@@ -21,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 37a148393d66a7434fda4461b704ee81b7e05223
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798077"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>SQL Server 인스턴스 등록(SQL Server 유틸리티)
-  ph x="1" /&gt; 인스턴스를 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 등록하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리되는 인스턴스로서 성능과 구성을 모니터링할 수 있습니다. UCP(유틸리티 제어 지점)는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스에서 15분마다 구성 및 성능 정보를 수집합니다. 이 정보는 UCP의 UMDW(유틸리티 관리 데이터 웨어하우스)에 저장됩니다. UMDW의 파일 이름은 sysutility_mdw입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 성능 데이터를 정책과 비교하면 리소스 사용 병목 현상과 통합 기회를 식별하는 데 도움이 됩니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 등록하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리되는 인스턴스로서 성능과 구성을 모니터링할 수 있습니다. UCP(유틸리티 제어 지점)는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스에서 15분마다 구성 및 성능 정보를 수집합니다. 이 정보는 UCP의 UMDW(유틸리티 관리 데이터 웨어하우스)에 저장됩니다. UMDW의 파일 이름은 sysutility_mdw입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 성능 데이터를 정책과 비교하면 리소스 사용 병목 현상과 통합 기회를 식별하는 데 도움이 됩니다.  
   
  이 릴리스에서 UCP 및 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스는 다음 요구 사항을 충족해야 합니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "72798077"
   
  이 릴리스에서 UCP는 다음 요구 사항을 충족해야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스는 지원되는 버전이어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지 원하는 기능 목록은 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조 하세요.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스는 지원되는 버전이어야 합니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조 하세요.  
   
 -   대/소문자를 구분하는 SQL Server 인스턴스에서 UCP를 호스팅하는 것이 좋습니다.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "72798077"
  계속하려면 **다음**을 클릭합니다.  
   
 ##  <a name="Instance_name"></a> SQL Server 인스턴스 지정  
- 연결 대화 상자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 선택 하려면 **연결 ...** 을 클릭 합니다. Computername\instancename 형식으로 컴퓨터 이름과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름을 제공 합니다. 자세한 내용은 [서버에 연결&#40;데이터베이스 엔진&#41;](../../ssms/f1-help/connect-to-server-database-engine.md)을 참조하세요.  
+ 연결 대화 상자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 선택하려면 **연결...** 을 클릭합니다. 컴퓨터 이름과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름을 ComputerName\InstanceName 형식으로 입력합니다. 자세한 내용은 [서버에 연결&#40;데이터베이스 엔진&#41;](../../ssms/f1-help/connect-to-server-database-engine.md)을 참조하세요.  
   
  계속하려면 **다음**을 클릭합니다.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "72798077"
 |조건|수정 동작|  
 |---------------|-----------------------|  
 |지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 및 UCP에 대한 관리자 권한이 있어야 합니다.|지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 및 UCP에 대한 관리자 권한이 있는 계정으로 로그온합니다.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전이 인스턴스 등록을 지원해야 합니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지 원하는 기능 목록은 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조 하세요.|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전이 인스턴스 등록을 지원해야 합니다.|버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조 하세요.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP에서 TCP/IP를 사용하도록 설정해야 합니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP에서 TCP/IP를 사용하도록 설정합니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 이미 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP에 등록되어 있으면 안 됩니다.|지정하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티의 일부로 이미 관리되고 있는 경우 이를 다른 UCP에 등록할 수 없습니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 이미 UCP이면 안 됩니다.|지정하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 연결하려는 UCP가 아닌 다른 UCP인 경우 이를 이 UCP에 등록할 수 없습니다.|  
@@ -169,7 +169,7 @@ ms.locfileid: "72798077"
 >   
 >  Transact-SQL 문 또는 일괄 처리를 실행하는 동안 예외가 발생했습니다. (Microsoft.SqlServer.ConnectionInfo)  
 >   
->  추가 정보: Windows NT 그룹/사용자 '\<DomainName\AccountName>'에 대한 정보를 가져올 수 없습니다. 오류 코드 0x5. (Microsoft SQL Server, 오류: 15404)  
+>  추가 정보:  Windows NT 그룹/사용자 ‘\<DomainName\AccountName>’에 대한 정보를 가져올 수 없습니다. 오류 코드 0x5. (Microsoft SQL Server, 오류: 15404)  
 >   
 >  이 문제를 해결하는 자세한 내용은 [SQL Server 유틸리티 문제 해결](../../database-engine/troubleshoot-the-sql-server-utility.md)을 참조하세요.  
   

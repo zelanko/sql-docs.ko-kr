@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eaa81c35dc13c60a06196d1c61ab4dce9106f9b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62711123"
 ---
 # <a name="copy-items-in-a-solution"></a>솔루션에서 항목 복사
@@ -37,7 +37,7 @@ ms.locfileid: "62711123"
 > [!NOTE]  
 >  프로젝트 간의 연결은 복사할 수 없습니다. 연관된 연결이 있는 쿼리를 다른 프로젝트에 복사하면 연관된 연결은 대상 프로젝트에 복사되지 않습니다. 따라서 대상 프로젝트에서 연결을 수동으로 만들어야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [솔루션 탐색기](solution-explorer.md)   
  [솔루션에서 항목 이동](move-items-in-a-solution.md)  
   

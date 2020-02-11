@@ -1,5 +1,5 @@
 ---
-title: 동기화 (복제 TRANSACT-SQL 프로그래밍) 하는 동안 트리거 및 제약 조건 동작 제어 | Microsoft Docs
+title: 동기화 하는 동안 트리거 및 제약 조건 동작 제어 (복제 Transact-sql 프로그래밍) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 26d9a2431b91c1dc081345a06e7fe5a7533cbaa2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721523"
 ---
 # <a name="control-the-behavior-of-triggers-and-constraints-during-synchronization-replication-transact-sql-programming"></a>동기화하는 동안 트리거 및 제약 조건 동작 제어(복제 Transact-SQL 프로그래밍)
@@ -40,7 +40,7 @@ ms.locfileid: "62721523"
   
 1.  새 CHECK 또는 FOREIGN KEY 제약 조건을 만들 때 [CREATE TABLE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)의 제약 조건 정의에서 CHECK NOT FOR REPLICATION 옵션을 지정합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [테이블 만들기&#40;데이터베이스 엔진&#41;](../tables/create-tables-database-engine.md)  
   
   

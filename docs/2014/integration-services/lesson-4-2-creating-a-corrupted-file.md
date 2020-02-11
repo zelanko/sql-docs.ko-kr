@@ -1,5 +1,5 @@
 ---
-title: '2단계: 손상된 된 파일 만들기 | Microsoft Docs'
+title: '2단계: 손상된 파일 만들기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa1bb23843447cc77276a34d5466d417f2a87a05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767385"
 ---
 # <a name="step-2-creating-a-corrupted-file"></a>2단계: 손상된 파일 만들기
@@ -28,18 +28,20 @@ ms.locfileid: "62767385"
   
      예제 데이터는 SSIS 단원 패키지에 포함되어 있습니다. 예제 데이터 및 단원 패키지를 다운로드하려면 다음을 수행합니다.  
   
-    1.  [Integration Services 제품 예제](https://go.microsoft.com/fwlink/?LinkID=267527)로 이동합니다.  
+    1.  
+  [Integration Services 제품 예제](https://go.microsoft.com/fwlink/?LinkID=267527)로 이동합니다.  
   
-    2.  **DOWNLOADS** 탭을 클릭합니다.  
+    2.  
+  **DOWNLOADS** 탭을 클릭합니다.  
   
     3.  SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip 파일을 클릭합니다.  
   
-2.  텍스트 편집기의 찾기 및 바꾸기의 모든 인스턴스를 찾으려면 기능 사용 `VEB` 로 바꿉니다 `BAD`합니다.  
+2.  텍스트 편집기의 찾기 및 바꾸기 기능을 사용 하 여의 `VEB` 모든 인스턴스를 찾아로 `BAD`바꿉니다.  
   
-3.  다른 샘플 데이터 파일과 동일한 폴더에서 수정 된 파일을 저장 `Currency_BAD.txt`합니다.  
+3.  다른 예제 데이터 파일과 동일한 폴더에서 수정 된 파일을로 `Currency_BAD.txt`저장 합니다.  
   
     > [!IMPORTANT]  
-    >  했는지 `Currency_BAD.txt` 다른 샘플 데이터 파일과 동일한 폴더에 저장 됩니다.  
+    >  `Currency_BAD.txt` 이 다른 예제 데이터 파일과 동일한 폴더에 저장 되었는지 확인 합니다.  
   
 4.  텍스트 편집기를 닫습니다.  
   

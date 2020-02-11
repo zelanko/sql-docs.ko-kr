@@ -1,5 +1,5 @@
 ---
-title: Visual Studio.NET에서에서 Visual Basic SMO 프로젝트 만들기 | Microsoft Docs
+title: Visual Studio .NET에서 Visual Basic SMO 프로젝트 만들기 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,32 +15,40 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 662916720b9953e0374bedb29890a36ced0cfac0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753350"
 ---
 # <a name="create-a-visual-basic-smo-project-in-visual-studio-net"></a>Visual Studio .NET에서 Visual Basic SMO 프로젝트 만들기
   이 섹션에서는 간단한 SMO 콘솔 애플리케이션을 빌드하는 방법을 설명합니다.  
   
- 이 예에서는 프로그램이 SMO 형식을 참조할 수 있도록 네임스페이스를 가져옵니다. `Agent` 네임스페이스 가져오기는 선택 사항입니다. 이 네임스페이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하는 프로그램을 작성하는 경우에 필요합니다. `Common` 네임스페이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 보안 연결을 설정하는 데 필요합니다. `SqlClient` 네임스페이스는 SQL 예외 오류를 처리하는 데 사용됩니다.  
+ 이 예에서는 프로그램이 SMO 형식을 참조할 수 있도록 네임스페이스를 가져옵니다. 
+  `Agent` 네임스페이스 가져오기는 선택 사항입니다. 이 네임스페이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하는 프로그램을 작성하는 경우에 필요합니다. 
+  `Common` 네임스페이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 보안 연결을 설정하는 데 필요합니다. 
+  `SqlClient` 네임스페이스는 SQL 예외 오류를 처리하는 데 사용됩니다.  
   
 ### <a name="creating-a-visual-basic-smo-project-in-visual-studionet"></a>Visual Studio.NET에서 Visual Basic SMO 프로젝트 만들기  
   
-1.  [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] (또는 [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)])을 시작합니다.  
+1.  
+  [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)](또는 [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)])을 시작합니다.  
   
-2.  **파일** 메뉴에서 **새 프로젝트**를 클릭합니다. **새 프로젝트** 대화 상자가 나타납니다.  
+2.  
+  **파일** 메뉴에서 **새 프로젝트**를 클릭합니다. 
+  **새 프로젝트** 대화 상자가 나타납니다.  
   
-3.  **프로젝트 형식** 대화 상자에서 **Visual Basic**를 선택한 후 **Windows**합니다. 에 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 설치 된 템플릿 창 **콘솔 응용 프로그램입니다.**  
+3.  **프로젝트 형식** 대화 상자에서 **Visual Basic**를 선택한 다음 **Windows**를 선택 합니다. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 설치 된 템플릿 창에서 **콘솔 응용 프로그램을 선택 합니다.**  
   
-4.  (선택 사항) 에 **이름을** 필드에 새 응용 프로그램의 이름을 입력 합니다.  
+4.  필드 **이름** 필드에 새 응용 프로그램의 이름을 입력 합니다.  
   
-5.  클릭 **확인** 로드 하는 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 콘솔 응용 프로그램 템플릿.  
+5.  **확인** 을 클릭 하 여 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 콘솔 응용 프로그램 템플릿을 로드 합니다.  
   
-6.  **프로젝트** 메뉴에서 **참조 추가**를 선택합니다. **참조 추가** 대화 상자가 나타납니다.  
+6.  
+  **프로젝트** 메뉴에서 **참조 추가**를 선택합니다. 
+  **참조 추가** 대화 상자가 나타납니다.  
   
-7.  클릭 **찾아보기**고 C:\Program Files\Microsoft SQL Server\120\SDK\Assemblies 폴더에서 SMO 어셈블리를 찾아서 다음 파일을 선택 합니다. SMO 애플리케이션을 빌드하려면 최소한 다음 파일이 있어야 합니다.  
+7.  **찾아보기**를 클릭 하 고 C:\PROGRAM Files\Microsoft SQL Server\120\SDK\Assemblies 폴더에서 SMO 어셈블리를 찾은 후 다음 파일을 선택 합니다. SMO 애플리케이션을 빌드하려면 최소한 다음 파일이 있어야 합니다.  
   
      Microsoft.SqlServer.ConnectionInfo.dll  
   
@@ -59,9 +67,9 @@ ms.locfileid: "62753350"
   
 9. **열기**를 클릭합니다.  
   
-10. 에 **뷰** 메뉴에서 클릭 **코드**. 또는 Module1.vb 창을 선택 하 여 코드 창을 표시 합니다.  
+10. **보기** 메뉴에서 **코드**를 클릭 합니다. 또는 module1.vb 창을 선택 하 여 코드 창을 표시 합니다.  
   
-11. 다른 모든 선언 앞의 코드를 다음 입력 **가져오기** 문을 SMO 네임 스페이스의 형식을 한정 합니다.  
+11. 코드에서 모든 선언 앞에 다음 **Imports** 문을 입력 하 여 SMO 네임 스페이스의 형식을 한정 합니다.  
   
     ```  
     Imports Microsoft.SqlServer.Management.Smo  

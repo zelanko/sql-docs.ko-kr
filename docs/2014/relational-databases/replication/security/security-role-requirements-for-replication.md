@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 52eed41a8b44147c13ed8dbc63dbda46ed625f51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676896"
 ---
 # <a name="security-role-requirements-for-replication"></a>Security Role Requirements for Replication
@@ -49,7 +49,7 @@ ms.locfileid: "62676896"
 |복제 에이전트 유지 관리|해당 데이터베이스에 대한**db_owner** 데이터베이스 역할 또는 해당 서버에 대한 **sysadmin** 서버 역할<br /><br /> 에이전트가 **sysadmin** 역할의 사용자에 의해 생성되고 에이전트에 대해 프록시 계정을 지정하지 않은 경우 에이전트는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 계정의 컨텍스트에서 실행됩니다. 이 경우 **db_owner** 역할의 사용자는 에이전트와 연결된 작업을 수정할 수 없습니다.|  
 |복제 에이전트 시작 또는 중지|에이전트 작업의 소유자 또는 해당 서버에 대한 **sysadmin** 서버 역할|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Replication Security Best Practices](replication-security-best-practices.md)   
  [SQL Server 복제 보안](view-and-modify-replication-security-settings.md)  
   

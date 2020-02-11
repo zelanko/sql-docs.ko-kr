@@ -11,21 +11,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5ca7d915b940296e6de6689e666401b0c3534c9d
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782727"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>SQL Server PowerShell 경로 작업
   [!INCLUDE[ssDE](../includes/ssde-md.md)] 공급자 경로의 노드로 이동한 후에는 노드에 연결된 [!INCLUDE[ssDE](../includes/ssde-md.md)] 관리 개체에서 메서드 및 속성을 사용하여 작업을 수행하거나 정보를 검색할 수 있습니다.  
   
-1.  [시작하기 전 주의 사항](#BeforeYouBegin)  
+1.  [시작하기 전에](#BeforeYouBegin)  
   
-2.  **경로 노드에서 작업하려면**  [메서드 및 속성 나열](#ListPropMeth), [메서드 및 속성 사용](#UsePropMeth)  
+2.  **경로 노드에서 작업 하려면**메서드 및[속성 나열](#ListPropMeth), [메서드 및 속성 사용](#UsePropMeth)    
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
- [!INCLUDE[ssDE](../includes/ssde-md.md)] 공급자 경로의 노드로 이동한 후에는 다음 두 가지 동작을 수행할 수 있습니다.  
+ 
+  [!INCLUDE[ssDE](../includes/ssde-md.md)] 공급자 경로의 노드로 이동한 후에는 다음 두 가지 동작을 수행할 수 있습니다.  
   
 -   **Rename-Item**과 같이 노드에서 작동하는 Windows PowerShell cmdlet을 실행할 수 있습니다.  
   
@@ -74,7 +75,7 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Table
 Get-ChildItem | Where {$_.Schema -eq "Sales"}  
 ```  
   
- 이 예에서는 SMO **script** 메서드를 사용 하 여 AdventureWorks2012에서 뷰를 다시 만드는 데 필요한 `CREATE VIEW` 문을 포함 하는 스크립트를 생성 합니다.  
+ 이 예에서는 SMO **script** 메서드를 사용 하 여 AdventureWorks2012에서 뷰를 `CREATE VIEW` 다시 만드는 데 필요한 문이 포함 된 스크립트를 생성 합니다.  
   
 ```powershell
 Remove-Item C:\PowerShell\CreateViews.sql  
@@ -94,7 +95,7 @@ $MyDBVar.State
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
+ [SQL Server PowerShell 공급자](sql-server-powershell-provider.md)   
  [SQL Server PowerShell 경로 탐색](navigate-sql-server-powershell-paths.md)   
  [URN을 SQL Server 공급자 경로로 변환](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  

@@ -1,5 +1,5 @@
 ---
-title: '5단원: 예측 쿼리를 실행 합니다. | Microsoft Docs'
+title: '5 단원: 예측 쿼리 실행 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a5f4d6dd79f62541e207df688349f694680e2421
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62822315"
 ---
 # <a name="lesson-5-executing-prediction-queries"></a>5단원: 예측 쿼리 실행
-  이 단원에서는 사용할지 합니다 [SELECT FROM \<모델 > PREDICTION JOIN (DMX)](/sql/dmx/select-from-model-cases-dmx) 형식의 두 가지 유형의 의사 결정 트리를 기반으로 예측을 만드는 SELECT 문은 모델에서 만든 [ 2 단원: 연결 마이닝 구조에 마이닝 모델 추가](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)합니다. 이러한 예측 유형은 다음과 같습니다.  
+  이 단원에서는 SELECT [FROM \<MODEL> 예측 조인 (DMX)](/sql/dmx/select-from-model-cases-dmx) 형식을 사용 하 여 [2 단원: 마이닝 모델을 연결 마이닝 구조에 추가](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)에서 만든 의사 결정 트리 모델을 기반으로 두 가지 유형의 예측을 만듭니다. 이러한 예측 유형은 다음과 같습니다.  
   
  단일 쿼리  
  예측을 만들 때는 단일 쿼리를 사용하여 임시 값을 제공합니다. 예를 들어 한 고객의 통근 거리, 지역 번호 또는 자녀 수와 같은 입력을 쿼리에 전달하여 해당 고객이 자전거를 구입할 가능성이 있는지를 확인할 수 있습니다. 단일 쿼리는 이러한 입력을 기준으로 해당 고객이 자전거를 구입할 가능성을 나타내는 값을 반환합니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "62822315"
  일괄 처리 쿼리  
  일괄 처리 쿼리를 사용하여 잠재 고객 테이블에서 자전거를 구입할 가능성이 있는 고객을 확인할 수 있습니다. 예를 들어 마케팅 부서에서 고객 및 고객 특성 목록을 제공한 경우 일괄 처리 예측을 사용하여 해당 테이블에서 자전거를 구입할 가능성이 있는 고객을 확인할 수 있습니다.  
   
- [SELECT FROM \<모델 > PREDICTION JOIN (DMX)](/sql/dmx/select-from-model-cases-dmx) SELECT 문의 양식을 세 부분이 있습니다.  
+ SELECT 문에서 select [ \<FROM MODEL> 예측 조인 (DMX)](/sql/dmx/select-from-model-cases-dmx) 형식은 다음 세 부분으로 구성 됩니다.  
   
 -   결과에 반환된 마이닝 모델 열 및 예측 함수 목록. 결과에는 원본 데이터의 입력 열도 포함될 수 있습니다.  
   
@@ -34,11 +34,12 @@ ms.locfileid: "62822315"
   
 -   마이닝 모델 열과 원본 데이터 간의 매핑. 이름이 일치하는 경우 NATURAL 구문을 사용할 수 있으며 열 매핑을 수행하지 않아도 됩니다.  
   
- 예측 함수를 사용하여 쿼리의 질을 보다 향상시킬 수 있습니다. 예측 함수는 예측 사항의 발생 확률과 같은 추가 정보를 제공하고 학습 데이터 세트의 예측에 대한 지지도를 제공합니다. 예측 함수에 대 한 자세한 내용은 참조 하세요. [함수 &#40;DMX&#41;](/sql/dmx/functions-dmx)합니다.  
+ 예측 함수를 사용하여 쿼리의 질을 보다 향상시킬 수 있습니다. 예측 함수는 예측 사항의 발생 확률과 같은 추가 정보를 제공하고 학습 데이터 세트의 예측에 대한 지지도를 제공합니다. 예측 함수에 대 한 자세한 내용은 [함수 &#40;DMX&#41;](/sql/dmx/functions-dmx)를 참조 하세요.  
   
  이 자습서의 예측은 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 예제 데이터베이스의 ProspectiveBuyer 테이블을 기반으로 합니다. ProspectiveBuyer 테이블에는 잠재 고객 및 관련 특징 목록이 있습니다. 이 테이블의 고객은 의사 결정 트리 마이닝 모델을 만드는 데 사용된 고객과는 독립적입니다.  
   
- [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 예측 쿼리 작성기를 사용하여 예측을 만들 수도 있습니다.  
+ 
+  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 예측 쿼리 작성기를 사용하여 예측을 만들 수도 있습니다.  
   
 ## <a name="lesson-tasks"></a>단원 태스크  
  이 단원에서는 다음 태스크를 수행합니다.  
@@ -48,7 +49,7 @@ ms.locfileid: "62822315"
 -   일괄 처리 쿼리를 사용하여 고객 테이블에서 자전거를 구입할 가능성이 있는 고객 확인  
   
 ## <a name="singleton-query"></a>단일 쿼리  
- 첫 번째 단계는 사용 하는 [선택에서 &#60;모델&#62; PREDICTION JOIN &#40;DMX&#41; ](/sql/dmx/select-from-model-cases-dmx) 단일 예측 쿼리에서 합니다. 다음은 단일 문의 일반적인 예입니다.  
+ 첫 번째 단계는 단일 예측 쿼리에서 [SELECT FROM &#60;모델&#62; 예측 조인 &#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx) 를 사용 하는 것입니다. 다음은 단일 문의 일반적인 예입니다.  
   
 ```  
 SELECT <select list> FROM [<mining model name>]   
@@ -76,7 +77,8 @@ ORDER BY <expression>
   
 #### <a name="to-create-a-singleton-prediction-query"></a>단일 예측 쿼리를 만들려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX**를 클릭합니다.  
+1.  
+  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX**를 클릭합니다.  
   
      비어 있는 새 쿼리가 포함된 쿼리 편집기가 열립니다.  
   
@@ -88,13 +90,13 @@ ORDER BY <expression>
     <select list>   
     ```  
   
-     다음 구문으로 바꿉니다.  
+     다음으로 바꿀 수 있습니다.  
   
     ```  
     [Bike Buyer] AS Buyer, PredictHistogram([Bike Buyer]) AS Statistics  
     ```  
   
-     AS 문은 쿼리에서 반환한 열의 별칭을 지정하는 데 사용됩니다. 합니다 [PredictHistogram](/sql/dmx/predicthistogram-dmx) 함수는 확률 및 지지도 포함 하 여 예측에 대 한 통계를 반환 합니다. 예측 문에서 사용할 수 있는 함수에 대 한 자세한 내용은 참조 하세요. [함수 &#40;DMX&#41;](/sql/dmx/functions-dmx)합니다.  
+     AS 문은 쿼리에서 반환한 열의 별칭을 지정하는 데 사용됩니다. [PredictHistogram](/sql/dmx/predicthistogram-dmx) 함수는 확률 및 지원을 포함 하 여 예측에 대 한 통계를 반환 합니다. 예측 문에 사용할 수 있는 함수에 대 한 자세한 내용은 [함수 &#40;DMX&#41;](/sql/dmx/functions-dmx)를 참조 하세요.  
   
 4.  다음 내용을  
   
@@ -102,7 +104,7 @@ ORDER BY <expression>
     [<mining model>]   
     ```  
   
-     다음 구문으로 바꿉니다.  
+     다음으로 바꿀 수 있습니다.  
   
     ```  
     [Decision Tree]  
@@ -114,7 +116,7 @@ ORDER BY <expression>
     (SELECT '<value>' AS [<column name>], ...)  AS t  
     ```  
   
-     다음 구문으로 바꿉니다.  
+     다음으로 바꿀 수 있습니다.  
   
     ```  
     (SELECT 35 AS [Age],  
@@ -140,16 +142,17 @@ ORDER BY <expression>
        2 AS [Total Children]) AS t  
     ```  
   
-6.  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
+6.  
+  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
   
-7.  에 **다른 이름으로 저장** 대화 상자에서 적절 한 폴더로 이동 하 고 파일 이름을 `Singleton_Query.dmx`입니다.  
+7.  다른 이름 **으로 저장** 대화 상자에서 해당 폴더로 이동한 다음 파일 `Singleton_Query.dmx`이름을로 합니다.  
   
 8.  도구 모음에서 **실행** 단추를 클릭합니다.  
   
      쿼리가 지정 특징을 갖는 고객이 자전거를 구입할지 여부에 대한 예측과 이 예측에 대한 통계를 반환합니다.  
   
 ## <a name="batch-query"></a>일괄 처리 쿼리  
- 다음 단계는 사용 하는 [선택에서 &#60;모델&#62; PREDICTION JOIN &#40;DMX&#41; ](/sql/dmx/select-from-model-cases-dmx) 일괄 처리 예측 쿼리에서 합니다. 다음은 일괄 처리 문의 일반적인 예입니다.  
+ 다음 단계는 일괄 처리 예측 쿼리에서 [SELECT FROM &#60;model&#62; 예측 조인 &#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx) 를 사용 하는 것입니다. 다음은 일괄 처리 문의 일반적인 예입니다.  
   
 ```  
 SELECT TOP <number> <select list>   
@@ -162,7 +165,7 @@ WHERE <where clause, boolean expression,>
 ORDER BY <expression>  
 ```  
   
- 단일 쿼리의 경우와 같이 코드의 처음 두 줄에서는 예측 생성에 사용할 마이닝 모델의 이름과 쿼리가 반환하는 마이닝 모델의 열을 정의합니다. 맨 위에 \<번호 > 문은 지정 된 결과 또는 쿼리만 반환 됩니다 지정 \<수 >.  
+ 단일 쿼리의 경우와 같이 코드의 처음 두 줄에서는 예측 생성에 사용할 마이닝 모델의 이름과 쿼리가 반환하는 마이닝 모델의 열을 정의합니다. TOP \<number> 문은 쿼리가 숫자>으로 \<지정 된 숫자나 결과만 반환 하도록 지정 합니다.  
   
  코드의 다음 줄에서는 예측의 토대가 되는 원본 데이터를 정의합니다.  
   
@@ -171,7 +174,7 @@ OPENQUERY([<datasource>],'<SELECT statement>')
   AS [<input alias>]  
 ```  
   
- 원본 데이터를 검색하는 방법에는 여러 가지가 있지만 이 자습서에서는 OPENQUERY를 사용합니다. 사용 가능한 옵션에 대 한 자세한 내용은 참조 하세요. [ &#60;원본 데이터 쿼리&#62;](/sql/dmx/source-data-query)합니다.  
+ 원본 데이터를 검색하는 방법에는 여러 가지가 있지만 이 자습서에서는 OPENQUERY를 사용합니다. 사용할 수 있는 옵션에 대 한 자세한 내용은 [&#60;원본 데이터 쿼리&#62;](/sql/dmx/source-data-query)를 참조 하세요.  
   
  다음 줄에서는 마이닝 모델의 원본 열과 원본 데이터 열 간의 매핑을 정의합니다.  
   
@@ -191,11 +194,12 @@ WHERE <where clause, boolean expression,>
 ORDER BY <expression> [DESC|ASC]  
 ```  
   
- ORDER BY는 TOP와 함께 사용 \<수 > 문에서 반환 되는 결과를 필터링 합니다. 예를 들어 이 예측에서는 예측의 정확도 예상률을 기준으로 정렬된 상위 10명의 자전거 구매자를 반환합니다. [DESC|ASC] 구문을 사용하여 결과 표시 순서를 조정할 수 있습니다.  
+ TOP \<number> 문과 함께 ORDER by를 사용 하 여 반환 되는 결과를 필터링 합니다. 예를 들어 이 예측에서는 예측의 정확도 예상률을 기준으로 정렬된 상위 10명의 자전거 구매자를 반환합니다. [DESC|ASC] 구문을 사용하여 결과 표시 순서를 조정할 수 있습니다.  
   
 #### <a name="to-create-a-batch-prediction-query"></a>일괄 처리 예측 쿼리를 만들려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX**를 클릭합니다.  
+1.  
+  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX**를 클릭합니다.  
   
      비어 있는 새 쿼리가 포함된 쿼리 편집기가 열립니다.  
   
@@ -207,7 +211,7 @@ ORDER BY <expression> [DESC|ASC]
     <select list>   
     ```  
   
-     다음 구문으로 바꿉니다.  
+     다음으로 바꿀 수 있습니다.  
   
     ```  
     SELECT  
@@ -327,9 +331,10 @@ ORDER BY <expression> [DESC|ASC]
     ORDER BY PredictProbability([Bike Buyer]) DESC  
     ```  
   
-7.  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
+7.  
+  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
   
-8.  에 **다른 이름으로 저장** 대화 상자에서 적절 한 폴더로 이동 하 고 파일 이름을 `Batch_Prediction.dmx`입니다.  
+8.  다른 이름 **으로 저장** 대화 상자에서 해당 폴더로 이동한 다음 파일 `Batch_Prediction.dmx`이름을로 합니다.  
   
 9. 도구 모음에서 **실행** 단추를 클릭합니다.  
   
@@ -337,6 +342,6 @@ ORDER BY <expression> [DESC|ASC]
   
  이 단원은 Bike Buyer 자습서의 마지막 단계입니다. 이제 생성된 마이닝 모델 집합을 사용하여 고객 간 유사성을 조사하고 잠재 고객이 자전거를 구입할 것인지 여부를 예측할 수 있습니다.  
   
- 시장 바구니 시나리오에서 DMX를 사용 하는 방법에 알아보려면 참조 [Market Basket DMX 자습서](../../2014/tutorials/market-basket-dmx-tutorial.md)합니다.  
+ 시장 바구니 시나리오에서 DMX를 사용 하는 방법을 알아보려면 [시장 바구니 DMX 자습서](../../2014/tutorials/market-basket-dmx-tutorial.md)를 참조 하세요.  
   
   

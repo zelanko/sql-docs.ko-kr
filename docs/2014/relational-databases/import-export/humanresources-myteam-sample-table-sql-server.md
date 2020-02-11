@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b038c1132cf8c1ccd31da2a5a1e2a600f2505624
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011955"
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>HumanResources.myTeam 예제 테이블(SQL Server)
@@ -27,13 +27,14 @@ ms.locfileid: "66011955"
 > [!NOTE]  
 >  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 샘플 데이터베이스 중 하나입니다.  
   
- **myTeam** 테이블에는 다음 열이 있습니다.  
+ 
+  **myTeam** 테이블에는 다음 열이 있습니다.  
   
-|Column|데이터 형식|Null 허용 여부|Description|  
+|열|데이터 형식|Null 허용 여부|Description|  
 |------------|---------------|-----------------|-----------------|  
 |**EmployeeID**|`smallint`|Null이 아님|행의 기본 키. 팀 멤버의 직원 ID|  
 |**이름**|`nvarchar(50)`|Null이 아님|팀 멤버의 이름|  
-|**Title**|`nvarchar(50)`|Null 허용|팀 직원의 직함|  
+|**제목**|`nvarchar(50)`|Nullable|팀 직원의 직함|  
 |**배경**|`nvarchar(50)`|Null이 아님|행이 마지막으로 업데이트된 날짜와 시간 (기본값)|  
   
  **HumanResources.myTeam을 만들려면**  
@@ -71,7 +72,7 @@ ms.locfileid: "66011955"
     > [!NOTE]  
     >  이 문은 4번째 열 `Background`를 건너뜁니다. 이 열에는 기본값이 있습니다. 이 열을 건너뛰면 이 `INSERT` 문에서 이 열을 비워 두게 됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 대량 가져오기 및 내보내기&#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)  
   
   

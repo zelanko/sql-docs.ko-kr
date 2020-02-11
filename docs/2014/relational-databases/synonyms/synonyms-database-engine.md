@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2066eeb7d9b86228ed86aed290e69f2a0e981b95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62736243"
 ---
 # <a name="synonyms-database-engine"></a>동의어(데이터베이스 엔진)
@@ -43,7 +43,7 @@ ms.locfileid: "62736243"
 |SQL 인라인 테이블 반환 함수|SQL 저장 프로시저|  
 |보기|테이블<sup>1</sup>(사용자 정의)|  
   
- <sup>1</sup> 로컬 및 전역 임시 테이블이 포함 되어 있습니다.  
+ <sup>1</sup> 로컬 및 전역 임시 테이블을 포함 합니다.  
   
 > [!NOTE]  
 >  함수 기본 개체의 네 부분으로 된 이름은 지원되지 않습니다.  
@@ -98,7 +98,7 @@ EXEC ('ALTER TABLE dbo.MyProduct
   
 |||  
 |-|-|  
-|GRANT|DENY|  
+|GRANT|거부|  
 |REVOKE||  
   
  동의어는 스키마 바운드가 아니므로 다음과 같은 스키마 바운드 식 컨텍스트에서 참조할 수 없습니다.  
@@ -112,7 +112,7 @@ EXEC ('ALTER TABLE dbo.MyProduct
  스키마 바운드 함수에 대한 자세한 내용은 [사용자 정의 함수 만들기&#40;데이터베이스 엔진&#41;](../user-defined-functions/create-user-defined-functions-database-engine.md)를 참조하세요.  
   
 ## <a name="getting-information-about-synonyms"></a>동의어에 대한 정보 가져오기  
- sys.synonyms 카탈로그 뷰에는 지정된 데이터베이스의 각 동의어에 대한 항목이 들어 있습니다. 이 카탈로그 뷰는 동의어 이름과 기본 개체 이름과 같은 동의어 메타데이터를 노출합니다. 에 대 한 자세한 내용은 합니다 `sys.synonyms` 카탈로그 뷰를 참조 하십시오 [sys.synonyms &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-synonyms-transact-sql)합니다.  
+ sys.synonyms 카탈로그 뷰에는 지정된 데이터베이스의 각 동의어에 대한 항목이 들어 있습니다. 이 카탈로그 뷰는 동의어 이름과 기본 개체 이름과 같은 동의어 메타데이터를 노출합니다. `sys.synonyms` 카탈로그 뷰에 대 한 자세한 내용은 [&#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-synonyms-transact-sql)를 참조 하세요.  
   
  확장 속성을 사용하면 설명이나 지시 텍스트, 입력 마스크, 서식 설정 규칙을 동의어 속성으로 추가할 수 있습니다. 속성이 데이터베이스에 저장되기 때문에 속성을 읽는 모든 애플리케이션은 개체를 같은 방식으로 평가할 수 있습니다. 자세한 내용은 [sp_addextendedproperty&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql)를 참조하세요.  
   
@@ -145,7 +145,7 @@ GO
 ## <a name="related-content"></a>관련 내용  
  [동의어 만들기](create-synonyms.md)  
   
- [CREATE SYNONYM&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-synonym-transact-sql)  
+ [CREATE SYNONYM &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-synonym-transact-sql)  
   
  [DROP SYNONYM&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-synonym-transact-sql)  
   

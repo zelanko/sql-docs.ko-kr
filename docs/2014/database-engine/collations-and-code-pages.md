@@ -1,5 +1,5 @@
 ---
-title: Collations and Code Pages | Microsoft Docs
+title: 데이터 정렬 및 코드 페이지 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1969a3e30b31a21c380559a3e8898f87eb8848b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62786738"
 ---
 # <a name="collations-and-code-pages"></a>데이터 정렬 및 코드 페이지
+  
   [!INCLUDE[hek_2](../includes/hek-2-md.md)]에는 메모리 최적화 테이블의 (var)char 열에 대해 지원되는 코드 페이지와 인덱스 및 고유하게 컴파일된 저장 프로시저에 사용되는 지원되는 데이터 정렬에 대한 제한 사항이 있습니다.  
   
  (var)char 값에 대한 코드 페이지는 테이블에 저장되는 문자와 바이트 표현 간의 매핑을 결정합니다. 예를 들어 Windows 라틴어 1 코드 페이지(1252, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 기본값)를 사용하는 경우 문자 'a'는 바이트 0x61에 해당합니다.  
@@ -82,7 +83,7 @@ GO
   
 -   고유하게 컴파일된 저장 프로시저 내의 모든 식과 정렬 작업은 BIN2 데이터 정렬을 사용해야 합니다. 즉, 모든 비교 및 정렬 작업이 문자(이진 표현)의 유니코드 코드 포인트를 기반으로 합니다. 예를 들어 모든 정렬이 대/소문자를 구분합니다('Z'가 'a' 앞에 옴). 필요한 경우 대/소문자를 구분하지 않는 정렬 및 비교를 위해 해석된 [!INCLUDE[tsql](../includes/tsql-md.md)]을 사용합니다.  
   
--   UTF-16 데이터의 잘림은 고유하게 컴파일된 저장 프로시저에서 지원되지 않습니다. 즉, 해당 n (var) char (*n*) 값 n (var) char 형식으로 변환할 수 없습니다 (*합니까*) 이면 *합니까* < *n*경우는 데이터 정렬에 _SC 속성이 있습니다. 예를 들어 다음은 지원되지 않습니다.  
+-   UTF-16 데이터의 잘림은 고유하게 컴파일된 저장 프로시저에서 지원되지 않습니다. 즉, 데이터 정렬에 _SC 속성이 *있는 경우 n* < (var) char (*n*) 값*을 n (* var) char (*i*) 형식으로 변환할 수 없습니다. 예를 들어 다음은 지원되지 않습니다.  
   
     ```sql  
     -- column definition using an _SC collation  
@@ -96,7 +97,7 @@ GO
   
      충분히 커서 잘림을 방지할 수 있는 형식을 사용하여 변수를 선언합니다.  
   
- 다음 예에서는 메모리 내 OLTP의 데이터 정렬 제한 사항이 의미하는 것과 그 해결 방법을 몇 가지 보여 줍니다. 이 예에서는 위에 지정된 Employees 테이블을 사용하여 이 모든 직원을 나열 합니다. LastName의 경우 이진 데이터 정렬로 인해 대문자 이름이 소문자 앞에 정렬됩니다. 따라서 대문자에 더 낮은 코드 포인트가 있기 때문에 'Thomas'가 'nolan' 앞에 옵니다. FirstName의 데이터 정렬은 대/소문자를 구분하지 않습니다. 따라서 문자의 코드 포인트가 아니라 영문자 순으로 정렬됩니다.  
+ 다음 예에서는 메모리 내 OLTP의 데이터 정렬 제한 사항이 의미하는 것과 그 해결 방법을 몇 가지 보여 줍니다. 이 예에서는 위에 지정된 Employees 테이블을 사용하여 이 샘플은 모든 직원을 나열 합니다. LastName의 경우 이진 데이터 정렬로 인해 대문자 이름이 소문자 앞에 정렬됩니다. 따라서 대문자에 더 낮은 코드 포인트가 있기 때문에 'Thomas'가 'nolan' 앞에 옵니다. FirstName의 데이터 정렬은 대/소문자를 구분하지 않습니다. 따라서 문자의 코드 포인트가 아니라 영문자 순으로 정렬됩니다.  
   
 ```sql  
 -- insert a number of values  
@@ -142,7 +143,7 @@ EXEC usp_EmployeeByName 'thomas', 'John'
 EXEC usp_EmployeeByName 'thomas', 'john'  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

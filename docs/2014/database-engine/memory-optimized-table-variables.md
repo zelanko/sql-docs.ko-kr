@@ -1,5 +1,5 @@
 ---
-title: 메모리 최적화 테이블 변수 | Microsoft Docs
+title: 메모리 액세스에 최적화 된 테이블 변수 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/14/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 485f481819a9712f822f969c04d8e7050ad43bae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774430"
 ---
 # <a name="memory-optimized-table-variables"></a>메모리 액세스에 최적화된 테이블 변수
@@ -36,9 +36,9 @@ ms.locfileid: "62774430"
   
 -   테이블 변수를 사용하여 고유하게 컴파일된 저장 프로시저에서 커서를 시뮬레이트할 수 있으며, 이를 통해 고유하게 컴파일된 저장 프로시저에서 화면 영역 제한을 해결할 수 있습니다.  
   
- 메모리 최적화 테이블과 마찬가지로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 메모리 최적화 테이블 형식별로 하나의 DLL을 생성합니다. (컴파일은 메모리 최적화 테이블 형식을 만들 때, 그리고 호출을 메모리 최적화 테이블 변수를 만드는 데 사용 하는 경우에 없습니다.) 이 DLL은 인덱스에 액세스하고 테이블 변수에서 데이터를 검색하는 함수를 포함합니다. 테이블 형식을 기반으로 메모리 최적화 테이블 변수를 선언할 경우 테이블 형식에 따라 테이블 및 인덱스 구조의 인스턴스가 사용자 세션에 만들어집니다. 이 테이블 변수는 디스크 기반 테이블 변수와 동일한 방법으로 사용할 수 있습니다. 테이블 변수에서 행을 삽입, 업데이트 및 삭제하고 [!INCLUDE[tsql](../includes/tsql-md.md)] 쿼리에서 변수를 사용할 수 있습니다. 변수를 고유하게 컴파일된 저장 프로시저와 해석된 저장 프로시저에 TVP(테이블 반환 매개 변수)로 전달할 수도 있습니다.  
+ 메모리 최적화 테이블과 마찬가지로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 메모리 최적화 테이블 형식별로 하나의 DLL을 생성합니다. 메모리 최적화 테이블 형식을 만들 때 컴파일이 호출 되며 메모리 최적화 테이블 변수를 만드는 데 사용 되지 않습니다. 이 DLL에는 인덱스에 액세스 하 고 테이블 변수에서 데이터를 검색 하는 함수가 포함 되어 있습니다. 테이블 형식을 기반으로 메모리 최적화 테이블 변수를 선언할 경우 테이블 형식에 따라 테이블 및 인덱스 구조의 인스턴스가 사용자 세션에 만들어집니다. 이 테이블 변수는 디스크 기반 테이블 변수와 동일한 방법으로 사용할 수 있습니다. 테이블 변수에서 행을 삽입, 업데이트 및 삭제하고 [!INCLUDE[tsql](../includes/tsql-md.md)] 쿼리에서 변수를 사용할 수 있습니다. 변수를 고유하게 컴파일된 저장 프로시저와 해석된 저장 프로시저에 TVP(테이블 반환 매개 변수)로 전달할 수도 있습니다.  
   
- 다음 샘플 AdventureWorks 기반 메모리 내 OLTP 샘플에서 메모리 최적화 테이블 형식을 보여 줍니다 ([SQL Server 2014 메모리 내 OLTP 샘플](https://msftdbprodsamples.codeplex.com/releases/view/114491)).  
+ 다음 샘플은 AdventureWorks 기반 메모리 내 OLTP 샘플 ([SQL Server 2014 메모리 내 Oltp 샘플](https://msftdbprodsamples.codeplex.com/releases/view/114491))의 메모리 최적화 테이블 형식을 보여 줍니다.  
   
 ```sql
 CREATE TYPE Sales.SalesOrderDetailType_inmem
@@ -60,11 +60,12 @@ WITH ( MEMORY_OPTIMIZED = ON );
   
  이 예제에서는 다음 사항을 제외하고 메모리 최적화 테이블 형식의 구문이 디스크 기반 테이블 형식과 비슷함을 보여 줍니다.  
   
--   `MEMORY_OPTIMIZED=ON`은 테이블 형식이 메모리 최적화 형식인지 여부를 나타냅니다.  
+-   
+  `MEMORY_OPTIMIZED=ON`은 테이블 형식이 메모리 최적화 형식인지 여부를 나타냅니다.  
   
 -   이 형식에 적어도 한 개의 인덱스가 있어야 합니다. 메모리 최적화 테이블과 마찬가지로 해시 및 비클러스터형 인덱스를 사용할 수 있습니다.  
   
-     해시 인덱스의 경우 버킷 수는 예상 고유 인덱스 키 개수의 약 1~2배 사이여야 합니다. 자세한 내용은 [해시 인덱스에 대 한 올바른 버킷 수를 결정](../relational-databases/indexes/indexes.md)합니다.  
+     해시 인덱스의 경우 버킷 수는 예상 고유 인덱스 키 개수의 약 1~2배 사이여야 합니다. 자세한 내용은 [Determining the Correct Bucket Count for Hash Indexes](../relational-databases/indexes/indexes.md)을 참조하세요.  
   
 -   메모리 최적화 테이블에 대한 데이터 형식 및 제약 조건 제한은 메모리 최적화 테이블 형식에도 적용됩니다. 예를 들어, [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 기본 제약 조건은 지원되지만 CHECK 제약 조건은 지원되지 않습니다.  
   
@@ -186,7 +187,7 @@ GO
   
  메모리는 데이터베이스의 단일 PGPOOL 메모리 소비자의 일부로 계산됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP에 대한 Transact-SQL 지원](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   
   

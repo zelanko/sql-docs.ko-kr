@@ -17,14 +17,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bcd55827377b72040dd142ed1f2fd094c9bd2651
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073883"
 ---
 # <a name="the-basic-mdx-query-mdx"></a>기본 MDX 쿼리(MDX)
-  기본 MDX (Multidimensional Expressions) 쿼리는 MDX에서 SELECT 문에 가장 자주 사용 되는 쿼리. MDX SELECT 문에서 결과 집합을 지정하는 방식, SELECT 문의 구문 정의 및 SELECT 문을 사용하여 간단한 쿼리를 만드는 방법을 이해하면 MDX를 사용하여 다차원 데이터를 쿼리하는 방법을 확실히 알 수 있습니다.  
+  기본 MDX (Multidimensional Expressions) 쿼리는 MDX에서 가장 자주 사용 되는 쿼리 SELECT 문입니다. MDX SELECT 문에서 결과 집합을 지정하는 방식, SELECT 문의 구문 정의 및 SELECT 문을 사용하여 간단한 쿼리를 만드는 방법을 이해하면 MDX를 사용하여 다차원 데이터를 쿼리하는 방법을 확실히 알 수 있습니다.  
   
 ## <a name="specifying-a-result-set"></a>결과 집합 지정  
  MDX에서 SELECT 문은 큐브로부터 반환된 다차원 데이터의 하위 집합이 포함되는 결과 집합을 지정합니다. 결과 집합을 지정하려면 MDX 쿼리에 다음과 같은 정보가 포함되어야 합니다.  
@@ -65,7 +65,7 @@ FROM <SELECT subcube clause>
 ### <a name="comparing-the-syntax-of-the-mdx-select-statement-to-sql"></a>MDX SELECT 문의 구문과 SQL 구문 비교  
  MDX SELECT 문의 구문 형식은 SQL 구문과 비슷합니다. 하지만 다음과 같은 점에서 근본적인 차이가 있습니다.  
   
--   MDX 구문은 튜플이나 멤버를 중괄호({})로 묶어 집합을 구분합니다. 멤버, 튜플 및 집합 구문에 대한 자세한 내용은 [멤버, 튜플 및 집합 작업&#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)을 참조하세요.  
+-   MDX 구문은 튜플이 나 멤버를 중괄호 ({및} 문자)로 묶어 집합을 구분 합니다. 멤버, 튜플 및 집합 구문에 대 한 자세한 내용은 [MDX&#41;&#40;멤버, 튜플 ](working-with-members-tuples-and-sets-mdx.md)및 집합 작업을 참조 하세요.  
   
 -   MDX 쿼리는 SELECT 문에서 쿼리 축을 0개, 1개, 2개 또는 128개까지 사용할 수 있습니다. 쿼리의 행과 열이 동작하는 방식이 크게 차이가 나는 SQL과 달리, 각 축은 똑같은 방식으로 동작합니다.  
   
@@ -108,8 +108,8 @@ WHERE ( [Sales Territory].[Southwest] )
   
  자세한 예는 [쿼리 축의 내용 지정&#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md) 및 [Slicer 축의 내용 지정&#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [MDX의 주요 개념&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
- [SELECT 문 & #40; Mdx& #41;](/sql/mdx/mdx-data-manipulation-select)  
+## <a name="see-also"></a>참고 항목  
+ [MDX의 주요 개념 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [SELECT 문 &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)  
   
   

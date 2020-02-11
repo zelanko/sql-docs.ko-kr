@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8c9fb5d1300b6f50f7ef0a765881896069becf0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073897"
 ---
 # <a name="subselects-in-queries"></a>쿼리의 하위 SELECT
@@ -205,8 +205,8 @@ SELECT { [Customer].[Customer Geography].[All Customers]
 |미국|$9,389,789.51|$80,450,596.98|  
 |Oregon|$1,170,991.54|$80,450,596.98|  
 |Portland|$110,649.54|$80,450,596.98|  
-|Washington|$2,467,248.34|$80,450,596.98|  
-|Seattle|$75,164.86|$80,450,596.98|  
+|워싱턴|$2,467,248.34|$80,450,596.98|  
+|시애틀|$75,164.86|$80,450,596.98|  
   
  위의 예에서 Seattle은 Washington의 자식이고 Portland는 Oregon의 자식이며 Oregon과 Washington은 United States의 자식이고 United States는 [Customer Geography].[All Customers]의 자식입니다. 이 예의 표시된 모든 멤버에는 부모 집계 값에 적용되는 다른 형제가 있습니다. 예를 들어, Spokane, Tacoma 및 Everett은 Seattle의 형제 도시이고 모두 Washington Internet Sales Amount에 적용됩니다. Reseller Sales Amount 값은 Customer Geography 특성에 독립적이므로 All 값이 결과에 표시됩니다. 다음 MDX 식은 하위 SELECT 절의 필터링 효과를 설명합니다.  
   
@@ -230,9 +230,9 @@ SELECT { [Customer].[Customer Geography].[All Customers]
 |-|-|-|  
 ||Internet Sales Amount|Reseller Sales Amount|  
 |All Customers|$2,467,248.34|$80,450,596.98|  
-|United States|$2,467,248.34|$80,450,596.98|  
-|Washington|$2,467,248.34|$80,450,596.98|  
-|Seattle|$75,164.86|$80,450,596.98|  
+|미국|$2,467,248.34|$80,450,596.98|  
+|워싱턴|$2,467,248.34|$80,450,596.98|  
+|시애틀|$75,164.86|$80,450,596.98|  
   
  위의 결과는 Washington State의 상위 항목과 하위 항목만 외부 SELECT 문이 실행된 하위 공간의 일부임을 보여 줍니다. Washington을 언급할 때 하위 SELECT에서 Oregon과 다른 모든 형제 주를 언급하지 않았기 때문에 Oregon과 Portland는 하위 큐브에서 제거되었습니다.  
   
@@ -255,13 +255,13 @@ SELECT { [Customer].[Customer Geography].[All Customers]
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||All Products|Accessory|구성 요소|Mountain|Road|Touring|  
+||All Products|Accessory|구성 요소|Mountain|도로|Touring|  
 |All Customers|$29,358,677.22|$604,053.30|(null)|$10,251,183.52|$14,624,108.58|$3,879,331.82|  
 |미국|$9,389,789.51|$217,168.79|(null)|$3,547,956.78|$4,322,438.41|$1,302,225.54|  
 |Oregon|$1,170,991.54|$30,513.17|(null)|$443,607.98|$565,372.10|$131,498.29|  
 |Portland|$110,649.54|$2,834.17|(null)|$47,099.91|$53,917.17|$6,798.29|  
-|Washington|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
-|Seattle|$75,164.86|$2,695.74|(null)|$19,914.53|$44,820.06|$7,734.54|  
+|워싱턴|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
+|시애틀|$75,164.86|$2,695.74|(null)|$19,914.53|$44,820.06|$7,734.54|  
   
 ```  
 SELECT { [Customer].[Customer Geography].[All Customers]  
@@ -280,11 +280,11 @@ SELECT { [Customer].[Customer Geography].[All Customers]
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||All Products|Accessory|구성 요소|Mountain|Road|Touring|  
+||All Products|Accessory|구성 요소|Mountain|도로|Touring|  
 |All Customers|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
 |미국|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
-|Washington|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
-|Seattle|$75,164.86|$2,695.74|(null)|$19,914.53|$44,820.06|$7,734.54|  
+|워싱턴|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
+|시애틀|$75,164.86|$2,695.74|(null)|$19,914.53|$44,820.06|$7,734.54|  
   
  위의 결과는 예상대로 Washington State의 값으로만 All Products 값이 조정되었음을 보여 줍니다.  
   
@@ -305,7 +305,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||All Sales Territories|Australia|캐나다|Central|Northwest|Southwest|  
+||All Sales Territories|오스트레일리아|캐나다|Central|Northwest|Southwest|  
 |All Products|$7,591,495.49|$1,281,059.99|$1,547,298.12|$600,205.79|$1,924,763.50|$2,238,168.08|  
 |Mountain-200 Silver, 38|$1,449,576.15|$248,702.93|$275,052.45|$141,103.65|$349,487.01|$435,230.12|  
 |Mountain-200 Black, 38|$1,722,896.50|$218,024.05|$418,726.43|$123,929.46|$486,694.63|$475,521.93|  
@@ -328,7 +328,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||All Sales Territories|Australia|Canada|Northwest|Southwest|United Kingdom|  
+||All Sales Territories|오스트레일리아|캐나다|Northwest|Southwest|영국|  
 |All Products|$7,938,218.56|$1,096,312.24|$1,474,255.49|$2,042,674.72|$2,238,099.55|$1,086,876.56|  
 |Mountain-200 Silver, 38|$1,520,958.53|$248,702.93|$275,052.45|$349,487.01|$435,230.12|$212,486.03|  
 |Mountain-200 Silver, 42|$1,392,237.14|$198,127.15|$229,679.01|$361,233.58|$407,854.24|$195,343.16|  
@@ -338,7 +338,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
  두 집합의 결과가 다름을 확인할 수 있습니다. 첫 번째 쿼리는 상위 5개 판매 지역에서 잘 팔리는 제품이 무엇인가라는 질문에 답했고, 두 번째 쿼리는 상위 5개 판매 제품이 가장 많이 팔리는 지역이 어디인가라는 질문에 답변했습니다.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>설명  
  하위 SELECT에는 다음과 같은 제한이 있습니다.  
   
 -   WHERE 절은 하위 공간을 필터링하지 않습니다.  
@@ -349,6 +349,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   축 절에서는 HAVING 절을 사용할 수 없습니다. 대신 [필터&#40;MDX&#41;](/sql/mdx/filter-mdx) 함수 식을 사용하세요.  
   
--   기본적으로 계산된 멤버가 하위 select;에서 허용 되지 않습니다. 그러나이 제한을 변경할 수 있습니다, 세션 별로의 값을 할당 하 여는 `SubQueries` 연결 문자열 속성 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 하거나 `DBPROP_MSMD_SUBQUERIES` 속성에서 [지원 되는 XMLA 속성 &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties). 참조 [하위 Select 및 하위 큐브의 계산 멤버](calculated-members-in-subselects-and-subcubes.md) 에 대 한 값에 따라 계산된 멤버의 동작에 대 한 자세한 설명은 `SubQueries` 또는 `DBPROP_MSMD_SUBQUERIES`합니다.  
+-   기본적으로 하위 select에서는 계산 멤버를 사용할 수 없습니다. `SubQueries` 그러나 [지원 되는 XMLA 속성 &#40;xmla&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)의 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 또는 `DBPROP_MSMD_SUBQUERIES` 속성에 값을 할당 하 여 세션 별로이 제한을 변경할 수 있습니다. `SubQueries` 또는 `DBPROP_MSMD_SUBQUERIES`의 값에 따른 계산 멤버의 동작에 대 한 자세한 설명은 [하위 select 및 하위 큐브의 계산 멤버](calculated-members-in-subselects-and-subcubes.md) 를 참조 하세요.  
   
   

@@ -1,5 +1,5 @@
 ---
-title: ASSL XML 표기 규칙 | Microsoft Docs
+title: XML 규칙 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -25,10 +25,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41e0a3fcf4348efcb2108a1205c1d2d8eabfb85c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62736396"
 ---
 # <a name="assl-xml-conventions"></a>ASSL XML 표기 규칙
@@ -36,9 +36,9 @@ ms.locfileid: "62736396"
   
  개체 계층을 나타내기 위해 ASSL에서는 다음과 같은 XML 표기 규칙을 사용합니다.  
   
--   모든 개체 및 속성 요소를 제외 하 고 'xml: lang'와 같은 표준 XML 특성으로 표시 됩니다.  
+-   모든 개체 및 속성은 ' xml: lang ' 같은 표준 XML 특성을 제외 하 고 요소로 표시 됩니다.  
   
--   요소 이름과 열거형 값을 모두 파스칼식 Microsoft.NET Framework 명명 규칙을 따르는 없습니다 밑줄을 사용 합니다.  
+-   요소 이름과 열거형 값은 모두 밑줄을 사용하지 않는 파스칼식 Microsoft .NET Framework 명명 규칙을 따릅니다.  
   
 -   모든 값의 대/소문자는 유지됩니다. 열거형의 값도 대/소문자를 구분합니다.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "62736396"
   
  여러 형식에 같은 이름의 속성이 있는 경우에는 일반적으로 상속을 사용하지 않습니다. 예를 들어, `Name` 및 `ID` 속성은 많은 요소에 나타나지만 이러한 속성은 추상 형식으로 승격되지 않습니다.  
   
-## <a name="whitespace"></a>Whitespace  
+## <a name="whitespace"></a>공백  
  요소 값 안의 공백은 유지됩니다. 그러나 선행 공백과 후행 공백은 항상 잘립니다. 예를 들어, 다음 요소는 동일한 텍스트를 가지고 있지만 텍스트의 공백 수가 다르므로 서로 다른 값을 가진 것으로 처리됩니다.  
   
  `<Description>My text<Description>`  
@@ -121,10 +121,10 @@ ms.locfileid: "62736396"
  Analysis Services는 다음과 같은 표준 XSD(XML 스키마 정의 언어) 데이터 형식을 사용합니다.  
   
  `Int`  
- -231 231-1 범위의 정수 값입니다.  
+ -231 ~ 231-1 범위의 정수 값입니다.  
   
  `Long`  
- 263-1 사이의 263-범위의 정수 값입니다.  
+ -263-263-1 범위의 정수 값입니다.  
   
  `String`  
  다음과 같은 전역 규칙을 따르는 문자열 값입니다.  
@@ -135,10 +135,13 @@ ms.locfileid: "62736396"
   
 -   내부 공백이 유지됩니다.  
   
- `Name` 및 `ID` 속성에는 문자열 요소의 유효한 문자에 대한 특별한 제한이 있습니다. 에 대 한 자세한 내용은 `Name` 하 고 `ID` 규칙을 참조 하십시오 [ASSL 개체 및 개체 특징](assl-objects-and-object-characteristics.md)합니다.  
+ 
+  `Name` 및 `ID` 속성에는 문자열 요소의 유효한 문자에 대한 특별한 제한이 있습니다. 및 `ID` 규칙에 대 `Name` 한 자세한 내용은 [개체 및 개체 특성](assl-objects-and-object-characteristics.md)을 참조 하세요.  
   
  `DateTime`  
- `DateTime` .NET Framework에서 구조입니다. `DateTime` 값은 NULL일 수 없습니다. `DataTime` 데이터 형식에서 지원되는 가장 이른 날짜는 1601년 1월 1일이며 프로그래머는 이 날짜를 `DateTime.MinValue`로 사용할 수 있습니다. 지원되는 가장 낮은 날짜는 `DateTime` 값이 누락되었음을 나타냅니다.  
+ .NET Framework `DateTime` 구조체입니다. 
+  `DateTime` 값은 NULL일 수 없습니다. 
+  `DataTime` 데이터 형식에서 지원되는 가장 이른 날짜는 1601년 1월 1일이며 프로그래머는 이 날짜를 `DateTime.MinValue`로 사용할 수 있습니다. 지원되는 가장 낮은 날짜는 `DateTime` 값이 누락되었음을 나타냅니다.  
   
  `Boolean`  
  {true, false} 또는 {0, 1}처럼 두 개의 값만 가지는 열거형입니다.  
@@ -150,8 +153,8 @@ ms.locfileid: "62736396"
 |-------------------|-------------------|  
 |`Boolean`|False|  
 |`String`|""(빈 문자열)|  
-|`Integer` 또는 `Long`|0 (영)|  
-|`Timestamp`|12시: 00 AM, 1/1/0001 (해당 하는.NET Frameworks `System.DateTime` 틱 수가 0 인)|  
+|`Integer`디스크나`Long`|0(영)|  
+|`Timestamp`|오전 12:00:00, 1/1/0001 (0 틱이 있는 .NET Framework `System.DateTime` 에 해당)|  
   
  존재하기는 하지만 비어 있는 요소는 기본값이 아닌 Null 문자열 값을 갖는 것으로 해석됩니다.  
   
@@ -178,6 +181,6 @@ ms.locfileid: "62736396"
   
  `</Dimension>`  
   
- 상속 된 기본값에 대 한 자세한 내용은 참조 하세요. [ASSL 개체 및 개체 특징](assl-objects-and-object-characteristics.md)합니다.  
+ 상속 된 기본값에 대 한 자세한 내용은 [개체 및 개체 특성](assl-objects-and-object-characteristics.md)을 참조 하세요.  
   
   

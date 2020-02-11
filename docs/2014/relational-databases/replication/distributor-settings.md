@@ -1,5 +1,5 @@
 ---
-title: 배포자 설정 대화 상자 | Microsoft Docs
+title: "' 배포자 설정 ' 대화 상자 | Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d910cdb4baf1d65f67ece14c20a1f384af2a843b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721355"
 ---
-# <a name="sql-server-replication-distributor-settings-dialog-box"></a>SQL Server 복제 배포자 설정 대화 상자
+# <a name="sql-server-replication-distributor-settings-dialog-box"></a>SQL Server 복제 ' 배포자 설정 ' 대화 상자
   **배포자 설정** 대화 상자에서는 복제 모니터의 왼쪽 창에 추가된 배포자에 대한 설정을 변경할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **복제 모니터가 시작될 때 자동으로 연결**  
  복제 모니터에서 배포자에 연결하고 상태 정보를 검색하도록 하려면 선택합니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62721355"
  **새 그룹**  
  새 게시자 그룹을 만들려면 클릭합니다. 게시자 그룹을 사용하면 복제 모니터 내에서 게시자를 편리하게 구성할 수 있습니다. 그룹은 데이터 복제 또는 복제 토폴로지의 서버 간 관계에 영향을 주지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [복제 모니터 시작](monitor/start-the-replication-monitor.md)   
  [복제 모니터링](monitoring-replication.md)  
   

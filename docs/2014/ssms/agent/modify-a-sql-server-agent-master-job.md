@@ -15,23 +15,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c96977ac3b2ed36ab9709d2af86a0d9f79e8eb73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62653887"
 ---
 # <a name="modify-a-sql-server-agent-master-job"></a>SQL Server 에이전트 마스터 작업 수정
-  다음 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 마스터 작업을 수정하는 방법에 대해 설명합니다.  
+  다음 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 마스터 작업을 수정 하는 방법에 대해 설명 합니다.  
   
  [Change the Scheduling Details for a SQL Server Agent Master Job](change-the-scheduling-details-for-a-sql-server-agent-master-job.md)  
   
- [SQL Server 에이전트 마스터 작업에 단계 추가](../object/add-steps-to-a-sql-server-agent-master-job.md)  
+ [Add Steps to a SQL Server Agent Master Job](../object/add-steps-to-a-sql-server-agent-master-job.md)  
   
  [Change Steps of a SQL Server Agent Master Job](change-steps-of-a-sql-server-agent-master-job.md)  
   
  [Remove Steps from a SQL Server Agent Master Job](remove-steps-from-a-sql-server-agent-master-job.md)  
   
- [SQL Server 에이전트 마스터 작업과 연관된 대상 서버 수정](modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md)  
+ [SQL Server 에이전트 마스터 작업과 연결 된 대상 서버&#40;s&#41; 수정](modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md)  
   
   

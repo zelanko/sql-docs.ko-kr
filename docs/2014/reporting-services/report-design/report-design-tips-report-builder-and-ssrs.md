@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ba5cdb309d277e751c2de7fcfbce5dfc02174366
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105095"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>보고서 디자인 팁(보고서 작성기 및 SSRS)
@@ -41,13 +41,13 @@ ms.locfileid: "66105095"
   
  보고서를 디자인할 때 고려해야 할 사항에 대한 자세한 내용은 [보고서 계획&#40;보고서 작성기&#41;](planning-a-report-report-builder.md)을 참조하세요.  
   
-##  <a name="NamingConventions"></a> 보고서, 데이터 원본 및 데이터 집합의 명명 규칙  
+##  <a name="NamingConventions"></a> 보고서, 데이터 원본 및 데이터 세트의 명명 규칙  
   
 -   데이터 원본 및 데이터 원본을 문서화하는 데이터 세트에 대한 명명 규칙을 사용합니다.  
   
     1.  **데이터 원본** 보안상의 이유로 실제 서버 또는 데이터베이스를 사용하지 않으려는 경우 사용자에게 데이터 원본이 무엇인지 나타내는 별칭을 사용합니다.  
   
-    2.  **데이터 집합** 기반이 되는 데이터 원본을 나타내는 이름을 사용합니다.  
+    2.  **데이터 세트.** 기반이 되는 데이터 원본을 나타내는 이름을 사용합니다.  
   
     3.  **데이터 영역** 데이터 영역 유형 및 데이터 영역에 표시되는 데이터의 유형을 나타냅니다. 데이터 영역 이름은 다음 시나리오에서 유용합니다.  
   
@@ -157,8 +157,8 @@ ms.locfileid: "66105095"
   
  이러한 동작의 조합, 보고서 항목의 너비 및 높이 속성, 보고서 본문의 크기, 페이지 높이 및 페이지 너비 정의, 부모 보고서의 여백 설정, 페이징에 대한 렌더러 관련 지원 모두가 결합하여 렌더링된 페이지에 잘 맞는 보고서 항목을 결정합니다. 자세한 내용은 [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [SQL Server 2014의에서 보고서 작성기](../report-builder/report-builder-in-sql-server-2016.md)   
+## <a name="see-also"></a>참고 항목  
+ [2014 SQL Server의 보고서 작성기](../report-builder/report-builder-in-sql-server-2016.md)   
  [Reporting Services 자습서 &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)   
  [자습서 &#40;보고서 작성기&#41;](../report-builder-tutorials.md)  
   

@@ -15,18 +15,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 649c972b001a0627a568f0bd9e1ac2b42d5175ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056315"
 ---
 # <a name="save-copy-of-package"></a>패키지 복사본 저장
+  
   **에서 사용할 수 있는** 패키지 복사본 저장 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]대화 상자를 통해 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 패키지 복사본을 다른 위치에 저장하고 필요에 따라 패키지의 보호 수준을 수정할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **패키지 위치**  
- 패키지 복사본을 저장할 스토리지 위치 유형을 선택합니다. 사용할 수 있는 옵션은 다음과 같습니다.  
+ 패키지 복사본을 저장할 스토리지 위치 유형을 선택합니다. 다음 옵션을 사용할 수 있습니다.  
   
  **SQL Server**  
   
@@ -53,15 +54,15 @@ ms.locfileid: "66056315"
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 사용하는 경우 암호를 입력합니다.  
   
  **패키지 경로**  
- 패키지 경로 입력 하거나 찾아보기 **(...)**  단추 및 패키지를 저장할 폴더를 찾습니다.  
+ 패키지 경로를 입력 하거나 찾아보기 **(...)** 단추를 클릭 하 고 패키지를 저장할 폴더를 찾습니다.  
   
  **보호 수준**  
- 찾아보기 **(...)**  단추를에서 보호 수준을 업데이트 합니다 **패키지 보호 수준** 대화 상자. 자세한 내용은 [패키지 및 프로젝트 보호 수준 대화 상자](../../2014/integration-services/package-and-project-protection-level-dialog-box.md)를 참조하세요.  
+ 찾아보기 **(...)** 단추를 클릭 하 고 **패키지 보호 수준** 대화 상자에서 보호 수준을 업데이트 합니다. 자세한 내용은 [패키지 및 프로젝트 보호 수준 대화 상자](../../2014/integration-services/package-and-project-protection-level-dialog-box.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [패키지 가져오기 대화 상자 UI 참조](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
  [패키지 내보내기 대화 상자 UI 참조](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
  [패키지 저장](save-packages.md)   
- [패키지 가져오기 및 내보내기&#40;SSIS 서비스&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
+ [SSIS 서비스&#41;&#40;패키지 가져오기 및 내보내기](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
   
   

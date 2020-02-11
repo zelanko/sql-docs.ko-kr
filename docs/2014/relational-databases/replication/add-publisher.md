@@ -1,5 +1,5 @@
 ---
-title: 게시자 추가 대화 상자
+title: "' 게시자 추가 ' 대화 상자"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,30 +15,34 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 735162edb8e7eda06e99d69ed74d4752b7f0d950
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676912"
 ---
-# <a name="sql-server-replication-add-publisher-dialog-box"></a>SQL Server 복제 게시자 추가 ' 대화 상자 
-  **게시자 추가** 대화 상자를 사용하여 복제 모니터의 왼쪽 창에 하나 이상의 게시자를 추가할 수 있습니다. 게시자를 추가한 후 왼쪽 창에서 게시자를 선택하면 오른쪽 창에 해당 게시자에 대한 정보가 표시됩니다.  
+# <a name="sql-server-replication-add-publisher-dialog-box"></a>' 게시자 추가 ' 대화 상자 SQL Server 복제 
+  **게시자 추가** 대화 상자를 사용 하 여 복제 모니터의 왼쪽 창에 하나 이상의 게시자를 추가할 수 있습니다. 게시자를 추가한 후 왼쪽 창에서 게시자를 선택하면 오른쪽 창에 해당 게시자에 대한 정보가 표시됩니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **추가**  
- 추가할 게시자 유형을 선택하려면 클릭합니다. **서버에 연결** 대화 상자가 시작됩니다. 다음 옵션을 사용할 수 있습니다.  
+ 추가할 게시자 유형을 선택하려면 클릭합니다. **서버에 연결** 대화 상자가 시작됩니다. 옵션은 다음과 같습니다.  
   
--   **SQL Server 게시자 추가...**  
+-   **SQL Server 게시자 추가 ...**  
   
-     **서버에 연결** 대화 상자를 사용하여 게시자에 연결합니다.  
+     
+  **서버에 연결** 대화 상자를 사용하여 게시자에 연결합니다.  
   
--   **Oracle 게시자 추가...**  
+-   **Oracle 게시자 추가 ...**  
   
-     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대화 상자를 사용하여 Oracle 게시자에 연결된 **서버에 연결** 대화 상자가 시작됩니다.  
+     
   
--   **배포자를 지정한 후 해당 게시자 추가...**  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대화 상자를 사용하여 Oracle 게시자에 연결된 **서버에 연결** 대화 상자가 시작됩니다.  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버에 연결 **대화 상자를 사용하여 하나 이상의 게시자에 연결된** 배포자에 연결합니다.  
+-   **배포자를 지정 하 고 해당 게시자 추가 ...**  
+  
+     
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버에 연결 **대화 상자를 사용하여 하나 이상의 게시자에 연결된** 배포자에 연결합니다.  
   
  게시자 또는 배포자에 성공적으로 연결하면 각 게시자 및 해당 배포자의 이름이 대화 상자 상단의 표에 표시됩니다.  
   
@@ -66,7 +70,7 @@ ms.locfileid: "62676912"
  **새 그룹**  
  새 게시자 그룹을 만들려면 클릭합니다. 게시자 그룹을 사용하면 복제 모니터 내에서 게시자를 편리하게 구성할 수 있습니다. 그룹은 데이터 복제 또는 복제 토폴로지의 서버 간 관계에 영향을 주지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [복제 모니터 시작](monitor/start-the-replication-monitor.md)   
  [복제 모니터링](monitoring-replication.md)  
   

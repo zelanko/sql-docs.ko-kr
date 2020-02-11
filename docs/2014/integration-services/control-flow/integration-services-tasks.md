@@ -27,21 +27,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89f73de6a8474b6e2842de7b1caf0b882ff2b5c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831457"
 ---
 # <a name="integration-services-tasks"></a>Integration Services 태스크
-  태스크는 패키지 제어 흐름에서 수행되는 작업 단위를 정의하는 제어 흐름 요소입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지는 두 개 이상의 태스크로 구성되어 있습니다. 패키지에 둘 이상의 태스크가 포함되면 이러한 태스크는 선행 제약 조건에 의해 제어 흐름으로 연결되고 순차화됩니다.  
+  태스크는 패키지 제어 흐름에서 수행되는 작업 단위를 정의하는 제어 흐름 요소입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 패키지는 하나 이상의 작업으로 구성 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 됩니다. 패키지에 둘 이상의 태스크가 포함되면 이러한 태스크는 선행 제약 조건에 의해 제어 흐름으로 연결되고 순차화됩니다.  
   
  COM을 지원하는 Visual Basic 등의 프로그래밍 언어와 C#과 같은 .NET 프로그래밍 언어를 사용하여 사용자 지정 태스크를 작성할 수도 있습니다.  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 디자이너는 패키지 제어 흐름을 만들기 위한 디자인 화면과 태스크 구성을 위한 사용자 지정 편집기를 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 개체 모델을 프로그래밍하여 프로그래밍 방식으로 패키지를 만들 수도 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssIS](../../includes/ssis-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 사용 하기 위한 그래픽 도구인 디자이너는 패키지 제어 흐름을 만들기 위한 디자인 화면을 제공 하 고 작업을 구성 하기 위한 사용자 지정 편집기를 제공 합니다. 개체 모델을 프로그래밍 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 여 프로그래밍 방식으로 패키지를 만들 수도 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
   
 ## <a name="types-of-tasks"></a>태스크 유형  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 다음 유형의 태스크가 포함되어 있습니다.  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 다음 유형의 태스크가 포함되어 있습니다.  
   
  데이터 흐름 태스크  
  데이터 흐름을 실행하여 데이터를 추출하고 열 수준 변환을 적용하며 데이터를 로드하는 태스크입니다.  
@@ -53,28 +54,35 @@ ms.locfileid: "62831457"
  다른 프로세스와 통신하여 패키지 실행, 프로그램 또는 배치 파일 실행, 패키지 간에 메시지 송수신, 전자 메일 메시지 보내기, WMI(Windows Management Instrumentation) 데이터 읽기, WMI 이벤트 감시 등을 수행하는 태스크입니다.  
   
  SQL Server 태스크  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 및 데이터를 액세스, 복사, 삽입, 삭제 및 수정하는 태스크입니다.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 및 데이터를 액세스, 복사, 삽입, 삭제 및 수정하는 태스크입니다.  
   
  스크립팅 태스크  
  스크립트를 사용하여 패키지 기능을 확장하는 태스크입니다.  
   
  Analysis Services 태스크  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체를 만들고 수정, 삭제 및 처리하는 태스크입니다.  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체를 만들고 수정, 삭제 및 처리하는 태스크입니다.  
   
  유지 관리 태스크  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 백업 및 축소, 인덱스 다시 작성 및 다시 구성, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 실행 등의 관리 기능을 수행하는 태스크입니다.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 백업 및 축소, 인덱스 다시 작성 및 다시 구성, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 실행 등의 관리 기능을 수행하는 태스크입니다.  
   
  사용자 지정 태스크  
- COM을 지원하는 Visual Basic 등의 프로그래밍 언어와 C#과 같은 .NET 프로그래밍 언어를 사용하여 사용자 지정 태스크를 작성할 수도 있습니다. [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 사용자 지정 태스크에 액세스하려는 경우 해당 태스크의 사용자 인터페이스를 만들어 등록할 수 있습니다. 자세한 내용은 [사용자 지정 태스크 개발](../extending-packages-custom-objects/task/developing-a-custom-task.md)을 참조하세요.  
+ COM을 지원하는 Visual Basic 등의 프로그래밍 언어와 C#과 같은 .NET 프로그래밍 언어를 사용하여 사용자 지정 태스크를 작성할 수도 있습니다. 
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 사용자 지정 태스크에 액세스하려는 경우 해당 태스크의 사용자 인터페이스를 만들어 등록할 수 있습니다. 자세한 내용은 [사용자 지정 태스크 개발](../extending-packages-custom-objects/task/developing-a-custom-task.md)을 참조하세요.  
   
 ## <a name="configuration-of-tasks"></a>태스크 구성  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에는 패키지 실행 시 데이터베이스 테이블에서 레코드를 삭제하는 SQL 실행 태스크와 같은 단일 태스크가 포함될 수 있습니다. 그러나 패키지는 일반적으로 여러 개의 태스크를 포함하며 각 태스크는 패키지 제어 흐름의 컨텍스트에서 실행되도록 설정됩니다. 런타임 이벤트에 응답하여 실행되는 작업 흐름인 이벤트 처리기도 태스크를 가질 수 있습니다.  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에는 패키지 실행 시 데이터베이스 테이블에서 레코드를 삭제하는 SQL 실행 태스크와 같은 단일 태스크가 포함될 수 있습니다. 그러나 패키지는 일반적으로 여러 개의 태스크를 포함하며 각 태스크는 패키지 제어 흐름의 컨텍스트에서 실행되도록 설정됩니다. 런타임 이벤트에 응답하여 실행되는 작업 흐름인 이벤트 처리기도 태스크를 가질 수 있습니다.  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하여 패키지에 태스크를 추가하는 방법에 대한 자세한 내용은 [제어 흐름에서 태스크 또는 컨테이너 추가 또는 삭제](add-or-delete-a-task-or-a-container-in-a-control-flow.md)를 참조하세요.  
+ 
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하여 패키지에 태스크를 추가하는 방법에 대한 자세한 내용은 [제어 흐름에서 태스크 또는 컨테이너 추가 또는 삭제](add-or-delete-a-task-or-a-container-in-a-control-flow.md)를 참조하세요.  
   
  프로그래밍 방식으로 패키지에 태스크를 추가하는 방법에 대한 자세한 내용은 [프로그래밍 방식으로 태스크 추가](../building-packages-programmatically/adding-tasks-programmatically.md)를 참조하세요.  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 제공하는 각 태스크의 사용자 지정 대화 상자나 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에 포함된 속성 창을 사용하여 각 태스크를 개별적으로 구성할 수 있습니다. 패키지에는 동일한 유형의 태스크(예: 6개의 SQL 실행 태스크)가 여러 개 포함될 수 있으며 각 태스크는 서로 다르게 구성될 수 있습니다. 자세한 내용은 [태스크 또는 컨테이너의 속성 설정](../set-the-properties-of-a-task-or-container.md)을 참조하세요.  
+ 
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 제공하는 각 태스크의 사용자 지정 대화 상자나 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에 포함된 속성 창을 사용하여 각 태스크를 개별적으로 구성할 수 있습니다. 패키지에는 동일한 유형의 태스크(예: 6개의 SQL 실행 태스크)가 여러 개 포함될 수 있으며 각 태스크는 서로 다르게 구성될 수 있습니다. 자세한 내용은 [태스크 또는 컨테이너의 속성 설정](../set-the-properties-of-a-task-or-container.md)을 참조하세요.  
   
 ## <a name="tasks-connections-and-groups"></a>태스크 연결 및 그룹  
  태스크에 둘 이상의 태스크가 포함되면 이러한 태스크는 선행 제약 조건에 의해 제어 흐름으로 연결되고 순차화됩니다. 자세한 내용은 [Precedence Constraints](precedence-constraints.md)을(를) 참조하세요.  

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9e046aef7cd5fb4049b4bfb92c99272f625224c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62670476"
 ---
 # <a name="delete-queries-visual-database-tools"></a>쿼리 삭제(Visual Database Tools)
@@ -38,10 +38,10 @@ ms.locfileid: "62670476"
 > [!NOTE]  
 >  쿼리를 삭제하는 대신 프로젝트에서 제거하기만 하려면 **제거**를 클릭합니다. 나중에 쿼리 폴더를 마우스 오른쪽 단추로 클릭하고 **항목 추가** 를 선택하면 쿼리를 찾아 프로젝트에 다시 추가할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [쿼리 결과 지우기 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [쿼리 변경 내용 취소 &#40;Visual Database Tools&#41;](discard-changes-made-to-queries-visual-database-tools.md)   
- [방법 도움말 항목을 쿼리 및 뷰 디자인 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools를 &#40;쿼리 결과를 지웁니다&#41;](visual-database-tools.md)   
+ [Visual Database Tools&#41;&#40;쿼리에 대 한 변경 내용을 취소 합니다.](discard-changes-made-to-queries-visual-database-tools.md)   
+ [쿼리 및 뷰 디자인 방법 도움말 항목 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [쿼리 관련 기본 작업 수행&#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

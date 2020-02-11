@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d480fe510b6d2e252faefaae13d7dd3776c8ec5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774887"
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>로그 전달 모니터링(Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "62774887"
   
  이러한 테이블을 쿼리하여 로그 전달 세션의 상태를 모니터링할 수 있습니다. 예를 들어 로그 전달 상태를 알려면 백업 작업, 복사 작업 및 복원 작업의 상태와 기록을 확인합니다. 다음의 모니터링 테이블을 쿼리하여 특정 로그 전달 기록 및 오류 정보를 볼 수 있습니다.  
   
-|Table|Description|  
+|테이블|Description|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](/sql/relational-databases/system-tables/log-shipping-monitor-alert-transact-sql)|경고 작업 ID를 저장합니다.|  
 |[log_shipping_monitor_error_detail](/sql/relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql)|로그 전달 작업에 대한 오류 정보를 저장합니다. 이 테이블을 쿼리하여 에이전트 세션에 대한 오류를 볼 수 있습니다. 필요에 따라 각 오류가 로그된 날짜 및 시간별로 오류를 정렬할 수 있습니다. 각 오류는 예외순으로 로그되고 에이전트 세션당 여러 개의 오류(시퀀스)가 로그될 수 있습니다.|  
@@ -59,7 +59,7 @@ ms.locfileid: "62774887"
 |[sp_help_log_shipping_secondary_database](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql)|**log_shipping_secondary**, **log_shipping_secondary_databases** 및 **log_shipping_monitor_secondary** 테이블에서 보조 데이터베이스 설정을 검색합니다.|보조 서버|  
 |[sp_help_log_shipping_secondary_primary&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql)|이 저장 프로시저는 보조 서버에서 지정된 주 데이터베이스의 설정을 검색합니다.|보조 서버|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [로그 전달 보고서 보기&#40;SQL Server Management Studio&#41;](view-the-log-shipping-report-sql-server-management-studio.md)   
  [로그 전달 저장 프로시저 및 테이블](log-shipping-tables-and-stored-procedures.md)  
   

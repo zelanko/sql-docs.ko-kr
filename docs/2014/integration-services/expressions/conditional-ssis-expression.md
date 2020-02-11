@@ -1,5 +1,5 @@
 ---
-title: '? : (조건부)(SSIS 식) | Microsoft Docs'
+title: '? :(조건부)(SSIS 식) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: baf066638eb8c42dbf4ba7f488c9b0c1ca9acdb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769400"
 ---
 # <a name="--conditional-ssis-expression"></a>? : (조건부)(SSIS 식)
@@ -44,7 +44,7 @@ boolean_expression?expression1:expression2
 ## <a name="result-types"></a>결과 형식  
  *expression1* 또는 *expression2*의 데이터 형식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  *boolean_expression* 이 NULL이면 식 결과도 NULL입니다. *expression1* 또는 *expression2* 중에서 선택한 식이 NULL이면 결과도 NULL입니다. 선택한 식은 NULL이 아니지만 선택하지 않은 식이 NULL이면 결과는 선택한 식의 값입니다.  
   
  *expression1* 및 *expression2* 의 데이터 형식이 같으면 결과도 해당 데이터 형식이 됩니다. 다음은 결과 형식에 적용되는 추가 규칙입니다.  
@@ -55,11 +55,11 @@ boolean_expression?expression1:expression2
   
  식 집합 *expression1* 및 *expression2*는 유효한 데이터 형식으로 계산되고 다음 규칙 중 하나를 따라야 합니다.  
   
--   **Numeric**   *expression1* 및 *expression2* 모두 숫자 데이터 형식이어야 합니다. 데이터 형식의 교집합은 식 계산기가 수행하는 암시적 숫자 변환에 대한 규칙에 지정된 대로 숫자 데이터 형식이어야 합니다. 두 숫자 데이터 형식의 교집합은 Null일 수 없습니다. 자세한 내용은 [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md)을 참조하세요.  
+-   **Numeric***expression1* 및 *expression2* 모두 숫자 데이터 형식이어야 합니다. 데이터 형식의 교집합은 식 계산기가 수행하는 암시적 숫자 변환에 대한 규칙에 지정된 대로 숫자 데이터 형식이어야 합니다. 두 숫자 데이터 형식의 교집합은 Null일 수 없습니다. 자세한 내용은 [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md)을 참조하세요.  
   
--   **String** *expression1*과 *expression2* 모두 문자열 데이터 형식인 DT_STR 또는 DT_WSTR여야 합니다. 두 식이 서로 다른 문자열 데이터 형식으로 계산될 수 있습니다. 결과는 DT_WSTR 데이터 형식으로 둘 중에서 긴 인수의 길이입니다.  
+-   **String***expression1* 및 *expression2* 모두 문자열 데이터 형식(DT_STR 또는 DT_WSTR)이어야 합니다. 두 식이 서로 다른 문자열 데이터 형식으로 계산될 수 있습니다. 결과는 DT_WSTR 데이터 형식으로 둘 중에서 긴 인수의 길이입니다.  
   
--   **Date, Time 또는 Date/Time** *expression1*과 *expression2* 모두 DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET 또는 DT_FILETIME 데이터 형식 중 하나로 계산되어야 합니다.  
+-   **Date, Time 또는 Date/Time***expression1* 및 *expression2* 모두는 DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET 또는 DT_FILETIME 데이터 형식 중 하나로 계산되어야 합니다.  
   
     > [!NOTE]  
     >  시간 데이터 형식으로 계산되는 식과 날짜 또는 날짜/시간 데이터 형식 중 하나로 계산되는 식 사이의 비교는 지원되지 않습니다. 시스템에서 오류가 발생합니다.  
@@ -97,7 +97,7 @@ boolean_expression?expression1:expression2
 ListPrice < 350.00 ? ListPrice * .2 : ListPrice * .1  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [연산자 우선 순위 및 계산 방향](operator-precedence-and-associativity.md)   
  [연산자&#40;SSIS 식&#41;](operators-ssis-expression.md)  
   

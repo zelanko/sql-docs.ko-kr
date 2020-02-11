@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8c9536e14f20e62b944df44ff943b05edb92e5fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060562"
 ---
 # <a name="configure-the-ole-db-command-transformation"></a>OLE DB 명령 변환 구성
@@ -71,8 +71,8 @@ ms.locfileid: "66060562"
   
 15. 업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **저장** 을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [OLE DB Command Transformation](data-flow/transformations/ole-db-command-transformation.md)   
+## <a name="see-also"></a>참고 항목  
+ [명령 변환 OLE DB](data-flow/transformations/ole-db-command-transformation.md)   
  [Integration Services 변환](data-flow/transformations/integration-services-transformations.md)   
  [Integration Services 경로](data-flow/integration-services-paths.md)   
  [데이터 흐름 태스크](control-flow/data-flow-task.md)  

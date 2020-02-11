@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2903eef63152af9b2e9af1434ba12ea91b4058fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721785"
 ---
 # <a name="article-properties---ltarticlegt"></a>아티클 속성 - &lt;Article&gt;
@@ -85,10 +85,10 @@ ms.locfileid: "62721785"
  자세한 내용은 [트랜잭션 아티클에 대한 변경 내용을 전파하는 방법 지정](transactional/transactional-articles-specify-how-changes-are-propagated.md)을 참조하세요.  
   
  **복제**  
- 이 옵션은 저장 프로시저에만 적용됩니다. 저장 프로시저의 정의(CREATE PROCEDURE 문)를 복제할 것인지 아니면 저장 프로시저의 실행을 복제할 것인지를 결정합니다. 저장 프로시저의 실행을 복제하면 구독이 초기화될 때 프로시저 정의가 구독자로 복제됩니다. 게시자에서 이 프로시저를 실행하면 이러한 복제의 결과로 구독자에서 해당 프로시저가 실행됩니다. 이렇게 하면 대규모 일괄 처리 작업이 수행되는 경우 성능을 크게 향상시킬 수 있습니다. 자세한 내용은 [Publishing Stored Procedure Execution in Transactional Replication](transactional/publishing-stored-procedure-execution-in-transactional-replication.md)을 참조하세요.  
+ 이 옵션은 저장 프로시저에만 적용됩니다. 저장 프로시저의 정의(CREATE PROCEDURE 문)를 복제할 것인지 아니면 저장 프로시저의 실행을 복제할 것인지를 결정합니다. 저장 프로시저의 실행을 복제하면 구독이 초기화될 때 프로시저 정의가 구독자로 복제됩니다. 게시자에서 이 프로시저를 실행하면 이러한 복제의 결과로 구독자에서 해당 프로시저가 실행됩니다. 이렇게 하면 대규모 일괄 처리 작업이 수행되는 경우 성능을 크게 향상시킬 수 있습니다. 자세한 내용은 [Publishing Stored Procedure Execution in Transactional Replication](transactional/publishing-stored-procedure-execution-in-transactional-replication.md)를 참조하세요.  
   
 ## <a name="options-for-merge-publications"></a>병합 게시에 대한 옵션  
- 병합 게시의 **문서 속성** 대화 상자에는 **속성**과 **해결 프로그램**의 두 가지 탭이 있습니다.  
+ 병합 게시의 **아티클 속성** 대화 상자에는 **속성** 및 **해결 프로그램**탭이 있습니다.  
   
 ### <a name="properties-tab"></a>속성 탭  
  **동기화 방향**  
@@ -124,9 +124,9 @@ ms.locfileid: "62721785"
  기본 해결 프로그램을 선택한 경우 사용된 구독 유형에 따라 각 구독자에 할당된 우선 순위나 게시자에 기록된 첫 번째 변경 내용을 기준으로 충돌을 해결합니다. 자세한 내용은 [병합 복제 충돌 감지 및 해결](merge/advanced-merge-replication-conflict-detection-and-resolution.md)을 참조하세요.  
   
  **사용자 지정 해결 프로그램 사용(배포자에 등록됨)**  
- 아티클 해결 프로그램( [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서 제공하는 해결 프로그램 또는 사용자가 작성한 해결 프로그램) 사용을 선택한 경우 목록 상자에서 해결 프로그램을 선택해야 합니다. 자세한 내용은 [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)을 참조하세요.  
+ 아티클 해결 프로그램( [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서 제공하는 해결 프로그램 또는 사용자가 작성한 해결 프로그램) 사용을 선택한 경우 목록 상자에서 해결 프로그램을 선택해야 합니다. 자세한 내용은 [고급 병합 복제 충돌 감지 및 해결](merge/advanced-merge-replication-conflict-detection-and-resolution.md)을 참조하세요.  
   
- 해결 프로그램에 입력이 필요한 경우 **해결 프로그램에 필요한 정보 입력** 입력란에 필요한 입력을 지정합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 사용자 지정 해결 프로그램에 필요한 입력에 대한 자세한 내용은 [Microsoft COM 기반 해결 프로그램](merge/advanced-merge-replication-conflict-com-based-resolvers.md)을 참조하세요.  
+ 해결 프로그램에 입력이 필요한 경우 **해결 프로그램에 필요한 정보 입력** 입력란에 필요한 입력을 지정합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 사용자 지정 해결 프로그램에 필요한 입력에 대한 자세한 내용은 [Microsoft COM-Based Resolvers](merge/advanced-merge-replication-conflict-com-based-resolvers.md) 을 참조하세요.  
   
  **요청 시 동기화 작업 중 구독자가 대화형으로 충돌 해결**  
  대화형으로 충돌을 해결하고 구독자가 요청 시 동기화(병합 복제의 기본값)를 사용하게 하려면 이 옵션을 선택합니다. 새 구독 마법사의 **동기화 일정** 페이지에서 요청 시 동기화를 지정합니다. 충돌을 대화형으로 해결하려면 대화형 해결 프로그램 사용자 인터페이스를 사용합니다. 자세한 내용은 [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md)을 참조하세요.  
@@ -135,7 +135,7 @@ ms.locfileid: "62721785"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서 제공하는 모든 COM 기반 해결 프로그램이 서명됩니다. 동기화할 때 해결 프로그램이 유효한지 확인하려면 이 옵션을 선택합니다.  
   
 ## <a name="options-for-oracle-publications"></a>Oracle 게시에 대한 옵션  
- Oracle 게시의 **문서 속성** 대화 상자에는 **속성**과 **데이터 매핑**의 두 가지 탭이 있습니다. Oracle 게시는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시에서 지원하는 속성 중 일부만 지원합니다. 자세한 내용은 [Design Considerations and Limitations for Oracle Publishers](non-sql/design-considerations-and-limitations-for-oracle-publishers.md)을 참조하세요.  
+ Oracle 게시의 **아티클 속성** 대화 상자에는 **속성** 및 **데이터 매핑**탭이 있습니다. Oracle 게시는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시에서 지원하는 속성 중 일부만 지원합니다. 자세한 내용은 [Design Considerations and Limitations for Oracle Publishers](non-sql/design-considerations-and-limitations-for-oracle-publishers.md)을 참조하세요.  
   
 ### <a name="properties-tab"></a>속성 탭  
  **INSERT, UPDATE 및 DELETE 저장 프로시저 복사**  
@@ -172,10 +172,10 @@ ms.locfileid: "62721785"
   
 -   일부 형식의 경우 두 개 이상의 매핑을 선택할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 는 애플리케이션에 다른 매핑이 필요 하지 않는 한 기본 매핑을 사용할 것을 권장합니다. 자세한 내용은 [Data Type Mapping for Oracle Publishers](non-sql/data-type-mapping-for-oracle-publishers.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Create a Publication](publish/create-a-publication.md)   
  [게시 속성 보기 및 수정](publish/view-and-modify-publication-properties.md)   
- [초기 스냅숏 만들기 및 적용](create-and-apply-the-initial-snapshot.md)   
+ [초기 스냅샷 만들기 및 적용](create-and-apply-the-initial-snapshot.md)   
  [구독 다시 초기화](reinitialize-a-subscription.md)   
  [데이터 및 데이터베이스 개체 게시](publish/publish-data-and-database-objects.md)  
   

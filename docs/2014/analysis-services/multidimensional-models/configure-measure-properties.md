@@ -42,10 +42,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7b1acd9e33865f1f60c1d1134e3173af4e4a562b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076613"
 ---
 # <a name="configure-measure-properties"></a>측정값 속성 구성
@@ -58,18 +58,21 @@ ms.locfileid: "66076613"
   
 |속성|정의|  
 |--------------|----------------|  
-|`AggregateFunction`|필수 사항입니다. 측정값이 집계되는 방법을 결정합니다. `Sum`이 기본 집계입니다. 자세한 내용은 각 함수 설명의 [Use Aggregate Functions](use-aggregate-functions.md) 을 참조하세요.|  
+|`AggregateFunction`|필수 사항입니다. 측정값이 집계되는 방법을 결정합니다. 
+  `Sum`이 기본 집계입니다. 자세한 내용은 각 함수 설명의 [Use Aggregate Functions](use-aggregate-functions.md) 을 참조하세요.|  
 |`DataType`|필수 사항입니다. 측정값이 바인딩되는 기본 팩트 테이블 열의 데이터 형식을 지정합니다. 이 값은 기본적으로 원본 열에서 상속됩니다.|  
 |`Description`|클라이언트 애플리케이션에 노출될 수 있는 측정값에 대한 설명을 제공합니다.|  
 |`DisplayFolder`|사용자가 큐브에 연결할 때 측정값이 표시되는 폴더를 지정합니다. 큐브에 많은 측정값이 있을 때 표시 폴더를 사용하여 측정값을 분류하고 사용자 검색 환경을 개선할 수 있습니다.|  
-|`FormatString`|측정값의 `FormatString` 속성을 사용하여 사용자에게 측정값을 표시하는 데 사용되는 형식을 선택할 수 있습니다.<br /><br /> [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 표시 형식 목록이 제공되지만 목록에 없는 여러 가지 추가 형식을 지정할 수 있습니다. Microsoft Visual Basic에서 유효한 사용자 정의 형식이나 명명된 형식을 지정할 수 있습니다.|  
+|`FormatString`|측정값의 `FormatString` 속성을 사용하여 사용자에게 측정값을 표시하는 데 사용되는 형식을 선택할 수 있습니다.<br /><br /> 
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 표시 형식 목록이 제공되지만 목록에 없는 여러 가지 추가 형식을 지정할 수 있습니다. Microsoft Visual Basic에서 유효한 사용자 정의 형식이나 명명된 형식을 지정할 수 있습니다.|  
 |`ID`|필수 사항입니다. 측정값의 고유 ID를 표시합니다. 이 속성은 읽기 전용입니다.|  
 |`MeasureExpression`|측정값을 정의하는 제한된 MDX 식을 지정합니다. 식은 집계되기 전에 리프 수준에서 평가되고 값의 가중치 적용을 허용합니다. 예를 들어 통화 변환에서 판매액은 환율에 따라 가중치가 적용됩니다.|  
 |`Name`|필수 사항입니다. 측정값의 이름을 지정합니다.|  
-|`Source`|필수 사항입니다. 측정값이 바인딩되는 데이터 원본 뷰의 열을 지정합니다. [데이터 원본 및 바인딩&#40;SSAS 다차원&#41;](data-sources-and-bindings-ssas-multidimensional.md)을 참조하세요.|  
+|`Source`|필수 사항입니다. 측정값이 바인딩되는 데이터 원본 뷰의 열을 지정합니다. 
+  [데이터 원본 및 바인딩&#40;SSAS 다차원&#41;](data-sources-and-bindings-ssas-multidimensional.md)을 참조하세요.|  
 |`Visible`|클라이언트 애플리케이션에서 측정값의 표시 유형을 결정합니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [측정값 그룹 속성 구성](configure-measure-group-properties.md)   
  [측정값 수정](../lesson-3-1-modifying-measures.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: '1단원: 시계열 마이닝 모델 및 마이닝 구조 만들기 | Microsoft Docs'
+title: '1 단원: 시계열 마이닝 모델 및 마이닝 구조 만들기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2513bc3837dd224f6561eb0015ced538ea3add8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62678445"
 ---
 # <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>1단원: 시계열 마이닝 모델 및 마이닝 구조 만들기
@@ -23,7 +23,7 @@ ms.locfileid: "62678445"
  이 단원에서는 사용자가 예측 모델과 Microsoft Time Series 알고리즘의 요구 사항을 잘 알고 있다고 가정합니다. 자세한 내용은 [Microsoft Time Series 알고리즘](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)을 참조하세요.  
   
 ## <a name="create-mining-model-statement"></a>CREATE MINING MODEL 문  
- 마이닝 모델을 직접 만들고 기본 마이닝 구조를 자동으로 생성, 하기 위해 사용 하는 [CREATE MINING MODEL &#40;DMX&#41; ](/sql/dmx/create-mining-model-dmx) 문. 이 문의 코드는 다음 부분으로 나눌 수 있습니다.  
+ 마이닝 모델을 직접 만들고 기본 마이닝 구조를 자동으로 생성 하기 위해 [CREATE 마이닝 model &#40;DMX&#41;](/sql/dmx/create-mining-model-dmx) 문을 사용 합니다. 이 문의 코드는 다음 부분으로 나눌 수 있습니다.  
   
 -   모델 이름 지정  
   
@@ -51,7 +51,7 @@ WITH DRILLTHROUGH
 CREATE MINING MODEL [Mining Model Name]  
 ```  
   
- Analysis Services에서는 모델 이름에 "_structure"를 추가하여 기본 구조의 이름을 자동으로 생성하므로 구조 이름이 모델 이름과 달리 고유합니다. DMX에서 개체를 이름 지정에 대 한 자세한 내용은 [식별자 &#40;DMX&#41;](/sql/dmx/identifiers-dmx)합니다.  
+ Analysis Services에서는 모델 이름에 "_structure"를 추가하여 기본 구조의 이름을 자동으로 생성하므로 구조 이름이 모델 이름과 달리 고유합니다. DMX에서 개체의 이름을 지정 하는 방법에 대 한 자세한 내용은 [id &#40;dmx&#41;](/sql/dmx/identifiers-dmx)를 참조 하세요.  
   
  코드의 다음 줄에서는 시계열 모델의 경우 원본 데이터의 시간 단계를 고유하게 식별하는 마이닝 모델에 대한 키 열을 정의합니다. 시간 단계는 열 이름과 데이터 형식 뒤에 `KEY TIME` 키워드로 식별합니다. 시계열 모델에 별도의 계열 키가 있으면 `KEY` 키워드를 사용하여 해당 키를 식별합니다.  
   
@@ -81,9 +81,11 @@ CREATE MINING MODEL [Mining Model Name]
   
 1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 엽니다.  
   
-2.  **서버에 연결** 대화 상자에서 **서버 유형**으로 **Analysis Services**를 선택합니다. **서버 이름**, 형식 `LocalHost`, 또는 인스턴스의 이름을 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 이 단원에 연결 하려는 합니다. **연결**을 클릭합니다.  
+2.  
+  **서버에 연결** 대화 상자에서 **서버 유형**으로 **Analysis Services**를 선택합니다. **서버 이름**,를 입력 `LocalHost`하거나이 단원에서 연결할 인스턴스의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 이름을 입력 합니다. **연결**을 클릭합니다.  
   
-3.  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX**를 클릭합니다.  
+3.  
+  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX**를 클릭합니다.  
   
      비어 있는 새 쿼리가 포함된 쿼리 편집기가 열립니다.  
   
@@ -100,7 +102,7 @@ CREATE MINING MODEL [Mining Model Name]
     [mining model name]   
     ```  
   
-     다음 구문으로 바꿉니다.  
+     다음으로 바꿀 수 있습니다.  
   
     ```  
     [Forecasting_MIXED]  
@@ -112,16 +114,18 @@ CREATE MINING MODEL [Mining Model Name]
     <key columns>  
     ```  
   
-     다음 구문으로 바꿉니다.  
+     다음으로 바꿀 수 있습니다.  
   
     ```  
     [Reporting Date] DATE KEY TIME,  
     [Model Region] TEXT KEY  
     ```  
   
-     `TIME KEY` 키워드는 ReportingDate 열에 값을 정렬하는 데 사용되는 시간 단계 값이 포함되어 있는지 나타냅니다. 값이 고유하고 데이터가 정렬되어 있으면 시간 단계는 날짜 및 시간, 정수 또는 정렬된 모든 데이터 형식일 수 있습니다.  
+     
+  `TIME KEY` 키워드는 ReportingDate 열에 값을 정렬하는 데 사용되는 시간 단계 값이 포함되어 있는지 나타냅니다. 값이 고유하고 데이터가 정렬되어 있으면 시간 단계는 날짜 및 시간, 정수 또는 정렬된 모든 데이터 형식일 수 있습니다.  
   
-     `TEXT` 및 `KEY` 키워드는 ModelRegion 열에 추가 계열 값이 포함되어 있는지 나타냅니다. 하나의 계열 키만 포함할 수 있으며 열의 값은 고유해야 합니다.  
+     
+  `TEXT` 및 `KEY` 키워드는 ModelRegion 열에 추가 계열 값이 포함되어 있는지 나타냅니다. 하나의 계열 키만 포함할 수 있으며 열의 값은 고유해야 합니다.  
   
 4.  다음 내용을  
   
@@ -129,7 +133,7 @@ CREATE MINING MODEL [Mining Model Name]
     < predictable attribute columns> )  
     ```  
   
-     다음 구문으로 바꿉니다.  
+     다음으로 바꿀 수 있습니다.  
   
     ```  
     [Quantity] LONG CONTINUOUS PREDICT,  
@@ -144,7 +148,7 @@ CREATE MINING MODEL [Mining Model Name]
     WITH DRILLTHROUGH  
     ```  
   
-     다음 구문으로 바꿉니다.  
+     다음으로 바꿀 수 있습니다.  
   
     ```  
     USING Microsoft_Time_Series(AUTO_DETECT_PERIODICITY = 0.8, FORECAST_METHOD = 'MIXED')  
@@ -155,7 +159,8 @@ CREATE MINING MODEL [Mining Model Name]
   
      알고리즘 매개 변수 `FORECAST_METHOD`는 사용자가 ARTXP, ARIMA 또는 이 둘의 조합을 사용하여 분석할 데이터를 원하는지 여부를 나타냅니다.  
   
-     `WITH DRILLTHROUGH` 키워드는 사용자가 모델이 완료된 후 원본 데이터의 자세한 통계를 볼 수 있는지 지정합니다. Microsoft 시계열 뷰어를 사용하여 모델을 찾아볼 경우 이 절을 추가해야 합니다. 예측에는 이 절이 필요하지 않습니다.  
+     
+  `WITH DRILLTHROUGH` 키워드는 사용자가 모델이 완료된 후 원본 데이터의 자세한 통계를 볼 수 있는지 지정합니다. Microsoft 시계열 뷰어를 사용하여 모델을 찾아볼 경우 이 절을 추가해야 합니다. 예측에는 이 절이 필요하지 않습니다.  
   
      이제 전체 문이 다음과 같아야 합니다.  
   
@@ -172,12 +177,13 @@ CREATE MINING MODEL [Mining Model Name]
   
     ```  
   
-6.  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
+6.  
+  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
   
-7.  에 **다른 이름으로 저장** 대화 상자에서 적절 한 폴더로 이동 하 고 파일 이름을 `Forecasting_MIXED.dmx`입니다.  
+7.  다른 이름 **으로 저장** 대화 상자에서 해당 폴더로 이동한 다음 파일 `Forecasting_MIXED.dmx`이름을로 합니다.  
   
 ## <a name="executing-the-query"></a>쿼리 실행  
- 마지막 단계는 쿼리를 실행하는 것입니다. 쿼리를 만들어 저장한 다음 서버에 마이닝 모델 및 해당 마이닝 구조를 만들려면 해당 쿼리를 실행해야 합니다. 쿼리 편집기에서 쿼리를 실행 하는 방법에 대 한 자세한 내용은 참조 하세요. [데이터베이스 엔진 쿼리 편집기 &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)합니다.  
+ 마지막 단계는 쿼리를 실행하는 것입니다. 쿼리를 만들어 저장한 다음 서버에 마이닝 모델 및 해당 마이닝 구조를 만들려면 해당 쿼리를 실행해야 합니다. 쿼리 편집기에서 쿼리를 실행 하는 방법에 대 한 자세한 내용은 [데이터베이스 엔진 쿼리 편집기 &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)를 참조 하세요.  
   
 #### <a name="to-execute-the-query"></a>쿼리를 실행하려면  
   
@@ -197,8 +203,8 @@ CREATE MINING MODEL [Mining Model Name]
 ## <a name="next-lesson"></a>다음 단원  
  [2단원: 시계열 마이닝 구조에 마이닝 모델 추가](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
   
-## <a name="see-also"></a>관련 항목  
- [마이닝 모델 콘텐츠 시계열 모델에 대 한 &#40;Analysis Services-데이터 마이닝&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)   
- [Microsoft 시계열 알고리즘 기술 참조](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  
+## <a name="see-also"></a>참고 항목  
+ [시계열 모델에 대 한 마이닝 모델 콘텐츠 &#40;Analysis Services 데이터 마이닝&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)   
+ [Microsoft Time Series 알고리즘 기술 참조](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  
   
   

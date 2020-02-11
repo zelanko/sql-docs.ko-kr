@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 52781de1cd4b6309f3ebeb9a2c59ae85b0b32dbd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754592"
 ---
 # <a name="pause-or-resume-a-database-mirroring-session-sql-server"></a>데이터베이스 미러링 세션 일시 중지 또는 재개(SQL Server)
@@ -32,13 +32,13 @@ ms.locfileid: "62754592"
   
      [보안](#Security)  
   
--   **ReplaceThisText를 수행하려면:**  
+-   **ReplaceThisText으로 다음을 사용 합니다.**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **후속 작업:**  [데이터베이스 미러링을 일시 중지하거나 재개한 후](#FollowUp)  
+-   **후속 작업:**  [데이터베이스 미러링을 일시 중지 하거나 재개 한 후](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  언제든지 데이터베이스 미러링 세션을 일시 중지하여 병목 상태에서 성능을 향상시킬 수 있으며, 일시 중지된 세션을 언제든지 재개할 수 있습니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "62754592"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  데이터베이스에 대한 ALTER 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -58,7 +58,8 @@ ms.locfileid: "62754592"
   
 1.  데이터베이스 미러링 세션 중에 주 서버 인스턴스에 연결하고 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
   
-2.  **데이터베이스**를 확장하고 해당 데이터베이스를 선택합니다.  
+2.  
+  **데이터베이스**를 확장하고 해당 데이터베이스를 선택합니다.  
   
 3.  데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**를 선택한 다음 **미러**를 클릭합니다. **데이터베이스 속성** 대화 상자의 **미러링** 페이지가 열립니다.  
   
@@ -108,21 +109,21 @@ ms.locfileid: "62754592"
     ALTER DATABASE AdventureWorks2012 SET PARTNER RESUME;  
     ```  
   
-##  <a name="FollowUp"></a> 후속 작업: 데이터베이스 미러링을 일시 중지하거나 재개한 후  
+##  <a name="FollowUp"></a>후속 작업: 데이터베이스 미러링을 일시 중지 하거나 재개 한 후  
   
--   **데이터베이스 미러링을 일시 중지한 후**  
+-   **데이터베이스 미러링을 일시 중지 한 후**  
   
      주 데이터베이스에서 전체 트랜잭션 로그를 피하기 위해 예방 조치를 취해야 합니다. 자세한 내용은 [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)을(를) 참조하세요.  
   
--   **데이터베이스 미러링을 재개한 후**  
+-   **데이터베이스 미러링을 재개 한 후**  
   
      데이터베이스 미러링을 재개하면 미러 데이터베이스는 SYNCHRONIZING 상태가 됩니다. 보안 수준이 FULL인 경우 미러 데이터베이스는 주 데이터베이스와 동기화되고 SYNCHRONIZED 상태가 됩니다. 이 시점에서 장애 조치(Failover)가 가능합니다. 미러링 모니터가 있고 ON 상태인 경우 자동 장애 조치가 가능합니다. 미러링 모니터가 없는 경우 수동 장애 조치가 가능합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [데이터베이스 미러링 제거&#40;SQL Server&#41;](remove-database-mirroring-sql-server.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링&#40;SQL Server&#41;](database-mirroring-sql-server.md)  
   
   

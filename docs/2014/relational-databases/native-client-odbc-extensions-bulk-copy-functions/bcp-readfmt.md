@@ -19,13 +19,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 76ccc4271877b81ae103a89b5df727b74017d9ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62688666"
 ---
-# <a name="bcpreadfmt"></a>bcp_readfmt
+# <a name="bcp_readfmt"></a>bcp_readfmt
   지정한 형식 파일에서 데이터 파일 형식 정의를 읽어 옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -49,17 +49,17 @@ szFormatFile
  *szFormatFile*  
  데이터 파일에 대한 서식 값이 포함된 파일의 경로 및 파일 이름입니다.  
   
-## <a name="returns"></a>반환 값  
+## <a name="returns"></a>반환  
  SUCCEED 또는 FAIL  
   
-## <a name="remarks"></a>Remarks  
- 이후에 `bcp_readfmt` 형식 값을 읽고을 적절 하 게 호출 [bcp_columns](bcp-columns.md) 하 고 [bcp_colfmt](bcp-colfmt.md)합니다. 형식 파일의 구문을 분석하여 이러한 호출을 수행할 필요가 없습니다.  
+## <a name="remarks"></a>설명  
+ 는 `bcp_readfmt` 형식 값을 읽은 후 [bcp_columns](bcp-columns.md) 및 [bcp_colfmt](bcp-colfmt.md)에 대 한 적절 한 호출을 수행 합니다. 형식 파일의 구문을 분석하여 이러한 호출을 수행할 필요가 없습니다.  
   
- 형식 파일을 저장하려면 [bcp_writefmt](bcp-writefmt.md)를 호출합니다. 에 대 한 호출 `bcp_readfmt` 저장 된 서식을 참조할 수 있습니다. 자세한 내용은 [bcp_init](bcp-init.md)를 참조하십시오.  
+ 형식 파일을 저장하려면 [bcp_writefmt](bcp-writefmt.md)를 호출합니다. 에 대 `bcp_readfmt` 한 호출은 저장 된 형식을 참조할 수 있습니다. 자세한 내용은 [bcp_init](bcp-init.md)를 참조하십시오.  
   
- 또는 대량 복사 유틸리티 (**bcp**)에서 참조할 수 있는 파일에서 사용자 정의 데이터 형식을 저장할 수 `bcp_readfmt`입니다. 에 대 한 자세한 내용은 **bcp** 의 구조 및 유틸리티 **bcp** 데이터 서식 파일을 참조 하십시오. [대량 데이터 가져오기 및 내보내기의 &#40;SQL Server&#41;](../import-export/bulk-import-and-export-of-data-sql-server.md).  
+ 또는**bcp**(대량 복사 유틸리티)는에서 `bcp_readfmt`참조할 수 있는 파일에 사용자 정의 데이터 형식을 저장할 수 있습니다. **Bcp 유틸리티와** **bcp** 데이터 형식 파일의 구조에 대 한 자세한 내용은 [데이터 대량 가져오기 및 내보내기 &#40;SQL Server&#41;](../import-export/bulk-import-and-export-of-data-sql-server.md)를 참조 하세요.  
   
- `BCPDELAYREADFMT` 의 값을 *eOption* 의 매개 변수 [bcp_control](bcp-control.md) bcp_readfmt의 동작을 수정 합니다.  
+ Bcp_control `BCPDELAYREADFMT` *eoption* 매개 변수의 값은 bcp_readfmt [](bcp-control.md) 동작을 수정 합니다.  
   
 > [!NOTE]  
 >  형식 파일은 **bcp** 유틸리티 4.2 이상 버전에서 생성된 파일이어야 합니다.  
@@ -109,7 +109,7 @@ if (bcp_exec(hdbc, &nRowsProcessed) == SUCCEED)
 // Carry on.  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [대량 복사 함수](sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>참고 항목  
+ [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

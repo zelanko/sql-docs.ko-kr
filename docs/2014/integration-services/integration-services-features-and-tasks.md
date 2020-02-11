@@ -1,5 +1,5 @@
 ---
-title: Integration Services 기능 및 태스크 | Microsoft Docs
+title: Integration Services 기능 및 작업 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/21/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 64b1945ba990278241d38cebb029feab86d6d7bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058027"
 ---
 # <a name="integration-services-features-and-tasks"></a>Integration Services 기능 및 태스크
-  해당 누구나-디자이너, 개발자, 분석가 또는 관리자 정보를 찾을-만들고 개발 하는 데 필요한 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지 있습니다. 그런 다음 이러한 패키지를 애플리케이션 및 웹 사이트에 통합하는 방법에 대해 설명합니다.  
+  디자이너, 개발자, 분석가 또는 관리자가 패키지를 만들고 개발 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 하는 데 필요한 정보를 찾아 볼 수 있습니다. 그런 다음 이러한 패키지를 애플리케이션 및 웹 사이트에 통합하는 방법에 대해 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [Integration Services &#40;SSIS&#41; 및 Studio 환경](integration-services-ssis-development-and-management-tools.md)  
@@ -32,9 +32,9 @@ ms.locfileid: "66058027"
   
  [Integration Services&#40;SSIS&#41; 프로젝트](integration-services-ssis-projects-and-solutions.md)  
   
- [Integration Services &#40;SSIS&#41; 매개 변수](integration-services-ssis-package-and-project-parameters.md)  
+ [SSIS&#41; 매개 변수 &#40;Integration Services](integration-services-ssis-package-and-project-parameters.md)  
   
- [Integration Services &#40;SSIS&#41; 쿼리](integration-services-ssis-queries.md)  
+ [SSIS&#41; 쿼리 Integration Services &#40;](integration-services-ssis-queries.md)  
   
  [Integration Services&#40;SSIS&#41; 식](expressions/integration-services-ssis-expressions.md)  
   

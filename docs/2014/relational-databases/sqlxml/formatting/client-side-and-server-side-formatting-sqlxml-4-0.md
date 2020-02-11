@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ab8293cdd0e2d839bb3d850116bf13f0cc0a7f58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012306"
 ---
 # <a name="client-side-and-server-side-formatting-sqlxml-40"></a>클라이언트 쪽 및 서버 쪽 서식 지정(SQLXML 4.0)
@@ -29,10 +29,10 @@ ms.locfileid: "66012306"
   
 -   클라이언트 쪽 서식 지정  
   
- 이 섹션에서는 클라이언트 쪽 이나 서버 쪽에서 데이터베이스에 대해 실행 하는 쿼리에 의해 생성 되는 행 집합에서 XML 문서 서식을 지정 하는 방법에 대 한 정보도 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
+ 이 섹션에서는의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]데이터베이스에 대해 실행 되는 쿼리에서 생성 된 행 집합에서 클라이언트 쪽 이나 서버 쪽에서 XML 문서에 서식을 지정 하는 방법에 대 한 정보를 제공 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [클라이언트 쪽 및 서버 쪽 XML 서식 지정 아키텍처 &#40;SQLXML 4.0&#41;](server-side-xml-formatting-sqlxml-4-0.md)  
+ [클라이언트 쪽 및 서버 쪽 XML 서식 &#40;SQLXML 4.0&#41;의 아키텍처](server-side-xml-formatting-sqlxml-4-0.md)  
  아키텍처 다이어그램을 제공하고 SQLXML의 클라이언트 쪽과 서버 쪽 서식 지정 아키텍처에 대해 개괄적으로 설명합니다.  
   
  [서버 쪽 XML 서식 지정 &#40;SQLXML 4.0&#41;](server-side-xml-formatting-sqlxml-4-0.md)  
@@ -41,7 +41,7 @@ ms.locfileid: "66012306"
  [클라이언트 쪽 XML 서식 지정 &#40;SQLXML 4.0&#41;](client-side-xml-formatting-sqlxml-4-0.md)  
  클라이언트에서 FOR XML을 사용하는 방법을 비롯하여 클라이언트 쪽 XML 서식 지정에 대해 설명합니다.  
   
- [클라이언트 쪽 XPath와 서버 쪽 XML 서식 지정 &#40;SQLXML 4.0&#41;](client-side-vs-server-side-xml-formatting-sqlxml-4-0.md)  
+ [클라이언트 쪽 및 서버 쪽 XML 서식 지정 &#40;SQLXML 4.0&#41;](client-side-vs-server-side-xml-formatting-sqlxml-4-0.md)  
  클라이언트 쪽 XML 서식 지정과 서버 쪽 XML 서식 지정의 구체적인 차이점에 대해 설명합니다.  
   
   

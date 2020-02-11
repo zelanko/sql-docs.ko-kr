@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2d4b110446ae27335f65e83958a1a153350ccbcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62704566"
 ---
 # <a name="creating-a-table-tutorial"></a>테이블 만들기(자습서)
@@ -27,7 +27,7 @@ ms.locfileid: "62704566"
  데이터 형식 목록과 각 형식에 대한 설명 링크를 보려면 [데이터 형식&#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)을 참조하세요.  
   
 > [!NOTE]  
->  [!INCLUDE[ssDE](../includes/ssde-md.md)]을 대/소문자를 구분하거나 구분하지 않도록 설치할 수 있습니다. [!INCLUDE[ssDE](../includes/ssde-md.md)] 을 대/소문자를 구분하도록 설치할 경우 개체 이름은 항상 대/소문자가 동일해야 합니다. 예를 들면 OrderData 테이블은 ORDERDATA 테이블과 다릅니다. [!INCLUDE[ssDE](../includes/ssde-md.md)] 을 대/소문자를 구분하지 않도록 설치할 경우 이러한 두 테이블 이름은 같은 것으로 간주되므로 해당 이름을 한 번만 사용할 수 있습니다.  
+>  [!INCLUDE[ssDE](../includes/ssde-md.md)] 을 대/소문자를 구분하거나 구분하지 않도록 설치할 수 있습니다. [!INCLUDE[ssDE](../includes/ssde-md.md)] 을 대/소문자를 구분하도록 설치할 경우 개체 이름은 항상 대/소문자가 동일해야 합니다. 예를 들면 OrderData 테이블은 ORDERDATA 테이블과 다릅니다. [!INCLUDE[ssDE](../includes/ssde-md.md)] 을 대/소문자를 구분하지 않도록 설치할 경우 이러한 두 테이블 이름은 같은 것으로 간주되므로 해당 이름을 한 번만 사용할 수 있습니다.  
   
 ### <a name="to-create-a-database-to-contain-the-new-table"></a>새 테이블을 포함하도록 데이터베이스를 만들려면  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62704566"
     GO  
     ```  
   
-### <a name="to-create-a-table"></a>테이블 형식 보고서를 만들려면  
+### <a name="to-create-a-table"></a>테이블 만들기  
   
 -   쿼리 편집기 창에서 다음 코드를 입력하고 실행하여 `Products`라는 간단한 테이블을 만듭니다. 이 테이블에 있는 열의 이름은 `ProductID`, `ProductName`, `Price`및 `ProductDescription`입니다. `ProductID` 열은 테이블의 기본 키입니다. `int`, `varchar(25)`, `money`및 `text` 는 모두 데이터 형식입니다. 행을 삽입하거나 변경할 경우 `Price` 및 `ProductionDescription` 열만 데이터를 가질 수 없습니다. 이 문에는 스키마라고 하는 선택적 요소(`dbo.`)가 포함되어 있습니다. 스키마는 테이블을 소유하는 데이터베이스 개체입니다. 관리자의 경우에 기본 스키마는 `dbo` 입니다. `dbo` 는 데이터베이스 소유자를 나타냅니다.  
   
@@ -71,9 +71,9 @@ ms.locfileid: "62704566"
     ```  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
- [테이블에서 데이터 삽입 및 업데이트&#40;자습서&#41;](../t-sql/lesson-1-3-inserting-and-updating-data-in-a-table.md)  
+ [테이블에서 데이터 삽입 및 업데이트 &#40;자습서&#41;](../t-sql/lesson-1-3-inserting-and-updating-data-in-a-table.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [CREATE TABLE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)  
   
   

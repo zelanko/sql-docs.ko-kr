@@ -14,10 +14,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: c1e96d37ae3d140eb2efddd6d3df5c656cc3afd7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013997"
 ---
 # <a name="spatial-reference-identifiers-srids"></a>SRID(Spatial Reference Identifier)
@@ -28,14 +28,14 @@ ms.locfileid: "66013997"
   
  공간 열은 SRID가 다른 개체를 포함할 수 있습니다. 그러나 SRID가 같은 단일 공간 인스턴스만 데이터에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공간 데이터 메서드를 사용하는 작업을 수행할 때 사용할 수 있습니다. 두 공간 데이터 인스턴스에서 파생되는 모든 공간 메서드의 결과는 이러한 인스턴스에 동일한 SRID가 있을 경우에만 유효합니다. 이 SRID는 인스턴스의 좌표를 결정하는 데 사용되는 동일한 측정 단위, 데이터 및 프로젝션을 기준으로 합니다. 가장 일반적인 SRID의 측정 단위는 미터 또는 제곱미터입니다.  
   
- 두 공간 인스턴스의 SRID가 같지 않을 경우 이 인스턴스에서 사용되는 `geometry` 또는 `geography` 데이터 형식 메서드의 결과로 NULL이 반환됩니다. 예를 들어 NULL이 아닌 결과를 반환하는 다음 조건자 조건의 경우 `geometry1` 및 `geometry2`의 두 `geometry` 인스턴스의 SRID가 같아야 합니다.  
+ 두 공간 인스턴스의 SRID가 같지 않을 경우 이 인스턴스에서 사용되는 `geometry` 또는 `geography` 데이터 형식 메서드의 결과로 NULL이 반환됩니다. 예를 들어 NULL이 아닌 결과를 반환하는 다음 조건자 조건의 경우 `geometry` 및 `geometry1`의 두 `geometry2` 인스턴스의 SRID가 같아야 합니다.  
   
  `geometry1.STIntersects(geometry2) = 1`  
   
 > [!NOTE]  
 >  공간 참조 확인 시스템은 지도 제작, 측량 및 측지 데이터 스토리지를 위해 개발된 표준 집합인 [EPSG(European Petroleum Survey Group)](https://go.microsoft.com/fwlink/?LinkId=99349) 표준에 따라 정의됩니다. 이 표준은 OGP(Oil and Gas Producers) Surveying and Positioning Committee에서 소유하고 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [공간 데이터 형식 개요](spatial-data-types-overview.md)  
   
   

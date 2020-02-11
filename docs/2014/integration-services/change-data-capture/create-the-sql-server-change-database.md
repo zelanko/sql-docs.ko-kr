@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 72785cffa01da7bf00248d442b1d3ce4103c45a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771369"
 ---
 # <a name="create-the-sql-server-change-database"></a>SQL Server 변경 데이터베이스 만들기
@@ -31,26 +31,26 @@ ms.locfileid: "62771369"
   
  SQL 서버에 연결 대화 상자에서 데이터를 입력하는 방법은 [SQL Server Connection for Instance Creation](sql-server-connection-for-instance-creation.md)을 참조하십시오.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **Oracle CDC 인스턴스**  
  만들려는 CDC 인스턴스에 대한 다음 정보를 입력합니다.  
   
 -   **이름**: 새 서비스의 이름을 입력합니다. 이 이름은 새 변경 데이터베이스의 이름이기도 합니다.  
   
--   **설명**: 새 인스턴스를 식별하는 데 도움이 되는 설명을 입력합니다. 이 옵션은 선택적입니다.  
+-   **설명**: 새 인스턴스를 식별하는 데 도움이 되는 설명을 입력합니다. 이 구성 요소는 선택 사항입니다.  
   
  **SQL Server 변경 데이터베이스**  
  이 섹션은 데이터베이스를 만드는 데 사용됩니다.  
   
-1.  **데이터베이스 변경**: 새 변경 데이터베이스의 이름입니다. 데이터베이스의 이름은 인스턴스에 대해 지정한 이름과 동일합니다. 이 읽기 전용 필드에는 데이터베이스의 전체 경로가 표시됩니다.  
+1.  **변경 데이터베이스**: 이 이름은 새 변경 데이터베이스의 이름이기도 합니다. 데이터베이스의 이름은 인스턴스에 대해 지정한 이름과 동일합니다. 이 읽기 전용 필드에는 데이터베이스의 전체 경로가 표시됩니다.  
   
-2.  **데이터베이스 만들기**: **데이터베이스 만들기**를 클릭하여 데이터베이스를 만들 수 있습니다.  
+2.  **데이터베이스 만들기**: **데이터베이스 만들기** 를 클릭하여 데이터베이스를 만들 수 있습니다.  
   
      데이터베이스를 만들려면 로그인에 `sysasmin` 서버 역할이 있어야 합니다. 자세한 내용은 위의 보안 참고 사항을 참조하십시오.  
   
      데이터베이스를 만든 후 **다음** 을 클릭하여 [Connect to an Oracle Source Database](connect-to-an-oracle-source-database.md)합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 변경 데이터베이스 인스턴스를 만드는 방법](how-to-create-the-sql-server-change-database-instance.md)   
  [Oracle CDC Service](the-oracle-cdc-service.md)  
   

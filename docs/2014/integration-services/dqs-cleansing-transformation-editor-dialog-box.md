@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cbb5ca8c048b42313b4776b4a2e4b99e44eec406
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059415"
 ---
 # <a name="dqs-cleansing-transformation-editor-dialog-box"></a>DQS 정리 변환 편집기 대화 상자
@@ -54,7 +54,7 @@ ms.locfileid: "66059415"
  연결된 데이터 원본에 대한 기존 DQS 기술 자료를 선택합니다. DQS 기술 자료에 대한 자세한 내용은 [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)을 참조하십시오.  
   
  **연결 암호화**  
- DQS 서버 사이의 데이터 전송을 암호화 하기 위해 연결을 암호화할지 여부를 지정 하 고 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]입니다.  
+ DQS 서버와 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]간 데이터 전송을 암호화 하기 위해 연결을 암호화할지 여부를 지정 합니다.  
   
  **사용 가능한 도메인**  
  선택한 기술 자료에 사용 가능한 도메인을 나열합니다. 단일 도메인과 둘 이상의 단일 도메인을 포함하는 복합 도메인의 두 가지 도메인 유형이 있습니다.  
@@ -108,10 +108,10 @@ ms.locfileid: "66059415"
  데이터 수정 이유를 포함할지 여부를 나타냅니다.  
   
  **추가된 데이터**  
- 기존 참조 데이터 공급자에서 받은 추가 데이터를 출력할지 여부를 나타냅니다. 자세한 내용은 [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md)을(를) 참조하세요.  
+ 기존 참조 데이터 공급자에서 받은 추가 데이터를 출력할지 여부를 나타냅니다. 자세한 내용은 [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md)을 참조하세요.  
   
  **추가된 데이터 스키마**  
- 데이터 스키마를 출력할지 여부를 나타냅니다. 자세한 내용은 [참조 데이터에 도메인 또는 복합 도메인 연결](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)합니다.  
+ 데이터 스키마를 출력할지 여부를 나타냅니다. 자세한 내용은 [참조 데이터에 도메인 또는 복합 도메인 연결](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)을 참조 하세요.  
   
 ##  <a name="manager"></a> DQS 정리 연결 관리자 대화 상자에서 옵션 설정  
  **서버 이름**  
@@ -128,7 +128,7 @@ ms.locfileid: "66059415"
   
 3.  **추가**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 원본에 데이터 품질 규칙 적용](data-flow/transformations/apply-data-quality-rules-to-data-source.md)  
   
   

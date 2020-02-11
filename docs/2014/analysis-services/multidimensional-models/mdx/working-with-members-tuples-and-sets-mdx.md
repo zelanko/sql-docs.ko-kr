@@ -1,5 +1,5 @@
 ---
-title: With Members, Tuples, and Sets (MDX) 작업 | Microsoft Docs
+title: 멤버, 튜플 및 집합 작업 (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -28,10 +28,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a8532b20ae5b71a9ef2353893272c628b9a80b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073677"
 ---
 # <a name="working-with-members-tuples-and-sets-mdx"></a>멤버, 튜플 및 집합 작업(MDX)
@@ -79,7 +79,7 @@ FROM [Adventure Works]
  튜플 함수에 대한 자세한 내용은 [MDX 함수 참조&#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)를 참조하세요.  
   
 ## <a name="set-functions"></a>집합 함수  
- MDX는 집합을 반환하는 여러 함수를 제공합니다. 명시적으로 튜플을 입력하고 중괄호로 묶는 것이 집합 검색을 위한 유일한 방법은 아닙니다. 집합을 반환하는 멤버 함수에 대한 자세한 내용은 [MDX의 주요 개념&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)을 참조하세요. 여러 가지 추가 집합 함수가 있습니다.  
+ MDX는 집합을 반환하는 여러 함수를 제공합니다. 명시적으로 튜플을 입력하고 중괄호로 묶는 것이 집합 검색을 위한 유일한 방법은 아닙니다. 집합을 반환하는 멤버 함수에 대한 자세한 내용은 [MDX의 주요 개념&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)를 참조하세요. 여러 가지 추가 집합 함수가 있습니다.  
   
  콜론 연산자를 사용하면 멤버의 자연 순서를 사용해 집합을 만들 수 있습니다. 예를 들어 다음 예의 집합은 2002년 1분기부터 4분기까지의 튜플을 포함합니다.  
   
@@ -125,9 +125,9 @@ FROM [Adventure Works]
 ## <a name="string-functions"></a>문자열 함수  
  문자열 함수는 MDX 식에 대해 실행되며 문자열을 반환합니다. 예를 들어 [UniqueName&#40;MDX&#41;](/sql/mdx/uniquename-mdx) 함수는 차원, 계층, 수준 또는 멤버의 고유 이름이 들어 있는 문자열 값을 반환합니다. 문자열 함수에 대한 자세한 내용은 [MDX 함수 참조&#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [MDX의 주요 개념&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
- [MDX 쿼리 기본 사항 & #40; Analysis Services & #41;](mdx-query-fundamentals-analysis-services.md)   
- [MDX 함수 참조&#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
+## <a name="see-also"></a>참고 항목  
+ [MDX의 주요 개념 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [MDX 쿼리 기본 사항 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
+ [Mdx 함수 참조 &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
   
   

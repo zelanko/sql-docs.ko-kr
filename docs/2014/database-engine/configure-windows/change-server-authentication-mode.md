@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43919e335700a23a4174eb1bdf42c36c0c08fe2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812302"
 ---
 # <a name="change-server-authentication-mode"></a>서버 인증 모드 변경
@@ -35,7 +35,7 @@ ms.locfileid: "62812302"
   
 -   **다음을 사용하여 서버 인증 모드를 변경합니다.**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -58,7 +58,7 @@ ms.locfileid: "62812302"
   
 #### <a name="to-enable-the-sa-login"></a>sa 로그인을 사용하려면  
   
-1.  개체 탐색기에서 확장 **보안**로그인을 확장, 마우스 오른쪽 단추로 클릭 `sa`를 클릭 하 고 **속성**합니다.  
+1.  개체 탐색기에서 **보안**, 로그인을 차례로 확장 하 고를 마우스 `sa`오른쪽 단추로 클릭 한 다음 **속성**을 클릭 합니다.  
   
 2.  **일반** 페이지에서 로그인에 대한 암호를 만들고 확인할 수 있습니다.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "62812302"
   
     ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [강력한 암호](../../relational-databases/security/strong-passwords.md)   
  [SQL Server 설치에 대한 보안 고려 사항](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)   

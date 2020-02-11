@@ -1,5 +1,5 @@
 ---
-title: 관리 인스턴스 세부 정보 (SQL Server 유틸리티) | Microsoft Docs
+title: Managed Instance 세부 정보 (SQL Server 유틸리티) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,26 +11,26 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d2b01eceff763d554644065fdb5137695bd82f69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774346"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>관리되는 인스턴스 세부 정보(SQL Server 유틸리티)
   유틸리티 탐색기의 관리되는 인스턴스 뷰에 나오는 정보는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 개별 인스턴스에 대한 사용 데이터, CPU 사용 기록, 파일 수준의 스토리지 사용 세부 정보, 그리고 정책 임계 값을 확인 및 업데이트하는 기능을 제공합니다. 정책 임계 값은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스 수준, 컴퓨터, 데이터베이스 파일과 로그 파일, 그리고 스토리지 볼륨 수준에서 제어할 수 있습니다. 개별 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 관리되는 인스턴스 속성 정보를 볼 수도 있습니다.  
   
 ## <a name="uielement-list"></a>UIElement 목록  
- 목록 뷰  
+ 목록 보기  
  창 맨 위에 있는 목록 뷰에는 개별 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 대한 정보가 ComputerName\InstanceName 형식의 행으로 나열 표시됩니다.  
   
  상태 아이콘은 각 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스의 상태 요약을 사용 범주별로 보여 줍니다.  
   
--   녹색 확인 표시 - ![](../../2014/database-engine/media/well-utilized.gif "Well_utilized") - 리소스 사용 정책을 위반하지 않는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 관리되는 인스턴스 수입니다. 리소스 사용이 정상적입니다.  
+-   녹색 확인 표시 - ![](../../2014/database-engine/media/well-utilized.gif "Well_utilized") - 리소스 사용 정책을 위반하지 않는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 관리되는 인스턴스 수 입니다. 리소스 사용이 정상적입니다.  
   
 -   녹색 아래쪽 화살표 - ![](../../2014/database-engine/media/utility-down-arrow.gif "Utility_down_arrow") - 리소스가 사용 미달 상태입니다.  
   
--   빨강색 위쪽 화살표 - ![](../../2014/database-engine/media/utility-up-arrow.gif "Utility_down_arrow") - 리소스가 초과 사용 상태입니다.  
+-   빨강 위쪽 화살표 - ![](../../2014/database-engine/media/utility-up-arrow.gif "Utility_up_arrow") - 리소스가 사용 과다 상태입니다.  
   
  목록 뷰의 열 순서는 마우스로 왼쪽이나 오른쪽으로 끌어서 변경할 수 있습니다. 목록 뷰에서 열 머리글을 마우스 오른쪽 단추로 클릭하고 열을 선택하거나 선택을 취소하여 열을 추가하거나 삭제할 수 있습니다. 오른쪽 클릭 메뉴에도 정렬 옵션이 있습니다. 열 이름 위쪽을 클릭하여 정렬을 활성화할 수도 있습니다.  
   
@@ -38,11 +38,11 @@ ms.locfileid: "62774346"
   
  기본적으로 각 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 관리되는 인스턴스 상태 정보가 다음과 같은 열에 표시됩니다.  
   
--   인스턴스 CPU – 이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스에 할당된 프로세서 사용률의 성능 상태가 표시됩니다. 이 매개 변수의 상태는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 설정된 CPU 사용 정책과 일시적 리소스 평가 정책의 구성 설정에 따라 결정됩니다. 자세한 내용은 [CPU 사용 정책에서 노이즈 줄이기&#40;SQL Server 유틸리티&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)를 참조하세요.  
+-   인스턴스 CPU – 이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스에 할당된 프로세서 사용률의 성능 상태가 표시됩니다. 이 매개 변수의 상태는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 설정된 CPU 사용 정책과 일시적 리소스 평가 정책의 구성 설정에 따라 결정됩니다. 자세한 내용은 [CPU 사용 정책에서 노이즈 줄이기 &#40;SQL Server 유틸리티&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)를 참조 하세요.  
   
      이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스의 프로세서 사용 기록을 보거나 정책 제한을 확인 또는 변경하려면 **CPU 사용** 탭을 클릭합니다.  
   
--   컴퓨터 CPU - 컴퓨터 프로세서 사용 상태가 표시됩니다. 이 매개 변수의 상태는 컴퓨터에 설정된 CPU 사용 정책과 일시적 리소스 평가 정책의 구성 설정에 따라 결정됩니다. 자세한 내용은 [CPU 사용 정책에서 노이즈 줄이기&#40;SQL Server 유틸리티&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)를 참조하세요.  
+-   컴퓨터 CPU - 컴퓨터 프로세서 사용 상태가 표시됩니다. 이 매개 변수의 상태는 컴퓨터에 설정된 CPU 사용 정책과 일시적 리소스 평가 정책의 구성 설정에 따라 결정됩니다. 자세한 내용은 [CPU 사용 정책에서 노이즈 줄이기 &#40;SQL Server 유틸리티&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)를 참조 하세요.  
   
      이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스의 프로세서 사용 기록을 보거나 정책 제한을 확인 또는 변경하려면 **CPU 사용** 탭을 클릭합니다.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62774346"
   
 -   SQL Server 에디션:  
   
--   클러스터형: (True 또는 False)  
+-   클러스터: (True 또는 False)  
   
 -   백업 디렉터리:  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62774346"
   
 -   언어:  
   
--   마지막 보고 시간: 이 열에는 datetime 데이터 형식을 사용하여 UCP 로컬 날짜 및 시간이 표시됩니다. 자세한 내용은 SQL Server 온라인 설명서의 [datetime(Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071)을 참조하세요. 유틸리티 개체 모델을 사용할 때는 SSMS가 datetimeoffset 데이터 형식을 사용합니다. 자세한 내용은 SQL Server 온라인 설명서의 [datetimeoffset(Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713)을 참조하세요.  
+-   마지막 보고 시간: 이 열에는 날짜 및 시간 데이터 형식을 사용하여 UCP 로컬 날짜 및 시간이 표시됩니다. 자세한 내용은 SQL Server 온라인 설명서의 [datetime(Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 을 참조하세요. 유틸리티 개체 모델을 사용할 때는 SSMS가 datetimeoffset 데이터 형식을 사용합니다. 자세한 내용은 SQL Server 온라인 설명서의 [datetimeoffset(Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713)을 참조하세요.  
   
  CPU 사용 탭  
  CPU 사용 탭에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스와 컴퓨터 CPU 사용의 기록 데이터 그래프가 함께 표시됩니다.  
@@ -96,7 +96,7 @@ ms.locfileid: "62774346"
 -   1년, 1개월 간격으로 표시  
   
  스토리지 사용 탭  
- 스토리지 사용 탭에는 스토리지 사용 세부 정보를 표시하는 트리 뷰가 있습니다. 시간 데이터는 datetime 데이터 형식을 사용하여 UCP 로컬 날짜 및 시간을 보여 줍니다. 자세한 내용은 SQL Server 온라인 설명서의 [datetime(Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 을 참조하세요. 유틸리티 개체 모델을 사용할 때는 SSMS가 datetimeoffset 데이터 형식을 사용합니다. 자세한 내용은 SQL Server 온라인 설명서의 [datetimeoffset(Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 을 참조하세요.  
+ 스토리지 사용 탭에는 스토리지 사용 세부 정보를 표시하는 트리 뷰가 있습니다. 시간 데이터는 datetime 데이터 형식을 사용하여 UCP 로컬 날짜 및 시간을 보여 줍니다. 자세한 내용은 SQL Server 온라인 설명서의 [datetime(Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 을 참조하세요. 유틸리티 개체 모델을 사용할 때는 SSMS가 datetimeoffset 데이터 형식을 사용합니다. 자세한 내용은 SQL Server 온라인 설명서의 [datetimeoffset(Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713)을 참조하세요.  
   
  표시는 데이터베이스별 또는 볼륨별로 그룹화할 수 있습니다. 데이터베이스 트리 뷰를 사용하려면 **파일 그룹화 방법:** 선택에서 **데이터베이스** 라디오 단추를 선택합니다. 개별 데이터베이스 파일의 스토리지 사용 상태를 보려면 트리 뷰에서 데이터베이스 이름 옆에 있는 더하기 기호를 클릭합니다. 나열되는 데이터베이스 파일에는 목록 뷰에서 선택한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 관리되는 인스턴스에 속한 모든 시스템 및 사용자 데이터베이스가 포함됩니다.  
   
@@ -149,7 +149,8 @@ ms.locfileid: "62774346"
  정책 위반에 대한 허용 오차를 변경하는 방법에 대한 자세한 내용은 [CPU 사용 정책에서 노이즈 줄이기&#40;SQL Server 유틸리티&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)를 참조하세요.  
   
  속성 정보 탭  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 대한 속성 정보에는 다음 범주가 포함됩니다.  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 대한 속성 정보에는 다음 범주가 포함됩니다.  
   
 -   프로세서 이름:  
   
@@ -165,7 +166,7 @@ ms.locfileid: "62774346"
   
 -   SQL Server 에디션:  
   
--   클러스터형: (True 또는 False)  
+-   클러스터: (True 또는 False)  
   
 -   백업 디렉터리:  
   
@@ -175,8 +176,8 @@ ms.locfileid: "62774346"
   
 -   언어:  
   
-## <a name="see-also"></a>관련 항목  
- [배포된 데이터 계층 응용 프로그램 세부 정보&#40;SQL Server 유틸리티&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
+## <a name="see-also"></a>참고 항목  
+ [배포된 데이터 계층 애플리케이션 세부 정보&#40;SQL Server 유틸리티&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
  [유틸리티 대시보드 &#40;SQL Server 유틸리티&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
  [SQL Server 유틸리티에서 SQL Server 인스턴스 모니터링](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
  [SQL Server 유틸리티 기능 및 태스크](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   

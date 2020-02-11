@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0299be9a1cb480a567e0b166c990d25588598aba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62711060"
 ---
 # <a name="join-tables-manually-visual-database-tools"></a>테이블 수동 조인(Visual Database Tools)
@@ -33,7 +33,7 @@ ms.locfileid: "62711060"
   
 1.  조인할 개체를 [다이어그램 창](diagram-pane-visual-database-tools.md) 에 추가합니다.  
   
-2.  첫 번째 테이블 또는 테이블 구조 개체의 조인 열 이름을 끌어서 두 번째 테이블 또는 테이블 구조 개체의 관련 열 위에 놓습니다. 조인을 기반 없습니다 `text`, `ntext`, 또는 i`mage` 열입니다.  
+2.  첫 번째 테이블 또는 테이블 구조 개체의 조인 열 이름을 끌어서 두 번째 테이블 또는 테이블 구조 개체의 관련 열 위에 놓습니다. `text`, `ntext`또는 i`mage` 열을 기반으로 할 수 없습니다.  
   
     > [!NOTE]  
     >  조인 열의 데이터 형식은 같거나 호환 가능해야 합니다. 예를 들어, 첫 번째 테이블의 조인 열이 날짜이면 이 열을 두 번째 테이블의 날짜 열과 관련시켜야 합니다. 반면에 첫 번째 조인 열이 정수이면 관련된 조인 열의 데이터 형식도 정수이어야 하지만 크기는 달라도 됩니다. 쿼리 및 뷰 디자이너는 조인을 만드는 데 사용하는 열의 데이터 형식을 검사하지 않지만 데이터 형식이 호환되지 않으면 쿼리를 실행할 때 데이터베이스에 오류 메시지가 표시됩니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "62711060"
   
  쿼리 및 뷰 디자이너는 [SQL 창](sql-pane-visual-database-tools.md)의 SQL 문에 INNER JOIN 절을 추가합니다. 조인 형식을 외부 조인으로 변경할 수 있습니다. 자세한 내용은 [외부 조인 만들기&#40;Visual Database Tools&#41;](create-outer-joins-visual-database-tools.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [조인을 사용한 쿼리&#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)  
   
   

@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a3994aa8a442f0ec1522bdf2314e0d6023e94bcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667067"
 ---
-# <a name="mssqleng002601"></a>MSSQL_ENG002601
+# <a name="mssql_eng002601"></a>MSSQL_ENG002601
     
 ## <a name="message-details"></a>메시지 정보  
   
@@ -29,7 +29,7 @@ ms.locfileid: "62667067"
 |이벤트 ID|2601|  
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
-|심볼 이름|해당 사항 없음|  
+|심볼 이름|해당 없음|  
 |메시지 텍스트|고유 인덱스가 '%.\*ls'인 개체 '%.*ls'에 중복 키 행을 삽입할 수 없습니다.|  
   
 ## <a name="explanation"></a>설명  
@@ -41,7 +41,7 @@ ms.locfileid: "62667067"
   
 -   ID 열이 있는 테이블이 사용되지만 해당 열이 적절히 관리되지 않습니다.  
   
--   병합 복제에서이 오류가 발생할 수 있습니다 삽입 하는 동안 시스템 테이블로 **MSmerge_contents**; 발생 하는 오류와 비슷합니다. 고유 인덱스가 'ucl1syccontents'.' 개체에 중복 키 행을 삽입할 수 없습니다.  
+-   병합 복제에서 이 오류는 시스템 테이블인 **MSmerge_contents**에 삽입하는 동안에도 발생할 수 있습니다. 발생하는 오류는 "고유 인덱스가 'ucl1SycContents'인 개체 'MSmerge_contents'에 중복 키 행을 삽입할 수 없습니다"와 비슷합니다.  
   
 ## <a name="user-action"></a>사용자 동작  
  필요한 동작은 오류 발생 원인에 따라 다릅니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "62667067"
   
      이 오류는 **join_unique_key**조인 필터 속성에 대한 값이 잘못되었기 때문에 발생할 수 있습니다. 부모 테이블의 조인된 열이 고유한 경우에만 이 속성을 TRUE로 설정해야 합니다. 속성이 TRUE로 설정되어 있지만 열이 고유하지 않은 경우에는 이 오류가 발생합니다. 이 속성을 설정하는 방법은 [병합 아티클 사이에서 조인 필터 정의 및 수정](publish/define-and-modify-a-join-filter-between-merge-articles.md)을 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [오류 및 이벤트 참조&#40;복제&#41;](errors-and-events-reference-replication.md)  
   
   

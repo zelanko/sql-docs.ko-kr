@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: aa4b0d73d1cba3d612da9f666bb548dfbc54102f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054116"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>비클러스터형 인덱스의 크기 예측
@@ -181,7 +181,7 @@ ms.locfileid: "66054116"
   
 5.  인덱스 행 크기를 계산합니다.  
   
-     ***Leaf_Row_Size***  = ***Fixed_Leaf_Size*** + ***Variable_Leaf_Size*** + ***Leaf_Null_Bitmap*** + 1(인덱스 행의 행 머리글 오버헤드) + 6(자식 페이지 ID 포인터)  
+     ***Leaf_Row_Size***  = ****** Fixed_Leaf_Size + ****** Variable_Leaf_Size + ***Leaf_Null_Bitmap*** + 1 (인덱스 행의 행 머리글 오버 헤드) + 6 (자식 페이지 ID 포인터)  
   
 6.  페이지당 인덱스 행 수를 계산합니다. 페이지당 사용 가능한 바이트 수는 8,096바이트입니다.  
   
@@ -216,13 +216,13 @@ ms.locfileid: "66054116"
   
 2.  인덱스의 비-리프 페이지 수를 계산합니다.  
   
-     ***Num_Index_Pages*** = level (***Num_Leaf_Pages/Index_Rows_Per_Page***<sup>수준</sup>) 여기서 1 < = Level < = ***수준***  
+     ***Num_Index_Pages*** = ∑ level (***Num_Leaf_Pages/Index_Rows_Per_Page***<sup>수준</sup>) 여기서 1 <***= 수준 <= 수준***  
   
      각 피가수를 가장 근사한 정수로 올립니다. 간단한 예로, ***Num_Leaf_Pages*** = 1000 및 ***Index_Rows_Per_Page*** = 25인 인덱스를 가정합니다. 리프 수준 위 첫 번째 인덱스 수준에 인덱스 행이 1000개 저장되고 리프 페이지당 인덱스 행 1개씩, 각 페이지마다 인덱스 행 25개가 들어갈 수 있습니다. 이러한 경우 인덱스 행 1000개를 저장하는 데 40페이지가 필요합니다. 인덱스의 다음 수준에서는 40개 행을 저장해야 하므로 2페이지가 필요합니다. 인덱스의 최종 수준에서는 2개 행을 저장해야 하므로 1페이지가 필요합니다. 결과적으로 비-리프 인덱스 페이지가 43개 필요합니다. 앞의 수식에 이 숫자들을 사용하면 다음 결과가 나옵니다.  
   
-     ***Non-leaf_levels*** = 1 + log25 (1000 / 25) = 3  
+     ***비 leaf_Levels*** = 1 + log25 (1000/25) = 3  
   
-     ***Num_Index_Pages*** = 1000 /(25<sup>3</sup>) + 1000 / (25<sup>2</sup>) + 1000 / (25<sup>1</sup>) = 1 + 2 + 40 = 43, 예에서 설명한 페이지 수입니다.  
+     ***Num_Index_Pages*** = 1000/(25<sup>3</sup>) + 1000/(25<sup>2</sup>) + 1000/(25<sup>1</sup>) = 1 + 2 + 40 = 43 (예제에 설명 된 페이지 수)  
   
 3.  인덱스 크기를 계산합니다. 페이지당 총 바이트 수는 8,192바이트입니다.  
   
@@ -255,7 +255,7 @@ ms.locfileid: "66054116"
   
      스파스 열의 공간 요구 사항은 [Use Sparse Columns](../tables/use-sparse-columns.md)을 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [클러스터형 및 비클러스터형 인덱스 소개](../indexes/clustered-and-nonclustered-indexes-described.md)   
  [비클러스터형 인덱스 만들기](../indexes/create-nonclustered-indexes.md)   
  [클러스터형 인덱스 만들기](../indexes/create-clustered-indexes.md)   

@@ -18,22 +18,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ff9340d7c9fb768f9e057d00868a9e238421a5f4
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798195"
 ---
 # <a name="notify-an-operator-of-job-status"></a>Notify an Operator of Job Status
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 알림 옵션을 설정하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 작업에 대한 알림을 운영자에게 전송할 수 있도록 하는 방법에 대해 설명합니다.  
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]또는 SQL Server 관리 개체를 사용 하 여에서 알림 옵션을 설정 하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 방법에 대해 설명 합니다. 그러면 에이전트에서 작업에 대해 운영자에 게 알림을 보낼 수 있습니다.  
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [보안](#Security)  
   
--   **운영자에게 작업 상태를 알리려면:**  
+-   **운영자에 게 작업 상태를 알리려면:**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -50,35 +50,38 @@ ms.locfileid: "72798195"
   
 #### <a name="to-notify-an-operator-of-job-status"></a>운영자에게 작업 상태를 알리려면  
   
-1.  **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+1.  
+  **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **SQL Server 에이전트**, **작업**을 차례로 확장한 다음 편집할 작업을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
+2.  
+  **SQL Server 에이전트**, **작업**을 차례로 확장한 다음 편집할 작업을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-3.  **작업 속성** 대화 상자에서 **알림** 페이지를 선택합니다.  
+3.  
+  **작업 속성** 대화 상자에서 **알림** 페이지를 선택합니다.  
   
 4.  전자 메일을 통해 운영자에게 알리려면 **전자 메일**확인란을 선택하고 목록에서 운영자를 선택한 후 다음 중 하나를 선택합니다.  
   
-    -   **작업 성공 시** - 작업이 성공적으로 완료되면 운영자에게 알립니다.  
+    -   **작업이 성공적** 으로 완료 되 면 운영자에 게 알립니다.  
   
-    -   **작업 실패 시** - 작업이 성공적으로 완료되지 않았을 때 운영자에게 알립니다.  
+    -   작업이 성공적으로 완료 **되지 않을 때 작업에서** 운영자에 게 알릴 수 없는 경우  
   
-    -   **작업 완료 시** - 완료 상태에 관계없이 운영자에게 알립니다.  
+    -   **작업이 완료 되 면** 완료 상태에 관계 없이 운영자에 게 알립니다.  
   
 5.  무선 호출기를 통해 운영자에게 알리려면 **호출**확인란을 선택하고 목록에서 운영자를 선택한 후 다음 중 하나를 선택합니다.  
   
-    -   **작업 성공 시** - 작업이 성공적으로 완료되면 운영자에게 알립니다.  
+    -   **작업이 성공적** 으로 완료 되 면 운영자에 게 알립니다.  
   
-    -   **작업 실패 시** - 작업이 성공적으로 완료되지 않았을 때 운영자에게 알립니다.  
+    -   작업이 성공적으로 완료 **되지 않을 때 작업에서** 운영자에 게 알릴 수 없는 경우  
   
-    -   **작업 완료 시** - 완료 상태에 관계없이 운영자에게 알립니다.  
+    -   **작업이 완료 되 면** 완료 상태에 관계 없이 운영자에 게 알립니다.  
   
 6.  Net Send로 운영자에게 알리려면 **Net Send**확인란을 선택하고 목록에서 운영자를 선택한 후 다음 중 하나를 선택합니다.  
   
-    -   **작업 성공 시** - 작업이 성공적으로 완료되면 운영자에게 알립니다.  
+    -   **작업이 성공적** 으로 완료 되 면 운영자에 게 알립니다.  
   
-    -   **작업 실패 시** - 작업이 성공적으로 완료되지 않았을 때 운영자에게 알립니다.  
+    -   작업이 성공적으로 완료 **되지 않을 때 작업에서** 운영자에 게 알릴 수 없는 경우  
   
-    -   **작업 완료 시** - 완료 상태에 관계없이 운영자에게 알립니다.  
+    -   **작업이 완료 되 면** 완료 상태에 관계 없이 운영자에 게 알립니다.  
   
 ##  <a name="TSQL"></a> Transact-SQL 사용  
   
@@ -102,9 +105,9 @@ ms.locfileid: "72798195"
     GO  
     ```  
   
- 자세한 내용은 [sp_add_notification &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)을 참조 하세요.  
+ 자세한 내용은 [sp_add_notification &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)를 참조 하세요.  
   
 ##  <a name="SMO"></a>SQL Server 관리 개체 사용  
- **운영자에게 작업 상태를 알리려면**  
+ **운영자에 게 작업 상태를 알리려면**  
   
  Visual Basic, Visual C#, PowerShell 등 선택한 프로그래밍 언어를 사용하여 `Job` 클래스를 사용합니다. 자세한 내용은 [SMO(SQL Server 관리 개체)](https://msdn.microsoft.com/library/ms162169.aspx)를 참조하세요.  

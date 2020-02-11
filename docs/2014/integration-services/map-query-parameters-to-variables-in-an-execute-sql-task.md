@@ -1,5 +1,5 @@
 ---
-title: 변수를 쿼리 매개 변수를 매핑하는 SQL 실행 태스크 | Microsoft Docs
+title: 쿼리 매개 변수를 SQL 실행 태스크의 변수에 매핑 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8863de6fc0418dbf502492ac20f7c5c846696aea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057803"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>쿼리 매개 변수를 SQL 실행 태스크의 변수에 매핑
@@ -32,14 +32,15 @@ ms.locfileid: "66057803"
   
 ### <a name="to-map-a-query-parameter-to-a-variable"></a>쿼리 매개 변수를 변수에 매핑하려면  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 작업하려는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 엽니다.  
+1.  
+  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 작업하려는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 엽니다.  
   
 2.  솔루션 탐색기에서 패키지를 두 번 클릭하여 엽니다.  
   
 3.  **제어 흐름** 탭을 클릭합니다.  
   
-4.  패키지에 아직 SQL 실행 태스크가 포함되어 있지 않으면 패키지의 제어 흐름에 해당 작업을 추가합니다. 자세한 내용은 참조 하세요. [작업 또는 제어 흐름 컨테이너 추가 또는 삭제](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
-  을 선택합니다.  
+4.  패키지에 아직 SQL 실행 태스크가 포함되어 있지 않으면 패키지의 제어 흐름에 해당 작업을 추가합니다. 자세한 내용은 [제어 흐름에서 태스크 또는 컨테이너 추가 또는 삭제](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md) 를 참조 하세요.  
+  .  
   
 5.  SQL 실행 태스크를 두 번 클릭합니다.  
   
@@ -70,13 +71,15 @@ ms.locfileid: "66057803"
     |ADO|`SELECT* FROM Production.Product WHERE ProductId > ? AND ProductID < ?`|  
     |[!INCLUDE[vstecado](../includes/vstecado-md.md)]|`SELECT* FROM Production.Product WHERE ProductId > @parmMinProductID AND ProductID < @parmMaxProductID`|  
   
-     저장 프로시저에서 매개 변수를 사용하는 예는 [SQL 실행 태스크의 매개 변수 및 반환 코드](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)를 참조하십시오.  
+     저장 프로시저에서 매개 변수를 사용하는 예는 [Parameters and Return Codes in the Execute SQL Task](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)를 참조하십시오.  
   
-7.  **매개 변수 매핑**을 클릭합니다.  
+7.  
+  **매개 변수 매핑**을 클릭합니다.  
   
 8.  매개 변수 매핑을 추가하려면 **추가**를 클릭합니다.  
   
-9. **매개 변수 이름** 상자에 이름을 제공합니다.  
+9. 
+  **매개 변수 이름** 상자에 이름을 제공합니다.  
   
      사용하는 매개 변수 이름은 SQL 실행 태스크에 사용하는 연결 형식에 따라 다릅니다.  
   
@@ -87,11 +90,14 @@ ms.locfileid: "66057803"
     |ODBC|1, 2, 3, ...|  
     |EXCEL 및 OLE DB|0, 1, 2, 3, ...|  
   
-10. **변수 이름** 목록에서 변수를 선택합니다. 자세한 내용은 [패키지에서 사용자 정의 변수의 범위 추가, 삭제, 변경](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)을 참조하세요.  
+10. 
+  **변수 이름** 목록에서 변수를 선택합니다. 자세한 내용은 [패키지에서 사용자 정의 변수의 범위 추가, 삭제, 변경](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)을 참조하세요.  
   
-11. **방향** 목록에서 매개 변수가 입력, 출력 또는 반환 값인지 여부를 지정합니다.  
+11. 
+  **방향** 목록에서 매개 변수가 입력, 출력 또는 반환 값인지 여부를 지정합니다.  
   
-12. **데이터 형식** 목록에서 매개 변수의 데이터 형식을 설정합니다.  
+12. 
+  **데이터 형식** 목록에서 매개 변수의 데이터 형식을 설정합니다.  
   
     > [!IMPORTANT]  
     >  매개 변수의 데이터 형식은 변수의 데이터 형식과 호환되어야 합니다.  
@@ -103,9 +109,9 @@ ms.locfileid: "66057803"
   
 14. **확인**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL 실행 태스크](control-flow/execute-sql-task.md)   
- [매개 변수 및 반환 코드는 SQL 실행 태스크](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)   
+ [SQL 실행 태스크의 매개 변수 및 반환 코드](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)   
  [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md)  
   
   

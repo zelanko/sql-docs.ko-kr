@@ -22,14 +22,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9dad3a2c5f7073ea63608ba5234061a3ffa2102c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62666970"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>복제 모니터에서 게시 및 구독 상태 보기
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 모니터에는 게시와 구독에 대한 상태 정보가 표시됩니다.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 모니터는 게시 및 구독에 대 한 상태 정보를 표시 합니다.  
   
 -   게시 상태는 해당 구독의 가장 높은 우선 순위 상태에 의해 결정됩니다. 예를 들어 게시에 대한 특정 구독에 오류가 있고 다른 구독에 성능 문제가 있으면 해당 게시에 대해 오류 상태가 표시됩니다.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "62666970"
   
 -   구독 만료  
   
-     이 상태 값은 모든 유형의 복제에 적용됩니다. 자세한 내용은 [복제 모니터에 임계값 및 경고 설정](set-thresholds-and-warnings-in-replication-monitor.md)를 참조하세요.  
+     이 상태 값은 모든 유형의 복제에 적용됩니다. 자세한 내용은 [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md)를 참조하세요.  
   
 -   성능 심각  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62666970"
   
  **게시 및 구독 상태를 보려면**  
   
--   복제 모니터: [복제 모니터를 사용하여 정보 보기 및 태스크 수행](view-information-and-perform-tasks-replication-monitor.md).
+-   복제 모니터: [복제 모니터를 사용 하 여 정보를 보고 태스크를 수행](view-information-and-perform-tasks-replication-monitor.md)합니다.
   
   
 ## <a name="publication-status-values"></a>게시 상태 값  
@@ -61,53 +61,54 @@ ms.locfileid: "62666970"
   
 |상태|아이콘|  
 |------------|----------|  
-|Error|![UI 아이콘: 오류](../media/repl-icon-error.gif "UI icon: error")|  
-|성능 심각|![UI 아이콘: 경고](../media/repl-icon-warn.gif "UI icon: warning")|  
-|실패한 명령 다시 시도 중|![UI 아이콘: 복제 에이전트 다시 시도](../media/repl-icon-retry.gif "UI icon: replication agent retry")|  
-|확인|none|  
+|Error|![UI 아이콘: 오류](../media/repl-icon-error.gif "UI 아이콘: 오류")|  
+|성능 심각|![UI 아이콘: 경고](../media/repl-icon-warn.gif "UI 아이콘: 경고")|  
+|실패한 명령 다시 시도 중|![UI 아이콘: 복제 에이전트 다시 시도](../media/repl-icon-retry.gif "UI 아이콘: 복제 에이전트 다시 시도")|  
+|확인|없음|  
   
 ## <a name="subscription-status-values"></a>구독 상태 값  
  다음 표에서는 구독 상태 값과 해당 아이콘을 우선 순위순으로 보여 줍니다. 한 구독이 동시에 두 가지 상태에 있을 수 있습니다(예: **곧 만료됨/만료됨** 및 **실패한 명령 다시 시도 중**). 이 경우 우선 순위가 가장 높은 상태가 표시됩니다.  
   
- **성능 심각**, **곧 만료됨/만료됨**및 **초기화되지 않음** 의 상태 값은 경고입니다. 경고를 표시할 때 복제 모니터는 에이전트가 실행되고 있는지 여부도 표시합니다. 예를 들어 상태가 **실행 중, 성능 심각**과 같이 표시될 수 있습니다.  
+ 
+  **성능 심각**, **곧 만료됨/만료됨**및 **초기화되지 않음** 의 상태 값은 경고입니다. 경고를 표시할 때 복제 모니터는 에이전트가 실행되고 있는지 여부도 표시합니다. 예를 들어 상태가 **실행 중, 성능 심각**과 같이 표시될 수 있습니다.  
   
 ### <a name="transactional-subscriptions"></a>트랜잭션 구독  
   
 |상태|아이콘|  
 |------------|----------|  
-|Error|![UI 아이콘: 오류](../media/repl-icon-error.gif "UI icon: error")|  
-|성능 심각|![UI 아이콘: 경고](../media/repl-icon-warn.gif "UI icon: warning")|  
-|곧 만료됨/만료됨|![UI 아이콘: 경고](../media/repl-icon-warn.gif "UI icon: warning")|  
-|초기화되지 않은 구독|![UI 아이콘: 경고](../media/repl-icon-warn.gif "UI icon: warning")|  
-|실패한 명령 다시 시도 중|![UI 아이콘: 복제 에이전트 다시 시도](../media/repl-icon-retry.gif "UI icon: replication agent retry")|  
-|실행 중이 아님|![UI 아이콘: 복제 에이전트 중지됨](../media/repl-icon-stopped.gif "UI icon: replication agent stopped")|  
-|실행 중|![UI 아이콘: 복제 에이전트 실행 중](../media/repl-icon-running.gif "UI icon: replication agent running")|  
+|Error|![UI 아이콘: 오류](../media/repl-icon-error.gif "UI 아이콘: 오류")|  
+|성능 심각|![UI 아이콘: 경고](../media/repl-icon-warn.gif "UI 아이콘: 경고")|  
+|곧 만료됨/만료됨|![UI 아이콘: 경고](../media/repl-icon-warn.gif "UI 아이콘: 경고")|  
+|초기화되지 않은 구독|![UI 아이콘: 경고](../media/repl-icon-warn.gif "UI 아이콘: 경고")|  
+|실패한 명령 다시 시도 중|![UI 아이콘: 복제 에이전트 다시 시도](../media/repl-icon-retry.gif "UI 아이콘: 복제 에이전트 다시 시도")|  
+|실행 중이 아님|![UI 아이콘: 복제 에이전트 중지됨](../media/repl-icon-stopped.gif "UI 아이콘: 복제 에이전트 중지됨")|  
+|실행 중|![UI 아이콘: 복제 에이전트 실행 중](../media/repl-icon-running.gif "UI 아이콘: 복제 에이전트 실행 중")|  
   
 ### <a name="merge-subscriptions"></a>병합 구독  
   
 |상태|아이콘|  
 |------------|----------|  
-|Error|![UI 아이콘: 오류](../media/repl-icon-error.gif "UI icon: error")|  
-|성능 심각|![UI 아이콘: 경고](../media/repl-icon-warn.gif "UI icon: warning")|  
-|장기 실행 트랜잭션 병합|![UI 아이콘: 경고](../media/repl-icon-warn.gif "UI icon: warning")|  
-|곧 만료됨/만료됨|![UI 아이콘: 경고](../media/repl-icon-warn.gif "UI icon: warning")|  
-|초기화되지 않은 구독|![UI 아이콘: 경고](../media/repl-icon-warn.gif "UI icon: warning")|  
-|실패한 명령 다시 시도 중|![UI 아이콘: 복제 에이전트 다시 시도](../media/repl-icon-retry.gif "UI icon: replication agent retry")|  
-|동기화 중|![UI 아이콘: 복제 에이전트 실행 중](../media/repl-icon-running.gif "UI icon: replication agent running")|  
-|비동기화 중|![UI 아이콘: 복제 에이전트 중지됨](../media/repl-icon-stopped.gif "UI icon: replication agent stopped")|  
+|Error|![UI 아이콘: 오류](../media/repl-icon-error.gif "UI 아이콘: 오류")|  
+|성능 심각|![UI 아이콘: 경고](../media/repl-icon-warn.gif "UI 아이콘: 경고")|  
+|장기 실행 트랜잭션 병합|![UI 아이콘: 경고](../media/repl-icon-warn.gif "UI 아이콘: 경고")|  
+|곧 만료됨/만료됨|![UI 아이콘: 경고](../media/repl-icon-warn.gif "UI 아이콘: 경고")|  
+|초기화되지 않은 구독|![UI 아이콘: 경고](../media/repl-icon-warn.gif "UI 아이콘: 경고")|  
+|실패한 명령 다시 시도 중|![UI 아이콘: 복제 에이전트 다시 시도](../media/repl-icon-retry.gif "UI 아이콘: 복제 에이전트 다시 시도")|  
+|동기화 중|![UI 아이콘: 복제 에이전트 실행 중](../media/repl-icon-running.gif "UI 아이콘: 복제 에이전트 실행 중")|  
+|비동기화 중|![UI 아이콘: 복제 에이전트 중지됨](../media/repl-icon-stopped.gif "UI 아이콘: 복제 에이전트 중지됨")|  
   
 ### <a name="snapshot-subscriptions"></a>스냅샷 구독  
   
 |상태|아이콘|  
 |------------|----------|  
-|Error|![UI 아이콘: 오류](../media/repl-icon-error.gif "UI icon: error")|  
-|곧 만료됨/만료됨|![UI 아이콘: 경고](../media/repl-icon-warn.gif "UI icon: warning")|  
-|초기화되지 않은 구독|![UI 아이콘: 경고](../media/repl-icon-warn.gif "UI icon: warning")|  
-|실패한 명령 다시 시도 중|![UI 아이콘: 복제 에이전트 다시 시도](../media/repl-icon-retry.gif "UI icon: replication agent retry")|  
-|동기화 중|![UI 아이콘: 복제 에이전트 실행 중](../media/repl-icon-running.gif "UI icon: replication agent running")|  
-|비동기화 중|![UI 아이콘: 복제 에이전트 중지됨](../media/repl-icon-stopped.gif "UI icon: replication agent stopped")|  
+|Error|![UI 아이콘: 오류](../media/repl-icon-error.gif "UI 아이콘: 오류")|  
+|곧 만료됨/만료됨|![UI 아이콘: 경고](../media/repl-icon-warn.gif "UI 아이콘: 경고")|  
+|초기화되지 않은 구독|![UI 아이콘: 경고](../media/repl-icon-warn.gif "UI 아이콘: 경고")|  
+|실패한 명령 다시 시도 중|![UI 아이콘: 복제 에이전트 다시 시도](../media/repl-icon-retry.gif "UI 아이콘: 복제 에이전트 다시 시도")|  
+|동기화 중|![UI 아이콘: 복제 에이전트 실행 중](../media/repl-icon-running.gif "UI 아이콘: 복제 에이전트 실행 중")|  
+|비동기화 중|![UI 아이콘: 복제 에이전트 중지됨](../media/repl-icon-stopped.gif "UI 아이콘: 복제 에이전트 중지됨")|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [복제 모니터링](../monitoring-replication.md)  
   
   

@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9fa5ac78eec56c665f05c1624c8555042433731d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832044"
 ---
 # <a name="copy-package-objects"></a>패키지 개체 복사
@@ -61,7 +61,7 @@ ms.locfileid: "62832044"
   
 6.  **연결 관리자** 영역을 마우스 오른쪽 단추로 클릭한 다음 **붙여넣기**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [제어 흐름](control-flow/control-flow.md)   
  [데이터 흐름](data-flow/data-flow.md)   
  [Integration Services&#40;SSIS&#41; 연결](connection-manager/integration-services-ssis-connections.md)   

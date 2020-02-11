@@ -1,5 +1,5 @@
 ---
-title: 자동으로 파일을 체크 아웃 편집 시 | Microsoft Docs
+title: 편집 시 자동으로 파일 체크 아웃 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0cb5bacaeab817c491ae72018630cf88e62b3b7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62791743"
 ---
 # <a name="automatically-check-out-files-upon-edit"></a>편집 시 자동으로 파일 체크 아웃
@@ -27,12 +27,14 @@ ms.locfileid: "62791743"
   
 1.  **도구** 메뉴에서 **옵션**을 클릭합니다.  
   
-2.  **원본 제어** 폴더를 확장한 다음 **환경**을 클릭합니다.  
+2.  
+  **원본 제어** 폴더를 확장한 다음 **환경**을 클릭합니다.  
   
-3.  **편집** 상자에서 **자동으로 체크 아웃**을 선택한 다음 **확인**을 클릭합니다.  
+3.  
+  **편집** 상자에서 **자동으로 체크 아웃**을 선택한 다음 **확인**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [파일을 체크 아웃](../../2014/database-engine/check-out-files.md)   
+## <a name="see-also"></a>참고 항목  
+ [파일 체크 아웃](../../2014/database-engine/check-out-files.md)   
  [체크 아웃 관리](../../2014/database-engine/manage-checkouts.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 집계 (Analysis Services-다차원) 디자인 | Microsoft Docs
+title: 집계 디자인 (다차원 Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 307d2ff0419cf5def9f422f08daf349b80bcad2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075204"
 ---
 # <a name="designing-aggregations-analysis-services---multidimensional"></a>집계 디자인(Analysis Services - 다차원)
@@ -41,7 +41,7 @@ ms.locfileid: "66075204"
   
  마법사의 마지막 단계에서는 처리를 시작하거나 지연할 수 있습니다. 처리하는 경우에는 마법사로 디자인한 집계가 생성되며, 연기하는 경우에는 디자인된 집계를 나중에 처리할 수 있도록 저장하여 처리 과정 없이 디자인 동작을 계속할 수 있습니다. 파티션 크기에 따라 처리 시간이 오래 걸릴 수도 있습니다. 필요한 경우 파티션 처리를 중단할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [집계 및 집계 디자인](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
+## <a name="see-also"></a>참고 항목  
+ [Aggregations and Aggregation Designs](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
   
   

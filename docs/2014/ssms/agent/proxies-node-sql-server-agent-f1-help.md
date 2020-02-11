@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bd38514159ca668a82f98582a9c5fde1d2aa98ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62650184"
 ---
 # <a name="proxies-node-sql-server-agent-f1-help"></a>프록시 노드(SQL Server 에이전트 F1 도움말)
-  이 섹션에서는 **개체 탐색기의** 프록시 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]노드에 대한 F1 도움말을 제공합니다.  
+  이 섹션에서는의 개체 탐색기 **프록시** 노드에 대 한 F1 도움말을 포함 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다.  
   
   

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e0d725f95fc8e9de0865ad895abd860d5f03687b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62662931"
 ---
 # <a name="database-event-category"></a>Database 이벤트 범주
@@ -38,7 +38,7 @@ ms.locfileid: "62662931"
 |[Log File Auto Grow 이벤트 클래스](log-file-auto-grow-event-class.md)|로그 파일이 자동으로 증가함을 나타냅니다. 이 이벤트는 ALTER DATABASE 문의 명시적인 실행으로 로그 파일이 증가하는 경우에는 트리거되지 않습니다.|  
 |[Log File Auto Shrink 이벤트 클래스](log-file-auto-shrink-event-class.md)|로그 파일이 자동으로 증가함을 나타냅니다. 로그 파일이 ALTER DATABASE를 통해 명시적으로 축소되는 경우 이 이벤트는 트리거되지 않습니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [확장 이벤트](../extended-events/extended-events.md)  
   
   

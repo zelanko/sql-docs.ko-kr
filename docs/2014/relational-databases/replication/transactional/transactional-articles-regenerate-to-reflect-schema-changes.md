@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8a99a98fd0d471e8cb0f8ab880ae1a6c55e1b121
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62655508"
 ---
 # <a name="regenerate-custom-transactional-procedures-to-reflect-schema-changes"></a>스키마 변경 내용을 반영하기 위해 사용자 지정 트랜잭션 프로시저 다시 생성
@@ -28,21 +28,21 @@ ms.locfileid: "62655508"
   
 -   첫 번째 옵션은 사용자 지정 스크립팅 프로시저를 사용하여 복제에서 사용하는 기본값을 바꾸는 것입니다.  
   
-    1.  [sp_addarticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)을 실행할 때 **@schema_option** 0x02비트가 **true**인지 확인합니다.  
+    1.  [Transact-sql&#41;&#40;sp_addarticle ](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)을 실행할 때 **@schema_option** 0x02 비트가 **true**인지 확인 합니다.  
   
-    2.  [sp_register_custom_scripting&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql)을 실행하고 **@type** 매개 변수에 대해 'insert', 'update' 또는 'delete' 값을 지정하고 **@value** 매개 변수에 대해 사용자 지정 스크립팅 프로시저의 이름을 지정합니다.  
+    2.  [Transact-sql&#41;&#40;sp_register_custom_scripting](/sql/relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql) 을 실행 하 고 매개 **@type** 변수에 대해 ' insert ', ' update ' 또는 ' delete ' 값을 지정 하 고 매개 변수에 **@value**대 한 사용자 지정 스크립팅 프로시저의 이름을 지정 합니다.  
   
      다음에 스키마를 변경하면 복제는 이 저장 프로시저를 호출하여 사용자가 새로 정의한 사용자 지정 저장 프로시저에 대한 정의를 스크립팅한 다음 프로시저를 각 구독자로 전파합니다.  
   
 -   두 번째 옵션은 새 사용자 지정 프로시저 정의를 포함하는 스크립트를 사용하는 것입니다.  
   
-    1.  [sp_addarticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)을 실행할 때는 복제가 구독자에서 사용자 지정 프로시저를 자동으로 생성하지 않도록 **@schema_option** 0x02비트를 **false**로 설정합니다.  
+    1.  [Transact-sql&#41;&#40;sp_addarticle ](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)를 실행 하는 경우 복제는 **@schema_option** 구독자에서 사용자 지정 프로시저를 자동으로 생성 하지 않도록 0x02 비트를 **false** 로 설정 합니다.  
   
-    2.  각 스키마 변경 전에 새 스크립트 파일을 만들고 [sp_register_custom_scripting&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql)을 실행하여 이 스크립트를 복제에 등록합니다. **@type** 매개 변수에 대해 'custom_script' 값을 지정하고 **@value** 매개 변수에 대해 게시자의 스크립트 경로를 지정합니다.  
+    2.  각 스키마 변경 전에 새 스크립트 파일을 만들고 [sp_register_custom_scripting&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql)을 실행하여 이 스크립트를 복제에 등록합니다. 매개 변수의 값으로 ' custom_script '을 지정 **@type** 하 고 매개 변수에 **@value**대해 게시자의 스크립트 경로를 지정 합니다.  
   
      다음에 관련 스키마를 변경하면 이 스크립트는 동일한 트랜잭션 내 각 구독자에서 DDL 명령으로 실행됩니다. 스키마를 변경한 다음에는 스크립트 등록이 취소됩니다. 후속 스키마 변경 이후에 스크립트를 실행하려면 해당 스크립트를 다시 등록해야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [트랜잭션 아티클에 대한 변경 내용을 전파하는 방법 지정](transactional-articles-specify-how-changes-are-propagated.md)   
  [게시 데이터베이스의 스키마 변경](../publish/make-schema-changes-on-publication-databases.md)  
   

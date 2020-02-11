@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c4013483838f81e9147eb45c84598c9cc73016fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057618"
 ---
 # <a name="multicast-transformation-editor"></a>멀티캐스트 변환 편집기
@@ -26,14 +26,14 @@ ms.locfileid: "66057618"
   
  멀티캐스트 변환에 대한 자세한 내용은 [Multicast Transformation](data-flow/transformations/multicast-transformation.md)을 참조하십시오.  
   
-## <a name="options"></a>변수  
- **출력**  
+## <a name="options"></a>옵션  
+ **Outputs**  
  왼쪽에서 출력을 선택하여 오른쪽에 있는 테이블에서 해당 속성을 확인합니다.  
   
- **Properties**  
+ **속성**  
  나열된 모든 출력 속성은 **Name** 과 **Description**을 제외하고 읽기 전용입니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [조건부 분할 변환](data-flow/transformations/conditional-split-transformation.md)  
   

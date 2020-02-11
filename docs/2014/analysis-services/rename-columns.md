@@ -1,5 +1,5 @@
 ---
-title: '3단원: 열 이름 바꾸기 | Microsoft Docs'
+title: '3 단원: 열 이름 바꾸기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80d9cae6deae4059327084f531f6a6d958a39ec6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070314"
 ---
 # <a name="lesson-3-rename-columns"></a>3단원: 열 이름 바꾸기
@@ -23,10 +23,10 @@ ms.locfileid: "66070314"
 > [!IMPORTANT]  
 >  이 자습서를 완료하기 위해 열 이름을 바꿀 필요는 없습니다. 그러나 관계 만들기, DAX 수식을 사용해 계산 열 및 측정값 만들기에 대해 소개하는 단원을 비롯한 나머지 단원에서는 이 단원에 설명된 알아보기 쉬운 열 이름을 참조합니다. 열 이름을 바꾸지 않으려는 경우 이 단원에 제공된 원래 원본 열 이름을 사용하도록 5, 6, 7단원에서 DAX 수식을 편집해야 합니다.  
   
- 예상이 단원을 완료 시간: **20 분**  
+ 이 단원을 완료하기 위한 예상 시간: **20분**  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
- 이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 이전 단원을 완료 해야 합니다. [2단원: 데이터 추가](lesson-2-add-data.md)합니다.  
+ 이 항목은 테이블 형식 모델링 자습서에 포함되며 순서대로 완료해야 합니다. 이 단원의 태스크를 수행하려면 이전 단원인 [2단원: 데이터 추가](lesson-2-add-data.md)를 완료해야 합니다.  
   
 ## <a name="rename-columns"></a>열 이름 바꾸기  
   
@@ -36,42 +36,43 @@ ms.locfileid: "66070314"
   
      탭을 클릭하면 해당 테이블이 모델 디자이너 창에서 활성화됩니다.  
   
-2.  두 번 클릭 합니다 **CustomerKey** 열 이름을 입력 합니다 `Customer  Id`, 한 다음 ENTER를 누릅니다.  
+2.  **Customerkey** 열 이름을 두 번 클릭 하 고를 `Customer  Id`입력 한 다음 enter 키를 누릅니다.  
   
     > [!TIP]  
-    >  열 이름을 바꿀 수도 있습니다는 **열 이름** 열에서 속성 **속성** 창 또는 다이어그램 뷰에서 합니다.  
+    >  열의 **속성** 창이 나 다이어그램 뷰에서 열 **이름** 속성의 열 이름을 바꿀 수도 있습니다.  
   
-3.  **Customer** 테이블의 나머지 열과 나머지 테이블에 있는 열의 이름을 바꿔 원본 이름을 알아보기 쉬운 이름으로 변경합니다.  
+3.  
+  **Customer** 테이블의 나머지 열과 나머지 테이블에 있는 열의 이름을 바꿔 원본 이름을 알아보기 쉬운 이름으로 변경합니다.  
   
      **Customer 테이블**  
   
-    |원본 이름|이름|  
+    |원본 이름|친숙한 이름|  
     |-----------------|-------------------|  
     |GeographyKey|Geography Id|  
     |CustomerAlternateKey|Customer Alternate Id|  
-    |FirstName|First Name|  
+    |FirstName|이름|  
     |MiddleName|Middle Name|  
-    |LastName|Last Name|  
+    |LastName|성|  
     |NameStyle|Name Style|  
-    |BirthDate|Birth Date|  
+    |BirthDate|생년월일|  
     |MaritalStatus|Marital Status|  
-    |EmailAddress|Email Address|  
+    |EmailAddress|메일 주소|  
     |YearlyIncome|Yearly Income|  
     |TotalChildren|Total Children|  
     |NumberChildrenAtHome|Number of Children At Home|  
-    |EnglishEducation|Education|  
+    |EnglishEducation|교육|  
     |EnglishOccupation|Occupation|  
     |HouseOwnerFlag|Owns House|  
     |NumberCarsOwned|Number of Cars Owned|  
     |AddressLine1|Address Line 1|  
     |AddressLine2|Address Line 2|  
-    |전화|Phone Number|  
+    |Phone|전화 번호|  
     |DateFirstPurchase|Date of First Purchase|  
     |CommuteDistance|Commute Distance|  
   
-     **날짜**  
+     **Date**  
   
-    |원본 이름|이름|  
+    |원본 이름|친숙한 이름|  
     |-----------------|-------------------|  
     |FullDateAlternateKey|Date|  
     |DayNumberOfWeek|Day Number of Week|  
@@ -88,9 +89,9 @@ ms.locfileid: "66070314"
     |FiscalYear|Fiscal Year|  
     |FiscalSemester|Fiscal Semester|  
   
-     **Geography**  
+     **요인**  
   
-    |원본 이름|이름|  
+    |원본 이름|친숙한 이름|  
     |-----------------|-------------------|  
     |GeographyKey|Geography Id|  
     |StateProvinceCode|State Province Code|  
@@ -102,7 +103,7 @@ ms.locfileid: "66070314"
   
      **Product**  
   
-    |원본 이름|이름|  
+    |원본 이름|친숙한 이름|  
     |-----------------|-------------------|  
     |ProductKey|Product Id|  
     |ProductAlternateKey|Product Alternate Id|  
@@ -119,7 +120,7 @@ ms.locfileid: "66070314"
     |DaysToManufacture|Days to Manufacture|  
     |ProductLine|Product Line|  
     |Dealer Price|Dealer Price|  
-    |ModelName|Model Name|  
+    |ModelName|모델 이름|  
     |LargePhoto|Large Photo|  
     |EnglishDescription|Description|  
     |StartDate|Product Start Date|  
@@ -128,7 +129,7 @@ ms.locfileid: "66070314"
   
      **제품 범주**  
   
-    |원본 이름|이름|  
+    |원본 이름|친숙한 이름|  
     |-----------------|-------------------|  
     |ProductCategoryKey|Product Category Id|  
     |ProductCategoryAlternateKey|Product Category Alternate Id|  
@@ -136,16 +137,16 @@ ms.locfileid: "66070314"
   
      **Product Subcategory**  
   
-    |원본 이름|이름|  
+    |원본 이름|친숙한 이름|  
     |-----------------|-------------------|  
     |ProductSubcategoryKey|Product Subcategory Id|  
     |ProductSubcategoryAlternateKey|Product Subcategory Alternate Id|  
     |EnglishProductSubcategoryName|Product Subcategory Name|  
     |ProductCategoryKey|Product Category Id|  
   
-     **Internet Sales**  
+     **인터넷 판매**  
   
-    |원본 이름|이름|  
+    |원본 이름|친숙한 이름|  
     |-----------------|-------------------|  
     |ProductKey|Product Id|  
     |CustomerKey|Customer Id|  
@@ -171,6 +172,6 @@ ms.locfileid: "66070314"
     |ShipDate|Ship Date|  
   
 ## <a name="next-step"></a>다음 단계  
- 이 자습서를 계속 하려면 다음 단원으로 이동 합니다. [4단원: 날짜 테이블로 표시](lesson-3-mark-as-date-table.md)합니다.  
+ 이 자습서를 계속하려면 다음 단원인 [4단원: 날짜 테이블로 표시](lesson-3-mark-as-date-table.md)로 이동하세요.  
   
   

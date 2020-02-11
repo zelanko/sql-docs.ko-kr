@@ -15,24 +15,26 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7508324be0bef23ba0590bb181135512d75701e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059036"
 ---
 # <a name="execute-sql-task-editor-parameter-mapping-page"></a>SQL 실행 태스크 편집기(매개 변수 매핑 페이지)
+  
   **SQL 실행 태스크 편집기** 대화 상자의 **매개 변수 매핑** 페이지를 사용하여 변수를 SQL 문의 매개 변수에 매핑할 수 있습니다.  
   
  이 태스크에 대해 알아보려면 [SQL 실행 태스크](control-flow/execute-sql-task.md) 및 [SQL 실행 태스크의 매개 변수 및 반환 코드](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)를 참조하세요.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **변수 이름**  
- **추가**를 클릭하여 매개 변수 매핑을 추가했으면 **변수 추가** 대화 상자를 사용하여 목록에서 시스템 또는 사용자 정의 변수를 선택하거나 \<**새 변수...** >를 클릭하여 새 변수를 추가합니다.  
+ 
+  **추가**를 클릭하여 매개 변수 매핑을 추가했으면 \<변수 추가** 대화 상자를 사용하여 목록에서 시스템 또는 사용자 정의 변수를 선택하거나 ****새 변수...**>를 클릭하여 새 변수를 추가합니다.  
   
- **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md)  
+ **관련 항목:** [SSIS&#41; 변수 &#40;Integration Services](integration-services-ssis-variables.md)  
   
- **Direction**  
+ **방향도**  
  매개 변수의 방향을 선택합니다. 각 변수를 입력 매개 변수, 출력 매개 변수 또는 반환 코드에 매핑합니다.  
   
  **데이터 형식**  
@@ -56,7 +58,7 @@ ms.locfileid: "66059036"
  **제거**  
  목록에서 매개 변수 매핑을 선택한 다음 **제거**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [SQL 실행 태스크 편집기 &#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
  [SQL 실행 태스크 편집기 &#40;결과 집합 페이지&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)   

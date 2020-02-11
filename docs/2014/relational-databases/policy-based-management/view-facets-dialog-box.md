@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f2b84ce093c25faa284033065c329bb14f254a8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676859"
 ---
 # <a name="view-facets-dialog-box"></a>패싯 보기 대화 상자
   이 대화 상자를 사용하여 정책 기반 관리 패싯의 속성을 볼 수 있습니다. 패싯의 속성은 패싯을 만들 때 정의되며 이 대화 상자를 사용하여 변경할 수 없습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **패싯**  
  현재 선택한 패싯의 이름입니다.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "62676859"
  **현재 상태를 정책으로 내보내기**  
  패싯 속성의 설명 상태를 새 정책으로 XML 파일로 내보내려면 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [정책 기반 관리를 사용하여 서버 관리](administer-servers-by-using-policy-based-management.md)  
   
   

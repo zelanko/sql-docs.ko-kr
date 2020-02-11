@@ -11,13 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a8a1825f00676618b9bcc98c774e7facd6f0e078
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753020"
 ---
 # <a name="lesson-3-working-with-templates-solutions-and-script-projects"></a>3단원: 템플릿, 솔루션 및 스크립트 프로젝트 작업
+  
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 사용자 지정 템플릿을 만들고 솔루션 및 스크립트 프로젝트를 만들 수 있습니다.  
   
  이 단원에서는 다음 항목을 다룹니다.  

@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b9830334843fd2c350091f7dc2af5493141bcfb1
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874439"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>역할 전환 중 서비스 중단 예측(데이터베이스 미러링)
@@ -72,7 +72,7 @@ ms.locfileid: "70874439"
 ## <a name="estimating-interruption-of-service-during-automatic-failover"></a>자동 장애 조치 중 서비스 중단 예측  
  다음 그림에서는 오류 검색 및 장애 조치 시간이 **Partner_B**에서 자동 장애 조치를 완료하는 데 필요한 전체 시간에 어떤 영향을 주는지를 보여 줍니다. 장애 조치에는 데이터베이스를 롤포워드할 시간(다시 실행 단계)과 데이터베이스를 온라인 상태로 만들기 위한 약간의 시간이 필요합니다. 커밋되지 않은 모든 트랜잭션이 롤백되는 실행 취소 단계는 새로운 주 데이터베이스가 온라인 상태가 된 다음 수행되고 장애 조치 후에도 계속됩니다. 데이터베이스는 실행 취소 단계 중에 사용할 수 있습니다.  
   
- ![오류 검색 및 장애 조치 시간](../media/dbm-failovauto-time.gif "오류 검색 및 장애 조치 시간")  
+ ![오류 검색 및 장애 조치(failover) 시간](../media/dbm-failovauto-time.gif "오류 검색 및 장애 조치(failover) 시간")  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링 운영 모드](database-mirroring-operating-modes.md)   

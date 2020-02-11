@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9fb4014688f1899e813d1df3e677caf9ad7bfbf1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770307"
 ---
 # <a name="transform-data-with-transformations"></a>변환을 사용하여 데이터 변환
@@ -26,7 +26,7 @@ ms.locfileid: "62770307"
   
  다음 다이어그램에서는 원본 하나, 변환 두 가지, 대상 하나를 포함하는 간단한 데이터 흐름을 보여 줍니다.  
   
- ![Data flow](../../media/mw-dts-08.gif "Data flow")  
+ ![데이터 흐름](../../media/mw-dts-08.gif "디자이너의")  
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 변환은 다음과 같은 기능을 제공합니다.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "62770307"
   
 -   [데이터 흐름 구성 요소의 속성 설정](../set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 흐름 태스크](../../control-flow/data-flow-task.md)   
  [데이터 흐름](../data-flow.md)   
  [경로에 구성 요소 연결](../../connect-components-with-paths.md)   

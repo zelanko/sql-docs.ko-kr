@@ -14,16 +14,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f3b2c9137f34a76ec77f179eb329042d92be5cd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769115"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>식에서의 Integration Services 데이터 형식
   식 계산기는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 데이터 형식을 사용합니다. 데이터가 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 패키지의 데이터 흐름에 처음 포함될 때 데이터 흐름 엔진이 모든 열 데이터를 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 데이터 형식으로 변환하므로 식에 사용되는 열 데이터는 이미 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 데이터 형식입니다. 조건부 분할 및 파생 열 변환에 사용된 식은 열 데이터가 포함된 데이터 흐름에 속해 있으므로 열을 참조할 수 있습니다.  
   
-## <a name="variables"></a>변수  
+## <a name="variables"></a>variables  
  식에 변수를 사용할 수도 있습니다. 변수는 Variant 데이터 형식으로, 식 계산기는 식을 계산하기 전에 변수의 데이터 형식을 Variant 하위 형식에서 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 데이터 형식으로 변환합니다. 변수는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 데이터 형식의 하위 집합만 사용할 수 있습니다. 예를 들어 변수는 BLOB(Binary Large Object Block) 데이터 형식을 사용할 수 없습니다.  
   
  Variant 데이터 형식을 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 데이터 형식으로 매핑하는 방법과 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 데이터 형식에 대한 자세한 내용은 [Integration Services 데이터 형식](../data-flow/integration-services-data-types.md)을 참조하세요.  
@@ -47,11 +47,12 @@ ms.locfileid: "62769115"
 > [!NOTE]  
 >  부울 값은 숫자가 아니라 논리 값입니다. 일부 환경에서는 부울 값이 숫자로 표시될 수 있지만 숫자로 저장되지는 않으며, 다양한 프로그래밍 언어에서는 부울 값을 .NET Framework 메서드와는 다른 숫자 값으로 표시합니다.  
 >   
->  예를 들어 Visual Basic에서 사용할 수 있는 변환 함수는 `True`를 -1로 변환하지만 .NET Framework의 `System.Convert.ToInt32` 메서드는 `True`를 +1로 변환합니다. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 식 언어는 `True`를 -1로 변환합니다.  
+>  예를 들어 Visual Basic에서 사용할 수 있는 변환 함수는 `True`를 -1로 변환하지만 .NET Framework의 `System.Convert.ToInt32` 메서드는 `True`를 +1로 변환합니다. 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 식 언어는 `True`를 -1로 변환합니다.  
 >   
 >  오류나 예기치 않은 결과를 방지하려면 `True` 및 `False`에 특정 숫자 값을 사용하는 코드를 작성하지 말아야 합니다. 가능하면 부울 변수는 부울 변수용으로 설계된 논리 값으로만 사용해야 합니다.  
   
- 자세한 내용은 다음 항목을 참조하십시오.  
+ 자세한 내용은 아래 항목을 참조하세요.  
   
 -   [== &#40;같음&#41;&#40;SSIS 식&#41;](equal-ssis-expression.md)  
   
@@ -78,9 +79,11 @@ ms.locfileid: "62769115"
 ## <a name="requirements-for-data-used-in-expressions"></a>식에 사용되는 데이터에 대한 요구 사항  
  식 계산기는 모든 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 데이터 형식을 지원합니다. 그러나 연산이나 함수에 따라 피연산자와 인수에 특정 데이터 형식이 필요합니다. 식 계산기는 식에 사용된 데이터에 대해 다음 데이터 형식 요구 사항을 설정합니다.  
   
--   **논리** 연산에 사용된 피연산자는 부울 값이어야 합니다. 예를 들어 ColumnA > 1&&ColumnB < 2가 있습니다.  
+-   
+  **논리** 연산에 사용된 피연산자는 부울 값이어야 합니다. 예를 들어 ColumnA > 1&&ColumnB < 2가 있습니다.  
   
--   **수치** 연산에 사용된 피연산자는 숫자 값이어야 합니다. 예를 들어 23.75 * 4와 같습니다.  
+-   
+  **수치** 연산에 사용된 피연산자는 숫자 값이어야 합니다. 예를 들어 23.75 * 4와 같습니다.  
   
 -   논리 및 등가 연산과 같은 비교 연산에 사용된 피연산자는 호환 가능한 데이터 형식이어야 합니다.  
   
@@ -92,7 +95,7 @@ ms.locfileid: "62769115"
   
 -   수치 연산 함수에 전달된 인수는 숫자 데이터 형식이어야 합니다. 함수나 연산에 따라 특정 숫자 데이터 형식이 필요할 수 있습니다. 예를 들어 HEX 함수는 부호 있는 정수나 부호 없는 정수가 필요합니다.  
   
--   문자열 함수에 전달된 인수는 문자 데이터 형식은 DT_STR 또는 DT_WSTR여야 합니다. 예를 들어 UPPER("flower")와 같습니다. SUBSTRING과 같은 일부 문자열 함수는 시작 위치와 문자열 길이를 나타내는 추가 정수 인수가 필요합니다.  
+-   문자열 함수에 전달된 인수는 DT_STR 또는 DT_WSTR과 같은 문자 데이터 형식이어야 합니다. 예를 들어 UPPER("flower")와 같습니다. SUBSTRING과 같은 일부 문자열 함수는 시작 위치와 문자열 길이를 나타내는 추가 정수 인수가 필요합니다.  
   
 -   날짜 및 시간 함수에 전달된 인수는 유효한 날짜여야 합니다. 예를 들어 DAY(GETDATE())와 같습니다. DATEADD와 같은 일부 함수는 날짜에 추가할 일 수를 나타내는 추가 정수 인수가 필요합니다.  
   

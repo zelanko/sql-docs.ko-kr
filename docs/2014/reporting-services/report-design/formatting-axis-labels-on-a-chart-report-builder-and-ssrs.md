@@ -28,16 +28,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4a98a3496e237de1d4eeb530dfe5e22b70149890
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105851"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>차트의 축 레이블 서식 지정(보고서 작성기 및 SSRS)
   좌표 기반 차트 종류(세로 막대형, 가로 막대형, 영역형, 점, 꺾은선형 및 범위형)에는 데이터 관계를 범주화하고 표시하는 데 사용되는 두 개의 축이 있습니다. 각 축에는 다양한 유형의 서식이 지정됩니다.  
   
- **축 속성** 대화 상자를 사용하거나 속성 창을 사용하여 축 서식을 지정할 수 있습니다. 서식을 지정하려는 축을 마우스 오른쪽 단추로 클릭하고 **축 속성** 을 클릭하여 축 텍스트, 숫자와 날짜 형식, 주 눈금 표시와 보조 눈금 표시, 레이블 자동 맞춤, 그리고 축 선의 굵기, 색 및 스타일에 대한 값을 변경합니다. 축 제목의 값을 변경하려면 축 제목을 마우스 오른쪽 단추로 클릭하고 **축 제목 속성**을 클릭합니다.  
+ 
+  **축 속성** 대화 상자를 사용하거나 속성 창을 사용하여 축 서식을 지정할 수 있습니다. 서식을 지정하려는 축을 마우스 오른쪽 단추로 클릭하고 **축 속성** 을 클릭하여 축 텍스트, 숫자와 날짜 형식, 주 눈금 표시와 보조 눈금 표시, 레이블 자동 맞춤, 그리고 축 선의 굵기, 색 및 스타일에 대한 값을 변경합니다. 축 제목의 값을 변경하려면 축 제목을 마우스 오른쪽 단추로 클릭하고 **축 제목 속성**을 클릭합니다.  
   
  축 레이블은 차트의 주 간격을 식별합니다. 기본적으로 차트는 텍스트 겹침을 방지할 수 있는 최적의 축 레이블 배치 방법을 결정하기 위한 알고리즘을 사용합니다.  
   
@@ -77,7 +78,7 @@ ms.locfileid: "66105851"
 ### <a name="example-of-how-the-chart-calculates-axis-labels"></a>차트가 축 레이블을 계산하는 방법의 예  
  다음 표에는 세로 막대형 차트에 표시될 샘플 판매 데이터가 있습니다. 이름 필드는 범주 그룹 영역에 추가되고 수량 필드는 값 역에 추가됩니다.  
   
-|이름|수량|  
+|속성|수량|  
 |----------|--------------|  
 |Michael Blythe|229|  
 |Jae Pak|112|  
@@ -107,9 +108,11 @@ ms.locfileid: "66105851"
   
  스칼라 축은 다음 두 가지 방법으로 설정할 수 있습니다.  
   
--   **축 속성** 대화 상자에서 **스칼라 축** 옵션을 선택합니다. 이렇게 하면 데이터 그룹화 값이 없는 축 위치에 숫자 또는 날짜/시간 값이 추가됩니다. 자세한 내용은 [축 속성 대화 상자, 축 옵션&#40;보고서 작성기 및 SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)를 참조하세요.  
+-   
+  **축 속성** 대화 상자에서 **스칼라 축** 옵션을 선택합니다. 이렇게 하면 데이터 그룹화 값이 없는 축 위치에 숫자 또는 날짜/시간 값이 추가됩니다. 자세한 내용은 [축 속성 대화 상자, 축 옵션&#40;보고서 작성기 및 SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)를 참조하세요.  
   
--   **계열 속성** 대화 상자의 **범주 필드** 옵션에 대한 필드를 선택하거나 식을 입력합니다. 차트는 지정한 범주 필드의 모든 값에 대해 축 간격을 추가합니다.  
+-   
+  **계열 속성** 대화 상자의 **범주 필드** 옵션에 대한 필드를 선택하거나 식을 입력합니다. 차트는 지정한 범주 필드의 모든 값에 대해 축 간격을 추가합니다.  
   
 ## <a name="adding-or-removing-side-margins-from-the-category-axis"></a>범주 축에서 양쪽 여백 추가 또는 제거  
  가로 막대형, 새로 막대형 및 분산형 차트 종류의 경우 x축의 끝에 자동으로 양쪽 여백이 추가됩니다. 여백의 크기는 변경할 수 없습니다. 다른 모든 차트 종류에서는 양쪽 여백이 추가되지 않습니다. 자세한 내용은 [차트에서 여백 추가 또는 제거&#40;보고서 작성기 및 SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)을 클릭합니다.  
@@ -117,15 +120,15 @@ ms.locfileid: "66105851"
 ## <a name="in-this-section"></a>섹션 내용  
  [축 레이블의 서식을 날짜 또는 통화로 지정&#40;보고서 작성기 및 SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)  
   
- [차트의 레이블 위치 지정&#40;보고서 작성기 및 SSRS&#41;](position-labels-in-a-chart-report-builder-and-ssrs.md)  
+ [차트 &#40;보고서 작성기 및 SSRS에 레이블 배치&#41;](position-labels-in-a-chart-report-builder-and-ssrs.md)  
   
  [축 간격 지정&#40;보고서 작성기 및 SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
   
- [차트에서 여백 추가 또는 제거&#40;보고서 작성기 및 SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
+ [차트에서 여백 추가 또는 제거 &#40;보고서 작성기 및 SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   
  [로그 눈금 간격 지정&#40;보고서 작성기 및 SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [차트의 데이터 요소에 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  

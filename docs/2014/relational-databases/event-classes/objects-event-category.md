@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 56a76c3675ceb3cf84c7812b4f9d95d61f9f830a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62661954"
 ---
 # <a name="objects-event-category"></a>Objects 이벤트 범주
@@ -35,7 +35,7 @@ ms.locfileid: "62661954"
 |[Object:Created 이벤트 클래스](object-created-event-class.md)|CREATE INDEX 문, CREATE TABLE 문 또는 CREATE DATABASE 문 등에 의해 개체가 생성되었음을 나타냅니다.|  
 |[Object:Deleted 이벤트 클래스](object-deleted-event-class.md)|DROP INDEX 문이나 DROP TABLE 문 등에 의해 개체가 삭제되었음을 나타냅니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [확장 이벤트](../extended-events/extended-events.md)  
   
   

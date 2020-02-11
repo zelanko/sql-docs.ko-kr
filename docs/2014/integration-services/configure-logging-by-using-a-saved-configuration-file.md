@@ -1,5 +1,5 @@
 ---
-title: 저장 된 구성 파일을 사용 하 여 로깅을 구성 | Microsoft Docs
+title: 저장 된 구성 파일을 사용 하 여 로깅 구성 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b2adc326ef2e0bb593b0532a51a9a677821ae0e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060591"
 ---
 # <a name="configure-logging-by-using-a-saved-configuration-file"></a>저장된 구성 파일을 사용하여 로깅 구성
@@ -33,16 +33,19 @@ ms.locfileid: "66060591"
   
 3.  패키지 트리 뷰를 확장하고 구성할 컨테이너를 선택합니다.  
   
-4.  **공급자 및 로그** 탭에서 컨테이너로 사용할 로그를 선택합니다.  
+4.  
+  **공급자 및 로그** 탭에서 컨테이너로 사용할 로그를 선택합니다.  
   
     > [!NOTE]  
     >  패키지 수준에서만 로그를 만들 수 있습니다. 자세한 내용은 [SQL Server Data Tools에서 패키지 로깅 사용](../../2014/integration-services/enable-package-logging-in-sql-server-data-tools.md)을 참조하세요.  
   
-5.  **자세히** 탭을 클릭하고 **로드**를 클릭합니다.  
+5.  
+  **자세히** 탭을 클릭하고 **로드**를 클릭합니다.  
   
 6.  사용할 로깅 구성 파일을 찾고 **열기**를 클릭합니다.  
   
-7.  필요에 따라 **이벤트** 열에서 해당 확인란을 선택하여 기록할 다른 로그 항목을 선택합니다. **고급** 을 클릭하여 이 항목에 대해 기록할 정보 유형을 선택합니다.  
+7.  필요에 따라 **이벤트** 열에서 해당 확인란을 선택하여 기록할 다른 로그 항목을 선택합니다. 
+  **고급** 을 클릭하여 이 항목에 대해 기록할 정보 유형을 선택합니다.  
   
     > [!NOTE]  
     >  새 컨테이너는 원래 로깅 구성을 만드는 데 사용된 컨테이너에는 사용할 수 없는 추가 로그 항목을 포함할 수 있습니다. 이러한 추가 로그 항목을 로그하려면 수동으로 선택해야 합니다.  
@@ -51,7 +54,7 @@ ms.locfileid: "66060591"
   
 9. 업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services&#40;SSIS&#41; 로깅](performance/integration-services-ssis-logging.md)  
   
   

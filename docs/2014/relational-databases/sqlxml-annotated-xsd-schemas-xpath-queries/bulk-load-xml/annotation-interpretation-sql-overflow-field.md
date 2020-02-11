@@ -1,5 +1,5 @@
 ---
-title: sql:overflow-필드 (SQLXML 4.0) | Microsoft Docs
+title: 'sql: 오버플로 필드 (SQLXML 4.0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,20 +16,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 594ebdbad3968ba2efe7e255b28379194d2fb77f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013467"
 ---
 # <a name="sqloverflow-field-sqlxml-40"></a>sql:overflow-field(SQLXML 4.0)
   스키마에서 열을 오버플로 열로 식별하여 XML 문서에서 사용되지 않은 데이터를 모두 받을 수 있습니다. 이 열은 `sql:overflow-field` 주석을 사용하여 스키마에 지정합니다. 오버플로 열을 여러 개 지정할 수도 있습니다.  
   
- `sql:overflow-field` 주석이 정의되어 있는 XML 노드(요소 또는 특성)가 범위에 들어오면 오버플로 열이 활성화되어 사용되지 않은 데이터를 받습니다. 노드가 범위를 벗어나면 오버플로 열이 더 이상 활성화되지 않고 XML 대량 로드를 통해 이전 오버플로 필드(있는 경우)가 활성화됩니다.  
+ 
+  `sql:overflow-field` 주석이 정의되어 있는 XML 노드(요소 또는 특성)가 범위에 들어오면 오버플로 열이 활성화되어 사용되지 않은 데이터를 받습니다. 노드가 범위를 벗어나면 오버플로 열이 더 이상 활성화되지 않고 XML 대량 로드를 통해 이전 오버플로 필드(있는 경우)가 활성화됩니다.  
   
  XML 대량 로드에서는 오버플로 열에 데이터를 저장할 때 `sql:overflow-field`가 정의된 부모 요소의 여는 태그와 닫는 태그도 저장됩니다.  
   
- 예를 들어 다음 스키마에 설명 합니다  **\<고객 >** 하 고  **\<CustOrder >** 요소입니다. 이러한 각 요소는 오버플로 열을 식별합니다.  
+ 예를 들어 다음 스키마는 ** \<고객>** 및 ** \<CustOrder>** 요소에 대해 설명 합니다. 이러한 각 요소는 오버플로 열을 식별합니다.  
   
 ```  
 <?xml version="1.0" ?>  
@@ -73,9 +74,9 @@ ms.locfileid: "66013467"
 </xsd:schema>  
 ```  
   
- 스키마에는  **\<고객 >** 요소는 Cust 테이블에 매핑합니다 및  **\<순서 >** 요소는 CustOrder 테이블에 매핑됩니다.  
+ 스키마에서 ** \<Customer>** 요소는 Cust 테이블에 매핑되고 ** \<Order>** 요소는 CustOrder 테이블에 매핑됩니다.  
   
- 모두를  **\<고객 >** 하 고  **\<순서 >** 오버플로 열을 식별 하는 요소입니다. 요소 및 특성의 XML 대량 로드에서 사용 되지 않은 모든 자식을 저장 하는 따라서 합니다  **\<고객 >** Cust 테이블의 오버플로 열에는 요소 및 모든 사용 되지 않은 자식 요소 및 특성을  **\<순서 >** CustOrder 테이블의 오버플로 열에는 요소입니다.  
+ ** \<Customer>** 와 ** \<Order>** 요소는 모두 오버플로 열을 식별 합니다. 따라서 XML 대량 로드는 CustOrder 테이블의 오버플로 열에 있는 ** \<Order>** 요소의 모든 하위 요소와 특성 및 모든 소비 되지 않은 자식 요소와 특성을 ** \<>** 해당 테이블의 오버플로 열에 저장 합니다.  
   
 ### <a name="to-test-a-working-sample"></a>작업 예제를 테스트하려면  
   

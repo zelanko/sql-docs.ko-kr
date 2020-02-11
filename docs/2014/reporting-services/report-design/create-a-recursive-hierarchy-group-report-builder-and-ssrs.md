@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ec051870966a3a8cf9d2d028d80a2fc36708ba28
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106134"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>재귀 계층 구조 그룹 만들기(보고서 작성기 및 SSRS)
@@ -50,19 +50,19 @@ ms.locfileid: "66106134"
     > [!NOTE]  
     >  속성 창이 표시되지 않으면 **보기** 탭에서 **속성** 을 클릭합니다.  
   
-2.  속성 창에서 확장을 `Padding` 노드를 클릭 **왼쪽**, 드롭 다운 목록에서 선택  **\<식... >** 합니다.  
+2.  속성 창에서 `Padding` 노드를 확장 하 고 **왼쪽**을 클릭 한 다음 드롭다운 목록에서 ** \<식 ... >** 를 선택 합니다.  
   
 3.  식 창에서 다음 식을 입력합니다.  
   
      `=CStr(2 + (Level()*10)) + "pt"`  
   
-     Padding 속성은 모두 *nnyy*형식의 문자열을 요구합니다. 여기서 *nn* 은 숫자이고, *yy* 는 측정 단위입니다. 예 식은 `Level` 함수를 사용하여 재귀 수준에 따라 안쪽 여백의 크기를 늘리는 문자열을 만듭니다. 예를 들어 1 수준의 행은 (2 + (1\*10))=12pt의 패딩으로, 3 수준의 행은 (2 + (3\*10))=32pt의 패딩으로 늘어납니다. 에 대 한 자세한 합니다 `Level` 함수를 참조 하세요 [수준](report-builder-functions-level-function.md)합니다.  
+     Padding 속성은 모두 *nnyy*형식의 문자열을 요구합니다. 여기서 *nn* 은 숫자이고, *yy* 는 측정 단위입니다. 예 식은 `Level` 함수를 사용하여 재귀 수준에 따라 안쪽 여백의 크기를 늘리는 문자열을 만듭니다. 예를 들어 1 수준의 행은 (2 + (1\*10))=12pt의 패딩으로, 3 수준의 행은 (2 + (3\*10))=32pt의 패딩으로 늘어납니다. `Level` 함수에 대 한 자세한 내용은 [Level](report-builder-functions-level-function.md)을 참조 하십시오.  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
      보고서를 실행합니다. 보고서에 그룹화된 데이터의 계층 뷰가 표시됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [재귀 계층 구조 그룹 생성&#40;보고서 작성기 및 SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
  [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   

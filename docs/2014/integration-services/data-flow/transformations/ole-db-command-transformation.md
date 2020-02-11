@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3a8ffc33de161c71c6f72eebf8616d1e814fb994
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770394"
 ---
 # <a name="ole-db-command-transformation"></a>OLE DB 명령 변환
@@ -47,9 +47,10 @@ ms.locfileid: "62770394"
  OLE DB 명령 변환이 외부 데이터 공급자에 대해 수행하는 호출을 로깅할 수 있습니다. 이 로깅 기능을 사용하여 OLE DB 명령 변환이 수행하는 외부 데이터 원본에 대한 연결 및 명령 문제를 해결할 수 있습니다. OLE DB 명령 변환이 외부 데이터 공급자에 대해 수행하는 호출을 로깅하려면 패키지 로깅을 설정하고 패키지 수준에서 **Diagnostic** 이벤트를 선택합니다. 자세한 내용은 [패키지 실행 문제 해결 도구](../../troubleshooting/troubleshooting-tools-for-package-execution.md)를 참조하세요.  
   
 ## <a name="related-tasks"></a>관련 작업  
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너 또는 개체 모델을 사용하여 변환을 구성할 수 있습니다. [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하여 변환을 구성하는 방법은  [OLE DB 명령 변환 구성](../../configure-the-ole-db-command-transformation.md)을 참조하세요. 프로그래밍 방식으로 이 변환을 구성하는 방법은 개발자 가이드를 참조하십시오.  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너 또는 개체 모델을 사용하여 변환을 구성할 수 있습니다. 
+  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하여 변환을 구성하는 방법은  [OLE DB 명령 변환 구성](../../configure-the-ole-db-command-transformation.md)을 참조하세요. 프로그래밍 방식으로 이 변환을 구성하는 방법은 개발자 가이드를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 흐름](../data-flow.md)   
  [Integration Services 변환](integration-services-transformations.md)  
   

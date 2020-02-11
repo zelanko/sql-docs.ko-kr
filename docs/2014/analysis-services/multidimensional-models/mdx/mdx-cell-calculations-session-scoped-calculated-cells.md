@@ -1,5 +1,5 @@
 ---
-title: 세션 범위 계산 만들기 셀 | Microsoft Docs
+title: 세션 범위 계산 셀 만들기 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4388ef278c0762184859162dc55f656aae1c9a15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074433"
 ---
 # <a name="creating-session-scoped-calculated-cells"></a>세션 범위 계산 셀 만들기
@@ -73,16 +73,17 @@ FOR String_Expression AS 'MDX_Expression'
    ( CellProperty_Identifier = Scalar_Expression )  
 ```  
   
- `String_Expression` 값은 다음 표에 나열된 집합의 범주 중 하나로 확인되어야 하는 직각의 단일 차원 MDX 집합 식 목록을 포함합니다.  
+ 
+  `String_Expression` 값은 다음 표에 나열된 집합의 범주 중 하나로 확인되어야 하는 직각의 단일 차원 MDX 집합 식 목록을 포함합니다.  
   
-|범주|Description|  
+|Category|Description|  
 |--------------|-----------------|  
 |빈 집합|빈 집합으로 확인되는 MDX 집합 식입니다. 이 경우 계산 셀의 범위는 전체 큐브입니다.|  
 |단일 멤버 집합|단일 멤버로 확인되는 MDX 집합 식입니다.|  
-|수준 멤버 집합|단일 수준의 멤버로 확인되는 MDX 집합 식입니다. 이러한 예로 *Level_Expression*합니다.`Members` MDX 함수. 계산된 멤버를 포함 하려면 사용 합니다 *Level_Expression*합니다.`AllMembers` MDX 함수.<br /><br /> 자세한 내용은 [AllMembers&#40;MDX&#41;](/sql/mdx/allmembers-mdx)를 참조하세요.|  
-|하위 항목 집합|지정된 멤버의 하위 항목으로 확인되는 MDX 집합 식입니다. 이 예로 `Descendants`(*Member_Expression*를 *Level_Expression*를 *Desc_Flag*) MDX 함수입니다.<br /><br /> 자세한 내용은 [Descendants&#40;MDX&#41;](/sql/mdx/descendants-mdx)를 참조하세요.|  
+|수준 멤버 집합|단일 수준의 멤버로 확인되는 MDX 집합 식입니다. 이에 대 한 예는 *Level_Expression*입니다.`Members` MDX 함수. 계산 멤버를 포함 하려면 *Level_Expression*을 사용 합니다.`AllMembers` MDX 함수.<br /><br /> 자세한 내용은 [AllMembers&#40;MDX&#41;](/sql/mdx/allmembers-mdx)를 참조하세요.|  
+|하위 항목 집합|지정된 멤버의 하위 항목으로 확인되는 MDX 집합 식입니다. 이에 대 한 예는 `Descendants`(*Member_Expression*, *Level_Expression*, *Desc_Flag*) MDX 함수입니다.<br /><br /> 자세한 내용은 [Descendants&#40;MDX&#41;](/sql/mdx/descendants-mdx)를 참조하세요.|  
   
-## <a name="see-also"></a>관련 항목  
- [MDX로 셀 계산 작성&#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)  
+## <a name="see-also"></a>참고 항목  
+ [Mdx로 셀 계산 작성 &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)  
   
   

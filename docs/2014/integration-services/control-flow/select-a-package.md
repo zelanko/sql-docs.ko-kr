@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 026c588f2fc35a6cb256a63046ad91e5d1b5641a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830250"
 ---
 # <a name="select-a-package"></a>패키지 선택
@@ -58,7 +58,7 @@ ms.locfileid: "62830250"
  **파일 이름**  
  패키지 경로를 입력하거나 찾아보기 단추 **(...)** 를 클릭하고 패키지를 찾습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [메시지 큐 태스크](message-queue-task.md)  
   
   

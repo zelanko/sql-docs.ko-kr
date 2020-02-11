@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 381007cb26f74cdf945900436d8a9fcea5a4ef39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62714720"
 ---
 # <a name="filter-a-trace"></a>추적 필터링
@@ -62,11 +62,11 @@ ms.locfileid: "62714720"
   
 |관계형 연산자|연산자 기호|Description|  
 |-------------------------|---------------------|-----------------|  
-|Like|Like|추적 이벤트 데이터가 입력한 텍스트와 같아야 함을 지정합니다. 다중 값을 허용합니다.|  
+|Like|LIKE|추적 이벤트 데이터가 입력한 텍스트와 같아야 함을 지정합니다. 다중 값을 허용합니다.|  
 |유사하지 않음|유사하지 않음|추적 이벤트 데이터가 입력한 텍스트와 같지 않아야 함을 지정합니다. 다중 값을 허용합니다.|  
 |같음|=|추적 이벤트 데이터가 입력한 값과 같아야 함을 지정합니다. 다중 값을 허용합니다.|  
 |같지 않음|<>|추적 이벤트 데이터가 입력한 값과 같지 않아야 함을 지정합니다. 다중 값을 허용합니다.|  
-|보다 큼|>|추적 이벤트 데이터가 입력한 값보다 커야 함을 지정합니다.|  
+|초과|>|추적 이벤트 데이터가 입력한 값보다 커야 함을 지정합니다.|  
 |크거나 같음|>=|추적 이벤트 데이터가 입력한 값보다 크거나 같아야 함을 지정합니다.|  
 |보다 작음|<|추적 이벤트 데이터가 입력한 값보다 작아야 함을 지정합니다.|  
 |작거나 같음|<=|추적 이벤트 데이터가 입력한 값보다 작거나 같아야 함을 지정합니다.|  
@@ -85,7 +85,7 @@ ms.locfileid: "62714720"
 |**DatabaseID**|=, <>, >=, <=|  
 |**DatabaseName**|LIKE, NOT LIKE|  
 |**DBUserName**|LIKE, NOT LIKE|  
-|**기간**|=, <>, >=, \<=|  
+|**Duration**|=, <>, >=, \<=|  
 |**EndTime**|>=, <=|  
 |**오류**|=, <>, >=, <=|  
 |**EventSubClass**|=, <>, >=, <=|  
@@ -127,7 +127,7 @@ ms.locfileid: "62714720"
 |**SqlHandle**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 이 데이터 열의 이벤트를 필터링할 수 있습니다. 자세한 내용은 [SQL Server Profiler로 추적 필터링](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)을 참조하세요.|  
 |**StartTime**|>=, <=|  
 |**State**|=, <>, >=, <=|  
-|**성공**|=, <>, >=, <=|  
+|**Success**|=, <>, >=, <=|  
 |**TargetLoginName**|LIKE, NOT LIKE|  
 |**TargetLoginSid**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 이 데이터 열의 이벤트를 필터링할 수 있습니다. 자세한 내용은 [SQL Server Profiler로 추적 필터링](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)을 참조하세요.|  
 |**TargetUserName**|LIKE, NOT LIKE|  
@@ -137,7 +137,7 @@ ms.locfileid: "62714720"
 |**Writes**|=, <>, >=, <=|  
 |**XactSequence**|=, <>, >=, <=|  
   
- <sup>1</sup> 이벤트를 추적 하는 경우는 **osql** 유틸리티 또는 **sqlcmd** 유틸리티를 항상 추가 **%** 필터에 **TextData**  데이터 열입니다.  
+ <sup>1</sup> **osql** 유틸리티 또는 **sqlcmd** 유틸리티에서 이벤트를 추적 하는 경우 항상 **%** **TextData** 데이터 열의 필터에 추가 합니다.  
   
  보안 예방 조치로서 SQL 추적은 암호에 영향을 미치는 보안 관련 저장 프로시저의 모든 정보를 자동으로 추적에서 생략합니다. 이 보안 메커니즘은 따로 구성할 수 없고 항상 유효하며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 모든 작업을 추적할 수 있는 권한을 가진 사용자가 암호를 캡처할 수 없도록 합니다.  
   

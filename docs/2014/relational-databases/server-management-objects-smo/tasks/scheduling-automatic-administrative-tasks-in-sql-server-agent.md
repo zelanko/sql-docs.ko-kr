@@ -15,29 +15,35 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 715a60d4a6f4a138a71e7de6095234a9e0d2a461
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782205"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>SQL Server 에이전트에서 자동 관리 태스크 예약
   SMO에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트는 다음 개체로 표시됩니다.  
   
--   <xref:Microsoft.SqlServer.Management.Smo.Agent.JobServer> 개체에는 작업, 경고, 운영자의 세 가지 컬렉션이 있습니다.  
+-   
+  <xref:Microsoft.SqlServer.Management.Smo.Agent.JobServer> 개체에는 작업, 경고, 운영자의 세 가지 컬렉션이 있습니다.  
   
--   <xref:Microsoft.SqlServer.Management.Smo.Agent.OperatorCollection> 개체는 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트로부터 자동으로 이벤트 알림을 받을 수 있는 호출기, 전자 메일 주소 및 net send 운영자 목록을 나타냅니다.  
+-   
+  <xref:Microsoft.SqlServer.Management.Smo.Agent.OperatorCollection> 개체는 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트로부터 자동으로 이벤트 알림을 받을 수 있는 호출기, 전자 메일 주소 및 net send 운영자 목록을 나타냅니다.  
   
--   <xref:Microsoft.SqlServer.Management.Smo.Agent.AlertCollection> 개체는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 모니터링되는 시스템 이벤트나 성능 조건과 같은 상황 목록을 나타냅니다.  
+-   
+  <xref:Microsoft.SqlServer.Management.Smo.Agent.AlertCollection> 개체는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 모니터링되는 시스템 이벤트나 성능 조건과 같은 상황 목록을 나타냅니다.  
   
--   <xref:Microsoft.SqlServer.Management.Smo.Agent.JobCollection> 개체는 약간 더 복잡합니다. 이 개체는 지정된 일정에서 실행되는 다단계 태스크 목록을 나타냅니다. 단계 및 일정 정보는 <xref:Microsoft.SqlServer.Management.Smo.Agent.JobStep> 및 <xref:Microsoft.SqlServer.Management.Smo.Agent.JobSchedule> 개체에 저장됩니다.  
+-   
+  <xref:Microsoft.SqlServer.Management.Smo.Agent.JobCollection> 개체는 약간 더 복잡합니다. 이 개체는 지정된 일정에서 실행되는 다단계 태스크 목록을 나타냅니다. 단계 및 일정 정보는 <xref:Microsoft.SqlServer.Management.Smo.Agent.JobStep> 및 <xref:Microsoft.SqlServer.Management.Smo.Agent.JobSchedule> 개체에 저장됩니다.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 개체는 <xref:Microsoft.SqlServer.Management.Smo.Agent> 네임스페이스에 있습니다.  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 개체는 <xref:Microsoft.SqlServer.Management.Smo.Agent> 네임스페이스에 있습니다.  
   
 ## <a name="examples"></a>예  
- 제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 visual [studio .net에서 VISUAL BASIC SMO 프로젝트 만들기](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) 또는 [visual Studio .Net에서 Visual C&#35; smo 프로젝트 만들기](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  
+ 제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 visual [studio .net에서 VISUAL BASIC SMO 프로젝트 만들기](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) 또는 [visual Studio .Net에서 VISUAL C&#35; smo 프로젝트 만들기](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  
   
-1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트를 사용하는 프로그램에 대해 에이전트 네임스페이스를 한정하는 `Imports` 문을 포함해야 합니다. 다음과 같이 응용 프로그램의 선언 앞에, 다른 `Imports` 문 끝에 구문을 삽입하십시오.  
+1.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트를 사용하는 프로그램에 대해 에이전트 네임스페이스를 한정하는 `Imports` 문을 포함해야 합니다. 다음과 같이 애플리케이션의 선언 앞에, 다른 `Imports` 문 끝에 구문을 삽입하십시오.  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   
@@ -166,18 +172,20 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-visual-basic"></a>Visual Basic에서 경고 만들기  
  이 코드 예제는 성능 조건에 따라 트리거되는 경고를 만듭니다. 다음과 같은 특정 형식으로 조건을 제공해야 합니다.  
   
- **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
+ **ObjectName | CounterName | 인스턴스 | ComparisionOp | CompValue**  
   
- 경고 알림을 위해 운영자가 필요합니다. <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>가 Visual Basic 키워드이므로 `operator` 형식을 대괄호로 묶어야 합니다.  
+ 경고 알림을 위해 운영자가 필요합니다. 
+  <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>가 Visual Basic 키워드이므로 `operator` 형식을 대괄호로 묶어야 합니다.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBAgent3](SMO How to#SMO_VBAgent3)]  -->  
   
 ## <a name="creating-an-alert-in-visual-c"></a>Visual C#에서 경고 만들기  
  이 코드 예제는 성능 조건에 따라 트리거되는 경고를 만듭니다. 다음과 같은 특정 형식으로 조건을 제공해야 합니다.  
   
- **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
+ **ObjectName | CounterName | 인스턴스 | ComparisionOp | CompValue**  
   
- 경고 알림을 위해 운영자가 필요합니다. <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>가 `operator` 키워드이므로 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 형식을 대괄호로 묶어야 합니다.  
+ 경고 알림을 위해 운영자가 필요합니다. 
+  <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>가 `operator` 키워드이므로 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 형식을 대괄호로 묶어야 합니다.  
   
 ```csharp
 {  
@@ -208,9 +216,10 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-powershell"></a>PowerShell에서 경고 만들기  
  이 코드 예제는 성능 조건에 따라 트리거되는 경고를 만듭니다. 다음과 같은 특정 형식으로 조건을 제공해야 합니다.  
   
- **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
+ **ObjectName | CounterName | 인스턴스 | ComparisionOp | CompValue**  
   
- 경고 알림을 위해 운영자가 필요합니다. <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>가 `operator` 키워드이므로 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 형식을 대괄호로 묶어야 합니다.  
+ 경고 알림을 위해 운영자가 필요합니다. 
+  <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>가 `operator` 키워드이므로 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 형식을 대괄호로 묶어야 합니다.  
   
 ```powershell
 #Get a server object which corresponds to the default instance  

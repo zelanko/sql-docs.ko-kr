@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: caa99de2383a022ff73c04dd5fcdeeb151ca086d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62691856"
 ---
 # <a name="ibcpsession2-ole-db"></a>IBCPSession2(OLE DB)
-  IBCPSession2 인터페이스는 확장 IBCPSession 각 열에 대해 ibcpsession:: Bcpcolfmt를 호출 하는 대신 하는 멤버 함수를 제공 하는입니다.  IBCPSession2는 IBCPSession에서 상속 되며 하나의 새 메서드를 추가 합니다. [IBCPSession2::BCPSetBulkMode](ibcpsession2-bcpsetbulkmode.md).  
+  IBCPSession2 인터페이스는 각 열에 대해 IBCPSession:: BCPColFmt를 호출 하는 대신 사용할 수 있는 멤버 함수를 제공 하는 IBCPSession에 대 한 확장입니다.  IBCPSession2는 IBCPSession에서 상속 하 고 [IBCPSession2:: Bcpset대량 모드](ibcpsession2-bcpsetbulkmode.md)의 새 메서드를 추가 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [인터페이스 &#40;OLE DB&#41;](../../database-engine/dev-guide/interfaces-ole-db.md)  
   
   

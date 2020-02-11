@@ -15,18 +15,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 66323ccdb91076496f9796245c368697d9ebc8c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057597"
 ---
 # <a name="message-queue-task-editor-send-page"></a>메시지 큐 태스크 편집기(보내기 페이지)
+  
   **메시지 큐 태스크 편집기** 대화 상자의 **보내기** 페이지를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지에서 메시지를 보내도록 메시지 큐 태스크를 구성할 수 있습니다.  
   
  이 태스크에 대한 자세한 내용은 [Message Queue Task](control-flow/message-queue-task.md)를 참조하십시오.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **UseEncryption**  
  메시지 암호화 여부를 나타냅니다. 기본값은 `False`입니다.  
   
@@ -51,23 +52,23 @@ ms.locfileid: "66057597"
 ## <a name="messagetype-dynamic-options"></a>MessageType 동적 옵션  
   
 ### <a name="messagetype--data-file-message"></a>MessageType = 데이터 파일 메시지  
- **DataFileMessage**  
+ **Datafilemessage가**  
  데이터 파일의 경로를 입력하거나 줄임표 **(...)** 를 클릭한 다음, 파일을 찾습니다.  
   
 ### <a name="messagetype--variable-message"></a>MessageType = 변수 메시지  
- **VariableMessage**  
+ **Variablemessage가**  
  변수 이름을 입력하거나 줄임표 **(...)** 를 클릭한 다음, 변수를 선택합니다. 변수는 쉼표로 구분됩니다.  
   
  **관련 항목:** 변수 선택  
   
 ### <a name="messagetype--string-message"></a>MessageType = 문자열 메시지  
- **StringMessage**  
+ **Stringmessage가**  
  문자열 메시지를 입력하거나 줄임표 **(...)** 를 클릭한 다음, **문자열 메시지 입력** 대화 상자에 메시지를 입력합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [메시지 큐 태스크 편집기&#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
- [메시지 큐 태스크 편집기&#40;받기 페이지&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
+ [메시지 큐 태스크 편집기 &#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
+ [메시지 큐 태스크 편집기 &#40;수신 페이지&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
  [식 페이지](expressions/expressions-page.md)  
   
   

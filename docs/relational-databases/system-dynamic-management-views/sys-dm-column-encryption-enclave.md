@@ -10,20 +10,20 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: d10bef0df04501c177086b6c89b3f67dec3bab10
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73599246"
 ---
-# <a name="sysdm_column_encryption_enclave-transact-sql"></a>sys. dm_column_encryption_enclave (Transact-sql)
+# <a name="sysdm_column_encryption_enclave-transact-sql"></a>sys.dm_column_encryption_enclave(Transact-SQL)
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
 Always Encrypted의 secure enclave에 대 한 성능 카운터를 반환 합니다. 자세한 내용은 [보안 Enclave를 사용한 Always Encrypted](../security/encryption/always-encrypted-enclaves.md)를 참조하세요.
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 마지막으로 다시 시작한 후에 enclave가 구성 되 고 올바르게 초기화 된 경우 뷰에는 정확히 한 개의 행이 포함 됩니다. Enclave이 구성 되지 않았거나 올바르게 초기화 되지 않은 경우 뷰는 행을 반환 하지 않습니다. 
+를 마지막으로 다시 시작한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]후 enclave가 구성 되어 올바르게 초기화 된 경우 뷰에는 정확히 한 개의 행이 포함 됩니다. Enclave이 구성 되지 않았거나 올바르게 초기화 되지 않은 경우 뷰는 행을 반환 하지 않습니다. 
 
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |current_enclave_session_count|**int**|Enclave를 사용 하는 현재 클라이언트 세션 수입니다.|  
 |current_column_encryption_key_count|**int**|Enclave가 현재 보유 하 고 있는 열 암호화 키의 수입니다.|  
@@ -40,7 +40,7 @@ SELECT * FROM sys.dm_column_encryption_enclave;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [Enclave type for Always Encrypted 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)
+## <a name="see-also"></a>참고 항목  
+ [Always Encrypted 서버 구성 옵션에 대한 Enclave 형식 구성](../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)
   
   

@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: efbe03a4aab65f792b352eeb5b6c5130c4c32335
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783211"
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>Reporting Services WMI 공급자 액세스
@@ -32,10 +32,10 @@ ms.locfileid: "72783211"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 릴리스부터는 WMI 공급자가 기본 모드 보고서 서버에 대해서만 지원됩니다. SharePoint 모드 보고서 서버는 SharePoint 중앙 관리 페이지 및 PowerShell 스크립트를 사용하여 관리할 수 있습니다.  
   
-|클래스|네임스페이스|설명|  
+|클래스|네임스페이스|Description|  
 |-----------|---------------|-----------------|  
-|MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\RS_ *\<EncodedInstanceName>* \v11|클라이언트에서 설치된 보고서 서버에 연결하는 데 필요한 기본 정보를 제공합니다.|  
-|MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\RS_ *\<EncodedInstanceName>* \v11\Admin|보고서 서버 인스턴스의 설치 및 런타임 매개 변수를 나타냅니다. 이러한 매개 변수는 보고서 서버의 구성 파일에 저장됩니다.<br /><br /> **\*\* 중요 \*\*** 이 클래스는 관리 권한이 있어야만 액세스할 수 있습니다.|  
+|MSReportServer_Instance|root\microsoft\sqlserver\reportserver\ RS_*\<EncodedInstanceName>* \v11|클라이언트에서 설치된 보고서 서버에 연결하는 데 필요한 기본 정보를 제공합니다.|  
+|MSReportServer_ConfigurationSetting|root\microsoft\sqlserver\reportserver\ RS_*\<EncodedInstanceName>* \v11\Admin|보고서 서버 인스턴스의 설치 및 런타임 매개 변수를 나타냅니다. 이러한 매개 변수는 보고서 서버의 구성 파일에 저장됩니다.<br /><br /> **\*\* 중요 \*\*** 이 클래스는 관리 권한이 있어야만 액세스할 수 있습니다.|  
   
  각 보고서 서버 인스턴스에 대해 위의 각 클래스 인스턴스가 만들어집니다. 모든 Microsoft 또는 타사 도구를 사용하여 .NET Framework 자체에서 제공하는 WMI 프로그래밍 인터페이스를 포함하여 보고서 서버에서 제공하는 WMI 개체에 액세스할 수 있습니다. 이 항목에서는 PowerShell 명령 [Get-WmiObject](https://technet.microsoft.com/library/dd315295.aspx)를 사용하여 WMI 클래스 인스턴스에 액세스하고 사용하는 방법을 설명합니다.  
   
@@ -70,7 +70,7 @@ Get-WmiObject -Namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLServer\v
 ```  
   
 ## <a name="query-the-available-methods-and-properties"></a>사용 가능한 메서드 및 속성 쿼리  
- Reporting Services WMI 클래스 중 하나에서 사용할 수 있는 메서드 및 속성을 보려면 Get-WmiObject의 결과를 Get-Member 명령으로 전달합니다. 예를 들어:  
+ Reporting Services WMI 클래스 중 하나에서 사용할 수 있는 메서드 및 속성을 보려면 Get-WmiObject의 결과를 Get-Member 명령으로 전달합니다. 다음은 그 예입니다.  
   
 ```powershell
 Get-WmiObject -Namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLServer\v11\Admin" -Class MSReportServer_ConfigurationSetting -ComputerName myrshost | Get-Member  
@@ -88,4 +88,4 @@ $rsconfig.GetAdminSiteUrl()
   
 ## <a name="see-also"></a>참고 항목
  [Reporting Services WMI 공급자 라이브러리 참조&#40;SSRS&#41;](../wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)   
- [RSReportServer 구성 파일](../report-server/rsreportserver-config-configuration-file.md)  
+ [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)  

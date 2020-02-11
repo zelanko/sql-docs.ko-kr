@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b5be7eb52d0aa8c0a94b1a4ff63493e7f641bdbd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754462"
 ---
 # <a name="register-mirrored-database"></a>미러된 데이터베이스 등록
@@ -29,7 +29,7 @@ ms.locfileid: "62754462"
   
 -   [데이터베이스 미러링 모니터 시작&#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **서버 인스턴스**  
  데이터베이스 미러링 모니터에 이미 저장된 연결이 있는 서버 인스턴스가 포함된 목록에서 서버 인스턴스를 선택하거나 **연결**을 클릭합니다. 나열된 서버 인스턴스에 대해 새 자격 증명을 지정하려면 **연결** 을 클릭하고 새 자격 증명을 사용하여 연결합니다.  
   
@@ -46,8 +46,8 @@ ms.locfileid: "62754462"
   
 |열 이름|Description|  
 |-----------------|-----------------|  
-|**등록**|등록할 각 데이터베이스를 검사합니다. 데이터베이스가 현재 모니터링되고 있는 경우 해당 확인란은 선택된 상태로 비활성화되어 있습니다.<br /><br /> 참고: 데이터베이스 등록을 취소하려면 **미러된 데이터베이스 등록** 대화 상자를 닫고 탐색 트리에서 데이터베이스를 선택하고 **동작** 메뉴에서 **등록 취소**를 선택합니다.|  
-|**데이터베이스 백업**|선택한 서버 인스턴스에 있는 미러된 데이터베이스의 이름입니다.|  
+|**등록**|등록할 각 데이터베이스를 검사합니다. 데이터베이스가 현재 모니터링되고 있는 경우 해당 확인란은 선택된 상태로 비활성화되어 있습니다.<br /><br /> 참고: 데이터베이스 등록을 취소하려면 **미러된 데이터베이스 등록** 대화 상자를 닫고 탐색 트리에서 데이터베이스를 선택한 다음 **동작** 메뉴에서 **등록 취소** 를 선택합니다.|  
+|**Database**|선택한 서버 인스턴스에 있는 미러된 데이터베이스의 이름입니다.|  
 |**현재 역할**|선택한 서버 인스턴스에 있는 데이터베이스의 현재 미러링 역할(주 서버 또는 미러 서버)입니다.|  
 |**파트너(연결 대상)**|데이터베이스에 대한 장애 조치(Failover) 파트너의 이름입니다. 괄호 안에 **콘솔 사용자의 Windows 인증** 또는 **'***\<로그인 이름>***' 로그인의 SQL Server 인증**이 표시됩니다. 이것은 인스턴스가 이전에 추가된 경우에는 현재 사용되는 인증 정보이고 인스턴스가 모니터에 추가되지 않은 경우에는 사용될 인증 정보입니다.|  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62754462"
  **적용**  
  대화 상자를 열어 둔 상태에서 선택한 데이터베이스를 등록하고 파트너 서버 인스턴스의 자격 증명을 저장하려면 이 단추를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링 모니터 시작&#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [데이터베이스 미러링 모니터링&#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [데이터베이스 미러링 보안 구성 마법사 시작&#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  

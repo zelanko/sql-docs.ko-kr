@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a9597686f4c9ca5a90a8344b425b6808cd96477a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060567"
 ---
 # <a name="configure-the-integration-services-service-as-a-cluster-resource"></a>Integration Services 서비스를 클러스터 리소스로 구성
@@ -100,9 +100,10 @@ ms.locfileid: "66060567"
   
 2.  공유 디스크에서 패키지 저장소로 사용할 **Packages** 라는 새 폴더를 만듭니다. 해당 사용자 및 그룹에 새 폴더에 대한 폴더 보기 및 쓰기 권한을 부여합니다.  
   
-3.  공유 디스크에서 텍스트 편집기나 XML 편집기로 구성 파일을 엽니다. `ServerName` 요소의 값을 같은 리소스 그룹에 있는 가상 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 이름으로 변경합니다.  
+3.  공유 디스크에서 텍스트 편집기나 XML 편집기로 구성 파일을 엽니다. 
+  `ServerName` 요소의 값을 같은 리소스 그룹에 있는 가상 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 이름으로 변경합니다.  
   
-4.  값을 변경 합니다 `StorePath` 의 정규화 된 경로에 요소는 **패키지** 이전 단계에서 공유 디스크에 만든 폴더입니다.  
+4.  `StorePath` 요소의 값을 이전 단계에서 공유 디스크에 만든 **패키지** 폴더의 정규화 된 경로로 변경 합니다.  
   
 5.  레지스트리의 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile** 값을 공유 디스크의 정규화된 경로 및 서비스 구성 파일의 파일 이름에 업데이트합니다.  
   

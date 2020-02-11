@@ -1,5 +1,5 @@
 ---
-title: 데이터 및 로그 파일 (SQL Server Management Studio)에 대 한 기본 위치 보기 또는 변경 | Microsoft Docs
+title: 데이터 및 로그 파일의 기본 위치 보기 또는 변경 (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 06d17a4feaec0db614f61fb7761b37ea415efc24
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62808713"
 ---
 # <a name="view-or-change-the-default-locations-for-data-and-log-files-sql-server-management-studio"></a>데이터 및 로그 파일의 기본 위치 보기 또는 변경(SQL Server Management Studio)
@@ -29,11 +29,11 @@ ms.locfileid: "62808713"
   
      [권장 사항](#Recommendations)  
   
--   **확인 하거나 데이터 및 로그 파일 기본 위치를 사용 하 여 변경 합니다.**  
+-   **데이터 및 로그 파일 기본 위치를 보거나 변경하려면:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
--   **후속 작업:**  [기본 위치 변경](#FollowUp)  
+-   **후속 작업:**[기본 위치를 변경 합니다](#FollowUp) .    
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62808713"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
@@ -52,12 +52,13 @@ ms.locfileid: "62808713"
   
 2.  왼쪽 패널에서 **데이터베이스 설정** 페이지를 클릭합니다.  
   
-3.  **데이터베이스 기본 위치**에서 새 데이터 파일 및 새 로그 파일의 현재 기본 위치를 봅니다. 기본 위치를 변경하려면 **데이터** 또는 **로그** 필드에 새 기본 경로 이름을 입력하거나 찾아보기 단추를 클릭한 다음 경로 이름을 찾아 선택합니다.  
+3.  
+  **데이터베이스 기본 위치**에서 새 데이터 파일 및 새 로그 파일의 현재 기본 위치를 봅니다. 기본 위치를 변경하려면 **데이터** 또는 **로그** 필드에 새 기본 경로 이름을 입력하거나 찾아보기 단추를 클릭한 다음 경로 이름을 찾아 선택합니다.  
   
-##  <a name="FollowUp"></a> 후속 작업: 기본 위치를 변경한 후  
+##  <a name="FollowUp"></a>후속 작업: 기본 위치를 변경한 후  
  변경 내용을 적용하려면 SQL Server 서비스를 중지했다가 시작해야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [데이터베이스 만들기](../../relational-databases/databases/create-a-database.md)  
   

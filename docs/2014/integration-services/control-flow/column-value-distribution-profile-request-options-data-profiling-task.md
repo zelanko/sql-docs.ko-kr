@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5a79ba9f2ff211ed4bf56e749acba7f1d4601643
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832428"
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>열 값 분포 프로필 요청 옵션(데이터 프로파일링 태스크)
@@ -34,7 +34,7 @@ ms.locfileid: "62832428"
   
 -   **일반**  
   
--   **Options**  
+-   **옵션**  
   
 ### <a name="data-options"></a>데이터 옵션  
  **ConnectionManager**  
@@ -45,7 +45,7 @@ ms.locfileid: "62832428"
   
  자세한 내용은 이 항목의 "TableorView 옵션" 섹션을 참조하십시오.  
   
- **Column**  
+ **열**  
  프로파일링할 기존 열을 선택합니다. 모든 열을 프로파일링하려면 **(\*)** 를 선택합니다.  
   
  자세한 내용은 이 항목의 "열 옵션" 섹션을 참조하십시오.  
@@ -59,7 +59,7 @@ ms.locfileid: "62832428"
   
 #### <a name="column-options"></a>열 옵션  
  **IsWildCard**  
- **(\*)** 와일드카드가 선택되었는지 여부를 지정합니다. 이 옵션은 모든 열을 프로파일링하도록 **(\*)** 를 선택한 경우 **True**로 설정됩니다. 프로파일링할 개별 열을 선택한 경우에는 **False** 로 설정됩니다. 이 옵션은 읽기 전용입니다.  
+ **(\*)** 와일드카드가 선택되었는지 여부를 지정합니다. 이 옵션은 모든 열을 프로파일링하도록 **(** )**를 선택한 경우 \*True**로 설정됩니다. 프로파일링할 개별 열을 선택한 경우에는 **False** 로 설정됩니다. 이 옵션은 읽기 전용입니다.  
   
  **ColumnName**  
  선택한 열의 이름을 표시합니다. 이 옵션은 모든 열을 프로파일링하도록 **(\*)** 를 선택한 경우 비어 있습니다. 이 옵션은 읽기 전용입니다.  
@@ -68,11 +68,11 @@ ms.locfileid: "62832428"
  문자열 값을 비교할 수 있는 옵션을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다. 이 옵션의 기본값은 **Default**입니다.  
   
 > [!NOTE]  
->  **ColumnName**에 대해 **(\*)** 와일드카드를 사용하는 경우 **CompareOptions**가 읽기 전용이 되며 **Default** 설정으로 설정됩니다.  
+>  **ColumnName\*에 대해** ( **)** 와일드카드를 사용하는 경우 **CompareOptions**가 읽기 전용이 되며 **Default** 설정으로 설정됩니다.  
   
 |값|Description|  
 |-----------|-----------------|  
-|**Default**|원본 테이블에서 열의 데이터 정렬을 기준으로 데이터를 정렬 및 비교합니다.|  
+|**기본값**|원본 테이블에서 열의 데이터 정렬을 기준으로 데이터를 정렬 및 비교합니다.|  
 |**BinarySort**|각 문자에 대해 정의된 비트 패턴을 기준으로 데이터를 정렬 및 비교합니다. 이진 정렬 순서는 대/소문자와 악센트를 구분합니다. 이진은 가장 빠른 정렬 순서입니다.|  
 |**DictionarySort**|관련된 언어 또는 알파벳에 대해 사전에 정의된 정렬 및 비교 규칙에 따라 데이터를 정렬 및 비교합니다.|  
   
@@ -89,7 +89,7 @@ ms.locfileid: "62832428"
  **RequestID**  
  이 프로필 요청을 식별할 설명이 포함된 이름을 입력합니다. 일반적으로 자동 생성된 값은 변경하지 않아도 됩니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>옵션  
  **ValueDistributionOption**  
  모든 열 값에 대해 분포를 컴퓨팅할 것인지 여부를 지정합니다. 이 옵션의 기본값은 **FrequentValues**입니다.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "62832428"
  **FrequentValueThreshold**  
  0-1의 값을 사용하여 임계값을 지정합니다. 이 임계값을 초과하는 열 값은 보고됩니다. **AllValues** 가 **ValueDistributionOption**으로 선택된 경우 이 옵션을 사용할 수 없습니다. 이 옵션의 기본값은 0.001입니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 프로파일링 태스크 편집기&#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)   
  [단일 테이블 빠른 프로필 형식&#40;데이터 프로파일링 태스크&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   

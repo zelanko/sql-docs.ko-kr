@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 23dee8cac6046223bf22ea52d1ceb4013a408050
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059057"
 ---
 # <a name="execute-package-task-editor"></a>패키지 실행 태스크 편집기
@@ -34,13 +34,14 @@ ms.locfileid: "66059057"
   
 -   [매개 변수 바인딩 페이지에서 옵션 설정](#parameter)  
   
-##  <a name="open"></a> 패키지 실행 태스크 편집기 열기  
+##  <a name="open"></a>패키지 실행 태스크 편집기 열기  
   
-1.  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 패키지 실행 태스크가 들어 있는 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 프로젝트를 엽니다.  
+1.  
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 패키지 실행 태스크가 들어 있는 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 프로젝트를 엽니다.  
   
 2.  SSIS 디자이너에서 태스크를 마우스 오른쪽 단추로 클릭한 다음 **편집**을 클릭합니다.  
   
-##  <a name="general"></a> 일반 페이지에서 옵션 설정  
+##  <a name="general"></a>일반 페이지에서 옵션 설정  
  **이름**  
  패키지 실행 태스크에 사용할 고유 이름을 제공합니다. 이 이름은 태스크 아이콘에서 레이블로 사용됩니다.  
   
@@ -50,18 +51,19 @@ ms.locfileid: "66059057"
  **설명**  
  패키지 실행 태스크에 대한 설명을 입력합니다.  
   
-##  <a name="package"></a> 패키지 페이지에서 옵션 설정  
+##  <a name="package"></a>패키지 페이지에서 옵션 설정  
  **ReferenceType**  
  자식 패키지가 프로젝트 내부에 있는 경우 **프로젝트 참조** 를 선택합니다. 자식 패키지가 프로젝트 외부에 있는 경우 **외부 참조** 를 선택합니다.  
   
 > [!NOTE]  
->  **ReferenceType** 옵션은 읽기 전용이며 패키지가 포함된 프로젝트가 프로젝트 배포 모델로 전환되지 않은 경우에는 **외부 참조** 로 설정됩니다. 변환에 대한 자세한 내용은 [Integration Services 서버에 프로젝트 배포](../../2014/integration-services/deploy-projects-to-integration-services-server.md)를 참조하세요.  
+>  
+  **ReferenceType** 옵션은 읽기 전용이며 패키지가 포함된 프로젝트가 프로젝트 배포 모델로 전환되지 않은 경우에는 **외부 참조** 로 설정됩니다. 변환에 대한 자세한 내용은 [Integration Services 서버에 프로젝트 배포](../../2014/integration-services/deploy-projects-to-integration-services-server.md)를 참조하세요.  
   
  **암호**  
  자식 패키지가 암호로 보호되어 있으면 자식 패키지의 암호를 입력하거나 줄임표 단추(...)를 클릭하여 자식 패키지의 새 암호를 만듭니다.  
   
  `ExecuteOutOfProcess`  
- 자식 패키지를 부모 패키지 프로세스에서 실행할지 아니면 별도의 프로세스에서 실행할지 지정합니다. 기본적으로 패키지 실행 태스크의 ExecuteOutOfProcess 속성 설정 `False`, 및 자식 패키지가 부모 패키지와 동일한 프로세스에서 실행 합니다. 이 속성을 `true`로 설정하면 하위 패키지가 개별 프로세스로 실행됩니다. 이렇게 하면 하위 패키지의 실행 속도가 느려집니다. 또한 이 속성을 `true`로 설정하면 도구만 설치로 패키지를 디버깅할 수 없으며 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 제품을 설치해야 합니다. 자세한 내용은 [Integration Services 설치](install-windows/install-integration-services.md)를 참조하세요.  
+ 자식 패키지를 부모 패키지 프로세스에서 실행할지 아니면 별도의 프로세스에서 실행할지 지정합니다. 기본적으로 패키지 실행 태스크의 ExecuteOutOfProcess 속성은로 `False`설정 되 고 자식 패키지는 부모 패키지와 같은 프로세스에서 실행 됩니다. 이 속성을 `true`로 설정하면 하위 패키지가 개별 프로세스로 실행됩니다. 이렇게 하면 하위 패키지의 실행 속도가 느려집니다. 또한 이 속성을 `true`로 설정하면 도구만 설치로 패키지를 디버깅할 수 없으며 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 제품을 설치해야 합니다. 자세한 내용은 [Integration Services 설치](install-windows/install-integration-services.md)를 참조하세요.  
   
 ### <a name="referencetype-dynamic-options"></a>ReferenceType 동적 옵션  
   
@@ -74,7 +76,7 @@ ms.locfileid: "66059057"
 |**SQL Server**|위치를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스로 설정합니다.|  
 |**파일 시스템**|파일 시스템에 위치를 설정합니다.|  
   
- **대량 삽입 태스크 편집기**  
+ **연결**  
  자식 패키지의 스토리지 위치 유형을 선택합니다.  
   
  **PackageNameReadOnly**  
@@ -87,24 +89,24 @@ ms.locfileid: "66059057"
 ### <a name="location-dynamic-options"></a>Location 동적 옵션  
   
 #### <a name="location--sql-server"></a>Location = SQL Server  
- **대량 삽입 태스크 편집기**  
- 목록에서 OLE DB 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 새 연결 관리자를 만듭니다.  
+ **연결**  
+ 목록에서 OLE DB 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- **관련 항목:** [OLE DB 연결 관리자](connection-manager/ole-db-connection-manager.md), [OLE DB 연결 관리자 구성](../../2014/integration-services/configure-ole-db-connection-manager.md)  
+ **관련 항목:** [연결 관리자 OLE DB](connection-manager/ole-db-connection-manager.md)연결 관리자 [구성 OLE DB](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
  **PackageName**  
  자식 패키지의 이름을 입력하거나 줄임표(...)를 클릭한 다음, 패키지를 찾습니다.  
   
 #### <a name="location--file-system"></a>Location = 파일 시스템  
- **대량 삽입 태스크 편집기**  
- 목록에서 파일 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 새 연결 관리자를 만듭니다.  
+ **연결**  
+ 목록에서 파일 연결 관리자를 선택 하거나 \< **새 연결** ...>을 클릭 하 여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
   
  **PackageNameReadOnly**  
  패키지 이름을 표시합니다.  
   
-##  <a name="parameter"></a> 매개 변수 바인딩 페이지에서 옵션 설정  
+##  <a name="parameter"></a>매개 변수 바인딩 페이지에서 옵션 설정  
  부모 패키지나 프로젝트의 값을 자식 패키지에 전달할 수 있습니다. 프로젝트에서 프로젝트 배포 모델을 사용해야 하며 자식 패키지는 부모 패키지와 동일한 프로젝트에 포함되어 있어야 합니다.  
   
  프로젝트를 프로젝트 배포 모델로 변환하는 방법은 [Integration Services 서버에 프로젝트 배포](../../2014/integration-services/deploy-projects-to-integration-services-server.md)를 참조하세요.  
@@ -112,7 +114,7 @@ ms.locfileid: "66059057"
  **자식 패키지 매개 변수**  
  자식 패키지 매개 변수의 이름을 입력하거나 선택합니다.  
   
- **매개 변수 또는 변수 바인딩**  
+ **바인딩 매개 변수 또는 변수**  
  자식 패키지에 전달할 값이 포함된 매개 변수나 변수를 선택합니다.  
   
  **추가**  

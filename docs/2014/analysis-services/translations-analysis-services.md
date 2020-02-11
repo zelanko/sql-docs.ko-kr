@@ -18,18 +18,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e97c9ba15aab664e9f0c77f9eb84152f75c3e3d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065876"
 ---
 # <a name="translations-analysis-services"></a>번역(Analysis Services)
-  **[!INCLUDE[applies](../includes/applies-md.md)]**  다차원 전용  
+  **[!INCLUDE[applies](../includes/applies-md.md)]** 다차원 전용  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 다차원 데이터 모델에서 캡션의 여러 번역을 포함하여 LCID를 기반으로 한 로캘 관련 문자열을 제공할 수 있습니다. 데이터베이스 이름, 큐브 개체 및 데이터베이스 차원 개체에 대한 번역을 추가할 수 있습니다.  
+ 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 다차원 데이터 모델에서 캡션의 여러 번역을 포함하여 LCID를 기반으로 한 로캘 관련 문자열을 제공할 수 있습니다. 데이터베이스 이름, 큐브 개체 및 데이터베이스 차원 개체에 대한 번역을 추가할 수 있습니다.  
   
- 번역을 정의하면 모델 내부에 메타데이터와 번역된 캡션이 생성되지만 클라이언트 애플리케이션에서 지역화된 문자열을 렌더링하려면 개체에서 `Language` 속성을 설정하거나 연결 문자열에서 `Locale Identifier` 매개 변수를 전달해야 합니다(예를 들어 프랑스어 문자열을 반환하려면 `LocaleIdentifier=1036` 설정). 동일한 개체에 대한 여러 개의 동시 번역을 서로 다른 언어로 지원하려면 `Locale Identifier` 사용을 계획합니다. `Language` 속성 설정은 작동하지만, 처리 및 쿼리에 영향을 주므로 의도하지 않은 결과를 초래할 수 있습니다. 반면에 `Locale Identifier`를 설정하면 번역된 문자열을 반환하는 데에만 사용되므로 이렇게 하는 것이 좋습니다.  
+ 번역을 정의하면 모델 내부에 메타데이터와 번역된 캡션이 생성되지만 클라이언트 애플리케이션에서 지역화된 문자열을 렌더링하려면 개체에서 `Language` 속성을 설정하거나 연결 문자열에서 `Locale Identifier` 매개 변수를 전달해야 합니다(예를 들어 프랑스어 문자열을 반환하려면 `LocaleIdentifier=1036` 설정). 동일한 개체에 대한 여러 개의 동시 번역을 서로 다른 언어로 지원하려면 `Locale Identifier` 사용을 계획합니다. 
+  `Language` 속성 설정은 작동하지만, 처리 및 쿼리에 영향을 주므로 의도하지 않은 결과를 초래할 수 있습니다. 반면에 `Locale Identifier`를 설정하면 번역된 문자열을 반환하는 데에만 사용되므로 이렇게 하는 것이 좋습니다.  
   
  번역은 LCID(로캘 식별자) 및 개체에 대한 번역된 캡션(예: 차원 또는 특성 이름)과 (원할 경우) 데이터 값을 대상 언어로 제공하는 열에 대한 바인딩으로 구성됩니다. 여러 번역이 있을 수 있지만 지정된 연결에 대해 하나씩만 사용할 수 있습니다. 모델에 포함할 수 있는 번역의 수에 이론적인 제한은 없지만 각 번역은 테스트를 더 복잡하게 하고 모든 번역은 동일한 데이터 정렬을 공유해야 하므로 솔루션을 디자인할 때에는 이러한 기본적인 제약 조건을 염두에 두어야 합니다.  
   
@@ -45,7 +47,7 @@ ms.locfileid: "66065876"
   
 1.  Adventure Works 다차원 모델을 디자이너에서 엽니다.  
   
-2.  솔루션 탐색기에서 데이터 원본 뷰를 열고 Adventure Works DW를 두 번 클릭\<버전 >.dsv 합니다.  
+2.  솔루션 탐색기에서 데이터 원본 뷰를 열고 놀이 Works DW\<버전>을 두 번 클릭 합니다.  
   
 3.  dimDate, dimProduct, dimProductCategory 또는 dimProductSubcateogry를 찾습니다. 이 차원들 모두에는 월, 요일, 제품 이름, 범주 이름 등에 대한 번역된 멤버용 특성이 포함되어 있습니다.  
   
@@ -53,17 +55,18 @@ ms.locfileid: "66065876"
   
  날짜, 시간 및 통화에 대한 형식은 번역을 통해 구현되지 않습니다. 클라이언트의 로캘을 기반으로 문화 관련 형식을 동적으로 제공하려면 통화 변환 마법사와 `FormatString` 속성을 사용합니다. 자세한 내용은 [통화 변환&#40;Analysis Services&#41;](currency-conversions-analysis-services.md) 및 [FormatString 요소&#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl)를 참조하세요.  
   
- [9 단원: 큐브 뷰 및 번역 정의](lesson-9-defining-perspectives-and-translations.md) Analysis Services 자습서에 안내 번역 만들기 및 테스트에 대 한 단계입니다.  
+ [9 단원: Analysis Services 자습서에서 큐브 뷰 및 번역 정의](lesson-9-defining-perspectives-and-translations.md) 는 번역을 만들고 테스트 하는 단계를 안내 합니다.  
   
 ## <a name="defining-translations"></a>번역 정의  
- 번역을 정의하면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스, 차원 또는 큐브 개체의 자식으로서 `Translation` 개체가 생성됩니다. [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] 를 사용하여 솔루션을 열고 번역을 정의합니다.  
+ 번역을 정의하면 `Translation` 데이터베이스, 차원 또는 큐브 개체의 자식으로서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체가 생성됩니다. 
+  [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] 를 사용하여 솔루션을 열고 번역을 정의합니다.  
   
 ### <a name="add-translations-to-a-cube"></a>큐브에 번역 추가  
  큐브, 측정값 그룹, 측정값, 큐브 차원, 큐브 뷰, KPI, 작업, 명명된 집합 및 계산된 멤버에 번역을 추가할 수 있습니다.  
   
 1.  솔루션 탐색기에서 큐브 이름을 두 번 클릭하여 큐브 디자이너를 엽니다.  
   
-2.  **번역** 탭을 클릭합니다. 번역을 지원하는 모든 개체는 이 페이지에 나열됩니다.  
+2.  **번역** 탭을 클릭 합니다. 번역을 지 원하는 모든 개체는이 페이지에 나열 됩니다.  
   
 3.  각 개체에 대해 대상 언어(내부적으로 LCID로 확인됨), 번역된 캡션 및 번역된 설명을 지정합니다. 언어 목록은 Management Studio에서 서버 언어를 설정하든, 아니면 단일 특성에 대한 번역 재정의를 추가하든 상관없이 전체 Analysis Services에서 일관됩니다.  
   
@@ -71,18 +74,19 @@ ms.locfileid: "66065876"
   
 4.  프로젝트를 빌드하고 배포합니다.  
   
-5.  로캘 식별자를 사용하도록 연결 문자열을 수정하여 Excel과 같은 클라이언트 애플리케이션을 사용하는 데이터베이스에 연결합니다. 자세한 내용은 [세계화 팁과 모범 사례&#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) 를 참조하세요.  
+5.  로캘 식별자를 사용하도록 연결 문자열을 수정하여 Excel과 같은 클라이언트 애플리케이션을 사용하는 데이터베이스에 연결합니다. 자세한 내용은 [Globalization Tips and Best Practices &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) 를 참조하세요.  
   
 ### <a name="add-translations-to-a-dimension-and-attributes"></a>차원 및 특성에 번역 추가  
  데이터베이스 차원, 특성, 계층 구조 및 계층 구조 내 수준에 번역을 추가할 수 있습니다.  
   
  번역된 캡션은 키보드나 복사-붙여넣기를 사용하여 수동으로 모델에 추가되지만 차원 특성 멤버의 경우 외부 데이터베이스에서 번역된 값을 얻을 수 있습니다. 특히 어떤 특성의 `CaptionColumn` 속성은 데이터 원본 뷰에 있는 열에 바인딩할 수 있습니다.  
   
- 특성 수준에서 데이터 정렬 설정을 재정의할 수 있습니다. 예를 들어 전자/반자 구분을 조정하거나 특정 특성에 이진 정렬을 사용할 수도 있습니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 데이터 정렬은 데이터 바인딩이 정의되어 있는 곳에 노출됩니다. 차원 특성 번역을 DSV에 있는 다른 원본 열에 바인딩하게 되므로 원본 열에 의해 사용되는 데이터 정렬을 지정할 수 있도록 데이터 정렬 설정을 사용할 수 있습니다. 관계형 데이터베이스의 열 데이터 정렬에 대한 자세한 내용은 [Set or Change the Column Collation](../relational-databases/collations/set-or-change-the-column-collation.md) 을 참조하세요.  
+ 특성 수준에서 데이터 정렬 설정을 재정의할 수 있습니다. 예를 들어 전자/반자 구분을 조정하거나 특정 특성에 이진 정렬을 사용할 수도 있습니다. 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 데이터 정렬은 데이터 바인딩이 정의되어 있는 곳에 노출됩니다. 차원 특성 번역을 DSV에 있는 다른 원본 열에 바인딩하게 되므로 원본 열에 의해 사용되는 데이터 정렬을 지정할 수 있도록 데이터 정렬 설정을 사용할 수 있습니다. 관계형 데이터베이스의 열 데이터 정렬에 대한 자세한 내용은 [Set or Change the Column Collation](../relational-databases/collations/set-or-change-the-column-collation.md) 을 참조하세요.  
   
 1.  솔루션 탐색기에서 차원 이름을 두 번 클릭하여 차원 디자이너를 엽니다.  
   
-2.  **번역** 탭을 클릭합니다. 번역을 지원하는 모든 차원 개체가 이 페이지에 나열됩니다.  
+2.  **번역** 탭을 클릭 합니다. 번역을 지 원하는 모든 차원 개체가이 페이지에 나열 됩니다.  
   
      각 개체에 대해 대상 언어(LCID로 확인), 번역된 캡션 및 번역된 설명을 지정합니다. 언어 목록은 Management Studio에서 서버 언어를 설정하든, 아니면 단일 특성에 대한 번역 재정의를 추가하든 상관없이 전체 Analysis Services에서 일관됩니다.  
   
@@ -100,7 +104,7 @@ ms.locfileid: "66065876"
   
 4.  프로젝트를 빌드하고 배포합니다.  
   
-5.  로캘 식별자를 사용하도록 연결 문자열을 수정하여 Excel과 같은 클라이언트 애플리케이션을 사용하는 데이터베이스에 연결합니다. 자세한 내용은 [세계화 팁과 모범 사례&#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)를 참조하세요.  
+5.  로캘 식별자를 사용하도록 연결 문자열을 수정하여 Excel과 같은 클라이언트 애플리케이션을 사용하는 데이터베이스에 연결합니다. 자세한 내용은 [Globalization Tips and Best Practices &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) 를 참조하세요.  
   
 ### <a name="add-a-translation-of-the-database-name"></a>데이터베이스 이름의 번역 추가  
  데이터베이스 수준에서 데이터베이스 이름 및 설명에 대한 번역을 추가할 수 있습니다. 번역된 데이터베이스 이름은 언어의 LCID를 지정하는 클라이언트 연결에 표시될 수도 있지만 이것은 도구에 따라 다릅니다. 예를 들어, 연결에서 로캘 식별자를 지정하더라도 Management Studio에서는 데이터베이스를 볼 때 번역된 이름이 표시되지 않습니다. Analysis Services에 연결하기 위해 Management Studio에서 사용하는 API는 `Language` 속성을 읽지 않습니다.  
@@ -116,10 +120,10 @@ ms.locfileid: "66065876"
 ## <a name="resolving-translations"></a>번역 확인  
  클라이언트 애플리케이션에서 로캘 ID를 요청하는 경우, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체에 대한 데이터 및 메타데이터를 가장 일치하는 LCID로 확인하고자 시도합니다. 클라이언트 애플리케이션이 기본 언어를 지정하지 않거나 중립 로캘 ID(0) 또는 기본 언어 처리 식별자(1024)를 지정하면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 는 인스턴스에 대해 기본 언어를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체의 데이터 및 메타데이터를 반환합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [Analysis Services 다차원에 대 한 세계화 시나리오](globalization-scenarios-for-analysis-services-multiidimensional.md)   
- [언어 및 데이터 정렬&#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)   
+## <a name="see-also"></a>참고 항목  
+ [Analysis Services Multiidimensional에 대 한 세계화 시나리오](globalization-scenarios-for-analysis-services-multiidimensional.md)   
+ [언어 및 데이터 정렬 &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)   
  [열 데이터 정렬 설정 또는 변경](../relational-databases/collations/set-or-change-the-column-collation.md)   
- [세계화 팁과 모범 사례&#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)  
+ [세계화 팁과 모범 사례 Analysis Services &#40;&#41;](globalization-tips-and-best-practices-analysis-services.md)  
   
   

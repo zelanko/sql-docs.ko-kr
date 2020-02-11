@@ -1,5 +1,5 @@
 ---
-title: 차원 쓰기 저장을 사용 하도록 설정 | Microsoft Docs
+title: 차원 쓰기 저장 (Writeback) 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6051f62caac2878b689a50e5773b047cb8df7afe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076846"
 ---
 # <a name="enable-dimension-writeback"></a>차원 쓰기 저장(writeback) 설정
@@ -40,8 +40,9 @@ ms.locfileid: "66076846"
 ## <a name="setting-dimension-writeback-capability"></a>차원 쓰기 저장(Writeback) 기능 설정  
  마법사의 두 번째 **차원 쓰기 저장(writeback) 설정** 페이지에서 실제로 **차원에 쓰기 저장(writeback) 설정** 옵션을 설정합니다. 이 옵션을 선택하면 자동으로 차원의 `WriteEnabled` 속성이 `True`로 설정됩니다. 이 옵션의 선택을 취소하면 자동으로 속성이 `False`로 설정됩니다.  
   
-## <a name="remarks"></a>Remarks  
- 새 멤버를 만들 때 차원에 모든 특성을 포함해야 합니다. 차원의 키 특성 값을 지정하지 않고 멤버를 삽입할 수 없습니다. 따라서 멤버를 만들 때는 차원 테이블에 정의된 모든 제약 조건(예: Null이 아닌 키 값)이 적용됩니다. `CustomRollupColumn`, `CustomRollupPropertiesColumn` 또는 `UnaryOperatorColumn`과 같은 차원 속성에 의해 선택적으로 지정된 열도 고려해야 합니다.  
+## <a name="remarks"></a>설명  
+ 새 멤버를 만들 때 차원에 모든 특성을 포함해야 합니다. 차원의 키 특성 값을 지정하지 않고 멤버를 삽입할 수 없습니다. 따라서 멤버를 만들 때는 차원 테이블에 정의된 모든 제약 조건(예: Null이 아닌 키 값)이 적용됩니다. 
+  `CustomRollupColumn`, `CustomRollupPropertiesColumn` 또는 `UnaryOperatorColumn`과 같은 차원 속성에 의해 선택적으로 지정된 열도 고려해야 합니다.  
   
 > [!WARNING]  
 >  SQL Azure를 데이터 원본으로 사용하여 Analysis Services에 쓰기 저장(writeback)을 수행할 경우 작업이 실패합니다. MARS(Multiple Active Result Set)를 활성화하는 공급자 옵션이 기본적으로 설정되어 있지 않기 때문에 이 작업이 실패하는 것입니다.  
@@ -50,9 +51,9 @@ ms.locfileid: "66076846"
 >   
 >  `"MultipleActiveResultSets=True"`  
 >   
->  자세한 내용은 [MARS&#40;Multiple Active Result Sets&#41; 사용](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)을 참조하세요.  
+>  자세한 내용은 [MARS&#41;를 사용 하 여 여러 활성 결과 집합 &#40;사용 ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)을 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [쓰기 가능 차원](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  
   
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8b5789a277eac84d9753a180b418c05c5fd71d09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761610"
 ---
 # <a name="create-foreign-key-relationships"></a>외래 키 관계 만들기
@@ -30,9 +30,9 @@ ms.locfileid: "62761610"
   
      [보안](#Security)  
   
--   **만드는 외래 키 관계에 사용 하 여:**  
+-   **외래 키 관계를 만들려면:**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -52,17 +52,19 @@ ms.locfileid: "62761610"
   
 -   테이블 수준에서 지정된 외래 키 제약 조건에는 제약 조건 열 목록의 열 개수와 같은 수의 참조 열이 있어야 합니다. 각 참조 열의 데이터 형식도 열 목록의 해당 열과 같아야 합니다.  
   
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 테이블에 포함하여 다른 테이블을 참조하는 FOREIGN KEY 제약 조건의 수나 특정 테이블을 참조하는 다른 테이블 소유의 FOREIGN KEY 제약 조건의 수에 미리 한계를 정의하지 않습니다. 하지만 실제로 사용할 수 있는 FOREIGN KEY 제약 조건의 수는 하드웨어 구성 및 데이터베이스와 애플리케이션의 디자인에 따라 제한됩니다. 테이블에 포함되거나 이 테이블을 참조하는 FOREIGN KEY 제약 조건의 수가 각각 253개를 넘지 않도록 하는 것이 좋습니다.  
+-   
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 테이블에 포함하여 다른 테이블을 참조하는 FOREIGN KEY 제약 조건의 수나 특정 테이블을 참조하는 다른 테이블 소유의 FOREIGN KEY 제약 조건의 수에 미리 한계를 정의하지 않습니다. 하지만 실제로 사용할 수 있는 FOREIGN KEY 제약 조건의 수는 하드웨어 구성 및 데이터베이스와 애플리케이션의 디자인에 따라 제한됩니다. 테이블에 포함되거나 이 테이블을 참조하는 FOREIGN KEY 제약 조건의 수가 각각 253개를 넘지 않도록 하는 것이 좋습니다.  
   
 -   임시 테이블에는 FOREIGN KEY 제약 조건이 적용되지 않습니다.  
   
 -   CLR 사용자 정의 형식 열에 외래 키를 정의하는 경우 형식 구현이 이진 순서를 지원해야 합니다. 자세한 내용은 [CLR 사용자 정의 형식](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)을 참조하세요.  
   
--   `varchar(max)` 유형의 열은 자신이 참조하는 기본 키도 `varchar(max)` 유형으로 정의된 경우에만 FOREIGN KEY 제약 조건에 참여할 수 있습니다.  
+-   
+  `varchar(max)` 유형의 열은 자신이 참조하는 기본 키도 `varchar(max)` 유형으로 정의된 경우에만 FOREIGN KEY 제약 조건에 참여할 수 있습니다.  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  외래 키가 포함된 새 테이블을 만들려면 데이터베이스에서 CREATE TABLE 권한이 필요하고 테이블을 만들려는 스키마에 대한 ALTER 권한이 필요합니다.  
   
  기존 테이블에서 외래 키를 만들려면 해당 테이블에 대한 ALTER 권한이 필요합니다.  
@@ -73,25 +75,32 @@ ms.locfileid: "62761610"
   
 1.  개체 탐색기에서 관계의 외래 키 쪽에 표시할 테이블을 마우스 오른쪽 단추로 클릭하고 **디자인**을 클릭합니다.  
   
-     **테이블 디자이너**에서 테이블이 열립니다.  
+     
+  **테이블 디자이너**에서 테이블이 열립니다.  
   
-2.  **테이블 디자이너** 메뉴에서 **관계**를 클릭합니다.  
+2.  
+  **테이블 디자이너** 메뉴에서 **관계**를 클릭합니다.  
   
-3.  **외래 키 관계** 대화 상자에서 **추가**를 클릭합니다.  
+3.  
+  **외래 키 관계** 대화 상자에서 **추가**를 클릭합니다.  
   
-     **선택한 관계** 목록에 FK_\<*tablename*>_\<*tablename*> 형식의 시스템 제공 이름과 함께 관계가 표시됩니다. 여기에서 *tablename*은 외래 키 테이블의 이름입니다.  
+     
+  **선택한 관계** 목록에 FK_\<*tablename*>_\<*tablename*> 형식의 시스템 제공 이름과 함께 관계가 표시됩니다. 여기에서 *tablename*은 외래 키 테이블의 이름입니다.  
   
-4.  **선택한 관계** 목록에서 관계를 클릭합니다.  
+4.  
+  **선택한 관계** 목록에서 관계를 클릭합니다.  
   
 5.  오른쪽에 있는 표에서 **테이블 및 열 사양**을 클릭한 다음, 속성의 오른쪽에 있는 줄임표(**…**)를 클릭합니다.  
   
-6.  **테이블 및 열** 대화 상자의 **기본 키** 드롭다운 목록에서 관계의 기본 키 쪽에 사용할 테이블을 선택합니다.  
+6.  
+  **테이블 및 열** 대화 상자의 **기본 키** 드롭다운 목록에서 관계의 기본 키 쪽에 사용할 테이블을 선택합니다.  
   
 7.  아래 표에서 테이블의 기본 키로 사용할 열을 선택합니다. 각 열 바로 왼쪽에 있는 표의 셀에서 외래 키 테이블의 상응하는 외래 키 열을 선택합니다.  
   
-     **테이블 디자이너** 에서 관계의 이름이 자동으로 지정됩니다. 이 이름을 변경하려면 **관계 이름** 입력란의 내용을 편집합니다.  
+     **테이블 디자이너** 은 관계의 이름을 제안 합니다. 이 이름을 변경하려면 **관계 이름** 입력란의 내용을 편집합니다.  
   
-8.  **확인** 을 선택하여 관계를 만듭니다.  
+8.  
+  **확인** 을 선택하여 관계를 만듭니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   

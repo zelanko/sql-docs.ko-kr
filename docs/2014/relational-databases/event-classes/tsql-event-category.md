@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cfa8ca59787be1fd6d33c392bfa7333075e38936
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62746087"
 ---
 # <a name="tsql-event-category"></a>TSQL 이벤트 범주
@@ -35,12 +35,12 @@ ms.locfileid: "62746087"
 |[SQL:BatchCompleted 이벤트 클래스](sql-batchcompleted-event-class.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리를 완료했음을 나타냅니다.|  
 |[SQL:BatchStarting 이벤트 클래스](sql-batchstarting-event-class.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리를 시작했음을 나타냅니다.|  
 |[SQL:StmtCompleted 이벤트 클래스](sql-stmtcompleted-event-class.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 완료했음을 나타냅니다.|  
-|[SQL:StmtRecompile Event Class](sql-stmtrecompile-event-class.md)|모든 유형의 일괄 처리로 인해 발생한 문 수준의 다시 컴파일을 나타냅니다. 여기에는 저장 프로시저, 트리거, 임시 일괄 처리 및 쿼리가 있습니다.|  
+|[SQL:StmtRecompile 이벤트 클래스](sql-stmtrecompile-event-class.md)|모든 유형의 일괄 처리로 인해 발생한 문 수준의 다시 컴파일을 나타냅니다. 여기에는 저장 프로시저, 트리거, 임시 일괄 처리 및 쿼리가 있습니다.|  
 |[SQL:StmtStarting 이벤트 클래스](sql-stmtstarting-event-class.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 시작했음을 나타냅니다.|  
 |[Unprepare SQL 이벤트 클래스](unprepare-sql-event-class.md)|SqlClient, ODBC, OLE DB 또는 DB-Library가 준비된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 삭제했음을 나타냅니다.|  
 |[XQuery Static Type 이벤트 클래스](xquery-static-type-event-class.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 XQuery 식을 실행할 때 발생합니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Transact-SQL 참조&#40;데이터베이스 엔진&#41;](/sql/t-sql/language-reference)  
   
   

@@ -21,10 +21,10 @@ ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e34cf20585ea7dcd3690d80ee415fc274bf852ca
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70155396"
 ---
 # <a name="managed_backupsp_backup_on_demand-transact-sql"></a>managed_backup. sp_backup_on_demand (Transact-sql)
@@ -38,7 +38,7 @@ ms.locfileid: "70155396"
   
  지정된 데이터베이스에 대해 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]이 지정된 유형의 백업을 실행하는 중에 있으면 오류가 반환됩니다. 이 경우 반환된 오류 메시지에는 현재 백업을 업그레이드 중인 전체 백업 파일 경로가 포함됩니다.  
    
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -53,7 +53,7 @@ EXEC managed_backup.sp_backup_on_demand
  백업을 수행할 데이터베이스의 이름입니다. 는 @database_name **SYSNAME**입니다.  
   
  @type  
- 수행할 백업 유형:  데이터베이스 또는 로그. 매개 @type 변수는 **NVARCHAR (32)** 입니다.  
+ 수행할 백업 유형입니다. 데이터베이스 또는 로그입니다. 매개 @type 변수는 **NVARCHAR (32)** 입니다.  
   
 ## <a name="return-code-value"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -61,7 +61,7 @@ EXEC managed_backup.sp_backup_on_demand
 ## <a name="security"></a>보안  
   
 ### <a name="permissions"></a>사용 권한  
- **ALTER ANY CREDENTIAL** 권한이 있는 **db_backupoperator** 데이터베이스 역할의 멤버 자격 및 **sp_delete_backuphistory**저장 프로시저에 대 한 **EXECUTE** 권한이 필요 합니다.  
+ **ALTER ANY CREDENTIAL** 권한 및 **sp_delete_backuphistory**저장 프로시저에 대 한 **EXECUTE** 권한이 있는 **db_backupoperator** 데이터베이스 역할의 멤버 자격이 필요 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 ' TestDB ' 데이터베이스에 대 한 데이터베이스 백업 요청을 만듭니다. 이 데이터베이스에는 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]이 설정되어 있습니다.  

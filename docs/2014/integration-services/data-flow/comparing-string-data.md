@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7fe9955ba4f20c4a20e24d99924adce7ff0d992a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62828145"
 ---
 # <a name="comparing-string-data"></a>문자열 데이터 비교
@@ -63,7 +63,7 @@ ms.locfileid: "62828145"
  또한 플랫 파일 연결 관리자와 다중 플랫 파일 연결 관리자에 대한 로캘을 지정할 수 있습니다.  
   
 ## <a name="setting-comparison-options"></a>비교 옵션 설정  
- 로캘은 문자열 데이터 비교를 위한 기본 규칙을 제공합니다. 예를 들어 로캘은 영문자의 각 문자에 대한 정렬 위치를 지정합니다. 하지만 이러한 규칙만으로는 일부 변환에서 수행되는 비교 시 충분하지 않을 수 있으며, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 로캘의 비교 규칙 이외에도 일련의 고급 비교 옵션이 지원됩니다. 이러한 비교 옵션은 열 수준에서 설정됩니다. 예를 들어 비교 옵션 중 하나를 사용하면 비공백 문자를 무시할 수 있습니다. "A"와 "å" 동일 하면 악센트와 같은 분음 부호를 무시 하려면이 옵션의 효과 비교를 위해.  
+ 로캘은 문자열 데이터 비교를 위한 기본 규칙을 제공합니다. 예를 들어 로캘은 영문자의 각 문자에 대한 정렬 위치를 지정합니다. 하지만 이러한 규칙만으로는 일부 변환에서 수행되는 비교 시 충분하지 않을 수 있으며, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 로캘의 비교 규칙 이외에도 일련의 고급 비교 옵션이 지원됩니다. 이러한 비교 옵션은 열 수준에서 설정됩니다. 예를 들어 비교 옵션 중 하나를 사용하면 비공백 문자를 무시할 수 있습니다. 이 옵션은 비교 목적으로 "a"와 "있습니다"을 동일 하 게 하는 악센트 부호와 같은 분음 부호를 무시 하는 데 영향을 줍니다.  
   
  다음 표에서는 비교 옵션과 정렬 스타일에 대해 설명합니다.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62828145"
   
  **FullySensitive** 비교 플래그는 유사 항목 그룹화 및 유사 항목 조회 변환을 위해 **고급 편집기** 대화 상자에 표시됩니다. **FullySensitive** 비교 플래그를 선택하면 모든 비교 옵션이 적용됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 데이터 형식](integration-services-data-types.md)   
  [빠른 구문 분석](../fast-parse.md)   
  [표준 구문 분석](../standard-parse.md)  

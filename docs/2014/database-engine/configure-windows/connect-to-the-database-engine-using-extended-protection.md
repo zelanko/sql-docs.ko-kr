@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5b1317bc41be836cfad5159339a4e7c90fcfbc83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62811287"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>확장된 보호를 사용하여 데이터베이스 엔진에 연결
@@ -48,7 +48,7 @@ ms.locfileid: "62811287"
  채널 바인딩에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 인스턴스와 클라이언트 간에 보안 채널(Schannel)을 설정합니다. 서비스는 해당 채널과 관련된 클라이언트의 CBT(채널 바인딩 토큰)를 자체 CBT와 비교하여 클라이언트의 신뢰성을 확인합니다. 채널 바인딩을 수행하면 유인 공격과 스푸핑 공격을 모두 해결할 수 있습니다. 그러나 모든 세션 트래픽에 대해 TLS(전송 계층 보안) 암호화를 수행해야 하므로 런타임 비용이 많이 듭니다. 클라이언트 애플리케이션에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하는 데 암호화를 사용하는 경우에는 암호화를 클라이언트에서 적용하는지 서버에서 적용하는지에 관계없이 채널 바인딩이 수행됩니다.  
   
 > [!WARNING]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 데이터 공급자는 TLS 1.0 및 SSL 3.0을 지원합니다. 운영 체제 SChannel 계층을 변경하여 다른 프로토콜 (예: TLS 1.1 또는 TLS 1.2)를 적용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대한 연결이 실패할 수 있습니다.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 공급자는 TLS 1.0 및 SSL 3.0을 지원합니다. 운영 체제 SChannel 계층을 변경하여 다른 프로토콜 (예: TLS 1.1 또는 TLS 1.2)를 적용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대한 연결이 실패할 수 있습니다.  
   
 ### <a name="operating-system-support"></a>운영 체제 지원  
  다음 링크에서는 Windows에서 **확장된 보호**를 지원하는 방법에 대해 자세히 설명합니다.  
@@ -72,7 +72,7 @@ ms.locfileid: "62811287"
   
     -   **허용**으로 설정하면 **확장된 보호** 를 지원하는 운영 체제로부터의 연결에 대해 **확장된 보호**를 사용해야 합니다. **확장된 보호** 를 지원하지 않는 운영 체제로부터의 연결에 대해서는 **확장된 보호**가 무시됩니다. 보호된 클라이언트 운영 체제에서 실행되는 보호되지 않는 클라이언트 애플리케이션으로부터의 연결은 거부됩니다. 이 설정은 **해제**보다는 안전하지만 가장 안전한 설정은 아닙니다. **확장된 보호** 를 지원하는 운영 체제와 지원하지 않은 운영 체제가 혼합되어 있는 환경에서는 이 설정을 사용하십시오.  
   
-    -   **필수**로 설정하면 보호된 운영 체제에서 실행되는 보호된 응용 프로그램으로부터의 연결만 허용됩니다. 이 설정은 가장 안전하지만 **확장된 보호** 를 지원하지 않는 운영 체제 또는 애플리케이션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결할 수 없습니다.  
+    -   **필수**로 설정하면 보호된 운영 체제에서 실행되는 보호된 애플리케이션으로부터의 연결만 허용됩니다. 이 설정은 가장 안전하지만 **확장된 보호** 를 지원하지 않는 운영 체제 또는 애플리케이션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결할 수 없습니다.  
   
 -   **허용되는 NTLM SPN**  
   
@@ -85,7 +85,8 @@ ms.locfileid: "62811287"
   
 1.  **시작** 메뉴에서 **모든 프로그램**을 선택하고 **Microsoft SQL Server** 를 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
   
-2.  **SQL Server 네트워크 구성**을 펼치고 *\<* InstanceName *>* **에 대한 프로토콜**을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+2.  
+  **SQL Server 네트워크 구성**을 펼치고 **** *InstanceName\<**>에 대한 프로토콜*을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
 3.  채널 바인딩과 서비스 바인딩 둘 다에 대해 **고급** 탭에서 **확장된 보호** 를 적절한 설정으로 지정합니다.  
   
@@ -100,10 +101,10 @@ ms.locfileid: "62811287"
   
  IIS를 사용하여 HTTP 또는 HTTPs 연결을 통해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터에 액세스할 때 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 IIS에서 제공하는 확장된 보호 기능을 사용할 수 있습니다. IIS에서 확장된 보호를 사용하도록 구성하는 방법에 대한 자세한 내용은 [IIS 7.5에서 확장된 보호 구성](https://go.microsoft.com/fwlink/?LinkId=181105)을 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [서버 네트워크 구성](server-network-configuration.md)   
  [클라이언트 네트워크 구성](client-network-configuration.md)   
  [인증에 대한 확장된 보호 개요](https://go.microsoft.com/fwlink/?LinkID=177943)   
- [확장된 보호를 사용하는 Windows 통합 인증(영문)](https://go.microsoft.com/fwlink/?LinkId=179922)  
+ [확장된 보호를 사용하는 Windows 통합 인증(Integrated Windows Authentication with Extended Protection)](https://go.microsoft.com/fwlink/?LinkId=179922)  
   
   

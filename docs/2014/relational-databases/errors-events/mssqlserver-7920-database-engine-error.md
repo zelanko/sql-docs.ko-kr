@@ -13,15 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9396c2cf462ff53020668c09e442fb815d4d66fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761984"
 ---
-# <a name="mssqlserver7920"></a>MSSQLSERVER_7920
+# <a name="mssqlserver_7920"></a>MSSQLSERVER_7920
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -36,6 +36,6 @@ ms.locfileid: "62761984"
  DBCC CHECKALLOC을 제외한 모든 DBCC CHECK 명령에서 반환하는 정보 메시지입니다. 반환되는 값은 검사 대상 행 집합의 총 개수입니다.  
   
 ## <a name="user-action"></a>사용자 동작  
- 없음  
+ None  
   
   

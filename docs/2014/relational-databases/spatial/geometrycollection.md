@@ -13,19 +13,22 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 5aceabe5a263cfa53572be6f818ddc905f9742a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014225"
 ---
 # <a name="geometrycollection"></a>GeometryCollection
-  `GeometryCollection`은 1개 이상의 `geometry` 또는 `geography` 인스턴스 컬렉션입니다. `GeometryCollection`은 비워 둘 수 있습니다.  
+  
+  `GeometryCollection`은 1개 이상의 `geometry` 또는 `geography` 인스턴스 컬렉션입니다. 
+  `GeometryCollection`은 비워 둘 수 있습니다.  
   
 ## <a name="geometrycollection-instances"></a>GeometryCollection 인스턴스  
   
 ### <a name="accepted-instances"></a>허용되는 인스턴스  
- `GeometryCollection` 인스턴스는 빈 `GeometryCollection` 인스턴스이거나 `GeometryCollection` 인스턴스를 구성하는 모든 인스턴스가 허용되는 인스턴스여야 허용됩니다. 다음 예에서는 허용되는 인스턴스를 보여 줍니다.  
+ 
+  `GeometryCollection` 인스턴스는 빈 `GeometryCollection` 인스턴스이거나 `GeometryCollection` 인스턴스를 구성하는 모든 인스턴스가 허용되는 인스턴스여야 허용됩니다. 다음 예에서는 허용되는 인스턴스를 보여 줍니다.  
   
 ```  
 DECLARE @g1 geometry = 'GEOMETRYCOLLECTION EMPTY';  
@@ -33,14 +36,15 @@ DECLARE @g2 geometry = 'GEOMETRYCOLLECTION(LINESTRING EMPTY,POLYGON((-1 -1, -1 -
 DECLARE @g3 geometry = 'GEOMETRYCOLLECTION(LINESTRING(1 1, 3 5),POLYGON((-1 -1, -1 -5, -5 -5, -5 -1, -1 -1)))';  
 ```  
   
- 다음 예에서는 `LinesString` 인스턴스의 `GeometryCollection` 인스턴스가 허용되지 않으므로 `System.FormatException`이 발생합니다.  
+ 다음 예에서는 `System.FormatException` 인스턴스의 `LinesString` 인스턴스가 허용되지 않으므로 `GeometryCollection`이 발생합니다.  
   
 ```  
 DECLARE @g geometry = 'GEOMETRYCOLLECTION(LINESTRING(1 1), POLYGON((-1 -1, -1 -5, -5 -5, -5 -1, -1 -1)))';  
 ```  
   
 ### <a name="valid-instances"></a>유효한 인스턴스  
- `GeometryCollection` 인스턴스는 `GeometryCollection` 인스턴스를 구성하는 모든 인스턴스가 유효한 경우 유효합니다. 다음 예에서는 유효한 `GeometryCollection` 인스턴스 세 개와 유효하지 않은 인스턴스 하나를 보여 줍니다.  
+ 
+  `GeometryCollection` 인스턴스는 `GeometryCollection` 인스턴스를 구성하는 모든 인스턴스가 유효한 경우 유효합니다. 다음 예에서는 유효한 `GeometryCollection` 인스턴스 세 개와 유효하지 않은 인스턴스 하나를 보여 줍니다.  
   
 ```  
 DECLARE @g1 geometry = 'GEOMETRYCOLLECTION EMPTY';  
@@ -50,7 +54,8 @@ DECLARE @g4 geometry = 'GEOMETRYCOLLECTION(LINESTRING(1 1, 3 5),POLYGON((-1 -1, 
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();  
 ```  
   
- `Polygon` 인스턴스의 `GeometryCollection` 인스턴스가 유효하지 않으므로 `@g4`는 유효하지 않습니다.  
+ 
+  `@g4` 인스턴스의 `Polygon` 인스턴스가 유효하지 않으므로 `GeometryCollection`는 유효하지 않습니다.  
   
  허용되는 인스턴스와 유효한 인스턴스에 대한 자세한 내용은 [Point](point.md), [MultiPoint](multipoint.md), [LineString](linestring.md), [MultiLineString](multilinestring.md), [Polygon](polygon.md)및 [MultiPolygon](multipolygon.md)을 참조하십시오.  
   
@@ -62,7 +67,7 @@ DECLARE @g geometry;
 SET @g = geometry::STGeomCollFromText('GEOMETRYCOLLECTION(POINT(3 3 1), POLYGON((0 0 2, 1 10 3, 1 0 4, 0 0 2)))', 1);  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [공간 데이터&#40;SQL Server&#41;](spatial-data-sql-server.md)  
   
   

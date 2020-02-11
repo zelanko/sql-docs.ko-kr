@@ -1,5 +1,5 @@
 ---
-title: Date and Time Formats | Microsoft Docs
+title: 날짜 및 시간 형식 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 26bd117cb63ccc623ee54f3370e1d07237de9c52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059652"
 ---
 # <a name="date-and-time-formats"></a>날짜 및 시간 형식
@@ -52,7 +52,7 @@ ms.locfileid: "66059652"
   
  빠른 구문 분석에서는 날짜가 DT_DBDATE로 출력됩니다. 잘림 형식의 날짜 값은 채워집니다. 예를 들어 YYYY는 YYYY0101이 됩니다.  
   
- 자세한 내용은 [Integration Services Data Types](data-flow/integration-services-data-types.md)을 참조하세요.  
+ 자세한 내용은 [Integration Services 데이터 형식](data-flow/integration-services-data-types.md)을 참조 하세요.  
   
 ## <a name="time-data-type"></a>시간 데이터 형식  
  빠른 구문 분석에서는 시간 데이터에 대해 다음과 같은 문자열 형식이 지원됩니다.  
@@ -80,7 +80,7 @@ ms.locfileid: "66059652"
     |-HH|현지 시간을 얻기 위해 UTC에서 뺀 시간을 나타내는 잘림 형식입니다.|  
     |Z|값 0은 시간이 UTC 시간임을 나타냅니다.|  
   
-     모든 시간 및 날짜/시간 데이터의 형식은 표준 시간대 요소를 포함할 수 있습니다. 그러나 데이터가 DT_DBTIMESTAMPOFFSET 유형인 경우를 제외하고 시스템에서는 표준 시간대 값이 무시됩니다. 자세한 내용은 [Integration Services Data Types](data-flow/integration-services-data-types.md)을 참조하세요.  
+     모든 시간 및 날짜/시간 데이터의 형식은 표준 시간대 요소를 포함할 수 있습니다. 그러나 데이터가 DT_DBTIMESTAMPOFFSET 유형인 경우를 제외하고 시스템에서는 표준 시간대 값이 무시됩니다. 자세한 내용은 [Integration Services 데이터 형식](data-flow/integration-services-data-types.md)을 참조 하세요.  
   
      표준 시간대 요소를 포함하는 형식에서는 다음 예와 같이 시간 요소와 표준 시간대 요소 사이에 공백이 없습니다.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "66059652"
   
  빠른 구문 분석에서는 문자열이 DT_DBTIME 및 DT_DBTIME2로 출력됩니다. 잘림 형식의 시간 값은 채워집니다. 예를 들어 HH:MI는 HH:MM:00.000이 됩니다.  
   
- 자세한 내용은 [Integration Services Data Types](data-flow/integration-services-data-types.md)을 참조하세요.  
+ 자세한 내용은 [Integration Services 데이터 형식](data-flow/integration-services-data-types.md)을 참조 하세요.  
   
 ## <a name="datetime-data-type"></a>날짜/시간 데이터 형식  
  빠른 구문 분석에서는 날짜/시간 데이터에 대해 다음과 같은 문자열 형식이 지원됩니다.  
@@ -125,9 +125,9 @@ ms.locfileid: "66059652"
 |초|00을 추가합니다.|  
 |분|00:00을 추가합니다.|  
 |Hour|00:00:00을 추가합니다.|  
-|Day|해당 월의 일에 대해 01을 추가합니다.|  
+|일|해당 월의 일에 대해 01을 추가합니다.|  
 |Month|해당 연도의 월에 대해 01을 추가합니다.|  
   
- 자세한 내용은 [Integration Services Data Types](data-flow/integration-services-data-types.md)을 참조하세요.  
+ 자세한 내용은 [Integration Services 데이터 형식](data-flow/integration-services-data-types.md)을 참조 하세요.  
   
   

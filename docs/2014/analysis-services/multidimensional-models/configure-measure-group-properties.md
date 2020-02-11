@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7571457847d8ffb0388608b7d634cc19261a609
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076666"
 ---
 # <a name="configure-measure-group-properties"></a>측정값 그룹 속성 구성
@@ -30,7 +30,8 @@ ms.locfileid: "66076666"
 |`AggregationPrefix`|ROLAP 스토리지에 적용됩니다. SQL Server에서 이 측정값 그룹과 연관된 파티션에 대한 집계를 저장하는 데 사용되는 인덱싱된 뷰에 공통 접두사를 할당합니다.|  
 |`DataAggregation`|이 속성은 나중에 사용하도록 예약되어 있으며 현재 영향을 주지 않습니다. 따라서 이 설정을 수정하지 않는 것이 좋습니다.|  
 |`Description`|이 속성을 사용하여 측정값 그룹을 문서화할 수 있습니다.|  
-|`ErrorConfiguration`|중복 키, 알 수 없는 키, Null 키, 오류 제한, 오류 감지 시 수행 동작 및 오류 로그 파일을 처리할 때 구성 가능한 오류 처리 설정을 제공합니다. [큐브, 파티션 및 차원 처리에 대한 오류 구성&#40;SSAS - 다차원&#41;](error-configuration-for-cube-partition-and-dimension-processing.md)을 참조하세요.|  
+|`ErrorConfiguration`|중복 키, 알 수 없는 키, Null 키, 오류 제한, 오류 감지 시 수행 동작 및 오류 로그 파일을 처리할 때 구성 가능한 오류 처리 설정을 제공합니다. 
+  [큐브, 파티션 및 차원 처리에 대한 오류 구성&#40;SSAS - 다차원&#41;](error-configuration-for-cube-partition-and-dimension-processing.md)을 참조하세요.|  
 |`EstimatedRows`|팩트 테이블의 예상 행 수를 지정합니다.|  
 |`EstimatedSize`|측정값 그룹의 예상 크기(바이트)를 지정합니다.|  
 |`ID`|개체의 식별자를 지정합니다.|  

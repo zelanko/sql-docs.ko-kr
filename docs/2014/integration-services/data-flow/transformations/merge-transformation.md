@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 741ea39f6a60d7c9f52fb901a1b038a352e948b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770423"
 ---
 # <a name="merge-transformation"></a>병합 변환
@@ -56,7 +56,8 @@ ms.locfileid: "62770423"
 ## <a name="configuration-of-the-merge-transformation"></a>병합 변환 구성  
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- **병합 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용은 [Merge Transformation Editor](../../merge-transformation-editor.md)를 참조하십시오.  
+ 
+  **병합 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용은 [Merge Transformation Editor](../../merge-transformation-editor.md)를 참조하십시오.  
   
  프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
@@ -71,7 +72,7 @@ ms.locfileid: "62770423"
   
 -   [병합 및 병합 조인 변환을 위한 데이터 정렬](sort-data-for-the-merge-and-merge-join-transformations.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [병합 조인 변환](merge-join-transformation.md)   
  [UNION ALL 변환](union-all-transformation.md)   
  [데이터 흐름](../data-flow.md)   

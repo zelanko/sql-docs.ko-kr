@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f27ec0c9fe8078bb11a48114a3d456793271853d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768289"
 ---
 # <a name="general-page"></a>일반 페이지
@@ -24,7 +24,7 @@ ms.locfileid: "62768289"
   
  **에서** 일반 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]페이지를 열려면 **도구** 메뉴에서 **옵션**을 클릭한 다음 **Business Intelligence 디자이너**를 확장하여 **Integration Services 디자이너**를 엽니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **패키지 로드 시 디지털 서명 확인**  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 패키지 로드 시 디지털 서명을 확인하도록 하려면 선택합니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 디지털 서명이 있는지, 유효한지 신뢰할 수 있는 원본에서 가져온 것인지 여부만 확인합니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 패키지가 서명된 이후 변경되었는지 여부는 확인하지 않습니다.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62768289"
  **새 패키지 ID 만들기**  
  [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] 패키지를 업그레이드할 때 업그레이드된 버전의 패키지에 대해 새 패키지 ID를 만듭니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보안 개요&#40;Integration Services&#41;](security/security-overview-integration-services.md)   
  [스크립팅을 사용한 패키지 확장](extending-packages-scripting/extending-packages-with-scripting.md)  
   

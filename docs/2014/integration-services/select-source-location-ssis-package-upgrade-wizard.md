@@ -1,5 +1,5 @@
 ---
-title: 원본 위치 (SSIS 패키지 업그레이드 마법사)를 선택 합니다. | Microsoft Docs
+title: 원본 위치 선택 (SSIS 패키지 업그레이드 마법사) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1ba348d3a47945bf9bb4f375310c5c92e6be7705
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055939"
 ---
 # <a name="select-source-location-ssis-package-upgrade-wizard"></a>원본 위치 선택(SSIS 패키지 업그레이드 마법사)
+  
   **원본 위치 선택** 페이지를 사용하여 패키지를 업그레이드할 원본을 지정할 수 있습니다.  
   
 > [!NOTE]  
@@ -39,7 +40,7 @@ ms.locfileid: "66055939"
 |**SSIS 패키지 저장소**|업그레이드할 패키지가 패키지 저장소에 있음을 나타냅니다. 패키지 저장소는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스가 관리하는 파일 시스템 폴더 집합으로 구성됩니다. 자세한 내용은 [패키지 관리&#40;SSIS 서비스&#41;](service/package-management-ssis-service.md)를 참조하세요.<br /><br /> 이 값을 선택하면 해당 **패키지 원본** 동적 옵션이 표시됩니다.|  
 |**Microsoft SQL Server**|업그레이드할 패키지가 기존 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스에 있음을 나타냅니다.<br /><br /> 이 값을 선택하면 해당 **패키지 원본** 동적 옵션이 표시됩니다.|  
   
- **Folder**  
+ **폴더**  
  업그레이드할 패키지를 포함하는 폴더의 이름을 입력하거나 **찾아보기** 를 클릭하여 폴더를 찾습니다.  
   
  **찾아보기**  
@@ -59,7 +60,9 @@ ms.locfileid: "66055939"
  Windows 인증을 사용하여 서버에 연결하려면 선택합니다.  
   
  **SQL Server 인증 사용**  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 사용하여 서버에 연결하려면 선택합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 사용하는 경우 사용자 이름과 암호를 입력해야 합니다.  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 사용하여 서버에 연결하려면 선택합니다. 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 사용하는 경우 사용자 이름과 암호를 입력해야 합니다.  
   
  **사용자 이름**  
  서버에 연결할 때 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증에 사용할 사용자 이름을 입력합니다.  
@@ -67,7 +70,7 @@ ms.locfileid: "66055939"
  **암호**  
  서버에 연결할 때 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증에 사용할 암호를 입력합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 패키지 업그레이드](install-windows/upgrade-integration-services-packages.md)  
   
   

@@ -15,14 +15,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e90e2386fcd6c6d2f71e1cea31f253f8baac9195
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807298"
 ---
 # <a name="database-mirroring-and-full-text-catalogs-sql-server"></a>데이터베이스 미러링 및 전체 텍스트 카탈로그(SQL Server)
-  전체 텍스트 카탈로그가 있는 데이터베이스를 미러링하려면 일반적인 백업을 사용하여 주 데이터베이스의 전체 데이터베이스 백업을 만든 다음 백업을 복원하여 데이터베이스를 미러 서버로 복사합니다. 자세한 내용은 [미러 데이터베이스에서 미러링 준비&#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)를 참조하세요.  
+  전체 텍스트 카탈로그가 있는 데이터베이스를 미러링하려면 일반적인 백업을 사용하여 주 데이터베이스의 전체 데이터베이스 백업을 만든 다음 백업을 복원하여 데이터베이스를 미러 서버로 복사합니다. 자세한 내용은 [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)을 사용합니다.  
   
 ## <a name="full-text-catalog-and-indexes-before-failover"></a>장애 조치(Failover) 이전의 전체 텍스트 카탈로그 및 인덱스  
  새로 생성된 미러 데이터베이스에서 전체 텍스트 카탈로그는 데이터베이스가 백업될 때와 동일합니다. 데이터베이스 미러링이 시작된 후 CREATE FULLTEXT CATALOG, ALTER FULLTEXT CATALOG, DROP FULLTEXT CATALOG 등과 같은 DDL 문으로 적용된 모든 카탈로그 수준 변경 내용은 기록되고 미러 서버로 전송되어 미러 데이터베이스에서 재생됩니다. 그러나 인덱스 수준 변경 내용은 주 서버에 기록되지 않으므로 미러 데이터베이스에서 재현되지 않습니다. 따라서 미러 데이터베이스의 전체 텍스트 카탈로그 내용은 주 데이터베이스의 전체 텍스트 카탈로그 내용이 변경됨에 따라 동기화되지 않습니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "62807298"
 ## <a name="after-forcing-service"></a>서비스 강제 이후  
  미러 서버에 대해 서비스를 강제(데이터 손실 가능)한 후 전체 탐색을 시작합니다. 전체 탐색을 시작할 때 사용할 방법은 전체 텍스트 인덱스의 변경 내용 추적 여부에 따라 달라집니다. 자세한 내용은 이 항목의 앞부분에 나오는 "장애 조치 이후의 전체 텍스트 인덱스"를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ALTER FULLTEXT INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)   
  [CREATE FULLTEXT INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)   
  [DROP FULLTEXT INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-fulltext-index-transact-sql)   

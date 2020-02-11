@@ -1,5 +1,5 @@
 ---
-title: 변수를 설정 하는 지도 결과 SQL 실행 태스크 | Microsoft Docs
+title: 결과 집합을 SQL 실행 태스크의 변수에 매핑 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 995afe55c1cd1b7d925c9267ba5dfa3aed038358
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057755"
 ---
 # <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>결과 집합을 SQL 실행 태스크의 변수에 매핑
@@ -34,20 +34,23 @@ ms.locfileid: "66057755"
   
 3.  **제어 흐름** 탭을 클릭합니다.  
   
-4.  패키지에 아직 SQL 실행 태스크가 포함되어 있지 않으면 패키지의 제어 흐름에 해당 작업을 추가합니다. 자세한 내용은 참조 하세요. [작업 또는 제어 흐름 컨테이너 추가 또는 삭제](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
-  을 선택합니다.  
+4.  패키지에 아직 SQL 실행 태스크가 포함되어 있지 않으면 패키지의 제어 흐름에 해당 작업을 추가합니다. 자세한 내용은 [제어 흐름에서 태스크 또는 컨테이너 추가 또는 삭제](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md) 를 참조 하세요.  
+  .  
   
 5.  SQL 실행 태스크를 두 번 클릭합니다.  
   
-6.  **SQL 실행 태스크 편집기** 대화 상자의 **일반** 페이지에서 **단일 행**, **전체 결과 집합**또는 **XML** 결과 집합 형식을 선택합니다.  
+6.  
+  **SQL 실행 태스크 편집기** 대화 상자의 **일반** 페이지에서 **단일 행**, **전체 결과 집합**또는 **XML** 결과 집합 형식을 선택합니다.  
   
      다양한 결과 집합에 대한 설명은 [SQL 실행 태스크의 결과 집합](result-sets-in-the-execute-sql-task.md)을 참조하세요.  
   
-7.  **결과 집합**을 클릭합니다.  
+7.  
+  **결과 집합**을 클릭합니다.  
   
 8.  결과 집합 매핑을 추가하려면 **추가**를 클릭합니다.  
   
-9. **변수 이름** 목록에서 변수를 선택하거나 새 변수를 만듭니다. 자세한 내용은 [패키지에서 사용자 정의 변수의 범위 추가, 삭제, 변경](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)을 참조하세요.  
+9. 
+  **변수 이름** 목록에서 변수를 선택하거나 새 변수를 만듭니다. 자세한 내용은 [패키지에서 사용자 정의 변수의 범위 추가, 삭제, 변경](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)을 참조하세요.  
   
      다양한 결과 집합에 매핑할 수 있는 변수 데이터 형식에 대한 설명은 [SQL 실행 태스크의 결과 집합](result-sets-in-the-execute-sql-task.md)을 참조하세요.  
   
@@ -59,13 +62,13 @@ ms.locfileid: "66057755"
   
 11. **확인**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL 실행 태스크](control-flow/execute-sql-task.md)   
- [결과 집합을 SQL 실행 태스크](result-sets-in-the-execute-sql-task.md)   
+ [SQL 실행 태스크의 결과 집합](result-sets-in-the-execute-sql-task.md)   
  [패키지 실행 태스크](control-flow/execute-package-task.md)   
  [패키지 구성](../../2014/integration-services/package-configurations.md)   
  [패키지 구성 만들기](../../2014/integration-services/create-package-configurations.md)   
- [자식 패키지에서 변수 및 매개 변수의 값을 사용 합니다.](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)   
+ [자식 패키지에서 변수 및 매개 변수의 값 사용](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)   
  [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md)  
   
   

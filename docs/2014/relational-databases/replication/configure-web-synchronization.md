@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721657"
 ---
 # <a name="configure-web-synchronization"></a>웹 동기화 구성
@@ -88,7 +88,7 @@ ms.locfileid: "62721657"
   
 #### <a name="to-increase-maximum-worker-processes-in-iis-7"></a>IIS 7에서 최대 작업자 프로세스 수를 늘리려면  
   
-1.  **인터넷 정보 서비스(IIS) 관리자**에서 로컬 서버 노드를 확장한 다음 **응용 프로그램 풀** 노드를 클릭합니다.  
+1.  **인터넷 정보 서비스(IIS) 관리자**에서 로컬 서버 노드를 확장한 다음 **애플리케이션 풀** 노드를 클릭합니다.  
   
 2.  웹 동기화 사이트와 연결된 애플리케이션 풀을 선택한 다음 **동작** 창에서 **고급 설정** 을 클릭합니다.  
   
@@ -101,7 +101,8 @@ ms.locfileid: "62721657"
   
  게시자를 처음으로 사용하는 경우에는 배포자 및 스냅샷 공유도 구성해야 합니다. 각 구독자의 병합 에이전트에는 이 스냅샷 공유에 대한 읽기 권한이 있어야 합니다. 자세한 내용은 [배포 구성](configure-distribution.md) 및 [스냅샷 폴더 보안 설정](security/secure-the-snapshot-folder.md)을 참조하세요.  
   
- `gen`은 websync xml 파일의 예약어입니다. 이름이 `gen`인 열을 포함하는 테이블은 게시하지 마십시오.  
+ 
+  `gen`은 websync xml 파일의 예약어입니다. 이름이 `gen`인 열을 포함하는 테이블은 게시하지 마십시오.  
   
 ## <a name="configuring-the-subscription"></a>구독 구성  
  게시를 설정하고 IIS를 구성한 다음에는 끌어오기 구독을 만들고 이 구독에서 IIS를 사용하여 동기화를 수행하도록 지정합니다. 웹 동기화는 끌어오기 구독에 대해서만 지원됩니다.  
@@ -124,7 +125,7 @@ ms.locfileid: "62721657"
   
 -   많은 양의 데이터를 복제하는 경우 병합 에이전트 일괄 처리 크기를 조정해야 합니다.  
   
- 병합 복제를 위한 일괄 처리 크기는 아티클 단위의 변경 내용 컬렉션인 *세대*로 측정됩니다. 일괄 처리에서 생성의 수를 사용 하 여 지정 합니다`DownloadGenerationsPerBatch` 및-`UploadGenerationsPerBatch` 병합 에이전트의 매개 변수입니다. 자세한 내용은 [Replication Merge Agent](agents/replication-merge-agent.md)을 참조하세요.  
+ 병합 복제를 위한 일괄 처리 크기는 아티클 단위의 변경 내용 컬렉션인 *세대*로 측정됩니다. 일괄 처리의 세대 수는 병합 에이전트의-`DownloadGenerationsPerBatch` 및`UploadGenerationsPerBatch` 매개 변수를 사용 하 여 지정 합니다. 자세한 내용은 [Replication Merge Agent](agents/replication-merge-agent.md)을(를) 참조하세요.  
   
  데이터의 양이 많은 경우 각 일괄 처리 매개 변수에 작은 수를 지정하십시오. 10부터 시작한 다음 애플리케이션 요구 사항과 성능에 따라 조정하는 것이 좋습니다. 일반적으로 이러한 매개 변수는 에이전트 프로필에 지정됩니다. 프로필에 대한 자세한 내용은 [Replication Agent Profiles](agents/replication-agent-profiles.md)을 참조하십시오.  
   
@@ -144,7 +145,7 @@ ms.locfileid: "62721657"
   
      에이전트에 필요한 사용 권한에 대한 자세한 내용은 [Replication Agent Security Model](security/replication-agent-security-model.md)을 참조하십시오.  
   
--   새 구독 마법사의 **웹 서버 정보** 페이지에서 계정과 암호를 지정할 때 또는 **@internet_url** 및 **@internet_login** 및 [@internet_login](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)를 참조하십시오. 이 계정에는 스냅샷 공유에 대한 읽기 권한이 있어야 합니다.  
+-   새 구독 마법사의 **웹 서버 정보** 페이지에서 계정과 암호를 지정할 때 또는 **@internet_url** **@internet_login** [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)의 및 매개 변수에 대 한 값을 지정할 때 병합 에이전트 사용 하는 것과 동일한 도메인 계정을 지정 합니다. 이 계정에는 스냅샷 공유에 대한 읽기 권한이 있어야 합니다.  
   
 -   각 게시는 IIS에 대해 서로 다른 가상 디렉터리를 사용해야 합니다.  
   
@@ -163,7 +164,7 @@ ms.locfileid: "62721657"
 > [!IMPORTANT]  
 >  방화벽의 포트를 열면 서버가 악의적인 공격에 노출될 수 있습니다. 포트를 열기 전에 방화벽 시스템을 잘 이해해야 합니다. 자세한 내용은 [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [병합 복제에 대한 웹 동기화](web-synchronization-for-merge-replication.md)  
   
   

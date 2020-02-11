@@ -1,5 +1,5 @@
 ---
-title: 특성 (차원 구조 탭, 차원 디자이너) (Analysis Services-다차원 데이터) | Microsoft Docs
+title: 특성 (차원 구조 탭, 차원 디자이너) (Analysis Services 다차원 데이터) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,24 +13,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a9eab7de49abaf06446fbd03f7b80c381d102f20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064397"
 ---
 # <a name="attributes-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>특성(차원 구조 탭, 차원 디자이너)(Analysis Services - 다차원 데이터)
-  이 창을 사용하여 선택한 차원과 연결된 특성을 관리할 수 있습니다. 이 창에서 **계층** 창으로 특성을 끌어서 계층 및 수준을 만들 수 있습니다. 자세한 내용은 [계층 &#40;차원 구조 탭, 차원 디자이너&#41; &#40;Analysis Services-Multidimensional Data&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)합니다.  
+  이 창을 사용하여 선택한 차원과 연결된 특성을 관리할 수 있습니다. 이 창에서 **계층** 창으로 특성을 끌어서 계층 및 수준을 만들 수 있습니다. 자세한 내용은 [계층 &#40;차원 구조 탭, 차원 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;를 ](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)참조 하세요.  
   
  특성을 만들려면 목록, 트리 또는 표 모드에 있는 동안 **데이터 원본 뷰** 창에서 **특성** 창으로 열을 끕니다. 특성을 제거하려면 바로 가기 메뉴에서 **삭제** 를 선택합니다.  
   
- **특성 창을 표시 하려면**  
+ **특성 창을 표시하려면**  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트를 연 다음 원하는 차원을 엽니다.  
+1.  
+  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트를 연 다음 원하는 차원을 엽니다.  
   
 2.  차원이 선택되지 않은 경우에는 **차원 구조** 탭을 클릭합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **특성**  
  선택한 차원에 사용할 수 있는 특성을 표시합니다. 이 옵션은 다음 모드에서 볼 수 있습니다.  
   
@@ -52,13 +53,13 @@ ms.locfileid: "66064397"
  **이름**  
  특성 이름을 표시합니다.  
   
- **Usage**  
+ **사용 현황**  
  선택한 특성의 사용법을 설정합니다. 아래쪽 화살표를 클릭하여 다음 선택 항목 중에서 선택합니다.  
   
 |값|Description|  
 |-----------|-----------------|  
-|Regular|일반 특성을 식별합니다.|  
-|Key|차원의 키 특성을 식별합니다. 이는 차원의 리프 멤버에 해당합니다. 차원 하나에 키 특성이 하나씩만 있을 수 있습니다. 수정하려면**속성**창의 **KeyColumns** 속성 옆에 있는 줄임표 단추( **...** )를 클릭합니다.|  
+|일반|일반 특성을 식별합니다.|  
+|키|차원의 키 특성을 식별합니다. 이는 차원의 리프 멤버에 해당합니다. 차원 하나에 키 특성이 하나씩만 있을 수 있습니다. 수정하려면**속성**창의 **KeyColumns** 속성 옆에 있는 줄임표 단추( **...** )를 클릭합니다.|  
 |Parent|부모-자식 관계의 부모 특성을 나타냅니다. 이 관계에서 자식 특성은 항상 키 특성이어야 합니다.|  
 |AccountType|계정 유형 특성을 나타냅니다. 이 값은 측정값에 대한 집계 함수를 "by account"로 설정한 경우 서버 또는 엔진에 사용됩니다.|  
   
@@ -69,11 +70,12 @@ ms.locfileid: "66064397"
  기본 열의 데이터 형식을 표시합니다. 새 특성을 만들 때는 아래쪽 화살표를 클릭하여 사용 가능한 선택 항목 중에서 선택합니다.  
   
  **이름 열**  
- 기본 열의 위치를 표시합니다. 새 특성을 만들 때는 아래쪽 화살표를 클릭하여 **키와 같음** 또는 **개별 열**중 하나를 선택합니다. **개별 열** 을 선택하면 **속성** 창의 **NameColumn** 속성이 특성에 사용할 이름을 저장하는 열을 설정합니다.  
+ 기본 열의 위치를 표시합니다. 새 특성을 만들 때는 아래쪽 화살표를 클릭하여 **키와 같음** 또는 **개별 열**중 하나를 선택합니다. 
+  **개별 열** 을 선택하면 **속성** 창의 **NameColumn** 속성이 특성에 사용할 이름을 저장하는 열을 설정합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [차원 구조 &#40;차원 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
- [계층 &#40;차원 구조 탭, 차원 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)   
- [도구 모음 &#40;차원 구조 탭, 차원 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>참고 항목  
+ [차원 구조 &#40;차원 디자이너&#41; &#40;Analysis Services 다차원 데이터&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
+ [계층 &#40;차원 구조 탭, 차원 디자이너&#41; &#40;Analysis Services 다차원 데이터&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)   
+ [&#40;차원 구조 탭, 차원 디자이너&#41; &#40;Analysis Services 다차원 데이터&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)  
   
   

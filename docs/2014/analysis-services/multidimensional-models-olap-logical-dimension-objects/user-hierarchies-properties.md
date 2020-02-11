@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 413272be4ac4ce913704494a26e9642666deeb92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62727318"
 ---
 # <a name="user-hierarchy-properties"></a>사용자 계층 속성
@@ -32,9 +32,9 @@ ms.locfileid: "62727318"
 |DisplayFolder|사용자에 대한 계층을 나열할 폴더를 지정합니다.|  
 |ID|계층의 고유 ID를 포함합니다.|  
 |MemberNamesUnique|계층에서 멤버 이름이 고유해야 하는지 여부를 결정합니다. 사용 가능한 값은 True와 False입니다. 기본값은 False입니다.|  
-|이름|계층 이름을 포함합니다.|  
+|속성|계층 이름을 포함합니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [사용자 계층](user-hierarchies.md)   
  [수준 속성](user-hierarchies-level-properties.md)  
   

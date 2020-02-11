@@ -22,34 +22,37 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bc152b8241b775f9fd686f8a31363cb4fca39de4
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874874"
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 각 언어마다 하나의 행이 포함되어 있습니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |langid|**smallint**|고유한 언어 ID입니다.|  
-|dateformat|**nchar(3)**|날짜 순서입니다(예: DMY).|  
+|dateformat|**nchar (3)**|날짜 순서입니다(예: DMY).|  
 |datefirst|**tinyint**|첫 번째 요일: 월요일의 경우 1, 화요일의 경우 2, 일요일은 7까지입니다.|  
-|업그레이드|**int**|시스템에서 사용하도록 예약됩니다.|  
-|NAME|**sysname**|공식 언어 이름 (예: Français)입니다.|  
+|업그레이드|**int**|시스템에서 사용하도록 예약되었습니다.|  
+|name|**sysname**|공식 언어 이름 (예: Français)입니다.|  
 |alias|**sysname**|대체 언어 이름입니다(예: 프랑스어).|  
-|months|**nvarchar(372)**|1월에서 12월까지의 순서로 쉼표로 구분된 전체 길이의 월 이름 목록이며 각 이름은 20자까지 사용할 수 있습니다.|  
-|shortmonths|**nvarchar(132)**|1월에서 12월까지의 순서로 쉼표로 구분된 짧은 길이의 월 이름 목록이며 각 이름은 9자까지 사용할 수 있습니다.|  
-|일|**nvarchar(217)**|월요일에서 일요일까지의 순서로 쉼표로 구분된 요일 이름의 목록이며 각 이름은 30자까지 사용할 수 있습니다.|  
-|lcid|**int**|해당 언어용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 로캘 ID입니다.|  
-|msglangid|**smallint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 메시지 그룹 ID입니다.|  
+|months|**nvarchar (372)**|1월에서 12월까지의 순서로 쉼표로 구분된 전체 길이의 월 이름 목록이며 각 이름은 20자까지 사용할 수 있습니다.|  
+|shortmonths|**nvarchar (132)**|1월에서 12월까지의 순서로 쉼표로 구분된 짧은 길이의 월 이름 목록이며 각 이름은 9자까지 사용할 수 있습니다.|  
+|days|**nvarchar (217)**|월요일에서 일요일까지의 순서로 쉼표로 구분된 요일 이름의 목록이며 각 이름은 30자까지 사용할 수 있습니다.|  
+|lcid|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)]언어의 Windows 로캘 ID입니다.|  
+|msglangid|**smallint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]메시지 그룹 ID입니다.|  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 설치된 언어는 다음과 같습니다.  
+ 
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 설치된 언어는 다음과 같습니다.  
   
-|영어 이름|Windows LCID|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 메시지 그룹 ID|  
+|영어 이름|Windows LCID|
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 메시지 그룹 ID|  
 |---------------------|------------------|-----------------------------------------|  
 |영어|1033|1033|  
 |독일어|1031|1031|  
@@ -79,14 +82,14 @@ ms.locfileid: "70874874"
 |라트비아어|1062|1062|  
 |리투아니아어|1063|1063|  
 |포르투갈어(브라질)|1046|1046|  
-|중국어(번체)|1028|1028|  
+|중국어 번체|1028|1028|  
 |한국어|1042|1042|  
 |중국어(간체)|2052|2052|  
 |아랍어|1025|1025|  
 |태국어|1054|1054|  
   
 ## <a name="see-also"></a>참고 항목  
- [호환성 뷰 &#40;transact-sql&#41; ](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
- [시스템 테이블을 시스템 뷰로 &#40;매핑 transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
+ [Transact-sql&#41;&#40;호환성 뷰](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
+ [시스템 테이블을 시스템 뷰로 매핑 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

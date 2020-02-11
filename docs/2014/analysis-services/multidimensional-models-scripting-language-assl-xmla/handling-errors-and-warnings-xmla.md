@@ -21,23 +21,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 856886a5edfa5dcae604b44f5c2dca356ba0addb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62702131"
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>오류 및 경고 처리(XMLA)
-  경우 XML for Analysis (XMLA) 오류 해결이 필요한 [Discover](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover) 또는 [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) 메서드 호출 실행 되지 않습니다, 성공적으로 실행 되지만 오류 또는 경고를 생성 또는 성공적으로 실행 되었으나 결과 반환 합니다. 오류를 포함 하는입니다.  
+  XML for Analysis (XMLA) [Discover](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover) 또는 [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) 메서드 호출을 실행 하지 않거나, 성공적으로 실행 되었으나 오류 또는 경고를 생성 하거나, 성공적으로 실행 되었지만 오류가 포함 된 결과를 반환 하는 경우 오류 처리가 필요 합니다.  
   
 |Error|보고|  
 |-----------|---------------|  
-|XMLA 메서드 호출이 실행되지 않음|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 오류의 세부 정보가 포함 된 SOAP 오류 메시지를 반환 합니다.<br /><br /> 자세한 내용은 섹션을 참조 하세요 [SOAP 오류](#handling_soap_faults)합니다.|  
-|메서드 호출이 성공적으로 실행되었으나 오류 또는 경고 발생|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 포함을 [오류](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/error-element-xmla) 또는 [경고](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/warning-element-xmla) 각 오류 또는 경고에 대 한 요소 각각를 [메시지](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/messages-element-xmla) 의 속성을 [루트](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/root-element-xmla) 요소 메서드 호출 결과가 들어 있는입니다.<br /><br /> 자세한 내용은 섹션을 참조 하세요 [오류 및 경고 처리](#handling_errors_and_warnings)합니다.|  
-|메서드 호출이 성공적으로 실행되었으나 결과에 오류가 있음|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인라인 `error` 또는 `warning` 요소는 오류 또는 경고에 대 한 적절 한 내에서 각각 [셀](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cell-element-xmla) 또는 [행](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/row-element-xmla) 메서드 호출의 결과 요소입니다.<br /><br /> 자세한 내용은 섹션을 참조 하세요 [인라인 오류 및 경고](#handling_inline_errors_and_warnings)합니다.|  
+|XMLA 메서드 호출이 실행되지 않음|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류의 세부 정보를 포함 하는 SOAP 오류 메시지를 반환 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 합니다.<br /><br /> 자세한 내용은 [SOAP 오류 처리](#handling_soap_faults)섹션을 참조 하십시오.|  
+|메서드 호출이 성공적으로 실행되었으나 오류 또는 경고 발생|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에는 메서드 호출의 결과를 포함 하는 [루트](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/root-element-xmla) 요소의 [Messages](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/messages-element-xmla) 속성에 각 오류 또는 경고에 대 한 [오류](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/error-element-xmla) 또는 [경고](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/warning-element-xmla) 요소가 각각 포함 되어 있습니다.<br /><br /> 자세한 내용은 [오류 및 경고 처리](#handling_errors_and_warnings)섹션을 참조 하십시오.|  
+|메서드 호출이 성공적으로 실행되었으나 결과에 오류가 있음|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에는 각각 `error` 오류 `warning` 또는 경고에 대 한 인라인 또는 요소가 메서드 호출 결과의 해당 [Cell](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cell-element-xmla) 또는 [row](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/row-element-xmla) 요소 내에 포함 되어 있습니다.<br /><br /> 자세한 내용은 [인라인 오류 및 경고 처리](#handling_inline_errors_and_warnings)섹션을 참조 하십시오.|  
   
-##  <a name="handling_soap_faults"></a> SOAP 오류 해결  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 SOAP 오류가 반환되는 경우는 다음과 같습니다.  
+##  <a name="handling_soap_faults"></a>SOAP 오류 처리  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 SOAP 오류가 반환되는 경우는 다음과 같습니다.  
   
 -   XMLA 메서드가 포함된 SOAP 메시지가 올바른 형식이 아니거나 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에서 해당 메시지의 유효성을 확인할 수 없는 경우  
   
@@ -50,15 +51,15 @@ ms.locfileid: "62702131"
 ### <a name="fault-code-information"></a>오류 코드 정보  
  다음 표에서는 SOAP 응답의 세부 정보 섹션에 포함된 XMLA 오류 코드 정보를 보여 줍니다. 열은 SOAP 오류의 세부 정보 섹션에 포함된 오류의 특성을 나타냅니다.  
   
-|열 이름|형식|Description|Null 허용<sup>1</sup>|  
+|열 이름|Type|Description|Null 허용<sup>1</sup>|  
 |-----------------|----------|-----------------|------------------------------|  
-|`ErrorCode`|`UnsignedInt`|메서드의 성공 또는 실패를 나타내는 코드를 반환합니다. 16진수 값은 `UnsignedInt` 값으로 변환되어야 합니다.|아니요|  
-|`WarningCode`|`UnsignedInt`|경고 조건을 나타내는 코드를 반환합니다. 16진수 값은 `UnsignedInt` 값으로 변환되어야 합니다.|사용자 계정 컨트롤|  
-|`Description`|`String`|오류가 발생한 구성 요소에서 반환한 오류 또는 경고에 대한 텍스트와 설명입니다.|사용자 계정 컨트롤|  
-|`Source`|`String`|오류 또는 경고가 발생한 구성 요소의 이름입니다.|사용자 계정 컨트롤|  
-|`HelpFile`|`String`|오류 또는 경고를 설명하는 도움말 파일 또는 항목의 경로 또는 URL입니다.|사용자 계정 컨트롤|  
+|`ErrorCode`|`UnsignedInt`|메서드의 성공 또는 실패를 나타내는 코드를 반환합니다. 16진수 값은 `UnsignedInt` 값으로 변환되어야 합니다.|예|  
+|`WarningCode`|`UnsignedInt`|경고 조건을 나타내는 코드를 반환합니다. 16진수 값은 `UnsignedInt` 값으로 변환되어야 합니다.|yes|  
+|`Description`|`String`|오류가 발생한 구성 요소에서 반환한 오류 또는 경고에 대한 텍스트와 설명입니다.|yes|  
+|`Source`|`String`|오류 또는 경고가 발생한 구성 요소의 이름입니다.|yes|  
+|`HelpFile`|`String`|오류 또는 경고를 설명하는 도움말 파일 또는 항목의 경로 또는 URL입니다.|yes|  
   
- <sup>1</sup> 여부를 나타내는 반환 해야 하는 데이터를 반드시 또는 여부 데이터가 선택적 열 적용 되지 않는 경우 null 문자열이 허용 됩니다.  
+ <sup>1</sup> 은 데이터가 필수이 고 반환 되어야 하는지 여부 또는 데이터가 선택적 이며 열이 적용 되지 않는 경우 null 문자열이 허용 되는지 여부를 나타냅니다.  
   
  다음은 메서드 호출이 실패했을 때 발생하는 SOAP 오류 예입니다.  
   
@@ -82,26 +83,28 @@ HelpFile="" />
 </SOAP-ENV:Envelope>  
 ```  
   
-##  <a name="handling_errors_and_warnings"></a> 오류 및 경고 처리  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 명령 실행 후 다음과 같은 상황이 발생할 경우 명령에 대한 `Messages` 요소에 `root` 속성을 반환합니다.  
+##  <a name="handling_errors_and_warnings"></a>오류 및 경고 처리  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 명령 실행 후 다음과 같은 상황이 발생할 경우 명령에 대한 `Messages` 요소에 `root` 속성을 반환합니다.  
   
 -   메서드 자체는 실패하지 않았지만 메서드가 성공적으로 호출된 후 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에서 오류가 발생한 경우  
   
 -   명령을 성공적으로 실행했지만 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에서 경고를 반환한 경우  
   
- `Messages` 속성은 `root` 요소에 포함된 속성 중 마지막 속성이며 `Message` 요소를 한 개 이상 포함할 수 있습니다. 또한 각 `Message` 요소는 지정된 명령에 대해 발생한 오류나 경고를 설명하는 단일 `error` 또는 `warning` 요소를 포함할 수 있습니다.  
+ 
+  `Messages` 속성은 `root` 요소에 포함된 속성 중 마지막 속성이며 `Message` 요소를 한 개 이상 포함할 수 있습니다. 또한 각 `Message` 요소는 지정된 명령에 대해 발생한 오류나 경고를 설명하는 단일 `error` 또는 `warning` 요소를 포함할 수 있습니다.  
   
- 오류 및 경고에 포함 된에 대 한 자세한 내용은 합니다 `Messages` 속성을 참조 하세요 [메시지 요소 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/messages-element-xmla).  
+ `Messages` 속성에 포함 된 오류 및 경고에 대 한 자세한 내용은 [MESSAGES 요소 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/messages-element-xmla)를 참조 하세요.  
   
 ### <a name="handling-errors-during-serialization"></a>직렬화 중 오류 해결  
- 후 오류가 발생 하는 경우는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스가 이미 성공적으로 실행 된 명령의 출력을 직렬화 하는 작업 시작 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 반환는 [예외](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/exception-element-xmla) 오류 시점에 다른 네임 스페이스에서 요소입니다. 그러면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스는 클라이언트에 보낸 XML 문서가 유효한 문서가 되도록 열려 있는 요소를 모두 닫습니다. 또한 오류에 대한 설명이 들어 있는 `Messages` 요소도 반환합니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스가 성공적으로 실행 된 명령의 출력을 직렬화 한 후에 오류가 발생 하 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 경우는 오류 지점에서 다른 네임 스페이스의 [Exception](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/exception-element-xmla) 요소를 반환 합니다. 그러면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스는 클라이언트에 보낸 XML 문서가 유효한 문서가 되도록 열려 있는 요소를 모두 닫습니다. 또한 오류에 대한 설명이 들어 있는 `Messages` 요소도 반환합니다.  
   
-##  <a name="handling_inline_errors_and_warnings"></a> 인라인 오류 및 경고 처리  
- XMLA 메서드 자체는 실패하지 않았지만 XMLA 메서드가 성공적으로 호출된 후 반환된 결과의 데이터 요소와 관련된 오류가 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에서 발생하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 명령에 대한 인라인 `error` 또는 `warning`을 반환합니다.  
+##  <a name="handling_inline_errors_and_warnings"></a>인라인 오류 및 경고 처리  
+ XMLA 메서드 자체는 실패하지 않았지만 XMLA 메서드가 성공적으로 호출된 후 반환된 결과의 데이터 요소와 관련된 오류가 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에서 발생하면 `error`에서는 명령에 대한 인라인 `warning` 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]을 반환합니다.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인라인을 제공 `error` 및 `warning` 다른 데이터 또는 셀에 문제 관련 된 경우 요소 내에 포함 된를 `root` 요소를 사용 하 여를 [MDDataSet](https://docs.microsoft.com/bi-reference/xmla/xml-data-types/mddataset-data-type-xmla) 보안 등의 데이터 형식 발생할 오류 또는 서식 지정 셀에 대 한 오류가 발생 했습니다. 이러한 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 오류 또는 경고가 포함된 `error` 또는 `warning` 요소에 `Cell` 또는 `row` 요소를 반환합니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)][Mddataset](https://docs.microsoft.com/bi-reference/xmla/xml-data-types/mddataset-data-type-xmla) 데이터 `warning` 형식을 사용 하 여 `root` 요소 내에 포함 된 셀 또는 다른 데이터에 대해 발생 하는 문제 (예: 보안 오류 또는 셀 형식 지정 오류)가 발생 하는 경우 인라인 `error` 및 요소를 제공 합니다. 이러한 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 오류 또는 경고가 포함된 `error` 또는 `warning` 요소에 `Cell` 또는 `row` 요소를 반환합니다.  
   
- 다음 예제에서 반환 된 행에 오류가 포함 된 결과 집합을는 `Execute` 메서드를 사용 하는 [문](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla) 명령입니다.  
+ 다음 예에서는 `Execute` [Statement](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla) 명령을 사용 하 여 메서드에서 반환 된 행 집합에 오류가 포함 된 결과 집합을 보여 줍니다.  
   
 ```  
 <return>  
@@ -125,7 +128,7 @@ HelpFile="" />
 </return>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Analysis Services에서 XMLA를 사용하여 개발](developing-with-xmla-in-analysis-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Representation(Tabular) 데이터베이스 | Microsoft Docs
+title: 데이터베이스 표현 (테이블 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 377b85c22d1c6da9f5296d6ad57a86028e022785
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62757806"
 ---
 # <a name="database-representationtabular"></a>데이터베이스 표현(테이블 형식)
@@ -53,7 +53,7 @@ currentCnx.ChangeDatabase("myOtherDatabase");
 ## <a name="database-in-amo"></a>AMO의 데이터베이스  
  AMO를 사용하여 데이터베이스 개체를 관리할 때는 먼저 <xref:Microsoft.AnalysisServices.Server> 개체로 시작하여 데이터베이스 컬렉션에서 데이터베이스를 검색하거나 새 데이터베이스를 컬렉션에 추가하여 데이터베이스를 만듭니다.  
   
- 다음 코드는 서버에 연결 하 고 빈 데이터베이스를 만드는 단계를 보여 줍니다.를 확인 한 후 데이터베이스가 존재 하지 않습니다.  
+ 다음 코드 조각에서는 데이터베이스가 존재 하지 않는지 확인 한 후 서버에 연결 하 고 빈 데이터베이스를 만드는 단계를 보여 줍니다.  
   
 ```  
   
@@ -86,6 +86,6 @@ catch (Exception createDBxc)
   
 ```  
   
- AMO를 사용 하 여 데이터베이스 표현을 만들고 조작 하는 방법에 대 한 실용적인 이해, Tabular AMO 2012 예제의 원본 코드를 참조 하세요. 특히 다음 원본 파일에서 확인 합니다. Database.cs 합니다. 예제 코드는 여기에서 설명한 논리적 개념에 대한 지원으로만 제공되며 프로덕션 환경에서 사용해서는 안 됩니다.  
+ AMO를 사용 하 여 데이터베이스 표현을 만들고 조작 하는 방법에 대 한 실질적인 이해는 테이블 형식 AMO 2012 샘플의 소스 코드를 참조 하세요. 특히 다음 원본 파일을 확인 하십시오. Database.cs. 예제 코드는 여기에서 설명한 논리적 개념에 대한 지원으로만 제공되며 프로덕션 환경에서 사용해서는 안 됩니다.  
   
   

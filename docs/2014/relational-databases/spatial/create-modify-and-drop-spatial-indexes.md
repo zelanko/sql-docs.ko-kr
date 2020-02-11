@@ -17,56 +17,65 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 7e5dcd71dec0a2189e9f3b51bb7a68b50b070416
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014273"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>공간 인덱스 만들기, 수정 및 삭제
-  공간 인덱스의 열에 특정 작업을 수행할 보다 효율적으로 수를 `geometry` 또는 `geography` 데이터 형식 (한 *공간 열*). 하나의 공간 열에 두 개 이상의 공간 인덱스가 지정될 수 있습니다. 예를 들어 이 기능은 단일 열에 다른 공간 분할 매개 변수를 인덱싱할 경우에 유용합니다.  
+  공간 인덱스는 `geometry` 또는 `geography` 데이터 형식의 열 ( *공간 열*)에서 특정 작업을 보다 효율적으로 수행할 수 있습니다. 하나의 공간 열에 두 개 이상의 공간 인덱스가 지정될 수 있습니다. 예를 들어 이 기능은 단일 열에 다른 공간 분할 매개 변수를 인덱싱할 경우에 유용합니다.  
   
  공간 인덱스를 만드는 작업에 대한 제한 사항이 많이 있습니다. 자세한 내용은 이 항목의 [공간 인덱스의 제한 사항](#restrictions) 을 참조하십시오.  
   
 > [!NOTE]  
 >  공간 인덱스와 파티션 및 파일 그룹의 관계에 대한 자세한 내용은 [CREATE SPATIAL INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-spatial-index-transact-sql)의 "주의" 섹션을 참조하세요.  
   
-##  <a name="creating"></a> 공간 인덱스 만들기, 수정 및 삭제  
+##  <a name="creating"></a>공간 인덱스 만들기, 수정 및 삭제  
   
-###  <a name="create"></a> 공간 인덱스를 만들려면  
- **Transact-SQL을 사용하여 공간 인덱스를 만들려면**  
- [CREATE SPATIAL INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-spatial-index-transact-sql)  
+###  <a name="create"></a>공간 인덱스를 만들려면  
+ **Transact-sql을 사용 하 여 공간 인덱스를 만들려면**  
+ [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-spatial-index-transact-sql)  
   
- **Management Studio의 새 인덱스 대화 상자를 사용하여 공간 인덱스를 만들려면**  
+ **Management Studio의 새 인덱스 대화 상자를 사용 하 여 공간 인덱스를 만들려면**  
  ##### <a name="to-create-a-spatial-index-in-management-studio"></a>Management Studio에서 공간 인덱스를 만들려면  
   
 1.  개체 탐색기에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **데이터베이스**를 확장하고 지정한 인덱스가 있는 테이블이 포함된 데이터베이스를 확장한 다음 **테이블**을 확장합니다.  
+2.  
+  **데이터베이스**를 확장하고 지정한 인덱스가 있는 테이블이 포함된 데이터베이스를 확장한 다음 **테이블**을 확장합니다.  
   
 3.  인덱스를 만들 테이블을 확장합니다.  
   
-4.  **인덱스** 를 마우스 오른쪽 단추로 클릭하고 **새 인덱스**를 선택합니다.  
+4.  
+  **인덱스** 를 마우스 오른쪽 단추로 클릭하고 **새 인덱스**를 선택합니다.  
   
-5.  **인덱스 이름** 필드에 인덱스의 이름을 입력합니다.  
+5.  
+  **인덱스 이름** 필드에 인덱스의 이름을 입력합니다.  
   
-6.  **인덱스 유형** 드롭다운 목록에서 **공간**을 선택합니다.  
+6.  
+  **인덱스 유형** 드롭다운 목록에서 **공간**을 선택합니다.  
   
 7.  인덱싱하려는 공간 열을 지정하려면 **추가**를 클릭합니다.  
   
-8.  에 **에서 열 선택**  *\<테이블 이름 >* 유형의 열 선택 대화 상자 `geometry` 또는 `geography` 해당 확인란을 선택 하 여 합니다. 그러면 다른 공간 열이 편집할 수 없게 됩니다. 다른 공간 열을 선택하려면 먼저 현재 선택된 열의 선택을 취소해야 합니다. 완료되었으면 **확인**을 클릭합니다.  
+8.  * \<테이블 이름* **에서 열 선택**>대화 상자에서 해당 확인란을 선택 하 여 또는 `geometry` `geography` 형식의 열을 선택 합니다. 그러면 다른 공간 열이 편집할 수 없게 됩니다. 다른 공간 열을 선택하려면 먼저 현재 선택된 열의 선택을 취소해야 합니다. 완료되었으면 **확인**을 클릭합니다.  
   
-9. **인덱스 키 열** 표에서 열 선택 사항을 확인합니다.  
+9. 
+  **인덱스 키 열** 표에서 열 선택 사항을 확인합니다.  
   
-10. **인덱스 속성** 대화 상자의 **페이지 선택** 창에서 **공간**을 클릭합니다.  
+10. 
+  **인덱스 속성** 대화 상자의 **페이지 선택** 창에서 **공간**을 클릭합니다.  
   
-11. **공간** 페이지에서 인덱스의 공간 속성에 사용할 값을 지정합니다.  
+11. 
+  **공간** 페이지에서 인덱스의 공간 속성에 사용할 값을 지정합니다.  
   
-     인덱스를 만들 때를 `geometry` 를 지정 해야 유형 열을 **( *`X-min`* 를 *`Y-min`* )** 및 **( *`X-max`* 하십시오 *`Y-max`* )** 경계 상자 좌표입니다. 에 대 한 인덱스를 `geography` 유형의 열에 경계 상자 필드는 읽기 전용이 지정한 후 합니다 **지리 표** 지리 표 공간 분할 경계 상자를 사용 하지 않으므로 공간 분할 구성표입니다.  
+     유형 열에 인덱스를 만들 때 경계 상자의 ***`X-min`*(,*`Y-min`*)** 및 ***`X-max`*(,*`Y-max`*)** 좌표를 지정 해야 합니다. `geometry` 유형 열의 인덱스의 경우 지리 표 공간 분할 구성표를 지정 하면 지리 표 공간 분할이 경계 상자를 사용 하지 않으므로 경계 상자 필드는 읽기 전용이 됩니다. **** `geography`  
   
-     필요에 따라 공간 분할(tessellation) 구성표의 모든 수준에서 표 밀도 및 **개체당 셀 수** 필드에 대해 기본값이 아닌 값을 지정할 수 있습니다. [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 또는 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 이상의 경우 개체당 기본 셀 수는 각각 16과 8이고, 기본 표 밀도는 **의 경우** 보통 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]입니다.  
+     필요에 따라 공간 분할(tessellation) 구성표의 모든 수준에서 표 밀도 및 **개체당 셀 수** 필드에 대해 기본값이 아닌 값을 지정할 수 있습니다. 
+  [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 또는 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 이상의 경우 개체당 기본 셀 수는 각각 16과 8이고, 기본 표 밀도는 **의 경우** 보통 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]입니다.  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 공간 분할(tessellation) 구성표의 GEOMETRY_AUTO_GRID 또는 GEOGRAPHY_AUTO_GRID를 선택할 수 있습니다. GEOMETRY_AUTO_GRID 또는 GEOGRAPHY_AUTO_GRID를 선택한 경우 수준 1, 수준 2, 수준 3 및 수준 4 표 밀도 옵션은 사용할 수 없습니다.  
+     
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 공간 분할(tessellation) 구성표의 GEOMETRY_AUTO_GRID 또는 GEOGRAPHY_AUTO_GRID를 선택할 수 있습니다. GEOMETRY_AUTO_GRID 또는 GEOGRAPHY_AUTO_GRID를 선택한 경우 수준 1, 수준 2, 수준 3 및 수준 4 표 밀도 옵션은 사용할 수 없습니다.  
   
      이러한 속성에 대한 자세한 내용은 [Index Properties F1 Help](../indexes/index-properties-f1-help.md)을 참조하십시오.  
   
@@ -76,7 +85,7 @@ ms.locfileid: "66014273"
 >  같은 공간 열 또는 다른 공간 열에 공간 인덱스를 더 만들려면 위 단계를 반복하십시오.  
   
   
- **Management Studio의 테이블 디자이너를 사용하여 공간 인덱스를 만들려면**  
+ **Management Studio에서 테이블 디자이너를 사용 하 여 공간 인덱스를 만들려면**  
  ##### <a name="to-create-a-spatial-index-in-table-designer"></a>테이블 디자이너에서 공간 인덱스를 만들려면  
   
 1.  개체 탐색기에서 공간 인덱스를 만들려는 테이블을 마우스 오른쪽 단추로 클릭하고 **디자인**을 클릭합니다.  
@@ -85,14 +94,17 @@ ms.locfileid: "66014273"
   
 2.  인덱스에 대해 `geometry` 또는 `geography` 열을 선택합니다.  
   
-3.  **테이블 디자이너** 메뉴에서 **공간 인덱스**를 클릭합니다.  
+3.  
+  **테이블 디자이너** 메뉴에서 **공간 인덱스**를 클릭합니다.  
   
-4.  **공간 인덱스** 대화 상자에서 **추가**를 클릭합니다.  
+4.  
+  **공간 인덱스** 대화 상자에서 **추가**를 클릭합니다.  
   
-5.  **선택한 공간 인덱스** 목록에서 새 인덱스를 선택하고 오른쪽에 있는 표에서 공간 인덱스의 속성을 설정합니다. 속성에 대한 자세한 내용은 [공간 인덱스 대화 상자&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/visual-database-tools.md)를 참조하세요.  
+5.  
+  **선택한 공간 인덱스** 목록에서 새 인덱스를 선택하고 오른쪽에 있는 표에서 공간 인덱스의 속성을 설정합니다. 속성에 대한 자세한 내용은 [공간 인덱스 대화 상자&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/visual-database-tools.md)를 참조하세요.  
   
   
-###  <a name="alter"></a> 공간 인덱스를 변경하려면  
+###  <a name="alter"></a>공간 인덱스를 변경 하려면  
   
 -   [ALTER INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)  
   
@@ -104,30 +116,33 @@ ms.locfileid: "66014273"
 -   [다른 파일 그룹으로 기존 인덱스 이동](../indexes/move-an-existing-index-to-a-different-filegroup.md)  
   
   
-###  <a name="drop"></a> 공간 인덱스를 삭제하려면  
- **Transact-SQL을 사용하여 공간 인덱스를 삭제하려면**  
+###  <a name="drop"></a>공간 인덱스를 삭제 하려면  
+ **Transact-sql을 사용 하 여 공간 인덱스를 삭제 하려면**  
  [DROP INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)  
   
- **Management Studio를 사용하여 인덱스를 삭제하려면**  
+ **Management Studio를 사용 하 여 인덱스를 삭제 하려면**  
  [인덱스 삭제](../indexes/delete-an-index.md)  
   
- **Management Studio의 테이블 디자이너를 사용하여 공간 인덱스를 삭제하려면**  
+ **Management Studio에서 테이블 디자이너를 사용 하 여 공간 인덱스를 삭제 하려면**  
  ##### <a name="to-drop-a-spatial-index-in-table-designer"></a>테이블 디자이너에서 공간 인덱스를 삭제하려면  
   
 1.  개체 탐색기에서 삭제하려는 공간 인덱스가 포함된 테이블을 마우스 오른쪽 단추로 클릭하고 **디자인**을 클릭합니다.  
   
      테이블 디자이너에서 테이블이 열립니다.  
   
-2.  **테이블 디자이너** 메뉴에서 **공간 인덱스**를 클릭합니다.  
+2.  
+  **테이블 디자이너** 메뉴에서 **공간 인덱스**를 클릭합니다.  
   
-     **공간 인덱스** 대화 상자가 나타납니다.  
+     
+  **공간 인덱스** 대화 상자가 나타납니다.  
   
-3.  **선택한 공간 인덱스** 열에서 삭제하려는 인덱스를 클릭합니다.  
+3.  
+  **선택한 공간 인덱스** 열에서 삭제하려는 인덱스를 클릭합니다.  
   
 4.  **삭제**를 클릭합니다.  
   
   
-##  <a name="restrictions"></a> 공간 인덱스의 제한 사항  
+##  <a name="restrictions"></a>공간 인덱스에 대 한 제한 사항  
  공간 인덱스는 `geometry` 또는 `geography` 유형의 열에서만 만들 수 있습니다.  
   
 ### <a name="table-and-view-restrictions"></a>테이블 및 뷰 제한 사항  
@@ -149,10 +164,12 @@ ms.locfileid: "66014273"
  인덱스 작성 작업은 사용 가능한 프로세스 병렬 처리를 사용할 수 있습니다.  
   
 ### <a name="version-restrictions"></a>버전 제한 사항  
- [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 에 도입된 공간 분할(tessellation)은 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]로 복제할 수 없습니다. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 데이터베이스와의 호환성이 요구되는 경우 공간 인덱스에는 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 공간 분할을 사용해야 합니다.  
+ 
+  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 에 도입된 공간 분할(tessellation)은 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]로 복제할 수 없습니다. 
+  [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 데이터베이스와의 호환성이 요구되는 경우 공간 인덱스에는 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 공간 분할을 사용해야 합니다.  
   
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [공간 인덱스 개요](spatial-indexes-overview.md)  
   
   
