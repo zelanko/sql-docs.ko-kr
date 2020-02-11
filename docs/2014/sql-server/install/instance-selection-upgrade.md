@@ -11,16 +11,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 922e528fc530064d90e748cc71baba614df59d4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094222"
 ---
 # <a name="instance-selection-upgrade"></a>인스턴스 선택(업그레이드)
   인스턴스 선택(업그레이드) 페이지를 사용하여 업그레이드할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 지정할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  인스턴스의 모든 구성 요소를 동시에 업그레이드해야 합니다. 업그레이드 중에는 기능을 추가하거나 제거할 수 없습니다.  
   
   

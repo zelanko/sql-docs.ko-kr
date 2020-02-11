@@ -1,5 +1,5 @@
 ---
-title: 문서화 되지 않은 시스템 테이블에 대 한 참조를 제거 합니다. | Microsoft Docs
+title: 문서화 되지 않은 시스템 테이블에 대 한 참조 제거 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 06249aa1849a1be9af40e183724e85b0f318f3dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093151"
 ---
 # <a name="remove-references-to-undocumented-system-tables"></a>문서화되지 않은 시스템 테이블에 대한 참조를 제거합니다.
@@ -80,16 +80,16 @@ ms.locfileid: "66093151"
 ## <a name="corrective-action"></a>수정 동작  
  다음 표에 따라 애플리케이션을 수정합니다.  
   
-|이전|이후|  
+|이전|사용|  
 |----------------|---------|  
-|**sysfulltextnotify**|OBJECTPROPERTYEX 함수의**TableFulltextPendingChanges** 속성|  
-|**syslocks**|**sys.dm_tran_locks** 동적 관리 뷰, sp_lock 또는 **sys.syslockinfo** 호환성 뷰|  
-|**sysproperties**|**sys.extended_properties** 카탈로그 뷰 또는 **fn_listextendedproperty** 함수|  
-|**sysxlogins**|**sys.server_principals** 카탈로그 뷰 또는 **syslogins** 호환성 뷰|  
+|**sysfulltextnotify**|OBJECTPROPERTYEX 함수의 **objectpropertyex 함수의 tablefulltextpendingchanges** 속성입니다.|  
+|**syslocks**|**sys. dm_tran_locks** 동적 관리 뷰 또는 sp_lock 또는 **syslockinfo** 호환성 뷰입니다.|  
+|**sysproperties**|**sys. extended_properties** 카탈로그 뷰 또는 **fn_listextendedproperty** 함수|  
+|**sysxlogins**|**sys. server_principals** 카탈로그 뷰 또는 **syslogins** compatibility view를 참조 하십시오.|  
 |모든 **spt_** 테이블|사용 가능한 대체 항목 없음|  
   
-## <a name="see-also"></a>관련 항목  
- [데이터베이스 엔진 업그레이드 문제](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>참고 항목  
+ [업그레이드 문제 데이터베이스 엔진](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 업그레이드 관리자 &#91;새&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

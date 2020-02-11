@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0cc753f16ca9b70523fe6cb858fd167ef044087b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098727"
 ---
 # <a name="url-access-ssrs"></a>URL 액세스(SSRS)
@@ -58,14 +58,14 @@ reportpath
   
 ### <a name="syntax-description"></a>구문 설명  
  *rswebserviceurl*  
- 보고서 서버의 웹 서비스 URL입니다. 기본 모드의 경우 Reporting Services 구성 관리자에 구성된 보고서 서버 인스턴스의 웹 서비스 URL입니다([보고서 서버 URL 구성&#40;SSRS Configuration Manager&#41;](install-windows/configure-report-server-urls-ssrs-configuration-manager.md) 참조). 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ 보고서 서버의 웹 서비스 URL입니다. 기본 모드의 경우 Reporting Services 구성 관리자에 구성된 보고서 서버 인스턴스의 웹 서비스 URL입니다([보고서 서버 URL 구성&#40;SSRS Configuration Manager&#41;](install-windows/configure-report-server-urls-ssrs-configuration-manager.md) 참조). 다음은 그 예입니다.  
   
 ```  
 http://myrshost/reportserver  
 https://machine.adventure-works.com/reportserver_MYNAMEDINSTANCE  
 ```  
   
- SharePoint 통합 모드의 경우 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 와 통합된 SharePoint 사이트의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]프록시 URL입니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ SharePoint 통합 모드의 경우 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 와 통합된 SharePoint 사이트의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]프록시 URL입니다. 다음은 그 예입니다.  
   
 ```  
 http://myspsite/subsite/_vti_bin/reportserver  
@@ -77,13 +77,13 @@ http://myspsite/subsite/_vti_bin/reportserver
  *pathinfo*  
  기본 모드 보고서 서버 데이터베이스 항목의 상대 경로 이름 또는 SharePoint 카탈로그 항목의 정규화된 URL입니다.  
   
- 카탈로그 항목의 경로입니다. 기본 모드의 경우 보고서 서버 데이터베이스 항목의 상대 경로(슬래시(`/`로 시작)입니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ 카탈로그 항목의 경로입니다. 기본 모드의 경우 보고서 서버 데이터베이스 항목의 상대 경로(슬래시(`/`로 시작)입니다. 다음은 그 예입니다.  
   
 ```  
 /AdventureWorks 2008R2/Employee_Sales_Summary_2008R2  
 ```  
   
- SharePoint 통합 모드의 경우 SharePoint 라이브러리 항목의 정규화된 URL(항목 확장명 포함)입니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ SharePoint 통합 모드의 경우 SharePoint 라이브러리 항목의 정규화된 URL(항목 확장명 포함)입니다. 다음은 그 예입니다.  
   
 ```  
 http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl  
@@ -104,21 +104,21 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
  *value*  
  사용 중인 매개 변수의 값에 해당하는 URL 텍스트입니다.  
   
- **참고:** 사용 가능한 URL 액세스 매개 변수 목록을 참조 하세요 [URL Access Parameter Reference](url-access-parameter-reference.md)합니다. URL에 보고서 매개 변수를 전달하는 예제는 [Pass a Report Parameter Within a URL](pass-a-report-parameter-within-a-url.md)을 참조하십시오.  
+ **참고:** 사용 가능한 URL 액세스 매개 변수의 목록은 [URL Access Parameter Reference](url-access-parameter-reference.md)을(를) 참조하십시오. URL에 보고서 매개 변수를 전달하는 예제는 [Pass a Report Parameter Within a URL](pass-a-report-parameter-within-a-url.md)을 참조하십시오.  
   
 ## <a name="related-tasks"></a>관련 작업  
   
 |태스크 설명|링크|  
 |-----------------------|-----------|  
 |보고서, 공유 데이터 원본 및 리소스와 같은 보고서 서버 항목 액세스|[URL 액세스를 사용하여 보고서 서버 항목 액세스](access-report-server-items-using-url-access.md)|  
-|보고서 매개 변수를 보고서로 전달|[Pass a Report Parameter Within a URL](pass-a-report-parameter-within-a-url.md)|  
+|보고서 매개 변수를 보고서로 전달|[URL에 보고서 매개 변수 전달](pass-a-report-parameter-within-a-url.md)|  
 |URL 액세스 문자열에서 날짜, 통화 등의 로캘별 해석을 정의하는 보고서 매개 변수의 로캘 설정|[URL에 보고서 매개 변수 언어 설정](set-the-language-for-report-parameters-in-a-url.md)|  
 |보고서 렌더링 방식을 사용자 지정하는 렌더링 확장자별 설정 보내기|[URL에 디바이스 정보 설정 지정](specify-device-information-settings-in-a-url.md)|  
 |보고서를 브라우저에서 보지 않고 파일 형식으로 직접 내보내기|[URL 액세스를 사용하여 보고서 내보내기](export-a-report-using-url-access.md)|  
 |보고서를 열고 문자열 위치로 직접 이동|[URL 액세스를 사용하여 보고서 검색](search-a-report-using-url-access.md)|  
-|특정 보고서 기록 스냅샷 렌더링|[URL 액세스를 사용하여 보고서 기록 스냅숏 렌더링](render-a-report-history-snapshot-using-url-access.md)|  
+|특정 보고서 기록 스냅샷 렌더링|[URL 액세스를 사용하여 보고서 기록 스냅샷 렌더링](render-a-report-history-snapshot-using-url-access.md)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Pass a Report Parameter Within a URL](pass-a-report-parameter-within-a-url.md)   
  [URL 액세스 매개 변수 참조](url-access-parameter-reference.md)   
  [URL 액세스를 사용하여 Reporting Services 통합](application-integration/integrating-reporting-services-using-url-access.md)   

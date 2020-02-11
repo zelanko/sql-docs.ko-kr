@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce8656df63c9d415ca09b54ecb86b87aba8bd83a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092856"
 ---
 # <a name="rename-user-sys"></a>sys 사용자 이름을 바꿉니다.
@@ -26,7 +26,8 @@ ms.locfileid: "66092856"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>Description  
- **sys** 사용자는 예약되어 있습니다.  
+ 
+  **sys** 사용자는 예약되어 있습니다.  
   
 ## <a name="corrective-action"></a>수정 동작  
   
@@ -44,9 +45,11 @@ ms.locfileid: "66092856"
     SELECT * FROM sysprotects WHERE uid = USER_ID('sys')  
     ```  
   
-3.  **sp_changeobjectowner** 를 사용하여 **sys**가 소유한 모든 개체의 소유권을 새 사용자로 전송합니다.  
+3.  
+  **sp_changeobjectowner** 를 사용하여 **sys**가 소유한 모든 개체의 소유권을 새 사용자로 전송합니다.  
   
-4.  **sys**사용자를 삭제합니다.  
+4.  
+  **sys**사용자를 삭제합니다.  
   
 5.  GRANT 문의 AS *new_user* 절을 사용하여 2단계에서 캡처된 원래 사용 권한을 복원합니다.  
   
@@ -55,14 +58,16 @@ ms.locfileid: "66092856"
 ### <a name="after-upgrade-procedure"></a>업그레이드 후 절차  
  업그레이드하기 전에 **sys** 사용자의 이름을 바꾸지 않았다면 다음을 수행하십시오.  
   
-1.  `ALTER DATABASE db_name SET ONLINE`문을 실행합니다. 데이터베이스는 SINGLE_USER 모드가 됩니다.  
+1.  
+  `ALTER DATABASE db_name SET ONLINE`문을 실행합니다. 데이터베이스는 SINGLE_USER 모드가 됩니다.  
   
 2.  "업그레이드 전 절차" 섹션의 모든 단계를 수행합니다.  
   
-3.  `ALTER DATABASE db_name SET MULTI_USER`문을 실행합니다.  
+3.  
+  `ALTER DATABASE db_name SET MULTI_USER`문을 실행합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [데이터베이스 엔진 업그레이드 문제](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>참고 항목  
+ [업그레이드 문제 데이터베이스 엔진](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 업그레이드 관리자 &#91;새&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

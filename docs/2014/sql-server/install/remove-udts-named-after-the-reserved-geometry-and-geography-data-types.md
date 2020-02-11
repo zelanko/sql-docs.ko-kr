@@ -1,5 +1,5 @@
 ---
-title: 예약된 된 GEOMETRY 및 GEOGRAPHY 데이터 형식의 명명 된 Udt 제거 | Microsoft Docs
+title: 예약 된 GEOMETRY 및 GEOGRAPHY 데이터 형식으로 이름이 지정 된 Udt를 제거 합니다. Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,15 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5e7b5ed9d730eb51e9994a8bd068eefda9715a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092940"
 ---
 # <a name="remove-udts-named-after-the-reserved-geometry-and-geography-data-types"></a>예약된 GEOMETRY 및 GEOGRAPHY 데이터 형식의 이름을 따서 명명된 UDT를 제거합니다.
-  업그레이드 관리자가 `geometry` 또는 `geography` 데이터 형식용으로 예약된 용어를 따서 명명된 UDT(사용자 정의 형식)를 발견했습니다. `geometry` 및 `geography` 데이터 형식은 공간 데이터 기능의 일부입니다.  
+  업그레이드 관리자가 `geometry` 또는 `geography` 데이터 형식용으로 예약된 용어를 따서 명명된 UDT(사용자 정의 형식)를 발견했습니다. 
+  `geometry` 및 `geography` 데이터 형식은 공간 데이터 기능의 일부입니다.  
   
 ## <a name="component"></a>구성 요소  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
