@@ -1,5 +1,5 @@
 ---
-title: 쿼리에서 HAVING 및 WHERE Clauses in the Same (Visual Database Tools)를 사용 하 여 | Microsoft Docs
+title: 동일한 쿼리에서 HAVING 및 WHERE 절 사용 (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f7aafcd72eff1d21dfe02c8957496398d327cf38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204633"
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>동일한 쿼리에서 HAVING 및 WHERE 절 사용(Visual Database Tools)
@@ -61,7 +61,8 @@ HAVING AVG(price) > 10
   
 3.  데이터 열이 GROUP BY 절의 일부가 아니거나 집계 함수에 포함되지 않은 경우 **출력** 열을 지웁니다.  
   
-4.  **필터** 열에서 WHERE 조건을 지정합니다. 쿼리 및 뷰 디자이너에서 SQL 문의 HAVING 절에 조건을 추가합니다.  
+4.  
+  **필터** 열에서 WHERE 조건을 지정합니다. 쿼리 및 뷰 디자이너에서 SQL 문의 HAVING 절에 조건을 추가합니다.  
   
     > [!NOTE]  
     >  이 절차의 예제로 나와 있는 쿼리에서는 `titles` 테이블과 `publishers`테이블을 조인합니다.  
@@ -76,7 +77,8 @@ HAVING AVG(price) > 10
     HAVING publishers.state = 'CA'  
     ```  
   
-5.  **그룹화 방법** 열의 그룹 및 요약 옵션 목록에서 **Where** 를 선택합니다. 쿼리 및 뷰 디자이너에서 SQL 문의 HAVING 절에 있던 조건이 제거되고 WHERE 절에 조건이 추가됩니다.  
+5.  
+  **그룹화 방법** 열의 그룹 및 요약 옵션 목록에서 **Where** 를 선택합니다. 쿼리 및 뷰 디자이너에서 SQL 문의 HAVING 절에 있던 조건이 제거되고 WHERE 절에 조건이 추가됩니다.  
   
      다음과 같이 WHERE 절이 대신 포함되도록 SQL 문이 변경됩니다.  
   
@@ -88,8 +90,8 @@ HAVING AVG(price) > 10
     GROUP BY titles.pub_id  
     ```  
   
-## <a name="see-also"></a>관련 항목  
- [쿼리 결과 정렬 및 그룹화 &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools&#41;&#40;쿼리 결과 정렬 및 그룹화](sort-and-group-query-results-visual-database-tools.md)   
  [쿼리 결과 요약&#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)  
   
   

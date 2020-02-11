@@ -18,10 +18,10 @@ ms.assetid: f1bcefb1-09c8-4b49-8c51-5d471065849f
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e2e5d935fc3d6db5d243ec4b76841f13a60e5a11
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72304858"
 ---
 # <a name="sp_help_spatial_geometry_index-transact-sql"></a>sp_help_spatial_geometry_index(Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "72304858"
 
   **기 하 도형** 공간 인덱스에 대해 지정 된 속성 집합의 이름과 값을 반환 합니다. 결과는 테이블 형식으로 반환됩니다. 인덱스의 핵심 속성 집합만 반환하거나 인덱스의 속성을 모두 반환하도록 선택할 수 있습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -54,7 +54,7 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
  NULL 값이 포함된 속성은 반환 집합에 포함되지 않습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예에서는 `sp_help_spatial_geometry_index`를 사용 하 여 **\@qs**의 지정 된 쿼리 예제에 대해 테이블 **geometry_col** 에 정의 된 **SIndx_SpatialTable_geometry_col2** 공간 인덱스를 조사 합니다. 이 예에서는 지정된 인덱스의 핵심 속성만 반환합니다.  
+ 다음 예에서는를 `sp_help_spatial_geometry_index` 사용 하 여 ** \@qs**의 지정 된 쿼리 샘플에 대 한 테이블 **geometry_col** 에 정의 된 **SIndx_SpatialTable_geometry_col2** 공간 인덱스를 조사 합니다. 이 예에서는 지정된 인덱스의 핵심 속성만 반환합니다.  
   
 ```  
 declare @qs geometry  

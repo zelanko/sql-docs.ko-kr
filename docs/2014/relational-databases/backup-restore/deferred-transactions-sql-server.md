@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e36b6c114e7e5f2f95c0747d6e36e4dabc118daa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876225"
 ---
 # <a name="deferred-transactions-sql-server"></a>지연된 트랜잭션(SQL Server)
@@ -84,18 +84,18 @@ ms.locfileid: "62876225"
   
          응급 모드에 대한 자세한 내용은 [Database States](../databases/database-states.md)를 참조하십시오.  
   
-    -   그런 다음 다음 DBCC 문 중 하나에 DBCC REPAIR_ALLOW_DATA_LOSS 옵션을 사용 하 여 데이터베이스를 복구 합니다. [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)하십시오 [DBCC CHECKALLOC](/sql/t-sql/database-console-commands/dbcc-checkalloc-transact-sql), 또는 [DBCC CHECKTABLE](/sql/t-sql/database-console-commands/dbcc-checktable-transact-sql)합니다.  
+    -   그런 후에 DBCC 문인 [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql), [DBCC CHECKALLOC](/sql/t-sql/database-console-commands/dbcc-checkalloc-transact-sql)또는 [DBCC CHECKTABLE](/sql/t-sql/database-console-commands/dbcc-checktable-transact-sql)중 하나에 DBCC REPAIR_ALLOW_DATA_LOSS 옵션을 사용하여 데이터베이스를 복구합니다.  
   
          DBCC에서 잘못된 페이지가 발생하면 DBCC에서 할당을 취소하고 관련 오류를 모두 복구합니다. 이 방법을 사용하면 물리적으로 일관된 상태로 데이터베이스를 다시 온라인 상태로 만들 수 있습니다. 그러나 추가 데이터가 손실될 수도 있으므로 이 방법은 마지막으로 선택해야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [복원 및 복구 개요&#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
  [존재하지 않는 파일 그룹 제거&#40;SQL Server&#41;](remove-defunct-filegroups-sql-server.md)   
  [파일 복원&#40;전체 복구 모델&#41;](file-restores-full-recovery-model.md)   
  [파일 복원&#40;단순 복구 모델&#41;](file-restores-simple-recovery-model.md)   
  [페이지 복원&#40;SQL Server&#41;](restore-pages-sql-server.md)   
  [증분 복원&#40;SQL Server&#41;](piecemeal-restores-sql-server.md)   
- [ALTER DATABASE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [ALTER DATABASE &#40;Transact-SQL &#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [RESTORE&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
   

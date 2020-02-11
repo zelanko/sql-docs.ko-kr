@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fde81304117befec38844c28b6d0c434ab3606e8
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242093"
 ---
 # <a name="insert-surround-with-transact-sql-snippets"></a>코드 감싸기 Transact-SQL 조각 삽입
@@ -31,21 +31,19 @@ ms.locfileid: "75242093"
   
 #### <a name="to-insert-a-surround-with-snippet"></a>코드 감싸기 조각을 삽입하려면  
   
-1.  
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창에서 블록에 포함할 일련의 문을 선택합니다.  
+1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창에서 블록에 포함할 일련의 문을 선택합니다.  
   
 2.  다음 세 가지 방법 중 하나를 사용하여 코드 감싸기 조각 목록을 표시합니다.  
   
     -   Ctrl+K, Ctrl+S를 누릅니다.  
   
-    -   
-  **편집** 메뉴에서 **IntelliSense**를 가리킨 다음 **코드 감싸기** 명령을 선택합니다.  
+    -   **편집** 메뉴에서 **IntelliSense**를 가리킨 다음 **코드 감싸기** 명령을 선택합니다.  
   
     -   선택한 텍스트를 마우스 오른쪽 단추로 클릭한 다음 상황에 맞는 메뉴에서 **코드 감싸기** 명령을 선택합니다.  
   
 3.  마우스를 사용하거나 코드 조각 이름을 입력하고 Tab 키 또는 Enter 키를 눌러 목록에서 코드 조각(BEGIN, IF 또는 WHILE)의 이름을 선택합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql 코드 조각 삽입](insert-transact-sql-snippets.md)  
+ [Transact-SQL 코드 조각 삽입](insert-transact-sql-snippets.md)  
   
   

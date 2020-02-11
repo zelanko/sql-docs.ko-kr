@@ -1,5 +1,5 @@
 ---
-title: 보고서 파트 (보고서 작성기 및 SSRS) 문제 해결 | Microsoft Docs
+title: 보고서 파트 문제 해결 (보고서 작성기 및 SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: df37de909461ace62edbbf3cfe9e7b9dd8448b56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099386"
 ---
 # <a name="troubleshoot-report-parts-report-builder-and-ssrs"></a>보고서 파트 문제 해결(보고서 작성기 및 SSRS)
@@ -25,8 +25,8 @@ ms.locfileid: "66099386"
   
  사용자와 사용자의 동료가 갖고 있는 사용 권한을 보려면 보고서 서버 관리자에게 문의하십시오.  
   
-## <a name="when-i-search-for-report-parts-that-i-uploaded-to-a-sharepoint-server-i-do-not-see-them-why-not"></a>SharePoint 서버로 업로드한 보고서 파트가 검색되지 않는 이유는 무엇입니까?  
- 보고서 작성기를 사용하여 게시하는 대신 SharePoint 문서 라이브러리로 수동 업로드한 보고서 파트는 보고서 파트 갤러리에 표시되지 않을 수 있습니다. 갤러리 검색에 사용되는 보고서 서버를 SharePoint 문서 라이브러리의 내용과 동기화해야 할 수 있습니다. 자세한 내용은 [SharePoint 중앙 관리에서 보고서 서버 파일 동기화 기능 활성화](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md) 에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [온라인](https://go.microsoft.com/fwlink/?LinkId=154888) msdn.microsoft.com 합니다.  
+## <a name="when-i-search-for-report-parts-that-i-uploaded-to-a-sharepoint-server-i-do-not-see-them-why-not"></a>SharePoint 서버로 업로드한 보고서 파트가 검색되지 않는 왜 그런가요?  
+ 보고서 작성기를 사용하여 게시하는 대신 SharePoint 문서 라이브러리로 수동 업로드한 보고서 파트는 보고서 파트 갤러리에 표시되지 않을 수 있습니다. 갤러리 검색에 사용되는 보고서 서버를 SharePoint 문서 라이브러리의 내용과 동기화해야 할 수 있습니다. 자세한 내용은 msdn.microsoft.com의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?LinkId=154888) 에서 [SharePoint 중앙 관리의 보고서 서버 파일 동기화 기능 활성화](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md) 를 참조 하세요.  
   
 ## <a name="why-cant-others-see-the-image-in-their-reports"></a>다른 사용자가 자신의 보고서에서 이미지를 볼 수 없는 이유는 무엇입니까?  
  이미지 파일에 대한 링크인 보고서 파트를 게시하는 경우 해당 보고서 파트는 실제로 링크일 뿐입니다. 다른 사용자가 이미지 보고서 파트를 자신의 보고서에 추가할 때 이미지를 볼 수 없는 경우 연결되어 있는 이미지에 대한 사용 권한이 없을 수 있습니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "66099386"
 ## <a name="why-do-i-get-a-circular-reference-error-message-when-i-try-to-publish-my-report-part"></a>보고서 파트를 게시하려고 하면 “순환 참조” 오류 메시지가 표시되는 이유는 무엇입니까?  
  순환 참조가 포함된 보고서 항목은 보고서 파트로 게시할 수 없습니다. 예를 들어 보고서 항목이 가리키는 데이터 세트이 매개 변수를 가리키고 이 매개 변수가 데이터 세트을 다시 가리킬 수 있습니다. 이 경우에는 참조 중 하나를 삭제해야 보고서 파트를 게시할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서 파트&#40;보고서 작성기 및 SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
   

@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3383dcd08ed5910d949608e521b3cd23f37aace8
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73790156"
 ---
 # <a name="sql-server-message-results"></a>SQL Server 메시지 결과
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 행 집합을 생성 하거나 실행 시 영향을 받는 행의 수를 생성 하지 않습니다.  
+  다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 Native Client OLE DB 공급자 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 행 집합 또는 실행 시 영향을 받는 행의 수를 생성 하지 않습니다.  
   
 -   PRINT  
   
@@ -37,13 +37,13 @@ ms.locfileid: "73790156"
   
 -   SET STATISTICS  
   
- 이러한 문은 하나 이상의 정보 메시지를 반환하거나, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 행 집합이나 개수 결과 대신 정보 메시지를 반환하도록 합니다. 성공적으로 실행 되 면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 S_OK을 반환 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 소비자가 메시지를 사용할 수 있습니다.  
+ 이러한 문은 하나 이상의 정보 메시지를 반환하거나, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 행 집합이나 개수 결과 대신 정보 메시지를 반환하도록 합니다. 성공적으로 실행 되 면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client OLE DB 공급자가 S_OK을 반환 하 고, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본 클라이언트 OLE DB 공급자 소비자가 메시지를 사용할 수 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 S_OK을 반환 하 고, 많은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 멤버 함수의 소비자 실행에 따라 하나 이상의 정보 메시지를 사용할 수 있습니다.  
+ Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client OLE DB 공급자는 S_OK를 반환 하 고, 여러 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행 한 후에 사용할 수 있는 하나 이상의 정보 메시지를 포함 하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client OLE DB 공급자 멤버 함수의 소비자 실행을 수행 합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 소비자는 반환 코드의 값에 관계 없이 모든 멤버 함수를 실행 한 후 반환 된 IRowset가 있는지 여부에 관계 없이 모든 멤버 함수 실행 후 오류 인터페이스를 확인 해야 합니다.또는 **IMultipleResults** 인터페이스 참조 또는 영향을 받는 행의 수입니다.  
+ 쿼리 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 텍스트의 동적 지정을 허용 하는 Native Client OLE DB 공급자 소비자는 반환 코드의 값, 반환 된 **IRowset** 또는 **IMultipleResults** 인터페이스 참조가 있는지 여부 또는 영향을 받는 행의 수에 관계 없이 모든 멤버 함수 실행 후 오류 인터페이스를 확인 해야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [오류](../../relational-databases/native-client-ole-db-errors/errors.md)  
   
   

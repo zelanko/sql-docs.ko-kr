@@ -10,10 +10,10 @@ ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 22a92035ea26a4341d4f912c3e6b5cdfaef75efa
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251703"
 ---
 # <a name="data-quality-projects-dqs"></a>데이터 품질 프로젝트(DQS)
@@ -62,7 +62,7 @@ ms.locfileid: "75251703"
 |데이터 품질 프로젝트를 만드는 방법에 대해 설명합니다.|[데이터 품질 프로젝트 만들기](../data-quality-services/create-a-data-quality-project.md)|  
 |데이터 품질 프로젝트를 열기, 잠금 해제, 이름 바꾸기 및 삭제하는 방법에 대해 설명합니다.|[데이터 품질 프로젝트 열기, 잠금 해제, 이름 바꾸기 및 삭제](open-unlock-rename-and-delete-a-data-quality-project.md)|  
 |
-  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]에서 Integration Services 프로젝트를 여는 방법에 대해 설명합니다.|[Data Quality Client에서 Integration Services 프로젝트를 엽니다.](../data-quality-services/open-integration-services-projects-in-data-quality-client.md)|  
+  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]에서 Integration Services 프로젝트를 여는 방법에 대해 설명합니다.|[Data Quality Client에서 Integration Services 프로젝트 열기](../data-quality-services/open-integration-services-projects-in-data-quality-client.md)|  
   
 ## <a name="see-also"></a>참고 항목  
  [DQS 기술 자료 및 도메인](../data-quality-services/dqs-knowledge-bases-and-domains.md)  

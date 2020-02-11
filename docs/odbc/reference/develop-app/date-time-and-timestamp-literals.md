@@ -13,37 +13,37 @@ ms.assetid: 2b42a52a-6353-494c-a179-3a7533cd729f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e6191995c9d1c488fc5af056248ba39dd3eb4607
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68076977"
 ---
 # <a name="date-time-and-timestamp-literals"></a>날짜, 시간, 타임스탬프 리터럴
-날짜, 시간 및 타임 스탬프 리터럴에 대 한 이스케이프 시퀀스는  
+날짜, 시간 및 타임 스탬프 리터럴의 이스케이프 시퀀스는  
   
  **{**  _-type_ **'** _value_ **'}**  
   
- 여기서 *리터럴 형식이* 값 중 하나는 다음 표에 나열 됩니다.  
+ 여기서 *리터럴 형식은* 다음 표에 나열 된 값 중 하나입니다.  
   
-|*literal-type*|의미|서식 *값*|  
+|*리터럴 형식*|의미|*값* 의 형식|  
 |---------------------|-------------|-----------------------|  
-|**d**|Date|*yyyy*-*mm*-*dd*|  
-|**t**|시간 *|*hh*:*mm*:*ss*[1]|  
-|**ts**|타임 스탬프|*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.*f...* ][1]|  
+|**2**|Date|*yyyy*-** mm-*dd*|  
+|**트**|런타임|*hh*:*mm*:*ss*[1]|  
+|**터미널**|타임스탬프|*yyyy*-** mm-*dd* *hh*:*mm*:*ss*[.* f ...*] 비슷합니다|  
   
- [SQL_DESC_PRECISION 설명자 필드에 포함 된 리터럴 초 구성 요소를 포함 하는 시간 또는 타임 스탬프 간격에서 소수점 오른쪽에 자릿수 1는 초 전체 자릿수에 따라 달라 집니다. (자세한 내용은 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).)  
+ [1] 초 구성 요소를 포함 하는 시간 또는 타임 스탬프 간격 리터럴에서 소수점 오른쪽에 있는 자릿수는 SQL_DESC_PRECISION 설명자 필드에 포함 된 초 전체 자릿수에 따라 달라 집니다. 자세한 내용은 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)를 참조 하세요.  
   
- 날짜, 시간 및 타임 스탬프 이스케이프 시퀀스에 대 한 자세한 내용은 참조 하세요. [날짜, 시간 및 타임 스탬프 이스케이프 시퀀스](../../../odbc/reference/appendixes/date-time-and-timestamp-escape-sequences.md) 부록 c: SQL 문법입니다.  
+ 날짜, 시간 및 타임 스탬프 이스케이프 시퀀스에 대 한 자세한 내용은 부록 C: SQL 문법의 [날짜, 시간 및 타임 스탬프 이스케이프 시퀀스](../../../odbc/reference/appendixes/date-time-and-timestamp-escape-sequences.md) 를 참조 하세요.  
   
- 예를 들어, 다음 SQL 문을 모두 Orders 테이블의 판매 주문 1023 열린 날짜를 업데이트합니다. 첫 번째 문은 이스케이프 시퀀스 구문은 사용합니다. 두 번째 문은 날짜 열에 대 한 Oracle Rdb 기본 구문을 사용 하 고 상호 운용은 불가능 합니다.  
+ 예를 들어 다음 SQL 문은 모두 Orders 테이블에서 판매 주문 1023의 열린 날짜를 업데이트 합니다. 첫 번째 문은 이스케이프 시퀀스 구문을 사용 합니다. 두 번째 문은 날짜 열에 대해 Oracle Rdb native 구문을 사용 하며 상호 운용할 수 없습니다.  
   
 ```  
 UPDATE Orders SET OpenDate={d '1995-01-15'} WHERE OrderID=1023  
 UPDATE Orders SET OpenDate='15-Jan-1995' WHERE OrderID=1023  
 ```  
   
- 또한 이스케이프 시퀀스는 날짜, 시간 또는 타임 스탬프 리터럴 날짜, 시간 또는 타임 스탬프 매개 변수를 바인딩할 문자 변수에서 배치할 수 있습니다. 예를 들어, 다음 코드는 Orders 테이블의 판매 주문 1023 열린 날짜를 업데이트 하려면 문자 변수를 바인딩할 날짜 매개 변수를 사용:  
+ 날짜, 시간 또는 타임 스탬프 리터럴의 이스케이프 시퀀스는 날짜, 시간 또는 타임 스탬프 매개 변수에 바인딩된 문자 변수에도 배치할 수 있습니다. 예를 들어 다음 코드는 문자 변수에 바인딩된 날짜 매개 변수를 사용 하 여 Orders 테이블에서 판매 주문 1023의 여는 날짜를 업데이트 합니다.  
   
 ```  
 SQLCHAR      OpenDate[56]; // The size of a date literal is 55.  
@@ -63,7 +63,7 @@ strcpy_s( (char*) OpenDate, _countof(OpenDate), "{d '1995-01-15'}");
 SQLExecDirect(hstmt, "UPDATE Orders SET OpenDate=? WHERE OrderID = 1023", SQL_NTS);  
 ```  
   
- 그러나 날짜 구조에 직접 매개 변수를 바인딩하기 위해 일반적으로 더 효율적인 것:  
+ 그러나 일반적으로 매개 변수를 날짜 구조에 직접 바인딩하는 것이 더 효율적입니다.  
   
 ```  
 SQL_DATE_STRUCT   OpenDate;  
@@ -82,10 +82,10 @@ OpenDate.day = 15;
 SQLExecDirect(hstmt, "UPDATE Employee SET OpenDate=? WHERE OrderID = 1023", SQL_NTS);  
 ```  
   
- 응용 프로그램이 호출 드라이버 날짜, 시간 또는 타임 스탬프 리터럴에 대 한 ODBC 이스케이프 시퀀스를 지원 하는지 여부를 결정할 **SQLGetTypeInfo**합니다. 데이터 원본에서 날짜, 시간 또는 타임 스탬프 데이터 형식을 지 원하는 경우 해당 이스케이프 시퀀스에도 지원 해야 합니다.  
+ 드라이버가 날짜, 시간 또는 타임 스탬프 리터럴에 대해 ODBC 이스케이프 시퀀스를 지원 하는지 확인 하기 위해 응용 프로그램은 **SQLGetTypeInfo**를 호출 합니다. 데이터 원본에서 날짜, 시간 또는 타임 스탬프 데이터 형식이 지원 되는 경우에도 해당 이스케이프 시퀀스를 지원 해야 합니다.  
   
- 데이터 소스 날짜, 시간 또는 타임 스탬프 리터럴 다른 ODBC 이스케이프 시퀀스는 ANSI SQL-92 사양에 정의 된 날짜/시간 리터럴 기능도 사용할 수 있습니다. 데이터 원본에 ANSI 리터럴은 지원 하는지 여부를 결정할 응용 프로그램 호출 **SQLGetInfo** SQL_ANSI_SQL_DATETIME_LITERALS 옵션입니다.  
+ 데이터 원본은 ANSI SQL-92 사양에 정의 된 날짜/시간 또는 타임 스탬프 리터럴의 ODBC 이스케이프 시퀀스와 다른 datetime 리터럴을 지원할 수도 있습니다. 데이터 소스가 ANSI 리터럴을 지원 하는지 확인 하기 위해 응용 프로그램은 SQL_ANSI_SQL_DATETIME_LITERALS 옵션으로 **SQLGetInfo** 를 호출 합니다.  
   
- 응용 프로그램이 호출 드라이버를 간격 리터럴에 대 한 ODBC 이스케이프 시퀀스를 지원 하는지 여부를 결정할 **SQLGetTypeInfo**합니다. 데이터 원본에서 datetime 간격 데이터 형식을 지 원하는 경우 해당 이스케이프 시퀀스에도 지원 해야 합니다.  
+ 드라이버가 간격 리터럴에 대 한 ODBC 이스케이프 시퀀스를 지원 하는지 확인 하기 위해 응용 프로그램은 **SQLGetTypeInfo**를 호출 합니다. 데이터 원본에서 datetime interval 데이터 형식을 지 원하는 경우 해당 이스케이프 시퀀스도 지원 해야 합니다.  
   
- 데이터 원본에 다른 날짜/시간 간격 리터럴에 대 한 ODBC 이스케이프 시퀀스는 ANSI SQL-92 사양에 정의 된 날짜/시간 리터럴 기능도 사용할 수 있습니다. 데이터 원본에 ANSI 리터럴은 지원 하는지 여부를 결정할 응용 프로그램 호출 **SQLGetInfo** SQL_ANSI_SQL_DATETIME_LITERALS 옵션입니다.
+ 데이터 원본은 ANSI SQL-92 사양에 정의 된 datetime 리터럴을 지원할 수도 있습니다 .이는 datetime 간격 리터럴의 ODBC 이스케이프 시퀀스와 다릅니다. 데이터 소스가 ANSI 리터럴을 지원 하는지 확인 하기 위해 응용 프로그램은 SQL_ANSI_SQL_DATETIME_LITERALS 옵션으로 **SQLGetInfo** 를 호출 합니다.

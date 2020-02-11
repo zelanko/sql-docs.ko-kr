@@ -1,5 +1,5 @@
 ---
-title: 새 외래 키 예제 (VC + +) 만들기 | Microsoft Docs
+title: 새 외래 키 만들기 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 28495b8f-18dc-482c-995d-a120f6ae2006
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 37fc296ecf520dc6ccc2964315a449bf508a2284
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c812f0503b8801e861364a04e5621cb975adb009
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67965843"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76918064"
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vc"></a>Keys Append 메서드, Key Type, RelatedColumn, RelatedTable 및 UpdateRule 속성 예제(VC++)
-다음 코드에는 새 외래 키를 만드는 방법을 보여 줍니다. (예: Customers 및 Orders) 두 개의 테이블이 있다고 가정 합니다.  
+다음 코드에서는 새 외래 키를 만드는 방법을 보여 줍니다. 두 테이블 (Customers 및 Orders)이 있다고 가정 합니다.  
   
 ```  
 // BeginCreateKeyCpp.cpp  
@@ -92,7 +92,7 @@ int main() {
    }  
   
    catch(...) {  
-      cout << "Error occured in include files...." << endl;  
+      cout << "Error occurred in include files...." << endl;  
    }  
    ::CoUninitialize();  
 }  

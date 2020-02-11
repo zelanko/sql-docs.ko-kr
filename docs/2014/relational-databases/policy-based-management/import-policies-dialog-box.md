@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4a0830e5db32fcc651b59114e1a2dad870e48d07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62705238"
 ---
 # <a name="import-policies-dialog-box"></a>정책 가져오기 대화 상자
   이 대화 상자를 사용하여 XML 파일로 저장된 하나 이상의 정책과 해당 참조 조건을 현재 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스로 가져올 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **가져올 파일**  
  XML 파일에서 정책을 가져오려면 파일의 경로와 이름을 입력하거나 찾아보기 단추( **...** )를 사용합니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62705238"
   
 -   **가져올 때 모든 정책을 사용할 수 없도록 설정**  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [정책 기반 관리를 사용하여 서버 관리](administer-servers-by-using-policy-based-management.md)   
  [정책 기반 관리 정책 가져오기](import-a-policy-based-management-policy.md)   
  [정책 기반 관리 정책 내보내기](export-a-policy-based-management-policy.md)  

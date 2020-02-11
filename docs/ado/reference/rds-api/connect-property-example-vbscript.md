@@ -15,17 +15,17 @@ ms.assetid: 06297993-fe72-4446-aa76-3b8bc25444f6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b2412d0e8c01b9c347491c2bd2e89acd81efdbff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964582"
 ---
 # <a name="connect-property-example-vbscript"></a>Connect 속성 예제(VBScript)
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
+>  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
   
- 이 코드를 설정 하는 방법을 보여 줍니다 합니다 [Connect](../../../ado/reference/rds-api/connect-property-rds.md) 디자인 타임에 속성:  
+ 이 코드는 디자인 타임에 [Connect](../../../ado/reference/rds-api/connect-property-rds.md) 속성을 설정 하는 방법을 보여 줍니다.  
   
 ```  
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33" ID="ADC1">  
@@ -37,9 +37,9 @@ ms.locfileid: "67964582"
 </OBJECT>  
 ```  
   
- 다음 예제에서는 설정 하는 방법을 보여 줍니다 합니다 **Connect** VBScript 코드에서 런타임에 속성입니다.  
+ 다음 예제에서는 런타임에 VBScript 코드에서 **Connect** 속성을 설정 하는 방법을 보여 줍니다.  
   
- 이 예제를 테스트 하려면에서 잘라내기 및 붙여넣기 사이의 코드를 \<본문 > 및 \</b > 일반 HTML 태그를에서 문서화 하 고 이름을 **ConnectVBS.asp**합니다. ASP 스크립트에서 서버를 식별 합니다.  
+ 이 예를 테스트 하려면 일반 HTML 문서에서 \<Body> 및 \</tbody> 태그 사이에 코드를 잘라내어 붙여넣고 이름을 **connectvbs .asp**로 이름을 붙입니다. ASP 스크립트는 서버를 식별 합니다.  
   
 ```  
 <!-- BeginConnectVBS -->  
@@ -125,7 +125,7 @@ BODY {
 <!-- EndConnectVBS -->  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Connect 속성(RDS)](../../../ado/reference/rds-api/connect-property-rds.md)
 
 

@@ -11,10 +11,10 @@ ms.assetid: c57bf8b8-55a6-4b6c-9adb-91b5f4f1ee3c
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 52ca3533dfb8c53e4bbf1cd9f431a290221f2d5e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729501"
 ---
 # <a name="custom-index-master-data-services"></a>사용자 지정 인덱스(Master Data Services)
@@ -56,11 +56,11 @@ ms.locfileid: "73729501"
   
 -   사용자 지정 인덱스에 포함된 속성 유형은 변경될 수 없습니다.  
   
-## <a name="related-tasks"></a>관련 태스크  
+## <a name="related-tasks"></a>관련 작업  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|인덱스 만들기|[인덱스 만들기&#40;Master Data Services&#41;](../master-data-services/create-an-index-master-data-services.md)|  
-|인덱스 편집 및 삭제|[인덱스 편집 및 삭제&#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-index-master-data-services.md)|  
+|인덱스 만들기|[MDS(Master Data Services) &#40;인덱스를 만듭니다&#41;](../master-data-services/create-an-index-master-data-services.md)|  
+|인덱스 편집 및 삭제|[인덱스를 편집 하 고 삭제 &#40;MDS(Master Data Services)&#41;](../master-data-services/edit-and-delete-an-index-master-data-services.md)|  
   
   

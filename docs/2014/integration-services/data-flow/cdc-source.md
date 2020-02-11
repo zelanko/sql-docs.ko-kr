@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4572e9fc61649f638b7c86ee23c75450216a4342
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62828125"
 ---
 # <a name="cdc-source"></a>CDC 원본
@@ -75,20 +75,25 @@ use <cdc-enabled-database-name>
   
  각 항목이 나타내는 의미는 다음과 같습니다.  
   
--   \<cdc-enabled-database-name>은 변경 테이블을 포함하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 이름입니다.  
+-   
+  \<cdc-enabled-database-name>은 변경 테이블을 포함하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 이름입니다.  
   
--   \<value-from-state-cs>는 CDC 상태 변수에 CS/\<value-from-state-cs>/로 나타나는 값입니다. CS는 현재 처리 범위 시작을 의미합니다.  
+-   
+  \<value-from-state-cs>는 CDC 상태 변수에 CS/\<value-from-state-cs>/로 나타나는 값입니다. CS는 현재 처리 범위 시작을 의미합니다.  
   
--   \<value-from-state-ce>는 CDC 상태 변수에 CE/\<value-from-state-cs>/로 나타나는 값입니다. CE는 현재 처리 범위 끝을 의미합니다.  
+-   
+  \<value-from-state-ce>는 CDC 상태 변수에 CE/\<value-from-state-cs>/로 나타나는 값입니다. CE는 현재 처리 범위 끝을 의미합니다.  
   
--   \<mode>는 CDC 처리 모드입니다. 처리 모드에는 **모두**, **이전 값이 포함된 모두**, **순**, **업데이트 마스크를 사용한 순 변경 내용**, **병합을 사용한 순 변경 내용**중 하나의 값이 지정됩니다.  
+-   
+  \<mode>는 CDC 처리 모드입니다. 처리 모드에는 **모두**, **이전 값이 포함된 모두**, **순**, **업데이트 마스크를 사용한 순 변경 내용**, **병합을 사용한 순 변경 내용**중 하나의 값이 지정됩니다.  
   
  이 스크립트는 오류를 식별하고 재현하기가 쉬운 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 문제를 재현하여 문제를 격리하는 데 도움이 됩니다.  
   
 #### <a name="sql-server-error-message"></a>SQL Server 오류 메시지  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 다음 메시지가 반환될 수 있습니다.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 다음 메시지가 반환될 수 있습니다.  
   
- **프로시저 또는 함수 cdc.fn_cdc_get_net_changes_\<..>** 에 제공된 인수 개수가 부족합니다.  
+ **프로시저 또는 함수 cdc에 제공 된 인수 개수가 부족 합니다. fn_cdc_get_net_changes_\<.. >.**  
   
  이 오류는 인수가 누락되었음을 나타내지 않습니다. 대신 CDC 상태 변수의 시작 또는 끝 LSN 값이 잘못되었음을 의미합니다.  
   
@@ -107,9 +112,11 @@ use <cdc-enabled-database-name>
   
  **고급 편집기** 대화 상자를 열려면  
   
--   **프로젝트의** 데이터 흐름 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 화면에서 CDC 원본을 마우스 오른쪽 단추로 클릭하고 **고급 편집기 표시**를 선택합니다.  
+-   
+  **프로젝트의** 데이터 흐름 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 화면에서 CDC 원본을 마우스 오른쪽 단추로 클릭하고 **고급 편집기 표시**를 선택합니다.  
   
- **고급 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용은 [CDC Source Custom Properties](cdc-source-custom-properties.md)을 참조하십시오.  
+ 
+  **고급 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용은 [CDC Source Custom Properties](cdc-source-custom-properties.md)을 참조하십시오.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -119,7 +126,7 @@ use <cdc-enabled-database-name>
   
 -   [CDC 원본 편집기&#40;오류 출력 페이지&#41;](../cdc-source-editor-error-output-page.md)  
   
--   [CDC Source Custom Properties](cdc-source-custom-properties.md)  
+-   [CDC 원본 사용자 지정 속성](cdc-source-custom-properties.md)  
   
 -   [CDC 원본을 사용하여 변경 데이터 추출](cdc-source.md)  
   

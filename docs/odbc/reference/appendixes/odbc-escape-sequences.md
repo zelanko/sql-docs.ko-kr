@@ -11,14 +11,14 @@ ms.assetid: 646d5f0b-df0c-47a6-a630-99cac1026a4c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 06f98cd40ee003a7e8805e6b83fdac0940526e49
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67990628"
 ---
 # <a name="odbc-escape-sequences"></a>ODBC 이스케이프 시퀀스
-다음과 같은 이스케이프 시퀀스는 ODBC에서 사용 됩니다. 이 섹션의 문법에 정의 된 몇 가지 요소를 사용 하 여 [SQL 문에 사용 되는 요소](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md)합니다.  
+ODBC에서 사용 되는 이스케이프 시퀀스는 다음과 같습니다. 이 섹션의 문법에서는 [SQL 문에 사용 되는 요소](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md)에 정의 된 일부 요소를 사용 합니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

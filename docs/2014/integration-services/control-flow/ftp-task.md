@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fcc071c10a2daa31190727dfc9f3cbe617bdcb66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831541"
 ---
 # <a name="ftp-task"></a>FTP 태스크
@@ -39,7 +39,7 @@ ms.locfileid: "62831541"
   
  이는 FTP 태스크에서 여러 개의 파일을 받고 여러 개의 원격 파일을 삭제할 수 있다는 것을 의미합니다. 그러나 파일 연결 관리자는 하나의 파일만 액세스할 수 있기 때문에 연결 관리자를 사용할 경우 하나의 파일만 보내고 하나의 로컬 파일만 삭제할 수 있습니다. 여러 개의 로컬 파일에 액세스하려면 FTP 태스크에 변수를 사용하여 경로 정보를 제공해야 합니다. 예를 들어 "C:\Test\\*.txt"가 포함된 변수는 Test 디렉터리에서 .txt 확장명을 가진 모든 파일 삭제 또는 보내기를 지원하는 경로를 제공합니다.  
   
- 여러 개의 파일을 보내고 여러 개의 로컬 파일 및 디렉터리에 액세스하려면 Foreach 루프에 태스크를 포함하여 FTP 태스크를 여러 번 실행할 수도 있습니다. Foreach 루프는 For Each File 열거자를 사용하여 디렉터리의 모든 파일을 열거할 수 있습니다. 자세한 내용은 [Foreach Loop Container](foreach-loop-container.md)을 참조하세요.  
+ 여러 개의 파일을 보내고 여러 개의 로컬 파일 및 디렉터리에 액세스하려면 Foreach 루프에 태스크를 포함하여 FTP 태스크를 여러 번 실행할 수도 있습니다. Foreach 루프는 For Each File 열거자를 사용하여 디렉터리의 모든 파일을 열거할 수 있습니다. 자세한 내용은 [Foreach 루프 컨테이너](foreach-loop-container.md)을 참조하십시오.  
   
  FTP 태스크는 경로에서 *?* 및 *\** 와일드카드 문자를 지원합니다. 와일드카드 문자를 사용하면 태스크가 여러 개의 파일에 액세스할 수 있습니다. 그러나 와일드카드 문자는 파일 이름을 지정하는 경로 부분에만 사용할 수 있습니다. 예를 들어 C:\MyDirectory\\*.txt는 유효한 경로지만 C:\\\*\MyText.txt는 유효한 경로가 아닙니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62831541"
 ## <a name="predefined-ftp-operations"></a>미리 정의된 FTP 작업  
  FTP 태스크에는 미리 정의된 작업 집합이 포함되어 있습니다. 다음 표에서는 이러한 작업을 설명합니다.  
   
-|연산|Description|  
+|작업(Operation)|Description|  
 |---------------|-----------------|  
 |파일 보내기|로컬 컴퓨터의 파일을 FTP 서버로 보냅니다.|  
 |파일 받기|FTP 서버의 파일을 로컬 컴퓨터에 저장합니다.|  
@@ -70,13 +70,14 @@ ms.locfileid: "62831541"
 ## <a name="related-tasks"></a>관련 작업  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법에 대한 자세한 내용은 [태스크 또는 컨테이너의 속성 설정](../set-the-properties-of-a-task-or-container.md)을 참조하세요.  
+ 
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법에 대한 자세한 내용은 [태스크 또는 컨테이너의 속성 설정](../set-the-properties-of-a-task-or-container.md)을 참조하세요.  
   
  이러한 속성을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [FTP 태스크 편집기&#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)   
- [FTP 태스크 편집기&#40;파일 전송 페이지&#41;](../ftp-task-editor-file-transfer-page.md)   
+## <a name="see-also"></a>참고 항목  
+ [FTP 태스크 편집기 &#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)   
+ [FTP 태스크 편집기 &#40;파일 전송 페이지&#41;](../ftp-task-editor-file-transfer-page.md)   
  [Integration Services 태스크](integration-services-tasks.md)   
  [제어 흐름](control-flow.md)  
   

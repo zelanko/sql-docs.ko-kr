@@ -14,14 +14,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b42115278e6866063639c7ce2fc596749ad2d39f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62898088"
 ---
 # <a name="datediff-ssis-expression"></a>DATEDIFF(SSIS 식)
-  지정한 두 날짜 간의 날짜 및 시간의 경계 수를 반환합니다. *datepart* 매개 변수는 비교할 날짜 및 시간 범위를 식별합니다.  
+  지정한 두 날짜 간에 교차되는 날짜와 시간 경계값을 반환합니다. *datepart* 매개 변수는 비교할 날짜 및 시간 범위를 식별합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,21 +43,21 @@ DATEDIFF(datepart, startdate, endate)
 ## <a name="result-types"></a>결과 형식  
  DT_I4  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  다음 표에서는 식 계산기가 인식하는 날짜 부분 및 약어를 나열합니다.  
   
-|datepart|약어|  
+|날짜 부분|약어|  
 |--------------|-------------------|  
 |Year|yy, yyyy|  
 |Quarter|qq, q|  
 |Month|mm, m|  
 |Dayofyear|dy, y|  
-|Day|dd, d|  
+|일|dd, d|  
 |Week|wk, ww|  
-|Weekday|dw, w|  
+|요일|dw, w|  
 |Hour|Hh|  
 |Minute|mi, n|  
-|둘째|ss, s|  
+|초|ss, s|  
 |Millisecond|Ms|  
   
  인수가 Null이면 DATEDIFF 결과도 Null입니다.  
@@ -81,13 +81,13 @@ DATEDIFF("dd", (DT_DBTIMESTAMP)"8/1/2003", (DT_DBTIMESTAMP)"8/8/2003")
 DATEDIFF("mm", (DT_DBTIMESTAMP)"8/1/2003",GETDATE())  
 ```  
   
- 이 예에서는 **ModifiedDate** 열의 날짜와 **YearEndDate** 변수 사이의 주 수를 반환합니다. 하는 경우 **YearEndDate** 에 `date` 데이터 형식으로 명시적 캐스트는 필요 없습니다.  
+ 이 예에서는 **ModifiedDate** 열의 날짜와 **YearEndDate** 변수 사이의 주 수를 반환합니다. **YearEndDate** 에 `date` 데이터 형식이 있는 경우에는 명시적 캐스팅이 필요 하지 않습니다.  
   
 ```  
 DATEDIFF("Week", ModifiedDate,@YearEndDate)  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [DATEADD&#40;SSIS 식&#41;](dateadd-ssis-expression.md)   
  [DATEPART&#40;SSIS 식&#41;](datepart-ssis-expression.md)   
  [DAY&#40;SSIS 식&#41;](day-ssis-expression.md)   

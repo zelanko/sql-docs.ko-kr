@@ -1,5 +1,5 @@
 ---
-title: 속성 (ADO)를 준비 합니다. | Microsoft Docs
+title: 준비 된 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,28 +16,28 @@ ms.assetid: 11ca8825-765e-4bb4-a6ce-3f6564ad8755
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ee7a94a06aa574c84c01cb8b9d05ebfcdf327d44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917595"
 ---
 # <a name="prepared-property-ado"></a>준비된 속성(ADO)
-컴파일된 버전을 저장할지 여부를 나타냅니다는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 실행 하기 전에 합니다.  
+실행 전에 [명령의](../../../ado/reference/ado-api/command-object-ado.md) 컴파일된 버전을 저장할지 여부를 나타냅니다.  
   
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
- 설정 하거나 반환을 **부울** 값,로 **True**, 명령을 준비할는 나타냅니다.  
+ **True**로 설정 된 경우 명령을 준비 해야 함을 나타내는 **부울** 값을 설정 하거나 반환 합니다.  
   
 ## <a name="remarks"></a>설명  
- 사용 하 여는 **Prepared** 는 공급자가 준비 된 (또는 컴파일된) 버전에 지정 된 쿼리를 저장 하는 속성을 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) 하기 전에 속성을 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체의 첫 번째 실행 합니다. 명령의 첫 번째 실행을 저하 될 수 있습니다이 있지만 공급자는 성능이 향상 됩니다. 후속 실행에 대 한 명령의 컴파일된 버전을 사용 공급자 명령을 컴파일한 후 합니다.  
+ **준비** 된 속성을 사용 하 여 공급자가 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체의 첫 번째 실행 전에 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) 속성에 지정 된 준비 된 (또는 컴파일된) 버전의 쿼리를 저장 하도록 합니다. 이렇게 하면 명령의 첫 번째 실행 속도가 느려질 수 있지만 공급자가 명령을 컴파일하면 이후 실행에 대해 컴파일된 버전의 명령이 사용 됩니다 .이로 인해 성능이 향상 됩니다.  
   
- 속성이 **False**, 공급자 실행될지를 **명령** 컴파일된 버전을 만들지 않고 직접 개체입니다.  
+ 속성이 **False**이면 공급자는 컴파일된 버전을 만들지 않고 **명령** 개체를 직접 실행 합니다.  
   
- 이 속성 설정 된 경우 오류를 반환 합니다 공급자 명령 준비를 지원 하지 않는 경우 **True**합니다. 명령 및 집합을 준비 하려면 요청 공급자 오류를 반환 하지 않으면 무시 하기만 합니다 **Prepared** 속성을 **False**.  
+ 공급자가 명령 준비를 지원 하지 않는 경우이 속성이 **True**로 설정 되 면 오류를 반환할 수 있습니다. 공급자가 오류를 반환 하지 않는 경우 단순히 명령을 준비 하는 요청을 무시 하 고 **준비** 된 속성을 **False**로 설정 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [명령 개체(ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목  
- [Prepared 속성 예제 (VB)](../../../ado/reference/ado-api/prepared-property-example-vb.md)   
+## <a name="see-also"></a>참고 항목  
+ [준비 된 속성 예제 (VB)](../../../ado/reference/ado-api/prepared-property-example-vb.md)   
  [Prepared 속성 예제(VC++)](../../../ado/reference/ado-api/prepared-property-example-vc.md)   

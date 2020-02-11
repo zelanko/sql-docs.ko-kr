@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4a9415e7258216c975dd066995bf347deca1d623
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75253205"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Reporting Services 설치 문제 해결
@@ -214,8 +214,7 @@ ms.locfileid: "75253205"
         > [!NOTE]  
         >  \< *.Net 2.0 Framework 디렉터리*>를 .NET Framework 2.0 파일의 실제 경로로 바꾸고 \< *보고서 서버 bin 디렉터리*>를 보고서 서버 bin 파일의 실제 경로로 바꿉니다.  
   
-3.  
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스를 다시 시작합니다.  
+3.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스를 다시 시작합니다.  
   
  위 단계가 제대로 수행되었는지 확인하기 위해 웹 브라우저를 열어 보고서 관리자 URL 또는 보고서 서버 URL로 이동합니다. 그런 다음 성능 모니터를 열어 카운터가 작동하고 있는지 확인합니다.  
   

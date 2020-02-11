@@ -13,23 +13,23 @@ ms.assetid: 395be464-4b19-44f7-91e5-b8876d6743dc
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2c0c76a36502d9d590b6db478efcab6feb50ba01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68029393"
 ---
 # <a name="creating-variable-value-files-sybasetosql"></a>변수 값 파일 만들기(SybaseToSQL)
-변수 값 파일은 다른 서버 마이그레이션에서 자주 변경 하는 원본 또는 대상 서버 이름과 같은 명령의 매개 변수 값을 비교 하는 XML 파일입니다. 많은 수의 데이터베이스 마이그레이션 수행 하는 경우 원본 서버의 각 값을 저장 하는 것에 대 한 여러 변수 파일을 만든 마스터 스크립트 파일의 참조를 **-v** 명령줄에서 전환 합니다. 이 여러 변수 파일에서 변수 값을 사용 하 여 몇 가지 스크립트 파일에 정적 값을 유지 관리에 도움이 됩니다.  
+변수 값 파일은 서버 마이그레이션 간에 자주 변경 되는 원본 또는 대상 서버 이름과 같은 명령의 매개 변수 값을 구성 하는 XML 파일입니다. 데이터베이스 마이그레이션이 많은 경우 각 원본 서버의 값을 저장 하는 여러 변수 파일이 생성 되 고 명령줄에서 **-v** 스위치를 사용 하 여 마스터 스크립트 파일에서 참조 됩니다. 이를 통해 여러 변수 파일의 변수 값을 사용 하 여 몇 가지 스크립트 파일의 정적 값을 유지 관리할 수 있습니다.  
   
 > [!NOTE]  
-> 1.  변수 이름은 접두사를 $ (달러) 기호가 붙습니다. 변수를 변수 값 파일에서 값이 지정 되지 않은 경우 상태일 콘솔 실행 프로세스의 결과 스크립트 파일의 구문 분석 하는 동안 오류가 발생 합니다.  
-> 2.  이스케이프 문자 **$** 됩니다 **$$** 합니다. 매개 변수 또는 정적 값의 값이 있으면 **$** (달러) 기호, 한 다음 **$$** 변수 대신 문자로 취급 되도록 지정 해야 합니다.  
-> 3.  유지 관리를 위해 변수를 선언할 수 내부 `'variable-group'` 사용자의 논리적 분리에 대 한 요소 변수를 정의 합니다.  이 요소의 사용 필수 아닙니다.  
+> 1.  변수 이름 앞에는 $ (달러) 기호가 붙습니다. 변수에 변수 값 파일의 값이 할당 되지 않은 경우에는 스크립트 파일을 구문 분석 하는 동안 오류가 발생 하 여 콘솔 실행 프로세스가 상태일 됩니다.  
+> 2.  에 대 한 **$** 이스케이프 문자 **$$** 는입니다. 매개 변수의 변수 또는 정적 값이 (달러) 기호를 포함 **$** 하는 경우 변수 대신 문자로 **$$** 처리 하도록를 지정 해야 합니다.  
+> 3.  유지 관리를 위해 변수를 요소 내 `'variable-group'` 에 선언 하 여 사용자 정의 변수의 논리적 분리를 수행할 수 있습니다.  이 요소는 반드시 사용 해야 하는 것은 아닙니다.  
   
 **예:**  
   
-**예제 1:**  
+**예 1:**  
   
 ```xml  
 <!--Sample of variable value file commands-->  
@@ -50,7 +50,7 @@ ms.locfileid: "68029393"
   
 </variables>  
 ```  
-**예제 2:**  
+**예 2:**  
   
 ```xml  
 <!--Sample of variable value file commands-->  
@@ -87,11 +87,11 @@ ms.locfileid: "68029393"
 ```  
   
 ## <a name="variable-value-file-validation"></a>변수 값 파일 유효성 검사  
-사용자 스키마 정의 파일에 대해 자신의 변수 값 파일을 쉽게 확인할 수 있습니다 **ConsoleScriptVariablesSchema.xsd** 'Schemas' 폴더에서 사용할 수 있습니다.  
+사용자는 ' 스키마 ' 폴더에서 사용할 수 있는 **ConsoleScriptVariablesSchema** 스키마 정의 파일에 대해 해당 변수 값 파일의 유효성을 쉽게 검사할 수 있습니다.  
   
 ## <a name="next-step"></a>다음 단계  
-운영 콘솔에서 다음 단계 [서버 연결 파일 만들기 &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
+콘솔을 운영 하는 다음 단계에서는 [서버 연결 파일 &#40;SybaseToSQL을 만듭니다&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
   
-## <a name="see-also"></a>관련 항목  
-[서버 파일 (Sybase) 만들기](https://msdn.microsoft.com/35ef396f-9f98-429d-9fc5-4f413d08fb37)  
+## <a name="see-also"></a>참고 항목  
+[서버 파일 만들기 (Sybase)](https://msdn.microsoft.com/35ef396f-9f98-429d-9fc5-4f413d08fb37)  
   

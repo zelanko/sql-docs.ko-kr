@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 405e5fd13298892a2c6226015f575ef9b8373148
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73779423"
 ---
 # <a name="freeing-a-statement-handle"></a>문 핸들 해제
@@ -32,7 +32,7 @@ ms.locfileid: "73779423"
   
  응용 프로그램에서 문 사용을 마치면 [Sqlfreehandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md) 을 호출 하 여 문을 해제 합니다. **Sqldisconnect** 는 연결에서 모든 문을 자동으로 해제 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [ODBC 쿼리 &#40;실행&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
+## <a name="see-also"></a>참고 항목  
+ [ODBC&#41;&#40;쿼리 실행](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

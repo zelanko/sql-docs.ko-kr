@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 19e6683baeb0a82c77a858b04f18695ba7120b15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250132"
 ---
 # <a name="inserting-and-updating-data-in-a-table-tutorial"></a>테이블에서 데이터 삽입 및 업데이트(자습서)
@@ -29,7 +29,7 @@ ms.locfileid: "63250132"
 |75|Tire Bar||Tool for changing tires.|  
 |3000|3mm Bracket|.52||  
   
- 기본 구문은 다음과 같습니다. INSERT, 테이블 이름, 열 목록, 값 및 다음 값의 목록을 삽입할 합니다. 줄의 맨 앞에 있는 두 개의 하이픈은 해당 줄이 주석이며 컴파일러에서 텍스트를 무시한다는 것을 나타냅니다. 이 경우에는 허용되는 구문 변형을 주석에서 설명합니다.  
+ 기본 구문은 INSERT, 테이블 이름, 열 목록, VALUES, 삽입할 값 목록을 차례로 포함합니다. 줄의 맨 앞에 있는 두 개의 하이픈은 해당 줄이 주석이며 컴파일러에서 텍스트를 무시한다는 것을 나타냅니다. 이 경우에는 허용되는 구문 변형을 주석에서 설명합니다.  
   
 ### <a name="to-insert-data-into-a-table"></a>데이터를 테이블에 삽입하려면  
   
@@ -84,9 +84,9 @@ ms.locfileid: "63250132"
     ```  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
- [테이블의 데이터 읽기&#40;자습서&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
+ [테이블의 데이터 읽기 &#40;자습서&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)   
  [UPDATE&#40;Transact-SQL&#41;](/sql/t-sql/queries/update-transact-sql)  
   

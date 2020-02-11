@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d2884e23cbee78acacdb72e386f0e99610e9629f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135834"
 ---
 # <a name="customdata-mdx"></a>CustomData(MDX)
 
 
-  값을 반환 합니다 **CustomData** 연결 문자열 속성이 정의 되지 않으면 **null**합니다.  
+  정의 된 경우 **CustomData** 연결 문자열 속성의 값을 반환 합니다. 그렇지 않으면 **null**입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -27,11 +27,11 @@ ms.locfileid: "68135834"
 CustomData()  
 ```  
   
-## <a name="return-value"></a>반환 값  
- 합니다 **CustomData** 함수를 검색할 수 있습니다 합니다 **CustomData** 연결 문자열 속성 및 구성와 같은 MDX (Multidimensional Expressions) 함수 및 문에서 사용할 설정을 전달 합니다. [UserName (MDX)](../mdx/username-mdx.md) 하 고 [CALL 문 (MDX)](../mdx/mdx-data-manipulation-call.md)합니다. 예를 들어이 함수 수 동적 보안 식에서 문자열 값에 대 한 허용/거부 집합 멤버를 선택 하 여 **CustomData** 연결 문자열 속성입니다.  
+## <a name="return-value"></a>Return Value  
+ **CustomData** 함수는 **CustomData** 연결 문자열 속성을 검색 하 고 mdx (Multidimensional Expressions) 함수 및 문 (예: [UserName (mdx)](../mdx/username-mdx.md) 및 [CALL Statement (mdx))](../mdx/mdx-data-manipulation-call.md)에 사용할 구성 설정을 전달할 수 있습니다. 예를 들어 동적 보안 식에서이 함수를 사용 하 여 **CustomData** 연결 문자열 속성의 문자열 값에 대해 허용/거부 집합 멤버를 선택할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 쿼리에서 반환한 값을 표시 합니다 **CustomData** 계산된 측정값에서 함수:  
+ 다음 쿼리는 계산 된 측정값에서 **CustomData** 함수에 의해 반환 된 값을 표시 합니다.  
   
 ```  
 WITH MEMBER [Measures].CUSTOMDATADEMO AS CUSTOMDATA()  
@@ -40,7 +40,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

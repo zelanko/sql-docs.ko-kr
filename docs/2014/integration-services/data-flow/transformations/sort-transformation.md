@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dba1f3598abb8877721ff77d3dabcc8af8e0b94a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62899891"
 ---
 # <a name="sort-transformation"></a>정렬 변환
@@ -43,11 +43,12 @@ ms.locfileid: "62899891"
 ## <a name="configuration-of-the-sort-transformation"></a>정렬 변환 구성  
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- **정렬 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용은 [Sort Transformation Editor](../../sort-transformation-editor.md)를 참조하십시오.  
+ 
+  **정렬 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용은 [Sort Transformation Editor](../../sort-transformation-editor.md)를 참조하십시오.  
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [공용 속성](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [변환 사용자 지정 속성](transformation-custom-properties.md)  
   
@@ -57,7 +58,7 @@ ms.locfileid: "62899891"
 ## <a name="related-content"></a>관련 내용  
  codeplex.com의 예제 - [SortDeDuplicateDelimitedString 사용자 지정 SSIS 구성 요소](https://go.microsoft.com/fwlink/?LinkId=220821)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 흐름](../data-flow.md)   
  [Integration Services 변환](integration-services-transformations.md)  
   

@@ -16,15 +16,15 @@ ms.assetid: ff45f220-9b8b-4c44-82f8-a8e9913fffea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 21495e538a554a477336d1a92926c11fe762c5af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68062659"
 ---
 # <a name="checking-feature-support-and-variability"></a>기능 지원 및 가변성 확인
-기능 지원 및 가변성을 확인 하려면 응용 프로그램 일반적으로 호출 **SQLGetInfo**하십시오 **SQLGetFunctions**, 및 **SQLGetTypeInfo**합니다. 시작에 좋은 위치는 드라이버의 API 및 SQL 문법 규칙 수준입니다. 이러한 광범위 한 수준의 기능 지원 설명합니다. 응용 프로그램을 호출할 수 있습니다 **SQLGetInfo** 가변성에 필요한 기능을 지원 하는 다른 옵션을 사용 하 여 **SQLGetFunctions** 결정할 여부 반환 된 초과 해야 함수 규칙 수준 지원 하 고 **SQLGetTypeInfo** 지 원하는 SQL 데이터 형식을 확인 하려면.  
+기능 지원 및 가변성을 확인 하기 위해 응용 프로그램은 일반적으로 **SQLGetInfo**, **SQLGetFunctions**및 **SQLGetTypeInfo**를 호출 합니다. 좋은 출발점은 드라이버의 API 및 SQL 문법 규칙 수준입니다. 이는 광범위 한 기능 지원 수준에 대해 설명 합니다. 그런 다음 응용 프로그램은 다른 옵션을 사용 하 여 **SQLGetInfo** 를 호출 하 여 필요한 기능의 지원 또는 산포도를 결정 하 고, 반환 된 규칙 수준을 **초과 하는** 함수가 지원 되는지 여부를 결정 하 고, **SQLGETFUNCTIONS** 에서 지원 되는 SQL 데이터 형식을 확인할 수 있습니다.  
   
- 응용 프로그램은 문 또는 연결 특성을 호출 하 여 지원 되는지 여부를 확인할 수 있습니다 **SQLSetStmtAttr** 하거나 **SQLSetConnectAttr** 해당 특성을 사용 하 여 합니다. 함수는 SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO를 반환 하는 경우 특성은 지원 됩니다. SQLSTATE HYC00 및 SQL_ERROR를 반환 하는 경우 (선택적 기능 구현 되지 않음)에 특성이 지원 되지 않습니다.  
+ 응용 프로그램은 해당 특성과 함께 **SQLSetStmtAttr** 또는 **SQLSetConnectAttr** 를 호출 하 여 문 또는 연결 특성이 지원 되는지 여부를 결정할 수 있습니다. 함수가 SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO를 반환 하는 경우 특성이 지원 됩니다. SQL_ERROR 및 SQLSTATE HYC00 (선택적 기능이 구현 되지 않음)를 반환 하는 경우이 특성은 지원 되지 않습니다.  
   
- 응용 프로그램을 제한 된 양의 호출 하 여 드라이버에 연결 하기 전에 정보를 확인할 수도 있습니다 **SQLDrivers**합니다.
+ 응용 프로그램은 **Sqldrivers**를 호출 하 여 드라이버에 연결 하기 전에 제한 된 양의 정보를 확인할 수도 있습니다.

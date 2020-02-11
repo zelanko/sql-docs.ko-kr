@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c4fc4e1b0f0340d579b1f6ee22db888417089352
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242936"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>XML 편집기(SQL Server Management Studio)
@@ -34,12 +34,12 @@ ms.locfileid: "75242936"
   
  XML 디자이너는 XML 파일, XML 스키마 및 데이터 세트 작업에 다음 세 가지 뷰(또는 모드)를 제공합니다.  
   
-|보기|설명|지원되는 파일 형식|  
+|보기|Description|지원되는 파일 형식|  
 |----------|-----------------|--------------------------|  
 |**스키마**|XML 스키마 및 ADO.NET 데이터 세트를 시각적으로 만들고 수정할 때 사용합니다.|.xsd|  
-|**데이터**|구조화된 데이터 표에서 XML 데이터 파일을 시각적으로 수정할 때 사용|.xml|  
+|**Data**|구조화된 데이터 표에서 XML 데이터 파일을 시각적으로 수정할 때 사용|.xml|  
 |**XML**|XML을 편집할 때 사용. 원본 편집기는 색 구분과 단어 자동 완성 및 멤버 목록 표시를 비롯한 IntelliSense 기능 제공|.xml .xsd .xslt .wsdl .web. resx .tdl. wsf .hta .disco .vsdisco .config|  
-|**ShowPlan**|SET SHOWPLAN_XML ON 옵션을 사용하여 만든 xml 쿼리 계획 표시|.showplan|  
+|**실행 계획**|SET SHOWPLAN_XML ON 옵션을 사용하여 만든 xml 쿼리 계획 표시|.showplan|  
   
 ## <a name="schema-view"></a>스키마 뷰  
  스키마 뷰는 XML 스키마와 ADO.NET 데이터 세트를 구성하는 요소, 특성, 유형 등을 시각적으로 보여 줍니다.  
@@ -81,9 +81,7 @@ ms.locfileid: "75242936"
 ## <a name="data-view"></a>데이터 뷰  
  데이터 뷰는 .xml 파일을 수정하는 데 사용할 수 있는 데이터 표를 제공합니다. 데이터 뷰에서는 XML 파일의 내용만 편집할 수 있으며 태그와 구조는 편집할 수 없습니다.  
   
- 데이터 뷰에는 **데이터 테이블** 및 **데이터**의 두 가지 별도 영역이 있습니다. 
-  **데이터 테이블** 영역은 XML 파일에 정의되어 있는 관계를 중첩된 순서(바깥쪽에서부터 안쪽으로)대로 보여 주는 목록입니다. 
-  **데이터** 영역은 데이터 테이블 영역에서 선택한 내용에 따라 해당 데이터를 표시하는 데이터 표입니다.  
+ 데이터 뷰에는 **데이터 테이블** 및 **데이터**의 두 가지 별도 영역이 있습니다. **데이터 테이블** 영역은 XML 파일에 정의되어 있는 관계를 중첩된 순서(바깥쪽에서부터 안쪽으로)대로 보여 주는 목록입니다. **데이터** 영역은 데이터 테이블 영역에서 선택한 내용에 따라 해당 데이터를 표시하는 데이터 표입니다.  
   
 > [!NOTE]  
 >  새로 만든 XML 파일에는 데이터가 들어 있지 않으므로 데이터 뷰에서 표시할 수 없습니다. 이외에도 일부 XML 문서에서는 데이터 뷰를 실행할 수 없습니다. XML의 형식이 올바르더라도 구조화된 데이터가 아닌 경우 데이터 뷰로 전환하려고 하면 "이 XML 문서는 형식이 올바르지만 데이터 뷰에서 표시할 수 없는 구조를 포함하고 있습니다"라는 메시지가 표시됩니다.  
@@ -100,8 +98,7 @@ ms.locfileid: "75242936"
  XML 뷰는 원시 XML을 편집할 수 있는 편집기와 IntelliSense 및 색 구분 기능을 제공합니다. 스키마가 연결되어 있는 .xml 파일과 .xsd 파일로 작업할 때는 문 완성 기능을 사용할 수 있습니다. 을 \< 입력 하 여 태그를 시작 하면 해당 위치에서 유효한 요소 목록이 표시 됩니다. 요소 이름을 입력한 후 스페이스바를 누르면 요소가 지원하는 특성이 목록으로 표시됩니다.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 옵션은 도구 모음에서 사용할 수 없습니다. XML 편집기에서 이 옵션을 사용하려면 **편집** 메뉴에서 **IntelliSense**를 클릭합니다.  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 옵션은 도구 모음에서 사용할 수 없습니다. XML 편집기에서 이 옵션을 사용하려면 **편집** 메뉴에서 **IntelliSense**를 클릭합니다.  
   
 ## <a name="showplan-view"></a>실행 계획 뷰  
  SET SHOWPLAN_XML ON 옵션을 사용하여 만든 쿼리 계획을 XML 형식으로 저장할 수 있습니다. 쿼리 계획을 열려면 확장명이 .showplan인 파일을 두 번 클릭하십시오.  

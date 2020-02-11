@@ -1,5 +1,5 @@
 ---
-title: 연결 (ADO-WFC 구문) | Microsoft Docs
+title: Connection (ADO-WFC 구문) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,14 +14,14 @@ ms.assetid: 8cfc35bb-91e2-47da-ad4c-982e9162cd51
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 64647d577170a79b1f600b7162a0338ea19c572e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919532"
 ---
 # <a name="connection-ado---wfc-syntax"></a>연결(ADO - WFC 구문)
-## <a name="package-commswfcdata"></a>package com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>package com.  
   
 ### <a name="constructor"></a>생성자  
   
@@ -44,7 +44,7 @@ public int executeUpdate(String commandText)
 public int executeUpdate(String commandText, int options)  
 ```  
   
- 합니다 **executeUpdate** 메서드는 특수 한 경우 호출 하는 메서드 내부 ADO **실행** 특정 매개 변수를 사용 하 여 메서드. **executeUpdate** 메서드는 반환을 지원 하지 않습니다는 **레코드 집합** 개체 이므로 **실행** 메서드의 *옵션* 매개 변수는 사용 하 여 수정할 **AdoEnums.ExecuteOptions.NORECORDS**합니다. 후는 **실행** 메서드가 완료 되 면 해당 업데이트 *RecordsAffected* 로 다시 전달 될 매개 변수를 **executeUpdate** 는으로마지막으로반환되는메서드**int**합니다.  
+ **Executeupdate** 메서드는 특정 매개 변수를 사용 하 여 기본 ADO **execute** 메서드를 호출 하는 특별 한 사례 메서드입니다. **Executeupdate** 메서드는 **레코드 집합** 개체의 반환을 지원 하지 않으므로 **execute** 메서드의 *options* 매개 변수는 ADOENUMS를 사용 하 여 수정 됩니다. **NORECORDS**. **Execute** 메서드가 완료 되 면 업데이트 된 *RecordsAffected* 매개 변수가 **executeupdate** 메서드로 다시 전달 되 고,이 메서드는 **int**로 반환 됩니다.  
   
 ```  
 public void open()   
@@ -86,7 +86,7 @@ public com.ms.wfc.data.Errors getErrors()
 ```  
   
 ### <a name="events"></a>이벤트  
- ADO/WFC 이벤트에 대 한 자세한 내용은 참조 하세요. [언어별 ADO 이벤트 인스턴스](../../../ado/guide/data/ado-event-instantiation-by-language.md)합니다.  
+ ADO/WFC 이벤트에 대 한 자세한 내용은 [언어별 Ado 이벤트 인스턴스화](../../../ado/guide/data/ado-event-instantiation-by-language.md)를 참조 하세요.  
   
 ```  
 public void addOnBeginTransComplete(ConnectionEventHandler handler)  
@@ -109,5 +109,5 @@ public void addOnWillExecute(ConnectionEventHandler handler)
 public void removeOnWillExecute(ConnectionEventHandler handler)  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

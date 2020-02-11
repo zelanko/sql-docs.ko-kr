@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4ce984303ea0a9e9a85f20e7d921a720be6ef299
-ms.sourcegitcommit: ea6603e20c723553c89827a6b8731a9e7b560b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74479235"
 ---
 # <a name="manage-logins-in-the-publication-access-list"></a>게시 액세스 목록에서 로그인 관리
@@ -28,37 +28,35 @@ ms.locfileid: "74479235"
   
  **항목 내용**  
   
--   **시작 하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [필수 구성 요소](#Prerequisites)  
   
--   **다음을 사용 하 여 게시 액세스 목록에서 로그인을 관리 하려면**  
+-   **다음을 사용하여 게시 액세스 목록에서 로그인을 관리하려면**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-     [Transact-sql](#TsqlProcedure)  
+     [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a>시작 하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a>사전  
+###  <a name="Prerequisites"></a> 필수 조건  
   
 -   PAL에 로그인을 추가하려면 먼저 게시 데이터베이스의 데이터베이스 사용자와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인을 연결해야 합니다.  
   
-##  <a name="SSMSProcedure"></a>SQL Server Management Studio 사용  
- 
-  **게시 속성 - **게시>** 대화 상자의 \<게시 액세스 목록** 페이지에서 PAL(게시 액세스 목록)을 사용하여 로그인을 관리할 수 있습니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](../publish/view-and-modify-publication-properties.md)을 참조하세요.  
+##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+ **게시 속성 -** 게시> **대화 상자의 \<게시 액세스 목록** 페이지에서 PAL(게시 액세스 목록)을 사용하여 로그인을 관리할 수 있습니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](../publish/view-and-modify-publication-properties.md)을 참조하세요.  
   
 #### <a name="to-manage-logins-in-the-pal"></a>PAL에서 로그인을 관리하려면  
   
-1.  
-  **게시 속성 - **게시>** 대화 상자의 \<게시 액세스 목록** 페이지에서 **추가**, **제거** 및 **모두 제거** 단추를 사용하여 PAL에서 로그인과 그룹을 추가 및 제거합니다. PAL에서 **distributor_admin** 은 제거하지 마세요. 이 계정은 복제에 사용됩니다.  
+1.  **게시 속성 -** 게시> **대화 상자의 \<게시 액세스 목록** 페이지에서 **추가**, **제거** 및 **모두 제거** 단추를 사용하여 PAL에서 로그인과 그룹을 추가 및 제거합니다. PAL에서 **distributor_admin** 은 제거하지 마세요. 이 계정은 복제에 사용됩니다.  
   
     > [!NOTE]  
     >  원격 배포자를 사용할 경우 PAL의 계정을 게시자와 배포자에서 모두 사용할 수 있어야 합니다. 이 계정은 두 서버 모두에 정의된 도메인 계정이나 로컬 계정이어야 합니다. 또한 두 로그인과 연결된 암호는 같아야 합니다.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a>Transact-sql 사용  
+##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-view-groups-and-logins-that-belong-to-the-pal"></a>PAL에 속한 그룹 및 로그인을 보려면  
   

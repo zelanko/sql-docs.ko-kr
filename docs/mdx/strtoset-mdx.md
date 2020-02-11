@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 729dae70fce03b3dec1394900126b216d09dc497
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036795"
 ---
 # <a name="strtoset-mdx"></a>StrToSet(MDX)
@@ -32,16 +32,16 @@ StrToSet(Set_Specification [,CONSTRAINED] )
  직접 또는 간접적으로 집합을 지정하는 유효한 문자열 식입니다.  
   
 ## <a name="remarks"></a>설명  
- 합니다 **StrToSet** 함수는 문자열 식에 지정 된 집합을 반환 합니다. 합니다 **StrToSet** 함수는 대개 다시 MDX 문으로 경우, 또는 MDX 쿼리에 매개 변수가 외부 함수의 집합 사양을 반환 사용자 정의 함수와 함께 사용 됩니다.  
+ **Strtoset** 함수는 문자열 식에 지정 된 집합을 반환 합니다. **Strtoset** 함수는 일반적으로 외부 함수의 집합 사양을 mdx 문에 다시 반환 하거나 mdx 쿼리가 매개 변수화 될 때 사용자 정의 함수와 함께 사용 됩니다.  
   
--   CONSTRAINED 플래그를 사용 하는 경우 해당 집합 사양에 정규화 되거나 정규화 되지 않은 멤버 이름 또는 괄호로 묶은 정규화 되거나 정규화 되지 않은 멤버 이름이 들어 있는 튜플 집합을 포함 해야 합니다 {}합니다. 이 플래그를 사용하면 지정한 문자열을 통한 삽입 공격 위험을 줄일 수 있습니다. 문자열을 지정 하는 경우 아닙니다 정규화 되거나 정규화 되지 않은으로 직접 확인할 수 멤버 이름이 다음과 같은 오류가 나타납니다. "CONSTRAINED 설정한 제한을 위반 했습니다 STRTOSET 함수에서 플래그."  
+-   제한 된 플래그를 사용 하는 경우 집합 사양에는 정규화 되거나 정규화 되지 않은 멤버 이름이 나 중괄호로 {}묶은 정규화 되거나 정규화 되지 않은 멤버 이름이 포함 된 튜플 집합이 포함 되어야 합니다. 이 플래그를 사용하면 지정한 문자열을 통한 삽입 공격 위험을 줄일 수 있습니다. 정규화 되거나 정규화 되지 않은 멤버 이름으로 직접 확인할 수 없는 문자열을 제공 하는 경우 "STRTOSET 함수에서 제약 조건이 적용 된 제한을 위반 했습니다." 라는 오류가 나타납니다.  
   
 -   CONSTRAINED 플래그를 사용하지 않을 경우 지정한 집합 사양은 집합을 반환하는 유효한 MDX 식으로 확인될 수 있습니다.  
   
 -   집합과 멤버의 차이를 더 잘 이해하려면 집합 식 사용 및 멤버 식 사용을 참조하십시오.  
   
 ## <a name="examples"></a>예  
- 다음 예제를 사용 하 여 State-province 특성 계층의 멤버 집합을 반환 합니다 **StrToSet** 함수입니다. 해당 집합 사양에서는 유효한 MDX 집합 식이 제공됩니다.  
+ 다음 예에서는 **Strtoset** 함수를 사용 하 여 시/도 특성 계층의 멤버 집합을 반환 합니다. 해당 집합 사양에서는 유효한 MDX 집합 식이 제공됩니다.  
   
 ```  
 SELECT StrToSet ('[Geography].[State-Province].Members')  
@@ -67,7 +67,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

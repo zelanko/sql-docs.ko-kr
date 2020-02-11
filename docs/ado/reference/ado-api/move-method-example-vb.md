@@ -15,14 +15,14 @@ ms.assetid: 55eb797a-0205-40d2-a797-55b216d1d3bb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 258f915b560bf7da9110909ada0f015fdc36af63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932128"
 ---
 # <a name="move-method-example-vb"></a>Move 메서드 예제(VB)
-이 예제에서는 합니다 [이동](../../../ado/reference/ado-api/move-method-ado.md) 사용자 입력을 기반으로 하는 레코드 포인터를 하는 방법입니다.  
+이 예제에서는 [Move](../../../ado/reference/ado-api/move-method-ado.md) 메서드를 사용 하 여 사용자 입력을 기준으로 레코드 포인터를 배치 합니다.  
   
 ```  
 'BeginMoveVB  
@@ -126,6 +126,6 @@ End Sub
 'EndMoveVB  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Move 메서드 (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

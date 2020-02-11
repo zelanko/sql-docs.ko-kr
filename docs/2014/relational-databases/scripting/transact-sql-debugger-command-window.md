@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 26306f8ad2adf01ebdcbf1b52169f1c2ec964920
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243077"
 ---
 # <a name="command-window"></a>명령 창
@@ -27,8 +27,7 @@ ms.locfileid: "75243077"
 ## <a name="task-list"></a>작업 목록  
  **명령 창에 액세스 하려면**  
   
--   
-  **디버그** 메뉴에서 **디버깅 시작**을 클릭합니다.  
+-   **디버그** 메뉴에서 **디버깅 시작**을 클릭합니다.  
   
  **변수 값을 인쇄 하려면**  
   
@@ -45,4 +44,4 @@ ms.locfileid: "75243077"
   **명령 창**에서 **Debug.QuickWatch \<VariableName>** 을 입력하고 Enter 키를 누릅니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql 디버거](transact-sql-debugger.md)  
+ [Transact-SQL 디버거](transact-sql-debugger.md)  

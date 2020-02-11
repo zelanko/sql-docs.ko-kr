@@ -1,5 +1,5 @@
 ---
-title: sp_can_tlog_be_applied (TRANSACT-SQL) | Microsoft Docs
+title: sp_can_tlog_be_applied (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 9c143b6c-27ac-4ab7-98d1-3b7b265f3963
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 279492503ba8ce31e3c5d4027d8fd184c4a81587
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68045964"
 ---
-# <a name="spcantlogbeapplied-transact-sql"></a>sp_can_tlog_be_applied(Transact-SQL)
+# <a name="sp_can_tlog_be_applied-transact-sql"></a>sp_can_tlog_be_applied(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  트랜잭션 로그 백업을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 적용할 수 있는지 여부를 확인합니다. **sp_can_tlog_be_applied** 데이터베이스가 Restoring 상태에 있어야 합니다.  
+  트랜잭션 로그 백업을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 적용할 수 있는지 여부를 확인합니다. **sp_can_tlog_be_applied** 를 사용 하려면 데이터베이스가 복원 중 상태 여야 합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,11 +41,11 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @backup_file_name = ] 'backup_file_name'` 백업 파일의 이름이입니다. *backup_file_name* 됩니다 **nvarchar (128)** 합니다.  
+`[ @backup_file_name = ] 'backup_file_name'`백업 파일의 이름입니다. *backup_file_name* 은 **nvarchar (128)** 입니다.  
   
-`[ @database_name = ] 'database_name'` 데이터베이스의 이름이입니다. *database_name*은 **sysname**입니다.  
+`[ @database_name = ] 'database_name'`데이터베이스의 이름입니다. *database_name* 는 **sysname**입니다.  
   
-`[ @result = ] _result_ OUTPUT` 트랜잭션 로그를 데이터베이스에 적용할 수 있는지 여부를 나타냅니다. *결과* 됩니다 **비트**합니다.  
+`[ @result = ] _result_ OUTPUT`트랜잭션 로그를 데이터베이스에 적용할 수 있는지 여부를 나타냅니다. *result* 는 **bit**입니다.  
   
  1 = 로그를 적용할 수 있음  
   
@@ -55,7 +55,7 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
  0(성공) 또는 1(실패)  
   
 ## <a name="permissions"></a>사용 권한  
- 멤버는 **sysadmin** 고정된 서버 역할을 실행할 수 있습니다 **sp_can_tlog_be_applied**합니다.  
+ **Sysadmin** 고정 서버 역할의 멤버만 **sp_can_tlog_be_applied**를 실행할 수 있습니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `@MyBitVar` 지역 변수를 선언하여 결과를 저장합니다.  
@@ -72,7 +72,7 @@ N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\Adventu
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

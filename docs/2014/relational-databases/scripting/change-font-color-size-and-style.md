@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aa6753b0e49e898476f4138c5e445ea75918aa17
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244994"
 ---
 # <a name="change-font-color-size-and-style"></a>글꼴 색상, 크기 및 스타일 변경
@@ -29,12 +29,9 @@ ms.locfileid: "75244994"
   
 ### <a name="to-change-font-color-size-and-style-in-the-editor"></a>편집기에서 글꼴 색, 크기 및 스타일을 변경하려면  
   
-1.  
-  **도구** 메뉴에서 **옵션** 을 클릭합니다. 
-  **환경**을 클릭한 다음 **글꼴 및 색**을 클릭합니다.  
+1.  **도구** 메뉴에서 **옵션** 을 클릭합니다. **환경**을 클릭한 다음 **글꼴 및 색**을 클릭합니다.  
   
-2.  
-  **설정 표시** 목록에서 **텍스트 편집기**를 선택합니다.  
+2.  **설정 표시** 목록에서 **텍스트 편집기**를 선택합니다.  
   
 3.  글꼴, 크기, 표시 항목, 전경색 및 배경색을 변경합니다.  
   
@@ -47,6 +44,6 @@ ms.locfileid: "75244994"
   
 ## <a name="see-also"></a>참고 항목  
  [코드 및 결과 인쇄](print-code-and-results.md)   
- [쿼리 편집기의 색 구분](color-coding-in-query-editors.md)  
+ [쿼리 편집기에서 코드 색상 지정](color-coding-in-query-editors.md)  
   
   

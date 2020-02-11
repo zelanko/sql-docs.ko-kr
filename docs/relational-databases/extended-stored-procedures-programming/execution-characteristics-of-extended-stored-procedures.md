@@ -14,21 +14,21 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 74ecd20f28e58e133b5710d3cbd9d18b27ca7756
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74095984"
 ---
 # <a name="execution-characteristics-of-extended-stored-procedures"></a>확장 저장 프로시저의 실행 특징
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하십시오.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]대신 CLR 통합을 사용 하세요.  
   
  확장 저장 프로시저 실행에는 다음과 같은 세 가지 특징이 있습니다.  
   
--   확장 저장 프로시저 함수는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 보안 컨텍스트에서 실행 됩니다.  
+-   확장 저장 프로시저 함수는의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]보안 컨텍스트에서 실행 됩니다.  
   
 -   확장 저장 프로시저 함수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스 공간에서 실행됩니다.  
   
@@ -39,22 +39,23 @@ ms.locfileid: "74095984"
   
 -  
   
- 확장 저장 프로시저 DLL이 로드 된 후에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 중지 될 때까지 DLL이 서버의 주소 공간에 로드 된 상태로 유지 되거나 관리자가 DBCC *DLL_name* (무료)를 사용 하 여 dll을 명시적으로 언로드합니다.  
+ 확장 저장 프로시저 DLL을 로드 한 후에는가 중지 되거나 관리자가 DBCC *DLL_name* (무료)를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 하 여 dll을 명시적으로 언로드할 때까지 dll이 서버의 주소 공간에 로드 된 상태로 유지 됩니다.  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 EXECUTE 문을 사용하여 확장 저장 프로시저를 저장 프로시저처럼 사용할 수 있습니다.  
+ 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 EXECUTE 문을 사용하여 확장 저장 프로시저를 저장 프로시저처럼 사용할 수 있습니다.  
   
 ```  
 EXECUTE @retval = xp_extendedProcName @param1, @param2 OUTPUT  
 ```  
   
 ## <a name="parameters"></a>매개 변수  
- \@ *retval*  
+ \@*retval*  
  반환 값입니다.  
   
- \@ *param1*  
+ \@*param1*  
  입력 매개 변수입니다.  
   
- \@ *param2*  
+ \@*param2*  
  입/출력 매개 변수입니다.  
   
 > [!CAUTION]  

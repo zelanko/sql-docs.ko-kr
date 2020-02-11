@@ -24,14 +24,16 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 9c167994c7145bce348b6959a57533e398e1d6bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035292"
 ---
 # <a name="choosing-a-network-protocol"></a>네트워크 프로토콜 선택
-  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에 연결하려면 네트워크 프로토콜을 사용할 수 있어야 합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 동시에 여러 프로토콜에 대 한 요청을 처리할 수 있습니다. 클라이언트에서는 단일 프로토콜을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결합니다. 클라이언트 프로그램에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 수신하는 프로토콜을 알지 못하는 경우 여러 프로토콜을 순서대로 시도하도록 클라이언트를 구성하십시오. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 네트워크 프로토콜을 설정, 해제 및 구성할 수 있습니다.  
+  
+  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에 연결하려면 네트워크 프로토콜을 사용할 수 있어야 합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 동시에 여러 프로토콜에 대 한 요청을 처리 합니다. 클라이언트에서는 단일 프로토콜을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결합니다. 클라이언트 프로그램에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 수신하는 프로토콜을 알지 못하는 경우 여러 프로토콜을 순서대로 시도하도록 클라이언트를 구성하십시오. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 네트워크 프로토콜을 설정, 해제 및 구성할 수 있습니다.  
   
 ## <a name="shared-memory"></a>공유 메모리  
  공유 메모리는 가장 간단한 프로토콜이며 구성 가능한 설정이 없습니다. 공유 메모리 프로토콜을 사용하는 클라이언트는 동일한 컴퓨터에서 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에만 연결할 수 있으므로 대부분의 데이터베이스 작업에 유용하지 않습니다. 다른 프로토콜이 제대로 구성되지 않는 것으로 의심되는 경우 문제 해결에 공유 메모리 프로토콜을 사용하십시오.  
@@ -40,7 +42,8 @@ ms.locfileid: "63035292"
 >  MDAC 2.8 또는 이전 버전을 사용하는 클라이언트에서는 공유 메모리 프로토콜을 사용할 수 없으며 이를 사용하려고 시도하면 자동으로 명명된 파이프 프로토콜로 전환됩니다.  
   
 ## <a name="tcpip"></a>TCP/IP  
- TCP/IP는 인터넷에서 광범위하게 사용되는 일반적인 프로토콜입니다. TCP/IP는 다양한 하드웨어 아키텍처 및 운영 체제가 있는 컴퓨터의 상호 연결된 네트워크를 통해 통신합니다. TCP/IP는 네트워크 트래픽의 라우팅을 위한 표준을 포함하며 고급 보안 기능을 제공합니다. TCP/IP는 현재 비즈니스에서 가장 많이 사용되는 프로토콜입니다. 컴퓨터에서 TCP/IP를 사용하도록 구성하는 과정은 복잡할 수 있지만 대부분의 네트워크 컴퓨터에 이미 올바르게 구성되어 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에 표시되지 않은 TCP/IP 설정을 구성하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 문서를 참조하십시오.  
+ TCP/IP는 인터넷에서 광범위하게 사용되는 일반적인 프로토콜입니다. TCP/IP는 다양한 하드웨어 아키텍처 및 운영 체제가 있는 컴퓨터의 상호 연결된 네트워크를 통해 통신합니다. TCP/IP는 네트워크 트래픽의 라우팅을 위한 표준을 포함하며 고급 보안 기능을 제공합니다. TCP/IP는 현재 비즈니스에서 가장 많이 사용되는 프로토콜입니다. 컴퓨터에서 TCP/IP를 사용하도록 구성하는 과정은 복잡할 수 있지만 대부분의 네트워크 컴퓨터에 이미 올바르게 구성되어 있습니다. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에 표시되지 않은 TCP/IP 설정을 구성하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 문서를 참조하십시오.  
   
 ## <a name="named-pipes"></a>명명된 파이프  
  명명된 파이프는 LAN(Local Area Network)을 위해 개발된 프로토콜입니다. 메모리의 일부는 한 프로세스에서 다른 프로세스로 정보를 전달하는 데 사용됩니다. 즉, 한 곳의 출력은 다른 곳의 입력이 됩니다. 두 번째 프로세스는 로컬(첫 번째와 동일한 컴퓨터에서) 또는 원격(네트워크 컴퓨터에서)일 수 있습니다.  

@@ -1,5 +1,5 @@
 ---
-title: 업그레이드 후 전체 텍스트 검색에서는 조건자 OUTPUT INTO 식에서 | Microsoft Docs
+title: 업그레이드 후에는 전체 텍스트 검색에서 OUTPUT INTO 식의 조건자를 허용 하지 않습니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,20 +11,20 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f5a99d7890a470a2026bfc0e972f8b5ae396d893
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095005"
 ---
 # <a name="after-upgrade-full-text-search-will-not-allow-predicates-in-output-into-expression"></a>업그레이드 후에는 전체 텍스트 검색 OUTPUT INTO 식의 조건자를 허용하지 않습니다.
   데이터베이스 호환성 수준이 100 이상으로 설정된 경우에는 OUTPUT 절에 전체 텍스트 조건자가 허용되지 않습니다.  
   
 ## <a name="description"></a>Description  
- OUTPUT 절에 대 한 자세한 내용은 참조 하세요. [OUTPUT 절 &#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/output-clause-transact-sql)합니다.  
+ OUTPUT 절에 대 한 자세한 내용은 [Output 절 &#40;transact-sql&#41;](/sql/t-sql/queries/output-clause-transact-sql)를 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [업그레이드 관리자를 사용 하 여 작업](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
+## <a name="see-also"></a>참고 항목  
+ [업그레이드 관리자 작업](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
  [전체 텍스트 Search 업그레이드 문제](../../../2014/sql-server/install/full-text-search-upgrade-issues.md)  
   
   

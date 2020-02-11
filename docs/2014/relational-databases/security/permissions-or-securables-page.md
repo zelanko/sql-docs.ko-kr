@@ -17,10 +17,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: c83d92da6708c8c63e1ba4c2cea60b1497a54883
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63284552"
 ---
 # <a name="permissions-or-securables-page"></a>사용 권한 또는 보안 개체 페이지
@@ -43,7 +43,7 @@ ms.locfileid: "63284552"
 ## <a name="explicit-tab"></a>명시적 탭  
  **명시적** 탭에서는 상단 표에서 선택된 보안 개체의 가능한 사용 권한을 나열합니다. 사용 권한을 구성하려면 **권한 부여** (또는 **허용**), **허용 권한 소유**및 **거부** 확인란을 선택하거나 선택 취소합니다. 모든 명시적 사용 권한에 대해 모든 옵션을 사용할 수 있는 것은 아닙니다.  
   
- **사용 권한**  
+ **권한**  
  사용 권한의 이름입니다.  
   
  **Grantor**  
@@ -64,14 +64,14 @@ ms.locfileid: "63284552"
 ## <a name="effective-tab"></a>유효 탭  
  보안 개체와 관련된 보안 주체의 사용 권한은 여러 가지 보안 주체에 대해 설정된 사용 권한에서 가져온 것일 수 있습니다. 예를 들어 로그인에 사용 권한을 개별적으로 부여할 수 있으며 그룹 멤버로서 부여할 수도 있습니다. **유효** 탭에서는 명시적 사용 권한과 그룹 또는 역할 멤버 자격으로부터 가져온 사용 권한을 조합한 결과를 보여 줍니다. 허용 권한은 집계되며 거부 권한은 모든 허용 권한보다 우선합니다.  
   
- **사용 권한**  
+ **권한**  
  사용 권한의 이름입니다.  
   
  **열**  
  사용 권한의 영향을 받은 열의 이름입니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 수준 역할](authentication-access/database-level-roles.md)   
- [SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 보안 센터](security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+ [SQL Server 데이터베이스 엔진 및 Azure SQL Database 보안 센터](security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

@@ -20,23 +20,23 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: b6ec5de74d2da2a94c25ef121abc0157348554d5
-ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74947076"
 ---
 # <a name="sysdm_cluster_endpoints-transact-sql"></a>sys. dm_cluster_endpoints (Transact-sql)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|이름|`sysname`|SQL 빅 데이터 클러스터에서 외부에 노출 되는 서비스의 이름입니다. 끝점에 대 한 고유 식별자입니다. 이 보기의 키입니다. Null을 허용하지 않습니다. |  
+|name|`sysname`|SQL 빅 데이터 클러스터에서 외부에 노출 되는 서비스의 이름입니다. 끝점에 대 한 고유 식별자입니다. 이 보기의 키입니다. Null을 허용하지 않습니다. |  
 |description|`nvarchar(4000)`|서비스에 대한 설명입니다. Null을 허용하지 않습니다. |
-|endpoint|`sysname`|끝점 url 또는 연결 특성입니다. Null을 허용하지 않습니다. |
+|엔드포인트(endpoint)|`sysname`|끝점 url 또는 연결 특성입니다. Null을 허용하지 않습니다. |
 |protocol_desc|`sysname`|끝점 프로토콜에 대 한 설명 |
 
-## <a name="permissions"></a>권한
+## <a name="permissions"></a>사용 권한
 
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]는 권한이 `VIEW SERVER STATE` 필요 합니다.
 

@@ -19,35 +19,35 @@ ms.author: sstein
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 0712785a5af3e8cc3c606a597ba02e0075c88dd9
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73843867"
 ---
-# <a name="syselastic_pool_resource_stats-azure-sql-database"></a>elastic_pool_resource_stats (Azure SQL Database)
+# <a name="syselastic_pool_resource_stats-azure-sql-database"></a>sys.elastic_pool_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  SQL Database 서버의 모든 탄력적 풀에 대 한 리소스 사용량 통계를 반환 합니다. 각 탄력적 풀에 대해 15 초 보고 기간 마다 하나의 행이 있습니다 (분당 4 개 행). 여기에는 풀에 있는 모든 데이터베이스의 CPU, IO, 로그, 저장소 사용량 및 동시 요청/세션 사용률이 포함 됩니다. 이 데이터는 14 일 동안 보존 됩니다. 
+  SQL Database 서버에서 모든 탄력적 풀에 대한 리소스 사용량 통계를 반환합니다. 각 탄력적 풀에는 15초의 보고 기간마다 행이 하나씩 있습니다(분당 행 4개) 여기에는 풀의 모든 데이터베이스에 의한 CPU, IO, 로그, 스토리지 계산 및 동시 요청/세션 사용률이 포함됩니다. 이 데이터는 14 일 동안 보존 됩니다. 
   
 ||  
 |-|  
 |**적용**대상: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12.|  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**start_time**|**datetime2**|15 초 보고 간격의 시작을 나타내는 UTC 시간입니다.|  
 |**end_time**|**datetime2**|15 초 보고 간격의 끝을 나타내는 UTC 시간입니다.|  
 |**elastic_pool_name**|**nvarchar(128)**|탄력적 데이터베이스 풀의 이름입니다.|  
-|**avg_cpu_percent**|**decimal(5,2)**|풀 한도의 백분율로 나타낸 평균 계산 사용률입니다.|  
-|**avg_data_io_percent**|**decimal(5,2)**|풀의 한도를 기준으로 하는 평균 i/o 사용률 (백분율)입니다.|  
-|**avg_log_write_percent**|**decimal(5,2)**|풀 한도의 백분율로 나타낸 평균 쓰기 리소스 사용률입니다.|  
-|**avg_storage_percent**|**decimal(5,2)**|풀 저장소 한도의 백분율로 나타낸 평균 저장소 사용률입니다.|  
-|**max_worker_percent**|**decimal(5,2)**|풀의 한도를 기준으로 하는 최대 동시 작업자 (요청)의 백분율입니다.|  
-|**max_session_percent**|**decimal(5,2)**|풀의 한도를 기준으로 하는 최대 동시 세션 (백분율)입니다.|  
-|**elastic_pool_dtu_limit**|**int**|이 간격 동안이 탄력적 풀에 대 한 현재 최대 탄력적 풀 DTU 설정입니다.|  
-|**elastic_pool_storage_limit_mb**|**bigint**|이 간격 중에이 탄력적 풀에 대 한 현재 최대 탄력적 풀 저장소 제한 설정 (mb)입니다.|
-|**avg_allocated_storage_percent**|**decimal(5,2)**|탄력적 풀의 모든 데이터베이스에서 할당 한 데이터 공간의 비율입니다.  탄력적 풀의 데이터 최대 크기에 할당 된 데이터 공간의 비율입니다.  자세한 내용은 [SQL DB의 파일 공간 관리](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management) 를 참조 하세요.|  
+|**avg_cpu_percent**|**decimal (5, 2)**|풀 한도의 백분율로 평균 컴퓨팅 사용률.|  
+|**avg_data_io_percent**|**decimal (5, 2)**|풀 한도에 따른 백분율로 평균 I/O 사용률|  
+|**avg_log_write_percent**|**decimal (5, 2)**|풀 한도의 백분율로 평균 쓰기 리소스 사용률|  
+|**avg_storage_percent**|**decimal (5, 2)**|풀의 스토리지 한도의 백분율로 평균 스토리지 사용률|  
+|**max_worker_percent**|**decimal (5, 2)**|풀의 한도에 따른 백분율로 최대 동시 작업자(요청)|  
+|**max_session_percent**|**decimal (5, 2)**|풀의 한도에 따른 백분율로 최대 동시 세션|  
+|**elastic_pool_dtu_limit**|**int**|이 간격 중에 이 탄력적 풀에 대한 현재 최대 탄력적 풀 DTU 설정|  
+|**elastic_pool_storage_limit_mb**|**bigint**|이 간격 중에 이 탄력적 풀에 대한 현재 최대 탄력적 풀 스토리지 제한 설정(MB)|
+|**avg_allocated_storage_percent**|**decimal (5, 2)**|탄력적 풀의 모든 데이터베이스에서 할당 한 데이터 공간의 비율입니다.  탄력적 풀의 데이터 최대 크기에 할당 된 데이터 공간의 비율입니다.  자세한 내용은 [SQL DB의 파일 공간 관리](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management) 를 참조 하세요.|  
   
 ## <a name="remarks"></a>설명
 
@@ -79,9 +79,9 @@ ORDER BY end_time DESC;
 
 ## <a name="see-also"></a>참고 항목
 
- [탄력적  데이터베이스를 사용 하 여 끝날 때쯤 증가](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)  
+ [탄력적 데이터베이스를 사용 하 여 끝날 때쯤 증가](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)   
  [SQL Database 탄력적 데이터베이스 풀 만들기 및 관리 (미리 보기)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)   
- [resource_stats &#40;Azure SQL Database&#41; ](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
+ [resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
  [dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_help_fulltext_tables_cursor (TRANSACT-SQL) | Microsoft Docs
+title: sp_help_fulltext_tables_cursor (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,21 +19,21 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8e4218f6a105f81997c37202421feb689cd3a074
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68055006"
 ---
-# <a name="sphelpfulltexttablescursor-transact-sql"></a>sp_help_fulltext_tables_cursor(Transact-SQL)
+# <a name="sp_help_fulltext_tables_cursor-transact-sql"></a>sp_help_fulltext_tables_cursor(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   커서를 사용하여 전체 텍스트 인덱싱에 등록된 테이블의 목록을 반환할 수 있습니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 새 **sys.fulltext_indexes** 카탈로그 뷰를 대신 합니다. 자세한 내용은 [sys.fulltext_indexes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)합니다.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]대신 새 **sys. fulltext_indexes** 카탈로그 뷰를 사용 하십시오. 자세한 내용은 [fulltext_indexes &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)을 참조 하십시오.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -45,18 +45,18 @@ sp_help_fulltext_tables_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @cursor_return = ] @cursor_variable OUTPUT` 유형의 출력 변수 **커서**합니다. 커서는 읽기 전용의 스크롤할 수 있는 동적 커서입니다.  
+`[ @cursor_return = ] @cursor_variable OUTPUT`**Cursor**유형의 출력 변수입니다. 커서는 읽기 전용의 스크롤할 수 있는 동적 커서입니다.  
   
-`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` 전체 텍스트 카탈로그의 이름이입니다. *fulltext_catalog_name* 됩니다 **sysname**, 기본값은 NULL입니다. 하는 경우 *fulltext_catalog_name* 이 생략 되거나 NULL 이면 데이터베이스에 연결 된 모든 전체 텍스트 인덱싱된 테이블 반환 됩니다. 하는 경우 *fulltext_catalog_name* 를 지정 하지만 *table_name* 이 생략 되거나 NULL이이 카탈로그와 연결 된 모든 전체 텍스트 인덱싱된 테이블 전체 텍스트 인덱스 정보가 검색 됩니다. 둘 다 *fulltext_catalog_name* 하 고 *table_name* 를 지정 하는 경우 행이 반환 됩니다 *table_name* 연관 된 *fulltext_catalog_name*; 그렇지 않으면 오류가 발생 합니다.  
+`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'`전체 텍스트 카탈로그의 이름입니다. *fulltext_catalog_name* 는 **sysname**이며 기본값은 NULL입니다. *Fulltext_catalog_name* 를 생략 하거나 NULL 인 경우 데이터베이스와 연결 된 전체 텍스트 인덱싱된 테이블이 모두 반환 됩니다. *Fulltext_catalog_name* 지정 되었지만 *TABLE_NAME* 생략 되거나 NULL 인 경우이 카탈로그와 연결 된 모든 전체 텍스트 인덱싱된 테이블에 대해 전체 텍스트 인덱스 정보가 검색 됩니다. *Fulltext_catalog_name* 와 *table_name* 를 모두 지정 하는 경우 *table_name* *fulltext_catalog_name*와 연결 된 경우 행이 반환 됩니다. 그렇지 않으면 오류가 발생 합니다.  
   
-`[ @table_name = ] 'table_name'` 전체 텍스트 메타 데이터를 요청한 대상 하나 또는 두 부분 구성 테이블 이름이입니다. *table_name* 됩니다 **nvarchar(517)** , 기본값은 NULL입니다. 경우에 *table_name* 지정 된 경우와 관련 된 행만 *table_name* 반환 됩니다.  
+`[ @table_name = ] 'table_name'`전체 텍스트 메타 데이터를 요청 하는 한 부분 또는 두 부분으로 구성 된 테이블 이름입니다. *table_name* 은 **nvarchar (517)** 이며 기본값은 NULL입니다. *Table_name* 만 지정 하면 *table_name* 관련 된 행만 반환 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**TABLE_OWNER**|**sysname**|테이블 소유자입니다. 테이블을 만든 데이터베이스 사용자의 이름입니다.|  
 |**TABLE_NAME**|**sysname**|테이블 이름입니다.|  
@@ -86,11 +86,11 @@ DEALLOCATE @mycursor;
 GO   
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [INDEXPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
- [OBJECTPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
- [sp_fulltext_table &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-table-transact-sql.md)   
- [sp_help_fulltext_tables &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
+ [OBJECTPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
+ [Transact-sql&#41;sp_fulltext_table &#40;](../../relational-databases/system-stored-procedures/sp-fulltext-table-transact-sql.md)   
+ [Transact-sql&#41;sp_help_fulltext_tables &#40;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4305438285ae5f3b51ab8ac51ec2b1d0699aee64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62810351"
 ---
 # <a name="connect-to-another-computer-sql-server-configuration-manager"></a>다른 컴퓨터에 연결(SQL Server 구성 관리자)
@@ -31,9 +31,11 @@ ms.locfileid: "62810351"
   
 #### <a name="to-connect-to-another-computer-with-windows-computer-management"></a>Windows 컴퓨터 관리에서 다른 컴퓨터에 연결하려면  
   
-1.  **시작** 메뉴에서 **내 컴퓨터** 를 마우스 오른쪽 단추로 클릭하고 **관리**를 클릭합니다.  
+1.  
+  **시작** 메뉴에서 **내 컴퓨터**를 마우스 오른쪽 단추로 클릭하고 **관리**를 클릭합니다.  
   
-2.  **컴퓨터 관리**에서 **컴퓨터 관리(로컬)** 를 마우스 오른쪽 단추로 클릭하고 **다른 컴퓨터로 연결**을 클릭합니다.  
+2.  
+  **컴퓨터 관리**에서 **컴퓨터 관리(로컬)** 를 마우스 오른쪽 단추로 클릭하고 **다른 컴퓨터로 연결**을 클릭합니다.  
   
 3.  **컴퓨터 선택** 대화 상자의 **다른 컴퓨터** 입력란에 관리할 컴퓨터의 이름을 입력하고 **확인**을 클릭합니다.  
   
@@ -45,7 +47,7 @@ ms.locfileid: "62810351"
   
 1.  **시작** 메뉴에서 **실행**을 클릭합니다.  
   
-2.  에 **엽니다** 상자에 입력 `mmc -a` 열려는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console을 작성자 모드로 합니다.  
+2.  **열기** 상자에를 입력 `mmc -a` 하 여 작성자 모드 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서 관리 콘솔을 엽니다.  
   
 3.  **파일** 메뉴에서 **스냅인 추가/제거**를 클릭합니다.  
   
@@ -59,20 +61,20 @@ ms.locfileid: "62810351"
   
 8.  **스냅인 추가/제거** 창에서 **확인**을 클릭합니다.  
   
-9. **컴퓨터 관리(***\<컴퓨터 이름>***)** 와 **서비스 및 응용 프로그램**을 펼칩니다.  
+9. **컴퓨터 관리 (***\<컴퓨터 이름>***)** 와 **서비스 및 응용 프로그램**을 확장 합니다.  
   
 10. **SQL Server 구성 관리자**를 마우스 오른쪽 단추로 클릭한 다음 **여기에서 창 새로 만들기**를 클릭합니다.  
   
 11. **창** 메뉴에서 **콘솔 루트**를 클릭하여 첫 번째 창으로 전환한 다음, 창을 삭제합니다.  
   
-12. 에 **파일** 메뉴에서 클릭 **다른 이름으로 저장**, 적절 한 이름을 사용 하 여 원하는 폴더에 파일을 저장 하 고는 `.msc` 파일 확장명입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console을 닫습니다.  
+12. **파일** 메뉴에서 다른 이름 **으로 저장**을 클릭 하 고 파일 확장명을 가진 `.msc` 적절 한 이름을 사용 하 여 원하는 폴더에 파일을 저장 합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console을 닫습니다.  
   
 13. 대상 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 열려면 파일을 두 번 클릭합니다. 필요한 경우 파일에 대한 링크를 바탕 화면이나 **시작** 메뉴에 저장합니다.  
   
 > [!CAUTION]  
 >  원격 컴퓨터의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하는 경우 컴퓨터 이름이 명확하지 않아 실수로 다른 컴퓨터를 중지하거나 구성할 수 있습니다. **서비스** 탭에서 **호스트 이름** 상자를 선택하여 서비스를 수정하기 전에 컴퓨터 이름을 확인합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [WMI를 구성하여 SQL Server 도구에 서버 상태 표시](../../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)  
   
   

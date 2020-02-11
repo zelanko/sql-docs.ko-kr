@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ef1a23d21e5945e15d497bab3480b48f8cf3fe6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098207"
 ---
-# <a name="reencryptsecureinformation-method-wmi-msreportserverconfigurationsetting"></a>ReencryptSecureInformation 메서드(WMI MSReportServer_ConfigurationSetting)
+# <a name="reencryptsecureinformation-method-wmi-msreportserver_configurationsetting"></a>ReencryptSecureInformation 메서드(WMI MSReportServer_ConfigurationSetting)
   새 암호화 키를 생성하고 이 새 키를 사용하여 카탈로그에 있는 모든 보안 정보를 다시 암호화합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -42,13 +42,13 @@ public void ReencryptSecureInformation (out Int32 HRESULT, out string[] Extended
  *HRESULT*  
  [out] 호출의 성공 여부를 나타내는 값입니다.  
   
- *ExtendedErrors[]*  
+ *ExtendedErrors []*  
  [out] 호출에서 반환되는 추가 오류가 들어 있는 문자열 배열입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드 호출의 성공 또는 실패를 나타내는 *HRESULT* 를 반환합니다. 0 값은 메서드 호출이 성공했음을 나타냅니다. 0 이외의 값은 오류가 발생했음을 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  관리자는 ReencryptSecureInformation 메서드를 사용하여 기존 암호화 키를 새 키로 바꿀 수 있습니다.  
   
  이 메서드가 호출되면 보고서 서버가 새 암호화 키를 생성하고 이 새 암호화 키로 모든 암호화 내용을 반복하여 다시 암호화합니다.  
@@ -58,9 +58,9 @@ public void ReencryptSecureInformation (out Int32 HRESULT, out string[] Extended
  이 메서드를 스케일 아웃 배포의 컴퓨터에서 실행하면 스케일 아웃 배포의 각 컴퓨터를 다시 초기화해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **네임 스페이스:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [MSReportServer_ConfigurationSetting 멤버](msreportserver-configurationsetting-members.md)  
   
   

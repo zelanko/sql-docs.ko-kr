@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60d5af2752a426faca3069541deeae3a6aa4f495
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245187"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>Transact-SQL 디버거 구성
@@ -211,10 +211,10 @@ ms.locfileid: "75245187"
 * 서버는 RPC를 통해 클라이언트와 다시 통신해야 합니다. SQL Server 서비스를 실행 하는 계정에는 클라이언트에 대 한 인증 권한이 있어야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql 디버거](transact-sql-debugger.md)   
+ [Transact-SQL 디버거](transact-sql-debugger.md)   
  [Transact-sql 디버거 실행](run-the-transact-sql-debugger.md)   
  [Transact-sql 코드 단계별 실행](step-through-transact-sql-code.md)   
- [Transact-sql 디버거 정보](transact-sql-debugger-information.md)   
- [데이터베이스 엔진 쿼리 편집기 &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)  
+ [Transact-SQL 디버거 정보](transact-sql-debugger-information.md)   
+ [데이터베이스 엔진 쿼리 편집기&#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)  
   
   

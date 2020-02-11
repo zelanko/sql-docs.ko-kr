@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6f5deb525654007248fbc5c97c07e3c368654ad5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057233"
 ---
 # <a name="odbc-destination-editor-mappings-page"></a>ODBC 대상 편집기(매핑 페이지)
@@ -24,7 +24,7 @@ ms.locfileid: "66057233"
   
  ODBC 대상에 대한 자세한 내용은 [ODBC Destination](data-flow/odbc-destination.md)을 참조하십시오.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
   
 ### <a name="available-input-columns"></a>사용 가능한 입력 열  
  사용 가능한 입력 열 목록입니다. 입력 열을 사용 가능한 대상 열에 끌어 놓아 열을 매핑할 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "66057233"
 ### <a name="destination-column"></a>대상 열  
  사용 가능한 모든 대상 열(매핑되거나 매핑되지 않음)을 표시합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ODBC 대상 편집기&#40;연결 관리자 페이지&#41;](../../2014/integration-services/odbc-destination-editor-connection-manager-page.md)   
  [ODBC 대상 편집기&#40;오류 출력 페이지&#41;](../../2014/integration-services/odbc-destination-editor-error-output-page.md)  
   

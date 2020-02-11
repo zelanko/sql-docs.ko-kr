@@ -1,5 +1,5 @@
 ---
-title: 스키마 생성 마법사 F1 도움말 (Analysis Services-다차원 데이터) | Microsoft Docs
+title: 스키마 생성 마법사 F1 도움말 (Analysis Services 다차원 데이터) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dbc1f6daf1039d24830bc91140f82e061b88ae65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069951"
 ---
 # <a name="schema-generation-wizard-f1-help-analysis-services---multidimensional-data"></a>스키마 생성 마법사 F1 도움말(Analysis Services - 다차원 데이터)
@@ -36,15 +36,15 @@ ms.locfileid: "66069951"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [대상 지정 &#40;스키마 생성 마법사&#41; &#40;Analysis Services-다차원 데이터&#41;](specify-target-schema-generation-wizard-analysis-services-multidimensional-data.md)  
+-   [대상 &#40;스키마 생성 마법사&#41; &#40;Analysis Services 다차원 데이터를 지정&#41;](specify-target-schema-generation-wizard-analysis-services-multidimensional-data.md)  
   
--   [주제 영역 데이터베이스 스키마 옵션 &#40;스키마 생성 마법사&#41; &#40;Analysis Services-다차원 데이터&#41;](subject-area-database-schema-options-analysis-services-multidimensional-data.md)  
+-   [주제 영역 데이터베이스 스키마 옵션 &#40;스키마 생성 마법사&#41; &#40;Analysis Services 다차원 데이터&#41;](subject-area-database-schema-options-analysis-services-multidimensional-data.md)  
   
--   [명명 규칙 지정 &#40;스키마 생성 마법사&#41; &#40;Analysis Services-다차원 데이터&#41;](specify-naming-conventions-schema-generation-analysis-services-multidimensional-data.md)  
+-   [&#40;스키마 생성 마법사&#41; &#40;명명 규칙 지정 Analysis Services 다차원 데이터&#41;](specify-naming-conventions-schema-generation-analysis-services-multidimensional-data.md)  
   
--   [마법사 완료 &#40;스키마 생성 마법사&#41; &#40;Analysis Services-다차원 데이터&#41;](complete-schema-generation-wizard-analysis-services-multidimensional-data.md)  
+-   [Analysis Services 다차원&#41;데이터를&#41; &#40;마법사 &#40;스키마 생성 마법사를 완료 하는 중](complete-schema-generation-wizard-analysis-services-multidimensional-data.md)  
   
-## <a name="see-also"></a>관련 항목  
- [Analysis Services 마법사 &#40;다차원 데이터&#41;](analysis-services-wizards-multidimensional-data.md)  
+## <a name="see-also"></a>참고 항목  
+ [다차원 데이터를 &#40;마법사 Analysis Services&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

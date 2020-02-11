@@ -13,16 +13,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cae79be898c326b395e781db741c87578edfe7ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721283"
 ---
 # <a name="generate-filters"></a>필터 생성
   **필터 생성** 대화 상자를 사용하여 병합 게시의 테이블에 행 필터를 정의할 수 있습니다. 그러면 복제에서 외래 키 관계를 통해 관련된 다른 테이블로 해당 필터를 확장합니다. 예를 들어 프랑스 고객에 대한 데이터만 포함되도록 고객 테이블에 필터를 정의하면 복제에서는 관련된 주문 및 주문 세부 정보 테이블에 프랑스 고객과 관련된 정보만 포함되도록 해당 필터를 확장합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  이 대화 상자에서는 3단계로 이루어진 프로세스를 통해 테이블에 행 필터를 만듭니다. 그러면 기본 키와 외래 키 간의 관계를 통해 필터링된 테이블과 관련된 테이블로 필터가 확장됩니다. 예를 들어 **Customer**, **SalesOrderHeader**및 **SalesOrderDetail**테이블이 있는데 **Customer** 와 **SalesOrderHeader**간에 관계가 있고 **SalesOrderHeader** 와 **SalesOrderDetail**간에 관계가 있을 때 **Customer**에 행 필터를 적용하면 복제에서는 해당 필터를 **SalesOrderHeader** 및 **SalesOrderDetail**로 확장합니다.  
   
 1.  **필터링할 테이블을 선택하십시오.**  
@@ -38,7 +38,7 @@ ms.locfileid: "62721283"
      이 텍스트는 변경할 수 없습니다. 표준 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문을 사용하여 WHERE 키워드 뒤에 필터 절을 입력합니다.  
   
     > [!IMPORTANT]  
-    >  성능상의 이유로 `LEFT([MyColumn]) = SUSER_SNAME()`과 같은 매개 변수가 있는 행 필터 절의 열 이름에는 함수를 적용하지 않는 것이 좋습니다. 필터 절에 HOST_NAME을 사용하고 HOST_NAME 값을 재지정할 경우 CONVERT를 사용하여 데이터 형식을 변환해야 할 수 있습니다. 이를 위한 최선의 구현 방법은 [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)로 확장합니다.  
+    >  성능상의 이유로 `LEFT([MyColumn]) = SUSER_SNAME()`과 같은 매개 변수가 있는 행 필터 절의 열 이름에는 함수를 적용하지 않는 것이 좋습니다. 필터 절에 HOST_NAME을 사용하고 HOST_NAME 값을 재지정할 경우 CONVERT를 사용하여 데이터 형식을 변환해야 할 수 있습니다. 이를 위한 최선의 구현 방법은 [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)항목의 "HOST_NAME() 값 재정의" 섹션을 참조하십시오.  
   
 3.  **이 테이블의 데이터를 받을 구독 수를 지정하십시오.**  
   
@@ -48,12 +48,12 @@ ms.locfileid: "62721283"
   
  문이 구문 분석되면 복제에서는 필요한 조인 필터를 만듭니다. 이 마법사가 실행 중인 게시자에 대해 배포자를 아직 구성하지 않은 경우 배포자를 구성하라는 메시지가 표시됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Create a Publication](publish/create-a-publication.md)   
  [게시 속성 보기 및 수정](publish/view-and-modify-publication-properties.md)   
  [게시된 데이터 필터링](publish/filter-published-data.md)   
  [Join Filters](merge/join-filters.md)   
- [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)   
+ [매개 변수가 있는 행 필터](merge/parameterized-filters-parameterized-row-filters.md)   
  [데이터 및 데이터베이스 개체 게시](publish/publish-data-and-database-objects.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: (OLE DB) ICommandText 매개 변수에 바인딩된 ISequentialStream을 사용 하 여 FILESTREAM 열에 데이터 전송 | Microsoft Docs
+title: ISequentialStream Bound to ICommandText 매개 변수 (OLE DB)를 사용 하 여 FILESTREAM 열에 데이터 전송 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -11,23 +11,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b661288c88a707eb81d4008b4c33c7497dfe40a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62643363"
 ---
 # <a name="send-data-to-a-filestream-column-using-isequentialstream-bound-to-icommandtext-parameter-ole-db"></a>ICommandText 매개 변수에 바인딩된 ISequentialStream을 사용하여 FILESTREAM 열에 데이터 전송(OLE DB)
   이 예제에서는 ICommandText 매개 변수에 바인딩된 ISequentialStream 인터페이스를 사용하여 filestream 열에 4MB에서 4GB 사이의 데이터를 보냅니다.  
   
- Filestream 기능에 대 한 자세한 내용은 참조 하십시오. [FILESTREAM 지원 &#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md).  
+ Filestream 기능에 대 한 자세한 내용은 [Filestream Support &#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md)를 참조 하세요.  
   
 ## <a name="example"></a>예제  
- 컴파일 및이 샘플을 실행 하기 전에 FILESTREAM 지원 사용 ([Enable and Configure FILESTREAM](../../blob/enable-and-configure-filestream.md)).  
+ 이 샘플을 컴파일하고 실행 하기 전에 FILESTREAM 지원 ([Filestream 설정 및 구성](../../blob/enable-and-configure-filestream.md))을 사용 하도록 설정 합니다.  
   
  INCLUDE 환경 변수에 sqlncli.h가 들어 있는 디렉터리를 포함해야 합니다.  
   
- 서버에는 C:\DBFsa라는 디렉터리가 있어야 합니다. 예제에서는 이 디렉터리에 데이터베이스를 만듭니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에는 이 위치에 대한 쓰기 권한이 있어야 합니다(예: 로컬 시스템 계정으로 로그온).  
+ 서버에는 C:\DBFsa라는 디렉터리가 있어야 합니다. 예제에서는 이 디렉터리에 데이터베이스를 만듭니다. 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에는 이 위치에 대한 쓰기 권한이 있어야 합니다(예: 로컬 시스템 계정으로 로그온).  
   
  첫 번째 코드 목록을 복사하고 ISSHelper.h라는 파일로 붙여 넣습니다.  
   

@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 20ea97f50592c6d8abc51e64acb4a164ad0b95b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192972"
 ---
 # <a name="xml-system-stored-procedures"></a>XML 시스템 저장 프로시저
@@ -37,7 +37,7 @@ ms.locfileid: "63192972"
   
  **sp_xml_removedocument** 시스템 저장 프로시저를 호출하여 XML 문서의 내부 표현을 메모리에서 제거할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [OPENXML&#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql)   
  [OPENXML&#40;SQL Server&#41;](../xml/openxml-sql-server.md)  
   

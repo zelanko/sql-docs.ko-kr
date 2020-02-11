@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9fa238a639321e9464ca3de2cc074b516f7df1e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63246003"
 ---
 # <a name="specify-job-responses"></a>작업 응답 지정
@@ -43,9 +43,9 @@ ms.locfileid: "63246003"
 |-|-|  
 |**설명**|**항목**|  
 |운영자에게 작업 상태를 알리는 방법에 대해 설명합니다.|[Notify an Operator of Job Status](notify-an-operator-of-job-status.md)|  
-|Windows 애플리케이션 로그에 작업 상태를 기록하는 방법에 대해 설명합니다.|[Windows 응용 프로그램 로그에 작업 상태 쓰기](../../reporting-services/report-server/windows-application-log.md)|  
+|Windows 애플리케이션 로그에 작업 상태를 기록하는 방법에 대해 설명합니다.|[Windows 애플리케이션 로그에 작업 상태 쓰기](../../reporting-services/report-server/windows-application-log.md)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [이벤트 모니터링 및 응답](monitor-and-respond-to-events.md)  
   
   

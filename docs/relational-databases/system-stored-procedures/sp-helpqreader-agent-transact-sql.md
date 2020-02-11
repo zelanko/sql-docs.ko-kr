@@ -16,18 +16,18 @@ ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ea01bd3eb765a0a5f7a85245090b79579f347b3a
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771418"
 ---
-# <a name="sphelpqreaderagent-transact-sql"></a>sp_helpqreader_agent(Transact-SQL)
+# <a name="sp_helpqreader_agent-transact-sql"></a>sp_helpqreader_agent(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   큐 판독기 에이전트의 속성을 반환합니다. 이 저장 프로시저는 배포 데이터베이스의 배포자 또는 모든 데이터베이스의 게시자에서 실행됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,11 +43,11 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|에이전트의 ID입니다.|  
-|**name**|**nvarchar(100)**|에이전트의 이름입니다.|  
+|**a-id**|**int**|에이전트의 ID입니다.|  
+|**name**|**nvarchar (100)**|에이전트의 이름입니다.|  
 |**job_id**|**uniqueidentifier**|에이전트 작업의 고유한 ID입니다.|  
 |**job_login**|**nvarchar(512)**|배포 에이전트가 실행 되는 Windows 계정으로, *도메인*\\*사용자 이름*형식으로 반환 됩니다.|  
-|**job_password**|**sysname**|보안상의 **\* \* \* 이유로항상\* 값이 반환됩니다.\* \* \* \* \* \***|  
+|**job_password**|**sysname**|** \* \* 보안상 \* 의 \* \* 이유로 항상 \* 값이 반환 \* 됩니다. \* \* **|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -58,7 +58,7 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
 ## <a name="permissions"></a>사용 권한  
  *Frompublisher* 의 값이 **1**인 경우 게시자에서 **sysadmin** 고정 서버 역할의 멤버 또는 게시 데이터베이스에 대 한 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_helpqreader_agent**을 실행할 수 있습니다. 그렇지 않으면 배포자에서 **sysadmin** 고정 서버 역할의 멤버 또는 배포 데이터베이스에 대 한 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_helpqreader_agent**을 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [트랜잭션 게시에 대해 업데이트할 수 있는 구독 설정](../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
+## <a name="see-also"></a>참고 항목  
+ [트랜잭션 게시에 대 한 구독 업데이트 설정](../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
   

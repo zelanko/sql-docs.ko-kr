@@ -12,10 +12,10 @@ ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 35f5c02e7206c6a9117b31c9ca9b503fb7b6875f
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75557960"
 ---
 # <a name="import-domains-from-an-excel-file-in-knowledge-discovery---data-quality-services-dqs"></a>기술 자료 검색-DQS (Data Quality Services)에서 Excel 파일에서 도메인 가져오기
@@ -24,14 +24,14 @@ ms.locfileid: "75557960"
 
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] ) 기술 자료 검색 작업을 통해 Excel 파일에서 하나 이상의 도메인을 가져오는 방법에 대해 설명합니다. 가져오기 프로세스는 기술 자료 생성 프로세스를 간소화하여 시간과 노력을 절감합니다. Excel 파일이나 텍스트 파일에 데이터가 있는 사용자는 이 프로세스를 통해 해당 데이터를 포함한 기술 자료를 만들 수 있습니다. (기존 기술 자료의 도메인으로 값을 가져오는 방법에 대 한 자세한 내용은 [Excel 파일에서 도메인으로 값 가져오기](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md) 를 참조 하세요.) Excel 파일로의 내보내기는 지원 되지 않습니다.  
   
-##  <a name="BeforeYouBegin"></a>시작 하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a>사전  
+###  <a name="Prerequisites"></a> 필수 조건  
  Excel 파일에서 도메인을 가져오려면 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 가 설치된 컴퓨터에 Excel이 설치되어 있어야 합니다. 도메인 값이 포함된 Excel 파일을 생성한 상태여야 합니다( [How the import works](#How)참조). 그리고 도메인을 가져올 기술 자료를 만들고 열어 두어야 합니다.  
   
-###  <a name="Security"></a>보안  
+###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a>권한에  
+####  <a name="Permissions"></a> 권한  
  Excel 파일에서 도메인을 가져오려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
 ##  <a name="Import"></a>Excel 파일에서 기술 자료로 도메인 가져오기  
@@ -63,8 +63,7 @@ ms.locfileid: "75557960"
   
 8.  열을 선택한 다음 기존 도메인을 열에 매핑하거나 **도메인 만들기** 아이콘을 클릭하고 **도메인 만들기** 대화 상자에서 도메인을 만든 후 도메인을 열에 매핑하여 새 도메인을 만듭니다. 도메인의 데이터 형식이 열의 데이터 형식과 일치해야 합니다. 스프레드시트의 모든 열에 대해 위의 작업을 반복합니다.  
   
-9. 
-  **다음**을 클릭합니다.  
+9. **다음**을 클릭합니다.  
   
 10. 
   **검색** 페이지에서 **시작** 을 클릭하여 Excel 스프레드시트의 데이터를 분석합니다.  

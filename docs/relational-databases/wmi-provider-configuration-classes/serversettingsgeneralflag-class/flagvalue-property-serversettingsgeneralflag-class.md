@@ -18,10 +18,10 @@ ms.assetid: a32f0ef0-f5f6-4e71-96c7-7d4617dedf0e
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 5c3c329474b27507b3e2a3bf0796c66025391ffa
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660286"
 ---
 # <a name="flagvalue-property-serversettingsgeneralflag-class"></a>FlagValue 속성(ServerSettingsGeneralFlag 클래스)
@@ -36,15 +36,15 @@ object.FlagValue [= value]
 ```  
   
 ## <a name="parts"></a>부분  
- *object*  
+ *개체가*  
  서버 설정에 대한 일반 플래그를 나타내는 [ServerSettingsGeneralFlag 클래스](../../../relational-databases/wmi-provider-configuration-classes/serversettingsgeneralflag-class/serversettingsgeneralflag-class.md) 개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  플래그의 값을 지정하는 부울 값입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [서버 네트워크 프로토콜 및 네트워크 라이브러리 구성](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

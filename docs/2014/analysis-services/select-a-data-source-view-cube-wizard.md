@@ -1,5 +1,5 @@
 ---
-title: 데이터 원본 뷰 (큐브 마법사)를 선택 합니다. | Microsoft Docs
+title: 데이터 원본 뷰 선택 (큐브 마법사) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,27 +13,28 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 901d8e0adc923ec5f70fbf1097cc806b30318809
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069746"
 ---
 # <a name="select-a-data-source-view-cube-wizard"></a>데이터 원본 뷰 선택(큐브 마법사)
+  
   **데이터 원본 뷰 선택** 페이지를 사용하여 빈 큐브에 사용할 데이터 원본 뷰를 선택할 수 있습니다.  
   
 > [!NOTE]  
 >  이 페이지는 **생성 방법 선택** 페이지에서 **빈 큐브 만들기** 를 선택한 경우에만 나타납니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **데이터 원본 뷰**  
  빈 큐브에 사용할 데이터 원본 뷰를 선택합니다.  
   
- **없음**  
+ **없음을**  
  데이터 원본 뷰를 사용하지 않으려면 이 옵션을 선택합니다. 이 옵션은 데이터 원본 뷰를 나중에 생성하거나 측정값 그룹이 연결되어 있는 큐브만 사용하려는 경우에 유용합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [큐브 개체 &#40;Analysis Services-다차원 데이터&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>참고 항목  
+ [큐브 개체는 Analysis Services 다차원 데이터를 &#40;&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [다차원 모델의 큐브](multidimensional-models/cubes-in-multidimensional-models.md)   
  [다차원 모델의 차원](multidimensional-models/dimensions-in-multidimensional-models.md)  
   

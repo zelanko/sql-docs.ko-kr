@@ -1,5 +1,5 @@
 ---
-title: '시각적 개체에 대 한 ADO C++ #import 구문 인덱스 | Microsoft Docs'
+title: '#Import을 사용 하는 Visual C++ 구문 인덱스를 위한 ADO Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,24 +18,24 @@ ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 626cad2e57a725ac953b678e648e7e3f4ac21cf6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920960"
 ---
-# <a name="ado-for-visual-c-syntax-index-with-import"></a>시각적 개체에 대 한 ADO C++ #import 구문 인덱스
-이 인덱스를 기준으로 Microsoft Visual ADO 언어 참조에 대 한 상호 참조는 C++ 하며 **#import** 지시문입니다.  
+# <a name="ado-for-visual-c-syntax-index-with-import"></a>#Import를 사용 하는 Visual C++ 구문 인덱스에 대 한 ADO
+이 인덱스는 Microsoft Visual C++ 및 **#import** 지시문을 기반으로 하는 ADO 언어 참조에 대 한 상호 참조입니다.  
   
- 이 특정 인덱스를 사용 하 여 프로그램을 컴파일할 때 파생 된 합니다 **#import** ADO.dll에 대 한 지시문을 다시 포맷 된 \*생성 된.tlh 파일. 메서드, 속성 및 이벤트에 대 한 정보만 유지 되었습니다. 각 속성은 해당 나열 됩니다에 대 한 대체 구문을 선언 "`__declspec(property...)`" 지시문입니다.  
+ 이 특정 인덱스는 .tlh에 대 한 지시문을 사용 **#import** 하 여 프로그램을 컴파일한 다음 생성 된 파일 \*을 다시 포맷 하는 방법으로 파생 되었습니다. 메서드, 속성 및 이벤트에 대 한 정보만 보존 됩니다. 각 속성에 대해 선언 된 대체 구문은 해당 "`__declspec(property...)`" 지시문에 의해 나열 됩니다.  
   
- 읽을 수는 것이 좋습니다 [시각적 C++ ADO 프로그래밍](../../../ado/guide/appendixes/visual-c-ado-programming.md) 에 대 한 자세한 내용은 합니다.  
+ 자세한 내용은 [ADO 프로그래밍 Visual C++](../../../ado/guide/appendixes/visual-c-ado-programming.md) 를 참조 하는 것이 좋습니다.  
   
- 시각적 개체의 메서드 및 속성 구문 C++ 와 **#import** 지시문 다음 요소에 대해 나열 됩니다.  
+ 다음 요소에 대 한 **#import** 지시문이 포함 된 Visual C++의 메서드 및 속성 구문이 나열 됩니다.  
   
 -   [ADO 컬렉션](../../../ado/reference/ado-api/collections-visual-c-syntax-index-with-sharpimport.md)  
   
--   [명령 개체](../../../ado/reference/ado-api/command-visual-c-syntax-index-with-sharpimport.md)  
+-   [Command 개체](../../../ado/reference/ado-api/command-visual-c-syntax-index-with-sharpimport.md)  
   
 -   [연결 개체](../../../ado/reference/ado-api/connection-visual-c-syntax-index-with-sharpimport.md)  
   
@@ -45,9 +45,9 @@ ms.locfileid: "67920960"
   
 -   [Parameter 개체](../../../ado/reference/ado-api/parameter-visual-c-syntax-index-with-sharpimport.md)  
   
--   [속성 개체](../../../ado/reference/ado-api/property-visual-c-syntax-index-with-sharpimport.md)  
+-   [Property 개체](../../../ado/reference/ado-api/property-visual-c-syntax-index-with-sharpimport.md)  
   
--   [레코드 개체](../../../ado/reference/ado-api/record-visual-c-syntax-index-with-sharpimport.md)  
+-   [Record 개체](../../../ado/reference/ado-api/record-visual-c-syntax-index-with-sharpimport.md)  
   
 -   [레코드 집합 개체](../../../ado/reference/ado-api/recordset-visual-c-syntax-index-with-sharpimport.md)  
   
@@ -57,5 +57,5 @@ ms.locfileid: "67920960"
   
 -   [레코드 집합 이벤트](../../../ado/reference/ado-api/recordsetevents-visual-c-syntax-index-with-sharpimport.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [COM용 Visual C++ 구문 인덱스에 대한 ADO](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)

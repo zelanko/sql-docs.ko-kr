@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 ms.openlocfilehash: fc280fa541e2a6b5ea984086d694ffdd3f7c39a8
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056538"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Data Migration Assistant에 대 한 설정 구성
@@ -29,7 +29,7 @@ Dma .exe .config 파일에서 구성 값을 설정 하 여 Data Migration Assist
 
 - 데스크톱 응용 프로그램
 
-  % ProgramFiles%\\Microsoft Data Migration Assistant\\를 실행 합니다.
+  % ProgramFiles%\\Microsoft Data Migration Assistant\\ping.exe .config
 
 - 명령줄 유틸리티
 
@@ -39,7 +39,7 @@ Dma .exe .config 파일에서 구성 값을 설정 하 여 Data Migration Assist
 
 ## <a name="number-of-databases-to-assess-in-parallel"></a>병렬로 평가할 데이터베이스 수
 
-Data Migration Assistant는 여러 데이터베이스를 병렬로 평가 합니다. 평가 하는 동안 데이터베이스 스키마를 이해 하기 위해 dacpac (데이터 계층 응용 프로그램)를 추출 Data Migration Assistant 합니다. 동일한 서버에 있는 여러 데이터베이스를 병렬로 평가 하는 경우이 작업의 시간이 초과 될 수 있습니다. 
+Data Migration Assistant는 여러 데이터베이스를 병렬로 평가 합니다. 평가 하는 동안 데이터베이스 스키마를 이해 하기 위해 dacpac (데이터 계층 응용 프로그램)를 추출 Data Migration Assistant 합니다.동일한 서버에 있는 여러 데이터베이스를 병렬로 평가 하는 경우이 작업의 시간이 초과 될 수 있습니다. 
 
 Data Migration Assistant v2.0부터 parallelDatabases 구성 값을 설정 하 여이를 제어할 수 있습니다. 기본값은 8입니다.
 
@@ -86,15 +86,15 @@ Data Migration Assistant v2.0부터이 문제가 발생 하는 경우 parallelDa
 
 - commandTimeout
 
-   이 매개 변수는 IDbCommand CommandTimeout 속성을 *초*단위로 설정 합니다. (기본값 = 60)
+   이 매개 변수는 IDbCommand CommandTimeout 속성을 *초*단위로 설정 합니다.(기본값 = 60)
 
 - databaseLockTimeout
 
-   이 매개 변수는 [LOCK\_timeout timeout\_period](../t-sql/statements/set-lock-timeout-transact-sql.md) ( *밀리초)* 를 설정 하는 것과 같습니다. (기본값 = 5000)
+   이 매개 변수는 [잠금\_제한 시간 제한\_기간](../t-sql/statements/set-lock-timeout-transact-sql.md) *(밀리초)* 을 설정 하는 것과 같습니다.(기본값 = 5000)
 
 - maxDataReaderDegreeOfParallelism
 
-  이 매개 변수는 사용할 SQL 연결 풀 연결 수를 설정 합니다. (기본값 = 8)
+  이 매개 변수는 사용할 SQL 연결 풀 연결 수를 설정 합니다.(기본값 = 8)
 
 ```
 <advisorGroup>

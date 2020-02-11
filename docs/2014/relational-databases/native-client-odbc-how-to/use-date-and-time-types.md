@@ -1,5 +1,5 @@
 ---
-title: 사용 하 여 날짜 및 시간 형식 | Microsoft Docs
+title: 날짜 및 시간 형식 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fc57a2c286c9870421a223ce6a14ef201bef0c3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68205504"
 ---
 # <a name="use-date-and-time-types"></a>날짜 및 시간 형식 사용
-  이 예제에서는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에 추가된 날짜/시간 데이터 구조체를 초기화하는 방법을 보여 줍니다. 그런 다음 입력 값을 준비하고, 매개 변수를 바인딩하고, 쿼리를 실행합니다. 이러한 형식을 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [날짜 및 시간 기능 향상 &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)합니다.  
+  이 예제에서는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에 추가된 날짜/시간 데이터 구조체를 초기화하는 방법을 보여 줍니다. 그런 다음 입력 값을 준비하고, 매개 변수를 바인딩하고, 쿼리를 실행합니다. 이러한 유형을 사용 하는 방법에 대 한 자세한 내용은 [ODBC&#41;&#40;날짜 및 시간 향상 ](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)을 참조 하세요.  
   
 ## <a name="example"></a>예제  
  DateTime이라는 ODBC 데이터 원본이 필요합니다. DateTime의 기본 데이터베이스는 tempdb입니다. 이 데이터 원본은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에 대한 ODBC 드라이버를 기반으로 해야 합니다.  

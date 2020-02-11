@@ -14,17 +14,17 @@ ms.assetid: 958a179c-97d9-4717-8d06-d33b715a9773
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4d985786e4743b8bcc691cf6888c24153f5cb5f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019058"
 ---
 # <a name="cursor-library-code-example"></a>커서 라이브러리 코드 예제
 > [!IMPORTANT]  
->  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는이 기능을 사용 하지 말고 현재이 기능을 사용 하는 응용 프로그램은 수정 합니다. 드라이버의 커서 기능을 사용 하는 것이 좋습니다.  
+>  이 기능은 이후 버전의 Windows에서 제거 될 예정입니다. 새 개발 작업에서는이 기능을 사용 하지 않도록 하 고 현재이 기능을 사용 하는 응용 프로그램은 수정 하십시오. 드라이버의 커서 기능을 사용 하는 것이 좋습니다.  
   
- 다음 예에서는 ORDERS 테이블의 각 주문 ID, 시작 날짜 및 상태를 검색 하려면 커서 라이브러리를 사용 합니다. 그러면 20 행의 데이터가 표시 됩니다. 사용자가이 데이터를 업데이트 하는 경우 코드를 행 집합 버퍼 업데이트 및 위치 지정된 update 문을 실행 합니다. 마지막으로 스크롤할 방향에 대 한 사용자 메시지를 표시 하 고 프로세스를 반복 합니다.  
+ 다음 예에서는 커서 라이브러리를 사용 하 여 ORDERS 테이블에서 각 주문의 ID, open date 및 status를 검색 합니다. 그런 다음 20 개의 데이터 행을 표시 합니다. 사용자가이 데이터를 업데이트 하는 경우 코드는 행 집합 버퍼를 업데이트 하 고 위치 지정 update 문을 실행 합니다. 마지막으로 스크롤 하는 방향을 사용자에 게 묻는 메시지를 표시 하 고 프로세스를 반복 합니다.  
   
 ```  
 #define ROWS 20  

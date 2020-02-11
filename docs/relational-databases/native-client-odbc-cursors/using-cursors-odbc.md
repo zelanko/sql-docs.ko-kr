@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 59a7e18c69ffa8d928dc38eaefcaf89249c18b38
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73784082"
 ---
 # <a name="using-cursors-odbc"></a>커서 사용(ODBC)
@@ -49,7 +49,9 @@ ms.locfileid: "73784082"
 |위치 지정 업데이트|UPDATE 또는 DELETE의 WHERE CURRENT OF 절|**SQLSetPos**|  
 |커서 닫기|닫기 *cursor_name* 할당 취소|[SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md)|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 구현된 서버 커서는 ODBC 커서 모델의 기능을 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 서버 커서를 사용하여 ODBC API의 커서 기능을 지원합니다.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 구현된 서버 커서는 ODBC 커서 모델의 기능을 지원합니다. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 서버 커서를 사용하여 ODBC API의 커서 기능을 지원합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -61,17 +63,17 @@ ms.locfileid: "73784082"
   
 -   [커서 속성](../../relational-databases/native-client-odbc-cursors/properties/cursor-properties.md)  
   
--   [커서 프로그래밍 정보 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc.md)  
+-   [ODBC&#41;&#40;커서 프로그래밍 정보](../../relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc.md)  
   
--   [행 스크롤 및 페치](../../relational-databases/native-client-odbc-cursors/scrolling-and-fetching-rows.md)  
+-   [행 스크롤 및 인출](../../relational-databases/native-client-odbc-cursors/scrolling-and-fetching-rows.md)  
   
--   [위치 업데이트 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-cursors/positioned-updates-odbc.md)  
+-   [ODBC&#41;&#40;위치 지정 업데이트](../../relational-databases/native-client-odbc-cursors/positioned-updates-odbc.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [ &#40;ODBC&#41;  SQL Server Native Client](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
- [CLOSE&#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
+ [ODBC&#41;SQL Server Native Client &#40;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
  [커서](../../relational-databases/cursors.md)   
- [DEALLOCATE&#40;Transact-SQL&#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
+ [DEALLOCATE &#40;Transact-SQL&#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
  [DECLARE CURSOR&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
  [FETCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)   
  [OPEN&#40;Transact-SQL&#41;](../../t-sql/language-elements/open-transact-sql.md)  

@@ -15,14 +15,14 @@ ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bde93002771c219b6358cd1ecd1325fd77208d8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932243"
 ---
 # <a name="maxrecords-property-example-vc"></a>MaxRecords 속성 예제(VC++)
-이 예제에서는 합니다 [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) 를 엽니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 에서 10 개의 가장 비싼 책 제목을 포함 하는 ***제목*** 테이블.  
+이 예에서는 [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) 속성을 사용 하 여 ***titles*** 테이블에서 가장 비싼 10 개의 제목이 포함 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 을 엽니다.  
   
 ## <a name="example"></a>예제  
   
@@ -165,17 +165,17 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **가격으로 상위 10 개의 제목:**  
-**하지만 사용자 친숙 한이? ---22.95**  
-**Phobic 및 비 Phobic 개인용 컴퓨터: 동작의 변형을---21.59**  
-**Onions, Leeks, 및 마늘: ---20.95 지중해의 요리 비밀**  
-**실리콘밸리---20.00의 비밀**  
-**사용 중인 경영진의 데이터베이스 가이드---19.99**  
-**컴퓨터---19.99에 대 한 직접 강연**  
-**실리콘밸리 Gastronomic 처리---19.99**  
-**장기적인된 데이터 Deprivation: 네 가지 사례 연구---19.99**  
-**Sushi, 누구나? ---14.99**  
-**50 년 Buckingham Palace 사용---11.95에**   
-## <a name="see-also"></a>관련 항목  
+ **가격 별 상위 10 개 제목:**  
+**하지만 사용자에 게 친숙 한가요? ---22.95**  
+**컴퓨터 Phobic 및 비 Phobic 개인: 동작 변형---21.59**  
+**Onions, Leeks 및 마늘: 지중해---20.95의 요리 비밀**  
+**실리콘 유역---20.00의 비밀**  
+**사용 중인 임원의 데이터베이스 가이드---19.99**  
+**컴퓨터---19.99에 대 한 직접적인 통신**  
+**실리콘 유역 Gastronomic는---19.99를 처리 합니다.**  
+**장기간 데이터 Deprivation: 4 대 사례 연구---19.99**  
+**초밥, 누구 인가요? ---14.99**  
+**50 년 Buckingham 왕궁 Kitchens---11.95**   
+## <a name="see-also"></a>참고 항목  
  [MaxRecords 속성 (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

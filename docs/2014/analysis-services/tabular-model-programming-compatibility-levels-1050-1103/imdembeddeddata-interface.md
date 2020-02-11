@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 83e46e9b62359623093415ca456ecadd72f847cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62757784"
 ---
 # <a name="imdembedded-interface"></a>IMDEmbedded 인터페이스
@@ -30,18 +30,22 @@ ms.locfileid: "62757784"
   
 -   현재 포함된 작업을 취소합니다.  
   
--   포함된 개체를 저장하기 위해 스트림의 예상 크기(바이트)를 가져옵니다. `IPersistStream`에서 상속됩니다.  
+-   포함된 개체를 저장하기 위해 스트림의 예상 크기(바이트)를 가져옵니다. 
+  `IPersistStream`에서 상속됩니다.  
   
--   포함된 데이터베이스가 마지막으로 저장된 후에 변경되었는지 여부를 확인합니다. `IPersistStream`에서 상속됩니다.  
+-   포함된 데이터베이스가 마지막으로 저장된 후에 변경되었는지 여부를 확인합니다. 
+  `IPersistStream`에서 상속됩니다.  
   
--   포함된 데이터베이스를 로컬 또는 in-process 엔진에 로드합니다. `IPersistStream`에서 상속됩니다.  
+-   포함된 데이터베이스를 로컬 또는 in-process 엔진에 로드합니다. 
+  `IPersistStream`에서 상속됩니다.  
   
--   로컬 또는 in-process 데이터베이스를 컨테이너 문서의 포함된 스트림에 저장합니다. `IPersistStream`에서 상속됩니다.  
+-   로컬 또는 in-process 데이터베이스를 컨테이너 문서의 포함된 스트림에 저장합니다. 
+  `IPersistStream`에서 상속됩니다.  
   
 ## <a name="reference"></a>참조  
- 다음 문서를 참조 합니다 `IMDEmbedded` 인터페이스에 제공 된 대로 **msmd.h** 헤더 파일입니다.  
+ 다음 참조는 **상수가 msmd.h** 헤더 `IMDEmbedded` 파일에 표시 된 인터페이스를 문서화 합니다.  
   
-### <a name="source-file-pxoembeddeddataidl"></a>소스 파일: PXOEmbeddedData.idl  
+### <a name="source-file-pxoembeddeddataidl"></a>원본 파일: PXOEmbeddedData.idl  
   
 ```  
 [  
@@ -88,7 +92,7 @@ HRESULT GetStreamIdentifier (
  *out_pbstrStreamId*  
  스트림 식별자의 위치를 지정합니다.  
   
-#### <a name="return-value"></a>반환 값  
+#### <a name="return-value"></a>Return Value  
  `S_OK`  
  스트림 식별자가 반환되었습니다.  
   
@@ -98,12 +102,12 @@ HRESULT GetStreamIdentifier (
  `E_FAIL`  
  스트림 식별자에 액세스하는 동안 오류가 발생했습니다.  
   
-#### <a name="remarks"></a>Remarks  
+#### <a name="remarks"></a>설명  
  현재 연결에 포함된 데이터베이스가 포함되어 있는지 확인하려면 OLE DB 연결 속성에서 DBPROP_MSMD_EMBEDDED_DATA 속성 값을 확인해야 합니다.  
   
  DBPROP_MSMD_EMBEDDED_DATA의 가능한 값은 다음과 같습니다.  
   
-|이름|값|정의|  
+|속성|값|정의|  
 |----------|-----------|----------------|  
 |DBPROPVAL_EMBED_NONE|0x00|포함된 데이터베이스를 사용할 수 없습니다.|  
 |DBPROPVAL_EMBED_EMBEDDED|0x01|현재 애플리케이션에 포함된 데이터베이스가 포함되어 있습니다.|  
@@ -132,7 +136,7 @@ HRESULT SetContainerURL (
  *in_bstrURL*  
  포함하는 문서의 URL을 지정합니다.  
   
-#### <a name="return-value"></a>반환 값  
+#### <a name="return-value"></a>Return Value  
  `S_OK`  
  컨테이너 URL을 설정했습니다.  
   
@@ -162,7 +166,7 @@ HRESULT SetHosted (
  *in_ftHosted*  
  호출자가 서비스 애플리케이션(예: IIS)의 호스팅된 환경에 있으면 TRUE입니다.  
   
-#### <a name="return-value"></a>반환 값  
+#### <a name="return-value"></a>Return Value  
  `S_OK`  
  플래그를 설정했습니다.  
   
@@ -192,7 +196,7 @@ HRESULT SetTempDirPath (
  *in_bstrPath*  
  임시 파일에 대한 호스트 애플리케이션에서 사용하는 경로입니다.  
   
-#### <a name="return-value"></a>반환 값  
+#### <a name="return-value"></a>Return Value  
  `S_OK`  
  임시 파일 디렉터리를 설정했습니다.  
   
@@ -219,7 +223,7 @@ HRESULT Cancel ( void )
 #### <a name="parameters"></a>매개 변수  
  없음  
   
-#### <a name="return-value"></a>반환 값  
+#### <a name="return-value"></a>Return Value  
  `S_OK`  
  작업을 취소했습니다.  
   
@@ -245,13 +249,14 @@ HRESULT GetSizeMax (
 ```  
   
 #### <a name="description"></a>Description  
- 포함된 개체를 저장하기 위해 스트림의 예상 크기(바이트)를 가져옵니다. `IPersistStream`에서 상속됩니다.  
+ 포함된 개체를 저장하기 위해 스트림의 예상 크기(바이트)를 가져옵니다. 
+  `IPersistStream`에서 상속됩니다.  
   
 #### <a name="parameters"></a>매개 변수  
  *in_bstrPath*  
  포함된 데이터베이스 이미지의 예상 크기(바이트)입니다.  
   
-#### <a name="return-value"></a>반환 값  
+#### <a name="return-value"></a>Return Value  
  `S_OK`  
  크기를 가져왔습니다.  
   
@@ -265,10 +270,11 @@ HRESULT IsDirty ( void )
 ```  
   
 #### <a name="description"></a>Description  
- 포함된 데이터베이스가 마지막으로 저장된 후에 변경되었는지 여부를 확인합니다. `IPersistStream`에서 상속됩니다.  
+ 포함된 데이터베이스가 마지막으로 저장된 후에 변경되었는지 여부를 확인합니다. 
+  `IPersistStream`에서 상속됩니다.  
   
 #### <a name="parameters"></a>매개 변수  
- none  
+ 없음  
   
 #### <a name="return-values"></a>반환 값  
  `S_OK`  
@@ -289,7 +295,8 @@ HRESULT Load (
 ```  
   
 #### <a name="description"></a>Description  
- 포함된 데이터베이스를 로컬 또는 in-process 엔진에 로드합니다. `IPersistStream`에서 상속됩니다.  
+ 포함된 데이터베이스를 로컬 또는 in-process 엔진에 로드합니다. 
+  `IPersistStream`에서 상속됩니다.  
   
 #### <a name="parameters"></a>매개 변수  
  *in_pStm*  
@@ -315,7 +322,8 @@ HRESULT Save (
 ```  
   
 #### <a name="description"></a>Description  
- 로컬 또는 in-process 데이터베이스를 컨테이너 문서의 포함된 스트림에 저장합니다. `IPersistStream`에서 상속됩니다.  
+ 로컬 또는 in-process 데이터베이스를 컨테이너 문서의 포함된 스트림에 저장합니다. 
+  `IPersistStream`에서 상속됩니다.  
   
 #### <a name="parameters"></a>매개 변수  
  *in_pStm*  

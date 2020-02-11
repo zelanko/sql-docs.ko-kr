@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2141a4f8ccc6e34ec3010ad3ce8e8e3789d09132
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892749"
 ---
 # <a name="import-dmx"></a>IMPORT(DMX)
@@ -28,7 +28,7 @@ IMPORT FROM <filename>
 ```  
   
 ## <a name="arguments"></a>인수  
- *filename*  
+ *이름도*  
  가져올 파일의 이름과 위치가 들어 있는 문자열입니다.  
   
 ## <a name="remarks"></a>설명  
@@ -43,11 +43,11 @@ IMPORT FROM <filename>
 IMPORT FROM 'C:\TEMP\Association_NEW.dmb'  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 마이닝 확장 &#40;DMX&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
  [데이터 마이닝 확장 &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
  [데이터 마이닝 확장 &#40;DMX&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)   
- [DMX &#40;내보내기&#41;](../dmx/export-dmx.md)   
+ [DMX &#40;&#41;내보내기](../dmx/export-dmx.md)   
  [데이터 마이닝 개체 내보내기 및 가져오기](https://docs.microsoft.com/analysis-services/data-mining/export-and-import-data-mining-objects)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.sysmessages (TRANSACT-SQL) | Microsoft Docs
+title: sysmessages (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,30 +21,32 @@ ms.assetid: 44bee7d9-7517-4071-99be-8b36f979c7cc
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 53f7abe7603430950f14ecad039419f8435cba28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68076555"
 ---
 # <a name="syssysmessages-transact-sql"></a>sys.sysmessages(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]이 반환할 수 있는 각 시스템 오류 또는 경고당 한 개의 행을 포함합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 오류에 관한 설명을 사용자의 화면에 표시합니다.  
+  
+  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]이 반환할 수 있는 각 시스템 오류 또는 경고당 한 개의 행을 포함합니다. 
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 오류에 관한 설명을 사용자의 화면에 표시합니다.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**error**|**int**|고유한 오류 번호입니다.|  
-|**severity**|**tinyint**|오류의 심각도 수준입니다.|  
+|**메시지가**|**int**|고유한 오류 번호입니다.|  
+|**등급**|**tinyint**|오류의 심각도 수준입니다.|  
 |**dlevel**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**description**|**nvarchar(255)**|오류에 대한 설명입니다. 매개 변수는 자리 표시자로 대체됩니다.|  
+|**한**|**nvarchar(255)**|오류에 대한 설명입니다. 매개 변수는 자리 표시자로 대체됩니다.|  
 |**msglangid**|**smallint**|시스템 메시지 그룹 ID입니다.|  
   
-## <a name="see-also"></a>관련 항목  
- [시스템 테이블을 시스템 뷰로 매핑 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [호환성 뷰&#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [시스템 테이블을 시스템 뷰로 매핑 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;호환성 뷰](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

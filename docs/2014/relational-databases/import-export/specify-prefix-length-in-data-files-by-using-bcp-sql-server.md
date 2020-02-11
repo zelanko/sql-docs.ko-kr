@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e5d91c82d892888d2e6edde5615ba05a2a9ebf3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011763"
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>bcp를 사용하여 데이터 파일에 접두사 길이 지정(SQL Server)
@@ -46,7 +46,7 @@ ms.locfileid: "66011763"
 > [!NOTE]  
 >  필드를 내보낼 때 접두사 길이 프롬프트에 제공되는 기본값은 해당 필드에 가장 효과적인 접두사 길이를 나타냅니다.  
   
- Null 값이 빈 필드로 나타납니다. 필드가 비어 있음(NULL)을 나타내기 위해 필드 접두사에 -1을 포함하므로 최소 1바이트가 필요합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블 열에서 Null 값을 허용하는 경우 해당 열은 파일 저장 유형에 따라 1이상의 접두사 길이가 필요합니다.  
+ Null 값이 빈 필드로 나타납니다. 필드가 비어 있음(NULL)을 나타내기 위해 필드 접두사에 -1을 포함하므로 최소 1바이트가 필요합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블 열에서 Null 값을 허용하는 경우 해당 열은 파일 스토리지 유형에 따라 1이상의 접두사 길이가 필요합니다.  
   
  대량 내보내기한 데이터를 네이티브 데이터 형식이나 문자 형식으로 저장하는 경우 다음 표에서 설명하는 접두사 길이를 사용하십시오.  
   
@@ -56,11 +56,11 @@ ms.locfileid: "66011763"
 |`varchar`|2|2|2|2|  
 |`nchar`|2|2|2|2|  
 |`nvarchar`|2|2|2|2|  
-|`text` <sup>1</sup>|4|4|4|4|  
-|`ntext` <sup>1</sup>|4|4|4|4|  
+|`text`<sup>1</sup>|4|4|4|4|  
+|`ntext`<sup>1</sup>|4|4|4|4|  
 |`binary`|2|2|2|2|  
 |`varbinary`|2|2|2|2|  
-|`image` <sup>1</sup>|4|4|4|4|  
+|`image`<sup>1</sup>|4|4|4|4|  
 |`datetime`|0|1|0|1|  
 |`smalldatetime`|0|1|0|1|  
 |`decimal`|1|1|1|1|  
@@ -81,19 +81,21 @@ ms.locfileid: "66011763"
 |UDT(사용자 정의 데이터 형식)|8|8|8|8|  
 |XML|8|8|8|8|  
   
- <sup>1</sup> 는 `ntext`를 `text`, 및 `image` 데이터 형식의 이후 버전에서 제거 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 향후 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 애플리케이션은 수정하세요. 대신 `nvarchar(max)`, `varchar(max)` 및 `varbinary(max)`를 사용해야 합니다.  
+ <sup>1</sup> `ntext`, `text`및 `image` 데이터 형식은 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거 될 예정입니다. 향후 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 애플리케이션은 수정하세요. 대신 `nvarchar(max)`, `varchar(max)` 및 `varbinary(max)`를 사용해야 합니다.  
   
-##  <a name="PrefixLengthsImport"></a> 대량 가져오기의 접두사 길이  
- 데이터를 대량 가져올 때 접두사 길이는 해당 데이터 파일이 원래 작성될 때 지정된 값입니다. **bcp** 을 사용하여 데이터 파일을 만들지 않은 경우에는 길이 접두사 문자가 없을 수도 있습니다. 이 경우에는 접두사 길이에 0을 지정합니다.  
+##  <a name="PrefixLengthsImport"></a>대량 가져오기의 접두사 길이  
+ 데이터를 대량 가져올 때 접두사 길이는 해당 데이터 파일이 원래 작성될 때 지정된 값입니다. 
+  **bcp** 을 사용하여 데이터 파일을 만들지 않은 경우에는 길이 접두사 문자가 없을 수도 있습니다. 이 경우에는 접두사 길이에 0을 지정합니다.  
   
 > [!NOTE]  
->  **bcp**를 사용하여 만들지 않은 데이터 파일에 접두사 길이를 지정하려면 이 항목의 앞부분에 나오는 [대량 내보내기의 접두사 길이](#PrefixLengthsExport)에 제공되어 있는 길이를 사용하세요.  
+>  
+  **bcp**를 사용하여 만들지 않은 데이터 파일에 접두사 길이를 지정하려면 이 항목의 앞부분에 나오는 [대량 내보내기의 접두사 길이](#PrefixLengthsExport)에 제공되어 있는 길이를 사용하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [bcp 유틸리티](../../tools/bcp-utility.md)   
  [데이터 형식&#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
- [bcp를 사용하여 필드 길이 지정&#40;SQL Server&#41;](specify-field-length-by-using-bcp-sql-server.md)   
- [필드 및 행 종결자 지정&#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)   
- [bcp를 사용하여 파일 저장 유형 지정&#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
+ [Bcp &#40;SQL Server를 사용 하 여 필드 길이를 지정&#41;](specify-field-length-by-using-bcp-sql-server.md)   
+ [필드 및 행 종결자를 지정 하 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)   
+ [Bcp &#40;SQL Server를 사용 하 여 File Storage 유형을 지정&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
   

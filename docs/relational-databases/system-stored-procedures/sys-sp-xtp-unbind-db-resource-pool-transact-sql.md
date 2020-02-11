@@ -1,5 +1,5 @@
 ---
-title: sys.sp_xtp_unbind_db_resource_pool (TRANSACT-SQL) | Microsoft Docs
+title: sys. sp_xtp_unbind_db_resource_pool (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,18 +21,18 @@ ms.assetid: 695a796d-087e-4bc8-99d0-ddc342604c75
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: be0f8e7b410abb2e9027ce0b773d1a1ad5a14465
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68041004"
 ---
-# <a name="sysspxtpunbinddbresourcepool-transact-sql"></a>sys.sp_xtp_unbind_db_resource_pool(Transact-SQL)
+# <a name="syssp_xtp_unbind_db_resource_pool-transact-sql"></a>sys.sp_xtp_unbind_db_resource_pool(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   이 시스템 프로시저는 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 메모리 사용량 추적을 위해 데이터베이스와 풀 리소스 간의 기존 바인딩을 제거합니다.  지정된 데이터베이스에 현재 바인딩된 풀이 없으면 성공이 반환됩니다. 데이터베이스가 바인딩 해제되면 메모리 최적화 개체에 대해 이전에 할당된 메모리가 이전 리소스 풀에 할당된 상태로 유지됩니다. 할당된 메모리를 해제하려면 데이터베이스를 다시 시작해야 합니다. 데이터베이스가 리소스 풀에서 바인딩 해제되면 DEFAULT 리소스 풀에 바인딩됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -65,12 +65,13 @@ sys.sp_xtp_unbind_db_resource_pool 'Hekaton_DB'
   
 ## <a name="requirements"></a>요구 사항  
   
--   `database_name`에서 지정하는 데이터베이스에 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 리소스 풀에 대한 바인딩이 있어야 합니다.  
+-   
+  `database_name`에서 지정하는 데이터베이스에 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 리소스 풀에 대한 바인딩이 있어야 합니다.  
   
 -   CONTROL SERVER 권한이 필요합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스를 리소스 풀에 바인딩하는 방법에 대한 지침은](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [sys.sp_xtp_bind_db_resource_pool &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)  
+ [sys.sp_xtp_bind_db_resource_pool&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)  
   
   

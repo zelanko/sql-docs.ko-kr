@@ -10,10 +10,10 @@ ms.assetid: c3d485f8-867c-4aa2-a90d-f38fda192534
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a5a8857330b1a4fa532e9e0f43b4596cdf34b48c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75254770"
 ---
 # <a name="multi-lingual-and-global-deployments-master-data-services"></a>다국어 및 글로벌 배포(Master Data Services)
@@ -26,7 +26,7 @@ ms.locfileid: "75254770"
 ## <a name="how-languages-are-used"></a>언어 사용 방식  
  다음 표에서는 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 구성 요소 및 도구의 언어 지원에 대해 설명합니다.  
   
-|구성 요소 또는 도구|설명|  
+|구성 요소 또는 도구|Description|  
 |-----------------------|-----------------|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]설치|
   [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 애플리케이션이 설치 언어와 다른 언어로 사용 및 지원되도록 하려면 영어 설치 프로그램을 선택합니다. 자세한 내용은 아래의 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 설명을 참조하십시오.|  

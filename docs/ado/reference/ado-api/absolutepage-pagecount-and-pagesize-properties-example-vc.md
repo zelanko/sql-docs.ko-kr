@@ -1,5 +1,5 @@
 ---
-title: AbsolutePage, PageCount, PageSize 속성 예제 (VC + +) | Microsoft Docs
+title: AbsolutePage, PageCount 및 PageSize 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 38ca4e1b-c109-4fba-b590-bdd6994f770e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a14b6ad09d33fd3e856065919dff52da99911fa7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921841"
 ---
-# <a name="absolutepage-pagecount-and-pagesize-properties-example-vc"></a>AbsolutePage, PageCount, PageSize 속성 예제 (VC + +)
-이 예제에서는 합니다 [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)를 [PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md), 및 [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) 속성 이름을 표시에서 날짜를 고용 하는 ***직원*** 테이블, 한 번에 5 개 레코드입니다.  
+# <a name="absolutepage-pagecount-and-pagesize-properties-example-vc"></a>AbsolutePage, PageCount 및 PageSize 속성 예제 (VC + +)
+이 예에서는 [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md), [PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)및 [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) 속성을 사용 하 여 ***Employee*** 테이블에서 이름 및 채용 날짜를 표시 하 고 한 번에 5 개의 레코드를 고용 합니다.  
   
 ```  
 // BeginAbsolutePageCpp.cpp  
@@ -178,7 +178,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [AbsolutePage 속성 (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
  [PageCount 속성 (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)   
  [PageSize 속성 (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)   

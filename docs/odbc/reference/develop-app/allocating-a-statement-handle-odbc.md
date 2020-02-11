@@ -1,5 +1,5 @@
 ---
-title: ODBC 문 핸들 할당 | Microsoft Docs
+title: 문 핸들을 할당 하는 중 ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 4ce3b446-34ab-46dc-96e5-f40ec95c267e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d50b0a31aed4935c805ca30620575ccff70d4a0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68077211"
 ---
 # <a name="allocating-a-statement-handle-odbc"></a>명령문 핸들 ODBC 할당
-응용 프로그램에서 문을 실행 하려면, 먼저 다음과 같이 문 핸들을 할당 해야 합니다.  
+응용 프로그램은 문을 실행 하기 전에 다음과 같이 문 핸들을 할당 해야 합니다.  
   
-1.  응용 프로그램 HSTMT 형식의 변수를 선언합니다. 그런 다음 호출 **SQLAllocHandle** 하 고이 변수는 문 및 호출 하 여 옵션을 할당 하는 연결의 핸들의 주소를 전달 합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+1.  응용 프로그램은 HSTMT 형식의 변수를 선언 합니다. 그런 다음 **SQLAllocHandle** 를 호출 하 고이 변수의 주소, 문을 할당할 연결의 핸들 및 SQL_HANDLE_STMT 옵션을 전달 합니다. 다음은 그 예입니다.  
   
     ```  
     SQLHSTMT hstmt1;  
@@ -33,10 +33,10 @@ ms.locfileid: "68077211"
     SQLAllocHandle(SQL_HANDLE_STMT, hdbc1, &hstmt1);  
     ```  
   
-2.  드라이버 관리자는 문 및 호출 하는 방법에 대 한 정보를 저장 하는 구조체를 할당 **SQLAllocHandle** 호출 하 여 옵션을 사용 하 여 합니다.  
+2.  드라이버 관리자는 문에 대 한 정보를 저장 하 고 SQL_HANDLE_STMT 옵션을 사용 하 여 드라이버에서 **SQLAllocHandle** 를 호출 하는 구조를 할당 합니다.  
   
-3.  드라이버는 문에 대 한 정보를 저장 하는 고유한 구조를 할당 하 고 드라이버 관리자를 드라이버 문 핸들을 반환 합니다.  
+3.  드라이버는 문에 대 한 정보를 저장 하 고 드라이버 문 핸들을 드라이버 관리자에 반환 하는 자체 구조를 할당 합니다.  
   
-4.  드라이버 관리자는 응용 프로그램 변수에서 응용 프로그램에 드라이버 관리자 문 핸들을 반환합니다.  
+4.  드라이버 관리자는 응용 프로그램 변수의 드라이버 관리자 문 핸들을 응용 프로그램에 반환 합니다.  
   
- 문 핸들에는 ODBC 함수를 호출할 때 사용 하는 문을 식별 합니다. 문 핸들에 대 한 자세한 내용은 참조 하세요. [문 핸들](../../../odbc/reference/develop-app/statement-handles.md)합니다.
+ 문 핸들은 ODBC 함수를 호출할 때 사용할 문을 식별 합니다. 문 핸들에 대 한 자세한 내용은 [문 핸들](../../../odbc/reference/develop-app/statement-handles.md)을 참조 하십시오.

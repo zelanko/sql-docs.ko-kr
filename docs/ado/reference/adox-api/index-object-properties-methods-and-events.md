@@ -13,17 +13,17 @@ ms.assetid: 6f4e92e1-e7cb-45d8-aa86-cd749474f825
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ffd5987d79ce539baf536a3221ebc1bb5b470a15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966062"
 ---
 # <a name="index-object-properties-methods-and-events"></a>인덱스 개체 속성, 메서드 및 이벤트
 ## <a name="propertiescollections"></a>속성/컬렉션  
  [Clustered 속성](../../../ado/reference/adox-api/clustered-property-adox.md)  
   
- [열 컬렉션](../../../ado/reference/adox-api/columns-collection-adox.md)  
+ [Columns 컬렉션](../../../ado/reference/adox-api/columns-collection-adox.md)  
   
  [IndexNulls 속성](../../../ado/reference/adox-api/indexnulls-property-adox.md)  
   
@@ -33,7 +33,7 @@ ms.locfileid: "67966062"
   
  [속성 컬렉션](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
- [고유한 속성](../../../ado/reference/adox-api/unique-property-adox.md)  
+ [Unique 속성](../../../ado/reference/adox-api/unique-property-adox.md)  
   
 ## <a name="methods"></a>메서드  
  없음  
@@ -41,5 +41,5 @@ ms.locfileid: "67966062"
 ## <a name="events"></a>이벤트  
  없음  
   
-## <a name="see-also"></a>관련 항목  
- [Index 개체(ADOX)](../../../ado/reference/adox-api/index-object-adox.md)
+## <a name="see-also"></a>참고 항목  
+ [인덱스 개체(ADOX)](../../../ado/reference/adox-api/index-object-adox.md)

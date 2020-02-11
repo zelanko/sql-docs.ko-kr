@@ -1,5 +1,5 @@
 ---
-title: 상호 Kerberos 인증 가져오기 | Microsoft 문서
+title: 상호 Kerberos 인증 가져오기 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9158544f40a18ff6dce97483be57e645e15a57d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200415"
 ---
 # <a name="get-mutual-kerberos-authentication"></a>상호 Kerberos 인증 가져오기
   이 예제에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에서 ODBC를 사용하여 상호 Kerberos 인증을 가져오는 방법을 보여 줍니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에서는 이 예제를 사용할 수 없습니다.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에서는 이 예제를 사용할 수 없습니다.  
   
- 자세한 내용은 [서비스 사용자 이름 &#40;SPN&#41; 클라이언트 연결의 지원](../native-client/features/service-principal-name-spn-support-in-client-connections.md)합니다.  
+ 자세한 내용은 [클라이언트 연결에서 SPN&#41; 지원 &#40;서비스 사용자 이름](../native-client/features/service-principal-name-spn-support-in-client-connections.md)을 참조 하세요.  
   
 ## <a name="example"></a>예제  
  이 예제를 64비트 운영 체제에서 32비트 애플리케이션으로 작성하여 실행하려는 경우 %windir%\SysWOW64\odbcad32.exe에서 ODBC 관리자를 사용하여 ODBC 데이터 원본을 만들어야 합니다.  

@@ -13,11 +13,11 @@ ms.assetid: 27f1b65e-e04d-457f-bd49-02deb3873613
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c52780ab67acf072a3ee61ce1ebd07fc18c0d40e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67987939"
 ---
 # <a name="schema-text-file-driver"></a>스키마(텍스트 파일 드라이버)
-스키마 테이블의 형식으로 열 형식을 결정할를 OEM를 사용 하 여 소스 파일의로 작성 된 테이블의 첫 번째 행에 열 이름이 포함 되는지 여부를 검색할 행 수를 포함 하 여 데이터 원본에서 각 테이블 (텍스트 파일)에 대 한 정보도 포함 됩니다. 또는 ANSI 코드 페이지 및 각 열 이름, 데이터 형식 및 너비입니다.
+이 스키마에는 테이블의 형식, 열 유형을 결정 하기 위해 검색할 행 수, 테이블의 첫 행에 열 이름이 포함 되어 있는지 여부, OEM을 사용 하 여 원본 파일을 쓸지 여부를 포함 하 여 데이터 원본의 각 테이블 (텍스트 파일)에 대 한 정보가 포함 됩니다. ANSI 코드 페이지와 각 열의 이름, 데이터 형식 및 너비가 있습니다.

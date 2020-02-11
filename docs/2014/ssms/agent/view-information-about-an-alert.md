@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c5567abc0893bd183c2468f82278a014e2005113
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211291"
 ---
 # <a name="view-information-about-an-alert"></a>View Information About an Alert
-  이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고에 대한 정보를 보는 방법을 설명합니다.  
+  이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 항목에서는 또는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용 하 여에서 에이전트 경고에 대 한 정보를 보는 방법에 대해 설명 합니다.  
   
  **항목 내용**  
   
@@ -32,7 +32,7 @@ ms.locfileid: "68211291"
   
      [보안](#Security)  
   
--   **다음을 사용하여 경고에 대한 정보를 봅니다.**  
+-   **다음을 사용 하 여 경고에 대 한 정보를 보려면**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68211291"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버가 경고의 정보를 볼 수 있습니다. 다른 사용자는 **msdb** 데이터베이스의 **SQLAgentOperatorRole** 고정 데이터베이스 역할을 부여 받아야 합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -57,7 +57,7 @@ ms.locfileid: "68211291"
   
 4.  보려는 정보가 포함된 경고를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-     _alert_name_**경고 속성** 대화 상자에 포함된 사용 가능한 옵션에 대한 자세한 내용은 다음을 참조하세요.  
+     _Alert_name_**경고 속성** 대화 상자에 포함 된 사용 가능한 옵션에 대 한 자세한 내용은 다음을 참조 하십시오.  
   
     -   [경고 속성-새 경고 &#40;일반 페이지&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
@@ -89,6 +89,6 @@ ms.locfileid: "68211291"
     GO  
     ```  
   
- 자세한 내용은 [sp_help_alert &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-alert-transact-sql)합니다.  
+ 자세한 내용은 [sp_help_alert &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-help-alert-transact-sql)를 참조 하세요.  
   
   

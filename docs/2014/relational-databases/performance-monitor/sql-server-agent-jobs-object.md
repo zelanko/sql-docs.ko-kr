@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5bd37ab434dbefbb01862f1004ca62e673df0453
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63251025"
 ---
 # <a name="sql-server-agent-jobs-object"></a>SQL Server 에이전트, Jobs 개체
@@ -25,7 +25,7 @@ ms.locfileid: "63251025"
   
  이 표에는 **SQLAgent:Jobs** 카운터가 포함되어 있습니다.  
   
-|이름|Description|  
+|속성|Description|  
 |----------|-----------------|  
 |**Active Jobs**|이 카운터는 현재 실행 중인 작업의 수를 보고합니다.|  
 |**Failed jobs**|이 카운터는 오류 발생으로 종료된 작업의 수를 보고합니다.|  
@@ -43,7 +43,7 @@ ms.locfileid: "63251025"
 |**Others**|경고나 일정에 의해 시작되지 않은 작업의 정보입니다. 대개 이런 작업은 **sp_start_job**을 사용하여 수동으로 시작됩니다.|  
 |**일정**|일정에 의해 시작된 작업의 정보입니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [작업 구현](../../ssms/agent/implement-jobs.md)   
  [성능 개체 사용](../../ssms/agent/use-performance-objects.md)   
  [리소스 사용 모니터링&#40;시스템 모니터&#41;](monitor-resource-usage-system-monitor.md)  

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6bbe78979c393490a52e1051fe158ae138f93dcc
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401155"
 ---
 # <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>병렬 데이터 웨어하우스에 대 한 T-sql 권한 부여
@@ -246,7 +246,7 @@ GO
 관리자 로그인을 만들려면 [고정 서버 역할](pdw-permissions.md#fixed-server-roles)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목
-[로그인 만들기](../t-sql/statements/create-login-transact-sql.md)  
-[사용자 만들기](../t-sql/statements/create-user-transact-sql.md)  
-[역할 만들기](../t-sql/statements/create-role-transact-sql.md)  
-[부하](load-overview.md)  
+[CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)  
+[CREATE USER](../t-sql/statements/create-user-transact-sql.md)  
+[CREATE ROLE](../t-sql/statements/create-role-transact-sql.md)  
+[로드](load-overview.md)  

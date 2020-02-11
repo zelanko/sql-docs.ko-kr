@@ -46,10 +46,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce6cef69abe7c2461552229363c8334ca56555b4
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245661"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server-2014"></a>Hardware and Software Requirements for Installing SQL Server 2014
@@ -73,7 +73,7 @@ ms.locfileid: "75245661"
 -   
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 제품에 필요한 다음 소프트웨어 구성 요소를 설치합니다.  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]설치 지원 파일  
   
@@ -216,7 +216,7 @@ Server Core 모드에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]�
   [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Enterprise 64비트<br /><br /> 
   [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Standard 64비트<br /><br /> 
   [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Web 64비트|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]비즈니스 인텔리전스|[!INCLUDE[winserver2019_datacenter_md](../../includes/winserver2019-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2019_standard_md](../../includes/winserver2019-standard-md.md)]<br/><br/>[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Business Intelligence|[!INCLUDE[winserver2019_datacenter_md](../../includes/winserver2019-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2019_standard_md](../../includes/winserver2019-standard-md.md)]<br/><br/>[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>
   [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter 64비트<br /><br /> 
   [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard 64비트<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)]R2 Essentials 64 비트<br /><br /> 
   [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation 64비트<br /><br /> 
@@ -484,7 +484,7 @@ Server Core 모드에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]�
   
     > **참고:**  SMB 저장소는 독립 실행형 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 클러스터형 설치에 대 한 데이터 파일에 대해 지원 되지 않습니다. 대신 직접 연결 스토리지 또는 SAN(Storage Area Network)을 사용하십시오.  
   
-    > **중요!!!** SMB 스토리지는 Windows 파일 서버 또는 타사 SMB 저장 디바이스에서 호스팅할 수 있습니다. Windows 파일 서버가 사용되는 경우 Windows 파일 서버 버전이 2008 이상이어야 합니다. 스토리지 옵션으로 SMB 파일 공유를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에 대한 자세한 내용은 [SMB fileshare 기능이 있는 SQL Server를 스토리지 옵션으로 설치](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md).  
+    > **중요!!** SMB 스토리지는 Windows 파일 서버 또는 타사 SMB 저장 디바이스에서 호스팅할 수 있습니다. Windows 파일 서버가 사용되는 경우 Windows 파일 서버 버전이 2008 이상이어야 합니다. 스토리지 옵션으로 SMB 파일 공유를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에 대한 자세한 내용은 [SMB fileshare 기능이 있는 SQL Server를 스토리지 옵션으로 설치](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md).  
   
     > **경고!!!!**  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 설치에서는 tempdb 파일 설치에 대해서만 로컬 디스크를 지원합니다. Tempdb 데이터 및 로그 파일에 대해 지정 된 경로가 **모든** 클러스터 노드에서 올바른지 확인 하십시오. 장애 조치(failover) 중에 장애 조치 대상 노드에서 tempdb 디렉터리를 사용할 수 없으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스가 온라인이 될 수 없습니다.  
@@ -509,5 +509,5 @@ Server Core 모드에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]�
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 설치 계획](planning-a-sql-server-installation.md)   
- [SQL Server 설치에 대 한 보안 고려 사항](security-considerations-for-a-sql-server-installation.md)   
+ [SQL Server 설치에 대한 보안 고려 사항](security-considerations-for-a-sql-server-installation.md)   
  [SQL Server 2014 제품 사양](../../getting-started/sql-server-2014-product-specifications.md)  

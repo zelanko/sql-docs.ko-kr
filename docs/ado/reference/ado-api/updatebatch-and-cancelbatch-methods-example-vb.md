@@ -16,14 +16,14 @@ ms.assetid: 41625f6f-e12d-4d8d-9f60-0729ce64c31e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 810cb2cdeb45c3ab7ea907864b344c4624bfa527
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67941643"
 ---
 # <a name="updatebatch-and-cancelbatch-methods-example-vb"></a>UpdateBatch 및 CancelBatch 메서드 예제 (VB)
-이 예제에서는 합니다 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) 메서드와 함께 합니다 [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) 메서드.  
+이 예제에서는 [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) 메서드와 함께 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) 메서드를 보여 줍니다.  
   
 ```  
 'BeginUpdateBatchVB  
@@ -123,6 +123,6 @@ End Sub
 'EndUpdateBatchVB  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [CancelBatch 메서드 (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
  [UpdateBatch 메서드](../../../ado/reference/ado-api/updatebatch-method.md)

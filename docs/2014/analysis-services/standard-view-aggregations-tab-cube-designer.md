@@ -13,26 +13,28 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1bfe78e7ac5cb497a39ab0b0679bcb2bd9a43a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068063"
 ---
 # <a name="standard-view-aggregations-tab-cube-designer"></a>표준 뷰(집계 탭, 큐브 디자이너)
   집계 디자이너의 **표준 뷰** 를 사용하여 집계를 볼 수 있습니다. 또한 이 뷰에서 **집계 디자인 마법사** 또는 **사용 빈도 기반 최적화 마법사**를 사용하여 집계 디자인을 만들고 수정할 수도 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
   
 |옵션|Description|  
 |------------|-----------------|  
-|**집계 디자인**|**집계 디자인 마법사**를 표시하려면 클릭합니다.|  
-|**사용 빈도 기반 최적화**|**사용 빈도 기반 최적화 마법사** 를 표시하려면 클릭합니다.|  
-|**집계 디자인 할당**|**집계 디자인 할당** 대화 상자를 표시하려면 클릭합니다.|  
+|**집계 디자인**|
+  **집계 디자인 마법사**를 표시하려면 클릭합니다.|  
+|**사용 빈도 기반 최적화**|**사용 빈도 기반 최적화** 마법사를 표시 하려면 클릭 합니다.|  
+|**집계 디자인 할당**|
+  **집계 디자인 할당** 대화 상자를 표시하려면 클릭합니다.|  
 |**Delete**|선택한 집계 디자인을 삭제하려면 클릭합니다.|  
-|**Properties**|집계의 속성을 보려면 클릭합니다.|  
+|**속성**|집계의 속성을 보려면 클릭합니다.|  
   
-## <a name="see-also"></a>관련 항목  
- [집계 &#40;큐브 디자인&#41;](aggregations-cube-design.md)  
+## <a name="see-also"></a>참고 항목  
+ [큐브 디자인&#41;&#40;집계](aggregations-cube-design.md)  
   
   

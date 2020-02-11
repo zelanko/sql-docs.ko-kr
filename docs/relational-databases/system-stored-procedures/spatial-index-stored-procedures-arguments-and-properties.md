@@ -15,10 +15,10 @@ ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 82b906be4568b15a18c55247532bf35b6cd939a7
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69028903"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>공간 인덱스 저장 프로시저-인수 및 속성
@@ -26,18 +26,18 @@ ms.locfileid: "69028903"
 
   이 항목에서는 공간 인덱스 저장 프로시저의 인수와 속성에 대해 설명합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
  특정 공간 인덱스 저장 프로시저의 구문은 다음 항목을 참조하십시오.  
   
--   [sp_help_spatial_geometry_index &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
+-   [Transact-sql&#41;sp_help_spatial_geometry_index &#40;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
   
--   [sp_help_spatial_geometry_index_xml &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
+-   [Transact-sql&#41;sp_help_spatial_geometry_index_xml &#40;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
   
--   [sp_help_spatial_geography_index &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
+-   [Transact-sql&#41;sp_help_spatial_geography_index &#40;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
   
--   [sp_help_spatial_geography_index_xml &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
+-   [Transact-sql&#41;sp_help_spatial_geography_index_xml &#40;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## <a name="arguments"></a>인수  
 `[ @tabname = ] 'tabname'`공간 인덱스가 지정 된 테이블의 정규화 된 이름 또는 정규화 되지 않은 이름입니다.  
@@ -54,12 +54,12 @@ ms.locfileid: "69028903"
   
  *verboseoutput* 은 **tinyint** 이며 기본값은 없습니다.  
   
-`[ @query_sample = ] 'query_sample'`는 인덱스의 유용성을 테스트 하는 데 사용할 수 있는 대표적인 쿼리 샘플입니다. 대표 개체 또는 쿼리 창일 수 있습니다. *query_sample* 는 **geometry** 이며 기본값은 없습니다.  
+`[ @query_sample = ] 'query_sample'`는 인덱스의 유용성을 테스트 하는 데 사용할 수 있는 대표적인 쿼리 샘플입니다. 대표 개체 또는 쿼리 창일 수 있습니다. *query_sample* 은 **geometry** 이며 기본값은 없습니다.  
   
-`[ @xml_output = ] 'xml_output'`는 XML 조각에서 결과 집합을 반환 하는 출력 매개 변수입니다. *xml_output* 은 기본값이 없는 **xml** 입니다.  
+`[ @xml_output = ] 'xml_output'`는 XML 조각에서 결과 집합을 반환 하는 출력 매개 변수입니다. *xml_output* 은 **xml** 이며 기본값은 없습니다.  
   
-## <a name="properties"></a>Properties  
- 아래 표에 표시 된 것 처럼  **\@verboseoutput** = 0을 설정 하 여 핵심 속성을 반환 합니다. verboseoutput는 0을 > 하 여 공간 인덱스의 모든 속성을 반환 합니다.  **\@**  
+## <a name="properties"></a>속성  
+ 아래 표에 표시 된 것 처럼 ** \@verboseoutput** = 0을 설정 하 여 핵심 속성을 반환 합니다. verboseoutput는 0을 > 하 여 공간 인덱스의 모든 속성을 반환 합니다. ** \@**  
   
  **Base_Table_Rows**  
  기본 테이블에 있는 행의 수입니다. 값이 **bigint**입니다.  
@@ -138,7 +138,7 @@ ms.locfileid: "69028903"
  **Total_Number_Of_ObjectCells_In_Level0_In_Index**  
  수준 0 ( **기 하 도형**에 대 한 경계 상자 외부의 공간 분할)에 있는 인덱싱된 개체의 셀 인스턴스 수입니다. 이 속성은 핵심 속성입니다. 값이 **bigint**입니다.  
   
- **기 하 도형** 인덱스의 경우 인덱스의 경계 상자가 데이터 도메인 보다 작은 경우 발생 합니다. 수준 0의 개체 수가 많으면 쿼리 창이 경계 상자를 부분적으로 벗어날 때 보조 필터가 필요할 수 있으며 인덱스 성능이 저하 됩니다 (예: **Total_Number_Of_ObjectCells_In_Level0_For_QuerySample** 가 1). 쿼리 창이 경계 상자 안쪽에 있으면 수준 0의 개체 수가 많은 경우 인덱스의 성능이 향상될 수 있습니다.  
+ **기 하 도형** 인덱스의 경우 인덱스의 경계 상자가 데이터 도메인 보다 작은 경우 발생 합니다. 수준 0의 개체 수가 많으면 쿼리 창이 경계 상자를 부분적으로 벗어날 때 보조 필터가 필요할 수 있으며 인덱스 성능이 저하 됩니다 (예: **Total_Number_Of_ObjectCells_In_Level0_For_QuerySample** 1). 쿼리 창이 경계 상자 안쪽에 있으면 수준 0의 개체 수가 많은 경우 인덱스의 성능이 향상될 수 있습니다.  
   
  NULL 및 빈 인스턴스는 수준 0에서 계산되지만 성능에 영향을 주지는 않습니다. 수준 0의 셀 수는 기본 테이블에 있는 NULL 인스턴스 및 빈 인스턴스의 수와 동일합니다. **지리** 인덱스의 경우 쿼리 샘플은 1로 계산 되므로 수준 0은 NULL과 빈 인스턴스 + 1 셀의 셀을 포함 합니다.  
   
@@ -155,28 +155,28 @@ ms.locfileid: "69028903"
  수준 4 정밀도로 공간 분할된 인덱싱된 개체의 셀 인스턴스 수입니다. 이 속성은 핵심 속성입니다. 값이 **bigint**입니다.  
   
  **Total_Number_Of_interior_ObjectCells_In_Level1_In_Index**  
- 공간 분할 수준 1에서 개체가 완전히 검사 하 여 개체의 내부에 있는 셀의 수입니다. (Cell_attributevalue는 2입니다.) 이 속성은 핵심 속성입니다. 값이 **bigint**입니다.  
+ 공간 분할 수준 1에서 개체가 완전히 검사 하 여 개체의 내부에 있는 셀의 수입니다. (Cell_attributevalue은 2입니다.) 핵심 속성입니다. 값이 **bigint**입니다.  
   
  **Total_Number_Of_interior_ObjectCells_In_Level2_In_Index**  
- 공간 분할 수준 2에서 개체가 완전히 검사 되므로 개체의 내부에 있는 셀의 수입니다. (Cell_attribute 값은 2입니다.) 이 속성은 핵심 속성입니다. 값이 **bigint**입니다.  
+ 공간 분할 수준 2에서 개체가 완전히 검사 되므로 개체의 내부에 있는 셀의 수입니다. Cell_attribute 값은 2입니다. 이 속성은 핵심 속성입니다. 값이 **bigint**입니다.  
   
  **Total_Number_Of_interior_ObjectCells_In_Level3_In_Index**  
- 공간 분할 수준 3에서 개체에 의해 완전히 포함 되는 셀의 수 이므로 개체의 내부입니다. (Cell_attribute 값은 2입니다.) 이 속성은 핵심 속성입니다. 값이 **bigint**입니다.  
+ 공간 분할 수준 3에서 개체에 의해 완전히 포함 되는 셀의 수 이므로 개체의 내부입니다. Cell_attribute 값은 2입니다. 이 속성은 핵심 속성입니다. 값이 **bigint**입니다.  
   
  **Total_Number_Of_interior_ObjectCells_In_Level4_In_Index**  
- 공간 분할 수준 4에서 하나의 개체에 완전히 포함되어 이 개체의 내부에 있는 셀의 수입니다. (Cell_attribute 값은 2입니다.) 이 속성은 핵심 속성입니다. 값이 **bigint**입니다.  
+ 공간 분할 수준 4에서 하나의 개체에 완전히 포함되어 이 개체의 내부에 있는 셀의 수입니다. Cell_attribute 값은 2입니다. 이 속성은 핵심 속성입니다. 값이 **bigint**입니다.  
   
  **Total_Number_Of_intersecting_ObjectCells_In_Level1_In_Index**  
- 공간 분할 수준 1에서 개체와 교차 하는 셀 수입니다. (Cell_attribute 값은 1입니다.) 이 속성은 핵심 속성입니다. 값이 **bigint**입니다.  
+ 공간 분할 수준 1에서 개체와 교차 하는 셀 수입니다. Cell_attribute 값은 1입니다. 핵심 속성입니다. 값이 **bigint**입니다.  
   
  **Total_Number_Of_intersecting_ObjectCells_In_Level2_In_Index**  
- 공간 분할 수준 2에서 개체와 교차 하는 셀 수입니다. (Cell_attribute 값은 1입니다.) 이 속성은 핵심 속성입니다. 값이 **bigint**입니다.  
+ 공간 분할 수준 2에서 개체와 교차 하는 셀 수입니다. Cell_attribute 값은 1입니다. 핵심 속성입니다. 값이 **bigint**입니다.  
   
  **Total_Number_Of_intersecting_ObjectCells_In_Level3_In_Index**  
- 공간 분할 수준 3에서 개체와 교차 하는 셀 수입니다. (Cell_attribute 값은 1입니다.) 이 속성은 핵심 속성입니다. 값이 **bigint**입니다.  
+ 공간 분할 수준 3에서 개체와 교차 하는 셀 수입니다. Cell_attribute 값은 1입니다. 핵심 속성입니다. 값이 **bigint**입니다.  
   
  **Total_Number_Of_intersecting_ObjectCells_In_Level4_In_Index**  
- 공간 분할 수준 4에서 개체와 교차되는 셀의 수입니다. (Cell_attribute 값은 1입니다.) 이 속성은 핵심 속성입니다. 값이 **bigint**입니다.  
+ 공간 분할 수준 4에서 개체와 교차되는 셀의 수입니다. Cell_attribute 값은 1입니다. 핵심 속성입니다. 값이 **bigint**입니다.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level0_For_QuerySample**  
  쿼리 샘플이 경계 상자를 벗어나되 이에 접해 있는 루트 셀 0에 있는지 여부를 나타냅니다. 이 속성은 핵심 속성입니다. 값이 **bigint**입니다.  
@@ -185,19 +185,19 @@ ms.locfileid: "69028903"
 >  이 정보는 경계 상자에서 미세한 차이로 누락된 개체가 있는지 여부를 확인하는 경우에만 사용됩니다.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level0_In_Index**  
- 경계 상자에 접한 수준 0에 있는 개체의 수입니다. (Cell_attribute 값은 0입니다.)  값이 **bigint**입니다.  
+ 경계 상자에 접한 수준 0에 있는 개체의 수입니다. Cell_attribute 값은 0입니다.  값이 **bigint**입니다.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level1_In_Index**  
- 공간 분할 수준 1에서 표 셀 경계를 터치 하는 개체 셀의 수입니다. (Cell_attribute 값은 0입니다.) 이 속성은 핵심 속성입니다. 값이 **bigint**입니다.  
+ 공간 분할 수준 1에서 표 셀 경계를 터치 하는 개체 셀의 수입니다. Cell_attribute 값은 0입니다. 핵심 속성입니다. 값이 **bigint**입니다.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level2_In_Index**  
- 공간 분할 수준 2에서 표 셀 경계를 터치 하는 개체 셀의 수입니다. (Cell_attribute 값은 0입니다.) 이 속성은 핵심 속성입니다. 값이 **bigint**입니다.  
+ 공간 분할 수준 2에서 표 셀 경계를 터치 하는 개체 셀의 수입니다. Cell_attribute 값은 0입니다. 핵심 속성입니다. 값이 **bigint**입니다.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level3_In_Index**  
- 공간 분할 수준 3에서 표 셀 경계를 터치 하는 개체 셀의 수입니다. (Cell_attribute 값은 0입니다.) 이 속성은 핵심 속성입니다. 값이 **bigint**입니다.  
+ 공간 분할 수준 3에서 표 셀 경계를 터치 하는 개체 셀의 수입니다. Cell_attribute 값은 0입니다. 핵심 속성입니다. 값이 **bigint**입니다.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level4_In_Index**  
- 공간 분할 수준 4에서 표 셀 경계에 접한 개체 셀의 수입니다. (Cell_attribute 값은 0입니다.) 이 속성은 핵심 속성입니다. 값이 **bigint**입니다.  
+ 공간 분할 수준 4에서 표 셀 경계에 접한 개체 셀의 수입니다. Cell_attribute 값은 0입니다. 핵심 속성입니다. 값이 **bigint**입니다.  
   
  **Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**  
  하나의 개체에 포함된 리프 셀을 포함하는 표의 전체 영역(전체 리프 셀) 비율입니다.  
@@ -306,19 +306,19 @@ ms.locfileid: "69028903"
 ## <a name="examples"></a>예  
  예를 보려면 다음 항목을 참조하십시오.  
   
--   [sp_help_spatial_geometry_index &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
+-   [Transact-sql&#41;sp_help_spatial_geometry_index &#40;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
   
--   [sp_help_spatial_geometry_index_xml &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
+-   [Transact-sql&#41;sp_help_spatial_geometry_index_xml &#40;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
   
--   [sp_help_spatial_geography_index &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
+-   [Transact-sql&#41;sp_help_spatial_geography_index &#40;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
   
--   [sp_help_spatial_geography_index_xml &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
+-   [Transact-sql&#41;sp_help_spatial_geography_index_xml &#40;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## <a name="requirements"></a>요구 사항  
   
-## <a name="see-also"></a>관련 항목  
- [공간 인덱스 저장 프로시저 &#40;transact-sql&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
- [sp_help_spatial_geometry_index &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;공간 인덱스 저장 프로시저 &#40;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
+ [Transact-sql&#41;sp_help_spatial_geometry_index &#40;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
  [공간 인덱스 개요](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [XQuery 기본 사항](../../xquery/xquery-basics.md)   
  [XQuery 언어 참조&#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  

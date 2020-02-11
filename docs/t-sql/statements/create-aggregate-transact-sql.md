@@ -22,10 +22,10 @@ ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 1e796155210017addb6801930903a5aa38df71e8
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064628"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "73064628"
 
   구현이 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]의 어셈블리 클래스에 정의된 사용자 정의 집계 함수를 만듭니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 집계 함수를 해당 구현에 바인딩하려면 CREATE ASSEMBLY 문을 사용하여 먼저 해당 구현이 포함된 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 어셈블리를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 업로드해야 합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -81,7 +81,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  *assembly_name* [ **.** _class_name_ ]  
  사용자 정의 집계 함수와 바인딩할 어셈블리를 지정하고 필요에 따라 어셈블리가 속한 스키마의 이름과 사용자 정의 집계를 구현하는 어셈블리의 클래스 이름을 지정합니다. 어셈블리는 CREATE ASSEMBLY 문을 사용하여 데이터베이스에 이미 생성되어 있어야 합니다. *class_name*은 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자여야 하며 어셈블리에 있는 클래스의 이름과 일치해야 합니다. *class_name*은 클래스를 작성할 때 사용된 프로그래밍 언어가 C#과 같은 네임스페이스를 사용하는 경우 네임스페이스로 한정된 이름일 수 있습니다. *class_name*을 지정하지 않을 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 *aggregate_name*과 동일한 것으로 간주합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 CLR 코드 실행 기능은 해제됩니다. 관리 코드 모듈을 참조하는 데이터베이스 개체를 만들고 수정하고 삭제할 수 있지만 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)를 사용하여 [clr enabled 옵션](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)을 설정해야 이러한 모듈의 코드가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 실행됩니다.  
   
  *assembly_name* 및 해당 메서드에서 참조되는 어셈블리의 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 사용자 정의 집계 함수를 구현하기 위한 모든 요구 사항을 만족해야 합니다. 자세한 내용은 [CLR 사용자 집계](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)를 참조하세요.  

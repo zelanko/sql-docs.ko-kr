@@ -1,5 +1,5 @@
 ---
-title: 변경 데이터 캡처 테이블 (TRANSACT-SQL) | Microsoft Docs
+title: 변경 데이터 캡처 테이블 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: a4372d0b-50ca-4e58-80f6-2ed3cb52a84a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7d6d87ee8b2aa05c3156acb2db9c6604380db887
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68082680"
 ---
 # <a name="change-data-capture-tables-transact-sql"></a>변경 데이터 캡처 테이블(Transact-SQL)
@@ -25,7 +25,7 @@ ms.locfileid: "68082680"
   변경 데이터 캡처를 사용하면 테이블에 대한 변경 추적이 가능하므로 테이블에 적용된 DML(데이터 조작 언어) 및 DDL(데이터 정의 언어) 변경 내용을 데이터 웨어하우스에 증분 로드할 수 있습니다. 이 섹션의 항목에서는 변경 데이터 캡처 작업에 사용되는 정보를 저장하는 시스템 테이블에 대해 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [cdc.<capture_instance>_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)  
+ [cdc. <capture_instance>_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)  
  관련된 원본 테이블에서 캡처된 열에 적용된 각 변경에 대해 한 개의 행을 반환합니다.  
   
  [cdc.captured_columns](../../relational-databases/system-tables/cdc-captured-columns-transact-sql.md)  
@@ -43,11 +43,11 @@ ms.locfileid: "68082680"
  [cdc.index_columns](../../relational-databases/system-tables/cdc-index-columns-transact-sql.md)  
  변경 테이블과 관련된 각 인덱스 열에 대해 하나의 행을 반환합니다.  
   
- [dbo.cdc_jobs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)  
+ [cdc_jobs &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)  
  변경 데이터 캡처 에이전트 작업에 대한 구성 매개 변수를 반환합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [변경 데이터 캡처 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
- [변경 데이터 캡처 함수 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)  
+ [변경 데이터 캡처 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)  
   
   

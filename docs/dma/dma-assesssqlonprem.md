@@ -2,8 +2,7 @@
 title: SQL Server 마이그레이션 평가 수행
 titleSuffix: Data Migration Assistant
 description: Data Migration Assistant를 사용 하 여 다른 SQL Server 마이그레이션하기 전에 온-프레미스 SQL Server를 평가 하는 방법을 알아보고 Azure SQL Database
-ms.custom: seo-lt-2019
-ms.date: 12/10/2019
+ms.date: 01/15/2020
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,16 +14,17 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: b6d9fd3f31885641451b3ade2f0f4543d9f44455
-ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 8b01469536655fc351ecf742ed284f3f6c68f707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "75001908"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76037170"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Data Migration Assistant를 사용하여 SQL Server 마이그레이션 평가 수행
 
-다음 단계별 지침은 Data Migration Assistant를 사용 하 여 온-프레미스 SQL Server, Azure VM에서 실행 되는 SQL Server 또는 Azure SQL Database으로 마이그레이션하기 위한 첫 번째 평가를 수행 하는 데 도움이 됩니다.
+다음 단계별 지침은 온-프레미스 SQL Server로 마이그레이션하기 위한 첫 번째 평가, Azure VM에서 실행 되는 SQL Server 또는 Data Migration Assistant를 사용 하 여 Azure SQL Database를 수행 하는 데 도움이 됩니다.
 
    > [!NOTE]
    > Data Migration Assistant v 5.0에서는 응용 프로그램 코드에서 데이터베이스 연결 및 포함 된 SQL 쿼리를 분석 하는 기능이 도입 되었습니다. 자세한 내용은 [Data Migration Assistant를 사용 하 여 응용 프로그램의 데이터 액세스 계층을 평가 하](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Using-Data-Migration-Assistant-to-assess-an-application-s-data/ba-p/990430)는 블로그 게시물을 참조 하세요.
@@ -116,6 +116,9 @@ ms.locfileid: "75001908"
 
     ![원본 추가 및 평가 시작](../dma/media/dma-assesssqlonprem/select-database1.png)
 
+> [!NOTE]
+> 여러 평가를 동시에 실행하고 **모든 평가** 페이지를 열어서 평가 상태를 볼 수 있습니다.
+
 ## <a name="view-results"></a>결과 보기
 
 평가 기간은 추가 된 데이터베이스 수와 각 데이터베이스의 스키마 크기에 따라 달라 집니다. 각 데이터베이스를 사용할 수 있게 되는 즉시 결과를 표시 합니다.
@@ -158,4 +161,6 @@ Azure SQL Database의 경우 평가는 마이그레이션 차단 문제와 기�
 
 모든 데이터베이스가 평가를 완료 한 후 **보고서 내보내기** 를 선택 하 여 결과를 JSON 파일이 나 CSV 파일로 내보냅니다. 그런 다음 사용자의 편의를 위해 데이터를 분석할 수 있습니다.
 
-여러 평가를 동시에 실행하고 **모든 평가** 페이지를 열어서 평가 상태를 볼 수 있습니다.
+## <a name="save-and-load-assessments"></a>평가 저장 및 로드
+
+평가 결과를 내보낼 뿐만 아니라 파일에 평가 세부 정보를 저장 하 고 나중에 검토할 수 있도록 평가 파일을 로드할 수 있습니다.  자세한 내용은 [Data Migration Assistant를 사용 하 여 평가 저장 및 로드](../dma/dma-save-load-assessments.md)문서를 참조 하세요.

@@ -1,5 +1,5 @@
 ---
-title: '4단원: 고급 특성 및 차원 속성 정의 | Microsoft Docs'
+title: '4 단원: 고급 특성 및 차원 속성 정의 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11d566c029491378a5e0e091e0803cdf5616e637
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493991"
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>4단원: 고급 특성 및 차원 속성 정의
@@ -32,7 +32,7 @@ ms.locfileid: "69493991"
  이 태스크에서는 부모-자식 차원의 수준 이름을 정의하고 부모 멤버에 관련된 데이터의 표시 여부를 지정합니다. 자세한 내용은 부모-자식 [계층](multidimensional-models/parent-child-dimension.md) 및 부모 [-자식 계층의 특성](multidimensional-models/parent-child-dimension-attributes.md)을 참조 하세요.  
   
  [자동으로 특성 멤버 그룹화](lesson-4-3-automatically-grouping-attribute-members.md)  
- 이 태스크에서는 특성 계층 내에서 멤버의 분포에 따라 특성 멤버 그룹을 자동으로 만듭니다. 자세한 내용은 [특성 멤버 그룹화&#40;불연속화&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)를 참조하세요.  
+ 이 태스크에서는 특성 계층 내에서 멤버의 분포에 따라 특성 멤버 그룹을 자동으로 만듭니다. 자세한 내용은 [특성 멤버 그룹화 &#40;불연속화&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)를 참조 하세요.  
   
  [특성 계층 숨기기 및 비활성화](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
  이 태스크에서는 특성 계층을 해제하거나 숨기는 방법과 시기에 대해 알아봅니다.  
@@ -41,17 +41,17 @@ ms.locfileid: "69493991"
  이 태스크에서는 보조 특성에 따라 차원 멤버를 정렬하여 원하는 대로 정렬하는 방법에 대해 알아봅니다.  
   
  [사용자 정의 계층의 특성 간 특성 관계 지정](4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
- 이 태스크에서는 특성에 대한 멤버 속성을 정의하고 특성 간 집계 관계를 지정하는 방법에 대해 알아봅니다. 자세한 내용은 [특성 관계 정의](multidimensional-models/attribute-relationships-define.md) 및 [사용자 계층 속성](multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)을 참조하세요.  
+ 이 태스크에서는 특성에 대한 멤버 속성을 정의하고 특성 간 집계 관계를 지정하는 방법에 대해 알아봅니다. 자세한 내용은 [특성 관계 정의](multidimensional-models/attribute-relationships-define.md) 및 [사용자 계층 속성](multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)을 참조 하세요.  
   
  [알 수 없는 멤버 및 Null 처리 속성 정의](lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
  이 태스크에서는 UnknownMember 및 UnknownMemberName 속성을 구성하여 Null 차원 멤버가 발생시킨 오류 조건을 처리합니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
- [5단원: 차원과 측정값 그룹 간의 관계 정의](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+ [5단원: 차원과 측정값 그룹의 관계 정의](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Analysis Services 자습서 시나리오](analysis-services-tutorial-scenario.md)   
- [다차원 모델링 &#40;놀이 Works 자습서&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
+ [&#40;의 다차원 모델링은 놀이 Works 자습서&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [다차원 모델의 차원](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

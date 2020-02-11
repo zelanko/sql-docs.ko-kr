@@ -16,17 +16,17 @@ ms.assetid: 753a4a3d-0fba-40b8-86e7-50b34182ca69
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 782b76ca40418cd7fb8313c2b22da3a6ddd3978a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964198"
 ---
 # <a name="executeoptions-and-fetchoptions-properties-example-vbscript"></a>ExecuteOptions 및 FetchOptions 속성 예제(VBScript)
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
+>  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
   
- 다음 코드를 설정 하는 방법을 보여 줍니다 합니다 [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) 하 고 [FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md) 디자인 타임 속성입니다. 설정 되지 않은 두면 **ExecuteOptions** 기본값으로 **adcExecSync**합니다. 이 설정은 때 나타냅니다는 **rds. 새로 고침** 메서드가 호출 되 면 현재 호출 스레드에서 실행 됩니다-즉, 동기적으로 합니다. 잘라내기 및 메모장 이나 다른 텍스트 편집기에 다음 코드를 붙여넣고,으로 저장 **비동기적**합니다.  
+ 다음 코드에서는 디자인 타임에 [executeoptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) 및 [fetchoptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md) 속성을 설정 하는 방법을 보여 줍니다. 설정 하지 않은 경우 **Executeoptions** 의 기본값은 **Adcexecsync**입니다. 이 설정은 RDS를 사용할 때를 나타냅니다 **. Refresh** 메서드가 호출 되 고, 현재 호출 스레드에서 실행 됩니다. 즉, 동기적으로 실행 됩니다. 다음 코드를 잘라내어 메모장 또는 다른 텍스트 편집기에 붙여넣고,이를 **Executeoptionsdesignvbs**로 저장 합니다.  
   
 ```  
 <!-- BeginExecuteOptionsDesignVBS -->  
@@ -94,7 +94,7 @@ body {
 <!-- EndExecuteOptionsDesignVBS -->  
 ```  
   
- 다음 예제에서는 설정 하는 방법을 보여 줍니다 합니다 **ExecuteOptions** 하 고 **FetchOptions** VBScript 코드에서 런타임에 속성. 참조 된 [새로 고침](../../../ado/reference/rds-api/refresh-method-rds.md) 이러한 속성의 작업 예제는 메서드. 잘라내기 및 메모장 이나 다른 텍스트 편집기에 다음 코드를 붙여넣고,으로 저장 **ExecuteOptionsRuntimeVBS.asp**합니다.  
+ 다음 예에서는 런타임에 VBScript 코드에서 **executeoptions** 및 **fetchoptions** 속성을 설정 하는 방법을 보여 줍니다. 이러한 속성의 작업 예제는 [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md) 메서드를 참조 하세요. 다음 코드를 잘라내어 메모장 또는 다른 텍스트 편집기에 붙여 넣은 다음,이를 **executeon Execute.vbs .asp**로 저장 합니다.  
   
 ```  
 <!-- BeginExecuteOptionsRuntimeVBS -->  
@@ -169,7 +169,7 @@ End Sub
 <!-- EndExecuteOptionsRuntimeVBS -->  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ExecuteOptions 속성 (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)   
  [FetchOptions 속성(RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)
 

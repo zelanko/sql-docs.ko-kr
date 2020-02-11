@@ -18,16 +18,17 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e58c355c437d325e2a0db228f8ed4af83956fecf
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73785049"
 ---
 # <a name="performing-bulk-copy-operations-odbc"></a>대량 복사 작업 수행(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  ODBC 표준에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대량 복사 작업을 직접 지원하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 이상 버전의 인스턴스에 연결되어 있으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대량 복사 작업을 수행하는 DB-Library 함수를 지원합니다. 이 드라이버 관련 확장은 대량 복사 함수를 사용하는 기존 DB-Library 애플리케이션에 대해 편리한 업그레이드 경로를 제공합니다. 특별한 대량 복사 지원은 다음 파일에 포함되어 있습니다.  
+  ODBC 표준에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대량 복사 작업을 직접 지원하지 않습니다. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 이상 버전의 인스턴스에 연결되어 있으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대량 복사 작업을 수행하는 DB-Library 함수를 지원합니다. 이 드라이버 관련 확장은 대량 복사 함수를 사용하는 기존 DB-Library 애플리케이션에 대해 편리한 업그레이드 경로를 제공합니다. 특별한 대량 복사 지원은 다음 파일에 포함되어 있습니다.  
   
 -   sqlncli.h  
   
@@ -50,7 +51,10 @@ ms.locfileid: "73785049"
  최소 로깅을 사용 하는 방법에 대 한 자세한 내용은 [대량 가져오기의 최소 로깅을 위한 필수 조건](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)을 참조 하세요.  
   
 ## <a name="remarks"></a>설명  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에서 bcp.exe를 사용하는 경우 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이전에는 오류가 발생하지 않았던 상황에서 오류가 표시될 수도 있습니다. 이는 이후 버전에서 bcp.exe가 더 이상 암시적 데이터 형식 변환을 수행하지 않기 때문입니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이전에는 대상 테이블에 money 데이터 형식이 있을 경우 bcp.exe에서 숫자 데이터를 money 데이터 형식으로 변환했습니다. 하지만 이 경우 bcp.exe에서 단순히 추가 필드를 자르기만 했습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터는 파일과 대상 테이블의 데이터 형식이 일치하지 않을 경우 대상 테이블에 맞게 잘라야 하는 데이터가 있으면 bcp.exe에서 오류를 발생시킵니다. 이 오류를 해결하려면 대상 데이터 형식과 일치하도록 데이터를 수정합니다. 필요에 따라 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이전 릴리스의 bcp.exe를 사용합니다.  
+ 
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에서 bcp.exe를 사용하는 경우 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이전에는 오류가 발생하지 않았던 상황에서 오류가 표시될 수도 있습니다. 이는 이후 버전에서 bcp.exe가 더 이상 암시적 데이터 형식 변환을 수행하지 않기 때문입니다. 
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이전에는 대상 테이블에 money 데이터 형식이 있을 경우 bcp.exe에서 숫자 데이터를 money 데이터 형식으로 변환했습니다. 하지만 이 경우 bcp.exe에서 단순히 추가 필드를 자르기만 했습니다. 
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터는 파일과 대상 테이블의 데이터 형식이 일치하지 않을 경우 대상 테이블에 맞게 잘라야 하는 데이터가 있으면 bcp.exe에서 오류를 발생시킵니다. 이 오류를 해결하려면 대상 데이터 형식과 일치하도록 데이터를 수정합니다. 필요에 따라 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이전 릴리스의 bcp.exe를 사용합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -65,7 +69,7 @@ ms.locfileid: "73785049"
 -   [DB-Library에서 ODBC 대량 복사로 변환](../../relational-databases/native-client-odbc-bulk-copy-operations/converting-from-db-library-to-odbc-bulk-copy.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [ &#40;ODBC&#41;  SQL Server Native Client](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
+ [ODBC&#41;SQL Server Native Client &#40;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
  [데이터 대량 가져오기 및 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)  
   
   

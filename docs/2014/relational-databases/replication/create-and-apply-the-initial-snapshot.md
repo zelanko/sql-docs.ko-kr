@@ -14,18 +14,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a69d4805a21cfbd83bd9a8d79b5150460d4977be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721688"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Create and Apply the Initial Snapshot
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 초기 스냅샷을 만들고 적용하는 방법에 대해 설명합니다. 매개 변수가 있는 필터를 사용하는 병합 게시에는 두 부분으로 구성된 스냅샷이 필요합니다. 자세한 내용은 [Create a Snapshot for a Merge Publication with Parameterized Filters](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을 참조하세요.  
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 초기 스냅샷을 만들고 적용하는 방법에 대해 설명합니다. 매개 변수가 있는 필터를 사용하는 병합 게시에는 두 부분으로 구성된 스냅샷이 필요합니다. 자세한 내용은 [매개 변수가 있는 필터로 병합 게시에 대한 스냅샷 만들기](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을 참조하세요.  
   
  **항목 내용**  
   
--   **다음을 사용하여 초기 스냅숏을 만들고 적용하려면**  
+-   **다음을 사용 하 여 초기 스냅숏을 만들고 적용 하려면**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -44,7 +44,8 @@ ms.locfileid: "62721688"
   
 3.  스냅샷을 생성할 게시를 마우스 오른쪽 단추로 클릭한 다음 **스냅샷 에이전트 상태 보기**를 클릭합니다.  
   
-4.  **스냅숏 에이전트 상태 보기 - \<게시>** 대화 상자에서 **시작**을 클릭합니다.  
+4.  
+  **스냅샷 에이전트 상태 보기 - \<게시&gt;** 대화 상자에서 **시작**을 클릭합니다.  
   
  스냅샷 에이전트에서 스냅샷 생성을 마치면 "[100%] 17개 아티클의 스냅샷이 생성되었습니다"라는 메시지가 표시됩니다.  
   
@@ -54,7 +55,7 @@ ms.locfileid: "62721688"
   
 2.  스냅샷을 생성할 게시를 마우스 오른쪽 단추로 클릭한 다음 **스냅샷 생성**을 클릭합니다.  
   
-3.  스냅샷 에이전트 상태를 보려면 **에이전트** 탭을 클릭합니다. 자세한 내용을 보려면 표에서 스냅숏 에이전트를 마우스 오른쪽 단추로 클릭한 다음 **자세히 보기**를 클릭합니다.  
+3.  스냅숏 에이전트 상태를 보려면 **에이전트** 탭을 클릭 합니다. 자세한 내용을 보려면 표에서 스냅숏 에이전트를 마우스 오른쪽 단추로 클릭 한 다음 **자세히 보기**를 클릭 합니다.  
   
 #### <a name="to-apply-a-snapshot"></a>스냅샷을 적용하려면  
   
@@ -76,38 +77,39 @@ ms.locfileid: "62721688"
   
 #### <a name="to-create-and-run-a-snapshot-agent-job-to-generate-the-initial-snapshot"></a>스냅샷 에이전트 작업을 만들고 실행하여 초기 스냅샷을 생성하려면  
   
-1.  스냅샷, 트랜잭션 또는 병합 게시를 만듭니다. 자세한 내용은 [Create a Publication](publish/create-a-publication.md)를 참조하세요.  
+1.  스냅샷, 트랜잭션 또는 병합 게시를 만듭니다. 자세한 내용은 [게시 만들기](publish/create-a-publication.md)를 참조하세요.  
   
-2.  [sp_addpublication_snapshot&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)을 실행합니다. 이때 **@publication** 및 다음 매개 변수를 지정합니다.  
+2.  
+  [sp_addpublication_snapshot&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)을 실행합니다. 및 **@publication** 다음 매개 변수를 지정 합니다.  
   
-    -   배포자에서 스냅숏 에이전트를 실행하는 Windows 인증 자격 증명을 지정하는 **@job_login** .  
+    -   스냅숏 에이전트 배포자에서 실행 되는 Windows 인증 자격 증명을 지정 하는입니다. ** @job_login**  
   
-    -   제공된 Windows 자격 증명의 암호인 **@job_password** .  
+    -   제공 된 Windows 자격 증명의 암호를 나타내는입니다. ** @job_password **  
   
-    -   (옵션) 게시자에 연결할 때 에이전트가 SQL Server 인증을 사용하면 **@publisher_security_mode** 에 값 **@publisher_security_mode** . 이 경우 **@publisher_login** 및 **@publisher_password** 을 참조하세요.  
+    -   (옵션) 게시자에 연결할 때 에이전트가 SQL Server 인증을 사용하면 **@publisher_security_mode** 에 값 **@publisher_security_mode** . 이 경우 및 **@publisher_login** **@publisher_password**에 대 한 SQL Server 인증 로그인 정보도 지정 해야 합니다.  
   
-    -   (옵션) 스냅샷 에이전트 작업에 대한 동기화 일정. 자세한 내용은 [Specify Synchronization Schedules](specify-synchronization-schedules.md)을 참조하세요.  
+    -   (옵션) 스냅샷 에이전트 작업에 대한 동기화 일정. 자세한 내용은 [동기화 일정 지정](specify-synchronization-schedules.md)을 참조 하세요.  
   
     > [!IMPORTANT]  
-    >  게시자를 원격 배포자로 구성할 경우 *job_login* 및 *job_password*를 비롯한 모든 매개 변수에 제공된 값이 일반 텍스트로 배포자에게 전송됩니다. 이 저장 프로시저를 실행하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  
+    >  게시자를 원격 배포자로 구성할 경우 *job_login* 및 *job_password*를 비롯한 모든 매개 변수에 제공된 값이 일반 텍스트로 배포자에게 전송됩니다. 이 저장 프로시저를 실행하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용 &#40;SQL Server 구성 관리자&#41;을 ](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)참조 하세요.  
   
 3.  아티클을 게시에 추가합니다. 자세한 내용은 [아티클을 정의](publish/define-an-article.md)을 참조하세요.  
   
-4.  게시 데이터베이스의 게시자에서 1단계의 **@publication** 값을 지정하여 [sp_startpublication_snapshot&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql)을 실행합니다.  
+4.  게시 데이터베이스의 게시자에서 1단계의 [](/sql/relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql)** 값을 지정하여 @publicationsp_startpublication_snapshot&#40;Transact-SQL&#41;** 을 실행합니다.  
   
 #### <a name="to-run-the-snapshot-agent-to-generate-the-initial-snapshot"></a>스냅샷 에이전트를 실행하여 초기 스냅샷을 생성하려면  
   
-1.  스냅샷, 트랜잭션 또는 병합 게시를 만듭니다. 자세한 내용은 [Create a Publication](publish/create-a-publication.md)를 참조하세요.  
+1.  스냅샷, 트랜잭션 또는 병합 게시를 만듭니다. 자세한 내용은 [게시 만들기](publish/create-a-publication.md)를 참조하세요.  
   
 2.  아티클을 게시에 추가합니다. 자세한 내용은 [아티클을 정의](publish/define-an-article.md)을 참조하세요.  
   
 3.  명령 프롬프트 또는 배치 파일에서 [snapshot.exe](agents/replication-snapshot-agent.md) 를 실행하여 **Replication Snapshot Agent**를 시작하고 다음 명령줄 인수를 지정합니다.  
   
-    -   **-Publication**  
+    -   **-게시**  
   
-    -   **-Publisher**  
+    -   **-게시자**  
   
-    -   **-Distributor**  
+    -   **-배포자**  
   
     -   **-PublisherDB**  
   
@@ -119,13 +121,13 @@ ms.locfileid: "62721688"
   
     -   **-DistributorPassword**  
   
-    -   **-DistributorSecurityMode** =  **@publisher_security_mode**  
+    -   **-DistributorSecurityMode** = **0**  
   
     -   **-PublisherLogin**  
   
     -   **-PublisherPassword**  
   
-    -   **-PublisherSecurityMode** =  **@publisher_security_mode**  
+    -   **-PublisherSecurityMode** = **0**  
   
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
  이 예제에서는 트랜잭션 게시를 만들고 **sqlcmd** 스크립팅 변수를 사용하여 새 게시에 대한 스냅샷 에이전트 작업을 추가하는 방법을 보여 줍니다. 또한 추가한 작업을 시작합니다.  
@@ -155,31 +157,42 @@ ms.locfileid: "62721688"
   
 2.  <xref:Microsoft.SqlServer.Replication.TransPublication> 클래스의 인스턴스를 만듭니다. 게시에 대해 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 및 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 속성을 설정하고 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 1단계에서 만든 연결로 설정합니다.  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체의 나머지 속성을 로드합니다. 이 메서드가 `false`를 반환하는 경우 2단계에서 게시 속성이 올바르게 정의되지 않았거나 게시가 없습니다.  
+3.  
+  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체의 나머지 속성을 로드합니다. 이 메서드가 `false`를 반환하는 경우 2단계에서 게시 속성이 올바르게 정의되지 않았거나 게시가 없습니다.  
   
-4.  <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A>의 값이 `false`이면 <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>를 호출하여 이 게시에 대한 스냅숏 에이전트 작업을 만듭니다.  
+4.  
+  <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A>의 값이 `false`이면 <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>를 호출하여 이 게시에 대한 스냅샷 에이전트 작업을 만듭니다.  
   
-5.  <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 메서드를 호출하여 이 게시에 대한 스냅숏을 생성하는 에이전트 작업을 시작합니다.  
+5.  
+  <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 메서드를 호출하여 이 게시에 대한 스냅샷을 생성하는 에이전트 작업을 시작합니다.  
   
 6.  (옵션) <xref:Microsoft.SqlServer.Replication.TransPublication.SnapshotAvailable%2A> 값이 `true`이면 구독자에서 스냅샷을 사용할 수 있습니다.  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-snapshot-or-transactional-publication-by-running-the-snapshot-agent-synchronous"></a>스냅샷 에이전트를 실행하여 스냅샷 또는 트랜잭션 게시에 대한 초기 스냅샷을 생성하려면(동기)  
   
-1.  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> 클래스의 인스턴스를 만들고 다음 필수 속성을 설정합니다.  
+1.  
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> 클래스의 인스턴스를 만들고 다음 필수 속성을 설정합니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publisher%2A> - 게시자의 이름  
+    -   
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publisher%2A> - 게시자의 이름  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherDatabase%2A> - 게시 데이터베이스의 이름  
+    -   
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherDatabase%2A> - 게시 데이터베이스의 이름  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publication%2A> - 게시의 이름  
+    -   
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publication%2A> - 게시의 이름  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Distributor%2A> - 배포자의 이름  
+    -   
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Distributor%2A> - 배포자의 이름  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> - 게시자에 연결할 때 Windows 인증을 사용하려면 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 값, 게시자에 연결할 때 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 인증을 사용하려면 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherLogin%2A> , <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherPassword%2A> 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 값. Windows 인증을 사용하는 것이 좋습니다.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> - 게시자에 연결할 때 Windows 인증을 사용하려면 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 값, 게시자에 연결할 때 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 인증을 사용하려면 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherLogin%2A> , <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherPassword%2A> 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 값. Windows 인증을 사용하는 것이 좋습니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> - 배포자에 연결할 때 Windows 인증을 사용하려면 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 값, 배포자에 연결할 때 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 인증을 사용하려면 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorLogin%2A> , <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorPassword%2A> 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 값. Windows 인증을 사용하는 것이 좋습니다.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> - 배포자에 연결할 때 Windows 인증을 사용하려면 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 값, 배포자에 연결할 때 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 인증을 사용하려면 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorLogin%2A> , <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorPassword%2A> 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 값. Windows 인증을 사용하는 것이 좋습니다.  
   
-2.  <xref:Microsoft.SqlServer.Replication.ReplicationType.Transactional> 에 <xref:Microsoft.SqlServer.Replication.ReplicationType.Snapshot> 또는 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.ReplicationType%2A>값을 설정합니다.  
+2.  
+  <xref:Microsoft.SqlServer.Replication.ReplicationType.Transactional> 에 <xref:Microsoft.SqlServer.Replication.ReplicationType.Snapshot> 또는 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.ReplicationType%2A>값을 설정합니다.  
   
 3.  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.GenerateSnapshot%2A> 메서드를 호출합니다.  
   
@@ -189,35 +202,46 @@ ms.locfileid: "62721688"
   
 2.  <xref:Microsoft.SqlServer.Replication.MergePublication> 클래스의 인스턴스를 만듭니다. 게시에 대해 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 및 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 속성을 설정하고 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 1단계에서 만든 연결로 설정합니다.  
   
-3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체의 나머지 속성을 로드합니다. 이 메서드가 `false`를 반환하는 경우 2단계에서 게시 속성이 올바르게 정의되지 않았거나 게시가 없습니다.  
+3.  
+  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체의 나머지 속성을 로드합니다. 이 메서드가 `false`를 반환하는 경우 2단계에서 게시 속성이 올바르게 정의되지 않았거나 게시가 없습니다.  
   
-4.  <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A>의 값이 `false`이면 <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>를 호출하여 이 게시에 대한 스냅숏 에이전트 작업을 만듭니다.  
+4.  
+  <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A>의 값이 `false`이면 <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>를 호출하여 이 게시에 대한 스냅샷 에이전트 작업을 만듭니다.  
   
-5.  <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 메서드를 호출하여 이 게시에 대한 스냅숏을 생성하는 에이전트 작업을 시작합니다.  
+5.  
+  <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 메서드를 호출하여 이 게시에 대한 스냅샷을 생성하는 에이전트 작업을 시작합니다.  
   
 6.  (옵션) <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> 값이 `true`이면 구독자에서 스냅샷을 사용할 수 있습니다.  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-merge-publication-by-running-the-snapshot-agent-synchronous"></a>스냅샷 에이전트를 실행하여 병합 게시에 대한 초기 스냅샷을 생성하려면(동기)  
   
-1.  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> 클래스의 인스턴스를 만들고 다음 필수 속성을 설정합니다.  
+1.  
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> 클래스의 인스턴스를 만들고 다음 필수 속성을 설정합니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publisher%2A> - 게시자의 이름  
+    -   
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publisher%2A> - 게시자의 이름  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherDatabase%2A> - 게시 데이터베이스의 이름  
+    -   
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherDatabase%2A> - 게시 데이터베이스의 이름  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publication%2A> - 게시의 이름  
+    -   
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publication%2A> - 게시의 이름  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Distributor%2A> - 배포자의 이름  
+    -   
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Distributor%2A> - 배포자의 이름  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> - 게시자에 연결할 때 Windows 인증을 사용하려면 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 값, 게시자에 연결할 때 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 인증을 사용하려면 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherLogin%2A> , <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherPassword%2A> 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 값. Windows 인증을 사용하는 것이 좋습니다.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> - 게시자에 연결할 때 Windows 인증을 사용하려면 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 값, 게시자에 연결할 때 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 인증을 사용하려면 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherLogin%2A> , <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherPassword%2A> 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 값. Windows 인증을 사용하는 것이 좋습니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> - 배포자에 연결할 때 Windows 인증을 사용하려면 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 값, 배포자에 연결할 때 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 인증을 사용하려면 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorLogin%2A> , <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorPassword%2A> 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 값. Windows 인증을 사용하는 것이 좋습니다.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> - 배포자에 연결할 때 Windows 인증을 사용하려면 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 값, 배포자에 연결할 때 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 인증을 사용하려면 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorLogin%2A> , <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorPassword%2A> 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 값. Windows 인증을 사용하는 것이 좋습니다.  
   
-2.  <xref:Microsoft.SqlServer.Replication.ReplicationType.Merge> 에 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.ReplicationType%2A>값을 설정합니다.  
+2.  
+  <xref:Microsoft.SqlServer.Replication.ReplicationType.Merge> 에 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.ReplicationType%2A>값을 설정합니다.  
   
 3.  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.GenerateSnapshot%2A> 메서드를 호출합니다.  
   
-###  <a name="PShellExample"></a> 예(RMO)  
+###  <a name="PShellExample"></a>예 (RMO)  
  이 예에서는 스냅샷 에이전트를 동기적으로 실행하여 트랜잭션 게시에 대한 초기 스냅샷을 생성합니다.  
   
  [!code-csharp[HowTo#rmo_GenerateSnapshot](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_generatesnapshot)]  
@@ -230,14 +254,14 @@ ms.locfileid: "62721688"
   
  [!code-vb[HowTo#rmo_vb_GenerateSnapshot_WithJob](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_generatesnapshot_withjob)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Create a Publication](publish/create-a-publication.md)   
- [끌어오기 구독 만들기](create-a-pull-subscription.md)   
+ [Create a Pull Subscription](create-a-pull-subscription.md)   
  [ssSDSFull](create-a-push-subscription.md)   
- [Specify Synchronization Schedules](specify-synchronization-schedules.md)   
+ [동기화 일정 지정](specify-synchronization-schedules.md)   
  [스냅숏 만들기 및 적용](create-and-apply-the-snapshot.md)   
- [스냅숏으로 구독 초기화](initialize-a-subscription-with-a-snapshot.md)   
- [복제 관리 개체 개념](concepts/replication-management-objects-concepts.md)   
+ [스냅샷으로 구독 초기화](initialize-a-subscription-with-a-snapshot.md)   
+ [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)   
  [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
  [스크립팅 변수와 함께 sqlcmd 사용](../scripting/sqlcmd-use-with-scripting-variables.md)  

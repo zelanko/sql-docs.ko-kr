@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 92cffa7c280aac559433a8fc7ad5a3223c9f6de2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876705"
 ---
 # <a name="backup-timeline"></a>백업 시간대
@@ -32,7 +32,7 @@ ms.locfileid: "62876705"
   
  **특정 날짜 및 시간** 을 사용하여 선택한 날짜와 시간에서 복원을 중지할 수 있습니다. 시간대에는 선택한 날짜 및 시간을 기준으로 24시간 이내에 수행된 백업 작업이 표시됩니다.  
   
- **날짜**  
+ **Date**  
  날짜를 입력하거나 드롭다운 목록에서 선택합니다.  
   
  **Time**  
@@ -56,7 +56,7 @@ ms.locfileid: "62876705"
  빨강 선  
  시간대에서 복원이 가능한 지점에만 놓일 수 있습니다. 시간대를 따라 빨강 선을 이동하면 **날짜** 및 **시간** 상자에 표시되는 날짜와 시간이 조정됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 복원&#40;일반 페이지&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
   

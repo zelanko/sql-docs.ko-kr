@@ -1,5 +1,5 @@
 ---
-title: sys.fn_listextendedproperty (TRANSACT-SQL) | Microsoft Docs
+title: sys. fn_listextendedproperty (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -27,19 +27,19 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9a2516d24b65e509ffc04c0f9979721ad6eefa22
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68082705"
 ---
-# <a name="sysfnlistextendedproperty-transact-sql"></a>sys.fn_listextendedproperty(Transact-SQL)
+# <a name="sysfn_listextendedproperty-transact-sql"></a>sys.fn_listextendedproperty(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   데이터베이스 개체의 확장 속성 값을 반환합니다.  
  
  
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -57,32 +57,32 @@ fn_listextendedproperty (
 ```  
   
 ## <a name="arguments"></a>인수  
- {0} 기본 | '*property_name*' | NULL}  
- 속성 이름입니다. *property_name* 됩니다 **sysname**합니다. 유효한 입력은 기본값, NULL, 속성 이름입니다.  
+ {기본값 | '*property_name*' | N  
+ 속성 이름입니다. *property_name* 는 **sysname**입니다. 유효한 입력은 기본값, NULL, 속성 이름입니다.  
   
- {0} 기본 | '*level0_object_type*' | NULL}  
- 사용자 또는 사용자 정의 형식입니다. *level0_object_type* 됩니다 **varchar(128)** , 기본값은 NULL입니다. 유효한 입력은 ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, TRIGGER, TYPE, USER 및 NULL입니다.  
+ {기본값 | '*level0_object_type*' | N  
+ 사용자 또는 사용자 정의 형식입니다. *level0_object_type* 는 **varchar (128)** 이며 기본값은 NULL입니다. 유효한 입력은 ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, TRIGGER, TYPE, USER 및 NULL입니다.  
   
 > [!IMPORTANT]  
 >  수준 0 유형 USER와 TYPE은 나중 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거됩니다. 새 개발 작업에서는 이 기능을 사용하지 말고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. USER 대신 SCHEMA를 수준 0 유형으로 사용합니다. TYPE의 경우 수준 0 유형으로 SCHEMA를 사용하고 수준 1 유형으로 TYPE을 사용합니다.  
   
- {0} 기본 | '*level0_object_name*' | NULL}  
- 지정된 수준 0 개체 유형의 이름입니다. *level0_object_name* 됩니다 **sysname** 이며 기본값은 NULL입니다. 유효한 입력은 기본값, NULL, 개체 이름입니다.  
+ {기본값 | '*level0_object_name*' | N  
+ 지정된 수준 0 개체 유형의 이름입니다. *level0_object_name* 는 **sysname** 이며 기본값은 NULL입니다. 유효한 입력은 기본값, NULL, 개체 이름입니다.  
   
- {0} 기본 | '*level1_object_type*' | NULL}  
- 수준 1 개체의 유형입니다. *level1_object_type* 됩니다 **varchar(128)** 이며 기본값은 NULL입니다. 유효한 입력은 AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TYPE, VIEW, XML SCHEMA COLLECTION 및 NULL입니다.  
+ {기본값 | '*level1_object_type*' | N  
+ 수준 1 개체의 유형입니다. *level1_object_type* 는 **varchar (128)** 이며 기본값은 NULL입니다. 유효한 입력은 AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TYPE, VIEW, XML SCHEMA COLLECTION 및 NULL입니다.  
   
 > [!NOTE]  
 >  기본값은 NULL에 매핑되며 'default'는 개체 유형 DEFAULT에 매핑됩니다.  
   
- {0} 기본 | '*level1_object_name*' | NULL}  
- 지정된 수준 1 개체 유형의 이름입니다. *level1_object_name* 됩니다 **sysname** 이며 기본값은 NULL입니다. 유효한 입력은 기본값, NULL, 개체 이름입니다.  
+ {기본값 | '*level1_object_name*' | N  
+ 지정된 수준 1 개체 유형의 이름입니다. *level1_object_name* 는 **sysname** 이며 기본값은 NULL입니다. 유효한 입력은 기본값, NULL, 개체 이름입니다.  
   
- {0} 기본 | '*level2_object_type*' | NULL}  
- 수준 2 개체의 유형입니다. *level2_object_type* 됩니다 **varchar(128)** 이며 기본값은 NULL입니다. 유효한 입력은 DEFAULT, 기본값(NULL에 매핑됨) 및 NULL입니다. 에 대 한 유효한 입력 *level2_object_type* 열, 제약 조건, 이벤트 알림, 인덱스, 매개 변수, 트리거 및 NULL이 됩니다.  
+ {기본값 | '*level2_object_type*' | N  
+ 수준 2 개체의 유형입니다. *level2_object_type* 는 **varchar (128)** 이며 기본값은 NULL입니다. 유효한 입력은 DEFAULT, 기본값(NULL에 매핑됨) 및 NULL입니다. *Level2_object_type* 에 대 한 유효한 입력은 COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER 및 NULL입니다.  
   
- {0} 기본 | '*level2_object_name*' | NULL}  
- 지정된 수준 2 개체 유형의 이름입니다. *level2_object_name* 됩니다 **sysname** 이며 기본값은 NULL입니다. 유효한 입력은 기본값, NULL, 개체 이름입니다.  
+ {기본값 | '*level2_object_name*' | N  
+ 지정된 수준 2 개체 유형의 이름입니다. *level2_object_name* 는 **sysname** 이며 기본값은 NULL입니다. 유효한 입력은 기본값, NULL, 개체 이름입니다.  
   
 ## <a name="tables-returned"></a>반환된 테이블  
  fn_listextendedproperty가 반환하는 테이블의 형식은 다음과 같습니다.  
@@ -91,19 +91,19 @@ fn_listextendedproperty (
 |-----------------|---------------|  
 |objtype|**sysname**|  
 |objname|**sysname**|  
-|NAME|**sysname**|  
-|value|**sql_variant**|  
+|name|**sysname**|  
+|값|**sql_variant**|  
   
  반환되는 테이블이 비어 있는 경우는 개체에 확장 속성이 없거나 사용자에게 개체의 확장 속성을 나열할 수 있는 권한이 없기 때문입니다. 데이터베이스 자체의 확장 속성을 반환하는 경우 objtype 및 objname 열은 NULL이 됩니다.  
   
-## <a name="remarks"></a>Remarks  
- 경우에 대 한 값 *property_name* 가 NULL 이거나 기본값인 경우 fn_listextendedproperty는 지정된 된 개체에 대 한 모든 속성을 반환 합니다.  
+## <a name="remarks"></a>설명  
+ *Property_name* 값이 NULL 또는 기본값 인 경우 fn_listextendedproperty는 지정 된 개체에 대 한 모든 속성을 반환 합니다.  
   
  개체 유형을 지정했으며 해당 개체 이름 값이 NULL 또는 기본값인 경우 fn_listextendedproperty는 지정된 유형의 모든 개체에 대한 확장 속성을 모두 반환합니다.  
   
  개체는 수준에 따라 구분하는데 수준 0은 최고, 수준 2는 최저를 나타냅니다. 더 낮은 수준의 개체(수준 1 또는 2) 유형과 이름을 지정한 경우에는 NULL이나 기본값이 아닌 부모 개체 유형 및 이름을 지정해야 합니다. 그렇지 않으면 빈 결과 집합을 반환합니다.  
   
- **objname** Latin1_General_CI_AI로 고정 됩니다. 그러나 방지할 수 있습니다이 데이터 정렬에서 비교를 재정의 하 여.  
+ **objname** 은 Latin1_General_CI_AI로 고정 됩니다. 그러나 비교 시 데이터 정렬을 재정의 하 여이 문제를 해결할 수 있습니다.  
   
 ```  
 SELECT o.[object_id] AS 'table_id', o.[name] 'table_name',  
@@ -120,7 +120,7 @@ WHERE o.name = 'Employee';
   
 ## <a name="examples"></a>예  
   
-### <a name="a-displaying-extended-properties-on-a-database"></a>1\. 데이터베이스의 확장 속성 표시  
+### <a name="a-displaying-extended-properties-on-a-database"></a>A. 데이터베이스의 확장 속성 표시  
  다음 예에서는 데이터베이스 개체 자체에 설정된 모든 확장 속성을 표시합니다.  
   
 ```  
@@ -141,8 +141,8 @@ GO
   
  `(1 row(s) affected)`  
   
-### <a name="b-displaying-extended-properties-on-all-columns-in-a-table"></a>2\. 테이블에 있는 모든 열의 확장 속성 표시  
- 열에 대 한 확장된 속성을 나열 하는 다음 예제에서 `ScrapReason` 테이블입니다. 이 속성은 `Production` 스키마에 포함되어 있습니다.  
+### <a name="b-displaying-extended-properties-on-all-columns-in-a-table"></a>B. 테이블에 있는 모든 열의 확장 속성 표시  
+ 다음 예에서는 `ScrapReason` 테이블의 열에 대 한 확장 속성을 나열 합니다. 이 속성은 `Production` 스키마에 포함되어 있습니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -166,8 +166,8 @@ GO
   
  `(3 row(s) affected)`  
   
-### <a name="c-displaying-extended-properties-on-all-tables-in-a-schema"></a>3\. 스키마에 있는 모든 테이블의 확장 속성 표시  
- 에 포함 된 모든 테이블에 대해 확장된 속성을 나열 하는 다음 예제는 `Sales` 스키마입니다.  
+### <a name="c-displaying-extended-properties-on-all-tables-in-a-schema"></a>C. 스키마에 있는 모든 테이블의 확장 속성 표시  
+ 다음 예에서는 `Sales` 스키마에 포함 된 모든 테이블에 대 한 확장 속성을 나열 합니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -177,10 +177,10 @@ FROM fn_listextendedproperty (NULL, 'schema', 'Sales', 'table', default, NULL, N
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [sp_addextendedproperty &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
- [sp_dropextendedproperty &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
- [sp_updateextendedproperty &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   
- [sys.extended_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;sp_addextendedproperty &#40;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
+ [Transact-sql&#41;sp_dropextendedproperty &#40;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
+ [Transact-sql&#41;sp_updateextendedproperty &#40;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   
+ [extended_properties &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
   
   

@@ -14,22 +14,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2a8dfd7da9bb1ccc60d18e68ccbe4930a6edb00d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196671"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>UNIQUE 제약 조건 및 CHECK 제약 조건
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에서 데이터 무결성을 강제 적용하는 데 사용할 수 있는 두 가지 유형의 제약 조건으로 UNIQUE 제약 조건과 CHECK 제약 조건이 있습니다. 이들 키는 중요한 데이터베이스 개체입니다.  
   
- 이 항목에는 다음 섹션이 수록되어 있습니다.  
+ 이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
   
  [UNIQUE 제약 조건](#Unique)  
   
  [CHECK 제약 조건](#Check)  
   
- [관련 태스크](#Tasks)  
+ [관련 작업](#Tasks)  
   
 ##  <a name="Unique"></a> UNIQUE 제약 조건  
  제약 조건은 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서 사용자에게 적용하는 규칙입니다. 예를 들어 UNIQUE 제약 조건을 사용하면 기본 키에 참여하고 있지 않은 특정 열에 중복 값이 입력되지 않도록 할 수 있습니다. UNIQUE 제약 조건과 PRIMARY KEY 제약 조건이 모두 고유성을 강제 적용하지만 기본 키가 아닌 열 또는 열 조합에 대해 고유성을 강제 적용하려면 PRIMARY KEY 제약 조건 대신 UNIQUE 제약 조건을 사용하세요.  
@@ -45,13 +45,13 @@ ms.locfileid: "68196671"
   
  열 하나에 여러 개의 CHECK 제약 조건을 적용할 수 있습니다. 테이블 수준에서 CHECK 제약 조건을 만들어 여러 열에 적용할 수도 있습니다. 예를 들어 여러 열에 대한 CHECK 제약 조건을 사용하여 **country_region** 열 값이 **USA** 인 모든 행이 **state** 열에서 두 문자의 값을 갖도록 할 수 있습니다. 이렇게 한 위치에서 여러 조건을 검사할 수 있습니다.  
   
- CHECK 제약 조건은 열에 있는 값을 다룬다는 점에서는 FOREIGN KEY 제약 조건과 비슷합니다. 차이점은 어떤 값이 유효한을 결정 하는 방법. FOREIGN KEY 제약 조건이 CHECK 제약 조건은 논리 식 으로부터 유효한 값을 결정 하는 동안 다른 테이블 로부터 유효한 값 목록을 가져옵니다.  
+ CHECK 제약 조건은 열에 있는 값을 다룬다는 점에서는 FOREIGN KEY 제약 조건과 비슷합니다. 어떤 값이 유효한지 결정하는 방법은 서로 다릅니다. FOREIGN KEY 제약 조건은 다른 테이블로부터 유효한 값을 가져오는 반면 CHECK 제약 조건은 논리 식으로부터 유효한 값을 결정합니다.  
   
 > [!CAUTION]  
 >  제약 조건에 암시적 또는 명시적 데이터 형식 변환이 포함된 경우 특정 작업이 실패할 수 있습니다. 예를 들어 파티션 전환의 원본인 테이블에 정의된 이러한 제약 조건으로 인해 ALTER TABLE...SWITCH 작업이 실패할 수 있습니다. 제약 조건 정의에서 데이터 형식을 변환하지 마세요.  
   
 ### <a name="limitations-of-check-constraints"></a>CHECK 제약 조건의 제한 사항  
- CHECK 제약 조건은 FALSE로 평가되는 값을 거부합니다. Null 값은 UNKNOWN으로 평가되므로 식에 Null 값이 있으면 제약 조건이 무시됩니다. 예를 들어, 제약 조건에 배치 된 `int` 열 **MyColumn** 지정 **MyColumn** 값 10만 포함할 수 있습니다 (**MyColumn = 10**). **MyColumn**에 NULL 값을 삽입할 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 NULL을 삽입하고 오류를 반환하지 않습니다.  
+ CHECK 제약 조건은 FALSE로 평가되는 값을 거부합니다. Null 값은 UNKNOWN으로 평가되므로 식에 Null 값이 있으면 제약 조건이 무시됩니다. 예 `int` 를 들어 mycolumn **= 10**과 같이 **mycolumn** 에 값 10만 포함할 수 있도록 열 **mycolumn** 에 대 한 제약 조건을 지정 한다고 가정 합니다. **MyColumn**에 NULL 값을 삽입할 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 NULL을 삽입하고 오류를 반환하지 않습니다.  
   
  CHECK 제약 조건은 확인 중인 조건이 테이블의 모든 행에 대해 FALSE가 아니면 TRUE를 반환합니다. CHECK 제약 조건은 행 수준에서 작동합니다. 방금 만든 테이블에 행이 없어도 이 테이블의 CHECK 제약 조건은 유효한 것으로 간주됩니다. 다음 예와 같이 이러한 상황은 예기치 않은 결과를 생성할 수 있습니다.  
   
@@ -84,12 +84,12 @@ DELETE CheckTbl WHERE col1 = 10;
   
  `DELETE` 제약 조건에서 `CHECK` 테이블에 행이 적어도 `CheckTbl` 개 이상 있어야 한다고 지정해도 `1` 문이 성공합니다.  
   
-##  <a name="Tasks"></a> 관련 태스크  
+##  <a name="Tasks"></a> 관련 작업  
   
 > [!NOTE]  
 >  테이블이 복제용으로 게시된 경우 Transact-SQL 문 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) 또는 SMO(SQL Server 관리 개체)를 사용하여 스키마를 변경해야 합니다. 테이블 디자이너 또는 데이터베이스 다이어그램 디자이너를 사용하여 스키마를 변경하면 테이블 삭제 및 재생성이 시도됩니다. 게시된 개체를 삭제할 수 없으므로 스키마가 변경되지 않습니다.  
   
-|태스크|항목|  
+|Task|항목|  
 |----------|-----------|  
 |UNIQUE 제약 조건을 만드는 방법에 대해 설명합니다.|[UNIQUE 제약 조건 만들기](../tables/create-unique-constraints.md)|  
 |UNIQUE 제약 조건을 수정하는 방법에 대해 설명합니다.|[UNIQUE 제약 조건 수정](../tables/modify-unique-constraints.md)|  

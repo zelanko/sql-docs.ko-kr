@@ -1,5 +1,5 @@
 ---
-title: 예약 된 키워드 | Microsoft Docs
+title: 예약 키워드 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a89a24ddbbe14938824819e24fd9112597168507
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68057213"
 ---
 # <a name="reserved-keywords"></a>예약 키워드
-다음은 ODBC 함수 호출에 사용하기 위해 예약된 단어입니다. 이러한 강요 하지 않지만 최소 SQL 문법을; 그러나 응용 프로그램은 핵심 SQL 문법을 지 원하는 드라이버와의 호환성을 위해 이러한 키워드를 사용 하 여를 방지 해야 합니다. #**정의** 값 SQL_ODBC_KEYWORDS 이러한 키워드의 쉼표로 구분 된 목록을 포함 합니다.  
+다음은 ODBC 함수 호출에 사용하기 위해 예약된 단어입니다. 이러한 단어는 최소 SQL 문법을 제한 하지 않습니다. 그러나 핵심 SQL 문법을 지 원하는 드라이버와의 호환성을 보장 하기 위해 응용 프로그램은 이러한 키워드를 사용 하지 않아야 합니다. #**Define** 값 SQL_ODBC_KEYWORDS은 쉼표로 구분 된 이러한 키워드 목록을 포함 합니다.  
   
 |||  
 |-|-|  
 |ABSOLUTE|IS|  
-|ACTION|ISOLATION|  
+|작업|ISOLATION|  
 |ADA|JOIN|  
 |ADD|KEY|  
 |ALL|LANGUAGE|  
@@ -38,9 +38,9 @@ ms.locfileid: "68057213"
 |AS|LOCAL|  
 |ASC|LOWER|  
 |ASSERTION|MATCH|  
-|AT|MAX|  
-|AUTHORIZATION|MIN|  
-|AVG|MINUTE|  
+|AT|최대|  
+|AUTHORIZATION|최소|  
+|평균|MINUTE|  
 |BEGIN|MODULE|  
 |BETWEEN|MONTH|  
 |BIT|NAMES|  
@@ -56,7 +56,7 @@ ms.locfileid: "68057213"
 |CHAR_LENGTH|NUMERIC|  
 |CHARACTER|OCTET_LENGTH|  
 |CHARACTER_LENGTH|OF|  
-|CHECK|ON|  
+|CHECK|켜기|  
 |CLOSE|ONLY|  
 |COALESCE|OPEN|  
 |COLLATE|OPTION|  
@@ -64,13 +64,13 @@ ms.locfileid: "68057213"
 |COLUMN|ORDER|  
 |COMMIT|OUTER|  
 |CONNECT|OUTPUT|  
-|CONNECTION|겹침|  
+|CONNECTION|OVERLAPS|  
 |CONSTRAINT|PAD|  
-|CONSTRAINTS|PARTIAL|  
+|제약 조건|PARTIAL|  
 |CONTINUE|PASCAL|  
-|CONVERT|위치|  
+|CONVERT|놓을|  
 |CORRESPONDING|PRECISION|  
-|COUNT|PREPARE|  
+|개수|PREPARE|  
 |CREATE|PRESERVE|  
 |CROSS|PRIMARY|  
 |CURRENT|PRIOR|  
@@ -78,7 +78,7 @@ ms.locfileid: "68057213"
 |CURRENT_TIME|PROCEDURE|  
 |CURRENT_TIMESTAMP|PUBLIC|  
 |CURRENT_USER|READ|  
-|커서|REAL|  
+|CURSOR|real|  
 |DATE|REFERENCES|  
 |DAY|RELATIVE|  
 |DEALLOCATE|RESTRICT|  
@@ -87,15 +87,15 @@ ms.locfileid: "68057213"
 |DECLARE|ROLLBACK|  
 |DEFAULT|ROWS|  
 |DEFERRABLE|SCHEMA|  
-|연기됨|SCROLL|  
-|DELETE|SECOND|  
+|DEFERRED|SCROLL|  
+|Delete|SECOND|  
 |DESC|SECTION|  
 |DESCRIBE|SELECT|  
-|DESCRIPTOR|세션|  
+|DESCRIPTOR|SESSION|  
 |DIAGNOSTICS|SESSION_USER|  
 |DISCONNECT|SET|  
-|DISTINCT|SIZE|  
-|DOMAIN|SMALLINT|  
+|DISTINCT|크기|  
+|DOMAIN|SmallInt|  
 |DOUBLE|SOME|  
 |DROP|SPACE|  
 |ELSE|SQL|  
@@ -105,7 +105,7 @@ ms.locfileid: "68057213"
 |EXCEPT|SQLSTATE|  
 |EXCEPTION|SQLWARNING|  
 |EXEC|SUBSTRING|  
-|CREATE 문을 실행하기 전에|SUM|  
+|CREATE 문을 실행하기 전에|합계|  
 |EXISTS|SYSTEM_USER|  
 |EXTERNAL|TABLE|  
 |EXTRACT|TEMPORARY|  
@@ -119,15 +119,15 @@ ms.locfileid: "68057213"
 |FOUND|TRANSACTION|  
 |FROM|TRANSLATE|  
 |FULL|TRANSLATION|  
-|가져오기|TRIM|  
+|GET|TRIM|  
 |GLOBAL|TRUE|  
-|GO|UNION|  
+|이동|UNION|  
 |GOTO|UNIQUE|  
 |GRANT|UNKNOWN|  
 |GROUP|UPDATE|  
 |HAVING|UPPER|  
 |HOUR|USAGE|  
-|IDENTITY|USER|  
+|ID|USER|  
 |IMMEDIATE|USING|  
 |IN|값|  
 |INCLUDE|VALUES|  
@@ -137,7 +137,7 @@ ms.locfileid: "68057213"
 |INNER|WHEN|  
 |INPUT|WHENEVER|  
 |INSENSITIVE|WHERE|  
-|INSERT|의 모든 멘션을|  
+|INSERT|WITH|  
 |INT|WORK|  
 |INTEGER|WRITE|  
 |INTERSECT|YEAR|  

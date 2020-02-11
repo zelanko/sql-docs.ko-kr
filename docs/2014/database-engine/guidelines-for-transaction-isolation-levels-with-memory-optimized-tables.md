@@ -1,5 +1,5 @@
 ---
-title: 메모리 최적화 테이블을 사용 하 여 트랜잭션 격리 수준에 대 한 지침 | Microsoft Docs
+title: 메모리 액세스에 최적화 된 테이블이 있는 트랜잭션 격리 수준에 대 한 지침 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 26f0193d40a01858bc3fe651a23b389a4ffcb6ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779158"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 트랜잭션 격리 수준에 대한 지침
@@ -37,9 +37,11 @@ ms.locfileid: "62779158"
  디스크 기반 테이블은 SNAPSHOT 및 READ_COMMITTED_SNAPSHOT 격리 수준을 사용한 다중 버전 관리를 허용합니다. 메모리 최적화 테이블의 경우 모든 격리 수준이 REPEATABLE READ 및 SERIALIZABLE을 비롯한 여러 버전을 기반으로 합니다.  
   
 ## <a name="types-of-transactions"></a>트랜잭션 유형  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 모든 쿼리는 트랜잭션의 컨텍스트에서 실행됩니다.  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 모든 쿼리는 트랜잭션의 컨텍스트에서 실행됩니다.  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에는 다음과 같은 세 가지 유형의 트랜잭션이 있습니다.  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에는 다음과 같은 세 가지 유형의 트랜잭션이 있습니다.  
   
 -   자동 커밋 트랜잭션. 세션에 활성 트랜잭션 컨텍스트가 없고 암시적 트랜잭션이 ON으로 설정되지 않은 경우 쿼리마다 고유한 트랜잭션 컨텍스트가 사용됩니다. 트랜잭션은 문 실행이 시작되면 시작되고 문 실행이 끝나면 완료됩니다.  
   
@@ -56,7 +58,7 @@ ms.locfileid: "62779158"
   
  SNAPSHOT 격리 수준(메모리 최적화 테이블에 대해 지원되는 가장 낮은 격리 수준)이 제공하는 보증에는 READ COMMITTED의 보증이 포함됩니다. 트랜잭션의 각 문은 동일한 버전의 데이터베이스를 읽습니다. 트랜잭션에서 읽은 모든 행이 데이터베이스에 커밋될 뿐 아니라 모든 읽기 작업이 동일한 트랜잭션 집합에 의해 변경된 내용 집합을 참조합니다.  
   
- **지침**: 사용 하 여 SNAPSHOT 격리를 통해 메모리 최적화 테이블에 액세스 하기 위한 고유 하 게 컴파일된 저장된 프로시저와 해석 된 READ COMMITTED 격리 보증만 필요한 경우 [!INCLUDE[tsql](../includes/tsql-md.md)]합니다.  
+ **지침**: READ COMMITTED 격리 보증만 필요한 경우 고유 하 게 컴파일된 저장 프로시저와 함께 SNAPSHOT 격리를 사용 하 고 해석 [!INCLUDE[tsql](../includes/tsql-md.md)]된을 통해 메모리 최적화 테이블에 액세스 합니다.  
   
  자동 커밋 트랜잭션의 경우 READ COMMITTED 격리 수준이 메모리 최적화 테이블에 대한 SNAPSHOT에 암시적으로 매핑됩니다. 따라서 TRANSACTION ISOLATION LEVEL 세션 설정이 READ COMMITTED로 설정된 경우 메모리 최적화 테이블에 액세스할 때 테이블 힌트를 통해 격리 수준을 지정할 필요가 없습니다.  
   
@@ -91,13 +93,13 @@ COMMIT
   
      일부 애플리케이션의 경우 판독기는 항상 기록기가 커밋할 때까지 기다린다고 가정할 수도 있습니다. 특히 애플리케이션 계층에서 두 트랜잭션 간의 동기화가 있을 경우 그렇습니다.  
   
-     **지침:** 응용 프로그램은 차단 동작에서 사용할 수 없습니다. 동시 트랜잭션 간의 동기화 해야 하는 응용 프로그램을 하는 경우 이러한 논리 응용 프로그램 계층 또는 데이터베이스 계층을 통해 구현할 수 [sp_getapplock &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-getapplock-transact-sql)합니다.  
+     **지침:** 응용 프로그램은 차단 동작을 사용할 수 없습니다. 응용 프로그램에서 동시 트랜잭션을 동기화 해야 하는 경우에는 [sp_getapplock &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-getapplock-transact-sql)를 통해 응용 프로그램 계층 이나 데이터베이스 계층에서 이러한 논리를 구현할 수 있습니다.  
   
 -   READ COMMITTED 격리를 사용하는 트랜잭션에서는 각 문이 데이터베이스에 있는 행의 최신 버전을 참조합니다. 따라서 이후 문은 데이터베이스 상태에 대한 변경 내용을 참조합니다.  
   
      이 가정을 사용하는 애플리케이션 패턴의 예로 새 행을 찾을 때까지 WHILE 루프를 사용하여 테이블을 폴링하는 경우를 들 수 있습니다. 루프가 반복될 때마다 쿼리는 데이터베이스에 있는 최신 업데이트를 참조합니다.  
   
-     **지침:** 응용 프로그램에서 테이블에 쓰여진 최신 행을 가져오기 위해 메모리 최적화 테이블을 폴링해야 하는 경우 폴링 루프를 트랜잭션 범위 밖에 서 이동 합니다.  
+     **지침:** 응용 프로그램에서 테이블에 기록 된 최신 행을 가져오기 위해 메모리 최적화 테이블을 폴링해야 하는 경우 폴링 루프를 트랜잭션 범위 밖으로 이동 합니다.  
   
      다음은 이 가정을 사용하는 애플리케이션 패턴의 예입니다. 새 행을 찾을 때까지 WHILE 루트를 사용하여 테이블을 폴링합니다. 루프가 반복될 때마다 쿼리는 데이터베이스에 있는 최신 업데이트에 액세스합니다.  
   
@@ -123,15 +125,15 @@ COMMIT
 ```  
   
 ## <a name="locking-table-hints"></a>테이블 잠금 힌트  
- 잠금 힌트 ([테이블 힌트 &#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)) 할 HOLDLOCK과 XLOCK 디스크 기반 테이블을 사용 하 여 사용할 수와 같은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 지정된 된 격리 수준에 필요한 것 보다 많은 잠금을 수행 합니다.  
+ HOLDLOCK 및 XLOCK 등의 잠금[&#41;&#40;](/sql/t-sql/queries/hints-transact-sql-table)힌트는 디스크 기반 테이블에서 지정 된 격리 수준에 필요한 것 보다 더 많은 잠금을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 수행 하는 데 사용할 수 있습니다.  
   
  메모리 액세스에 최적화된 테이블은 잠금을 사용하지 않습니다. REPEATABLE READ와 SERIALIZABLE 같은 더 높은 격리 수준을 사용하여 원하는 보증을 선언할 수 있습니다.  
   
  잠금 힌트는 지원되지 않습니다. 대신 트랜잭션 격리 수준을 통해 필요한 보증을 선언하십시오. ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 메모리 최적화 테이블을 잠그지 않기 때문에 NOLOCK이 지원됩니다. 디스크 기반 테이블과 달리 NOLOCK은 메모리 최적화 테이블에 대한 READ UNCOMMITTED 동작을 의미하지는 않습니다.)  
   
-## <a name="see-also"></a>관련 항목  
- [메모리 최적화 테이블의 트랜잭션 이해](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
- [메모리 최적화 테이블의 트랜잭션에 대 한 재시도 논리에 대 한 지침](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)   
+## <a name="see-also"></a>참고 항목  
+ [메모리 액세스에 최적화 된 테이블의 트랜잭션 이해](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
+ [메모리 액세스에 최적화 된 테이블의 트랜잭션에 대 한 재시도 논리 지침](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)   
  [트랜잭션 격리 수준](../../2014/database-engine/transaction-isolation-levels.md)  
   
   

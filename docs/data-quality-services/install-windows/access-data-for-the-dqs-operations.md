@@ -10,10 +10,10 @@ ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 2eae5415e6f6bb93501dfc7989fe180e581ae387
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75254789"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>DQS 작업을 위해 데이터 액세스
@@ -27,7 +27,7 @@ ms.locfileid: "75254789"
   
 -   사용자 데이터베이스를 DQS 작업의 원본 데이터 및 처리된 데이터의 내보내기 대상으로 사용합니다. 이렇게 하려면 사용자 데이터베이스가 데이터 품질 서버 데이터베이스와 동일한 SQL Server 인스턴스에 있어야 합니다. 그렇지 않으면 데이터 품질 클라이언트에서 해당 데이터베이스를 DQS 작업에 사용할 수 없습니다. 또한 일치하는 결과는 2단계로 내보내지므로 일치하는 결과를 내보내려면 Windows 사용자 계정에 DQS_STAGING_DATA 데이터베이스에 대한 읽기 권한을 부여해야 합니다. 먼저 일치하는 결과를 DQS_STAGING_DATA 데이터베이스의 임시 표로 내보낸 다음 대상 데이터베이스의 표로 이동합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
   
 -   DQSInstaller.exe 파일을 실행하여 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 설치를 완료해야 합니다. 자세한 내용은 [DQSInstaller.exe를 실행하여 Data Quality 서버 설치 완료](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)를 참조하세요.  
   

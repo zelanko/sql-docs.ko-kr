@@ -9,19 +9,51 @@ metadata:
   author: MashaMSFT
   ms.author: mathoma
   ms.date: 10/14/2019
-  ms.openlocfilehash: 6d9e92db1b261899846fd0de3c28488717cc58e1
-  ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+  ms.openlocfilehash: 2a7c0d83963f82862c89c1262409fe600dcbd7d3
+  ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/04/2019
-  ms.locfileid: "73536229"
+  ms.lasthandoff: 01/31/2020
+  ms.locfileid: "76831739"
 landingContent:
+- title: Azure의 SQL
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Azure SQL Database 단일 데이터베이스
+      url: /azure/sql-database/sql-database-single-database
+    - text: Azure SQL Database Managed Instance
+      url: /azure/sql-database/sql-database-managed-instance
+    - text: Azure Synapse Analytics(SQL DW)
+      url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
+    - text: Windows VM의 SQL Server
+      url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
+    - text: Linux VM의 SQL Server
+      url: ../linux/quickstart-install-connect-clouds.md
+    - text: Azure Database Migration Service
+      url: /azure/dms/dms-overview
+- title: 마이그레이션
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 마이그레이션 콘텐츠
+      url: migrate/index.yml
+    - text: 데이터 마이그레이션 가이드
+      url: https://datamigration.microsoft.com/
+    - text: 데이터베이스 호환성 인증
+      url: https://aka.ms/dbcompat
+    - text: Data Migration Assistant(DMA)
+      url: ../dma/dma-overview.md
+    - text: SSMA(SQL Server Migration Assistant)
+      url: ../ssma/sql-server-migration-assistant.md
 - title: SQL Server
   linkLists:
   - linkListType: whats-new
     links:
     - text: SQL Server 2019
       url: what-s-new-in-sql-server-ver15.md
+    - text: SQL Server 빅 데이터 클러스터
+      url: ../big-data-cluster/big-data-cluster-overview.md
     - text: Azure Data Studio
       url: ../azure-data-studio/what-is.md
     - text: SQL Server on Linux
@@ -35,68 +67,152 @@ landingContent:
   - linkListType: download
     links:
     - text: SQL Server
-      url: https://www.microsoft.com/en-us/sql-server/sql-server-downloads
+      url: https://www.microsoft.com/sql-server/sql-server-downloads
     - text: SQL Server Management Studio
       url: ../ssms/download-sql-server-management-studio-ssms.md
     - text: Azure Data Studio
       url: ../azure-data-studio/download.md
   - linkListType: reference
     links:
-    - text: Transact-SQL
+    - text: Transact-SQL(T-SQL)
       url: ../t-sql/language-reference.md
-    - text: SQL PowerShell
-      url: ../powershell/sql-server-powershell.md
-    - text: 예제 데이터베이스
+    - text: SQL Server 2014 docs
+      url: https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014
+    - text: 교육용 SQL 리소스
+      url: ../sql-server/educational-sql-resources.yml
+    - text: 샘플 데이터베이스
       url: https://docs.microsoft.com/sql/samples/sql-samples-where-are
     - text: 내부 요소 및 아키텍처 가이드
       url: https://aka.ms/sqlserverguides
-    - text: 이전 버전 2005-2014
+    - text: 이전 버전 2005~2012
       url: https://docs.microsoft.com/sql/toc/previous-versions-sql-server
-- title: Azure의 SQL
+- title: 비즈니스 연속성
   linkLists:
   - linkListType: overview
-    links:
-    - text: Azure SQL Database 단일 데이터베이스
-      url: /azure/sql-database/sql-database-single-database
-    - text: Azure SQL Database 관리되는 인스턴스
-      url: /azure/sql-database/sql-database-managed-instance
-    - text: Azure Synapse Analytics(SQL DW)
-      url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
-    - text: Windows VM의 SQL Server
-      url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
-    - text: Linux VM의 SQL Server
-      url: ../linux/quickstart-install-connect-clouds.md
-- title: 관리
-  linkLists:
-  - linkListType: deploy
-    links:
-    - text: SQL Server 설치
-      url: https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server
-    - text: SQL Server 업그레이드
-      url: ../database-engine/install-windows/upgrade-sql-server.md
-  - linkListType: overview
-    links:
-    - text: 보안
-      url: https://docs.microsoft.com/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database
-    - text: 성능 모니터링 및 튜닝
-      url: https://docs.microsoft.com/sql/relational-databases/performance/monitor-and-tune-for-performance
-    - text: 메모리 내 데이터베이스
-      url: ..//relational-databases/in-memory-database.md
-    - text: 자동 튜닝
-      url: ../relational-databases/automatic-tuning/automatic-tuning.md
-    - text: 지능형 쿼리 처리
-      url: https://aka.ms/IQP
-  - linkListType: concept
     links:
     - text: 백업 및 복원
       url: ../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md
     - text: Always On 가용성 그룹
       url: ../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
-    - text: 장애 조치(Failover) 클러스터 인스턴스
-      url: failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md
-    - text: SQL  Server  복제
+    - text: Always On 장애 조치(failover) 클러스터 인스턴스
+      url: failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md
+    - text: 데이터베이스 미러링
+      url: ../database-engine/database-mirroring/database-mirroring-sql-server.md
+    - text: 로그 전달
+      url: ../database-engine/log-shipping/about-log-shipping-sql-server.md
+    - text: 복제
       url: ../relational-databases/replication/sql-server-replication.md
-- title: Business Intelligence
+- title: 보안
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: SQL 취약성 평가
+      url: ../relational-databases/security/sql-vulnerability-assessment.md
+    - text: 액세스 관리
+      url: ../relational-databases/security/authentication-access/determining-effective-database-engine-permissions.md
+    - text: Always Encrypted
+      url: ../relational-databases/security/encryption/always-encrypted-database-engine.md
+    - text: 감사
+      url: ../relational-databases/security/auditing/sql-server-audit-database-engine.md
+    - text: Enclave
+      url: ../relational-databases/security/encryption/always-encrypted-enclaves.md
+    - text: 동적 데이터 마스킹
+      url: ../relational-databases/security/dynamic-data-masking.md
+    - text: TDE(투명한 데이터 암호화)
+      url: ../relational-databases/security/encryption/transparent-data-encryption.md
+    - text: 행 수준 보안
+      url: ../relational-databases/security/row-level-security.md
+- title: 데이터베이스 디자인
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 데이터 정렬
+      url: ../relational-databases/collations/collation-and-unicode-support.md
+    - text: 데이터베이스
+      url: ../relational-databases/databases/databases.md
+    - text: 그래프
+      url: ../relational-databases/graphs/sql-graph-overview.md
+    - text: 인덱스
+      url: ../relational-databases/indexes/indexes.md
+    - text: 뷰
+      url: ../relational-databases/views/views.md
+    - text: 사용자 정의 함수
+      url: ../relational-databases/user-defined-functions/user-defined-functions.md
+    - text: 테이블
+      url: ../relational-databases/tables/tables.md
+    - text: 저장 프로시저
+      url: ../relational-databases/stored-procedures/stored-procedures-database-engine.md
+- title: 관리 및 모니터링
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 트랜잭션 로그 관리
+      url: ../relational-databases/logs/the-transaction-log-sql-server.md
+    - text: 유지 관리 계획
+      url: ../relational-databases/maintenance-plans/maintenance-plans.md
+    - text: SQL Server 에이전트
+      url: ../ssms/agent/sql-server-agent.md
+    - text: 변경 내용 추적 작업
+      url: ../relational-databases/track-changes/track-data-changes-sql-server.md
+    - text: 데이터 압축
+      url: ../relational-databases/data-compression/data-compression.md
+    - text: 확장 이벤트
+      url: ../relational-databases/extended-events/extended-events.md
+    - text: SQLdiag
+      url: ../tools/sqldiag-utility.md
+    - text: SQL 프로파일러
+      url: ../tools/sql-server-profiler/sql-server-profiler.md
+- title: 튜닝
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 성능 센터
+      url: ../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md
+    - text: 지능형 쿼리 처리
+      url: https://aka.ms/IQP
+    - text: 자동 튜닝
+      url: ../relational-databases/automatic-tuning/automatic-tuning.md
+    - text: 데이터베이스 튜닝 관리자
+      url: ../relational-databases/performance/database-engine-tuning-advisor.md
+    - text: 메모리 내 OLTP
+      url: ../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
+  - linkListType: concept
+    links:
+    - text: 카디널리티 추정
+      url: ../relational-databases/performance/cardinality-estimation-sql-server.md
+    - text: 통계
+      url: ../relational-databases/statistics/statistics.md
+    - text: 인덱스
+      url: ../relational-databases/indexes/indexes.md
+- title: 쿼리 데이터
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Transact-SQL(T-SQL)
+      url: ../t-sql/language-reference.md
+    - text: SQL PowerShell
+      url: ../powershell/sql-server-powershell.md
+    - text: 스크립팅
+      url: ../ssms/scripting/database-engine-scripting.md
+    - text: 조인
+      url: ../relational-databases/performance/joins.md
+    - text: 전체 텍스트 검색
+      url: ../relational-databases/search/full-text-search.md
+    - text: 동의어
+      url: ../relational-databases/synonyms/synonyms-database-engine.md
+- title: 빅 데이터 및 기계 학습
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: SQL Server 빅 데이터 클러스터
+      url: ../big-data-cluster/big-data-cluster-overview.md
+    - text: 분석 플랫폼 시스템
+      url: https://www.microsoft.com/sql/analytics-platform-system/
+    - text: SQL Server Machine Learning(R 및 Python)
+      url: https://docs.microsoft.com/sql/advanced-analytics/
+    - text: Polybase를 사용한 데이터 가상화
+      url: ../relational-databases/polybase/polybase-guide.md
+- title: 비즈니스 인텔리전스
   linkLists:
   - linkListType: overview
     links:
@@ -106,35 +222,5 @@ landingContent:
       url: /analysis-services/analysis-services-overview
     - text: SSIS(SQL Server Integration Services)
       url: ../integration-services/sql-server-integration-services.md
-    - text: Azure Data Factory
+    - text: Azure 데이터 팩터리
       url: https://docs.microsoft.com/azure/data-factory/
-- title: 마이그레이션
-  linkLists:
-  - linkListType: overview
-    links:
-    - text: 데이터 마이그레이션 가이드
-      url: https://datamigration.microsoft.com/
-    - text: 데이터베이스 호환성 인증
-      url: https://aka.ms/dbcompat
-    - text: Azure Database Migration Service
-      url: https://docs.microsoft.com/azure/dms/dms-overview
-    - text: Data Migration Assistant(DMA)
-      url: ../dma/dma-overview.md
-    - text: 데이터베이스 실험 도우미
-      url: ../dea/database-experimentation-assistant-overview.md
-    - text: SSMA(SQL Server Migration Assistant)
-      url: ../ssma/sql-server-migration-assistant.md
-- title: 빅 데이터 및 기계 학습
-  linkLists:
-  - linkListType: overview
-    links:
-    - text: SQL Server 빅 데이터 클러스터
-      url: ../big-data-cluster/big-data-cluster-overview.md
-    - text: 분석 플랫폼 시스템
-      url: https://www.microsoft.com/sql/analytics-platform-system/
-    - text: SQL Server를 사용한 기계 학습
-      url: https://docs.microsoft.com/sql/advanced-analytics/
-    - text: R Services
-      url: ../advanced-analytics/r/sql-server-r-services.md
-    - text: Polybase를 사용한 데이터 가상화
-      url: ../relational-databases/polybase/polybase-guide.md

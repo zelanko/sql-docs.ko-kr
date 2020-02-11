@@ -10,10 +10,10 @@ ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: bb763d2212bd8dcb09b6088467e97aa702d15012
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251745"
 ---
 # <a name="data-profiling-and-notifications-in-dqs"></a>DQS의 데이터 프로파일링 및 알림
@@ -100,6 +100,6 @@ ms.locfileid: "75251745"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|DQS에서 알림을 설정 또는 해제하는 방법에 대해 설명합니다.|[DQS에서 프로 파일링 알림 사용 또는 사용 안 함](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)|  
+|DQS에서 알림을 설정 또는 해제하는 방법에 대해 설명합니다.|[DQS에서 프로파일링 알림 설정 또는 해제](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)|  
   
   

@@ -13,25 +13,26 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e450559355baf1242e5d822761256047f4790fe2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058573"
 ---
 # <a name="for-loop-editor"></a>For 루프 편집기
+  
   **For 루프 편집기** 대화 상자의 **For 루프** 페이지를 사용하여 지정한 조건이 False로 평가될 때까지 워크플로를 반복하는 루프를 구성할 수 있습니다.  
   
  For 루프 컨테이너 및 패키지에서의 해당 컨테이너 사용 방법은 [For Loop Container](control-flow/for-loop-container.md)를 참조하십시오.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **InitExpression**  
  필요에 따라 루프에서 사용하는 값을 초기화하는 식을 제공합니다.  
   
  **EvalExpression**  
  루프를 중단할 것인지, 아니면 계속할 것인지를 평가하는 식을 제공합니다.  
   
- **AssignExpression**  
+ **Assignexpression 입력란**  
  필요에 따라 루프가 반복될 때마다 조건을 변경하는 식을 제공합니다.  
   
  **이름**  
@@ -43,7 +44,7 @@ ms.locfileid: "66058573"
  **설명**  
  For 루프 컨테이너에 대한 설명을 제공합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [식 페이지](expressions/expressions-page.md)   
  [Foreach 루프 컨테이너](control-flow/foreach-loop-container.md)   
