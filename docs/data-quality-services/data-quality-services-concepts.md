@@ -10,10 +10,10 @@ ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: a9f1ab0eaca67eb1e5266f11381f316607031635
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251716"
 ---
 # <a name="data-quality-services-concepts"></a>Data Quality Services 개념
@@ -39,14 +39,14 @@ ms.locfileid: "75251716"
   
  **참조 Data Services**  
   
- 참조 데이터를 사용하면 참조 데이터 품질을 보장하는 회사의 서비스를 이용하여 데이터의 유효성을 검사하고 데이터를 수정 및 보강할 수 있습니다. Azure Marketplace 서비스를 사용 하 여 참조 데이터 공급자에 연결 하거나 공급자에 대 한 직접 연결을 사용할 수 있습니다. 자세한 내용은 [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md)을(를) 참조하세요.  
+ 참조 데이터를 사용하면 참조 데이터 품질을 보장하는 회사의 서비스를 이용하여 데이터의 유효성을 검사하고 데이터를 수정 및 보강할 수 있습니다. Azure Marketplace 서비스를 사용 하 여 참조 데이터 공급자에 연결 하거나 공급자에 대 한 직접 연결을 사용할 수 있습니다. 자세한 내용은 [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md)을 참조하세요.  
   
  DQS의 기술 자료 관리에 대한 자세한 내용은 [DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md)을 참조하세요.  
   
 ##  <a name="Projects"></a>데이터 품질 프로젝트 개념  
  데이터 관리자는 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 애플리케이션에서 데이터 품질 프로젝트를 사용하여 데이터 품질 작업(정리 및 일치)을 수행합니다.  
   
- **데이터 정리**  
+ **Data Cleansing**  
   
  DQS의 데이터 정리 작업은 DQS 기술 자료의 지식을 기반으로 수행됩니다. DQS의 데이터 정리 작업은 2단계 프로세스입니다.  
   
@@ -95,6 +95,6 @@ ms.locfileid: "75251716"
  DQS 관리에 대한 자세한 내용은 [DQS Administration](../data-quality-services/dqs-administration.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Data Quality Services](../data-quality-services/data-quality-services.md)  
+ [데이터베이스 엔진 서비스](../data-quality-services/data-quality-services.md)  
   
   
