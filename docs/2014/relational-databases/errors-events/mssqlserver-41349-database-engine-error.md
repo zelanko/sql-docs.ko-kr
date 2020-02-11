@@ -13,15 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c5bd805a6c737862adbfe9fdef507e61d4035eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914019"
 ---
-# <a name="mssqlserver41349"></a>MSSQLSERVER_41349
+# <a name="mssqlserver_41349"></a>MSSQLSERVER_41349
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -30,9 +30,9 @@ ms.locfileid: "62914019"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|HK_ENCRYPTION_ON|  
-|메시지 텍스트|경고: 하나를 포함 하는 데이터베이스에 암호화가 사용 하거나 내구성이 SCHEMA_AND_DATA 인 메모리 최적화 테이블입니다. 이러한 메모리 액세스에 최적화된 테이블의 데이터는 암호화되지 않습니다.|  
+|메시지 텍스트|경고: 내구성이 SCHEMA_AND_DATA인 메모리 액세스에 최적화된 테이블이 하나 이상 있는 데이터베이스에 암호화가 사용됩니다. 이러한 메모리 액세스에 최적화된 테이블의 데이터는 암호화되지 않습니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e528b94e51238a06a9776e58693c3093f4bfb831
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091876"
 ---
 # <a name="sql-server-parameters"></a>SQL Server 매개 변수
@@ -28,9 +28,9 @@ ms.locfileid: "66091876"
 > [!NOTE]  
 >  추적 파일이나 SQL 배치 파일을 분석하기 위해 전송할 경우에만 일부 업그레이드 문제가 감지될 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **분석할 데이터베이스**  
- 모든 데이터베이스를 분석 하려면 선택 합니다 **모든 데이터베이스** 확인란 합니다. 일부 데이터베이스를 분석하려면 분석할 각 데이터베이스 옆에 있는 확인란을 선택합니다.  
+ 모든 데이터베이스를 분석 하려면 **모든 데이터베이스** 확인란을 선택 합니다. 일부 데이터베이스를 분석하려면 분석할 각 데이터베이스 옆에 있는 확인란을 선택합니다.  
   
  **추적 파일 분석**  
  파일 시스템에 있는 추적 파일을 분석하려면 이 확인란을 선택합니다.  
@@ -38,21 +38,22 @@ ms.locfileid: "66091876"
  **추적 파일의 경로**  
  하나 이상의 파일을 분석할 수 있습니다. 위치를 찾아 여러 개의 파일을 선택하거나 파일 이름을 여러 개 입력할 수 있습니다. 각 파일의 전체 경로 이름(파일 이름 포함)을 사용하고 파이프 문자(|)로 각 항목을 구분합니다.  
   
- 사용 하도록 설정 하면 **추적 파일 분석**를 **다음** 경로 이름과 파일 이름을 입력할 때까지 사용 하지 않도록 설정 됩니다.  
+ **추적 파일 분석**을 사용 하도록 설정 하는 경우 경로 이름과 파일 이름을 입력할 때까지 **다음** 을 사용할 수 없습니다.  
   
- **분석 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 배치 파일**  
+ **배치 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일 분석**  
  파일 시스템에 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 배치 파일을 분석하려면 이 확인란을 선택합니다.  
   
- **에 대 한 경로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 배치 파일**  
+ **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 배치 파일의 경로**  
  하나 이상의 배치 파일을 분석할 수 있습니다. 위치를 찾아 여러 개의 파일을 선택하거나 파일 이름을 여러 개 입력할 수 있습니다. 각 파일의 전체 경로 이름(파일 이름 포함)을 사용하고 파이프 문자(|)로 각 항목을 구분합니다.  
   
- 사용 하도록 설정 하면 **분석 SQL 배치 파일**서 **다음** 경로 이름과 파일 이름을 입력할 때까지 단추가 비활성화 됩니다.  
+ **SQL 배치 파일 분석**을 사용 하도록 설정 하는 경우 경로 이름과 파일 이름을 입력할 때까지 **다음** 단추를 사용할 수 없습니다.  
   
  **SQL 일괄 처리 구분 기호**  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 일괄 처리를 구분하는 데 사용되는 텍스트입니다. 기본값은 **이동**합니다.  
+ 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 일괄 처리를 구분하는 데 사용되는 텍스트입니다. 기본값은 **GO**입니다.  
   
-## <a name="see-also"></a>관련 항목  
- [업그레이드 관리자를 사용 하 여 작업](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
+## <a name="see-also"></a>참고 항목  
+ [업그레이드 관리자 작업](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
  [업그레이드 관리자 사용자 인터페이스 참조](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)  
   
   

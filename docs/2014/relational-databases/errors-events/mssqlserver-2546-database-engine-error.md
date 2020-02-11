@@ -13,15 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ca1a8af843d0183acd46a8b11e00427738d59d0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62868854"
 ---
-# <a name="mssqlserver2546"></a>MSSQLSERVER_2546
+# <a name="mssqlserver_2546"></a>MSSQLSERVER_2546
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -38,7 +38,7 @@ ms.locfileid: "62868854"
 ## <a name="user-action"></a>사용자 동작  
  ALTER INDEX를 사용하여 인덱스를 다시 작성하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ALTER INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
  [인덱스 다시 구성 및 다시 작성](../indexes/indexes.md)  
   

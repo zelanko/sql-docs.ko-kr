@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5d5ffe7ba8f0f844b7de626ff6238ebbead91dd7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085211"
 ---
 # <a name="customize-mining-models-and-structure"></a>마이닝 모델 및 구조 사용자 지정
@@ -41,9 +41,10 @@ ms.locfileid: "66085211"
  모델에서 사용할 데이터 열과 해당 데이터를 사용 및 처리하는 방법에 대한 결정은 분석 결과에 큰 영향을 줍니다. 다음 항목에서는 이러한 선택 사항을 이해하는 데 도움이 되는 정보를 제공합니다.  
   
 ### <a name="using-feature-selection"></a>기능 선택 사용  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 데이터 마이닝 알고리즘에서는 대부분 *기능 선택* 이라는 프로세스를 사용하여 모델에 추가할 가장 유용한 특성만 선택합니다. 열과 특성 수를 줄이면 모델 품질 및 성능을 향상시킬 수 있습니다. 사용 가능한 기능 선택 방법은 선택한 알고리즘에 따라 달라집니다.  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 데이터 마이닝 알고리즘에서는 대부분 *기능 선택* 이라는 프로세스를 사용하여 모델에 추가할 가장 유용한 특성만 선택합니다. 열과 특성 수를 줄이면 모델 품질 및 성능을 향상시킬 수 있습니다. 사용 가능한 기능 선택 방법은 선택한 알고리즘에 따라 달라집니다.  
   
- [기능 선택&#40;데이터 마이닝&#41;](feature-selection-data-mining.md).  
+ [기능 선택은 데이터 마이닝&#41;&#40;](feature-selection-data-mining.md).  
   
 ### <a name="changing-usage"></a>사용법 변경  
  마이닝 모델에 포함할 열과 각 열의 사용 방법을 변경할 수 있습니다. 원하는 결과를 얻지 못한 경우 입력으로 사용한 열의 예제를 만들어 열을 올바르게 선택했는지, 그리고 다음을 포함하여 데이터 처리를 향상시키기 위해 수행할 수 있는 작업이 있는지 확인해야 합니다.  
@@ -56,14 +57,14 @@ ms.locfileid: "66085211"
   
 -   고유 값이 많은 열 또는 주소나 중간 이름과 같이 실제로 데이터를 참조하고 분석에는 유용하지 않은 열 제거  
   
- 마이닝 구조에서 열을 물리적으로 제거할 필요가 없습니다. 열으로만 플래그를 수 **무시**합니다. 열이 마이닝 모델에서 제거되지만 구조의 다른 마이닝 모델에서는 해당 열을 계속 사용할 수 있으며 드릴스루 쿼리에서 참조됩니다.  
+ 마이닝 구조에서 열을 실제로 제거할 필요는 없습니다. 열에 **무시**로 플래그를 지정 하면 됩니다. 열이 마이닝 모델에서 제거되지만 구조의 다른 마이닝 모델에서는 해당 열을 계속 사용할 수 있으며 드릴스루 쿼리에서 참조됩니다.  
   
 ### <a name="creating-aliases-for-model-columns"></a>모델 열의 별칭 만들기  
  마이닝 모델을 만들 때 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 마이닝 구조에 있는 이름과 동일한 열 이름을 사용합니다. 마이닝 모델의 모든 열에 별칭을 추가할 수 있습니다. 이렇게 하면 열 내용 또는 사용법을 보다 쉽게 이해할 수 있으며 쿼리 작성 시 편리하도록 이름을 짧게 만들 수 있습니다. 별칭은 열의 복사본을 만들고 이해하기 쉬운 이름을 지정하려는 경우에도 유용합니다.  
   
- 마이닝 모델 열의 `Name` 속성을 편집하여 별칭을 만듭니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 계속 원래 이름을에 입력 하는 열과 새 값의 ID로 사용 `Name` 열 별칭이 되어 표에서 열 사용법 옆에 괄호로 묶여 나타납니다 및 합니다.  
+ 마이닝 모델 열의 `Name` 속성을 편집하여 별칭을 만듭니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 계속 해 서 원래 이름을 열의 ID로 사용 하 고,에 `Name` 입력 하는 새 값이 열 별칭이 되어 표에 열 사용법 옆의 괄호 안에 표시 됩니다.  
   
- ![별칭에 마이닝 모델 열](../media/modelcolumnalias-income.gif "별칭에 마이닝 모델 열")  
+ ![마이닝 모델 열의 별칭](../media/modelcolumnalias-income.gif "마이닝 모델 열의 별칭")  
   
  이 그림에서는 모두 소득과 관련된 마이닝 구조 열의 여러 복사본이 있는 관련 모델을 보여 줍니다. 구조 열의 각 복사본은 서로 다른 방식으로 불연속화되었습니다. 다이어그램의 모델은 각각 마이닝 구조의 다른 열을 사용하지만 모델 전체에서 열을 비교할 때 편리하도록 각 모델의 열 이름을 [**Income**]으로 바꾸었습니다.  
   
@@ -83,8 +84,8 @@ ms.locfileid: "66085211"
   
 |||  
 |-|-|  
-|[Microsoft 의사 결정 트리 알고리즘](microsoft-decision-trees-algorithm.md)|[Microsoft 시계열 알고리즘](microsoft-time-series-algorithm.md)|  
-|[Microsoft 클러스터링 알고리즘](microsoft-clustering-algorithm.md)|[Microsoft 신경망 알고리즘](microsoft-neural-network-algorithm.md)|  
+|[Microsoft 의사 결정 트리 알고리즘](microsoft-decision-trees-algorithm.md)|[Microsoft Time Series 알고리즘](microsoft-time-series-algorithm.md)|  
+|[Microsoft Clustering Algorithm](microsoft-clustering-algorithm.md)|[Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)|  
 |[Microsoft Naive Bayes Algorithm](microsoft-naive-bayes-algorithm.md)|[Microsoft 로지스틱 회귀 알고리즘](microsoft-logistic-regression-algorithm.md)|  
 |[Microsoft 연결 알고리즘](microsoft-association-algorithm.md)|[Microsoft 선형 회귀 알고리즘](microsoft-linear-regression-algorithm.md)|  
 |[Microsoft 시퀀스 클러스터링 알고리즘](microsoft-sequence-clustering-algorithm.md)||  
@@ -96,44 +97,44 @@ ms.locfileid: "66085211"
   
 |속성 이름|적용 대상|  
 |-------------------|----------------|  
-|AUTO_DETECT_PERIODICITY|[Microsoft 시계열 알고리즘 기술 참조](microsoft-time-series-algorithm-technical-reference.md)|  
+|AUTO_DETECT_PERIODICITY|[Microsoft Time Series 알고리즘 기술 참조](microsoft-time-series-algorithm-technical-reference.md)|  
 |CLUSTER_COUNT|[Microsoft 클러스터링 알고리즘 기술 참조](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft 시퀀스 클러스터링 알고리즘 기술 참조](microsoft-sequence-clustering-algorithm-technical-reference.md)|  
 |CLUSTER_SEED|[Microsoft 클러스터링 알고리즘 기술 참조](microsoft-clustering-algorithm-technical-reference.md)|  
 |CLUSTERING_METHOD|[Microsoft 클러스터링 알고리즘 기술 참조](microsoft-clustering-algorithm-technical-reference.md)|  
-|COMPLEXITY_PENALTY|[Microsoft 의사 결정 트리 알고리즘 기술 참조](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 시계열 알고리즘 기술 참조](microsoft-time-series-algorithm-technical-reference.md)|  
-|FORCE_REGRESSOR|[Microsoft 의사 결정 트리 알고리즘 기술 참조](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 선형 회귀 알고리즘 기술 참조](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [모델링 플래그&#40;데이터 마이닝&#41;](modeling-flags-data-mining.md)|  
-|FORECAST_METHOD|[Microsoft 시계열 알고리즘 기술 참조](microsoft-time-series-algorithm-technical-reference.md)|  
+|COMPLEXITY_PENALTY|[Microsoft 의사 결정 트리 알고리즘 기술 참조](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft Time Series 알고리즘 기술 참조](microsoft-time-series-algorithm-technical-reference.md)|  
+|FORCE_REGRESSOR|[Microsoft 의사 결정 트리 알고리즘 기술 참조](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 선형 회귀 알고리즘 기술 참조](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [데이터 마이닝&#41;&#40;모델링 플래그](modeling-flags-data-mining.md)|  
+|FORECAST_METHOD|[Microsoft Time Series 알고리즘 기술 참조](microsoft-time-series-algorithm-technical-reference.md)|  
 |HIDDEN_NODE_RATIO|[Microsoft 신경망 알고리즘 기술 참조](microsoft-neural-network-algorithm-technical-reference.md)|  
-|HISTORIC_MODEL_COUNT|[Microsoft 시계열 알고리즘 기술 참조](microsoft-time-series-algorithm-technical-reference.md)|  
-|HISTORICAL_MODEL_GAP|[Microsoft 시계열 알고리즘 기술 참조](microsoft-time-series-algorithm-technical-reference.md)|  
-|HOLDOUT_PERCENTAGE|[Microsoft 로지스틱 회귀 알고리즘 기술 참조](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft 신경망 알고리즘 기술 참조](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> 참고: 이 매개 변수는 마이닝 구조에 적용 되는 홀드 아웃 백분율 값과 다릅니다.|  
-|HOLDOUT_SEED|[Microsoft 로지스틱 회귀 알고리즘 기술 참조](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft 신경망 알고리즘 기술 참조](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> 참고: 이 매개 변수는 마이닝 구조에 적용 되는 홀드 아웃 초기값과 다릅니다.|  
-|INSTABILITY_SENSITIVITY|[Microsoft 시계열 알고리즘 기술 참조](microsoft-time-series-algorithm-technical-reference.md)|  
+|HISTORIC_MODEL_COUNT|[Microsoft Time Series 알고리즘 기술 참조](microsoft-time-series-algorithm-technical-reference.md)|  
+|HISTORICAL_MODEL_GAP|[Microsoft Time Series 알고리즘 기술 참조](microsoft-time-series-algorithm-technical-reference.md)|  
+|HOLDOUT_PERCENTAGE|[Microsoft 로지스틱 회귀 알고리즘 기술 참조](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft 신경망 알고리즘 기술 참조](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> 참고: 이 매개 변수는 마이닝 구조에 적용되는 홀드아웃 백분율 값과는 다릅니다.|  
+|HOLDOUT_SEED|[Microsoft 로지스틱 회귀 알고리즘 기술 참조](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft 신경망 알고리즘 기술 참조](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> 참고: 이 매개 변수는 마이닝 구조에 적용되는 홀드아웃 초기값과는 다릅니다.|  
+|INSTABILITY_SENSITIVITY|[Microsoft Time Series 알고리즘 기술 참조](microsoft-time-series-algorithm-technical-reference.md)|  
 |MAXIMUM_INPUT_ATTRIBUTES|[Microsoft 클러스터링 알고리즘 기술 참조](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft 의사 결정 트리 알고리즘 기술 참조](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 선형 회귀 알고리즘 기술 참조](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft Naive Bayes 알고리즘 기술 참조](microsoft-naive-bayes-algorithm-technical-reference.md)<br /><br /> [Microsoft 신경망 알고리즘 기술 참조](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> [Microsoft 로지스틱 회귀 알고리즘 기술 참조](microsoft-logistic-regression-algorithm-technical-reference.md)|  
 |MAXIMUM_ITEMSET_COUNT|[Microsoft 연결 알고리즘 기술 참조](microsoft-association-algorithm-technical-reference.md)|  
 |MAXIMUM_ITEMSET_SIZE|[Microsoft 연결 알고리즘 기술 참조](microsoft-association-algorithm-technical-reference.md)|  
 |MAXIMUM_OUTPUT_ATTRIBUTES|[Microsoft 의사 결정 트리 알고리즘 기술 참조](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 선형 회귀 알고리즘 기술 참조](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft 로지스틱 회귀 알고리즘 기술 참조](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft Naive Bayes 알고리즘 기술 참조](microsoft-naive-bayes-algorithm-technical-reference.md)<br /><br /> [Microsoft 신경망 알고리즘 기술 참조](microsoft-neural-network-algorithm-technical-reference.md)|  
 |MAXIMUM_SEQUENCE_STATES|[Microsoft 시퀀스 클러스터링 알고리즘 기술 참조](microsoft-sequence-clustering-algorithm-technical-reference.md)|  
-|MAXIMUM_SERIES_VALUE|[Microsoft 시계열 알고리즘 기술 참조](microsoft-time-series-algorithm-technical-reference.md)|  
+|MAXIMUM_SERIES_VALUE|[Microsoft Time Series 알고리즘 기술 참조](microsoft-time-series-algorithm-technical-reference.md)|  
 |MAXIMUM_STATES|[Microsoft 클러스터링 알고리즘 기술 참조](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft 신경망 알고리즘 기술 참조](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> [Microsoft 시퀀스 클러스터링 알고리즘 기술 참조](microsoft-sequence-clustering-algorithm-technical-reference.md)|  
 |MAXIMUM_SUPPORT|[Microsoft 연결 알고리즘 기술 참조](microsoft-association-algorithm-technical-reference.md)|  
 |MINIMUM_IMPORTANCE|[Microsoft 연결 알고리즘 기술 참조](microsoft-association-algorithm-technical-reference.md)|  
 |MINIMUM_ITEMSET_SIZE|[Microsoft 연결 알고리즘 기술 참조](microsoft-association-algorithm-technical-reference.md)|  
 |MINIMUM_DEPENDENCY_PROBABILITY|[Microsoft Naive Bayes 알고리즘 기술 참조](microsoft-naive-bayes-algorithm-technical-reference.md)|  
 |MINIMUM_PROBABILITY|[Microsoft 연결 알고리즘 기술 참조](microsoft-association-algorithm-technical-reference.md)|  
-|MINIMUM_SERIES_VALUE|[Microsoft 시계열 알고리즘 기술 참조](microsoft-time-series-algorithm-technical-reference.md)|  
-|MINIMUM_SUPPORT|[Microsoft 연결 알고리즘 기술 참조](microsoft-association-algorithm-technical-reference.md)<br /><br /> [Microsoft 클러스터링 알고리즘 기술 참조](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft 의사 결정 트리 알고리즘 기술 참조](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 시퀀스 클러스터링 알고리즘 기술 참조](microsoft-sequence-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft 시계열 알고리즘 기술 참조](microsoft-time-series-algorithm-technical-reference.md)|  
-|MISSING_VALUE_SUBSTITUTION|[Microsoft 시계열 알고리즘 기술 참조](microsoft-time-series-algorithm-technical-reference.md)|  
+|MINIMUM_SERIES_VALUE|[Microsoft Time Series 알고리즘 기술 참조](microsoft-time-series-algorithm-technical-reference.md)|  
+|MINIMUM_SUPPORT|[Microsoft 연결 알고리즘 기술 참조](microsoft-association-algorithm-technical-reference.md)<br /><br /> [Microsoft 클러스터링 알고리즘 기술 참조](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft 의사 결정 트리 알고리즘 기술 참조](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 시퀀스 클러스터링 알고리즘 기술 참조](microsoft-sequence-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft Time Series 알고리즘 기술 참조](microsoft-time-series-algorithm-technical-reference.md)|  
+|MISSING_VALUE_SUBSTITUTION|[Microsoft Time Series 알고리즘 기술 참조](microsoft-time-series-algorithm-technical-reference.md)|  
 |MODELLING_CARDINALITY|[Microsoft 클러스터링 알고리즘 기술 참조](microsoft-clustering-algorithm-technical-reference.md)|  
-|PERIODICITY_HINT|[Microsoft 시계열 알고리즘 기술 참조](microsoft-time-series-algorithm-technical-reference.md)|  
-|PREDICTION_SMOOTHING|[Microsoft 시계열 알고리즘 기술 참조](microsoft-time-series-algorithm-technical-reference.md)|  
+|PERIODICITY_HINT|[Microsoft Time Series 알고리즘 기술 참조](microsoft-time-series-algorithm-technical-reference.md)|  
+|PREDICTION_SMOOTHING|[Microsoft Time Series 알고리즘 기술 참조](microsoft-time-series-algorithm-technical-reference.md)|  
 |SAMPLE_SIZE|[Microsoft 클러스터링 알고리즘 기술 참조](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft 로지스틱 회귀 알고리즘 기술 참조](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft 신경망 알고리즘 기술 참조](microsoft-neural-network-algorithm-technical-reference.md)|  
 |SCORE_METHOD|[Microsoft 의사 결정 트리 알고리즘 기술 참조](microsoft-decision-trees-algorithm-technical-reference.md)|  
 |SPLIT_METHOD|[Microsoft 의사 결정 트리 알고리즘 기술 참조](microsoft-decision-trees-algorithm-technical-reference.md)|  
 |STOPPING_TOLERANCE|[Microsoft 클러스터링 알고리즘 기술 참조](microsoft-clustering-algorithm-technical-reference.md)|  
   
-## <a name="see-also"></a>관련 항목  
- [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [물리적 아키텍처&#40;Analysis Services - 데이터 마이닝&#41;](physical-architecture-analysis-services-data-mining.md)  
+## <a name="see-also"></a>참고 항목  
+ [데이터 마이닝 알고리즘 &#40;Analysis Services 데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [물리적 아키텍처 &#40;Analysis Services 데이터 마이닝&#41;](physical-architecture-analysis-services-data-mining.md)  
   
   

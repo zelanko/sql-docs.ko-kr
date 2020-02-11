@@ -16,16 +16,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 14e86ac2dd32f2a3e1384e08aca597794ee4bc71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083963"
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Microsoft 로지스틱 회귀 알고리즘
   로지스틱 회귀는 이진 결과 모델링에 사용되는 유명한 통계 기법입니다.  
   
- 통계 연구에는 여러 가지 학습 기법을 사용하는 로지스틱 회귀의 다양한 구현이 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 로지스틱 회귀 알고리즘은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘의 변형을 사용하여 구현되었습니다. 이 알고리즘은 신경망의 많은 특성을 공유하지만 학습하기가 더 쉽습니다.  
+ 통계 연구에는 여러 가지 학습 기법을 사용하는 로지스틱 회귀의 다양한 구현이 있습니다. 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 로지스틱 회귀 알고리즘은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘의 변형을 사용하여 구현되었습니다. 이 알고리즘은 신경망의 많은 특성을 공유하지만 학습하기가 더 쉽습니다.  
   
  로지스틱 회귀는 매우 유연하여 모든 종류의 입력을 사용하며 다음과 같은 여러 가지 분석 태스크를 지원한다는 이점이 있습니다.  
   
@@ -46,11 +47,11 @@ ms.locfileid: "66083963"
   
  로지스틱 회귀 모델의 요구 사항은 다음과 같습니다.  
   
- **단일 키 열** 각 모델은 각 레코드를 고유하게 식별하는 숫자 또는 텍스트 열을 하나 포함해야 합니다. 복합 키는 사용할 수 없습니다.  
+ **단일 키 열** 각 모델은 각 레코드를 고유 하 게 식별 하는 숫자 또는 텍스트 열을 하나 포함 해야 합니다. 복합 키는 사용할 수 없습니다.  
   
- **입력 열** 각 모델은 분석에서 요소로 사용되는 값을 포함하는 입력 열을 하나 이상 포함해야 합니다. 입력 열은 원하는 만큼 사용할 수 있지만 각 열의 값 수에 따라 추가되는 열로 인해 모델 학습에 걸리는 시간이 길어질 수 있습니다.  
+ **입력 열** 각 모델은 분석에서 요소로 사용 되는 값을 포함 하는 입력 열을 하나 이상 포함 해야 합니다. 입력 열은 원하는 만큼 사용할 수 있지만 각 열의 값 수에 따라 추가되는 열로 인해 모델 학습에 걸리는 시간이 길어질 수 있습니다.  
   
- **하나 이상의 예측 가능한 열** 모델은 연속 숫자 데이터를 포함하여 모든 데이터 형식의 예측 가능한 열을 하나 이상 포함해야 합니다. 또한 예측 가능한 열의 값은 모델에 대한 입력으로 처리될 수도 있고, 이를 예측용으로만 사용하도록 지정할 수도 있습니다. 중첩 테이블은 예측 가능한 열에 사용할 수 없지만 입력으로는 사용할 수 있습니다.  
+ **하나 이상의 예측 가능한 열** 모델은 연속 숫자 데이터를 포함 하 여 모든 데이터 형식의 예측 가능한 열을 하나 이상 포함 해야 합니다. 또한 예측 가능한 열의 값은 모델에 대한 입력으로 처리될 수도 있고, 이를 예측용으로만 사용하도록 지정할 수도 있습니다. 중첩 테이블은 예측 가능한 열에 사용할 수 없지만 입력으로는 사용할 수 있습니다.  
   
  로지스틱 회귀 모델에 대해 지원되는 콘텐츠 형식 및 데이터 형식에 대한 자세한 내용은 [Microsoft 로지스틱 회귀 알고리즘 기술 참조](microsoft-logistic-regression-algorithm-technical-reference.md)의 요구 사항 섹션을 참조하세요.  
   
@@ -59,7 +60,7 @@ ms.locfileid: "66083963"
   
  Microsoft 신경망 뷰어를 사용하여 모델을 보는 경우 Analysis Services에서는 특정 결과에 영향을 주는 요소를 중요도에 따라 순위를 지정하여 표시합니다. 비교할 특성 및 값은 사용자가 선택할 수 있습니다. 자세한 내용은 [Microsoft 신경망 뷰어를 사용하여 모델 찾아보기](browse-a-model-using-the-microsoft-neural-network-viewer.md)를 참조하세요.  
   
- 보다 자세한 내용을 보려면 Microsoft 일반 콘텐츠 트리 뷰어를 사용하여 모델 세부 정보를 살펴보세요. 로지스틱 회귀 모델의 모델 콘텐츠에는 모델에 사용된 모든 입력과 예측 가능한 특성의 하위 네트워크를 보여 주는 한계 노드가 포함되어 있습니다. 자세한 내용은 [로지스틱 회귀 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-logistic-regression-models.md)를 참조하세요.  
+ 보다 자세한 내용을 보려면 Microsoft 일반 콘텐츠 트리 뷰어를 사용하여 모델 세부 정보를 살펴보세요. 로지스틱 회귀 모델의 모델 콘텐츠에는 모델에 사용된 모든 입력과 예측 가능한 특성의 하위 네트워크를 보여 주는 한계 노드가 포함되어 있습니다. 자세한 내용은 [로지스틱 회귀 분석 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-logistic-regression-models.md)를 참조하세요.  
   
 ## <a name="creating-predictions"></a>예측 만들기  
  모델을 학습한 후에는 모델 콘텐츠에 대한 쿼리를 만들어 회귀 계수 및 기타 세부 정보를 가져오거나, 모델을 사용하여 예측을 만들 수 있습니다.  
@@ -68,7 +69,7 @@ ms.locfileid: "66083963"
   
 -   로지스틱 회귀 모델에 대한 쿼리 예는 [클러스터링 모델 쿼리 예제](clustering-model-query-examples.md)를 참조하세요.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 -   드릴스루는 지원하지 않습니다. 이는 마이닝 모델의 노드 구조가 기본 데이터와 반드시 일치하지는 않기 때문입니다.  
   
@@ -78,8 +79,8 @@ ms.locfileid: "66083963"
   
 -   PMML(Predictive Model Markup Language)을 사용한 마이닝 모델 생성은 지원하지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [로지스틱 회귀 분석 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-logistic-regression-models.md)   
+## <a name="see-also"></a>참고 항목  
+ [로지스틱 회귀 모델에 대 한 마이닝 모델 콘텐츠 &#40;Analysis Services 데이터 마이닝&#41;](mining-model-content-for-logistic-regression-models.md)   
  [Microsoft 로지스틱 회귀 알고리즘 기술 참조](microsoft-logistic-regression-algorithm-technical-reference.md)   
  [로지스틱 회귀 모델 쿼리 예제](logistic-regression-model-query-examples.md)  
   

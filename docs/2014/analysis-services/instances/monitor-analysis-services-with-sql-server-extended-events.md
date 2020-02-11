@@ -11,18 +11,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d6abfca98386ef691add200d433af827ed44836
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079742"
 ---
 # <a name="use-sql-server-extended-events-xevents-to-monitor-analysis-services"></a>SQL Server 확장 이벤트(XEvent)를 사용하여 Analysis Services 모니터링
-  사용 하 여 추적 기능을 제공 하는 analysis Services [확장 이벤트](../../relational-databases/extended-events/extended-events.md)합니다.  
+  Analysis Services는 [확장 이벤트](../../relational-databases/extended-events/extended-events.md)를 사용 하 여 추적 기능을 제공 합니다.  
   
  확장 이벤트는 서버 시스템에 대해 구성할 수 있는 확장성이 높은 이벤트 인프라입니다. 확장 이벤트는 성능 리소스를 적게 사용하는 간단한 성능 모니터링 시스템입니다.  
   
- 모든 Analysis Services 이벤트를 캡처할 수 있습니다 및에 정의 된 특정 소비자를 대상 [확장 이벤트](../../relational-databases/extended-events/extended-events.md), XEvents를 통해.  
+ Xevent를 통해 [확장 이벤트](../../relational-databases/extended-events/extended-events.md)에 정의 된 대로 모든 Analysis Services 이벤트를 캡처하고 특정 소비자를 대상으로 지정할 수 있습니다.  
   
 ## <a name="initiating-extended-events-in-analysis-services"></a>Analysis Services에서 확장 이벤트 시작  
  확장 이벤트 추적은 다음과 같은 XMLA 개체 만들기 스크립트 명령을 사용하여 설정할 수 있습니다.  
@@ -63,7 +63,8 @@ ms.locfileid: "66079742"
  이 추적의 고유 식별자를 정의합니다.  
   
  *trace_name*  
- 이 추적에 지정된 이름으로, 대개 사람이 읽을 수 있는 추적에 대한 정의입니다. *trace_id* 값을 이름으로 사용하는 것이 일반적입니다.  
+ 이 추적에 지정된 이름으로, 대개 사람이 읽을 수 있는 추적에 대한 정의입니다. 
+  *trace_id* 값을 이름으로 사용하는 것이 일반적입니다.  
   
  *AS_event*  
  노출할 Analysis Services 이벤트입니다. 이벤트의 이름은 [Analysis Services 추적 이벤트](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events) 를 참조하세요.  
@@ -98,7 +99,7 @@ ms.locfileid: "66079742"
  *trace_id*  
  삭제할 추적의 고유 식별자를 정의합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [확장 이벤트](../../relational-databases/extended-events/extended-events.md)  
   
   

@@ -13,15 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a9a20d1003e8b87179e2690fa35ad44b50894568
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870582"
 ---
-# <a name="mssqlserver10534"></a>MSSQLSERVER_10534
+# <a name="mssqlserver_10534"></a>MSSQLSERVER_10534
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -30,17 +30,21 @@ ms.locfileid: "62870582"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|PG_INVALID_PARAMS|  
-|메시지 텍스트|계획 지침 ' %. \*l s에 대 한 지정 된 값 때문에 `@params` 올바르지 않습니다. *parameter_name parameter_type* 형식으로 값을 지정하거나 NULL을 지정하세요.|  
+|메시지 텍스트|
+  \*
+  `@params`
+  에 지정된 값이 잘못되었으므로 계획 지침 '%.ls'을(를) 만들 수 없습니다. *parameter_name parameter_type* 형식으로 값을 지정하거나 NULL을 지정하세요.|  
   
 ## <a name="explanation"></a>설명  
- 지정 된 값 `@params` 올바르지 않습니다.  
+ 
+  `@params`에 지정된 값이 잘못되었습니다.  
   
 ## <a name="user-action"></a>사용자 동작  
  *parameter_name parameter_type* 형식으로 값을 지정하거나 NULL을 지정하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [계획 지침](../performance/plan-guides.md)   
- [sp_create_plan_guide&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [Transact-sql&#41;sp_create_plan_guide &#40;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [sp_create_plan_guide_from_handle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)  
   
   

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 69aedf4a3712b79672a0630e953e399c08f23338
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876197"
 ---
 # <a name="online-restore-sql-server"></a>온라인 복원(SQL Server)
@@ -54,17 +54,18 @@ ms.locfileid: "62876197"
     > [!NOTE]  
     >  위의 정보는 모든 오프라인 상태인 파일에도 적용할 수 있습니다.  
   
--   특별한 경우로 첫 번째 복원 문이 실행된 시점에서 온라인 상태였다가 해당 복원 문에 의해 자동으로 오프라인 상태가 된 읽기/쓰기 파일이 있습니다. 이 경우 반드시 첫 번째 *복원 순서* (데이터를 복원, 롤포워드 및 복구하는 하나 이상의 RESTORE 문의 순서) 중에 로그 백업을 수행해야 합니다. 일반적으로 이 로그 백업은 모든 전체 백업을 복원한 이후 그리고 데이터를 복구하기 이전에 발생해야 합니다. 그러나 특정 파일 그룹에 대한 파일 백업이 여러 개인 경우 로그 백업의 최소 시점은 해당 파일 그룹이 오프라인 상태가 된 후입니다. 이러한 데이터 복원 후 로그 백업은 파일이 오프라인 상태가 된 지점을 캡처합니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 은 온라인 복원에 온라인 로그를 사용할 수 없으므로 이러한 데이터 복원 후 로그 백업이 필요합니다.  
+-   특별한 경우로 첫 번째 복원 문이 실행된 시점에서 온라인 상태였다가 해당 복원 문에 의해 자동으로 오프라인 상태가 된 읽기/쓰기 파일이 있습니다. 이 경우 반드시 첫 번째 *복원 순서* (데이터를 복원, 롤포워드 및 복구하는 하나 이상의 RESTORE 문의 순서) 중에 로그 백업을 수행해야 합니다. 일반적으로 이 로그 백업은 모든 전체 백업을 복원한 이후 그리고 데이터를 복구하기 이전에 발생해야 합니다. 그러나 특정 파일 그룹에 대한 파일 백업이 여러 개인 경우 로그 백업의 최소 시점은 해당 파일 그룹이 오프라인 상태가 된 후입니다. 이러한 데이터 복원 후 로그 백업은 파일이 오프라인 상태가 된 지점을 캡처합니다. 
+  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 은 온라인 복원에 온라인 로그를 사용할 수 없으므로 이러한 데이터 복원 후 로그 백업이 필요합니다.  
   
     > [!NOTE]  
     >  복원 시퀀스 전에 파일을 수동으로 오프라인 상태로 만들 수도 있습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 "데이터베이스 또는 파일을 오프라인 상태로 만들기"를 참조하세요.  
   
-##  <a name="taking_db_or_file_offline"></a> 데이터베이스 또는 파일을 오프라인 상태로 만들기  
+##  <a name="taking_db_or_file_offline"></a>데이터베이스 또는 파일을 오프 라인 상태로 만들기  
  온라인 복원을 사용하지 않으려면 복원 시퀀스를 시작하기 전에 다음 방법 중 하나를 사용하여 데이터베이스를 오프라인 상태로 만들 수 있습니다.  
   
 -   복구 모델에서 다음 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) 문을 사용하여 데이터베이스를 오프라인 상태로 만들 수 있습니다.  
   
-     ALTER DATABASE *database_name* SET OFFLINE  
+     ALTER DATABASE *database_name* 오프 라인으로 설정  
   
 -   또는 전체 복구 모델에서 다음 [BACKUP LOG](/sql/t-sql/statements/backup-transact-sql) 문을 사용하여 데이터베이스를 복원 중인 상태로 설정하여 파일이나 페이지 복원을 강제로 오프라인 상태로 만들 수 있습니다.  
   
@@ -77,21 +78,21 @@ ms.locfileid: "62876197"
 > [!NOTE]  
 >  온라인 복원 시퀀스의 구문은 오프라인 복원 시퀀스의 구문과 동일합니다.  
   
--   [예: 데이터베이스의 증분 복원&#40;단순 복구 모델&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [예제: 데이터베이스의 증분 복원&#40;단순 복구 모델&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
--   [예: 일부 파일 그룹만 증분 복원&#40;단순 복구 모델&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
+-   [예제: 일부 파일 그룹만 증분 복원&#40;단순 복구 모델&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
--   [예: 읽기 전용 파일의 온라인 복원&#40;단순 복구 모델&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
+-   [예제: 읽기 전용 파일의 온라인 복원&#40;단순 복구 모델&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
--   [예: 데이터베이스의 증분 복원&#40;전체 복구 모델&#41;](example-piecemeal-restore-of-database-full-recovery-model.md)  
+-   [예제: 데이터베이스의 증분 복원&#40;전체 복구 모델&#41;](example-piecemeal-restore-of-database-full-recovery-model.md)  
   
--   [예: 일부 파일 그룹만 증분 복원&#40;전체 복구 모델&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
+-   [예제: 일부 파일 그룹만 증분 복원&#40;전체 복구 모델&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
--   [예: 읽기-쓰기 파일의 온라인 복원&#40;전체 복구 모델&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md)  
+-   [예제: 읽기-쓰기 파일의 온라인 복원&#40;전체 복구 모델&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md)  
   
--   [예: 읽기 전용 파일의 온라인 복원&#40;전체 복구 모델&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
+-   [예제: 읽기 전용 파일 온라인 복원&#40;전체 복구 모델&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [파일 및 파일 그룹 복원&#40;SQL Server&#41;](restore-files-and-filegroups-sql-server.md)  
   
@@ -101,9 +102,9 @@ ms.locfileid: "62876197"
   
 -   [데이터를 복원하지 않고 데이터베이스 복구&#40;Transact-SQL&#41;](recover-a-database-without-restoring-data-transact-sql.md)  
   
--   [존재하지 않는 파일 그룹 제거&#40;SQL Server&#41;](remove-defunct-filegroups-sql-server.md)  
+-   [존재 하지 않는 파일 그룹 &#40;SQL Server&#41;제거](remove-defunct-filegroups-sql-server.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [파일 복원&#40;전체 복구 모델&#41;](file-restores-full-recovery-model.md)   
  [파일 복원&#40;단순 복구 모델&#41;](file-restores-simple-recovery-model.md)   
  [페이지 복원&#40;SQL Server&#41;](restore-pages-sql-server.md)   

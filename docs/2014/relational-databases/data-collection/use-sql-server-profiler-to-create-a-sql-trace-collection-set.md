@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a9e37fd917dc2716967623648a62057e45df73dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873342"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>SQL Server 프로파일러를 사용하여 SQL 추적 컬렉션 집합 만들기(SQL Server Management Studio)
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]의 서버 쪽 추적 기능을 이용하여 일반 SQL 추적 수집기 유형을 사용하는 컬렉션 집합을 만들기 위한 추적 정의를 내보낼 수 있습니다. 이 프로세스는 두 부분으로 구성되어 있습니다.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 의 서버 쪽 추적 기능을 이용하여 일반 SQL 추적 수집기 유형을 사용하는 컬렉션 집합을 만들기 위한 추적 정의를 내보낼 수 있습니다. 이 프로세스는 두 부분으로 구성되어 있습니다.  
   
 1.  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 추적을 만들고 내보냅니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62873342"
   
 2.  **서버에 연결** 대화 상자에서 **취소**를 클릭합니다.  
   
-3.  이 시나리오에서는 기간 값을 밀리초로 표시(기본 설정)하도록 구성되어 있는지 확인합니다. 이렇게 하려면 다음 단계를 수행합니다.  
+3.  이 시나리오에서는 기간 값을 밀리초로 표시(기본 설정)하도록 구성되어 있는지 확인합니다. 이렇게 하려면 다음 단계를 수행하세요.  
   
     1.  **도구** 메뉴에서 **옵션**을 클릭합니다.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "62873342"
   
     1.  필터 목록에서 **기간**을 클릭합니다.  
   
-    2.  부울 연산자 창에서 확장을 **보다 크거나** 노드를 입력 `80` 클릭 한 다음 확인 하 고 값으로 **확인**합니다.  
+    2.  부울 연산자 창에서 **크거나 같음** 노드를 확장 하 고를 값으로 입력 `80` 한 다음 **확인**을 클릭 합니다.  
   
 9. **실행** 을 클릭하여 추적을 시작합니다.  
   
@@ -100,13 +100,13 @@ ms.locfileid: "62873342"
   
 4.  **실행** 을 클릭하여 쿼리를 실행하고 컬렉션 집합을 만듭니다.  
   
-5.  개체 탐색기에서 컬렉션 집합이 만들어졌는지 확인합니다. 이렇게 하려면 다음 단계를 수행합니다.  
+5.  개체 탐색기에서 컬렉션 집합이 만들어졌는지 확인합니다. 이렇게 하려면 다음 단계를 수행하세요.  
   
     1.  **관리**를 마우스 오른쪽 단추로 클릭한 다음 **새로 고침**을 클릭합니다.  
   
     2.  **관리**와 **데이터 컬렉션**을 차례로 확장합니다.  
   
-     `SPROC_CollectionSet` 와 같은 수준에 표시 되는 컬렉션 집합을 **시스템 데이터 컬렉션 집합** 노드. 이 컬렉션 집합은 기본적으로 해제되어 있습니다.  
+     컬렉션 `SPROC_CollectionSet` 집합은 **시스템 데이터 컬렉션 집합** 노드와 같은 수준에 나타납니다. 이 컬렉션 집합은 기본적으로 해제되어 있습니다.  
   
 6.  개체 탐색기를 사용하여 SPROC_CollectionSet에 대해 컬렉션 모드 및 업로드 일정 등의 속성을 편집합니다. 데이터 수집기와 함께 제공되는 시스템 데이터 컬렉션 집합의 경우와 동일한 절차를 따릅니다.  
   

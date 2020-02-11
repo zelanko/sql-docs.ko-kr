@@ -1,5 +1,5 @@
 ---
-title: 데이터 (SSAS 테이블 형식)를 수동으로 처리 | Microsoft Docs
+title: 수동으로 데이터 처리 (SSAS 테이블 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5de1215bd9646e115c6b2730c4e8a750a3f4040f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077969"
 ---
 # <a name="manually-process-data-ssas-tabular"></a>수동으로 데이터 처리(SSAS 테이블 형식)
@@ -30,25 +30,30 @@ ms.locfileid: "66077969"
   
 -   [데이터 처리 진행률](#bkmk_data_process_progress)  
   
-##  <a name="bkmk_mahually_process"></a> 수동으로 데이터 처리  
+##  <a name="bkmk_mahually_process"></a>수동으로 데이터 처리  
   
 #### <a name="to-process-data-for-a-single-table-or-all-tables-in-a-model"></a>모델의 단일 테이블 또는 모든 테이블의 데이터를 처리하려면  
   
 1.  모델 디자이너에서 처리할 테이블을 클릭합니다.  
   
-2.  **모델** 메뉴를 클릭하고 **처리**를 클릭한 다음 **처리** 또는 **모두 처리**를 클릭합니다.  
+2.  
+  **모델** 메뉴를 클릭하고 **처리**를 클릭한 다음 **처리** 또는 **모두 처리**를 클릭합니다.  
   
 #### <a name="to-process-data-for-all-tables-using-the-same-connection"></a>같은 연결을 사용하는 모든 테이블에 대한 데이터를 처리하려면  
   
-1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 **모델** 메뉴를 클릭한 다음 **기존 연결**을 클릭합니다.  
+1.  
+  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 **모델** 메뉴를 클릭한 다음 **기존 연결**을 클릭합니다.  
   
-2.  **기존 연결** 대화 상자에서 연결을 선택한 다음 **처리**를 클릭합니다.  
+2.  
+  **기존 연결** 대화 상자에서 연결을 선택한 다음 **처리**를 클릭합니다.  
   
 #### <a name="to-process-data-for-one-or-more-partitions"></a>하나 이상의 파티션에 대한 데이터를 처리하려면  
   
-1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 **모델** 메뉴를 클릭하고 **처리**를 가리킨 다음 **파티션 처리**를 클릭합니다.  
+1.  
+  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 **모델** 메뉴를 클릭하고 **처리**를 가리킨 다음 **파티션 처리**를 클릭합니다.  
   
-2.  **파티션 처리** 대화 상자의 **모드**에서 다음 처리 모드 중 하나를 선택합니다.  
+2.  
+  **파티션 처리** 대화 상자의 **모드**에서 다음 처리 모드 중 하나를 선택합니다.  
   
     |모드|Description|  
     |----------|-----------------|  
@@ -56,12 +61,13 @@ ms.locfileid: "66077969"
     |**전체 처리**|파티션 개체와 여기에 포함된 모든 개체를 처리합니다. 이미 처리된 개체에 대해 전체 처리를 실행하면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 개체의 모든 데이터를 삭제한 다음 개체를 처리합니다. 개체에 구조적 변경이 발생한 경우 이러한 종류의 처리가 필요합니다.|  
     |**데이터 처리**|계층 또는 관계를 다시 작성하거나 계산 열 및 측정값을 다시 계산하지 않고 파티션 또는 테이블에 데이터를 로드합니다.|  
     |**지우기 처리**|파티션에서 모든 데이터를 제거합니다.|  
-    |**증분 처리**|새 데이터로 파티션을 증분 업데이트합니다.|  
+    |**추가 처리**|새 데이터로 파티션을 증분 업데이트합니다.|  
   
 3.  파티션 목록에서 처리할 파티션을 선택한 다음 **확인**을 클릭합니다.  
   
-##  <a name="bkmk_data_process_progress"></a> 데이터 처리 진행률  
- **데이터 처리 진행률** 대화 상자를 사용하면 외부 원본에서 모델로 가져온 데이터의 처리 상태를 모니터링할 수 있습니다. 이 대화 상자에 액세스하려면 **모델** 메뉴를 클릭한 다음 **파티션 처리**, **테이블 처리** 또는 **모두 처리**를 클릭합니다.  
+##  <a name="bkmk_data_process_progress"></a>데이터 처리 진행률  
+ 
+  **데이터 처리 진행률** 대화 상자를 사용하면 외부 원본에서 모델로 가져온 데이터의 처리 상태를 모니터링할 수 있습니다. 이 대화 상자에 액세스하려면 **모델** 메뉴를 클릭한 다음 **파티션 처리**, **테이블 처리** 또는 **모두 처리**를 클릭합니다.  
   
  **상태**  
  처리 작업의 성공 여부를 나타냅니다.  
@@ -72,8 +78,8 @@ ms.locfileid: "66077969"
  **새로 고침 중지**  
  처리 작업을 중지하려면 클릭합니다. 이 옵션은 작업에 시간이 너무 많이 걸리거나 오류가 너무 많은 경우에 유용합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [데이터 처리&#40;SSAS 테이블 형식&#41;](process-data-ssas-tabular.md)   
- [데이터 처리 문제 해결&#40;SSAS 테이블 형식&#41;](troubleshoot-process-data-ssas-tabular.md)  
+## <a name="see-also"></a>참고 항목  
+ [SSAS 테이블 형식&#41;&#40;데이터 처리](process-data-ssas-tabular.md)   
+ [SSAS 테이블 형식&#41;&#40;처리 데이터 문제 해결](troubleshoot-process-data-ssas-tabular.md)  
   
   

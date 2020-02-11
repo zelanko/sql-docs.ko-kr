@@ -1,5 +1,5 @@
 ---
-title: '4단계: 5 단원 자습서 패키지 테스트 | Microsoft Docs'
+title: '4단계: 5단원 자습서 패키지 테스트 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 30f395ed065df5974adf6146a4ee12d0c7b472f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62890945"
 ---
 # <a name="step-4-testing-the-lesson-5-tutorial-package"></a>4단계: 5단원 자습서 패키지 테스트
@@ -40,6 +40,6 @@ ms.locfileid: "62890945"
 2.  패키지의 실행이 완료된 후에 **디버그** 메뉴에서 **디버깅 중지**를 클릭합니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
- [6단원: 매개 변수를 사용 하 여 프로젝트 배포 모델을 사용 하 여](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
+ [6단원: 프로젝트 배포 모델에 매개 변수 사용](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
   
   

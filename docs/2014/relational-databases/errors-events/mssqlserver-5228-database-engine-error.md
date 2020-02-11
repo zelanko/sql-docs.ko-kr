@@ -13,15 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dfbfa64cb61332591fadef874b8c73da3ce1e7c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913752"
 ---
-# <a name="mssqlserver5228"></a>MSSQLSERVER_5228
+# <a name="mssqlserver_5228"></a>MSSQLSERVER_5228
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -30,7 +30,7 @@ ms.locfileid: "62913752"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|DBCC4_ANTIMATTER_COLUMN_DETECTED|  
-|메시지 텍스트|테이블 오류: 개체 ID O_ID, 인덱스 ID I_ID, 파티션 ID PN_ID, 할당 단위 ID A_ID (type 유형), 페이지 PG_ID, 행 R_ID. DBCC가 온라인 인덱스 작성 작업에서 완료되지 않은 정리를 검색했습니다. anti-matter 열 값은 VALUE입니다.|  
+|메시지 텍스트|테이블 오류: 개체 ID O_ID, 인덱스 ID I_ID, 파티션 ID PN_ID, 할당 단위 ID A_ID(TYPE 유형), 페이지 PG_ID, 행 R_ID. DBCC가 온라인 인덱스 작성 작업에서 완료되지 않은 정리를 검색했습니다. anti-matter 열 값은 VALUE입니다.|  
   
 ## <a name="explanation"></a>설명  
  개체 *O_ID*, 인덱스 *I_ID* 및 파티션 *PN_ID*에 대해 완료되지 않은 온라인 인덱스 작성이 감지되었습니다. 이는 행 *R_ID*의 anti-matter 열로 알 수 있습니다. anti-matter 열은 온라인으로 인덱스를 작성하는 동안 여러 원본의 레코드를 조정할 때 사용됩니다. 오류 메시지에는 anti-matter 열의 값도 표시됩니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "62913752"
 ## <a name="user-action"></a>사용자 동작  
   
 ### <a name="look-for-hardware-failure"></a>하드웨어 오류 찾기  
- 하드웨어 진단을 실행하여 문제가 있으면 이를 해결하십시오. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 시스템 및 응용 프로그램 로그와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그도 검토하여 해당 오류가 하드웨어 오류로 인해 발생했는지 확인하십시오. 로그에 하드웨어 관련 문제가 포함되어 있으면 이를 해결하십시오.  
+ 하드웨어 진단을 실행하여 문제가 있으면 이를 해결하십시오. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 시스템 및 애플리케이션 로그와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그도 검토하여 해당 오류가 하드웨어 오류로 인해 발생했는지 확인하십시오. 로그에 하드웨어 관련 문제가 포함되어 있으면 이를 해결하십시오.  
   
  데이터 손상 문제가 지속되면 다른 하드웨어 구성 요소로 교체하여 문제를 해결하십시오. 시스템의 디스크 컨트롤러에 쓰기 캐시가 설정되어 있지 않은지 확인하세요. 쓰기 캐시가 문제가 된다고 생각되면 하드웨어 공급업체에 문의하십시오.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "62913752"
 ### <a name="results-of-running-repair-options"></a>REPAIR 옵션의 실행 결과  
  REPAIR 실행으로 인해 지정한 인덱스 및 모든 종속 인덱스가 다시 작성됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [DBCC CHECKDB&#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)  
   
   

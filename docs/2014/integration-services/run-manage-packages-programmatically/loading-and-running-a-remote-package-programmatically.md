@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d1cc7358a7058af9feb3f0540085ab140cfd8a7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62889637"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>프로그래밍 방식으로 원격 패키지 로드 및 실행
@@ -36,17 +36,17 @@ ms.locfileid: "62889637"
   
 -   [웹 서비스 또는 원격 구성 요소를 사용하여 프로그래밍 방식으로 원격 패키지 실행](#service)  
   
- 이 항목에서 설명하는 패키지 로드 및 저장 방법을 사용할 경우에는 대부분 `Microsoft.SqlServer.ManagedDTS` 어셈블리에 대한 참조가 필요합니다. 실행 하기 위한이 항목에 설명 된 ADO.NET 방법은 예외입니다 합니다 **sp_start_job** 저장 프로시저에 대 한 참조만 필요한 `System.Data`합니다. 새 프로젝트에 `Microsoft.SqlServer.ManagedDTS` 어셈블리에 대한 참조를 추가한 후에는 `using` 또는 `Imports` 문을 사용하여 <xref:Microsoft.SqlServer.Dts.Runtime> 네임스페이스를 가져옵니다.  
+ 이 항목에서 설명하는 패키지 로드 및 저장 방법을 사용할 경우에는 대부분 `Microsoft.SqlServer.ManagedDTS` 어셈블리에 대한 참조가 필요합니다. 예외는 **sp_start_job** 저장 프로시저를 실행 하기 위해이 항목에서 설명 하는 ADO.NET 방법입니다 .이 방법에서는에 `System.Data`대 한 참조만 필요 합니다. 새 프로젝트에 `Microsoft.SqlServer.ManagedDTS` 어셈블리에 대한 참조를 추가한 후에는 <xref:Microsoft.SqlServer.Dts.Runtime> 또는 `using` 문을 사용하여 `Imports` 네임스페이스를 가져옵니다.  
   
 ###  <a name="agent"></a> SQL Server 에이전트를 사용하여 서버에서 프로그래밍 방식으로 원격 패키지 실행  
- 다음 코드 예제에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 프로그래밍 방식으로 사용하여 서버에서 원격 패키지를 실행하는 방법을 보여 줍니다. 이 코드 샘플에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 시작하는 **sp_start_job** 시스템 저장 프로시저를 호출합니다. 이 프로시저가 시작하는 작업의 이름은 `RunSSISPackage`이며 이 작업은 원격 컴퓨터에 있습니다. 그런 다음 `RunSSISPackage` 작업은 원격 컴퓨터에서 패키지를 실행합니다.  
+ 다음 코드 예제에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 프로그래밍 방식으로 사용하여 서버에서 원격 패키지를 실행하는 방법을 보여 줍니다. 이 코드 샘플에서는 **에이전트 작업을 시작하는**sp_start_job[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 저장 프로시저를 호출합니다. 이 프로시저가 시작하는 작업의 이름은 `RunSSISPackage`이며 이 작업은 원격 컴퓨터에 있습니다. 그런 다음 `RunSSISPackage` 작업은 원격 컴퓨터에서 패키지를 실행합니다.  
   
 > [!NOTE]  
 >  **sp_start_job** 저장 프로시저의 반환 값은 저장 프로시저에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 성공적으로 시작할 수 있었는지 여부를 나타내며, 패키지가 성공했는지 실패했는지를 나타내지는 않습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업에서 실행되는 패키지 문제를 해결하는 방법에 대한 자세한 내용은 [SSIS 패키지는 SQL Server 에이전트 작업 단계에서 호출 될 때 실행되지 않습니다.](https://support.microsoft.com/kb/918760) Microsoft 문서를 참조하세요.  
   
-### <a name="sample-code"></a>예제 코드  
+### <a name="sample-code"></a>샘플 코드  
   
 ```vb  
 Imports System.Data  
@@ -154,7 +154,7 @@ namespace LaunchSSISPackageAgent_CS
 > [!IMPORTANT]  
 >  SSIS 패키지 저장소를 사용하기 위한 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 클래스의 메서드는 ".", localhost 또는 로컬 서버의 서버 이름만 지원합니다. "(local)"은 사용할 수 없습니다.  
   
-### <a name="sample-code"></a>예제 코드  
+### <a name="sample-code"></a>샘플 코드  
  다음 코드 예제에서는 웹 서비스를 만들고 테스트하는 방법을 보여 줍니다.  
   
 #### <a name="creating-the-web-service"></a>웹 서비스 만들기  
@@ -164,7 +164,7 @@ namespace LaunchSSISPackageAgent_CS
   
 1.  Visual Studio를 열고 원하는 프로그래밍 언어로 웹 서비스 프로젝트를 만듭니다. 예제 코드에서는 프로젝트 이름으로 LaunchSSISPackageService를 사용합니다.  
   
-2.  에 대 한 참조를 추가 `Microsoft.SqlServer.ManagedDTS` 추가 하 고는 `Imports` 또는 `using` 문을 대 한 코드 파일에는 **Microsoft.SqlServer.Dts.Runtime** 네임 스페이스입니다.  
+2.  에 `Microsoft.SqlServer.ManagedDTS` 대 한 참조를 추가 하 `Imports` 고 `using` 또는 문을 코드 파일에 **추가 합니다.**  
   
 3.  LaunchPackage 웹 서비스 메서드의 예제 코드를 클래스에 붙여 넣습니다. 이 예제에서는 코드 창의 전체 내용을 보여 줍니다.  
   
@@ -331,7 +331,7 @@ public class LaunchSSISPackageServiceCS : System.Web.Services.WebService
 ```  
   
 #### <a name="testing-the-web-service"></a>웹 서비스 테스트  
- 다음 예제 콘솔 애플리케이션에서는 웹 서비스를 사용하여 패키지를 실행합니다. 웹 서비스의 LaunchPackage 메서드는 클라이언트 컴퓨터에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 어셈블리에 대한 참조가 필요하지 않도록 패키지 실행 결과를 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 값 대신 정수로 반환합니다. 이 예제에서는 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 값을 미러링하는 값을 포함하는 프라이빗 열거형을 만들어 실행 결과를 보고합니다.  
+ 다음 예제 콘솔 애플리케이션에서는 웹 서비스를 사용하여 패키지를 실행합니다. 웹 서비스의 LaunchPackage 메서드는 클라이언트 컴퓨터에서 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 어셈블리에 대한 참조가 필요하지 않도록 패키지 실행 결과를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 값 대신 정수로 반환합니다. 이 예제에서는 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 값을 미러링하는 값을 포함하는 프라이빗 열거형을 만들어 실행 결과를 보고합니다.  
   
 ###### <a name="to-create-a-console-application-to-test-the-web-service"></a>콘솔 애플리케이션을 만들어 웹 서비스를 테스트하려면  
   
@@ -420,11 +420,11 @@ namespace LaunchSSISPackageSvcTestCS
   
 ## <a name="external-resources"></a>외부 리소스  
   
--   MSDN Library의 비디오 - [방법: SQL Server 에이전트를 사용하여 SSIS 패키지 실행 자동화(SQL Server 비디오)](https://technet.microsoft.com/sqlserver/ff686764.aspx)  
+-   technet.microsoft.com의 비디오 - [방법: SQL Server 에이전트를 사용하여 SSIS 패키지 실행 자동화(SQL Server 비디오)](https://technet.microsoft.com/sqlserver/ff686764.aspx)  
   
-![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [로컬 실행과 원격 실행의 차이점 이해](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
  [프로그래밍 방식으로 로컬 패키지 로드 및 실행](../run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
  [로컬 패키지의 출력 로드](../run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  

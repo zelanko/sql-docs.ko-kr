@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a2d9e58d622efd5951f95d3e3b9907a4289df9e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835824"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-f1-help"></a>Attunity Oracle CDC Service F1 도움말
@@ -24,7 +24,7 @@ ms.locfileid: "62835824"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [SQL 서버에 연결](connection-to-sql-server.md)  
+-   [SQL Server에 연결](connection-to-sql-server.md)  
   
 -   [삭제를 위해 SQL Server에 연결](connection-to-sql-server-for-delete.md)  
   

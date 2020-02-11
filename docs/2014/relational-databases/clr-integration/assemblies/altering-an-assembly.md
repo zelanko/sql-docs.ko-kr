@@ -16,13 +16,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 780b64f59143d3bf2b8ef99e3da6d32a1fe160cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874108"
 ---
 # <a name="altering-an-assembly"></a>어셈블리 변경
+  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 등록된 어셈블리를 ALTER ASSEMBLY 문을 사용하여 최신 버전에서 업데이트할 수 있습니다. 어셈블리를 업데이트하려면 ALTER ASSEMBLY 문을 다음 구문과 함께 사용합니다.  
   
 ```  
@@ -30,7 +31,7 @@ ALTER ASSEMBLY SQLCLRTest
 FROM 'C:\MyDBApp\SQLCLRTest.dll'  
 ```  
   
- ALTER ASSEMBLY는 해당 어셈블리를 사용하는 현재 실행 중인 프로세스를 중단하지 않습니다. 이러한 프로세스는 변경되지 않은 어셈블리를 사용하여 계속해서 실행됩니다. 트리거, 저장 프로시저, 집계 함수 및 CLR(공용 언어 런타임) 함수의 서명을 변경하는 데는 ALTER ASSEMBLY를 사용할 수 없습니다. 새 퍼블릭 메서드를 어셈블리에 추가하고 프라이빗 메서드를 수정할 수 있으며 서명이나 특성을 변경하지 않는 범위에서 퍼블릭 메서드를 수정할 수도 있습니다. 데이터 멤버 또는 기본 클래스를 비롯하여 기본적으로 직렬화된 사용자 정의 형식에 포함된 필드는 ALTER ASSEMBLY를 사용하여 변경할 수 없습니다. 다른 모든 변경은 지원되지 않습니다. 자세한 내용은 [ALTER ASSEMBLY &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-assembly-transact-sql)합니다.  
+ ALTER ASSEMBLY는 해당 어셈블리를 사용하는 현재 실행 중인 프로세스를 중단하지 않습니다. 이러한 프로세스는 변경되지 않은 어셈블리를 사용하여 계속해서 실행됩니다. 트리거, 저장 프로시저, 집계 함수 및 CLR(공용 언어 런타임) 함수의 서명을 변경하는 데는 ALTER ASSEMBLY를 사용할 수 없습니다. 새 퍼블릭 메서드를 어셈블리에 추가하고 프라이빗 메서드를 수정할 수 있으며 서명이나 특성을 변경하지 않는 범위에서 퍼블릭 메서드를 수정할 수도 있습니다. 데이터 멤버 또는 기본 클래스를 비롯하여 기본적으로 직렬화된 사용자 정의 형식에 포함된 필드는 ALTER ASSEMBLY를 사용하여 변경할 수 없습니다. 다른 모든 변경은 지원되지 않습니다. 자세한 내용은 [ALTER ASSEMBLY &#40;transact-sql&#41;](/sql/t-sql/statements/alter-assembly-transact-sql)를 참조 하세요.  
   
 ## <a name="changing-the-permission-set-of-an-assembly"></a>어셈블리의 권한 집합 변경  
  ALTER ASSEMBLY 문을 사용하여 어셈블리의 권한 집합도 변경할 수 있습니다. 다음 문은 SQLCLRTest 어셈블리의 권한 집합을 `EXTERNAL_ACCESS`로 변경합니다.  
@@ -51,7 +52,7 @@ WITH PERMISSION_SET = EXTERNAL_ACCESS
   
  `ADD FILE FROM 'C:\Projects\Point\Point.cs' AS PointSource`  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [CLR 통합 어셈블리 관리](managing-clr-integration-assemblies.md)   
  [어셈블리 만들기](creating-an-assembly.md)   
  [어셈블리 삭제](dropping-an-assembly.md)   

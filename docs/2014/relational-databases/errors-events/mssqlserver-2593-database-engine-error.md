@@ -13,15 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 400a754f58b2a4bbe5c0512cf7bae36d34f9fa70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62868788"
 ---
-# <a name="mssqlserver2593"></a>MSSQLSERVER_2593
+# <a name="mssqlserver_2593"></a>MSSQLSERVER_2593
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -36,6 +36,6 @@ ms.locfileid: "62868788"
  이 메시지는 DBCC CHECKALLOC을 제외한 모든 DBCC 검사에서 반환하는 출력 정보의 일부이며 지정된 개체의 행과 페이지 수를 나타냅니다.  
   
 ## <a name="user-action"></a>사용자 동작  
- 없음  
+ None  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05c0a25ceded07264e4dbe10467e9dc6f093f6c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077617"
 ---
 # <a name="model-tab-mining-model-viewers"></a>모델 탭(마이닝 모델 뷰어)
@@ -24,19 +24,19 @@ ms.locfileid: "66077617"
   
  이 시계열 모델 뷰를 사용하여 그래프에 대한 수식, ARIMA 항, 계수 등, 시계열 분석에 대한 유용한 정보를 추출할 수 있습니다.  
   
- **참조 항목:** [Microsoft 시계열 알고리즘](data-mining/microsoft-time-series-algorithm.md)하십시오 [Microsoft 시계열 뷰어를 사용 하 여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), [Microsoft 시계열 알고리즘](data-mining/microsoft-time-series-algorithm.md)  
+ **자세한 내용:** Microsoft 시계열 [알고리즘](data-mining/microsoft-time-series-algorithm.md), Microsoft 시계열 [뷰어를 사용 하 여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), [microsoft 시계열 알고리즘](data-mining/microsoft-time-series-algorithm.md)  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **뷰어 내용 새로 고침**  
  뷰어에서 마이닝 모델을 다시 로드합니다.  
   
  **마이닝 모델**  
  확인할 마이닝 모델을 선택합니다. 관련 뷰어에서 마이닝 모델이 열립니다.  
   
- **Viewer**  
+ **뷰어**  
  선택한 마이닝 모델을 탐색하는 데 사용할 뷰어를 선택합니다. 이 모델 유형에 대한 사용자 지정 뷰어 또는 **Microsoft 일반 콘텐츠 트리** 뷰어를 사용할 수 있습니다. 또한 사용 가능한 경우 플러그 인 뷰어를 사용할 수 있습니다.  
   
- **확대/축소**  
+ **확대**  
  다이어그램을 확대합니다.  
   
  **축소**  
@@ -51,7 +51,7 @@ ms.locfileid: "66077617"
  **창에 맞게 다이어그램 크기 조정**  
  전체 다이어그램이 화면에 표시될 때까지 다이어그램을 축소합니다.  
   
- **트리**  
+ **Tree**  
  뷰어에서 표시할 트리를 드롭다운 목록에서 선택합니다.  
   
  시계열 모델에 여러 계열이 포함되어 있으면 각 계열이 별도의 트리로 표시됩니다. 예를 들어 [Quantity] 및 [Sales Amount]에 대한 시간에 따른 예측을 만든 경우 각 예측 가능한 특성에 대해 별도의 계열이 만들어집니다.  
@@ -69,9 +69,9 @@ ms.locfileid: "66077617"
  **수준 표시**  
  트리에 표시되는 수준 수를 변경합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [마이닝 모델 뷰어&#40;데이터 마이닝 모델 디자이너&#41;](mining-model-viewers-data-mining-model-designer.md)   
+## <a name="see-also"></a>참고 항목  
+ [데이터 마이닝 알고리즘 &#40;Analysis Services 데이터 마이닝&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [마이닝 모델 뷰어 &#40;데이터 마이닝 모델 디자이너&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [데이터 마이닝 모델 뷰어](data-mining/data-mining-model-viewers.md)  
   
   

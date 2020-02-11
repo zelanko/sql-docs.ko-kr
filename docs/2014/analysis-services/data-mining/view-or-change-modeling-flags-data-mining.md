@@ -1,5 +1,5 @@
 ---
-title: 모델링 플래그 (데이터 마이닝) 확인 또는 변경 | Microsoft Docs
+title: 모델링 플래그 확인 또는 변경 (데이터 마이닝) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7657e7502d3b215cd87326c51cc9416ba0707235
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082674"
 ---
 # <a name="view-or-change-modeling-flags-data-mining"></a>모델링 플래그 확인 또는 변경(데이터 마이닝)
@@ -28,7 +28,7 @@ ms.locfileid: "66082674"
   
 1.  SQL Server Design Studio에서 솔루션 탐색기를 열고 마이닝 구조를 두 번 클릭합니다.  
   
-2.  NOT NULL 모델링 플래그를 설정하려면 **마이닝 구조** 탭을 클릭합니다. REGRESSOR 또는 MODEL_EXISTENCE_ONLY 플래그를 설정하려면 **마이닝 모델** 탭을 클릭합니다.  
+2.  NOT NULL 모델링 플래그를 설정 하려면 **마이닝 구조** 탭을 클릭 합니다. 회귀 변수 또는 MODEL_EXISTENCE_ONLY 플래그를 설정 하려면 **마이닝 모델** 탭을 클릭 합니다.  
   
 3.  확인하거나 변경할 열을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
@@ -41,7 +41,8 @@ ms.locfileid: "66082674"
   
 ### <a name="get-the-modeling-flags-used-in-the-model"></a>모델에 사용되는 모델링 플래그 가져오기  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 DMX 쿼리 창을 열고 다음과 같은 쿼리를 입력합니다.  
+-   
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 DMX 쿼리 창을 열고 다음과 같은 쿼리를 입력합니다.  
   
     ```  
     SELECT COLUMN_NAME, CONTENT_TYPE, MODELING_FLAG  
@@ -50,8 +51,8 @@ ms.locfileid: "66082674"
   
     ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [마이닝 모델 태스크 및 방법](mining-model-tasks-and-how-tos.md)   
- [모델링 플래그&#40;데이터 마이닝&#41;](modeling-flags-data-mining.md)  
+ [데이터 마이닝&#41;&#40;모델링 플래그](modeling-flags-data-mining.md)  
   
   

@@ -11,15 +11,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2b753397b4791d658692a8cb63dbc6a3d779c621
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914360"
 ---
-# <a name="mssqlserver30053"></a>MSSQLSERVER_30053
+# <a name="mssqlserver_30053"></a>MSSQLSERVER_30053
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -48,7 +48,7 @@ ms.locfileid: "62914360"
 ## <a name="user-action"></a>사용자 동작  
  다음과 같이 시간 초과 문제의 가능한 원인에 적합한 사용자 동작을 선택합니다.  
   
-|예상 원인|사용자 동작|  
+|가능한 원인:|사용자 조치|  
 |--------------------|-----------------|  
 |쿼리 언어용 단어 분리기가 올바르지 않게 구성된 경우|타사 단어 분리기를 사용할 경우 운영 체제에 올바르지 않게 등록되어 있을 수 있습니다. 이 경우 단어 분리기를 다시 등록하십시오. 자세한 내용은 [검색에 사용된 단어 분리기를 이전 버전으로 되돌리기](../search/revert-the-word-breakers-used-by-search-to-the-previous-version.md)를 참조하세요.|  
 |특정 쿼리 문자열에 대해 단어 분리기가 제대로 작동하지 않는 경우|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원되는 단어 분리기의 경우 Microsoft 고객 서비스 지원 센터에 문의하십시오.|  
@@ -56,10 +56,10 @@ ms.locfileid: "62914360"
 |필터 데몬 프로세스 구성이 올바르지 않은 경우|현재 암호를 사용 중이고 도메인 정책에서 필터 데몬 계정 로그온을 차단하고 있는지 확인하십시오.|  
 |서버에서 실행되는 쿼리 작업의 양이 너무 많은 경우|부하를 줄여 쿼리를 다시 실행하십시오.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [전체 텍스트 필터 데몬 시작 관리자 서비스 계정 설정](../search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
  [전체 텍스트 검색](../search/full-text-search.md)   
- [sp_help_fulltext_system_components &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql)   
+ [Transact-sql&#41;sp_help_fulltext_system_components &#40;](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql)   
  [검색을 위해 단어 분리기와 형태소 분석기 구성 및 관리](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [검색 필터 구성 및 관리](../search/configure-and-manage-filters-for-search.md)  
   

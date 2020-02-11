@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 530cca00459ed1ae170272dfd20a54928f039b38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900351"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>병합 및 병합 조인 변환을 위한 데이터 정렬
@@ -38,7 +38,7 @@ ms.locfileid: "62900351"
   
      정렬 변환은 Windows 데이터 정렬을 사용하여 문자열 값을 정렬합니다.  
   
-     -또는-  
+     또는  
   
 -   먼저 Transact-SQL CAST 연산자를 사용하여 `varchar` 값을 `nvarchar` 값으로 캐스팅한 다음 Transact-SQL ORDER BY 절을 사용하여 데이터를 정렬합니다.  
   
@@ -48,10 +48,11 @@ ms.locfileid: "62900351"
 ## <a name="setting-sort-options-on-the-data"></a>데이터 정렬 옵션 설정  
  병합 및 병합 조인 변환에 데이터를 제공하는 원본이나 업스트림 변환에 두 가지 중요한 정렬 속성을 설정해야 합니다.  
   
--   데이터가 정렬되었는지 여부를 나타내는 출력의 `IsSorted` 속성. 이 속성으로 설정 되어 있어야 `True`합니다.  
+-   데이터가 정렬되었는지 여부를 나타내는 출력의 `IsSorted` 속성. 이 속성을 `True`로 설정해야 합니다.  
   
     > [!IMPORTANT]  
-    >  `IsSorted` 속성의 값을 `True`로 설정해도 데이터가 정렬되지는 않습니다. 이 속성은 데이터가 이전에 정렬되었다는 정보를 다운스트림 구성 요소에 제공하기만 합니다.  
+    >  
+  `IsSorted` 속성의 값을 `True`로 설정해도 데이터가 정렬되지는 않습니다. 이 속성은 데이터가 이전에 정렬되었다는 정보를 다운스트림 구성 요소에 제공하기만 합니다.  
   
 -   열이 정렬되었는지 여부, 열의 정렬 순서 및 여러 열이 정렬된 시퀀스를 나타내는 출력 열의 `SortKeyPosition` 속성. 정렬된 데이터의 각 열에 이 속성을 설정해야 합니다.  
   
@@ -71,7 +72,7 @@ ms.locfileid: "62900351"
   
 5.  **입/출력 속성** 탭을 클릭합니다.  
   
-6.  클릭  **\<구성 요소 이름 > 출력**를 설정 합니다 `IsSorted` 속성을 `True`입니다.  
+6.  ** \<구성 요소 이름> 출력**을 클릭 하 고 `IsSorted` 속성을 `True`로 설정 합니다.  
   
     > [!NOTE]  
     >  수동으로 출력의 `IsSorted` 속성을 `True`로 설정했지만 데이터가 정렬되지 않았다면 패키지를 실행할 때 다운스트림 병합 또는 병합 조인 변환에 데이터가 누락되었거나 데이터 비교가 잘못되었기 때문일 수 있습니다.  
@@ -88,7 +89,8 @@ ms.locfileid: "62900351"
   
     -   기본값인 0은 열이 정렬되지 않았음을 나타냅니다. 출력 열이 정렬에 참여하지 않는 경우 값을 0으로 둡니다.  
   
-     `SortKeyPosition` 속성을 설정하는 방법을 보여 주는 예는 원본에서 데이터를 로드하는 다음 Transact-SQL 문을 참조하십시오.  
+     
+  `SortKeyPosition` 속성을 설정하는 방법을 보여 주는 예는 원본에서 데이터를 로드하는 다음 Transact-SQL 문을 참조하십시오.  
   
      `SELECT * FROM MyTable ORDER BY ColumnA, ColumnB DESC, ColumnC`  
   
@@ -106,7 +108,7 @@ ms.locfileid: "62900351"
   
 11. 업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [병합 변환](merge-transformation.md)   
  [병합 조인 변환](merge-join-transformation.md)   
  [Integration Services 변환](integration-services-transformations.md)   

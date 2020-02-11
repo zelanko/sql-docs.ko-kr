@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d0b936b0d48696491e71aa6ad4ea573b898f33c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62836042"
 ---
 # <a name="how-to-prepare-sql-server-for-cdc"></a>CDC를 위해 SQL Server를 준비하는 방법
@@ -22,7 +22,7 @@ ms.locfileid: "62836042"
   
  다음에서는 CDC Service 구성 콘솔을 사용하여 Oracle Change Data Capture를 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 준비하는 방법에 대해 설명합니다. 이 프로세스는 MSXDBCDC 데이터베이스를 만들고 필수 테이블, 저장 프로시저 및 기타 필수 아티팩트를 정의합니다.  
   
- Oracle CDC를 위해 SQL Server를 준비하는 작업은 Oracle CDC Service 관리자가 수행합니다. CDC Service 관리자 역할에 대 한 자세한 내용은 참조 하세요. [Change Data Capture Service for Oracle by Attunity에 대 한 사용자 역할](user-roles.md)입니다.  
+ Oracle CDC를 위해 SQL Server를 준비하는 작업은 Oracle CDC Service 관리자가 수행합니다. CDC Service 관리자 역할에 대 한 자세한 내용은 [사용자 역할의 Change Data Capture Service for Oracle에 대 한 사용자 역할](user-roles.md)을 참조 하세요.  
   
 ### <a name="to-enable-sql-server-for-cdc"></a>CDC용 SQL Server를 활성화하려면  
   
@@ -36,9 +36,9 @@ ms.locfileid: "62836042"
   
      Oracle CDC를 위해 SQL Server 인스턴스를 준비하려면 로그인은 MSXDBCDC 데이터베이스에 대해 쓰기 권한이 있어야 합니다. MSXDBCDC 데이터베이스에 대해 쓰기 권한이 있는 로그인(예: `sysasmin` 역할의 멤버)의 자격 증명을 입력합니다.  
   
- **참고**: **스크립트 보기**를 클릭하여 설치 스크립트의 읽기 전용 버전을 볼 수 있습니다. 필요한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 관리자는 이 스크립트를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 콘솔에 복사하여 편집하고 실행할 수 있습니다.  
+ **참고**: **스크립트 보기** 를 클릭하여 설치 스크립트의 읽기 전용 버전을 볼 수 있습니다. 필요한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 관리자는 이 스크립트를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 콘솔에 복사하여 편집하고 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [CDC를 위한 SQL Server 준비](prepare-sql-server-for-cdc.md)  
   
   

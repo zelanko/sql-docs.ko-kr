@@ -14,17 +14,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5c97c07d34de2b17b6966ab269004612c966b961
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62856438"
 ---
 # <a name="stored-procedure-properties-general-page"></a>저장 프로시저 속성(일반 페이지)
   저장 프로시저에 대한 정보를 표시합니다. 모든 정보는 읽기 전용입니다.  
   
-## <a name="options"></a>변수  
- **데이터베이스 백업**  
+## <a name="options"></a>옵션  
+ **Database**  
  이 저장 프로시저를 포함하는 데이터베이스의 이름입니다.  
   
  **Server**  
@@ -60,7 +60,7 @@ ms.locfileid: "62856438"
  **다시 컴파일**  
  개체가 RECOMPILE 옵션으로 생성되었는지 여부를 나타냅니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [저장 프로시저&#40;데이터베이스 엔진&#41;](stored-procedures-database-engine.md)   
  [CREATE PROCEDURE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)   
  [ALTER PROCEDURE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-procedure-transact-sql)  

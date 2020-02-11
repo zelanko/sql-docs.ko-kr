@@ -1,5 +1,5 @@
 ---
-title: 마이닝 구조에 사용 되는 데이터 원본 뷰 편집 | Microsoft Docs
+title: 마이닝 구조에 사용 되는 데이터 원본 뷰를 편집 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec3175fd9979b6b0a781492fb7ae0cde532db366
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084521"
 ---
 # <a name="edit-the-data-source-view-used-for-a-mining-structure"></a>마이닝 구조에 사용되는 데이터 원본 뷰 편집
@@ -26,11 +26,13 @@ ms.locfileid: "66084521"
   
 ### <a name="to-access-data-source-view-designer-from-the-mining-structure-tab-in-data-mining-designer"></a>데이터 마이닝 디자이너의 마이닝 구조 탭에서 데이터 원본 뷰 디자이너에 액세스하려면  
   
--   **데이터 원본 뷰** 창에서 마우스 오른쪽 단추를 클릭하고 **데이터 원본 뷰 편집**을 선택합니다.  
+-   
+  **데이터 원본 뷰** 창에서 마우스 오른쪽 단추를 클릭하고 **데이터 원본 뷰 편집**을 선택합니다.  
   
-     [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 새 탭에 데이터 원본 뷰 디자이너가 열립니다.  
+     
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 새 탭에 데이터 원본 뷰 디자이너가 열립니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [마이닝 구조 태스크 및 방법](mining-structure-tasks-and-how-tos.md)  
   
   

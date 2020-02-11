@@ -13,15 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a73f2469c38d611b95e3446e80755687f40346e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62869711"
 ---
-# <a name="mssqlserver17128"></a>MSSQLSERVER_17128
+# <a name="mssqlserver_17128"></a>MSSQLSERVER_17128
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -30,7 +30,7 @@ ms.locfileid: "62869711"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|INIT_NOBUFSPACE|  
-|메시지 텍스트|initdata: 커널 버퍼 용 메모리가 없습니다.|  
+|메시지 텍스트|initdata: 커널 버퍼용 메모리가 없습니다.|  
   
 ## <a name="explanation"></a>설명  
  버퍼 풀의 초기 메모리 할당 또는 예약이 실패하여 SQL Server가 종료됩니다.  

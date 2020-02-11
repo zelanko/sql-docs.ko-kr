@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 349a100a295ef00b19b2de69214fdd7af8bd2d32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62897352"
 ---
 # <a name="replicate-ssis-expression"></a>REPLICATE(SSIS 식)
@@ -42,7 +42,7 @@ REPLICATE(character_expression,times)
 ## <a name="result-types"></a>결과 형식  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  *times* 가 0이면 빈 문자열이 반환됩니다.  
   
  *times* 가 음수이면 오류가 반환됩니다.  
@@ -72,7 +72,7 @@ REPLICATE(Name, @Times)
 REPLICATE(@Name, (DT_I4(Times))  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [함수&#40;SSIS 식&#41;](functions-ssis-expression.md)  
   
   

@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0caed882338b4ac1ce2f3e1e225693017ff1605
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62899936"
 ---
 # <a name="term-extraction-transformation"></a>용어 추출 변환
@@ -44,7 +44,7 @@ ms.locfileid: "62899936"
   
  용어 추출 변환은 추출되는 각 용어에 대한 순위를 생성합니다. 순위는 TFIDF 값이나 입력에서 기본 용어가 나타나는 횟수를 의미하는 기본 빈도일 수 있습니다. 어느 경우에도 순위는 0 이상의 실수로 표현됩니다. 예를 들어 TFIDF 순위 값이 0.5이거나 빈도 값이 1.0 또는 2.0일 수 있습니다.  
   
- 용어 추출 변환의 출력에는 두 개의 열만 포함됩니다. 한 열에는 추출된 용어가 포함되고 다른 열에는 순위가 포함됩니다. 열의 기본 이름은 **용어** 고 `Score`입니다. 입력의 텍스트 열에는 여러 용어가 포함될 수 있기 때문에 용어 추출 변환의 출력에는 일반적으로 입력보다 많은 개수의 행이 포함됩니다.  
+ 용어 추출 변환의 출력에는 두 개의 열만 포함됩니다. 한 열에는 추출된 용어가 포함되고 다른 열에는 순위가 포함됩니다. 열의 기본 이름은 **Term** 및 `Score`입니다. 입력의 텍스트 열에는 여러 용어가 포함될 수 있기 때문에 용어 추출 변환의 출력에는 일반적으로 입력보다 많은 개수의 행이 포함됩니다.  
   
  추출된 용어를 테이블에 기록하는 경우에는 용어 조회, 유사 항목 조회 및 조회 변환과 같은 다른 조회 변환에서 해당 용어를 사용할 수 있습니다.  
   
@@ -171,17 +171,18 @@ ms.locfileid: "62899936"
   
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- **용어 추출 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
+ 
+  **용어 추출 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [용어 추출 변환 편집기&#40;용어 추출 탭&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
+-   [용어 추출 변환 편집기 &#40;용어 추출 탭&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
   
--   [용어 추출 변환 편집기&#40;제외 탭&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
+-   [용어 추출 변환 편집기 &#40;제외 탭&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
   
--   [용어 추출 변환 편집기&#40;고급 탭&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
+-   [용어 추출 변환 편집기 &#40;고급 탭&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
   
  **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [공용 속성](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [변환 사용자 지정 속성](transformation-custom-properties.md)  
   

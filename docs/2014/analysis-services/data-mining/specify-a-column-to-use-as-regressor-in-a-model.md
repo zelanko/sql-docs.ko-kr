@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cf035895142ae48cb59f6256e7249710d9709b92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082906"
 ---
 # <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>모델에서 회귀 변수로 사용할 열 지정
@@ -26,15 +26,17 @@ ms.locfileid: "66082906"
   
 ### <a name="how-to-create-a-simple-linear-regression-model"></a>단순 선형 회귀 모델을 만드는 방법  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 **솔루션 탐색기**에서 **마이닝 구조**를 확장합니다.  
+1.  의 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] **솔루션 탐색기**에서 **마이닝 구조**를 확장 합니다.  
   
 2.  Call Center.dmm을 두 번 클릭하여 디자이너에서 엽니다.  
   
-3.  **마이닝 모델** 메뉴에서 **새 마이닝 모델**을 선택합니다.  
+3.  
+  **마이닝 모델** 메뉴에서 **새 마이닝 모델**을 선택합니다.  
   
 4.  알고리즘에 대해 **Microsoft 선형 회귀**를 선택합니다. 이름에 대해 **Call Center Regression**을 입력합니다.  
   
-5.  **마이닝 모델** 탭에서 열 사용법을 다음과 같이 변경합니다. 다음 목록에 없는 열은 모두 **Ignore**로 설정(이미 설정되어 있지 않은 경우)해야 합니다.  
+5.  
+  **마이닝 모델** 탭에서 열 사용법을 다음과 같이 변경합니다. 다음 목록에 없는 열은 모두 **Ignore**로 설정(이미 설정되어 있지 않은 경우)해야 합니다.  
   
      FactCallCenterID**Key**  
   
@@ -44,7 +46,8 @@ ms.locfileid: "66082906"
   
      AverageTimePerIssue**Input**  
   
-6.  **마이닝 모델** 메뉴에서 **모델 매개 변수 설정**을 선택합니다.  
+6.  
+  **마이닝 모델** 메뉴에서 **모델 매개 변수 설정**을 선택합니다.  
   
 7.  매개 변수 FORCE_REGRESSOR의 경우 **값** 열에서 다음과 같이 괄호로 묶고 쉼표로 구분한 열 이름을 입력합니다.  
   
@@ -55,14 +58,16 @@ ms.locfileid: "66082906"
     > [!NOTE]  
     >  알고리즘이 자동으로 최상의 회귀 변수인 열을 검색합니다. 열을 최종 수식에 포함하려는 경우 회귀 변수를 적용하기만 하면 됩니다.  
   
-8.  **마이닝 모델** 메뉴에서 **모델 처리**를 선택합니다.  
+8.  
+  **마이닝 모델** 메뉴에서 **모델 처리**를 선택합니다.  
   
-     뷰어에서 모델은 회귀 수식을 포함하는 단일 노드로 나타납니다. **마이닝 범례**에서 수식을 보거나 쿼리를 사용하여 수식에 대한 계수를 추출할 수 있습니다.  
+     뷰어에서 모델은 회귀 수식을 포함하는 단일 노드로 나타납니다. 
+  **마이닝 범례**에서 수식을 보거나 쿼리를 사용하여 수식에 대한 계수를 추출할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Microsoft 선형 회귀 알고리즘](microsoft-linear-regression-algorithm.md)   
  [데이터 마이닝 쿼리](data-mining-queries.md)   
  [Microsoft 선형 회귀 알고리즘 기술 참조](microsoft-linear-regression-algorithm-technical-reference.md)   
- [선형 회귀 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [선형 회귀 모델에 대 한 마이닝 모델 콘텐츠 &#40;Analysis Services 데이터 마이닝&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

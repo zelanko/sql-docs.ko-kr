@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bd9095a11ef304c256b6c5a60560a71866e744fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62899021"
 ---
 # <a name="add-or-change-a-property-expression"></a>속성 식 추가 또는 변경
@@ -43,7 +43,7 @@ ms.locfileid: "62899021"
   
     -   **식** 열에서 속성 식을 직접 입력하거나 변경한 다음 **확인**을 클릭합니다.  
   
-         -또는-  
+         또는  
   
     -   속성의 식 행에서 줄임표(...)를 클릭하여 **식 작성기**를 엽니다.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62899021"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services&#40;SSIS&#41; 식](integration-services-ssis-expressions.md)   
  [패키지에서 속성 식 사용](use-property-expressions-in-packages.md)   
  [Integration Services&#40;SSIS&#41; 패키지](../integration-services-ssis-packages.md)   

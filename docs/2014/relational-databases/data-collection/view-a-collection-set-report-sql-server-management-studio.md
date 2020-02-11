@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 898dd309dae82818b60332b29c14f785c18b173b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873064"
 ---
 # <a name="view-a-collection-set-report-sql-server-management-studio"></a>컬렉션 집합 보고서 보기(SQL Server Management Studio)
@@ -51,10 +51,10 @@ ms.locfileid: "62873064"
  **시작 시간**  
  보고서 데이터의 시작 시간을 입력하거나 화살표를 클릭하여 지정합니다.  
   
- **기간**  
+ **Duration**  
  보고서에 포함할 시간 범위를 지정합니다. 기본값은 240분입니다. 선택 가능한 값은 15분, 60분, 240분(4시간), 720분(12시간) 및 1440분(24시간)입니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 컬렉션](data-collection.md)   
  [Management Studio의 사용자 지정 보고서](../../ssms/object/custom-reports-in-management-studio.md)   
  [관리 데이터 웨어하우스 구성&#40;SQL Server Management Studio&#41;](configure-the-management-data-warehouse-sql-server-management-studio.md)  

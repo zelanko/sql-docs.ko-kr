@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 96d752b84506ea3e9275e5f16903c19288c6ff92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62836216"
 ---
 # <a name="view-the-list-of-packages-on-the-integration-services-server"></a>Integration Services 서버의 패키지 목록 보기
@@ -23,7 +23,7 @@ ms.locfileid: "62836216"
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스  
  서버에 저장된 패키지 목록을 보려면 [catalog.packages&#40;SSISDB 데이터베이스&#41;](/sql/integration-services/system-views/catalog-packages-ssisdb-database) 뷰를 쿼리합니다.  
   
- 입력 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]  
+ 위치: [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 개체 탐색기를 사용하여 서버에 저장된 패키지를 보려면 아래 절차를 따릅니다.  
   
 ### <a name="to-view-packages-using-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>다음을 사용하여 패키지를 보려면 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]  

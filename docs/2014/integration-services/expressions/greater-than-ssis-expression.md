@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 52df62d9a69d57b95c3e3f4fa9a6e75599925953
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62898025"
 ---
 # <a name="gt-greater-than-ssis-expression"></a>&gt;(보다 큼)(SSIS 식)
@@ -43,19 +43,19 @@ expression1 > expression2
 ## <a name="result-types"></a>결과 형식  
  DT_BOOL  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  비교하는 두 식 중 하나가 Null이면 비교 결과도 Null입니다. 두 식이 모두 Null이면 결과도 Null입니다.  
   
  식 집합 *expression1* 및 *expression2*는 다음 규칙 중 하나를 따라야 합니다.  
   
--   **Numeric**   *expression1* 및 *expression2* 모두 숫자 데이터 형식이어야 합니다. 데이터 형식의 교집합은 식 계산기가 수행하는 암시적 숫자 변환에 대한 규칙에 지정된 대로 숫자 데이터 형식이어야 합니다. 두 숫자 데이터 형식의 교집합은 Null일 수 없습니다. 자세한 내용은 [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md)을 참조하세요.  
+-   **Numeric***expression1* 및 *expression2* 모두 숫자 데이터 형식이어야 합니다. 데이터 형식의 교집합은 식 계산기가 수행하는 암시적 숫자 변환에 대한 규칙에 지정된 대로 숫자 데이터 형식이어야 합니다. 두 숫자 데이터 형식의 교집합은 Null일 수 없습니다. 자세한 내용은 [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md)을 참조하세요.  
   
--   **Character** *expression1* 및 *expression2* 모두 DT_STR 또는 DT_WSTR 데이터 형식으로 계산되어야 합니다. 두 식이 서로 다른 문자열 데이터 형식으로 계산될 수 있습니다.  
+-   **Character***expression1* 및 *expression2* 모두 DT_STR 또는 DT_WSTR 데이터 형식으로 계산되어야 합니다. 두 식이 서로 다른 문자열 데이터 형식으로 계산될 수 있습니다.  
   
     > [!NOTE]  
     >  문자열 비교는 대/소문자, 악센트, 일본어 가나 및 전자/반자를 구분합니다.  
   
--   **Date, Time 또는 Date/Time** *expression1*과 *expression2* 모두 DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET 또는 DT_FILETIME 데이터 형식 중 하나로 계산되어야 합니다.  
+-   **Date, Time 또는 Date/Time***expression1* 및 *expression2* 모두는 DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET 또는 DT_FILETIME 데이터 형식 중 하나로 계산되어야 합니다.  
   
     > [!NOTE]  
     >  시간 데이터 형식으로 계산되는 식과 날짜 또는 날짜/시간 데이터 형식 중 하나로 계산되는 식 사이의 비교는 지원되지 않습니다. 시스템에서 오류가 발생합니다.  
@@ -99,7 +99,7 @@ ListPrice > 500
 @LPrice > 500  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [&#60;&#40;보다 작음&#41;&#40;SSIS 식&#41;](less-than-ssis-expression.md)   
  [&#62;=&#40;크거나 같음&#41;&#40;SSIS 식&#41;](greater-than-or-equal-to-ssis-expression.md)   
  [&#60;=&#40;작거나 같음&#41;&#40;SSIS 식&#41;](less-than-or-equal-to-ssis-expression.md)   

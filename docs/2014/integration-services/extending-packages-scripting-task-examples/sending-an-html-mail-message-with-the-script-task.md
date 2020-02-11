@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 254f1fcb701fd11b22e35def915b09b537c4b33a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62894992"
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>스크립트 태스크를 사용하여 HTML 메일 메시지 보내기
@@ -36,7 +36,7 @@ ms.locfileid: "62894992"
   
 1.  `HtmlEmailTo`, `HtmlEmailFrom` 및 `HtmlEmailSubject`라는 문자열 변수를 만들고 이 변수에 올바른 테스트 메시지에 대한 적절한 값을 할당합니다.  
   
-2.  `HtmlEmailBody`라는 문자열 변수를 만들고 이 변수에 HTML 태그의 문자열을 할당합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+2.  `HtmlEmailBody`라는 문자열 변수를 만들고 이 변수에 HTML 태그의 문자열을 할당합니다. 다음은 그 예입니다.  
   
     ```  
     <html><body><h1>Testing</h1><p>This is a <b>test</b> message.</p></body></html>  
@@ -46,17 +46,19 @@ ms.locfileid: "62894992"
   
 4.  이러한 다섯 개의 변수를 모두 새 스크립트 태스크의 **ReadOnlyVariables** 속성에 할당합니다.  
   
-5.  `System.Net` 및 `System.Net.Mail` 네임스페이스를 코드로 가져옵니다.  
+5.  
+  `System.Net` 및 `System.Net.Mail` 네임스페이스를 코드로 가져옵니다.  
   
  이 항목의 예제 코드는 패키지 변수에서 SMTP 서버 이름을 가져옵니다. 그러나 SMTP 연결 관리자를 사용하여 연결 정보를 캡슐화하고 코드를 통해 연결 관리자에서 서버 이름을 추출할 수도 있습니다. SMTP 연결 관리자의 <xref:Microsoft.SqlServer.Dts.ManagedConnections.SMTPConn.AcquireConnection%2A> 메서드는 문자열을 다음과 같은 형식으로 반환합니다.  
   
  `SmtpServer=smtphost;UseWindowsAuthentication=False;EnableSsl=False;`  
   
- `String.Split` 메서드를 사용하여 이 인수 목록을 각 세미콜론(;) 또는 등호(=) 위치에서 구분하여 개별 문자열의 배열로 만든 다음 해당 배열에서 두 번째 인수(subscript 1)를 서버 이름으로 추출할 수 있습니다.  
+ 
+  `String.Split` 메서드를 사용하여 이 인수 목록을 각 세미콜론(;) 또는 등호(=) 위치에서 구분하여 개별 문자열의 배열로 만든 다음 해당 배열에서 두 번째 인수(subscript 1)를 서버 이름으로 추출할 수 있습니다.  
   
 #### <a name="to-configure-this-script-task-example-with-an-smtp-connection-manager"></a>이 스크립트 태스크 예에서 SMTP 연결 관리자를 사용하도록 구성하려면  
   
-1.  **ReadOnlyVariables** 목록에서 `HtmlEmailServer` 변수를 제거하여 이전에 구성한 스크립트 태스크를 수정합니다.  
+1.  `HtmlEmailServer`ReadOnlyVariables**목록에서** 변수를 제거하여 이전에 구성한 스크립트 태스크를 수정합니다.  
   
 2.  서버 이름을 가져오는 다음 코드 줄을  
   
@@ -150,9 +152,9 @@ public void Main()
         }  
 ```  
   
-![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [메일 보내기 태스크](../control-flow/send-mail-task.md)  
   
   

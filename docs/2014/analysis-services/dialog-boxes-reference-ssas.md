@@ -11,25 +11,26 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 33cb020aac728bec7a98d8eb7f66f78eb799b0c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081797"
 ---
 # <a name="dialog-boxes-reference-ssas"></a>대화 상자 참조(SSAS)
+  
   [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]의 대화 상자에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   
 -   [열 너비 대화 상자 &#40;SSAS&#41;](column-width-dialog-box-ssas.md)  
   
--   [날짜 테이블 대화 상자로 표시 &#40;SSAS&#41;](mark-as-date-table-dialog-box-ssas.md)  
+-   [날짜 테이블로 표시 대화 상자 &#40;SSAS&#41;](mark-as-date-table-dialog-box-ssas.md)  
   
--   [테이블 속성 편집 대화 상자&#40;SSAS&#41;](edit-table-properties-dialog-box-ssas.md)  
+-   [테이블 속성 편집 대화 상자 &#40;SSAS&#41;](edit-table-properties-dialog-box-ssas.md)  
   
--   [대화 상자로 이동 &#40;SSAS&#41;](go-to-dialog-box-ssas.md)  
+-   [SSAS로 이동 대화 상자 &#40;&#41;](go-to-dialog-box-ssas.md)  
   
--   [함수 삽입 대화 상자 &#40;SSAS&#41;](insert-function-dialog-box-ssas.md)  
+-   [SSAS&#41;&#40;함수 삽입 대화 상자](insert-function-dialog-box-ssas.md)  
   
--   [테이블 이동 대화 상자 &#40;SSAS&#41;](move-table-dialog-box-ssas.md)  
+-   [SSAS&#41;&#40;테이블 이동 대화 상자](move-table-dialog-box-ssas.md)  
   
   

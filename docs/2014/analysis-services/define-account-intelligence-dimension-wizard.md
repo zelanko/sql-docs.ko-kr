@@ -13,21 +13,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e7bbc2b890c61e2864aa727f42276f01c87e94a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082156"
 ---
 # <a name="define-account-intelligence-dimension-wizard"></a>계정 인텔리전스 정의(차원 마법사)
+  
   **계정 인텔리전스 정의** 페이지를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에서 정의한 계정 유형을 차원의 **계정 유형** 특성 유형과 연결된 차원 특성에서 정의한 계정 유형으로 매핑할 수 있습니다.  
   
 > [!NOTE]  
->  **차원 유형 선택** 페이지에서 **표준 차원** 을 선택했으며 **차원 유형 지정** 페이지에서 차원 특성을 **계정 유형** 특성 유형에 매핑한 경우에만 이 페이지가 표시됩니다.  
+>  
+  **차원 유형 선택** 페이지에서 **표준 차원** 을 선택했으며 **차원 유형 지정** 페이지에서 차원 특성을 **계정 유형** 특성 유형에 매핑한 경우에만 이 페이지가 표시됩니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **원본 테이블 계정 유형**  
- **차원 키 및 유형 지정** 페이지의 **계정 유형** 특성 유형에 할당된 차원 특성에 포함된 값을 표시합니다.  
+ 
+  **차원 키 및 유형 지정** 페이지의 **계정 유형** 특성 유형에 할당된 차원 특성에 포함된 값을 표시합니다.  
   
  **기본 제공 계정 유형**  
  원본 테이블의 계정 유형에 매핑되는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 정의된 계정 유형을 선택합니다.  
@@ -36,17 +39,17 @@ ms.locfileid: "66082156"
   
 |값|Description|  
 |-----------|-----------------|  
-|**Asset**|특정 시간에 소유하고 있는 항목의 가치입니다.|  
+|**자산**|특정 시간에 소유하고 있는 항목의 가치입니다.|  
 |**Balance**|특정 시간의 항목 합계입니다.|  
-|**Expense**|지출한 비용입니다.|  
-|**Flow**|항목의 증분 합계입니다.|  
-|**Income**|받은 항목의 가치입니다.|  
-|**Liability**|특정 시간에 진 빚의 가치입니다.|  
+|**경비**|지출한 비용입니다.|  
+|**방향을**|항목의 증분 합계입니다.|  
+|**서**|받은 항목의 가치입니다.|  
+|**책임**|특정 시간에 진 빚의 가치입니다.|  
 |**통계**|항목의 계산된 비율 또는 집계되지 않는 항목의 합계입니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [차원 마법사 F1 도움말](dimension-wizard-f1-help.md)   
- [차원 &#40;Analysis Services-다차원 데이터&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [차원 &#40;Analysis Services 다차원 데이터&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [다차원 모델의 차원](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d948a9edfafdbf39bd8ee5c512fb77814cb7adf7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62837264"
 ---
 # <a name="high-availability-support"></a>고가용성 지원
@@ -24,7 +24,7 @@ ms.locfileid: "62837264"
   
 -   Oracle CDC Service는 클러스터형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 사용할 수 있으므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 다른 클러스터 노드로 장애 조치된 후 복구할 수 있습니다. Oracle CDC Service 컴퓨터 관리자가 Oracle CDC Service를 만들 때 연결 정보를 클러스터형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 지정하면 됩니다.  
   
--   Oracle CDC Service는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**AlwaysOn** 데이터베이스 미러링 기능을 사용할 수 있습니다. 이 기능을 지원하려면 MSXDBCDC 및 모든 CDC 데이터베이스가 동일한 가용성 그룹에 있어야 합니다. 적절 한을 지정 하는 Oracle CDC Service 컴퓨터 관리자도 필요 **AlwaysOn** 연결 정보를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가용성 그룹 (예를 들어, 연결 속성 `Failover_Partner and Network=dbmssocn`). 그러면 CDC Service는 장애 조치(failover) 후 데이터베이스의 보조 복제에서 처리를 자동으로 재개할 수 있습니다.  
+-   Oracle CDC Service는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**AlwaysOn** 데이터베이스 미러링 기능을 사용할 수 있습니다. 이 기능을 지원하려면 MSXDBCDC 및 모든 CDC 데이터베이스가 동일한 가용성 그룹에 있어야 합니다. 또한 Oracle CDC Service 컴퓨터 관리자가 해당 **AlwaysOn** 연결 정보를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가용성 그룹에 지정해야 합니다(예: 연결 속성 `Failover_Partner and Network=dbmssocn`). 그러면 CDC Service는 장애 조치(failover) 후 데이터베이스의 보조 복제에서 처리를 자동으로 재개할 수 있습니다.  
   
 -   Windows 장애 조치(failover) 클러스터에서( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 함께 또는 따로) Oracle CDC Service를 구성할 수 있으므로 간단하게 장애 조치를 수행하고 CDC 처리를 클러스터로 대체할 수 있습니다. 장애 조치(failover) 클러스터에서 Oracle CDC Service를 리소스로 구성하려면 시스템 관리자가 장애 조치(failover) 클러스터의 각 노드에서 Oracle CDC Service를 일반 서비스 리소스로 설정해야 합니다.  
   

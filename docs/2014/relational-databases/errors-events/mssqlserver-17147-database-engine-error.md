@@ -13,15 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b46fdc4886a6a2bcda0d82de23833d0fa96c7c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915299"
 ---
-# <a name="mssqlserver17147"></a>MSSQLSERVER_17147
+# <a name="mssqlserver_17147"></a>MSSQLSERVER_17147
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -30,12 +30,12 @@ ms.locfileid: "62915299"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|STARTUP_SERVERKILLED|  
-|메시지 텍스트|시스템이 종료되어 SQL Server를 종료하고 있습니다. 이 메시지는 정보 제공용이므로 사용자가 조치할 필요는 없습니다.|  
+|메시지 텍스트|시스템이 종료되어 SQL Server를 종료하고 있습니다. 이 메시지는 정보 제공용이므로 추가적인 조치가 필요하지 않습니다.|  
   
 ## <a name="explanation"></a>설명  
  시스템이 종료되었습니다.  
   
 ## <a name="user-action"></a>사용자 동작  
- 없음  
+ None  
   
   

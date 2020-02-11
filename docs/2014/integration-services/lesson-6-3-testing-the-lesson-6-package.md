@@ -1,5 +1,5 @@
 ---
-title: '3단계: 6 단원 패키지 테스트 | Microsoft Docs'
+title: '3단계: 6단원 패키지 테스트 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c69c75c9dff4bf8d0542dae71cddcf1a431ab063
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62890859"
 ---
 # <a name="step-3-testing-the-lesson-6-package"></a>3단계: 6단원 패키지 테스트
@@ -40,6 +40,6 @@ ms.locfileid: "62890859"
 2.  패키지의 실행이 완료된 후에 디버그 메뉴에서 디버깅 중지를 클릭합니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
- [4단계: 6 단원 패키지 배포](../integration-services/lesson-6-4-deploying-the-lesson-6-package.md)  
+ [4단계: 6단원 패키지 배포](../integration-services/lesson-6-4-deploying-the-lesson-6-package.md)  
   
   

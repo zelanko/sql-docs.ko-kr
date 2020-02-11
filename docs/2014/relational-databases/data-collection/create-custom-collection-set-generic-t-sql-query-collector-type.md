@@ -1,5 +1,5 @@
 ---
-title: 일반 T-SQL 쿼리 수집기 유형 (Transact SQL)를 사용 하는 사용자 지정 컬렉션 집합 만들기 | Microsoft Docs
+title: 일반 T-sql 쿼리 수집기 유형 (Transact-sql)을 사용 하는 사용자 지정 컬렉션 집합 만들기 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5c131f413c8b7be0dad8432c5711b19e74253aab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873343"
 ---
 # <a name="create-a-custom-collection-set-that-uses-the-generic-t-sql-query-collector-type-transact-sql"></a>일반 T-SQL 쿼리 수집기 유형을 사용하는 사용자 지정 컬렉션 집합 만들기(Transact-SQL)
@@ -160,7 +160,7 @@ SELECT @collection_item_id;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 수집기 저장 프로시저&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql)   
  [일정 관리](../../ssms/agent/manage-schedules.md)   
  [컬렉션 집합 시작 또는 중지](start-or-stop-a-collection-set.md)  

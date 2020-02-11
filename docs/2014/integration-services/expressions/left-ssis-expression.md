@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e6deba09d2804903e8353d4648a2775d18c8c392
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62897691"
 ---
 # <a name="left-ssis-expression"></a>LEFT(SSIS 식)
@@ -37,7 +37,7 @@ LEFT(character_expression,number)
 ## <a name="result-types"></a>결과 형식  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  *number* 가 *character_expression*의 길이보다 큰 경우 함수는 *character_expression*을 반환합니다.  
   
  *number* 가 0이면 함수는 길이가 0인 문자열을 반환합니다.  
@@ -57,7 +57,7 @@ LEFT(character_expression,number)
 LEFT("Mountain Bike", 8)  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [RIGHT&#40;SSIS 식&#41;](right-ssis-expression.md)   
  [함수&#40;SSIS 식&#41;](functions-ssis-expression.md)  
   

@@ -13,15 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a54c45746ec786461135fb3f2a50f4753dbe2df5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62867907"
 ---
-# <a name="mssqlserver5233"></a>MSSQLSERVER_5233
+# <a name="mssqlserver_5233"></a>MSSQLSERVER_5233
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -36,7 +36,7 @@ ms.locfileid: "62867907"
  페이지 머리글이 손상되어 페이지 *P_ID* 감사에 실패했습니다. TEST의 문자열로 실패한 실제 테스트를 알 수 있습니다.  
   
 ### <a name="look-for-hardware-failure"></a>하드웨어 오류 찾기  
- 하드웨어 진단을 실행하여 문제가 있으면 이를 해결하십시오. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 시스템 및 응용 프로그램 로그와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그도 검토하여 해당 오류가 하드웨어 오류로 인해 발생했는지 확인하십시오. 로그에 하드웨어 관련 문제가 포함되어 있으면 이를 해결하십시오.  
+ 하드웨어 진단을 실행하여 문제가 있으면 이를 해결하십시오. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 시스템 및 애플리케이션 로그와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그도 검토하여 해당 오류가 하드웨어 오류로 인해 발생했는지 확인하십시오. 로그에 하드웨어 관련 문제가 포함되어 있으면 이를 해결하십시오.  
   
  데이터 손상 문제가 지속되면 다른 하드웨어 구성 요소로 교체하여 문제를 해결하십시오. 시스템의 디스크 컨트롤러에 쓰기 캐시가 설정되어 있지 않은지 확인하세요. 쓰기 캐시가 문제가 된다고 생각되면 하드웨어 공급업체에 문의하십시오.  
   
@@ -46,6 +46,6 @@ ms.locfileid: "62867907"
  하드웨어 관련 문제가 아니면 정상적인 백업(있는 경우)을 사용하여 데이터베이스를 복원하세요.  
   
 ### <a name="run-dbcc-checkdb"></a>DBCC CHECKDB 실행  
- 이 오류에는 이 작업을 적용할 수 없습니다. 이 오류를 복구할 수 없습니다. 백업에서 데이터베이스를 복원할 수 없으면 Microsoft CSS(고객 서비스 지원 센터)에 문의하십시오.  
+ 해당 사항 없음 이 오류를 복구할 수 없습니다. 백업에서 데이터베이스를 복원할 수 없으면 Microsoft CSS(고객 서비스 지원 센터)에 문의하십시오.  
   
   

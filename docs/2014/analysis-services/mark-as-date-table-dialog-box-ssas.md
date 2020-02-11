@@ -1,5 +1,5 @@
 ---
-title: 날짜 Table Dialog Box (SSAS)으로 표시 | Microsoft Docs
+title: 날짜 테이블로 표시 대화 상자 (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 65c3dc2c084cdc426842cf822b1d65735030a9e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077935"
 ---
 # <a name="mark-as-date-table-dialog-box-ssas"></a>날짜 테이블로 표시 대화 상자(SSAS)
+  
   **날짜 테이블로 표시** 대화 상자는 **테이블** 메뉴를 클릭하고 **날짜**를 클릭한 다음 **날짜 테이블로 표시**를 클릭하면 나타납니다. 날짜 테이블은 시간 인텔리전스 함수에 사용됩니다. 데이터 테이블과의 관계를 만들려면 테이블의 고유 식별자로 사용할 고유 값 열을 지정해야 합니다.  
   
  **Date**  

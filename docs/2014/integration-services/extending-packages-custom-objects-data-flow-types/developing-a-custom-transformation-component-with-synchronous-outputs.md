@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 785ca6c05bc221e1449607b9dc3deaa93aa667bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896585"
 ---
 # <a name="developing-a-custom-transformation-component-with-synchronous-outputs"></a>동기 출력을 사용하여 사용자 지정 변환 구성 요소 개발
@@ -111,7 +111,7 @@ End Class
   
  열의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A>은 다른 속성에 대해 설정되는 값을 결정합니다. 다음 표에서는 각 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A>의 종속 속성에 대한 요구 사항을 보여 줍니다. 이 목록에 포함되지 않은 데이터 형식의 종속 속성은 0으로 설정됩니다.  
   
-|DataType|길이|소수 자릿수|전체 자릿수|CodePage|  
+|DataType|길이|확장|자릿수|CodePage|  
 |--------------|------------|-----------|---------------|--------------|  
 |DT_DECIMAL|0|0보다 크고 28보다 작거나 같습니다.|0|0|  
 |DT_CY|0|0|0|0|  
@@ -120,7 +120,7 @@ End Class
 |DT_STR|0보다 크고 8000보다 작습니다.|0|0|0이 아니며 올바른 코드 페이지가 아닙니다.|  
 |DT_WSTR|0보다 크고 4000보다 작습니다.|0|0|0|  
   
- 데이터 형식 속성에 대한 제한 사항은 출력 열의 데이터 형식을 기준으로 하므로 관리되는 형식을 사용할 때는 올바른 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식을 선택해야 합니다. 기본 클래스에서는 관리되는 구성 요소 개발자가 관리되는 형식의 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 데이터 형식을 선택하는 데 도움이 되는 세 개의 도우미 메서드 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A>, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A> 및 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A>을 제공합니다. 이러한 메서드는 관리되는 데이터 형식을 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 데이터 형식으로 변환하거나 그 반대로 변환합니다.  
+ 데이터 형식 속성에 대한 제한 사항은 출력 열의 데이터 형식을 기준으로 하므로 관리되는 형식을 사용할 때는 올바른 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식을 선택해야 합니다. 기본 클래스에서는 관리되는 구성 요소 개발자가 관리되는 형식의 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A> 데이터 형식을 선택하는 데 도움이 되는 세 개의 도우미 메서드 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A>, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A> 및 [!INCLUDE[ssIS](../../includes/ssis-md.md)]을 제공합니다. 이러한 메서드는 관리되는 데이터 형식을 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 데이터 형식으로 변환하거나 그 반대로 변환합니다.  
   
 ## <a name="run-time"></a>런타임  
  일반적으로 구성 요소의 런타임 부분에 대한 구현은 버퍼에서 구성 요소의 입력 및 출력 열을 찾는 태스크와 들어오는 버퍼 행에서 이러한 열의 값을 읽거나 쓰는 태스크로 분류됩니다.  
@@ -184,7 +184,8 @@ End Sub
 ### <a name="processing-rows"></a>행 처리  
  구성 요소는 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> 메서드에서 행 및 열이 들어 있는 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 개체를 받습니다. 이 메서드가 실행되는 동안에는 버퍼의 행을 반복하고 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A> 실행 중 식별된 열을 읽고 수정합니다. 이 메서드는 업스트림 구성 요소에서 더 이상 행을 제공하지 않을 때까지 데이터 흐름 태스크에서 반복적으로 호출됩니다.  
   
- 버퍼의 개별 열은 배열 인덱서 액세스 메서드를 사용하거나 `Get` 또는 `Set` 메서드 중 하나를 사용하여 읽거나 쓸 수 있습니다. `Get` 및 `Set` 메서드가 보다 효율적이므로 버퍼에 있는 열의 데이터 형식을 알고 있는 경우에는 이 두 메서드를 사용해야 합니다.  
+ 버퍼의 개별 열은 배열 인덱서 액세스 메서드를 사용하거나 `Get` 또는 `Set` 메서드 중 하나를 사용하여 읽거나 쓸 수 있습니다. 
+  `Get` 및 `Set` 메서드가 보다 효율적이므로 버퍼에 있는 열의 데이터 형식을 알고 있는 경우에는 이 두 메서드를 사용해야 합니다.  
   
  다음 코드 예에서는 들어오는 행을 처리하는 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> 메서드의 구현을 보여 줍니다.  
   
@@ -227,7 +228,7 @@ Public Overrides Sub ProcessInput(ByVal InputID As Integer, ByVal buffer As Pipe
 End Sub  
 ```  
   
-## <a name="sample"></a>예제  
+## <a name="sample"></a>샘플  
  다음 예제에서는 동기 출력을 사용하며 모든 문자열 열의 값을 대문자로 변환하는 간단한 변환 구성 요소를 보여 줍니다. 이 예제는 이 항목에 설명된 메서드 및 기능의 일부를 보여 줍니다. 여기에서는 동기 출력을 사용하는 모든 사용자 지정 변환 구성 요소에서 재정의해야 하는 중요한 메서드를 보여 주지만 디자인 타임 유효성 검사를 위한 코드는 포함하지 않습니다.  
   
 ```csharp  
@@ -321,9 +322,9 @@ Namespace Uppercase
 End Namespace  
 ```  
   
-![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [비동기 출력을 사용하여 사용자 지정 변환 구성 요소 개발](../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)   
  [동기 및 비동기 변환 이해](../understanding-synchronous-and-asynchronous-transformations.md)   
  [스크립트 구성 요소를 사용하여 동기 변환 만들기](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md) 

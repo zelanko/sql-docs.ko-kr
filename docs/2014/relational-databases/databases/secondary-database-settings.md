@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 57131b757dfc66df990f0ddf8a3c5f28f4e04396
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871221"
 ---
 # <a name="secondary-database-settings"></a>보조 데이터베이스 설정
@@ -24,7 +24,7 @@ ms.locfileid: "62871221"
   
  로그 전달 개념에 대한 설명은 [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)를 참조하세요.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **보조 서버 인스턴스**  
  로그 전달 구성에서 현재 보조 서버로 구성되어 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름을 표시합니다.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "62871221"
  로그 전달 구성에서 보조 서버로 사용할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다. 연결 시 사용한 계정은 보조 서버 인스턴스에서 sysadmin 고정 서버 역할의 멤버여야 합니다.  
   
  **초기화 탭**  
- 다음과 같은 옵션이 있습니다.  
+ 옵션은 다음과 같습니다.  
   
  **예, 주 데이터베이스의 전체 백업을 생성하고 보조 데이터베이스에 복원합니다.**  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 주 데이터베이스를 백업하여 보조 서버에 복원하는 방법으로 보조 데이터베이스를 구성하도록 합니다. **보조 데이터베이스** 입력란에 새 데이터베이스 이름을 입력한 경우 복원 작업을 실행하는 과정의 일부로 해당 데이터베이스가 생성됩니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "62871221"
  보조 데이터베이스가 이미 초기화되었고 주 데이터베이스로부터 트랜잭션 로그 백업을 받을 준비가 되었음을 나타냅니다. 이 옵션은 **보조 데이터베이스** 입력란에 새 데이터베이스 이름을 입력한 경우에는 사용할 수 없습니다.  
   
  **파일 복사 탭**  
- 다음과 같은 옵션이 있습니다.  
+ 옵션은 다음과 같습니다.  
   
  **복사한 파일의 대상 폴더**  
  보조 데이터베이스를 복원하기 위해 트랜잭션 로그 백업을 복사할 경로를 입력합니다. 일반적으로 이 경로는 보조 서버에 있는 폴더의 로컬 경로입니다. 폴더가 다른 서버에 있으면 해당 폴더의 UNC 경로를 지정해야 합니다. 보조 서버 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정에는 이 폴더에 대한 읽기 권한이 있어야 합니다. 또한 보조 서버 인스턴스에서 복사 및 복원 작업을 실행하는 데 사용할 프록시 계정에 이 네트워크 공유를 읽고 쓸 수 있는 권한을 부여해야 합니다. 기본적으로 이 계정은 보조 서버 인스턴스의 SQL Server 에이전트 서비스 계정이지만 sysadmin 권한이 있는 사용자가 다른 프록시 계정을 선택하여 작업에 사용할 수 있습니다.  
@@ -83,7 +83,7 @@ ms.locfileid: "62871221"
  SQL Server 에이전트 복사 작업을 일시 중지합니다.  
   
  **트랜잭션 로그 복원 탭**  
- 다음과 같은 옵션이 있습니다.  
+ 옵션은 다음과 같습니다.  
   
  **백업 복원 시 데이터베이스의 사용자 연결 끊기**  
  트랜잭션 로그 백업을 복원하는 동안 자동으로 보조 데이터베이스에서 사용자의 연결을 끊습니다.  
@@ -115,7 +115,7 @@ ms.locfileid: "62871221"
  **이 작업 비활성화**  
  보조 데이터베이스로의 복원 작업을 일시 중지합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 데이터베이스 백업 및 복원](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   

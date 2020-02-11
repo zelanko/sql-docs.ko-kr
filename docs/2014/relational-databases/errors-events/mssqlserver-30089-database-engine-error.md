@@ -13,15 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f452da206afd91c2db49d32600c34397ef7b2609
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62868778"
 ---
-# <a name="mssqlserver30089"></a>MSSQLSERVER_30089
+# <a name="mssqlserver_30089"></a>MSSQLSERVER_30089
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -42,8 +42,8 @@ ms.locfileid: "62868778"
   
 2.  탐색 로그를 보고 전체 텍스트 인덱스에 실패한 새 문서가 있는지 확인한 후 이를 제거합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [sp_help_fulltext_system_components &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql)   
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;sp_help_fulltext_system_components &#40;](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql)   
  [검색을 위해 단어 분리기와 형태소 분석기 구성 및 관리](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [검색 필터 구성 및 관리](../search/configure-and-manage-filters-for-search.md)  
   

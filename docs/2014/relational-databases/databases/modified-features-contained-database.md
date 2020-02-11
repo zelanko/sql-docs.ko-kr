@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f78f4bdf08b9a5caf9b2654289bf181080efff02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871517"
 ---
 # <a name="modified-features-contained-database"></a>수정된 기능(포함된 데이터베이스)
@@ -45,13 +45,13 @@ ms.locfileid: "62871517"
  임시 테이블은 사용자 정의 형식, XML 스키마 컬렉션 또는 사용자 정의 함수를 참조할 수 없습니다.  
   
 ## <a name="collation"></a>데이터 정렬  
- 포함 되지 않은 데이터베이스 모델에 별도 세 가지 유형의 데이터 정렬 데이터베이스 데이터 정렬, 인스턴스 데이터 정렬 및 tempdb 데이터 정렬입니다. 포함된 데이터베이스는 두 가지의 데이터 정렬인 데이터베이스 데이터 정렬과 새 카탈로그 데이터 정렬만 사용합니다. 포함된 데이터베이스 데이터 정렬에 대한 자세한 내용은 [Contained Database Collations](contained-database-collations.md) 을 참조하십시오.  
+ 포함되지 않은 데이터베이스 모델에는 데이터베이스 데이터 정렬, 인스턴스 데이터 정렬 및 tempdb 데이터 정렬이라는 별도의 세 가지 데이터 정렬이 있습니다. 포함된 데이터베이스는 두 가지의 데이터 정렬인 데이터베이스 데이터 정렬과 새 카탈로그 데이터 정렬만 사용합니다. 포함된 데이터베이스 데이터 정렬에 대한 자세한 내용은 [Contained Database Collations](contained-database-collations.md) 을 참조하십시오.  
   
 ## <a name="user-options"></a>사용자 옵션  
  포함된 데이터베이스를 사용하도록 설정할 경우 [인스턴스에 대해](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md) user options 옵션 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 0으로 설정해야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [Contained Database Collations](contained-database-collations.md)   
- [Contained Databases](contained-databases.md)  
+## <a name="see-also"></a>참고 항목  
+ [포함된 데이터베이스 데이터 정렬](contained-database-collations.md)   
+ [포함된 데이터베이스](contained-databases.md)  
   
   

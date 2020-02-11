@@ -13,15 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 832ee3caa23a034f1c228d01ff8ec2ceda32de06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915125"
 ---
-# <a name="mssqlserver21871"></a>MSSQLSERVER_21871
+# <a name="mssqlserver_21871"></a>MSSQLSERVER_21871
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -33,9 +33,10 @@ ms.locfileid: "62915125"
 |메시지 텍스트|데이터베이스 %s의 게시자 %s이(가) 리디렉션되지 않았습니다.|  
   
 ## <a name="explanation"></a>설명  
- `sp_validate_replica_hosts_as_publishers` msredirected_publishers에서 식별 된 게시자 및 게시자 데이터베이스에 대 한 항목에 대 한 배포 데이터베이스를 확인합니다.  항목이 없으면 `sp_validate_replica_hosts_as_publishers`가 오류 21871을 반환합니다.  
+ `sp_validate_replica_hosts_as_publishers`는 식별된 게시자 및 게시자 데이터베이스에 대한 항목이 있는지 확인하기 위해 배포 데이터베이스의 MSredirected_publishers 테이블을 확인합니다.  항목이 없으면 `sp_validate_replica_hosts_as_publishers`가 오류 21871을 반환합니다.  
   
 ## <a name="user-action"></a>사용자 동작  
- `sp_validate_replica_hosts_as_publishers`는 리디렉션된 게시자와만 관련됩니다. 게시자 데이터베이스가 가용성 그룹의 멤버인 경우에는 `sp_redirect_publisher` 저장 프로시저를 사용하여 게시자 및 게시자 데이터베이스에 가용성 그룹의 가용성 그룹 수신기 이름을 연결하십시오.  
+ 
+  `sp_validate_replica_hosts_as_publishers`는 리디렉션된 게시자와만 관련됩니다. 게시자 데이터베이스가 가용성 그룹의 멤버인 경우에는 `sp_redirect_publisher` 저장 프로시저를 사용하여 게시자 및 게시자 데이터베이스에 가용성 그룹의 가용성 그룹 수신기 이름을 연결하십시오.  
   
   

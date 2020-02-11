@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e2fd00fd96fe9b0bf7e1b605d935908970d0c1fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875622"
 ---
 # <a name="restore-a-database-backup-under-the-simple-recovery-model-transact-sql"></a>단순 복구 모델에서 데이터베이스 백업 복원(Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "62875622"
 > [!IMPORTANT]  
 >  이 작업을 수행하려면 복원될 데이터베이스를 현재 사용하고 있는 사람이 전체 데이터베이스 백업을 복원하는 시스템 관리자뿐이어야 합니다.  
   
-## <a name="prerequisites-and-recommendations"></a>필수 구성 요소 및 권장 사항  
+## <a name="prerequisites-and-recommendations"></a>필수 조건 및 권장 사항  
   
 -   암호화된 데이터베이스를 복원하려면 데이터베이스를 암호화하는 데 사용된 인증서 또는 비대칭 키에 대한 액세스 권한이 있어야 합니다. 인증서 또는 비대칭 키가 없으면 데이터베이스를 복원할 수 없습니다. 따라서 데이터베이스 암호화 키를 암호화하는 데 사용되는 인증서는 백업이 필요한 동안에는 유지되어야 합니다. 자세한 내용은 [SQL Server Certificates and Asymmetric Keys](../security/sql-server-certificates-and-asymmetric-keys.md)을 참조하세요.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62875622"
 > [!NOTE]  
 >  새 사용자 데이터베이스는 **모델** 데이터베이스의 호환성 수준을 상속합니다.  
   
-## <a name="procedures"></a>절차  
+## <a name="procedures"></a>프로시저  
   
 #### <a name="to-restore-a-full-database-backup"></a>전체 데이터베이스 백업을 복원하려면  
   
@@ -80,7 +80,7 @@ RESTORE DATABASE AdventureWorks2012
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [전체 데이터베이스 복원&#40;전체 복구 모델&#41;](complete-database-restores-full-recovery-model.md)   
  [전체 데이터베이스 복원&#40;단순 복구 모델&#41;](complete-database-restores-simple-recovery-model.md)   
  [전체 데이터베이스 백업&#40;SQL Server&#41;](full-database-backups-sql-server.md)   

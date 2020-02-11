@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eed258c78e76c5ec3f6aeeeb6bdd647166592613
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62856129"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>테이블에 열 추가(데이터베이스 엔진)
@@ -32,9 +32,9 @@ ms.locfileid: "62856129"
   
      [보안](#Security)  
   
--   **사용 하 여 열을 삽입 합니다.**  
+-   **열을 삽입하려면**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -45,30 +45,34 @@ ms.locfileid: "62856129"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  테이블에 대한 ALTER 사용 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-insert-columns-into-a-table-with-table-designer"></a>테이블 디자이너에서 테이블에 열을 삽입하려면  
   
-1.  **개체 탐색기**에서 열을 추가할 테이블을 마우스 오른쪽 단추로 클릭하고 **디자인**을 선택합니다.  
+1.  
+  **개체 탐색기**에서 열을 추가할 테이블을 마우스 오른쪽 단추로 클릭하고 **디자인**을 선택합니다.  
   
-2.  **열 이름** 열에서 첫 번째 빈 셀을 클릭합니다.  
+2.  
+  **열 이름** 열에서 첫 번째 빈 셀을 클릭합니다.  
   
 3.  셀에 열 이름을 입력합니다. 열 이름은 반드시 입력해야 합니다.  
   
 4.  Tab 키를 눌러 **데이터 형식** 셀로 이동한 다음 드롭다운에서 데이터 형식을 선택합니다. 데이터 형식도 반드시 지정해야 하며, 사용자가 이 값을 선택하지 않으면 기본값이 할당됩니다.  
   
     > [!NOTE]  
-    >  **데이터베이스 도구** 아래의 **옵션**대화 상자에서 기본값을 변경할 수 있습니다.  
+    >  
+  **데이터베이스 도구** 아래의 **옵션**대화 상자에서 기본값을 변경할 수 있습니다.  
   
-5.  **열 속성** 탭에서 다른 열 속성을 계속 정의합니다.  
+5.  
+  **열 속성** 탭에서 다른 열 속성을 계속 정의합니다.  
   
     > [!NOTE]  
     >  새 열을 만들면 열 속성에 기본값이 자동으로 추가됩니다. 이러한 값은 **열 속성** 탭에서 변경할 수 있습니다.  
   
-6.  열을 모두 추가했으면 **파일** 메뉴에서 **저장**_table name_을 선택합니다.  
+6.  열을 모두 추가했으면 **파일** 메뉴에서 **테이블 이름**_저장_을 선택합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
@@ -78,12 +82,12 @@ ms.locfileid: "62856129"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예에서는 `dbo.doc_exa`테이블에 두 개의 열을 추가합니다. 다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
+3.  다음 예에서는 `dbo.doc_exa`테이블에 두 개의 열을 추가합니다. 다음 예를 복사 하 여 쿼리 창에 붙여넣고 **실행** 을 클릭 합니다.  
   
 ```  
 ALTER TABLE dbo.doc_exa ADD column_b VARCHAR(20) NULL, column_c INT NULL ;  
 ```  
   
-##  <a name="FollowUp"></a> 자세한 내용은 [ALTER TABLE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)을 참조하세요.  
+##  <a name="FollowUp"></a>자세한 내용은 [ALTER TABLE &#40;transact-sql](/sql/t-sql/statements/alter-table-transact-sql) 을 참조 하세요&#41;  
   
   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c8f876852ff78e254bdff7ed687d2196d01d9c1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835350"
 ---
 # <a name="oracle-supplemental-logging-script"></a>Oracle 보완 로깅 스크립트
@@ -24,7 +24,7 @@ ms.locfileid: "62835350"
   
  조직의 Oracle DBA 정책에 따라 보완 로깅 스크립트를 실행하려면 Oracle DBA의 검토와 승인이 필요할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  다음은 스크립트를 실행하는 방법을 지정하는 데 사용할 수 있는 옵션입니다.  
   
  **스크립트 실행**  
@@ -33,10 +33,10 @@ ms.locfileid: "62835350"
  **다른 이름으로 저장**  
  스크립트를 텍스트 파일에 저장합니다. Oracle 데이터베이스 관리자(DBA)가 보완 로깅 스크립트를 검사하고 실행해야 하는 경우에 사용되며, 스크립트를 텍스트 파일로 저장하여 나중에 전자 메일 또는 다른 방법으로 Oracle DBA에게 보낸 다음 Oracle 데이터베이스에서 스크립트를 실행하는 데 사용되는 SQL*Plus Oracle 유틸리티 또는 기타 도구를 사용하여 스크립트를 실행할 수 있습니다.  
   
- **복사**  
+ **Copy**  
  스크립트를 클립보드에 복사합니다. Oracle 데이터베이스 관리자가 보완 로깅 스크립트를 검사하고 실행해야 하는 경우에 필요한 위치에 스크립트를 붙여 넣을 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [How to Manage a CDC Instance](manage-a-cdc-instance.md)   
  [CDC 인스턴스 관리](manage-a-cdc-instance.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: '1단계: 4 단원 패키지 복사 | Microsoft Docs'
+title: '1단계: 4단원 패키지 복사 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3cf58665c69c744b35c8703f7f00fc07e0b8aafc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891180"
 ---
 # <a name="step-1-copying-the-lesson-4-package"></a>1단계: 4단원 패키지 복사
@@ -22,39 +22,43 @@ ms.locfileid: "62891180"
   
 ### <a name="to-copy-the-lesson-4-package"></a>4단원 패키지를 복사하려면  
   
-1.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools를 아직 열지 않은 경우 **시작**을 클릭하고 **모든 프로그램**, **Microsoft SQL Server 2012**를 차례로 가리킨 다음 **SQL Server Data Tools**를 클릭합니다.  
+1.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools를 아직 열지 않은 경우 **시작**을 클릭하고 **모든 프로그램**, **Microsoft SQL Server 2012**를 차례로 가리킨 다음 **SQL Server Data Tools**를 클릭합니다.  
   
-2.  **파일** 메뉴에서 **열기**, **프로젝트/솔루션**을 차례로 클릭하고 **SSIS Tutorial** 을 선택한 다음 **열기**를 클릭하고 **SSIS Tutorial.sln**을 두 번 클릭합니다.  
+2.  
+  **파일** 메뉴에서 **열기**, **프로젝트/솔루션**을 차례로 클릭하고 **SSIS Tutorial** 을 선택한 다음 **열기**를 클릭하고 **SSIS Tutorial.sln**을 두 번 클릭합니다.  
   
 3.  솔루션 탐색기에서 **Lesson 4.dtsx**를 마우스 오른쪽 단추로 클릭한 다음 **복사**를 클릭합니다.  
   
-4.  솔루션 탐색기에서 **SSIS 패키지**를 마우스 오른쪽 단추로 클릭한 다음 **붙여넣기**를 클릭합니다.  
+4.  솔루션 탐색기에서 **SSIS 패키지**를 마우스 오른쪽 단추로 클릭 한 다음 **붙여넣기**를 클릭 합니다.  
   
      기본적으로 복사된 패키지의 이름은 Lesson 5.dtsx가 됩니다.  
   
 5.  솔루션 탐색기에서 **Lesson 5.dtsx** 를 두 번 클릭하여 패키지를 엽니다.  
   
-6.  **제어 흐름** 탭 배경의 아무 곳이나 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+6.  **제어 흐름** 탭 배경의 아무 곳 이나 마우스 오른쪽 단추로 클릭 한 다음 **속성**을 클릭 합니다.  
   
-7.  속성 창에서 업데이트를 `Name` 속성을 `Lesson 5`입니다.  
+7.  속성 창에서 `Name` 속성을로 `Lesson 5`업데이트 합니다.  
   
-8.  에 대 한 상자를 클릭 합니다 **ID** 속성을 다음 드롭다운 화살표를 클릭 한 다음 클릭  **\<새 ID 생성 >** 합니다.  
+8.  **Id** 속성 상자를 클릭 한 다음 드롭다운 화살표를 클릭 하 고 ** \<새 id>생성 **을 클릭 합니다.  
   
 ### <a name="to-add-the-completed-lesson-4-package"></a>완성된 4단원 패키지를 추가하려면  
   
-1.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools를 연 다음 SSIS 자습서 프로젝트를 엽니다.  
+1.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools를 연 다음 SSIS 자습서 프로젝트를 엽니다.  
   
-2.  솔루션 탐색기에서 **SSIS 패키지**를 마우스 오른쪽 단추로 클릭한 다음 **기존 패키지 추가**를 클릭합니다.  
+2.  솔루션 탐색기에서 **SSIS 패키지**를 마우스 오른쪽 단추로 클릭 하 고 **기존 패키지 추가**를 클릭 합니다.  
   
-3.  **기존 패키지의 복사본 추가** 대화 상자의 **패키지 위치**에서 **파일 시스템**을 선택합니다.  
+3.  **기존 패키지의 복사본 추가** 대화 상자의 **패키지 위치**에서 **파일 시스템**을 선택 합니다.  
   
 4.  찾아보기 **(...)** 단추를 클릭하여 머신의 **Lesson 4.dtsx**로 이동한 다음, **열기**를 클릭합니다.  
   
      이 자습서에 대한 모든 단원 패키지를 다운로드하려면 다음을 수행합니다.  
   
-    1.  [Integration Services 제품 예제](https://go.microsoft.com/fwlink/?LinkId=275027)로 이동합니다.  
+    1.  [Integration Services 제품 샘플](https://go.microsoft.com/fwlink/?LinkId=275027) 로 이동 합니다.  
   
-    2.  **DOWNLOADS** 탭을 클릭합니다.  
+    2.  
+  **DOWNLOADS** 탭을 클릭합니다.  
   
     3.  SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip 파일을 클릭합니다.  
   

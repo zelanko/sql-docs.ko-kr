@@ -1,5 +1,5 @@
 ---
-title: 데이터 마이닝 모니터링 하려면 SQL Server Profiler를 사용 하 여 (Analysis Services-데이터 마이닝) | Microsoft Docs
+title: SQL Server Profiler를 사용 하 여 데이터 마이닝 모니터링 (Analysis Services 데이터 마이닝) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3aa29cede2849158162aba27332d5fe7f8f5fae5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082697"
 ---
 # <a name="using-sql-server-profiler-to-monitor-data-mining-analysis-services---data-mining"></a>SQL Server 프로파일러를 사용하여 데이터 마이닝 모니터링(Analysis Services - 데이터 마이닝)
@@ -31,18 +31,20 @@ ms.locfileid: "66082697"
   
 |EventClass|EventSubclass|Description|  
 |----------------|-------------------|-----------------|  
-|**Query Begin**<br /><br /> **쿼리 끝**|**0 - MDXQuery**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 저장 프로시저에 대한 모든 호출의 텍스트를 포함합니다.|  
-|**Query Begin**<br /><br /> **쿼리 끝**|**1 - DMXQuery**|DMX(Data Mining Extensions) 문의 텍스트와 결과를 포함합니다.|  
-|**Progress Report Begin**<br /><br /> **Progress Report End**|**34 - DataMiningProgress**|데이터 마이닝 알고리즘의 진행률에 대한 정보를 제공합니다. 예를 들어 클러스터링 모델을 작성하는 경우 작성 중인 후보 클러스터를 알려 주는 진행률 메시지가 나타납니다.|  
-|**Query Begin**<br /><br /> **쿼리 끝**|EXECUTESQL|실행 중인 Transact-SQL 쿼리의 텍스트를 포함합니다.|  
-|**Query Begin**<br /><br /> **쿼리 끝**|**2- SQLQuery**|시스템 테이블 형식의 스키마 행 집합에 대한 쿼리의 텍스트를 포함합니다.|  
-|**DISCOVER Begin**<br /><br /> **DISCOVER End**|다중|XMLA로 캡슐화된 DMX 함수 호출 또는 DISCOVER 문의 텍스트를 포함합니다.|  
-|**오류**|(없음)|서버에서 클라이언트로 보낸 오류의 텍스트를 포함합니다.<br /><br /> **오류(데이터 마이닝):** 이나 **정보(데이터 마이닝):** 가 앞에 오는 오류 메시지는 특별히 DMX 요청에 대한 응답으로 생성됩니다. 그러나 이러한 오류 메시지를 보는 것만으로는 충분하지 않습니다. 파서에서 생성하는 오류 메시지와 같은 다른 오류 메시지도 데이터 마이닝과 관련이 있을 수 있지만 이러한 접두사는 없습니다.|  
+|**쿼리 시작**<br /><br /> **쿼리 종료**|**0-MDXQuery**|
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 저장 프로시저에 대한 모든 호출의 텍스트를 포함합니다.|  
+|**쿼리 시작**<br /><br /> **쿼리 종료**|**1-DMXQuery**|DMX(Data Mining Extensions) 문의 텍스트와 결과를 포함합니다.|  
+|**진행률 보고 시작**<br /><br /> **진행률 보고 종료**|**34-DataMiningProgress**|데이터 마이닝 알고리즘의 진행률에 대한 정보를 제공합니다. 예를 들어 클러스터링 모델을 작성하는 경우 작성 중인 후보 클러스터를 알려 주는 진행률 메시지가 나타납니다.|  
+|**쿼리 시작**<br /><br /> **쿼리 종료**|EXECUTESQL|실행 중인 Transact-SQL 쿼리의 텍스트를 포함합니다.|  
+|**쿼리 시작**<br /><br /> **쿼리 종료**|**2-SQLQuery**|시스템 테이블 형식의 스키마 행 집합에 대한 쿼리의 텍스트를 포함합니다.|  
+|**검색 시작**<br /><br /> **검색 끝**|여러 접두사|XMLA로 캡슐화된 DMX 함수 호출 또는 DISCOVER 문의 텍스트를 포함합니다.|  
+|**오류**|(없음)|서버에서 클라이언트로 보낸 오류의 텍스트를 포함합니다.<br /><br /> 
+  **오류(데이터 마이닝):** 이나 **정보(데이터 마이닝):** 가 앞에 오는 오류 메시지는 특별히 DMX 요청에 대한 응답으로 생성됩니다. 그러나 이러한 오류 메시지를 보는 것만으로는 충분하지 않습니다. 파서에서 생성하는 오류 메시지와 같은 다른 오류 메시지도 데이터 마이닝과 관련이 있을 수 있지만 이러한 접두사는 없습니다.|  
   
  추적 로그에 있는 명령 문을 보면 시스템 저장 프로시저에 대한 호출을 포함하여 클라이언트에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버로 보낸 복잡한 문의 구문도 볼 수 있습니다. 이 정보를 사용하여 디버깅을 수행하거나 유효한 문을 새 예측 쿼리 또는 모델을 만들기 위한 템플릿으로 사용할 수 있습니다. 추적을 통해 캡처할 수 있는 저장 프로시저 호출의 예는 [클러스터링 모델 쿼리 예제](clustering-model-query-examples.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [Monitor an Analysis Services Instance](../instances/monitor-an-analysis-services-instance.md)   
- [SQL Server 확장 이벤트를 사용 하 여 &#40;XEvents&#41; 모니터는 분석 서비스](../instances/monitor-analysis-services-with-sql-server-extended-events.md)  
+## <a name="see-also"></a>참고 항목  
+ [Analysis Services 인스턴스 모니터링](../instances/monitor-an-analysis-services-instance.md)   
+ [SQL Server 확장 이벤트 &#40;Xevent&#41;를 사용 하 여 모니터링 Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   
   

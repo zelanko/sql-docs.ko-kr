@@ -18,14 +18,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 262a6404ced039e629aa7e507c211949dab7bad2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892299"
 ---
 # <a name="integration-services-backward-compatibility"></a>Integration Services의 이전 버전과의 호환성
-  이 섹션에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]버전 간의 변경 사항에 대해 설명하며 더 이상 사용되지 않거나 후속 릴리스에서 제거될 예정인 기능을 포함합니다. 또한 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 기능을 비롯한 기존 애플리케이션의 동작을 중단시키거나 변경하는 것으로 알려진 제품 변경 사항에 대해서도 설명합니다.  
+  이 섹션에서는 버전 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]간의 변경 내용에 대해 설명 합니다. 더 이상 사용되지 않거나 후속 릴리스에서 제거될 예정인 기능을 포함합니다. 또한 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 기능을 비롯한 기존 애플리케이션의 동작을 중단시키거나 변경하는 것으로 알려진 제품 변경 사항에 대해서도 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -33,7 +33,7 @@ ms.locfileid: "62892299"
   
 -   [SQL Server 2014에서 지원되지 않는 Integration Services 기능](../../2014/integration-services/discontinued-integration-services-functionality-in-sql-server-2014.md)  
   
--   [SQL Server 2014의 Integration Services 기능에 대한 주요 변경 내용](../../2014/integration-services/breaking-changes-to-integration-services-features-in-sql-server-2014.md)  
+-   [SQL Server 2014 Integration Services 기능의 주요 변경](../../2014/integration-services/breaking-changes-to-integration-services-features-in-sql-server-2014.md)  
   
 -   [SQL Server 2014 Integration Services 기능의 동작 변경](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md)  
   

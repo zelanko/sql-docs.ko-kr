@@ -15,15 +15,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f0e254e38eabc62ab3e11e7d8ab1a3396c465470
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913238"
 ---
-# <a name="mssqlserver8525"></a>MSSQLSERVER_8525
+# <a name="mssqlserver_8525"></a>MSSQLSERVER_8525
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -35,7 +35,7 @@ ms.locfileid: "62913238"
 |메시지 텍스트|분산 트랜잭션이 완료되었습니다. 이 세션을 새 트랜잭션이나 NULL 트랜잭션에 참여하게 하십시오.|  
   
 ## <a name="explanation"></a>설명  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 함께 DTC(Distributed Transaction Coordinator)를 사용하기 위한 프로그래밍 모델에서는 응용 프로그램을 명시적으로 분산 트랜잭션에 참여시키고 분산 트랜잭션에서 제거해야 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 함께 DTC(Distributed Transaction Coordinator)를 사용하기 위한 프로그래밍 모델에서는 애플리케이션을 명시적으로 분산 트랜잭션에 참여시키고 분산 트랜잭션에서 제거해야 합니다.  
   
  이 오류는 다음과 같은 4가지 조건이 만족되면 발생합니다.  
   

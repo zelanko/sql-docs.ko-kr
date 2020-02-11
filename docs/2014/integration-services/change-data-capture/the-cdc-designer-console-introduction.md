@@ -11,17 +11,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fba97c2e348b238702206ebf194c2390f155ad16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62834645"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>CDC Designer 콘솔 소개
   이 섹션에서는 Attunity Oracle CDC Designer 설치 절차에 대해 설명합니다.  
   
 ## <a name="installation"></a>설치  
- 이 섹션에서는 Attunity Oracle CDC Designer 설치 절차에 대해 설명합니다. CDC Designer 콘솔을 설치 하려면 수동으로 실행 **AttunityOracleCdcDesigner.msi** SQL Server 설치 미디어에서.  X86 및 x64 설치 패키지에 위치한 **.\Tools\AttunityCDCOracle\\**  SQL Server 설치 미디어에 있습니다.  
+ 이 섹션에서는 Attunity Oracle CDC Designer 설치 절차에 대해 설명합니다. CDC Designer 콘솔을 설치 하려면 SQL Server 설치 미디어에서 **attunityoraclecdcdesigner.msi** 를 수동으로 실행 합니다.  X86 및 x 64 용 설치 패키지는 SQL Server 설치 미디어의 **.\Tools\AttunityCDCOracle\\ ** 에 있습니다.  
   
 ## <a name="supported-windows-environments"></a>지원되는 Windows 환경  
  CDC Designer 콘솔은 다음과 같은 Windows 환경에서 실행될 수 있습니다.  
@@ -37,13 +37,13 @@ ms.locfileid: "62834645"
 ## <a name="database-prerequisites"></a>데이터베이스 필수 구성 요소  
  Attunity Oracle CDC Designer 작업은 Oracle 데이터베이스를 사용하여 수행합니다. Attunity Oracle CDC Designer는 다음과 같은 버전을 지원합니다.  
   
- **Oracle Database**  
+ **Oracle 데이터베이스**  
   
--   Oracle Database 10g 릴리스 2: 10.2.0.1-10.2.0.5 (2010 년 4 월 기준 패치)  
+-   Oracle 데이터베이스 10g 릴리스 2: 10.2.0.1-10.2.0.5(2010년 4월 기준 패치)  
   
--   Oracle Database 11g 릴리스 1: 11.1.0.6-11.1.0.7 (2008 년 9 월 기준 패치)  
+-   Oracle 데이터베이스 11g 릴리스 1: 11.1.0.6-11.1.0.7(2008년 9월 기준 패치)  
   
--   Oracle Database 11g 릴리스 2: 11.2.0.1-11.2.0.3 (2011 년 9 월 기준 패치)  
+-   Oracle 데이터베이스 11g 릴리스 2: 11.2.0.1-11.2.0.3(2011년 9월 기준 패치)  
   
  **SQL Server 데이터베이스**  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62834645"
 ## <a name="software-prerequisites"></a>소프트웨어 필수 구성 요소  
  다음과 같은 소프트웨어가 필요합니다.  
   
--   Oracle 10.x 클라이언트  
+-   Oracle 10. x 클라이언트  
   
 -   Oracle 11.x 클라이언트  
   

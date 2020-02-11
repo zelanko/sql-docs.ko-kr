@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3bf7682ce42422efb0e47e4272e53933eba92a4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081556"
 ---
 # <a name="dmx-templates"></a>DMX 템플릿
@@ -28,9 +28,10 @@ ms.locfileid: "66081556"
   
 3.  페이지에서 **모델 선택**을 클릭하고 **고급**을 클릭합니다.  
   
-     **팁:** 모델에 예측 쿼리를 작성 하려는 경우 먼저 모델을 선택 하 고 클릭 수 **고급**, 여 템플릿에 모델 이름 미리 채웁니다.  
+     **팁:** 모델에 대 한 예측 쿼리를 만들려면 먼저 모델을 선택한 다음 **고급**을 클릭 하 여 모델 이름을 사용 하 여 템플릿을 미리 채울 수 있습니다.  
   
-4.  **데이터 마이닝 고급 쿼리 편집기**에서 **DMX 템플릿**을 클릭하고 템플릿을 선택합니다.  
+4.  
+  **데이터 마이닝 고급 쿼리 편집기**에서 **DMX 템플릿**을 클릭하고 템플릿을 선택합니다.  
   
 5.  Enter 키를 눌러서 템플릿을 DMX 쿼리 창에 로드합니다.  
   
@@ -38,16 +39,18 @@ ms.locfileid: "66081556"
   
      예측 쿼리의 경우 입력 데이터 세트를 먼저 선택한 다음, 열을 매핑합니다.  
   
-7.  **쿼리 편집** 을 클릭해서 텍스트 편집기 보기로 전환하고 쿼리를 수동으로 변경합니다.  
+7.  
+  **쿼리 편집** 을 클릭해서 텍스트 편집기 보기로 전환하고 쿼리를 수동으로 변경합니다.  
   
      하지만 쿼리 편집기에서 작업할 때 보기를 전환하면 이전 보기에 있던 정보가 지워지므로 주의해야 합니다. 보기를 변경하기 전에 DMX 문을 복사한 다음 별도의 파일로 붙여 넣어 작업 내용을 저장하십시오.  
   
-8.  **마침**을 클릭합니다. **대상 선택** 대화 상자에서 결과를 저장하려는 위치를 지정합니다. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+8.  **Finish**를 클릭합니다. 
+  **대상 선택** 대화 상자에서 결과를 저장하려는 위치를 지정합니다. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 > [!NOTE]  
->  문을 성공적으로 실행한 경우 서버로 전송한 DMX 문은 **추적** 창에도 기록됩니다. 추적 기능을 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [추적 &#40;Excel 용 데이터 마이닝 클라이언트&#41;](trace-data-mining-client-for-excel.md)합니다.  
+>  문을 성공적으로 실행한 경우 서버로 전송한 DMX 문은 **추적** 창에도 기록됩니다. 추적 기능을 사용 하는 방법에 대 한 자세한 내용은 [추적 &#40;Excel 용 데이터 마이닝 클라이언트&#41;](trace-data-mining-client-for-excel.md)를 참조 하세요.  
   
- 데이터 마이닝 고급 쿼리 편집기를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [쿼리 &#40;SQL Server 데이터 마이닝 추가 기능&#41; ](query-sql-server-data-mining-add-ins.md) 하 고 [데이터 마이닝 고급 쿼리 편집기](advanced-data-mining-query-editor.md).  
+ 데이터 마이닝 고급 쿼리 편집기를 사용 하는 방법에 대 한 자세한 내용은 [쿼리 &#40;SQL Server 데이터 마이닝 추가 기능&#41;](query-sql-server-data-mining-add-ins.md) 및 [고급 데이터 마이닝 쿼리 편집기](advanced-data-mining-query-editor.md)를 참조 하십시오.  
   
 ## <a name="list-of-dmx-templates"></a>DMX 템플릿 목록  
  다음 DMX 템플릿은 Excel용 데이터 마이닝 클라이언트에 포함됩니다.  
@@ -72,9 +75,9 @@ ms.locfileid: "66081556"
   
 -   중첩 테이블의 상위 예측 쿼리  
   
- **만들기**  
+ **만드십시오**  
   
- 이러한 템플릿을 사용하면 사용자 지정 모델 또는 데이터 구조를 작성할 수 있습니다. 인스턴스에서 지원 되는 데이터 마이닝 알고리즘을 사용할 수 있습니다-마법사에서 지원 되는 모델에 국한 되지 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 플러그 인 알고리즘을 포함 하 여에 연결 됩니다.  
+ 이러한 템플릿을 사용하면 사용자 지정 모델 또는 데이터 구조를 작성할 수 있습니다. 마법사에서 지 원하는 모델만 사용할 수 있는 것은 아닙니다. 플러그 인 알고리즘을 포함 하 여 연결 된 인스턴스에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 지원 되는 데이터 마이닝 알고리즘을 사용할 수 있습니다.  
   
 -   마이닝 모델  
   
@@ -125,7 +128,7 @@ ms.locfileid: "66081556"
 ### <a name="requirements"></a>요구 사항  
  사용하는 템플릿에 따라 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 서버에 액세스하고 쿼리를 실행하는 데 관리 권한이 필요할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 마이닝 모델 만들기](creating-a-data-mining-model.md)  
   
   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f8ecb517174c8cd8189ad2f7382c774df3545620
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62864950"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>ODBC 원본을 사용하여 데이터 추출
@@ -36,7 +36,7 @@ ms.locfileid: "62864950"
   
          이 목록에는 처음 1000개의 테이블만 포함되어 있습니다. 데이터베이스에 포함되어 있는 테이블이 1000개를 넘는 경우 테이블 이름의 시작 부분을 입력하거나 와일드카드(*)를 통해 이름의 일부를 입력하여 사용할 테이블을 표시합니다.  
   
-    -   **SQL 명령**: SQL 명령을 입력하거나 **찾아보기**를 클릭하여 텍스트 파일에서 SQL 쿼리를 로드합니다.  
+    -   **SQL 명령**: SQL 명령을 입력하거나 **찾아보기** 를 클릭하여 텍스트 파일에서 SQL 쿼리를 로드합니다.  
   
 6.  **미리 보기** 를 클릭하면 ODBC 원본에 의해 추출된 최대 200개의 데이터 행을 볼 수 있습니다.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62864950"
   
 11. 업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ODBC 원본 편집기&#40;연결 관리자 페이지&#41;](../odbc-source-editor-connection-manager-page.md)   
  [ODBC 원본 편집기&#40;열 페이지&#41;](../odbc-source-editor-columns-page.md)   
  [ODBC 원본 편집기&#40;오류 출력 페이지&#41;](../odbc-source-editor-error-output-page.md)  

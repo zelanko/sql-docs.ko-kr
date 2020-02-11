@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5ccb8df947d31376707f81c0ce7cd7c28cc62d6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900022"
 ---
 # <a name="slowly-changing-dimension-wizard-f1-help"></a>느린 변경 차원 마법사 F1 도움말
@@ -45,7 +45,7 @@ ms.locfileid: "62900022"
  [느린 변경 차원 마법사 완료](finish-the-slowly-changing-dimension-wizard.md)  
  사용자가 선택한 구성 옵션을 표시합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Slowly Changing Dimension Transformation](slowly-changing-dimension-transformation.md)   
  [느린 변경 차원 마법사를 사용하여 출력 구성](configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   

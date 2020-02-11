@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d0a425bda3d32f19aca5be09dbb8ba4b7b6ac899
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62911720"
 ---
 # <a name="startservice-method-sqlservice-class"></a>StartService 메서드(SqlService 클래스)
@@ -38,17 +38,17 @@ object
 ```  
   
 ## <a name="parts"></a>부분  
- *object*  
+ *개체가*  
  서비스를 나타내는 [SqlService 클래스](sqlservice-class.md) 개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  다음 시작 상태 중 하나를 지정하는 uint32 값입니다.  
   
  0  
- 명령 실행 성공 요청이 수락되었습니다.  
+ 성공했습니다. 요청이 수락되었습니다.  
   
  1  
- 지원되지 않음. 요청이 지원되지 않습니다.  
+ 지원되지 않습니다. 요청이 지원되지 않습니다.  
   
  2  
  액세스가 거부되었습니다.)가 나타납니다. 사용자에게 적절한 액세스 권한이 없습니다.  
@@ -119,9 +119,9 @@ object
  24  
  서비스가 이미 일시 중지되었습니다. 서비스가 현재 시스템에서 일시 중지되었습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [서비스 시작 및 중지](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

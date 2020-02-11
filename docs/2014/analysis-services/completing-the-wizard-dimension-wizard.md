@@ -13,26 +13,29 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4efca206c40c685f81c2c4629714e285ba6119af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087602"
 ---
 # <a name="completing-the-wizard-dimension-wizard"></a>마법사 완료(차원 마법사)
+  
   **마법사 완료** 페이지를 사용하여 다음 절차를 수행할 수 있습니다.  
   
 -   차원 이름 지정  
   
--   **마침** 을 클릭할 때 변경되는 내용 검토  
+-   
+  **마침** 을 클릭할 때 변경되는 내용 검토  
   
 -   필요한 경우 차원을 지원하는 데 필요한 스키마 생성  
   
  **차원 마법사를 열려면**  
   
--   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 **솔루션 탐색기**에서 **프로젝트의** 차원 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 폴더를 마우스 오른쪽 단추로 클릭한 다음 **새 차원**을 클릭합니다.  
+-   
+  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 **솔루션 탐색기**에서 **프로젝트의** 차원 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 폴더를 마우스 오른쪽 단추로 클릭한 다음 **새 차원**을 클릭합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **이름**  
  새 차원의 이름을 입력합니다.  
   
@@ -45,9 +48,9 @@ ms.locfileid: "66087602"
 > [!NOTE]  
 >  이 옵션은 **생성 방법 선택** 페이지에서 **데이터 원본에 시간 테이블 생성** 또는 **데이터 원본에 시간이 아닌 테이블 생성**을 선택한 경우에만 표시됩니다. 자세한 내용은 [생성 방법 선택&#40;차원 마법사&#41;](select-creation-method-dimension-wizard.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [차원 마법사 F1 도움말](dimension-wizard-f1-help.md)   
- [차원 &#40;Analysis Services-다차원 데이터&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [차원 &#40;Analysis Services 다차원 데이터&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [다차원 모델의 차원](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

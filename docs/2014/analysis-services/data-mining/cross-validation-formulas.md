@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ccdf0285dc110cde89e08778f6badf56f586a5ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085144"
 ---
 # <a name="cross-validation-formulas"></a>교차 유효성 검사 수식
@@ -29,7 +29,7 @@ ms.locfileid: "66085144"
 > [!NOTE]  
 >  **중요:** 이러한 정확도 측정값은 각 대상 특성에 대해 계산 됩니다. 각 특성에 대해 대상 값을 지정하거나 생략할 수 있습니다. 데이터 집합의 사례에 대상 특성의 값이 없는 경우 이러한 사례는 *누락 값*이라는 특수한 값을 가지고 있는 것으로 간주됩니다. 값이 누락된 행은 특정 대상 특성에 대한 정확도 측정값을 계산할 때 계산되지 않습니다. 점수는 각 특성에 대해 개별적으로 계산되므로 대상 특성의 값은 있지만 다른 특성의 값은 누락된 경우 대상 특성의 점수가 영향을 받지 않습니다.  
   
-|이름|적용 대상|구현|  
+|측정값|적용 대상|구현|  
 |-------------|----------------|--------------------|  
 |**참 긍정**|불연속 특성(값이 지정됨)|다음 조건을 충족하는 사례의 수입니다.<br /><br /> 사례에 대상 값이 포함되어 있습니다.<br /><br /> 사례에 대상 값이 포함되어 있을 것으로 모델이 예측했습니다.|  
 |**참 부정**|불연속 특성(값이 지정됨)|다음 조건을 충족하는 사례의 수입니다.<br /><br /> 사례에 대상 값이 포함되어 있지 않습니다.<br /><br /> 사례에 대상 값이 포함되어 있지 않을 것으로 모델이 예측했습니다.|  
@@ -44,8 +44,8 @@ ms.locfileid: "66085144"
 |**제곱 평균 오차**|불연속 특성. 대상 값을 지정할 수 있지만 대상 값이 필수 항목은 아닙니다.|파티션의 사례 수로 나눈 확률 점수의 보수에 대한 제곱 평균의 제곱근으로, 대상 특성 값이 누락된 행은 제외됩니다.|  
 |**제곱 평균 오차**|불연속 특성(지정된 대상 없음)|파티션의 사례 수로 나눈 확률 점수의 보수에 대한 제곱 평균의 제곱근으로, 대상 특성 값이 누락된 사례는 제외됩니다.|  
   
-## <a name="see-also"></a>관련 항목  
- [테스트 및 유효성 검사 & #40; 데이터 마이닝 & #41;](testing-and-validation-data-mining.md)   
- [교차 유효성 검사&#40;Analysis Services - 데이터 마이닝&#41;](cross-validation-analysis-services-data-mining.md)  
+## <a name="see-also"></a>참고 항목  
+ [데이터 마이닝&#41;&#40;테스트 및 유효성 검사](testing-and-validation-data-mining.md)   
+ [교차 유효성 검사 &#40;Analysis Services 데이터 마이닝&#41;](cross-validation-analysis-services-data-mining.md)  
   
   

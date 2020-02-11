@@ -1,5 +1,5 @@
 ---
-title: Actions (Analysis Services-Multidimensional Data) | Microsoft Docs
+title: 작업 (Analysis Services 다차원 데이터) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3ff4e330950a3fca54ba8ab08456157156836c0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077586"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>동작(Analysis Services - 다차원 데이터)
@@ -28,7 +28,8 @@ ms.locfileid: "66077586"
   
 -   동작이 발생하는 큐브에서 선택된 셀에 대한 기본 데이터를 나타내는 행 집합을 반환하는 드릴스루 동작  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 동작이 발생하는 큐브에서 선택된 섹션과 연관된 보고서를 반환하는 보고 동작  
+-   
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 동작이 발생하는 큐브에서 선택된 섹션과 연관된 보고서를 반환하는 보고 동작  
   
 -   동작이 발생하는 큐브에서 선택된 섹션과 연관된 동작 요소(URL, HTML, DataSet, RowSet 및 기타 요소)를 반환하는 표준 동작.  
   
@@ -40,9 +41,10 @@ ms.locfileid: "66077586"
   
  조건은 동작 이벤트에서 평가되는 `Boolean` MDX 식입니다. 조건이 `true`로 평가되면 동작이 실행되고, 그렇지 않으면 동작이 실행되지 않습니다.  
   
- 유형은 실행할 동작의 종류입니다. <xref:Microsoft.AnalysisServices.Action> 은 추상 클래스이므로 이 동작을 실행하려면 파생 클래스 중 하나를 사용해야 합니다. 두 가지 동작, 드릴스루와 보고는 미리 정의되어 있는데 해당 파생 클래스로 각각 <xref:Microsoft.AnalysisServices.DrillThroughAction> 및 <xref:Microsoft.AnalysisServices.ReportAction>을 참조하세요. 나머지 동작은 <xref:Microsoft.AnalysisServices.StandardAction> 클래스에서 처리됩니다.  
+ 유형은 실행할 동작의 종류입니다. 
+  <xref:Microsoft.AnalysisServices.Action> 은 추상 클래스이므로 이 동작을 실행하려면 파생 클래스 중 하나를 사용해야 합니다. 두 가지 동작, 드릴스루와 보고는 미리 정의되어 있는데 해당 파생 클래스로 각각 <xref:Microsoft.AnalysisServices.DrillThroughAction> 및 <xref:Microsoft.AnalysisServices.ReportAction>을 참조하세요. 나머지 동작은 <xref:Microsoft.AnalysisServices.StandardAction> 클래스에서 처리됩니다.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 동작은 클라이언트 응용 프로그램에 제공되어 사용될 수 있는 저장 MDX 문입니다. 즉, 동작은 서버에 정의되고 저장되는 클라이언트 명령입니다. 동작에는 클라이언트 애플리케이션에서 MDX 문을 표시하고 처리해야 하는 시기 및 방법을 지정하는 정보도 들어 있습니다. 작업이 지정하는 동작은 작업의 정보를 매개 변수로 사용하여 애플리케이션을 시작하거나 작업이 제공하는 조건을 기반으로 정보를 검색할 수 있습니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]작업은 클라이언트 응용 프로그램에 제공 되어 사용 될 수 있는 저장 된 MDX 문입니다. 즉, 동작은 서버에 정의되고 저장되는 클라이언트 명령입니다. 동작에는 클라이언트 애플리케이션에서 MDX 문을 표시하고 처리해야 하는 시기 및 방법을 지정하는 정보도 들어 있습니다. 작업이 지정하는 동작은 작업의 정보를 매개 변수로 사용하여 애플리케이션을 시작하거나 작업이 제공하는 조건을 기반으로 정보를 검색할 수 있습니다.  
   
  업무용 사용자는 동작을 통해 분석 결과에 대한 작업을 수행할 수 있습니다. 동작을 저장하여 다시 사용하면 비즈니스 인텔리전스 애플리케이션을 큐브 범위 밖으로 확장할 수 있으므로 최종 사용자가 데이터를 표시하는 일반적인 분석 이상의 작업을 수행할 수 있으며 발견된 문제와 결함을 해결할 수 있습니다. 동작은 클라이언트 애플리케이션을 복잡한 데이터 렌더링 도구에서 기업 운영 체제의 필수 부분으로 바꿀 수 있습니다. 최종 사용자는 데이터를 작업용 애플리케이션의 입력 항목으로 보내는 작업에 초점을 맞추는 대신 의사 결정 과정을 "마무리"할 수 있습니다. 분석 데이터를 의사 결정으로 변환하는 이 기능은 성공적인 비즈니스 인텔리전스 애플리케이션에 매우 중요합니다.  
   
@@ -56,10 +58,10 @@ ms.locfileid: "66077586"
 ## <a name="types-of-actions"></a>동작 유형  
  다음 표에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 포함된 동작의 유형을 나열합니다.  
   
-|동작 유형|Description|  
+|작업 유형|Description|  
 |-----------------|-----------------|  
 |명령줄|명령 프롬프트에서 명령을 실행합니다.|  
-|데이터 세트|데이터 집합을 클라이언트 애플리케이션으로 반환합니다.|  
+|데이터 세트|데이터 세트를 클라이언트 애플리케이션으로 반환합니다.|  
 |드릴스루|행 집합을 반환하기 위해 클라이언트가 실행하는 드릴스루 문을 식으로 반환합니다.|  
 |Html|인터넷 브라우저에서 HTML 스크립트를 실행합니다.|  
 |소유|이 표에 나열되지 않은 인터페이스를 사용하여 작업을 수행합니다.|  
@@ -71,7 +73,7 @@ ms.locfileid: "66077586"
 ## <a name="resolving-and-executing-actions"></a>동작 확인 및 실행  
  업무용 사용자가 명령 개체가 정의된 개체에 액세스하면 해당 동작과 연관된 문이 자동으로 확인되므로 클라이언트 애플리케이션에서 해당 문을 사용할 수 있지만 작업이 자동으로 실행되지는 않습니다. 동작을 시작하는 클라이언트별 작업을 업무용 사용자가 수행할 때만 작업이 실행됩니다. 예를 들어 업무용 사용자가 특정 멤버나 셀을 마우스 오른쪽 단추로 클릭하는 경우 클라이언트 애플리케이션에서 동작 목록을 팝업 메뉴로 표시할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [다차원 모델의 동작](actions-in-multidimensional-models.md)  
   
   

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c34cbfd2ea88d863239c068300c65531fd19f5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085876"
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>마이닝 모델의 속성 변경
@@ -25,9 +25,9 @@ ms.locfileid: "66085876"
   
  다음 모델 속성의 경우 식을 만들거나 복잡한 모델 속성을 구성하는 데 사용할 수 있는 고급 편집기가 제공됩니다.  
   
--   `Filter` 속성: 열립니다는 [데이터 집합 필터 또는 모델 필터 대화 상자](../data-set-filter-or-model-filter-dialog-box.md)합니다.  
+-   `Filter`속성: [데이터 집합 필터 또는 모델 필터 대화 상자](../data-set-filter-or-model-filter-dialog-box.md)를 엽니다.  
   
--   `AlgorithmParameters` 속성: 열립니다는 [알고리즘 매개 변수 대화 상자 &#40;마이닝 모델 뷰&#41;](../algorithm-parameters-dialog-box-mining-models-view.md)합니다.  
+-   `AlgorithmParameters`속성: [마이닝 모델 뷰&#41;&#40;알고리즘 매개 변수 대화 상자 ](../algorithm-parameters-dialog-box-mining-models-view.md)를 엽니다.  
   
  마이닝 모델의 속성을 설정하는 방법은 [마이닝 모델 열](mining-model-columns.md)을 참조하세요.  
   
@@ -46,11 +46,11 @@ ms.locfileid: "66085876"
 2.  화면 오른쪽에 있는 **속성** 창에서 변경할 속성에 해당하는 값을 강조 표시하고 새 값을 입력합니다.  
   
     > [!NOTE]  
-    >  열 사용법으로 설정 되어 있으면 `Ignore`는 **속성** 열 창은 비어 있습니다.  
+    >  열 사용법을로 `Ignore`설정 하면 해당 열에 대 한 **속성** 창이 비어 있습니다.  
   
      디자이너에서 다른 요소를 선택하면 새 값이 적용됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [마이닝 모델 태스크 및 방법](mining-model-tasks-and-how-tos.md)  
   
   

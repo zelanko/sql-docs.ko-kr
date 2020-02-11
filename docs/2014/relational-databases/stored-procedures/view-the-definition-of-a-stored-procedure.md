@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 333d4d9f0ab9feb5d5b5c4d0aa48fd584cef3143
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62856510"
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>저장 프로시저의 정의 보기
@@ -28,13 +28,13 @@ ms.locfileid: "62856510"
   
 -   **시작하기 전 주의 사항:**  [보안](#Security)  
   
--   **프로시저 정의를 보려면 사용 하 여:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **프로시저 정의를 볼 때 사용할 기능**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  시스템 저장 프로시저: `sp_helptext`  
  **public** 역할의 멤버 자격이 필요합니다. 시스템 개체 정의는 공개적으로 표시됩니다. 개체 소유자나 ALTER, CONTROL, TAKE OWNERSHIP 또는 VIEW DEFINITION 권한 중 하나를 부여 받은 사람은 사용자 개체의 정의를 볼 수 있습니다.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "62856510"
   
 2.  **데이터베이스**를 확장하고 해당 프로시저가 속한 데이터베이스를 확장한 다음 **프로그래밍 기능**을 확장합니다.  
   
-3.  확장 **저장 프로시저**프로시저를 마우스 오른쪽 단추로 클릭 한 다음 클릭 **저장 프로시저 스크립팅**, 다음 중 하나를 클릭 하 고: **만들**, **Alter**, 또는 **삭제 및 만들기**합니다.  
+3.  **저장 프로시저**를 확장하고 프로시저를 마우스 오른쪽 단추로 클릭한 다음 **저장 프로시저 스크립팅**을 클릭하고 **Create To**, **Alter To**또는 **Drop and Create To**중 하나를 클릭합니다.  
   
 4.  **새 쿼리 편집기 창**을 선택합니다. 프로시저 정의가 표시됩니다.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "62856510"
     WHERE object_id = (OBJECT_ID(N'AdventureWorks2012.dbo.uspLogError'));  
     ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [저장 프로시저 만들기](create-a-stored-procedure.md)   
  [저장 프로시저 수정](modify-a-stored-procedure.md)   
  [저장 프로시저 삭제](delete-a-stored-procedure.md)   

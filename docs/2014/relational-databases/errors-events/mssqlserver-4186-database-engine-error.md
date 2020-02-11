@@ -13,15 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 53a8e0ab728c1fee0033ef86dbf6b7dfc22bdc8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62867847"
 ---
-# <a name="mssqlserver4186"></a>MSSQLSERVER_4186
+# <a name="mssqlserver_4186"></a>MSSQLSERVER_4186
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -67,7 +67,7 @@ GO
   
  **함수에 의해 정의되는 뷰 열**  
   
- 다음 예제에서는 열 `CurrentInventory`를 정의하기 위해 선택 목록에 있는 데이터 액세스 스칼라 함수 `dbo.ufnGetStock`을 사용하는 뷰를 만듭니다. 그러면 UPDATE 문이 OUTPUT 절의 `CurrentInventory` 열을 참조합니다.  
+ 다음 예제에서는 열 `dbo.ufnGetStock`를 정의하기 위해 선택 목록에 있는 데이터 액세스 스칼라 함수 `CurrentInventory`을 사용하는 뷰를 만듭니다. 그러면 UPDATE 문이 OUTPUT 절의 `CurrentInventory` 열을 참조합니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -106,7 +106,7 @@ WHERE ProductModelID BETWEEN 75 and 80;
   
 -   OUTPUT 절에서 열을 제거합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [OUTPUT 절&#40;Transact-SQL&#41;](/sql/t-sql/queries/output-clause-transact-sql)  
   
   

@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ed12525e1b27bd45aa1d6313ad6538a7856f17ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083295"
 ---
 # <a name="moving-data-mining-objects"></a>데이터 마이닝 개체 이동
@@ -41,17 +41,18 @@ ms.locfileid: "66083295"
   
  다음 섹션에서는 이러한 옵션에 대해 자세히 설명합니다.  
   
-### <a name="deploying"></a>배포  
+### <a name="deploying"></a>배포 중  
  다른 서버나 데이터베이스에 솔루션을 배포하려면 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 사용하여 만든 솔루션 파일이 있어야 합니다.  
   
  Analysis Services 솔루션 배포에 대한 자세한 내용은 [Analysis Services 프로젝트 배포&#40;SSDT&#41;](../multidimensional-models/deploy-analysis-services-projects-ssdt.md)를 참조하세요.  
   
 ### <a name="scripting"></a>스크립팅  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]개체를 스크립팅 하는 데 사용할 수 있는 여러 언어를 제공 합니다.  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 은 개체를 스크립팅하는 데 사용할 수 있는 여러 언어를 제공합니다.  
   
--   **XMLA**: 개체를 마우스 오른쪽 단추로 클릭 하 여 XMLA를 사용 하 여 개체를 스크립팅할 수 있습니다 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다. 스크립트를 실행하려면 대상 서버의 **XMLA 쿼리** 창에서 스크립트를 엽니다.  
+-   **Xmla**:에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]개체를 마우스 오른쪽 단추로 클릭 하 여 XMLA를 사용 하 여 개체를 스크립팅할 수 있습니다. 스크립트를 실행하려면 대상 서버의 **XMLA 쿼리** 창에서 스크립트를 엽니다.  
   
--   **DMX**: 템플릿을 사용 하 여 스크립트를 만들 수 있습니다 또는 쿼리 작성기 중 하나에서 제공 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 고 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]입니다.  
+-   **DMX**: 및 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 제공 하는 템플릿 또는 쿼리 작성기 중 하나를 사용 하 여 스크립트를 만들 수 있습니다.  
   
  하지만 각 스크립트 언어로 수행할 수 있는 태스크에는 차이가 있습니다.  
   
@@ -63,26 +64,27 @@ ms.locfileid: "66083295"
   
 -   DMX만 애플리케이션 데이터를 사용한 모델 학습을 지원합니다. 또한 DMX INSERT INTO 문은 키 열의 값을 제공하지 않는 모델 학습을 지원합니다.  
   
- 자세한 내용은 [ASSL&#40;Analysis Services Scripting Language&#41;을 사용하여 개발](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)을 참조하세요.  
+ 자세한 내용은 [ASSL&#40;Analysis Services Scripting Language&#41;을 사용하여 개발](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)를 참조하십시오.  
   
-### <a name="backup-and-restore"></a>Backup 및 Restore 메서드  
- 전체 Analysis Services 데이터베이스의 백업 및 복원은 현재 데이터 마이닝 구조가 OLAP 개체에 의존하는 경우 선택하는 방법입니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]데이터베이스 백업을 더 빠르고 쉽게 할 수 있는 백업 및 복원 기능을 제공 합니다.  
+### <a name="backup-and-restore"></a>Backup 및 복원  
+ 전체 Analysis Services 데이터베이스의 백업 및 복원은 현재 데이터 마이닝 구조가 OLAP 개체에 의존하는 경우 선택하는 방법입니다. 
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 는 데이터베이스 백업을 더 빠르고 쉽게 할 수 있는 새로운 백업 및 복원 기능을 제공합니다.  
   
  백업에 대한 자세한 내용은 [Analysis Services 데이터베이스 백업 및 복원](../multidimensional-models/backup-and-restore-of-analysis-services-databases.md)을 참조하세요.  
   
 ### <a name="exporting-and-importing"></a>내보내기 및 가져오기  
  DMX 문을 사용하여 마이닝 모델 및 구조를 내보낸 다음 다시 가져오는 것은 개별 관계형 데이터 마이닝 개체를 이동하거나 백업하는 가장 쉬운 방법입니다. 이러한 작업에 사용하는 DMX 구문에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   
--   [내보내기 &#40; DMX &#41;](/sql/dmx/export-dmx)  
+-   [DMX &#40;&#41;내보내기](/sql/dmx/export-dmx)  
   
--   [가져오기 &#40; DMX &#41;](/sql/dmx/import-dmx)  
+-   [DMX &#40;&#41;가져오기](/sql/dmx/import-dmx)  
   
- INCLUDE DEPENDENCIES 옵션을 지정하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 필요한 모든 데이터 원본 뷰 정의도 내보내며, 사용자가 모델 또는 구조를 가져올 때 대상 서버에서 데이터 원본 뷰를 다시 생성합니다. 모델 가져오기를 마친 후에는 개체에 대해 필요한 마이닝 사용 권한을 설정해야 합니다.  
+ INCLUDE DEPENDENCIES 옵션을 지정하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 필요한 모든 데이터 원본 뷰 정의도 내보내며, 사용자가 모델 또는 구조를 가져올 때 대상 서버에서 데이터 원본 뷰를 다시 생성합니다. 모델 가져오기를 마친 후에는 개체에 대해 필요한 마이닝 사용 권한을 설정해야 합니다.  
   
 > [!NOTE]  
 >  OLAP 모델은 DMX를 사용하여 내보내고 가져올 수 없습니다. 마이닝 모델이 OLAP 큐브를 기반으로 하는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 제공하는 기능을 사용하여 전체 데이터베이스를 백업한 다음 복원하거나 큐브와 해당 모델을 다시 배포해야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터 마이닝 솔루션 및 개체 관리](management-of-data-mining-solutions-and-objects.md)  
   
   

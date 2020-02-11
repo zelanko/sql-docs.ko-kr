@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d1387b6321ace59ec8a0c13ed03444553f4adf85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871920"
 ---
 # <a name="drop-a-database-snapshot-transact-sql"></a>데이터베이스 스냅샷 삭제(Transact-SQL)
@@ -26,13 +26,13 @@ ms.locfileid: "62871920"
   
 ## <a name="security"></a>보안  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 권한  
  DROP DATABASE 권한을 가진 사용자는 누구든지 데이터베이스 스냅샷을 삭제할 수 있습니다.  
   
-##  <a name="TsqlProcedure"></a> 데이터베이스 스냅숏을 삭제하는 방법(Transact-SQL 사용)  
- **데이터베이스 스냅숏을 삭제하려면**  
+##  <a name="TsqlProcedure"></a> 데이터베이스 스냅샷을 삭제하는 방법(Transact-SQL 사용)  
+ **데이터베이스 스냅샷을 삭제하려면**  
   
-1.  삭제할 데이터베이스 스냅샷을 확인합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 데이터베이스의 스냅숏을 확인할 수 있습니다. 자세한 내용은 [데이터베이스 스냅숏 보기&#40;SQL Server&#41;](view-a-database-snapshot-sql-server.md)에서 데이터베이스의 스냅숏을 확인할 수 있습니다.  
+1.  삭제할 데이터베이스 스냅샷을 확인합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 데이터베이스의 스냅샷을 확인할 수 있습니다. 자세한 내용은 [View a Database Snapshot &#40;SQL Server&#41;](view-a-database-snapshot-sql-server.md).  
   
 2.  삭제할 데이터베이스 스냅샷의 이름을 지정하여 [DROP DATABASE](/sql/t-sql/statements/drop-database-audit-specification-transact-sql) 문을 실행합니다. 구문은 다음과 같습니다.  
   
@@ -50,20 +50,20 @@ DROP DATABASE SalesSnapshot0600 ;
  SalesSnapshot0600에 대한 사용자 연결이 모두 종료되고 스냅샷에 사용되는 NTFS 파일 시스템 스파스 파일이 모두 삭제됩니다.  
   
 > [!NOTE]  
->  데이터베이스 스냅숏이 사용하는 스파스 파일에 대한 자세한 내용은 [데이터베이스 스냅숏&#40;SQL Server&#41;](database-snapshots-sql-server.md)에서 데이터베이스의 스냅숏을 확인할 수 있습니다.  
+>  데이터베이스 스냅샷이 사용하는 스파스 파일에 대한 자세한 내용은 [데이터베이스 스냅샷&#40;SQL Server&#41;](database-snapshots-sql-server.md)에서 데이터베이스의 스냅샷을 확인할 수 있습니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
--   [데이터베이스 스냅숏 만들기&#40;Transact-SQL&#41;](create-a-database-snapshot-transact-sql.md)  
+-   [데이터베이스 스냅샷 만들기&#40;Transact-SQL&#41;](create-a-database-snapshot-transact-sql.md)  
   
--   [데이터베이스 스냅숏 보기&#40;SQL Server&#41;](view-a-database-snapshot-sql-server.md)  
+-   [데이터베이스 스냅샷 보기&#40;SQL Server&#41;](view-a-database-snapshot-sql-server.md)  
   
--   [데이터베이스를 데이터베이스 스냅숏으로 되돌리기](revert-a-database-to-a-database-snapshot.md)  
+-   [데이터베이스를 데이터베이스 스냅샷으로 되돌리기](revert-a-database-to-a-database-snapshot.md)  
   
 
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [DROP DATABASE&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-database-audit-specification-transact-sql)   
- [데이터베이스 스냅숏&#40;SQL Server&#41;](database-snapshots-sql-server.md)  
+ [데이터베이스 스냅샷&#40;SQL Server&#41;](database-snapshots-sql-server.md)  
   
   

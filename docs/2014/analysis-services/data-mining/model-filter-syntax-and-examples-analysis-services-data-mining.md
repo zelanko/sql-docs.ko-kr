@@ -1,5 +1,5 @@
 ---
-title: 모델 필터 구문 및 예제 (Analysis Services-데이터 마이닝) | Microsoft Docs
+title: 모델 필터 구문 및 예 (Analysis Services 데이터 마이닝) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e8fea8d2a7b92ccca9b139b62d429fafe3a9bc4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083372"
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>모델 필터 구문 및 예(Analysis Services - 데이터 마이닝)
@@ -27,12 +27,14 @@ ms.locfileid: "66083372"
   
  
   
-##  <a name="bkmk_Syntax"></a> Filter Syntax  
+##  <a name="bkmk_Syntax"></a>필터 구문  
  일반적으로 필터 식은 WHERE 절의 내용에 해당합니다. 논리 연산자 `AND`, `OR` 및 `NOT`을 사용하여 여러 조건을 연결할 수 있습니다.  
   
- 중첩 테이블에서는 `EXISTS` 및 `NOT EXISTS` 연산자도 사용할 수 있습니다. `EXISTS` 조건은 하위 쿼리가 하나 이상의 행을 반환하는 경우 `true`로 평가됩니다. 이는 중첩 테이블에 특정 값을 포함하는 사례로 모델을 제한하려는 경우 유용합니다. 특정 제품을 한 번 이상 구매한 고객으로 모델을 제한하려는 경우를 예로 들 수 있습니다.  
+ 중첩 테이블에서는 `EXISTS` 및 `NOT EXISTS` 연산자도 사용할 수 있습니다. 
+  `EXISTS` 조건은 하위 쿼리가 하나 이상의 행을 반환하는 경우 `true`로 평가됩니다. 이는 중첩 테이블에 특정 값을 포함하는 사례로 모델을 제한하려는 경우 유용합니다. 특정 제품을 한 번 이상 구매한 고객으로 모델을 제한하려는 경우를 예로 들 수 있습니다.  
   
- `NOT EXISTS` 조건은 하위 쿼리에 지정된 조건이 없는 경우 `true`로 평가됩니다. 특정 제품을 구매한 적이 없는 고객으로 모델을 제한하려는 경우를 예로 들 수 있습니다.  
+ 
+  `NOT EXISTS` 조건은 하위 쿼리에 지정된 조건이 없는 경우 `true`로 평가됩니다. 특정 제품을 구매한 적이 없는 고객으로 모델을 제한하려는 경우를 예로 들 수 있습니다.  
   
  일반 구문은 다음과 같습니다.  
   
@@ -47,10 +49,10 @@ ms.locfileid: "66083372"
 <subquery>::=SELECT * FROM <columnName>[ WHERE  <predicate list> ]  
 ```  
   
- *filter*  
+ *필터가*  
  논리 연산자로 연결된 하나 이상의 조건자를 포함합니다.  
   
- *predicate list*  
+ *조건자 목록*  
  논리 연산자로 구분된 하나 이상의 올바른 필터 식입니다.  
   
  *columnName*  
@@ -60,39 +62,42 @@ ms.locfileid: "66083372"
  `AND`, `OR`, `NOT`  
   
  *avPredicate*  
- 스칼라 마이닝 구조 열에만 적용할 수 있는 필터 식입니다. *avPredicate* 식은 모델 필터나 중첩 테이블 필터 모두에 사용할 수 있습니다.  
+ 스칼라 마이닝 구조 열에만 적용할 수 있는 필터 식입니다. 
+  *avPredicate* 식은 모델 필터나 중첩 테이블 필터 모두에 사용할 수 있습니다.  
   
  다음 연산자를 사용하는 식은 연속 열에만 적용할 수 있습니다. :  
   
--   **\<** (보다 작음)  
+-   **\<**(보다 작음)  
   
--   **>** (보다 큼)  
+-   **>**(보다 큼)  
   
--   **>=** (크거나 같음)  
+-   **>=**(크거나 같음)  
   
--   **\<=** (작거나 같음)  
+-   **\<=**(작거나 같음)  
   
 > [!NOTE]  
 >  데이터 형식과 관계없이 이러한 연산자는 유형이 `Discrete`, `Discretized` 또는 `Key`인 열에 적용할 수 없습니다.  
   
  다음 연산자를 사용하는 식은 연속 열, 불연속 열, 분할된 열 또는 키 열에 적용할 수 있습니다.  
   
--   **=** (같음)  
+-   **=** 같거나  
   
--   **!=** (같지 않음)  
+-   **! =** (같지 않음)  
   
 -   **IS NULL**  
   
- *avPredicate*인수가 불연속 열에 적용되는 경우 필터에 사용되는 값은 특정 버킷의 임의 값이 될 수 있습니다.  
+ 
+  *avPredicate*인수가 불연속 열에 적용되는 경우 필터에 사용되는 값은 특정 버킷의 임의 값이 될 수 있습니다.  
   
  즉, 조건을 `AgeDisc = '25-35'`로 정의하지 않고 해당 구간에서 값을 컴퓨팅하여 사용합니다.  
   
  예를 들어  `AgeDisc = 27`  은 27과 같은 구간(이 경우 25-35)에 있는 임의의 값을 의미합니다.  
   
- *nestedTablePredicate*  
+ *e*  
  중첩 테이블에 적용되는 필터 식입니다. 모델 필터에만 사용할 수 있습니다.  
   
- *nestedTablePredicate*의 하위 쿼리 인수는 테이블 마이닝 구조 열에만 적용할 수 있습니다.  
+ 
+  *nestedTablePredicate*의 하위 쿼리 인수는 테이블 마이닝 구조 열에만 적용할 수 있습니다.  
   
  하위 쿼리  
  올바른 조건자 또는 조건자 목록 앞에 오는 SELECT 문입니다.  
@@ -109,9 +114,10 @@ ms.locfileid: "66083372"
 -   더하기 기호나 빼기 기호 같이 부울이 아닌 연산자는 필터 구문에서 지원되지 않습니다.  
   
 ## <a name="examples-of-filters"></a>필터 예  
- 다음 예에서는 마이닝 모델에 적용되는 필터의 사용을 보여 줍니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 사용하여 **속성** 창 및 필터 대화 상자의 **식** 창에서 필터 식을 만드는 경우 WITH FILTER 키워드 뒤에 나타나는 문자열만 표시됩니다. 여기서는 열 유형 및 사용법을 더 쉽게 이해할 수 있도록 마이닝 구조의 정의를 포함했습니다.  
+ 다음 예에서는 마이닝 모델에 적용되는 필터의 사용을 보여 줍니다. 
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 사용하여 **속성** 창 및 필터 대화 상자의 **식** 창에서 필터 식을 만드는 경우 WITH FILTER 키워드 뒤에 나타나는 문자열만 표시됩니다. 여기서는 열 유형 및 사용법을 더 쉽게 이해할 수 있도록 마이닝 구조의 정의를 포함했습니다.  
   
-###  <a name="bkmk_Ex1"></a> 예제 1: 일반적인 사례 수준 필터링  
+###  <a name="bkmk_Ex1"></a>예 1: 일반적인 사례 수준 필터링  
  이 예에서는 직업이 건축가이고 나이가 31세 이상인 고객으로 모델에 사용되는 사례를 제한하는 간단한 필터를 보여 줍니다.  
   
 ```  
@@ -127,7 +133,7 @@ WITH FILTER (Age > 30 AND Occupation='Architect')
   
 
   
-###  <a name="bkmk_Ex2"></a> 예제 2: 중첩 테이블 특성을 사용한 사례 수준 필터링  
+###  <a name="bkmk_Ex2"></a>예 2: 중첩 테이블 특성을 사용한 사례 수준 필터링  
  마이닝 구조에 중첩 테이블이 포함되어 있는 경우 중첩 테이블에서 값의 존재 여부를 필터링하거나 특정 값이 포함된 중첩 테이블 행을 필터링할 수 있습니다. 이 예에서는 우유를 포함한 제품을 한 번 이상 구매한 31세 이상의 고객으로 모델에 사용되는 사례를 제한합니다.  
   
  이 예에서 볼 수 있듯이 모델에 포함된 열만 필터에 사용할 필요는 없습니다. 중첩 테이블 **Products** 는 마이닝 구조의 일부이지만 마이닝 모델에는 포함되지 않습니다. 그럼에도 불구하고 중첩 테이블의 값 및 특성을 필터링할 수 있습니다. 이러한 사례에 대한 세부 정보를 보려면 드릴스루를 사용해야 합니다.  
@@ -147,7 +153,7 @@ FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk')
   
  
   
-###  <a name="bkmk_Ex3"></a> 예제 3: 여러 중첩 테이블 특성을 사용한 사례 수준 필터링  
+###  <a name="bkmk_Ex3"></a>예 3: 여러 중첩 테이블 특성에 대 한 사례 수준 필터링  
  이 예에서는 사례 테이블에 적용되는 조건, 중첩 테이블의 특성에 적용되는 조건 및 중첩 테이블 열 중 하나의 특정 값에 적용되는 조건이라는 세 부분으로 이루어진 필터를 보여 줍니다.  
   
  필터의 첫 번째 조건인 `Age > 30`은 사례 테이블의 열에 적용됩니다. 나머지 조건은 중첩 테이블에 적용됩니다.  
@@ -173,7 +179,7 @@ FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk'  AN
   
 
   
-###  <a name="bkmk_Ex4"></a> 예제 4: 중첩 테이블 특성의 부재에서 사례 수준 필터링  
+###  <a name="bkmk_Ex4"></a>예 4: 중첩 테이블 특성의 부재에 대 한 사례 수준 필터링  
  이 예에서는 중첩 테이블에서 특성의 부재를 필터링하여 특정 제품을 구매하지 않은 고객으로 사례를 제한하는 방법을 보여 줍니다. 이 예에서는 우유를 구입한 적이 없는 31세 이상의 고객을 사용하여 모델을 학습합니다.  
   
 ```  
@@ -193,7 +199,7 @@ FILTER (Age > 30 AND NOT EXISTS (SELECT * FROM Products WHERE ProductName='Milk'
   
 
   
-###  <a name="bkmk_Ex5"></a> 예제 5: 여러 중첩 테이블 값을 사용한 필터링  
+###  <a name="bkmk_Ex5"></a>예 5: 여러 중첩 테이블 값에 대 한 필터링  
  이 예는 중첩 테이블 필터링을 보여 주기 위한 것입니다. 중첩 테이블 필터는 사례 필터 다음에 적용되며 중첩 테이블 행만 제한합니다.  
   
  이 모델에서는 EXISTS를 지정하지 않았으므로 빈 중첩 테이블이 있는 여러 사례가 모델에 포함될 수 있습니다.  
@@ -216,7 +222,7 @@ WITH DRILLTHROUGH
   
 
   
-###  <a name="bkmk_Ex6"></a> 예제 6: 중첩 테이블 특성 및 EXISTS를 사용한 필터링  
+###  <a name="bkmk_Ex6"></a>예 6: 중첩 테이블 특성 및 EXISTS에 대 한 필터링  
  이 예에서 중첩 테이블에 대한 필터는 우유 또는 생수를 포함하는 항목으로만 행을 제한합니다. 그런 다음 `EXISTS` 문을 사용하여 모델의 사례를 제한합니다. 이렇게 하면 중첩 테이블이 비어 있지 않게 됩니다.  
   
 ```  
@@ -237,10 +243,10 @@ FILTER (EXISTS (Products))
   
 
   
-###  <a name="bkmk_Ex7"></a> 예제 7: 복잡한 필터 조합  
- 이 모델의 시나리오는 예 4의 시나리오와 비슷하지만 훨씬 더 복잡합니다. 중첩된 테이블 **ProductsOnSale**, 필터 조건이 `(OnSale)` 의 값 즉 **OnSale** 여야 `true` 에 나열 된 제품에 대 한 **ProductName**. 여기서 **OnSale** 은 구조 열입니다.  
+###  <a name="bkmk_Ex7"></a>예 7: 복잡 한 필터 조합  
+ 이 모델의 시나리오는 예 4의 시나리오와 비슷하지만 훨씬 더 복잡합니다. 중첩 테이블 **ProductsOnSale**에는 필터 조건이 `(OnSale)` 있습니다 .이는 **Onsale** 의 값이 **ProductName**에 나열 `true` 된 제품에 대 한 값 이어야 함을 의미 합니다. 여기서 **OnSale** 은 구조 열입니다.  
   
- 필터의 두 번째 부분에 대 한 **ProductsNotOnSale**이 구문이 반복 되지만 필터 인 제품의 값 **OnSale** 는 `not true``(!OnSale)`합니다.  
+ **ProductsNotOnSale**에 대 한 필터의 두 번째 부분은이 구문을 반복 하지만 **onsale** 의 값이 인 `not true``(!OnSale)`제품에 대 한 필터입니다.  
   
  마지막으로 조건을 조합하고 하나의 추가 제한 사항을 사례 테이블에 추가합니다. 그 결과 26세 이상의 모든 고객에 대해 **ProductsNotOnSale** 목록에 포함된 사례를 기반으로 **ProductsOnSale** 목록의 제품 구매를 예측할 수 있습니다.  
   
@@ -280,7 +286,7 @@ FILTER (EXISTS (Products))
   
   
   
-###  <a name="bkmk_Ex8"></a> 예 8: 날짜로 필터링  
+###  <a name="bkmk_Ex8"></a>예 8: 날짜로 필터링  
  다른 데이터와 마찬가지로 날짜로 입력 열을 필터링할 수 있습니다. 날짜/시간 형식의 열에 포함된 날짜는 연속 값입니다. 따라서 보다 큼(>) 또는 보다 작음(<)과 같은 연산자를 사용하여 날짜 범위를 지정할 수 있습니다. 데이터 원본에서 날짜를 연속 데이터 형식이 아니라 불연속 또는 텍스트 값으로 나타낼 경우 날짜 범위를 필터링할 수 없고 개별 불연속 값을 지정해야 합니다.  
   
  그러나 필터에 사용된 날짜 열이 또한 모델의 키 열인 경우 시계열 모델에서 날짜 열에 대한 필터를 만들 수 없습니다. 이는 시계열 모델 및 시퀀스 클러스터링 모델에서 날짜 열은 `KeyTime` 또는 `KeySequence` 형식으로 처리될 수 있기 때문입니다.  
@@ -303,8 +309,8 @@ FILTER (EXISTS (Products))
   
  
   
-## <a name="see-also"></a>관련 항목:  
- [마이닝 모델에 대한 필터&#40;Analysis Services - 데이터 마이닝&#41;](mining-models-analysis-services-data-mining.md)   
- [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](testing-and-validation-data-mining.md)  
+## <a name="see-also"></a>참고 항목  
+ [마이닝 모델 &#40;Analysis Services 데이터 마이닝&#41;필터](mining-models-analysis-services-data-mining.md)   
+ [데이터 마이닝&#41;&#40;테스트 및 유효성 검사](testing-and-validation-data-mining.md)  
   
   

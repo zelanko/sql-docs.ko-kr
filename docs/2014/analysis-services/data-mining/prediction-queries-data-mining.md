@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a1026597a0ae000b91e088d2457b3c9dd607044b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083122"
 ---
 # <a name="prediction-queries-data-mining"></a>예측 쿼리(데이터 마이닝)
@@ -40,7 +40,7 @@ ms.locfileid: "66083122"
   
  [쿼리 결과 작업](#bkmk_WorkResults)  
   
-##  <a name="bkmk_PredQuery"></a> 기본 예측 쿼리 디자인  
+##  <a name="bkmk_PredQuery"></a>기본 예측 쿼리 디자인  
  예측을 만들 때 사용자는 일반적으로 몇 가지 새로운 데이터를 제공한 다음 이 새로운 데이터를 기반으로 모델이 예측을 생성하도록 요청합니다.  
   
 -   일괄 처리 예측 쿼리에서는 *예측 조인*을 사용하여 모델을 외부 데이터 원본에 매핑합니다.  
@@ -55,22 +55,22 @@ ms.locfileid: "66083122"
   
  시계열 모델의 경우 입력 데이터가 필요하지 않은 경우도 있습니다. 모델에 이미 있는 데이터만 사용하여 예측을 만들 수 있습니다. 하지만 새 입력 데이터를 지정하는 경우에는 새 데이터를 사용하여 모델을 업데이트하고 확장할지 아니면 모델에서 사용된 데이터의 원래 계열을 바꿀지를 결정해야 합니다.  이러한 옵션에 대한 자세한 내용은 [Time Series Model Query Examples](time-series-model-query-examples.md)를 참조하세요.  
   
-###  <a name="bkmk_PredFunc"></a> 예측 함수 추가  
+###  <a name="bkmk_PredFunc"></a>예측 함수 추가  
  값을 예측하는 것 외에도 예측 쿼리를 사용자 지정하여 예측과 관련된 여러 종류의 정보를 반환할 수 있습니다. 예를 들어 예측에 따라 고객에게 권장할 제품 목록을 만드는 경우 예측을 평가하여 최상위 권장 사항만 사용자에게 제공할 수 있도록 각 예측에 대한 확률을 반환할 수 있습니다.  
   
- 이렇게 하려면 쿼리에 *예측 함수* 를 추가합니다. 지원되는 함수는 모델 또는 쿼리 유형마다 다릅니다. 예를 들어 클러스터링 모델은 모델에서 만들어진 클러스터에 대한 추가 세부 정보를 제공하는 특수한 예측 함수를 지원하지만 시계열 모델에는 시간 경과에 따른 차이를 계산하는 함수가 있습니다. 또한 모든 모델 유형에서 작동하는 일반 예측 함수도 있습니다. 다양 한 유형의 쿼리에서 지 원하는 예측 함수 목록은 DMX 참조이 항목을 참조 하세요.  [일반 예측 함수 &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx)합니다.  
+ 이렇게 하려면 쿼리에 *예측 함수* 를 추가합니다. 지원되는 함수는 모델 또는 쿼리 유형마다 다릅니다. 예를 들어 클러스터링 모델은 모델에서 만들어진 클러스터에 대한 추가 세부 정보를 제공하는 특수한 예측 함수를 지원하지만 시계열 모델에는 시간 경과에 따른 차이를 계산하는 함수가 있습니다. 또한 모든 모델 유형에서 작동하는 일반 예측 함수도 있습니다. 다양한 유형의 쿼리에서 지원되는 예측 함수 목록은 DMX 참조 항목 [일반 예측 함수&#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx)를 참조하세요.  
   
-###  <a name="bkmk_SingletonQuery"></a> 단일 예측 쿼리 만들기  
+###  <a name="bkmk_SingletonQuery"></a>단일 예측 쿼리 만들기  
  단일 예측 쿼리는 빠른 예측을 실시간으로 만들려는 경우에 유용합니다. 일반적인 시나리오는 웹 사이트에서 폼을 사용하는 등의 방법으로 고객으로부터 정보를 얻은 다음 해당 데이터를 단일 예측 쿼리에 입력으로 전송하려는 경우입니다. 예를 들어 고객이 목록에서 제품을 선택하는 경우 추천할 최고의 제품을 예측하는 쿼리에 대한 입력으로 해당 선택을 사용할 수 있습니다.  
   
  단일 예측 쿼리에는 입력을 포함하는 별도의 테이블이 필요하지 않습니다. 대신 하나 또는 여러 행의 값을 모델에 입력으로 제공하면 예측이 실시간으로 반환됩니다.  
   
 > [!WARNING]  
->  이름이 단일 예측 쿼리만 만들지 단일 예측-입력의 각 집합에 대해 여러 예측을 생성할 수 있습니다. 각 입력 사례에 대해 SELECT 문을 만들고 UNION 연산자로 입력 사례를 결합하여 여러 입력 사례를 제공합니다.  
+>  이름에도 불구 하 고 단일 예측 쿼리는 단일 예측만 수행 하는 것이 아니라 각 입력 집합에 대해 여러 예측을 생성할 수 있습니다. 각 입력 사례에 대해 SELECT 문을 만들고 UNION 연산자로 입력 사례를 결합하여 여러 입력 사례를 제공합니다.  
   
  단일 예측 쿼리를 만들 때 PREDICTION JOIN의 형태로 모델에 새 데이터를 제공해야 합니다. 즉, 실제 테이블에 매핑하는 것은 아니지만 새 데이터가 마이닝 모델의 기존 열과 일치하도록 해야 합니다. 새 데이터 열과 새 데이터가 정확하게 일치할 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 자동으로 열을 매핑하는데 이를 *NATURAL PREDICTION JOIN*이라고 합니다. 하지만 열이 일치하지 않거나 모델에 있는 것과 동일한 종류 및 양의 데이터가 새 데이터에 들어 있지 않은 경우 모델의 어떤 열이 새 데이터에 매핑되는지 지정하거나 누락된 값을 지정해야 합니다.  
   
-###  <a name="bkmk_BatchQuery"></a> 일괄 처리 예측 쿼리  
+###  <a name="bkmk_BatchQuery"></a>일괄 처리 예측 쿼리  
  예측을 만드는 데 사용하려는 외부 데이터가 있는 경우 일괄 처리 예측 쿼리가 유용합니다. 예를 들어 온라인 활동과 구매 기록을 기준으로 고객을 범주화하는 모델을 작성했을 수 있습니다. 이 모델을 새로 얻은 잠재 고객의 목록에 적용하여 매출 예상치를 구하거나 제안된 캠페인의 대상을 식별할 수 있습니다.  
   
  예측 조인을 수행하는 경우 모델의 열을 새 데이터 원본의 열에 매핑해야 합니다. 따라서 입력을 위해 선택하는 데이터 원본은 모델의 데이터와 어느 정도 비슷한 데이터여야 합니다. 새 정보는 정확히 일치할 필요가 없으며 불완전할 수 있습니다. 예를 들어 수입 및 연령에 대한 정보를 사용하여 모델을 학습했지만 예측에 사용할 고객 목록에 수입에 대한 정보는 전혀 없고 연령 정보만 있다고 가정합니다. 이 경우 새 데이터를 모델에 매핑하고 각 고객에 대한 예측을 만들 수 있습니다. 그러나 수입은 모델을 예측하는 데 중요한 요소이므로 완전한 정보가 없음으로 인해 예측 품질이 떨어집니다.  
@@ -80,18 +80,19 @@ ms.locfileid: "66083122"
  모든 관련 열을 성공적으로 매핑한 후 쿼리를 실행하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 모델의 패턴을 기반으로 새 데이터의 각 행에 대해 예측을 만듭니다. 외부 데이터가 포함된 데이터 원본 뷰의 새 테이블에 결과를 저장하거나, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하는 경우 데이터를 복사하여 붙여넣을 수 있습니다.  
   
 > [!WARNING]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 디자이너를 사용하는 경우 먼저 외부 데이터 원본을 데이터 원본 뷰로 정의해야 합니다.  
+>  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 디자이너를 사용하는 경우 먼저 외부 데이터 원본을 데이터 원본 뷰로 정의해야 합니다.  
   
  DMX를 사용하여 예측 조인을 만드는 경우 OPENQUERY, OPENROWSET 또는 SHAPE 명령을 사용하여 외부 데이터 원본을 지정할 수 있습니다. DMX 템플릿의 기본 데이터 액세스 메서드는 OPENQUERY입니다. 이러한 메서드에 대한 자세한 내용은 [&#60;원본 데이터 쿼리&#62;](/sql/dmx/source-data-query)를 참조하세요.  
   
-###  <a name="bkmk_TSQuery"></a> 시계열 마이닝 모델의 예측  
+###  <a name="bkmk_TSQuery"></a>시계열 마이닝 모델의 예측  
  시계열 모델은 다른 모델 유형과 다릅니다. 모델을 있는 그대로 사용하여 예측을 만들 수도 있고, 모델에 새 데이터를 제공하여 최신 추세를 기반으로 모델을 업데이트하고 예측을 만들 수도 있습니다. 새 데이터를 추가하는 경우 새 데이터를 사용할 방법을 지정할 수 있습니다.  
   
--   *모델 사례 확장* 은 시계열 모델의 기존 데이터 계열에 새 데이터를 추가하는 것을 의미합니다. 이후에는 예측이 결합된 새 계열을 기반으로 합니다. 이 옵션은 몇 가지 데이터 요소를 기존 모델에 추가하려는 경우에 유용합니다.  
+-   *모델 사례 확장* 은 시계열 모델의 기존 데이터 계열에 새 데이터를 추가 하는 것을 의미 합니다. 이후에는 예측이 결합된 새 계열을 기반으로 합니다. 이 옵션은 몇 가지 데이터 요소를 기존 모델에 추가하려는 경우에 유용합니다.  
   
      예를 들어 전년도 판매 데이터에 대해 학습된 기존 시계열 모델이 있다고 가정합니다. 수개월 동안 새로운 판매 데이터를 수집한 후 현재 연도에 대한 예측 판매량을 업데이트하려고 합니다. 이 경우 새 데이터를 추가하여 모델을 업데이트하고 새로운 예측을 만들도록 모델을 확장하는 예측 조인을 만들 수 있습니다.  
   
--   *모델 사례 대체* 는 학습된 모델은 그대로 유지하지만 기본 사례를 새로운 사례 데이터 집합으로 대체하는 것을 의미합니다. 이 옵션은 추세를 모델에 유지하지만 다른 데이터 집합에 적용하려는 경우에 유용합니다.  
+-   *모델 사례를 대체* 하면 학습 된 모델을 유지 하지만 기본 사례를 새로운 사례 데이터 집합으로 대체 하는 것을 의미 합니다. 이 옵션은 추세를 모델에 유지하지만 다른 데이터 집합에 적용하려는 경우에 유용합니다.  
   
      예를 들어 원래 모델이 판매량이 매우 많은 데이터 집합에 대해 학습되었을 수도 있습니다. 기본 데이터를 새 계열(판매량이 적은 상점 등에서 제공됨)로 대체할 때 추세를 유지하지만 예측은 대체 계열의 값에서 시작됩니다.  
   
@@ -99,12 +100,14 @@ ms.locfileid: "66083122"
   
  시계열 모델에 대한 예측 조인을 만드는 방법은 [시계열 모델 쿼리 예제](time-series-model-query-examples.md) 또는 [PredictTimeSeries&#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)를 참조하세요.  
   
-##  <a name="bkmk_WorkResults"></a> 예측 쿼리 결과 처리  
+##  <a name="bkmk_WorkResults"></a>예측 쿼리 결과 작업  
  데이터 마이닝 예측 쿼리의 결과를 저장하기 위한 옵션은 쿼리를 만드는 방법에 따라 달라집니다.  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 예측 쿼리 작성기를 사용하여 쿼리를 작성할 경우 예측 쿼리의 결과를 기존 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본에 저장할 수 있습니다. 자세한 내용은 [예측 쿼리 결과 보기 및 저장](view-and-save-the-results-of-a-prediction-query.md)을 참조하세요.  
+-   
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 예측 쿼리 작성기를 사용하여 쿼리를 작성할 경우 예측 쿼리의 결과를 기존 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본에 저장할 수 있습니다. 자세한 내용은 [예측 쿼리 결과 보기 및 저장](view-and-save-the-results-of-a-prediction-query.md)을 참조하세요.  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 쿼리 창에서 DMX를 사용하여 예측 쿼리를 만드는 경우 쿼리 출력 옵션을 사용하여 결과를 파일로 저장하거나 쿼리 결과 창에 텍스트 또는 표로 저장할 수 있습니다. 자세한 내용은 [쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)를 참조하세요.  
+-   
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 쿼리 창에서 DMX를 사용하여 예측 쿼리를 만드는 경우 쿼리 출력 옵션을 사용하여 결과를 파일로 저장하거나 쿼리 결과 창에 텍스트 또는 표로 저장할 수 있습니다. 자세한 내용은 [쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)를 참조하세요.  
   
 -   Integration Services 구성 요소를 사용하여 예측 쿼리를 실행하는 경우 해당 태스크에서 사용 가능한 ADO.NET 연결 관리자나 OLEDB 연결 관리자를 사용하여 데이터베이스에 결과를 쓸 수 있습니다. 자세한 내용은 [Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)을 참조하세요.  
   
@@ -145,8 +148,8 @@ FROM
   
  공급자가 계층적 행 집합을 처리할 수 없는 경우 예측 쿼리에 FLATTEN 키워드를 사용하여 결과를 평면화할 수 있습니다. 일반 행 집합의 예를 비롯한 자세한 내용은 [SELECT&#40;DMX&#41;](/sql/dmx/select-dmx)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [콘텐츠 쿼리 & #40; 데이터 마이닝 & #41;](content-queries-data-mining.md)   
- [데이터 정의 쿼리 & #40; 데이터 마이닝 & #41;](data-definition-queries-data-mining.md)  
+## <a name="see-also"></a>참고 항목  
+ [데이터 마이닝을 &#40;내용 쿼리&#41;](content-queries-data-mining.md)   
+ [데이터 마이닝&#41;&#40;데이터 정의 쿼리](data-definition-queries-data-mining.md)  
   
   

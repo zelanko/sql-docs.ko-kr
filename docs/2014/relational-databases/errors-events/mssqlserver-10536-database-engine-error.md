@@ -13,15 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e5ddb4df0089b488d3a15c76a76abef8be154848
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870526"
 ---
-# <a name="mssqlserver10536"></a>MSSQLSERVER_10536
+# <a name="mssqlserver_10536"></a>MSSQLSERVER_10536
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -30,7 +30,7 @@ ms.locfileid: "62870526"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|PG_TOO_MANY_STMTS|  
-|메시지 텍스트|계획 지침 ' %. \*l s 때문에 일괄 처리 또는 모듈을 지정 된 해당 `@plan_handle` 적합 한 문이 1000 개 이상 포함 되어 있습니다. 각 문에 `statement_start_offset` 값을 지정하여 일괄 처리 또는 모듈의 각 문에 대해 계획 지침을 만드십시오.|  
+|메시지 텍스트|지정된 \*`@plan_handle`에 해당하는 일괄 처리 또는 모듈에 적합한 문이 1000개 이상 포함되어 있으므로 계획 지침 '%*ls'을(를) 만들 수 없습니다. 각 문에 `statement_start_offset` 값을 지정하여 일괄 처리 또는 모듈의 각 문에 대해 계획 지침을 만드십시오.|  
   
 ## <a name="explanation"></a>설명  
  지정된 `@plan_handle`에 해당하는 일괄 처리 또는 모듈에 적합한 문이 1000개 이상 포함되어 있습니다.  
@@ -38,8 +38,8 @@ ms.locfileid: "62870526"
 ## <a name="user-action"></a>사용자 동작  
  각 문에 `statement_start_offset` 값을 지정하여 일괄 처리 또는 모듈의 각 문에 대해 계획 지침을 만드십시오.  
   
-## <a name="see-also"></a>관련 항목  
- [sp_create_plan_guide&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;sp_create_plan_guide &#40;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [계획 지침](../performance/plan-guides.md)   
  [sp_create_plan_guide_from_handle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)  
   

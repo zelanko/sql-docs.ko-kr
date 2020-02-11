@@ -13,13 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 67cd89f4cf857f11f08f69769ff54a22fd83760f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077737"
 ---
 # <a name="mining-model-viewers-data-mining-model-designer"></a>마이닝 모델 뷰어(데이터 마이닝 모델 디자이너)
+  
   **마이닝 모델 뷰어** 탭을 사용하여 마이닝 구조에 포함된 마이닝 모델을 탐색할 수 있습니다.  
   
  먼저 마이닝 모델을 선택한 다음 뷰어를 선택합니다. 항상 각 모델에는 여러 탭을 포함할 수 있는 사용자 지정 뷰어와 일반 뷰어라는 두 개의 뷰어가 있습니다.  
@@ -33,8 +34,8 @@ ms.locfileid: "66077737"
  **마이닝 모델**  
  현재 마이닝 구조에서 볼 마이닝 모델을 선택합니다. 마이닝 모델은 연결된 사용자 지정 뷰어에서 먼저 열립니다.  
   
- **Viewer**  
- 선택한 마이닝 모델을 탐색하는 데 사용할 뷰어를 선택합니다. 이 목록에는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 가 각 마이닝 모델에 대해 제공하는 뷰어, [!INCLUDE[msCoName](../includes/msconame-md.md)] 마이닝 콘텐츠 뷰어 및 모든 플러그 인 뷰어가 포함되어 있습니다.  
+ **뷰어**  
+ 선택한 마이닝 모델을 탐색하는 데 사용할 뷰어를 선택합니다. 이 목록에는 각 마이닝 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 모델에 대해 제공 하는 뷰어 [!INCLUDE[msCoName](../includes/msconame-md.md)] , 마이닝 콘텐츠 뷰어 및 모든 플러그 인 뷰어가 포함 되어 있습니다.  
   
  다음 다이어그램에서는 같은 모델에 대해 사용자 지정 뷰어와 일반 뷰어를 보여 줍니다.  
   
@@ -55,19 +56,19 @@ ms.locfileid: "66077737"
   
     -   [항목 집합 탭 &#40;마이닝 모델 뷰어&#41;](itemsets-tab-mining-model-viewer.md)  
   
-    -   [규칙 탭 &#40;마이닝 모델 뷰어&#41;](rules-tab-mining-model-viewer.md)  
+    -   [마이닝 모델 뷰어 &#40;규칙 탭&#41;](rules-tab-mining-model-viewer.md)  
   
-    -   [종속성 네트워크 탭 &#40;마이닝 모델 뷰어&#41;](dependency-network-tab-mining-model-viewer.md)  
+    -   [&#40;마이닝 모델 뷰어&#41;종속성 네트워크 탭](dependency-network-tab-mining-model-viewer.md)  
   
 ### <a name="microsoft-clustering-algorithm"></a>Microsoft Clustering Algorithm  
   
 -   [Microsoft 클러스터 뷰어를 사용하여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
-    -   [클러스터 다이어그램 탭 &#40;마이닝 모델 뷰어&#41;](cluster-diagram-tab-mining-model-viewer.md)  
+    -   [마이닝 모델 뷰어를 &#40;클러스터 다이어그램 탭&#41;](cluster-diagram-tab-mining-model-viewer.md)  
   
-    -   [클러스터 프로필 탭 &#40;마이닝 모델 뷰어&#41;](cluster-profiles-tab-mining-model-viewer.md)  
+    -   [마이닝 모델 뷰어를 &#40;클러스터 프로필 탭&#41;](cluster-profiles-tab-mining-model-viewer.md)  
   
-    -   [클러스터 특징 탭 &#40;마이닝 모델 뷰어&#41;](cluster-characteristics-tab-mining-model-viewer.md)  
+    -   [마이닝 모델 뷰어를 &#40;클러스터 특징 탭&#41;](cluster-characteristics-tab-mining-model-viewer.md)  
   
     -   [클러스터 판별 탭 &#40;마이닝 모델 뷰어&#41;](cluster-discrimination-tab-mining-model-viewer.md)  
   
@@ -77,9 +78,9 @@ ms.locfileid: "66077737"
   
 -   [Microsoft 트리 뷰어를 사용하여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
-    -   [트리 탭 의사 결정 &#40;마이닝 모델 뷰어&#41;](decision-tree-tab-mining-model-viewer.md)  
+    -   [마이닝 모델 뷰어를 &#40;의사 결정 트리 탭&#41;](decision-tree-tab-mining-model-viewer.md)  
   
-    -   [종속성 네트워크 탭 &#40;마이닝 모델 뷰어&#41;](dependency-network-tab-mining-model-viewer.md)  
+    -   [&#40;마이닝 모델 뷰어&#41;종속성 네트워크 탭](dependency-network-tab-mining-model-viewer.md)  
   
     -   [마이닝 범례 대화 상자 &#40;마이닝 모델 뷰어&#41;](mining-legend-dialog-box-mining-model-viewer.md)  
   
@@ -87,9 +88,9 @@ ms.locfileid: "66077737"
   
 -   [Microsoft 신경망 뷰어를 사용하여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
   
-    -   [트리 탭 의사 결정 &#40;마이닝 모델 뷰어&#41;](decision-tree-tab-mining-model-viewer.md)  
+    -   [마이닝 모델 뷰어를 &#40;의사 결정 트리 탭&#41;](decision-tree-tab-mining-model-viewer.md)  
   
-    -   [종속성 네트워크 탭 &#40;마이닝 모델 뷰어&#41;](dependency-network-tab-mining-model-viewer.md)  
+    -   [&#40;마이닝 모델 뷰어&#41;종속성 네트워크 탭](dependency-network-tab-mining-model-viewer.md)  
   
     -   [마이닝 범례 대화 상자 &#40;마이닝 모델 뷰어&#41;](mining-legend-dialog-box-mining-model-viewer.md)  
   
@@ -101,23 +102,23 @@ ms.locfileid: "66077737"
   
 -   [Microsoft Naive Bayes 뷰어를 사용하여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
   
-    -   [종속성 네트워크 탭 &#40;마이닝 모델 뷰어&#41;](dependency-network-tab-mining-model-viewer.md)  
+    -   [&#40;마이닝 모델 뷰어&#41;종속성 네트워크 탭](dependency-network-tab-mining-model-viewer.md)  
   
-    -   [특성 프로필 탭 &#40;마이닝 모델 뷰어&#41;](attribute-profiles-tab-mining-model-viewer.md)  
+    -   [마이닝 모델 뷰어 &#40;특성 프로필 탭&#41;](attribute-profiles-tab-mining-model-viewer.md)  
   
-    -   [특성 특징 탭 &#40;마이닝 모델 뷰어&#41;](attribute-characteristics-tab-mining-model-viewer.md)  
+    -   [마이닝 모델 뷰어 &#40;특성 특징 탭&#41;](attribute-characteristics-tab-mining-model-viewer.md)  
   
-    -   [특성 판별 탭 &#40;마이닝 모델 뷰어&#41;](attribute-discrimination-tab-mining-model-viewer.md)  
+    -   [마이닝 모델 뷰어를 &#40;특성 판별 탭&#41;](attribute-discrimination-tab-mining-model-viewer.md)  
   
 ### <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm  
   
 -   [Microsoft 신경망 뷰어를 사용하여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
   
-    -   [종속성 네트워크 탭 &#40;마이닝 모델 뷰어&#41;](dependency-network-tab-mining-model-viewer.md)  
+    -   [&#40;마이닝 모델 뷰어&#41;종속성 네트워크 탭](dependency-network-tab-mining-model-viewer.md)  
   
     -   [신경망 &#40;마이닝 모델 뷰어&#41;](neural-network-mining-model-viewer.md)  
   
-    -   [노드 찾기 대화 상자 &#40;마이닝 모델 뷰어&#41;](find-node-dialog-box-mining-model-viewer.md)  
+    -   [마이닝 모델 뷰어를 &#40;노드 찾기 대화 상자&#41;](find-node-dialog-box-mining-model-viewer.md)  
   
 ### <a name="microsoft-sequence-clustering-algorithm"></a>Microsoft 시퀀스 클러스터링 알고리즘  
   
@@ -125,7 +126,7 @@ ms.locfileid: "66077737"
   
     -   [시퀀스 클러스터링 클러스터 다이어그램 탭 &#40;마이닝 모델 뷰어](sequence-clustering-cluster-diagram-tab-mining-model-viewer.md)  
   
-    -   [시퀀스 클러스터링 클러스터 프로필 탭 &#40;마이닝 모델 뷰어](sequence-clustering-cluster-profiles-tab-mining-model-viewer.md)  
+    -   [마이닝 모델 뷰어 &#40;시퀀스 클러스터링 클러스터 프로필 탭](sequence-clustering-cluster-profiles-tab-mining-model-viewer.md)  
   
     -   [시퀀스 클러스터링 클러스터 특징 탭 &#40;마이닝 모델 뷰어&#41;](sequence-clustering-cluster-characteristics-tab-mining-model-viewer.md)  
   
@@ -139,11 +140,11 @@ ms.locfileid: "66077737"
   
     -   [모델 탭 &#40;마이닝 모델 뷰어&#41;](model-tab-mining-model-viewers.md)  
   
-    -   [차트 탭 &#40;마이닝 모델 뷰어&#41;](chart-tab-mining-model-viewers.md)  
+    -   [마이닝 모델 뷰어를 &#40;차트 탭&#41;](chart-tab-mining-model-viewers.md)  
   
     -   [마이닝 범례 대화 상자 &#40;마이닝 모델 뷰어&#41;](mining-legend-dialog-box-mining-model-viewer.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [마이닝 모델 뷰 &#40;데이터 마이닝 모델 디자이너&#41;](mining-models-view-data-mining-model-designer.md)   
  [마이닝 구조 뷰 &#40;데이터 마이닝 모델 디자이너&#41;](mining-structure-view-data-mining-model-designer.md)   
  [마이닝 정확도 차트 디자이너 &#40;데이터 마이닝&#41;](mining-accuracy-chart-designer-data-mining.md)   

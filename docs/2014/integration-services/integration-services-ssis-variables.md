@@ -19,16 +19,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b824129d1687dce8471800f79d106328b9ee36f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892286"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services(SSIS) 변수
-  변수에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지와 해당 컨테이너, 태스크 및 이벤트 처리기에서 런타임에 사용할 수 있는 값이 저장됩니다. 스크립트 태스크와 스크립트 구성 요소의 스크립트에서도 변수가 사용될 수 있습니다. 태스크 및 컨테이너의 순서를 워크플로에 지정하는 선행 제약 조건에서는 해당 제약 조건 정의에 식이 포함된 경우에 변수가 사용될 수 있습니다.  
+  변수에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지와 해당 컨테이너, 태스크 및 이벤트 처리기에서 런타임에 사용할 수 있는 값이 저장 됩니다. 스크립트 태스크와 스크립트 구성 요소의 스크립트에서도 변수가 사용될 수 있습니다. 태스크 및 컨테이너의 순서를 워크플로에 지정하는 선행 제약 조건에서는 해당 제약 조건 정의에 식이 포함된 경우에 변수가 사용될 수 있습니다.  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지에서 변수는 다음 용도로 사용될 수 있습니다.  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지에서 변수는 다음 용도로 사용될 수 있습니다.  
   
 -   패키지 요소의 속성을 런타임에 업데이트합니다. 예를 들어 Foreach 루프 컨테이너에서 허용하는 동시 실행 파일 수를 동적으로 설정할 수 있습니다.  
   
@@ -43,7 +44,7 @@ ms.locfileid: "62892286"
 -   변수 값이 포함된 식을 작성합니다. 예를 들어 파생 열 변환에서 변수 값을 열 값으로 곱하여 얻은 결과를 열에 채울 수 있습니다.  
   
 ## <a name="system-and-user-defined-variables"></a>시스템 및 사용자 정의 변수  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 사용자 정의 변수와 시스템 변수라는 두 가지 유형의 변수를 지원합니다. 사용자 정의 변수는 패키지 개발자에 의해 정의되며 시스템 변수는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에 의해 정의됩니다. 사용자 정의 변수는 패키지에 필요한 만큼 얼마든지 만들 수 있지만 시스템 변수는 추가로 만들 수 없습니다.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서는 사용자 정의 변수와 시스템 변수 라는 두 가지 유형의 변수를 지원 합니다. 사용자 정의 변수는 패키지 개발자에 의해 정의되며 시스템 변수는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에 의해 정의됩니다. 사용자 정의 변수는 패키지에 필요한 만큼 얼마든지 만들 수 있지만 시스템 변수는 추가로 만들 수 없습니다.  
   
  SQL 실행 태스크에서 SQL 문의 매개 변수에 변수를 매핑하는 데 사용하는 매개 변수 바인딩에 모든 변수, 즉 시스템 변수와 사용자 정의 변수를 사용할 수 있습니다. 자세한 내용은 [SQL 실행 태스크](control-flow/execute-sql-task.md) 및 [SQL 실행 태스크의 매개 변수 및 반환 코드](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)를 참조하세요.  
   
@@ -52,7 +53,8 @@ ms.locfileid: "62892286"
   
  사용자 정의 변수는 패키지, Foreach 루프 컨테이너, For 루프 컨테이너, 시퀀스 컨테이너, 태스크 및 이벤트 처리기와 같은 모든 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 컨테이너 유형에 대해 만들 수 있습니다. 사용자 정의 변수는 해당 컨테이너에 대한 Variables 컬렉션의 멤버입니다.  
   
- [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너를 사용하여 패키지를 만드는 경우에는 **디자이너의** 패키지 탐색기 **탭에 있는** 변수 [!INCLUDE[ssIS](../includes/ssis-md.md)] 폴더에서 Variables 컬렉션의 멤버를 확인할 수 있습니다. 폴더에는 사용자 정의 변수와 시스템 변수가 나열됩니다.  
+ 
+  [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너를 사용하여 패키지를 만드는 경우에는 **디자이너의** 패키지 탐색기 **탭에 있는** 변수 [!INCLUDE[ssIS](../includes/ssis-md.md)] 폴더에서 Variables 컬렉션의 멤버를 확인할 수 있습니다. 폴더에는 사용자 정의 변수와 시스템 변수가 나열됩니다.  
   
  사용자 정의 변수는 다음과 같은 방식으로 구성할 수 있습니다.  
   
@@ -77,30 +79,31 @@ ms.locfileid: "62892286"
  변수의 실제 사용 시나리오에 대한 자세한 내용은 [패키지에서 변수 사용](../../2014/integration-services/use-variables-in-packages.md)을 참조하세요.  
   
 ## <a name="variable-properties"></a>변수 속성  
- **변수** 창이나 **속성** 창에서 다음 속성을 설정하여 사용자 정의 변수를 구성할 수 있습니다. 일부 속성은 속성 창에서만 사용할 수 있습니다.  
+ 
+  **변수** 창이나 **속성** 창에서 다음 속성을 설정하여 사용자 정의 변수를 구성할 수 있습니다. 일부 속성은 속성 창에서만 사용할 수 있습니다.  
   
 > [!NOTE]  
 >  시스템 변수에서 구성할 수 있는 유일한 옵션은 값이 변경될 때 이벤트를 발생시키는지 여부를 지정하는 것입니다.  
   
  Description  
- 변수에 대한 설명을 지정합니다.  
+ 변수의 설명을 지정합니다.  
   
  EvaluateAsExpression  
- 속성이로 설정 된 경우 `True`, 제공 된 식이 변수 값을 설정 하는 데 사용 됩니다.  
+ 속성이로 `True`설정 되 면 제공 된 식이 변수 값을 설정 하는 데 사용 됩니다.  
   
  식  
  변수에 할당되는 식을 지정합니다.  
   
- 이름  
+ 속성  
  변수 이름을 지정합니다.  
   
- Namespace  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]은 **User** 및 **System**의 두 가지 네임스페이스를 제공합니다. 기본적으로 사용자 지정 변수는 **사용자** 네임스페이스에 속하고 시스템 변수는 **시스템** 네임스페이스에 속합니다. 사용자 정의 변수에 대한 추가 네임스페이스를 만들고 **User** 네임스페이스의 이름을 변경할 수 있지만 **System** 네임스페이스의 이름을 변경하거나, **System** 네임스페이스에 변수를 추가하거나, 시스템 변수를 다른 네임스페이스에 할당할 수 없습니다.  
+ 네임스페이스  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서는 **사용자** 와 **시스템**이라는 두 가지 네임 스페이스를 제공 합니다. 기본적으로 사용자 지정 변수는 **사용자** 네임스페이스에 속하고 시스템 변수는 **시스템** 네임스페이스에 속합니다. 사용자 정의 변수에 대한 추가 네임스페이스를 만들고 **User** 네임스페이스의 이름을 변경할 수 있지만 **System** 네임스페이스의 이름을 변경하거나, **System** 네임스페이스에 변수를 추가하거나, 시스템 변수를 다른 네임스페이스에 할당할 수 없습니다.  
   
  RaiseChangedEvent  
  이 속성을 `True`로 설정하면 변수에서 값을 변경할 때 `OnVariableValueChanged` 이벤트가 발생합니다.  
   
- 읽기 전용  
+ ReadOnly  
  이 속성을 `False`로 설정하면 변수는 읽기/쓰기 변수입니다.  
   
  범위  
@@ -114,17 +117,17 @@ ms.locfileid: "62892286"
  IncludeInDebugDump  
  디버그 덤프 파일에 변수 값이 포함되는지 여부를 나타냅니다.  
   
- 사용자 정의 변수 및 시스템 변수의 기본값에 대 한 값을 **InclueInDebugDump** 옵션은 `true`합니다.  
+ 사용자 정의 변수 및 시스템 변수의 경우 **경우 inclueindebugdump** 옵션의 기본값은 `true`입니다.  
   
- 그러나 사용자 정의 변수에 대 한 시스템을 다시 설정 합니다 **IncludeInDebugDump** 옵션을 `false` 다음 조건이 충족 될 때:  
+ 그러나 사용자 정의 변수의 경우 다음 조건이 충족 될 때 시스템에서 **IncludeInDebugDump** 옵션을 `false` 로 다시 설정 합니다.  
   
--   경우는 **EvaluateAsExpression** 변수 속성이로 설정 되어 `true`, 시스템을 다시 설정 합니다 **IncludeInDebugDump** 옵션을 `false`합니다.  
+-   **EvaluateAsExpression** `true`variable 속성이로 설정 된 경우 시스템에서는 **IncludeInDebugDump** 옵션을로 `false`다시 설정 합니다.  
   
-     디버그 덤프 파일에 변수 값으로 식의 텍스트를 포함 하려면 설정 합니다 **IncludeInDebugDump** 옵션을 `true`입니다.  
+     디버그 덤프 파일에 식의 텍스트를 변수 값으로 포함 하려면 **IncludeInDebugDump** 옵션을로 `true`설정 합니다.  
   
--   변수 데이터 형식이 문자열로 변경 되 면 시스템이 다시 설정 합니다 **IncludeInDebugDump** 옵션을 `false`입니다.  
+-   변수 데이터 형식이 문자열로 변경 되 면 시스템은 **IncludeInDebugDump** 옵션을로 `false`다시 설정 합니다.  
   
- 시스템으로 다시 설정 합니다 **IncludeInDebugDump** 옵션을 `false`, 사용자가 선택한 값이 재정의 될 수 있습니다.  
+ 시스템에서 **IncludeInDebugDump** 옵션을로 `false`다시 설정 하면 사용자가 선택한 값이 재정의 될 수 있습니다.  
   
  값  
  사용자 정의 변수의 값은 문자 또는 식일 수 있습니다. 변수에는 변수 값과 값의 데이터 형식을 설정하기 위한 옵션이 포함됩니다. 이 두 속성은 호환되어야 합니다. 예를 들어 정수 데이터 형식에는 문자열 값을 사용할 수 없습니다.  
@@ -140,7 +143,8 @@ ms.locfileid: "62892286"
 ## <a name="configuring-variables"></a>변수 구성  
  [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용은 [변수 창](../../2014/integration-services/variables-window.md)을 참조하세요.  
+ 
+  [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용은 [변수 창](../../2014/integration-services/variables-window.md)을 참조하세요.  
   
  변수 속성에 대한 자세한 내용과 이러한 변수를 프로그래밍 방식으로 설정하는 방법은 <xref:Microsoft.SqlServer.Dts.Runtime.Variable>을 참조하십시오.  
   

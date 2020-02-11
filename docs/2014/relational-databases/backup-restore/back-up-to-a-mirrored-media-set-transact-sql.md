@@ -11,14 +11,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 88ea15fabe8e8fd6630d3430417879c7104dff67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876991"
 ---
 # <a name="back-up-to-a-mirrored-media-set-transact-sql"></a>미러된 미디어 세트에 백업(TRANSACT-SQL)
-  이 항목에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)][데이터베이스를 백업할 때](/sql/t-sql/statements/backup-transact-sql) BACKUP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문을 사용하여 미러된 미디어 세트를 지정하는 방법에 대해 설명합니다. BACKUP 문에서 TO 절에 첫 번째 미러를 지정합니다. 그런 다음 해당 MIRROR TO 절에 각 미러를 지정합니다. TO절과 MIRROR TO 절은 같은 개수와 유형의 백업 디바이스를 지정해야 합니다.  
+  이 항목에서는 데이터베이스를 [!INCLUDE[tsql](../../includes/tsql-md.md)] [](/sql/t-sql/statements/backup-transact-sql) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업할 때 BACKUP 문을 사용 하 여 미러된 미디어 세트를 지정 하는 방법에 대해 설명 합니다. BACKUP 문에서 TO 절에 첫 번째 미러를 지정합니다. 그런 다음 해당 MIRROR TO 절에 각 미러를 지정합니다. TO절과 MIRROR TO 절은 같은 개수와 유형의 백업 디바이스를 지정해야 합니다.  
   
 ## <a name="example"></a>예제  
  다음 예에서는 이전 그림에 표시된 미러된 미디어 세트를 만들고 두 미러 모두에 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 백업합니다.  
@@ -34,12 +34,12 @@ GO
 ```  
   
 ## <a name="related-tasks"></a>관련 작업  
- **미러된 백업에서 복원하려면**  
+ **미러된 백업에서 복원 하려면**  
   
 -   [RESTORE&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [BACKUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [미러된 백업 미디어 세트&#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md)  
+ [미러된 백업 미디어 세트 &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 마법사 완료 (스키마 생성 마법사) (Analysis Services-다차원 데이터) | Microsoft Docs
+title: 마법사 완료 (스키마 생성 마법사) (Analysis Services 다차원 데이터) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,21 +13,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6491d0a73aa28d8dd396bf1befa321ed6f1cb9b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087735"
 ---
 # <a name="completing-the-wizard-schema-generation-wizard-analysis-services---multidimensional-data"></a>마법사 완료(스키마 생성 마법사)(Analysis Services - 다차원 데이터)
+  
   **마법사 완료** 페이지를 사용하여 선택한 항목을 확인하고 새 프로젝트 및 데이터 원본 뷰를 만들 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **요약**  
  설정한 옵션을 표시합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [스키마 생성 마법사 F1 도움말 &#40;Analysis Services-다차원 데이터&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)   
- [Analysis Services 마법사 &#40;다차원 데이터&#41;](analysis-services-wizards-multidimensional-data.md)  
+## <a name="see-also"></a>참고 항목  
+ [스키마 생성 마법사 F1 도움말 &#40;Analysis Services 다차원 데이터&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)   
+ [다차원 데이터를 &#40;마법사 Analysis Services&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

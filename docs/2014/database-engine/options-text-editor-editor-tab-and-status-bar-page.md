@@ -1,5 +1,5 @@
 ---
-title: '옵션(텍스트 편집기: 편집기 탭 및 상태 표시줄 페이지) | Microsoft Docs'
+title: '옵션 (텍스트 편집기: 편집기 탭 및 상태 표시줄 페이지) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 01098f2181085f17788429608afb7bdda15fb504
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089238"
 ---
 # <a name="options-text-editor-editor-tab-and-status-bar-page"></a>옵션(텍스트 편집기: 편집기 탭 및 상태 표시줄 페이지)
+  
   **편집기 탭 및 상태 표시줄** 페이지를 사용하여 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 쿼리 편집기에 표시되는 정보를 사용자 지정할 수 있습니다. 쿼리 편집기 창의 탭 및 상태 표시줄에 표시되는 정보의 수준을 지정하고 상태 표시줄을 편집기 창의 위쪽에 표시할지, 아래쪽에 표시할지를 지정할 수 있습니다.  
   
 ## <a name="option-settings-by-editor"></a>편집기별 옵션 설정  
@@ -34,13 +35,13 @@ ms.locfileid: "66089238"
  **실행 시간 표시**  
  스크립트 실행 시간을 포함합니다. 설정은 다음과 같습니다.  
   
- **없음**  
+ **없음을**  
  상태 표시줄에서 시간 정보를 표시하지 않습니다.  
   
- **End**  
+ **끝**  
  상태 표시줄에서 스크립트가 실행 중인 현재 시간을 표시합니다. 스크립트가 완료되면 스크립트가 완료된 시간을 표시합니다.  
   
- **경과 된**  
+ **시간**  
  상태 표시줄에서 스크립트가 실행된 기간을 표시합니다. 스크립트가 완료되면 스크립트를 실행하는 데 걸린 시간을 표시합니다.  
   
  **데이터베이스 이름 포함**  
@@ -67,7 +68,7 @@ ms.locfileid: "66089238"
  **상태 표시줄 위치**  
  상태 표시줄 위치를 지정합니다. 설정은 다음과 같습니다.  
   
- **Top**  
+ **맨 위로**  
  상태 표시줄이 쿼리 편집기 창 위쪽에 표시됩니다.  
   
  **아래쪽**  
@@ -91,7 +92,7 @@ ms.locfileid: "66089238"
  **서버 이름 포함**  
  서버 이름을 포함합니다. 로컬 연결의 경우 인스턴스 이름입니다. 원격 연결의 경우 원격 컴퓨터 이름 및 인스턴스 이름입니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [옵션 &#40;환경: 글꼴 및 색 페이지&#41;](../ssms/menu-help/options-environment-fonts-and-colors-page.md)   
  [쿼리 편집기에서 코드 색상 지정](../relational-databases/scripting/color-coding-in-query-editors.md)  
   

@@ -13,15 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 612c39b57682e5b7cfcefd1988e7674f25fb913c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915713"
 ---
-# <a name="mssqlserver1406"></a>MSSQLSERVER_1406
+# <a name="mssqlserver_1406"></a>MSSQLSERVER_1406
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -38,8 +38,8 @@ ms.locfileid: "62915713"
 ## <a name="user-action"></a>사용자 동작  
  데이터베이스 미러링을 제거합니다. 그런 다음 미러 데이터베이스를 복구하여 이 데이터베이스에 액세스할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [데이터베이스 미러링 세션에 서비스 강제 수행&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/force-service-in-a-database-mirroring-session-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;&#40;데이터베이스 미러링 세션에 서비스 강제 적용](../../database-engine/database-mirroring/force-service-in-a-database-mirroring-session-transact-sql.md)   
  [데이터베이스 미러링 제거&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   
   

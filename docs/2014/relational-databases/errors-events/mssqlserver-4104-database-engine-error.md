@@ -13,15 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd364a08781c00eaaf42eb0b1c15e7e5011ed432
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62868000"
 ---
-# <a name="mssqlserver4104"></a>MSSQLSERVER_4104
+# <a name="mssqlserver_4104"></a>MSSQLSERVER_4104
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -63,7 +63,7 @@ ms.locfileid: "62868000"
   
      별칭을 사용하는 경우 문의 다른 위치에서 테이블 이름을 사용할 수 없습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 여러 부분으로 구성된 식별자가 테이블 이름을 접두사로 사용하는 열을 참조하는지 또는 열 이름을 접두사로 사용하는 CLR UDT(사용자 정의 데이터 형식)의 속성을 참조하는지 확인할 수 없습니다. 이는 열 이름의 접두사로 테이블 이름이 사용되는 것과 같은 방법으로 UDT 열의 속성이 열 이름과 속성 이름 사이에 마침표 구분 기호(.)를 사용하여 참조되기 때문입니다. 다음 예에서는 두 개의 테이블 `a` 및 `b`를 만듭니다. `b` 테이블에는 CLR UDT `dbo.myudt2`를 데이터 형식으로 사용하는 `a` 열이 포함되어 있습니다. SELECT 문에는 여러 부분으로 구성된 식별자 `a.c2`가 포함되어 있습니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 여러 부분으로 구성된 식별자가 테이블 이름을 접두사로 사용하는 열을 참조하는지 또는 열 이름을 접두사로 사용하는 CLR UDT(사용자 정의 데이터 형식)의 속성을 참조하는지 확인할 수 없습니다. 이는 열 이름의 접두사로 테이블 이름이 사용되는 것과 같은 방법으로 UDT 열의 속성이 열 이름과 속성 이름 사이에 마침표 구분 기호(.)를 사용하여 참조되기 때문입니다. 다음 예에서는 두 개의 테이블 `a` 및 `b`를 만듭니다. `b` 테이블에는 CLR UDT `a`를 데이터 형식으로 사용하는 `dbo.myudt2` 열이 포함되어 있습니다. SELECT 문에는 여러 부분으로 구성된 식별자 `a.c2`가 포함되어 있습니다.  
   
     ```  
     CREATE TABLE a (c2 int);   
@@ -79,7 +79,7 @@ ms.locfileid: "62868000"
     SELECT a.c2 FROM a, b;   
     ```  
   
-     UDT `myudt2`에 `c2`라는 속성이 없다고 가정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 `a.c2` 식별자가 `a` 테이블의 `c2` 열을 참조하는지 또는 `b` 테이블의 `a` 열과 `c2` 속성을 참조하는지 확인할 수 없습니다.  
+     UDT `myudt2`에 `c2`라는 속성이 없다고 가정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 `a.c2` 식별자가 `c2` 테이블의 `a` 열을 참조하는지 또는 `a` 테이블의 `c2` 열과 `b` 속성을 참조하는지 확인할 수 없습니다.  
   
 ## <a name="user-action"></a>사용자 동작  
   
@@ -113,7 +113,7 @@ ms.locfileid: "62868000"
     SELECT 'X' FROM TableA, TableB WHERE TableB.KeyCol = TableA.KeyCol;  
     ```  
   
-     로 구분하거나 여러  
+     또는  
   
     ```  
     SELECT 'X' FROM TableA INNER JOIN TableB ON TableB.KeyCol = TableA.KeyCol;  
@@ -121,7 +121,7 @@ ms.locfileid: "62868000"
   
 -   식별자에 대해 고유하고 명확하게 정의된 이름을 사용합니다. 이렇게 하면 코드를 보다 쉽게 읽고 유지 관리할 수 있으며 여러 엔터티를 모호하게 참조하는 위험을 최소화할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [MSSQLSERVER_107](mssqlserver-107-database-engine-error.md)   
  [데이터베이스 식별자](../databases/database-identifiers.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 표시 된 관련된 데이터베이스를 일관 되 게 복구 하는 트랜잭션을 사용 (전체 복구 모델) | Microsoft Docs
+title: 표시 된 트랜잭션을 사용 하 여 관련 데이터베이스를 일관 되 게 복구 (전체 복구 모델) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 37b4a53461b2ebd485941ecad89e3672e7c31b62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62877072"
 ---
 # <a name="use-marked-transactions-to-recover-related-databases-consistently-full-recovery-model"></a>표시된 트랜잭션을 사용하여 관련 데이터베이스를 일관되게 복구(전체 복구 모델)
@@ -173,7 +173,7 @@ GO
 ## <a name="recovering-to-a-marked-transaction"></a>표시된 트랜잭션으로 복구  
  표시된 트랜잭션을 포함하는 데이터베이스를 특정 표시 또는 해당 표시 바로 앞으로 복구하는 방법은 [표시된 트랜잭션이 포함된 관련 데이터베이스 복구](recovery-of-related-databases-that-contain-marked-transaction.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [BEGIN DISTRIBUTED TRANSACTION&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/begin-distributed-transaction-transact-sql)   
  [시스템 데이터베이스 백업 및 복원&#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   
  [BEGIN TRANSACTION&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/begin-transaction-transact-sql)   

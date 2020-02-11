@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 825343c58feeb7ffb217a8b1c8c53d8f81ae7441
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077499"
 ---
 # <a name="actions-in-multidimensional-models"></a>다차원 모델의 동작
@@ -37,7 +37,7 @@ ms.locfileid: "66077499"
   
 -   셀  
   
--   Cube  
+-   Perspective  
   
 -   차원 멤버  
   
@@ -54,29 +54,30 @@ ms.locfileid: "66077499"
  **조건(옵션)**  
  부울 값으로 확인되는 선택적 MDX(Multidimensional Expression) 식을 지정합니다. 값이 `True`이면 지정된 대상에서 동작이 수행됩니다. 값이 `False`이면 동작이 수행되지 않습니다.  
   
- **동작 내용**  
+ **작업 콘텐츠**  
  동작의 유형을 선택합니다. 다음 표에는 사용 가능한 유형이 요약되어 있습니다.  
   
-|형식|Description|  
+|Type|Description|  
 |----------|-----------------|  
 |데이터 집합|데이터 세트를 검색합니다.|  
 |소유|이 표에 나열되지 않은 인터페이스를 사용하여 작업을 수행합니다.|  
 |행 집합|행 집합을 검색합니다.|  
-|문|OLE DB 명령을 실행합니다.|  
+|인수를 제거합니다.|OLE DB 명령을 실행합니다.|  
 |URL|가변 페이지를 인터넷 브라우저로 표시합니다.|  
   
- **동작 식**의 경우 작업이 실행될 때 전달되는 매개 변수를 지정합니다. 구문은 문자열로 평가되어야 하며 MDX로 작성된 식이 포함되어야 합니다. 예를 들어 MDX 식으로 구문에 포함되는 큐브의 일부를 나타낼 수 있습니다. MDX 식은 매개 변수가 전달되기 전에 평가됩니다. 또한 MDX 식 작성을 도와 주는 MDX 작성기를 사용할 수 있습니다.  
+ 
+  **동작 식**의 경우 작업이 실행될 때 전달되는 매개 변수를 지정합니다. 구문은 문자열로 평가되어야 하며 MDX로 작성된 식이 포함되어야 합니다. 예를 들어 MDX 식으로 구문에 포함되는 큐브의 일부를 나타낼 수 있습니다. MDX 식은 매개 변수가 전달되기 전에 평가됩니다. 또한 MDX 식 작성을 도와 주는 MDX 작성기를 사용할 수 있습니다.  
   
  **추가 속성**  
  속성을 선택합니다. 다음 표에는 사용 가능한 속성이 요약되어 있습니다.  
   
 |속성|Description|  
 |--------------|-----------------|  
-|**호출**|동작 실행 방법을 지정합니다. 기본값인 대화형은 사용자가 개체에 액세스할 때 동작이 실행되도록 지정합니다. 가능한 설정은 아래와 같습니다.<br /><br /> 일괄 처리<br /><br /> 대화형<br /><br /> 열 때|  
-|**응용 프로그램**|동작의 애플리케이션을 나타냅니다.|  
+|**호출**|동작 실행 방법을 지정합니다. 기본값인 대화형은 사용자가 개체에 액세스할 때 동작이 실행되도록 지정합니다. 가능한 설정은 아래와 같습니다.<br /><br /> Batch<br /><br /> 대화형<br /><br /> 열 때|  
+|**프로그램별**|동작의 애플리케이션을 나타냅니다.|  
 |**설명**|동작에 대한 설명입니다.|  
-|**캡션**|동작에 대해 표시되는 캡션을 제공합니다. 캡션이 MDX 이면 지정할 `True` 에 대 한 **캡션이 MDX 인지**합니다.|  
-|**캡션이 MDX 인지**|캡션이 MDX이면 `True`를 지정하고 그렇지 않으면 `False`를 지정합니다.|  
+|**Caption**|동작에 대해 표시되는 캡션을 제공합니다. 캡션이 MDX 인 경우 **캡션에 mdx**를 `True` 지정 합니다.|  
+|**MDX 캡션**|캡션이 MDX이면 `True`를 지정하고 그렇지 않으면 `False`를 지정합니다.|  
   
 > [!NOTE]  
 >  HTML 및 명령줄 동작 유형을 정의하려면 ASSL(Analysis Services Scripting Language)이나 AMO(Analysis Management Objects)를 사용해야 합니다. 자세한 내용은 [Action 요소&#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/action-element-assl), [Type 요소&#40;Action&#41;&#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/type-element-action-assl) 및 [AMO OLAP 고급 개체 프로그래밍](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-advanced-objects)을 참조하세요.  
@@ -93,7 +94,7 @@ ms.locfileid: "66077499"
 |**서버 경로**|보고서 서버를 나타내는 경로입니다.|  
 |**보고서 형식**|HTML5, HTML3, Excel 또는 PDF입니다.|  
   
- **매개 변수(옵션)**  
+ **매개 변수 (옵션)**  
  매개 변수는 동작이 생성될 때 URL 문자열의 일부로 서버에 전송됩니다. 이러한 매개 변수에는 MDX 식인 **매개 변수 이름** 과 **매개 변수 값**이 포함됩니다.  
   
  보고서 서버 URL의 형식은 다음과 같습니다.  
@@ -111,7 +112,7 @@ parametervalue1
 & ...  
 ```  
   
- 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ 다음은 그 예입니다.  
   
 ```  
 http://localhost/ReportServer/Sales/YearlySalesByCategory?rs:Command=Render&Region=West  
@@ -123,7 +124,7 @@ http://localhost/ReportServer/Sales/YearlySalesByCategory?rs:Command=Render&Regi
  **드릴스루 열**  
  하나 이상의 차원을 선택하고 각 차원에 대해 동작에 따라 클라이언트 애플리케이션에 반환되는 드릴스루 열을 선택합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [다차원 모델의 큐브](cubes-in-multidimensional-models.md)  
   
   

@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 179e7aaea331ba565ca5afae7bd51754e23b9718
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876205"
 ---
 # <a name="differential-backups-sql-server"></a>차등 백업(SQL Server)
   이 백업 및 복원 항목은 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 관련됩니다.  
   
- 차등 백업은 가장 최근에 수행한 이전의 전체 데이터 백업을 기반으로 합니다. 차등 백업은 전체 백업 이후 변경된 데이터만 캡처합니다. 차등 백업의 기반이 되는 전체 백업을 차등의 *기반* 이라고 합니다. 복사 전용 백업을 제외한 전체 백업은 데이터베이스 백업, 부분 백업 및 파일 백업을 포함한 일련의 차등 백업에 대한 기반으로 사용할 수 있습니다. 파일 차등 백업에 대한 기반 백업은 전체 백업, 파일 백업 또는 부분 백업에 포함될 수 있습니다.  
+ 차등 백업은 가장 최근에 수행한 이전 전체 데이터 백업을 기반으로 합니다. 차등 백업은 전체 백업 이후 변경된 데이터만 캡처합니다. 차등 백업의 기반이 되는 전체 백업을 차등의 *기반* 이라고 합니다. 복사 전용 백업을 제외한 전체 백업은 데이터베이스 백업, 부분 백업 및 파일 백업을 포함한 일련의 차등 백업에 대한 기반으로 사용할 수 있습니다. 파일 차등 백업에 대한 기반 백업은 전체 백업, 파일 백업 또는 부분 백업에 포함될 수 있습니다.  
   
   
 ##  <a name="Benefits"></a> 이점  
@@ -34,12 +34,12 @@ ms.locfileid: "62876205"
   
 -   전체 복구 모델에서 차등 백업을 사용하면 복원해야 하는 로그 백업의 수를 줄일 수 있습니다.  
   
-##  <a name="Overview"></a> 차등 백업 개요  
+##  <a name="Overview"></a>차등 백업 개요  
  차등 백업은 차등 기반을 만든 시간과 차등 백업을 만든 시간 사이에 변경된 *익스텐트* (실제로 연속하는 8페이지의 컬렉션)의 상태를 캡처합니다. 따라서 특정 차등 백업의 크기는 기반 이후 변경된 데이터의 양에 따라 다릅니다. 대체로 기반이 오래된 것일수록 새 차등 백업의 크기가 커집니다. 일련의 차등 백업에서 자주 업데이트된 익스텐트는 각 차등 백업에 다른 데이터를 포함할 수 있습니다.  
   
  다음 그림에서는 차등 백업의 작동 방식을 보여 줍니다. 이 그림에서는 표시된 24개의 데이터 익스텐트 중 6개가 변경되었으며 차등 백업은 이들 6개의 데이터 익스텐트만 포함합니다. 차등 백업 작업은 각 익스텐트에 대해 하나의 비트가 포함된 비트맵 페이지를 사용합니다. 기반 이후 업데이트된 익스텐트의 경우 비트맵의 해당 비트가 1로 설정됩니다.  
   
- ![차등 비트맵에서 변경된 익스텐트 식별](../../database-engine/media/bnr-how-diff-backups-work.gif "Differential bitmap identifies changed extents")  
+ ![차등 비트맵에서 변경된 익스텐트 식별](../../database-engine/media/bnr-how-diff-backups-work.gif "차등 비트맵에서 변경된 익스텐트 식별")  
   
 > [!NOTE]  
 >  복사 전용 백업은 차등 비트맵을 업데이트하지 않습니다. 따라서 후속 차등 백업에 영향을 주지 않습니다.  
@@ -53,26 +53,30 @@ ms.locfileid: "62876205"
 ## <a name="differential-backups-of-databases-with-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블이 있는 데이터베이스의 차등 백업  
  차등 백업 및 메모리 최적화 테이블이 있는 데이터베이스에 대한 자세한 내용은 [메모리 최적화 테이블이 포함된 데이터베이스 백업](../in-memory-oltp/memory-optimized-tables.md)을 참조하세요.  
   
-##  <a name="ReadOnlyDbs"></a> 읽기 전용 데이터베이스의 차등 백업  
- 읽기 전용 데이터베이스의 경우 차등 백업과 함께 사용하는 것보다는 전체 백업만 사용하는 것이 관리하기 쉽습니다. 데이터베이스가 읽기 전용일 때는 백업 및 기타 작업을 하더라도 파일에 포함된 메타데이터를 변경할 수 없습니다. 따라서 차등 백업이 시작되는 로그 시퀀스 번호(차등 기반 LSN)와 같이 차등 백업에 필요한 메타데이터는 **master** 데이터베이스에 저장됩니다. 차등 기반은 데이터베이스가 읽기 전용인 경우 수행되며 차등 비트맵은 기반 백업 이후에 실제로 발생되는 변경 내용보다 많은 변경 내용을 나타냅니다. **backupset** 시스템 테이블에 저장된 [differential_base_lsn](/sql/relational-databases/system-tables/backupset-transact-sql) 은 데이터가 실제로 기반 백업 이후에 변경되었는지 여부를 결정하는 데 사용되므로 추가 데이터를 백업에서 읽지만 백업에 쓸 수는 없습니다.  
+##  <a name="ReadOnlyDbs"></a>읽기 전용 데이터베이스의 차등 백업  
+ 읽기 전용 데이터베이스의 경우 차등 백업과 함께 사용하는 것보다는 전체 백업만 사용하는 것이 관리하기 쉽습니다. 데이터베이스가 읽기 전용일 때는 백업 및 기타 작업을 하더라도 파일에 포함된 메타데이터를 변경할 수 없습니다. 따라서 차등 백업이 시작되는 로그 시퀀스 번호(차등 기반 LSN)와 같이 차등 백업에 필요한 메타데이터는 **master** 데이터베이스에 저장됩니다. 차등 기반은 데이터베이스가 읽기 전용인 경우 수행되며 차등 비트맵은 기반 백업 이후에 실제로 발생되는 변경 내용보다 많은 변경 내용을 나타냅니다. 
+  **backupset** 시스템 테이블에 저장된 [differential_base_lsn](/sql/relational-databases/system-tables/backupset-transact-sql) 은 데이터가 실제로 기반 백업 이후에 변경되었는지 여부를 결정하는 데 사용되므로 추가 데이터를 백업에서 읽지만 백업에 쓸 수는 없습니다.  
   
- 읽기 전용 데이터베이스를 다시 작성하고 다시 저장하거나 분리 또는 연결하는 경우 차등 기반 정보는 손실됩니다. **master** 데이터베이스가 사용자 데이터베이스와 함께 동기화되지 않으므로 이러한 상황이 발생합니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 은 이 문제를 감지하거나 방지하지 못하므로 이후 모든 차등 백업은 가장 최근의 전체 백업을 기반으로 하지 않게 되고 따라서 결과를 예상할 수 없게 됩니다. 새 차등 기반을 설정하려면 전체 데이터베이스 백업을 만드는 것이 좋습니다.  
+ 읽기 전용 데이터베이스를 다시 작성하고 다시 저장하거나 분리 또는 연결하는 경우 차등 기반 정보는 손실됩니다. 
+  **master** 데이터베이스가 사용자 데이터베이스와 함께 동기화되지 않으므로 이러한 상황이 발생합니다. 
+  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 은 이 문제를 감지하거나 방지하지 못하므로 이후 모든 차등 백업은 가장 최근의 전체 백업을 기반으로 하지 않게 되고 따라서 결과를 예상할 수 없게 됩니다. 새 차등 기반을 설정하려면 전체 데이터베이스 백업을 만드는 것이 좋습니다.  
   
 ### <a name="best-practices-for-using-differential-backups-with-a-read-only-database"></a>읽기 전용 데이터베이스에 차등 백업을 사용하기 위한 최상의 방법  
  읽기 전용 데이터베이스의 전체 데이터베이스 백업을 만든 다음 후속 차등 백업을 만들려면 **master** 데이터베이스를 백업합니다.  
   
- **master** 데이터베이스가 손실된 경우 우선 이것을 복원한 후에 사용자 데이터베이스의 차등 백업을 복원합니다.  
+ 
+  **master** 데이터베이스가 손실된 경우 우선 이것을 복원한 후에 사용자 데이터베이스의 차등 백업을 복원합니다.  
   
  나중에 차등 백업을 사용하려는 읽기 전용 데이터베이스를 분리 및 연결하는 경우 가능한 빨리 읽기 전용 데이터베이스와 **master** 데이터베이스의 전체 데이터베이스 백업을 수행합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [차등 데이터베이스 백업 만들기&#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)  
   
 -   [차등 데이터베이스 백업 복원&#40;SQL Server&#41;](restore-a-differential-database-backup-sql-server.md)  
   
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [백업 개요&#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [전체 데이터베이스 백업&#40;SQL Server&#41;](full-database-backups-sql-server.md)   
  [전체 데이터베이스 복원&#40;전체 복구 모델&#41;](complete-database-restores-full-recovery-model.md)   

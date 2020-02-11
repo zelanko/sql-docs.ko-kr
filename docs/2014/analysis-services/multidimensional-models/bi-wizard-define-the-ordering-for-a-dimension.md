@@ -1,5 +1,5 @@
 ---
-title: 차원 순서 정의 | Microsoft Docs
+title: 차원에 대 한 순서 정의 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05e75eb726d67e992a0a9320be8d23bbc547bedb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076857"
 ---
 # <a name="define-the-ordering-for-a-dimension"></a>차원 순서 정의
@@ -35,7 +35,9 @@ ms.locfileid: "66076857"
 ## <a name="specifying-ordering"></a>순서 지정  
  마법사의 두 번째 **특성 순서 지정** 페이지에서 차원에 있는 모든 특성의 순서를 지정하는 방식을 지정합니다.  
   
- **순서 특성** 열에서 순서 지정에 사용할 특성을 변경할 수 있습니다. 멤버 순서 지정에 사용 하려는 특성 목록에 없는 경우 목록을 아래로 스크롤한 다음 선택  **\<새 특성... >** 열려는 합니다 **열을 선택** 수행할 수 있는 대화 상자 차원 테이블의 열을 선택 합니다. **열 선택** 대화 상자에서 열을 선택하면 특성의 멤버 순서를 지정하는 추가 특성이 생성됩니다.  
+ 
+  **순서 특성** 열에서 순서 지정에 사용할 특성을 변경할 수 있습니다. 멤버를 정렬 하는 데 사용 하려는 특성이 목록에 없는 경우 목록에서 아래로 스크롤한 다음 ** \<새 특성 ... >** 를 선택 하 여 차원 테이블의 열을 선택할 수 있는 **열 선택** 대화 상자를 엽니다. 
+  **열 선택** 대화 상자에서 열을 선택하면 특성의 멤버 순서를 지정하는 추가 특성이 생성됩니다.  
   
  그런 다음 **조건** 열에서 **키** 또는 **이름**을 중에서 어떤 기준으로 특성 멤버의 순서를 지정할 것인지 선택합니다.  
   

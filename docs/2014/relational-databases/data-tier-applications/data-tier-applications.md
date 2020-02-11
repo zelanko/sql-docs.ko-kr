@@ -16,13 +16,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b9731a25633b5bc127039ae81a31df8c69bb8ccb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873104"
 ---
-# <a name="data-tier-applications"></a>의
+# <a name="data-tier-applications"></a>데이터 계층 애플리케이션
   DAC(데이터 계층 애플리케이션)는 사용자의 데이터베이스와 연결된 로그인을 포함하여 테이블, 뷰 및 인스턴스 개체와 같은 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 정의하는 논리적인 데이터베이스 관리 엔터티입니다. DAC는 데이터 계층 개발자 및 데이터베이스 관리자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 DAC 패키지(또는 DACPAC)라고 부르는 이식 가능한 아티팩트로 패키징할 수 있게 해주는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 자체 포함 배포 단위입니다.  
   
  BACPAC는 데이터베이스에 저장된 데이터뿐만 아니라 데이터베이스 스키마를 캡슐화하는 관련 아티팩트입니다.  
@@ -47,7 +47,8 @@ ms.locfileid: "62873104"
   
     -   DAC 작업은 SQL Server 2008 R2에 소개되었습니다. 이 도구는 SQL Server 2008 R2 데이터베이스 외에도 SQL Server 2008, SQL Server 2005 및 SQL Server 2000 데이터베이스에서 DACPAC 파일을 생성할 수 있도록 지원합니다.  
   
-    -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 에 제공되는 도구는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 데이터베이스 외에도 SQL Server 2008 R2 또는 SQL Server 2012에 제공된 DAC 도구로 생성된 DACPAC 파일을 읽을 수 있습니다. 여기에는 SQL Server 2012, SQL Server 2008 R2, SQL Server 2008 및 SQL Server 2005의 데이터베이스가 포함되지만 SQL Server 2000은 포함되지 않습니다.  
+    -   
+  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 에 제공되는 도구는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 데이터베이스 외에도 SQL Server 2008 R2 또는 SQL Server 2012에 제공된 DAC 도구로 생성된 DACPAC 파일을 읽을 수 있습니다. 여기에는 SQL Server 2012, SQL Server 2008 R2, SQL Server 2008 및 SQL Server 2005의 데이터베이스가 포함되지만 SQL Server 2000은 포함되지 않습니다.  
   
     -   SQL Server 2008 R2의 DAC 도구는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 도구로 생성된 DACPAC 파일을 읽을 수 없습니다.  
   
@@ -98,7 +99,7 @@ ms.locfileid: "62873104"
 ## <a name="backup-package-bacpac"></a>백업 패키지(.bacpac)  
  BACPAC는 데이터베이스에 저장된 데이터뿐만 아니라 데이터베이스 스키마를 캡슐화하는 아티팩트입니다. BACPAC는 확장명이 .bacpac인 Windows 파일입니다. DACPAC와 비슷하게 BACPAC 파일 형식도 개방형이며, BACPAC의 스키마 콘텐츠는 DACPAC의 스키마 콘텐츠와 동일합니다. 데이터는 JSON 형식으로 저장됩니다.  
   
- DACPAC와 BACPAC는 서로 비슷하지만 대상 시나리오가 서로 다릅니다. DACPAC는 기존 데이터베이스의 업그레이드를 포함하여 스키마를 캡처하고 배포하는 데 사용됩니다. DACPAC를 개발, 테스트 및 다음 프로덕션 환경에서는 반대로 밀접 하 게 정의 된 스키마를 배포 하는 것에 대 한 주요 사용 사례: 프로덕션 환경의 스키마를 캡처하고 다시 테스트 및 개발 환경에 적용 합니다.  
+ DACPAC와 BACPAC는 서로 비슷하지만 대상 시나리오가 서로 다릅니다. DACPAC는 기존 데이터베이스의 업그레이드를 포함하여 스키마를 캡처하고 배포하는 데 사용됩니다. DACPAC의 주요 사용 사례는 긴밀 하 게 정의 된 스키마를 개발, 테스트 및 프로덕션 환경에 배포 하 고 역방향: 프로덕션의 스키마를 캡처하여 테스트 및 개발 환경에 다시 적용 하는 것입니다.  
   
  반면에 BACPAC는 스키마와 데이터를 캡처하는 데 사용됩니다. BACPAC는 데이터베이스 백업과 논리적으로 동일하며 기존 데이터베이스를 업그레이드하는 데 사용할 수 없습니다. BACPAC의 기본 용도는 한 서버에서 다른 서버로 또는 로컬 서버에서 클라우드로 데이터베이스를 이동하고 기존 데이터베이스를 개방형 형식으로 보관하기 위한 것입니다.  
   
@@ -108,7 +109,7 @@ ms.locfileid: "62873104"
   
 -   **가져오기** - 사용자가 스키마 및 데이터를 호스트 서버의 새 데이터베이스로 가져올 수 있습니다.  
   
- 두이 기능이 모두 데이터베이스 관리 도구에서 지원 됩니다. Server Management Studio, SQL Azure 용 관리 포털 및 dacfx API에서 지원 합니다.  
+ 이러한 기능 모두 데이터베이스 관리 도구에서 지원 됩니다. 서버 Management Studio, SQL Azure 용 관리 포털 및 DACFx API입니다.  
   
 ## <a name="permissions"></a>사용 권한  
  DAC 패키지를 배포하여 데이터베이스를 만드는 작업을 포함하여 데이터베이스를 만들기 위해서는 사용자가 `dbmanager` 역할의 멤버이거나 사용자에게 `CREATE DATABASE` 권한이 할당되어 있어야 합니다. 데이터베이스를 삭제하기 위해서는 사용자가 `dbmanager` 역할의 멤버이거나 사용자에게 `DROP DATABASE` 권한이 할당되어 있어야 합니다.  
@@ -117,11 +118,11 @@ ms.locfileid: "62873104"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|DAC 패키지 파일을 사용하여 새 DAC 인스턴스를 만드는 방법에 대해 설명합니다.|[데이터 계층 응용 프로그램 배포](deploy-a-data-tier-application.md)|  
-|새 DAC 패키지 파일을 사용하여 인스턴스를 새 DAC 버전으로 업그레이드하는 방법에 대해 설명합니다.|[데이터 계층 응용 프로그램 업그레이드](upgrade-a-data-tier-application.md)|  
-|DAC 인스턴스를 제거하는 방법에 대해 설명합니다. 연결된 데이터베이스를 선택하여 분리 또는 삭제하거나 데이터베이스를 그대로 둘 수도 있습니다.|[데이터 계층 응용 프로그램 삭제](delete-a-data-tier-application.md)|  
-|SQL Server 유틸리티를 사용하여 현재 배포된 DAC의 상태를 확인하는 방법에 대해 설명합니다.|[데이터 계층 응용 프로그램 모니터링](data-tier-applications.md)|  
-|DAC의 데이터 및 메타데이터 보관 파일을 포함하는 .bacpac 파일을 만드는 방법에 대해 설명합니다.|[데이터 계층 응용 프로그램 내보내기](export-a-data-tier-application.md)|  
+|DAC 패키지 파일을 사용하여 새 DAC 인스턴스를 만드는 방법에 대해 설명합니다.|[데이터 계층 애플리케이션 배포](deploy-a-data-tier-application.md)|  
+|새 DAC 패키지 파일을 사용하여 인스턴스를 새 DAC 버전으로 업그레이드하는 방법에 대해 설명합니다.|[데이터 계층 애플리케이션 업그레이드](upgrade-a-data-tier-application.md)|  
+|DAC 인스턴스를 제거하는 방법에 대해 설명합니다. 연결된 데이터베이스를 선택하여 분리 또는 삭제하거나 데이터베이스를 그대로 둘 수도 있습니다.|[데이터 계층 애플리케이션 삭제](delete-a-data-tier-application.md)|  
+|SQL Server 유틸리티를 사용하여 현재 배포된 DAC의 상태를 확인하는 방법에 대해 설명합니다.|[데이터 계층 애플리케이션 모니터링](data-tier-applications.md)|  
+|DAC의 데이터 및 메타데이터 보관 파일을 포함하는 .bacpac 파일을 만드는 방법에 대해 설명합니다.|[데이터 계층 애플리케이션 내보내기](export-a-data-tier-application.md)|  
 |DAC 보관 파일(.bacpac)을 사용하여 DAC 논리 복원을 수행하거나, DAC를 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 또는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 다른 인스턴스로 마이그레이션하는 방법에 대해 설명합니다.|[BACPAC 파일을 가져와 새 사용자 데이터베이스 만들기](import-a-bacpac-file-to-create-a-new-user-database.md)|  
 |BACPAC 파일을 가져와서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스 내에 새 사용자 데이터베이스를 만드는 방법에 대해 설명합니다.|[데이터베이스에서 DAC 추출](extract-a-dac-from-a-database.md)|  
 |기존 데이터베이스를 DAC 인스턴스로 승격하는 방법에 대해 설명합니다. DAC 정의는 작성된 후 시스템 데이터베이스에 저장됩니다.|[DAC로 데이터베이스 등록](register-a-database-as-a-dac.md)|  
@@ -129,7 +130,7 @@ ms.locfileid: "62873104"
 |패키지를 프로덕션 서버에 배포하기 전에 데이터베이스 관리자가 DAC에서 수행하는 작업을 검토할 수 있도록 DAC 패키지 내용을 폴더에 넣는 방법에 대해 설명합니다.|[DAC 패키지 압축 풀기](unpack-a-dac-package.md)|  
 |마법사를 사용하여 기존 데이터베이스를 배포하는 방법에 대해 설명합니다. 마법사는 DAC를 사용하여 배포를 수행합니다.|[DAC를 사용하여 데이터베이스 배포](deploy-a-database-by-using-a-dac.md)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 개체 및 버전에 대한 DAC 지원](dac-support-for-sql-server-objects-and-versions.md)  
   
   

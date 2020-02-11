@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aa9d5a5352afd10617358a032824d275b14b6c5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079706"
 ---
 # <a name="performance-counters-ssas"></a>성능 카운터(SSAS)
@@ -24,7 +24,9 @@ ms.locfileid: "66079706"
   
  성능 모니터는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 원격 및 로컬 인스턴스를 모니터링할 수 있습니다. 자세한 내용은 [성능 모니터 사용](https://technet.microsoft.com/library/cc749115.aspx)을 참조하십시오.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]와 함께 사용할 수 있는 카운터에 대한 설명을 보려면 성능에서 **카운터 추가** 대화 상자를 열고 성능 개체를 선택한 다음 **설명 표시**를 클릭하십시오. 가장 중요한 카운터는 CPU  사용량,  메모리 사용량,  디스크 IO  속도입니다. 이 중요한 카운터부터 사용해 보고 모니터링을 통해 향상될 수 있는 다른 사항에 대해 더 나은 생각이 떠오를 때 보다 세부적인 카운터를 시도하는 것이 좋습니다. 포함할 카운터에 대한 자세한 내용은 [SQL  Server  2008  R2작업 가이드](https://go.microsoft.com/fwlink/?LinkID=225539)를 참조하십시오.  
+ 
+  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]와 함께 사용할 수 있는 카운터에 대한 설명을 보려면 성능에서 **카운터 추가** 대화 상자를 열고 성능 개체를 선택한 다음 **설명 표시**를 클릭하십시오. 가장 중요한 카운터는 CPU  사용량,  메모리 사용량,  디스크 IO  속도입니다. 이 중요한 카운터부터 사용해 보고 모니터링을 통해 향상될 수 있는 다른 사항에 대해 더 나은 생각이 떠오를 때 보다 세부적인 카운터를 시도하는 것이 좋습니다. 포함할 카운터에 대한 자세한 내용은 [SQL  Server  2008  R2작업 가이드](https://go.microsoft.com/fwlink/?LinkID=225539)를 참조하십시오.  
   
  카운터는 관련된 카운터를 더 쉽게 찾을 수 있도록 그룹화되어 있습니다.  
   
@@ -42,11 +44,11 @@ ms.locfileid: "66079706"
 |[자동 관리 캐싱](#bkmk_ProactiveCaching)|Microsoft  Analysis  Services  자동 관리 캐싱과 관련된 통계입니다.|  
 |[집계 처리](#bkmk_ProcAggregations)|MOLAP  데이터 파일의 집계 처리와 관련된 통계입니다.|  
 |[인덱스 처리](#bkmk_ProcIndexes)|MOLAP  데이터 파일의 인덱스 처리와 관련된 통계입니다.|  
-|[처리](#bkmk_Processing)|데이터 처리와 관련된 통계입니다.|  
+|[프로세스가](#bkmk_Processing)|데이터 처리와 관련된 통계입니다.|  
 |[저장소 엔진 쿼리](#bkmk_StorageEngineQuery)|Microsoft Analysis Services 스토리지 엔진 쿼리와 관련된 통계입니다.|  
-|[스레드](#bkmk_Threads)|Microsoft  Analysis  Services  스레드와 관련된 통계입니다.|  
+|[임계값](#bkmk_Threads)|Microsoft  Analysis  Services  스레드와 관련된 통계입니다.|  
   
-###  <a name="bkmk_Cache"></a> 캐시  
+###  <a name="bkmk_Cache"></a>캐시  
  Microsoft  Analysis  Services  집계 캐시와 관련된 통계입니다.  
   
 |카운터|Description|  
@@ -68,21 +70,21 @@ ms.locfileid: "66079706"
 |Total  filtered  iterator  cache  hits|필터링된 결과에서 인덱싱된 반복자를 반환하는 총 캐시 적중 수입니다.|  
 |Total  filtered  iterator  cache  misses|필터링된 결과에서 인덱싱된 반복자를 작성할 수 없어서 필터링된 결과로 새 캐시를 작성해야 하는 총 캐시 적중 수입니다.|  
   
-###  <a name="bkmk_Connection"></a> 연결  
+###  <a name="bkmk_Connection"></a>연결  
  Microsoft  Analysis  Services  연결과 관련된 통계입니다.  
   
 |카운터|Description|  
 |-------------|-----------------|  
-|Current  connections|현재 설정된 클라이언트 연결 수입니다.|  
-|Requests/sec|도착한 연결 요청  수입니다.|  
-|Total  requests|도착한 총 연결 요청  수입니다.|  
+|현재 연결|현재 설정된 클라이언트 연결 수입니다.|  
+|요청/초|도착한 연결 요청  연결 요청 수입니다.|  
+|Total  requests|도착한 총  연결 요청 수입니다.|  
 |Successes/sec|성공적으로 완료된 연결 비율입니다.|  
 |Total  successes|성공한 총 연결 수입니다.|  
 |Failures/sec|실패한 연결 비율입니다.|  
 |Total  failures|실패한 총 연결 시도 수입니다.|  
 |Current  user  sessions|현재 설정된 사용자 세션 수입니다.|  
   
-###  <a name="bkmk_DataMiningModelProcessing"></a> 데이터 마이닝 모델 처리  
+###  <a name="bkmk_DataMiningModelProcessing"></a>데이터 마이닝 모델 처리  
  Microsoft  Analysis  Services  데이터 마이닝 모델 처리와 관련된 통계입니다.  
   
 |카운터|Description|  
@@ -90,7 +92,7 @@ ms.locfileid: "66079706"
 |Cases/sec|사례가 처리되는 속도입니다.|  
 |Current  models  processing|현재 처리 중인 모델 수입니다.|  
   
-###  <a name="bkmk_DataMiningPrediction"></a> 데이터 마이닝 예측  
+###  <a name="bkmk_DataMiningPrediction"></a>데이터 마이닝 예측  
  Microsoft  Analysis  Services  데이터 마이닝 예측과 관련된 통계입니다.  
   
 |카운터|Description|  
@@ -103,7 +105,7 @@ ms.locfileid: "66079706"
 |Total  Rows|데이터 마이닝 쿼리에서 반환되는 총 행 수입니다.|  
 |Total  Predictions|서버에서 받는 총 데이터 마이닝 예측 쿼리 수입니다.|  
   
-###  <a name="bkmk_Locks"></a> 잠금  
+###  <a name="bkmk_Locks"></a>중지  
  Microsoft  Analysis  Services  내부 서버 잠금과 관련된 통계입니다.  
   
 |카운터|Description|  
@@ -119,7 +121,7 @@ ms.locfileid: "66079706"
 |Unlock requests/sec|초당 잠금 해제 요청 수입니다.|  
 |Total  deadlocks  detected|발견된 교착 상태의 총 수입니다.|  
   
-###  <a name="bkmk_MDX"></a> MDX  
+###  <a name="bkmk_MDX"></a>MDX  
  Microsoft  Analysis  Services  MDX  계산과 관련된 통계입니다.  
   
 |카운터|Description|  
@@ -152,7 +154,7 @@ ms.locfileid: "66079706"
 |Total  Autoexist|AUTOEXIST를 수행한 총 횟수입니다.|  
 |Total  EXISTING|EXISTING  집합 연산을 수행한 총 횟수입니다.|  
   
-###  <a name="bkmk_Memory"></a> 메모리  
+###  <a name="bkmk_Memory"></a>Ram  
  Microsoft  Analysis  Services  내부 서버 메모리와 관련된 통계입니다.  
   
 |카운터|Description|  
@@ -163,18 +165,18 @@ ms.locfileid: "66079706"
 |Page Pool 8 Lookaside KB|8KB 할당 준비 목록에 있는 현재 메모리(KB)입니다.  메모리 페이지를 사용할 준비가 되었습니다.|  
 |Page Pool 1 Alloc KB|64KB  페이지 풀에서 빌려 온 메모리(KB)입니다.  이 메모리는 서버의 다른 부분에 제공됩니다.|  
 |Page Pool 1 Lookaside KB|8KB 할당 준비 목록에 있는 현재 메모리(KB)입니다.  메모리 페이지를 사용할 준비가 되었습니다.|  
-|Cleaner  Current  Price|1000  단위로 규정된 메모리의 현재 가격($/바이트/시간)입니다.|  
+|클리너 현재 가격|현재 메모리 가격, $/바이트/시간, 1000으로 일반화됩니다.|  
 |Cleaner Balance/sec|밸런스 및 축소 작업의 비율입니다.|  
 |Cleaner Memory shrunk KB/sec|축소 속도(KB/초)입니다.|  
 |Cleaner Memory shrinkable KB|백그라운드에서 수행되는 클리너에 의한 제거에 영향을 받는 메모리 용량(KB)입니다.|  
 |Cleaner  Memory  nonshrinkable  KB|백그라운드에서 수행되는 클리너에 의한 제거에 영향을 받지 않는 메모리 용량(KB)입니다.|  
 |Cleaner  Memory  KB|백그라운드에서 수행되는 클리너에 인식된 메모리 용량(KB)입니다.  (클리너 메모리 축소 가능 +  클리너 메모리 축소 불가능.)|  
-|Memory  Usage  KB|더욱 명확한 메모리 비용 계산에 사용되는 서버 프로세스의 메모리 사용량입니다.  Process\PrivateBytes  카운터와 메모리가 매핑된 데이터의 크기를 더한 값과 동일하며,  xVelocity  엔진 Memory  Limit를 초과하여 xVelocity  메모리 내 분석 엔진(VertiPaq)에 의해 매핑되었거나 할당된 메모리는 무시합니다.|  
-|Memory  Limit  Low  KB|구성 파일의 하한 메모리 제한입니다.|  
-|Memory  Limit  High  KB|구성 파일의 상한 메모리 제한입니다.|  
+|Memory  Usage  KB|클리너 메모리 가격을 계산하는 데 사용되는 서버 프로세스의 메모리 사용량입니다.  메모리 매핑된 데이터 크기를 더한 카운터 Process\PrivateBytes와 동일하며 xVelocity 엔진 메모리 제한을 초과하여 xVelocity 메모리 내 분석 엔진(VertiPaq)에서 매핑하거나 할당하는 메모리를 무시합니다.|  
+|Memory  Limit  Low  KB|하한 메모리 제한, 구성 파일 원본입니다.|  
+|Memory  Limit  High  KB|상한 메모리 제한, 구성 파일 원본입니다.|  
 |AggCacheKB|집계 캐시에 할당된 현재 메모리(KB)입니다.|  
 |Quota  KB|현재 메모리 할당량(KB)입니다.  메모리 할당량은 메모리 부여 또는 메모리 예약이라고도 합니다.|  
-|Quota  Blocked|다른 메모리 할당량이 해제될 때까지 차단되는 현재 할당량 요청 수입니다.|  
+|차단된 할당량|다른 메모리 할당량이 해제될 때까지 차단되는 할당량 요청의 현재 수입니다.|  
 |Filestore KB|파일 저장소(파일 캐시)에 할당된 현재 메모리(KB)입니다.|  
 |Filestore  Page  Faults/sec|파일 저장소 페이지 폴트 비율입니다.|  
 |Filestore  Reads/sec|초당 파일 저장소 페이지 읽기 수입니다.|  
@@ -226,10 +228,10 @@ ms.locfileid: "66079706"
 |VertiPaq Paged KB|메모리 내 데이터에 대해 사용 중인 페이징된 메모리(KB)입니다.|  
 |VertiPaq Nonpaged KB|메모리 내 엔진에서 사용하기 위한 작업 집합에 잠긴 메모리(KB)입니다.|  
 |VertiPaq Memory-Mapped KB|메모리 내 데이터에 대해 사용 중인 페이징 가능한 메모리(KB)입니다.|  
-|Memory Limit Hard KB|구성 파일의 하드 메모리 제한입니다.|  
-|Memory Limit VertiPaq KB|구성 파일의 메모리 내 제한입니다.|  
+|Memory Limit Hard KB|하드 메모리 제한, 구성 파일 원본입니다.|  
+|Memory Limit VertiPaq KB|메모리 내 제한, 구성 파일 원본입니다.|  
   
-###  <a name="bkmk_ProactiveCaching"></a> 자동 관리 캐싱  
+###  <a name="bkmk_ProactiveCaching"></a>자동 관리 캐싱  
  Microsoft  Analysis  Services  자동 관리 캐싱과 관련된 통계입니다.  
   
 |카운터|Description|  
@@ -239,7 +241,7 @@ ms.locfileid: "66079706"
 |Proactive Caching Begin/sec|자동 관리 캐싱 시작 비율입니다.|  
 |Proactive Caching Completion/sec|자동 관리 캐싱 완료 비율입니다.|  
   
-###  <a name="bkmk_ProcAggregations"></a> 집계 처리  
+###  <a name="bkmk_ProcAggregations"></a>집계 처리  
  MOLAP  데이터 파일의 Microsoft  Analysis  Services  집계 처리와 관련된 통계입니다.  
   
 |카운터|Description|  
@@ -253,7 +255,7 @@ ms.locfileid: "66079706"
 |Temp  file  rows  written/sec|임시 파일에 쓰는 행의 비율입니다.  이 작업은 집계가 메모리 한계를 초과할 때 발생합니다.|  
 |Temp  file  bytes  written/sec|임시 파일에 쓰는 바이트의 비율입니다.  이 작업은 집계가 메모리 한계를 초과할 때 발생합니다.|  
   
-###  <a name="bkmk_ProcIndexes"></a> 인덱스 처리  
+###  <a name="bkmk_ProcIndexes"></a>인덱스 처리  
  MOLAP  데이터 파일의 Microsoft  Analysis  Services  인덱스 처리와 관련된 통계입니다.  
   
 |카운터|Description|  
@@ -263,7 +265,7 @@ ms.locfileid: "66079706"
 |Rows/sec|인덱스를 만드는 데 사용한 MOLAP  파일의 행 비율입니다.|  
 |Total  Rows|인덱스를 만드는 데 사용한 MOLAP  파일의 총 행 수입니다.|  
   
-###  <a name="bkmk_Processing"></a> 처리  
+###  <a name="bkmk_Processing"></a>프로세스가  
  Microsoft  Analysis  Services  데이터 처리와 관련된 통계입니다.  
   
 |카운터|Description|  
@@ -272,10 +274,10 @@ ms.locfileid: "66079706"
 |Total  rows  read|모든 관계형 데이터베이스에서 읽은 행 수입니다.|  
 |Rows  converted/sec|처리하는 동안 변환된 행의 비율입니다.|  
 |Total  rows  converted|처리하는 동안 변환된 행 수입니다.|  
-|Rows  written/sec|처리하는 동안 쓴 행의 비율입니다.|  
+|Rows  written/sec|처리하는 동안 작성된 행의 비율입니다.|  
 |Total  rows  written|처리하는 동안 쓴 행 수입니다.|  
   
-###  <a name="bkmk_StorageEngineQuery"></a> 저장소 엔진 쿼리  
+###  <a name="bkmk_StorageEngineQuery"></a>저장소 엔진 쿼리  
  Microsoft Analysis Services 스토리지 엔진 쿼리와 관련된 통계입니다.  
   
 |카운터|Description|  
@@ -318,30 +320,30 @@ ms.locfileid: "66079706"
 |Aggregation  lookups/sec|집계 조회 비율입니다.|  
 |Aggregation  hits/sec|집계 적중 비율입니다.|  
   
-###  <a name="bkmk_Threads"></a> 스레드  
+###  <a name="bkmk_Threads"></a>임계값  
  Microsoft  Analysis  Services  스레드와 관련된 통계입니다.  
   
 |카운터|Description|  
 |-------------|-----------------|  
-|Short  parsing  idle  threads|짧은 구문 분석 스레드 풀의 유휴 상태 스레드 수입니다.|  
-|Short  parsing  busy  threads|짧은 구문 분석 스레드 풀의 사용 중인 스레드 수입니다.|  
-|Short  parsing  job  queue  length|짧은 구문 분석 스레드 풀의 큐에 있는 작업 수입니다.|  
+|짧은 구문 분석 유휴 상태 스레드|짧은 구문 분석 스레드 풀에서 유휴 상태 스레드 수입니다.|  
+|짧은 구문 분석 사용 중인 스레드|짧은 구문 분석 스레드 풀에서 사용 중인 스레드 수입니다.|  
+|짧은 구문 분석 작업 큐 길이|짧은 구문 분석 스레드 풀의 큐에 있는 작업 수입니다.|  
 |Short  parsing  job  rate|짧은 구문 분석 스레드 풀을 통한 작업 비율입니다.|  
-|Long  parsing  idle  threads|긴 구문 분석 스레드 풀의 유휴 상태 스레드 수입니다.|  
-|Long  parsing  busy  threads|긴 구문 분석 스레드 풀의 사용 중인 스레드 수입니다.|  
-|Long  parsing  job  queue  length|긴 구문 분석 스레드 풀의 큐에 있는 작업 수입니다.|  
+|긴 구문 분석 유휴 상태 스레드|긴 구문 분석 스레드 풀에서 유휴 상태 스레드 수입니다.|  
+|긴 구문 분석 사용 중인 스레드|긴 구문 분석 스레드 풀에서 사용 중인 스레드 수입니다.|  
+|긴 구문 분석 작업 큐 길이|긴 구문 분석 스레드 풀의 큐에 있는 작업 수입니다.|  
 |Long  parsing  job  rate|긴 구문 분석 스레드 풀을 통한 작업 비율입니다.|  
-|Query  pool  idle  threads|쿼리 스레드 풀의 유휴 상태 스레드 수입니다.|  
+|쿼리 풀 유휴 상태 스레드|쿼리 스레드 풀의 유휴 상태 스레드 수입니다.|  
 |Query  pool  busy  threads|쿼리 스레드 풀의 사용 중인 스레드 수입니다.|  
-|Query  pool  job  queue  length|쿼리 스레드 풀의 큐에 있는 작업 수입니다.|  
+|쿼리 풀 작업 큐 길이|쿼리 스레드 풀의 큐에 있는 작업 수입니다.|  
 |Query  pool  job  rate|쿼리 스레드 풀을 통한 작업 비율입니다.|  
-|Processing pool idle non-I/O threads|비-I/O  작업에만 사용되는 처리 스레드 풀의 유휴 상태 스레드 수입니다.|  
-|Processing pool busy non-I/O threads|처리 스레드 풀에서 비-I/O  작업을 실행 중인 스레드 수입니다.|  
-|Processing pool job queue length|처리 스레드 풀의 큐에 있는 비-I/O  작업 수입니다.|  
+|처리 풀 유휴 상태 비-I/O 스레드|비-I/O 작업 전용인 처리 스레드 풀에서 유휴 상태 스레드 수입니다.|  
+|처리 풀 사용 중인 비-I/O 스레드|처리 스레드 풀에서 비-I/O 작업을 실행 중인 스레드 수입니다.|  
+|Processing pool job queue length|처리 스레드 풀의 큐에 있는 비-I/O 작업 수입니다.|  
 |Processing  pool  job  rate|처리 스레드 풀을 통한 비-I/O  작업 비율입니다.|  
-|Processing  pool  idle  I/O  job  threads|처리 스레드 풀에서 I/O 작업에 사용되는 유휴 상태 스레드 수입니다.|  
-|Processing  pool  busy  I/O  job  threads|처리 스레드 풀에서 I/O 작업을 실행 중인 스레드 수입니다.|  
-|Processing  pool  I/O  job  queue  length|처리 스레드 풀의 큐에 있는 I/O  작업 수입니다.|  
+|처리 풀 유휴 상태 I/O 작업 스레드|처리 스레드 풀에서 I/O 작업의 유휴 상태 스레드 수입니다.|  
+|처리 풀 사용 중인 I/O 작업 스레드|처리 스레드 풀에서 I/O 작업을 실행 중인 스레드 수입니다.|  
+|처리 중인 풀 I/O 작업 큐 길이|처리 스레드 풀의 큐에 있는 I/O 작업 수입니다.|  
 |Processing  pool  I/O  job  completion  rate|처리 스레드 풀을 통한 I/O 작업 비율입니다.|  
   
   

@@ -15,13 +15,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9e779a0c0da9920b2efda5f52135e85f31959d10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62843559"
 ---
 # <a name="share-files"></a>파일 공유
+  
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 사용하여 여러 원본 제어 프로젝트에서 항목을 공유할 수 있습니다. 항목을 공유할 경우 항목에 대한 모든 변경 내용이 항목이 공유되는 모든 프로젝트에 반영됩니다.  
   
  항목 공유는 원본 제어 사용자에게 다음 장점을 제공합니다.  
@@ -34,13 +35,13 @@ ms.locfileid: "62843559"
   
 1.  솔루션 탐색기에서 공유 파일을 넣으려는 폴더나 프로젝트를 선택합니다.  
   
-2.  에 **파일** 메뉴에서 **소스 제어**를 클릭 하 고 **공유**합니다.  
+2.  **파일** 메뉴에서 **원본 제어**를 가리킨 다음 **공유**를 클릭 합니다.  
   
-3.  에 **공유할** 대화 상자에서 공유 하려는 항목에 대 한 디렉터리 목록을 검색 하 고 해당 항목을 클릭 합니다.  
+3.  **공유** 대상 대화 상자에서 공유할 항목의 디렉터리 목록을 검색 하 고 해당 항목을 클릭 합니다.  
   
-4.  클릭 **공유**합니다.  
+4.  **공유**를 클릭 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [원본 제어 기본 사항](../../2014/database-engine/source-control-basics.md)  
   
   
