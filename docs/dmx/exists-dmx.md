@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 0197417dfef604f3cb90b5fa032dae892de272c7
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889045"
 ---
 # <a name="exists-dmx"></a>Exists(DMX)
@@ -29,9 +29,9 @@ EXISTS(<subquery>)
   
 ## <a name="arguments"></a>인수  
  *subquery*  
- Select * FROM \<열 name > [WHERE \<predicate list >] 형식의 select 문입니다.  
+ Select * FROM \<열 name> [WHERE \<predicate LIST>] 형식의 select 문입니다.  
   
-## <a name="result-type"></a>결과 유형  
+## <a name="result-type"></a>결과 형식  
  하위 쿼리에서 반환 된 결과 집합에 하나 이상의 행이 포함 된 경우 **true** 를 반환 합니다. 그렇지 않으면 **false**를 반환 합니다.  
   
 ## <a name="remarks"></a>설명  
@@ -55,8 +55,8 @@ WHERE [[Model] = 'Patch kit'
   
  이 쿼리에서 반환 되는 것과 동일한 데이터를 볼 수 있는 다른 방법은 연결 뷰어에서 모델을 열고, 항목 집합 **패치 키트 = 기존**을 마우스 오른쪽 단추로 클릭 하 고, **드릴스루** 옵션을 선택한 다음, **모델 사례만**을 선택 하는 것입니다.  
   
-## <a name="see-also"></a>관련 항목  
- [함수 &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [모델 필터 구문 및 예제 &#40;Analysis Services-데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining)  
+## <a name="see-also"></a>참고 항목  
+ [DMX &#40;함수&#41;](../dmx/functions-dmx.md)   
+ [모델 필터 구문 및 예제 &#40;Analysis Services 데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining)  
   
   

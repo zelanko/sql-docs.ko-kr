@@ -16,18 +16,18 @@ ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 2190e31245cde19eca4c5a47f21ac48e12f57f53
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771395"
 ---
-# <a name="spadddistpublisher-transact-sql"></a>sp_adddistpublisher(Transact-SQL)
+# <a name="sp_adddistpublisher-transact-sql"></a>sp_adddistpublisher(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  지정된 배포 데이터베이스를 사용하기 위해 게시자를 구성합니다. 이 저장 프로시저는 모든 데이터베이스의 배포자에서 실행됩니다. 이 저장 프로시저를 사용 하기 전에 [sp_adddistributor &#40;&#41; ](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) 및 [sp_adddistributiondb &#40;&#41; ](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) 저장 프로시저를 실행 해야 합니다.  
+  지정된 배포 데이터베이스를 사용하기 위해 게시자를 구성합니다. 이 저장 프로시저는 모든 데이터베이스의 배포자에서 실행됩니다. 이 저장 프로시저를 사용 하기 전에 [transact-sql sp_adddistributiondb&#41;&#40;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) transact-sql [&#40;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) sp_adddistributor 저장 프로시저를 실행 해야 합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -58,14 +58,14 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 |**0**|배포자의 복제 에이전트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 게시자에 연결합니다.|  
 |**1** (기본값)|배포자의 복제 에이전트는 Windows 인증을 사용하여 게시자에 연결합니다.|  
   
-`[ @login = ] 'login'`로그인입니다. *Security_mode* 가 **0**인 경우이 매개 변수는 필수입니다. *login*은 **sysname**이며 기본값은 NULL입니다. 이 매개 변수는 복제 에이전트가 게시자에 연결할 때 사용합니다.  
+`[ @login = ] 'login'`로그인입니다. *Security_mode* 가 **0**인 경우이 매개 변수는 필수입니다. *login* 은 **sysname**이며 기본값은 NULL입니다. 이 매개 변수는 복제 에이전트가 게시자에 연결할 때 사용합니다.  
   
 `[ @password = ] 'password']`암호입니다. *password* 는 **sysname**이며 기본값은 NULL입니다. 이 매개 변수는 복제 에이전트가 게시자에 연결할 때 사용합니다.  
   
 > [!IMPORTANT]  
 >  빈 암호를 사용하지 마세요. 강력한 암호를 사용하세요.  
   
-`[ @working_directory = ] 'working_directory'`게시에 대 한 데이터 및 스키마 파일을 저장 하는 데 사용 되는 작업 디렉터리의 이름입니다. *working_directory* 는 **nvarchar (255)** 이며 기본값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이 인스턴스에 대 한 repldata 폴더입니다 (예: `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`). 이름은 UNC 형식으로 지정해야 합니다.  
+`[ @working_directory = ] 'working_directory'`게시에 대 한 데이터 및 스키마 파일을 저장 하는 데 사용 되는 작업 디렉터리의 이름입니다. *working_directory* 은 **nvarchar (255)** 이며 기본값은이 인스턴스에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]대 한 repldata 폴더입니다 (예: `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`). 이름은 UNC 형식으로 지정해야 합니다.  
 
  Azure SQL Database의 경우를 `\\<storage_account>.file.core.windows.net\<share>`사용 합니다.
 
@@ -77,20 +77,22 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
   
 `[ @encrypted_password = ] encrypted_password`*Encrypted_password* 설정은 더 이상 지원 되지 않습니다. 이 **비트** 매개 변수를 **1** 로 설정 하려고 하면 오류가 발생 합니다.  
   
-`[ @thirdparty_flag = ] thirdparty_flag`게시자가 인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]경우입니다. *thirdparty_flag* 는 **bit**이며 다음 값 중 하나일 수 있습니다.  
+`[ @thirdparty_flag = ] thirdparty_flag`게시자가 인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]경우입니다. *thirdparty_flag* **bit**이며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
-|**0** (기본값)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.|  
-|**1**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 아닌 데이터베이스입니다.|  
+|**0** (기본값)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터.|  
+|**1**|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 아닌 데이터베이스입니다.|  
   
 `[ @publisher_type = ] 'publisher_type'`게시자가가 아닌 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]경우 게시자 유형을 지정 합니다. *publisher_type* 는 sysname 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
-|**MSSQLSERVER**<br /><br /> (기본값)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정합니다.|  
+|**MSSQLSERVER**<br /><br /> (기본값)|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정합니다.|  
 |**ORACLE**|표준 Oracle 게시자를 지정합니다.|  
-|**ORACLE 게이트웨이**|Oracle Gateway 게시자를 지정합니다.|  
+|**ORACLE GATEWAY**|Oracle Gateway 게시자를 지정합니다.|  
   
  Oracle 게시자와 Oracle Gateway 게시자 간의 차이점에 대 한 자세한 내용은 [Oracle 게시자 구성](../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)을 참조 하세요.  
   
@@ -104,13 +106,13 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
  [!code-sql[HowTo#AddDistPub](../../relational-databases/replication/codesnippet/tsql/sp-adddistpublisher-tran_1.sql)]  
   
 ## <a name="permissions"></a>사용 권한  
- **Sysadmin** 고정 서버 역할의 멤버만 **sp_adddistpublisher**을 실행할 수 있습니다.  
+ **Sysadmin** 고정 서버 역할의 멤버만 **sp_adddistpublisher**를 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [게시 및 배포 구성](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [sp_changedistpublisher&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
- [sp_dropdistpublisher &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
- [sp_helpdistpublisher&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
+ [Transact-sql&#41;sp_changedistpublisher &#40;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
+ [Transact-sql&#41;sp_dropdistpublisher &#40;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
+ [Transact-sql&#41;sp_helpdistpublisher &#40;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [배포 구성](../../relational-databases/replication/configure-distribution.md)  
   

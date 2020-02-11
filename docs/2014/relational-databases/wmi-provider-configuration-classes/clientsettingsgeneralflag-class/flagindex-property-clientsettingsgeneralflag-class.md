@@ -1,5 +1,5 @@
 ---
-title: FlagIndex 속성 (ClientSettingsGeneralFlag 클래스) | Microsoft Docs
+title: 로 속성 인덱스 속성 (ClientSettingsGeneralFlag 클래스) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0200ce01bd8c2218272d56635b15fcf7a41e744e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63242697"
 ---
 # <a name="flagindex-property-clientsettingsgeneralflag-class"></a>FlagIndex 속성(ClientSettingsGeneralFlag 클래스)
@@ -37,15 +37,15 @@ object
 ```  
   
 ## <a name="parts"></a>부분  
- *object*  
+ *개체가*  
  서버 설정에 대한 일반 플래그를 나타내는 [ClientSettingsGeneralFlag 클래스](clientsettingsgeneralflag-class.md) 개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  플래그의 인덱스 값을 지정하는 u`int32` 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [클라이언트 프로토콜 구성](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

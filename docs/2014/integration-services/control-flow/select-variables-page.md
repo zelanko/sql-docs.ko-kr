@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 49c5b559d675ec29ab85a68b9ac31a619e2538ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830286"
 ---
 # <a name="select-variables-page"></a>변수 선택 페이지
@@ -27,7 +27,7 @@ ms.locfileid: "62830286"
   
  **변수 선택** 대화 상자를 열려면 **스크립트 변환 편집기** 대화 상자의 **스크립트** 페이지의 **사용자 지정 속성**에서 **ReadOnlyVariables** 또는 **ReadWriteVariables** 속성을 찾은 다음, 해당 속성과 연결된 줄임표(…) 단추를 클릭합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  선택 상자  
  특정 변수를 선택하거나 모든 변수를 선택하거나 모든 변수의 선택을 해제합니다.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "62830286"
  **형식**  
  변수의 데이터 형식을 지정합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [스크립트 태스크 편집기&#40;스크립트 페이지&#41;](../script-task-editor-script-page.md)  
   
   

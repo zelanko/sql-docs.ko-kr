@@ -1,5 +1,5 @@
 ---
-title: 방법 도움말 항목 (ODBC) 쿼리를 실행할 | Microsoft Docs
+title: 쿼리 실행 방법 도움말 항목 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6b892adaf02f13ec7de150ae1de9966a65ac1d7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200381"
 ---
 # <a name="executing-queries-how-to-topics-odbc"></a>쿼리 실행 방법 도움말 항목(ODBC)
@@ -24,15 +24,15 @@ ms.locfileid: "63200381"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [문을 사용 하 여 &#40;ODBC&#41;](use-a-statement-odbc.md)  
+-   [문을 사용 하 여 ODBC&#41;&#40;](use-a-statement-odbc.md)  
   
--   [커서 옵션 설정 &#40;ODBC&#41;](set-cursor-options-odbc.md)  
+-   [ODBC&#41;&#40;커서 옵션 설정](set-cursor-options-odbc.md)  
   
--   [문을 직접 실행 &#40;ODBC&#41;](execute-a-statement-directly-odbc.md)  
+-   [ODBC&#41;&#40;직접 문 실행](execute-a-statement-directly-odbc.md)  
   
--   [준비와 문 실행 &#40;ODBC&#41;](prepare-and-execute-a-statement-odbc.md)  
+-   [ODBC&#41;&#40;문을 준비 하 고 실행 합니다.](prepare-and-execute-a-statement-odbc.md)  
   
-## <a name="see-also"></a>관련 항목  
- [ODBC 방법 도움말 항목](../odbc-how-to-topics.md)  
+## <a name="see-also"></a>참고 항목  
+ [ODBC How-to Topics](../odbc-how-to-topics.md)  
   
   

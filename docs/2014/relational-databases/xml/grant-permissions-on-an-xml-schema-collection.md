@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e009f0fe22156f9a652dd19fceddf02bbc48c247
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63288762"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>XML 스키마 컬렉션에 대한 사용 권한 부여
@@ -61,12 +61,13 @@ ms.locfileid: "63288762"
   
 -   보안 주체가 컬렉션에 대해 ALTER, REFERENCES 또는 CONTROL 권한 중 하나를 가진 경우 VIEW DEFINITION 권한을 사용하면 보안 주체가 XML_SCHEMA_NAMESPACE 또는 카탈로그 뷰를 통해 XML 스키마 컬렉션의 내용을 쿼리할 수 있습니다.  
   
--   `xml` 유형 열, 변수 및 매개 변수를 형식화하거나 제약하는 XML 스키마 컬렉션에 대해 보안 주체가 삽입하거나 업데이트한 값의 유효성을 검사하려면 EXECUTE 권한이 필요합니다. 이 권한은 이러한 열 및 변수에 저장된 XML을 쿼리할 때도 필요합니다.  
+-   
+  `xml` 유형 열, 변수 및 매개 변수를 형식화하거나 제약하는 XML 스키마 컬렉션에 대해 보안 주체가 삽입하거나 업데이트한 값의 유효성을 검사하려면 EXECUTE 권한이 필요합니다. 이 권한은 이러한 열 및 변수에 저장된 XML을 쿼리할 때도 필요합니다.  
   
 ## <a name="examples"></a>예  
  다음 예의 시나리오에서는 XML 스키마 권한의 작동 방식을 보여 줍니다. 각 예에서는 필요한 테스트 데이터베이스, 관계형 스키마 및 로그인을 만듭니다. 이러한 로그인에는 필요한 XML 스키마 컬렉션 권한이 부여됩니다. 각 예에서는 종료 시 필요한 정리를 수행합니다.  
   
-### <a name="a-granting-permissions-to-create-an-xml-schema-collection"></a>1. XML 스키마 컬렉션을 만들 권한 부여  
+### <a name="a-granting-permissions-to-create-an-xml-schema-collection"></a>A. XML 스키마 컬렉션을 만들 권한 부여  
  다음 예에서는 보안 주체가 XML 스키마 컬렉션을 만들 수 있도록 권한을 부여하는 방법을 보여 줍니다. 이 예에서는 `TestLogin1`이라는 테스트 사용자와 예제 데이터베이스를 만듭니다. `TestLogin1` 은 관계형 스키마에 대해 `ALTER` 권한을 부여받고 데이터베이스에 대해 `CREATE XML SCHEMA COLLECTION` 권한을 부여받습니다. 이러한 권한을 통해 `TestLogin1` 은 예제 XML 스키마 컬렉션을 성공적으로 만듭니다.  
   
 ```  
@@ -120,7 +121,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### <a name="b-granting-permission-to-use-an-existing-xml-schema-collection"></a>2. 기존 XML 스키마 컬렉션을 사용할 권한 부여  
+### <a name="b-granting-permission-to-use-an-existing-xml-schema-collection"></a>B. 기존 XML 스키마 컬렉션을 사용할 권한 부여  
  다음 예에서는 XML 스키마 컬렉션에 대한 권한 모델을 보여 줍니다. XML 스키마 컬렉션을 만들고 사용하는 데 다른 권한이 필요한지 설명합니다.  
   
  이 예에서는 테스트 데이터베이스와 `TestLogin1`이라는 로그인을 만듭니다. `TestLogin1` 은 데이터베이스에 XML 스키마 컬렉션을 만듭니다. 이 로그인은 테이블을 만들고 XML 스키마 컬렉션을 사용하여 형식화된 xml 열을 만듭니다. 그런 다음 데이터를 삽입하고 쿼리합니다. 이러한 모든 단계에는 코드에 표시된 대로 필요한 스키마 권한이 있어야 합니다.  
@@ -237,7 +238,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### <a name="c-granting-alter-permission-on-an-xml-schema-collection"></a>3. XML 스키마 컬렉션에 대한 ALTER 권한 부여  
+### <a name="c-granting-alter-permission-on-an-xml-schema-collection"></a>C. XML 스키마 컬렉션에 대한 ALTER 권한 부여  
  사용자가 데이터베이스에서 기존 XML 스키마 컬렉션을 수정하려면 ALTER 권한이 있어야 합니다. 다음 예에서는 `ALTER` 권한을 부여하는 방법을 보여 줍니다.  
   
 ```  
@@ -312,7 +313,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### <a name="d-granting-take-ownership-permission-on-an-xml-schema-collection"></a>4. XML 스키마 컬렉션에 대한 TAKE OWNERSHIP 권한 부여  
+### <a name="d-granting-take-ownership-permission-on-an-xml-schema-collection"></a>D. XML 스키마 컬렉션에 대한 TAKE OWNERSHIP 권한 부여  
  다음 예에서는 XML 스키마 소유권을 한 사용자에서 다른 사용자로 이전하는 방법을 보여 줍니다. 보다 유용한 예로 만들기 위해 사용자는 서로 다른 기본 관계형 스키마에서 작업을 수행합니다.  
   
  이 예에서는 다음을 수행합니다.  
@@ -430,7 +431,7 @@ DROP LOGIN TestLogin2
 go   
 ```  
   
-### <a name="e-granting-view-definition-permission-on-an-xml-schema-collection"></a>5. XML 스키마 컬렉션에 대한 VIEW DEFINITION 권한 부여  
+### <a name="e-granting-view-definition-permission-on-an-xml-schema-collection"></a>E. XML 스키마 컬렉션에 대한 VIEW DEFINITION 권한 부여  
  다음 예에서는 XML 스키마 컬렉션에 대한 VIEW DEFINITION 권한을 부여하는 방법을 보여 줍니다.  
   
 ```  
@@ -502,7 +503,7 @@ SELECT XML_SCHEMA_NAMESPACE(N'dbo',N'MySC')
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 데이터&#40;SQL Server&#41;](xml-data-sql-server.md)   
  [형식화된 XML과 형식화되지 않은 XML 비교](compare-typed-xml-to-untyped-xml.md)   
  [XML 스키마 컬렉션&#40;SQL Server&#41;](xml-schema-collections-sql-server.md)   

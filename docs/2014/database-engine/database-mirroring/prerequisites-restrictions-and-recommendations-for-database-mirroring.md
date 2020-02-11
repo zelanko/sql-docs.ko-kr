@@ -19,39 +19,41 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9763385093db6e649e60ab7a6be74f8f28466e1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754606"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>데이터베이스 미러링을 위한 필수 구성 요소, 제한 사항 및 권장 사항
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]을 대신 사용합니다.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)]을 대신 사용합니다.  
   
  이 항목에서는 데이터베이스 미러링을 설정하기 위한 사전 요구 사항 및 권장 사항에 대해 설명합니다. 데이터베이스 미러링에 대한 소개는 [데이터베이스 미러링&#40;SQL Server&#41;](database-mirroring-sql-server.md)을 참조하세요.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디스크상 스토리지 형식은 64비트 및 32비트 환경에서 동일합니다. 따라서 데이터베이스 미러링 세션은 32비트 환경에서 실행하는 서버 인스턴스와 64비트 환경에서 실행하는 서버 인스턴스를 결합할 수 있습니다.  
+>  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디스크상 스토리지 형식은 64비트 및 32비트 환경에서 동일합니다. 따라서 데이터베이스 미러링 세션은 32비트 환경에서 실행하는 서버 인스턴스와 64비트 환경에서 실행하는 서버 인스턴스를 결합할 수 있습니다.  
   
 
   
-##  <a name="DbmSupport"></a> 데이터베이스 미러링 지원  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 데이터베이스 미러링 지원에 대한 자세한 내용은 [SQL Server 2014 버전에서 지원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조하세요.  
+##  <a name="DbmSupport"></a>데이터베이스 미러링 지원  
+ 
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 데이터베이스 미러링 지원에 대한 자세한 내용은 [SQL Server 2014 버전에서 지원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조하세요.  
   
  데이터베이스 미러링은 지원되는 모든 데이터베이스 호환성 수준에서 작동합니다. 지원되는 호환성 수준에 대한 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)을 참조하세요.  
   
 
   
-##  <a name="Prerequisites"></a> 사전 요구 사항  
+##  <a name="Prerequisites"></a> 필수 조건  
   
 -   미러링 세션을 설정하려면 파트너 및 미러링 모니터 서버(있는 경우)가 같은 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행되어야 합니다.  
   
 -   각각 주 서버와 미러 서버인 두 파트너가 같은 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행해야 합니다. 미러링 모니터 서버(있는 경우)는 데이터베이스 미러링을 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 모든 버전에서 실행할 수 있습니다.  
   
     > [!NOTE]  
-    >  미러링 세션의 파트너인 서버 인스턴스를 최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 업그레이드할 수 있습니다. 자세한 내용은 [서버 인스턴스 업그레이드 시 미러된 데이터베이스의 작동 중단 최소화](upgrading-mirrored-instances.md)을 참조하세요.  
+    >  미러링 세션의 파트너인 서버 인스턴스를 최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 업그레이드할 수 있습니다. 자세한 내용은 [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](upgrading-mirrored-instances.md)을 참조하세요.  
   
 -   이 데이터베이스는 전체 복구 모델을 사용해야 합니다. 단순 복구 모델 및 대량 로그 복구 모델에서는 데이터베이스 미러링이 지원되지 않습니다. 따라서 대량 작업이 미러링된 데이터베이스에 대해 항상 전체 로깅됩니다. 복구 모델에 대한 자세한 내용은 [복구 모델&#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)을 참조하세요.  
   
@@ -69,7 +71,8 @@ ms.locfileid: "62754606"
   
 ##  <a name="Restrictions"></a> 제한 사항  
   
--   사용자 데이터베이스만 미러링할 수 있습니다. **master**, **msdb**, **tempdb**또는 **model** 데이터베이스는 미러링할 수 없습니다.  
+-   사용자 데이터베이스만 미러링할 수 있습니다. 
+  **master**, **msdb**, **tempdb**또는 **model** 데이터베이스는 미러링할 수 없습니다.  
   
 -   데이터베이스 미러링 세션 동안에는 미러된 데이터베이스의 이름을 바꿀 수 없습니다.  
   
@@ -81,7 +84,7 @@ ms.locfileid: "62754606"
   
 
   
-##  <a name="RecommendationsForPartners"></a> 파트너 서버 구성에 대한 권장 사항  
+##  <a name="RecommendationsForPartners"></a>파트너 서버 구성에 대 한 권장 사항  
   
 -   동일한 작업을 처리할 수 있는 동등한 시스템에서 파트너를 실행해야 합니다.  
   
@@ -103,7 +106,7 @@ ms.locfileid: "62754606"
   
 
   
-##  <a name="RecommendationsForDeploying"></a> 데이터베이스 미러링 배포 시의 권장 구성  
+##  <a name="RecommendationsForDeploying"></a>데이터베이스 미러링 배포에 대 한 권장 사항  
  비동기 작업을 사용하면 데이터베이스 미러링 성능이 최적화됩니다. 동기 작업을 사용하는 미러링 세션의 경우 작업에서 대량의 트랜잭션 로그 데이터가 생성될 때 성능이 저하될 수 있습니다.  
   
  테스트 환경에서 모든 운영 모드를 시험하여 데이터베이스 미러링 성능을 평가하는 것도 좋지만 프로덕션 환경에 미러링을 배포하기 전에 실제 네트워크 작동 방식을 이해하는 것이 중요합니다.  
@@ -123,9 +126,9 @@ ms.locfileid: "62754606"
   
 
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링 설정&#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)   
- [데이터베이스 미러링 및 AlwaysOn 가용성 그룹에 대 한 전송 보안 &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
+ [데이터베이스 미러링 및 AlwaysOn 가용성 그룹 &#40;SQL Server에 대 한 전송 보안&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [데이터베이스 미러링&#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [데이터베이스 미러링 구성 문제 해결&#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)  
   

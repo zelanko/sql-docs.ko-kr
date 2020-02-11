@@ -11,21 +11,24 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 00a5db60a0bccdd3deec1d1ac845e926b6af5fb9
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637751"
 ---
 # <a name="clr-transactions-sample"></a>CLR 트랜잭션 예제
   이 예제에서는 `System.Transactions` 네임스페이스에 있는 관리되는 API를 사용하여 트랜잭션을 제어하는 방법을 보여 줍니다. 특히 `System.Transactions.TransactionScope` 클래스는 요청을 처리할 재고가 충분하지 않는 경우 재고 수치를 조정하지 않고, 재고가 충분한 경우 한 위치에서 다른 위치로 재고를 원자 단위로 이동하도록 트랜잭션 경계를 설정하는 데 사용됩니다. 분산 트랜잭션에서의 자동 등록은 별도의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 저장된 감사 데이터베이스에 재고 변경 내용을 기록하여 표시됩니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 프로젝트를 만들고 실행하려면 다음 소프트웨어가 설치되어 있어야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](https://www.microsoft.com/sql-server/sql-server-editions-express)에서 무료로 구할 수 있습니다.  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](https://www.microsoft.com/sql-server/sql-server-editions-express)에서 무료로 구할 수 있습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개발자 [웹 사이트](https://go.microsoft.com/fwlink/?linkid=62796)에서 제공되는 AdventureWorks 데이터베이스  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개발자 [웹 사이트](https://go.microsoft.com/fwlink/?linkid=62796)에서 제공되는 AdventureWorks 데이터베이스  
   
 -   .NET Framework SDK 2.0 이상 또는 Microsoft Visual Studio 2005 이상. .NET Framework SDK는 무료로 구할 수 있습니다.  
   
@@ -52,7 +55,7 @@ ms.locfileid: "73637751"
   
 -   사용하고 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 AdventureWorks 데이터베이스를 설치해야 합니다.  
   
--   사용하고 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 관리자가 아닌 경우 설치를 완료하기 위해 관리자로부터 **CreateAssembly** 권한을 부여 받아야 합니다.  
+-   사용 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 관리자가 아닌 경우 설치를 완료 하려면 관리자에 게 **createassembly** 권한을 부여 해야 합니다.  
   
 ## <a name="building-the-sample"></a>예제 빌드  
   
@@ -72,13 +75,15 @@ ms.locfileid: "73637751"
   
     -   `Csc /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Transactions.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll /keyfile:key.snk /out:Transaction.dll /target:library InventoryMover.cs`  
   
-5.  [!INCLUDE[tsql](../../includes/tsql-md.md)] 설치 코드를 파일에 복사하고 해당 파일을 예제 디렉터리에 `install.sql` 로 저장합니다.  
+5.  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 설치 코드를 파일에 복사하고 해당 파일을 예제 디렉터리에 `install.sql` 로 저장합니다.  
   
 6.  다음을 실행하여 어셈블리 및 저장 프로시저를 배포합니다.  
   
     -   `sqlcmd -E -I -i install.sql -v root = "C:\MySample\"`  
   
-7.  [!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 설치 코드를 파일에 복사하고 해당 파일을 예제 디렉터리에 `installDB.sql` 로 저장합니다.  
+7.  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 설치 코드를 파일에 복사하고 해당 파일을 예제 디렉터리에 `installDB.sql` 로 저장합니다.  
   
 8.  다음을 실행하여 감사 데이터베이스를 설치합니다.  
   
@@ -86,13 +91,15 @@ ms.locfileid: "73637751"
   
      인스턴스 및 서버의 적합한 값을 사용합니다.  
   
-9. [!INCLUDE[tsql](../../includes/tsql-md.md)] 테스트 명령 스크립트를 파일에 복사하고 해당 파일을 예제 디렉터리에 `test.sql` 로 저장합니다.  
+9. 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 테스트 명령 스크립트를 파일에 복사하고 해당 파일을 예제 디렉터리에 `test.sql` 로 저장합니다.  
   
 10. 다음 명령으로 테스트 스크립트를 실행합니다.  
   
     -   `sqlcmd -E -I -i test.sql`  
   
-11. [!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 정리 스크립트를 파일에 복사하고 해당 파일을 예제 디렉터리에 `cleanupDB.sql` 로 저장합니다.  
+11. 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 정리 스크립트를 파일에 복사하고 해당 파일을 예제 디렉터리에 `cleanupDB.sql` 로 저장합니다.  
   
 12. 다음 명령으로 스크립트를 실행합니다.  
   
@@ -100,13 +107,14 @@ ms.locfileid: "73637751"
   
          인스턴스 및 서버의 적합한 값을 사용합니다.  
   
-13. [!INCLUDE[tsql](../../includes/tsql-md.md)] 정리 스크립트를 파일에 복사하고 해당 파일을 예제 디렉터리에 `cleanup.sql` 로 저장합니다.  
+13. 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 정리 스크립트를 파일에 복사하고 해당 파일을 예제 디렉터리에 `cleanup.sql` 로 저장합니다.  
   
 14. 다음 명령으로 스크립트를 실행합니다.  
   
     -   `sqlcmd -E -I -i cleanup.sql`  
   
-## <a name="sample-code"></a>예제 코드  
+## <a name="sample-code"></a>샘플 코드  
  다음은 이 예제에 대한 코드 목록입니다.  
   
  C#  
@@ -620,7 +628,7 @@ USE AdventureWorks
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [공용 언어 런타임 &#40;CLR&#41; 통합에 대한 사용 시나리오 및 예제](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+## <a name="see-also"></a>참고 항목  
+ [공용 언어 런타임 &#40;CLR&#41; 통합에 대 한 사용 시나리오 및 예제](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

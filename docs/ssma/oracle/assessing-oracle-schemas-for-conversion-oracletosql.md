@@ -1,5 +1,5 @@
 ---
-title: (OracleToSQL) 변환을 위해 Oracle 스키마 평가 | Microsoft Docs
+title: 변환을 위해 Oracle 스키마 평가 (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,75 +13,75 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 0ff56be1b7da0376250c7ed021ae78d7144a7645
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68264546"
 ---
 # <a name="assessing-oracle-schemas-for-conversion-oracletosql"></a>변환을 위해 Oracle 스키마 평가(OracleToSQL)
-개체를 로드 하 고 데이터를 마이그레이션하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 얼마나 복잡 마이그레이션 되며 얼마나 많은 시간을 결정 해야 마이그레이션 걸립니다. SSMA는 성공적으로 변환 하는 개체의 비율을 표시 하는 평가 보고서를 만들 수 있습니다. 또한 SSMA 변환 오류가 발생 하는 특정 문제를 볼 수 있습니다.  
+개체를 로드 하 고로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터를 마이그레이션하려면 먼저 마이그레이션의 복잡성과 마이그레이션에 소요 되는 시간을 결정 해야 합니다. SSMA는 성공적으로 변환 되는 개체의 비율을 보여 주는 평가 보고서를 만들 수 있습니다. SSMA를 사용 하면 변환 오류를 발생 시키는 특정 문제를 확인할 수도 있습니다.  
   
 ## <a name="creating-assessment-reports"></a>평가 보고서 만들기  
-SSMA 변환 선택한 Oracle 데이터베이스 개체를이 평가 보고서를 만들 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구문 및 결과 표시 합니다.  
+이 평가 보고서를 만들 때 SSMA는 선택한 Oracle 데이터베이스 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구문으로 변환한 다음 결과를 표시 합니다.  
   
 **평가 보고서를 만들려면**  
   
-1.  Oracle 메타 데이터 탐색기에서 스키마 평가를 선택 합니다.  
+1.  Oracle 메타 데이터 탐색기에서 평가할 스키마를 선택 합니다.  
   
-2.  개별 개체를 생략 하려면 옆에 확인란의 선택을 취소 합니다.  
+2.  개별 개체를 생략 하려면 해당 개체 옆에 있는 확인란의 선택을 취소 합니다.  
   
-3.  마우스 오른쪽 단추로 클릭 **스키마**를 선택한 후 **보고서 만들기**합니다.  
+3.  **스키마**를 마우스 오른쪽 단추로 클릭 한 다음 **보고서 만들기**를 선택 합니다.  
   
-    개체를 마우스 오른쪽 단추로 클릭 한 다음 선택 하 여 개별 개체를 분석할 수도 있습니다 **보고서 만들기**합니다.  
+    개체를 마우스 오른쪽 단추로 클릭 한 다음 **보고서 만들기**를 선택 하 여 개별 개체를 분석할 수도 있습니다.  
   
-    SSMA는 창의 맨 아래에서 상태 표시줄에 진행률이 표시 됩니다. 출력 창 표시 인 경우 출력 창에는 메시지가 나타납니다.  
+    SSMA는 창의 아래쪽에 있는 상태 표시줄에 진행률을 표시 합니다. 출력 창이 표시 되 면 출력 창에도 메시지가 표시 됩니다.  
   
-    평가가 완료 되 면는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Oracle: 평가 보고서 창이 표시 됩니다.  
+    평가가 완료 되 면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant Oracle: 평가 보고서 창이 표시 됩니다.  
   
-## <a name="using-assessment-reports"></a>평가 보고서를 사용 하 여  
-평가 보고서 창에는 세 가지 창이 있습니다.  
+## <a name="using-assessment-reports"></a>평가 보고서 사용  
+평가 보고서 창에는 다음과 같은 세 개의 창이 있습니다.  
   
--   왼쪽된 창에는 평가 보고서에 포함 된 개체 계층을 포함 합니다. 계층을 찾아 개체 및 종류의 변환 통계 및 코드를 보려면 개체를 선택할 수 있습니다.  
+-   왼쪽 창에는 평가 보고서에 포함 된 개체의 계층 구조가 포함 되어 있습니다. 계층 구조를 찾아보고 개체 및 개체 범주를 선택 하 여 변환 통계 및 코드를 볼 수 있습니다.  
   
--   오른쪽 창 내용의 왼쪽된 창에서 선택한 항목에 따라 달라 집니다.  
+-   오른쪽 창의 내용은 왼쪽 창에서 선택한 항목에 따라 달라 집니다.  
   
-    개체 그룹을 선택 하면 이러한 스키마 또는 범주 창에서 오른쪽 창에 변환 통계 창 및 개체는 테이블을 선택 합니다. 변환 통계 창 선택한 개체에 대 한 변환 통계를 보여 줍니다. 범주 창에서 개체에서 개체 또는 개체의 범주에 대 한 변환 통계를 보여 줍니다.  
+    스키마와 같은 개체 그룹을 선택 하거나 테이블을 선택 하는 경우 오른쪽 창에는 변환 통계 창과 범주별 개체 창이 포함 됩니다. 변환 통계 창에는 선택한 개체에 대 한 변환 통계가 표시 됩니다. 범주별 개체 창에는 개체 또는 개체 범주에 대 한 변환 통계가 표시 됩니다.  
   
-    함수, 패키지, 프로시저, 시퀀스 또는 뷰를 선택한 경우 오른쪽 창 통계, 소스 코드 및 대상 코드를 포함 합니다.  
+    함수, 패키지, 프로시저, 시퀀스 또는 뷰가 선택 된 경우 오른쪽 창에는 통계, 소스 코드 및 대상 코드가 포함 됩니다.  
   
-    -   위쪽 영역에는 개체에 대 한 전체 통계를 보여 줍니다. 확장 해야 할 수 있습니다 **통계** 이 정보를 볼 수 있습니다.  
+    -   위쪽 영역에는 개체에 대 한 전체 통계가 표시 됩니다. 이 정보를 보려면 **통계** 를 확장 해야 할 수 있습니다.  
   
-    -   소스 영역에는 왼쪽된 창에서 선택한 개체의 소스 코드를 보여 줍니다. 강조 표시 된 영역 문제가 있는 소스 코드를 표시 합니다.  
+    -   소스 영역에는 왼쪽 창에서 선택한 개체의 소스 코드가 표시 됩니다. 강조 표시 된 영역에는 문제가 있는 소스 코드가 표시 됩니다.  
   
-    -   대상 영역에는 변환 된 코드를 보여 줍니다. 빨간색 텍스트 문제가 있는 코드 및 오류 메시지를 보여 줍니다.  
+    -   대상 영역에는 변환 된 코드가 표시 됩니다. 빨간색 텍스트는 문제가 있는 코드 및 오류 메시지를 표시 합니다.  
   
--   아래쪽 창에는 메시지 번호별로 그룹화 된 변환 메시지를 보여 줍니다. 클릭할 수 **오류**를 **경고**, 또는 **정보** 메시지의 범주를 표시 하 여 메시지 그룹을 차례로 확장 합니다. 왼쪽된 창에서 개체를 선택 하 고 오른쪽 창에서 세부 정보를 표시 하는 개별 메시지를 클릭 합니다.  
+-   아래쪽 창에는 메시지 번호로 그룹화 된 변환 메시지가 표시 됩니다. **오류**, **경고**또는 **정보** 를 클릭 하 여 메시지 범주를 확인 한 다음 메시지 그룹을 확장할 수 있습니다. 개별 메시지를 클릭 하 여 왼쪽 창에서 개체를 선택 하 고 오른쪽 창에 세부 정보를 표시 합니다.  
   
 ## <a name="analyzing-conversion-problems-by-using-the-assessment-report"></a>평가 보고서를 사용 하 여 변환 문제 분석  
-변환 통계 창 변환 통계를 보여 줍니다. 모든 범주의 비율을 100% 보다 작은 경우 변환에 성공 하지 못한 이유에 결정 해야 합니다.  
+변환 통계 창에는 변환 통계가 표시 됩니다. 범주에 대 한 백분율이 100% 미만이 면 변환에 성공 하지 못한 이유를 확인 해야 합니다.  
   
-**변환 문제를 보려면**  
+**변환 문제를 확인 하려면**  
   
 1.  이전 절차의 지침을 사용 하 여 평가 보고서를 만듭니다.  
   
-2.  왼쪽된 창에서 스키마 또는 빨간색 오류 아이콘이 있는 폴더를 확장 합니다. 변환에 실패 한 개별 항목을 선택할 때까지 항목을 확장을 계속 합니다.  
+2.  왼쪽 창에서 빨간색 오류 아이콘이 있는 스키마 또는 폴더를 확장 합니다. 변환에 실패 한 개별 항목을 선택할 때까지 항목을 계속 확장 합니다.  
   
-3.  소스 창 맨 위에 있는 클릭 **문제**합니다.  
+3.  원본 창 위쪽에서 **다음 문제**를 클릭 합니다.  
   
-    문제가 되는 코드는 대상 탐색 창에서 관련된 코드를 강조 표시 됩니다.  
+    대상 탐색 창의 관련 코드와 마찬가지로 문제가 있는 코드가 강조 표시 됩니다.  
   
-4.  모든 오류 메시지를 검토 하 고 변환 문제를 발생 시킨 개체를 사용 하 여 수행 하려는 결정 합니다.  
+4.  오류 메시지를 검토 한 다음 변환 문제를 일으킨 개체를 사용 하 여 수행할 작업을 결정 합니다.  
   
-    -   SSMA는 Oracle 구문을 업데이트 합니다. 프로시저, 함수, 트리거, 패키지 함수 및 패키지 된 프로시저에 대 한 구문을 업데이트할 수 있습니다. 구문을 업데이트 하려면 Oracle 메타 데이터 탐색기 창에서 개체를 선택를 클릭 합니다 **SQL** 탭 한 다음 SQL 코드를 수정 합니다. 항목에서로 이동 하면 업데이트 된 구문 저장할 묻는 메시지가 나타납니다. 개체에 대해 보고 된 오류를 볼 수 있습니다 합니다 **보고서** 탭 합니다.  
+    -   SSMA의 Oracle 구문을 업데이트 합니다. 프로시저, 함수, 트리거, 패키지 된 함수 및 패키지 프로시저에 대 한 구문을 업데이트할 수 있습니다. 구문을 업데이트 하려면 Oracle 메타 데이터 탐색기 창에서 개체를 선택 하 고 **sql** 탭을 클릭 한 다음 sql 코드를 수정 합니다. 항목에서 벗어나면 업데이트 된 구문을 저장 하 라는 메시지가 표시 됩니다. **보고서** 탭에서 개체에 대 한 보고 된 오류를 볼 수 있습니다.  
   
-    -   Oracle에서는 Oracle 개체를 제거 하거나 수정 하는 문제가 있는 코드를 수정할 수 있습니다. SSMA에 업데이트 된 코드를 로드 하는 메타 데이터를 업데이트 해야 합니다. 자세한 내용은 [Oracle 데이터베이스에 연결 &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)합니다.  
+    -   Oracle에서 Oracle 개체를 수정 하 여 문제가 있는 코드를 제거 하거나 수정할 수 있습니다. 업데이트 된 코드를 SSMA에 로드 하려면 메타 데이터를 업데이트 해야 합니다. 자세한 내용은 [Oracle Database &#40;OracleToSQL&#41;에 연결 ](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)을 참조 하세요.  
   
-    -   마이그레이션에서 개체를 제외할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메타 데이터 탐색기 및 Oracle 메타 데이터 탐색기 확인란의 선택을 취소 항목 옆에 있는 개체를 로드 하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Oracle에서 데이터를 마이그레이션합니다.  
+    -   마이그레이션할 때 개체를 제외할 수 있습니다. 메타 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 탐색기 및 Oracle 메타 데이터 탐색기에서 개체를에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로드 하 고 oracle에서 데이터를 마이그레이션하기 전에 항목 옆에 있는 확인란의 선택을 취소 합니다.  
   
 ## <a name="next-step"></a>다음 단계  
-[Oracle 스키마 변환 &#40;OracleToSQL&#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)  
+[Oracle 스키마 &#40;OracleToSQL&#41;변환](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)  
   
-## <a name="see-also"></a>관련 항목  
-[SQL Server로 데이터베이스 마이그레이션 Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+## <a name="see-also"></a>참고 항목  
+[Oracle 데이터베이스를 SQL Server &#40;OracleToSQL&#41;로 마이그레이션](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

@@ -13,15 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fb94a88d749b7d850eee9eff96cd78ef8cf9e08d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913624"
 ---
-# <a name="mssqlserver5512"></a>MSSQLSERVER_5512
+# <a name="mssqlserver_5512"></a>MSSQLSERVER_5512
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -36,6 +36,6 @@ ms.locfileid: "62913624"
  자르기 작업이 실패했습니다.  
   
 ## <a name="user-action"></a>사용자 동작  
- 오류의 원인은 해당 Windows 상태 코드를 참조하십시오. 이 상태 코드에 대 한 자세한 내용은 참조 하세요. [이벤트 및 오류 메시지 Microsoft 지원에서](https://support.microsoft.com/search?query=events%20and%20error%20messages)합니다.  
+ 오류의 원인은 해당 Windows 상태 코드를 참조하십시오. 이 상태 코드에 대 한 자세한 내용은 [Microsoft 지원 이벤트 및 오류 메시지](https://support.microsoft.com/search?query=events%20and%20error%20messages)를 참조 하세요.  
   
   

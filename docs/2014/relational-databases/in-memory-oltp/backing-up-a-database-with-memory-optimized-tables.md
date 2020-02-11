@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: bc4da6702716e845121d2081a166254d4be9449f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62468329"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블이 포함된 데이터베이스 백업
@@ -28,18 +28,18 @@ ms.locfileid: "62468329"
 ## <a name="full-database-backup"></a>전체 데이터베이스 백업  
  여기에서는 디스크 기반 테이블의 백업이 동일하기 때문에 메모리 최적화 영구 테이블이 포함된 데이터베이스의 백업을 중점적으로 살펴봅니다. 메모리 최적화 파일 그룹의 검사점 파일 쌍은 다양한 상태에 있을 수 있습니다. 아래의 표에서는 백업되는 파일의 부분에 대해 설명합니다.  
   
-|검사점 파일 쌍 상태|백업|  
+|검사점 파일 쌍 상태|Backup|  
 |--------------------------------|------------|  
 |PRECREATED|파일 메타데이터만|  
 |UNDER CONSTRUCTION|파일 메타데이터만|  
-|활성|파일 메타데이터와 사용된 바이트|  
+|Active|파일 메타데이터와 사용된 바이트|  
 |MERGE SOURCE|파일 메타데이터와 사용된 바이트|  
 |MERGE TARGET|파일 메타데이터만|  
 |REQUIRED FOR BACKUP/HA|파일 메타데이터와 사용된 바이트|  
 |IN TRANSITION TO TOMBSTONE|파일 메타데이터만|  
 |TOMBSTONE|파일 메타데이터만|  
   
- 메모리 최적화 테이블이 하나 이상 포함된 데이터베이스 백업의 크기는 일반적으로 메모리 내의 해당 크기보다 크지만 디스크상 스토리지보다는 작습니다. 추가 크기는 삭제된 행 수와 작업에 간접적으로 의존하는 REQUIRED FOR BACKUP/HA 및 MERGE SOURCE 상태의 검사점 파일 쌍 수에 따라 달라집니다. 검사점 파일 쌍에 대 한 상태 설명을 보려면 [sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)합니다.  
+ 메모리 최적화 테이블이 하나 이상 포함된 데이터베이스 백업의 크기는 일반적으로 메모리 내의 해당 크기보다 크지만 디스크상 스토리지보다는 작습니다. 추가 크기는 삭제된 행 수와 작업에 간접적으로 의존하는 REQUIRED FOR BACKUP/HA 및 MERGE SOURCE 상태의 검사점 파일 쌍 수에 따라 달라집니다. 검사점 파일 쌍의 상태에 대 한 설명은 [dm_db_xtp_checkpoint_files &#40;transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)을 참조 하십시오.  
   
 ### <a name="estimating-size-of-full-database-backup"></a>전체 데이터베이스 백업의 크기 예측  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62468329"
   
  일반적인 OLTP 작업의 경우 차등 백업이 전체 데이터베이스 백업보다 상당히 작습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [메모리 액세스에 최적화된 테이블의 백업, 복원 및 복구](restore-and-recovery-of-memory-optimized-tables.md)  
   
   

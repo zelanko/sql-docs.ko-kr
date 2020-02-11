@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4bf9e58296b70f29e3e328782b463ecbbf7f6aab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770347"
 ---
 # <a name="pivot-transformation"></a>피벗 변환
@@ -62,7 +62,8 @@ ms.locfileid: "62770347"
  **일치하지 않는 피벗 키 값을 무시하고 DataFlow 실행 후 보고**  
  패키지를 실행할 때 **피벗 키** 열에서 인식되지 않은 값이 포함된 행을 무시하고 모든 피벗 키 값을 로그 메시지로 출력하도록 피벗 변환을 구성하려면 이 옵션을 선택합니다.  
   
- `PassThroughUnmatchedPivotKeys` 사용자 지정 속성을 `True`로 설정하여 값을 출력하도록 변환을 구성할 수도 있습니다.  
+ 
+  `PassThroughUnmatchedPivotKeys` 사용자 지정 속성을 `True`로 설정하여 값을 출력하도록 변환을 구성할 수도 있습니다.  
   
  **값에서 피벗 출력 열 생성**  
  각 값에 대해 출력 열을 만들기 위해 피벗 변환을 설정하려면 이 상자에 피벗 키 값을 입력합니다. 패키지를 실행하기 전 값을 입력하거나 다음을 수행할 수 있습니다.  
@@ -93,7 +94,7 @@ ms.locfileid: "62770347"
   
  다음 표에서는 **Year** 열로 데이터가 피벗되기 전의 데이터 집합을 보여 줍니다.  
   
-|Year|제품 이름|Total|  
+|Year|제품 이름|합계|  
 |----------|------------------|-----------|  
 |2004|HL Mountain Tire|1504884.15|  
 |2003|Road Tire Tube|35920.50|  
@@ -133,7 +134,7 @@ ms.locfileid: "62770347"
 ## <a name="related-content"></a>관련 내용  
  이 구성 요소의 속성을 설정하는 방법에 대한 자세한 내용은 [데이터 흐름 구성 요소의 속성 설정](../set-the-properties-of-a-data-flow-component.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [피벗 해제 변환](pivot-transformation.md)   
  [데이터 흐름](../data-flow.md)   
  [Integration Services 변환](integration-services-transformations.md)  

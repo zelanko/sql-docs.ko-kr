@@ -12,10 +12,10 @@ ms.assetid: 5ee468f0-8538-4620-90e8-63f466c9000e
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 90937a98bb409c6f17bc542183cd024f408d71f2
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257760"
 ---
 # <a name="use-value-relations-in-a-composite-domain"></a>복합 도메인의 값 관계 사용
@@ -24,14 +24,14 @@ ms.locfileid: "75257760"
 
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 기술 자료 검색 프로세스 중에 복합 도메인에 대해 발견된 값 조합을 보는 방법에 대해 설명합니다. 이 페이지에서는 값 조합의 발생 횟수를 보여줍니다. 복합 도메인에는 값 관리가 지원되지 않으므로 이러한 값에 대해 어떠한 작업도 수행할 수 없습니다.  
   
-##  <a name="BeforeYouBegin"></a>시작 하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a>사전  
+###  <a name="Prerequisites"></a> 필수 조건  
  값 관계를 보려면 복합 도메인을 만들고 열어 두어야 합니다.  
   
-###  <a name="Security"></a>보안  
+###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a>권한에  
+####  <a name="Permissions"></a> 권한  
  복합 도메인의 값 관계를 보려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
 ##  <a name="Use"></a>값 관계 보기  

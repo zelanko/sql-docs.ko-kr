@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca5b07a0cd6e6282e4d61075d86ca6af6a2abd70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63062151"
 ---
 # <a name="alert-properties-new-alert-general-page"></a>경고 속성-새 경고 (일반 페이지)
-  이 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고의 일반 속성을 확인하고 수정할 수 있습니다.  
+  이 페이지를 사용 하 여 에이전트 경고의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 일반 속성을 확인 하 고 수정할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **이름**  
  경고 이름을 변경합니다.  
   
@@ -32,11 +32,11 @@ ms.locfileid: "63062151"
  **형식**  
  경고 유형을 선택합니다.  
   
--   **SQL Server 이벤트 경고** - [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 이벤트 로그의 메시지에 응답합니다.  
+-   **SQL Server 이벤트 경고** 는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 이벤트 로그의 메시지에 응답 합니다.  
   
--   **SQL Server 성능 조건 경고** - 성능 카운터의 특정 조건에 응답합니다.  
+-   **SQL Server 성능 조건 경고** 는 성능 카운터의 특정 조건에 응답 합니다.  
   
--   **WMI 이벤트 경고** - WMI(Windows Management Instrumentation) 이벤트에 응답합니다.  
+-   **Wmi 이벤트 경고** 는 WMI(WINDOWS MANAGEMENT INSTRUMENTATION) (wmi) 이벤트에 응답 합니다.  
   
 ## <a name="sql-server-event-alert-options"></a>SQL Server 이벤트 경고 옵션  
  **데이터베이스 이름**  
@@ -45,17 +45,17 @@ ms.locfileid: "63062151"
  **오류 번호**  
  이 이벤트가 오류에 응답하도록 지정하고 오류 번호를 지정합니다.  
   
- **Severity**  
+ **심각도**  
  이 이벤트가 특정 심각도를 지닌 메시지에 응답하도록 지정하고 심각도를 지정합니다.  
   
- **메시지에 다음 텍스트가 포함될 때 경고 발생**  
+ **메시지에 다음이 포함 될 때 경고 발생**  
  특정 문자열로 이벤트를 필터링합니다. 이 옵션을 선택하면 경고가 특정 문자열을 포함하는 이벤트에 대해서만 응답합니다.  
   
  **메시지 텍스트**  
  이벤트를 필터링할 때 사용할 문자열을 지정합니다.  
   
 ## <a name="sql-server-performance-condition-alerts"></a>SQL Server 성능 조건 경고  
- **개체**  
+ **Object**  
  모니터링할 성능 개체를 지정합니다.  
   
  **카운터**  
@@ -67,17 +67,18 @@ ms.locfileid: "63062151"
  **경고 발생 카운터**  
  경고가 응답하는 카운터의 동작을 지정합니다. 예를 들어 경고를 **Free space in tempdb (KB)** 카운터의 값이 특정 값 미만이 될 때 응답하도록 지정하거나 **SQL Compilations/sec** 가 특정 값을 초과할 때 응답하도록 지정할 수 있습니다.  
   
- **Value**  
+ **값**  
  카운터에 대한 값을 지정합니다.  
   
 ## <a name="wmi-event-alert-options"></a>WMI 이벤트 경고 옵션  
  **네임스페이스**  
- WQL(WMI Query Language) 문에 사용할 네임스페이스를 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 실행하는 컴퓨터의 네임스페이스만 지원됩니다.  
+ WQL(WMI Query Language) 문에 사용할 네임스페이스를 지정합니다. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 실행하는 컴퓨터의 네임스페이스만 지원됩니다.  
   
- **데이터 집합 속성**  
+ **쿼리**  
  경고 응답 이벤트를 식별하는 WQL 문을 지정합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Alerts](alerts.md)   
  [서버 이벤트 용 WMI 공급자에 WQL 사용](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)   
  [오류 번호를 사용 하 여 경고 만들기](create-an-alert-using-an-error-number.md)   

@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 6fcb4245d4efff00002dea9b490312792e0d83d6
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73706991"
 ---
 # <a name="install-sql-server-2016-r-services"></a>SQL Server 2016 R Services 설치
@@ -197,7 +197,7 @@ SSMS의 인스턴스에 대해 **Restart** 명령을 마우스 오른쪽 단추�
 
 <a name="bkmk_FollowUp"></a> 
 
-## <a name="additional-configuration"></a>기타 고려 사항
+## <a name="additional-configuration"></a>추가 구성
 
 외부 스크립트 확인 단계가 성공하면 SQL Server Management Studio, Visual Studio Code에서 또는 T-SQL 문을 서버로 보낼 수 있는 기타 클라이언트에서 Python 명령을 실행할 수 있습니다.
 

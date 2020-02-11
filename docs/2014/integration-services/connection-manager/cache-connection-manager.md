@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1026f4c20042a9aec24256238190dd1a230bda42
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833606"
 ---
 # <a name="cache-connection-manager"></a>캐시 연결 관리자
@@ -49,7 +49,8 @@ ms.locfileid: "62833606"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용은 [캐시 연결 관리자 편집기](../cache-connection-manager-editor.md)를 참조하세요.  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용은 [캐시 연결 관리자 편집기](../cache-connection-manager-editor.md)를 참조하세요.  
   
  연결 관리자를 프로그래밍 방식으로 구성하는 방법에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 및 [프로그래밍 방식으로 연결 추가](../building-packages-programmatically/adding-connections-programmatically.md)를 참조하세요.  
   

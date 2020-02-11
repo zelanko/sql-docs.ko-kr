@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b1258797d76df49a2622335ee798120632706c78
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62772230"
 ---
 # <a name="adding-connections-programmatically"></a>프로그래밍 방식으로 연결 추가
@@ -41,11 +41,11 @@ ms.locfileid: "62772230"
   
  `ConnectionManagerAdoNetClass cmado = cm.InnerObject as ConnectionManagerAdoNet;`  
   
- 이 코드 줄은 관리되는 연결 관리자 개체를 기본 연결 개체로 캐스팅합니다. C++를 사용하는 경우에는 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 개체의 `QueryInterface` 메서드를 호출하며 기본 연결 개체의 인터페이스가 필요합니다.  
+ 이 코드 줄은 관리되는 연결 관리자 개체를 기본 연결 개체로 캐스팅합니다. C++를 사용하는 경우에는 `QueryInterface` 개체의 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 메서드를 호출하며 기본 연결 개체의 인터페이스가 필요합니다.  
   
  다음 표에서는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 포함된 연결 관리자와 `package.Connections.Add("xxx")` 문에 사용되는 문자열을 보여 줍니다. 모든 연결 관리자의 목록은 [Integration Services&#40;SSIS&#41; 연결](../connection-manager/integration-services-ssis-connections.md)를 참조하세요.  
   
-|문자열|ODBC 대상 편집기|  
+|String|ODBC 대상 편집기|  
 |------------|------------------------|  
 |"OLEDB"|OLE DB 연결용 연결 관리자|  
 |"ODBC"|ODBC 연결용 연결 관리자|  
@@ -209,10 +209,10 @@ End Class
 ## <a name="external-resources"></a>외부 리소스  
  carlprothman.net의 기술 문서 - [Connection Strings](https://go.microsoft.com/fwlink/?LinkId=220743)  
   
-![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.  
   
-## <a name="see-also"></a>관련 항목  
- [Integration Services&#40;SSIS&#41; 연결](../connection-manager/integration-services-ssis-connections.md)   
+## <a name="see-also"></a>참고 항목  
+ [SSIS&#41; 연결을 &#40;Integration Services](../connection-manager/integration-services-ssis-connections.md)   
  [연결 관리자 만들기](../create-connection-managers.md)  
   
   

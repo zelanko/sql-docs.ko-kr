@@ -1,7 +1,7 @@
 ---
 title: CREATE WORKLOAD GROUP(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/10/2020
+ms.date: 01/14/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -20,12 +20,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: 325dd0c78cf74fdcfd485c1eb77957a4bddf5ca0
-ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
+ms.openlocfilehash: ca80b2f95ee049d763d22f35e4ff6d35e344a8c0
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75952386"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "75956506"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP(Transact-SQL)
 
@@ -37,7 +37,7 @@ ms.locfileid: "75952386"
 
 > |||||
 > |---|---|---|---|
-> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />관리되는 인스턴스](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />분석](create-workload-group-transact-sql.md?view=azure-sqldw-latest)|
+> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />관리되는 인스턴스](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](create-workload-group-transact-sql.md?view=azure-sqldw-latest)|
 
 &nbsp;
 
@@ -192,7 +192,7 @@ GO
 ```
 CREATE WORKLOAD GROUP group_name
  WITH
- (        MIN_PERCENTAGE_RESOURCE = valu
+ (        MIN_PERCENTAGE_RESOURCE = value
       ,   CAP_PERCENTAGE_RESOURCE = value
       ,   REQUEST_MIN_RESOURCE_GRANT_PERCENT = value
   [ [ , ] REQUEST_MAX_RESOURCE_GRANT_PERCENT = value ]

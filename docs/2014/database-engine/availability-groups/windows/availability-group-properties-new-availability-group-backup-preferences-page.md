@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8c60a2de7c36eef7f01338e2b8ea8abe29093490
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62790222"
 ---
 # <a name="availability-group-properties-new-availability-group-backup-preferences-page"></a>가용성 그룹 속성: 새 가용성 그룹(백업 기본 설정 페이지)
@@ -28,11 +28,11 @@ ms.locfileid: "62790222"
   
 -   [가용성 그룹 속성 보기&#40;SQL Server&#41;](view-availability-group-properties-sql-server.md)  
   
--   [AlwaysOn 대시보드 사용&#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [AlwaysOn 대시보드 &#40;SQL Server Management Studio를 사용&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 ## <a name="where-should-backups-occur"></a>백업 수행 위치  
  **보조 사용**  
- 백업이 보조 복제본에서 수행되도록 지정합니다. 주 복제본이 유일한 온라인 복제본인 경우는 예외로, 이 경우에는 백업이 주 복제본에서 수행되어야 합니다. 이 옵션이 기본 옵션입니다.  
+ 백업이 보조 복제본에서 수행되도록 지정합니다. 주 복제본이 유일한 온라인 복제본인 경우는 예외로, 이 경우에는 백업이 주 복제본에서 수행되어야 합니다. 기본 옵션입니다.  
   
  **보조만**  
  백업이 주 복제본에서 수행되지 않도록 지정합니다. 주 복제본이 유일한 온라인 복제본인 경우에는 백업이 수행되지 않아야 합니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "62790222"
  백업을 수행할 복제본을 선택할 때 백업 작업에서 가용성 복제본의 역할을 무시하도록 지정합니다. 백업 작업에서는 각 가용성 복제본의 작동 상태 및 연결 상태와 함께 백업 우선 순위 등의 기타 요인을 평가할 수 있습니다.  
   
 > [!IMPORTANT]  
->  백업 기본 설정은 적용되지 않습니다. 이 기본 설정의 해석은 지정된 가용성 그룹의 데이터베이스에 대한 백업 작업으로 스크립팅하는 논리(있는 경우)에 따라 달라집니다. 자세한 내용은 [활성 보조 복제본: 보조 복제본 (AlwaysOn 가용성 그룹)에 백업](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)합니다.  
+>  백업 기본 설정은 적용되지 않습니다. 이 기본 설정의 해석은 지정된 가용성 그룹의 데이터베이스에 대한 백업 작업으로 스크립팅하는 논리(있는 경우)에 따라 달라집니다. 자세한 내용은 [활성 보조: 보조 복제본에 백업 (AlwaysOn 가용성 그룹)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)을 참조 하세요.  
   
 ## <a name="replica-backup-priorities"></a>복제본 백업 우선 순위  
  이 표는 가용성 그룹에 대한 복제본을 호스팅하는 각 서버 인스턴스의 현재 백업 우선 순위를 표시합니다. 이 표를 사용하여 하나 이상의 가용성 복제본에 대한 백업 우선 순위를 변경할 수 있습니다.  
@@ -58,8 +58,8 @@ ms.locfileid: "62790222"
  **복제본 제외**  
  백업 수행을 위해 이 가용성 백업을 선택하지 않으려는 경우에 선택합니다. 이 값은 예를 들어 백업을 장애 조치할 대상으로 사용하지 않을 원격 가용성 복제본의 경우에 유용합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [활성 보조 복제본: 보조 복제본 (AlwaysOn 가용성 그룹)에 백업](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
+## <a name="see-also"></a>참고 항목  
+ [활성 보조: 보조 복제본에 백업 (AlwaysOn 가용성 그룹)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
  [ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)  
   
   

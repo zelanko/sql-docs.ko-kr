@@ -1,5 +1,5 @@
 ---
-title: AlwaysOn 가용성 그룹 (SQL Server)를 사용 하 여 스냅숏의 데이터베이스 | Microsoft Docs
+title: AlwaysOn 가용성 그룹 (SQL Server)를 사용 하는 데이터베이스 스냅숏 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cba02aa87e800391ffba3c791c1ee4341462c3f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62814659"
 ---
 # <a name="database-snapshots-with-alwayson-availability-groups-sql-server"></a>AlwaysOn 가용성 그룹이 있는 데이터베이스 스냅샷(SQL Server)
@@ -35,8 +35,8 @@ ms.locfileid: "62814659"
   
  데이터베이스 스냅샷을 호스팅하는 가용성 복제본이 장애 조치되는 경우 데이터베이스 스냅샷은 처음 만들어진 서버 인스턴스에 그대로 유지됩니다. 사용자는 장애 조치 후에도 스냅샷을 계속 사용할 수 있습니다. 사용자 환경에서 성능이 중요한 경우 수동 장애 조치 모드에 대해 구성되는 보조 복제본에서 호스팅되는 보조 데이터베이스에서만 데이터베이스 스냅샷을 만드는 것이 좋습니다.  가용성 그룹을 이 보조 복제본으로 수동으로 장애 조치하는 경우 다른 보조 복제본에서 새 데이터베이스 스냅샷 집합을 만들고 클라이언트를 새 데이터베이스 스냅샷으로 리디렉션한 다음 새 주 데이터베이스의 모든 데이터베이스 스냅샷을 삭제할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [데이터베이스 스냅숏&#40;SQL Server&#41;](../../../relational-databases/databases/database-snapshots-sql-server.md)  
+## <a name="see-also"></a>참고 항목  
+ [AlwaysOn 가용성 그룹 &#40;SQL Server 개요&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [데이터베이스 스냅샷&#40;SQL Server&#41;](../../../relational-databases/databases/database-snapshots-sql-server.md)  
   
   

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6e0eafd8a8eb1d9d73f71ab069dc8bf0795a87bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812305"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>데이터베이스 엔진 액세스에 대한 Windows 방화벽 구성
@@ -50,7 +50,7 @@ ms.locfileid: "62812305"
   
      [SQL Server 구성 관리자](#SSMSProcedure)  
   
-## <a name="before-you-begin"></a>시작하기 전 주의 사항  
+## <a name="before-you-begin"></a>시작하기 전에  
   
 ###  <a name="Security"></a> 보안  
  방화벽의 포트를 열면 서버가 악의적인 공격에 노출될 수 있습니다. 포트를 열기 전에 방화벽 시스템을 잘 이해해야 합니다. 자세한 내용은 [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)를 참조하세요.  
@@ -68,13 +68,13 @@ ms.locfileid: "62812305"
   
 3.  **규칙 유형** 대화 상자에서 **포트**를 선택한 다음 **다음**을 클릭합니다.  
   
-4.  **프로토콜 및 포트** 대화 상자에서 **TCP**를 선택합니다. 선택 **특정 로컬 포트**, 인스턴스의 포트 번호를 입력 하 고는 [!INCLUDE[ssDE](../../includes/ssde-md.md)], 같은 `1433` 기본 인스턴스에 대 한 합니다. **다음**을 클릭합니다.  
+4.  **프로토콜 및 포트** 대화 상자에서 **TCP**를 선택합니다. **특정 로컬 포트**를 선택한 다음 인스턴스의 포트 번호를 입력 합니다. 예 [!INCLUDE[ssDE](../../includes/ssde-md.md)]를 `1433` 들어 기본 인스턴스의 포트 번호를 입력 합니다. **다음**을 클릭합니다.  
   
 5.  **동작** 대화 상자에서 **연결 허용**을 선택한 다음 **다음**을 클릭합니다.  
   
 6.  **프로필** 대화 상자에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결할 때의 컴퓨터 연결 환경을 설명하는 프로필을 선택한 다음 **다음**을 클릭합니다.  
   
-7.  **이름** 대화 상자에 이 규칙의 이름 및 설명을 입력한 다음 **마침**을 클릭합니다.  
+7.  **이름** 대화 상자에서 이 규칙의 이름 및 설명을 입력한 후 **마침**을 클릭합니다.  
   
 #### <a name="to-open-access-to-sql-server-when-using-dynamic-ports"></a>동적 포트 사용 시 SQL Server에 대한 액세스를 열려면  
   
@@ -84,12 +84,12 @@ ms.locfileid: "62812305"
   
 3.  **규칙 유형** 대화 상자에서 **프로그램**을 선택한 다음 **다음**을 클릭합니다.  
   
-4.  **프로그램** 대화 상자에서 **다음 프로그램 경로**를 선택합니다. **찾아보기**를 클릭하여 방화벽을 통해 액세스할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 찾은 다음 **열기**를 클릭합니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 은 **C:\Program Files\Microsoft SQL Server\MSSQL12. MSSQLSERVER\MSSQL\Binn\Sqlservr.exe**합니다. **다음**을 클릭합니다.  
+4.  **프로그램** 대화 상자에서 **다음 프로그램 경로**를 선택합니다. **찾아보기**를 클릭하여 방화벽을 통해 액세스할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 찾은 다음 **열기**를 클릭합니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 **C:\Program Files\Microsoft SQL Server\MSSQL12.에 있습니다. MSSQLSERVER\MSSQL\Binn\Sqlservr.exe**. **다음**을 클릭합니다.  
   
 5.  **동작** 대화 상자에서 **연결 허용**을 선택한 다음 **다음**을 클릭합니다.  
   
 6.  **프로필** 대화 상자에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결할 때의 컴퓨터 연결 환경을 설명하는 프로필을 선택한 다음 **다음**을 클릭합니다.  
   
-7.  **이름** 대화 상자에 이 규칙의 이름 및 설명을 입력한 다음 **마침**을 클릭합니다.  
+7.  **이름** 대화 상자에서 이 규칙의 이름 및 설명을 입력한 후 **마침**을 클릭합니다.  
   
   

@@ -20,18 +20,17 @@ ms.assetid: badc6d36-8a87-42b5-b28c-9c4f5ded8552
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 5f81904fd930e22857bfa51584c2eefda813e7e7
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75253541"
 ---
 # <a name="srv_paramtype-extended-stored-procedure-api"></a>srv_paramtype(확장 저장 프로시저 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하세요.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]대신 CLR 통합을 사용 하세요.  
   
  원격 저장 프로시저 호출 매개 변수의 데이터 형식을 반환합니다.  
   
@@ -52,10 +51,10 @@ n
  *srvproc*  
  특정 클라이언트 연결에 대한 핸들(이 경우 원격 저장 프로시저 호출을 수신한 핸들)인 SRV_PROC 구조에 대한 포인터입니다. 이 구조에는 확장 저장 프로시저 API 라이브러리가 애플리케이션과 클라이언트 간 통신 및 데이터를 관리하는 데 사용하는 정보가 들어 있습니다.  
   
- *개의*  
+ *n*  
  매개 변수의 번호를 나타냅니다. 첫 번째 매개 변수는 1입니다.  
   
-## <a name="returns"></a>Returns  
+## <a name="returns"></a>반환  
  매개 변수의 데이터 형식에 대한 토큰 값입니다. 데이터 형식에 대한 자세한 내용은 [데이터 형식(확장 저장 프로시저 API)](../../relational-databases/extended-stored-procedures-reference/data-types-extended-stored-procedure-api.md)을 참조하세요. 
   *n*번째 매개 변수가 없거나 원격 저장 프로시저가 없으면 -1이 반환됩니다.  
   
@@ -69,7 +68,7 @@ n
 |**BIGBINARY**|BINARY|  
 |**BIGVARBINARY**|VARBINARY|  
 |**NCHAR**|CHAR|  
-|**VARCHAR**|VARCHAR|  
+|**NVARCHAR**|VARCHAR|  
 |**N**|-1|  
   
 ## <a name="remarks"></a>설명  

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ff9785d18d46e9aaca26c768d1069c32d3d2e8b6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242620"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>SQLXML 4.0 프로그래밍 개념
@@ -30,7 +30,7 @@ ms.locfileid: "75242620"
   
  이 섹션에서는 SQLXML 4.0에 대한 정보를 제공합니다.  
   
- [SQLXML이 SQL Server에 설치 되어 있지 않습니다.](../../relational-databases/sqlxml/sqlxml-is-not-installed-in-sql-server.md)  
+ [SQLXML이 SQL Server에 설치되지 않음](../../relational-databases/sqlxml/sqlxml-is-not-installed-in-sql-server.md)  
  이 항목에서는 SQLXML 4.0을 설치하는 방법에 대해 설명합니다.  
   
  [SQLXML 4.0 SP1의 새로운 기능](../../relational-databases/sqlxml/what-s-new-in-sqlxml-4-0-sp1.md)  
@@ -54,7 +54,7 @@ ms.locfileid: "75242620"
  [SQLXML 4.0의 XPath 쿼리 사용](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)  
  XPath 언어의 하위 집합을 사용하여 주석이 추가된 XSD 스키마로 만든 XML 뷰를 쿼리하는 방법에 대해 설명하고 예를 제공합니다.  
   
- [Updategrams을 사용 하 여 SQLXML 4.0에서 데이터 수정](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
+ [SQLXML 4.0에서 updategram을 사용하여 데이터 수정](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
  주석이 추가된 XSD(또는 XDR) 스키마가 제공하는 XML 뷰에서 작업하여 데이터베이스의 데이터를 수정하는 Updategram에 대한 정보를 제공합니다.  
   
  [SQLXML 4.0&#41;&#40;XML 데이터 대량 로드를 수행 하는 중](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
@@ -76,6 +76,6 @@ ms.locfileid: "75242620"
  SQLXML 4.0에서 작업할 때 주의할 문제를 표시합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [XML 데이터 &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
+ [XML 데이터&#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   
   

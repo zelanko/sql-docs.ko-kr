@@ -1,5 +1,5 @@
 ---
-title: 클러스터형된 Columnstore 인덱스를 사용 하 여 | Microsoft Docs
+title: 클러스터형 Columnstore 인덱스 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,35 +11,36 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1e65c3e277eb9a3e5e3703525b9c1ac06b423c96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773743"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>클러스터형 columnstore 인덱스 사용
+  
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 클러스터형 columnstore 인덱스를 사용하는 태스크입니다.  
   
  columnstore 인덱스에 대한 개요는 [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md)를 참조하십시오.  
   
  클러스터형 columnstore 인덱스에 대한 자세한 내용은 [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md)을 참조하십시오.  
   
-## <a name="contents"></a>내용  
+## <a name="contents"></a>콘텐츠  
   
--   [클러스터형된 Columnstore 인덱스 만들기](#create)  
+-   [클러스터형 Columnstore 인덱스 만들기](#create)  
   
--   [클러스터형된 Columnstore 인덱스를 삭제 합니다.](#drop)  
+-   [클러스터형 columnstore 인덱스 삭제](#drop)  
   
--   [클러스터형 Columnstore 인덱스로 데이터 로드](#load)  
+-   [클러스터형 columnstore 인덱스로 데이터 로드](#load)  
   
--   [클러스터형된 Columnstore 인덱스에 데이터를 변경 합니다.](#change)  
+-   [클러스터형 columnstore 인덱스의 데이터 변경](#change)  
   
--   [클러스터형된 Columnstore 인덱스를 다시 작성](#rebuild)  
+-   [클러스터형 Columnstore 인덱스 다시 작성](#rebuild)  
   
--   [클러스터형된 Columnstore 인덱스를 다시 구성](#reorganize)  
+-   [클러스터형 Columnstore 인덱스 다시 구성](#reorganize)  
   
-##  <a name="create"></a> 클러스터형된 Columnstore 인덱스 만들기  
- 클러스터형된 columnstore 인덱스를 만들려면 먼저 rowstore 테이블을 힙 또는 클러스터형된 인덱스를 만들고 사용 하 여 합니다 [CREATE CLUSTERED COLUMNSTORE INDEX &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql) 변환할 테이블을 클러스터형 문 columnstore 인덱스입니다. 클러스터형 columnstore 인덱스의 이름을 클러스터형 인덱스와 동일하게 지정하려면 DROP_EXISTING 옵션을 사용합니다.  
+##  <a name="create"></a>클러스터형 Columnstore 인덱스 만들기  
+ 클러스터형 columnstore 인덱스를 만들려면 먼저 rowstore 테이블을 힙 또는 클러스터형 인덱스로 만든 다음 [CREATE CLUSTERED COLUMNSTORE index &#40;transact-sql&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql) 문을 사용 하 여 테이블을 클러스터형 columnstore 인덱스로 변환 합니다. 클러스터형 columnstore 인덱스의 이름을 클러스터형 인덱스와 동일하게 지정하려면 DROP_EXISTING 옵션을 사용합니다.  
   
  이 예에서는 테이블을 힙으로 만들고 이를 cci_Simple라는 클러스터형 columnstore 인덱스로 변환합니다. 이렇게 하면 전체 테이블의 스토리지가 rowstore에서 columnstore로 변경됩니다.  
   
@@ -54,13 +55,13 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci_T1 ON T1;
 GO  
 ```  
   
- 추가 예제를 보려면 예 섹션을 참조 하세요 [CREATE CLUSTERED COLUMNSTORE INDEX &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)합니다.  
+ 더 많은 예제를 보려면 [CREATE CLUSTERED COLUMNSTORE INDEX &#40;transact-sql&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)의 예제 섹션을 참조 하십시오.  
   
-##  <a name="drop"></a> 클러스터형된 Columnstore 인덱스를 삭제 합니다.  
- 사용 된 [DROP INDEX &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/drop-index-transact-sql) 문이 클러스터형된 columnstore 인덱스를 삭제 하려면. 이 연산은 인덱스를 삭제하고 columnstore 테이블을 rowstore 힙으로 변환합니다.  
+##  <a name="drop"></a>클러스터형 Columnstore 인덱스 삭제  
+ [DROP INDEX &#40;transact-sql&#41;](/sql/t-sql/statements/drop-index-transact-sql) 문을 사용 하 여 클러스터형 columnstore 인덱스를 삭제 합니다. 이 연산은 인덱스를 삭제하고 columnstore 테이블을 rowstore 힙으로 변환합니다.  
   
-##  <a name="load"></a> 클러스터형 Columnstore 인덱스로 데이터 로드  
- 표준 로딩 방법 중 하나를 사용하여 기존 클러스터형 columnstore 인덱스에 데이터를 추가할 수 있습니다.  예를 들어, bcp 대량 로드 도구, Integration Services 및 INSERT... SELECT는 모두 클러스터형 columnstore 인덱스에 데이터를 로드할 수 있습니다.  
+##  <a name="load"></a>클러스터형 Columnstore 인덱스로 데이터 로드  
+ 표준 로딩 방법 중 하나를 사용하여 기존 클러스터형 columnstore 인덱스에 데이터를 추가할 수 있습니다.  예를 들어 bcp 대량 로드 도구, Integration Services 및 INSERT ... SELECT는 모두 클러스터형 columnstore 인덱스에 데이터를 로드할 수 있습니다.  
   
  클러스터형 columnstore 인덱스는 columnstore의 열 세그먼트 조각화를 방지하기 위해 deltastore를 활용합니다.  
   
@@ -68,7 +69,7 @@ GO
  분할된 데이터에 대해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서는 먼저 각 행을 파티션에 할당한 다음 파티션 내에서 데이터에 columnstore 작업을 수행합니다. 각 파티션에는 고유한 행 그룹 수와 적어도 하나의 deltastore가 있습니다.  
   
 ### <a name="deltastore-loading-scenarios"></a>Deltastore 로드 시나리오  
- 행 수가 행 그룹에 허용된 최대 행 수에 도달할 때까지 행은 deltastore에 누적됩니다. Deltastore 행 그룹당 최대 수를 포함 하는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] "CLOSED"로 표시 합니다. 백그라운드 프로세스가 "tuple-mover" 라는 닫힌된 행 그룹을 발견 하며 여기서 행 그룹이 열 세그먼트로 압축 되 고 열 세그먼트가 columnstore에 저장 된 columnstore로 이동 합니다.  
+ 행 수가 행 그룹에 허용된 최대 행 수에 도달할 때까지 행은 deltastore에 누적됩니다. Deltastore는 행 그룹 당 최대 행 수를 포함 하 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 경우 행 그룹를 "닫힘"으로 표시 합니다. "튜플-이동" 이라고 하는 백그라운드 프로세스는 닫힌 행 그룹를 찾고 columnstore로 이동 합니다. 여기서 행 그룹는 열 세그먼트로 압축 되며 열 세그먼트는 columnstore에 저장 됩니다.  
   
  클러스터형 columnstore 인덱스마다 여러 deltastore가 있을 수 있습니다.  
   
@@ -84,8 +85,8 @@ GO
 |-----------------------|-----------------------------------|----------------------------------|  
 |102,000|0|102,000|  
 |145,000|145,000<br /><br /> 행 그룹 크기: 145,000|0|  
-|1,048,577|1,048,576<br /><br /> 행 그룹 크기: 1,048,576.|1|  
-|2,252,152|2,252,152<br /><br /> 행 그룹 크기: 1,048,576, 1,048,576, 155,000.|0|  
+|1,048,577|1,048,576<br /><br /> 행 그룹 크기: 1,048,576|1|  
+|2,252,152|2,252,152<br /><br /> 행 그룹 크기: 1,048,576, 1,048,576, 155,000|0|  
   
  다음 예제에서는 1,048,577행을 파티션으로 로드하는 결과를 보여 줍니다. 결과에는 columnstore에 COMPRESSED 행 그룹이 하나 있고(열 세그먼트로 압축됨) deltastore에 행이 1개 있습니다.  
   
@@ -93,14 +94,14 @@ GO
 SELECT * FROM sys.column_store_row_groups  
 ```  
   
- ![일괄 처리 로드를 위한 행 그룹 및 deltastore](../../2014/database-engine/media/sql-server-pdw-columnstore-batchload.gif "일괄 처리 로드를 위한 행 그룹 및 deltastore")  
+ ![일괄 처리 로드를 위한 Rowgroup 및 deltastore](../../2014/database-engine/media/sql-server-pdw-columnstore-batchload.gif "일괄 처리 로드를 위한 Rowgroup 및 deltastore")  
   
 
   
-##  <a name="change"></a> 클러스터형된 Columnstore 인덱스에 데이터를 변경 합니다.  
+##  <a name="change"></a>클러스터형 Columnstore 인덱스의 데이터 변경  
  클러스터형 columnstore 인덱스는 DML 삽입, 업데이트 및 삭제 작업을 지원합니다.  
   
- 사용 하 여 [삽입 &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/insert-transact-sql) 행을 삽입 합니다. 그러면 행이 deltastore에 추가됩니다.  
+ [Insert &#40;transact-sql&#41;](/sql/t-sql/statements/insert-transact-sql) 를 사용 하 여 행을 삽입 합니다. 그러면 행이 deltastore에 추가됩니다.  
   
  행을 삭제하려면 [DELETE&#40;Transact-SQL&#41;](/sql/t-sql/statements/delete-transact-sql) 를 사용합니다.  
   
@@ -114,8 +115,8 @@ SELECT * FROM sys.column_store_row_groups
   
 -   행이 deltastore에 있는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 deltastore에 있는 행을 업데이트합니다.  
   
-##  <a name="rebuild"></a> 클러스터형된 Columnstore 인덱스를 다시 작성  
- 사용 하 여 [CREATE CLUSTERED COLUMNSTORE INDEX &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql) 하거나 [ALTER INDEX &#40;Transact SQL&#41; ](/sql/t-sql/statements/alter-index-transact-sql) 기존 클러스터형된 columnstore 인덱스의 전체 다시 빌드를 수행 하 합니다. 또한 ALTER INDEX ... REBUILD를 사용하여 다시 작성할 수 있습니다.  
+##  <a name="rebuild"></a>클러스터형 Columnstore 인덱스 다시 작성  
+ [CREATE CLUSTERED COLUMNSTORE index &#40;transact-sql&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql) 또는 [ALTER index &#40;transact-sql&#41;](/sql/t-sql/statements/alter-index-transact-sql) 를 사용 하 여 기존 클러스터형 columnstore 인덱스의 전체 다시 빌드를 수행할 수 있습니다. 또한 ALTER INDEX ...를 사용할 수 있습니다. 다시 빌드하여 특정 파티션을 다시 작성 합니다.  
   
 ### <a name="rebuild-process"></a>프로세스 다시 작성  
  클러스터형 columnstore 인덱스를 다시 작성하려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
@@ -145,8 +146,8 @@ SELECT * FROM sys.column_store_row_groups
   
      이렇게 하면 모든 데이터가 columnstore에 저장됩니다. 여러 로드를 동시에 수행하면 각 파티션에 여러 deltastore가 생길 수 있습니다. 다시 작성 시 deltastore의 모든 행이 columnstore로 이동됩니다.  
   
-##  <a name="reorganize"></a> 클러스터형된 Columnstore 인덱스를 다시 구성  
- 클러스터형 columnstore 인덱스를 다시 구성하면 모든 CLOSED 행 그룹이 columnstore로 이동됩니다. 재구성을 수행 하려면 사용 [ALTER INDEX &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)REORGANIZE 옵션을 사용 하 여 합니다.  
+##  <a name="reorganize"></a>클러스터형 Columnstore 인덱스 다시 구성  
+ 클러스터형 columnstore 인덱스를 다시 구성하면 모든 CLOSED 행 그룹이 columnstore로 이동됩니다. 다시 구성 하려면 [ALTER INDEX &#40;transact-sql&#41;](/sql/t-sql/statements/alter-index-transact-sql)에서 다시 구성 옵션을 사용 합니다.  
   
  CLOSED 행 그룹을 columnstore로 이동할 경우에는 다시 구성할 필요가 없습니다. tuple-mover 프로세스에서 모든 CLOSED 행 그룹을 찾아서 이동합니다. 하지만 tuple-mover는 단일 스레드이므로 작업에 맞게 충분히 빠르게 행 그룹을 이동하지 못할 수 있습니다.  
   

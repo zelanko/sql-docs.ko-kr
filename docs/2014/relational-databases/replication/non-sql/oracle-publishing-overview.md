@@ -17,14 +17,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 558ee09eeb4419bc354ff3ade9d6586877246b33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022255"
 ---
 # <a name="oracle-publishing-overview"></a>Oracle Publishing Overview
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]부터는 복제 토폴로지에 Oracle 버전 9i 이상의 Oracle 게시자를 추가할 수 있습니다. 게시 서버는 모든 Oracle 지원 하드웨어 및 운영 체제에 배포할 수 있습니다. 이 기능은 잘 설정된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 스냅샷 복제 및 트랜잭션 복제의 토대 위에 구축되었으므로 비슷한 성능과 유용성을 제공합니다.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]부터는 복제 토폴로지에 Oracle 버전 9i 이상의 Oracle 게시자를 포함할 수 있습니다. 게시 서버는 모든 Oracle 지원 하드웨어 및 운영 체제에 배포할 수 있습니다. 이 기능은 잘 설정된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 스냅샷 복제 및 트랜잭션 복제의 토대 위에 구축되었으므로 비슷한 성능과 유용성을 제공합니다.  
   
  Oracle 게시는 지원되지 않습니다. SQL Server 이외의 구독자에 대한 다른 유형의 복제는 지원되지 않습니다. 데이터를 이동하려면 변경 데이터 캡처 및 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]를 사용하여 솔루션을 만듭니다.  
   
@@ -39,9 +39,9 @@ ms.locfileid: "63022255"
   
  Oracle 게시가 생성되면 Oracle 데이터베이스 내의 게시된 각 테이블에 대해 트리거 및 추적 테이블이 생성됩니다. 게시된 테이블의 데이터가 변경되면 테이블에 대해 데이터베이스 트리거가 발생되고 수정된 각 행에 대한 정보가 복제 추적 테이블에 삽입됩니다. 그런 후 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에 대한 로그 판독기 에이전트가 추적 테이블의 데이터 변경 정보를 배포자의 배포 데이터베이스로 옮깁니다. 마지막으로 표준 트랜잭션 복제의 경우처럼 배포 에이전트가 배포자에서 구독자로 변경 내용을 옮깁니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Oracle 게시자 구성](configure-an-oracle-publisher.md)   
  [Oracle 게시를 위한 용어 설명](glossary-of-terms-for-oracle-publishing.md)   
- [Heterogeneous Database Replication](heterogeneous-database-replication.md)  
+ [다른 유형의 데이터베이스 복제](heterogeneous-database-replication.md)  
   
   

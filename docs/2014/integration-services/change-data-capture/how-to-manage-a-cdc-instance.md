@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fd64fe5cad5f85c41830d25dce279ba09915626b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771171"
 ---
 # <a name="how-to-manage-a-cdc-instance"></a>How to Manage a CDC Instance
@@ -40,9 +40,9 @@ ms.locfileid: "62771171"
   
     -   **다시 설정**: **다시 설정** 을 클릭하여 CDC 인스턴스를 초기(비어 있음) 상태로 다시 설정합니다. 이 옵션은 CDC 인스턴스가 중지된 경우에 사용할 수 있습니다. 변경 테이블의 모든 변경 사항과 CDC 인스턴스 내부 상태가 삭제됩니다. CDC 인스턴스를 나중에 시작하면 변경 캡처가 해당 시점에서 시작되고 CDC 인스턴스가 시작된 후에 시작된 트랜잭션만 포함됩니다.  
   
-    -   **삭제**: DAC 인스턴스를 삭제합니다.  
+    -   **삭제**: CDC 인스턴스를 삭제합니다.  
   
-    -   **Oracle 로깅 스크립트**: **Oracle 로깅 스크립트**를 클릭하여 Oracle 로깅 스크립트 대화 상자를 Oracle 보완 로깅 스크립트와 함께 표시할 수 있습니다. 이 대화 상자에서 수행할 수 있는 작업에 대한 자세한 내용은 [Oracle Supplemental Logging Script](oracle-supplemental-logging-script.md)를 참조하십시오.  
+    -   **Oracle 로깅 스크립트**: **Oracle 로깅 스크립트** 를 클릭하여 Oracle 로깅 스크립트 대화 상자를 Oracle 보완 로깅 스크립트와 함께 표시할 수 있습니다. 이 대화 상자에서 수행할 수 있는 작업에 대한 자세한 내용은 [Oracle Supplemental Logging Script](oracle-supplemental-logging-script.md)를 참조하십시오.  
   
          **참고**: 보완 로깅 스크립트를 실행하면 유효한 Oracle 사용자 이름과 암호를 입력할 수 있는 스크립트 실행을 위한 Oracle 자격 증명 대화 상자가 열립니다. 적절한 Oracle 자격 증명을 제공하는 방법은 [Oracle Credentials for Running Script](oracle-credentials-for-running-script.md)을 참조하십시오.  
   

@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ecb72ee0cb9d6e94a672f46ed523096ac4cc096e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900159"
 ---
 # <a name="export-column-transformation"></a>열 내보내기 변환
@@ -32,16 +32,16 @@ ms.locfileid: "62900159"
 ## <a name="append-and-truncate-options"></a>추가 및 잘림 옵션  
  다음 표에서는 추가 및 잘림 옵션 설정이 결과에 미치는 영향을 설명합니다.  
   
-|추가|잘라내기|파일 존재 여부|결과|  
+|추가|Truncate|파일 존재 여부|결과|  
 |------------|--------------|-----------------|-------------|  
-|False|False|아니요|이 변환은 새 파일을 만들고 해당 파일에 데이터를 씁니다.|  
-|True|False|아니요|이 변환은 새 파일을 만들고 해당 파일에 데이터를 씁니다.|  
-|False|True|아니요|이 변환은 새 파일을 만들고 해당 파일에 데이터를 씁니다.|  
-|True|True|아니요|이 변환은 디자인 타임 유효성 검사에 실패합니다. 두 속성을 모두 `true`로 설정하면 안 됩니다.|  
-|False|False|사용자 계정 컨트롤|런타임 오류가 발생합니다. 이 변환은 파일은 있지만 해당 파일에 쓸 수 없습니다.|  
-|False|True|사용자 계정 컨트롤|이 변환은 파일을 삭제하고 다시 만든 후 해당 파일에 데이터를 씁니다.|  
-|True|False|사용자 계정 컨트롤|이 변환은 파일을 열고 해당 파일의 끝에 데이터를 씁니다.|  
-|True|True|사용자 계정 컨트롤|이 변환은 디자인 타임 유효성 검사에 실패합니다. 두 속성을 모두 `true`로 설정하면 안 됩니다.|  
+|False|False|예|이 변환은 새 파일을 만들고 해당 파일에 데이터를 씁니다.|  
+|True|False|예|이 변환은 새 파일을 만들고 해당 파일에 데이터를 씁니다.|  
+|False|True|예|이 변환은 새 파일을 만들고 해당 파일에 데이터를 씁니다.|  
+|True|True|예|이 변환은 디자인 타임 유효성 검사에 실패합니다. 두 속성을 모두 `true`로 설정하면 안 됩니다.|  
+|False|False|yes|런타임 오류가 발생합니다. 이 변환은 파일은 있지만 해당 파일에 쓸 수 없습니다.|  
+|False|True|yes|이 변환은 파일을 삭제하고 다시 만든 후 해당 파일에 데이터를 씁니다.|  
+|True|False|yes|이 변환은 파일을 열고 해당 파일의 끝에 데이터를 씁니다.|  
+|True|True|yes|이 변환은 디자인 타임 유효성 검사에 실패합니다. 두 속성을 모두 `true`로 설정하면 안 됩니다.|  
   
 ## <a name="configuration-of-the-export-column-transformation"></a>열 내보내기 변환 구성  
  다음과 같은 방법으로 열 내보내기 변환을 구성할 수 있습니다.  
@@ -55,17 +55,18 @@ ms.locfileid: "62900159"
     > [!NOTE]  
     >  기존 파일에 데이터를 추가하지 않으며 데이터 형식이 DT_NTEXT인 경우에만 BOM이 기록됩니다.  
   
- 이 변형은 입력 열의 쌍을 사용합니다. 두 열 중 하나에는 파일 이름이 있고 다른 열에는 데이터가 포함되어 있습니다. 데이터 집합의 각 행에서 서로 다른 파일을 지정할 수 있습니다. 변환이 행을 처리하면 지정한 파일에 데이터가 삽입됩니다. 런타임 시 파일이 존재하지 않을 경우 이 변환은 새로 파일을 만든 후 데이터를 해당 파일에 씁니다. 기록될 데이터 형식은 DT_TEXT, DT_NTEXT 또는 DT_IMAGE여야 합니다. 자세한 내용은 [Integration Services Data Types](../integration-services-data-types.md)을 참조하세요.  
+ 이 변환은 입력 열의 쌍을 사용합니다. 그 중 하나에는 파일 이름이 있고 다른 하나에는 데이터가 있습니다. 데이터 집합의 각 행에서 서로 다른 파일을 지정할 수 있습니다. 변환이 행을 처리하면 지정한 파일에 데이터가 삽입됩니다. 런타임 시 파일이 존재하지 않을 경우 이 변환은 새로 파일을 만든 후 데이터를 해당 파일에 씁니다. 기록될 데이터 형식은 DT_TEXT, DT_NTEXT 또는 DT_IMAGE여야 합니다. 자세한 내용은 [Integration Services Data Types](../integration-services-data-types.md)을 참조하세요.  
   
  이 변환에는 하나의 입력, 하나의 출력 및 하나의 오류 출력이 있습니다.  
   
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- **열 내보내기 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용은 [열 내보내기 변환 편집기&#40;열 페이지&#41;](../../export-column-transformation-editor-columns-page.md)를 참조하세요.  
+ 
+  **열 내보내기 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용은 [열 내보내기 변환 편집기&#40;열 페이지&#41;](../../export-column-transformation-editor-columns-page.md)를 참조하세요.  
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [공용 속성](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [변환 사용자 지정 속성](transformation-custom-properties.md)  
   

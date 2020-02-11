@@ -1,5 +1,5 @@
 ---
-title: CHECK OPTION을 사용 하 여 지원 되지 않습니다 호환성 모드 90 이상의 TOP이 포함 된 뷰에서 | Microsoft Docs
+title: 90 이상 호환성 모드의 TOP이 포함 된 뷰에서는 WITH CHECK OPTION이 지원 되지 않습니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 254969e6201795e2f4ae512e03be26419b71d866
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66090999"
 ---
 # <a name="with-check-option-is-not-supported-in-views-that-contain-top-in-90-or-later-compatibility-modes"></a>호환성 모드 90 이상의 TOP이 포함된 뷰에서는 WITH CHECK OPTION이 지원되지 않습니다.
@@ -27,10 +27,10 @@ ms.locfileid: "66090999"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="corrective-action"></a>수정 동작  
- 업그레이드할 때 사용자 데이터베이스는 호환성 모드를 유지합니다. 뷰를 통해 데이터를 수정해야 하는 경우 데이터베이스 호환성 모드를 100 이상으로 변경하기 전에 WITH CHECK OPTION과 TOP를 둘 다 사용하는 뷰를 수정합니다. 자세한 내용은 [sp_dbcmptlevel &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbcmptlevel-transact-sql)합니다.  
+ 업그레이드할 때 사용자 데이터베이스는 호환성 모드를 유지합니다. 뷰를 통해 데이터를 수정해야 하는 경우 데이터베이스 호환성 모드를 100 이상으로 변경하기 전에 WITH CHECK OPTION과 TOP를 둘 다 사용하는 뷰를 수정합니다. 자세한 내용은 [sp_dbcmptlevel &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-dbcmptlevel-transact-sql)를 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [데이터베이스 엔진 업그레이드 문제](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>참고 항목  
+ [업그레이드 문제 데이터베이스 엔진](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 업그레이드 관리자 &#91;새&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

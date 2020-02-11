@@ -15,19 +15,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0ef94ed9e296c588b70789ace0bbbbe79bc8008f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68205960"
 ---
 # <a name="notify-operator-task-maintenance-plan"></a>운영자에게 알림 태스크(유지 관리 계획)
-  **운영자에게 알림 태스크** 대화 상자를 사용하여 이 유지 관리 계획에 자동 알림을 추가할 수 있습니다. 이 태스크를 사용하려면 MSDB를 사용하여 데이터베이스 메일을 활성화하고 메일 호스트 데이터베이스로 구성해야 합니다. 또한 유효한 메일 주소를 가지고 있는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 운영자가 있어야 합니다.  
+  운영자에 **게 알림 태스크** 대화 상자를 사용 하 여이 유지 관리 계획에 자동 알림을 추가할 수 있습니다. 이 태스크를 사용 하려면 MSDB를 메일 호스트 데이터베이스로 사용 하도록 설정 하 고 올바르게 구성 해야 하며 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유효한 전자 메일 주소를 포함 하는 에이전트 운영자가 데이터베이스 메일 있어야 합니다.  
   
  이 태스크에서는 sp_notify_operator 저장 프로시저를 사용합니다.  
   
-## <a name="options"></a>변수  
- **대량 삽입 태스크 편집기**  
+## <a name="options"></a>옵션  
+ **연결**  
  이 태스크를 수행할 때 사용할 서버 연결을 선택합니다.  
   
  **새로 만들기**  
@@ -42,7 +42,7 @@ ms.locfileid: "68205960"
  **알림 메시지 본문**  
  알림 메시지 본문에 포함할 텍스트를 지정합니다.  
   
- **T-SQL 보기**  
+ **T-sql 보기**  
  선택한 옵션을 기반으로 서버에 대해 수행한 이 태스크의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 표시합니다.  
   
 > [!NOTE]  
@@ -61,11 +61,12 @@ ms.locfileid: "68205960"
  **서버 로그온 정보 입력**  
  서버에 대한 인증 방법을 지정합니다.  
   
- **Windows NT 통합 보안 사용**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 인스턴스에 연결합니다.  
+ **Windows 통합 보안 사용**  
+ Windows 인증 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 을 사용 하 여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 인스턴스에 연결 합니다.  
   
  **특정 사용자 이름 및 암호 사용**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다. 이 옵션은 사용할 수 없습니다.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다. 이 옵션은 사용할 수 없습니다.  
   
  **사용자 이름**  
  인증 시 사용할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 입력합니다. 이 옵션은 사용할 수 없습니다.  
@@ -73,8 +74,8 @@ ms.locfileid: "68205960"
  **암호**  
  인증 시 사용할 암호를 입력합니다. 이 옵션은 사용할 수 없습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 메일](../database-mail/database-mail.md)   
- [sp_notify_operator&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-notify-operator-transact-sql)  
+ [Transact-sql&#41;sp_notify_operator &#40;](/sql/relational-databases/system-stored-procedures/sp-notify-operator-transact-sql)  
   
   

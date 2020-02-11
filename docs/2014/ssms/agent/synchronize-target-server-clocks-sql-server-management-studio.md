@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 769b2b9caba541af3a1ea38e1969d8a6422950be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68188771"
 ---
 # <a name="synchronize-target-server-clocks-sql-server-management-studio"></a>Synchronize Target Server Clocks (SQL Server Management Studio)
@@ -32,7 +32,7 @@ ms.locfileid: "68188771"
   
      [보안](#Security)  
   
--   **다음을 사용하여 대상 서버 클럭을 동기화합니다.**  
+-   **다음을 사용 하 여 대상 서버 클럭을 동기화 합니다.**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -42,26 +42,32 @@ ms.locfileid: "68188771"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-synchronize-target-server-clocks"></a>대상 서버 클럭을 동기화하려면  
   
-1.  **개체 탐색기** 에서 더하기 기호를 클릭하여 대상 서버 클럭을 마스터 서버 클럭과 동기화하려는 서버를 확장합니다.  
+1.  
+  **개체 탐색기** 에서 더하기 기호를 클릭하여 대상 서버 클럭을 마스터 서버 클럭과 동기화하려는 서버를 확장합니다.  
   
-2.  **SQL Server 에이전트**를 마우스 오른쪽 단추로 클릭하고 **다중 서버 관리**를 가리킨 다음 **대상 서버 관리**를 선택합니다.  
+2.  
+  **SQL Server 에이전트**를 마우스 오른쪽 단추로 클릭하고 **다중 서버 관리**를 가리킨 다음 **대상 서버 관리**를 선택합니다.  
   
-3.  **대상 서버 관리** 대화 상자에서 **명령 게시**를 클릭합니다.  
+3.  
+  **대상 서버 관리** 대화 상자에서 **명령 게시**를 클릭합니다.  
   
-4.  **명령 유형** 목록에서 **클럭 동기화**를 선택합니다.  
+4.  
+  **명령 유형** 목록에서 **클럭 동기화**를 선택합니다.  
   
-5.  **받는 사람**에서 다음 중 하나를 수행합니다.  
+5.  
+  **받는 사람**에서 다음 중 하나를 수행합니다.  
   
     -   모든 대상 서버 클럭을 마스터 서버 클럭과 동기화하려면 **모든 대상 서버** 를 클릭합니다.  
   
-    -   **대상 서버 지정** 을 클릭하여 특정 서버 클럭을 동기화하고 마스터 서버 클럭과 동기화할 클럭의 대상 서버를 각각 선택합니다.  
+    -   
+  **대상 서버 지정** 을 클릭하여 특정 서버 클럭을 동기화하고 마스터 서버 클럭과 동기화할 클럭의 대상 서버를 각각 선택합니다.  
   
 6.  완료되었으면 **확인**을 클릭합니다.  
   
@@ -84,6 +90,6 @@ ms.locfileid: "68188771"
     GO  
     ```  
   
- 자세한 내용은 [sp_resync_targetserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql)합니다.  
+ 자세한 내용은 [sp_resync_targetserver &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql)를 참조 하세요.  
   
   

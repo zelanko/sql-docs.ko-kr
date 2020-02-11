@@ -13,15 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a092a7228f5ec70247e38cf39073d946de0e56ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761635"
 ---
-# <a name="mssqlserver9955"></a>MSSQLSERVER_9955
+# <a name="mssqlserver_9955"></a>MSSQLSERVER_9955
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -38,7 +38,7 @@ ms.locfileid: "62761635"
 ## <a name="user-action"></a>사용자 동작  
  이 오류를 해결하려면 실행 중인 전체 텍스트 필터 데몬 프로세스를 종료하고, 필요한 경우 SQL Server 구성 관리자를 사용하여 전체 텍스트 데몬 호스트 계정을 다시 구성하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 구성 관리자](../sql-server-configuration-manager.md)   
  [전체 텍스트 필터 데몬 시작 관리자 서비스 계정 설정](../search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
  [전체 텍스트 검색](../search/full-text-search.md)  

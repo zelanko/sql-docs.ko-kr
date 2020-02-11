@@ -17,22 +17,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 06ca087cdb1e2009faa19ff8fb86f9ab4982fddd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62752970"
 ---
 # <a name="fetching-blob-data-using-irow"></a>IRow를 사용하여 BLOB 데이터 인출
-  사용 하 여 행 개체의 BLOB 열을 검색할 수 있습니다 **irow:: Getcolumns**, 또는 **irow:: Open** 하 고 **ISequentialStream**합니다.  
+  **IRow:: GetColumns**또는 **IRow:: Open** 및 **ISequentialStream**를 사용 하 여 행 개체의 BLOB 열을 검색할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [IRow::GetColumns 및 ISequentialStream을 사용하여 BLOB 데이터 페치](../../relational-databases/native-client-ole-db-rowsets/fetching-blob-data-using-irow-getcolumns-and-isequentialstream.md)  
+-   [IRow::GetColumns 및 ISequentialStream을 사용하여 BLOB 데이터 인출](../../relational-databases/native-client-ole-db-rowsets/fetching-blob-data-using-irow-getcolumns-and-isequentialstream.md)  
   
--   [IRow::Open 및 ISequentialStream을 사용하여 BLOB 데이터 페치](../../relational-databases/native-client-ole-db-rowsets/fetching-blob-data-using-irow-open-and-isequentialstream.md)  
+-   [IRow::Open 및 ISequentialStream을 사용하여 BLOB 데이터 인출](../../relational-databases/native-client-ole-db-rowsets/fetching-blob-data-using-irow-open-and-isequentialstream.md)  
   
-## <a name="see-also"></a>관련 항목  
- [IRow를 사용하여 단일 행 페치](../../relational-databases/native-client-ole-db-rowsets/fetching-a-single-row-with-irow.md)  
+## <a name="see-also"></a>참고 항목  
+ [IRow를 사용하여 단일 행 인출](../../relational-databases/native-client-ole-db-rowsets/fetching-a-single-row-with-irow.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: One Column (Visual Database Tools)에 여러 검색 조건 지정 | Microsoft Docs
+title: 한 열에 여러 검색 조건 지정 (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 176d5a6586008d49ece1430ec03e2c54278eebce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62695400"
 ---
 # <a name="specify-multiple-search-conditions-for-one-column-visual-database-tools"></a>한 열에 여러 검색 조건 지정(Visual Database Tools)
@@ -82,8 +82,8 @@ WHERE (title LIKE '%Cook%') AND
   (title LIKE '%Recipe%')  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [조건 창의 검색 조건 결합 규칙 &#40;Visual Database Tools&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [조건 창에서 검색 조건을 결합 하는 규칙 &#40;Visual Database Tools&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
  [검색 조건 지정&#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)  
   
   

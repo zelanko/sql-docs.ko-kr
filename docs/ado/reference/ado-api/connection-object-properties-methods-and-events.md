@@ -13,15 +13,15 @@ ms.assetid: f571b74d-b796-4009-9c66-6a36ab995a2a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bd6c95c7c761e2aadf9d42befcd4e2f740877196
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919517"
 ---
-# <a name="connection-object-properties-methods-and-events"></a>연결 개체 속성, 메서드 및 이벤트
+# <a name="connection-object-properties-methods-and-events"></a>Connection 개체 속성, 메서드 및 이벤트
 ## <a name="propertiescollections"></a>속성/컬렉션  
- [특성 속성](../../../ado/reference/ado-api/attributes-property-ado.md)  
+ [Attributes 속성](../../../ado/reference/ado-api/attributes-property-ado.md)  
   
  [CommandTimeout 속성](../../../ado/reference/ado-api/commandtimeout-property-ado.md)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "67919517"
   
  [IsolationLevel 속성](../../../ado/reference/ado-api/isolationlevel-property.md)  
   
- [모드 속성](../../../ado/reference/ado-api/mode-property-ado.md)  
+ [Mode 속성](../../../ado/reference/ado-api/mode-property-ado.md)  
   
  [속성 컬렉션](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
@@ -61,7 +61,7 @@ ms.locfileid: "67919517"
  [OpenSchema 메서드](../../../ado/reference/ado-api/openschema-method.md)  
   
 ## <a name="events"></a>이벤트  
- [BeginTransComplete, CommitTransComplete, 및 RollbackTransComplete 이벤트](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)  
+ [BeginTransComplete, CommitTransComplete 및 RollbackTransComplete 이벤트](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)  
   
  [ConnectComplete 및 Disconnect 이벤트](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)  
   
@@ -73,5 +73,5 @@ ms.locfileid: "67919517"
   
  [WillExecute 이벤트](../../../ado/reference/ado-api/willexecute-event-ado.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

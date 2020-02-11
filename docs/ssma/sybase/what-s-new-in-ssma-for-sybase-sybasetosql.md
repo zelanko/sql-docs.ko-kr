@@ -1,7 +1,7 @@
 ---
 title: SAP ASE 용 SSMA의 새로운 기능 (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/04/2019
+ms.date: 01/22/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ssma
@@ -9,16 +9,27 @@ ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: 094db4e2d374f79e8102d111d0a9f9bfda22e6b7
-ms.sourcegitcommit: 26868c8ac3217176b370d972a26d307598a10328
+ms.openlocfilehash: 752c099f985cc1695ab30e2d01241aea4c0c754c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74834258"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76516621"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>SAP ASE 용 SSMA의 새로운 기능 (SybaseToSQL)
 
 이 문서에서는 각 릴리스의 SAP ASE (이전에는 Sybase 용 SSMA) 변경 내용에 대 한 SSMA (SQL Server Migration Assistant)를 나열 합니다.
+
+## <a name="ssma-v86"></a>SSMA v 8.6
+
+사용자가 변환 된 코드에서 SSMA 확장 속성을 생략할 수 있도록 하는 설정을 추가 하 여 SAP ASE 용 SSMA의 hyper-v 8.6 릴리스를 향상 시켰습니다.
+
+이 설정을 활용 하려면 SAP ASE 용 ssma에서 **도구** > **프로젝트 설정** > **일반** > **변환**으로 이동한 다음 **기타**에서 **확장 속성 생략** 설정의 값을 **예**로 업데이트 합니다.
+
+![확장 속성 설정 생략](../sybase/media/ssma-omit-extended-properties.png)
+
+> [!IMPORTANT]
+> SSMA v 8.5 이상에서 .Net 4.7.2는 설치 필수 구성 요소입니다. 이 버전을 설치 해야 하는 경우 [여기](https://dotnet.microsoft.com/download/dotnet-framework/net472)에서 런타임 파일을 다운로드할 수 있습니다.
 
 ## <a name="ssma-v85"></a>SSMA v 8.5
 
@@ -158,7 +169,7 @@ Sybase 용 SSMA의 v 7.1 릴리스에는 다음과 같은 변경 내용이 포�
 
 * 이제 Windows 및 Linux CTP1의 SQL Server 2017는 마이그레이션에 지원 되는 대상 플랫폼입니다. 이 기능은 technical preview에 있으며 SQL server를 대상으로 하는 스키마 및 데이터 이동을 지원 합니다.
 * 최신 버전의 SSMA를 사용할 수 있는 즉시 다운로드 하는 자동 업데이트 지원.
-* 이제 Windows installer 패키지 파일 (.msi)을 통해 SSMA를 설치할 수 있는 이진 파일이 제공 됩니다.
+* 이제 Windows Installer 패키지 파일 (.msi)을 통해 SSMA를 설치할 수 있는 이진 파일이 제공 됩니다.
 
 ## <a name="may-2016"></a>2016년 5월
 

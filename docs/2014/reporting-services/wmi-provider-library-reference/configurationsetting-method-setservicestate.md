@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 21c8de3e6903a28ad8358431f5e455df31d3044e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097946"
 ---
-# <a name="setservicestate-method-wmi-msreportserverconfigurationsetting"></a>SetServiceState 메서드(WMI MSReportServer_ConfigurationSetting)
+# <a name="setservicestate-method-wmi-msreportserver_configurationsetting"></a>SetServiceState 메서드(WMI MSReportServer_ConfigurationSetting)
   보고서 서버 Windows 및 웹 서비스를 설정하거나 해제합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -43,10 +43,12 @@ public void SetSecureConnectionLevel(Boolean EnableWindowsService,
   
 ## <a name="parameters"></a>매개 변수  
  *EnableWindowsService*  
- Windows 서비스의 상태를 나타내는 `Boolean` 값입니다. `true` 값은 보고서 서버 Windows 서비스를 시작하고 `false` 값은 Windows 서비스를 중지합니다.  
+ Windows 서비스의 상태를 나타내는 `Boolean` 값입니다. 
+  `true` 값은 보고서 서버 Windows 서비스를 시작하고 `false` 값은 Windows 서비스를 중지합니다.  
   
  *EnableWebService*  
- A `Boolean` 의 상태를 나타내는 값을 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 서비스입니다. `true` 값은 보고서 서버 웹 서비스를 시작하고 `false` 값은 웹 서비스를 중지합니다.  
+ 웹 서비스의 상태를 나타내는 `Boolean` 값입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 
+  `true` 값은 보고서 서버 웹 서비스를 시작하고 `false` 값은 웹 서비스를 중지합니다.  
   
  *EnableReportManager*  
  보고서 관리자의 필요한 상태를 나타내는 `Boolean` 값입니다.  
@@ -54,15 +56,15 @@ public void SetSecureConnectionLevel(Boolean EnableWindowsService,
  *HRESULT*  
  [out] 호출의 성공 여부를 나타내는 값입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드 호출의 성공 또는 실패를 나타내는 *HRESULT* 를 반환합니다. 0 값은 메서드 호출이 성공했음을 나타냅니다. 0 이외의 값은 오류가 발생했음을 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 ## <a name="requirements"></a>요구 사항  
- **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **네임 스페이스:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [MSReportServer_ConfigurationSetting 멤버](msreportserver-configurationsetting-members.md)  
   
   

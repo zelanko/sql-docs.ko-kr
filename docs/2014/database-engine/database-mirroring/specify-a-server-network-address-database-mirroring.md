@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f197eef6369281001359969bf1d92bd0390bedc8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755062"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>서버 네트워크 주소 지정(데이터베이스 미러링)
@@ -32,9 +32,9 @@ ms.locfileid: "62755062"
 ##  <a name="Syntax"></a> 서버 네트워크 주소 구문  
  서버 네트워크 주소 구문은 다음 형식을 사용합니다.  
   
- TCP<strong>://</strong> *\<system-address>* <strong>:<strong> *\<port>* 
+ TCP:<strong>//</strong>*\<시스템 주소>* <strong>:<strong>*\<포트>* 
   
- 여기서  
+ 라는 설치 관리자 실행 파일에 포함됩니다. 여기서  
   
 -   *\<system-address>* 는 대상 컴퓨터 시스템을 명확하게 식별하는 문자열입니다. 일반적으로 서버 주소는 시스템 이름(시스템이 같은 도메인에 있는 경우), 정규화된 도메인 이름 또는 IP 주소입니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62755062"
   
     -   정규화된 도메인 이름을 사용하는 것이 좋습니다. 이 주소 문자열은 로컬로 정의되므로 위치에 따라 형식이 달라집니다. 항상은 아니지만 정규화된 도메인 이름은 컴퓨터 이름과 마침표로 구분된 일련의 도메인 세그먼트를 다음 형식으로 포함하는 복합 이름입니다.  
   
-         _computer_name_ **)을 사용할 수 있습니다.** _domain_segment_[... **.** _domain_segment_]  
+         _computer_name_ **.** _domain_segment_[... **.** _domain_segment_]  
   
          여기에서 *computer_name*은 서버 인스턴스를 실행하는 컴퓨터의 네트워크 이름이고 *domain_segment*[... **.** _domain_segment_]는 서버의 나머지 도메인 정보입니다(예: `localinfo.corp.Adventure-Works.com`).  
   
@@ -73,28 +73,28 @@ ms.locfileid: "62755062"
   
 ### <a name="examples"></a>예  
   
-#### <a name="a-using-a-system-name"></a>1\. 시스템 이름 사용  
+#### <a name="a-using-a-system-name"></a>A. 시스템 이름 사용  
  다음 서버 네트워크 주소는 시스템 이름 `SYSTEM46`및 포트 `7022`를 지정합니다.  
   
 ```  
 ALTER DATABASE AdventureWorks SET PARTNER ='tcp://SYSTEM46:7022';  
 ```  
   
-#### <a name="b-using-a-fully-qualified-domain-name"></a>2\. 정규화된 도메인 이름 사용  
+#### <a name="b-using-a-fully-qualified-domain-name"></a>B. 정규화된 도메인 이름 사용  
  다음 서버 네트워크 주소는 정규화된 도메인 이름 `DBSERVER8.manufacturing.Adventure-Works.com`및 포트 `7024`를 지정합니다.  
   
 ```  
 ALTER DATABASE AdventureWorks SET PARTNER ='tcp://DBSERVER8.manufacturing.Adventure-Works.com:7024';  
 ```  
   
-#### <a name="c-using-ipv4"></a>3\. IPv4 사용  
+#### <a name="c-using-ipv4"></a>C. IPv4 사용  
  다음 서버 네트워크 주소는 IPv4 주소 `10.193.9.134`및 포트 `7023`을 지정합니다.  
   
 ```  
 ALTER DATABASE AdventureWorks SET PARTNER ='tcp://10.193.9.134:7023';  
 ```  
   
-#### <a name="d-using-ipv6"></a>4\. IPv6 사용  
+#### <a name="d-using-ipv6"></a>D. IPv6 사용  
  다음 서버 네트워크 주소에는 IPv6 주소 `2001:4898:23:1002:20f:1fff:feff:b3a3`및 포트 `7022`가 포함되어 있습니다.  
   
 ```  
@@ -129,11 +129,11 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  `TCP://DBSERVER1:7022`  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링&#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [데이터베이스 미러링 엔드포인트&#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)  
   

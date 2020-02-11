@@ -1,5 +1,5 @@
 ---
-title: 메모리 최적화 테이블에 LOB 열 구현 | Microsoft Docs
+title: 메모리 액세스에 최적화 된 테이블에서 LOB 열 구현 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e347d942bf6541de9c16f34075e2d66817c3e347
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62778924"
 ---
 # <a name="implementing-lob-columns-in-a-memory-optimized-table"></a>메모리 액세스에 최적화된 테이블에서 LOB 열 구현
-  메모리 최적화 테이블에 행 외부 또는 큰 개체 (LOB) 저장소 없는 (SQL Server 2016 이상-참조가이 제한이 제거 되었습니다 [메모리 내 OLTP에 대 한 데이터 형식 지원](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)), 및 행 크기 제한인 8060 바이트입니다. 다음 두 가지 방법으로 큰 이진 또는 문자열 값을 저장할 수 있습니다.  
+  메모리 액세스에 최적화 된 테이블에는 행 외부 또는 LOB (large object) 저장소가 없습니다 .이 제한 사항은 SQL Server 2016 이상에서 제거 되었으며, [메모리 내 OLTP에 대해 지원 되는 데이터 형식](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)참조) 행 크기 제한은 8060 바이트입니다. 다음 두 가지 방법으로 큰 이진 또는 문자열 값을 저장할 수 있습니다.  
   
 -   여러 행으로 LOB 값을 분할합니다.  
   
@@ -100,7 +100,7 @@ COMMIT
 END  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP로 마이그레이션](../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

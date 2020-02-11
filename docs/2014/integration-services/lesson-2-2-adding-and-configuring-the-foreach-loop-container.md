@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 07c5118c654faccea2d9bab01040ce17b1d5699a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232468"
 ---
 # <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>2단계: Foreach 루프 컨테이너 추가 및 구성
@@ -42,13 +42,11 @@ ms.locfileid: "75232468"
 1.  
   **SQL Server Data Tools**에서 **제어 흐름** 탭을 클릭합니다.  
   
-2.  
-  **SSIS 도구 상자**에서 **컨테이너**를 확장한 다음 **Foreach 루프 컨테이너** 를 **제어 흐름** 탭의 디자인 화면으로 끌어옵니다.  
+2.  **SSIS 도구 상자**에서 **컨테이너**를 확장한 다음 **Foreach 루프 컨테이너** 를 **제어 흐름** 탭의 디자인 화면으로 끌어옵니다.  
   
 3.  새로 추가한 **Foreach 루프 컨테이너** 를 마우스 오른쪽 단추로 클릭하고 **편집**을 선택합니다.  
   
-4.  **Foreach 루프 편집기** 대화 상자의 **일반** 페이지에서 **이름**에을 입력 `Foreach File in Folder`합니다. 
-  **확인**을 클릭합니다.  
+4.  **Foreach 루프 편집기** 대화 상자의 **일반** 페이지에서 **이름**에을 입력 `Foreach File in Folder`합니다. **확인**을 클릭합니다.  
   
 5.  Foreach 루프 컨테이너를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 클릭 한 다음 속성 창에서 `LocaleID` 속성이 **영어 (미국)** 로 설정 되어 있는지 확인 합니다.  
   
@@ -60,8 +58,7 @@ ms.locfileid: "75232468"
 2.  
   **컬렉션**을 클릭합니다.  
   
-3.  
-  **컬렉션** 페이지에서 **Foreach File 열거자**를 선택합니다.  
+3.  **컬렉션** 페이지에서 **Foreach File 열거자**를 선택합니다.  
   
 4.  
   **열거자 구성** 그룹에서 **찾아보기**를 클릭합니다.  
@@ -94,8 +91,7 @@ ms.locfileid: "75232468"
     > [!IMPORTANT]  
     >  변수 이름은 대/소문자를 구분합니다.  
   
-4.  
-  **확인**을 클릭합니다.  
+4.  **확인**을 클릭합니다.  
   
 5.  
   **확인** 을 다시 클릭하여 **Foreach 루프 편집기** 대화 상자를 종료합니다.  
@@ -105,7 +101,7 @@ ms.locfileid: "75232468"
 -   **Extract Sample Currency data** 데이터 흐름 태스크를 지금 이름이 바뀐 `Foreach File in Folder`Foreach 루프 컨테이너로 끌어 옵니다.  
   
 ## <a name="next-lesson-task"></a>다음 단원 태스크  
- [3 단계: 플랫 파일 연결 관리자 수정](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+ [3단계: 플랫 파일 연결 관리자 수정](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [Foreach 루프 컨테이너 구성](control-flow/foreach-loop-container.md)   

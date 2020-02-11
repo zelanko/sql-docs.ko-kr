@@ -10,10 +10,10 @@ ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 1fda81ac39233435dbcd0546e452878cc6767b33
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75247145"
 ---
 # <a name="manage-a-knowledge-base"></a>기술 자료 관리
@@ -22,14 +22,14 @@ ms.locfileid: "75247145"
 
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 기술 자료에 대해 관리 기능을 수행하는 방법에 대해 설명합니다. 기술 자료에 대해 삭제, 잠금 해제, 작업 취소, 이름 바꾸기 및 속성 표시 기능을 수행할 수 있습니다.  
   
-##  <a name="BeforeYouBegin"></a>시작 하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a>사전  
+###  <a name="Prerequisites"></a> 필수 조건  
  기술 자료를 관리하려면 기술 자료가 이미 생성되어 있고 게시되었거나(다른 사람이 생성한 경우) 닫혀 있어야 합니다(본인이 생성한 경우).  
   
-###  <a name="Security"></a>보안  
+###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a>권한에  
+####  <a name="Permissions"></a> 권한  
  기술 자료를 열려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
 ##  <a name="Manage"></a>기술 자료 관리  
@@ -55,7 +55,7 @@ ms.locfileid: "75247145"
   
     6.  **속성**: 읽기 전용 화면에서 데이터베이스에 대 한 속성을 표시 하려면 클릭 합니다.  
   
-        1.  **원본 기술 자료**:이 데이터베이스가 기반으로 하는 기술 자료입니다. 선택 사항입니다.  
+        1.  **원본 기술 자료**:이 데이터베이스가 기반으로 하는 기술 자료입니다. 이 구성 요소는 선택 사항입니다.  
   
         2.  **상태**: 기술 자료가 **작업 중** 이 고 특정 기술 자료 관리 작업에 있는지 여부를 나타냅니다 .이 작업은 마지막으로 닫힌 시점에 결정 됩니다. 상태는 기술 자료가 기술 자료 관리 세션에서 열렸지만 특정 작업 상태가 아닌 **작업 중**상태이거나 기술 자료가 기술 자료 관리 세션에서 열렸고 특정 작업 상태인 **작업 중** 상태에 해당 기술 자료 관리 작업이 함께 표시될 수 있습니다.  
   

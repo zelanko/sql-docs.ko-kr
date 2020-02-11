@@ -1,5 +1,5 @@
 ---
-title: 추가, 변경 하거나 (보고서 작성기 및 SSRS) 보고서 매개 변수의 사용 가능한 값을 삭제 | Microsoft Docs
+title: 보고서 매개 변수의 사용 가능한 값 추가, 변경 또는 삭제 (보고서 작성기 및 SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e9944e437be03dd7cfac3cbe6bad7c5224f3b462
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106676"
 ---
 # <a name="add-change-or-delete-available-values-for-a-report-parameter-report-builder-and-ssrs"></a>보고서 매개 변수의 사용 가능한 값 추가, 변경 또는 삭제(보고서 작성기 및 SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "66106676"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- 보고서를 게시한 후에는 보고서 서버에서 매개 변수 속성 값을 설정하여 보고서 제작 도구에서 보고서에 정의한 사용 가능한 값을 재정의할 수 있습니다. 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](report-parameters-report-builder-and-report-designer.md)를 참조하세요.  
+ 보고서를 게시한 후에는 보고서 서버에서 매개 변수 속성 값을 설정하여 보고서 제작 도구에서 보고서에 정의한 사용 가능한 값을 재정의할 수 있습니다. 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](report-parameters-report-builder-and-report-designer.md)에 대해 자세히 알아봅니다.  
   
 ### <a name="to-add-or-change-the-available-values-for-a-report-parameter"></a>보고서 매개 변수에 대한 사용 가능한 값을 추가 또는 변경하려면  
   
@@ -48,12 +48,12 @@ ms.locfileid: "66106676"
   
          제공할 값 개수만큼 이 단계를 반복합니다. 이 목록에 표시되는 항목의 순서에 따라 드롭다운 목록에 표시되는 항목의 순서가 결정됩니다. 목록에서 항목의 순서를 변경하려면 **값** 또는 **레이블** 입력란을 클릭하여 항목을 선택한 다음 위쪽 및 아래쪽 화살표 단추를 사용하여 항목을 목록의 위나 아래로 이동합니다.  
   
-    -   **쿼리에서 값 가져오기** 를 클릭하여 이 매개 변수에 대한 값과 필요에 따라 이름을 검색하는 기존 데이터 집합의 이름을 제공합니다.  
+    -   **쿼리에서 값 가져오기**를 클릭하여 이 매개 변수에 대한 값과 필요에 따라 이름을 검색하는 기존 데이터 세트의 이름을 제공합니다.  
   
         > [!IMPORTANT]  
         >  동일한 데이터 세트에 보고서 매개 변수에 대한 해당 쿼리 매개 변수가 있는 경우 보고서를 실행하려고 하면 보고서에서 오류 메시지를 표시합니다. 다른 데이터 세트를 사용하여 값을 검색하면 이 오류를 해결할 수 있습니다.  
   
-         **데이터 집합**에서 데이터 집합의 이름을 선택합니다.  
+         **데이터 세트**에서 데이터 세트의 이름을 선택합니다.  
   
          **값 필드**에서 매개 변수 값을 제공하는 필드의 이름을 선택합니다.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "66106676"
   
      보고서를 미리 볼 때 매개 변수에 대한 사용 가능한 값의 드롭다운 목록이 더 이상 나타나지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서 매개 변수의 순서 변경&#40;보고서 작성기 및 SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
  [보고서 매개 변수 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
  [보고서에 연계 매개 변수 추가&#40;보고서 작성기 및 SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   

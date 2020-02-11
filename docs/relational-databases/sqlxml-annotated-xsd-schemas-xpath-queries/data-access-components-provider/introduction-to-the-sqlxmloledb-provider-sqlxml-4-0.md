@@ -16,10 +16,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7f94cf5002f0f587332df9ccc9a77e24010b8824
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246682"
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>SQLXMLOLEDB 공급자 소개(SQLXML 4.0)
@@ -39,13 +39,13 @@ oTestCommand.Execute , , adExecuteStream
 ## <a name="sqlxmloledb-provider-specific-properties"></a>SQLXMLOLEDB 공급자별 속성  
  SQLXMLOLEDB 공급자는 다음과 같은 공급자별 연결 속성을 노출합니다.  
   
-|연결<br /><br /> 속성|Default<br /><br /> (있는 경우)|설명|  
+|연결<br /><br /> 속성|기본값<br /><br /> (있는 경우)|Description|  
 |-----------------------------|----------------------------|-----------------|  
 |데이터 공급자||SQLXMLOLEDB에서 명령을 실행하는 데 사용하는 OLE DB Provider의 PROGID를 제공합니다. SQLXML 4.0 및 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]부터 이 공급자는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 내에 포함되어 있으므로 이 속성 값은 "SQLNCLI11"으로 제한됩니다. 자세한 내용은 [SQL Server Native Client 프로그래밍](../../../relational-databases/native-client/sql-server-native-client-programming.md)을 참조하세요.|  
   
  SQLXMLOLEDB 공급자는 다음과 같은 공급자별 명령 속성을 노출합니다.  
   
-|명령<br /><br /> 속성|Default<br /><br /> (있는 경우)|설명|  
+|명령<br /><br /> 속성|기본값<br /><br /> (있는 경우)|Description|  
 |--------------------------|----------------------------|-----------------|  
 |기본 경로|""|기본 파일 경로를 지정합니다. 기본 파일 경로는 XSL(XML Stylesheet Language) 또는 매핑 스키마 파일의 위치를 지정하는 데 사용됩니다. 기본 파일 경로는 XSL 또는 매핑 스키마 속성에 지정 된 XSL 또는 매핑 스키마 파일의 상대 경로를 확인 하는 데도 사용 됩니다.<br /><br /> 이 속성을 사용 하는 예는 [XPath 쿼리 실행 &#40;SQLXMLOLEDB Provider&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md)를 참조 하세요.|  
 |ClientSideXML|False|행 집합을 XML로 변환하는 프로세스가 서버 대신 클라이언트에서 수행되도록 하려면 이 속성을 True로 설정합니다. 이 속성은 성능 부하를 중간 계층으로 이동하려는 경우에 유용합니다.<br /><br /> 이 속성을 사용 하는 예는 [sql 쿼리 실행 &#40;SQLXMLOLEDB provider&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md) 또는 [Sql 쿼리가 포함 된 템플릿 실행 &#40;SQLXMLOLEDB provider&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md)를 참조 하세요.|  
@@ -58,7 +58,7 @@ oTestCommand.Execute , , adExecuteStream
   
  다음 표에는 ss 스트림 플래그 속성 값에 대 한 설명이 나와 있습니다.  
   
-|속성 값|설명|  
+|속성 값|Description|  
 |--------------------|-----------------|  
 |STREAM_FLAGS_DISALLOW_URL|매핑 스키마 또는 XSL에 URL을 사용할 수 없습니다.|  
 |STREAM_FLAGS_DISALLOW_ABSOLTE_PATH|매핑 스키마 또는 XSL에 대해 지정된 경로는 템플릿 자체의 기본 경로에 상대적이어야 합니다.|  

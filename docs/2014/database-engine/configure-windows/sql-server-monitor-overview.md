@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 889e0c5a54477a1532aa9ec2760fad890a671618
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755188"
 ---
 # <a name="sql-server-monitor-overview"></a>SQL Server 모니터 개요
@@ -50,7 +50,7 @@ ms.locfileid: "62755188"
  **동작**  
  탐색 트리에서 선택한 노드의 상황에 맞는 메뉴를 포함합니다.  
   
- **이동**  
+ **Go**  
  모니터링 구성 요소의 목록을 포함합니다.  
   
 -   데이터베이스 미러링  
@@ -61,7 +61,7 @@ ms.locfileid: "62755188"
   
 -   [데이터베이스 미러링 모니터 시작&#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링 모니터링&#40;SQL Server&#41;](../database-mirroring/database-mirroring-sql-server.md)  
   
   

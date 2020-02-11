@@ -19,17 +19,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 94025942a6e06f4dfb7b0eeab43487e4a6308e4f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243260"
 ---
 # <a name="connect-to-the-database-engine-with-sqlcmd"></a>sqlcmd를 사용하여 데이터베이스 엔진에 연결
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 TCP/IP 네트워크 프로토콜 (기본값) 및 명명 된 파이프 프로토콜을 통한 클라이언트 통신을 지원 합니다. 클라이언트가 동일 컴퓨터의 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결하고 있는 경우 공유 메모리 프로토콜도 사용할 수 있습니다. 일반적으로 프로토콜을 선택하는 방법에는 3가지가 있습니다. 
-  **sqlcmd** 유틸리티에서 사용하는 프로토콜은 다음과 같은 순서로 결정됩니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 TCP/IP 네트워크 프로토콜(기본값) 및 명명된 파이프 프로토콜을 통한 클라이언트 통신을 지원합니다. 클라이언트가 동일 컴퓨터의 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결하고 있는 경우 공유 메모리 프로토콜도 사용할 수 있습니다. 일반적으로 프로토콜을 선택하는 방법에는 3가지가 있습니다. **sqlcmd** 유틸리티에서 사용하는 프로토콜은 다음과 같은 순서로 결정됩니다.  
   
--   **sqlcmd** 는 아래에 설명 된 대로 연결 문자열의 일부로 지정 된 프로토콜을 사용 합니다.  
+-   **sqlcmd** 는 다음 설명과 같이 연결 문자열의 일부로 지정된 프로토콜을 사용합니다.  
   
 -   프로토콜을 연결 문자열의 일부로 지정하지 않으면 **sqlcmd** 는 연결하고 있는 별칭의 일부로 정의된 프로토콜을 사용합니다. 별칭을 만들어 특정 네트워크 프로토콜을 사용하도록 **sqlcmd**를 구성하려면 [클라이언트에서 사용할 서버 별칭 만들기 또는 삭제&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md)를 참조하세요.  
   

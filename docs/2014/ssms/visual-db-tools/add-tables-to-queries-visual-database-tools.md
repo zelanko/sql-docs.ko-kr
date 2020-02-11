@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ba3957eb5b0c88396376d615033107b13d0621ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63297862"
 ---
 # <a name="add-tables-to-queries-visual-database-tools"></a>쿼리에 테이블 추가(Visual Database Tools)
@@ -56,11 +56,11 @@ ms.locfileid: "63297862"
   
 7.  **SQL 창**에서 닫는 괄호 뒤에 별칭을 추가합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [테이블 별칭 만들기 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools&#41;&#40;테이블 별칭을 만듭니다.](visual-database-tools.md)   
  [쿼리에서 테이블 제거 &#40;Visual Database Tools&#41;](remove-tables-from-queries-visual-database-tools.md)   
- [검색 조건 지정 &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)   
- [쿼리 결과 요약 &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
+ [Visual Database Tools &#40;검색 조건을 지정&#41;](specify-search-criteria-visual-database-tools.md)   
+ [Visual Database Tools를 &#40;쿼리 결과 요약&#41;](summarize-query-results-visual-database-tools.md)   
  [쿼리 관련 기본 작업 수행&#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

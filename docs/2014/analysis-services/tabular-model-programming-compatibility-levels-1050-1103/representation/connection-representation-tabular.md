@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ffd99068db329ea8e9066c6bd9508dc13f239690
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62757757"
 ---
 # <a name="connection-representation-tabular"></a>연결 표현(테이블 형식)
@@ -68,6 +68,6 @@ newDatasource.Update();
 ```  
   
 ## <a name="tabular-amo-2012-sample"></a>Tabular AMO 2012 예제  
- AMO를 사용 하 여 연결 표현을 만들고 조작 하는 방법에 더 잘 이해 하도록; Tabular AMO 2012 예제의 원본 코드를 참조 하십시오. 특히 다음 원본 파일에서 확인 합니다. Database.cs 합니다. 예제는 Codeplex에서 사용할 수 있습니다. 예제 코드는 여기에서 설명한 논리적 개념에 대한 지원으로만 제공되며 프로덕션 환경에서 사용해서는 안 됩니다.  
+ AMO를 사용하여 연결 표현을 만들고 조작하려면 Tabular AMO 2012 예제의 원본 코드를 참조하십시오. 특히 다음 원본 파일을 확인하십시오. 특히 원본 파일 Database.cs에서 확인하십시오. 예제는 Codeplex에서 사용할 수 있습니다. 예제 코드는 여기에서 설명한 논리적 개념에 대한 지원으로만 제공되며 프로덕션 환경에서 사용해서는 안 됩니다.  
   
   

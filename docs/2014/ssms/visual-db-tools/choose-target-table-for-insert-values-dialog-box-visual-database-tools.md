@@ -1,5 +1,5 @@
 ---
-title: 삽입 값 대화 상자 (Visual Database Tools)의 대상 테이블 선택 | Microsoft Docs
+title: 값 삽입의 대상 테이블 선택 대화 상자 (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7dc613dd6dcb7e639fff247a84a73812d023fb5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255746"
 ---
 # <a name="choose-target-table-for-insert-values-dialog-box-visual-database-tools"></a>값 삽입의 대상 테이블 선택 대화 상자(Visual Database Tools)
@@ -25,7 +25,7 @@ ms.locfileid: "63255746"
   
  데이터를 추가하려는 테이블을 선택한 다음 **확인**을 선택합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [값 삽입 쿼리 만들기&#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

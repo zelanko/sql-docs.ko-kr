@@ -14,16 +14,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 38bc4d44b988192be76ed613f52793dc2e8daefc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629709"
 ---
 # <a name="subscription-synchronization-history-merge-subscription-sql-server-2005-and-later"></a>구독, 동기화 기록(병합 구독, SQL Server 2005 이상)
   **동기화 기록** 탭은 상태, 아티클 통계, 기록, 정보 메시지, 모든 오류 메시지 등 병합 에이전트에 대한 자세한 정보를 표시합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **보기** 메뉴에서 보려는 병합 에이전트 세션을 선택한 다음 **병합 에이전트의 세션**표에서 특정 세션을 선택합니다. **선택한 세션에서 처리한 아티클**표에 이 세션에 대한 자세한 정보가 표시됩니다.  
   
  **보기**  
@@ -34,7 +34,7 @@ ms.locfileid: "62629709"
   
 -   Error  
   
--   완료  
+-   Completed  
   
 -   다시 시도 중  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62629709"
  **종료 시간**  
  세션의 종료 시간입니다. 에이전트가 중지되지 않은 경우 이 필드는 비어 있습니다.  
   
- **기간**  
+ **Duration**  
  세션에서 병합 에이전트가 실행된 시간입니다. 에이전트가 현재 실행되고 있는 경우 이 시간은 경과된 시간을 나타내고 에이전트가 이전에 실행된 경우에는 총 시간을 나타냅니다.  
   
  **업로드된 명령**  
@@ -58,7 +58,7 @@ ms.locfileid: "62629709"
  **오류 메시지**  
  세션이 오류로 인해 종료된 경우 이 필드는 병합 에이전트에서 기록한 마지막 오류 메시지를 표시합니다. 세션이 오류 없이 종료된 경우에는 필드가 비어 있습니다.  
   
- **아티클**  
+ **문서**  
  게시에 있는 각 아티클의 이름입니다. 다음은 전체 게시의 처리 단계입니다.  
   
 -   **초기화**. 병합 에이전트를 시작한다는 의미이며 스냅샷 적용과 관련된 구독 초기화와는 다릅니다.  
@@ -74,13 +74,13 @@ ms.locfileid: "62629709"
  **총 %**  
  선택한 세션에서 각 단계가 차지하는 처리 시간 비율입니다.  
   
- **기간**  
+ **Duration**  
  각 처리 단계에서 소요된 시간입니다. 병합 에이전트가 현재 세션에 대해 실행 중이면 이 시간은 경과된 시간을 나타내고 병합 에이전트가 이전에 실행된 경우에는 총 시간을 나타냅니다.  
   
  **Inserts**  
  선택한 세션의 이 단계에서 삽입된 행 수입니다.  
   
- **Updates**  
+ **업데이트**  
  선택한 세션의 이 단계에서 업데이트된 행 수입니다.  
   
  **Deletes**  
@@ -95,7 +95,7 @@ ms.locfileid: "62629709"
  **선택한 세션에 대한 마지막 메시지**  
  이 텍스트 영역은 선택한 세션의 마지막 메시지를 표시합니다. 오류가 발생하면 오류 발생 시 시도한 명령과 자세한 오류 정보를 표시합니다. 오류와 관련된 추가 내용으로 연결되는 링크도 포함되어 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [복제 모니터 시작](monitor/start-the-replication-monitor.md)   
  [복제 모니터를 사용하여 정보 보기 및 태스크 수행](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [복제 모니터링](monitoring-replication.md)   

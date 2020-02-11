@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 014c0891fa3a887e781def415e68c38549bafe08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755048"
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>데이터베이스 미러링 모니터(경고 페이지)
   데이터베이스 미러링 이벤트에서 지원되는 경고와 지정된 경고 임계값(사용 가능한 경우)의 읽기 전용 목록을 표시합니다.  
   
- **SQL Server Management Studio를 사용하여 데이터베이스 미러링을 모니터링하려면**  
+ **SQL Server Management Studio를 사용 하 여 데이터베이스 미러링을 모니터링 하려면**  
   
 -   [데이터베이스 미러링 모니터 시작&#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
@@ -30,14 +30,14 @@ ms.locfileid: "62755048"
  **경고**  
  임계값을 정의할 수 있는 경고는 다음과 같습니다.  
   
-|경고|임계값|  
+|Warning|임계값|  
 |-------------|---------------|  
 |**보내지 않은 로그가 임계값을 초과하는 경우 경고**|주 서버 인스턴스에서 경고를 생성하는 보내지 않은 로그의 크기(KB)를 지정합니다. 이 경고는 KB를 기준으로 발생 가능한 데이터 손실을 측정하는 데 도움이 되며 특히 성능 우선 모드와 관련이 있습니다. 그러나 파트너의 연결이 끊어져 미러링이 일시 중지되거나 일시 중단되면 이 경고는 보호 우선 모드와도 관련이 있습니다.|  
 |**복원되지 않은 로그가 임계값을 초과하는 경우 경고**|미러 서버 인스턴스에서 경고를 생성하는 복원되지 않은 로그의 크기(KB)를 지정합니다. 이 경고는 KB를 기준으로 장애 조치(Failover) 시간을 측정하는 데 유용합니다. *장애 조치 시간* 은 주로 이전 미러 서버에서 Redo Queue에 남아 있는 로그를 롤포워드해야 하는 시간과 짧은 추가 시간으로 구성됩니다.<br /><br /> 참고: 자동 장애 조치의 경우 시스템이 오류를 감지하는 데 걸리는 시간은 장애 조치 시간과 관계가 없습니다.<br /><br /> 자세한 내용은 [역할 전환 중 서비스 중단 예측&#40;데이터베이스 미러링&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)프로세스를 통해 주 역할과 미러 역할을 서로 바꿀 수 있습니다.|  
 |**보내지 않은 가장 오래된 트랜잭션 기간이 임계값을 초과하는 경우 경고**|주 서버 인스턴스에서 경고가 생성되기까지 Send Queue에 누적될 수 있는 트랜잭션에 해당하는 시간(분)을 지정합니다. 이 경고는 시간을 기준으로 발생 가능한 데이터 손실을 측정하는 데 도움이 되며 특히 성능 우선 모드와 관련이 있습니다. 그러나 파트너의 연결이 끊어져 미러링이 일시 중지되거나 일시 중단되면 이 경고는 보호 우선 모드와도 관련이 있습니다.|  
 |**미러 커밋 오버헤드가 임계값을 초과하는 경우 경고**|주 서버에서 경고가 생성되기까지 허용되는 트랜잭션당 평균 지연 시간(밀리초)을 지정합니다. 이 지연 시간은 주 서버 인스턴스에서 미리 서버 인스턴스가 트랜잭션 로그 레코드를 Redo Queue에 쓸 때까지 대기하는 동안 발생한 오버헤드 양입니다. 이 값은 보호 우선 모드에만 해당됩니다.|  
   
- **임계값 '** _<server_instance>_ **'**  
+ **'** _<server_instance>_ **'** 의 임계값  
  각 경고에 대해 서버 인스턴스 중 하나에 대한 현재의 사용자 지정 임계값(있을 경우)을 표시합니다. 서버 인스턴스의 전체 인스턴스 이름이 해당 열 머리글에 표시됩니다.  
   
  자세한 내용은 이 항목의 뒷부분에 나오는 "주의"를 참조하십시오.  
@@ -47,8 +47,8 @@ ms.locfileid: "62755048"
   
  자세한 내용은 이 항목의 뒷부분에 나오는 "주의"를 참조하십시오.  
   
-## <a name="remarks"></a>Remarks  
- 서버 인스턴스에 대한 정보를 현재 사용할 수 없는 경우 해당 **임계값** 열의 셀에 회색 배경과 워터마크 텍스트가 표시됩니다. 모니터가 서버 인스턴스에 연결되지 않은 경우 인스턴스가 기본 인스턴스인지 명명된 인스턴스인지에 따라 _<SYSTEM_NAME>_ **에 연결되지 않음** 또는 _<SYSTEM_NAME>_ **\\** _<instance_name>_ **에 연결되지 않음**이 표의 모든 셀에 표시됩니다. 모니터에서 쿼리 반환을 기다리고 있는 경우 표의 모든 셀에 **데이터를 기다리는 중...** 이 표시됩니다.  
+## <a name="remarks"></a>설명  
+ 서버 인스턴스에 대한 정보를 현재 사용할 수 없는 경우 해당 **임계값** 열의 셀에 회색 배경과 워터마크 텍스트가 표시됩니다. 모니터가 서버 인스턴스에 연결 되지 않은 경우에는 인스턴스가 기본 인스턴스인지 명명 된 인스턴스인지에 따라 _<SYSTEM_NAME>_ **에 연결 되지** 않았거나 _<SYSTEM_NAME_ **\\** _><_ instance_name **에 연결** 되지 않은 모든 셀에 표가 표시 됩니다. 모니터에서 쿼리 반환을 기다리고 있는 경우 표의 모든 셀에 **데이터를 기다리는 중...** 이 표시됩니다.  
   
  정보를 사용할 수 있는 경우 각 경고의 셀에 지정된 임계값과 측정 단위 또는 **사용 안 함**이 표시됩니다.  
   
@@ -69,13 +69,15 @@ ms.locfileid: "62755048"
 |**미러 커밋 오버헤드가 임계값을 초과하는 경우 경고**|미러 커밋 오버헤드|32045|  
   
 ## <a name="permissions"></a>사용 권한  
- 전체 액세스 권한의 경우 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다. **sysadmin** 멤버만 주요 성능 메트릭에 대해 경고 임계값을 구성하고 볼 수 있습니다.  
+ 전체 액세스 권한의 경우 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다. 
+  **sysadmin** 멤버만 주요 성능 메트릭에 대해 경고 임계값을 구성하고 볼 수 있습니다.  
   
- **dbm_monitor** 역할의 멤버 자격을 사용하면 **경고** 페이지에서 최신 상태 행만 볼 수 있습니다.  
+ 
+  **dbm_monitor** 역할의 멤버 자격을 사용하면 **경고** 페이지에서 최신 상태 행만 볼 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링 모니터 시작&#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
- [데이터베이스 미러링 모니터링&#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [데이터베이스 미러링 &#40;SQL Server&#41;모니터링](database-mirroring-sql-server.md)   
  [데이터베이스 미러링 보안 구성 마법사 시작&#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
   
   

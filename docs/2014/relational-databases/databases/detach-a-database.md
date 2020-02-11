@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 050220781f484b4a9e595551496d7e58c06f954c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871958"
 ---
 # <a name="detach-a-database"></a>데이터베이스 분리
@@ -46,7 +46,7 @@ ms.locfileid: "62871958"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  db_owner 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -62,7 +62,7 @@ ms.locfileid: "62871958"
      **분리할 데이터베이스**  
      분리할 데이터베이스를 나열합니다.  
   
-     **Database Name**  
+     **데이터베이스 이름**  
      분리할 데이터베이스 이름을 표시합니다.  
   
      **연결 삭제**  
@@ -78,21 +78,21 @@ ms.locfileid: "62871958"
      기본적으로 분리 작업은 데이터베이스와 연결된 모든 전체 텍스트 카탈로그를 유지합니다. 전체 텍스트 카탈로그를 제거하려면 **전체 텍스트 카탈로그 유지** 확인란의 선택을 취소합니다. 이 옵션은 데이터베이스를 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 업그레이드하는 경우에만 표시됩니다.  
   
      **상태**  
-     다음 상태 중 하나가 표시 됩니다. **준비** 또는 **준비 안 됨**을 표시합니다.  
+     **준비** 또는 **준비 안 됨**상태 중 하나를 표시합니다.  
   
      **메시지**  
      다음과 같이 **메시지** 열에 데이터베이스에 대한 정보가 표시될 수도 있습니다.  
   
     -   데이터베이스가 복제와 관련된 경우 **상태** 는 **준비 안 됨** 이고 **메시지** 열에는 **데이터베이스 복제 완료**가 표시됩니다.  
   
-    -   데이터베이스에 하나 이상의 활성 연결이 있는 경우는 **상태** 됩니다 **준비 안 됨** 하며 **메시지** 열에 표시 됩니다 _< number_of_active_connections >_ **활성 연결** -예를 들어: **1 활성 연결**이 표시됩니다. 데이터베이스를 분리하려면 먼저 **연결 삭제**를 선택하여 모든 활성 연결을 끊어야 합니다.  
+    -   데이터베이스에 하나 이상의 활성 연결이 있는 경우 **상태**는 **준비 안 됨**이고 **메시지** 열에는 _<number_of_active_connections>_ **활성 연결**(예: **1개의 활성 연결**)이 표시됩니다. 데이터베이스를 분리하려면 먼저 **연결 삭제**를 선택하여 모든 활성 연결을 끊어야 합니다.  
   
      메시지에 대한 자세한 내용을 보려면 하이퍼링크로 연결된 텍스트를 클릭하여 작업 모니터를 엽니다.  
   
 4.  데이터베이스를 분리할 준비가 되었으면 **확인**을 클릭합니다.  
   
 > [!NOTE]  
->  새로 분리된 데이터베이스는 뷰를 새로 고칠 때까지 개체 탐색기의 **데이터베이스** 노드에 계속 표시됩니다. 언제 든 지 뷰를 새로 고칠 수 있습니다. 클릭 하 고 메뉴 모음에서 개체 탐색기 창에서 선택 **뷰** 차례로 **새로 고침**합니다.  
+>  새로 분리된 데이터베이스는 뷰를 새로 고칠 때까지 개체 탐색기의 **데이터베이스** 노드에 계속 표시됩니다. 뷰는 언제든지 새로 고칠 수 있습니다. 개체 탐색기 창을 클릭한 다음 메뉴 모음에서 **보기** , **새로 고침**을 차례로 선택합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
@@ -108,7 +108,7 @@ ms.locfileid: "62871958"
 EXEC sp_detach_db 'AdventureWorks2012', 'true';  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 분리 및 연결&#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
  [sp_detach_db&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql)  
   

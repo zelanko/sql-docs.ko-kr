@@ -1,5 +1,5 @@
 ---
-title: 옵션 (쿼리 결과-SQL Server-다중-Server) | Microsoft Docs
+title: 옵션 (쿼리 결과-SQL Server-다중 서버) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 6019a328463d27b4495ae0db70e844eb4e05d747
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089972"
 ---
 # <a name="options-query-results-sql-server-multi-server"></a>옵션(쿼리 결과-SQL Server-다중 서버)
@@ -35,8 +35,8 @@ ms.locfileid: "66089972"
  **결과에 로그인 이름 추가**  
  각 행을 제공한 서버에 연결하는 데 사용된 로그인을 제공하는 추가 열을 포함하려면 이 확인란을 선택합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [중앙 관리 서버 및 서버 그룹 만들기 &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-a-central-management-server-and-server-group.md)   
+## <a name="see-also"></a>참고 항목  
+ [중앙 관리 서버 및 서버 그룹 &#40;SQL Server Management Studio를 만듭니다&#41;](../ssms/register-servers/create-a-central-management-server-and-server-group.md)   
  [여러 서버에 대해 동시에 문 실행&#40;SQL Server Management Studio&#41;](../ssms/register-servers/execute-statements-against-multiple-servers-simultaneously.md)  
   
   

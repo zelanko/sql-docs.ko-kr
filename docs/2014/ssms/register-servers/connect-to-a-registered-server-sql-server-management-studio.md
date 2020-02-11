@@ -14,13 +14,13 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: e1cd65cc97877ef7e59d44be40f53fc49f4a49ac
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257016"
 ---
-# <a name="connect-to-a-registered-server-sql-server-management-studio"></a>Connect to a Registered Server (SQL Server Management Studio)
+# <a name="connect-to-a-registered-server-sql-server-management-studio"></a>등록된 서버에 연결(SQL Server Management Studio)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 등록된 서버에 연결하는 방법에 대해 설명합니다. 서버가 실행 중이 아니거나 네트워크에서 찾을 수 없는 경우 등록된 서버는 오류를 표시합니다.  
   
 ##  <a name="SSMSProcedure"></a>  

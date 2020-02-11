@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f5e61bd8ef63baa9a087bcae912b04f653f63b54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753885"
 ---
 # <a name="view-the-state-of-a-mirrored-database-sql-server-management-studio"></a>미러된 데이터베이스의 상태 보기(SQL Server Management Studio)
@@ -42,7 +42,7 @@ ms.locfileid: "62753885"
     |장애 조치|주 서버 인스턴스에서 수동 장애 조치(역할 교체)가 시작되었지만 미러 서버 인스턴스에서 아직 수락하지 않았습니다.|  
     |동기화됨|미러 데이터베이스에 주 데이터베이스와 동일한 데이터가 들어 있습니다. 수동 장애 조치와 자동 장애 조치는 동기화 *상태에서만* 가능합니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [미러링 상태&#40;SQL Server&#41;](mirroring-states-sql-server.md)  
   
   

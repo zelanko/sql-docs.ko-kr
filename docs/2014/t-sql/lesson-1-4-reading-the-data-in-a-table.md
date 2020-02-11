@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 0649e167ebaa90267422594ccd193ba468838e6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68187295"
 ---
 # <a name="reading-the-data-in-a-table-tutorial"></a>테이블의 데이터 읽기(자습서)
@@ -80,13 +80,13 @@ ms.locfileid: "68187295"
   
 |||  
 |-|-|  
-|[문자열 함수&#40;Transact-SQL&#41;](/sql/t-sql/functions/string-functions-transact-sql)|[날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)|  
+|[문자열 함수&#40;Transact-SQL&#41;](/sql/t-sql/functions/string-functions-transact-sql)|[날짜 및 시간 데이터 형식 및 함수 &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)|  
 |[수치 연산 함수&#40;Transact-SQL&#41;](/sql/t-sql/functions/mathematical-functions-transact-sql)|[텍스트 및 이미지 함수&#40;Transact-SQL&#41;](/sql/t-sql/functions/text-and-image-functions-textptr-transact-sql)|  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [요약: 데이터베이스 개체 만들기](lesson-1-5-summary-creating-database-objects.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SELECT&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)  
   
   

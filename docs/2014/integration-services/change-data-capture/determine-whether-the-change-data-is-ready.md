@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b4aa1420edc1cb627940aca6c6c2aed9d18a390
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771429"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>변경 데이터의 준비 여부 확인
@@ -86,7 +86,7 @@ ms.locfileid: "62771429"
   
  다음 표에서 첫 번째 열은 샘플 Transact-SQL 쿼리에 의해 SQL 실행 태스크에서 반환되는 값을 보여 줍니다. 두 번째 열은 다른 구성 요소에서 이러한 값에 응답하는 방식을 보여 줍니다.  
   
-|반환 값|의미|응답|  
+|Return Value|의미|응답|  
 |------------------|-------------|--------------|  
 |0|변경 데이터가 준비되지 않았음을 나타냅니다.<br /><br /> 선택한 간격의 끝 지점 뒤에 오는 변경 데이터 캡처 레코드가 없습니다.|지연을 구현하는 구성 요소에서 실행이 계속됩니다. 그런 다음 제어가 For 루프 컨테이너로 반환되어 반환되는 값이 0인 한 SQL 실행 태스크가 계속 검사됩니다.|  
 |1|변경 데이터가 전체 간격에 대해 캡처되지 않았거나 삭제되었음을 나타낼 수 있습니다. 이는 오류 상태로 처리됩니다.<br /><br /> 선택한 간격의 시작 지점 앞에 오는 변경 데이터 캡처 레코드가 없습니다.|오류를 기록하는 선택적 구성 요소에서 실행이 계속됩니다.|  
@@ -197,7 +197,8 @@ ms.locfileid: "62771429"
         ```  
   
         > [!NOTE]  
-        >  `Thread.Sleep` 메서드는 밀리초 단위로 지정된 인수를 필요로 합니다.  
+        >  
+  `Thread.Sleep` 메서드는 밀리초 단위로 지정된 인수를 필요로 합니다.  
   
 7.  스크립트 실행에서 `DtsExecResult.Success`를 반환하는 기본 코드 행을 그대로 둡니다.  
   

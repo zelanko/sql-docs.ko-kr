@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 56148cca72ca9561219a9ea14025b0bd0f2204b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206576"
 ---
 # <a name="modify-a-partition-scheme"></a>파티션 구성표 수정
@@ -30,7 +30,7 @@ ms.locfileid: "68206576"
   
 -   **분할된 테이블 또는 인덱스를 만들려면:**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "68206576"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  다음 사용 권한을 통해 ALTER PARTITION SCHEME을 실행할 수 있습니다.  
   
 -   ALTER ANY DATASPACE 권한. 이 권한은 기본적으로 **sysadmin** 고정 서버 역할 및 **db_owner** 및 **db_ddladmin** 고정 데이터베이스 역할의 멤버에게 부여됩니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "68206576"
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  **파티션 구성표를 수정하려면**  
   
- 이 특정 동작은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 수행할 수 없습니다. 파티션 구성표를 수정하려면 먼저 구성표를 삭제한 다음 파티션 작성 마법사를 사용하여 원하는 속성이 포함된 새 구성표를 만들어야 합니다. 자세한 내용은 [Create Partitioned Tables and 인덱스를 사용 하 여 SQL Server Management Studio](create-partitioned-tables-and-indexes.md#SSMSProcedure) 아래에서 **만들기 Partitioned Tables and Indexes**합니다.  
+ 이 특정 동작은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 수행할 수 없습니다. 파티션 구성표를 수정하려면 먼저 구성표를 삭제한 다음 파티션 작성 마법사를 사용하여 원하는 속성이 포함된 새 구성표를 만들어야 합니다. 자세한 내용은 **분할 된 테이블 및 인덱스 만들기**에서 [SQL Server Management Studio를 사용 하 여 분할 된 테이블 및 인덱스 만들기](create-partitioned-tables-and-indexes.md#SSMSProcedure) 를 참조 하세요.  
   
 #### <a name="to-delete-a-partition-scheme"></a>파티션 구성표를 삭제하려면  
   

@@ -13,36 +13,40 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: aae800226a585f7a29334887829be2a09277a004
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809279"
 ---
 # <a name="server-properties-processors-page"></a>서버 속성(프로세서 페이지)
   이 페이지를 사용하여 프로세서 옵션을 확인하거나 수정할 수 있습니다. 프로세서 선호도 설정은 프로세서가 두 개 이상 설치되어 있는 경우에만 활성화됩니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **프로세서 선호도**  
  특정 스레드에 프로세서를 할당하여 프로세서를 다시 로드해야 하는 필요성을 없애고 프로세스 간의 스레드 마이그레이션을 줄입니다. 자세한 내용은 [affinity mask 서버 구성 옵션](affinity-mask-server-configuration-option.md)을 참조하세요.  
   
- **I/O 선호도**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디스크 I/O를 지정된 CPU 하위 집합에 바인딩합니다. 자세한 내용은 [affinity Input-Output mask 서버 구성 옵션](affinity-input-output-mask-server-configuration-option.md)을 참조하세요.  
+ **I/o 선호도**  
+ 디스크 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i/o를 지정 된 cpu 하위 집합에 바인딩합니다. 자세한 내용은 [affinity Input-Output mask 서버 구성 옵션](affinity-input-output-mask-server-configuration-option.md)을 참조하세요.  
   
  **모든 프로세서에 대해 자동으로 프로세서 선호도 마스크 설정**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 프로세서 선호도를 자동으로 설정하도록 합니다.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 프로세서 선호도를 자동으로 설정하도록 합니다.  
   
- **모든 프로세서에 대해 자동으로 I/O 선호도 마스크 설정**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 I/O 선호도를 자동으로 설정하도록 합니다.  
+ **모든 프로세서에 대해 자동으로 i/o 선호도 마스크 설정**  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 I/O 선호도를 자동으로 설정하도록 합니다.  
   
- **최대 작업자 스레드 수**  
+ **최대 작업자 스레드**  
  0으로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 작업자 스레드 수를 동적으로 설정합니다. 이 설정은 대부분의 시스템에 적합합니다. 그러나 시스템 구성에 따라 이 옵션을 특정 값으로 설정하면 성능이 향상되기도 합니다. 자세한 내용은 [Configure the max worker threads Server Configuration Option](configure-the-max-worker-threads-server-configuration-option.md)을 참조하세요.  
   
  **SQL Server 우선 순위 높임**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 일정 예약 우선 순위를 같은 컴퓨터의 다른 프로세스보다 높여서 실행할지 여부를 지정합니다. 자세한 내용은 [Configure the priority boost Server Configuration Option](configure-the-priority-boost-server-configuration-option.md)을 참조하세요.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 일정 예약 우선 순위를 같은 컴퓨터의 다른 프로세스보다 높여서 실행할지 여부를 지정합니다. 자세한 내용은 [Configure the priority boost Server Configuration Option](configure-the-priority-boost-server-configuration-option.md)을 참조하세요.  
   
- **Windows 파이버(경량 풀링) 사용**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 스레드 대신 Windows 파이버를 사용합니다. 이 옵션은 Windows 2003 Server Edition에서만 사용할 수 있습니다. 자세한 내용은 [lightweight pooling Server Configuration Option](lightweight-pooling-server-configuration-option.md)을 참조하세요.  
+ **Windows 파이버 (경량 풀링) 사용**  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 스레드 대신 Windows 파이버를 사용합니다. 이 옵션은 Windows 2003 Server Edition에서만 사용할 수 있습니다. 자세한 내용은 [lightweight pooling Server Configuration Option](lightweight-pooling-server-configuration-option.md)을 참조하세요.  
   
  **구성 값**  
  이 창의 옵션에 대해 구성된 값을 표시합니다. 이러한 값을 변경한 후에는 **실행 값** 을 클릭하여 변경 사항이 적용되었는지 여부를 확인합니다. 변경 사항이 적용되지 않은 경우 먼저 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 다시 시작해야 합니다.  
@@ -50,7 +54,7 @@ ms.locfileid: "62809279"
  **실행 값**  
  이 창의 옵션에 대한 현재 실행 값을 볼 수 있습니다. 이 값은 읽기 전용입니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [서버 구성 옵션&#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   
   

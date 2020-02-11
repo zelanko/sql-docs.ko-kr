@@ -13,21 +13,21 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6950199a5da1f4aa773eaa12fee80edb98aba04f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809420"
 ---
 # <a name="server-properties-memory-page"></a>서버 속성(메모리 페이지)
-  이 페이지를 사용하여 서버 메모리 옵션을 확인하거나 수정할 수 있습니다. **최소 서버 메모리** 를 0으로 설정하고 **최대 서버 메모리** 를 2147483647MB로 설정하면 운영 체제 및 기타 응용 프로그램에서 현재 사용하고 있는 메모리에 따라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 메모리가 항상 최적화됩니다. 컴퓨터와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 로드가 변경됨에 따라 할당되는 메모리도 달라집니다. 아래에 지정된 최소값과 최대값을 설정하여 이 동적 메모리 할당을 추가로 제한할 수 있습니다.  
+  이 페이지를 사용하여 서버 메모리 옵션을 확인하거나 수정할 수 있습니다. **최소 서버 메모리** 를 0으로 설정하고 **최대 서버 메모리** 를 2147483647MB로 설정하면 운영 체제 및 기타 애플리케이션에서 현재 사용하고 있는 메모리에 따라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 메모리가 항상 최적화됩니다. 컴퓨터와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 로드가 변경됨에 따라 할당되는 메모리도 달라집니다. 아래에 지정된 최소값과 최대값을 설정하여 이 동적 메모리 할당을 추가로 제한할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **최소 서버 메모리(MB)**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 할당된 최소 메모리 양으로 시작되고 이 값 아래로 메모리를 해제하지 않도록 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 크기와 작업에 기반하여 이 값을 설정합니다. 항상 이 옵션을 적당한 값으로 설정하여 운영 체제가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 너무 많은 메모리를 요구하여 Windows 성능을 저하시키지 않도록 해야 합니다.  
   
  **최대 서버 메모리(MB)**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 시작될 때와 실행되는 동안 할당할 수 있는 최대 메모리 크기를 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 동시에 실행되는 응용 프로그램이 여러 개 있는 것을 아는 경우, 이러한 응용 프로그램이 충분한 메모리를 사용하여 실행되도록 하려면 이 구성 옵션을 특정 값으로 설정할 수 있습니다. 웹 또는 전자 메일 서버 등의 다른 애플리케이션이 필요할 때만 메모리를 요청하는 경우에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 필요할 때마다 메모리를 해제하므로 이 옵션을 설정하지 않는 편이 좋습니다. 그러나 애플리케이션에서는 시작할 때 사용할 수 있는 모든 메모리를 사용하고, 필요할 때 더 요청하지 않는 경우가 많습니다. 이런 방식으로 동작하는 애플리케이션이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 동시에 같은 컴퓨터에서 실행되는 경우에는 애플리케이션에 필요한 메모리를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 할당하지 않도록 이 옵션의 값을 설정합니다. 최소에 지정할 수 있는 메모리 양은 **최대 서버 메모리** 64 비트 시스템에 대 한 32 비트 시스템에서 128MB에 64 (mb) 됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 시작될 때와 실행되는 동안 할당할 수 있는 최대 메모리 크기를 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 동시에 실행되는 애플리케이션이 여러 개 있는 것을 아는 경우, 이러한 애플리케이션이 충분한 메모리를 사용하여 실행되도록 하려면 이 구성 옵션을 특정 값으로 설정할 수 있습니다. 웹 또는 전자 메일 서버 등의 다른 애플리케이션이 필요할 때만 메모리를 요청하는 경우에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 필요할 때마다 메모리를 해제하므로 이 옵션을 설정하지 않는 편이 좋습니다. 그러나 애플리케이션에서는 시작할 때 사용할 수 있는 모든 메모리를 사용하고, 필요할 때 더 요청하지 않는 경우가 많습니다. 이런 방식으로 동작하는 애플리케이션이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 동시에 같은 컴퓨터에서 실행되는 경우에는 애플리케이션에 필요한 메모리를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 할당하지 않도록 이 옵션의 값을 설정합니다. **최대 서버 메모리** 에 지정할 수 있는 최소 메모리 양은 32 비트 시스템의 경우 64 메가바이트 (mb)이 고 64 비트 시스템의 경우 128 MB입니다.  
   
  **인덱스 생성 메모리(KB, 0 = 동적 메모리)**  
  인덱스 생성 정렬에 사용되는 메모리의 크기(KB)를 지정합니다. 기본값 0을 그대로 사용하면 동적 할당 기능이 설정되고 대부분의 경우 추가 조정 없이 제대로 작동하지만 사용자가 704 ~ 2147483647 사이의 다른 값을 입력할 수도 있습니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "62809420"
  **실행 값**  
  이 창의 옵션에 대한 현재 실행 값을 표시합니다. 이 값은 읽기 전용입니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [서버 구성 옵션&#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [서버 메모리 서버 구성 옵션](server-memory-server-configuration-options.md)  
   

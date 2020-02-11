@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 209bc81c63998cea299d2c377175955ee99470c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875715"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>표시된 트랜잭션이 포함된 관련 데이터베이스 복구
@@ -54,18 +54,19 @@ ms.locfileid: "62875715"
 BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'    
 ```  
   
- 트랜잭션 로그는 표시 이름(트랜잭션 이름), 설명, 데이터베이스, 사용자, `datetime` 정보, LSN(로그 시퀀스 번호) 등을 기록합니다. `datetime` 정보는 표시를 고유하게 식별하는 표시 이름과 함께 사용됩니다.  
+ 트랜잭션 로그는 표시 이름(트랜잭션 이름), 설명, 데이터베이스, 사용자, `datetime` 정보, LSN(로그 시퀀스 번호) 등을 기록합니다. 
+  `datetime` 정보는 표시를 고유하게 식별하는 표시 이름과 함께 사용됩니다.  
   
  여러 데이터베이스에 걸쳐 있는 트랜잭션에 표시를 삽입하는 방법은 [표시된 트랜잭션을 사용하여 관련 데이터베이스를 일관되게 복구&#40;전체 복구 모델&#41;](use-marked-transactions-to-recover-related-databases-consistently.md)을 참조하세요.  
   
 ## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>표시 지점으로 복구하는 Transact-SQL 구문  
  [RESTORE LOG](/sql/t-sql/statements/restore-statements-transact-sql)문을 사용하여 표시된 트랜잭션을 대상으로 지정할 때 중지된 곳이나 표시 바로 앞에 다음 절 중 하나를 사용할 수 있습니다.  
   
--   WITH stopatmark = **' *`<mark_name>`* '** 절에 표시 된 트랜잭션이 복구 지점 임을 지정 합니다.  
+-   WITH stopatmark = **'*`<mark_name>`*'** 절을 사용 하 여 표시 된 트랜잭션이 복구 지점 임을 지정 합니다.  
   
      STOPATMARK는 표시로 롤포워드하고 표시된 트랜잭션을 롤포워드에 포함시킵니다.  
   
--   WITH STOPBEFOREMARK 사용 = **' *`<mark_name>`* '** 표시가 복구 지점 직전 로그 레코드를 지정 하는 절이 있습니다.  
+-   표시 바로 앞에 있는 로그 레코드가 복구 지점이 되도록 지정 하려면 WITH STOPBEFOREMARK = **'*`<mark_name>`*'** 절을 사용 합니다.  
   
      STOPBEFOREMARK는 표시로 롤포워드하고 롤포워드에서 표시된 트랜잭션을 제외시킵니다.  
   
@@ -110,7 +111,7 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
   
 6.  각 데이터베이스를 복구합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [BEGIN TRANSACTION&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/begin-transaction-transact-sql)   
  [RESTORE&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [트랜잭션 로그 백업 적용&#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   

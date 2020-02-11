@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a27b4bf288d6b1e436ba43fc9c1002d03cd9eaf4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62736203"
 ---
 # <a name="create-check-constraints"></a>CHECK 제약 조건 만들기
@@ -42,7 +42,7 @@ ms.locfileid: "62736203"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  테이블에 대한 ALTER 사용 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -74,7 +74,7 @@ ms.locfileid: "62736203"
   
 6.  **테이블 디자이너** 범주에서는 제약 조건을 적용하는 경우를 설정할 수 있습니다.  
   
-    |**수행할 작업:**|**다음 필드에서 예 선택:**|  
+    |**받는 사람:**|**다음 필드에서 예 선택:**|  
     |-------------|---------------------------------------------|  
     |제약 조건을 만들기 전에 존재한 데이터에 대한 제약 조건 테스트|**만들거나 활성화할 때 기존 데이터 검사**|  
     |이 테이블에서 복제 작업이 수행될 때마다 제약 조건 적용|**복제에 적용**|  

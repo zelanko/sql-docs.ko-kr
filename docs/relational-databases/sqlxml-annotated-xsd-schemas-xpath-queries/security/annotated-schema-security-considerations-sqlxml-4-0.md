@@ -22,10 +22,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 87af92866658e2fa5b4f8648e2a22dbf3d1cb13f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75252507"
 ---
 # <a name="annotated-schema-security-considerations-sqlxml-40"></a>주석 스키마 보안 고려 사항(SQLXML 4.0)
@@ -36,7 +36,7 @@ ms.locfileid: "75252507"
   
 -   주석을 사용하여 명시적 매핑을 지정하면 테이블 이름 및 열 이름과 같은 데이터베이스 정보가 공개됩니다. 따라서 이러한 스키마가 공개되지 않도록 해야 합니다.  
   
--   재귀를 사용 하 여 매핑 스키마에 대해 지정 된 것과 같은 특정 쿼리 ( **최대 깊이** 주석 집합을 더 높은 값으로 지정)는 실행 하는 데 시간이 더 오래 걸릴 수 있습니다. 선택적으로 명령 제한 시간 속성을 설정 하 여 제한 시간을 지정할 수 있습니다 (초 단위). 예:  
+-   재귀를 사용 하 여 매핑 스키마에 대해 지정 된 것과 같은 특정 쿼리 ( **최대 깊이** 주석 집합을 더 높은 값으로 지정)는 실행 하는 데 시간이 더 오래 걸릴 수 있습니다. 선택적으로 명령 제한 시간 속성을 설정 하 여 제한 시간을 지정할 수 있습니다 (초 단위). 다음은 그 예입니다.  
   
     ```  
     cn.Open "Provider=SQLOLEDB;Server=localhost;Database=tempdb;Integrated Security=SSPI;Command Properties='Command Time Out=50';"  

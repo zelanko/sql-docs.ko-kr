@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ddcdec0f624c1d6f70c57e593eaf9da66cbe0419
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63065531"
 ---
 # <a name="checkpoint-operation-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 대한 검사점 작업
@@ -30,7 +30,7 @@ ms.locfileid: "63065531"
   
  메모리 최적화 테이블의 경우 마지막 검사점 이후 트랜잭션 로그 파일이 512MB보다 커질 때 자동 검사점이 확인됩니다. 512MB에는 디스크 기반 및 메모리 최적화 테이블 모두에 대한 트랜잭션 로그 기록이 포함됩니다.  
   
-## <a name="see-also"></a>관련 항목  
- [메모리 액세스에 최적화된 개체의 저장소 만들기 및 관리](creating-and-managing-storage-for-memory-optimized-objects.md)  
+## <a name="see-also"></a>참고 항목  
+ [메모리 최적화 개체에 대한 스토리지 만들기 및 관리](creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

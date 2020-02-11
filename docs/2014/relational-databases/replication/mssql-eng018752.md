@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0558ded6ed10284df39270ddeca9d92434daf40e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63057546"
 ---
-# <a name="mssqleng018752"></a>MSSQL_ENG018752
+# <a name="mssql_eng018752"></a>MSSQL_ENG018752
     
 ## <a name="message-details"></a>메시지 정보  
   
@@ -48,7 +48,7 @@ ms.locfileid: "63057546"
 ## <a name="user-action"></a>사용자 동작  
  다음 단계를 수행하면 문제를 해결하는 데 도움이 됩니다. 다음 단계를 수행하는 중 로그 판독기 에이전트가 오류 없이 시작되면 나머지 단계를 완료할 필요가 없습니다.  
   
--   로그 판독기 에이전트의 기록에서 이 오류의 원인이 될 수 있는 다른 오류가 있는지 확인합니다. 복제 모니터에서 에이전트 상태 및 오류 정보를 보는 방법에 대한 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 작업 수행](monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
+-   로그 판독기 에이전트의 기록에서 이 오류의 원인이 될 수 있는 다른 오류가 있는지 확인합니다. 복제 모니터에서 에이전트 상태 및 오류 정보를 보는 방법에 대 한 자세한 내용은 [정보 보기 및 복제 모니터를 사용 하 여 태스크 수행](monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조 하세요.  
   
 -   [sp_who&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql)의 출력에서 게시된 데이터베이스에 연결된 특정 프로세스 ID 번호(SPID)를 확인합니다. **sp_repldone**, **sp_replcmds**또는 **sp_replshowcmds**를 실행했을 가능성이 있는 연결을 모두 닫습니다.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "63057546"
   
 -   오류가 계속 발생하면 에이전트의 로깅을 늘리고 해당 로그의 출력 파일을 지정하십시오. 오류의 컨텍스트에 따라 이러한 작업을 수행하면 오류 및/또는 추가 오류 메시지가 발생할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [오류 및 이벤트 참조&#40;복제&#41;](errors-and-events-reference-replication.md)   
  [복제 로그 판독기 에이전트](agents/replication-log-reader-agent.md)  
   

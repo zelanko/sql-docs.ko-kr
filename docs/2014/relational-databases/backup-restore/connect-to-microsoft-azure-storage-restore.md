@@ -13,24 +13,24 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6fbb57fe629797e34cc7c61f224d65d46d4e66cd
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154769"
 ---
-# <a name="connect-to-azure-storage-restore"></a>Azure Storage에 연결 (복원)
-  이 대화 상자에서는 azure storage 계정에서 파일 저장소를 검색 하기 위해 Azure storage 계정 정보에 대 한 연결을 지정할 수 있습니다. 필요한 정보를 지정한 후 **연결** 을 클릭 하 여 Azure storage에 대 한 연결을 설정 합니다.  
+# <a name="connect-to-azure-storage-restore"></a>Azure Storage에 연결(복원)
+  대화 상자를 사용하면 Azure Storage 계정에서 파일 스토리지를 검색하기 위해 Azure Storage 계정 정보에 대한 연결을 지정할 수 있습니다. 필요한 정보를 지정한 후 **연결**을 클릭하여 Azure Storage에 대한 연결을 설정합니다.  
   
 ## <a name="azure-storage-account"></a>Azure Storage 계정  
- **저장소 계정**  
- 사용 하려는 Azure storage 계정의 이름을 선택 하거나 입력 하거나 붙여 넣습니다. 드롭다운 상자에 이전에 사용한 계정이 나열됩니다.  
+ **스토리지 계정**  
+ 사용할 Azure Storage 계정 이름을 선택, 입력 또는 붙여 넣습니다. 드롭다운 상자에 이전에 사용한 계정이 나열됩니다.  
   
  **계정 키**  
- Azure 저장소 계정 액세스 키를 지정 합니다.  
+ Azure Storage 계정 액세스 키를 지정합니다.  
   
  **보안 엔드포인트 사용(HTTPS)** 확인란  
- Azure storage에 대 한 보안 연결을 설정 하려면이 옵션을 선택 합니다 (권장).  
+ Azure Storage에 대한 보안 연결을 설정하려면 이 옵션을 선택합니다(권장 사항).  
   
  **계정 키 저장** 확인란  
  SQL Server에서 이 스토리지 계정에 대한 액세스 키를 기억하도록 설정하려면 이 확인란을 선택합니다.  

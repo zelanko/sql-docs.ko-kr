@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c4b1706f81808d90e02df32df7e56828b054bd05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638108"
 ---
 # <a name="drop-xml-indexes"></a>XML 인덱스 삭제
@@ -26,7 +26,7 @@ ms.locfileid: "62638108"
   
  *TableName.IndexName* 이 있는 DROP 구문은 단계적으로 제거하며 XML 인덱스에 대해서는 지원되지 않습니다.  
   
-## <a name="example-creating-and-dropping-a-primary-xml-index"></a>예: 기본 XML 인덱스 만들기 및 삭제  
+## <a name="example-creating-and-dropping-a-primary-xml-index"></a>예제: 기본 XML 인덱스 만들기 및 삭제  
  다음 예에서는 XML 인덱스가 `xml` 유형 열에 생성됩니다.  
   
 ```  
@@ -68,7 +68,7 @@ ON TestTable(Col2)
 GO  
 ```  
   
-## <a name="example-creating-an-xml-index-by-using-the-dropexisting-index-option"></a>예: DROP_EXISTING 인덱스 옵션을 사용 하 여 XML 인덱스 만들기  
+## <a name="example-creating-an-xml-index-by-using-the-drop_existing-index-option"></a>예제: DROP_EXISTING 인덱스 옵션을 사용하여 XML 인덱스 만들기  
  다음 예에서는 XML 인덱스가`XmlColx`열에 생성됩니다. 그런 다음 같은 이름으로 된 다른 XML 인덱스가 다른 열`XmlColy`에 생성됩니다. `DROP_EXISTING` 옵션이 지정되어 있으므로 (`XmlColx)` )의 기존 XML 인덱스가 삭제되고 (`XmlColy`)의 새 XML 인덱스가 생성됩니다.  
   
 ```  
@@ -96,7 +96,7 @@ AND    si.object_id=object_id('T')
   
  이 쿼리에서는 지정된 XML 인덱스가 생성된 열 이름을 반환합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 인덱스&#40;SQL Server&#41;](xml-indexes-sql-server.md)  
   
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3c744d3f28bc27373f3dc9798ba591848d4b720e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769350"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD(SSIS 식)
@@ -44,7 +44,7 @@ DATEADD(datepart, number, date)
 ## <a name="result-types"></a>결과 형식  
  DT_DBTIMESTAMP  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  다음 표에서는 식 계산기가 인식하는 날짜 부분 및 약어를 나열합니다. 날짜 부분 이름은 대/소문자를 구분하지 않습니다.  
   
 |날짜 부분|약어|  
@@ -53,12 +53,12 @@ DATEADD(datepart, number, date)
 |Quarter|qq, q|  
 |Month|mm, m|  
 |Dayofyear|dy, y|  
-|Day|dd, d|  
+|일|dd, d|  
 |Week|wk, ww|  
-|Weekday|dw, w|  
+|요일|dw, w|  
 |Hour|Hh|  
 |Minute|mi, n|  
-|둘째|ss, s|  
+|초|ss, s|  
 |Millisecond|Ms|  
   
  식을 구문 분석할 때 *number* 인수를 사용할 수 있어야 합니다. 인수는 상수 또는 변수일 수 있습니다. 식을 구문 분석할 때 값을 알 수 없으므로 열 값을 사용할 수 없습니다.  
@@ -90,7 +90,7 @@ DATEADD("day", 21, ModifiedDate)
 DATEADD("yyyy", 2, (DT_DBTIMESTAMP)"8/6/2003")  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [DATEDIFF&#40;SSIS 식&#41;](datediff-ssis-expression.md)   
  [DATEPART&#40;SSIS 식&#41;](datepart-ssis-expression.md)   
  [DAY&#40;SSIS 식&#41;](day-ssis-expression.md)   

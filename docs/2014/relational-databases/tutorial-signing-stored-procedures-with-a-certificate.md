@@ -1,5 +1,5 @@
 ---
-title: '자습서: 인증서를 사용 하 여 저장된 프로시저에 서명 | Microsoft Docs'
+title: '자습서: 인증서로 저장 프로시저 서명 | Microsoft 문서'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: daf80492cd6a0d8040d1497e71600c798e7ef96c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524096"
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>자습서: 인증서로 저장 프로시저 서명
@@ -192,7 +192,7 @@ GO
   
  REVERT 문에 대한 자세한 내용은 [REVERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/revert-transact-sql)를 참조하세요.  
   
-##  <a name="CompleteExample"></a> 전체 예제  
+##  <a name="CompleteExample"></a>전체 예제  
  이 섹션에서는 전체 예제 코드를 보여 줍니다.  
   
 ```  
@@ -288,7 +288,7 @@ DROP CERTIFICATE TestCreditRatingCer;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [SQL Server 데이터베이스 엔진 및 Azure SQL Database에 대한 보안 센터](security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+## <a name="see-also"></a>참고 항목  
+ [SQL Server 데이터베이스 엔진 및 Azure SQL Database 보안 센터](security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

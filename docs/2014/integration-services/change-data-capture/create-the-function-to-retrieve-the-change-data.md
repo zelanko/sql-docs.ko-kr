@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 28878f96b843a8a557e95d6c4ddf10681f481b8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771439"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>변경 데이터 검색을 위한 함수 만들기
@@ -76,7 +76,7 @@ ms.locfileid: "62771439"
 > [!NOTE]  
 >  이 저장 프로시저의 구문과 해당 매개 변수에 대한 자세한 내용은 [sys.sp_cdc_generate_wrapper_function&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql)을 참조하세요.  
   
- 이 저장 프로시저는 항상 각 캡처 인스턴스의 모든 변경 내용을 반환하는 래퍼 함수를 생성합니다. 캡처 인스턴스를 만들 때 *@supports_net_changes* 매개 변수가 설정된 경우에는 각 해당 캡처 인스턴스의 순 변경을 반환하는 래퍼 함수도 생성됩니다.  
+ 이 저장 프로시저는 항상 각 캡처 인스턴스의 모든 변경 내용을 반환하는 래퍼 함수를 생성합니다. 캡처 인스턴스 *@supports_net_changes* 를 만들 때 매개 변수가 설정 된 경우 저장 프로시저는 적용 가능한 각 캡처 인스턴스에서 순 변경 내용을 반환 하는 래퍼 함수도 생성 합니다.  
   
  이 저장 프로시저는 열이 두 개 있는 결과 집합을 반환합니다.  
   
@@ -108,7 +108,7 @@ deallocate #hfunctions
 ```  
   
 ### <a name="understanding-and-using-the-functions-created-by-the-stored-procedure"></a>저장 프로시저에서 만든 함수 이해 및 사용  
- 생성된 래퍼 함수는 캡처된 변경 데이터의 시간대를 체계적으로 탐색하기 위해 특정 간격의 *@end_time* 매개 변수가 후속 간격의 *@start_time* 매개 변수일 것으로 간주합니다. 이러한 규칙이 준수되는 경우 생성된 래퍼 함수에서 다음과 같은 태스크를 수행할 수 있습니다.  
+ 캡처된 변경 데이터의 타임 라인을 체계적으로 탐색 하기 위해 생성 된 래퍼 함수는 *@end_time* 한 간격의 매개 변수가 후속 간격 *@start_time* 의 매개 변수일 것으로 간주 합니다. 이러한 규칙이 준수되는 경우 생성된 래퍼 함수에서 다음과 같은 태스크를 수행할 수 있습니다.  
   
 -   날짜/시간 값을 내부적으로 사용되는 LSN 값에 매핑  
   
@@ -126,7 +126,7 @@ deallocate #hfunctions
   
 -   간격의 시작 날짜/시간 값 및 종료 날짜/시간 값. 래퍼 함수는 날짜/시간 값을 쿼리 간격의 끝점으로 사용하지만 변경 데이터 캡처 함수는 두 LSN 값을 끝점으로 사용합니다.  
   
--   행 필터. 래퍼 함수와 변경 데이터 캡처 함수의 *@row_filter_option* 매개 변수는 서로 동일합니다. 자세한 내용은 [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql) 및 [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62;&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql)를 참조하세요.  
+-   행 필터. 래퍼 함수와 변경 데이터 캡처 함수의 경우 *@row_filter_option* 매개 변수는 동일 합니다. 자세한 내용은 [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql) 및 [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62;&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql)를 참조하세요.  
   
  래퍼 함수에서 반환하는 결과 집합에는 다음과 같은 데이터가 포함됩니다.  
   
@@ -134,12 +134,12 @@ deallocate #hfunctions
   
 -   1문자 또는 2문자 필드를 사용하여 행에 연결된 작업을 식별하는 __CDC_OPERATION이라는 열. 이 필드의 유효한 값은 다음과 같습니다. ‘I’는 삽입, ‘D’는 삭제, ‘UO’는 이전 값 업데이트 및 ‘UN’은 새 값 업데이트입니다.  
   
--   요청 시 작업 코드 뒤에 *@update_flag_list* 매개 변수에 지정된 순서대로 비트 열로 표시되는 업데이트 플래그. 이러한 열의 이름은 관련 열 이름에 '_uflag'를 추가한 것입니다.  
+-   요청 시 작업 코드 뒤에 비트 열로 표시 되 고 *@update_flag_list* 매개 변수에 지정 된 순서로 플래그를 업데이트 합니다. 이러한 열의 이름은 관련 열 이름에 '_uflag'를 추가한 것입니다.  
   
  패키지에서 모든 변경을 쿼리하는 래퍼 함수를 호출하는 경우 래퍼 함수는 __CDC_STARTLSN 및 \__CDC_SEQVAL 열도 반환합니다. 이러한 두 열은 각각 결과 집합의 첫 번째 열과 두 번째 열이 됩니다. 또한 래퍼 함수는 이러한 두 열에 따라 결과 집합을 정렬합니다.  
   
 ## <a name="writing-your-own-table-value-function"></a>테이블 반환 함수 직접 작성  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 통해 변경 데이터 캡처 쿼리 함수를 호출하는 테이블 반환 함수를 직접 작성하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장할 수도 있습니다. TRANSACT-SQL 함수를 만드는 방법에 대한 자세한 내용은 [CREATE FUNCTION&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)을 참조하세요.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 통해 변경 데이터 캡처 쿼리 함수를 호출하는 테이블 반환 함수를 직접 작성하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장할 수도 있습니다. TRANSACT-SQL 함수를 만드는 방법에 대한 자세한 내용은 [CREATE FUNCTION&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)을 참조하세요.  
   
  다음 예에서는 지정한 변경 간격 동안 Customer 테이블에서 변경 내용을 검색하는 테이블 반환 함수를 정의합니다. 이 함수는 변경 데이터 캡처 함수를 사용하여 변경 테이블이 내부적으로 사용하는 이진 LSN(로그 시퀀스 번호) 값에 `datetime` 값을 매핑합니다. 또한 이 함수는 다음과 같은 몇 가지 특수 상황을 처리합니다.  
   
@@ -209,10 +209,10 @@ go
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|`binary(10)`|변경에 대한 커밋 트랜잭션과 연관된 LSN입니다.<br /><br /> 동일한 트랜잭션에서 커밋된 변경의 커밋 LSN은 모두 동일합니다. 예를 들어 원본 테이블의 업데이트 작업에서 두 개의 서로 다른 행을 수정하면 변경 테이블에는 모두 동일한 **__$start_lsn** 값이 있는 4개의 행(이전 값과 새 값 두 개씩 포함)이 포함됩니다.|  
-|**__$seqval**|`binary(10)`|트랜잭션에서 행 변경 내용을 정렬하는 데 사용되는 시퀀스 값입니다.|  
-|**__$operation**|`int`|변경과 연관된 DML(데이터 조작 언어) 작업입니다. 다음 중 하나일 수 있습니다.<br /><br /> 1 = 삭제<br /><br /> 2 = 삽입<br /><br /> 3 = 업데이트(업데이트 작업 전의 값)<br /><br /> 4 = 업데이트(업데이트 작업 후의 값)|  
-|**__$update_mask**|`varbinary(128)`|변경된 열을 식별하는 변경 테이블의 열 서수를 기준으로 하는 비트 마스크입니다. 변경된 열을 확인해야 하는 경우 이 값을 검토할 수 있습니다.|  
-|**\<captured source table columns>**|다양함|함수에서 반환되는 나머지 열은 캡처 인스턴스 생성 시 캡처된 열로 식별된 원본 테이블의 열입니다. 캡처된 열 목록에 열이 원래 지정되어 있지 않은 경우 원본 테이블의 모든 열이 반환됩니다.|  
+|**__ $ seqval**|`binary(10)`|트랜잭션에서 행 변경 내용을 정렬하는 데 사용되는 시퀀스 값입니다.|  
+|**__ $ 연산**|`int`|변경과 연관된 DML(데이터 조작 언어) 작업입니다. 다음 중 하나일 수 있습니다.<br /><br /> 1 = 삭제<br /><br /> 2 = 삽입<br /><br /> 3 = 업데이트(업데이트 작업 전의 값)<br /><br /> 4 = 업데이트(업데이트 작업 후의 값)|  
+|**__ $ update_mask**|`varbinary(128)`|변경된 열을 식별하는 변경 테이블의 열 서수를 기준으로 하는 비트 마스크입니다. 변경된 열을 확인해야 하는 경우 이 값을 검토할 수 있습니다.|  
+|**\<캡처된 원본 테이블 열>**|다름|함수에서 반환되는 나머지 열은 캡처 인스턴스 생성 시 캡처된 열로 식별된 원본 테이블의 열입니다. 캡처된 열 목록에 열이 원래 지정되어 있지 않은 경우 원본 테이블의 모든 열이 반환됩니다.|  
   
  자세한 내용은 [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62;&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql)를 참조하세요.  
   

@@ -16,18 +16,18 @@ ms.assetid: dc9f591a-e67e-4ba8-bf47-defd5eda0822
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a02082715dfc77384ebfde58d4c29f94cd3dd44c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68769069"
 ---
-# <a name="spaddqreaderagent-transact-sql"></a>sp_addqreader_agent(Transact-SQL)
+# <a name="sp_addqreader_agent-transact-sql"></a>sp_addqreader_agent(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   지정된 배포자에 대한 큐 판독기 에이전트를 추가합니다. 이 저장 프로시저는 배포 데이터베이스의 배포자 또는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -57,18 +57,18 @@ sp_addqreader_agent [ @job_login = ] 'job_login'
 ## <a name="remarks"></a>설명  
  **sp_addqreader_agent** 은 트랜잭션 복제에 사용 됩니다.  
   
- **sp_addqreader_agent** 는 [sp_adddistributiondb](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) 이후, [sp_addpublication](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)이전에 지연 업데이트를 지 원하는 배포자에서 한 번 이상 실행 해야 합니다.  
+ **sp_addqreader_agent** 은 [sp_addpublication](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) [sp_adddistributiondb](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) 후에는 지연 업데이트를 지 원하는 배포자에서 한 번 이상 실행 해야 합니다.  
   
- [Sp_dropdistributiondb](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)를 실행 하면 큐 판독기 에이전트 작업이 제거 됩니다.  
+ [Sp_dropdistributiondb](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)을 실행 하면 큐 판독기 에이전트 작업이 제거 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
- **Sysadmin** 고정 서버 역할의 멤버만 **sp_addqreader_agent**을 실행할 수 있습니다.  
+ **Sysadmin** 고정 서버 역할의 멤버만 **sp_addqreader_agent**를 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [트랜잭션 게시에 대해 업데이트할 수 있는 구독 설정](../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)   
- [복제 스크립트 업그레이드&#40;복제 Transact-SQL 프로그래밍&#41;](../../relational-databases/replication/administration/upgrade-replication-scripts-replication-transact-sql-programming.md)   
- [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
- [sp_changeqreader_agent &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changeqreader-agent-transact-sql.md)   
- [sp_helpqreader_agent &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpqreader-agent-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [트랜잭션 게시에 대 한 구독 업데이트 설정](../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)   
+ [복제 스크립트를 업그레이드 &#40;복제 Transact-sql 프로그래밍&#41;](../../relational-databases/replication/administration/upgrade-replication-scripts-replication-transact-sql-programming.md)   
+ [트랜잭션 복제에 대 한 업데이트할 수 있는 구독](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
+ [Transact-sql&#41;sp_changeqreader_agent &#40;](../../relational-databases/system-stored-procedures/sp-changeqreader-agent-transact-sql.md)   
+ [Transact-sql&#41;sp_helpqreader_agent &#40;](../../relational-databases/system-stored-procedures/sp-helpqreader-agent-transact-sql.md)  
   
   

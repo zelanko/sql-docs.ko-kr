@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bfcd8337105766d91e097d35201d749c86ca840e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769039"
 ---
 # <a name="-logical-not-ssis-expression"></a>! (논리적 Not)(SSIS 식)
@@ -41,10 +41,10 @@ ms.locfileid: "62769039"
 ## <a name="result-types"></a>결과 형식  
  DT_BOOL  
   
-## <a name="remarks"></a>Remarks  
- 다음 표에서는 ! 연산의 결과를 지정합니다.  
+## <a name="remarks"></a>설명  
+ 다음 표에서는 ! 연산의 결과를 작업을 완료하기 위해 수행해야 하는 다음 단계가 있는 경우 추가로 연락을 드리겠습니다.  
   
-|원래 부울 식|! 연산자를 적용한 후|  
+|원래 부울 식|! 연산자를 operator|  
 |---------------------------------|------------------------------------|  
 |TRUE|FALSE|  
 |NULL|NULL|  
@@ -63,7 +63,7 @@ ms.locfileid: "62769039"
 !(@MonthNumber != MONTH(GETDATE())  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [연산자 우선 순위 및 계산 방향](operator-precedence-and-associativity.md)   
  [연산자&#40;SSIS 식&#41;](operators-ssis-expression.md)  
   

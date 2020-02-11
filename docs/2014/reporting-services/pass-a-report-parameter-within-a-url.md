@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 97fa6d01fc4a06825814c8494268ecb668f1da7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108106"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>URL에 보고서 매개 변수 전달
@@ -69,13 +69,15 @@ parameter
   
 ```  
   
- 예:  
+ 예를 들면 다음과 같습니다.  
   
 ```  
 SalesOrderNumber:isnull=true  
 ```  
   
- `Boolean` 값을 전달하려면 False에 0을 사용하고 True에 1을 사용합니다. `Float` 값을 전달하려면 서버 로캘의 소수 구분 기호를 포함합니다.  
+ 
+  `Boolean` 값을 전달하려면 False에 0을 사용하고 True에 1을 사용합니다. 
+  `Float` 값을 전달하려면 서버 로캘의 소수 구분 기호를 포함합니다.  
   
 > [!NOTE]  
 >  보고서에 기본값을 가진 보고서 매개 변수가 포함되어 있고 `Prompt` 속성의 값이 `false`이면(즉, 보고서 관리자에서 사용자에게 확인 속성이 선택되지 않음) URL 내에서 해당 보고서 매개 변수에 대한 값을 전달할 수 없습니다. 이러한 기능을 통해 관리자는 최종 사용자가 특정 보고서 매개 변수의 값을 추가하거나 수정하지 못하도록 설정할 수 있습니다.  
@@ -105,7 +107,7 @@ https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/fold
 http://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report_AdventureWorks&SellStartDate=7/1/2005  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [URL 액세스&#40;SSRS&#41;](url-access-ssrs.md)   
  [URL 액세스 매개 변수 참조](url-access-parameter-reference.md)  
   

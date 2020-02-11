@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ab8db976275a60cfbf1e0afb78457afad18fc366
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63012251"
 ---
 # <a name="accessing-the-soap-api"></a>SOAP API 액세스
@@ -34,14 +34,16 @@ ms.locfileid: "63012251"
 ## <a name="referencing-the-reporting-services-wsdl"></a>Reporting Services WSDL 참조  
  웹 서비스를 성공적으로 호출하려면 서비스에 액세스하는 방법, 서비스에서 지원하는 작업, 서비스에 필요한 매개 변수, 서비스에서 반환하는 내용 등에 대해 알고 있어야 합니다. WSDL은 이러한 정보를 컴퓨터에서 읽거나 처리할 수 있는 XML 문서로 제공합니다.  
   
- 보고서 서버 웹 서비스는 세 가지 엔드포인트로 표시되며, WSDL 파일의 이름은 각 엔드포인트에 대해 서로 다릅니다. <xref:ReportService2010> 엔드포인트는 기본 모드 또는 SharePoint 통합 모드에서 보고서 서버의 개체를 관리하는 메서드를 포함합니다. 이 엔드포인트에 대한 WSDL은 `ReportService2010.asmx?wsdl.`을 통해 액세스됩니다.  
+ 보고서 서버 웹 서비스는 세 가지 엔드포인트로 표시되며, WSDL 파일의 이름은 각 엔드포인트에 대해 서로 다릅니다. 
+  <xref:ReportService2010> 엔드포인트는 기본 모드 또는 SharePoint 통합 모드에서 보고서 서버의 개체를 관리하는 메서드를 포함합니다. 이 엔드포인트에 대한 WSDL은 `ReportService2010.asmx?wsdl.`을 통해 액세스됩니다.  
   
 > [!NOTE]  
->  <xref:ReportService2005> 및 <xref:ReportService2006> 엔드포인트는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]에서 더 이상 사용되지 않습니다. <xref:ReportService2010> 엔드포인트에는 두 엔드포인트의 기능이 모두 포함되어 있으며 추가 관리 기능도 포함되어 있습니다.  
+>  <xref:ReportService2005> 및 <xref:ReportService2006> 엔드포인트는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]에서 더 이상 사용되지 않습니다. <xref:ReportService2010>엔드포인트에는 두 엔드포인트의 기능이 모두 포함되어 있으며 추가 관리 기능도 포함되어 있습니다.  
   
--   <xref:ReportExecution2005> 엔드포인트를 통해 개발자는 보고서 서버의 보고서를 프로그래밍 방식으로 처리하고 렌더링할 수 있습니다. 이 엔드포인트에 대한 WSDL은 `ReportExecution2005.asmx?wsdl`을 통해 액세스됩니다.  
+-   
+  <xref:ReportExecution2005> 엔드포인트를 통해 개발자는 보고서 서버의 보고서를 프로그래밍 방식으로 처리하고 렌더링할 수 있습니다. 이 엔드포인트에 대한 WSDL은 `ReportExecution2005.asmx?wsdl`을 통해 액세스됩니다.  
   
- WSDL은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK와 같이 SOAP 및 웹 서비스를 지원하는 개발 키트에서 사용할 수 있습니다.  
+ WSDL은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK와 같이 SOAP 및 웹 서비스를 지 원하는 개발 키트에서 사용할 수 있습니다.  
   
  다음 예는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 관리 WSDL 파일에 대한 URL의 형식을 보여 줍니다.  
   
@@ -53,14 +55,14 @@ http://server/reportserver/ReportService2010.asmx?wsdl
   
 |URL 요소|Description|  
 |-----------------|-----------------|  
-|*server*|보고서 서버가 배포된 서버의 이름입니다.|  
+|*서버인*|보고서 서버가 배포된 서버의 이름입니다.|  
 |*reportserver*|XML 웹 서비스가 포함된 폴더의 이름입니다. 이 폴더는 설치 중 구성됩니다.|  
-|*\<endpoint name>.asmx*|웹 서비스 엔드포인트의 이름입니다.|  
+|*\<끝점 이름> .asmx*|웹 서비스 엔드포인트의 이름입니다.|  
   
- WSDL 형식에 대한 자세한 내용은 http://www.w3.org/TR/wsdl 에서 W3C(World Wide Web 컨소시엄) WSDL 사양을 참조하십시오.  
+ WSDL 형식에 대한 자세한 내용은 http://www.w3.org/TR/wsdl에서 W3C(World Wide Web 컨소시엄) WSDL 사양을 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
- [웹 서비스와 .NET Framework를 사용하여 응용 프로그램 빌드](net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
+## <a name="see-also"></a>참고 항목  
+ [웹 서비스와 .NET Framework를 사용하여 애플리케이션 빌드](net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [보고서 서버 웹 서비스](report-server-web-service.md)  
   
   

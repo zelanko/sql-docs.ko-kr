@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5c7676d046a504a6f230df7a1352e791802ce7b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63288267"
 ---
 # <a name="for-xml-sql-server"></a>FOR XML(SQL Server)
@@ -80,13 +80,15 @@ FROM ServerName.AdventureWorks2012.Person.Person
 FOR XML AUTO  
 ```  
   
- `ServerName` 이 로컬 서버면 쿼리는 다음을 반환합니다.  
+ 
+  `ServerName` 이 로컬 서버면 쿼리는 다음을 반환합니다.  
   
 ```  
 <AdventureWorks2012.Person.Person LastName="Achong" />  
 ```  
   
- `ServerName` 이 네트워크 서버면 쿼리는 다음을 반환합니다.  
+ 
+  `ServerName` 이 네트워크 서버면 쿼리는 다음을 반환합니다.  
   
 ```  
 <ServerName.AdventureWorks2012.Person.Person LastName="Achong" />  
@@ -106,13 +108,13 @@ FOR XML AUTO
 <x LastName="Achong"/>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [FOR XML 절의 기본 구문](basic-syntax-of-the-for-xml-clause.md)   
  [FOR XML에서 RAW 모드 사용](use-raw-mode-with-for-xml.md)   
  [FOR XML에서 AUTO 모드 사용](use-auto-mode-with-for-xml.md)   
  [FOR XML에서 EXPLICIT 모드 사용](use-explicit-mode-with-for-xml.md)   
  [FOR XML에서 PATH 모드 사용](use-path-mode-with-for-xml.md)   
- [OPENXML&#40;SQL Server&#41;](openxml-sql-server.md)   
+ [OPENXML &#40;SQL Server&#41;](openxml-sql-server.md)   
  [WITH XMLNAMESPACES를 사용하여 쿼리에 네임스페이스 추가](add-namespaces-to-queries-with-with-xmlnamespaces.md)  
   
   
