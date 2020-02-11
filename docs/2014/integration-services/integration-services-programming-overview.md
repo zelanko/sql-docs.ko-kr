@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4bf90de7f1ebcadbc65b6f2ee7eaaacb6d52e0e1
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74683630"
 ---
 # <a name="integration-services-programming-overview"></a>Integration Services 프로그래밍 개요
@@ -64,15 +64,14 @@ ms.locfileid: "74683630"
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 응용 프로그래밍 인터페이스는 VBScript 같은 COM 기반 스크립팅 언어와 호환되지 않습니다.  
   
 ## <a name="locating-assemblies"></a>어셈블리 찾기  
- 
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에서 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 어셈블리는 .NET 4.0으로 업그레이드되었습니다. .Net 4에 대 한 별도의 전역 어셈블리 캐시는 * \<드라이브>*: \windows\ microsoft.net \assembly에 있습니다. 이 경로, 주로 GAC_MSIL 폴더에서 모든 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 어셈블리를 찾을 수 있습니다.  
+ [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에서 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 어셈블리는 .NET 4.0으로 업그레이드되었습니다. *\<드라이브>* :\Windows\Microsoft.NET\assembly에는 .NET 4에 대한 별도의 전역 어셈블리 캐시가 있습니다. 이 경로, 주로 GAC_MSIL 폴더에서 모든 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 어셈블리를 찾을 수 있습니다.  
   
  이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서와 같이 핵심 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 확장성 .dll 파일도 * \<드라이브>*: fileFiles\Microsoft SQL server\100\sdk\assemblies에 있습니다.  
   
 ## <a name="commonly-used-assemblies"></a>일반적으로 사용되는 어셈블리  
  다음 표에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]를 사용하여 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]를 프로그래밍할 때 자주 사용되는 어셈블리에 대해 설명합니다.  
   
-|어셈블리|설명|  
+|어셈블리|Description|  
 |--------------|-----------------|  
 |Microsoft.SqlServer.ManagedDTS.dll|관리되는 런타임 엔진을 포함합니다.|  
 |Microsoft.SqlServer.RuntimeWrapper.dll|네이티브 런타임 엔진에 대한 PIA(주 interop 어셈블리) 또는 래퍼를 포함합니다.|  
