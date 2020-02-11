@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8530a13af0e0ae6f1b769adcaa7cb6e9a3fbc0ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106042"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>페이지 번호 또는 기타 보고서 속성 표시(보고서 작성기 및 SSRS)
@@ -32,7 +32,7 @@ ms.locfileid: "66106042"
   
 -   전체 페이지 수  
   
--   User ID  
+-   사용자 ID  
   
 -   언어  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66106042"
   
 1.  [&PageNumber]가 들어 있는 입력란을 마우스 오른쪽 단추로 클릭한 다음 **식**을 클릭합니다.  
   
-     **대 한 식 설정: 값** 텍스트 상자에 식 =Globals!PageNumber가 포함됩니다.  
+     **다음에 대한 식 설정: 값** 입력란에 식 =Globals!PageNumber가 포함됩니다.  
   
 2.  = 기호 뒤에 커서를 두고 `"Page " &`를 입력합니다.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "66106042"
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [페이지 머리글 및 바닥글&#40;보고서 작성기 및 SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
  [입력란의 텍스트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
   

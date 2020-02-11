@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 88bceac4d712eb1010e4915e11267b7d2ee258a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101741"
 ---
 # <a name="secure-my-reports"></a>내 보고서 보안 설정
@@ -54,7 +54,7 @@ ms.locfileid: "66101741"
   
  내 보고서를 해제하면 내 보고서 폴더에 대한 링크가 보고서 관리자에서 제거됩니다. 내 보고서를 지원하는 기본 폴더 구조, 즉 사용자 폴더 폴더와 하위 폴더는 계속 사용할 수 있으며 사용자가 폴더 경로를 알고 있으면 액세스할 수 있습니다. **내 보고서** 역할에서 태스크를 제거하면 액세스할 수 없게 됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서 및 리소스 보안](secure-reports-and-resources.md)   
  [보안 폴더](secure-folders.md)   
  [기본 모드 보고서 서버에 대한 사용 권한 부여](granting-permissions-on-a-native-mode-report-server.md)  

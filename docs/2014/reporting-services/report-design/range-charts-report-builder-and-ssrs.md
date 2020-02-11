@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e44e658d2aaf8be9a9e591f627f60798f6ba4121
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105398"
 ---
 # <a name="range-charts-report-builder-and-ssrs"></a>범위형 차트(보고서 작성기 및 SSRS)
@@ -29,11 +29,11 @@ ms.locfileid: "66105398"
   
 ## <a name="variations"></a>변형  
   
--   **곡선 범위형**. 곡선 범위형 차트는 직선보다는 곡선을 표시합니다.  
+-   **부드러운 범위**. 곡선 범위형 차트는 직선보다는 곡선을 표시합니다.  
   
--   **세로 막대 범위형**. 세로 막대 범위형 차트는 영역 대신 세로 막대를 사용하여 범위를 표시합니다.  
+-   **열 범위**. 세로 막대 범위형 차트는 영역 대신 세로 막대를 사용하여 범위를 표시합니다.  
   
--   **가로 막대 범위형**. 가로 막대 범위형 차트는 영역 대신 가로 막대를 사용하여 범위를 표시합니다.  
+-   **막대 범위**. 가로 막대 범위형 차트는 영역 대신 가로 막대를 사용하여 범위를 표시합니다.  
   
 ## <a name="data-considerations-for-range-charts"></a>범위형 차트의 데이터 고려 사항  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66105398"
   
 -   Gantt 차트는 범위형 가로 막대 차트를 사용하여 만들 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [차트 종류&#40;보고서 작성기 및 SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  

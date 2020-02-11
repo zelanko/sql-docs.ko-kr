@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f76a48481066ff30bbd5a825d477d0e6309abaca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204966"
 ---
 # <a name="stop-a-query-visual-database-tools"></a>쿼리 중지(Visual Database Tools)
@@ -28,9 +28,9 @@ ms.locfileid: "63204966"
   
 -   [결과 창](visual-database-tools.md)에서 임의의 위치를 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 **창**을 가리킨 다음 **결과 지우기**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [쿼리 결과 지우기 &#40;Visual Database Tools&#41;](clear-query-results-visual-database-tools.md)   
- [쿼리 실행 &#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools를 &#40;쿼리 결과를 지웁니다&#41;](clear-query-results-visual-database-tools.md)   
+ [Visual Database Tools를 &#40;쿼리 실행&#41;](run-queries-visual-database-tools.md)   
  [쿼리 관련 기본 작업 수행&#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Procedures Append 메서드 예제 (VB) | Microsoft Docs
+title: 프로시저 Append 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: ce83b966-474b-4f57-8eb9-370996dfc5c0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8bacc5dc2d55fb335358ab9ca34248f8e322811a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965421"
 ---
 # <a name="procedures-append-method-example-vb"></a>Procedures Append 메서드 예제(VB)
-다음 코드를 사용 하는 방법에 설명 된 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체 및 [프로시저](../../../ado/reference/adox-api/procedures-collection-adox.md) 컬렉션 [추가](../../../ado/reference/adox-api/append-method-adox-procedures.md) 기본 데이터 원본에 새 프로시저를 만드는 방법.  
+다음 코드에서는 [Command](../../../ado/reference/ado-api/command-object-ado.md) 개체와 [procedure collection](../../../ado/reference/adox-api/procedures-collection-adox.md) [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md) 메서드를 사용 하 여 기본 데이터 소스에 새 프로시저를 만드는 방법을 보여 줍니다.  
   
 ```  
 ' BeginCreateProcedureVB  
@@ -73,7 +73,7 @@ End Sub
 ' EndCreateProcedureVB  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ActiveConnection 속성 (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [Append 메서드 (ADOX 프로시저)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
  [Catalog 개체 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   

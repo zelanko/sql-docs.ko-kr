@@ -12,10 +12,10 @@ ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: df0fd7cb27977679a6ca879d7ae01045ed3fa8c8
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727141"
 ---
 # <a name="tutorial-deploy-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>자습서: Python에서 SQL Server Machine Learning Services를 사용하여 고객을 분류하기 위한 모델 배포
@@ -28,7 +28,7 @@ ms.locfileid: "73727141"
 
 이 섹션에서는 바로 전에 작성한 Python 코드를 SQL Server로 이동하고 SQL Server Machine Learning Services를 사용해서 클러스터링을 배포합니다.
 
-이 문서에서는 다음과 같은 방법을 알아봅니다.
+이 문서에서는 다음을 수행하는 방법을 알아봅니다.
 
 > [!div class="checklist"]
 > * 모델을 생성하는 저장 프로시저 만들기

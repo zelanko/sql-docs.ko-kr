@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f0aa1455ffd9f52fd917f68d2bb0bb80e3f25a94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68006277"
 ---
 # <a name="comment-mdx"></a>주석 (MDX)
@@ -32,7 +32,7 @@ ms.locfileid: "68006277"
  주석 텍스트를 포함하는 문자열입니다.  
   
 ## <a name="remarks"></a>설명  
- 서버는 주석 문자 사이 텍스트를 평가 하지 않습니다 / * 및 \*/입니다. 주석은 별도의 줄 또는 MDX 문에 입력될 수 있습니다. 여러 줄 주석으로 표시 되어야 합니다 /\* 고 \*/입니다.  
+ 서버는 주석 문자/* 및 \*/사이의 텍스트를 평가 하지 않습니다. 주석은 별도의 줄 또는 MDX 문에 입력될 수 있습니다. 여러 줄로 된 주석은/\* 및 \*/로 표시 되어야 합니다.  
   
  주석의 길이에는 제한이 없습니다. 주석은 `/* Test /*Comment*/ Text*/`와 같이 중첩될 수 있습니다.  
   
@@ -52,9 +52,9 @@ WHERE
     [Measures].[Gross Profit Margin]  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [&#40;주석&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)   
- [-- &#40;설명&#41;&#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)   
- [MDX 연산자 참조 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [MDX&#41; &#40;&#40;설명&#41;](../mdx/comment-mdx-double-slash.md)   
+ [--&#40;주석&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)   
+ [Mdx 연산자 참조 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b6d973d4628e9c80b47c4fea0ef3476dbd05131f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107447"
 ---
 # <a name="bind-a-report-or-model-to-a-shared-data-source-ssrs"></a>보고서 또는 모델을 공유 데이터 원본에 바인딩(SSRS)
@@ -28,13 +28,16 @@ ms.locfileid: "66107447"
   
 ### <a name="to-bind-a-report-or-model-to-a-shared-data-source-on-a-report-server-running-in-native-mode"></a>보고서나 모델을 기본 모드로 실행되는 보고서 서버의 공유 데이터 원본에 바인딩하려면  
   
-1.  **보고서 관리자**에서 서버로 업로드할 보고서나 모델의 이름을 클릭합니다.  
+1.  
+  **보고서 관리자**에서 서버로 업로드할 보고서나 모델의 이름을 클릭합니다.  
   
      속성 탭이 열립니다.  
   
-2.  **데이터 원본**을 클릭합니다.  
+2.  
+  **데이터 원본**을 클릭합니다.  
   
-3.  **찾아보기**를 클릭한 다음 보고서나 모델을 바인딩할 데이터 원본을 탐색합니다.  
+3.  
+  **찾아보기**를 클릭한 다음 보고서나 모델을 바인딩할 데이터 원본을 탐색합니다.  
   
 4.  데이터 원본을 선택한 다음 **확인**을 클릭합니다.  
   
@@ -48,13 +51,17 @@ ms.locfileid: "66107447"
   
 2.  보고서나 모델을 가리키고 아래쪽 화살표를 클릭합니다.  
   
-3.  **데이터 원본 관리**를 클릭합니다.  
+3.  
+  **데이터 원본 관리**를 클릭합니다.  
   
-4.  **dataSource1**을 클릭합니다.  
+4.  
+  **dataSource1**을 클릭합니다.  
   
-5.  **연결 형식** 영역에서 **공유 데이터 원본** 이 선택되어 있는지 확인합니다.  
+5.  
+  **연결 형식** 영역에서 **공유 데이터 원본** 이 선택되어 있는지 확인합니다.  
   
-6.  **데이터 원본 링크** 영역에서 줄임표(...) 단추를 클릭합니다.  
+6.  
+  **데이터 원본 링크** 영역에서 줄임표(...) 단추를 클릭합니다.  
   
 7.  사용할 데이터 원본을 찾습니다.  
   
@@ -64,12 +71,12 @@ ms.locfileid: "66107447"
   
 10. **닫기**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [파일 또는 보고서 업로드&#40;보고서 관리자&#41;](../reports/upload-a-file-or-report-report-manager.md)   
- [SharePoint 라이브러리에 문서 업로드&#40;SharePoint 모드의 Reporting Services&#41;](../upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)   
- [공유 데이터 원본 만들기 및 관리&#40;SharePoint 통합 모드의 Reporting Services&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
- [공유 데이터 원본 만들기, 삭제 또는 수정&#40;보고서 관리자&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [데이터 연결, 데이터 원본 및 Reporting Services의 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md)  
+## <a name="see-also"></a>참고 항목  
+ [보고서 관리자&#41;&#40;파일 또는 보고서 업로드](../reports/upload-a-file-or-report-report-manager.md)   
+ [Sharepoint 라이브러리에 문서를 업로드 &#40;SharePoint 모드에서 Reporting Services&#41;](../upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)   
+ [SharePoint 통합 모드에서 공유 데이터 원본 &#40;Reporting Services 만들기 및 관리&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
+ [공유 데이터 원본 &#40;보고서 관리자 만들기, 삭제 또는 수정&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Reporting Services의 데이터 연결, 데이터 원본 및 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [Reporting Services &#40;SSRS&#41;에서 지 원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

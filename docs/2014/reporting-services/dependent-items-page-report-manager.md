@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 59c022a0e6c57a85d83b25be3fe9dbe0c9dfeeb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109332"
 ---
 # <a name="dependent-items-page-report-manager"></a>종속 항목 페이지(보고서 관리자)
@@ -31,9 +31,10 @@ ms.locfileid: "66109332"
   
 3.  드롭다운 메뉴에서 **관리**를 클릭합니다. 데이터 원본의 일반 속성 페이지가 열립니다.  
   
-4.  **종속 항목** 탭을 선택합니다.  
+4.  
+  **종속 항목** 탭을 선택합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **이름**  
  보고서 또는 모델의 이름을 표시합니다. 보고서를 열려면 보고서 이름을 클릭하십시오. 해당 속성 페이지를 열려면 모델 이름을 클릭합니다.  
   
@@ -41,10 +42,12 @@ ms.locfileid: "66109332"
  보고서 또는 모델에 대한 설명을 표시합니다.  
   
  **Delete**  
- 보고서 서버 데이터베이스에서 보고서나 모델을 삭제하려면 클릭합니다. **삭제**를 클릭하기 전에 삭제할 각 항목 옆의 확인란을 선택하십시오.  
+ 보고서 서버 데이터베이스에서 보고서나 모델을 삭제하려면 클릭합니다. 
+  **삭제**를 클릭하기 전에 삭제할 각 항목 옆의 확인란을 선택하십시오.  
   
  **이동**  
- 폴더 계층 구조에서 보고서나 모델의 위치를 다시 지정하려면 클릭합니다. **이동**을 클릭하기 전에 이동할 각 항목 옆의 확인란을 선택하십시오. 이렇게 하면 폴더를 이동하여 새 위치를 선택할 수 있는 항목 이동 페이지가 열립니다.  
+ 폴더 계층 구조에서 보고서나 모델의 위치를 다시 지정하려면 클릭합니다. 
+  **이동**을 클릭하기 전에 이동할 각 항목 옆의 확인란을 선택하십시오. 이렇게 하면 폴더를 이동하여 새 위치를 선택할 수 있는 항목 이동 페이지가 열립니다.  
   
  **편집**  
  보고서 또는 모델의 속성 페이지에 액세스하려면 속성 아이콘을 클릭합니다.  
@@ -55,16 +58,16 @@ ms.locfileid: "66109332"
  **수정한 날짜**  
  보고서 또는 모델을 마지막으로 수정한 날짜와 시간을 표시합니다.  
   
- **에 의해 수정**  
+ **수정한 사람**  
  해당 항목 속성을 마지막으로 수정한 사람의 이름을 표시합니다.  
   
- **실행 하는 경우**  
+ **실행 날짜**  
  보고서 실행 스냅샷으로 실행되는 보고서의 경우 보고서를 마지막으로 새로 고친 날짜와 시간을 표시합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)   
+## <a name="see-also"></a>참고 항목  
+ [F1 도움말 보고서 관리자](../../2014/reporting-services/report-manager-f1-help.md)   
  [보고서 관리자&#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [내용 페이지&#40;보고서 관리자&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [내용 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

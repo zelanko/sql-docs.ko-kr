@@ -1,5 +1,5 @@
 ---
-title: 관계형 데이터 원본 (SSAS 테이블 형식)에서 가져오기 | Microsoft Docs
+title: 관계형 데이터 원본에서 가져오기 (SSAS 테이블 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 61fb30ea21ea810eab8d30a3a040fac4a1bd2128
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080528"
 ---
 # <a name="import-from-a-relational-data-source-ssas-tabular"></a>관계형 데이터 원본에서 가져오기(SSAS 테이블 형식)
@@ -52,14 +52,16 @@ ms.locfileid: "66080528"
   
 ### <a name="to-import-data-from-a-database"></a>데이터베이스에서 데이터를 가져오려면  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 **모델** 메뉴를 클릭한 다음 **데이터 원본에서 가져오기**를 클릭합니다.  
+1.  
+  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 **모델** 메뉴를 클릭한 다음 **데이터 원본에서 가져오기**를 클릭합니다.  
   
-2.  **데이터 원본에 연결** 페이지에서 연결할 데이터베이스의 유형을 선택하고 **다음**을 클릭합니다.  
+2.  
+  **데이터 원본에 연결** 페이지에서 연결할 데이터베이스의 유형을 선택하고 **다음**을 클릭합니다.  
   
 3.  테이블 가져오기 마법사의 단계별 지침을 따릅니다. 마법사 단계에서 **테이블 및 뷰 선택** 페이지를 사용하거나 **SQL 쿼리 지정** 페이지에서 SQL 쿼리를 만들어 특정 테이블과 뷰를 선택하거나 필터를 적용할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [데이터 가져오기&#40;SSAS 테이블 형식&#41;](import-data-ssas-tabular.md)   
- [지원되는 데이터 원본&#40;SSAS 테이블 형식&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
+## <a name="see-also"></a>참고 항목  
+ [SSAS 테이블 형식&#41;&#40;데이터 가져오기](import-data-ssas-tabular.md)   
+ [SSAS 테이블 형식&#41;&#40;지원 되는 데이터 원본](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

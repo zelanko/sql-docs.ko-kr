@@ -15,25 +15,27 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14f380f510070da1b8fa77f7f5440640ce37452b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62856498"
 ---
 # <a name="view-the-dependencies-of-a-stored-procedure"></a>저장 프로시저의 종속성 보기
     
-##  <a name="Top"></a> 이 항목의 저장된 프로시저 종속성을 보는 방법을 설명 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용 하 여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]합니다.  
+##  
+  <a name="Top"></a>
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 저장 프로시저 종속성을 보는 방법에 대해 설명합니다.  
   
--   **시작하기 전 주의 사항:**  [보안](#Security)  
+-   **시작 하기 전 주의:**  [보안](#Security)  
   
--   **프로시저의 종속성 보기를 사용 하 여:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **저장 프로시저의 종속성을 보려면 다음을 사용합니다.**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  시스템 함수: `sys.dm_sql_referencing_entities`  
  참조된 엔터티에 대한 CONTROL 권한과 sys.dm_sql_referencing_entities에 대한 SELECT 권한이 필요합니다. 참조된 엔터티가 파티션 함수인 경우 데이터베이스에 대한 CONTROL 권한이 필요합니다. 기본적으로 SELECT 권한은 public에 부여됩니다.  
   
@@ -43,7 +45,7 @@ ms.locfileid: "62856498"
  개체 카탈로그 뷰: `sys.sql_expression_dependencies`  
  데이터베이스에 대한 VIEW DEFINITION 권한과 데이터베이스의 sys.sql_expression_dependencies에 대한 SELECT 권한이 필요합니다. 기본적으로 SELECT 권한은 db_owner 고정 데이터베이스 역할의 멤버에게만 부여됩니다. SELECT와 VIEW DEFINITION 권한을 다른 사용자에게 부여하면 피부여자는 데이터베이스의 모든 종속성을 볼 수 있습니다.  
   
-##  <a name="Procedures"></a> 저장 프로시저의 종속성을 보는 방법  
+##  <a name="Procedures"></a>저장 프로시저의 종속성을 보는 방법  
  다음 중 하나를 사용할 수 있습니다.  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
@@ -51,13 +53,14 @@ ms.locfileid: "62856498"
 -   [Transact-SQL](#TsqlProcedure)  
   
 ###  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
- **개체 탐색기에서 프로시저 종속성을 보려면**  
+ **개체 탐색기 프로시저의 종속성을 보려면**  
   
 1.  개체 탐색기에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
 2.  **데이터베이스**를 확장하고 해당 프로시저가 속한 데이터베이스를 확장한 다음 **프로그래밍 기능**을 확장합니다.  
   
-3.  **저장 프로시저**를 확장하고 프로시저를 마우스 오른쪽 단추로 클릭한 다음 **종속성 보기**를 클릭합니다.  
+3.  
+  **저장 프로시저**를 확장하고 프로시저를 마우스 오른쪽 단추로 클릭한 다음 **종속성 보기**를 클릭합니다.  
   
 4.  프로시저에 종속된 개체 목록을 확인합니다.  
   
@@ -73,9 +76,11 @@ ms.locfileid: "62856498"
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **데이터베이스**를 확장하고 프로시저가 속한 데이터베이스를 확장합니다.  
+2.  
+  **데이터베이스**를 확장하고 프로시저가 속한 데이터베이스를 확장합니다.  
   
-3.  **파일** 메뉴에서 **새 쿼리** 를 클릭합니다.  
+3.  
+  **파일** 메뉴에서 **새 쿼리** 를 클릭합니다.  
   
 4.  다음 예를 복사하여 쿼리 편집기에 붙여 넣습니다. 첫 번째 예에서는 `uspVendorAllInfo` 데이터베이스의 모든 공급업체 이름, 해당 공급업체가 공급하는 제품, 신용 등급 및 사용 가능성을 반환하는 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 프로시저를 만듭니다.  
   
@@ -97,9 +102,11 @@ ms.locfileid: "62856498"
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **데이터베이스**를 확장하고 프로시저가 속한 데이터베이스를 확장합니다.  
+2.  
+  **데이터베이스**를 확장하고 프로시저가 속한 데이터베이스를 확장합니다.  
   
-3.  **파일** 메뉴에서 **새 쿼리** 를 클릭합니다.  
+3.  
+  **파일** 메뉴에서 **새 쿼리** 를 클릭합니다.  
   
 4.  다음 예를 복사하여 쿼리 편집기에 붙여 넣습니다. 첫 번째 예에서는 `uspVendorAllInfo` 데이터베이스의 모든 공급업체 이름, 해당 공급업체가 공급하는 제품, 신용 등급 및 사용 가능성을 반환하는 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 프로시저를 만듭니다.  
   
@@ -123,9 +130,11 @@ ms.locfileid: "62856498"
  프로시저에 종속된 개체를 표시  
  1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **데이터베이스**를 확장하고 프로시저가 속한 데이터베이스를 확장합니다.  
+2.  
+  **데이터베이스**를 확장하고 프로시저가 속한 데이터베이스를 확장합니다.  
   
-3.  **파일** 메뉴에서 **새 쿼리** 를 클릭합니다.  
+3.  
+  **파일** 메뉴에서 **새 쿼리** 를 클릭합니다.  
   
 4.  다음 예를 복사하여 쿼리 편집기에 붙여 넣습니다. 첫 번째 예에서는 `uspVendorAllInfo` 데이터베이스의 모든 공급업체 이름, 해당 공급업체가 공급하는 제품, 신용 등급 및 사용 가능성을 반환하는 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 프로시저를 만듭니다.  
   
@@ -154,9 +163,11 @@ ms.locfileid: "62856498"
  프로시저가 종속된 개체 목록을 표시  
  1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **데이터베이스**를 확장하고 프로시저가 속한 데이터베이스를 확장합니다.  
+2.  
+  **데이터베이스**를 확장하고 프로시저가 속한 데이터베이스를 확장합니다.  
   
-3.  **파일** 메뉴에서 **새 쿼리** 를 클릭합니다.  
+3.  
+  **파일** 메뉴에서 **새 쿼리** 를 클릭합니다.  
   
 4.  다음 예를 복사하여 쿼리 편집기에 붙여 넣습니다. 첫 번째 예에서는 `uspVendorAllInfo` 데이터베이스의 모든 공급업체 이름, 해당 공급업체가 공급하는 제품, 신용 등급 및 사용 가능성을 반환하는 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 프로시저를 만듭니다.  
   
@@ -181,10 +192,10 @@ ms.locfileid: "62856498"
     GO  
     ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [저장 프로시저 이름 바꾸기](rename-a-stored-procedure.md)   
- [sys.dm_sql_referencing_entities&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql)   
- [sys.dm_sql_referenced_entities&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql)   
+ [dm_sql_referencing_entities &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql)   
+ [dm_sql_referenced_entities &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql)   
  [sys.sql_expression_dependencies&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql)  
   
   
