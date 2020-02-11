@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 24e31e60f29970ca1d3a73d3a215447e9dd325bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807241"
 ---
 # <a name="choose-servers-to-configure-configure-database-mirroring-security-wizard"></a>구성할 서버 선택(데이터베이스 미러링 보안 구성 마법사)
@@ -30,7 +30,7 @@ ms.locfileid: "62807241"
   
 -   [데이터베이스 미러링 보안 구성 마법사 시작&#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **주 서버 인스턴스**  
  주 서버에 대한 보안을 구성하려면 선택합니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62807241"
  **미러링 모니터 서버 인스턴스**  
  미러링 모니터 서버(있는 경우)에 대한 보안을 구성하려면 선택합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 속성&#40;미러링 페이지&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [데이터베이스 미러링&#40;SQL Server&#41;](database-mirroring-sql-server.md)  
   
