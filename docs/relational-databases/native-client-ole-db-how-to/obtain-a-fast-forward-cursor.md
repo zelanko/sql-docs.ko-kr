@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0ab00e9d49b7a72ba9ac23bcf7aa4141bd9c4435
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73767438"
 ---
 # <a name="obtain-a-fast_forward-cursor"></a>FAST_FORWARD 커서 가져오기
@@ -25,7 +25,7 @@ ms.locfileid: "73767438"
 
   정방향 전용, 읽기 전용 커서를 가져오려면 행 집합 속성 DBPROP_SERVERCURSOR, DBPROP_OTHERINSERT, DBPROP_OTHERUPDATEDELETE, DBPROP_OWNINSERT 및 DBPROP_OWNUPDATEDELETE를 VARIANT_TRUE로 설정합니다.  
   
- 전체 예제에서는 행 집합 속성을 설정하여 FAST_FORWARD 커서를 가져오는 방법을 보여 줍니다. 속성이 설정된 후에 SELECT 문이 실행되어 **AdventureWorks** 데이터베이스에 있는 **Purchasing.Vendor** 테이블의 **Name** 열이 검색되고 표시됩니다.  
+ 전체 예제에서는 행 집합 속성을 설정하여 FAST_FORWARD 커서를 가져오는 방법을 보여 줍니다. 속성이 설정 된 후에 SELECT 문이 실행 되어 **AdventureWorks** 데이터베이스에 있는 **구매. Vendor** 테이블의 **Name** 열이 검색 되 고 표시 됩니다.  
   
 > [!IMPORTANT]  
 >  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  

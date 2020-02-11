@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: f8dcec71f8b9c90df9f30aa5bfb972fef28fbcd7
-ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74200444"
 ---
 # <a name="install-the-analysis-services-ole-db-provider-on-sharepoint-servers"></a>SharePoint 서버에서 Analysis Services OLE DB 공급자 설치
@@ -175,6 +175,6 @@ ms.locfileid: "74200444"
   
   
 ## <a name="see-also"></a>참고 항목  
- [SharePoint용 PowerPivot 2010 설치](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
+ [SharePoint 2010용 PowerPivot 설치](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
   

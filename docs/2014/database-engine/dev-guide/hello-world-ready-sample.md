@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8303c387ff38ab5448d15e478534df165e05bddf
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637652"
 ---
 # <a name="hello-world-ready-sample"></a>Hello World Ready 예제
@@ -22,22 +22,27 @@ ms.locfileid: "73637652"
   
 1.  XML 파일 변경 (.`resx` 파일)에 대 한 리소스 디렉터리의 특정 문화권  
   
-2.  `resgen`을 사용하여 해당 culture의 리소스 파일 빌드  
+2.  
+  `resgen`을 사용하여 해당 culture의 리소스 파일 빌드  
   
 3.  해당 culture에 대한 업데이트된 위성 DLL 빌드  
   
 4.  SQL Server에서 해당 어셈블리 삭제 및 추가  
   
- CLR 저장 프로시저 자체에 대한 원본 코드 및 어셈블리는 변경되지 않습니다. 리소스 어셈블리를 컴파일하고 연결하는 방법을 보여 주는 `build.cmd` 스크립트가 제공됩니다. 애플리케이션의 원본 코드는 현재 실행 중인 어셈블리에 기반하는 리소스 관리자를 만들지만 저장 프로시저를 포함하는 DLL에 culture 중립 리소스를 포함해야 할 필요는 없습니다. `System.Resources.NeutralResourcesLanguage attribute` 특성이 있으면 위성 DLL에 culture 중립 리소스가 존재할 수 있습니다. 이 경우 지역화된 텍스트를 추가 또는 변경할 때 CLR 저장 프로시저가 포함된 기본 DLL을 변경할 필요가 없도록 별도의 DLL을 사용하는 것이 좋습니다. 특히 열 및 기타 종속성을 갖고 있어 유형을 삭제하고 다시 추가하기가 어려운 CLR 사용자 정의 형식의 경우 이 방법이 유용합니다. 일반적으로 위성 DLL 버전은 주 어셈블리 버전과 동일해야 합니다. 하지만 `SatelliteContractVersion` 특성을 사용하여 위성 어셈블리를 업데이트하지 않고 주 어셈블리만 업데이트하도록 할 수도 있습니다. 자세한 내용은 Microsoft .NET 설명서에서 `ResourceManager` 클래스를 참조하십시오.  
+ CLR 저장 프로시저 자체에 대한 원본 코드 및 어셈블리는 변경되지 않습니다. 리소스 어셈블리를 컴파일하고 연결하는 방법을 보여 주는 `build.cmd` 스크립트가 제공됩니다. 애플리케이션의 원본 코드는 현재 실행 중인 어셈블리에 기반하는 리소스 관리자를 만들지만 저장 프로시저를 포함하는 DLL에 culture 중립 리소스를 포함해야 할 필요는 없습니다. 
+  `System.Resources.NeutralResourcesLanguage attribute` 특성이 있으면 위성 DLL에 culture 중립 리소스가 존재할 수 있습니다. 이 경우 지역화된 텍스트를 추가 또는 변경할 때 CLR 저장 프로시저가 포함된 기본 DLL을 변경할 필요가 없도록 별도의 DLL을 사용하는 것이 좋습니다. 특히 열 및 기타 종속성을 갖고 있어 유형을 삭제하고 다시 추가하기가 어려운 CLR 사용자 정의 형식의 경우 이 방법이 유용합니다. 일반적으로 위성 DLL 버전은 주 어셈블리 버전과 동일해야 합니다. 하지만 `SatelliteContractVersion` 특성을 사용하여 위성 어셈블리를 업데이트하지 않고 주 어셈블리만 업데이트하도록 할 수도 있습니다. 자세한 내용은 Microsoft .NET 설명서에서 `ResourceManager` 클래스를 참조하십시오.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 예제는 SQL Server 2005 이상 버전에서만 작동합니다.  
   
  이 프로젝트를 만들고 실행하려면 다음 소프트웨어가 설치되어 있어야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](https://www.microsoft.com/sql-server/sql-server-editions-express)에서 무료로 구할 수 있습니다.  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](https://www.microsoft.com/sql-server/sql-server-editions-express)에서 무료로 구할 수 있습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개발자 [웹 사이트](https://go.microsoft.com/fwlink/?linkid=62796)에서 제공되는 AdventureWorks 데이터베이스  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개발자 [웹 사이트](https://go.microsoft.com/fwlink/?linkid=62796)에서 제공되는 AdventureWorks 데이터베이스  
   
 -   .NET Framework SDK 2.0 이상 또는 Microsoft Visual Studio 2005 이상. .NET Framework SDK는 무료로 구할 수 있습니다.  
   
@@ -74,11 +79,11 @@ ms.locfileid: "73637652"
   
 2.  필요한 경우 예제에 대한 디렉터리를 만듭니다. 이 예에서는 C:\MySample을 사용합니다.  
   
-3.  c:\MySample에서 `HelloWorld.vb` (Visual Basic 예제용) 또는 `HelloWorld.cs` (C# 예제용)를 만들고 적합한 Visual Basic 또는 C# 예제 코드(아래)를 파일에 복사합니다.  
+3.  c:\MySample에서 `HelloWorld.vb`(Visual Basic 예제용) 또는 `HelloWorld.cs`(C# 예제용)를 만들고 적합한 Visual Basic 또는 C# 예제 코드(아래)를 파일에 복사합니다.  
   
 4.  c:\MySample에서 `messages.resx` 파일을 만들고 예제 코드를 파일에 복사합니다.  
   
-5.  C:\MySample에서 줄을 변경한 후 파일 `messages.resx`을 `messages.de.resx`로 저장 하 여 파일 `messages.de.resx`를 만듭니다.  
+5.  C:\MySample에서 줄을 변경한 후 `messages.de.resx` 파일 `messages.resx` 을로 `messages.de.resx` 저장 하 여 파일을 만듭니다.  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -86,7 +91,7 @@ ms.locfileid: "73637652"
   
     -   `<value xml:space="preserve">Hallo Welt!</value>`  
   
-6.  C:\MySample에서 줄을 변경한 후 파일 `messages.resx`을 `messages.es.resx`로 저장 하 여 파일 `messages.es.resx`를 만듭니다.  
+6.  C:\MySample에서 줄을 변경한 후 `messages.es.resx` 파일 `messages.resx` 을로 `messages.es.resx` 저장 하 여 파일을 만듭니다.  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -94,7 +99,7 @@ ms.locfileid: "73637652"
   
     -   `<value xml:space="preserve">Hola a todos</value>`  
   
-7.  C:\MySample에서 줄을 변경한 후 파일 `messages.resx`을 `messages.fr.resx`로 저장 하 여 파일 `messages.fr.resx`를 만듭니다.  
+7.  C:\MySample에서 줄을 변경한 후 `messages.fr.resx` 파일 `messages.resx` 을로 `messages.fr.resx` 저장 하 여 파일을 만듭니다.  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -102,7 +107,7 @@ ms.locfileid: "73637652"
   
     -   `<value xml:space="preserve">BonjourÂ !</value>`  
   
-8.  C:\MySample에서 줄을 변경한 후 파일 `messages.resx`을 `messages.fr-FR.resx`로 저장 하 여 파일 `messages.fr-FR.resx`를 만듭니다.  
+8.  C:\MySample에서 줄을 변경한 후 `messages.fr-FR.resx` 파일 `messages.resx` 을로 `messages.fr-FR.resx` 저장 하 여 파일을 만듭니다.  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -110,7 +115,7 @@ ms.locfileid: "73637652"
   
     -   `<value xml:space="preserve">Bonjour de France!</value>`  
   
-9. C:\MySample에서 줄을 변경한 후 파일 `messages.resx`을 `messages.it.resx`로 저장 하 여 파일 `messages.it.resx`를 만듭니다.  
+9. C:\MySample에서 줄을 변경한 후 `messages.it.resx` 파일 `messages.resx` 을로 `messages.it.resx` 저장 하 여 파일을 만듭니다.  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -118,7 +123,7 @@ ms.locfileid: "73637652"
   
     -   `<value xml:space="preserve">Buongiorno</value>`  
   
-10. C:\MySample에서 줄을 변경한 후 파일 `messages.resx`을 `messages.ja.resx`로 저장 하 여 파일 `messages.ja.resx`를 만듭니다.  
+10. C:\MySample에서 줄을 변경한 후 `messages.ja.resx` 파일 `messages.resx` 을로 `messages.ja.resx` 저장 하 여 파일을 만듭니다.  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -142,19 +147,21 @@ ms.locfileid: "73637652"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-16. [!INCLUDE[tsql](../../includes/tsql-md.md)] 테스트 명령 스크립트를 파일에 복사하고 해당 파일을 예제 디렉터리에 `test.sql` 로 저장합니다.  
+16. 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 테스트 명령 스크립트를 파일에 복사하고 해당 파일을 예제 디렉터리에 `test.sql` 로 저장합니다.  
   
 17. 다음 명령으로 테스트 스크립트를 실행합니다.  
   
     -   `sqlcmd -E -I -i test.sql`  
   
-18. [!INCLUDE[tsql](../../includes/tsql-md.md)] 정리 스크립트를 파일에 복사하고 해당 파일을 예제 디렉터리에 `cleanup.sql` 로 저장합니다.  
+18. 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 정리 스크립트를 파일에 복사하고 해당 파일을 예제 디렉터리에 `cleanup.sql` 로 저장합니다.  
   
 19. 다음 명령으로 스크립트를 실행합니다.  
   
     -   `sqlcmd -E -I -i cleanup.sql`  
   
-## <a name="sample-code"></a>예제 코드  
+## <a name="sample-code"></a>샘플 코드  
  다음은 이 예제에 대한 코드 목록입니다.  
   
  C#  
@@ -450,7 +457,7 @@ USE master;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [공용 언어 런타임 &#40;CLR&#41; 통합에 대한 사용 시나리오 및 예제](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+## <a name="see-also"></a>참고 항목  
+ [공용 언어 런타임 &#40;CLR&#41; 통합에 대 한 사용 시나리오 및 예제](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

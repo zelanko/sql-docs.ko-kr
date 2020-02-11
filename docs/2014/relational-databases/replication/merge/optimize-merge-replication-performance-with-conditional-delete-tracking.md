@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a93eed388f494b7d0aeaac127b95bc0d87c76963
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68210698"
 ---
 # <a name="optimize-merge-replication-performance-with-conditional-delete-tracking"></a>조건부 삭제 추적으로 병합 복제 성능 최적화
@@ -44,11 +44,11 @@ ms.locfileid: "68210698"
 > [!IMPORTANT]  
 >  게시자에서 다른 작업이 계속되는 경우 삭제 추적이 해제되어 있는 동안은 구독자로 전파되어야 하는 삭제가 발생하지 않도록 합니다.  
   
- **삭제가 추적되지 않게 지정하려면**  
+ **삭제가 추적 되지 않도록 지정 하려면**  
   
 -   복제 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 프로그래밍: [병합 아티클에 대해 삭제가 추적되지 않도록 지정&#40;복제 Transact-SQL 프로그래밍&#41;](..//publish/specify-merge-replication-properties.md#tracking-deletes)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [병합 복제를 위한 아티클 옵션](article-options-for-merge-replication.md)   
  [다운로드 전용 아티클로 병합 복제 성능 최적화](optimize-merge-replication-performance-with-download-only-articles.md)  
   

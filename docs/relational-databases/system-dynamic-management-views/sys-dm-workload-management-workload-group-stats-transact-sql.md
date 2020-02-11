@@ -13,18 +13,18 @@ ms.author: rortloff
 manager: craigg
 monikerRange: = azure-sqldw-latest||= sqlallproducts-allversions
 ms.openlocfilehash: 6e77239d019cb51e66a34a3a5b909e01c28a7faa
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73633437"
 ---
 # <a name="sysdm_workload_management_workload_groups_stats-transact-sql"></a>sys. dm_workload_management_workload_groups_stats (Transact-sql)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-작업 그룹 통계 및 작업 그룹의 유효 값 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]을 반환 합니다.  
+에서 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]작업 그룹 통계 및 작업 그룹의 유효 값을 반환 합니다.  
   
-|열 이름|데이터 형식|설명|범위|  
+|열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |group_id|**int**|작업 그룹의 고유한 ID입니다.||
 |name|**sysname**|작업 그룹의 이름입니다.||
@@ -41,4 +41,4 @@ ms.locfileid: "73633437"
 
 ## <a name="see-also"></a>참고 항목
 
- [SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰 &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

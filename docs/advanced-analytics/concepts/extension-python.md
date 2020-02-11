@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 0445fb83a1ee4c4e2a991df8e698f24988454d19
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727680"
 ---
 # <a name="python-language-extension-in-sql-server"></a>SQL Server의 Python 언어 확장
@@ -35,7 +35,7 @@ SQL Server는 Python 실행 파일을 수정하지 않지만, 설치 프로그�
 
 병렬 및 분산 워크로드를 처리하기 위해 Microsoft에서 추가한 Python 패키지에는 다음 라이브러리가 포함되어 있습니다.
 
-| 라이브러리 | 설명 |
+| 라이브러리 | Description |
 |---------|-------------|
 | [**revoscalepy**](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 데이터 원본 개체와 데이터 탐색, 조작, 변환 및 시각화를 지원합니다. **rxLinMod**와 같이 다양한 확장 가능한 기계 학습 모델뿐 아니라 원격 컴퓨팅 컨텍스트 만들기도 지원합니다. 자세한 내용은 [SQL Server와 revoscalepy 모듈](../python/ref-py-revoscalepy.md)을 참조하세요.  |
 | [**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 속도와 정확도에 최적화된 기계 학습 알고리즘과 텍스트 및 이미지 작업을 위한 인라인 변환이 포함되어 있습니다. 자세한 내용은 [SQL Server와 microsoftml 모듈](../python/ref-py-microsoftml.md)을 참조하세요. |

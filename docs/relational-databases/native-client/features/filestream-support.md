@@ -14,10 +14,10 @@ ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 75c5d2f0f04cf0692f4a6c6ca3145210fee014b3
-ms.sourcegitcommit: aaa42f26c68abc2de10eb58444fe6b490c174eab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74308069"
 ---
 # <a name="filestream-support"></a>FILESTREAM 지원
@@ -35,7 +35,7 @@ ms.locfileid: "74308069"
   
 -   [ODBC&#41;&#40;FILESTREAM 지원](../../../relational-databases/native-client/odbc/filestream-support-odbc.md)  
   
--   [OpenSqlFilestream을 사용 하 여 FILESTREAM 데이터 액세스](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
+-   [OpenSqlFilestream을 사용하여 FILESTREAM 데이터 액세스](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   
 ## <a name="querying-for-filestream-columns"></a>FILESTREAM 열 쿼리  
  OLE DB의 스키마 행 집합은 열이 FILESTREAM 열인지 여부를 보고하지 않습니다. OLE DB의 ITableDefinition을 사용하여 FILESTREAM 열을 만들 수 없습니다.  

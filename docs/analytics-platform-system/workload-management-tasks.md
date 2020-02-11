@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 88d95eb0a2e0805930cb5f01f5af05b8fc6b3f2e
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399409"
 ---
 # <a name="workload-management-tasks-in-analytics-platform-system"></a>분석 플랫폼 시스템의 작업 관리 작업
@@ -138,5 +138,5 @@ FROM sys.dm_pdw_resource_waits;
   
   
 ## <a name="see-also"></a>참고 항목  
-[워크로드 관리](workload-management.md)  
+[워크 로드 관리](workload-management.md)  
   

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: cec604ff1a93213fc6308455cadda90e6efa2d61
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401419"
 ---
 # <a name="appliance-monitoring-for-analytics-platform-system"></a>분석 플랫폼 시스템에 대 한 어플라이언스 모니터링
@@ -63,7 +63,7 @@ SQL Server PDW는 시스템 센터 Operations Manager와 광범위 하 게 통�
    
 ## <a name="Tasks"></a>관련 모니터링 태스크  
   
-|모니터링 태스크|설명|  
+|모니터링 태스크|Description|  
 |-------------------|---------------|  
 |관리 콘솔을 사용 하 여 어플라이언스를 모니터링 합니다.|[관리 콘솔 &#40;분석 플랫폼 시스템을 사용 하 여 어플라이언스를 모니터링&#41;](monitor-the-appliance-by-using-the-admin-console.md)|  
 |시스템 뷰를 사용 하 여 어플라이언스를 모니터링 합니다.|[시스템 뷰 &#40;분석 플랫폼 시스템을 사용 하 여 어플라이언스를 모니터링&#41;](monitor-the-appliance-by-using-system-views.md)|  

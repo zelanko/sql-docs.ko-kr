@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1916be8c443799fa41680341e72889bd10551b4a
-ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74200422"
 ---
 # <a name="import-the-sqlps-module"></a>SQLPS 모듈 가져오기
@@ -43,7 +43,7 @@ ms.locfileid: "74200422"
 > [!NOTE]  
 >  두 SQL Server cmdlet(`Encode-Sqlname` 및 `Decode-Sqlname`)의 이름에 사용되는 동사는 Windows PowerShell 2.0에 대해 승인된 동사와 일치하지 않습니다. 이로 인해 작동에는 영향을 주지 않지만 `sqlps` 모듈을 세션으로 가져올 때 Windows PowerShell에서 경고를 표시합니다.  
   
-###  <a name="Security"></a>보안  
+###  <a name="Security"></a> 보안  
  기본적으로 Windows PowerShell은 모든 Windows PowerShell 스크립트 실행을 방지하는 **제한됨**으로 설정된 스크립팅 실행 정책과 함께 실행됩니다. 
   `sqlps` 모듈을 로드하려면 `Set-ExecutionPolicy` cmdlet을 사용하여 서명된 스크립트나 기타 스크립트를 실행할 수 있도록 설정합니다. 신뢰할 수 있는 출처에서 제공하는 스크립트만 실행하고 적절한 NTFS 권한을 사용하여 모든 입력 및 출력 파일을 보호하십시오. Windows PowerShell 스크립트를 사용하도록 설정하는 방법은 [Windows PowerShell 스크립트 실행](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell?view=powershell-6#how-to-enable-windows-powershell-ise-on-earlier-releases-of-windows)을 참조하십시오.  
   

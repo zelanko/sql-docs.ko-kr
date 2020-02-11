@@ -1,5 +1,5 @@
 ---
-title: SQL Server (SQL Server 구성 관리자) 인스턴스의 자동 시작 방지 | Microsoft Docs
+title: SQL Server 인스턴스의 자동 시작 방지 (SQL Server 구성 관리자) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6af4597a4ddf802c80bc98cb38363d59348fa0bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62810053"
 ---
 # <a name="prevent-automatic-startup-of-an-instance-of-sql-server-sql-server-configuration-manager"></a>SQL Server 인스턴스의 자동 시작 방지(SQL Server 구성 관리자)
@@ -37,11 +37,12 @@ ms.locfileid: "62810053"
   
 3.  세부 정보 창에서 **MSSQLServer**를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-4.  **SQL Server \<** _instancename_ **> 속성** 대화 상자의 **속성** 상자에서 **시작 모드**의 값을 **수동**으로 설정합니다.  
+4.  
+  **SQL Server \<**_instancename_**> 속성** 대화 상자의 **속성** 상자에서 **시작 모드**의 값을 **수동**으로 설정합니다.  
   
 5.  **확인**을 클릭하여 **SQL Server \<** _instancename_ **> 속성** 대화 상자를 닫은 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 닫습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](start-stop-pause-resume-restart-sql-server-services.md)  
   
   

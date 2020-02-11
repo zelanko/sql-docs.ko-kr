@@ -42,10 +42,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cfa159a88cfc159e65fe3ec39b334a3f6e8c5c8b
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74683610"
 ---
 # <a name="getting-sql-server-assistance"></a>SQL Server 지원 받기
@@ -61,8 +61,7 @@ ms.locfileid: "74683610"
   
  이러한 원본에서 원하는 정보를 찾지 못한 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 커뮤니티 포럼 및 뉴스 그룹에서 질문을 게시하거나 [!INCLUDE[msCoName](../includes/msconame-md.md)] 지원 서비스를 받을 수 있습니다.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-books-online"></a>
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서  
+## <a name="includessnoversionincludesssnoversion-mdmd-books-online"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서  
  
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 사용하는 데 필요한 개념과 절차가 포함되어 있습니다. 또한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 사용하여 데이터를 저장, 검색, 보고 및 수정하기 위한 언어 및 프로그래밍 인터페이스에 대한 참조 자료도 담겨 있습니다.  
   
@@ -94,7 +93,7 @@ ms.locfileid: "74683610"
 ## <a name="additional-online-information"></a>추가적인 온라인 정보  
  추가적인 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 정보는 다음 [!INCLUDE[msCoName](../includes/msconame-md.md)] 웹 사이트에서 이용할 수 있습니다.  
   
-|리소스|설명|  
+|리소스|Description|  
 |--------------|-----------------|  
 |[Microsoft SQL Server](https://go.microsoft.com/fwlink/?linkid=8504)|
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 데이터 스토리지 및 비즈니스 인텔리전스 도구로 평가하는 사전 영업 정보를 제공합니다.|  
