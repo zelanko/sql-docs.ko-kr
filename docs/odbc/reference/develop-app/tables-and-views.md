@@ -14,11 +14,11 @@ ms.assetid: 72cef4bd-13be-430e-9b6a-c75b60f9d1dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 670809a90de5917975c09bed2e65d6d0fcf33946
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68114098"
 ---
 # <a name="tables-and-views"></a>테이블 및 뷰
-ODBC 함수에서 테이블 및 뷰는 서로 바꿔 사용할 수 있습니다. 용어 *테이블* 테이블 및 뷰의 경우 위치를 제외 하 고는 용어 *보기* 명시적으로 사용 됩니다.
+ODBC 함수에서 테이블과 뷰는 서로 교환할 수 있습니다. 용어 *테이블* 은 용어 *보기가* 명시적으로 사용 되는 경우를 제외 하 고 테이블 및 뷰에 대해 모두 사용 됩니다.

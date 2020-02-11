@@ -20,18 +20,18 @@ ms.assetid: a0b7b9f3-dbda-4350-a274-bd9ecd5c0a74
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 79fc54e65b6e014575b5942a573c4077e8a9c5d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041815"
 ---
-# <a name="set-contextinfo-transact-sql"></a>SET CONTEXT_INFO(Transact-SQL)
+# <a name="set-context_info-transact-sql"></a>SET CONTEXT_INFO(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   128바이트까지의 이전 정보를 현재 연결 또는 현재 세션과 연결합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,7 +47,7 @@ SET CONTEXT_INFO { binary_str | @binary_var }
  **@** *binary_var*  
  현재 세션이나 연결에 연결할 수 있는 컨텍스트 값을 보유하는 **varbinary** 또는 **binary** 변수입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  현재 세션에 대한 컨텍스트 정보를 검색하는 기본 방법은 CONTEXT_INFO 함수를 사용하는 것입니다. 세션 컨텍스트 정보는 다음과 같은 시스템 뷰의 **context_info** 열에 저장됩니다.  
   
 -   **sys.dm_exec_requests**  
@@ -64,7 +64,7 @@ SET CONTEXT_INFO { binary_str | @binary_var }
   
 ## <a name="examples"></a>예  
   
-### <a name="a-setting-context-information-by-using-a-constant"></a>1\. 상수를 사용하여 컨텍스트 정보 설정  
+### <a name="a-setting-context-information-by-using-a-constant"></a>A. 상수를 사용하여 컨텍스트 정보 설정  
  다음 예에서는 값을 설정하고 결과를 표시하여 `SET CONTEXT_INFO`를 보여 줍니다. `sys.dm_exec_sessions`을 쿼리하려면 SELECT 및 VIEW SERVER STATE 권한이 필요하지만 CONTEXT_INFO 함수를 사용하면 해당 권한이 필요하지 않습니다.  
   
 ```  
@@ -76,7 +76,7 @@ WHERE session_id = @@SPID;
 GO  
 ```  
   
-### <a name="b-setting-context-information-by-using-a-function"></a>2\. 함수를 사용하여 컨텍스트 정보 설정  
+### <a name="b-setting-context-information-by-using-a-function"></a>B. 함수를 사용하여 컨텍스트 정보 설정  
  다음 예에서는 함수의 결과를 사용하여 컨텍스트 값을 설정합니다. 이때 함수의 값을 **binary** 변수에 먼저 넣어야 합니다.  
   
 ```  
@@ -92,6 +92,6 @@ GO
  [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
  [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
- [CONTEXT_INFO  &#40;Transact-SQL&#41;](../../t-sql/functions/context-info-transact-sql.md)  
+ [CONTEXT_INFO&#40;Transact-SQL&#41;](../../t-sql/functions/context-info-transact-sql.md)  
   
   

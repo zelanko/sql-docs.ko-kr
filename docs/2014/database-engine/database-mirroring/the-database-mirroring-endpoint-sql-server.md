@@ -17,14 +17,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1afac17b04c968c6685e356e3bbc8101161a36b3
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797897"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>데이터베이스 미러링 엔드포인트(SQL Server)
-  ph x="1" /&gt; 또는 데이터베이스 미러링에 참여하려면 서버 인스턴스에 자체의 전용 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]데이터베이스 미러링 엔드포인트*가 필요합니다. 데이터베이스 미러링 엔드포인트는 다른 서버 인스턴스로부터 연결을 받는 데만 사용되는 특별한 용도의 엔드포인트입니다. 지정된 서버 인스턴스에서 다른 모든 서버 인스턴스에 대한 모든 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 또는 데이터베이스 미러링 연결은 단일 데이터베이스 미러링 엔드포인트를 사용합니다.  
+  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 또는 데이터베이스 미러링에 참여하려면 서버 인스턴스에 자체의 전용 *데이터베이스 미러링 엔드포인트*가 필요합니다. 데이터베이스 미러링 엔드포인트는 다른 서버 인스턴스로부터 연결을 받는 데만 사용되는 특별한 용도의 엔드포인트입니다. 지정된 서버 인스턴스에서 다른 모든 서버 인스턴스에 대한 모든 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 또는 데이터베이스 미러링 연결은 단일 데이터베이스 미러링 엔드포인트를 사용합니다.  
   
  데이터베이스 미러링 엔드포인트는 TCP(전송 제어 프로토콜)를 사용하여 데이터베이스 미러링 세션에 참여하거나 가용성 복제본을 호스팅하는 서버 인스턴스 간에 메시지를 보내고 받습니다. 데이터베이스 미러링 엔드포인트는 고유의 TCP 포트 번호에서 수신합니다.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "72797897"
   
 -   모든 서버 인스턴스가 도메인 서비스 계정으로 실행 중인 경우 데이터베이스 미러링 엔드포인트에 Windows 인증을 사용할 수 있습니다. 모든 서버 인스턴스가 동일한 도메인 사용자 계정으로 실행되는 경우에는 두 **master** 데이터베이스 모두에 올바른 사용자 로그인이 자동으로 생성됩니다. 이 경우 가용성 데이터베이스에 대한 보안 구성이 단순해지므로 계정을 이와 같이 설정하는 것이 좋습니다.  
   
-     가용성 그룹의 가용성 복제본을 호스팅하는 서버 인스턴스가 서로 다른 계정으로 실행되는 경우, 다른 서버 인스턴스의 **master** 에 각 계정에 대한 로그인을 만들어야 합니다. 그런 다음 해당 서버 인스턴스의 데이터베이스 미러링 엔드포인트에 연결할 수 있도록 해당 로그인에 CONNECT 권한을 부여해야 합니다. 자세한 내용은 [데이터베이스 미러링 또는 AlwaysOn 가용성 그룹 &#40;에 대 한 로그인 계정 설정을 SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md).  
+     가용성 그룹의 가용성 복제본을 호스팅하는 서버 인스턴스가 서로 다른 계정으로 실행되는 경우, 다른 서버 인스턴스의 **master** 에 각 계정에 대한 로그인을 만들어야 합니다. 그런 다음 해당 서버 인스턴스의 데이터베이스 미러링 엔드포인트에 연결할 수 있도록 해당 로그인에 CONNECT 권한을 부여해야 합니다. 자세한 내용은 [데이터베이스 미러링에 대 한 로그인 계정 또는&#41;SQL Server &#40;AlwaysOn 가용성 그룹을 설정 ](set-up-login-accounts-database-mirroring-always-on-availability.md)합니다.  
   
      서버 인스턴스에서 Windows 인증을 사용하는 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)], PowerShell 또는 새 가용성 그룹 마법사를 사용하여 데이터베이스 미러링 엔드포인트를 만들 수 있습니다.  
   
@@ -67,24 +67,24 @@ ms.locfileid: "72797897"
   
 -   로컬 시스템, 로컬 서비스 또는 네트워크 서비스와 같은 기본 제공 계정이나 비도메인 계정으로 실행되는 서버 인스턴스가 하나라도 있을 경우에는 엔드포인트 인증에 인증서를 사용해야 합니다. 데이터베이스 미러링 엔드포인트에 인증서를 사용하려면 시스템 관리자가 아웃바운드 및 인바운드 연결 모두에 인증서를 사용하도록 각 서버 인스턴스를 구성해야 합니다.  
   
-     인증서를 통해 데이터베이스 미러링 보안을 구성하는 자동화된 방법은 없습니다. CREATE ENDPOINT [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 `New-SqlHadrEndpoint` PowerShell cmdlet을 사용해야 합니다. 자세한 내용은 [CREATE ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)과 함께 작동하도록 Service Broker를 구성하는 방법에 대한 정보를 제공합니다. 서버 인스턴스에서 인증서 인증을 사용 하도록 설정 하는 방법에 대 한 자세한 내용은 [데이터베이스 미러링 끝점 &#40;에 대 한&#41;인증서 사용 transact-sql](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)을 참조 하세요.  
+     인증서를 통해 데이터베이스 미러링 보안을 구성하는 자동화된 방법은 없습니다. CREATE ENDPOINT [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 `New-SqlHadrEndpoint` PowerShell cmdlet을 사용해야 합니다. 자세한 내용은 [CREATE ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)과 함께 작동하도록 Service Broker를 구성하는 방법에 대한 정보를 제공합니다. 서버 인스턴스에서 인증서 인증을 사용 하도록 설정 하는 방법에 대 한 자세한 내용은 [transact-sql&#41;&#40;데이터베이스 미러링 끝점에 인증서 사용 ](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)을 참조 하세요.  
   
   
 ##  <a name="RelatedTasks"></a> 관련 작업  
 
 ### <a name="to-configure-a-database-mirroring-endpoint"></a>데이터베이스 미러링 엔드포인트를 구성하려면
   
--   [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기 &#40;Transact-SQL &#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
+-   [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
--   [데이터베이스 미러링 엔드포인트에 대한 인증서 사용 &#40;Transact-SQL &#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
+-   [데이터베이스 미러링 엔드포인트에 대한 인증서 사용&#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
-    -   [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용&amp;#40;Transact-SQL&amp;#41;](database-mirroring-use-certificates-for-outbound-connections.md)  
+    -   [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md)  
   
-    -   [데이터베이스 미러링 엔드포인트의 인바운드 연결에 대한 인증서 사용 허용 &#40;Transact-SQL &#41;](database-mirroring-use-certificates-for-inbound-connections.md)  
+    -   [데이터베이스 미러링 엔드포인트의 인바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-inbound-connections.md)  
   
 -   [서버 네트워크 주소 지정&#40;데이터베이스 미러링&#41;](specify-a-server-network-address-database-mirroring.md)  
   
--   [가용성 복제본 추가 또는 수정 시 엔드포인트 URL 지정 &40;SQL Server &#41;](../availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [가용성 복제본 &#40;SQL Server를 추가 하거나 수정할 때 끝점 URL을 지정&#41;](../availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
 -   [가용성 그룹 마법사 사용&#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
   
@@ -94,7 +94,7 @@ ms.locfileid: "72797897"
   
   
 ## <a name="see-also"></a>참고 항목  
- [데이터베이스 미러링 및 AlwaysOn 가용성 그룹에 대 한 전송 보안 &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
+ [데이터베이스 미러링 및 AlwaysOn 가용성 그룹 &#40;SQL Server에 대 한 전송 보안&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [데이터베이스 미러링 구성 문제 해결&#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
- [dm_hadr_availability_replica_states &#40;transact-sql&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)   
- [sys. dm_db_mirroring_connections &#40;transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  
+ [dm_hadr_availability_replica_states &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)   
+ [dm_db_mirroring_connections &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  

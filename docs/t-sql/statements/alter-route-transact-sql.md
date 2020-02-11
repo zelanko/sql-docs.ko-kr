@@ -23,10 +23,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 1e05ad220147e7f46bfaa66127fcc492aaeae6a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927180"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE(Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67927180"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 기존 경로에 대한 경로 정보를 수정합니다. 
 
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -56,7 +56,7 @@ WITH
  *route_name*  
  변경할 경로의 이름입니다. 서버, 데이터베이스 및 스키마 이름은 지정될 수 없습니다.  
   
- 의 모든 멘션을  
+ WITH  
  변경되는 경로를 정의하는 절을 지정합니다.  
   
  SERVICE_NAME **=‘** _service\_name_ **’**  
@@ -101,7 +101,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  경로에 *next_hop_address*가 **‘LOCAL’** 로 지정되어 있으면 메시지는 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내의 서비스로 배달됩니다.  
   
- 경로에 *next_hop_address*가 **'TRANSPORT'** 로 지정되어 있으면 네트워크 주소는 서비스 이름의 네트워크 주소를 기준으로 결정됩니다. **'TRANSPORT'** 를 지정하는 경로는 서비스 이름이나 broker 인스턴스를 지정할 수 있습니다.  
+ 경로에 *next_hop_address*가 **‘TRANSPORT’** 로 지정되어 있으면 네트워크 주소는 서비스 이름의 네트워크 주소를 기준으로 결정됩니다. **'TRANSPORT'** 를 지정하는 경로는 서비스 이름이나 broker 인스턴스를 지정할 수 있습니다.  
   
  *next_hop_address*가 데이터베이스 미러의 주 서버인 경우에는 미러 서버에 대해 MIRROR_ADDRESS도 지정해야 합니다. 그렇지 않으면 이 경로는 미러 서버에 대해 자동으로 장애 조치(Failover)하지 않습니다.  
   
@@ -128,7 +128,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 > [!NOTE]  
 >  포함된 데이터베이스에서는 이 옵션을 사용할 수 없습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  경로를 저장하는 라우팅 테이블은 **sys.routes** 카탈로그 뷰를 통해 읽을 수 있는 메타데이터 테이블입니다. 라우팅 테이블은 CREATE ROUTE, ALTER ROUTE 및 DROP ROUTE 문으로만 업데이트할 수 있습니다.  
   
  ALTER ROUTE 명령에서 지정하지 않은 절은 변경되지 않은 상태로 유지됩니다. 따라서 경로를 변경하여 경로의 제한 시간이 초과되지 않거나, 경로가 서비스 이름과 일치하거나, 경로가 모든 broker 인스턴스와 일치하도록 지정할 수는 없습니다. 이러한 경로의 특성을 변경하려면 기존 경로를 삭제하고 새 정보로 새 경로를 만들어야 합니다.  
@@ -144,7 +144,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
 ## <a name="examples"></a>예  
   
-### <a name="a-changing-the-service-for-a-route"></a>1\. 경로에 대한 서비스 변경  
+### <a name="a-changing-the-service-for-a-route"></a>A. 경로에 대한 서비스 변경  
  다음 예에서는 `ExpenseRoute` 원격 서비스를 가리키도록 `//Adventure-Works.com/Expenses` 경로를 수정합니다.  
   
 ```  
@@ -153,7 +153,7 @@ ALTER ROUTE ExpenseRoute
      SERVICE_NAME = '//Adventure-Works.com/Expenses';  
 ```  
   
-### <a name="b-changing-the-target-database-for-a-route"></a>2\. 경로의 대상 데이터베이스 변경  
+### <a name="b-changing-the-target-database-for-a-route"></a>B. 경로의 대상 데이터베이스 변경  
  다음 예에서는 `ExpenseRoute` 경로의 대상 데이터베이스를 `D8D4D268-00A3-4C62-8F91-634B89B1E317.` 고유 식별자로 식별되는 데이터베이스로 변경합니다.  
   
 ```  

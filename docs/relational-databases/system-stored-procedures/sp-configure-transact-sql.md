@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 09f5a26493600fd346192f6ba7ebbc73ea7ed184
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73536209"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure(Transact-SQL)
@@ -31,9 +31,9 @@ ms.locfileid: "73536209"
   현재 서버에 대한 전역 구성 설정을 표시하거나 변경합니다.
 
 > [!NOTE]  
-> 데이터베이스 수준 구성 옵션은 [ALTER DATABASE 범위 &#40;구성 transact-sql&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)을 참조 하세요. 소프트 NUMA를 구성 하려면 [소프트 numa &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)를 참조 하세요.  
+> 데이터베이스 수준 구성 옵션은 [ALTER DATABASE 범위 구성 &#40;transact-sql&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)를 참조 하세요. 소프트 NUMA를 구성 하려면 [소프트 numa &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)를 참조 하세요.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -60,11 +60,12 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @configname = ] 'option_name'`는 구성 옵션의 이름입니다. *option_name* 은 **varchar(35)** 이며 기본값은 NULL입니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서는 구성 이름의 일부인 고유 문자열을 모두 인식합니다. 이 인수를 지정하지 않으면 옵션의 전체 목록이 반환됩니다.  
+`[ @configname = ] 'option_name'`구성 옵션의 이름입니다. *option_name* 는 **varchar (35)** 이며 기본값은 NULL입니다. 
+  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서는 구성 이름의 일부인 고유 문자열을 모두 인식합니다. 이 인수를 지정하지 않으면 옵션의 전체 목록이 반환됩니다.  
   
- 사용 가능한 구성 옵션 및 해당 설정에 대 한 자세한 내용은 [서버 구성 옵션 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)을 참조 하세요.  
+ 사용 가능한 구성 옵션 및 해당 설정에 대 한 자세한 내용은 [서버 구성 옵션 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)를 참조 하세요.  
   
-`[ @configvalue = ] 'value'`은 새로운 구성 설정입니다. *value* 는 **int**이며 기본값은 NULL입니다. 최대값은 개별 옵션에 따라 달라집니다.  
+`[ @configvalue = ] 'value'`새 구성 설정입니다. *value* 는 **int**이며 기본값은 NULL입니다. 최대값은 개별 옵션에 따라 달라집니다.  
   
  각 옵션에 대 한 최대값을 확인 하려면 **sys. 구성** 카탈로그 뷰의 **최 댓** 열을 참조 하세요.  
   
@@ -76,13 +77,13 @@ RECONFIGURE
   
  **Config_value** 및 **run_value** 값은 자동으로 동일 하지 않습니다. **Sp_configure**를 사용 하 여 구성 설정을 업데이트 한 후에는 다시 구성 또는 다시 설정 재정의를 사용 하 여 시스템 관리자가 실행 중인 구성 값을 업데이트 해야 합니다. 자세한 내용은 주의 섹션을 참조하세요.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**nvarchar(35)**|구성 옵션의 이름입니다.|  
-|**minimum**|**int**|구성 옵션의 최소값입니다.|  
-|**maximum**|**int**|구성 옵션의 최대값입니다.|  
-|**config_value**|**int**|**Sp_configure** (값을 사용 하 여 구성 옵션이 설정 된 값입니다 **.** 이러한 옵션에 대 한 자세한 내용은 [서버 구성 옵션 &#40;SQL Server&#41; ](../../database-engine/configure-windows/server-configuration-options-sql-server.md) 및 [sys. 구성 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)을 참조 하세요.|  
-|**run_value**|**int**|현재 실행 중인 구성 옵션 값입니다 ( **value_in_use**의 값).<br /><br /> 자세한 내용은 [sys. 구성 &#40;&#41;transact-sql](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)을 참조 하세요.|  
+|**name**|**nvarchar (35)**|구성 옵션의 이름입니다.|  
+|**최대**|**int**|구성 옵션의 최소값입니다.|  
+|**최대화**|**int**|구성 옵션의 최대값입니다.|  
+|**config_value**|**int**|**Sp_configure** (값을 사용 하 여 구성 옵션이 설정 된 값입니다 **.** 이러한 옵션에 대 한 자세한 내용은 [서버 구성 옵션 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md) 및 [sys. 구성 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)을 참조 하세요.|  
+|**run_value**|**int**|현재 실행 중인 구성 옵션 값입니다 ( **value_in_use**의 값).<br /><br /> 자세한 내용은 [&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)를 참조 하세요.|  
   
 ## <a name="remarks"></a>설명  
  **Sp_configure** 를 사용 하 여 서버 수준 설정을 표시 하거나 변경할 수 있습니다. 데이터베이스 수준의 설정을 변경하려면 ALTER DATABASE를 사용합니다. 현재 사용자 세션에만 적용되는 설정을 변경하려면 SET 문을 사용합니다.  
@@ -99,21 +100,21 @@ RECONFIGURE
 > [!CAUTION]  
 > 옵션 값을 잘못 설정하면 역으로 서버 인스턴스 구성에 영향을 줄 수 있습니다. RECONFIGURE WITH OVERRIDE는 매우 주의를 기울여 사용해야 합니다.  
   
- RECONFIGURE 문은 일부 옵션을 동적으로 업데이트합니다. 그 외의 옵션을 업데이트하려면 서버를 중지하고 다시 시작해야 합니다. 예를 들어 **min server memory** 및 **max server memory** 서버 메모리 옵션은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 동적으로 업데이트 됩니다. 따라서 서버를 다시 시작 하지 않고 변경할 수 있습니다. 반면 **채우기 비율** 옵션의 실행 값을 다시 구성 하려면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]를 다시 시작 해야 합니다.  
+ RECONFIGURE 문은 일부 옵션을 동적으로 업데이트합니다. 그 외의 옵션을 업데이트하려면 서버를 중지하고 다시 시작해야 합니다. 예를 들어 **min server memory** 및 **max server memory** 서버 메모리 옵션은에서 동적으로 업데이트 됩니다 [!INCLUDE[ssDE](../../includes/ssde-md.md)]. 따라서 서버를 다시 시작 하지 않고 변경할 수 있습니다. 반면 **채우기 비율** 옵션의 실행 값을 다시 구성 하려면을 [!INCLUDE[ssDE](../../includes/ssde-md.md)]다시 시작 해야 합니다.  
   
  구성 옵션에서 RECONFIGURE를 실행 한 후 **sp_configure '***option_name***'** 를 실행 하 여 옵션이 동적으로 업데이트 되었는지 여부를 확인할 수 있습니다. **Run_value** 및 **config_value** 열의 값은 동적으로 업데이트 된 옵션에 대해 일치 해야 합니다. 또한 **sys. 구성** 카탈로그 뷰의 **is_dynamic** 열을 살펴보면 동적 옵션을 확인할 수 있습니다.  
  
  변경 내용은 SQL Server 오류 로그에도 기록 됩니다.
   
 > [!NOTE]  
->  옵션에 대해 지정 된 *값* 이 너무 높으면 **run_value** 열은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]가 유효 하지 않은 설정을 사용 하는 대신 동적 메모리를 기본값으로 사용 한다는 사실을 반영 합니다.  
+>  옵션에 대해 지정 된 *값* 이 너무 높으면 **run_value** 열은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 가 유효 하지 않은 설정을 사용 하는 대신 동적 메모리에 대해 기본적으로 사용 되는 사실을 반영 합니다.  
   
- 자세한 내용은 [ &#40;&#41;transact-sql 다시 구성](../../t-sql/language-elements/reconfigure-transact-sql.md)을 참조 하세요.  
+ 자세한 내용은 [RECONFIGURE &#40;transact-sql&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)를 참조 하세요.  
   
 ## <a name="advanced-options"></a>고급 옵션  
  **선호도 마스크** 및 **복구 간격과**같은 일부 구성 옵션은 고급 옵션으로 지정 됩니다. 기본적으로 이 옵션은 보거나 변경할 수 없습니다. 사용 가능 하도록 설정 하려면 **ShowAdvancedOptions** 구성 옵션을 1로 설정 합니다.  
   
- 구성 옵션 및 해당 설정에 대 한 자세한 내용은 [서버 구성 옵션 &#40;&#41;SQL Server](../../database-engine/configure-windows/server-configuration-options-sql-server.md)을 참조 하세요.  
+ 구성 옵션 및 해당 설정에 대 한 자세한 내용은 [서버 구성 옵션 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)를 참조 하세요.  
   
 ## <a name="permissions"></a>사용 권한  
  매개 변수 없이 또는 첫 번째 매개 변수만 사용하여 **sp_configure** 를 실행할 수 있는 권한은 기본적으로 모든 사용자에게 부여됩니다. 구성 옵션을 변경 하거나 RECONFIGURE 문을 실행 하는 두 매개 변수를 사용 하 여 **sp_configure** 를 실행 하려면 ALTER SETTINGS 서버 수준 사용 권한이 있어야 합니다. **sysadmin** 및 **serveradmin** 고정 서버 역할은 ALTER SETTINGS 권한을 암시적으로 보유하고 있습니다.  
@@ -131,14 +132,15 @@ EXEC sp_configure 'show advanced option', '1';
   
  "구성 옵션 ' 고급 옵션 표시 '가 0에서 1로 변경 된 메시지는 다음과 같습니다. RECONFIGURE 문을 실행하여 설치하십시오."  
   
- `RECONFIGURE`를 실행하여 모든 구성 옵션을 표시합니다.  
+ 
+  `RECONFIGURE`를 실행하여 모든 구성 옵션을 표시합니다.  
   
 ```sql  
 RECONFIGURE;  
 EXEC sp_configure;  
 ```  
   
-### <a name="b-changing-a-configuration-option"></a>2\. 구성 옵션 변경  
+### <a name="b-changing-a-configuration-option"></a>B. 구성 옵션 변경  
  다음 예에서는 시스템 `recovery interval`을 `3`분으로 설정합니다.  
   
 ```sql  
@@ -150,32 +152,34 @@ RECONFIGURE WITH OVERRIDE;
   
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-list-all-available-configuration-settings"></a>3\. 모든 사용 가능한 구성 설정 나열  
+### <a name="c-list-all-available-configuration-settings"></a>C. 모든 사용 가능한 구성 설정 나열  
  다음 예에서는 모든 구성 옵션을 나열하는 방법을 보여 줍니다.  
   
 ```sql  
 EXEC sp_configure;  
 ```  
   
- 결과로 옵션 이름과 그 뒤에 해당 옵션에 대한 최소 및 최대값이 반환됩니다. **Config_value** 는 재구성이 완료 되 면 [!INCLUDE[ssDW](../../includes/ssdw-md.md)]에서 사용할 값입니다. **run_value** 는 현재 사용되는 값입니다. **config_value** 및 **run_value** 는 값이 변경 중이 아니라면 일반적으로 동일합니다.  
+ 결과로 옵션 이름과 그 뒤에 해당 옵션에 대한 최소 및 최대값이 반환됩니다. **Config_value** 은 재구성이 완료 될 때 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 사용할 값입니다. 
+  **run_value** 는 현재 사용되는 값입니다. 
+  **config_value** 및 **run_value** 는 값이 변경 중이 아니라면 일반적으로 동일합니다.  
   
-### <a name="d-list-the-configuration-settings-for-one-configuration-name"></a>4\. 특정 구성 이름에 대한 구성 설정 나열  
+### <a name="d-list-the-configuration-settings-for-one-configuration-name"></a>D. 특정 구성 이름에 대한 구성 설정 나열  
   
 ```sql  
 EXEC sp_configure @configname='hadoop connectivity';  
 ```  
   
-### <a name="e-set-hadoop-connectivity"></a>5\. Hadoop 연결 설정  
- Hadoop 연결을 설정 하려면 sp_configure를 실행 하는 것 외에 몇 가지 추가 단계가 필요 합니다. 전체 절차는 [CREATE EXTERNAL DATA &#40;SOURCE transact-sql&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)을 참조 하세요.  
+### <a name="e-set-hadoop-connectivity"></a>E. Hadoop 연결 설정  
+ Hadoop 연결을 설정 하려면 sp_configure를 실행 하는 것 외에 몇 가지 추가 단계가 필요 합니다. 전체 절차는 [CREATE EXTERNAL DATA SOURCE &#40;transact-sql&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)를 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [RECONFIGURE&#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
- [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys.configurations&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
- [ALTER DATABASE SCOPED CONFIGURATION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)   
+ [sys. Transact-sql&#41;&#40;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
+ [ALTER DATABASE 범위 구성 &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)   
  [Soft-NUMA&#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)  
   
   

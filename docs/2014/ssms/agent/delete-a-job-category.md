@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9bb392991afbb3707fafdb18a28cc3de53f97c78
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783196"
 ---
 # <a name="delete-a-job-category"></a>작업 범주 삭제
-  이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 SQL Server 관리 개체를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 범주를 삭제하는 방법에 대해 설명합니다.  
+  이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 항목에서는, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 SQL Server 관리 개체를 사용 하 여에서 에이전트 작업 범주를 삭제 하는 방법에 대해 설명 합니다.  
   
  작업 범주를 사용하면 작업을 쉽게 필터링하고 그룹화할 수 있게 구성할 수 있습니다. 예를 들어 데이터베이스 유지 관리 범주에 있는 모든 데이터베이스 백업 작업을 구성할 수 있습니다.  
 
@@ -40,17 +40,20 @@ ms.locfileid: "72783196"
   
 ### <a name="to-delete-a-job-category"></a>작업 범주를 삭제하려면  
   
-1.  **개체 탐색기**에서 더하기 기호를 클릭하여 작업 범주를 삭제하려는 서버를 확장합니다.  
+1.  
+  **개체 탐색기**에서 더하기 기호를 클릭하여 작업 범주를 삭제하려는 서버를 확장합니다.  
   
 2.  더하기 기호를 클릭하여 **SQL Server 에이전트**를 확장합니다.  
   
-3.  **작업** 폴더를 마우스 오른쪽 단추로 클릭하고 **작업 범주 관리**를 선택합니다.  
+3.  
+  **작업** 폴더를 마우스 오른쪽 단추로 클릭하고 **작업 범주 관리**를 선택합니다.  
   
-4.  **작업 범주 관리**_server_name_ 대화 상자에서 삭제할 작업 범주를 선택합니다.  
+4.  **작업 범주 관리**_server_name_ 대화 상자에서 삭제할 작업 범주를 선택 합니다.  
   
 5.  **삭제**를 클릭합니다.  
   
-6.  **작업 범주** 대화 상자에서 **예**를 클릭합니다.  
+6.  
+  **작업 범주** 대화 상자에서 **예**를 클릭합니다.  
   
 7.  **작업 범주 관리**_server_name_ 대화 상자를 닫습니다.  
   
@@ -74,7 +77,7 @@ ms.locfileid: "72783196"
     GO  
     ```  
   
- 자세한 내용은 [sp_delete_category &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-category-transact-sql)을 참조 하세요.  
+ 자세한 내용은 [sp_delete_category &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-category-transact-sql)를 참조 하세요.  
 
   
 ##  <a name="SMO"></a>SQL Server 관리 개체 사용  

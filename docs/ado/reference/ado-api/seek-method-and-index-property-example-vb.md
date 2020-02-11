@@ -16,14 +16,14 @@ ms.assetid: 337c9eda-9ddf-49ac-94d3-b33114ba6224
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bc39677c9d3c847a87c5ef510fffbd776acf8e7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931120"
 ---
 # <a name="seek-method-and-index-property-example-vb"></a>Seek 메서드 및 인덱스 속성 예제 (VB)
-이 예에서는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 [Seek](../../../ado/reference/ado-api/seek-method.md) 메서드 및 [인덱스](../../../ado/reference/ado-api/index-property.md) 와 함께에서 속성을 지정 ***직원 ID***를 찾습니다 직원의 이름에는 ***직원*** Nwind.mdb 데이터베이스의 테이블입니다.  
+이 예에서는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 [Seek](../../../ado/reference/ado-api/seek-method.md) 메서드 및 [인덱스](../../../ado/reference/ado-api/index-property.md) 속성을 지정 된 ***직원 ID***와 함께 사용 하 여 Nwind 데이터베이스의 ***Employees*** 테이블에서 직원의 이름을 찾습니다.  
   
 ```  
 'BeginSeekVB  
@@ -115,7 +115,7 @@ End Sub
 'EndSeekVB  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [인덱스 속성](../../../ado/reference/ado-api/index-property.md)   
  [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Seek 메서드](../../../ado/reference/ado-api/seek-method.md)

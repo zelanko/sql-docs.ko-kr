@@ -14,11 +14,11 @@ ms.assetid: fd4ddc7c-9c7e-4a0c-a781-e5427dfb2e18
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b58afff444c09622027f50a87bd77fcd6ed45640
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68100767"
 ---
 # <a name="order-by-clause-limitations"></a>ORDER BY 절 제한 사항
-SELECT 문의 GROUP BY 절 및 ORDER BY 절에 있으면 ORDER BY 절은 결과 집합의 열만 또는 GROUP BY 절에 식을 포함할 수 있습니다.
+SELECT 문에 GROUP BY 절과 ORDER BY 절이 포함 된 경우 ORDER BY 절은 결과 집합의 열 이나 GROUP BY 절의 식만 포함할 수 있습니다.

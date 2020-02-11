@@ -1,5 +1,5 @@
 ---
-title: sp_add_maintenance_plan (TRANSACT-SQL) | Microsoft Docs
+title: sp_add_maintenance_plan (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 01ab1834-6260-47cb-a1b7-20722217b062
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: aa33e418b81cb2f77a39f20d36bba7a25caffb4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68104579"
 ---
-# <a name="spaddmaintenanceplan-transact-sql"></a>sp_add_maintenance_plan(Transact-SQL)
+# <a name="sp_add_maintenance_plan-transact-sql"></a>sp_add_maintenance_plan(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   유지 관리 계획을 추가하고 계획 ID를 반환합니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "68104579"
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -45,19 +45,19 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @plan_name = ] 'plan_name'` 추가할 유지 관리 계획의 이름을 지정 합니다. *plan_name* 됩니다 **varchar(128)** 합니다.  
+`[ @plan_name = ] 'plan_name'`추가할 유지 관리 계획의 이름을 지정 합니다. *plan_name* 는 **varchar (128)** 입니다.  
   
- **@plan_id = '** *plan_id* **'**  
- 유지 관리 계획의 ID를 지정합니다. *plan_id* 됩니다 **uniqueidentifier**합니다.  
+ ** ** @plan_id = '** plan_id **'**  
+ 유지 관리 계획의 ID를 지정합니다. **uniqueidentifier** *plan_id* 입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
 ## <a name="remarks"></a>설명  
- **sp_add_maintenance_plan** 에서 실행 되어야 합니다는 **msdb** 데이터베이스 및 새롭 지만 빈, 유지 관리 계획을 만듭니다. 하나 이상의 데이터베이스를 추가 하 고 작업 또는 작업을 연결 하려면 다음을 실행 **sp_add_maintenance_plan_db** 하 고 **sp_add_maintenance_plan_job**합니다.  
+ **sp_add_maintenance_plan** 는 **msdb** 데이터베이스에서 실행 해야 하며 비어 있는 새 유지 관리 계획을 만듭니다. 하나 이상의 데이터베이스를 추가 하 고이를 작업 또는 작업과 연결 하려면 **sp_add_maintenance_plan_db** 및 **sp_add_maintenance_plan_job**를 실행 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 멤버는 **sysadmin** 고정된 서버 역할을 실행할 수 있습니다 **sp_add_maintenance_plan**합니다.  
+ **Sysadmin** 고정 서버 역할의 멤버만 **sp_add_maintenance_plan**를 실행할 수 있습니다.  
   
 ## <a name="examples"></a>예  
  Myplan이라는 유지 관리 계획을 만듭니다.  
@@ -75,8 +75,8 @@ GO
 'The id for the maintenance plan "Myplan" is:' FAD6F2AB-3571-11D3-9D4A-00C04FB925FC  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [유지 관리 계획](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [데이터베이스 유지 관리 계획 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;의 데이터베이스 유지 관리 계획 저장 프로시저 &#40;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   
   

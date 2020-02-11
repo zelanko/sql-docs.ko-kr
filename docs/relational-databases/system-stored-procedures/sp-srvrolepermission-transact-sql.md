@@ -1,5 +1,5 @@
 ---
-title: sp_srvrolepermission (TRANSACT-SQL) | Microsoft Docs
+title: sp_srvrolepermission (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 5709667f-e3e4-48a2-93ec-af5e22a2ac58
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 6613c4e94ce8c802e45fe003ac73e51b3f38072b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68032813"
 ---
-# <a name="spsrvrolepermission-transact-sql"></a>sp_srvrolepermission(Transact-SQL)
+# <a name="sp_srvrolepermission-transact-sql"></a>sp_srvrolepermission(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   고정 서버 역할의 사용 권한을 표시합니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "68032813"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,17 +42,17 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @srvrolename = ] 'role'` 사용 권한이 반환 되는 고정된 서버 역할의 이름이입니다. *역할* 됩니다 **sysname**, 기본값은 NULL입니다. 역할을 지정하지 않으면 모든 고정 서버 역할의 사용 권한이 반환됩니다. *역할* 다음 값 중 하나일 수 있습니다.  
+`[ @srvrolename = ] 'role'`사용 권한이 반환 되는 고정 서버 역할의 이름입니다. *role* 은 **sysname**이며 기본값은 NULL입니다. 역할을 지정하지 않으면 모든 고정 서버 역할의 사용 권한이 반환됩니다. *role* 은 다음 값 중 하나를 사용할 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**sysadmin**|시스템 관리자입니다.|  
 |**securityadmin**|보안 관리자입니다.|  
-|**serveradmin**|서버 관리자입니다.|  
+|**serveradmin**|서버 관리자|  
 |**setupadmin**|설치 관리자입니다.|  
 |**processadmin**|프로세스 관리자입니다.|  
 |**diskadmin**|디스크 관리자입니다.|  
-|**dbcreator**|데이터베이스 작성자입니다.|  
+|**dbcreator**|데이터베이스 작성자|  
 |**bulkadmin**|BULK INSERT 문을 실행할 수 있습니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -60,15 +60,15 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**ServerRole**|**sysname**|고정 서버 역할의 이름입니다.|  
-|**사용 권한**|**sysname**|와 관련 된 권한은 **ServerRole**|  
+|**사용 권한**|**sysname**|**ServerRole** 와 연결 된 권한|  
   
 ## <a name="remarks"></a>설명  
- 실행할 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문, 고정 서버 역할의 멤버가 수행할 수 있는 기타 특수 작업 등의 사용 권한이 나열됩니다. 가 고정된 서버 역할의 목록을 표시 하려면 실행 **sp_helpsrvrole**합니다.  
+ 실행할 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문, 고정 서버 역할의 멤버가 수행할 수 있는 기타 특수 작업 등의 사용 권한이 나열됩니다. 고정 서버 역할 목록을 표시 하려면 **sp_helpsrvrole**를 실행 합니다.  
   
- 합니다 **sysadmin** 고정된 서버 역할에 다른 모든 고정된 서버 역할의 권한이 있습니다.  
+ **Sysadmin** 고정 서버 역할에는 다른 모든 고정 서버 역할의 사용 권한이 있습니다.  
   
 ## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
@@ -81,11 +81,11 @@ EXEC sp_srvrolepermission 'sysadmin';
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addsrvrolemember&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
- [sp_dropsrvrolemember &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
- [sp_helpsrvrole &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;&#40;보안 저장 프로시저](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;sp_addsrvrolemember &#40;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
+ [Transact-sql&#41;sp_dropsrvrolemember &#40;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
+ [Transact-sql&#41;sp_helpsrvrole &#40;](../../relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

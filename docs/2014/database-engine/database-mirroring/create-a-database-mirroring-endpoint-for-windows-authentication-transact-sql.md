@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43bb7fdd5b9c8cf8a73c423ac21e8ba7f779ec79
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797932"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기(Transact-SQL)
@@ -31,9 +31,9 @@ ms.locfileid: "72797932"
   
  **항목 내용**  
   
--   **시작하기 전 주의 사항:**  [보안](#Security)  
+-   **시작 하기 전 주의:**  [보안](#Security)  
   
--   **데이터베이스 미러링 엔드포인트를 만들려면:** [Transact-SQL](#TsqlProcedure)  
+-   **데이터베이스 미러링 끝점을 만들려면 다음을 사용 합니다.**  [transact-sql](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -41,10 +41,11 @@ ms.locfileid: "72797932"
  서버 인스턴스의 인증 및 암호화 방법은 시스템 관리자가 설정합니다.  
   
 > [!IMPORTANT]  
->  RC4 알고리즘은 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] AES를 사용하는 것이 좋습니다.  
+>  RC4 알고리즘은 더 이상 사용되지 않습니다. 
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] AES를 사용하는 것이 좋습니다.  
   
-####  <a name="Permissions"></a> 사용 권한  
- CREATE ENDPOINT 권한 또는 sysadmin 고정 서버 역할의 멤버 자격이 필요합니다. 자세한 내용은 [GRANT 엔드포인트 사용 권한 &#40;Transact-SQL &#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)을 참조하세요.  
+####  <a name="Permissions"></a> 권한  
+ CREATE ENDPOINT 권한 또는 sysadmin 고정 서버 역할의 멤버 자격이 필요합니다. 자세한 내용은 [GRANT 엔드포인트 사용 권한&#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)을 참조하세요.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
@@ -65,37 +66,37 @@ ms.locfileid: "72797932"
   
 4.  Transact-SQL로 Windows 인증을 사용하는 엔드포인트를 만들려면 CREATE ENDPOINT 문을 사용합니다. 이 문은 일반적으로 다음과 같은 형식으로 되어 있습니다.  
   
-     CREATE ENDPOINT *\<endpointName>*  
+     CREATE ENDPOINT * \<endpointName>*  
   
      STATE=STARTED  
   
-     AS TCP ( LISTENER_PORT = *\<listenerPortList>* )  
+     AS TCP (LISTENER_PORT = * \<listenerportlist>>* )  
   
      FOR DATABASE_MIRRORING  
   
      (  
   
-     [ AUTHENTICATION = **WINDOWS** [ *\<authorizationMethod>* ]  
+     [AUTHENTICATION = **WINDOWS** [ * \<authorizationmethod>* ]  
   
      ]  
   
-     [ [ **,** ] ENCRYPTION = **REQUIRED**  
+     [ [**,**] ENCRYPTION = **REQUIRED**  
   
-     [ ALGORITHM { *\<알고리즘>* } ]  
+     [알고리즘 { * \<알고리즘>* }]  
   
      ]  
   
-     [ **,** ] ROLE = *\<역할>*  
+     [**,**] ROLE = *\<역할>*  
   
      )  
   
-     여기서  
+     라는 설치 관리자 실행 파일에 포함됩니다. 여기서  
   
-    -   *\<endpointName&gt;* 은 서버 인스턴스의 데이터베이스 미러링 엔드포인트에 대한 고유 이름입니다.  
+    -   endpointName>은 서버 인스턴스의 데이터베이스 미러링 끝점에 대 한 고유한 이름입니다. * \<*  
   
     -   STARTED는 엔드포인트가 시작되어 연결에 대한 수신을 시작하도록 지정합니다. 데이터베이스 미러링 엔드포인트는 일반적으로 STARTED 상태로 생성됩니다. STOPPED 상태(기본값)나 DISABLED 상태로 세션을 시작할 수도 있습니다.  
   
-    -   *\<listenerPortList>* 는 서버에서 데이터베이스 미러링 메시지를 수신할 하나의 포트 번호(*nnnn*)입니다. TCP만 허용되기 때문에 다른 프로토콜을 지정하면 오류가 발생합니다.  
+    -   listenerportlist>>는 서버에서 데이터베이스 미러링 메시지를 수신 하는 데 사용할 단일 포트 번호 (*nnnn*)입니다. * \<* TCP만 허용되기 때문에 다른 프로토콜을 지정하면 오류가 발생합니다.  
   
          하나의 포트 번호는 컴퓨터 시스템당 한 번만 사용할 수 있습니다. 데이터베이스 미러링 엔드포인트는 엔드포인트가 생성될 때 로컬 시스템에서 사용 가능한 모든 포트를 사용할 수 있습니다. 시스템의 TCP 엔드포인트에서 현재 사용 중인 포트를 식별하려면 다음 Transact-SQL 문을 사용합니다.  
   
@@ -106,26 +107,28 @@ ms.locfileid: "72797932"
         > [!IMPORTANT]  
         >  각 서버 인스턴스에는 하나의 고유 수신기 포트만 필요합니다.  
   
-    -   엔드포인트에서 연결을 인증하는 데 NTLM이나 Kerberos만을 사용하려는 경우가 아니라면 Windows 인증에서 AUTHENTICATION 옵션은 선택 사항입니다. *\<authorizationMethod>* 는 연결을 인증하는 데 사용되는 방법을 NTLM, KERBEROS 또는 NEGOTIATE 중 하나로 지정합니다. 기본값인 NEGOTIATE를 적용하면 엔드포인트가 Windows 협상 프로토콜을 사용하여 NTLM이나 Kerberos를 선택합니다. 협상을 사용하면 반대쪽 엔드포인트의 인증 수준에 따라 인증을 사용하여 연결을 설정하거나 인증을 사용하지 않고 연결을 설정할 수 있습니다.  
+    -   엔드포인트에서 연결을 인증하는 데 NTLM이나 Kerberos만을 사용하려는 경우가 아니라면 Windows 인증에서 AUTHENTICATION 옵션은 선택 사항입니다. authorizationmethod>NTLM, KERBEROS 또는 NEGOTIATE 중 하나로 연결을 인증 하는 데 사용 되는 메서드를 지정 합니다. * \<* 기본값인 NEGOTIATE를 적용하면 엔드포인트가 Windows 협상 프로토콜을 사용하여 NTLM이나 Kerberos를 선택합니다. 협상을 사용하면 반대쪽 엔드포인트의 인증 수준에 따라 인증을 사용하여 연결을 설정하거나 인증을 사용하지 않고 연결을 설정할 수 있습니다.  
   
     -   ENCRYPTION은 기본적으로 REQUIRED로 설정되어 있으며 이는 엔드포인트에 대한 모든 연결에 암호화를 사용해야 함을 의미합니다. 그러나 다음과 같이 엔드포인트에 대해 암호화를 해제하거나 선택적으로 사용할 수 있습니다. 대체 방법은 다음과 같습니다.  
   
-        |Value|정의|  
+        |값|정의|  
         |-----------|----------------|  
         |DISABLED|연결을 통해 전송되는 데이터를 암호화하지 않도록 지정합니다.|  
         |SUPPORTED|반대쪽 엔드포인트가 SUPPORTED나 REQUIRED로 지정된 경우에만 데이터를 암호화하도록 지정합니다.|  
-        |REQUIRED|연결을 통해 전송되는 데이터를 반드시 암호화하도록 지정합니다.|  
+        |필수|연결을 통해 전송되는 데이터를 반드시 암호화하도록 지정합니다.|  
   
          한 엔드포인트에 암호화가 필요한 경우 다른 엔드포인트의 ENCRYPTION은 SUPPORTED나 REQUIRED로 설정해야 합니다.  
   
-    -   *\<알고리즘&gt;* 은 엔드포인트의 암호화 표준을 지정하는 옵션을 제공합니다. *\<알고리즘>* 값은 RC4, AES, AES RC4 또는 RC4 AES 중 하나이거나 이러한 알고리즘의 조합일 수 있습니다.  
+    -   알고리즘>끝점에 대 한 암호화 표준을 지정 하는 옵션을 제공 합니다. * \<* * \<알고리즘>* 의 값은 rc4, aes, aes RC4 또는 rc4 AES 중 하나 이거나 알고리즘의 조합일 수 있습니다.  
   
          AES RC4는 엔드포인트가 AES 알고리즘에 우선 순위를 두어 암호화 알고리즘을 협상하도록 지정합니다. RC4 AES는 엔드포인트가 RC4 알고리즘에 우선 순위를 두어 암호화 알고리즘을 협상하도록 지정합니다. 양쪽 엔드포인트가 두 알고리즘을 모두 지정하지만 순서가 다른 경우 연결을 수락하는 엔드포인트의 알고리즘이 적용됩니다.  
   
         > [!NOTE]  
-        >  RC4 알고리즘은 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] AES를 사용하는 것이 좋습니다.  
+        >  RC4 알고리즘은 더 이상 사용되지 않습니다. 
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] AES를 사용하는 것이 좋습니다.  
   
-    -   *\<역할>* 은 서버에서 수행할 수 있는 역할을 정의합니다. ROLE은 반드시 지정해야 합니다. 그러나 엔드포인트의 역할은 데이터베이스 미러링과만 관련이 있습니다. [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]에 대해서는 엔드포인트의 역할이 무시됩니다.  
+    -   역할>서버에서 수행할 수 있는 역할을 정의 합니다. * \<* ROLE은 반드시 지정해야 합니다. 그러나 엔드포인트의 역할은 데이터베이스 미러링과만 관련이 있습니다. 
+  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]에 대해서는 엔드포인트의 역할이 무시됩니다.  
   
          서버 인스턴스가 데이터베이스 미러링 세션에 따라 각기 다른 역할을 하도록 하려면 ROLE=ALL을 지정합니다. 서버 인스턴스가 파트너 또는 미러링 모니터 서버가 되도록 제한하려면 ROLE=PARTNER와 ROLE=WITNESS를 각각 지정합니다.  
   
@@ -137,7 +140,7 @@ ms.locfileid: "72797932"
     > [!NOTE]  
     >  기존 엔드포인트를 변경하려면 [ALTER ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)를 사용합니다.  
   
-###  <a name="TsqlExample"></a> 예: 데이터베이스 미러링 지원을 위한 엔드포인트 만들기(Transact-SQL)  
+###  <a name="TsqlExample"></a>예: 데이터베이스 미러링 지원을 위한 끝점 만들기 (Transact-sql)  
  다음 예에서는 세 대의 다른 컴퓨터 시스템에 있는 기본 서버 인스턴스에 대한 데이터베이스 미러링 엔드포인트를 만듭니다.  
   
 |서버 인스턴스의 역할|호스트 컴퓨터 이름|  
@@ -181,19 +184,19 @@ GO
 
 ### <a name="to-configure-a-database-mirroring-endpoint"></a>데이터베이스 미러링 엔드포인트를 구성하려면
   
--   [AlwaysOn 가용성 그룹 &#40;SQL Server PowerShell에 대 한 데이터베이스 미러링 끝점 만들기&#41;](../availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
+-   [AlwaysOn 가용성 그룹 &#40;SQL Server PowerShell에 대 한 데이터베이스 미러링 끝점을 만듭니다&#41;](../availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
--   [데이터베이스 미러링 엔드포인트에 대한 인증서 사용 &#40;Transact-SQL &#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
+-   [데이터베이스 미러링 엔드포인트에 대한 인증서 사용&#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
-    -   [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용&amp;#40;Transact-SQL&amp;#41;](database-mirroring-use-certificates-for-outbound-connections.md)  
+    -   [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md)  
   
-    -   [데이터베이스 미러링 엔드포인트의 인바운드 연결에 대한 인증서 사용 허용 &#40;Transact-SQL &#41;](database-mirroring-use-certificates-for-inbound-connections.md)  
+    -   [데이터베이스 미러링 엔드포인트의 인바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-inbound-connections.md)  
   
 -   [서버 네트워크 주소 지정&#40;데이터베이스 미러링&#41;](specify-a-server-network-address-database-mirroring.md)  
   
--   [가용성 복제본 추가 또는 수정 시 엔드포인트 URL 지정 &40;SQL Server &#41;](../availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [가용성 복제본 &#40;SQL Server를 추가 하거나 수정할 때 끝점 URL을 지정&#41;](../availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
- **데이터베이스 미러링 엔드포인트에 대한 정보를 보려면**  
+ **데이터베이스 미러링 끝점에 대 한 정보를 보려면**  
   
 -   [sys.database_mirroring_endpoints&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)  
   
@@ -201,6 +204,6 @@ GO
  [ALTER ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)   
  [암호화 알고리즘 선택](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [CREATE ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)   
- [서버 네트워크 주소 지정&#40;데이터베이스 미러링&#41;](specify-a-server-network-address-database-mirroring.md)   
- [예제: Windows 인증을 사용하여 데이터베이스 미러링 설정&#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)   
- [데이터베이스 미러링 엔드포인트 &#40;SQL Server &#41;](the-database-mirroring-endpoint-sql-server.md)  
+ [데이터베이스 미러링 &#40;서버 네트워크 주소를 지정&#41;](specify-a-server-network-address-database-mirroring.md)   
+ [예제: Transact-sql&#41;&#40;Windows 인증을 사용 하 여 데이터베이스 미러링 설정](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)   
+ [데이터베이스 미러링 엔드포인트&#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)  

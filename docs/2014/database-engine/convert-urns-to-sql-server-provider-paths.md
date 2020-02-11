@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 77b6031e91f59fc691f0b1c055e90464d660d3a9
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797937"
 ---
 # <a name="convert-urns-to-sql-server-provider-paths"></a>URN을 SQL Server 공급자 경로로 변환
@@ -40,6 +40,6 @@ Get-Help Convert-UrnToPath -Examples
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [쿼리 식 및 URN](../powershell/query-expressions-and-uniform-resource-names.md)   
- [SQL Server PowerShell Provider](../powershell/sql-server-powershell-provider.md)   
+ [쿼리 식 및 Uniform Resource Name](../powershell/query-expressions-and-uniform-resource-names.md)   
+ [SQL Server PowerShell 공급자](../powershell/sql-server-powershell-provider.md)   
  [SQL Server PowerShell](../powershell/sql-server-powershell.md)  

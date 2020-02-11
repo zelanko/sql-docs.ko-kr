@@ -16,10 +16,10 @@ ms.assetid: 045d3cd1-712b-44b7-a56a-c9438d4077b9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3df1b991f160aafdfcfd71818c8bd3e7cbd10ffa
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798393"
 ---
 # <a name="sp_repldone-transact-sql"></a>sp_repldone(Transact-SQL)
@@ -28,9 +28,9 @@ ms.locfileid: "72798393"
   서버에서 마지막으로 배포된 트랜잭션을 식별하는 레코드를 업데이트합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
 > [!CAUTION]  
->  **Sp_repldone** 를 수동으로 실행 하는 경우 전달 된 트랜잭션의 순서와 일관성을 무효화할 수 있습니다. **sp_repldone** 은 숙련 된 복제 지원 전문가의 지시에 따라 복제 문제를 해결 하는 데만 사용 해야 합니다.  
+>  수동으로 **sp_repldone**을 실행하는 경우 전달된 트랜잭션의 순서와 일관성을 무효화할 수 있습니다. **sp_repldone** 은 숙련 된 복제 지원 전문가의 지시에 따라 복제 문제를 해결 하는 데만 사용 해야 합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,15 +43,15 @@ sp_repldone [ @xactid= ] xactid
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @xactid = ] xactid`은 서버의 마지막 분산 트랜잭션에 대 한 첫 번째 레코드의 LSN (로그 시퀀스 번호)입니다. *xactid* 는 **binary (10)** 이며 기본값은 없습니다.  
+`[ @xactid = ] xactid`서버의 마지막 분산 트랜잭션에 대 한 첫 번째 레코드의 LSN (로그 시퀀스 번호)입니다. *xactid* 는 **binary (10)** 이며 기본값은 없습니다.  
   
-`[ @xact_seqno = ] xact_seqno`은 서버의 마지막 분산 트랜잭션에 대 한 마지막 레코드의 LSN입니다. *xact_seqno* 는 **binary (10)** 이며 기본값은 없습니다.  
+`[ @xact_seqno = ] xact_seqno`서버의 마지막 분산 트랜잭션에 대 한 마지막 레코드의 LSN입니다. *xact_seqno* 는 **binary (10)** 이며 기본값은 없습니다.  
   
-`[ @numtrans = ] numtrans`는 배포 된 트랜잭션의 수입니다. *numtrans* 은 **int**이며 기본값은 없습니다.  
+`[ @numtrans = ] numtrans`분산 된 트랜잭션의 수입니다. *numtrans* 은 **int**이며 기본값은 없습니다.  
   
-`[ @time = ] time`은 트랜잭션의 마지막 일괄 처리를 배포 하는 데 필요한 시간 (밀리초)입니다 (제공 된 경우). *시간은* **int**이며 기본값은 없습니다.  
+`[ @time = ] time`트랜잭션의 마지막 일괄 처리를 배포 하는 데 필요한 시간 (밀리초)입니다 (제공 된 경우). *시간은* **int**이며 기본값은 없습니다.  
   
-`[ @reset = ] reset`는 다시 설정 상태입니다. *reset* 은 **int**이며 기본값은 없습니다. **1**인 경우 로그의 모든 복제 된 트랜잭션이 분산 된 것으로 표시 됩니다. **0**인 경우 트랜잭션 로그는 첫 번째 복제 된 트랜잭션으로 다시 설정 되 고 복제 된 트랜잭션은 분산 된 것으로 표시 되지 않습니다. *reset* 은 *xactid* 및 *xact_seqno* 가 모두 NULL 인 경우에만 유효 합니다.  
+`[ @reset = ] reset`다시 설정 상태입니다. *reset* 은 **int**이며 기본값은 없습니다. **1**인 경우 로그의 모든 복제 된 트랜잭션이 분산 된 것으로 표시 됩니다. **0**인 경우 트랜잭션 로그는 첫 번째 복제 된 트랜잭션으로 다시 설정 되 고 복제 된 트랜잭션은 분산 된 것으로 표시 되지 않습니다. *reset* 은 *xactid* 및 *xact_seqno* 가 모두 NULL 인 경우에만 유효 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -80,6 +80,6 @@ EXEC sp_repldone @xactid = NULL, @xact_seqno = NULL, @numtrans = 0, @time = 0, @
   
 ## <a name="see-also"></a>참고 항목  
  [sp_replcmds&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
- [ &#40;transact-sql&#41;  sp_replflush](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)  
- [ &#40;transact-sql&#41;  sp_repltrans](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)  
+ [Transact-sql&#41;sp_replflush &#40;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
+ [Transact-sql&#41;sp_repltrans &#40;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

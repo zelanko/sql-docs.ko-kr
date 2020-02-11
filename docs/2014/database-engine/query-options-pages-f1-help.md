@@ -13,19 +13,19 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 9ae4a5009c33067dcb5db2d26ff3e287b31b8768
-ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71118129"
 ---
 # <a name="query-options-pages-f1-help"></a>쿼리 옵션 페이지 F1 도움말
 
 이 섹션에서는 **의** 쿼리 옵션 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]페이지에 대한 F1 도움말 항목을 제공합니다.
 
-[Analysis Services 쿼리 실행 옵션 &#40;일반 페이지&#41;](analysis-services-query-execution-options-general-page.md)
+[일반 페이지 &#40;쿼리 실행 옵션을 Analysis Services&#41;](analysis-services-query-execution-options-general-page.md)
 
-[Analysis Services 쿼리 결과 &#40;일반 페이지&#41;](../../2014/database-engine/analysis-services-query-results-general-page.md)
+[일반 페이지 &#40;쿼리 결과를 Analysis Services&#41;](../../2014/database-engine/analysis-services-query-results-general-page.md)
 
 [쿼리 옵션 실행 &#40;고급 페이지&#41;](../../2014/database-engine/query-options-execution-advanced-page.md)
 
@@ -33,6 +33,6 @@ ms.locfileid: "71118129"
 
 [쿼리 옵션 실행 &#40;일반 페이지&#41;](../../2014/database-engine/query-options-execution-general-page.md)
   
-[쿼리 옵션 결과 &#40;그리드 페이지&#41;](../../2014/database-engine/query-options-results-grid-page.md)
+[쿼리 옵션 결과 표 페이지 &#40;&#41;](../../2014/database-engine/query-options-results-grid-page.md)
 
-[쿼리 옵션 결과 &#40;텍스트 페이지&#41;](../../2014/database-engine/query-options-results-text-page.md)
+[쿼리 옵션 결과 텍스트 페이지 &#40;&#41;](../../2014/database-engine/query-options-results-text-page.md)

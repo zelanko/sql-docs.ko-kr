@@ -1,5 +1,5 @@
 ---
-title: syspolicy_policy_execution_history_details (TRANSACT-SQL) | Microsoft Docs
+title: syspolicy_policy_execution_history_details (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,22 +18,22 @@ ms.assetid: 97ef6573-5e8b-4ba5-8ae0-7901e79a9683
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c2d0daf21a479bff171f31beb30e9dc188a9c97b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68094818"
 ---
-# <a name="syspolicypolicyexecutionhistorydetails-transact-sql"></a>syspolicy_policy_execution_history_details(Transact-SQL)
+# <a name="syspolicy_policy_execution_history_details-transact-sql"></a>syspolicy_policy_execution_history_details(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   실행한 조건 식, 식 대상, 각 실행 결과, 오류(발생한 경우)에 대한 정보를 표시합니다. 다음 표에서는 syspolicy_execution_history_details 뷰의 열에 대해 설명합니다.  
   
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |detail_id|**bigint**|이 레코드의 ID입니다. 각 레코드는 정책에 있는 하나의 조건 식을 평가하거나 적용하는 시도를 나타냅니다. 조건이 여러 대상에 적용되는 경우 각 조건에는 각 대상에 대한 세부 레코드가 포함됩니다.|  
-|history_id|**bigint**|기록 이벤트의 식별자입니다. 각 기록 이벤트는 정책을 실행하는 한 번의 시도를 나타냅니다. 조건에 여러 조건 식과 여러 대상이 있을 수 있으므로 history_id에서 여러 세부 레코드를 만들 수 있습니다. History_id 열을 사용 하 여이 뷰를 조인 합니다 [syspolicy_policy_execution_history](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-transact-sql.md) 보기.|  
+|history_id|**bigint**|기록 이벤트의 식별자입니다. 각 기록 이벤트는 정책을 실행하는 한 번의 시도를 나타냅니다. 조건에 여러 조건 식과 여러 대상이 있을 수 있으므로 history_id에서 여러 세부 레코드를 만들 수 있습니다. History_id 열을 사용 하 여이 뷰를 [syspolicy_policy_execution_history](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-transact-sql.md) 뷰에 조인 합니다.|  
 |target_query_expression|**nvarchar(max)**|정책 및 syspolicy_policy_execution_history 뷰의 대상입니다.|  
 |execution_date|**datetime**|세부 레코드가 생성된 날짜 및 시간입니다.|  
 |result|**bit**|이 대상 및 조건 식 평가의 성공 또는 실패입니다.<br /><br /> 0(성공) 또는 1(실패).|  
@@ -68,8 +68,8 @@ WHERE PolHistDet.result = 0 ;
 ## <a name="permissions"></a>사용 권한  
  msdb 데이터베이스에서 PolicyAdministratorRole 역할의 멤버 자격이 필요합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [정책 기반 관리를 사용하여 서버 관리](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
- [정책 기반 관리 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
+ [Transact-sql&#41;&#40;정책 기반 관리 뷰](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   

@@ -16,27 +16,27 @@ ms.assetid: d3df2c90-e570-4c40-a79a-25b3448a009c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4a872ee5f4af49d9fbe97621a5d2549fd9472202
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931237"
 ---
 # <a name="resyncenum"></a>ResyncEnum
-호출 하 여 기본 값을 덮어쓸지 여부를 지정 [Resync](../../../ado/reference/ado-api/resync-method.md)합니다.  
+다시 [동기화](../../../ado/reference/ado-api/resync-method.md)를 호출 하 여 기본 값을 덮어쓸지 여부를 지정 합니다.  
   
-|상수|값|설명|  
+|지속적임|값|Description|  
 |--------------|-----------|-----------------|  
-|**adResyncAllValues**|2|기본. 데이터를 덮어쓰고 보류 중인 업데이트가 취소 됩니다.|  
-|**adResyncUnderlyingValues**|1|데이터를 덮어쓰지 않습니다 및 보류 중인 업데이트를 취소 하지 않습니다.|  
+|**adResyncAllValues**|2|Default. 데이터를 덮어쓰고 보류 중인 업데이트가 취소 됩니다.|  
+|**adResyncUnderlyingValues**|1|는 데이터를 덮어쓰지 않으며 보류 중인 업데이트는 취소 되지 않습니다.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC 해당  
+## <a name="adowfc-equivalent"></a>ADO/WFC 동급  
  Package: **com.ms.wfc.data**  
   
-|상수|  
+|지속적임|  
 |--------------|  
-|AdoEnums.Resync.ALLVALUES|  
-|AdoEnums.Resync.UNDERLYINGVALUES|  
+|AdoEnums|  
+|AdoEnums. UNDERLYINGVALUES|  
   
 ## <a name="applies-to"></a>적용 대상  
  [Resync 메서드](../../../ado/reference/ado-api/resync-method.md)

@@ -20,10 +20,10 @@ ms.assetid: 5f84ff9e-c1ec-46aa-8501-50f854ebcc3a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 4d0feb6b3254ddff640a41de8e0b833739225761
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73168772"
 ---
 # <a name="pwdcompare-transact-sql"></a>PWDCOMPARE(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "73168772"
 
   암호를 해시하고 해당 해시를 기존 암호의 해시와 비교합니다. PWDCOMPARE를 사용하여 빈 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 암호 또는 일반적인 약한 암호를 검색할 수 있습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -60,7 +60,7 @@ PWDCOMPARE ( 'clear_text_password'
   
  *clear_text_password*의 해시가 *password_hash* 매개 변수와 일치하면 1을, 그렇지 않으면 0을 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  암호를 첫 번째 매개 변수로 지정하여 로그인을 시도함으로써 동일한 테스트를 수행할 수 있으므로 PWDCOMPARE 함수는 암호 해시의 강력함에 대한 위협이 되지 않습니다.  
   
  **PWDCOMPARE**는 포함된 데이터베이스 사용자 암호와 함께 사용할 수 없습니다. 동등한 포함된 데이터베이스가 없습니다.  
@@ -72,7 +72,7 @@ PWDCOMPARE ( 'clear_text_password'
   
 ## <a name="examples"></a>예  
   
-### <a name="a-identifying-logins-that-have-no-passwords"></a>1\. 암호가 없는 로그인 식별  
+### <a name="a-identifying-logins-that-have-no-passwords"></a>A. 암호가 없는 로그인 식별  
  다음 예에서는 암호가 없는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 식별합니다.  
   
 ```  
@@ -80,7 +80,7 @@ SELECT name FROM sys.sql_logins
 WHERE PWDCOMPARE('', password_hash) = 1 ;  
 ```  
   
-### <a name="b-searching-for-common-passwords"></a>2\. 일반적인 암호 검색  
+### <a name="b-searching-for-common-passwords"></a>B. 일반적인 암호 검색  
  식별하여 변경할 일반적인 암호를 검색하려면 암호를 첫 번째 매개 변수로 지정합니다. 예를 들어 `password`로 지정된 암호를 검색하려면 다음 문을 실행합니다.  
   
 ```  

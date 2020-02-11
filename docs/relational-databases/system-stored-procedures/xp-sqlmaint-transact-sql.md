@@ -1,5 +1,5 @@
 ---
-title: xp_sqlmaint (TRANSACT-SQL) | Microsoft Docs
+title: xp_sqlmaint (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,21 +18,21 @@ ms.assetid: bda66e1b-6bbd-49be-b86e-37efc920e912
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9948767ca0eca5721207079f978987142653e9c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091916"
 ---
-# <a name="xpsqlmaint-transact-sql"></a>xp_sqlmaint(Transact-SQL)
+# <a name="xp_sqlmaint-transact-sql"></a>xp_sqlmaint(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  호출 된 **sqlmaint** 포함 된 문자열을 사용 하 여 유틸리티 **sqlmaint**스위치입니다. 합니다 **sqlmaint** 유틸리티 집합 하나 이상의 데이터베이스에서 유지 관리 작업을 수행 합니다.  
+  **Sqlmaint**스위치를 포함 하는 문자열을 사용 하 여 **sqlmaint** 유틸리티를 호출 합니다. **Sqlmaint** 유틸리티는 하나 이상의 데이터베이스에서 유지 관리 작업 집합을 수행 합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,15 +43,15 @@ xp_sqlmaint 'switch_string'
   
 ## <a name="arguments"></a>인수  
  **'** *switch_string* **'**  
- 문자열을 포함 하는 **sqlmaint** 유틸리티 스위치입니다. 스위치와 해당 값은 공백으로 구분되어야 합니다.  
+ 는 **sqlmaint** 유틸리티 스위치를 포함 하는 문자열입니다. 스위치와 해당 값은 공백으로 구분되어야 합니다.  
   
- **-?** 스위치에 대해 올바르지 않습니다. **xp_sqlmaint**합니다.  
+ **-?** 스위치가 **xp_sqlmaint**에 적합 하지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 없음 오류를 반환 합니다 **sqlmaint** 유틸리티 실패 합니다.  
+ 없음 **Sqlmaint** 유틸리티에 오류가 발생 하는 경우 오류를 반환 합니다.  
   
 ## <a name="remarks"></a>설명  
- SQL Server 인증을 사용 하 여 로그온 사용자가이 프로시저를 호출 합니다 **-U "***login_id***"** 하 고 **-P "***암호***"** 스위치 앞에 추가 됩니다 *switch_string* 실행 하기 전에 합니다. 사용자가 Windows 인증을 사용 하 여 로그온 *switch_string* 를 변경 하지 않고 전달 됩니다 **sqlmaint**합니다.  
+ SQL Server 인증을 사용 하 여 로그온 한 사용자가이 프로시저를 호출 하는 경우 **-U "***login_id***"** 및 **-P "***password***"** 스위치가 실행 되기 전에 *switch_string* 앞에 붙습니다. 사용자가 Windows 인증을 사용 하 여 로그온 한 경우에는 **sqlmaint**로 변경 하지 않고 *switch_string* 전달 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
@@ -70,7 +70,7 @@ EXEC xp_sqlmaint '-D AdventureWorks2012 -PlanID 02A52657-D546-11D1-9D8A-00A0C905
 The command(s) executed successfully.  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [sqlmaint 유틸리티](../../tools/sqlmaint-utility.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

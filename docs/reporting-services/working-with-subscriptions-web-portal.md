@@ -9,10 +9,10 @@ ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 786f7391d87799a0822f357e449db21fea0d0f09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68221254"
 ---
 # <a name="working-with-subscriptions-web-portal"></a>구독 작업(웹 포털)
@@ -50,7 +50,7 @@ ms.locfileid: "68221254"
   
 이 옵션은 고급 권한이 있는 사용자가 사용할 수 있습니다. 기본 보안을 사용할 경우 내 보고서 폴더에 있는 보고서에 대해서는 데이터 기반 구독을 사용할 수 없습니다.  
   
-### <a name="destination"></a>Destination  
+### <a name="destination"></a>대상  
 보고서를 배포하는 데 사용할 배달 확장 프로그램을 선택합니다.   
   
 배달 확장 프로그램의 가용성은 보고서 서버에 설치 및 구성되었는지 여부에 따라 다릅니다. 보고서 서버 전자 메일은 기본 배달 확장 프로그램이지만 먼저 구성을 해야 사용할 수 있습니다. 파일 공유 배달은 구성이 필요하지 않지만 먼저 공유 폴더를 정의해야 사용할 수 있습니다.  

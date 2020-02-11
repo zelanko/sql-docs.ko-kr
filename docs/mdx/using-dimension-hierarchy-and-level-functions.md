@@ -1,5 +1,5 @@
 ---
-title: 차원, 계층 및 수준 함수를 사용 하 여 | Microsoft Docs
+title: 차원, 계층 및 수준 함수 사용 | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8fa374ef93f56f8cddaed81bc9e3872d1eb206c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097182"
 ---
 # <a name="using-dimension-hierarchy-and-level-functions"></a>차원, 계층 구조, 수준 함수 사용
@@ -20,7 +20,7 @@ ms.locfileid: "68097182"
 
   차원, 계층 및 수준 함수는 Analysis Services에서 사용되는 다차원 구조를 탐색하는 데 유용합니다. 일반적으로 이 함수들은 차원, 계층 또는 수준의 멤버에 관한 정보를 가져오는 작업에 다른 함수와 함께 사용됩니다.  
   
- 다음 예제에서는 사용 하는 방법의 **합니다. 차원**, **합니다. 계층 구조**, 및 **합니다. 수준** 함수:  
+ 다음 예제에서는를 사용 하는 방법을 보여 줍니다 **. 차원**, **. 계층 구조**및 **입니다. 수준** 함수:  
   
  `WITH`  
   
@@ -42,10 +42,10 @@ ms.locfileid: "68097182"
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [차원 &#40;MDX&#41;](../mdx/dimension-mdx.md)   
  [함수 &#40;MDX 구문&#41;](../mdx/functions-mdx-syntax.md)   
  [계층 &#40;MDX&#41;](../mdx/hierarchy-mdx.md)   
- [수준 &#40;MDX&#41;](../mdx/level-mdx.md)  
+ [MDX&#41;수준 &#40;](../mdx/level-mdx.md)  
   
   

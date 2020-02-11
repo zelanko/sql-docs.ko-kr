@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 4fae460e78682263c604d8e1e86ca40b7b62df97
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69531042"
 ---
 # <a name="sql-server-2019-on-windows-isolation-changes-for-machine-learning-services"></a>Windows의 SQL Server 2019: Machine Learning Services에 대한 격리 변경 내용
@@ -39,7 +39,7 @@ Windows에서 SQL Server 2019 설치 프로그램은 외부 프로세스에 대�
 
 이전 릴리스의 **SQLRUserGroup**에는 외부 프로세스를 격리하고 실행하는 데 사용되는 로컬 Windows 사용자 계정(MSSQLSERVER00-MSSQLSERVER20) 풀이 포함되어 있습니다. 외부 프로세스가 필요한 경우 SQL Server 실행 패드 서비스는 사용 가능한 계정을 가져와 프로세스를 실행하는 데 사용합니다. 
 
-SQL Server 2019에서 설치 프로그램은 더 이상 로컬 작업자 계정을 생성하지 않습니다. 대신 [AppContainer](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation)를 통해 격리가 진행됩니다. 런타임에 저장 프로시저 또는 쿼리에서 포함된 스크립트나 코드가 감지되면 SQL Server는 확장별 시작 관리자를 요청하여 실행 패드를 호출합니다. 실행 패드는 해당 ID를 사용해 프로세스에서 적절한 런타임 환경을 호출하고, 이를 포함할 AppContainer를 인스턴스화합니다. 이러한 변경은 로컬 계정 및 암호 관리가 더 이상 필요하지 않기 때문에 유용합니다. 또한 로컬 사용자 계정이 금지된 설치에서 로컬 사용자 계정 종속성을 제거하면 이 기능을 사용할 수 있습니다.
+SQL Server 2019에서 설치 프로그램은 더 이상 로컬 작업자 계정을 생성하지 않습니다. 대신 [AppContainer](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation)를 통해 격리가 이루어집니다. 런타임에 저장 프로시저 또는 쿼리에서 포함된 스크립트나 코드가 감지되면 SQL Server는 확장별 시작 관리자를 요청하여 실행 패드를 호출합니다. 실행 패드는 해당 ID를 사용하여 프로세스에서 적절한 런타임 환경을 호출하고, 이를 포함할 AppContainer를 인스턴스화합니다. 이러한 변경은 로컬 계정 및 암호 관리가 더 이상 필요하지 않기 때문에 유용합니다. 또한 로컬 사용자 계정이 금지된 설치에서 로컬 사용자 계정 종속성을 제거하면 이 기능을 사용할 수 있습니다.
 
 SQL Server에서 구현되므로 AppContainer는 내부 메커니즘입니다. 프로세스 모니터에서 AppContainer의 물리적 증거는 표시되지 않지만 설치 프로그램에서 프로세스의 네트워크 호출 수행을 방지하기 위해 만든 아웃바운드 방화벽 규칙에 표시될 수 있습니다.
 
@@ -66,7 +66,7 @@ AppContainer로 전환하는 과정에서 AppContainer SID를 기준으로 새�
 심볼 링크는 SQL Server 설치 프로그램의 일부로 현재 기본 **R_SERVICES** 및 **PYTHON_SERVICES**에 생성됩니다. 이 링크를 만들지 않으려는 경우에는 대신, 해당 폴더까지의 계층 구조에 대한 읽기 권한을 '모든 애플리케이션 패키지'에 부여하는 것이 좋습니다.
 
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 + [Windows에서 SQL Server Machine Learning Services 설치](sql-machine-learning-services-windows-install.md)
 + [Linux에서 SQL Server Machine Learning Services 설치](../../linux/sql-server-linux-setup-machine-learning.md)

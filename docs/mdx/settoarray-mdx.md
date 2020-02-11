@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c52c2641d21c20c91ec7548cafc969e506801b08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036996"
 ---
 # <a name="settoarray-mdx"></a>SetToArray(MDX)
@@ -38,7 +38,7 @@ SetToArray(Set_Expression1 [ ,Set_Expression2,...n ][ ,Numeric_Expression ] )
  숫자를 반환하는 셀 좌표의 유효한 숫자 식으로서, 일반적으로 MDX 식입니다.  
   
 ## <a name="remarks"></a>설명  
- 합니다 **SetToArray** 함수 집합 하나 이상의 사용자 정의 함수에서 사용할 배열로 변환 합니다. 결과 배열의 차원 수는 지정된 집합의 수와 같습니다.  
+ **Settoarray** 함수는 하나 이상의 집합을 사용자 정의 함수에서 사용할 배열로 변환 합니다. 결과 배열의 차원 수는 지정된 집합의 수와 같습니다.  
   
  숫자 식(옵션)은 배열 셀에 값을 제공할 수 있습니다. 숫자 식이 지정되지 않은 경우 현재 컨텍스트에서 집합의 크로스 조인이 계산됩니다.  
   
@@ -50,7 +50,7 @@ SetToArray(Set_Expression1 [ ,Set_Expression2,...n ][ ,Numeric_Expression ] )
 ```  
   
 > [!NOTE]  
->  반환 형식은 합니다 **SetToArray** 함수는 VARIANT 형식의 VT_ARRAY입니다. 따라서 출력은 **SetToArray** 함수는 사용자 정의 함수에 대 한 입력 으로만 사용 해야 합니다.  
+>  **Settoarray** 함수의 반환 형식은 VARIANT 형식 VT_ARRAY입니다. 따라서 **Settoarray** 함수의 출력은 사용자 정의 함수에 대 한 입력 으로만 사용 해야 합니다.  
   
 ## <a name="example"></a>예제  
  다음 예에서는 배열을 반환합니다.  
@@ -59,7 +59,7 @@ SetToArray(Set_Expression1 [ ,Set_Expression2,...n ][ ,Numeric_Expression ] )
 SetToArray([Geography].[Geography].Members, [Measures].[Internet Sales Amount])  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

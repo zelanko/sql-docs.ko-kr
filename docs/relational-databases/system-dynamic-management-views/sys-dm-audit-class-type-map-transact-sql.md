@@ -1,5 +1,5 @@
 ---
-title: sys.dm_audit_class_type_map (TRANSACT-SQL) | Microsoft Docs
+title: sys. dm_audit_class_type_map (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,27 +19,27 @@ ms.assetid: e10b5431-1bb0-47ca-8fd0-c04bd73a4410
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ae1c39d5c3ddc36f4ca3007cf9e17c2543055b85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68099198"
 ---
-# <a name="sysdmauditclasstypemap-transact-sql"></a>sys.dm_audit_class_type_map(Transact-SQL)
+# <a name="sysdm_audit_class_type_map-transact-sql"></a>sys.dm_audit_class_type_map(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  감사 로그의 class_type 필드를 sys.dm_audit_actions의 class_desc 필드에 매핑하는 테이블을 반환합니다. 에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 감사 참조 [SQL Server Audit &#40;데이터베이스 엔진&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)합니다.  
+  감사 로그의 class_type 필드를 sys.dm_audit_actions의 class_desc 필드에 매핑하는 테이블을 반환합니다. 감사에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자세한 내용은 [SQL Server 감사 &#40;데이터베이스 엔진&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)를 참조 하세요.  
 
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**class_type**|**char(2)**|감사된 엔터티의 클래스 형식입니다. 감사 로그에 기록 하 고 반환한 class_type에 매핑되는 **get_audit_file ()** 함수입니다. Null을 허용하지 않습니다.|  
-|**class_type_desc**|**nvarchar(120)**|감사 가능한 엔터티의 이름입니다. Null을 허용하지 않습니다.|  
-|**securable_class_desc**|**nvarchar(120)**|감사할 class_type에 매핑되는 보안 개체입니다. class_type이 보안 개체에 매핑되지 않으면 NULL입니다. sys.dm_audit_actions의 class_desc와 관련될 수 있습니다.|  
+|**class_type**|**char (2)**|감사된 엔터티의 클래스 형식입니다. 감사 로그에 기록 되 고 **get_audit_file ()** 함수에 의해 반환 되는 class_type에 매핑됩니다. Null을 허용하지 않습니다.|  
+|**class_type_desc**|**nvarchar (120)**|감사 가능한 엔터티의 이름입니다. Null을 허용하지 않습니다.|  
+|**securable_class_desc**|**nvarchar (120)**|감사할 class_type에 매핑되는 보안 개체입니다. class_type이 보안 개체에 매핑되지 않으면 NULL입니다. sys.dm_audit_actions의 class_desc와 관련될 수 있습니다.|  
   
 ## <a name="permissions"></a>사용 권한  
- 보안 주체 있어야 **선택** 권한. 기본적으로 이 권한은 Public에 부여됩니다.  
+ 보안 주체에 **SELECT** 권한이 있어야 합니다. 기본적으로 이 권한은 Public에 부여됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
@@ -58,7 +58,7 @@ ms.locfileid: "68099198"
  [sys.database_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
  [sys.database_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
  [sys.dm_server_audit_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
- [sys.dm_audit_class_type_map](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
+ [sys. dm_audit_class_type_map](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
  [서버 감사 및 서버 감사 사양 만들기](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
   

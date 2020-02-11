@@ -14,29 +14,29 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 ms.openlocfilehash: acb8d5f9687798bc0efa514ee8646b16140fcd36
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68100577"
 ---
 # <a name="parameter-markers"></a>매개 변수 표식
-SQL-92 사양에 따라 응용 프로그램은 다음 위치에 매개 변수 표식을 배치할 수 없습니다. 보다 포괄적인 목록은 SQL-92 사양을 참조 하세요.  
+SQL-92 사양에 따라 응용 프로그램은 다음 위치에 매개 변수 표식을 추가할 수 없습니다. 보다 포괄적인 목록은 SQL-92 사양을 참조 하십시오.  
   
--   에 **선택** 목록  
+-   **SELECT** 목록에서  
   
--   둘 다로 *식을* 에 *비교 조건자*  
+-   *비교 조건자* 의 두 *식* 으로  
   
--   이항 연산자의 피연산자가 모두로  
+-   이항 연산자의 두 피연산자로  
   
--   첫 번째와 두 번째 피연산자가 모두의는 **BETWEEN** 작업  
+-   **BETWEEN** 작업의 첫 번째 피연산자와 두 번째 피연산자 모두로  
   
--   첫 번째 및 세 번째 피연산자로 **BETWEEN** 작업  
+-   **BETWEEN** 작업의 첫 번째 피연산자와 세 번째 피연산자 모두로  
   
--   식 및 첫 번째 값을 **IN** 작업  
+-   식과 **IN** 작업의 첫 번째 값 모두로  
   
--   단항 피연산자로 + 또는-작업  
+-   단항 + 또는-연산의 피연산자로  
   
--   함수의 인수로 *집합 함수 참조*  
+-   *집합 함수 참조* 의 인수로  
   
- 매개 변수 표식에 대 한 자세한 내용은 SQL-92 사양을 참조 하세요. 매개 변수에 대 한 자세한 내용은 참조 하십시오 [문 매개 변수](../../../odbc/reference/develop-app/statement-parameters.md)합니다.
+ 매개 변수 표식에 대 한 자세한 내용은 SQL-92 사양을 참조 하십시오. 매개 변수에 대 한 자세한 내용은 [문 매개 변수](../../../odbc/reference/develop-app/statement-parameters.md)를 참조 하세요.

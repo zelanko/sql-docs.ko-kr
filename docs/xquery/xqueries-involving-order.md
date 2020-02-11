@@ -1,5 +1,5 @@
 ---
-title: 정렬 포함 XQueries | Microsoft Docs
+title: Order를 포함 하는 XQueries | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,16 +17,16 @@ ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 4fc30086978e26f53f7a4fdbab8a731ac2334181
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946119"
 ---
 # <a name="xqueries-involving-order"></a>정렬 포함 XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  관계형 데이터베이스에는 시퀀스 개념이 없습니다. 예를 들어 "데이터베이스에서 첫 번째 고객 가져오기"와 같은 요청은 수행할 수 없습니다. 그러나 XML 문서를 쿼리할 수 있으며 첫 번째 검색 \<고객 > 요소입니다. 그런 다음에는 항상 같은 고객을 검색할 수 있습니다.  
+  관계형 데이터베이스에는 시퀀스 개념이 없습니다. 예를 들어 "데이터베이스에서 첫 번째 고객 가져오기"와 같은 요청은 수행할 수 없습니다. 그러나 XML 문서를 쿼리하고 첫 번째 \<Customer> 요소를 검색할 수 있습니다. 그런 다음에는 항상 같은 고객을 검색할 수 있습니다.  
   
  이 항목에서는 문서에 노드가 표시되는 시퀀스에 기반한 쿼리에 대해 설명합니다.  
   
@@ -59,13 +59,13 @@ WHERE ProductModelID=7
   
  이전 쿼리에서 다음을 유의하세요.  
   
--   중괄호 안에 있는 식은 해당 평가 결과로 대체됩니다. 자세한 내용은 [XML 생성 &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)합니다.  
+-   중괄호 안에 있는 식은 해당 평가 결과로 대체됩니다. 자세한 내용은 [XML 생성 &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)를 참조 하세요.  
   
--   **@\*** 두 번째 작업 센터 위치의 모든 특성을 검색합니다.  
+-   **@\*** 두 번째 작업 센터 위치의 모든 특성을 검색 합니다.  
   
--   FLWOR 반복문 (에 대 한... 반환)를 모두 검색 합니다 <`step`> 자식 요소가 두 번째 작업 센터 위치입니다.  
+-   FLWOR 반복 (... RETURN)는 두 번째 작업 `step` 센터 위치의 자식 요소> 모든 <를 검색 합니다.  
   
--   합니다 [1!s!sql:column () 함수 (XQuery)](../xquery/xquery-extension-functions-sql-column.md) 생성 되는 XML의 관계형 값이 포함 됩니다.  
+-   [Sql: column () 함수 (XQuery)](../xquery/xquery-extension-functions-sql-column.md) 는 생성 되는 XML에 관계형 값을 포함 합니다.  
   
  다음은 결과입니다.  
   
@@ -81,9 +81,9 @@ WHERE ProductModelID=7
 </ManuStep>    
 ```  
   
- 이전 쿼리에서는 단지 텍스트 노드만 검색합니다. 전체를 하려는 경우 <`step`> 요소 대신 반환 된 제거 합니다 **string ()** 쿼리에서 함수:  
+ 이전 쿼리에서는 단지 텍스트 노드만 검색합니다. 전체 <`step`> 요소가 대신 반환 되도록 하려면 쿼리에서 **string ()** 함수를 제거 합니다.  
   
-### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>2\. 제품 제조의 두 번째 작업 센터 위치에서 사용되는 모든 자재 및 도구 찾기  
+### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>B. 제품 제조의 두 번째 작업 센터 위치에서 사용되는 모든 자재 및 도구 찾기  
  특정 제품 모델에 대해 다음 쿼리는 제조 프로세스의 작업 센터 위치 시퀀스에 따라 두 번째 작업 센터 위치에서 사용되는 도구와 자재를 검색합니다.  
   
 ```sql
@@ -115,7 +115,7 @@ where ProductModelID=7
   
  이전 쿼리에서 다음을 유의하세요.  
   
--   쿼리를 생성 합니다 < Loca`tion`> 요소 및 검색 데이터베이스에서 해당 특성 값입니다.  
+-   이 쿼리는 <Loca`tion`> 요소를 생성 하 고 데이터베이스에서 해당 특성 값을 검색 합니다.  
   
 -   여기에서는 두 개의 FLWOR (for...return) 반복문이 사용되며, 이 중 하나는 도구를 검색하고 다른 하나는 사용된 자재를 검색합니다.  
   
@@ -136,8 +136,8 @@ where ProductModelID=7
 </Location>  
 ```  
   
-### <a name="c-retrieve-the-first-two-product-feature-descriptions-from-the-product-catalog"></a>3\. 제품 카탈로그에서 처음 두 개의 제품 기능 설명 검색  
- 특정 제품 모델에 대 한 쿼리는에서 첫 번째 두 개의 기능 설명을 검색 합니다 <`Features`> 제품 모델 카탈로그에는 요소입니다.  
+### <a name="c-retrieve-the-first-two-product-feature-descriptions-from-the-product-catalog"></a>C. 제품 카탈로그에서 처음 두 개의 제품 기능 설명 검색  
+ 특정 제품 모델의 경우이 쿼리는 제품 모델 카탈로그의 <`Features`> 요소에서 처음 두 개의 기능 설명을 검색 합니다.  
   
 ```sql
 SELECT CatalogDescription.query('  
@@ -157,9 +157,9 @@ where ProductModelID=19
   
  이전 쿼리에서 다음을 유의하세요.  
   
- 쿼리 본문에 포함 된 XML을 생성 합니다 <`ProductModel`> ProductModelID 및 ProductModelName 특성이 있는 요소입니다.  
+ 쿼리 본문은 제품을 포함 하는 <`ProductModel`> 요소를 포함 하는 XML을 생성 합니다.  
   
--   쿼리는 FOR... 제품 모델 기능 설명 검색 루프를 반환 합니다. 합니다 **position ()** 함수를 사용 하는 처음 두 기능을 검색 합니다.  
+-   쿼리에서 ...를 사용 합니다. 반환 루프를 통해 제품 모델 기능 설명을 검색 합니다. **Position ()** 함수는 처음 두 기능을 검색 하는 데 사용 됩니다.  
   
  다음은 결과입니다.  
   
@@ -180,8 +180,8 @@ where ProductModelID=19
 </ProductModel>   
 ```  
   
-### <a name="d-find-the-first-two-tools-used-at-the-first-work-center-location-in-the-manufacturing-process-of-the-product"></a>4\. 제품 제조 프로세스의 첫 번째 작업 센터 위치에서 사용되는 처음 두 개의 도구 찾기  
- 제품 모델에 대해 다음 쿼리는 제조 프로세스의 작업 센터 위치 시퀀스에 따라 첫 번째 작업 센터 위치에서 사용되는 처음 두 개의 도구를 반환합니다. 에 저장 된 제조 지침에 대해 쿼리가 지정 됩니다 합니다 **지침** 열을 **Production.ProductModel** 테이블입니다.  
+### <a name="d-find-the-first-two-tools-used-at-the-first-work-center-location-in-the-manufacturing-process-of-the-product"></a>D. 제품 제조 프로세스의 첫 번째 작업 센터 위치에서 사용되는 처음 두 개의 도구 찾기  
+ 제품 모델에 대해 다음 쿼리는 제조 프로세스의 작업 센터 위치 시퀀스에 따라 첫 번째 작업 센터 위치에서 사용되는 처음 두 개의 도구를 반환합니다. 이 쿼리는 **Production 모델** 테이블의 **명령** 열에 저장 된 제조 지침에 따라 지정 됩니다.  
   
 ```sql
 SELECT Instructions.query('  
@@ -216,8 +216,8 @@ where ProductModelID=7
 </Location>   
 ```  
   
-### <a name="e-find-the-last-two-manufacturing-steps-at-the-first-work-center-location-in-the-manufacturing-of-a-specific-product"></a>5\. 특정 제품 제조의 첫 번째 작업 센터 위치에서 마지막 두 개의 제조 단계 찾기  
- 쿼리에서 사용 합니다 **last ()** 마지막 두 제조 단계 검색을 위한 함수입니다.  
+### <a name="e-find-the-last-two-manufacturing-steps-at-the-first-work-center-location-in-the-manufacturing-of-a-specific-product"></a>E. 특정 제품 제조의 첫 번째 작업 센터 위치에서 마지막 두 개의 제조 단계 찾기  
+ 이 쿼리에서는 **last ()** 함수를 사용 하 여 마지막 두 제조 단계를 검색 합니다.  
   
 ```sql
 SELECT Instructions.query('   
@@ -245,7 +245,7 @@ where ProductModelID=7
 </LastTwoManuSteps>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 데이터&#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XQuery 언어 참조&#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
  [XML 생성 &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  

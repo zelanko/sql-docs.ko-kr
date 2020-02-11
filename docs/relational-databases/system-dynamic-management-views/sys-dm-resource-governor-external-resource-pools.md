@@ -1,5 +1,5 @@
 ---
-title: _resource_governor_external_resource_pools (Transact-sql) | Microsoft Docs
+title: sys. dm_resource_governor_external_resource_pools (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2019
 ms.prod: sql
@@ -21,20 +21,20 @@ ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: cf77a073a1432df839bfd13046c66018496e79f1
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68468516"
 ---
-# <a name="sysdmresourcegovernorexternalresourcepools-transact-sql"></a>_resource_governor_external_resource_pools (Transact-sql)
+# <a name="sysdm_resource_governor_external_resource_pools-transact-sql"></a>sys. dm_resource_governor_external_resource_pools (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 현재 외부 리소스 풀 상태, 리소스 풀의 현재 구성 및 리소스 풀 통계에 대 한 정보를 반환 합니다. 
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
-|열 이름      |데이터 형식      |설명|  
+|열 이름      |데이터 형식      |Description|  
 |----------------|---------------|-----------------| 
 | external_pool_id|**int**|리소스 풀의 ID입니다. Null을 허용하지 않습니다. |
 | name|**sysname**|리소스 풀의 이름입니다. Null을 허용하지 않습니다. 
@@ -48,14 +48,14 @@ ms.locfileid: "68468516"
 | read_io_count|**int**|리소스 관리자 통계를 다시 설정한 후 발생한 총 읽기 IO입니다. Null을 허용하지 않습니다. |
 | total_cpu_kernel_ms|**bigint**|리소스 Govenor 통계가 다시 설정 된 후의 누적 CPU 사용자 커널 시간 (밀리초)입니다. Null을 허용하지 않습니다. |
 | total_cpu_user_ms|**bigint**|리소스 Govenor 통계가 다시 설정 된 이후의 누적 CPU 사용자 시간 (밀리초)입니다. Null을 허용하지 않습니다. |
-| active_processes_count|**int**|요청 시 실행 되는 외부 프로세스의 수입니다. Null을 허용하지 않습니다. |
+| active_processes_count|**int**|요청 순간에 실행되는 외부 프로세스의 수입니다. Null을 허용하지 않습니다. |
 
  
 ## <a name="permissions"></a>사용 권한
 
-필요한 `VIEW SERVER STATE` 권한.
+`VIEW SERVER STATE` 권한이 필요합니다.
 
-## <a name="see-also"></a>관련 항목  
- [sys.dm_resource_governor_external_resource_pool_affinity&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [dm_resource_governor_external_resource_pool_affinity &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  
   
   

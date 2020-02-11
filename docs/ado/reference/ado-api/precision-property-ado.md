@@ -17,24 +17,24 @@ ms.assetid: 1fa38e78-6b5b-414d-ba0a-3dd26b29b766
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26da0367e494bd74253b904393a2dad62308a608
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931634"
 ---
 # <a name="precision-property-ado"></a>Precision 속성(ADO)
-숫자 값에 대 한 전체 자릿수를 나타냅니다는 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체 또는 숫자 [필드](../../../ado/reference/ado-api/field-object.md) 개체입니다.  
+[매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체 또는 숫자 [필드](../../../ado/reference/ado-api/field-object.md) 개체의 숫자 값에 대 한 전체 자릿수를 나타냅니다.  
   
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
- 설정 하거나 반환 된 **바이트** 값을 나타내는 데 사용 되는 최대 자릿수를 나타내는 값입니다.  
+ 값을 나타내는 데 사용 되는 최대 자릿수를 나타내는 **바이트** 값을 설정 하거나 반환 합니다.  
   
 ## <a name="remarks"></a>설명  
- 사용 된 **정밀도** 숫자에 대 한 값을 나타내는 데 사용 되는 숫자의 최대 수를 확인 하는 속성 **매개 변수** 또는 **필드** 개체입니다.  
+ **Precision** 속성을 사용 하 여 숫자 **매개 변수** 또는 **Field** 개체의 값을 나타내는 데 사용 되는 최대 자릿수를 확인 합니다.  
   
- 값은 읽기/쓰기를 **매개 변수** 개체입니다.  
+ 값은 **매개 변수** 개체에 대 한 읽기/쓰기입니다.  
   
- 에 대 한는 **필드**개체를 **정밀도** 일반적으로 읽기 전용입니다. 그러나에 대 한 새 **필드** 에 추가 된 개체를 [필드](../../../ado/reference/ado-api/fields-collection-ado.md) 의 컬렉션을 [레코드](../../../ado/reference/ado-api/record-object-ado.md)를 **정밀도** 만 읽기/쓰기 후는 [값](../../../ado/reference/ado-api/value-property-ado.md) 에 대 한 속성을 **필드** 지정 된 데이터 공급자에 성공적으로 추가 하 고 **필드** 를호출하여[업데이트](../../../ado/reference/ado-api/update-method.md) 메서드를 **필드** 컬렉션입니다.  
+ **필드**개체의 경우 **전체 자릿수** 는 일반적으로 읽기 전용입니다. 그러나 [레코드](../../../ado/reference/ado-api/record-object-ado.md)의 [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) 컬렉션에 추가 된 새 **field** 개체의 경우 **필드** 의 [Value](../../../ado/reference/ado-api/value-property-ado.md) 속성을 지정 하 고 데이터 공급자가 **Fields** 컬렉션의 [Update](../../../ado/reference/ado-api/update-method.md) 메서드를 호출 하 여 새 **필드** 를 성공적으로 추가한 후에만 **전체 자릿수가** 읽기/쓰기입니다.  
   
 ## <a name="applies-to"></a>적용 대상  
   
@@ -42,7 +42,7 @@ ms.locfileid: "67931634"
 |-|-|  
 |[Field 개체](../../../ado/reference/ado-api/field-object.md)|[Parameter 개체](../../../ado/reference/ado-api/parameter-object.md)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [NumericScale 및 Precision 속성 예제 (VB)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vb.md)   
  [NumericScale 및 Precision 속성 예제 (VC + +)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)   
  [NumericScale 속성(ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)

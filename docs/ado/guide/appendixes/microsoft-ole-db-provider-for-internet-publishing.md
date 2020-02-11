@@ -1,5 +1,5 @@
 ---
-title: 인터넷 게시용 Microsoft OLE DB Provider | Microsoft Docs
+title: 인터넷 게시용 Microsoft OLE DB 공급자 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,26 +15,26 @@ ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 19d719ddb4e5a2f7851a1d12dc4abe69069a354f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926758"
 ---
-# <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Microsoft OLE DB Provider for Internet 게시 개요
-Microsoft OLE DB Provider for Internet Publishing는 ADO를 Microsoft FrontPage 또는 Microsoft Internet Information Server 제공한 리소스에 액세스할 수 있습니다. 리소스에는 HTML 파일, Windows 2000 웹 폴더 등 웹 원본 파일이 포함 됩니다.
+# <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>인터넷 게시용 Microsoft OLE DB 공급자 개요
+Microsoft OLE DB Provider for Internet 게시용을 사용 하면 ADO에서 Microsoft FrontPage 또는 Microsoft Internet Information Server가 제공 하는 리소스에 액세스할 수 있습니다. 리소스에는 HTML 파일, Windows 2000 웹 폴더 등의 웹 원본 파일이 포함 됩니다.
 
 ## <a name="connection-string-parameters"></a>연결 문자열 매개 변수
- 이 공급자에 연결을 설정 합니다 *공급자* 인수를 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 속성을:
+ 이 공급자에 연결 하려면 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 속성의 *공급자* 인수를로 설정 합니다.
 
 ```vb
 MSDAIPP.DSO
 ```
 
- 이 값을 설정 하거나 사용 하 여 읽을 수도 있습니다는 [공급자](../../../ado/reference/ado-api/provider-property-ado.md) 속성입니다.
+ 이 값은 [공급자](../../../ado/reference/ado-api/provider-property-ado.md) 속성을 사용 하 여 설정 하거나 읽을 수도 있습니다.
 
-## <a name="typical-connection-string"></a>일반적인 연결 문자열
- 이 공급자에 대 한 일반적인 연결 문자열은:
+## <a name="typical-connection-string"></a>일반 연결 문자열
+ 이 공급자에 대 한 일반적인 연결 문자열은 다음과 같습니다.
 
 ```vb
 "Provider=MSDAIPP.DSO;Data Source=ResourceURL;User ID=MyUserID;Password=MyPassword;"
@@ -46,22 +46,22 @@ MSDAIPP.DSO
 "URL=ResourceURL;User ID=MyUserID;Password=MyPassword;"
 ```
 
- 문자열을 이러한 키워드 이루어져 있습니다.
+ 문자열은 다음과 같은 키워드로 구성 됩니다.
 
-|키워드|설명|
+|키워드|Description|
 |-------------|-----------------|
-|**공급자**|인터넷 게시용 OLE DB Provider를 지정합니다.|
-|**데이터 원본** -또는- **URL**|파일 또는 웹 폴더에 게시 하는 디렉터리의 URL을 지정 합니다.|
+|**공급자**|인터넷 게시용 OLE DB 공급자를 지정 합니다.|
+|**데이터 원본** 또는 **URL**|웹 폴더에 게시 된 파일 또는 디렉터리의 URL을 지정 합니다.|
 |**사용자 ID**|사용자 이름을 지정합니다.|
 |**암호**|사용자 암호를 지정 합니다.|
 
 > [!NOTE]
->  지정 해야 하는 경우 Windows 인증을 지 원하는 데이터 원본 공급자에 연결 하는, **Trusted_Connection = yes** 하거나 **Integrated Security = SSPI** 사용자 ID와 암호 대신 연결 문자열에 대 한 정보입니다.
+>  Windows 인증을 지 원하는 데이터 원본 공급자에 연결 하는 경우 연결 문자열에 사용자 ID 및 암호 정보 대신 **Trusted_Connection = yes** 또는 **INTEGRATED Security = SSPI** 를 지정 해야 합니다.
 
- 설정 하는 경우는 *ResourceURL* 에서 값을 "URL =" 잘못 된 값으로 연결 문자열에서 기본적으로 인터넷 게시 공급자를 발생 시킵니다를 올바른 값을 묻는 대화 상자. 이 동작은 바람직하지 않은 응용 프로그램의 중간 계층의 구성 요소에 대 한 대화 상자를 지우고 클라이언트 구성 요소에서 응답을 받지 못했기 때문에 고정 하려면 표시 될 때까지 프로그램 실행을 일시 중단 하기 때문에 합니다.
+ 연결 문자열의 "URL ="에서 *Resourceurl* 값을 잘못 된 값으로 설정 하는 경우 기본적으로 인터넷 게시 공급자는 유효한 값을 요청 하는 대화 상자를 발생 시킵니다. 이는 응용 프로그램의 중간 계층에 있는 구성 요소에 대해 바람직하지 않은 동작입니다 .이는 대화 상자를 지우고 클라이언트에서 구성 요소 로부터 응답을 받지 못해 중지 된 것 처럼 보일 때까지 프로그램 실행을 일시 중단 하기 때문입니다.
 
 > [!NOTE]
->  경우 MSDAIPP 합니다. DSO을 사용 하 여 공급자의 값으로 명시적으로 지정 합니다 *공급자* 연결 문자열 키워드 또는 **공급자** 속성을 사용할 수 없습니다 "URL =" 연결 문자열에 있습니다. 이렇게 하면 오류가 발생 합니다. 대신, URL만 지정 하면 항목에 표시 된 대로 [OLE DB provider for Internet Publishing ADO를 사용 하 여](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)입니다.
+>  MSDAIPP.DLL 인 경우 DSO는 공급자 연결 문자열 키워드 또는 **공급자** 속성을 사용 하 *여 공급자의* 값으로 명시적으로 지정 됩니다. 연결 문자열에는 "URL ="을 사용할 수 없습니다. 그러면 오류가 발생 합니다. 대신 [인터넷 게시용 OLE DB 공급자와 함께 ADO 사용](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)항목에 표시 된 대로 URL을 지정 하면 됩니다.
 
-## <a name="see-also"></a>관련 항목
- [인터넷 게시 시나리오](../../../ado/guide/data/internet-publishing-scenario.md) [인터넷 게시용 OLE DB Provider](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)
+## <a name="see-also"></a>참고 항목
+ 인터넷 게시 [시나리오](../../../ado/guide/data/internet-publishing-scenario.md) [인터넷 게시를 위한 OLE DB 공급자](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)

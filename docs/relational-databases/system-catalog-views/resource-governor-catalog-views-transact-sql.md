@@ -1,5 +1,5 @@
 ---
-title: 리소스 관리자 카탈로그 뷰 (TRANSACT-SQL) | Microsoft Docs
+title: Resource Governor 카탈로그 뷰 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2016
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: bb0a38e0-4eb2-49bf-bba8-750fb706d06e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 20d8b284106bf3f8cfbcd7a69cf57d3fd59d7d82
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68018367"
 ---
 # <a name="resource-governor-catalog-views-transact-sql"></a>리소스 관리자 카탈로그 뷰(Transact-SQL)
@@ -29,11 +29,11 @@ ms.locfileid: "68018367"
   
 |||  
 |-|-|  
-|[sys.resource_governor_configuration &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-configuration-transact-sql.md)|[sys.resource_governor_resource_pools &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)|  
-|[sys.resource_governor_external_resource_pools &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)|[sys.resource_governor_workload_groups &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)|  
+|[resource_governor_configuration &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-configuration-transact-sql.md)|[resource_governor_resource_pools &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)|  
+|[resource_governor_external_resource_pools &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)|[resource_governor_workload_groups &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)|  
   
-## <a name="see-also"></a>관련 항목  
- [리소스 관리자 관련 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [Resource Governor 관련 된 동적 관리 뷰 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)   
  [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)  
   
   

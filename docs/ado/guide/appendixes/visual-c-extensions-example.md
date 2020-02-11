@@ -1,5 +1,5 @@
 ---
-title: Visual C++ 확장 예 | Microsoft Docs
+title: Visual C++ 확장 예제 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,18 +16,18 @@ ms.assetid: 9739c278-582c-402b-a158-7f68a1b2c293
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6d3517f40b15081ca2ee4621d07455cc13bb577d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926397"
 ---
 # <a name="visual-c-extensions-example"></a>Visual C++ 확장 예제
-이 프로그램에서는 값 필드에서 검색 되 고 C로 변환 하는 방법을 보여 줍니다. /C++ 변수입니다.  
+이 프로그램은 필드에서 값을 검색 하 고 C/c + + 변수로 변환 하는 방법을 보여 줍니다.  
   
- 이 예제에서는 또한 활용 자동으로 호출 하는 COM 관련 세부 정보를 처리 하는 "스마트 포인터" `QueryInterface` 및 참조에 대 한 계산 된 **IADORecordBinding** 인터페이스입니다.  
+ 또한이 예제에서는 `QueryInterface` **IADORecordBinding** 인터페이스에 대 한 호출 및 참조 계산에 대 한 COM 관련 세부 정보를 자동으로 처리 하는 "스마트 포인터"를 활용 합니다.  
   
- 스마트 포인터가 코드:  
+ 스마트 포인터가 없으면 다음 코드를 사용할 수 있습니다.  
   
 ```cpp
 IADORecordBinding   *picRs = NULL;  
@@ -38,19 +38,19 @@ TESTHR(pRs->QueryInterface(
 if (picRs) picRs->Release();  
 ```  
   
- 스마트 포인터를 사용 하 여 파생 되는 `IADORecordBindingPtr` 에서 입력을 `IADORecordBinding` 이 문 사용 하 여 인터페이스:  
+ 스마트 포인터를 사용 하면 다음 문을 `IADORecordBindingPtr` 사용 하 여 `IADORecordBinding` 인터페이스에서 형식을 파생 시킬 수 있습니다.  
   
 ```cpp
 _COM_SMARTPTR_TYPEDEF(IADORecordBinding, __uuidof(IADORecordBinding));  
 ```  
   
- 와 같이 포인터를 인스턴스화합니다.  
+ 다음과 같이 포인터를 인스턴스화합니다.  
   
 ```cpp
 IADORecordBindingPtr picRs(pRs);  
 ```  
   
- 때문에 시각적 개체 C++ 확장을 구현 합니다 **레코드 집합** 개체, 스마트 포인터에 대 한 생성자 `picRs`, _는`RecordsetPtr` 포인터 `pRs`. 생성자 호출 `QueryInterface` 를 사용 하 여 `pRs` 찾으려고 합니다 `IADORecordBinding` 인터페이스입니다.  
+ Visual C++ 확장은 **레코드 집합** 개체에 의해 구현 되기 때문에 스마트 포인터 `picRs`에 대 한 생성자는 _`RecordsetPtr` 포인터를 `pRs`사용 합니다. 생성자는 `QueryInterface` `pRs` 를 호출 하 여 `IADORecordBinding` 인터페이스를 찾습니다.  
   
 ```cpp
 // Visual_Cpp_Extensions_Example.cpp  
@@ -109,6 +109,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [시각적 개체를 사용 하 여 C++ 확장](../../../ado/guide/appendixes/using-visual-c-extensions.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual C++ 확장 사용](../../../ado/guide/appendixes/using-visual-c-extensions.md)   
  [Visual C++ 확장 헤더](../../../ado/guide/appendixes/visual-c-extensions-header.md)

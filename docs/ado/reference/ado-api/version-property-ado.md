@@ -18,26 +18,26 @@ ms.assetid: db4cb894-9bd9-422d-a58a-cef6941a5784
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: addae0713fc175c7a261668c532b771ee0f4fa34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938732"
 ---
 # <a name="version-property-ado"></a>Version 속성(ADO)
 ADO 버전 번호를 나타냅니다.  
   
-## <a name="return-value"></a>반환 값  
- 반환 된 **문자열** 버전을 나타내는 값입니다.  
+## <a name="return-value"></a>Return Value  
+ 버전을 나타내는 **문자열** 값을 반환 합니다.  
   
 ## <a name="remarks"></a>설명  
- 사용 된 **버전** ADO 구현의 버전 번호를 반환 하는 속성입니다.  
+ **Version** 속성을 사용 하 여 ADO 구현의 버전 번호를 반환 합니다.  
   
- 버전의 공급자에 동적 속성으로 사용할 수는 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션입니다.  
+ 공급자의 버전을 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션에서 동적 속성으로 사용할 수 있습니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Version 속성 예제 (VB)](../../../ado/reference/ado-api/version-property-example-vb.md)   
  [Version 속성 예제(VC++)](../../../ado/reference/ado-api/version-property-example-vc.md)   

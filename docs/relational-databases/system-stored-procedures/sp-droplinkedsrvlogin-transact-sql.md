@@ -1,5 +1,5 @@
 ---
-title: sp_droplinkedsrvlogin (TRANSACT-SQL) | Microsoft Docs
+title: sp_droplinkedsrvlogin (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,19 @@ ms.assetid: 75a4a040-72d5-4d29-8304-de0aa481ad4b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ff6abaef6fc19a1bc646aab7ff30e4fcf6e13380
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097662"
 ---
-# <a name="spdroplinkedsrvlogin-transact-sql"></a>sp_droplinkedsrvlogin(Transact-SQL)
+# <a name="sp_droplinkedsrvlogin-transact-sql"></a>sp_droplinkedsrvlogin(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 실행되고 있는 로컬 서버의 로그인과 연결된 서버의 로그인 간의 기존 매핑을 제거합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,19 +41,19 @@ sp_droplinkedsrvlogin [ @rmtsrvname= ] 'rmtsrvname' ,
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @rmtsrvname = ] 'rmtsrvname'` 연결된 된 서버 이름인는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 매핑이 적용 되 합니다. *rmtsrvname* 됩니다 **sysname**, 기본값은 없습니다. *rmtsrvname* 이미 존재 해야 합니다.  
+`[ @rmtsrvname = ] 'rmtsrvname'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 매핑이 적용 되는 연결 된 서버의 이름입니다. *rmtsrvname* 는 **sysname**이며 기본값은 없습니다. *rmtsrvname* 가 이미 있어야 합니다.  
   
-`[ @locallogin = ] 'locallogin'` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결된 된 서버에 매핑되는 로컬 서버의 로그인 *rmtsrvname*합니다. *locallogin* 됩니다 **sysname**, 기본값은 없습니다. 에 대 한 매핑이 *locallogin* 하 *rmtsrvname* 이미 존재 해야 합니다. 기본 매핑을 만들어 NULL 인 경우 **sp_addlinkedserver**, 로컬 서버의 모든 로그인을 연결 된 서버의 로그인에 매핑되는 삭제 됩니다.  
+`[ @locallogin = ] 'locallogin'`연결 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버 *rmtsrvname*에 대 한 매핑이 있는 로컬 서버의 로그인입니다. *locallogin* 은 **sysname**이며 기본값은 없습니다. *Rmtsrvname* 에 대 한 *locallogin* 에 대 한 매핑이 이미 존재 해야 합니다. NULL 인 경우 로컬 서버의 모든 로그인을 연결 된 서버의 로그인에 매핑하는 **sp_addlinkedserver**에서 만든 기본 매핑이 삭제 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
 ## <a name="remarks"></a>설명  
- 로컬 서버에 만든 기본 매핑을 사용 되는 경우는 기존에 대 한 매핑을 로그인을 삭제 합니다 **sp_addlinkedserver** 로그인 대신 연결된 된 서버에 연결 되 면 합니다. 기본 매핑을 변경 하려면 **sp_addlinkedsrvlogin**합니다.  
+ 로그인에 대 한 기존 매핑을 삭제 하면 로컬 서버는 해당 로그인을 대신 하 여 연결 된 서버에 연결할 때 **sp_addlinkedserver** 에서 만든 기본 매핑을 사용 합니다. 기본 매핑을 변경 하려면 **sp_addlinkedsrvlogin**을 사용 합니다.  
   
- 기본 매핑을 삭제 하는 경우 명시적으로 지정 된 연결된 된 서버에 로그인 매핑을 사용 하 여 로그인만 **sp_addlinkedsrvlogin**, 연결 된 서버에 액세스할 수 있습니다.  
+ 기본 매핑만 삭제 된 경우에는 **sp_addlinkedsrvlogin**를 사용 하 여 연결 된 서버에 대 한 로그인 매핑이 명시적으로 지정 된 로그인만 연결 된 서버에 액세스할 수 있습니다.  
   
- **sp_droplinkedsrvlogin** 사용자 정의 트랜잭션 내에서 실행할 수 없습니다.  
+ **sp_droplinkedsrvlogin** 은 사용자 정의 트랜잭션 내에서 실행할 수 없습니다.  
   
 ## <a name="permissions"></a>사용 권한  
  서버에 대한 ALTER ANY LOGIN 권한이 필요합니다.  
@@ -66,16 +67,16 @@ sp_droplinkedsrvlogin [ @rmtsrvname= ] 'rmtsrvname' ,
 EXEC sp_droplinkedsrvlogin 'Accounts', 'Mary';  
 ```  
   
-### <a name="b-removing-the-default-login-mapping"></a>2\. 기본 로그인 매핑 제거  
+### <a name="b-removing-the-default-login-mapping"></a>B. 기본 로그인 매핑 제거  
  다음 예에서는 원래 `sp_addlinkedserver`를 실행하여 연결된 서버 `Accounts`에 작성된 기본 로그인 매핑을 제거합니다.  
   
 ```  
 EXEC sp_droplinkedsrvlogin 'Accounts', NULL;  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [sp_addlinkedserver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_addlinkedsrvlogin &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [Transact-sql&#41;sp_addlinkedsrvlogin &#40;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
