@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 101badf320f72887d6eb9669224d24fff5b9a299
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62663648"
 ---
 # <a name="clr-event-category"></a>CLR 이벤트 범주
-  **CLR** 이벤트 범주에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR(공용 언어 런타임) 개체를 실행하여 만들어지는 이벤트 클래스가 포함됩니다.  
+  **CLR** 이벤트 범주에는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 내의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]CLR(공용 언어 런타임) 개체를 실행하여 만들어지는 이벤트 클래스가 포함됩니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -33,7 +33,7 @@ ms.locfileid: "62663648"
 |[Assembly Load 이벤트 클래스](../../database-engine/assembly-load-event-class.md)|어셈블리 로드 요청이 실행되었음을 나타냅니다.|  
 |[Assembly Load 이벤트 클래스](../../database-engine/assembly-load-event-class.md)|어셈블리 로드 요청을 실행할 때 발생합니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [확장 이벤트](../extended-events/extended-events.md)  
   
   

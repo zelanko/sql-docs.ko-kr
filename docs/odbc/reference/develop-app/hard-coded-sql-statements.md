@@ -1,5 +1,5 @@
 ---
-title: 하드 코드 된 SQL 문을 | Microsoft Docs
+title: 하드 코드 된 SQL 문 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,22 +15,22 @@ ms.assetid: e355f5f1-4f1a-4933-8c74-ee73e90d2d19
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b0205208a28238f4fbccb5ae2fd96639b664bd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139148"
 ---
 # <a name="hard-coded-sql-statements"></a>하드 코딩된 SQL 문
-일반적으로 고정 된 작업을 수행 하는 응용 프로그램에 하드 코딩 된 SQL 문을 포함 합니다. 예를 들어 주문 입력 시스템을 열고 판매 주문 목록 다음 호출을 사용할 수 있습니다.  
+고정 태스크를 수행 하는 응용 프로그램은 일반적으로 하드 코드 된 SQL 문을 포함 합니다. 예를 들어 주문 입력 시스템은 다음 호출을 사용 하 여 오픈 판매 주문을 나열할 수 있습니다.  
   
 ```  
 SQLExecDirect(hstmt, "SELECT OrderID FROM Orders WHERE Status = 'OPEN'", SQL_NTS);  
 ```  
   
- 하드 코드 된 SQL 문에 장점은 다음과 같습니다. 응용 프로그램; 쓰면 테스트할 수 있습니다. 간단 하 게; 런타임에 생성 하는 문을 보다 구현 및 응용 프로그램을 간소화할 수 있습니다.  
+ 하드 코드 된 SQL 문에는 다음과 같은 몇 가지 이점이 있습니다. 응용 프로그램을 작성할 때 테스트할 수 있습니다. 런타임에 생성 된 문 보다 구현 하는 것이 더 간단 합니다. 그리고 응용 프로그램을 단순화 합니다.  
   
- 문 준비와 문 매개 변수를 사용 하 여 하드 코드 된 SQL 문을 사용 하 여 더 나은 방법 제공 합니다. 예를 들어 부품 테이블 PartID, 설명 및 가격 열을 포함 합니다. 이 테이블에 새 행을 삽입 하는 한 가지 방법은 생성 하 고 실행 하는 것을 **삽입** 문:  
+ 문 매개 변수를 사용 하 고 문을 준비 하면 하드 코드 된 SQL 문을 사용 하는 것이 훨씬 더 나은 방법을 제공 합니다. 예를 들어 Parts 테이블에 PartID, 설명 및 가격 열이 포함 되어 있다고 가정 합니다. 이 테이블에 새 행을 삽입 하는 한 가지 방법은 **insert** 문을 생성 하 고 실행 하는 것입니다.  
   
 ```  
 #define DESC_LEN 51  
@@ -51,7 +51,7 @@ sprintf_s(Statement, 100, "INSERT INTO Parts (PartID, Description,  Price) "
 SQLExecDirect(hstmt, Statement, SQL_NTS);  
 ```  
   
- 더 좋은 방법은 하드 코드 된, 매개 변수가 있는 문을 사용 하는 경우 이 하드 코드 된 데이터 값을 사용 하 여 문 다음 두 가지 장점이 있습니다. 첫째, 데이터 값에 정수 및 부동 소수점 숫자 보다는 문자열로 변환 하기와 같은 원시 형식으로 보낼 수 있으므로 매개 변수가 있는 문을 생성 하기 쉽습니다. 둘째, 이러한 문을 사용할 수 한 번만 매개 변수 값을 변경 하 고, 종료할지 하면 다시 않아도가 됩니다.  
+ 하드 코드 된 매개 변수가 있는 문을 사용 하는 것이 훨씬 더 좋은 방법입니다. 여기에는 하드 코드 된 데이터 값이 있는 문에 비해 두 가지 이점이 있습니다. 첫째, 데이터 값을 문자열로 변환 하는 대신 정수 및 부동 소수점 숫자와 같은 네이티브 형식으로 보낼 수 있으므로 매개 변수가 있는 문을 생성 하는 것이 더 쉽습니다. 둘째, 매개 변수 값을 변경 하 고 다시 실행 하는 것 만으로 이러한 문을 두 번 이상 사용할 수 있습니다. 다시 빌드할 필요가 없습니다.  
   
 ```  
 #define DESC_LEN 51  
@@ -78,7 +78,7 @@ GetNewValues(&PartID, Desc, &Price);
 SQLExecDirect(hstmt, Statement, SQL_NTS);  
 ```  
   
- 으로 가정 하 고이 문을 두 번 이상 실행할 효율성도 향상을 위해 준비 될 것:  
+ 이 문이 두 번 이상 실행 되는 것으로 가정 하면 훨씬 더 높은 효율성을 위해 준비할 수 있습니다.  
   
 ```  
 #define DESC_LEN 51  
@@ -106,7 +106,7 @@ while (GetNewValues(&PartID, Desc, &Price))
    SQLExecute(hstmt);  
 ```  
   
- 아마도 문을 사용 하는 가장 효율적인 방법은 다음 코드 예제와 같이 문을 포함 하는 프로시저를 만드는 것입니다. 절차는 개발 시에 생성 되 고 데이터 원본에 저장 된, 때문에 런타임에 준비가 필요 하지 않습니다. 이 메서드는 단점은 프로시저를 만드는 구문은 특정 DBMS를 실행 하는 응용 프로그램에는 각 DBMS에 대 한 절차를 별도로 생성 해야 합니다.  
+ 문을 사용 하는 가장 효율적인 방법은 다음 코드 예제와 같이 문을 포함 하는 프로시저를 생성 하는 것입니다. 프로시저는 개발 시에 생성 되 고 데이터 소스에 저장 되므로 런타임에 준비할 필요가 없습니다. 이 방법의 단점은 프로시저를 만들기 위한 구문이 DBMS에 따라 달라 지 며, 응용 프로그램이 실행 되는 각 DBMS에 대해 프로시저를 별도로 생성 해야 한다는 것입니다.  
   
 ```  
 #define DESC_LEN 51  
@@ -129,4 +129,4 @@ while (GetNewValues(&PartID, Desc, &Price))
    SQLExecDirect(hstmt, "{call InsertPart(?, ?, ?)}", SQL_NTS);  
 ```  
   
- 매개 변수, 준비 된 문 및 프로시저에 대 한 자세한 내용은 참조 하세요. [문을 실행](../../../odbc/reference/develop-app/executing-a-statement.md)합니다.
+ 매개 변수, 준비 된 문 및 프로시저에 대 한 자세한 내용은 [문 실행](../../../odbc/reference/develop-app/executing-a-statement.md)을 참조 하세요.

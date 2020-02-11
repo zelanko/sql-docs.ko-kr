@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 731550d385d073c7b2f2e2758d4fcaf2353db746
-ms.sourcegitcommit: 9b8b11961b33e66fc9f433d094fc5c0f9b473772
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74908991"
 ---
 # <a name="powerpivot-availability-and-disaster-recovery-sql-server-2014"></a>PowerPivot Availability and Disaster Recovery (SQL Server 2014)
@@ -25,7 +25,7 @@ ms.locfileid: "74908991"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** Sharepoint 2013 &#124; SharePoint 2010|  
   
- **이 항목의 내용:**  
+ **항목 내용**  
   
 -   [PowerPivot 고가용성에 대한 SharePoint 2013 토폴로지 예제](#bkmk_sharepoint2013)  
   
@@ -84,7 +84,7 @@ ms.locfileid: "74908991"
 ##  <a name="bkmk_sql_server_technologies"></a>PowerPivot 서비스 응용 프로그램 데이터베이스 및 SQL Server 가용성 및 복구 기술  
  SharePoint 고가용성 계획에 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 서비스 애플리케이션 데이터베이스를 포함합니다. 이 데이터베이스 기본 이름은 `DefaultPowerPivotServiceApplicationDB-<GUID>`입니다. 다음은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가용성 기술과, [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 데이터베이스에 사용할 때의 권장 사항에 대한 요약입니다. 자세한 내용은 [SharePoint 데이터베이스에 지원되는 고가용성 및 재해 복구 옵션(SharePoint 2013)](https://technet.microsoft.com/library/jj841106.aspx)을 참조하세요.  
   
-||설명|  
+||주석|  
 |-|--------------|  
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]가용성 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 을 위해 팜의 동기식 미러링|지원되나 이 옵션은 사용하지 않는 것이 좋습니다. 동기-커밋 모드에서 AlwaysOn을 사용 하는 것이 좋습니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 동기-커밋 모드에서|지원 및 권장합니다.|  

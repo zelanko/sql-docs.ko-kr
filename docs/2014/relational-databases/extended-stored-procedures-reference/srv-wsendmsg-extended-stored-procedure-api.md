@@ -21,16 +21,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 18b166472cff011b3766645dde61f562c766ff2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63140457"
 ---
-# <a name="srvwsendmsg-extended-stored-procedure-api"></a>srv_wsendmsg(확장 저장 프로시저 API)
+# <a name="srv_wsendmsg-extended-stored-procedure-api"></a>srv_wsendmsg(확장 저장 프로시저 API)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하세요.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]대신 CLR 통합을 사용 하세요.  
   
  클라이언트에 유니코드 메시지를 보냅니다.  
   
@@ -59,33 +59,36 @@ msglen
  *Msgnum*  
  4바이트 메시지 번호입니다.  
   
- *Severity*  
+ *심각도*  
  오류의 심각도를 지정합니다. 심각도가 10보다 작거나 같으면 정보 메시지로 간주되고 그렇지 않으면 오류로 간주됩니다.  
   
- *message*  
+ *메시지*  
  클라이언트로 보낼 유니코드 문자열에 대한 포인터입니다.  
   
  *msglen*  
- *message*의 길이(문자 수)를 지정합니다.  
+ 
+  *message*의 길이(문자 수)를 지정합니다.  
   
-## <a name="returns"></a>반환 값  
+## <a name="returns"></a>반환  
  SUCCEED 또는 FAIL  
   
-## <a name="remarks"></a>Remarks  
- 이 함수를 사용하여 유니코드로 메시지를 보낼 수 있습니다. **srv_sendmsg**와 비슷하지만 DBCHAR 문자열이 아니라 WCHAR 문자열 형식으로 메시지를 보냅니다. 메시지 길이는 바이트가 아니라 문자 수로 보고되며 *msglen* 은 SRV_NULLTERM일 수 없습니다.  
+## <a name="remarks"></a>설명  
+ 이 함수를 사용하여 유니코드로 메시지를 보낼 수 있습니다. 
+  **srv_sendmsg**와 비슷하지만 DBCHAR 문자열이 아니라 WCHAR 문자열 형식으로 메시지를 보냅니다. 메시지 길이는 바이트가 아니라 문자 수로 보고되며 *msglen* 은 SRV_NULLTERM일 수 없습니다.  
   
  이 함수는 다음과 같은 경우 FAIL을 반환합니다.  
   
 -   지정된 *msglen* 이 0-32242의 범위를 벗어난 경우  
   
--   *msglen* 이 0으로 지정되어 있지만 메시지 포인터가 NULL인 경우  
+-   
+  *msglen* 이 0으로 지정되어 있지만 메시지 포인터가 NULL인 경우  
   
 -   네트워크를 통해 오류 메시지를 보낼 때 오류가 발생한 경우  
   
 > [!IMPORTANT]  
->  확장 저장 프로시저의 원본 코드를 철저히 검토하고 프로덕션 서버에 DLL을 설치하기 전에 컴파일한 DLL을 테스트해야 합니다. 보안 검토 및 테스트에 대한 자세한 내용은 [Microsoft 웹 사이트](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/)를 참조하십시오.  
+>  확장 저장 프로시저의 원본 코드를 철저히 검토하고 프로덕션 서버에 DLL을 설치하기 전에 컴파일한 DLL을 테스트해야 합니다. 보안 검토 및 테스트에 대한 자세한 내용은 [Microsoft 웹 사이트](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
- [srv_sendmsg(확장 저장 프로시저 API)](srv-sendmsg-extended-stored-procedure-api.md)  
+## <a name="see-also"></a>참고 항목  
+ [srv_sendmsg &#40;확장 저장 프로시저 API&#41;](srv-sendmsg-extended-stored-procedure-api.md)  
   
   

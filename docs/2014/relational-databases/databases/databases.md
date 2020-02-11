@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7de13f529dc0aab0c897ebe3dc1cb19220b13fd7
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154580"
 ---
 # <a name="databases"></a>데이터베이스
@@ -41,8 +41,8 @@ ms.locfileid: "70154580"
 |||  
 |-|-|  
 |[시스템 데이터베이스](system-databases.md)|[데이터베이스에서 데이터 또는 로그 파일 삭제](delete-data-or-log-files-from-a-database.md)|  
-|[Contained Databases](contained-databases.md)|[데이터베이스의 데이터 및 로그 공간 정보 표시](display-data-and-log-space-information-for-a-database.md)|  
-|[Azure에서 데이터 파일 SQL Server](sql-server-data-files-in-microsoft-azure.md)|[데이터베이스의 크기 늘리기](increase-the-size-of-a-database.md)|  
+|[포함된 데이터베이스](contained-databases.md)|[데이터베이스의 데이터 및 로그 공간 정보 표시](display-data-and-log-space-information-for-a-database.md)|  
+|[Azure의 SQL Server 데이터 파일](sql-server-data-files-in-microsoft-azure.md)|[데이터베이스의 크기 늘리기](increase-the-size-of-a-database.md)|  
 |[데이터베이스 파일 및 파일 그룹](database-files-and-filegroups.md)|[데이터베이스 이름 바꾸기](rename-a-database.md)|  
 |[데이터베이스 상태](database-states.md)|[단일 사용자 모드로 데이터베이스 설정](set-a-database-to-single-user-mode.md)|  
 |[파일 상태](file-states.md)|[데이터베이스 축소](shrink-a-database.md)|  
@@ -52,13 +52,13 @@ ms.locfileid: "70154580"
 |[데이터베이스에 데이터 또는 로그 파일 추가](add-data-or-log-files-to-a-database.md)|[데이터베이스의 호환성 수준 보기 또는 변경](view-or-change-the-compatibility-level-of-a-database.md)|  
 |[데이터베이스 메일의 구성 설정 변경](change-the-configuration-settings-for-a-database.md)|[유지 관리 계획 마법사 사용](../maintenance-plans/use-the-maintenance-plan-wizard.md)|  
 |[데이터베이스 만들기](create-a-database.md)|[사용자 정의 데이터 형식 별칭 만들기](create-a-user-defined-data-type-alias.md)|  
-|[데이터베이스 삭제](delete-a-database.md)|[데이터베이스 스냅샷&amp;#40;SQL Server&amp;#41;](database-snapshots-sql-server.md)|  
+|[데이터베이스 삭제](delete-a-database.md)|[데이터베이스 스냅샷&#40;SQL Server&#41;](database-snapshots-sql-server.md)|  
   
 ## <a name="related-content"></a>관련 내용  
  [인덱스](../indexes/indexes.md)  
   
  [뷰](../views/views.md)  
   
- [저장 프로시저&#40;데이터베이스 엔진&#41;](../stored-procedures/stored-procedures-database-engine.md)  
+ [저장 프로시저 &#40;데이터베이스 엔진&#41;](../stored-procedures/stored-procedures-database-engine.md)  
   
   
