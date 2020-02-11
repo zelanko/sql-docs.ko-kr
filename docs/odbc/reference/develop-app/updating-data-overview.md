@@ -16,16 +16,16 @@ ms.assetid: 062036a4-cda6-4aaa-9765-f1ec3e0b31b1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0701218b5ef489d1f8962ffadc9409986a0c36c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942813"
 ---
 # <a name="updating-data-overview"></a>데이터 업데이트 개요
-SQL 문을 실행 하 여 또는 호출 하 여 응용 프로그램 데이터를 업데이트할 수 있습니다 **SQLSetPos** 하거나 **SQLBulkOperations**합니다. **업데이트**, **삭제**, 및 **삽입** 문 데이터 원본에 직접 작업할 및 드라이버에서 일반적으로 지원 됩니다. 업데이트 검색 및 delete 문을 변경 하려면 행에 대 한 사양 포함 합니다. 배치 업데이트 및 delete 문 및 **SQLSetPos** 커서를 통해 데이터 원본에서 역할 및 널리 지원 됩니다.  
+응용 프로그램은 SQL 문을 실행 하거나 **SQLSetPos** 또는 **SQLBulkOperations**를 호출 하 여 데이터를 업데이트할 수 있습니다. **UPDATE**, **DELETE**및 **INSERT** 문은 데이터 원본에서 직접 작동 하며 일반적으로 드라이버에서 지원 됩니다. 검색 된 update 및 delete 문에는 변경할 행 사양이 포함 되어 있습니다. 위치 지정 update 및 delete 문과 **SQLSetPos** 는 커서를 통해 데이터 원본에 대해 작동 하며 광범위 하 게 지원 됩니다.  
   
- 커서 결과 집합을이 섹션에서 설명 하는 방법에 대 한 변경 내용을 감지할 수 있는지 여부를 구현 하는 방법 및 커서의 유형에 따라 달라 집니다. 정방향 전용 커서 행 다시 방문 하지 않습니다 하 고 변경 내용을 검색 하지 않습니다. 스크롤 가능 커서 변경을 검색할 수 있는지 여부에 대 한 자세한 내용은 [스크롤 가능 커서](../../../odbc/reference/develop-app/scrollable-cursors.md)합니다.  
+ 이 섹션에서 설명 하는 메서드를 사용 하 여 커서에서 결과 집합에 대 한 변경 내용을 검색할 수 있는지 여부는 커서의 형식 및 구현 방법에 따라 달라 집니다. 앞 으로만 이동 가능한 커서는 행을 다시 방문 하지 않으므로 변경 내용을 검색 하지 않습니다. 스크롤할 수 있는 커서가 변경 내용을 검색할 수 있는지 여부에 대 한 자세한 내용은 [스크롤 가능한 커서](../../../odbc/reference/develop-app/scrollable-cursors.md)를 참조 하세요.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

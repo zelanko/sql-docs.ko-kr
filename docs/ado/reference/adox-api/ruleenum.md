@@ -16,21 +16,21 @@ ms.assetid: 738fd3ff-3daf-483d-a0b9-88bef1be54c1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 87c61baa93cb1dbca58bbe86ffc254a92d2b9d5b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965240"
 ---
 # <a name="ruleenum"></a>RuleEnum
-시 따라야 하는 규칙 지정 된 [키](../../../ado/reference/adox-api/key-object-adox.md) 삭제 됩니다.  
+[키](../../../ado/reference/adox-api/key-object-adox.md) 를 삭제할 때 따라야 하는 규칙을 지정 합니다.  
   
-|상수|값|설명|  
+|지속적임|값|Description|  
 |--------------|-----------|-----------------|  
-|**adRICascade**|1|변경 내용을 연계할 수 있습니다.|  
-|**adRINone**|0|기본. 아무 작업도 수행 합니다.|  
-|**adRISetDefault**|3|외래 키 값을 기본값으로 설정 됩니다.|  
-|**adRISetNull**|2|외래 키 값을 설정 하려면 null입니다.|  
+|**adRICascade**|1|Cascade 변경|  
+|**adRINone**|0|Default. 아무 동작도 수행되지 않습니다.|  
+|**adRISetDefault**|3|외래 키 값이 기본값으로 설정 됩니다.|  
+|**adRISetNull**|2|외래 키 값이 null로 설정 됩니다.|  
   
 ## <a name="applies-to"></a>적용 대상  
  [DeleteRule 속성(ADOX)](../../../ado/reference/adox-api/deleterule-property-adox.md)

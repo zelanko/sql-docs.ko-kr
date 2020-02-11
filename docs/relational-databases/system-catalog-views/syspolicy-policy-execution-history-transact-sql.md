@@ -1,5 +1,5 @@
 ---
-title: syspolicy_policy_execution_history (TRANSACT-SQL) | Microsoft Docs
+title: syspolicy_policy_execution_history (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: b13c44a7-6d49-4d50-abe1-e657fc52bb05
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2dc0b47ce2723215d03886f7dfc5dab3f121e617
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68121110"
 ---
-# <a name="syspolicypolicyexecutionhistory-transact-sql"></a>syspolicy_policy_execution_history(Transact-SQL)
+# <a name="syspolicy_policy_execution_history-transact-sql"></a>syspolicy_policy_execution_history(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   정책이 실행된 시간, 각 실행의 결과 및 오류가 있는 경우 오류에 대한 자세한 내용을 표시합니다. 다음 표에서는 syspolicy_policy_execution_history 뷰의 열을 설명합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |history_id|**bigint**|이 레코드의 ID입니다. 각 레코드는 정책과 시작된 시간을 하나씩 나타냅니다.|  
 |policy_id|**int**|정책의 ID입니다.|  
@@ -40,13 +40,13 @@ ms.locfileid: "68121110"
 |exception|**nvarchar(max)**|예외가 발생한 경우 예외에 대한 설명입니다.|  
   
 ## <a name="remarks"></a>설명  
- 합니다 [syspolicy_policy_execution_history_details](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-details-transact-sql.md) 뷰는 정책 및 테스트 조건 식의 대상에 대 한 관련된 세부 정보를 포함 합니다.  
+ [Syspolicy_policy_execution_history_details](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-details-transact-sql.md) 뷰에는 정책 대상 및 테스트 된 조건 식에 대 한 관련 정보가 포함 되어 있습니다.  
   
 ## <a name="permissions"></a>사용 권한  
  msdb 데이터베이스에서 PolicyAdministratorRole 역할의 멤버 자격이 필요합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [정책 기반 관리를 사용하여 서버 관리](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
- [정책 기반 관리 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
+ [Transact-sql&#41;&#40;정책 기반 관리 뷰](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   

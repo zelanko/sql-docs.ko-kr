@@ -20,18 +20,18 @@ ms.assetid: 9246c7b2-7098-42c4-a222-cbf30267c46a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 16230302a44ef9c56d3b2ab9ff17de6288ead371
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109359"
 ---
-# <a name="keyguid-transact-sql"></a>KEY_GUID(Transact-SQL)
+# <a name="key_guid-transact-sql"></a>KEY_GUID(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   데이터베이스에 있는 대칭 키의 GUID를 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,7 +47,7 @@ Key_GUID( 'Key_Name' )
 ## <a name="return-types"></a>반환 형식  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  키를 작성할 때 ID 값을 지정한 경우 키의 GUID는 해당 ID 값의 MD5 해시입니다. 지정된 ID 값이 없는 경우 서버가 GUID를 생성합니다.  
   
  임시 키의 경우 키 이름이 숫자 기호(#)로 시작해야 합니다.  

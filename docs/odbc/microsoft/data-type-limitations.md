@@ -15,23 +15,23 @@ ms.assetid: 81c4eab7-1f6b-47a0-b940-89d6c6a14dae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 64d16a9181c475427677371d1e6e180570225b7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096461"
 ---
 # <a name="data-type-limitations"></a>데이터 형식 제한 사항
-Microsoft ODBC 데스크톱 데이터베이스 드라이버 데이터 형식에 대해 다음과 같은 제한 사항이 적용 합니다.  
+Microsoft ODBC Desktop Database 드라이버는 데이터 형식에 대해 다음과 같은 제한 사항을 적용 합니다.  
   
-|데이터 형식|설명|  
+|데이터 형식|Description|  
 |---------------|-----------------|  
-|모든 데이터 형식|형식 변환 오류가 NULL로 설정 되 고 영향을 받는 열에 발생할 수 있습니다.|  
-|BINARY|길이가 0 인 이진 열을 만드는 255 바이트 이진 열 실제로 반환 합니다.|  
-|DATE|DATE 데이터 형식 변환 함수에서 다른 데이터 형식 (또는 자체)로 변환할 수 없습니다.|  
-|10 진수 (정확한 수치)|지원되지 않습니다.|  
-|부동 소수점 데이터 형식|부동 소수점 숫자에서 소수 자릿수는 Windows 제어판의 국가별 섹션에서 설정 하는 숫자 형식에 따라 제한 될 수 있습니다.|  
-|NUMERIC|최대 전체 자릿수 및 소수 자릿수가 28 지원합니다.|  
-|timestamp|타임 스탬프 데이터 형식 변환 함수에 의해 자체를 변환할 수 없습니다.|  
-|TINYINT|TINYINT 값은 항상 서명 합니다.|  
-|길이가 0 인 문자열|DBASE, Microsoft Excel, Paradox, 또는 Textdriver를 사용 하면 열에 길이가 0 인 문자열을 삽입 실제로 삽입 NULL 대신 합니다.|
+|모든 데이터 형식|형식 변환 실패로 인해 영향을 받는 열이 NULL로 설정 될 수 있습니다.|  
+|BINARY|길이가 0 인 이진 열을 만들면 실제로 255 바이트 이진 열이 반환 됩니다.|  
+|DATE|DATE 데이터 형식을 CONVERT 함수에서 다른 데이터 형식 (또는 자체)으로 변환할 수 없습니다.|  
+|DECIMAL (정확한 숫자)|지원되지 않습니다.|  
+|부동 소수점 데이터 형식|부동 소수점 숫자의 소수 자릿수는 Windows 제어판의 국가별 섹션에 설정 된 숫자 형식에 따라 제한 될 수 있습니다.|  
+|NUMERIC|최대 전체 자릿수와 28의 소수 자릿수를 지원 합니다.|  
+|timestamp|TIMESTAMP 데이터 형식은 CONVERT 함수에 의해 자기 자신으로 변환할 수 없습니다.|  
+|TINYINT|TINYINT 값은 항상 부호가 없습니다.|  
+|길이가 0 인 문자열|DBASE, Microsoft Excel, Paradox 또는 Textdriver를 사용 하는 경우 열에 길이가 0 인 문자열을 삽입 하면 실제로 NULL이 삽입 됩니다.|

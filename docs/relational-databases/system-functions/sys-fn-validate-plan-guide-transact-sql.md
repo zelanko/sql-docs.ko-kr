@@ -1,5 +1,5 @@
 ---
-title: sys.fn_validate_plan_guide (TRANSACT-SQL) | Microsoft Docs
+title: sys. fn_validate_plan_guide (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,20 +21,20 @@ ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a76835272ed86faeab807f97f6e8801985062733
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68059183"
 ---
-# <a name="sysfnvalidateplanguide-transact-sql"></a>sys.fn_validate_plan_guide(Transact-SQL)
+# <a name="sysfn_validate_plan_guide-transact-sql"></a>sys.fn_validate_plan_guide(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   지정된 계획 지침의 유효성을 확인할 수 있습니다. sys.fn_validate_plan_guide 함수는 계획 지침이 쿼리에 적용될 때 발생하는 첫 번째 오류 메시지를 반환합니다. 계획 지침이 유효하면 빈 행 집합이 반환됩니다. 데이터베이스의 물리적 디자인을 변경한 후에 계획 지침이 잘못될 수 있습니다. 예를 들어 계획 지침이 특정 인스턴스를 지정한 이후 해당 인스턴스가 삭제되면 쿼리가 더 이상 계획 지침을 사용할 수 없습니다.  
   
  계획 지침을 확인하여 최적화 프로그램이 수정하지 않고 해당 계획을 사용할 수 있는지 확인할 수 있습니다. 작동 결과에 따라 계획 지침을 삭제할지 결정하고 쿼리를 반환하거나 데이터베이스 디자인을 수정할 수 있습니다. 예를 들어 계획 지침에 지정된 인덱스를 다시 만들어서 이 작업을 수행할 수 있습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,16 +44,16 @@ sys.fn_validate_plan_guide ( plan_guide_id )
   
 ## <a name="arguments"></a>인수  
  *plan_guide_id*  
- 보고 되는 계획 지침의 ID를 [sys.plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md) 카탈로그 뷰에 있습니다. *plan_guide_id* 됩니다 **int** 기본값은 없습니다.  
+ 은 (는) [plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md) 카탈로그 뷰에 보고 된 계획 지침의 ID입니다. *plan_guide_id* 은 **int** 이며 기본값은 없습니다.  
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |msgnum|**int**|오류 메시지 ID입니다.|  
 |severity|**tinyint**|1에서 25 사이의 메시지 심각도입니다.|  
 |state|**smallint**|오류가 발생한 코드의 지점을 나타내는 오류의 상태 번호입니다.|  
-|message|**nvarchar(2048)**|오류의 메시지 텍스트입니다.|  
+|message|**nvarchar (2048)**|오류의 메시지 텍스트입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  OBJECT 범위 계획 지침에는 참조된 개체에 대한 VIEW DEFINITION 또는 ALTER 권한이 필요하고 계획 지침에 제공된 쿼리나 일괄 처리에 대한 권한이 필요합니다. 예를 들어 일괄 처리에 SELECT 문이 있으면 참조 개체의 SELECT 권한이 필요합니다.  
@@ -74,8 +74,8 @@ CROSS APPLY fn_validate_plan_guide(plan_guide_id);
 GO  
 ```  
   
-### <a name="b-testing-plan-guide-validation-before-implementing-a-change-to-the-database"></a>2\. 데이터베이스를 변경하기 전에 계획 지침 유효성 테스트  
- 다음 예에서는 명시적 트랜잭션을 사용하여 인덱스를 삭제합니다. `sys.fn_validate_plan_guide` 함수는이 작업에 데이터베이스에 있는 모든 계획 지침을 무효화 됩니다 있는지 여부를 확인 하려면 실행 합니다. 함수의 결과에 따라 `DROP INDEX` 문이 커밋되거나 트랜잭션이 롤백되고 인덱스가 삭제되지 않습니다.  
+### <a name="b-testing-plan-guide-validation-before-implementing-a-change-to-the-database"></a>B. 데이터베이스를 변경하기 전에 계획 지침 유효성 테스트  
+ 다음 예에서는 명시적 트랜잭션을 사용하여 인덱스를 삭제합니다. `sys.fn_validate_plan_guide` 함수를 실행 하 여이 작업이 데이터베이스의 계획 지침을 무효화 하는지 여부를 확인 합니다. 함수의 결과에 따라 `DROP INDEX` 문이 커밋되거나 트랜잭션이 롤백되고 인덱스가 삭제되지 않습니다.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -92,9 +92,9 @@ ELSE
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [계획 지침](../../relational-databases/performance/plan-guides.md)   
- [sp_create_plan_guide&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
+ [Transact-sql&#41;sp_create_plan_guide &#40;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sp_create_plan_guide_from_handle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)  
   
   

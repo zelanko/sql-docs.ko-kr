@@ -1,5 +1,5 @@
 ---
-title: DataSpace 개체 및 CreateObject 메서드 예제 (VBScript) | Microsoft Docs
+title: 스페이스 개체 및 CreateObject 메서드 예제 (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,17 +16,17 @@ ms.assetid: 12b0e160-5e5c-441f-bed7-ac0bd061e003
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7c9eb9a15094f6c08bacb9e063c707163548875a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964333"
 ---
 # <a name="dataspace-object-and-createobject-method-example-vbscript"></a>DataSpace 개체 및 CreateObject 메서드 예제(VBScript)
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
+>  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
   
- 다음 예제에서는 사용 하는 방법을 보여 줍니다 합니다 [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) 메서드는 [rds. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) 기본 비즈니스 개체를 사용 하 여 [업데이트할](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)합니다. 이 예제를 테스트 하려면에서 잘라내기 및 붙여넣기 사이 다음이 코드를 \<본문 > 및 \</b > 일반 HTML 태그를에서 문서화 하 고 이름을 **DataSpaceVBS.asp**합니다. ASP 스크립트에서 서버를 식별 합니다.  
+ 다음 예제에서는 RDS의 [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) 메서드를 사용 하는 방법을 보여 줍니다 [. ](../../../ado/reference/rds-api/dataspace-object-rds.md)기본 비즈니스 개체인 [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)를 사용 하 여 공간을 사용 합니다. 이 예를 테스트 하려면이 코드를 잘라내어 \<본문>와 \<> 태그 사이에 붙여넣고 **DataSpaceVBS**. ASP 스크립트는 서버를 식별 합니다.  
   
 ```  
 <!-- BeginDataSpaceVBS -->  
@@ -130,12 +130,12 @@ The <i>Query</i> Method of the RDSServer.DataFactory is used to bring back a Rec
 <!-- EndDataSpaceVBS -->  
 ```  
   
- 다음 예제에서는 사용 하는 방법을 보여 줍니다 합니다 **CreateObject** VbBusObj.VbBusObjCls 사용자 지정 비즈니스 개체의 인스턴스를 만드는 방법. 또한 웹 서버 이름을 식별 하기 위해 스크립트는 Active Server Pages를 사용 합니다.  
+ 다음 예에서는 **CreateObject** 메서드를 사용 하 여 사용자 지정 비즈니스 개체의 인스턴스를 만드는 방법을 보여 줍니다. VbBusObj. 또한 Active Server 페이지 스크립팅을 사용 하 여 웹 서버 이름을 식별 합니다.  
   
- 전체 예제를 보려면 샘플 응용 프로그램 선택기를 엽니다. 에 **클라이언트 계층** 열 선택 **Internet Explorer에서 VBScript**합니다. 에 **중간 계층** 열 선택 **사용자 지정 Visual Basic 비즈니스 개체**합니다.  
+ 전체 예제를 보려면 샘플 응용 프로그램 선택기를 엽니다. **클라이언트 계층** 열의 **Internet Explorer에서 VBScript**를 선택 합니다. **중간 계층** 열에서 **사용자 지정 Visual Basic 비즈니스 개체**를 선택 합니다.  
   
 > [!NOTE]
->  지정 해야 하는 경우 Windows 인증을 지 원하는 데이터 원본 공급자에 연결 하는, **Trusted_Connection = yes** 하거나 **Integrated Security = SSPI** 사용자 ID와 암호 대신 연결 문자열에 대 한 정보입니다.  
+>  Windows 인증을 지 원하는 데이터 원본 공급자에 연결 하는 경우 연결 문자열에 사용자 ID 및 암호 정보 대신 **Trusted_Connection = yes** 또는 **INTEGRATED Security = SSPI** 를 지정 해야 합니다.  
   
 ```  
 Sub Window_OnLoad()  
@@ -146,7 +146,7 @@ Sub Window_OnLoad()
 End Sub  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [CreateObject 메서드 (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)   
  [DataSpace 개체(RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)
 

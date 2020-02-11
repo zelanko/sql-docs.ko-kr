@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0ffd514fcdf5479f91e31d3bb5f261bba7ab4cd2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999645"
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>개체 탐색기를 사용하여 개체 관리
@@ -53,11 +53,11 @@ ms.locfileid: "62999645"
 ### <a name="start-powershell"></a>PowerShell 시작  
  개체 탐색기 트리에서 대부분의 폴더 및 개체를 마우스 오른쪽 단추로 클릭하고 **PowerShell 시작**을 선택하면 PowerShell 세션을 시작할 수 있습니다. 이렇게 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 지원이 활성화되고 개체 탐색기에서 마우스 오른쪽 단추로 클릭한 개체로 경로가 설정되어 PowerShell 세션이 시작됩니다. 그러면 대화형 PowerShell 환경에서 PowerShell 명령을 입력할 수 있습니다. 자세한 내용은 [SQL Server PowerShell](../../powershell/sql-server-powershell.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [개체 탐색기](object-explorer.md)   
  [개체 탐색기 열기 및 구성](open-and-configure-object-explorer.md)   
- [개체 탐색기에서 인스턴스에 연결 합니다.](connect-to-an-instance-from-object-explorer.md)   
- [개체 탐색기 정보 창](object-explorer-details-pane.md)   
+ [개체 탐색기에서 인스턴스에 연결](connect-to-an-instance-from-object-explorer.md)   
+ [개체 탐색기 세부 정보 창](object-explorer-details-pane.md)   
  [Management Studio의 사용자 지정 보고서](custom-reports-in-management-studio.md)  
   
   

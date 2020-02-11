@@ -1,5 +1,5 @@
 ---
-title: syspolicy_conditions (TRANSACT-SQL) | Microsoft Docs
+title: syspolicy_conditions (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,19 @@ ms.assetid: af97d26c-4bd5-4b08-be51-8419e3b2832c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ee0f269fcfda93733d36a0b7396fd72d16bc01d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68121165"
 ---
-# <a name="syspolicyconditions-transact-sql"></a>syspolicy_conditions(Transact-SQL)
+# <a name="syspolicy_conditions-transact-sql"></a>syspolicy_conditions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 각 정책 기반 관리 조건에 대해 한 행을 표시합니다. syspolicy_ conditions는 msdb 데이터베이스의 dbo 스키마에 속합니다. 다음 표에서는 syspolicy_conditions 뷰의 열을 설명합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |condition_id|**int**|이 조건의 ID입니다. 각 조건은 하나 이상의 조건 식의 컬렉션을 나타냅니다.|  
 |name|**sysname**|조건의 이름입니다.|  
@@ -49,8 +50,8 @@ ms.locfileid: "68121165"
 ## <a name="permissions"></a>사용 권한  
  msdb 데이터베이스에서 PolicyAdministratorRole 역할의 멤버 자격이 필요합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [정책 기반 관리를 사용하여 서버 관리](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
- [정책 기반 관리 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
+ [Transact-sql&#41;&#40;정책 기반 관리 뷰](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5cc8352b0d087b54a623cce892a05dfed29258b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68105258"
 ---
 # <a name="isancestor-mdx"></a>IsAncestor(MDX)
@@ -35,10 +35,10 @@ IsAncestor(Member_Expression1, Member_Expression2)
  멤버를 반환하는 유효한 MDX 식입니다.  
   
 ## <a name="remarks"></a>설명  
- 합니다 **IsAncestor** 함수에서 반환 **true** 지정 된 첫 번째 멤버가 지정 된 두 번째 멤버의 상위 항목이 면 합니다. 반환이 고, 그렇지 **false**합니다.  
+ **Isancestor** 함수는 지정 된 첫 번째 멤버가 지정 된 두 번째 멤버의 상위 항목인 경우 **true** 를 반환 합니다. 그렇지 않으면 함수는 **false**를 반환 합니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 반환 **true** 경우 [Date]. [ Fiscal]. CurrentMember는 2003 년 1 월의 상위 같습니다.  
+ 다음 예에서는 [Date] 인 경우 **true** 를 반환 합니다. [회계]. CurrentMember는 1 월 2003의 상위 항목입니다.  
   
  `WITH MEMBER MEASURES.ISANCESTORDEMO AS`  
   
@@ -50,8 +50,8 @@ IsAncestor(Member_Expression1, Member_Expression2)
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [상위 &#40;MDX&#41;](../mdx/ancestor-mdx.md)   
- [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

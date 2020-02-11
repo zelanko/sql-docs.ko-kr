@@ -11,17 +11,17 @@ ms.assetid: c609d0fb-787a-4b39-9673-332d411b3d63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 877dda7f387c8574c8ea2e91281b10b7563037b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68100660"
 ---
 # <a name="odbc-functions-and-the-cursor-library"></a>ODBC 함수 및 커서 라이브러리
 > [!IMPORTANT]  
->  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는이 기능을 사용 하지 말고 현재이 기능을 사용 하는 응용 프로그램은 수정 합니다. 드라이버의 커서 기능을 사용 하는 것이 좋습니다.  
+>  이 기능은 이후 버전의 Windows에서 제거 될 예정입니다. 새 개발 작업에서는이 기능을 사용 하지 않도록 하 고 현재이 기능을 사용 하는 응용 프로그램은 수정 하십시오. 드라이버의 커서 기능을 사용 하는 것이 좋습니다.  
   
- ODBC 커서 라이브러리는 연결을 사용할 때 드라이버 관리자 드라이버에서 대신 커서 라이브러리에서 함수를 호출 합니다. 커서 라이브러리 함수를 실행 또는 지정된 된 드라이버에서 호출 합니다.  
+ 연결에 ODBC 커서 라이브러리를 사용 하는 경우 드라이버 관리자는 드라이버 대신 커서 라이브러리의 함수를 호출 합니다. 커서 라이브러리는 함수를 실행 하거나 지정 된 드라이버에서 호출 합니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

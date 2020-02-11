@@ -1,5 +1,5 @@
 ---
-title: sp_create_removable (TRANSACT-SQL) | Microsoft Docs
+title: sp_create_removable (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,21 +18,21 @@ ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d6f842b96a9b179548688a4c655a566087ba1ebf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108622"
 ---
-# <a name="spcreateremovable-transact-sql"></a>sp_create_removable(Transact-SQL)
+# <a name="sp_create_removable-transact-sql"></a>sp_create_removable(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   이동식 미디어 데이터베이스를 작성합니다. 3개 이상(시스템 카탈로그 테이블용으로 하나, 트랜잭션 로그용으로 하나 및 데이터 테이블용으로 하나 이상)의 파일을 작성하고 이러한 파일에 데이터베이스를 놓습니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 사용 하는 것이 좋습니다 [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) 대신 합니다.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]대신 [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) 를 사용 하는 것이 좋습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -55,33 +55,33 @@ sp_create_removable
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @dbname = ] 'dbname'` 이동식 미디어에서 사용 하기 위해 만들 데이터베이스의 이름이입니다. *dbname* 됩니다 **sysname**합니다.  
+`[ @dbname = ] 'dbname'`이동식 미디어에서 사용 하기 위해 만들 데이터베이스의 이름입니다. *dbname* 은 **sysname**입니다.  
   
-`[ @syslogical = ] 'syslogical'` 시스템 카탈로그 테이블을 포함 하는 파일의 논리적 이름이입니다. *syslogical* 됩니다 **sysname**합니다.  
+`[ @syslogical = ] 'syslogical'`시스템 카탈로그 테이블을 포함 하는 파일의 논리적 이름입니다. *syslogical* 은 **sysname**입니다.  
   
-`[ @sysphysical = ] 'sysphysical'` 물리적 이름이입니다. 여기에는 시스템 카탈로그 테이블을 보유하고 있는 파일의 정규화된 경로가 포함됩니다. *sysphysical* 됩니다 **nvarchar(260)** 합니다.  
+`[ @sysphysical = ] 'sysphysical'`물리적 이름입니다. 여기에는 시스템 카탈로그 테이블을 보유하고 있는 파일의 정규화된 경로가 포함됩니다. *sysphysical* 은 **nvarchar (260)** 입니다.  
   
-`[ @syssize = ] syssize` 메가바이트를 시스템 카탈로그 테이블을 보유 하는 파일의 크기가입니다. *syssize* 됩니다 **int**합니다. 최소 *syssize* 1입니다.  
+`[ @syssize = ] syssize`시스템 카탈로그 테이블을 보유 하는 파일의 크기 (mb)입니다. *syssize* 는 **int**입니다. 최소 *syssize* 는 1입니다.  
   
-`[ @loglogical = ] 'loglogical'` 트랜잭션 로그를 포함 하는 파일의 논리적 이름이입니다. *loglogical* 됩니다 **sysname**합니다.  
+`[ @loglogical = ] 'loglogical'`트랜잭션 로그를 포함 하는 파일의 논리적 이름입니다. *loglogical* 은 **sysname**입니다.  
   
-`[ @logphysical = ] 'logphysical'` 물리적 이름이입니다. 여기에는 트랜잭션 로그가 있는 파일의 정규화된 경로가 포함됩니다. *logphysical* 됩니다 **nvarchar(260)** 합니다.  
+`[ @logphysical = ] 'logphysical'`물리적 이름입니다. 여기에는 트랜잭션 로그가 있는 파일의 정규화된 경로가 포함됩니다. *logphysical* 는 **nvarchar (260)** 입니다.  
   
-`[ @logsize = ] logsize` (메가바이트) 트랜잭션 로그를 포함 하는 파일의 크기가입니다. *logsize* 됩니다 **int**합니다. 최소 *logsize* 1입니다.  
+`[ @logsize = ] logsize`트랜잭션 로그를 포함 하는 파일의 크기 (mb)입니다. *logsize* 는 **int**입니다. 최소 *logsize* 는 1입니다.  
   
-`[ @datalogical1 = ] 'datalogical'` 데이터 테이블이 포함 된 파일의 논리적 이름이입니다. *datalogical* 됩니다 **sysname**합니다.  
+`[ @datalogical1 = ] 'datalogical'`데이터 테이블을 포함 하는 파일의 논리적 이름입니다. *datalogical* 는 **sysname**입니다.  
   
  1개에서 16개까지의 데이터 파일이 있어야 합니다. 일반적으로 데이터베이스가 대형일 것으로 예상되며 여러 디스크에 배포되어야 할 때 두 개 이상의 데이터 파일이 작성됩니다.  
   
-`[ @dataphysical1 = ] 'dataphysical'` 물리적 이름이입니다. 여기에는 데이터 테이블을 포함하는 파일의 정규화된 경로가 포함됩니다. *dataphysical* 됩니다 **nvarchar(260)** 합니다.  
+`[ @dataphysical1 = ] 'dataphysical'`물리적 이름입니다. 여기에는 데이터 테이블을 포함하는 파일의 정규화된 경로가 포함됩니다. *dataphysical* 은 **nvarchar (260)** 입니다.  
   
-`[ @datasize1 = ] 'datasize'` (메가바이트) 데이터 테이블을 포함 하는 파일의 크기가입니다. *datasize* 됩니다 **int**합니다. 최소 *datasize* 1입니다.  
+`[ @datasize1 = ] 'datasize'`데이터 테이블을 포함 하는 파일의 크기 (mb)입니다. *datasize* 는 **int**입니다. 최소 *datasize* 는 1입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="remarks"></a>설명  
  CD 등과 같은 이동식 미디어에 데이터베이스를 복사하여 다른 사용자에게 배포하고자 하는 경우에는 이 저장 프로시저를 사용하십시오.  
@@ -96,7 +96,7 @@ sp_create_removable
   
 |데이터베이스에 대한 작업|파일에 사용 권한 설정|  
 |---------------------------|------------------------------|  
-|새 파일을 추가하기 위해 수정됨|만든 날짜|  
+|새 파일을 추가하기 위해 수정됨|생성일|  
 |백업|연결|  
 |복원|분리|  
   
@@ -118,14 +118,14 @@ EXEC sp_create_removable 'inventory',
 10;  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [데이터베이스 분리 및 연결&#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [sp_certify_removable &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-certify-removable-transact-sql.md)   
- [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [sp_dbremove &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
- [sp_detach_db&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
- [sp_helpfile&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
- [sp_helpfilegroup&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [데이터베이스 분리 및 연결 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
+ [Transact-sql&#41;sp_certify_removable &#40;](../../relational-databases/system-stored-procedures/sp-certify-removable-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [Transact-sql&#41;sp_dbremove &#40;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
+ [Transact-sql&#41;sp_detach_db &#40;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
+ [Transact-sql&#41;sp_helpfile &#40;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
+ [Transact-sql&#41;sp_helpfilegroup &#40;](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

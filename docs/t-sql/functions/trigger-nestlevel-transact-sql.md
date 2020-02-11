@@ -20,18 +20,18 @@ ms.assetid: 6a33e74a-0cf9-4ae1-a1e4-4a137a3ea39d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6215824f230001cb9d7add20d32c85780a65ede6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68098812"
 ---
-# <a name="triggernestlevel-transact-sql"></a>TRIGGER_NESTLEVEL(Transact-SQL)
+# <a name="trigger_nestlevel-transact-sql"></a>TRIGGER_NESTLEVEL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   트리거를 발생시킨 문에 대해 실행된 트리거의 수를 반환합니다. TRIGGER_NESTLEVEL는 DML 및 DDL 트리거에서 현재 중첩 수준을 확인하는 데 사용됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -50,7 +50,7 @@ TRIGGER_NESTLEVEL ( [ object_id ] , [ 'trigger_type' ] , [ 'trigger_event_catego
  **'** *trigger_event_category* **'**  
  TRIGGER_NESTLEVEL을 DML 또는 DDL 트리거 중 어디에 적용할지를 지정합니다. DML 트리거에 대해 **DML**을 지정하며 DDL 트리거에는 **DDL**을 지정합니다. *trigger_event_category*가 지정된 경우에는 *trigger_type*도 지정해야 합니다. DDL 트리거는 AFTER 트리거만 가능하므로 **AFTER**만 **DDL**을 함께 지정할 수 있습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  매개 변수를 지정하지 않은 경우 TRIGGER_NESTLEVEL은 호출 스택에 있는 총 트리거 수를 반환합니다. 여기에는 해당 트리거도 포함됩니다. 트리거가 다른 트리거를 발생시키면서 명령을 실행하거나 트리거를 연속적으로 발생시키는 경우 매개 변수를 생략할 수 있습니다.  
   
  호출 스택에서 특정 트리거 형식 및 이벤트 범주에 대한 총 트리거 수를 반환하려면 *object_id* = 0을 지정합니다.  
@@ -61,14 +61,14 @@ TRIGGER_NESTLEVEL ( [ object_id ] , [ 'trigger_type' ] , [ 'trigger_event_catego
   
 ## <a name="examples"></a>예  
   
-### <a name="a-testing-the-nesting-level-of-a-specific-dml-trigger"></a>1\. 특정 DML 트리거의 중첩 수준 테스트  
+### <a name="a-testing-the-nesting-level-of-a-specific-dml-trigger"></a>A. 특정 DML 트리거의 중첩 수준 테스트  
   
 ```  
 IF ( (SELECT TRIGGER_NESTLEVEL( OBJECT_ID('xyz') , 'AFTER' , 'DML' ) ) > 5 )  
    RAISERROR('Trigger xyz nested more than 5 levels.',16,-1)  
 ```  
   
-### <a name="b-testing-the-nesting-level-of-a-specific-ddl-trigger"></a>2\. 특정 DML 트리거의 중첩 수준 테스트  
+### <a name="b-testing-the-nesting-level-of-a-specific-ddl-trigger"></a>B. 특정 DML 트리거의 중첩 수준 테스트  
   
 ```  
 IF ( ( SELECT TRIGGER_NESTLEVEL ( ( SELECT object_id FROM sys.triggers  

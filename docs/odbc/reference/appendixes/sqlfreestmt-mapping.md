@@ -14,23 +14,23 @@ ms.assetid: 267d95f2-4f0c-47ab-9411-5afe105215a2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a92af35d8a1b1e98a484c69d7d2e66bf5bef3196
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086085"
 ---
 # <a name="sqlfreestmt-mapping"></a>SQLFreeStmt 매핑
-응용 프로그램을 호출할 때 **SQLFreeStmt** 사용 하 여는 *옵션* ODBC 통해 SQL_DROP 인수의 *3.x* 드라이버에 대 한 호출  
+응용 *프로그램이 ODBC 3.x* 드라이버를 통해 SQL_DROP의 *Option* 인수를 사용 하 여 **SQLFreeStmt** 를 호출 하는 경우에 대 한 호출은  
   
 ```  
 SQLFreeStmt(hstmt, SQL_DROP)   
 ```  
   
- 매핑되는  
+ 매핑 대상  
   
 ```  
 SQLFreeHandle(SQL_HANDLE_STMT,Handle)  
 ```  
   
- 사용 하 여 합니다 *처리할* 인수는 값으로 설정 *hstmt*합니다.
+ *핸들* 인수가 *hstmt*의 값으로 설정 된입니다.

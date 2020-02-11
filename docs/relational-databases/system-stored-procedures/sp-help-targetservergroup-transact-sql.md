@@ -1,5 +1,5 @@
 ---
-title: sp_help_targetservergroup (TRANSACT-SQL) | Microsoft Docs
+title: sp_help_targetservergroup (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: ec3a4a68-b591-431c-9518-053ede522d0c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 63a3d9daa48bb98408c3f0d9b8282e8083849cf0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085069"
 ---
-# <a name="sphelptargetservergroup-transact-sql"></a>sp_help_targetservergroup(Transact-SQL)
+# <a name="sp_help_targetservergroup-transact-sql"></a>sp_help_targetservergroup(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   지정된 그룹의 모든 대상 서버를 나열합니다. 그룹을 지정하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 모든 대상 서버 그룹에 관한 정보를 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,20 +40,20 @@ sp_help_targetservergroup
 ```  
   
 ## <a name="argument"></a>인수  
-`[ @name = ] 'name'` 정보를 반환 하는 대상 서버 그룹의 이름이입니다. *이름* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @name = ] 'name'`정보를 반환할 대상 서버 그룹의 이름입니다. *name* 은 **sysname**이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**servergroup_id**|**int**|서버 그룹의 ID 번호입니다.|  
 |**name**|**sysname**|서버 그룹의 이름입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
- 이 프로시저를 실행 하는 권한은 기본적으로 **sysadmin** 고정된 서버 역할입니다.  
+ 이 프로시저를 실행할 수 있는 권한은 기본적으로 **sysadmin** 고정 서버 역할에 대 한 것입니다.  
   
 ## <a name="examples"></a>예  
   
@@ -68,7 +68,7 @@ EXEC dbo.sp_help_targetservergroup ;
 GO  
 ```  
   
-### <a name="b-listing-information-for-a-specific-target-server-group"></a>2\. 특정 대상 서버 그룹에 대한 정보 나열  
+### <a name="b-listing-information-for-a-specific-target-server-group"></a>B. 특정 대상 서버 그룹에 대한 정보 나열  
  다음 예에서는 `Servers Maintaining Customer Information` 대상 서버 그룹에 대한 정보를 나열합니다.  
   
 ```  
@@ -80,10 +80,10 @@ EXEC dbo.sp_help_targetservergroup
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [sp_add_targetservergroup &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
- [sp_delete_targetservergroup &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
- [sp_update_targetservergroup &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;sp_add_targetservergroup &#40;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
+ [Transact-sql&#41;sp_delete_targetservergroup &#40;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
+ [Transact-sql&#41;sp_update_targetservergroup &#40;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
