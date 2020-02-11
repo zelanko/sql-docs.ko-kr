@@ -13,18 +13,18 @@ ms.assetid: 40af6e70-2a37-480f-aadc-92095d450af7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d06cf8343bf100077fccc34645ccb14dbdbfaae6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926873"
 ---
 # <a name="appendix-c-programming-with-ado-in-development-environments"></a>부록 C: 개발 환경에서 ADO를 사용한 프로그래밍
-ADO는 Microsoft Visual Basic, VBScript, JScript 및 시각적 개체를 포함 하 여 여러 프로그래밍 언어를 사용 하 여 사용할 수 있는 COM 자동화 인터페이스 구성 요소 C++입니다. ADO의 버전을 사용 하 여 이러한 도구 및 Microsoft Office 및 Microsoft SQL Server와 같은 다른 응용 프로그램의 각 설치 됩니다.
+ADO는 Microsoft Visual Basic, VBScript, JScript 및 Visual C++를 비롯 한 다양 한 프로그래밍 언어에 사용할 수 있는 COM 자동화 인터페이스 구성 요소입니다. 이러한 도구 및 기타 응용 프로그램 (예: Microsoft Office 및 Microsoft SQL Server)과 함께 ADO 버전이 설치 됩니다.
 
- ADO 용 라이브러리는 msado15.dll 이며 프로그램 ID (ProgID) 접두사 "ADODB." 예를 들어 ADO 명시적으로 가리킵니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)를 사용 하 여 `ADODB.Recordset`입니다.
+ ADO 용 라이브러리는 msado15.dll이 고 program ID (ProgID) 접두사는 "ADODB"입니다. 예를 들어 ADO [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)을 명시적으로 참조 하려면를 `ADODB.Recordset`사용 합니다.
 
- ADO 사용 하 여 다양 한 개발 환경에서 프로그래밍 하는 방법에 대 한 자세한 내용은 다음 항목을 참조 합니다.
+ 다양 한 개발 환경에서 ADO를 사용 하 여 프로그래밍 하는 방법에 대 한 자세한 내용은 다음 항목을 참조 하십시오.
 
 -   [Microsoft Visual Basic에서 ADO 사용](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)
 
@@ -32,5 +32,5 @@ ADO는 Microsoft Visual Basic, VBScript, JScript 및 시각적 개체를 포함 
 
 -   [Microsoft Visual C++으로 ADO 사용](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)
 
-## <a name="see-also"></a>관련 항목
- [ADO API 참조](../../../ado/reference/ado-api/ado-api-reference.md) [부록 d: ADO 샘플](../../../ado/guide/appendixes/appendix-d-ado-samples.md) [RDS 구성](../../../ado/guide/remote-data-service/configuring-rds.md) [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md) [부록 a: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md) [ADO 기록](../../../ado/guide/ado-history.md)
+## <a name="see-also"></a>참고 항목
+ [ADO API 참조](../../../ado/reference/ado-api/ado-api-reference.md) [부록 D: ado 샘플](../../../ado/guide/appendixes/appendix-d-ado-samples.md) [RDS](../../../ado/guide/remote-data-service/configuring-rds.md) [Microsoft ADO(ActiveX Data Objects) (Ado)](../../../ado/microsoft-activex-data-objects-ado.md) [부록 a: Providers](../../../ado/guide/appendixes/appendix-a-providers.md) [ado 기록](../../../ado/guide/ado-history.md) 구성

@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fe860a52cb847aec473763c02f24348701766478
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62772206"
 ---
 # <a name="advanced-editor"></a>고급 편집기
@@ -42,7 +42,7 @@ ms.locfileid: "62772206"
   
  구성 요소에 따라 다른 속성이 표시됩니다. **고급 편집기**에 표시될 수 있는 속성에 대한 자세한 내용은 다음 항목을 참조하세요.  
   
--   [공용 속성](../../2014/integration-services/common-properties.md)  
+-   [Common Properties](../../2014/integration-services/common-properties.md)  
   
 -   [변환 사용자 지정 속성](data-flow/transformations/transformation-custom-properties.md)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62772206"
   
 -   [Integration Services 변환](data-flow/transformations/integration-services-transformations.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   
