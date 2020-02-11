@@ -1,5 +1,5 @@
 ---
-title: Filestream 및 FileTable 동적 관리 뷰 (TRANSACT-SQL) | Microsoft Docs
+title: Filestream 및 FileTable 동적 관리 뷰 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ ms.assetid: e50a135d-6644-42a4-a0df-1c7a2b722051
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bbe626428e0b7ffcf8c3fe4153c8b7c4938a4246
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130797"
 ---
 # <a name="filestream-and-filetable-dynamic-management-views-transact-sql"></a>Filestream 및 FileTable 동적 관리 뷰(Transact-SQL)
@@ -36,9 +36,9 @@ ms.locfileid: "68130797"
  [sys.dm_filestream_non_transacted_handles&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)  
  FileTable 데이터에 대한 현재 열려 있는 비트랜잭션 파일 핸들을 표시합니다.  
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 [Filestream](../../relational-databases/blob/filestream-sql-server.md)
 <br>[Filetable](../../relational-databases/blob/filetables-sql-server.md)
 <br>[Filestream 및 FileTable 카탈로그 뷰(Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
-<br>[Filestream 및 FileTable 시스템 저장 프로시저(Transact-SQL)](../system-stored-procedures/filestream-and-filetable-system-stored-procedures.md)
+<br>[Filestream 및 FileTable 시스템 저장 프로시저 (Transact-sql)](../system-stored-procedures/filestream-and-filetable-system-stored-procedures.md)
   

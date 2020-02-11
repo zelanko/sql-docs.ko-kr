@@ -13,15 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ea24081f4b3a41211f3bd8d6bba52aaec8b74fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62868745"
 ---
-# <a name="mssqlserver3168"></a>MSSQLSERVER_3168
+# <a name="mssqlserver_3168"></a>MSSQLSERVER_3168
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -50,7 +50,7 @@ ms.locfileid: "62868745"
 ## <a name="user-action"></a>사용자 동작  
  이 시나리오에는 복원 프로세스가 마지막 수단으로 이미 시도되었습니다. 자세한 내용은 "[You cannot restore system database backups to a different build of SQL Server](https://support.microsoft.com/kb/264474)(시스템 데이터베이스 백업을 SQL Server의 다른 빌드로 복원할 수 없습니다.)"를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [시스템 데이터베이스 백업 및 복원&#40;SQL Server&#41;](../backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
   
   

@@ -13,16 +13,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cc291a9677efe2acf875f5b5a37d9153fcb3eee3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676925"
 ---
 # <a name="add-non-sql-server-subscriber"></a>SQL Server 이외 구독자 추가
   복제에서는 Oracle 및 IBM DB2 구독자의 스냅샷 및 트랜잭션 게시에 대한 밀어넣기 구독 생성을 지원합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **추가할 구독자 유형**  
  Oracle 구독자 또는 IBM DB2 구독자를 선택합니다. 이러한 구독자 지원에 대한 자세한 내용은 [SQL Server 이외 구독자](non-sql/non-sql-server-subscribers.md)를 참조하세요.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62676925"
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 배포 에이전트가 구독을 초기화할 때까지 데이터 원본 이름과 연결 문자열의 유효성을 검사하지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 이외 구독자에 대한 구독 만들기](create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)   
  [게시 구독](subscribe-to-publications.md)  

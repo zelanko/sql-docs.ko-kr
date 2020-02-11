@@ -13,23 +13,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 169ab149df11de12e5cf5452b0f8176737fb5dba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62510015"
 ---
 # <a name="windows-dialog-box-microsoft-document-explorer-help"></a>창 대화 상자(Microsoft Document Explorer 도움말)
   이 대화 상자를 사용하여 편집기와 디자이너에서 열리는 문서를 표시하고 닫으며 정렬할 수 있습니다. **창** 메뉴에서 **창** 을 클릭하여 이 대화 상자를 표시할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **이름**  
  현재 선택한 활성 항목과 함께 문서 및 도구 창의 이름을 표시합니다.  
   
- **경로**  
+ **Path**  
  문서의 전체 경로를 표시합니다. 창에는 대개 경로가 없습니다.  
   
- **Activate**  
+ **활성화**  
  선택한 문서 또는 도구 창을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Document Explorer의 활성 항목으로 만듭니다.  
   
  **저장**  

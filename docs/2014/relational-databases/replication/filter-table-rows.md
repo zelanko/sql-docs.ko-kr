@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eafa0dc2be5ee9ceffd86185399168589fdd8b1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721225"
 ---
 # <a name="filter-table-rows"></a>테이블 행 필터
@@ -30,7 +30,7 @@ ms.locfileid: "62721225"
   
  필터링 옵션에 대한 자세한 내용은 [게시된 데이터 필터링](publish/filter-published-data.md)을 참조하세요. **게시 속성** 대화 상자의 **행 필터** 페이지에서 필터링을 변경할 수 있습니다.  
   
- 애플리케이션 성능을 최대화하고 필요한 원격 저장소를 줄이거나 특정 구독자가 사용할 수 있는 데이터를 제한하려면 필요한 데이터만 게시해야 합니다. 게시에는 필터링되지 않은 테이블과 필터링된 테이블이 모두 포함될 수 있습니다. 예를 들어 필터링되지 않은 전체 회사 제품 테이블을 포함할 수도 있고 행 필터를 사용하여 특정 영역으로 필터링된 고객 테이블을 제공할 수 있습니다. 게시된 데이터를 필터링하여 다음 작업을 수행할 수 있습니다.  
+ 애플리케이션 성능을 최대화하고 필요한 원격 스토리지를 줄이거나 특정 구독자가 사용할 수 있는 데이터를 제한하려면 필요한 데이터만 게시해야 합니다. 게시에는 필터링되지 않은 테이블과 필터링된 테이블이 모두 포함될 수 있습니다. 예를 들어 필터링되지 않은 전체 회사 제품 테이블을 포함할 수도 있고 행 필터를 사용하여 특정 영역으로 필터링된 고객 테이블을 제공할 수 있습니다. 게시된 데이터를 필터링하여 다음 작업을 수행할 수 있습니다.  
   
 -   네트워크로 보내지는 데이터 양을 최소화합니다.  
   
@@ -44,12 +44,12 @@ ms.locfileid: "62721225"
   
  필터는 행 식별을 위해 복제에 사용된 `rowguidcol`을 포함하지 않아야 합니다. 기본적으로 이 열은 병합 복제를 설정할 때 추가된 열이며 이름은 **rowguid**입니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **필터링된 테이블**  
  이 창은 게시의 테이블 아티클에 필터를 추가하면 추가된 필터로 채워집니다. 행 필터가 있는 테이블은 창에서 최상위 노드로 표시됩니다. 병합 게시의 경우 조인 필터를 통해 필터링이 확장된 테이블은 자식 노드로 표시됩니다.  
   
  **추가**  
- **추가** 를 클릭하면 테이블 아티클을 필터링할 수 있는 대화 상자가 시작됩니다. 스냅샷 또는 트랜잭션 게시에 대해 **추가** 를 클릭하면 대화 상자가 바로 시작됩니다. 병합 게시에 대해 **추가**를 클릭하면 **필터 추가**, **선택한 필터 확장을 위해 조인 추가**, **자동으로 필터 생성**의 세 가지 선택 사항이 표시됩니다.  
+ **추가** 를 클릭하면 테이블 아티클을 필터링할 수 있는 대화 상자가 시작됩니다. 스냅샷 또는 트랜잭션 게시에 대해 **추가** 를 클릭하면 대화 상자가 바로 시작됩니다. 병합 게시에 대해 **추가** 를 클릭하면 **필터 추가**, **선택한 필터 확장을 위해 조인 추가**, **자동으로 필터 생성**의 세 가지 선택이 표시됩니다.  
   
 -   **필터 추가** 를 선택하면 **필터 추가** 대화 상자가 시작됩니다. 이 대화 상자를 사용하여 테이블 아티클에 행 필터를 적용할 수 있습니다. 예를 들어 **필터 추가** 대화 상자에서 고객 데이터가 들어 있는 테이블을 구독자로 복제할 때 프랑스 고객의 데이터만 포함되도록 지정할 수 있습니다.  
   
@@ -76,15 +76,15 @@ ms.locfileid: "62721225"
   
  창에서 바로 가기 노드를 선택하고 **테이블 찾기**를 클릭합니다. 창이 확장되고 해당 테이블이 강조 표시됩니다. 바로 가기 노드를 선택하지 않고 **테이블 찾기** 를 클릭하면 **테이블 찾기** 대화 상자가 시작됩니다.  
   
- **Assert**  
+ **Filter**  
  필터 창에서 선택한 필터의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 정의를 포함합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Create a Publication](publish/create-a-publication.md)   
  [게시 속성 보기 및 수정](publish/view-and-modify-publication-properties.md)   
  [게시된 데이터 필터링](publish/filter-published-data.md)   
  [Join Filters](merge/join-filters.md)   
- [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)   
+ [매개 변수가 있는 행 필터](merge/parameterized-filters-parameterized-row-filters.md)   
  [데이터 및 데이터베이스 개체 게시](publish/publish-data-and-database-objects.md)  
   
   

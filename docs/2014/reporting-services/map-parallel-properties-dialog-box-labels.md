@@ -1,5 +1,5 @@
 ---
-title: 지도 위 도선 속성 대화 상자, 레이블 | Microsoft Docs
+title: 지도 평행 속성 대화 상자, 레이블 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -14,23 +14,23 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 03ffd44d2d119554537898f960d6befedd04dbe3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108252"
 ---
 # <a name="map-parallel-properties-dialog-box-labels"></a>지도 위도선 속성 대화 상자, 레이블
-  사용 된 **MapParallel 속성** 지도 뷰포트의 가로 격자 눈금에 대 한 레이블 옵션을 변경 하려면 대화 상자. 위도선은 뷰포트에 지정된 좌표계에 따라 다음 값을 나타냅니다.  
+  **Mapparallel 속성** 대화 상자를 사용 하 여 지도 뷰포트의 가로 눈금에 대 한 레이블 옵션을 변경할 수 있습니다. 위도선은 뷰포트에 지정된 좌표계에 따라 다음 값을 나타냅니다.  
   
--   **평면입니다.** X 좌표입니다.  
+-   **평면.** X 좌표입니다.  
   
--   **Geographic.** 현재 도법의 위도입니다.  
+-   **지역적.** 현재 도법의 위도입니다.  
   
  옵션의 값을 설정하는 식을 편집하려면 **식** 단추(*fx*)를 클릭합니다.  
   
-## <a name="options"></a>변수  
- **간격**  
+## <a name="options"></a>옵션  
+ **간격은**  
  위도선 간의 간격을 지정하는 정수 값(도)을 입력합니다. 기본적으로 **자동** 이 선택되어 있습니다. 이 옵션이 **자동**으로 설정되어 있으면 지도 데이터 세트의 데이터에 따라 값이 결정됩니다.  
   
  **레이블 표시**  
@@ -39,17 +39,17 @@ ms.locfileid: "66108252"
  **배치**  
  뷰포트의 위쪽, 가운데 및 아래쪽과 상대적으로 레이블을 표시할 위치를 선택합니다. 기본 배치는 **가까이**입니다.  
   
--   **가까이** 위쪽에 레이블을 표시합니다.  
+-   **Near** 위쪽에 레이블을 표시 합니다.  
   
--   **1/4** 위쪽과 가운데의 중간에 레이블을 표시합니다.  
+-   **1 분기** 위쪽과 가운데의 중간에 레이블을 표시 합니다.  
   
--   **가운데** 가운데에 레이블을 표시합니다.  
+-   **가운데** 가운데에 레이블을 표시 합니다.  
   
--   **3/4** 가운데와 아래쪽의 중간에 레이블을 표시합니다.  
+-   **3 분기** 가운데와 아래쪽의 중간에 레이블을 표시 합니다.  
   
--   **멀리** 아래쪽에 레이블을 표시합니다.  
+-   **Far** 아래쪽에 레이블을 표시 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [지도&#40;보고서 작성기 및 SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
  [지도 범례, 색 눈금 및 관련 규칙 변경&#40;보고서 작성기 및 SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   

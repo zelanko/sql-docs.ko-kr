@@ -1,5 +1,5 @@
 ---
-title: 추가 하 고 스케일 아웃 배포 (SSRS 구성 관리자)에 대 한 암호화 키를 제거 합니다. | Microsoft Docs
+title: 스케일 아웃 배포의 암호화 키 추가 및 제거 (SSRS Configuration Manager) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b935a74dba93596e734537f62f2ccafd192f3523
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108920"
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment-ssrs-configuration-manager"></a>확장 배포의 암호화 키 추가 및 제거(SSRS 구성 관리자)
@@ -37,7 +37,10 @@ ms.locfileid: "66108920"
   
 1.  이미 보고서 서버 스케일 아웃 배포의 멤버인 보고서 서버를 호스트하는 컴퓨터에서 로컬로 **rskeymgmt.exe** 를 실행합니다.  
   
-2.  `-j` 인수를 사용하여 보고서 서버를 보고서 서버 데이터베이스에 참여시킵니다. `-m` 및 `-n` 인수를 사용하여 배포에 추가할 원격 보고서 서버 인스턴스를 지정합니다. `-u` 및 `-v` 인수를 사용하여 원격 컴퓨터의 관리자 계정을 지정합니다. 같은 컴퓨터에서 여러 보고서 서버 인스턴스를 사용하여 스케일 아웃 배포를 만드는 경우 사용하는 구문이 약간 다릅니다. 사용해야 할 구문에 대한 자세한 내용은 [rskeymgmt 유틸리티&#40;SSRS&#41;](../tools/rskeymgmt-utility-ssrs.md)를 참조하세요.  
+2.  
+  `-j` 인수를 사용하여 보고서 서버를 보고서 서버 데이터베이스에 참여시킵니다. 
+  `-m` 및 `-n` 인수를 사용하여 배포에 추가할 원격 보고서 서버 인스턴스를 지정합니다. 
+  `-u` 및 `-v` 인수를 사용하여 원격 컴퓨터의 관리자 계정을 지정합니다. 같은 컴퓨터에서 여러 보고서 서버 인스턴스를 사용하여 스케일 아웃 배포를 만드는 경우 사용하는 구문이 약간 다릅니다. 사용해야 할 구문에 대한 자세한 내용은 [rskeymgmt 유틸리티&#40;SSRS&#41;](../tools/rskeymgmt-utility-ssrs.md)를 참조하세요.  
   
      다음 예에서는 원격 보고서 서버를 스케일 아웃 배포에 조인하려는 경우 지정해야 하는 인수에 대해 설명합니다. 원격 컴퓨터에서 관리자 권한이 있으면 자격 증명을 생략해도 됩니다.  
   
@@ -53,15 +56,15 @@ ms.locfileid: "66108920"
   
 2.  **rskeymgmt.exe**를 실행합니다. 보고서 서버 스케일 아웃 배포에 속하는 어떠한 보고서 서버에 대해서도 이 프로그램을 실행할 수 있습니다.  
   
-3.  `-r` 인수를 사용하여 스케일 아웃 배포에서 보고서 서버 인스턴스를 해제합니다. 다음은 인수 지정 예입니다.  
+3.  ph x="1" /&gt; 인수를 사용하여 스케일 아웃 배포에서 보고서 서버 인스턴스를 해제합니다. 다음은 인수 지정 예입니다.  
   
     ```  
     rskeymgmt -r <installation ID>  
     ```  
   
- 이 단계를 수행하면 스케일 아웃 배포에서 보고서 서버가 제거되지만, 보고서 서버에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스의 설치가 제거되지는 않습니다. 스케일 아웃 배포에서 보고서 서버를 제거한 후 해당 서버에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]가 더 이상 필요하지 않은 경우 서버에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 제거할 수 있습니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 [SQL Server의 기존 인스턴스 제거&#40;설치 프로그램&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)를 참조하세요.  
+ 이 단계를 수행하면 스케일 아웃 배포에서 보고서 서버가 제거되지만, 보고서 서버에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스의 설치가 제거되지는 않습니다. 스케일 아웃 배포에서 보고서 서버를 제거한 후 해당 서버에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]가 더 이상 필요하지 않은 경우 서버에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 제거할 수 있습니다. 자세한 내용은 [ 온라인 설명서에서 ](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)SQL Server의 기존 인스턴스 제거&#40;설치 프로그램&#41;[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [암호화 키 구성 및 관리&#40;SSRS 구성 관리자&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
  [보고서 서버 초기화&#40;SSRS 구성 관리자&#41;](ssrs-encryption-keys-initialize-a-report-server.md)  
   

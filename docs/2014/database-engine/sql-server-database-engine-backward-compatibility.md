@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: dc5681577b051ebb26959856a9eb775ae2ae409f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62842850"
 ---
 # <a name="sql-server-database-engine-backward-compatibility"></a>SQL Server 데이터베이스 엔진의 이전 버전과의 호환성
@@ -27,9 +27,10 @@ ms.locfileid: "62842850"
   
 |항목|Description|  
 |-----------|-----------------|  
-|[SQL Server 2014에서 사용되지 않는 데이터베이스 엔진 기능](deprecated-database-engine-features-in-sql-server-2016.md)|이 릴리스에서 더 이상 지원되지 않는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 기능.|  
+|[SQL Server 2014 이후에는 지원되지 않는 데이터베이스 엔진 기능](deprecated-database-engine-features-in-sql-server-2016.md)|이 릴리스에서 더 이상 지원되지 않는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 기능.|  
 |[SQL Server 2014에서 지원되지 않는 데이터베이스 엔진 기능](discontinued-database-engine-functionality-in-sql-server-2016.md)|이 릴리스 이후에는 지원되지 않는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 기능|  
-|[SQL Server 2014 데이터베이스 엔진 기능의 주요 변경](breaking-changes-to-database-engine-features-in-sql-server-2016.md)|[!INCLUDE[ssDE](../includes/ssde-md.md)] 기능 변경 내용|  
+|[SQL Server 2014 데이터베이스 엔진 기능의 주요 변경](breaking-changes-to-database-engine-features-in-sql-server-2016.md)|
+  [!INCLUDE[ssDE](../includes/ssde-md.md)] 기능 변경 내용|  
 |[SQL Server 2014 데이터베이스 엔진 기능의 동작 변경 내용](../../2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014.md)|이 릴리스에서 변경된 기타 데이터베이스 기능|  
   
   

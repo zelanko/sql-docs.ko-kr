@@ -11,15 +11,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ff7116a6f6dc9407e5782ce3f5d9bce23e527380
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067879"
 ---
-# <a name="localdberrorunknownerrorcode"></a>LOCALDB_ERROR_UNKNOWN_ERROR_CODE
+# <a name="localdb_error_unknown_error_code"></a>LOCALDB_ERROR_UNKNOWN_ERROR_CODE
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  

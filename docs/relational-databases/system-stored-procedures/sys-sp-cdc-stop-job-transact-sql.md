@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_stop_job (TRANSACT-SQL) | Microsoft Docs
+title: sys. sp_cdc_stop_job (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ ms.assetid: 421fc21c-c7a4-407c-8b31-359273b68c63
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 3c166fe18ad7fdd651f07025aa7deb6ea2f599e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905150"
 ---
-# <a name="sysspcdcstopjob-transact-sql"></a>sys.sp_cdc_stop_job(Transact-SQL)
+# <a name="syssp_cdc_stop_job-transact-sql"></a>sys.sp_cdc_stop_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   현재 데이터베이스의 변경 데이터 캡처 정리 또는 캡처 작업을 중지합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,13 +41,13 @@ sys.sp_cdc_stop_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ [ @job_type = ] 'job_type_' ]` 추가할 작업 유형입니다. *job_type* 됩니다 **nvarchar(20)** 이며 기본값은 **캡처**합니다. 유효한 입력은 **캡처** 하 고 **정리**합니다.  
+`[ [ @job_type = ] 'job_type_' ]`추가할 작업 유형입니다. *job_type* 은 **nvarchar (20)** 이며 기본값은 **capture**입니다. 올바른 입력은 **캡처** 및 **정리**입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="remarks"></a>설명  
  sys.sp_cdc_stop_job을 사용하면 관리자가 캡처 작업이나 정리 작업을 명시적으로 중지할 수 있습니다.  
@@ -65,8 +65,8 @@ EXEC sys.sp_cdc_stop_job @job_type = N'capture';
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [dbo.cdc_jobs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
- [sys.sp_cdc_start_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-start-job-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [cdc_jobs &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
+ [sp_cdc_start_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-start-job-transact-sql.md)  
   
   

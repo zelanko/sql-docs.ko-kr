@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 44537263a785ed32a9618f352cdd402d412dc3b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097202"
 ---
-# <a name="msreportserverinstance-members"></a>MSReportServer_Instance 멤버
+# <a name="msreportserver_instance-members"></a>MSReportServer_Instance 멤버
   MSReportServer_Instance 클래스는 클라이언트에서 설치된 보고서 서버에 연결하는 데 필요한 기본 정보를 제공합니다.  
   
 ## <a name="public-properties"></a>Public 속성  

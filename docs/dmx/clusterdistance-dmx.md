@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 523c57811ca29956edc3c18b8143844732c163b6
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892392"
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance(DMX)
@@ -31,7 +31,7 @@ ClusterDistance([<ClusterID expression>])
  이 함수는 기본 데이터 마이닝 모델이 클러스터링을 지원할 때만 사용할 수 있습니다. 이 함수는 EM과 K-Means를 비롯한 모든 종류의 클러스터링 모델과 함께 사용할 수 있지만 알고리즘에 따라 결과가 달라집니다.  
   
 ## <a name="return-type"></a>반환 형식  
- 스칼라 값입니다.  
+ 스칼라 값  
   
 ## <a name="remarks"></a>설명  
  **Clusterdistance** 함수는 입력 사례에 대해 확률이 가장 높은 클러스터와 입력 사례 사이의 거리를 반환 합니다.  
@@ -42,22 +42,23 @@ ClusterDistance([<ClusterID expression>])
   
  ClusterDistance (N) = 1-(membershipWeight (N))  
   
- 또는:  
+ 또는  
   
  ClusterDistance (N) = 1-Clusterdistance (N))  
   
 ## <a name="related-prediction-functions"></a>관련 예측 함수  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 클러스터링 모델을 쿼리하는 다음과 같은 함수를 추가로 제공합니다.  
+ 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 클러스터링 모델을 쿼리하는 다음과 같은 함수를 추가로 제공합니다.  
   
--   [클러스터 &#40;DMX&#41; ](../dmx/cluster-dmx.md) 함수를 사용 하 여 가장 가능성이 높은 클러스터를 반환 합니다.  
+-   [클러스터 &#40;DMX&#41;](../dmx/cluster-dmx.md) 함수를 사용 하 여 가장 가능성이 높은 클러스터를 반환 합니다.  
   
--   [Clusterprobability &#40;DMX&#41; ](../dmx/clusterprobability-dmx.md) 함수를 사용 하 여 사례가 특정 클러스터에 속할 확률을 가져옵니다. 이 값은 클러스터 거리의 역수가 됩니다.  
+-   [Clusterprobability &#40;DMX&#41;](../dmx/clusterprobability-dmx.md) 함수를 사용 하 여 사례가 특정 클러스터에 속할 확률을 가져옵니다. 이 값은 클러스터 거리의 역수가 됩니다.  
   
--   [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) 함수를 사용 하 여 각 모델의 클러스터에 있는 입력 사례의 사용 가능성에 대 한 히스토그램을 반환 합니다.  
+-   [PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md) 함수를 사용 하 여 각 모델의 클러스터에 있는 입력 사례의 사용 가능성에 대 한 히스토그램을 반환 합니다.  
   
--   [PredictCaseLikelihood &#40;DMX&#41; ](../dmx/predictcaselikelihood-dmx.md) 함수를 사용 하 여 알고리즘에서 학습 한 모델을 고려 하 여 입력 사례가 존재할 가능성을 나타내는 0에서 1 사이의 측정값을 반환 합니다.  
+-   [PredictCaseLikelihood &#40;DMX&#41;](../dmx/predictcaselikelihood-dmx.md) 함수를 사용 하 여 알고리즘에서 학습 한 모델을 고려 하 여 입력 사례가 존재할 가능성을 나타내는 0에서 1 사이의 측정값을 반환 합니다.  
   
-## <a name="example1-obtaining-cluster-distance-to-the-most-likely-cluster"></a>Example1 클러스터 거리를 가장 가능성이 높은 클러스터로 가져오기  
+## <a name="example1-obtaining-cluster-distance-to-the-most-likely-cluster"></a>Example1: 클러스터 거리를 가장 가능성이 높은 클러스터로 가져오기  
  다음 예에서는 지정된 사례와 해당 사례가 속할 가능성이 가장 높은 클러스터 사이의 거리를 반환합니다.  
   
 ```  
@@ -73,7 +74,7 @@ NATURAL PREDICTION JOIN
     0 AS [Number Children At Home]) AS t  
 ```  
   
- 예제 결과:  
+ 결과 예:  
   
 |식|  
 |----------------|  
@@ -81,13 +82,13 @@ NATURAL PREDICTION JOIN
   
  가장 가능성 있는 클러스터를 확인하려면 위 예제에서 `Cluster`를 `ClusterDistance`로 바꿉니다.  
   
- 예제 결과:  
+ 결과 예:  
   
 |$CLUSTER|  
 |--------------|  
 |클러스터 6|  
   
-## <a name="example2-obtaining-distance-to-a-specified-cluster"></a>Example2 지정 된 클러스터에 대 한 거리 가져오기  
+## <a name="example2-obtaining-distance-to-a-specified-cluster"></a>Example2: 지정 된 클러스터에 대 한 거리 가져오기  
  다음 구문은 마이닝 모델 콘텐츠 스키마 행 집합을 사용하여 마이닝 모델의 클러스터에 대한 노드 ID 및 노드 캡션의 목록을 반환합니다. 그런 다음 노드 캡션을 **Clusterdistance** 함수에서 클러스터 식별자 인수로 사용할 수 있습니다.  
   
 ```  
@@ -96,7 +97,7 @@ FROM <model>.CONTENT
 WHERE NODE_TYPE = 5  
 ```  
   
- 예제 결과:  
+ 결과 예:  
   
 |NODE_UNIQUE_NAME|NODE_CAPTION|  
 |------------------------|-------------------|  
@@ -118,16 +119,16 @@ NATURAL PREDICTION JOIN
     0 AS [Number Children At Home]) AS t  
 ```  
   
- 예제 결과:  
+ 결과 예:  
   
 |Cluster 2 Distance|  
 |------------------------|  
 |0.97008209236394|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [클러스터 &#40;DMX&#41;](../dmx/cluster-dmx.md)   
  [데이터 마이닝 확장 &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [함수 &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [클러스터링 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)  
+ [DMX &#40;함수&#41;](../dmx/functions-dmx.md)   
+ [클러스터링 모델에 대 한 마이닝 모델 콘텐츠 &#40;Analysis Services 데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)  
   
   

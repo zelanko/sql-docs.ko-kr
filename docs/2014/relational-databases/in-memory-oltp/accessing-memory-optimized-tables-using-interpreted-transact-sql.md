@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c81ac6c0c8dcf7e24c80b426654164c668fcf3a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62468610"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>해석된 Transact-SQL을 사용하여 메모리 액세스에 최적화된 테이블에 액세스
@@ -42,7 +42,8 @@ ms.locfileid: "62468610"
 |데이터베이스 간|데이터베이스 간 쿼리<br /><br /> 데이터베이스 간 트랜잭션<br /><br /> 연결된 서버|  
   
 ## <a name="table-hints"></a>테이블 힌트  
- 테이블 힌트에 대한 자세한 내용은 [테이블 힌트&#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)를 참조하세요. [!INCLUDE[hek_2](../../includes/hek-2-md.md)]를 지원하기 위해 SNAPSHOT 격리가 추가되었습니다.  
+ 테이블 힌트에 대한 자세한 내용은 [테이블 힌트&#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)를 참조하세요. 
+  [!INCLUDE[hek_2](../../includes/hek-2-md.md)]를 지원하기 위해 SNAPSHOT 격리가 추가되었습니다.  
   
  다음 테이블 힌트는 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 메모리 최적화 테이블에 액세스하는 경우 지원되지 않습니다.  
   
@@ -53,12 +54,12 @@ ms.locfileid: "62468610"
 |READUNCOMMITTED|ROWLOCK|SPATIAL_WINDOW_MAX_CELLS = *integer*|TABLOCK|  
 |TABLOCKXX|UPDLOCK|XLOCK||  
   
- 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 명시적 또는 암시적 트랜잭션으로부터 메모리 최적화 테이블에 액세스할 때 SNAPSHOT, REPEATABLEREAD, SERIALIZABLE 등의 격리 수준 테이블 힌트 중 하나를 포함해야 합니다. 또는 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT을 사용해도 됩니다. 자세한 내용은 [메모리 최적화 테이블이 있는 트랜잭션 격리 수준에 대 한 지침](memory-optimized-tables.md) 하 고 [ALTER DATABASE SET 옵션 &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
+ 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 명시적 또는 암시적 트랜잭션으로부터 메모리 최적화 테이블에 액세스할 때 SNAPSHOT, REPEATABLEREAD, SERIALIZABLE 등의 격리 수준 테이블 힌트 중 하나를 포함해야 합니다. 또는 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT을 사용해도 됩니다. 자세한 내용은 [메모리 최적화 테이블을 사용 하는 트랜잭션 격리 수준에 대 한 지침](memory-optimized-tables.md) 및 [Transact-sql&#41;&#40;ALTER database SET 옵션 ](/sql/t-sql/statements/alter-database-transact-sql-set-options)을 참조 하세요.  
   
 > [!NOTE]  
 >  자동 커밋 모드에서 실행되는 쿼리에서 액세스하는 메모리 최적화 테이블에는 격리 수준 테이블 힌트가 필요하지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP에 대한 Transact-SQL 지원](transact-sql-support-for-in-memory-oltp.md)   
  [메모리 내 OLTP로 마이그레이션](migrating-to-in-memory-oltp.md)  
   

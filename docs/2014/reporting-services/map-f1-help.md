@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 936dd10df3beb1f78e39abad2e075c5f6306bb30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108296"
 ---
 # <a name="map-f1-help"></a>지도 F1 도움말
   이 절의 항목에서는 지도 보고서 항목에 설정할 수 있는 옵션에 대해 설명합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services 보고서&#40;SSRS&#41;](reports/reporting-services-reports-ssrs.md)  
   
   

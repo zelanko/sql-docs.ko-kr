@@ -14,17 +14,19 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9a63d9760142ec3d3f964d80334b2244a4cac4be
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74095179"
 ---
 # <a name="creating-and-updating-statistics"></a>통계 생성 및 업데이트
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
   SMO에서 <xref:Microsoft.SqlServer.Management.Smo.Statistic> 개체를 사용하여 데이터베이스의 쿼리 처리에 대한 통계 정보를 수집할 수 있습니다.  
   
- <xref:Microsoft.SqlServer.Management.Smo.Statistic> 및 <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn> 개체를 사용하여 임의 열에 대한 통계를 만드는 것도 가능합니다. <xref:Microsoft.SqlServer.Management.Smo.Statistic.Update%2A> 개체에서 통계를 업데이트하려면 <xref:Microsoft.SqlServer.Management.Smo.Statistic> 메서드를 실행할 수 있습니다. 결과는 쿼리 최적화 프로그램에서 볼 수 있습니다.  
+ 
+  <xref:Microsoft.SqlServer.Management.Smo.Statistic> 및 <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn> 개체를 사용하여 임의 열에 대한 통계를 만드는 것도 가능합니다. 
+  <xref:Microsoft.SqlServer.Management.Smo.Statistic.Update%2A> 개체에서 통계를 업데이트하려면 <xref:Microsoft.SqlServer.Management.Smo.Statistic> 메서드를 실행할 수 있습니다. 결과는 쿼리 최적화 프로그램에서 볼 수 있습니다.  
   
 ## <a name="example"></a>예제  
  제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio .net에서 Visual C&#35; SMO 프로젝트 만들기](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  

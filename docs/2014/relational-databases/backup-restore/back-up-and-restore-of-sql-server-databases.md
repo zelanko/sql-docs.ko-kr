@@ -23,24 +23,26 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a94ec756e86cb814d0e3b3f624b4a9b3eb180533
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70176030"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server 데이터베이스 백업 및 복원
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 백업의 이점과 기본 백업 및 복원 용어에 대해 설명하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대한 백업 및 복원 전략과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 및 복원을 위한 보안 고려 사항에 대해 소개합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 및 복원 구성 요소는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 저장된 중요한 데이터를 보호하기 위한 필수 보호 방법을 제공합니다. 치명적인 데이터 손실 위험을 최소화하기 위해서는 데이터베이스를 정기적으로 백업하여 수정된 데이터를 유지해야 합니다. 백업 및 복원 전략을 적절하게 계획하면 다양한 오류로 인해 데이터베이스의 데이터가 손실되는 것을 방지할 수 있습니다. 일련의 백업 복원과 데이터베이스 복구를 통해 전략을 테스트하여 재해에 효과적으로 대처할 수 있습니다.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 및 복원 구성 요소는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 저장된 중요한 데이터를 보호하기 위한 필수 보호 방법을 제공합니다. 치명적인 데이터 손실 위험을 최소화하려면 정기적으로 데이터베이스를 백업하여 수정 내용을 보존해야 합니다. 잘 계획된 백업 및 복원 전략은 다양한 오류로 인한 데이터 손실을 막아줍니다. 백업 세트를 복원하고 데이터베이스를 복구하는 방법으로 전략을 테스트하여 재해에 효과적으로 대응할 수 있도록 준비하세요.  
   
- 백업을 저장하기 위한 로컬 스토리지 외에도 SQL Server는 Azure Blob Storage 서비스로의 백업 및 복원도 지원합니다. 자세한 내용은 [Azure Blob Storage 서비스를 사용 하 여 백업 및 복원 SQL Server](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)를 참조 하세요.  
+ 백업을 저장하기 위한 로컬 스토리지 외에도 SQL Server는 Azure Blob Storage 서비스로의 백업 및 복원도 지원합니다. 자세한 내용은 [Azure Blob Storage 서비스로 SQL Server 백업 및 복원](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요.  
   
 
   
 ##  <a name="Benefits"></a> 이점  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 백업하고 백업에 대한 테스트 복원 절차를 실행한 다음 안전한 오프 사이트 위치에 백업을 저장하여 치명적인 데이터 손실을 방지할 수 있습니다.  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 백업하고 백업에 대한 테스트 복원 절차를 실행한 다음 안전한 오프 사이트 위치에 백업을 저장하여 치명적인 데이터 손실을 방지할 수 있습니다.  
   
     > [!IMPORTANT]  
     >  이렇게 하는 것이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터를 안정적으로 보호하는 유일한 방법입니다.  
@@ -59,7 +61,7 @@ ms.locfileid: "70176030"
   
 
   
-##  <a name="TermsAndDefinitions"></a> 구성 요소 및 개념  
+##  <a name="TermsAndDefinitions"></a>구성 요소 및 개념  
  백업[동사]  
  데이터 또는 로그 레코드를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 또는 해당 트랜잭션 로그에서 백업 디바이스(예: 디스크)로 복사하여 데이터 백업 또는 로그 백업을 만들 수 있습니다.  
   
@@ -67,7 +69,7 @@ ms.locfileid: "70176030"
  오류가 발생한 이후에 데이터를 복원 및 복구하는 데 사용할 수 있는 데이터 복사본입니다. 데이터베이스 백업을 사용하여 데이터베이스 복사본을 새 위치에 복원할 수도 있습니다.  
   
  백업 디바이스(backup device)  
- SQL Server 백업이 기록되는 대상이자 백업을 복원하는 원본이 되는 디스크 또는 테이프 디바이스입니다. SQL Server 백업은 Azure Blob Storage 서비스에 기록할 수도 있으며 백업 파일의 대상과 이름을 지정하기 위해 **URL** 형식이 사용됩니다. 자세한 내용은 [Azure Blob Storage 서비스를 사용 하 여 백업 및 복원 SQL Server](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)를 참조 하세요.  
+ SQL Server 백업이 기록되는 대상이자 백업을 복원하는 원본이 되는 디스크 또는 테이프 디바이스입니다. SQL Server 백업은 Azure Blob Storage 서비스에 기록할 수도 있으며 백업 파일의 대상과 이름을 지정하기 위해 **URL** 형식이 사용됩니다. 자세한 내용은 [Azure Blob Storage 서비스로 SQL Server 백업 및 복원](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요.  
   
  백업 미디어  
  하나 이상의 백업이 기록된 하나 이상의 테이프 또는 디스크 파일입니다.  
@@ -87,7 +89,7 @@ ms.locfileid: "70176030"
  로그 백업(log backup)  
  이전 로그 백업에서 백업되지 않은 모든 로그 레코드를 포함하는 트랜잭션 로그 백업입니다. (전체 복구 모델)  
   
- 복구  
+ recover  
  데이터베이스를 안정적이고 일관된 상태로 되돌립니다.  
   
  recovery  
@@ -96,7 +98,7 @@ ms.locfileid: "70176030"
  복구 모델  
  데이터베이스에서 트랜잭션 로그 유지 관리를 제어하는 데이터베이스 속성입니다. 사용할 수 있는 복구 모델은 3가지로 단순, 전체 및 대량 로그 복구 모델입니다. 데이터베이스의 복구 모델에 따라 백업 및 복원 요구 사항이 결정됩니다.  
   
- 복원(restore)  
+ 복원  
  지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업에서 지정된 데이터베이스로 모든 데이터 및 로그 페이지를 복사하고 기록된 변경 사항을 적용하여 데이터를 최신 상태로 전환함으로써 백업에 기록된 모든 트랜잭션을 롤포워드하는 다단계 프로세스입니다.  
   
 
@@ -118,14 +120,15 @@ ms.locfileid: "70176030"
 -   하드웨어, 인력, 백업 미디어 저장 공간, 저장된 미디어의 물리적 보안 등과 같은 리소스의 제약 요건  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디스크상 저장소 형식은 64비트 및 32비트 환경에서 동일합니다. 따라서 32비트 및 64비트 환경에서 백업 및 복원 작업을 수행할 수 있습니다. 한 환경에서 실행 중인 서버 인스턴스에서 만든 백업을 다른 환경에서 실행하는 서버 인스턴스에서 복원할 수 있습니다.  
+    >  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디스크상 스토리지 형식은 64비트 및 32비트 환경에서 동일합니다. 따라서 32비트 및 64비트 환경에서 백업 및 복원 작업을 수행할 수 있습니다. 한 환경에서 실행 중인 서버 인스턴스에서 만든 백업을 다른 환경에서 실행하는 서버 인스턴스에서 복원할 수 있습니다.  
   
 
   
 ### <a name="impact-of-the-recovery-model-on-backup-and-restore"></a>백업 및 복원에 대한 복구 모델의 영향  
  백업 및 복원 작업은 복구 모델의 컨텍스트에서 수행됩니다. 복구 모델은 트랜잭션 로그의 관리 방법을 제어하는 데이터베이스 속성입니다. 또한 데이터베이스의 복구 모델은 데이터베이스에 지원되는 복원 시나리오 및 백업 유형을 결정합니다. 일반적으로 데이터베이스는 단순 복구 모델 또는 전체 복구 모델 모두 사용합니다. 전체 복구 모델은 대량 작업 이전에 대량 로그 복구 모델로 전환하여 보완될 수 있습니다. 이러한 복구 모델 및 이러한 복구 모델이 트랜잭션 로그 관리에 미치는 영향에 대한 자세한 내용은 [트랜잭션 로그&#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)를 참조하세요.  
   
- 데이터베이스에 가장 적합한 복구 모델은 비즈니스 요구 사항에 따라 달라집니다. 트랜잭션 로그 관리를 방지하고 백업 및 복원을 단순화하려면 단순 복구 모델을 사용하십시오. 관리 오버헤드가 증가하더라도 작업 손실 가능성을 최소화하려면 전체 복구 모델을 사용하십시오. 백업 및 복원에 미치는 복구 모델의 영향에 대한 자세한 내용은 [백업 개요&#40;SQL Server&#41;](backup-overview-sql-server.md)를 참조하세요.  
+ 데이터베이스에 가장 적합한 복구 모델은 비즈니스 요구 사항에 따라 달라집니다. 트랜잭션 로그 관리를 방지하고 백업 및 복원을 단순화하려면 단순 복구 모델을 사용하십시오. 관리 오버헤드가 증가하더라도 작업 손실 가능성을 최소화하려면 전체 복구 모델을 사용하십시오. 백업 및 복원에 미치는 복구 모델의 영향에 대한 자세한 내용은 [백업 개요&#40;SQL Server&#41;](backup-overview-sql-server.md)을 참조하세요.  
   
 ### <a name="design-the-backup-strategy"></a>백업 전략 디자인  
  지정한 데이터베이스에 대해 비즈니스 요구 사항에 맞는 복구 모델을 선택한 후에는 해당 백업 전략을 계획 및 구현해야 합니다. 백업 전략을 최적화하는 요소는 다양합니다. 그 중에서도 특히 다음과 같은 요소에 의해 주로 영향을 받습니다.  
@@ -151,7 +154,8 @@ ms.locfileid: "70176030"
      자세한 내용은 이 항목의 뒷부분에 나오는 [전체 데이터베이스 백업의 크기 예측](#EstimateDbBuSize)을 참조하십시오.  
   
 ####  <a name="EstimateDbBuSize"></a>전체 데이터베이스 백업의 크기 예측  
- 백업 및 복원을 구현하기 전에 전체 데이터베이스 백업에 어느 정도의 디스크 공간이 필요한지 예측해야 합니다. 백업 작업은 데이터베이스의 데이터를 백업 파일로 복사합니다. 백업에는 데이터베이스의 실제 데이터만 포함되고 사용하지 않은 공간은 포함되지 않습니다. 따라서 백업은 일반적으로 데이터베이스 자체의 크기보다 작습니다. **sp_spaceused** 시스템 저장 프로시저를 사용하여 전체 데이터베이스 백업의 크기를 예측할 수 있습니다. 자세한 내용은 [sp_spaceused&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql)를 참조하세요.  
+ 백업 및 복원을 구현하기 전에 전체 데이터베이스 백업에 어느 정도의 디스크 공간이 필요한지 예측해야 합니다. 백업 작업은 데이터베이스의 데이터를 백업 파일로 복사합니다. 백업에는 데이터베이스의 실제 데이터만 포함되고 사용하지 않은 공간은 포함되지 않습니다. 따라서 백업은 일반적으로 데이터베이스 자체의 크기보다 작습니다. 
+  **sp_spaceused** 시스템 저장 프로시저를 사용하여 전체 데이터베이스 백업의 크기를 예측할 수 있습니다. 자세한 내용은 [sp_spaceused&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql)를 참조하세요.  
   
 ### <a name="schedule-backups"></a>백업 예약  
  백업 작업을 수행해도 실행 중인 트랜잭션에는 큰 영향을 미치지 않으므로 일반 작업을 수행할 때도 백업 작업을 실행할 수 있습니다. 프로덕션 작업에 거의 영향을 주지 않고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업을 수행할 수 있습니다.  
@@ -174,7 +178,7 @@ ms.locfileid: "70176030"
   
 -   [작업 만들기](../../ssms/agent/create-a-job.md)  
   
--   [작업 예약](../../ssms/agent/schedule-a-job.md)  
+-   [Schedule a Job](../../ssms/agent/schedule-a-job.md)  
   
 ### <a name="working-with-backup-devices-and-backup-media"></a>백업 디바이스 및 백업 미디어 사용  
   
@@ -182,15 +186,15 @@ ms.locfileid: "70176030"
   
 -   [테이프 드라이브에 대한 논리적 백업 디바이스 정의&#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
--   [디스크 또는 테이프를 백업 대상으로 지정&#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
+-   [디스크 또는 테이프를 백업 대상으로 지정 &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
   
--   [백업 디바이스 삭제&#40;SQL Server&#41;](delete-a-backup-device-sql-server.md)  
+-   [SQL Server&#41;&#40;백업 장치 삭제](delete-a-backup-device-sql-server.md)  
   
--   [백업의 만료 날짜 설정&#40;SQL Server&#41;](set-the-expiration-date-on-a-backup-sql-server.md)  
+-   [백업 &#40;에서 만료 날짜를 설정 SQL Server&#41;](set-the-expiration-date-on-a-backup-sql-server.md)  
   
 -   [백업 테이프 또는 파일의 내용 보기&#40;SQL Server&#41;](view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
--   [백업 세트의 데이터와 로그 파일 보기&#40;SQL Server&#41;](view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
+-   [백업 세트에 있는 데이터 및 로그 파일 &#40;SQL Server를 확인&#41;](view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
   
 -   [논리적 백업 디바이스의 속성 및 내용 보기&#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
@@ -211,9 +215,9 @@ ms.locfileid: "70176030"
   
 -   [차등 데이터베이스 백업 만들기&#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)  
   
- **Transact-SQL 사용**  
+ **Transact-sql 사용**  
   
--   [Resource GovernoR을 사용하여 백업 압축을 통해 CPU 사용량 제한&#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
+-   [Resource Governor를 사용하여 백업 압축을 통해 CPU 사용량 제한&#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
 -   [데이터베이스가 손상된 경우 트랜잭션 로그 백업&#40;SQL Server&#41;](back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  
   
@@ -226,7 +230,7 @@ ms.locfileid: "70176030"
 ### <a name="restoring-data-backups"></a>데이터 백업 복원  
  **SQL Server Management Studio 사용**  
   
--   [데이터베이스 백업 &#40;SQL Server Management Studio 복원&#41;](restore-a-database-backup-using-ssms.md)  
+-   [데이터베이스 백업 복원 &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
 -   [데이터베이스를 새 위치로 복원&#40;SQL Server&#41;](restore-a-database-to-a-new-location-sql-server.md)  
   
@@ -234,7 +238,7 @@ ms.locfileid: "70176030"
   
 -   [파일 및 파일 그룹 복원&#40;SQL Server&#41;](restore-files-and-filegroups-sql-server.md)  
   
- **Transact-SQL 사용**  
+ **Transact-sql 사용**  
   
 -   [단순 복구 모델에서 데이터베이스 백업 복원&#40;Transact-SQL&#41;](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
   
@@ -244,7 +248,7 @@ ms.locfileid: "70176030"
   
 -   [새 위치로 파일 복원&#40;SQL Server&#41;](restore-files-to-a-new-location-sql-server.md)  
   
--   [master 데이터베이스 복원&#40;Transact-SQL&#41;](restore-the-master-database-transact-sql.md)  
+-   [Master 데이터베이스 &#40;Transact-sql&#41;복원](restore-the-master-database-transact-sql.md)  
   
 
   
@@ -257,16 +261,16 @@ ms.locfileid: "70176030"
   
 -   [SQL Server 데이터베이스를 지정 시간으로 복원&#40;전체 복구 모델&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
- **Transact-SQL 사용**  
+ **Transact-sql 사용**  
   
 -   [SQL Server 데이터베이스를 지정 시간으로 복원&#40;전체 복구 모델&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
 
   
 ### <a name="additional-restore-tasks"></a>추가 복원 태스크  
- **Transact-SQL 사용**  
+ **Transact-sql 사용**  
   
--   [중단된 복원 작업 다시 시작&#40;Transact-SQL&#41;](restart-an-interrupted-restore-operation-transact-sql.md)  
+-   [Transact-sql&#41;&#40;중단 된 복원 작업 다시 시작](restart-an-interrupted-restore-operation-transact-sql.md)  
   
 -   [데이터를 복원하지 않고 데이터베이스 복구&#40;Transact-SQL&#41;](recover-a-database-without-restoring-data-transact-sql.md)  
   
@@ -277,11 +281,11 @@ ms.locfileid: "70176030"
  [복원 및 복구 개요&#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
  [BACKUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [RESTORE&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [Analysis Services 데이터베이스 백업 및 복원](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)   
- [전체 텍스트 카탈로그와 인덱스 백업 및 복원](../search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
+ [Analysis Services 데이터베이스의 백업 및 복원](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)   
+ [전체 텍스트 카탈로그 및 인덱스 백업 및 복원](../search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
  [복제된 데이터베이스 백업 및 복원](../replication/administration/back-up-and-restore-replicated-databases.md)   
  [트랜잭션 로그&#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   
- [복구 모델&#40;SQL Server&#41;](recovery-models-sql-server.md)   
+ [복구 모델 &#40;SQL Server&#41;](recovery-models-sql-server.md)   
  [미디어 세트, 미디어 패밀리 및 백업 세트&#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)  
   
   

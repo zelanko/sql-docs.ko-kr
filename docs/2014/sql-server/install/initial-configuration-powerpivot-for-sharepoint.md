@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: bc9b053b62a19cbe2c234f87010ae2a9652fb95c
-ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74200431"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>초기 구성(SharePoint용 PowerPivot)
@@ -24,7 +24,7 @@ ms.locfileid: "74200431"
   
  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
  SharePoint 설치 프로그램에서 서버 팜 설치 옵션을 사용하여 SharePoint 서버를 설치해야 합니다. 기본 제공 데이터베이스를 사용하는 독립 실행형 SharePoint 서버는 지원되지 않습니다. 자세한 내용은 [SharePoint 2010 팜에서 SQL SERVER BI 기능 사용에 대 한 지침](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md)을 참조 하세요.  
   
 > [!IMPORTANT]  
@@ -77,8 +77,7 @@ ms.locfileid: "74200431"
 5.  
   **배포 위치**에서 PowerPivot 기능 지원을 추가할 SharePoint 웹 애플리케이션을 선택합니다.  
   
-6.  
-  **확인**을 클릭합니다.  
+6.  **확인**을 클릭합니다.  
   
 7.  PowerPivot 데이터 액세스를 지원할 다른 SharePoint 웹 애플리케이션에 대해서도 반복합니다.  
   
@@ -148,8 +147,7 @@ ms.locfileid: "74200431"
   
 7.  서비스 애플리케이션 프록시를 기본 서비스 연결 목록에 추가하는 기본 확인란을 선택된 상태로 유지합니다.  
   
-8.  
-  **확인**을 클릭합니다.  
+8.  **확인**을 클릭합니다.  
   
 9. 방금 만든 Excel 서비스 애플리케이션을 클릭합니다.  
   
@@ -163,8 +161,7 @@ ms.locfileid: "74200431"
 13. 
   **새로 고칠 때 경고** 확인란 선택을 취소하여 PowerPivot 갤러리에서 개별 워크시트의 미리 보기 이미지를 허용합니다. 통합 문서 설정이 "열 때마다 새로 고침"인 경우 경고를 그대로 유지하면 통합 문서의 페이지 대신 경고 미리 보기 이미지 하나가 표시될 수 있습니다.  
   
-14. 
-  **확인**을 클릭합니다.  
+14. **확인**을 클릭합니다.  
   
 ##  <a name="SSS"></a>5 단계: 보안 저장소 서비스 사용 및 데이터 새로 고침 구성  
  데이터 새로 고침을 위해 무인 실행 계정 및 자격 증명을 저장하려면 SharePoint용 PowerPivot에 보안 저장소 서비스가 필요합니다. 서비스 애플리케이션 목록에 보안 저장소 서비스가 나타나는지 확인하여 보안 저장소 서비스가 이미 사용하도록 설정되어 있는지 확인할 수 있습니다.  
@@ -211,8 +208,7 @@ ms.locfileid: "74200431"
   
 4.  전달 구를 입력한 다음 확인합니다. 이 전달 구는 추가 보안 저장소 공유 서비스 애플리케이션을 추가하는 데 사용됩니다.  
   
-5.  
-  **확인**을 클릭합니다.  
+5.  **확인**을 클릭합니다.  
   
 ##### <a name="part-3-configure-the-unattended-powerpivot-data-refresh-account"></a>3부: 무인 PowerPivot 데이터 새로 고침 계정 구성  
  데이터 새로 고침 중에 외부 데이터에 액세스하려면 PowerPivot 데이터 액세스용으로 무인 데이터 새로 고침 계정을 만들어야 하는 경우가 많습니다. 예를 들어 Kerberos가 설정되지 않은 경우에는 PowerPivot 서비스가 외부 데이터 원본에 연결하는 데 사용할 수 있는 무인 계정을 만들어야 합니다.  
@@ -238,8 +234,7 @@ ms.locfileid: "74200431"
   
 4.  페이지를 아래로 스크롤하여 **PowerPivot 통합 사이트 컬렉션 기능**을 찾습니다.  
   
-5.  
-  **활성화**를 클릭합니다.  
+5.  **활성화**를 클릭합니다.  
   
 6.  각 사이트를 열고 **사이트 작업**을 클릭 하 여 추가 사이트 모음에 대해이 작업을 반복 합니다.  
   
@@ -281,8 +276,7 @@ ms.locfileid: "74200431"
   
 6.  서버 이름에 서버 이름 ** \<> \powerpivot**을 입력 합니다. 여기서 ** \<server-name>** 은 SharePoint용 PowerPivot가 설치 된 컴퓨터의 이름입니다.  
   
-7.  
-  **연결**을 클릭합니다.  
+7.  **연결**을 클릭합니다.  
   
 8.  개체 탐색기에서 **데이터베이스** 를 클릭하여 로드된 PowerPivot 데이터 파일 목록을 확인합니다.  
   
@@ -322,4 +316,4 @@ ms.locfileid: "74200431"
  [중앙 관리에서 PowerPivot 서비스 응용 프로그램 만들기 및 구성](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca)   
  [SharePoint에 PowerPivot 솔루션 배포](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint)   
  [중앙 관리에서 사이트 모음에 대 한 PowerPivot 기능 통합 활성화](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca)   
- [SharePoint용 PowerPivot 2010 설치](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
+ [SharePoint 2010용 PowerPivot 설치](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  

@@ -12,10 +12,10 @@ ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 3bb5b27d8a164eb98dc3e2180fd32c81fda0d471
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75252822"
 ---
 # <a name="introduction-to-data-quality-services"></a>Data Quality Services 소개
@@ -42,7 +42,7 @@ ms.locfileid: "75252822"
   
 -   
   **참조 Data Services:** 참조 데이터 공급자의 서비스를 사용하여 데이터의 품질을 확인합니다. 
-  [Microsoft Azure Marketplace](https://azure.microsoft.com/marketplace/)에서 참조 데이터 서비스를 사용하여 데이터를 정리, 유효성 검사, 일치 및 강화할 수 있습니다. 자세한 내용은 [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md)을(를) 참조하세요.  
+  [Microsoft Azure Marketplace](https://azure.microsoft.com/marketplace/)에서 참조 데이터 서비스를 사용하여 데이터를 정리, 유효성 검사, 일치 및 강화할 수 있습니다. 자세한 내용은 [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md)을 참조하세요.  
   
 -   **프로 파일링:** 데이터 원본의 분석을 통해 기술 자료 검색, 도메인 관리, 일치 및 데이터 정리 프로세스의 모든 단계에서 데이터의 품질에 대 한 통찰력을 제공 합니다. 프로파일링은 DQS 데이터 품질 솔루션의 강력한 도구입니다. 프로파일링이 지식 관리, 일치 또는 데이터 정리만큼 중요한 데이터 품질 솔루션을 만들 수 있습니다. 자세한 내용은 [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md)을 참조하세요.  
   

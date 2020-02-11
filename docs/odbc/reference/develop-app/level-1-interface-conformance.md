@@ -1,5 +1,5 @@
 ---
-title: 수준 1 인터페이스 적합성 | Microsoft Docs
+title: 수준 1 인터페이스 규칙 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,23 +15,23 @@ ms.assetid: ee3f5c08-0583-4f3b-8354-ef71b6086a7e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 05cf381ccbb8c0747db88259acfb4ba218d3e0ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135009"
 ---
 # <a name="level-1-interface-conformance"></a>수준 1 인터페이스 적합성
-수준 1 인터페이스 적합성 수준에는 핵심 인터페이스 적합성 수준 기능 및 OLTP 관계형 DBMS는 일반적으로 사용할 수 있는 트랜잭션과 같은 추가 기능을 포함 합니다. 수준 1 인터페이스와 호환 되는 드라이버는 핵심 인터페이스 적합성 수준에서 기능 외에 다음을 수행 하 여 응용 프로그램을 사용 수 있습니다.  
+수준 1 인터페이스 규칙 수준에는 OLTP 관계형 DBMS에서 일반적으로 사용할 수 있는 핵심 인터페이스 규칙 수준 기능 및 트랜잭션과 같은 추가 기능이 포함 됩니다. 수준 1 인터페이스 준수 드라이버를 통해 응용 프로그램은 핵심 인터페이스 규칙 수준의 기능 외에도 다음 작업을 수행할 수 있습니다.  
   
 |||  
 |-|-|  
-|101|데이터베이스의 스키마 테이블 및 뷰 (두 부분으로 사용)을 지정 합니다. (자세한 내용은 참조에서 201 기능 세 부분으로 이루어진 명명 [수준 2 인터페이스 적합성](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)|  
-|102|모두 동기 이거나 모두 비동기 지정된 된 연결에 ODBC 함수를 적용할 수 있는 ODBC 함수의 true 비동기 실행을 호출 합니다.|  
-|103|스크롤 가능 커서를 사용 하 고 여는 메서드에서 전진 전용 이외의 호출 하면 결과 집합에 대 한 액세스를 달성 **SQLFetchScroll** 사용 하 여 합니다 *FetchOrientation* SQL_FETCH_NEXT 이외의 인수입니다. (의 SQL_FETCH_BOOKMARK *FetchOrientation* 204 기능에 [수준 2 인터페이스 적합성](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)|  
-|104|호출 하 여 테이블의 기본 키를 가져올 **SQLPrimaryKeys**합니다.|  
-|105|프로시저 호출에 대 한 ODBC 이스케이프 시퀀스를 통해 저장된 프로시저를 사용 하 고 호출 하 여 저장된 프로시저에 대 한 데이터 사전 쿼리 **SQLProcedureColumns** 하 고 **SQLProcedures**합니다. (프로세스는 프로시저 작성 되어 데이터 원본에 저장 된 경우이 문서의 범위 외부)|  
-|106|호출 하 여 사용 가능한 서버를 대화형으로 찾아봄으로써 데이터 원본에 연결 **SQLBrowseConnect**합니다.|  
-|107|SQL 문 대신 ODBC 함수를 사용 하 여 특정 데이터베이스 작업을 수행 합니다. **SQLSetPos** SQL_POSITION과 SQL_REFRESH 합니다.|  
-|108|호출 하 여 일괄 처리 및 저장된 프로시저에서 생성 하는 여러 결과 집합의 내용에 액세스할 **SQLMoreResults**합니다.|  
-|109|True 원자성 및 SQL_ROLLBACK에서 지정 하는 기능을 사용 하 여 여러 ODBC 함수에 걸쳐 있는 트랜잭션을 구분 **SQLEndTran**합니다.|
+|101|데이터베이스 테이블 및 뷰 (두 부분으로 구성 된 이름 지정)의 스키마를 지정 합니다. 자세한 내용은 [수준 2 인터페이스 규칙](../../../odbc/reference/develop-app/level-2-interface-conformance.md)의 세 부분으로 구성 된 이름 지정 기능 201을 참조 하세요.|  
+|102|지정 된 연결에서 해당 ODBC 함수가 모두 동기 이거나 모두 비동기 인 경우 ODBC 함수에 대해 진정한 비동기 실행을 호출 합니다.|  
+|103|스크롤 가능 커서를 사용 하 여 SQL_FETCH_NEXT 이외의 *Fetchorientation* 인수로 **sqlfetchscroll** 을 호출 하 여 앞 으로만 이동이 아닌 다른 방법으로 결과 집합에 액세스할 수 있습니다. SQL_FETCH_BOOKMARK *Fetchorientation* 는 [수준 2 인터페이스 규칙](../../../odbc/reference/develop-app/level-2-interface-conformance.md)의 기능 204에 있습니다.|  
+|104|**Sqlprimarykeys**를 호출 하 여 테이블의 기본 키를 가져옵니다.|  
+|105|프로시저 호출에 대해 ODBC 이스케이프 시퀀스를 통해 저장 프로시저를 사용 하 고 **SQLProcedureColumns** 및 **sqlprocedures**를 호출 하 여 저장 프로시저에 대 한 데이터 사전을 쿼리 합니다. (프로시저를 만들어 데이터 소스에 저장 하는 프로세스는이 문서의 범위를 벗어납니다.)|  
+|106|**SQLBrowseConnect**을 호출 하 여 사용 가능한 서버를 대화식으로 검색 하 여 데이터 원본에 연결 합니다.|  
+|107|SQL 문 대신 ODBC 함수를 사용 하 여 특정 데이터베이스 작업을 수행 합니다. **SQLSetPos** 는 SQL_POSITION 및 SQL_REFRESH입니다.|  
+|108|**SQLMoreResults**를 호출 하 여 일괄 처리 및 저장 프로시저에 의해 생성 된 여러 결과 집합의 콘텐츠에 대 한 액세스 권한을 얻습니다.|  
+|109|진정한 원자성 및 **Sqlendtran**에서 SQL_ROLLBACK를 지정 하는 기능을 사용 하 여 여러 ODBC 함수에 걸친 트랜잭션을 구분 합니다.|

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1657d9e58a0ae729a67e179602cd9a886ae923b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125787"
 ---
 # <a name="xor-mdx"></a>XOR(MDX)
@@ -35,20 +35,20 @@ Expression1 XOR Expression2
  *Expression2*  
  숫자 값을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="return-value"></a>반환 값  
- 반환 하는 부울 값 **true** 로 평가 되 면 하나의 인수 **true**이 고, 그렇지 않으면 **false**합니다.  
+## <a name="return-value"></a>Return Value  
+ 하나의 인수만 **true**로 평가 되는 경우 **true** 를 반환 하는 부울 값입니다. 그렇지 않으면 **false**입니다.  
   
 ## <a name="remarks"></a>설명  
- 합니다 **XOR** 연산자는 매개 변수가 모두 부울 값으로 처리 (0으로 **false**이 고, 그렇지 않으면 **true**) 연산자는 논리 제외 연산을 수행 하기 전에 합니다. 다음 표에서 설명 하는 방법을 **XOR** 연산자로 논리 제외를 수행 합니다.  
+ **XOR** 연산자는 연산자가 논리적 **제외를 수행**하기 전에 두 매개 변수를 모두 부울 값 (0, 0, 0, 0, 0)으로 처리 **합니다.** 다음 표에서는 **XOR** 연산자가 논리적 제외를 수행 하는 방법을 보여 줍니다.  
   
-|*Expression1*|*Expression2*|반환 값|  
+|*Expression1*|*Expression2*|Return Value|  
 |-------------------|-------------------|------------------|  
-|**true**|**true**|**false**|  
-|**true**|**false**|**true**|  
-|**false**|**true**|**true**|  
-|**false**|**false**|**false**|  
+|**true**|**true**|**허위**|  
+|**true**|**허위**|**true**|  
+|**허위**|**true**|**true**|  
+|**허위**|**허위**|**허위**|  
   
-## <a name="see-also"></a>관련 항목  
- [MDX 연산자 참조 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [Mdx 연산자 참조 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

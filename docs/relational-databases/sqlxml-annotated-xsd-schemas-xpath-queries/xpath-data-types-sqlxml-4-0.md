@@ -29,10 +29,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 089b2b006d0159c63e480c8627762ac37dec98b8
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75247087"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath 데이터 형식(SQLXML 4.0)
@@ -76,7 +76,7 @@ ms.locfileid: "75247087"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 노드 집합에 대해 위치 선택을 수행하지 않습니다. 예를 들어 XPath 쿼리 `Customer[3]`는 세 번째 고객을 의미하는데 이러한 종류의 위치 선택이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 지원되지 않습니다. 따라서 XPath 사양에서 설명 하는 노드 집합-**문자열** 또는 노드 집합-**숫자** 변환이 구현 되지 않습니다. 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 XPath 사양에 "첫 번째" 의미 체계가 지정된 경우 항상 "임의" 의미 체계를 사용합니다. 예를 들어 W3C XPath 사양을 기반으로 하는 XPath 쿼리 `Order[OrderDetail/@UnitPrice > 10.0]` 는 **단가** 가 10.0 보다 큰 첫 번째 **orderdetail** 이 포함 된 주문을 선택 합니다. 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이 XPath 쿼리는 **단가** 가 10.0 보다 큰 **orderdetail** 이 포함 된 주문을 선택 합니다.  
   
- **부울** 로 변환 하면 존재 테스트가 생성 됩니다. 따라서 XPath 쿼리 `Products[@Discontinued=true()]` 는 sql 식 "Products. 단종 = 1"이 아니라 sql 식 "Products. 단종 함은 null이 아닙니다."와 동일 합니다. 쿼리를 후자의 SQL 식과 동일 하 게 만들려면 먼저 노드 집합을 **숫자**와 같은**부울** 이 아닌 형식으로 변환 합니다. 정의합니다(예: `Products[number(@Discontinued) = true()]`).  
+ **부울** 로 변환 하면 존재 테스트가 생성 됩니다. 따라서 XPath 쿼리 `Products[@Discontinued=true()]` 는 sql 식 "Products. 단종 = 1"이 아니라 sql 식 "Products. 단종 함은 null이 아닙니다."와 동일 합니다. 쿼리를 후자의 SQL 식과 동일 하 게 만들려면 먼저 노드 집합을 **숫자**와 같은**부울** 이 아닌 형식으로 변환 합니다. `Products[number(@Discontinued) = true()]`)을 입력합니다.  
   
  대부분의 연산자는 노드 집합의 임의 노드 또는 특정 노드에 대해 TRUE이면 TRUE가 되도록 정의되어 있으므로 노드 집합이 비어 있으면 이러한 연산의 결과가 항상 FALSE입니다. 따라서 A가 비어 있으면 `A = B`와 `A != B`는 모두 FALSE이고 `not(A=B)`와 `not(A!=B)`는 TRUE입니다.  
   
@@ -93,12 +93,12 @@ ms.locfileid: "75247087"
 |XDR 데이터 형식|해당<br /><br /> XPath 데이터 형식|사용되는 SQL Server 변환|  
 |-------------------|------------------------------------|--------------------------------|  
 |Nonebin.base64bin.hex|해당 없음|NoneEmployeeID|  
-|부울|부울|CONVERT(bit, EmployeeID)|  
+|boolean|boolean|CONVERT(bit, EmployeeID)|  
 |number, int, float,i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8|number|CONVERT(float(53), EmployeeID)|  
-|id, idref, idrefsentity, entities, enumerationnotation, nmtoken, nmtokens, chardate, Timedate, Time.tz, string, uri, uuid|string|CONVERT(nvarchar(4000), EmployeeID, 126)|  
+|id, idref, idrefsentity, entities, enumerationnotation, nmtoken, nmtokens, chardate, Timedate, Time.tz, string, uri, uuid|문자열|CONVERT(nvarchar(4000), EmployeeID, 126)|  
 |fixed14.4|해당 사항 없음(XPath에는 fixed14.4 XDR 데이터 형식에 해당하는 데이터 형식이 없음)|CONVERT(money, EmployeeID)|  
-|date|string|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
-|time<br /><br /> time.tz|string|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
+|date|문자열|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
+|time<br /><br /> time.tz|문자열|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
   
  날짜 및 시간 변환은 값이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** 데이터 형식 또는 **문자열**을 사용 하 여 데이터베이스에 저장 되는지 여부에 맞게 설계 되었습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Datetime** 데이터 형식은 **timezone** 를 사용 하지 않으며 XML **time** 데이터 형식의 전체 자릿수 보다 작습니다. **Timezone** 데이터 형식이 나 추가 전체 자릿수를 포함 하려면 **문자열** 형식을 사용 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 여에 데이터를 저장 합니다.  
   

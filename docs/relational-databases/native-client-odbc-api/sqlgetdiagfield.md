@@ -15,18 +15,19 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f2a3d8d829794692cff6ecb9879e6f62f0b0b91b
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73786478"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 **SQLGetDiagField**에 대해 다음과 같은 추가 진단 필드를 지정합니다. 이러한 필드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 애플리케이션에 대한 다양한 오류 보고를 지원하며 연결된 ODBC 연결 핸들과 ODBC 문 핸들에서 생성된 모든 진단 레코드에서 사용할 수 있습니다. 필드는 sqlncli.h에서 정의됩니다.  
   
-|진단 레코드 필드|설명|  
+|진단 레코드 필드|Description|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|오류를 생성하는 저장 프로시저의 줄 번호를 보고합니다. SQL_DIAG_SS_LINE 값은 SQL_DIAG_SS_PROCNAME에서 값을 반환하는 경우에만 의미가 있습니다. 값은 부호 없는 16비트 정수로 반환됩니다.|  
 |SQL_DIAG_SS_MSGSTATE|오류 메시지의 상태입니다. 오류 메시지 상태에 대한 자세한 내용은 [RAISERROR](../../t-sql/language-elements/raiserror-transact-sql.md)를 참조하십시오. 값은 부호 있는 32비트 정수로 반환됩니다.|  
@@ -36,7 +37,8 @@ ms.locfileid: "73786478"
   
  문자 데이터가 포함된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관련 진단 필드 SQL_DIAG_SS_PROCNAME과 SQL_DIAG_SS_SRVNAME은 해당 데이터를 Null로 종결된 ANSI 또는 유니코드 문자열로 클라이언트에 반환합니다. 필요한 경우 문자 너비로 문자 수를 조정해야 합니다. 또는 이식 가능한 C 데이터 형식(예: TCHAR 또는 SQLTCHAR)을 사용하여 올바른 프로그램 변수 길이를 유지할 수 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 마지막으로 시도된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문을 식별하는 다음과 같은 추가 동적 함수 코드를 보고합니다. 동적 함수 코드는 진단 레코드 집합의 헤더(레코드 0)에 반환되므로 성공 여부에 관계없이 실행할 때마다 사용할 수 있습니다.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 마지막으로 시도된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문을 식별하는 다음과 같은 추가 동적 함수 코드를 보고합니다. 동적 함수 코드는 진단 레코드 집합의 헤더(레코드 0)에 반환되므로 성공 여부에 관계없이 실행할 때마다 사용할 수 있습니다.  
   
 |동적 함수 코드|원본|  
 |---------------------------|------------|  
@@ -99,7 +101,7 @@ ms.locfileid: "73786478"
 ## <a name="sqlgetdiagfield-and-table-valued-parameters"></a>SQLGetDiagField 및 테이블 반환 매개 변수  
  SQLGetDiagField를 사용 하 여 두 개의 진단 필드인 SQL_DIAG_SS_TABLE_COLUMN_NUMBER 및 SQL_DIAG_SS_TABLE_ROW_NUMBER를 검색할 수 있습니다. 두 필드는 진단 레코드와 관련된 오류 또는 경고를 발생시킨 값을 확인하는 데 유용합니다.  
   
- 테이블 반환 매개 변수에 대 한 자세한 내용은 [테이블 반환 매개 &#40;변수 ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)를 참조 하세요.  
+ 테이블 반환 매개 변수에 대 한 자세한 내용은 [ODBC&#41;&#40;테이블 반환 매개 변수 ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)를 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLGetDiagField 함수](https://go.microsoft.com/fwlink/?LinkId=59352)   

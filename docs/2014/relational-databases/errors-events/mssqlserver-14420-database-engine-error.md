@@ -13,15 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5c2818c322749672c514cd9d392b61b580d40e88
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62869905"
 ---
-# <a name="mssqlserver14420"></a>MSSQLSERVER_14420
+# <a name="mssqlserver_14420"></a>MSSQLSERVER_14420
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -57,11 +57,11 @@ ms.locfileid: "62869905"
     > [!NOTE]  
     >  두 서버 인스턴스의 서로 다른 표준 시간대로 인해 문제가 발생하지 않아야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [log_shipping_monitor_primary &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-tables/log-shipping-monitor-primary-transact-sql)   
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;log_shipping_monitor_primary &#40;](/sql/relational-databases/system-tables/log-shipping-monitor-primary-transact-sql)   
  [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [sp_help_log_shipping_monitor_primary &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-primary-transact-sql)   
- [sp_refresh_log_shipping_monitor &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql)   
+ [Transact-sql&#41;sp_help_log_shipping_monitor_primary &#40;](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-primary-transact-sql)   
+ [Transact-sql&#41;sp_refresh_log_shipping_monitor &#40;](/sql/relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql)   
  [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   
   

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 73d0cf3a374a7f3dda7797238d2c1702360aa955
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62872332"
 ---
 # <a name="check-the-status-of-e-mail-messages-sent-with-database-mail"></a>데이터베이스 메일을 통해 보낸 전자 메일 메시지의 상태 확인
@@ -27,7 +27,7 @@ ms.locfileid: "62872332"
   
 -   **시작하기 전 주의 사항:**  
   
--   **보내는 전자 메일을 사용 하 여 데이터베이스 메일의 상태를 보려면:**  [Transact-SQL](#TsqlProcedure)  
+-   **다음을 사용하여 데이터베이스 메일을 통해 전송된 메일의 상태 보기:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  데이터베이스 메일은 보내는 전자 메일 메시지의 복사본을 유지하고 **msdb**데이터베이스의 **sysmail_allitems**, **sysmail_sentitems**, **sysmail_unsentitems** , **sysmail_faileditems** 뷰에 표시합니다. 데이터베이스 메일 외부 프로그램은 작업을 기록하고 Windows 애플리케이션 이벤트 로그와 **msdb** 데이터베이스의 **sysmail_event_log** 뷰를 통해 로그를 표시합니다. 전자 메일 메시지의 상태를 확인하려면 이 뷰에 대한 쿼리를 실행하세요. 전자 메일 메시지에는 **sent**, **unsent**, **retrying**및 **failed**의 4가지 가능한 상태 중 하나가 있습니다.  
@@ -38,7 +38,8 @@ ms.locfileid: "62872332"
 > [!NOTE]  
 >  이 절차에 대한 예는 이 섹션의 뒷부분에 나오는 [예제(Transact-SQL)](#TsqlExample)을 참조하세요.  
   
-1.  **sysmail_allitems** 테이블에서 **mailitem_id** 또는 **sent_status**로 메시지를 선택합니다.  
+1.  
+  **sysmail_allitems** 테이블에서 **mailitem_id** 또는 **sent_status**로 메시지를 선택합니다.  
   
 2.  전자 메일 메시지에 대해 외부 프로그램에서 반환된 상태를 확인하려면 다음 섹션에 나열된 방법으로 **sysmail_allitems** 를 **mailitem_id** 열의 **sysmail_event_log** 뷰에 조인합니다.  
   
@@ -71,7 +72,7 @@ WHERE items.recipients LIKE '%danw%'
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 메일 로그 및 감사](database-mail-log-and-audits.md)  
   
   

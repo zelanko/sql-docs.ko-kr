@@ -15,20 +15,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: af1548ad29203f06e6d9cc49c048f1973afa3e3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63131458"
 ---
 # <a name="reinitialize-subscriptions---one-subscription"></a>구독 다시 초기화 - 단일 구독
   **구독 다시 초기화** 대화 상자를 사용하여 구독을 다시 초기화하도록 표시할 수 있습니다. 다시 초기화에는 스냅샷을 구독자에 적용하는 작업이 포함됩니다. 이 작업은 트랜잭션 게시의 구독에 대한 배포 에이전트 또는 병합 게시의 구독에 대한 병합 에이전트에서 수행합니다.  
   
-## <a name="options"></a>변수  
- **현재 스냅숏 사용**  
+## <a name="options"></a>옵션  
+ **현재 스냅샷 사용**  
  다음에 배포 에이전트 또는 병합 에이전트가 실행될 때 현재 스냅샷을 구독자에 적용하려면 이 옵션을 선택합니다. 유효한 스냅샷이 없으면 이 옵션을 선택할 수 없습니다.  
   
- **새 스냅숏 사용**  
+ **새 스냅샷 사용**  
  새 스냅샷으로 구독을 다시 초기화하려면 이 옵션을 선택합니다. 스냅샷 에이전트에 의해 스냅샷이 생성된 후에만 스냅샷을 구독자에 적용할 수 있습니다. 스냅샷 에이전트가 예약 실행되도록 설정한 경우에는 예약된 다음 스냅샷 에이전트가 실행될 때까지 구독이 다시 초기화되지 않습니다.  
   
  스냅샷 에이전트를 바로 시작하려면 **지금 새 스냅샷 생성** 을 선택합니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "63131458"
  **다시 초기화 표시**  
  구독을 다시 초기화하도록 표시하려면 클릭합니다. 유효한 스냅샷을 사용할 수 있으면 다음에 배포 에이전트 또는 병합 에이전트가 해당 구독에 대해 실행될 때 이 스냅샷이 구독자에 적용됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [구독 다시 초기화](reinitialize-subscriptions.md)  
   
   

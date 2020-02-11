@@ -17,13 +17,13 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 9591b483380d8bfcaea8404cccfa0279d3bcc035
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957202"
 ---
-# <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Azure Key Vault(SQL Server)를 사용한 확장 가능 키 관리
+# <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Azure 키 자격 증명 모음(SQL Server)을 사용한 확장 가능 키 관리
   Azure Key Vault [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 용 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 커넥터를 사용 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 하 여 암호화를 사용 하면 암호화 키를 보호 하기 위해 [EKM&#41;공급자로 확장 가능 키 관리 &#40;](extensible-key-management-ekm.md) Azure Key Vault 서비스를 활용할 수 있습니다.  
   
  이 항목의 내용:  
@@ -127,13 +127,12 @@ ms.locfileid: "74957202"
   
 ##  <a name="Step3"></a>3 단계: Key Vault에 대 한 EKM 공급자를 사용 하도록 SQL Server 구성  
   
-###  <a name="Permissions"></a>권한에  
+###  <a name="Permissions"></a> 권한  
  이 전체 프로세스를 완료하려면 **sysadmin** 고정 서버 역할에 CONTROL SERVER 권한이나 멤버 자격이 있어야 합니다. 특정 작업에는 다음 권한이 필요합니다.  
   
 -   암호화 공급자를 만들려면 **sysadmin** 고정 서버 역할에 CONTROL SERVER 권한 또는 멤버 자격이 있어야 합니다.  
   
--   구성 옵션을 변경하고 RECONFIGURE 문을 실행하려면 ALTER SETTINGS 서버 수준 권한이 있어야 합니다. 
-  **sysadmin** 및 **serveradmin** 고정 서버 역할은 ALTER SETTINGS 권한을 암시적으로 보유하고 있습니다.  
+-   구성 옵션을 변경하고 RECONFIGURE 문을 실행하려면 ALTER SETTINGS 서버 수준 권한이 있어야 합니다. **sysadmin** 및 **serveradmin** 고정 서버 역할은 ALTER SETTINGS 권한을 암시적으로 보유하고 있습니다.  
   
 -   자격 증명을 만들려면 ALTER ANY CREDENTIAL 권한이 필요합니다.  
   
@@ -216,17 +215,17 @@ ms.locfileid: "74957202"
   
  자세한 내용은  
   
--   [Transact-sql&#41;sp_configure &#40;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
+-   [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   
--   [Transact-sql&#41;&#40;암호화 공급자 만들기](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)  
+-   [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)  
   
--   [Transact-sql&#41;자격 증명 &#40;만들기](/sql/t-sql/statements/create-credential-transact-sql)  
+-   [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
   
--   [Transact-sql&#41;&#40;비대칭 키 만들기](/sql/t-sql/statements/create-asymmetric-key-transact-sql)  
+-   [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)  
   
--   [Transact-sql&#41;로그인 &#40;만들기](/sql/t-sql/statements/create-login-transact-sql)  
+-   [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)  
   
--   [ALTER LOGIN &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-login-transact-sql)  
+-   [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)  
   
 ## <a name="examples"></a>예  
   
@@ -291,9 +290,9 @@ ms.locfileid: "74957202"
   
      자세한 내용은  
   
-    -   [Transact-sql&#41;&#40;데이터베이스 암호화 키 만들기](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
+    -   [CREATE DATABASE ENCRYPTION KEY&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
   
-    -   [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
+    -   [ALTER DATABASE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   
 ###  <a name="ExampleB"></a>예 2: Key Vault에서 비대칭 키를 사용 하 여 백업 암호화  
  암호화된 백업은 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]부터 지원됩니다. 다음 예제에서는 키 자격 증명 모음에서 비대칭 키로 보호되는 데이터 암호화 키로 암호화된 백업을 만들고 복원합니다.  
@@ -359,11 +358,11 @@ CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;암호화 공급자 만들기](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)   
- [Transact-sql&#41;자격 증명 &#40;만들기](/sql/t-sql/statements/create-credential-transact-sql)   
- [Transact-sql&#41;&#40;비대칭 키 만들기](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
- [Transact-sql&#41;&#40;대칭 키 만들기](/sql/t-sql/statements/create-symmetric-key-transact-sql)   
- [EKM&#41;&#40;확장 가능 키 관리](extensible-key-management-ekm.md)   
+ [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)   
+ [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)   
+ [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
+ [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)   
+ [확장 가능 키 관리 &#40;EKM&#41;](extensible-key-management-ekm.md)   
  [EKM을 사용 하 여 TDE 사용](enable-tde-on-sql-server-using-ekm.md)   
  [백업 암호화](../../backup-restore/backup-encryption.md)   
- [암호화 된 백업 만들기](../../backup-restore/create-an-encrypted-backup.md)  
+ [암호화된 백업 만들기](../../backup-restore/create-an-encrypted-backup.md)  

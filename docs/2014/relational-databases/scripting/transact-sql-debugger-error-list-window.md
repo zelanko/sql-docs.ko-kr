@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d1eb74eca33bc92152ea08fad2303b9a8b4ba48e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243085"
 ---
 # <a name="error-list-window-management-studio"></a>오류 목록 창(Management Studio)
@@ -92,10 +92,10 @@ ms.locfileid: "75243085"
  **설명**  
  오류 항목의 텍스트를 표시합니다. 설명이 길어지면 다음 줄로 줄 바꿈됩니다.  
   
- **파일과**  
+ **파일**  
  오류를 생성한 스크립트 파일의 이름을 표시합니다.  
   
- **꺽은선형**  
+ **꺾은선형**  
  오류가 포함된 코드 줄을 나타내는 정수를 표시합니다.  
   
  **열**  

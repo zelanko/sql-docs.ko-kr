@@ -1,5 +1,5 @@
 ---
-title: sp_dropmergefilter (TRANSACT-SQL) | Microsoft Docs
+title: sp_dropmergefilter (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: 798586d7-05f3-4a5e-bea8-a34b7b52d0fd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b952fcd8145a2cf5392308b21d593e8c377761f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933963"
 ---
-# <a name="spdropmergefilter-transact-sql"></a>sp_dropmergefilter(Transact-SQL)
+# <a name="sp_dropmergefilter-transact-sql"></a>sp_dropmergefilter(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  병합 필터를 삭제합니다. **sp_dropmergefilter** 삭제 될 병합 필터에서 정의 된 모든 병합 필터 열을 삭제 합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
+  병합 필터를 삭제합니다. 삭제할 병합 필터에 정의 된 모든 병합 필터 열을 삭제 **sp_dropmergefilter** 합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,38 +39,38 @@ sp_dropmergefilter [ @publication= ] 'publication', [ @article= ] 'article'     
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @article = ] 'article'` 아티클의 이름이입니다. *문서* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @article = ] 'article'`아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 없습니다.  
   
-`[ @filtername = ] 'filtername'` 삭제할 필터의 이름이입니다. *filtername* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @filtername = ] 'filtername'`삭제할 필터의 이름입니다. *filtername* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 스냅숏 무효화 하는 기능을 사용할지 설정 합니다. *force_invalidate_snapshot* 되는 **비트**, 기본값 **0**합니다.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`스냅숏이 무효화 되는 기능을 사용 하거나 사용 하지 않도록 설정 합니다. *force_invalidate_snapshot* 은 **bit**이며 기본값은 **0**입니다.  
   
- **0** 병합 아티클에 대 한 변경 인해 스냅숏이 무효화 되지 않도록 지정 합니다.  
+ **0** 은 병합 아티클에 대 한 변경으로 인해 스냅숏이 무효화 되지 않도록 지정 합니다.  
   
- **1** 병합 아티클을 변경 하는 수단을 유효 하지 않게 스냅숏을 무효화 합니다. 하는 경우, 값이 **1** 새 스냅숏 발생에 대 한 사용 권한을 부여 합니다.  
+ **1** 은 병합 아티클에 대 한 변경으로 인해 스냅숏이 무효화 될 수 있음을 의미 합니다. 해당 하는 경우 값 **1** 은 새 스냅숏이 발생할 수 있는 권한을 부여 합니다.  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription` 사용 하거나 구독을 무효로 표시 하는 기능을 사용 하지 않도록 설정 합니다. *force_reinit_subscription* 되는 **비트**, 기본값 **0**합니다.  
+`[ @force_reinit_subscription = ] force_reinit_subscription`구독을 유효 하지 않은 것으로 표시 하는 기능을 사용 하거나 사용 하지 않도록 설정 합니다. *force_reinit_subscription* 은 **bit**이며 기본값은 **0**입니다.  
   
- **0** 병합 아티클 필터 변경 내용을 잘못 된 것에 대 한 구독으로 인해 되지 않도록 지정 합니다.  
+ **0** 은 병합 아티클 필터에 대 한 변경으로 인해 구독이 무효화 되지 않도록 지정 합니다.  
   
- **1** 병합 아티클 필터를 변경 하는 방법으로 인해 구독이 무효화 되도록 합니다.  
+ **1** 은 병합 아티클 필터에 대 한 변경으로 인해 구독이 무효화 되는 것을 의미 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>설명  
- **sp_dropmergefilter** 병합 복제에 사용 됩니다.  
+ **sp_dropmergefilter** 는 병합 복제에 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_dropmergefilter**합니다.  
+ **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_dropmergefilter**을 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [게시 및 아티클 속성 변경](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addmergefilter&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
- [sp_changemergefilter&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
- [sp_helpmergefilter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
+ [Transact-sql&#41;sp_addmergefilter &#40;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
+ [Transact-sql&#41;sp_changemergefilter &#40;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
+ [Transact-sql&#41;sp_helpmergefilter &#40;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

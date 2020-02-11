@@ -13,10 +13,10 @@ ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 89c71bd3864fcaa682d3587a54fc2b32c26e5659
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75255589"
 ---
 # <a name="create-a-composite-domain"></a>복합 도메인 만들기
@@ -29,14 +29,14 @@ ms.locfileid: "75255589"
   
  복합 도메인을 만든 후 복합 도메인의 속성을 변경하거나 도메인에 참조 데이터 서비스를 연결하거나 도메인 간 규칙을 만들거나 값 관계를 만들 수 있습니다. 이렇게 하려면 **도메인 관리** 페이지의 **도메인** 목록에서 복합 도메인을 선택한 다음 해당 탭을 선택합니다.  
   
-##  <a name="BeforeYouBegin"></a>시작 하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a>사전  
+###  <a name="Prerequisites"></a> 필수 조건  
  복합 도메인을 만들려면 기술 자료를 만들고 열어야 하며 복합 도메인에 추가할 두 개 이상의 단일 도메인이 있어야 합니다.  
   
-###  <a name="Security"></a>보안  
+###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a>권한에  
+####  <a name="Permissions"></a> 권한  
  복합 도메인을 만들려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
 ##  <a name="ParsingKnowledgeDiscoveryActivity"></a>기술 자료 검색 작업에서 복합 도메인 만들기  
@@ -78,8 +78,7 @@ ms.locfileid: "75255589"
 6.  
   **도메인 목록**에서 복합 도메인의 일부로 사용할 도메인을 선택하고 오른쪽 화살표를 클릭하여 해당 도메인을 **복합 도메인 내의 도메인** 테이블로 이동합니다.  
   
-7.  
-  **확인**을 클릭합니다.  
+7.  **확인**을 클릭합니다.  
   
 ##  <a name="CompositeDomainProperties"></a>복합 도메인 속성 설정  
   
@@ -89,8 +88,7 @@ ms.locfileid: "75255589"
 2.  
   **도메인 목록**에서 복합 도메인의 일부로 사용할 도메인을 선택하고 오른쪽 화살표를 클릭하여 해당 도메인을 **복합 도메인 내의 도메인** 테이블로 이동합니다. 이는 만들려는 복합 도메인에 추가할 수 있는 단일 도메인 목록입니다. 이미 만들어지고 기존 복합 도메인에 추가되지 않은 단일 도메인만 사용할 수 있습니다. 단일 도메인을 기술 자료에 있는 둘 이상의 복합 도메인에 추가할 수 없으며, 복합 도메인을 다른 복합 도메인에 추가할 수 없습니다.  
   
-3.  
-  **고급**을 클릭합니다.  
+3.  **고급**을 클릭합니다.  
   
 4.  
   **구문 분석 방법**에 대해 다음 중 하나를 선택합니다.  

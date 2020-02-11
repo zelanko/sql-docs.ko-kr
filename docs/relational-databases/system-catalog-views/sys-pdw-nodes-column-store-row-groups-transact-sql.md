@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: b1cbdc63907933f173c7d32a2dde3151dd4db7af
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399871"
 ---
 # <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys. pdw_nodes_column_store_row_groups (Transact-sql)
@@ -24,7 +24,7 @@ ms.locfileid: "74399871"
 
   에서는 클러스터 된 columnstore 인덱스 정보를 사용 하 여 관리자가에서 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]시스템 관리를 결정 하도록 지원 합니다. **pdw_nodes_column_store_row_groups** 에는 실제로 저장 된 총 행 수 (삭제 된 것으로 표시 된 행 수 포함)와 삭제 된 것으로 표시 된 행 수에 대 한 열이 있습니다. **Pdw_nodes_column_store_row_groups** 를 사용 하 여 삭제 된 행의 비율이 높은 행 그룹을 확인 하 고 다시 작성 해야 합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|기본 테이블의 ID입니다. 이는 계산 노드의 물리적 테이블 이며, 컨트롤 노드의 논리 테이블에 대 한 object_id이 아닙니다. 예를 들어 object_id은 sys. tables의 object_id와 일치 하지 않습니다.<br /><br /> Sys. tables에 조인 하려면 pdw_index_mappings를 사용 합니다.|  
 |**index_id**|**int**|*Object_id* 테이블에 대 한 클러스터형 columnstore 인덱스의 ID입니다.|  
@@ -50,7 +50,7 @@ ms.locfileid: "74399871"
   
  다 채워진 columnstore 행 그룹은 압축되며, 새 행을 수락하지 않습니다. 압축된 그룹에서 행을 삭제하면 삭제된 것으로 표시되고 행 자체는 그대로 유지됩니다. 압축된 그룹을 업데이트할 때는 압축된 그룹의 삭제 또는 열린 그룹에 대한 삽입을 이용합니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **VIEW SERVER STATE** 권한이 필요 합니다.  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  

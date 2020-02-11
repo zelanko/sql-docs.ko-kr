@@ -27,10 +27,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5b6e2072e06e1ea5d61802a4c6a006737bc04762
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871699"
 ---
 # <a name="database-states"></a>데이터베이스 상태
@@ -39,7 +39,7 @@ ms.locfileid: "62871699"
 ## <a name="database-state-definitions"></a>데이터베이스 상태 정의  
  다음 표에서는 데이터베이스 상태를 정의합니다.  
   
-|State|정의|  
+|시스템 상태|정의|  
 |-----------|----------------|  
 |ONLINE|데이터베이스에 액세스할 수 있습니다. 복구의 실행 취소 단계가 완료되지 않은 경우에도 주 파일 그룹은 온라인 상태입니다.|  
 |OFFLINE|데이터베이스를 사용할 수 없습니다. 명시적 사용자 동작으로 인해 데이터베이스가 오프라인 상태가 되어 추가 사용자 동작이 수행될 때까지 오프라인 상태로 있습니다. 예를 들어 파일을 새 디스크로 이동하기 위해 데이터베이스를 오프라인으로 설정할 수 있습니다. 이러한 경우 이동이 완료되면 데이터베이스가 온라인 상태로 돌아옵니다.|  

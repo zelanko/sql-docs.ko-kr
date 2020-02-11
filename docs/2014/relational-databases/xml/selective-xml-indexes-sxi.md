@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a00800150f5f100f97687df59bc4603f07d0fcc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62679824"
 ---
 # <a name="selective-xml-indexes-sxi"></a>SXI(선택적 XML 인덱스)
@@ -123,7 +123,7 @@ FOR
   
 -   base64Binary 및 hexBinary와 같은 이진 XS 유형이 있는 노드의 인덱싱  
   
--   와일드 카드 문자를 포함 하는 XPath 식을 사용 하 여 인덱싱할 노드 지정 `*` 끝: 예: `/a/b/c/*`, `/a//b/*` 또는 `/a/b/*:c`.  
+-   끝에 `*` 와일드카드 문자가 포함된 XPath 식을 사용하여 인덱싱할 노드 지정. 예를 들면 다음과 같습니다.  `/a/b/c/*`, `/a//b/*`또는 `/a/b/*:c`  
   
 -   자식, 특성 또는 하위 항목 이외의 모든 축 인덱싱. `//<step>` 은 특별한 경우로 허용됩니다.  
   
@@ -133,7 +133,7 @@ FOR
   
 
   
-###  <a name="prereq"></a> 필수 구성 요소  
+###  <a name="prereq"></a> 필수 조건  
  사용자 테이블의 XML 열에 대해 선택적 XML 인덱스를 만들려면 먼저 다음 사전 요구 사항을 충족해야 합니다.  
   
 -   클러스터형 인덱스는 사용자 테이블의 기본 키에 있어야 합니다.  
@@ -169,7 +169,7 @@ FOR
   
 5.  노드가 128번 이상 중첩된 XML 열  
   
- **저장소 관련 제한 사항**  
+ **스토리지 관련 제한 사항**  
   
  XML 문서에서 인덱스에 추가할 수 있는 노드 수는 제한되어 있습니다. 선택적 XML 인덱스는 XML 문서를 하나의 관계형 테이블에 매핑합니다. 따라서 지정된 테이블의 행에는 null이 아닌 행이 1024개 이상 있을 수 없습니다. 또한 인덱스에서 스토리지 목적으로 스파스 열을 사용하므로 스파스 열에 대한 많은 제한 사항이 선택적 XML 열에도 적용됩니다.  
   
@@ -201,7 +201,7 @@ FOR
   
 |||  
 |-|-|  
-|**태스크**|**항목**|  
+|**Task**|**항목**|  
 |선택적 XML 인덱스를 만들거나 변경할 때 인덱싱할 노드 경로 및 선택적 최적화 힌트를 지정합니다.|[선택적 XML 인덱스에 대한 경로 및 최적화 힌트 지정](specify-paths-and-optimization-hints-for-selective-xml-indexes.md)|  
 |선택적 XML 인덱스를 만들고, 변경하고, 삭제합니다.|[선택적 XML 인덱스 만들기, 변경 및 삭제](create-alter-and-drop-selective-xml-indexes.md)|  
 |보조 선택적 XML 인덱스를 만들고, 변경하고, 삭제합니다.|[보조 선택적 XML 인덱스 만들기, 변경 및 삭제](create-alter-and-drop-secondary-selective-xml-indexes.md)|  

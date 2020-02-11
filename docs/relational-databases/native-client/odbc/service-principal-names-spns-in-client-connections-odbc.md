@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6eb3887586a7c0398b196ba042c44381c2d900f3
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75247378"
 ---
 # <a name="service-principal-names-spns-in-client-connections-odbc"></a>클라이언트 연결(ODBC)의 SPN(서비스 사용자 이름)
@@ -26,7 +26,7 @@ ms.locfileid: "75247378"
 ## <a name="connection-string-keywords"></a>연결 문자열 키워드  
  클라이언트 애플리케이션은 다음 연결 문자열 키워드를 사용하여 SPN을 지정할 수 있습니다.  
   
-|키워드|Value|  
+|키워드|값|  
 |-------------|-----------|  
 |**ServerSPN**|서버의 SPN입니다. 기본값은 빈 문자열이며 이 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 드라이버에서 생성한 기본 SPN을 사용합니다.|  
 |**Failoverpartnerspn이**|장애 조치(failover) 파트너의 SPN입니다. 기본값은 빈 문자열이며 이 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 드라이버에서 생성한 기본 SPN을 사용합니다.|  
@@ -34,7 +34,7 @@ ms.locfileid: "75247378"
 ## <a name="connection-attributes"></a>연결 특성  
  클라이언트 애플리케이션은 다음 연결 특성을 사용하여 SPN을 지정하고 인증 방법을 쿼리할 수 있습니다.  
   
-|이름|유형|사용|  
+|속성|Type|사용|  
 |----------|----------|-----------|  
 |SQL_COPT_SS_SERVER_SPN<br /><br /> SQL_COPT_SS_FAILOVER_PARTNER_SPN|SQLTCHAR, 읽기/쓰기|서버의 SPN을 지정합니다. 기본값은 빈 문자열이며 이 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 드라이버에서 생성한 기본 SPN을 사용합니다.<br /><br /> 이 특성은 프로그래밍 방식으로 설정된 후 또는 연결이 열린 후에만 쿼리할 수 있습니다. 열려 있지 않은 연결에서 이 특성을 쿼리하거나 특성이 프로그래밍 방식으로 설정되지 않은 경우 SQL_ERROR가 반환되고 SQLState 08003 및 "연결을 열 수 없습니다"라는 메시지가 표시되며 진단 레코드가 기록됩니다.<br /><br /> 연결이 열려 있을 때 이 특성을 설정하려고 하면 SQL_ERROR가 반환되고 SQLState HY011 및 "현재 작업이 잘못되었습니다"라는 메시지가 표시되며 진단 레코드가 기록됩니다.|  
 |SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD|SQLTCHAR, 읽기 전용|연결에 사용된 인증 방법을 반환합니다. 애플리케이션으로 반환되는 값은 Windows에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client로 반환하는 값입니다. 가능한 값은 다음과 같습니다.<br /><br /> NTLM 인증을 사용하여 연결을 열 때 반환되는 "NTLM"<br /><br /> Kerberos 인증을 사용하여 연결을 열 때 반환되는 "Kerberos"<br /><br /> <br /><br /> 이 특성은 Windows 인증을 사용하여 열린 연결에 대해서만 읽을 수 있습니다. 연결이 열리기 전에 이 특성을 읽으려고 하면 SQL_ERROR가 반환되고 SQLState 08003 및 "연결을 열 수 없습니다"라는 메시지가 표시되며 오류가 기록됩니다.<br /><br /> Windows 인증을 사용하지 않은 연결에서 이 특성을 쿼리하면 SQL_ERROR가 반환되고 SQLState HY092 및 "잘못된 특성/옵션 식별자입니다(SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD는 트러스트된 연결에만 사용할 수 있음)"라는 메시지가 표시되며 오류가 기록됩니다.<br /><br /> 인증 방법을 확인할 수 없는 경우 SQL_ERROR가 반환되고 SQLState HY000 및 "일반 오류"라는 메시지가 표시되며 오류가 기록됩니다.|  

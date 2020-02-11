@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aa3f8b6ec0cd81f1a29ea3262bd3ec52dd8158ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109094"
 ---
 # <a name="general-properties-page-report-parts-report-manager"></a>일반 속성 페이지, 보고서 파트(보고서 관리자)
@@ -33,17 +33,17 @@ ms.locfileid: "66109094"
   
 3.  드롭다운 목록에서 **관리**를 클릭합니다. 일반 속성 페이지가 열립니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **수정한 날짜**  
  서버에서 보고서 파트 속성이 마지막으로 수정되거나 새 버전의 보고서 파트가 서버에 게시된 날짜 및 시간입니다. 읽기 전용입니다.  
   
- **에 의해 수정**  
+ **수정한 사람**  
  보고서 파트를 마지막으로 수정한 사람의 이름입니다. 읽기 전용입니다.  
   
  **만든 날짜**  
  보고서 파트가 서버에 처음 게시된 날짜 및 시간입니다. 읽기 전용입니다.  
   
- **만든**  
+ **만든 사람**  
  보고서 파트를 처음에 만든 사람의 이름입니다. 읽기 전용입니다.  
   
  **크기**  
@@ -68,20 +68,20 @@ ms.locfileid: "66109094"
  보고서 서버 데이터베이스에서 보고서 파트를 제거합니다. 서버에서 보고서 파트를 삭제해도 보고서 파트가 추가된 기존 보고서는 렌더링됩니다.  
   
  **이동**  
- 보고서 서버 폴더 계층 구조 내에서 보고서 파트를 이동하기 위해 항목 이동 페이지를 열려면 클릭합니다. 자세한 내용은 [항목 이동 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/move-items-page-report-manager.md)합니다.  
+ 보고서 서버 폴더 계층 구조 내에서 보고서 파트를 이동하기 위해 항목 이동 페이지를 열려면 클릭합니다. 자세한 내용은 [항목 이동 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/move-items-page-report-manager.md)를 참조 하세요.  
   
- **다운로드**  
+ **다운로드할지**  
  .rsc 파일로 저장할 보고서 파트 정의의 복사본을 추출합니다. .rsc 파일을 보고서 서버 폴더에 업로드하거나 보고서 서버 폴더의 기존 보고서 파트를 바꾸는 데 사용할 수 있습니다.  
   
- **바꾸기**  
+ **바꾸십시오**  
  보고서 파트 정의를 .rsc 파일의 다른 정의로 바꿉니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서 파트 관리](report-design/managing-report-parts.md)   
  [보고서 관리자&#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [내용 페이지&#40;보고서 관리자&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [내용 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [보고서 파트&#40;보고서 작성기 및 SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
- [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)   
- [보고서 작성기의 보고서 파트 및 데이터 집합](report-data/report-parts-and-datasets-in-report-builder.md)  
+ [F1 도움말 보고서 관리자](../../2014/reporting-services/report-manager-f1-help.md)   
+ [보고서 작성기의 보고서 파트 및 데이터 세트](report-data/report-parts-and-datasets-in-report-builder.md)  
   
   
