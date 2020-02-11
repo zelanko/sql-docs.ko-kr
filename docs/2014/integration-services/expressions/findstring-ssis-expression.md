@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7efc711e97abde1d33a7dd4194bd2953b959ef6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769179"
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING(SSIS 식)
@@ -42,10 +42,10 @@ FINDSTRING(character_expression, searchstring, occurrence)
 ## <a name="result-types"></a>결과 형식  
  DT_I4  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  FINDSTRING은 DT_WSTR 데이터 형식에서만 실행됩니다.  문자열 리터럴인*character_expression* 및 *searchstring* 인수나 DT_STR 데이터 형식의 데이터 열은 FINDSTRING 연산이 수행되기 전에 DT_WSTR 데이터 형식으로 암시적으로 캐스팅됩니다. 다른 데이터 형식은 DT_WSTR 데이터 형식으로 명시적으로 캐스팅되어야 합니다. 자세한 내용은 [Integration Services 데이터 형식](../data-flow/integration-services-data-types.md) 및 [캐스트&#40;SSIS 식&#41;](cast-ssis-expression.md)를 참조하세요.  
   
- *character_expression* 또는 *searchstring*이 Null이면 FINDSTRING은 Null을 반환합니다.  
+ *character_expression* 또는 *searchstring* 이 Null이면 FINDSTRING은 Null을 반환합니다.  
   
  *occurrence* 인수의 값이 1이면 첫 번째 발생의 인덱스를 가져오고 값이 2이면 두 번째 발생의 인덱스를 가져옵니다.  
   
@@ -64,7 +64,8 @@ FINDSTRING("New York, NY, NY", "NY", 1)
 FINDSTRING("New York, NY, NY", "NY", 3)   
 ```  
   
- 이 예에서는 **Name** 열을 사용합니다. **Name** 열에서 값 n의 위치가 반환됩니다. 반환 결과는 **Name**열의 값에 따라 달라집니다. **Name** 열에 Anderson이 포함된 경우 함수는 8을 반환합니다.  
+ 이 예에서는 **Name** 열을 사용합니다. 
+  **Name** 열에서 값 n의 위치가 반환됩니다. 반환 결과는 **Name**열의 값에 따라 달라집니다. **Name** 열에 Anderson이 포함된 경우 함수는 8을 반환합니다.  
   
 ```  
 FINDSTRING(Name,"n", 2)   
@@ -76,7 +77,7 @@ FINDSTRING(Name,"n", 2)
 FINDSTRING(Name,Size,1)   
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [REPLACE&#40;SSIS 식&#41;](replace-ssis-expression.md)   
  [함수&#40;SSIS 식&#41;](functions-ssis-expression.md)  
   

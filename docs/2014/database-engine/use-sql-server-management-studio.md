@@ -15,43 +15,50 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 544d4b40c66f345aa563cbc96380639c729ae1d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773902"
 ---
 # <a name="use-sql-server-management-studio"></a>SQL Server Management Studio 사용
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS)는 액세스, 구성, 관리, 관리 및 개발의 모든 구성 요소에 대 한 통합된 환경을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다. SSMS는 수많은 풍부한 스크립트 편집기와 광범위한 그래픽 도구 그룹을 결합하여 기술 수준에 상관없이 모든 개발자와 관리자가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 액세스할 수 있도록 해줍니다.  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)](SSMS)는의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]모든 구성 요소를 액세스, 구성, 관리, 관리 및 개발 하기 위한 통합 환경입니다. SSMS는 수많은 풍부한 스크립트 편집기와 광범위한 그래픽 도구 그룹을 결합하여 기술 수준에 상관없이 모든 개발자와 관리자가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 액세스할 수 있도록 해줍니다.  
   
  SSMS는 이전 릴리스의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 포함된 엔터프라이즈 관리자, 쿼리 분석기 및 분석 관리자의 기능을 단일 환경에 결합합니다. 또한 SSMS는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 와 같은 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]의 모든 구성 요소에서 작동합니다. 개발자는 익숙한 경험을 활용할 수 있으며 데이터베이스 관리자는 사용하기 쉬운 그래픽 도구를 다양한 스크립팅 기능과 결합하는 포괄적인 단일 유틸리티를 사용할 수 있습니다.  
   
- SSMS에서 다운로드 및 설치 합니다 [Microsoft Developer Network](https://msdn.microsoft.com/library/dn434042.aspx)합니다.  
+ [Microsoft Developer Network](https://msdn.microsoft.com/library/dn434042.aspx)에서 SSMS를 다운로드 하 여 설치 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [SQL Server Management Studio의 기능](features-in-sql-server-management-studio.md)  
- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에 포함된 풍부한 기능 집합을 나열합니다.  
+ 
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에 포함된 풍부한 기능 집합을 나열합니다.  
   
  [SQL Server Management Studio 도구 창](../ssms/tool-windows-in-sql-server-management-studio.md)  
- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 구성 요소인 도구를 설명합니다.  
+ 
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 구성 요소인 도구를 설명합니다.  
   
  [SQL Server Management Studio의 창 관리 이해](../ssms/understand-sql-server-management-studio-windows-management.md)  
- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에 표시된 창을 관리하는 방법에 대해 설명합니다.  
+ 
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에 표시된 창을 관리하는 방법에 대해 설명합니다.  
   
  [SQL Server Management Studio에서 서버 관리](../ssms/administer-servers-with-sql-server-management-studio.md)  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스를 관리하는 방법에 대해 설명합니다.  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스를 관리하는 방법에 대해 설명합니다.  
   
  [SQL Server Management Studio에서 SQL Server 구성 요소로 연결](../ssms/f1-help/connect-to-any-sql-server-component-from-sql-server-management-studio.md)  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결하는 방법과 연결 없이 특정 태스크를 수행하는 방법에 대해 설명합니다.  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결하는 방법과 연결 없이 특정 태스크를 수행하는 방법에 대해 설명합니다.  
   
  [개체 탐색기](../ssms/object/object-explorer.md)  
  개체 탐색기의 기능을 설명합니다.  
   
  [SQL Server Management Studio의 사용자 지원](../ssms/user-assistance-in-sql-server-management-studio.md)  
- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 사용자 지원(예: 도움말)을 구성하는 방법에 대해 설명합니다.  
+ 
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 사용자 지원(예: 도움말)을 구성하는 방법에 대해 설명합니다.  
   
  [쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 의 풍부한 편집 환경을 사용하여 [!INCLUDE[tsql](../includes/tsql-md.md)], MDX, DMX 및 XML/A 스크립트를 편집하는 방법에 대해 설명합니다.  
+ 
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 의 풍부한 편집 환경을 사용하여 [!INCLUDE[tsql](../includes/tsql-md.md)], MDX, DMX 및 XML/A 스크립트를 편집하는 방법에 대해 설명합니다.  
   
  [쿼리 편집기로 SQLCMD 스크립트 편집](../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)  
  SQLCMD 모드에서 쿼리 편집기를 사용할 경우의 기능과 제한 사항을 설명합니다.  
@@ -60,7 +67,8 @@ ms.locfileid: "62773902"
  코드 편집기 창에서 색 구분의 의미를 설명합니다.  
   
  [SQL Server Management Studio 바로 가기 키](../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 사용할 수 있는 키보드 바로 가기를 나열합니다.  
+ 
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 사용할 수 있는 키보드 바로 가기를 나열합니다.  
   
  [메뉴 및 바로 가기 키 사용자 지정](../ssms/customize-menus-and-shortcut-keys.md)  
  사용자 지정 메뉴와 바로 가기를 만드는 방법에 대해 설명합니다.  
@@ -69,15 +77,17 @@ ms.locfileid: "62773902"
  스크립트 프로젝트와 솔루션을 개발하는 방법에 대해 설명합니다.  
   
  [템플릿 탐색기](../ssms/template/template-explorer.md)  
- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 템플릿을 사용하는 방법과 사용자 지정 템플릿을 만드는 방법에 대해 설명합니다.  
+ 
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 템플릿을 사용하는 방법과 사용자 지정 템플릿을 만드는 방법에 대해 설명합니다.  
   
  [SQL Server Management Studio의 속성 페이지](../ssms/property-pages-in-sql-server-management-studio.md)  
- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 새 속성 창 레이아웃에 대해 설명합니다.  
+ 
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 새 속성 창 레이아웃에 대해 설명합니다.  
   
  [Visual Database Tools 디자이너](../ssms/visual-db-tools/visual-database-tool-designers.md)  
  쿼리를 만들거나 데이터베이스 구조를 디자인 또는 수정하거나 데이터를 업데이트하는 데 사용할 수 있는 Visual Database Tools에 대해 설명합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [서버 속성 보기 또는 변경&#40;SQL Server&#41;](configure-windows/view-or-change-server-properties-sql-server.md)  
+## <a name="see-also"></a>참고 항목  
+ [서버 속성 &#40;보거나 변경 SQL Server&#41;](configure-windows/view-or-change-server-properties-sql-server.md)  
   
   

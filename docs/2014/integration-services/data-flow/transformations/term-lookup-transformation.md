@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 01b6388dbec5ed563dd8e7fa4476335a3ace998d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770319"
 ---
 # <a name="term-lookup-transformation"></a>용어 조회 변환
@@ -40,7 +40,7 @@ ms.locfileid: "62770319"
   
  용어 조회 변환에서 대/소문자를 구분하여 일치하는 용어를 검색할 수 있도록 구성하여 용어 검색 방법의 사용자 지정 수위를 높일 수 있습니다.  
   
-## <a name="matches"></a>요청 내용  
+## <a name="matches"></a>일치  
  용어 조회에서는 조회를 수행하고 다음 규칙에 따라 값을 반환합니다.  
   
 -   대/소문자 구분 검색을 수행하도록 변환이 구성된 경우 대/소문자가 다른 일치 항목은 무시됩니다. 예를 들어 *student* 와 *STUDENT* 는 별개의 단어로 취급됩니다.  
@@ -78,11 +78,12 @@ ms.locfileid: "62770319"
   
  InputColumnType 속성이 0이나 2로 설정된 변환 출력 열에는 업스트림 데이터 흐름 구성 요소에 의해 열에 할당된 계보 식별자를 포함하는 열에 대한 CustomLineageID 속성이 포함됩니다.  
   
- 용어 조회 변환은 변환 출력에 기본적으로 `Term`과 `Frequency`라는 두 개의 열을 추가합니다. `Term`은 조회 테이블의 용어를 포함하고 `Frequency`는 참조 테이블의 용어가 입력 데이터 집합에서 발생한 횟수를 포함합니다. 이러한 열에는 CustomLineageID 속성이 포함되지 않습니다.  
+ 용어 조회 변환은 변환 출력에 기본적으로 `Term`과 `Frequency`라는 두 개의 열을 추가합니다. 
+  `Term`은 조회 테이블의 용어를 포함하고 `Frequency`는 참조 테이블의 용어가 입력 데이터 집합에서 발생한 횟수를 포함합니다. 이러한 열에는 CustomLineageID 속성이 포함되지 않습니다.  
   
  조회 테이블은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 또는 Access 데이터베이스의 테이블이어야 합니다. 용어 추출 변환의 출력이 테이블에 저장되는 경우 이 테이블을 참조 테이블로 사용할 수 있지만 다른 테이블도 사용할 수 있습니다. 플랫 파일, Excel 통합 문서 또는 다른 원본에 있는 텍스트는 용어 조회 변환을 사용하기 전에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스나 Access 데이터베이스로 가져와야 합니다.  
   
- 용어 조회 변환은 별개의 OLE DB 연결을 사용하여 참조 테이블에 연결합니다. 자세한 내용은 [OLE DB Connection Manager](../../connection-manager/ole-db-connection-manager.md)을(를) 참조하세요.  
+ 용어 조회 변환은 별개의 OLE DB 연결을 사용하여 참조 테이블에 연결합니다. 자세한 내용은 [OLE DB Connection Manager](../../connection-manager/ole-db-connection-manager.md)를 참조하세요.  
   
  용어 조회 변환은 완전히 사전 캐시된 모드에서 작동합니다. 용어 조회 변환은 런타임에 참조 테이블로부터 용어를 읽고 변환 입력 행을 처리하기 전에 이를 프라이빗 메모리에 저장합니다.  
   
@@ -92,17 +93,18 @@ ms.locfileid: "62770319"
   
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- **용어 조회 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
+ 
+  **용어 조회 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [용어 조회 변환 편집기&#40;참조 테이블 탭&#41;](../../term-lookup-transformation-editor-reference-table-tab.md)  
+-   [용어 조회 변환 편집기 &#40;참조 테이블 탭&#41;](../../term-lookup-transformation-editor-reference-table-tab.md)  
   
 -   [용어 조회 변환 편집기&#40;용어 조회 탭&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
   
--   [용어 조회 변환 편집기&#40;고급 탭&#41;](../../term-lookup-transformation-editor-advanced-tab.md)  
+-   [용어 조회 변환 편집기 &#40;고급 탭&#41;](../../term-lookup-transformation-editor-advanced-tab.md)  
   
  **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [공용 속성](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [변환 사용자 지정 속성](transformation-custom-properties.md)  
   

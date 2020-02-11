@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 521d40529501d761b8e50300c16a816284109695
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770892"
 ---
 # <a name="request-log"></a>요청 로그
@@ -41,7 +41,7 @@ ms.locfileid: "62770892"
     > [!NOTE]  
     >  **미리 보기** 를 클릭하면 **미리 보기** 대화 상자도 열립니다. 이 대화 상자에 대한 자세한 내용은 [Preview](preview.md)을 참조하십시오.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **Time**  
  이벤트가 기록된 시간을 표시합니다.  
   
@@ -51,15 +51,15 @@ ms.locfileid: "62770892"
 |값|Description|  
 |-----------|-----------------|  
 |S|성공 메시지입니다.|  
-|E|오류 메시지입니다.|  
+|E|오류 메시지|  
 |W|경고 메시지입니다.|  
 |I|정보 메시지.|  
-|변수를 잠그기 위한|작업이 중단되었습니다.|  
+|A|작업이 중단되었습니다.|  
   
  **메시지**  
  기록된 이벤트와 관련된 메시지 텍스트를 표시합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SAP BW 원본 편집기&#40;연결 관리자 페이지&#41;](sap-bw-source-editor-connection-manager-page.md)   
  [Microsoft Connector 1.1 for SAP BW F1 도움말](../microsoft-connector-for-sap-bw-f1-help.md)  
   

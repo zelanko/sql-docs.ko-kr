@@ -15,15 +15,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cc558a0a0f5b8bd05f2ff461cc45a73aafa6da23
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916400"
 ---
-# <a name="mssqlserver-1"></a>MSSQLSERVER_-1
+# <a name="mssqlserver_-1"></a>MSSQLSERVER_-1
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -32,7 +32,7 @@ ms.locfileid: "62916400"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름||  
-|메시지 텍스트|서버에 대한 연결을 구성하는 동안 오류가 발생했습니다.  기본 설정 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 원격 연결이 허용되지 않기 때문에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결할 때 이 오류가 발생할 수 있습니다. (공급자: SQL 네트워크 인터페이스, 오류: 28-서버가 요청한 프로토콜을 지원 하지 않습니다) (Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 오류:-1)|  
+|메시지 텍스트|서버에 대한 연결을 구성하는 동안 오류가 발생했습니다.  기본 설정 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 원격 연결이 허용되지 않기 때문에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결할 때 이 오류가 발생할 수 있습니다. (공급자: SQL 네트워크 인터페이스, 오류: 28 - 서버가 요청한 프로토콜을 지원하지 않습니다.) (Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 오류: -1)|  
   
 ## <a name="explanation"></a>설명  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트가 서버에 연결할 수 없습니다. 이 오류는 다음과 같은 이유로 인해 발생할 수 있습니다.  
@@ -56,8 +56,8 @@ ms.locfileid: "62916400"
   
 -   서버에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스가 시작되었는지 확인합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [데이터베이스 엔진 액세스에 대 한 Windows 방화벽을 구성 합니다.](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)   
+## <a name="see-also"></a>참고 항목  
+ [데이터베이스 엔진 액세스에 대 한 Windows 방화벽 구성](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)   
  [클라이언트 프로토콜 구성](../../database-engine/configure-windows/configure-client-protocols.md)   
  [네트워크 프로토콜 및 네트워크 라이브러리](../../sql-server/install/network-protocols-and-network-libraries.md)   
  [클라이언트 네트워크 구성](../../database-engine/configure-windows/client-network-configuration.md)   

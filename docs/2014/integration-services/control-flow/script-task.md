@@ -17,14 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7c710065bf0a87b5ec3850010344f2ef5114022e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830564"
 ---
 # <a name="script-task"></a>스크립트 태스크
-  스크립트 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 가 제공하는 기본 제공 태스크와 변환에서 사용할 수 없는 기능을 수행하는 코드를 제공합니다. 또한 여러 개의 태스크와 변환을 사용하는 대신 여러 기능을 하나의 스크립트에 결합할 수 있습니다. 스크립트 태스크는 데이터 행마다 한 번 수행하는 대신 패키지에서 한 번 또는 열거된 개체마다 한 번 수행해야 하는 작업에 사용합니다.  
+  스크립트 작업은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]가 제공하는 기본 제공 작업과 변환에서 사용할 수 없는 기능을 수행하는 코드를 제공합니다. 또한 여러 개의 태스크와 변환을 사용하는 대신 여러 기능을 하나의 스크립트에 결합할 수 있습니다. 스크립트 태스크는 데이터 행마다 한 번 수행하는 대신 패키지에서 한 번 또는 열거된 개체마다 한 번 수행해야 하는 작업에 사용합니다.  
   
  스크립트 태스크는 다음 용도로 사용할 수 있습니다.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "62830564"
  스크립트 태스크를 패키지에 적합한 선택 항목으로 결정한 후에는 태스크에서 사용하는 스크립트를 개발하고 태스크 자체를 구성해야 합니다.  
   
 ## <a name="writing-and-running-the-script-that-the-task-uses"></a>태스크에서 사용하는 스크립트 작성 및 실행  
- 스크립트 태스크는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) as the environment in which you write the scripts and the engine that runs those scripts.  
+ 스크립트 작업은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] VSTA([!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications)를 스크립트 작성 환경과 스크립트 실행 엔진으로 사용합니다.  
   
  VSTA는 색 구분 기능이 포함된 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 편집기, IntelliSense, [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 개체 탐색기 **등**환경의 모든 표준 기능을 제공합니다. 또한 다른 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 개발 도구에서 사용하는 것과 동일한 디버거를 사용합니다. 스크립트 작업의 중단점이 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 태스크 및 컨테이너의 중단점과 문제 없이 작동합니다. VSTA는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 프로그래밍 언어를 지원합니다.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62830564"
  이러한 속성은 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 설정할 수 있습니다.  
   
 ### <a name="configuring-the-script-task-in-the-designer"></a>디자이너에서 스크립트 태스크 구성  
- 다음 표에서는 스크립트 태스크용으로 로깅될 수 있는 `ScriptTaskLogEntry` 이벤트에 대해 설명합니다. `ScriptTaskLogEntry` 이벤트가 로그온 하기 위해 선택 된 합니다 **세부 정보** 탭의 **SSIS 로그 구성** 대화 상자. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../performance/integration-services-ssis-logging.md) 및 [로깅할 메시지 사용자 지정](../custom-messages-for-logging.md)을 참조하세요.  
+ 다음 표에서는 스크립트 태스크용으로 로깅될 수 있는 `ScriptTaskLogEntry` 이벤트에 대해 설명합니다. `ScriptTaskLogEntry` **SSIS 로그 구성** 대화 상자의 **자세히** 탭에서 로깅할 이벤트를 선택 합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../performance/integration-services-ssis-logging.md) 및 [로깅할 메시지 사용자 지정](../custom-messages-for-logging.md)을 참조하세요.  
   
 |로그 항목|Description|  
 |---------------|-----------------|  

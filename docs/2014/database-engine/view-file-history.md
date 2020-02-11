@@ -1,5 +1,5 @@
 ---
-title: 파일 기록 보기 | Microsoft Docs
+title: 파일 히스토리 보기 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,22 +14,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1060520a9c1fc6b5db20d1cca5e8c2d19cbd429a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773299"
 ---
 # <a name="view-file-history"></a>파일 기록 보기
-  사용할 수 있습니다는 **기록** 명령 소스 제어 파일에 대 한 버전 기록을 볼 수 있습니다. 이 기록에는 원본 제어에서 파일이 추가 또는 체크 인된 날짜와 시간이 포함되어 있습니다.  
+  **기록** 명령을 사용 하 여 원본 제어 파일에 대 한 버전 기록을 볼 수 있습니다. 이 기록에는 원본 제어에서 파일이 추가 또는 체크 인된 날짜와 시간이 포함되어 있습니다.  
   
 ### <a name="to-view-the-history-of-a-file"></a>파일의 기록을 보려면  
   
 1.  솔루션 탐색기에서 파일을 선택합니다.  
   
-2.  에 **파일** 메뉴에서 **소스 제어** 누릅니다 **기록**합니다.  
+2.  **파일** 메뉴에서 **소스 제어** 를 가리킨 다음 **기록**을 클릭 합니다.  
   
-3.  에 **파일의 기록** 대화 상자에서 다음 작업 중 하나를 수행 합니다.  
+3.  **파일 기록** 대화 상자에서 다음 작업 중 하나를 수행 합니다.  
   
 4.  선택한 버전을 봅니다.  
   
@@ -43,10 +43,10 @@ ms.locfileid: "62773299"
   
 9. 기록 보고서를 프린터, 파일 또는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 클립보드에 내보냅니다.  
   
- 이러한 작업을 수행 하는 방법에 대 한 자세한 내용은 다음을 클릭 합니다 **도움말** 단추를 **파일의 기록** 대화 상자.  
+ 이러한 작업을 수행 하는 방법에 대 한 자세한 내용을 보려면 **파일 기록** 대화 상자에서 [ **도움말** ] 단추를 클릭 하십시오.  
   
-## <a name="see-also"></a>관련 항목  
- [설정 및 버전 정보를 검색 합니다.](../../2014/database-engine/set-and-retrieve-version-information.md)   
+## <a name="see-also"></a>참고 항목  
+ [버전 정보 설정 및 검색](../../2014/database-engine/set-and-retrieve-version-information.md)   
  [프로젝트 기록 보기](../../2014/database-engine/view-project-history.md)   
  [파일 상태 보기](../../2014/database-engine/view-file-status.md)   
  [파일 검색](../../2014/database-engine/retrieve-files.md)   

@@ -1,5 +1,5 @@
 ---
-title: '4단계: 2 단원 자습서 패키지 테스트 | Microsoft Docs'
+title: '4단계: 2단원 자습서 패키지 테스트 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a9b8361c83201fa2e3c6aa0c6a091e09f7c12f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767491"
 ---
 # <a name="step-4-testing-the-lesson-2-tutorial-package"></a>4단계: 2단원 자습서 패키지 테스트
@@ -38,16 +38,17 @@ ms.locfileid: "62767491"
   
 ### <a name="to-test-the-lesson-2-tutorial-package"></a>2단원 자습서 패키지를 테스트하려면  
   
-1.  **솔루션 탐색기**에서 **Lesson 2.dtsx** 를 마우스 오른쪽 단추로 클릭한 다음 **패키지 실행**을 클릭합니다.  
+1.  
+  **솔루션 탐색기**에서 **Lesson 2.dtsx** 를 마우스 오른쪽 단추로 클릭한 다음 **패키지 실행**을 클릭합니다.  
   
-     패키지가 실행됩니다. 출력 창에서 각 루프 상태를 확인하거나 **진행률** 탭을 클릭하여 확인할 수 있습니다. 예를 들어 Currency_VEB.txt 파일에서 대상 테이블로 1097개의 행이 추가되었음을 확인할 수 있습니다.  
+     패키지가 실행됩니다. 출력 창에서 각 루프의 상태를 확인 하거나 **진행률** 탭을 클릭 하 여 확인할 수 있습니다. 예를 들어 Currency_VEB 파일에서 대상 테이블에 1097 줄이 추가 된 것을 볼 수 있습니다.  
   
 2.  패키지의 실행이 완료된 후에 **디버그** 메뉴에서 **디버깅 중지**를 클릭합니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
  [5단원: 패키지 배포 모델을 위한 패키지 구성 추가](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [프로젝트 및 패키지 실행](packages/run-integration-services-ssis-packages.md)  
   
   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0152594c213196860e80ff5d5267356977404b7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771194"
 ---
 # <a name="the-oracle-cdc-instance"></a>Oracle CDC 인스턴스
@@ -28,7 +28,7 @@ ms.locfileid: "62771194"
   
 -   **Oracle에서 변경 내용 캡처**: Oracle CDC 인스턴스는 Oracle LogMiner 기능을 사용하여 Oracle에서 변경 내용을 풀링하여 트랜잭션 커밋에 따라 정렬한 다음 트랜잭션 시간을 변경하여 CDC 데이터베이스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변경 테이블에 기록합니다.  
   
--   **서비스 종료 처리**: Oracle CDC 인스턴스의 수명 주기는 Oracle CDC Service에 의해 관리 됩니다. Oracle CDC 인스턴스는 종료하도록 요청되면 다음 태스크를 수행합니다.  
+-   **서비스 종료 처리**: Oracle CDC 인스턴스의 수명 주기는 Oracle CDC Service에 의해 관리됩니다. Oracle CDC 인스턴스는 종료하도록 요청되면 다음 태스크를 수행합니다.  
   
     -   Oracle 트랜잭션 로그 읽기를 중지합니다.  
   
@@ -40,9 +40,9 @@ ms.locfileid: "62771194"
   
 -   **구성 변경 처리**: Oracle CDC 인스턴스는 **cdc.xdbcdc_config** 테이블에서 새 버전을 검색하거나 CDC Service를 통해 구성 변경에 대한 알림을 받습니다. 대부분의 변경(예: 캡처 인스턴스 추가 또는 제거)은 Oracle CDC 인스턴스를 다시 시작할 필요가 없습니다. 일부 변경(예: Oracle 연결 문자열 또는 액세스 자격 증명 변경)은 CDC 인스턴스를 다시 시작해야 합니다.  
   
--   **복구 처리**: Oracle CDC 인스턴스가 시작되면 내부 상태가 **xdbcdc_state** 및 **xdbcdc_staged_transactions** 테이블에서 복원됩니다. 상태가 복원되면 CDC 인스턴스가 평소와 같이 진행됩니다.  
+-   **복원 처리**: Oracle CDC 인스턴스가 시작되면 내부 상태가 **xdbcdc_state** 및 **xdbcdc_staged_transactions** 테이블에서 복원됩니다. 상태가 복원되면 CDC 인스턴스가 평소와 같이 진행됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [오류 처리](error-handling.md)  
   
   

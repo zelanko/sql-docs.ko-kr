@@ -26,10 +26,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 403e0af44fc1db7efaf674d02ed0e3b94e81a5b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916877"
 ---
 # <a name="estimate-the-size-of-a-table"></a>테이블 크기 예측
@@ -41,7 +41,7 @@ ms.locfileid: "62916877"
   
 3.  1단계와 2단계에서 계산한 값을 더합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 크기 예측](estimate-the-size-of-a-database.md)   
  [힙 크기 예측](estimate-the-size-of-a-heap.md)   
  [클러스터형 인덱스의 크기 예측](estimate-the-size-of-a-clustered-index.md)   

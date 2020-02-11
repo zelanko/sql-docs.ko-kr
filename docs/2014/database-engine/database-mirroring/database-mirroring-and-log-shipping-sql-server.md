@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ca584a81b8ba70073ee833d8033cd5f664747741
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807475"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>데이터베이스 미러링 및 로그 전달(SQL Server)
@@ -61,11 +61,11 @@ ms.locfileid: "62807475"
  로컬 로그 전달 모니터를 사용할 때 이 시나리오에 따르기 위해 특별히 고려해야 할 사항은 없습니다. 이 시나리오에서 원격 모니터링 인스턴스를 사용하는 방법은 이 항목의 뒷부분에 나오는 "원격 모니터링 인스턴스에서 데이터베이스 미러링의 영향"을 참조하십시오.  
   
 ## <a name="failing-over-from-the-principal-to-the-mirror-database"></a>주 데이터베이스에서 미러 데이터베이스로 장애 조치  
- 다음 그림은 미러링이 자동 장애 조치(Failover)가 있는 보호 우선 모드로 실행 중일 때 로그 전달 및 데이터베이스 미러링이 함께 작동하는 방법을 보여 줍니다. 처음에 **Server_A** 는 미러링용 주 서버이자 로그 전달용 기본 서버입니다. **Server_B** 는 미러 서버이며 현재 비활성화되어 있는 기본 서버로 구성되어 있습니다. **Server_C** 및 **Server_D** 는 로그 전달 보조 서버입니다. 로그 전달 세션의 가용성을 극대화하려면 백업 위치가 별도의 호스트 컴퓨터에 있는 공유 디렉터리여야 합니다.  
+ 다음 그림은 미러링이 자동 장애 조치(Failover)가 있는 보호 우선 모드로 실행 중일 때 로그 전달 및 데이터베이스 미러링이 함께 작동하는 방법을 보여 줍니다. 처음에 **Server_A** 는 미러링용 주 서버이자 로그 전달용 기본 서버입니다. **Server_B** 미러 서버 이며 현재 비활성 상태인 주 서버로도 구성 됩니다. **Server_C** 및 **Server_D** 는 로그 전달 보조 서버입니다. 로그 전달 세션의 가용성을 극대화하려면 백업 위치가 별도의 호스트 컴퓨터에 있는 공유 디렉터리여야 합니다.  
   
  ![로그 전달 및 데이터베이스 미러링](../media/logshipping-and-dbm-automatic-failover.gif "로그 전달 및 데이터베이스 미러링")  
   
- 미러링 장애 조치 후에 보조 서버에서 정의된 기본 서버 이름은 변경되지 않습니다. 을 선택합니다.  
+ 미러링 장애 조치 후에 보조 서버에서 정의된 기본 서버 이름은 변경되지 않습니다. .  
   
 ## <a name="the-impact-of-database-mirroring-on-a-remote-monitoring-instance"></a>원격 모니터링 인스턴스에서 데이터베이스 미러링의 영향  
  원격 모니터링 인스턴스에 로그 전달이 사용될 때 로그 전달 세션과 데이터베이스 미러링을 함께 사용하면 모니터 테이블의 정보에 영향을 줍니다. 기본 서버에 대한 정보는 주/기본 서버에서 구성된 정보와 각 보조 서버에서 구성된 모니터 정보가 결합된 것입니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "62807475"
 ## <a name="setting-up-mirroring-and-log-shipping-together"></a>미러링과 로그 전달을 함께 설정  
  데이터베이스 미러링과 로그 전달을 함께 설정하려면 다음 단계를 수행해야 합니다.  
   
-1.  나중에 주/기본 데이터베이스에 대해 미러 데이터베이스를 미러링하는 데이터베이스로 사용되도록 다른 서버 인스턴스에서 NORECOVERY를 사용하여 주/기본 데이터베이스의 백업을 복원합니다. 자세한 내용은 [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)를 참조하세요.  
+1.  나중에 주/기본 데이터베이스에 대해 미러 데이터베이스를 미러링하는 데이터베이스로 사용되도록 다른 서버 인스턴스에서 NORECOVERY를 사용하여 주/기본 데이터베이스의 백업을 복원합니다. 자세한 내용은 [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)을 사용합니다.  
   
 2.  데이터베이스 미러링을 설정합니다. 자세한 내용은 [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md) 또는 [데이터베이스 미러링 설정&#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)을 참조하세요.  
   
@@ -102,7 +102,8 @@ ms.locfileid: "62807475"
   
      4단계에서 사용한 것과 동일한 백업 공유를 사용해야 합니다.  
   
-     **의** 트랜잭션 로그 전달 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 인터페이스는 로그 전달 구성별로 하나의 기본 데이터베이스만 지원합니다. 따라서 새로운 주 서버를 기본 데이터베이스로 설정하려면 저장 프로시저를 사용해야 합니다.  
+     
+  **의** 트랜잭션 로그 전달 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 인터페이스는 로그 전달 구성별로 하나의 기본 데이터베이스만 지원합니다. 따라서 새로운 주 서버를 기본 데이터베이스로 설정하려면 저장 프로시저를 사용해야 합니다.  
   
 7.  원래의 주 서버로 되돌리면 수동 장애 조치를 추가로 수행합니다.  
   

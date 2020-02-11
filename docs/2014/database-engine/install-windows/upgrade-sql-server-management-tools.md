@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 925ab0eb6248ec59284c175e472a237071a0c0bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774817"
 ---
 # <a name="upgrade-sql-server-management-tools"></a>SQL Server 관리 도구 업그레이드
@@ -34,7 +34,7 @@ ms.locfileid: "62774817"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 모든 구성 요소를 동시에 업그레이드해야 합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 요소의 버전 번호는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]인스턴스에서 동일해야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 업그레이드할 때 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 기존 설치에 구성 요소를 추가할 수 있습니다. 자세한 내용은 [설치 마법사를 사용 하 여 SQL Server 2014로 업그레이드 &#40;설치&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 업그레이드할 때 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 기존 설치에 구성 요소를 추가할 수 있습니다. 자세한 내용은 [설치 마법사를 사용 하 여 SQL Server 2014로 업그레이드 &#40;설치&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)를 참조 하세요.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트 도구(예: [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자, sqlcmd, osql)는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드되지 않습니다. 대신 클라이언트 도구는 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도구와 함께 실행됩니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 클라이언트 도구의 설정을 가져올 수 있습니다.  
   
@@ -46,9 +46,9 @@ ms.locfileid: "62774817"
   
 -   SQLiMail이라고도 하는 데이터베이스 메일은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]구성 요소와 함께 업그레이드됩니다. 기본적으로 데이터베이스 메일은 업그레이드 후에 해제됩니다. 모든 스키마 업데이트는 업그레이드 후에 업데이트 스크립트로 조정해야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [지원되는 버전 및 에디션 업그레이드](supported-version-and-edition-upgrades.md)   
  [이전 버전과의 호환성](../../getting-started/backward-compatibility.md)   
- [업그레이드 하려면 SQL Server 2014 설치 마법사를 사용 하 여 &#40;설치&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)  
+ [설치 마법사 &#40;사용 하 여 SQL Server 2014로 업그레이드&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   

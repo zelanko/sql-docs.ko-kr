@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3dbab24f756498d7427f9961e4176249daac8dfb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770949"
 ---
 # <a name="partition-processing-destination-custom-properties"></a>파티션 처리 대상 사용자 지정 속성
@@ -24,23 +24,23 @@ ms.locfileid: "62770949"
   
 |속성|데이터 형식|Description|  
 |--------------|---------------|-----------------|  
-|ASConnectionString|문자열|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 대한 연결 문자열입니다.|  
-|KeyDuplicate|Integer(열거형)|UseDefaultConfiguration이 `False`에 중복 키 오류를 처리 하는 방법을 나타내는 값입니다. 가능한 값은 `IgnoreError`(0), `ReportAndContinue`(1) 및 `ReportAndStop`(2)입니다. 이 속성의 기본값은 `IgnoreError`(0)입니다.|  
-|KeyErrorAction|Integer(열거형)|UseDefaultConfiguration이 `False`, 키 오류를 처리 하는 방법을 나타내는 값입니다. 가능한 값은 `ConvertToUnknown`(0) 및 `DiscardRecord`(1)입니다. 이 속성의 기본값은 `ConvertToUnknown`(0)입니다.|  
-|KeyErrorLimit|정수|UseDefaultConfiguration이 `False`, 허용 되는 키 오류의 상한값입니다.|  
-|KeyErrorLimitAction|Integer(열거형)|UseDefaultConfiguration이 `False`때 수행할 동작을 지정 하는 값 `KeyErrorLimit` 에 도달 합니다. 가능한 값은 `StopLogging`(1) 및 `StopProcessing`(0)입니다. 이 속성의 기본값은 `StopProcessing`(0)입니다.|  
-|KeyErrorLogFile|문자열|UseDefaultConfiguration이 `False`, 오류 로그 파일의 경로 및 파일 이름입니다.|  
-|KeyNotFound|Integer(열거형)|UseDefaultConfiguration이 `False`, 키 누락 오류를 처리 하는 방법을 나타내는 값입니다. 가능한 값은 `IgnoreError`(0), `ReportAndContinue`(1) 및 `ReportAndStop`(2)입니다. 이 속성의 기본값은 `ReportAndContinue`(1)입니다.|  
-|NullKeyConvertedToUnknown|Integer(열거형)|UseDefaultConfiguration이 `False`, 알 수 없는 값으로 변환 된 null 키를 처리 하는 방법을 나타내는 값입니다. 가능한 값은 `IgnoreError`(0), `ReportAndContinue`(1) 및 `ReportAndStop`(2)입니다. 이 속성의 기본값은 `IgnoreError`(0)입니다.|  
-|NullKeyNotAllowed|Integer(열거형)|UseDefaultConfiguration이 `False`, 허용 되지 않는 null을 처리 하는 방법을 나타내는 값입니다. 가능한 값은 `IgnoreError`(0), `ReportAndContinue`(1) 및 `ReportAndStop`(2)입니다. 이 속성의 기본값은 `ReportAndContinue`(1)입니다.|  
+|ASConnectionString|String|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 대한 연결 문자열입니다.|  
+|KeyDuplicate|Integer(열거형)|UseDefaultConfiguration가 인 `False`경우 중복 키 오류를 처리 하는 방법을 나타내는 값입니다. 가능한 값은 `IgnoreError`(0), `ReportAndContinue`(1) 및 `ReportAndStop`(2)입니다. 이 속성의 기본값은 `IgnoreError`(0)입니다.|  
+|KeyErrorAction|Integer(열거형)|UseDefaultConfiguration가 인 `False`경우 키 오류를 처리 하는 방법을 나타내는 값입니다. 가능한 값은 `ConvertToUnknown`(0) 및 `DiscardRecord`(1)입니다. 이 속성의 기본값은 `ConvertToUnknown`(0)입니다.|  
+|KeyErrorLimit|정수|UseDefaultConfiguration가 인 `False`경우 허용 되는 키 오류의 상한입니다.|  
+|KeyErrorLimitAction|Integer(열거형)|UseDefaultConfiguration이 `False`인 경우에 도달할 때 `KeyErrorLimit` 수행할 동작을 나타내는 값입니다. 가능한 값은 `StopLogging`(1) 및 `StopProcessing`(0)입니다. 이 속성의 기본값은 `StopProcessing`(0)입니다.|  
+|KeyErrorLogFile|String|UseDefaultConfiguration이 인 `False`경우 오류 로그 파일의 경로 및 파일 이름입니다.|  
+|KeyNotFound|Integer(열거형)|UseDefaultConfiguration가 인 `False`경우 누락 된 키 오류를 처리 하는 방법을 나타내는 값입니다. 가능한 값은 `IgnoreError`(0), `ReportAndContinue`(1) 및 `ReportAndStop`(2)입니다. 이 속성의 기본값은 `ReportAndContinue`(1)입니다.|  
+|NullKeyConvertedToUnknown|Integer(열거형)|UseDefaultConfiguration가 인 `False`경우 알 수 없는 값으로 변환 된 null 키를 처리 하는 방법을 나타내는 값입니다. 가능한 값은 `IgnoreError`(0), `ReportAndContinue`(1) 및 `ReportAndStop`(2)입니다. 이 속성의 기본값은 `IgnoreError`(0)입니다.|  
+|NullKeyNotAllowed|Integer(열거형)|UseDefaultConfiguration가 인 `False`경우 허용 되지 않는 null을 처리 하는 방법을 나타내는 값입니다. 가능한 값은 `IgnoreError`(0), `ReportAndContinue`(1) 및 `ReportAndStop`(2)입니다. 이 속성의 기본값은 `ReportAndContinue`(1)입니다.|  
 |ProcessType|Integer(열거형)|변환에서 사용하는 파티션 처리의 유형입니다. 가능한 값은 `ProcessAdd`(1)(증분), `ProcessFull`(0) 및 `ProcessUpdate`(2)입니다.|  
-|UseDefaultConfiguration|Boolean|변환에서 기본 오류 구성을 사용하는지 여부를 지정하는 값입니다. 이 속성이 `False`, 변환에서 KeyDuplicate, KeyErrorAction 등 등이 표에 나열 된 오류 처리 사용자 지정 속성의 값을 사용 합니다.|  
+|UseDefaultConfiguration|부울|변환에서 기본 오류 구성을 사용하는지 여부를 지정하는 값입니다. 이 속성이 인 `False`경우 변환은 Keyduplicate, KeyErrorAction 등을 비롯 하 여이 표에 나열 된 오류 처리 사용자 지정 속성의 값을 사용 합니다.|  
   
  파티션 처리 대상의 입력 및 입력 열에는 사용자 지정 속성이 없습니다.  
   
  자세한 내용은 [Partition Processing Destination](partition-processing-destination.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [공용 속성](../common-properties.md)  
+## <a name="see-also"></a>참고 항목  
+ [Common Properties](../common-properties.md)  
   
   

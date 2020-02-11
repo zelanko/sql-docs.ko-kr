@@ -13,15 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ef8a59c98bc6669a13b5a4ffeb516b4063db23c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915902"
 ---
-# <a name="mssqlserver1205"></a>MSSQLSERVER_1205
+# <a name="mssqlserver_1205"></a>MSSQLSERVER_1205
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -33,7 +33,7 @@ ms.locfileid: "62915902"
 |메시지 텍스트|트랜잭션(프로세스 ID %d)이 %.*ls 리소스에서 다른 프로세스와의 교착 상태가 발생하여 실행이 중지되었습니다. 트랜잭션을 다시 실행하십시오.|  
   
 ## <a name="explanation"></a>설명  
- 분리된 트랜잭션에서 리소스에 액세스하는 순서가 적절하지 못하여 교착 상태가 발생합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ 리소스가 별도의 트랜잭션에서 충돌하는 순서대로 액세스되면 교착 상태가 발생합니다. 다음은 그 예입니다.  
   
 -   Transaction2가 **Table2.Row2**를 업데이트하는 동안 Transaction1이 **Table1.Row1**을 업데이트합니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62915902"
   
 -   Transaction1은 Transaction2가 완료되기를 기다리지만 Transaction2는 Transaction1이 완료되기를 기다리므로 교착 상태가 발생합니다.  
   
- 시스템이 이 교착 상태를 발견하고 교착 상태가 발생한 트랜잭션 중 하나를 선택하여 이 메시지를 표시한 후 선택한 트랜잭션을 롤백합니다.  
+ 시스템에서는 이 '교착 상태'를 감지하면 관련된 트랜잭션 중 하나를 '희생자'로 선택하고 이 메시지를 보낸 후 희생자의 트랜잭션을 롤백합니다.  
   
 ## <a name="user-action"></a>사용자 동작  
  트랜잭션을 다시 실행하십시오. 교착 상태가 발생하지 않도록 애플리케이션을 수정할 수도 있습니다. 교착 상태가 발생한 트랜잭션을 다시 실행하면 동시에 실행 중인 작업이 무엇인지에 따라 성공할 수도 있습니다.  

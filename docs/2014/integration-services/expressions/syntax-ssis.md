@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ed5ea8e711fcc3013a682f8c63a01dc042556f40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768839"
 ---
 # <a name="syntax-ssis"></a>구문(SSIS)
@@ -26,7 +26,7 @@ ms.locfileid: "62768839"
 > [!NOTE]  
 >  이전 버전의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 결과에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] DT_WSTR 또는 DT_STR 데이터 형식이 있는 경우 식의 계산 결과에 대해 4000자 제한이 있었습니다. 이제 이 제한이 제거되었습니다.  
   
- 특정 연산자와 함수를 사용하는 예제 식을 보려면 이 항목의 각 연산자와 함수에 대해 설명된 항목인 [연산자&#40;SSIS 식&#41;](operators-ssis-expression.md) 및 [함수&#40;SSIS 식&#41;](functions-ssis-expression.md)를 참조하세요.  
+ 특정 연산자와 함수를 사용하는 샘플 식은 [연산자&#40;SSIS 식&#41;](operators-ssis-expression.md) 및 [함수&#40;SSIS 식&#41;](functions-ssis-expression.md) 항목에서 각 연산자와 함수에 대한 항목을 참조하세요.  
   
  여러 개의 연산자 및 함수뿐만 아니라 식별자와 리터럴도 사용하는 샘플 식은 [고급 Integration Services 식의 예](examples-of-advanced-integration-services-expressions.md)를 참조하세요.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62768839"
 ###### <a name="equality-operators"></a>등가 연산자  
  식 계산기 문법에서는 == 등가 연산자를 제공합니다. 이 연산자는 Transact-SQL의 = 연산자 및 C#의 == 연산자에 해당합니다.  
   
-## <a name="functions"></a>함수  
+## <a name="functions"></a>Functions  
  식 언어에는 Transact-SQL 함수 및 C# 메서드와 유사한 날짜 및 시간 함수, 수치 연산 함수 및 문자열 함수가 포함되어 있습니다.  
   
  몇몇 함수는 Transact-SQL 함수와 이름이 같지만 식 계산기에서 조금 다른 기능을 수행합니다.  

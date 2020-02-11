@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3a42d496a59f489238d270fcb6bb17f3e1ff6421
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809007"
 ---
 # <a name="server-properties-security-page"></a>서버 속성(보안 페이지)
@@ -64,14 +64,14 @@ ms.locfileid: "62809007"
  **암호**  
  프록시 계정의 암호를 지정합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **C2 감사 추적 설정**  
  문과 개체에 대한 모든 액세스 시도를 감사하여 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 사용되는 \MSSQL\Data 디렉터리 또는 명명된*인스턴스에 사용되는 \MSSQL$* instancename [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Data 디렉터리의 파일에 결과를 기록합니다. 자세한 내용은 [c2 audit mode 서버 구성 옵션](c2-audit-mode-server-configuration-option.md)을 참조하세요.  
   
  **데이터베이스 간 소유권 체인**  
  데이터베이스가 데이터베이스 간 소유권 체인의 원본이나 대상이 되도록 허용하려면 선택합니다. 자세한 내용은 [cross db ownership chaining 서버 구성 옵션](cross-db-ownership-chaining-server-configuration-option.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [서버 구성 옵션&#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   
   

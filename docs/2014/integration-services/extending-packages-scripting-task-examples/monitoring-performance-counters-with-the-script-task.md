@@ -20,18 +20,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5de911200c7fbe91c912c7ac7a321f79226b6452
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768509"
 ---
 # <a name="monitoring-performance-counters-with-the-script-task"></a>스크립트 태스크를 사용하여 성능 카운터 모니터링
-  관리자는 대량의 데이터에 대해 복잡한 변환을 수행하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 성능을 모니터링하는 경우가 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]의 **System.Diagnostics** 네임스페이스에서는 기존 성능 카운터를 사용하고 개발자 고유의 성능 카운터를 만들기 위한 클래스를 제공합니다.  
+  관리자는 대량의 데이터에 대해 복잡한 변환을 수행하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 성능을 모니터링하는 경우가 있습니다. 
+  **
+  **의 System.Diagnostics[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 네임스페이스에서는 기존 성능 카운터를 사용하고 개발자 고유의 성능 카운터를 만들기 위한 클래스를 제공합니다.  
   
- 성능 카운터는 시간 경과에 따른 소프트웨어 성능을 분석하는 데 사용할 수 있는 애플리케이션 성능 정보를 저장합니다. **성능 모니터** 도구를 사용하여 로컬 또는 원격으로 성능 카운터를 모니터링할 수 있습니다. 나중에 패키지에서 제어 흐름을 분기할 수 있도록 성능 카운터의 값을 변수에 저장할 수 있습니다.  
+ 성능 카운터는 시간 경과에 따른 소프트웨어 성능을 분석하는 데 사용할 수 있는 애플리케이션 성능 정보를 저장합니다. 
+  **성능 모니터** 도구를 사용하여 로컬 또는 원격으로 성능 카운터를 모니터링할 수 있습니다. 나중에 패키지에서 제어 흐름을 분기할 수 있도록 성능 카운터의 값을 변수에 저장할 수 있습니다.  
   
- 성능 카운터를 사용하는 대신 `Dts` 개체의 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireProgress%2A> 속성을 통해 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A> 이벤트를 발생시킬 수도 있습니다. <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireProgress%2A> 이벤트는 진행률 및 완료율 정보를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 런타임에 반환합니다.  
+ 성능 카운터를 사용하는 대신 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireProgress%2A> 개체의 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A> 속성을 통해 `Dts` 이벤트를 발생시킬 수도 있습니다. 
+  <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireProgress%2A> 이벤트는 진행률 및 완료율 정보를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 런타임에 반환합니다.  
   
 > [!NOTE]  
 >  여러 패키지에서 쉽게 다시 사용할 수 있는 태스크를 만들려면 이 스크립트 태스크 예제에 있는 코드를 바탕으로 사용자 지정 태스크를 만들어 보십시오. 자세한 내용은 [사용자 지정 태스크 개발](../extending-packages-custom-objects/task/developing-a-custom-task.md)을 참조하세요.  
@@ -44,7 +48,7 @@ ms.locfileid: "62768509"
   
 #### <a name="to-configure-this-script-task-example"></a>이 스크립트 태스크 예를 구성하려면  
   
--   사용 하 여는 `Imports` 가져오려는 코드에서 문을 합니다 **System.Diagnostics** 네임 스페이스입니다.  
+-   코드에서 `Imports` 문을 사용 하 여 **Diagnostics** 네임 스페이스를 가져옵니다.  
   
 ### <a name="example-code"></a>코드 예  
   
@@ -120,6 +124,6 @@ public void Main()
   
 ```  
   
-![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.  
   
   

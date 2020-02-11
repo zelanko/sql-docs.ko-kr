@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b073e6025bc1483db2482a03d525b758d39efea4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917458"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>사용자 정의 데이터 형식 별칭 만들기
@@ -35,7 +35,7 @@ ms.locfileid: "62917458"
   
 -   **사용자 정의 데이터 형식 별칭을 만들려면:**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "62917458"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  현재 데이터베이스에 대한 CREATE TYPE 권한 및 *schema_name*에 대한 ALTER 권한이 필요합니다. *schema_name* 을 지정하지 않으면 현재 사용자에 대한 스키마를 결정하는 기본 이름 확인 규칙이 적용됩니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -59,7 +59,7 @@ ms.locfileid: "62917458"
      **NULL 허용**  
      사용자 정의 데이터 형식에 NULL 값이 허용되는지 여부를 지정합니다. 기존 사용자 정의 데이터 형식의 Null 허용 여부는 편집할 수 없습니다.  
   
-     **Data type**  
+     **데이터 형식**  
      목록 상자에서 기본 데이터 형식을 선택합니다. 목록 상자에는 `geography`, `geometry`, `hierarchyid`, `sysname`, `timestamp` 및 `xml` 데이터 형식을 제외한 모든 데이터 형식이 표시됩니다. 기존 사용자 정의 데이터 형식의 데이터 형식은 편집할 수 없습니다.  
   
      **기본값**  
@@ -68,21 +68,22 @@ ms.locfileid: "62917458"
      **길이/전체 자릿수**  
      데이터 형식에 적용되는 길이 또는 전체 자릿수를 표시합니다. **길이** 는 문자 기반 사용자 정의 데이터 형식에 적용되고 **전체 자릿수** 는 숫자 기반 사용자 정의 데이터 형식에 적용됩니다. 이 옵션의 레이블은 이전에 선택한 데이터 형식에 따라 바뀝니다. 선택한 데이터 형식의 길이 또는 전체 자릿수가 고정된 경우에는 이 상자를 편집할 수 없습니다.  
   
-     `nvarchar(max)`, `varchar(max)` 또는 `varbinary(max)` 데이터 형식의 경우에는 길이가 표시되지 않습니다.  
+     
+  `nvarchar(max)`, `varchar(max)` 또는 `varbinary(max)` 데이터 형식의 경우에는 길이가 표시되지 않습니다.  
   
      **이름**  
-     새 사용자 정의 데이터 형식 별칭을 만드는 경우 데이터베이스에서 사용자 정의 데이터 형식을 나타내는 데 사용할 고유 이름을 입력합니다. 최대 문자 수는 시스템 일치 해야 `sysname` 데이터 형식입니다. 기존 사용자 정의 데이터 형식 별칭의 이름은 편집할 수 없습니다.  
+     새 사용자 정의 데이터 형식 별칭을 만드는 경우 데이터베이스에서 사용자 정의 데이터 형식을 나타내는 데 사용할 고유 이름을 입력합니다. 최대 문자 수는 시스템 `sysname` 데이터 형식과 일치 해야 합니다. 기존 사용자 정의 데이터 형식 별칭의 이름은 편집할 수 없습니다.  
   
      **규칙**  
      필요에 따라 사용자 정의 데이터 형식 별칭에 바인딩할 규칙을 선택합니다.  
   
-     **소수 자릿수**  
+     **규모**  
      소수점의 오른쪽에 저장될 수 있는 최대 자릿수를 지정합니다.  
   
      **스키마**  
      현재 사용자가 사용할 수 있는 모든 스키마의 목록에서 스키마를 선택합니다. 현재 사용자에 대한 기본 스키마가 기본적으로 선택되어 있습니다.  
   
-     **저장소**  
+     **스토리지**  
      사용자 정의 데이터 형식 별칭에 대한 최대 스토리지 크기를 표시합니다. 최대 스토리지 크기는 전체 자릿수에 따라 달라집니다.  
   
     |||  
@@ -92,9 +93,10 @@ ms.locfileid: "62917458"
     |20 - 28|13|  
     |29 - 38|17|  
   
-     에 대 한 `nchar` 하 고 `nvarchar` 데이터 형식의 경우 저장소 값이 값의 두 배 항상 **길이**입니다.  
+     및 데이터 형식의 경우 저장소 값은 항상 길이 값의 두 배입니다. **** `nchar` `nvarchar`  
   
-     `nvarchar(max)`, `varchar(max)` 또는 `varbinary(max)` 데이터 형식의 경우에는 저장소가 표시되지 않습니다.  
+     
+  `nvarchar(max)`, `varchar(max)` 또는 `varbinary(max)` 데이터 형식의 경우에는 스토리지가 표시되지 않습니다.  
   
 2.  **새 사용자 정의 데이터 형식** 대화 상자의 **스키마** 상자에 이 데이터 형식 별칭을 소유할 스키마를 입력하거나 찾아보기 단추를 사용하여 스키마를 선택합니다.  
   
@@ -123,7 +125,7 @@ CREATE TYPE ssn
 FROM varchar(11) NOT NULL ;  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 식별자](database-identifiers.md)   
  [CREATE TYPE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-type-transact-sql)  
   

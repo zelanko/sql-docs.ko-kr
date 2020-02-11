@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 447b91ee1aa99642647dd1377976feef026b9a08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62778954"
 ---
 # <a name="full-text-search-f1-help"></a>전체 텍스트 검색 F1 도움말
@@ -25,13 +25,13 @@ ms.locfileid: "62778954"
 |[새 전체 텍스트 카탈로그 &#40;일반 페이지&#41;](new-full-text-catalog-general-page.md)|[전체 텍스트 인덱스 속성 &#40;일정 페이지&#41;](../../2014/database-engine/full-text-index-properties-schedules-page.md)|  
 |[전체 텍스트 카탈로그 속성 &#40;일반 페이지&#41;](../../2014/database-engine/full-text-catalog-properties-general-page.md)|[새 전체 텍스트 중지 목록 &#40;일반 페이지&#41;](../../2014/database-engine/new-full-text-stoplist-general-page.md)|  
 |[전체 텍스트 카탈로그 속성 &#40;채우기 일정 페이지&#41;](../../2014/database-engine/full-text-catalog-properties-population-schedule-page.md)|[전체 텍스트 중지 목록 속성](../../2014/database-engine/full-text-stoplist-properties.md)|  
-|[전체 텍스트 카탈로그 속성 &#40;테이블 및 뷰 페이지&#41;](../../2014/database-engine/full-text-catalog-properties-tables-and-views-page.md)|[새 검색 속성 목록](../../2014/database-engine/new-search-property-list.md)|  
+|[테이블 및 뷰 페이지 &#40;전체 텍스트 카탈로그 속성&#41;](../../2014/database-engine/full-text-catalog-properties-tables-and-views-page.md)|[새 검색 속성 목록](../../2014/database-engine/new-search-property-list.md)|  
 |[전체 텍스트 인덱스 속성 &#40;일반 페이지&#41;](../../2014/database-engine/full-text-index-properties-general-page.md)|[검색 속성 목록 편집기](../../2014/database-engine/search-property-list-editor.md)|  
 |[전체 텍스트 인덱스 속성 &#40;열 페이지&#41;](../../2014/database-engine/full-text-index-properties-columns-page.md)||  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [전체 텍스트 검색](../relational-databases/search/full-text-search.md)   
- [CREATE FULLTEXT CATALOG&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
+ [Transact-sql&#41;&#40;전체 텍스트 카탈로그 만들기](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
  [CREATE FULLTEXT INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)   
  [CREATE FULLTEXT STOPLIST&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)   
  [CREATE SEARCH PROPERTY LIST&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql)  

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 27ec5fcac246c9907d38d8e0eff4e82befb0a04e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771309"
 ---
 # <a name="how-to-manage-a-local-cdc-service"></a>로컬 CDC Service를 관리하는 방법
@@ -56,7 +56,7 @@ ms.locfileid: "62771309"
   
          속성을 편집할 CDC Service를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택할 수도 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [Manage an Oracle CDC Service](manage-an-oracle-cdc-service.md)  
+## <a name="see-also"></a>참고 항목  
+ [Oracle CDC Service 관리](manage-an-oracle-cdc-service.md)  
   
   

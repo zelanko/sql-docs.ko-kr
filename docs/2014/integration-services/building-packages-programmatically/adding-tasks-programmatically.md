@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: da9a2e5bf8338b8188f00f3c340d50ef32f1204f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771839"
 ---
 # <a name="adding-tasks-programmatically"></a>프로그래밍 방식으로 태스크 추가
@@ -43,7 +43,8 @@ ms.locfileid: "62771839"
  패키지에 태스크를 추가하려면 기존 <xref:Microsoft.SqlServer.Dts.Runtime.Executables> 컬렉션이 있는 컨테이너가 필요합니다. 대부분의 경우 컬렉션에 추가할 태스크는 패키지입니다. 새 태스크 실행 파일을 해당 컨테이너의 컬렉션에 추가하려면 <xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A> 메서드를 호출합니다. 이 메서드에는 추가할 태스크의 CLSID, PROGID, STOCK 모니커 또는 <xref:Microsoft.SqlServer.Dts.Runtime.TaskInfo.CreationName%2A>이 들어 있는 단일 문자열 매개 변수가 있습니다.  
   
 ## <a name="task-names"></a>태스크 이름  
- 태스크는 이름이나 ID로 지정할 수 있지만 <xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A> 메서드에서 가장 자주 사용되는 매개 변수는 `STOCK` 모니커입니다. `STOCK` 모니터로 식별된 실행 파일에 태스크를 추가하려면 다음 구문을 사용합니다.  
+ 태스크는 이름이나 ID로 지정할 수 있지만 `STOCK` 메서드에서 가장 자주 사용되는 매개 변수는 <xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A> 모니커입니다. 
+  `STOCK` 모니터로 식별된 실행 파일에 태스크를 추가하려면 다음 구문을 사용합니다.  
   
 ```csharp  
 Executable exec = package.Executables.Add("STOCK:BulkInsertTask");  
@@ -412,9 +413,9 @@ End Module
 ## <a name="external-resources"></a>외부 리소스  
  blogs.msdn.com의 블로그 항목 - [EzAPI – SQL Server 2012용으로 업데이트됨](https://go.microsoft.com/fwlink/?LinkId=243223)  
   
-![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [프로그래밍 방식으로 태스크 연결](../building-packages-programmatically/connecting-tasks-programmatically.md)  
   
   

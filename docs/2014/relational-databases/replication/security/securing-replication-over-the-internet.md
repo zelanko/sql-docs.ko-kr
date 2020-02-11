@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 78dfc544d7fd01f6641df6c0968d4a59a668cdd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62960037"
 ---
 # <a name="securing-replication-over-the-internet"></a>Securing Replication Over the Internet
@@ -37,7 +37,7 @@ ms.locfileid: "62960037"
 ## <a name="web-synchronization-through-iis"></a>IIS를 통한 웹 동기화  
  병합 복제를 위한 웹 동기화 옵션은 HTTPS 프로토콜을 사용하여 데이터를 복제하는 기능을 제공하며 이 기능은 방화벽을 통해 데이터를 복제하는 편리한 방법이 될 수 있습니다. 웹 동기화 보안에 대한 자세한 내용은 [웹 동기화 구성](../configure-web-synchronization.md) 및 [웹 동기화를 위한 보안 아키텍처](security-architecture-for-web-synchronization.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Replication Security Best Practices](replication-security-best-practices.md)   
  [SQL Server 복제 보안](view-and-modify-replication-security-settings.md)  
   

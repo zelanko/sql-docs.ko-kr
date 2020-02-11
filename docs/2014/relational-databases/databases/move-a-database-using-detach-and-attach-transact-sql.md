@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16fa57c35c2c40d307b73809c21ccfbedc54f705
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917097"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>분리 및 연결을 사용하여 데이터베이스 이동(Transact-SQL)
@@ -46,12 +46,12 @@ ms.locfileid: "62917097"
     > [!NOTE]  
     >  로그 파일을 지정하지 않고 데이터베이스를 연결할 경우 연결 작업은 원래 위치에서 로그 파일을 검색합니다. 원래 위치에 로그 복사본이 있으면 해당 복사본이 연결됩니다. 원래 로그 파일을 사용하지 않으려면 새 로그 파일의 경로를 지정하거나 로그 파일의 원본을 새 위치로 복사한 후 제거합니다.  
   
-3.  복사된 파일을 연결합니다. 자세한 내용은 [Attach a Database](attach-a-database.md)을(를) 참조하세요.  
+3.  복사된 파일을 연결합니다. 자세한 내용은 [데이터베이스 연결](attach-a-database.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는의 복사본을 만듭니다는 [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] 문은 하려는 서버 인스턴스에 연결 된 쿼리 편집기 창에 연결 되어 있는 대로 실행 됩니다.  
+ 다음 예에서는가 연결 된 서버 인스턴스에 [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] 연결 된 쿼리 편집기 창에서 실행 되는 문의 복사본을 만듭니다.  
   
-1.  분리 된 [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] 문:  
+1.  문을 분리 [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] 합니다.  
   
     ```  
     USE master;  
@@ -60,7 +60,7 @@ ms.locfileid: "62917097"
     GO  
     ```  
   
-2.  선택한 메서드를 사용 하 여 복사할 데이터베이스 파일 ((adventureworks208r2_data.mdf 및 Adventureworks208r2_log)): C:\MySQLServer\AdventureWorks208R2_Data.mdf and C:\MySQLServer\AdventureWorks208R2_Log.ldf, respectively.  
+2.  선택한 방법을 사용하여 데이터베이스 파일(AdventureWorks208R2_Data.mdf 및 AdventureWorks208R2_log)을 각각 C:\MySQLServer\AdventureWorks208R2_Data.mdf 및 C:\MySQLServer\AdventureWorks208R2_Log.ldf로 복사합니다.  
   
     > [!IMPORTANT]  
     >  프로덕션 데이터베이스의 경우 데이터베이스와 트랜잭션 로그를 별도의 디스크에 저장합니다.  
@@ -81,7 +81,7 @@ ms.locfileid: "62917097"
   
      [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 새로 연결되는 데이터베이스는 개체 탐색기에 즉시 표시되지 않습니다. 데이터베이스를 보려면 개체 탐색기에서 **보기** , **새로 고침**을 차례로 클릭합니다. 개체 탐색기에서 **데이터베이스** 노드가 확장될 때 새로 연결된 데이터베이스가 데이터베이스 목록에 나타납니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 분리 및 연결&#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)  
   
   

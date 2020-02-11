@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9239c1022cd9dfab1edba675c21e69129efe36c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770979"
 ---
 # <a name="odbc-source-custom-properties"></a>ODBC Source Custom Properties
@@ -28,7 +28,7 @@ ms.locfileid: "62770979"
 |BindCharColumnAs|Integer(열거형)|이 속성은 ODBC 원본이 다중 바이트 문자열 형식(예: SQL_CHAR, SQL_VARCHAR 또는 SQL_LONGVARCHAR)이 포함된 열을 바인딩하는 방법을 결정합니다.<br /><br /> 가능한 값은 열을 SQL_C_WCHAR로 바인딩하는 유니코드(0)와 열을 SQL_C_CHAR로 바인딩하는 ANSI(1)입니다. 기본값은 유니코드(0)입니다.<br /><br /> **참고**: 이 속성은 **ODBC 원본 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다.|  
 |BindNumericAs|Integer(열거형)|이 속성은 ODBC 원본이 데이터 형식이 SQL_TYPE_NUMERIC 및 SQL_TYPE_DECIMAL인 숫자 데이터가 포함된 열을 바인딩하는 방법을 결정합니다.<br /><br /> 가능한 옵션은 열을 SQL_C_CHAR로 바인딩하는 Char(0)과 열을 SQL_C_NUMERIC으로 바인딩하는 숫자(1)입니다. 기본값은 Char(0)입니다.<br /><br /> **참고**: 이 속성은 **ODBC 원본 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다.|  
 |DefaultCodePage|정수|문자열 출력 열에 사용할 코드 페이지입니다.<br /><br /> **참고**: 이 속성은 **ODBC 원본 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다.|  
-|ExposeCharColumnsAsUnicode|Boolean|이 속성은 구성 요소가 CHAR 열을 표시하는 방법을 결정합니다. 기본값은 CHAR 열이 멀티바이트 문자열(DT_STR)로 표시됨을 나타내는 False입니다. True이면 CHAR 열이 와이드 문자열(DT_WSTR)로 표시됩니다.<br /><br /> **참고**: 이 속성은 **ODBC 원본 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다.|  
+|ExposeCharColumnsAsUnicode|부울|이 속성은 구성 요소가 CHAR 열을 표시하는 방법을 결정합니다. 기본값은 CHAR 열이 멀티바이트 문자열(DT_STR)로 표시됨을 나타내는 False입니다. True이면 CHAR 열이 와이드 문자열(DT_WSTR)로 표시됩니다.<br /><br /> **참고**: 이 속성은 **ODBC 원본 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다.|  
 |FetchMethod|Integer(열거형)|데이터를 가져오는 데 사용되는 메서드입니다. 가능한 옵션은 행 단위(0) 및 일괄 처리(1)입니다. 기본값은 일괄 처리(1)입니다.<br /><br /> 이러한 옵션에 대한 자세한 내용은 [ODBC Source](odbc-source.md)를 참조하세요.<br /><br /> **참고**: 이 속성은 **ODBC 원본 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다.|  
 |SqlCommand|String|AccessMode가 SQL 명령으로 설정될 때 실행할 SQL 명령입니다.|  
 |StatementTimeout|정수|오류가 발생하여 애플리케이션으로 반환되기 전에 SQL 문이 실행되기를 기다릴 시간(초)입니다. 기본값은 0입니다. 값 0은 시스템에 제한 시간이 없음을 나타냅니다.|  
@@ -36,7 +36,7 @@ ms.locfileid: "62770979"
 |LobChunckSize|정수|LOB 열에 대한 청크 크기 할당입니다.|  
 ||||  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ODBC Source](odbc-source.md)   
  [ODBC 원본 편집기&#40;연결 관리자 페이지&#41;](../odbc-source-editor-connection-manager-page.md)  
   

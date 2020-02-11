@@ -13,16 +13,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b196aaa30934e4206886b8b6290e402b6c28fce5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771319"
 ---
-# <a name="finish"></a>마침
+# <a name="finish"></a>Finish
   **마침** 페이지에서는 마법사 프로세스를 요약합니다. **마침** 를 클릭하여 마법사를 닫고 CDC 인스턴스 만들기 마법사에서 정의한 모든 테이블을 생성합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 변경 데이터베이스 인스턴스를 만드는 방법](how-to-create-the-sql-server-change-database-instance.md)   
  [새 인스턴스 마법사 사용](use-the-new-instance-wizard.md)  
   

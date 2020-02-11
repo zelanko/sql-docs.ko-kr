@@ -11,15 +11,15 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 459bdc20c9698a8b6271092c57ed0de936c4d7f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62775045"
 ---
 # <a name="manage-full-text-indexes"></a>전체 텍스트 인덱스 관리
      
-##  <a name="view"></a> 전체 텍스트 인덱스의 속성 보기 및 변경  
+##  <a name="view"></a>전체 텍스트 인덱스의 속성 보기 및 변경  
   
 #### <a name="to-view-or-change-the-properties-of-a-full-text-index-in-management-studio"></a>Management Studio에서 전체 텍스트 인덱스의 속성을 보거나 변경하려면  
   
@@ -37,16 +37,16 @@ ms.locfileid: "62775045"
     |----------|-----------------|  
     |**일반**|전체 텍스트 인덱스의 기본 속성을 표시합니다. 이러한 속성으로는 데이터베이스 이름, 테이블 이름 및 전체 텍스트 키 열의 이름과 같이 변경할 수 없는 많은 속성과 여러 가지 수정 가능한 속성이 있습니다. 수정 가능한 속성은 다음과 같습니다.<br /><br /> **전체 텍스트 인덱스 중지 목록**<br /><br /> **전체 텍스트 인덱싱 설정**<br /><br /> **변경 내용 추적**<br /><br /> **검색 속성 목록**<br /><br /> <br /><br /> 자세한 내용은 [전체 텍스트 인덱스 속성&#40;일반 페이지&#41;](full-text-index-properties-general-page.md)을 참조하세요.|  
     |**열**|전체 텍스트 인덱싱에 사용할 수 있는 테이블 열을 표시합니다. 열을 선택하면 선택한 열이 전체 텍스트 인덱싱됩니다. 이때 전체 텍스트 인덱스에 포함하려는 만큼 사용 가능한 열을 선택할 수 있습니다. 자세한 내용은 [전체 텍스트 인덱스 속성&#40;열 페이지&#41;](../../2014/database-engine/full-text-index-properties-columns-page.md)을 참조하세요.|  
-    |**일정**|이 페이지를 사용하여 전체 텍스트 인덱스 채우기에 대한 증분 테이블 채우기를 시작하는 SQL Server 에이전트 작업의 일정을 만들거나 관리할 수 있습니다. 자세한 내용은 [전체 텍스트 인덱스 채우기](../relational-databases/indexes/indexes.md)를 참조하세요.<br /><br /> <strong>\*\* 중요 \* \*</strong>  종료 한 후 합니다 **전체 텍스트 인덱스 속성** 대화 상자를 닫으면 새로 만든된 일정이 SQL Server 에이전트 작업 (시작 대 한 증분 테이블 채우기 연관된*database_name*. *table_name*).|  
+    |**일정**|이 페이지를 사용하여 전체 텍스트 인덱스 채우기에 대한 증분 테이블 채우기를 시작하는 SQL Server 에이전트 작업의 일정을 만들거나 관리할 수 있습니다. 자세한 내용은 [전체 텍스트 인덱스 채우기](../relational-databases/indexes/indexes.md)를 참조하세요.<br /><br /> <strong> \* 중요 \* \* </strong> **전체 텍스트 인덱스 속성** 대화 상자를 종료 한 후 새로 만든 일정은 SQL Server 에이전트 작업과 연결 됩니다 ( *Database_name*의 증분 테이블 채우기 시작).* table_name*).|  
   
-6.  변경 내용을 저장하고 **전체 텍스트 인덱스 속성** 대화 상자를 닫으려면 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  변경 내용을 저장하고 [!INCLUDE[clickOK](../includes/clickok-md.md)]전체 텍스트 인덱스 속성**대화 상자를 닫으려면**  
   
-##  <a name="props"></a> 인덱싱된 테이블 및 열 속성 보기  
+##  <a name="props"></a>인덱싱된 테이블 및 열 속성 보기  
  OBJECTPROPERTYEX와 같은 여러 가지 [!INCLUDE[tsql](../includes/tsql-md.md)] 함수를 사용하여 다양한 전체 텍스트 인덱싱 속성 값을 얻을 수 있습니다. 이 정보는 전체 텍스트 검색을 관리하고 이러한 검색에서 발생하는 문제를 해결하는 데 유용합니다.  
   
  다음 표에서는 인덱싱된 테이블 및 열과 관련한 전체 텍스트 속성과 관련 [!INCLUDE[tsql](../includes/tsql-md.md)] 함수를 보여 줍니다.  
   
-|속성|Description|기능|  
+|속성|Description|함수|  
 |--------------|-----------------|--------------|  
 |`FullTextTypeColumn`|열의 문서 유형 정보를 보관하는 테이블의 TYPE COLUMN입니다.|[COLUMNPROPERTY](/sql/t-sql/functions/columnproperty-transact-sql)|  
 |`IsFulltextIndexed`|열에 대한 전체 텍스트 인덱싱 설정 여부를 나타냅니다.|COLUMNPROPERTY|  
@@ -63,12 +63,12 @@ ms.locfileid: "62775045"
 |`TableFulltextPopulateStatus`|전체 텍스트 테이블의 채우기 상태입니다.|OBJECTPROPERTYEX|  
 |`TableHasActiveFulltextIndex`|테이블에 활성화된 전체 텍스트 인덱스가 있는지를 나타냅니다.|OBJECTPROPERTYEX|  
   
-##  <a name="key"></a> 전체 텍스트 키 열에 대 한 정보 가져오기  
+##  <a name="key"></a>전체 텍스트 키 열에 대 한 정보 가져오기  
  일반적으로 CONTAINSTABLE 또는 FREETEXTTABLE 행 집합 반환 함수의 결과는 기본 테이블과 조인되어야 합니다. 이러한 경우 고유 키 열 이름을 알아야 합니다. 그러면 지정된 고유 인덱스가 전체 텍스트 키로 사용되는지 여부를 확인하고 전체 텍스트 키 열의 식별자를 가져올 수 있습니다.  
   
 #### <a name="to-inquire-whether-a-given-unique-index-is-used-as-the-full-text-key-column"></a>지정된 고유 인덱스가 전체 텍스트 키 열로 사용되는지 여부를 확인하려면  
   
-1.  [SELECT](/sql/t-sql/queries/select-transact-sql) 문을 사용하여 [INDEXPROPERTY](/sql/t-sql/functions/indexproperty-transact-sql) 함수를 호출합니다. 함수에서 호출 테이블의 이름을 변환할 OBJECT_ID 함수를 사용 (*table_name*)을 테이블 ID로 테이블에 대 한 고유 인덱스의 이름을 지정 하 고 지정 된 `IsFulltextKey` 다음과 같은 인덱스 속성:  
+1.  [SELECT](/sql/t-sql/queries/select-transact-sql) 문을 사용하여 [INDEXPROPERTY](/sql/t-sql/functions/indexproperty-transact-sql) 함수를 호출합니다. 함수 호출에서 OBJECT_ID 함수를 사용 하 여 테이블 이름 (*table_name*)을 테이블 ID로 변환 하 고, 테이블에 대 한 고유 인덱스의 이름을 지정 하 고, 다음과 같이 `IsFulltextKey` 인덱스 속성을 지정 합니다.  
   
     ```  
     SELECT INDEXPROPERTY( OBJECT_ID('table_name'), 'index_name',  'IsFulltextKey' );  
@@ -92,7 +92,7 @@ SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentID
   
 1.  전체 텍스트를 사용하도록 설정된 테이블에는 해당 테이블에 고유 행을 강제 적용하는 데 사용되는 열(*고유**키 열*)이 있습니다. OBJECTPROPERTYEX 함수에서 얻을 수 있는 `TableFulltextKeyColumn` 속성에는 고유 키 열의 열 ID가 포함됩니다.  
   
-     이 식별자를 가져오려면 SELECT 문을 사용하여 OBJECTPROPERTYEX 함수를 호출하면 됩니다. OBJECT_ID 함수를 사용 하 여 테이블의 이름을 변환할 (*table_name*)을 테이블 ID로 지정 된 `TableFulltextKeyColumn` 다음과 같은 속성:  
+     이 식별자를 가져오려면 SELECT 문을 사용하여 OBJECTPROPERTYEX 함수를 호출하면 됩니다. OBJECT_ID 함수를 사용 하 여 테이블 이름 (*table_name*)을 테이블 ID로 변환 하 고 다음과 같이 속성 `TableFulltextKeyColumn` 을 지정 합니다.  
   
     ```  
     SELECT OBJECTPROPERTYEX(OBJECT_ID( 'table_name'), 'TableFulltextKeyColumn' ) AS 'Column Identifier';  
@@ -125,7 +125,7 @@ GO
   
  이 예에서는 Document 테이블의 고유 키 열 이름인 DocumentID가 포함된 단일 행을 표시하는 `Unique Key Column`라는 결과 집합 열을 반환합니다. 이 쿼리에 잘못된 인덱스 이름이 포함되어 있거나, 인덱스 이름이 테이블과 일치하지 않거나, 테이블이 존재하지 않는 경우에는 NULL이 반환됩니다.  
   
-##  <a name="disable"></a> 또는 전체 텍스트 인덱싱에 대 한 테이블을 다시 사용 안 함  
+##  <a name="disable"></a>테이블에서 전체 텍스트 인덱싱을 사용 하지 않도록 설정 또는 다시 설정  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 사용자가 만든 모든 데이터베이스에서 기본적으로 전체 텍스트를 사용할 수 있습니다. 또한 개별 테이블에 전체 텍스트 인덱스를 만들고 이 인덱스에 열을 추가하는 즉시 자동으로 개별 테이블에서 전체 텍스트 인덱싱을 사용할 수 있게 됩니다. 해당 전체 텍스트 인덱스에서 마지막 열을 삭제하면 자동으로 테이블에서 전체 텍스트 인덱싱을 사용할 수 없게 됩니다.  
   
  전체 텍스트 인덱스가 있는 테이블에서 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 사용하여 테이블에서의 전체 텍스트 인덱싱을 수동으로 해제하거나 다시 설정할 수 있습니다.  
@@ -138,7 +138,7 @@ GO
   
 3.  **전체 텍스트 인덱스**를 선택한 다음 **전체 텍스트 인덱스 사용 안 함** 또는 **전체 텍스트 인덱스 사용**을 클릭합니다.  
   
-##  <a name="remove"></a> 테이블에서 전체 텍스트 인덱스 제거  
+##  <a name="remove"></a>테이블에서 전체 텍스트 인덱스 제거  
   
 #### <a name="to-remove-a-full-text-index-from-a-table"></a>테이블에서 전체 텍스트 인덱스를 제거하려면  
   

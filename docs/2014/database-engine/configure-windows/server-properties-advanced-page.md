@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 998d42d262e3f980b4b35ed82b26904399d6b33c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809384"
 ---
 # <a name="server-properties-advanced-page"></a>서버 속성(고급 페이지)
@@ -76,10 +76,10 @@ ms.locfileid: "62809384"
   
  전체 텍스트 카탈로그를 사용할 수 없는 경우 연결된 전체 텍스트 인덱스가 다시 작성됩니다. 이 옵션은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 데이터베이스에 대해서만 사용할 수 있습니다.  
   
- **Rebuild**  
+ **다시 빌드**  
  향상된 새로운 단어 분리기를 사용하여 전체 텍스트 카탈로그를 다시 작성합니다. 인덱스를 다시 작성하면 시간이 오래 걸릴 수 있으며 업그레이드 후 CPU 및 메모리가 많이 필요할 수 있습니다.  
   
- **다시 설정**  
+ **재설정**  
  전체 텍스트 카탈로그를 다시 설정합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 전체 텍스트 카탈로그 파일이 제거되지만 전체 텍스트 카탈로그 및 전체 텍스트 인덱스의 메타데이터는 유지됩니다. 업그레이드가 끝나면 모든 전체 텍스트 인덱스의 변경 내용 추적이 해제되고 탐색이 자동으로 시작되지 않습니다. 업그레이드가 완료된 후 전체 채우기를 수동으로 실행할 때까지 카탈로그가 비어 있습니다.  
   
  전체 텍스트 업그레이드 옵션을 선택하는 방법은 [전체 텍스트 검색 업그레이드](../../relational-databases/search/upgrade-full-text-search.md)를 참조하세요.  
@@ -112,7 +112,7 @@ ms.locfileid: "62809384"
   
  설정을 변경하면 즉시 적용됩니다.  
   
-## <a name="parallelism"></a>병렬 처리  
+## <a name="parallelism"></a>병렬 처리:  
  **병렬 처리에 대한 비용 임계값**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 쿼리에 대한 병렬 계획을 만들고 실행하는 데 사용되는 최소 비용 임계값을 지정합니다. 이 비용은 특정 하드웨어 구성에서 직렬 계획을 실행하는 데 필요한 예상 경과 시간(초)을 참조합니다. 이 옵션은 대칭 다중 프로세서에 대해서만 설정해야 합니다. 자세한 내용은 [병렬 처리에 대한 비용 임계값 서버 구성 옵션 구성](configure-the-cost-threshold-for-parallelism-server-configuration-option.md)을 참조하세요.  
   

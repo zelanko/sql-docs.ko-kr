@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 97da627058fa6da67e8ef623b267d0f7cbaa6c7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770739"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>캐시 없음 또는 부분 캐시 모드로 조회 구현
@@ -60,11 +60,11 @@ ms.locfileid: "62770739"
   
     -   **SQL 쿼리 결과 사용**을 클릭한 다음 **SQL 명령** 창에 쿼리를 작성합니다.  
   
-         -또는-  
+         또는  
   
          **쿼리 작성** 을 클릭하여 **쿼리 작성기** 에서 공급하는 그래픽 도구를 사용하여 쿼리를 작성합니다.  
   
-         -또는-  
+         또는  
   
          **찾아보기** 를 클릭하여 파일에서 SQL 문을 가져옵니다.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "62770739"
   
 14. 조회 변환의 변경 내용을 저장한 다음 패키지를 실행하려면 **확인** 을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 변환](integration-services-transformations.md)  
   
   

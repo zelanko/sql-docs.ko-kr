@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3034ec95573d2f3c43ab28f2ad31e5ba41661cfc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773369"
 ---
 # <a name="view-file-status"></a>파일 상태 보기
@@ -40,10 +40,10 @@ ms.locfileid: "62773369"
   
 1.  솔루션 탐색기에서 항목을 선택합니다.  
   
-2.  에 **파일** 메뉴에서 **소스 제어**를 클릭 하 고 **SourceSafe 속성**합니다.  
+2.  **파일** 메뉴에서 **소스 제어**를 가리킨 다음 **SourceSafe 속성**을 클릭 합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [설정 및 버전 정보를 검색 합니다.](../../2014/database-engine/set-and-retrieve-version-information.md)   
+## <a name="see-also"></a>참고 항목  
+ [버전 정보 설정 및 검색](../../2014/database-engine/set-and-retrieve-version-information.md)   
  [프로젝트 기록 보기](../../2014/database-engine/view-project-history.md)   
  [파일 검색](../../2014/database-engine/retrieve-files.md)   
  [파일 비교](../../2014/database-engine/compare-files.md)  

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3c643ad9a84c6afe5b6ff08fd6716753ef42f79e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807277"
 ---
 # <a name="database-mirroring-and-database-snapshots-sql-server"></a>데이터베이스 미러링 및 데이터베이스 스냅샷(SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "62807277"
  새 데이터베이스 스냅샷은 거의 비어 있지만 시간이 경과하면서 점점 더 많은 데이터베이스 페이지가 처음으로 업데이트됨에 따라 확장됩니다. 데이터베이스의 모든 스냅샷이 이렇게 증분 방식으로 증가하기 때문에 각 데이터베이스 스냅샷에서 일반 데이터베이스만큼 많은 리소스를 사용합니다. 미러 서버와 주 서버의 구성에 따라 미러 데이터베이스에 있는 데이터베이스 스냅샷의 수가 너무 많으면 주 데이터베이스의 성능이 느려질 수 있으므로 몇 개의 최근 스냅샷만 미러 데이터베이스에 보관하는 것이 좋습니다. 대체 스냅샷을 만든 후 들어오는 쿼리를 새 스냅샷으로 리디렉션하고 현재 쿼리가 완료된 후에는 이전 스냅샷을 삭제해야 합니다.  
   
 > [!NOTE]  
->  데이터베이스 스냅숏에 대한 자세한 내용은 [데이터베이스 스냅숏&#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)을 참조하세요.  
+>  데이터베이스 스냅샷에 대한 자세한 내용은 [데이터베이스 스냅샷&#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)을 참조하세요.  
   
  역할이 전환되면 데이터베이스와 해당 스냅샷이 다시 시작되고 일시적으로 사용자와의 연결을 끊습니다. 그런 후 데이터베이스 스냅샷은 자신이 만들어진 서버 인스턴스에서 새로운 주 데이터베이스가 되어 그대로 유지됩니다. 사용자는 장애 조치(Failover) 후에도 스냅샷을 계속 사용할 수 있습니다. 그러나 이렇게 하면 새로운 주 서버에 추가 로드가 발생합니다. 환경에서 성능이 중요한 경우 새 미러 데이터베이스를 사용할 수 있게 되면 스냅샷을 만들어 클라이언트를 새 스냅샷으로 리디렉션하고 이전 미러 데이터베이스에서 모든 데이터베이스 스냅샷을 삭제하는 것이 좋습니다.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "62807277"
   
  데이터베이스 미러링 세션에 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]데이터베이스가 있다고 가정합니다. 이 예에서는 `AdventureWorks` 드라이브에 있는 `F` 데이터베이스의 미러 복사본에 대해 3개의 데이터베이스 스냅샷을 만듭니다. 스냅샷의 이름은 대략적인 생성 시간에 따라 각각 `AdventureWorks_0600`, `AdventureWorks_1200`및 `AdventureWorks_1800` 으로 지정됩니다.  
   
-1.  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]미러의 첫 번째 데이터베이스 스냅숏을 만듭니다.  
+1.  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]미러의 첫 번째 데이터베이스 스냅샷을 만듭니다.  
   
     ```  
     CREATE DATABASE AdventureWorks_0600  
@@ -49,7 +49,7 @@ ms.locfileid: "62807277"
        AS SNAPSHOT OF AdventureWorks2012  
     ```  
   
-2.  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]미러의 두 번째 데이터베이스 스냅숏을 만듭니다. `AdventureWorks_0600` 사용자는 계속 사용할 수 있습니다.  
+2.  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]미러의 두 번째 데이터베이스 스냅샷을 만듭니다. `AdventureWorks_0600` 사용자는 계속 사용할 수 있습니다.  
   
     ```  
     CREATE DATABASE AdventureWorks_1200  
@@ -59,7 +59,7 @@ ms.locfileid: "62807277"
   
      이 시점에서 프로그래밍 방식으로 새 클라이언트 연결을 최신 스냅샷으로 지정할 수 있습니다.  
   
-3.  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]미러의 세 번째 스냅숏을 만듭니다. `AdventureWorks_0600` 또는 `AdventureWorks_1200` 사용자는 계속 사용할 수 있습니다.  
+3.  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]미러의 세 번째 스냅샷을 만듭니다. `AdventureWorks_0600` 또는 `AdventureWorks_1200` 사용자는 계속 사용할 수 있습니다.  
   
     ```  
     CREATE DATABASE AdventureWorks_1800  
@@ -69,17 +69,17 @@ ms.locfileid: "62807277"
   
      이 시점에서 프로그래밍 방식으로 새 클라이언트 연결을 최신 스냅샷으로 지정할 수 있습니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
--   [데이터베이스 스냅숏 만들기&#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
+-   [데이터베이스 스냅샷 만들기&#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
   
--   [데이터베이스 스냅숏 보기&#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)  
+-   [데이터베이스 스냅샷 보기&#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)  
   
--   [데이터베이스 스냅숏 삭제&#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
+-   [데이터베이스 스냅샷 삭제&#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
 
   
-## <a name="see-also"></a>관련 항목  
- [데이터베이스 스냅숏&#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
+## <a name="see-also"></a>참고 항목  
+ [데이터베이스 스냅샷&#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
  [데이터베이스 미러링 세션에 클라이언트 연결&#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md)  
   
   

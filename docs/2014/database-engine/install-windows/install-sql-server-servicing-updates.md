@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 07f438f86a22b866351a0b83ee7634338f3ad2cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62775346"
 ---
 # <a name="install-sql-server-2014-servicing-updates"></a>SQL Server 2014 서비스 업데이트 설치
@@ -37,16 +37,16 @@ ms.locfileid: "62775346"
   
 -   네트워크 공유  
   
- 설치 프로그램에서 최신 버전의 적용 가능한 업데이트를 찾으면 이를 다운로드하고 현재의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로세스와 통합합니다. 제품 업데이트에는 누적 업데이트, 서비스 팩 또는 서비스 팩과 누적 업데이트가 포함될 수 있습니다. 제품 업데이트 기능을 확장 합니다 [통합 설치 기능](https://go.microsoft.com/fwlink/?LinkId=219945) 에서 제공 했던 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] PCU1 합니다.  
+ 설치 프로그램에서 최신 버전의 적용 가능한 업데이트를 찾으면 이를 다운로드하고 현재의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로세스와 통합합니다. 제품 업데이트에는 누적 업데이트, 서비스 팩 또는 서비스 팩과 누적 업데이트가 포함될 수 있습니다. 제품 업데이트 기능은 PCU1에서 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 제공 되는 [통합 설치 기능](https://go.microsoft.com/fwlink/?LinkId=219945) 을 확장 한 것입니다.  
   
 ## <a name="installing-updates-for-includesscurrentincludessscurrent-mdmd-after-it-has-already-been-installed"></a>설치 후 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 용 업데이트 설치  
- 설치 된 인스턴스의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], 모든 사용 가능한 업데이트를 적용 하는 것이 좋습니다. 일반 배포 릴리스 (GDR-중요/보안 업데이트)는 최신 사용 가능한 CU (누적 업데이트) 뿐만 아니라 서비스 팩 (SP).  
+ 설치 된 인스턴스에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]는 사용 가능한 업데이트 (일반 배포 릴리스), SP (서비스 팩), SP (서비스 팩) 및 최신 CU (누적 업데이트)를 모두 적용 하는 것이 좋습니다.  
   
- 릴리스를 서비스의 유형에 따라 SQL Server 업데이트가 Microsoft Update (MU), Microsoft 다운로드 센터 및/또는 고객 지원 서비스 핫픽스 서버를 통해 제공 됩니다. SQL Server에 대 한 보안 및 중요 업데이트 (해야 옵트인 Windows Update를 통해 MU를 제어판에서 이러한 업데이트를 볼 수)를 Microsoft 업데이트에서 자동으로 제공 됩니다. 서비스 팩은 선택 사항/중요 다운로드 다운로드 센터와 MU에서 사용할 수 있습니다. 누적 업데이트 CU 기술 자료 문서에 제공 된 Microsoft 핫픽스 다운로드 서버에서 사용할 수 있습니다.  
+ 서비스 릴리스 유형에 따라 SQL Server 업데이트는 MU (Microsoft 업데이트), Microsoft 다운로드 센터 및/또는 고객 지원 서비스 핫픽스 서버를 통해 사용할 수 있습니다. SQL Server에 대 한 보안 및 중요 업데이트는 Microsoft 업데이트에서 자동으로 제공 됩니다. 이러한 업데이트를 보려면 제어판의 Windows 업데이트를 통해 MU로 옵트인 해야 합니다. 서비스 팩은 다운로드 센터 뿐만 아니라 선택적/중요 다운로드로 MU에서 사용할 수 있습니다. 누적 업데이트는 CU 기술 자료 문서에 제공 된 Microsoft 핫픽스 다운로드 서버에서 사용할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [설치 마법사에서 SQL Server 2014를 설치 &#40;설치&#41;](install-sql-server-from-the-installation-wizard-setup.md)   
- [명령 프롬프트에서 업데이트를 설치](installing-updates-from-the-command-prompt.md) [는 인스턴스에 SQL Server 2014의 기능 추가 &#40;설치&#41;](add-features-to-an-instance-of-sql-server-setup.md)   
+## <a name="see-also"></a>참고 항목  
+ [설치 마법사 &#40;설치 프로그램에서 SQL Server 2014을 설치&#41;](install-sql-server-from-the-installation-wizard-setup.md)   
+ [명령 프롬프트에서 업데이트 설치](installing-updates-from-the-command-prompt.md) [SQL Server 2014 &#40;설치 프로그램의 인스턴스에 기능을 추가&#41;](add-features-to-an-instance-of-sql-server-setup.md)   
  [SQL Server 2014 설치 삭제](repair-a-failed-sql-server-installation.md)  
   
   

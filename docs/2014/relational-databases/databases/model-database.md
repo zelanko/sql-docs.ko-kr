@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2886fffebdf06ea16ebe8b6992387be3c22e0bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916949"
 ---
 # <a name="model-database"></a>model 데이터베이스
@@ -40,7 +40,7 @@ ms.locfileid: "62916949"
 |파일|논리적 이름|물리적 이름|파일 증가|  
 |----------|------------------|-------------------|-----------------|  
 |주 데이터|modeldev|model.mdf|디스크가 꽉 찰 때까지 10%씩 자동 증가|  
-|Log|modellog|modellog.ldf|최대 2TB까지 10%씩 자동 증가|  
+|로그|modellog|modellog.ldf|최대 2TB까지 10%씩 자동 증가|  
   
  **model** 데이터베이스나 로그 파일을 이동하려면 [시스템 데이터베이스 이동](system-databases.md)을 참조하세요.  
   
@@ -49,40 +49,40 @@ ms.locfileid: "62916949"
   
 |데이터베이스 옵션|기본값|수정 가능|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|OFF|사용자 계정 컨트롤|  
-|ANSI_NULL_DEFAULT|OFF|사용자 계정 컨트롤|  
-|ANSI_NULLS|OFF|사용자 계정 컨트롤|  
-|ANSI_PADDING|OFF|사용자 계정 컨트롤|  
-|ANSI_WARNINGS|OFF|사용자 계정 컨트롤|  
-|ARITHABORT|OFF|사용자 계정 컨트롤|  
-|AUTO_CLOSE|OFF|사용자 계정 컨트롤|  
-|AUTO_CREATE_STATISTICS|ON|사용자 계정 컨트롤|  
-|AUTO_SHRINK|OFF|사용자 계정 컨트롤|  
-|AUTO_UPDATE_STATISTICS|ON|사용자 계정 컨트롤|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|사용자 계정 컨트롤|  
-|CHANGE_TRACKING|OFF|아니요|  
-|CONCAT_NULL_YIELDS_NULL|OFF|사용자 계정 컨트롤|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|사용자 계정 컨트롤|  
-|CURSOR_DEFAULT|GLOBAL|사용자 계정 컨트롤|  
-|데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|아니요<br /><br /> 예<br /><br /> 사용자 계정 컨트롤|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|사용자 계정 컨트롤|  
-|DB_CHAINING|OFF|아니요|  
-|ENCRYPTION|OFF|아니요|  
-|NUMERIC_ROUNDABORT|OFF|사용자 계정 컨트롤|  
-|PAGE_VERIFY|CHECKSUM|사용자 계정 컨트롤|  
-|PARAMETERIZATION|SIMPLE|사용자 계정 컨트롤|  
-|QUOTED_IDENTIFIER|OFF|사용자 계정 컨트롤|  
-|READ_COMMITTED_SNAPSHOT|OFF|사용자 계정 컨트롤|  
-|RECOVERY|에 따라 달라 집니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edition<sup>1</sup>|사용자 계정 컨트롤|  
-|RECURSIVE_TRIGGERS|OFF|사용자 계정 컨트롤|  
-|Service Broker 옵션|DISABLE_BROKER|아니요|  
-|TRUSTWORTHY|OFF|아니요|  
+|ALLOW_SNAPSHOT_ISOLATION|OFF|yes|  
+|ANSI_NULL_DEFAULT|OFF|yes|  
+|ANSI_NULLS|OFF|yes|  
+|ANSI_PADDING|OFF|yes|  
+|ANSI_WARNINGS|OFF|yes|  
+|ARITHABORT|OFF|yes|  
+|AUTO_CLOSE|OFF|yes|  
+|AUTO_CREATE_STATISTICS|켜기|yes|  
+|AUTO_SHRINK|OFF|yes|  
+|AUTO_UPDATE_STATISTICS|켜기|yes|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|yes|  
+|CHANGE_TRACKING|OFF|예|  
+|CONCAT_NULL_YIELDS_NULL|OFF|yes|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|yes|  
+|CURSOR_DEFAULT|GLOBAL|yes|  
+|데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|예<br /><br /> yes<br /><br /> yes|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|yes|  
+|DB_CHAINING|OFF|예|  
+|ENCRYPTION|OFF|예|  
+|NUMERIC_ROUNDABORT|OFF|yes|  
+|PAGE_VERIFY|CHECKSUM|yes|  
+|PARAMETERIZATION|SIMPLE|yes|  
+|QUOTED_IDENTIFIER|OFF|yes|  
+|READ_COMMITTED_SNAPSHOT|OFF|yes|  
+|RECOVERY|버전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 따라 다름<sup>1</sup>|yes|  
+|RECURSIVE_TRIGGERS|OFF|yes|  
+|Service Broker 옵션|DISABLE_BROKER|예|  
+|TRUSTWORTHY|OFF|예|  
   
- <sup>1</sup> 데이터베이스의 현재 복구 모델을 확인 하려면 참조 [데이터베이스의 복구 모델 보기 또는 변경 &#40;SQL Server&#41; ](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) 하거나 [sys.databases &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
+ <sup>1</sup> 데이터베이스의 현재 복구 모델을 확인 하려면 [데이터베이스의 복구 모델 보기 또는 변경 &#40;SQL Server&#41;](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) 또는 [sys. &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)을 참조 하세요.  
   
  이러한 데이터베이스 옵션에 대한 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)를 참조하세요.  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>제한  
  **model** 데이터베이스에서는 다음 작업을 수행할 수 없습니다.  
   
 -   파일이나 파일 그룹 추가  

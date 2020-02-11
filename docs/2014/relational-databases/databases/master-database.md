@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 767d77eefe8c54fe5a3d584c670cc991b284178e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917046"
 ---
 # <a name="master-database"></a>master 데이터베이스
@@ -29,7 +29,7 @@ ms.locfileid: "62917046"
 |파일|논리적 이름|물리적 이름|파일 증가|  
 |----------|------------------|-------------------|-----------------|  
 |주 데이터|master|master.mdf|디스크가 꽉 찰 때까지 10%씩 자동 증가|  
-|Log|mastlog|mastlog.ldf|최대 2TB까지 10%씩 자동 증가|  
+|로그|mastlog|mastlog.ldf|최대 2TB까지 10%씩 자동 증가|  
   
  **master** 데이터 및 로그 파일의 이동 방법은 [시스템 데이터베이스 이동](system-databases.md)을 참조하세요.  
   
@@ -38,38 +38,38 @@ ms.locfileid: "62917046"
   
 |데이터베이스 옵션|기본값|수정 가능|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|아니요|  
-|ANSI_NULL_DEFAULT|OFF|사용자 계정 컨트롤|  
-|ANSI_NULLS|OFF|사용자 계정 컨트롤|  
-|ANSI_PADDING|OFF|사용자 계정 컨트롤|  
-|ANSI_WARNINGS|OFF|사용자 계정 컨트롤|  
-|ARITHABORT|OFF|사용자 계정 컨트롤|  
-|AUTO_CLOSE|OFF|아니요|  
-|AUTO_CREATE_STATISTICS|ON|사용자 계정 컨트롤|  
-|AUTO_SHRINK|OFF|아니요|  
-|AUTO_UPDATE_STATISTICS|ON|사용자 계정 컨트롤|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|사용자 계정 컨트롤|  
-|CHANGE_TRACKING|OFF|아니요|  
-|CONCAT_NULL_YIELDS_NULL|OFF|사용자 계정 컨트롤|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|사용자 계정 컨트롤|  
-|CURSOR_DEFAULT|GLOBAL|사용자 계정 컨트롤|  
-|데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|아니요<br /><br /> 아니요<br /><br /> 아니요|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|사용자 계정 컨트롤|  
-|DB_CHAINING|ON|아니요|  
-|ENCRYPTION|OFF|아니요|  
-|NUMERIC_ROUNDABORT|OFF|사용자 계정 컨트롤|  
-|PAGE_VERIFY|CHECKSUM|사용자 계정 컨트롤|  
-|PARAMETERIZATION|SIMPLE|사용자 계정 컨트롤|  
-|QUOTED_IDENTIFIER|OFF|사용자 계정 컨트롤|  
-|READ_COMMITTED_SNAPSHOT|OFF|아니요|  
-|RECOVERY|SIMPLE|사용자 계정 컨트롤|  
-|RECURSIVE_TRIGGERS|OFF|사용자 계정 컨트롤|  
-|Service Broker 옵션|DISABLE_BROKER|아니요|  
-|TRUSTWORTHY|OFF|사용자 계정 컨트롤|  
+|ALLOW_SNAPSHOT_ISOLATION|켜기|예|  
+|ANSI_NULL_DEFAULT|OFF|yes|  
+|ANSI_NULLS|OFF|yes|  
+|ANSI_PADDING|OFF|yes|  
+|ANSI_WARNINGS|OFF|yes|  
+|ARITHABORT|OFF|yes|  
+|AUTO_CLOSE|OFF|예|  
+|AUTO_CREATE_STATISTICS|켜기|yes|  
+|AUTO_SHRINK|OFF|예|  
+|AUTO_UPDATE_STATISTICS|켜기|yes|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|yes|  
+|CHANGE_TRACKING|OFF|예|  
+|CONCAT_NULL_YIELDS_NULL|OFF|yes|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|yes|  
+|CURSOR_DEFAULT|GLOBAL|yes|  
+|데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|예<br /><br /> 예<br /><br /> 예|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|yes|  
+|DB_CHAINING|켜기|예|  
+|ENCRYPTION|OFF|예|  
+|NUMERIC_ROUNDABORT|OFF|yes|  
+|PAGE_VERIFY|CHECKSUM|yes|  
+|PARAMETERIZATION|SIMPLE|yes|  
+|QUOTED_IDENTIFIER|OFF|yes|  
+|READ_COMMITTED_SNAPSHOT|OFF|예|  
+|RECOVERY|SIMPLE|yes|  
+|RECURSIVE_TRIGGERS|OFF|yes|  
+|Service Broker 옵션|DISABLE_BROKER|예|  
+|TRUSTWORTHY|OFF|yes|  
   
  이러한 데이터베이스 옵션에 대한 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)를 참조하세요.  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>제한  
  **master** 데이터베이스에서는 다음 작업을 수행할 수 없습니다.  
   
 -   파일이나 파일 그룹 추가  

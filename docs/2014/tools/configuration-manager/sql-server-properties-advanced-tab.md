@@ -11,16 +11,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1bab4c78cdb4aee364cc8f41aff70578b8a6df0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63028826"
 ---
 # <a name="sql-server-properties-advanced-tab"></a>SQL Server 속성(고급 탭)
   다음 속성은 기본적으로 **고급** 탭에 나타납니다. 사용자 지정 속성을 정의한 경우 속성이 해당 값과 함께 이 탭에 나타납니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **클러스터형**  
  이 서비스가 클러스터형 서버의 리소스로 설치되었는지 여부를 나타냅니다.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "63028826"
  **SKU(Stock Keeping Unit)**  
  제품 SKU(Stock Keeping Unit) 번호를 표시합니다.  
   
- **버전(Version)**  
+ **버전**  
  이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 버전 번호를 표시합니다.  
   
  **가상 서버 이름**  

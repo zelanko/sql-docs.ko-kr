@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b58da11d973d169a0372e59c7e8d7e174e3cf789
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767659"
 ---
 # <a name="step-1-creating-working-folders-and-environment-variables"></a>1단계: 작업 폴더 및 환경 변수 만들기
@@ -36,7 +36,7 @@ ms.locfileid: "62767659"
   
 3.  **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **폴더**를 클릭합니다.  
   
-4.  새 폴더 이름 바꾸기 `DeploymentTutorial`합니다.  
+4.  새 폴더의 이름을 `DeploymentTutorial`로 바꿉니다.  
   
 ### <a name="to-create-local-environment-variables"></a>로컬 환경 변수를 만들려면  
   
@@ -48,11 +48,11 @@ ms.locfileid: "62767659"
   
 4.  **환경 변수** 대화 상자의 **시스템 변수** 프레임에서 **새로 만들기**를 클릭합니다.  
   
-5.  에 **새 시스템 변수** 대화 상자에서 `DataTransfer` 에 **변수 이름** 상자 및 `C:\DeploymentTutorial\datatransferconfig.dtsconfig` 에서 **변수 값** 상자.  
+5.  **새 시스템 변수** 대화 상자에서 `DataTransfer` **변수 이름** 상자에를 입력 하 고 `C:\DeploymentTutorial\datatransferconfig.dtsconfig` **변수 값** 상자에를 입력 합니다.  
   
 6.  **확인**을 클릭합니다.  
   
-7.  클릭 **새로 만들기** 다시 유형과 `LoadXMLData` 에 **변수 이름** 상자 및 `C:\DeploymentTutorial\loadxmldataconfig.dtsconfig` 에 **변수 값** 상자.  
+7.  **새로 만들기** 를 다시 클릭 하 `LoadXMLData` 고 **변수 이름** 상자 `C:\DeploymentTutorial\loadxmldataconfig.dtsconfig` 에를 입력 하 고 **변수 값** 상자에를 입력 합니다.  
   
 8.  **확인** 을 클릭하여 **환경 변수** 대화 상자를 종료합니다.  
   
@@ -70,11 +70,11 @@ ms.locfileid: "62767659"
   
 4.  **환경 변수** 대화 상자의 **시스템 변수** 프레임에서 **새로 만들기**를 클릭합니다.  
   
-5.  에 **새 시스템 변수** 대화 상자에서 `DataTransfer` 에 **변수 이름** 상자 및 `C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig` 에서 **변수 값** 상자.  
+5.  **새 시스템 변수** 대화 상자의 변수 `DataTransfer` **이름** 상자에를 입력 하 고 `C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig` **변수 값** 상자에를 입력 합니다.  
   
 6.  **확인**을 클릭합니다.  
   
-7.  클릭 **새로 만들기** 다시 유형과 `LoadXMLData` 에 **변수 이름** 상자 및 `C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig` 에 **변수 값** 상자.  
+7.  **새로 만들기** 를 다시 클릭 하 `LoadXMLData` 고 **변수 이름** 상자 `C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig` 에를 입력 하 고 **변수 값** 상자에를 입력 합니다.  
   
 8.  **확인** 을 클릭하여 **환경 변수** 대화 상자를 종료합니다.  
   
@@ -85,6 +85,6 @@ ms.locfileid: "62767659"
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [2단계: 배포 프로젝트 만들기](../integration-services/lesson-1-2-creating-the-deployment-project.md)  
   
-![Integration Services 아이콘 (작은)](media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은 아이콘)](media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.  
   
   

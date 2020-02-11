@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d9a601a710531aa6905f35a2fe5ca7f02a9177f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770686"
 ---
 # <a name="script-component"></a>스크립트 구성 요소
@@ -31,7 +31,8 @@ ms.locfileid: "62770686"
   
 -   기존 .NET 어셈블리에 있는 비즈니스 규칙에 액세스합니다. 예를 들어 스크립트로 `Income` 열에서 유효한 값 범위를 지정하는 비즈니스 규칙을 적용할 수 있습니다.  
   
--   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 식 문법에서 제공되는 함수와 연산자 외에 사용자 지정 수식과 함수를 사용합니다. 예를 들어 LUHN 수식을 사용하는 신용 카드 번호의 유효성을 검사합니다.  
+-   
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 식 문법에서 제공되는 함수와 연산자 외에 사용자 지정 수식과 함수를 사용합니다. 예를 들어 LUHN 수식을 사용하는 신용 카드 번호의 유효성을 검사합니다.  
   
 -   열 데이터의 유효성을 검사하고 잘못된 데이터가 포함된 레코드는 건너 뜁니다. 예를 들어 스크립트로 적절한 우편 요금을 평가하여 금액이 너무 높거나 낮은 레코드를 건너뛸 수 있습니다.  
   
@@ -53,10 +54,11 @@ ms.locfileid: "62770686"
  스크립트 구성 요소를 패키지에 적합한 선택 항목으로 결정한 후에는 입력과 출력을 구성하고 구성 요소에서 사용하는 스크립트를 개발하며 구성 요소 자체를 구성해야 합니다.  
   
 ## <a name="understanding-the-script-component-modes"></a>스크립트 구성 요소 모드 이해  
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서 스크립트 구성 요소에는 두 가지 모드인 메타데이터 디자인 모드와 코드 디자인 모드가 있습니다. 메타데이터 디자인 모드에서는 스크립트 구성 요소 입력 및 출력을 추가하고 수정할 수 있지만 코드를 작성할 수는 없습니다. 따라서 입력과 출력이 구성된 다음에는 스크립트를 작성하기 위해 코드 디자인 모드로 전환해야 합니다. 스크립트 구성 요소는 입력 및 출력의 메타데이터로부터 기본 코드를 자동으로 생성합니다. 스크립트 구성 요소가 기본 코드를 생성한 다음 메타데이터를 변경하면 업데이트된 기본 코드가 사용자의 코드와 호환되지 않기 때문에 사용자의 코드가 더 이상 컴파일되지 않을 수 있습니다.  
+ 
+  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서 스크립트 구성 요소에는 두 가지 모드인 메타데이터 디자인 모드와 코드 디자인 모드가 있습니다. 메타데이터 디자인 모드에서는 스크립트 구성 요소 입력 및 출력을 추가하고 수정할 수 있지만 코드를 작성할 수는 없습니다. 따라서 입력과 출력이 구성된 다음에는 스크립트를 작성하기 위해 코드 디자인 모드로 전환해야 합니다. 스크립트 구성 요소는 입력 및 출력의 메타데이터로부터 기본 코드를 자동으로 생성합니다. 스크립트 구성 요소가 기본 코드를 생성한 다음 메타데이터를 변경하면 업데이트된 기본 코드가 사용자의 코드와 호환되지 않기 때문에 사용자의 코드가 더 이상 컴파일되지 않을 수 있습니다.  
   
 ## <a name="writing-the-script-that-the-component-uses"></a>구성 요소에서 사용하는 스크립트 작성  
- 스크립트 구성 요소는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) as the environment in which you write the scripts. VSTA는 **스크립트 변환 편집기**를 통해 액세스할 수 있습니다. 자세한 내용은 [스크립트 변환 편집기&#40;스크립트 페이지&#41;](../../script-transformation-editor-script-page.md)을 참조하세요.  
+ 스크립트 구성 요소는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 스크립트를 작성 하는 환경으로 VSTA (Tools for Applications)를 사용 합니다. VSTA는 **스크립트 변환 편집기**를 통해 액세스할 수 있습니다. 자세한 내용은 [스크립트 변환 편집기&#40;스크립트 페이지&#41;](../../script-transformation-editor-script-page.md)을 참조하세요.  
   
  스크립트 구성 요소는 구성 요소 메타데이터를 나타내는 ScriptMain이라는 자동 생성된 클래스가 포함된 VSTA 프로젝트를 제공합니다. 예를 들어 스크립트 구성 요소가 3개의 출력이 있는 변환으로 사용되는 경우 ScriptMain에는 각 출력에 대한 메서드가 포함됩니다. ScriptMain은 스크립트에 대한 진입점입니다.  
   
@@ -75,7 +77,8 @@ ms.locfileid: "62770686"
 -   참조할 입력 열을 선택합니다.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용할 경우 입력을 한 개만 구성할 수 있습니다.  
+    >  
+  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용할 경우 입력을 한 개만 구성할 수 있습니다.  
   
 -   구성 요소에서 실행할 스크립트를 제공합니다.  
   
@@ -88,22 +91,24 @@ ms.locfileid: "62770686"
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
 ### <a name="configuring-the-script-component-in-the-designer"></a>디자이너에서 스크립트 구성 요소 구성  
- **스크립트 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
+ 
+  **스크립트 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [스크립트 변환 편집기&#40;입력 열 페이지&#41;](../../script-transformation-editor-input-columns-page.md)  
+-   [스크립트 변환 편집기 &#40;입력 열 페이지&#41;](../../script-transformation-editor-input-columns-page.md)  
   
--   [스크립트 변환 편집기&#40;입/출력 페이지&#41;](../../script-transformation-editor-inputs-and-outputs-page.md)  
+-   [스크립트 변환 편집기 &#40;입력 및 출력 페이지&#41;](../../script-transformation-editor-inputs-and-outputs-page.md)  
   
--   [스크립트 변환 편집기&#40;스크립트 페이지&#41;](../../script-transformation-editor-script-page.md)  
+-   [스크립트 변환 편집기 &#40;스크립트 페이지&#41;](../../script-transformation-editor-script-page.md)  
   
--   [스크립트 변환 편집기&#40;연결 관리자 페이지&#41;](../../script-transformation-editor-connection-managers-page.md)  
+-   [스크립트 변환 편집기 &#40;연결 관리자 페이지&#41;](../../script-transformation-editor-connection-managers-page.md)  
   
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법을 보려면 다음 항목을 클릭하십시오.  
   
 -   [데이터 흐름 구성 요소의 속성 설정](../set-the-properties-of-a-data-flow-component.md)  
   
 ### <a name="configuring-the-script-component-programmatically"></a>프로그래밍 방식으로 스크립트 구성 요소 구성  
- **속성** 창을 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
+ 
+  **속성** 창을 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
 -   [Common Properties](../../common-properties.md)  
   

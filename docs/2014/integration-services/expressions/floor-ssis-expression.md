@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9addd13deb4dcf3c81a4975e0ed33783799ae2a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769169"
 ---
 # <a name="floor-ssis-expression"></a>FLOOR(SSIS 식)
@@ -37,7 +37,7 @@ FLOOR(numeric_expression)
 ## <a name="result-types"></a>결과 형식  
  인수 식의 숫자 데이터 형식입니다. 결과는 *numeric_expression*과 동일한 데이터 형식으로 계산된 값의 정수 부분입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  인수가 Null이면 FLOOR 결과도 Null입니다.  
   
 ## <a name="expression-examples"></a>식 예  
@@ -47,7 +47,7 @@ FLOOR(numeric_expression)
 FLOOR(123.45)  
 ```  
   
- 123\.00을 반환합니다.  
+ 123.00을 반환합니다.  
   
 ```  
 FLOOR(-123.45)  
@@ -61,7 +61,7 @@ FLOOR(0.00)
   
  0\.00을 반환합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [CEILING&#40;SSIS 식&#41;](ceiling-ssis-expression.md)   
  [함수&#40;SSIS 식&#41;](functions-ssis-expression.md)  
   

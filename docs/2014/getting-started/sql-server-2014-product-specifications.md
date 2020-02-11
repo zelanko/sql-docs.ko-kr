@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2014 제품 사양 | Microsoft Docs
+title: SQL Server 2014에 대 한 제품 사양 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 98d595be891fbae75cfe90d06ceccec232e7e53e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62772292"
 ---
 # <a name="sql-server-2014-product-specifications"></a>SQL Server 2014 제품 사양
@@ -42,7 +42,7 @@ ms.technology:
 This HTML comment can be erased, if you like.
 -->
 
- [SQL Server의 버전별 계산 용량 제한](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
+ [SQL Server의 버전별 컴퓨팅 용량 제한](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
  각 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전에서 지원하는 최대 프로세서 수  
   
  [SQL Server 2014 버전 및 구성 요소](../sql-server/editions-and-components-of-sql-server-2016.md)  

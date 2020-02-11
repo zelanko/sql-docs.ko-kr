@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a6d398c2c9d8439025c7ff5ec7a8e4295b24d337
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754686"
 ---
 # <a name="remove-database-mirroring-sql-server"></a>데이터베이스 미러링 제거(SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "62754686"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  데이터베이스에 대한 ALTER 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -38,16 +38,20 @@ ms.locfileid: "62754686"
   
 1.  데이터베이스 미러링 세션 중에 주 서버 인스턴스에 연결하고 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
   
-2.  **데이터베이스**를 확장하고 해당 데이터베이스를 선택합니다.  
+2.  
+  **데이터베이스**를 확장하고 해당 데이터베이스를 선택합니다.  
   
 3.  데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**를 선택한 다음 **미러**를 클릭합니다. **데이터베이스 속성** 대화 상자의 **미러링** 페이지가 열립니다.  
   
-4.  **페이지 선택** 창에서 **미러링**을 클릭합니다.  
+4.  
+  **페이지 선택** 창에서 **미러링**을 클릭합니다.  
   
-5.  미러링을 제거하려면 **미러링 제거**를 클릭합니다. 확인 메시지가 나타납니다. **예**를 클릭하면 세션이 중지되고 미러링이 데이터베이스에서 제거됩니다.  
+5.  미러링을 제거하려면 **미러링 제거**를 클릭합니다. 확인 메시지가 나타납니다. 
+  **예**를 클릭하면 세션이 중지되고 미러링이 데이터베이스에서 제거됩니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
- 데이터베이스 미러링을 제거하려면 **데이터베이스 속성**을 사용합니다. **데이터베이스 속성** 대화 상자의 **미러링** 페이지를 사용합니다.  
+ 데이터베이스 미러링을 제거하려면 **데이터베이스 속성**을 사용합니다. 
+  **데이터베이스 속성** 대화 상자의 **미러링** 페이지를 사용합니다.  
   
 #### <a name="to-remove-database-mirroring"></a>데이터베이스 미러링을 제거하려면  
   
@@ -69,16 +73,16 @@ ms.locfileid: "62754686"
     ALTER DATABASE AdventureWorks2012 SET PARTNER OFF;  
     ```  
   
-##  <a name="FollowUp"></a> 후속 작업: 데이터베이스 미러링 제거  
+##  <a name="FollowUp"></a>후속 작업: 데이터베이스 미러링 제거  
   
 > [!NOTE]  
 >  미러링 제거의 영향에 대한 자세한 내용은 [데이터베이스 미러링 제거&#40;SQL Server&#41;](database-mirroring-sql-server.md)를 참조하세요.  
   
--   **데이터베이스에서 미러링을 다시 시작하려는 경우**  
+-   **데이터베이스에서 미러링을 다시 시작 하려는 경우**  
   
      미러링이 제거된 후 주 데이터베이스에서 수행된 모든 로그 백업을 미러 데이터베이스에 모두 적용해야만 미러링을 다시 시작할 수 있습니다.  
   
--   **미러링을 다시 시작하지 않으려는 경우**  
+-   **미러링을 다시 시작 하지 않으려는 경우**  
   
      필요한 경우 이전 미러 데이터베이스를 복구할 수 있습니다. 미러 서버로 사용했던 서버 인스턴스에 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용할 수 있습니다.  
   
@@ -89,7 +93,7 @@ ms.locfileid: "62754686"
     > [!IMPORTANT]  
     >  이 데이터베이스를 복구하면 같은 이름의 두 분기 데이터베이스가 온라인 상태가 됩니다. 따라서 클라이언트가 두 데이터베이스 중 하나(일반적으로 가장 최근의 주 데이터베이스)에만 액세스할 수 있는지 확인해야 합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [데이터베이스 미러링 세션 일시 중지 또는 재개&#40;SQL Server&#41;](pause-or-resume-a-database-mirroring-session-sql-server.md)  
   
@@ -99,11 +103,11 @@ ms.locfileid: "62754686"
   
 -   [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;Transact-SQL&#41;](database-mirroring-establish-session-windows-authentication.md)  
   
--   [예: 인증서를 사용하여 데이터베이스 미러링 설정&#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
+-   [예제: 인증서를 사용하여 데이터베이스 미러링 설정&#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링&#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [데이터베이스 미러링 설정&#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)   
- [AlwaysOn 가용성 그룹 (SQL Server)](../availability-groups/windows/always-on-availability-groups-sql-server.md)  
+ [AlwaysOn 가용성 그룹(SQL Server)](../availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   

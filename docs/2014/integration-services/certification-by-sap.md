@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 06ae79e51fa7526ab0e6bad2747c32d0bc5ca6bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771607"
 ---
 # <a name="certification-by-sap"></a>SAP 인증
@@ -27,6 +27,6 @@ ms.locfileid: "62771607"
 |SAP 인터페이스|SAP 릴리스 레벨|인증서 날짜|관련 구성 요소|  
 |-------------------|------------------------|------------------------|-----------------------|  
 |BW_OHS 7.0 - SAP NetWeaver Business Intelligence - Open Hub Service 7.0|Business Intelligence 7.0|2012년 12월|원본|  
-|BW-STA 3.5 - SAP BW 3.5에 대한 BAPI 준비|Business Intelligence 3.5, 7.0|2012년 12월|Destination|  
+|BW-STA 3.5 - SAP BW 3.5에 대한 BAPI 준비|Business Intelligence 3.5, 7.0|2012년 12월|대상|  
   
   

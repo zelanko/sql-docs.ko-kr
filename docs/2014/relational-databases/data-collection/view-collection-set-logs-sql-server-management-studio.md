@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9a68d71c44304d2f57c39d5a32fd57a5efb9617e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918243"
 ---
 # <a name="view-collection-set-logs-sql-server-management-studio"></a>컬렉션 집합 로그 보기(SQL Server Management Studio)
@@ -41,7 +41,7 @@ ms.locfileid: "62918243"
   
      **로그 파일 뷰어** 가 열리고 선택한 컬렉션 집합에 대한 로그 파일만 표시됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 컬렉션](data-collection.md)   
  [데이터 컬렉션 관리](manage-data-collection.md)  
   

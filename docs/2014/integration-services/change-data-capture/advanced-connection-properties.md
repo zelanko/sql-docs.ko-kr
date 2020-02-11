@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a7a5744aa2adcaab74ca09bbb962c8c69d985b79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771519"
 ---
 # <a name="advanced-connection-properties"></a>고급 연결 속성
@@ -31,7 +31,7 @@ ms.locfileid: "62771519"
 > [!IMPORTANT]  
 >  **고급 연결 속성** 대화 상자에 로그인 자격 증명을 포함하지 마십시오. 이러한 정보는 네트워크로 전달될 때 암호화되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [CDC Designer 콘솔 액세스](access-the-cdc-designer-console.md)   
  [인스턴스를 만들기 위한 SQL Server 연결](sql-server-connection-for-instance-creation.md)  
   

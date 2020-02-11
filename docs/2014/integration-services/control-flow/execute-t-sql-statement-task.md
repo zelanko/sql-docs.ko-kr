@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f20f64c9a26d1e9b030c01618a63157757c0b205
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831738"
 ---
 # <a name="execute-t-sql-statement-task"></a>T-SQL 문 실행 태스크
@@ -39,7 +39,7 @@ ms.locfileid: "62831738"
   
 -   [태스크 또는 컨테이너의 속성 설정](../set-the-properties-of-a-task-or-container.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 태스크](integration-services-tasks.md)   
  [제어 흐름](control-flow.md)   
  [Integration Services 패키지의 MERGE](merge-in-integration-services-packages.md)  

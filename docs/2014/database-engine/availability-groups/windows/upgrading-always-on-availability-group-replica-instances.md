@@ -1,5 +1,5 @@
 ---
-title: 업그레이드 및 업데이트의 최소 가동 중지 시간 및 데이터 손실로 가용성 그룹 서버 | Microsoft Docs
+title: 가동 중지 시간 및 데이터 손실을 최소화 하 여 가용성 그룹 서버 업그레이드 및 업데이트 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8e9be78ff13d39b4cdcaf60516ac20b9a85648d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812948"
 ---
 # <a name="upgrade-and-update-of-availability-group-servers-with-minimal-downtime-and-data-loss"></a>최소 작동 중지 및 데이터 손실로 가용성 그룹 서버 업그레이드 및 업데이트
   서버 인스턴스를 SQL Server 2012에서 서비스 팩 또는 최신 버전으로 업데이트하거나 업그레이드할 때 순차적 업데이트 또는 업그레이드를 수행하면 가용성 그룹의 작동 중단을 단 한 번의 수동 장애 조치(Failover)로 줄일 수 있습니다. SQL Server 버전을 업그레이드하는 경우 롤링 업그레이드라고 하고, 핫픽스 또는 서비스 팩이 포함된 현재 SQL Server 버전을 업데이트하는 것을 롤링 업데이트라고 합니다.  
   
- 이 항목은 SQL Server 업그레이드/업데이트에 대한 설명에 한해 제한됩니다. 운영 체제 관련 업그레이드/업데이트에서 항상 사용 가능한 SQL Server 인스턴스가 실행 되는 참조 [클러스터 간 마이그레이션 AlwaysOn 가용성 그룹의 운영 체제 업그레이드](https://msdn.microsoft.com/library/jj873730.aspx)  
+ 이 항목은 SQL Server 업그레이드/업데이트에 대한 설명에 한해 제한됩니다. 항상 사용 가능한 SQL Server 인스턴스가 실행 되는 운영 체제 관련 업그레이드/업데이트는 [운영 체제 업그레이드에 대 한 AlwaysOn 가용성 그룹의 클러스터 간 마이그레이션](https://msdn.microsoft.com/library/jj873730.aspx) 을 참조 하세요.  
   
 ## <a name="rolling-upgradeupdate-best-practices-for-alwayson-availability-groups"></a>AlwaysOn 가용성 그룹의 롤링 업그레이드/업데이트를 위한 최상의 방법  
  서버 업그레이드/업데이트를 수행할 때 가용성 그룹에 대한 가동 중단 시간 및 데이터 손실을 최소화하기 위해 다음과 같은 최상의 방법을 구현해야 합니다.  
@@ -96,7 +96,7 @@ ms.locfileid: "62812948"
 ## <a name="availability-group-with-failover-cluster-instance-nodes"></a>장애 조치(Failover) 클러스터 인스턴스 노드가 포함된 가용성 그룹  
  가용성 그룹에 FCI(장애 조치(failover) 클러스터 인스턴스) 노드가 포함된 경우 활성 노드를 업그레이드/업데이트하기 전에 비활성 노드를 업그레이드/업데이트해야 합니다. 아래 그림에서는 로컬 고가용성을 위한 FCI 및 원격 재해 복구용 FCI 간 비동기 커밋과 함께 일반적인 가용성 그룹 시나리오와 업그레이드 시퀀스를 설명합니다.  
   
- ![FCI를 통한 가용성 그룹 업그레이드](../../media/agupgrade-ag-fci-dr.gif "FCI를 통한 가용성 그룹 업그레이드")  
+ ![FCI가 포함된 가용성 그룹 업그레이드](../../media/agupgrade-ag-fci-dr.gif "FCI가 포함된 가용성 그룹 업그레이드")  
   
 1.  REMOTE2 업그레이드/업데이트  
   

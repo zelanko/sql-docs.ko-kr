@@ -1,5 +1,5 @@
 ---
-title: '2단원: 루핑 추가 | Microsoft Docs'
+title: '2 단원: 루핑 추가 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a542b2828a2ea6803a6b4174396e57c7e9d3af4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767565"
 ---
 # <a name="lesson-2-adding-looping"></a>2단원: 루핑 추가
-  [1단원: 프로젝트 및 기본 패키지 만들기](lesson-1-create-a-project-and-basic-package-with-ssis.md), 단일 플랫 파일 원본에서 데이터를 추출 하 고 조회 변환을 사용 하 여 데이터를 로드 하는 패키지를 생성 합니다 **FactCurrency** 팩트 테이블의 **AdventureWorksDW2012** 샘플 데이터베이스.  
+  [1 단원: 프로젝트 및 기본 패키지 만들기](lesson-1-create-a-project-and-basic-package-with-ssis.md)에서는 단일 플랫 파일 원본에서 데이터를 추출 하 고, 조회 변환을 사용 하 여 데이터를 변환 하 고, 마지막으로 **AdventureWorksDW2012** 예제 데이터베이스의 **FactCurrency** 팩트 테이블로 데이터를 로드 하는 패키지를 만들었습니다.  
   
- 그러나 ETL(추출, 변환 및 로드) 프로세스에서 플랫 파일을 하나만 사용하는 경우는 거의 없습니다. 일반적인 ETL 프로세스는 여러 플랫 파일 원본에서 데이터를 추출합니다. 여러 원본에서 데이터를 추출하려면 반복적인 제어 흐름이 필요합니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 의 가장 기대되는 기능 중 하나는 패키지에 반복이나 루핑을 쉽게 추가할 수 있는 기능입니다.  
+ 그러나 ETL(추출, 변환 및 로드) 프로세스에서 플랫 파일을 하나만 사용하는 경우는 거의 없습니다. 일반적인 ETL 프로세스는 여러 플랫 파일 원본에서 데이터를 추출합니다. 여러 원본에서 데이터를 추출하려면 반복적인 제어 흐름이 필요합니다. 의 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 가장 중요 한 기능 중 하나는 패키지에 반복 이나 반복을 쉽게 추가할 수 있는 기능입니다.  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 Foreach Loop 컨테이너와 For Loop 컨테이너라는 패키지 루핑을 위한 두 가지 유형의 컨테이너를 제공합니다. Foreach 루프 컨테이너는 열거자를 사용하여 루핑을 수행하지만 For 루프 컨테이너는 대개 변수 식을 사용합니다. 이 단원에서는 Foreach 루프 컨테이너를 사용합니다.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]는 패키지를 반복 하기 위해 Foreach 루프 컨테이너와 For Loop 컨테이너 라는 두 가지 유형의 컨테이너를 제공 합니다. Foreach 루프 컨테이너는 열거자를 사용하여 루핑을 수행하지만 For 루프 컨테이너는 대개 변수 식을 사용합니다. 이 단원에서는 Foreach 루프 컨테이너를 사용합니다.  
   
  Foreach 루프 컨테이너를 사용하면 패키지에서 지정한 열거자의 각 멤버에 대해 제어 흐름을 반복할 수 있습니다. Foreach 루프 컨테이너를 사용하여 다음과 같은 항목을 열거할 수 있습니다.  
   
@@ -40,30 +40,31 @@ ms.locfileid: "62767565"
   
 -   XML 경로 언어(XPath)식의 노드  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] SMO(Management Objects)(!!)  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]SMO (Management Objects)  
   
  이 단원에서는 1단원에서 만든 단순 ETL 패키지를 Foreach 루프 컨테이너를 사용하도록 수정하고 자습서 패키지에서 폴더에 있는 모든 플랫 파일을 반복 처리할 수 있도록 사용자 정의 패키지 변수를 설정하는 방법에 대해 설명합니다. 이전 단원을 완료하지 않은 경우 자습서에 완성된 상태로 포함된 1단원 패키지를 복사할 수도 있습니다.  
   
  이 단원에서는 데이터 흐름을 수정하지 않고 제어 흐름만 수정합니다.  
   
 > [!IMPORTANT]  
->  이 자습서를 실행하려면 **AdventureWorksDW2012** 예제 데이터베이스가 필요합니다. **AdventureWorksDW2012**의 설치 및 배포 방법에 대한 자세한 내용은 [CodePlex의 Reporting Services 제품 샘플](https://go.microsoft.com/fwlink/p/?LinkID=526910)을 참조하십시오.  
+>  이 자습서를 실행하려면 **AdventureWorksDW2012** 예제 데이터베이스가 필요합니다. 
+  **AdventureWorksDW2012**의 설치 및 배포 방법에 대한 자세한 내용은 [CodePlex의 Reporting Services 제품 샘플](https://go.microsoft.com/fwlink/p/?LinkID=526910)을 참조하십시오.  
   
 ## <a name="lesson-tasks"></a>단원 태스크  
  이 단원에서는 다음 태스크를 다룹니다.  
   
--   [1단계: 1 단원 패키지 복사](lesson-2-1-copying-the-lesson-1-package.md)  
+-   [1단계: 1단원 패키지 복사](lesson-2-1-copying-the-lesson-1-package.md)  
   
 -   [2단계: Foreach 루프 컨테이너 추가 및 구성](lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
 -   [3단계: 플랫 파일 연결 관리자 수정](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
--   [4단계: 2 단원 자습서 패키지 테스트](lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
+-   [4단계: 2단원 자습서 패키지 테스트](lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>단원 시작  
- [1단계: 1 단원 패키지 복사](lesson-2-1-copying-the-lesson-1-package.md)  
+ [1단계: 1단원 패키지 복사](lesson-2-1-copying-the-lesson-1-package.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [For 루프 컨테이너](control-flow/for-loop-container.md)  
   
   

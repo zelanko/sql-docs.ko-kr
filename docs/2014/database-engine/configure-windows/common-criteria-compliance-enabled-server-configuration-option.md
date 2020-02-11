@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8fef699da6e63c534d19e0d66bfa076f85348d29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62786642"
 ---
 # <a name="common-criteria-compliance-enabled-server-configuration-option"></a>common criteria compliance enabled 서버 구성 옵션
@@ -40,7 +40,7 @@ ms.locfileid: "62786642"
   
  sp_configure 시스템 저장 프로시저를 사용하여 설정을 변경하는 경우에는 show advanced options를 1로 설정할 때만 common criteria compliance enabled를 변경할 수 있습니다. 이 설정은 서버를 다시 시작한 후에 적용됩니다. 가능한 값은 0과 1입니다.  
   
--   0은 Common Criteria 준수를 설정하지 않음을 나타냅니다. 기본값입니다.  
+-   0은 Common Criteria 준수를 설정하지 않음을 나타냅니다. 이것이 기본값입니다.  
   
 -   1은 Common Criteria 준수를 설정함을 나타냅니다.  
   
@@ -58,7 +58,7 @@ RECONFIGURE
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [서버 구성 옵션&#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   
   

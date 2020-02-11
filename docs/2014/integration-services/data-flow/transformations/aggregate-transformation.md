@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4759050a9453e1925ea47bc3dbf66d13aa821feb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770639"
 ---
 # <a name="aggregate-transformation"></a>집계 변환
@@ -30,7 +30,7 @@ ms.locfileid: "62770639"
 ## <a name="operations"></a>작업  
  집계 변환은 다음과 같은 연산을 지원합니다.  
   
-|연산|Description|  
+|작업(Operation)|Description|  
 |---------------|-----------------|  
 |Group By|데이터 세트를 그룹으로 나눕니다. 그룹화에는 모든 종류의 데이터 형식의 열을 사용할 수 있습니다. 자세한 내용은 [GROUP BY&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-group-by-transact-sql)를 참조하세요.|  
 |합계|열에 있는 값의 합계를 계산합니다. 숫자 데이터 형식의 열만 합계를 계산할 수 있습니다. 자세한 내용은 [SUM&#40;Transact-SQL&#41;](/sql/t-sql/functions/sum-transact-sql)을 참조하세요.|  
@@ -38,7 +38,7 @@ ms.locfileid: "62770639"
 |개수|그룹의 항목 개수를 반환합니다. 자세한 내용은 [COUNT&#40;Transact-SQL&#41;](/sql/t-sql/functions/count-transact-sql)를 참조하세요.|  
 |Count distinct|그룹에서 Null이 아닌 고유한 값의 개수를 반환합니다.|  
 |최소|그룹의 최소값을 반환합니다. 자세한 내용은 [MIN&#40;Transact-SQL&#41;](/sql/t-sql/functions/min-transact-sql)을 참조하세요. Transact-SQL MIN 함수와는 반대로 이 연산은 숫자, 날짜 및 시간 데이터 형식에서만 사용할 수 있습니다.|  
-|최대값|그룹의 최대값을 반환합니다. 자세한 내용은 [MAX&#40;Transact-SQL&#41;](/sql/t-sql/functions/max-transact-sql)를 참조하세요. Transact-SQL MAX 함수와는 반대로 이 연산은 숫자, 날짜 및 시간 데이터 형식에서만 사용할 수 있습니다.|  
+|최대|그룹의 최대값을 반환합니다. 자세한 내용은 [MAX&#40;Transact-SQL&#41;](/sql/t-sql/functions/max-transact-sql)를 참조하세요. Transact-SQL MAX 함수와는 반대로 이 연산은 숫자, 날짜 및 시간 데이터 형식에서만 사용할 수 있습니다.|  
   
  집계 변환은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 관계형 데이터베이스 엔진과 동일한 방식으로 Null 값을 처리합니다. 이러한 동작은 SQL-92 표준에서 정의됩니다. 다음 규칙이 적용됩니다.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "62770639"
   
  집계 변환은 비동기적이며 따라서 행별로 데이터를 사용하고 게시하지 않습니다. 대신 전체 행 집합을 사용하고 그룹화 및 집계를 수행한 다음 결과를 게시합니다.  
   
- 이 변환은 어떤 열을 통해서도 전달되지 않지만 게시하는 데이터에 대한 데이터 흐름에 새 열을 만듭니다. 집계 함수가 적용하는 입력 열이나 변환에서 그룹화를 위해 사용되는 입력 열만 변환 출력으로 복사됩니다. 예를 들어 집계 변형 입력에는 **CountryRegion**, **City** 및 **Population**과 같은 3개의 열만 포함될 수 있습니다. 변환은 **CountryRegion** 열에 따라 그룹화되며 Sum 함수를 **Population** 열에 적용합니다. 따라서 출력에는 **City** 열이 포함되지 않습니다.  
+ 이 변환은 어떤 열을 통해서도 전달되지 않지만 게시하는 데이터에 대한 데이터 흐름에 새 열을 만듭니다. 집계 함수가 적용하는 입력 열이나 변환에서 그룹화를 위해 사용되는 입력 열만 변환 출력으로 복사됩니다. 예를 들어 집계 변환 입력에는 **CountryRegion**, **City**및 **Population**과 같은 3개의 열만 포함될 수 있습니다. 변환은 **CountryRegion** 열에 따라 그룹화되며 Sum 함수를 **Population** 열에 적용합니다. 따라서 출력에는 **City** 열이 포함되지 않습니다.  
   
  또한 집계 변환에 여러 출력을 추가하고 각 집계를 서로 다른 출력으로 지정할 수 있습니다. 예를 들어 집계 변환이 Sum 및 the Average 함수를 적용하는 경우 각 집계는 서로 다른 출력으로 지정될 수 있습니다.  
   
@@ -110,30 +110,31 @@ ms.locfileid: "62770639"
   
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- **집계 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
+ 
+  **집계 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [집계 변환 편집기&#40;집계 탭&#41;](../../aggregate-transformation-editor-aggregations-tab.md)  
+-   [집계 변환 편집기 &#40;집계 탭&#41;](../../aggregate-transformation-editor-aggregations-tab.md)  
   
--   [집계 변환 편집기&#40;고급 탭&#41;](../../aggregate-transformation-editor-advanced-tab.md)  
+-   [집계 변환 편집기 &#40;고급 탭&#41;](../../aggregate-transformation-editor-advanced-tab.md)  
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [공용 속성](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [변환 사용자 지정 속성](transformation-custom-properties.md)  
   
  속성 설정 방법을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [집계 변환을 사용하여 데이터 집합의 값 집계](aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
+-   [집계 변환을 사용하여 데이터 세트의 값 집계](aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
 -   [데이터 흐름 구성 요소의 속성 설정](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [병합 및 병합 조인 변환을 위한 데이터 정렬](sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-tasks"></a>관련 작업  
- [집계 변환을 사용하여 데이터 집합의 값 집계](aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
+ [집계 변환을 사용하여 데이터 세트의 값 집계](aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 흐름](../data-flow.md)   
  [Integration Services 변환](integration-services-transformations.md)  
   

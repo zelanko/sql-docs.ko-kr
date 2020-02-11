@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 80ba5505204f592ef04c939b3e84b6f3ca3c7c89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916747"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>힙 크기 예측
@@ -57,7 +57,7 @@ ms.locfileid: "62916747"
      ***Max_Var_Size*** 에 추가된 바이트는 각 가변 길이 열을 추적하기 위한 것입니다. 이 수식에서는 모든 가변 길이 열이 100% 꽉 찬 것으로 가정합니다. 사용할 가변 길이 열 스토리지 공간 비율이 더 적을 것으로 예상되는 경우 해당 비율로 ***Max_Var_Size*** 값을 조정하여 전체 테이블 크기를 보다 정확하게 예측할 수 있습니다.  
   
     > [!NOTE]  
-    >  정의된 총 테이블 너비가 8,060바이트를 초과하는 `varchar`, `nvarchar`, `varbinary` 또는 `sql_variant` 열을 결합할 수 있습니다. 각 이러한 열의 길이 여전히 8,000 바이트 이내 여야를 `varchar`하십시오 `nvarchar,``varbinary`, 또는 `sql_variant` 열. 그러나 결합된 너비는 테이블의 8,060바이트 제한을 초과할 수 있습니다.  
+    >  정의된 총 테이블 너비가 8,060바이트를 초과하는 `varchar`, `nvarchar`, `varbinary` 또는 `sql_variant` 열을 결합할 수 있습니다. 이러한 열 각각의 길이는 `varchar`, `nvarchar,``varbinary`또는 `sql_variant` 열에 대해 8000 바이트 이내로 제한 되어야 합니다. 그러나 결합된 너비는 테이블의 8,060바이트 제한을 초과할 수 있습니다.  
   
      가변 길이 열이 없는 경우에는 ***Variable_Data_Size*** 를 0으로 설정합니다.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62916747"
   
 7.  모든 행을 저장하는 데 필요한 페이지 수를 계산합니다.  
   
-     ***Num_Pages***  = ***Num_Rows*** / ***Rows_Per_Page***  
+     ***Num_Pages***    = ***Num_Rows ***  / ***Rows_Per_Page***  
   
      예상 페이지 수는 가장 근사한 전체 페이지로 올림되어 계산됩니다.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "62916747"
   
 -   LOB(Large Object) 값  
   
-     공간 LOB 데이터 형식을 저장 하려면 사용할 정확 하 게 하는 알고리즘 `varchar(max)`, `varbinary(max)`, `nvarchar(max)`, `text`를 **ntextxml**, 및 `image` 값은 복잡 합니다. LOB 값의 예상 평균 크기만 전체 힙 크기에 추가해도 됩니다.  
+     LOB 데이터 형식 `varchar(max)`,,, `varbinary(max)` `nvarchar(max)` `text`, **ntextxml**및 `image` 값을 저장 하는 데 사용 되는 공간을 정확 하 게 결정 하는 알고리즘은 복잡 합니다. LOB 값의 예상 평균 크기만 전체 힙 크기에 추가해도 됩니다.  
   
 -   압축  
   
@@ -105,7 +105,7 @@ ms.locfileid: "62916747"
   
      스파스 열의 공간 요구 사항은 [Use Sparse Columns](../tables/use-sparse-columns.md)을 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [힙&#40;클러스터형 인덱스가 없는 테이블&#41;](../indexes/heaps-tables-without-clustered-indexes.md)   
  [클러스터형 및 비클러스터형 인덱스 소개](../indexes/clustered-and-nonclustered-indexes-described.md)   
  [클러스터형 인덱스 만들기](../indexes/create-clustered-indexes.md)   

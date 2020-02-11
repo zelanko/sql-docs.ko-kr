@@ -1,5 +1,5 @@
 ---
-title: 데이터베이스 미러링 끝점의 아웃 바운드 연결 (Transact SQL)에 대 한 인증서 사용 허용 | Microsoft Docs
+title: 데이터베이스 미러링 끝점의 아웃 바운드 연결에 대 한 인증서 사용 허용 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43a55174bae1bb03034ea005749055701884848f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62806876"
 ---
 # <a name="allow-a-database-mirroring-endpoint-to-use-certificates-for-outbound-connections-transact-sql"></a>데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용(Transact-SQL)
@@ -43,7 +43,7 @@ ms.locfileid: "62806876"
   
 ## <a name="procedure"></a>절차  
   
-#### <a name="to-configure-server-instances-for-outbound-mirroring-connections-on-hosta"></a>아웃바운드 미러링 연결을 위한 서버 인스턴스를 구성하려면(HOST_A)  
+#### <a name="to-configure-server-instances-for-outbound-mirroring-connections-on-host_a"></a>아웃바운드 미러링 연결을 위한 서버 인스턴스를 구성하려면(HOST_A)  
   
 1.  **master** 데이터베이스에 데이터베이스 마스터 키가 없으면 새로 만듭니다. 데이터베이스의 기존 키를 보려면 [sys.symmetric_keys](/sql/relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql) 카탈로그 뷰를 사용합니다.  
   
@@ -168,19 +168,19 @@ GO
   
  Transact-SQL 예제를 포함하여 미러 데이터베이스를 만드는 방법은 [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)를 참조하세요.  
   
- 성능 우선 모드 세션을 설정 하는 TRANSACT-SQL 예제를 보려면 [예제: 인증서를 사용 하 여 데이터베이스 미러링 설정 &#40;TRANSACT-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)합니다.  
+ 고성능 모드 세션을 설정하는 Transact-SQL 예제는 [예제: 인증서를 사용하여 데이터베이스 미러링 설정&#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)를 참조하세요.  
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
  네트워크 보안을 보장할 수 없는 경우 데이터베이스 미러링 연결에 암호화를 사용하는 것이 좋습니다.  
   
  인증서를 다른 시스템으로 복사할 때는 안전한 복사 방법을 사용하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [암호화 알고리즘 선택](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)   
  [ALTER ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)   
- [예: 인증서를 사용 하 여 데이터베이스 미러링 설정 &#40;TRANSACT-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)   
- [데이터베이스 미러링 엔드포인트&amp;#40;SQL Server&amp;#41;](the-database-mirroring-endpoint-sql-server.md)   
+ [예제: 인증서를 사용하여 데이터베이스 미러링 설정&#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)   
+ [데이터베이스 미러링 엔드포인트&#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [데이터베이스 미러링 구성 문제 해결&#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
  [암호화된 미러 데이터베이스 설정](set-up-an-encrypted-mirror-database.md)  
   

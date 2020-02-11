@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8380b3ff1502088e0131b182149e90e31d2be42c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771655"
 ---
 # <a name="validate-dialog-box"></a>유효성 검사 대화 상자
@@ -60,7 +60,7 @@ ms.locfileid: "62771655"
  **매개 변수**  
  매개 변수 이름을 나열합니다.  
   
- **Value**  
+ **값**  
  매개 변수 값을 나열합니다.  
   
  **연결 관리자** 탭에는 프로젝트 또는 패키지의 유효성 검사를 위해 사용하는 연결 관리자 속성이 나열됩니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "62771655"
  **속성 이름**  
  연결 관리자 속성 이름을 나열합니다.  
   
- **Value**  
+ **값**  
  연결 관리자 속성에 할당된 값을 나열합니다.  
   
   

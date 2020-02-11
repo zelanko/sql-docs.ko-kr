@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 175998d210bec502199922831adc3508cc9171a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035762"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>유지 관리 정리 태스크(유지 관리 계획)
@@ -27,7 +27,7 @@ ms.locfileid: "63035762"
 > [!NOTE]  
 >  유지 관리 정리 태스크에서는 지정된 디렉터리의 하위 폴더에 있는 파일을 자동으로 삭제하지 않습니다. 이 기능은 유지 관리 정리 태스크를 사용하여 파일을 삭제하는 악의적 공격의 가능성을 줄여 줍니다. 첫 번째 수준의 하위 폴더를 삭제하려는 경우 **첫 번째 수준의 하위 폴더 포함**을 선택해야 합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **연결**  
  현재 연결을 표시합니다.  
   
@@ -49,22 +49,24 @@ ms.locfileid: "63035762"
  **확장명에 따라 폴더 검색 및 파일 삭제**  
  지정한 확장명을 가진 파일을 지정한 폴더에서 모두 삭제합니다. 예를 들어 Tuesday 폴더에서 확장명이 .bak인 백업 파일을 모두 삭제할 수 있습니다.  
   
- **Folder**  
+ **폴더**  
  삭제할 파일이 있는 폴더의 경로와 이름입니다.  
   
  **파일 확장명**  
  삭제할 파일의 파일 확장명을 제공합니다.  
   
  **첫 번째 수준의 하위 폴더 포함**  
- **폴더** 아래의 첫 번째 하위 폴더에서 **파일 확장명**에 지정된 확장명을 갖는 파일을 삭제합니다.  
+ 
+  **폴더** 아래의 첫 번째 하위 폴더에서 **파일 확장명**에 지정된 확장명을 갖는 파일을 삭제합니다.  
   
- **태스크 런타임에 파일의 보존 기간에 따라 파일 삭제**  
- **다음보다 오래된 파일 삭제** 상자에 숫자와 시간 단위를 제공하여 삭제할 파일의 최소 보존 기간을 지정합니다.  
+ **작업 런타임에 파일의 보존 기간에 따라 파일 삭제**  
+ 
+  **다음보다 오래된 파일 삭제** 상자에 숫자와 시간 단위를 제공하여 삭제할 파일의 최소 보존 기간을 지정합니다.  
   
- **다음보다 오래된 파일 삭제**  
+ **다음 보다 오래 된 파일 삭제**  
  숫자와 시간 단위(일, 주, 월 또는 년)를 제공하여 삭제할 파일의 최소 보존 기간을 지정합니다. 지정한 시간대 이전의 파일은 삭제됩니다.  
   
- **T-SQL 보기**  
+ **T-sql 보기**  
  선택한 옵션을 기반으로 서버에 대해 수행한 이 태스크의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 표시합니다.  
   
 > [!NOTE]  
@@ -83,7 +85,7 @@ ms.locfileid: "63035762"
  **서버 로그온 정보 입력**  
  서버에 대한 인증 방법을 지정합니다.  
   
- **Windows NT 통합 보안 사용**  
+ **Windows 통합 보안 사용**  
  Microsoft Windows 인증을 사용하여 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스에 연결합니다.  
   
  **특정 사용자 이름 및 암호 사용**  
@@ -95,7 +97,7 @@ ms.locfileid: "63035762"
  **암호**  
  인증 시 사용할 암호를 입력합니다. 이 옵션은 사용할 수 없습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [개체 탐색기의](maintenance-plans.md)  
+## <a name="see-also"></a>참고 항목  
+ [유지 관리 계획](maintenance-plans.md)  
   
   

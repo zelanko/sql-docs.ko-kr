@@ -15,19 +15,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eac9f39478b66df98de0483f8dc68d3e671ce045
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62789149"
 ---
 # <a name="replication-subscribers-and-alwayson-availability-groups-sql-server"></a>복제 구독자 및 AlwaysOn 가용성 그룹(SQL Server)
   복제 구독자인 데이터베이스를 포함하는 AlwaysOn 가용성 그룹이 장애 조치(Failover)되면 복제 구독은 실패할 수 있습니다. 트랜잭션 복제 밀어넣기 구독자의 경우 AG 수신기 이름을 사용하여 구독이 생성되었다면 장애 조치(failover) 후에 배포 에이전트가 자동으로 계속 복제합니다. 트랜잭션 복제 풀 구독자의 경우 AG 수신기 이름을 사용하여 구독이 생성되었고 원래 구독자 서버가 실행 중이라면 장애 조치(failover) 후에 배포 에이전트가 자동으로 계속 복제합니다. 이는 배포 에이전트 작업이 원래 구독자 서버(AG의 주 복제본)에서만 생성되기 때문입니다. 병합 구독자의 경우 복제 관리자가 복제를 다시 만들어 수동으로 구독자를 다시 구성해야 합니다.  
   
 ## <a name="what-is-supported"></a>지원되는 기능  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제는 게시자에 대한 자동 장애 조치, 트랜잭션 구독자에 대한 자동 장애 조치 및 병합 구독자에 대한 수동 장애 조치를 제공합니다. 가용성 데이터베이스의 배포자에 대한 장애 조치는 지원되지 않습니다. AlwaysOn은 Websync 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Compact 시나리오와 함께 사용할 수 없습니다.  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제는 게시자에 대한 자동 장애 조치, 트랜잭션 구독자에 대한 자동 장애 조치 및 병합 구독자에 대한 수동 장애 조치를 제공합니다. 가용성 데이터베이스의 배포자에 대한 장애 조치는 지원되지 않습니다. AlwaysOn은 Websync 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Compact 시나리오와 함께 사용할 수 없습니다.  
   
- **병합 끌어오기 구독의 장애 조치**  
+ **병합 끌어오기 구독의 장애 조치 (Failover)**  
   
  서버 인스턴스가 실패하여 사용할 수 없으므로 끌어오기 에이전트가 주 복제본을 호스팅하는 서버 인스턴스의 **msdb** 데이터베이스에 저장된 작업을 찾을 수 없어 가용성 그룹 장애 조치 시 끌어오기 구독이 실패합니다.  
   
@@ -49,13 +50,17 @@ ms.locfileid: "62789149"
   
 4.  끌어오기 구독을 만드는 경우:  
   
-    1.  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]의 주 구독자 노드에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트를 엽니다.  
+    1.  
+  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]의 주 구독자 노드에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트를 엽니다.  
   
-    2.  **끌어오기 배포 에이전트** 작업을 식별하고 작업을 편집합니다.  
+    2.  
+  **끌어오기 배포 에이전트** 작업을 식별하고 작업을 편집합니다.  
   
-    3.  **에이전트 실행** 작업 단계에서 `-Publisher` 및 `-Distributor` 매개 변수를 확인합니다. 이러한 매개 변수에 올바른 직접 서버 및 게시자 및 배포자의 인스턴스 이름이 포함되어 있는지 확인합니다.  
+    3.  
+  **에이전트 실행** 작업 단계에서 `-Publisher` 및 `-Distributor` 매개 변수를 확인합니다. 이러한 매개 변수에 올바른 직접 서버 및 게시자 및 배포자의 인스턴스 이름이 포함되어 있는지 확인합니다.  
   
-    4.  `-Subscriber` 매개 변수를 구독자의 가용성 그룹 수신기 이름으로 변경합니다.  
+    4.  
+  `-Subscriber` 매개 변수를 구독자의 가용성 그룹 수신기 이름으로 변경합니다.  
   
  다음 단계에 따라 구독을 만드는 경우 장애 조치 이후 아무 것도 수행하지 않아도 됩니다.  
   
@@ -81,7 +86,8 @@ GO
 ## <a name="to-resume-the-merge-agents-after-the-availability-group-of-the-subscriber-fails-over"></a>구독자의 가용성 그룹 장애 조치 이후 병합 에이전트를 다시 시작하려면  
  병합 복제의 경우 복제 관리자가 다음 단계에 따라 수동으로 구독자를 다시 구성해야 합니다.  
   
-1.  `sp_subscription_cleanup`을 실행하여 구독자의 이전 구독을 제거합니다. 새로운 주 복제본(이전에 보조 복제본이었음)에서 이 동작을 수행합니다.  
+1.  
+  `sp_subscription_cleanup`을 실행하여 구독자의 이전 구독을 제거합니다. 새로운 주 복제본(이전에 보조 복제본이었음)에서 이 동작을 수행합니다.  
   
 2.  새 구독을 만들고 새 스냅샷부터 시작하여 구독을 다시 만듭니다.  
   

@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ebc622c0adb9fe2422c1cd215de36b6ba79057c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780834"
 ---
 # <a name="preparing-to-use-smo"></a>SMO 사용 준비
@@ -25,6 +25,6 @@ ms.locfileid: "62780834"
   
 |||  
 |-|-|  
-|**SMO 사용 준비**<br /><br /> -   [구문 표기 규칙](../../relational-databases/server-management-objects-smo/smo-syntax-conventions.md) 이 섹션에 사용 되는 구문 표기 규칙에 설명 합니다.<br />-   [시스템 요구 사항](../../../2014/database-engine/dev-guide/system-requirements.md) 설치 하 고 SMO를 사용 하 여에 대 한 시스템 요구 사항을 지정 합니다.<br />-   [파일 및 버전 번호](../../relational-databases/server-management-objects-smo/files-and-version-numbers.md) SMO 구성 요소 및 해당 버전 번호를 나열 합니다.|-   [SMO 설치](../../relational-databases/server-management-objects-smo/installing-smo.md) SMO 설치 지침을 제공 합니다.|  
+|**SMO 사용 준비**<br /><br /> -   [구문 규칙](../../relational-databases/server-management-objects-smo/smo-syntax-conventions.md) 은이 섹션에서 사용 되는 구문 표기 규칙을 설명 합니다.<br />-   [시스템 요구 사항](../../../2014/database-engine/dev-guide/system-requirements.md) SMO를 설치 및 사용 하기 위한 시스템 요구 사항을 지정 합니다.<br />-   [파일 및 버전 번호](../../relational-databases/server-management-objects-smo/files-and-version-numbers.md) 에는 SMO 구성 요소와 해당 버전 번호가 나열 됩니다.|-   [Smo](../../relational-databases/server-management-objects-smo/installing-smo.md) 를 설치 하면 smo를 설치 하는 지침이 제공 됩니다.|  
   
   

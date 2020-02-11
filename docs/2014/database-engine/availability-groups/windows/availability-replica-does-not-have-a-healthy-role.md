@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c5d487965237395da68bbc8ba3134c8d372f90db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62815600"
 ---
 # <a name="availability-replica-does-not-have-a-healthy-role"></a>가용성 복제본에 정상 상태의 역할이 없음
@@ -41,10 +41,10 @@ ms.locfileid: "62815600"
 ## <a name="possible-causes"></a>가능한 원인  
  이 가용성 복제본의 역할이 비정상 상태에 있습니다. 복제본에 주 역할 또는 보조 역할이 없습니다.  
   
-## <a name="possible-solution-informationstilltocome"></a>가능한 해결 방법: Information_still_to_come  
+## <a name="possible-solution-information_still_to_come"></a>가능한 해결 방법: Information_still_to_come  
   
-## <a name="see-also"></a>관련 항목  
- [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [AlwaysOn 대시보드 사용&#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+## <a name="see-also"></a>참고 항목  
+ [AlwaysOn 가용성 그룹 &#40;SQL Server 개요&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 대시보드 &#40;SQL Server Management Studio를 사용&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

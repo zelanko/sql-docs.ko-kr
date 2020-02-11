@@ -1,5 +1,5 @@
 ---
-title: 파일을 체크 아웃 | Microsoft Docs
+title: 파일 체크 아웃 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bde4d7fa738bdc952abc936ea13caa7225887ad6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62786748"
 ---
 # <a name="check-out-files"></a>파일 체크 아웃
@@ -26,7 +26,8 @@ ms.locfileid: "62786748"
   
  파일을 배타적으로 또는 공유 모드로 체크 아웃할 수 있습니다. 파일이 배타적으로 체크 아웃되면 체크 아웃한 사용자가 체크 인할 때까지 다른 사용자가 파일을 체크 아웃할 수 없습니다. 파일이 공유 모드로 체크 아웃되면 다른 사용자가 파일을 체크 아웃 및 수정할 수 있으며 파일을 체크 인할 경우에는 자신이 체크 아웃한 버전과 다른 사용자가 만든 버전을 병합해야 할 수 있습니다.  
   
- **체크 아웃** 명령을 사용하여 원본 제어 프로젝트와 파일을 체크 아웃할 수 있습니다. 이 명령을 사용하여 솔루션이나 프로젝트를 체크 아웃하면 솔루션이나 프로젝트의 모든 파일도 체크 아웃됩니다. 그러나 개별 원본 코드 파일을 체크 아웃할 경우 해당 파일이 속하는 프로젝트나 솔루션이 체크 아웃되지는 않습니다.  
+ 
+  **체크 아웃** 명령을 사용하여 원본 제어 프로젝트와 파일을 체크 아웃할 수 있습니다. 이 명령을 사용 하 여 솔루션이 나 프로젝트를 체크 아웃 하면 솔루션이 나 프로젝트의 모든 파일도 체크 아웃 됩니다. 그러나 개별 원본 코드 파일을 체크 아웃 하면 해당 파일에 속한 프로젝트 또는 솔루션이 체크 아웃 되지 않습니다.  
   
 > [!NOTE]  
 >  프로젝트에 대한 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe 데이터베이스가 여러 체크 아웃을 허용하도록 구성된 상태에서 파일을 배타적으로 체크 아웃하려는 경우에는 파일을 체크 아웃하기 전에 **고급 체크 아웃 옵션** 대화 상자에서 **여러 체크 아웃 허용** 옵션을 선택 취소해야 합니다. 이 설정을 적용하려면 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 를 다시 시작해야 합니다.  
@@ -35,9 +36,10 @@ ms.locfileid: "62786748"
   
 1.  솔루션 탐색기에서 프로젝트나 파일을 선택합니다.  
   
-2.  **파일** 메뉴에서 **원본 제어**를 가리킨 다음 **편집하기 위해 체크 아웃**을 클릭합니다.  
+2.  
+  **파일** 메뉴에서 **원본 제어**를 가리킨 다음 **편집하기 위해 체크 아웃**을 클릭합니다.  
   
-3.  **편집하기 위해 체크 아웃** 대화 상자가 표시되면 원하는 항목을 선택하고 **체크 아웃**을 클릭합니다. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 체크 아웃 **대화 상자를 표시하지 않도록** 환경을 구성한 경우 솔루션 탐색기에서 선택한 항목과 해당 항목에 포함된 모든 자식 항목이 즉시 체크 아웃되지 않습니다.  
+3.  **편집 하기 위해 체크 아웃** 대화 상자가 표시 되 면 원하는 항목을 선택 하 고 **체크 아웃**을 클릭 합니다. **체크 아웃** 대화 상자를 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 표시 하지 않도록 환경을 구성한 경우 솔루션 탐색기에서 선택한 항목과 해당 항목이 있을 수 있는 모든 자식 항목이 즉시 체크 아웃 됩니다.  
   
      **체크 아웃**  
      선택한 항목을 모두 체크 아웃합니다.  
@@ -45,17 +47,17 @@ ms.locfileid: "62786748"
      **열**  
      표시할 열 및 열이 표시되는 순서를 식별합니다.  
   
-     **설명**  
+     **주석**  
      체크 아웃 작업과 관련한 설명을 지정합니다.  
   
-     **체크 아웃할 때 체크 아웃 표시 대화 상자를 하지 않습니다.**  
+     **체크 아웃할 때 체크 아웃 대화 상자 표시 안 함**  
      체크 아웃 작업을 실행하는 동안 대화 상자를 표시하지 않습니다.  
   
-     **플랫 보기**  
+     **기본 뷰**  
      체크 아웃하는 항목을 해당 원본 제어 연결 아래에 기본 목록으로 표시합니다.  
   
      **편집**  
-     항목을 체크 아웃하지 않고 수정합니다. **편집** 단추는 체크 인된 파일에 대한 편집을 지원하도록 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 를 구성한 경우에만 표시됩니다.  
+     항목을 체크 아웃 하지 않고 수정 합니다. **편집** 단추는 체크 인 된 파일의 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 편집을 지원 하도록를 구성한 경우에만 표시 됩니다.  
   
      **이름**  
      체크 아웃할 수 있는 항목의 이름을 표시합니다. 항목은 옆에 있는 확인란이 선택된 상태로 나타납니다. 특정 항목을 체크 아웃하지 않으려면 확인란의 선택을 취소합니다.  
@@ -69,9 +71,9 @@ ms.locfileid: "62786748"
      **트리 뷰**  
      체크 아웃하는 항목의 폴더 및 파일 계층 구조를 표시합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [체크 인 된 파일을 편집](../../2014/database-engine/edit-checked-in-files.md)   
- [자동으로 파일을 체크 아웃 편집 시](../../2014/database-engine/automatically-check-out-files-upon-edit.md)   
+## <a name="see-also"></a>참고 항목  
+ [체크 인 한 파일 편집](../../2014/database-engine/edit-checked-in-files.md)   
+ [편집 시 자동으로 파일 체크 아웃](../../2014/database-engine/automatically-check-out-files-upon-edit.md)   
  [체크 아웃 취소](../../2014/database-engine/undo-checkouts.md)   
  [체크 아웃 관리](../../2014/database-engine/manage-checkouts.md)  
   

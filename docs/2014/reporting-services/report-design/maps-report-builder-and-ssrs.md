@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86932da9ccec6e973a2a35fc0ccbb5f54af63f05
-ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67826542"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>지도(보고서 작성기 및 SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "67826542"
   
  ![rs_MapElements](../media/rs-mapelements.gif "rs_MapElements")  
   
- 지도 사용을 즉시 시작하려면 [자습서: 맵 보고서&#40;보고서 작성기&#41;](../tutorial-map-report-report-builder.md) 또는 [보고서 예제(보고서 작성기 및 SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)를 참조하세요.  
+ 지도 사용을 즉시 시작하려면 [자습서: 지도 보고서&#40;보고서 작성기&#41;](../tutorial-map-report-report-builder.md) 또는 [보고서 예제(보고서 작성기 및 SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)를 참조하세요.  
   
 > [!NOTE]  
 >  보고서와는 별도로 지도를 보고서 파트로 저장할 수 있습니다.  [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -39,7 +39,7 @@ ms.locfileid: "67826542"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Process"></a> 보고서에 지도 추가  
+##  <a name="Process"></a>보고서에 지도 추가  
  보고서에 지도를 추가하기 위해 수행할 일반 단계의 목록은 다음과 같습니다.  
   
 -   표시할 분석 데이터와 필요한 공간 데이터 형식을 결정합니다. 예를 들어 거품형 지도에서 상대적 연간 상점 판매량을 표시하려면 분석 데이터에 상점 이름과 상점 판매량이 필요하고 공간 데이터에 위도와 경도로 상점 위치와 상점 이름이 필요합니다.  
@@ -52,11 +52,11 @@ ms.locfileid: "67826542"
   
 -   보고서에서 지도를 미리 본 후 지도 보기를 조정하고, 데이터에 따라 각 계층의 표시가 달라지는 방식을 변경하고, 사용자의 데이터 해석을 돕기 위해 범례를 제공하고, 사용자가 잘 볼 수 있도록 해상도를 조정할 수 있습니다.  
   
- 자세한 내용은 [지도 보고서 계획&#40;보고서 작성기 및 SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)을 참조하세요.  
+ 자세한 내용은 [지도 보고서 계획&#40;보고서 작성기 및 SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)를 클릭합니다.  
   
 
   
-##  <a name="AddingData"></a> 지도에 데이터 추가  
+##  <a name="AddingData"></a>지도에 데이터 추가  
  지도에서는 공간 데이터와 분석 데이터라는 두 가지 데이터 형식을 사용합니다. 공간 데이터는 지도의 모양을 정의하는 반면 분석 데이터는 지도와 연결된 값을 제공합니다. 예를 들어 공간 데이터는 한 지역의 도시 위치를 정의하는 반면 분석 데이터는 각 도시의 인구를 제공합니다.  
   
  지도에는 공간 데이터가 반드시 있어야 하며 분석 데이터는 없어도 됩니다. 예를 들어 도시에 있는 상점 위치만 표시되는 지도를 추가할 수 있습니다.  
@@ -68,23 +68,24 @@ ms.locfileid: "67826542"
   
  공간 데이터는 다음 좌표계 중 하나를 기반으로 합니다.  
   
--   **지리.** 경도 및 위도를 사용하여 구형 표면의 측지 좌표를 지정합니다. 공간 데이터가 지리이면 도법을 지정해야 합니다. 도법은 구형 좌표를 갖는 개체를 평면 표면에 그리는 방법을 지정하는 규칙의 집합입니다. 동일한 도법의 지리 데이터만 비교하거나 결합할 수 있습니다.  
+-   **지리적** 위치 경도 및 위도를 사용 하 여 구면 표면의 측 지 좌표를 지정 합니다. 공간 데이터가 지리이면 도법을 지정해야 합니다. 도법은 구형 좌표를 갖는 개체를 평면 표면에 그리는 방법을 지정하는 규칙의 집합입니다. 동일한 도법의 지리 데이터만 비교하거나 결합할 수 있습니다.  
   
--   **평면.** X 및 Y를 사용하여 평면 표면의 지리 좌표를 지정합니다.  
+-   **평면** X 및 Y를 사용 하 여 평면 표면의 기하학적 좌표를 지정 합니다.  
   
  각 지도 계층에는 다각형, 선 또는 점 형식의 공간 데이터가 표시됩니다. 여러 공간 데이터 형식을 표시하려면 지도에 여러 계층을 추가합니다. Microsoft Bing Maps 타일의 계층을 추가할 수도 있습니다. 타일 계층은 공간 데이터에 의존하지 않습니다. 타일 계층에는 지도 뷰포트의 좌표에 해당하는 이미지 타일이 표시됩니다.  
   
 #### <a name="sources-of-spatial-data"></a>공간 데이터 원본  
  다음과 같은 공간 데이터 원본이 지원됩니다.  
   
--   **지도 갤러리 보고서.** 지도 갤러리에 있는 보고서에 공간 데이터가 포함되어 있습니다. 기본적으로 지도 갤러리는 *\<drive>* :\Program Files\Microsoft SQL Server\Report Builder \MapGallery에 설치됩니다.  
+-   **지도 갤러리 보고서.** 지도 갤러리에 있는 보고서에 공간 데이터가 포함되어 있습니다. 기본적으로 지도 갤러리는>: Files\Microsoft SQL Server\Report Builder builder\mapgallery * \<드라이브 *에 설치 됩니다.  
   
     > [!NOTE]  
-    >  이 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 지도 제작 기능은 미 통계국([http://www.census.gov/](http://www.census.gov/)). TIGER/Line Shapefile은 Census MAF/TIGER 데이터베이스에서 선택한 지리 및 지도 정보를 추출한 것입니다. TIGER/Line Shapefile은 미 통계국에 요금을 지불하지 않고 사용할 수 있습니다. TIGER/Line Shapefile에 대한 자세한 내용은 [TIGER/Line Shapefile 및 TIGER/Line Files 기술 설명서](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.html)를 참조하세요. TIGER/Line Shapefile의 경계 정보는 통계 데이터 수집 및 집계 목적으로만 사용되며 통계 목적의 설명 및 지정은 사법권이나 소유권 또는 수급권의 판결에 영향을 미치지 않고 법적인 토지 설명이 아닙니다. Census TIGER 및 TIGER/Line은 미 통계국의 등록 상표입니다.  
+    >  이 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 매핑 기능은 미국 인구 조사 기관 ([http://www.census.gov/](http://www.census.gov/))을 통해 제공 되는 TIGER/Line 셰이프 파일의 데이터를 사용 합니다. TIGER/Line Shapefile은 Census MAF/TIGER 데이터베이스에서 선택한 지리 및 지도 정보를 추출한 것입니다. TIGER/Line Shapefile은 미 통계국에 요금을 지불하지 않고 사용할 수 있습니다. TIGER/Line Shapefile에 대한 자세한 내용은 [TIGER/Line Shapefile 및 TIGER/Line Files 기술 설명서](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.html)를 참조하세요. TIGER/Line Shapefile의 경계 정보는 통계 데이터 수집 및 집계 목적으로만 사용되며 통계 목적의 설명 및 지정은 사법권이나 소유권 또는 수급권의 판결에 영향을 미치지 않고 법적인 토지 설명이 아닙니다. Census TIGER 및 TIGER/Line은 미 통계국의 등록 상표입니다.  
   
 -   **ESRI 셰이프 파일.** ESRI 셰이프 파일은 ESRI(Environmental Systems Research Institute, Inc.) 셰이프 파일 공간 데이터 형식을 따르는 데이터를 포함합니다. ESRI 셰이프 파일은 파일 집합입니다. .shp 파일의 데이터는 지리적 또는 기하학적 모양을 지정합니다. .dbf 파일의 데이터는 모양의 특성을 제공합니다. 디자인 뷰에서 지도를 보거나 보고서 서버에서 지도를 실행하려면 두 파일이 모두 같은 폴더에 있어야 합니다. 로컬 파일 시스템에서 .shp 파일의 공간 데이터를 추가하면 이 공간 데이터가 보고서에 포함됩니다. 런타임에 동적으로 공간 데이터를 검색하려면 셰이프 파일을 보고서 서버로 업로드한 다음 공간 데이터 원본으로 지정합니다. 자세한 내용은 [Finding ESRI Shapefiles for a Map](https://go.microsoft.com/fwlink/?linkid=178814)을 참조하십시오.  
   
--   **데이터베이스에 저장된 SQL Server 공간 데이터.** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터베이스에서 `SQLGeometry` 또는 `SQLGeography` 데이터 형식을 지정하는 쿼리를 사용할 수 있습니다. 자세한 내용은 [SQL Server 온라인 설명서](../../relational-databases/spatial/spatial-data-types-overview.md) 에서 [공간 데이터 형식 개요](https://go.microsoft.com/fwlink/?linkid=98335)를 참조하세요.  
+-   **데이터베이스에 저장된 SQL Server 공간 데이터.** 
+  `SQLGeometry` 관계형 데이터베이스에서 `SQLGeography` 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지정하는 쿼리를 사용할 수 있습니다. 자세한 내용은 [SQL Server 온라인 설명서](../../relational-databases/spatial/spatial-data-types-overview.md) 에서 [공간 데이터 형식 개요](https://go.microsoft.com/fwlink/?linkid=98335)를 참조하세요.  
   
      쿼리 디자이너에 나타나는 결과 집합에서 각 공간 데이터 행은 하나의 단위로 처리되고 단일 지도 요소에 저장됩니다. 예를 들어 결과 집합에서 한 행에 여러 개의 점이 정의되어 있으면 표시 속성이 해당 지도 요소의 모든 점에 적용됩니다.  
   
@@ -131,41 +132,42 @@ ms.locfileid: "67826542"
   
     -   **공간 데이터.** 도시의 위도와 경도를 지정하는 공간 데이터가 있는 필드입니다.  
   
-    -   **이름.** 도시의 이름이 있는 필드입니다.  
+    -   **이름의.** 도시의 이름이 있는 필드입니다.  
   
-    -   **지역.** 지역의 이름이 있는 필드입니다.  
+    -   **면적.** 지역의 이름이 있는 필드입니다.  
   
 -   분석 데이터 원본에서:  
   
     -   **인구.** 도시 인구가 있는 필드입니다.  
   
-    -   **도시.** 도시의 이름이 있는 필드입니다.  
+    -   **대도시.** 도시의 이름이 있는 필드입니다.  
   
-    -   **지역.** 영토, 주 또는 지역의 이름이 있는 필드입니다.  
+    -   **면적.** 영토, 주 또는 지역의 이름이 있는 필드입니다.  
   
  이 예에서 도시 이름만으로는 인구를 고유하게 식별할 수 없습니다. 예를 들어 미국에는 올버니라는 도시가 많습니다. 특정 도시의 이름을 지정하려면 도시 이름뿐만 아니라 지역을 지정해야 합니다.  
   
 
   
-##  <a name="Viewport"></a> 지도 뷰포트 이해  
+##  <a name="Viewport"></a>지도 뷰포트 이해  
  보고서의 지도 데이터를 지정한 후 지도 *뷰포트*를 지정하여 지도의 표시 영역을 제한할 수 있습니다. 기본적으로 뷰포트는 전체 지도와 동일한 영역입니다. 지도를 자르려면 보고서에 포함할 지역을 정의하는 최대 및 최소 좌표, 확대/축소 수준 및 중심을 지정하면 됩니다. 보고서에서 지도의 표시를 향상시키기 위해 범례, 거리 눈금 및 색 눈금을 뷰포트 밖으로 이동할 수 있습니다. 다음 그림에서는 뷰포트를 보여 줍니다.  
   
  ![rs_MapViewport](../media/rs-mapviewport.gif "rs_MapViewport")  
   
   
   
-##  <a name="TileLayer"></a> Bing Maps 타일 계층 추가  
+##  <a name="TileLayer"></a>Bing 지도 타일 계층 추가  
  뷰포트에서 정의하는 대로 현재 지도 보기의 지리적 배경을 제공하는 Bing Maps 타일의 계층을 추가할 수 있습니다. 타일 계층을 추가하려면 좌표계에 **지리** , 도법 종류에 **메르카토르**를 지정해야 합니다. 선택한 뷰포트 중심 및 확대/축소 수준과 일치하는 타일이 Bing Maps 웹 서비스에서 자동으로 검색됩니다.  
   
  다음 옵션을 지정하여 계층을 사용자 지정할 수 있습니다.  
   
 -   타일 유형. 지원되는 스타일은 다음과 같습니다.  
   
-    -   **도로.** 흰색 배경, 도로 및 레이블 텍스트가 있는 도로 지도 스타일을 표시합니다.  
+    -   **여행을.** 흰색 배경, 도로 및 레이블 텍스트가 있는 도로 지도 스타일을 표시합니다.  
   
     -   **항공.** 텍스트 없이 항공 이미지 스타일을 표시합니다.  
   
-    -   **혼합.** **도로** 및 **항공** 스타일의 조합을 표시합니다.  
+    -   **혼성.** 
+  **도로** 및 **항공** 스타일의 조합을 표시합니다.  
   
 -   타일의 표시 텍스트 언어  
   
@@ -177,7 +179,7 @@ ms.locfileid: "67826542"
   
  
   
-##  <a name="MapLayers"></a> 지도 계층 및 지도 요소 이해  
+##  <a name="MapLayers"></a>지도 계층 및 지도 요소 이해  
  지도 하나에 계층이 여러 개 있을 수 있습니다. 세 가지 계층 유형이 있으며, 각 계층에는 한 가지 공간 데이터 형식이 표시됩니다.  
   
 -   **다각형 계층.** 각 다각형에 대해 자동으로 계산되는 다각형 중심점의 표식이나 영역의 윤곽선을 표시합니다.  
@@ -209,7 +211,7 @@ ms.locfileid: "67826542"
   
 3.  **색 규칙, 크기 규칙, 두께 규칙 및 표식 유형 규칙.** 규칙은 계층에 분석 데이터와 관계가 있는 지도 요소가 있는 경우 계층에 속성을 적용합니다. 규칙 유형은 계층 유형에 따라 다릅니다. 예를 들어 점 크기 규칙을 사용하여 인구에 따라 거품 크기를 변경합니다.  
   
-4.  **포함된 다각형, 선 또는 점 속성의 무시.** 포함된 지도 요소의 경우 무시 옵션을 선택하고 속성 또는 데이터 값을 변경할 수 있습니다. 개별 요소에 대한 규칙을 무시하기 위해 변경하는 모든 내용은 되돌릴 수 없습니다. 예를 들어 압정 표식을 사용하여 특정 상점을 강조 표시할 수 있습니다.  
+4.  **포함 된 다각형, 선 또는 점 속성을 재정의**합니다. 포함된 지도 요소의 경우 무시 옵션을 선택하고 속성 또는 데이터 값을 변경할 수 있습니다. 개별 요소에 대한 규칙을 무시하기 위해 변경하는 모든 내용은 되돌릴 수 없습니다. 예를 들어 압정 표식을 사용하여 특정 상점을 강조 표시할 수 있습니다.  
   
  자세한 내용은 [규칙 및 분석 데이터를 사용하여 다각형, 선 및 점 표시 변경&#40;보고서 작성기 및 SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)를 참조하세요.  
   
@@ -225,7 +227,7 @@ ms.locfileid: "67826542"
   
 
   
-##  <a name="Legends"></a> 지도 범례, 색 눈금 및 거리 눈금 이해  
+##  <a name="Legends"></a>지도 범례, 색 눈금 및 거리 눈금 이해  
  사용자가 지도를 해석하는 데 도움이 되도록 다양한 범례를 보고서에 추가할 수 있습니다. 지도에는 다음 항목이 포함될 수 있습니다.  
   
 -   **범례.** 여러 범례를 만들 수 있습니다. 범례에 나열되는 항목은 각 계층의 지도 요소에 대해 지정하는 규칙에 따라 자동으로 생성됩니다. 각 규칙의 경우 관련 항목을 표시하는 데 사용할 범례를 지정할 수 있습니다. 이런 식으로 여러 계층의 항목을 동일한 범례나 서로 다른 범례에 할당할 수 있습니다.  
@@ -238,41 +240,41 @@ ms.locfileid: "67826542"
   
   
   
-##  <a name="Troubleshooting"></a> 지도 문제 해결  
+##  <a name="Troubleshooting"></a>지도 문제 해결  
  지도 보고서에서는 다양한 데이터 원본에서 공간 데이터와 분석 데이터를 사용합니다. 각 지도 계층에서 서로 다른 데이터 원본을 사용할 수 있습니다. 각 계층의 표시 속성은 계층 속성, 규칙, 지도 요소 속성에 따라 특정 우선 순위를 따릅니다.  
   
  지도 보고서를 볼 때 원하는 결과가 표시되지 않으면 근본 원인은 다양한 문제에서 비롯될 수 있습니다. 각 문제를 확인하고 이해하려면 한 번에 한 계층에서 작업하는 것이 유용합니다. 지도 창을 사용하여 계층을 선택하고 계층의 표시 유형을 쉽게 설정/해제할 수 있습니다.  
   
- 맵 보고서 문제에 대한 자세한 내용은 [보고서 문제 해결: 맵 보고서&#40;보고서 작성기 및 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ 지도 보고서 문제에 대한 자세한 내용은 [Troubleshoot Reports: Map Reports &#40;Report Builder and SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
 
   
 ##  <a name="HowTo"></a> 방법 도움말 항목  
  이 섹션에는 보고서에서 지도와 지도 계층을 사용하여 작업하는 방법을 단계별로 보여 주는 절차가 나열되어 있습니다.  
   
--   [지도 또는 지도 계층 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
+-   [지도 또는 지도 계층 &#40;보고서 작성기 및 SSRS를 추가, 변경 또는 삭제&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
 -   [지도 범례, 색 눈금 및 관련 규칙 변경&#40;보고서 작성기 및 SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
--   [지도에 사용자 지정 위치 추가&#40;보고서 작성기 및 SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
+-   [맵에 사용자 지정 위치 추가 &#40;보고서 작성기 및 SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
  
   
 ##  <a name="Section"></a> 섹션 내용  
- [지도 보고서 계획&#40;보고서 작성기 및 SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)  
+ [보고서 작성기 및 SSRS를 &#40;지도 보고서를 계획&#41;](plan-a-map-report-report-builder-and-ssrs.md)  
   
  [지도 마법사 및 지도 계층 마법사&#40;보고서 작성기 및 SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
- [지도 또는 지도 계층의 데이터 및 표시 사용자 지정&#40;보고서 작성기 및 SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)  
+ [지도 또는 지도 계층의 데이터 및 표시를 사용자 지정 하 &#40;보고서 작성기 및 SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
  [규칙 및 분석 데이터를 사용하여 다각형, 선 및 점 표시 변경&#40;보고서 작성기 및 SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   
- [지도 또는 지도 계층 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
+ [지도 또는 지도 계층 &#40;보고서 작성기 및 SSRS를 추가, 변경 또는 삭제&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
  [지도 범례, 색 눈금 및 관련 규칙 변경&#40;보고서 작성기 및 SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
- [지도에 사용자 지정 위치 추가&#40;보고서 작성기 및 SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
+ [맵에 사용자 지정 위치 추가 &#40;보고서 작성기 및 SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
- [보고서 문제 해결: 맵 보고서&#40;보고서 작성기 및 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [보고서 문제 해결: 보고서 작성기 및 SSRS&#41;&#40;지도 보고서](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

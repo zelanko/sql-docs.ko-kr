@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: aba9a971b703a3344fc209c1c01943f10c76d767
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833068"
 ---
 # <a name="suggest-column-types-dialog-box-ui-reference"></a>열 유형 제안 대화 상자 UI 참조
@@ -24,7 +24,7 @@ ms.locfileid: "62833068"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 사용하는 데이터 형식에 대한 자세한 내용은 [Integration Services 데이터 형식](../data-flow/integration-services-data-types.md)을 참조하세요.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **행 수**  
  알고리즘에서 사용하는 샘플의 행 수를 입력하거나 선택합니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62833068"
  **패딩 비율**  
  문자 데이터 형식 열의 길이에 추가할 열 길이의 비율을 입력하거나 선택합니다. 비율은 정수여야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../integration-services-error-and-message-reference.md)   
  [플랫 파일 연결 관리자](file-connection-manager.md)  
   

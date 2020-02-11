@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1ba6dcb7052fed3d209dd87f55789a99df24116c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767355"
 ---
 # <a name="step-2-converting-the-project-to-the-project-deployment-model"></a>2단계: 프로젝트를 프로젝트 배포 모델로 변환
@@ -51,6 +51,6 @@ ms.locfileid: "62767355"
 13. 매개 변수 탭을 클릭하고 패키지가 VarFolderName에 대한 매개 변수를 포함하게 되었는지 및 Lesson 5 구성 파일의 새 예제 데이터 폴더에서 지정된 것과 같은 경로의 값인지 확인합니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
- [3단계: 6 단원 패키지 테스트](lesson-6-3-testing-the-lesson-6-package.md)  
+ [3단계: 6단원 패키지 테스트](lesson-6-3-testing-the-lesson-6-package.md)  
   
   

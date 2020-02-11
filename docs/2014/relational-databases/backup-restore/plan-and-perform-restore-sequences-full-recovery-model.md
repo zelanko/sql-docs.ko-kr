@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 08898d4c7a324a97fc0e44ef45b15dba90d42a1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62921850"
 ---
 # <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>복원 시퀀스 계획 및 수행(전체 복구 모델)
@@ -41,7 +41,7 @@ ms.locfileid: "62921850"
   
 3.  수행하려는 복원 유형을 결정합니다. 자세한 내용은 [복원 및 복구 개요&#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)을 참조하세요.  
   
-4.  필요한 백업을 확인하고 필요한 미디어 세트와 백업 디바이스를 사용할 수 있는지 확인합니다. 자세한 내용은 [백업 장치&#40;SQL Server&#41;](backup-devices-sql-server.md) 및 [미디어 세트, 미디어 패밀리 및 백업 세트&#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)를 참조하세요.  
+4.  필요한 백업을 확인하고 필요한 미디어 세트와 백업 디바이스를 사용할 수 있는지 확인합니다. 자세한 내용은 [백업 디바이스&#40;SQL Server&#41;](backup-devices-sql-server.md) 및 [미디어 세트, 미디어 패밀리 및 백업 세트&#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)를 참조하세요.  
   
 ## <a name="to-perform-a-restore-sequence"></a>복원 시퀀스를 수행하려면  
  복원 시퀀스를 수행하려면 다음 단계를 따르십시오.  
@@ -61,7 +61,7 @@ ms.locfileid: "62921850"
 ## <a name="restarting-a-restore-sequence"></a>복원 시퀀스 다시 시작  
  복원 시퀀스의 결과에 문제가 발생한 경우 복원 시퀀스를 중지하고 처음부터 다시 시작할 수 있습니다. 예를 들어 실수로 너무 많은 로그 백업을 복원하여 의도한 복원 지점을 지나친 경우 대상 복구 지점을 포함하는 로그 백업까지 복원 시퀀스를 다시 시작해야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [백업 개요&#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [복원 및 복구 개요&#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
  [전체 데이터베이스 복원&#40;전체 복구 모델&#41;](complete-database-restores-full-recovery-model.md)   

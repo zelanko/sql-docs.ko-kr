@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d00f864d5e7209bc0865bfbb52bd1231a2c12a9c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770424"
 ---
 # <a name="character-map-transformation"></a>문자표 변환
@@ -36,7 +36,7 @@ ms.locfileid: "62770424"
 ## <a name="mapping-operations"></a>매핑 작업  
  다음 표에서는 문자표 변환이 지원하는 매핑 작업을 설명합니다.  
   
-|연산|Description|  
+|작업(Operation)|Description|  
 |---------------|-----------------|  
 |바이트 반전|바이트 순서를 반대로 바꿉니다.|  
 |전자|반자 문자를 전자 문자에 매핑합니다.|  
@@ -46,7 +46,7 @@ ms.locfileid: "62770424"
 |대/소문자 구분 기능|시스템 규칙 대신 대/소문자 구분 기능을 적용합니다. 대/소문자 구분 기능은 터키어 및 다른 로캘의 유니코드 단순 대/소문자 구분 매핑을 위해 Win32 API에서 제공하는 기능입니다.|  
 |소문자|문자를 소문자로 변환합니다.|  
 |중국어(간체)|중국어 번체 문자를 중국어 간체 문자에 매핑합니다.|  
-|중국어(번체)|중국어 간체 문자를 중국어 번체 문자에 매핑합니다.|  
+|중국어 번체|중국어 간체 문자를 중국어 번체 문자에 매핑합니다.|  
 |대문자|문자를 대문자로 변환합니다.|  
   
 ## <a name="mutually-exclusive-mapping-operations"></a>상호 배타적인 매핑 작업  
@@ -57,7 +57,7 @@ ms.locfileid: "62770424"
 |소문자|대문자|  
 |히라가나|가타카나|  
 |반자|전자|  
-|중국어(번체)|중국어(간체)|  
+|중국어 번체|중국어(간체)|  
 |소문자|히라가나, 가타카나, 반자, 전자|  
 |대문자|히라가나, 가타카나, 반자, 전자|  
   
@@ -70,11 +70,12 @@ ms.locfileid: "62770424"
   
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- **문자표 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용은 [Character Map Transformation Editor](../../character-map-transformation-editor.md)를 참조하십시오.  
+ 
+  **문자표 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용은 [Character Map Transformation Editor](../../character-map-transformation-editor.md)를 참조하십시오.  
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [공용 속성](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [변환 사용자 지정 속성](transformation-custom-properties.md)  
   
