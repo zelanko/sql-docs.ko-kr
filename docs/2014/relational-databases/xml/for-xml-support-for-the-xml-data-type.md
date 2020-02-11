@@ -14,16 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 015c52194ce17e70a25bfe627aaf6822acda3ce3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63205005"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>xml 데이터 형식에 대한 FOR XML 지원
-  FOR XML 쿼리가 SELECT 절에서 `xml` 유형의 열을 지정하는 경우 ELEMENTS 지시어를 지정했는지 여부에 관계없이 열 값은 반환된 XML의 요소로 매핑됩니다. `xml` 유형의 열에 있는 XML 선언은 직렬화되지 않습니다.  
+  FOR XML 쿼리가 SELECT 절에서 `xml` 유형의 열을 지정하는 경우 ELEMENTS 지시어를 지정했는지 여부에 관계없이 열 값은 반환된 XML의 요소로 매핑됩니다. 
+  `xml` 유형의 열에 있는 XML 선언은 직렬화되지 않습니다.  
   
- 예를 들어 다음 쿼리는 검색 고객 연락처 정보 등을 `BusinessEntityID`, `FirstName`, 및 `LastName` 열 및 전화 번호를 `AdditionalContactInfo` 열의 `xml` 형식입니다.  
+ 예를 들어 다음 쿼리 `BusinessEntityID`는, `FirstName`, 및 `LastName` 열과 같은 고객 연락처 정보 및 `AdditionalContactInfo` `xml` 유형의 열에서 전화 번호를 검색 합니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -71,7 +72,7 @@ FOR XML AUTO, TYPE;
 ...  
 ```  
   
- XQuery에 의해 생성된 XML 열에 대한 열 별칭을 지정하면 XQuery에 의해 생성되는 XML에 래퍼 요소를 추가하는 데 해당 별칭이 사용됩니다. 예를 들어 다음 쿼리는 `MorePhoneNumbers`를 열 별칭으로 지정합니다.  
+ XQuery에 의해 생성된 XML 열에 대한 열 별칭을 지정하면 XQuery에 의해 생성되는 XML에 래퍼 요소를 추가하는 데 해당 별칭이 사용됩니다. 예를 들어 다음 쿼리는 `MorePhoneNumbers` 를 열 별칭으로 지정합니다.  
   
 ```  
 SELECT BusinessEntityID, FirstName, LastName, AdditionalContactInfo.query('  
@@ -146,7 +147,8 @@ for xml auto;
   
 -   단일 `xml` 유형 열이 포함된 테이블  
   
--   `xml` 유형의 인스턴스  
+-   
+  `xml` 유형의 인스턴스  
   
  예를 들어 다음 사용자 정의 함수는 `xm` 유형의 단일 열이 포함된 테이블을 반환합니다.  
   
@@ -203,7 +205,7 @@ SELECT @x= dbo.MyUDF4 (19) ;
 select @x;  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [다양한 SQL Server 데이터 형식에 대한 FOR XML 지원](for-xml-support-for-various-sql-server-data-types.md)  
   
   
