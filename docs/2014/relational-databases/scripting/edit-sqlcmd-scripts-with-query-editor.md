@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 224fcd5f6b4c15a492be6aa6d893a4a4e5625b08
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245178"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>쿼리 편집기로 SQLCMD 스크립트 편집

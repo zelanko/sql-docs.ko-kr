@@ -1,5 +1,5 @@
 ---
-title: sys.dm_tran_session_transactions (TRANSACT-SQL) | Microsoft Docs
+title: sys. dm_tran_session_transactions (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -21,44 +21,45 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 148cab2122a907c138a2bd74c5f3403d231e2793
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68262666"
 ---
-# <a name="sysdmtransessiontransactions-transact-sql"></a>sys.dm_tran_session_transactions(Transact-SQL)
+# <a name="sysdm_tran_session_transactions-transact-sql"></a>sys.dm_tran_session_transactions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   연결된 트랜잭션 및 세션에 대한 상관 관계 정보를 반환합니다.  
   
 > [!NOTE]  
->  이를 호출 하 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 나 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_tran_session_transactions**합니다.  
+>  또는 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서이를 호출 하려면 이름 **sys. dm_pdw_nodes_tran_session_transactions**을 사용 합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |session_id|**int**|트랜잭션을 실행하고 있는 세션의 ID입니다.|  
 |transaction_id|**bigint**|트랜잭션 ID입니다.|  
-|transaction_descriptor|**binary(8)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 클라이언트 드라이버와 통신할 때 사용하는 트랜잭션 식별자입니다.|  
+|transaction_descriptor|**binary (8)**|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 클라이언트 드라이버와 통신할 때 사용하는 트랜잭션 식별자입니다.|  
 |enlist_count|**int**|트랜잭션에서 작동 중인 세션의 활성 요청 수입니다.|  
 |is_user_transaction|**bit**|1 = 사용자 요청에 의해 시작된 트랜잭션<br /><br /> 0 = 시스템 트랜잭션|  
 |is_local|**bit**|1 = 로컬 트랜잭션<br /><br /> 0 = 분산 트랜잭션 또는 참여한 바운드 세션 트랜잭션|  
 |is_enlisted|**bit**|1 = 참여한 분산 트랜잭션<br /><br /> 0 = 참여한 분산 트랜잭션 아님|  
 |is_bound|**bit**|1 = 바운드 세션을 통해 세션에서 활성화된 트랜잭션<br /><br /> 0 = 바운드 세션을 통해 세션에서 활성화되지 않은 트랜잭션|  
 |open_transaction_count||각 세션에 대해 열린 트랜잭션 수입니다.|  
-|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
+|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
 ## <a name="permissions"></a>사용 권한
 
-온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
-온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 프리미엄 계층 필요는 `VIEW DATABASE STATE` 데이터베이스의 권한. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에 필요 합니다 **서버 관리자** 요소나 **Azure Active Directory 관리자** 계정.   
+에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]는 권한이 `VIEW SERVER STATE` 필요 합니다.   
+Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 계층에서는 데이터베이스에 대 `VIEW DATABASE STATE` 한 권한이 필요 합니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
 
 ## <a name="remarks"></a>설명  
  바운드 세션 및 분산 트랜잭션을 통해 둘 이상의 세션에서 트랜잭션을 실행할 수 있습니다. 이 경우 sys.dm_tran_session_transactions는 트랜잭션이 실행되고 있는 각 세션에 대해 하나씩 동일한 transaction_id에 대한 여러 개의 행을 표시합니다.  
   
  MARS(Multiple Active Result Sets)를 사용하여 자동 커밋 모드에서 여러 개의 요청을 실행하면 단일 세션에 둘 이상의 활성 트랜잭션이 있을 수 있습니다. 이 경우 sys.dm_tran_session_transactions는 해당 세션에서 실행되고 있는 각 트랜잭션에 대해 하나씩 동일한 session_id에 대한 여러 개의 행을 표시합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [트랜잭션 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

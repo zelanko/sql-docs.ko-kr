@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b9f58e472b0b6e6d164e45c2d1136c81bc4a46d6
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811233"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>메모리 액세스에 최적화된 테이블 구독자로 복제
@@ -27,7 +27,8 @@ ms.locfileid: "68811233"
   
 1.  게시 생성  
   
-2.  아티클을 게시에 추가합니다. `@upd_cmd` 매개 변수에 대해서는 SCALL 또는 SQL 규칙을 사용합니다.  
+2.  아티클을 게시에 추가합니다. 
+  `@upd_cmd` 매개 변수에 대해서는 SCALL 또는 SQL 규칙을 사용합니다.  
   
     ```  
     EXEC sp_addarticle  
@@ -59,11 +60,12 @@ ms.locfileid: "68811233"
     EXEC sp_startpublication_snapshot @publication = N'Publication1';  
     ```  
   
-2.  스냅샷 폴더로 이동합니다. 기본 위치는 "C:\Program Files\Microsoft SQL Server\MSSQL12. 인스턴스 > \MSSQL\repldata\unc\XXX\YYYYMMDDHHMMSS\\". \<  
+2.  스냅샷 폴더로 이동합니다. 기본 위치는 "C:\Program Files\Microsoft SQL Server\MSSQL12. \<인스턴스> \mssql\repldata\unc\xxx\yyyymmddhhmmss\\".  
   
-3.  을 찾습니다 **.** 테이블에 대 한 sch-m 파일을 만들고 Management Studio에서 엽니다. 아래 설명에 따라 테이블 스키마를 변경하고 저장 프로시저를 업데이트합니다.  
+3.  을 찾습니다 **. **테이블에 대 한 sch-m 파일을 만들고 Management Studio에서 엽니다. 아래 설명에 따라 테이블 스키마를 변경하고 저장 프로시저를 업데이트합니다.  
   
-     IDX 파일에 정의된 인덱스를 평가합니다. `CREATE TABLE`을 수정하여 필수 인덱스, 제약 조건, 기본 키 및 메모리 최적화 구문을 지정합니다. 메모리 최적화 테이블에서 인덱스 열은 NOT NULL이어야 하며 문지 형식의 인덱스 열은 Unicode여야 하고 BIN2 데이터 정렬을 사용해야 합니다. 아래 예제를 참조하십시오.  
+     IDX 파일에 정의된 인덱스를 평가합니다. 
+  `CREATE TABLE`을 수정하여 필수 인덱스, 제약 조건, 기본 키 및 메모리 최적화 구문을 지정합니다. 메모리 최적화 테이블에서 인덱스 열은 NOT NULL이어야 하며 문지 형식의 인덱스 열은 Unicode여야 하고 BIN2 데이터 정렬을 사용해야 합니다. 아래 예제를 참조하십시오.  
   
     ```  
     SET ANSI_PADDING ON;  
@@ -86,7 +88,8 @@ ms.locfileid: "68811233"
     GO  
     ```  
   
-4.  `@upd_cmd` 매개 변수에 대해 SCALL 규칙을 사용할 때는 스키마(.SCH) 파일로 이동하고 `create procedure [sp_MSupd_<SCHEMA><TABLE_NAME>]`에서 테이블 업데이트 문을 변경하여 기본 키 열을 제거합니다.  
+4.  
+  `@upd_cmd` 매개 변수에 대해 SCALL 규칙을 사용할 때는 스키마(.SCH) 파일로 이동하고 `create procedure [sp_MSupd_<SCHEMA><TABLE_NAME>]`에서 테이블 업데이트 문을 변경하여 기본 키 열을 제거합니다.  
   
      기본 키 업데이트를 지원하려면 사용자 정의 업데이트 저장 프로시저를 사용해서 다음과 같이 기본 키 업데이트 문을 바꿉니다.  
   
@@ -263,7 +266,7 @@ ms.locfileid: "68811233"
     GO  
     ```  
   
- **동기화 구독 없음 추가**  
+ **비동기 구독 추가**  
   
  비동기 구독을 추가합니다.  
   
@@ -282,7 +285,7 @@ GO
   
  메모리 액세스에 최적화된 테이블이 이제 게시자로부터 업데이트 수신을 시작합니다.  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>제한  
  단방향 트랜잭션 복제만 지원됩니다. 피어 투 피어 트랜잭션 복제는 지원되지 않습니다.  
   
  메모리 액세스에 최적화된 테이블은 게시할 수 없습니다.  
@@ -301,7 +304,7 @@ GO
   
 -   구독자에서 메모리 최적화 테이블에 복제하는 테이블의 기본 키는 업데이트하는 데 제한 사항이 있습니다. 자세한 내용은 [기본 키로 변경 내용 복제](#PrimaryKey)를 참조 하세요.  
   
--   외래 키, 고유 제약 조건, 트리거, 스키마 수정, ROWGUIDCOL, 계산 열, 데이터 압축, 별칭 데이터 형식, 버전 관리 및 잠금은 메모리 최적화 테이블에서 지원되지 않습니다. 자세한 내용은 [메모리 내 OLTP에서 지원되지 않는 T-SQL 구문](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) 을 참조하십시오.  
+-   외래 키, 고유 제약 조건, 트리거, 스키마 수정, ROWGUIDCOL, 계산 열, 데이터 압축, 별칭 데이터 형식, 버전 관리 및 잠금은 메모리 최적화 테이블에서 지원되지 않습니다. 자세한 내용은 [Transact-SQL Constructs Not Supported by In-Memory OLTP](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) 을 참조하십시오.  
   
 ##  <a name="Schema"></a> 스키마 파일 수정  
   
@@ -316,7 +319,7 @@ GO
 ##  <a name="PrimaryKey"></a>기본 키에 대 한 변경 내용 복제  
  메모리 최적화 테이블의 기본 키는 업데이트할 수 없습니다. 구독자에서 기본 키 업데이트를 복제하려면 삭제 및 삽입 쌍으로 업데이트를 제공하도록 업데이트 저장 프로시저를 수정합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 복제](sql-server-replication.md)  
   
   

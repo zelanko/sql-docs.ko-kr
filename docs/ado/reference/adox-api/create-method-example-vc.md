@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 57fcb0eb-5d40-4ad4-996d-380732de8a3d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 0cd79f758d173a2060c21465b35284023942a15a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8b694c8d8e7381a8237511f8bba3ffd444cd5d37
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966611"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76910538"
 ---
 # <a name="create-method-example-vc"></a>Create 메서드 예제(VC++)
-다음 코드에 사용 하 여 새 Microsoft Jet 데이터베이스를 만드는 방법을 보여 줍니다 합니다 [만들기](../../../ado/reference/adox-api/create-method-adox.md) 메서드.  
+다음 코드에서는 [create](../../../ado/reference/adox-api/create-method-adox.md) 메서드를 사용 하 여 새 Microsoft Jet 데이터베이스를 만드는 방법을 보여 줍니다.  
   
 ```  
 // BeginCreateDatabaseCpp.cpp  
@@ -70,10 +70,10 @@ void CreateDatabaseX() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in CreateDatabaseX...." << endl;  
+      cout << "Error occurred in CreateDatabaseX...." << endl;  
    }  
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Create 메서드(ADOX)](../../../ado/reference/adox-api/create-method-adox.md)
