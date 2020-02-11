@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2c968cb8c75fc5f1fb8e77cc98d8c6a306a62115
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62727277"
 ---
 # <a name="proactive-caching-partitions"></a>자동 관리 캐싱(파티션)
@@ -42,8 +42,8 @@ ms.locfileid: "62727277"
 ### <a name="maximizing-performance"></a>성능 최대화  
  대기 시간을 줄이는 동시에 성능을 최대화하기 위해 현재 사용 중인 MOLAP 개체를 삭제하지 않고 캐싱을 사용할 수도 있습니다. 그러면 새 캐시로 데이터가 읽히고 처리되는 동안 쿼리는 계속 MOLAP 개체에 대해 수행됩니다. 이 방법을 사용하면 성능은 향상되지만 새 캐시를 다시 작성하는 동안 쿼리에서 오래된 데이터를 반환할 수도 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [차원 저장소](../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)   
- [파티션 저장소 설정&#40;Analysis Services - 다차원&#41;](../multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)  
+ [파티션 저장소 &#40;Analysis Services-다차원&#41;설정](../multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)  
   
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e0c727e6a6f981dd2862575bfb4943b104196080
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67913743"
 ---
 # <a name="and-dmx"></a>AND(DMX)
@@ -34,7 +34,7 @@ Expression1 AND Expression2
  *Expression2*  
  숫자 값을 반환하는 유효한 DMX 식입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  두 매개 변수가 TRUE로 계산되면 TRUE를 반환하고 그렇지 않으면 FALSE를 반환하는 부울 값입니다.  
   
 ## <a name="remarks"></a>설명  
@@ -44,12 +44,12 @@ Expression1 AND Expression2
 |-----------------------|-----------------------|---------------------|  
 |TRUE|TRUE|TRUE|  
 |TRUE|FALSE|FALSE|  
-|false|true|FALSE|  
+|FALSE|TRUE|FALSE|  
 |FALSE|FALSE|FALSE|  
   
-## <a name="see-also"></a>관련 항목  
- [Data Mining Extensions &#40;DMX&#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+## <a name="see-also"></a>참고 항목  
+ [데이터 마이닝 확장 &#40;DMX&#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [논리 연산자 &#40;DMX&#41;](../dmx/operators-logical.md)   
- [연산자 &#40;DMX&#41;](../dmx/operators-dmx.md)  
+ [&#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

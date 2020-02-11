@@ -11,14 +11,15 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6da38b25ca23302c8b683a5c9b54ed2b6f88f6b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773755"
 ---
 # <a name="utility-administration-sql-server-utility"></a>유틸리티 관리(SQL Server 유틸리티)
-  유틸리티 관리 탭을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티의 정책, 보안 및 데이터 웨어하우스 설정을 관리할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티 개념에 대한 자세한 내용은 [SQL Server 유틸리티 기능 및 태스크](../relational-databases/manage/sql-server-utility-features-and-tasks.md)를 참조하세요.  
+  유틸리티 관리 탭을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티의 정책, 보안 및 데이터 웨어하우스 설정을 관리할 수 있습니다. 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티 개념에 대한 자세한 내용은 [SQL Server 유틸리티 기능 및 태스크](../relational-databases/manage/sql-server-utility-features-and-tasks.md)를 참조하세요.  
   
 ## <a name="uielement-list"></a>UIElement 목록  
  정책 탭 - 정책 탭을 사용하여 전역 모니터링 정책을 보거나 지정할 수 있습니다.  
@@ -70,7 +71,8 @@ ms.locfileid: "62773755"
  Utility 읽기 역할에 추가될 UCP에서 로그인을 선택합니다.  
  Utility 읽기 권한이 있는 사용자 계정으로 다음과 같은 작업을 할 수 있습니다.  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티에 연결합니다.  
+-   
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티에 연결합니다.  
   
 -   SSMS의 유틸리티 탐색기에서 모든 뷰포인트를 봅니다.  
   
@@ -78,22 +80,24 @@ ms.locfileid: "62773755"
   
  유틸리티 관리자는 SQL Server Utility에 SQL Server 인스턴스를 등록하거나 제거할 수 있으며 관리되는 인스턴스의 정책을 수정하고 UCP의 관리 설정을 수정할 수 있습니다.  
   
- 유틸리티 관리자가 되려면 SQL Server 인스턴스에 대한 sysadmin 권한이 있어야 합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP에 대한 사용자 계정을 추가하거나 변경하려면 SSMS의 개체 탐색기를 사용하여 SQL Server UCP 인스턴스의 서버 로그인에 사용자를 추가합니다. 자세한 내용은 [sp_addlogin&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogin-transact-sql)을 참조하세요.  
+ 유틸리티 관리자가 되려면 SQL Server 인스턴스에 대한 sysadmin 권한이 있어야 합니다. 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP에 대한 사용자 계정을 추가하거나 변경하려면 SSMS의 개체 탐색기를 사용하여 SQL Server UCP 인스턴스의 서버 로그인에 사용자를 추가합니다. 자세한 내용은 [sp_addlogin&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogin-transact-sql)을 참조하세요.  
   
 ## <a name="uielement-list"></a>UIElement 목록  
  데이터 웨어하우스 탭 - 유틸리티 관리 데이터 웨어하우스에 대한 구성 세부 정보를 표시합니다.  
   
- 데이터 보존 기간  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 관리되는 인스턴스에 대해 수집된 사용률 정보의 데이터 보존 기간을 지정합니다. 기본 기간은 1년입니다. 최소값은 1개월입니다. 지원되는 가장 긴 기간은 2년입니다.  
+ 데이터 보존  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 관리되는 인스턴스에 대해 수집된 사용률 정보의 데이터 보존 기간을 지정합니다. 기본 기간은 1년입니다. 최소값은 1개월입니다. 지원되는 가장 긴 기간은 2년입니다.  
   
  유틸리티 데이터 웨어하우스 구성 정보  
  다음 구성 설정은 이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]릴리스에서 구성할 수 없습니다.  
   
 -   UMDW 이름: Sysutility_mdw_\<GUID>_DATA.  
   
--   컬렉션 집합 업로드 빈도: 15 분 마다  
+-   컬렉션 집합 업로드 빈도: 15분마다.  
   
- UMDW 디렉터리는 구성할 수 있습니다. \<시스템 드라이브 >: \Program Files\Microsoft SQL Server\MSSQL10_50. < UCP_Name > \MSSQL\Data\\여기서 \<시스템 드라이브 >는 일반적으로 C:\ 드라이브입니다. 로그 파일 UMDW_\<GUID>_LOG는 같은 디렉터리에 있습니다.  
+ UMDW 디렉터리는 구성할 수 있으며 \<시스템 드라이브>:\Program Files\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\입니다. 여기서 \<시스템 드라이브>는 일반적으로 C:\ 드라이브입니다. 로그 파일 UMDW_\<GUID>_LOG는 같은 디렉터리에 있습니다.  
   
 > [!NOTE]  
 >  UMDW(sysutility_mdw) 파일 위치는 detach/attach 또는 ALTER DATABASE를 사용하여 변경할 수 있으며 ALTER DATABASE를 사용하는 것이 좋습니다. 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)를 참조하세요.  
@@ -101,10 +105,10 @@ ms.locfileid: "62773755"
  제품 기본값으로 돌아갑니다.  
  이 탭의 설정을 기본값으로 다시 설정하려면 **기본값 복원** 단추를 클릭하고 **적용**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [유틸리티 대시보드 &#40;SQL Server 유틸리티&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
- [배포된 데이터 계층 응용 프로그램 세부 정보&#40;SQL Server 유틸리티&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
- [관리되는 인스턴스 세부 정보&amp;amp;#40;SQL Server 유틸리티&amp;amp;#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
+ [배포된 데이터 계층 애플리케이션 세부 정보&#40;SQL Server 유틸리티&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
+ [관리되는 인스턴스 세부 정보&#40;SQL Server 유틸리티&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
  [SQL Server 유틸리티에서 SQL Server 인스턴스 모니터링](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)  
   
   

@@ -13,15 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b2fd28a126b3a0a7f833c6410d4e590b5dc07e5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62869618"
 ---
-# <a name="mssqlserver17204"></a>MSSQLSERVER_17204
+# <a name="mssqlserver_17204"></a>MSSQLSERVER_17204
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -30,7 +30,7 @@ ms.locfileid: "62869618"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|DBLKIO_DEVOPENFAILED|  
-|메시지 텍스트|%ls: 파일 번호 %d 대 한 %ls 파일을 열 수 없습니다.  OS 오류: '%ls'.|  
+|메시지 텍스트|%ls: 파일 번호 %d에 대한 파일 %ls을(를) 열 수 없습니다.  OS 오류: '%ls'.|  
   
 ## <a name="explanation"></a>설명  
  SQL Server에서 특정 오류로 인해 지정한 파일을 열 수 없습니다.  
