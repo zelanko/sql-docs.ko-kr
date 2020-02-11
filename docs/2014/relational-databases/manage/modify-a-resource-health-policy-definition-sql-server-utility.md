@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2b489fda1c051ecd08b63f28d6232a0e213d9fcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188883"
 ---
 # <a name="modify-a-resource-health-policy-definition-sql-server-utility"></a>리소스 상태 정책 정의 수정(SQL Server 유틸리티)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 리소스 상태 정책 정의를 수정하는 방법에 대해 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 리소스 사용률 정책을 수정하려면 먼저 UCP(유틸리티 제어 지점)를 만들어야 합니다. 자세한 내용은 [SQL Server 유틸리티 기능 및 태스크](sql-server-utility-features-and-tasks.md)를 참조하세요.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 리소스 사용률 정책은 데이터 계층 응용 프로그램 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관리되는 인스턴스에 대해 구성할 수 있습니다. 리소스 사용률 정책은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 모든 데이터 계층 애플리케이션 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스에 대해 전역으로 정의하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 각 데이터 계층 애플리케이션 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스에 대해 개별적으로 정의할 수 있습니다. 전역 정책을 구현하고 개별 데이터 계층 애플리케이션 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스가 자체 정책 정의를 구성하도록 할 수도 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 리소스 사용률 정책은 데이터 계층 애플리케이션 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관리되는 인스턴스에 대해 구성할 수 있습니다. 리소스 사용률 정책은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 모든 데이터 계층 애플리케이션 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스에 대해 전역으로 정의하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 각 데이터 계층 애플리케이션 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스에 대해 개별적으로 정의할 수 있습니다. 전역 정책을 구현하고 개별 데이터 계층 애플리케이션 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스가 자체 정책 정의를 구성하도록 할 수도 있습니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
@@ -58,7 +58,7 @@ ms.locfileid: "63188883"
   
 8.  데이터를 새로 고치려면 유틸리티 탐색기 탐색 창에서 **배포된 데이터 계층 애플리케이션** 노드를 마우스 오른쪽 단추로 클릭하고 **새로 고침**을 선택합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 유틸리티 기능 및 태스크](sql-server-utility-features-and-tasks.md)   
  [리소스 상태 정책 결과 보기&#40;SQL Server 유틸리티&#41;](view-resource-health-policy-results-sql-server-utility.md)  
   

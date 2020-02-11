@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0afebe3d8e974ac4920a6f75bf544a13027b360e
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811005"
 ---
 # <a name="mssql_eng014114"></a>MSSQL_ENG014114
@@ -40,7 +40,7 @@ ms.locfileid: "68811005"
  IP 주소나 FQDN(정규화된 도메인 이름)으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 등록한 경우에는 복제가 지원되지 않습니다. 복제 구성 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 IP 주소 또는 FQDN으로 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 인스턴스를 등록한 경우 이 오류가 발생할 수 있습니다.  
   
 ## <a name="user-action"></a>사용자 동작  
- 오류 메시지가 특정 인스턴스를 지정하면 서버를 배포자로 구성하십시오. 자세한 내용은 [배포 구성](configure-distribution.md)을 참조하세요.  
+ 오류 메시지가 특정 인스턴스를 지정하면 서버를 배포자로 구성하십시오. 자세한 내용은 [Configure Distribution](configure-distribution.md)를 참조하세요.  
   
  메시지가 특정 인스턴스를 지정하지 않으면('Null') 배포자 인스턴스가 적절하게 등록되었는지 확인하십시오. 컴퓨터의 네트워크 이름과 SQL Server 인스턴스의 이름이 다른 경우 다음 중 하나를 수행하십시오.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "68811005"
   
      10.193.17.129 inst1  
   
--   배포를 해제하고 인스턴스를 등록한 후 배포를 다시 설정합니다. 비클러스터형 인스턴스에 대해 @@SERVERNAME 값이 올바르지 않으면 다음 단계를 수행 합니다.  
+-   배포를 해제하고 인스턴스를 등록한 후 배포를 다시 설정합니다. 비클러스터형 인스턴스에 대해 @@SERVERNAME 값이 올바르지 않으면 다음 단계를 수행하세요.  
   
     ```  
     sp_dropserver '<old_name>', 'droplogins'  
@@ -59,11 +59,11 @@ ms.locfileid: "68811005"
     go  
     ```  
   
-     [sp_addserver&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql) 저장 프로시저를 실행한 후에 @@SERVERNAME 변경 내용을 적용하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 다시 시작해야 합니다.  
+     [sp_addserver&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql) 저장 프로시저를 실행한 후에 @[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변경 내용을 적용하려면 @SERVERNAME 서비스를 다시 시작해야 합니다.  
   
      클러스터형 인스턴스에 대해 @@SERVERNAME 값이 올바르지 않으면 클러스터 관리자를 사용하여 해당 이름을 변경해야 합니다. 자세한 내용은 [Always On 장애 조치(failover) 클러스터 인스턴스(SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [오류 및 이벤트 참조&#40;복제&#41;](errors-and-events-reference-replication.md)  
   
   

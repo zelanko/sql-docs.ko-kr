@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e67c5448a6625b37c7fb17bc24ea6bdd7cb879ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061597"
 ---
 # <a name="analysis-of-data-flow"></a>데이터 흐름 분석
-  사용할 수는 [catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB` 데이터베이스 뷰를 패키지의 데이터 흐름을 분석 합니다. 이 뷰는 데이터 흐름 구성 요소가 다운스트림 구성 요소에 데이터를 전송할 때마다 행을 표시합니다. 이 정보를 사용하여 각 구성 요소로 보내진 행을 자세하게 파악할 수 있습니다.  
+  [Catalog. execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB` 데이터베이스 뷰를 사용 하 여 패키지의 데이터 흐름을 분석할 수 있습니다. 이 뷰는 데이터 흐름 구성 요소가 다운스트림 구성 요소에 데이터를 전송할 때마다 행을 표시합니다. 이 정보를 사용하여 각 구성 요소로 보내진 행을 자세하게 파악할 수 있습니다.  
   
 > [!NOTE]  
 >  catalog.execution_data_statistics 뷰를 사용하여 정보를 캡처하려면 로깅 수준을 **자세히** 로 설정해야 합니다.  
@@ -36,13 +36,13 @@ order by source_component_name, destination_component_name
   
  다음 예에서는 특정 실행 중 각 구성 요소가 보낸 밀리초당 행 수를 계산합니다. 계산되는 값은 다음과 같습니다.  
   
--   **total_rows** - 구성 요소가 보낸 모든 행의 합계  
+-   **total_rows** -구성 요소가 보낸 모든 행의 합계입니다.  
   
--   **wall_clock_time_ms** - 각 구성 요소에 대한 총 실행 경과 시간(밀리초)  
+-   **wall_clock_time_ms** -각 구성 요소에 대해 경과 된 총 실행 시간 (밀리초)입니다.  
   
--   **num_rows_per_millisecond** - 각 구성 요소가 보낸 밀리초당 행 수  
+-   **num_rows_per_millisecond** -각 구성 요소가 보낸 밀리초 당 행 수  
   
- `HAVING` 계산에서 0으로 나누기 오류를 방지 하기 위해 절을 사용 합니다.  
+ `HAVING` 절은 계산에서 0으로 나누기 오류를 방지 하는 데 사용 됩니다.  
   
 ```  
 use SSISDB  
@@ -63,7 +63,7 @@ order by source_component_name desc
   
  [패키지 실행 문제 해결 도구](troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 흐름의 데이터](data-flow/data-in-data-flows.md)  
   
   
