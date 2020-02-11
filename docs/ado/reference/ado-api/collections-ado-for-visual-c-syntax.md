@@ -1,5 +1,5 @@
 ---
-title: 컬렉션 (시각적 개체에 대 한 ADO C++ 구문) | Microsoft Docs
+title: 컬렉션 (Visual C++ 구문에 대 한 ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,10 +18,10 @@ ms.assetid: 6a0109a0-f2d9-4f7c-8e1e-42763f9acaea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f18884c7a1aabe138408cca7eb529f4f21120330
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919913"
 ---
 # <a name="collections-ado-for-visual-c-syntax"></a>컬렉션(Visual C++ 구문에 대한 ADO)
@@ -140,8 +140,8 @@ get_Item(VARIANT Index, ADOProperty **ppvObject);
   
 -   [Item 속성(ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Errors 컬렉션 (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [필드 컬렉션 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Fields 컬렉션 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Parameters 컬렉션 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Properties 컬렉션(ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

@@ -16,16 +16,16 @@ ms.assetid: 66eca011-e258-4d8f-bd67-e017bcf0871b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 87b2753c989ad2996dc7788bb0820d78b3b9b6ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931913"
 ---
 # <a name="open-and-close-methods-example-vbscript"></a>Open 및 Close 메서드 예제(VBScript)
-이 예제에서는 합니다 [열기](../../../ado/reference/ado-api/open-method-ado-recordset.md) 및 [닫기](../../../ado/reference/ado-api/close-method-ado.md) 둘 다에서 메서드 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 및 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 열려 있는 개체입니다.  
+이 예에서는 열려 있는 [레코드 집합과](../../../ado/reference/ado-api/recordset-object-ado.md) [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 모두에서 [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) 및 [Close](../../../ado/reference/ado-api/close-method-ado.md) 메서드를 사용 합니다.  
   
- 다음 예제에는 페이지 ASP (Active Server)를 사용 합니다. 사용 하 여 **찾을** Adovbs.inc 파일을 찾아서을 사용 하려는 디렉터리에 배치 합니다. 메모장 이나 다른 텍스트 편집기에 다음 코드를 붙여 넣습니다. 잘라내기 및 저장 **넣고 OpenVBS.asp**합니다. 모든 브라우저에서 결과 볼 수 있습니다.  
+ Active Server 페이지 (ASP)에서 다음 예제를 사용 합니다. **찾기** 를 사용 하 여 Adovbs 파일을 찾은 다음 사용 하려는 디렉터리에 배치 합니다. 다음 코드를 잘라내어 메모장 또는 다른 텍스트 편집기에 붙여 넣고 **Openvbs .asp**로 저장 합니다. 모든 브라우저에서 결과를 볼 수 있습니다.  
   
 ```  
 <!-- BeginOpenVBS -->  
@@ -161,9 +161,9 @@ BODY {
 <!-- EndOpenVBS -->  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Close 메서드 (ADO)](../../../ado/reference/ado-api/close-method-ado.md)   
- [연결 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Connection 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Open 메서드 (ADO 연결)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
  [Open 메서드 (ADO 레코드 집합)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

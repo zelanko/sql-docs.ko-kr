@@ -1,5 +1,5 @@
 ---
-title: Attributes 및 Name 속성 예제 (VC + +) | Microsoft Docs
+title: 특성 및 이름 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 2db7c9ca-d7d0-4c8e-840b-b27d7933ec40
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 218103d24bc7fb35e8432743f543ad7bb9558479
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920533"
 ---
-# <a name="attributes-and-name-properties-example-vc"></a>Attributes 및 Name 속성 예제 (VC + +)
-값을 표시 하는이 예제는 [특성](../../../ado/reference/ado-api/attributes-property-ado.md) 속성에 대 한 [연결](../../../ado/reference/ado-api/connection-object-ado.md)에 [필드](../../../ado/reference/ado-api/field-object.md), 및 [속성](../../../ado/reference/ado-api/property-object-ado.md) 개체입니다. 사용 하 여는 [이름](../../../ado/reference/ado-api/name-property-ado.md) 각각의 이름을 표시 하는 속성 **필드** 하 고 **속성** 개체입니다.  
+# <a name="attributes-and-name-properties-example-vc"></a>특성 및 이름 속성 예제 (VC + +)
+이 예에서는 [연결](../../../ado/reference/ado-api/connection-object-ado.md), [필드](../../../ado/reference/ado-api/field-object.md)및 [속성](../../../ado/reference/ado-api/property-object-ado.md) 개체에 대 한 [Attributes](../../../ado/reference/ado-api/attributes-property-ado.md) 속성의 값을 표시 합니다. [Name](../../../ado/reference/ado-api/name-property-ado.md) 속성을 사용 하 여 각 **필드** 및 **속성** 개체의 이름을 표시 합니다.  
   
 ```  
 // BeginAttributesCpp.cpp  
@@ -180,9 +180,9 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Attributes 속성 (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)   
- [연결 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Connection 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Field 개체](../../../ado/reference/ado-api/field-object.md)   
  [Name 속성 (ADO)](../../../ado/reference/ado-api/name-property-ado.md)   
  [속성 개체(ADO)](../../../ado/reference/ado-api/property-object-ado.md)

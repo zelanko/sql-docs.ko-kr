@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 17c751898aee25fa98bfeb6c2a7e1f1143bc61ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62931623"
 ---
 # <a name="choose-a-resolver"></a>해결 프로그램 선택
@@ -41,8 +41,8 @@ ms.locfileid: "62931623"
 |논리적 레코드 값의 여러 변경 내용을 충돌로 플래그 지정합니다.|논리적 레코드 수준 추적을 설정한 기본 해결 프로그램을 사용합니다. 논리적 레코드 기능은 사용자 지정 해결 프로그램 또는 비즈니스 논리 처리기를 지원하지 않습니다.|  
 |충돌 결과 데이터가 원본 충돌 데이터와 달라야 합니다.|새 값을 계산하는 아티클 해결 프로그램을 사용합니다.|  
   
-## <a name="see-also"></a>관련 항목  
- [논리적 레코드에서 충돌 감지 및 해결](advanced-merge-replication-conflict-resolving-in-logical-record.md)   
+## <a name="see-also"></a>참고 항목  
+ [Detecting and Resolving Conflicts in Logical Records](advanced-merge-replication-conflict-resolving-in-logical-record.md)   
  [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md)   
  [데이터 다시 게시](../republish-data.md)  
   

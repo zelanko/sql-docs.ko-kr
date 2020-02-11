@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2f09d633ccd8dfc8bdfdda27c75ac3a710475d93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011495"
 ---
 # <a name="managing-logins-users-and-schemas-how-to-topics"></a>로그인, 사용자 및 스키마 관리 방법 도움말 항목
@@ -32,9 +32,9 @@ ms.locfileid: "63011495"
   
 -   [역할 조인](join-a-role.md)  
   
--   [보안 주체에게 사용 권한 부여](grant-a-permission-to-a-principal.md)  
+-   [보안 주체에 게 사용 권한 부여](grant-a-permission-to-a-principal.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보안 주체&#40;데이터베이스 엔진&#41;](principals-database-engine.md)   
  [SQL Server 보안 설정](../securing-sql-server.md)  
   

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3fd70d208960af1f121795bfdf8a657ceaf59f21
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62775296"
 ---
 # <a name="install-sql-server-replication"></a>SQL Server 복제 설치
@@ -39,9 +39,9 @@ ms.locfileid: "62775296"
 ## <a name="installing-replication-from-the-command-prompt"></a>명령 프롬프트에서 복제 설치  
  **다음의 새 인스턴스를 설치할 때 복제를 설치하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**  
   
--   참조 [명령 프롬프트에서 SQL Server 2014 설치](install-sql-server-from-the-command-prompt.md)합니다.  
+-   [명령 프롬프트에서 SQL Server 2014 설치를](install-sql-server-from-the-command-prompt.md)참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 2014 설치](install-sql-server.md)   
  [명령 프롬프트에서 SQL Server 2014 설치](install-sql-server-from-the-command-prompt.md)   
  [SQL Server 2014 버전에서 지원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  

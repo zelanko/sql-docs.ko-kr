@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 85eb934b93d22acc2534d1eb34aa967cbb4f2714
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774255"
 ---
 # <a name="view-the-log-shipping-report-sql-server-management-studio"></a>로그 전달 보고서 보기(SQL Server Management Studio)
@@ -47,7 +47,7 @@ ms.locfileid: "62774255"
   
 3.  **트랜잭션 로그 전달 상태**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [로그 전달 모니터링&#40;Transact-SQL&#41;](monitor-log-shipping-transact-sql.md)  
   
   

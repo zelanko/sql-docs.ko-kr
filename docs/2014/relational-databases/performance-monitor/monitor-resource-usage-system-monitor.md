@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8bd4676eed22cea99808d87016231dbd2ebaf4cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63032124"
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>리소스 사용 모니터링(시스템 모니터)
@@ -71,7 +71,7 @@ ms.locfileid: "63032124"
   
 -   프로세서 사용률  
   
--   메모리 사용  
+-   메모리 사용량  
   
  시스템 모니터가 실행 중인 컴퓨터를 모니터링하면 컴퓨터 성능에 약간의 영향을 줄 수 있으므로 시스템 모니터 데이터를 다른 디스크나 컴퓨터에 기록해 모니터링하는 컴퓨터에 미치는 영향을 줄이거나 시스템 모니터를 원격 컴퓨터에서 실행하십시오. 또한 관심 있는 카운터만 모니터링해야 합니다. 너무 많은 수의 카운터를 모니터링하면 모니터링 프로세스에 리소스 사용 오버헤드가 추가되고 모니터링하고 있는 컴퓨터의 성능에 영향을 미칩니다.  
   

@@ -1,5 +1,5 @@
 ---
-title: Lead (MDX) | Microsoft Docs
+title: 리드 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: cc4d362fbc7656e9427548a352b32d5d8297071e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905739"
 ---
 # <a name="lead-mdx"></a>Lead(MDX)
@@ -31,19 +31,19 @@ Member_Expression.Lead( Index )
  *Member_Expression*  
  멤버를 반환하는 유효한 MDX 식입니다.  
   
- *Index*  
+ *인덱싱할*  
  멤버 위치 번호를 지정하는 유효한 숫자 식입니다.  
   
 ## <a name="remarks"></a>설명  
  수준 내의 멤버 위치는 특성 계층의 일반적인 순서에 따라 결정됩니다. 위치를 나타내는 번호는 0부터 시작합니다.  
   
- 지정한 간격이 0 (0) 이면 합니다 **발생할** 함수에 지정 된 멤버를 반환 합니다.  
+ 지정 된 리드가 영 (0) 이면 **리드** 함수는 지정 된 멤버를 반환 합니다.  
   
- 지정한 간격이 음수 이면 합니다 **발생할** 함수는 이전 멤버를 반환 합니다.  
+ 지정 된 리드가 음수 이면 **리드** 함수는 이전 멤버를 반환 합니다.  
   
- `Lead(1)` 해당 하는 [NextMember](../mdx/nextmember-mdx.md) 함수입니다. `Lead(-1)` 해당 하는 [PrevMember](../mdx/prevmember-mdx.md) 함수입니다.  
+ `Lead(1)`는 [Nextmember](../mdx/nextmember-mdx.md) 함수와 동일 합니다. `Lead(-1)`은 [PrevMember](../mdx/prevmember-mdx.md) 함수와 동일 합니다.  
   
- **발생할** 함수는를 [지연](../mdx/lag-mdx.md) 함수와 합니다 **지연** 함수와 검색 방향이 반대 합니다 **발생할** 함수입니다. 즉, `Lead(n)`은 `Lag(-n)`과 동일합니다.  
+ **지연** 함수는 **리드** 함수와 반대 방향으로 표시 된다는 점을 제외 하 고 **리드** 함수는 [lag](../mdx/lag-mdx.md) 함수와 비슷합니다. 즉, `Lead(n)`은 `Lag(-n)`과 동일합니다.  
   
 ## <a name="example"></a>예제  
  다음 예에서는 2001년 12월의 값을 반환합니다.  
@@ -62,7 +62,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

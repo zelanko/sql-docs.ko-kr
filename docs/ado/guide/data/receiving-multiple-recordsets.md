@@ -1,5 +1,5 @@
 ---
-title: 다중 레코드 집합 수신 | Microsoft Docs
+title: 여러 레코드 집합 받기 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,16 +14,16 @@ ms.assetid: 2a7ad7a6-f00d-4355-b0b5-d0ab957b0566
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6d6e649201b8bf23a1b696d574baea2f4b049e06
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924537"
 ---
 # <a name="receiving-multiple-recordsets"></a>다중 레코드 집합 수신
-[Microsoft OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) 지 원하는 여러 반환 **Recordset** 여러 SQL 문이 포함 된 단일 명령에 대 한 개체 하나 **레코드 집합**당 SQL 문입니다. 순서를 **레코드 집합**명령 텍스트에서 SQL 문을 배치 되는 순서를 따릅니다이 반환 됩니다.  
+[SQL Server 용 Microsoft OLE DB 공급자](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) 는 여러 sql 문을 포함 하는 단일 명령에 대 한 여러 **레코드 집합** 개체를 반환 하는 것을 지원 합니다. Sql 문 당 하나의 **레코드 집합** **레코드 집합**의 반환 순서는 SQL 문이 명령 텍스트에 배치 되는 순서에 따라 결정 됩니다.  
   
- 또한 Microsoft OLE DB Provider for SQL Server 명령을 COMPUTE 절을 포함 하는 경우 여러 결과 집합 ADO에 게 반환 합니다. 예를 들어, 다음 SQL 문을 포함 하는 명령을 돌아갑니다 결과 두 **Recordset** 개체:의 행 집합에 대 한 하나 (*ProductID*를 *ProductName*, *UnitPrice*), 다른 테이블의 모든 제품의 평균 가격 중 한 합니다.  
+ 또한 SQL Server에 대 한 Microsoft OLE DB 공급자는 명령에 COMPUTE 절이 포함 된 경우 ADO에 여러 결과 집합을 반환 합니다. 예를 들어 다음 SQL 문을 포함 하는 명령은 두 개의 **레코드 집합** 개체 (*ProductID*, *ProductName*, *UnitPrice*)의 행 집합에 대 한 결과를 반환 하 고 다른 하나는 테이블에 있는 모든 제품의 평균 가격을 반환 합니다.  
   
 ```  
 SELECT ProductID, ProductName, UnitPrice   
@@ -31,6 +31,6 @@ SELECT ProductID, ProductName, UnitPrice
   COMPUTE AVG(UnitPrice)  
 ```  
   
- 사용할 수는 **Recordset.NextRecordset** 두 개체를 열거 하는 방법입니다.  
+ **NextRecordset** 메서드를 사용 하 여 두 개체를 열거할 수 있습니다.  
   
- 자세한 내용은 [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)합니다.
+ 자세한 내용은 [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)를 참조 하세요.

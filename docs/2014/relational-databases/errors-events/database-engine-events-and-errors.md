@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3c0e2316d8222709b3b276f3206bf82b4343d24c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916518"
 ---
 # <a name="database-engine-events-and-errors"></a>데이터베이스 엔진 이벤트 및 오류
@@ -22,7 +22,8 @@ ms.locfileid: "62916518"
   
 ## <a name="in-this-section"></a>섹션 내용  
  [데이터베이스 엔진 오류 이해](../native-client-ole-db-errors/errors.md)  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] 오류 메시지의 형식을 설명하고 오류 메시지를 보는 방법 및 오류 메시지를 애플리케이션으로 반환하는 방법에 대해 설명합니다.  
+ 
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 오류 메시지의 형식을 설명하고 오류 메시지를 보는 방법 및 오류 메시지를 애플리케이션으로 반환하는 방법에 대해 설명합니다.  
   
  [데이터베이스 엔진 오류의 원인 및 해결 방법](../../database-engine/cause-and-resolution-of-database-engine-errors.md)  
  시스템 오류 메시지, 가능한 원인, 수행할 수 있는 동작에 대해 설명합니다.  

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4424504ddbfd0dfa1b16169186988141bb7b4c41
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999562"
 ---
 # <a name="open-and-configure-object-explorer"></a>개체 탐색기 열기 및 구성
@@ -26,11 +26,11 @@ ms.locfileid: "62999562"
 ## <a name="configuring-object-explorer-options"></a>개체 탐색기 옵션 구성  
  개체 탐색기 설정을 구성하려면 **도구** 메뉴에서 **옵션**을 클릭한 다음 **SQL Server 개체 탐색기**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [개체 탐색기](object-explorer.md)   
- [개체 탐색기에서 인스턴스에 연결 합니다.](connect-to-an-instance-from-object-explorer.md)   
- [개체 탐색기를 사용 하 여 개체를 관리 합니다.](manage-objects-by-using-object-explorer.md)   
- [개체 탐색기 정보 창](object-explorer-details-pane.md)   
+ [개체 탐색기에서 인스턴스에 연결](connect-to-an-instance-from-object-explorer.md)   
+ [개체 탐색기를 사용 하 여 개체 관리](manage-objects-by-using-object-explorer.md)   
+ [개체 탐색기 세부 정보 창](object-explorer-details-pane.md)   
  [Management Studio의 사용자 지정 보고서](custom-reports-in-management-studio.md)  
   
   

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 90d3e9e50ef16e51e9669a92cfb53f5f734c83ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827922"
 ---
 # <a name="connect-components-in-a-data-flow"></a>데이터 흐름의 구성 요소 연결
@@ -29,9 +29,11 @@ ms.locfileid: "62827922"
   
 2.  솔루션 탐색기에서 패키지를 두 번 클릭하여 엽니다.  
   
-3.  **제어 흐름** 탭을 클릭한 후 구성 요소를 연결하려는 데이터 흐름이 들어 있는 데이터 흐름 태스크를 두 번 클릭합니다.  
+3.  
+  **제어 흐름** 탭을 클릭한 후 구성 요소를 연결하려는 데이터 흐름이 들어 있는 데이터 흐름 태스크를 두 번 클릭합니다.  
   
-4.  **데이터 흐름** 탭의 디자인 화면에서 연결하려는 변환 또는 원본을 선택합니다.  
+4.  
+  **데이터 흐름** 탭의 디자인 화면에서 연결하려는 변환 또는 원본을 선택합니다.  
   
 5.  변환 또는 원본의 녹색 출력 화살표를 변환 또는 대상으로 끌어 옵니다. 일부 데이터 흐름 구성 요소에는 오류 출력이 포함되어 있으며 이 출력도 동일한 방법으로 연결할 수 있습니다.  
   
@@ -40,7 +42,7 @@ ms.locfileid: "62827922"
   
 6.  업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 흐름에서 구성 요소 추가 또는 삭제](data-flow.md)   
  [데이터 흐름 구성 요소에서 오류 출력 구성](../configure-an-error-output-in-a-data-flow-component.md)   
  [데이터 흐름](data-flow.md)  

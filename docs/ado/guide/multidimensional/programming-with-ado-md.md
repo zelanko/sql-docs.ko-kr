@@ -1,5 +1,5 @@
 ---
-title: ADO MD를 사용한 프로그래밍 | Microsoft Docs
+title: ADO MD로 프로그래밍 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,17 +13,17 @@ ms.assetid: c826b9b5-0d78-43a2-8174-5844db62a93c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2ee0aa11dcc9b73f6c0a174714852f76f383fb45
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923170"
 ---
 # <a name="programming-with-ado-md"></a>ADO MD를 사용한 프로그래밍
-개발 도구를 사용 하 여 ADO MD를 사용 하려면 ADO MD 형식 라이브러리에 대 한 참조를 설정 해야 합니다. ADO MD 라이브러리에 대 한 설명을 Microsoft ActiveX Data Objects (다차원) 라이브러리입니다. ADO MD 라이브러리 파일 이름을 msadomd.dll, 이며 (progid 프로그램)의 프로그램 ID "ADOMD"입니다. 라이브러리에 대 한 참조를 설정 하는 방법에 대 한 자세한 내용은 개발 도구 설명서를 참조 하세요.  
+개발 도구에서 ADO MD를 사용 하려면 ADO MD 형식 라이브러리에 대 한 참조를 설정 해야 합니다. ADO MD 라이브러리에 대 한 설명은 Microsoft ADO(ActiveX Data Objects) (다차원) 라이브러리입니다. ADO MD 라이브러리 파일 이름은 msadomd이 고 프로그램 ID (ProgID)는 "ADOMD"입니다. 라이브러리에 대 한 참조를 설정 하는 방법에 대 한 자세한 내용은 개발 도구의 설명서를 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ADO (다차원) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [다차원 스키마 및 데이터 개요](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
- [ADO MD를 사용 하 여 ADO를 사용 하 여](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)   
+ [ADO MD와 함께 ADO 사용](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)   
  [다차원 데이터 작업](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)

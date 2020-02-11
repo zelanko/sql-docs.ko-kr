@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8b11907a235c4b7d74ce25f126896774ae019698
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63023201"
 ---
-# <a name="mssqleng021385"></a>MSSQL_ENG021385
+# <a name="mssql_eng021385"></a>MSSQL_ENG021385
     
 ## <a name="message-details"></a>메시지 정보  
   
@@ -38,7 +38,7 @@ ms.locfileid: "63023201"
 ## <a name="user-action"></a>사용자 동작  
  게시 데이터베이스에 대한 변경이 완료된 후에 스냅샷 에이전트를 다시 시작합니다. 자세한 내용은 [복제 에이전트 시작 및 중지&#40;SQL Server Management Studio&#41;](agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) 및 [복제 에이전트 실행 파일 개념](concepts/replication-agent-executables-concepts.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [오류 및 이벤트 참조&#40;복제&#41;](errors-and-events-reference-replication.md)  
   
   

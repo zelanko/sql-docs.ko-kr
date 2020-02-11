@@ -11,15 +11,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2077b7b5f8ac84d95903a80a0a567cff119231e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63065781"
 ---
-# <a name="localdberrornotinstalled"></a>LOCALDB_ERROR_NOT_INSTALLED
+# <a name="localdb_error_not_installed"></a>LOCALDB_ERROR_NOT_INSTALLED
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -27,7 +27,7 @@ ms.locfileid: "63065781"
 |이벤트 ID|278|  
 |이벤트 원본|SQL Server 로컬 데이터베이스 런타임 12.0|  
 |구성 요소|로컬 데이터베이스 런타임 API|  
-|메시지 텍스트|**참고:**  메시지 텍스트를 비어 있는 경우 있기 때문이 메시지는 전체 LocalDB API (HRESULTS를 메시지 텍스트에 매핑하는 FormatMessage 함수 포함)를 사용할 수 없습니다.|  
+|메시지 텍스트|**참고:**  이 메시지는 전체 LocalDB API (HRESULT를 메시지 텍스트에 매핑하는 FormatMessage 함수 포함)를 사용할 수 없음을 의미 하므로 메시지 텍스트는 비어 있습니다.|  
   
 ## <a name="explanation"></a>설명  
  로컬 데이터베이스 런타임이 컴퓨터에 설치되지 않았습니다.  

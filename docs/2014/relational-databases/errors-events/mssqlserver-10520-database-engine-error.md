@@ -13,15 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 79274cf031103e50151b6e93a9daff781005abad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916175"
 ---
-# <a name="mssqlserver10520"></a>MSSQLSERVER_10520
+# <a name="mssqlserver_10520"></a>MSSQLSERVER_10520
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -38,8 +38,8 @@ ms.locfileid: "62916175"
 ## <a name="user-action"></a>사용자 동작  
  매개 변수에 NULL을 지정하거나, 매개 변수에 NULL이 아닌 값을 허용하는 유형으로 유형을 변경하십시오.  
   
-## <a name="see-also"></a>관련 항목  
- [sp_create_plan_guide&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;sp_create_plan_guide &#40;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [계획 지침](../performance/plan-guides.md)  
   
   

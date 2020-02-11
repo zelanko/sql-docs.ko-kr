@@ -14,16 +14,16 @@ ms.assetid: c1b7d7e6-1707-4ce2-863f-0c6dea967df6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 41fd90d4f30c080951bd5d68407e38adac482418
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923791"
 ---
 # <a name="understanding-cursors-and-locks"></a>커서 및 잠금 이해
-응용 프로그램의 데이터 액세스 요구 사항에 대 한 가장 효율적인 커서 유형을 선택할 수 있도록 커서의 작동 방법을 이해 하는 것이 반드시 합니다. 최적화 않은 경우 보다 커서 구성 매우 느려질 데이터 액세스 작업을 만들 수 있습니다.  
+응용 프로그램의 데이터 액세스 요구 사항에 가장 적합 한 가장 효율적인 커서 형식을 선택할 수 있도록 커서가 작동 하는 방식을 이해 하는 것이 중요 합니다. 최적의 커서 구성을 사용 하면 데이터 액세스 작업이 painfully 속도가 느려질 수 있습니다.  
   
- ADO의 다양 한 기능 **레코드 집합** 개체 유형 및 잠금 형식 뿐만 아니라 커서의 위치를 따라 결정 됩니다.  
+ ADO **레코드 집합** 개체의 많은 기능은 커서의 유형 및 위치와 잠금 유형으로 결정 됩니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

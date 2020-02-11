@@ -1,5 +1,5 @@
 ---
-title: Leaves (MDX) | Microsoft Docs
+title: 나뭇잎 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d29c77250c23900d74d1969a6c37bc719c89cdd7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905731"
 ---
 # <a name="leaves-mdx"></a>Leaves(MDX)
 
 
-  모든 특성 또는 특정 차원에만 속하는 특성으로 구성된 집합을 반환합니다. 반환된 집합의 각 x 특성의 경우, x가 세분성 특성이거나 세분성 특성에 직접 또는 간접적으로 관련되어 있으면 해당 세분성은 조각에 영향을 주지 않고 x 특성에 대해 설정됩니다. 합니다 **둡니다** 함수는 SCOPE 문 내에 또는 대입의 왼쪽에 있는 사용 하기 위해 설계 되었습니다.  
+  모든 특성 또는 특정 차원에만 속하는 특성으로 구성된 집합을 반환합니다. 반환된 집합의 각 x 특성의 경우, x가 세분성 특성이거나 세분성 특성에 직접 또는 간접적으로 관련되어 있으면 해당 세분성은 조각에 영향을 주지 않고 x 특성에 대해 설정됩니다. **나뭇잎** 함수는 SCOPE 문 내에서 또는 할당의 왼쪽에 사용할 수 있도록 설계 되었습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,7 +34,7 @@ Leaves( [ Dimension_expression ] )
 ## <a name="remarks"></a>설명  
  리프 멤버는 모든 특성 계층에 대한 가장 낮은 수준의 크로스 조인으로 형성된 튜플입니다. 계산 멤버는 제외됩니다.  
   
--   차원 이름이 지정 된 경우는 **둡니다** 함수는 지정 된 차원에 대 한 키 특성의 리프 멤버를 포함 하는 집합을 반환 합니다.  
+-   차원 이름이 지정 된 경우에는 **나뭇잎** 함수는 지정 된 차원에 대 한 키 특성의 리프 멤버를 포함 하는 집합을 반환 합니다.  
   
 -   차원이 여러 측정값 그룹과 연결된 경우 현재 범위의 측정값 차원이 사용됩니다.  
   
@@ -46,7 +46,7 @@ Leaves( [ Dimension_expression ] )
     > [!IMPORTANT]  
     >  현재 범위의 측정값 그룹에서 일부 특성의 세분성이 같지 않으면 오류가 생성됩니다.  
   
-## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

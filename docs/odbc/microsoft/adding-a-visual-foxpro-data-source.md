@@ -14,38 +14,38 @@ ms.assetid: 1487e188-52c8-4f48-b4fe-25a650dd9e97
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5203a7216faa008aade21c4e3e1dc54fc794461b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67901438"
 ---
 # <a name="adding-a-visual-foxpro-data-source"></a>Visual FoxPro 데이터 원본 추가
-응용 프로그램에서 Visual FoxPro 데이터에 액세스 하려면 데이터 원본을 사용 해야 합니다. 다음과 같이 데이터 소스를 만들 수 있습니다.  
+응용 프로그램에서 Visual FoxPro 데이터에 액세스 하려면 데이터 원본이 있어야 합니다. 다음과 같이 데이터 소스를 만들 수 있습니다.  
   
--   Microsoft® Word, Microsoft Excel 또는 Microsoft Access 등의 응용 프로그램에서 ODBC 드라이버를 사용 하는 합니다.  
+-   Microsoft® Word, microsoft Excel 또는 Microsoft Access와 같은 응용 프로그램에서 ODBC 드라이버를 사용 합니다.  
   
--   외부 응용 프로그램을 Microsoft Windows® 95, Microsoft Windows 98 또는 Microsoft Windows/Windows 2000 제어판을 사용합니다.  
+-   응용 프로그램 외부에서 Microsoft Windows® 95, Microsoft Windows 98 또는 Microsoft Windows NT®/Windows 2000 제어판을 사용 합니다.  
   
- 데이터 원본 시스템에 있으면 Visual FoxPro 데이터에 액세스 하려는 때마다 동일한 데이터 소스를 재사용할 수 있습니다. 여러 다른 데이터베이스 또는 테이블에 액세스 하려는 경우에 각 데이터베이스 또는 디렉터리에 대 한 별도 데이터 소스를 만들 수 있습니다.  
+ 시스템에 데이터 원본이 있으면 Visual FoxPro 데이터에 액세스할 때마다 동일한 데이터 원본을 다시 사용할 수 있습니다. 액세스 하려는 데이터베이스가 여러 개 있는 경우 각 데이터베이스 또는 디렉터리에 대 한 별도의 데이터 원본을 만들 수 있습니다.  
   
- 다음 절차는 제어판을 사용 하 여 데이터 원본을 만듭니다. 응용 프로그램에서 데이터 원본을 만드는 방법에 대 한 자세한 내용은 참조 하세요. [Microsoft Office에서 Visual FoxPro 데이터 액세스](../../odbc/microsoft/accessing-visual-foxpro-data-from-microsoft-office.md)합니다.  
+ 다음 절차는 제어판을 사용 하 여 데이터 소스를 만듭니다. 응용 프로그램에서 데이터 소스를 만드는 방법에 대 한 자세한 내용은 [Microsoft Office에서 Visual FoxPro 데이터에 액세스](../../odbc/microsoft/accessing-visual-foxpro-data-from-microsoft-office.md)를 참조 하세요.  
   
 ### <a name="to-add-a-visual-foxpro-data-source"></a>Visual FoxPro 데이터 원본을 추가 하려면  
   
-1.  Windows 2000을 실행 하는 컴퓨터에서 Windows 제어판을 열고 관리 도구를 두 번 클릭 합니다.  
+1.  Windows 2000를 실행 하는 컴퓨터에서 Windows 제어판을 열고 관리 도구를 두 번 클릭 합니다.  
   
-2.  데이터 원본 (ODBC) ODBC 데이터 원본 관리자 대화 상자를 열려면 두 번 클릭 합니다. Visual FoxPro ODBC 드라이버 또는 모든 ODBC 드라이버 소프트웨어를 설치한 후이 아이콘은 사용할 수 있습니다.  
+2.  데이터 원본 (ODBC)을 두 번 클릭 하 여 ODBC 데이터 원본 관리자 대화 상자를 엽니다. 이 아이콘은 Visual FoxPro ODBC 드라이버 또는 ODBC 드라이버 소프트웨어를 설치한 후에 사용할 수 있습니다.  
   
     > [!NOTE]  
-    >  이전 버전의 Windows 실행 하는 경우 Windows 제어판을 열고 32 비트 ODBC 또는 ODBC는 ODBC 데이터 원본 관리자 대화 상자를 열려면 두 번 클릭 합니다.  
+    >  이전 버전의 Windows를 실행 하는 경우 Windows 제어판을 열고 32 비트 ODBC 또는 ODBC를 두 번 클릭 하 여 ODBC 데이터 원본 관리자 대화 상자를 엽니다.  
   
 3.  추가를 클릭합니다.  
   
-4.  새 데이터 원본 만들기 대화 상자에서 Microsoft Visual FoxPro 드라이버를 선택 하 고 마침을 클릭 합니다.  
+4.  새 데이터 소스 만들기 대화 상자에서 Microsoft Visual FoxPro 드라이버를 선택한 다음 마침을 클릭 합니다.  
   
-5.  에 [ODBC Visual FoxPro 설치 대화 상자가](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md), 데이터 원본 이름 및 설명을 입력, 데이터베이스 유형 선택, 데이터베이스 또는 디렉터리를 선택 및 확인을 클릭 합니다.  
+5.  [ODBC Visual FoxPro 설정 대화 상자](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)에서 데이터 원본 이름 및 설명을 입력 하 고 데이터베이스 유형을 선택한 다음 데이터베이스 또는 디렉터리를 선택 하 고 확인을 클릭 합니다.  
   
-     새 데이터 원본 이름은 ODBC 데이터 원본 관리자 대화 상자의 사용자 DSN 탭에서 사용자 데이터 원본 목록에 표시 됩니다.  
+     ODBC 데이터 원본 관리자 대화 상자의 사용자 DSN 탭에 있는 사용자 데이터 원본 목록에 새 데이터 원본 이름이 표시 됩니다.  
   
-6.  새 데이터 원본을 저장 하 여 ODBC 데이터 원본 관리자 대화 상자를 닫으려면 확인을 클릭 합니다.
+6.  확인을 클릭 하 여 새 데이터 원본을 저장 하 고 ODBC 데이터 원본 관리자 대화 상자를 닫습니다.

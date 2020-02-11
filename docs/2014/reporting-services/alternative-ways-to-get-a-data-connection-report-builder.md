@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 36f489f25adc9746f844a6289ca8a2849ad83870
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109994"
 ---
 # <a name="alternative-ways-to-get-a-data-connection-report-builder"></a>데이터에 연결하는 다른 방법(보고서 작성기)
@@ -31,7 +31,8 @@ ms.locfileid: "66109994"
   
 #### <a name="to-specify-a-data-connection-from-a-list-of-shared-data-sources"></a>공유 데이터 원본 목록을 사용하여 데이터 연결을 지정하려면  
   
-1.  **데이터 집합 선택** 페이지에서 **데이터 집합 만들기**를 선택하고 **다음**을 클릭합니다. **데이터 원본에 대한 연결 선택** 페이지가 열립니다.  
+1.  
+  **데이터 세트 선택** 페이지에서 **데이터 세트 만들기**를 선택한 후, **다음**을 클릭합니다. **데이터 원본에 대한 연결 선택** 페이지가 열립니다.  
   
 2.  데이터 원본 목록에서 액세스할 권한이 있는 데이터 원본을 선택합니다.  
   
@@ -45,7 +46,8 @@ ms.locfileid: "66109994"
   
 #### <a name="to-specify-a-data-connection-by-browsing-to-a-shared-data-source-on-a-report-server"></a>보고서 서버에서 공유 데이터 원본을 찾아 데이터 연결을 지정하려면  
   
-1.  **데이터 집합 선택** 페이지에서 **데이터 집합 만들기**를 선택하고 **다음**을 클릭합니다. **데이터 원본에 대한 연결 선택** 페이지가 열립니다.  
+1.  
+  **데이터 세트 선택** 페이지에서 **데이터 세트 만들기**를 선택한 후, **다음**을 클릭합니다. **데이터 원본에 대한 연결 선택** 페이지가 열립니다.  
   
 2.  **찾아보기**를 클릭합니다. **데이터 원본 선택** 대화 상자가 열립니다.  
   
@@ -71,8 +73,8 @@ ms.locfileid: "66109994"
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>관련 항목  
- [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](report-data/report-datasets-ssrs.md)   
+## <a name="see-also"></a>참고 항목  
+ [보고서 &#40;보고서 작성기 및 SSRS&#41;에 데이터를 추가 합니다.](report-data/report-datasets-ssrs.md)   
  [자습서 &#40;보고서 작성기&#41;](report-builder-tutorials.md)  
   
   

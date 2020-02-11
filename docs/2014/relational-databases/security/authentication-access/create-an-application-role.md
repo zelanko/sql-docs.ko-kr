@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 032c371fd37bb66392761fff24bd30efb2bd5b37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011943"
 ---
 # <a name="create-an-application-role"></a>애플리케이션 역할 만들기
@@ -33,9 +33,9 @@ ms.locfileid: "63011943"
   
      [보안](#Security)  
   
--   **다음을 사용하여 응용 프로그램 역할을 만듭니다.**  
+-   **다음을 사용하여 애플리케이션 역할을 만듭니다.**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "63011943"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  데이터베이스에 대한 ALTER ANY APPLICATION ROLE 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -69,7 +69,7 @@ ms.locfileid: "63011943"
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>추가 옵션  
- 합니다 **응용 프로그램 역할-새** 대화 상자는 또한 두 개의 추가 페이지인 옵션을 제공 합니다. **보안 개체** 하 고 **확장 속성**합니다.  
+ **애플리케이션 역할 – 신규** 대화 상자는 또한 두 개의 추가 페이지인 **보안 개체** 및 **확장 속성**을 제공합니다.  
   
 -   **보안 개체** 페이지에는 사용 가능한 모든 보안 개체와 이러한 보안 개체에서 로그인에 부여할 수 있는 권한이 나열됩니다.  
   

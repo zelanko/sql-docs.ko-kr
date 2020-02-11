@@ -1,5 +1,5 @@
 ---
-title: 추가 및 CreateParameter 메서드 예제 (VB) | Microsoft Docs
+title: Append 및 CreateParameter 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 46908cbd-434f-43e7-a794-ed0be0e0c0a7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 60ea4653fac6bd2fada500d562420b1ff705d4d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920715"
 ---
 # <a name="append-and-createparameter-methods-example-vb"></a>Append 및 CreateParameter 메서드 예제(VB)
-이 예제에서는 합니다 [Append](../../../ado/reference/ado-api/append-method-ado.md) 및 [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) 입력된 매개 변수를 사용 하 여 저장된 프로시저를 실행 하는 방법입니다.  
+이 예에서는 [Append](../../../ado/reference/ado-api/append-method-ado.md) 및 [createparameter](../../../ado/reference/ado-api/createparameter-method-ado.md) 메서드를 사용 하 여 입력 매개 변수를 사용 하 여 저장 프로시저를 실행 합니다.  
   
 ```  
 'BeginAppendVB  
@@ -119,9 +119,9 @@ End Sub
 'EndAppendVB  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Append 메서드 (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [CreateParameter 메서드 (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Field 개체](../../../ado/reference/ado-api/field-object.md)   
- [필드 컬렉션 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Fields 컬렉션 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Parameter 개체](../../../ado/reference/ado-api/parameter-object.md)

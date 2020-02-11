@@ -13,19 +13,19 @@ ms.assetid: 98db9631-eb9b-4962-abe4-96f495133a5d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 20043c96771bf888defa2c8fbeb028aaa18f5abc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905340"
 ---
 # <a name="sqlsetstmtoption-desktop-database-drivers"></a>SQLSetStmtOption(데스크톱 데이터베이스 드라이버)
 
 |*fOption*|주석|  
 |---------------|--------------|  
-|SQL_ASYNC_ENABLE|비동기 처리가 지원 되지 않습니다. SQL_ASYNC_ENABLE fOption SQLSTATE S1C00 반환 됩니다 (드라이버를 사용할 수 없습니다.).|  
-|SQL_KEYSET_SIZE|혼합 하기 때문에 유효한 키 크기는 0, 및 동적 커서는 지원 되지 않습니다. 이 값을 다른 숫자를 설정 하는 경우 0으로 변경 됩니다 및 호출 SQL_SUCCESS_WITH_INFO 및 SQLSTATE 01S02를 반환 합니다 (옵션 값이 변경 됨).|  
-|SQL_MAX_ROWS|유효한 행 집합 크기는 0, 데스크톱 데이터베이스 드라이버에 반환 되는 행 수를 제한 지원 하지 않기 때문입니다. 이 값을 다른 숫자를 설정 하는 경우 0으로 변경 됩니다 및 호출 SQL_SUCCESS_WITH_INFO 및 SQLSTATE 01S02를 반환 합니다 (옵션 값이 변경 됨).|  
+|SQL_ASYNC_ENABLE|비동기 처리가 지원 되지 않습니다. SQL_ASYNC_ENABLE fOption은 SQLSTATE S1C00 (드라이버를 사용할 수 없음)를 반환 합니다.|  
+|SQL_KEYSET_SIZE|혼합 및 동적 커서는 지원 되지 않으므로 올바른 키 집합 크기는 0입니다. 이 값을 다른 숫자로 설정 하면 0으로 변경 되 고 호출은 SQL_SUCCESS_WITH_INFO 및 SQLSTATE 01 S 02 (옵션 값이 변경 됨)를 반환 합니다.|  
+|SQL_MAX_ROWS|데스크톱 데이터베이스 드라이버는 반환 되는 행 수를 제한 하는 것을 지원 하지 않으므로 올바른 행 집합 크기는 0입니다. 이 값을 다른 숫자로 설정 하면 0으로 변경 되 고 호출은 SQL_SUCCESS_WITH_INFO 및 SQLSTATE 01 S 02 (옵션 값이 변경 됨)를 반환 합니다.|  
 |SQL_QUERY_TIMEOUT|지원되지 않습니다.|  
 |SQL_ROW_NUMBER|지원되지 않습니다.|  
 |SQL_SIMULATE_CURSOR|지원되지 않습니다.|

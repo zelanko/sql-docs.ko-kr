@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b45328614bbefe730c815f528e82f220ad0093e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905513"
 ---
 # <a name="linregvariance-mdx"></a>LinRegVariance(MDX)
 
 
-  집합의 선형 회귀를 계산 하 고 회귀선을 사용 하 여 연관 된 분산을 반환 합니다 y = ax + b입니다.  
+  집합의 선형 회귀를 계산 하 고 회귀선 y = ax + b와 연관 된 분산을 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,16 +38,16 @@ LinRegVariance(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] ] 
  X축 값을 나타내는 숫자를 반환하는 셀 좌표의 유효한 숫자 식으로서, 일반적으로 MDX 식입니다.  
   
 ## <a name="remarks"></a>설명  
- 최소 제곱법을 사용하는 선형 회귀는 일련의 점에 대해 가장 적합한 선인 회귀선의 수식을 계산합니다. 회귀선은 다음 수식을 여기서는 기울기 하 고 b는 절편입니다.  
+ 최소 제곱법을 사용하는 선형 회귀는 일련의 점에 대해 가장 적합한 선인 회귀선의 수식을 계산합니다. 회귀선에는 다음과 같은 수식이 있습니다. 여기서 a는 기울기이 고 b는 절편입니다.  
   
  y = ax+b  
   
- 합니다 **LinRegVariance** 함수 계산 지정된 setagainst y 축에 대 한 값을 가져오는 첫 번째 숫자 식입니다. 다음 함수를 지정 하 여 x 축 값을 가져오려면 지정된 setagainst는 두 번째 숫자 식에를 평가 합니다. 두 번째 숫자 expressionis 지정 하지 않으면 함수는 x 축에 대 한 지정된 된 집합에서 셀의 현재 컨텍스트 값으로 사용 합니다. X축 인수를 지정하지 않는 방식은 Time 차원에서 자주 사용됩니다.  
+ **Linregvariance** 함수는 첫 번째 숫자 식에 대해 지정 된 setagainst를 계산 하 여 y 축 값을 구합니다. 그런 다음 함수는 두 번째 숫자 식 (지정 된 경우)에 대해 지정 된 setagainst를 계산 하 여 x 축 값을 구합니다. 두 번째 숫자 expressionis가 지정 되지 않은 경우이 함수는 지정 된 집합에 있는 셀의 현재 컨텍스트를 x 축 값으로 사용 합니다. X축 인수를 지정하지 않는 방식은 Time 차원에서 자주 사용됩니다.  
   
- 점의 집합을 구한 후 합니다 **LinRegVariance** 함수 지점에 대 한 선형 수식의 적합도 설명 하는 통계 분산을 반환 합니다.  
+ 점의 집합을 구한 후 **Linregvariance** 함수는 요소에 대 한 선형 수식의 적합도를 설명 하는 통계 분산을 반환 합니다.  
   
 > [!NOTE]  
->  합니다 **LinRegVariance** 함수는 빈 셀 이나 텍스트 또는 논리 값을 포함 하는 셀은 무시 합니다. 그러나 값이 0인 셀은 포함시킵니다.  
+>  **Linregvariance** 함수는 빈 셀 이나 텍스트 또는 논리 값을 포함 하는 셀을 무시 합니다. 그러나 값이 0인 셀은 포함시킵니다.  
   
 ## <a name="example"></a>예제  
  다음 예에서는 Unit Sales 및 Store Sales 측정값의 점에 대한 선형 수식의 적합도를 설명하는 통계 분산을 반환합니다.  
@@ -56,7 +56,7 @@ LinRegVariance(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] ] 
 LinRegVariance(LastPeriods(10),[Measures].[Unit Sales],[Measures].[Store Sales])  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

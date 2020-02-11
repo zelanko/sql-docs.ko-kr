@@ -16,40 +16,44 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 613c0ccae7be912bd3bec63905b838b7f07b59b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033583"
 ---
 # <a name="set-up-the-job-history-log"></a>Set Up the Job History Log
-  이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 기록 로그를 설정하는 방법에 대해 설명합니다.  
+  이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 기록 로그를 설정 하는 방법에 대해 설명 합니다.  
   
--   **시작하기 전 주의 사항:**  [보안](#Security)  
+-   **시작 하기 전 주의:**  [보안](#Security)  
   
--   **작업 기록 로그를 설정하려면 다음을 사용합니다.**  [SQL Server Management Studio](#SSMS)  
+-   **작업 기록 로그를 설정 하려면: SQL Server Management Studio을 사용 합니다.**[](#SSMS)    
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Security"></a> 보안  
- 자세한 내용은 [Implement SQL Server Agent Security](implement-sql-server-agent-security.md)을 참조하세요.  
+ 자세한 내용은 [SQL Server 에이전트 보안 구현](implement-sql-server-agent-security.md)을 참조하세요.  
   
 ##  <a name="SSMS"></a> SQL Server Management Studio 사용  
- **작업 기록 로그를 설정하려면**  
+ **작업 기록 로그를 설정 하려면**  
   
-1.  **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+1.  
+  **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
 2.  **SQL Server 에이전트**를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-3.  **SQL Server 에이전트 속성** 대화 상자에서 **기록** 페이지를 선택합니다.  
+3.  
+  **SQL Server 에이전트 속성** 대화 상자에서 **기록** 페이지를 선택합니다.  
   
 4.  다음 옵션 중에서 선택합니다.  
   
-    1.  **작업 기록 로그 크기 제한**을 선택한 다음 작업 기록 로그의 최대 행 수와 작업당 최대 행 수를 입력합니다.  
+    1.  
+  **작업 기록 로그 크기 제한**을 선택한 다음 작업 기록 로그의 최대 행 수와 작업당 최대 행 수를 입력합니다.  
   
-    2.  **자동으로 에이전트 기록 제거**를 선택한 다음 해당 기간보다 오래된 기록은 로그에서 삭제되도록 기간을 지정합니다.  
+    2.  
+  **자동으로 에이전트 기록 제거**를 선택한 다음 해당 기간보다 오래된 기록은 로그에서 삭제되도록 기간을 지정합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [작업 구현](implement-jobs.md)   
  [작업 활동 모니터링](monitor-job-activity.md)   
  [작업 만들기](create-jobs.md)  

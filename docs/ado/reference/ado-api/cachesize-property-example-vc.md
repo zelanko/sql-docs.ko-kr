@@ -15,14 +15,14 @@ ms.assetid: e0e7b7ba-3943-43cb-a2cd-0e4667187973
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 98670a6f63392a3f208eb7719b0be52a9422d59a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920252"
 ---
 # <a name="cachesize-property-example-vc"></a>CacheSize 속성 예제(VC++)
-이 예제에서는 합니다 [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) 작업에 대 한 성능 차이 표시 하는 속성 30 개의 레코드가 캐시 하지 않고 사용 하 여 수행 합니다.  
+이 예에서는 [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) 속성을 사용 하 여 30 레코드 캐시 없이 수행 된 작업의 성능 차이를 표시 합니다.  
   
 ```  
 // CacheSize_Property_Sample.cpp  
@@ -160,6 +160,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [CacheSize 속성 (ADO)](../../../ado/reference/ado-api/cachesize-property-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

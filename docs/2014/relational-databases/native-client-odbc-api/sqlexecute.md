@@ -13,19 +13,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3ad659cfb929ac5a489b069db0b6a5f2b8abdae7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067499"
 ---
 # <a name="sqlexecute"></a>SQLExecute
-  문 특성 SQL_SOPT_SS_PARAM_FOCUS를 0으로 SQLExecute 설정 되지 않은 SQL_ERROR가 반환 되며 sqlstate 진단 레코드를 생성 하는 경우 = HY024 및 "잘못 된 특성 값 SQL_SOPT_SS_PARAM_FOCUS (실행 시 0 이어야 함)". SQL_SOPT_SS_PARAM_FOCUS에 대한 자세한 내용은 [SQLSetStmtAttr](sqlsetstmtattr.md)을 참조하십시오.  
+  SQL_SOPT_SS_PARAM_FOCUS statement 특성이 0으로 설정 되지 않은 경우 SQLExecute는 SQL_ERROR를 반환 하 고 SQLSTATE = HY024 및 "잘못 된 특성 값, SQL_SOPT_SS_PARAM_FOCUS (실행 시 0 이어야 함)" 라는 메시지와 함께 진단 레코드를 생성 합니다. SQL_SOPT_SS_PARAM_FOCUS에 대한 자세한 내용은 [SQLSetStmtAttr](sqlsetstmtattr.md)을 참조하십시오.  
   
-## <a name="remarks"></a>Remarks  
- 테이블 반환 매개 변수에 대 한 자세한 내용은 참조 하세요. [테이블 반환 매개 변수 &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)합니다.  
+## <a name="remarks"></a>설명  
+ 테이블 반환 매개 변수에 대 한 자세한 내용은 [ODBC&#41;&#40;테이블 반환 매개 변수 ](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)를 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=80708)   
  [ODBC API 구현 정보](odbc-api-implementation-details.md)  
   

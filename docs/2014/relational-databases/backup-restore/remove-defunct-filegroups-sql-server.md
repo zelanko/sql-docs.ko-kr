@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2a59277110d91ffd40a2db7d62fd3a01aa109dfc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62921555"
 ---
 # <a name="remove-defunct-filegroups-sql-server"></a>존재하지 않는 파일 그룹 제거(SQL Server)
@@ -59,7 +59,7 @@ ms.locfileid: "62921555"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  데이터베이스에 대한 ALTER 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -86,7 +86,7 @@ ms.locfileid: "62921555"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. (**참고 합니다.** 이 예에서는 파일과 파일 그룹이 이미 존재 한다고 가정 합니다. 이러한 개체를 만들려면 [ALTER DATABASE 파일 및 파일 그룹 옵션](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options) 항목의 예제 B를 참조하세요. 첫 번째 예에서는 `test1dat3` 절과 함께 `test1dat4` 문을 사용하여 존재하지 않는 파일 그룹에서 `ALTER DATABASE` 및 `REMOVE FILE` 파일을 제거합니다. 두 번째 예에서는 `Test1FG1` 절을 사용하여 존재하지 않는 파일 그룹 `REMOVE FILEGROUP`을 제거합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. **참고:** 이 예제에서는 파일과 파일 그룹이 이미 있다고 가정합니다. 이러한 개체를 만들려면 [ALTER DATABASE 파일 및 파일 그룹 옵션](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options) 항목의 예제 B를 참조하세요. 첫 번째 예에서는 `test1dat3` 절과 함께 `test1dat4` 문을 사용하여 존재하지 않는 파일 그룹에서 `ALTER DATABASE` 및 `REMOVE FILE` 파일을 제거합니다. 두 번째 예에서는 `Test1FG1`절을 사용하여 존재하지 않는 파일 그룹 `REMOVE FILEGROUP` 을 제거합니다.  
   
 ```sql  
 USE master;  
@@ -108,7 +108,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ALTER DATABASE 파일 및 파일 그룹 옵션&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)   
  [지연된 트랜잭션&#40;SQL Server&#41;](deferred-transactions-sql-server.md)   
  [파일 복원&#40;전체 복구 모델&#41;](file-restores-full-recovery-model.md)   

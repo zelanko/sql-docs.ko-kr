@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 206ba778a5c131ac4f9260ed37de63b29de86820
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63025677"
 ---
 # <a name="save-trace-results-to-a-file-sql-server-profiler"></a>추적 결과를 파일에 저장(SQL Server Profiler)
@@ -54,7 +54,7 @@ ms.locfileid: "63025677"
         > [!NOTE]  
         >  **서버에서 추적 데이터 처리**가 선택되지 않은 경우 이벤트 기록으로 인해 성능이 크게 저하되면 서버는 이벤트를 기록하지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [SQL Server 프로파일러](sql-server-profiler.md)  
+## <a name="see-also"></a>참고 항목  
+ [SQL Server Profiler](sql-server-profiler.md)  
   
   

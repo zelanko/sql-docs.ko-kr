@@ -13,14 +13,14 @@ ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b6e591ecc9f366f3914986b0ae11e0e301b782d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924298"
 ---
 # <a name="schema-section"></a>스키마 섹션
-스키마 섹션은 필수입니다. 이전 예제에서 알 수 있듯이, ADO 데이터 값의 의미 체계를 업데이트 하기 위한 최대한 유지 하기 위해 각 열에 대 한 자세한 메타 데이터를 작성 합니다. 그러나 XML을 로드 하려면 ADO 하기만 열 및 속해 있는 행 집합의 이름입니다. 최소 스키마의 예는 다음과 같습니다.  
+스키마 섹션이 필요 합니다. 이전 예제에서 볼 수 있듯이 ADO는 각 열에 대 한 자세한 메타 데이터를 작성 하 여 데이터 값의 의미 체계를 업데이트 가능한 한 많이 유지 합니다. 그러나 XML에서 로드 하려면 ADO에 열 이름과 해당 열이 속한 행 집합만 필요 합니다. 최소 스키마의 예는 다음과 같습니다.  
   
 ```  
 <xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"  
@@ -40,10 +40,10 @@ ms.locfileid: "67924298"
 </xml>  
 ```  
   
- 이전 예제에서는 ADO는 처리 데이터를 가변 길이 문자열로 형식 정보가 없는 스키마에 포함 되어 있으므로 합니다.  
+ 이전 예제에서 ADO는 스키마에 형식 정보가 포함 되어 있지 않기 때문에 데이터를 가변 길이 문자열로 취급 합니다.  
   
-## <a name="creating-aliases-for-column-names"></a>열 이름에 대 한 별칭을 만드는 방법  
- Rs: 이름 특성을 사용 하면 이름을 노출 행 집합에서 열 정보에 나타날 수 있습니다 하 고 더 짧은 이름을 데이터 섹션에서 사용할 수 있도록 열 이름에 대 한 별칭을 만들 수 있습니다. 예를 들어, s1, s2, CompanyName ShipperID 매핑 및 s3 같이 Phone 이전 스키마를 변경할 수 있습니다.  
+## <a name="creating-aliases-for-column-names"></a>열 이름에 대 한 별칭 만들기  
+ Rs: name 특성을 사용 하면 열 이름에 대 한 별칭을 만들어 행 집합에 의해 노출 되는 열 정보에 이름이 표시 될 수 있으며 데이터 섹션에 더 짧은 이름을 사용할 수 있습니다. 예를 들어 앞의 스키마를 수정 하 여 다음과 같이가 나이를 s1, CompanyName을 s2로, Phone을 s 2에 매핑할 수 있습니다.  
   
 ```  
 <s:Schema id="RowsetSchema">   
@@ -62,19 +62,19 @@ ms.locfileid: "67924298"
 </s:Schema>  
 ```  
   
- 그런 다음 데이터 섹션에 행 사용 name 특성 (rs 이름이 아님) 해당 열을 참조 합니다.:  
+ 그런 다음 데이터 섹션에서 행은 name 특성 (rs: name 아님)을 사용 하 여 해당 열을 참조 합니다.  
   
 ```  
 "<row s1="1" s2="Speedy Express" s3="(503) 555-9831"/>  
 ```  
   
- 열 이름 별칭을 만드는 방법 열 이름을 유효한 특성 또는 xml에서 태그 이름이 없을 때마다 필요 합니다. 예를 들어, "LastName" 별칭이 있어야 공백이 포함된 된 이름은 잘못 된 특성 때문입니다. 다음 줄은 처리 되지 않습니다 올바르게 XML 파서에서 공백이 없는 다른 이름에 대 한 별칭을 만들어야 합니다.  
+ 열 이름이 XML에서 올바른 특성 또는 태그 이름이 아닐 때마다 열 이름에 대 한 별칭을 만드는 것이 필요 합니다. 예를 들어 공백이 포함 된 이름은 잘못 된 특성 이므로 "LastName"은 별칭을 포함 해야 합니다. 다음 줄은 XML 파서에서 올바르게 처리 되지 않으므로 공백을 포함 하지 않는 다른 이름에 대 한 별칭을 만들어야 합니다.  
   
 ```  
 <row last name="Jones"/>  
 ```  
   
- XML 문서의 스키마 및 데이터 섹션에서 참조 되는 열에는 각 위치에 name 특성에 사용할 값을 일관 되 게 사용 되어야 합니다. 다음 예제에서는 s1의 일관 된 사용을 보여 줍니다.  
+ Name 특성에 사용 하는 모든 값은 XML 문서의 스키마 및 데이터 섹션 모두에서 열이 참조 되는 각 위치의 일관 되 게 사용 되어야 합니다. 다음 예제에서는 s1을 일관 되 게 사용 하는 방법을 보여 줍니다.  
   
 ```  
 <s:Schema id="RowsetSchema">  
@@ -95,10 +95,10 @@ ms.locfileid: "67924298"
 </rs:data>  
 ```  
   
- 에 대 한 별칭이 없는 정의 되어 있기 때문에 마찬가지로 `CompanyName` 이전 예에서 `CompanyName` 문서 전체에서 일관 되 게 사용 해야 합니다.  
+ 마찬가지로, 이전 예제에서에 대해 `CompanyName` 정의 된 별칭이 없기 때문에 문서 `CompanyName` 전체에서를 일관 되 게 사용 해야 합니다.  
   
 ## <a name="data-types"></a>데이터 형식  
- Dt: type 특성을 사용 하 여 열 데이터 형식에 적용할 수 있습니다. 허용 되는 XML 형식에 선언적 가이드의 데이터 형식 섹션을 참조 합니다 [W3C XML 데이터 사양](http://www.w3.org/TR/1998/NOTE-XML-data/)합니다. 두 가지 방법으로 데이터 형식을 지정할 수 있습니다: 열 정의 자체가에 직접 dt: type 특성을 지정 하거나 방법 열 정의의 중첩 된 요소로 사용 합니다. 예:  
+ Dt: type 특성을 사용 하 여 열에 데이터 형식을 적용할 수 있습니다. 허용 되는 XML 유형에 대 한 명확한 지침은 [W3C XML 데이터 사양의](http://www.w3.org/TR/1998/NOTE-XML-data/)데이터 형식 섹션을 참조 하세요. 다음 두 가지 방법으로 데이터 형식을 지정할 수 있습니다. 열 정의 자체에는 dt: type 특성을 직접 지정 하거나, 열 정의의 중첩 된 요소로는 다음과 같은 두 가지 방법을 사용 합니다. 예를 들면 다음과 같습니다.  
   
 ```  
 <s:AttributeType name="Phone" >  
@@ -106,17 +106,17 @@ ms.locfileid: "67924298"
 </s:AttributeType>  
 ```  
   
- 위의 식은 아래의 식과 동일합니다.  
+ 이는 다음과 동등합니다.  
   
 ```  
 <s:AttributeType name="Phone" dt:type="string"/>  
 ```  
   
- 기본적으로 행 정의에서 완전히 dt: type 특성을 생략 하면 가변 길이 문자열 열의 형식이 됩니다.  
+ 행 정의에서 완전히 dt: type 특성을 생략 하는 경우 기본적으로 열의 형식은 가변 길이 문자열이 됩니다.  
   
- 간단한 형식 이름 (예를 들어 dt: maxlength) 보다 더 많은 형식 정보에 있는 경우이 있도록 s:datatype 자식 요소를 사용 하는 것이 쉬운 합니다. 그러나이 단순히에서 규칙을 요구 사항이 아니라 있습니다.  
+ 형식 이름 (예: dt: maxLength) 보다 더 많은 형식 정보가 있는 경우에는이를 통해 내용 데이터 형식 자식 요소를 보다 읽기 쉽게 만들 수 있습니다. 그러나이는 단순한 규칙 이지만 요구 사항은 아닙니다.  
   
- 다음 예제에서는 추가 스키마에 형식 정보를 포함 하는 방법을 표시 합니다.  
+ 다음 예제에서는 스키마에 형식 정보를 포함 하는 방법을 자세히 보여 줍니다.  
   
 ```  
 <!-- 1. String with no max length -->  
@@ -138,10 +138,10 @@ ms.locfileid: "67924298"
 <s:AttributeType name="title_id" dt:type="int"/>  
 ```  
   
- 두 번째 예제에서 rs: fixedlength 특성을 사용 하는 미묘한 있습니다. Rs: fixedlength 특성을 가진 열을 데이터 스키마에 정의 된 길이 포함 해야 하는 true로 설정 합니다. 이 경우 title_id에 대 한 유효한 값은 "123456,"는 "123"입니다. 그러나 "123" 해당 길이 3, 6 하지 때문에 하지 유효한 것입니다. Fixedlength 속성 설명은 완료 더에 대 한 OLE DB Programmer's Guide를 참조 하세요.  
+ 두 번째 예제에는 rs: fixedlength 특성의 미묘한 사용이 있습니다. Rs: fixedlength 특성이 true로 설정 된 열은 데이터의 길이가 스키마에 정의 되어 있어야 함을 의미 합니다. 이 경우 title_id의 유효한 값은 "123"와 같이 "123456"입니다. 그러나 "123"은 길이가 6이 아니라 3 이므로 유효 하지 않습니다. Fixedlength 속성에 대 한 자세한 설명은 OLE DB 프로그래머 가이드를 참조 하세요.  
   
 ## <a name="handling-nulls"></a>Null 처리  
- Rs: maybenull 특성으로 null 값 처리 됩니다. 이 특성이로 설정 된 경우 true 이면 열 내용의 수 null 값을 포함 합니다. 또한 열 데이터의 행에 없는 경우 행 집합에서 다시 데이터를 읽는 사용자는 IRowset::GetData()에서 null 상태를을 받게 됩니다. Shippers 테이블에서 다음 열 정의 고려해 야 합니다.  
+ Null 값은 rs: maybenull 특성에 의해 처리 됩니다. 이 특성을 true로 설정 하면 열의 내용에 null 값이 포함 될 수 있습니다. 또한 데이터 행에서 열을 찾을 수 없는 경우에는 행 집합에서 데이터를 다시 읽는 사용자가 IRowset:: GetData ()에서 null 상태를 가져옵니다. 운송 테이블에서 다음과 같은 열 정의를 고려 합니다.  
   
 ```  
 <s:AttributeType name="ShipperID">  
@@ -152,27 +152,27 @@ ms.locfileid: "67924298"
 </s:AttributeType>  
 ```  
   
- 정의 사용 하면 `CompanyName` null 일 수 있지만 `ShipperID` null 값을 포함할 수 없습니다. 데이터 섹션에서 다음 행에 포함 하는 경우 지 속성 공급자 설정에 대 한 데이터의 상태는 `CompanyName` OLE DB 상태 상수 DBSTATUS_S_ISNULL 열:  
+ 정의 `CompanyName` 는 null이 될 수 있지만 `ShipperID` null 값을 포함할 수 없습니다. 데이터 섹션에 다음 행이 포함 된 경우 지 속성 공급자는 `CompanyName` 열에 대 한 데이터의 상태를 OLE DB 상태 상수 DBSTATUS_S_ISNULL 설정 합니다.  
   
 ```  
 <z:row ShipperID="1"/>  
 ```  
   
- 지 속성 공급자는 OLE DB 상태에 대 한 DBSTATUS_E_UNAVAILABLE의 반환 행 인 경우 완전히 비어 있는 경우 다음과 같이 `ShipperID` 및 DBSTATUS_S_ISNULL CompanyName에 대 한 합니다.  
+ 다음과 같이 행이 완전히 비어 있으면 지 속성 공급자는에 대해 `ShipperID` DBSTATUS_E_UNAVAILABLE OLE DB 상태를 반환 하 고 CompanyName에 대해 DBSTATUS_S_ISNULL을 반환 합니다.  
   
 ```  
 <z:row/>   
 ```  
   
- 길이가 0 인 문자열은 null로 동일한 note 합니다.  
+ 길이가 0 인 문자열은 null과 같지 않습니다.  
   
 ```  
 <z:row ShipperID="1" CompanyName=""/>  
 ```  
   
- 이전 행에 대 한 지 속성 공급자는 OLE DB 상태 DBSTATUS_S_OK의 두 열 모두에 대 한 반환 합니다. `CompanyName` 여기서는 단순히 "" (빈 문자열)입니다.  
+ 이전 행의 경우 지 속성 공급자는 두 열에 대해 DBSTATUS_S_OK의 OLE DB 상태를 반환 합니다. 이 `CompanyName` 경우는 단순히 "" (빈 문자열)입니다.  
   
- OLE DB에 대 한 자세한 내용은 OLE DB에 대 한 XML 문서의 스키마 내에서 사용 하기 위해 사용할 수 있는 구문을 정의 참조 "urn: 스키마-microsoft-com:rowset" 및 OLE DB 프로그래머 가이드입니다.  
+ OLE DB XML 문서 스키마 내에서 사용할 수 있는 OLE DB 구문에 대 한 자세한 내용은 "urn: schema-microsoft-com: rowset"의 정의 및 OLE DB 프로그래머 가이드를 참조 하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 형식으로 레코드 유지](../../../ado/guide/data/persisting-records-in-xml-format.md)

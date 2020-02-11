@@ -15,14 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5636ac5193c13b58ec263b8aae3e17466d968fb7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63012274"
 ---
 # <a name="setting-the-item-namespace-for-the-getproperties-method"></a>GetProperties 메서드에 대한 항목 네임스페이스 설정
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 <xref:ReportService2010.ItemNamespaceHeader> SOAP 헤더를 사용하여 서로 다른 항목 식별자인 항목의 전체 경로 또는 항목의 ID를 기준으로 항목 속성을 검색할 수 있습니다.  
+  <xref:ReportService2010.ItemNamespaceHeader>에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SOAP 헤더를 사용하여 서로 다른 항목 식별자인 항목의 전체 경로 또는 항목의 ID를 기준으로 항목 속성을 검색할 수 있습니다.  
   
  <xref:ReportService2010.ReportingService2010.GetProperties%2A> 메서드를 호출할 때 일반적으로 속성을 검색하려는 항목의 전체 경로를 인수로 전달합니다. <xref:ReportService2010.ItemNamespaceHeader>를 사용하여 메서드 호출에 대해 SOAP 헤더를 설정하면 항목의 ID를 식별자로 전달하여 <xref:ReportService2010.ReportingService2010.GetProperties%2A>를 사용할 수 있습니다.  
   
@@ -119,7 +119,7 @@ class Sample
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [기술 참조&#40;SSRS&#41;](../technical-reference-ssrs.md)   
  [Reporting Services SOAP 헤더 사용](using-reporting-services-soap-headers.md)  
   

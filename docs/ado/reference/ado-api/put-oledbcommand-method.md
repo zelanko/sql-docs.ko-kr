@@ -13,14 +13,14 @@ ms.assetid: ca6a5804-bf5c-4afc-99db-22904bc0b33d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e182792a78d07cd6423b4409be95872c707791d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917420"
 ---
-# <a name="putoledbcommand-method"></a>put_OLEDBCommand 메서드
-이 메서드는 아무 작업도 수행 하 고 항상 S_OK를 반환 합니다.  
+# <a name="put_oledbcommand-method"></a>put_OLEDBCommand 메서드
+이 메서드는 작업을 수행 하지 않으며 항상 S_OK을 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -33,7 +33,7 @@ HRESULT put_OLEDBCommand(
   
 #### <a name="parameters"></a>매개 변수  
  *pOLEDBCommand*  
- [in] OLE DB 명령 개체에 대 한 포인터입니다.  
+ 진행 OLE DB Command 개체에 대 한 포인터입니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [IADOCommandConstruction](https://msdn.microsoft.com/library/windows/desktop/aa965677.aspx)

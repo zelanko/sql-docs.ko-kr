@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3c3747149b23c6217f321eff9d19621189b89b66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011984"
 ---
 # <a name="create-a-database-schema"></a>데이터베이스 스키마 만들기
@@ -35,9 +35,9 @@ ms.locfileid: "63011984"
   
      [보안](#Security)  
   
--   **다음을 사용하여 스키마를 만듭니다.**  
+-   **다음을 사용 하 여 스키마를 만듭니다.**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "63011984"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
   
 -   데이터베이스에 대한 CREATE SCHEMA 권한이 필요합니다.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "63011984"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>추가 옵션  
- **스키마 - 신규** 대화 상자에는 또한 **사용 권한** 및 **확장 속성**의 두 가지 추가 페이지의 옵션이 제공됩니다.  
+ **스키마 – 신규** 대화 상자는 또한 두 개의 추가 페이지인 **권한** 및 **확장 속성**을 제공합니다.  
   
 -   **사용 권한** 페이지에는 사용 가능한 모든 보안 개체와 이러한 보안 개체에서 로그인에 부여할 수 있는 권한이 나열됩니다.  
   

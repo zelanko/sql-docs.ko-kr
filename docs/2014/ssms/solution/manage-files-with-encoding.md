@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 22b1c18cba793d5845e2adf92b1dca300911a72f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62823803"
 ---
 # <a name="manage-files-with-encoding"></a>인코딩으로 파일 관리
@@ -42,7 +42,7 @@ ms.locfileid: "62823803"
   
 #### <a name="to-save-a-file-with-a-different-encoding-or-line-ending-type"></a>다른 인코딩 또는 줄 끝 형식으로 파일을 저장하려면  
   
-1.  에 **파일** 메뉴에서 클릭 **저장 \<파일 이름 >으로**입니다.  
+1.  **파일** 메뉴에서 다른 **이름으로 파일 \<이름> 저장**을 클릭 합니다.  
   
 2.  **다른 이름으로 파일 저장** 대화 상자에서 **저장** 단추를 확장한 다음 **인코딩하여 저장**을 클릭합니다.  
   
@@ -61,8 +61,8 @@ ms.locfileid: "62823803"
   
 -   UTF8 파일의 경우에는 체크 인, 체크 아웃, 차이 검사 및 병합 중에 UTF8 파일 편집기의 문제를 일으키는 변경 내용이 적용되기 때문에 Visual SourceSafe에서 안전하게 작동하지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [솔루션 및 프로젝트 관리 파일](files-that-manage-solutions-and-projects.md)   
+## <a name="see-also"></a>참고 항목  
+ [솔루션 및 프로젝트를 관리 하는 파일](files-that-manage-solutions-and-projects.md)   
  [파일 확장명을 코드 편집기에 연결](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
   
   

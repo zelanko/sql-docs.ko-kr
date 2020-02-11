@@ -1,5 +1,5 @@
 ---
-title: '매개 변수 (Visual C++ #import 구문 인덱스) | Microsoft Docs'
+title: 매개 변수 (#import를 사용 하는 Visual C++ 구문 인덱스) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,13 +16,13 @@ ms.assetid: 6b43cf70-9695-47b0-9e68-f36898859b6b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ad717081698efcc3c976376a8f1f1f3cab604e54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917759"
 ---
-# <a name="parameter-visual-c-syntax-index-with-import"></a>매개 변수 (Visual C++ #import 구문 인덱스)
+# <a name="parameter-visual-c-syntax-index-with-import"></a>매개 변수 (#import를 사용 하는 Visual C++ 구문 인덱스)
 ## <a name="methods"></a>메서드  
   
 ```  
@@ -69,5 +69,5 @@ void PutValue( const _variant_t & pvar );
 __declspec(property(get=GetValue,put=PutValue)) _variant_t Value;  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Parameter 개체](../../../ado/reference/ado-api/parameter-object.md)

@@ -1,5 +1,5 @@
 ---
-title: 형식 및 멤버 Microsoft.VisualBasic.dll에 허용 되지 않는 | Microsoft Docs
+title: Microsoft.visualbasic에 허용 되지 않는 형식 및 멤버 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,19 +14,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7905d620cb9bff24f92e73929322ed995a1d8ba0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919652"
 ---
 # <a name="disallowed-types-and-members-in-microsoftvisualbasicdll"></a>Microsoft.VisualBasic.dll에 허용되지 않는 유형 및 멤버
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식 또는 멤버에는 사용할 수 없게 하는 공용 언어 통합 (CLR) 프로그래밍을 `HostProtectionAttribute` 를 지정 하는 `System.Security.Permissions.HostProtectionResource` 열거형의 값을 사용 하 여 `ExternalProcessMgmt`, `ExternalThreading`, `MayLeakOnAbort`, `SecurityInfrastructure`, `SelfAffectingProcessMgmnt`, `SelfAffectingThreading`, **: SharedState**합니다 `Synchronization`, 또는 `UI`합니다. 다음 표에는 HPA(호스트 보호 특성) 값이 허용되지 않는 `Microsoft.VisualBasic.dll` 어셈블리의 멤버 및 유형이 나열되어 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]CLR (공용 `HostProtectionAttribute` 언어 통합) 프로그래밍에서는 `System.Security.Permissions.HostProtectionResource` `ExternalProcessMgmt`, `ExternalThreading` `MayLeakOnAbort` `SecurityInfrastructure` `SelfAffectingProcessMgmnt` `SelfAffectingThreading`,,,,, **sharedstate**, `Synchronization`또는 `UI`값을 사용 하 여 열거형을 지정 하는가 있는 형식 또는 멤버를 사용할 때를 허용 하지 않습니다. 다음 표에는 HPA(호스트 보호 특성) 값이 허용되지 않는 `Microsoft.VisualBasic.dll` 어셈블리의 멤버 및 유형이 나열되어 있습니다.  
   
 > [!NOTE]  
 >  이 목록은 지원되는 어셈블리에서 생성되었습니다. 자세한 내용은 [Supported .NET Framework Libraries](../clr-integration/database-objects/supported-net-framework-libraries.md)을 참조하세요.  
   
-|**형식 또는 멤버**|**HPA 값**|  
+|**유형 또는 멤버**|**HPA 값**|  
 |------------------------|------------------------|  
 |Microsoft.VisualBasic.ApplicationServices.ApplicationBase|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeCulture()|ExternalProcessMgmt|  
@@ -64,25 +64,25 @@ ms.locfileid: "62919652"
 |Microsoft.VisualBasic.Interaction.MsgBox()|UI|  
 |Microsoft.VisualBasic.Logging.AspLog|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.Logging.FileLogTraceListener..ctor()|ExternalProcessMgmt|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.Close()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.Dispose()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.Flush()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.GetSupportedAttributes()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceData()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceEvent()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.Write()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.WriteLine()|Synchronization|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.Close()|동기화|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.Dispose()|동기화|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.Flush()|동기화|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.GetSupportedAttributes()|동기화|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceData()|동기화|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceEvent()|동기화|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.Write()|동기화|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.WriteLine()|동기화|  
 |Microsoft.VisualBasic.Logging.Log|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.MyServices.ClipboardProxy|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.MyServices.FileSystemProxy|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.MyServices.RegistryProxy|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.MyServices.SpecialDirectoriesProxy|ExternalProcessMgmt|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [호스트 보호 특성 및 CLR 통합 프로그래밍](host-protection-attributes-and-clr-integration-programming.md)   
- [Mscorlib.dll에 허용 되지 않는 유형 및 멤버](disallowed-types-and-members-in-mscorlib-dll.md)   
- [Disallowed Types and Members in System.dll](disallowed-types-and-members-in-system-dll.md)   
- [System.Data.dll에 허용 되지 않는 유형 및 멤버](disallowed-types-and-members-in-system-data-dll.md)   
- [System.Core.dll에 허용되지 않는 형식 및 멤버](disallowed-types-and-members-in-system-core-dll.md)  
+ [Mscorlib.dll에 허용 되지 않는 형식 및 멤버](disallowed-types-and-members-in-mscorlib-dll.md)   
+ [System.object의 허용 되지 않는 형식 및 멤버](disallowed-types-and-members-in-system-dll.md)   
+ [System.object의 허용 되지 않는 형식 및 멤버](disallowed-types-and-members-in-system-data-dll.md)   
+ [System.Core.dll에 허용되지 않는 유형 및 멤버](disallowed-types-and-members-in-system-core-dll.md)  
   
   

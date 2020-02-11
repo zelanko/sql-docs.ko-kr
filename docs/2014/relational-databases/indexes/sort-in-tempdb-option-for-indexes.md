@@ -18,13 +18,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 49a10795cbb9177837960739890baebc221c0712
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035602"
 ---
-# <a name="sortintempdb-option-for-indexes"></a>인덱스에 대한 SORT_IN_TEMPDB 옵션
+# <a name="sort_in_tempdb-option-for-indexes"></a>인덱스에 대한 SORT_IN_TEMPDB 옵션
   인덱스를 만들거나 다시 만들 때 SORT_IN_TEMPDB 옵션을 ON으로 설정하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서 **tempdb** 를 사용하여 인덱스를 만드는 데 사용되는 중간 정렬 결과를 저장하도록 지시할 수 있습니다. 이 옵션을 사용하면 인덱스를 만드는 데 사용되는 임시 디스크 공간이 늘어나지만 **tempdb** 가 사용자 데이터베이스와 다른 디스크 집합에 있을 때 인덱스를 만들거나 다시 만드는 데 필요한 시간이 줄어듭니다. **tempdb**에 대한 자세한 내용은 [인덱스 생성 메모리 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)를 참조하십시오.  
   
 ## <a name="phases-of-index-building"></a>인덱스를 만드는 단계  
@@ -36,7 +36,7 @@ ms.locfileid: "63035602"
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 정렬된 단일 스트림으로 인덱스 리프 행의 정렬된 실행을 병합합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 정렬 병합 구성 요소는 각 정렬 실행의 첫 페이지에서 시작하여 모든 페이지에서 가장 낮은 키를 찾은 다음 인덱스 만들기 구성 요소에 리프 행을 전달합니다. 다음으로 가장 낮은 키를 처리하는 식으로 이 과정이 계속됩니다. 마지막 리프 인덱스 행이 정렬 실행 페이지에서 추출되면 프로세스는 해당 정렬 실행에서 다음 페이지로 전환됩니다. 정렬 실행 익스텐트의 모든 페이지가 처리되면 익스텐트가 해제됩니다. 각 리프 인덱스 행이 인덱스 만들기 구성 요소에 전달되면 버퍼의 리프 인덱스 페이지에 포함됩니다. 각 리프 페이지는 채워진 후에 쓰여집니다. 리프 페이지가 쓰여지면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 도 인덱스의 상위 수준을 만듭니다. 각 상위 수준 인덱스 페이지는 채워진 후에 쓰여집니다.  
   
-## <a name="sortintempdb-option"></a>SORT_IN_TEMPDB 옵션  
+## <a name="sort_in_tempdb-option"></a>SORT_IN_TEMPDB 옵션  
  SORT_IN_TEMPDB를 기본값인 OFF로 설정한 경우 기본적으로 정렬 실행은 대상 파일 그룹에 저장됩니다. 인덱스를 만드는 첫째 단계 동안 기본 테이블 페이지의 읽기와 정렬 실행의 쓰기가 번갈아 수행되어 디스크의 한 영역에서 다른 영역으로 디스크 읽기/쓰기 헤드가 이동됩니다. 이 헤드는 데이터 페이지가 검색될 때 데이터 페이지 영역에 있습니다. 정렬 버퍼가 채워지고 현재 정렬 실행이 디스크에 쓰여져야 할 때 이러한 헤드는 빈 영역으로 이동했다가 테이블 페이지 검색이 다시 시작될 때 데이터 페이지 영역으로 다시 돌아갑니다. 읽기/쓰기 헤드 이동은 둘째 단계에서 더 많이 수행됩니다. 이 단계에서 정렬 프로세스는 일반적으로 각 정렬 실행 영역을 번갈아 읽습니다. 대상 파일 그룹에 정렬 실행과 새 인덱스 페이지가 작성되는데 이는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 각 정렬 실행을 번갈아 읽으면서 동시에 주기적으로 인덱스 익스텐트로 점프하여 채워질 때 새 인덱스 페이지를 써야 함을 의미합니다.  
   
  SORT_IN_TEMPDB 옵션을 ON으로 설정하고 **tempdb** 가 대상 파일 그룹의 개별 디스크 집합에 있으면 첫째 단계 중에 데이터 페이지의 읽기는 **tempdb**의 정렬 작업 영역에 대한 쓰기와는 다른 디스크에서 발생합니다. 그러므로 마지막 인덱스를 작성하기 위한 쓰기를 수행할 때 일반적으로 데이터 키의 디스크 읽기가 디스크에서 좀 더 연속적으로 진행되며 일반적으로 **tempdb** 디스크에 대한 쓰기 역시 연속적으로 진행됩니다. 다른 사용자가 해당 데이터베이스를 사용하고 별도의 디스크 주소를 액세스하는 경우에도 읽기 및 쓰기의 전반적인 패턴은 SORT_IN_TEMPDB가 지정되는 것이 지정되지 않을 때보다 좀 더 효율적으로 나타납니다.  

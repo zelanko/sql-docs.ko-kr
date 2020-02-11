@@ -13,15 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6bb9c6f7fddc9ba0d4430b42ba5472a59c29e3cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916238"
 ---
-# <a name="mssqlserver10519"></a>MSSQLSERVER_10519
+# <a name="mssqlserver_10519"></a>MSSQLSERVER_10519
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -30,16 +30,20 @@ ms.locfileid: "62916238"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|PG_INCOMPATIBLE_STMT_AND_HINTS|  
-|메시지 텍스트|계획 지침 ' %. \*l s에 지정 된 힌트 `@hints` 으로 지정 된 문에 적용할 수 없습니다 `@stmt` 또는 `@statement_start_offset`합니다. 힌트를 문에 적용할 수 있는지 확인하십시오.|  
+|메시지 텍스트|
+  \*
+  `@hints`
+  에 지정된 힌트를  또는 `@stmt`으로 지정된 문에 적용할 수 없으므로 계획 지침 '%.`@statement_start_offset`ls'을(를) 만들 수 없습니다. 힌트를 문에 적용할 수 있는지 확인하십시오.|  
   
 ## <a name="explanation"></a>설명  
- `@hints`에 지정된 힌트를 `@stmt` 또는 `@statement_start_offset`으로 지정된 문에 적용할 수 없습니다.  
+ 
+  `@hints`에 지정된 힌트를 `@stmt` 또는 `@statement_start_offset`으로 지정된 문에 적용할 수 없습니다.  
   
 ## <a name="user-action"></a>사용자 동작  
  문에 적용할 수 있는 힌트를 지정하십시오.  
   
-## <a name="see-also"></a>관련 항목  
- [sp_create_plan_guide&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;sp_create_plan_guide &#40;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [계획 지침](../performance/plan-guides.md)   
  [sp_create_plan_guide_from_handle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)  
   

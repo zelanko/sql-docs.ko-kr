@@ -16,30 +16,30 @@ ms.assetid: 62273658-0fe7-4aac-b4d8-f725e6baf043
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8d07759405dc337667cc8971ce7795af428a0cfa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926809"
 ---
 # <a name="jscript-ado-programming"></a>JScript ADO 프로그래밍
 ## <a name="creating-an-ado-project"></a>ADO 프로젝트 만들기  
- Microsoft JScript 있습니다 하지 않아도 되므로 ADO 참조 프로젝트에서 형식 라이브러리를 지원 하지 않습니다. 따라서 명령줄 완성과 같은 관련된 없는 기능 지원 됩니다. 또한 기본적으로 ADO 열거 상수 JScript에서 정의 되지 않습니다.  
+ Microsoft JScript는 형식 라이브러리를 지원 하지 않으므로 프로젝트에서 ADO를 참조할 필요가 없습니다. 따라서 명령줄 완성 등의 관련 기능은 지원 되지 않습니다. 또한 기본적으로 ADO 열거 상수는 JScript에서 정의 되지 않습니다.  
   
- 그러나 ADO 제공 두 명의 JScript를 사용 하 여 사용할 다음 정의 포함 하는 파일을 포함 합니다.  
+ 그러나 ADO는 JScript에서 사용할 다음 정의를 포함 하는 두 개의 포함 파일을 제공 합니다.  
   
--   서버 쪽 스크립팅 사용 Adojavas.inc는 ADO 라이브러리 폴더에 설치 됩니다.  
+-   서버 쪽 스크립팅에 대해 Adojavas를 사용 하 여 ADO 라이브러리 폴더에 설치 합니다.  
   
--   클라이언트 쪽 스크립트 사용 Adcjavas.inc는 ADO 라이브러리 폴더에 설치 됩니다.  
+-   클라이언트 쪽 스크립팅에 대해 Adcjavas를 사용 하 여 ADO 라이브러리 폴더에 설치 합니다.  
   
- 복사 및 ASP 페이지에 이러한 파일에서 상수 정의 붙여 넣습니다. 하거나, 서버 쪽 스크립팅, 수행 하는 경우 웹 사이트의 폴더로 Adojavas.inc 파일을 복사 하 고 다음과 같은 ASP 페이지에서 참조 합니다.  
+ 이러한 파일의 상수 정의를 복사 하 여 ASP 페이지에 붙여넣거나, 서버 쪽 스크립팅을 수행 하는 경우 Adojavas 파일을 웹 사이트의 폴더에 복사 하 고 다음과 같이 ASP 페이지에서 참조 합니다.  
   
 ```javascript
 <!--#include File="adojavas.inc"-->  
 ```  
   
-## <a name="creating-ado-objects-in-jscript"></a>JScript의 ADO 개체 만들기  
- 대신 사용 해야 합니다 **CreateObject** 함수 호출:  
+## <a name="creating-ado-objects-in-jscript"></a>JScript에서 ADO 개체 만들기  
+ 대신 **CreateObject** 함수 호출을 사용 해야 합니다.  
   
 ```javascript
 var Rs1;  
@@ -47,7 +47,7 @@ Rs1 = Server.CreateObject("ADODB.Recordset");
 ```  
   
 ## <a name="jscript-example"></a>JScript 예제  
- 다음 코드는 열리는 페이지 ASP (Active Server) 파일에서 JScript 서버 쪽 프로그래밍의 일반적인 예는 **레코드 집합** 개체:  
+ 다음 코드는 **레코드 집합** 개체를 여는 Active Server 페이지 (ASP) 파일의 JScript 서버 쪽 프로그래밍에 대 한 일반적인 예입니다.  
   
 ```javascript
 <%  @LANGUAGE="JScript" %>  

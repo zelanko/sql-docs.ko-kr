@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6ae1ee11edd51153585e9a6738bbfbd59af8974f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109916"
 ---
 # <a name="cache-refresh-options-report-manager"></a>캐시 새로 고침 옵션(보고서 관리자)
@@ -23,7 +23,7 @@ ms.locfileid: "66109916"
  캐시 새로 고침 계획의 관련 보고서 및 공유 데이터 세트를 추가, 삭제, 변경 및 볼 수 있는 기본 역할 할당은 내용 관리자, 내 보고서 및 게시자입니다.  
   
 > [!NOTE]  
->  이 기능은 일부 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에서는 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
+>  이 기능은 일부 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에서는 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [SQL Server 2014 버전에서 지 원하는 기능](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조 하세요.  
   
 ## <a name="to-open-the-cache-refresh-plan-properties-page-for-a-report-or-shared-dataset"></a>보고서 또는 공유 데이터 세트에 대한 캐시 새로 고침 계획 속성 페이지를 열려면  
   
@@ -31,9 +31,10 @@ ms.locfileid: "66109916"
   
 2.  보고서 또는 공유 데이터 세트 위로 마우스를 이동하고 드롭다운 화살표를 클릭합니다.  
   
-3.  드롭다운 목록에서 **관리**를 클릭합니다. **일반** 속성 페이지가 열립니다.  
+3.  드롭다운 목록에서 **관리**를 클릭합니다. **일반 속성** 페이지가 열립니다.  
   
-4.  **캐시 새로 고침 계획** 탭을 클릭합니다.  
+4.  
+  **캐시 새로 고침 계획** 탭을 클릭합니다.  
   
 5.  캐시 계획을 새로 만들려면 **새 캐시 새로 고침 계획**을 클릭합니다.  
   
@@ -65,14 +66,14 @@ ms.locfileid: "66109916"
  **구성**  
  빈도 정보를 지정하는 데 사용되는 일정 페이지를 열려면 클릭합니다.  
   
- 자세한 내용은 참조 하세요. [새 일정: 일정 편집 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md)합니다.  
+ 자세한 내용은 [새 일정: 일정 편집 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md)를 참조 하세요.  
   
  **공유 일정**  
  기존 일정을 선택하려면 이 옵션을 선택합니다.  
   
  자세한 내용은 [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)을 참조하세요.  
   
- **@\<** *Parameter* **>**  
+ **@\<***매개 변수***>**  
  매개 변수 값의 한 조합을 지정합니다. 이 섹션은 현재 데이터 세트나 보고서에 매개 변수가 있을 경우에만 나타납니다.  
   
  다음 섹션의 [매개 변수 지정](#Parameters) 을 참조하십시오.  
@@ -80,7 +81,7 @@ ms.locfileid: "66109916"
  **기본값 사용**  
  이 매개 변수의 미리 정의된 기본값을 사용하려면 이 옵션을 선택합니다.  
   
-##  <a name="Parameters"></a> 매개 변수 지정  
+##  <a name="Parameters"></a>매개 변수 지정  
  캐시 새로 고침 계획을 만들려면 각 보고서나 공유 데이터 세트 매개 변수에 값이 있어야 합니다. 보고서나 공유 데이터 세트 항목의 정의에 기본값이 없으면 값을 지정해야 합니다. 기본값이 있으면 여기서 기본값을 제공할 필요가 없습니다. 값을 제공하면 제공한 값이 기본값을 재정의합니다.  
   
  여러 개의 매개 변수 값 조합을 지정하려면 각 조합에 대해 별도의 캐시 새로 고침 계획을 만듭니다.  
@@ -90,15 +91,15 @@ ms.locfileid: "66109916"
 ### <a name="shared-dataset-parameters"></a>공유 데이터 세트 매개 변수  
  공유 데이터 세트의 경우 다음 정보가 공유 데이터 세트 정의에서 파생됩니다.  
   
--   **이름** 쿼리 매개 변수의 이름을 지정합니다.  
+-   **이름** 쿼리 매개 변수의 이름을 지정 합니다.  
   
--   **유형** 쿼리 매개 변수의 데이터 형식을 지정합니다. 이 데이터 형식은 데이터 공급자가 데이터 세트 쿼리를 처리할 때까지 알 수 없기 때문에 데이터 형식 유효성 검사는 공유 데이터 세트가 처리될 때까지 수행되지 않습니다.  
+-   **유형** 쿼리 매개 변수의 데이터 형식을 지정 합니다. 이 데이터 형식은 데이터 공급자가 데이터 세트 쿼리를 처리할 때까지 알 수 없기 때문에 데이터 형식 유효성 검사는 공유 데이터 세트가 처리될 때까지 수행되지 않습니다.  
   
--   **Null 허용** NULL을 유효한 값으로 간주할지 여부를 지정합니다.  
+-   **Nullable** NULL이 유효한 값 인지 여부를 지정 합니다.  
   
--   **ReadOnly** 공유 데이터 집합 정의에서 이 매개 변수를 읽기 전용으로 표시할지 여부를 지정합니다. 읽기 전용 매개 변수는 캐시 새로 고침 옵션의 매개 변수 목록에 나타나지 않으며 공유 데이터 세트 정의에 기본값이 지정되어 있어야 합니다.  
+-   **읽기 전용** 공유 데이터 집합 정의에서이 매개 변수를 읽기 전용으로 표시할지 여부를 지정 합니다. 읽기 전용 매개 변수는 캐시 새로 고침 옵션의 매개 변수 목록에 나타나지 않으며 공유 데이터 세트 정의에 기본값이 지정되어 있어야 합니다.  
   
--   **DefaultValues** 공유 데이터 집합 정의에 지정된 기본값입니다. 쿼리 매개 변수는 다중값을 가질 수 있습니다. 기본값을 재정의하려면 입력란 프롬프트 영역에 새 값을 입력합니다.  
+-   **DefaultValues** 공유 데이터 집합 정의에 지정 된 기본값입니다. 쿼리 매개 변수는 다중값을 가질 수 있습니다. 기본값을 재정의하려면 입력란 프롬프트 영역에 새 값을 입력합니다.  
   
  공유 데이터 세트 정의에서 매개 변수에 대해 **쿼리에서 생략** 옵션을 지정할 경우 기본값을 제공할 필요가 없습니다. 이 플래그는 해당 데이터 세트 매개 변수가 쿼리에 사용되지 않음을 나타냅니다. 예를 들어 이 매개 변수는 데이터 세트 필터에만 사용되는 보고서 매개 변수이기 때문에 공유 데이터 세트 정의에 나타납니다.  
   
@@ -107,9 +108,9 @@ ms.locfileid: "66109916"
 ### <a name="report-parameters"></a>보고서 매개 변수  
  보고서의 경우 캐시 새로 고침 계획을 만들려면 각 매개 변수 값이 유효해야 합니다. 각 보고서 매개 변수에 대해 기본값을 입력하거나 선택해야 합니다. 사용자가 설정한 값은 보고서 서버에서 보고서 매개 변수에 대해 정의된 기본값을 재정의합니다.  
   
- 매개 변수는 보고서 서버의 매개 변수 속성에 지정된 요구 사항을 따라야 합니다. 예를 들어 속성 AllowBlank 보고서 매개 변수의 false 인 경우 빈 문자열 값이 아닙니다 유효 합니다.  
+ 매개 변수는 보고서 서버의 매개 변수 속성에 지정된 요구 사항을 따라야 합니다. 예를 들어 보고서 매개 변수에 대해 AllowBlank 속성이 false 인 경우 빈 문자열은 유효한 값이 아닙니다.  
   
- 보고서 매개 변수 옵션을 보거나 변경하려면 보고서의 보고서 매개 변수를 편집하거나 보고서 서버에서 개별적으로 편집해야 합니다. 자세한 내용은 [보고서 매개 변수 개념 &#40;보고서 작성기 및 SSRS&#41;](report-design/report-parameters-concepts-report-builder-and-ssrs.md)합니다.  
+ 보고서 매개 변수 옵션을 보거나 변경하려면 보고서의 보고서 매개 변수를 편집하거나 보고서 서버에서 개별적으로 편집해야 합니다. 자세한 내용은 [보고서 매개 변수 개념 &#40;보고서 작성기 및 SSRS&#41;](report-design/report-parameters-concepts-report-builder-and-ssrs.md)를 참조 하세요.  
   
 ## <a name="conditions-that-cause-a-cache-refresh-plan-to-be-inactive"></a>캐시 새로 고침 계획이 비활성화되는 조건  
  다음 조건에서는 공유 데이터 세트 또는 보고서 캐시 새로 고침 계획이 비활성화될 수 있습니다.  
@@ -127,11 +128,11 @@ ms.locfileid: "66109916"
   
 -   새로 고침 계획과 연결된 데이터 세트 쿼리 매개 변수의 읽기 전용 옵션을 선택하거나 선택을 취소한 다음, 새 정의를 보고서 서버에 저장합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [항목 수준의 태스크](security/tasks-and-permissions-item-level-tasks.md)   
  [보고서 관리자&#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)   
+ [F1 도움말 보고서 관리자](../../2014/reporting-services/report-manager-f1-help.md)   
  [보고서 캐시&#40;SSRS&#41;](report-server/caching-reports-ssrs.md)   
- [공유 데이터 집합 관리](report-data/manage-shared-datasets.md)  
+ [공유 데이터 세트 관리](report-data/manage-shared-datasets.md)  
   
   

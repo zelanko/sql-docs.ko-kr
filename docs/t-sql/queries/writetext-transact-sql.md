@@ -24,10 +24,10 @@ ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c10e7259062316454e4e0ecf430f6fdb87c53caf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948108"
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT(Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "67948108"
 > [!IMPORTANT]
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 큰 값 데이터 형식 및 [UPDATE](../../t-sql/queries/update-transact-sql.md) 문의 **.** WRITE 절을 사용합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -68,7 +68,7 @@ WRITETEXT [BULK]
  *data*  
  저장할 실제 **text**, **ntext** 또는 **image** 데이터입니다. *data*는 리터럴 또는 매개 변수일 수 있습니다. WRITETEXT와 함께 대화형으로 삽입할 수 있는 텍스트의 최대 길이는 **text**, **ntext** 또는 **image** 데이터의 경우 약 120KB입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  WRITETEXT를 사용하여 **text**, **ntext** 및 **image** 데이터를 바꾸고 UPDATETEXT를 사용하여 **text**, **ntext** 및 **image** 데이터를 수정합니다. UPDATETEXT는 **text**, **ntext** 또는 **image** 열의 전체가 아닌 일부만 변경하므로 더 융통성이 있습니다.  
   
  최상의 성능을 위해 **text**, **ntext** 및 **image** 데이터를 8,040바이트의 배수가 되는 청크 크기로 삽입하거나 업데이트하는 것이 좋습니다.  
@@ -84,7 +84,7 @@ WRITETEXT [BULK]
   
  ODBC SQLPutData 함수는 WRITETEXT보다 빠르며 동적 메모리를 덜 사용합니다. 이 함수는**text**, **ntext** 또는 **image** 데이터를 2GB까지 삽입할 수 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **text**, **ntext** 또는 **image** 데이터에 대한 행 내부 텍스트 포인터가 있어도 유효하지 않을 수 있습니다. 행의 텍스트 옵션에 대한 자세한 내용은 [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)을 참조하세요. 텍스트 포인터를 무효화하는 방법은 [sp_invalidate_textptr&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md)를 참조하십시오.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **text**, **ntext** 또는 **image** 데이터에 대한 행 내부 텍스트 포인터가 있어도 유효하지 않을 수 있습니다. text in row 옵션에 대한 자세한 내용은 [sp_tableoption&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)을 참조하십시오. 텍스트 포인터를 무효화하는 방법은 [sp_invalidate_textptr&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md)를 참조하십시오.  
   
 ## <a name="permissions"></a>사용 권한  
  지정된 테이블에 대해 UPDATE 권한이 필요합니다. UPDATE 권한이 부여되면 이를 위임할 수 있습니다.  

@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: bd95133bee73720e6117a0eedd93f8de56b5496f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807527"
 ---
 # <a name="database-engine-cross-instance-features"></a>데이터베이스 엔진 인스턴스 간 기능
@@ -27,7 +27,7 @@ ms.locfileid: "62807527"
 [정책 기반 관리를 사용하여 서버 관리](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
 [서버 등록](../ssms/register-servers/register-servers.md)  
 [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)  
-[데이터 컬렉션](../relational-databases/data-collection/data-collection.md)  
+[데이터 수집](../relational-databases/data-collection/data-collection.md)  
 [리소스 사용 모니터링&#40;시스템 모니터&#41;](../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
 [중앙 관리 서버를 사용하여 여러 서버 관리](../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
 [SQL Server 구성 관리자](../relational-databases/sql-server-configuration-manager.md)  

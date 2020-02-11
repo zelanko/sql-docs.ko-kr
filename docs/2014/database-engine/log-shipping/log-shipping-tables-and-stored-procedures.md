@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d88e0826617b63638c720f176da84a85d68a7e18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774503"
 ---
 # <a name="log-shipping-tables-and-stored-procedures"></a>Log Shipping Tables and Stored Procedures
@@ -28,7 +28,7 @@ ms.locfileid: "62774503"
   
 ## <a name="primary-server-tables"></a>주 서버 테이블  
   
-|Table|Description|  
+|테이블|Description|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](/sql/relational-databases/system-tables/log-shipping-monitor-alert-transact-sql)|경고 작업 ID를 저장합니다. 이 테이블은 원격 모니터 서버가 구성되지 않았으면 주 서버에서만 사용됩니다.|  
 |[log_shipping_monitor_error_detail](/sql/relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql)|이 주 서버와 관련된 로그 전달 작업에 대한 오류 정보를 저장합니다.|  
@@ -53,7 +53,7 @@ ms.locfileid: "62774503"
   
 ## <a name="secondary-server-tables"></a>보조 서버 테이블  
   
-|Table|Description|  
+|테이블|Description|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](/sql/relational-databases/system-tables/log-shipping-monitor-alert-transact-sql)|경고 작업 ID를 저장합니다. 이 테이블은 원격 모니터 서버가 구성되지 않았으면 보조 서버에서만 사용됩니다.|  
 |[log_shipping_monitor_error_detail](/sql/relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql)|이 보조 서버와 관련된 로그 전달 작업에 대한 오류 정보를 저장합니다.|  
@@ -82,7 +82,7 @@ ms.locfileid: "62774503"
   
 ## <a name="monitor-server-tables"></a>모니터 서버 테이블  
   
-|Table|Description|  
+|테이블|Description|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](/sql/relational-databases/system-tables/log-shipping-monitor-alert-transact-sql)|경고 작업 ID를 저장합니다.|  
 |[log_shipping_monitor_error_detail](/sql/relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql)|로그 전달 작업에 대한 오류 정보를 저장합니다.|  

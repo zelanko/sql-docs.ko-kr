@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 56d4f7d922c0c229b1e2126f93611670adf7c702
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63135614"
 ---
 # <a name="modify-an-existing-trace-transact-sql"></a>기존 추적 수정(Transact-SQL)
@@ -29,17 +29,17 @@ ms.locfileid: "63135614"
   
 2.  추적 이벤트를 수정하려면 매개 변수를 통해 변경 내용을 지정하는 **sp_trace_setevent** 를 실행합니다. 순서대로 나열된 매개 변수는 다음과 같습니다.  
   
-    -   **@traceid** (추적 ID)  
+    -   **@traceid**(추적 ID)  
   
-    -   **@eventid** (이벤트 ID)  
+    -   **@eventid**(이벤트 ID)  
   
-    -   **@columnid** (열 ID)  
+    -   **@columnid**(열 ID)  
   
-    -   **@on** (ON)  
+    -   **@on**SIGN-ON  
   
-     **@on** 매개 변수를 수정할 경우 이 매개 변수가 **@columnid** 매개 변수와 상호 작용한다는 점에 유의하세요.  
+     매개 변수를 수정할 **@on** 때 **@columnid** 매개 변수와의 상호 작용을 염두에 두어야 합니다.  
   
-    |ON|열 ID|결과|  
+    |켜기|열 ID|결과|  
     |--------|---------------|------------|  
     |ON(**1**)|NULL|이벤트가 활성화됩니다. 모든 열이 지워집니다.|  
     ||NOT NULL|지정된 이벤트에 대해 열이 활성화됩니다.|  
@@ -49,7 +49,7 @@ ms.locfileid: "63135614"
 > [!IMPORTANT]
 >  일반적인 저장 프로시저와 달리 모든 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 저장 프로시저의 매개 변수(<strong>sp_trace_*xx*</strong>)는 정확하게 입력해야 하며 데이터 형식 자동 변환을 지원하지 않습니다. 이러한 매개 변수를 인수 설명에 지정된 올바른 입력 매개 변수 데이터 형식으로 호출하지 않으면 저장 프로시저가 오류를 반환합니다.  
 
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [sp_trace_setevent&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [sp_trace_setstatus&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql)   

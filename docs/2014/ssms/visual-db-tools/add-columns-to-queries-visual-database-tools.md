@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: aef64ed8031664dcbefa7d0e30bf9f63435b292c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015704"
 ---
 # <a name="add-columns-to-queries-visual-database-tools"></a>쿼리에 열 추가(Visual Database Tools)
@@ -34,13 +34,13 @@ ms.locfileid: "63015704"
   
 -   **다이어그램 창**에서 포함하려는 열 옆에 있는 확인란을 선택합니다.  
   
-     -또는-  
+     또는  
   
 -   **조건 창**의 표에서 비어 있는 첫째 행으로 이동하여 **열** 열의 필드를 클릭한 다음 드롭다운 목록에서 열 이름을 선택합니다.  
   
 ### <a name="to-add-all-columns-for-one-table-or-table-valued-object"></a>하나의 테이블 또는 테이블 반환 개체에 대한 열 전체를 추가하려면  
   
--   에 **다이어그램 창**, 옆에 확인란을 선택  **\*(모든 열)** 합니다.  
+-   **다이어그램 창**에서 ** \*(모든 열)** 옆의 확인란을 선택 합니다.  
   
 ### <a name="to-add-all-columns-for-all-tables-and-table-structured-objects"></a>모든 테이블 및 테이블 구조 개체에 대한 열 전체를 추가하려면  
   
@@ -50,11 +50,11 @@ ms.locfileid: "63015704"
   
 3.  속성 창에서 **모든 열 출력** 을 클릭하고 드롭다운 목록에서 **예** 또는 **아니요** 를 선택합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [쿼리 결과에서 열 제거 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [쿼리에서 열 제거 &#40;Visual Database Tools&#41;](remove-columns-from-queries-visual-database-tools.md)   
- [검색 조건 지정 &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)   
- [쿼리 결과 요약 &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools&#41;&#40;쿼리 결과에서 열을 제거 합니다.](visual-database-tools.md)   
+ [Visual Database Tools&#41;&#40;쿼리에서 열을 제거 합니다.](remove-columns-from-queries-visual-database-tools.md)   
+ [Visual Database Tools &#40;검색 조건을 지정&#41;](specify-search-criteria-visual-database-tools.md)   
+ [Visual Database Tools를 &#40;쿼리 결과 요약&#41;](summarize-query-results-visual-database-tools.md)   
  [쿼리 관련 기본 작업 수행&#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

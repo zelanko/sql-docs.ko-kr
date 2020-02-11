@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7532f2a6f2c50f53e5af01c2cec979170b493147
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62922938"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>트랜잭션 로그 백업 적용(SQL Server)
@@ -28,29 +28,29 @@ ms.locfileid: "62922938"
   
  이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 복원의 일부로 수행되는 트랜잭션 로그 백업 적용에 대해 설명합니다.  
   
- **항목 내용:**  
+ **항목 내용**  
   
--   [트랜잭션 로그 백업 복원을 위한 요구 사항](#Requirements)  
+-   [트랜잭션 로그 백업 복원에 대 한 요구 사항](#Requirements)  
   
 -   [복구 및 트랜잭션 로그](#RecoveryAndTlogs)  
   
--   [로그 백업을 사용 하 여 오류 지점으로 복원](#PITrestore)  
+-   [로그 백업을 사용하여 오류 지점까지 복원](#PITrestore)  
   
 -   [관련 작업](#RelatedTasks)  
   
-##  <a name="Requirements"></a> 트랜잭션 로그 백업 복원을 위한 요구 사항  
+##  <a name="Requirements"></a>트랜잭션 로그 백업 복원에 대 한 요구 사항  
  트랜잭션 로그 백업을 적용하려면 다음 요구 사항을 충족해야 합니다.  
   
--   **복원 시퀀스를 위한 충분한 로그 백업:** 복원 순서를 완료하려면 백업된 로그 레코드가 충분히 있어야 합니다. 복원 시퀀스를 시작하려면 필요한 로그 백업(필요한 경우 [비상 로그 백업](tail-log-backups-sql-server.md) 을 포함)을 반드시 확보해야 합니다.  
+-   **복원 순서를 위한 충분한 로그 백업:** 복원 순서를 완료하려면 백업된 로그 레코드가 충분히 있어야 합니다. 복원 시퀀스를 시작하려면 필요한 로그 백업(필요한 경우 [비상 로그 백업](tail-log-backups-sql-server.md) 을 포함)을 반드시 확보해야 합니다.  
   
 -   **올바른 복원 순서:**  바로 이전의 전체 데이터베이스 백업 또는 차등 데이터베이스 백업을 먼저 복원해야 합니다. 그런 후 전체 또는 차등 데이터베이스 백업 후에 생성된 모든 트랜잭션 로그를 시간순으로 복원해야 합니다. 이 로그 체인의 트랜잭션 로그 백업이 손실되거나 손상된 경우 손실된 트랜잭션 로그 이전의 트랜잭션 로그만 복원할 수 있습니다.  
   
--   **아직 복구되지 않은 데이터베이스:**  마지막 트랜잭션 로그가 적용될 때까지 데이터베이스를 복구할 수 없습니다. 로그 체인이 끝나기 이전의 중간 트랜잭션 로그 백업 중 하나를 복원한 후 데이터베이스를 복구할 경우 해당 시점 이후의 데이터베이스를 복원하려면 전체 데이터베이스 백업부터 시작하여 전체 복원 시퀀스를 다시 시작해야 합니다.  
+-   **데이터베이스가 아직 복구되지 않음:**  마지막 트랜잭션 로그가 적용될 때까지 데이터베이스를 복구할 수 없습니다. 로그 체인이 끝나기 이전의 중간 트랜잭션 로그 백업 중 하나를 복원한 후 데이터베이스를 복구할 경우 해당 시점 이후의 데이터베이스를 복원하려면 전체 데이터베이스 백업부터 시작하여 전체 복원 시퀀스를 다시 시작해야 합니다.  
   
     > [!TIP]  
     >  최선의 방법은 모든 로그 백업을 복원하는 것입니다(RESTORE LOG *database_name* WITH NORECOVERY). 그런 후 마지막 로그 백업을 복원한 후 데이터베이스를 별도의 작업으로 복구합니다(RESTORE DATABASE *database_name* WITH RECOVERY).  
   
-##  <a name="RecoveryAndTlogs"></a> 복구 및 트랜잭션 로그  
+##  <a name="RecoveryAndTlogs"></a>복구 및 트랜잭션 로그  
  복원 작업을 완료하고 데이터베이스를 복구할 때 완료되지 않은 트랜잭션은 모두 롤백되는데 이것을 *실행 취소 단계*라고 합니다. 롤백은 데이터베이스의 무결성을 복원하는 데 필요합니다. 롤백 후 데이터베이스는 온라인 상태가 되고 트랜잭션 로그 백업이 더 이상 데이터베이스에 적용되지 않습니다.  
   
  예를 들어 일련의 트랜잭션 로그 백업은 장기 실행 트랜잭션을 포함합니다. 트랜잭션의 시작은 첫 번째 트랜잭션 로그 백업에 기록되지만 트랜잭션의 끝은 두 번째 트랜잭션 로그 백업에 기록됩니다. 첫 번째 트랜잭션 로그 백업에는 커밋 또는 롤백 작업의 기록이 없습니다. 첫 번째 트랜잭션 로그 백업이 적용될 때 복구 작업이 실행되면 장기 실행 트랜잭션은 완료되지 않은 것으로 취급되고 해당 트랜잭션에 대한 첫 번째 트랜잭션 로그 백업에 기록된 데이터 수정이 롤백됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이 시점 이후에 두 번째 트랜잭션 로그 백업을 적용할 수 없습니다.  
@@ -58,10 +58,10 @@ ms.locfileid: "62922938"
 > [!NOTE]  
 >  경우에 따라서는 로그 복원 중에 파일을 명시적으로 추가할 수 있습니다.  
   
-##  <a name="PITrestore"></a> 로그 백업을 사용 하 여 오류 지점으로 복원  
+##  <a name="PITrestore"></a>로그 백업을 사용 하 여 오류 지점으로 복원  
  예를 들어 다음과 같은 순서의 이벤트가 발생한다고 가정합니다.  
   
-|Time|이벤트|  
+|Time|행사|  
 |----------|-----------|  
 |8:00 A.M.|데이터베이스를 백업하여 전체 데이터베이스 백업을 만듭니다.|  
 |정오|트랜잭션 로그를 백업합니다.|  
@@ -95,7 +95,7 @@ ms.locfileid: "62922938"
 > [!NOTE]  
 >  경우에 따라 트랜잭션 로그를 사용하여 데이터베이스를 지정 시간으로 복원할 수도 있습니다. 자세한 내용은 [SQL Server 데이터베이스를 지정 시간으로 복원&#40;전체 복구 모델&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)라고 합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
  **트랜잭션 로그 백업을 적용하려면**  
   
 -   [트랜잭션 로그 백업 복원&#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)  
@@ -116,7 +116,7 @@ ms.locfileid: "62922938"
   
 -   [데이터를 복원하지 않고 데이터베이스 복구&#40;Transact-SQL&#41;](recover-a-database-without-restoring-data-transact-sql.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [트랜잭션 로그&#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)  
   
   

@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5157fcfeb54e22c404dcba29655771a1c2034e2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62921829"
 ---
 # <a name="file-restores-simple-recovery-model"></a>파일 복원(단순 복구 모델)
@@ -46,11 +46,11 @@ ms.locfileid: "62921829"
      온라인 페이지 및 파일 복원 지원에 대한 자세한 내용은 [SQL Server 2014 버전에서 지원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조하세요. 온라인 복원에 대한 자세한 내용은 [온라인 복원&#40;SQL Server&#41;](online-restore-sql-server.md)을 참조하세요.  
   
     > [!TIP]  
-    >  파일 복원을 위해 데이터베이스를 오프라인 상태로 전환하려면 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) 문: ALTER DATABASE *database_name* SET OFFLINE을 실행하여 복원 시퀀스를 시작하기 전에 데이터베이스 오프라인으로 전환합니다.  
+    >  파일 복원을 위해 데이터베이스를 오프라인 상태로 전환하려면 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) 문인 ALTER DATABASE *database_name* SET OFFLINE을 실행하여 복원 시퀀스를 시작하기 전에 데이터베이스를 오프라인으로 설정합니다.  
   
 
   
-##  <a name="Overview"></a> 단순 복구 모델의 파일 및 파일 그룹 복원 개요  
+##  <a name="Overview"></a>단순 복구 모델에서 파일 및 파일 그룹 복원 개요  
  파일 복원 시나리오는 다음과 같이 올바른 데이터를 복사, 롤포워드 및 복구하는 단일 복원 시퀀스로 구성됩니다.  
   
 1.  가장 최근의 파일 백업에서 각각의 손상된 파일을 복원합니다.  
@@ -62,13 +62,13 @@ ms.locfileid: "62921829"
   
  복원 시퀀스는 두 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문만 포함됩니다. 첫 번째 문은 WITH NORECOVERY를 사용하여 보조 파일인 `A`파일을 복원합니다. 두 번째 작업에서는 다른 백업 디바이스에서 WITH RECOVERY를 사용하여 `B` 및 `C` 파일을 복원합니다.  
   
-1.  RESTORE DATABASE *database* FILE **=** _name_of_file_A_  
+1.  데이터베이스 *데이터베이스* 파일 **=** _name_of_file_A_ 복원  
   
      FROM *file_backup_of_file_A*  
   
      WITH NORECOVERY **;**  
   
-2.  RESTORE DATABASE *database* FILE **=** _name_of_file_B_ **,** _name_of_file_C_  
+2.  데이터베이스 *데이터베이스* 파일 **=** _name_of_file_B_**** 복원_name_of_file_C_  
   
      FROM *file_backup_of_files_B_and_C*  
   
@@ -76,13 +76,13 @@ ms.locfileid: "62921829"
   
 ### <a name="examples"></a>예  
   
--   [예: 읽기 전용 파일의 온라인 복원&#40;단순 복구 모델&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
+-   [예제: 읽기 전용 파일의 온라인 복원&#40;단순 복구 모델&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
--   [예: 주 파일 그룹 및 다른 파일 그룹의 오프라인 복원&#40;전체 복구 모델&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
+-   [예제: 주 파일 그룹 및 다른 파일 그룹의 오프라인 복원&#40;전체 복구 모델&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
  **파일과 파일 그룹을 복원하려면**  
   
 -   [기존 파일에서 파일 및 파일 그룹 복원&#40;SQL Server&#41;](restore-files-and-filegroups-over-existing-files-sql-server.md)  
@@ -95,7 +95,7 @@ ms.locfileid: "62921829"
   
   
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [백업 및 복원: 상호 운용성 및 공존성&#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [차등 백업&#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [전체 파일 백업&#40;SQL Server&#41;](full-file-backups-sql-server.md)   

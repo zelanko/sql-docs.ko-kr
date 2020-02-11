@@ -27,10 +27,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eec38b5ecc524f0d3decd02c0832efd1909e8f00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63127884"
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>SQL Server 설치에 대한 보안 고려 사항
@@ -120,7 +120,7 @@ ms.locfileid: "63127884"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 컴퓨터에 설치한 후에는 도메인 컨트롤러에서 도메인 멤버로 컴퓨터를 변경할 수 없습니다. 호스트 컴퓨터를 도메인 멤버로 변경하려면 먼저 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 제거해야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치 클러스터 인스턴스는 클러스터 노드가 도메인 컨트롤러인 경우 지원되지 않습니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스는 클러스터 노드가 도메인 컨트롤러인 경우 지원되지 않습니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 읽기 전용 도메인 컨트롤러에서 보안 그룹을 만들거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정을 프로비전할 수 없습니다. 이 경우 설치 프로그램에서 오류가 발생합니다.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "63127884"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 낮은 권한을 가진 Windows 로컬 사용자 계정 또는 도메인 사용자 계정과 연결합니다.  
   
--   자세한 내용은 [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)을 참조하세요.  
+-   자세한 내용은 [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)를 참조하세요.  
   
  **인증 모드**  
   
@@ -143,7 +143,8 @@ ms.locfileid: "63127884"
   
  **강력한 암호**  
   
--   `sa` 계정에는 항상 강력한 암호를 지정합니다.  
+-   
+  `sa` 계정에는 항상 강력한 암호를 지정합니다.  
   
 -   암호 강도 및 만료를 검사하는 암호 정책을 항상 사용하도록 설정합니다.  
   
@@ -152,8 +153,8 @@ ms.locfileid: "63127884"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 설치 중에 BUILTIN\Users 그룹에 대한 로그인이 추가됩니다. 이 로그인을 사용하면 컴퓨터의 모든 인증된 사용자가 public 역할의 멤버로 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 인스턴스에 액세스할 수 있습니다. BUILTIN\Users 로그인은 개별 로그인이 있거나 로그인이 있는 기타 Windows 그룹의 멤버인 컴퓨터 사용자에 대한 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 액세스를 제한하기 위해 안전하게 제거할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)   
+## <a name="see-also"></a>참고 항목  
+ [SQL Server 2014를 설치 하기 위한 하드웨어 및 소프트웨어 요구 사항](hardware-and-software-requirements-for-installing-sql-server.md)   
  [네트워크 프로토콜 및 네트워크 라이브러리](../../../2014/sql-server/install/network-protocols-and-network-libraries.md)   
  [Kerberos 연결의 서비스 사용자 이름 등록](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  
   

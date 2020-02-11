@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5e8022dd9a7bd4f301ca55f60614e1b13369b804
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62810424"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>데이터베이스 관리자를 위한 진단 연결
@@ -43,9 +43,9 @@ ms.locfileid: "62810424"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin 역할의 멤버만이 DAC를 사용하여 연결할 수 있습니다.  
   
- DAC는 **sqlcmd** 명령 프롬프트 유틸리티에 특수 관리자 스위치( **-A**)를 사용하여 이용 가능하며 지원됩니다. **sqlcmd**를 사용하는 방법은 [스크립팅 변수와 함께 sqlcmd 사용](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)을 참조하세요. 또한 접두사을 연결할 수 있습니다 `admin:`형식으로 인스턴스 이름에 **sqlcmd-Sadmin:** _< instance_name >._ DAC를 시작할 수도 있습니다는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에 연결 하 여 쿼리 편집기 `admin:` \< *instance_name*>.  
+ DAC는 **sqlcmd** 명령 프롬프트 유틸리티에 특수 관리자 스위치( **-A**)를 사용하여 이용 가능하며 지원됩니다. **sqlcmd**를 사용하는 방법은 [스크립팅 변수와 함께 sqlcmd 사용](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)을 참조하세요. `admin:` **Sqlcmd-sadmin:** _<instance_name>_ 형식으로 인스턴스 이름에 접두사를 연결할 수도 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] `admin:` \< *Instance_name*>에 연결 하 여 쿼리 편집기에서 DAC를 시작할 수도 있습니다.  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>제한  
  DAC는 드물게 발생하는 서버 문제 진단만을 위한 연결이므로 연결에 다음과 같은 제한이 있습니다.  
   
 -   연결에 사용할 수 있는 리소스를 보장하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스당 하나의 DAC만 허용됩니다. DAC 연결이 이미 활성화된 경우 DAC를 통해 연결하려는 모든 새 요청은 17810 오류가 발생하면서 거부됩니다.  
@@ -74,7 +74,7 @@ ms.locfileid: "62810424"
   
 -   카탈로그 뷰를 쿼리합니다.  
   
--   DBCC FREEPROCCACHE, DBCC FREESYSTEMCACHE, DBCC DROPCLEANBUFFERS`,` DBCC SQLPERF 등의 기본 DBCC 명령을 사용합니다. **DBCC** CHECKDB, DBCC DBREINDEX 또는 DBCC SHRINKDATABASE 등 리소스를 많이 사용하는 명령을 실행하지 마세요.  
+-   DBCC FREEPROCCACHE, DBCC FREESYSTEMCACHE, DBCC DROPCLEANBUFFERS`,` DBCC SQLPERF 등의 기본 DBCC 명령을 사용합니다. **Dbcc** CHECKDB, dbcc DBREINDEX 또는 dbcc SHRINKDATABASE와 같은 리소스를 많이 사용 하는 명령을 실행 하지 마십시오.  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL *\<spid>* 명령 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 상태에 따라 KILL 명령은 성공하지 않을 수도 있습니다. 이러한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작하는 것이 유일한 해결 방법입니다. 일반적인 지침은 다음과 같습니다.  
   
@@ -93,11 +93,11 @@ ms.locfileid: "62810424"
   
  시작할 때 DAC 포트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 의해 동적으로 할당됩니다. 기본 인스턴스에 연결할 때 DAC는 SQL Server Browser 서비스에 대한 SSRP( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol) 요청을 사용하지 않습니다. 먼저 TCP 포트 1434를 통해 연결합니다. 연결이 실패할 경우 SSRP 호출을 실행하여 포트를 설정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser가 SSRP 요청을 수신하지 않을 경우 연결 요청이 오류를 반환합니다. 오류 로그를 참조하여 DAC를 수신 대기 중인 포트 번호를 찾으십시오. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 원격 관리 연결을 허용하도록 구성되어 있는 경우 DAC를 명시적 포트 번호로 시작해야 합니다.  
   
- **sqlcmd-Stcp:** _\<server>,\<port>_  
+ **sqlcmd-stcp:** _ \<서버>,\<포트>_  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그는 DAC의 포트 번호를 표시합니다. 포트 번호는 기본적으로 1434입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 로컬 DAC 연결만 허용하도록 구성된 경우 다음 명령을 사용하여 루프백 어댑터를 통해 연결하십시오.  
   
- **sqlcmd-S127.0.0.1**,`1434`  
+ **sqlcmd-s 127.0.0.1**,`1434`  
   
 ## <a name="example"></a>예제  
  이 예에서 관리자는 `URAN123` 서버가 응답하지 않음을 확인하고 문제를 진단하려고 합니다. 이 작업을 수행하려면 사용자는 `sqlcmd` 명령 프롬프트 유틸리티를 활성화하고 DAC를 나타내는 `URAN123` 를 사용하여 `-A` 서버에 연결해야 합니다.  

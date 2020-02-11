@@ -11,17 +11,17 @@ ms.assetid: de0e1214-b9d8-4afc-8fc0-e8b9c4c648f6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cef0c3737dbca640d6b842fc495c14c925c35723
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67948813"
 ---
 # <a name="stored-procedures-odbc-driver-for-oracle"></a>저장 프로시저(Oracle용 ODBC 드라이버)
 > [!IMPORTANT]  
->  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. 대신, Oracle에서 제공 하는 ODBC 드라이버를 사용 합니다.  
+>  이 기능은 이후 버전의 Windows에서 제거 될 예정입니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. 대신 Oracle에서 제공 하는 ODBC 드라이버를 사용 합니다.  
   
- 이 섹션에서는 다음 항목을 다룹니다.  
+ 이 섹션에는 다음 토픽이 포함되어 있습니다.  
   
 -   [저장 프로시저 매개 변수 제한 사항](../../odbc/microsoft/stored-procedure-parameter-limitations.md)  
   

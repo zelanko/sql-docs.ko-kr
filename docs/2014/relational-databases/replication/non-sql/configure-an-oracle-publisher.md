@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bffa36106278b8913a9ecb042e94318c41ce87b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022598"
 ---
 # <a name="configure-an-oracle-publisher"></a>Oracle 게시자 구성
@@ -26,7 +26,7 @@ ms.locfileid: "63022598"
   
 2.  게시할 테이블에 대해서는 1단계에서 만든 Oracle 관리 사용자에게 각 테이블에 대한 SELECT 권한을 역할을 사용하지 않고 직접 부여합니다.  
   
-3.  Oracle 클라이언트 소프트웨어와 OLE DB 공급자를 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에 설치한 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 중지했다가 다시 시작합니다. 배포자가 64비트 플랫폼에서 실행되는 경우 64비트 버전의 Oracle OLE DB 공급자를 사용해야 합니다.  
+3.  Oracle 클라이언트 소프트웨어와 OLE DB 공급자를 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에 설치한 다음 인스턴스를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 중지 했다가 다시 시작 합니다. 배포자가 64비트 플랫폼에서 실행되는 경우 64비트 버전의 Oracle OLE DB 공급자를 사용해야 합니다.  
   
 4.  Oracle 데이터베이스를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에서 게시자로 구성합니다.  
   
@@ -39,9 +39,10 @@ ms.locfileid: "63022598"
  복제 에이전트는 Oracle 데이터베이스에 연결한 다음 만들어야 할 사용자 스키마 컨텍스트에서 작업을 수행합니다. 이 스키마에는 몇 가지 사용 권한을 부여해야 하며 이는 다음 섹션에 나열되어 있습니다. 이 스키마는 Oracle 게시자의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 프로세스에서 만든 모든 개체( **MSSQLSERVERDISTRIBUTOR**공용 동의어 제외)를 소유합니다. Oracle 데이터베이스에서 만든 개체에 대한 자세한 내용은 [Objects Created on the Oracle Publisher](objects-created-on-the-oracle-publisher.md)를 참조하십시오.  
   
 > [!NOTE]  
->  **CASCADE** 옵션으로 **MSSQLSERVERDISTRIBUTOR** 공용 동의어와 구성된 Oracle 복제 사용자를 삭제하면 Oracle 게시자에서 모든 복제 개체가 제거됩니다.  
+>  
+  **CASCADE** 옵션으로 **MSSQLSERVERDISTRIBUTOR** 공용 동의어와 구성된 Oracle 복제 사용자를 삭제하면 Oracle 게시자에서 모든 복제 개체가 제거됩니다.  
   
- Oracle 복제 사용자 스키마의 설치를 도와 주는 예제 스크립트가 제공됩니다. 이 스크립트는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 후 *\<드라이브>* :\\\Program Files\Microsoft SQL Server\\ *\<InstanceName>* \MSSQL\Install\oracleadmin.sql 디렉터리에서 사용할 수 있습니다. 이 스크립트에 대한 내용은 [Script to Grant Oracle Permissions](script-to-grant-oracle-permissions.md)항목에도 포함되어 있습니다.  
+ Oracle 복제 사용자 스키마의 설치를 도와 주는 예제 스크립트가 제공됩니다. 이 스크립트는 다음 디렉터리에서 사용할 수 있습니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. * \<드라이브>*:\\SQL Server InstanceName Files\Microsoft\\*\<InstanceName>* \mssql\install\oracleadmin.sql 이 스크립트에 대한 내용은 [Script to Grant Oracle Permissions](script-to-grant-oracle-permissions.md)항목에도 포함되어 있습니다.  
   
  DBA 권한이 있는 계정을 사용하여 Oracle 데이터베이스에 연결하고 해당 스크립트를 실행합니다. 이 스크립트는 개체를 만들 기본 테이블스페이스(이 테이블스페이스는 이미 Oracle 데이터베이스에 있어야 함)를 비롯하여 복제 관리 사용자 스키마에 대한 사용자 이름 및 암호를 묻는 메시지를 표시합니다. 개체에 대해 다른 테이블스페이스를 지정하는 방법은 [Oracle 테이블스페이스 관리](manage-oracle-tablespaces.md)를 참조하세요. 원하는 사용자 이름과 강력한 암호를 선택한 다음 이를 기록해 둡니다. 나중에 Oracle 데이터베이스를 게시자로 구성할 때 이러한 정보를 묻는 메시지가 표시됩니다. 복제에 필요한 개체에 대해서만 스키마를 사용하는 것이 좋습니다. 이 스키마에 게시될 테이블은 만들지 마십시오.  
   
@@ -95,13 +96,16 @@ ms.locfileid: "63022598"
 ### <a name="testing-connectivity-between-the-sql-server-distributor-and-the-oracle-publisher"></a>SQL Server 배포자와 Oracle 게시자 간 연결 테스트  
  Net Configuration Assistant의 후반부에는 Oracle 게시자에 대한 연결을 테스트하는 옵션이 있습니다. 연결을 테스트하기 전에 Oracle 데이터베이스 인스턴스가 온라인 상태인지 Oracle 수신기가 실행 중인지 확인합니다. 테스트가 실패하면 연결하려는 데이터베이스를 담당하는 Oracle DBA에게 문의하십시오.  
   
- Oracle 게시자에 성공적으로 연결한 다음에는 만든 복제 관리 사용자 스키마에 연결된 계정과 암호를 사용하여 데이터베이스에 로그인합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스가 사용하는 것과 같은 Windows 계정으로 실행하는 동안 다음을 수행해야 합니다.  
+ Oracle 게시자에 성공적으로 연결한 다음에는 만든 복제 관리 사용자 스키마에 연결된 계정과 암호를 사용하여 데이터베이스에 로그인합니다. 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스가 사용하는 것과 같은 Windows 계정으로 실행하는 동안 다음을 수행해야 합니다.  
   
-1.  **시작**을 클릭한 다음 **실행**을 클릭합니다.  
+1.  
+  **시작**을 클릭한 다음 **실행**을 클릭합니다.  
   
-2.  `cmd` 를 입력한 다음 **확인**을 클릭합니다.  
+2.  
+  `cmd` 를 입력한 다음 **확인**을 클릭합니다.  
   
-3.  명령 프롬프트에서 다음을 입력합니다.  
+3.  명령 프롬프트에서 다음과 같이 입력합니다.  
   
      `sqlplus <UserSchemaLogin>/<UserSchemaPassword>@<NetServiceName>`  
   
@@ -122,15 +126,16 @@ ms.locfileid: "63022598"
 > [!NOTE]  
 >  Oracle 게시자는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자 또는 동일한 배포자를 사용하는 모든 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 게시자와 같은 이름을 가질 수 없습니다.  
   
- 게시자로 Oracle 데이터베이스를 식별 하는 경우 Oracle 게시 옵션인을 선택 해야 합니다. 전체 또는 Oracle Gateway입니다. 게시자를 식별한 다음에 이 옵션을 변경하려면 해당 게시자를 삭제하고 다시 구성해야 합니다. Oracle Complete 옵션은 Oracle 게시에 대해 지원되는 전체 기능 집합과 함께 스냅샷 및 트랜잭션 게시를 제공하도록 디자인되었습니다. Oracle Gateway 옵션은 복제가 시스템 간 게이트웨이 역할을 하는 경우 성능을 향상시킬 수 있도록 특정 디자인 최적화를 제공합니다.  
+ Oracle 데이터베이스를 게시자로 식별하는 경우 Oracle 게시 옵션인 Complete 또는 Oracle Gateway 중 하나를 선택해야 합니다. 게시자를 식별한 다음에 이 옵션을 변경하려면 해당 게시자를 삭제하고 다시 구성해야 합니다. Oracle Complete 옵션은 Oracle 게시에 대해 지원되는 전체 기능 집합과 함께 스냅샷 및 트랜잭션 게시를 제공하도록 디자인되었습니다. Oracle Gateway 옵션은 복제가 시스템 간 게이트웨이 역할을 하는 경우 성능을 향상시킬 수 있도록 특정 디자인 최적화를 제공합니다.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에서 Oracle 게시자를 식별한 다음 복제는 Oracle 데이터베이스의 TNS 서비스 이름과 같은 이름으로 연결된 서버를 만듭니다. 이 연결된 서버는 복제에서만 사용할 수 있습니다. 연결된 서버 연결을 통해 Oracle 게시자에 연결하려면 다른 TNS 서비스 이름을 만든 다음 이 이름을 사용하여 [sp_addlinkedserver&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)를 호출합니다.  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에서 Oracle 게시자를 식별한 다음 복제는 Oracle 데이터베이스의 TNS 서비스 이름과 같은 이름으로 연결된 서버를 만듭니다. 이 연결된 서버는 복제에서만 사용할 수 있습니다. 연결된 서버 연결을 통해 Oracle 게시자에 연결하려면 다른 TNS 서비스 이름을 만든 다음 이 이름을 사용하여 [sp_addlinkedserver&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)를 호출합니다.  
   
  Oracle 게시자를 구성하고 게시를 만들려면 [Create a Publication from an Oracle Database](../publish/create-a-publication-from-an-oracle-database.md)를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Oracle 게시자에 대한 관리 고려 사항](administrative-considerations-for-oracle-publishers.md)   
- [Oracle 게시자에 대한 데이터 형식 매핑](data-type-mapping-for-oracle-publishers.md)   
+ [Oracle 게시자에 대 한 데이터 형식 매핑](data-type-mapping-for-oracle-publishers.md)   
  [Oracle 게시를 위한 용어 설명](glossary-of-terms-for-oracle-publishing.md)   
  [Oracle 게시 개요](oracle-publishing-overview.md)  
   

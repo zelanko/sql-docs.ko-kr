@@ -13,18 +13,18 @@ ms.assetid: 4aca9838-1ec6-4084-bd63-dc2d17d8ab7d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 603b0a95dbf469041247a2b73da67b6ebe272079
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920910"
 ---
 # <a name="ado-object-model"></a>ADO 개체 모델
-다음 그림에서는 ADO 개체 및 해당 컬렉션을 표시 합니다.  
+다음 그림에서는 ADO 개체와 해당 컬렉션을 보여 줍니다.  
   
  ![ADO 개체 모델](../../../ado/reference/ado-api/media/ado_object_model.gif "ADO_object_model")  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ADO 컬렉션](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO 동적 속성](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [ADO 열거 상수](../../../ado/reference/ado-api/ado-enumerated-constants.md)   

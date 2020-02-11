@@ -1,5 +1,5 @@
 ---
-title: BOF, EOF 및 책갈피 속성 예제 (VB) | Microsoft Docs
+title: BOF, EOF 및 Bookmark 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: b6573c6e-fee8-4267-a722-fadaec6eafe6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9ab332d7d4144d62dd3a0cee1d3585820bf77e77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920435"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vb"></a>BOF, EOF 및 책갈피 속성 예제(VB)
-이 예제에서는 합니다 [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 및 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 사용자의 첫 번째 또는 마지막 레코드를 지 나 이동 하려고 하는 경우 메시지를 표시 하는 속성을 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다. 사용 하 여는 [책갈피](../../../ado/reference/ado-api/bookmark-property-ado.md) 사용자가 레코드 플래그 속성을 **레코드 집합** 하 고 나중에 반환 합니다.  
+이 예에서는 사용자가 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)의 첫 번째 또는 마지막 레코드를 지나서 이동 하려고 시도 하는 경우에는 [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 및 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 속성을 사용 하 여 메시지를 표시 합니다. [책갈피](../../../ado/reference/ado-api/bookmark-property-ado.md) 속성을 사용 하 여 사용자가 레코드 **집합** 의 레코드에 플래그를 지정 하 고 나중에이 레코드로 돌아갈 수 있습니다.  
   
 ```  
 'BeginBOFVB  
@@ -129,13 +129,13 @@ End Sub
 'EndBOFVB  
 ```  
   
- 이 예제에서는 **책갈피** 및 [필터](../../../ado/reference/ado-api/filter-property.md) 제한 된 보기를 만들기 위한 속성을 **레코드 집합**합니다. 책갈피의 배열에서 참조 하는 레코드만 액세스할 수 있습니다.  
+ 이 예에서는 **책갈피** 및 [필터](../../../ado/reference/ado-api/filter-property.md) 속성을 사용 하 여 **레코드 집합**의 제한 된 뷰를 만듭니다. 책갈피 배열에서 참조 하는 레코드만 액세스할 수 있습니다.  
   
 ```  
 Attribute VB_Name = "BOF"  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [BOF, EOF 속성 (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
- [책갈피 속성 (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
+ [Bookmark 속성 (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a16d7565bb36eb7895db94da088927be7595f5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63043948"
 ---
 # <a name="delete-a-solution"></a>솔루션 삭제
@@ -37,7 +37,7 @@ ms.locfileid: "63043948"
   
 4.  **파일** 메뉴에서 **삭제**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [솔루션 탐색기](solution-explorer.md)   
  [새 솔루션 만들기](create-a-new-solution.md)   
  [프로젝트 만들기](create-a-project.md)   

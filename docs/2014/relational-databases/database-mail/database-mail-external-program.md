@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6c617e4f7c069a869935fa4ed83d28c02d0b0b9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917644"
 ---
 # <a name="database-mail-external-program"></a>데이터베이스 메일 외부 프로그램
@@ -43,7 +43,7 @@ ms.locfileid: "62917644"
 |------------------------|----------------|  
 |외부 프로그램을 종료하기 전에 시간을 지정합니다.|[sysmail_configure_sp&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [데이터베이스 메일 로그 및 감사](database-mail-log-and-audits.md)   
  [데이터베이스 메일](database-mail.md)  

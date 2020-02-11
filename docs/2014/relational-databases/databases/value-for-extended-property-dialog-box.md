@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7ac8dd7682ecfe8df3b317bba578bca8358b9b11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916505"
 ---
 # <a name="value-for-extended-property-dialog-box"></a>확장 속성 값 대화 상자
-  *\<속성 이름* **에 대한 값** 대화 상자를 사용하여 값을 입력하거나 확인할 수 있습니다. 이 대화 상자는 여러 위치에서 열 수 있는 일반 대화 상자입니다.  
+  속성 이름>대화 상자의 **값** 을 사용 하 여 값을 입력 하거나 볼 수 있습니다. * \<* 이 대화 상자는 여러 위치에서 열 수 있는 일반 대화 상자입니다.  
   
 ## <a name="uielement-list"></a>UIElement 목록  
  **확장 속성 이름**  

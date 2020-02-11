@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 72b426c504532f9c112eaaa1222b0349f3e5d814
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832594"
 ---
 # <a name="column-null-ratio-profile-request-options-data-profiling-task"></a>열 Null 비율 프로필 요청 옵션(데이터 프로파일링 태스크)
@@ -43,7 +43,7 @@ ms.locfileid: "62832594"
   
  자세한 내용은 이 항목의 "TableorView 옵션" 섹션을 참조하십시오.  
   
- **Column**  
+ **열**  
  프로파일링할 기존 열을 선택합니다. 모든 열을 프로파일링하려면 **(\*)** 를 선택합니다.  
   
  자세한 내용은 이 항목의 "열 옵션" 섹션을 참조하십시오.  
@@ -57,7 +57,7 @@ ms.locfileid: "62832594"
   
 #### <a name="column-options"></a>열 옵션  
  **IsWildCard**  
- **(\*)** 와일드카드가 선택되었는지 여부를 지정합니다. 이 옵션은 모든 열을 프로파일링하도록 **(\*)** 를 선택한 경우 **True**로 설정됩니다. 프로파일링할 개별 열을 선택한 경우에는 **False** 로 설정됩니다. 이 옵션은 읽기 전용입니다.  
+ **(\*)** 와일드카드가 선택되었는지 여부를 지정합니다. 이 옵션은 모든 열을 프로파일링하도록 **(** )**를 선택한 경우 \*True**로 설정됩니다. 프로파일링할 개별 열을 선택한 경우에는 **False** 로 설정됩니다. 이 옵션은 읽기 전용입니다.  
   
  **ColumnName**  
  선택한 열의 이름을 표시합니다. 이 옵션은 모든 열을 프로파일링하도록 **(\*)** 를 선택한 경우 비어 있습니다. 이 옵션은 읽기 전용입니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "62832594"
  **RequestID**  
  이 프로필 요청을 식별할 설명이 포함된 이름을 입력합니다. 일반적으로 자동 생성된 값은 변경하지 않아도 됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 프로파일링 태스크 편집기&#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)   
  [단일 테이블 빠른 프로필 형식&#40;데이터 프로파일링 태스크&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   

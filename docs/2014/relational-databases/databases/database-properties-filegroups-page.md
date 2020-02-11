@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b8de45556d3c19ee8460b33e7f07ceb485b37597
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917121"
 ---
 # <a name="database-properties-filegroups-page"></a>데이터베이스 속성(파일 그룹 페이지)
@@ -24,9 +24,9 @@ ms.locfileid: "62917121"
   
  행 파일 그룹에는 일반 데이터 파일 및 로그 파일이 있고, FILESTREAM 데이터 파일 그룹에는 FILESTREAM 데이터 파일이 있습니다. 이러한 데이터 파일은 FILESTREAM 스토리지를 사용할 경우 BLOB(Binary Large Object) 데이터가 파일 시스템에 저장되는 방식에 대한 정보를 저장합니다. 옵션은 두 가지 파일 그룹 유형에서 동일합니다.  
   
- FILESTREAM이 설정되지 않은 경우 **Filestream** 섹션은 사용할 수 없습니다. [서버 속성(고급 페이지)](../../database-engine/configure-windows/server-properties-advanced-page.md)을 사용하여 FILESTREAM 저장소를 설정할 수 있습니다.  
+ FILESTREAM이 설정되지 않은 경우 **Filestream** 섹션은 사용할 수 없습니다. [서버 속성(고급 페이지)](../../database-engine/configure-windows/server-properties-advanced-page.md)을 사용하여 FILESTREAM 스토리지를 설정할 수 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 행 파일 그룹을 사용하는 방법은 [데이터베이스 파일 및 파일 그룹](database-files-and-filegroups.md)을 참조하세요. FILESTREAM 데이터 및 파일 그룹에 대한 자세한 내용은 [FILESTREAM&#40;SQL Server&#41;](../blob/filestream-sql-server.md)을 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 행 파일 그룹을 사용하는 방법은 [데이터베이스 파일 및 파일 그룹](database-files-and-filegroups.md)을 참조하세요. FILESTREAM 데이터 및 파일 그룹에 대한 자세한 내용은 [FILESTREAM&#40;SQL Server&#41;](../blob/filestream-sql-server.md)을 참조하세요.  
   
  데이터베이스가 메모리 최적화 테이블을 하나 이상 포함하려면 메모리 최적화 파일 그룹이 필요합니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62917121"
  **읽기 전용**  
  파일 그룹을 읽기 전용 상태로 설정하려면 선택합니다.  
   
- **Default**  
+ **기본값**  
  이 파일 그룹을 기본 파일 그룹으로 만들려면 선택합니다. 행 및 FILESTREAM 데이터에 대해 각각 한 개의 기본 파일 그룹을 가질 수 있습니다.  
   
  **추가**  
@@ -62,8 +62,8 @@ ms.locfileid: "62917121"
  **제거**  
  표에서 선택한 파일 그룹 행을 제거합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [ALTER DATABASE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+## <a name="see-also"></a>참고 항목  
+ [ALTER DATABASE &#40;Transact-SQL &#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [sys.databases&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   
   

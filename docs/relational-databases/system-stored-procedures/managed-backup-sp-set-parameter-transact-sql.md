@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_set_parameter (TRANSACT-SQL) | Microsoft Docs
+title: managed_backup. sp_set_parameter (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: bd8ae5fd-1337-4b7f-b0a4-153cbca9fa5f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 838a8b0d998476a37b0dd4d30cab5041ad4276a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942030"
 ---
-# <a name="managedbackupspsetparameter-transact-sql"></a>managed_backup.sp_set_parameter (Transact SQL)
+# <a name="managed_backupsp_set_parameter-transact-sql"></a>managed_backup. sp_set_parameter (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   지정된 스마트 관리 시스템 매개 변수의 값을 설정합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "67942030"
  사용 가능한 매개 변수는 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]과 관련되어 있습니다. 이러한 매개 변수는 전자 메일 알림을 설정하고 특정 확장 이벤트를 사용하도록 설정하며 사용자를 통해 정책 기반 관리 정책을 설정하는 데 사용됩니다. 매개 변수 이름과 매개 변수 값 쌍을 지정해야 합니다.  
 
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,31 +47,31 @@ EXEC managed_backup.sp_set_parameter
   
 ##  <a name="Arguments"></a> 인수  
  @parameter_name  
- 값을 설정하려는 매개 변수의 이름입니다. @parameter_name NVARCHAR(128)입니다. 사용 가능한 매개 변수 이름은 **SSMBackup2WANotificationEmailIds**, **SSMBackup2WADebugXevent**하십시오 **SSMBackup2WAEnableUserDefinedPolicy**를 **FileRetentionDebugXevent**, 및 **StorageOperationDebugXevent**합니다.  
+ 값을 설정하려는 매개 변수의 이름입니다. @parameter_name는 NVARCHAR (128)입니다. 사용할 수 있는 매개 변수 이름은 **SSMBackup2WANotificationEmailIds**, **SSMBackup2WADebugXevent**, **SSMBackup2WAEnableUserDefinedPolicy**, **FileRetentionDebugXevent**및 **storageoperationdebugxevent**입니다.  
   
  @parameter_value  
- 설정하려는 매개 변수의 값입니다. @parameter value는 NVARCHAR(128)입니다.  다음은 허용되는 매개 변수 이름과 값 쌍입니다.  
+ 설정하려는 매개 변수의 값입니다. @parameter값은 NVARCHAR (128)입니다.  다음은 허용되는 매개 변수 이름과 값 쌍입니다.  
   
--   @parameter_name = 'SSMBackup2WANotificationEmailIds': @parameter_value = 'email'  
+-   @parameter_name= ' SSMBackup2WANotificationEmailIds ': @parameter_value = ' email '  
   
--   @parameter_name = 'SSMBackup2WAEnableUserDefinedPolicy' : @parameter_value  = { 'true' | 'false' }  
+-   @parameter_name= ' SSMBackup2WAEnableUserDefinedPolicy ': @parameter_value = {' true ' | ' false '}  
   
--   @parameter_name = 'SSMBackup2WADebugXevent': @parameter_value = {'true' | false'}  
+-   @parameter_name= ' SSMBackup2WADebugXevent ': @parameter_value = {' true ' | ' false '}  
   
--   @parameter_name = 'FileRetentionDebugXevent': @parameter_value = {'true' | false'}  
+-   @parameter_name= ' FileRetentionDebugXevent ': @parameter_value = {' true ' | ' false '}  
   
--   @parameter_name = 'StorageOperationDebugXevent' = { 'true' | 'false' }  
+-   @parameter_name= ' StorageOperationDebugXevent ' = {' true ' | ' false '}  
   
 ## <a name="return-code-value"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="best-practices"></a>최선의 구현 방법  
+## <a name="best-practices"></a>모범 사례  
  최선의 구현 방법을 설명하는 옵션 섹션에서 사용자는 문 또는 루틴을 실행할 때를 알아야 합니다.  
   
 ## <a name="security"></a>보안  
   
 ### <a name="permissions"></a>사용 권한  
- 필요 **EXECUTE** 에 대 한 권한을 **managed_backup.sp_set_parameter** 저장 프로시저입니다.  
+ **Managed_backup. sp_set_parameter** 저장 프로시저에 대 한 **EXECUTE** 권한이 필요 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 operational 및 debug 확장 이벤트를 사용하도록 설정합니다.  

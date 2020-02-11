@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ebffc2246f0940c4643af2267086e727882a0633
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63031975"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>결과 삽입 쿼리 만들기(Visual Database Tools)
@@ -76,11 +76,11 @@ WHERE (pub_id = '0766')
     > [!NOTE]  
     >  쿼리 및 뷰 디자이너에서는 업데이트 가능한 테이블과 뷰를 미리 확인할 수 없습니다. 따라서 **결과 삽입의 대상 테이블 선택** 대화 상자의 **테이블 이름** 목록에는 쿼리하려는 데이터 연결에 사용 가능한 모든 테이블과 뷰가 표시됩니다. 여기에는 행을 복사해 넣을 수 없는 테이블이나 뷰도 포함됩니다.  
   
-4.  테이블이나 테이블 반환 개체를 나타내는 사각형에서 복사하려는 내용이 들어 있는 열의 이름을 선택합니다. 행 전체를 복사 하려면 선택  **\* (모든 열)** 합니다.  
+4.  테이블이나 테이블 반환 개체를 나타내는 사각형에서 복사하려는 내용이 들어 있는 열의 이름을 선택합니다. 전체 행을 복사 하려면 ** \* (모든 열)** 을 선택 합니다.  
   
      사용자가 선택한 열이 쿼리 및 뷰 디자이너에서 조건 창의 **열** 열에 추가됩니다.  
   
-5.  조건 창의 **추가** 열에서 복사하려는 각 열에 대한 대상 테이블의 대상 열을 선택합니다. 선택할 *tablename.\**  행 전체를 복사 하는 경우. 대상 테이블 열의 데이터 형식은 원본 테이블 열의 데이터 형식과 동일하거나 호환되어야 합니다.  
+5.  조건 창의 **추가** 열에서 복사하려는 각 열에 대한 대상 테이블의 대상 열을 선택합니다. 전체 행을 복사 하는 경우 tablename을 선택 *합니다.\* * 대상 테이블 열의 데이터 형식은 원본 테이블 열의 데이터 형식과 동일하거나 호환되어야 합니다.  
   
 6.  행을 특정 순서에 따라 복사하려면 정렬 순서를 지정합니다. 자세한 내용은 [쿼리 결과 정렬 및 그룹화&#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)를 참조하세요.  
   
@@ -95,8 +95,8 @@ WHERE (pub_id = '0766')
   
  결과 삽입 쿼리를 실행해도 [결과 창](results-pane-visual-database-tools.md)에는 결과가 보고되지 않습니다. 대신, 복사한 행의 수를 나타내는 메시지가 표시됩니다.  
   
-## <a name="see-also"></a>관련 항목  
- [쿼리의 형식은 &#40;Visual Database Tools&#41;](types-of-queries-visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools를 &#40;쿼리 유형&#41;](types-of-queries-visual-database-tools.md)   
  [쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

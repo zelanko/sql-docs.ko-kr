@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 26af58e208527d155b5ddf3506be4509627c1f7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918341"
 ---
 # <a name="management-data-warehouse"></a>관리 데이터 웨어하우스
@@ -109,7 +109,7 @@ ms.locfileid: "62918341"
   
  데이터베이스 테이블 열에 대한 자세한 데이터 형식 및 콘텐츠 정보는 각 테이블에 해당되는 데이터 수집기 저장 프로시저에 대한 설명서를 참조하십시오.  
   
-### <a name="best-practices"></a>최선의 구현 방법  
+### <a name="best-practices"></a>모범 사례  
  관리 데이터 웨어하우스를 사용할 때는 다음과 같은 최선의 방법을 따르는 것이 좋습니다.  
   
 -   새 수집기 유형을 추가하지 않는 한 관리 데이터 웨어하우스 테이블의 메타데이터를 수정하지 않습니다.  
@@ -125,7 +125,7 @@ ms.locfileid: "62918341"
 |"core 스키마" 섹션에 core.performance_counter_report_group_items 테이블이 추가되었습니다.|  
 |"snapshots 스키마" 섹션의 테이블 목록이 업데이트되었습니다. snapshots.os_memory_clerks,snapshots.sql_process_and_system_memory 및 snapshots.io_virtual_file_stats가 추가되었습니다. snapshots.os_process_memory 및 snapshots.distinct_query_stats가 제거되었습니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [관리 데이터 웨어하우스 저장 프로시저&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql)   
  [데이터 수집기 저장 프로시저&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql)   
  [데이터 컬렉션](data-collection.md)   

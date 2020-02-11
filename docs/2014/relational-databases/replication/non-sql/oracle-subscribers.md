@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e38cc3a111eb68688fcc9c30ef01bb607349afcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022222"
 ---
 # <a name="oracle-subscribers"></a>Oracle 구독자
@@ -62,7 +62,7 @@ ms.locfileid: "63022222"
   
 2.  `cmd` 를 입력한 다음 **확인**을 클릭합니다.  
   
-3.  명령 프롬프트에서 다음을 입력합니다.  
+3.  명령 프롬프트에 다음을 입력합니다.  
   
      `sqlplus <UserSchemaLogin>/<UserSchemaPassword>@<NetServiceName>`  
   
@@ -127,7 +127,7 @@ ms.locfileid: "63022222"
 |`smalldatetime`|DATE|  
 |`smallint`|NUMBER(5,0)|  
 |`smallmoney`|NUMBER(10,4)|  
-|`sql_variant`|해당 사항 없음|  
+|`sql_variant`|해당 없음|  
 |`sysname`|VARCHAR2(128)|  
 |`text`|CLOB|  
 |`time(0-7)`|VARCHAR(16)|  
@@ -142,7 +142,7 @@ ms.locfileid: "63022222"
 |`varchar(max)`|CLOB|  
 |`xml`|NCLOB|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   
  [게시 구독](../subscribe-to-publications.md)  
   

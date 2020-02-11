@@ -18,13 +18,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8156e3d62e8aac027499ad1e267e1f6e14f5ef9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108687"
 ---
 # <a name="store-encrypted-report-server-data-ssrs-configuration-manager"></a>암호화된 보고서 서버 데이터 저장(SSRS 구성 관리자)
+  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 암호화된 값을 보고서 서버 데이터베이스와 구성 파일에 저장합니다. 암호화된 대부분의 값은 보고서에 데이터를 제공하는 외부 데이터 원본에 액세스하기 위한 자격 증명입니다. 이 항목에서는 암호화된 값, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 사용되는 암호화 기능 및 사용자가 알아야 할 기타 저장되는 기밀 데이터 유형에 대해 설명합니다.  
   
 ## <a name="encrypted-values"></a>암호화된 값  
@@ -32,7 +33,7 @@ ms.locfileid: "66108687"
   
 -   내부 서버 데이터를 저장하는 보고서 서버 데이터베이스에 연결하기 위해 보고서 서버에서 사용하는 연결 정보 및 자격 증명  
   
-     이러한 값은 설치 또는 보고서 서버 구성 중에 지정되고 암호화됩니다. Reporting Services 구성 도구나 **rsconfig** 유틸리티를 사용하여 언제든지 연결 정보를 업데이트할 수 있습니다. 구성 설정은 모든 사용자가 사용할 수 있는 로컬 컴퓨터의 컴퓨터 수준 키를 사용하여 암호화됩니다. 암호화된 보고서 서버 연결 정보는 rsreportserver.config 파일에 저장되며 다른 구성 파일에는 암호화된 설정이 포함되지 않습니다. 자세한 내용은 [보고서 서버 데이터베이스 연결 구성&#40;SSRS 구성 관리자&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)을 참조하세요.  
+     이러한 값은 설치 또는 보고서 서버 구성 중에 지정되고 암호화됩니다. Reporting Services 구성 도구나 **rsconfig** 유틸리티를 사용하여 언제든지 연결 정보를 업데이트할 수 있습니다. 구성 설정은 모든 사용자가 사용할 수 있는 로컬 컴퓨터의 컴퓨터 수준 키를 사용하여 암호화됩니다. 암호화된 보고서 서버 연결 정보는 rsreportserver.config 파일에 저장되며 다른 구성 파일에는 암호화된 설정이 포함되지 않습니다. 자세한 내용은 [보고서 서버 데이터베이스 연결 구성 &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)를 참조 하세요.  
   
 -   보고서에 데이터를 제공하는 외부 데이터 원본에 연결하기 위해 보고서 서버에서 사용하는 저장된 자격 증명  
   
@@ -49,7 +50,8 @@ ms.locfileid: "66108687"
      이 값은 설치 또는 서버 구성 중에 생성된 후 보고서 서버 데이터베이스에 암호화된 값으로 저장됩니다. 보고서 서버 Windows 서비스는 이 키를 사용하여 보고서 서버 데이터베이스에 저장된 데이터를 암호화 및 해독합니다.  
   
 ## <a name="encryption-functionality-in-reporting-services"></a>Reporting Services의 암호화 기능  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 Windows 운영 체제에 포함되어 있는 암호화 기능을 사용합니다. 대칭 암호화와 비대칭 암호화가 모두 사용됩니다.  
+ 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 Windows 운영 체제에 포함되어 있는 암호화 기능을 사용합니다. 대칭 암호화와 비대칭 암호화가 모두 사용됩니다.  
   
  보고서 서버 데이터베이스의 데이터는 대칭 키를 사용하여 암호화됩니다. 보고서 서버 데이터베이스마다 단일 대칭 키가 있습니다. 이 대칭 키는 Windows에서 생성하는 비대칭 키 쌍의 공개 키를 사용하여 자체적으로 암호화됩니다. 프라이빗 키는 보고서 서버 Windows 서비스 계정이 보유합니다.  
   
@@ -62,9 +64,10 @@ ms.locfileid: "66108687"
  보고서 서버는 암호화되지 않은 다른 데이터를 저장하지만 보호해야 할 중요한 정보가 포함될 수도 있습니다. 특히 보고서 기록 스냅샷 및 보고서 실행 스냅샷에는 허가된 사용자를 위한 데이터를 포함할 수 있는 쿼리 결과가 들어 있습니다. 기밀 데이터가 들어 있는 보고서에 스냅샷 기능을 사용하는 경우에는 보고서 서버 데이터베이스의 테이블을 열 수 있는 사용자가 테이블 내용을 검사하여 저장된 보고서의 일부를 볼 수 있으므로 주의해야 합니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 사용자의 보안 ID를 기반을 둔 매개 변수를 사용하는 보고서에 대한 캐싱 또는 보고서 기록을 지원하지 않습니다.  
+>  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 사용자의 보안 ID를 기반을 둔 매개 변수를 사용하는 보고서에 대한 캐싱 또는 보고서 기록을 지원하지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [암호화 키 구성 및 관리&#40;SSRS 구성 관리자&#41;](ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

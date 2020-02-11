@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 84ee67faf36668a297cdfd801a84147ed236ce50
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62956078"
 ---
 # <a name="add-an-existing-project-to-a-solution"></a>솔루션에 기존 프로젝트 추가
@@ -39,7 +39,7 @@ ms.locfileid: "62956078"
 > [!NOTE]  
 >  다중 개발자 환경에서 공유 디렉터리의 기존 프로젝트를 추가하려면 먼저 자신의 변경 내용이 다른 개발자의 변경 내용을 덮어쓰거나 프로젝트에 좋지 않은 영향을 주지는 않는지 확인해야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [프로젝트 &#40;SQL Server Management Studio&#41;](projects-sql-server-management-studio.md)   
  [솔루션&#40;SQL Server Management Studio&#41;](solutions-sql-server-management-studio.md)  
   

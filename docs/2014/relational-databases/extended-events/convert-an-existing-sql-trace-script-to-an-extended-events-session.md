@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 83cf9390524d2fdc013fdddc41c610c28930e998
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015775"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>기존 SQL 추적 스크립트를 확장 이벤트 세션으로 변환
@@ -100,7 +100,7 @@ ms.locfileid: "63015775"
 ## <a name="to-create-the-extended-events-session"></a>확장 이벤트 세션을 만들려면  
  쿼리 편집기를 사용하여 확장 이벤트 세션을 만들고 출력을 파일 대상에 씁니다. 다음 단계에서는 단일 쿼리를 설명하고 쿼리 작성 방법을 보여 줍니다. 전체 쿼리 예를 보려면 이 항목의 "예" 섹션을 참조하십시오.  
   
-1.  다음과 같이 이벤트 세션을 만드는 문을 추가합니다.*session_name* 을 확장 이벤트 세션에 사용할 이름으로 바꿉니다.  
+1.  문을 추가 하 여 이벤트 세션을 만들고 s*ession_name* 을 확장 이벤트 세션에 사용할 이름으로 바꿉니다.  
   
     ```sql
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
@@ -247,7 +247,7 @@ ADD TARGET package0.asynchronous_file_target
    (SET filename='c:\temp\ExtendedEventsStoredProcs.xel', metadatafile='c:\temp\ExtendedEventsStoredProcs.xem');  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL 추적 이벤트 클래스에 해당하는 확장 이벤트 항목 확인](view-the-extended-events-equivalents-to-sql-trace-event-classes.md)  
   
   

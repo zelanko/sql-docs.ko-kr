@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5aaf7031afb1b3c148bbef2bcafd5d40f4947f8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63000340"
 ---
 # <a name="advanced-merge-replication-conflict-detection-and-resolution"></a>Advanced Merge Replication Conflict Detection and Resolution
@@ -85,7 +85,7 @@ ms.locfileid: "63000340"
   
 -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)]에서 제공하는 COM 기반 해결 프로그램  
   
-     [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에는 많은 COM 기반 해결 프로그램이 포함되어 있습니다. 자세한 내용은 [Microsoft COM 기반 해결 프로그램](advanced-merge-replication-conflict-com-based-resolvers.md)을(를) 참조하세요.  
+     [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에는 많은 COM 기반 해결 프로그램이 포함되어 있습니다. 자세한 내용은 [Microsoft COM 기반 해결 프로그램](advanced-merge-replication-conflict-com-based-resolvers.md)을(를) 참조하세요.  
   
  적절한 유형의 해결 프로그램을 선택하는 방법에 대한 자세한 내용은 [해결 프로그램 선택](advanced-merge-replication-conflict-choose-a-resolver.md)을 참조하세요.  
   
@@ -94,9 +94,9 @@ ms.locfileid: "63000340"
   
  병합 구독 유형 및 충돌 해결 우선 순위를 지정하려면 다음을 참조하십시오.  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [병합 구독 유형 및 충돌 해결 우선순위 지정 &#40;SQL Server Management Studio&#41;](../specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [병합 구독 유형 및 충돌 해결 우선 순위 지정  &#40;SQL Server Management Studio &#41;](../specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
   
--   복제 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 프로그래밍 및 관리 RMO (복제 개체) 프로그래밍: [끌어오기 구독 만들기](../create-a-pull-subscription.md) 및 [밀어넣기 구독 만들기](../create-a-push-subscription.md)  
+-   복제 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 복제 프로그래밍 및 RMO(복제 관리 개체) 프로그래밍: [Create a Pull Subscription](../create-a-pull-subscription.md) 및 [Create a Push Subscription](../create-a-push-subscription.md)  
   
 ### <a name="interactive-resolver"></a>대화형 해결 프로그램  
  복제는 기본 우선 순위 기반 충돌 해결 프로그램이나 아티클 해결 프로그램과 함께 사용할 수 있는 대화형 해결 프로그램 사용자 인터페이스를 제공합니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 동기화 관리자를 통해 요청 시 동기화를 수행할 때 대화형 해결 프로그램은 런타임 시 충돌 데이터를 표시하고 충돌 해결 방법을 선택할 수 있습니다. 대화형 해결 기능 설정 방법 및 대화형 해결 프로그램 시작 방법은 [Interactive Conflict Resolution](advanced-merge-replication-conflict-interactive-resolution.md)을 참조하십시오.  
@@ -131,7 +131,7 @@ ms.locfileid: "63000340"
   
 -   복제 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 프로그래밍: [병합 게시에 대한 충돌 정보 보기&#40;복제 Transact-SQL 프로그래밍&#41;](../view-conflict-information-for-merge-publications.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 동기화](../synchronize-data.md)  
   
   

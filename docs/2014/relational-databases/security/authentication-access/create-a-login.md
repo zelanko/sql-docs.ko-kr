@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: b765248e43dc66b9e1c038df27ca9a8b6135706d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63012026"
 ---
 # <a name="create-a-login"></a>로그인 만들기
@@ -40,7 +40,7 @@ ms.locfileid: "63012026"
   
      [보안](#Security)  
   
--   **로그인을 만들려면 사용 합니다.**  
+-   **로그인을 만들려면 다음을 사용합니다.**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -52,7 +52,8 @@ ms.locfileid: "63012026"
  로그인은 보안 시스템에서 인증을 수행할 수 있는 보안 주체 또는 엔터티입니다. 사용자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 연결하려면 로그인이 필요합니다. 도메인 사용자 또는 Windows 도메인 그룹 등의 Windows 주체에 기반한 로그인을 만들거나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인과 같은 Windows 주체에 기반한 로그인을 만들 수 있습니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하려면 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]에서 혼합 모드 인증을 사용해야 합니다. 자세한 내용은 [인증 모드 선택](../choose-an-authentication-mode.md)을 참조하세요.  
+>  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하려면 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 에서 혼합 모드 인증을 사용해야 합니다. 자세한 내용은 [인증 모드 선택](../choose-an-authentication-mode.md)을 참조하세요.  
   
  보안 주체는 사용 권한을 로그인에 부여할 수 있습니다. 로그인의 범위는 전체 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에서 특정 데이터베이스에 연결하려면 로그인을 데이터베이스 사용자에 매핑해야 합니다. 이 경우 로그인이 아니라 데이터베이스 내의 사용 권한이 데이터베이스 사용자에게 부여되며 거부됩니다. 범위가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 전체 인스턴스에 속하는 사용 권한(예: `CREATE ENDPOINT` 권한)을 로그인에 부여할 수 있습니다.  
   
@@ -113,7 +114,7 @@ ms.locfileid: "63012026"
  **로그인 - 신규** 대화 상자에서는 다음 네 가지 추가 페이지에 대한 옵션도 제공합니다. **서버 역할**, **사용자 매핑**, **보안 개체** 및 **상태**.  
   
 ### <a name="server-roles"></a>서버 역할  
- **서버 역할** 페이지에는 새 로그인에 할당할 수 있는 모든 사용 가능한 역할이 나열됩니다. 사용할 수 있는 옵션은 다음과 같습니다.  
+ **서버 역할** 페이지에는 새 로그인에 할당할 수 있는 모든 사용 가능한 역할이 나열됩니다. 다음 옵션을 사용할 수 있습니다.  
   
  **bulkadmin** 확인란  
  **bulkadmin** 고정 서버 역할의 멤버는 BULK INSERT 문을 실행할 수 있습니다.  
@@ -146,12 +147,12 @@ ms.locfileid: "63012026"
  **사용자 매핑** 페이지에는 사용 가능한 모든 데이터베이스와 이러한 데이터베이스에서 해당 로그인에 적용할 수 있는 데이터베이스 역할이 나열됩니다. 선택한 데이터베이스에 따라 로그인에 사용할 수 있는 역할 멤버 자격이 결정됩니다. 이 페이지에서는 다음과 같은 옵션을 사용할 수 있습니다.  
   
  **이 로그인으로 매핑된 사용자**  
- 이 로그인으로 액세스할 수 있는 데이터베이스를 선택합니다. 데이터베이스를 선택하면 **데이터베이스 역할 멤버 자격:** _database_name_ 창에 유효한 데이터베이스 역할이 표시됩니다.  
+ 이 로그인으로 액세스할 수 있는 데이터베이스를 선택합니다. 데이터베이스를 선택하면 **데이터베이스 역할 멤버 자격 대상:** _database_name_ 창에 유효한 데이터베이스 역할이 표시됩니다.  
   
- **지도**  
+ **Map**  
  아래 나열되는 데이터베이스에 해당 로그인이 액세스하는 것을 허용합니다.  
   
- **데이터베이스 백업**  
+ **Database**  
  서버의 사용 가능한 데이터베이스를 나열합니다.  
   
  **사용자**  
@@ -160,10 +161,10 @@ ms.locfileid: "63012026"
  **기본 스키마**  
  사용자의 기본 스키마를 지정합니다. 사용자를 처음 만들 경우 기본 스키마는 **dbo**입니다. 아직 존재하지 않는 기본 스키마를 지정할 수도 있습니다. Windows 그룹, 인증서 또는 비대칭 키에 매핑된 사용자에 대해서는 기본 스키마를 지정할 수 없습니다.  
   
- **Guest account enabled for:**  _database_name_  
+ **게스트 계정 활성화 대상:**  _database_name_  
  선택한 데이터베이스에 게스트 계정이 설정되어 있는지 여부를 나타내는 읽기 전용 특성입니다. 게스트 계정에 대한 **로그인 속성** 대화 상자의 **상태** 페이지를 사용하여 게스트 계정을 설정하거나 해제할 수 있습니다.  
   
- **Database role membership for:**  _database_name_  
+ **데이터베이스 역할 멤버 자격 대상:**  _database_name_  
  지정한 데이터베이스 사용자에 대한 역할을 선택합니다. 모든 사용자는 모든 데이터베이스에서 **public** 역할의 멤버이며 제거할 수 없습니다. 데이터베이스 역할에 대한 자세한 내용은 [데이터베이스 수준 역할](database-level-roles.md)을 참조하세요.  
   
 ### <a name="securables"></a>보안 개체  
@@ -176,10 +177,10 @@ ms.locfileid: "63012026"
   
 1.  **검색**을 클릭합니다.  
   
-2.  **개체 추가** 대화 상자에서 다음 옵션 중 하나를 선택합니다. **특정 개체...** , **유형의 모든 개체...** , 또는 **서버**_server_name_합니다. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  **개체 추가** 대화 상자에서 다음 옵션 중 하나를 선택 합니다. **특정 개체 ...**, **유형의 모든 개체**... 또는 **서버**_server_name_ [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > [!NOTE]  
-    >  **서버**_server_name_을 선택하면 상단 표에 해당 서버의 모든 보안 개체가 자동으로 채워집니다.  
+    >  **서버**_server_name_ 를 선택 하면 상단 표에 해당 서버의 모든 보안 개체가 자동으로 채워집니다.  
   
 3.  **특정 개체...** 를 선택한 경우:  
   
@@ -204,7 +205,7 @@ ms.locfileid: "63012026"
  **명시적 탭**  
  상단 표에서 선택한 보안 개체에 대해 사용 가능한 사용 권한이 나열됩니다. 모든 명시적 사용 권한에 대해 모든 옵션을 사용할 수 있는 것은 아닙니다.  
   
- **사용 권한**  
+ **권한**  
  사용 권한의 이름입니다.  
   
  **Grantor**  
@@ -229,14 +230,14 @@ ms.locfileid: "63012026"
   
  로그인에 CONNECT SQL 권한을 부여하려면 **허용** 을 선택합니다. 로그인에 CONNECT SQL을 거부하려면 **거부** 를 선택합니다.  
   
- **Login**  
+ **로그인**  
  이 설정을 사용할 때 사용자는 선택한 로그인을 테이블에 있는 레코드로 간주해야 합니다. 여기에 나열된 값의 변경 내용은 레코드에 적용됩니다.  
   
  사용하지 않도록 선택한 로그인은 레코드로 계속 존재합니다. 그러나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 연결하려는 경우 로그인이 인증되지 않습니다.  
   
  이 로그인을 사용하거나 사용하지 않도록 선택합니다. 이 옵션은 ALTER LOGIN 문에 ENABLE 또는 DISABLE 옵션을 사용합니다.  
   
- **SQL Server Authentication**  
+ **SQL Server 인증**  
  **로그인 잠겨 있음** 확인란은 선택한 로그인을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하여 연결하고 로그인이 잠겨 있는 경우에만 사용할 수 있습니다. 이 설정은 읽기 전용입니다. 잠긴 로그인을 잠금 해제하려면 UNLOCK 옵션을 사용하여 ALTER LOGIN을 실행합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  

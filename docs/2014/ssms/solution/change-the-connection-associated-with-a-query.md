@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4f666bf30ebddbc173f6f23f13b1eca4c2d9024a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62955822"
 ---
 # <a name="change-the-connection-associated-with-a-query"></a>쿼리와 연관된 연결 변경
@@ -31,9 +31,9 @@ ms.locfileid: "62955822"
   
 2.  **데이터베이스 엔진에 연결** 대화 상자에서 새 연결 정보를 제공한 다음 **연결**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [솔루션 탐색기](solution-explorer.md)   
- [쿼리를 프로젝트의 연결 정보로 연결](associate-a-query-with-a-connection-in-a-project.md)   
+ [프로젝트의 연결을 사용 하 여 쿼리 연결](associate-a-query-with-a-connection-in-a-project.md)   
  [프로젝트의 연결 속성 보기 및 변경](view-or-change-the-properties-of-a-connection-in-a-project.md)  
   
   

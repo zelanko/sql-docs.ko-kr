@@ -1,5 +1,5 @@
 ---
-title: 날짜 및 시간 함수 (Visual FoxPro ODBC 드라이버) | Microsoft Docs
+title: 시간 및 날짜 함수 (Visual FoxPro ODBC 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,56 +18,56 @@ ms.assetid: c1fb63b7-af50-45d6-8dec-ae6ea7119527
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 537af13edf943e27a634d3a8ba4f0f85c645251f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67912399"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>날짜 및 시간 함수(Visual FoxPro ODBC 드라이버)
-다음 표에서 Visual FoxPro ODBC 드라이버;에서 지원 되는 ODBC 날짜 및 시간 함수 동일한 함수에 대 한 Visual FoxPro 문법 ODBC 구문을 다를 경우에 해당 Visual FoxPro 나열 됩니다.  
+다음 표에서는 Visual FoxPro ODBC 드라이버에서 지 원하는 ODBC 시간 및 날짜 함수를 보여 줍니다. 동일한 함수에 대 한 Visual FoxPro 문법이 ODBC 구문과 다를 경우 Visual FoxPro와 동일한 항목이 나열 됩니다.  
   
 |ODBC 문법|Visual FoxPro 문법|  
 |------------------|---------------------------|  
-|CURDATE *)*|날짜 *)*|  
-|CURTIME *( )*|TIME *( )*|  
+|CURDATE *()*|DATE *()*|  
+|CURTIME *()*|시간 *()*|  
 |DAYNAME *(date_exp)*|CDOW *(date_exp)*|  
-|DAYOFMONTH(*date_exp)*|일 *)*|  
-|HOUR *(time_exp)*||  
-|MINUTE *(time_exp)*||  
-|MONTH *(time_exp)*||  
+|DAYOFMONTH (*date_exp)*|일 *()*|  
+|시간 *(time_exp)*||  
+|분 *(time_exp)*||  
+|월 *(time_exp)*||  
 |MONTHNAME *(date_exp)*|CMONTH *(date_exp)*|  
-|이제 *)*|DATETIME *( )*|  
-|SECOND *(time_exp)*|SEC *(time_exp)*|  
-|WEEK *(date_exp)*||  
-|YEAR *(date_exp)*||  
+|NOW *()*|DATETIME *()*|  
+|초 *(time_exp)*|초 *(time_exp)*|  
+|주 *(date_exp)*||  
+|연도 *(date_exp)*||  
   
- 다음 날짜 및 시간 함수는 지원 되지 않습니다.  
+ 다음 시간 및 날짜 함수는 지원 되지 않습니다.  
   
  DAYOFYEAR *(date_exp)*  
   
- 분기 *(date_exp)*  
+ 사분기 *(date_exp)*  
   
- TIMESTAMPADD *(간격, integer_exp timestamp_exp)*  
+ TIMESTAMPADD *(interval, integer_exp, timestamp_exp)*  
   
  TIMESTAMPDIFF *(interval, timestamp_exp1, timestamp_exp2)*  
   
 ## <a name="odbc-escape-sequences"></a>ODBC 이스케이프 시퀀스  
- 또한 드라이버는 날짜 및 타임 스탬프 데이터에 대 한 ODBC 이스케이프 시퀀스를 지원합니다. Escape 절 구문 아래와 같습니다.  
+ 또한 드라이버는 날짜 및 타임 스탬프 데이터에 대 한 ODBC 이스케이프 시퀀스를 지원 합니다. Escape 절 구문은 다음과 같습니다.  
   
 ```  
 --(*vendor(Microsoft),product(ODBC) d 'value' *)-  
 --(*vendor(Microsoft),product(ODBC) ts ''value' *)-  
 ```  
   
- 이 구문에서 **d** 나타냅니다 *값* 갖는 날짜를 *yyyy-월-일* 형식 및 **ts** 나타내는 *값*  은 타임 스탬프에는 *h:mm: ss yyyy-월-일*[.*f...* ] 형식입니다. 날짜 및 타임 스탬프 데이터에 대 한 약식 구문을 아래와 같습니다.  
+ 이 구문에서 **d** 는 *값* 이 *yyyy-mm-dd* 형식의 날짜이 고 **ts** 는 *값* 이 *yyyy-mm-dd hh: mm: ss*[의 타임 스탬프 임을 나타냅니다.* f ...*] 형식과. 날짜 및 타임 스탬프 데이터의 줄임 구문은 다음과 같습니다.  
   
 ```  
 {d 'value'}  
 {ts 'value'}  
 ```  
   
- 예를 들어, 다음 문 중 각 지원 되는 SQL UPDATE 명령을에서 날짜 및 타임 스탬프 축약형 구문을 사용 하 여 ALLTYPES 테이블 업데이트:  
+ 예를 들어 다음 문은 모두 지원 되는 SQL UPDATE 명령에서 date 및 timestamp 줄임 구문을 사용 하 여 ALLTYPES 테이블을 업데이트 합니다.  
   
 ```  
 UPDATE alltypes  
@@ -80,4 +80,4 @@ UPDATE alltypes
 ```  
   
 ## <a name="remarks"></a>설명  
- 이스케이프 시퀀스에 대 한 자세한 내용은 참조 하세요. [ODBC의 이스케이프 시퀀스](../../odbc/reference/develop-app/escape-sequences-in-odbc.md) 에 *ODBC 프로그래머 참조*합니다.
+ 이스케이프 시퀀스에 대 한 자세한 내용은 *Odbc 프로그래머 참조*에서 [Odbc의 이스케이프 시퀀스](../../odbc/reference/develop-app/escape-sequences-in-odbc.md) 를 참조 하세요.

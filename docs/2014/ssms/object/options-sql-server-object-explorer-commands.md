@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cd2aeedcfcb9c4888e730f94c73aabe2cdd6607d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999303"
 ---
 # <a name="options-sql-server-object-explorer-commands"></a>옵션 (SQL Server 개체 탐색기-명령)
@@ -33,16 +33,16 @@ ms.locfileid: "62999303"
  **일반 스크립팅 옵션** 대화 상자를 사용하여 열릴 행의 수를 변경할 수 있습니다.  
   
 ## <a name="general-scripting-options"></a>일반 스크립팅 옵션  
- **Select Top 값 \<n > 감사 레코드 명령을**  
+ **Select Top \<n> Audit record 명령의 값**  
  반환할 감사 행 수를 지정합니다. 기본값은 1000입니다.  
   
- **값 편집 상위 \<n > 명령을 행**  
+ **Top \<n> 행 편집 명령의 값**  
  테이블의 행을 편집할 때 반환할 행 수를 지정합니다. 기본값은 200개 행입니다.  
   
- **Select Top 값 \<n > 명령을 행**  
+ **Select Top \<n> Rows 명령의 값**  
  쿼리 편집기에서 만든 스크립트에 지정된 반환할 행 수를 지정합니다. 기본값은 1000입니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Audit&#40;데이터베이스 엔진&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   

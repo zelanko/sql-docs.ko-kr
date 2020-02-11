@@ -17,16 +17,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d5e46c3d8a8a6836dbc0252177e45e86115abb07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63128793"
 ---
 # <a name="localdbcreateinstance-function"></a>LocalDBCreateInstance 함수
   새 SQL Server Express LocalDB 인스턴스를 만듭니다.  
   
- **헤더 파일:** sqlncli.h  
+ **헤더 파일:** sqlncli  
   
 ## <a name="syntax"></a>구문  
   
@@ -48,7 +48,7 @@ HRESULT LocalDBCreateInstance(
  *dwFlags*  
  [입력] 나중에 사용하도록 예약되어 있습니다. 현재 0으로 설정해야 합니다.  
   
-## <a name="returns"></a>반환 값  
+## <a name="returns"></a>반환  
  S_OK  
  함수가 성공했습니다.  
   
@@ -97,14 +97,14 @@ HRESULT LocalDBCreateInstance(
  [LOCALDB_ERROR_INTERNAL_ERROR](../express-localdb-error-messages/localdb-error-internal-error.md)  
  예기치 않은 오류가 발생했습니다. 자세한 내용은 이벤트 로그를 참조하십시오.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  지정한 이름으로 완전히 작동하는 LocalDB 인스턴스가 이미 있으며 버전이 요청한 것보다 높거나 같은 경우 결과는 S_OK입니다.  
   
  기존 인스턴스가 손상된 경우 `LocalDBCreateInstance` API 메서드에 대한 후속 요청이 실패합니다. 손상된 인스턴스를 다시 사용하려면 수동으로 수정하거나 명시적으로 삭제해야 합니다.  
   
  LocalDB API를 사용하는 코드 샘플은 [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md)를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Express LocalDB 헤더 및 버전 정보](sql-server-express-localdb-header-and-version-information.md)  
   
   

@@ -11,13 +11,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3a35d5cdb9db4c56579a4229b2d08014a99da542
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63072765"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 대한 내구성
+  
   [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]는 메모리 최적화 테이블에 대한 완전한 내구성을 제공합니다. 메모리 최적화 테이블을 변경한 트랜잭션을 커밋할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 사용하면 (디스크 기반 테이블과 마찬가지로) 기본 스토리지를 사용할 수 있는 경우 변경 내용이 영구적이 됩니다(데이터베이스 다시 시작 유지). 내구성의 두 가지 주요 구성 요소는 트랜잭션 로깅 및 디스크상 스토리지에 데이터 변경 내용 저장입니다.  
   
 ## <a name="transaction-log"></a>트랜잭션 로그  
@@ -43,7 +44,7 @@ ms.locfileid: "63072765"
 ## <a name="populating-data-and-delta-files"></a>데이터 및 델타 파일 채우기  
  데이터 및 델타 파일은 오프 라인 검사점이라는 백그라운드 스레드에 의해 채워집니다. 이 스레드는 메모리 최적화 테이블에서 커밋된 트랜잭션에 의해 생성되는 트랜잭션 로그 레코드를 읽고 삽입된 행과 삭제된 행에 대한 정보를 해당 데이터 및 델타 파일에 추가합니다. 검사점이 완료되면 데이터/인덱스 페이지가 임의 I/O로 플러시되는 디스크 기반 테이블과 달리 메모리 최적화 테이블은 계속해서 백그라운드 작업으로 지속됩니다. 트랜잭션을 삭제하거나 이전 트랜잭션에 의해 삽입된 모든 행을 업데이트하기 때문에 여러 개의 델타 파일이 액세스됩니다. 삭제 정보는 항상 델타 파일의 끝에 추가됩니다. 예를 들어, 커밋 타임스탬프가 600인 트랜잭션은 한 행을 삽입하고 아래 그림처럼 150, 250 및 450의 커밋 타임스탬프를 갖는 트랜잭션에 의해 삽입된 행을 삭제합니다. 모두 4번의 파일 I/O 작업(삭제된 행에 3번, 새로 삽입된 행에 1번)이 해당 델타 및 데이터 파일에 대한 추가 전용 작업입니다.  
   
- ![메모리 최적화 테이블의 로그 레코드를 읽습니다.](../../database-engine/media/read-logs-hekaton.gif "Read log records for memory-optimized tables.")  
+ ![메모리 최적화 테이블의 로그 레코드를 읽습니다.](../../database-engine/media/read-logs-hekaton.gif "메모리 최적화 테이블의 로그 레코드를 읽습니다.")  
   
 ## <a name="accessing-data-and-delta-files"></a>데이터 및 델타 파일 액세스  
  데이터 및 델타 파일 쌍은 다음이 발생할 때 액세스됩니다.  
@@ -55,7 +56,8 @@ ms.locfileid: "63072765"
  작업은 하나 이상의 데이터 및 델타 파일 쌍을 병합하고 새로운 데이터 및 델타 파일 쌍을 만듭니다.  
   
  충돌 복구 동안  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]을 다시 시작하거나 데이터베이스가 다시 온라인이 되면 데이터 및 델타 파일 쌍을 사용하여 메모리 최적화 데이터가 채워집니다. 델타 파일은 해당 데이터 파일에서 행을 읽을 때 삭제된 행에 대한 필터의 역할을 합니다. 각 데이터 및 델타 파일 쌍은 서로 독립적이기 때문에 이러한 파일은 메모리에 데이터를 채우는 데 걸리는 시간을 줄이기 위해 병렬로 로드됩니다. 데이터가 메모리로 로드되면 메모리 내 OLTP 엔진은 메모리 최적화 데이터가 완전하도록 검사점 파일에 아직 포함되지 않은 활성 트랜잭션 로그 레코드를 적용합니다.  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]을 다시 시작하거나 데이터베이스가 다시 온라인이 되면 데이터 및 델타 파일 쌍을 사용하여 메모리 최적화 데이터가 채워집니다. 델타 파일은 해당 데이터 파일에서 행을 읽을 때 삭제된 행에 대한 필터의 역할을 합니다. 각 데이터 및 델타 파일 쌍은 서로 독립적이기 때문에 이러한 파일은 메모리에 데이터를 채우는 데 걸리는 시간을 줄이기 위해 병렬로 로드됩니다. 데이터가 메모리로 로드되면 메모리 내 OLTP 엔진은 메모리 최적화 데이터가 완전하도록 검사점 파일에 아직 포함되지 않은 활성 트랜잭션 로그 레코드를 적용합니다.  
   
  복원 작업 동안  
  메모리 내 OLTP 검사점 파일이 데이터베이스 백업에서 만들어진 다음 하나 이상의 트랜잭션 로그 백업이 적용됩니다. 충돌 복구와 마찬가지로 메모리 내 OLTP 엔진은 데이터를 병렬로 메모리로 로드하여 복구 시간에 미치는 영향을 최소화합니다.  
@@ -83,12 +85,13 @@ ms.locfileid: "63072765"
   
  아래 예제에서 메모리 최적화 테이블 파일 그룹에는 이전 트랜잭션의 데이터를 포함하는 타임스탬프 500에 4개의 데이터와 델타 파일 쌍이 있습니다. 예를 들어, 첫 번째 데이터 파일의 행은 타임스탬프가 100보다 크고 200보다 작거나 같은 트랜잭션에 해당하며 (100, 200]으로 표시됩니다. 두 번째 및 세 번째 데이터 파일은 삭제된 것으로 표시된 행이 채워진 비율이 50% 미만으로 표시됩니다. 병합 작업에서는 이 두 CFP를 결합하고 타임스탬프가 200보다 크고 400보다 작거나 같은(이 두 CFP의 결합 범위) 트랜잭션을 포함하는 새 CFP를 만듭니다. 범위가 CFP (500, 600]인 다른 CFP가 표시되고 트랜잭션 범위 (200, 400]에 대한 비어 있지 않은 델타 파일은 원본 CFP에서 여러 행 삭제와 같은 트랜잭션 활동과 병합 작업을 동시에 수행할 수 있음을 나타냅니다.  
   
- ![다이어그램에서는 메모리 액세스에 최적화된 테이블 파일 그룹을 보여 줍니다.](../../database-engine/media/storagediagram-hekaton.png "Diagram shows memory optimized table file group")  
+ ![다이어그램에서는 메모리 액세스에 최적화된 테이블 파일 그룹을 보여 줍니다.](../../database-engine/media/storagediagram-hekaton.png "다이어그램에서는 메모리 액세스에 최적화된 테이블 파일 그룹을 보여 줍니다.")  
   
  백그라운드 스레드는 병합 정책에 따라 모든 닫힌 CFP를 평가한 다음 조건에 맞는 CFP에 대한 하나 이상의 병합 요청을 시작합니다. 이러한 병합 요청은 오프라인 검사점 스레드에서 처리됩니다. 병합 정책 평가는 주기적으로 수행되며 검사점을 닫을 때에도 수행됩니다.  
   
-### <a name="includesssql14includessssql14-mdmd-merge-policy"></a>[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 병합 정책  
- [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 에서는 다음과 같은 병합 정책을 구현합니다.  
+### <a name="includesssql14includessssql14-mdmd-merge-policy"></a>[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]병합 정책  
+ 
+  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 에서는 다음과 같은 병합 정책을 구현합니다.  
   
 -   두 개 이상의 연속하는 CFP를 통합할 수 있는 경우 삭제된 행을 고려한 후 이상적인 크기의 CFP 하나에 결과 행을 모두 넣을 수 있도록 병합을 예약합니다. CFP의 이상적인 크기는 다음과 같이 결정됩니다.  
   
@@ -108,16 +111,16 @@ ms.locfileid: "63072765"
   
  사용 가능한 공간이 있는 CFP 중 일부는 병합할 수 없습니다. 예를 들어, 두 개의 인접한 CFP가 60% 채워진 경우 해당 CFP는 병합되지 않고 각 CFP의 스토리지 중 40%는 사용되지 않습니다. 최악의 경우 모든 CFP가 50% 채워진 경우 스토리지의 50%만 사용됩니다. CFP가 병합되지 않아 삭제된 행이 스토리지에 존재할 수 있지만 삭제된 행은 메모리 내 가비지 수집에 의해 메모리에서 이미 제거되었을 수 있습니다. 스토리지 관리와 메모리는 가비지 수집에 종속되지 않습니다. 활성 CFP가 차지하는 스토리지(일부 CFP는 업데이트되지 않음)는 메모리 내 영구 테이블 크기보다 최대 2배 더 클 수 있습니다.  
   
- 필요한 경우 수동 병합을 수행할 수 있습니다 명시적으로 호출 하 여 [sys.sp_xtp_merge_checkpoint_files &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql)합니다.  
+ 필요한 경우 [sp_xtp_merge_checkpoint_files &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql)를 호출 하 여 수동 병합을 명시적으로 수행할 수 있습니다.  
   
 ### <a name="life-cycle-of-a-cfp"></a>CFP의 수명 주기  
  CPF 할당을 취소하려면 여러 상태를 전환해야 합니다. 언제든지 CFP는 PRECREATED, UNDER CONSTRUCTION, ACTIVE, MERGE TARGET, MERGED SOURCE, REQUIRED FOR BACKUP/HA, IN TRANSITION TO TOMBSTONE 및 TOMBSTONE 단계 중 하나에 속합니다. 이러한 단계에 대한 자세한 내용은 [sys.dm_db_xtp_checkpoint_files&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)를 참조하세요.  
   
- 다양한 상태의 CFP가 차지하는 스토리지를 고려한 후 메모리 최적화 영구 테이블이 차지하는 전체 스토리지는 메모리 내 해당 테이블 크기의 2배보다 훨씬 클 수 있습니다. DMV [sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql) 모든 Cfp는 메모리 최적화 파일 그룹의 해당 단계를 나열 하려면 쿼리할 수 있습니다. MERGE SOURCE 상태의 CFP를 TOMBSTONE으로 전환하면 결국 가비지 수집에서 최대 5개의 검사점을 사용할 수 있으며, 데이터베이스가 전체 또는 대량 로그 복구 모델에 대해 구성된 경우 각 검사점 뒤에는 트랜잭션 로그 백업이 수행됩니다.  
+ 다양한 상태의 CFP가 차지하는 스토리지를 고려한 후 메모리 최적화 영구 테이블이 차지하는 전체 스토리지는 메모리 내 해당 테이블 크기의 2배보다 훨씬 클 수 있습니다. 해당 단계를 포함 하 여 메모리 최적화 파일 그룹의 CFPs를 모두 나열 하도록 [transact-sql&#41;&#40;DM_DB_XTP_CHECKPOINT_FILES](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql) DMV를 쿼리할 수 있습니다. MERGE SOURCE 상태의 CFP를 TOMBSTONE으로 전환하면 결국 가비지 수집에서 최대 5개의 검사점을 사용할 수 있으며, 데이터베이스가 전체 또는 대량 로그 복구 모델에 대해 구성된 경우 각 검사점 뒤에는 트랜잭션 로그 백업이 수행됩니다.  
   
  검사점 후에 강제 로그 백업을 수동으로 수행하여 가비지를 빠르게 수집할 수 있지만 그러면 5개의 빈 CFP(데이터 파일의 크기가 각각 128MB인 5개의 데이터/델타 파일 쌍)가 추가됩니다. 프로덕션 시나리오에서 백업 전략의 일부로 수행되는 자동 검사점 및 로그 백업에서는 수동 작업을 수행할 필요 없이 이러한 단계에서 CFP를 완벽하게 전환합니다. 가비지 수집 프로세스의 영향으로 메모리 최적화 테이블을 포함하는 데이터베이스에 메모리 내 크기에 비해 큰 스토리지가 존재할 수 있습니다. CFP가 메모리에 있는 메모리 최적화 영구 테이블 크기의 최대 4배인 경우도 드물지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [메모리 액세스에 최적화된 개체의 저장소 만들기 및 관리](creating-and-managing-storage-for-memory-optimized-objects.md)  
+## <a name="see-also"></a>참고 항목  
+ [메모리 최적화 개체에 대한 스토리지 만들기 및 관리](creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   
