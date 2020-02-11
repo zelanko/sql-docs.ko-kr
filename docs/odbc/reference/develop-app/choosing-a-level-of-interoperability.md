@@ -13,14 +13,14 @@ ms.assetid: 1f915832-a7c1-41cd-8c4f-bf6d976951b0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 63d80d6d28427843937f12bf973e52309b56f870
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036576"
 ---
 # <a name="choosing-a-level-of-interoperability"></a>상호 운용성 수준 선택
-다음 단계 어떤 수준의 상호 운용성이 필요한 지 확인 하는 것으로 가정 하 고 응용 프로그램에서 ODBC를 사용 합니다. 기본 수준의 상호 운용성은 일반적으로 응용 프로그램 유형의 함수. 사용자 지정 응용 프로그램 경향이 하지 상호 운용이 가능 수직 응용 프로그램을 제한 된 수의 Dbms 간에 상호 운용 가능한 경향이 및 일반 응용 프로그램을 모든 Dbms 간에 상호 운용 가능한 경향이 있습니다.  
+응용 프로그램에서 ODBC를 사용 하는 경우 다음 단계는 필요한 상호 운용성 수준을 결정 하는 것입니다. 상호 운용성의 기본 수준은 일반적으로 응용 프로그램 종류의 기능입니다. 사용자 지정 응용 프로그램은 상호 운용할 수 없고, 수직 응용 프로그램은 제한 된 수의 Dbms에서 상호 운용할 수 있으며, 제네릭 응용 프로그램은 상호 운용할 수 있는 경향이 있습니다. 모든 Dbms에서.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

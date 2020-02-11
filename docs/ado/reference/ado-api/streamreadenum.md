@@ -16,22 +16,22 @@ ms.assetid: cfa1b416-003a-436f-a21b-bd2397e54db3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7700fc1ddc3cc619db224ac46006370898af1d62
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67928669"
 ---
 # <a name="streamreadenum"></a>StreamReadEnum
-전체 스트림을 또는 다음 줄에서 읽을 수 있는지 여부를 지정 된 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다.  
+[스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체에서 전체 스트림 또는 다음 줄을 읽어야 하는지 여부를 지정 합니다.  
   
-|상수|값|설명|  
+|지속적임|값|Description|  
 |--------------|-----------|-----------------|  
-|**adReadAll**|-1|기본. 이상에 현재 위치에서 스트림에서 모든 바이트를 읽습니다 합니다 [EOS](../../../ado/reference/ado-api/eos-property.md) 표식입니다. 이 값만 유효 **StreamReadEnum** 이진 스트림 값 ([형식](../../../ado/reference/ado-api/type-property-ado-stream.md) 됩니다 **adTypeBinary**).|  
-|**adReadLine**|-2|스트림에서 다음 줄을 읽습니다 (으로 지정 합니다 [LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md) 속성).|  
+|**adReadAll**|-1|Default. 현재 위치부터 [EOS](../../../ado/reference/ado-api/eos-property.md) 표식까지 스트림에서 모든 바이트를 읽습니다. 이는 이진 스트림이 있는 유일 하 게 유효한 **Streamreadenum** 값 이며,이 값은 **Adtypebinary**[형식](../../../ado/reference/ado-api/type-property-ado-stream.md) 입니다.|  
+|**adReadLine**|-2|[LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md) 속성으로 지정 된 스트림에서 다음 줄을 읽습니다.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC 해당  
- 이러한 상수는 ADO/wfc 필요가 없습니다.  
+## <a name="adowfc-equivalent"></a>ADO/WFC 동급  
+ 이러한 상수에는 ADO/WFC 해당 항목이 없습니다.  
   
 ## <a name="applies-to"></a>적용 대상  
   

@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ba2cef1cfb95319cbe0aff827cb251ff7e2317c2
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893617"
 ---
 # <a name="exists-mdx"></a>Exists(MDX)
 
 
-  지정된 첫 번째 집합에 있는 튜플 중 지정된 두 번째 집합에 있는 하나 이상의 튜플과 함께 존재하는 튜플의 집합을 반환합니다. 이 함수는 AUTOEXIST에서 자동으로 수행되는 작업을 수동으로 수행합니다. Auto exists에 대 한 자세한 내용은 [MDX &#40;Analysis Services&#41;의 주요 개념](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)을 참조 하세요.  
+  지정된 첫 번째 집합에 있는 튜플 중 지정된 두 번째 집합에 있는 하나 이상의 튜플과 함께 존재하는 튜플의 집합을 반환합니다. 이 함수는 AUTOEXIST에서 자동으로 수행되는 작업을 수동으로 수행합니다. Auto exists에 대 한 자세한 내용은 [MDX의 주요 개념 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)를 참조 하세요.  
   
- 선택적인 \<측정값 그룹 이름 > 제공 되는 경우이 함수는 두 번째 집합의 튜플이 하나 이상 있고 지정 된 측정값 그룹의 팩트 테이블에 연결 된 행이 있는 튜플을 반환 합니다.  
+ 선택적인 \<측정값 그룹 이름> 제공 되는 경우이 함수는 두 번째 집합의 튜플이 하나 이상 있고 지정 된 측정값 그룹의 팩트 테이블에 연결 된 행이 있는 튜플을 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -92,11 +92,11 @@ EXISTS(
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)   
+## <a name="see-also"></a>참고 항목  
+ [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
  [Crossjoin &#40;MDX&#41;](../mdx/crossjoin-mdx.md)   
  [NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)   
- [비어 &#40;있지 않은 MDX&#41;](../mdx/nonempty-mdx.md)   
+ [비어 있지 않은 &#40;MDX&#41;](../mdx/nonempty-mdx.md)   
  [IsEmpty &#40;MDX&#41;](../mdx/isempty-mdx.md)  
   
   

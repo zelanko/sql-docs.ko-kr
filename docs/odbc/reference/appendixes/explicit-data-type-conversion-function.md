@@ -15,22 +15,22 @@ ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6982f7b7caa71abc08c5b84ef1bb6211dcadaecd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67913608"
 ---
 # <a name="explicit-data-type-conversion-function"></a>명시적 데이터 형식 변환 함수
-명시적 데이터 형식 변환이 SQL 데이터 형식 정의 기준으로 지정 됩니다.  
+명시적 데이터 형식 변환은 SQL 데이터 형식 정의를 기준으로 지정 됩니다.  
   
- ODBC 구문을 명시적 데이터 형식 변환 함수에 대 한 변환 제한 하지 않습니다. 다른 데이터 형식으로 한 데이터 형식의 특정 변환의 유효성을 검사 각 드라이버별 구현에 의해 결정 됩니다. 드라이버는 ODBC 구문은 기본 구문으로 변환 하는 대로 거부 하지만 ODBC 구문에서 사용할 데이터 원본에서 지원 되지 않는 이러한 변환 합니다. ODBC 함수 **SQLGetInfo**, 변환을 옵션 (예: SQL_CONVERT_BIGINT, SQL_CONVERT_BINARY, SQL_CONVERT_INTERVAL_YEAR_MONTH, 및 등)를 통해 데이터 원본에서 지 원하는 변환에 대 한 질의 시에 .  
+ 명시적 데이터 형식 변환 함수에 대 한 ODBC 구문은 변환을 제한 하지 않습니다. 한 데이터 형식에서 다른 데이터 형식으로의 특정 변환의 유효성은 각 드라이버별 구현에 따라 결정 됩니다. 드라이버는 ODBC 구문을 네이티브 구문으로 변환 하 고, ODBC 구문의 법적 고 지는 않지만 데이터 원본에서 지원 하지 않는 변환을 거부 합니다. 변환 옵션 (예: SQL_CONVERT_BIGINT, SQL_CONVERT_BINARY, SQL_CONVERT_INTERVAL_YEAR_MONTH 등)이 포함 된 ODBC 함수 **SQLGetInfo**는 데이터 소스에서 지 원하는 변환을 제공 하는 방법을 제공 합니다.  
   
- 형식의 합니다 **변환** 함수는:  
+ **CONVERT** 함수의 형식은 다음과 같습니다.  
   
- **CONVERT(** _value_exp_, _data_type_ **)**  
+ **CONVERT (** _value_exp_, _data_type_**)**  
   
- 함수에 지정 된 값을 반환 합니다. *value_exp* 지정 된 변환 *data_type*여기서 *data_type* 다음 키워드 중 하나입니다.  
+ 함수는 지정 된 *data_type*로 변환 된 *value_exp* 에 지정 된 값을 반환 합니다. 여기서 *data_type* 는 다음 키워드 중 하나입니다.  
   
 |||  
 |-|-|  
@@ -54,59 +54,59 @@ ms.locfileid: "67913608"
 |SQL_INTERVAL_DAY_TO_MINUTE||  
 |SQL_INTERVAL_DAY_TO_SECOND||  
   
- ODBC 구문을 명시적 데이터 형식 변환 함수에 대 한 변환 형식 지정을 지원 하지 않습니다. 명시적 형식 지정 데이터 원본에서 지원 되는 드라이버 기본값을 지정 하거나 형식 사양을 구현 해야 합니다.  
+ 명시적 데이터 형식 변환 함수에 대 한 ODBC 구문은 변환 형식의 사양을 지원 하지 않습니다. 기본 데이터 원본에서 명시적 형식 지정을 지 원하는 경우 드라이버는 기본값을 지정 하거나 형식 사양을 구현 해야 합니다.  
   
- 인수 *value_exp* 수 열 이름, 결과 다른 스칼라 함수 또는 숫자 또는 문자열 리터럴일 수 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ *Value_exp* 인수는 열 이름, 다른 스칼라 함수의 결과 또는 숫자 또는 문자열 리터럴일 수 있습니다. 다음은 그 예입니다.  
   
 ```  
 { fn CONVERT( { fn CURDATE() }, SQL_CHAR ) }  
 ```  
   
- CURDATE 스칼라 함수의 출력을 문자열로 변환합니다.  
+ CURDATE 스칼라 함수의 출력을 문자열로 변환 합니다.  
   
- ODBC는 반환 값에 대 한 데이터 형식을 위임 하지 때문에 (함수 경우가 종종 있으므로 데이터 소스 관련) 스칼라 함수, 응용 프로그램에서 데이터 형식 변환에 적용할 가능한 CONVERT 스칼라 함수를 사용 해야 합니다.  
+ ODBC는 스칼라 함수에서 반환 값에 대 한 데이터 형식을 지정 하지 않기 때문에 (함수가 일반적으로 데이터 소스와 관련 되어 있기 때문에) 응용 프로그램은 가능 하면 CONVERT 스칼라 함수를 사용 하 여 데이터 형식을 강제로 변환 해야 합니다.  
   
- 다음 두 예제는 사용법을 보여 줍니다.는 **변환** 함수입니다. 이러한 예제는 EMPNO 열 SQL_SMALLINT 형식의 및 SQL_CHAR 형식의 EMPNAME 열을 사용 하 여 EMPLOYEES 라는 테이블의 존재 여부를 가정 합니다.  
+ 다음 두 예에서는 **CONVERT** 함수를 사용 하는 방법을 보여 줍니다. 이러한 예에서는 SQL_SMALLINT 형식의 EMPNO 열과 SQL_CHAR 형식의 EMPNAME 열이 있는 EMPLOYEES 라는 테이블이 있다고 가정 합니다.  
   
- 다음 SQL 문을 지정 하는 응용 프로그램:  
+ 응용 프로그램에서 다음 SQL 문을 지정 하는 경우:  
   
 ```  
 SELECT EMPNO FROM EMPLOYEES WHERE {fn CONVERT(EMPNO,SQL_CHAR)} LIKE '1%'  
 ```  
   
--   ORACLE 용 드라이버에는 SQL 문을 변환합니다.  
+-   ORACLE 용 드라이버는 SQL 문을 다음과 같이 변환 합니다.  
   
     ```  
     SELECT EMPNO FROM EMPLOYEES WHERE to_char(EMPNO) LIKE '1%'  
     ```  
   
--   SQL Server 용 driver에는 SQL 문을 변환합니다.  
+-   SQL Server에 대 한 드라이버는 SQL 문을로 변환 합니다.  
   
     ```  
     SELECT EMPNO FROM EMPLOYEES WHERE convert(char,EMPNO) LIKE '1%'  
     ```  
   
- 다음 SQL 문을 지정 하는 응용 프로그램:  
+ 응용 프로그램에서 다음 SQL 문을 지정 하는 경우:  
   
 ```  
 SELECT {fn ABS(EMPNO)}, {fn CONVERT(EMPNAME,SQL_SMALLINT)}  
    FROM EMPLOYEES WHERE EMPNO <> 0  
 ```  
   
--   ORACLE 용 드라이버에는 SQL 문을 변환합니다.  
+-   ORACLE 용 드라이버는 SQL 문을 다음과 같이 변환 합니다.  
   
     ```  
     SELECT abs(EMPNO), to_number(EMPNAME) FROM EMPLOYEES WHERE EMPNO <> 0  
     ```  
   
--   SQL Server 용 driver에는 SQL 문을 변환합니다.  
+-   SQL Server에 대 한 드라이버는 SQL 문을로 변환 합니다.  
   
     ```  
     SELECT abs(EMPNO), convert(smallint, EMPNAME) FROM EMPLOYEES  
        WHERE EMPNO <> 0  
     ```  
   
--   Ingres 드라이버에는 SQL 문을 변환합니다.  
+-   Ingres 용 드라이버는 SQL 문을로 변환 합니다.  
   
     ```  
     SELECT abs(EMPNO), int2(EMPNAME) FROM EMPLOYEES WHERE EMPNO <> 0  

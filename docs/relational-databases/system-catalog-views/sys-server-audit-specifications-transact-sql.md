@@ -1,5 +1,5 @@
 ---
-title: sys.server_audit_specifications (TRANSACT-SQL) | Microsoft Docs
+title: sys. server_audit_specifications (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -20,32 +20,32 @@ ms.assetid: fa496c6c-2a54-4fda-a238-db490c6b3afd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6a3c6522218702b52c075ef5ce8088057fc7662b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125014"
 ---
-# <a name="sysserverauditspecifications-transact-sql"></a>sys.server_audit_specifications(Transact-SQL)
+# <a name="sysserver_audit_specifications-transact-sql"></a>sys.server_audit_specifications(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   서버 인스턴스에 있는 SQL Server Audit의 서버 감사 사양 정보를 포함합니다. SQL Server Audit에 관한 자세한 내용은 [SQL Server Audit&#40;데이터베이스 엔진&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)을 참조하세요.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**Sysname**|서버 사양의 이름입니다.|  
-|**server_specification_id**|**정수**|ID를 **server_specification**합니다.|  
-|**create_date**|**날짜/시간**|서버 감사 사양을 만든 날짜입니다.|  
-|**modified_date**|**날짜/시간**|서버 감사 사양을 마지막으로 수정한 날짜입니다.|  
-|**is_state_enabled**|**tinyint**|감사 사양 상태:<br /><br /> 0-사용 안 함<br /><br /> 1-사용 하도록 설정|  
+|**name**|**Sysname 이며**|서버 사양의 이름입니다.|  
+|**server_specification_id**|**Int**|**SERVER_SPECIFICATION**ID입니다.|  
+|**create_date**|**날짜**|서버 감사 사양을 만든 날짜입니다.|  
+|**modified_date**|**날짜**|서버 감사 사양을 마지막으로 수정한 날짜입니다.|  
+|**is_state_enabled**|**tinyint**|감사 사양 상태:<br /><br /> 0-사용 안 함<br /><br /> 1-사용|  
 |**audit_GUID**|**uniqueidentifier**|이 사양을 포함하는 감사의 GUID입니다. 서버 시작 시 멤버 서버 감사 사양을 열거하는 동안 사용됩니다.|  
   
 ## <a name="permissions"></a>사용 권한  
- 사용 하 여 보안 주체를 **ALTER ANY SERVER AUDIT** 또는 **VIEW ANY DEFINITION** 권한이이 카탈로그 뷰에 액세스할 수 있습니다. 또한 보안 주체 거부 하지 말아야 **VIEW ANY DEFINITION** 권한.  
+ **ALTER ANY SERVER AUDIT** 또는 **VIEW any DEFINITION** 권한이 있는 보안 주체가이 카탈로그 뷰에 액세스할 수 있습니다. 또한 보안 주체는 **VIEW ANY DEFINITION** 권한을 거부 해서는 안 됩니다.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

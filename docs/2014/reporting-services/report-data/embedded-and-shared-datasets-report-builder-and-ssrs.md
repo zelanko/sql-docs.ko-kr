@@ -11,18 +11,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 01f37190ac96486235cbdd4477a0eed0e9974389
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107282"
 ---
 # <a name="embedded-and-shared-datasets-report-builder-and-ssrs"></a>포함된 데이터 세트 및 공유 데이터 세트(보고서 작성기 및 SSRS)
   보고서에서 데이터 세트는 외부 데이터 원본에 대해 쿼리를 실행할 때 반환되는 보고서 데이터를 나타냅니다. 데이터 세트는 외부 데이터 원본에 대한 정보를 포함하는 데이터 연결에 따라 달라집니다. 이때 데이터 자체가 보고서 정의에 포함되지는 않습니다. 데이터 세트에는 쿼리 명령, 필드 컬렉션, 매개 변수, 필터 및 대/소문자 구분, 데이터 정렬 등의 데이터 옵션이 포함됩니다. 데이터 세트에는 두 가지 유형이 있습니다.  
   
--   **공유 데이터 집합** 공유 데이터 세트는 보고서 서버에 게시되며 여러 보고서에서 사용할 수 있습니다. 공유 데이터 세트는 공유 데이터 원본을 기반으로 해야 합니다. 공유 데이터 세트는 캐시 새로 고침 계획을 만들어 캐시하고 예약할 수 있습니다.  
+-   **공유 데이터 집합.** 공유 데이터 세트는 보고서 서버에 게시되며 여러 보고서에서 사용할 수 있습니다. 공유 데이터 세트는 공유 데이터 원본을 기반으로 해야 합니다. 공유 데이터 세트는 캐시 새로 고침 계획을 만들어 캐시하고 예약할 수 있습니다.  
   
--   **포함된 데이터 집합** 포함된 데이터 세트는 단일 보고서에서 정의되고 사용됩니다.  
+-   **포함 된 데이터 집합.** 포함된 데이터 세트는 단일 보고서에서 정의되고 사용됩니다.  
   
  두 유형 간의 차이점은 연결 문자열이 작성, 저장 및 관리되는 방법입니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66107282"
   
  보고서 작성기에서 다음을 수행할 수 있습니다.  
   
-1.  공유 데이터 세트를 만들려면 공유 데이터 세트 디자인 뷰를 사용합니다. 이 뷰를 보고서 서버나 SharePoint  사이트에 저장하여 다른 보고서와 공유할 수 있습니다. 보고서 서버를 찾아 기존의 공유 데이터 세트를 편집할 수도 있습니다. 이 뷰에서는 쿼리를 작성하고 모든 데이터 세트 옵션을 설정할 수 있습니다. 자세한 내용은 [공유 데이터 집합 디자인 뷰&#40;보고서 작성기&#41;](../report-builder/shared-dataset-design-view-report-builder.md)를 참조하세요.  
+1.  공유 데이터 세트를 만들려면 공유 데이터 세트 디자인 뷰를 사용합니다. 이 뷰를 보고서 서버나 SharePoint  사이트에 저장하여 다른 보고서와 공유할 수 있습니다. 보고서 서버를 찾아 기존의 공유 데이터 세트를 편집할 수도 있습니다. 이 뷰에서는 쿼리를 작성하고 모든 데이터 세트 옵션을 설정할 수 있습니다. 자세한 내용은 [공유 데이터 세트 디자인 뷰&#40;보고서 작성기&#41;](../report-builder/shared-dataset-design-view-report-builder.md)를 참조하세요.  
   
 2.  보고서에 공유 데이터 세트를 추가하려면 보고서 디자인 뷰에서 보고서 작성기를 엽니다. 마법사나 보고서 데이터 창에서 보고서 서버로 이동하고 보고서에 추가할 공유 데이터 세트를 선택합니다. 이 뷰에서는 필드를 추가하는 것을 제외하고는 쿼리를 변경할 수 없습니다. 다른 데이터 옵션을 무시하고 필터를 추가할 수도 있지만 필터를 제거할 수는 없습니다.  
   
@@ -58,12 +58,12 @@ ms.locfileid: "66107282"
   
  포함된 데이터 세트를 만들거나 편집하려면 보고서 데이터 창을 사용합니다. 데이터 세트를 만든 후에 **데이터 세트 속성** 대화 상자에서 속성을 구성할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [포함된 데이터 연결 및 공유 데이터 연결 또는 데이터 원본&#40;보고서 작성기 및 SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
- [공유 데이터 집합 또는 포함된 데이터 집합 만들기&#40;보고서 작성기 및 SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](report-datasets-ssrs.md)   
- [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>참고 항목  
+ [포함 된 데이터 연결 및 공유 데이터 연결 또는 데이터 원본 &#40;보고서 작성기 및 SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [공유 데이터 집합 또는 포함 된 데이터 집합 &#40;보고서 작성기 및 SSRS를 만듭니다&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [보고서 &#40;보고서 작성기 및 SSRS&#41;에 데이터를 추가 합니다.](report-datasets-ssrs.md)   
+ [데이터 세트 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)   
  [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
- [보고서 서비스의 데이터 연결, 데이터 원본 및 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
+ [Data Connections, Data Sources, and Connection Strings in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

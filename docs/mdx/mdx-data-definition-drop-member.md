@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 4e8e38a3ff3f40f44c911a277f99ab9b629c7c87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038189"
 ---
 # <a name="mdx-data-definition---drop-member"></a>MDX 데이터 정의 - DROP MEMBER
@@ -37,8 +37,8 @@ DROP MEMBER
  *Member_Identifier*  
  멤버 이름이나 멤버 키를 지정하는 유효한 문자열 식입니다.  
   
-## <a name="see-also"></a>관련 항목  
- [MEMBER 문 & #40; 만들기 Mdx& #41;](../mdx/mdx-data-definition-create-member.md)   
- [MDX 데이터 정의 문 &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [CREATE MEMBER 문 &#40;MDX&#41;](../mdx/mdx-data-definition-create-member.md)   
+ [Mdx 데이터 정의 문은 MDX를 &#40;&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   
