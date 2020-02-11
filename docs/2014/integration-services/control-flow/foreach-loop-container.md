@@ -18,22 +18,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bb50b4000397ca3dd51be58867e45135d1d587f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831588"
 ---
 # <a name="foreach-loop-container"></a>Foreach 루프 컨테이너
   Foreach 루프 컨테이너는 패키지의 반복 제어 흐름을 정의합니다. 루프 구현은 프로그래밍 언어에서의 **Foreach** 루프 구조와 유사합니다. 패키지에서 Foreach 열거자를 사용하면 루프를 사용할 수 있습니다.  Foreach 루프 컨테이너는 지정한 열거자의 각 멤버에 대해 제어 흐름을 반복합니다.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 는 다음 열거자 유형을 제공합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에서는 다음 열거자 형식을 제공 합니다.  
   
 -   Foreach ADO 열거자는 테이블의 행을 열거합니다. 예를 들어 ADO 레코드 집합의 행을 가져올 수 있습니다.  
   
      레코드 집합 대상은 `Object` 데이터 형식의 패키지 변수에 저장된 레코드 집합의 메모리에 데이터를 저장합니다. 일반적으로 Foreach 루프 컨테이너를 Foreach ADO 열거자와 함께 사용하여 레코드 집합의 행을 한 번에 하나씩 처리합니다. Foreach ADO 열거자에 대해 지정된 변수는 개체 데이터 형식이어야 합니다. 레코드 집합 대상에 대한 자세한 내용은 [Use a Recordset Destination](../data-flow/recordset-destination.md)을 참조하십시오.  
   
--   Foreach ADO.NET 스키마 행 집합 열거자는 데이터 원본에 대한 스키마 정보를 열거합니다. 예를 들어 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스의 테이블 목록을 열거하고 가져올 수 있습니다.  
+-   Foreach ADO.NET 스키마 행 집합 열거자는 데이터 원본에 대한 스키마 정보를 열거합니다. 예를 들어 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스의 테이블 목록을 열거 하 고 가져올 수 있습니다.  
   
 -   Foreach File 열거자는 폴더의 파일을 열거합니다. 열거자는 하위 폴더를 포함할 수 있습니다. 예를 들어 Windows 폴더 및 하위 폴더에서 파일 이름 확장명이 *.log인 모든 파일을 읽을 수 있습니다.  
   
@@ -47,13 +47,13 @@ ms.locfileid: "62831588"
   
 -   Azure 스토리지의 blob 컨테이너에 blob를 열거하는 Foreach Azure Blob 열거자입니다.  
   
--   Foreach ADLS File 열거자는 ADLS 디렉터리의 파일을 열거 합니다.
+-   Foreach ADLS File 열거자를 통해 ADLS 디렉터리의 파일을 열거 합니다.
   
  다음 다이어그램에서는 파일 시스템 태스크가 있는 Foreach 루프 컨테이너를 보여 줍니다. Foreach 루프는 Foreach File 열거자를 사용하며 파일 시스템 태스크는 파일을 복사하도록 구성되어 있습니다. 열거자가 지정한 폴더에 4개 파일이 들어 있으면 루프가 4번 반복되어 4개 파일이 복사됩니다.  
   
  ![폴더를 열거하는 Foreach 루프 컨테이너](../media/ssis-foreachloop.gif "폴더를 열거하는 Foreach 루프 컨테이너")  
   
- 변수 및 속성 식의 조합을 사용하여 패키지 개체의 속성을 열거자 컬렉션 값으로 업데이트할 수 있습니다. 먼저 컬렉션 값을 사용자 정의 변수에 매핑한 다음 이 변수를 사용하는 속성 식을 속성에 구현합니다. Foreach File 열거자 컬렉션 값 이라는 변수에 매핑되는 예를 들어 `MyFile` 한 변수는 다음 메일 보내기 태스크의 Subject 속성에 대 한 속성 식에 사용 됩니다. 패키지를 실행하면 루프가 반복될 때마다 Subject 속성이 파일 이름으로 업데이트됩니다. 자세한 내용은 [패키지에서 속성 식 사용](../expressions/use-property-expressions-in-packages.md)을 참조하세요.  
+ 변수 및 속성 식의 조합을 사용하여 패키지 개체의 속성을 열거자 컬렉션 값으로 업데이트할 수 있습니다. 먼저 컬렉션 값을 사용자 정의 변수에 매핑한 다음 이 변수를 사용하는 속성 식을 속성에 구현합니다. 예를 들어 Foreach File 열거자의 컬렉션 값은 라는 `MyFile` 변수에 매핑되고이 변수는 메일 보내기 태스크의 Subject 속성에 대 한 속성 식에 사용 됩니다. 패키지를 실행하면 루프가 반복될 때마다 Subject 속성이 파일 이름으로 업데이트됩니다. 자세한 내용은 [패키지에서 속성 식 사용](../expressions/use-property-expressions-in-packages.md)을 참조하세요.  
   
  열거자 컬렉션 값에 매핑된 변수를 식과 스크립트에 사용할 수도 있습니다.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62831588"
 |Foreach Item|열과 열 데이터 형식을 포함하여 Foreach Item 컬렉션의 항목 정의|  
 |Foreach Nodelist|XML 문서의 원본 지정 및 XPath 작업 구성|  
 |Foreach SMO|데이터베이스에 대한 연결과 열거할 SMO 개체 지정|  
-|Foreach Azure Blob|열거할 blob이 포함 된 Azure blob 컨테이너를 지정 합니다.|  
+|Foreach Azure Blob|열거할 blob을 포함 하는 Azure blob 컨테이너를 지정 합니다.|  
 |Foreach ADLS 파일|일부 필터와 함께 열거할 파일을 포함 하는 ADLS 디렉터리를 지정 합니다.|
   
 ## <a name="property-expressions-in-foreach-loop-containers"></a>Foreach 루프 컨테이너의 속성 식  
@@ -88,7 +88,8 @@ ms.locfileid: "62831588"
 ## <a name="related-tasks"></a>관련 작업  
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법을 보려면 다음 항목 중 하나를 클릭하십시오.  
+ 
+  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
 -   [Foreach 루프 컨테이너 구성](foreach-loop-container.md)  
   
@@ -101,7 +102,7 @@ ms.locfileid: "62831588"
 ## <a name="related-content"></a>관련 내용  
  bidn.com의 블로그 항목 - [각 노드 목록 열거자에 대한 SSIS](https://go.microsoft.com/fwlink/?LinkId=220671)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [제어 흐름](control-flow.md)   
  [Integration Services 컨테이너](integration-services-containers.md)  
   
