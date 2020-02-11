@@ -15,18 +15,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 35d4720a8fe8b8c1b404a97e27b36896f36dd5f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63209689"
 ---
 # <a name="view-resource-governor-properties"></a>리소스 관리자 속성 보기
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 리소스 관리자 속성 페이지를 사용하여 리소스 풀, 작업 그룹과 같은 리소스 관리자 엔터티를 만들거나 구성할 수 있습니다.  
   
-1.  **시작하기 전 주의 사항:**  [사용 권한](#Permissions)  
+1.  **시작 하기 전 주의:**  [사용 권한](#Permissions)  
   
-2.  **리소스 관리자 속성을 보려면:**  [Resource Governor 속성 페이지](#ViewRGProp)  
+2.  **Resource Governor 속성을 보려면:**[Resource Governor 속성 페이지](#ViewRGProp) 를 사용 합니다.    
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  리소스 관리자 엔터티 속성을 보는 것 이외에도, **리소스 관리자 속성** 페이지를 사용하여 몇 가지 구성 작업을 수행할 수 있습니다. 자세한 내용은 다음 항목을 참조하세요.  
@@ -51,10 +51,10 @@ ms.locfileid: "63209689"
   
  [sys.dm_resource_governor_configuration](/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql) 동적 관리 뷰를 쿼리해 is_configuration_pending의 현재 상태를 가져와서 보류 중인 구성이 있는지 여부를 확인할 수 있습니다.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 권한  
  리소스 관리자 속성을 보려면 VIEW SERVER STATER 권한이 필요합니다. 리소스 관리자 구성 작업을 하려면 CONTROL SERVER 권한이 필요합니다.  
   
-##  <a name="ViewRGProp"></a> Resource Governor 속성 페이지 보기  
+##  <a name="ViewRGProp"></a>Resource Governor 속성 페이지 보기  
  **Resource Governor 속성 페이지를 사용하여 Resource Governor 속성을 보려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 개체 탐색기를 열고 **리소스 관리자** 까지 **관리**노드를 계속 확장합니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "63209689"
   
 4.  변경 사항을 저장하려면 **확인**을 클릭합니다.  
   
-##  <a name="RGProp"></a> 리소스 관리자 속성  
+##  <a name="RGProp"></a>Resource Governor 속성  
  **분류자 함수 이름**  
  분류자 함수를 목록에서 선택하여 지정합니다.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "63209689"
  **최대 메모리(%)**  
  이 리소스 풀의 요청에서 사용할 수 있는 총 서버 메모리를 지정합니다. 범위는 0에서 100까지입니다. 기본 설정은 100입니다.  
   
- 자세한 내용은 [CREATE RESOURCE POOL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)합니다.  
+ 자세한 내용은 [CREATE RESOURCE POOL &#40;transact-sql&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)를 참조 하세요.  
   
  **리소스 풀의 작업 그룹**  
  제공된 표를 사용하여 작업 그룹 구성을 만들거나 변경합니다. 이 표는 미리 정의된 내부 그룹 및 기본 그룹에 대한 정보로 채워집니다. 풀의 행에 있는 첫 번째 열을 클릭하여 작업할 그룹을 선택합니다. 새 작업 그룹을 만들려면 접두사로 별표( **&#42;** )가 붙은 행을 클릭합니다.  
@@ -125,7 +125,7 @@ ms.locfileid: "63209689"
   
 2.  Resource Governor 엔터티의 현재 구성을 보려면 [Resource Governor 관련 동적 관리 뷰&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql)를 사용하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [리소스 관리자](resource-governor.md)   
  [리소스 관리자 사용](enable-resource-governor.md)   
  [리소스 관리자 리소스 풀](resource-governor-resource-pool.md)   
