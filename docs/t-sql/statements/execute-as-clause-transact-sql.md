@@ -26,10 +26,10 @@ ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2dfba9eef86ab77ec114bc74712d9573fb5e4c48
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155056"
 ---
 # <a name="execute-as-clause-transact-sql"></a>EXECUTE AS 절(Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "70155056"
   
  모듈이 실행되는 컨텍스트를 지정해서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 사용자 계정을 제어하면 모듈에서 참조하는 개체에 대한 사용 권한을 검사할 수 있습니다. 이렇게 하면 사용자 정의 모듈 및 해당 모듈에서 참조하는 개체 사이에 있는 개체 체인에서 좀 더 유연하게 사용 권한 관리를 제어할 수 있습니다. 참조된 개체에 대한 명시적 사용 권한이 아닌 모듈 자체에 대한 사용 권한만 사용자에게 부여해야 합니다. 모듈을 실행하고 있는 사용자만이 모듈에서 액세스하는 개체에 대한 사용 권한을 가져야 합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -105,7 +105,7 @@ DDL Triggers with Database Scope
   
  *login_name*은 그룹, 역할, 인증서 또는 키이거나 NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService 또는 NT AUTHORITY\LocalSystem과 같은 기본 제공 계정이 될 수 없습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 모듈이 참조하는 개체에 대한 사용 권한을 평가하는 방법은 호출 개체와 참조된 개체 간에 존재하는 소유권 체인에 따라 다릅니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 호출 사용자에게 참조된 모든 개체에 대한 액세스 권한을 부여하지 않도록 하는 유일한 방법은 소유권 체인이었습니다.  
   
  소유권 체인에는 다음과 같은 제한 사항이 있습니다.  
@@ -184,7 +184,7 @@ GO
   
  지정된 실행 컨텍스트가 있는 모듈 정의를 보려면 [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) 카탈로그 뷰를 사용합니다.  
   
-## <a name="best-practice"></a>최선의 구현 방법  
+## <a name="best-practice"></a>모범 사례  
  모듈에 정의된 작업을 수행하는 데 필요한 최소한의 권한이 있는 로그인이나 사용자를 지정합니다. 예를 들어 데이터베이스 소유자 계정은 해당 권한이 필요한 경우에만 지정하세요.  
   
 ## <a name="permissions"></a>사용 권한  

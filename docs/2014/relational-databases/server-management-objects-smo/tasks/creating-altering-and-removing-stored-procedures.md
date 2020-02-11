@@ -13,19 +13,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 58890cc7b9e34a3e8ff9262af1f6b1a67b47841e
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782356"
 ---
 # <a name="creating-altering-and-removing-stored-procedures"></a>저장 프로시저 생성, 변경 및 제거
+  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects(SMO)에서 저장 프로시저는 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 개체로 표시됩니다.  
   
- SMO에서 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 개체를 만들려면 저장 프로시저를 정의하는 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> 속성을 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 스크립트로 설정해야 합니다. 매개 변수에는 \@ 접두사가 필요 하며, <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> 개체를 사용 하 고 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 개체의 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> 컬렉션에를 추가 하 여 개별적으로 만들어야 합니다.  
+ SMO에서 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 개체를 만들려면 저장 프로시저를 정의하는 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> 속성을 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 스크립트로 설정해야 합니다. 매개 변수에는 \@ 접두사가 필요 하며, 개체를 사용 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> 하 고 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 개체의 컬렉션에를 추가 하 여 개별적으로 만들어야 합니다.  
   
 ## <a name="example"></a>예제  
- 제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 visual [studio .net에서 VISUAL BASIC SMO 프로젝트 만들기](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) 또는 [visual Studio .Net에서 Visual C&#35; smo 프로젝트 만들기](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  
+ 제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 visual [studio .net에서 VISUAL BASIC SMO 프로젝트 만들기](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) 또는 [visual Studio .Net에서 VISUAL C&#35; smo 프로젝트 만들기](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  
   
 ## <a name="creating-altering-and-removing-a-stored-procedure-in-visual-basic"></a>Visual Basic에서 저장 프로시저 생성, 변경 및 제거  
  이 코드 예제는 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 데이터베이스에 대한 저장 프로시저를 만드는 방법을 보여 줍니다. 이 예에서는 직원 ID 번호를 제공하면 직원의 성을 반환합니다. 저장 프로시저에는 직원 ID 번호를 지정하는 입력 매개 변수 하나와 직원의 성을 반환하는 출력 매개 변수 하나가 필요합니다.  
@@ -112,5 +113,5 @@ $sp.Alter()
 $sp.Drop()  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>  

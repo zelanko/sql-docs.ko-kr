@@ -15,14 +15,14 @@ ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c28a0b615a9f250c8539e87abf9fefbc11f513ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67916822"
 ---
 # <a name="status-property-example-field-vb"></a>Status 속성 예제(필드)(VB)
-다음 예제에서는 사용 하 여 읽기/쓰기 폴더에서 문서를 열고 합니다 [인터넷 게시 공급자](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)합니다. [상태](../../../ado/reference/ado-api/status-property-ado-field.md) 의 속성을 [필드](../../../ado/reference/ado-api/field-object.md) 의 개체를 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 처음으로 설정 됩니다 **adFieldPendingInsert**, 로업데이트될**adFieldOk**합니다.  
+다음 예제에서는 [인터넷 게시 공급자](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)를 사용 하 여 읽기/쓰기 폴더에서 문서를 엽니다. [레코드](../../../ado/reference/ado-api/record-object-ado.md) 에 대 한 [Field](../../../ado/reference/ado-api/field-object.md) 개체의 [Status](../../../ado/reference/ado-api/status-property-ado-field.md) 속성은 먼저 **adfieldpendinginsert**로 설정 된 다음 **adFieldOk**로 업데이트 됩니다.  
   
 ```  
 'BeginStatusFieldVB  
@@ -79,19 +79,19 @@ End Sub
 'EndStatusFieldVB  
 ```  
   
- 다음 예에서는 삭제 알려진 **필드** 에서 **레코드** 문서에서 열. **상태** 속성에 처음 설정할 **adFieldOK**, 한 다음 **adFieldPendingUnknown**합니다.  
+ 다음 예에서는 문서에서 연 **레코드** 에서 알려진 **필드** 를 삭제 합니다. **Status** 속성은 먼저 **adFieldOK**로 설정 된 다음 **adfieldpendingunknown**으로 설정 됩니다.  
   
 ```  
 Attribute VB_Name = "StatusField"  
 ```  
   
- 다음 코드 삭제를 **필드** 에서 **레코드** 읽기 전용으로 문서에서 열. **상태** 로 설정 됩니다 **adFieldPendingDelete**합니다. [업데이트](../../../ado/reference/ado-api/update-method.md), 삭제가 실패 하 고 **상태** 됩니다 **adFieldPendingDelete** plus **adFieldPermissionDenied**. [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) 지웁니다는 보류 중인 **상태** 설정 합니다.  
+ 다음 코드는 읽기 전용 문서에서 열린 **레코드** 에서 **필드** 를 삭제 합니다. **상태** 는 **adfieldpendingdelete**로 설정 됩니다. [업데이트](../../../ado/reference/ado-api/update-method.md)시에는 삭제 작업이 실패 하 고 **상태** 는 **Adfieldpendingdelete** plus **adfieldpendingdelete 거부**합니다. [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) 보류 중 **상태** 설정을 지웁니다.  
   
 ```  
 Attribute VB_Name = "StatusField"  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Field 개체](../../../ado/reference/ado-api/field-object.md)   
- [레코드 개체 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+ [Record 개체 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Status 속성(ADO 필드)](../../../ado/reference/ado-api/status-property-ado-field.md)

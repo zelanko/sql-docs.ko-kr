@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 39f3ccc462fb063ecb314b1e9968dcfa8a095cbb
-ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72688891"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>XML 데이터 직렬화 정의
@@ -31,7 +31,7 @@ ms.locfileid: "72688891"
 ## <a name="serialization-encoding"></a>직렬화 인코딩  
  SQL 대상 유형이 VARBINARY인 경우 결과는 UTF-16 바이트 순서 표시가 앞에 표시되어 있지만 XML 선언이 없는 UTF-16으로 직렬화됩니다. 대상 유형이 너무 작으면 오류가 발생합니다.  
   
- 예를 들어:  
+ 다음은 그 예입니다.  
   
 ```sql
 select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))  
@@ -45,7 +45,7 @@ select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))
   
  SQL 대상 유형이 NVARCHAR 또는 NCHAR인 경우 결과는 앞에 바이트 순서 표시가 없고 XML 선언이 없는 UTF-16으로 직렬화됩니다. 대상 유형이 너무 작으면 오류가 발생합니다.  
   
- 예를 들어:  
+ 다음은 그 예입니다.  
   
 ```sql
 select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))  
@@ -59,13 +59,13 @@ select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))
   
  SQL 대상 유형이 VARCHAR 또는 NCHAR인 경우 결과는 바이트 순서 표시나 XML 선언이 없이 데이터베이스의 데이터 정렬 코드 페이지에 따른 인코딩으로 직렬화됩니다. 대상 유형이 너무 작거나 값을 대상 데이터 정렬 코드 페이지에 매핑할 수 없는 경우 오류가 발생합니다.  
   
- 예를 들어:  
+ 다음은 그 예입니다.  
   
 ```sql
 select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))  
 ```  
   
- 현재 데이터 정렬의 코드 페이지가 유니코드 문자 &#x10300;를 나타내지 않거나 특정 인코딩으로 표시 되는 경우이로 인해 오류가 발생할 수 있습니다.  
+ 현재 데이터 정렬의 코드 페이지가 유니코드 문자 & # x10300;을 (를) 나타내지 않거나 특정 인코딩으로 표시 되는 경우이로 인해 오류가 발생할 수 있습니다.  
   
  XML 결과를 클라이언트 쪽에 반환할 때 데이터는 UTF-16 인코딩으로 보내집니다. 그런 다음 클라이언트 쪽 공급자는 해당 API 규칙에 따라 이 데이터를 제공합니다.  
   
@@ -87,7 +87,7 @@ select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))
   
 -   공백만 포함된 텍스트 노드를 보호하기 위해 공백 문자 중 하나(일반적으로 마지막 공백 문자)는 해당 숫자 문자 참조로 엔터티화됩니다. 이러한 방식으로 다시 구문 분석 과정에서 구문 분석 중의 공백 처리 설정에 관계없이 공백 문자 텍스트 노드를 보존합니다.  
   
- 예를 들어:  
+ 다음은 그 예입니다.  
   
 ```sql
 declare @u NVARCHAR(50)  

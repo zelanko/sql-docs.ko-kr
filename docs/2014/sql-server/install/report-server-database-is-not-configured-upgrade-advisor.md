@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: bb5dd5968930319532a29ff7c3909c36af99b3a0
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952116"
 ---
 # <a name="report-server-database-is-not-configured-upgrade-advisor"></a>보고서 서버 데이터베이스가 올바르게 구성되지 않음(업그레이드 관리자)
@@ -24,20 +24,22 @@ ms.locfileid: "71952116"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]기본 모드 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드입니다.|  
   
 ## <a name="component"></a>구성 요소  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-## <a name="description"></a>설명  
- 설치 프로그램은 완전하게 구성된 보고서 서버 인스턴스만 업그레이드할 수 있습니다. 계속하려면 보고서 서버 데이터베이스를 구성하거나 Microsoft Windows **제어판** 을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에서 보고서 서버 기능을 제거합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 제거한 후에는 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 업그레이드할 수 있습니다.  
+## <a name="description"></a>Description  
+ 설치 프로그램은 완전하게 구성된 보고서 서버 인스턴스만 업그레이드할 수 있습니다. 계속하려면 보고서 서버 데이터베이스를 구성하거나 Microsoft Windows **제어판** 을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에서 보고서 서버 기능을 제거합니다. 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 제거한 후에는 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 업그레이드할 수 있습니다.  
   
 ## <a name="corrective-action"></a>수정 동작  
  보고서 서버 데이터베이스를 구성하지 않은 경우 보고서 서버가 작동하지 않으므로 업그레이드하기 전에 보고서 서버를 제거해야 합니다.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 제거에 대한 자세한 내용은 [Reporting Services 2012 제거](https://technet.microsoft.com/library/hh479745.aspx\(v=sql.11\))를 참조하십시오. 이 항목에서는 특정 버전을 제거하는 방법에 대해 설명하며, 절차는 이전 버전과 비슷합니다.  
+ 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 제거에 대한 자세한 내용은 [Reporting Services 2012 제거](https://technet.microsoft.com/library/hh479745.aspx\(v=sql.11\))를 참조하십시오. 이 항목에서는 특정 버전을 제거하는 방법에 대해 설명하며, 절차는 이전 버전과 비슷합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [업그레이드 문제 &#40;Reporting Services 업그레이드 관리자&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+## <a name="see-also"></a>참고 항목  
+ [업그레이드 관리자를 &#40;업그레이드 문제를 Reporting Services&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
   

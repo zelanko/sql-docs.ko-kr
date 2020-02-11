@@ -16,10 +16,10 @@ ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5d3f67794eb2825c10b822ce719459b563f046d2
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72304830"
 ---
 # <a name="sp_copysubscription-transact-sql"></a>sp_copysubscription(Transact-SQL)
@@ -27,11 +27,11 @@ ms.locfileid: "72304830"
 
     
 > [!IMPORTANT]  
->  연결 가능한 구독 기능은 더 이상 사용되지 않으며 후속 릴리스에서 제거될 예정입니다. 새로운 개발 작업에서는 이 기능을 사용하면 안 됩니다. 매개 변수가 있는 필터를 사용하여 분할된 병합 게시의 경우 구독을 대량으로 초기화하는 작업을 간단하게 만들어 주는 분할된 스냅샷의 새 기능을 사용하는 것이 좋습니다. 자세한 내용은 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을 참조하세요. 분할되지 않은 게시의 경우 백업을 사용하여 구독을 초기화할 수 있습니다. 자세한 내용은 [스냅숏 없이 트랜잭션 구독 초기화](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.  
+>  연결 가능한 구독 기능은 더 이상 사용되지 않으며 후속 릴리스에서 제거될 예정입니다. 새로운 개발 작업에서는 이 기능을 사용하면 안 됩니다. 매개 변수가 있는 필터를 사용하여 분할된 병합 게시의 경우 구독을 대량으로 초기화하는 작업을 간단하게 만들어 주는 분할된 스냅샷의 새 기능을 사용하는 것이 좋습니다. 자세한 내용은 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을(를) 참조하세요. 분할되지 않은 게시의 경우 백업을 사용하여 구독을 초기화할 수 있습니다. 자세한 내용은 [스냅샷 없이 트랜잭션 구독 초기화](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.  
   
  끌어오기 구독만 있고 밀어넣기 구독이 없는 구독 데이터베이스를 복사합니다. 하나의 파일로 구성된 데이터베이스만 복사할 수 있습니다. 이 저장 프로시저는 구독 데이터베이스의 구독자에서 실행됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,11 +43,11 @@ sp_copysubscription [ @filename = ] 'file_name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @filename = ] 'file_name'`은 데이터 파일 (.mdf)의 복사본을 저장할 파일 이름을 포함 하 여 전체 경로를 지정 하는 문자열입니다. *파일 이름은* **nvarchar (260)** 이며 기본값은 없습니다.  
+`[ @filename = ] 'file_name'`데이터 파일 (.mdf)의 복사본을 저장할 파일 이름을 포함 한 전체 경로를 지정 하는 문자열입니다. *파일 이름은* **nvarchar (260)** 이며 기본값은 없습니다.  
   
-`[ @temp_dir = ] 'temp_dir'`은 임시 파일이 포함 된 디렉터리의 이름입니다. *temp_dir* 은 **nvarchar (260)** 이며 기본값은 NULL입니다. NULL 인 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본 데이터 디렉터리가 사용 됩니다. 디렉터리에는 모든 구독자 데이터베이스 파일을 저장할 수 있는 충분한 공간이 있어야 합니다.  
+`[ @temp_dir = ] 'temp_dir'`임시 파일이 포함 된 디렉터리의 이름입니다. *temp_dir* 은 **nvarchar (260)** 이며 기본값은 NULL입니다. NULL [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인 경우 기본 데이터 디렉터리가 사용 됩니다. 디렉터리에는 모든 구독자 데이터베이스 파일을 저장할 수 있는 충분한 공간이 있어야 합니다.  
   
-`[ @overwrite_existing_file = ] 'overwrite_existing_file'`은 **\@filename**에 지정 된 것과 동일한 이름의 기존 파일을 덮어쓸지 여부를 지정 하는 선택적 부울 플래그입니다. *overwrite_existing_file*은 **bit**이며 기본값은 **0**입니다. 1 인 경우 **\@filename**에 지정 된 파일 (있는 경우 **)** 을 덮어씁니다. **0**인 경우 파일이 있는 경우 저장 프로시저가 실패 하 고 파일을 덮어쓰지 않습니다.  
+`[ @overwrite_existing_file = ] 'overwrite_existing_file'`** \@Filename**에 지정 된 동일한 이름의 기존 파일을 덮어쓸지 여부를 지정 하는 선택적 부울 플래그입니다. *overwrite_existing_file*은 **bit**이며 기본값은 **0**입니다. 1 인 경우 ** \@filename**에 지정 된 파일 (있는 경우 **)** 을 덮어씁니다. **0**인 경우 파일이 있는 경우 저장 프로시저가 실패 하 고 파일을 덮어쓰지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -63,7 +63,7 @@ sp_copysubscription [ @filename = ] 'file_name'
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_copysubscription**를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [대체 스냅샷 폴더 위치](../../relational-databases/replication/snapshot-options.md)   
+ [대체 스냅숏 폴더 위치](../../relational-databases/replication/snapshot-options.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

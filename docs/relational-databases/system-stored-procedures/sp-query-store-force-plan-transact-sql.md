@@ -22,20 +22,20 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b34cf94a2ab6cfec601d41b02bf32b00f0eb3b41
-ms.sourcegitcommit: 816ff47eeab157c66e0f75f18897a63dc8033502
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71207718"
 ---
-# <a name="sp_query_store_force_plan-transact-sql"></a>sp_query_store_force_plan (Transact-SQL)
+# <a name="sp_query_store_force_plan-transact-sql"></a>sp_query_store_force_plan (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   특정 쿼리에 대해 특정 계획을 강제로 적용할 수 있습니다.  
   
- 특정 쿼리에 대해 계획을 적용 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리가 발생할 때마다 쿼리 최적화 프로그램에서 계획을 강제로 적용 하려고 시도 합니다. 계획 강제 적용에 실패 하는 경우 확장 이벤트가 발생 하 고 쿼리 최적화 프로그램은 일반적인 방식으로 최적화 하도록 지시 됩니다.  
+ 특정 쿼리에 대해 계획을 강제 적용 하는 경우 쿼리를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 발견할 때마다 쿼리 최적화 프로그램에서 계획을 강제로 적용 하려고 시도 합니다. 계획 강제 적용에 실패 하는 경우 확장 이벤트가 발생 하 고 쿼리 최적화 프로그램은 일반적인 방식으로 최적화 하도록 지시 됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,9 +44,9 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @query_id = ] query_id`는 쿼리 id입니다. *query_id* 는 **bigint**이며 기본값은 없습니다.  
+`[ @query_id = ] query_id`쿼리 id입니다. *query_id* 는 **bigint**이며 기본값은 없습니다.  
   
-`[ @plan_id = ] plan_id`은 강제 적용할 쿼리 계획의 id입니다. *plan_id* 는 **bigint**이며 기본값은 없습니다.  
+`[ @plan_id = ] plan_id`강제 적용할 쿼리 계획의 id입니다. *plan_id* 는 **bigint**이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -75,13 +75,13 @@ EXEC sp_query_store_force_plan 3, 3;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [sp_query_store_remove_plan &#40;transct-sql&-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
- [ &#40;transact-sql&#41;  sp_query_store_remove_query](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)  
- [ &#40;transact-sql&#41;  sp_query_store_unforce_plan](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)  
+ [sp_query_store_remove_plan &#40;Transct-sql&-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
+ [Transact-sql&#41;sp_query_store_remove_query &#40;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
+ [Transact-sql&#41;sp_query_store_unforce_plan &#40;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   
  [쿼리 저장소 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
- [쿼리 저장소 를 사용 하 여 성능 모니터링](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
- [ &#40;transact-sql&#41;  sp_query_store_reset_exec_stats](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)  
- [ &#40;transact-sql&#41;      sp_query_store_flush_db](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)  
+ [쿼리 저장소를 사용 하 여 성능 모니터링](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [Transact-sql&#41;sp_query_store_reset_exec_stats &#40;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
+ [Transact-sql&#41;sp_query_store_flush_db &#40;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)       
  [쿼리 저장소에 대한 모범 사례](../../relational-databases/performance/best-practice-with-the-query-store.md#CheckForced)    
   
   

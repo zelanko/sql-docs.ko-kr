@@ -9,10 +9,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 47fc9ba65aca128a7e812f85c5bd06ca38131cbf
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72251917"
 ---
 # <a name="branding-the-web-portal"></a>웹 포털 브랜딩
@@ -91,9 +91,9 @@ Reporting Services의 colors.json 파일에는 항목이 그룹화되는 두 가
   
 인터페이스 섹션은 다음 그룹으로 나누어집니다.  
   
-|섹션|설명|  
+|섹션|Description|  
 |---|---|  
-|primary|단추 및 가리킨 항목 색|  
+|주|단추 및 가리킨 항목 색|  
 |보조|제목 표시줄, 검색 표시줄, 왼쪽 메뉴(표시된 경우), 해당 항목의 텍스트 색|  
 |중립 기본|홈 및 보고서 영역 배경|  
 |중립 보조|텍스트 상자 및 폴더 옵션 배경, 설정 메뉴|  

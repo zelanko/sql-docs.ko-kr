@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e4227b0af8453a40e9dd63b4aef170d52f8115b2
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782924"
 ---
 # <a name="remove-an-availability-group-sql-server"></a>가용성 그룹 제거(SQL Server)
@@ -36,7 +36,7 @@ ms.locfileid: "72782924"
   
      [보안](#Security)  
   
--   **가용성 그룹을 삭제하려면:**  
+-   **다음을 사용 하 여 가용성 그룹을 삭제 합니다.**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -60,7 +60,7 @@ ms.locfileid: "72782924"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  가용성 그룹에 대한 ALTER AVAILABILITY GROUP 권한, CONTROL AVAILABILITY GROUP 권한, ALTER ANY AVAILABILITY GROUP 권한 또는 CONTROL SERVER 권한이 필요합니다. 로컬 서버 인스턴스에서 호스팅되지 않는 가용성 그룹을 삭제하려면 해당 가용성 그룹에 대한 CONTROL SERVER 권한이나 CONTROL 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -68,7 +68,8 @@ ms.locfileid: "72782924"
   
 1.  개체 탐색기에서 주 복제본을 호스팅하는 서버 인스턴스에 연결하거나(가능한 경우) 가용성 그룹에 대한 올바른 보안 자격 증명을 소유한 WSFC 노드에 있으며 AlwaysOn 가용성 그룹을 사용하도록 설정된 다른 서버 인스턴스에 연결합니다. 서버 트리를 확장합니다.  
   
-2.  **AlwaysOn 고가용성** 및 **가용성 그룹** 노드를 확장합니다.  
+2.  
+  **AlwaysOn 고가용성** 및 **가용성 그룹** 노드를 확장합니다.  
   
 3.  이 단계는 여러 가용성 그룹을 삭제할지 아니면 가용성 그룹을 하나만 삭제할지에 따라 다음과 같이 달라집니다.  
   
@@ -124,5 +125,5 @@ ms.locfileid: "72782924"
 -   [작동 방식: DROP AVAILABILITY GROUP 동작](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (CSS SQL Server 엔지니어 블로그)  
   
 ## <a name="see-also"></a>참고 항목  
- [AlwaysOn 가용성 그룹 &#40;SQL Server&#41; 개요](overview-of-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 가용성 그룹 &#40;SQL Server 개요&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [가용성 그룹의 생성 및 구성&#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)  

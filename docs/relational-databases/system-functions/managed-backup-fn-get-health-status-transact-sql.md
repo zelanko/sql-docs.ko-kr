@@ -21,10 +21,10 @@ ms.assetid: b376711d-444a-4b5e-b483-8df323b4e31f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bc2bfdbd8714bf4211373e921c1b054ed224feb3
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70155812"
 ---
 # <a name="managed_backupfn_get_health_status-transact-sql"></a>managed_backup. fn_get_health_status (Transact-sql)
@@ -35,7 +35,7 @@ ms.locfileid: "70155812"
  함수는 Smart Admin에서 서비스의 상태를 보고 하는 데 사용 됩니다.  현재 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 스마트 관리 파라솔에서 지원 됩니다. 따라서 반환되는 오류는 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]과 관련이 있습니다.  
   
  
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -52,7 +52,7 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |number_of_storage_connectivity_errors|int|프로그램이 Azure storage 계정에 연결 하는 경우 연결 오류 횟수입니다.|  
 |number_of_sql_errors|int|프로그램에서 SQL Server 엔진에 연결할 때 반환되는 오류 수입니다.|  
@@ -62,8 +62,8 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
 |number_of_backup_loops|int|백업 에이전트가 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 사용하여 구성된 모든 데이터베이스를 검색하는 횟수입니다.|  
 |number_of_retention_loops|int|설정된 보존 기간을 평가하기 위해 데이터베이스가 검색되는 횟수입니다.|  
   
-## <a name="best-practices"></a>최선의 구현 방법  
- 이 집계 수는 시스템 상태를 모니터링하는 데 사용될 수 있습니다. 예를 들어 number_of_retention_loops 열이 30분 동안 0인 경우 보존 관리가 시간이 오래 걸리고 있거나 제대로 작동하지 않고 있을 가능성이 있습니다. 0이 아닌 오류 열은 문제를 나타낼 수 있으며 문제에 대해 알아보려면 확장 이벤트 로그를 확인해야 합니다. 또는 저장 프로시저 managed_backup를 사용 하 여 오류에 대 한 세부 정보를 찾는 확장 이벤트 목록을 가져옵니다 **.**  
+## <a name="best-practices"></a>모범 사례  
+ 이 집계 수는 시스템 상태를 모니터링하는 데 사용될 수 있습니다. 예를 들어 number_of_retention_loops 열이 30분 동안 0인 경우 보존 관리가 시간이 오래 걸리고 있거나 제대로 작동하지 않고 있을 가능성이 있습니다. 0이 아닌 오류 열은 문제를 나타낼 수 있으며 문제에 대해 알아보려면 확장 이벤트 로그를 확인해야 합니다. 또는 저장 프로시저 **managed_backup sp_get_backup_diagnostics** 사용 하 여 오류에 대 한 세부 정보를 찾는 확장 이벤트 목록을 가져옵니다.  
   
 ## <a name="security"></a>보안  
   

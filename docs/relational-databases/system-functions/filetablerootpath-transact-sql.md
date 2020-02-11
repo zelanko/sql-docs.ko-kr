@@ -18,10 +18,10 @@ ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 10b4aa19b86530213f852ea90f959a1d7ef6c74f
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72251235"
 ---
 # <a name="filetablerootpath-transact-sql"></a>FileTableRootPath(Transact-SQL)
@@ -38,10 +38,10 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
   
 ## <a name="arguments"></a>인수  
  *FileTable_name*  
- FileTable의 이름입니다. *FileTable_name* 는 **nvarchar**형식입니다. 선택적 매개 변수입니다. 기본값은 현재 데이터베이스입니다. *Schema_name* 를 지정 하는 것도 선택 사항입니다. *FileTable_name* 에 대해 NULL을 전달 하 여 기본 매개 변수 값을 사용할 수 있습니다.  
+ FileTable의 이름입니다. *FileTable_name* 은 **nvarchar**형식입니다. 선택적 매개 변수입니다. 기본값은 현재 데이터베이스입니다. *Schema_name* 지정도 선택 사항입니다. *FileTable_name* 에 대해 NULL을 전달 하 여 기본 매개 변수 값을 사용할 수 있습니다.  
   
  *\@option*  
- 경로에 있는 서버 구성 요소의 형식을 지정하는 방법을 정의하는 정수 식입니다. *\@option* 은 다음 값 중 하나를 사용할 수 있습니다.  
+ 경로에 있는 서버 구성 요소의 형식을 지정하는 방법을 정의하는 정수 식입니다. 옵션은 다음 값 중 하나를 사용할 수 있습니다. * \@*  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -57,15 +57,15 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
 ## <a name="general-remarks"></a>일반적인 주의 사항  
  **FileTableRootPath** 함수는 다음 조건 중 하나가 true 인 경우 NULL을 반환 합니다.  
   
--   *FileTable_name* 의 값이 잘못 되었습니다.  
+-   *FileTable_name* 값이 잘못 되었습니다.  
   
 -   호출자에게 지정된 테이블 또는 현재 데이터베이스를 참조할 수 있는 충분한 사용 권한이 없는 경우  
   
--   현재 데이터베이스에 대해 *database_directory* 의 FILESTREAM 옵션이 설정 되지 않았습니다.  
+-   현재 데이터베이스에 대해 *DATABASE_DIRECTORY* FILESTREAM 옵션이 설정 되지 않았습니다.  
   
  자세한 내용은 [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)을 참조하세요.  
   
-## <a name="best-practices"></a>최선의 구현 방법  
+## <a name="best-practices"></a>모범 사례  
  코드와 애플리케이션을 현재 컴퓨터 및 데이터베이스 외에서도 사용할 수 있도록 하려면 코드를 작성할 때 절대 파일 경로를 사용하지 않는 것이 좋습니다. 대신, 다음 예제와 같이 **FileTableRootPath** 및 **GetFileNamespacePath** 함수를 함께 사용 하 여 런타임에 파일의 전체 경로를 가져옵니다. 기본적으로 **GetFileNamespacePath** 함수는 데이터베이스의 루트 경로 아래에 있는 파일의 상대 경로를 반환합니다.  
   
 ```sql  
@@ -87,7 +87,7 @@ WHERE Name = N'document.docx';
   
 -   특정 FileTable의 루트 경로를 가져올 수 있는 FileTable에 대한 SELECT 권한  
   
--   현재 데이터베이스에 대 한 루트 경로를 가져올 수 있는 권한이 **db_datareader** 이상입니다.  
+-   현재 데이터베이스의 루트 경로를 가져올 수 있는 권한이 **db_datareader** 이상입니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 **FileTableRootPath** 함수를 호출 하는 방법을 보여 줍니다.  
@@ -104,7 +104,7 @@ SELECT FileTableRootPath(N'dbo.MyFileTable');
 SELECT FileTableRootPath(N'MyFileTable');  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [FileTable에서 디렉터리 및 경로 작업](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
   
   

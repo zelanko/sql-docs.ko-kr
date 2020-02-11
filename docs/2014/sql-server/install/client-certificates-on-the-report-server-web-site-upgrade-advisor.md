@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 5588930efbadf785e78aa115ad0021bce64bd7f7
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952598"
 ---
 # <a name="client-certificates-on-the-report-server-web-site-upgrade-advisor"></a>보고서 서버 웹 사이트의 클라이언트 인증서(업그레이드 관리자)
@@ -24,18 +24,18 @@ ms.locfileid: "71952598"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드입니다.|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]기본 모드입니다.|  
   
 ## <a name="component"></a>구성 요소  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-## <a name="description"></a>설명  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서는 사용자를 인증하는 데 클라이언트 인증서를 사용하도록 지원하지 않습니다. 업그레이드를 계속 진행할 수는 있지만 클라이언트 인증서는 업그레이드된 보고서 서버에서 사용되지 않습니다.  
+## <a name="description"></a>Description  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 클라이언트 인증서를 사용 하 여 사용자를 인증할 수 없습니다. 업그레이드를 계속 진행할 수는 있지만 클라이언트 인증서는 업그레이드된 보고서 서버에서 사용되지 않습니다.  
   
 ## <a name="corrective-action"></a>수정 동작  
  ISA Server와 같은 별도의 솔루션을 사용하여 클라이언트 인증서 인증 요구 사항을 해결합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [업그레이드 문제 &#40;Reporting Services 업그레이드 관리자&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+## <a name="see-also"></a>참고 항목  
+ [업그레이드 관리자를 &#40;업그레이드 문제를 Reporting Services&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
   

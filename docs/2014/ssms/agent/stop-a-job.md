@@ -15,22 +15,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b55ca5e8f2e57e85a75f610efe4115ced0dce365
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798145"
 ---
 # <a name="stop-a-job"></a>Stop a Job
-  이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 중지하는 방법에 대해 설명합니다. 작업은 SQL Server 에이전트에서 수행하도록 지정된 일련의 동작입니다.  
+  이 항목에서는 에이전트 작업을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 중지 하는 방법에 대해 설명 합니다. 작업은 SQL Server 에이전트에서 수행하도록 지정된 일련의 동작입니다.  
   
--   **시작하기 전 주의 사항:**  
+-   **시작 하기 전에:** ,  
   
      [제한 사항](#Restrictions)  
   
      [보안](#Security)  
   
--   **작업을 중지하려면:**  
+-   **다음을 사용 하 여 작업을 중지 합니다.**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -53,9 +53,11 @@ ms.locfileid: "72798145"
   
 #### <a name="to-stop-a-job"></a>작업을 중지하려면  
   
-1.  **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+1.  
+  **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **SQL Server 에이전트**, **작업**을 차례로 확장하고 중단할 작업을 마우스 오른쪽 단추로 클릭한 다음 **작업 중지**를 클릭합니다.  
+2.  
+  **SQL Server 에이전트**, **작업**을 차례로 확장하고 중단할 작업을 마우스 오른쪽 단추로 클릭한 다음 **작업 중지**를 클릭합니다.  
   
 3.  여러 작업을 중지하려면 **작업 활동 모니터**를 마우스 오른쪽 단추로 클릭한 다음 **작업 활동 보기**를 클릭합니다. 작업 활동 모니터에서 중지하려는 작업을 선택하고 선택 항목을 마우스 오른쪽 단추로 클릭한 다음 **작업 중지**를 클릭합니다.  
   
@@ -79,7 +81,7 @@ ms.locfileid: "72798145"
     GO  
     ```  
   
- 자세한 내용은 [sp_stop_job &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-stop-job-transact-sql)을 참조 하세요.  
+ 자세한 내용은 [sp_stop_job &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-stop-job-transact-sql)를 참조 하세요.  
   
 ##  <a name="SMO"></a>SQL Server 관리 개체 사용  
 

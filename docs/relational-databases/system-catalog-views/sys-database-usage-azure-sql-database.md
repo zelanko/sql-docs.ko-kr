@@ -21,10 +21,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 0a0789ebd9a5aa4bd10605d69afa59a586ce75b2
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70155542"
 ---
 # <a name="sysdatabase_usage-azure-sql-database"></a>sys.database_usage(Azure SQL Database)
@@ -36,9 +36,9 @@ ms.locfileid: "70155542"
   
  **Database_usage** 뷰에는 다음 열이 포함 되어 있습니다.  
   
-|열 이름|설명|  
+|열 이름|Description|  
 |-----------------|-----------------|  
-|Time|사용 이벤트가 발생한 날짜입니다.|  
+|time|사용 이벤트가 발생한 날짜입니다.|  
 |sku|데이터베이스의 서비스 계층 형식: **Web**, **Business**, **Basic**, **Standard**, **Premium**|  
 |quantity|하루 동안 존재한 SKU 형식 데이터베이스의 최대 수입니다.|  
   
@@ -49,7 +49,7 @@ ms.locfileid: "70155542"
  **Database_usage** 뷰는 구독의 각 날짜에 대해 하나의 행을 반환 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [가격 책정 세부 정보를 SQL Database](https://go.microsoft.com/fwlink/?LinkID=394978)   
- [Azure SQL Database의 계정 및 요금 청구](https://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
+ [SQL Database 가격 정보](https://go.microsoft.com/fwlink/?LinkID=394978)   
+ [Azure SQL 데이터베이스에서 계정 및 요금 청구](https://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
   
   

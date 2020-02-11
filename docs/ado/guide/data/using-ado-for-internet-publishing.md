@@ -1,5 +1,5 @@
 ---
-title: 인터넷 게시에 ADO를 사용 하 여 | Microsoft Docs
+title: 인터넷 게시에 ADO 사용 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,31 +16,31 @@ ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: decbc7c3b377234d91fe6b3e662d9449298041c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923613"
 ---
 # <a name="using-ado-for-internet-publishing"></a>인터넷 게시용 ADO 사용
-[OLE DB Provider for Internet Publishing](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) ADO 사용 하 여 다른 유형의 데이터에 액세스 하는 특정 예제를 보여 줍니다. 이 섹션의 예에서는 인터넷 게시 공급자를 사용 하 여 특정 하지만 전자 메일 저장소 공급자와 같은 다른 유형의 데이터를 다른 공급자와 함께 ADO 사용 하는 경우에 원리와 유사한 이어야 합니다.  
+[인터넷 게시용 OLE DB 공급자는](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) ADO를 사용 하 여 다른 유형의 데이터에 액세스 하는 특정 예제를 보여 줍니다. 이 섹션의 예제는 인터넷 게시 공급자를 사용 하는 것과 관련 된 것 이지만, 다른 공급자와 함께 ADO를 사용 하 여 전자 메일 저장소에 대 한 공급자와 같은 다른 유형의 데이터를 사용 하는 경우에도 이와 비슷한 원칙이 사용 됩니다.  
   
 ## <a name="urls"></a>URL  
- Url (uniform Resource Locator) 데이터 원본 및 파일 및 디렉터리의 위치를 지정 하려면 연결 문자열을 명령 텍스트는 대 안으로 사용할 수 있습니다. 기존 Url을 사용할 수 있습니다 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 하 고 **레코드 집합** 개체와는 **레코드** 및 **Stream** 개체입니다.  
+ Url (Uniform Resource Locator)을 연결 문자열과 명령 텍스트 대신 사용 하 여 데이터 원본 및 파일 및 디렉터리의 위치를 지정할 수 있습니다. 기존 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 및 레코드 **집합** 개체와 함께 Url과 **레코드** 및 **스트림** 개체를 사용할 수 있습니다.  
   
- Url을 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [절대 및 상대 Url](../../../ado/guide/data/absolute-and-relative-urls.md)합니다.  
+ Url을 사용 하는 방법에 대 한 자세한 내용은 [절대 및 상대 url](../../../ado/guide/data/absolute-and-relative-urls.md)을 참조 하세요.  
   
 ## <a name="record-fields"></a>레코드 필드  
- 유형이 다른 데이터와 같은 데이터 간의 가장 큰 차이점은 전자의 경우 데이터의 각 행에는 나 **레코드**, 다양 한 열을 가질 수 있습니다 또는 **필드**합니다. 유형이 같은 데이터에 대 한 각 행에 동일한 열 집합이 있습니다. 인터넷 게시 공급자에 게 특정 필드에 대 한 자세한 내용은 참조 하세요. [레코드 및 공급자 제공 필드를 추가](../../../ado/guide/data/records-and-provider-supplied-fields.md)합니다.  
+ 다른 유형의 데이터와 동일한 데이터의 차이점은 전자의 경우에는 데이터의 각 행 이나 **레코드**에 다른 열 집합이 나 **필드가**있을 수 있습니다. 유형이 같은 데이터의 경우 각 행에 동일한 열 집합이 있습니다. 인터넷 게시 공급자와 관련 된 필드에 대 한 자세한 내용은 [레코드 및 공급자 제공 추가 필드](../../../ado/guide/data/records-and-provider-supplied-fields.md)를 참조 하십시오.  
   
 ### <a name="appending-new-fields"></a>새 필드 추가  
- 여러 ADO 개체와 함께 작동 하도록 향상 되었습니다 **레코드** 하 고 **Stream** 개체입니다.  
+ 여러 ADO 개체가 **Record** 및 **Stream** 개체와 함께 작동 하도록 향상 되었습니다.  
   
--   [필드](../../../ado/reference/ado-api/fields-collection-ado.md) 컬렉션 [추가](../../../ado/reference/ado-api/append-method-ado.md) 메서드를 만들고 추가 [필드](../../../ado/reference/ado-api/field-object.md) 컬렉션에 개체의 값을 지정할 수도 있습니다는 **필드**.  
+-   [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) 컬렉션 [Append](../../../ado/reference/ado-api/append-method-ado.md) 메서드는 [필드 개체를](../../../ado/reference/ado-api/field-object.md) 만들어 컬렉션에 추가 하 고 **필드**의 값도 지정할 수 있습니다.  
   
--   합니다 [업데이트](../../../ado/reference/ado-api/update-method.md) 메서드를 추가 하거나 컬렉션에 필드의 삭제 작업을 마무리 합니다.  
+-   [Update](../../../ado/reference/ado-api/update-method.md) 메서드는 컬렉션에 대 한 필드의 추가 또는 삭제를 마무리 합니다.  
   
--   바로 가기로 사용 하거나 대신 합니다 **Append** 메서드를 정의 되지 않았거나 이전에 삭제 된 필드에 값을 할당 하 여 필드를 만들 수 있습니다.  
+-   **Append** 메서드에 대 한 바로 가기와 대안은 정의 되지 않았거나 이전에 삭제 한 필드에 값을 할당 하 여 필드를 만들 수 있습니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "67923613"
   
 -   [레코드 및 공급자 제공 필드](../../../ado/guide/data/records-and-provider-supplied-fields.md)  
   
-## <a name="see-also"></a>관련 항목  
- [레코드 개체 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+## <a name="see-also"></a>참고 항목  
+ [Record 개체 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Stream 개체 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
- [ADO 버전 이력](../../../ado/guide/ado-history.md)
+ [ADO 기록](../../../ado/guide/ado-history.md)

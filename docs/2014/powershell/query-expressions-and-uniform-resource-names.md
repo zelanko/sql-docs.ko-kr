@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4fec86c0f732a4f47d3132be51226b877c428d5f
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782758"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>쿼리 식 및 URN
-  SMO([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object) 모델 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 스냅인은 XPath 식과 유사한 두 가지 유형의 식 문자열을 사용합니다. 쿼리 식은 개체 모델 계층 구조에 있는 하나 이상의 개체를 열거하는 데 사용되는 조건 집합을 지정하는 문자열입니다. URN(Uniform Resource Name)은 단일 개체를 고유하게 식별하는 특정 유형의 쿼리 식 문자열입니다.  
+  SMO( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object) 모델 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 스냅인은 XPath 식과 유사한 두 가지 유형의 식 문자열을 사용합니다. 쿼리 식은 개체 모델 계층 구조에 있는 하나 이상의 개체를 열거하는 데 사용되는 조건 집합을 지정하는 문자열입니다. URN(Uniform Resource Name)은 단일 개체를 고유하게 식별하는 특정 유형의 쿼리 식 문자열입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,7 +41,7 @@ ms.locfileid: "72782758"
 ```  
   
 ## <a name="arguments"></a>인수  
- *개체*  
+ *Object*  
  식 문자열의 Object 노드에서 나타내는 개체 유형을 지정합니다. 각 개체는 이러한 SMO 개체 모델 네임스페이스의 컬렉션 클래스를 나타냅니다.  
   
  <xref:Microsoft.SqlServer.Management.Smo>  
@@ -121,35 +121,35 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']/Table[@Name='Sal
 Server[@Name='MYCOMPUTER']/Database[@AutoClose=false()]  
 ```  
   
-### <a name="b-enumerating-objects-using-contains"></a>2\. contains를 사용하여 개체 열거  
+### <a name="b-enumerating-objects-using-contains"></a>B. contains를 사용하여 개체 열거  
  이 쿼리 식은 대/소문자를 구분하지 않고 이름에 'm' 문자가 있는 데이터베이스를 모두 열거합니다.  
   
 ```  
 Server[@Name='MYCOMPUTER']/Database[@CaseSensitive=false() and contains(@Name, 'm')]   
 ```  
   
-### <a name="c-enumerating-objects-using-not"></a>3\. not을 사용하여 개체 열거  
+### <a name="c-enumerating-objects-using-not"></a>C. not을 사용하여 개체 열거  
  이 쿼리 식은 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] Production **스키마에 없으며 테이블 이름에 History라는 단어를 포함하는** 테이블을 모두 열거합니다.  
   
 ```  
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']/Table[not(@Schema='Production') and contains(@Name, 'History')]  
 ```  
   
-### <a name="d-not-supplying-a-filter-expression-for-the-final-node"></a>4\. 최종 노드에 대한 필터 식 제공 안 함  
+### <a name="d-not-supplying-a-filter-expression-for-the-final-node"></a>D. 최종 노드에 대한 필터 식 제공 안 함  
  이 쿼리 식은 **AdventureWorks2012.Sales.SalesPerson** 테이블에서 모든 열을 열거합니다.  
   
 ```  
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@Schema='Sales' and @Name='SalesPerson']/Columns  
 ```  
   
-### <a name="e-enumerating-objects-using-datetime"></a>5\. datetime을 사용하여 개체 열거  
+### <a name="e-enumerating-objects-using-datetime"></a>E. datetime을 사용하여 개체 열거  
  이 쿼리 식은 특정 시간에 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스에서 만든 테이블을 모두 열거합니다.  
   
 ```  
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@CreateDate=datetime('2008-03-21 19:49:32.647')]  
 ```  
   
-### <a name="f-enumerating-objects-using-is_null"></a>6\. is_null을 사용하여 개체 열거  
+### <a name="f-enumerating-objects-using-is_null"></a>F. is_null을 사용하여 개체 열거  
  이 쿼리 식은 마지막 수정 날짜 속성에 대한 NULL이 없는 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스의 테이블을 모두 열거합니다.  
   
 ```  

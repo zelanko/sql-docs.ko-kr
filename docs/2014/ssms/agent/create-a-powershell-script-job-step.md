@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6375229899c1bfe8f175771e55fdd821fc232166
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798296"
 ---
 # <a name="create-a-powershell-script-job-step"></a>Create a PowerShell Script Job Step
@@ -27,11 +27,11 @@ ms.locfileid: "72798296"
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [보안](#Security)  
   
--   **PowerShell 스크립트 작업 단계를 만들려면**  
+-   **PowerShell 스크립트 작업 단계를 만들려면 다음을 사용 합니다.**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -48,21 +48,29 @@ ms.locfileid: "72798296"
   
 #### <a name="to-create-a-powershell-script-job-step"></a>PowerShell 스크립트 작업 단계를 만들려면  
   
-1.  **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+1.  
+  **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **SQL Server 에이전트**를 확장하고 새 작업을 만들거나 기존 작업을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 작업을 만드는 방법은 [작업 만들기](create-jobs.md)를 참조하세요.  
+2.  
+  **SQL Server 에이전트**를 확장하고 새 작업을 만들거나 기존 작업을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 작업을 만드는 방법은 [작업 만들기](create-jobs.md)를 참조하세요.  
   
-3.  **작업 속성** 대화 상자에서 **단계** 페이지를 클릭한 다음 **새로 만들기**를 클릭합니다.  
+3.  
+  **작업 속성** 대화 상자에서 **단계** 페이지를 클릭한 다음 **새로 만들기**를 클릭합니다.  
   
-4.  **새 작업 단계** 대화 상자에서 작업 **단계 이름**을 입력합니다.  
+4.  
+  **새 작업 단계** 대화 상자에서 작업 **단계 이름**을 입력합니다.  
   
-5.  **형식** 목록에서 **PowerShell**을 클릭합니다.  
+5.  
+  **형식** 목록에서 **PowerShell**을 클릭합니다.  
   
-6.  **다음 계정으로 실행** 목록에서 작업에 사용할 자격 증명을 가진 프록시 계정을 선택합니다.  
+6.  
+  **다음 계정으로 실행** 목록에서 작업에 사용할 자격 증명을 가진 프록시 계정을 선택합니다.  
   
-7.  **명령** 입력란에 작업 단계를 위해 실행될 PowerShell 스크립트 구문을 입력합니다. 아니면 **열기** 를 클릭한 다음 해당 스크립트 구문이 포함된 파일을 선택합니다. PowerShell 스크립트 예는 아래의 **Transact-SQL 사용** 을 참조하세요.  
+7.  
+  **명령** 입력란에 작업 단계를 위해 실행될 PowerShell 스크립트 구문을 입력합니다. 아니면 **열기** 를 클릭한 다음 해당 스크립트 구문이 포함된 파일을 선택합니다. PowerShell 스크립트 예는 아래의 **Transact-SQL 사용** 을 참조하세요.  
   
-8.  **고급** 페이지를 클릭하여 작업 단계가 성공 또는 실패할 경우에 수행할 동작, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트의 작업 단계 실행 시도 횟수, 그리고 다시 시도 간격 등 작업 단계 옵션을 설정합니다.  
+8.  
+  **고급** 페이지를 클릭하여 작업 단계가 성공 또는 실패할 경우에 수행할 동작, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트의 작업 단계 실행 시도 횟수, 그리고 다시 시도 간격 등 작업 단계 옵션을 설정합니다.  
   
 ##  <a name="TSQL"></a> Transact-SQL 사용  
   
@@ -88,7 +96,7 @@ ms.locfileid: "72798296"
     GO  
     ```  
   
- 자세한 내용은 [sp_add_jobstep &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)을 참조 하세요.  
+ 자세한 내용은 [sp_add_jobstep &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)를 참조 하세요.  
   
 ##  <a name="SMO"></a>SQL Server 관리 개체 사용  
  **PowerShell 스크립트 작업 단계를 만들려면**  

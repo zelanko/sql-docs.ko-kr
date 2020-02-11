@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 8959b1ca4ea719ce571cb8609b817bba965185bd
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798333"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>명령 프롬프트에서 PowerPivot 설치
   명령줄에서 설치 프로그램을 실행하여 SQL Server SharePoint용 PowerPivot를 설치할 수 있습니다. 명령에 `/ROLE` 매개 변수를 포함하고 `/FEATURES` 매개 변수는 제외해야 합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
  SharePoint Server 2010 Enterprise Edition SP1(서비스 팩 1)이 설치되어 있어야 합니다.  
   
  Analysis Services를 프로비전하기 위해 도메인 계정을 사용해야 합니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "72798333"
  이전 릴리스와 달리 모든 서버 구성 태스크는 설치 후 태스크로 수행됩니다. 설치 및 구성 단계를 자동화하는 경우 PowerShell을 사용하여 서버를 구성할 수 있습니다. 자세한 내용은 [Windows PowerShell을 사용한 PowerPivot 구성](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell)을 참조 하세요.  
   
 ## <a name="example-commands"></a>예제 명령  
- 다음 예제는 각 옵션의 사용법을 보여 줍니다. 예 1에서는 `SPI_AS_ExistingFarm`를 보여 줍니다.  
+ 다음 예제는 각 옵션의 사용법을 보여 줍니다. 예제 1은 `SPI_AS_ExistingFarm`을 보여 줍니다.  
   
 ```cmd
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_ExistingFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
@@ -62,25 +62,32 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
     Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_ExistingFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
     ```  
   
-     `/q` 매개 변수가 설치 프로그램을 자동 모드에서 실행하며 사용자 인터페이스를 숨깁니다.  
+     
+  `/q` 매개 변수가 설치 프로그램을 자동 모드에서 실행하며 사용자 인터페이스를 숨깁니다.  
   
-     `/IAcceptSQLServerLicenseTerms`는 무인 설치에 대해 `/q` 또는 `/qs` 매개 변수를 지정하는 경우 필요합니다.  
+     
+  `/IAcceptSQLServerLicenseTerms`는 무인 설치에 대해 `/q` 또는 `/qs` 매개 변수를 지정하는 경우 필요합니다.  
   
-     `/action` 매개 변수는 설치를 수행하도록 설치 프로그램에 지시합니다.  
+     
+  `/action` 매개 변수는 설치를 수행하도록 설치 프로그램에 지시합니다.  
   
-     `/role` 매개 변수를 지정하면 SharePoint용 PowerPivot에 필요한 Analysis Services 프로그램 및 구성 파일이 설치됩니다. 이 역할 역시 기존 팜 연결 정보를 검색 및 사용하여 SharePoint 구성 데이터베이스에 액세스합니다. 이 매개 변수는 필수적 요소입니다. 설치할 구성 요소를 지정하려면 `/features` 매개 변수 대신 이 매개 변수를 사용합니다.  
+     
+  `/role` 매개 변수를 지정하면 SharePoint용 PowerPivot에 필요한 Analysis Services 프로그램 및 구성 파일이 설치됩니다. 이 역할 역시 기존 팜 연결 정보를 검색 및 사용하여 SharePoint 구성 데이터베이스에 액세스합니다. 이 매개 변수는 필수입니다. 설치할 구성 요소를 지정하려면 `/features` 매개 변수 대신 이 매개 변수를 사용합니다.  
   
-     `/instancename` 매개 변수는 명명된 인스턴스로 'PowerPivot'을 지정합니다. 이 값은 하드 코딩되어 변경할 수 없으며, 교육용으로 명령에 지정되므로 서비스 설치 방법을 확인할 수 있습니다.  
+     
+  `/instancename` 매개 변수는 명명된 인스턴스로 'PowerPivot'을 지정합니다. 이 값은 하드 코딩되어 변경할 수 없으며, 교육용으로 명령에 지정되므로 서비스 설치 방법을 확인할 수 있습니다.  
   
-     `/indicateprogress` 매개 변수를 사용하면 명령 프롬프트 창에서 진행률을 모니터링할 수 있습니다.  
+     
+  `/indicateprogress` 매개 변수를 사용하면 명령 프롬프트 창에서 진행률을 모니터링할 수 있습니다.  
   
-2.  `PID` 매개 변수는 명령에서 생략되므로 Evaluation 버전이 설치됩니다. Enterprise 버전을 설치하려면 설치 명령에 PID를 추가하고 올바른 제품 키를 제공하십시오.  
+2.  
+  `PID` 매개 변수는 명령에서 생략되므로 Evaluation 버전이 설치됩니다. Enterprise 버전을 설치하려면 설치 명령에 PID를 추가하고 올바른 제품 키를 제공하십시오.  
   
     ```  
     /PID=<product key for an Enterprise installation>  
     ```  
   
-3.  \<domain\username > 및 \<StrongPassword >에 대 한 자리 표시자를 유효한 사용자 계정 및 암호로 바꿉니다.  
+3.  Domain\username> 및 \<StrongPassword \<>에 대 한 자리 표시자를 올바른 사용자 계정 및 암호로 바꿉니다.  
   
      `/assvaccount` 및 **/assvcpassword** 매개 변수는 응용 프로그램 서버에서 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 인스턴스를 구성 하는 데 사용 됩니다. 이들 자리 표시자는 올바른 계정 정보로 바꿉니다.  
   
@@ -100,7 +107,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
   
 10. 설치를 확인하려면 \Program Files\SQL Server\120\Setup Bootstrap\Log의 summary.txt 파일을 확인하십시오. 서버가 오류 없이 설치된 경우 최종 결과는 "통과"여야 합니다.  
   
-11. 서버를 구성합니다. 최소한 솔루션을 배포하고 서비스 애플리케이션을 만들고 각 사이트 모음에 대해 기능을 사용하도록 설정해야 합니다. 자세한 내용은 [구성 또는 복구 SharePoint용 PowerPivot 2010 &#40;powerpivot 구성 도구&#41; ](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md) 또는 [중앙 관리에서 powerpivot 서버 관리 및 구성](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)을 참조 하세요.  
+11. 서버를 구성합니다. 최소한 솔루션을 배포하고 서비스 애플리케이션을 만들고 각 사이트 모음에 대해 기능을 사용하도록 설정해야 합니다. 자세한 내용은 [Configure Or Repair SharePoint용 PowerPivot 2010 &#40;Powerpivot 구성 도구&#41;](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md) 또는 [중앙 관리에서 powerpivot 서버 관리 및 구성](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [PowerPivot 서비스 계정 구성](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts)   

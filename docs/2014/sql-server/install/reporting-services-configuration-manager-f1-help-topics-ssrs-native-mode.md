@@ -13,16 +13,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: d2205465f1fd6f03c67e1fc09ec76a2dfbb2e083
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952038"
 ---
 # <a name="reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode"></a>Reporting Services 구성 관리자 F1 도움말 항목(SSRS 기본 모드)
   이 섹션에서는 Reporting Services 구성 관리자에 대한 F1 도움말을 제공합니다.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드입니다.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -36,7 +36,7 @@ ms.locfileid: "71952038"
   
 -   [고급 다중 웹 사이트 구성](../../../2014/sql-server/install/advanced-multiple-web-site-configuration-ssrs-native-mode.md)  
   
--   [데이터베이스 백업](../../../2014/sql-server/install/database-ssrs-native-mode.md)  
+-   [Database](../../../2014/sql-server/install/database-ssrs-native-mode.md)  
   
 -   [데이터베이스 변경 마법사](../../../2014/sql-server/install/change-database-wizard-ssrs-native-mode.md)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "71952038"
   
 -   [확장 배포](../../../2014/sql-server/install/scale-out-deployment-native-mode-report-server.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services 구성 관리자 &#40;del&#41;](reporting-services-configuration-manager-native-mode.md)  
   
   

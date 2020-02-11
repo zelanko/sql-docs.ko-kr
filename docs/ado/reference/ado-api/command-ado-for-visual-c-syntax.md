@@ -1,5 +1,5 @@
 ---
-title: 명령 (시각적 개체에 대 한 ADO C++ 구문) | Microsoft Docs
+title: 명령 (Visual C++ 구문에 대 한 ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,10 +16,10 @@ ms.assetid: cf12cbd1-25f7-4bb5-aa94-0fe823b3b6d6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 49a82682e619bb2a33e5c04e049b40ac4733f427
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919879"
 ---
 # <a name="command-ado-for-visual-c-syntax"></a>명령(Visual C++ 구문에 대한 ADO)
@@ -51,5 +51,5 @@ get_State(LONG *plObjState)
 get_Parameters(ADOParameters **ppvObject)  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [명령 개체(ADO)](../../../ado/reference/ado-api/command-object-ado.md)

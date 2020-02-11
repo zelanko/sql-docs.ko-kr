@@ -13,10 +13,10 @@ ms.assetid: dadde268-bd0f-4ba0-8775-83a5cd3e258a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4868db07f3366163412021ac7f613c3cddf050da
-ms.sourcegitcommit: 49f3d12c0a46d98b82513697a77a461340f345e1
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70737663"
 ---
 # <a name="record-object-properties-methods-and-events"></a>Record 개체 속성, 메서드 및 이벤트
@@ -29,7 +29,7 @@ ms.locfileid: "70737663"
   
  [ParentURL 속성](../../../ado/reference/ado-api/parenturl-property-ado.md)  
   
- [Properties 컬렉션](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [속성 컬렉션](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
  [RecordType 속성](../../../ado/reference/ado-api/recordtype-property-ado.md)  
   
@@ -55,5 +55,5 @@ ms.locfileid: "70737663"
 ## <a name="events"></a>이벤트  
  없음  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [레코드 개체(ADO)](../../../ado/reference/ado-api/record-object-ado.md)

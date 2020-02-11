@@ -1,5 +1,5 @@
 ---
-title: _resource_governor_workload_groups_history_ex (Azure SQL Database) | Microsoft Docs
+title: dm_resource_governor_workload_groups_history_ex (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
@@ -19,10 +19,10 @@ helpviewer_keywords:
 author: joesackmsft
 ms.author: josack
 ms.openlocfilehash: 5fea5badf14ce9863f07dff189f1665788ec5fb6
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70873776"
 ---
 # <a name="sysdm_resource_governor_workload_groups_history_ex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex(Azure SQL Database)
@@ -30,12 +30,12 @@ ms.locfileid: "70873776"
 
 Azure SQL Database에 대 한 리소스 풀 통계의 마지막 32 분 (128 개 합계)에 대 한 스냅숏을 20 초 간격으로 반환 합니다.
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**pool_id**| int |리소스 풀의 ID입니다. Null을 허용하지 않습니다.|
 |**group_id**| int |작업 그룹의 ID입니다. Null을 허용하지 않습니다.|
 |**name**| nvarchar(256) |작업 그룹의 이름입니다. Null을 허용하지 않습니다.|
-|**snapshot_time**| datetime |만든 리소스 그룹 통계 스냅숏의 날짜/시간입니다.|
+|**snapshot_time**| Datetime |만든 리소스 그룹 통계 스냅숏의 날짜/시간입니다.|
 |**duration_ms**| int |현재 스냅숏과 이전 스냅숏 간의 기간입니다.|
 |**active_worker_count**| int |현재 스냅숏의 총 작업자|
 |**active_request_count**| int |현재 요청 수입니다. Null을 허용하지 않습니다.|
@@ -100,7 +100,7 @@ WHERE name LIKE 'User%'
 ORDER BY snapshot_time DESC;
 ```
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
 - [변환 로그 율 거 버 넌 스](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
 - [탄력적 풀 DTU 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)

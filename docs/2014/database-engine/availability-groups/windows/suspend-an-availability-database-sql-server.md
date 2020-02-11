@@ -18,20 +18,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c428d9141acfaca3e8ec7876e62b733c30ec161
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797955"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>가용성 데이터베이스 일시 중지(SQL Server)
+  
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 의 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]또는 PowerShell을 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 가용성 데이터베이스를 일시 중지할 수 있습니다. 일시 중지하거나 재개할 데이터베이스를 호스팅하는 서버 인스턴스에서 일시 중지 명령을 실행해야 합니다.  
   
  일시 중지 명령의 효과는 일시 중지하는 데이터베이스가 보조 데이터베이스인지 주 데이터베이스인지에 따라 다음과 같이 다릅니다.  
   
 |일시 중지된 데이터베이스|일시 중지 명령의 효과|  
 |------------------------|-------------------------------|  
-|보조 데이터베이스|로컬 보조 데이터베이스만 일시 중지되고 동기화 상태가 NOT SYNCHRONIZING이 됩니다. 다른 보조 데이터베이스는 영향을 받지 않습니다. 일시 중지된 데이터베이스는 데이터(로그 레코드)의 수신과 적용을 중지하고 주 데이터베이스보다 뒤처지기 시작합니다. 읽기 가능한 보조 복제본에 대한 기존 연결은 계속 사용할 수 있습니다. 읽기 가능한 보조 복제본의 일시 중단된 데이터베이스에 대한 새 연결은 데이터 이동이 다시 시작될 때까지 허용되지 않습니다.<br /><br /> 주 데이터베이스는 사용 가능한 상태로 남아 있습니다. 각각의 해당 보조 데이터베이스를 중지하면 주 데이터베이스가 노출된 상태로 실행됩니다.<br /><br /> **\*\* 중요 \*\*** 보조 데이터베이스를 일시 중지하면 해당 주 데이터베이스의 큐 보내기에서 보내지 않은 트랜잭션 로그 레코드를 누적합니다. 보조 복제본에 대한 연결은 데이터 이동이 일시 중단된 시간에 사용 가능했던 데이터를 반환합니다.|  
+|보조 데이터베이스|로컬 보조 데이터베이스만 일시 중지되고 동기화 상태가 NOT SYNCHRONIZING이 됩니다. 다른 보조 데이터베이스는 영향을 받지 않습니다. 일시 중지된 데이터베이스는 데이터(로그 레코드)의 수신과 적용을 중지하고 주 데이터베이스보다 뒤처지기 시작합니다. 읽기 가능한 보조 복제본에 대한 기존 연결은 계속 사용할 수 있습니다. 읽기 가능한 보조 복제본의 일시 중단된 데이터베이스에 대한 새 연결은 데이터 이동이 다시 시작될 때까지 허용되지 않습니다.<br /><br /> 주 데이터베이스는 사용 가능한 상태로 남아 있습니다. 각각의 해당 보조 데이터베이스를 중지하면 주 데이터베이스가 노출된 상태로 실행됩니다.<br /><br /> ** \* 중요 \* \* ** 보조 데이터베이스가 일시 중단 된 동안에는 해당 주 데이터베이스의 송신 큐에 보내지 않은 트랜잭션 로그 레코드가 누적 됩니다. 보조 복제본에 대한 연결은 데이터 이동이 일시 중단된 시간에 사용 가능했던 데이터를 반환합니다.|  
 |주 데이터베이스|주 데이터베이스는 연결된 모든 보조 데이터베이스로의 데이터 이동을 중지합니다. 주 데이터베이스는 계속해서 노출된 모드에서 실행됩니다. 클라이언트에서 주 데이터베이스를 계속해서 사용할 수 있고 읽을 수 있는 보조 데이터베이스의 기존 연결을 계속해서 사용할 수 있으며 새로운 연결을 만들 수 있습니다.|  
   
 > [!NOTE]  
@@ -47,7 +48,7 @@ ms.locfileid: "72797955"
   
      [보안](#Security)  
   
--   **데이터베이스를 일시 중지하려면:**  
+-   **다음을 사용 하 여 데이터베이스를 일시 중지 합니다.**  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -64,7 +65,7 @@ ms.locfileid: "72797955"
 ###  <a name="Restrictions"></a> 제한 사항  
  SUSPEND 명령은 대상 데이터베이스를 호스팅하는 복제본에서 수락되는 즉시 반환하지만 실제로 데이터베이스 일시 중지는 비동기식으로 발생합니다.  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 필수 조건  
  일시 중지할 데이터베이스를 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다. 주 데이터베이스와 해당 보조 데이터베이스를 일시 중지하려면 주 복제본을 호스팅하는 서버 인스턴스에 연결합니다. 주 데이터베이스는 사용 가능한 상태로 두고 보조 데이터베이스를 일시 중지하려면 보조 복제본에 연결합니다.  
   
 ###  <a name="Recommendations"></a> 권장 사항  
@@ -72,23 +73,26 @@ ms.locfileid: "72797955"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  데이터베이스에 대한 ALTER 권한이 필요합니다.  
   
  가용성 그룹에 대한 ALTER AVAILABILITY GROUP 권한, CONTROL AVAILABILITY GROUP 권한, ALTER ANY AVAILABILITY GROUP 권한 또는 CONTROL SERVER 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
- **데이터베이스를 일시 중지하려면**  
+ **데이터베이스를 일시 중지 하려면**  
   
 1.  개체 탐색기에서 데이터베이스를 일시 중지할 가용성 복제본을 호스팅하는 서버 인스턴스에 연결하고 서버 트리를 확장합니다. 자세한 내용은 이 항목의 앞부분에 나오는 [필수 구성 요소](#Prerequisites)를 참조하세요.  
   
-2.  **AlwaysOn 고가용성** 및 **가용성 그룹** 노드를 확장합니다.  
+2.  
+  **AlwaysOn 고가용성** 및 **가용성 그룹** 노드를 확장합니다.  
   
 3.  가용성 그룹을 확장합니다.  
   
-4.  **가용성 데이터베이스** 노드를 확장하고 데이터베이스를 마우스 오른쪽 단추로 누른 다음 **데이터 이동 일시 중지**를 클릭합니다.  
+4.  
+  **가용성 데이터베이스** 노드를 확장하고 데이터베이스를 마우스 오른쪽 단추로 누른 다음 **데이터 이동 일시 중지**를 클릭합니다.  
   
-5.  **데이터 이동 일시 중지** 대화 상자에서 **확인**을 클릭합니다.  
+5.  
+  **데이터 이동 일시 중지** 대화 상자에서 **확인**을 클릭합니다.  
   
      개체 탐색기에서 데이터베이스 아이콘이 일시 중지 표시기로 변경되어 데이터베이스가 일시 중지되었음을 나타냅니다.  
   
@@ -96,7 +100,7 @@ ms.locfileid: "72797955"
 >  이 복제본 위치에서 다른 데이터베이스를 일시 중지하려면 각 데이터베이스에 대해 4단계와 5단계를 반복합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
- **데이터베이스를 일시 중지하려면**  
+ **데이터베이스를 일시 중지 하려면**  
   
 1.  데이터베이스를 일시 중지할 복제본을 호스팅하는 서버 인스턴스에 연결합니다. 자세한 내용은 이 항목의 앞부분에 나오는 [필수 구성 요소](#Prerequisites)를 참조하세요.  
   
@@ -105,11 +109,12 @@ ms.locfileid: "72797955"
      ALTER DATABASE *database_name* SET HADR SUSPEND  
   
 ##  <a name="PowerShellProcedure"></a> PowerShell 사용  
- **데이터베이스를 일시 중지하려면**  
+ **데이터베이스를 일시 중지 하려면**  
   
 1.  데이터베이스를 일시 중지할 복제본을 호스팅하는 서버 인스턴스로 디렉터리를 변경합니다(`cd`). 자세한 내용은 이 항목의 앞부분에 나오는 [필수 구성 요소](#Prerequisites)를 참조하세요.  
   
-2.  `Suspend-SqlAvailabilityDatabase` cmdlet을 사용하여 가용성 그룹을 일시 중지합니다.  
+2.  
+  `Suspend-SqlAvailabilityDatabase` cmdlet을 사용하여 가용성 그룹을 일시 중지합니다.  
   
      예를 들어 다음 명령은 서버 인스턴스 `MyDb3` 에서 가용성 그룹 `MyAg` 에 있는 가용성 데이터베이스 `Computer\Instance`에 대한 데이터 동기화를 일시 중단합니다.  
   
@@ -124,7 +129,7 @@ ms.locfileid: "72797955"
   
 -   [SQL Server PowerShell 공급자](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Follow Up: Avoiding a Full Transaction Log  
+##  <a name="FollowUp"></a>후속 작업: 꽉 찬 트랜잭션 로그 방지  
  일반적으로 데이터베이스에서 자동 검사점을 수행하면 다음 로그 백업 이후 해당 트랜잭션 로그가 이 검사점까지 잘립니다. 그러나 보조 데이터베이스를 일시 중지하는 동안 모든 현재 로그 레코드가 주 데이터베이스에서 활성 상태로 남아 있습니다. 서버 인스턴스의 공간이 부족하거나 최대 크기에 도달하여 트랜잭션 로그가 가득 차면 데이터베이스는 더 이상 업데이트를 수행할 수 없습니다.  
   
  이 문제를 방지하려면 다음 중 하나를 수행해야 합니다.  
@@ -135,7 +140,7 @@ ms.locfileid: "72797955"
   
 -   보조 데이터베이스를 제거하려면 자세한 내용은 [가용성 그룹에서 보조 데이터베이스 제거&#40;SQL Server&#41;](remove-a-secondary-database-from-an-availability-group-sql-server.md)를 참조하세요.  
   
- **꽉 찬 트랜잭션 로그 문제를 해결하려면**  
+ **전체 트랜잭션 로그 문제를 해결 하려면**  
   
 -   [꽉 찬 트랜잭션 로그 문제 해결&#40;SQL Server 오류 9002&#41;](../../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
@@ -144,5 +149,5 @@ ms.locfileid: "72797955"
 -   [가용성 데이터베이스 재개&#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [AlwaysOn 가용성 그룹 &#40;SQL Server&#41; 개요](overview-of-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 가용성 그룹 &#40;SQL Server 개요&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [가용성 데이터베이스 재개&#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)  

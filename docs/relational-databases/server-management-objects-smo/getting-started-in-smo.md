@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 22271c7c7fd5099ae9e65fecfedb820da00c6e30
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70911269"
 ---
 # <a name="getting-started-in-smo"></a>SMO 시작
@@ -33,7 +33,7 @@ ms.locfileid: "70911269"
 [개체 모델](../../relational-databases/server-management-objects-smo/smo-object-model.md) 은 SMO 개체 계층 구조와 개체가 서로 관련 되는 방법을 설명 합니다.  
   
 ## <a name="programming-languages"></a>프로그래밍 언어  
-[프로그래밍 언어](../../relational-databases/server-management-objects-smo/smo-programming-languages.md) 는 프로그래밍 환경에 대해 설명 하 고 SMO 프로그램 작성을 시작 하기 위한 C#자세한 절차를 제공 합니다.  
+[프로그래밍 언어](../../relational-databases/server-management-objects-smo/smo-programming-languages.md) 는 프로그래밍 환경에 대해 설명 하 고, c #에서 SMO 프로그램 작성을 시작 하기 위한 자세한 절차를 제공 합니다.  
   
 ## <a name="general-programming-in-smo"></a>SMO의 일반 프로그래밍  
 [Smo의 일반적인 프로그래밍](../../relational-databases/server-management-objects-smo/create-program/creating-smo-programs.md) 은 smo를 사용한 프로그래밍에 대 한 소개입니다. 이 항목에서는 SQL Server 인스턴스에 연결 하는 방법과 속성, 메서드 및 컬렉션을 사용 하는 방법에 대해 설명 합니다. 추가적인 고급 항목에서는 데이터 형식, 트랜잭션, 캡처 모드 설정, 이벤트 및 예외 처리에 대해 설명합니다.  

@@ -21,10 +21,10 @@ ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: ef4bf385e2ce0ecd140ad402c43d0039669c56e8
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72006070"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "72006070"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 현재 서버에 대한 전역 구성 설정을 수정합니다.  
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
 
@@ -146,7 +146,7 @@ NUMA  노드 또는 NUMA  노드의 범위를 지정합니다.
 DIAGNOSTICS  LOG  
 sp_server_diagnostics 프로시저가 캡처하는 로깅 진단 데이터를 시작하거나 중지합니다. 또한 이 인수는 로그 파일 롤오버 수, 로그 파일 크기 및 파일 위치 등의 SQLDIAG 로그 구성 매개 변수를 설정합니다. 자세한 내용은 [장애 조치(failover) 클러스터 인스턴스 진단 로그 보기 및 읽기](../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md)를 참조하세요.  
   
-ON  
+켜기  
 PATH  파일 옵션에 지정된 위치에서 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 진단 데이터 로깅을 시작합니다. 이 인수는 기본값입니다.  
   
 OFF  
@@ -220,7 +220,7 @@ LOCAL
   
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터)    
   
-ON  
+켜기  
 버퍼 풀 확장 옵션을 설정합니다. 이 옵션은 비휘발성 스토리지를 사용해서 버퍼 풀 크기를 확장합니다. SSD(반도체 드라이브)와 같은 비휘발성 스토리지는 무결한 데이터 페이지를 풀에 저장합니다. 이 기능에 대한 자세한 내용은 [버퍼 풀 확장](../../database-engine/configure-windows/buffer-pool-extension.md)을 참조하세요. 모든 SQL Server 버전에서 버퍼 풀 확장을 사용할 수 있는 것은 아닙니다. 자세한 내용은 [SQL Server 2016의 버전과 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
 FILENAME = 'os_file_path_and_name'  
@@ -241,7 +241,7 @@ OFF
 
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터)  
   
-ON  
+켜기  
 큰 NUMA 하드웨어 노드를 더 작은 NUMA 노드로 분할하도록 자동 분할을 사용합니다. 실행 중인 값을 변경하려면 데이터베이스 엔진을 다시 시작해야 합니다.  
   
 OFF  
@@ -260,7 +260,7 @@ OFF
 
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터)
 
-ON <br>
+켜기 <br>
 [IMDB](../../relational-databases/in-memory-database.md) 기능군의 일부인 모든 인스턴스 수준 기능을 사용합니다. 이는 현재 [메모리 최적화 tempdb 메타데이터](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata) 및 [하이브리드 버퍼 풀](../../database-engine/configure-windows/hybrid-buffer-pool.md)을 포함합니다. 적용하려면 다시 시작해야 합니다.
 
 OFF <br>
@@ -294,7 +294,7 @@ HYBRID_BUFFER_POOL = ON | OFF <br>
   
 ## <a name="examples"></a>예  
   
-|범주|중요한 구문 요소|  
+|Category|중요한 구문 요소|  
 |--------------|------------------------------|  
 |[프로세스 선호도 설정](#Affinity)|CPU  • NUMANODE  • AUTO|  
 |[진단 로그 옵션 설정](#Diagnostic)|ON  • OFF  • PATH  • MAX_SIZE|  
@@ -312,7 +312,7 @@ HYBRID_BUFFER_POOL = ON | OFF <br>
 -   그룹 2: 8~12개의 NUMA 노드, 128~191개의 CPU  
 -   그룹 3: 13~16개의 NUMA 노드, 192~255개의 CPU  
   
-#### <a name="a-setting-affinity-to-all-cpus-in-groups-0-and-2"></a>1\. 그룹 0 및 2의 모든 CPU에 선호도 설정  
+#### <a name="a-setting-affinity-to-all-cpus-in-groups-0-and-2"></a>A. 그룹 0 및 2의 모든 CPU에 선호도 설정  
 다음 예에서는 그룹 0  및 2의 모든 CPU에 선호도를 설정합니다.  
   
 ```sql  
@@ -320,7 +320,7 @@ ALTER SERVER CONFIGURATION
 SET PROCESS AFFINITY CPU=0 TO 63, 128 TO 191;  
 ```  
   
-#### <a name="b-setting-affinity-to-all-cpus-in-numa-nodes-0-and-7"></a>2\. NUMA 노드 0 및 7의 모든 CPU에 선호도 설정  
+#### <a name="b-setting-affinity-to-all-cpus-in-numa-nodes-0-and-7"></a>B. NUMA 노드 0 및 7의 모든 CPU에 선호도 설정  
 다음 예에서는 노드 `0` 및 `7`에만 CPU  선호도를 설정합니다.  
   
 ```sql  
@@ -357,14 +357,14 @@ SET PROCESS AFFINITY CPU=AUTO;
   
 이 섹션의 예에서는 진단 로그 옵션 값을 설정하는 방법을 보여 줍니다.  
   
-#### <a name="a-starting-diagnostic-logging"></a>1\. 진단 로깅 시작  
+#### <a name="a-starting-diagnostic-logging"></a>A. 진단 로깅 시작  
 다음 예에서는 진단 데이터의 로깅을 시작합니다.  
   
 ```sql  
 ALTER SERVER CONFIGURATION SET DIAGNOSTICS LOG ON;  
 ```  
   
-#### <a name="b-stopping-diagnostic-logging"></a>2\. 진단 로깅 중지  
+#### <a name="b-stopping-diagnostic-logging"></a>B. 진단 로깅 중지  
 다음 예에서는 진단 데이터의 로깅을 중지합니다.  
   
 ```sql  
@@ -393,7 +393,7 @@ SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;
   
 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover)  클러스터 리소스의 속성 값을 설정하는 방법을 보여 줍니다.  
   
-#### <a name="a-specifying-the-value-for-the-healthchecktimeout-property"></a>1\. HealthCheckTimeout 속성 값 지정  
+#### <a name="a-specifying-the-value-for-the-healthchecktimeout-property"></a>A. HealthCheckTimeout 속성 값 지정  
 다음 예에서는 `HealthCheckTimeout` 옵션을 15,000밀리초(15초)로 설정합니다.  
   
 ```sql  
@@ -422,7 +422,7 @@ SET BUFFER POOL EXTENSION ON
     (FILENAME = 'F:\SSDCACHE\Example.BPE', SIZE = 50 GB);  
 ```  
   
-#### <a name="b-modifying-buffer-pool-extension-parameters"></a>2\. 버퍼 풀 확장 매개 변수 수정  
+#### <a name="b-modifying-buffer-pool-extension-parameters"></a>B. 버퍼 풀 확장 매개 변수 수정  
 다음 예에서는 버퍼 풀 확장 파일의 크기를 수정합니다. 매개 변수를 수정하려면 먼저 버퍼 풀 확장 옵션을 해제해야 합니다.  
   
 ```sql  
@@ -443,14 +443,14 @@ GO
 
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터)
 
-#### <a name="a-enable-all-in-memory-database-features-with-default-options"></a>1\. 기본 옵션으로 모든 IMDB 기능 사용
+#### <a name="a-enable-all-in-memory-database-features-with-default-options"></a>A. 기본 옵션으로 모든 IMDB 기능 사용
 
 ```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED ON;
 GO
 ```
 
-#### <a name="b-enable-memory-optimized-tempdb-metadata-using-the-default-resource-pool"></a>2\. 기본 리소스 풀을 통해 메모리 최적화 tempdb 메타데이터 사용
+#### <a name="b-enable-memory-optimized-tempdb-metadata-using-the-default-resource-pool"></a>B. 기본 리소스 풀을 통해 메모리 최적화 tempdb 메타데이터 사용
 
 ```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON;

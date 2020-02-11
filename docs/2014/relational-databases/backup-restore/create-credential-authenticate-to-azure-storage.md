@@ -13,26 +13,26 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6de7b5c8f9cdc7162eb9c6a8ddd214d0486255c6
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175960"
 ---
 # <a name="create-credential---authenticate-to-azure-storage"></a>자격 증명 만들기 - Azure 스토리지 인증
   **URL로 백업 - 자격 증명 만들기** 대화 상자를 사용하여 새 SQL 자격 증명을 만듭니다.  
   
- 이 대화 상자를 사용 하 여 자격 증명을 만들 때 로컬 인증서 저장소에 추가 된 Azure 관리 인증서 또는 컴퓨터에 다운로드 된 게시 프로필을 제공 하 여 구독 및 저장소 계정 정보의 유효성을 검사 해야 합니다.  
+ 이 대화 상자를 사용하여 자격 증명을 만들 때 로컬 인증서 저장소에 추가된 Azure 관리 인증서 또는 컴퓨터에 다운로드된 게시 프로필을 제공하여 구독 및 스토리지 계정 정보의 유효성을 검사해야 합니다.  
   
  **SQL 자격 증명**  
  만들려는 SQL 자격 증명의 이름을 지정합니다.  
   
 ## <a name="azure-credentials"></a>Azure 자격 증명  
  **관리 인증서**  
- Azure의 관리 인증서와 일치 하는 로컬 인증서 저장소의 인증서를 지정 하려면이 옵션을 사용 합니다. Azure 관리 인증서에 대 한 자세한 내용은 [azure 용 관리 인증서 만들기 및 업로드](https://go.microsoft.com/fwlink/?LinkId=320781)를 참조 하세요.  
+ 이 옵션을 사용하여 Azure의 관리 인증서와 일치하는 로컬 인증서 저장소의 인증서를 지정합니다. Azure 관리 인증서에 대한 자세한 내용은 [Azure용 관리 인증서 만들기 및 업로드](https://go.microsoft.com/fwlink/?LinkId=320781)를 참조하세요.  
   
  **구독**  
- 로컬 인증서 저장소의 관리 인증서와 일치 하는 Azure 구독 ID를 선택, 입력 또는 붙여 넣습니다.  
+ 로컬 인증서 저장소의 관리 인증서와 일치하는 Azure 구독 ID를 선택, 입력 또는 붙여 넣습니다.  
   
  **게시 프로필**  
  게시 프로필을 컴퓨터에 다운로드한 경우 이 옵션을 사용합니다. 이 옵션을 사용하는 경우 구독 ID 및 인증서가 자동으로 채워집니다.  

@@ -17,14 +17,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d8d98d2a45ff50c60a37ee04e576567db7f96e26
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874408"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>세계화 팁과 모범 사례(Analysis Services)
-  **[!INCLUDE[applies](../includes/applies-md.md)]**  다차원 전용  
+  **[!INCLUDE[applies](../includes/applies-md.md)]** 다차원 전용  
   
  다음의 팁 및 지침은 비즈니스 인텔리전스 솔루션의 이식성을 향상시키고 언어 및 데이터 정렬 설정과 직접적으로 관련이 있는 오류를 방지하는 데 유용할 수 있습니다.  
   
@@ -36,11 +36,11 @@ ms.locfileid: "70874408"
   
 -   [Excel 및 SQL Server Profiler를 사용한 로캘 테스트](#bkmk_test)  
   
--   [번역이 들어 있는 솔루션에서 MDX 쿼리 작성](#bkmk_mdx)  
+-   [번역이 포함 된 솔루션에서 MDX 쿼리 작성](#bkmk_mdx)  
   
--   [날짜 및 시간 값이 들어 있는 MDX 쿼리 작성](#bkmk_datetime)  
+-   [날짜 및 시간 값이 포함 된 MDX 쿼리 작성](#bkmk_datetime)  
   
-##  <a name="bkmk_sameColl"></a> 스택 전체에서 유사한 데이터 정렬 사용  
+##  <a name="bkmk_sameColl"></a>스택 전체에서 유사한 데이터 정렬 사용  
  가능하면 데이터베이스 엔진에 사용하는 것과 동일한 데이터 정렬 설정을 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 사용하여 전자/반자 구분 및 대/소문자 구분과 액세스 민감도를 일치시키도록 하세요.  
   
  각 서비스에는 데이터베이스 엔진의 기본값이 SQL_Latin1_General_CP1_CI_AS로 설정되어 있고 Analysis Services가 Latin1_General_AS로 설정되어 있는 자체 데이터 정렬 설정이 있습니다. 기본값은 대/소문자, 전자/반자 및 악센트 구분 측면에서 호환됩니다. 두 데이터 정렬 중 하나의 설정을 변경하는 경우 데이터 정렬 속성이 기본 방법에서 벗어나면 문제가 발생할 수 있습니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "70874408"
   
  자세한 내용과 권장 해결 방법에 대해 알려면 [유니코드 문자열의 공백에 데이터 정렬을 기반으로 한 서로 다른 처리 결과가 있는 경우](https://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx)(영문)를 참조하세요.  
   
-##  <a name="bkmk_recos"></a> 일반적인 데이터 정렬 권장 사항  
+##  <a name="bkmk_recos"></a>일반적인 데이터 정렬 권장 사항  
  Analysis Services에서는 항상 모든 사용 가능한 언어 및 데이터 정렬의 전체 목록을 제공하며, 선택된 언어에 따라 데이터 정렬을 필터링하지 않습니다. 실행 가능한 조합을 선택해야 합니다.  
   
  자주 사용되는 일부 데이터 정렬이 다음 목록에 나와 있습니다.  
@@ -78,23 +78,24 @@ ms.locfileid: "70874408"
   
 -   Korean_100은 한국어에 대해 권장됩니다. Korean_Wansung_Unicode도 목록에 있지만 더 이상 사용되지 않습니다.  
   
-##  <a name="bkmk_objid"></a> 개체 식별자의 대/소문자 구분  
+##  <a name="bkmk_objid"></a>개체 식별자의 대/소문자 구분  
  SQL Server 2012 SP2부터는 개체 ID의 대/소문자 구분이 데이터 정렬과 관계없이 적용됩니다. 하지만 동작은 언어에 따라 다릅니다.  
   
 |언어 스크립트|대/소문자 구분|  
 |---------------------|----------------------|  
 |**기본 라틴어 알파벳**|라틴어 스크립트(26개의 영어 대문자 또는 소문자 중 사용)로 표현되는 개체 식별자는 데이터 정렬과 상관없이 대/소문자를 구분하는 것으로 처리됩니다. 예를 들어, 개체 ID 54321**abcdef**, 54321**ABCDEF**, 54321**AbCdEf**는 같다고 간주됩니다. 내부적으로 Analysis Services에서는 문자열의 문자들을 모두 대문자인 것처럼 처리한 다음 언어에 상관없는 간단한 바이트 비교를 수행합니다.<br /><br /> 26개 문자에만 적용됩니다. 서부 유럽 언어에 스칸디나비아어 문자가 사용되면 추가 문자는 대문자로 처리되지 않습니다.|  
-|**키릴자모, 그리스어, 콥트어, 아르메니아어**|키릴자모와 같은 비라틴 bicameral 스크립트의 개체 식별자는 항상 대/소문자 구분입니다. 예를 들어, Измерение 및 измерение은 유일한 차이점이 첫 글자의 대소문자 여부임에도 불구하고 두 개의 서로 다른 값으로 간주됩니다.|  
+|**키릴 자모, 그리스어, 콥트어, 아르메니아어**|키릴자모와 같은 비라틴 bicameral 스크립트의 개체 식별자는 항상 대/소문자 구분입니다. 예를 들어, Измерение 및 измерение은 유일한 차이점이 첫 글자의 대소문자 여부임에도 불구하고 두 개의 서로 다른 값으로 간주됩니다.|  
   
- **개체 식별자에 대한 대/소문자 구분의 의미**  
+ **개체 식별자에 대 한 대/소문자 구분의 의미**  
   
  개체 이름이 아니라 개체 식별자만 표에 설명된 대/소문자 구분 동작이 적용됩니다. 솔루션 작동 방식에 변화가 있는 경우(전후 비교 -- SQL Server 2012 SP2 이상 설치 후), 처리 문제가 발생할 수 있습니다. 쿼리는 개체 식별자에 의해 영향을 받지 않습니다. 두 쿼리 언어(DAX 및 MDX)에서 수식 엔진에 개체 이름(식별자 아님)이 사용됩니다.  
   
 > [!NOTE]  
 >  대/소문자 구분과 관련된 코드 변경 내용은 일부 애플리케이션에 대한 주요 변경 내용이었습니다. 자세한 내용은 [SQL Server 2014에서 Analysis Services 기능의 주요 변경](breaking-changes-to-analysis-services-features-in-sql-server-2014.md)을 참조하세요.  
   
-##  <a name="bkmk_test"></a> Excel, SQL Server Profiler 및 SQL Server Management Studio를 사용한 로캘 테스트  
- 번역을 테스트할 때 연결에서 번역의 LCID를 지정해야 합니다. [다른 언어를 SSAS에서 Excel로 가져오기](http://extremeexperts.com/sql/Tips/ExcelDiffLocale.aspx)(영문)에 설명된 대로 Excel을 사용하여 번역을 테스트할 수 있습니다.  
+##  <a name="bkmk_test"></a>Excel, SQL Server Profiler 및 SQL Server Management Studio를 사용 하 여 로캘 테스트  
+ 번역을 테스트할 때 연결에서 번역의 LCID를 지정해야 합니다. 
+  [다른 언어를 SSAS에서 Excel로 가져오기](http://extremeexperts.com/sql/Tips/ExcelDiffLocale.aspx)(영문)에 설명된 대로 Excel을 사용하여 번역을 테스트할 수 있습니다.  
   
  다음 작업은 로캘 식별자 연결 문자열 속성을 포함하도록 .odc 파일을 편집하여 손으로 수행할 수 있습니다. Adventure Works 샘플 다차원 데이터베이스에서 이렇게 해보세요.  
   
@@ -102,31 +103,33 @@ ms.locfileid: "70874408"
   
 -   연결 문자열에 `Locale Identifier=1036` 를 추가합니다. 파일을 저장하고 닫습니다.  
   
--   Excel | **데이터** | **기존 연결**을 엽니다. 목록을 이 컴퓨터에 있는 연결 파일로 필터링합니다. Adventure Works용 연결을 찾습니다. 이름을 주의 깊게 살펴보세요. 두 개 이상 있을 수 있습니다. 연결을 엽니다.  
+-   Excel 열기 | **데이터** | **기존 연결**. 목록을 이 컴퓨터에 있는 연결 파일로 필터링합니다. Adventure Works용 연결을 찾습니다. 이름을 주의 깊게 살펴보세요. 두 개 이상 있을 수 있습니다. 연결을 엽니다.  
   
      Adventure Works 샘플 데이터베이스에 프랑스어 번역이 표시되어야 합니다.  
   
-     프랑스어 번역(media/ssas-localetest-excel.png "Excel 피벗 테이블이 프랑스어 번역") 된 ![excel 피벗 테이블]  
+     ![프랑스어 번역이 있는 Excel 피벗 테이블](media/ssas-localetest-excel.png "프랑스어 번역이 있는 Excel 피벗 테이블")  
   
- 후속 작업으로 SQL Server Profiler를 사용하여 로캘을 확인할 수 있습니다. `Session Initialize` 이벤트를 클릭한 다음 아래의 텍스트 영역에서 속성 목록을 보고 `<localeidentifier>1036</localeidentifier>`를 찾습니다.  
+ 후속 작업으로 SQL Server Profiler를 사용하여 로캘을 확인할 수 있습니다. 
+  `Session Initialize` 이벤트를 클릭한 다음 아래의 텍스트 영역에서 속성 목록을 보고 `<localeidentifier>1036</localeidentifier>`를 찾습니다.  
   
  Management Studio에서는 서버 연결에 있는 로캘 식별자를 지정할 수 있습니다.  
   
--   개체 탐색기 | **연결** | **Analysis Services** | **옵션**에서 **추가 연결 매개 변수** 탭을 클릭합니다.  
+-   개체 탐색기 | **연결** | **** Analysis Services | **옵션**에서 **추가 연결 매개 변수** 탭을 클릭 합니다.  
   
--   `Local Identifier=1036` 을 입력하고 **연결**을 클릭합니다.  
+-   
+  `Local Identifier=1036` 을 입력하고 **연결**을 클릭합니다.  
   
 -   Adventure Works 데이터베이스에 대해 MDX 쿼리를 실행합니다. 쿼리 결과는 프랑스어 번역이어야 합니다.  
   
-     Ssms에서 프랑스어 번역을 ![사용 하는 mdx 쿼리](media/ssas-localetest-ssms.png "ssms에서 프랑스어 번역이 포함 된 mdx 쿼리")  
+     ![SSMS에서 프랑스어 번역이 있는 MDX 쿼리](media/ssas-localetest-ssms.png "SSMS에서 프랑스어 번역이 있는 MDX 쿼리")  
   
-##  <a name="bkmk_mdx"></a> 번역이 들어 있는 솔루션에서 MDX 쿼리 작성  
+##  <a name="bkmk_mdx"></a>번역이 포함 된 솔루션에서 MDX 쿼리 작성  
  번역은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체의 이름에 대한 표시 정보를 제공합니다. 그러나 동일 개체의 식별자는 번역되지 않습니다. 가능하면 번역된 캡션 및 이름 대신 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체의 식별자 및 키를 사용하십시오. 예를 들어 여러 언어 간 이식성을 위해 MDX(Multidimensional Expressions) 문 및 스크립트에 대해 멤버 이름 대신 멤버 키를 사용할 수 있습니다.  
   
 > [!NOTE]  
 >  테이블 형식 개체 이름은 데이터 정렬에 관계없이 항상 대/소문자를 구분한다는 점에 유의하세요. 반면에 다차원 개체 이름은 데이터 정렬의 대/소문자 구분을 따릅니다. 다차원 개체 이름만 대/소문자를 구분하므로 다차원 개체를 참조하는 모든 MDX 쿼리에 대/소문자가 올바로 사용되었는지 확인합니다.  
   
-##  <a name="bkmk_datetime"></a> 날짜 및 시간 값이 들어 있는 MDX 쿼리 작성  
+##  <a name="bkmk_datetime"></a>날짜 및 시간 값이 포함 된 MDX 쿼리 작성  
  여러 언어 간에 날짜 및 시간 기반 MDX 쿼리의 이식성을 높이기 위한 제안 사항은 다음과 같습니다.  
   
 1.  **비교 및 작업에 숫자 부분 사용**  
@@ -137,7 +140,7 @@ ms.locfileid: "70874408"
   
      최종 사용자에게 표시되는 결과 집합을 만들 때 다국어 고객이 제공된 번역의 혜택을 받을 수 있도록 문자열(예: MonthName) 사용을 고려해 보세요.  
   
-3.  **일반적인 날짜 및 시간 정보를 위한 ISO 날짜 형식 사용**  
+3.  **유니버설 날짜 및 시간 정보에 ISO 날짜 형식 사용**  
   
      한 [Analysis Services 전문가](http://geekswithblogs.net/darrengosbell/Default.aspx) 는 다음과 같이 추천합니다. "저는 SQL 또는 MDX 쿼리에 전달하는 날짜 문자열에 대해 항상 ISO 날짜 형식인 yyyy-mm-dd를 사용합니다. 이 형식은 명확하고 클라이언트나 서버의 국가별 설정과 관계없이 작동하기 때문입니다. 모호한 날짜 형식을 구문 분석할 때 서버는 국가별 설정을 따라야 한다는 데 동의하겠지만 또한 선택할 수 있다면 선택에 따라 해석이 달라지지 않는 것이 좋다고 생각합니다."  
   
@@ -160,7 +163,7 @@ ms.locfileid: "70874408"
     ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Analysis Services Multiidimensional 에 대 한 세계화 시나리오](globalization-scenarios-for-analysis-services-multiidimensional.md)  
+ [Analysis Services Multiidimensional에 대 한 세계화 시나리오](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [국가별 Transact-SQL 문 작성](../relational-databases/collations/write-international-transact-sql-statements.md)  
   
   

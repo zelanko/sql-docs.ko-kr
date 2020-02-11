@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: f70af740fb3fe8310a5306368c1bf48c6f357419
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952001"
 ---
 # <a name="troubleshoot-a-powerpivot-for-sharepoint-installation"></a>SharePoint용 PowerPivot 설치 문제 해결
@@ -31,14 +31,17 @@ ms.locfileid: "71952001"
 ### <a name="powerpivot-gallery-thumbnail-images-show-as-a-red-x"></a>PowerPivot 갤러리 축소판 이미지가 빨간색 X로 표시됨  
  한 가지 가능한 원인은 **사이트 모음에 대한 PowerPivot 기능 통합** 이 활성 상태가 아닌 것입니다. 다음을 완료합니다.  
   
-1.  PowerPivot 갤러리 라이브러리의 기어 아이콘 ![Sharepoint 설정](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Sharepoint 설정") 또는 **홈** 목록에서 **사이트 설정** 을 클릭 합니다.  
+1.  PowerPivot 갤러리 라이브러리의 기어 아이콘 ![SharePoint 설정](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 설정") 또는 **홈** 목록에서 **사이트 설정** 을 클릭 합니다.  
   
-2.  **사이트 모음 관리** 섹션에서 **사이트 모음 기능**을 클릭합니다.  
+2.  
+  **사이트 모음 관리** 섹션에서 **사이트 모음 기능**을 클릭합니다.  
   
-3.  **사이트 모음 기능**을 클릭합니다.  
+3.  
+  **사이트 모음 기능**을 클릭합니다.  
   
-4.  **사이트 모음에 대한 PowerPivot 기능 통합** 이 **활성**상태인지 확인합니다.  
+4.  
+  **사이트 모음에 대한 PowerPivot 기능 통합** 이 **활성**상태인지 확인합니다.  
   
- 이 문제의 추가 원인은 [PowerPivot 갤러리의 아이콘에 빨간색 X가 표시](https://support.microsoft.com/kb/2361559) 되는 경우 (https://support.microsoft.com/kb/2361559) 을 참조 하세요.  
+ 이 문제의 추가 원인은 [PowerPivot 갤러리의 아이콘에 빨간색 X가 표시](https://support.microsoft.com/kb/2361559) 되는 경우를https://support.microsoft.com/kb/2361559)참조 하세요.  
   
   

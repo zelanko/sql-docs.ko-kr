@@ -17,18 +17,18 @@ ms.assetid: f6f3e4b2-8c72-4d23-a5de-fe671ca5c5cd
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 01809f0d4eb494d58f035d23846025578aada7c7
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72251267"
 ---
-# <a name="syssp_rda_reauthorize_db-transact-sql"></a>sys. sp_rda_reauthorize_db (Transact-sql)
+# <a name="syssp_rda_reauthorize_db-transact-sql"></a>sys.sp_rda_reauthorize_db(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   스트레치를 사용 하도록 설정 된 로컬 데이터베이스와 원격 데이터베이스 간의 인증 된 연결을 복원 합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,20 +38,20 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
 ```  
   
 ## <a name="arguments"></a>인수  
- @credential = *\@자격 증명*  
+ @credential= * \@자격 증명*  
  로컬 스트레치 사용 데이터베이스와 연결 된 데이터베이스 범위 자격 증명입니다.  
   
- @with_copy = *\@with_copy*  
- 원격 데이터의 복사본을 만들고 복사본에 연결할지 여부를 지정 합니다 (권장). *\@with_copy* 비트입니다.  
+ @with_copy= * \@with_copy*  
+ 원격 데이터의 복사본을 만들고 복사본에 연결할지 여부를 지정 합니다 (권장). with_copy 비트입니다. * \@*  
   
- @azure_servername = *\@azure_servername*  
- 원격 데이터를 포함 하는 Azure 서버의 이름을 지정 합니다. *\@azure_servername* 는 sysname입니다.  
+ @azure_servername= * \@azure_servername*  
+ 원격 데이터를 포함 하는 Azure 서버의 이름을 지정 합니다. azure_servername는 sysname입니다. * \@*  
   
- @azure_databasename = *\@azure_databasename*  
- 원격 데이터를 포함 하는 Azure 데이터베이스의 이름을 지정 합니다. *\@azure_databasename* 는 sysname입니다.  
+ @azure_databasename= * \@azure_databasename*  
+ 원격 데이터를 포함 하는 Azure 데이터베이스의 이름을 지정 합니다. azure_databasename는 sysname입니다. * \@*  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 0 (성공) 또는 > 0 (실패)  
+ 0 (성공) 또는 >0 (실패)  
   
 ## <a name="permissions"></a>사용 권한  
  Db_owner 권한이 필요 합니다.  
@@ -70,7 +70,7 @@ EXEC sp_rda_reauthorize_db @credential = @credentialName, @with_copy = 1;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [sp_rda_deauthorize_db &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
- [스트레치 데이터베이스](../../sql-server/stretch-database/stretch-database.md)  
+ [sp_rda_deauthorize_db &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
+ [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   

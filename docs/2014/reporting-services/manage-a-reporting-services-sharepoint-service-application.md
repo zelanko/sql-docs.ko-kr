@@ -11,18 +11,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bc19a1813e81847912ac43f607cead8423850af5
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72796373"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Reporting Services SharePoint 서비스 애플리케이션 관리
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 애플리케이션은 SharePoint 중앙 관리에서 관리됩니다. 관리 및 속성 페이지에서 서비스 애플리케이션의 구성과 일반 관리 태스크를 업데이트할 수 있습니다.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]서비스 응용 프로그램은 SharePoint 중앙 관리에서 관리 됩니다. 관리 및 속성 페이지에서 서비스 애플리케이션의 구성과 일반 관리 태스크를 업데이트할 수 있습니다.  
   
  이 항목에는 다음과 같은 정보가 포함되어 있습니다.  
   
--   [서비스 애플리케이션 관리 페이지를 열려면](#bkmk_openpages)  
+-   [서비스 응용 프로그램 관리 페이지를 열려면](#bkmk_openpages)  
   
 -   [시스템 설정 페이지](#bkmk_systemsettings)  
   
@@ -34,10 +34,11 @@ ms.locfileid: "72796373"
   
 -   [전자 메일 설정](#bkmk_email)  
   
--   [구독 및 경고 프로비전](#bkmk_provisionsubscriptions)  
+-   [구독 및 경고 프로 비전](#bkmk_provisionsubscriptions)  
   
 ## <a name="to-open-service-application-properties-page"></a>서비스 애플리케이션 속성 페이지를 열려면  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 애플리케이션에 대한 속성 페이지를 열려면 다음을 완료합니다.  
+ 
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 애플리케이션에 대한 속성 페이지를 열려면 다음을 완료합니다.  
   
 1.  중앙 관리의 애플리케이션 관리 그룹에서 **서비스 애플리케이션 관리**를 클릭합니다.  
   
@@ -45,8 +46,9 @@ ms.locfileid: "72796373"
   
  서비스 애플리케이션 속성에 대한 자세한 내용은 [Step 3: Create a Reporting Services Service Application](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication)을 참조하세요.  
   
-##  <a name="bkmk_openpages"></a> 서비스 애플리케이션 관리 페이지를 열려면  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 애플리케이션에 대한 관리 페이지를 열려면 다음을 완료합니다.  
+##  <a name="bkmk_openpages"></a>서비스 응용 프로그램 관리 페이지를 열려면  
+ 
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 애플리케이션에 대한 관리 페이지를 열려면 다음을 완료합니다.  
   
 1.  중앙 관리의 애플리케이션 관리 그룹에서 **서비스 애플리케이션 관리**를 클릭합니다.  
   
@@ -54,20 +56,20 @@ ms.locfileid: "72796373"
   
 3.  또는 서비스 애플리케이션의 이름 근처를 클릭하거나 **유형** 열을 클릭하여 전체 행을 선택한 다음 SharePoint 리본에서 **관리** 를 클릭할 수 있습니다.  
   
-##  <a name="bkmk_systemsettings"></a> 시스템 설정 페이지  
+##  <a name="bkmk_systemsettings"></a>시스템 설정 페이지  
  시스템 설정 페이지에서 다양한 제한 시간을 포함하여 서비스 애플리케이션의 동작과 사용자 환경을 구성할 수 있습니다.  
   
 -   [보고서 설정](#bkmk_report_settings_section)  
   
 -   [세션 설정](#bkmk_session_settings_section)  
   
--   [로깅에 대한 시스템 설정](#bkmk_logging_settings_section)  
+-   [로깅에 대 한 시스템 설정](#bkmk_logging_settings_section)  
   
 -   [보안 설정](#bkmk_security_settings_section)  
   
 -   [클라이언트 설정](#bkmk_client_settings_section)  
   
-###  <a name="bkmk_report_settings_section"></a> 보고서 설정  
+###  <a name="bkmk_report_settings_section"></a>보고서 설정  
   
 |설정|주석|  
 |-------------|--------------|  
@@ -78,7 +80,7 @@ ms.locfileid: "72796373"
 |저장된 매개 변수 수명|기본값은 180입니다.|  
 |저장된 매개 변수 임계값|기본값은 1500일입니다.|  
   
-###  <a name="bkmk_session_settings_section"></a> 세션 설정  
+###  <a name="bkmk_session_settings_section"></a>세션 설정  
   
 |설정|주석|  
 |-------------|--------------|  
@@ -86,16 +88,17 @@ ms.locfileid: "72796373"
 |세션 쿠키 사용|기본값은 TRUE입니다.|  
 |EDLX 보고서 제한 시간|기본값은 1800초입니다.|  
   
-###  <a name="bkmk_logging_settings_section"></a> 로깅에 대한 시스템 설정  
+###  <a name="bkmk_logging_settings_section"></a>로깅에 대 한 시스템 설정  
   
 |설정|주석|  
 |-------------|--------------|  
-|실행 로깅 사용|기본값은 TRUE입니다.<br /><br /> 보고서 서버에서 추적 로그를 생성할지 여부와 로그를 보관할 일 수를 지정합니다. 이라고도 합니다. 로그는 보고서 서버 컴퓨터의 \Microsoft SQL Server\MSSQL.n\ReportServer\Log 폴더에 저장됩니다. 서비스가 다시 시작될 때마다 새 로그 파일이 시작됩니다. 로그 파일에 대한 자세한 내용은 [Report Server Service Trace Log](report-server/report-server-service-trace-log.md)를 참조하세요.|  
+|실행 로깅 사용|기본값은 TRUE입니다.<br /><br /> 보고서 서버에서 추적 로그를 생성할지 여부와 로그를 보관할 일 수를 지정합니다. . 로그는 보고서 서버 컴퓨터의 \Microsoft SQL Server\MSSQL.n\ReportServer\Log 폴더에 저장됩니다. 서비스가 다시 시작될 때마다 새 로그 파일이 시작됩니다. 로그 파일에 대한 자세한 내용은 [Report Server Service Trace Log](report-server/report-server-service-trace-log.md)를 참조하세요.|  
 |실행 로그 보관 일 수|기본값은 60일입니다.|  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 는 SharePoint ULS 로깅을 지원합니다.  자세한 내용은 [SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정&#40;ULS&#41;](report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
+ 
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 는 SharePoint ULS 로깅을 지원합니다.  자세한 내용은 [SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정&#40;ULS&#41;](report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
-###  <a name="bkmk_security_settings_section"></a> 보안 설정  
+###  <a name="bkmk_security_settings_section"></a>보안 설정  
   
 |설정|주석|  
 |-------------|--------------|  
@@ -104,7 +107,7 @@ ms.locfileid: "72796373"
 |원격 오류 사용|기본값은 FALSE입니다.|  
 |테스트 연결 자세한 오류 사용|기본값은 TRUE입니다.|  
   
-###  <a name="bkmk_client_settings_section"></a> 클라이언트 설정  
+###  <a name="bkmk_client_settings_section"></a>클라이언트 설정  
   
 |설정|주석|  
 |-------------|--------------|  
@@ -114,12 +117,12 @@ ms.locfileid: "72796373"
 |세션 제한 시간 편집|기본값은 7200초입니다.|  
 |세션 캐시 제한 편집|기본값은 5입니다.|  
   
-##  <a name="bkmk_managejobs"></a> 작업 관리  
+##  <a name="bkmk_managejobs"></a>작업 관리  
  보고서 구독과 데이터 기반 구독에서 만들어진 작업과 같은 실행 중인 작업을 보고 삭제할 수 있습니다. 이 페이지는 구독을 관리하는 데 사용되지 않으며 구독에서 트리거된 작업을 관리하는 데 사용됩니다. 예를 들어 1시간에 한 번 실행되도록 예약된 구독은 **작업 관리** 페이지에 나타나는 작업을 1시간에 한 번 생성합니다.  
   
- ![실행 중인 작업 관리](media/ssrs-manage-jobs.gif "실행 중인 작업 관리")  
+ ![실행 중인 작업 관리](media/ssrs-manage-jobs.gif "실행 작업 관리")  
   
-##  <a name="bkmk_keymgt"></a> 키 관리  
+##  <a name="bkmk_keymgt"></a>키 관리  
  다음 표에는 키 관리 페이지가 요약되어 있습니다.  
   
 > [!IMPORTANT]  
@@ -127,12 +130,13 @@ ms.locfileid: "72796373"
   
 |호출|Description|  
 |----------|-----------------|  
-|암호화 키 백업|1) **암호:** 상자와 **암호 확인:** 상자에 암호를 입력하고 **내보내기**를 클릭합니다. 입력한 암호가 도메인 정책의 복잡성 요구 사항을 충족하지 않으면 경고가 표시됩니다.<br /><br /> 2) 키 파일을 저장할 파일 위치를 묻는 메시지가 나타납니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]를 실행 중인 컴퓨터와 별도의 컴퓨터에 키 파일을 저장해야 합니다. 기본 파일 이름은 서비스 애플리케이션의 이름과 동일합니다.|  
+|암호화 키 백업|1) **암호:** 상자와 **암호 확인:** 상자에 암호를 입력하고 **내보내기**를 클릭합니다. 입력한 암호가 도메인 정책의 복잡성 요구 사항을 충족하지 않으면 경고가 표시됩니다.<br /><br /> 2) 키 파일을 저장할 파일 위치를 묻는 메시지가 나타납니다. 
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]를 실행 중인 컴퓨터와 별도의 컴퓨터에 키 파일을 저장해야 합니다. 기본 파일 이름은 서비스 애플리케이션의 이름과 동일합니다.|  
 |암호화 키 복원|1) **파일 위치** 상자에서 키 파일을 입력하거나 해당 위치를 찾습니다.<br /><br /> 2) **암호** 상자에 암호화 파일을 백업하는 데 사용된 암호를 입력합니다.<br /><br /> 3) **확인**을 클릭합니다.|  
 |암호화 키 변경|이 작업에서는 새 키를 만들고 암호화된 내용을 다시 암호화합니다. 내용이 많은 경우 이 작업을 수행하는 데 몇 시간이 걸릴 수 있습니다.<br /><br /> 암호화 키 변경 작업이 완료되면 새 키를 백업하는 것이 좋습니다.|  
-|삭제된 암호화된 내용|삭제된 내용을 복구할 수 없습니다.<br /><br /> **\*\* 중요 \*\*** 대칭 키 삭제 및 다시 만들기 동작은 되돌리거나 실행 취소할 수 없습니다. 키를 삭제 또는 다시 만들기는 현재 설치에 중요한 결과를 가져올 수 있습니다. 키를 삭제하면 대칭 키로 암호화된 모든 기존 데이터도 삭제됩니다. 삭제된 데이터에는 외부 보고서 데이터 원본에 대한 연결 문자열, 저장된 연결 문자열 및 일부 구독 정보가 포함되어 있습니다.|  
+|삭제된 암호화된 내용|삭제된 내용을 복구할 수 없습니다.<br /><br /> ** \* 중요 \* \* ** 대칭 키를 삭제 하 고 다시 만드는 작업은 되돌리거나 실행 취소할 수 없습니다. 키를 삭제 또는 다시 만들기는 현재 설치에 중요한 결과를 가져올 수 있습니다. 키를 삭제하면 대칭 키로 암호화된 모든 기존 데이터도 삭제됩니다. 삭제된 데이터에는 외부 보고서 데이터 원본에 대한 연결 문자열, 저장된 연결 문자열 및 일부 구독 정보가 포함되어 있습니다.|  
   
-##  <a name="bkmk_executionaccount"></a> 실행 계정  
+##  <a name="bkmk_executionaccount"></a>실행 계정  
  이 페이지를 사용하여 무인 모드 처리용으로 사용할 계정을 구성할 수 있습니다. 이 계정은 다음과 같이 다른 자격 증명 원본을 사용할 수 없는 특별한 환경에서 사용됩니다.  
   
 -   보고서 서버가 자격 증명이 필요 없는 데이터 원본에 연결하는 경우 자격 증명이 필요 없는 데이터 원본의 예로는 XML 문서와 일부 클라이언트 쪽 애플리케이션이 있습니다.  
@@ -145,7 +149,7 @@ ms.locfileid: "72796373"
   
  Windows 사용자 계정을 사용할 수 있습니다. 최상의 결과를 얻으려면 다른 컴퓨터와의 연결을 지원하는 네트워크 로그온 권한과 읽기 권한을 가진 계정을 선택합니다. 보고서에서 사용하려는 모든 외부 이미지 또는 데이터 파일에 대해 읽기 권한을 갖고 있어야 합니다. 모든 보고서 데이터 원본과 외부 이미지가 보고서 서버 컴퓨터에 저장되어 있지 않으면 로컬 계정을 지정하지 마세요. 이 계정은 무인 보고서 처리에만 사용합니다.  
   
- ![PowerShell 관련 콘텐츠](media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠")  
+ ![PowerShell 관련 내용](media/rs-powershellicon.jpg "PowerShell 관련 내용")  
   
  다음은 UEAccount 속성과 함께 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 애플리케이션의 목록을 반환하는 예제 PowerShell 명령입니다.  
   
@@ -155,12 +159,12 @@ Get-SPRSServiceApplication | Select typename, name, service, ueaccountname
   
  자세한 내용은 [Reporting Services SharePoint 모드용 PowerShell cmdlet](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)을 참조하세요.  
   
-### <a name="options"></a>대량 삽입 태스크 편집기  
+### <a name="options"></a>옵션  
  **실행 계정 지정**  
  계정을 지정하려면 선택합니다.  
   
- **계정**  
- Windows 도메인 사용자 계정을 입력합니다. *\<domain>\\<user account\>* 형식을 사용합니다.  
+ **계정일**  
+ Windows 도메인 사용자 계정을 입력합니다. *도메인>\\<사용자 계정\>형식을 사용 \<* 합니다.  
   
  **암호**  
  암호를 입력합니다.  
@@ -168,20 +172,20 @@ Get-SPRSServiceApplication | Select typename, name, service, ueaccountname
  **암호 확인**  
  암호를 다시 입력합니다.  
   
-##  <a name="bkmk_email"></a> 전자 메일 설정  
+##  <a name="bkmk_email"></a>전자 메일 설정  
  이 페이지에서는 보고서 서버에서 보고서 서버 전자 메일 배달을 가능하게 하는 SMTP(Simple Mail Transport Protocol) 설정을 지정할 수 있습니다. 보고서 서버 전자 메일 배달 확장 프로그램을 사용하여 전자 메일 구독을 통해 보고서 또는 보고서 처리 알림을 배포할 수 있습니다. 보고서 서버 전자 메일 배달 확장 프로그램을 사용하려면 SMTP 서버 및 보낸 사람 주소: 필드에 사용할 전자 메일 주소가 필요합니다.  
   
-### <a name="options"></a>대량 삽입 태스크 편집기  
+### <a name="options"></a>옵션  
  **SMTP 서버 사용**  
  보고서 서버 전자 메일이 SMTP 서버를 통해 라우팅되도록 지정합니다.  
   
- **아웃바운드 SMTP 서버**  
+ **아웃 바운드 SMTP 서버**  
  사용할 SMTP 서버 또는 게이트웨이를 지정합니다. 네트워크에서 로컬 서버나 SMTP 서버를 사용할 수 있습니다.  
   
  **보낸 사람 주소**  
  생성된 전자 메일의 보낸 사람: 필드에 사용할 전자 메일 주소를 지정합니다. SMTP 서버에서 메일을 보낼 수 있는 권한이 있는 사용자 계정을 지정해야 합니다.  
   
-##  <a name="bkmk_provisionsubscriptions"></a> 구독 및 경고 프로비전  
+##  <a name="bkmk_provisionsubscriptions"></a>구독 및 경고 프로 비전  
  이 페이지를 사용하여 SQL Server 에이전트가 실행 중인지 확인하고 SQL Server 에이전트를 사용하도록 보고 서비스에 대한 액세스를 프로비전합니다. SQL Server 에이전트는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구독, 일정 및 데이터 경고에 필요합니다. [SSRS 서비스 애플리케이션에 대한 구독 및 경고 프로비전](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
   
 ## <a name="proxy-association"></a>프록시 연결  
@@ -193,7 +197,8 @@ Get-SPRSServiceApplication | Select typename, name, service, ueaccountname
   
 3.  새 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 애플리케이션의 이름을 찾아서 클릭합니다. 또한 애플리케이션 프록시 그룹 이름인 **기본값** 을 클릭하여 다음 단계를 완료하는 대신 기본 그룹에 프록시를 추가할 수도 있습니다.  
   
-4.  **다음 연결 그룹 편집** 선택 상자에서 **사용자 지정**을 선택합니다.  
+4.  
+  **다음 연결 그룹 편집** 선택 상자에서 **사용자 지정**을 선택합니다.  
   
 5.  해당 프록시의 상자를 선택하고 **확인**클릭합니다.  
   

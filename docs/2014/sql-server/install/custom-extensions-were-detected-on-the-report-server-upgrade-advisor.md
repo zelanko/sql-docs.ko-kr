@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: f985f41104dd194d851760c3d1c3e5479a65b7e8
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952592"
 ---
 # <a name="custom-extensions-were-detected-on-the-report-server-upgrade-advisor"></a>보고서 서버에서 사용자 지정 확장 프로그램이 검색됨(업그레이드 관리자)
@@ -28,13 +28,13 @@ ms.locfileid: "71952592"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]기본 모드 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드입니다.|  
   
 ## <a name="component"></a>구성 요소  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-## <a name="description"></a>설명  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]은 개발자가 데이터 처리, 배달, 렌더링, 보안 및 인증을 위한 사용자 지정 확장 프로그램을 만들 수 있도록 하는 확장 가능한 아키텍처를 제공 합니다.  
+## <a name="description"></a>Description  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 개발자가 데이터 처리, 배달, 렌더링, 보안 및 인증을 위한 사용자 지정 확장 프로그램을 만들 수 있도록 하는 확장 가능한 아키텍처를 제공 합니다.  
   
  사용자 지정 확장 프로그램 또는 어셈블리가 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치에서 사용되는 경우 설치 프로그램을 사용하여 업그레이드를 수행할 수 있지만 업그레이드가 완료된 후 확장 프로그램을 새 설치 위치로 이동하거나 업그레이드 전 단계를 수행해야 합니다.  
   
@@ -44,7 +44,8 @@ ms.locfileid: "71952592"
  소프트웨어 공급업체로부터 사용자 지정 확장 프로그램을 구입한 경우 해당 업체에 사용자 지정 기능의 업그레이드에 대한 추가 정보를 문의하십시오.  
   
 ## <a name="corrective-action"></a>수정 동작  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 업그레이드하기 전이나 후에 수행할 단계를 확인하려면 다음 섹션을 참조하십시오.  
+ 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 업그레이드하기 전이나 후에 수행할 단계를 확인하려면 다음 섹션을 참조하십시오.  
   
  [사용자 지정 데이터 처리 또는 배달 확장 프로그램](#dataprocdeliver)  
   
@@ -71,7 +72,7 @@ ms.locfileid: "71952592"
   
 ##### <a name="post-upgrade-steps-for-custom-data-processing-or-delivery-extensions"></a>사용자 지정 데이터 처리 또는 배달 확장 프로그램에 대해 수행할 업그레이드 후 단계  
   
-1.  확장 프로그램 파일을 새 보고서 서버 프로그램 폴더로 이동합니다. 기본적으로 보고서 서버 프로그램 폴더는 Files\Microsoft SQL Server\MSRS10_50. \<*instance_name*> \report server에 있습니다.  
+1.  확장 프로그램 파일을 새 보고서 서버 프로그램 폴더로 이동합니다. 기본적으로 보고서 서버 프로그램 폴더는 Files\Microsoft SQL Server \ MSRS10_50에 있습니다. \<> \report server를 *instance_name* 합니다.  
   
  자세한 내용은 SQL Server 온라인 설명서의 "데이터 처리 확장 프로그램 배포" 및 "배달 확장 프로그램 구현"을 참조하십시오.  
   
@@ -96,12 +97,14 @@ ms.locfileid: "71952592"
  자세한 내용은 SQL Server 온라인 설명서의 "렌더링 확장 프로그램 구현"을 참조하십시오.  
   
 ###  <a name="secauth2000"></a>SQL Server 2000 보고서 서버의 사용자 지정 보안 또는 인증 확장 프로그램  
- 업그레이드 관리자가 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 보고서 서버에서 사용자 지정 보안 또는 인증 확장 프로그램을 검색할 경우 업그레이드 프로세스가 차단됩니다. 업그레이드 지원을 위한 단계를 수행해야 하거나 대신 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]로 마이그레이션할 수도 있습니다. [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]에서 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]로 넘어오면서 인터페이스가 변경되었기 때문에 어떤 방법을 선택하든 Microsoft.ReportingServices.Interfaces.dll의 최신 인터페이스로 확장 프로그램을 업데이트하고 다시 컴파일해야 합니다.  
+ 업그레이드 관리자가 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 보고서 서버에서 사용자 지정 보안 또는 인증 확장 프로그램을 검색할 경우 업그레이드 프로세스가 차단됩니다. 업그레이드 지원을 위한 단계를 수행해야 하거나 대신 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]로 마이그레이션할 수도 있습니다. 
+  [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]에서 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]로 넘어오면서 인터페이스가 변경되었기 때문에 어떤 방법을 선택하든 Microsoft.ReportingServices.Interfaces.dll의 최신 인터페이스로 확장 프로그램을 업데이트하고 다시 컴파일해야 합니다.  
   
 > [!IMPORTANT]  
 >  업데이트된 보안 또는 인증 확장 프로그램이 예상대로 작동하는지 테스트하고 확인하기 전까지는 보고서 서버를 업그레이드하거나 마이그레이션하지 마십시오.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]용으로 작성한 사용자 지정 인증 확장 프로그램을 사용 중인 경우 모델 기반 보고를 위해 새로 도입된 새 클래스와 멤버를 지원하도록 원본 코드를 수정해야 합니다.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]용으로 작성한 사용자 지정 인증 확장 프로그램을 사용 중인 경우 모델 기반 보고를 위해 새로 도입된 새 클래스와 멤버를 지원하도록 원본 코드를 수정해야 합니다.  
   
 ##### <a name="to-upgrade-custom-security-or-authentication-extensions-from-a-sql-server-2000-report-server"></a>SQL Server 2000 보고서 서버에서 사용자 지정 보안 또는 인증 확장 프로그램을 업그레이드 하려면  
   
@@ -141,7 +144,7 @@ ms.locfileid: "71952592"
   
 3.  새 인스턴스에서 확장 프로그램을 구성합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [업그레이드 문제 &#40;Reporting Services 업그레이드 관리자&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+## <a name="see-also"></a>참고 항목  
+ [업그레이드 관리자를 &#40;업그레이드 문제를 Reporting Services&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
   

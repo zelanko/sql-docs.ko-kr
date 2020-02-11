@@ -10,19 +10,20 @@ ms.assetid: 3ae2a470-6afd-4512-b6d1-fcbe6afe88ad
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 1623430eed752db7fa387caf33124082eb318490
-ms.sourcegitcommit: 243925311cc952dd455faea3c1156e980959d6de
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70774181"
 ---
 # <a name="installing-ssma-for-db2-client-db2tosql"></a>DB2 용 SSMA 클라이언트 설치 (DB2ToSQL)
 
 SSMA 클라이언트는 다음 작업을 수행 하는 프로그램 파일로 구성 됩니다.  
   
-- DB2 데이터베이스에 연결 합니다.  
+- DB2 데이터베이스에 연결합니다.  
   
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다.  
+- 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다.  
   
 - DB2 데이터베이스 개체를 구문 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 으로 변환 합니다.  
   
@@ -34,7 +35,7 @@ SSMA 클라이언트는 다음 작업을 수행 하는 프로그램 파일로 �
   
 ## <a name="prerequisites"></a>사전 요구 사항
 
-Ssma는 z/OS 버전 9.0 및 10.0 또는 db2 (LUW 버전 9.8 및 10.1 이상 버전) 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 이상 버전에서 db2를 사용 하도록 설계 되었습니다.  
+SSMA는 z/OS 버전 9.0 및 10.0 또는 DB2 (LUW 버전 9.8 및 10.1 이상 버전) 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 이상 버전에서 db2를 사용 하도록 설계 되었습니다.  
   
 SSMA를 설치 하기 전에 컴퓨터가 다음 요구 사항을 충족 하는지 확인 합니다.  
   
@@ -42,11 +43,11 @@ SSMA를 설치 하기 전에 컴퓨터가 다음 요구 사항을 충족 하는�
   
 - [!INCLUDE[msCoName](../../includes/msconame_md.md)]3.1 이상 버전을 Windows Installer 합니다.  
   
-- [!INCLUDE[msCoName](../../includes/msconame_md.md)] 버전[!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] 4.0 이상 버전 제품미디어[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 버전4.0[!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] 을 사용할 수 있습니다. [.NET Framework 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=48882)에서 가져올 수도 있습니다.  
+- [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제품 미디어에서 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] 버전 4.0을 사용할 수 있습니다. [.NET Framework 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=48882)에서 가져올 수도 있습니다.  
   
 - Microsoft OLEDB Provider for DB2 버전 5 이상 버전 및 마이그레이션할 DB2 데이터베이스에 대 한 연결입니다.  
   
-- 데이터베이스 개체와 데이터를 마이그레이션할 대상 인스턴스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB를 호스트 하는 컴퓨터에 대 한 액세스 권한이 있어야 합니다. 자세한 내용은 [SQL Server &#40;에 연결 DB2eToSQL&#41;을](../../ssma/db2/connecting-to-sql-server-db2etosql.md)참조 하세요.  
+- 데이터베이스 개체와 데이터를 마이그레이션할 대상 인스턴스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 AZURE SQL DB를 호스트 하는 컴퓨터에 대 한 액세스 권한이 있어야 합니다. 자세한 내용은 [SQL Server &#40;DB2eToSQL&#41;에 연결 ](../../ssma/db2/connecting-to-sql-server-db2etosql.md)을 참조 하세요.  
   
 - 4gb RAM 권장.  
   
@@ -62,7 +63,8 @@ SSMA 클라이언트를 설치 하려면:
   
 1. SSMA for DB2 *n*을 두 번 클릭 합니다. Setup.exe를 설치 합니다. 여기서 *n* 은 빌드 번호입니다.  
   
-2. **시작** 페이지에서 **다음**을 선택 합니다.  
+2. 
+  **Welcome** 페이지에서 **다음**을 선택합니다.  
   
    필수 구성 요소를 설치 하지 않은 경우 먼저 필수 구성 요소를 설치 해야 한다는 메시지가 표시 됩니다. 모든 필수 구성 요소를 설치 했는지 확인 한 후 설치 프로그램을 다시 실행 합니다.  
   
@@ -70,14 +72,15 @@ SSMA 클라이언트를 설치 하려면:
   
 4. **설치 유형 선택** 페이지에서 **일반**을 선택 합니다.  
   
-5. **설치**를 선택합니다.  
+5. 
+  **설치**를 선택합니다.  
   
 > [!IMPORTANT]  
 > 새 버전을 설치 하기 전에 d b 2 용 SSMA의 모든 이전 버전을 제거 하세요.
   
 기본 설치 위치는 d b 2의 경우 C:\Program Files\Microsoft SQL Server Migration Assistant입니다.  
   
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-[SQL Server &#40;DB2ToSQL에 Ssma 구성 요소 설치&#41;](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)  
-[DB2 데이터베이스를 SQL Server &#40;DB2ToSQL로 마이그레이션&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+[SQL Server &#40;DB2ToSQL&#41;에 SSMA 구성 요소 설치](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)  
+[DB2 데이터베이스를 SQL Server &#40;DB2ToSQL&#41;로 마이그레이션](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
