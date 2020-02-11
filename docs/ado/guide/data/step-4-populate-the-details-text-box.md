@@ -1,5 +1,5 @@
 ---
-title: '4단계: 정보 텍스트 상자 채우기 | Microsoft Docs'
+title: '4 단계: 세부 정보 텍스트 상자 채우기 | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,14 +11,14 @@ ms.assetid: cb4273e2-c907-4a86-a621-3bf110088228
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 90748ca7f725ddbf947d9686b846695da0c6626c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924062"
 ---
 # <a name="step-4-populate-the-details-text-box"></a>4단계: 세부 정보 텍스트 상자 채우기
-정보 텍스트 상자를 채우려면 라는 새 서브루틴을 만들려면 **recFields** 다음 코드를 삽입 합니다.  
+세부 정보 텍스트 상자를 채우려면 새 **서브루틴 이라는 새 서브루틴을 만들고** 다음 코드를 삽입 합니다.  
   
 ```  
 Sub recFields(r As Record, l As ListBox, t As TextBox)  
@@ -44,8 +44,8 @@ Sub recFields(r As Record, l As ListBox, t As TextBox)
 End Sub  
 ```  
   
- 이 코드 채웁니다 `lstDetails` 전달할 간단한 레코드의 값 필드와 `recFields`합니다. 리소스를 텍스트 파일에서 텍스트 Stream 리소스 레코드에서 열립니다. 코드와 문자 집합은 ASCII Stream 콘텐츠를 복사 하는지 여부를 결정 `txtDetails`합니다.  
+ 이 코드는 `lstDetails` 에 `recFields`전달 된 단순 레코드의 필드 및 값으로 채워집니다. 리소스가 텍스트 파일이 면 리소스 레코드에서 텍스트 스트림이 열립니다. 이 코드는 문자 집합이 ASCII 인지 확인 하 고 스트림 내용을에 `txtDetails`복사 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [인터넷 게시 시나리오](../../../ado/guide/data/internet-publishing-scenario.md)   
  [3단계: 필드 목록 상자 채우기](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)

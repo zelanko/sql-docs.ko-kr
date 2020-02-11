@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 04b836a53b4b9928118221053d1fbc2c3a89dfdd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63217810"
 ---
 # <a name="count-rows-in-a-table-visual-database-tools"></a>테이블의 행 계산(Visual Database Tools)
@@ -43,9 +43,9 @@ ms.locfileid: "63217810"
   
 2.  다이어그램 창의 배경을 마우스 오른쪽 단추로 클릭한 다음 바로 가기 메뉴에서 **그룹화 방법 추가** 를 선택합니다. [쿼리 및 뷰 디자이너](visual-database-tools.md) 에서 **그룹화 방법** 열이 조건 창의 표에 추가됩니다.  
   
-3.  선택  **\* (모든 열)** 테이블 또는 테이블 반환 개체를 나타내는 사각형에서 합니다.  
+3.  테이블이 나 테이블 반환 개체를 나타내는 사각형에서 ** \* (모든 열)** 을 선택 합니다.  
   
-     쿼리 및 뷰 디자이너의 조건 창에서 **그룹화 방법** 열에 **Count** 라는 단어가 자동으로 입력되고 요약하려는 열에 대한 열 별칭이 할당됩니다. 자동으로 생성된 이 별칭을 좀 더 의미 있는 별칭으로 바꿀 수 있습니다. 자세한 내용은 [열 별칭 만들기&#40;Visual Database Tools&#41;](create-column-aliases-visual-database-tools.md)를 참조하세요.  
+     쿼리 및 뷰 디자이너의 조건 창에서 **그룹화 방법** 열에 **Count**라는 단어가 자동으로 입력되고 요약하려는 열에 대한 열 별칭이 할당됩니다. 자동으로 생성된 이 별칭을 좀 더 의미 있는 별칭으로 바꿀 수 있습니다. 자세한 내용은 [열 별칭 만들기&#40;Visual Database Tools&#41;](create-column-aliases-visual-database-tools.md)를 참조하세요.  
   
 4.  쿼리를 실행합니다.  
   
@@ -55,9 +55,9 @@ ms.locfileid: "63217810"
   
 2.  다이어그램 창의 배경을 마우스 오른쪽 단추로 클릭한 다음 바로 가기 메뉴에서 **그룹화 방법 추가** 를 선택합니다. 쿼리 및 뷰 디자이너에서 **그룹화 방법** 열이 조건 창의 표에 추가됩니다.  
   
-3.  선택  **\*(모든 열)** 테이블 또는 테이블 구조 개체를 나타내는 사각형에서 합니다.  
+3.  테이블이 나 테이블 구조 개체를 나타내는 사각형에서 ** \*(모든 열)** 을 선택 합니다.  
   
-     쿼리 및 뷰 디자이너의 조건 창에서 **그룹화 방법** 열에 **Count** 라는 단어가 자동으로 입력되고 요약하려는 열에 대한 열 별칭이 할당됩니다. 쿼리 결과에 더 유용한 열 머리글을 만들려면 [열 별칭 만들기&#40;Visual Database Tools&#41;](create-column-aliases-visual-database-tools.md)를 참조하세요.  
+     쿼리 및 뷰 디자이너의 조건 창에서 **그룹화 방법** 열에 **Count**라는 단어가 자동으로 입력되고 요약하려는 열에 대한 열 별칭이 할당됩니다. 쿼리 결과에 더 유용한 열 머리글을 만들려면 [열 별칭 만들기&#40;Visual Database Tools&#41;](create-column-aliases-visual-database-tools.md)를 참조하세요.  
   
 4.  검색하려는 데이터 열을 추가한 다음 **출력** 열의 확인란 선택을 취소합니다.  
   
@@ -86,8 +86,8 @@ ms.locfileid: "63217810"
   
 5.  쿼리를 실행합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [쿼리 결과 정렬 및 그룹화 &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools&#41;&#40;쿼리 결과 정렬 및 그룹화](sort-and-group-query-results-visual-database-tools.md)   
  [쿼리 결과 요약&#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)  
   
   

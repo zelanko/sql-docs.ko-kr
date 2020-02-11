@@ -1,5 +1,5 @@
 ---
-title: 레코드 집합 예제 (VBScript)의 레코드 포인터를 이동 합니다. | Microsoft Docs
+title: 레코드 집합 예제의 레코드 이동 포인터 (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,16 +18,16 @@ ms.assetid: 911aa1dd-2786-4f34-992c-bb2fbdabcbdf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9da7517ece0961e5139df4be44ddf575c41c9abe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918119"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript"></a>MoveFirst, MoveLast, MoveNext 및 MovePrevious 메서드 예제 (VBScript)
-이 예제에서는 합니다 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)를 [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)를 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), 및 [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) 를 의레코드포인터를이동하는방법[레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 제공 된 명령을 기반으로 합니다.  
+이 예에서는 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)및 [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) 메서드를 사용 하 여 제공 된 명령에 따라 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 의 레코드 포인터를 이동 합니다.  
   
- 메모장 이나 다른 텍스트 편집기에 다음 코드를 붙여 넣습니다. 잘라내기 및 저장 **MoveFirstVBS.asp**합니다. 모든 브라우저에서 결과 볼 수 있습니다.  
+ 다음 코드를 잘라내어 메모장 또는 다른 텍스트 편집기에 붙여 넣고 **Movefirstvbs .asp**로 저장 합니다. 모든 브라우저에서 결과를 볼 수 있습니다.  
   
 ```  
 <!-- BeginMoveFirstVBS -->  
@@ -183,6 +183,6 @@ ms.locfileid: "67918119"
 <!-- EndMoveFirstVBS -->  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [MoveFirst, MoveLast, MoveNext 및 MovePrevious 메서드 (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

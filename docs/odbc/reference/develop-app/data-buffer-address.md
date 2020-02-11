@@ -15,14 +15,14 @@ ms.assetid: f2426d68-71bc-4ef7-a5cb-ee9d6c1c9671
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7cd157edd6111dec29ae238a1c383879e66ac0b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68067427"
 ---
 # <a name="data-buffer-address"></a>데이터 버퍼 주소
-응용 프로그램 종종 명명 된 인수를 드라이버에 데이터 버퍼의 주소를 전달 *ValuePtr* 또는 비슷한 이름입니다. 예를 들어, 다음에서에 호출할 **SQLBindCol**, 응용 프로그램의 주소를 지정 합니다 *날짜* 변수:  
+응용 프로그램은 데이터 버퍼의 주소를 인수 (일반적으로 *이름이 지정 된* 인수)의 드라이버에 전달 합니다. 예를 들어 **SQLBindCol**에 대 한 다음 호출에서 응용 프로그램은 *날짜* 변수의 주소를 지정 합니다.  
   
 ```  
 SQL_DATE_STRUCT Date;  
@@ -30,6 +30,6 @@ SQLINTEGER DateInd;
 SQLBindCol(hstmt, 1, SQL_C_TYPE_DATE, &dsDate, 0, &DateInd);  
 ```  
   
- 에 설명 된 대로 합니다 [Allocating 및 버퍼를 해제](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md) 섹션에서는 지연 된 버퍼의 주소를 유효한 상태로 유지 되어야 버퍼 바인딩 해제할 때까지 유지 합니다.  
+ 버퍼 [할당 및 해제](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md) 섹션에서 설명한 것 처럼 버퍼를 바인딩 해제할 때까지 지연 된 버퍼의 주소는 유효한 상태로 유지 되어야 합니다.  
   
- 특히 금지 하지 않는 한 데이터 버퍼의 주소는 null 포인터를 수 있습니다. 드라이버에 데이터를 보내는 데 사용 하는 버퍼에 대 한 일반적으로 버퍼에 포함 된 정보를 무시 하도록 하면이 합니다. 드라이버에서 데이터를 검색 하는 데 사용 하는 버퍼에 대 한 드라이버에 값을 반환 하지 그러면 합니다. 두 경우 모두 해당 데이터 버퍼 길이 인수를 무시 합니다.
+ 특별히 금지 되지 않은 경우 데이터 버퍼의 주소는 null 포인터 일 수 있습니다. 드라이버에 데이터를 전송 하는 데 사용 되는 버퍼의 경우이로 인해 드라이버가 일반적으로 버퍼에 포함 된 정보를 무시 합니다. 드라이버에서 데이터를 검색 하는 데 사용 되는 버퍼의 경우 드라이버에서 값을 반환 하지 않습니다. 두 경우 모두 드라이버는 해당 데이터 버퍼 길이 인수를 무시 합니다.

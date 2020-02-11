@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 39cb8593351e97c47fff38ae2d1b6f2b326f49b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109737"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>주체 대체 이름을 사용하도록 Reporting Services 구성
@@ -22,15 +22,17 @@ ms.locfileid: "66109737"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기본 모드|  
+|**[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]기본 모드|  
   
  이 지침은 보고 서비스 URL과 웹 서비스 URL에 적용됩니다.  
   
  SAN을 사용하려면 서버에 SSL 인증서를 등록 및 서명하고 프라이빗 키를 가지고 있어야 합니다. 자체 서명된 인증서를 사용할 수 없습니다.  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 의 URL은 SSL 인증서를 사용하도록 구성할 수 있습니다. 인증서에는 일반적으로 SSL(Secure Sockets Layer) 세션에 대해 하나의 URL만 허용하는 주체 이름만 있습니다. SAN은 SSL 서비스에서 여러 URL을 수신하고 여러 URL에 대해 유효하도록 허용하며 다른 애플리케이션과 SSL 포트를 공유하도록 허용하는 인증서의 추가 필드입니다. SAN은 www.s2.com 과 같습니다.  
+ 
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 의 URL은 SSL 인증서를 사용하도록 구성할 수 있습니다. 인증서에는 일반적으로 SSL(Secure Sockets Layer) 세션에 대해 하나의 URL만 허용하는 주체 이름만 있습니다. SAN은 SSL 서비스에서 여러 URL을 수신하고 여러 URL에 대해 유효하도록 허용하며 다른 애플리케이션과 SSL 포트를 공유하도록 허용하는 인증서의 추가 필드입니다. SAN은 www.s2.com과 같습니다.  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 SSL 설정에 대한 자세한 내용은 [기본 모드 보고서 서버에서 SSL 연결 구성](security/configure-ssl-connections-on-a-native-mode-report-server.md)을 참조하세요.  
+ 
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 SSL 설정에 대한 자세한 내용은 [기본 모드 보고서 서버에서 SSL 연결 구성](security/configure-ssl-connections-on-a-native-mode-report-server.md)을 참조하세요.  
   
 ### <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>웹 서비스 URL에 대해 주체 대체 이름을 사용하도록 SSRS 구성  
   
@@ -123,10 +125,10 @@ ms.locfileid: "66109737"
   
 10. Reporting Services 구성 관리자의 **보고서 서버 상태** 페이지에서 **중지** 를 클릭한 다음 **시작** 을 클릭하여 보고서 서버를 다시 시작합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [RSReportServer 구성 파일](report-server/rsreportserver-config-configuration-file.md)   
+## <a name="see-also"></a>참고 항목  
+ [Rsreportserver.config 구성 파일](report-server/rsreportserver-config-configuration-file.md)   
  [Reporting Services 구성 관리자&#40;기본 모드&#41;](../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [Rsreportserver.config&#41;&#40;Reporting Services 구성 파일을 수정 합니다.](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [보고서 서버 URL 구성&#40;SSRS 구성 관리자&#41;](install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

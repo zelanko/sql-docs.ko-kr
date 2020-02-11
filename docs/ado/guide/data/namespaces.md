@@ -13,37 +13,37 @@ ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a5f28b5d593524288a755f4c9455bba39554d7bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924812"
 ---
 # <a name="namespaces"></a>네임스페이스
-ADO의 XML 지 속성 형식으로 다음 네 가지 네임 스페이스를 사용합니다.  
+ADO의 XML 지 속성 형식은 다음 네 가지 네임 스페이스를 사용 합니다.  
   
 ## <a name="remarks"></a>설명  
- ADO의 XML 지 속성 형식으로 다음 네 가지 네임 스페이스를 사용합니다.  
+ ADO의 XML 지 속성 형식은 다음 네 가지 네임 스페이스를 사용 합니다.  
   
-|접두사|설명|  
+|접두사|Description|  
 |------------|-----------------|  
-|s|현재 레코드 집합의 스키마를 정의 하는 특성 및 요소를 포함 하는 "XML 데이터" 네임 스페이스를 가리킵니다.|  
-|dt|데이터 형식 정의 사양을 나타냅니다.|  
-|rs|요소를 포함 하는 네임 스페이스 및 ADO 레코드 집합 속성에 특정 특성 및 특성을 가리킵니다.|  
-|z|현재 행 집합의 스키마를 가리킵니다.|  
+|s|현재 레코드 집합의 스키마를 정의 하는 요소와 특성을 포함 하는 "XML 데이터" 네임 스페이스를 참조 합니다.|  
+|제외한|데이터 형식 정의 사양을 참조 합니다.|  
+|rs|ADO 레코드 집합 속성 및 특성과 관련 된 요소 및 특성을 포함 하는 네임 스페이스를 참조 합니다.|  
+|z|현재 행 집합의 스키마를 참조 합니다.|  
   
- 클라이언트 사양에 정의 된 대로 이러한 네임 스페이스에는 고유한 태그 추가 하지 해야 합니다. 예를 들어, 클라이언트 정의 안 네임 스페이스 "urn: 스키마-microsoft-com:rowset" 및 "rs: MyOwnTag."와 같은 무엇 인가 작성할 네임 스페이스에 대 한 자세한 내용은 참조는 [XML 권장 사항의 W3C 네임 스페이스](http://www.w3.org/TR/REC-xml-names/)합니다.  
+ 사양에 정의 된 대로 클라이언트는 이러한 네임 스페이스에 자체 태그를 추가 하면 안 됩니다. 예를 들어 클라이언트에서 네임 스페이스를 "urn: MyOwnTag: rowset"으로 정의 하지 않고 "rs:"와 같은 항목을 작성 해야 합니다. 네임 스페이스에 대 한 자세한 내용은 [XML 권장 사항에서 W3C 네임 스페이스](http://www.w3.org/TR/REC-xml-names/)를 참조 하세요.  
   
 > [!IMPORTANT]
->  스키마 태그에 대 한 ID에는 "RowsetSchema," 이어야 하며 현재 행 집합의 스키마를 참조 하는 데 네임 스페이스 "#RowsetSchema."를 가리켜야 합니다.  
+>  스키마 태그의 ID는 "RowsetSchema" 여야 하 고 현재 행 집합의 스키마를 참조 하는 데 사용 되는 네임 스페이스는 "#RowsetSchema"을 가리켜야 합니다.  
   
- -등호 콜론 사이의 부-네임 스페이스의 접두사는 임의의 note 합니다.  
+ 네임 스페이스의 접두사 (콜론과 등호 사이에 있는 부분)는 임의의 접두사입니다.  
   
 ```  
 xmlns:rs="urn:schemas-microsoft-com:rowset"  
 ```  
   
- 사용자는이 XML 문서 전체에서 일관 되 게는이 이름으로 모든 이름을 정의할 수 있습니다. 항상 "s", "rs", "dt" ADO에 작성 되며 "z" 하지만 이러한 접두사 이름은 없습니다 로드 구성 요소에 하드 코딩 합니다.  
+ 이 이름이 XML 문서 전체에서 일관 되 게 사용 되는 경우 사용자는이 이름을 모든 이름으로 정의할 수 있습니다. ADO는 항상 "s", "rs", "dt" 및 "z"를 작성 하지만 이러한 접두사 이름은 로드 구성 요소에 하드 코딩 되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 형식으로 레코드 유지](../../../ado/guide/data/persisting-records-in-xml-format.md)

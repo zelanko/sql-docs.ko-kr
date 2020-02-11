@@ -1,5 +1,5 @@
 ---
-title: 명령을 라는 | Microsoft Docs
+title: 명명 된 명령 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,14 +14,14 @@ ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 928ac3b1d3cd753ded0bcf4337f10a654c9a3dc0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924822"
 ---
 # <a name="named-commands"></a>명명된 명령
-[만들기 및 실행 하는 간단한 명령을](../../../ado/guide/data/creating-and-executing-a-simple-command.md) 명령을 실행 하는 방법을 보여 줍니다. 다른 방법이 있습니다: 명명 된 명령을 하 고 그런 다음이 명령에서 직접 명명 된 호출 수를 **연결** 개체 (에 할당 된를 **ActiveConnection** 속성은 **명령** 개체). 명령 이름에 이름을 할당 의미는 **이름** 의 속성을 **명령** 개체. 예:  
+[간단한 명령을 만들고 실행](../../../ado/guide/data/creating-and-executing-a-simple-command.md) 하면 명령을 실행 하는 한 가지 방법이 표시 됩니다. 또 다른 방법으로, 명명 된 명령으로 만든 다음 **연결** 개체 ( **명령** 개체의 **ActiveConnection** 속성에 할당 됨)에서 직접이 명명 된 명령을 호출할 수 있습니다. 명령 이름 지정은 **명령** 개체의 **name** 속성에 이름을 할당 하는 것을 의미 합니다. 예를 들면 다음과 같습니다.  
   
 ```  
 objCmd.Name = "GetCustomers"  
@@ -29,7 +29,7 @@ objCmd.ActiveConnection = objConn
 objConn.GetCustomers objRs  
 ```  
   
- 명명 된 명령에서 "사용자 지정 메서드" 것 처럼 작동 합니다 **연결** 개체입니다. 명령의 결과이 "사용자 지정 메서드"를 out 매개 변수로 반환 됩니다.  
+ 명명 된 명령은 **연결** 개체에 대 한 "사용자 지정 메서드" 처럼 작동 합니다. 명령의 결과는이 "사용자 지정 메서드"의 출력 매개 변수로 반환 됩니다.  
   
  다음 예제에서는이 기능을 보여 줍니다.  
   
@@ -89,5 +89,5 @@ ErrHandler:
 'EndNamedCmd  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

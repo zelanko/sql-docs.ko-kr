@@ -14,27 +14,27 @@ ms.assetid: 65d6d78b-a8c8-489a-9dad-f8d127a44882
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 730ead7bf90af3b6e6906fe184e0fa3312212137
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107266"
 ---
 # <a name="statement-handles"></a>명령문 핸들
-A *문* 은 가장 쉽게 생각할 SQL 문 처럼 같은 **선택 \* 에서 직원**합니다. 그러나 문에 SQL 문 이상의-의 모든 문에 의해 만들어진 결과 집합 및 문 실행에 사용 되는 매개 변수와 같은 해당 SQL 문과 사용 하 여 연결 정보를 모두 구성 됩니다. 문을 필요가 없습니다 SQL 문이 응용 프로그램 정의 합니다. 예를 들어 경우 카탈로그 함수가 같은 **SQLTables** 실행 되는 문의 테이블 이름 목록을 반환 하는 미리 정의 된 SQL 문을 실행 합니다.  
+*문은* ** \* SELECT FROM Employee**와 같은 SQL 문으로 가장 쉽게 생각할 수 있습니다. 그러나 문은 SQL 문 뿐 이며 문 실행에 사용 되는 문과 매개 변수에 의해 생성 된 결과 집합과 같이 해당 SQL 문과 연결 된 모든 정보로 구성 됩니다. 문에는 응용 프로그램 정의 SQL 문이 없어도 됩니다. 예를 들어 문에 대해 **Sqltables** 와 같은 카탈로그 함수를 실행 하는 경우 테이블 이름 목록을 반환 하는 미리 정의 된 SQL 문을 실행 합니다.  
   
- 각 문은 문 핸들에 의해 식별 됩니다. 문을 단일 연결을 사용 하 여 연결 되며 해당 연결에서 여러 문이 있을 수 있습니다. 일부 드라이버 지; 활성 문 수를 제한 합니다. 옵션은 SQL_MAX_CONCURRENT_ACTIVITIES **SQLGetInfo** 얼마나 많은 활성 문을 단일 연결에서 지 원하는 드라이버를 지정 합니다. 문을 다음과 같이 정의 됩니다 *active* 보류 중인 결과가 있으면 여기서 결과 결과 집합 또는 영향을 받는 행의 수는 **삽입**합니다 **업데이트**, 또는 **삭제할** 문 또는 데이터에 대 한 여러 호출을 사용 하 여 전송 중인 **SQLPutData**합니다.  
+ 각 문은 문 핸들로 식별 됩니다. 문은 단일 연결과 연결 되며 해당 연결에 여러 문이 있을 수 있습니다. 일부 드라이버는 지원 되는 활성 문의 수를 제한 합니다. **SQLGetInfo** 의 SQL_MAX_CONCURRENT_ACTIVITIES 옵션은 드라이버가 단일 연결에서 지 원하는 활성 문 수를 지정 합니다. 문이 보류 중인 결과를 포함 하는 경우 (결과가 결과 집합 또는 **INSERT**, **UPDATE**또는 **DELETE** 문의 영향을 받는 행의 수) 또는 **sqlputdata**에 대 한 여러 번의 호출로 데이터가 전송 되는 경우 *활성화* 되도록 정의 됩니다.  
   
- 문 핸들 ODBC (드라이버 관리자 또는 드라이버)를 구현 하는 코드 부분 내에서 같은 문 정보를 포함 하는 구조체를 식별 합니다.  
+ ODBC (드라이버 관리자 또는 드라이버)를 구현 하는 코드 조각 내에서 문 핸들은 다음과 같이 문 정보를 포함 하는 구조를 식별 합니다.  
   
--   설명의 상태  
+-   문의 상태  
   
 -   현재 문 수준 진단  
   
--   응용 프로그램 변수의 주소를 문의 매개 변수에 바인딩할 및 결과 집합 열의  
+-   문의 매개 변수 및 결과 집합 열에 바인딩된 응용 프로그램 변수의 주소  
   
--   각 문 특성의 현재 설정  
+-   각 문 특성의 현재 설정입니다.  
   
- 문 핸들은 대부분의 ODBC 함수에 사용 됩니다. 특히 사용할 함수에서를 매개 변수 바인딩 및 결과 집합 열의 (**SQLBindParameter** 하 고 **SQLBindCol**), 준비 및 문 실행 (**SQLPrepare** 를 **SQLExecute**, 및 **SQLExecDirect**), 메타 데이터 검색 (**SQLColAttribute** 및 **SQLDescribeCol**), fetch 결과 (**SQLFetch**), 진단 검색 및 (**SQLGetDiagField** 하 고 **SQLGetDiagRec**). 카탈로그 함수에도 사용 됩니다 (**SQLColumns**를 **SQLTables**등) 및 여러 다른 기능입니다.  
+ 문 핸들은 대부분의 ODBC 함수에서 사용 됩니다. 특히 매개 변수 및 결과 집합 열 (**SQLBindParameter** 및 **SQLBindCol**)을 바인딩하고, 문 (**Sqlprepare**, **sqlprepare**및 **sqlexecdirect**)을 바인딩하고 실행 하 고, 메타 데이터 (**sqlcolattribute** 및 **SQLDescribeCol**)를 검색 하 고, 결과를 인출 (**sqlprepare**) 하 고, 진단 (**SQLGetDiagField** 및 **SQLGetDiagRec**)을 검색 하는 함수에 사용 됩니다. 또한 카탈로그 함수 (**Sqlcolumns**, **sqlcolumns**등)와 여러 다른 함수에서 사용 됩니다.  
   
- 사용 하 여 문 핸들 할당 됩니다 **SQLAllocHandle** 및 사용 하 여 해제 된 **SQLFreeHandle**합니다.
+ 문 핸들은 **SQLAllocHandle** 를 사용 하 여 할당 되 고 **sqlfreehandle**을 사용 하 여 해제 됩니다.

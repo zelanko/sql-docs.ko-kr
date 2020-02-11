@@ -13,23 +13,23 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 09aea8e66b76103c27bdc44ade4df48a1e505e7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63021624"
 ---
 # <a name="publication-peer-to-peer-replication"></a>게시(피어 투 피어 복제)
   **게시** 페이지는 피어 투 피어 복제에 대해 설정되어 있는 트랜잭션 게시를 표시합니다. 게시는 **게시 속성** 대화 상자의 **구독 옵션** 페이지에서 설정합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **게시자**  
  연결된 서버를 표시합니다. 다른 서버에 연결하려면 **SQL Server 게시자 찾기**를 선택합니다.  
   
  **데이터베이스 및 게시**  
  피어 투 피어 복제에 대해 설정된 게시를 하나 이상 포함하는 서버의 모든 데이터베이스를 표시합니다. 계속하려면 게시를 선택합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [피어 투 피어 토폴로지 관리&#40;복제 Transact-SQL 프로그래밍&#41;](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [@loopback_detection](transactional/peer-to-peer-transactional-replication.md)  
   

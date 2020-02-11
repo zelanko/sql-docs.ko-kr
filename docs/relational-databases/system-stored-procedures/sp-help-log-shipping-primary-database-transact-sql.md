@@ -1,5 +1,5 @@
 ---
-title: sp_help_log_shipping_primary_database (TRANSACT-SQL) | Microsoft Docs
+title: sp_help_log_shipping_primary_database (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: e711b01c-ef29-4eb6-a016-0e647e337818
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9559a882da12c3e2a7a48a0aaa656a554633aa6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67937912"
 ---
-# <a name="sphelplogshippingprimarydatabase-transact-sql"></a>sp_help_log_shipping_primary_database(Transact-SQL)
+# <a name="sp_help_log_shipping_primary_database-transact-sql"></a>sp_help_log_shipping_primary_database(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   주 데이터베이스 설정을 검색합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,49 +41,49 @@ sp_help_log_shipping_primary_database
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @database = ] 'database'` 로그 전달 주 데이터베이스의 이름이입니다. *데이터베이스* 됩니다 **sysname**, 기본값은 없고 NULL 일 수 없습니다.  
+`[ @database = ] 'database'`로그 전달 주 데이터베이스의 이름입니다. *데이터베이스* 는 **sysname**이며 기본값은 없고 NULL 일 수 없습니다.  
   
-`[ @primary_id = ] 'primary_id'` 로그 전달 구성에 대 한 주 데이터베이스의 ID입니다. *primary_id* 됩니다 **uniqueidentifier** NULL 일 수 없습니다.  
+`[ @primary_id = ] 'primary_id'`로그 전달 구성에 대 한 주 데이터베이스의 ID입니다. *primary_id* 은 **uniqueidentifier** 이며 NULL 일 수 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|설명|  
+|열 이름|Description|  
 |-----------------|-----------------|  
 |**primary_id**|로그 전달 구성의 주 데이터베이스의 ID입니다.|  
 |**primary_database**|로그 전달 구성의 주 데이터베이스의 이름입니다.|  
 |**backup_directory**|주 서버의 트랜잭션 로그 백업 파일이 저장되는 디렉터리입니다.|  
 |**backup_share**|백업 디렉터리의 네트워크 또는 UNC 경로입니다.|  
 |**backup_retention_period**|백업 디렉터리에서 로그 백업 파일이 삭제되기까지 보관되는 기간(분)입니다.|  
-|**backup_compression**|로그 전달 구성을 사용 하는지 여부를 나타냅니다 [백업 압축](../../relational-databases/backup-restore/backup-compression-sql-server.md)합니다.<br /><br /> **0** = 사용 안 함. 로그 백업을 압축하지 않습니다.<br /><br /> **1** = 사용 하도록 설정 합니다. 항상 로그 백업을 압축합니다.<br /><br /> **2** =의 설정을 사용 합니다 [보거나 backup compression default 서버 구성 옵션 구성](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)합니다. 이것은 기본값입니다.<br /><br /> 백업 압축은 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 이상 버전에서만 지원됩니다. 다른 버전의 경우 값은 항상 2입니다.|  
-|**backup_job_id**|합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 주 서버의 백업 작업과 연결 된 에이전트 작업 ID입니다.|  
+|**backup_compression**|로그 전달 구성에서 [백업 압축](../../relational-databases/backup-restore/backup-compression-sql-server.md)을 사용 하는지 여부를 나타냅니다.<br /><br /> **0** = 사용 안 함 로그 백업을 압축하지 않습니다.<br /><br /> **1** = 사용 항상 로그 백업을 압축합니다.<br /><br /> **2** = [백업 압축 기본값 서버 구성 옵션](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)의 설정을 사용 합니다. 이것은 기본값입니다.<br /><br /> 백업 압축은 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 이상 버전에서만 지원됩니다. 다른 버전의 경우 값은 항상 2입니다.|  
+|**backup_job_id**|주 서버의 백업 작업과 연관된 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트의 작업 ID입니다.|  
 |**monitor_server**|로그 전달 구성에서 모니터 서버로 사용되는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스의 이름입니다.|  
-|**monitor_server_security_mode**|모니터 서버 연결에 사용되는 보안 모드입니다.<br /><br /> 1 = [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 인증<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 합니다.|  
+|**monitor_server_security_mode**|모니터 서버 연결에 사용되는 보안 모드입니다.<br /><br /> 1 = [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 인증<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증|  
 |**backup_threshold**|백업 작업 간 허용되는 시간(분)입니다. 이 시간이 지나면 경고가 발생합니다.|  
 |**threshold_alert**|백업 임계값이 초과될 때 발생하는 경고입니다.|  
-|**threshold_alert_enabled**|백업 임계값 경고를 설정할지 여부를 결정합니다.<br /><br /> **1** = 사용 하도록 설정 합니다.<br /><br /> **0** = 사용 안 함.|  
+|**threshold_alert_enabled**|백업 임계값 경고를 설정할지 여부를 결정합니다.<br /><br /> **1** = 사용<br /><br /> **0** = 사용 안 함|  
 |**last_backup_file**|가장 최근 트랜잭션 로그 백업의 절대 경로입니다.|  
 |**last_backup_date**|마지막 로그 백업 작업의 시간과 날짜입니다.|  
 |**last_backup_date_utc**|주 데이터베이스에서 마지막으로 수행된 트랜잭션 로그 백업 작업의 시간과 날짜(UTC)입니다.|  
 |**history_retention_period**|지정된 기본 데이터베이스의 로그 전달 기록 레코드가 삭제되기까지 보관되는 기간(분)입니다.|  
   
 ## <a name="remarks"></a>설명  
- **sp_help_log_shipping_primary_database** 에서 실행 해야 합니다 **마스터** 주 서버의 데이터베이스입니다.  
+ **sp_help_log_shipping_primary_database** 는 주 서버의 **master** 데이터베이스에서 실행 해야 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 멤버는 **sysadmin** 고정된 서버 역할에서이 프로시저를 실행할 수 있습니다.  
+ **Sysadmin** 고정 서버 역할의 멤버만이 프로시저를 실행할 수 있습니다.  
   
 ## <a name="examples"></a>예  
- 이 예제를 사용 하 여 **sp_help_log_shipping_primary_database** 데이터베이스에 대 한 주 데이터베이스 설정을 검색 하려면 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]합니다.  
+ 다음 예에서는 **sp_help_log_shipping_primary_database** 를 사용 하 여 데이터베이스 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]에 대 한 주 데이터베이스 설정을 검색 하는 방법을 보여 줍니다.  
   
 ```  
 EXEC master.dbo.sp_help_log_shipping_primary_database @database=N'AdventureWorks2012';  
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

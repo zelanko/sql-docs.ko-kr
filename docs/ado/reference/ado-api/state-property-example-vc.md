@@ -1,5 +1,5 @@
 ---
-title: 상태 속성 예제 (VC + +) | Microsoft Docs
+title: State 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 1c38cd3b-e4f5-4754-b115-ef5e46d24ab9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dad78c3754fb55aa83c50d467920a611db277f13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930843"
 ---
 # <a name="state-property-example-vc"></a>State 속성 예제(VC++)
-이 예제에서는 합니다 [상태](../../../ado/reference/ado-api/state-property-ado.md) 비동기 연결을 여는 비동기 명령을 실행 하는 동안 메시지를 표시 하는 속성입니다.  
+이 예제에서는 [상태](../../../ado/reference/ado-api/state-property-ado.md) 속성을 사용 하 여 비동기 연결이 열리고 비동기 명령이 실행 되는 동안 메시지를 표시 합니다.  
   
 ```  
 // BeginStateCpp.cpp  
@@ -135,5 +135,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [State 속성(ADO)](../../../ado/reference/ado-api/state-property-ado.md)

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_wait_stats (Azure SQL Database) | Microsoft Docs
+title: dm_db_wait_stats (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.service: sql-database
@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 0c32af194a1e74e0fd11e65a75109165e81cc4c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68090872"
 ---
 # <a name="sysdm_db_wait_stats-azure-sql-database"></a>sys.dm_db_wait_stats(Azure SQL Database)
@@ -33,9 +33,9 @@ ms.locfileid: "68090872"
   
  쿼리 실행 중에 특정 유형의 대기 시간이 쿼리 내의 병목 또는 대기 지점을 나타낼 수 있습니다. 마찬가지로 높은 대기 시간이나 서버 전체의 대기 횟수가 서버 인스턴스 내의 쿼리 상호 작용에서 병목 또는 핫 스폿을 나타낼 수 있습니다. 예를 들어 잠금 대기는 쿼리의 데이터 경합을, 페이지 IO 래치 대기는 느린 IO 응답 시간을, 페이지 래치 업데이트 대기는 잘못된 파일 레이아웃을 나타냅니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|wait_type|**nvarchar(60)**|대기 유형의 이름입니다. 자세한 내용은 [대기 유형](#WaitTypes)이 항목의 뒷부분에 나오는.|  
+|wait_type|**nvarchar (60)**|대기 형식 이름 자세한 내용은 이 항목의 뒷부분에 나오는 [대기 유형](#WaitTypes)을 참조하십시오.|  
 |waiting_tasks_count|**bigint**|이 대기 유형의 대기 수입니다. 이 카운터는 각 대기가 시작될 때 증가합니다.|  
 |wait_time_ms|**bigint**|이 대기 유형의 총 대기 시간(밀리초)입니다. 이 시간은 signal_wait_time_ms를 포함합니다.|  
 |max_wait_time_ms|**bigint**|이 대기 유형의 최대 대기 시간입니다.|  
@@ -62,7 +62,7 @@ ms.locfileid: "68090872"
 ## <a name="permissions"></a>사용 권한  
  서버에 대한 VIEW DATABASE STATE 권한이 필요합니다.  
   
-##  <a name="WaitTypes"></a> 대기 유형  
+##  <a name="WaitTypes"></a>대기 유형  
  리소스 대기  
  리소스 대기는 다른 작업자가 사용하고 있거나 아직 제공되지 않아서 사용할 수 없는 리소스에 대한 액세스를 요청하는 경우에 발생합니다. 리소스 대기의 예로는 잠금, 래치, 네트워크 및 디스크 I/O 대기가 있습니다. 잠금 및 래치 대기는 동기화 개체에 대한 대기입니다.  
   
@@ -74,11 +74,11 @@ ms.locfileid: "68090872"
   
  스레드가 더 이상 대기하지 않더라도 즉시 스레드 실행을 시작하지는 않습니다. 그와 같은 스레드가 실행 가능한 작업자 큐의 첫 번째 항목이고 퀀텀이 스케줄러에서 실행될 때까지 대기해야 하기 때문입니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대기 시간 카운터 **bigint** 값 및 많지 않기 카운터가 롤오버 되기 쉽습니다 이전 버전의 동등한 카운터와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+ 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대기 시간 카운터는 **bigint** 값 이므로 이전 버전의에 해당 하는 카운터로 인해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]카운터 롤오버가 발생 하기 쉽습니다.  
   
  다음 표에서는 태스크에서 발생한 대기 유형을 나열합니다.  
   
-|대기 유형|설명|  
+|대기 유형|Description|  
 |---------------|-----------------|  
 |ABR|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |ASSEMBLY_LOAD|어셈블리 로드에 대한 단독 액세스 중에 발생합니다.|  
@@ -90,23 +90,26 @@ ms.locfileid: "68090872"
 |AUDIT_ON_DEMAND_TARGET_LOCK|감사와 관련된 확장 이벤트 대상의 단일 초기화를 위한 잠금을 기다리는 경우에 발생합니다.|  
 |AUDIT_XE_SESSION_MGR|감사와 관련된 확장 이벤트 세션의 시작 및 중지를 동기화하는 데 사용되는 잠금을 기다리는 경우에 발생합니다.|  
 |BACKUP|태스크가 백업 처리의 일부로 차단되는 경우에 발생합니다.|  
-|BACKUP_OPERATOR|태스크가 테이프 탑재를 대기하는 경우에 발생합니다. 테이프 상태를 보려면 쿼리 [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md)합니다. 탑재 작업이 보류된 상태가 아니라면 이 대기 유형이 테이프 드라이브의 하드웨어 문제를 나타낼 수 있습니다.|  
+|BACKUP_OPERATOR|태스크가 테이프 탑재를 대기하는 경우에 발생합니다. 테이프 상태를 확인하려면 [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md)를 쿼리합니다. 탑재 작업이 보류된 상태가 아니라면 이 대기 유형이 테이프 드라이브의 하드웨어 문제를 나타낼 수 있습니다.|  
 |BACKUPBUFFER|백업 태스크가 데이터를 기다리거나 데이터를 저장할 버퍼를 기다리는 경우에 발생합니다. 이 유형은 태스크가 테이프 탑재를 기다리는 경우 외에는 일반적이지 않습니다.|  
 |BACKUPIO|백업 태스크가 데이터를 기다리거나 데이터를 저장할 버퍼를 기다리는 경우에 발생합니다. 이 유형은 태스크가 테이프 탑재를 기다리는 경우 외에는 일반적이지 않습니다.|  
 |BACKUPTHREAD|태스크가 백업 작업이 완료될 때까지 대기하는 경우에 발생합니다. 대기 시간은 몇 분에서 몇 시간까지 걸릴 수 있습니다. 대기 중인 태스크가 I/O 프로세스에 위치하면 문제가 있는 것이 아닙니다.|  
 |BAD_PAGE_PROCESS|백그라운드의 주의 대상 페이지 로거가 5초보다 긴 간격으로 실행되는 것을 방지하려는 경우에 발생합니다. 주의 대상 페이지가 너무 많으면 로거가 자주 실행됩니다.|  
 |BROKER_CONNECTION_RECEIVE_TASK|연결 엔드포인트에서 메시지를 받기 위한 액세스를 대기하는 경우에 발생합니다. 엔드포인트에 대한 수신 액세스는 직렬화됩니다.|  
-|BROKER_ENDPOINT_STATE_MUTEX|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 연결 엔드포인트의 상태에 액세스하려는 경합이 있는 경우에 발생합니다. 변경 내용의 상태에 대한 액세스는 직렬화됩니다.|  
+|BROKER_ENDPOINT_STATE_MUTEX|ph x="1" /&gt; 연결 엔드포인트의 상태에 액세스하려는 경합이 있는 경우에 발생합니다. 변경 내용의 상태에 대한 액세스는 직렬화됩니다.|  
 |BROKER_EVENTHANDLER|태스크가 [!INCLUDE[ssSB](../../includes/sssb-md.md)]의 기본 이벤트 처리기에서 대기하는 경우에 발생합니다. 매우 짧게 발생해야 합니다.|  
 |BROKER_INIT|각 활성 데이터베이스에서 [!INCLUDE[ssSB](../../includes/sssb-md.md)]를 초기화하는 경우에 발생합니다. 자주 발생하면 안 됩니다.|  
 |BROKER_MASTERSTART|태스크가 [!INCLUDE[ssSB](../../includes/sssb-md.md)]의 기본 이벤트 처리기가 시작될 때까지 대기하는 경우에 발생합니다. 매우 짧게 발생해야 합니다.|  
 |BROKER_RECEIVE_WAITFOR|RECEIVE WAITFOR가 대기 중인 경우에 발생합니다. 받을 준비가 된 메시지가 없는 경우에 주로 발생합니다.|  
-|BROKER_REGISTERALLENDPOINTS|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 연결 엔드포인트의 초기화 중에 발생합니다. 매우 짧게 발생해야 합니다.|  
+|BROKER_REGISTERALLENDPOINTS|ph x="1" /&gt; 연결 엔드포인트의 초기화 중에 발생합니다. 매우 짧게 발생해야 합니다.|  
 |BROKER_SERVICE|대상 서비스와 연결된 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대상 목록이 업데이트되거나 우선 순위가 다시 매겨지는 경우에 발생합니다.|  
 |BROKER_SHUTDOWN|계획된 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 종료 시 발생합니다. 가능하면 매우 짧게 발생해야 합니다.|  
-|BROKER_TASK_STOP|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐 태스크 처리기가 태스크를 종료하려고 하는 경우에 발생합니다. 상태 검사가 직렬화되고 먼저 실행 상태에 있어야 합니다.|  
-|BROKER_TO_FLUSH|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 지연 플러셔가 메모리 내 전송 개체를 작업 테이블에 플러시하는 경우에 발생합니다.|  
-|BROKER_TRANSMITTER|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 전송기가 작동될 때까지 대기하는 경우에 발생합니다.|  
+|BROKER_TASK_STOP|
+  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐 태스크 처리기가 태스크를 종료하려고 하는 경우에 발생합니다. 상태 검사가 직렬화되고 먼저 실행 상태에 있어야 합니다.|  
+|BROKER_TO_FLUSH|
+  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 지연 플러셔가 메모리 내 전송 개체를 작업 테이블에 플러시하는 경우에 발생합니다.|  
+|BROKER_TRANSMITTER|
+  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 전송기가 작동될 때까지 대기하는 경우에 발생합니다.|  
 |BUILTIN_HASHKEY_MUTEX|내부 데이터 구조를 초기화하는 동안 인스턴스 시작 후 발생할 수 있습니다. 데이터 구조가 초기화되면 되풀이되지 않습니다.|  
 |CHECK_PRINT_RECORD|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |CHECKPOINT_QUEUE|검사점 태스크가 다음 검사점 요청을 대기하는 동안 발생합니다.|  
@@ -136,7 +139,8 @@ ms.locfileid: "68090872"
 |DEADLOCK_ENUM_MUTEX|교착 상태 모니터와 sys.dm_os_waiting_tasks가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 동시에 여러 개의 교착 상태 검색을 실행하고 있지 않도록 하려고 하는 경우에 발생합니다.|  
 |DEADLOCK_TASK_SEARCH|이 리소스의 대기 시간이 길면 서버가 sys.dm_os_waiting_tasks 위에서 쿼리를 실행하고 있으며 이러한 쿼리가 교착 상태 모니터의 교착 상태 검색을 차단하고 있음을 나타냅니다. 이 대기 유형은 교착 상태 모니터에만 사용됩니다. sys.dm_os_waiting_tasks 위의 쿼리는 DEADLOCK_ENUM_MUTEX를 사용합니다.|  
 |DEBUG|내부 동기화에 대한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR 디버깅 작업 중에 발생합니다.|  
-|DISABLE_VERSIONING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 가장 오래된 활성 트랜잭션의 타임스탬프가 상태 변경이 시작될 때의 타임스탬프보다 나중인지 확인하기 위해 버전 트랜잭션 관리자를 폴링하는 경우에 발생합니다. 이 경우 ALTER DATABASE 문이 실행되기 전에 시작된 모든 스냅샷 트랜잭션은 완료되었습니다. 이 대기 상태는 ALTER DATABASE 문을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 버전 관리를 해제하는 경우에 사용됩니다.|  
+|DISABLE_VERSIONING|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 가장 오래된 활성 트랜잭션의 타임스탬프가 상태 변경이 시작될 때의 타임스탬프보다 나중인지 확인하기 위해 버전 트랜잭션 관리자를 폴링하는 경우에 발생합니다. 이 경우 ALTER DATABASE 문이 실행되기 전에 시작된 모든 스냅샷 트랜잭션은 완료되었습니다. 이 대기 상태는 ALTER DATABASE 문을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 버전 관리를 해제하는 경우에 사용됩니다.|  
 |DISKIO_SUSPEND|외부 백업이 활성 상태일 때 태스크가 파일에 액세스하려고 대기하는 경우에 발생합니다. 대기 중인 모든 사용자 프로세스에 대해 보고됩니다. 사용자 프로세스당 값이 5보다 크면 외부 백업을 완료하는 데 걸리는 시간이 너무 긴 것일 수 있습니다.|  
 |DISPATCHER_QUEUE_SEMAPHORE|디스패처 풀의 스레드가 처리할 추가 작업을 기다리는 경우에 발생합니다. 이 대기 유형의 대기 시간은 디스패처가 유휴 상태일 때 증가됩니다.|  
 |DLL_LOADING_MUTEX|XML 파서 DLL이 로드될 때까지 대기하는 동안 한 번 발생합니다.|  
@@ -145,14 +149,16 @@ ms.locfileid: "68090872"
 |DTC_ABORT_REQUEST|MS DTC 작업자 세션이 MS DTC 트랜잭션의 소유권을 획득하려고 대기하는 경우에 MS DTC 작업자 세션에서 발생합니다. MS DTC가 트랜잭션의 소유권을 획득한 후에는 세션이 트랜잭션을 롤백할 수 있습니다. 일반적으로 세션은 트랜잭션을 사용하고 있는 다른 세션을 기다립니다.|  
 |DTC_RESOLVE|복구 태스크가 트랜잭션의 결과물을 쿼리할 수 있도록 데이터베이스 간 트랜잭션에서 master 데이터베이스를 대기하는 경우에 발생합니다.|  
 |DTC_STATE|태스크가 내부 MS DTC 전역 상태 개체의 변경을 방지하는 이벤트를 기다리는 경우에 발생합니다. 이 상태는 매우 짧은 시간 동안 유지되어야 합니다.|  
-|DTC_TMDOWN_REQUEST|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 MS DTC 서비스가 사용할 수 없게 되었다는 알림을 받는 경우에 MS DTC 작업자 세션에서 발생합니다. 먼저 작업자는 MS DTC 복구 프로세스가 시작될 때까지 기다렸다가 작업자가 작업하고 있는 분산 트랜잭션의 결과물을 획득하기 위해 대기합니다. 이것은 MS DTC 서비스와의 연결이 다시 설정될 때까지 계속될 수 있습니다.|  
+|DTC_TMDOWN_REQUEST|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 MS DTC 서비스가 사용할 수 없게 되었다는 알림을 받는 경우에 MS DTC 작업자 세션에서 발생합니다. 먼저 작업자는 MS DTC 복구 프로세스가 시작될 때까지 기다렸다가 작업자가 작업하고 있는 분산 트랜잭션의 결과물을 획득하기 위해 대기합니다. 이것은 MS DTC 서비스와의 연결이 다시 설정될 때까지 계속될 수 있습니다.|  
 |DTC_WAITFOR_OUTCOME|복구 태스크가 MS DTC가 활성화되어 준비된 트랜잭션을 해결할 수 있을 때까지 대기하는 경우에 발생합니다.|  
 |DUMP_LOG_COORDINATOR|주 태스크가 하위 작업이 데이터를 생성할 때까지 대기하는 경우에 발생합니다. 일반적으로 이 상태는 발생하지 않습니다. 대기 시간이 길면 예상하지 못했던 차단이 발생한 것일 수 있으므로 하위 태스크를 조사해야 합니다.|  
 |DUMPTRIGGER|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |EC|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |EE_PMOLOCK|문 실행 중 특정 유형의 메모리 할당을 동기화하는 경우에 발생합니다.|  
 |EE_SPECPROC_MAP_INIT|내부 프로시저 해시 테이블 생성을 동기화하는 경우에 발생합니다. 이 대기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 시작된 후 해시 테이블에 처음 액세스하는 경우에만 발생합니다.|  
-|ENABLE_VERSIONING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스를 스냅숏 격리 허용 상태로 전환할 준비가 되었다고 선언하기 전에 이 데이터베이스의 모든 업데이트 트랜잭션이 완료될 때까지 대기하는 경우에 발생합니다. 이 상태는 ALTER DATABASE 문을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 스냅샷 격리를 설정하는 경우에 사용됩니다.|  
+|ENABLE_VERSIONING|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스를 스냅샷 격리 허용 상태로 전환할 준비가 되었다고 선언하기 전에 이 데이터베이스의 모든 업데이트 트랜잭션이 완료될 때까지 대기하는 경우에 발생합니다. 이 상태는 ALTER DATABASE 문을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 스냅샷 격리를 설정하는 경우에 사용됩니다.|  
 |ERROR_REPORTING_MANAGER|여러 개의 동시 오류 로그 초기화를 동기화하는 경우에 발생합니다.|  
 |EXCHANGE|병렬 쿼리 중 쿼리 프로세서 교환 반복기에서 동기화 중에 발생합니다.|  
 |EXECSYNC|병렬 쿼리 중 쿼리 프로세서 교환 반복기와 관련되지 않은 영역에서 동기화 중에 발생합니다. 이러한 영역의 예에는 비트맵, LOB(Large Binary Object) 및 스풀 반복기가 있습니다. LOB는 이 대기 상태를 자주 사용할 수 있습니다.|  
@@ -174,11 +180,13 @@ ms.locfileid: "68090872"
 |GUARDIAN|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |HTTP_ENUMERATION|시스템 시작 시에 HTTP를 시작할 HTTP 엔드포인트를 열거하기 위해 발생합니다.|  
 |HTTP_START|연결이 HTTP 초기화가 완료될 때까지 대기하는 경우에 발생합니다.|  
-|IMPPROV_IOWAIT|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 대량 로드 I/O가 완료될 때까지 대기하는 경우에 발생합니다.|  
+|IMPPROV_IOWAIT|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 대량 로드 I/O가 완료될 때까지 대기하는 경우에 발생합니다.|  
 |INTERNAL_TESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |IO_AUDIT_MUTEX|추적 이벤트 버퍼 동기화 중에 발생합니다.|  
 |IO_COMPLETION|I/O 작업이 완료될 때까지 대기하는 동안 발생합니다. 이 대기 유형은 일반적으로 비데이터 페이지 I/O를 나타냅니다. 데이터 페이지 I/O 완료 대기는 PAGEIOLATCH_* 대기로 표시됩니다.|  
-|IO_QUEUE_LIMIT|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]의 비동기 IO 큐에 보류 중인 IO가 너무 많은 경우에 발생합니다. 보류 중인 IO 수가 임계값 아래로 떨어질 때까지 다른 IO를 실행하려는 작업은 이 대기 유형에서 차단됩니다. 임계값은 데이터베이스에 할당된 DTU에 비례합니다.|  
+|IO_QUEUE_LIMIT|
+  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]의 비동기 IO 큐에 보류 중인 IO가 너무 많은 경우에 발생합니다. 보류 중인 IO 수가 임계값 아래로 떨어질 때까지 다른 IO를 실행하려는 작업은 이 대기 유형에서 차단됩니다. 임계값은 데이터베이스에 할당된 DTU에 비례합니다.|  
 |IO_RETRY|리소스 부족으로 인해 읽기 또는 쓰기와 같은 디스크 I/O 작업이 실패하여 다시 시도되는 경우에 발생합니다.|  
 |IOAFF_RANGE_QUEUE|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |KSOURCE_WAKEUP|서비스 제어 관리자의 요청을 대기하는 동안 서비스 제어 태스크에 사용됩니다. 긴 대기가 예상되며 문제가 있는 것은 아닙니다.|  
@@ -192,27 +200,27 @@ ms.locfileid: "68090872"
 |LATCH_SH|SH(공유) 래치를 대기하는 경우에 발생합니다. 버퍼 래치 또는 트랜잭션 표시 래치를 포함하지 않습니다. sys.dm_os_latch_stats에서 LATCH_* 대기 목록을 사용할 수 있습니다. sys.dm_os_latch_stats는 LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX 및 LATCH_DT 대기를 그룹화합니다.|  
 |LATCH_UP|UP(업데이트) 래치를 대기하는 경우에 발생합니다. 버퍼 래치 또는 트랜잭션 표시 래치를 포함하지 않습니다. sys.dm_os_latch_stats에서 LATCH_* 대기 목록을 사용할 수 있습니다. sys.dm_os_latch_stats는 LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX 및 LATCH_DT 대기를 그룹화합니다.|  
 |LAZYWRITER_SLEEP|지연 기록기 태스크가 일시 중지되는 경우에 발생합니다. 대기 중인 백그라운드 태스크에서 사용한 시간을 측정한 것입니다. 사용자 대기를 찾을 때 이 상태는 고려하지 마세요.|  
-|LCK_M_BU|태스크가 대량 업데이트(BU) 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 행렬을 참조 하세요 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)합니다.|  
-|LCK_M_IS|태스크가 내재된 공유(IS) 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 행렬을 참조 하세요 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)합니다.|  
-|LCK_M_IU|태스크가 의도 업데이트(IU) 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 행렬을 참조 하세요 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)합니다.|  
-|LCK_M_IX|태스크가 의도 배타(IX) 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 행렬을 참조 하세요 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)합니다.|  
-|LCK_M_RIn_NL|태스크가 현재 키 값의 NULL 잠금 및 현재 키와 이전 키 간의 삽입 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. 키의 NULL 잠금은 즉시 해제 잠금입니다. 잠금 호환성 행렬을 참조 하세요 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)합니다.|  
-|LCK_M_RIn_S|태스크가 현재 키 값의 공유 잠금 및 현재 키와 이전 키 간의 삽입 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 행렬을 참조 하세요 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)합니다.|  
-|LCK_M_RIn_U|태스크가 현재 키 값의 업데이트 잠금 및 현재 키와 이전 키 간의 삽입 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 행렬을 참조 하세요 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)합니다.|  
-|LCK_M_RIn_X|태스크가 현재 키 값의 배타 잠금 및 현재 키와 이전 키 간의 삽입 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 행렬을 참조 하세요 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)합니다.|  
-|LCK_M_RS_S|태스크가 현재 키 값의 공유 잠금 및 현재 키와 이전 키 간의 공유 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 행렬을 참조 하세요 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)합니다.|  
-|LCK_M_RS_U|태스크가 현재 키 값의 업데이트 잠금 및 현재 키와 이전 키 간의 업데이트 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 행렬을 참조 하세요 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)합니다.|  
-|LCK_M_RX_S|태스크가 현재 키 값의 공유 잠금 및 현재 키와 이전 키 간의 배타 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 행렬을 참조 하세요 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)합니다.|  
-|LCK_M_RX_U|태스크가 현재 키 값의 업데이트 잠금 및 현재 키와 이전 키 간의 배타 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 행렬을 참조 하세요 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)합니다.|  
-|LCK_M_RX_X|태스크가 현재 키 값의 배타 잠금 및 현재 키와 이전 키 간의 배타 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 행렬을 참조 하세요 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)합니다.|  
-|LCK_M_S|태스크가 공유 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 행렬을 참조 하세요 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)합니다.|  
-|LCK_M_SCH_M|태스크가 스키마 수정 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 행렬을 참조 하세요 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)합니다.|  
-|LCK_M_SCH_S|태스크가 스키마 공유 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 행렬을 참조 하세요 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)합니다.|  
-|LCK_M_SIU|태스크가 의도 업데이트 공유 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 행렬을 참조 하세요 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)합니다.|  
-|LCK_M_SIX|태스크가 의도 배타 공유 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 행렬을 참조 하세요 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)합니다.|  
-|LCK_M_U|태스크가 업데이트 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 행렬을 참조 하세요 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)합니다.|  
-|LCK_M_UIX|태스크가 의도 배타 업데이트 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 행렬을 참조 하세요 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)합니다.|  
-|LCK_M_X|태스크가 배타 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 행렬을 참조 하세요 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)합니다.|  
+|LCK_M_BU|태스크가 대량 업데이트(BU) 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
+|LCK_M_IS|태스크가 내재된 공유(IS) 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
+|LCK_M_IU|태스크가 의도 업데이트(IU) 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
+|LCK_M_IX|태스크가 의도 배타(IX) 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
+|LCK_M_RIn_NL|태스크가 현재 키 값의 NULL 잠금 및 현재 키와 이전 키 간의 삽입 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. 키의 NULL 잠금은 즉시 해제 잠금입니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
+|LCK_M_RIn_S|태스크가 현재 키 값의 공유 잠금 및 현재 키와 이전 키 간의 삽입 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
+|LCK_M_RIn_U|태스크가 현재 키 값의 업데이트 잠금 및 현재 키와 이전 키 간의 삽입 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
+|LCK_M_RIn_X|태스크가 현재 키 값의 배타 잠금 및 현재 키와 이전 키 간의 삽입 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
+|LCK_M_RS_S|태스크가 현재 키 값의 공유 잠금 및 현재 키와 이전 키 간의 공유 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
+|LCK_M_RS_U|태스크가 현재 키 값의 업데이트 잠금 및 현재 키와 이전 키 간의 업데이트 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
+|LCK_M_RX_S|태스크가 현재 키 값의 공유 잠금 및 현재 키와 이전 키 간의 배타 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
+|LCK_M_RX_U|태스크가 현재 키 값의 업데이트 잠금 및 현재 키와 이전 키 간의 배타 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
+|LCK_M_RX_X|태스크가 현재 키 값의 배타 잠금 및 현재 키와 이전 키 간의 배타 범위 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
+|LCK_M_S|태스크가 공유 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
+|LCK_M_SCH_M|태스크가 스키마 수정 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
+|LCK_M_SCH_S|태스크가 스키마 공유 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
+|LCK_M_SIU|태스크가 의도 업데이트 공유 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
+|LCK_M_SIX|태스크가 의도 배타 공유 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
+|LCK_M_U|태스크가 업데이트 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
+|LCK_M_UIX|태스크가 의도 배타 업데이트 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
+|LCK_M_X|태스크가 배타 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 매트릭스는 [dm_tran_locks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)를 참조 하세요.|  
 |LOG_RATE_GOVERNOR|DB에서 견적을 로그에 작성할 때까지 기다릴 때 발생합니다.|  
 |LOGBUFFER|태스크가 로그 버퍼의 공간에 로그 레코드가 저장될 때까지 대기하는 경우에 발생합니다. 값이 계속 높게 나타나면 로그 디바이스가 서버에서 생성하는 로그의 양을 따라갈 수 없는 것일 수 있습니다.|  
 |LOGGENERATION|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -224,10 +232,12 @@ ms.locfileid: "68090872"
 |MSQL_DQ|분산 쿼리 작업이 완료될 때까지 태스크가 대기하는 경우에 발생합니다. 발생 가능한 MARS(Multiple Active Result Set) 애플리케이션 교착 상태를 감지하는 데 사용됩니다. 대기는 분산 쿼리 호출이 완료될 때 끝납니다.|  
 |MSQL_XACT_MGR_MUTEX|태스크가 세션 트랜잭션 관리자의 소유권을 획득하여 세션 수준 트랜잭션 작업을 수행하려고 대기하는 경우에 발생합니다.|  
 |MSQL_XACT_MUTEX|트랜잭션 사용 동기화 중에 발생합니다. 요청에서 트랜잭션을 사용하려면 먼저 뮤텍스를 획득해야 합니다.|  
-|MSQL_XP|태스크가 확장 저장 프로시저가 끝날 때까지 대기하는 경우에 발생합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이 대기 상태를 사용하여 잠재적 MARS 애플리케이션 교착 상태를 감지합니다. 대기는 확장 저장 프로시저 호출이 끝날 때 중지됩니다.|  
+|MSQL_XP|태스크가 확장 저장 프로시저가 끝날 때까지 대기하는 경우에 발생합니다. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이 대기 상태를 사용하여 잠재적 MARS 애플리케이션 교착 상태를 감지합니다. 대기는 확장 저장 프로시저 호출이 끝날 때 중지됩니다.|  
 |MSSEARCH|전체 텍스트 검색 호출 중에 발생합니다. 이 대기는 전체 텍스트 작업이 완료될 때 끝나며 경합이 아니라 전체 텍스트 작업 기간을 나타냅니다.|  
 |NET_WAITFOR_PACKET|네트워크 읽기 중 연결이 네트워크 패킷을 대기하는 경우에 발생합니다.|  
-|OLEDB|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider를 호출할 때 발생합니다. 이 대기 유형은 동기화에 사용되지 않습니다. 대신 OLE DB Provider에 대한 호출 기간을 나타냅니다.|  
+|OLEDB|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider를 호출할 때 발생합니다. 이 대기 유형은 동기화에 사용되지 않습니다. 대신 OLE DB Provider에 대한 호출 기간을 나타냅니다.|  
 |ONDEMAND_TASK_QUEUE|백그라운드 태스크가 우선 순위가 높은 시스템 작업 요청을 대기하는 동안 발생합니다. 대기 시간이 길면 우선 순위가 높은 처리할 요청이 없는 것이므로 염려할 필요가 없습니다.|  
 |PAGEIOLATCH_DT|태스크가 I/O 요청에 있는 버퍼를 래치에서 기다리는 경우에 발생합니다. 래치 요청이 삭제 모드에 있습니다. 대기 수가 많으면 디스크 하위 시스템에 문제가 있을 수 있습니다.|  
 |PAGEIOLATCH_EX|태스크가 I/O 요청에 있는 버퍼를 래치에서 기다리는 경우에 발생합니다. 래치 요청이 배타 모드에 있습니다. 대기 수가 많으면 디스크 하위 시스템에 문제가 있을 수 있습니다.|  
@@ -250,17 +260,17 @@ ms.locfileid: "68090872"
 |PREEMPTIVE_CLOSEBACKUPVDIDEVICE|가상 백업 디바이스를 닫기 위해 SQLOS 스케줄러가 우선 모드로 전환된 경우에 발생합니다.|  
 |PREEMPTIVE_CLUSAPI_CLUSTERRESOURCECONTROL|Windows 장애 조치(Failover) 클러스터 작업을 수행하기 위해 SQLOS 스케줄러가 우선 모드로 전환된 경우에 발생합니다.|  
 |PREEMPTIVE_COM_COCREATEINSTANCE|COM 개체를 만들기 위해 SQLOS 스케줄러가 우선 모드로 전환된 경우에 발생합니다.|  
-|PREEMPTIVE_HADR_LEASE_MECHANISM|Always On 가용성 그룹 임대 관리자 CSS 진단에 대 한 일정입니다.|  
+|PREEMPTIVE_HADR_LEASE_MECHANISM|CSS 진단에 대 한 가용성 그룹 임대 관리자 일정을 Always On 합니다.|  
 |PREEMPTIVE_SOSTESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_STRESSDRIVER|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_TESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_XETESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PRINT_ROLLBACK_PROGRESS|ALTER DATABASE termination 절을 사용하여 전환된 데이터베이스에서 사용자 프로세스가 끝나기를 기다리는 데 사용됩니다. 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.|  
 |PWAIT_HADR_CHANGE_NOTIFIER_TERMINATION_SYNC|백그라운드 태스크가 폴링을 통해 Windows Server 장애 조치(Failover) 클러스터링 알림을 받는 백그라운드 태스크가 종료될 때까지 기다리는 경우에 발생합니다.  내부적으로만 사용됩니다.|  
-|PWAIT_HADR_CLUSTER_INTEGRATION|추가, 바꾸기 및/또는 제거는 항상 내부 목록 (예: 네트워크, 네트워크 주소 또는 가용성 그룹 수신기의 목록)에 대 한 쓰기 잠금을 가져올 작업을 기다리고 있습니다.  내부적으로만 사용됩니다.|  
-|PWAIT_HADR_OFFLINE_COMPLETED|Always On 가용성 그룹 삭제 작업이 Windows Server 장애 조치 클러스터링 개체를 제거 하기 전에 오프 라인으로 전환 하는 대상 가용성 그룹 대기 중입니다.|  
-|PWAIT_HADR_ONLINE_COMPLETED|Always On 만들거나가 온라인 대상 가용성 그룹에 대 한 가용성 그룹 장애 조치 작업을 기다리고 있습니다.|  
-|PWAIT_HADR_POST_ONLINE_COMPLETED|Always On 가용성 그룹 삭제 작업이 이전 명령의 일부로 예약 된 백그라운드 태스크가 종료 대기 중입니다. 예를 들어 가용성 데이터베이스를 주 역할로 전환 중인 백그라운드 작업이 있을 수 있습니다. 경합 상태를 방지하기 위해 DROP AVAILABILITY GROUP DDL이 이 백그라운드 태스크가 종료될 때까지 기다려야 합니다.|  
+|PWAIT_HADR_CLUSTER_INTEGRATION|추가, 바꾸기 및/또는 제거 작업에서 Always On 내부 목록 (예: 네트워크, 네트워크 주소 또는 가용성 그룹 수신기의 목록)에 대 한 쓰기 잠금을 잡기 위해 대기 하 고 있습니다.  내부적으로만 사용됩니다.|  
+|PWAIT_HADR_OFFLINE_COMPLETED|Always On drop availability group 작업이 Windows Server 장애 조치 (Failover) 클러스터링 개체를 삭제 하기 전에 대상 가용성 그룹이 오프 라인 상태가 될 때까지 기다리고 있습니다.|  
+|PWAIT_HADR_ONLINE_COMPLETED|가용성 그룹 만들기 또는 장애 조치 (failover) 작업이 대상 가용성 그룹이 온라인 상태가 될 때까지 기다리고 있습니다. Always On|  
+|PWAIT_HADR_POST_ONLINE_COMPLETED|Always On drop availability group 작업이 이전 명령의 일부로 예약 된 백그라운드 태스크가 종료 될 때까지 기다리고 있습니다. 예를 들어 가용성 데이터베이스를 주 역할로 전환 중인 백그라운드 작업이 있을 수 있습니다. 경합 상태를 방지하기 위해 DROP AVAILABILITY GROUP DDL이 이 백그라운드 태스크가 종료될 때까지 기다려야 합니다.|  
 |PWAIT_HADR_WORKITEM_COMPLETED|비동기 작업 태스크가 완료될 때까지 기다리는 스레드에 의한 내부 대기입니다. 이는 예상되는 대기이며 CSS용으로 사용됩니다.|  
 |PWAIT_MD_LOGIN_STATS|로그인 상태에서 메타데이터의 내부 동기화 중에 발생합니다.|  
 |PWAIT_MD_RELATION_CACHE|테이블 또는 인덱스에서 메타데이터의 내부 동기화 중에 발생합니다.|  
@@ -308,7 +318,8 @@ ms.locfileid: "68090872"
 |SLEEP_SYSTEMTASK|tempdb 시작이 완료될 때까지 대기하는 동안 백그라운드 태스크 시작 중에 발생합니다.|  
 |SLEEP_TASK|일반 이벤트가 발생할 때까지 대기하는 동안 태스크가 중지되는 경우에 발생합니다.|  
 |SLEEP_TEMPDBSTARTUP|태스크가 tempdb 시작이 완료될 때까지 대기하는 동안 발생합니다.|  
-|SNI_CRITICAL_SECTION|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네트워킹 구성 요소의 내부 동기화 중에 발생합니다.|  
+|SNI_CRITICAL_SECTION|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네트워킹 구성 요소의 내부 동기화 중에 발생합니다.|  
 |SNI_HTTP_WAITFOR_0_DISCON|처리 중인 HTTP 연결이 종료될 때까지 대기하는 동안 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 종료 중에 발생합니다.|  
 |SNI_LISTENER_ACCESS|NUMA(비균일 메모리 액세스) 노드의 상태 변경 업데이트 작업을 대기하는 동안 발생합니다. 상태 변경에 대한 액세스는 직렬화됩니다.|  
 |SNI_TASK_COMPLETION|NUMA 노드 상태 변경 동안 모든 태스크가 완료될 때까지 대기하는 중에 발생합니다.|  
@@ -316,15 +327,18 @@ ms.locfileid: "68090872"
 |SOAP_WRITE|HTTP 네트워크 쓰기가 완료될 때까지 대기하는 동안 발생합니다.|  
 |SOS_CALLBACK_REMOVAL|콜백을 제거하기 위해 콜백 목록에 대한 동기화를 수행하는 동안 발생합니다. 서버 초기화가 완료된 후에는 이 카운터가 변경되지 않습니다.|  
 |SOS_DISPATCHER_MUTEX|디스패처 풀의 내부 동기화 중에 발생합니다. 풀이 조정되는 경우도 포함됩니다.|  
-|SOS_LOCALALLOCATORLIST|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 관리자의 내부 동기화 중에 발생합니다.|  
+|SOS_LOCALALLOCATORLIST|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 관리자의 내부 동기화 중에 발생합니다.|  
 |SOS_MEMORY_USAGE_ADJUSTMENT|메모리 사용량이 풀 사이에서 조절될 경우 발생합니다.|  
 |SOS_OBJECT_STORE_DESTROY_MUTEX|풀에서 개체를 삭제하는 경우 메모리 풀의 내부 동기화 중에 발생합니다.|  
 |SOS_PROCESS_AFFINITY_MUTEX|프로세스 선호도 설정에 대한 액세스 동기화 중에 발생합니다.|  
-|SOS_RESERVEDMEMBLOCKLIST|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 관리자의 내부 동기화 중에 발생합니다.|  
+|SOS_RESERVEDMEMBLOCKLIST|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 관리자의 내부 동기화 중에 발생합니다.|  
 |SOS_SCHEDULER_YIELD|다른 작업이 실행될 수 있도록 태스크가 자발적으로 스케줄러를 양보하는 경우에 발생합니다. 이 대기 중에 태스크는 해당 퀀텀이 갱신될 때까지 대기합니다.|  
 |SOS_SMALL_PAGE_ALLOC|일부 메모리 개체에 의해 관리되는 메모리의 할당 및 해제 중에 발생합니다.|  
 |SOS_STACKSTORE_INIT_MUTEX|내부 저장소 초기화 동기화 중에 발생합니다.|  
-|SOS_SYNC_TASK_ENQUEUE_EVENT|태스크가 동기 방식으로 시작되는 경우에 발생합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 태스크는 대부분 비동기 방식으로 시작되므로 작업 요청이 작업 큐에 배치된 후 제어가 즉시 시작으로 돌아갑니다.|  
+|SOS_SYNC_TASK_ENQUEUE_EVENT|태스크가 동기 방식으로 시작되는 경우에 발생합니다. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 태스크는 대부분 비동기 방식으로 시작되므로 작업 요청이 작업 큐에 배치된 후 제어가 즉시 시작으로 돌아갑니다.|  
 |SOS_VIRTUALMEMORY_LOW|메모리 할당이 리소스 관리자가 가상 메모리를 해제할 때까지 대기하는 경우에 발생합니다.|  
 |SOSHOST_EVENT|CLR과 같은 호스팅된 구성 요소가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트 동기화 개체를 대기하는 경우에 발생합니다.|  
 |SOSHOST_INTERNAL|CLR과 같은 호스팅된 구성 요소에 사용되는 메모리 관리자 콜백 동기화 중에 발생합니다.|  

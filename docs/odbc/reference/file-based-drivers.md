@@ -15,17 +15,17 @@ ms.assetid: d92e0c5c-d176-4282-bbe1-d449e2223d50
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 803da51c8507faa47f92b295d3749f00317bc413
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915378"
 ---
 # <a name="file-based-drivers"></a>파일 기반 드라이버
-파일 기반 드라이버는 드라이버 사용에 대 한 독립 실행형 데이터베이스 엔진을 제공 하지 않는 dBASE와 같은 데이터 원본 사용 됩니다. 이러한 드라이버는 실제 데이터에 직접 액세스 및 SQL 문 처리할 하는 데이터베이스 엔진을 구현 해야 합니다. 파일 기반 드라이버에서 데이터베이스 엔진을 표준 사례로 최소 SQL 적합성 수준에서 정의 하는 ODBC SQL의 하위 집합을 구현 이 규칙 수준에서 SQL 문의 목록을 참조 하세요. [부록 c: SQL 문법을](../../odbc/reference/appendixes/appendix-c-sql-grammar.md)합니다.  
+파일 기반 드라이버는 드라이버를 사용할 수 있는 독립 실행형 데이터베이스 엔진을 제공 하지 않는 dBASE와 같은 데이터 원본에 사용 됩니다. 이러한 드라이버는 물리적 데이터에 직접 액세스 하 고 SQL 문을 처리 하기 위해 데이터베이스 엔진을 구현 해야 합니다. 표준 사례로, 파일 기반 드라이버의 데이터베이스 엔진은 최소 SQL 규칙 수준으로 정의 된 ODBC SQL의 하위 집합을 구현 합니다. 이 규칙 수준의 SQL 문 목록은 [부록 C: Sql 문법](../../odbc/reference/appendixes/appendix-c-sql-grammar.md)을 참조 하세요.  
   
- 비교 파일 및 DBMS 기반 드라이버의 파일 기반 드라이버는 데이터베이스 엔진 구성 요소에 구성 되므로 네트워크 부분이 없음을 덜 복잡 하 게 인해 작성 하기가 및 덜 강력한 소수의 사용자가 데이터베이스를 쓸 수 있는 시간 때문에 타사 데이터베이스에서 생성 된 것으로 강력한 엔진입니다.  
+ 파일 기반 드라이버와 DBMS 기반 드라이버를 비교할 때 파일 기반 드라이버는 데이터베이스 엔진 구성 요소 때문에 작성 하기 어렵고, 네트워크 부분이 없어 구성 하기가 복잡 하며, 사용자가 데이터베이스를 쓸 시간이 없기 때문에 더 강력 하지 않습니다. 데이터베이스 회사에서 생성 하는 엔진과 강력 합니다.  
   
- 다음 그림은 네트워크 파일 서버의 파일 기반 드라이버, 하나는 데이터를 로컬로 상주 및 상주 하는 다른 두 개의 다른 구성을 보여 줍니다.  
+ 다음 그림은 데이터를 로컬로 저장 하는 파일 기반 드라이버의 두 가지 구성과 네트워크 파일 서버에 상주 하는 파일을 보여 줍니다.  
   
- ![파일의 두 가지 구성&#45;기반 드라이버](../../odbc/reference/media/pr06.gif "pr06")
+ ![파일&#45;기반 드라이버의 두 가지 구성](../../odbc/reference/media/pr06.gif "pr06")

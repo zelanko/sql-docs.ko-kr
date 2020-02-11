@@ -20,14 +20,14 @@ ms.assetid: 568f5252-d069-4d99-a01b-2ada87ad1304
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 448270ddf0e8cd7efb5ec39a93d4ff993360730e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919574"
 ---
 # <a name="connectcomplete-and-disconnect-events-ado"></a>ConnectComplete 및 Disconnect 이벤트(ADO)
-합니다 **ConnectComplete** 이벤트 연결이 시작 된 후 호출 됩니다. 합니다 **연결 끊기** 이벤트 연결이 종료 된 후 호출 됩니다.  
+**Connectcomplete** 이벤트는 연결이 시작 된 후에 호출 됩니다. 연결 **끊기** 이벤트는 연결이 종료 된 후에 호출 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,18 +39,18 @@ Disconnect adStatus, pConnection
   
 #### <a name="parameters"></a>매개 변수  
  *pError*  
- [오류](../../../ado/reference/ado-api/error-object.md) 개체입니다. 경우에 발생 한 오류에 설명 합니다 값 *adStatus* 됩니다 **adStatusErrorsOccurred**; 설정 되지 않은 고, 그렇지 합니다.  
+ [오류](../../../ado/reference/ado-api/error-object.md) 개체입니다. *Adstatus* 값이 **adStatusErrorsOccurred**인 경우 발생 하는 오류를 설명 합니다. 그렇지 않으면 설정 되지 않습니다.  
   
  *adStatus*  
- [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) 반환 값 항상 **adStatusOK**합니다.  
+ 항상 **Adstatusok**를 반환 하는 [eventstatusenum](../../../ado/reference/ado-api/eventstatusenum.md) 값입니다.  
   
- 때 **ConnectComplete** 가 호출이 매개 변수 설정 **adStatusCancel** 경우는 **WillConnect** 이벤트에서 보류 중인 연결의 취소를 요청 합니다.  
+ **Connectcomplete** 가 호출 되 면이 매개 변수는 **WillConnect** 이벤트에서 보류 중인 연결 취소가 요청 된 경우 **adstatuscancel** 로 설정 됩니다.  
   
- 이 매개 변수를 설정 하거나 이벤트가 반환 되기 전에 **adStatusUnwantedEvent** 후속 알림을 방지 하 합니다. 그러나 닫았다가 합니다 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 하면 이러한 이벤트 다시 발생 합니다.  
+ 두 이벤트를 반환 하기 전에이 매개 변수를 **adStatusUnwantedEvent** 로 설정 하 여 후속 알림이 발생 하지 않도록 합니다. 그러나 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 을 닫았다가 다시 열면 이러한 이벤트가 다시 발생 합니다.  
   
  *pConnection*  
- 합니다 **연결** 이 이벤트에 적용 되는 개체입니다.  
+ 이 이벤트가 적용 되는 **연결** 개체입니다.  
   
-## <a name="see-also"></a>관련 항목  
- [ADO 이벤트 모델 예제 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+## <a name="see-also"></a>참고 항목  
+ [ADO Events 모델 예제 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO 이벤트 처리기 요약](../../../ado/guide/data/ado-event-handler-summary.md)

@@ -13,15 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0b1882c04d4aacd76b59cb952781205edac84012
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914821"
 ---
-# <a name="mssqlserver2533"></a>MSSQLSERVER_2533
+# <a name="mssqlserver_2533"></a>MSSQLSERVER_2533
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -30,7 +30,7 @@ ms.locfileid: "62914821"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|DBCC_PAGE_WAS_NOT_SEEN|  
-|메시지 텍스트|테이블 오류: 개체 ID O_ID, 인덱스 ID I_ID, 파티션 ID PN_ID, 할당 된 페이지 P_ID, 할당 단위 ID A_ID (type 유형) 표시 되지 않습니다. 페이지가 잘못되었거나 페이지 머리글의 할당 단위 ID가 잘못되었을 수 있습니다.|  
+|메시지 텍스트|테이블 오류: 개체 ID O_ID, 인덱스 ID I_ID, 파티션 ID PN_ID, 할당 단위 ID A_ID(TYPE 유형)에 할당된 페이지 P_ID이(가) 없습니다. 페이지가 잘못되었거나 페이지 머리글의 할당 단위 ID가 잘못되었을 수 있습니다.|  
   
 ## <a name="explanation"></a>설명  
  페이지가 할당 단위 ID *A_ID*에 할당되었지만 이 할당 단위는 페이지 머리글에 없습니다. 헤더에 다른 할당 단위 ID가 있습니다. 페이지 헤더에 있는 할당 단위 ID가 올바른 개체에 대한 것이면 해당 페이지에 MSSQLEngine_2534 오류가 발생할 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "62914821"
 ## <a name="user-action"></a>사용자 동작  
   
 ### <a name="look-for-hardware-failure"></a>하드웨어 오류 찾기  
- 하드웨어 진단을 실행하여 문제가 있으면 이를 해결하십시오. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 시스템 및 응용 프로그램 로그와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그도 검토하여 해당 오류가 하드웨어 오류로 인해 발생했는지 확인하십시오. 로그에 하드웨어 관련 문제가 포함되어 있으면 이를 해결하십시오.  
+ 하드웨어 진단을 실행하여 문제가 있으면 이를 해결하십시오. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 시스템 및 애플리케이션 로그와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그도 검토하여 해당 오류가 하드웨어 오류로 인해 발생했는지 확인하십시오. 로그에 하드웨어 관련 문제가 포함되어 있으면 이를 해결하십시오.  
   
  데이터 손상 문제가 지속되면 다른 하드웨어 구성 요소로 교체하여 문제를 해결하십시오. 시스템의 디스크 컨트롤러에 쓰기 캐시가 설정되어 있지 않은지 확인하세요. 쓰기 캐시가 문제가 된다고 생각되면 하드웨어 공급업체에 문의하십시오.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62914821"
 > [!CAUTION]  
 >  이 복구로 인해 데이터가 손실될 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [MSSQLSERVER_2534](mssqlserver-2534-database-engine-error.md)  
   
   

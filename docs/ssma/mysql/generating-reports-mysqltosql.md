@@ -12,57 +12,57 @@ ms.assetid: 1c0202e8-546d-4cb3-a37f-1d2e35d53839
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: a5b94ef545285cd7dfa4597820da00552b9f3930
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68103008"
 ---
 # <a name="generating-reports-mysqltosql"></a>보고서 생성(MySQLToSQL)
-개체 트리 수준 SSMA 콘솔의 명령을 사용 하 여 수행 되는 특정 활동의 보고서를 생성 됩니다.  
+명령을 사용 하 여 수행 되는 특정 활동의 보고서는 SSMA 콘솔에서 개체 트리 수준에 생성 됩니다.  
   
-보고서를 생성 하려면 다음 절차를 따르십시오.  
+다음 절차를 사용 하 여 보고서를 생성 합니다.  
   
-1.  지정 된 **쓰기-요약-보고 대상** 매개 변수입니다. 지정 하는 경우 관련 된 보고서 파일 이름으로 저장 됩니다 또는 폴더를 지정 합니다. 파일 이름은 시스템 정의 where, 아래 표에서 설명 했 듯이 **&lt;n&gt;** 동일한 명령 실행할 때마다를 사용 하 여 숫자를 사용 하 여 증가 하는 고유한 파일입니다.  
+1.  **쓰기 요약-보고서-대상** 매개 변수를 지정 합니다. 관련 보고서는 파일 이름 (지정 된 경우) 또는 지정한 폴더에 저장 됩니다. 파일 이름은 아래 표에 설명 된 대로 시스템에서 미리 정의 되어 있습니다. ** &lt;n&gt; ** 은 동일한 명령을 실행할 때마다 숫자로 증가 하는 고유 파일 번호입니다.  
   
-    보고서 vis-...-vis 명령은 다음과 같습니다.  
+    Reports vis-à-vis 명령은 다음과 같습니다.  
   
     ||||  
     |-|-|-|  
-    |**Sl 합니다. No.**|**Command**|**보고서 제목**|  
-    |1|generate-assessment-report|AssessmentReport&lt;n&gt;.XML|  
-    |2|convert-schema|SchemaConversionReport&lt;n&gt;.XML|  
-    |3|데이터 마이그레이션|DataMigrationReport&lt;n&gt;.XML|  
-    |4|convert-sql-statement|ConvertSQLReport&lt;n&gt;.XML|  
-    |5|동기화 대상|TargetSynchronizationReport&lt;n&gt;.XML|  
-    |6|데이터베이스에서 새로 고침|SourceDBRefreshReport&lt;n&gt;.XML|  
+    |**Sl. 아니요.**|**명령**|**보고서 제목**|  
+    |1|평가 생성-보고서|AssessmentReport&lt;n&gt;. XML|  
+    |2|변환-스키마|SchemaConversionReport&lt;n&gt;. XML|  
+    |3|마이그레이션-데이터|DataMigrationReport&lt;n&gt;. XML|  
+    |4|convert-sql 문|ConvertSQLReport&lt;n&gt;. XML|  
+    |5|동기화-대상|TargetSynchronizationReport&lt;n&gt;. XML|  
+    |6|데이터베이스에서 새로 고침|SourceDBRefreshReport&lt;n&gt;. XML|  
   
     > [!IMPORTANT]  
-    > 형식의 출력 보고서는 평가 보고서와 다릅니다. 전자는 하는 동안 실행 된 명령의 성능에 대 한 보고서, 후자는 XML 보고서를 프로그래밍 방식으로 사용 합니다.  
+    > 출력 보고서는 평가 보고서와 다릅니다. 전자는 실행 된 명령의 성능에 대 한 보고서 이며 후자는 프로그래밍 방식으로 사용할 수 있는 XML 보고서입니다.  
   
-    (Sl에서에서 출력 보고서에 대 한 명령 옵션. 아니요. 위의 2-4)를 참조 합니다 [SSMA 콘솔 실행 &#40;MySQLToSQL&#41; ](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md) 섹션.  
+    Sl에서 출력 보고서에 대 한 명령 옵션을 선택 합니다. 아니요. 2-4) [&#40;MySQLToSQL&#41;섹션에서 SSMA 콘솔 실행](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md) 을 참조 하세요.  
   
-2.  세부 정보 보고서 세부 정보 표시 설정을 사용 하 여 출력 보고서에서 원하는 범위를 나타냅니다.  
-  
-    ||||  
-    |-|-|-|  
-    |**Sl 합니다. No.**|**명령 및 매개 변수**|**출력 설명**|  
-    |1|verbose="false"|활동의 요약 된 보고서를 생성합니다.|  
-    |2|verbose="true"|각 작업에 대 한 요약 및 자세한 상태 보고서를 생성합니다.|  
-  
-    > [!NOTE]  
-    > 위에 지정 된 보고서의 자세한 정도 설정이-평가-보고서 생성, 스키마 변환, 데이터 마이그레이션, 문-변환-sql 명령에 적용 됩니다.  
-  
-3.  오류 보고 설정을 사용 하는 오류 보고서에 원하는 세부 범위를 나타냅니다.  
+2.  보고서 세부 정보 표시 설정을 사용 하 여 출력 보고서에서 원하는 세부 정보 범위를 표시 합니다.  
   
     ||||  
     |-|-|-|  
-    |**Sl 합니다. No.**|**명령 및 매개 변수**|**출력 설명**|  
-    |1|report-errors="false"|오류 세부 정보 없음 / 경고 / 정보 메시지입니다.|  
-    |2|report-errors="true"|자세한 오류 / 경고 / 정보 메시지입니다.|  
+    |**Sl. 아니요.**|**명령 및 매개 변수**|**출력 설명**|  
+    |1|verbose = "false"|활동의 요약 된 보고서를 생성 합니다.|  
+    |2|verbose = "true"|각 작업에 대 한 요약 및 자세한 상태 보고서를 생성 합니다.|  
   
     > [!NOTE]  
-    > 위에 지정 된 오류 보고 설정-평가-보고서 생성, 스키마 변환, 데이터 마이그레이션, 문-변환-sql 명령에 적용 됩니다.  
+    > 위에서 지정한 보고서의 자세한 정도 설정은 평가 보고서 생성, 변환-스키마, 마이그레이션 데이터, convert-sql 문 명령에 적용 됩니다.  
+  
+3.  오류 보고 설정을 사용 하 여 오류 보고서에서 원하는 세부 정보 범위를 표시 합니다.  
+  
+    ||||  
+    |-|-|-|  
+    |**Sl. 아니요.**|**명령 및 매개 변수**|**출력 설명**|  
+    |1|report-errors = "false"|오류/경고/정보 메시지에 대 한 세부 정보가 없습니다.|  
+    |2|report-errors = "true"|자세한 오류/경고/정보 메시지입니다.|  
+  
+    > [!NOTE]  
+    > 위에서 지정한 오류 보고 설정은 평가 보고서 생성, 변환-스키마, 마이그레이션 데이터, convert-sql 문 명령에 적용 됩니다.  
   
 ```xml  
 <generate-assessment-report  
@@ -84,10 +84,10 @@ ms.locfileid: "68103008"
 />  
 ```  
   
-### <a name="synchronize-target"></a>동기화 대상:  
-명령을 **동기화 대상** 했습니다 **보고서 오류-간** 동기화 작업에 대 한 오류 보고서의 위치를 지정 하는 매개 변수. 그런 다음 이름의 파일이 **TargetSynchronizationReport&lt;n&gt;합니다. XML** 지정된 된 위치에 만들어진 위치 **&lt;n&gt;** 동일한 명령 실행할 때마다를 사용 하 여 숫자를 사용 하 여 증가 하는 고유한 파일입니다.  
+### <a name="synchronize-target"></a>동기화-대상:  
+**Synchronize-target** 명령에는 동기화 작업에 대 한 오류 보고서의 위치를 지정 하는 **보고서-오류** 매개 변수가 있습니다. 그런 다음 이름이 **TargetSynchronizationReport&lt;n&gt;인 파일입니다. **지정 된 위치에 XML이 생성 됩니다. ** &lt;여기서&gt; n** 은 동일한 명령을 실행할 때마다 숫자로 증가 하는 고유 파일 번호입니다.  
   
-**참고:** 폴더 경로 지정 하는 경우 ' 보고서-오류-를 ' 매개 변수는 명령 ' 동기화 대상 '의 선택적 특성이 됩니다.  
+**참고:** 폴더 경로를 지정 하면 ' synchronize-target ' 명령에 대 한 선택적 특성이 ' report-errors ' 매개 변수가 됩니다.  
   
 ```xml  
 <!-- Example: Synchronize target entire Database with all attributes-->  
@@ -102,20 +102,20 @@ ms.locfileid: "68103008"
   
 />  
 ```  
-**object-name:** 동기화 (가질 수도 있습니다 개별 개체 이름 또는 그룹 개체 이름)에 대 한 것으로 간주 하는 개체를 지정 합니다.  
+**개체 이름:** 동기화에 사용할 개체를 지정 합니다 (개별 개체 이름 또는 그룹 개체 이름이 있을 수도 있음).  
   
-**오류 발생 시:** 동기화 오류 경고 또는 오류도 지정할지 여부를 지정 합니다. 오류 발생 시에 대 한 사용 가능한 옵션:  
+**오류가 발생 한 경우:** 동기화 오류를 경고 또는 오류로 지정 하는지 여부를 지정 합니다. 오류 시 사용 가능한 옵션:  
   
--   report-total-as-warning  
+-   보고-전체 경고  
   
--   report-each-as-warning  
+-   report-경고만  
   
--   스크립트 실패  
+-   fail-스크립트  
   
-### <a name="refresh-from-database"></a>새로 고침--데이터베이스:  
-명령을 **데이터베이스에서 새로 고침** 했습니다 **보고서 오류-간** 새로 고침 작업에 대 한 오류 보고서의 위치를 지정 하는 매개 변수. 그런 다음 이름의 파일이 **SourceDBRefreshReport&lt;n&gt;합니다. XML** 지정된 된 위치에 만들어진 위치 **&lt;n&gt;** 동일한 명령 실행할 때마다를 사용 하 여 숫자를 사용 하 여 증가 하는 고유한 파일입니다.  
+### <a name="refresh-from-database"></a>새로 고침-데이터베이스에서:  
+**데이터베이스에서 새로 고침** 명령에는 새로 고침 작업에 대 한 오류 보고서의 위치를 지정 하는 **보고서-오류** 매개 변수가 있습니다. 그런 다음 이름이 **SourceDBRefreshReport&lt;n&gt;인 파일입니다. **지정 된 위치에 XML이 생성 됩니다. ** &lt;여기서&gt; n** 은 동일한 명령을 실행할 때마다 숫자로 증가 하는 고유 파일 번호입니다.  
   
-**참고:** 폴더 경로 지정 하는 경우 ' 보고서-오류-를 ' 매개 변수는 명령 ' 동기화 대상 '의 선택적 특성이 됩니다.  
+**참고:** 폴더 경로를 지정 하면 ' synchronize-target ' 명령에 대 한 선택적 특성이 ' report-errors ' 매개 변수가 됩니다.  
   
 ```xml  
 <!-- Example: Refresh entire Schema (with all attributes)-->  
@@ -132,16 +132,16 @@ ms.locfileid: "68103008"
   
 />  
 ```  
-**object-name:** 새로 고침 (가질 수도 있습니다 개별 개체 이름 또는 그룹 개체 이름)에 대 한 것으로 간주 하는 개체를 지정 합니다.  
+**개체 이름:** 새로 고침에 사용할 개체를 지정 합니다. 개별 개체 이름이 나 그룹 개체 이름도 지정할 수 있습니다.  
   
-**오류 발생 시:** 경고 또는 오류 새로 고침 오류를 지정할지 여부를 지정 합니다. 오류 발생 시에 대 한 사용 가능한 옵션:  
+**오류가 발생 한 경우:** 새로 고침 오류를 경고 또는 오류로 지정 하는지 여부를 지정 합니다. 오류 시 사용 가능한 옵션:  
   
--   report-total-as-warning  
+-   보고-전체 경고  
   
--   report-each-as-warning  
+-   report-경고만  
   
--   스크립트 실패  
+-   fail-스크립트  
   
-## <a name="see-also"></a>관련 항목  
-[SSMA 콘솔 (MySQL)를 실행합니다.](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
+## <a name="see-also"></a>참고 항목  
+[SSMA 콘솔 실행 (MySQL)](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
   

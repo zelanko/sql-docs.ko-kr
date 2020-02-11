@@ -16,10 +16,10 @@ ms.assetid: ce5e8efc-6a2d-40d5-a658-8dd35cd1dd09
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dac34e8b3559b4d77aec411fd636ac7850932a4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096401"
 ---
 # <a name="dbase-driver-programming-considerations"></a>dBASE 드라이버 프로그래밍 고려 사항
@@ -34,4 +34,4 @@ ms.locfileid: "68096401"
 -   [기타 dBASE 드라이버 프로그래밍 세부 정보](../../odbc/microsoft/other-dbase-driver-programming-details.md)  
   
 > [!NOTE]  
->  ODBC 데스크톱 데이터베이스 드라이버를 통해 dBASE ISAM 파일에 액세스 하려면 Borland 데이터베이스 엔진 설치 됩니다.
+>  ODBC 데스크톱 데이터베이스 드라이버를 통해 dBASE ISAM 파일에 액세스 하려면 Borland 데이터베이스 엔진을 설치 해야 합니다.

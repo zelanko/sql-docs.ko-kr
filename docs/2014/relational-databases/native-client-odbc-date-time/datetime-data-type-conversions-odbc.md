@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dcc48b1e545fb58d076074f9b11960227f788321
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63206989"
 ---
 # <a name="datetime-data-type-conversions-odbc"></a>datetime 데이터 형식 변환(ODBC)
@@ -30,7 +30,7 @@ ms.locfileid: "63206989"
   
 -   날짜 문자열의 형식은 'yyyy-mm-dd'입니다.  
   
- 문자열에서 변환을 시작하면 공백 및 필드 너비를 보다 융통성 있게 사용할 수 있습니다. 자세한 내용은 참조는 "데이터 형식: 문자열 및 리터럴"섹션 [ODBC 날짜 및 시간 기능 향상을 위한 데이터 형식 지원](data-type-support-for-odbc-date-and-time-improvements.md)합니다.  
+ 문자열에서 변환을 시작하면 공백 및 필드 너비를 보다 융통성 있게 사용할 수 있습니다. 자세한 내용은 [ODBC 날짜 및 시간 향상을 위한 데이터 형식 지원](data-type-support-for-odbc-date-and-time-improvements.md)의 "데이터 형식: 문자열 및 리터럴" 섹션을 참조 하세요.  
   
  일반적인 변환 규칙은 다음과 같습니다.  
   
@@ -55,9 +55,10 @@ ms.locfileid: "63206989"
  C 형식을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜/시간 형식으로 변환할 때 고려해야 할 문제를 표시합니다.  
   
  [SQL에서 C로 변환](datetime-data-type-conversions-from-sql-to-c.md)  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜/시간 형식을 C 형식으로 변환할 때 고려해야 할 문제를 표시합니다.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜/시간 형식을 C 형식으로 변환할 때 고려해야 할 문제를 표시합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [날짜 및 시간 기능 향상 &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
+## <a name="see-also"></a>참고 항목  
+ [ODBC&#41;&#40;날짜 및 시간 기능 향상](date-and-time-improvements-odbc.md)  
   
   

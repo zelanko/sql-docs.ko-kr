@@ -1,5 +1,5 @@
 ---
-title: Resync Command 속성-동적 (ADO) | Microsoft Docs
+title: Resync Command 속성-Dynamic (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,26 +14,26 @@ ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e81fa9ffb28ba31f50d77cacf372bc24d09787ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917143"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Resync Command 속성-동적(ADO)
-사용자가 제공한 명령 문자열을 지정 합니다 [다시 동기화](../../../ado/reference/ado-api/resync-method.md) 에 지정 된 테이블에서 데이터를 새로 고치려면 메서드 문제를 [고유 테이블](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) 동적 속성입니다.  
+[Resync](../../../ado/reference/ado-api/resync-method.md) 메서드에서 [고유 테이블](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) 동적 속성의 테이블에 있는 데이터를 새로 고치는 데 발급 하는 사용자 제공 명령 문자열을 지정 합니다.  
   
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
- 설정 하거나 반환 된 **문자열** 명령 문자열 값.  
+ 명령 문자열인 **문자열** 값을 설정 하거나 반환 합니다.  
   
 ## <a name="remarks"></a>설명  
- 합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체가 여러 기본 테이블에서 실행 하는 조인 작업의 결과입니다. 영향을 받는 행에 따라 달라 집니다 합니다 *AffectRecords* 의 매개 변수를 [Resync](../../../ado/reference/ado-api/resync-method.md) 메서드. 표준 **Resync** 경우 메서드가 실행 되기 합니다 [고유 테이블](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) 및 **Resync Command** 속성이 설정 되지 않습니다.  
+ [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체는 여러 기본 테이블에 대해 실행 된 조인 작업의 결과입니다. 영향을 받는 행은 [Resync](../../../ado/reference/ado-api/resync-method.md) 메서드의 *AffectRecords* 매개 변수에 따라 달라 집니다. [고유 테이블](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) 및 다시 **동기화 명령** 속성을 설정 하지 않으면 표준 다시 **동기화** 방법이 실행 됩니다.  
   
- 명령 문자열을 **Resync Command** 매개 변수가 있는 명령 또는 저장된 프로시저를 새로 고쳐 행을 고유 하 게 식별 하는 속성과 같은 개수 및 열 순서를 행으로 포함 된 단일 행을 반환 새로 고쳐집니다. 명령 문자열의 각 기본 키 열에 대 한 매개 변수를 포함 합니다 **고유 테이블**고, 그렇지 않으면 런타임에 오류가 반환 됩니다. 매개 변수를 자동으로 새로 고쳐져 야 하는 행의 기본 키 값으로 채웁니다.  
+ **Resync command** 속성의 명령 문자열은 새로 고칠 행을 고유 하 게 식별 하는 매개 변수가 있는 명령 또는 저장 프로시저 이며, 새로 고칠 행과 동일한 수와 순서를 포함 하는 단일 행을 반환 합니다. 명령 문자열은 **고유 테이블**의 각 기본 키 열에 대 한 매개 변수를 포함 합니다. 그렇지 않으면 런타임 오류가 반환 됩니다. 매개 변수는 새로 고칠 행의 기본 키 값으로 자동으로 채워집니다.  
   
- SQL을 사용 하는 두 가지 예는 다음과 같습니다.  
+ 다음은 SQL을 기반으로 하는 두 가지 예제입니다.  
   
- 1\) 는 **레코드 집합** 명령에 의해 정의 됩니다.  
+ 1\) **레코드 집합** 은 명령으로 정의 됩니다.  
   
 ```  
 SELECT * FROM Customers JOIN Orders ON   
@@ -42,7 +42,7 @@ SELECT * FROM Customers JOIN Orders ON
    ORDER BY CustomerID  
 ```  
   
- 합니다 **Resync Command** 속성:  
+ **Resync 명령** 속성은 다음과 같이 설정 됩니다.  
   
 ```  
 "SELECT * FROM   
@@ -52,9 +52,9 @@ SELECT * FROM Customers JOIN Orders ON
 WHERE Orders.OrderID = ?"  
 ```  
   
- **고유 테이블** 는 *주문* 와 기본 키가 *OrderID*를 매개 변수화 됩니다. 하위 select에 프로그래밍 방식으로 동일한 개수 및 열 순서는 원래 명령에 의해 반환 되도록를 확인 하는 간단한 방법을 제공 합니다.  
+ **고유 테이블** 은 *Orders* 이 고 해당 기본 키인 *OrderID*는 매개 변수화 됩니다. 하위 select는 원래 명령과 동일한 개수의 열이 반환 되는지 프로그래밍 방식으로 확인 하는 간단한 방법을 제공 합니다.  
   
- 2\) 는 **레코드 집합** 저장된 프로시저에 의해 정의 됩니다.  
+ 2\) **레코드 집합** 은 저장 프로시저에 의해 정의 됩니다.  
   
 ```  
 CREATE PROC Custorders @CustomerID char(5) AS   
@@ -63,7 +63,7 @@ Customers.CustomerID = Orders.CustomerID
 WHERE Customers.CustomerID = @CustomerID  
 ```  
   
- 합니다 **Resync** 메서드에서 다음 저장된 프로시저를 실행 해야 합니다.  
+ **Resync** 메서드는 다음 저장 프로시저를 실행 해야 합니다.  
   
 ```  
 CREATE PROC CustordersResync @ordid int AS   
@@ -72,15 +72,15 @@ Customers.CustomerID = Orders.CustomerID
 WHERE Orders.ordid  = @ordid  
 ```  
   
- 합니다 **Resync Command** 속성:  
+ **Resync 명령** 속성은 다음과 같이 설정 됩니다.  
   
 ```  
 "{call CustordersResync (?)}"  
 ```  
   
- 이번에 **고유 테이블** 은 *주문* 와 기본 키가 *OrderID*, 매개 변수화 된 합니다.  
+ 이 경우 **고유 테이블** 은 *Orders* 이 고 기본 키인 *OrderID*는 매개 변수화 됩니다.  
   
- **명령을 다시 동기화** 에 추가 하는 동적 속성을 **레코드 집합** 개체 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션 때 합니다 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성**adUseClient**합니다.  
+ **Resync 명령은** [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성이 **AdUseClient**로 설정 된 경우 **레코드 집합** 개체 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션에 추가 되는 동적 속성입니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

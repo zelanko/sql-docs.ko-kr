@@ -1,5 +1,5 @@
 ---
-title: sys.resource_usage (Azure SQL Database) | Microsoft Docs
+title: resource_usage (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.service: sql-database
@@ -20,10 +20,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 3be4ff07923759af53b929852d4dbaa4088a77f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67904429"
 ---
 # <a name="sysresource_usage-azure-sql-database"></a>sys.resource_usage(Azure SQL Database)
@@ -42,15 +42,15 @@ ms.locfileid: "67904429"
   
  각 사용자 데이터베이스에 대해 한 시간에 한 개의 행이 지속적으로 있습니다. 해당 시간 동안 데이터베이스가 유휴 상태인 경우라도 행이 있으며 해당 데이터베이스의 usage_in_seconds 값이 0이 됩니다. 스토리지 사용량 및 SKU 정보는 해당 시간에 대해 적절하게 롤업됩니다.  
   
-|열|데이터 형식|설명|  
+|열|데이터 형식|Description|  
 |-------------|---------------|-----------------|  
-|Time|**datetime**|시간 단위로 시간(UTC)입니다.|  
+|time|**datetime**|시간 단위로 시간(UTC)입니다.|  
 |database_name|**nvarchar**|사용자 데이터베이스 이름입니다.|  
-|sku|**nvarchar**|SKU 이름입니다. 가능한 값은 다음과 같습니다.<br /><br /> Web<br /><br /> Business<br /><br /> 기본<br /><br /> 표준<br /><br /> Premium|  
-|usage_in_seconds|**int**|해당 시간에 사용된 CPU 시간의 합계입니다.<br /><br /> 참고: 이 열은 V11에 대 한 않으며 V12에 적용 되지 않습니다. **값은 항상 0으로 설정 됩니다.**|  
-|storage_in_megabytes|**decimal**|데이터베이스 데이터, 인덱스, 저장 프로시저 및 메타데이터를 포함하여 해당 시간에 대한 최대 스토리지 크기입니다.|  
+|sku|**nvarchar**|SKU 이름입니다. 가능한 값은 다음과 같습니다.<br /><br /> 웹<br /><br /> Business<br /><br /> 기본<br /><br /> Standard<br /><br /> Premium|  
+|usage_in_seconds|**int**|해당 시간에 사용된 CPU 시간의 합계입니다.<br /><br /> 참고:이 열은 V11에 대해 사용 되지 않으며 V12에는 적용 되지 않습니다. **값은 항상 0으로 설정 됩니다.**|  
+|storage_in_megabytes|**진수가**|데이터베이스 데이터, 인덱스, 저장 프로시저 및 메타데이터를 포함하여 해당 시간에 대한 최대 스토리지 크기입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
- 이 보기는 가상으로 연결할 수 있는 권한 가진 모든 사용자 역할에 사용할 수 있습니다 **마스터** 데이터베이스입니다.  
+ 이 보기는 가상 **master** 데이터베이스에 연결할 수 있는 권한이 있는 모든 사용자 역할에 사용할 수 있습니다.  
   
   

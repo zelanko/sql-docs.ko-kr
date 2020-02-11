@@ -13,20 +13,20 @@ ms.assetid: 984d6605-39ba-4d33-ac94-22625bfa6107
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 706677b71d1243baac0ca576bb3087d50abb6796
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68098307"
 ---
 # <a name="sqlbindcol-visual-foxpro-odbc-driver"></a>SQLBindCol(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
->  이 항목에서는 Visual FoxPro ODBC 드라이버 관련 정보를 포함합니다. 이 함수에 대 한 일반 정보에서 해당 항목을 참조 하세요 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)합니다.  
+>  이 항목에는 Visual FoxPro ODBC 드라이버 관련 정보가 포함 되어 있습니다. 이 함수에 대 한 일반 정보는 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)에서 적절 한 항목을 참조 하세요.  
   
  지원: 전체  
   
  ODBC API 규칙: 코어 수준  
   
- 결과 열에 대 한 저장소 공간을 할당 하 고 결과의 형식을 지정 합니다. 때 [SQLFetch](../../odbc/microsoft/sqlfetch-visual-foxpro-odbc-driver.md) 하거나 [SQLExtendedFetch](../../odbc/microsoft/sqlextendedfetch-visual-foxpro-odbc-driver.md) 는 호출 드라이버 배치 바인딩된 모든 열에 대 한 데이터는 할당 된 위치에 있습니다. 참조 [SQLGetTypeInfo](../../odbc/microsoft/sqlgettypeinfo-visual-foxpro-odbc-driver.md) ODBC 및 Visual FoxPro 데이터 형식 간의 매핑에 대 한 합니다.  
+ 결과 열에 대 한 저장소 공간을 할당 하 고 결과 유형을 지정 합니다. [Sqlfetch](../../odbc/microsoft/sqlfetch-visual-foxpro-odbc-driver.md) 또는 [sqlextendedfetch](../../odbc/microsoft/sqlextendedfetch-visual-foxpro-odbc-driver.md) 를 호출 하면 드라이버는 할당 된 위치에 있는 모든 바운드 열에 대 한 데이터를 저장 합니다. ODBC와 Visual FoxPro 데이터 형식 간의 매핑에 대 한 [SQLGetTypeInfo](../../odbc/microsoft/sqlgettypeinfo-visual-foxpro-odbc-driver.md) 를 참조 하세요.  
   
- 자세한 내용은 [SQLBindCol](../../odbc/reference/syntax/sqlbindcol-function.md) 에 *ODBC 프로그래머 참조*합니다.
+ 자세한 내용은 *ODBC 프로그래머 참조*에서 [SQLBindCol](../../odbc/reference/syntax/sqlbindcol-function.md) 를 참조 하세요.

@@ -16,10 +16,10 @@ ms.assetid: 09ebe734-39a0-4af0-a39b-1d5479f69635
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5222d7956cbf7ffe678cc339778c60659ed90260
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67912421"
 ---
 # <a name="translation-dlls-and-desktop-database-drivers"></a>변환 DLL 및 데스크톱 데이터베이스 드라이버

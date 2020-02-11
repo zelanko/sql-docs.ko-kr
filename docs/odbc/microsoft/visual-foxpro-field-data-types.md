@@ -14,25 +14,25 @@ ms.assetid: 50b733dc-679a-4b10-bc5d-98bb474dead2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 217058bf328677bf375d346ae7201c6eb81efa4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68087950"
 ---
 # <a name="visual-foxpro-field-data-types"></a>Visual FoxPro 필드 데이터 형식
-다음 표에서 대 한 값을 *FieldType* ALTER TABLE 및 CREATE TABLE에서 인수를 나타내고 있는지 여부를 *nFieldWidth* 및 *nPrecision* 인수는 필수.  
+다음 표에서는 ALTER TABLE 및 CREATE TABLE의 *FieldType* 인수 값을 나열 하 고 *Nfieldwidth* 및 *nprecision* 인수가 필요한 지 여부를 나타냅니다.  
   
-|*FieldType*|*NFieldWidth*|*nPrecision*|설명|  
+|*FieldType*|*NFieldWidth*|*nPrecision*|Description|  
 |-----------------|-------------------|------------------|-----------------|  
-|B|-|d|Double|  
-|C|N|-|너비의 문자 필드 *n*|  
+|b|-|d|Double|  
+|C|N|-|너비 *n* 의 문자 필드|  
 |D|-|-|Date|  
-|F|N|d|숫자 필드 너비의 부동 *n* 사용 하 여 *d* 소수 자릿수|  
+|F|N|d|소수 자릿수가 *d* 인 너비 *n* 의 부동 숫자 필드|  
 |G|-|-|일반|  
 |I|-|-|정수|  
 |L|-|-|논리|  
 |M|-|-|Memo|  
-|N|N|d|숫자 필드 너비 *n* 사용 하 여 *d* 소수 자릿수|  
-|T|-|-|Datetime|  
-|Y|-|-|Currency|
+|N|N|d|소수 자릿수가 *d* 인 너비 *n* 의 숫자 필드|  
+|T|-|-|DateTime|  
+|Y|-|-|통화|

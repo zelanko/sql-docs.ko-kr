@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66be53c7b4c145f361c49c0e1611fa2942005ae5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192467"
 ---
 # <a name="start-and-stop-a-replication-agent-sql-server-management-studio"></a>복제 에이전트 시작 및 중지(SQL Server Management Studio)
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]와 복제 모니터에 있는 **작업** 폴더 및 **복제** 폴더에서 에이전트를 시작하고 중지합니다. 다음 에이전트 및 작업을 시작하고 중지할 수 있습니다.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 및 복제 모니터에 있는 **작업** 폴더와 **복제** 폴더에서 에이전트를 시작하고 중지합니다. 다음 에이전트 및 작업을 시작하고 중지할 수 있습니다.  
   
 -   스냅샷 에이전트 - 모든 게시에서 사용  
   
@@ -45,7 +45,7 @@ ms.locfileid: "63192467"
   
 2.  **로컬 게시** 폴더를 확장한 다음 게시를 마우스 오른쪽 단추로 클릭합니다.  
   
-3.  **스냅숏 에이전트 상태 보기** 또는 **로그 판독기 에이전트 상태 보기**를 클릭합니다.  
+3.  **스냅샷 에이전트 상태 보기** 또는 **로그 판독기 에이전트 상태 보기**를 클릭합니다.  
   
 4.  **시작** 또는 **중지**를 클릭합니다.  
   
@@ -65,9 +65,9 @@ ms.locfileid: "63192467"
   
 3.  에이전트를 마우스 오른쪽 단추로 클릭한 다음 **에이전트 시작** 또는 **에이전트 중지**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [복제 모니터링](../monitoring-replication.md)   
  [복제 에이전트 실행 파일 개념](../concepts/replication-agent-executables-concepts.md)   
- [Replication Agents Overview](replication-agents-overview.md)  
+ [복제 에이전트 개요](replication-agents-overview.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_add_maintenance_plan_job (TRANSACT-SQL) | Microsoft Docs
+title: sp_add_maintenance_plan_job (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 7205855c-964f-4f55-bf75-39a55f6fe7bd
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ba27f90c8d2fc4c7e174333080815d56f90e48c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091919"
 ---
-# <a name="spaddmaintenanceplanjob-transact-sql"></a>sp_add_maintenance_plan_job(Transact-SQL)
+# <a name="sp_add_maintenance_plan_job-transact-sql"></a>sp_add_maintenance_plan_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   유지 관리 계획과 기존 작업을 연결합니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "68091919"
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,28 +44,28 @@ sp_add_maintenance_plan_job [ @plan_id = ] 'plan_id' , [ @job_id = ] 'job_id'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @plan_id = ] 'plan_id'` 유지 관리 계획의 ID를 지정 합니다. *plan_id* 됩니다 **uniqueidentifier**, 이며 유효한 ID 여야 합니다  
+`[ @plan_id = ] 'plan_id'`유지 관리 계획의 ID를 지정 합니다. *plan_id* 은 **UNIQUEIDENTIFIER**이며 유효한 id 여야 합니다.  
   
-`[ @job_id = ] 'job_id'` 유지 관리 계획에 연결할 작업의 ID를 지정 합니다. *job_id* 됩니다 **uniqueidentifier**, 이며 유효한 ID 여야 합니다 실행 작업 또는 작업을 만들려면 **sp_add_job**, 또는 SQL Server Management Studio를 사용 합니다.  
+`[ @job_id = ] 'job_id'`유지 관리 계획과 관련 된 작업의 ID를 지정 합니다. *job_id* 은 **UNIQUEIDENTIFIER**이며 유효한 id 여야 합니다. 작업을 만들려면 **sp_add_job**를 실행 하거나 SQL Server Management Studio를 사용 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
 ## <a name="remarks"></a>설명  
- **sp_add_maintenance_plan_job** 에서 실행 해야 합니다 **msdb** 데이터베이스입니다.  
+ **sp_add_maintenance_plan_job** 는 **msdb** 데이터베이스에서 실행 해야 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 멤버는 **sysadmin** 고정된 서버 역할을 실행할 수 있습니다 **sp_add_maintenance_plan_job**합니다.  
+ **Sysadmin** 고정 서버 역할의 멤버만 **sp_add_maintenance_plan_job**를 실행할 수 있습니다.  
   
 ## <a name="examples"></a>예  
- 이 예제를 사용 하 여 만든 유지 관리 계획 "B8FCECB1-E22C-11D2-AA64-00C04F688EAE" 작업 추가 **sp_add_maintenance_plan_job**합니다.  
+ 이 예에서는 **sp_add_maintenance_plan_job**를 사용 하 여 만든 유지 관리 계획에 "B8FCECB1-E22C-11D2-AA64-00C04F688EAE" 작업을 추가 합니다.  
   
 ```  
 EXECUTE   sp_add_maintenance_plan_job N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC', N'B8FCECB1-E22C-11D2-AA64-00C04F688EAE';  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [유지 관리 계획](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [데이터베이스 유지 관리 계획 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;의 데이터베이스 유지 관리 계획 저장 프로시저 &#40;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   
   

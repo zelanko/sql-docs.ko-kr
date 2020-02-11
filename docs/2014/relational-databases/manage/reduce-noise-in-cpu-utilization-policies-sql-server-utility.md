@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ce41c287105f97ce4a9cc0ce92facf9919f7ad33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035794"
 ---
 # <a name="reduce-noise-in-cpu-utilization-policies-sql-server-utility"></a>CPU 사용 정책에서 노이즈 줄이기(SQL Server 유틸리티)
@@ -41,7 +41,7 @@ ms.locfileid: "63035794"
   
 -   위반 비율 허용을 1증가분으로 30%까지 늘립니다. 1시간 동안 샘플 크기 4의 데이터 요소 1개가 단일 위반이 됩니다. 이 경우 정책에서 시간당 위반이 1번 허용되지만 1시간의 수집 기간 동안 2번 이상 위반(데이터 요소 > 30%)되면 과다 사용을 보고합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스 및 데이터 계층 응용 프로그램 프로세서 사용의 정책 임계값을 늘립니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관리되는 인스턴스 또는 데이터 계층 응용 프로그램의 전역 CPU 사용 정책을 변경하는 방법은 [유틸리티 관리&#40;SQL Server 유틸리티&#41;](../../database-engine/utility-administration-sql-server-utility.md)를 참조하세요. 개별 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 CPU 사용 정책을 변경하는 방법은 [관리되는 인스턴스 세부 정보&#40;SQL Server 유틸리티&#41;](../../database-engine/managed-instance-details-sql-server-utility.md)를 참조하세요. 개별 데이터 계층 애플리케이션의 CPU 사용 정책을 변경하는 방법은 [배포된 데이터 계층 애플리케이션 세부 정보&#40;SQL Server 유틸리티&#41;](../../database-engine/deployed-data-tier-application-details-sql-server-utility.md)를 참조하세요.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관리되는 인스턴스 및 데이터 계층 애플리케이션 프로세서 사용의 정책 임계값을 늘립니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관리되는 인스턴스 또는 데이터 계층 애플리케이션의 전역 CPU 사용 정책을 변경하는 방법은 [유틸리티 관리&#40;SQL Server 유틸리티&#41;](../../database-engine/utility-administration-sql-server-utility.md)를 참조하세요. 개별 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 CPU 사용 정책을 변경하는 방법은 [관리되는 인스턴스 세부 정보&#40;SQL Server 유틸리티&#41;](../../database-engine/managed-instance-details-sql-server-utility.md)를 참조하세요. 개별 데이터 계층 애플리케이션의 CPU 사용 정책을 변경하는 방법은 [배포된 데이터 계층 애플리케이션 세부 정보&#40;SQL Server 유틸리티&#41;](../../database-engine/deployed-data-tier-application-details-sql-server-utility.md)를 참조하세요.  
   
 ## <a name="how-frequently-should-processor-utilization-be-in-violation-before-it-is-reported-as-underutilized"></a>프로세서 사용이 얼마나 자주 위반되면 사용 미달로 보고됩니까?  
  평가 기간 및 위반 비율 허용 오차는 모두 유틸리티 탐색기의 **유틸리티 관리** 노드에 있는 **정책** 탭 설정에서 구성할 수 있습니다. 정책을 변경하려면 정책 설명 오른쪽에 있는 슬라이더 컨트롤을 사용한 다음 **적용**을 클릭합니다. 아래쪽에 있는 단추를 사용하여 기본값으로 복원하거나 변경을 취소할 수도 있습니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "63035794"
   
  기본값의 경우 매주 데이터 요소 672개가 수집되지만 정책 임계값은 0%입니다. 따라서 기본적으로 이 정책에서는 프로세서 사용 미달 위반이 발생하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관리되는 인스턴스 또는 데이터 계층 애플리케이션의 전역 CPU 사용 정책을 변경하는 방법은 [유틸리티 관리&#40;SQL Server 유틸리티&#41;](../../database-engine/utility-administration-sql-server-utility.md)를 참조하세요. 개별 SQL Server 인스턴스의 CPU 사용 정책을 변경하는 방법은 [관리되는 인스턴스 세부 정보&#40;SQL Server 유틸리티&#41;](../../database-engine/managed-instance-details-sql-server-utility.md)를 참조하세요. 개별 데이터 계층 애플리케이션의 CPU 사용 정책을 변경하는 방법은 [배포된 데이터 계층 애플리케이션 세부 정보&#40;SQL Server 유틸리티&#41;](../../database-engine/deployed-data-tier-application-details-sql-server-utility.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [유틸리티 관리&#40;SQL Server 유틸리티&#41;](../../database-engine/utility-administration-sql-server-utility.md)   
  [SQL Server 유틸리티에서 SQL Server 인스턴스 모니터링](monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
  [리소스 상태 정책 정의 수정&#40;SQL Server 유틸리티&#41;](modify-a-resource-health-policy-definition-sql-server-utility.md)   

@@ -1,5 +1,5 @@
 ---
-title: 데이터베이스 관련 동적 관리 뷰 (TRANSACT-SQL) | Microsoft Docs
+title: 데이터베이스 관련 동적 관리 뷰 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/18/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ ms.assetid: 615e9440-32a3-4ec4-94c6-94547e10ebda
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c51f22a66344c0ae72daf7ca662285e1fdde5b5b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68090885"
 ---
 # <a name="database-related-dynamic-management-views-transact-sql"></a>데이터베이스 관련 동적 관리 뷰(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  이 섹션의 다음 동적 관리 개체를 설명 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 및 SQL Database의 경우도 있습니다.  
+  이 섹션에서는의 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 다음과 같은 동적 관리 개체 및 SQL Database 경우에 대해 설명 합니다.  
   
 |||  
 |-|-|  
@@ -36,15 +36,15 @@ ms.locfileid: "68090885"
 |[sys.dm_db_uncontained_entities](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)||
 
 
-DMV의 SQL Database 또는 SQL Data Warehouse에 고유 합니다.   
+DMV는 SQL Database 또는 SQL Data Warehouse에 대해 고유 합니다.   
 
 | | | 
 |-|-|  
-|[sys.dm_db_wait_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)|[sys.dm_database_copies&#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)|  
-|[sys.dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)|[sys.dm_db_objects_impacted_on_version_change &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-objects-impacted-on-version-change-azure-sql-database.md)|  
-|[sys.dm_operation_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) | |
+|[dm_db_wait_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)|[dm_database_copies &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)|  
+|[dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)|[dm_db_objects_impacted_on_version_change &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-objects-impacted-on-version-change-azure-sql-database.md)|  
+|[dm_operation_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) | |
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
    
   

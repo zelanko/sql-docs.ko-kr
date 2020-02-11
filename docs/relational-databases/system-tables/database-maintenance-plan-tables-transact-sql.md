@@ -1,5 +1,5 @@
 ---
-title: 데이터베이스 유지 관리 계획 테이블 (TRANSACT-SQL) | Microsoft Docs
+title: 데이터베이스 유지 관리 계획 테이블 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ ms.assetid: f264554c-5514-4df2-aadb-6dcdc2dfcfea
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f6fe1c0734864f8bde8b579ced77dc8106cb80ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68084752"
 ---
 # <a name="database-maintenance-plan-tables-transact-sql"></a>데이터베이스 유지 관리 계획 테이블(Transact-SQL)
@@ -44,7 +44,7 @@ ms.locfileid: "68084752"
  [sysdbmaintplans](../../relational-databases/system-tables/sysdbmaintplans-transact-sql.md)  
  업그레이드된 데이터베이스 유지 관리 계획 각각에 대해 행 한 개가 포함됩니다.  
   
-## <a name="see-also"></a>관련 항목  
- [개체 탐색기의](../../relational-databases/maintenance-plans/maintenance-plans.md)  
+## <a name="see-also"></a>참고 항목  
+ [유지 관리 계획](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 업데이트, 삭제 또는 페치 책갈피 | Microsoft Docs
+title: 책갈피에서 업데이트, 삭제 또는 페치 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,11 +17,11 @@ ms.assetid: e2ee58d7-c28f-435f-b537-06207215dd2f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ce43cb1d5563128e840aa3c0df26190524774a38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091631"
 ---
 # <a name="updating-deleting-or-fetching-by-bookmark"></a>책갈피로 업데이트, 삭제 또는 페치
-데이터 집합 또는 결과 행 집합 버퍼에 집합에서 인출한 결과에서 삭제 결과 집합에서 업데이트를 식별 하려면 책갈피를 사용할 수 있습니다. 호출 하 여 이러한 작업은 수행 **SQLBulkOperations** 사용 하 여는 *옵션* SQL_UPDATE_BY_BOOKMARK, SQL_DELETE_BY_BOOKMARK, 또는 SQL_FETCH_BY_BOOKMARK의 인수입니다. 이러한 작업에 사용 되는 책갈피 행 집합 버퍼의 0 열에 저장 됩니다. 책갈피로 업데이트, 행 집합 버퍼에서 검색 되는 결과 집합 열의 데이터 업데이트 됩니다. 자세한 내용은 [SQLBulkOperations 사용 하 여 데이터 업데이트](../../../odbc/reference/develop-app/updating-data-with-sqlbulkoperations.md)합니다.
+책갈피를 사용 하 여 결과 집합에서 업데이트 하거나 결과 집합에서 삭제 하거나 결과 집합에서 행 집합 버퍼로 가져올 데이터를 식별할 수 있습니다. 이러한 작업은 SQL_UPDATE_BY_BOOKMARK, SQL_DELETE_BY_BOOKMARK 또는 SQL_FETCH_BY_BOOKMARK의 *옵션* 인수를 사용 하 여 **SQLBulkOperations** 를 호출 하 여 수행 됩니다. 이러한 작업에 사용 되는 책갈피는 행 집합 버퍼의 0 열에 저장 됩니다. 책갈피를 기준으로 업데이트 하는 경우 결과 집합 열이 업데이트 되는 데이터는 행 집합 버퍼에서 검색 됩니다. 자세한 내용은 [SQLBulkOperations를 사용 하 여 데이터 업데이트](../../../odbc/reference/develop-app/updating-data-with-sqlbulkoperations.md)를 참조 하세요.

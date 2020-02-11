@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: adb00f8b0e7cb009420e9843532c3f3d4deb0833
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63028420"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>전체 텍스트 인덱스 대화 상자(Visual Database Tools)
@@ -26,9 +26,9 @@ ms.locfileid: "63028420"
 >  전체 텍스트 인덱스를 만들려면 우선 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 나 엔터프라이즈 관리자와 같은 외부 도구를 사용하여 데이터베이스의 전체 텍스트 카탈로그를 만들어야 합니다.  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 일부 버전에서는 전체 텍스트 인덱스 기능을 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 일부 버전에서는 전체 텍스트 인덱스 기능을 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조 하세요.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **선택한 전체 텍스트 인덱스**  
  기존의 전체 텍스트 인덱스를 나열합니다. 인덱스를 선택하면 오른쪽 표에 해당 속성이 표시됩니다. 목록이 비어 있는 경우 테이블에 정의된 전체 텍스트 관계가 없음을 의미합니다.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "63028420"
  현재 전체 텍스트 인덱스를 사용하여 전체 텍스트 검색을 지금 수행할 수 있는지 여부를 나타냅니다.  
   
  **추적 설정 변경**  
- 다음 인덱스에 대한 변경 내용 추적 상태를 설명합니다. 수동, 자동 또는 해제.  
+ 수동, 자동 또는 해제와 같이 이 인덱스의 변경 내용 추적 상태에 대해 설명합니다.  
   
  **탐색 완료**  
  가장 최근의 탐색이 완료되었는지 여부를 표시합니다. 이 속성 값이 No이면 탐색이 아직 진행 중임을 의미합니다.  
@@ -87,12 +87,12 @@ ms.locfileid: "63028420"
  다음 탐색을 시작할 날짜와 시간을 표시합니다.  
   
  **현재 또는 마지막 탐색의 형식**  
- 현재 또는 가장 최근 크롤링 유형을 다음과 같이 표시합니다. 최대 사용, 증분, 업데이트 또는 자동 전파.  
+ 최대, 증분, 업데이트 또는 자동 전파와 같이 현재 또는 가장 최근 탐색의 형식을 표시합니다.  
   
  **고유 인덱스 이름**  
  현재 데이터베이스에서 고유한 단일 열 인덱스가 있는 열의 이름에 대한 전체 목록을 표시합니다. 이러한 열은 전체 텍스트 인덱스를 만드는 데 사용할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [전체 텍스트 인덱싱 마법사 사용](../../relational-databases/search/use-the-full-text-indexing-wizard.md)   
  [CREATE FULLTEXT INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)  
   

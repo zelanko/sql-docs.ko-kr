@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 79ddfb40d33c8585b94ccc9718100e771da5e92e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126596"
 ---
 # <a name="diagram-pane-visual-database-tools"></a>다이어그램 창(Visual Database Tools)
@@ -35,7 +35,7 @@ ms.locfileid: "63126596"
   
  각 테이블 또는 테이블 반환 개체는 다이어그램 창에서 별도의 창으로 나타납니다. 각 사각형의 제목 표시줄에 있는 아이콘은 다음 표에서 설명하는 바와 같이 사각형이 나타내는 개체 형식을 보여 줍니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **테이블**  
  다이어그램 창에 추가할 수 있는 테이블을 나열합니다. 테이블을 추가하려면 테이블을 선택하고 **추가**를 클릭합니다. 여러 테이블을 한번에 추가하려면 원하는 테이블을 모두 선택하고 **추가**를 클릭합니다.  
   
@@ -51,9 +51,9 @@ ms.locfileid: "63126596"
  **동의어**  
  다이어그램 창에 추가할 수 있는 동의어를 나열합니다. 동의어를 추가하려면 동의어를 선택하고 **추가**를 클릭합니다. 여러 동의어를 한번에 추가하려면 원하는 동의어를 모두 선택하고 **추가**를 클릭합니다.  
   
-|아이콘|개체 유형|  
+|아이콘|개체 형식|  
 |----------|-----------------|  
-|![Visual Database Tools 아이콘](../../database-engine/media//dv3wbi1.gif "Visual Database Tools 아이콘")|Table|  
+|![Visual Database Tools 아이콘](../../database-engine/media//dv3wbi1.gif "Visual Database Tools 아이콘")|테이블|  
 |![Visual Database Tools 아이콘](../../database-engine/media//dv3wbi2.gif "Visual Database Tools 아이콘")|쿼리 또는 뷰|  
 |![Visual Database Tools 아이콘](../../database-engine/media//dv3wbi3.gif "Visual Database Tools 아이콘")|연결된 테이블|  
 |![Visual Database Tools 아이콘](../../database-engine/media//dvudficon.gif "Visual Database Tools 아이콘")|사용자 정의 함수|  
@@ -65,7 +65,8 @@ ms.locfileid: "63126596"
   
 |확인란 또는 기호|Description|  
 |-------------------------|-----------------|  
-|![Visual Database Tools 아이콘](../../database-engine/media//dv3wbi7.gif "Visual Database Tools 아이콘")<br /><br /> ![Visual Database Tools 아이콘](../../database-engine/media//dv3wbi8.gif "Visual Database Tools 아이콘")<br /><br /> ![Visual Database Tools 아이콘](../../database-engine/media//dv3wbi9.gif "Visual Database Tools 아이콘")<br /><br /> ![Visual Database Tools 아이콘](../../database-engine/media//dv3wbia.gif "Visual Database Tools 아이콘")|데이터 열을 쿼리 결과 집합(선택 쿼리)에 나타낼지 또는 업데이트, 삽입 원본, 테이블 만들기 또는 삽입 위치 쿼리에서 사용할지 여부를 지정합니다. 열을 선택하여 결과에 추가합니다. **(모든 열)** 을 선택하면 모든 데이터 열이 출력에 나타납니다.<br /><br /> 확인란과 함께 사용하는 아이콘은 만드는 쿼리 형식에 따라 변경됩니다. 삭제 쿼리를 만들 때에는 열을 개별적으로 선택할 수 없습니다.|  
+|![Visual Database Tools 아이콘](../../database-engine/media//dv3wbi7.gif "Visual Database Tools 아이콘")<br /><br /> ![Visual Database Tools 아이콘](../../database-engine/media//dv3wbi8.gif "Visual Database Tools 아이콘")<br /><br /> ![Visual Database Tools 아이콘](../../database-engine/media//dv3wbi9.gif "Visual Database Tools 아이콘")<br /><br /> ![Visual Database Tools 아이콘](../../database-engine/media//dv3wbia.gif "Visual Database Tools 아이콘")|데이터 열을 쿼리 결과 집합(선택 쿼리)에 나타낼지 또는 업데이트, 삽입 원본, 테이블 만들기 또는 삽입 위치 쿼리에서 사용할지 여부를 지정합니다. 열을 선택하여 결과에 추가합니다. 
+  **(모든 열)** 을 선택하면 모든 데이터 열이 출력에 나타납니다.<br /><br /> 확인란과 함께 사용하는 아이콘은 만드는 쿼리 형식에 따라 변경됩니다. 삭제 쿼리를 만들 때에는 열을 개별적으로 선택할 수 없습니다.|  
 |![Visual Database Tools 아이콘](../../database-engine/media//dv3wbib.gif "Visual Database Tools 아이콘")<br /><br /> ![Visual Database Tools 아이콘](../../database-engine/media//dv3wbic.gif "Visual Database Tools 아이콘")|데이터 열이 ORDER BY 절의 일부인 쿼리 결과를 정렬하는 데 사용되고 있음을 나타냅니다. 정렬 순서가 오름차순이면 아이콘이 A-Z로 나타나고 내림차순이면 Z-A로 나타납니다.|  
 |![Visual Database Tools 아이콘](../../database-engine/media//dv3wbid.gif "Visual Database Tools 아이콘")|데이터 열이 집계 쿼리에서 GROUP BY 절의 일부인 그룹화된 결과 집합을 만드는 데 사용되고 있음을 나타냅니다.|  
 |![Visual Database Tools 아이콘](../../database-engine/media//dv3wbie.gif "Visual Database Tools 아이콘")|데이터 열이 WHERE 또는 HAVING 절의 일부인 쿼리에 대한 검색 조건에 포함되어 있음을 나타냅니다.|  
@@ -95,8 +96,8 @@ ms.locfileid: "63126596"
 |![Visual Database Tools 아이콘](../../database-engine/media//dv3wbin.gif "Visual Database Tools 아이콘")|일 대 다 조인|  
 |![Visual Database Tools 아이콘](../../database-engine/media//dv3wbio.gif "Visual Database Tools 아이콘")|쿼리 및 뷰 디자이너는 조인 형식을 결정할 수 없습니다.|  
   
-## <a name="see-also"></a>관련 항목  
- [방법 도움말 항목을 쿼리 및 뷰 디자인 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [쿼리 및 뷰 디자인 방법 도움말 항목 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [조건 창 &#40;Visual Database Tools&#41;](criteria-pane-visual-database-tools.md)   
  [쿼리 결과 정렬 및 그룹화&#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)  
   

@@ -14,45 +14,45 @@ ms.assetid: 6a9921aa-8a53-4668-9b13-87164062f1e5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dc4ed430b301f2b191c0586c0a54af19a2d2d526
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091675"
 ---
 # <a name="sqlsetstmtoption-mapping"></a>SQLSetStmtOption 매핑
-응용 프로그램을 호출할 때 **SQLSetStmtOption** 는 ODBC를 통한 *3.x* 드라이버에 대 한 호출  
+응용 *프로그램이 ODBC 3.x* 드라이버를 통해 **SQLSetStmtOption** 를 호출 하는 경우에 대 한 호출이  
   
 ```  
 SQLSetStmtOption(StatementHandle, fOption, vParam)  
 ```  
   
- 다음과 같이 발생 합니다.  
+ 는 다음과 같이 생성 됩니다.  
   
--   하는 경우 *fOption* ODBC 정의 문 특성 드라이버 관리자를 호출 하 여 문자열을 나타냅니다.  
+-   *Foption* 이 문자열인 ODBC 정의 문 특성을 나타내는 경우 드라이버 관리자는를 호출 합니다.  
   
     ```  
     SQLSetStmtAttr(StatementHandle, fOption, ValuePtr, SQL_NTS)  
     ```  
   
--   하는 경우 *fOption* 드라이버 관리자를 호출 하 여 32 비트 정수 값을 반환 하는 ODBC 정의 문 특성을 나타냅니다.  
+-   *Foption* 이 32 비트 정수 값을 반환 하는 ODBC 정의 문 특성을 나타내는 경우 드라이버 관리자는를 호출 합니다.  
   
     ```  
     SQLSetStmtAttr(StatementHandle, fOption, ValuePtr, 0)  
     ```  
   
--   하는 경우 *fOption* 드라이버 관리자를 호출 하 여 드라이버에서 정의 된 문 특성을 나타냅니다.  
+-   *Foption* 이 드라이버 정의 문 특성을 나타내는 경우 드라이버 관리자는를 호출 합니다.  
   
     ```  
     SQLSetStmtAttr(StatementHandle, fOption, ValuePtr, BufferLength)  
     ```  
   
- 위의 세 가지 경우에 **StatementHandle** 인수를 값으로 설정 *hstmt*의 *특성* 인수를 값으로 설정 *fOption* , 및 *ValuePtr* 인수를 값으로 설정 됩니다 *갖고*합니다.  
+ 앞의 세 가지 경우에서 **StatementHandle** 인수는 *hstmt*의 값으로 설정 되 고, *특성* 인수는 *foption*의 값으로 설정 되며, *값은* *vparam*로 값으로 설정 됩니다.  
   
- 에 대 한 유효한 값을 전달 해야 하는 드라이버 관리자가 드라이버에서 정의 된 문 특성 문자열 또는 32 비트 정수 값을 필요한 지 여부를 알지 못하므로, 합니다 *StringLength* 인수의 **SQLSetStmtAttr**. 드라이버가 드라이버에서 정의 된 문 특성에 대 한 특별 한 의미를 정의 하 고 사용 하 여 호출 해야 하는 경우 **SQLSetStmtOption**를 지원 해야 **SQLSetStmtOption**합니다.  
+ 드라이버 관리자는 드라이버 정의 문 특성에 문자열 또는 32 비트 정수 값이 필요한 지 여부를 알 수 없으므로 **SQLSetStmtAttr**의 *stringlength* 인수에 유효한 값을 전달 해야 합니다. 드라이버가 드라이버 정의 문 특성에 대 한 특수 한 의미 체계를 정의 하 고 **SQLSetStmtOption**를 사용 하 여 호출 해야 하는 경우 **SQLSetStmtOption**를 지원 해야 합니다.  
   
- 응용 프로그램을 호출 하는 경우 **SQLSetStmtOption** ODBC에서 드라이버별 문 옵션을 설정 하려면 *3.x* 옵션과 드라이버는 ODBC에 정의 된 *2.x* 의 버전을 드라이버는 ODBC의 옵션에 대 한 새 매니페스트 상수를 정의 해야 *3.x* 드라이버입니다. 오래 된 매니페스트 상수에 대 한 호출에 사용 되는 경우 **SQLSetStmtOption**, 드라이버 관리자를 호출 합니다 **SQLSetStmtAttr** 사용 하 여 합니다 *StringLength* 인수는 0으로 설정 합니다.  
+ 응용 프로그램에서 **SQLSetStmtOption** 를 호출 하 여 odbc 2.x 드라이버에서 드라이버별 문 옵션을 설정 하 고 해당 *옵션이 odbc 2.x* 버전의 드라이버에서 정의 된 *경우 odbc 3.x* 드라이버의 옵션에 대해 새 매니페스트 상수를 정의 해야 *합니다.* **SQLSetStmtOption**에 대 한 호출에서 이전 매니페스트 상수를 사용 하는 경우 드라이버 관리자는 *stringlength* 인수를 0으로 설정 하 여 **SQLSetStmtAttr** 를 호출 합니다.  
   
- 응용 프로그램을 호출할 때 **SQLSetStmtAttr** SQL_ATTR_USE_BOOKMARKS SQL_UB_ON ODBC에서 설정 하려면 *3.x* 드라이버 SQL_ATTR_USE_BOOKMARKS 문 특성 SQL_UB_FIXED로 설정 됩니다. SQL_UB_ON는 SQL_UB_FIXED로 동일한 상수입니다. 드라이버 관리자는 드라이버를 통해 SQL_UB_FIXED를 전달합니다. SQL_UB_FIXED ODBC 되지 *3.x*, 있지만 ODBC *3.x* 드라이버는 ODBC를 사용 하도록 구현 해야 *2.x* 고정 길이 책갈피를 사용 하는 응용 프로그램입니다.  
+ 응용 프로그램에서 **SQLSetStmtAttr** 를 호출 하 여 ODBC *3.x 드라이버에서* SQL_ATTR_USE_BOOKMARKS를 SQL_UB_ON로 설정 하면 SQL_ATTR_USE_BOOKMARKS statement 특성이 SQL_UB_FIXED로 설정 됩니다. SQL_UB_ON은 SQL_UB_FIXED와 동일한 상수입니다. 드라이버 관리자는 드라이버에 SQL_UB_FIXED를 전달 합니다. SQL_UB_FIXED ODBC 3.x에서 더 이상 사용 되지 *않지만 odbc 2.x 드라이버는* 고정 길이 *책갈피를 사용*하는 odbc *2.x 응용 프로그램* 에서 작동 하도록 구현 해야 합니다.  
   
- ODBC에 대 한 *3.x* 드라이버를 드라이버 관리자는 더 이상 있는지 확인 합니다 *옵션* SQL_STMT_OPT_MIN 사이의 SQL_STMT_OPT_MAX, 되었거나 SQL_CONNECT_OPT_DRVR_START 보다 큽니다.
+ ODBC 3.x 드라이버의 경우 드라이버 관리자는 더 이상 *옵션이* SQL_STMT_OPT_MIN와 SQL_STMT_OPT_MAX 사이에 있는지 또는 SQL_CONNECT_OPT_DRVR_START 보다 큰지 확인 하지 *않습니다.*

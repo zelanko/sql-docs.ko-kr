@@ -1,5 +1,5 @@
 ---
-title: dbo.sysproxysubsystem (TRANSACT-SQL) | Microsoft Docs
+title: dbo. sysproxysubsystem (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,27 +20,27 @@ ms.assetid: 6d7713f5-1253-4a19-b1fb-635c377c95c1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f3a140a4cf1c82deda3b9d6a15b419b33b411974
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097026"
 ---
 # <a name="dbosysproxysubsystem-transact-sql"></a>dbo.sysproxysubsystem(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  각 프록시 계정에서 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 하위 시스템을 기록합니다. 이 테이블에 저장 되는 **msdb** 데이터베이스입니다.  
+  각 프록시 계정에서 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 하위 시스템을 기록합니다. 이 테이블은 **msdb** 데이터베이스에 저장 됩니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**subsystem_id**|**int**|하위 시스템의 ID입니다. 이 값에 해당 합니다 **subsystem_id** 열에는 **syssubsystems** 테이블입니다.|  
-|**proxy_id**|**int**|프록시 계정의 ID입니다. 이 값에 해당 합니다 **proxy_id** 열에는 **sysproxies** 테이블입니다.|  
+|**subsystem_id**|**int**|하위 시스템의 ID입니다. 이 값은 **syssubsystems 시스템** 테이블의 **subsystem_id** 열에 해당 합니다.|  
+|**proxy_id**|**int**|프록시 계정의 ID입니다. 이 값은 **sysproxies** 테이블의 **proxy_id** 열에 해당 합니다.|  
   
 ## <a name="remarks"></a>설명  
- 멤버는 **sysadmin** 고정된 서버 역할이이 테이블에 액세스할 수 있습니다.  
+ **Sysadmin** 고정 서버 역할의 멤버만이 테이블에 액세스할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [dbo.syssubsystems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-syssubsystems-transact-sql.md)   
- [dbo.sysproxies &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [&#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-syssubsystems-transact-sql.md)   
+ [&#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)  
   
   
