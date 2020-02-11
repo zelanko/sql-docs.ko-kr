@@ -16,14 +16,14 @@ ms.assetid: d608ea35-6e68-402f-8184-a5041e408678
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 96ca853100baddd94d29331416215278d493388f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966599"
 ---
 # <a name="datecreated-and-datemodified-properties-example-vb"></a>DateCreated 및 DateModified 속성 예제(VB)
-이 예제에서는 합니다 [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) 하 고 [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) 새로 추가 하 여 속성 [열](../../../ado/reference/adox-api/column-object-adox.md) 기존 [테이블](../../../ado/reference/adox-api/table-object-adox.md) 및 새로 만들 **테이블**합니다. DateOutput 절차는이 예제를 실행 하려면 필요 합니다.  
+이 예에서는 기존 [테이블](../../../ado/reference/adox-api/table-object-adox.md) 에 새 [열](../../../ado/reference/adox-api/column-object-adox.md) 을 추가 하 고 새 **테이블**을 만들어 [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) 및 [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) 속성을 보여 줍니다. 이 예제를 실행 하려면 DateOutput 프로시저가 필요 합니다.  
   
 ```  
 ' BeginDateCreatedVB  
@@ -94,10 +94,10 @@ End Sub
 ' EndDateCreatedVB  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [DateCreated 속성 (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)   
  [DateModified 속성 (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)   
  [Procedure 개체 (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
- [Procedures 컬렉션 (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)   
- [뷰 개체 (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
+ [프로시저 컬렉션 (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)   
+ [View 개체 (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
  [Views 컬렉션(ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

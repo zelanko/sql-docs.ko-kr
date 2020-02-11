@@ -13,15 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ee0544c14bbf3e05fcb59e16a9bb3e0d8e61e33b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916104"
 ---
-# <a name="mssqlserver1204"></a>MSSQLSERVER_1204
+# <a name="mssqlserver_1204"></a>MSSQLSERVER_1204
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -35,7 +35,7 @@ ms.locfileid: "62916104"
 ## <a name="explanation"></a>설명  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 리소스를 잠글 수 없습니다. 이 오류는 다음과 같은 문제로 인해 발생할 수 있습니다.  
   
--   다른 프로세스가 사용 중이거나 서버가 **max server memory** 옵션이 구성된 상태로 동작 중이어서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 운영 체제에서 더 많은 메모리를 할당할 수 없습니다.  
+-   다른 프로세스가 사용 중이거나 서버가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]max server memory**옵션이 구성된 상태로 동작 중이어서**가 운영 체제에서 더 많은 메모리를 할당할 수 없습니다.  
   
 -   잠금 관리자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용 가능한 메모리의 60% 이상을 사용하지 않습니다.  
   

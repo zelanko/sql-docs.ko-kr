@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3235c9a9305e4476214add63f8710ba9de7b4c19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63049160"
 ---
 # <a name="sort-rows-visual-database-tools"></a>행 정렬(Visual Database Tools)
@@ -89,7 +89,7 @@ ms.locfileid: "63049160"
   
      이 쿼리에서는 `state` 를 두 번째 정렬 열로 사용합니다. 따라서 두 개의 주에 같은 수의 저자가 있을 경우 해당 주들은 사전순으로 표시됩니다.  
   
--   **국가별 데이터를 사용하여 정렬할 수 있습니다.** 해당 열에 대한 기본 규칙과 다른 데이터 정렬 규칙을 사용하여 열을 정렬할 수 있습니다. 예를 들어, Jaime Pati 모든 책 제목을 검색 하는 쿼리를 작성할 수 있습니다. o입니다. 제목을 사전순으로 표시하려면 title 열에 스페인어 데이터 정렬 순서를 사용합니다. 결과 SQL은 다음과 같습니다.  
+-   **국가별 데이터를 사용하여 정렬할 수 있습니다.** 해당 열에 대한 기본 규칙과 다른 데이터 정렬 규칙을 사용하여 열을 정렬할 수 있습니다. 예를 들어 Jaime Pati?의 모든 책 제목을 검색 하는 쿼리를 작성할 수 있습니다. i/o. 제목을 사전순으로 표시하려면 title 열에 스페인어 데이터 정렬 순서를 사용합니다. 결과 SQL은 다음과 같습니다.  
   
     ```  
     SELECT title  
@@ -110,8 +110,8 @@ ms.locfileid: "63049160"
          title COLLATE SQL_Spanish_Pref_CP1_CI_AS  
     ```  
   
-## <a name="see-also"></a>관련 항목  
- [쿼리 결과 정렬 및 그룹화 &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools&#41;&#40;쿼리 결과 정렬 및 그룹화](sort-and-group-query-results-visual-database-tools.md)   
  [쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

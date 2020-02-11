@@ -13,21 +13,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3dc2de6d8dc1967986162f2a468d0edf7266730a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015805"
 ---
 # <a name="sqlfetch"></a>SQLFetch
-  SQLFetch 지원 날짜 및 시간 기능 향상.  
+  SQLFetch는 향상 된 날짜 및 시간 기능을 지원 합니다.  
   
- 날짜/시간 형식의 결과 열 값이 변환 되는 방법에 대 한 자세한 내용은 [SQL에서 C로 변환](../native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)합니다.  
+ 날짜/시간 형식의 결과 열 값을 변환 하는 방법에 대 한 자세한 내용은 [SQL에서 C로 변환](../native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)을 참조 하세요.  
   
 ## <a name="sqlfetch-support-for-large-clr-udts"></a>큰 CLR UDT에 대한 SQLFetch 지원  
- `SQLFetch`는 큰 CLR UDT(사용자 정의 형식)를 지원합니다. 자세한 내용은 [Large CLR User-Defined 형식 &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)합니다.  
+ 
+  `SQLFetch`는 큰 CLR UDT(사용자 정의 형식)를 지원합니다. 자세한 내용은 [ODBC&#41;&#40;LARGE CLR 사용자 정의 형식 ](../native-client/odbc/large-clr-user-defined-types-odbc.md)을 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=80703)   
  [ODBC API 구현 정보](odbc-api-implementation-details.md)  
   

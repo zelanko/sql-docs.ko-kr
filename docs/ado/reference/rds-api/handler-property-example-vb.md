@@ -15,19 +15,19 @@ ms.assetid: 9664f9a6-65fc-4e7f-be3d-3e4b501b558a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1a72e393716d3d24fdb9f0f95be9faae85651696
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964096"
 ---
 # <a name="handler-property-example-vb"></a>Handler 속성 예제(VB)
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
+>  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
   
- 이 예제에서는 합니다 [RDS DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체 [처리기](../../../ado/reference/rds-api/handler-property-rds.md) 속성입니다. (참조 [DataFactory 사용자 지정](../../../ado/guide/remote-data-service/datafactory-customization.md) 대 한 자세한 내용은 합니다.)  
+ 이 예제에서는 [RDS DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체 [처리기](../../../ado/reference/rds-api/handler-property-rds.md) 속성을 보여 줍니다. 자세한 내용은 [DataFactory 사용자 지정](../../../ado/guide/remote-data-service/datafactory-customization.md) 을 참조 하세요.  
   
- Msdfmap.ini, 매개 변수 파일에 다음 섹션에서는 서버에 있는 것으로 가정 합니다.  
+ 매개 변수 파일 Msdfmap. ini의 다음 섹션이 서버에 있는 것으로 가정 합니다.  
   
 ```  
 [connect AuthorDataBase]  
@@ -37,7 +37,7 @@ Connect="DSN=Pubs"
 SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
- 코드는 다음과 같습니다. 에 할당 한 명령을 [SQL](../../../ado/reference/rds-api/sql-property.md) 속성 일치는 ***AuthorById*** 식별자 및 Michael O'Leary 작성자에 대 한 행을 검색 합니다. 합니다 **DataControl** 개체 **레코드 집합** 속성은 할당 하 여 연결이 끊어진 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 코딩 편의 위해 전적으로 개체입니다.  
+ 코드는 다음과 같습니다. [SQL](../../../ado/reference/rds-api/sql-property.md) 속성에 할당 되는 명령은 ***AuthorById*** 식별자와 일치 하 고 author Michael O'Leary에 대 한 행을 검색 합니다. **DataControl** 개체 **레코드 집합** 속성은 코딩 편의를 위해 연결 되지 않은 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체에만 할당 됩니다.  
   
 ```  
 'BeginHandlerVB  
@@ -78,7 +78,7 @@ End Sub
 'EndHandlerVB  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [DataControl 개체 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Handler 속성(RDS)](../../../ado/reference/rds-api/handler-property-rds.md)
 

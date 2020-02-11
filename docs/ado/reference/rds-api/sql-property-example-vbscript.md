@@ -15,17 +15,17 @@ ms.assetid: 32c33bcf-3320-4836-9e2e-99c8978ce581
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c4974d6509a0ba864f0159271d9c8cc90e2c4047
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963399"
 ---
 # <a name="sql-property-example-vbscript"></a>SQL 속성 예제(VBScript)
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
+>  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
   
- 다음 코드를 설정 하는 방법을 보여 줍니다는 [rds. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 디자인 타임 및 바인딩 이라는 데이터베이스를 사용 하 여 데이터 인식 컨트롤으로 SQL 매개 변수 *Pubs*, Microsoft SQL Server와 함께 제공 되는 합니다. 예제 테스트, 기본 ASP 문서에 다음 코드를 복사 하려면 **SQLDesignVBS.asp** 웹 서버에 있습니다.  
+ 다음 코드에서는 RDS를 설정 하는 방법을 보여 줍니다 [. ](../../../ado/reference/rds-api/datacontrol-object-rds.md)디자인 타임에 DataControl SQL 매개 변수를 사용 하 여 Microsoft SQL Server와 함께 제공 되는 *Pubs*라는 데이터베이스를 사용 하 여 데이터 인식 컨트롤에 바인딩합니다. 예제를 테스트 하려면 웹 서버에서 다음 코드를 **Sqldesignvbs .asp** 라는 일반 asp 문서에 복사 합니다.  
   
 ```  
 <!-- BeginSQLDesignVBS -->  
@@ -88,7 +88,7 @@ body {
 <!-- EndSQLDesignVBS -->  
 ```  
   
- 다음 예제에서는 필요한 매개 변수를 설정 하는 방법을 보여 줍니다 **rds. DataControl** 런타임 시. 이 예제를 테스트 하려면 잘라내기 및 일반 ASP 문서에 다음 코드를 붙여 고 이름을 **SQLRuntimeVBS.asp**합니다. ASP 스크립트에서 서버를 식별 합니다.  
+ 다음 예에서는 RDS의 필수 매개 변수를 설정 하는 방법을 보여 줍니다 **. 런타임에.** 이 예를 테스트 하려면 다음 코드를 잘라내어 일반 ASP 문서에 붙여넣고 이름을 **Sqlruntimevbs**로 만듭니다. ASP 스크립트는 서버를 식별 합니다.  
   
 ```  
 <!-- BeginSQLRuntimeVBS -->  
@@ -174,7 +174,7 @@ End Sub
 <!-- EndSQLRuntimeVBS -->  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [DataControl 개체 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [SQL 속성](../../../ado/reference/rds-api/sql-property.md)
 

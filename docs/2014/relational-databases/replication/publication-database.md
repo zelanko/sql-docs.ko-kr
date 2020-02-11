@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cb31bae59d95b01279a9fa84e02cd22c8017ca14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63021745"
 ---
 # <a name="publication-database"></a>게시 데이터베이스
@@ -26,13 +26,13 @@ ms.locfileid: "63021745"
   
 -   **게시자 속성** 대화 상자에서 데이터베이스를 선택합니다.  
   
--   **sp_replicationdboption** 을 실행하여 **publish** (스냅숏 또는 트랜잭션 게시의 경우) 또는 **merge publish** (병합 게시의 경우) 옵션을 **True**로 설정합니다.  
+-   **sp_replicationdboption** 을 실행하여 **publish** (스냅샷 또는 트랜잭션 게시의 경우) 또는 **merge publish** (병합 게시의 경우) 옵션을 **True**로 설정합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **데이터베이스**  
  게시할 데이터 및 데이터베이스 개체를 포함하는 데이터베이스의 이름을 선택합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 및 데이터베이스 개체 게시](publish/publish-data-and-database-objects.md)   
  [Create a Publication](publish/create-a-publication.md)   
  [배포자 및 게시자 속성 보기 및 수정](view-and-modify-distributor-and-publisher-properties.md)   

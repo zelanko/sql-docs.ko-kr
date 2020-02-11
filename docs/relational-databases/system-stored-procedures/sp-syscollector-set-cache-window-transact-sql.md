@@ -1,5 +1,5 @@
 ---
-title: sp_syscollector_set_cache_window (TRANSACT-SQL) | Microsoft Docs
+title: sp_syscollector_set_cache_window (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,19 +19,19 @@ ms.assetid: 660f2749-392f-46bf-89f3-27764d848507
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 80462381e058c4cb9107aa4ac07138e42d27e677
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68010634"
 ---
-# <a name="spsyscollectorsetcachewindow-transact-sql"></a>sp_syscollector_set_cache_window(Transact-SQL)
+# <a name="sp_syscollector_set_cache_window-transact-sql"></a>sp_syscollector_set_cache_window(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   실패한 데이터 업로드의 시도 횟수를 설정합니다. 오류가 발생 시 업로드를 다시 시도하면 수집된 데이터의 손실 위험을 완화할 수 있습니다.  
 
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,19 +42,19 @@ sp_syscollector_set_cache_window [ @cache_window = ] cache_window
   
 ## <a name="arguments"></a>인수  
  [ @cache_window = ] *cache_window*  
- 데이터 손실이 없는 오류 발생 시에 관리 데이터 웨어하우스에 대한 데이터 업로드를 다시 시도하는 횟수입니다. *cache_window* 됩니다 **int** 1의 기본값입니다. *cache_window* 다음 값 중 하나일 수 있습니다.  
+ 데이터 손실이 없는 오류 발생 시에 관리 데이터 웨어하우스에 대한 데이터 업로드를 다시 시도하는 횟수입니다. *cache_window* 은 **int** 이며 기본값은 1입니다. *cache_window* 는 다음 값 중 하나를 사용할 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |-1|실패한 이전 업로드의 업로드 데이터를 모두 캐시합니다.|  
 |0|실패한 업로드의 데이터를 캐시하지 않습니다.|  
-|*n*|N 실패 한 이전 업로드의에서 데이터를 캐시 합니다. 여기서 *n* > = 1입니다.|  
+|*n*|N 이전 업로드 실패에서 데이터를 캐시 합니다. 여기서 *n* >= 1입니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
 ## <a name="remarks"></a>설명  
- 캐시 시간대 구성을 변경하려면 먼저 데이터 수집기를 사용하지 않도록 설정해야 합니다. 데이터 수집기를 사용하면 이 저장 프로시저가 실패합니다. 자세한 내용은 [사용 또는 사용 데이터 컬렉션 사용 안 함](../../relational-databases/data-collection/enable-or-disable-data-collection.md), 및 [데이터 컬렉션 관리](../../relational-databases/data-collection/manage-data-collection.md)합니다.  
+ 캐시 시간대 구성을 변경하려면 먼저 데이터 수집기를 사용하지 않도록 설정해야 합니다. 데이터 수집기를 사용하면 이 저장 프로시저가 실패합니다. 자세한 내용은 [데이터 컬렉션 활성화 또는 비활성화](../../relational-databases/data-collection/enable-or-disable-data-collection.md)및 [데이터 컬렉션 관리](../../relational-databases/data-collection/manage-data-collection.md)를 참조 하세요.  
   
 ## <a name="permissions"></a>사용 권한  
  이 프로시저를 실행하려면 dc_admin(EXECUTE 권한 있음) 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
@@ -72,8 +72,8 @@ GO
 EXECUTE dbo.sp_syscollector_enable_collector;  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sp_syscollector_set_cache_directory&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-directory-transact-sql.md)  
+ [Transact-sql&#41;sp_syscollector_set_cache_directory &#40;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-directory-transact-sql.md)  
   
   

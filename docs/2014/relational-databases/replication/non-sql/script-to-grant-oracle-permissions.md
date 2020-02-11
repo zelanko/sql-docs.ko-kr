@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d7c61a21f149a50c4893c9c82d3624e0905a481b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022424"
 ---
 # <a name="script-to-grant-oracle-permissions"></a>Oracle 권한 부여 스크립트
-  이 항목에서 제공된 스크립트는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제를 사용하여 데이터를 게시할 Oracle 데이터베이스를 구성할 때 사용됩니다. 이 스크립트는 설치 후 *\<드라이브>* :\\\Program Files\Microsoft SQL Server\\ *\<InstanceName>* \MSSQL\Install\oracleadmin.sql 디렉터리에서도 사용할 수 있습니다. Oracle 데이터베이스 구성에 대한 자세한 내용은 [Oracle 게시자 구성](configure-an-oracle-publisher.md)을 참조하세요.  
+  이 항목에서 제공 하는 스크립트는 복제를 사용 하 여 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터를 게시할 Oracle 데이터베이스를 구성 하는 동안 사용 됩니다. 이 스크립트는 설치 후에도 다음 디렉터리에서 사용할 수 있습니다. * \<drive>*\\: Files\Microsoft\\SQL Server*\<InstanceName>* \mssql\install\oracleadmin.sql Oracle 데이터베이스 구성에 대한 자세한 내용은 [Oracle 게시자 구성](configure-an-oracle-publisher.md)을 참조하세요.  
   
 > [!NOTE]  
 >  이 스크립트에는 트랜잭션 복제에 사용되는 트리거에 필요한 `GRANT CREATE ANY TRIGGER TO &&AdminLogin;`문이 포함되어 있습니다. 스냅샷 복제만 사용하려면 스크립트에서 이 줄을 제거하십시오.  
   
- **Oracle SQL\*Plus 유틸리티에서 스크립트를 실행하려면**  
+ **Oracle SQL\*Plus 유틸리티에서 스크립트를 실행 하려면**  
   
 1.  SQL Server 배포자에서 명령 프롬프트 창을 엽니다.  
   
@@ -124,7 +124,7 @@ GRANT CREATE VIEW TO &&ReplLogin;
 GRANT CREATE ANY TRIGGER TO &&ReplLogin;  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Oracle 게시자 구성](configure-an-oracle-publisher.md)  
   
   

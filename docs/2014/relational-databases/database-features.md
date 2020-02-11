@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7cec72a2f70db07e5653d095ce586b50604d6412
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917667"
 ---
 # <a name="database-features"></a>데이터베이스 기능
@@ -28,12 +28,12 @@ ms.locfileid: "62917667"
 |[테이블](tables/tables.md)|[시퀀스 번호](sequence-numbers/sequence-numbers.md)|[데이터 대량 가져오기 및 내보내기&#40;SQL Server&#41;](import-export/bulk-import-and-export-of-data-sql-server.md)|  
 |[메모리 내 OLTP&#40;메모리 내 최적화&#41;](in-memory-oltp/in-memory-oltp-in-memory-optimization.md)|[DDL 트리거](triggers/ddl-triggers.md)|[데이터 압축](data-compression/data-compression.md)|  
 |[인덱스](indexes/indexes.md)|[DML 트리거](triggers/dml-triggers.md)|[Transact-SQL의 OLE 자동화 개체](stored-procedures/ole-automation-objects-in-transact-sql.md)|  
-|[Partitioned Tables and Indexes](partitions/partitioned-tables-and-indexes.md)|[동의어&#40;데이터베이스 엔진&#41;](synonyms/synonyms-database-engine.md)|[이벤트 알림](service-broker/event-notifications.md)|  
+|[Partitioned Tables and Indexes](partitions/partitioned-tables-and-indexes.md)|[동의어 &#40;데이터베이스 엔진&#41;](synonyms/synonyms-database-engine.md)|[이벤트 알림](service-broker/event-notifications.md)|  
 |[뷰](views/views.md)|[XML 데이터&#40;SQL Server&#41;](xml/xml-data-sql-server.md)|[성능 모니터링 및 튜닝](performance/monitor-and-tune-for-performance.md)|  
-|[저장 프로시저&#40;데이터베이스 엔진&#41;](stored-procedures/stored-procedures-database-engine.md)|[공간 데이터&#40;SQL Server&#41;](spatial/spatial-data-sql-server.md)||  
+|[저장 프로시저 &#40;데이터베이스 엔진&#41;](stored-procedures/stored-procedures-database-engine.md)|[공간 데이터&#40;SQL Server&#41;](spatial/spatial-data-sql-server.md)||  
 |[검색 &#40;SQL Server&#41;](../database-engine/search-sql-server.md)|[Blob&#40;Binary Large Object&#41; 데이터&#40;SQL Server&#41;](blob/binary-large-object-blob-data-sql-server.md)||  
-|[사용자 정의 함수](user-defined-functions/user-defined-functions.md)|[데이터 계층 응용 프로그램](data-tier-applications/data-tier-applications.md)||  
+|[사용자 정의 함수](user-defined-functions/user-defined-functions.md)|[데이터 계층 애플리케이션](data-tier-applications/data-tier-applications.md)||  
 |[통계](statistics/statistics.md)|[트랜잭션 로그&#40;SQL Server&#41;](logs/the-transaction-log-sql-server.md)||  
-|[계획 지침](performance/plan-guides.md)|[데이터베이스 검사점 &#40;SQL Server&#41;](logs/database-checkpoints-sql-server.md)||  
+|[계획 지침](performance/plan-guides.md)|[데이터베이스 검사점&#40;SQL Server&#41;](logs/database-checkpoints-sql-server.md)||  
   
   

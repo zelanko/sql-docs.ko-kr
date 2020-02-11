@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b05d3b02c4fcd0d90b0b96a1a32c792537818e1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999848"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>논리적 레코드를 사용하여 관련된 행의 변경 내용 그룹화
@@ -33,13 +33,13 @@ ms.locfileid: "62999848"
   
  다음과 같은 3개의 관련된 테이블을 살펴보십시오.  
   
- ![열 이름만 포함하는 3개의 테이블 논리적 레코드](../media/logical-records-01.gif "Three table logical record, with column names only")  
+ ![열 이름만 포함하는 3개 테이블 논리적 레코드](../media/logical-records-01.gif "열 이름만 포함하는 3개 테이블 논리적 레코드")  
   
  이 관계의 부모 테이블인 **Customers** 테이블에는 기본 키 열 **CustID**가 있습니다. **Orders** 테이블에는 기본 키 열 **OrderID**가 있으며 **Customers** 테이블의 **CustID** 열을 참조하는 FOREIGN KEY 제약 조건이 이 테이블의 **CustID** 열에 있습니다. 마찬가지로 **OrderItems** 테이블에는 기본 키 열 **OrderItemID**가 있으며 **Orders** 테이블의 **OrderID** 열을 참조하는 FOREIGN KEY 제약 조건이 이 테이블의 **OrderID** 열에 있습니다.  
   
  이 예에서 논리적 레코드는 단일 **CustID** 값에 관련된 **Orders** 테이블의 모든 행 및 **Orders** 테이블의 해당 행과 관련된 **OrderItems** 테이블의 모든 행으로 구성되어 있습니다. 이 다이어그램에서는 Customer2에 대한 논리적 레코드에 있는 3개 테이블의 모든 행을 보여 줍니다.  
   
- ![값을 포함하는 3개의 테이블 논리적 레코드](../media/logical-records-02.gif "Three table logical record with values")  
+ ![값을 포함하는 3개 테이블 논리적 레코드](../media/logical-records-02.gif "값을 포함하는 3개 테이블 논리적 레코드")  
   
  아티클 간 논리적 레코드 관계를 정의하려면 [병합 테이블 기사 간의 논리적 레코드 관계 정의](../publish/define-a-logical-record-relationship-between-merge-table-articles.md)를 참조하십시오.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62999848"
 ### <a name="the-application-of-changes-as-a-unit"></a>변경 내용을 하나의 단위로 적용  
  연결이 끊기는 경우와 같이 병합 프로세스가 중단되는 경우 논리적 레코드를 사용하면 관련 복제된 변경 내용 중 부분적으로 완료된 변경 내용 집합이 롤백됩니다. 예를 들어 구독자가 **OrderID** = 6인 새 주문과 **OrderID** = 6에 대해 **OrderItemID** = 10 및 **OrderItemID** = 11인 두 개의 새 행을 **OrderItems** 테이블에 추가하는 경우를 살펴봅시다.  
   
- ![값을 포함하는 3개의 테이블 논리적 레코드](../media/logical-records-04.gif "Three table logical record with values")  
+ ![값을 포함하는 3개 테이블 논리적 레코드](../media/logical-records-04.gif "값을 포함하는 3개 테이블 논리적 레코드")  
   
  **OrderID** = 6에 대한 **Orders** 행은 완료되었지만 **OrderItems** 10 및 11이 완료되기 전에 복제 프로세스가 중단되고 논리적 레코드가 사용되지 않는 경우 **OrderID** = 6에 대한 **OrderTotal** 값이 **OrderItems** 행에 대한 **OrderAmount** 값의 합계와 일치하지 않게 됩니다. 논리적 레코드가 사용되는 경우에는 관련 **OrderItems** 변경 내용이 복제될 때까지 **OrderID** = 6에 대한 **Orders** 행이 커밋되지 않습니다.  
   
@@ -127,7 +127,7 @@ ms.locfileid: "62999848"
   
      예를 들어 수업 및 학생 데이터를 추적하는 데이터베이스는 다음과 같습니다.  
   
-     ![둘 이상의 부모 테이블이 있는 자식 테이블](../media/logical-records-03.gif "Child table with more than one parent table")  
+     ![둘 이상의 부모 테이블이 있는 자식 테이블](../media/logical-records-03.gif "둘 이상의 부모 테이블이 있는 자식 테이블")  
   
      **ClassMembers** 의 행이 기본 키 행과 연결되어 있지 않았기 때문에 논리적 레코드를 사용하여 이 관계에 있는 3개의 테이블을 나타낼 수 없습니다. **ClassMembers** 테이블과 **Students** 테이블 간에 논리적 레코드를 만들 수 있듯이 **Classes** 테이블과 **ClassMembers**테이블 간에도 논리적 레코드를 만들 수 있지만 이 3개의 테이블 간에는 논리적 레코드를 만들 수 없습니다.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "62999848"
   
  논리적 레코드를 사용하는 경우 복제 에이전트는 각각의 전체 논리적 레코드에 대한 변경 내용을 한 번에 처리해야 합니다. 이 방식은 병합 에이전트가 행을 복제하는 데 걸리는 시간에 영향을 미칩니다. 또한 에이전트가 각 논리적 레코드에 대해 별도의 트랜잭션을 열기 때문에 잠금 요구 사항이 증가할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [병합 복제를 위한 아티클 옵션](article-options-for-merge-replication.md)  
   
   

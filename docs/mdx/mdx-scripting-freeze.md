@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 4738dab411fe55808034a6d9d81a16994089ea74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138293"
 ---
 # <a name="mdx-scripting---freeze"></a>MDX 스크립팅 - FREEZE
@@ -32,7 +32,7 @@ FREEZE Subcube_Expression
  하위 큐브를 반환하는 유효한 MDX 식입니다.  
   
 ## <a name="remarks"></a>설명  
- 합니다 **FREEZE** 문은 지정 된 하위 큐브에서 셀 값을 잠가서 MDX의 이후 문이 방지 이후 계산에 해당 값을 변경에서 스크립트를 전달 합니다.  
+ **고정** 문은 지정 된 하위 큐브에서 셀 값을 잠가서 후속 계산 패스에서 MDX 스크립트의 이후 문이 해당 값을 변경 하지 못하도록 방지 합니다.  
   
  다음 예에서 A와 B는 MDX 계산 스크립트의 하위 큐브를 나타냅니다.  
   
@@ -44,7 +44,7 @@ B = 3
   
  여기서 A와 B 모두 3과 같습니다.  
   
- 이제 삽입 합니다 **고정** 함수를 A 하위 큐브를 잠급니다.  
+ 이제 **고정** 함수를 삽입 하 여 A 하위 큐브의 셀을 잠급니다.  
   
 ```  
 B = 2;  
@@ -55,7 +55,7 @@ B = 3
   
  그러면 A는 2가 되고 B는 3이 됩니다.  
   
-## <a name="see-also"></a>관련 항목  
- [MDX 스크립팅 문&#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [Mdx 스크립팅 문 &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

@@ -16,33 +16,33 @@ ms.assetid: 927bcf3e-32f5-4a80-98d3-600779f0732e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1681001dd42026c1a1fce04814b094047a475a0f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965482"
 ---
 # <a name="procedure-object-adox"></a>프로시저 개체(ADOX)
-저장된 프로시저를 나타냅니다. ADO와 함께 사용 하는 경우 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체를 **프로시저** 개체 추가, 삭제 또는 수정 저장된 프로시저에 사용할 수 있습니다.  
+저장 프로시저를 나타냅니다. ADO [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체와 함께 사용 하는 경우 **프로시저** 개체를 사용 하 여 저장 프로시저를 추가, 삭제 또는 수정할 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
- 합니다 **프로시저** 개체를 알고 있거나 공급자의 "CREATE PROCEDURE" 구문을 사용 하지 않고도 저장된 프로시저를 만들 수 있습니다.  
+ **프로시저** 개체를 사용 하면 공급자의 "프로시저 만들기" 구문을 알거나 사용 하지 않고도 저장 프로시저를 만들 수 있습니다.  
   
- 속성을 사용 하 여는 **프로시저** 개체를 할 수 있습니다.  
+ **프로시저** 개체의 속성을 사용 하 여 다음을 수행할 수 있습니다.  
   
--   사용 하 여 프로시저를 식별 합니다 [이름을](../../../ado/reference/adox-api/name-property-adox.md) 속성입니다.  
+-   [Name](../../../ado/reference/adox-api/name-property-adox.md) 속성을 사용 하 여 프로시저를 식별 합니다.  
   
--   ADO 지정 **명령** 만들거나 사용 하 여 프로시저를 실행할 수 있는 개체를 [명령](../../../ado/reference/adox-api/command-property-adox.md) 속성입니다.  
+-   [명령](../../../ado/reference/adox-api/command-property-adox.md) 속성을 사용 하 여 프로시저를 만들거나 실행 하는 데 사용할 수 있는 ADO **명령** 개체를 지정 합니다.  
   
--   사용 하 여 날짜 정보를 반환 합니다 [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) 하 고 [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) 속성입니다.  
+-   [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) 및 [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) 속성을 사용 하 여 날짜 정보를 반환 합니다.  
   
- 이 섹션에서는 다음 항목을 포함합니다.  
+ 이 섹션에는 다음 항목이 포함 되어 있습니다.  
   
--   [Procedure 개체 속성, 메서드 및 이벤트](../../../ado/reference/adox-api/procedure-object-properties-methods-and-events.md)  
+-   [프로시저 개체 속성, 메서드 및 이벤트](../../../ado/reference/adox-api/procedure-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Command 및 CommandText 속성 예제 (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
  [Parameters 컬렉션, Command 속성 예제 (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
- [Procedures Append 메서드 예제 (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
- [Procedures Delete 메서드 예제 (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
+ [프로시저 Append 메서드 예제 (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
+ [프로시저 Delete 메서드 예제 (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
  [Procedures 컬렉션(ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)

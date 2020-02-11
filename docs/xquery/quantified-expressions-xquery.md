@@ -1,5 +1,5 @@
 ---
-title: 식 (XQuery) 정량화 | Microsoft Docs
+title: 정량화 된 식 (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,10 +23,10 @@ ms.assetid: a3a75a6c-8f67-4923-8406-1ada546c817f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1cdbff23d2158dec00b6b8d050d6a4a90341bd23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946370"
 ---
 # <a name="quantified-expressions-xquery"></a>정량화된 식(XQuery)
@@ -46,9 +46,10 @@ ms.locfileid: "67946370"
 ( some | every ) <variable> in <Expression> (,...) satisfies <Expression>  
 ```  
   
- 쿼리에 이러한 식을 사용하여 하나 이상의 시퀀스에서 존재 또는 범용 정량화를 명시적으로 식에 적용할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 `satisfies` 절에 있는 식의 결과가 노드 시퀀스, 빈 시퀀스 또는 부울 값 중 하나여야 합니다. 식의 결과에 알맞은 부울 값이 정량화에 사용됩니다. 사용 하는 존재 정량화 **일부** 식에서 결과가 True 수량자로 바인딩된 값 중 하나 이상 있으면 True를 반환 합니다. 사용 하는 범용 정량화 **마다** 수량자로 바인딩된 모든 값에 대해 True 여야 합니다.  
+ 쿼리에 이러한 식을 사용하여 하나 이상의 시퀀스에서 존재 또는 범용 정량화를 명시적으로 식에 적용할 수 있습니다. 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 `satisfies` 절에 있는 식의 결과가 노드 시퀀스, 빈 시퀀스 또는 부울 값 중 하나여야 합니다. 식의 결과에 알맞은 부울 값이 정량화에 사용됩니다. **일부** 를 사용 하는 존재 정량화는 수량자에 의해 바인딩된 값 중 하나 이상이 만족 식에 true 결과가 있는 경우 true를 반환 합니다. **모든** 를 사용 하는 universal 정량화은 수량자로 바인딩된 모든 값에 대해 True 여야 합니다.  
   
- 다음 검사를 쿼리 하는 예를 들어, 모든 \<위치 > 요소에 LocationID 특성이 있는지 여부를 확인 합니다.  
+ 예를 들어 다음 쿼리는 모든 \<위치> 요소를 검사 하 여 locationid 특성이 있는지 여부를 확인 합니다.  
   
 ```  
 SELECT Instructions.query('  
@@ -64,13 +65,13 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- LocationID의 필수 특성 이므로 \<위치 > 요소를 예상된 결과 수신 합니다.  
+ LocationID는 \<Location> 요소의 필수 특성이 기 때문에 예상 결과를 수신 합니다.  
   
 ```  
 <Result>All work centers have Location ID</Result>   
 ```  
   
- 사용 하는 대신 합니다 [query () 메서드](../t-sql/xml/query-method-xml-data-type.md)를 사용할 수는 [value () 메서드](../t-sql/xml/value-method-xml-data-type.md) 다음 쿼리에서와에서 같이 관계형 전 세계에 결과 반환 하려면. 모든 업무 센터 위치에 LocationID 특성이 있으면 쿼리에서 True를 반환하고 그렇지 않으면 False를 반환합니다.  
+ [Query () 메서드](../t-sql/xml/query-method-xml-data-type.md)를 사용 하는 대신 다음 쿼리와 같이 [value () 메서드](../t-sql/xml/value-method-xml-data-type.md) 를 사용 하 여 결과를 관계형 세계에 반환할 수 있습니다. 모든 업무 센터 위치에 LocationID 특성이 있으면 쿼리에서 True를 반환하고 그렇지 않으면 False를 반환합니다.  
   
 ```  
 SELECT Instructions.value('  
@@ -106,7 +107,7 @@ ProductModelID SmallPicturesStored
   
 -   정량화된 식의 변수를 바인딩할 때는 유형 어설션이 지원되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [XQuery 식](../xquery/xquery-expressions.md)  
   
   

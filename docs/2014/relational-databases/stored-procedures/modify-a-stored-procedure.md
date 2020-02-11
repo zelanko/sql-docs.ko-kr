@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7cbc7981817a6c62db378976fe36a4dc753c6b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015884"
 ---
 # <a name="modify-a-stored-procedure"></a>저장 프로시저 수정
@@ -27,7 +27,7 @@ ms.locfileid: "63015884"
   
 -   **시작하기 전 주의 사항:**  [제한 사항](#Restrictions), [보안](#Security)  
   
--   **프로시저를 변경 하려면 사용 합니다.**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **프로시저를 변경하려면 다음을 사용합니다.**   [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -38,7 +38,7 @@ ms.locfileid: "63015884"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  프로시저에 대한 ALTER PROCEDURE 권한이 필요합니다.  
   
 ##  <a name="Procedures"></a> 저장 프로시저 수정 방법  
@@ -146,7 +146,7 @@ ms.locfileid: "63015884"
   
     ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ALTER PROCEDURE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-procedure-transact-sql)  
   
   

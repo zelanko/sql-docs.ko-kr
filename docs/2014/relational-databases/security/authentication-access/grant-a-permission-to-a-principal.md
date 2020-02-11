@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 9b0ff18a9b3c6ff338a2b827b91ff20bbc7b2ce9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011954"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>보안 주체에게 사용 권한 부여
@@ -47,7 +47,7 @@ ms.locfileid: "63011954"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  사용 권한을 부여한 사용자 또는 AS 옵션으로 지정한 보안 주체에게 GRANT OPTION을 통한 사용 권한이 있거나 부여할 사용 권한을 포함하는 상위 사용 권한이 있어야 합니다. **sysadmin** 고정 서버 역할의 멤버는 모든 사용 권한을 부여할 수 있습니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -65,7 +65,7 @@ ms.locfileid: "63011954"
   
 4.  저장 프로시저를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-5.  에 **저장 프로시저 속성-** _stored_procedure_name_ 대화 상자 페이지를 선택 **권한을**합니다. 이 페이지에서는 저장 프로시저에 사용자 또는 역할을 추가하고 해당 사용자 또는 역할이 포함할 사용 권한을 지정할 수 있습니다.  
+5.  **저장 프로시저 속성-**_stored_procedure_name_ 대화 상자의 페이지 선택 아래에서 **사용 권한**을 선택 합니다. 이 페이지에서는 저장 프로시저에 사용자 또는 역할을 추가하고 해당 사용자 또는 역할이 포함할 사용 권한을 지정할 수 있습니다.  
   
 6.  완료되었으면 **확인**을 클릭합니다.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "63011954"
   
  자세한 내용은 [GRANT&#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql) 및 [GRANT 개체 사용 권한&#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-object-permissions-transact-sql)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보안 주체&#40;데이터베이스 엔진&#41;](principals-database-engine.md)  
   
   

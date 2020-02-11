@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf8b3b4f00ad2e8a3b9236292ee20948c852b6ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68199552"
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>병합 아티클 사이에서 조인 필터 정의 및 수정
@@ -52,11 +52,11 @@ ms.locfileid: "68199552"
 -   테이블 집합에 대한 조인 필터를 수동으로 만들거나 테이블에 정의된 외래 키와 기본 키 간의 관계를 기반으로 복제에서 필터를 자동으로 생성할 수 있습니다. 조인 필터 집합을 자동으로 생성하는 방법에 대한 자세한 내용은 [병합 아티클 간의 조인 필터 집합 자동 생성&#40;SQL Server Management Studio&#41;](automatically-generate-join-filters-between-merge-articles.md)을 참조하세요.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
- 새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<게시>** 대화 상자의 **행 필터** 페이지에서 조인 필터를 정의, 수정 및 삭제합니다. 마법사 사용 및 대화 상자 액세스에 대한 자세한 내용은 [게시 만들기](create-a-publication.md) 및 [게시 속성 보기 및 수정](view-and-modify-publication-properties.md)을 참조하세요.  
+ 새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 -** 게시> **대화 상자의 \<행 필터** 페이지에서 조인 필터를 정의, 수정 및 삭제합니다. 마법사 사용 및 대화 상자 액세스에 대한 자세한 내용은 [게시 만들기](create-a-publication.md) 및 [게시 속성 보기 및 수정](view-and-modify-publication-properties.md)을 참조하세요.  
   
 #### <a name="to-define-a-join-filter"></a>조인 필터를 정의하려면  
   
-1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<게시>** 의 **행 필터** 페이지에 있는 **필터링된 테이블** 창에서 기존 행 필터 또는 조인 필터를 선택합니다.  
+1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 -** 게시>**의 \<행 필터** 페이지에 있는 **필터링된 테이블** 창에서 기존 행 필터 또는 조인 필터를 선택합니다.  
   
 2.  **추가**를 클릭한 다음 **선택한 필터 확장을 위해 조인 추가**를 클릭합니다.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "68199552"
         > [!CAUTION]  
         >  이 옵션을 선택하면 조인 필터에서의 자식 테이블과 부모 테이블 간의 관계가 일대일 또는 일대다가 됩니다. 자식 테이블에 있는 조인 열이 고유해야 하는 경우에만 이 옵션을 선택합니다. 이 옵션이 잘못 설정되면 데이터가 일치하지 않을 수 있습니다.  
   
-    -   기본적으로 병합 복제는 동기화 과정에서 행별로 변경 내용을 처리합니다. 필터링된 테이블과 조인된 테이블 행의 관련 변경 내용을 하나의 단위로 처리하려면 **논리적 레코드** ([!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이후 버전에서만 제공). 논리적 레코드를 사용하기 위한 아티클 및 게시 요구 사항이 충족되는 경우에만 이 옵션을 사용할 수 있습니다. 자세한 내용은 [논리적 레코드를 사용하여 관련된 행의 변경 내용 그룹화](../merge/group-changes-to-related-rows-with-logical-records.md)에서 "논리적 레코드 사용 시 고려 사항" 섹션을 참조하세요.  
+    -   기본적으로 병합 복제는 동기화 과정에서 행별로 변경 내용을 처리합니다. 필터링된 테이블과 조인된 테이블 행의 관련 변경 내용을 하나의 단위로 처리하려면 **논리적 레코드**를 선택합니다([!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이상 버전에만 해당). 논리적 레코드를 사용하기 위한 아티클 및 게시 요구 사항이 충족되는 경우에만 이 옵션을 사용할 수 있습니다. 자세한 내용은 [논리적 레코드를 사용하여 관련된 행의 변경 내용 그룹화](../merge/group-changes-to-related-rows-with-logical-records.md)에서 "논리적 레코드 사용 시 고려 사항" 섹션을 참조하세요.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -91,7 +91,7 @@ ms.locfileid: "68199552"
   
 #### <a name="to-modify-a-join-filter"></a>조인 필터를 수정하려면  
   
-1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<게시>** 대화 상자의 **행 필터** 페이지에 있는 **필터링된 테이블** 창에서 필터를 선택하고 **편집**을 클릭합니다.  
+1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 -** 게시> **대화 상자의 \<행 필터** 페이지에 있는 **필터링된 테이블** 창에서 필터를 선택하고 **편집**을 클릭합니다.  
   
 2.  **조인 편집** 대화 상자에서 필터를 수정합니다.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "68199552"
   
 #### <a name="to-delete-a-join-filter"></a>조인 필터를 삭제하려면  
   
-1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<게시>** 대화 상자의 **행 필터** 페이지에 있는 **필터링된 테이블** 창에서 필터를 선택하고 **삭제**를 클릭합니다. 삭제하는 조인 필터가 다른 조인에 의해 확장된 경우 해당 조인 또한 삭제됩니다.  
+1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 -** 게시> **대화 상자의 \<행 필터** 페이지에 있는 **필터링된 테이블** 창에서 필터를 선택하고 **삭제**를 클릭합니다. 삭제하는 조인 필터가 다른 조인에 의해 확장된 경우 해당 조인 또한 삭제됩니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
  다음 절차에서는 부모 아티클의 매개 변수가 있는 필터 및 이 아티클과 관련 자식 아티클 간의 조인 필터를 보여 줍니다. 조인 필터는 복제 저장 프로시저를 사용하여 프로그래밍 방식으로 정의 및 수정할 수 있습니다.  
@@ -114,7 +114,7 @@ ms.locfileid: "68199552"
   
 2.  게시 데이터베이스의 게시자에서 [sp_addmergearticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)을 실행하여 게시에 대한 하나 이상의 관련 아티클, 즉 자식 아티클을 정의합니다. 자세한 내용은 [아티클을 정의](define-an-article.md)을 참조하세요.  
   
-3.  게시 데이터베이스의 게시자에서 [sp_addmergefilter&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)를 실행합니다. **@publication** 을 지정하고 **@filtername** 에 이 필터에 대한 고유한 이름을, **@article** 에 2단계에서 만든 자식 아티클의 이름을, **@join_articlename** 에 조인되는 부모 아티클의 이름을, **@join_unique_key** 에 다음 값 중 하나를 지정합니다.  
+3.  게시 데이터베이스의 게시자에서 [sp_addmergefilter&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)를 실행합니다. 을 **@publication**지정 하 고,에 대해이 필터 **@filtername**의 고유 이름을,에 **@article**2 단계에서 만든 자식 아티클의 이름,에 조인 **@join_articlename**되는 부모 아티클의 이름을,에 **@join_unique_key**다음 값 중 하나를 지정 합니다.  
   
     -   **0** - 부모 아티클과 자식 아티클 간의 다 대 일 또는 다 대 다 조인을 나타냅니다.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "68199552"
      이는 두 아티클 간의 조인 필터를 정의합니다.  
   
     > [!CAUTION]  
-    >  부모 아티클의 기반 테이블에 있는 조인 열에 고유성을 보장하는 제약 조건이 있는 경우에만 **@join_unique_key** 를 **1** 로 설정하세요. **@join_unique_key** 를 **1**로 설정하면 데이터가 일치하지 않을 수 있습니다.  
+    >  부모 아티클의 **@join_unique_key** 기본 테이블에 있는 조인 열에 고유성을 보장 하는 제약 조건이 있는 경우에만 **1** 로 설정 합니다. 가 **@join_unique_key** **1** 로 잘못 설정 된 경우 데이터가 일치 하지 않을 수 있습니다.  
   
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
  다음 예에서는 정적 행 필터를 사용하여 자체 필터링되는 `SalesOrderDetail` 테이블에 대해 `SalesOrderHeader` 테이블 아티클을 필터링하는 병합 게시에 대한 아티클을 정의합니다. 자세한 내용은 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md)을 참조하세요.  
@@ -134,13 +134,13 @@ ms.locfileid: "68199552"
   
  [!code-sql[HowTo#sp_MergeDynamicPub1](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepubdynamic1.sql#sp_mergedynamicpub1)]  
   
-## <a name="see-also"></a>관련 항목  
- [조인 필터](../merge/join-filters.md)   
+## <a name="see-also"></a>참고 항목  
+ [Join Filters](../merge/join-filters.md)   
  [매개 변수가 있는 행 필터](../merge/parameterized-filters-parameterized-row-filters.md)   
  [게시 및 아티클 속성 변경](change-publication-and-article-properties.md)   
  [병합 복제의 게시된 데이터 필터링](../merge/filter-published-data-for-merge-replication.md)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
- [병합 테이블 아티클 간의 논리적 레코드 관계 정의](define-a-logical-record-relationship-between-merge-table-articles.md)   
+ [Define a Logical Record Relationship Between Merge Table Articles](define-a-logical-record-relationship-between-merge-table-articles.md)   
  [병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)  
   
   

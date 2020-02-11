@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 13ec38a90e0acf85dccf87edd94f6efa4cf3dfd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916961"
 ---
 # <a name="database-properties-general-page"></a>데이터베이스 속성(일반 페이지)
   이 페이지를 사용하여 선택한 데이터베이스의 속성을 확인하거나 수정할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **마지막 데이터베이스 백업**  
  데이터베이스를 마지막으로 백업한 날짜를 표시합니다.  
   
@@ -53,8 +53,8 @@ ms.locfileid: "62916961"
  **데이터 정렬 이름**  
  데이터베이스에 사용된 데이터 정렬을 표시합니다. **옵션** 페이지에서 데이터 정렬을 변경할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [ALTER DATABASE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+## <a name="see-also"></a>참고 항목  
+ [ALTER DATABASE &#40;Transact-SQL &#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [sys.databases&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   
   

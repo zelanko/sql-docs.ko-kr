@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d71ea2d6a10755ef52e0cac37ddcd2385d82d9cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067623"
 ---
 # <a name="set-up-database-diagram-designer-visual-database-tools"></a>데이터베이스 다이어그램 디자이너 설정(Visual Database Tools)
@@ -57,9 +57,9 @@ ms.locfileid: "63067623"
   
     9. sp_upgraddiagrams 저장 프로시저  
   
-## <a name="see-also"></a>관련 항목  
- [데이터베이스 다이어그램 소유권 이해 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [이전 버전에서 데이터베이스 다이어그램 업그레이드 &#40;Visual Database Tools&#41;](upgrade-database-diagrams-from-previous-editions-visual-database-tools.md)   
- [ALTER AUTHORIZATION&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-authorization-transact-sql)  
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools를 &#40;데이터베이스 다이어그램 소유권 이해&#41;](visual-database-tools.md)   
+ [Visual Database Tools&#41;&#40;이전 버전에서 데이터베이스 다이어그램 업그레이드](upgrade-database-diagrams-from-previous-editions-visual-database-tools.md)   
+ [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-authorization-transact-sql)  
   
   

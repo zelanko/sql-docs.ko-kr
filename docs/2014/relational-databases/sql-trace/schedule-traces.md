@@ -19,14 +19,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f177db7495e3304dff4653dbc778fdce25bfe7c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63028400"
 ---
 # <a name="schedule-traces"></a>예약된 추적
-  Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 추적을 예약하는 두 가지 방법이 제공됩니다. 다음 작업을 수행할 수 있습니다.  
+  Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 추적을 예약하는 두 가지 방법이 제공됩니다. 다음을 수행할 수 있습니다.  
   
 -   추적 중지 시간을 설정합니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "63028400"
   
  [sp_trace_setstatus&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql)  
   
-## <a name="see-also"></a>관련 항목  
- [관리 태스크 자동화&#40;SQL Server Agent&#41;](../../ssms/agent/sql-server-agent.md)  
+## <a name="see-also"></a>참고 항목  
+ [관리 태스크 자동화&#40;SQL Server 에이전트&#41;](../../ssms/agent/sql-server-agent.md)  
   
   

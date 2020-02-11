@@ -1,5 +1,5 @@
 ---
-title: MSdatatype_mappings (TRANSACT-SQL) | Microsoft Docs
+title: MSdatatype_mappings (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,30 +18,30 @@ ms.assetid: 13cdabb3-6e07-4e8d-ae80-4235022ccc7f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ee1a0cc83b55fc265ae2bb490fd9d5e11fd73f22
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68129619"
 ---
-# <a name="msdatatypemappings-transact-sql"></a>MSdatatype_mappings(Transact-SQL)
+# <a name="msdatatype_mappings-transact-sql"></a>MSdatatype_mappings(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  합니다 **MSdatatype_mappings** 뷰를 SQL Server 데이터 형식을 SQL Server 이외 데이터베이스 관리 시스템 (DBMS)에서 사용 되는 데이터 형식에 매핑합니다. 이 테이블에 저장 되는 **msdb** 데이터베이스입니다.  
+  **MSdatatype_mappings** 뷰는 SQL Server 데이터 형식을 SQL SERVER 아닌 DBMS (데이터베이스 관리 시스템)에서 사용 하는 데이터 형식에 매핑합니다. 이 테이블은 **msdb** 데이터베이스에 저장 됩니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**dbms_name**|**nvarchar(128)**|DBMS의 이름이입니다. 가능한 값 및 해당 설명이 같습니다.<br /><br /> **MSSQLSERVER**: 대상은은 SQL Server 데이터베이스입니다.<br />**ORACLE**: 대상은 Oracle 데이터베이스입니다.<br />**DB2**: 대상은 IBM DB2 데이터베이스입니다.<br />**SYBASE**: 대상은 Sybase 데이터베이스입니다.|  
-|**sql_type**|**nvarchar(128)**|SQL Server 데이터 형식이입니다.|  
-|**dest_type**|**nvarchar(128)**|SQL Server 이외 데이터 형식의 이름이입니다.|  
-|**dest_prec**|**bigint**|SQL Server 이외 데이터 형식의 전체 자릿수가입니다.|  
+|**dbms_name**|**nvarchar(128)**|DBMS의 이름입니다. 다음은 가능한 값과 그에 대 한 설명입니다.<br /><br /> **MSSQLSERVER**: 대상이 SQL Server 데이터베이스입니다.<br />**Oracle**: 대상이 ORACLE 데이터베이스입니다.<br />**DB2**: 대상은 IBM DB2 데이터베이스입니다.<br />**Sybase**: 대상이 SYBASE 데이터베이스입니다.|  
+|**sql_type**|**nvarchar(128)**|SQL Server 데이터 형식입니다.|  
+|**dest_type**|**nvarchar(128)**|SQL Server 이외 데이터 형식의 이름입니다.|  
+|**dest_prec**|**bigint**|SQL Server 이외 데이터 형식의 전체 자릿수입니다.|  
 |**dest_create_params**|**int**|내부적으로만 사용됩니다.|  
-|**dest_nullable**|**bit**|SQL Server 이외 데이터 형식의 NULL 값을 지원 하는 경우입니다.|  
+|**dest_nullable**|**bit**|SQL Server 이외 데이터 형식이 NULL 값을 지원할지 여부입니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [다른 유형의 데이터베이스 복제](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Oracle 게시자에 대 한 데이터 형식 매핑 지정](../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)   
- [복제 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;복제 테이블](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d735fc81e38354630eb4486bbf6ca2bdae570e6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022233"
 ---
 # <a name="performance-tuning-for-oracle-publishers"></a>Oracle 게시자를 위한 성능 튜닝
@@ -24,7 +24,7 @@ ms.locfileid: "63022233"
   
  또한 Oracle 게시자 성능과 관련된 다음 두 가지 방법을 사용할 수 있습니다.  
   
--   적절 한 게시 옵션을 지정 합니다. Oracle 또는 Oracle Gateway입니다.  
+-   Oracle 또는 Oracle Gateway 중에서 적절한 게시 옵션 지정  
   
 -   적절한 간격으로 게시자의 변경 내용을 처리하도록 트랜잭션 세트 작업 구성  
   
@@ -40,7 +40,7 @@ ms.locfileid: "63022233"
   
  트랜잭션 집합 작업을 구성하려면 [Oracle 게시자에 대한 트랜잭션 집합 작업 구성&#40;복제 Transact-SQL 프로그래밍&#41;](../administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Oracle 게시자 구성](configure-an-oracle-publisher.md)   
  [Oracle 게시 개요](oracle-publishing-overview.md)  
   

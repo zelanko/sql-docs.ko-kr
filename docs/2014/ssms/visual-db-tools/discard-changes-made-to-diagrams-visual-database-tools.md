@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a2f439c1d3350a30f1bdd8fe8c3fe917686d2401
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63125966"
 ---
 # <a name="discard-changes-made-to-diagrams-visual-database-tools"></a>다이어그램 변경 내용 취소(Visual Database Tools)
@@ -33,8 +33,8 @@ ms.locfileid: "63125966"
     > [!CAUTION]  
     >  동일한 데이터베이스에 연결된 다른 데이터베이스 다이어그램이나 테이블 디자인 창이 열려 있으면 이러한 창의 변경 내용도 저장되지 않은 채 닫힙니다.  
   
-## <a name="see-also"></a>관련 항목  
- [데이터베이스 다이어그램 작업 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools를 &#40;데이터베이스 다이어그램 작업&#41;](visual-database-tools.md)   
  [데이터베이스 다이어그램에서 테이블 작업&#40;Visual Database Tools&#41;](work-with-tables-in-database-diagram-visual-database-tools.md)  
   
   

@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1d6bb42e4b35a74ef2bd6eefb85ea81b0ed18e40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63073848"
 ---
 # <a name="creating-and-managing-storage-for-memory-optimized-objects"></a>메모리 액세스에 최적화된 개체의 스토리지 만들기 및 관리
@@ -34,7 +34,7 @@ ms.locfileid: "63073848"
   
 -   메모리 최적화 모든 테이블은 메모리 최적화 파일 그룹에 매핑됩니다. 이 파일 그룹은 파일 스트림 파일 그룹을 사용하여 생성됩니다.  
   
--   페이지가 없고 데이터가 행으로 유지됩니다.  
+-   페이지는 없으며 데이터는 행으로 유지됩니다.  
   
 -   메모리 최적화 테이블의 모든 변경 내용은 활성 파일에 추가되는 방식으로 저장됩니다. 파일 읽기와 파일에 쓰기는 모두 순차적으로 수행됩니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "63073848"
   
  이 섹션의 항목:  
   
--   [메모리 액세스에 최적화된 테이블 저장소 구성](configuring-storage-for-memory-optimized-tables.md)  
+-   [메모리 액세스에 최적화된 테이블 스토리지 구성](configuring-storage-for-memory-optimized-tables.md)  
   
 -   [메모리 액세스에 최적화된 파일 그룹](the-memory-optimized-filegroup.md)  
   
@@ -58,11 +58,11 @@ ms.locfileid: "63073848"
   
 -   [메모리 액세스에 최적화된 개체에 대한 내구성 정의](defining-durability-for-memory-optimized-objects.md)  
   
--   [디스크 기반 테이블 저장소와 메모리 액세스에 최적화된 테이블 저장소 비교](comparing-disk-based-table-storage-to-memory-optimized-table-storage.md)  
+-   [디스크 기반 테이블 스토리지와 메모리 액세스에 최적화된 테이블 스토리지 비교](comparing-disk-based-table-storage-to-memory-optimized-table-storage.md)  
   
 -   [데이터 및 델타 파일 쌍에 대한 병합 모니터링 및 문제 해결](../../database-engine/monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP&#40;메모리 내 최적화&#41;](in-memory-oltp-in-memory-optimization.md)  
   
   

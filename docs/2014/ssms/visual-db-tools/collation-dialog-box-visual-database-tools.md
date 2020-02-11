@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 28c32be0bfb42b923041169c542e21b21074cf70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62936968"
 ---
 # <a name="collation-dialog-box-visual-database-tools"></a>데이터 정렬 대화 상자(Visual Database Tools)
@@ -27,9 +27,9 @@ ms.locfileid: "62936968"
   
 -   **열 속성** 탭의 **데이터 정렬** 필드에 잘못된 데이터 정렬 이름을 입력한 경우  
   
--   **열 속성** 탭의 **데이터 정렬** 필드를 클릭한 다음, 필드의 오른쪽에 있는 줄임표 단추(**...**)를 클릭한 경우  
+-   **열 속성** 탭의 **데이터 정렬** 필드를 클릭한 다음, 필드의 오른쪽에 있는 줄임표 단추( **...** )를 클릭한 경우  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **SQL 데이터 정렬**  
  드롭다운 목록의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 정의되어 있는 데이터 정렬 순서 중에서 하나를 선택합니다.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62936968"
  **기본값 복원 단추**  
  데이터베이스의 기본 데이터 정렬 순서를 열에 적용합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [집계 쿼리에서 열 작업&#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

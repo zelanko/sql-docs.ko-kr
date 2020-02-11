@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4850be4c112f9c0b987d543873cb55af08372455
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917358"
 ---
 # <a name="display-data-and-log-space-information-for-a-database"></a>데이터베이스의 데이터 및 로그 공간 정보 표시
@@ -35,7 +35,7 @@ ms.locfileid: "62917358"
   
      [보안](#Security)  
   
--   **데이터 및 로그 공간 정보를 데이터베이스에 대 한 표시를 사용 하 여:**  
+-   **데이터베이스에 대한 데이터 및 로그 공간 정보를 표시하려면:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -45,8 +45,9 @@ ms.locfileid: "62917358"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
- **sp_spaceused** 를 실행할 수 있는 사용 권한은 **public** 역할에 부여됩니다. **db_owner** 고정 데이터베이스 역할의 멤버만 **@updateusage** 매개 변수를 지정할 수 있습니다.  
+####  <a name="Permissions"></a> 권한  
+ **sp_spaceused** 를 실행할 수 있는 사용 권한은 **public** 역할에 부여됩니다. 
+  **db_owner** 고정 데이터베이스 역할의 멤버만 **@updateusage** 매개 변수를 지정할 수 있습니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
@@ -92,7 +93,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SELECT&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
  [sys.database_files&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
  [sp_spaceused&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql)   

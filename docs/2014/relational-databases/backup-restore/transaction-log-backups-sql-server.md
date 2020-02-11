@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6dc94409e607c91944a2263ac5dfb3e8a3f4ce54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62920683"
 ---
 # <a name="transaction-log-backups-sql-server"></a>트랜잭션 로그 백업(SQL Server)
@@ -27,9 +27,9 @@ ms.locfileid: "62920683"
   
  로그 백업을 만들려면 최소한 하나의 전체 백업을 만들어야 합니다. 그렇게 해야 로그가 백업 중일 때를 제외하고 언제든지 트랜잭션 로그를 백업할 수 있습니다. 로그 백업을 자주 수행하여 작업 손실 가능성을 최소화하고 트랜잭션 로그를 잘라내는 것이 좋습니다. 데이터베이스 관리자는 보통 주기적(예: 매주)으로 전체 데이터베이스 백업을 만들고, 상황에 따라 더 짧은 간격(예: 매일)으로 차등 데이터베이스 백업을 만듭니다. 또한 데이터베이스 백업과 상관없이 더 자주(예: 매 10분) 트랜잭션 로그를 백업합니다. 지정된 백업 유형의 최적 간격은 데이터의 중요도, 데이터베이스의 크기 및 서버의 작업과 같은 요소에 따라 달라집니다.  
   
- **항목 내용:**  
+ **항목 내용**  
   
--   [로그 백업 시퀀스의 작동 원리](#LogBackupSequence)  
+-   [로그 백업 시퀀스의 작동 방식](#LogBackupSequence)  
   
 -   [권장 사항](#Recommendations)  
   
@@ -37,10 +37,10 @@ ms.locfileid: "62920683"
   
 -   [관련 내용](#RelatedContent)  
   
-##  <a name="LogBackupSequence"></a> 로그 백업 시퀀스의 작동 원리  
+##  <a name="LogBackupSequence"></a>로그 백업 시퀀스의 작동 방식  
  트랜잭션 로그 백업 *로그 체인* 시퀀스는 데이터 백업과 독립되어 있습니다. 예를 들어 이벤트가 다음과 같은 순서로 발생한다고 가정합니다.  
   
-|Time|이벤트|  
+|Time|행사|  
 |----------|-----------|  
 |8:00 A.M.|데이터베이스를 백업합니다.|  
 |정오|트랜잭션 로그를 백업합니다.|  
@@ -58,7 +58,7 @@ ms.locfileid: "62920683"
   
 -   기본적으로 백업 작업을 성공적으로 수행할 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그와 시스템 이벤트 로그에 항목이 추가됩니다. 로그를 자주 백업하는 경우 이러한 성공 메시지는 바로 누적되므로 엄청난 오류 로그가 쌓여 다른 메시지를 찾기 힘들 수 있습니다. 이 경우 스크립트가 이러한 로그 항목에 종속되지 않을 경우 추적 플래그 3226을 사용하여 이러한 항목을 표시하지 않을 수 있습니다. 자세한 내용은 [추적 플래그&#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)를 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
  **트랜잭션 로그 백업을 만들려면**  
   
 -   [트랜잭션 로그 백업&#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
@@ -70,7 +70,7 @@ ms.locfileid: "62920683"
 ##  <a name="RelatedContent"></a> 관련 내용  
  없음  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [트랜잭션 로그&#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   
  [SQL Server 데이터베이스 백업 및 복원](back-up-and-restore-of-sql-server-databases.md)   
  [비상 로그 백업&#40;SQL Server&#41;](tail-log-backups-sql-server.md)   

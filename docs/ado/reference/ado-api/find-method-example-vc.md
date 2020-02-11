@@ -15,14 +15,14 @@ ms.assetid: 594c51cb-1157-4417-802b-d91b875ba020
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e6be0edf100501762f6d4eada735ff90caa84df4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932523"
 ---
 # <a name="find-method-example-vc"></a>Find 메서드 예제(VC++)
-이 예제에서는 합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 [찾을](../../../ado/reference/ado-api/find-method-ado.md) 찾아에서 직함의 수를 계산 하는 메서드를 **Pubs** 데이터베이스. 기본 공급자와 유사한 기능을 지원 하지 않습니다 하는 것을 전제로 합니다.  
+이 예에서는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 [Find](../../../ado/reference/ado-api/find-method-ado.md) 메서드를 사용 하 여 **Pubs** 데이터베이스의 비즈니스 타이틀 수를 찾고 계산 합니다. 이 예에서는 기본 공급자가 유사한 기능을 지원 하지 않는다고 가정 합니다.  
   
 ```  
 // BeginFindCpp.cpp  
@@ -154,6 +154,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Find 메서드 (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

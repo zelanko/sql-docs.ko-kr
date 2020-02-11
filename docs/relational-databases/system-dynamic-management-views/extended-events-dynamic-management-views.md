@@ -15,10 +15,10 @@ ms.assetid: 6d337c2f-71e9-4e0c-8877-9780baa7699d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6fb0b49bc25b8c5ac73224a41198d50b6e8099ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130858"
 ---
 # <a name="extended-events-dynamic-management-views"></a>확장 이벤트 동적 관리 뷰
@@ -34,7 +34,7 @@ ms.locfileid: "68130858"
 |[sys.dm_xe_packages&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-packages-transact-sql.md)|[sys.dm_xe_sessions&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-sessions-transact-sql.md)|  
 |[sys.dm_xe_session_event_actions&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-event-actions-transact-sql.md)||  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

@@ -17,16 +17,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6f28abbf9871d5f4e512e9c9ee0cfb5c7ad9db59
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63135278"
 ---
 # <a name="localdbstopinstance-function"></a>LocalDBStopInstance 함수
   지정한 SQL Server Express LocalDB 인스턴스의 실행을 중지합니다.  
   
- **헤더 파일:** sqlncli.h  
+ **헤더 파일:** sqlncli  
   
 ## <a name="syntax"></a>구문  
   
@@ -58,7 +58,7 @@ HRESULT LocalDBStopInstance(
  *ulTimeout*  
  [입력] 이 작업이 완료될 때까지 대기할 시간(초)입니다. 이 값이 0인 경우 이 함수는 LocalDB 인스턴스가 중지될 때까지 대기하지 않고 즉시 반환됩니다.  
   
-## <a name="returns"></a>반환 값  
+## <a name="returns"></a>반환  
  S_OK  
  함수가 성공했습니다.  
   
@@ -101,10 +101,10 @@ HRESULT LocalDBStopInstance(
  [LOCALDB_ERROR_INTERNAL_ERROR](../express-localdb-error-messages/localdb-error-internal-error.md)  
  예기치 않은 오류가 발생했습니다. 자세한 내용은 이벤트 로그를 참조하십시오.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  LocalDB API를 사용하는 코드 샘플은 [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md)를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Express LocalDB 헤더 및 버전 정보](sql-server-express-localdb-header-and-version-information.md)  
   
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 788defce7f897e4da3a3680118c573b5a73ac3b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917056"
 ---
 # <a name="log-shipping-monitor-settings"></a>로그 전달 모니터 설정
@@ -24,7 +24,7 @@ ms.locfileid: "62917056"
   
  로그 전달 개념에 대한 설명은 [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)를 참조하세요.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **모니터 서버 인스턴스**  
  로그 전달 구성을 위한 모니터 서버로 현재 구성되어 있는 서버 인스턴스의 이름을 표시합니다.  
   

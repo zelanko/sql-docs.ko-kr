@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e91a501a899a6ba2b18790ac2da6e7c45b270b07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63025739"
 ---
 # <a name="replay-options-sql-server-profiler"></a>재생 옵션(SQL Server Profiler)
@@ -50,14 +50,14 @@ ms.locfileid: "63025739"
  성능을 최적화하고 디버깅할 수 없도록 합니다. 이벤트는 특정 서버 프로세스 ID(SPID)에 기록된 순서로 재생되지만 SPID의 순서는 보장되지 않습니다.  
   
  **재생 결과 표시**  
- 재생 결과를 표시합니다. 이 옵션이 기본 옵션입니다. 재생 중인 추적의 용량이 클 경우에는 이 옵션을 해제하여 디스크 공간을 절약할 수 있습니다.  
+ 재생 결과를 표시합니다. 기본 옵션입니다. 재생 중인 추적의 용량이 클 경우에는 이 옵션을 해제하여 디스크 공간을 절약할 수 있습니다.  
   
 > [!NOTE]  
 >  최고의 재생 성능을 위해 여러 스레드를 사용하여 이벤트를 재생하고 재생 결과는 표시하지 않도록 선택하는 것이 좋습니다.  
   
 ## <a name="advanced-replay-options"></a>고급 재생 옵션  
  **시스템 SPID 재생**  
- 모든 SPID를 재생합니다. 이 옵션이 기본 옵션입니다.  
+ 모든 SPID를 재생합니다. 기본 옵션입니다.  
   
  **한 SPID만 재생**  
  목록에서 선택한 SPID 번호만 재생합니다.  
@@ -77,7 +77,7 @@ ms.locfileid: "63025739"
 ## <a name="about-the-health-monitor"></a>상태 모니터 정보  
  상태 모니터는 추적 재생의 시뮬레이션된 프로세스를 모니터링하고 재생 내에서 차단된 프로세스를 종료하는 애플리케이션 스레드입니다. **재생 구성** 대화 상자의 **고급 재생 옵션** 탭에서 차단된 프로세스를 끝내기 전에 상태 모니터가 대기해야 하는 시간(**상태 모니터 대기 간격**)을 초 단위로 지정할 수 있습니다. 이 간격을 0으로 설정하면 상태 모니터가 재생 추적에서 시뮬레이션된 차단 프로세스를 종료하지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [추적 재생](replay-traces.md)   
  [재생 요구 사항](replay-requirements.md)   
  [추적 재생에 대한 고려 사항&#40;SQL Server Profiler&#41;](considerations-for-replaying-traces-sql-server-profiler.md)  

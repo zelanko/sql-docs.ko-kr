@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 0af4d7b97777002dc5683c075f82531ccc8df86e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68016802"
 ---
 # <a name="children-mdx"></a>Children(MDX)
@@ -32,7 +32,7 @@ Member_Expression.Children
  멤버를 반환하는 유효한 MDX 식입니다.  
   
 ## <a name="remarks"></a>설명  
- 합니다 **자식을** 함수는 지정 된 멤버의 자식을 포함 하는 일반적인 순서로 정렬 된 집합을 반환 합니다. 지정된 멤버에 자식이 없는 경우 이 함수는 빈 집합을 반환합니다.  
+ **Children** 함수는 지정 된 멤버의 자식을 포함 하는 자연스럽 게 정렬 된 집합을 반환 합니다. 지정된 멤버에 자식이 없는 경우 이 함수는 빈 집합을 반환합니다.  
   
 ## <a name="example"></a>예제  
  다음 예에서는 Geography 차원에서 Geography 계층에 있는 United States 멤버의 자식을 반환합니다.  
@@ -42,7 +42,7 @@ SELECT [Geography].[Geography].[Country].&[United States].Children ON 0
 FROM [Adventure Works]  
 ```  
   
- 다음 예제에서 모든 멤버를 반환 합니다 **측정값** 차원 열 축에이 모든 계산된 멤버, 및의 모든 자식 항목 집합을 포함 합니다 `[Product].[Model Name]` 특성 행 축에는 계층에서의 **Adventure Works** 큐브.  
+ 다음 예에서는 열 축에서 **측정값** 차원의 모든 멤버를 반환 합니다. 여기에는 모든 계산 멤버와 `[Product].[Model Name]` **어드벤처 Works** 큐브의 행 축에 있는 특성 계층의 모든 자식 집합이 포함 됩니다.  
   
 ```  
 SELECT  
@@ -53,11 +53,11 @@ FROM
   
 ```  
   
-|릴리스|기록|  
+|해제|기록|  
 |-------------|-------------|  
-|[!INCLUDE[ssBOL2005_R03](../includes/ssbol2005-r03-md.md)]|**변경 된 내용**<br /> -구문 및 인수를 명확 하 게 업데이트 합니다.<br /><br /> -업데이트 된 예제를 추가 합니다.|  
+|[!INCLUDE[ssBOL2005_R03](../includes/ssbol2005-r03-md.md)]|**변경된 내용**<br /> -명확성을 향상 시키기 위해 구문 및 인수가 업데이트 되었습니다.<br /><br /> -업데이트 된 예제를 추가 했습니다.|  
   
-## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

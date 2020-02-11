@@ -14,22 +14,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 485c748aad8b07a5e8b92a02c03d51a82e5f362a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62990698"
 ---
 # <a name="extended-events"></a>확장 이벤트
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장 이벤트는 확장성이 높고 다양하게 구성 가능한 인프라를 갖추고 있으므로 사용자는 이를 통해 문제를 해결하거나 성능 문제를 파악하는 데 필요한 만큼의 정보만 수집할 수 있습니다.  
   
  확장 이벤트에 대한 자세한 내용은 [SQL Server 확장 이벤트](https://blogs.msdn.com/b/extended_events/)에서 찾을 수 있습니다.  
   
 ## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장 이벤트의 이점  
- 확장 이벤트는 성능 리소스를 적게 사용하는 간단한 성능 모니터링 시스템입니다. 확장 이벤트에서는**새 세션 마법사** 와 **새 세션**이라는 두 가지 그래픽 사용자 인터페이스가 제공되므로 세션 데이터를 작성, 수정, 표시 및 분석할 수 있습니다.  
+ 확장 이벤트는 성능 리소스를 적게 사용하는 간단한 성능 모니터링 시스템입니다. 확장 이벤트는 세션 데이터를 생성, 수정, 표시 및 분석 하는 두 가지 그래픽 사용자 인터페이스 (**새 세션 마법사** 와 **새 세션**)를 제공 합니다.  
   
 ## <a name="extended-events-concepts"></a>확장 이벤트 개념  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장 이벤트(Extended Event)는 이벤트나 이벤트 소비자와 같은 기존 개념을 바탕으로 하고 Windows용 이벤트 추적의 개념을 사용하며 여기에 새로운 개념을 도입했습니다.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장 이벤트(Extended Event)는 이벤트나 이벤트 소비자와 같은 기존 개념을 바탕으로 하고 Windows용 이벤트 추적의 개념을 사용하며 여기에 새로운 개념을 도입했습니다.  
   
  다음 표는 확장 이벤트의 개념에 대해 설명합니다.  
   
@@ -97,12 +99,12 @@ ms.locfileid: "62990698"
 |데이터베이스 성능을 저하시키는 잠금의 원인을 파악하는 방법에 대해 설명합니다.|[가장 많은 잠금이 발생한 개체 찾기](find-the-objects-that-have-the-most-locks-taken-on-them.md)|  
 |확장 이벤트를 Windows용 이벤트 추적과 함께 사용하여 시스템 작업을 모니터링하는 방법에 대해 설명합니다.|[확장 이벤트를 사용하여 시스템 작업 모니터링](monitor-system-activity-using-extended-events.md)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 계층 응용 프로그램](../data-tier-applications/data-tier-applications.md)   
- [SQL Server 개체 및 버전에 대한 DAC 지원](../data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)   
+ [SQL Server 개체 및 버전에 대 한 DAC 지원](../data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)   
  [데이터 계층 응용 프로그램 배포](../data-tier-applications/deploy-a-data-tier-application.md)   
  [데이터 계층 응용 프로그램 모니터링](../data-tier-applications/monitor-data-tier-applications.md)   
  [확장 이벤트 동적 관리 뷰](../views/views.md)   
- [확장 이벤트 카탈로그 뷰 &#40;TRANSACT-SQL&#41;] (~/relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql  
+ [확장 이벤트 카탈로그 뷰 &#40;Transact-sql&#41;] (~/relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql  
   
   

@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 840af91236f95d2065a926db93100e0a2bdc312f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62989074"
 ---
 # <a name="filter-published-data"></a>게시된 데이터 필터링
@@ -52,18 +52,19 @@ ms.locfileid: "62989074"
   
 -   매개 변수가 있는 행 필터 - 병합 복제에만 사용할 수 있음  
   
-     매개 변수가 있는 행 필터를 사용하여 게시할 행의 하위 집합을 선택할 수 있습니다. 모든 구독자에게 행의 동일한 하위 집합을 보내는 정적 필터와 달리 매개 변수가 있는 행 필터는 구독자가 제공한 데이터 값을 사용하여 구독자에게 행의 다른 하위 집합을 보냅니다. 자세한 내용은 [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)을 참조하세요.  
+     매개 변수가 있는 행 필터를 사용하여 게시할 행의 하위 집합을 선택할 수 있습니다. 모든 구독자에게 행의 동일한 하위 집합을 보내는 정적 필터와 달리 매개 변수가 있는 행 필터는 구독자가 제공한 데이터 값을 사용하여 구독자에게 행의 다른 하위 집합을 보냅니다. 자세한 내용은 [매개 변수가 있는 행 필터](../merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  
   
 -   조인 필터 - 병합 복제에만 사용할 수 있음  
   
-     조인 필터를 사용하여 다른 게시된 테이블로 행 필터를 확장할 수 있습니다. 자세한 내용은 [Join Filters](../merge/join-filters.md)을 참조하세요.  
+     조인 필터를 사용하여 다른 게시된 테이블로 행 필터를 확장할 수 있습니다. 자세한 내용은 [Join Filters](../merge/join-filters.md)를 참조하세요.  
   
 ## <a name="static-row-filters"></a>정적 행 필터  
  다음 그림에서는 2행, 3행, 6행만 게시에 포함되도록 필터링된 게시된 테이블을 보여 줍니다.  
   
- ![행 필터링](../media/repl-16.gif "Row filtering")  
+ ![행 필터링](../media/repl-16.gif "행 필터링")  
   
- 정적 행 필터는 WHERE 절을 사용하여 게시에 적합한 데이터를 선택합니다. WHERE 절의 마지막 부분은 사용자가 지정합니다. **ProductLine** 열이 포함된 Adventure Works 예제 데이터베이스의 **Product 테이블**을 참조하십시오. 산악 자전거 관련 제품에 대한 데이터가 있는 행만 게시하려면 `ProductLine = 'M'`을 지정합니다.  
+ 정적 행 필터는 WHERE 절을 사용하여 게시에 적합한 데이터를 선택합니다. WHERE 절의 마지막 부분은 사용자가 지정합니다. 
+  **ProductLine** 열이 포함된 Adventure Works 예제 데이터베이스의 **Product 테이블**을 참조하십시오. 산악 자전거 관련 제품에 대한 데이터가 있는 행만 게시하려면 `ProductLine = 'M'`을 지정합니다.  
   
  정적 행 필터를 사용하면 각 게시에 대해 단일 데이터 집합이 생성됩니다. 위의 예에서는 모든 구독자가 산악 자전거 관련 제품에 대한 데이터가 있는 행만 받게 됩니다. 일반 자전거 관련 제품에 대한 데이터가 있는 행만을 필요로 하는 다른 구독자가 있는 경우 다음을 수행하십시오.  
   
@@ -79,11 +80,11 @@ ms.locfileid: "62989074"
 ## <a name="column-filters"></a>열 필터  
  다음 그림에서는 C 열을 필터링하여 제외하는 게시를 보여 줍니다.  
   
- ![열 필터링](../media/repl-17.gif "Column filtering")  
+ ![열 필터링](../media/repl-17.gif "열 필터링")  
   
  다음 그림처럼 행 필터링과 열 필터링을 함께 사용할 수도 있습니다.  
   
- ![행 및 열 필터링](../media/repl-18.gif "Row and column filtering")  
+ ![행 및 열 필터링](../media/repl-18.gif "행 및 열 필터링")  
   
  게시가 생성된 다음에는 열 필터링을 사용하여 열을 기존 게시에서는 삭제하고 게시자에서는 테이블에 유지할 수 있고 게시에 기존 열을 포함시킬 수 있습니다. 테이블에 새 열을 추가한 다음 이 열을 게시된 아티클에 추가하는 것과 같은 다른 변경에 대해서는 스키마 변경 복제를 사용합니다. 자세한 내용은 [게시 데이터베이스의 스키마 변경](make-schema-changes-on-publication-databases.md) 항목의 "열 추가" 및 "열 삭제" 섹션을 참조하세요.  
   
@@ -93,14 +94,16 @@ ms.locfileid: "62989074"
 |-----------------|-------------------------------------|  
 |기본 키 열|기본 키 열은 트랜잭션 게시의 모든 테이블에 필요합니다. 기본 키는 병합 게시의 테이블에 필요하지 않지만 기본 키 열이 있는 경우 필터링할 수 없습니다.|  
 |외래 키 열|새 게시 마법사를 사용하여 생성된 모든 게시입니다. Transact-SQL 저장 프로시저를 사용하여 외래 키 열을 필터링할 수 있습니다. 자세한 내용은 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)을 참조하십시오.|  
-|**rowguid** 열|병합 게시<sup>1</sup>|  
-|**msrepl_tran_version** 열|업데이트할 수 있는 구독을 허용하는 스냅샷 게시나 트랜잭션 게시|  
+|
+  **rowguid** 열|병합 게시<sup>1</sup>|  
+|
+  **msrepl_tran_version** 열|업데이트할 수 있는 구독을 허용하는 스냅샷 게시나 트랜잭션 게시|  
 |NULL을 허용하지 않고 기본값 또는 IDENTITY 속성 설정이 없는 열|업데이트할 수 있는 구독을 허용하는 스냅샷 게시나 트랜잭션 게시|  
 |UNIQUE 제약 조건 또는 인덱스가 있는 열|업데이트할 수 있는 구독을 허용하는 스냅샷 게시나 트랜잭션 게시|  
 |SQL Server 7.0 병합 게시의 모든 열|SQL Server 7.0 병합 게시에서는 열을 필터링할 수 없습니다.|  
 |타임스탬프|업데이트할 수 있는 구독을 허용하는 SQL Server 7.0 스냅샷 또는 트랜잭션 게시|  
   
- <sup>1</sup> 병합 게시에서 테이블을 게시 하는 경우 해당 테이블 데이터 형식의 열이 이미 포함 `uniqueidentifier` 사용 하 여는 `ROWGUIDCOL` 속성 집합을 복제 라는 추가 열 만드는대신이열을사용할수있습니다**rowguid**합니다. 이 경우 기존 열을 게시해야 합니다.  
+ <sup>1</sup> 병합 게시에 테이블을 게시 하는 경우 해당 테이블에 이미 `uniqueidentifier` `ROWGUIDCOL` 속성이 설정 된 데이터 형식의 열이 있는 경우 복제는 **rowguid**라는 추가 열을 만드는 대신이 열을 사용할 수 있습니다. 이 경우 기존 열을 게시해야 합니다.  
   
  열 필터를 정의하거나 수정하려면 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)의 "HOST_NAME()으로 필터링" 섹션을 참조하십시오.  
   
@@ -129,9 +132,12 @@ ms.locfileid: "62989074"
   
 -   트랜잭션 복제를 사용하면 인덱싱된 뷰를 뷰나 테이블로 복제할 수 있습니다. 뷰를 테이블로 복제하면 테이블의 열을 필터링할 수 없습니다.  
   
- 행 필터는 데이터베이스에서 작동하도록 설계되지 않았습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 `sp_replcmds` 실행(필터 실행 대상)을 의도적으로 데이터베이스 소유자(`dbo`)로 제한합니다. `dbo`에는 데이터베이스 간 권한이 없습니다. `sp_replcmds` 논리는 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]에 CDC(변경 데이터 캡처)를 추가하여 변경 내용 추적 테이블을 사용자가 반환하고 쿼리할 수 있는 정보로 채웁니다. 보안상의 이유로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이 논리의 실행을 제한 하도록 악성 `dbo` 이 실행 경로 가로채지 합니다. 예를 들어, 악성 `dbo`는 `sp_replcmds`를 호출하는 사용자의 컨텍스트에서 실행될 수 있는 트리거를 CDC 테이블에 추가할 수 있으며, 이 경우 logreader 에이전트입니다.  에이전트가 실행 중인 계정의 권한이 더 높은 경우 악성 `dbo`가 자신의 권한을 에스컬레이션할 수 있습니다.  
+ 행 필터는 데이터베이스에서 작동하도록 설계되지 않았습니다. 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 `sp_replcmds` 실행(필터 실행 대상)을 의도적으로 데이터베이스 소유자(`dbo`)로 제한합니다. 
+  `dbo`에는 데이터베이스 간 권한이 없습니다. 
+  [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 논리는 `sp_replcmds`에 CDC(변경 데이터 캡처)를 추가하여 변경 내용 추적 테이블을 사용자가 반환하고 쿼리할 수 있는 정보로 채웁니다. 보안상의 이유로는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 악성 `dbo` 이 실행 경로를 활용할 수 없도록이 논리의 실행을 제한 합니다. 예를 들어, 악성 `dbo`는 `sp_replcmds`를 호출하는 사용자의 컨텍스트에서 실행될 수 있는 트리거를 CDC 테이블에 추가할 수 있으며, 이 경우 logreader 에이전트입니다.  에이전트가 실행 중인 계정의 권한이 더 높은 경우 악성 `dbo`가 자신의 권한을 에스컬레이션할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 및 데이터베이스 개체 게시](publish-data-and-database-objects.md)  
   
   

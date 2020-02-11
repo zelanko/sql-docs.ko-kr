@@ -16,35 +16,37 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9a9a93c9c6efdd5a864b5ab3ce0beacb7cbf1632
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63049630"
 ---
 # <a name="change-the-ip-address-of-a-failover-cluster-instance"></a>장애 조치(failover) 클러스터 인스턴스의 IP 주소 변경
   이 항목에서는 장애 조치(failover) 클러스터 관리자 스냅인을 사용하여 AlwaysOn 장애 조치(failover) 클러스터 인스턴스(FCI)에 IP 주소 리소스를 변경하는 방법에 대해 설명합니다. 장애 조치 클러스터 관리자 스냅인은 WSFC(Windows Server 장애 조치(failover) 클러스터링) 서비스용 클러스터 관리 애플리케이션입니다.  
   
--   **시작하기 전 주의 사항:**  [보안](#Security)  
+-   **시작 하기 전 주의:**  [보안](#Security)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
- 시작 하기 전에 다음을 검토 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 온라인 설명서 항목: [Before Installing Failover Clustering](../install/before-installing-failover-clustering.md)를 참조하십시오.  
+ 시작하기 전에 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 온라인 설명서의 [장애 조치(failover) 클러스터링을 설치하기 전에](../install/before-installing-failover-clustering.md)항목을 검토하세요.  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  FCI를 유지 관리 또는 업데이트하려면 FCI의 모든 노드 서비스로 로그온할 수 있는 권한을 가진 로컬 관리자여야 합니다.  
   
-##  <a name="WSFC"></a> 장애 조치(Failover) 클러스터 관리자 스냅인 사용  
- **FCI용 IP 주소 리소스를 변경하려면**  
+##  <a name="WSFC"></a>장애 조치(Failover) 클러스터 관리자 스냅인 사용  
+ **FCI에 대 한 IP 주소 리소스를 변경 하려면**  
   
 1.  장애 조치(failover) 클러스터 관리자 스냅인을 엽니다.  
   
 2.  왼쪽 창에서 **서비스 및 애플리케이션** 노드를 확장하고 FCI를 클릭합니다.  
   
-3.  **서버 이름** 범주 아래의 오른쪽 창에서 SQL Server 인스턴스를 마우스 오른쪽 단추로 클릭하고 **속성** 옵션을 선택하여 **속성** 대화 상자를 엽니다.  
+3.  
+  **서버 이름** 범주 아래의 오른쪽 창에서 SQL Server 인스턴스를 마우스 오른쪽 단추로 클릭하고 **속성** 옵션을 선택하여 **속성** 대화 상자를 엽니다.  
   
-4.  **일반** 탭에서 IP 주소 리소스를 변경합니다.  
+4.  
+  **일반** 탭에서 IP 주소 리소스를 변경합니다.  
   
 5.  **확인** 을 클릭하여 대화 상자를 닫습니다.  
   

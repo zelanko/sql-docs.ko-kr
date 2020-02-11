@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7591cff38ac08d9fd36d7b39f180613fbdd12961
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63066441"
 ---
 # <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 SQL Server 관리 개체 지원
@@ -55,7 +55,7 @@ ms.locfileid: "63066441"
 -   <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType.IsMemoryOptimized%2A>  
   
 ## <a name="code-sample"></a>코드 예제  
- 이 예제에서는 다음을 수행합니다.  
+ 이 샘플 애플리케이션은 다음을 수행합니다.  
   
 -   메모리 최적화 파일 그룹 및 메모리 최적화 파일이 있는 데이터베이스를 만듭니다.  
   
@@ -171,7 +171,7 @@ public class A {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP에 대한 SQL Server 지원](sql-server-support-for-in-memory-oltp.md)  
   
   

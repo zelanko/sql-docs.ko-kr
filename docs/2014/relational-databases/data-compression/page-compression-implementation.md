@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 65777f25066cfb42093313b90ac198c6bc1796a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918228"
 ---
 # <a name="page-compression-implementation"></a>페이지 압축 구현
@@ -66,8 +66,8 @@ ms.locfileid: "62918228"
   
  데이터가 들어 있는 기존 테이블이 페이지 압축으로 변환되면 각 페이지가 다시 작성되고 평가됩니다. 모든 페이지를 다시 작성하면 테이블, 인덱스 또는 파티션이 다시 작성됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 압축](data-compression.md)   
- [Row Compression Implementation](row-compression-implementation.md)  
+ [행 압축 구현](row-compression-implementation.md)  
   
   

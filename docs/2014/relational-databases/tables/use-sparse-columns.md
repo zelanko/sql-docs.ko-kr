@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1e98485d0a1887b2ac24da20d8b8a672c0060591
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196670"
 ---
 # <a name="use-sparse-columns"></a>스파스 열 사용
@@ -39,7 +39,7 @@ ms.locfileid: "68196670"
 ## <a name="properties-of-sparse-columns"></a>스파스 열 속성  
  스파스 열에는 다음과 같은 특징이 있습니다.  
   
--   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 은 열 정의에 SPARSE 키워드를 사용하여 해당 열의 값 저장을 최적화할 수 있습니다. 따라서 테이블에 있는 행에 대해 열 값이 NULL인 경우 값을 스토리지할 필요가 없습니다.  
+-   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 은 열 정의에 SPARSE 키워드를 사용하여 해당 열의 값 스토리지를 최적화할 수 있습니다. 따라서 테이블에 있는 행에 대해 열 값이 NULL인 경우 값을 스토리지할 필요가 없습니다.  
   
 -   스파스 열을 포함하는 테이블에 대한 카탈로그 뷰는 일반적인 테이블에 대한 카탈로그 뷰와 동일합니다. sys.columns 카탈로그 뷰는 테이블의 각 열에 대한 행을 포함하고 열 집합(정의된 경우)을 포함합니다.  
   
@@ -65,7 +65,8 @@ ms.locfileid: "68196670"
 |`ntext`||  
   
 ## <a name="estimated-space-savings-by-data-type"></a>데이터 형식별 예상 공간 절약  
- 스파스 열을 사용하면 SPARSE로 표시되지 않은 동일한 데이터에 대해 필요한 공간보다 Null이 아닌 값에 더 많은 스토리지 공간이 필요합니다. 다음 표에서는 각 데이터 형식에 대한 공간 사용률을 보여 줍니다. **NULL 백분율** 열은 40%의 순 공간 절약을 위해 NULL이어야 하는 데이터 비율을 나타냅니다.  
+ 스파스 열을 사용하면 SPARSE로 표시되지 않은 동일한 데이터에 대해 필요한 공간보다 Null이 아닌 값에 더 많은 스토리지 공간이 필요합니다. 다음 표에서는 각 데이터 형식에 대한 공간 사용률을 보여 줍니다. 
+  **NULL 백분율** 열은 40%의 순 공간 절약을 위해 NULL이어야 하는 데이터 비율을 나타냅니다.  
   
  **고정 길이 데이터 형식**  
   
@@ -85,7 +86,7 @@ ms.locfileid: "68196670"
 |`uniqueidentifier`|16|20|43%|  
 |`date`|3|7|69%|  
   
- **Precision-Dependent-Length 데이터 형식**  
+ **전체 자릿수 종속 길이 데이터 형식**  
   
 |데이터 형식|비-스파스 바이트|스파스 바이트|NULL 백분율|  
 |---------------|---------------------|------------------|---------------------|  
@@ -97,16 +98,17 @@ ms.locfileid: "68196670"
 |`datetimetoffset (7)`|10|14|49%|  
 |`decimal/numeric(1,s)`|5|9|60%|  
 |`decimal/numeric(38,s)`|17|21|42%|  
-|`vardecimal(p,s)`|`decimal` 형식을 일반적인 예상치로 사용|||  
+|`vardecimal(p,s)`|
+  `decimal` 형식을 일반적인 예상치로 사용|||  
   
- **Data-Dependent-Length 데이터 형식**  
+ **데이터 종속 길이 데이터 형식**  
   
 |데이터 형식|비-스파스 바이트|스파스 바이트|NULL 백분율|  
 |---------------|---------------------|------------------|---------------------|  
 |`sql_variant`|기본 데이터 형식에 따라 다름|||  
-|`varchar` 또는 `char`|2*|4*|60%|  
-|`nvarchar` 또는 `nchar`|2*|4*+|60%|  
-|`varbinary` 또는 `binary`|2*|4*|60%|  
+|`varchar`디스크나`char`|2*|4*|60%|  
+|`nvarchar`디스크나`nchar`|2*|4*+|60%|  
+|`varbinary`디스크나`binary`|2*|4*|60%|  
 |`xml`|2*|4*|60%|  
 |`hierarchyid`|2*|4*|60%|  
   
@@ -231,7 +233,7 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  `1      Tire Spec 1  AXZZ217                  27`  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [열 집합 사용](../tables/use-column-sets.md)   
  [CREATE TABLE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)   
  [ALTER TABLE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   

@@ -1,5 +1,5 @@
 ---
-title: 형식 및 Members in System.dll에 허용 되지 않는 | Microsoft Docs
+title: System.object에서 허용 되지 않는 형식 및 멤버 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1780f4236c70d8685c1ce2050a08bc305a3f0853
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919673"
 ---
 # <a name="disallowed-types-and-members-in-systemdll"></a>Disallowed Types and Members In System.dll
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식 또는 멤버에는 사용할 수 없게 하는 공용 언어 통합 (CLR) 프로그래밍을 `HostProtectionAttribute` 를 지정 하는 `System.Security.Permissions.HostProtectionResource` 열거형의 값을 사용 하 여 `ExternalProcessMgmt`, `ExternalThreading`, `MayLeakOnAbort`, `SecurityInfrastructure`, `SelfAffectingProcessMgmnt`, `SelfAffectingThreading`, **: SharedState**합니다 `Synchronization`, 또는 `UI`합니다. 다음 표에는 HPA(호스트 보호 특성) 값이 허용되지 않는 System.dll 어셈블리의 멤버 및 유형이 나열되어 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]CLR (공용 `HostProtectionAttribute` 언어 통합) 프로그래밍에서는 `System.Security.Permissions.HostProtectionResource` `ExternalProcessMgmt`, `ExternalThreading` `MayLeakOnAbort` `SecurityInfrastructure` `SelfAffectingProcessMgmnt` `SelfAffectingThreading`,,,,, **sharedstate**, `Synchronization`또는 `UI`값을 사용 하 여 열거형을 지정 하는가 있는 형식 또는 멤버를 사용할 때를 허용 하지 않습니다. 다음 표에는 HPA(호스트 보호 특성) 값이 허용되지 않는 System.dll 어셈블리의 멤버 및 유형이 나열되어 있습니다.  
   
 > [!NOTE]  
 >  이 목록은 지원되는 어셈블리에서 생성되었습니다. 자세한 내용은 [Supported .NET Framework Libraries](../clr-integration/database-objects/supported-net-framework-libraries.md)을 참조하세요.  
@@ -64,7 +64,7 @@ ms.locfileid: "62919673"
 |System.ComponentModel.AsyncCompletedEventHandler|SharedState|  
 |System.ComponentModel.AsyncOperation|SharedState|  
 |System.ComponentModel.AsyncOperationManager|SharedState|  
-|System.ComponentModel.AttributeCollection|Synchronization|  
+|System.ComponentModel.AttributeCollection|동기화|  
 |System.ComponentModel.BackgroundWorker|SharedState|  
 |System.ComponentModel.BaseNumberConverter|SharedState|  
 |System.ComponentModel.BindingList|SharedState|  
@@ -77,7 +77,7 @@ ms.locfileid: "62919673"
 |System.ComponentModel.CollectionChangeEventHandler|SharedState|  
 |System.ComponentModel.CollectionConverter|SharedState|  
 |System.ComponentModel.CompModSwitches|SharedState|  
-|System.ComponentModel.ComponentCollection|Synchronization|  
+|System.ComponentModel.ComponentCollection|동기화|  
 |System.ComponentModel.ComponentConverter|SharedState|  
 |System.ComponentModel.ComponentEditor|SharedState|  
 |System.ComponentModel.ComponentResourceManager|SharedState|  
@@ -130,7 +130,7 @@ ms.locfileid: "62919673"
 |System.ComponentModel.DoWorkEventHandler|SharedState|  
 |System.ComponentModel.EnumConverter|SharedState|  
 |System.ComponentModel.EventDescriptor|SharedState|  
-|System.ComponentModel.EventDescriptorCollection|Synchronization|  
+|System.ComponentModel.EventDescriptorCollection|동기화|  
 |System.ComponentModel.EventHandlerList|SharedState|  
 |System.ComponentModel.ExpandableObjectConverter|SharedState|  
 |System.ComponentModel.ExtendedPropertyDescriptor|SharedState|  
@@ -165,7 +165,7 @@ ms.locfileid: "62919673"
 |System.ComponentModel.PropertyChangedEventArgs|SharedState|  
 |System.ComponentModel.PropertyChangedEventHandler|SharedState|  
 |System.ComponentModel.PropertyDescriptor|SharedState|  
-|System.ComponentModel.PropertyDescriptorCollection|Synchronization|  
+|System.ComponentModel.PropertyDescriptorCollection|동기화|  
 |System.ComponentModel.ReferenceConverter|SharedState|  
 |System.ComponentModel.ReflectEventDescriptor|SharedState|  
 |System.ComponentModel.ReflectPropertyDescriptor|SharedState|  
@@ -189,22 +189,22 @@ ms.locfileid: "62919673"
 |System.ComponentModel.WarningException|SharedState|  
 |System.ComponentModel.WeakHashtable|SharedState|  
 |System.ComponentModel.Win32Exception|SharedState|  
-|System.Diagnostics.ConsoleTraceListener|Synchronization|  
+|System.Diagnostics.ConsoleTraceListener|동기화|  
 |System.Diagnostics.Debug.get_Listeners()|SharedState|  
-|System.Diagnostics.DefaultTraceListener|Synchronization|  
-|System.Diagnostics.DelimitedListTraceListener|Synchronization|  
-|System.Diagnostics.EventLog.get_SynchronizingObject()|Synchronization|  
-|System.Diagnostics.EventLogTraceListener|Synchronization|  
+|System.Diagnostics.DefaultTraceListener|동기화|  
+|System.Diagnostics.DelimitedListTraceListener|동기화|  
+|System.Diagnostics.EventLog.get_SynchronizingObject()|동기화|  
+|System.Diagnostics.EventLogTraceListener|동기화|  
 |System.Diagnostics.PerformanceCounter|SharedState, Synchronization|  
 |System.Diagnostics.PerformanceCounterCategory|SharedState, Synchronization|  
 |System.Diagnostics.Process|SelfAffectingProcessMgmt, ExternalProcessMgmt, SharedState, Synchronization|  
 |System.Diagnostics.ProcessStartInfo|SelfAffectingProcessMgmt, SharedState|  
 |System.Diagnostics.ProcessThread|SelfAffectingThreading, SelfAffectingProcessMgmt|  
 |System.Diagnostics.SharedPerformanceCounter|SharedState, Synchronization|  
-|System.Diagnostics.TextWriterTraceListener|Synchronization|  
+|System.Diagnostics.TextWriterTraceListener|동기화|  
 |System.Diagnostics.Trace.get_Listeners()|SharedState|  
-|System.Diagnostics.TraceListener|Synchronization|  
-|System.Diagnostics.XmlWriterTraceListener|Synchronization|  
+|System.Diagnostics.TraceListener|동기화|  
+|System.Diagnostics.XmlWriterTraceListener|동기화|  
 |System.IO.Compression.DeflateStream.BeginRead()|ExternalThreading|  
 |System.IO.Compression.DeflateStream.BeginWrite()|ExternalThreading|  
 |System.IO.Compression.GZipStream.BeginRead()|ExternalThreading|  
@@ -260,7 +260,7 @@ ms.locfileid: "62919673"
 |System.Net.Sockets.TcpListener.BeginAcceptTcpClient()|ExternalThreading|  
 |System.Net.Sockets.UdpClient.BeginReceive()|ExternalThreading|  
 |System.Net.Sockets.UdpClient.BeginSend()|ExternalThreading|  
-|System.Net.SpnDictionary.get_SyncRoot()|Synchronization|  
+|System.Net.SpnDictionary.get_SyncRoot()|동기화|  
 |System.Net.WebClient.DownloadDataAsync()|ExternalThreading|  
 |System.Net.WebClient.DownloadFileAsync()|ExternalThreading|  
 |System.Net.WebClient.DownloadStringAsync()|ExternalThreading|  
@@ -271,20 +271,20 @@ ms.locfileid: "62919673"
 |System.Net.WebClient.UploadStringAsync()|ExternalThreading|  
 |System.Net.WebClient.UploadValuesAsync()|ExternalThreading|  
 |System.Net.WebRequest.BeginGetRequestStream()|ExternalThreading|  
-|System.Net.WebRequest.BeginGetResponse()|Synchronization|  
-|System.Text.RegularExpressions.Group.Synchronized()|Synchronization|  
-|System.Text.RegularExpressions.Match.Synchronized()|Synchronization|  
+|System.Net.WebRequest.BeginGetResponse()|동기화|  
+|System.Text.RegularExpressions.Group.Synchronized()|동기화|  
+|System.Text.RegularExpressions.Match.Synchronized()|동기화|  
 |System.Text.RegularExpressions.Regex.CompileToAssembly()|MayLeakOnAbort|  
 |System.Threading.Semaphore|ExternalThreading, Synchronization|  
 |System.Timers.Timer|ExternalThreading, Synchronization|  
 |WebClientWriteStream.BeginRead()|ExternalThreading|  
 |WebClientWriteStream.BeginWrite()|ExternalThreading|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [호스트 보호 특성 및 CLR 통합 프로그래밍](host-protection-attributes-and-clr-integration-programming.md)   
- [Microsoft.VisualBasic.dll에 허용 되지 않는 유형 및 멤버](disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
- [Mscorlib.dll에 허용 되지 않는 유형 및 멤버](disallowed-types-and-members-in-mscorlib-dll.md)   
- [System.Data.dll에 허용 되지 않는 유형 및 멤버](disallowed-types-and-members-in-system-data-dll.md)   
- [System.Core.dll에 허용되지 않는 형식 및 멤버](disallowed-types-and-members-in-system-core-dll.md)  
+ [Microsoft.visualbasic에 허용 되지 않는 형식 및 멤버](disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
+ [Mscorlib.dll에 허용 되지 않는 형식 및 멤버](disallowed-types-and-members-in-mscorlib-dll.md)   
+ [System.object의 허용 되지 않는 형식 및 멤버](disallowed-types-and-members-in-system-data-dll.md)   
+ [System.Core.dll에 허용되지 않는 유형 및 멤버](disallowed-types-and-members-in-system-core-dll.md)  
   
   

@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 89cdfa63bff88c4f4bb5954402034b31ad7f77ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63060989"
 ---
 # <a name="errorcontrol-property-sqlservice-class"></a>ErrorControl 속성(SqlService 클래스)
@@ -37,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>부분  
- *object*  
+ *개체가*  
  서비스를 나타내는 [SqlService 클래스](sqlservice-class.md) 개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
@@ -46,22 +46,22 @@ object
  무시  
  사용자에게 오류를 알리지 않습니다.  
   
- Normal  
+ 정상  
  사용자에게 오류를 알립니다.  
   
  심각  
  마지막으로 성공한 올바른 구성으로 시스템을 다시 시작합니다.  
   
- 심각  
+ 위험  
  올바른 구성으로 시스템을 다시 시작합니다.  
   
  알 수 없음  
  심각도를 알 수 없습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 값은 오류가 발생할 때 시작 프로그램에서 수행하는 동작을 나타냅니다. 모든 오류는 컴퓨터 시스템에 기록됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [서비스 시작 및 중지](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

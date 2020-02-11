@@ -16,13 +16,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7e9580839c18ed40a6163ab933ce40276bc413ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63044058"
 ---
-# <a name="force-a-target-server-to-poll-the-master-server"></a>대상 서버를 강제 실행하여 마스터 서버 폴링
+# <a name="force-a-target-server-to-poll-the-master-server"></a>Force a Target Server to Poll the Master Server
   이 항목에서는 강제로 대상 서버가 마스터 서버를 폴링하도록 하는 방법에 대해 설명합니다. 대상 서버는 마스터 서버에 등록된 서버여야 합니다.  
   
  작업은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 수행하도록 지정된 일련의 동작입니다. 다중 서버 작업은 마스터 서버가 하나 이상의 대상 서버에서 실행하는 작업입니다. 각 대상 서버는 같은 작업의 한 인스턴스를 동시에 실행할 수 있습니다. 각 대상 서버는 주기적으로 마스터 서버를 폴링하여 해당 대상 서버에 새로 할당된 작업의 복사본을 다운로드한 다음 연결을 끊습니다. 대상 서버는 로컬에서 작업을 실행한 다음 마스터 서버에 다시 연결하여 작업 결과 상태를 업로드합니다.  
@@ -30,9 +30,9 @@ ms.locfileid: "63044058"
 > [!NOTE]  
 >  대상 서버에서 작업 상태 업로드를 시도할 때 마스터 서버가 액세스 가능하지 않은 경우 작업 상태는 마스터 서버가 액세스 가능해질 때까지 스풀링됩니다.  
   
--   **시작하기 전 주의 사항:**  [제한 사항](#Restrictions), [보안](#Security)  
+-   **시작 하기 전 주의 사항:**  [제한 사항](#Restrictions), [보안](#Security)  
   
--   **대상 서버가 마스터 서버를 폴링하도록 설정하려면 다음을 사용합니다.**  [SQL Server Management Studio](#SSMS)  
+-   **대상 서버가 마스터 서버를 폴링하기 강제로 적용 하려면:**  [SQL Server Management Studio](#SSMS)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -43,11 +43,13 @@ ms.locfileid: "63044058"
  자세한 내용은 [Implement SQL Server Agent Security](implement-sql-server-agent-security.md) 및 [Choose the Right SQL Server Agent Service Account for Multiserver Environments](choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md)을 참조하세요.  
   
 ##  <a name="SSMS"></a> SQL Server Management Studio 사용  
- **대상 서버가 마스터 서버를 폴링하도록 설정하려면**  
+ **대상 서버가 마스터 서버를 폴링하 게 하려면**  
   
-1.  **개체 탐색기**에서 마스터 서버를 확장합니다.  
+1.  
+  **개체 탐색기**에서 마스터 서버를 확장합니다.  
   
-2.  **SQL Server 에이전트**를 마우스 오른쪽 단추로 클릭하고 **다중 서버 관리**를 가리킨 다음 **대상 서버 관리**를 클릭합니다.  
+2.  
+  **SQL Server 에이전트**를 마우스 오른쪽 단추로 클릭하고 **다중 서버 관리**를 가리킨 다음 **대상 서버 관리**를 클릭합니다.  
   
 3.  대상 서버를 클릭한 다음 **강제 폴링**을 클릭합니다.  
   

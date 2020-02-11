@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 63ec11b8575017ffbb3a1b1468ef3150a20326e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63028355"
 ---
 # <a name="exclude-duplicate-rows-visual-database-tools"></a>중복 행 제외(Visual Database Tools)
@@ -38,8 +38,8 @@ ms.locfileid: "63028355"
     > [!NOTE]  
     >  DISTINCT 키워드를 사용하면 결과 창에서 결과 집합을 수정할 수 없습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [검색 조건 지정 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools &#40;검색 조건을 지정&#41;](visual-database-tools.md)   
  [쿼리 결과 정렬 및 그룹화&#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)  
   
   

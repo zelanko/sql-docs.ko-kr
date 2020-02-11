@@ -24,14 +24,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 5e06e33048548baad245bee78b9989e9c4cc700b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011337"
 ---
 # <a name="choose-an-authentication-mode"></a>인증 모드 선택
-  설치 중에 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 인증 모드를 선택해야 합니다. 가능한 모드 두 가지가 있습니다. Windows 인증 모드 및 혼합된 모드입니다. Windows 인증 모드는 Windows 인증을 활성화하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증은 비활성화합니다. 혼합 모드는 Windows 인증과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 모두 활성화합니다. Windows 인증은 항상 사용할 수 있으며 비활성화할 수 없습니다.  
+  설치 중에 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 인증 모드를 선택해야 합니다. Windows 인증 모드 및 혼합 모드의 2가지 유형이 있습니다. Windows 인증 모드는 Windows 인증을 활성화하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증은 비활성화합니다. 혼합 모드는 Windows 인증과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 모두 활성화합니다. Windows 인증은 항상 사용할 수 있으며 비활성화할 수 없습니다.  
   
 ## <a name="configuring-the-authentication-mode"></a>인증 모드 구성  
  설치 중에 혼합 모드 인증을 선택하면 sa라는 기본 제공 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 관리자 계정에 대해 강력한 암호를 입력하고 확인해야 합니다. sa 계정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 연결합니다.  
@@ -67,9 +67,9 @@ ms.locfileid: "63011337"
   
 1.  **시작** 메뉴에서 **실행**을 클릭합니다.  
   
-2.  에 **실행** 대화 상자에서 `secpol.msc`를 클릭 하 고 **확인**합니다.  
+2.  **실행** 대화 상자에서를 입력 `secpol.msc`한 다음 **확인**을 클릭 합니다.  
   
-3.  **로컬 보안 설정** 응용 프로그램에서 **보안 설정**, **계정 정책**을 차례로 확장한 다음 **암호 정책**을 클릭합니다.  
+3.  **로컬 보안 설정** 애플리케이션에서 **보안 설정**, **계정 정책**을 차례로 확장한 다음 **암호 정책**을 클릭합니다.  
   
      암호 정책에 대한 설명이 결과 창에 표시됩니다.  
   
@@ -85,20 +85,20 @@ ms.locfileid: "63011337"
   
 ### <a name="advantages-of-sql-server-authentication"></a>SQL Server 인증의 장점  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증이 필요한 이전 응용 프로그램 및 타사에서 제공되는 응용 프로그램을 지원할 수 있습니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증이 필요한 이전 애플리케이션 및 타사에서 제공되는 애플리케이션을 지원할 수 있습니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 일부 사용자가 Windows 도메인으로 인증되는 혼합 운영 체제 환경을 지원할 수 있습니다.  
   
--   사용자가 알려지지 않았거나 신뢰할 수 없는 도메인에서 연결할 수 있게 해 줍니다. 예를 들어 기존 고객이 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인으로 연결하여 자신의 주문 상태를 확인하는 애플리케이션이 이에 해당합니다.  
+-   사용자가 알 수 없거나 신뢰할 수 없는 도메인에서 연결합니다. 예를 들어 기존 고객이 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인으로 연결하여 자신의 주문 상태를 확인하는 애플리케이션이 이에 해당합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용자가 고유한 ID를 만들 수 있는 웹 기반 응용 프로그램을 지원할 수 있습니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용자가 고유한 ID를 만들 수 있는 웹 기반 애플리케이션을 지원할 수 있습니다.  
   
 -   소프트웨어 개발자가 사전 설정된 알려진 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 기반으로 복잡한 권한 계층 구조를 사용하여 자신의 애플리케이션을 배포할 수 있게 해 줍니다.  
   
     > [!NOTE]  
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치된 컴퓨터에 대한 로컬 관리자 권한에 제한이 없습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 설치에 대한 보안 고려 사항](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   
   

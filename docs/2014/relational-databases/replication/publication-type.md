@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48c6ccac0692075db43e4a5c3a7010c541827d0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63021792"
 ---
 # <a name="publication-type"></a>게시 유형
@@ -30,12 +30,12 @@ ms.locfileid: "63021792"
   
  애플리케이션에 대한 복제 유형 선택은 물리적 복제 환경, 복제할 데이터 형식 및 양, 데이터가 구독자에서 업데이트되는지 여부에 따라 달라집니다. 물리적 환경에는 복제와 관련된 컴퓨터 수 및 위치와 이러한 컴퓨터가 클라이언트(워크스테이션, 랩톱 또는 핸드헬드 디바이스) 또는 서버인지 여부가 포함됩니다. 자세한 내용은 [복제 유형](types-of-replication.md)을 참조하세요.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **Publication type**  
  이 게시에 적합한 복제 유형을 선택합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 및 데이터베이스 개체 게시](publish/publish-data-and-database-objects.md)   
- [Create a Publication](publish/create-a-publication.md)  
+ [게시 만들기](publish/create-a-publication.md)  
   
   

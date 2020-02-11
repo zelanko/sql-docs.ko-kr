@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 32d66451ff0c3e08feccc72719152a275e40a511
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63063069"
 ---
 # <a name="reorder-output-columns-visual-database-tools"></a>출력 열 다시 정렬(Visual Database Tools)
@@ -33,16 +33,16 @@ ms.locfileid: "63063069"
   
 2.  행 선택기 단추를 가리키고 행을 새 위치에 끌어 옵니다.  
   
-     -또는-  
+     또는  
   
      [SQL 창](sql-pane-visual-database-tools.md)에서 열 이름의 순서를 편집합니다.  
   
 > [!TIP]  
 >  조건 창에 빈 행을 삽입한 다음 삽입할 데이터 열을 지정하여 조건 창의 특정 위치에 데이터 행을 추가할 수 있습니다. 자세한 내용은 [쿼리에 열 추가&#40;Visual Database Tools&#41;](add-columns-to-queries-visual-database-tools.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [쿼리 결과 정렬 및 그룹화 &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
- [쿼리 결과 요약 &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools&#41;&#40;쿼리 결과 정렬 및 그룹화](sort-and-group-query-results-visual-database-tools.md)   
+ [Visual Database Tools를 &#40;쿼리 결과 요약&#41;](summarize-query-results-visual-database-tools.md)   
  [쿼리 관련 기본 작업 수행&#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   
