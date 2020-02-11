@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 keywords:
-- master data services
+- Master Data Services
 ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 86b9a2ed9738790cf9747fbad104074393fd33d1
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729279"
 ---
 # <a name="entity-dependencies-explorer"></a>엔터티 종속성 탐색기
@@ -24,11 +24,13 @@ ms.locfileid: "73729279"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   
-[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 2016은 파생 계층을 먼저 정의할 필요 없이 해당 도메인 기반 특성(DBA) 값에 지정된 대로 모델 내의 엔터티 멤버 간의 관계를 시각화하는 대체 방법을 제공하는 새 탐색기 페이지, 엔터티 종속성을 추가합니다.   
+
+  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 2016은 파생 계층을 먼저 정의할 필요 없이 해당 도메인 기반 특성(DBA) 값에 지정된 대로 모델 내의 엔터티 멤버 간의 관계를 시각화하는 대체 방법을 제공하는 새 탐색기 페이지, 엔터티 종속성을 추가합니다.   
   
 "내 엔터티를 사용하는 사람 및 방법?"의 질문에 답변하는 데 도움이 됩니다. 보기는 파생 계층 탐색기 페이지와 유사하지만 더욱 포괄적입니다. 특정 계층의 일부로 정의된 것 뿐만 아니라 모든 DBA 관계를 보여 줍니다. 표시된 계층 구조는 단순히 기존 DBA에서 유추되기 때문에 계층 정의는 필요하지 않습니다.  
   
-탐색기 페이지 메뉴에서 엔터티 종속성 메뉴 항목은 하나 이상의 엔터티에 의해 종속되는 모델의 모든 엔터티를 나열합니다(즉, 하나 이상의 엔터티는 나열된 엔터티를 참조하는 DBA를 가짐). 종속성(직접 및 간접)의 수는 엔터티 이름 옆에 표시되고 맨 위쪽에 가장 많이 참조된 엔터티와 함께 이 수로 목록이 정렬됩니다. [샘플 데이터](https://msdn.microsoft.com/library/master-data-services-sample.aspx)의 Customer 모델에서 가져온 아래 스크린샷은 BigArea 엔터티가 7개의 엔터티로 참조된 것(직접 또는 간접적으로)을 보여 줍니다.  
+탐색기 페이지 메뉴에서 엔터티 종속성 메뉴 항목은 하나 이상의 엔터티에 의해 종속되는 모델의 모든 엔터티를 나열합니다(즉, 하나 이상의 엔터티는 나열된 엔터티를 참조하는 DBA를 가짐). 종속성(직접 및 간접)의 수는 엔터티 이름 옆에 표시되고 맨 위쪽에 가장 많이 참조된 엔터티와 함께 이 수로 목록이 정렬됩니다. 
+  [샘플 데이터](https://msdn.microsoft.com/library/master-data-services-sample.aspx)의 Customer 모델에서 가져온 아래 스크린샷은 BigArea 엔터티가 7개의 엔터티로 참조된 것(직접 또는 간접적으로)을 보여 줍니다.  
   
 ![MDS_EntityDependencies_Menu.jpg](../master-data-services/media/mds-entitydependencies-menu-jpg.jpg)  
     

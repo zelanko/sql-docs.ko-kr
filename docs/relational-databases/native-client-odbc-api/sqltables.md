@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c6a77d041ef66a046697bbf6999fd6b728e7dae0
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73785182"
 ---
 # <a name="sqltables"></a>SQLTables
@@ -30,7 +30,8 @@ ms.locfileid: "73785182"
   
  SQLTables는 사용 가능한 카탈로그, 스키마 및 테이블 형식을 보고 하기 위해 빈 문자열 (길이가 0 인 바이트 포인터)을 특별 하 게 사용 합니다. 빈 문자열은 기본값(NULL 포인터)이 아닙니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 *CatalogName* 매개 변수의 두 부분으로 구성된 이름인 *Linked_Server_Name.Catalog_Name*을 사용하여 연결된 서버의 테이블에 대한 정보를 보고할 수 있도록 지원합니다.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 *CatalogName* 매개 변수의 두 부분으로 구성된 이름인 *Linked_Server_Name.Catalog_Name*을 사용하여 연결된 서버의 테이블에 대한 정보를 보고할 수 있도록 지원합니다.  
   
  SQLTables는 이름이 *TableName* 과 일치 하 고 현재 사용자가 소유 하 고 있는 모든 테이블에 대 한 정보를 반환 합니다.  
   
@@ -39,7 +40,7 @@ ms.locfileid: "73785182"
   
  테이블, 뷰 및 동의어는 테이블 형식에 사용되는 네임스페이스와 다른 공용 네임스페이스를 공유합니다. 따라서 테이블과 뷰를 같은 이름으로 만들 수는 없지만 동일한 카탈로그 및 스키마에서 테이블과 테이블 형식을 같은 이름으로 만드는 것은 가능합니다.  
   
- 테이블 반환 매개 변수에 대 한 자세한 내용은 [테이블 반환 매개 &#40;변수 ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)를 참조 하세요.  
+ 테이블 반환 매개 변수에 대 한 자세한 내용은 [ODBC&#41;&#40;테이블 반환 매개 변수 ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)를 참조 하세요.  
   
 ## <a name="example"></a>예제  
   
@@ -56,7 +57,7 @@ SQLTables(hstmt, (SQLCHAR*) "%", SQL_NTS, (SQLCHAR*)"", 0, (SQLCHAR*)"",
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Sqltables 함수](https://go.microsoft.com/fwlink/?LinkId=59374)   
+ [SQLTables 함수](https://go.microsoft.com/fwlink/?LinkId=59374)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

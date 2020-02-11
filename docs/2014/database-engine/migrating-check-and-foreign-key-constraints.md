@@ -1,5 +1,5 @@
 ---
-title: 마이그레이션 Check 및 Foreign Key 제약 조건 | Microsoft Docs
+title: Check 및 Foreign Key 제약 조건 마이그레이션 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2494ab96cc3b4964c26a1ce17593e9b5aece2e7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774934"
 ---
 # <a name="migrating-check-and-foreign-key-constraints"></a>CHECK 및 FOREIGN KEY 제약 조건 마이그레이션
@@ -32,7 +32,7 @@ ms.locfileid: "62774934"
   
  논리 데이터 무결성이 수정에 필수적이고 제약 조건을 위반하는 수정일 가능성이 높은 경우 이 해결 방법을 사용하십시오. 그러나 무결성을 보장하기 위해 모든 데이터 수정은 이러한 적용을 포함하는 저장된 프로시저를 통해 수행되어야 합니다. 임시 쿼리 및 다른 저장 프로시저를 통한 수정은 이러한 제약 조건이 적용되지 않으므로 경고 없이 제약 조건을 위반할 수 있습니다.  
   
-## <a name="sample-code"></a>예제 코드  
+## <a name="sample-code"></a>샘플 코드  
  다음 샘플은 AdventureWorks2012 데이터베이스를 기반으로 합니다. 특히 이러한 샘플은 고유 인덱스와 더불어 [Sales].[SalesOrderDetail] 테이블 및 해당 관련 CHECK 및 FOREIGN KEY 제약 조건을 기반으로 합니다.  
   
  여기에 지정된 저장 프로시저는 삽입 작업만을 위한 것입니다. 업데이트 및 삭제 작업에 대한 저장 프로시저에는 유사한 구조가 있습니다.  
@@ -240,7 +240,7 @@ END CATCH
 END  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP로 마이그레이션](../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

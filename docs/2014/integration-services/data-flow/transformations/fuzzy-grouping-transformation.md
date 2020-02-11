@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 41ac7c11824457bd6d93a062344eb3b411c95b3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900562"
 ---
 # <a name="fuzzy-grouping-transformation"></a>유사 항목 그룹화 변환
@@ -69,7 +69,7 @@ ms.locfileid: "62900562"
  이 변환은 하나의 입력과 하나의 출력을 가지며 오류 출력은 지원하지 않습니다.  
   
 ## <a name="row-comparison"></a>행 비교  
- 유사 항목 그룹화 변환을 구성하는 경우 변환에서 변환 입력 내의 행을 비교하는 데 사용할 비교 알고리즘을 지정할 수 있습니다. Exhaustive 속성을 설정 하면 `true`, 변환 입력의 다른 모든 행에 대 한 입력의 모든 행을 비교 합니다. 이 비교 알고리즘을 사용하면 더 정확한 결과를 얻을 수 있지만 입력 행의 수가 많으면 변환 성능이 느려집니다. 성능 문제를 방지 하는 것이 좋습니다 Exhaustive 속성 설정 하려면 `true` 패키지 개발 시에만 합니다.  
+ 유사 항목 그룹화 변환을 구성하는 경우 변환에서 변환 입력 내의 행을 비교하는 데 사용할 비교 알고리즘을 지정할 수 있습니다. 전체 속성을로 `true`설정 하는 경우 변환에서는 입력의 모든 행을 입력의 다른 모든 행과 비교 합니다. 이 비교 알고리즘을 사용하면 더 정확한 결과를 얻을 수 있지만 입력 행의 수가 많으면 변환 성능이 느려집니다. 성능 문제를 방지 하려면 패키지를 개발 하는 동안에만 철저 `true` 한 속성을로 설정 하는 것이 좋습니다.  
   
 ## <a name="temporary-tables-and-indexes"></a>임시 테이블 및 인덱스  
  유사 항목 그룹화 변환에서는 런타임에 변환에서 연결하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 테이블 및 인덱스와 같은 크기가 큰 임시 개체를 만듭니다. 테이블 및 인덱스의 크기는 변환 입력 내 행의 수 및 유사 항목 그룹화 변환에서 만든 토큰의 수에 비례합니다.  
@@ -81,17 +81,18 @@ ms.locfileid: "62900562"
 ## <a name="configuration-of-the-fuzzy-grouping-transformation"></a>유사 항목 그룹화 변환 구성  
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- **유사 항목 그룹화 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
+ 
+  **유사 항목 그룹화 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [유사 항목 그룹화 변환 편집기&#40;연결 관리자 탭&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
+-   [유사 항목 그룹화 변환 편집기 &#40;연결 관리자 탭&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
   
--   [유사 항목 그룹화 변환 편집기&#40;열 탭&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
+-   [유사 항목 그룹화 변환 편집기 &#40;열 탭&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
   
--   [유사 항목 그룹화 변환 편집기&#40;고급 탭&#41;](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
+-   [유사 항목 그룹화 변환 편집기 &#40;고급 탭&#41;](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
   
  **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [공용 속성](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [변환 사용자 지정 속성](transformation-custom-properties.md)  
   
@@ -102,7 +103,7 @@ ms.locfileid: "62900562"
   
 -   [데이터 흐름 구성 요소의 속성 설정](../set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [유사 항목 조회 변환](lookup-transformation.md)   
  [Integration Services 변환](integration-services-transformations.md)  
   

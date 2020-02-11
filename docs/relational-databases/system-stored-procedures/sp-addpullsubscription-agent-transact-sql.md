@@ -16,10 +16,10 @@ ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 79bca732108776b66a2e5750015a27e5931b617a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69028950"
 ---
 # <a name="sp_addpullsubscription_agent-transact-sql"></a>sp_addpullsubscription_agent(Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "69028950"
  
   끌어오기 구독을 동기화하는 데 사용하는 새로 예약된 에이전트 작업을 트랜잭션 게시에 추가합니다. 이 저장 프로시저는 구독 데이터베이스의 구독자에서 실행됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -81,7 +81,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 ## <a name="arguments"></a>인수  
 `[ @publisher = ] 'publisher'`게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @publisher_db = ] 'publisher_db'_`게시자 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 NULL입니다. *publisher_db* 는 Oracle 게시자가 무시 합니다.  
+`[ @publisher_db = ] 'publisher_db'_`게시자 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 NULL입니다. Oracle 게시자는 *publisher_db* 무시 됩니다.  
   
 `[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
@@ -105,7 +105,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 > [!NOTE]  
 >  이 매개 변수는 더 이상 사용되지 않으며 이전 버전 스크립트와의 호환성을 위해 유지 관리됩니다. 이 매개 변수의 값을 지정하면 경고 메시지가 반환되고 값은 무시됩니다.  
   
-`[ @subscriber_password = ] 'subscriber_password'`구독자 암호입니다. *subscriber_security_mode* 가 **0**으로 설정 된 경우 *subscriber_password* 가 필요 합니다. *subscriber_password* 는 **sysname**이며 기본값은 NULL입니다. 구독자 암호가 사용되는 경우에는 자동으로 암호화됩니다.  
+`[ @subscriber_password = ] 'subscriber_password'`구독자 암호입니다. *subscriber_security_mode* 가 **0**으로 설정 된 경우 *subscriber_password* 필요 합니다. *subscriber_password* 는 **sysname**이며 기본값은 NULL입니다. 구독자 암호가 사용되는 경우에는 자동으로 암호화됩니다.  
   
 > [!NOTE]  
 >  이 매개 변수는 더 이상 사용되지 않으며 이전 버전 스크립트와의 호환성을 위해 유지 관리됩니다. 이 매개 변수의 값을 지정하면 경고 메시지가 반환되고 값은 무시됩니다.  
@@ -119,27 +119,27 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-`[ @distributor_login = ] 'distributor_login'`동기화 할 때 배포자에 연결 하는 데 사용 하는 배포자 로그인입니다. *distributor_security_mode* 가 **0**으로 설정 된 경우 *distributor_login* 가 필요 합니다. *distributor_login* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @distributor_login = ] 'distributor_login'`동기화 할 때 배포자에 연결 하는 데 사용 하는 배포자 로그인입니다. *distributor_security_mode* 가 **0**으로 설정 된 경우 *distributor_login* 필요 합니다. *distributor_login* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @distributor_password = ] 'distributor_password'`배포자 암호입니다. *distributor_security_mode* 가 **0**으로 설정 된 경우 *distributor_password* 가 필요 합니다. *distributor_password* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @distributor_password = ] 'distributor_password'`배포자 암호입니다. *distributor_security_mode* 가 **0**으로 설정 된 경우 *distributor_password* 필요 합니다. *distributor_password* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!IMPORTANT]  
 >  빈 암호를 사용하지 마세요. 강력한 암호를 사용하세요. 가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 스크립트 파일에 저장해야 하는 경우에는 파일에 무단으로 액세스하지 못하도록 보안을 설정해야 합니다.  
   
-`[ @optional_command_line = ] 'optional_command_line'`배포 에이전트에 제공 되는 선택적 명령 프롬프트입니다. 예를 들어 **-definitionfile** C:\distdef.txt 또는 **-commitbatchsize** 10입니다. *optional_command_line* 는 **nvarchar (4000)** 이며 기본값은 빈 문자열입니다.  
+`[ @optional_command_line = ] 'optional_command_line'`배포 에이전트에 제공 되는 선택적 명령 프롬프트입니다. 예를 들어 **-definitionfile** C:\distdef.txt 또는 **-commitbatchsize** 10입니다. *optional_command_line* 은 **nvarchar (4000)** 이며 기본값은 빈 문자열입니다.  
   
 `[ @frequency_type = ] frequency_type`배포 에이전트 일정을 예약 하는 빈도입니다. *frequency_type* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
-|**2** (기본값)|요청 시|  
-|**4**|일별|  
-|**8**|매주|  
-|**16**|매월|  
+|**2** (기본값)|주문형|  
+|**4**|매일|  
+|**20cm(8**|매주|  
+|**x**|매월|  
 |**32**|매월 상대적|  
 |**64**|자동 시작|  
-|**128**|되풀이|  
+|**128**|Recurring|  
   
 > [!NOTE]  
 >  **64** 값을 지정 하면 배포 에이전트 연속 모드로 실행 됩니다. 이는 에이전트에 대 한 **-연속** 매개 변수 설정에 해당 합니다. 자세한 내용은 [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)을 참조하세요.  
@@ -148,24 +148,24 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`배포 에이전트 날짜입니다. 이 매개 변수는 *frequency_type* 이 **32** (매월 상대적)로 설정 된 경우에 사용 됩니다. *frequency_relative_interval* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
-|**1** (기본값)|첫째|  
+|**1** (기본값)|처음|  
 |**2**|Second|  
 |**4**|셋째|  
-|**8**|넷째|  
-|**16**|마지막|  
+|**20cm(8**|넷째|  
+|**x**|마지막|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*에서 사용 하는 되풀이 비율입니다. *frequency_recurrence_factor* 은 **int**이며 기본값은 **1**입니다.  
   
 `[ @frequency_subday = ] frequency_subday`정의 된 기간 동안 다시 예약 하는 빈도입니다. *frequency_subday* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**1** (기본값)|한 번|  
 |**2**|Second|  
-|**4**|Minute|  
-|**8**|Hour|  
+|**4**|분|  
+|**20cm(8**|Hour|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*에 대 한 간격입니다. *frequency_subday_interval* 은 **int**이며 기본값은 **1**입니다.  
   
@@ -204,7 +204,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 `[ @dts_package_password = ] 'dts_package_password'`패키지에 대 한 암호를 지정 합니다 (있는 경우). *dts_package_password* 는 **sysname** 이며 기본값은 NULL입니다. 즉, 암호는 패키지에 없습니다.  
   
 > [!NOTE]  
->  *Dts_package_name* 가 지정 된 경우 암호를 지정 해야 합니다.  
+>  *Dts_package_name* 지정 된 경우 암호를 지정 해야 합니다.  
   
 `[ @dts_package_location = ] 'dts_package_location'`패키지 위치를 지정 합니다. *dts_package_location* 은 **nvarchar (12)** 이며 기본값은 **subscriber**입니다. 패키지의 위치는 **배포자** 또는 **구독자**일 수 있습니다.  
   
@@ -237,15 +237,15 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  [!code-sql[HowTo#sp_addtranpullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addpullsubscription-a_1.sql)]  
   
 ## <a name="permissions"></a>사용 권한  
- **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만이 **sp_addpullsubscription_agent**을 실행할 수 있습니다.  
+ **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_addpullsubscription_agent**을 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [끌어오기 구독 만들기](../../relational-databases/replication/create-a-pull-subscription.md)   
- [게시 구독](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_addpullsubscription &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [sp_change_subscription_properties &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
- [sp_droppullsubscription &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
- [sp_helppullsubscription &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
- [sp_helpsubscription_properties&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Transact-sql&#41;sp_addpullsubscription &#40;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [Transact-sql&#41;sp_change_subscription_properties &#40;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
+ [Transact-sql&#41;sp_droppullsubscription &#40;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
+ [Transact-sql&#41;sp_helppullsubscription &#40;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
+ [Transact-sql&#41;sp_helpsubscription_properties &#40;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

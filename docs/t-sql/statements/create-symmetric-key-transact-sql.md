@@ -23,10 +23,10 @@ ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 485ef972b86795a2127dba5fc3e86bdf98354c7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117072"
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY(Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68117072"
   
  이 기능은 Data Tier Application Framework(DACFx)를 사용하는 데이터베이스 내보내기와 호환되지 않습니다. 내보내기 전에 모든 대칭 키를 삭제해야 합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -116,7 +116,7 @@ CREATE SYMMETRIC KEY key_name
 > [!WARNING]  
 > [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터는 AES_128, AES_192 및 AES_256 이외의 모든 알고리즘을 지원하지 않습니다. 오래된 알고리즘을 사용하려면(권장하지 않음) 데이터베이스 간 호환성 수준을 120 이하로 설정해야 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  대칭 키를 만들 때 대칭 키는 인증서, 암호, 대칭 키, 비대칭 키 또는 PROVIDER 중 하나 이상을 사용하여 암호화해야 합니다. 키에는 각 유형에 대해 두 개 이상의 암호화가 포함될 수 있습니다. 즉, 여러 인증서, 암호, 대칭 키 및 비대칭 키를 동시에 사용하여 단일 대칭 키를 암호화할 수 있습니다.  
   
 > [!CAUTION]  
@@ -155,7 +155,7 @@ CREATE SYMMETRIC KEY key_name
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-symmetric-key"></a>1\. 대칭 키 만들기  
+### <a name="a-creating-a-symmetric-key"></a>A. 대칭 키 만들기  
  다음 예에서는 `JanainaKey09` 알고리즘을 사용하여 `AES 256`라는 대칭 키를 만든 다음 새 키를 `Shipping04` 인증서를 사용하여 암호화합니다.  
   
 ```  
@@ -165,7 +165,7 @@ ENCRYPTION BY CERTIFICATE Shipping04;
 GO  
 ```  
   
-### <a name="b-creating-a-temporary-symmetric-key"></a>2\. 임시 대칭 키 만들기  
+### <a name="b-creating-a-temporary-symmetric-key"></a>B. 임시 대칭 키 만들기  
  다음 예에서는 `#MarketingXXV`라는 임시 대칭 키를 `The square of the hypotenuse is equal to the sum of the squares of the sides` 전달 구에서 만듭니다. 이 키는 `Pythagoras` 문자열에서 생성되고 `Marketing25` 인증서로 암호화된 GUID와 함께 제공됩니다.  
   
 ```  

@@ -11,10 +11,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3845470668e4cffeda7a48ed01c144eb53f671b9
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399426"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>확장 MPP 데이터 웨어하우스의 분석 플랫폼 시스템의 새로운 기능
@@ -129,7 +129,7 @@ SMO를 사용 하는 대신 메타 데이터 호출에 대해 카탈로그 개�
 ### <a name="bug-fixes"></a>버그 수정
 Microsoft는 APS CU 7.1을 사용 하 여 SQL Server 2016 SP2 CU2로 업그레이드 했습니다. 업그레이드는 아래에 설명 된 몇 가지 문제를 해결 합니다.
 
-| 제목 | 설명 |
+| 제목 | Description |
 |:---|:---|
 | **잠재적 튜플 이동 교착 상태** |업그레이드는 분산 트랜잭션과 튜플 이동 기 백그라운드 스레드에서 교착 상태의 긴 가능성을 수정 합니다. CU 7.1을 설치한 후 TF634를 사용 하 여 시작 매개 변수 또는 전역 추적 플래그로 SQL Server 튜플 이동 기를 중지 하는 고객은이를 안전 하 게 제거할 수 있습니다. | 
 | **특정 지연/리드 쿼리 실패** |오류가 발생 하는 중첩 된 지연/리드 함수를 사용 하는 CCI 테이블의 특정 쿼리는 이제이 업그레이드로 수정 되었습니다. | 
@@ -220,7 +220,7 @@ HPE 또는 DELL의 새 어플라이언스에는 모든 최신 업데이트 plus�
 - DDR4 Dimm 업데이트
 - 향상 된 DIMM 처리량
 
-**통합할**
+**통합**
 
 - FQDN (정규화 된 도메인 이름)을 지원 하면 어플라이언스에 대 한 도메인 트러스트를 설정할 수 있습니다. 
 - FQDN을 사용 하려면 업그레이드 하는 동안 전체 업그레이드 및 옵트인 (opt in) 해야 합니다. 

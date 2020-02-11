@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 880baacd3cf629ee28f55a399fcb02019e836d44
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229232"
 ---
 # <a name="use-powerpivot-gallery"></a>PowerPivot 갤러리 사용
@@ -44,7 +44,7 @@ ms.locfileid: "75229232"
   
  [필수 구성 요소](#prereq)  
   
-##  <a name="prereq"></a>사전  
+##  <a name="prereq"></a> 필수 조건  
   
 > [!NOTE]  
 >  파워 피벗 갤러리에는 Microsoft Silverlight가 필요합니다.  Microsoft Edge 브라우저는 Silverlight를 지원하지 않습니다.   
@@ -57,7 +57,7 @@ ms.locfileid: "75229232"
 ##  <a name="icons"></a>PowerPivot 갤러리의 아이콘  
  아이콘은 콘텐츠 사용 가능 여부와 상태를 시각적으로 표시합니다.  
   
-|아이콘|설명|  
+|아이콘|Description|  
 |----------|-----------------|  
 |![GMNI_PowerPivotGalleryIcon_Hourglass](../media/gmni-powerpivotgalleryicon-hourglass.gif "GMNI_PowerPivotGalleryIcon_Hourglass")|문서의 각 페이지 축소판 이미지를 생성하는 동안에는 모래 시계 아이콘이 나타납니다. 업데이트된 이미지를 표시하려면 페이지를 새로 고칩니다.|  
 |![GMNI_PowerPivotGalleryIcon_Truncated](../media/gmni-powerpivotgalleryicon-truncated.gif "GMNI_PowerPivotGalleryIcon_Truncated")|통합 문서 또는 보고서의 페이지 수가 PowerPivot 갤러리에 표시할 수 있는 것보다 많으면 페이지 아이콘이 나타납니다. 모든 페이지를 표시하려면 클라이언트 애플리케이션을 사용해야 합니다.|  
@@ -156,8 +156,7 @@ ms.locfileid: "75229232"
   
 3.  오른쪽에 있는 아래쪽 화살표를 클릭한 다음 **속성 편집**을 선택합니다.  
   
-4.  
-  **저장**을 클릭합니다. 문서를 저장하면 스냅샷 서비스에서 미리 보기 이미지를 다시 생성합니다.  
+4.  **저장**을 클릭합니다. 문서를 저장하면 스냅샷 서비스에서 미리 보기 이미지를 다시 생성합니다.  
   
 ##  <a name="bkmk_known_issues"></a>알려진 문제  
   

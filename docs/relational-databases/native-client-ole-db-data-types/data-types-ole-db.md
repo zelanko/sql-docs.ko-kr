@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fd73a7498914060757a9ce4e8137638440556ae3
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73770756"
 ---
 # <a name="data-types-ole-db"></a>데이터 형식(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 사용 하 여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행 하 고 결과를 처리 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가에서 매개 변수 또는 열을 바인딩하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 OLE DB 데이터 형식에 매핑하는 방법을 알아야 합니다. 행 집합을 사용 하 고 **Itabledefinition** 인터페이스를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 테이블을 만드는 경우  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client OLE DB 공급자 [!INCLUDE[tsql](../../includes/tsql-md.md)] 를 사용 하 여 문을 실행 하 고 결과를 처리 하려면 행 집합의 매개 변수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 열을 바인딩할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 **itabledefinition** 인터페이스를 사용 하 여에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]테이블을 만들 때 native client OLE DB 공급자가 데이터 형식을 OLE DB 데이터 형식에 매핑하는 방법을 알아야 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -36,7 +36,7 @@ ms.locfileid: "73770756"
   
 -   [SSVARIANT 구조](../../relational-databases/native-client-ole-db-data-types/ssvariant-structure.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Native Client&#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

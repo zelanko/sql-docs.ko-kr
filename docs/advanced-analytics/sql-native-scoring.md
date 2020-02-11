@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 766adecbc91f88ed0796e4214b7e4074fc564f01
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727290"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>PREDICT T-SQL 함수를 사용하는 네이티브 채점
@@ -71,7 +71,7 @@ MicrosoftML 또는 microsoftml의 모델을 사용해야 하는 경우 [sp_rxPre
 + PMML 모델
 + 다른 오픈 소스 또는 타사 라이브러리를 사용하여 만든 모델
 
-## <a name="example-predict-t-sql"></a>예: PREDICT(T-SQL)
+## <a name="example-predict-t-sql"></a>예제: PREDICT(T-SQL)
 
 이 예에서는 모델을 만든 다음, T-SQL에서 실시간 예측 함수를 호출합니다.
 

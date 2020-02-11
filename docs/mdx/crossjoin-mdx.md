@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 63de71ae82e60b8ec7d8a39e18f89e6bd2393f2d
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892942"
 ---
 # <a name="crossjoin-mdx"></a>Crossjoin(MDX)
@@ -46,7 +46,7 @@ Set_Expression1 * Set_Expression2 [* ...n]
  (x2, y*n*),..., (x*n*, y1), (x*n*, y2),..., (xn, y*n*)}  
   
 > [!IMPORTANT]  
->  크로스 조인의 집합이 동일한 차원에 있는 다른 특성 계층의 튜플로 구성된 경우 이 함수는 실제로 존재하는 튜플만 반환합니다. 자세한 내용은 [MDX &#40;Analysis Services&#41;의 주요 개념](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)을 참조 하세요.  
+>  크로스 조인의 집합이 동일한 차원에 있는 다른 특성 계층의 튜플로 구성된 경우 이 함수는 실제로 존재하는 튜플만 반환합니다. 자세한 내용은 [MDX의 주요 개념 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)를 참조 하세요.  
   
 ## <a name="examples"></a>예  
  다음 쿼리에서는 쿼리의 Columns 및 Rows 축에서 Crossjoin 함수를 사용하는 간단한 예를 보여 줍니다.  
@@ -93,7 +93,7 @@ Set_Expression1 * Set_Expression2 [* ...n]
   
  다음 세 개의 예에서는 동일한 결과, 즉 미국 내의 주에 대한 주별 인터넷 판매 금액(Internet Sales Amount)을 반환합니다. 처음 두 개의 예에서는 두 개의 크로스 조인 구문을 사용하고, 세 번째 예에서는 WHERE 절을 사용하여 동일한 정보를 반환하는 방법을 보여 줍니다.  
   
-### <a name="example-1"></a>예제 1  
+### <a name="example-1"></a>예 1  
   
 ```  
 SELECT CROSSJOIN  
@@ -116,7 +116,7 @@ FROM [Adventure Works]
 WHERE Measures.[Internet Sales Amount]  
 ```  
   
-### <a name="example-3"></a>예 3  
+### <a name="example-3"></a>예제 3  
   
 ```  
 SELECT   
@@ -127,7 +127,7 @@ WHERE (Measures.[Internet Sales Amount],
    [Customer].[Country].[United States])  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

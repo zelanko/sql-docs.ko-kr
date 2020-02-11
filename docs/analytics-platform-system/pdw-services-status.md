@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 2789c8b74420a56a32d08a0339d4ee6d3cc112d1
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400851"
 ---
 # <a name="parallel-data-warehouse-services-status-for-analytics-platform-system"></a>분석 플랫폼 시스템에 대 한 병렬 데이터 웨어하우스 서비스 상태

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a5c3b456fa650cff94d0b5809c37f7ceca8b1b71
-ms.sourcegitcommit: 961c56bb78ff46ae6eb1a2cc5d2b1262ddf7a4fa
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74706663"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>웹 동기화를 위한 IIS 구성
@@ -86,8 +86,7 @@ ms.locfileid: "74706663"
   
     4.  웹 서버 인증서 마법사를 완료합니다.  
   
-4.  
-  **확인**을 클릭합니다.  
+4.  **확인**을 클릭합니다.  
   
  CA에서 서버 인증서를 얻을 수 없는 경우에는 테스트용 인증서를 지정할 수 있습니다. 테스트를 위해 IIS 6.0을 구성하려면 SelfSSL 유틸리티를 사용하여 인증서를 설치합니다. 이 유틸리티는 IIS 6.0 Resource Kit에서 사용할 수 있습니다. 
   [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=5135)에서 도구를 다운로드할 수 있습니다. IIS 5.0의 경우 [Microsoft 도움말 및 지원](https://go.microsoft.com/fwlink/?LinkId=46229)을 방문하십시오.  
@@ -173,8 +172,7 @@ ms.locfileid: "74706663"
   **별칭** 상자에 가상 디렉터리의 별칭을 입력합니다.  
   
     2.  
-  **경로** 상자에 가상 디렉터리의 경로를 입력합니다. 예를 들어 **별칭** 상자에 `websync1` 를 입력 한 경우 **경로** 상자 `C:\Inetpub\wwwroot\websync1` 에를 입력 합니다. 
-  **다음**을 클릭합니다.  
+  **경로** 상자에 가상 디렉터리의 경로를 입력합니다. 예를 들어 **별칭** 상자에 `websync1` 를 입력 한 경우 **경로** 상자 `C:\Inetpub\wwwroot\websync1` 에를 입력 합니다. **다음**을 클릭합니다.  
   
     3.  두 대화 상자에서 모두 **예**를 클릭합니다. 새 폴더가 생성되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ISAPI(Internet Server API) DLL이 복사됩니다. .  
   
@@ -319,8 +317,7 @@ ms.locfileid: "74706663"
   
     6.  디렉터리에 대한 액세스가 필요 없는 사용자나 그룹을 선택한 다음 **제거**를 클릭합니다.  
   
-    7.  
-  **확인**을 클릭합니다.  
+    7.  **확인**을 클릭합니다.  
   
 4.  
   **인터넷 정보 서비스(IIS) 관리자**에서 애플리케이션 풀을 만듭니다.  
@@ -351,8 +348,7 @@ ms.locfileid: "74706663"
     4.  
   **사용자 이름** 및 **암호** 필드에 1단계에서 만든 계정과 암호를 입력합니다.  
   
-    5.  
-  **확인**을 클릭합니다.  
+    5.  **확인**을 클릭합니다.  
   
 6.  웹 동기화에 사용되는 가상 디렉터리와 애플리케이션 풀을 연결합니다.  
   
@@ -365,8 +361,7 @@ ms.locfileid: "74706663"
   **
   **VirtualDirectoryName&gt; 속성** 대화 상자의 \<가상 디렉터리** 탭에 있는 **애플리케이션 풀** 드롭다운 목록에서 5단계에서 만든 애플리케이션 풀을 선택합니다.  
   
-    4.  
-  **확인**을 클릭합니다.  
+    4.  **확인**을 클릭합니다.  
   
 ## <a name="testing-the-connection-to-replisapidll"></a>replisapi.dll에 대한 연결 테스트  
  진단 모드에서 웹 동기화를 실행하여 IIS를 실행하는 컴퓨터에 대한 연결을 테스트하고 SSL(Secure Sockets Layer) 인증서가 제대로 설치되었는지 확인합니다. 진단 모드에서 웹 동기화를 실행하려면 IIS가 실행되는 컴퓨터의 관리자여야 합니다.  
@@ -384,8 +379,7 @@ ms.locfileid: "74706663"
   
     4.  프록시 서버가 사용되는 경우 **사용자 LAN에 프록시 서버 사용** 및 **로컬 주소에 프록시 서버 사용 안 함**을 선택합니다.  
   
-    5.  
-  **확인**을 클릭합니다.  
+    5.  **확인**을 클릭합니다.  
   
 2.  구독자에서는 Internet Explorer에서 replisapi.dll에 대한 주소에 `?diag` (예: 예: https://server.domain.com/directory/replisapi.dll?diag  
   

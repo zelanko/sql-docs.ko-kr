@@ -1,5 +1,5 @@
 ---
-title: '예: HIDE 지시어 지정 | Microsoft Docs'
+title: '예제: HIDE 지시어 지정 | Microsoft 문서'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 901fa0d72798862f54ebc23131870b704538cb8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287725"
 ---
-# <a name="example-specifying-the-hide-directive"></a>예: HIDE 지시어 지정
+# <a name="example-specifying-the-hide-directive"></a>예제: HIDE 지시어 지정
   이 예에서는 **HIDE** 지시어 사용 방법을 보여 줍니다. 이 지시어는 쿼리에 의해 반환된 범용 테이블의 행을 정렬하기 위한 특성은 쿼리가 반환하게 하고 최종 결과 XML 문서에는 그 특성이 포함되지 않게 하려는 경우에 유용합니다.  
   
  다음 쿼리는 이러한 XML을 생성합니다.  
@@ -81,7 +81,7 @@ go
 </ProductModel>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [FOR XML에서 EXPLICIT 모드 사용](use-explicit-mode-with-for-xml.md)  
   
   

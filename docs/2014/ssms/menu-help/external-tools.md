@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 264eb3c9b16c5eb12a578090d55e4f64884177c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62649699"
 ---
 # <a name="external-tools"></a>외부 도구
   이 대화 상자를 사용하여 SQL Server 구성 관리자 또는 메모장과 같은 외부 도구를 **도구** 메뉴에 추가할 수 있습니다. 외부 도구를 추가하면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 작업하는 동안 간편하게 다른 애플리케이션을 실행할 수 있습니다. 도구를 실행할 때 인수 및 작업 디렉터리를 지정할 수 있습니다. 또한 일부 도구의 출력을 출력 창에 표시할 수도 있습니다. **외부 도구** 대화 상자는 **도구** 메뉴에서 사용할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **메뉴 내용**  
  현재 **도구** 메뉴에 추가된 항목의 제목을 나열합니다. **위로 이동** 및 **아래로 이동** 화살표를 사용하여 메뉴에 나타나는 항목의 순서를 변경할 수 있습니다. **삭제** 단추를 사용하여 메뉴에서 항목을 제거할 수 있습니다.  
   
@@ -38,10 +38,10 @@ ms.locfileid: "62649699"
  **Delete**  
  **메뉴 내용** 목록과 **도구** 메뉴에서 도구나 명령을 제거합니다.  
   
- **Title**  
+ **제목**  
  **도구** 메뉴의 **외부 도구** 하위 메뉴에 나타날 도구 또는 명령의 이름입니다. 이름의 특정 문자를 도구의 액셀러레이터 키로 사용하려면 해당 문자 앞에 앰퍼샌드를 넣습니다. 예를 들어 `&Spy++` 는 **도구** 메뉴에 **Spy++** 와 같이 표시됩니다.  
   
- **Command**  
+ **명령**  
  실행할 .exe, .com, .pif, .bat, .cmd 또는 기타 파일의 경로를 지정합니다. `.bat`출력 창 사용 `.com`확인란을 선택하면 출력 창에 **,** 및 기타 파일의 출력이 표시됩니다.  
   
  **인수**  
@@ -70,9 +70,9 @@ ms.locfileid: "62649699"
   
 2.  **제목** 입력란에 **SQL Server 구성 관리자**를 입력합니다.  
   
-3.  에 **명령** 상자에 대 한 경로 입력 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console 실행 파일을 같은 `C:\WINNT\system32\mmc.exe`  
+3.  **명령** 상자에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 관리 콘솔 실행 파일의 경로를 입력 합니다 (예:).`C:\WINNT\system32\mmc.exe`  
   
-4.  에 **인수** 상자와 같은.msc 파일의 경로를 입력 합니다 `"C:\WINNT\system32\SQLServerManager.msc"`  
+4.  **인수** 상자에 .msc 파일의 경로 (예:)를 입력 합니다.`"C:\WINNT\system32\SQLServerManager.msc"`  
   
 > [!NOTE]  
 >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 시작 **메뉴에서** 바로 가기 속성을 보고 컴퓨터에 있는 파일의 위치를 확인합니다.  

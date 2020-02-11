@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6e9232f5de2172c7dfbe503a26188fdf4d05550c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011473"
 ---
 # <a name="query-properties-visual-database-tools"></a>쿼리 속성(Visual Database Tools)
@@ -26,14 +26,14 @@ ms.locfileid: "63011473"
 > [!NOTE]  
 >  이 항목의 속성은 사전순이 아니라 범주별로 정렬됩니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **ID 범주**  
  확장하면 **이름** 속성이 표시됩니다.  
   
  **이름**  
  현재 쿼리의 이름을 표시합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서는 이를 변경할 수 없습니다.  
   
- **Database Name**  
+ **데이터베이스 이름**  
  선택한 테이블의 데이터 원본 이름을 표시합니다.  
   
  **서버 이름**  
@@ -76,14 +76,14 @@ ms.locfileid: "63011473"
  **식**  
  쿼리에서 반환할 행의 수나 비율을 지정합니다. **Percent** 를 예로 설정한 경우 이 값은 쿼리에서 반환할 행의 비율을 나타내고, **Percent** 를 아니요로 설정한 경우 이 값은 반환할 행의 수를 나타냅니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 이상 버전에만 적용됩니다.  
   
- **Percent**  
+ **백분율**  
  결과 집합의 처음 *n* %에 해당하는 행만 쿼리가 반환하도록 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 이상 버전에만 적용됩니다.  
   
  **With Ties**  
  뷰에 WITH TIES 절이 포함되도록 지정합니다. WITH TIES는 백분율을 기반으로 하는 ORDER BY 절과 TOP 절이 뷰에 포함되어 있을 경우 유용합니다. 이 옵션을 설정하는 경우 백분율 값이 ORDER BY 절에서 동일한 값을 가진 행 집합의 중간까지만 포함하면 동일한 값을 가진 행을 모두 포함할 수 있도록 뷰가 확장됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 이상 버전에만 적용됩니다.  
   
-## <a name="see-also"></a>관련 항목  
- [쿼리 매개 변수를 사용 하 여 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools를 &#40;매개 변수를 사용 하 여 쿼리&#41;](visual-database-tools.md)   
  [쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

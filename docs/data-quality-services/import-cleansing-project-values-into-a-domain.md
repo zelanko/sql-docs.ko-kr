@@ -12,10 +12,10 @@ ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 34060c3fc5416f7244b400b506faad9097d66880
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75241797"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>도메인으로 정리 프로젝트 값 가져오기
@@ -24,17 +24,17 @@ ms.locfileid: "75241797"
 
   DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서는 데이터 품질 정리 프로젝트나 DQS 정리 구성 요소가 포함된 Integration Services 패키지에서 정리 프로세스 중에 수집된 데이터 품질 기술 자료를 도메인으로 가져올 수 있습니다. 이렇게 하면 신뢰할 수 있는 정보가 손실되지 않고 기술 자료가 지속적으로 개선됩니다.  
   
-##  <a name="BeforeYouBegin"></a>시작 하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a>사전  
+###  <a name="Prerequisites"></a> 필수 조건  
   
 -   Data Quality 클라이언트의 정리 프로젝트나 DQS 정리 구성 요소가 포함된 Integration Services 패키지에서 도메인을 사용한 경우에만 정리 프로젝트 값을 도메인으로 가져올 수 있습니다.  
   
 -   Data Quality 클라이언트의 정리 프로젝트나 DQS 정리 구성 요소가 포함된 Integration Services 패키지가 올바르게 완료된 상태여야 합니다.  
   
-###  <a name="Security"></a>보안  
+###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a>권한에  
+####  <a name="Permissions"></a> 권한  
  정리 프로세스 도중 수집된 데이터 품질 기술 자료를 도메인으로 가져오려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
 ##  <a name="Import"></a>정리 프로젝트 값 가져오기  
@@ -64,8 +64,7 @@ ms.locfileid: "75241797"
     -   
   **새 탭에서 값 추가** 를 선택하여 **올바름** 및 **수정됨** 탭의 값 외에 새 탭의 값을 가져옵니다.  
   
-    -   
-  **확인**을 클릭합니다.  
+    -   **확인**을 클릭합니다.  
   
 6.  
   **도메인 값** 탭으로 전환되고 값을 가져왔다는 메시지가 표시됩니다. 가져와서 도메인에 새로 추가된 값이 **값** 테이블에 표시됩니다.  
@@ -78,8 +77,7 @@ ms.locfileid: "75241797"
   
 9. 특정 문자열을 검색하려면 **찾기** 입력란에 문자열을 입력합니다. 위쪽 또는 아래쪽 화살표를 클릭하여 검색 조건에 맞는 값 사이를 이동합니다. 이러한 값은 노란색으로 강조 표시됩니다.  
   
-10. 
-  **마침**을 클릭합니다.  
+10. **Finish**를 클릭합니다.  
   
     > [!NOTE]  
     >  

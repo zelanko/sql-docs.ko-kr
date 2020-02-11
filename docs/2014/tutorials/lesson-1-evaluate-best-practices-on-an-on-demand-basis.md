@@ -1,5 +1,5 @@
 ---
-title: '1단원: 주문형으로 최선의 구현 방법 평가 | Microsoft Docs'
+title: '1 단원: 주문형 기반 모범 사례 평가 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: dc8da3880afe5cf107c7e6df260957e3df6ddc9d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68185752"
 ---
 # <a name="lesson-1-evaluate-best-practices-on-an-on-demand-basis"></a>1단원: 요청 시 최선의 구현 방법 평가
@@ -24,14 +24,14 @@ ms.locfileid: "68185752"
   
  이 단원에서는 다음 항목을 다룹니다.  
   
--   [Perform an On-Demand Evaluation by Using Object Explorer](../ssms/object/object-explorer.md) (단일 인스턴스인 경우)  
+-   단일 인스턴스에 대 한 [개체 탐색기를 사용 하 여 요청 시 평가 수행](../ssms/object/object-explorer.md)  
   
--   [Perform an On-Demand Evaluation by Using Registered Servers](../../2014/tutorials/perform-an-on-demand-evaluation-by-using-registered-servers.md) (하나 이상의 인스턴스인 경우)  
+-   하나 이상의 인스턴스에 대해 [등록 된 서버를 사용 하 여 요청 시 평가 수행](../../2014/tutorials/perform-an-on-demand-evaluation-by-using-registered-servers.md)  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [개체 탐색기를 사용하여 요청 시 평가 수행](../ssms/object/object-explorer.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [2단원: 일정에 따라 최선의 구현 방법 정책 평가](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
   
   

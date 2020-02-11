@@ -15,15 +15,15 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 ms.openlocfilehash: 3fbf2429a384ad64b1b416e3920a193d92a6c387
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056621"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>명령줄에서 Data Migration Assistant 실행
 
-Data Migration Assistant 설치 버전 2.1 이상에서 시기, dmacmd.exe에도 설치 됩니다 *\% ProgramFiles %\\Microsoft Data Migration Assistant\\* 합니다. Node.js를 사용 하 여 무인 모드에서 데이터베이스를 평가 하 고 그 결과를 JSON 또는 CSV 파일에 출력 합니다. 이 방법은 여러 데이터베이스 또는 방대한 데이터베이스를 평가할 때 특히 유용 합니다. 
+버전 2.1 이상에서는 Data Migration Assistant를 설치 하는 경우 *% ProgramFiles%\\\\Microsoft Data Migration Assistant*에도 설치 됩니다. Node.js를 사용 하 여 무인 모드에서 데이터베이스를 평가 하 고 그 결과를 JSON 또는 CSV 파일에 출력 합니다. 이 방법은 여러 데이터베이스 또는 방대한 데이터베이스를 평가할 때 특히 유용 합니다. 
 
 > [!NOTE]
 > Node.js는 평가 실행만 지원 합니다. 지금은 마이그레이션이 지원 되지 않습니다.
@@ -40,7 +40,7 @@ DmaCmd.exe /AssessmentName="string"
 /AssessmentResultJson="file"|/AssessmentResultCsv="file"
 ```
 
-|인수  |설명  | 필수 (Y/N)
+|인수  |Description  | 필수 (Y/N)
 |---------|---------|---------------|
 | `/help or /?`     | Node.js 도움말 텍스트를 사용 하는 방법        | N
 |`/AssessmentName`     |   평가 프로젝트의 이름입니다.   | Y
@@ -61,7 +61,7 @@ DmaCmd.exe /AssessmentName="string"
 
 ## <a name="examples-of-assessments-using-the-cli"></a>CLI를 사용 하는 평가 예
 
-**Dmacmd.exe**
+**Node.js**
 
   `Dmacmd.exe /? or DmaCmd.exe /help`
 
@@ -248,7 +248,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
 /SkuRecommendationPreventPriceRefresh=true 
 ```
 
-|인수  |설명  | 필수 (Y/N)
+|인수  |Description  | 필수 (Y/N)
 |---------|---------|---------------|
 |`/Action=SkuRecommendation` | DMA 명령줄을 사용 하 여 SKU 평가 실행 | Y
 |`/SkuRecommendationInputDataFilePath` | 데이터베이스를 호스트 하는 컴퓨터에서 수집 된 성능 카운터 파일의 전체 경로입니다. | Y
@@ -259,7 +259,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
 |`/SkuRecommendationCurrencyCode` | 가격 (예: "USD")을 표시할 통화입니다. | Y <br> (최신 가격)
 |`/SkuRecommendationOfferName` | 제품 이름 (예: "MS-AZR-0017P-0003P")입니다. 자세한 내용은 [Microsoft Azure 제품 세부 정보](https://azure.microsoft.com/support/legal/offer-details/) 페이지를 참조 하세요. | Y <br> (최신 가격)
 |`/SkuRecommendationRegionName` | 영역 이름 (예: "WestUS") | Y <br> (최신 가격)
-|`/SkuRecommendationSubscriptionId` | 구독 ID입니다. | Y <br> (최신 가격)
+|`/SkuRecommendationSubscriptionId` | 구독 ID | Y <br> (최신 가격)
 |`/SkuRecommendationDatabasesToRecommend` | 권장 되는 데이터베이스의 공백으로 구분 된 목록입니다 (예: "Database1" "Database2" "Database3"). 이름은 대/소문자를 구분 하며 큰따옴표로 묶어야 합니다. 생략 하는 경우 모든 데이터베이스에 대 한 권장 사항이 제공 됩니다. | N
 |`/AzureAuthenticationTenantId` | 인증 테 넌 트입니다. | Y <br> (최신 가격)
 |`/AzureAuthenticationClientId` | 인증에 사용 되는 AAD 앱의 클라이언트 ID입니다. | Y <br> (최신 가격)
@@ -270,7 +270,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
 
 ## <a name="examples-of-sku-assessments-using-the-cli"></a>CLI를 사용 하는 SKU 평가 예
 
-**Dmacmd.exe**
+**Node.js**
 
 `Dmacmd.exe /? or DmaCmd.exe /help`
 

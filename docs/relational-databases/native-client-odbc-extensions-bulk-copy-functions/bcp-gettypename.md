@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d2752a1708c5727567de470b49d4cbcc63f90923
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782650"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
@@ -43,76 +43,76 @@ RETCODE bcp_gettypename (
  *토큰*  
  BCP 유형 토큰을 나타내는 값입니다.  
   
- *field*  
+ *필드가*  
  요청된 토큰이 max 유형인지 여부를 나타냅니다.  
   
-## <a name="returns"></a>반환 값  
+## <a name="returns"></a>반환  
  BCP 유형에 해당하는 SQL 유형 이름이 포함된 문자열입니다. 잘못된 BCP 유형을 지정하면 빈 문자열이 반환됩니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  BCP 유형 토큰은 sqlncli.h 헤더 파일과 sqlncli11.lib 라이브러리에서 정의됩니다.  
   
  다음 표에서는 가능한 BCP 유형, max 유형인지 여부 및 예상 출력을 지정합니다.  
   
 |BCP 유형 이름|MaxType|출력|  
 |-------------------|-------------|------------|  
-|**SQLDECIMAL**|모두|**decimal**|  
-|**SQLNUMERIC**|모두|**numeric**|  
-|**SQLINT1**|모두|**tinyint**|  
-|**SQLINT2**|모두|**smallint**|  
-|**SQLINT4**|모두|**int**|  
-|**SQLMONEY**|모두|**money**|  
-|**SQLFLT8**|모두|**float**|  
-|**SQLDATETIME**|모두|**datetime**|  
-|**SQLBITN**|모두|**비트-null**|  
-|**SQLBIT**|모두|**bit**|  
-|**SQL이상 문자**|아니요|**char**|  
-|**SQLCHARACTER**|아니요|**char**|  
-|**SQL이상 VARCHAR**|아니요|**varchar**|  
-|**SQLVARCHAR**|아니요|**varchar**|  
-|**SQLTEXT**|모두|**text**|  
-|**SQL이상 이진**|아니요|**binary**|  
-|**SQLBINARY**|아니요|**이진**|  
-|**SQL이상 VARBINARY**|아니요|**Varbinary**|  
-|**SQLVARBINARY**|아니요|**Varbinary**|  
-|**SQLIMAGE**|모두|**이미지**|  
-|**SQLINTN**|모두|**int-null**|  
-|**SQLDATETIMN**|모두|**datetime-null**|  
-|**SQLMONEYN**|모두|**money-null**|  
-|**SQLFLTN**|모두|**float-null**|  
-|**SQLAOPSUM**|모두|**Sum**|  
-|**SQLAOPAVG**|모두|**Avg**|  
-|**SQLAOPCNT**|모두|**개수**|  
-|**SQLAOPMIN**|모두|**최소값**|  
-|**SQLAOPMAX**|모두|**Max**|  
-|**SQLDATETIM4**|모두|**smalldatetime**|  
-|**SQLMONEY4**|모두|**Smallmoney**|  
-|**SQLFLT4**|모두|**실제로**|  
-|**SQLUNIQUEID**|모두|**uniqueidentifier**|  
-|**SQLNCHAR**|아니요|**Nchar**|  
-|**SQLNVARCHAR**|아니요|**Nvarchar**|  
-|**SQLNTEXT**|모두|**N**|  
-|**SQLVARIANT**|모두|**sql_variant**|  
-|**SQLINT8**|모두|**Bigint**|  
-|**SQLCHARACTER**|예|**varchar(max)**|  
-|**SQL이상 문자**|예|**varchar(max)**|  
-|**SQL이상 VARCHAR**|예|**varchar(max)**|  
-|**SQLVARCHAR**|예|**varchar(max)**|  
-|**SQLBINARY**|예|**varbinary(max)**|  
-|**SQL이상 이진**|예|**varbinary(max)**|  
-|**SQL이상 VARBINARY**|예|**varbinary(max)**|  
-|**SQLVARBINARY**|예|**varbinary(max)**|  
-|**SQLNCHAR**|예|**nvarchar(max)**|  
-|**SQLNVARCHAR**|예|**nvarchar(max)**|  
-|**SQLXML**|예|**Xml**|  
-|**SQLUDT**|모두|**Udt**|  
+|**SQLDECIMAL**|여기서는|**진수가**|  
+|**SQLNUMERIC**|여기서는|**번호**|  
+|**SQLINT1**|여기서는|**tinyint**|  
+|**SQLINT2**|여기서는|**smallint**|  
+|**SQLINT4**|여기서는|**int**|  
+|**SQLMONEY**|여기서는|**money**|  
+|**SQLFLT8**|여기서는|**float**|  
+|**SQLDATETIME**|여기서는|**datetime**|  
+|**SQLBITN**|여기서는|**bit-null**|  
+|**SQLBIT**|여기서는|**bit**|  
+|**SQLBIGCHAR**|예|**char**|  
+|**SQLCHARACTER**|예|**char**|  
+|**SQLBIGVARCHAR**|예|**varchar**|  
+|**SQLVARCHAR**|예|**varchar**|  
+|**SQLTEXT**|여기서는|**text**|  
+|**SQLBIGBINARY**|예|**binary**|  
+|**SQLBINARY**|예|**바이너리**|  
+|**SQLBIGVARBINARY**|예|**Varbinary**|  
+|**SQLVARBINARY**|예|**Varbinary**|  
+|**SQLIMAGE**|여기서는|**이미지로**|  
+|**SQLINTN**|여기서는|**int-null**|  
+|**SQLDATETIMN**|여기서는|**datetime-null**|  
+|**SQLMONEYN**|여기서는|**money-null**|  
+|**SQLFLTN**|여기서는|**float-null**|  
+|**SQLAOPSUM**|여기서는|**총합**|  
+|**SQLAOPAVG**|여기서는|**매출**|  
+|**SQLAOPCNT**|여기서는|**수**|  
+|**SQLAOPMIN**|여기서는|**일별**|  
+|**SQLAOPMAX**|여기서는|**최대값**|  
+|**SQLDATETIM4**|여기서는|**smalldatetime**|  
+|**SQLMONEY4**|여기서는|**Smallmoney**|  
+|**SQLFLT4**|여기서는|**실제로**|  
+|**SQLUNIQUEID**|여기서는|**uniqueidentifier**|  
+|**SQLNCHAR**|예|**Nchar**|  
+|**SQLNVARCHAR**|예|**Varchar**|  
+|**SQLNTEXT**|여기서는|**N**|  
+|**SQLVARIANT**|여기서는|**sql_variant**|  
+|**SQLINT8**|여기서는|**Bigint**|  
+|**SQLCHARACTER**|yes|**varchar(max)**|  
+|**SQLBIGCHAR**|yes|**varchar(max)**|  
+|**SQLBIGVARCHAR**|yes|**varchar(max)**|  
+|**SQLVARCHAR**|yes|**varchar(max)**|  
+|**SQLBINARY**|yes|**varbinary(max)**|  
+|**SQLBIGBINARY**|yes|**varbinary(max)**|  
+|**SQLBIGVARBINARY**|yes|**varbinary(max)**|  
+|**SQLVARBINARY**|yes|**varbinary(max)**|  
+|**SQLNCHAR**|yes|**nvarchar(max)**|  
+|**SQLNVARCHAR**|yes|**nvarchar(max)**|  
+|**SQLXML**|yes|**Xml**|  
+|**SQLUDT**|여기서는|**Udt**|  
   
 ## <a name="bcp_gettypename-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 bcp_gettypename 지원  
- 날짜/시간 형식에 대 한 토큰 매개 변수 값은 [향상 된 날짜 및 시간 &#40;형식 OLE DB 및 ODBC&#41;에 대 한 대량 복사 변경 내용](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)에서 테이블의 "sqlncli 형식" 열에 설명 되어 있습니다. 반환 값은 "파일 스토리지 유형" 열의 해당 행에 있습니다.  
+ 날짜/시간 형식에 대 한 토큰 매개 변수 값은 [OLE DB 및 ODBC&#41;&#40;향상 된 날짜 및 시간 형식에 대 한 대량 복사 변경 내용 ](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)에서 테이블의 "sqlncli 형식" 열에 설명 되어 있습니다. 반환 값은 "파일 스토리지 유형" 열의 해당 행에 있습니다.  
   
- 자세한 내용은 [ODBC&#41;의 날짜 및 시간 기능 향상 &#40;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)을 참조 하세요.  
+ 자세한 내용은 [ODBC&#41;&#40;날짜 및 시간 향상 ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)을 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목:  
- [대량 복사 함수](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>참고 항목  
+ [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

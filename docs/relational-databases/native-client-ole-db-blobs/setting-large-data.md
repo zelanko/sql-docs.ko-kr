@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 317f6f25e717a49f3b26c4cc09d957f8c38557f0
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73758324"
 ---
 # <a name="setting-large-data"></a>대규모 데이터 설정
@@ -52,7 +52,9 @@ ms.locfileid: "73758324"
   
 4.  구조의 DBBINDINGS 배열에 있는 바인딩 정보를 사용하여 접근자를 만듭니다.  
   
-5.  **GetNextRows** 를 호출하여 다음 행을 행 집합으로 인출합니다. **GetData** 를 호출하여 행 집합에서 데이터를 읽습니다.  
+5.  
+  **GetNextRows** 를 호출하여 다음 행을 행 집합으로 인출합니다. 
+  **GetData** 를 호출하여 행 집합에서 데이터를 읽습니다.  
   
 6.  데이터 및 길이 표시기가 포함된 스토리지 개체를 만든 다음, 해당 BLOB 열을 바인딩하는 접근자와 함께 **IRowsetChange::SetData**(또는 **IRowsetChange::InsertRow**)를 호출하여 데이터를 설정합니다.  
 
@@ -721,7 +723,7 @@ Exit:
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [BLOB 및 OLE 개체](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
+ [Blob 및 OLE 개체](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [큰 값 형식 사용](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

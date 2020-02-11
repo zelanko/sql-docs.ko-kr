@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: df90080d0c07b87d646c7c67cbe1fd672a2a582f
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73780665"
 ---
 # <a name="profiling-odbc-driver-performance-data"></a>ODBC 드라이버 성능 데이터 프로파일링
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  이 예제에서는 성능 통계를 기록하기 위한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버 관련 옵션을 보여 줍니다. 이 샘플은 파일 하나를 만듭니다. odbcperf .이 샘플은 성능 데이터 로그 파일을 만들고 SQLPERF 데이터 구조에서 직접 성능 데이터를 표시 하는 방법을 보여 줍니다 (SQLPERF 구조는 Odbcss.h에 정의 됨). 이 예제는 ODBC 버전 3.0 이상용으로 개발되었습니다.  
+  이 예제에서는 성능 통계를 기록하기 위한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버 관련 옵션을 보여 줍니다. 이 예제는 odbcperf.log 파일을 만듭니다. 또한 SQLPERF 데이터 구조에서 직접 성능 데이터 로그 파일을 만들고 성능 데이터를 표시하는 방법을 보여 줍니다. SQLPERF 구조는 Odbcss.h에 정의되어 있습니다. 이 예제는 ODBC 버전 3.0 이상용으로 개발되었습니다.  
   
 > [!IMPORTANT]  
 >  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
@@ -36,7 +36,8 @@ ms.locfileid: "73780665"
   
 3.  성능 데이터를 기록할 데이터 원본을 클릭합니다.  
   
-4.  클릭 **구성**합니다.  
+4.  
+  **구성**을 클릭합니다.  
   
 5.  Microsoft SQL Server DSN 구성 마법사에서 **로그 파일에 ODBC 드라이버 통계 로그**를 포함 하는 페이지로 이동 합니다.  
   
@@ -44,7 +45,7 @@ ms.locfileid: "73780665"
   
 ### <a name="to-log-driver-performance-data-programmatically"></a>드라이버 성능 데이터를 프로그래밍 방식으로 기록하려면  
   
-1.  SQL_COPT_SS_PERF_DATA_LOG와 성능 데이터 로그 파일의 전체 경로 및 파일 이름을 사용 하 여 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 를 호출 합니다. 예를 들어:  
+1.  SQL_COPT_SS_PERF_DATA_LOG와 성능 데이터 로그 파일의 전체 경로 및 파일 이름을 사용 하 여 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 를 호출 합니다. 다음은 그 예입니다.  
   
     ```  
     "C:\\Odbcperf.log"  
@@ -241,7 +242,7 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Odbc 드라이버 성능 프로 파일링 방법 &#40;항목 odbc&#41; ](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)   
+ [ODBC 드라이버 성능 프로 파일링 방법 항목 ODBC&#41;&#40;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)   
  [ODBC 드라이버 성능 프로파일링](../../relational-databases/native-client/odbc/profiling-odbc-driver-performance.md)  
   
   

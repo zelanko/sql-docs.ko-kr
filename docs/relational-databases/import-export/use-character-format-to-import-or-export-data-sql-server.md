@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 4d380954be720a6cb839b0c4259a408733f8e176
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056330"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>문자 형식을 사용하여 데이터 가져오기 또는 내보내기(SQL Server)
@@ -54,20 +54,20 @@ ms.locfileid: "74056330"
   
 -   변환 작업 중에 확장 문자가 손실되는 것을 방지하려면 유니코드 문자 형식을 사용하거나 코드 페이지를 지정하십시오.  
   
--   문자 서식 파일로 저장되는 모든 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 데이터는 메타데이터 없이 저장됩니다. 각 데이터 값은 암시적 데이터 변환 규칙에 따라 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) 로 변환되며 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 열로 데이터를 가져오는 경우 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md)로 변환됩니다. [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 이외의 데이터 형식으로 열에 가져오는 경우 해당 데이터는 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md)에서 암시적 변환을 거칩니다. 데이터 변환에 대한 자세한 내용은 [데이터 형식 변환&#40;데이터베이스 엔진&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)을 참조하세요.  
+-   문자 서식 파일로 저장되는 모든 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 데이터는 메타데이터 없이 저장됩니다. 각 데이터 값은 암시적 데이터 변환 규칙에 따라 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) 로 변환되며 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 열로 데이터를 가져오는 경우 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md)로 변환됩니다. [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md)이외의 데이터 형식으로 열에 가져오는 경우 해당 데이터는 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) 에서 암시적 변환을 거칩니다. 데이터 변환에 대한 자세한 내용은 [데이터 형식 변환&#40;데이터베이스 엔진&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)을 참조하세요.  
   
--   [bcp 유틸리티](../../tools/bcp-utility.md)가 문자 형식 데이터 파일로서 [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) 값을 내보낼 때는 소수점 이하 4자리만 표시하며 쉼표 구분자 등 숫자 구분 기호는 사용하지 않습니다. 예를 들어 1,234,567.123456이라는 값을 포함하는 [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) 열을 데이터 파일로 대량 내보내면 1234567.1235라는 문자열이 됩니다.  
+-   [bcp 유틸리티](../../tools/bcp-utility.md) 가 문자 형식 데이터 파일로서 [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) 값을 내보낼 때는 소수점 이하 4자리만 표시하며 쉼표 구분자 등 숫자 구분 기호는 사용하지 않습니다. 예를 들어 1,234,567.123456이라는 값을 포함하는 [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) 열을 데이터 파일로 대량 내보내면 1234567.1235라는 문자열이 됩니다.  
   
 ## 문자 형식의 명령 옵션<a name="command_options"></a>  
 [bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 또는 [INSERT ... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md)를 사용하여 테이블로 유니코드 문자 형식 데이터를 가져올 수 있습니다. [bcp](../../tools/bcp-utility.md) 명령 또는 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 문의 경우 문에서 데이터 형식을 지정할 수 있습니다.  [INSERT ... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 문의 경우 서식 파일에서 데이터 형식을 지정해야 합니다.  
   
 문자 형식에 대해 지원되는 명령 옵션은 다음과 같습니다.  
   
-|Command|옵션|설명|  
+|명령|옵션|Description|  
 |-------------|------------|-----------------|  
 |bcp|**-c**|bcp 유틸리티가 문자 데이터를 사용하도록 합니다.\*|  
 |BULK INSERT|DATAFILETYPE **='char'**|데이터를 대량 가져올 때 문자 형식을 사용합니다.|  
-|OPENROWSET|해당 사항 없음|서식 파일을 사용해야 합니다.|
+|OPENROWSET|해당 없음|서식 파일을 사용해야 합니다.|
   
  \*문자( **-c**) 데이터를 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트와 호환되는 형식으로 로드하려면 **-V** 스위치를 사용하세요. 자세한 내용은 [SQL Server 이전 버전으로부터 기본 및 문자 형식 데이터 가져오기](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)를 참조하세요.  
    
@@ -105,7 +105,7 @@ SELECT * FROM TestDatabase.dbo.myChar;
 ```
 
 ### **샘플 비 XML 서식 파일**<a name="nonxml_format_file"></a>
-SQL Server는 두 유형의 서식 파일, 즉 비 XML 서식 파일과 XML 서식 파일을 지원합니다.  비 XML 서식 파일은 이전 버전의 SQL Server에서 원래 지원했던 서식 파일입니다.  자세한 내용은 [비 XML 서식 파일(SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 을 검토하세요.  다음 명령은 [bcp 유틸리티](../../tools/bcp-utility.md) 를 사용하여 `myChar.fmt`의 스키마를 기반으로 비 xml 서식 파일 `myChar`를 생성합니다.  [bcp](../../tools/bcp-utility.md) 명령을 사용하여 서식 파일을 만들려면 데이터 파일 경로 대신 **format** 인수를 지정하고 **nul** 을 사용합니다.  format 옵션에는 **-f** 옵션도 필요합니다.  또한 이 예제에서 한정자 **c** 는 문자 데이터를 지정하는 데 사용되고 **T** 는 통합된 보안을 사용하여 신뢰할 수 있는 연결을 지정하는 데 사용됩니다.  명령 프롬프트에서 다음 명령을 입력합니다.
+SQL Server는 두 유형의 서식 파일, 즉 비 XML 서식 파일과 XML 서식 파일을 지원합니다.  비 XML 서식 파일은 이전 버전의 SQL Server에서 원래 지원했던 서식 파일입니다.  자세한 내용은 [비 XML 서식 파일(SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 을 검토하세요.  다음 명령은 [bcp 유틸리티](../../tools/bcp-utility.md) 를 사용하여 `myChar.fmt`의 스키마를 기반으로 비 xml 서식 파일 `myChar`를 생성합니다.  [bcp](../../tools/bcp-utility.md) 명령을 사용하여 서식 파일을 만들려면 데이터 파일 경로 대신 **format** 인수를 지정하고 **NUL** 을 사용합니다.  format 옵션에는 **-f** 옵션도 필요합니다.  또한 이 예제에서 한정자 **c** 는 문자 데이터를 지정하는 데 사용되고 **T** 는 통합된 보안을 사용하여 신뢰할 수 있는 연결을 지정하는 데 사용됩니다.  명령 프롬프트에서 다음 명령을 입력합니다.
 
 ```cmd
 bcp TestDatabase.dbo.myChar format nul -f D:\BCP\myChar.fmt -T -c 
@@ -212,14 +212,14 @@ SELECT * FROM TestDatabase.dbo.myChar;
   
 -   [SQL Server 이전 버전으로부터 기본 및 문자 형식 데이터 가져오기](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
--   [네이티브 형식을 사용하여 데이터 가져오기 및 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)  
+-   [네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [유니코드 문자 형식을 사용하여 데이터 가져오기 및 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [유니코드 문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
 -   [유니코드 네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp 유틸리티](../../tools/bcp-utility.md)   
  [BULK INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET&#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   

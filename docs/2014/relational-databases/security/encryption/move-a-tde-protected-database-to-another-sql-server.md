@@ -14,10 +14,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 748ad4cfe0e399062fd1b13bcf3a05169ef94b1c
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957172"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>다른 SQL Server로 TDE 보호 데이터베이스 이동
@@ -25,7 +25,7 @@ ms.locfileid: "74957172"
   
  **항목 내용**  
   
--   **시작 하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [제한 사항](#Restrictions)  
   
@@ -35,17 +35,17 @@ ms.locfileid: "74957172"
   
      [SQL Server Management Studio](#SSMSCreate)  
   
-     [Transact-sql](#TsqlCreate)  
+     [Transact-SQL](#TsqlCreate)  
   
 -   **다음을 사용 하 여 데이터베이스를 이동 합니다.**  
   
      [SQL Server Management Studio](#SSMSMove)  
   
-     [Transact-sql](#TsqlMove)  
+     [Transact-SQL](#TsqlMove)  
   
-##  <a name="BeforeYouBegin"></a>시작 하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a>제한 사항  
+###  <a name="Restrictions"></a> 제한 사항  
   
 -   TDE로 보호되는 데이터베이스를 이동하려면 DEK를 여는 데 사용되는 인증서 또는 비대칭 키도 이동해야 합니다. 에서 데이터베이스 파일에 액세스할 `master` [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 수 있도록 대상 서버의 데이터베이스에 인증서 또는 비대칭 키가 설치 되어 있어야 합니다. 자세한 내용은 [TDE&#40;투명한 데이터 암호화&#41;](transparent-data-encryption.md)를 참조하세요.  
   
@@ -53,9 +53,9 @@ ms.locfileid: "74957172"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]여기에 생성 된 파일을 **C:\Program FILES\MICROSOFT SQL Server\MSSQL12.에 저장 합니다. **기본적으로 MSSQLSERVER\MSSQL\DATA입니다. 파일 이름 및 위치는 다를 수 있습니다.  
   
-###  <a name="Security"></a>보안  
+###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a>권한에  
+####  <a name="Permissions"></a> 권한  
   
 -   데이터베이스 `CONTROL DATABASE` 마스터 키를 `master` 만들려면 데이터베이스에 대 한 권한이 필요 합니다.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "74957172"
   
 ##  <a name="SSMSProcedure"></a>투명 한 데이터 암호화로 보호 되는 데이터베이스를 만들려면  
   
-###  <a name="SSMSCreate"></a>SQL Server Management Studio 사용  
+###  <a name="SSMSCreate"></a> SQL Server Management Studio 사용  
   
 1.  데이터베이스에 `master` 데이터베이스 마스터 키 및 인증서를 만듭니다. 자세한 내용은 아래에서 **Transact-SQL 사용** 을 참조하세요.  
   
@@ -98,15 +98,13 @@ ms.locfileid: "74957172"
      **데이터베이스 암호화 설정**  
      데이터베이스의 TDE를 설정(선택) 또는 해제(선택 취소)로 변경합니다.  
   
-8.  작업을 완료한 후 **확인**을 클릭합니다.  
+8.  완료되었으면 **확인**을 클릭합니다.  
   
-###  <a name="TsqlCreate"></a>Transact-sql 사용  
+###  <a name="TsqlCreate"></a> Transact-SQL 사용  
   
-1.  
-  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  
-  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
   
@@ -150,21 +148,21 @@ ms.locfileid: "74957172"
   
  자세한 내용은 다음을 참조하세요.  
   
--   [Transact-sql&#41;&#40;마스터 키 만들기](/sql/t-sql/statements/create-master-key-transact-sql)  
+-   [CREATE MASTER KEY&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)  
   
--   [Transact-sql&#41;인증서 &#40;만들기](/sql/t-sql/statements/create-certificate-transact-sql)  
+-   [CREATE CERTIFICATE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
   
--   [Transact-sql&#41;&#40;백업 인증서](/sql/t-sql/statements/backup-certificate-transact-sql)  
+-   [BACKUP CERTIFICATE&#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-certificate-transact-sql)  
   
--   [Transact-sql&#41;SQL Server 데이터베이스 &#40;만들기](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
+-   [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   
--   [Transact-sql&#41;&#40;데이터베이스 암호화 키 만들기](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
+-   [CREATE DATABASE ENCRYPTION KEY&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
   
--   [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
+-   [ALTER DATABASE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   
 ##  <a name="TsqlProcedure"></a>데이터베이스를 이동 하려면  
   
-###  <a name="SSMSMove"></a>SQL Server Management Studio 사용  
+###  <a name="SSMSMove"></a> SQL Server Management Studio 사용  
   
 1.  개체 탐색기에서 위에서 암호화한 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크** 를 가리킨 후, **분리...** 를 선택합니다.  
   
@@ -202,8 +200,7 @@ ms.locfileid: "74957172"
   
      메시지에 대한 자세한 내용을 보려면 하이퍼링크로 연결된 텍스트를 클릭하여 작업 모니터를 엽니다.  
   
-2.  
-  **확인**을 클릭합니다.  
+2.  **확인**을 클릭합니다.  
   
 3.  Windows 탐색기를 사용하여 데이터베이스 파일을 원본 서버에서 대상 서버의 동일한 위치로 이동 또는 복사합니다.  
   
@@ -241,18 +238,18 @@ ms.locfileid: "74957172"
      **연결 이름**  
      필요에 따라 연결할 데이터베이스의 이름을 다른 이름으로 지정합니다.  
   
-     **소유자도**  
+     **소유자**  
      필요에 따라 다른 소유자를 선택할 수 있도록 가능한 데이터베이스 소유자의 드롭다운 목록을 제공합니다.  
   
      **상태**  
      다음 표에 설명된 내용과 같이 데이터베이스의 상태를 표시합니다.  
   
-    |아이콘|상태 텍스트|설명|  
+    |아이콘|상태 텍스트|Description|  
     |----------|-----------------|-----------------|  
     |(아이콘 없음)|(텍스트 없음)|연결 작업이 시작되지 않았거나 이 개체에 대해 보류 중입니다. 대화 상자가 열려 있는 경우에 표시되는 기본 설정입니다.|  
     |녹색, 오른쪽 방향 삼각형|진행 중|연결 작업이 시작되었지만 아직 완료되지 않았습니다.|  
     |녹색 확인 표시|Success|개체가 성공적으로 연결되었습니다.|  
-    |흰색 십자 표시가 있는 빨강 원|오류|연결 작업을 수행하는 동안 오류가 발생하여 완료하지 못했습니다.|  
+    |흰색 십자 표시가 있는 빨강 원|Error|연결 작업을 수행하는 동안 오류가 발생하여 완료하지 못했습니다.|  
     |오른쪽과 왼쪽에 두 개의 검정 사분면이 있고 위쪽과 아래쪽에 두 개의 흰색 사분면이 있는 원|중지됨|사용자가 작업을 중지하여 연결 작업이 완료되지 않았습니다.|  
     |시계 반대 방향을 가리키는 곡선 모양의 화살표가 있는 원|롤백됨|연결 작업이 성공적으로 완료되었지만 다른 개체를 연결하는 동안 발생한 오류로 인해 롤백되었습니다.|  
   
@@ -262,7 +259,7 @@ ms.locfileid: "74957172"
      **추가**  
      필요한 기본 데이터베이스 파일을 찾습니다. 사용자가 .mdf 파일을 선택하면 **연결할 데이터베이스** 표의 각 필드에 적절한 정보가 자동으로 입력됩니다.  
   
-     **삭제**  
+     **제거**  
      선택한 파일을 **연결할 데이터베이스** 표에서 제거합니다.  
   
      **"** _<database_name>_ **" 데이터베이스 세부 정보**  
@@ -274,7 +271,7 @@ ms.locfileid: "74957172"
      **원래 파일 이름**  
      데이터베이스에 속한 연결된 파일의 이름을 표시합니다.  
   
-     **파일 형식**  
+     **파일 유형**  
      파일의 형식( **데이터** 또는 **로그**)을 나타냅니다.  
   
      **현재 파일 경로**  
@@ -283,13 +280,11 @@ ms.locfileid: "74957172"
      **메시지**  
      빈 메시지 또는 "**파일을 찾을 수 없습니다**"라는 하이퍼링크를 표시합니다.  
   
-###  <a name="TsqlMove"></a>Transact-sql 사용  
+###  <a name="TsqlMove"></a> Transact-SQL 사용  
   
-1.  
-  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  
-  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
   
@@ -328,15 +323,15 @@ ms.locfileid: "74957172"
   
  자세한 내용은 다음을 참조하세요.  
   
--   [Transact-sql&#41;sp_detach_db &#40;](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql)  
+-   [sp_detach_db&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql)  
   
--   [Transact-sql&#41;&#40;마스터 키 만들기](/sql/t-sql/statements/create-master-key-transact-sql)  
+-   [CREATE MASTER KEY&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)  
   
--   [Transact-sql&#41;인증서 &#40;만들기](/sql/t-sql/statements/create-certificate-transact-sql)  
+-   [CREATE CERTIFICATE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
   
--   [Transact-sql&#41;SQL Server 데이터베이스 &#40;만들기](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
+-   [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터베이스 분리 및 연결 &#40;SQL Server&#41;](../../databases/database-detach-and-attach-sql-server.md)  
+ [데이터베이스 분리 및 연결&#40;SQL Server&#41;](../../databases/database-detach-and-attach-sql-server.md)  
   
   

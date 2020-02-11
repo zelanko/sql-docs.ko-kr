@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: c319259d8997db2ff39d90b408056d03eb008782
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401646"
 ---
 # <a name="sysdm_pdw_nodes_database_encryption_keys-transact-sql"></a>sys. dm_pdw_nodes_database_encryption_keys (Transact-sql)
@@ -24,22 +24,22 @@ ms.locfileid: "74401646"
 
   연결된 데이터베이스 암호화 키 및 데이터베이스의 암호화 상태에 대한 정보를 반환합니다. **dm_pdw_nodes_database_encryption_keys** 각 노드에 대해이 정보를 제공 합니다. 데이터베이스 암호화에 대 한 자세한 내용은 [투명한 데이터 암호화 (SQL Server PDW)](../../analytics-platform-system/transparent-data-encryption.md)를 참조 하세요.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|각 노드에 있는 물리적 데이터베이스의 ID입니다.|  
 |encryption_state|**int**|이 노드의 데이터베이스가 암호화 되었는지 아니면 암호화 되지 않는지를 나타냅니다.<br /><br /> 0 = 데이터베이스 암호화 키가 없고 암호화되지 않음<br /><br /> 1 = 암호화되지 않음<br /><br /> 2 = 암호화 진행 중<br /><br /> 3 = 암호화됨<br /><br /> 4 = 키 변경 진행 중<br /><br /> 5 = 해독 진행 중<br /><br /> 6 = 보호 변경 진행 중 (데이터베이스 암호화 키를 암호화 하는 인증서를 변경 하는 중)|  
-|create_date|**날짜**|암호화 키를 만든 날짜를 표시합니다.|  
-|regenerate_date|**날짜**|암호화 키를 다시 생성한 날짜를 표시합니다.|  
-|modify_date|**날짜**|암호화 키를 수정한 날짜를 표시합니다.|  
-|set_date|**날짜**|암호화 키가 데이터베이스에 적용된 날짜를 표시합니다.|  
-|opened_date|**날짜**|데이터베이스 키가 마지막으로 열린 시간을 표시합니다.|  
+|create_date|**datetime**|암호화 키를 만든 날짜를 표시합니다.|  
+|regenerate_date|**datetime**|암호화 키를 다시 생성한 날짜를 표시합니다.|  
+|modify_date|**datetime**|암호화 키를 수정한 날짜를 표시합니다.|  
+|set_date|**datetime**|암호화 키가 데이터베이스에 적용된 날짜를 표시합니다.|  
+|opened_date|**datetime**|데이터베이스 키가 마지막으로 열린 시간을 표시합니다.|  
 |key_algorithm|**varchar (?)**|키에 사용된 알고리즘을 표시합니다.|  
 |key_length|**int**|키의 길이를 표시합니다.|  
 |encryptor_thumbprint|**varbin**|암호기의 손도장을 표시합니다.|  
-|percent_complete|**real**|데이터베이스 암호화 상태 변경의 완료 비율입니다. 상태 변경이 없으면 0이 됩니다.|  
+|percent_complete|**실제로**|데이터베이스 암호화 상태 변경의 완료 비율입니다. 상태 변경이 없으면 0이 됩니다.|  
 |node_id|**int**|노드와 연결 된 고유 숫자 id입니다.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  서버에 대한 VIEW SERVER STATE 권한이 필요합니다.  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  

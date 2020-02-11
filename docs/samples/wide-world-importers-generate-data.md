@@ -10,10 +10,10 @@ author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 0f880ea881b53c2600fb1fffdf7da5d16ab8d423
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056280"
 ---
 # <a name="wideworldimporters-data-generation"></a>WideWorldImporters 데이터 생성
@@ -40,7 +40,7 @@ WideWorldImporters 및 WideWorldImportersDW 데이터베이스의 릴리스 버�
 
     이 문은 예제 판매 및 구매 데이터를 데이터베이스에 현재 날짜로 추가 합니다. 일별 데이터 생성의 진행 상태를 표시 합니다. 데이터 생성은 데이터를 필요로 하는 모든 연도에 대해 약 10 분이 소요 될 수 있습니다. 데이터 생성의 임의 요소로 인해 실행 간에 생성 되는 데이터에는 약간의 차이가 있습니다.
 
-    매일 주문에 대해 생성 되는 데이터의 양을 늘리거나 줄이려면 매개 변수 `@AverageNumberOfCustomerOrdersPerDay`의 값을 변경 합니다. `@SaturdayPercentageOfNormalWorkDay` 및 `@SundayPercentageOfNormalWorkDay` 매개 변수를 사용 하 여 주말의 주문 볼륨을 결정 합니다.
+    매일 주문에 대해 생성 되는 데이터의 양을 늘리거나 줄이려면 매개 변수의 `@AverageNumberOfCustomerOrdersPerDay`값을 변경 합니다. 및 `@SundayPercentageOfNormalWorkDay` 매개 변수 `@SaturdayPercentageOfNormalWorkDay` 를 사용 하 여 주말의 주문 볼륨을 확인 합니다.
 
 ## <a name="import-generated-data-in-wideworldimportersdw"></a>WideWorldImportersDW에서 생성 된 데이터 가져오기
 
@@ -62,17 +62,17 @@ WideWorldImportersDW는 성능 테스트를 위해 데이터 크기를 임의로
 
 문제 중 하나는 다운로드 크기를 쉽게 다운로드할 수 있는 크기를 유지 하는 것입니다. 하지만 SQL Server 성능 기능을 보여 줄 수 있을 정도로 커야 합니다. 예를 들어 많은 수의 행으로 작업 하는 경우에만 columnstore 인덱스에 대 한 상당한 이점을 얻을 수 있습니다. 
 
-`Application.Configuration_PopulateLargeSaleTable` 프로시저를 사용 하 여 `Fact.Sale` 테이블의 행 수를 늘릴 수 있습니다. 2012 년 1 월 2013 1 일에 시작 하는 기존 세계 넓은 가져오기 데이터와의 충돌을 방지 하기 위해 행이 달력 년에 삽입 됩니다.
+프로시저를 `Application.Configuration_PopulateLargeSaleTable` 사용 하 여 `Fact.Sale` 테이블의 행 수를 늘릴 수 있습니다. 2012 년 1 월 2013 1 일에 시작 하는 기존 세계 넓은 가져오기 데이터와의 충돌을 방지 하기 위해 행이 달력 년에 삽입 됩니다.
 
 ### <a name="procedure-details"></a>프로시저 세부 정보
 
-#### <a name="name"></a>이름
+#### <a name="name"></a>속성
 
     Application.Configuration_PopulateLargeSaleTable
 
 #### <a name="parameters"></a>매개 변수
 
-  `@EstimatedRowsFor2012` **bigint** (기본값 1200만)
+  `@EstimatedRowsFor2012`**bigint** (기본값 1200만)
 
 #### <a name="result"></a>결과
 

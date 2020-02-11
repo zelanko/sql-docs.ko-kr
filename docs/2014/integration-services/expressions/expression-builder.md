@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c2aa59b0806cc0ede01fa728636ab9d90479f14b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62898851"
 ---
 # <a name="expression-builder"></a>식 작성기
@@ -36,7 +36,7 @@ ms.locfileid: "62898851"
   
  속성 식에 대한 자세한 내용과 식을 작성하는 방법에 대한 자세한 내용은 [패키지에서 속성 식 사용](use-property-expressions-in-packages.md) 및 [Integration Services&#40;SSIS&#41; 식](integration-services-ssis-expressions.md)를 참조하세요.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
   
 |용어|정의|  
 |----------|----------------|  
@@ -46,7 +46,7 @@ ms.locfileid: "62898851"
 |**평가 값**|식의 평가 결과를 나열합니다.|  
 |**식 계산**|식의 계산 결과를 보려면 **식 계산** 을 클릭합니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [식 페이지](expressions-page.md)   
  [속성 식 편집기](property-expressions-editor.md)   
  [Integration Services&#40;SSIS&#41; 변수](../integration-services-ssis-variables.md)   

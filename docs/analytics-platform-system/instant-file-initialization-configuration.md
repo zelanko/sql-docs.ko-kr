@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 83ed373fd4fdd38ae5ddd391678b74e3d2e168c9
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401110"
 ---
 # <a name="instant-file-initialization-configuration"></a>즉시 파일 초기화 구성
@@ -50,8 +50,7 @@ TDE를 사용하도록 설정되어 있으면 즉시 파일 초기화를 사용�
     > [!WARNING]  
     > 즉시 파일 초기화를 해제 하면 즉시 파일 초기화를 사용 하는 동안 삭제 된 파일에도 해당 기능에 대해 위에서 설명한 보안 고려 사항이 적용 될 수 있습니다.  
   
-4.  
-  **적용**을 클릭합니다. 변경 내용은 다음에 어플라이언스 서비스를 다시 시작할 때 SQL Server PDW의 SQL Server 인스턴스를 통해 전파 됩니다. 지금 어플라이언스 서비스를 다시 시작 하려면 [PDW 서비스 상태 &#40;분석 플랫폼 시스템&#41;](pdw-services-status.md)을 참조 하세요.  
+4.  **적용**을 클릭합니다. 변경 내용은 다음에 어플라이언스 서비스를 다시 시작할 때 SQL Server PDW의 SQL Server 인스턴스를 통해 전파 됩니다. 지금 어플라이언스 서비스를 다시 시작 하려면 [PDW 서비스 상태 &#40;분석 플랫폼 시스템&#41;](pdw-services-status.md)을 참조 하세요.  
   
 5.  위에 설명 된 단계를 **백업 계정에 대 한 추가 권한** 으로 반복 하 여 **볼륨 유지 관리 작업 수행** 권한을 제거할 수 있습니다.  
   

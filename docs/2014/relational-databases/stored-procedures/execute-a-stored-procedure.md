@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0cd447f6ad12ee12c96f6bcbb6af858aa32fdb06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63016062"
 ---
 # <a name="execute-a-stored-procedure"></a>저장 프로시저 실행
@@ -43,7 +43,7 @@ ms.locfileid: "63016062"
   
 -   **저장 프로시저를 실행하려면:**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -122,7 +122,7 @@ ms.locfileid: "63016062"
 ###  <a name="Security"></a> 보안  
  자세한 내용은 [EXECUTE AS&#40;Transact-SQL&#41;](/sql/t-sql/statements/execute-as-transact-sql) 및 [EXECUTE AS 절&#40;Transact-SQL&#41;](/sql/t-sql/statements/execute-as-clause-transact-sql)을 참조하세요.  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  자세한 내용은 [EXECUTE&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql)을 사용하여 저장 프로시저를 실행하는 방법에 대해 설명합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -149,7 +149,7 @@ ms.locfileid: "63016062"
      **Null 값 전달**  
      매개 변수의 값으로 NULL 값을 전달합니다.  
   
-     **Value**  
+     **값**  
      프로시저를 호출할 때 매개 변수의 값을 입력합니다.  
   
 5.  저장 프로시저를 실행하려면 **확인**을 클릭합니다.  
@@ -204,7 +204,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [매개 변수 지정](specify-parameters.md)   
  [scan for startup procs 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)   
  [EXECUTE&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql)   

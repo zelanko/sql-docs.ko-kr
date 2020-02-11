@@ -21,10 +21,10 @@ ms.assetid: 7acfac5c-9ad6-4226-b874-7add36c4ea43
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 66830b3000d749ab17a5800c3450c5880c5d1aba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68076442"
 ---
 # <a name="setuser-transact-sql"></a>SETUSER(Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68076442"
 > [!IMPORTANT]  
 >  SETUSER는 이전 버전과의 호환성을 위해 포함되었습니다. SETUSER는 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 릴리스에서 지원되지 않을 수 있으므로 대신 [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md)를 사용하는 것이 좋습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -51,7 +51,7 @@ SETUSER [ 'username' [ WITH NORESET ] ]
  WITH NORESET  
  *username*을 지정하지 않은 이후의 SETUSER 문이 사용자 ID를 시스템 관리자 또는 데이터베이스 소유자로 다시 설정하지 않도록 지정합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sysadmin** 고정 서버 역할 또는 데이터베이스 소유자 고정 데이터베이스 역할의 멤버는 SETUSER를 사용하여 다른 사용자로 가장하고, 해당 사용자의 사용 권한을 테스트할 수 있습니다. db_owner 고정 데이터베이스 역할의 멤버 자격으로는 충분하지 않습니다.  
   
  SETUSER는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자에만 사용하세요. Windows 사용자에는 SETUSER가 지원되지 않습니다. 다른 사용자의 ID를 가장하기 위해 SETUSER를 사용할 때 가장한 사용자가 만든 개체는 가장된 사용자가 소유합니다. 예를 들어 데이터베이스 소유자가 **Margaret**라는 사용자로 가장하여 **orders**라는 테이블을 만들면 **orders** 테이블의 소유자는 데이터베이스 소유자가 아니라 **Margaret**가 됩니다.  

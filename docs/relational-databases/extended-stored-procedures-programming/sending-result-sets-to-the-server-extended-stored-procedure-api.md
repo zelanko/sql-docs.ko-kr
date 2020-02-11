@@ -14,19 +14,19 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4a54ad922e7033737ccd256c1b3a0a34f543a6dd
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74095940"
 ---
 # <a name="sending-result-sets-to-the-server-extended-stored-procedure-api"></a>서버로 결과 집합 보내기(확장 저장 프로시저 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하십시오.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]대신 CLR 통합을 사용 하세요.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 결과 집합을 보낼 때 확장 저장 프로시저는 다음과 같이 적절 한 API를 호출 해야 합니다.  
+ 로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]결과 집합을 보낼 때 확장 저장 프로시저는 다음과 같이 적절 한 API를 호출 해야 합니다.  
   
 -   **Srv_sendmsg** 함수는 **srv_sendrow**를 사용 하 여 모든 행 (있는 경우)이 전송 되기 전이나 후에 순서에 관계 없이 호출 될 수 있습니다. **Srv_senddone**를 사용 하 여 완료 상태를 보내기 전에 모든 메시지를 클라이언트로 보내야 합니다.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "74095940"
   
 -   **Srv_describe** 를 사용 하 여 정의 된 모든 열이 없는 행을 보내면 응용 프로그램에서 정보 오류 메시지를 발생 시키고 클라이언트에 FAIL을 반환 합니다. 이 경우 행이 전송되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [확장 저장 프로시저 만들기](../../relational-databases/extended-stored-procedures-programming/creating-extended-stored-procedures.md)  
   
   

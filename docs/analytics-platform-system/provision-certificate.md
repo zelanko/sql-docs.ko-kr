@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 669e65a7d27b208d861a33618d889707134dfefa
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400509"
 ---
 # <a name="certificate-provisioning-in-analytics-platform-system"></a>분석 플랫폼 시스템에서 인증서 프로 비전
@@ -21,7 +21,7 @@ ms.locfileid: "74400509"
 
 를 사용 하 여 연결을 암호화 하는 인증서는 SQL Server 클라이언트, SQL Server PDW 드라이버, [관리 콘솔](monitor-the-appliance-by-using-the-admin-console.md)및 Integration Services 로드를 사용 하는 도구를 통해 제어 노드에 대 한 통신을 보호 하는 데 도움이 될 수 있습니다. 
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
 인증서를 설치 하기 전에 다음을 수행 합니다.  
   
 1.  보안 인증서를 가져옵니다. 보안 인증서를 가져오는 방법에 대 한 자세한 정보가 필요한 경우 Microsoft 지원에 문의 하세요.  

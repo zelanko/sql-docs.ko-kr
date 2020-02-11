@@ -1,5 +1,5 @@
 ---
-title: SQLMoreResults | Microsoft 문서
+title: SQLMoreResults | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 85e0008e22e38b82fbd006a91eca80f67d7d8289
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63046728"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
-  **SQLMoreResults** 는 애플리케이션에서 여러 결과 행 집합을 검색하는 데 사용됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문에 COMPUTE 절 또는 ODBC 문이나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 전송된 일괄 처리가 포함되어 있으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버가 여러 결과 집합을 생성하게 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 두 경우의 결과를 처리할 서버 커서를 만들 수 없습니다. 따라서 개발자는 ODBC 문으로 인해 차단되지 않도록 해야 합니다. 즉, 연결에서 다른 활성 문의 데이터를 처리하기 전에 반환된 데이터를 폐기하거나 ODBC 문을 취소해야 합니다.  
+  **SQLMoreResults** 를 사용 하면 응용 프로그램에서 여러 결과 행 집합을 검색할 수 있습니다. 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문에 COMPUTE 절 또는 ODBC 문이나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 전송된 일괄 처리가 포함되어 있으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버가 여러 결과 집합을 생성하게 됩니다. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 두 경우의 결과를 처리할 서버 커서를 만들 수 없습니다. 따라서 개발자는 ODBC 문으로 인해 차단되지 않도록 해야 합니다. 즉, 연결에서 다른 활성 문의 데이터를 처리하기 전에 반환된 데이터를 폐기하거나 ODBC 문을 취소해야 합니다.  
   
 > [!NOTE]  
 >  COMPUTE 절이 포함된 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]이전 서버 버전에 연결할 경우에만 지원됩니다.  
@@ -160,7 +162,7 @@ EXIT:
     }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQLMoreResults 함수](https://go.microsoft.com/fwlink/?LinkId=59357)   
  [ODBC API 구현 정보](odbc-api-implementation-details.md)  
   

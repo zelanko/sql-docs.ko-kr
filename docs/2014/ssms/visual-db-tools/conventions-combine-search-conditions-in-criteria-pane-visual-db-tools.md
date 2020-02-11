@@ -1,5 +1,5 @@
 ---
-title: 조건 창 (Visual Database Tools)에서 검색 조건 결합 규칙 | Microsoft Docs
+title: 조건 창의 검색 조건 결합 규칙 (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3a1022770526386640f0ad2aa114a2161ba16dc8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63140371"
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>조건 창의 검색 조건 결합 규칙(Visual Database Tools)
@@ -139,7 +139,7 @@ WHERE (hire_date < '01/01/95' ) AND
   
  쿼리 및 뷰 디자이너는 아래와 같이 조건 창에 이 WHERE 문을 나타냅니다.  
   
- ![조건 창의 OR 절 우선 순위](../../database-engine/media//vs-criteriapane1.gif "조건 창의 OR 절 우선 순위")  
+ ![조건 창의 OR 절 선행 조건](../../database-engine/media//vs-criteriapane1.gif "조건 창의 OR 절 선행 조건")  
   
  그러나 연결된 OR 절이 AND 절보다 우선 순위가 높으면 AND 절은 각 OR 절에 대해 반복됩니다. 이렇게 하면 AND 절이 각 OR 절에 분배됩니다. 예를 들어, SQL 창에서 다음과 같은 WHERE 절을 만들 수 있습니다.  
   
@@ -166,7 +166,7 @@ WHERE (hire_date < '01/01/95' ) AND
   
  쿼리를 변경하면(예: 조건 창에서 값 하나를 변경) 쿼리 및 뷰 디자이너는 SQL 창에 SQL 문을 다시 만듭니다. 다시 만들어진 SQL 문은 원래 문보다는 조건 창에 표시되는 것과 비슷합니다. 예를 들어, 분배된 AND 절이 조건 창에 있는 경우 SQL 창에는 명시적으로 분배된 AND 절로 문이 다시 만들어집니다. 자세한 내용은 이 항목의 앞부분에서 설명한 "OR 절이 여러 개 있는 경우 AND가 적용되는 방법"을 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [검색 조건 지정&#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)  
   
   

@@ -15,16 +15,18 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3256e0e4862923138cdf035eb15926364bc8e0a5
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73786294"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  **SQLMoreResults** 는 애플리케이션에서 여러 결과 행 집합을 검색하는 데 사용됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문에 COMPUTE 절 또는 ODBC 문이나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 전송된 일괄 처리가 포함되어 있으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버가 여러 결과 집합을 생성하게 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 두 경우의 결과를 처리할 서버 커서를 만들 수 없습니다. 따라서 개발자는 ODBC 문으로 인해 차단되지 않도록 해야 합니다. 즉, 연결에서 다른 활성 문의 데이터를 처리하기 전에 반환된 데이터를 폐기하거나 ODBC 문을 취소해야 합니다.  
+  **SQLMoreResults** 를 사용 하면 응용 프로그램에서 여러 결과 행 집합을 검색할 수 있습니다. 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문에 COMPUTE 절 또는 ODBC 문이나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 전송된 일괄 처리가 포함되어 있으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버가 여러 결과 집합을 생성하게 됩니다. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 두 경우의 결과를 처리할 서버 커서를 만들 수 없습니다. 따라서 개발자는 ODBC 문으로 인해 차단되지 않도록 해야 합니다. 즉, 연결에서 다른 활성 문의 데이터를 처리하기 전에 반환된 데이터를 폐기하거나 ODBC 문을 취소해야 합니다.  
   
 > [!NOTE]  
 >  COMPUTE 절이 포함된 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]이전 서버 버전에 연결할 경우에만 지원됩니다.  

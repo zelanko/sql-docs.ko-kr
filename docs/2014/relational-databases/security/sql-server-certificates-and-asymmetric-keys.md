@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ddb7e84f69f501a7857b0d55b1b8a14d11a85694
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244510"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server 인증서 및 비대칭 키
@@ -45,11 +45,11 @@ ms.locfileid: "75244510"
 ### <a name="using-a-certificate-in-sql-server"></a>SQL Server에서 인증서 사용  
  인증서를 사용하면 데이터베이스 미러링에서 패키지 및 기타 개체를 서명하도록 안전하게 연결할 수 있으며 데이터 또는 연결을 암호화할 수 있습니다. 다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인증서에 대한 추가 리소스를 보여 줍니다.  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
-|[Transact-sql&#41;인증서 &#40;만들기](/sql/t-sql/statements/create-certificate-transact-sql)|인증서를 만들기 위한 명령에 대해 설명합니다.|  
-|[디지털 서명을 사용 하 여 패키지 원본 확인](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)|인증서를 사용하여 소프트웨어 패키지를 서명하는 방법에 대한 정보가 표시됩니다.|  
-|[Transact-sql&#41;&#40;데이터베이스 미러링 끝점에 대 한 인증서 사용](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|데이터베이스 미러링에 인증서를 사용하는 방법에 대해 설명합니다.|  
+|[CREATE CERTIFICATE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)|인증서를 만들기 위한 명령에 대해 설명합니다.|  
+|[디지털 서명을 사용하여 패키지 원본 확인](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)|인증서를 사용하여 소프트웨어 패키지를 서명하는 방법에 대한 정보가 표시됩니다.|  
+|[데이터베이스 미러링 엔드포인트에 대한 인증서 사용&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|데이터베이스 미러링에 인증서를 사용하는 방법에 대해 설명합니다.|  
   
 ## <a name="asymmetric-keys"></a>비대칭 키  
  비대칭 키는 대칭 키의 보안을 설정하는 데 사용됩니다. 또한 제한된 데이터 암호화와 데이터베이스 개체의 디지털 서명에도 사용할 수 있습니다. 비대칭 키는 프라이빗 키와 해당 퍼블릭 키로 구성됩니다. 비대칭 키에 대한 자세한 내용은 [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)입니다.  
@@ -59,10 +59,10 @@ ms.locfileid: "75244510"
 ### <a name="using-an-asymmetric-key-in-sql-server"></a>SQL Server에서 비대칭 키 사용  
  비대칭 키는 데이터에 보안을 설정하거나 일반 텍스트를 서명하는 데 사용할 수 있습니다. 다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 비대칭 키에 대한 추가 리소스를 보여 줍니다.  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
-|[Transact-sql&#41;&#40;비대칭 키 만들기](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|비대칭 키를 만들기 위한 명령에 대해 설명합니다.|  
-|[SIGNBYASYMKEY &#40;Transact-sql&#41;](/sql/t-sql/functions/signbyasymkey-transact-sql)|개체를 서명하는 옵션을 표시합니다.|  
+|[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|비대칭 키를 만들기 위한 명령에 대해 설명합니다.|  
+|[SIGNBYASYMKEY&#40;Transact-SQL&#41;](/sql/t-sql/functions/signbyasymkey-transact-sql)|개체를 서명하는 옵션을 표시합니다.|  
   
 ## <a name="tools"></a>도구  
  
@@ -77,11 +77,11 @@ ms.locfileid: "75244510"
 ## <a name="related-tasks"></a>관련 작업  
  [암호화 알고리즘 선택](encryption/choose-an-encryption-algorithm.md)  
   
- [Transact-sql&#41;&#40;대칭 키 만들기](/sql/t-sql/statements/create-symmetric-key-transact-sql)  
+ [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)  
   
- [Transact-sql&#41;인증서 &#40;만들기](/sql/t-sql/statements/create-certificate-transact-sql)  
+ [CREATE CERTIFICATE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
   
 ## <a name="see-also"></a>참고 항목  
  [sys. 인증서 &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)   
- [투명한 데이터 암호화 &#40;TDE&#41;](encryption/transparent-data-encryption.md)  
+ [투명한 데이터 암호화&#40;TDE&#41;](encryption/transparent-data-encryption.md)  
   

@@ -21,16 +21,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ed4abfe8914c7f6b1dc3e22de7a321419b8d9cee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63127118"
 ---
 # <a name="srv_pfield-extended-stored-procedure-api"></a>srv_pfield(확장 저장 프로시저 API)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하세요.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]대신 CLR 통합을 사용 하세요.  
   
  데이터베이스 연결에 대한 정보를 반환합니다.  
   
@@ -55,10 +55,10 @@ len
  *srvproc*  
  데이터베이스 연결을 식별하는 포인터입니다.  
   
- *field*  
+ *필드가*  
  반환할 연결 데이터를 지정합니다.  
   
-|값|반환 값|  
+|값|반환|  
 |-----------|-------------|  
 |SRV_APPLNAME|연결을 설정할 때 클라이언트가 제공한 애플리케이션 이름입니다.|  
 |SRV_BCPFLAG|플래그로, 클라이언트가 대량 복사 작업을 준비 중이면 TRUE이고, 그렇지 않으면 FALSE입니다.|  
@@ -73,17 +73,21 @@ len
 |SRV_PIPEHANDLE|연결된 클라이언트의 파이프 핸들이 포함된 문자열입니다. 클라이언트가 명명된 파이프를 사용하지 않는 네트워크에 연결된 경우에는 NULL입니다. 이 핸들을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows에서 유효한 파이프 핸들로 사용하려면 이 문자열을 정수로 변환하십시오.|  
 |SRV_RMTSERVER|클라이언트 프로세스가 로그인해 온 서버입니다. 클라이언트에서 로그인한 경우에는 이 값이 빈 문자열입니다.|  
 |SRV_ROWSENT|현재 결과 집합에 대해 *srvproc*를 통해 이미 전송된 행 수입니다.|  
-|SRV_SPID|*srvproc*의 서버 스레드 ID입니다. 확장 저장 프로시저의 경우 이 값은 **sys.sysprocesses**의 **kpid** 열과 같으며 시간이 지나면 변경될 수 있습니다.|  
+|SRV_SPID|
+  *srvproc*의 서버 스레드 ID입니다. 확장 저장 프로시저의 경우 이 값은 **sys.sysprocesses**의 **kpid** 열과 같으며 시간이 지나면 변경될 수 있습니다.|  
 |SRV_SPROC_CODEPAGE|서버에서 멀티바이트 데이터를 해석하는 데 사용하는 코드 페이지입니다.|  
-|SRV_STATUS|*srvproc*의 현재 상태로, 실행 중이거나 닫힌 상태입니다.|  
-|SRV_TYPE|*srvproc*의 연결 형식입니다. 서버가 반환되면 *srvproc*가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 연결된 것입니다. 클라이언트가 반환되면 *srvproc*가 DB-Library 또는 ODBC 클라이언트에서 연결된 것입니다.|  
+|SRV_STATUS|
+  *srvproc*의 현재 상태로, 실행 중이거나 닫힌 상태입니다.|  
+|SRV_TYPE|
+  *srvproc*의 연결 형식입니다. 서버가 반환되면 *srvproc*가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 연결된 것입니다. 클라이언트가 반환되면 *srvproc*가 DB-Library 또는 ODBC 클라이언트에서 연결된 것입니다.|  
 |SRV_USER|연결 사용자의 이름입니다.|  
 |||  
   
- *len*  
- 반환된 *field* 값의 길이가 포함된 **int** 변수에 대한 포인터입니다. *len*이 NULL이면 문자열 길이가 반환되지 않습니다.  
+ *길이가*  
+ 반환된 **field** 값의 길이가 포함된 *int* 변수에 대한 포인터입니다. 
+  *len*이 NULL이면 문자열 길이가 반환되지 않습니다.  
   
-## <a name="returns"></a>반환 값  
+## <a name="returns"></a>반환  
  SRV_PROC 구조에 지정된 필드에 대한 현재 값이 포함된 Null로 끝나는 문자열에 대한 포인터입니다. 필드가 비어 있으면 빈 문자열에 대한 올바른 포인터가 반환되고 *len*에 0이 포함됩니다. 필드가 알 수 없는 필드이면 NULL이 반환되고 *len*에 -1 값이 포함됩니다.  
   
 > [!IMPORTANT]  

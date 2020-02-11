@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2a2767de67eac1a0346f059e1a2c81a5698607dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900516"
 ---
 # <a name="derived-column-transformation"></a>파생 열 변환
@@ -45,7 +45,7 @@ ms.locfileid: "62900516"
 ## <a name="configuration-of-the-derived-column-transformation"></a>파생 열 변환 구성  
  다음과 같은 방법으로 파생 열 변환을 구성할 수 있습니다.  
   
--   변경될 각 입력 열이나 새 열에 대한 식을 제공합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 식](../../expressions/integration-services-ssis-expressions.md)을 참조하세요.  
+-   변경될 각 입력 열이나 새 열에 대한 식을 제공합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 식](../../expressions/integration-services-ssis-expressions.md)가 될 때까지 워크플로를 반복합니다.  
   
     > [!NOTE]  
     >  파생 열 변환에서 덮어쓰는 입력 열을 참조하는 식은 파생 값이 아닌 원래 열 값을 사용합니다.  
@@ -58,11 +58,12 @@ ms.locfileid: "62900516"
   
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- **파생 열 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용은 [Derived Column Transformation Editor](../../derived-column-transformation-editor.md)를 참조하세요.  
+ 
+  **파생 열 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용은 [Derived Column Transformation Editor](../../derived-column-transformation-editor.md)를 참조하세요.  
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [공용 속성](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [변환 사용자 지정 속성](transformation-custom-properties.md)  
   
@@ -77,6 +78,6 @@ ms.locfileid: "62900516"
 ## <a name="related-content"></a>관련 내용  
  social.technet.microsoft.com의 기술 문서 - [SSIS 식 예](https://go.microsoft.com/fwlink/?LinkId=220761)  
   
- 블로그 [SSIS를 사용 하 여 열 데이터를 분할 하는 방법을](https://microsoft-ssis.blogspot.com/2012/10/split-multi-value-column-into-multiple.html)합니다.  
+ 블로그, [SSIS를 사용 하 여 열 데이터를 분할 하는 방법](https://microsoft-ssis.blogspot.com/2012/10/split-multi-value-column-into-multiple.html)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 인터페이스 적합성 수준 | Microsoft Docs
+title: 인터페이스 규칙 수준 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,27 +16,27 @@ ms.assetid: 2c470e54-0600-4b2b-b1f3-9885cb28a01a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 185e68ed8d083e3ccfbab99369f6a778766a4c09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138908"
 ---
 # <a name="interface-conformance-levels"></a>인터페이스 적합성 수준
-사용할 수 있는 기능을 드라이버에서 응용 프로그램에 알리기 위해 평준화의 목적은입니다. 함수를 기반으로 평준화 체계를 충분히이 목표를 얻지 않습니다. Odbc 3. *x*, 드라이버는 소유 하는 기능을 기반으로 분류 됩니다. 기능을 지 원하는 함수를 지 원하는 포함 될 수 있습니다. 반환 된 정보 유형에 대 한 설명자 필드, 문 특성, "Y" 값을 지 원하는 포함할 수도 있습니다 **SQLGetInfo**등입니다.  
+평준화의 목적은 드라이버에서 사용할 수 있는 기능을 응용 프로그램에 알리는 것입니다. 함수를 기반으로 하는 평준화 체계는이 목표를 달성 하는 데 충분 하지 않습니다. ODBC 3. *x*, 드라이버는 소유 하 고 있는 기능을 기준으로 분류 됩니다. 기능 지원에는 함수 지원이 포함 될 수 있습니다. 설명자 필드, 문 특성, **SQLGetInfo**에서 반환 하는 정보 형식에 대 한 "Y" 값 등을 지원 하기도 합니다.  
   
- ODBC를 간소화 하기 위해 인터페이스 적합성 사양의 세 적합성 수준을 정의 합니다. 특정 규칙 수준을 달성 하기 위해 드라이버를 모든 해당 규칙 수준의 요구 사항을 충족 해야 합니다. 지정된 된 수준에 따라 모든 하위 수준으로 전체 준수를 의미합니다.  
+ 인터페이스 규칙의 지정을 단순화 하기 위해 ODBC는 세 가지 규칙 수준을 정의 합니다. 특정 규칙 수준을 충족 하려면 드라이버가 해당 규칙 수준의 요구 사항을 모두 충족 해야 합니다. 지정 된 수준에 대 한 규칙은 모든 하위 수준에 대 한 완전 한 준수를 의미 합니다.  
   
- 적합성 수준 항상 나누지 마세요 깔끔하게 ODBC 함수의 특정 목록에 대 한 지원 하지만 다음 섹션에 나열 된 지원 되는 기능을 지정 합니다. 기능을 지원 하기 위해 드라이버를 일부 또는 모든 형태의 특정 ODBC 함수 호출을 지원 해야 합니다 (자세한 내용은 [함수 적합성](../../../odbc/reference/develop-app/function-conformance.md)), 특정 특성을 설정 (참조 [특성 적합성 ](../../../odbc/reference/develop-app/attribute-conformance.md)), 및 특정 설명자 필드 (참조 [설명자 필드 적합성](../../../odbc/reference/develop-app/descriptor-field-conformance.md)).  
+ 규칙 수준은 항상 특정 ODBC 함수 목록에 대 한 지원으로 깔끔하게 분할 되지는 않지만 다음 섹션에 나열 된 지원 되는 기능을 지정 합니다. 기능에 대 한 지원을 제공 하려면 드라이버는 특정 ODBC 함수에 대 한 일부 또는 모든 형태의 호출을 지원 해야 합니다 (자세한 내용은 [함수 규칙](../../../odbc/reference/develop-app/function-conformance.md)을 참조). 특정 특성 설정 ( [특성 규칙](../../../odbc/reference/develop-app/attribute-conformance.md)참조) 및 특정 설명자 필드 ( [설명자 필드 규칙](../../../odbc/reference/develop-app/descriptor-field-conformance.md)참조).  
   
- 응용 프로그램은 데이터 원본에 연결 하 고 호출 하 여 운전 인터페이스 적합성 수준 검색 **SQLGetInfo** SQL_ODBC_INTERFACE_CONFORMANCE 옵션을 사용 합니다.  
+ 응용 프로그램은 데이터 원본에 연결 하 고 SQL_ODBC_INTERFACE_CONFORMANCE 옵션으로 **SQLGetInfo** 를 호출 하 여 드라이버의 인터페이스 규칙 수준을 검색 합니다.  
   
- 드라이버는 전체 규칙 클레임을 수준 이상의 기능을 구현 하는 무료입니다. 호출 하 여 이러한 모든 추가 기능을 검색 하는 응용 프로그램 **SQLGetFunctions** (결정할 ODBC 함수를 사용할 수 있는) 및 **SQLGetInfo** (다른 다양 한 ODBC 기능 쿼리)를 합니다.  
+ 드라이버는 완전 한 규칙을 준수 하는 수준 이상의 기능을 구현 하는 데 사용할 수 있습니다. 응용 프로그램은 **SQLGetFunctions** (odbc 함수를 결정 하기 위해)와 **SQLGetInfo** (다른 여러 odbc 기능을 쿼리 하기 위해)를 호출 하 여 이러한 추가 기능을 검색 합니다.  
   
- ODBC 인터페이스 적합성 수준 세 가지 Core, 수준 1 및 수준 2입니다.  
+ 핵심, 수준 1 및 수준 2의 세 가지 ODBC 인터페이스 규칙 수준이 있습니다.  
   
 > [!NOTE]
->  이러한 적합성 수준 ODBC 2에 있는 동일한 이름의 ODBC API 적합성 수준 보다 다양 한 요구 사항이 *.x*합니다. ODBC 2에 의해 모든 기능을 포함 하는 특히 *.x* API 규칙 Level 1 Core 인터페이스 적합성 수준 포함 됩니다. 결과적으로, 대부분의 ODBC 드라이버는 핵심 수준 인터페이스 적합성을 보고할 수 있습니다.  
+>  이러한 규칙 수준의 요구 사항은 ODBC 2.x에서 동일한 이름의 ODBC API 규칙 수준과*다릅니다.* 특히 ODBC*2.X API 규칙* 수준 1에서 암시 하는 모든 기능은 이제 핵심 인터페이스 규칙 수준의 일부입니다. 결과적으로 많은 ODBC 드라이버에서 핵심 수준 인터페이스 규칙을 보고할 수 있습니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

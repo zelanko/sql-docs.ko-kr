@@ -17,16 +17,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec38404a32751330d7fefd974fafe3d571d3b11b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074775"
 ---
 # <a name="linked-measure-groups"></a>연결된 측정값 그룹
   연결된 측정값 그룹은 동일한 데이터베이스 또는 다른 Analysis Services 데이터베이스 내에 있는 다른 큐브의 또 다른 측정값 그룹을 기반으로 합니다. 측정값 집합을 다시 사용하려는 경우 여러 큐브에서 연결된 측정값 그룹과 해당 데이터 값을 사용할 수 있습니다.  
   
- 원본 측정값 그룹과 연결된 측정값 그룹은 동일한 서버에서 실행되는 솔루션에 상주하는 것이 좋습니다. 향후 릴리스에서 사용 중단 예정 된 원격 서버의 측정값 그룹에 연결 (참조 [SQL Server 2014에서 Analysis Services 기능의 사용 되지 않는](../deprecated-analysis-services-features-in-sql-server-2014.md)).  
+ 원본 측정값 그룹과 연결된 측정값 그룹은 동일한 서버에서 실행되는 솔루션에 상주하는 것이 좋습니다. 원격 서버의 측정값 그룹에 연결 하는 기능은 이후 릴리스에서 사용 중단 될 예정입니다 ( [SQL Server 2014에서 사용 되지 않는 Analysis Services 기능](../deprecated-analysis-services-features-in-sql-server-2014.md)참조).  
   
 > [!IMPORTANT]  
 >  연결된 측정값 그룹은 읽기 전용입니다. 최근 변경 사항을 선택하려면 모든 연결된 측정값을 삭제하고 수정된 원본 개체를 기반으로 다시 만들어야 합니다. 따라서 이후에 측정값 그룹 수정이 필요할 경우에는 프로젝트 사이에 측정값 그룹을 복사하고 붙여넣는 방식을 고려해야 할 수 있습니다.  
@@ -51,7 +51,8 @@ ms.locfileid: "66074775"
  연결된 측정값 그룹에 포함된 측정값은 동일한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에서 검색한 연결된 차원과만 직접 구성이 가능합니다. 그러나 계산 멤버를 사용하면 연결된 측정값 그룹의 정보를 큐브 내의 연결되지 않은 다른 차원과 연결할 수 있습니다. 또한 참조 또는 다 대 다 관계 등의 간접 관계를 사용하여 연결되지 않은 차원을 연결된 측정값 그룹에 연결할 수 있습니다.  
   
 ## <a name="create-or-modify-a-linked-measure"></a>연결된 측정값 만들기 또는 수정  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 를 사용하여 연결된 측정값 그룹을 만들 수 있습니다.  
+ 
+  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 를 사용하여 연결된 측정값 그룹을 만들 수 있습니다.  
   
 1.  이제 원본 큐브에서 원래 측정값 그룹에 대한 수정을 모두 완료합니다. 이에 따라 나중에 이후 큐브에서 연결된 측정값 그룹을 다시 만들 필요가 없습니다. 연결된 개체의 이름을 바꿀 수 있지만 다른 속성을 변경할 수는 없습니다.  
   
@@ -63,14 +64,15 @@ ms.locfileid: "66074775"
   
 5.  다음 페이지에서 연결할 측정값 그룹 또는 차원을 선택합니다. 측정값 그룹 등의 큐브 개체 및 차원이 별도로 나열됩니다. 현재 큐브에 없는 개체만 사용할 수 있습니다.  
   
-6.  **마침** 을 클릭하여 연결된 개체를 만듭니다. 연결된 개체가 측정값 및 차원 창에서 링크 아이콘으로 표시되어 나타납니다.  
+6.  
+  **마침** 을 클릭하여 연결된 개체를 만듭니다. 연결된 개체가 측정값 및 차원 창에서 링크 아이콘으로 표시되어 나타납니다.  
   
 ## <a name="secure-a-linked-measure"></a>연결된 측정값 보안  
  연결이 정의된 다음에는 연결된 측정값 그룹의 측정값에 대한 액세스가 다른 측정값 그룹에 대한 액세스와 동일한 방법으로 관리됩니다. 연결된 개체가 역할 디자이너에서 연결되지 않은 해당 항목과 함께 나타납니다. 측정값 그룹의 보안 관리에 대한 자세한 내용은 [큐브 또는 모델 권한 부여&#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)를 참조하세요.  
   
  연결된 측정값 그룹을 정의하거나 사용하려면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 대한 Windows 서비스 계정이 원본 큐브 및 측정값 그룹에 대해 원본 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 대한 `ReadDefinition` 및 `Read` 액세스 권한이 있는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 역할에 속하거나 원본 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 대한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 관리자 역할에 속해야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [연결된 차원 정의](define-linked-dimensions.md)  
   
   

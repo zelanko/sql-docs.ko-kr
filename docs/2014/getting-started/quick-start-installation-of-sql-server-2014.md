@@ -15,10 +15,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8bd173abbb6ee355429d891a49f672bb0ac818d2
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74683618"
 ---
 # <a name="quick-start-installation-of-sql-server-2014"></a>SQL Server 2014 빠른 시작 설치
@@ -109,23 +109,23 @@ ms.locfileid: "74683618"
 |----------------------|-----------|  
 |하드웨어 및 소프트웨어 요구 사항, 운영 체제 지원, 네트워크 및 인터넷 고려 사항, 하드 디스크 공간 요구 사항을 검토합니다.|[설치 필수 구성 요소](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)|  
 |
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설치를 위한 보안 고려 사항을 검토합니다.|[보안 고려 사항](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)|  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설치를 위한 보안 고려 사항을 검토합니다.|[Security Considerations](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)|  
 |다른 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 버전에서 지원되는 기능의 세부 정보를 검토합니다.|[기능 및 버전](features-supported-by-the-editions-of-sql-server-2014.md)|  
 |
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 사용할 수 있는 여러 버전과 구성 요소 중에서 가장 적합한 항목을 결정합니다.|[SQL Server 2014의 버전 및 구성 요소](../sql-server/editions-and-components-of-sql-server-2016.md)|  
-|하드웨어 구성을 검토하고 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 설치를 준비하는 방법을 알아 봅니다.|[장애 조치 (Failover) 클러스터링을 설치 하기 전에](../sql-server/failover-clusters/install/before-installing-failover-clustering.md)|  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 사용할 수 있는 여러 버전과 구성 요소 중에서 가장 적합한 항목을 결정합니다.|[SQL Server 2014 버전 및 구성 요소](../sql-server/editions-and-components-of-sql-server-2016.md)|  
+|하드웨어 구성을 검토하고 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 설치를 준비하는 방법을 알아 봅니다.|[장애 조치(Failover) 클러스터링을 설치하기 전에](../sql-server/failover-clusters/install/before-installing-failover-clustering.md)|  
   
 ###  <a name="BKMK_Upgrading"></a>로 업그레이드[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
  기존 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 인스턴스를 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]로 업그레이드할 수 있습니다. 자세한 내용은 [SQL Server 2014로 업그레이드를](../database-engine/install-windows/upgrade-sql-server.md)참조 하세요. 
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설치 프로그램을 실행하여 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]로 업그레이드하기 전에 업그레이드 프로세스에 대한 다음 항목을 검토하십시오.  
   
-|설명|항목|  
+|Description|항목|  
 |-----------------|-----------|  
 |지원되는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]로의 업그레이드 경로에 대해 설명합니다.|[지원되는 업그레이드](../database-engine/install-windows/supported-version-and-edition-upgrades.md)|  
 |
-  [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 및 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 인스턴스를 분석하여 알려진 업그레이드 문제를 식별하는 도구인 업그레이드 관리자에 대해 설명합니다.|[업그레이드 관리자를 사용 하 여 업그레이드 준비](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)|  
+  [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 및 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 인스턴스를 분석하여 알려진 업그레이드 문제를 식별하는 도구인 업그레이드 관리자에 대해 설명합니다.|[업그레이드 관리자를 사용하여 업그레이드 준비](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)|  
 |여러 컴퓨터를 사용해 추적 데이터를 재생하여 중요한 작업을 효율적으로 시뮬레이션할 수 있는 도구인 Distributed Replay Utility에 대해 설명합니다. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 업그레이드 이전 및 이후에 테스트 서버에서 재생을 수행하면 성능 차이를 측정하고 업그레이드와의 애플리케이션 비호환성을 확인할 수 있습니다.|[Distributed Replay 유틸리티를 사용 하 여 업그레이드 준비](../../2014/sql-server/install/use-the-distributed-replay-utility-to-prepare-for-upgrades.md)|  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 업그레이드 이전 및 이후에 테스트 서버에서 재생을 수행하면 성능 차이를 측정하고 업그레이드와의 애플리케이션 비호환성을 확인할 수 있습니다.|[Distributed Replay Utility를 사용하여 업그레이드 준비](../../2014/sql-server/install/use-the-distributed-replay-utility-to-prepare-for-upgrades.md)|  
 |
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]로 업그레이드한 후 애플리케이션에 영향을 줄 수 있는 중요한 변경 내용을 보여 줍니다.|[이전 버전과의 호환성](backward-compatibility.md)|  
 |
@@ -138,7 +138,7 @@ ms.locfileid: "74683618"
  
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]의 다양한 설치 시나리오에 대한 정보는 다음 항목을 검토하십시오.  
   
-|설명|항목|  
+|Description|항목|  
 |-----------------|-----------|  
 |
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]의 다양한 구성 요소 설치에 대한 항목 및 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 설치에 대한 절차 항목 링크를 제공합니다.|[SQL Server 2014 설치](../database-engine/install-windows/install-sql-server.md)|  
@@ -146,11 +146,11 @@ ms.locfileid: "74683618"
 |기존 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 인스턴스에 개별 기능을 추가하려면 이 항목을 검토하십시오|[SQL Server 2014 &#40;설치 프로그램의 인스턴스에 기능을 추가&#41;](../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md)|  
 |새 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스를 만들려면 이 항목을 검토하십시오.|[설치 &#40;SQL Server 장애 조치 (Failover) 클러스터를 새로 만듭니다&#41;](../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |이 항목에서는 기존 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스에서 노드를 관리합니다.|[SQL Server 장애 조치 (Failover) 클러스터에서 노드 추가 또는 제거 &#40;설치&#41;](../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
-|이 항목에서는 장애 조치(Failover) 클러스터에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 클라이언트 도구를 설치합니다.|[SQL Server 장애 조치 (Failover) 클러스터에 클라이언트 도구 설치](../sql-server/failover-clusters/install/install-client-tools-on-a-sql-server-failover-cluster.md)|  
+|이 항목에서는 장애 조치(Failover) 클러스터에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 클라이언트 도구를 설치합니다.|[SQL Server 장애 조치 클러스터에 클라이언트 도구 설치](../sql-server/failover-clusters/install/install-client-tools-on-a-sql-server-failover-cluster.md)|  
 |SQL 검색 보고서 사용 방법을 검토하여 컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 버전 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 기능을 확인합니다.|[SQL Server 설치 유효성 검사](../database-engine/install-windows/validate-a-sql-server-installation.md)|  
 |설치 마법사, 명령 프롬프트, 구성 파일 사용 및 SysPrep 사용 등의 방법으로 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]를 설치하는 절차 항목에 대한 링크를 제공합니다.|[설치 방법 도움말 항목](../../2014/sql-server/install/installation-how-to-topics.md)|  
   
-## <a name="related-content"></a>관련 콘텐츠  
+## <a name="related-content"></a>관련 내용  
  이 섹션에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 및 제거에 대해 설명합니다.  
   
 ###  <a name="BKMK_Configure"></a>구성은[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
@@ -158,18 +158,18 @@ ms.locfileid: "74683618"
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설치를 완료하면 그래픽 및 명령 프롬프트 유틸리티를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 추가로 구성할 수 있습니다. 
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 처음 구성할 때는 다음 항목을 참조하십시오.  
   
-|설명|항목|  
+|Description|항목|  
 |-----------------|-----------|  
-|이 항목에 있는 정보를 사용하여 방화벽의 포트 차단을 해제하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 또는 SharePoint용 PowerPivot에 대한 액세스를 허용하도록 결정할 수 있습니다. 이 항목에서 제공하는 단계를 수행하여 포트와 방화벽 설정을 모두 구성할 수 있습니다.|[Analysis Services 액세스를 허용 하도록 Windows 방화벽 구성](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|  
-|이 항목에서는 방화벽 구성의 개요를 제공하고 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 관리자에게 유용한 정보를 요약하여 설명합니다.|[SQL Server 액세스를 허용 하도록 Windows 방화벽 구성](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
-|이 항목에서는 다중 홈 환경에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 네트워크 연결을 제공하기 위해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 와 고급 보안이 포함된 Windows 방화벽을 구성하는 방법에 대해 설명합니다.|[SQL Server 액세스를 위한 다중 홈 컴퓨터 구성](../../2014/sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|  
+|이 항목에 있는 정보를 사용하여 방화벽의 포트 차단을 해제하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 또는 SharePoint용 PowerPivot에 대한 액세스를 허용하도록 결정할 수 있습니다. 이 항목에서 제공하는 단계를 수행하여 포트와 방화벽 설정을 모두 구성할 수 있습니다.|[Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|  
+|이 항목에서는 방화벽 구성의 개요를 제공하고 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 관리자에게 유용한 정보를 요약하여 설명합니다.|[SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
+|이 항목에서는 다중 홈 환경에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 네트워크 연결을 제공하기 위해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 와 고급 보안이 포함된 Windows 방화벽을 구성하는 방법에 대해 설명합니다.|[SQL Server 액세스를 허용하도록 다중 홈 컴퓨터 구성](../../2014/sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|  
   
 ###  <a name="BKMK_Uninstalling"></a>제거[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
  다음 항목에서는 독립 실행형 및 장애 조치(failover) 클러스터형 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 수동으로 제거하는 방법에 대해 설명합니다.  
   
-|설명|항목|  
+|Description|항목|  
 |-----------------|-----------|  
-|이 항목에서는 독립 실행형 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스를 수동으로 제거하는 방법에 대해 설명합니다.|[2014 SQL Server 제거](../sql-server/install/uninstall-sql-server.md)|  
+|이 항목에서는 독립 실행형 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스를 수동으로 제거하는 방법에 대해 설명합니다.|[SQL Server 2014 제거](../sql-server/install/uninstall-sql-server.md)|  
 |이 항목에서는 장애 조치(failover) 클러스터 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 제거하는 방법에 대해 설명합니다.|[SQL Server 장애 조치 (Failover) 클러스터 인스턴스 제거 &#40;설치&#41;](../sql-server/failover-clusters/install/remove-a-sql-server-failover-cluster-instance-setup.md)|  
 |이 항목에서는 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)]를 제거한 후 DQS([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]) 개체를 수동으로 제거하거나 DQS 서버만 제거하는 방법에 대해 자세히 설명합니다.|[Data Quality 서버 개체 제거](../../2014/sql-server/install/remove-data-quality-server-objects.md)|  
   

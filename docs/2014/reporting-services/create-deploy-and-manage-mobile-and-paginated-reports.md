@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1a4d9983da355c244e5d26873f92b4c43159a0e1
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74685443"
 ---
 # <a name="reporting-services-ssrs"></a>Reporting Services(SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "74685443"
  다른 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 요소, 도구 및 리소스에 대한 자세한 내용은 [SQL Server 온라인 설명서](../2014-toc/index.yml)를 참조하십시오.  
   
  **영역별 내용 찾아보기**  
- [보고서 서버 Reporting Services](../../2014/reporting-services/reporting-services-report-server.md) ![폴더 아이콘](media/hlp-16folder.gif "F이전 아이콘 ")  
+ [보고서 서버 Reporting Services](../../2014/reporting-services/reporting-services-report-server.md) ![폴더 아이콘](media/hlp-16folder.gif "폴더 아이콘")  
   
  ![폴더 아이콘](media/hlp-16folder.gif "폴더 아이콘") [REPORTING SERVICES 보고서 &#40;SSRS&#41;](reports/reporting-services-reports-ssrs.md)  
   

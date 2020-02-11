@@ -16,13 +16,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fa08a7f84cd413f1212cc73d4242b5da70fd33eb
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73882285"
 ---
-# <a name="delete-a-publication"></a>Delete a Publication
+# <a name="delete-a-publication"></a>게시 삭제
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 게시를 삭제하는 방법에 대해 설명합니다.  
   
  **항목 내용**  
@@ -58,10 +58,10 @@ ms.locfileid: "73882285"
   
     -   단일 게시를 삭제하려면 게시 데이터베이스의 게시자에서 [sp_droppublication](/sql/relational-databases/system-stored-procedures/sp-droppublication-transact-sql) 을 실행합니다.  
   
-    -   모든 게시를 삭제하고 게시된 데이터베이스에서 모든 복제 개체를 제거하려면 게시자에서 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 을 실행합니다. **\@형식**에 `tran` 값을 지정 합니다. (옵션) 배포자에 액세스할 수 없거나 데이터베이스의 상태가 주의 대상 또는 오프라인인 경우force**에 값 \@1**을 지정합니다. (옵션) 게시 데이터베이스에서 **sp_removedbreplication\@이 실행되지 않은 경우** [dbname](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql)에 데이터베이스 이름을 지정합니다.  
+    -   모든 게시를 삭제하고 게시된 데이터베이스에서 모든 복제 개체를 제거하려면 게시자에서 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 을 실행합니다. `tran` ** \@형식**에 값을 지정 합니다. (옵션) 배포자에 액세스할 수 없거나 데이터베이스의 상태가 주의 대상 또는 오프라인인 경우 **\@force**에 값 **1**을 지정합니다. (옵션) 게시 데이터베이스에서 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql)이 실행되지 않은 경우 **\@dbname**에 데이터베이스 이름을 지정합니다.  
   
         > [!NOTE]  
-        >  force**에 값 \@1**을 지정하면 데이터베이스에 복제 관련 게시 개체가 남을 수 있습니다.  
+        >  **\@force**에 값 **1**을 지정하면 데이터베이스에 복제 관련 게시 개체가 남을 수 있습니다.  
   
 2.  (선택 사항) 이 데이터베이스에 다른 게시가 없으면 [sp_replicationdboption&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql)을 실행하여 스냅샷 또는 트랜잭션 복제를 통해 현재 데이터베이스를 게시할 수 없도록 해제합니다.  
   
@@ -73,16 +73,16 @@ ms.locfileid: "73882285"
   
     -   단일 게시를 삭제하려면 게시 데이터베이스의 게시자에서 [sp_dropmergepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql)을 실행합니다.  
   
-    -   모든 게시를 삭제하고 게시된 데이터베이스에서 모든 복제 개체를 제거하려면 게시자에서 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 을 실행합니다. **\@형식**에 `merge` 값을 지정 합니다. (옵션) 배포자에 액세스할 수 없거나 데이터베이스의 상태가 주의 대상 또는 오프라인인 경우force**에 값 \@1**을 지정합니다. (옵션) 게시 데이터베이스에서 **sp_removedbreplication\@이 실행되지 않은 경우** [dbname](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql)에 데이터베이스 이름을 지정합니다.  
+    -   모든 게시를 삭제하고 게시된 데이터베이스에서 모든 복제 개체를 제거하려면 게시자에서 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 을 실행합니다. `merge` ** \@형식**에 값을 지정 합니다. (옵션) 배포자에 액세스할 수 없거나 데이터베이스의 상태가 주의 대상 또는 오프라인인 경우 **\@force**에 값 **1**을 지정합니다. (옵션) 게시 데이터베이스에서 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql)이 실행되지 않은 경우 **\@dbname**에 데이터베이스 이름을 지정합니다.  
   
         > [!NOTE]  
-        >  force**에 값 \@1**을 지정하면 데이터베이스에 복제 관련 게시 개체가 남을 수 있습니다.  
+        >  **\@force**에 값 **1**을 지정하면 데이터베이스에 복제 관련 게시 개체가 남을 수 있습니다.  
   
 2.  (선택 사항) 이 데이터베이스에 다른 게시가 없으면 [sp_replicationdboption&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql)을 실행하여 병합 복제를 통해 현재 데이터베이스를 게시할 수 없도록 해제합니다.  
   
 3.  (선택 사항) 구독 데이터베이스의 구독자에서 [sp_mergesubscription_cleanup&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql)을 실행하여 구독 데이터베이스에 남은 모든 복제 메타데이터를 제거합니다.  
   
-###  <a name="TsqlExample"></a> 예제(Transact-SQL)  
+###  <a name="TsqlExample"></a> 예(Transact-SQL)  
  다음 예에서는 트랜잭션 게시를 제거하고 데이터베이스에 대한 트랜잭션 게시를 해제하는 방법을 보여 줍니다. 이 예에서는 모든 구독이 이전에 제거되었다고 가정합니다. 자세한 내용은 [Delete a Pull Subscription](../delete-a-pull-subscription.md) 또는 [Delete a Push Subscription](../delete-a-push-subscription.md)를 참조하세요.  
   
  [!code-sql[HowTo#sp_droppublication](../../../snippets/tsql/SQL15/replication/howto/tsql/droptranpub.sql#sp_droppublication)]  
@@ -112,7 +112,8 @@ ms.locfileid: "73882285"
   
     2.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출합니다. 이 메서드가 `false`를 반환할 경우 데이터베이스가 있는지 확인합니다.  
   
-    3.  <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A> 속성을 `false`으로 설정합니다.  
+    3.  
+  <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A> 속성을 `false`로 설정합니다.  
   
     4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 메서드를 호출합니다.  
   
@@ -136,7 +137,8 @@ ms.locfileid: "73882285"
   
     2.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출합니다. 이 메서드가 `false`를 반환하면 데이터베이스가 있는지 확인합니다.  
   
-    3.  <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> 속성을 `false`으로 설정합니다.  
+    3.  
+  <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> 속성을 `false`로 설정합니다.  
   
     4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 메서드를 호출합니다.  
   

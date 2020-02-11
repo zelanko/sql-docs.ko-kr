@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 8ea941e45f5125beed0820c5d5242b0f86073f76
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401173"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>병렬 데이터 웨어하우스의 dwloader 명령줄 로더
@@ -222,7 +222,7 @@ ASCII 파일의 경우에는 구분 기호를 연속으로 배치 하 여 Null�
 **-t** *field_delimiter*  
 행의 각 필드 (열)에 대 한 구분 기호입니다. 필드 구분 기호는 이러한 ASCII 이스케이프 문자 또는 ASCII 16 진수 값 중 하나 이상입니다.  
   
-|이름|Escape Character|16 진수 문자|  
+|속성|Escape Character|16 진수 문자|  
 |--------|--------------------|-----------------|  
 |탭|\t|0x09|  
 |CR (캐리지 리턴)|\r|0x0d|  
@@ -490,7 +490,7 @@ CU 7.4 update에서 사용할 수 있으며 로드할 수 있는 최대 행 길�
 ## <a name="return-code-values"></a>반환 코드 값  
 0 (성공) 또는 기타 정수 값 (오류)  
   
-명령 창이 나 배치 파일에서를 사용 `errorlevel` 하 여 반환 코드를 표시 합니다. 예:  
+명령 창이 나 배치 파일에서를 사용 `errorlevel` 하 여 반환 코드를 표시 합니다. 다음은 그 예입니다.  
   
 ```  
 dwloader  
@@ -501,7 +501,7 @@ if %errorlevel%==0 echo Success
   
 PowerShell을 사용 하는 `$LastExitCode`경우를 사용 합니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
 대상 테이블에서 로드 권한 및 해당 사용 권한 (INSERT, UPDATE, DELETE)이 필요 합니다. 준비 데이터베이스에 대 한 CREATE 권한 (임시 테이블을 만드는 경우)이 필요 합니다. 준비 데이터베이스를 사용 하지 않는 경우 대상 데이터베이스에 대 한 CREATE 권한이 필요 합니다. 
 
 <!-- MISSING LINK
@@ -554,14 +554,14 @@ For the maximum number of loads per appliance, see [Minimum and Maximum Values](
   
 |테이블 형식|다중 트랜잭션<br />모드 (-m)|테이블이 비어 있음|동시성이 지원 됨|로깅|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
+|힙|yes|yes|yes|최소|  
+|힙|yes|예|yes|최소|  
+|힙|예|yes|예|최소|  
 |힙|예|예|예|최소|  
-|힙|예|아니요|예|최소|  
-|힙|아니요|예|아니요|최소|  
-|힙|아니요|아니요|아니요|최소|  
-|Cl.exe|예|예|아니요|최소|  
-|Cl.exe|예|아니요|예|전체|  
-|Cl.exe|아니요|예|아니요|최소|  
-|Cl.exe|아니요|아니요|예|전체|  
+|Cl.exe|yes|yes|예|최소|  
+|Cl.exe|yes|예|yes|전체|  
+|Cl.exe|예|yes|예|최소|  
+|Cl.exe|예|예|yes|전체|  
   
 위의 표에서는 추가 모드를 힙 또는 CI (클러스터형 인덱스) 테이블로 로드 하 여 다중 트랜잭션 플래그를 사용 하거나 사용 하지 않고 빈 테이블이 나 비어 있지 않은 테이블에 로드 하는 **dwloader** 를 보여 줍니다. 이러한 각 부하 조합의 잠금 및 로깅 동작이 표에 표시 됩니다. 예를 들어, 추가 모드를 사용 하 여 다중 트랜잭션 모드를 사용 하지 않는 클러스터형 인덱스에 추가 모드를 로드 하 고 빈 테이블로 로드 하는 경우 PDW는 테이블에 대 한 배타적 잠금을 만들고 로깅은 최소화 합니다. 즉, 고객은 두 번째 단계와 쿼리를 빈 테이블로 동시에 로드할 수 없습니다. 그러나 동일한 구성을 사용 하 여 비어 있지 않은 테이블에 로드 하는 경우 PDW는 테이블에 대해 배타 잠금을 실행 하지 않으며 동시성이 가능 합니다. 그러나 전체 로깅이 발생 하 여 프로세스가 느려집니다.  
   

@@ -17,10 +17,10 @@ ms.assetid: cc58e1f2-2863-4034-ba21-aa9497320b07
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 834c41b00945d9de09cf9964ee8aa2ca6e63c414
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660682"
 ---
 # <a name="clientsettings-class"></a>ClientSettings 클래스
@@ -29,7 +29,7 @@ ms.locfileid: "73660682"
   
  이 클래스를 사용하여 클라이언트를 프로그래밍 방식으로 관리할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [클라이언트 프로토콜 구성](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

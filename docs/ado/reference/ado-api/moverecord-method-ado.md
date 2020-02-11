@@ -17,14 +17,14 @@ ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 157e38c2c9c23ff8f7e92af40385b0962c6dcb70
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918070"
 ---
 # <a name="moverecord-method-ado"></a>MoveRecord 메서드(ADO)
-이동 하 여 표시 되는 엔터티에 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 다른 위치에 있습니다.  
+[레코드로](../../../ado/reference/ado-api/record-object-ado.md) 표시 되는 엔터티를 다른 위치로 이동 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,45 +35,45 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
   
 #### <a name="parameters"></a>매개 변수  
  *원본*  
- (선택 사항) A **문자열** 식별 하는 URL을 포함 하는 값을 **레코드** 이동 해야 합니다. 하는 경우 *소스* 생략 되거나 빈 문자열인 경우이 나타내는 개체를 지정 **레코드** 이동 됩니다. 예를 들어 경우는 **레코드** 파일을 파일의 내용 나타내는 지정 된 위치로 이동 *대상*합니다.  
+ (선택 사항) 이동할 **레코드** 를 식별 하는 URL을 포함 하는 **문자열** 값입니다. *Source* 를 생략 하거나 빈 문자열을 지정 하면이 **레코드가** 나타내는 개체가 이동 합니다. 예를 들어 **레코드가** 파일을 나타내는 경우 파일의 내용이 *Destination*에서 지정한 위치로 이동 합니다.  
   
  *대상*  
- (선택 사항) A **문자열** 위치를 지정 하는 URL이 포함 된 값 위치 *원본* 이동 됩니다.  
+ (선택 사항) *소스* 를 이동할 위치를 지정 하는 URL을 포함 하는 **문자열** 값입니다.  
   
- *UserName*  
- (선택 사항) A **문자열** 필요한 경우에 대 한 액세스 권한을 부여 하는 사용자 ID를 포함 하는 값 *대상*합니다.  
+ *이름*  
+ (선택 사항) 필요한 경우 *대상*에 대 한 액세스 권한을 부여 하는 사용자 ID를 포함 하는 **문자열** 값입니다.  
   
  *암호*  
- (선택 사항) A **문자열** 필요한 경우를 확인 하는 암호가 포함 된 *UserName*합니다.  
+ (선택 사항) 필요한 경우 *사용자 이름을*확인 하는 암호를 포함 하는 **문자열** 입니다.  
   
  *옵션*  
- (선택 사항) A [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md) 값을 지정 합니다 **메서드의 동작**합니다. 이 메서드의 동작을 지정 합니다.  
+ (선택 사항) 기본값이 **Admoveunspecified 되지 않은** [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md) 값입니다. 이 메서드의 동작을 지정 합니다.  
   
- *비동기*  
- (선택 사항) A **부울** 값을 때 **True**, 지정이 작업은 비동기 여야 합니다.  
+ *동기화*  
+ (선택 사항) **True**인 경우이 작업이 비동기가 되도록 지정 하는 **부울** 값입니다.  
   
-## <a name="return-value"></a>반환 값  
- **문자열** 값입니다. 일반적으로 값 *대상* 반환 됩니다. 그러나 공급자에 따라 다릅니다는 정확한 값을 반환 합니다.  
+## <a name="return-value"></a>Return Value  
+ **문자열** 값입니다. 일반적으로 *Destination* 값이 반환 됩니다. 그러나 반환 되는 정확한 값은 공급자에 따라 다릅니다.  
   
 ## <a name="remarks"></a>설명  
- 값 *원본* 하 고 *대상* 아니어야 고, 그렇지 않으면 동일 하면 런타임 오류가 발생 합니다. 최소한 서버, 경로 및 리소스 이름이 달라 야 합니다.  
+ *원본* 및 *대상* 의 값은 달라 야 합니다. 그렇지 않으면 런타임 오류가 발생 합니다. 적어도 서버, 경로 및 리소스 이름은 서로 달라 야 합니다.  
   
- 이 메서드를 인터넷 게시 공급자를 사용 하 여 파일에 대 한 모든 하이퍼텍스트 링크를 여 달리 지정 하지 않으면 이동 되는 파일을 업데이트 *옵션*합니다. 이 메서드가 실패 하는 경우 *대상* 하지 않으면 (예를 들어, 파일 또는 디렉터리), 기존 개체를 식별 **adMoveOverWrite** 지정 됩니다.  
-  
-> [!NOTE]
->  사용 된 **adMoveOverWrite** 옵션을 신중 하 게 합니다. 예를 들어, 디렉터리에 파일을 이동 하는 경우이 옵션을 지정 디렉터리를 삭제 되며 파일을 바꿉니다.  
-  
- 특정 한 특성을 **레코드** 개체를 [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md) 속성을이 작업이 완료 된 후 업데이트 되지 것입니다. 새로 고침 합니다 **레코드** 닫아 개체의 속성을 **레코드**, 파일 또는 디렉터리가 이동 된 위치의 URL을 사용 하 여 닫았다가 다시 열면 다음.  
-  
- 이 경우 **레코드** 에서 가져온를 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md), 이동할된 파일 또는 디렉터리의 새 위치에 즉시 반영 되지 것입니다는 **레코드 집합**합니다. 새로 고침 합니다 **레코드 집합** 를 닫았다가 다시 열면 됩니다.  
+ 인터넷 게시 공급자를 사용 하 여 이동한 파일의 경우이 메서드는 *옵션*으로 지정 하지 않는 한 이동 중인 파일의 모든 하이퍼텍스트 링크를 업데이트 합니다. **Admoveoverwrite** 가 지정 되지 않은 경우 *대상* 에서 기존 개체 (예: 파일 또는 디렉터리)를 식별 하는 경우이 메서드는 실패 합니다.  
   
 > [!NOTE]
->  Http 체계를 사용 하 여 Url은 자동으로 호출 합니다 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)합니다. 자세한 내용은 [절대 및 상대 Url](../../../ado/guide/data/absolute-and-relative-urls.md)합니다.  
+>  **Admoveoverwrite** 옵션을 신중 하 게 사용 합니다. 예를 들어 파일을 디렉터리로 이동할 때이 옵션을 지정 하면 디렉터리가 삭제 되 고 파일로 바뀝니다.  
+  
+ [Parenturl](../../../ado/reference/ado-api/parenturl-property-ado.md) 속성과 같은 **Record** 개체의 특정 특성은이 작업이 완료 된 후 업데이트 되지 않습니다. **레코드**를 닫은 다음 파일 또는 디렉터리가 이동 된 위치의 URL을 사용 하 여 **레코드** 개체의 속성을 다시 엽니다.  
+  
+ 레코드 [집합](../../../ado/reference/ado-api/recordset-object-ado.md)에서이 **레코드** 를 가져온 경우 이동한 파일이 나 디렉터리의 새 위치가 **레코드 집합**에 즉시 반영 되지 않습니다. 레코드 집합을 닫았다가 다시 열어 **레코드 집합** 을 새로 고칩니다.  
+  
+> [!NOTE]
+>  Http 체계를 사용 하는 Url은 자동으로 [Microsoft OLE DB 공급자에 게 Internet 게시용](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)으로 호출 됩니다. 자세한 내용은 [절대 및 상대 url](../../../ado/guide/data/absolute-and-relative-urls.md)을 참조 하세요.  
   
 ## <a name="applies-to"></a>적용 대상  
  [레코드 개체(ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Move 메서드 (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
  [MoveFirst, MoveLast, MoveNext 및 MovePrevious 메서드 (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [MoveFirst, MoveLast, MoveNext 및 MovePrevious 메서드(RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)

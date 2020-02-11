@@ -14,21 +14,24 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8fc10bd6ebb44e0f8b45edb3c669e8216cc313b1
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74095563"
 ---
 # <a name="creating-altering-and-removing-user-defined-functions"></a>사용자 정의 함수 생성, 변경 및 제거
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
-  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> 개체는 사용자가 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 사용자 정의 함수를 프로그래밍 방식으로 관리할 수 있도록 하는 기능을 제공 합니다. 사용자 정의 함수는 입력 및 출력 매개 변수를 지원하며 테이블 열에 대한 직접 참조도 지원합니다.  
+  개체 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> 는 사용자가에서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]사용자 정의 함수를 프로그래밍 방식으로 관리할 수 있도록 하는 기능을 제공 합니다. 사용자 정의 함수는 입력 및 출력 매개 변수를 지원하며 테이블 열에 대한 직접 참조도 지원합니다.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 저장 프로시저, 사용자 정의 함수, 트리거 및 사용자 정의 데이터 형식에서 어셈블리를 사용할 수 있으려면 먼저 데이터베이스에 어셈블리를 등록해야 합니다. SMO는 <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> 개체에서 이 기능을 지원합니다.  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 저장 프로시저, 사용자 정의 함수, 트리거 및 사용자 정의 데이터 형식에서 어셈블리를 사용할 수 있으려면 먼저 데이터베이스에 어셈블리를 등록해야 합니다. SMO는 <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> 개체에서 이 기능을 지원합니다.  
   
- <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> 개체는 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.AssemblyName%2A>, <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.ClassName%2A> 및 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.MethodName%2A> 속성으로 .NET 어셈블리를 참조합니다.  
+ 
+  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> 개체는 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.AssemblyName%2A>, <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.ClassName%2A> 및 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.MethodName%2A> 속성으로 .NET 어셈블리를 참조합니다.  
   
- <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> 개체가 .NET 어셈블리를 참조하는 경우 <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> 개체를 만들고 이를 <xref:Microsoft.SqlServer.Management.Smo.SqlAssemblyCollection> 개체에 속하는 <xref:Microsoft.SqlServer.Management.Smo.Database> 개체에 추가하여 어셈블리를 등록해야 합니다.  
+ 
+  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> 개체가 .NET 어셈블리를 참조하는 경우 <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> 개체를 만들고 이를 <xref:Microsoft.SqlServer.Management.Smo.SqlAssemblyCollection> 개체에 속하는 <xref:Microsoft.SqlServer.Management.Smo.Database> 개체에 추가하여 어셈블리를 등록해야 합니다.  
   
 ## <a name="example"></a>예제  
  제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio .net에서 Visual C&#35; SMO 프로젝트 만들기](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  
@@ -65,7 +68,7 @@ udf.Drop()
 ``` 
   
 ## <a name="creating-a-scalar-user-defined-function-in-visual-c"></a>Visual C#에서 스칼라 사용자 정의 함수 만들기  
- 이 코드 예제는 <xref:System.DateTime>에서 입력 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 개체 매개 변수와 정수 반환 형식을 사용하는 스칼라 사용자 정의 함수를 만들고 제거하는 방법을 보여 줍니다. 사용자 정의 함수는 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 데이터베이스에 만들어집니다. 이 예에서는 사용자 정의 함수를 만듭니다. `ISOweek`입니다. 이 함수는 날짜 인수를 사용하여 ISO 주 번호를 계산합니다. 이 함수가 계산을 제대로 수행하기 위해서는 함수를 호출하기 전에 데이터베이스 `DATEFIRST` 옵션을 `1` 로 설정해야 합니다.  
+ 이 코드 예제는 <xref:System.DateTime>에서 입력 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 개체 매개 변수와 정수 반환 형식을 사용하는 스칼라 사용자 정의 함수를 만들고 제거하는 방법을 보여 줍니다. 사용자 정의 함수는 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 데이터베이스에 만들어집니다. 이 예에서는 사용자 정의 함수를 만듭니다. `ISOweek`. 이 함수는 날짜 인수를 사용하여 ISO 주 번호를 계산합니다. 이 함수가 계산을 제대로 수행하기 위해서는 함수를 호출하기 전에 데이터베이스 `DATEFIRST` 옵션을 `1` 로 설정해야 합니다.  
   
 ```csharp  
 {  
@@ -101,7 +104,7 @@ udf.Drop()
 ```  
   
 ## <a name="creating-a-scalar-user-defined-function-in-powershell"></a>PowerShell에서 스칼라 사용자 정의 함수 만들기  
- 이 코드 예제는 <xref:System.DateTime>에서 입력 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 개체 매개 변수와 정수 반환 형식을 사용하는 스칼라 사용자 정의 함수를 만들고 제거하는 방법을 보여 줍니다. 사용자 정의 함수는 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 데이터베이스에 만들어집니다. 이 예에서는 사용자 정의 함수를 만듭니다. `ISOweek`입니다. 이 함수는 날짜 인수를 사용하여 ISO 주 번호를 계산합니다. 이 함수가 계산을 제대로 수행하기 위해서는 함수를 호출하기 전에 데이터베이스 `DATEFIRST` 옵션을 `1` 로 설정해야 합니다.  
+ 이 코드 예제는 <xref:System.DateTime>에서 입력 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 개체 매개 변수와 정수 반환 형식을 사용하는 스칼라 사용자 정의 함수를 만들고 제거하는 방법을 보여 줍니다. 사용자 정의 함수는 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 데이터베이스에 만들어집니다. 이 예에서는 사용자 정의 함수를 만듭니다. `ISOweek`. 이 함수는 날짜 인수를 사용하여 ISO 주 번호를 계산합니다. 이 함수가 계산을 제대로 수행하기 위해서는 함수를 호출하기 전에 데이터베이스 `DATEFIRST` 옵션을 `1` 로 설정해야 합니다.  
   
 ```powershell   
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
@@ -137,7 +140,7 @@ $udf.Create()
 $udf.Drop()  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction>  
   
   

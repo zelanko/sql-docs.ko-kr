@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5067793ae0f5533a889973e18f7b300914df9092
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892110"
 ---
 # <a name="operators-mdx-syntax"></a>연산자(MDX 구문)
@@ -30,7 +30,7 @@ ms.locfileid: "68892110"
   
  MDX는 다음 테이블에 나열된 연산자를 지원합니다.  
   
-|원하는 연산|이후|  
+|원하는 연산|사용|  
 |---------------------------------------|---------|  
 |변수에 값을 할당하거나 결과 집합 열을 별칭과 연결합니다.|[대입 연산자](../mdx/assignment-operators.md)|  
 |더하기, 빼기, 곱하기, 나누기 연산을 수행합니다.|[산술 연산자](../mdx/arithmetic-operators.md)|  
@@ -46,7 +46,7 @@ ms.locfileid: "68892110"
  여러 연산자를 사용할 때는 MDX가 연산자를 계산하는 순서가 중요합니다. 마찬가지로 연산자 사용자가 해당 연산자로 계산하려면 먼저 데이터 형식을 다른 데이터 형식으로 변환해야 하도록 요구할 수도 있습니다.  
   
 ## <a name="evaluating-complex-expressions"></a>복잡한 식 계산  
- 연산자를 사용하여 작은 식 여러 개를 결합한 식을 만들 수 있습니다. 이러한 복잡 한 식에서 MDX는에 사용 되 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]는 연산자 우선 순위 정의에 따라 연산자를 순서 대로 계산 합니다. MDX는 높은 우선 순위의 연산자를 먼저 수행한 다음 낮은 우선 순위의 연산자를 수행합니다.  
+ 연산자를 사용하여 작은 식 여러 개를 결합한 식을 만들 수 있습니다. 이러한 복잡 한 식에서 MDX는에 사용 되는 연산자 우선 순위 정의에 따라 연산자를 순서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]대로 계산 합니다. MDX는 높은 우선 순위의 연산자를 먼저 수행한 다음 낮은 우선 순위의 연산자를 수행합니다.  
   
 ### <a name="understanding-operator-precedence"></a>연산자 우선 순위의 이해  
  다음 목록은 내림차순으로 연산자 우선 순위를 표시한 것입니다. 같은 줄에 있는 연산자의 우선 순위는 같고 괄호로 묶인 경우가 아니라면 왼쪽에서 오른쪽으로 계산됩니다.  
@@ -77,12 +77,12 @@ ms.locfileid: "68892110"
   
 -   또는  
   
- MDX의 연산자에 대 한 자세한 내용은 mdx [Operator Reference &#40;mdx&#41;](../mdx/mdx-operator-reference-mdx.md)를 참조 하십시오.  
+ MDX의 연산자에 대 한 자세한 내용은 mdx [Operator Reference &#40;mdx&#41;](../mdx/mdx-operator-reference-mdx.md)를 참조 하세요.  
   
 ### <a name="determining-results"></a>결과 확정  
  간단한 식들을 결합하여 복잡한 식을 구성하는 경우 연산자에 대한 규칙을 데이터 형식 우선 순위에 대한 규칙과 결합하면 결과 값의 데이터 형식이 결정됩니다.  
   
- 결과가 문자 또는 유니코드 값인 경우에는 연산자에 대한 규칙을 데이터 정렬 우선 순위에 대한 규칙과 결합하면 결과의 데이터 정렬이 결정됩니다. 데이터 정렬에 대 한 자세한 내용은 [Analysis Services &#40;&#41;언어 및 데이터 정렬](https://docs.microsoft.com/analysis-services/languages-and-collations-analysis-services)을 참조 하세요.  
+ 결과가 문자 또는 유니코드 값인 경우에는 연산자에 대한 규칙을 데이터 정렬 우선 순위에 대한 규칙과 결합하면 결과의 데이터 정렬이 결정됩니다. 데이터 정렬에 대 한 자세한 내용은 [Analysis Services&#41;&#40;언어 및 데이터 정렬 ](https://docs.microsoft.com/analysis-services/languages-and-collations-analysis-services)을 참조 하세요.  
   
  간단한 식의 전체 자릿수, 소수 자릿수 및 길이를 기준으로 결과의 전체 자릿수, 소수 자릿수 및 길이를 결정하는 규칙도 있습니다.  
   
@@ -91,14 +91,14 @@ ms.locfileid: "68892110"
   
 |원본 형식|필요한 형식|변환|  
 |-------------------|-----------------|----------------|  
-|Level|Set|\<수준 >. 멤버|  
-|계층|멤버|\<hierarchy>.defaultmember|  
-|멤버|Tuple|(\<멤버 >)|  
-|Tuple|멤버|\<tuple>.item(0)|  
-|Tuple|스칼라|\<tuple>.value|  
+|Level|설정|\<수준>. 멤버|  
+|계층|멤버|\<계층> defaultmember|  
+|멤버|Tuple|(\<멤버>)|  
+|Tuple|멤버|\<튜플을> 합니다. 항목 (0)|  
+|Tuple|스칼라|\<튜플>. 값|  
   
-## <a name="see-also"></a>관련 항목  
- [MDX 연산자 참조 &#40;mdx&#41;](../mdx/mdx-operator-reference-mdx.md)   
- [Mdx 구문 요소 &#40;mdx&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [Mdx 연산자 참조 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [Mdx 구문 요소 &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

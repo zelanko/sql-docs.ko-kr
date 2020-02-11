@@ -33,10 +33,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dbee99748718d88ce678d78cfa64849f8e5bbc5d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982167"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX(Transact-SQL)
@@ -49,7 +49,7 @@ ms.locfileid: "73982167"
 > [!IMPORTANT]
 >  `<drop_backward_compatible_index>`에 정의된 구문은 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서 제거될 예정입니다. 새 개발 작업에서는 이 구문을 사용하지 말고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. 대신 `<drop_relational_or_xml_index>`에 지정된 구문을 사용하세요. XML 인덱스는 이전 버전과의 호환을 위한 구문을 사용하여 삭제할 수 없습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -162,7 +162,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
   
  인덱스 작업 중 쿼리 및 데이터 수정에 기본 테이블과 관련 인덱스를 사용할 수 있는지 여부를 지정합니다. 기본값은 OFF입니다.  
   
- ON  
+ 켜기  
  장기 테이블 잠금이 유지되지 않습니다. 따라서 기본 테이블에 대한 쿼리나 업데이트를 계속할 수 있습니다.  
   
  OFF  
@@ -217,7 +217,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 > [!NOTE]
 >  이 컨텍스트에서 default는 키워드가 아니라 기본 파일 그룹에 대한 식별자이므로 MOVE TO **"** default **"** 또는 MOVE TO **[** default **]** 와 같이 구분되어야 합니다. "default"를 지정하면 현재 세션의 QUOTED_IDENTIFIER 옵션이 ON이어야 합니다. 이 값은 기본 설정입니다. 자세한 내용은 [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)를 참조하세요.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  비클러스터형 인덱스를 삭제하면 인덱스 정의가 메타데이터에서 제거되고 인덱스 데이터 페이지(B-트리)가 데이터베이스 파일에서 제거됩니다. 클러스터형 인덱스가 삭제되면 인덱스 정의가 메타데이터에서 제거되고 클러스터형 인덱스의 리프 수준에 저장된 데이터 행은 정렬되지 않은 결과 테이블인 힙에 저장됩니다. 인덱스가 이전에 점유하고 있던 모든 공간은 반환됩니다. 반환된 공간은 다른 데이터베이스 개체에서 사용할 수 있습니다.  
   
  인덱스가 있는 파일 그룹이 오프라인이거나 읽기 전용으로 설정되어 있으면 파일 그룹에서 인덱스를 삭제할 수 없습니다.  
@@ -268,7 +268,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
   
 ## <a name="examples"></a>예  
   
-### <a name="a-dropping-an-index"></a>1\. 인덱스 삭제  
+### <a name="a-dropping-an-index"></a>A. 인덱스 삭제  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `ProductVendor` 테이블의 `IX_ProductVendor_VendorID` 인덱스를 삭제합니다.  
   
 ```  
@@ -277,7 +277,7 @@ DROP INDEX IX_ProductVendor_BusinessEntityID
 GO  
 ```  
   
-### <a name="b-dropping-multiple-indexes"></a>2\. 여러 인덱스 삭제  
+### <a name="b-dropping-multiple-indexes"></a>B. 여러 인덱스 삭제  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 하나의 트랜잭션으로 두 개의 인덱스를 삭제합니다.  
   
 ```  

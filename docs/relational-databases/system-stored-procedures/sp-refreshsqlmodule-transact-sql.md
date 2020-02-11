@@ -27,10 +27,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: df5ff458c45a4ac804591a8a4d77d9367b8cb6c4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73982767"
 ---
 # <a name="sp_refreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule(Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "73982767"
 
   현재 데이터베이스에서 지정된 비스키마 바운드 저장 프로시저, 사용자 정의 함수, 뷰, DML 트리거, 데이터베이스 수준 DDL 트리거 또는 서버 수준 DDL 트리거에 대한 메타데이터를 업데이트합니다. 기본 개체가 변경되면 매개 변수의 데이터 형식과 같은 이러한 개체의 영구 메타데이터가 최신 상태를 유지하지 못할 수 있습니다.
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -56,9 +56,9 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @name = ] 'module\_name'`은 저장 프로시저, 사용자 정의 함수, 뷰, DML 트리거, 데이터베이스 수준 DDL 트리거 또는 서버 수준 DDL 트리거의 이름입니다. *module_name* 은 clr (공용 언어 런타임) 저장 프로시저 또는 clr 함수가 될 수 없습니다. *module_name* 은 스키마 바인딩될 수 없습니다. *module_name* 는 **nvarchar**이며 기본값은 없습니다. *module_name* 은 여러 부분으로 구성 된 식별자가 될 수 있지만 현재 데이터베이스의 개체만 참조할 수 있습니다.  
+`[ @name = ] 'module\_name'`저장 프로시저, 사용자 정의 함수, 뷰, DML 트리거, 데이터베이스 수준 DDL 트리거 또는 서버 수준 DDL 트리거의 이름입니다. *module_name* 은 clr (공용 언어 런타임) 저장 프로시저 또는 clr 함수가 될 수 없습니다. *module_name* 은 스키마 바인딩될 수 없습니다. *module_name* 는 **nvarchar**이며 기본값은 없습니다. *module_name* 은 여러 부분으로 구성 된 식별자가 될 수 있지만 현재 데이터베이스의 개체만 참조할 수 있습니다.  
   
-`[ , @namespace = ] ' \<class> '`는 지정 된 모듈의 클래스입니다. *MODULE_NAME* DDL 트리거는 \<클래스 > 필요 합니다. *\<클래스 >* 은 **nvarchar**(20)입니다. 잘못된 입력:  
+`[ , @namespace = ] ' \<class> '`는 지정 된 모듈의 클래스입니다. *MODULE_NAME* DDL 트리거 일 경우 \<클래스> 필요 합니다. >클래스는 **nvarchar**(20)입니다. * \<* 잘못된 입력:  
   
 |||  
 |-|-|  
@@ -86,7 +86,8 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ## <a name="examples"></a>예  
   
 ### <a name="a-refreshing-a-user-defined-function"></a>A. 사용자 정의 함수 새로 고침  
- 다음 예에서는 사용자 정의 함수를 새로 고칩니다. 이 예에서는 별칭 데이터 형식인 `mytype`과 `to_upper`을 사용하는 사용자 정의 함수 `mytype`를 만듭니다. 그런 다음 `mytype`의 이름을 `myoldtype`으로 바꾸고 다른 정의가 있는 새 `mytype`을 만듭니다. `dbo.to_upper` 함수를 새로 고치면 이전 항목 대신 새로 구현된 `mytype`이 참조됩니다.  
+ 다음 예에서는 사용자 정의 함수를 새로 고칩니다. 이 예에서는 별칭 데이터 형식인 `mytype`과 `to_upper`을 사용하는 사용자 정의 함수 `mytype`를 만듭니다. 그런 다음 `mytype`의 이름을 `myoldtype`으로 바꾸고 다른 정의가 있는 새 `mytype`을 만듭니다. 
+  `dbo.to_upper` 함수를 새로 고치면 이전 항목 대신 새로 구현된 `mytype`이 참조됩니다.  
   
 ```  
 -- Create an alias type.  
@@ -143,7 +144,7 @@ SELECT dbo.to_upper('abcdefgh');
 GO  
 ```  
   
-### <a name="b-refreshing-a-database-level-ddl-trigger"></a>2\. 데이터베이스 수준 DDL 트리거 새로 고침  
+### <a name="b-refreshing-a-database-level-ddl-trigger"></a>B. 데이터베이스 수준 DDL 트리거 새로 고침  
  다음 예에서는 데이터베이스 수준 DDL 트리거를 새로 고칩니다.  
   
 ```  
@@ -153,7 +154,7 @@ EXEC sys.sp_refreshsqlmodule @name = 'ddlDatabaseTriggerLog' , @namespace = 'DAT
 GO  
 ```  
   
-### <a name="c-refreshing-a-server-level-ddl-trigger"></a>3\. 서버 수준 DDL 트리거 새로 고침  
+### <a name="c-refreshing-a-server-level-ddl-trigger"></a>C. 서버 수준 DDL 트리거 새로 고침  
  다음 예에서는 서버 수준 DDL 트리거를 새로 고칩니다.  
   
 ||  
@@ -169,7 +170,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [sp_refreshview&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
- [Transact-sql 저장 프로시저 &#40;데이터베이스 엔진&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;sp_refreshview &#40;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

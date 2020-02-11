@@ -1,5 +1,5 @@
 ---
-title: 주요 성능 지표 표현 (테이블 형식) | Microsoft Docs
+title: 핵심 성과 지표 표현 (테이블 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d0981b473ef29ac709213c1e9eee1cea01f47e2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62795443"
 ---
 # <a name="key-performance-indicator-representation-tabular"></a>KPI(핵심 성과 지표) 표현(테이블 형식)
   KPI는 기본 측정값으로 정의된 값을 대상 값과 비교하여 값 성과를 측정하는 데 사용됩니다.  
   
 ## <a name="key-performance-indicator-representation"></a>KPI(핵심 성과 지표) 표현  
- 테이블 형식 개체의 핵심 성과 지표-kpi 모델-그래픽으로 표시 하는 클라이언트 응용 프로그램에 대 한 추가 정보를 사용 하 여 측정값입니다. KPI에는 대개 달성해야 할 목표, 목표 대비 측정값의 상태 및 상태를 그래픽으로 보여 주는 방법을 제공하는 클라이언트 도구에 대한 정보가 포함되어 있습니다.  
+ 테이블 형식 개체 모델에서 kpi (핵심 성과 지표)는 클라이언트 응용 프로그램에 그래픽으로 표시 하는 추가 정보가 포함 된 측정값입니다. KPI에는 대개 달성해야 할 목표, 목표 대비 측정값의 상태 및 상태를 그래픽으로 보여 주는 방법을 제공하는 클라이언트 도구에 대한 정보가 포함되어 있습니다.  
   
 ### <a name="key-performance-indicator-in-amo"></a>AMO의 핵심 성과 지표  
  AMO를 사용하여 테이블 형식 모델 KPI를 관리하는 경우 AMO의 KPI에 대해 일 대 일 개체 일치가 없습니다. AMO <xref:Microsoft.AnalysisServices.Kpi> 개체는 이러한 용도로 사용되지 않습니다. 테이블 형식 모델에 대해 AMO의 KPI는 <xref:Microsoft.AnalysisServices.MdxScript.Commands%2A> 컬렉션 및 <xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A>에 있는 요소 중 하나에서 만들어진 일련의 개체로 표현됩니다.  
@@ -221,6 +221,6 @@ private void addStaticKPI(object sender, EventArgs e)
 ```  
   
 ## <a name="amo2tabular-sample"></a>AMO2Tabular 예제  
- AMO를 사용 하 여 만들고 핵심 성과 지표를 조작 하는 방법은 이해 하 게 표현 AMO to Tabular 예제의;의 소스 코드 참조 특히 다음 원본 파일에서 확인 합니다. AddKPIs.cs 합니다. 예제는 Codeplex에서 사용할 수 있습니다. 코드에 대한 중요 정보: 코드는 여기에서 설명한 논리적 개념에 대한 지원으로만 제공되며 프로덕션 환경에서 사용해서는 안 됩니다. 그리고 교육 목적 이외의 목적으로는 사용할 수 없습니다.  
+ AMO를 사용 하 여 핵심 성과 지표 표현을 만들고 조작 하는 방법을 이해 하려면 AMO to Tabular 예제의 원본 코드를 참조 하세요. 특히 다음 원본 파일을 확인 하십시오. AddKPIs.cs. 예제는 Codeplex에서 사용할 수 있습니다. 코드에 대한 중요 정보: 코드는 여기에서 설명한 논리적 개념에 대한 지원으로만 제공되며 프로덕션 환경에서 사용해서는 안 됩니다. 그리고 교육 목적 이외의 목적으로는 사용할 수 없습니다.  
   
   

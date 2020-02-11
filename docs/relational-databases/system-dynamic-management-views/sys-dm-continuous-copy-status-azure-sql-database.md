@@ -1,5 +1,5 @@
 ---
-title: sys. dm_continuous_copy_status
+title: sys.dm_continuous_copy_status
 titleSuffix: Azure SQL Database
 ms.date: 03/03/2017
 ms.service: sql-database
@@ -21,10 +21,10 @@ ms.author: sstein
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6d0bda2d1851d7ec7900a23ad6203d4f85beb73f
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73844498"
 ---
 # <a name="sysdm_continuous_copy_status-azure-sql-database"></a>sys.dm_continuous_copy_status(Azure SQL Database)
@@ -35,7 +35,7 @@ ms.locfileid: "73844498"
 SQL Database V12를 사용 하는 경우 V11에만 적용 *dm_continuous_copy_status* 되므로 [dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) 를 사용 해야 합니다.
 
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**copy_guid**|**uniqueidentifier**|복제본 데이터베이스의 고유 ID입니다.|  
 |**partner_server**|**sysname**|연결된 SQL Database 서버의 이름입니다.|  
@@ -52,14 +52,14 @@ SQL Database V12를 사용 하는 경우 V11에만 적용 *dm_continuous_copy_st
  데이터를 검색 하려면 **db_owner** 데이터베이스 역할의 멤버 자격이 필요 합니다. Dbo 사용자, **dbmanager** 데이터베이스 역할의 멤버 및 sa 로그인도 모두이 뷰를 쿼리할 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
- **Dm_continuous_copy_status** 뷰는 **리소스** 데이터베이스에서 만들어지며 논리적 master를 비롯 한 모든 데이터베이스에 표시 됩니다. 그러나 논리 master에서 이 뷰를 쿼리하면 빈 집합이 반환됩니다.  
+ **Dm_continuous_copy_status** 뷰는 **리소스** 데이터베이스에서 만들어지며 논리적 master를 비롯 한 모든 데이터베이스에 표시 됩니다. 그러나 논리 마스터에서 이 뷰를 쿼리하면 빈 집합이 반환됩니다.  
   
  데이터베이스에서 연속 복사 관계가 종료 되 면 **dm_continuous_copy_status** 보기에서 해당 데이터베이스의 행이 사라집니다.  
   
  **Dm_database_copies** 뷰와 마찬가지로, **dm_continuous_copy_status** 는 데이터베이스가 주 데이터베이스 이거나 활성 보조 데이터베이스 인 연속 복사 관계의 상태를 반영 합니다. **Dm_database_copies**와는 달리, **dm_continuous_copy_status** 에는 작업과 성능에 대 한 세부 정보를 제공 하는 여러 열이 포함 되어 있습니다. 이러한 열에는 **last_replication**및 **replication_lag_sec**가 포함 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [dm_database_copies &#40;Azure SQL Database&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)   
- [활성 지역 복제 저장 프로시저 &#40;transact-sql&#41;](https://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)  
+ [dm_database_copies &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)   
+ [Transact-sql&#41;&#40;활성 지역 복제 저장 프로시저](https://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)  
   
   

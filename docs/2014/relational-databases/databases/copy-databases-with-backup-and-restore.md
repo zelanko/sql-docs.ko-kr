@@ -19,33 +19,35 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a35156a465e521ceea60fa090142836da6a4c1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917470"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>백업 및 복원으로 데이터베이스 복사
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전을 사용하여 만든 사용자 데이터베이스 백업을 복원하여 새 데이터베이스를 만들 수 있습니다. 그러나 이전 **버전을 사용하여 만든**master **,** model **및** msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 통해 복원할 수 없습니다. 또한 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 백업을 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 복원할 수도 없습니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 는 이전 버전과는 다른 기본 경로를 사용합니다. 따라서 이전 버전의 기본 위치에 만든 데이터베이스 백업을 복원하려면 MOVE 옵션을 사용해야 합니다. 새 기본 경로에 대한 자세한 내용은 [SQL Server 기본 인스턴스 및 명명된 인스턴스의 파일 위치](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)를 참조하십시오. 데이터베이스 파일을 이동하는 방법은 이 항목의 뒷부분에 나오는 "데이터베이스 파일 이동"을 참조하십시오.  
+>  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 는 이전 버전과는 다른 기본 경로를 사용합니다. 따라서 이전 버전의 기본 위치에 만든 데이터베이스 백업을 복원하려면 MOVE 옵션을 사용해야 합니다. 새 기본 경로에 대한 자세한 내용은 [SQL Server 기본 인스턴스 및 명명된 인스턴스의 파일 위치](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)를 참조하십시오. 데이터베이스 파일을 이동하는 방법은 이 항목의 뒷부분에 나오는 "데이터베이스 파일 이동"을 참조하십시오.  
   
 ## <a name="general-steps-for-using-backup-and-restore-to-copy-a-database"></a>백업과 복원을 사용하여 데이터베이스를 복사하는 일반적인 단계  
- 백업과 복원을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 인스턴스로 데이터베이스를 복사할 때는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 실행되는 모든 플랫폼이 원본 컴퓨터 및 대상 컴퓨터가 될 수 있습니다.  
+ 백업과 복원을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 인스턴스로 데이터베이스를 복사할 때는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 실행되는 모든 플랫폼이 원본 컴퓨터 및 대상 컴퓨터가 될 수 있습니다.  
   
  일반적인 단계는 다음과 같습니다.  
   
-1.  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상의 인스턴스에 있을 수 있는 원본 데이터베이스를 백업합니다. 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행 중인 컴퓨터가 *원본 컴퓨터*입니다.  
+1.  
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상의 인스턴스에 있을 수 있는 원본 데이터베이스를 백업합니다. 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행 중인 컴퓨터가 *원본 컴퓨터*입니다.  
   
-2.  데이터베이스 복사 하려는 컴퓨터의 (합니다 *대상 컴퓨터*)의 인스턴스에 연결할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 데이터베이스를 복원 하려고 하는 합니다. 필요한 경우 대상 서버 인스턴스에 원본 데이터베이스의 백업에 사용된 것과 같은 백업 디바이스를 만듭니다.  
+2.  데이터베이스를 복사 하려는 컴퓨터 ( *대상 컴퓨터*)에서 데이터베이스를 복원 하려는의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결 합니다. 필요한 경우 대상 서버 인스턴스에 원본 데이터베이스의 백업에 사용된 것과 같은 백업 디바이스를 만듭니다.  
   
 3.  대상 컴퓨터에서 원본 데이터베이스의 백업을 복원합니다. 데이터베이스를 복원하면 자동으로 모든 데이터베이스 파일이 생성됩니다.  
   
  다음 항목에서는 이 프로세스에 영향을 줄 수 있는 추가 고려 사항에 대해 설명합니다.  
   
 ## <a name="before-you-restore-database-files"></a>데이터베이스 파일을 복원하기 전 고려 사항  
- 데이터베이스를 복원하면 복원 중인 데이터베이스에 필요한 데이터베이스 파일이 자동으로 생성됩니다. 기본적으로 복원 프로세스 중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 만든 파일은 원본 컴퓨터에 있는 원본 데이터베이스의 백업 파일과 같은 이름과 경로를 사용합니다.  
+ 데이터베이스를 복원하면 복원 중인 데이터베이스에 필요한 데이터베이스 파일이 자동으로 생성됩니다. 기본적으로 복원 프로세스 중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 만든 파일은 원본 컴퓨터에 있는 원본 데이터베이스의 백업 파일과 같은 이름과 경로를 사용합니다.  
   
  원하는 경우 데이터베이스를 복원할 때 디바이스 매핑, 파일 이름 또는 데이터베이스 복원 경로를 지정할 수 있습니다. 이 방법은 다음과 같은 경우 유용합니다.  
   
@@ -62,7 +64,7 @@ ms.locfileid: "62917470"
  오류 및 의도하지 않은 결과를 방지하려면 복원 작업 전에 [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql) 기록 테이블을 통해 복원하려는 백업에서 데이터베이스 및 로그 파일을 찾을 수 있습니다.  
   
 ## <a name="moving-the-database-files"></a>데이터베이스 파일 이동  
- 위에서 설명한 이유 때문에 데이터베이스 백업 내의 파일을 대상 컴퓨터에 복원할 수 없으면 복원 도중에 이 파일을 새 위치로 이동해야 합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ 위에서 설명한 이유 때문에 데이터베이스 백업 내의 파일을 대상 컴퓨터에 복원할 수 없으면 복원 도중에 이 파일을 새 위치로 이동해야 합니다. 다음은 그 예입니다.  
   
 -   이전 버전의 기본 위치에 만든 백업에서 데이터베이스를 복원하려는 경우  
   
@@ -98,29 +100,29 @@ ms.locfileid: "62917470"
   
 -   [RESTORE FILELISTONLY&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)  
   
- **새 위치로 파일 및 파일 그룹을 복원 하려면**  
+ **파일과 파일 그룹을 새 위치로 복원하려면**  
   
 -   [새 위치로 파일 복원&#40;SQL Server&#41;](../backup-restore/restore-files-to-a-new-location-sql-server.md)  
   
 -   [데이터베이스 백업 복원 &#40;SQL Server Management Studio&#41;](../backup-restore/restore-a-database-backup-using-ssms.md)  
   
- **기존 파일에서 파일과 파일 그룹 복원**  
+ **기존 파일에서 파일과 파일 그룹을 복원하려면**  
   
 -   [기존 파일에서 파일 및 파일 그룹 복원&#40;SQL Server&#41;](../backup-restore/restore-files-and-filegroups-over-existing-files-sql-server.md)  
   
- **새 이름의 데이터베이스를 복원 하려면**  
+ **새 이름으로 데이터베이스를 복원하려면**  
   
 -   [데이터베이스 백업 복원 &#40;SQL Server Management Studio&#41;](../backup-restore/restore-a-database-backup-using-ssms.md)  
   
- **중단된 된 복원 작업을 다시 시작**  
+ **중단된 복원 작업을 다시 시작하려면**  
   
--   [중단된 복원 작업 다시 시작&#40;Transact-SQL&#41;](../backup-restore/restart-an-interrupted-restore-operation-transact-sql.md)  
+-   [Transact-sql&#41;&#40;중단 된 복원 작업 다시 시작](../backup-restore/restart-an-interrupted-restore-operation-transact-sql.md)  
   
- **데이터베이스의 소유자를 변경 하려면**  
+ **데이터베이스의 소유자를 변경하려면**  
   
--   [sp_changedbowner&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changedbowner-transact-sql)  
+-   [Transact-sql&#41;sp_changedbowner &#40;](/sql/relational-databases/system-stored-procedures/sp-changedbowner-transact-sql)  
   
- **SQL Server Management Objects (SMO)를 사용 하 여 데이터베이스 복사**  
+ **SMO(SQL Server 관리 개체)를 사용하여 데이터베이스를 복사하려면**  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.ReadFileList%2A>  
   
@@ -130,9 +132,9 @@ ms.locfileid: "62917470"
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore>  
   
-## <a name="see-also"></a>관련 항목  
- [데이터베이스를 다른 서버로 복사](copy-databases-to-other-servers.md)   
- [SQL Server 기본 인스턴스 및 명명된 인스턴스의 파일 위치](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)   
+## <a name="see-also"></a>참고 항목  
+ [다른 서버에 데이터베이스 복사](copy-databases-to-other-servers.md)   
+ [SQL Server의 기본 및 명명 된 인스턴스의 파일 위치](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)   
  [RESTORE FILELISTONLY&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)   
  [RESTORE&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   

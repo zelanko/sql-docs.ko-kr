@@ -1,5 +1,5 @@
 ---
-title: 데이터 원본 뷰 찾아보기 대화 상자 (Analysis Services-다차원 데이터) | Microsoft Docs
+title: 데이터 원본 뷰 찾아보기 대화 상자 (Analysis Services 다차원 데이터) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 49a98b2710cf1af3a936ba7fa7fe244bb7675bd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064455"
 ---
 # <a name="browse-data-source-view-dialog-box-analysis-services---multidimensional-data"></a>데이터 원본 뷰 찾아보기 대화 상자(Analysis Services - 다차원 데이터)
@@ -28,10 +28,10 @@ ms.locfileid: "66064455"
  다이어그램 화면에서 개체를 클릭하여 선택하고, 개체를 마우스로 끌어 위치를 다시 지정하고, 커서를 여러 개체 위로 끌어 다수의 개체를 선택할 수 있습니다. 다이어그램에 표시되는 데이터 원본 뷰의 영역을 변경하려면 오른쪽 아래 모퉁이에 있는 탐색 단추(십자형 화살표)를 클릭한 다음 선택 창을 표시할 영역으로 끕니다.  
   
 ## <a name="diagram"></a>다이어그램  
- **확대/축소**  
+ **Zoom**  
  확대/축소 비율을 선택하여 다이어그램 화면에서 개체 크기를 조정할 수 있습니다.  
   
- **닫기**  
+ **닫습니다**  
  을 클릭하여 대화 상자를 닫습니다.  
   
   

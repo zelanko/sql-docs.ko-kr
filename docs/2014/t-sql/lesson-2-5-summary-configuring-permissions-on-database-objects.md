@@ -1,5 +1,5 @@
 ---
-title: '요약: 데이터베이스 개체의 사용 권한 구성 | Microsoft Docs'
+title: '요약: 데이터베이스 개체에 대한 사용 권한 구성 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ca78065f168c96ce5a092050e49e1d4e9f8f3f41
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62642716"
 ---
 # <a name="summary-configuring-permissions-on-database-objects"></a>요약: 데이터베이스 개체에 대한 사용 권한 구성
@@ -25,6 +25,6 @@ ms.locfileid: "62642716"
  뷰는 단일 SELECT 문이며 사용자에게 테이블처럼 표시됩니다. 저장 프로시저는 일괄 처리로 실행되는 하나 이상의 [!INCLUDE[tsql](../includes/tsql-md.md)] 문입니다.  
   
 ## <a name="next-lesson-in-tutorial"></a>자습서의 다음 단원  
- [3단원: 데이터베이스 개체 삭제](lesson-3-1-deleting-database-objects.md)  
+ [3단원: 데이터베이스 개체에 대한 액세스 권한 부여](lesson-3-1-deleting-database-objects.md)  
   
   

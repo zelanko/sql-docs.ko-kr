@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: eb81724c8feb5ca34736b16aeb8f8d65b1018300
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74683496"
 ---
 # <a name="getting-started-sql-server-2014"></a>시작(SQL Server 2014)
@@ -27,7 +27,7 @@ ms.locfileid: "74683496"
   
  [SQL Server 2014 하이브리드 클라우드 소개](introduction-to-sql-server-2014-hybrid-cloud.md)  
   
- [SQL Server 2014의 빠른 시작 설치](quick-start-installation-of-sql-server-2014.md)  
+ [SQL Server 2014 빠른 시작 설치](quick-start-installation-of-sql-server-2014.md)  
   
  [SQL Server 제품 설명서 시작](../2014-toc/index.yml)  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7889bb81d9bb1f1e3fefa229c0a6a0ee0dc1f1dd
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493771"
 ---
 # <a name="defining-and-browsing-perspectives"></a>큐브 뷰 정의 및 찾아보기
@@ -29,13 +29,15 @@ ms.locfileid: "69493771"
   
 ## <a name="defining-an-internet-sales-perspective"></a>인터넷 판매 큐브 뷰 정의  
   
-1.  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브에 대한 큐브 디자이너를 열고 **큐브 뷰** 탭을 클릭합니다.  
+1.  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브에 대한 큐브 디자이너를 열고 **큐브 뷰** 탭을 클릭합니다.  
   
      다음 그림에 표시된 것처럼 모든 개체 및 해당 개체 유형이 **큐브 뷰** 창에 나타납니다.  
   
      ![큐브 디자이너의 큐브 뷰 창](../../2014/tutorials/media/l9-perspectives-1.gif "큐브 디자이너의 큐브 뷰 창")  
   
-2.  **큐브 뷰** 탭의 도구 모음에서 **새 큐브 뷰** 단추를 클릭합니다.  
+2.  
+  **큐브 뷰** 탭의 도구 모음에서 **새 큐브 뷰** 단추를 클릭합니다.  
   
      다음 그림에 표시된 것처럼 **큐브 뷰** 의 기본 이름과 함께 새 큐브 뷰가 **큐브 뷰 이름**열에 나타납니다. 개체에 대한 확인란의 선택을 취소할 때까지 모든 개체에 대한 확인란은 선택된 상태를 유지합니다. 이 큐브 뷰는 이 큐브의 기본 큐브 뷰와 동일합니다.  
   
@@ -54,35 +56,35 @@ ms.locfileid: "69493771"
   
     -   `Reseller Sales`측정값 그룹  
   
-    -   **Sales Quotas** 측정값 그룹  
+    -   **판매 할당량** 측정값 그룹  
   
-    -   **Sales Quotas 1** 측정값 그룹  
+    -   **판매 할당량 1** 측정값 그룹  
   
-    -   **Reseller** 큐브 차원  
+    -   **재판매인** 큐브 차원  
   
-    -   **Reseller Geography** 큐브 차원  
+    -   **재판매인 지리** 큐브 차원  
   
-    -   **Sales Territory** 큐브 차원  
+    -   **영업 지역** 큐브 차원  
   
     -   **Employee** 큐브 차원  
   
-    -   **Promotion** 큐브 차원  
+    -   **홍보** 큐브 차원  
   
-    -   **Reseller Revenue** KPI  
+    -   **대리점 수익** KPI  
   
-    -   **Large Resellers** 명명된 집합  
+    -   **대기업** 명명 된 집합  
   
     -   **Total Sales Amount** 계산 멤버  
   
     -   **Total Product Cost** 계산 멤버  
   
-    -   **Reseller GPM** 계산 멤버  
+    -   **대리점 GPM** 계산 멤버  
   
     -   **Total GPM** 계산 멤버  
   
-    -   **Reseller Sales Ratio to All Products** 계산 멤버  
+    -   **대리점 판매 비율을 모든 Products** 계산 멤버  
   
-    -   **Total Sales Ratio to All Products** 계산 멤버  
+    -   **Total Sales Ratio To All Products** 계산 멤버  
   
      이러한 개체는 인터넷 판매와 관련이 없습니다.  
   
@@ -91,11 +93,13 @@ ms.locfileid: "69493771"
   
 ## <a name="defining-a-reseller-sales-perspective"></a>Reseller Sales 큐브 뷰 정의  
   
-1.  **큐브 뷰** 탭의 도구 모음에서 **새 큐브 뷰** 단추를 클릭합니다.  
+1.  
+  **큐브 뷰** 탭의 도구 모음에서 **새 큐브 뷰** 단추를 클릭합니다.  
   
 2.  새 큐브 뷰의 이름을로 `Reseller Sales`변경 합니다.  
   
-3.  **Reseller Sales-Sales Amount** 를 기본 측정값으로 설정합니다.  
+3.  
+  **Reseller Sales-Sales Amount** 를 기본 측정값으로 설정합니다.  
   
      사용자가 이 큐브 뷰를 사용하여 큐브를 찾아볼 때 다른 측정값을 지정하지 않은 경우 이 측정값이 표시됩니다.  
   
@@ -111,25 +115,26 @@ ms.locfileid: "69493771"
   
     -   **Sales Reason** 큐브 차원  
   
-    -   **Internet Sales Details Drillthrough Action** 드릴스루 동작  
+    -   **Internet Sales Details Drillthrough action** 드릴스루 동작  
   
     -   **Total Sales Amount** 계산 멤버  
   
     -   **Total Product Cost** 계산 멤버  
   
-    -   **Internet GPM** 계산 멤버  
+    -   **인터넷 GPM** 계산 멤버  
   
     -   **Total GPM** 계산 멤버  
   
-    -   **Internet Sales Ratio to All Products** 계산 멤버  
+    -   **Internet Sales Ratio To All Products** 계산 멤버  
   
-    -   **Total Sales Ratio to All Products** 계산 멤버  
+    -   **Total Sales Ratio To All Products** 계산 멤버  
   
      이러한 개체는 대리점 판매와 관련이 없습니다.  
   
 ## <a name="defining-a-sales-summary-perspective"></a>판매 요약 큐브 뷰 정의  
   
-1.  **큐브 뷰** 탭의 도구 모음에서 **새 큐브 뷰** 단추를 클릭합니다.  
+1.  
+  **큐브 뷰** 탭의 도구 모음에서 **새 큐브 뷰** 단추를 클릭합니다.  
   
 2.  새 큐브 뷰의 이름을로 `Sales Summary`변경 합니다.  
   
@@ -144,7 +149,7 @@ ms.locfileid: "69493771"
   
     -   **Internet Sales Reason** 측정값 그룹  
   
-    -   **Sales Quotas** 측정값 그룹  
+    -   **판매 할당량** 측정값 그룹  
   
     -   **Sales Quotas1** 측정값 그룹  
   
@@ -152,17 +157,18 @@ ms.locfileid: "69493771"
   
     -   **Sales Reason** 큐브 차원  
   
-    -   **Internet Sales Details Drillthrough Action** 드릴스루 동작  
+    -   **Internet Sales Details Drillthrough action** 드릴스루 동작  
   
 4.  다음 개체에 대한 확인란을 선택합니다.  
   
     -   **Internet Sales Count** 측정값  
   
-    -   **Reseller Sales Count** 측정값  
+    -   **대리점 판매 개수** 측정값  
   
 ## <a name="browsing-the-cube-through-each-perspective"></a>각 큐브 뷰를 통해 큐브 찾아보기  
   
-1.  **빌드** 메뉴에서 **Analysis Services Tutorial 배포**를 클릭합니다.  
+1.  
+  **빌드** 메뉴에서 **Analysis Services Tutorial 배포**를 클릭합니다.  
   
 2.  배포가 성공적으로 완료되면 **브라우저** 탭으로 전환한 다음 **다시 연결** 단추를 클릭합니다.  
   
@@ -170,7 +176,7 @@ ms.locfileid: "69493771"
   
 4.  다음 그림에 표시된 것처럼 Excel에서 분석에서 Excel에서 모델을 검색할 때 사용할 큐브 뷰를 선택하라는 메시지를 표시합니다.  
   
-     ![Internet Sales 큐브 뷰에 대 한 개체](../../2014/tutorials/media/l9-perspectives-3.gif "Internet Sales 큐브 뷰에 대 한 개체")  
+     ![Internet Sales 큐브 뷰의 개체](../../2014/tutorials/media/l9-perspectives-3.gif "Internet Sales 큐브 뷰의 개체")  
   
 5.  또는 다음 그림에 표시된 것처럼 Windows 시작 메뉴에서 Excel을 시작하고 localhost의 Analysis Services 자습서 데이터베이스에 대한 연결을 정의하고 데이터 연결 마법사에서 큐브 뷰를 선택합니다.  
   
@@ -182,19 +188,20 @@ ms.locfileid: "69493771"
   
 7.  메타데이터 창에서 **Measures**를 확장합니다.  
   
-     측정값 그룹만 **internet gpm** 및 **internet Sales Ratio to All Products** 계산 멤버와 함께 표시 됩니다. `Internet Sales`  
+     `Internet Sales` 측정값 그룹만 **internet Gpm** 및 **Internet Sales Ratio to All Products** 계산 멤버와 함께 표시 됩니다.  
   
-8.  모델에서 Excel을 다시 선택합니다. `Sales Summary`을(를) 선택합니다.  
+8.  모델에서 Excel을 다시 선택합니다. 
+  `Sales Summary`를 선택합니다.  
   
      다음 그림에 표시된 것처럼 이러한 각 측정값 그룹에서 단일 측정값만 나타납니다.  
   
-     ![Internet sales 및 대리점 판매 측정값](../../2014/tutorials/media/l9-perspectives-4.gif "Internet sales 및 대리점 판매 측정값")  
+     ![Internet Sales 및 Reseller Sales 측정값](../../2014/tutorials/media/l9-perspectives-4.gif "Internet Sales 및 Reseller Sales 측정값")  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [번역 정의 및 찾아보기](lesson-9-2-defining-and-browsing-translations.md)  
   
-## <a name="see-also"></a>관련 항목  
- [큐브 뷰](multidimensional-models-olap-logical-cube-objects/perspectives.md)   
+## <a name="see-also"></a>참고 항목  
+ [전망을](multidimensional-models-olap-logical-cube-objects/perspectives.md)   
  [다차원 모델의 큐브 뷰](multidimensional-models/perspectives-in-multidimensional-models.md)  
   
   

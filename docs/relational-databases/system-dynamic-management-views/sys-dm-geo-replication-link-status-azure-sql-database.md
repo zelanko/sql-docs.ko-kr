@@ -1,5 +1,5 @@
 ---
-title: sys. dm_geo_replication_link_status
+title: sys.dm_geo_replication_link_status
 titleSuffix: Azure SQL Database
 ms.date: 01/28/2019
 ms.service: sql-database
@@ -19,19 +19,19 @@ ms.author: mathoma
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e642fada95ddf20e81f9fcb7da8b6267469ef0c9
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73843892"
 ---
 # <a name="sysdm_geo_replication_link_status-azure-sql-database"></a>sys.dm_geo_replication_link_status(Azure SQL Database)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  지역에서 복제 파트너 관계에 있는 주 데이터베이스와 보조 데이터베이스 간의 각 복제 링크에 대 한 행을 포함 합니다. 여기에는 주 데이터베이스와 보조 데이터베이스가 모두 포함 됩니다. 지정 된 주 데이터베이스에 대해 둘 이상의 연속 복제 링크가 있는 경우이 테이블에는 각 관계에 대 한 행이 포함 됩니다. 이 뷰는 논리적 master를 비롯 한 모든 데이터베이스에 생성 됩니다. 그러나 논리 master에서 이 뷰를 쿼리하면 빈 집합이 반환됩니다.  
+  지역에서 복제 파트너 관계에 있는 주 데이터베이스와 보조 데이터베이스 간의 각 복제 링크에 대 한 행을 포함 합니다. 주 및 보조 데이터베이스가 포함됩니다. 지정된 주 데이터베이스에 두 개 이상의 연속 복제 링크가 있는 경우 이 테이블은 각 관계에 대한 행을 포함합니다. 논리 마스터를 포함한 모든 데이터베이스에 뷰가 생성됩니다. 그러나 논리 마스터에서 이 뷰를 쿼리하면 빈 집합이 반환됩니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |link_guid|**uniqueidentifier**|복제 링크의 고유 ID입니다.|  
 |partner_server|**sysname**|연결 된 데이터베이스를 포함 하는 SQL Database 서버의 이름입니다.|  
@@ -43,7 +43,7 @@ ms.locfileid: "73843892"
 |역할(role)|**tinyint**|지역에서 복제 역할, 다음 중 하나입니다.<br /><br /> 0 = 기본 Database_id는 지역에서 복제 파트너 관계에서 주 데이터베이스를 참조 합니다.<br /><br /> 1 = 보조  Database_id는 지역에서 복제 파트너 관계에서 주 데이터베이스를 참조 합니다.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|보조 유형이 며 다음 중 하나입니다.<br /><br /> 0 = 보조 데이터베이스에 대 한 직접 연결이 허용 되지 않으며 읽기 액세스를 위해 데이터베이스를 사용할 수 없습니다.<br /><br /> 2 = 보조 repl의 데이터베이스에 대 한 모든 연결을 허용 하 고 읽기 전용 액세스를 허용 합니다.|  
-|secondary_allow_connections_desc|**nvarchar(256)**|아니요<br /><br /> 모두|  
+|secondary_allow_connections_desc|**nvarchar(256)**|예<br /><br /> 모두|  
 |last_commit|**datetimeoffset**|데이터베이스에 마지막으로 커밋된 트랜잭션 시간입니다. 주 데이터베이스에서 검색 된 경우 주 데이터베이스에 대 한 마지막 커밋 시간을 나타냅니다. 보조 데이터베이스에서 검색 된 경우 보조 데이터베이스의 마지막 커밋 시간을 나타냅니다. 복제 링크의 주 복제본이 다운 되 면 보조 데이터베이스에서 검색 된 경우 보조 데이터베이스에서 발견 된 지점을 나타냅니다.|
   
 > [!NOTE]  
@@ -65,8 +65,8 @@ FROM sys.dm_geo_replication_link_status;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [ALTER database &#40;Azure SQL Database&#41; ](../../t-sql/statements/alter-database-azure-sql-database.md)   
- [geo_replication_links &#40;Azure SQL Database&#41; ](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
+ [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)   
+ [geo_replication_links &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
  [dm_operation_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)  
   
   

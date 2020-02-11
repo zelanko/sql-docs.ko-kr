@@ -11,10 +11,10 @@ ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: dfce2ce4a6f13a25687d668268f532893c1404e0
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056295"
 ---
 # <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>SQL Server 기능 및 기능 WideWorldImportersDW 사용
@@ -31,11 +31,11 @@ PolyBase는 WideWorldImportersDW의 판매 정보를 인구 통계에 대 한 �
 
     EXEC [Application].[Configuration_ApplyPolyBase]
 
-이렇게 하면 Azure blob storage에 호스팅된 미국의 도시에 대 한 인구 데이터를 포함 하는 공용 데이터 집합을 참조 하는 외부 테이블 `dbo.CityPopulationStatistics` 만들어집니다. 구성 프로세스를 이해 하려면 저장 프로시저의 코드를 검토 하는 것이 좋습니다. Azure blob storage에서 사용자 고유의 데이터를 호스팅하고 일반 공용 액세스에서 안전 하 게 유지 하려면 추가 구성 단계를 수행 해야 합니다. 다음 쿼리는 해당 외부 데이터 집합의 데이터를 반환 합니다.
+Azure blob storage에 호스트 된 `dbo.CityPopulationStatistics` 미국의 도시에 대 한 인구 데이터를 포함 하는 공용 데이터 집합을 참조 하는 외부 테이블을 만듭니다. 구성 프로세스를 이해 하려면 저장 프로시저의 코드를 검토 하는 것이 좋습니다. Azure blob storage에서 사용자 고유의 데이터를 호스팅하고 일반 공용 액세스에서 안전 하 게 유지 하려면 추가 구성 단계를 수행 해야 합니다. 다음 쿼리는 해당 외부 데이터 집합의 데이터를 반환 합니다.
 
     SELECT CityID, StateProvinceCode, CityName, YearNumber, LatestRecordedPopulation FROM dbo.CityPopulationStatistics;
 
-추가 확장에 관심을 가질 수 있는 도시를 이해 하기 위해 다음 쿼리는 도시의 증가율을 확인 하 고, 상당한 성장을 갖춘 상위 100 가장 큰 도시를 반환 하며, Wide Wide Wide Wide에는 판매가 없습니다. 이 쿼리에는 원격 테이블 `dbo.CityPopulationStatistics`와 로컬 테이블 `Dimension.City`간의 조인이 포함 되며 로컬 테이블 `Fact.Sales`관련 된 필터가 포함 됩니다.
+추가 확장에 관심을 가질 수 있는 도시를 이해 하기 위해 다음 쿼리는 도시의 증가율을 확인 하 고, 상당한 성장을 갖춘 상위 100 가장 큰 도시를 반환 하며, Wide Wide Wide Wide에는 판매가 없습니다. 이 쿼리에는 원격 테이블과 `dbo.CityPopulationStatistics` 로컬 테이블 간의 조인이 포함 되며 로컬 테이블과 `Fact.Sales`관련 된 필터가 포함 됩니다. `Dimension.City`
 
     WITH PotentialCities
     AS
@@ -79,7 +79,7 @@ PolyBase는 WideWorldImportersDW의 판매 정보를 인구 통계에 대 한 �
 
 예제 데이터베이스는 샘플을 쉽게 다운로드 하 고 설치할 수 있도록 제한 된 데이터 크기를 가집니다. 그러나 columnstore 인덱스의 실제 성능 이점을 확인 하려면 더 큰 데이터 집합을 사용 하는 것이 좋습니다.
 
-다음 문을 실행 하 여 예제 데이터의 다른 1200만 행을 삽입 하 여 `Fact.Sales` 테이블의 크기를 늘릴 수 있습니다. 이러한 행은 모두 2012 년 동안 삽입 되며 ETL 프로세스에 대 한 간섭이 없습니다.
+다음 문을 실행 하 여 샘플 데이터의 다른 1200만 행을 `Fact.Sales` 삽입 하 여 테이블 크기를 늘릴 수 있습니다. 이러한 행은 모두 2012 년 동안 삽입 되며 ETL 프로세스에 대 한 간섭이 없습니다.
 
     EXECUTE [Application].[Configuration_PopulateLargeSaleTable]
 
@@ -101,14 +101,14 @@ Columnstore를 사용 하거나 사용 하지 않고 쿼리 성능을 비교 하
 
 데이터 웨어하우스의 데이터 크기는 매우 커질 수 있습니다. 그러므로 분할을 사용 하 여 데이터베이스에 있는 대량 테이블의 저장소를 관리 하는 것이 좋습니다.
 
-모든 큰 팩트 테이블은 연도별로 분할 됩니다. 유일한 예외는 `Fact.Stock Holdings`이며,이는 날짜 기반이 아니고 다른 팩트 테이블과 비교 하 여 데이터 크기가 제한 됩니다.
+모든 큰 팩트 테이블은 연도별로 분할 됩니다. 유일한 예외는 이며 `Fact.Stock Holdings`,이는 날짜 기반이 아니고 다른 팩트 테이블과 비교 하 여 데이터 크기가 제한 된 경우입니다.
 
-분할 된 모든 테이블에 사용 되는 파티션 함수는 `PF_Date`되며 사용 중인 파티션 구성표는 `PS_Date`됩니다.
+분할 된 모든 테이블 `PF_Date`에 사용 되는 파티션 함수는 이며 사용 중인 파티션 구성표는 `PS_Date`입니다.
 
 ## <a name="in-memory-oltp"></a>메모리 내 OLTP
 
 (전체 샘플 버전)
 
-WideWorldImportersDW은 준비 테이블에 SCHEMA_ONLY 메모리 최적화 테이블을 사용 합니다. 모든 `Integration.`*`_Staging` 테이블은 메모리 최적화 테이블을 SCHEMA_ONLY 합니다.
+WideWorldImportersDW은 준비 테이블에 SCHEMA_ONLY 메모리 최적화 테이블을 사용 합니다. `Integration.` * 모든 `_Staging` 테이블은 메모리 최적화 테이블 SCHEMA_ONLY 됩니다.
 
 SCHEMA_ONLY 테이블의 장점은 기록 되지 않으며 디스크 액세스가 필요 하지 않다는 것입니다. 이렇게 하면 ETL 프로세스의 성능이 향상 됩니다. 이러한 테이블은 기록 되지 않으므로 오류가 발생 하면 해당 내용이 손실 됩니다. 그러나 데이터 원본은 여전히 사용할 수 있으므로 오류가 발생 하면 ETL 프로세스를 다시 시작할 수 있습니다.

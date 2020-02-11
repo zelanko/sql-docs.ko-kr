@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7a7d7e7dd9bf7e6d5ad6dfa5776d76892f96ad05
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70148662"
 ---
 # <a name="files-and-version-numbers"></a>파일 및 버전 번호
@@ -32,12 +32,14 @@ ms.locfileid: "70148662"
 > > [!Important]
 > > SMO 어셈블리의 파일 버전은 Major로 표시 됩니다. **0**. 빌드. 수정 버전. 그러나 포함 된 어셈블리 버전은 중요 합니다. **100**. 빌드. 수정 버전. 이 작업은 각 응용 프로그램에서 사용 되는 SMO의 버전을 분리 하 여 다른 항목에 대 한 업데이트가 다른 모든 항목에 영향을 주지 않도록 합니다.
 > > 
-> > 따라서 이러한 버전의 어셈블리 를 GAC (전역 어셈블리 캐시)에 설치 하면 안 됩니다. 이렇게 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio 같은 다른 응용 프로그램이 중단 될 수 있습니다. 
+> > 따라서 이러한 버전의 어셈블리를 GAC (전역 어셈블리 캐시) **에 설치 하면 안 됩니다** . 이렇게 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio 같은 다른 응용 프로그램이 중단 될 수 있습니다. 
   
-|파일|설명|  
+|파일|Description|  
 |-----------|-----------------|  
-|Microsoft.SqlServer.ConnectionInfo.dll|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결 지원을 포함합니다.|  
-|Microsoft.SqlServer.ServiceBrokerEnum.dll|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Service Broker 프로그래밍 지원을 포함합니다. 이 파일은 Service Broker에 액세스하는 프로그램에만 필요합니다.|  
+|Microsoft.SqlServer.ConnectionInfo.dll|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결 지원을 포함합니다.|  
+|Microsoft.SqlServer.ServiceBrokerEnum.dll|
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Service Broker 프로그래밍 지원을 포함합니다. 이 파일은 Service Broker에 액세스하는 프로그램에만 필요합니다.|  
 |Microsoft.SqlServer.Smo.dll|SMO 클래스를 대부분 포함합니다.|  
 |Microsoft.SqlServer.SmoExtended.dll<br /><br /> Microsoft.SqlServer.Management.Sdk.Sfc.dll<br /><br /> Microsoft.SqlServer.SqlEnum.dll|SMO 클래스 지원을 포함합니다.|  
 |Microsoft.SqlServer.WmiEnum.dll|WMI(Windows Management Instrumentation) 공급자 클래스를 포함합니다. 이 파일은 WMI 공급자 클래스를 사용하는 프로그램에만 필요합니다.|  

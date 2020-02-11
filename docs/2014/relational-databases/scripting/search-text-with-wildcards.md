@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: caeda52d612f4df6672f686e06834de6fef0cc67
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243284"
 ---
 # <a name="search-text-with-wildcards"></a>와일드카드로 텍스트 검색
@@ -35,7 +35,7 @@ ms.locfileid: "75243284"
   
  다음 표에서는 **참조 목록**에서 사용할 수 있는 와일드카드를 설명합니다.  
   
-|식|구문|설명|  
+|식|구문|Description|  
 |----------------|------------|-----------------|  
 |임의의 단일 문자|?|임의의 문자 하나에 대응합니다.|  
 |임의의 단일 숫자|#|임의의 숫자 하나와 대응합니다. 예를 들어 7#은 7 다음에 다른 숫자 하나가 표시되는 숫자와 일치합니다(즉, 71과는 일치하지만 17과는 일치하지 않음).|  
@@ -44,5 +44,5 @@ ms.locfileid: "75243284"
 |문자 집합|[ ]|집합에 지정된 문자 중 하나와 대응합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [검색 및 바꾸기](search-and-replace.md)   
- [정규식을 사용 하 여 텍스트 검색](search-text-with-regular-expressions.md)  
+ [찾기 및 바꾸기](search-and-replace.md)   
+ [정규식을 사용한 텍스트 검색](search-text-with-regular-expressions.md)  

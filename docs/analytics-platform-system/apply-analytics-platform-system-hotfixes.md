@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fd62413ec8542aba9f3973d0e8483cb9c5c9128a
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401372"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>Analytics Platform System 핫픽스 적용
@@ -27,7 +27,7 @@ ms.locfileid: "74401372"
 > [!WARNING]  
 > 어플라이언스를 사용 하는 동안에는 분석 플랫폼 시스템 핫픽스를 적용 하지 마십시오. 핫픽스를 적용 하면 어플라이언스 노드가 재부팅 될 수 있습니다. 어플라이언스를 사용 하지 않는 경우 유지 관리 기간 중에 핫픽스를 적용 해야 합니다.  
   
-### <a name="prerequisites"></a>필수 구성 요소  
+### <a name="prerequisites"></a>사전 요구 사항  
 이러한 단계를 수행 하려면 다음이 필요 합니다.  
   
 -   관리 콘솔에 액세스 하 여 어플라이언스 상태를 모니터링할 수 있는 권한이 있는 분석 플랫폼 시스템 로그인입니다. <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  

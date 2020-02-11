@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b11aa11f942e6f0f801de36c7d15e17cae4141b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916623"
 ---
 # <a name="publish-a-database-sql-server-management-studio"></a>데이터베이스 게시(SQL Server Management Studio)
@@ -44,7 +44,7 @@ ms.locfileid: "62916623"
   
 5.  **스크립트 저장 또는 게시** 페이지에서 게시 진행률을 모니터링합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [스크립트 생성&#40;SQL Server Management Studio&#41;](../scripting/generate-scripts-sql-server-management-studio.md)   
  [데이터베이스를 다른 서버로 복사](copy-databases-to-other-servers.md)  
   

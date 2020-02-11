@@ -24,10 +24,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6ecaeed10c5903b50d848a42ff3b12ee96ebeaf5
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73779138"
 ---
 # <a name="fetching-result-data"></a>결과 데이터 인출
@@ -45,7 +45,7 @@ ms.locfileid: "73779138"
   
  **SQLBindCol** 에서 ODBC 드라이버가 메모리를 할당 하기 때문에 **SQLBindCol** 를 과도 하 게 사용 하면 결과 집합 열을 프로그램 변수에 바인딩할 수 있습니다. 결과 열을 변수에 바인딩하는 경우 [Sqlfreehandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md) 을 호출 하 여 문 핸들을 해제 하거나 *foption* 이 SQL_UNBIND로 설정 된 [SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md) 를 호출할 때까지 해당 바인딩은 적용 된 상태로 유지 됩니다. 바인딩은 문이 완료될 때 자동으로 취소되지 않습니다.  
   
- 이 논리를 이용해 서로 다른 매개 변수를 사용하는 동일 SELECT 문의 복수 실행을 효과적으로 처리할 수 있습니다. 결과 집합이 동일한 구조를 유지 하기 때문에 결과 집합을 한 번 바인딩하고, 모든 SELECT 문을 처리 한 다음, 마지막 실행 후 SQL_UNBIND으로 *Foption* 을 설정 하 여 **SQLFreeStmt** 를 호출할 수 있습니다. **SQLBindCol** SQL_UNBIND를 호출 하 여 SQLFreeStmt로 설정 된 *Foption* 이 있는 를 먼저 호출 하지 않고 결과 집합의 열을 바인딩하려면 먼저 이전 바인딩을 해제 해야 합니다.  
+ 이 논리를 이용해 서로 다른 매개 변수를 사용하는 동일 SELECT 문의 복수 실행을 효과적으로 처리할 수 있습니다. 결과 집합이 동일한 구조를 유지 하기 때문에 결과 집합을 한 번 바인딩하고, 모든 SELECT 문을 처리 한 다음, 마지막 실행 후 SQL_UNBIND으로 *Foption* 을 설정 하 여 **SQLFreeStmt** 를 호출할 수 있습니다. **SQLBindCol** SQL_UNBIND를 호출 하 여 SQLFreeStmt로 설정 된 *Foption* 이 있는 **** 를 먼저 호출 하지 않고 결과 집합의 열을 바인딩하려면 먼저 이전 바인딩을 해제 해야 합니다.  
   
  **SQLBindCol**를 사용 하는 경우 행 단위 또는 열 단위 바인딩을 수행할 수 있습니다. 행 단위 바인딩은 열 단위 바인딩보다 빠릅니다.  
   
@@ -53,17 +53,18 @@ ms.locfileid: "73779138"
   
  **SQLGetData**, **SQLBindCol**및 [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)와 같이 프로그램 변수로 데이터를 이동 하거나 외부로 이동 하는 것을 처리 하는 ODBC 함수는 암시적 데이터 형식 변환을 지원 합니다. 예를 들어 애플리케이션이 정수 열을 문자열 프로그램 변수에 바인딩할 경우 드라이버는 해당 데이터를 자동으로 정수에서 문자로 변환한 후 이를 프로그램 변수에 전달합니다.  
   
- 애플리케이션에서의 데이터 변환은 최소화해야 합니다. 애플리케이션에서 수행하는 처리에 데이터 변환이 반드시 필요한 경우가 아니면 애플리케이션은 열과 매개 변수를 동일한 형식의 프로그램 변수에 바인딩해야 합니다. 데이터 형식 변환이 반드시 필요한 경우에는 애플리케이션에서가 아니라 드라이버가 변환을 수행하도록 하는 것이 효율적입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 일반적으로 네트워크 버퍼에서 애플리케이션의 변수에 직접 데이터를 전달합니다. 데이터 변환을 수행하도록 드라이버에 요청하면 드라이버는 데이터를 버퍼링한 후 CPU 주기를 사용하여 데이터를 변환합니다.  
+ 애플리케이션에서의 데이터 변환은 최소화해야 합니다. 애플리케이션에서 수행하는 처리에 데이터 변환이 반드시 필요한 경우가 아니면 애플리케이션은 열과 매개 변수를 동일한 형식의 프로그램 변수에 바인딩해야 합니다. 데이터 형식 변환이 반드시 필요한 경우에는 애플리케이션에서가 아니라 드라이버가 변환을 수행하도록 하는 것이 효율적입니다. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 일반적으로 네트워크 버퍼에서 애플리케이션의 변수에 직접 데이터를 전달합니다. 데이터 변환을 수행하도록 드라이버에 요청하면 드라이버는 데이터를 버퍼링한 후 CPU 주기를 사용하여 데이터를 변환합니다.  
   
  프로그램 변수는 **text**, **ntext**및 **image** 데이터를 제외 하 고 열에서 전송 된 데이터를 저장할 수 있을 만큼 커야 합니다. 애플리케이션이 결과 집합 데이터를 검색한 후 해당 데이터를 수용하기에 너무 작은 변수에 데이터를 삽입하려고 하면 드라이버가 경고를 생성합니다. 이 경우 드라이버는 메시지에 사용할 메모리를 할당하게 되고 드라이버와 애플리케이션 모두 메시지 및 오류 처리를 위해 CPU 주기를 사용해야 합니다. 애플리케이션은 검색된 데이터를 수용할 수 있을 만큼 큰 변수를 할당하거나 SELECT 목록에서 SUBSTRING 함수를 사용하여 결과 집합의 열 크기를 줄여야 합니다.  
   
  SQL_C_DEFAULT를 사용하여 C 변수의 형식을 지정할 때는 주의를 기울여야 합니다. SQL_C_DEFAULT는 C 변수 형식이 열이나 매개 변수의 SQL 데이터 형식과 일치하도록 지정합니다. **Ntext**, **nchar**또는 **nvarchar** 열에 SQL_C_DEFAULT을 지정 하면 유니코드 데이터가 응용 프로그램으로 반환 됩니다. 유니코드 데이터를 처리하도록 애플리케이션이 코딩되지 않은 경우 이로 인해 여러 가지 문제가 발생할 수 있습니다. **Uniqueidentifier** (SQL_GUID) 데이터 형식에는 동일한 유형의 문제가 발생할 수 있습니다.  
   
- **text**, **ntext**및 **image** 데이터는 일반적으로 너무 커서 단일 프로그램 변수에 맞지 않으며 일반적으로 **SQLBindCol**대신 **SQLGetData** 를 사용 하 여 처리 됩니다. 서버 커서를 사용 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 행이 인출 될 때 바인딩되지 않은 **text**, **ntext**또는 **image** 열에 대 한 데이터를 전송 하지 않도록 최적화 되어 있습니다. **Text**, **ntext**또는 **image** 데이터는 응용 프로그램이 열에 대해 **SQLGetData** 를 발급할 때까지 서버에서 실제로 검색 되지 않습니다.  
+ **text**, **ntext**및 **image** 데이터는 일반적으로 너무 커서 단일 프로그램 변수에 맞지 않으며 일반적으로 **SQLBindCol**대신 **SQLGetData** 를 사용 하 여 처리 됩니다. 서버 커서를 사용할 때 Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC 드라이버는 행이 인출 될 때 바인딩되지 않은 **text**, **ntext**또는 **image** 열에 대 한 데이터를 전송 하지 않도록 최적화 되어 있습니다. **Text**, **ntext**또는 **image** 데이터는 응용 프로그램이 열에 대해 **SQLGetData** 를 발급할 때까지 서버에서 실제로 검색 되지 않습니다.  
   
  사용자가 커서를 위나 아래로 스크롤 하는 동안 **text**, **ntext**또는 **image** 데이터가 표시 되지 않도록 이러한 최적화를 응용 프로그램에 적용할 수 있습니다. 사용자가 행을 선택 하면 응용 프로그램에서 **SQLGetData** 를 호출 하 여 **text**, **ntext**또는 **image** 데이터를 검색할 수 있습니다. 이렇게 하면 사용자가 선택 하지 않은 행에 대해 **text**, **ntext**또는 **image** 데이터를 전송 하 고 대량의 데이터 전송을 저장할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [결과 &#40;ODBC 처리&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+## <a name="see-also"></a>참고 항목  
+ [ODBC&#41;&#40;결과 처리](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

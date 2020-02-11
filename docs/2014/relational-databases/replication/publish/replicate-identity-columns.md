@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c6410e6b21ec3ebbb3cfb01fa78ffe80b2196a3
-ms.sourcegitcommit: ea6603e20c723553c89827a6b8731a9e7b560b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74479250"
 ---
 # <a name="replicate-identity-columns"></a>ID 열 복제
@@ -65,7 +65,7 @@ ms.locfileid: "74479250"
 |`smallint`|-2^15(-32,768) ~ 2^15-1(32,767)|  
 |`int`|-2^31(-2,147,483,648) ~ 2^31-1(2,147,483,647)|  
 |`bigint`|-2^63(-9,223,372,036,854,775,808) ~ 2^63-1(9,223,372,036,854,775,807)|  
-|`decimal`하거나`numeric`|-10^38+1 ~ 10^38-1|  
+|`decimal` 및 `numeric`|-10^38+1 ~ 10^38-1|  
   
 > [!NOTE]  
 >  여러 테이블에서 사용할 수 있거나 테이블을 참조하지 않고 애플리케이션에서 호출할 수 있는 자동으로 증가하는 번호를 만들려면 [시퀀스 번호](../../sequence-numbers/sequence-numbers.md)를 참조하세요.  
@@ -126,10 +126,10 @@ ms.locfileid: "74479250"
     >  ID 열의 값이 증가값이 아닌 감소값으로 설정되면 발견된 값 중 가장 낮은 값을 기록하고 해당 값으로 초기값을 다시 설정합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;백업 &#40;](/sql/t-sql/statements/backup-transact-sql)   
- [Transact-sql&#41;DBCC CHECKIDENT &#40;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql)   
- [Transact-sql&#41;IDENT_CURRENT &#40;](/sql/t-sql/functions/ident-current-transact-sql)   
- [Transact-sql&#41;IDENTITY &#40;속성&#41; &#40;](/sql/t-sql/statements/create-table-transact-sql-identity-property)   
+ [BACKUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
+ [DBCC CHECKIDENT&#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql)   
+ [IDENT_CURRENT&#40;Transact-SQL&#41;](/sql/t-sql/functions/ident-current-transact-sql)   
+ [IDENTITY&#40;속성&#41;&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)   
  [Transact-sql&#41;sp_adjustpublisheridentityrange &#40;](/sql/relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql)  
   
   

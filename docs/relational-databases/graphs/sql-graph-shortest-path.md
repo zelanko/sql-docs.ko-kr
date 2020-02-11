@@ -19,10 +19,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
 ms.openlocfilehash: 9318a34b4853937983b107491c9210de80e5506c
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056398"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-sql)
@@ -30,7 +30,7 @@ ms.locfileid: "74056398"
 
   반복적으로 또는 반복적으로 검색 되는 그래프의 검색 조건을 지정 합니다. SELECT 문에서 그래프 노드 및에 지 테이블과 일치 하는 항목 내에 SHORTEST_PATH를 사용할 수 있습니다. 
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="shortest-path"></a>최단 경로
 SHORTEST_PATH 함수를 사용 하 여 다음을 찾을 수 있습니다.    
@@ -48,8 +48,8 @@ FOR PATH는 임의의 길이 패턴에 참여 하는 FROM 절에서 모든 노�
 ## <a name="arbitrary-length-pattern"></a>임의 길이 패턴
 이 패턴에는 원하는 노드에 도달할 때까지 또는 패턴에 지정 된 최대 반복 횟수가 충족 될 때까지 반복적으로 이동 해야 하는 노드 및 가장자리가 포함 됩니다. 쿼리가 실행 될 때마다이 패턴을 실행 한 결과는 시작 노드에서 끝 노드로 경로를 따라 이동 하는 노드의 정렬 된 컬렉션입니다. 정규식 스타일 구문 패턴이 며 다음 두 가지 패턴 수량자가 지원 됩니다.
 
-* **' + '** : 패턴을 1 번 이상 반복 합니다. 최단 경로를 찾는 즉시 종료됩니다.
-* **{1, n}** : 패턴 1 ~ ' n '을 반복 합니다. 가장 짧은 항목이 발견 되 면 즉시 종료 합니다.
+* **' + '**: 패턴을 1 번 이상 반복 합니다. 최단 경로를 찾는 즉시 종료됩니다.
+* **{1, n}**: 패턴 1 ~ ' n '을 반복 합니다. 가장 짧은 항목이 발견 되 면 즉시 종료 합니다.
 
 ## <a name="last_node"></a>LAST_NODE
 LAST_NODE () 함수는 두 개의 임의 길이 트래버스 패턴의 체인을 허용 합니다. 다음과 같은 시나리오에서 사용할 수 있습니다.    
@@ -85,26 +85,26 @@ STRING_AGG 함수는 식과 구분 기호를 입력으로 사용 하 고 문자�
 ### <a name="last_value"></a>LAST_VALUE
 트래버스 된 경로에서 마지막 노드의 특성을 프로젝션 하려면 LAST_VALUE 집계 함수를 사용할 수 있습니다. Edge 테이블 별칭을이 함수에 대 한 입력으로 제공 하면 노드 테이블 이름 또는 별칭만 사용할 수 있습니다.
 
-**마지막 노드**: 마지막 노드는 일치 조건자의 화살표 방향에 관계 없이 트래버스 된 경로에서 마지막으로 표시 되는 노드를 참조 합니다. 예를 들어 `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`을 참조하십시오. 여기서 경로의 마지막 노드는 마지막으로 방문한 P 노드가 됩니다. 
+**마지막 노드**: 마지막 노드는 일치 조건자의 화살표 방향에 관계 없이 트래버스 된 경로에서 마지막으로 표시 되는 노드를 참조 합니다. 예: `MATCH(SHORTEST_PATH(n(-(e)->p)+) )` 여기서 경로의 마지막 노드는 마지막으로 방문한 P 노드가 됩니다. 
 
-반면 마지막 노드는이 패턴에 대 한 출력 그래프 경로의 마지막 n 번째 노드입니다. `MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
+반면 마지막 노드는이 패턴에 대 한 출력 그래프 경로의 마지막 n 번째 노드입니다.`MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
 
-### <a name="sum"></a>SUM
+### <a name="sum"></a>합계
 이 함수는 트래버스하 경로에 나타난 제공 된 노드/가장자리 특성 값 또는 식의 합계를 반환 합니다.
 
-### <a name="count"></a>COUNT
-이 함수는 경로에서 원하는 node/edge 특성의 null이 아닌 값의 개수를 반환 합니다. COUNT 함수는 노드 또는에 지 테이블 별칭으로 '\*' 연산자를 지원 합니다. 노드 또는에 지 테이블 별칭이 없으면 \* 사용이 모호 하 고 오류가 발생 합니다.
+### <a name="count"></a>개수
+이 함수는 경로에서 원하는 node/edge 특성의 null이 아닌 값의 개수를 반환 합니다. COUNT 함수는 노드 또는에\*지 테이블 별칭이 있는 ' ' 연산자를 지원 합니다. 노드 또는에 지 테이블 별칭이 없으면의 \* 사용법이 모호 하 고 오류가 발생 합니다.
 
     {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
 
 
-### <a name="avg"></a>AVG
+### <a name="avg"></a>평균
 제공 된 노드/가장자리 특성 값 또는 트래버스 된 경로에 나타난 식의 평균을 반환 합니다.
 
-### <a name="min"></a>MIN
+### <a name="min"></a>최소
 제공 된 노드/가장자리 특성 값 또는 트래버스 된 경로에 나타난 식의 최소값을 반환 합니다.
 
-### <a name="max"></a>MAX
+### <a name="max"></a>최대
 제공 된 노드/가장자리 특성 값 또는 트래버스 된 경로에 나타난 식의 최대값을 반환 합니다.
 
 ## <a name="remarks"></a>설명  
@@ -137,7 +137,7 @@ FROM (
 WHERE Q.LastNode = 'Alice'
  ```
 
- ### <a name="b--find-shortest-path-from-a-given-node-to-all-other-nodes-in-the-graph"></a>2\.  지정 된 노드에서 그래프의 다른 모든 노드로 최단 경로를 찾습니다. 
+ ### <a name="b--find-shortest-path-from-a-given-node-to-all-other-nodes-in-the-graph"></a>B.  지정 된 노드에서 그래프의 다른 모든 노드로 최단 경로를 찾습니다. 
  다음 예에서는 그래프에서 Jacob가 연결 된 모든 사용자와 Jacob부터 모든 사람들까지 가장 짧은 경로를 찾습니다. 
 
  ```
@@ -152,7 +152,7 @@ WHERE MATCH(SHORTEST_PATH(Person1(-(fo)->Person2)+))
 AND Person1.name = 'Jacob'
  ```
 
-### <a name="c--count-the-number-of-hopslevels-traversed-to-go-from-one-person-to-another-in-the-graph"></a>3\.  그래프의 한 사용자에서 다른 사용자로 이동 하기 위해 트래버스하는 홉/수준의 수를 계산 합니다.
+### <a name="c--count-the-number-of-hopslevels-traversed-to-go-from-one-person-to-another-in-the-graph"></a>C.  그래프의 한 사용자에서 다른 사용자로 이동 하기 위해 트래버스하는 홉/수준의 수를 계산 합니다.
  다음 예제에서는 Jacob와 Alice 사이의 최단 경로를 찾아 Jacob에서 Alice로 이동 하는 데 걸리는 홉 수를 인쇄 합니다. 
 
  ```
@@ -173,7 +173,7 @@ FROM (
 WHERE Q.LastNode = 'Alice'
  ```
 
-### <a name="d-find-people-1-3-hops-away-from-a-given-person"></a>4\. 지정 된 사용자 로부터 받은 사용자 1-3 홉 찾기
+### <a name="d-find-people-1-3-hops-away-from-a-given-person"></a>D. 지정 된 사용자 로부터 받은 사용자 1-3 홉 찾기
 다음 예에서는 Jacob와 graph 1-3에서 연결 된 모든 사람 사이에서 가장 짧은 경로를 찾습니다. 
 
 ```
@@ -188,7 +188,7 @@ WHERE MATCH(SHORTEST_PATH(Person1(-(fo)->Person2){1,3}))
 AND Person1.name = 'Jacob'
 ```
 
-### <a name="e-find-people-exactly-2-hops-away-from-a-given-person"></a>5\. 지정 된 사용자가 정확히 2 개의 홉을 찾습니다.
+### <a name="e-find-people-exactly-2-hops-away-from-a-given-person"></a>E. 지정 된 사용자가 정확히 2 개의 홉을 찾습니다.
 다음 예제에서는 Jacob 사이에서 가장 짧은 경로를 검색 하 고, 그래프에서 정확히 2 개의 홉을 말합니다. 
 
 ```
@@ -210,7 +210,7 @@ WHERE Q.levels = 2
 
 ## <a name="see-also"></a>참고 항목  
  [MATCH (SQL 그래프)](../../t-sql/queries/match-sql-graph.md)    
- [CREATE TABLE &#40;SQL Graph&#41;](../../t-sql/statements/create-table-sql-graph.md)   
- [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
+ [SQL 그래프를 &#40;CREATE TABLE&#41;](../../t-sql/statements/create-table-sql-graph.md)   
+ [INSERT(SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
  [SQL Server 2017에서 그래프 처리](../../relational-databases/graphs/sql-graph-overview.md)     
  

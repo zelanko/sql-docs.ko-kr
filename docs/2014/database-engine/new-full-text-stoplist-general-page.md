@@ -13,20 +13,21 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: eca5e82b9d23709b45949cfe6af9022f1243ef08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774215"
 ---
 # <a name="new-full-text-stoplist-general-page"></a>새 전체 텍스트 중지 목록(일반 페이지)
-  이 대화 상자를 사용하여 전체 텍스트 중지 목록을 만들 수 있습니다. *중지 목록은* *중지 단어*라고 하는 일반적으로 사용되는 단어 집합으로, 중지 목록을 사용하는 테이블에 대한 전체 텍스트 인덱싱에서 생략됩니다. 자세한 내용은 [전체 텍스트 검색에 사용할 중지 단어와 중지 목록 구성 및 관리](../relational-databases/search/full-text-search.md)를 참조하세요.  
+  이 대화 상자를 사용하여 전체 텍스트 중지 목록을 만들 수 있습니다. 
+  *중지 목록은**중지 단어*라고 하는 일반적으로 사용되는 단어 집합으로, 중지 목록을 사용하는 테이블에 대한 전체 텍스트 인덱싱에서 생략됩니다. 자세한 내용은 [전체 텍스트 검색에 사용할 중지 단어와 중지 목록 구성 및 관리](../relational-databases/search/full-text-search.md)를 참조하세요.  
   
- **중지 목록을 만들려면 SQL Server Management Studio를 사용 하려면**  
+ **SQL Server Management Studio를 사용하여 중지 목록을 만들려면**  
   
 -   [전체 텍스트 검색에 사용할 중지 단어와 중지 목록 구성 및 관리](../relational-databases/search/full-text-search.md)  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **전체 텍스트 중지 목록 이름**  
  전체 텍스트 중지 목록의 이름을 입력합니다.  
   
@@ -42,7 +43,8 @@ ms.locfileid: "62774215"
  새 중지 목록에 중지 단어가 포함되지 않습니다.  
   
  **시스템 중지 목록에서 만들기**  
- [리소스 데이터베이스](../relational-databases/databases/resource-database.md)에 기본적으로 존재하는 중지 목록으로 새 중지 목록을 만듭니다.  
+ 
+  [리소스 데이터베이스](../relational-databases/databases/resource-database.md)에 기본적으로 존재하는 중지 목록으로 새 중지 목록을 만듭니다.  
   
  **기존 전체 텍스트 중지 목록에서 만들기**  
  기존 중지 목록을 복사하여 새 중지 목록을 만듭니다.  
@@ -55,7 +57,7 @@ ms.locfileid: "62774215"
   
  원본 중지 목록에 중지 단어로 지정된 언어가 현재 데이터베이스에 등록되지 않은 경우 CREATE FULLTEXT STOPLIST는 성공하지만 경고가 반환되고 해당 중지 단어가 추가되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)   
  [CREATE FULLTEXT STOPLIST&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)   
  [DROP FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-fulltext-stoplist-transact-sql)   

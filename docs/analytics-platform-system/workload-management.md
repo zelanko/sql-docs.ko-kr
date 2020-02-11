@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d14714cb23a9f6b0d6cc63ddca5049cb6741017c
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399441"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>분석 플랫폼 시스템의 워크 로드 관리
@@ -58,7 +58,7 @@ ALTER SERVER ROLE largerc ADD MEMBER Anna;
 ## <a name="RC"></a>리소스 클래스 설명  
 다음 표에서는 리소스 클래스 및 해당 시스템 리소스 할당에 대해 설명 합니다.  
   
-|리소스 클래스|요청 중요도|최대 메모리 사용량 *|동시성 슬롯 (최대값 = 32)|설명|  
+|리소스 클래스|요청 중요도|최대 메모리 사용량 *|동시성 슬롯 (최대값 = 32)|Description|  
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
 |기본값|중간|400 MB|1|기본적으로 각 로그인은 적은 양의 메모리와 해당 요청에 대 한 동시성 리소스를 허용 합니다.<br /><br />리소스 클래스에 로그인을 추가 하면 새 클래스가 우선적으로 적용 됩니다. 모든 리소스 클래스에서 로그인을 삭제 하면 해당 로그인은 기본 리소스 할당으로 돌아갑니다.|  
 |MediumRC|중간|1200 M B|3|중간 리소스 클래스가 필요할 수 있는 요청의 예는 다음과 같습니다.<br /><br />해시 조인이 많은 CTAS 작업<br /><br />디스크로의 캐싱을 방지 하기 위해 더 많은 메모리가 필요한 작업을 선택 합니다.<br /><br />클러스터형 columnstore 인덱스에 데이터를 로드 하는 중입니다.<br /><br />10-15 개의 열이 있는 작은 테이블에 대 한 클러스터형 columnstore 인덱스를 작성, 다시 작성 및 다시 구성 합니다.|  
@@ -131,7 +131,7 @@ SQL Server PDW 문을 실행 하기 전에 요청에 필요한 동시성 슬롯�
   
 -   UPDATE  
   
--   삭제  
+-   Delete  
   
 -   더 많은 계산 노드를 사용 하 여 어플라이언스로 복원할 때 데이터베이스를 복원 합니다.  
   
@@ -140,7 +140,7 @@ SQL Server PDW 문을 실행 하기 전에 요청에 필요한 동시성 슬롯�
 ## <a name="Limits"></a>제한 사항  
 리소스 클래스는 메모리 및 동시성 할당을 제어 합니다.  이러한 작업은 입/출력 작업을 제어 하지 않습니다.  
   
-## <a name="Metadata"></a>메타  
+## <a name="Metadata"></a>메타데이터  
 리소스 클래스 및 리소스 클래스 멤버에 대 한 정보를 포함 하는 Dmv입니다.  
   
 -   [sys.server_role_members](../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)  
@@ -149,9 +149,9 @@ SQL Server PDW 문을 실행 하기 전에 요청에 필요한 동시성 슬롯�
   
 요청 상태와 필요한 리소스에 대 한 정보를 포함 하는 Dmv:  
   
--   [sys. dm_pdw_lock_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-lock-waits-transact-sql.md)  
+-   [sys.dm_pdw_lock_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-lock-waits-transact-sql.md)  
   
--   [sys. dm_pdw_resource_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md)  
+-   [sys.dm_pdw_resource_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md)  
   
 계산 노드의 SQL Server Dmv에서 노출 되는 관련 시스템 뷰입니다. MSDN의 이러한 Dmv에 대 한 링크는 [SQL Server 동적 관리 뷰](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) 를 참조 하세요.  
   
@@ -177,7 +177,7 @@ SQL Server PDW 문을 실행 하기 전에 요청에 필요한 동시성 슬롯�
   
 -   sys.dm_pdw_nodes_exec_cached_plans  
   
-## <a name="RelatedTasks"></a>관련 태스크  
+## <a name="RelatedTasks"></a>관련 작업  
 [작업 관리 작업](workload-management-tasks.md)  
   
 <!-- MISSING LINKS

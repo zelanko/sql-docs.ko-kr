@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: fc99b725f4c5895306d544df14bf2a9390189066
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244530"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 보안 센터
@@ -56,7 +56,7 @@ ms.locfileid: "75244530"
   
  **다른 Id 사용**  
   
--   [자격 증명 &#40;데이터베이스 엔진&#41;](authentication-access/credentials-database-engine.md)  
+-   [자격 증명&#40;데이터베이스 엔진&#41;](authentication-access/credentials-database-engine.md)  
   
 -   [다른 로그인으로 실행](/sql/t-sql/statements/execute-as-transact-sql)  
   
@@ -92,9 +92,9 @@ ms.locfileid: "75244530"
  ![작은 파일 폴더 아이콘](../../integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") **권한 부여: 무엇을 할 수 있나요?**  
  **권한 부여, 취소 및 거부**  
   
--   [데이터베이스 엔진&#41;&#40;사용 권한 계층](permissions-hierarchy-database-engine.md)  
+-   [사용 권한 계층&#40;데이터베이스 엔진&#41;](permissions-hierarchy-database-engine.md)  
   
--   [권한에](permissions-database-engine.md)  
+-   [권한](permissions-database-engine.md)  
   
 -   [보안 개체](securables.md)  
   
@@ -118,7 +118,7 @@ ms.locfileid: "75244530"
  ![작은 파일 폴더 아이콘](../../integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") **연결 보안: 제한 및 보안**  
  **방화벽 보호**  
   
--   [데이터베이스 엔진 액세스에 대 한 Windows 방화벽 구성](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
+-   [데이터베이스 엔진 액세스에 대한 Windows 방화벽 구성](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
   
 -   [Azure SQL Database 방화벽 설정](/sql/relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database)  
   
@@ -133,7 +133,7 @@ ms.locfileid: "75244530"
  ![작은 파일 폴더 아이콘](../../integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") **감사: 액세스 기록**  
  **자동화 된 감사**  
   
--   [SQL Server 감사 &#40;데이터베이스 엔진&#41;](auditing/sql-server-audit-database-engine.md)  
+-   [SQL Server Audit&#40;데이터베이스 엔진&#41;](auditing/sql-server-audit-database-engine.md)  
   
 -   [SQL Database 감사](https://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)  
   
@@ -146,18 +146,18 @@ ms.locfileid: "75244530"
   
 -   [공통 조건](https://go.microsoft.com/fwlink/?LinkId=616319)  
   
- **SQL Database**  
+ **SQL 데이터베이스**  
   
 -   [Microsoft Azure 보안 센터: 기능별 준수](https://azure.microsoft.com/support/trust-center/services/)  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 보안](securing-sql-server.md)   
- [보안 주체 &#40;데이터베이스 엔진&#41;](authentication-access/principals-database-engine.md)   
+ [보안 주체&#40;데이터베이스 엔진&#41;](authentication-access/principals-database-engine.md)   
  [인증서 및 비대칭 키 SQL Server](sql-server-certificates-and-asymmetric-keys.md)   
- [암호화 SQL Server](encryption/sql-server-encryption.md)   
+ [SQL Server 암호화](encryption/sql-server-encryption.md)   
  [노출 영역 구성](surface-area-configuration.md)   
  [강력한 암호](strong-passwords.md)   
- [신뢰 데이터베이스 속성](trustworthy-database-property.md)   
- [데이터베이스 엔진 기능 및 작업](../../database-engine/database-engine-features-and-tasks.md)  
+ [TRUSTWORTHY 데이터베이스 속성](trustworthy-database-property.md)   
+ [데이터베이스 엔진 기능 및 태스크](../../database-engine/database-engine-features-and-tasks.md)  
   
   

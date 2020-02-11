@@ -24,10 +24,10 @@ helpviewer_keywords:
 - rank
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 376438a45d6b104cbf4e66dbdf8e5542cf3fd2c2
-ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74542049"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications(Transact-SQL)
@@ -35,18 +35,18 @@ ms.locfileid: "74542049"
 
 데이터베이스의 각 분류 된 항목에 대해 행을 반환 합니다.
 
-|열 이름|데이터 형식|설명|
+|열 이름|데이터 형식|Description|
 |-----------------|---------------|-----------------|  
 |**클래스**|**int**|분류가 존재 하는 항목의 클래스를 식별 합니다. 항상 값 1 (열을 나타냄)이 있습니다.|  
 |**class_desc**|**varchar (16)**|분류가 존재 하는 항목의 클래스에 대 한 설명입니다. 에는 항상 값이 포함 됩니다 *OBJECT_OR_COLUMN*|  
 |**major_id**|**int**|All_objects에 해당 하는 분류 된 열을 포함 하는 테이블의 ID를 나타냅니다 object_id|  
 |**minor_id**|**int**|All_columns에 해당 하는 분류가 있는 열의 ID를 나타냅니다 column_id|   
-|**레이블**|**sysname 이며**|민감도 분류에 할당 된 레이블 (사람이 읽을 수 있음)|  
-|**label_id**|**sysname 이며**|레이블과 연결 된 ID입니다 .이 ID는 AIP (Azure Information Protection)와 같은 정보 보호 시스템에서 사용할 수 있습니다.|  
-|**information_type**|**sysname 이며**|민감도 분류에 할당 된 정보 유형 (사람이 읽을 수 있음)|  
-|**information_type_id**|**sysname 이며**|정보 보호 시스템에서 사용할 수 있는 정보 유형과 연결 된 ID입니다 (AIP (Azure Information Protection)).|  
+|**label**|**sysname**|민감도 분류에 할당 된 레이블 (사람이 읽을 수 있음)|  
+|**label_id**|**sysname**|레이블과 연결 된 ID입니다 .이 ID는 AIP (Azure Information Protection)와 같은 정보 보호 시스템에서 사용할 수 있습니다.|  
+|**information_type**|**sysname**|민감도 분류에 할당 된 정보 유형 (사람이 읽을 수 있음)|  
+|**information_type_id**|**sysname**|정보 보호 시스템에서 사용할 수 있는 정보 유형과 연결 된 ID입니다 (AIP (Azure Information Protection)).|  
 |**배열**|**int**|Rank의 숫자 값입니다. <br><br>없음의 경우 0<br>낮음의 경우 10<br>MEDIUM의 경우 20<br>높음의 경우 30<br>40 위험| 
-|**rank_desc**|**sysname 이며**|Rank의 텍스트 표현입니다.  <br><br>없음, 낮음, 중간, 높음, 위험|  
+|**rank_desc**|**sysname**|Rank의 텍스트 표현입니다.  <br><br>없음, 낮음, 중간, 높음, 위험|  
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="remarks"></a>설명  
@@ -75,15 +75,15 @@ left join sys.all_columns on sys.sensitivity_classifications.major_id = sys.all_
                          and sys.sensitivity_classifications.minor_id = sys.all_columns.column_id
 ```
 
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  **민감도 분류 보기** 권한이 필요 합니다. 
  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]자세한 내용은 [메타 데이터 표시 유형 구성](../../relational-databases/security/metadata-visibility-configuration.md)을 참조 하세요.  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
 
 ## <a name="see-also"></a>참고 항목  
 
-[민감도 분류 추가 (Transact-sql)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
+[ADD SENSITIVITY CLASSIFICATION(Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
 
-[DROP 민감도 분류 (Transact-sql)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
+[DROP SENSITIVITY CLASSIFICATION(Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
 [SQL Information Protection 시작](https://aka.ms/sqlip)

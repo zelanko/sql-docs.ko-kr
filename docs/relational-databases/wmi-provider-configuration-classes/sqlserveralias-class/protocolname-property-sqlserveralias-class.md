@@ -18,10 +18,10 @@ ms.assetid: 8fb81ab3-15f1-4a71-be72-2072c6bcc670
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 957faa6c58c9149ec703fe9fa269e379d4e5b6f6
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660417"
 ---
 # <a name="protocolname-property-sqlserveralias-class"></a>ProtocolName 속성(SqlServerAlias 클래스)
@@ -36,11 +36,12 @@ object.ProtocolName [= value]
 ```  
   
 ## <a name="parts"></a>부분  
- *object*  
- [별칭을 나타내는](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md) SqlServerAlias 클래스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 개체입니다.  
+ *개체가*  
+ 
+  [별칭을 나타내는](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md) SqlServerAlias 클래스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  서버 연결 별칭에서 사용하는 프로토콜의 이름을 지정하는 문자열 값입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
   

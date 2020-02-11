@@ -1,5 +1,5 @@
 ---
-title: 사용자 선택 대화 상자 (Analysis Services-다차원 데이터) | Microsoft Docs
+title: 사용자 선택 대화 상자 (Analysis Services 다차원 데이터) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,23 +13,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cae7cb0c9219a49bb22537b632fa9f1686eb7e6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065486"
 ---
 # <a name="user-selection-dialog-box-analysis-services---multidimensional-data"></a>사용자 선택 대화 상자(Analysis Services - 다차원 데이터)
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 및 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 **사용자 선택** 대화 상자를 사용하여 사용 빈도 기반 최적화 마법사에 대한 쿼리 로그에 저장된 쿼리를 필터링할 사용자를 선택할 수 있습니다.  
   
- **사용자 선택** 대화 상자를 열려면 사용 빈도 기반 최적화 마법사의 **쿼리 조건 지정** 페이지에서 **사용자** 옵션에 대한 줄임표 단추 (...)를 클릭합니다.  
+  ** 및 **의 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]사용자 선택[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 사용 빈도 기반 최적화 마법사에 대한 쿼리 로그에 저장된 쿼리를 필터링할 사용자를 선택할 수 있습니다.  
   
-## <a name="options"></a>변수  
+ 
+  **사용자 선택** 대화 상자를 열려면 사용 빈도 기반 최적화 마법사의 **쿼리 조건 지정** 페이지에서 **사용자** 옵션에 대한 줄임표 단추 (...)를 클릭합니다.  
+  
+## <a name="options"></a>옵션  
  **사용자 선택**  
  쿼리 로그의 쿼리를 필터링할 사용자를 선택합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [Analysis Services Designers and Dialog Boxes &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [쿼리 조건 지정 &#40;사용 빈도 기반 최적화 마법사&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
+## <a name="see-also"></a>참고 항목  
+ [Analysis Services 디자이너 및 대화 상자 &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [사용 빈도 기반 최적화 마법사 &#40;쿼리 조건을 지정&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
   
   

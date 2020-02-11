@@ -30,10 +30,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 02872a037e60fa3af58a70d3599b03c61d0cfb5e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257346"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>sql:relationship을 사용하여 관계 지정(SQLXML 4.0)
@@ -52,10 +52,10 @@ ms.locfileid: "75257346"
   
  테이블 이름과 필요한 조인 정보를 제공 하기 위해 **sql: relationship** 주석에 다음 특성이 지정 됩니다. 이러한 특성은 ** \<sql: relationship>** 요소에만 사용할 수 있습니다.  
   
- **이름의**  
+ **이름**  
  관계의 고유한 이름을 지정합니다.  
   
- **부모**  
+ **Parent**  
  부모 관계(테이블)를 지정합니다. 이 특성은 옵션입니다. 특성이 지정되지 않으면 문서의 자식 계층에 있는 정보에서 부모 테이블 이름을 가져옵니다. 스키마가 동일한 ** \<sql: relationship>** 사용 하는 두 개의 부모-자식 계층을 지정 하 고 부모 요소를 서로 다른 경우 ** \<sql: relationship>** 에서 부모 특성을 지정 하지 않습니다. 이 정보는 스키마의 계층에서 가져옵니다.  
   
  **parent-key**  

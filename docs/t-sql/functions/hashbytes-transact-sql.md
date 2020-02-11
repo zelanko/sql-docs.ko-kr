@@ -69,7 +69,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 
 ## <a name="examples"></a>예  
 ### <a name="return-the-hash-of-a-variable"></a>변수의 해시 반환  
- 다음 예에서는 변수 `SHA2_256`에 저장된 **nvarchar** 데이터의 `@HashThis` 해시를 반환합니다.  
+ 다음 예에서는 변수 `@HashThis`에 저장된 **nvarchar** 데이터의 `SHA2_256` 해시를 반환합니다.  
   
 ```sql  
 DECLARE @HashThis nvarchar(32);  

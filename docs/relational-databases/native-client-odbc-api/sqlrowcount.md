@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 676e2cc86a6b41a1bc778160611a9a967336390f
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73785696"
 ---
 # <a name="sqlrowcount"></a>SQLRowCount
@@ -30,10 +30,10 @@ ms.locfileid: "73785696"
   
  또한 애플리케이션에서는 SQL_ATTR_PARAM_STATUS_PTR 문 특성을 사용하여 바인딩된 상태 값의 배열을 사용하여 문제를 일으키는 매개 변수 행의 배열 오프셋을 캡처할 수도 있습니다. 애플리케이션에서는 상태 배열을 트래버스하여 처리된 실제 행 수를 확인할 수 있습니다.  
   
- OUTPUT 절이 있는 INSERT, UPDATE, DELETE 또는 MERGE 문을 실행 [!INCLUDE[tsql](../../includes/tsql-md.md)] 하면 OUTPUT 절에 의해 생성 된 결과 집합의 모든 행이 사용 될 때까지 SQLRowCount는 영향을 받는 행 수를 반환 하지 않습니다. 이러한 행을 사용 하려면 SQLFetch 또는 SQLFetchScroll을 호출 합니다. SQLResultCols는 모든 결과 행이 소비 될 때까지-1을 반환 합니다. SQLFetch 또는 SQLFetchScroll SQL_NO_DATA 반환한 후 응용 프로그램은 Sqlfetch를 호출 하 여 다음 결과로 이동 하기 전에 SQLMoreResults를 호출 하기 전에 영향을 받는 행 수를 확인 해야 합니다.  
+ OUTPUT 절 [!INCLUDE[tsql](../../includes/tsql-md.md)] 이 있는 INSERT, UPDATE, DELETE 또는 MERGE 문을 실행 하면 output 절에 의해 생성 된 결과 집합의 모든 행이 소비 될 때까지 sqlrowcount는 영향을 받는 행 수를 반환 하지 않습니다. 이러한 행을 사용 하려면 SQLFetch 또는 SQLFetchScroll을 호출 합니다. SQLResultCols는 모든 결과 행이 소비 될 때까지-1을 반환 합니다. SQLFetch 또는 SQLFetchScroll SQL_NO_DATA 반환한 후 응용 프로그램은 Sqlfetch를 호출 하 여 다음 결과로 이동 하기 전에 SQLMoreResults를 호출 하기 전에 영향을 받는 행 수를 확인 해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQLRowCount Function](https://go.microsoft.com/fwlink/?LinkId=59367)   
+ [SQLRowCount 함수](https://go.microsoft.com/fwlink/?LinkId=59367)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

@@ -17,10 +17,10 @@ ms.assetid: df5b955a-feb0-4863-9b3b-7f71e9653b3d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a493ef87ad2f980f21a99c50da1cb39dfdcda8cf
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75319994"
 ---
 # <a name="sp_replmonitorsubscriptionpendingcmds-transact-sql"></a>sp_replmonitorsubscriptionpendingcmds(Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "75319994"
 
   트랜잭션 게시의 구독에 대해 보류 중인 명령의 수와 이러한 명령을 처리하는 데 걸리는 대략적인 예상 시간에 대한 정보를 반환합니다. 이 저장 프로시저는 반환된 각 구독에 대해 한 행을 반환합니다. 복제 모니터링에 사용되는 이 저장 프로시저는 배포 데이터베이스의 배포자에서 실행됩니다.  
   
- ![토픽 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-sql 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -55,14 +55,14 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
   
 `[ @subscription_type = ] subscription_type`구독의 유형입니다. *publication_type* 은 **int**이며 기본값은 없고 다음 값 중 하나일 수 있습니다.  
   
-|Value|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**0**|밀어넣기 구독|  
-|**1(sp1)**|끌어오기 구독|  
+|**1**|끌어오기 구독|  
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**pendingcmdcount**|**int**|구독에 대해 보류 중인 명령 수입니다.|  
 |**estimatedprocesstime**|**int**|구독자에 보류 중인 명령을 모두 배달하는 데 필요할 것으로 예상되는 시간(초)입니다.|  
@@ -73,7 +73,7 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
 ## <a name="remarks"></a>설명  
  **sp_replmonitorsubscriptionpendingcmds** 은 트랜잭션 복제와 함께 사용 됩니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  배포자에서 **sysadmin** 고정 서버 역할의 멤버 또는 배포 데이터베이스에 있는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_replmonitorsubscriptionpendingcmds**을 실행할 수 있습니다. 배포 데이터베이스를 사용 하는 게시에 대 한 게시 액세스 목록의 멤버는 **sp_replmonitorsubscriptionpendingcmds** 를 실행 하 여 해당 게시에 대 한 보류 중인 명령을 반환할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

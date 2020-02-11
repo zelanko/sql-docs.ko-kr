@@ -1,5 +1,5 @@
 ---
-title: Backup 및 복원
+title: 백업 및 복원
 description: 데이터 백업 및 복원이 PDW (병렬 데이터 웨어하우스)에서 작동 하는 방식을 설명 합니다. 백업 및 복원 작업은 재해 복구에 사용 됩니다. 백업 및 복원을 사용 하 여 한 어플라이언스에서 다른 어플라이언스로 데이터베이스를 복사할 수도 있습니다.
 author: mzaman1
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 75399480879623a39da542c68f036389c645f6ab
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401357"
 ---
-# <a name="backup-and-restore"></a>Backup 및 복원
+# <a name="backup-and-restore"></a>백업 및 복원
 
 데이터 백업 및 복원이 PDW (병렬 데이터 웨어하우스)에서 작동 하는 방식을 설명 합니다. 백업 및 복원 작업은 재해 복구에 사용 됩니다. 백업 및 복원을 사용 하 여 한 어플라이언스에서 다른 어플라이언스로 데이터베이스를 복사할 수도 있습니다.  
     
@@ -130,7 +130,7 @@ PDW는 SQL Server 백업 기술을 사용 하 여 어플라이언스 데이터�
   
 ## <a name="related-tasks"></a>관련 작업  
   
-|백업 및 복원 태스크|설명|  
+|백업 및 복원 태스크|Description|  
 |---------------------------|---------------|  
 |서버를 백업 서버로 준비 합니다.|[백업 서버 획득 및 구성](acquire-and-configure-backup-server.md)|  
 |데이터베이스를 백업 합니다.|[BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)|  

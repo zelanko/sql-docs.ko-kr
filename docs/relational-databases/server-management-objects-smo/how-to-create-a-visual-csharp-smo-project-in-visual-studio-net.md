@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 53ab22f96020080e28a92975c4d78d6ca3215d57
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74095962"
 ---
 # <a name="how-to-create-a-visual-c-smo-project-in-visual-studio-net"></a>방법: Visual Studio .NET에서 Visual C# SMO 프로젝트 만들기
@@ -25,15 +25,16 @@ ms.locfileid: "74095962"
 
   이 섹션에서는 간단한 SMO 콘솔 애플리케이션을 빌드하는 방법을 설명합니다.  
   
- 이 예에서는 프로그램이 SMO 형식을 참조할 수 있도록 네임스페이스를 가져옵니다. **에이전트** 네임 스페이스 가져오기는 선택 사항입니다. 이 네임스페이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하는 프로그램을 작성하는 경우에 필요합니다. **공용** 네임 스페이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대 한 보안 연결을 설정 하는 데 필요 합니다. **SqlClient** 네임 스페이스는 SQL 예외 오류를 처리 하는 데 사용 됩니다.  
+ 이 예에서는 프로그램이 SMO 형식을 참조할 수 있도록 네임스페이스를 가져옵니다. **에이전트** 네임 스페이스 가져오기는 선택 사항입니다. 이 네임스페이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하는 프로그램을 작성하는 경우에 필요합니다. **공용** 네임 스페이스는 인스턴스에 대 한 보안 연결을 설정 하는 데 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]필요 합니다. **SqlClient** 네임 스페이스는 SQL 예외 오류를 처리 하는 데 사용 됩니다.  
   
 ### <a name="creating-a-visual-c-smo-project-in-visual-studionet"></a>Visual Studio .NET에서 Visual C# SMO 프로젝트 만들기  
   
-1. Visual Studio 시작
+1. Visual Studio를 시작합니다.
   
-2. **파일** 메뉴에서 **새로 만들기** , **프로젝트**를 차례로 클릭 합니다.  **새 프로젝트** 대화 상자가 나타납니다.   
+2. **파일** 메뉴에서 **새로 만들기** , **프로젝트**를 차례로 클릭 합니다.  
+  **새 프로젝트** 대화 상자가 나타납니다.   
   
-3. **설치** [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 창에서 **템플릿**\\**Visual C#** \\**Windows** 로 이동 하 고 **콘솔 응용 프로그램**을 선택 합니다.  
+3. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **설치 됨** 창에서 **템플릿**\\**Visual c #**\\**Windows** 로 이동 하 고 **콘솔 응용 프로그램**을 선택 합니다.  
   
 4. 필드 **이름** 텍스트 상자에 새 응용 프로그램의 이름을 입력 합니다.  
 
@@ -41,7 +42,8 @@ ms.locfileid: "74095962"
 
 6. [SMO 설치](installing-smo.md) 의 지침에 따라 참조할 프로젝트에 대 한 패키지를 설치 합니다.
   
-7. **보기** 메뉴에서 **코드**를 클릭합니다.
+7. 
+  **보기** 메뉴에서 **코드**를 클릭합니다.
     
 8. 코드에서 네임 스페이스 문 앞에 다음 **using** 문을 입력 하 여 SMO 네임 스페이스의 형식을 한정 합니다.
   

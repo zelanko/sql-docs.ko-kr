@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6bff80fbe2b5022e12eca58de42192a3a1bb18d1
-ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74190368"
 ---
 # <a name="sysquery_store_wait_stats-transact-sql"></a>sys. query_store_wait_stats (Transact-sql)
@@ -32,7 +32,7 @@ ms.locfileid: "74190368"
 
   쿼리의 대기 정보에 대 한 정보를 포함 합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**wait_stats_id**|**bigint**|Plan_id, runtime_stats_interval_id execution_type 및 wait_category에 대 한 대기 통계를 나타내는 행의 식별자입니다. 이전 런타임 통계 간격에 대해서만 고유 합니다. 현재 활성 간격의 경우 plan_id에서 참조 하는 계획에 대 한 대기 통계를 나타내는 여러 행이 있을 수 있으며 execution_type로 표시 되는 실행 유형과 wait_category 표시 되는 대기 범주가 있습니다. 일반적으로 한 행은 디스크로 플러시된 대기 통계를 나타내고 다른 하나는 메모리 내 상태를 나타냅니다. 따라서 모든 간격에 대 한 실제 상태를 가져오려면 메트릭을 집계 해야 합니다. plan_id, runtime_stats_interval_id, execution_type 및 wait_category를 기준으로 그룹화 합니다. |  
 |**plan_id**|**bigint**|외래 키입니다. [Transact-sql&#41;&#40;query_store_plan ](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)에 조인 합니다.|  
@@ -54,11 +54,11 @@ ms.locfileid: "74190368"
   
 |정수 값|대기 범주|대기 유형은 범주에 포함 됩니다.|  
 |-----------------|---------------|-----------------|  
-|**0**|**Unknown**|Unknown |  
-|**1(sp1)**|**CPU**|SOS_SCHEDULER_YIELD|
-|**sr-2**|**작업자 스레드**|THREADPOOL|
+|**0**|**없습니다**|알 수 없음 |  
+|**1**|**CPU**|SOS_SCHEDULER_YIELD|
+|**2**|**작업자 스레드**|THREADPOOL|
 |**3**|**잠기지**|LCK_M_%|
-|**3-4**|**래치가**|LATCH_%|
+|**4**|**래치가**|LATCH_%|
 |**5**|**버퍼 래치**|PAGELATCH_%|
 |**6**|**버퍼 IO**|PAGEIOLATCH_%|
 |**일**|**컴파일과***|RESOURCE_SEMAPHORE_QUERY_COMPILE|
@@ -70,8 +70,8 @@ ms.locfileid: "74190368"
 |**/10**|**Service Broker**|BROKER_% **(BROKER_RECEIVE_WAITFOR 하지 않음)**|
 |**14**|**트랜잭션 로그 IO**|LOGMGR, LOGMGR, LOGMGR_RESERVE_APPEND, LOGMGR_FLUSH, LOGMGR_PMM_LOG, CHKPT, WRITELOG|
 |**15**|**네트워크 IO**|ASYNC_NETWORK_IO, NET_WAITFOR_PACKET, PROXY_NETWORK_IO, EXTERNAL_SCRIPT_NETWORK_IOF|
-|**x**|**병렬로**|CXPACKET, EXCHANGE, HT%, BMP%, BP%|
-|**17**|**Ram**|RESOURCE_SEMAPHORE, CMEMTHREAD, CMEMTHREAD, EE_PMOLOCK, MEMORY_ALLOCATION_EXT, RESERVED_MEMORY_ALLOCATION_EXT, MEMORY_GRANT_UPDATE|
+|**x**|**병렬 처리**|CXPACKET, EXCHANGE, HT%, BMP%, BP%|
+|**17**|**메모리**|RESOURCE_SEMAPHORE, CMEMTHREAD, CMEMTHREAD, EE_PMOLOCK, MEMORY_ALLOCATION_EXT, RESERVED_MEMORY_ALLOCATION_EXT, MEMORY_GRANT_UPDATE|
 |**개가**|**사용자 대기**|WAITFOR, WAIT_FOR_RESULTS, BROKER_RECEIVE_WAITFOR|
 |**mb**|**추적**|TRACEWRITE, SQLTRACE_LOCK, SQLTRACE_FILE_BUFFER, SQLTRACE_FILE_WRITE_IO_COMPLETION, SQLTRACE_FILE_READ_IO_COMPLETION, SQLTRACE_PENDING_BUFFER_WRITERS, SQLTRACE_SHUTDOWN, QUERY_TRACEOUT, TRACE_EVTNOTIFF|
 |**20**|**전체 텍스트 검색**|FT_RESTART_CRAWL, 전체 텍스트 GATHERER, MSSEARCH, FT_METADATA_MUTEX, FT_IFTSHC_MUTEX, FT_IFTSISM_MUTEX, FT_IFTS_RWLOCK, FT_COMPROWSET_RWLOCK, FT_MASTER_MERGE, FT_PROPERTYLIST_CACHE, FT_MASTER_MERGE_COORDINATOR PARALLEL_QUERY_SYNC|
@@ -81,10 +81,9 @@ ms.locfileid: "74190368"
 
 **컴파일** 대기 범주는 현재 지원 되지 않습니다.
 
-## <a name="permissions"></a>권한
+## <a name="permissions"></a>사용 권한
 
- 
-  `VIEW DATABASE STATE` 권한이 필요합니다.  
+ `VIEW DATABASE STATE` 권한이 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목
 
@@ -94,6 +93,6 @@ ms.locfileid: "74190368"
 - [query_store_query &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)
 - [query_store_query_text &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)
 - [query_store_runtime_stats_interval &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)
-- [쿼리 저장소를 사용 하 여 성능 모니터링](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
-- [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
-- [Transact-sql&#41;&#40;저장 프로시저 쿼리 저장소](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
+- [쿼리 저장소를 사용하여 성능 모니터링](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
+- [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
+- [쿼리 저장소 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c9a2244c5e6cddbc53ccd3aaec7faaaa3836a923
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831748"
 ---
 # <a name="file-system-task"></a>파일 시스템 태스크
@@ -31,7 +31,7 @@ ms.locfileid: "62831748"
 ## <a name="predefined-file-system-operations"></a>미리 정의된 파일 시스템 작업  
  파일 시스템 태스크에는 미리 정의된 작업 집합이 포함되어 있습니다. 다음 표에서는 이러한 작업을 설명합니다.  
   
-|연산|Description|  
+|작업(Operation)|Description|  
 |---------------|-----------------|  
 |디렉터리 복사|폴더를 다른 위치에 복사합니다.|  
 |파일 복사|파일을 다른 위치에 복사합니다.|  
@@ -62,7 +62,7 @@ ms.locfileid: "62831748"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   
--   [파일 시스템 태스크 편집기&#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [파일 시스템 태스크 편집기 &#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [식 페이지](../expressions/expressions-page.md)  
   
@@ -75,9 +75,10 @@ ms.locfileid: "62831748"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask>  
   
 ## <a name="related-tasks"></a>관련 작업  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 데이터 파일을 다운로드 및 업로드하고 서버의 디렉터리를 관리하는 태스크가 있습니다. 자세한 내용은 [FTP Task](ftp-task.md)을 참조하세요.  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 데이터 파일을 다운로드 및 업로드하고 서버의 디렉터리를 관리하는 태스크가 있습니다. 자세한 내용은 [FTP Task](ftp-task.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 태스크](integration-services-tasks.md)   
  [제어 흐름](control-flow.md)  
   

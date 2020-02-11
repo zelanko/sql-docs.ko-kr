@@ -1,5 +1,5 @@
-- name: SQL Server 2014용 온라인 설명서
-  href: books-online-for-sql-server-2014.md
+- name: SQL Server 2014 docs
+  href: index.yml
 - name: Analysis Services +
   href: ../analysis-services/analysis-services.md
 - name: Data Quality Services +
@@ -20,7 +20,7 @@
   href: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
 - name: SQL Server 2014 자습서 +
   href: ../tutorials/tutorials-for-sql-server-2014.md
-- name: 용어 설명
+- name: 용어
   href: glossary.md
 - name: SQL Server 2014의 새로운 기능 +
   href: ../sql-server/what-s-new-in-sql-server-2016.md
@@ -56,5 +56,5 @@
   href: sql-server-transaction-locking-and-row-versioning-guide.md
 - name: 트랜잭션 로그 아키텍처 및 관리
   href: sql-server-transaction-log-architecture-and-management.md
-- name: '사례 연구: 확장성과 성능을 위해 Microsoft Dynamics ERP와 SQL Server 2014 Replication을 사용하여 엔터프라이즈 에코시스템 빌드'
+- name: '사례 연구: 확장성과 성능을 위해 Microsoft Dynamics ERP와 SQL Server 2014 Replication을 사용하여 엔터프라이즈 에코시스템 구축'
   href: case-study-building-an-enterprise-ecosystem.md

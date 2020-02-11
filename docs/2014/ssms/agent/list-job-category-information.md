@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dae8f1d98fb1758e9a9802883def1574bda68a78
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798211"
 ---
 # <a name="list-job-category-information"></a>작업 범주 정보 나열
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 SQL Server 관리 개체를 사용 하 여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 작업 범주 정보를 나열 하는 방법  
+  또는 SQL Server 관리 개체를 사용 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 하 여에서 작업 범주 정보를 나열 하는 방법입니다.  
 
   
 ##  <a name="Security"></a> 보안  
@@ -45,10 +45,10 @@ ms.locfileid: "72798211"
     GO  
     ```  
   
- 자세한 내용은 [sp_help_category &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-help-category-transact-sql)을 참조 하세요.  
+ 자세한 내용은 [sp_help_category &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-help-category-transact-sql)를 참조 하세요.  
   
   
 ##  <a name="SMO"></a>SQL Server 관리 개체 사용  
- **작업 범주 정보를 나열하려면**  
+ **작업 범주 정보를 나열 하려면**  
   
- Visual Basic, Visual C#, PowerShell 등 선택한 프로그래밍 언어를 사용하여 `JobCategory` 클래스를 사용합니다. 자세한 내용은 [SQL Server 관리 개체 &#40;&#41; SMO 프로그래밍 가이드](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)를 참조 하세요.  
+ Visual Basic, Visual C#, PowerShell 등 선택한 프로그래밍 언어를 사용하여 `JobCategory` 클래스를 사용합니다. 자세한 내용은 [SQL Server 관리 개체 &#40;SMO&#41; 프로그래밍 가이드](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)를 참조 하세요.  

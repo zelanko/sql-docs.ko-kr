@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f795f1848f3e4c9fe1239df79677c35c38ba3b58
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73783513"
 ---
 # <a name="sql_variant-support-for-date-and-time-types"></a>날짜 및 시간 형식에 대한 sql_variant 지원
@@ -25,7 +25,7 @@ ms.locfileid: "73783513"
 
   이 항목에서는 **sql_variant** 데이터 형식에서 향상된 날짜 및 시간 기능을 지원하는 방법에 대해 설명합니다.  
   
- 열 특성 SQL_CA_SS_VARIANT_TYPE은 C 형식의 variant 결과 열을 반환하는 데 사용됩니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에는 IRD (구현 행 설명자)에서 변형 결과 열의 SQL 유형을 설정 하는 추가 특성인 SQL_CA_SS_VARIANT_SQL_TYPE이 도입 되었습니다. IPD(구현 매개 변수 설명자)에서 SQL_SS_VARIANT 형식으로 바인딩된 SQL_C_BINARY C 형식을 갖는 SQL 형식의 SQL_SS_TIME2 또는 SQL_SS_TIMESTAMPOFFSET 매개 변수를 지정하는 데에도 SQL_CA_SS_VARIANT_SQL_TYPE을 사용할 수 있습니다.  
+ 열 특성 SQL_CA_SS_VARIANT_TYPE은 C 형식의 variant 결과 열을 반환하는 데 사용됩니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]IRD (구현 행 설명자)에서 변형 결과 열의 SQL 형식을 설정 하는 추가 특성인 SQL_CA_SS_VARIANT_SQL_TYPE를 소개 합니다. IPD(구현 매개 변수 설명자)에서 SQL_SS_VARIANT 형식으로 바인딩된 SQL_C_BINARY C 형식을 갖는 SQL 형식의 SQL_SS_TIME2 또는 SQL_SS_TIMESTAMPOFFSET 매개 변수를 지정하는 데에도 SQL_CA_SS_VARIANT_SQL_TYPE을 사용할 수 있습니다.  
   
  새 형식 SQL_SS_TIME2 및 SQL_SS_TIMESTAMPOFFSET는 SQLColAttribute로 설정할 수 있습니다. SQL_CA_SS_VARIANT_SQL_TYPE는 SQLGetDescField에서 반환 될 수 있습니다.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "73783513"
   
  SQL_SS_TIME2 및 SQL_SS_TIMESTAMPOFFSET 매개 변수의 경우 드라이버에서는 아래 표에 설명된 대로 C 값을 **sql_variant** 값으로 변환합니다. 매개 변수가 SQL_C_BINARY로 바인딩되어 있고 서버 형식이 SQL_SS_VARIANT인 경우에는 애플리케이션에서 SQL_CA_SS_VARIANT_SQL_TYPE을 다른 SQL 형식으로 설정한 경우 외에는 이진 값으로 처리됩니다. 이 경우 SQL_CA_SS_VARIANT_SQL_TYPE이 우선 순위가 높습니다. 즉, SQL_CA_SS_VARIANT_SQL_TYPE이 설정된 경우 C 형식에서 variant SQL 형식을 추론하는 기본 동작이 무시됩니다.  
   
-|C 형식|서버 유형|설명|  
+|C 형식|서버 유형|주석|  
 |------------|-----------------|--------------|  
 |SQL_C_CHAR|varchar|SQL_CA_SS_VARIANT_SQL_TYPE이 무시됩니다.|  
 |SQL_C_WCHAR|nvarcar|SQL_CA_SS_VARIANT_SQL_TYPE이 무시됩니다.|  
@@ -46,7 +46,7 @@ ms.locfileid: "73783513"
 |SQL_C_SLONG|int|SQL_CA_SS_VARIANT_SQL_TYPE이 무시됩니다.|  
 |SQL_C_ULONG|bigint|SQL_CA_SS_VARIANT_SQL_TYPE이 무시됩니다.|  
 |SQL_C_SBIGINT|bigint|SQL_CA_SS_VARIANT_SQL_TYPE이 무시됩니다.|  
-|SQL_C_FLOAT|REAL|SQL_CA_SS_VARIANT_SQL_TYPE이 무시됩니다.|  
+|SQL_C_FLOAT|real|SQL_CA_SS_VARIANT_SQL_TYPE이 무시됩니다.|  
 |SQL_C_DOUBLE|float|SQL_CA_SS_VARIANT_SQL_TYPE이 무시됩니다.|  
 |SQL_C_BIT|bit|SQL_CA_SS_VARIANT_SQL_TYPE이 무시됩니다.|  
 |SQL_C_UTINYINT|tinyint|SQL_CA_SS_VARIANT_SQL_TYPE이 무시됩니다.|  
@@ -60,7 +60,7 @@ ms.locfileid: "73783513"
 |SQL_C_SS_TIME2|time|SQL_CA_SS_VARIANT_SQL_TYPE이 무시됩니다.|  
 |SQL_C_SS_TIMESTAMPOFFSET|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE이 무시됩니다.|  
   
-## <a name="see-also"></a>관련 항목:  
- [ODBC의 날짜 및 &#40;시간 기능 향상&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+## <a name="see-also"></a>참고 항목  
+ [ODBC&#41;&#40;날짜 및 시간 기능 향상](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

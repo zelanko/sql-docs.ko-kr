@@ -13,10 +13,10 @@ ms.assetid: 3bf2be83-61f9-4183-836b-85204ac7116a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b70622ea038b61883ce7a5307a558a5667139fb1
-ms.sourcegitcommit: a26cb217adfbbfb3636dff43fb19a46462e2e994
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74491968"
 ---
 # <a name="odbcconfexe"></a>ODBCCONF. CONVERT.EXE
@@ -41,7 +41,7 @@ ODBCCONF [switches] action
 ## <a name="remarks"></a>설명  
  다음 스위치를 사용할 수 있습니다.  
   
-|스위치|설명|  
+|스위치|Description|  
 |------------|-----------------|  
 |/A {*action*}|작업을 지정 합니다.<br /><br /> 하나의 동작만 지정 된 경우/a는 선택 사항입니다.|  
 |/?|ODBCCONF에 대 한 사용법을 표시 합니다. CONVERT.EXE.|  
@@ -55,15 +55,15 @@ ODBCCONF [switches] action
   
  사용할 수 있는 작업은 다음과 같습니다.  
   
-|작업|설명|  
+|작업|Description|  
 |------------|-----------------|  
-|CONFIGDRIVER *driver_name * * 드라이버별 구성 매개 변수*|적절 한 드라이버 설치 DLL을 로드 하 고 **Configdriver** 함수를 호출 합니다.<br /><br /> [SQLConfigDriver 함수와](../odbc/reference/syntax/sqlconfigdriver-function.md)동일 합니다.<br /><br /> 예:<br /><br /> /A {CONFIGDRIVER "드라이버 이름" "CPTimeout = 60"}<br /><br /> /A {CONFIGDRIVER "드라이버 이름" "DriverODBCVer = 03.80"}|  
-|CONFIGDSN *driver_name* DSN =*이름* &#124; *특성*|시스템 데이터 원본을 추가 하거나 수정 합니다.<br /><br /> [SQLConfigDataSource 함수와](../odbc/reference/syntax/sqlconfigdatasource-function.md)동일 합니다.<br /><br /> 예:<br /><br /> /A {CONFIGDSN "SQL Server" "DSN = name &#124; Server = srv"}|  
-|CONFIGSYSDSN *driver_name* dsn =*name* &#124; *특성*|시스템 데이터 원본을 추가 하거나 수정 합니다.<br /><br /> [SQLConfigDataSource 함수와](../odbc/reference/syntax/sqlconfigdatasource-function.md)동일 합니다.<br /><br /> 예:<br /><br /> /A {CONFIGSYSDSN "SQL Server" "DSN = name &#124; Server = srv"}|  
-|INSTALLDRIVER|[Sqlinstalldriverex 함수와](../odbc/reference/syntax/sqlinstalldriverex-function.md)동일 합니다.<br /><br /> INSTALLDRIVER에 전달 된 키워드-값 쌍 구문에 대 한 자세한 내용은 [드라이버 사양 하위 키](../odbc/reference/install/driver-specification-subkeys.md)를 참조 하세요.<br /><br /> 예:<br /><br /> /A {INSTALLDRIVER "드라이버 &#124; Driver = c:\your.dll &#124; Setup = c:\your.dll &#124; APILevel = 2 &#124; ConnectFunctions = YYY &#124; DriverODBCVer = 03.50 &#124; FileUsage = 0 &#124; SQLLevel = 1"}|  
-|INSTALLTRANSLATOR *변환기 구성 * * 드라이버 경로*|HKEY_LOCAL_MACHINE \SOFTWARE\ODBC\ODBCINST.에 변환기에 대 한 정보를 추가 합니다. ** INI\ODBC 번역가** 레지스트리 키입니다.<br /><br /> [SQLInstallTranslatorEx 함수](../odbc/reference/syntax/sqlinstalltranslatorex-function.md)에 해당 합니다.<br /><br /> INSTALLDRIVER에 전달 된 키워드-값 쌍 구문에 대 한 자세한 내용은 [Translator 사양 하위 키](../odbc/reference/install/translator-specification-subkeys.md)를 참조 하세요.<br /><br /> 예:<br /><br /> /A {INSTALLTRANSLATOR "My Translator &#124; Translator = c:\my.dll &#124; Setup = c:\my.dll"}|  
-|REGSVR *dll*|DLL을 등록 합니다.<br /><br /> Regsvr32와 동일 합니다.<br /><br /> 예:<br /><br /> /A {REGSVR|  
-|SETFILEDSNDIR|\SOFTWARE\ODBC\ODBC.를 HKEY_LOCAL_MACHINE 하는 경우 INI\ODBC 파일 DSN\DefaultDSNDir이 존재 하지 않습니다. SETFILEDSNDIR 작업에서 \ODBC\Data 원본에 추가 된 HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows\CurrentVersion\CommonFilesDir에 값을 할당 하 고 할당 합니다.<br /><br /> HKEY_LOCAL_MACHINE \SOFTWARE\ODBC\ODBC.의 값 INI\ODBC File DSN\DefaultDSNDir는 파일 기반 데이터 원본을 만들 때 ODBC 데이터 원본 관리자가 사용 하는 기본 위치를 지정 합니다.<br /><br /> 예:<br /><br /> /A {SETFILEDSNDIR}|  
+|CONFIGDRIVER *driver_name * * 드라이버별 구성 매개 변수*|적절 한 드라이버 설치 DLL을 로드 하 고 **Configdriver** 함수를 호출 합니다.<br /><br /> [SQLConfigDriver 함수와](../odbc/reference/syntax/sqlconfigdriver-function.md)동일 합니다.<br /><br /> 다음은 그 예입니다.<br /><br /> /A {CONFIGDRIVER "드라이버 이름" "CPTimeout = 60"}<br /><br /> /A {CONFIGDRIVER "드라이버 이름" "DriverODBCVer = 03.80"}|  
+|CONFIGDSN *driver_name* DSN =*이름* &#124; *특성*|시스템 데이터 원본을 추가 하거나 수정 합니다.<br /><br /> [SQLConfigDataSource 함수와](../odbc/reference/syntax/sqlconfigdatasource-function.md)동일 합니다.<br /><br /> 다음은 그 예입니다.<br /><br /> /A {CONFIGDSN "SQL Server" "DSN = name &#124; Server = srv"}|  
+|CONFIGSYSDSN *driver_name* dsn =*name* &#124; *특성*|시스템 데이터 원본을 추가 하거나 수정 합니다.<br /><br /> [SQLConfigDataSource 함수와](../odbc/reference/syntax/sqlconfigdatasource-function.md)동일 합니다.<br /><br /> 다음은 그 예입니다.<br /><br /> /A {CONFIGSYSDSN "SQL Server" "DSN = name &#124; Server = srv"}|  
+|INSTALLDRIVER|[Sqlinstalldriverex 함수와](../odbc/reference/syntax/sqlinstalldriverex-function.md)동일 합니다.<br /><br /> INSTALLDRIVER에 전달 된 키워드-값 쌍 구문에 대 한 자세한 내용은 [드라이버 사양 하위 키](../odbc/reference/install/driver-specification-subkeys.md)를 참조 하세요.<br /><br /> 다음은 그 예입니다.<br /><br /> /A {INSTALLDRIVER "드라이버 &#124; Driver = c:\your.dll &#124; Setup = c:\your.dll &#124; APILevel = 2 &#124; ConnectFunctions = YYY &#124; DriverODBCVer = 03.50 &#124; FileUsage = 0 &#124; SQLLevel = 1"}|  
+|INSTALLTRANSLATOR *변환기 구성 * * 드라이버 경로*|HKEY_LOCAL_MACHINE \SOFTWARE\ODBC\ODBCINST.에 변환기에 대 한 정보를 추가 합니다. ** INI\ODBC 번역가** 레지스트리 키입니다.<br /><br /> [SQLInstallTranslatorEx 함수](../odbc/reference/syntax/sqlinstalltranslatorex-function.md)에 해당 합니다.<br /><br /> INSTALLDRIVER에 전달 된 키워드-값 쌍 구문에 대 한 자세한 내용은 [Translator 사양 하위 키](../odbc/reference/install/translator-specification-subkeys.md)를 참조 하세요.<br /><br /> 다음은 그 예입니다.<br /><br /> /A {INSTALLTRANSLATOR "My Translator &#124; Translator = c:\my.dll &#124; Setup = c:\my.dll"}|  
+|REGSVR *dll*|DLL을 등록 합니다.<br /><br /> Regsvr32와 동일 합니다.<br /><br /> 다음은 그 예입니다.<br /><br /> /A {REGSVR|  
+|SETFILEDSNDIR|\SOFTWARE\ODBC\ODBC.를 HKEY_LOCAL_MACHINE 하는 경우 INI\ODBC 파일 DSN\DefaultDSNDir이 존재 하지 않습니다. SETFILEDSNDIR 작업에서 \ODBC\Data 원본에 추가 된 HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows\CurrentVersion\CommonFilesDir에 값을 할당 하 고 할당 합니다.<br /><br /> HKEY_LOCAL_MACHINE \SOFTWARE\ODBC\ODBC.의 값 INI\ODBC File DSN\DefaultDSNDir는 파일 기반 데이터 원본을 만들 때 ODBC 데이터 원본 관리자가 사용 하는 기본 위치를 지정 합니다.<br /><br /> 다음은 그 예입니다.<br /><br /> /A {SETFILEDSNDIR}|  
   
 ## <a name="see-also"></a>참고 항목  
  [Microsoft ODBC(Open Database Connectivity)](../odbc/microsoft-open-database-connectivity-odbc.md)

@@ -10,10 +10,10 @@ ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 06f4b140ef90eb3d1ed942e5374643e80fb1b24e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75254806"
 ---
 # <a name="importing-and-exporting-knowledge"></a>기술 자료 가져오기 및 내보내기
@@ -32,19 +32,19 @@ ms.locfileid: "75254806"
   
 |||  
 |-|-|  
-|기술 자료의 도메인을 .dqs 데이터 파일로 내보내기|[도메인을 dqs 파일로 내보내기](../data-quality-services/export-a-domain-to-a-dqs-file.md)|  
-|.dqs 데이터 파일에서 기존의 기술 자료로 도메인 가져오기|[Dqs 파일에서 도메인 가져오기](../data-quality-services/import-a-domain-from-a-dqs-file.md)|  
-|전체 기술 자료를 .dqs 데이터 파일로 내보내기|[기술 자료를 dqs 파일로 내보내기](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)|  
-|전체 기술 자료를 .dqs 데이터 파일로 가져오기|[Dqs 파일에서 기술 자료 가져오기](../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)|  
+|기술 자료의 도메인을 .dqs 데이터 파일로 내보내기|[.dqs 파일로 도메인 내보내기](../data-quality-services/export-a-domain-to-a-dqs-file.md)|  
+|.dqs 데이터 파일에서 기존의 기술 자료로 도메인 가져오기|[.dqs 파일에서 도메인 가져오기](../data-quality-services/import-a-domain-from-a-dqs-file.md)|  
+|전체 기술 자료를 .dqs 데이터 파일로 내보내기|[.dqs 파일로 기술 자료 내보내기](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)|  
+|전체 기술 자료를 .dqs 데이터 파일로 가져오기|[.dqs 파일에서 기술 자료 가져오기](../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)|  
 |Excel 파일에서 도메인으로 값 가져오기|[Excel 파일에서 도메인으로 값 가져오기](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)|  
 |Excel 파일에서 기술 자료로 도메인 가져오기|[기술 자료 검색 시 Excel 파일에서 도메인 가져오기](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)|  
-|정리 도중 수집한 정보를 기술 자료로 가져오기|[정리 프로젝트 값을 도메인으로 가져오기](../data-quality-services/import-cleansing-project-values-into-a-domain.md)|  
+|정리 도중 수집한 정보를 기술 자료로 가져오기|[도메인으로 정리 프로젝트 값 가져오기](../data-quality-services/import-cleansing-project-values-into-a-domain.md)|  
   
 ## <a name="related-tasks"></a>관련 작업  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|기술 자료 검색을 실행하고 대화식으로 정보를 관리하여 기술 자료 구축|[기술 자료 빌드](../data-quality-services/building-a-knowledge-base.md)|  
+|기술 자료 검색을 실행하고 대화식으로 정보를 관리하여 기술 자료 구축|[기술 자료 구축](../data-quality-services/building-a-knowledge-base.md)|  
 |단일 도메인 만들기 및 단일 도메인에 정보 추가|[도메인 관리](../data-quality-services/managing-a-domain.md)|  
 |복합 도메인 만들기 및 단일 도메인에 정보 추가|[복합 도메인 관리](../data-quality-services/managing-a-composite-domain.md)|  
   

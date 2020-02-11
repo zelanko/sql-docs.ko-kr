@@ -15,10 +15,10 @@ author: HJToland3
 ms.author: rajpo
 ms.custom: seo-lt-2019
 ms.openlocfilehash: cc87b541b2b6ebf2f6a9068ba35ae0f62f8e9988
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056609"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>Azure Vm에서 온-프레미스 SQL Server 또는 SQL Server를 마이그레이션하여 Data Migration Assistant를 사용 하 여 Azure SQL Database
@@ -120,6 +120,6 @@ Data Migration Assistant은 온-프레미스 SQL Server를 원활 하 게 평가
 
 ## <a name="see-also"></a>참고 항목
 
-* [Data Migration Assistant (DMA)](../dma/dma-overview.md)
+* [Data Migration Assistant(DMA)](../dma/dma-overview.md)
 * [Data Migration Assistant: 구성 설정](../dma/dma-configurationsettings.md)
 * [Data Migration Assistant: 모범 사례](../dma/dma-bestpractices.md)

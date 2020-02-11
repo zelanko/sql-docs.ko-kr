@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 126b05adab3a07099f6c9110e18e54910f5b2f25
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73982987"
 ---
 # <a name="sysfn_xe_file_target_read_file-transact-sql"></a>sys.fn_xe_file_target_read_file(Transact-SQL)
@@ -35,9 +35,9 @@ ms.locfileid: "73982987"
   확장 이벤트 비동기 파일 대상에서 만든 파일을 읽습니다. 행당 하나의 이벤트가 XML 형식으로 반환됩니다.  
   
 > [!WARNING]  
->  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] XEL 및 XEM 형식으로 생성 된 추적 결과를 허용 합니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 확장 이벤트는 XEL 형식의 추적 결과만 지원 합니다. XEL 형식의 추적 결과를 읽으려면 SQL Server Management Studio를 사용하는 것이 좋습니다.    
+>  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]XEL [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 및 xem 형식으로 생성 된 추적 결과를 허용 합니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]확장 이벤트는 XEL 형식의 추적 결과만 지원 합니다. XEL 형식의 추적 결과를 읽으려면 SQL Server Management Studio를 사용하는 것이 좋습니다.    
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,7 +47,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 ```  
   
 ## <a name="arguments"></a>인수  
- *path*  
+ *경로*  
  읽을 파일 파일의 경로입니다. *경로* 에는 와일드 카드를 포함할 수 있으며 파일 이름을 포함할 수 있습니다. *경로* 는 **nvarchar (260)** 입니다. 기본값은 없습니다. Azure SQL Database 컨텍스트에서이 값은 Azure Storage 파일에 대 한 HTTP URL입니다.
   
  *mdpath*  
@@ -67,7 +67,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |module_guid|**uniqueidentifier**|이벤트 모듈 GUID입니다. Null을 허용하지 않습니다.|  
 |package_guid|**uniqueidentifier**|이벤트 패키지 GUID입니다. Null을 허용하지 않습니다.|  
@@ -75,11 +75,11 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |event_data|**nvarchar(max)**|XML 형식의 이벤트 내용입니다. Null을 허용하지 않습니다.|  
 |file_name|**nvarchar(260)**|이벤트가 포함된 파일의 이름입니다. Null을 허용하지 않습니다.|  
 |file_offset|**bigint**|이벤트가 포함된 파일에 있는 블록의 오프셋입니다. Null을 허용하지 않습니다.|  
-|timestamp_utc|**datetime2**|**적용 대상**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /><br />이벤트의 날짜 및 시간 (UTC 표준 시간대)입니다. Null을 허용하지 않습니다.|  
+|timestamp_utc|**datetime2**|**적용**대상: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /><br />이벤트의 날짜 및 시간 (UTC 표준 시간대)입니다. Null을 허용하지 않습니다.|  
 
   
 ## <a name="remarks"></a>설명  
- [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 **fn_xe_file_target_read_file** 를 실행 하 여 많은 결과 집합을 읽으면 오류가 발생할 수 있습니다. **결과 파일** 모드 (**Ctrl + Shift + F**)를 사용 하 여 많은 결과 집합을 파일로 내보내고 대신 다른 도구를 사용 하 여 파일을 읽습니다.  
+ 에서 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **fn_xe_file_target_read_file** 를 실행 하 여 대량 결과 집합을 읽으면 오류가 발생할 수 있습니다. **결과 파일** 모드 (**Ctrl + Shift + F**)를 사용 하 여 많은 결과 집합을 파일로 내보내고 대신 다른 도구를 사용 하 여 파일을 읽습니다.  
   
 ## <a name="permissions"></a>사용 권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  

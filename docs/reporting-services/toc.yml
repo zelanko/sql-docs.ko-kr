@@ -15,13 +15,19 @@
     - name: Backward Compatibility
       href: ../reporting-services/reporting-services-backward-compatibility.md
       items:
-        - name: 사용되지 않는 기능
+        - name: 2019년도 사용되지 않는 기능
+          href: ../reporting-services/deprecated-features-sql-server-2019-reporting-services-ssrs.md
+        - name: 2017년도 사용되지 않는 기능
+          href: ../reporting-services/deprecated-features-sql-server-2017-reporting-services-ssrs.md
+        - name: 2016년도 사용되지 않는 기능
           href: ../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md
-        - name: SQL Server 2016의 SSRS에서 지원되지 않는 기능
+        - name: 2019년도 지원되지 않는 기능
+          href: ../reporting-services/discontinued-functionality-sql-server-reporting-services-2019.md
+        - name: 2016년도 지원되지 않는 기능
           href: ../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md
-        - name: SQL Server 2016의 SSRS에서 주요 변경 내용
+        - name: 2016년도 주요 변경 내용
           href: ../reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md
-        - name: SQL Server 2016에서 SQL Server Reporting Services의 동작 변경
+        - name: 2016년도 동작 변경 내용
           href: ../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md
 - name: 자습서
   items:
@@ -40,18 +46,18 @@
               href: ../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md
             - name: '4단원: 보고서에 테이블 추가'
               href: ../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md
-            - name: '5단원: 보고서 서식 지정'
+            - name: 'Lesson 5: Formatting a Report'
               href: ../reporting-services/lesson-5-formatting-a-report-reporting-services.md
-            - name: '6단원: 그룹화 및 합계 추가'
+            - name: 'Lesson 6: Adding Grouping and Totals'
               href: ../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md
         - name: 데이터 기반 구독 만들기(SSRS 자습서)
           href: ../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md
           items:
             - name: '1단원: 샘플 구독자 데이터베이스 만들기'
               href: ../reporting-services/lesson-1-creating-a-sample-subscriber-database.md
-            - name: '2단원: 보고서 데이터 원본 속성 수정'
+            - name: 'Lesson 2: Modifying the Report Data Source Properties'
               href: ../reporting-services/lesson-2-modifying-the-report-data-source-properties.md
-            - name: '3단원: 데이터 기반 구독 정의'
+            - name: 'Lesson 3: Defining a Data-Driven Subscription'
               href: ../reporting-services/lesson-3-defining-a-data-driven-subscription.md
         - name: ReportViewer를 사용하여 매개 변수가 있는 드릴스루(RDLC) 보고서 만들기(SSRS 자습서)
           href: ../reporting-services/create-drillthrough-rdlc-report-with-parameters-reportviewer.md
@@ -72,7 +78,7 @@
               href: ../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md
             - name: '8단원: 데이터 필터 만들기'
               href: ../reporting-services/lesson-8-create-a-data-filter.md
-            - name: '9단원: 애플리케이션 빌드 및 실행'
+            - name: 'Lesson 9: Build and Run the Application'
               href: ../reporting-services/lesson-9-build-and-run-the-application.md
     - name: 보고서 작성기 자습서
       href: ../reporting-services/report-builder-tutorials.md
@@ -95,13 +101,13 @@
           href: ../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md
         - name: '자습서: 보고서에 원형 차트 추가(보고서 작성기)'
           href: ../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md
-        - name: '자습서: 보고서에 가로 막대형 차트 추가(보고서 작성기)'
+        - name: '자습서: 보고서에 막대형 차트 추가(보고서 작성기)'
           href: ../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md
         - name: '자습서: 보고서에 스파크라인 추가(보고서 작성기)'
           href: ../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md
         - name: '자습서: 보고서에 KPI 추가'
           href: ../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md
-        - name: '자습서: 맵 보고서'
+        - name: '자습서: 지도 보고서'
           href: ../reporting-services/tutorial-map-report-report-builder.md
         - name: '자습서: 보고서에 매개 변수 추가(보고서 작성기)'
           href: ../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md
@@ -681,7 +687,7 @@
           href: ../reporting-services/report-design/specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md
         - name: 계기 창에 표시기 및 계기 포함
           href: ../reporting-services/report-design/include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md
-    - name: 맵
+    - name: 지도
       href: ../reporting-services/report-design/maps-report-builder-and-ssrs.md
       items:
         - name: 지도 보고서 계획
@@ -698,7 +704,7 @@
           href: ../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md
         - name: 지도에 사용자 지정 위치 추가
           href: ../reporting-services/report-design/add-custom-locations-to-a-map-report-builder-and-ssrs.md
-        - name: '보고서 문제 해결: 맵 보고서'
+        - name: '보고서 문제 해결: 지도 보고서'
           href: ../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md
     - name: '이미지, 입력란, 사각형 및 선'
       href: ../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md
@@ -1014,15 +1020,19 @@
       href: ../reporting-services/report-builder/print-a-report-reporting-services-in-sharepoint-mode.md
 - name: SSRS의 보고서 데이터
   items:
-    - name: SSRS 개요의 보고서 데이터
+    - name: 보고서 데이터 소개
       href: ../reporting-services/report-data/report-data-ssrs.md
-    - name: Reporting Services에서 지원하는 데이터 원본
+    - name: 지원되는 데이터 원본
       href: ../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md
-    - name: '데이터 연결, 데이터 원본 및 연결 문자열(보고서 작성기 및 SSRS)'
+    - name: 연결 문자열 만들기
       href: ../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md
     - name: 데이터 연결 추가 및 확인
       href: ../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md
-    - name: '공유 데이터 원본 만들기, 수정 및 삭제'
+    - name: 자격 증명 및 연결 정보 지정
+      href: ../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md
+    - name: 공유 데이터 원본 및 포함된 데이터 원본 비교
+      href: ../reporting-services/report-data/compare-shared-embedded-data-sources-report-builder-ssrs.md
+    - name: 공유 데이터 원본 만들기 및 수정
       href: ../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md
     - name: 포함된 데이터 원본 만들기 및 수정
       href: ../reporting-services/report-data/create-and-modify-embedded-data-sources.md
@@ -1430,7 +1440,7 @@
       href: ../reporting-services/manage-my-data-alerts-in-data-alert-manager.md
     - name: 사용자 및 경고 담당자에게 권한 부여
       href: ../reporting-services/grant-permissions-to-users-and-alerting-administrators.md
-- name: 확장 프로그램
+- name: 확장
   href: ../reporting-services/extensions-ssrs.md
   items:
     - name: RSReportServer.Config의 렌더링 확장 프로그램 매개 변수 사용자 지정
@@ -1682,7 +1692,7 @@
       href: ../reporting-services/application-integration/integrating-reporting-services-into-applications.md
     - name: 보고서 뷰어 컨트롤을 사용하여 통합
       items:
-        - name: 시작
+        - name: 시작하기
           href: ../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-get-started.md
         - name: 보고서 뷰어 컨트롤을 사용하여 Reporting Services 통합
           href: ../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md
