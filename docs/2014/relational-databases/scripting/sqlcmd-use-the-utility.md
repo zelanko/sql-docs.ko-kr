@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bb14d7809eba496ede8c8e0aa6e7133c2ad9c524
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243176"
 ---
 # <a name="use-the-sqlcmd-utility"></a>sqlcmd 유틸리티 사용
@@ -35,7 +35,7 @@ ms.locfileid: "75243176"
   
 -   쿼리 편집기의 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [SQLCMD 모드](edit-sqlcmd-scripts-with-query-editor.md) 입니다.  
   
--   SMO(SQL Server Management Objects)  
+-   SMO(SQL Server 관리 개체)  
   
 -   SQL Server 에이전트 CmdExec 작업  
   
@@ -112,7 +112,7 @@ ms.locfileid: "75243176"
   
 ## <a name="running-transact-sql-statements-interactively-by-using-sqlcmd"></a>sqlcmd를 사용하여 대화형으로 Transact-SQL 문 실행  
  
-  `sqlcmd` 유틸리티를 대화형으로 사용하여 명령 프롬프트 창에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 를 사용 `sqlcmd`하 여 문을 대화형으로 실행 하려면 입력 파일이 나 쿼리를 지정 하는 **-q**, **-q**, **-Z**또는 **-i** 옵션을 사용 하지 않고 유틸리티를 실행 합니다. 예:  
+  `sqlcmd` 유틸리티를 대화형으로 사용하여 명령 프롬프트 창에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 를 사용 `sqlcmd`하 여 문을 대화형으로 실행 하려면 입력 파일이 나 쿼리를 지정 하는 **-q**, **-q**, **-Z**또는 **-i** 옵션을 사용 하지 않고 유틸리티를 실행 합니다. 다음은 그 예입니다.  
   
  `sqlcmd -S <ComputerName>\<InstanceName>`  
   
@@ -131,7 +131,7 @@ ms.locfileid: "75243176"
  따옴표 두 개를 연속으로 입력하여 문자열 내에 따옴표를 삽입하는 예외적인 경우를 제외하고 따옴표로 묶인 문자는 추가적인 전처리 없이 사용됩니다. 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이러한 문자 시퀀스를 하나의 따옴표로 처리합니다. 변환은 서버에서 발생합니다. 스크립팅 변수 역시 문자열 내에서는 단순한 문자로 처리됩니다.  
   
- 예:  
+ 다음은 그 예입니다.  
   
  `sqlcmd`  
   

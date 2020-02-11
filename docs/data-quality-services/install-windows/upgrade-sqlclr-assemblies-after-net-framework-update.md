@@ -12,10 +12,10 @@ ms.assetid: b1a008cc-7e6b-4655-a869-bd429f986400
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 623fbf69ef49ceb7dfea7f2d9c6e96b7520ded3e
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75558091"
 ---
 # <a name="upgrade-sqlclr-assemblies-after-net-framework-update"></a>.NET framework 업데이트 후 SQLCLR 어셈블리 업그레이드
@@ -33,10 +33,9 @@ A new version of .NET was installed on this machine. In order to continue to wor
   
  이 문제를 해결하려면 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 영향을 받는 SQLCLR 어셈블리를 업그레이드해야 합니다. DQS 데이터베이스를 다시 만드는 것을 건너뛰고 영향을 받는 어셈블리만 업그레이드하도록 **upgradedlls** 명령줄 매개 변수를 사용하여 DQSInstaller.exe를 실행하면 됩니다. 이렇게 하면 기술 자료, 데이터 품질 프로젝트 및 DQS의 다른 데이터를 유지할 수 있습니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
   
--   
-  [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 컴퓨터에서 Administrators 그룹의 멤버로 로그온해야 합니다.  
+-   [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 컴퓨터에서 Administrators 그룹의 멤버로 로그온해야 합니다.  
   
 -   Windows 사용자 계정은 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 가 설치된 SQL Server 인스턴스에서 sysadmin 고정 서버 역할의 멤버여야 합니다.  
   
@@ -60,6 +59,6 @@ A new version of .NET was installed on this machine. In order to continue to wor
   
 ## <a name="see-also"></a>참고 항목  
  [Data Quality Services 설치](../../data-quality-services/install-windows/install-data-quality-services.md)   
- [SQL Server 업데이트를 설치한 후 DQS 데이터베이스 스키마 업그레이드](../../data-quality-services/install-windows/upgrade-dqs-databases-schema-after-installing-sql-server-update.md)  
+ [SQL Server 업데이트 설치 후 DQS 데이터베이스 스키마 업그레이드](../../data-quality-services/install-windows/upgrade-dqs-databases-schema-after-installing-sql-server-update.md)  
   
   

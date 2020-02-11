@@ -15,14 +15,14 @@ ms.assetid: 35033910-623b-449a-a57d-baff3ed5ab8f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5be99b4f43669a14f948cf10ee0b91028907ec0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933368"
 ---
 # <a name="count-property-example-vb"></a>Count 속성 예제(VB)
-이 예제에서는 합니다 [수](../../../ado/reference/ado-api/count-property-ado.md) 에서 두 개의 컬렉션을 사용 하 여 속성을 ***직원*** 데이터베이스. 각 컬렉션의 개체 수를 가져옵니다 속성과 해당이 컬렉션을 열거 하는 루프에 대 한 상한값을 설정 합니다. 사용 하지 않고 해당이 컬렉션을 열거 하는 또 다른 방법은 합니다 **개수** 속성을 사용 하는 것 `For Each...Next` 문입니다.  
+이 예에서는 ***Employee*** 데이터베이스에 두 개의 컬렉션이 있는 [Count](../../../ado/reference/ado-api/count-property-ado.md) 속성을 보여 줍니다. 속성은 각 컬렉션의 개체 수를 가져오고 이러한 컬렉션을 열거 하는 루프의 상한 값을 설정 합니다. **Count** 속성을 사용 하지 않고 이러한 컬렉션을 열거 하는 또 다른 방법은 `For Each...Next` 문을 사용 하는 것입니다.  
   
 ```  
 'BeginCountVB  
@@ -96,5 +96,5 @@ End Sub
 'EndCountVB  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Count 속성(ADO)](../../../ado/reference/ado-api/count-property-ado.md)

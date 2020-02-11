@@ -16,16 +16,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e2bb9829f49f8ce777e98e3e43191a29466fc8c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093257"
 ---
 # <a name="ready-to-install"></a>설치 준비 완료
   설치 준비 완료 페이지에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서 설치하거나 변경할 기능을 요약해서 보여 줍니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  이 페이지에서는 다음 옵션을 선택할 수 있습니다.  
   
 -   설치 프로그램을 계속하려면 **설치**를 클릭합니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "66093257"
   
 -   설치 프로그램을 끝내려면 **취소**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 설치 로그 파일 보기 및 읽기](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

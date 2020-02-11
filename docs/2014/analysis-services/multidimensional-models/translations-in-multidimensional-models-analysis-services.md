@@ -13,38 +13,39 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a80c7950ec4079021bbcf03d9ccee6970d68786b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072738"
 ---
 # <a name="translations-in-multidimensional-models"></a>다차원 모델의 번역
-  다국어 지원은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 번역을 사용 하 여 수행 됩니다. 번역에는 다국어로 제공할 수 있는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체 속성의 언어 식별자와 바인딩이 포함됩니다. 예를 들어 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 대해 번역을 정의하여 지정한 언어로 해당 데이터베이스의 캡션과 설명을 제공할 수 있습니다. 번역에 대 한 자세한 내용은 참조 하세요. [큐브 번역](../multidimensional-models-olap-logical-cube-objects/cube-translations.md)합니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 다국어 지원은 번역을 사용 하 여 수행 됩니다. 번역에는 다국어로 제공할 수 있는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체 속성의 언어 식별자와 바인딩이 포함됩니다. 예를 들어 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 대해 번역을 정의하여 지정한 언어로 해당 데이터베이스의 캡션과 설명을 제공할 수 있습니다. 번역에 대 한 자세한 내용은 [큐브 번역](../multidimensional-models-olap-logical-cube-objects/cube-translations.md)을 참조 하세요.  
   
 ## <a name="defining-translations"></a>번역 정의  
- 번역할 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 개체에 적절한 디자이너를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 번역을 정의할 수 있습니다. 번역을 정의하면 해당 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체와 연결된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체의 속성에 대해 지정한 언어로 지정한 명시적 리터럴 값을 가진 `Translation` 개체가 생성됩니다.  
+ 번역할 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 개체에 적절한 디자이너를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 번역을 정의할 수 있습니다. 번역을 정의하면 해당 `Translation` 개체와 연결된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체의 속성에 대해 지정한 언어로 지정한 명시적 리터럴 값을 가진 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체가 생성됩니다.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 번역이 연결될 수 있는 개체와 속성은 다음과 같습니다.  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 번역이 연결될 수 있는 개체와 속성은 다음과 같습니다.  
   
 |Object|속성|디자이너|  
 |------------|----------------|--------------|  
-|데이터베이스|`Caption`, `Description`|[일반 &#40;데이터베이스 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](../general-database-designer-analysis-services-multidimensional-data.md)|  
-|Cube|`Caption`, `Description`|[번역 &#40;큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
-|측정값 그룹|`Caption`|[번역 &#40;큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
-|이름|`Caption`, `DisplayFolder`|[번역 &#40;큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
-|큐브 차원|`Caption`|[번역 &#40;큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
-|Cube|`Caption`|[번역 &#40;큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
-|KPI(핵심 성과 지표)|`Caption`, `Description`, `DisplayFolder`|[번역 &#40;큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
-|작업|`Caption`|[번역 &#40;큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
-|명명된 집합|`Caption`|[번역 &#40;큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
-|계산 멤버|`Caption`|[번역 &#40;큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
-|데이터베이스 차원|`Caption`, `AttributeAllMember`|[번역 &#40;차원 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
-|attribute|`Caption`, `CaptionColumn`<sup>1</sup>, `AttributeHierarchyDisplayFolder`, `NamingTemplate`, `MembersWithDataCaption`|[번역 &#40;차원 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
-|계층|`Caption`, `AllMemberName`|[번역 &#40;차원 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
-|Level|`Caption`|[번역 &#40;차원 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
+|데이터베이스|`Caption`, `Description`|[일반 &#40;데이터베이스 디자이너&#41; &#40;Analysis Services 다차원 데이터&#41;](../general-database-designer-analysis-services-multidimensional-data.md)|  
+|Perspective|`Caption`, `Description`|[큐브 디자이너&#41; &#40;Analysis Services 다차원&#41;데이터를 &#40;번역](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
+|측정값 그룹|`Caption`|[큐브 디자이너&#41; &#40;Analysis Services 다차원&#41;데이터를 &#40;번역](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
+|측정값|`Caption`, `DisplayFolder`|[큐브 디자이너&#41; &#40;Analysis Services 다차원&#41;데이터를 &#40;번역](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
+|큐브 차원|`Caption`|[큐브 디자이너&#41; &#40;Analysis Services 다차원&#41;데이터를 &#40;번역](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
+|관점|`Caption`|[큐브 디자이너&#41; &#40;Analysis Services 다차원&#41;데이터를 &#40;번역](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
+|KPI(핵심 성과 지표)|`Caption`, `Description`, `DisplayFolder`|[큐브 디자이너&#41; &#40;Analysis Services 다차원&#41;데이터를 &#40;번역](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
+|작업|`Caption`|[큐브 디자이너&#41; &#40;Analysis Services 다차원&#41;데이터를 &#40;번역](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
+|명명된 집합|`Caption`|[큐브 디자이너&#41; &#40;Analysis Services 다차원&#41;데이터를 &#40;번역](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
+|계산 멤버|`Caption`|[큐브 디자이너&#41; &#40;Analysis Services 다차원&#41;데이터를 &#40;번역](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
+|데이터베이스 차원|`Caption`, `AttributeAllMember`|[번역 &#40;차원 디자이너&#41; &#40;Analysis Services 다차원 데이터&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
+|attribute|`Caption`, `CaptionColumn` <sup>1</sup>, `AttributeHierarchyDisplayFolder`, `NamingTemplate`,`MembersWithDataCaption`|[번역 &#40;차원 디자이너&#41; &#40;Analysis Services 다차원 데이터&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
+|계층|`Caption`, `AllMemberName`|[번역 &#40;차원 디자이너&#41; &#40;Analysis Services 다차원 데이터&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
+|Level|`Caption`|[번역 &#40;차원 디자이너&#41; &#40;Analysis Services 다차원 데이터&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
   
- <sup>1</sup> 는 `CaptionColumn` 특성의 속성을 데이터 원본 뷰의 열에 바인딩될 수 및 이외의 다른 번역과 달리 인스턴스에 지정 된 Windows 데이터 정렬을 사용할 수 있습니다.  
+ <sup>1</sup> 특성 `CaptionColumn` 의 속성은 데이터 원본 뷰의 열에 바인딩할 수 있으며 다른 번역본과 달리 인스턴스에 대해 지정 된 것과 다른 Windows 데이터 정렬을 사용할 수 있습니다.  
   
 ### <a name="defining-attribute-translations"></a>특성 번역 정의  
  데이터베이스 차원의 특성과 연결된 번역은 다른 번역과 달리 다음과 같이 처리됩니다.  
@@ -53,7 +54,7 @@ ms.locfileid: "66072738"
   
 -   인스턴스에 지정된 데이터 정렬이 아닌 Windows 데이터 정렬을 사용할 수 있으므로 번역에 지정한 언어에 대해 특성 멤버를 올바로 정렬할 수 있습니다.  
   
- 사용할 수 있습니다는 **특성 데이터 번역** 대화 상자 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 데이터베이스 차원의 특성에 대 한 번역을 정의할 수 있습니다. 에 대 한 자세한 내용은 합니다 **특성 데이터 번역** 대화 상자, 참조 [특성 데이터 번역 대화 상자 &#40;Analysis Services-Multidimensional Data&#41;](../attribute-data-translation-dialog-box-analysis-services-multidimensional-data.md).  
+ 의 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] **특성 데이터 번역** 대화 상자를 사용 하 여 데이터베이스 차원의 특성에 대 한 번역을 정의할 수 있습니다. **특성 데이터 번역** 대화 상자에 대 한 자세한 내용은 [특성 데이터 번역 대화 상자 &#40;Analysis Services 다차원 데이터&#41;](../attribute-data-translation-dialog-box-analysis-services-multidimensional-data.md)를 참조 하세요.  
   
 ## <a name="resolving-translations"></a>번역 확인  
  클라이언트 애플리케이션이 지정한 언어 식별자로 정보를 요청하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체의 데이터 및 메타데이터를 가장 근사한 언어 식별자로 확인합니다. 클라이언트 애플리케이션이 기본 언어를 지정하지 않거나 중립 로캘 ID(0) 또는 기본 언어 처리 식별자(1024)를 지정하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 인스턴스에 대해 기본 언어를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체의 데이터 및 메타데이터를 반환합니다.  
@@ -76,8 +77,8 @@ ms.locfileid: "66072738"
 ## <a name="deleting-translation-objects"></a>번역 개체 삭제  
  차원 디자이너 또는 큐브 디자이너에서 번역 개체를 마우스 오른쪽 단추로 클릭하여 영구적으로 제거할 수 있습니다. 삭제된 개체를 복원하거나 재활용할 수는 없으므로 계속하기 전에 영향을 받는 개체의 목록을 검토해야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [Analysis Services 다차원에 대 한 세계화 시나리오](../globalization-scenarios-for-analysis-services-multiidimensional.md)   
- [언어 및 데이터 정렬&#40;Analysis Services&#41;](../languages-and-collations-analysis-services.md)  
+## <a name="see-also"></a>참고 항목  
+ [Analysis Services Multiidimensional에 대 한 세계화 시나리오](../globalization-scenarios-for-analysis-services-multiidimensional.md)   
+ [언어 및 데이터 정렬 &#40;Analysis Services&#41;](../languages-and-collations-analysis-services.md)  
   
   

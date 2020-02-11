@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 63c877d9b9275ef482591f6345715569a25c5e2a
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67285009"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>메모리 사용량 모니터링 및 문제 해결
@@ -23,14 +23,16 @@ ms.locfileid: "67285009"
  이 항목에서는 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 메모리 사용 모니터링에 대해 다룹니다.  
   
   
-##  <a name="bkmk_CreateDB"></a> 메모리 최적화 테이블이 포함된 샘플 데이터베이스 만들기  
+##  <a name="bkmk_CreateDB"></a>메모리 최적화 테이블이 포함 된 샘플 데이터베이스 만들기  
  메모리 최적화 테이블이 있는 데이터베이스를 이미 만든 경우에는 이 섹션을 건너뛸 수 있습니다.  
   
  다음 단계에서는 이 항목의 나머지 부분에서 사용할 수 있는 메모리 최적화 테이블이 3개 있는 데이터베이스를 만듭니다. 이 예제에서는 데이터베이스를 리소스 풀에 매핑하여 메모리 최적화 테이블에서 가져올 수 있는 메모리의 양을 제어할 수 있습니다.  
   
-1.  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]를 시작합니다.  
+1.  
+  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]를 시작합니다.  
   
-2.  **새 쿼리**를 클릭합니다.  
+2.  
+  **새 쿼리**를 클릭합니다.  
   
 3.  새 쿼리 창에 이 코드를 붙여 넣고 각 섹션을 실행합니다.  
   
@@ -112,17 +114,20 @@ ms.locfileid: "67285009"
   
 ##  <a name="monitoring-memory-usage"></a>메모리 사용 모니터링  
   
-###  <a name="using-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>사용 하 여 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]  
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 에서는 메모리 내 테이블이 사용하는 메모리를 모니터링할 수 있는 기본 표준 보고서를 제공합니다. 이러한 보고서는 [여기](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx)에 설명된 개체 탐색기를 사용하여 액세스할 수 있습니다. 또한 개체 탐색기를 사용하여 메모리 최적화 개별 테이블에서 사용하는 메모리를 모니터링할 수 있습니다.  
+###  <a name="using-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>
+  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 사용  
+ 
+  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 에서는 메모리 내 테이블이 사용하는 메모리를 모니터링할 수 있는 기본 표준 보고서를 제공합니다. 이러한 보고서는 [여기](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx)에 설명된 개체 탐색기를 사용하여 액세스할 수 있습니다. 또한 개체 탐색기를 사용하여 메모리 최적화 개별 테이블에서 사용하는 메모리를 모니터링할 수 있습니다.  
   
 #### <a name="consumption-at-the-database-level"></a>데이터베이스 수준에서 사용  
  다음과 같이 데이터베이스 수준에서 메모리 사용을 모니터링할 수 있습니다.  
   
-1.  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 를 시작하고 서버에 연결합니다.  
+1.  
+  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 를 시작하고 서버에 연결합니다.  
   
 2.  개체 탐색기에서 보고하려는 데이터베이스를 마우스 오른쪽 단추로 클릭합니다.  
   
-3.  상황에 맞는 메뉴에서 **보고서** -> **Standard 보고서** -> **메모리 액세스에 최적화된 개체의 메모리 사용량**을 선택합니다.  
+3.  상황에 맞는 메뉴에서 **보고서** -> **표준** -> 에서 메모리 액세스에**최적화 된 개체별 메모리 사용량** 을 보고 함을 선택 합니다.  
   
  ![HK_MM_SSMS](../../database-engine/media/hk-mm-ssms-stdrpt-memuse.gif "HK_MM_SSMS")  
   
@@ -157,7 +162,7 @@ NULL       -3          0                             0                       2  
 NULL       -2          192                           25                      16                              16  
 ```  
   
- 자세한 내용은 [sys.dm_db_xtp_table_memory_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql?view=sql-server-2016)합니다.  
+ 자세한 내용은 [dm_db_xtp_table_memory_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql?view=sql-server-2016)를 참조 하세요.  
   
 #### <a name="memory-consumption-by-internal-system-structures"></a>내부 시스템 구조의 메모리 사용  
  메모리는 트랜잭션 구조, 데이터 및 델타 파일 버퍼, 가비지 수집 구조 등의 시스템 개체에서도 사용합니다. 이러한 시스템 개체에서 사용하는 메모리는 여기 표시된 대로 `sys.dm_xtp_system_memory_consumers` 를 쿼리하여 확인할 수 있습니다.  
@@ -230,10 +235,11 @@ memory_object_address pages_ in_bytes bytes_used type
 0x00000001F813E040    16842752            NULL       MEMOBJ_XTPBLOCKALLOC  
 ```  
   
- 자세한 내용은 [sys.dm_os_memory_objects (TRANSACT-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql)합니다.  
+ 자세한 내용은 [dm_os_memory_objects (transact-sql)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql)를 참조 하세요.  
   
-#### <a name="memory-consumed-by-includehek2includeshek-2-mdmd-engine-across-the-instance"></a>인스턴스 전반의 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 엔진에서 사용하는 메모리  
- [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 엔진 및 메모리 액세스에 최적화된 개체에 할당된 메모리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내의 다른 메모리 소비자와 동일한 방식으로 관리됩니다. MEMORYCLERK_XTP 유형의 계정 클럭은 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 엔진에 할당된 모든 메모리를 처리합니다. 다음 쿼리를 사용하여 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 엔진에서 사용하는 모든 메모리를 찾을 수 있습니다.  
+#### <a name="memory-consumed-by-includehek_2includeshek-2-mdmd-engine-across-the-instance"></a>인스턴스 전반의 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 엔진에서 사용하는 메모리  
+ 
+  [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 엔진 및 메모리 최적화 개체에 할당된 메모리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내의 다른 메모리 소비자와 동일한 방식으로 관리됩니다. MEMORYCLERK_XTP 유형의 계정 클럭은 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 엔진에 할당된 모든 메모리를 처리합니다. 다음 쿼리를 사용하여 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 엔진에서 사용하는 모든 메모리를 찾을 수 있습니다.  
   
 ```sql  
 -- this DMV accounts for all memory used by the hek_2 engine  
@@ -256,7 +262,7 @@ MEMORYCLERK_XTP      DB_ID_5    0              1358
 MEMORYCLERK_XTP      Default    64             0  
 ```  
   
- 자세한 내용은 [sys.dm_os_memory_clerks (TRANSACT-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql)합니다.  
+ 자세한 내용은 [dm_os_memory_clerks (transact-sql)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql)를 참조 하세요.  
   
 ##   <a name="managing-memory-consumed-by-memory-optimized-objects"></a>메모리 최적화 개체에서 사용하는 메모리 관리  
  메모리 최적화 테이블을 [메모리 최적화 테이블이 있는 데이터베이스를 리소스 풀에 바인딩](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)항목에서 설명된 대로 명명된 리소스 풀에 바인딩하여 사용하는 총 메모리 양을 제어할 수 있습니다.  
@@ -268,10 +274,10 @@ MEMORYCLERK_XTP      Default    64             0
   
 2.  메모리 사용 증가량과 남은 공간을 확인합니다. 메모리 사용을 주기적으로 모니터링하여 메모리 사용 증가량을 확인할 수 있습니다. 예를 들어, 데이터베이스를 명명된 리소스 풀에 매핑한 경우 성능 카운터 메모리 사용(KB)을 모니터링하여 메모리 사용량의 증가 정도를 확인할 수 있습니다.  
   
-3.  잠재적인 메모리 문제를 해소하기 위한 정정 작업을 수행합니다. 자세한 내용은 [메모리 문제 개 해결](resolve-out-of-memory-issues.md)합니다.  
+3.  잠재적인 메모리 문제를 해소하기 위한 정정 작업을 수행합니다. 자세한 내용은 [메모리 부족 문제 해결](resolve-out-of-memory-issues.md)을 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [메모리 액세스에 최적화된 테이블이 있는 데이터베이스를 리소스 풀에 바인딩](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
+## <a name="see-also"></a>참고 항목  
+ [데이터베이스를 리소스 풀에 바인딩하는 방법에 대한 지침은](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [기존 풀에서 MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT 변경](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-min-memory-percent-and-max-memory-percent-on-an-existing-pool)
   
   

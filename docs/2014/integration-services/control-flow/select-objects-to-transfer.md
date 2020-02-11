@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8ca32cdc72bb5c062be4c3745d3f742f39753afa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830407"
 ---
 # <a name="select-objects-to-transfer"></a>전송할 개체 선택
@@ -26,7 +26,7 @@ ms.locfileid: "62830407"
   
  전송할 특정 개체를 선택하려면 개체가 나열된 표에서 해당 행에 대한 첫 번째 열의 확인란을 선택합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../integration-services-error-and-message-reference.md)   
  [작업 전송 태스크 편집기&#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)   
  [로그인 전송 태스크 편집기&#40;로그인 페이지&#41;](../transfer-logins-task-editor-logins-page.md)   

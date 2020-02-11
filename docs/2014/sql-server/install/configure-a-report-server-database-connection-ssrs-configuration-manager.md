@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 8b6f1fa1697898432479b524659383d81fc8836a
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952630"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>보고서 서버 데이터베이스 연결 구성(SSRS 구성 관리자)
@@ -42,7 +42,8 @@ ms.locfileid: "71952630"
   
  보고서 서버 데이터베이스는 보고서 서버에 의해서만 액세스되는 내부 구성 요소이므로 보고서 서버 데이터베이스에 대해 지정된 자격 증명과 연결 정보는 보고서 서버에만 사용됩니다. 따라서 보고서를 요청하는 사용자에게는 보고서 서버 데이터베이스에 대한 데이터베이스 권한이나 데이터베이스 로그인이 필요하지 않습니다.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] `System.Data.SqlClient`를 사용 하 여 보고서 서버 데이터베이스를 호스팅하는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결 합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 로컬 인스턴스를 사용하고 있는 경우 보고서 서버에서는 공유 메모리를 사용하여 연결을 설정합니다. 보고서 서버 데이터베이스에 원격 데이터베이스 서버를 사용하고 있는 경우 사용하고 있는 에디션에 따라 원격 연결을 설정해야 할 수도 있습니다. Enterprise Edition을 사용하고 있는 경우에는 기본적으로 TCP/IP에 대한 원격 연결이 설정되어 있습니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 `System.Data.SqlClient` 를 사용 하 여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 보고서 서버 데이터베이스를 호스팅하는에 연결 합니다. 
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 로컬 인스턴스를 사용하고 있는 경우 보고서 서버에서는 공유 메모리를 사용하여 연결을 설정합니다. 보고서 서버 데이터베이스에 원격 데이터베이스 서버를 사용하고 있는 경우 사용하고 있는 에디션에 따라 원격 연결을 설정해야 할 수도 있습니다. Enterprise Edition을 사용하고 있는 경우에는 기본적으로 TCP/IP에 대한 원격 연결이 설정되어 있습니다.  
   
  인스턴스가 원격 연결을 허용하는지 확인하려면 **시작**, **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **구성 도구**, **SQL Server 구성 관리자**를 차례로 클릭한 다음 각 서비스에 대해 TCP/IP 프로토콜이 설정되어 있는지 확인합니다.  
   
@@ -59,12 +60,14 @@ ms.locfileid: "71952630"
   
 -   사용자 이름 및 암호. Windows 도메인 계정 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 사용하는 경우에만 필요합니다.  
   
- 제공하는 자격 증명에는 보고서 서버 데이터베이스에 대한 액세스 권한을 부여해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하면 이 단계가 자동으로 수행됩니다. 데이터베이스에 액세스하는 데 필요한 권한에 대한 자세한 내용은 이 항목의 "데이터베이스 권한" 섹션을 참조하십시오.  
+ 제공하는 자격 증명에는 보고서 서버 데이터베이스에 대한 액세스 권한을 부여해야 합니다. 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하면 이 단계가 자동으로 수행됩니다. 데이터베이스에 액세스하는 데 필요한 권한에 대한 자세한 내용은 이 항목의 "데이터베이스 권한" 섹션을 참조하십시오.  
   
 ### <a name="storing-database-connection-information"></a>데이터베이스 연결 정보 저장  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 다음 RSreportserver.config 설정에 연결 정보를 저장 및 암호화합니다. 이러한 설정에 대해 암호화된 값을 만들려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구 또는 rsconfig 유틸리티를 사용해야 어야 합니다.  
+ 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 다음 RSreportserver.config 설정에 연결 정보를 저장 및 암호화합니다. 이러한 설정에 대해 암호화된 값을 만들려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구 또는 rsconfig 유틸리티를 사용해야 어야 합니다.  
   
- 모든 연결 유형에 대해 모든 값이 설정되는 것은 아닙니다. 기본값을 사용 하 여 연결을 구성 하는 경우 (즉, 서비스 계정을 사용 하 여 연결을 설정 하는 경우), <`LogonUser`>, <`LogonDomain`> 및 <`LogonCred`> 다음과 같이 비어 있게 됩니다.  
+ 모든 연결 유형에 대해 모든 값이 설정되는 것은 아닙니다. 기본값을 사용 하 여 연결을 구성 하는 경우 (즉, 서비스 계정을 사용 하 여 연결을 설정 하는 `LogonUser` 경우), `LogonDomain` <>, <`LogonCred`> 및 <> 다음과 같이 비어 있게 됩니다.  
   
 ```  
 <Dsn></Dsn>  
@@ -83,12 +86,14 @@ ms.locfileid: "71952630"
   
 -   Windows 사용자 계정. 보고서 서버와 보고서 서버 데이터베이스가 같은 컴퓨터에 설치되어 있는 경우에는 로컬 계정을 사용할 수 있습니다. 그렇지 않은 경우에는 도메인 계정을 사용해야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인  
   
 > [!NOTE]  
 >  보고서 서버 데이터베이스 연결에는 사용자 지정 인증 확장 프로그램을 사용할 수 없습니다. 이 확장 프로그램은 보고서 서버의 보안 주체를 인증하는 데에만 사용됩니다. 또한 이 프로그램은 보고서 서버 데이터베이스에 연결하거나 보고서에 내용을 제공하는 외부 데이터 원본에 연결할 때는 아무 영향도 주지 않습니다.  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 Windows 인증이 구성되어 있고 이 인스턴스가 보고서 서버 컴퓨터와 같은 도메인이나 트러스트된 도메인에 있는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 통해 연결 속성으로 관리되는 서비스 계정 또는 도메인 사용자 계정을 사용하도록 연결을 구성할 수 있습니다. 데이터베이스 서버가 다른 도메인에 있거나 작업 그룹 보안을 사용하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 로그인을 사용하도록 연결을 구성해야 합니다. 이 경우 연결을 암호화해야 합니다.  
+ 
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 Windows 인증이 구성되어 있고 이 인스턴스가 보고서 서버 컴퓨터와 같은 도메인이나 트러스트된 도메인에 있는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 통해 연결 속성으로 관리되는 서비스 계정 또는 도메인 사용자 계정을 사용하도록 연결을 구성할 수 있습니다. 데이터베이스 서버가 다른 도메인에 있거나 작업 그룹 보안을 사용하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 로그인을 사용하도록 연결을 구성해야 합니다. 이 경우 연결을 암호화해야 합니다.  
   
 ##### <a name="using-service-accounts-and-integrated-security"></a>서비스 계정 및 통합 보안 사용  
  Windows 통합 보안을 사용하면 보고서 서버 서비스 계정을 통해 연결할 수 있습니다. 이 계정에는 보고서 서버 데이터베이스에 대한 로그인 권한이 부여됩니다. 이 유형은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 기본 구성으로 설치하는 경우 설치 프로그램에서 선택하는 기본 자격 증명 유형입니다.  
@@ -106,14 +111,17 @@ ms.locfileid: "71952630"
 ### <a name="database-permissions"></a>데이터베이스 권한  
  보고서 서버 데이터베이스 연결에 사용되는 계정에는 다음 역할이 부여됩니다.  
   
--   **ReportServer** 데이터베이스에 대한 **public** 및 **RSExecRole** 역할  
+-   **ReportServer** 데이터베이스에 대 한 **public** 및 **RSExecRole** 역할  
   
--   **master** , **msdb**및 **ReportServerTempDB**데이터베이스에 대한 **RSExecRole** 역할  
+-   **Master**, **Msdb**및 **reportservertempdb** 데이터베이스에 대 한 **RSExecRole** 역할입니다.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하여 연결을 만들거나 수정하는 경우에는 이러한 권한이 자동으로 부여됩니다. rsconfig 유틸리티를 사용하는 경우 연결에 대해 다른 계정을 지정하면 해당 새 계정에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 업데이트해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구에서 스크립트 파일을 만들어 보고서 서버에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 업데이트할 수 있습니다.  
+ 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하여 연결을 만들거나 수정하는 경우에는 이러한 권한이 자동으로 부여됩니다. rsconfig 유틸리티를 사용하는 경우 연결에 대해 다른 계정을 지정하면 해당 새 계정에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 업데이트해야 합니다. 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구에서 스크립트 파일을 만들어 보고서 서버에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 업데이트할 수 있습니다.  
   
 ### <a name="verifying-the-database-name"></a>데이터베이스 이름 확인  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하여 특정 보고서 서버 인스턴스에서 사용하는 보고서 서버 데이터베이스를 확인할 수 있습니다. 이름을 찾으려면 보고서 서버 인스턴스에 연결한 다음 데이터베이스 설치 페이지를 엽니다.  
+ 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하여 특정 보고서 서버 인스턴스에서 사용하는 보고서 서버 데이터베이스를 확인할 수 있습니다. 이름을 찾으려면 보고서 서버 인스턴스에 연결한 다음 데이터베이스 설치 페이지를 엽니다.  
   
 ## <a name="using-a-different-report-server-database-or-moving-a-report-server-database"></a>다른 보고서 서버 데이터베이스 사용 또는 보고서 서버 데이터베이스 이동  
  연결 정보를 변경하여 보고서 서버 인스턴스에서 다른 보고서 서버 데이터베이스를 사용하도록 구성할 수 있습니다. 프로덕션 보고서 서버를 배포할 때 주로 데이터베이스를 전환합니다. 테스트 보고서 서버 데이터베이스에서 프로덕션 보고서 서버 데이터베이스로 전환 하는 것은 일반적으로 프로덕션 서버가 롤아웃 되는 방식입니다. 보고서 서버 데이터베이스를 다른 컴퓨터로 이동할 수도 있습니다. 자세한 내용은 [온라인 설명서의](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md) Reporting Services 업그레이드 및 마이그레이션 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 참조하세요.  

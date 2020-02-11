@@ -13,16 +13,16 @@ ms.assetid: 3931e7ec-f66b-4d5d-aad3-c4bf12e8b154
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 72e24c8c68a8042cda83c6fa5e448fafcaed1607
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925259"
 ---
 # <a name="getting-data"></a>데이터 가져오기
-[ADO 기본 사항](../../../ado/guide/data/ado-fundamentals.md), 및 [HelloData](../../../ado/guide/data/hellodata-a-simple-ado-application.md) 예제 ADO 응용 프로그램을 만드는 데 관련 된 네 가지 기본 작업을 특히 도입: 데이터 가져오기, 데이터를 검사, 데이터, 편집 및 데이터를 업데이트 합니다. 이 섹션에서는 시작 데이터를 더 자세히 설명 합니다.  
+[Ado 기본 사항](../../../ado/guide/data/ado-fundamentals.md)및 특히 [HelloData](../../../ado/guide/data/hellodata-a-simple-ado-application.md) 예제에는 ado 응용 프로그램 만들기와 관련 된 네 가지 기본 작업 (데이터 가져오기, 데이터 검사, 데이터 편집, 데이터 업데이트)이 도입 되었습니다. 이 섹션에서는 데이터 가져오기에 대해 자세히 설명 합니다.  
   
- 기본 수준에서 여러 ADO 개체 데이터를 가져오는 작업에 영향을 줍니다. ADO를 사용 하 여 데이터 원본에 먼저 연결 해야 합니다 **연결** 개체입니다. ADO를 사용 하 여 데이터 원본에 지침을 전달할 **명령** 개체입니다. 마지막으로, 대부분의 데이터를 수신할 ado에서 **레코드 집합** 개체입니다.  
+ 기본 수준에서 여러 ADO 개체는 데이터 가져오기 작업에 영향을 주지 않습니다. 먼저 ADO **연결** 개체를 사용 하 여 데이터 원본에 연결 해야 합니다. 그런 다음 ADO **명령** 개체를 사용 하 여 데이터 원본에 명령을 전달 합니다. 마지막으로 대부분의 경우 ADO **레코드 집합** 개체에서 데이터를 수신 합니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

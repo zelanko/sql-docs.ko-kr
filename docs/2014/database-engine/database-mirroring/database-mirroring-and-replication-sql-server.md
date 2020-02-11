@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9268f0d06e0bf960ce3fb8879dfc219232ea822e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807466"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>데이터베이스 미러링 및 복제(SQL Server)
@@ -69,13 +69,15 @@ ms.locfileid: "62807466"
   
 2.  데이터베이스 미러링을 구성합니다. 자세한 내용은 [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md) 및 [데이터베이스 미러링 설정&#40;SQL Server&#41;](database-mirroring-sql-server.md)을 참조하세요.  
   
-3.  미러 서버에 대한 배포를 구성합니다. 게시자로 미러 이름을 지정하고 주 서버에서 사용되는 것과 같은 배포자 및 스냅샷 폴더를 지정합니다. 예를 들어 저장 프로시저로 복제를 구성하는 경우 배포자에서 [sp_adddistpublisher](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) 를 실행한 다음 미러에서 [sp_adddistributor](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) 를 실행합니다. **sp_adddistpublisher**의 경우 다음과 같이 합니다.  
+3.  미러 서버에 대한 배포를 구성합니다. 게시자로 미러 이름을 지정하고 주 서버에서 사용되는 것과 같은 배포자 및 스냅샷 폴더를 지정합니다. 예를 들어 저장 프로시저로 복제를 구성하는 경우 배포자에서 [sp_adddistpublisher](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) 를 실행한 다음 미러에서 [sp_adddistributor](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) 를 실행합니다. 
+  **sp_adddistpublisher**의 경우 다음과 같이 합니다.  
   
-    -   **@publisher** 매개 변수의 값을 미러 서버의 네트워크 이름으로 설정합니다.  
+    -   **@publisher** 매개 변수의 값을 미러 서버의 네트워크 이름으로 설정 합니다.  
   
-    -   **@working_directory** 매개 변수의 값을 주 서버에서 사용되는 스냅숏 폴더로 설정합니다.  
+    -   **@working_directory** 매개 변수의 값을 주 서버에서 사용 하는 스냅숏 폴더로 설정 합니다.  
   
-4.  **–PublisherFailoverPartner** 에이전트 매개 변수에 대한 미러 이름을 지정합니다. 이 에이전트 매개 변수는 다음 에이전트에서 장애 조치 후 미러 서버를 식별하는 데 필요합니다.  
+4.  
+  **–PublisherFailoverPartner** 에이전트 매개 변수에 대한 미러 이름을 지정합니다. 이 에이전트 매개 변수는 다음 에이전트에서 장애 조치 후 미러 서버를 식별하는 데 필요합니다.  
   
     -   모든 게시에 대한 스냅샷 에이전트  
   
@@ -85,15 +87,16 @@ ms.locfileid: "62807466"
   
     -   병합 게시에 대한 병합 에이전트  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제 수신기(replisapi.dll: 웹 동기화를 사용하여 동기화된 병합 구독)  
+    -   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제 수신기(replisapi.dll: 웹 동기화를 사용하여 동기화된 병합 구독)  
   
     -   컨트롤로 동기화된 병합 구독에 대한 SQL 병합 ActiveX 컨트롤  
   
      배포 에이전트 및 배포 ActiveX 컨트롤은 게시자에 연결되지 않기 때문에 이 매개 변수가 없습니다.  
   
-     에이전트 매개 변수에 대한 변경 사항은 다음에 에이전트가 시작될 때 적용됩니다. 에이전트가 연속적으로 실행되는 경우에는 에이전트를 중단했다가 다시 시작해야 합니다. 에이전트 프로필 및 명령 프롬프트에서 매개 변수를 지정할 수 있습니다. 참조 항목:  
+     에이전트 매개 변수에 대한 변경 사항은 다음에 에이전트가 시작될 때 적용됩니다. 에이전트가 연속적으로 실행되는 경우에는 에이전트를 중단했다가 다시 시작해야 합니다. 에이전트 프로필 및 명령 프롬프트에서 매개 변수를 지정할 수 있습니다. 자세한 내용은 다음을 참조하세요.  
   
-    -   [복제 에이전트의 명령 프롬프트 매개 변수 보기 및 수정&#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+    -   [복제 에이전트의 명령 프롬프트 매개 변수를 보고 수정 &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
     -   [Replication Agent Executables Concepts](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
@@ -121,7 +124,8 @@ ms.locfileid: "62807466"
 ## <a name="maintaining-a-mirrored-publication-database"></a>미러된 게시 데이터베이스 유지 관리  
  미러된 게시 데이터베이스를 유지 관리하는 작업은 미러되지 않은 데이터베이스를 유지 관리하는 방법과 본질적으로 동일하지만 다음 사항을 고려해야 합니다.  
   
--   관리 및 모니터링은 활성 서버에서 수행되어야 합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 게시는 활성 서버의 경우에만 **로컬 게시** 폴더에 표시됩니다. 예를 들어 미러 서버로 장애 조치된 경우, 게시는 미러 서버에 표시되고 주 서버에는 더 이상 표시되지 않습니다. 데이터베이스가 미러 데이터베이스로 장애 조치된 경우에는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 와 복제 모니터를 수동으로 새로 고쳐서 변경 내용을 적용해야 할 수 있습니다.  
+-   관리 및 모니터링은 활성 서버에서 수행되어야 합니다. 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 게시는 활성 서버의 경우에만 **로컬 게시** 폴더에 표시됩니다. 예를 들어 미러 서버로 장애 조치된 경우, 게시는 미러 서버에 표시되고 주 서버에는 더 이상 표시되지 않습니다. 데이터베이스가 미러 데이터베이스로 장애 조치된 경우에는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 와 복제 모니터를 수동으로 새로 고쳐서 변경 내용을 적용해야 할 수 있습니다.  
   
 -   복제 모니터는 개체 트리에 주 서버와 미러 서버의 게시 노드를 표시합니다. 주 서버가 활성 서버이면 게시 정보가 복제 모니터의 주 노드 아래에만 표시됩니다.  
   
@@ -133,12 +137,13 @@ ms.locfileid: "62807466"
   
 -   게시자 이름 지정 등을 위해 저장 프로시저나 RMO(복제 관리 개체)를 사용하여 미러 서버에서 복제를 관리할 때는 복제용으로 데이터베이스가 설정된 인스턴스 이름을 지정해야 합니다. 올바른 이름을 확인하려면 [publishingservername](/sql/t-sql/functions/replication-functions-publishingservername)함수를 사용하십시오.  
   
-     게시 데이터베이스가 미러된 경우 미러된 데이터베이스에 저장된 복제 메타데이터는 주 데이터베이스에 저장된 메타데이터와 동일합니다. 따라서 주 서버에서 복제용으로 설정된 게시 데이터베이스의 경우 미러 서버에서 시스템 테이블에 저장된 게시자 이름은 미러 서버가 아닌 주 서버의 이름입니다. 이러한 방식은 게시 데이터베이스가 미러 서버로 장애 조치되는 경우 복제 구성 및 유지 관리에 영향을 줍니다. 예를 들어 장애 조치(failover) 후에 미러 서버에서 저장 프로시저로 복제를 구성할 때 주 서버에서 설정된 게시 데이터베이스에 끌어오기 구독을 추가하려면 **@publisher** 또는 **sp_addmergepullsubscription** 의 **@publisher**을 참조하세요.  
+     게시 데이터베이스가 미러된 경우 미러된 데이터베이스에 저장된 복제 메타데이터는 주 데이터베이스에 저장된 메타데이터와 동일합니다. 따라서 주 서버에서 복제용으로 설정된 게시 데이터베이스의 경우 미러 서버에서 시스템 테이블에 저장된 게시자 이름은 미러 서버가 아닌 주 서버의 이름입니다. 이러한 방식은 게시 데이터베이스가 미러 서버로 장애 조치되는 경우 복제 구성 및 유지 관리에 영향을 줍니다. 예를 들어 장애 조치 (failover) 후에 미러 서버에서 저장 프로시저를 사용 하 여 복제를 구성 하는 경우 주 서버에서 사용 하도록 설정 된 게시 데이터베이스에 끌어오기 구독을 추가 하려면 **@publisher** **sp_addpullsubscription** 또는 **sp_addmergepullsubscription**의 매개 변수에 대 한 미러 이름이 아닌 사용자 이름을 지정 해야 합니다.  
   
-     미러 서버로 장애 조치된 후 미러 서버에 게시 데이터베이스를 설정하면 시스템 테이블에 저장된 게시자 인스턴스 이름이 미러 서버의 이름이며, 이 경우 **@publisher** 매개 변수에 대해 미러 서버의 이름을 사용하게 됩니다.  
+     미러 서버로 장애 조치 (failover) 후 미러에서 게시 데이터베이스를 사용 하도록 설정 하면 시스템 테이블에 저장 된 게시자 인스턴스 이름이 미러 서버의 이름이 됩니다. 이 경우 **@publisher** 매개 변수에 대 한 미러 이름을 사용 합니다.  
   
     > [!NOTE]  
-    >  **sp_addpublication**과 같은 일부 경우에는 **@publisher** 매개 변수가 비[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자에 대해서만 지원되며, 이 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 미러링과는 관련이 없습니다.  
+    >  
+  **sp_addpublication**과 같은 일부 경우에는 **@publisher** 매개 변수가 비[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자에 대해서만 지원되며, 이 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 미러링과는 관련이 없습니다.  
   
 -   장애 조치 후 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서 구독을 동기화하려면 구독자에서 끌어오기 구독을 동기화하고 활성 게시자에서 밀어넣기 구독을 동기화합니다.  
   
@@ -160,8 +165,8 @@ ms.locfileid: "62807466"
 |성능 우선 모드|미러 서버를 사용할 수 없으면 주 데이터베이스가 노출된 상태(즉, 미러되지 않은 상태)로 실행됩니다. 하지만 로그 판독기 에이전트는 미러 서버에 저장된 트랜잭션만 복제합니다. 서비스가 강제되고 미러 서버가 주 서버의 역할을 수행하는 경우 로그 판독기 에이전트는 미러 서버에 따라 작동되며 새로운 트랜잭션을 가져오기 시작합니다.<br /><br /> 미러 서버가 주 서버보다 뒤쳐지면 복제 지연이 증가할 수 있습니다.|  
 |자동 장애 조치를 지원하지 않는 보호 우선 모드|커밋된 모든 트랜잭션이 미러 서버의 디스크에 확정됩니다. 로그 판독기 에이전트는 미러 서버에 확정된 트랜잭션만 복제합니다. 미러 서버를 사용할 수 없는 경우 주 서버는 데이터베이스에 대한 더 이상의 작동을 허용하지 않기 때문에 로그 에이전트에는 복제할 트랜잭션이 없게 됩니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 복제](../../relational-databases/replication/sql-server-replication.md)   
- [로그 전달 및 복제&#40;SQL Server&#41;](../log-shipping/log-shipping-and-replication-sql-server.md)  
+ [로그 전달 및 복제 &#40;SQL Server&#41;](../log-shipping/log-shipping-and-replication-sql-server.md)  
   
   

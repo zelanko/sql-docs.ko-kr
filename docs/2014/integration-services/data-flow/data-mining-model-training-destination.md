@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5dac84fe42185806ae468593876a6bd439c1c689
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890651"
 ---
 # <a name="data-mining-model-training-destination"></a>데이터 마이닝 모델 학습 대상
@@ -35,19 +35,20 @@ ms.locfileid: "68890651"
   
  이 대상에는 하나의 입력이 포함되며 출력은 포함되지 않습니다.  
   
- 데이터 마이닝 모델 학습 대상은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 연결 관리자를 사용하여 학습 대상의 마이닝 구조와 마이닝 모델이 포함된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스나 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 연결합니다. 자세한 내용은 [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md)을 참조하세요.  
+ 데이터 마이닝 모델 학습 대상은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 연결 관리자를 사용 하 여 대상의 학습 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에 사용 되는 마이닝 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 구조 및 마이닝 모델이 포함 된 인스턴스 또는 프로젝트에 연결 합니다. 자세한 내용은 [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md)을 참조하세요.  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- **데이터 마이닝 모델 학습 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
+ 
+  **데이터 마이닝 모델 학습 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [데이터 마이닝 모델 학습 편집기&#40;연결 탭&#41;](../data-mining-model-training-editor-connection-tab.md)  
+-   [데이터 마이닝 모델 학습 편집기 &#40;연결 탭&#41;](../data-mining-model-training-editor-connection-tab.md)  
   
--   [데이터 마이닝 모델 학습 편집기&#40;열 탭&#41;](../data-mining-model-training-editor-columns-tab.md)  
+-   [데이터 마이닝 모델 학습 편집기 &#40;열 탭&#41;](../data-mining-model-training-editor-columns-tab.md)  
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [공용 속성](../common-properties.md)  
+-   [Common Properties](../common-properties.md)  
   
 -   [데이터 마이닝 모델 학습 대상 사용자 지정 속성](data-mining-model-training-destination-custom-properties.md)  
   

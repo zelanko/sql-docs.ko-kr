@@ -1,5 +1,5 @@
 ---
-title: Hierarchy (MDX) | Microsoft Docs
+title: 계층 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ba105499fd3f94429c73152f4471541e13e9af98
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68105425"
 ---
 # <a name="hierarchy-mdx"></a>Hierarchy(MDX)
@@ -39,7 +39,7 @@ Level_Expression.Hierarchy
  수준을 반환하는 유효한 MDX 식입니다.  
   
 ### <a name="examples"></a>예  
- 다음 예제에서는 AdventureWorks 큐브에서 Date 차원의 Calendar 계층의 이름을 반환합니다.  
+ 다음 예에서는 AdventureWorks 큐브의 Date 차원에 있는 Calendar 계층의 이름을 반환 합니다.  
   
  `WITH`  
   
@@ -53,7 +53,7 @@ Level_Expression.Hierarchy
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

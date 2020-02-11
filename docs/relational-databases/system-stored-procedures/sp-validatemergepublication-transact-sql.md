@@ -16,10 +16,10 @@ ms.assetid: 5a862f1a-2be1-4758-9954-4cdc8c77d149
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 02ffdd0facfedd1b9eb6d8eee083f819566d818d
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72006098"
 ---
 # <a name="sp_validatemergepublication-transact-sql"></a>s sp_validatemergepublication(Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "72006098"
 
   모든 구독(밀어넣기, 끌어오기 및 익명 구독)에 대해 한 번씩 유효성 검사를 하는 게시 차원의 유효성 검사를 수행합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,15 +38,15 @@ sp_validatemergepublication [@publication=] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **\@게시 =** ] **'***게시***'**  
+ [**\@게시 =**] **'***게시***'**  
  게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @level = ] level`는 수행할 유효성 검사의 유형입니다. *level* 은 **tinyint**이며 기본값은 없습니다. 수준은 다음 값 중 하나일 수 있습니다.  
+`[ @level = ] level`수행할 유효성 검사의 유형입니다. *level* 은 **tinyint**이며 기본값은 없습니다. 수준은 다음 값 중 하나일 수 있습니다.  
   
-|수준 값|설명|  
+|수준 값|Description|  
 |-----------------|-----------------|  
-|**1.**|행 개수의 유효성만 검사합니다.|  
-|**2**|행 개수 및 체크섬의 유효성을 검사합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]구독자의 경우 자동으로 **3**으로 설정 됩니다.|  
+|**1**|행 개수의 유효성만 검사합니다.|  
+|**2**|행 개수 및 체크섬의 유효성을 검사합니다. 구독자 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]의 경우이는 자동으로 **3**으로 설정 됩니다.|  
 |**3**|권장 값입니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -61,6 +61,6 @@ sp_validatemergepublication [@publication=] 'publication'
 ## <a name="see-also"></a>참고 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [복제 된 데이터의 유효성 검사](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [Transact-sql &#40;sp_validatemergesubscription&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)  
+ [Transact-sql&#41;sp_validatemergesubscription &#40;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)  
   
   

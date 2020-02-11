@@ -1,5 +1,5 @@
 ---
-title: MSmerge_subscriptions (TRANSACT-SQL) | Microsoft Docs
+title: MSmerge_subscriptions (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: cafd954a-92f8-44cb-a5d0-dce9aafa5ee1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b00a2e83839724c2b6e5193e2ca08d5c6d3eced9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106312"
 ---
-# <a name="msmergesubscriptions-transact-sql"></a>MSmerge_subscriptions(Transact-SQL)
+# <a name="msmerge_subscriptions-transact-sql"></a>MSmerge_subscriptions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  합니다 **MSmerge_subscriptions** 구독자에서 병합 에이전트에 의해 서비스 되는 각 구독에 대해 하나의 행을 포함 하는 테이블입니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
+  **MSmerge_subscriptions** 테이블은 구독자에서 병합 에이전트 서비스를 제공 하는 각 구독에 대해 하나의 행을 포함 합니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|게시자의 ID입니다.|  
 |**publisher_db**|**sysname**|게시자 데이터베이스의 이름입니다.|  
@@ -38,11 +38,11 @@ ms.locfileid: "68106312"
 |**subscriber_db**|**sysname**|구독 데이터베이스의 이름입니다.|  
 |**subscription_type**|**int**|구독 유형은 다음과 같습니다.<br /><br /> 0 = 밀어넣기<br /><br /> 1 = 끌어오기<br /><br /> 2 = 익명|  
 |**sync_type**|**tinyint**|동기화 유형입니다.<br /><br /> 1 = 자동<br /><br /> 2 = 동기화 안 함|  
-|**상태**|**tinyint**|구독의 상태입니다.|  
+|**업무**|**tinyint**|구독의 상태입니다.|  
 |**subscription_time**|**datetime**|구독이 추가된 시간입니다.|  
   
-## <a name="see-also"></a>관련 항목  
- [복제 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;&#40;복제 테이블](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

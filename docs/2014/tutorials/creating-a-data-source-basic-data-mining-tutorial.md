@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3f85320a99c901a2fd71c9048750825569559099
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69494021"
 ---
 # <a name="creating-a-data-source-basic-data-mining-tutorial"></a>데이터 원본 만들기(기본 데이터 마이닝 자습서)
-  *데이터 원본은* 프로젝트에서 저장 및 관리 되 고 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 배포 되는 데이터 연결입니다. 데이터 원본에는 원본 데이터가 있는 서버 및 데이터베이스의 이름뿐만 아니라 필요한 기타 연결 속성이 포함됩니다.  
+  *데이터 원본은* 프로젝트에서 저장 및 관리 되 고 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스에 배포 되는 데이터 연결입니다. 데이터 원본에는 원본 데이터가 있는 서버 및 데이터베이스의 이름뿐만 아니라 필요한 기타 연결 속성이 포함됩니다.  
   
 > [!IMPORTANT]  
 >  데이터베이스의 이름은 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]입니다. 이 데이터베이스를 아직 설치 하지 않은 경우 [MICROSOFT SQL 예제 데이터베이스](https://go.microsoft.com/fwlink/?LinkId=88417) 페이지를 참조 하세요.  
@@ -27,7 +27,8 @@ ms.locfileid: "69494021"
   
 1.  **솔루션 탐색기**에서 **데이터 원본** 폴더를 마우스 오른쪽 단추로 클릭 하 고 **새 데이터 원본**을 선택 합니다.  
   
-2.  **데이터 원본 마법사 시작** 페이지에서 **다음**을 클릭 합니다.  
+2.  
+  **데이터 원본 마법사 시작** 페이지에서 **다음**을 클릭합니다.  
   
 3.  **연결 정의 방법 선택** 페이지에서 **새로 만들기** 를 클릭 하 여 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 데이터베이스에 대 한 연결을 추가 합니다.  
   
@@ -50,19 +51,19 @@ ms.locfileid: "69494021"
   
      **마법사 완료** 페이지에서는 기본적으로 데이터 원본의 이름이 놀이 Works DW 2012입니다.  
   
-10. **마침**을 클릭합니다.  
+10. **Finish**를 클릭합니다.  
   
      새 데이터 원본인 어드벤처 DW 2012는 솔루션 탐색기의 **데이터 원본** 폴더에 표시 됩니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
- [데이터 원본 뷰 &#40;만들기 기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/creating-a-data-source-view-basic-data-mining-tutorial.md)  
+ [기본 데이터 마이닝 자습서를 &#40;데이터 원본 뷰 만들기&#41;](../../2014/tutorials/creating-a-data-source-view-basic-data-mining-tutorial.md)  
   
 ## <a name="previous-task-in-lesson"></a>단원의 이전 태스크  
- [Analysis Services 프로젝트 &#40;기본 데이터 마이닝 자습서 만들기&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md)  
+ [기본 데이터 마이닝 자습서 &#40;Analysis Services 프로젝트 만들기 자습서&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 원본 만들기&#40;SSAS 다차원&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
  [데이터 원본 정의](../analysis-services/lesson-1-2-defining-a-data-source.md)   
- [가장 옵션 설정 & #40; SSAS-다차원 데이터 & #41;](https://docs.microsoft.com/analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional)  
+ [가장 옵션 &#40;SSAS-다차원&#41;설정](https://docs.microsoft.com/analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional)  
   
   

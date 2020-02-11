@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bd09706d1b3de9ebe4a5b333f79be9644c433e7c
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73982348"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities(Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "73982348"
   
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -60,27 +60,27 @@ sys.dm_sql_referencing_entities (
 ```  
   
 ## <a name="arguments"></a>인수  
- *schema_name.referenced*_*entity_name*  
+ *schema_name. 참조*_*entity_name*  
  참조된 엔터티의 이름입니다.  
   
  참조 된 클래스가 PARTITION_FUNCTION 되는 경우를 제외 하 고 *schema_name* 필요 합니다.  
   
  *schema_name referenced_entity_name* **nvarchar (517)** 입니다.  
   
- *< referenced_class >* :: = {OBJECT | 형식 | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION}  
+ *<referenced_class>* :: = {OBJECT | 형식 | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION}  
  참조된 엔터티의 클래스입니다. 각 문에는 하나의 클래스만 지정할 수 있습니다.  
   
- *< referenced_class >* 은 **nvarchar**(60)입니다.  
+ *<referenced_class>* 은 **nvarchar**(60)입니다.  
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |referencing_schema_name|**sysname**|참조 엔터티가 속한 스키마입니다. Null을 허용합니다.<br /><br /> 데이터베이스 수준 및 서버 수준 DDL 트리거의 경우 NULL입니다.|  
 |referencing_entity_name|**sysname**|참조 엔터티의 이름입니다. Null을 허용하지 않습니다.|  
 |referencing_id|**int**|참조 엔터티의 ID입니다. Null을 허용하지 않습니다.|  
 |referencing_class|**tinyint**|참조 엔터티의 클래스입니다. Null을 허용하지 않습니다.<br /><br /> 1 = 개체<br /><br /> 12 = 데이터베이스 수준 DDL 트리거<br /><br /> 13 = 서버 수준 DDL 트리거|  
-|referencing_class_desc|**nvarchar(60)**|참조 엔터티 클래스에 대한 설명입니다.<br /><br /> OBJECT<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER|  
+|referencing_class_desc|**nvarchar (60)**|참조 엔터티 클래스에 대한 설명입니다.<br /><br /> OBJECT<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER|  
 |is_caller_dependent|**bit**|참조된 엔터티 ID 확인은 호출자의 스키마에 종속되기 때문에 런타임에 발생함을 나타냅니다.<br /><br /> 1 = 참조 엔터티는 엔터티를 참조할 수 있습니다. 그러나 참조된 엔터티 ID의 확인은 호출자에 종속되므로 확인할 수 없습니다. 이는 EXECUTE 문에서 호출되는 저장 프로시저, 확장 저장 프로시저 또는 사용자 정의 함수에 대한 비스키마 바운드 참조에서만 발생합니다.<br /><br /> 0 = 참조된 엔터티는 호출자에 종속되지 않습니다.|  
   
 ## <a name="exceptions"></a>예외  
@@ -99,26 +99,29 @@ sys.dm_sql_referencing_entities (
 ## <a name="remarks"></a>설명  
  다음 표에서는 종속성 정보가 생성 및 유지되는 엔터티 유형을 보여 줍니다. 종속성 정보는 규칙, 기본값, 임시 테이블, 임시 저장 프로시저 또는 시스템 개체에 대해서는 생성 및 유지되지 않습니다.  
   
-|엔터티 유형|참조 엔터티|참조된 엔터티|  
+|엔터티 형식|참조 엔터티|참조된 엔터티|  
 |-----------------|------------------------|-----------------------|  
-|Table|예*|예|  
-|보기|예|예|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저**|예|예|  
-|CLR 저장 프로시저|아니요|예|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수|예|예|  
-|CLR 사용자 정의 함수|아니요|예|  
-|CLR 트리거(DML 및 DDL)|아니요|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거|예|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 수준 DDL 트리거|예|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 수준 DDL 트리거|예|아니요|  
-|확장 저장 프로시저|아니요|예|  
-|큐|아니요|예|  
-|동의어|아니요|예|  
-|형식(별칭 및 CLR 사용자 정의 형식)|아니요|예|  
-|XML 스키마 컬렉션|아니요|예|  
-|파티션 함수|아니요|예|  
+|테이블|예*|yes|  
+|보기|yes|yes|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)]저장 프로시저 * *|yes|yes|  
+|CLR 저장 프로시저|예|yes|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)]사용자 정의 함수|yes|yes|  
+|CLR 사용자 정의 함수|예|yes|  
+|CLR 트리거(DML 및 DDL)|예|예|  
+|
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거|yes|예|  
+|
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 수준 DDL 트리거|yes|예|  
+|
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 수준 DDL 트리거|yes|예|  
+|확장된 저장 프로시저|예|yes|  
+|큐|예|yes|  
+|동의어|예|yes|  
+|형식(별칭 및 CLR 사용자 정의 형식)|예|yes|  
+|XML 스키마 컬렉션|예|yes|  
+|파티션 함수|예|yes|  
   
- \* 테이블은 계산 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈, 사용자 정의 형식 또는 XML 스키마 컬렉션을 참조 하는 경우에만 참조 엔터티로 추적 됩니다.  
+ \*테이블은 계산 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 모듈, 사용자 정의 형식 또는 XML 스키마 컬렉션을 참조 하는 경우에만 참조 엔터티로 추적 됩니다.  
   
  ** 정수 값 1보다 큰 번호가 있는 저장 프로시저는 참조 엔터티나 참조된 엔터티로 추적되지 않습니다.  
   
@@ -153,7 +156,7 @@ FROM sys.dm_sql_referencing_entities ('Production.Product', 'OBJECT');
 GO  
 ```  
   
-### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>2\. 지정된 유형을 참조하는 엔터티 반환  
+### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>B. 지정된 유형을 참조하는 엔터티 반환  
  다음 예에서는 `dbo.Flag` 별칭 유형을 참조하는 엔터티를 반환합니다. 결과 집합은 두 개의 저장 프로시저가 이 유형을 사용한다는 것을 보여 줍니다. `dbo.Flag` 형식은 `HumanResources.Employee` 테이블에 있는 여러 열의 정의에도 사용 됩니다. 그러나이 형식은 테이블의 계산 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의에 있지 않기 때문에 `HumanResources.Employee` 테이블에 대 한 행이 반환 되지 않습니다.  
   
 ```sql  
@@ -175,7 +178,7 @@ GO
  ``` 
  
 ## <a name="see-also"></a>참고 항목  
- [sys.dm_sql_referenced_entities&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
+ [dm_sql_referenced_entities &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.sql_expression_dependencies&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   
   

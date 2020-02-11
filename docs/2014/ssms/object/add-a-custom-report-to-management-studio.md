@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a860db611154f9f7a130ee6be90dd43a96b50af5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62510425"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>Management Studio에 사용자 지정 보고서 추가
@@ -67,10 +67,10 @@ ms.locfileid: "62510425"
   
     2.  **최근 사용 목록에 n개 파일 표시**의 개수를 조정합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Management Studio의 사용자 지정 보고서](custom-reports-in-management-studio.md)   
- [개체 탐색기 노드 속성과 함께 사용자 지정 보고서 사용](use-custom-reports-with-object-explorer-node-properties.md)   
- [사용자 지정 보고서 실행된 경으십시오](unsuppress-run-custom-report-warnings.md)   
- [Reporting Services &#40;SSRS&#41;](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
+ [개체 탐색기 노드 속성으로 사용자 지정 보고서 사용](use-custom-reports-with-object-explorer-node-properties.md)   
+ [표시 사용자 지정 보고서 경고 실행](unsuppress-run-custom-report-warnings.md)   
+ [Reporting Services&#40;SSRS&#41;](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

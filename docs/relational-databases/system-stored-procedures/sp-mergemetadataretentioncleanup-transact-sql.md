@@ -1,5 +1,5 @@
 ---
-title: sp_mergemetadataretentioncleanup (TRANSACT-SQL) | Microsoft Docs
+title: sp_mergemetadataretentioncleanup (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: 4e8d6343-2a38-421d-a3f3-c37d437a0f88
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 41c3a6848d71d7ba8f22667c117686485bb569b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019967"
 ---
-# <a name="spmergemetadataretentioncleanup-transact-sql"></a>sp_mergemetadataretentioncleanup(Transact-SQL)
+# <a name="sp_mergemetadataretentioncleanup-transact-sql"></a>sp_mergemetadataretentioncleanup(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  메타 데이터를 수동으로 정리 합니다 [MSmerge_genhistory](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)를 [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)를 [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md), [MSmerge_past_partition_ 매핑을](../../relational-databases/system-tables/msmerge-past-partition-mappings-transact-sql.md), 및 [MSmerge_current_partition_mappings](../../relational-databases/system-tables/msmerge-current-partition-mappings.md) 시스템 테이블입니다. 이 저장 프로시저는 토폴로지의 게시자 및 구독자에서 실행됩니다.  
+  [MSmerge_genhistory](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md), [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md), [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md), [MSmerge_past_partition_mappings](../../relational-databases/system-tables/msmerge-past-partition-mappings-transact-sql.md)및 [MSmerge_current_partition_mappings](../../relational-databases/system-tables/msmerge-current-partition-mappings.md) 시스템 테이블에서 메타 데이터의 수동 정리를 수행 합니다. 이 저장 프로시저는 토폴로지의 게시자 및 구독자에서 실행됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,13 +40,13 @@ sp_mergemetadataretentioncleanup [ [ @num_genhistory_rows = ] num_genhistory_row
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @num_genhistory_rows = ] num_genhistory_rows OUTPUT` 정리 된 행의 수를 반환 합니다 [MSmerge_genhistory](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md) 테이블입니다. *num_genhistory_rows* 됩니다 **int**, 기본값은 **0**합니다.  
+`[ @num_genhistory_rows = ] num_genhistory_rows OUTPUT`[MSmerge_genhistory](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md) 테이블에서 정리 된 행 수를 반환 합니다. *num_genhistory_rows* 은 **int**이며 기본값은 **0**입니다.  
   
-`[ @num_contents_rows = ] num_contents_rows OUTPUT` 정리 된 행의 수를 반환 합니다 [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) 테이블입니다. *num_contents_rows* 됩니다 **int**, 기본값은 **0**합니다.  
+`[ @num_contents_rows = ] num_contents_rows OUTPUT`[MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) 테이블에서 정리 된 행 수를 반환 합니다. *num_contents_rows* 은 **int**이며 기본값은 **0**입니다.  
   
-`[ @num_tombstone_rows = ] num_tombstone_rows OUTPUT` 정리 된 행의 수를 반환 합니다 [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) 테이블입니다. *num_tombstone_rows* 됩니다 **int**, 기본값은 **0**합니다.  
+`[ @num_tombstone_rows = ] num_tombstone_rows OUTPUT`[MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) 테이블에서 정리 된 행 수를 반환 합니다. *num_tombstone_rows* 은 **int**이며 기본값은 **0**입니다.  
   
-`[ @aggressive_cleanup_only = ] aggressive_cleanup_only` 내부 전용입니다.  
+`[ @aggressive_cleanup_only = ] aggressive_cleanup_only`내부용 으로만 사용 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -54,12 +54,12 @@ sp_mergemetadataretentioncleanup [ [ @num_genhistory_rows = ] num_genhistory_row
 ## <a name="remarks"></a>설명  
   
 > [!IMPORTANT]  
->  이러한 게시 중 하나가 무한 게시 보존 기간을 사용 하 여 데이터베이스에 게시가 여러 개를 실행 중인 **sp_mergemetadataretentioncleanup** 병합 복제 변경 내용 추적 정리 하지 않습니다 데이터베이스에 대 한 메타 데이터입니다. 그러므로 무한 게시 보존은 신중히 사용하십시오. 게시에 무한 보존 기간이 있는지를 확인 하려면 실행 [sp_helpmergepublication &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md) 설정의 값을 사용 하 여 결과의 모든 게시 게시자 **0** 에 대 한 **보존**합니다.  
+>  데이터베이스에 게시가 여러 개 있고 이러한 게시 중 하나가 무한 게시 보존 기간을 사용 하는 경우 **sp_mergemetadataretentioncleanup** 를 실행 해도 데이터베이스의 병합 복제 변경 내용 추적 메타 데이터가 정리 되지 않습니다. 그러므로 무한 게시 보존은 신중히 사용하십시오. 게시에 무한 보존 기간이 있는지 확인 하려면 게시자에서 [sp_helpmergepublication &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md) 을 실행 하 고 결과 집합의 모든 게시에 대해 **보존**기간으로 **0** 값을 기록해 둡니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 구성원만 합니다 **db_owner** 고정 데이터베이스 역할 또는 게시 액세스 목록에서 사용자가 게시 된 데이터베이스를 실행할 수에 대 한 **sp_mergemetadataretentioncleanup**합니다.  
+ **Db_owner** 고정 데이터베이스 역할의 멤버 또는 게시 된 데이터베이스에 대 한 게시 액세스 목록의 사용자만 **sp_mergemetadataretentioncleanup**을 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

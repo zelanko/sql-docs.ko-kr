@@ -16,14 +16,14 @@ ms.assetid: 05f7cc97-b806-41d2-939d-a955d10844c4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 340f471215e9f8ec8bf4f0feaabec5cce559a9a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921478"
 ---
 # <a name="actualsize-and-definedsize-properties-example-vc"></a>ActualSize 및 DefinedSize 속성 예제 (VC + +)
-이 예제에서는 합니다 [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) 및 [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) 속성을 정의 크기와 필드의 실제 크기를 표시 합니다.  
+이 예에서는 [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) 및 [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) 속성을 사용 하 여 필드의 정의 된 크기 및 실제 크기를 표시 합니다.  
   
 ## <a name="example"></a>예제  
   
@@ -128,24 +128,24 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
- **저장소 이름: Eric 읽기 책**  
+ **매장 이름: Eric 읽기 서적**  
 **정의 된 크기: 40**  
 **실제 크기: 19**  
-**저장소 이름: Barnum의**  
+**저장소 이름: 바 번호**  
 **정의 된 크기: 40**  
 **실제 크기: 8**  
-**저장소 이름: 뉴스 및 맥주**  
+**매장 이름: News & 맥주**  
 **정의 된 크기: 40**  
 **실제 크기: 12**  
-**저장소 이름: 문서-U-하 게 접지 되도록 합니다. 품질 세탁 및 온라인 설명서**  
+**매장 이름: Doc-U-대/부: 품질 Laundry 및 서적**  
 **정의 된 크기: 40**  
 **실제 크기: 36**  
-**저장소 이름: Fricative Bookshop**  
+**매장 이름: Fricative Bookshop**  
 **정의 된 크기: 40**  
 **실제 크기: 18**  
-**저장소 이름: Bookbeat**  
+**매장 이름: Bookbeat**  
 **정의 된 크기: 40**  
 **실제 크기: 8**   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ActualSize 속성 (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)   
  [DefinedSize 속성](../../../ado/reference/ado-api/definedsize-property.md)

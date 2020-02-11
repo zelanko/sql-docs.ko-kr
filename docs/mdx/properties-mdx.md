@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 9a9aa2ab3fbfdbe10246e0dcf8758cfcf7732375
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893670"
 ---
 # <a name="properties-mdx"></a>Properties(MDX)
@@ -35,7 +35,7 @@ Member_Expression.Properties(Property_Name [, TYPED])
  멤버 속성 이름의 유효한 문자열 식입니다.  
   
 ## <a name="remarks"></a>설명  
- **Properties** 함수는 지정 된 멤버 속성에 대해 지정 된 멤버의 값을 반환 합니다. 멤버 속성은 **NAME**, **ID**, **KEY**또는 **CAPTION**과 같은 기본 멤버 속성 이거나 사용자 정의 멤버 속성 일 수 있습니다. 자세한 내용은 [기본 멤버 속성 &#40;&#41; mdx](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties) 및 [사용자 정의 멤버 속성 &#40;mdx&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties)를 참조 하십시오.  
+ **Properties** 함수는 지정 된 멤버 속성에 대해 지정 된 멤버의 값을 반환 합니다. 멤버 속성은 **NAME**, **ID**, **KEY**또는 **CAPTION**과 같은 기본 멤버 속성 이거나 사용자 정의 멤버 속성 일 수 있습니다. 자세한 내용은 mdx&#41;&#40;[내장 멤버 속성 &#40;mdx&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties) 및 [사용자 정의 멤버 속성 ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties)을 참조 하세요.  
   
  기본적으로 값은 문자열로 변환됩니다. **형식화** 된 경우 반환 값은 강력한 형식입니다.  
   
@@ -104,8 +104,8 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [멤버 속성 사용&#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties)   
- [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [MDX&#41;&#40;멤버 속성 사용](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties)   
+ [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

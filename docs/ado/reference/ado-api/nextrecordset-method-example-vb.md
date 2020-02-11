@@ -15,14 +15,14 @@ ms.assetid: b14806da-80d9-4da4-bb87-f558b36a6ac0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 28a16d531cceb7147c5d4971d662797cb57242e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918017"
 ---
 # <a name="nextrecordset-method-example-vb"></a>NextRecordset 메서드 예제(VB)
-이 예제에서는 합니다 [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) 3 개의 별도 이루어진 복합 명령문을 사용 하는 레코드 집합의 데이터를 보는 방법 **선택** 문입니다.  
+이 예제에서는 [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) 메서드를 사용 하 여 세 개의 개별 **SELECT** 문으로 구성 된 복합 명령 문을 사용 하는 레코드 집합의 데이터를 봅니다.  
   
 ```  
 'BeginNextRecordsetVB  
@@ -94,6 +94,6 @@ End Sub
 'EndNextRecordsetVB  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [NextRecordset 메서드 (ADO)](../../../ado/reference/ado-api/nextrecordset-method-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

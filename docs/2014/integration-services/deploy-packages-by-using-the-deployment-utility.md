@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 73b71e83f3b0f0f895b2cc5b8fd3495fb4893a32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059619"
 ---
 # <a name="deploy-packages-by-using-the-deployment-utility"></a>배포 유틸리티를 사용한 패키지 배포
@@ -40,7 +40,8 @@ ms.locfileid: "66059619"
   
 -   대상 서버에 패키지 설치 후 패키지의 유효성 검사  
   
- 패키지의 파일 기반 종속성은 항상 파일 시스템에 설치됩니다. 파일 시스템에 패키지를 설치한 경우 패키지에 지정한 것과 동일한 폴더에 종속성이 설치됩니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 패키지를 설치하는 경우 파일 기반 종속성을 저장할 폴더를 지정할 수 있습니다.  
+ 패키지의 파일 기반 종속성은 항상 파일 시스템에 설치됩니다. 파일 시스템에 패키지를 설치한 경우 패키지에 지정한 것과 동일한 폴더에 종속성이 설치됩니다. 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 패키지를 설치하는 경우 파일 기반 종속성을 저장할 폴더를 지정할 수 있습니다.  
   
  패키지에 대상 컴퓨터에서 사용하기 위해 수정할 구성이 포함된 경우 마법사를 사용하여 속성 값을 업데이트할 수 있습니다.  
   
@@ -52,19 +53,23 @@ ms.locfileid: "66059619"
   
 2.  매니페스트 파일 \<프로젝트 이름>.SSISDeploymentManifest를 두 번 클릭하여 패키지 설치 마법사를 시작합니다.  
   
-3.  **SSIS 패키지 배포** 페이지에서 **SQL Server 배포** 옵션을 선택합니다.  
+3.  
+  **SSIS 패키지 배포** 페이지에서 **SQL Server 배포** 옵션을 선택합니다.  
   
 4.  필요에 따라 **설치 후 패키지 유효성 검사** 를 선택하여 대상 서버에 패키지를 설치한 후 패키지의 유효성을 검사합니다.  
   
-5.  **대상 SQL Server 지정** 페이지에서 패키지를 설치할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 지정하고 인증 모드를 선택합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 선택하는 경우 사용자 이름 및 암호를 지정해야 합니다.  
+5.  
+  **대상 SQL Server 지정** 페이지에서 패키지를 설치할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 지정하고 인증 모드를 선택합니다. 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 선택하는 경우 사용자 이름 및 암호를 지정해야 합니다.  
   
-6.  **설치 폴더 선택** 페이지에서 패키지 종속성에 의해 설치될 파일 시스템 내의 폴더를 지정합니다.  
+6.  
+  **설치 폴더 선택** 페이지에서 패키지 종속성에 의해 설치될 파일 시스템 내의 폴더를 지정합니다.  
   
 7.  패키지가 구성을 포함하는 경우 구성 패키지 페이지에서 **값** 목록의 값을 업데이트하여 구성을 편집할 수 있습니다.  
   
 8.  설치 후에 패키지의 유효성 검사를 수행하도록 선택한 경우 배포된 패키지의 유효성 검사 결과를 확인합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [배포 패키지 &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
+## <a name="see-also"></a>참고 항목  
+ [SSIS&#41;패키지 배포 &#40;](packages/legacy-package-deployment-ssis.md)  
   
   

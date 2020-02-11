@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 00021ea9c23de80f6b025963543af2cf4be2f572
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905678"
 ---
 # <a name="lt-less-than-or-equal-to-mdx"></a>&lt;= (작거나 같음) (MDX)
@@ -31,12 +31,12 @@ MDX_Expression <= MDX_Expression
  *MDX_Expression*  
  유효한 MDX 식입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  다음 조건을 기반으로 하는 부울 값입니다.  
   
--   t**rue** 두 매개 변수가 null이 아닌 첫 번째 매개 변수는 값이 경우 두 번째 매개 변수의 값 보다 작거나 합니다.  
+-   두 매개 변수가 모두 null이 아니고 첫 번째 매개 변수의 값이 두 번째 매개 변수의 값 보다 작거나 같은 경우 t**rue&lt** 입니다.  
   
--   f**alse** 두 매개 변수가 null이 아닌 첫 번째 매개 변수 값이 경우는 두 번째 매개 변수의 값 보다 큽니다.  
+-   두 매개 변수가 모두 null이 아니고 첫 번째 매개 변수의 값이 두 번째 매개 변수 값 보다 큰 경우 f**아니고** 입니다.  
   
 -   매개 변수 중 하나가 Null이거나 둘 다 Null인 경우 Null입니다.  
   
@@ -60,7 +60,7 @@ WHERE
     ([Measures].[LowGPM])  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [MDX 연산자 참조 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [Mdx 연산자 참조 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

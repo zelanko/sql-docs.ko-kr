@@ -15,32 +15,34 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 051e3b93761511db07a2f381be5c94ea3247e76a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779010"
 ---
 # <a name="get-dialog-box-source-control"></a>가져오기 대화 상자(소스 제어)
   선택한 항목의 읽기 전용 복사본을 원본 제어 데이터베이스에서 작업 폴더나 지정한 다른 폴더로 가져옵니다.  
   
 ## <a name="dialog-box-access"></a>대화 상자 액세스  
- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 솔루션 탐색기의 항목을 선택합니다. **파일** 메뉴에서 **소스 제어** 를 클릭한 다음 **가져오기**를 클릭합니다.  
+ 
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 솔루션 탐색기의 항목을 선택합니다. 
+  **파일** 메뉴에서 **소스 제어** 를 클릭한 다음 **가져오기**를 클릭합니다.  
   
 > [!NOTE]  
 >  이 대화 상자는 솔루션 탐색기의 항목을 마우스 오른쪽 단추로 클릭해도 나타납니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **동작**  
  가져올 항목에 대해 수행할 동작을 지정합니다.  
   
  **열**  
  표시할 열 및 열이 표시되는 순서를 식별합니다.  
   
- **플랫 보기**  
+ **기본 뷰**  
  가져오는 파일을 해당 파일의 원본 제어 연결 아래에 기본 목록으로 표시합니다.  
   
- **수정 된 시간**  
+ **수정한 시간**  
  항목을 마지막으로 수정한 시간을 표시합니다.  
   
  **이름**  
@@ -55,7 +57,7 @@ ms.locfileid: "62779010"
  **트리 뷰**  
  검색 중인 항목의 폴더 및 파일 계층 구조를 표시합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [파일 검색](../../2014/database-engine/retrieve-files.md)   
  [솔루션 탐색기 원본 제어](../../2014/database-engine/solution-explorer-source-control.md)  
   

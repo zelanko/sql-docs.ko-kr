@@ -13,21 +13,21 @@ ms.assetid: 9b0eed90-c38c-4aa6-9040-5827f8c46b94
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 326019b8e870739954c059475d851dbac62e0b57
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930673"
 ---
 # <a name="stream-object-properties-methods-and-events"></a>Stream 개체 속성, 메서드 및 이벤트
 ## <a name="properties"></a>속성  
- [문자 집합 속성](../../../ado/reference/ado-api/charset-property-ado.md)  
+ [Charset 속성](../../../ado/reference/ado-api/charset-property-ado.md)  
   
  [EOS 속성](../../../ado/reference/ado-api/eos-property.md)  
   
  [LineSeparator 속성](../../../ado/reference/ado-api/lineseparator-property-ado.md)  
   
- [모드 속성](../../../ado/reference/ado-api/mode-property-ado.md)  
+ [Mode 속성](../../../ado/reference/ado-api/mode-property-ado.md)  
   
  [Position 속성](../../../ado/reference/ado-api/position-property-ado.md)  
   
@@ -69,5 +69,5 @@ ms.locfileid: "67930673"
 ## <a name="events"></a>이벤트  
  없음  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [스트림 개체(ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

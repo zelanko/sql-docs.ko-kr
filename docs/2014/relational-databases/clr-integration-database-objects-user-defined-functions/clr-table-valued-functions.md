@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7dfd3db3a8193e92f9670213c602d55dc45f5c7f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232288"
 ---
 # <a name="clr-table-valued-functions"></a>CLR 테이블 반환 함수
@@ -57,7 +57,7 @@ Public Shared Sub FillRow ( <Out()> ByRef value As SqlInt32)
 ```  
   
 ### <a name="defining-a-table-valued-function-in-transact-sql"></a>Transact-SQL에서 테이블 반환 함수 정의  
- CLR 테이블 반환 함수를 정의하는 구문은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 테이블 반환 함수를 정의하는 구문과 비슷하지만 `EXTERNAL NAME` 절이 추가됩니다. 예:  
+ CLR 테이블 반환 함수를 정의하는 구문은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 테이블 반환 함수를 정의하는 구문과 비슷하지만 `EXTERNAL NAME` 절이 추가됩니다. 다음은 그 예입니다.  
   
 ```  
 CREATE FUNCTION GetEmpFirstLastNames()  

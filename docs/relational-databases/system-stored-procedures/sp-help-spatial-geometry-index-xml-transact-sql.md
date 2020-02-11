@@ -18,10 +18,10 @@ ms.assetid: 9668ae6d-9ed5-418e-bb9a-9e7b66f7dd16
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 9e7eb2e007191088a0259360924b2f5f931dec0a
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72304891"
 ---
 # <a name="sp_help_spatial_geometry_index_xml-transact-sql"></a>sp_help_spatial_geometry_index_xml(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "72304891"
   
  결과는 선택한 속성의 이름과 값을 표시하는 XML 조각으로 반환됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -57,7 +57,7 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
  NULL 값이 포함된 속성은 XML 반환 집합에 포함되지 않습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예에서는 `sp_help_spatial_geometry_index_xml`를 사용 하 여 **\@qs**의 지정 된 쿼리 예제에 대해 테이블 **geometry_col** 에 정의 된 **SIndx_SpatialTable_geometry_col2** 공간 인덱스를 조사 합니다. 이 예에서는 지정된 인덱스의 핵심 속성을 선택한 속성의 이름과 값을 표시하는 XML 조각으로 반환합니다.  
+ 다음 예에서는를 `sp_help_spatial_geometry_index_xml` 사용 하 여 ** \@qs**의 지정 된 쿼리 샘플에 대 한 테이블 **geometry_col** 에 정의 된 **SIndx_SpatialTable_geometry_col2** 공간 인덱스를 조사 합니다. 이 예에서는 지정된 인덱스의 핵심 속성을 선택한 속성의 이름과 값을 표시하는 XML 조각으로 반환합니다.  
   
  그러면 [XQuery](../../xquery/xquery-basics.md) 가 결과 집합에서 실행 되어 특정 속성을 반환 합니다.  
   

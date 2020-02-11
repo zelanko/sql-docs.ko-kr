@@ -1,5 +1,5 @@
 ---
-title: 실패 한 패키지를 다시 시작 하는 검사점 구성 | Microsoft Docs
+title: 실패 한 패키지를 다시 시작 하기 위한 검사점 구성 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e22e47af568ecf723b54a35fb6b83bd5ce74e333
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060767"
 ---
 # <a name="configure-checkpoints-for-restarting-a-failed-package"></a>실패한 패키지를 다시 시작하는 검사점 구성
@@ -34,7 +34,7 @@ ms.locfileid: "66060767"
   
 4.  제어 흐름 디자인 화면 배경의 아무 위치나 마우스 오른쪽 단추로 클릭한 후 **속성**을 클릭합니다.  
   
-5.  SaveCheckpoints 속성을 설정 `True`합니다.  
+5.  SaveCheckpoints 속성을로 `True`설정 합니다.  
   
 6.  CheckpointFileName 속성에 검사점 파일의 이름을 입력합니다.  
   
@@ -51,9 +51,9 @@ ms.locfileid: "66060767"
   
     -   태스크 또는 컨테이너를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  
   
-    -   FailPackageOnFailure 속성을 설정 `True` 각 태스크 및 컨테이너를 선택 합니다.  
+    -   선택한 각 태스크 및 컨테이너에 대해 FailPackageOnFailure 속성을로 `True` 설정 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [검사점을 사용하여 패키지 다시 시작](packages/restart-packages-by-using-checkpoints.md)  
   
   

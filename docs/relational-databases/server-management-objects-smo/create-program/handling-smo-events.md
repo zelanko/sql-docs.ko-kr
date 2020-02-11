@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 893fb08f2d32c7ae9d80321c1d849010660cc308
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70148722"
 ---
 # <a name="handling-smo-events"></a>SMO 이벤트 처리
@@ -28,19 +28,21 @@ ms.locfileid: "70148722"
 
   이벤트 처리기 및 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체를 사용하여 구독할 수 있는 서버 이벤트 유형이 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects(SMO)의 인스턴스 클래스 대부분은 서버에서 특정 동작이 발생할 때 이벤트를 트리거할 수 있습니다.  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects(SMO)의 인스턴스 클래스 대부분은 서버에서 특정 동작이 발생할 때 이벤트를 트리거할 수 있습니다.  
   
  이러한 이벤트는 이벤트 처리기를 설정하고 연관된 이벤트를 구독하여 프로그래밍 방식으로 처리할 수 있습니다. 모든 구독은 SMO 클라이언트 프로그램이 종료될 때 제거되므로 이런 유형의 이벤트 처리는 일시적입니다.  
   
 ## <a name="connectioncontext-event-handling"></a>ConnectionContext 이벤트 처리  
- <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체는 여러 이벤트 유형을 지원합니다. 이벤트 속성을 적절한 이벤트 처리기 인스턴스로 설정한 다음, 이벤트 처리기 개체를 이벤트를 처리하는 보호된 함수로 정의해야 합니다.  
+ 
+  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체는 여러 이벤트 유형을 지원합니다. 이벤트 속성을 적절한 이벤트 처리기 인스턴스로 설정한 다음, 이벤트 처리기 개체를 이벤트를 처리하는 보호된 함수로 정의해야 합니다.  
   
 ## <a name="event-subscription"></a>이벤트 구독  
  이벤트 처리기 클래스를 작성하고, 해당 인스턴스를 만들고, 이벤트 처리기를 부모 개체에 할당하고, 이벤트를 구독하는 방법으로 이벤트를 처리합니다.  
   
  이벤트를 처리하려면 이벤트 처리기 클래스를 작성해야 합니다. 이벤트 처리기 클래스는 여러 개의 이벤트 처리기 함수를 포함할 수 있고, 이벤트를 처리하려면 이 클래스를 설치해야 합니다. 이벤트 처리기 함수는 이벤트에 대 한 정보를 보고 하는 데 사용할 수 있는 이벤트에 대 한 정보를 *ServerEventNotificatificationArgs* 매개 변수에서 받습니다.  
   
- 처리할 수 있는 데이터베이스 및 서버 이벤트의 유형은 <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> 클래스 <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>및 클래스에 나열 됩니다.  
+ 처리할 수 있는 데이터베이스 및 서버 이벤트의 유형은 <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> 클래스 및 <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>클래스에 나열 됩니다.  
   
 ## <a name="example"></a>예제  
 제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio .net에서 Visual C&#35; SMO 프로젝트 만들기](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  

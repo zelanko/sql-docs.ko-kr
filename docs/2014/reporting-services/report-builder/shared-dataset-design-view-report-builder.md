@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1589f171fd8d402572408186a10b3e6f4ac97982
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107592"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>공유 데이터 세트 디자인 뷰(보고서 작성기)
@@ -22,21 +22,22 @@ ms.locfileid: "66107592"
   
  ![rs_SharedDatasetDesignMode](../media/rs-shareddatasetdesignmode.gif "rs_SharedDatasetDesignMode")  
   
- 보고서에서 데이터 작업에 대 한 자세한 내용은 참조 하세요. [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](../report-data/report-datasets-ssrs.md)합니다.  
+ 보고서의 데이터로 작업 하는 방법에 대 한 자세한 내용은 [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](../report-data/report-datasets-ssrs.md)를 참조 하세요.  
   
-##  <a name="Ribbon"></a> 리본  
- 리본은 태스크를 완료하는 데 필요한 명령을 빠르게 찾을 수 있도록 도와줍니다. 명령에는 다음과 같은 논리 그룹으로 구성 되어 있습니다. 연결, 데이터 집합 및 쿼리 디자이너  
+##  <a name="Ribbon"></a>리본 메뉴  
+ 리본은 태스크를 완료하는 데 필요한 명령을 빠르게 찾을 수 있도록 도와줍니다. 명령은 연결, 데이터 세트, 쿼리 디자이너 같은 논리 그룹에 구성됩니다.  
   
 ### <a name="connection"></a>연결  
  연결 그룹의 **선택** 단추를 사용하여 보고서에서 공유 데이터 원본을 선택하거나 보고서 서버에서 공유 데이터 원본을 찾습니다.  
   
 > [!NOTE]  
->  공유 데이터 세트는 공유 데이터 원본을 기반으로 해야 합니다. 필요한 데이터 원본을 사용할 수 없는 경우 보고서 서버에서 만들어야 합니다. 자세한 내용은 [만들기, 삭제 또는 공유 데이터 원본을 수정 &#40;보고서 관리자&#41; ](../create-delete-or-modify-a-shared-data-source-report-manager.md) Reporting Services 설명서에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [온라인](https://go.microsoft.com/fwlink/?linkid=121312).  
+>  공유 데이터 세트는 공유 데이터 원본을 기반으로 해야 합니다. 필요한 데이터 원본을 사용할 수 없는 경우 보고서 서버에서 만들어야 합니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)의 Reporting Services 설명서에서 [공유 데이터 원본 만들기, 삭제 또는 수정 &#40;보고서 관리자&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md) 을 참조 하십시오.  
   
  자세한 내용은 [데이터 연결, 데이터 원본 및 연결 문자열](../data-connections-data-sources-and-connection-strings-in-report-builder.md)을 참조하세요.  
   
 ### <a name="dataset"></a>데이터 세트  
- **옵션 설정** 단추를 사용하여 공유 데이터 집합 속성을 설정할 수 있습니다. 여기에는 다음과 같은 옵션이 포함됩니다.  
+ 
+  **옵션 설정** 단추를 사용하여 공유 데이터 세트 속성을 설정할 수 있습니다. 여기에는 다음과 같은 옵션이 포함됩니다.  
   
 -   필드. 필드 컬렉션에 필드를 추가하거나 편집할 수 있습니다.  
   
@@ -50,29 +51,29 @@ ms.locfileid: "66107592"
   
  공유 데이터 세트가 보고서에 추가되면 보고서 작성자가 데이터 정렬, 대/소문자 구분, 악센트 구분, 일본어 가나 구분, 전자/반자 구분, 부분합 옵션을 재정의할 수 있습니다. 또한 데이터 세트 필터를 추가로 만들어 보고서에서 데이터를 제한할 수도 있습니다.  
   
- 자세한 내용은 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)이라는 데이터 집합이 들어 있습니다.  
+ 자세한 내용은 [보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.  
   
- 캐시 새로 고침 계획에 대 한 자세한 내용은 참조 하세요. [공유 데이터 집합 캐시 &#40;SSRS&#41; ](../report-server/cache-shared-datasets-ssrs.md) Reporting Services 설명서에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [온라인](https://go.microsoft.com/fwlink/?linkid=121312).  
+ 캐시 새로 고침 계획에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)의 Reporting Services 설명서에서 [공유 데이터 집합 캐시 &#40;SSRS&#41;](../report-server/cache-shared-datasets-ssrs.md) 를 참조 하세요.  
   
 ### <a name="query-designer"></a>쿼리 디자이너  
  쿼리 디자이너 도구 모음을 사용하면 데이터 연결에서 검색할 데이터를 지정하는 쿼리를 작성할 수 있습니다. 표시되는 도구 모음은 데이터 연결의 데이터 원본 유형과 연결된 쿼리 디자이너에 따라 다릅니다.  
   
- 자세한 내용은에서 데이터 원본 유형에 해당 하는 항목을 참조 하세요 [외부 데이터 원본의 데이터 추가 &#40;SSRS&#41; ](../report-data/add-data-from-external-data-sources-ssrs.md) 하 고 [쿼리 디자이너 &#40;보고서 작성기&#41; ](../query-designers-report-builder.md) .  
+ 자세한 내용은 데이터 원본 유형에 해당 하는 항목을 참조 하십시오 .이 항목은 [외부 데이터 원본의 데이터 추가 &#40;SSRS&#41;](../report-data/add-data-from-external-data-sources-ssrs.md) 및 [쿼리 디자이너 &#40;보고서 작성기&#41;](../query-designers-report-builder.md)에 해당 합니다.  
   
 
   
-##  <a name="DesignSurface"></a> 쿼리 디자이너 화면  
+##  <a name="DesignSurface"></a>쿼리 디자이너 화면  
  쿼리 디자이너를 사용하면 외부 데이터 원본에 필요한 구문으로 쿼리를 작성할 수 있습니다.  
   
  일부 데이터 원본 유형은 외부 데이터 원본의 메타데이터를 탐색하는 데 사용할 수 있는 그래픽 쿼리 디자이너를 제공합니다. 메타데이터 창에서 이름을 쿼리 디자인 화면으로 대화형으로 끌어 오거나 사용할 이름을 대화형으로 선택할 수 있습니다.  
   
  일부 데이터 원본 유형은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]등의 다른 도구에서 만든 쿼리에 붙여넣는 데 사용할 수 있는 텍스트 기반 쿼리 디자이너를 지원합니다.  
   
- 각 데이터 원본 유형은 외부 데이터 원본에서 작동하는 쿼리에 대한 특정 요구 사항이 있습니다. 자세한 내용은에서 데이터 원본 유형에 해당 하는 항목을 참조 하세요 [외부 데이터 원본의 데이터 추가 &#40;SSRS&#41; ](../report-data/add-data-from-external-data-sources-ssrs.md) 하 고 [Data Sources Supported by Reporting Services &#40;SSRS&#41; ](../create-deploy-and-manage-mobile-and-paginated-reports.md) Reporting Services 설명서에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [온라인](https://go.microsoft.com/fwlink/?linkid=121312)합니다.  
+ 각 데이터 원본 유형은 외부 데이터 원본에서 작동하는 쿼리에 대한 특정 요구 사항이 있습니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)의&#41;설명서에서 ssrs&#41;및 [&#40;Reporting Services에서 지 원하는 데이터](../create-deploy-and-manage-mobile-and-paginated-reports.md) 원본 [&#40;ssrs](../report-data/add-data-from-external-data-sources-ssrs.md) 의 데이터 원본 유형에 해당 하는 항목을 참조 하세요.  
   
 
   
-##  <a name="Results"></a> 쿼리 결과 보기  
+##  <a name="Results"></a>쿼리 결과 보기  
  보고서가 처리될 때 데이터 연결에서 데이터를 검색하는 쿼리를 공유 데이터 세트 디자인 뷰에서 작성합니다.  
   
  쿼리를 실행하여 데이터 연결의 예제 데이터를 검토하여 쿼리가 예상되는 데이터 형식을 반환하는지 확인합니다. 결과 집합의 열은 데이터 연결의 데이터 스키마에 대한 메타데이터에서 가져온 것입니다. 열 이름은 데이터 세트 필드 컬렉션이 됩니다. 쿼리 결과 집합에 표시되는 데이터 값은 디자인 타임 데이터입니다. 공유 데이터 세트를 보고서 서버에 공유 데이터 세트 정의로 저장하면 쿼리 텍스트만 저장됩니다. 쿼리 결과 집합의 데이터는 저장되지 않습니다.  
@@ -86,17 +87,17 @@ ms.locfileid: "66107592"
   
  보고서에 매개 변수가 있는 경우 모든 매개 변수에 기본값이 있어야 보고서를 자동으로 실행할 수 있습니다. 매개 변수에 기본값이 없는 경우 보고서를 실행할 때에는 매개 변수 값을 선택한 후 **실행** 탭에서 **보고서 보기** 를 클릭해야 합니다.  
   
- 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)를 참조하세요.  
+ 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)에 대해 자세히 알아봅니다.  
   
 
   
-##  <a name="Save"></a> 공유 데이터 집합 저장  
+##  <a name="Save"></a>공유 데이터 집합 저장  
  작성한 쿼리를 저장하려면 **보고서 작성기** 단추에서 **저장** 또는 **다른 이름으로 저장**을 클릭합니다. 보고서 서버에서 해당 폴더로 이동하고 공유 데이터 세트 정의를 저장합니다. 공유 데이터 세트는 보고서 서버에 저장할 때까지 다른 사용자가 사용할 수 없습니다.  
   
 
   
-## <a name="see-also"></a>관련 항목  
- [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](../report-data/report-datasets-ssrs.md)   
+## <a name="see-also"></a>참고 항목  
+ [보고서 &#40;보고서 작성기 및 SSRS&#41;에 데이터를 추가 합니다.](../report-data/report-datasets-ssrs.md)   
  [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   

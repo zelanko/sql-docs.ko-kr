@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 188e2b824a033365ec366d3b5f7474b261b1bbf2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771859"
 ---
 # <a name="building-packages-programmatically"></a>프로그래밍 방식으로 패키지 작성
@@ -26,7 +26,8 @@ ms.locfileid: "62771859"
   
 -   새 패키지를 만들고 구성 요소를 개체별 및 속성별로 구성한 다음 새 패키지를 저장 후 실행합니다.  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 개체 모델을 사용하면 패키지를 만들고 구성하고 실행하는 코드를 관리되는 프로그래밍 언어로 작성할 수 있습니다. 예를 들어 선택한 데이터 원본과 해당 데이터 원본의 테이블 및 열을 기반으로 연결이나 데이터 원본, 변환 및 대상을 구성하는 메타데이터 구동 패키지를 만들 수 있습니다.  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 개체 모델을 사용하면 패키지를 만들고 구성하고 실행하는 코드를 관리되는 프로그래밍 언어로 작성할 수 있습니다. 예를 들어 선택한 데이터 원본과 해당 데이터 원본의 테이블 및 열을 기반으로 연결이나 데이터 원본, 변환 및 대상을 구성하는 메타데이터 구동 패키지를 만들 수 있습니다.  
   
  이 섹션에서는 패키지를 프로그래밍 방식으로 한 줄씩 만들고 구성하는 방법을 설명하고 예로 보여 줍니다. 위에 나열된 패키지 프로그래밍 방법 중 비교적 덜 복잡한 첫 번째 방법은 [프로그래밍 방식으로 패키지 실행 및 관리](../run-manage-packages-programmatically/running-and-managing-packages-programmatically.md)에 설명된 대로 단순히 기존 패키지를 로드한 다음 수정하지 않은 채 실행하는 것입니다.  
   
@@ -48,7 +49,7 @@ ms.locfileid: "62771859"
  [프로그래밍 방식으로 연결 추가](../building-packages-programmatically/adding-connections-programmatically.md)  
  패키지에 연결 관리자를 추가하는 방법에 대해 설명합니다.  
   
- [프로그래밍 방식으로 변수 작업](../building-packages-programmatically/working-with-variables-programmatically.md)  
+ [프로그래밍 방식으로 변수 사용](../building-packages-programmatically/working-with-variables-programmatically.md)  
  패키지 실행 중 변수를 추가하고 사용하는 방법에 대해 설명합니다.  
   
  [프로그래밍 방식으로 이벤트 처리](../building-packages-programmatically/handling-events-programmatically.md)  
@@ -95,9 +96,9 @@ ms.locfileid: "62771859"
   
 -   blogs.msdn.com의 블로그 항목 - [사용자 지정 확장 프로그램 성능 프로파일링](https://go.microsoft.com/fwlink/?LinkId=238831)  
   
-![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Integration Services](../sql-server-integration-services.md)  
   
   
