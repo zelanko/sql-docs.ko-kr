@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a2e9fb0dfd3607adc1773d4a43561f32ba650ee5
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68887677"
 ---
 # <a name="select-into-dmx"></a>SELECT INTO(DMX)
@@ -30,17 +30,17 @@ FROM <existing model>
 ```  
   
 ## <a name="arguments"></a>인수  
- *새 모델*  
+ *new model*  
  생성될 새 모델의 고유 이름입니다.  
   
- *algorithm*  
+ *알고리즘과*  
  공급자가 정의한 데이터 마이닝 알고리즘 이름입니다.  
   
  *매개 변수 목록*  
  (선택 사항) 알고리즘에 대해 공급자가 정의한 매개 변수의 쉼표로 구분된 목록입니다.  
   
- *expression*  
- 학습 데이터에 대해 유효한 필터 조건으로 계산되는 식입니다. 필터로 사용할 수 있는 식에 대 한 자세한 내용은 [마이닝 &#40;모델에 대 한 필터 Analysis Services-데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining)을 참조 하세요.  
+ *식*  
+ 학습 데이터에 대해 유효한 필터 조건으로 계산되는 식입니다. 필터로 사용할 수 있는 식에 대 한 자세한 내용은 [데이터 마이닝&#41;Analysis Services &#40;마이닝 모델에 대 한 필터 ](https://docs.microsoft.com/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining)를 참조 하세요.  
   
  *기존 모델*  
  복사할 기존 모델의 이름입니다.  
@@ -73,9 +73,9 @@ FROM [TM Clustering]
 > [!NOTE]  
 >  이 예와 같이 SELECT INTO 문을 사용하면 사례 테이블에 적용된 필터를 변경할 수 있지만, 원래 모델에 중첩 테이블에 대한 필터가 들어 있는 경우 중첩 테이블 필터는 이 구문을 사용하여 변경하거나 제거할 수 없습니다. 이러한 필터는 원래 모델에서 그대로 복사됩니다. 중첩 테이블에 대해 다른 필터를 사용하여 모델을 만들려면 ALTER STRTUCTURE...ADD MODEL 구문을 사용합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 마이닝 확장 &#40;DMX&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
  [데이터 마이닝 확장 &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
- [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
+ [데이터 마이닝 확장 &#40;DMX&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

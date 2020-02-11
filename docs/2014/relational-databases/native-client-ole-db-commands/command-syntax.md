@@ -1,5 +1,5 @@
 ---
-title: 명령 구문 | Microsoft 문서
+title: 명령 구문 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 00ab769ee2051edc499d586ab7d5ee1fa47dd854
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62468220"
 ---
 # <a name="command-syntax"></a>명령 구문
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 DBGUID_SQL 매크로로 지정 된 명령 구문을 인식 합니다. 에 대 한는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 지정자를 나타냅니다 모두 유효함을 ODBC SQL, ISO의 및 [!INCLUDE[tsql](../../includes/tsql-md.md)] 올바른 구문입니다. 예를 들어 다음 SQL 문은 ODBC SQL 이스케이프 시퀀스를 사용하여 LCASE 문자열 함수를 지정합니다.  
+  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 DBGUID_SQL 매크로에 지정 된 명령 구문을 인식 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자의 경우 지정자는 ODBC SQL, ISO 및 [!INCLUDE[tsql](../../includes/tsql-md.md)] 의 amalgam가 유효한 구문 임을 나타냅니다. 예를 들어 다음 SQL 문은 ODBC SQL 이스케이프 시퀀스를 사용하여 LCASE 문자열 함수를 지정합니다.  
   
 ```  
 SELECT customerid={fn LCASE(CustomerID)} FROM Customers  
@@ -35,10 +35,10 @@ SELECT customerid={fn LCASE(CustomerID)} FROM Customers
 SELECT customerid=LOWER(CustomerID) FROM Customers  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 문 명령 텍스트로 지정할 경우 형식 중 하나를 처리 합니다.  
+ Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 명령의 텍스트로 지정 된 경우 문 형식을 성공적으로 처리 합니다.  
   
 ## <a name="stored-procedures"></a>저장 프로시저  
- 실행 하는 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저를 사용 하 여를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 명령, 명령 텍스트에 ODBC CALL 이스케이프 시퀀스를 사용 합니다. 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 다음의 원격 프로시저 호출 메커니즘을 사용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 명령 처리를 최적화 합니다. 예를 들어 다음 중 [!INCLUDE[tsql](../../includes/tsql-md.md)] 형식보다는 ODBC SQL 문을 명령 텍스트로 사용하는 것이 좋습니다.  
+ Native Client OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공급자 명령을 사용 하 여 저장 프로시저를 실행 하는 경우 명령 텍스트에서 ODBC CALL 이스케이프 시퀀스를 사용 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 원격 프로시저 호출 메커니즘을 사용 하 여 명령 처리를 최적화 합니다. 예를 들어 다음 중 [!INCLUDE[tsql](../../includes/tsql-md.md)] 형식보다는 ODBC SQL 문을 명령 텍스트로 사용하는 것이 좋습니다.  
   
 -   ODBC SQL  
   
@@ -52,7 +52,7 @@ SELECT customerid=LOWER(CustomerID) FROM Customers
     EXECUTE SalesByCategory 'Produce', '1995'  
     ```  
   
-## <a name="see-also"></a>관련 항목  
- [도구](commands.md)  
+## <a name="see-also"></a>참고 항목  
+ [명령](commands.md)  
   
   

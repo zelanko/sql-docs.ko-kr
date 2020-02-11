@@ -14,14 +14,14 @@ ms.assetid: 159ca21a-ccc4-45e2-97ca-2a9387efa7df
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3f05be059bc374b7b8236453e7c46feed4b8a6bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67948943"
 ---
 # <a name="sqltransact-dbase-driver"></a>SQLTransact(dBASE 드라이버)
 > [!NOTE]  
->  이 항목에서는 dBASE 드라이버 관련 정보를 제공 합니다. 이 함수에 대 한 일반 정보에서 해당 항목을 참조 하세요 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)합니다.  
+>  이 항목에서는 dBASE 드라이버 관련 정보를 제공 합니다. 이 함수에 대 한 일반 정보는 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)에서 적절 한 항목을 참조 하세요.  
   
- 이 함수에서는 SQL_COMMIT, 있지만 SQL_ROLLBACK 없습니다.
+ 이 함수는 SQL_COMMIT을 지원 하지만 SQL_ROLLBACK는 지원 하지 않습니다.

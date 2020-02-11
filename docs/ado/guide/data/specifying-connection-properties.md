@@ -14,14 +14,14 @@ ms.assetid: 49456201-b085-4851-9686-e814136b07be
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5aee5946f3087956a0117b88f4044ef8a6c9bd9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924135"
 ---
 # <a name="specifying-connection-properties"></a>연결 속성 지정
-대부분의 지정 된 정보를 제공할 수 있습니다는 [연결 문자열](../../../ado/guide/data/creating-a-connection-string.md) 의 속성을 설정 하 여 합니다 **연결** 연결을 열기 전에 개체입니다. 예를 들어 연결 문자열에 설명 된 대로 동일한 효과 얻을 수 있습니다 [연결 문자열 만들기](../../../ado/guide/data/creating-a-connection-string.md) 다음 코드를 사용 하 여 합니다.  
+연결을 열기 전에 **연결 개체의** 속성을 설정 하 여 연결 [문자열](../../../ado/guide/data/creating-a-connection-string.md) 에 지정 된 많은 정보를 제공할 수 있습니다. 예를 들어 다음 코드를 사용 하 여 [연결 문자열을 만드는 데](../../../ado/guide/data/creating-a-connection-string.md) 설명 된 연결 문자열과 동일한 효과를 달성할 수 있습니다.  
   
 ```  
 With objConn  
@@ -33,7 +33,7 @@ With objConn
 End With  
 ```  
   
- DefaultDatabase 연결을 연 후에 설정 됩니다.  
+ DefaultDatabase는 연결을 연 후에만 설정 됩니다.  
   
 > [!NOTE]
->  ADO 세미콜론을 포함 하는 암호를 사용 해야 하면 (";") 암호는 작은따옴표로 묶여 있지 않은 한 합니다.
+>  ADO에서는 암호가 작은따옴표로 묶여 있지 않으면 세미콜론 (";")이 포함 된 암호를 사용 하면 안 됩니다.

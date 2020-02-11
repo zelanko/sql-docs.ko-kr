@@ -14,14 +14,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3fe1414131991a35b316a50da730f42e8b02d462
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637996"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>XML 데이터 형식 변수 및 열 만들기
-  `xml` 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 제공 데이터 형식이며 `int` 및 `varchar`와 같은 다른 기본 제공 유형과 비슷한 점이 있습니다. 사용할 수 있는 다른 기본 제공 형식과 합니다 `xml` 변수 유형, 매개 변수 유형, 함수 반환 형식 또는 테이블을 만들 때 데이터 형식을 열 유형으로 [CAST 및 CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)합니다.  
+  
+  `xml` 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 제공 데이터 형식이며 `int` 및 `varchar`와 같은 다른 기본 제공 유형과 비슷한 점이 있습니다. 다른 기본 제공 유형과 마찬가지로 변수 유형, 매개 변수 유형, `xml` 함수 반환 유형 또는 [CAST 및 CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)로 테이블을 만들 때 데이터 형식을 열 유형으로 사용할 수 있습니다.  
   
 ## <a name="creating-columns-and-variables"></a>열 및 변수 만들기  
  다음 예에서와 같이 테이블의 일부분으로 `xml` 유형 열을 만들려면 `CREATE TABLE` 문을 사용합니다.  
@@ -66,14 +67,16 @@ CREATE TABLE T (XmlColumn xml
                   default CAST(N'<element1/><element2/>' AS xml))  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 `xml` 유형의 열에서 NULL과 NOT NULL 제약 조건도 지원합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 `xml` 유형의 열에서 NULL과 NOT NULL 제약 조건도 지원합니다. 다음은 그 예입니다.  
   
 ```  
 CREATE TABLE T (XmlColumn xml NOT NULL)  
 ```  
   
 ## <a name="specifying-constraints"></a>제약 조건 지정  
- `xml` 유형의 열을 만들 때 열 수준이나 테이블 수준 제약 조건을 정의할 수 있습니다. 다음 경우에 제약 조건을 사용합니다.  
+ 
+  `xml` 유형의 열을 만들 때 열 수준이나 테이블 수준 제약 조건을 정의할 수 있습니다. 다음 경우에 제약 조건을 사용합니다.  
   
 -   비즈니스 규칙을 XML 스키마에 표현할 수 없습니다. 예를 들어 꽃 판매점의 배달 주소는 해당 영업소 위치에서 81km 이내에 있어야 합니다. 이러한 사항은 XML 열에 대한 제약 조건으로 작성될 수 있습니다. 제약 조건에는 `xml` 데이터 형식의 메서드가 포함될 수 있습니다.  
   
@@ -87,7 +90,8 @@ CREATE TABLE T (XmlColumn xml NOT NULL)
   
 -   COLLATE  
   
-     XML은 자체 인코딩을 제공합니다. 데이터 정렬은 문자열 유형에만 적용됩니다. `xml` 데이터 형식은 문자열 유형이 아닙니다. 하지만 문자열 표현이 있으며 문자열 데이터 형식으로 캐스팅할 수 있습니다.  
+     XML은 자체 인코딩을 제공합니다. 데이터 정렬은 문자열 유형에만 적용됩니다. 
+  `xml` 데이터 형식은 문자열 유형이 아닙니다. 하지만 문자열 표현이 있으며 문자열 데이터 형식으로 캐스팅할 수 있습니다.  
   
 -   RULE  
   
@@ -127,17 +131,19 @@ INSERT INTO T values(1,'<Product />')
 ```  
   
 ## <a name="same-or-different-table"></a>같은 테이블 또는 다른 테이블  
- `xml` 기본 테이블에 외래 키 관계에 있는 별도 테이블 또는 다른 관계형 열이 포함 된 테이블의 데이터 형식 열을 만들 수 있습니다.  
+ 다른 `xml` 관계형 열이 포함 된 테이블 또는 주 테이블에 대 한 외래 키 관계가 있는 별도의 테이블에 데이터 형식 열을 만들 수 있습니다.  
   
- 만들기는 `xml` 다음 조건 중 하나가 true 인 경우 같은 테이블의 데이터 형식 열:  
+ 다음 조건 `xml` 중 하나에 해당 하는 경우 동일한 테이블에 데이터 형식 열을 만듭니다.  
   
 -   애플리케이션이 XML 열에서 데이터 검색을 수행하고 XML 열에 XML 인덱스가 필요하지 않습니다.  
   
--   `xml` 데이터 형식의 열에 XML 인덱스를 작성하려고 하며 기본 테이블의 기본 키는 해당 클러스터링 키와 같습니다. 자세한 내용은 [XML 인덱스&#40;SQL Server&#41;](xml-indexes-sql-server.md)를 참조하세요.  
+-   
+  `xml` 데이터 형식의 열에 XML 인덱스를 작성하려고 하며 기본 테이블의 기본 키는 해당 클러스터링 키와 같습니다. 자세한 내용은 [XML 인덱스&#40;SQL Server&#41;](xml-indexes-sql-server.md)를 참조하세요.  
   
  다음 조건에 맞는 경우 별개의 테이블에 `xml` 데이터 형식의 열을 만듭니다.  
   
--   `xml` 데이터 형식의 열에 XML 인덱스를 작성하려고 하지만 기본 테이블의 기본 키가 해당 클러스터링 키와 다르거나, 기본 테이블에 기본 키가 없거나, 기본 테이블이 힙(비 클러스터링 키)입니다. 기본 테이블이 이미 있는 경우에는 이 조건에 부합될 수 있습니다.  
+-   
+  `xml` 데이터 형식의 열에 XML 인덱스를 작성하려고 하지만 기본 테이블의 기본 키가 해당 클러스터링 키와 다르거나, 기본 테이블에 기본 키가 없거나, 기본 테이블이 힙(비 클러스터링 키)입니다. 기본 테이블이 이미 있는 경우에는 이 조건에 부합될 수 있습니다.  
   
 -   테이블에 있는 XML 열로 인해 테이블 검색 속도가 느려지는 것을 원치 않습니다. XML 열은 행 안에 있든 행 밖에 있든 간에 공간을 사용합니다.  
   

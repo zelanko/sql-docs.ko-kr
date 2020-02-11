@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d4a29a8227fc7b0452f17d6da0c1f47d37738ed0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036816"
 ---
 # <a name="stripcalculatedmembers-mdx"></a>StripCalculatedMembers(MDX)
@@ -32,7 +32,7 @@ StripCalculatedMembers(Set_Expression)
  집합을 반환하는 유효한 MDX 식입니다.  
   
 ## <a name="remarks"></a>설명  
- 합니다 **StripCalculatedMembers** 함수 집합에서 계산된 멤버를 제거 합니다. 계산 멤버는 사용 하 여 집합을 추가할 수 있습니다 합니다 [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) 서버의 정의 된 계산된 멤버 또는 WITH를 사용 하 여 쿼리 자체 내에서 추가 된 계산된 멤버를 반환 하는 함수 멤버 구문입니다.  
+ **StripCalculatedMembers** 함수는 집합에서 계산 멤버를 제거 합니다. [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) 함수를 사용 하 여 집합에 계산 멤버를 추가할 수 있습니다 .이 함수는 서버에 정의 된 계산 멤버 또는 WITH MEMBER 구문을 사용 하 여 쿼리 자체 내에 추가 된 계산 멤버를 반환 합니다.  
   
 ## <a name="example"></a>예제  
  다음 예에서는 쿼리에서 모든 계산 멤버를 제거합니다.  
@@ -77,7 +77,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

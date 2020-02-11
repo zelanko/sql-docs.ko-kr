@@ -1,5 +1,5 @@
 ---
-title: 특성 속성 예제 (VB) | Microsoft Docs
+title: Attributes 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: c0ed8195-09af-42c8-99c7-038ecc8a5c9f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 378fecc379febf3daa6e17ebb2ccad748c40989f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67967134"
 ---
 # <a name="attributes-property-example-vb"></a>Attributes 속성 예제(VB)
-이 예제에서는 합니다 [특성](../../../ado/reference/adox-api/attributes-property-adox.md) 의 속성을 [열](../../../ado/reference/adox-api/column-object-adox.md)합니다. 로 설정 **adColNullable** 의 값을 설정할 수 있습니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) [필드](../../../ado/reference/ado-api/field-object.md) 빈 문자열입니다. 이런 경우, 사용자 위치 데이터는 알 수 없는 레코드 및 레코드를 데이터에 적용 되지 않습니다 구별할 수 있습니다.  
+이 예에서는 열의 [Attributes](../../../ado/reference/adox-api/attributes-property-adox.md) 속성을 보여 [](../../../ado/reference/adox-api/column-object-adox.md)줍니다. **Adcolnullable** 로 설정 하면 사용자가 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) [필드](../../../ado/reference/ado-api/field-object.md) 의 값을 빈 문자열로 설정할 수 있습니다. 이 경우 사용자는 데이터를 알 수 없는 레코드와 데이터가 적용 되지 않는 레코드를 구분할 수 있습니다.  
   
 ```  
 ' BeginAttributesVB  
@@ -125,7 +125,7 @@ End Sub
 ' EndAttributesVB  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Attributes 속성 (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)   
  [Catalog 개체 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Column 개체(ADOX)](../../../ado/reference/adox-api/column-object-adox.md)
+ [열 개체(ADOX)](../../../ado/reference/adox-api/column-object-adox.md)

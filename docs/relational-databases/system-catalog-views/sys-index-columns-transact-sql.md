@@ -1,5 +1,5 @@
 ---
-title: sys.index_columns (Transact SQL) | Microsoft Docs
+title: sys. index_columns (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
 ms.prod: sql
@@ -21,28 +21,28 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e20bd7ecc783e0449a1deaa21c9f3db6e07abbc7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68122665"
 ---
-# <a name="sysindexcolumns-transact-sql"></a>sys.index_columns(Transact SQL)
+# <a name="sysindex_columns-transact-sql"></a>sys.index_columns(Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  일부인 열 하나당 하나의 행을 포함 한 **sys.indexes** 인덱스 또는 순서가 지정 되지 않은 테이블 (힙).  
+  열 하나를 포함 하는 열에는 열 **을 포함** 합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|인덱스가 정의되는 개체의 ID입니다.|  
 |**index_id**|**int**|열이 정의되는 인덱스의 ID입니다.|  
-|**index_column_id**|**int**|인덱스 열의 ID입니다. **index_column_id** 내 에서만 고유 **index_id**합니다.|  
-|**column_id**|**int**|ID 열의 **object_id**합니다.<br /><br /> 0 = 비클러스터형 인덱스의 RID(행 식별자)<br /><br /> **column_id** 내 에서만 고유 **object_id**합니다.|  
-|**key_ordinal**|**tinyint**|키 열 집합 내에서의 서수(1부터 시작)입니다.<br /><br /> 0 = 키 열이 아니거나, XML 인덱스, columnstore 인덱스 또는 공간 인덱스입니다.<br /><br /> 참고: XML 또는 공간 인덱스 키 일 수 없습니다는 기본 열을 비교할 수 없기 때문에 즉 해당 값을 정렬할 수 없습니다.|  
+|**index_column_id**|**int**|인덱스 열의 ID입니다. **index_column_id** 는 **index_id**내 에서만 고유 합니다.|  
+|**column_id**|**int**|**Object_id**열의 ID입니다.<br /><br /> 0 = 비클러스터형 인덱스의 RID(행 식별자)<br /><br /> **column_id** 는 **object_id**내 에서만 고유 합니다.|  
+|**key_ordinal**|**tinyint**|키 열 집합 내에서의 서수(1부터 시작)입니다.<br /><br /> 0 = 키 열이 아니거나, XML 인덱스, columnstore 인덱스 또는 공간 인덱스입니다.<br /><br /> 참고: 기본 열을 비교할 수 없기 때문에 XML 또는 공간 인덱스는 키가 될 수 없습니다. 즉, 해당 값을 정렬할 수 없습니다.|  
 |**partition_ordinal**|**tinyint**|분할 열 집합 내에 있는 서수(1부터 시작)입니다. 클러스터형 columnstore 인덱스는 하나의 분할 열만 가질 수 있습니다.<br /><br /> 0 = 분할 열 아님|  
 |**is_descending_key**|**bit**|1 = 인덱스 키 열이 내림차순으로 정렬됩니다.<br /><br /> 0 = 인덱스 키 열이 오름차순으로 정렬되거나 열이 columnstore 또는 해시 인덱스의 일부입니다.|  
-|**is_included_column**|**bit**|1 = 열이 CREATE INDEX INCLUDE 절을 사용하여 인덱스에 추가된 키가 아닌 열이거나 columnstore 인덱스의 일부인 열입니다.<br /><br /> 0 = 열이 포괄 열이 아닙니다.<br /><br /> 클러스터링 키의 일부 이기 때문에 암시적으로 추가 된 열에 나열 되지 않은 **sys.index_columns**합니다.<br /><br /> 분할 열이어서 암시적으로 추가된 열은 0으로 반환됩니다.| 
-|**column_store_order_ordinal**</br> 적용 대상: Azure SQL Data Warehouse (미리 보기)|**tinyint**|서 수 (1부터 시작) 내에서 순서가 지정 된 클러스터형된 columnstore 인덱스의 열 순서 지정의 집합입니다.|
+|**is_included_column**|**bit**|1 = 열이 CREATE INDEX INCLUDE 절을 사용하여 인덱스에 추가된 키가 아닌 열이거나 columnstore 인덱스의 일부인 열입니다.<br /><br /> 0 = 열이 포괄 열이 아닙니다.<br /><br /> 클러스터링 키의 일부 이므로 암시적으로 추가 된 열은 **sys. index_columns**에 나열 되지 않습니다.<br /><br /> 분할 열이어서 암시적으로 추가된 열은 0으로 반환됩니다.| 
+|**column_store_order_ordinal**</br> 적용 대상: Azure SQL Data Warehouse (미리 보기)|**tinyint**|순서가 지정 된 클러스터형 columnstore 인덱스의 순서 열 집합 내에서의 서 수 (1부터 기반)입니다.|
   
 ## <a name="permissions"></a>사용 권한
 
@@ -83,13 +83,13 @@ IX_BillOfMaterials_UnitMeasureCode                         UnitMeasureCode    1 
   
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [개체 카탈로그 뷰 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;&#40;개체 카탈로그 뷰](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys.indexes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
- [sys.objects&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys. 개체 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
- [sys.columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [SQL Server 시스템 카탈로그 쿼리 FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
+ [&#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+ [SQL Server 시스템 카탈로그 쿼리에 대한 질문과 대답](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

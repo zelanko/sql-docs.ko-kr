@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2fe1a42540b21fd11dbfb9747a77991073d35c97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637571"
 ---
 # <a name="deny-permissions-on-an-xml-schema-collection"></a>XML 스키마 컬렉션에 대한 사용 권한 거부
@@ -47,7 +47,7 @@ ms.locfileid: "62637571"
 ## <a name="examples"></a>예  
  다음 예의 시나리오에서는 XML 스키마 권한의 작동 방식을 보여 줍니다. 각 예에서는 필요한 테스트 데이터베이스, 관계형 스키마 및 로그인을 만듭니다. 이러한 로그인에는 필요한 XML 스키마 컬렉션 권한이 부여됩니다. 각 예에서는 종료 시 필요한 정리를 수행합니다.  
   
-### <a name="a-preventing-a-user-from-creating-an-xml-schema-collection"></a>1\. 사용자가 XML 스키마 컬렉션을 만드는 것을 방지  
+### <a name="a-preventing-a-user-from-creating-an-xml-schema-collection"></a>A. 사용자가 XML 스키마 컬렉션을 만드는 것을 방지  
  사용자가 XML 스키마 컬렉션을 만들 수 없게 하는 방법 중 하나는 관계형 스키마에 대한 ALTER 권한을 거부하는 것입니다. 이는 다음 예에서 확인할 수 있습니다.  
   
  이 예에서는 `TestLogin1`이라는 사용자와 데이터베이스를 만듭니다. 또한 데이터베이스에 `dbo` 스키마 외에 관계형 스키마를 만듭니다. 처음에는 사용자가 `CREATE XML SCHEMA` 권한을 사용하여 데이터베이스의 모든 위치에 스키마 컬렉션을 만들 수 있습니다. 그런 다음 관계형 스키마 중 하나에 대한 사용자의 `ALTER` 권한을 거부합니다. 이렇게 하면 사용자가 해당 관계형 스키마에 XML 스키마 컬렉션을 만들 수 없습니다.  
@@ -109,7 +109,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### <a name="b-denying-permissions-on-an-xml-schema-collection"></a>2\. XML 스키마 컬렉션에 대한 사용 권한 거부  
+### <a name="b-denying-permissions-on-an-xml-schema-collection"></a>B. XML 스키마 컬렉션에 대한 사용 권한 거부  
  다음 예에서는 로그인에 대해 기존 XML 스키마 컬렉션에 대한 특정 권한을 거부할 수 있는 방법을 보여 줍니다. 이 예에서 테스트 로그인은 기존 XML 스키마 컬렉션에 대한 REFERENCES 권한이 거부됩니다.  
   
  이 예에서는 `TestLogin1`이라는 사용자와 데이터베이스를 만듭니다. 또한 데이터베이스에 `dbo` 스키마 외에 관계형 스키마를 만듭니다. 처음에는 사용자가 `CREATE XML SCHEMA` 권한을 사용하여 데이터베이스의 모든 위치에 스키마 컬렉션을 만들 수 있습니다.  
@@ -188,7 +188,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [형식화된 XML과 형식화되지 않은 XML 비교](compare-typed-xml-to-untyped-xml.md)   
  [XML 스키마 컬렉션&#40;SQL Server&#41;](xml-schema-collections-sql-server.md)   
  [서버의 XML 스키마 컬렉션에 대한 요구 사항 및 제한 사항](requirements-and-limitations-for-xml-schema-collections-on-the-server.md)   

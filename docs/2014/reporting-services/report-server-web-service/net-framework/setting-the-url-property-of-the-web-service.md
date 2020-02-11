@@ -18,14 +18,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4036e38a0d0eb5e76934fa119b3bcc37342062a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62520289"
 ---
 # <a name="setting-the-url-property-of-the-web-service"></a>웹 서비스의 URL 속성 설정
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 애플리케이션에서 언제든지 애플리케이션이 현재 지정된 보고서 서버 웹 서비스의 기준 URL을 수정할 수 있습니다. 그러려면 서비스 개체의 **Url** 속성을 설정하기만 됩니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+  응용 프로그램에서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 언제 든 지 응용 프로그램이 현재 지정 된 보고서 서버 웹 서비스의 기본 URL을 수정할 수 있습니다. 그러려면 서비스 개체의 **Url** 속성을 설정하기만 됩니다. 다음은 그 예입니다.  
   
 ```vb  
 Dim rs As New ReportingService2010()  
@@ -106,10 +106,10 @@ class Sample
   
  초기 웹 서비스 프록시를 만드는 방법은 [웹 서비스 프록시 만들기](creating-the-web-service-proxy.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>   
  <xref:ReportService2010.ReportingService2010.GetItemDefinition%2A>   
- [웹 서비스와 .NET Framework를 사용하여 응용 프로그램 빌드](building-applications-using-the-web-service-and-the-net-framework.md)   
+ [웹 서비스와 .NET Framework를 사용하여 애플리케이션 빌드](building-applications-using-the-web-service-and-the-net-framework.md)   
  [보고서 서버 웹 서비스](../report-server-web-service.md)  
   
   

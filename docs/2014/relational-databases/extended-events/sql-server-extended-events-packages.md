@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1982a1ed16479ca1f7891a7b81d761ee7a0b1621
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638747"
 ---
 # <a name="sql-server-extended-events-packages"></a>SQL Server 확장 이벤트 패키지
@@ -53,7 +53,7 @@ ms.locfileid: "62638747"
 ## <a name="package-contents"></a>패키지 내용  
  다음 그림에서는 패키지에 포함될 수 있는 개체를 보여 줍니다. 패키지는 모듈에 포함되며 모듈은 실행 파일 또는 동적 연결 라이브러리일 수 있습니다.  
   
- ![모듈, 패키지 및 개체의 관계](../../database-engine/media/xepackagesobjects.gif "The relationship of a module, packages, and object")  
+ ![모듈, 패키지 및 개체의 관계](../../database-engine/media/xepackagesobjects.gif "모듈, 패키지 및 개체의 관계")  
   
 ### <a name="events"></a>이벤트  
  이벤트는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]같은 프로그램의 실행 경로 내에서 특정 지점을 모니터링합니다. 이벤트의 발생은 이러한 관심 지점에 도달했다는 사실을 알림과 동시에 이벤트가 발생한 시점의 상태 정보를 제공하게 됩니다.  
@@ -77,9 +77,9 @@ ms.locfileid: "62638747"
 |용어|정의|  
 |----------|----------------|  
 |Admin|Admin 이벤트는 주로 최종 사용자, 관리자 및 지원 담당자를 대상으로 합니다. Admin 채널의 이벤트는 관리자가 대처할 수 있는 잘 정의된 솔루션이 마련된 문제를 나타냅니다. Admin 이벤트의 예로 애플리케이션에서 프린터를 연결하는 데 실패한 경우를 들 수 있습니다. 이러한 이벤트는 문제를 해결하기 위해 수행할 작업을 사용자에게 알려 주는 적절한 문서나 메시지와 연결됩니다.|  
-|Operational|Operational 이벤트는 문제 또는 발생을 분석 및 진단하는 데 사용되며 문제 또는 발생을 기반으로 도구 또는 태스크를 트리거하는 데 사용할 수 있습니다. Operational 이벤트의 예로는 시스템에서 프린터를 추가 또는 제거하는 경우를 들 수 있습니다.|  
+|작동|Operational 이벤트는 문제 또는 발생을 분석 및 진단하는 데 사용되며 문제 또는 발생을 기반으로 도구 또는 태스크를 트리거하는 데 사용할 수 있습니다. Operational 이벤트의 예로는 시스템에서 프린터를 추가 또는 제거하는 경우를 들 수 있습니다.|  
 |Analytic|Analytic 이벤트는 고용량으로 게시됩니다. 이러한 이벤트는 프로그램 작업을 나타내며 일반적으로 성능 검사에 사용됩니다.|  
-|디버그|Debug 이벤트는 디버깅을 위해 문제를 진단하는 개발자에 의해서만 사용됩니다.<br /><br /> 참고: 디버그 채널의 이벤트는 내부 구현과 관련된 상태 데이터를 반환합니다. 이벤트가 반환하는 스키마와 데이터는 변경되거나 이후 SQL Server 버전에서 유효하지 않게 될 수 있습니다. 따라서 이후 버전의 SQL Server에서는 예고 없이 디버그 채널의 이벤트가 변경되거나 제거될 수 있습니다.|  
+|디버그|Debug 이벤트는 디버깅을 위해 문제를 진단하는 개발자에 의해서만 사용됩니다.<br /><br /> 참고: 디버그 채널의 이벤트는 내부 구현과 관련 된 상태 데이터를 반환 합니다. 이벤트가 반환하는 스키마와 데이터는 변경되거나 이후 SQL Server 버전에서 유효하지 않게 될 수 있습니다. 따라서 이후 버전의 SQL Server에서는 예고 없이 디버그 채널의 이벤트가 변경되거나 제거될 수 있습니다.|  
   
  **키워드**  
   
@@ -141,17 +141,17 @@ where name = 'keyword_map'
   
 -   action  
   
--   target  
+-   대상  
   
 -   pred_source  
   
 -   pred_compare  
   
--   유형  
+-   type  
   
  자세한 내용은 [sys.dm_xe_objects&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql)를 참조하세요.  
   
-### <a name="maps"></a>맵  
+### <a name="maps"></a>지도  
  맵 테이블은 내부 값을 문자열에 매핑함으로써 값이 무엇을 나타내는지 사용자에게 알려 줍니다. 사용자는 숫자 값뿐만 아니라 내부 값의 의미를 나타내는 설명도 얻을 수 있습니다. 다음 쿼리에서는 맵 값을 가져오는 방법을 보여 줍니다.  
   
 ```  
@@ -213,9 +213,9 @@ where name = 'lock_mode'
   
  이 표의 경우 mode라는 열이 있고 값이 5라고 가정하면 표에서 5가 X에 매핑되므로 잠금 유형은 배타입니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Extended Events Sessions](sql-server-extended-events-sessions.md)   
  [SQL Server 확장 이벤트 엔진](sql-server-extended-events-engine.md)   
- [SQL Server Extended Events Targets](../../database-engine/sql-server-extended-events-targets.md)  
+ [SQL Server 확장 이벤트 대상](../../database-engine/sql-server-extended-events-targets.md)  
   
   

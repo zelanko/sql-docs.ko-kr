@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 384b5cc158600848dbca6528a4c8c39250a23908
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629168"
 ---
 # <a name="clean-up-merge-metadata-replication-transact-sql-programming"></a>병합 메타데이터 정리(복제 Transact-SQL 프로그래밍)
@@ -29,11 +29,11 @@ ms.locfileid: "62629168"
   
 1.  게시 데이터베이스의 게시자에서 [sp_mergemetadataretentioncleanup](/sql/relational-databases/system-stored-procedures/sp-mergemetadataretentioncleanup-transact-sql)을 실행합니다.  
   
-2.  (옵션) 1단계를 통해 [MSmerge_genhistory](/sql/relational-databases/system-tables/msmerge-genhistory-transact-sql), [MSmerge_contents](/sql/relational-databases/system-tables/msmerge-contents-transact-sql)및 [MSmerge_tombstone](/sql/relational-databases/system-tables/msmerge-tombstone-transact-sql) 시스템 테이블에서 제거된 행 수는 각각 **@num_genhistory_rows** , **@num_contents_rows** 및 **@num_tombstone_rows** 출력 매개 변수에 반환됩니다.  
+2.  필드 **@num_genhistory_rows**, **@num_contents_rows**및 **@num_tombstone_rows** 출력 매개 변수에서 각각 반환 되는 [MSmerge_genhistory](/sql/relational-databases/system-tables/msmerge-genhistory-transact-sql), [MSmerge_contents](/sql/relational-databases/system-tables/msmerge-contents-transact-sql)및 [MSmerge_tombstone](/sql/relational-databases/system-tables/msmerge-tombstone-transact-sql) 시스템 테이블에서 1 단계에서 제거 된 행 수를 확인 합니다.  
   
 3.  구독자에서 1~2단계를 반복하여 구독 데이터베이스의 메타데이터를 정리합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [구독 만료 및 비활성화](../subscription-expiration-and-deactivation.md)  
   
   

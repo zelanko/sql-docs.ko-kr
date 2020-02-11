@@ -15,19 +15,19 @@ ms.assetid: e3e18da4-0511-4ece-a35d-699978bc28c6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b27a26eede798b8a8f8df9d76451125f042510a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963601"
 ---
 # <a name="readystate-property-example-vbscript"></a>ReadyState 속성 예제(VBScript)
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
+>  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
   
- 다음 예제에서는 읽는 방법을 보여 줍니다 합니다 [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) 의 속성을 [rds. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) VBScript 코드에서 런타임 시 개체입니다. **ReadyState** 읽기 전용 속성입니다.  
+ 다음 예제에서는 RDS의 [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) 속성을 읽는 방법을 보여 줍니다 [. ](../../../ado/reference/rds-api/datacontrol-object-rds.md)VBScript 코드의 런타임에는 DataControl 개체입니다. **ReadyState** 는 읽기 전용 속성입니다.  
   
- 이 예제를 테스트 하려면에서 잘라내기 및 붙여넣기 사이 다음이 코드를 \<본문 > 및 \</b > 일반 HTML 태그를에서 문서화 하 고 이름을 **RDSReadySt.asp**합니다. 사용 하 여 **찾을** Adovbs.inc 파일을 찾아서을 사용 하려는 디렉터리에 배치 합니다. ASP 스크립트에서 서버를 식별 합니다.  
+ 이 예를 테스트 하려면이 코드를 잘라내어 \<본문>와 \<> 태그 사이에 붙여넣고 **RDSReadySt**. **찾기** 를 사용 하 여 Adovbs 파일을 찾은 다음 사용 하려는 디렉터리에 배치 합니다. ASP 스크립트는 서버를 식별 합니다.  
   
 ```  
 <!-- BeginReadyStateVBS -->  
@@ -109,7 +109,7 @@ body {
 <!-- EndReadyStateVBS -->  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [DataControl 개체 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [ReadyState 속성(RDS)](../../../ado/reference/rds-api/readystate-property-rds.md)
 

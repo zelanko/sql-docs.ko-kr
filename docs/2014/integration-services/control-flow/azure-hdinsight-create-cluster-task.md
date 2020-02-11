@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 88ab6a4e91b98a2e6551f6a01cbca29738513b61
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69028627"
 ---
 # <a name="azure-hdinsight-create-cluster-task"></a>Azure HDInsight 클러스터 만들기 태스크
@@ -40,7 +40,7 @@ ms.locfileid: "69028627"
 |ResourceGroup|HDInsight 클러스터가 만들어질 Azure 리소스 그룹을 지정합니다.|
 |위치|HDInsight 클러스터의 위치를 지정합니다. Azure Storage 계정과 동일한 위치에 클러스터를 만들어야 합니다.|  
 |ClusterName|만들 HDInsight 클러스터의 이름을 지정합니다.|  
-|ClusterSize|클러스터에 만들 노드의 수를 지정합니다.|  
+|clusterSize|클러스터에 만들 노드의 수를 지정합니다.|  
 |BlobContainer|HDInsight 클러스터와 연결될 기본 스토리지 컨테이너의 이름을 지정합니다.|  
 |UserName|HDInsight 클러스터에 연결하는 데 사용할 사용자 이름을 지정합니다.|  
 |암호|HDInsight 클러스터에 연결하는 데 사용할 암호를 지정합니다.|

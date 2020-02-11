@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 58076b9ad8c32563ae8502de148803ac762b35f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62472933"
 ---
 # <a name="pick-schedule-for-job"></a>작업 일정 선택
-  이 대화 상자를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업의 기존 일정을 선택할 수 있습니다.  
+  이 대화 상자를 사용 하 여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업의 기존 일정을 선택할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **사용 가능한 일정**  
  이 작업에 사용할 수 있는 일정을 나열합니다. 작업과 일정의 소유자가 같아야 하므로 이 목록에는 작업 소유자가 소유한 일정만 포함됩니다.  
   
@@ -37,13 +37,13 @@ ms.locfileid: "62472933"
  **설명**  
  일정에서 작업을 실행하는 조건을 설명합니다.  
   
- **이 일정 내의 작업**  
+ **일정 내의 작업**  
  일정에 연결된 작업 번호를 나열합니다. 작업의 속성을 보려면 번호를 클릭합니다.  
   
  **속성**  
  일정에 대한 정보를 확인할 수 있는 **작업 일정 속성** 대화 상자를 시작합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [일정을 만들고 작업에 연결](create-and-attach-schedules-to-jobs.md)  
   
   

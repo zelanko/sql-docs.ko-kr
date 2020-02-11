@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM &lt;모델&gt;합니다. DIMENSION_CONTENT (DMX) | Microsoft Docs
+title: 모델&gt;에서 &lt;선택 합니다. DIMENSION_CONTENT (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7fac89454cd31c1334e41d4c2367143f31476e20
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67928365"
 ---
-# <a name="select-from-ltmodelgtdimensioncontent-dmx"></a>SELECT FROM &lt;모델&gt;합니다. DIMENSION_CONTENT (DMX)
+# <a name="select-from-ltmodelgtdimension_content-dmx"></a>모델&gt;에서 &lt;선택 합니다. DIMENSION_CONTENT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  OLAP 큐브에서 모델의 각 노드가 차원 멤버를 나타내도록 하여 마이닝 모델을 차원으로 사용할 수 있습니다. **SELECT FROM \<모델 >. Dimension_CONTENT** 문은 차원으로 사용에 관련 된 모델의 내용을 반환 합니다.  
+  OLAP 큐브에서 모델의 각 노드가 차원 멤버를 나타내도록 하여 마이닝 모델을 차원으로 사용할 수 있습니다. **SELECT FROM \<model>입니다. Dimension_CONTENT** 문은 차원으로 사용 하는 것과 관련 된 모델의 콘텐츠를 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,7 +42,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
  *조건 식*  
  (선택 사항) 열 목록에서 반환되는 값을 제한하는 조건입니다.  
   
- *expression*  
+ *식*  
  (선택 사항) 스칼라 값을 반환하는 식입니다.  
   
 ## <a name="remarks"></a>설명  
@@ -56,9 +56,9 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
 |NODE_NAME|멤버 속성|  
 |NODE_UNIQUE_NAME|키 특성|  
 |NODE_TYPE|멤버 속성|  
-|NODE_CAPTION|CaptionColumn **키** 특성입니다.|  
+|NODE_CAPTION|**키** 특성에 대 한 CaptionColumn입니다.|  
 |CHILDREN_CARDINALITY|멤버 속성|  
-|PARENT_UNIQUE_NAME|**키** 특성 (부모-자식 계층 구조의 ParentAttribute).|  
+|PARENT_UNIQUE_NAME|**키** 특성 (부모-자식 계층의 parentattribute)에 대 한 RelatedAttribute입니다.|  
 |NODE_DESCRIPTION|멤버 속성|  
 |NODE_RULE|멤버 속성|  
 |MARGINAL_RULE|멤버 속성|  
@@ -68,7 +68,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
   
 ## <a name="examples"></a>예  
   
-### <a name="description"></a>설명  
+### <a name="description"></a>Description  
  이 예에서는 `[TM Decision Tree]` 모델 내용에서 모델을 차원으로 사용하는 데 적합한 모든 열을 선택합니다.  
   
 ### <a name="code"></a>코드  
@@ -78,10 +78,10 @@ SELECT *
 FROM [TM Decision Tree].Dimension_Content  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [선택 &#40;DMX&#41;](../dmx/select-dmx.md)   
- [Data Mining Extensions &#40;DMX&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
- [Data Mining Extensions &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
- [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>참고 항목  
+ [DMX &#40;선택&#41;](../dmx/select-dmx.md)   
+ [데이터 마이닝 확장 &#40;DMX&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
+ [데이터 마이닝 확장 &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
+ [데이터 마이닝 확장 &#40;DMX&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

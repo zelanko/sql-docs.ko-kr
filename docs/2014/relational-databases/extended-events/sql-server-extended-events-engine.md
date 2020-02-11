@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89d92fc60e18926351cc94e6e6c21a32a7371ed5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638241"
 ---
 # <a name="sql-server-extended-events-engine"></a>SQL Server 확장 이벤트 엔진
@@ -34,9 +34,9 @@ ms.locfileid: "62638241"
   
  다음 그림은 확장 이벤트 세션을 간략히 요약하여 보여 줍니다. 자세한 내용은 [SQL Server Extended Events Sessions](sql-server-extended-events-sessions.md)을 참조하세요.  
   
- ![자세한 확장 이벤트 아키텍처](../../database-engine/media/xearchitecturedetailed.gif "Detailed extended events architecture")  
+ ![자세한 확장 이벤트 아키텍처](../../database-engine/media/xearchitecturedetailed.gif "자세한 확장 이벤트 아키텍처")  
   
- 다음에 유의하세요.  
+ 다음 사항에 유의하세요.  
   
 -   각 Windows 프로세스에는 하나 이상의 모듈(**Win32 프로세스**, **Win32 모듈**)이 있을 수 있습니다. 이를 *바이너리* 또는 *실행 모듈*이라고도 합니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62638241"
   
     -   버퍼가 가득 차면 해당 버퍼가 대상으로 디스패치됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [확장 이벤트](extended-events.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: '자습서: 데이터베이스 엔진을 시작 하기 | Microsoft Docs'
+title: '자습서: 데이터베이스 엔진 시작 | Microsoft 문서'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 07f8ecc0e6550fcec63a0b1ebb906cd5ffd3aaf1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524337"
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>자습서: 데이터베이스 엔진 시작
@@ -42,9 +42,9 @@ ms.locfileid: "62524337"
   
  이 자습서를 사용하려면 시스템에 다음 항목이 설치되어야 합니다.  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 설치한 사용자를 위해 작성되었습니다. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설치 프로그램으로 설치할 수도 있고 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?LinkId=144346)에서 다운로드하여 설치할 수도 있습니다.  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]입니다. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]는 설치 프로그램을 실행 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 하거나 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?LinkId=144346)에서 다운로드 하 여 설치할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [자습서: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: '2단원: 데이터베이스 개체의 사용 권한 구성 | Microsoft Docs'
+title: '2단원: 데이터베이스 개체에 대한 사용 권한 구성 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 940b33cda3158e98c9fee519ea12f1193e615bca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62642582"
 ---
 # <a name="lesson-2-configuring-permissions-on-database-objects"></a>2단원: 데이터베이스 개체에 대한 사용 권한 구성
@@ -32,7 +32,7 @@ ms.locfileid: "62642582"
   
 -   [데이터베이스 개체에 대한 액세스 권한 부여](lesson-2-4-granting-access-to-a-database-object.md)  
   
--   [요약: 데이터베이스 개체의 사용 권한 구성](lesson-2-5-summary-configuring-permissions-on-database-objects.md)  
+-   [요약: 데이터베이스 개체에 대한 사용 권한 구성](lesson-2-5-summary-configuring-permissions-on-database-objects.md)  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [로그인 만들기](lesson-2-1-creating-a-login.md)  

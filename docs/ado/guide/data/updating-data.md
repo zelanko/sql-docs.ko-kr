@@ -1,5 +1,5 @@
 ---
-title: 데이터를 업데이트 하는 중 | Microsoft Docs
+title: 데이터 업데이트 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,20 +14,20 @@ ms.assetid: 6508e4e9-e33a-4dad-b340-5d632fd78a91
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5bd3b72e897b8ae12441c7cf28d1995eb45318d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923698"
 ---
 # <a name="updating-data"></a>데이터 업데이트
-업데이트 동작 및 기능 크게 의존 하는 모드 (잠금 유형), 커서 유형 및 커서 위치를 업데이트 합니다.  
+업데이트 동작 및 기능은 주로 업데이트 모드 (잠금 유형), 커서 유형 및 커서 위치에 따라 달라 집니다.  
   
- 사용 하 여는 **업데이트** 의 현재 레코드에 대 한 변경 내용을 저장 하는 방법을 **레코드 집합** 호출 이후 개체를 **AddNew** 메서드 또는 필드 값 변경 후 기존 레코드입니다. 합니다 **레코드 집합** 개체 업데이트를 지원 해야 합니다.  
+ **AddNew** 메서드를 호출 하거나 기존 레코드의 필드 값을 변경한 후에는 **Update** 메서드를 사용 하 여 **레코드 집합** 개체의 현재 레코드에 대 한 변경 내용을 저장할 수 있습니다. **레코드 집합** 개체는 업데이트를 지원 해야 합니다.  
   
- 경우는 **레코드 집합** 개체가 일괄 처리 업데이트를 지원, 호출할 때까지 로컬로 여러 변경 내용을 하나 이상의 레코드를 캐시할 수 있습니다 합니다 **UpdateBatch** 메서드. 현재 레코드를 편집 하거나 호출 하는 경우 새 레코드를 추가 하는 경우는 **UpdateBatch** 메서드를 ADO를 자동으로 호출 합니다 **업데이트** 하기 전에 현재 레코드에 보류 중인 변경 내용을 저장 하는 방법 공급자에 게 일괄 처리 된 변경 내용을 전송 합니다.  
+ **레코드 집합** 개체가 일괄 처리 업데이트를 지 원하는 경우 **UpdateBatch** 메서드를 호출할 때까지 하나 이상의 레코드에 대 한 여러 변경 내용을 로컬로 캐시할 수 있습니다. 현재 레코드를 편집 하거나 **UpdateBatch** 메서드를 호출할 때 새 레코드를 추가 하는 경우, ADO는 일괄 처리 된 변경 내용을 공급자에 전송 하기 전에 **업데이트** 메서드를 자동으로 호출 하 여 현재 레코드에 대 한 보류 중인 변경 내용을 저장 합니다.  
   
- 현재 레코드를 호출한 후 유지 합니다 **업데이트** 하거나 **UpdateBatch** 메서드.  
+ **업데이트** 또는 **UpdateBatch** 메서드를 호출한 후 현재 레코드는 현재 상태로 유지 됩니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

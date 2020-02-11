@@ -1,5 +1,5 @@
 ---
-title: '대체 형식: SQL 문을 사용 하 여 | Microsoft Docs'
+title: '대안: SQL 문 사용 | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,16 +15,16 @@ ms.assetid: 8b528b23-063d-45ea-8dea-6a90d4060b20
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f41ef7f0641877056a6e2f3d85fd6a40ff7826db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925998"
 ---
-# <a name="alternatives-using-sql-statements"></a>대체 형식: SQL 문 사용
-ADO를 대체 하는 기본 제공 속성 및 메서드 데이터를 편집 하기 위한 명령을 사용할 수도 있습니다. 공급자에 따라이 섹션에 언급 된 모든 작업이 완료할 수 있습니다 데이터 원본에 명령을 전달 하 여 합니다. SQL UPDATE 문을 사용 하지 않고 데이터를 수정 하려면 예를 들어 사용할 수는 **값** 의 속성을 **필드**합니다. ADO 메서드 대신 데이터 원본에 새 레코드를 추가할 SQL INSERT 문은 사용할 수 있습니다 **AddNew**합니다. SQL 또는 공급자의 데이터 조작 언어에 대 한 자세한 내용은 데이터 원본의 설명서를 참조 합니다.  
+# <a name="alternatives-using-sql-statements"></a>대안: SQL 문 사용
+ADO를 사용 하면 데이터를 편집 하는 데 사용할 수 있는 기본 제공 속성 및 방법 대신 명령을 사용할 수도 있습니다. 공급자에 따라이 섹션에 설명 된 모든 작업은 데이터 원본에 명령을 전달 하 여 수행할 수도 있습니다. 예를 들어 SQL UPDATE 문을 사용 하 여 **필드**의 **Value** 속성을 사용 하지 않고 데이터를 수정할 수 있습니다. SQL INSERT 문을 사용 하 여 ADO 메서드 **AddNew**대신 데이터 원본에 새 레코드를 추가할 수 있습니다. 공급자의 SQL 또는 데이터 조작 언어에 대 한 자세한 내용은 데이터 원본 설명서를 참조 하십시오.  
   
- 예를 들어, 다음 코드와 같이 데이터베이스에는 DELETE 문을 포함 하는 SQL 문자열을 전달할 수 있습니다.  
+ 예를 들어 다음 코드와 같이 DELETE 문을 포함 하는 SQL 문자열을 데이터베이스에 전달할 수 있습니다.  
   
 ```  
 'BeginSQLDelete  

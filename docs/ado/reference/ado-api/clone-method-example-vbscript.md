@@ -15,18 +15,18 @@ ms.assetid: 36b96e3d-8cb0-4b79-bd93-ea5e0eb5679f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cc82f72b175373d504b7fda658f1c7ed8eb7f1ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919999"
 ---
 # <a name="clone-method-example-vbscript"></a>Clone 메서드 예제(VBScript)
-이 예제에서는 합니다 [복제](../../../ado/reference/ado-api/clone-method-ado.md) 의 복사본을 만드는 방법을 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 다음 각 복사본의 레코드 포인터를 독립적으로 위치를 지정할 수 있도록 합니다.  
+이 예제에서는 [Clone](../../../ado/reference/ado-api/clone-method-ado.md) 메서드를 사용 하 여 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 의 복사본을 만든 다음 사용자가 각 복사본의 레코드 포인터를 독립적으로 배치할 수 있도록 합니다.  
   
- 다음 예제에는 페이지 ASP (Active Server)를 사용 합니다. 이 예제에서는 합니다 **Northwind** Microsoft Access를 사용 하 여 분산 데이터베이스입니다. 잘라내기 및 메모장 이나 다른 텍스트 편집기에 다음 코드를 붙여넣고 CloneVBS.asp로 저장 합니다. 모든 클라이언트 브라우저에서 결과 볼 수 있습니다.  
+ Active Server 페이지 (ASP)에서 다음 예제를 사용 합니다. 이 예에서는 Microsoft Access와 함께 배포 된 **Northwind** 데이터베이스를 사용 합니다. 다음 코드를 잘라내어 메모장 또는 다른 텍스트 편집기에 붙여넣고 CloneVBS로 저장 합니다. 모든 클라이언트 브라우저에서 결과를 볼 수 있습니다.  
   
- 예를 실습 하는 줄을 변경 `RsCustomerList.Source = "Customers"` 에 `RsCustomerList.Source = "Products"` 더 큰 테이블을 계산 합니다.  
+ 예제를 실행 하려면 줄 `RsCustomerList.Source = "Customers"` 을로 `RsCustomerList.Source = "Products"` 변경 하 여 더 큰 테이블을 계산 합니다.  
   
 ```  
 <!-- BeginCloneVBS -->  
@@ -117,6 +117,6 @@ ms.locfileid: "67919999"
 <!-- EndCloneVBS -->  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Clone 메서드 (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

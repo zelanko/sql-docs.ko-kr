@@ -14,22 +14,22 @@ ms.assetid: 4f19bf5e-6d8c-40ae-a975-cfd62a0790ec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: de22797bdcf4ff526a8c17aee313567da3114b60
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036537"
 ---
 # <a name="closing-the-cursor"></a>커서 닫기
-호출 응용 프로그램이 커서를 사용 하 여 완료 되 면 **SQLCloseCursor** 를 커서를 닫습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+응용 프로그램이 커서를 사용 하 여 완료 되 면 **SQLCloseCursor** 를 호출 하 여 커서를 닫습니다. 다음은 그 예입니다.  
   
 ```  
 SQLCloseCursor(hstmt);  
 ```  
   
- 응용 프로그램을 커서를 닫을 때까지 커서가 열릴 문은 다른 SQL 문을 실행 하는 등 다른 대부분의 작업에 사용할 수 없습니다. 커서가 열려 있는 동안 호출할 수 있는 함수의 전체 목록은 참조 하세요. [부록 b: ODBC 상태 전환 테이블](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)합니다.  
+ 응용 프로그램이 커서를 닫을 때까지 커서를 열 때 사용 하는 문은 다른 SQL 문 실행과 같은 대부분의 다른 작업에 사용할 수 없습니다. 커서가 열려 있는 동안 호출 될 수 있는 전체 함수 목록은 [부록 B: ODBC 상태 전환 표](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)를 참조 하세요.  
   
 > [!NOTE]  
->  커서 닫기, 응용 프로그램에서 호출 해야 **SQLCloseCursor**가 아닌 **SQLCancel**합니다.  
+>  커서를 닫으려면 응용 프로그램이 **Sqlcancel**이 아닌 **SQLCloseCursor**를 호출 해야 합니다.  
   
- 커서가 열린 상태로 남게 명시적으로 닫았는지 될 때까지 트랜잭션이 커밋되거나 롤백될 때 경우 일부 데이터 소스는 커서 닫기 제외 합니다. 특히 결과의 끝에 도달을 설정 하면 **SQLFetch** sql_no_data, 커서를 닫지 않습니다. 빈 결과 집합 (결과 집합을 문이 성공적으로 실행 하는 반환 행이 없는 경우 생성)에 커서를 명시적으로 닫아야 합니다.
+ 커서는 트랜잭션을 커밋하거나 롤백하는 경우를 제외 하 고는 명시적으로 닫을 때까지 열린 상태로 유지 됩니다 .이 경우 일부 데이터 소스는 커서를 닫습니다. 특히 **Sqlfetch** 가 SQL_NO_DATA를 반환할 때 결과 집합의 끝에 도달 하면 커서가 닫히지 않습니다. 빈 결과 집합 (문이 성공적으로 실행 되었지만 행이 반환 되지 않은 경우 생성 된 결과 집합)의 경우에도 명시적으로 닫아야 합니다.

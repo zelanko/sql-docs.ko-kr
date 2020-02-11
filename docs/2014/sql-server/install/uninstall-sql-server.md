@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2014 제거 | Microsoft Docs
+title: SQL Server 2014 | 제거 Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,20 +11,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d81180c9cbadec8816c401bc6b8c8d200e76e28b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62470225"
 ---
 # <a name="uninstall-sql-server-2014"></a>SQL Server 2014 제거
+  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 의 기존 인스턴스를 완전히 제거하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 설치할 수 있도록 시스템을 준비하려면 아래 항목을 따르십시오.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [SQL Server의 기존 인스턴스 제거&#40;설치&#41;](uninstall-an-existing-instance-of-sql-server-setup.md)  
+ [SQL Server의 기존 인스턴스 제거&#40;설치 프로그램&#41;](uninstall-an-existing-instance-of-sql-server-setup.md)  
  이 항목에서는 독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 수동으로 제거하는 방법에 대해 설명합니다.  
   
- [SharePoint용 PowerPivot 제거](uninstall-power-pivot-for-sharepoint.md)  
+ [Uninstall PowerPivot for SharePoint](uninstall-power-pivot-for-sharepoint.md)  
  이 항목에서는 SharePoint용 PowerPivot을 수동으로 제거하는 방법에 대해 설명합니다.  
   
  [Reporting Services 제거](uninstall-reporting-services.md)  
@@ -44,7 +45,7 @@ ms.locfileid: "62470225"
   
 -   [SQL Server 2014 설치 삭제](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 설치 계획](planning-a-sql-server-installation.md)   
  [SQL Server 2014 설치](../../database-engine/install-windows/install-sql-server.md)   
  [SQL Server 2014로 업그레이드](../../database-engine/install-windows/upgrade-sql-server.md)  

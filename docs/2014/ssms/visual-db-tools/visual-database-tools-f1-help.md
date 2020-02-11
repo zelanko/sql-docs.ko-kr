@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b893480036b607dc1e6639ed9f50232520663879
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62473020"
 ---
 # <a name="visual-database-tools-f1-help"></a>Visual Database Tools F1 도움말
@@ -24,8 +24,8 @@ ms.locfileid: "62473020"
   
  대화 상자 항목을 열려면 대화 상자가 열려 있고 포커스가 주어진 상태에서 F1 키를 누릅니다. 속성 창 항목을 열려면 속성 창을 클릭하고 F1 키를 누릅니다.  
   
-## <a name="see-also"></a>관련 항목  
- [테이블 디자인 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools를 &#40;테이블 디자인&#41;](visual-database-tools.md)   
  [쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

@@ -16,18 +16,18 @@ ms.assetid: 171501fe-4b74-4647-96c3-7691c777e01b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5db934c972282609e9b2978a66034b39bb38a092
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771187"
 ---
-# <a name="spreplmonitorhelppublisher-transact-sql"></a>sp_replmonitorhelppublisher(Transact-SQL)
+# <a name="sp_replmonitorhelppublisher-transact-sql"></a>sp_replmonitorhelppublisher(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   배포자와 연결된 하나 이상의 게시에 대한 현재 상태 정보를 반환합니다. 복제 모니터링에 사용되는 이 저장 프로시저는 배포 데이터베이스의 배포자에서 실행됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,12 +44,12 @@ sp_replmonitorhelppublisher [ [ @publisher = ] 'publisher' ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**publisher**|**sysname**|게시자의 이름입니다.|  
+|**발행자**|**sysname**|게시자의 이름입니다.|  
 |**distribution_db**|**sysname**|지정된 게시자에서 사용하는 배포 데이터베이스의 이름입니다.|  
-|**상태**|**int**|이 게시자의 게시와 연결된 모든 복제 에이전트의 최대 상태로 다음 값 중 하나일 수 있습니다.<br /><br /> **1** = 시작 됨<br /><br /> **2** = 성공<br /><br /> **3** = 진행 중<br /><br /> **4** = 유휴 상태<br /><br /> **5** = 다시 시도 중<br /><br /> **6** = 실패|  
-|**warning**|**int**|이 게시자의 게시에 속한 구독에서 생성한 최대 임계값 경고로 다음 값 중 하나 이상을 논리적 OR 연산한 결과일 수 있습니다.<br /><br /> **1** = 만료-트랜잭션 게시에 대 한 구독이 보존 기간 임계값 내에서 동기화 되지 않았습니다.<br /><br /> **2** = latency-트랜잭션 게시자에서 구독자로 데이터를 복제 하는 데 소요 된 시간이 임계값 (초)을 초과 합니다.<br /><br /> **4** = mergeexpiration-병합 게시에 대 한 구독이 보존 기간 임계값 내에서 동기화 되지 않았습니다.<br /><br /> **8** = mergefastrunduration-고속 네트워크 연결을 통해 병합 구독의 동기화를 완료 하는 데 소요 된 시간이 임계값 (초)을 초과 합니다.<br /><br /> **16** = mergeslowrunduration-저속 또는 전화 접속 네트워크 연결을 통해 병합 구독의 동기화를 완료 하는 데 소요 된 시간이 임계값 (초)을 초과 합니다.<br /><br /> **32** = mergefastrunspeed-고속 네트워크 연결을 통해 병합 구독을 동기화 하는 동안 행의 배달 속도가 임계값 속도 (초당 행 수)를 유지 하지 못했습니다.<br /><br /> **64** = mergeslowrunspeed-저속 또는 전화 접속 네트워크 연결을 통해 병합 구독을 동기화 하는 동안 행의 배달 속도가 임계값 속도 (초당 행 수)를 유지 하지 못했습니다.|  
+|**업무**|**int**|이 게시자의 게시와 연결된 모든 복제 에이전트의 최대 상태로 다음 값 중 하나일 수 있습니다.<br /><br /> **1** = 시작 됨<br /><br /> **2** = 성공<br /><br /> **3** = 진행 중<br /><br /> **4** = 유휴 상태<br /><br /> **5** = 다시 시도 중<br /><br /> **6** = 실패|  
+|**내용의**|**int**|이 게시자의 게시에 속한 구독에서 생성한 최대 임계값 경고로 다음 값 중 하나 이상을 논리적 OR 연산한 결과일 수 있습니다.<br /><br /> **1** = 만료-트랜잭션 게시에 대 한 구독이 보존 기간 임계값 내에서 동기화 되지 않았습니다.<br /><br /> **2** = latency-트랜잭션 게시자에서 구독자로 데이터를 복제 하는 데 소요 된 시간이 임계값 (초)을 초과 합니다.<br /><br /> **4** = mergeexpiration-병합 게시에 대 한 구독이 보존 기간 임계값 내에서 동기화 되지 않았습니다.<br /><br /> **8** = mergefastrunduration-고속 네트워크 연결을 통해 병합 구독의 동기화를 완료 하는 데 소요 된 시간이 임계값 (초)을 초과 합니다.<br /><br /> **16** = mergeslowrunduration-저속 또는 전화 접속 네트워크 연결을 통해 병합 구독의 동기화를 완료 하는 데 소요 된 시간이 임계값 (초)을 초과 합니다.<br /><br /> **32** = mergefastrunspeed-고속 네트워크 연결을 통해 병합 구독을 동기화 하는 동안 행의 배달 속도가 임계값 속도 (초당 행 수)를 유지 하지 못했습니다.<br /><br /> **64** = mergeslowrunspeed-저속 또는 전화 접속 네트워크 연결을 통해 병합 구독을 동기화 하는 동안 행의 배달 속도가 임계값 속도 (초당 행 수)를 유지 하지 못했습니다.|  
 |**publicationcount**|**int**|게시자에 속한 게시의 수입니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -61,7 +61,7 @@ sp_replmonitorhelppublisher [ [ @publisher = ] 'publisher' ]
 ## <a name="permissions"></a>사용 권한  
  배포자에서 **sysadmin** 고정 서버 역할의 멤버 또는 배포 데이터베이스의 **db_owner** 또는 **replmonitor** 고정 데이터베이스 역할의 멤버만 **sp_replmonitorhelppublisher**을 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [프로그래밍 방식으로 복제 모니터링](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

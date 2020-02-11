@@ -1,5 +1,5 @@
 ---
-title: '예: XMLDATA 및 XMLSCHEMA 옵션을 사용하여 결과로 스키마 요청 | Microsoft Docs'
+title: '예제: XMLDATA 및 XMLSCHEMA 옵션을 사용하여 결과로 스키마 요청 | Microsoft 문서'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a2a18dd84f5f0a83cc3c6f42bf664c178c1ba6b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637929"
 ---
 # <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>예: XMLDATA 및 XMLSCHEMA 옵션을 사용하여 결과로 스키마 요청
@@ -52,7 +52,7 @@ GO
 ```  
   
 > [!NOTE]
->  <`Schema`>는 네임스페이스로 선언되었습니다. 서로 다른 FOR XML 쿼리에서 여러 XML-Data 스키마를 요청할 때는 네임스페이스 충돌을 피하기 위해 쿼리가 실행될 때마다 네임스페이스 식별자(이 예제에서는 `Schema1` )가 변경됩니다. 네임 스페이스 식별자는 이루어져 **Schema_n_** 여기서 **_n_** 는 정수입니다.  
+>  <`Schema`>는 네임스페이스로 선언되었습니다. 서로 다른 FOR XML 쿼리에서 여러 XML-Data 스키마를 요청할 때는 네임스페이스 충돌을 피하기 위해 쿼리가 실행될 때마다 네임스페이스 식별자(이 예제에서는 `Schema1` )가 변경됩니다. 네임 스페이스 식별자는 **Schema_n_** 으로 구성 됩니다. 여기서 **_n_** 은 정수입니다.  
   
  `XMLSCHEMA` 옵션을 지정하면 결과에 대해 XSD 스키마를 요청할 수 있습니다.  
   
@@ -123,7 +123,7 @@ GO
 <row xmlns="urn:example.com" ProductModelID="119" Name="Bike Wash" />  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [FOR XML에서 RAW 모드 사용](use-raw-mode-with-for-xml.md)  
   
   

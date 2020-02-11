@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 374d75c18adc091eaf6a01ae1164a529a34accee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62636427"
 ---
 # <a name="connect-with-registered-servers-and-object-explorer"></a>등록된 서버 및 개체 탐색기와 연결
@@ -29,23 +29,30 @@ ms.locfileid: "62636427"
   
 1.  필요한 경우 등록된 서버 도구 모음에서 **데이터베이스 엔진** 을 클릭합니다. 이미 선택되어 있을 수도 있습니다.  
   
-2.  **데이터베이스 엔진**을 확장합니다.  
+2.  
+  **데이터베이스 엔진**을 확장합니다.  
   
-3.  **로컬 서버 그룹**을 마우스 오른쪽 단추로 클릭한 다음 **새 서버 등록**을 클릭합니다.  
+3.  
+  **로컬 서버 그룹**을 마우스 오른쪽 단추로 클릭한 다음 **새 서버 등록**을 클릭합니다.  
   
-4.  **새 서버 등록** 대화 상자의 **서버 이름** 입력란에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스 이름을 입력합니다.  
+4.  
+  **새 서버 등록** 대화 상자의 **서버 이름** 입력란에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스 이름을 입력합니다.  
   
-5.  **등록된 서버 이름** 입력란에 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]를 입력합니다.  
+5.  
+  **등록된 서버 이름** 입력란에 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]를 입력합니다.  
   
-6.  에 **연결 속성** 탭의 **데이터베이스에 연결** 목록에서  **\<서버 찾아보기... >** 합니다.  
+6.  **연결 속성** 탭의 **데이터베이스에 연결** 목록에서 ** \<찾아보기 서버 ... >** 를 선택 합니다.  
   
-7.  **데이터베이스 찾아보기** 대화 상자에서 **예**를 클릭합니다.  
+7.  
+  **데이터베이스 찾아보기** 대화 상자에서 **예**를 클릭합니다.  
   
-8.  **서버에서 데이터베이스 찾아보기** 대화 상자에서 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]를 선택한 다음 **확인**을 클릭합니다.  
+8.  
+  **서버에서 데이터베이스 찾아보기** 대화 상자에서 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]를 선택한 다음 **확인**을 클릭합니다.  
   
 9. 서버가 제대로 등록되었는지 확인하려면 **테스트**를 클릭합니다.  
   
-10. **새 서버 등록** 대화 상자에서 **저장**을 클릭합니다.  
+10. 
+  **새 서버 등록** 대화 상자에서 **저장**을 클릭합니다.  
   
 ## <a name="connecting-with-object-explorer"></a>개체 탐색기와 연결  
  등록된 서버와 마찬가지로 개체 탐색기에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 연결할 수 있습니다.  
@@ -54,9 +61,11 @@ ms.locfileid: "62636427"
   
 1.  개체 탐색기의 도구 모음에서 **연결** 을 클릭하여 가능한 연결 유형 목록을 표시한 다음 **데이터베이스 엔진**을 선택합니다.  
   
-2.  **서버에 연결** 대화 상자의 **서버 이름** 입력란에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스 이름을 입력합니다.  
+2.  
+  **서버에 연결** 대화 상자의 **서버 이름** 입력란에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스 이름을 입력합니다.  
   
-3.  **옵션** 을 클릭하고 원하는 옵션을 탐색합니다.  
+3.  
+  **옵션** 을 클릭하고 원하는 옵션을 탐색합니다.  
   
 4.  서버에 연결하려면 **연결**을 클릭합니다. 이미 연결된 경우 개체 탐색기로 돌아가고 해당 서버에 포커스가 설정됩니다.  
   
@@ -64,7 +73,8 @@ ms.locfileid: "62636427"
   
 5.  개체 탐색기에서 **데이터베이스** 폴더를 확장하고 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]를 선택합니다.  
   
-     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서는 시스템 데이터베이스를 별개의 폴더에 표시합니다.  
+     
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서는 시스템 데이터베이스를 별개의 폴더에 표시합니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [환경 레이아웃 변경](lesson-1-3-change-the-environment-layout.md)  

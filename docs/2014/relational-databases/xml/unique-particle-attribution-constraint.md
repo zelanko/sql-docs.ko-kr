@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2f6361e3e6a295398bdd88d56a6c70a79e92b526
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467419"
 ---
 # <a name="unique-particle-attribution-constraint"></a>UNIQUE PARTICLE ATTRIBUTION 제약 조건
@@ -80,15 +80,15 @@ ms.locfileid: "62467419"
 ## <a name="finding-more-information"></a>추가 정보 찾기  
  다음 문서는 W3C(World Wide Web Consortium)에서 발행했으며 UNIQUE PARTICLE ATTRIBUTION 제약 조건에 대한 기술적인 설명이 포함되어 있습니다.  
   
- "XML Schema Part 1: 구조 제 2 판, W3C 제안 수정된 추천 ":  
+ "XML 스키마 1부: 구조 제2판, W3C 제안 수정 추천":  
   
--   섹션 3.8.6: 모델 그룹 스키마 구성 요소에 대 한 제약 조건  
+-   섹션 3.8.6: 모델 그룹 스키마 구성 요소의 제한 사항  
   
--   부록 h: Unique Particle Attribution 제약 조건 (비표준) 분석  
+-   부록 H: Unique Particle Attribution 제약 조건 분석(비표준)  
   
  이 문서를 보려면 [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881)을 방문하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 스키마 컬렉션&#40;SQL Server&#41;](xml-schema-collections-sql-server.md)  
   
   

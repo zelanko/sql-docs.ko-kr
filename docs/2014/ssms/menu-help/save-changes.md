@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 78a7f93dc2d906f86a83f1cfd2518b39cd73c9e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62510025"
 ---
 # <a name="save-changes"></a>변경 내용 저장
@@ -33,7 +33,7 @@ ms.locfileid: "62510025"
   
  이전에 저장한 항목의 변경 내용은 스토리지의 해당 저장 위치에 자동으로 저장됩니다. 항목을 아직 저장하지 않은 경우 새 저장 위치를 묻는 **다른 이름으로 파일 저장** 대화 상자가 나타납니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **다음 항목의 변경 내용을 저장하시겠습니까?**  
  선택한 항목이 저장됩니다. 항목을 선택하거나 선택을 취소할 수 있습니다.  
   

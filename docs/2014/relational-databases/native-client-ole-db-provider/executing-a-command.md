@@ -17,22 +17,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5f94cc014a04c3392fefb61f4fa291a8f5a44ad8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638450"
 ---
 # <a name="executing-a-command"></a>명령 실행
-  소비자를 호출 하는 데이터 원본에 대 한 연결 설정 되 면 합니다 **idbcreatesession:: Createsession** 메서드 세션을 만듭니다. 세션은 명령, 행 집합 또는 트랜잭션 팩토리로 작동합니다.  
+  데이터 원본에 대 한 연결이 설정 된 후 소비자는 **IDBCreateSession:: CreateSession** 메서드를 호출 하 여 세션을 만듭니다. 세션은 명령, 행 집합 또는 트랜잭션 팩토리로 작동합니다.  
   
- 개별 테이블이나 인덱스를 직접 사용하기 위해 소비자는 `IOpenRowset` 인터페이스를 요청합니다. `IOpenRowset::OpenRowset` 메서드는 단일 기본 테이블이나 인덱스의 모든 행이 포함된 행 집합을 열고 반환합니다.  
+ 개별 테이블이나 인덱스를 직접 사용하기 위해 소비자는 `IOpenRowset` 인터페이스를 요청합니다. 
+  `IOpenRowset::OpenRowset` 메서드는 단일 기본 테이블이나 인덱스의 모든 행이 포함된 행 집합을 열고 반환합니다.  
   
- 명령을 실행 하려면 (SELECT 등 \* FROM Authors), 소비자의 요청을 `IDBCreateCommand` 인터페이스. 소비자는 `IDBCreateCommand::CreateCommand` 메서드를 호출하여 명령 개체를 만들고 `ICommandText` 인터페이스를 요청할 수 있습니다. 실행할 명령을 지정하는 데는 `ICommandText::SetCommandText` 메서드를 사용합니다.  
+ 명령을 실행 하기 위해 (예: Authors \* 에서 선택) 소비자는 `IDBCreateCommand` 인터페이스를 요청 합니다. 소비자는 `IDBCreateCommand::CreateCommand` 메서드를 호출하여 명령 개체를 만들고 `ICommandText` 인터페이스를 요청할 수 있습니다. 실행할 명령을 지정하는 데는 `ICommandText::SetCommandText` 메서드를 사용합니다.  
   
  명령을 실행하는 데는 `Execute` 명령을 사용합니다. SQL 문이나 프로시저 이름은 모두 명령으로 사용할 수 있습니다. 결과 집합(행 집합) 개체를 생성하지 않는 명령도 있습니다. SELECT * FROM Authors와 같은 명령은 결과 집합을 생성합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [SQL Server Native Client OLE DB 공급자 응용 프로그램 만들기](creating-a-sql-server-native-client-ole-db-provider-application.md)  
+## <a name="see-also"></a>참고 항목  
+ [SQL Server Native Client OLE DB 공급자 애플리케이션 만들기](creating-a-sql-server-native-client-ole-db-provider-application.md)  
   
   

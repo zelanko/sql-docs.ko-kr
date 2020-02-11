@@ -15,14 +15,14 @@ ms.assetid: 54dfb1dd-636c-4560-8a3f-32b1f6aa07d7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 73557703a1375128a141de8194929f9284b86930
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919330"
 ---
 # <a name="count-property-example-vc"></a>Count 속성 예제(VC++)
-이 예제에서는 합니다 [수](../../../ado/reference/ado-api/count-property-ado.md) 에서 두 개의 컬렉션을 사용 하 여 속성을 ***직원*** 데이터베이스. 각 컬렉션의 개체 수를 가져옵니다 속성과 해당이 컬렉션을 열거 하는 루프에 대 한 상한값을 설정 합니다.  
+이 예에서는 ***Employee*** 데이터베이스에 두 개의 컬렉션이 있는 [Count](../../../ado/reference/ado-api/count-property-ado.md) 속성을 보여 줍니다. 속성은 각 컬렉션의 개체 수를 가져오고 이러한 컬렉션을 열거 하는 루프의 상한 값을 설정 합니다.  
   
 ```  
 // BeginCountCpp.cpp  
@@ -130,5 +130,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Count 속성(ADO)](../../../ado/reference/ado-api/count-property-ado.md)

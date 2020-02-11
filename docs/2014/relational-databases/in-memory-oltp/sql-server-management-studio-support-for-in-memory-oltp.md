@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1b640d9d27e9ad624dab83fdb97a301b3a54b1e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62468198"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 SQL Server Management Studio 지원
@@ -97,7 +97,7 @@ ms.locfileid: "62468198"
   
     -   스크립팅  
   
-    -   태스크  
+    -   작업  
   
     -   보고서  
   
@@ -138,7 +138,7 @@ ms.locfileid: "62468198"
   
         -   데이터 가져오기 및 내보내기. **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사 하나 이상의 테이블 또는 뷰에서 데이터 복사** 옵션을 사용합니다. 대상 테이블이 대상 데이터베이스에 존재하지 않는 메모리 최적화 테이블인 경우:  
   
-            1.  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사**의 **테이블 복사 또는 쿼리 지정** 화면에서 **하나 이상의 테이블 또는 뷰에서 데이터 복사**를 선택합니다. 그런 후 **다음**을 클릭합니다.  
+            1.  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사**의 **테이블 복사 또는 쿼리 지정** 화면에서 **하나 이상의 테이블 또는 뷰에서 데이터 복사**를 선택합니다. 그런 후 **Next** 를 클릭합니다.  
   
             2.  **매핑 편집**을 클릭합니다. 그런 다음 **대상 테이블 만들기** 를 선택하고 **SQL 편집**을 클릭합니다. 대상 데이터베이스에서 메모리 최적화 테이블을 만드는 CREATE TABLE 구문을 입력합니다. **확인** 을 클릭하고 마법사의 나머지 단계를 완료합니다.  
   
@@ -153,9 +153,9 @@ ms.locfileid: "62468198"
 ## <a name="unsupported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>다음에서 지원되지 않는 기능 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  메모리 내 OLTP 개체의 경우 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 데이터베이스 엔진이 지원하지 않는 기능과 작업을 지원하지 않습니다.  
   
- 지원 되지 않는 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 참조 하세요 [지원 되는 SQL Server 기능](unsupported-sql-server-features-for-in-memory-oltp.md)합니다.  
+ 지원 되지 않는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능에 대 한 자세한 내용은 [지원 되는 SQL Server 기능](unsupported-sql-server-features-for-in-memory-oltp.md)을 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP에 대한 SQL Server 지원](sql-server-support-for-in-memory-oltp.md)  
   
   

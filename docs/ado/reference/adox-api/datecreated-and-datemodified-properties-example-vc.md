@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b964beee-83c7-4f91-8255-3ba864c9adfd
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 07fe23064173ba6e5c64294f9ea89615909cb10f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dd6117e48fbdf79af24227b9b5b499afd1a60288
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966600"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76939589"
 ---
 # <a name="datecreated-and-datemodified-properties-example-vc"></a>DateCreated 및 DateModified 속성 예제(VC++)
-이 예제에서는 합니다 [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) 하 고 [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) 새로 추가 하 여 속성 [열](../../../ado/reference/adox-api/column-object-adox.md) 기존 [테이블](../../../ado/reference/adox-api/table-object-adox.md) 및 새로 만들 **테이블**합니다. DateOutput 절차는이 예제를 실행 하려면 필요 합니다.  
+이 예에서는 기존 [테이블](../../../ado/reference/adox-api/table-object-adox.md) 에 새 [열](../../../ado/reference/adox-api/column-object-adox.md) 을 추가 하 고 새 **테이블**을 만들어 [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) 및 [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) 속성을 보여 줍니다. 이 예제를 실행 하려면 DateOutput 프로시저가 필요 합니다.  
   
 ```  
 // BeginDateCreatedCpp.cpp  
@@ -101,7 +101,7 @@ void DateCreatedX() {
     }  
   
     catch(...) {  
-        cout << "Error occured in include files...." << endl;  
+        cout << "Error occurred in include files...." << endl;  
     }  
 }  
   
@@ -114,8 +114,8 @@ void DateOutPut(_bstr_t strTemp , _TablePtr tblTemp) {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Column 개체 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [DateCreated 속성 (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)   
  [DateModified 속성 (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)   
- [Table 개체(ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
+ [테이블 개체(ADOX)](../../../ado/reference/adox-api/table-object-adox.md)

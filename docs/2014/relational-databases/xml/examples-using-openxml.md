@@ -27,10 +27,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 61c5fc1cb0692d22f110958b894ac2eb7c2af4cf
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874695"
 ---
 # <a name="examples-using-openxml"></a>예제: OPENXML 사용
@@ -95,7 +95,8 @@ LILAS      Carlos Gonzlez
   
  <`Customer`> 요소에는 하위 요소가 없기 때문에 *flags*가 **2**로 설정되어 요소 중심 매핑을 나타내도록 같은 SELECT 문이 실행되는 경우 두 고객에 대한 **CustomerID** 및 **ContactName**의 값은 NULL로 반환됩니다.  
   
- @xmlDocument는 **xml** 유형 또는 **(n)varchar(max)** 유형일 수 있습니다.  
+ 
+  @xmlDocument는 **xml** 유형 또는 **(n)varchar(max)** 유형일 수 있습니다.  
   
  XML 문서에서 <`CustomerID`>와 <`ContactName`>이 하위 요소인 경우에는 요소 중심의 매핑이 값을 검색합니다.  
   
@@ -140,7 +141,7 @@ LILAS      Carlos Gonzlez
   
  **sp_xml_preparedocument** 에 의해 반환되는 문서 핸들은 세션이 아닌 일괄 처리 기간 동안 유효합니다.  
   
-### <a name="b-specifying-colpattern-for-mapping-between-rowset-columns-and-the-xml-attributes-and-elements"></a>2\. 행 집합 열과 XML 특성 및 요소 간의 매핑을 위해 ColPattern 지정  
+### <a name="b-specifying-colpattern-for-mapping-between-rowset-columns-and-the-xml-attributes-and-elements"></a>B. 행 집합 열과 XML 특성 및 요소 간의 매핑을 위해 ColPattern 지정  
  이 예제에서는 행 집합 열과 XML 특성 및 요소 간에 매핑을 제공하기 위해 선택 사항인 *ColPattern* 매개 변수에 XPath 패턴을 지정하는 방법을 보여 줍니다.  
   
  이 예의 XML 문서는 <`Customer`>, <`Order`> 및 <`OrderDetail`> 요소로 이루어져 있습니다. OPENXML 문은 고객과 주문 정보를 XML 문서로부터 행 집합(**CustomerID**, **OrderDate**, **ProdID**및 **Qty**)으로 검색합니다.  
@@ -238,7 +239,7 @@ WITH (CustomerID  varchar(10)   '../CustomerID',
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
-### <a name="c-combining-attribute-centric-and-element-centric-mapping"></a>3\. 특성 중심 및 요소 중심의 매핑 결합  
+### <a name="c-combining-attribute-centric-and-element-centric-mapping"></a>C. 특성 중심 및 요소 중심의 매핑 결합  
  이 예에서 *flags* 매개 변수는 **3** 으로 설정되며 특성 중심 및 요소 중심 매핑이 적용됨을 나타냅니다. 이 경우, 특성 중심의 매핑이 먼저 적용된 다음 아직 처리되지 않은 모든 열에 대해 요소 중심의 매핑이 적용됩니다.  
   
 ```  
@@ -272,7 +273,7 @@ FROM OPENXML (@docHandle, '/ROOT/Customer',3)
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- 다음은 결과  
+ 다음은 결과입니다.  
   
 ```  
 CustomerID ContactName            
@@ -283,7 +284,7 @@ LILAS      Carlos Gonzlez
   
  특성 중심의 매핑은 **CustomerID**에 대해 적용됩니다. < **> 요소에는** ContactName`Customer` 특성이 없습니다. 따라서 요소 중심 매핑이 적용됩니다.  
   
-### <a name="d-specifying-the-text-xpath-function-as-colpattern"></a>4\. text() XPath 함수를 ColPattern으로 지정  
+### <a name="d-specifying-the-text-xpath-function-as-colpattern"></a>D. text() XPath 함수를 ColPattern으로 지정  
  이 예의 XML 문서는 <`Customer`> 및 <`Order`> 요소로 이루어져 있습니다. OPENXML 문은 < **> 요소의** oid`Order` 특성, *rowpattern*으로 식별된 노드에 대한 부모 노드의 ID 및 요소 콘텐츠의 리프 값 문자열로 구성된 행 집합을 검색합니다.  
   
  먼저 **sp_xml_preparedocument** 저장 프로시저가 문서 핸들을 얻기 위해 호출됩니다. 이 문서 핸들은 OPENXML에 전달됩니다.  
@@ -340,7 +341,7 @@ O3    100.0         Happy Customer.
 O4    10000.0       NULL  
 ```  
   
-### <a name="e-specifying-tablename-in-the-with-clause"></a>5\. WITH 절에 TableName 지정  
+### <a name="e-specifying-tablename-in-the-with-clause"></a>E. WITH 절에 TableName 지정  
  이 예에서는 WITH 절에서 *SchemaDeclaration* 대신 *TableName*을 지정합니다. 이것은 원하는 구조를 가지고 있고 열 패턴 *ColPattern* 매개 변수는 필요하지 않은 테이블을 사용하는 경우에 유용합니다.  
   
  이 예의 XML 문서는 <`Customer`> 및 <`Order`> 요소로 이루어져 있습니다. OPENXML 문은 XML 문서로부터 세 열로 구성된 행 집합(**oid**, **date**및 **amount**)의 주문 정보를 검색합니다.  
@@ -400,7 +401,7 @@ O3    1999-07-14 00:00:00.000     100.0
 O4    1996-01-20 00:00:00.000     10000.0  
 ```  
   
-### <a name="f-obtaining-the-result-in-an-edge-table-format"></a>6\. Edge 테이블 형식으로 결과 얻기  
+### <a name="f-obtaining-the-result-in-an-edge-table-format"></a>F. Edge 테이블 형식으로 결과 얻기  
  이 예제에서는 OPENXML 문에서 WITH 절이 지정되지 않습니다. 따라서 OPENXML이 생성하는 행 집합은 Edge 테이블 형식이 됩니다. SELECT 문은 Edge 테이블의 열을 모두 반환합니다.  
   
  이 예의 예제 XML 문서는 <`Customer`>, <`Order`> 및 <`OrderDetail`> 요소로 이루어져 있습니다.  
@@ -442,7 +443,7 @@ FROM OPENXML (@docHandle, '/ROOT/Customer')
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- 결과는 Edge 테이블로 반환됩니다. Edge 테이블에 대해 쿼리를 작성하여 다음과 같은 정보를 얻을 수 있습니다. 예를 들어:  
+ 결과는 Edge 테이블로 반환됩니다. Edge 테이블에 대해 쿼리를 작성하여 다음과 같은 정보를 얻을 수 있습니다. 다음은 그 예입니다.  
   
 -   다음은 문서의 **Customer** 노드 수를 반환하는 쿼리입니다. WITH 절이 지정되지 않았으므로 OPENXML은 Edge 테이블을 반환합니다. SELECT 문은 Edge 테이블을 쿼리합니다.  
   
@@ -461,7 +462,7 @@ EXEC sp_xml_removedocument @docHandle
     ORDER BY localname  
     ```  
   
-### <a name="g-specifying-rowpattern-ending-with-an-attribute"></a>7\. 특성으로 끝나는 rowpattern 지정  
+### <a name="g-specifying-rowpattern-ending-with-an-attribute"></a>G. 특성으로 끝나는 rowpattern 지정  
  이 예의 XML 문서는 <`Customer`>, <`Order`> 및 <`OrderDetail`> 요소로 이루어져 있습니다. OPENXML 문은 XML 문서로부터 세 열로 구성된 행 집합(**ProductID**, **Quantity**및 **OrderID**)의 주문 정보를 검색합니다.  
   
  먼저 **sp_xml_preparedocument** 가 문서 핸들을 얻기 위해 호출됩니다. 이 문서 핸들은 OPENXML에 전달됩니다.  
@@ -522,8 +523,8 @@ ProdID      Qty         OID
 72          3           10283  
 ```  
   
-### <a name="h-specifying-an-xml-document-that-has-multiple-text-nodes"></a>8\. 여러 개의 텍스트 노드가 있는 XML 문서 지정  
- XML 문서에 텍스트 노드가 여러 개 있는 경우 *text()* **ColPattern**을 포함한 SELECT 문은 전체가 아닌 첫 번째 텍스트 노드만 반환합니다. 예를 들어:  
+### <a name="h-specifying-an-xml-document-that-has-multiple-text-nodes"></a>H. 여러 개의 텍스트 노드가 있는 XML 문서 지정  
+ XML 문서에 텍스트 노드가 여러 개 있는 경우 *text()* **ColPattern**을 포함한 SELECT 문은 전체가 아닌 첫 번째 텍스트 노드만 반환합니다. 다음은 그 예입니다.  
   
 ```  
 DECLARE @h int  
@@ -603,18 +604,18 @@ id  lname   xmlname                   OverFlow
   
 -   WITH 절에 있는 열이 형식화된 XML 열이고 XML 인스턴스가 스키마에 맞지 않는 경우 오류가 반환됩니다.  
   
-### <a name="j-retrieving-individual-values-from-multivalued-attributes"></a>10. 다중 값 특성에서 개별 값 검색  
+### <a name="j-retrieving-individual-values-from-multivalued-attributes"></a>J. 다중 값 특성에서 개별 값 검색  
  XML 문서는 다중 값 특성을 가질 수 있습니다. 예를 들어 **IDREFS** 특성은 다중 값일 수 있습니다. XML 문서에서 다중 값 특성 값은 공간으로 값이 구별되는 문자열로 지정됩니다. 다음 XML 문서에서 **Student> 요소의** attends\< 특성과 **Class>의** attendedBy\< 특성은 다중 값을 갖고 있습니다. 다중 값 XML 특성에서 개별 값을 검색하고 데이터베이스의 독립된 행에서 각각의 값을 저장하려면 추가 작업이 필요합니다. 다음 예제에서는 처리 과정을 보여 줍니다.  
   
  이 예제 XML 문서는 다음 요소로 구성됩니다.  
   
 -   \<Student>  
   
-     **id**(학생 ID), **name** 및 **attends** 특성입니다. **attends** 특성은 다중 값 특성입니다.  
+     **id** (학생 ID), **name**및 **attends** 특성입니다. **attends** 특성은 다중 값 특성입니다.  
   
 -   \<Class>  
   
-     **id**(학생 ID), **name** 및 **attendedBy** 특성입니다. **attendedBy** 특성은 다중 값 특성입니다.  
+     **id** (학생 ID), **name**및 **attendedBy** 특성입니다. **attendedBy** 특성은 다중 값 특성입니다.  
   
  **Student>에 있는** attends\< 특성과 **Class>에 있는** attendedBy\< 특성은 Student 및 Class 테이블 간의 **m:n** 관계를 나타냅니다. 학생은 여러 개의 수업을 받을 수 있고 한 수업에는 여러 학생이 있을 수 있습니다.  
   

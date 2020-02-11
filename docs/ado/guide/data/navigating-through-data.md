@@ -16,14 +16,14 @@ ms.assetid: 8d88c9aa-8ec8-4969-8fa1-1663fd29bfc4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a0b58000da5f29824fbfdd134a701088775c90af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924787"
 ---
 # <a name="navigating-through-data"></a>데이터 탐색
-**레코드 집합** 결과 데이터 집합을 탐색 하려면 다양 한 속성과 메서드를 지원 합니다. 샘플을 사용 하 여 몇 가지 시나리오를 안내 하 여이 기능을 살펴봅니다 **레코드 집합** 개체입니다.  
+**레코드 집합** 은 다양 한 메서드 및 속성을 지원 하 여 결과 데이터 집합을 탐색 합니다. 샘플 **레코드 집합** 개체를 사용 하 여 몇 가지 시나리오를 진행 하 여이 기능을 검토 합니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

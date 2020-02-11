@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4e0b418e44436912b5ed1368ad7a316951872266
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62519206"
 ---
 # <a name="the-role-of-soap-in-reporting-services"></a>The Role of SOAP in Reporting Services
@@ -29,7 +29,8 @@ ms.locfileid: "62519206"
   
  보고서 서버는 SOAP 서버의 역할을 하며, SOAP 클라이언트로부터 요청을 수신하고 적절한 응답을 만들 수 있는 SOAP 인식 서비스입니다. 서버에서는 요청을 처리하고 인코딩된 응답을 다시 클라이언트로 보냅니다.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 SOAP 메시지의 형태는 클라이언트의 요청 유형에 따라 다양합니다. 다음 예는 보고서 서버 데이터베이스에서 항목을 제거하는 간단한 SOAP 클라이언트 요청을 나타냅니다.  
+ 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 SOAP 메시지의 형태는 클라이언트의 요청 유형에 따라 다양합니다. 다음 예는 보고서 서버 데이터베이스에서 항목을 제거하는 간단한 SOAP 클라이언트 요청을 나타냅니다.  
   
 ```  
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
@@ -41,7 +42,7 @@ ms.locfileid: "62519206"
 </soap:Envelope>  
 ```  
   
- SOAP 자체의 경우 전체 메시지를 `Envelope` 요소 내에 두며 메시지 중 많은 부분을 `Body` 요소에 포함합니다. 이 예에서 본문에는 삭제할 항목의 경로를 나타내는 문자열 매개 변수를 가지는 <xref:ReportService2010.ReportingService2010.DeleteItem%2A> 메서드 호출이 포함되어 있습니다. 모든 SOAP 작업을 메서드로 캡슐화하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 클라이언트 프록시 클래스를 만들 수 있습니다. 다음 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 메서드는 위의 SOAP 예를 나타냅니다.  
+ SOAP 자체의 경우 전체 메시지를 `Envelope` 요소 내에 두며 메시지 중 많은 부분을 `Body` 요소에 포함합니다. 이 예에서 본문에는 삭제할 항목의 경로를 나타내는 문자열 매개 변수를 가지는 <xref:ReportService2010.ReportingService2010.DeleteItem%2A> 메서드 호출이 포함되어 있습니다. 모든 SOAP 작업을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 메서드로 캡슐화 하는 클라이언트 프록시 클래스를 만들 수 있습니다. 다음 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 메서드는 이전에 제공 된 SOAP 예제를 나타냅니다.  
   
 ```  
 public void DeleteItem(string item);  
@@ -57,9 +58,10 @@ public void DeleteItem(string item);
 </soap:Envelope>  
 ```  
   
- <xref:ReportService2010.ReportingService2010.DeleteItem%2A> 메서드에는 반환 값이 없으므로 빈 응답이 반환됩니다.  
+ 
+  <xref:ReportService2010.ReportingService2010.DeleteItem%2A> 메서드에는 반환 값이 없으므로 빈 응답이 반환됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SOAP API 액세스](accessing-the-soap-api.md)   
  [보고서 관리자&#40;SSRS 기본 모드&#41;](../report-manager-ssrs-native-mode.md)   
  [Reporting Services 보고서 서버](../reporting-services-report-server.md)   

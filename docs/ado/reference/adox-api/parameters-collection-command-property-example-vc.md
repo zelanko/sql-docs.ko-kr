@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8636fa08-b3db-4e9a-a918-585e76dd59c8
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5197f81ed9363a1df128281bd2ae6020bdb6bf14
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4707899d44ca74e868c82ddc6a6962022fd75759
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67965604"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76911067"
 ---
 # <a name="parameters-collection-command-property-example-vc"></a>Parameters 컬렉션, Command 속성 예제(VC++)
-다음 코드를 사용 하는 방법에 설명 합니다 [명령](../../../ado/reference/adox-api/command-property-adox.md) 속성을를 [명령](../../../ado/reference/ado-api/command-object-ado.md) 프로시저의 매개 변수 정보를 검색 하는 개체입니다.  
+다음 [코드에서는 command 개체와](../../../ado/reference/ado-api/command-object-ado.md) 함께 [command](../../../ado/reference/adox-api/command-property-adox.md) 속성을 사용 하 여 프로시저에 대 한 매개 변수 정보를 검색 하는 방법을 보여 줍니다.  
   
 ```  
 // BeginProcedureParametersCpp.cpp  
@@ -90,7 +90,7 @@ void ProcedureParametersX() {
         printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
     }  
     catch(...) {  
-        cout << "Error occured in ProcedureParametersX...." << endl;  
+        cout << "Error occurred in ProcedureParametersX...." << endl;  
     }  
 }  
 ```

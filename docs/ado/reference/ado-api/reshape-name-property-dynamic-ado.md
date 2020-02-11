@@ -1,5 +1,5 @@
 ---
-title: Reshape Name 속성-동적 (ADO) | Microsoft Docs
+title: 이름 변경 속성-동적 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,33 +14,33 @@ ms.assetid: 690229d1-46cc-42e6-a57d-4438251fe248
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ec72b2b1908f967caee4610e27315acaab787ac9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917168"
 ---
 # <a name="reshape-name-property-dynamic-ado"></a>Reshape Name 속성-동적(ADO)
-이름을 지정 합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  
+[레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 이름을 지정 합니다.  
   
 ## <a name="return-values"></a>반환 값  
- 반환 된 **문자열** 값의 이름입니다 합니다 **레코드 집합**합니다.  
+ **레코드 집합**의 이름인 **문자열** 값을 반환 합니다.  
   
 ## <a name="remarks"></a>설명  
- 때까지 또는 연결의 기간에 대 한 이름을 유지 합니다 **레코드 집합** 닫혀 있습니다.  
+ 이름은 연결 기간 동안 또는 **레코드 집합** 을 닫을 때까지 유지 됩니다.  
   
- **변형 이름** 속성은 주로의 다시 셰이핑 기능을 사용 하 여 사용 합니다 [OLE DB에 대 한 Microsoft Data Shaping Service](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) 서비스 공급자입니다. 이름은 다시 형성에 참여 하도록 고유 해야 합니다.  
+ **이름 변경** 속성은 주로 OLE DB 서비스 공급자 [용 Microsoft 데이터 셰이핑 서비스](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) 의 재구성 기능에서 사용 하기 위한 것입니다. 다시 셰이핑에 참여 하려면 이름이 고유 해야 합니다.  
   
- 이 속성은 읽기 전용 이지만 설정할 수 있습니다 하지 직접 경우는 **레코드 집합** 만들어집니다. 예를 들어 경우 절에는 Shape 명령을 만듭니다는 **레코드 집합** 를 사용 하 여 별칭 이름을 제공 합니다 **AS** 키워드 별칭에 할당 된를 **변형 이름** 속성. 별칭 없음로 선언 된 경우는 **변형 이름** 속성 데이터 셰이핑 서비스에서 생성 된 고유한 이름이 할당 됩니다. 별칭 이름이 기존 이름과 동일 **Recordset**되지 않습니다 **Recordset** 둘 중 해제 될 때까지 모양을 변경할 수 있습니다. 고유 이름을 설정 하 여 기본 동작을 변경할 수 있습니다는 [이름은 변형](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md) 속성에 대 한 ADO 연결을 **True**. 데이터 셰이핑 고유성을 보장 하는 데 필요한 경우 할당 된 사용자 이름을 변경 하려면 서비스 사용 권한 제공이 속성을 설정 합니다. 모양 변경 하는 방법에 대 한 자세한 내용은 참조 하세요. [OLE DB (ADO 서비스 공급자)에 대 한 Microsoft Data Shaping Service](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)합니다.  
+ 이 속성은 읽기 전용 이지만 **레코드 집합** 을 만들 때 간접적으로 설정할 수 있습니다. 예를 들어 Shape 명령의 절에서 **레코드 집합** 을 만들고 **AS** 키워드를 사용 하 여 별칭 이름을 지정 하는 경우 별칭은 **이름 변경** 속성에 할당 됩니다. 별칭이 선언 되지 않은 경우 **이름 변경** 속성에는 데이터 셰이핑 서비스에 의해 생성 된 고유 이름이 할당 됩니다. 별칭 이름이 기존 **레코드 집합**의 이름과 같을 경우 둘 중 하나를 해제할 때까지 **레코드 집합** 을 변경할 수 없습니다. ADO 연결에서 [이름 변경](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md) 속성의 고유한 이름을 **True**로 설정 하 여 기본 동작을 변경할 수 있습니다. 이 속성을 설정 하면 필요한 경우 사용자가 지정한 이름을 변경 하 여 고유성이 보장 되는 데이터 셰이핑 서비스 권한이 제공 됩니다. 모양 변경에 대 한 자세한 내용은 [OLE DB Microsoft 데이터 셰이핑 서비스 (ADO 서비스 공급자)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)를 참조 하세요.  
   
- 사용 하 여는 **변형 이름** 참조 하려는 경우 속성을 **레코드 집합** 셰이프 명령 또는 데이터 셰이핑 서비스에서 생성 되어 있으므로 이름을 모를 경우. 이때 명령에서 반환한 문자열 주위에 연결 하 여 SHAPE 명령을 생성할 수 있습니다 합니다 **변형 이름** 속성입니다.  
+ 셰이프 명령에서 **레코드 집합** 을 참조 하려는 경우 또는 데이터 셰이핑 서비스에서 생성 되었기 때문에 이름을 알 수 없는 경우에는 **이름 변경** 속성을 사용 합니다. 이 경우 **이름 변경** 속성에 의해 반환 되는 문자열 주위에 명령을 연결 하 여 SHAPE 명령을 생성할 수 있습니다.  
   
- **이름 변형** 에 추가 하는 동적 속성을 **레코드 집합** 개체의 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션 때 합니다 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성**adUseClient**합니다.  
+ [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성이 **adUseClient**로 설정 된 경우, **이름 변경** 은 **레코드 집합** 개체의 [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션에 추가 되는 동적 속성입니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목  
- [Microsoft 데이터 셰이핑 OLE DB (ADO 서비스 공급자)에 대 한 서비스](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)   
- [일반적인 셰이핑 명령](../../../ado/guide/data/shape-commands-in-general.md)   
+## <a name="see-also"></a>참고 항목  
+ [OLE DB 용 Microsoft 데이터 셰이핑 서비스 (ADO 서비스 공급자)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)   
+ [Shape 명령 일반](../../../ado/guide/data/shape-commands-in-general.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

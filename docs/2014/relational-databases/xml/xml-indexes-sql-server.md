@@ -34,10 +34,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7004f2cae60ab69c6c4bf94ceee47d270579570b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62631369"
 ---
 # <a name="xml-indexes-sql-server"></a>XML 인덱스(SQL Server)
@@ -53,7 +53,8 @@ ms.locfileid: "62631369"
   
 -   보조 XML 인덱스  
   
- `xml` 형식 열의 첫 번째 인덱스는 기본 XML 인덱스여야 합니다. 기본 XML 인덱스를 사용 하 여 보조 인덱스 유형은 지원 됩니다. PATH, VALUE 및 PROPERTY 합니다. 이러한 보조 인덱스는 쿼리 유형에 따라 쿼리 성능을 향상시킬 수 있습니다.  
+ 
+  `xml` 형식 열의 첫 번째 인덱스는 기본 XML 인덱스여야 합니다. 기본 XML 인덱스를 사용하면 PATH, VALUE 및 PROPERTY 형식의 보조 인덱스가 지원됩니다. 이러한 보조 인덱스는 쿼리 유형에 따라 쿼리 성능을 향상시킬 수 있습니다.  
   
 > [!NOTE]  
 >  데이터베이스 옵션이 `xml` 데이터 형식 작업에 대해 제대로 설정되지 않을 경우 XML 인덱스를 만들거나 수정할 수 없습니다. 자세한 내용은 [XML 열에 전체 텍스트 검색 사용](use-full-text-search-with-xml-columns.md)을 참조하세요.  
@@ -93,7 +94,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   기본 테이블의 기본 키. 기본 테이블의 기본 키는 기본 테이블과 백 조인을 위한 기본 XML 인덱스에 복제되고 해당 기본 테이블의 기본 키에 있는 최대 열 수는 15개로 제한됩니다.  
   
- 이 노드 정보는 지정된 쿼리에 대해 XML 결과를 계산 및 구성하는 데 사용됩니다. 최적화를 위해 태그 이름과 노드 유형 정보는 정수 값으로 인코딩되고 경로 열에서는 같은 인코딩을 사용합니다. 또한 경로는 경로 접미사가 알려져 있는 경우에만 경로에 일치할 수 있도록 반대 순서로 저장됩니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ 이 노드 정보는 지정된 쿼리에 대해 XML 결과를 계산 및 구성하는 데 사용됩니다. 최적화를 위해 태그 이름과 노드 유형 정보는 정수 값으로 인코딩되고 경로 열에서는 같은 인코딩을 사용합니다. 또한 경로는 경로 접미사가 알려져 있는 경우에만 경로에 일치할 수 있도록 반대 순서로 저장됩니다. 다음은 그 예입니다.  
   
 -   `//ContactRecord/PhoneNumber` - 마지막 두 단계만 알려져 있는 경우  
   
@@ -103,7 +104,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
  쿼리 프로세서에서는 [xml Data Type Methods](/sql/t-sql/xml/xml-data-type-methods) 를 포함하는 쿼리에 대해 기본 XML 인덱스를 사용하고 기본 인덱스 자체에서 스칼라 값이나 XML 하위 트리를 반환합니다. 이 인덱스는 XML 인스턴스를 재구성하는 데 필요한 모든 정보를 저장합니다.  
   
- 다음 쿼리에 저장 된 요약 정보를 반환 하는 예를 들어 합니다 `CatalogDescription``xml` 유형 열을 `ProductModel` 테이블. 이 쿼리는 카탈로그 설명에 <`Features`> 설명도 저장되어 있는 제품 모델에 대해서만 <`Summary`> 정보를 반환합니다.  
+ 예를 들어 다음 쿼리는 `CatalogDescription``xml` `ProductModel` 테이블의 유형 열에 저장 된 요약 정보를 반환 합니다. 이 쿼리는 카탈로그 설명에 <`Summary`> 설명도 저장되어 있는 제품 모델에 대해서만 <`Features`> 정보를 반환합니다.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
@@ -166,9 +167,9 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   `//author[LastName="someName"]` - <`LastName`> 요소의 값은 알지만 <`author`> 부모가 아무 곳에서나 발생할 수 있는 경우  
   
--   `/book[@* = "someValue"]` - 쿼리가 `"someValue"` 값이 있는 일부 특성을 가진 <`book`> 요소를 찾는 경우  
+-   `/book[@* = "someValue"]` - 쿼리가 `book` 값이 있는 일부 특성을 가진 <`"someValue"`> 요소를 찾는 경우  
   
- 다음 쿼리에서는 `ContactID` 테이블에서 `Contact` 를 반환합니다. 합니다 `WHERE` 절에서 값을 찾는 필터를 지정 합니다 `AdditionalContactInfo``xml` 유형 열입니다. 연락처 ID는 해당되는 추가 연락처 정보 XML BLOB에 특정 전화 번호가 포함되는 경우에만 반환됩니다. <`telephoneNumber`> 요소가 XML의 아무 위치에서나 나타날 수 있기 때문에 경로 식은 하위 또는 자체 축을 지정합니다.  
+ 다음 쿼리에서는 `ContactID` 테이블에서 `Contact` 를 반환합니다. 절 `WHERE` 은 `AdditionalContactInfo``xml` 유형 열에서 값을 찾는 필터를 지정 합니다. 연락처 ID는 해당되는 추가 연락처 정보 XML BLOB에 특정 전화 번호가 포함되는 경우에만 반환됩니다. <`telephoneNumber`> 요소가 XML의 아무 위치에서나 나타날 수 있기 때문에 경로 식은 하위 또는 자체 축을 지정합니다.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -183,7 +184,7 @@ WHERE  AdditionalContactInfo.exist('//ACT:telephoneNumber/ACT:number[.="111-111-
  이 경우 <`number`>에 대한 검색 값을 알지만 이 값은 <`telephoneNumber`> 요소의 자식으로 XML 인스턴스의 아무 위치에서나 나타날 수 있습니다. 이러한 유형의 쿼리를 사용하면 특정 값에 기반한 인덱스 조회의 장점을 활용할 수 있습니다.  
   
 ### <a name="property-secondary-index"></a>PROPERTY 보조 인덱스  
- 개별 XML 인스턴스에서 하나 이상의 값을 검색하는 쿼리는 PROPERTY 인덱스의 장점을 활용할 수 있습니다. 이 시나리오를 사용 하 여 개체 속성을 검색할 때 발생 합니다 **value ()** 메서드를 `xml` 형식 및 개체의 기본 키 값이 알려져 합니다.  
+ 개별 XML 인스턴스에서 하나 이상의 값을 검색하는 쿼리는 PROPERTY 인덱스의 장점을 활용할 수 있습니다. 이 시나리오는 `xml` 형식의 **value ()** 메서드를 사용 하 여 개체 속성을 검색 하 고 개체의 기본 키 값을 알고 있는 경우에 발생 합니다.  
   
  PK가 기본 테이블의 기본 키인 기본 XML 인덱스의 열(PK, 경로 및 노드 값)에 PROPERTY XML 인덱스를 만듭니다.  
   
@@ -198,7 +199,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- 이 항목의 뒷부분에 설명 하는 차이점을 제외 하 고 만드는 XML 인덱스에`xml` 유형 열이 비 인덱스를 만드는 것과 유사`xml` 유형 열입니다. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 문은 XML 인덱스의 작성 및 관리에 사용될 수 있습니다.  
+ 이 항목의 뒷부분에서 설명 하는 차이점을 제외 하 고`xml` 유형 열에 XML 인덱스를 만드는 것은 비-`xml` 유형 열에 인덱스를 만드는 것과 비슷합니다. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 문은 XML 인덱스의 작성 및 관리에 사용될 수 있습니다.  
   
 -   [CREATE INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)  
   
@@ -213,7 +214,7 @@ WHERE ProductModelID = 19
   
  XML 인덱스의 공간 사용은 [sys.dm_db_index_physical_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql)테이블 반환 함수에서 찾을 수 있습니다. 이 함수는 모든 인덱스 유형에 대해 사용된 디스크 페이지 수, 평균 행 크기(바이트) 및 레코드 수와 같은 정보를 제공합니다. 여기에는 XML 인덱스도 포함됩니다. 이 정보는 각 데이터베이스 파티션에서 사용할 수 있습니다. XML 인덱스는 기본 테이블과 동일한 파티션 구성표 및 파티션 함수를 사용합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [sys.dm_db_index_physical_stats&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql)   
  [XML 데이터&#40;SQL Server&#41;](../xml/xml-data-sql-server.md)  
   

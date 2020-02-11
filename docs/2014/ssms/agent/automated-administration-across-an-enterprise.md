@@ -21,21 +21,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b3be16ea856b5d632ba5a0285bad2c4d2d93709c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62473152"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>기업 내 관리 자동화
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 여러 인스턴스에 대한 관리 자동화를 *다중 서버 관리*라고 합니다. 다중 서버 관리를 사용하여 다음을 수행합니다.  
+  여러 인스턴스에서의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 관리 자동화를 *다중 서버 관리*라고 합니다. 다중 서버 관리를 사용하여 다음을 수행합니다.  
   
 -   두 대 이상의 서버 관리  
   
 -   데이터 웨어하우징을 위해 엔터프라이즈 서버 간의 정보 흐름 예약  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)]는 총 소유 비용을 줄이고자 하는 지속적인 노력의 일환으로 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에서 정책 기반 관리라고 하는 서버 관리 방법과 구성 서버 및 서버 그룹을 사용하는 다중 서버 쿼리라고 하는 두 가지 기능을 새로 도입했습니다. 이러한 기능을 이 항목에서 설명하는 일부 기능 대신 또는 일부 기능과 함께 사용할 수 있습니다. 자세한 내용은 [하 여 서버 정책 관리](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) 하 고 [여러 서버를 사용 하 여 중앙 관리 서버](../../relational-databases/administer-multiple-servers-using-central-management-servers.md).  
+>  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]는 총 소유 비용을 줄이고자 하는 지속적인 노력의 일환으로 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에서 정책 기반 관리라고 하는 서버 관리 방법과 구성 서버 및 서버 그룹을 사용하는 다중 서버 쿼리라고 하는 두 가지 기능을 새로 도입했습니다. 이러한 기능을 이 항목에서 설명하는 일부 기능 대신 또는 일부 기능과 함께 사용할 수 있습니다. 자세한 내용은 [정책 기반 관리를 사용 하 여 서버 관리](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) 및 [중앙 관리 서버를 사용 하 여 여러 서버 관리](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)를 참조 하세요.  
   
  다중 서버 관리를 이용하려면 마스터 서버와 대상 서버가 적어도 하나씩 있어야 합니다. 마스터 서버는 대상 서버에 작업을 배포하거나 대상 서버에서 이벤트를 받습니다. 또한 마스터 서버에서는 대상 서버에서 실행되는 작업에 대한 작업 정의의 중앙 복사본을 저장합니다. 대상 서버는 주기적으로 마스터 서버에 연결되어 작업 일정을 업데이트합니다. 새 작업이 마스터 서버에 있는 경우 대상 서버는 작업을 다운로드합니다. 대상 서버는 작업을 완료한 후에 마스터 서버에 다시 연결하여 작업 상태를 보고합니다.  
   
@@ -61,7 +62,8 @@ ms.locfileid: "62473152"
  마스터 서버와 대상 서버를 만들고 관리하는 방법에 대해 설명합니다.  
   
  [다중 서버 환경에 적합한 SQL Server 에이전트 서비스 계정 선택](choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md)  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 서비스에 관리자가 아닌 Windows 계정이나 로컬 시스템 계정을 사용할 경우 다중 서버 환경에 미치는 영향에 대한 정보를 포함합니다.  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 서비스에 관리자가 아닌 Windows 계정이나 로컬 시스템 계정을 사용할 경우 다중 서버 환경에 미치는 영향에 대한 정보를 포함합니다.  
   
  [대상 서버의 암호화 옵션 설정](set-encryption-options-on-target-servers.md)  
  대상 서버에서 MsxEncryptChannelOptions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 레지스트리 하위 키를 설정하는 방법에 대한 정보를 포함합니다.  
@@ -81,19 +83,19 @@ ms.locfileid: "62473152"
  [기업 내의 자동화된 관리 튜닝](tune-automated-administration-across-an-enterprise.md)  
  다중 서버 환경에서 자동화된 관리를 통해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 자체 튜닝 기능을 사용하는 방법에 대해 설명합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [SQL Server 데이터베이스 엔진의 이전 버전과의 호환성](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
+## <a name="see-also"></a>참고 항목  
+ [SQL Server 데이터베이스 엔진 이전 버전과의 호환성](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
  [서버 등록](../register-servers/register-servers.md)   
- [sp_add_targetservergroup &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql)   
- [sp_delete_targetserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql)   
- [sp_delete_targetservergroup &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql)   
- [sp_help_downloadlist &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql)   
- [sp_help_jobserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql)   
- [sp_help_targetservergroup &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)   
- [sp_resync_targetserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql)   
- [sp_update_targetservergroup &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql)   
- [dbo.sysjobservers &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobservers-transact-sql)   
- [sys.syslogins &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)   
- [dbo.systargetservers &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-tables/dbo-systargetservers-transact-sql)  
+ [Transact-sql&#41;sp_add_targetservergroup &#40;](/sql/relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql)   
+ [Transact-sql&#41;sp_delete_targetserver &#40;](/sql/relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql)   
+ [Transact-sql&#41;sp_delete_targetservergroup &#40;](/sql/relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql)   
+ [Transact-sql&#41;sp_help_downloadlist &#40;](/sql/relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql)   
+ [Transact-sql&#41;sp_help_jobserver &#40;](/sql/relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql)   
+ [Transact-sql&#41;sp_help_targetservergroup &#40;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)   
+ [Transact-sql&#41;sp_resync_targetserver &#40;](/sql/relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql)   
+ [Transact-sql&#41;sp_update_targetservergroup &#40;](/sql/relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql)   
+ [&#40;Transact-sql&#41;의 dbo. sysjobservers](/sql/relational-databases/system-tables/dbo-sysjobservers-transact-sql)   
+ [sys.debug &#40;Transact-sql&#41;](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)   
+ [systargetservers &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-systargetservers-transact-sql)  
   
   

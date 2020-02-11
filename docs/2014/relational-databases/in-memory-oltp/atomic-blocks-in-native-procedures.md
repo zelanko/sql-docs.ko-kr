@@ -11,14 +11,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 83ec721d214633df7daf9ace5ae45c3cdb51ca97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467283"
 ---
 # <a name="atomic-blocks"></a>ATOMIC 블록
-  `BEGIN ATOMIC`은 ANSI SQL 표준의 일부입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 고유하게 컴파일된 저장 프로시저의 최상위 수준에서만 ATOMIC 블록을 지원합니다.  
+  
+  `BEGIN ATOMIC`은 ANSI SQL 표준의 일부입니다. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 고유하게 컴파일된 저장 프로시저의 최상위 수준에서만 ATOMIC 블록을 지원합니다.  
   
 -   고유하게 컴파일된 모든 저장 프로시저에는 항상 하나의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 블록이 포함됩니다. 이것이 ATOMIC 블록입니다.  
   
@@ -31,7 +33,7 @@ ms.locfileid: "62467283"
   
  세션에 활성 트랜잭션이 없는 경우 `BEGIN ATOMIC`은 새 트랜잭션을 시작합니다. 블록 범위 밖에서 예외가 발생하지 않는다면 트랜잭션은 블록 끝에서 커밋됩니다. 블록에서 예외가 발생하면(예외가 catch되지 않고 블록 내에서 처리됨) 트랜잭션이 롤백됩니다. 단일 ATOMIC 블록에 걸쳐 있는 트랜잭션(고유하게 컴파일된 단일 저장 프로시저)의 경우 `BEGIN TRANSACTION` 및 `COMMIT` 또는 `ROLLBACK` 문을 명시적으로 작성할 필요가 없습니다.  
   
- 고유하게 컴파일된 저장 프로시저는 오류 처리를 위해 `TRY`, `CATCH` 및 `THROW` 구문을 지원합니다. `RAISERROR`은 지원되지 않습니다.  
+ 고유하게 컴파일된 저장 프로시저는 오류 처리를 위해 `TRY`, `CATCH` 및 `THROW` 구문을 지원합니다. `RAISERROR`은 지원 되지 않습니다.  
   
  다음 예에서는 ATOMIC 블록 및 고유하게 컴파일된 저장 프로시저에 대한 오류 처리 동작을 설명합니다.  
   
@@ -123,17 +125,19 @@ ORDER BY c1
 GO  
 ```  
   
- 메모리 최적화 테이블에 대한 다음 오류 메시지가 발생하면 트랜잭션이 실패합니다. Atomic 블록 범위에서 발생할 경우 트랜잭션이 중단 발생 됩니다. 10772, 41301, 41302, 41305, 41325, 41332 및 41333 합니다.  
+ 메모리 최적화 테이블에 대한 다음 오류 메시지가 발생하면 트랜잭션이 실패합니다. Atomic 블록 범위 내에서 10772, 41301, 41302, 41305, 41325, 41332 및 41333 오류가 발생하면 트랜잭션을 중단시킵니다.  
   
 ## <a name="session-settings"></a>세션 설정  
  저장 프로시저가 컴파일되면 ATOMIC 블록의 세션 설정은 고정됩니다. 설정은 `BEGIN ATOMIC`으로 지정할 수도 있고 같은 값으로 항상 고정할 수도 있습니다.  
   
- `BEGIN ATOMIC`에는 다음 옵션이 필요합니다.  
+ 
+  `BEGIN ATOMIC`에는 다음 옵션이 필요합니다.  
   
 |필요한 설정|Description|  
 |----------------------|-----------------|  
 |`TRANSACTION ISOLATION LEVEL`|지원되는 값은 `SNAPSHOT`, `REPEATABLEREAD` 및 `SERIALIZABLE`입니다.|  
-|`LANGUAGE`|날짜 및 시간 형식과 시스템 메시지를 결정합니다. [sys.syslanguages&#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql)의 모든 언어와 별칭이 지원됩니다.|  
+|`LANGUAGE`|날짜 및 시간 형식과 시스템 메시지를 결정합니다. 
+  [sys.syslanguages&#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql)의 모든 언어와 별칭이 지원됩니다.|  
   
  다음 설정은 선택 사항입니다.  
   
@@ -141,27 +145,27 @@ GO
 |----------------------|-----------------|  
 |`DATEFORMAT`|모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜 형식이 지원됩니다. 지정되면 `DATEFORMAT`에서 `LANGUAGE`와 관련된 기본 날짜 형식을 재정의합니다.|  
 |`DATEFIRST`|지정되면 `DATEFIRST`에서 `LANGUAGE`와 관련된 기본값을 재정의합니다.|  
-|`DELAYED_DURABILITY`|지원 되는 값은 `OFF` 고 `ON`입니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션은 완전 내구성이 있는(기본값) 커밋 또는 지연된 내구성이 있는 커밋을 수행할 수 있습니다. 자세한 내용은 [트랜잭션 내구성 제어](../logs/control-transaction-durability.md)를 참조하세요.|  
+|`DELAYED_DURABILITY`|지원되는 값은 `OFF` 및 `ON`입니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]트랜잭션 커밋은 완전 내구성, 기본값 또는 지연 된 내구성이 있을 수 있습니다. 자세한 내용은 [트랜잭션 내구성 제어](../logs/control-transaction-durability.md)를 참조 하세요.|  
   
  다음 SET 옵션은 고유하게 컴파일된 모든 저장 프로시저의 모든 ATOMIC 블록에 대해 동일한 시스템 기본값을 가집니다.  
   
 |SET 옵션|ATOMIC 블록의 시스템 기본값|  
 |----------------|--------------------------------------|  
-|ANSI_NULLS|ON|  
-|ANSI_PADDING|ON|  
-|ANSI_WARNING|ON|  
-|ARITHABORT|ON|  
+|ANSI_NULLS|켜기|  
+|ANSI_PADDING|켜기|  
+|ANSI_WARNING|켜기|  
+|ARITHABORT|켜기|  
 |ARITHIGNORE|OFF|  
-|CONCAT_NULL_YIELDS_NULL|ON|  
+|CONCAT_NULL_YIELDS_NULL|켜기|  
 |IDENTITY_INSERT|OFF|  
-|NOCOUNT|ON|  
+|NOCOUNT|켜기|  
 |NUMERIC_ROUNDABORT|OFF|  
-|QUOTED_IDENTIFIER|ON|  
+|QUOTED_IDENTIFIER|켜기|  
 |ROWCOUNT|0|  
 |TEXTSIZE|0|  
 |XACT_ABORT|OFF<br /><br /> catch되지 않는 예외는 ATOMIC 블록을 롤백시키지만 오류로 인해 트랜잭션이 실패하지 않는다면 트랜잭션이 중단되지 않습니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [고유하게 컴파일된 저장 프로시저](natively-compiled-stored-procedures.md)  
   
   

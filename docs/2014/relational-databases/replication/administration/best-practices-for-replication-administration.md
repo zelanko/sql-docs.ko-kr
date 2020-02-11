@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fb7a972d865f7afe1295c5dbdf5ad3ce0c886556
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629635"
 ---
 # <a name="best-practices-for-replication-administration"></a>최선의 복제 관리 방법
-  복제를 구성한 후에는 복제 토폴로지 관리 방법을 이해하는 것이 중요합니다. 이 항목에서는 다양한 영역의 작업에 대한 기본적인 수행 방법과 각 영역에 대한 추가 정보를 제공하는 링크를 제공합니다. 이 항목에 제시 된 최선의 방법 지침을 수행 하는 것 외에도 숙지 일반적인 질문 사항과 문제점에 자주 묻는 질문 항목을 고려 합니다. [복제 관리자를 위한 질문과 대답](frequently-asked-questions-for-replication-administrators.md).  
+  복제를 구성한 후에는 복제 토폴로지 관리 방법을 이해하는 것이 중요합니다. 이 항목에서는 다양한 영역의 작업에 대한 기본적인 수행 방법과 각 영역에 대한 추가 정보를 제공하는 링크를 제공합니다. 이 항목에 제공된 [복제 관리자를 위한 질문과 대답](frequently-asked-questions-for-replication-administrators.md)의 모범 사례 지침 외에도 FAQ 항목을 읽고 일반적인 질문 사항과 문제점에 대해 숙지하세요.  
   
  최선의 수행 방법을 다음과 같은 두 가지 영역으로 나누면 이해가 쉽습니다.  
   
@@ -58,12 +58,13 @@ ms.locfileid: "62629635"
   
 -   구독 데이터베이스  
   
--   게시자, 배포자 및 모든 구독자의**msdb** 데이터베이스 및 **master** 데이터베이스  
+-   게시자, 배포자 및 모든 구독자의 **msdb** 데이터베이스 및 **master** 데이터베이스  
   
  복제된 데이터베이스의 경우 데이터를 백업 및 복원할 때 특별히 주의를 기울여야 합니다. 자세한 내용은 [복제된 데이터베이스 백업 및 복원](back-up-and-restore-replicated-databases.md)을 참조하세요.  
   
 ## <a name="script-the-replication-topology"></a>복제 토폴로지 스크립팅  
- 토폴로지의 모든 복제 구성 요소는 재해 복구 계획의 일부로 스크립팅되어야 하며 반복 태스크를 자동화하는 데도 스크립트를 사용할 수 있습니다. 스크립트에는 게시 또는 구독과 같이 스크립팅된 복제 구성 요소를 구현하는 데 필요한 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 시스템 저장 프로시저가 포함되어 있습니다. 구성 요소를 만든 후에 마법사(예: 새 게시 마법사) 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 에서 스크립트를 만들 수 있습니다. [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 또는 **sqlcmd**를 사용하여 스크립트를 확인, 수정 및 실행할 수 있습니다. 백업 파일과 함께 스크립트를 저장하여 복제 토폴로지를 다시 구성할 때 사용할 수 있습니다. 자세한 내용은 [Scripting Replication](../scripting-replication.md)을 참조하세요.  
+ 토폴로지의 모든 복제 구성 요소는 재해 복구 계획의 일부로 스크립팅되어야 하며 반복 태스크를 자동화하는 데도 스크립트를 사용할 수 있습니다. 스크립트에는 게시 또는 구독과 같이 스크립팅된 복제 구성 요소를 구현하는 데 필요한 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 시스템 저장 프로시저가 포함되어 있습니다. 스크립트는 마법사 (예: 새 게시 마법사) 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 구성 요소를 만든 후에 만들 수 있습니다. 
+  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 또는 **sqlcmd**를 사용하여 스크립트를 확인, 수정 및 실행할 수 있습니다. 백업 파일과 함께 스크립트를 저장하여 복제 토폴로지를 다시 구성할 때 사용할 수 있습니다. 자세한 내용은 [Scripting Replication](../scripting-replication.md)을 참조하세요.  
   
  속성이 변경된 경우 구성 요소를 다시 스크립팅해야 합니다. 트랜잭션 복제에서 사용자 지정 저장 프로시저를 사용할 경우 각 프로시저의 복사본을 스크립트와 함께 저장해야 합니다. 프로시저가 변경되면 복사본도 업데이트해야 합니다. 일반적으로 프로시저는 스키마가 변경되거나 애플리케이션 요구 사항이 변경될 때 업데이트됩니다. 사용자 지정 프로시저에 대한 자세한 내용은 [트랜잭션 아티클에 대한 변경 내용을 전파하는 방법 지정](../transactional/transactional-articles-specify-how-changes-are-propagated.md)을 참조하세요.  
   
@@ -105,7 +106,7 @@ ms.locfileid: "62629635"
  기준 수치를 설정한 후에 복제 모니터에서 임계값을 설정합니다. 자세한 내용은 [복제 모니터에 임계값 및 경고 설정](../monitor/set-thresholds-and-warnings-in-replication-monitor.md) 및 [복제 에이전트 이벤트에 대한 경고 사용](../agents/use-alerts-for-replication-agent-events.md)을 참조하세요. 성능 문제가 발생하면 위에 나열된 성능 향상 항목의 제안 사항을 읽어 보고 발생한 문제점에 영향을 주는 영역에서 필요한 사항을 변경하는 것이 좋습니다.  
   
 ## <a name="create-thresholds-and-alerts"></a>임계값 및 경고 만들기  
- 복제 모니터를 사용하면 상태 및 성능과 관련된 여러 임계값을 설정할 수 있습니다. 사용하는 토폴로지에 적합한 임계값을 설정하는 것이 좋습니다. 임계값에 도달하면 경고가 표시되며 선택적으로 경고를 전자 메일 계정, 호출기 또는 다른 디바이스로 보낼 수 있습니다. 자세한 내용은 [복제 모니터에 임계값 및 경고 설정](../monitor/set-thresholds-and-warnings-in-replication-monitor.md)를 참조하세요.  
+ 복제 모니터를 사용하면 상태 및 성능과 관련된 여러 임계값을 설정할 수 있습니다. 사용하는 토폴로지에 적합한 임계값을 설정하는 것이 좋습니다. 임계값에 도달하면 경고가 표시되며 선택적으로 경고를 전자 메일 계정, 호출기 또는 다른 디바이스로 보낼 수 있습니다. 자세한 내용은 [Set Thresholds and Warnings in Replication Monitor](../monitor/set-thresholds-and-warnings-in-replication-monitor.md)를 참조하세요.  
   
  모니터링 임계값과 연결시킬 수 있는 경고 외에 복제는 복제 에이전트 동작에 응답하는 미리 정의된 여러 가지 경고를 제공합니다. 관리자가 이러한 경고를 사용하면 복제 토폴로지의 상태에 대한 정보를 계속 받아볼 수 있습니다. 경고에 대해 설명하는 항목을 자세히 읽고 관리 요구 사항에 맞는 경고를 사용하는 것이 좋습니다. 필요한 경우에는 추가 경고를 만들 수도 있습니다. 자세한 내용은 [복제 에이전트 이벤트에 대한 경고 사용](../agents/use-alerts-for-replication-agent-events.md)을 참조하세요.  
   
@@ -114,7 +115,8 @@ ms.locfileid: "62629635"
   
 -   복제 모니터는 복제를 모니터링하는 가장 중요한 도구로 이를 사용하여 복제 토폴로지의 전체적 상태를 모니터링할 수 있습니다. 자세한 내용은 [Monitoring Replication](../monitoring-replication.md)을 참조하세요.  
   
--   [!INCLUDE[tsql](../../../includes/tsql-md.md)] 및 RMO(복제 관리 개체)는 복제 모니터링을 위한 인터페이스를 제공합니다. 자세한 내용은 [Monitoring Replication](../monitoring-replication.md)을 참조하세요.  
+-   
+  [!INCLUDE[tsql](../../../includes/tsql-md.md)] 및 RMO(복제 관리 개체)는 복제 모니터링을 위한 인터페이스를 제공합니다. 자세한 내용은 [Monitoring Replication](../monitoring-replication.md)을 참조하세요.  
   
 -   복제 성능을 모니터링하는 데에는 시스템 모니터도 유용할 수 있습니다. 자세한 내용은 [Monitoring Replication with System Monitor](../monitor/monitoring-replication-with-system-monitor.md)을 참조하세요.  
   
@@ -124,10 +126,10 @@ ms.locfileid: "62629635"
  유효성 검사를 게시 데이터베이스의 백업 일정에 따라 수행하는 것이 좋습니다. 예를 들어 게시 데이터베이스를 일주일에 한 번 전체 백업하면 유효성 검사도 일주일에 한 번 백업이 완료된 후에 실행할 수 있습니다. 자세한 내용은 [복제된 데이터의 유효성 검사](../validate-data-at-the-subscriber.md)를 참조하세요.  
   
 ## <a name="use-agent-profiles-to-change-agent-parameters-if-necessary"></a>에이전트 프로필을 사용하여 에이전트 매개 변수 변경(필요한 경우)  
- 에이전트 프로필은 복제 에이전트 매개 변수를 설정하는 편리한 방법을 제공합니다. 매개 변수를 에이전트 명령줄에서 지정할 수도 있지만 일반적으로 미리 정의된 에이전트 프로필을 사용하거나 매개 변수 값을 변경해야 할 경우에는 새 프로필을 만드는 것이 더 적합합니다. 예를 들어 병합 복제를 사용하고 구독자가 광대역 연결에서 전화 접속 연결로 이동하는 경우에는 병합 에이전트에 대해 느린 통신 연결에 더 적합한 매개 변수 집합을 사용하는 **느린 연결** 프로필을 사용하십시오. 자세한 내용은 [Replication Agent Profiles](../agents/replication-agent-profiles.md)을(를) 참조하세요.  
+ 에이전트 프로필은 복제 에이전트 매개 변수를 설정하는 편리한 방법을 제공합니다. 매개 변수를 에이전트 명령줄에서 지정할 수도 있지만 일반적으로 미리 정의된 에이전트 프로필을 사용하거나 매개 변수 값을 변경해야 할 경우에는 새 프로필을 만드는 것이 더 적합합니다. 예를 들어 병합 복제를 사용하고 구독자가 광대역 연결에서 전화 접속 연결로 이동하는 경우에는 병합 에이전트에 대해 느린 통신 연결에 더 적합한 매개 변수 집합을 사용하는 **느린 연결** 프로필을 사용하십시오. 자세한 내용은 [Replication Agent Profiles](../agents/replication-agent-profiles.md)을 참조하세요.  
   
 ## <a name="adjust-publication-and-distribution-retention-periods-if-necessary"></a>게시 및 배포 보존 기간 조정(필요한 경우)  
- 트랜잭션 복제 및 병합 복제는 보존 기간을 사용하여 각각 트랜잭션이 배포 데이터베이스에 저장되는 기간과 구독이 동기화되어야 하는 빈도를 결정합니다. 설정을 조정해야 할지 여부를 판단하기 위해 토폴로지를 모니터링하는 경우에는 초기 기본 설정을 사용하는 것이 좋습니다. 예를 들어 병합 복제의 경우 게시 보존 기간(기본값: 14일)은 시스템 테이블에 메타데이터를 저장하는 기간을 결정합니다. 구독이 항상 5일 이내에 동기화되는 경우 설정을 낮게 조정하면 메타데이터가 줄어들고 성능이 향상될 수 있습니다. 자세한 내용은 [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md)을 참조하세요.  
+ 트랜잭션 복제 및 병합 복제는 보존 기간을 사용하여 각각 트랜잭션이 배포 데이터베이스에 저장되는 기간과 구독이 동기화되어야 하는 빈도를 결정합니다. 설정을 조정해야 할지 여부를 판단하기 위해 토폴로지를 모니터링하는 경우에는 초기 기본 설정을 사용하는 것이 좋습니다. 예를 들어 병합 복제의 경우 게시 보존 기간(기본값: 14일)은 시스템 테이블에 메타데이터를 저장하는 기간을 결정합니다. 구독이 항상 5일 이내에 동기화되는 경우 설정을 낮게 조정하면 메타데이터가 줄어들고 성능이 향상될 수 있습니다. 자세한 내용은 [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md)을(를) 참조하세요.  
   
 ## <a name="understand-how-to-modify-publications-if-application-requirements-change"></a>애플리케이션 요구 사항이 변경된 경우 게시 수정 방법 이해  
  게시를 만든 후에 아티클을 추가 또는 삭제하거나 게시 및 아티클 속성을 변경해야 할 수 있습니다. 게시가 생성된 후에는 대부분의 변경이 허용되지만 일부 경우에 게시에 대한 스냅샷을 새로 생성하거나 게시에 대한 구독을 다시 초기화해야 합니다. 자세한 내용은 [게시 및 아티클 속성 변경](../publish/change-publication-and-article-properties.md) 및 [기존 게시에 대한 아티클 추가 및 삭제](../publish/add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.  
@@ -147,7 +149,7 @@ ms.locfileid: "62629635"
   
  자세한 내용은 [게시 데이터베이스의 스키마 변경](../publish/make-schema-changes-on-publication-databases.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [복제 관리 FAQ](frequently-asked-questions-for-replication-administrators.md)  
   
   

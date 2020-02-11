@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2055602dae01e71ac320f5838181c8d8b08534a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62757638"
 ---
 # <a name="tabular-model-programming"></a>테이블 형식 모델 프로그래밍
@@ -25,16 +25,16 @@ ms.locfileid: "62757638"
  이 섹션에서는 프로그래밍 방식으로 테이블 형식 엔터티 및 해당 속성을 사용하여 작업하는 방법에 대해 자세히 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [비즈니스 인텔리전스에 대한 CSDL 주석&#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
+ [비즈니스 인텔리전스 &#40;CSDLBI&#41;에 대 한 CSDL 주석](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
  [테이블 형식 개체 모델 이해](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
- [CSDL용 BI 주석에 대한 기술 참조](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl)  
+ [CSDL에 대 한 BI 주석에 대 한 기술 참조](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl)  
   
  [IMDEmbedded 인터페이스](imdembeddeddata-interface.md)  
   
-## <a name="see-also"></a>관련 항목  
- [테이블 형식 모델링 &#40;&AMP;#40;SSAS 테이블 형식&#41;](../tabular-models/tabular-models-ssas.md)   
- [테이블 형식 모델 디자이너 &#40;&AMP;#40;SSAS 테이블 형식&#41;](../tabular-model-designer-ssas-tabular.md)  
+## <a name="see-also"></a>참고 항목  
+ [테이블 형식 모델링 &#40;SSAS 테이블 형식&#41;](../tabular-models/tabular-models-ssas.md)   
+ [테이블 형식 모델 디자이너 &#40;SSAS 테이블 형식&#41;](../tabular-model-designer-ssas-tabular.md)  
   
   

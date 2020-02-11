@@ -1,5 +1,5 @@
 ---
-title: 언어별 ADO 이벤트 인스턴스 | Microsoft Docs
+title: 언어별 ADO 이벤트 인스턴스화 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,20 +14,20 @@ ms.assetid: eded7e8c-a25f-46a6-bc2b-32d89a54d1bc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a2881ca390aebc18cf5e80b390591c81a575c8de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926173"
 ---
 # <a name="ado-event-instantiation-by-language"></a>언어별 ADO 이벤트 인스턴스
-각 프로그래밍 언어는 다르게 ADO 이벤트 인스턴스를 만듭니다. 다음 예제에서는 모든 작성 하는 **ConnectComplete** 이벤트 처리기입니다.  
+각 프로그래밍 언어는 ADO 이벤트의 인스턴스를 다르게 만듭니다. 다음 모든 예제에서는 **Connectcomplete** 이벤트 처리기를 만듭니다.  
   
 -   [Visual Basic](../../../ado/guide/data/ado-event-instantiation-visual-basic.md)  
   
--   [Visual Studio의 Visual C++](../../../ado/guide/data/ado-event-instantiation-visual-c.md)  
+-   [Visual C++](../../../ado/guide/data/ado-event-instantiation-visual-c.md)  
   
--   [VBScript](../../../ado/guide/data/ado-event-instantiation-vbscript.md)  
+-   [Vba](../../../ado/guide/data/ado-event-instantiation-vbscript.md)  
   
 -   [JScript](../../../ado/guide/data/ado-event-instantiation-jscript.md)  
   

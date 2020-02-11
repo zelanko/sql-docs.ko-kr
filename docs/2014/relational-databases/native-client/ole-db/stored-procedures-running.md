@@ -1,5 +1,5 @@
 ---
-title: 저장된 프로시저 (OLE DB) 실행 | Microsoft Docs
+title: 저장 프로시저 실행 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0102fa66e65fa11f47eec9f49cd1fa90fb11f877
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638762"
 ---
 # <a name="running-stored-procedures-ole-db"></a>저장 프로시저 실행(OLE DB)
@@ -34,7 +34,7 @@ ms.locfileid: "62638762"
   
 -   기능 추가  
   
- 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 지 원하는 세 가지 메커니즘을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 반환 데이터를 사용 하 여 저장된 프로시저:  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 저장 프로시저에서 데이터를 반환 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 하는 데 사용 하는 세 가지 메커니즘을 지원 합니다.  
   
 -   프로시저의 모든 SELECT 문은 결과 집합을 생성합니다.  
   
@@ -44,13 +44,13 @@ ms.locfileid: "62638762"
   
  애플리케이션은 저장 프로시저의 이러한 모든 출력을 처리할 수 있어야 합니다.  
   
- OLE DB 공급자는 결과를 처리하는 동안 각각 다른 시기에 출력 매개 변수와 반환 값을 반환합니다. 경우는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자, 출력 매개 변수 및 반환 코드는 소비자가 검색 또는 저장된 프로시저가 반환한 결과 집합을 취소 한 후까지 제공 되지 않습니다. 반환 코드와 출력 매개 변수는 서버에서 보내는 마지막 TDS 패킷에서 반환됩니다.  
+ OLE DB 공급자는 결과를 처리하는 동안 각각 다른 시기에 출력 매개 변수와 반환 값을 반환합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자의 경우 소비자가 저장 프로시저에서 반환 된 결과 집합을 검색 하거나 취소할 때까지 출력 매개 변수 및 반환 코드가 제공 되지 않습니다. 반환 코드와 출력 매개 변수는 서버에서 보내는 마지막 TDS 패킷에서 반환됩니다.  
   
  공급자는 출력 매개 변수와 반환 값을 반환할 때 DBPROP_OUTPUTPARAMETERAVAILABILITY 속성을 사용하여 보고합니다. 이 속성은 DBPROPSET_DATASOURCEINFO 속성 집합에 들어 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 반환 코드 및 출력 매개 변수는 반환 되지 않습니다 결과 집합 처리 되거나 해제 될 때까지 나타내려면 DBPROPVAL_OA_ATROWRELEASE로 DBPROP_OUTPUTPARAMETERAVAILABILITY 속성을 설정 합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 DBPROP_OUTPUTPARAMETERAVAILABILITY 속성을 DBPROPVAL_OA_ATROWRELEASE로 설정 하 여 반환 코드와 출력 매개 변수가 반환 되지 않고 결과 집합이 처리 되거나 해제 될 때까지 반환 되도록 지정 합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [저장된 프로시저](stored-procedures.md)  
+## <a name="see-also"></a>참고 항목  
+ [저장 프로시저](stored-procedures.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: DCOM에서 실행 하도록 DLL 사용 | Microsoft Docs
+title: DLL을 DCOM에서 실행할 수 있도록 설정 Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,32 +15,32 @@ ms.assetid: 5f1c2205-191c-4fb4-9bd9-84c878ea46ed
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9ea7ea83219780602f8d8d68e5c807178e775bc2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922708"
 ---
 # <a name="enabling-a-dll-to-run-on-dcom"></a>DCOM에서 실행하도록 DLL 사용
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
+>  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
   
- 다음 단계에는 DCOM 및 Microsoft 인터넷 정보 서비스 (HTTP) 구성 요소 서비스를 통해 모두 사용 하 여 비즈니스 개체.dll을 사용 하도록 설정 하는 방법을 간략하게 설명 합니다.  
+ 다음 단계에서는 구성 요소 서비스를 통해 DCOM과 Microsoft 인터넷 정보 서비스 (HTTP)를 둘 다 사용 하도록 비즈니스 개체 .dll을 설정 하는 방법을 간략하게 설명 합니다.  
   
 1.  구성 요소 서비스 MMC 스냅인에서 비어 있는 새 패키지를 만듭니다.  
   
-     패키지를 만들고이 패키지에 DLL을 추가 하려면 구성 요소 서비스 MMC 스냅인을 사용 합니다. 따라서.dll DCOM을 통해 액세스할 수 있지만 IIS 통해 액세스 가능성을 제거 합니다. (.Dll을 레지스트리에서 확인 하는 경우는 **Inproc** 키가 비어 있는 이제;이 항목의 뒷부분에서 설명 하 고 활성화 특성을 설정에 값을 추가 합니다 **Inproc** 키입니다.)  
+     구성 요소 서비스 MMC 스냅인을 사용 하 여 패키지를 만들고이 패키지에 DLL을 추가 합니다. 이렇게 하면 DCOM을 통해 .dll에 액세스할 수 있지만 IIS를 통해 접근성을 제거 합니다. .Dll에 대 한 레지스트리를 체크 인하면 **inproc** 키가 비어 있게 됩니다 .이 항목의 뒷부분에 설명 된 활성화 특성을 설정 하면 **inproc** 키에 값이 추가 됩니다.  
   
 2.  패키지에 비즈니스 개체를 설치 합니다.  
   
-     -또는-  
+     또는  
   
-     가져오기의 [업데이트할](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 패키지에는 개체입니다.  
+     [RDSServer DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 개체를 패키지에 가져옵니다.  
   
-3.  패키지에 대 한 활성화 특성을 설정 **작성자의 프로세스에서** (라이브러리 응용 프로그램).  
+3.  **작성자의 프로세스** (라이브러리 응용 프로그램)에서 패키지에 대 한 활성화 특성을로 설정 합니다.  
   
-     .Dll에 동일한 컴퓨터에서 DCOM 및 IIS를 통해 액세스할 수 있도록 구성 요소 서비스 MMC 스냅인에서 구성 요소의 활성화 특성을 설정 해야 합니다. 특성 설정한 후 **작성자의 프로세스**는 **Inproc** 구성 요소 서비스를 가리키는 대리.dll을 레지스트리에 서버 키가 추가 되었습니다.  
+     동일한 컴퓨터의 DCOM 및 IIS를 통해 .dll을 액세스할 수 있도록 구성 요소 서비스 MMC 스냅인에서 구성 요소의 활성화 특성을 설정 해야 합니다. **작성자의 프로세스에서**특성을로 설정 하면 레지스트리에서 **Inproc** 서버 키가 추가 된 것을 알 수 있습니다 .이는 구성 요소 서비스 서로게이트 .dll을 가리킵니다.  
   
- 구성 요소 서비스 (또는 Microsoft Transaction 서비스, Windows NT를 사용 하는 경우)에 대 한 자세한 방법과 이러한 단계를 수행 하려면 Microsoft Transaction Server 웹 사이트를 방문 합니다.
+ 구성 요소 서비스 (또는 Windows NT를 사용 하는 경우 Microsoft Transaction Service)에 대 한 자세한 내용 및 이러한 단계를 수행 하는 방법에 대 한 자세한 내용은 Microsoft Transaction Server 웹 사이트를 참조 하십시오.
 
 

@@ -11,15 +11,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a6dfee8c03d7039f509775a8e9a936e6dcef67e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62519411"
 ---
-# <a name="localdberrorcannotcreatesqlprocess"></a>LOCALDB_ERROR_CANNOT_CREATE_SQL_PROCESS
+# <a name="localdb_error_cannot_create_sql_process"></a>LOCALDB_ERROR_CANNOT_CREATE_SQL_PROCESS
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -27,7 +27,7 @@ ms.locfileid: "62519411"
 |이벤트 ID|268|  
 |이벤트 원본|SQL Server 로컬 데이터베이스 런타임 12.0|  
 |구성 요소|로컬 데이터베이스 런타임 API|  
-|메시지 텍스트|로컬 데이터베이스 인스턴스를 시작 하는 동안 오류가 발생 했습니다: SQL Server 프로세스를 만들 수 없습니다.|  
+|메시지 텍스트|로컬 데이터베이스 인스턴스를 시작 하는 동안 오류가 발생 했습니다. SQL Server 프로세스를 만들 수 없습니다.|  
   
 ## <a name="explanation"></a>설명  
  SQL Server에 대한 프로세스를 만들 수 없습니다.  

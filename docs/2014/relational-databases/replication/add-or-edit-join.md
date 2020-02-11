@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5fb76e62e1816be53c312cc263053f854ad3b796
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62625939"
 ---
 # <a name="add-or-edit-join"></a>조인 추가 또는 편집
@@ -32,7 +32,7 @@ ms.locfileid: "62625939"
 > [!IMPORTANT]  
 >  조인 필터는 테이블을 무제한 포함할 수 있지만 테이블 수가 많은 필터는 병합 처리 중 성능에 영향을 줄 수 있습니다. 5개 이상의 테이블을 가진 조인 필터를 생성하는 경우 다른 해결책을 고려하는 것이 좋습니다. 크기가 작거나, 변경될 가능성이 없거나, 기본적으로 조회 테이블에 해당하는 테이블은 필터링하지 마십시오. 구독자 간에 분할해야 하는 테이블 사이에서만 조인 필터를 사용합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  이 대화 상자는 3단계로 이루어진 프로세스를 통해 두 테이블 간에 조인 필터를 만듭니다. 조인 필터를 두 개 이상 만들려면 대화 상자를 두 번 이상 완료해야 합니다.  
   
 1.  **필터링된 테이블을 확인하고 조인된 테이블을 선택하십시오.**  
@@ -58,16 +58,16 @@ ms.locfileid: "62625939"
         > [!CAUTION]  
         >  이 옵션을 선택하면 조인 필터에서의 자식 테이블과 부모 테이블 간의 관계가 일대일 또는 일대다가 됩니다. 자식 테이블에 있는 조인 열이 고유해야 하는 경우에만 이 옵션을 선택합니다. 이 옵션이 잘못 설정되면 데이터가 일치하지 않을 수 있습니다.  
   
-    -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only. 기본적으로 병합 복제는 동기화 과정에서 행별로 변경 내용을 처리합니다. 관련 변경 내용을 하나의 단위로 처리하려면 **논리적 레코드**를 선택합니다. 논리적 레코드를 사용하기 위한 아티클 및 게시 요구 사항이 충족되는 경우에만 이 옵션을 사용할 수 있습니다. 자세한 내용은 [논리적 레코드를 사용하여 관련된 행의 변경 내용 그룹화](merge/group-changes-to-related-rows-with-logical-records.md)의 "논리적 레코드 사용 시 고려 사항" 섹션을 참조하세요.  
+    -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에만 해당됩니다. 기본적으로 병합 복제는 동기화 과정에서 행별로 변경 내용을 처리합니다. 관련 변경 내용을 하나의 단위로 처리하려면 **논리적 레코드**를 선택합니다. 논리적 레코드를 사용하기 위한 아티클 및 게시 요구 사항이 충족되는 경우에만 이 옵션을 사용할 수 있습니다. 자세한 내용은 [논리적 레코드를 사용하여 관련된 행의 변경 내용 그룹화](merge/group-changes-to-related-rows-with-logical-records.md)의 "논리적 레코드 사용 시 고려 사항" 섹션을 참조하세요.  
   
  필터를 추가 또는 편집한 후에는 **확인** 을 클릭하여 변경 내용을 저장하고 대화 상자를 닫습니다. 지정한 필터가 구문 분석되고 SELECT 절의 테이블에 대해 실행됩니다. 필터 문에 구문 오류나 기타 문제가 있으면 알림 메시지가 표시되며 이를 보고 필터 문을 편집할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Create a Publication](publish/create-a-publication.md)   
  [게시 속성 보기 및 수정](publish/view-and-modify-publication-properties.md)   
  [게시된 데이터 필터링](publish/filter-published-data.md)   
  [Join Filters](merge/join-filters.md)   
- [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)   
+ [매개 변수가 있는 행 필터](merge/parameterized-filters-parameterized-row-filters.md)   
  [데이터 및 데이터베이스 개체 게시](publish/publish-data-and-database-objects.md)  
   
   

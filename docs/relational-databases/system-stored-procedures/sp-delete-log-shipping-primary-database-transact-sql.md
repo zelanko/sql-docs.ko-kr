@@ -18,10 +18,10 @@ ms.assetid: cb1d5d00-2805-4d47-bd04-545232067345
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: aff19eabc5738e986fca1bf13f85130daead3217
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72909865"
 ---
 # <a name="sp_delete_log_shipping_primary_database-transact-sql"></a>sp_delete_log_shipping_primary_database(Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "72909865"
 
   이 저장 프로시저는 백업 작업과 로컬 및 원격 기록을 포함하여 주 데이터베이스의 로그 전달을 제거합니다. **Sp_delete_log_shipping_primary_secondary**를 사용 하 여 보조 데이터베이스를 제거한 후에만이 저장 프로시저를 사용 하십시오.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,7 +40,7 @@ sp_delete_log_shipping_primary_database
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @database = ] 'database'`은 로그 전달 주 데이터베이스의 이름입니다. *데이터베이스* 는 **sysname**이며 기본값은 없고 NULL 일 수 없습니다.  
+`[ @database = ] 'database'`로그 전달 주 데이터베이스의 이름입니다. *데이터베이스* 는 **sysname**이며 기본값은 없고 NULL 일 수 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6ed8a56892cfd70b43341ffff8349faa56094a97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62519143"
 ---
 # <a name="report-server-item-properties"></a>보고서 서버 항목 속성
@@ -40,7 +40,7 @@ ms.locfileid: "62519143"
 |**ModifiedBy**|보고서 서버 데이터베이스의 항목을 마지막으로 수정한 사용자의 이름입니다.|  
 |**ModifiedDate**|사용자가 항목을 마지막으로 수정한 날짜와 시간입니다.|  
 |**이름**|보고서 서버 데이터베이스에 있는 항목의 이름입니다.|  
-|**경로**|항목의 전체 경로 이름입니다. 보고서 서버 데이터베이스에 있는 항목의 경로에는 최대 260자까지 사용할 수 있습니다.|  
+|**Path**|항목의 전체 경로 이름입니다. 보고서 서버 데이터베이스에 있는 항목의 경로에는 최대 260자까지 사용할 수 있습니다.|  
 |**크기**|보고서 서버 데이터베이스에 있는 항목의 크기(바이트)입니다.|  
 |**형식**|보고서 서버 데이터베이스에 있는 항목의 형식입니다.|  
 |**VirtualPath**|보고서 서버 데이터베이스에 있는 항목의 가상 경로입니다. <xref:ReportService2010.CatalogItem.VirtualPath%2A> 속성의 값은 사용자가 항목을 볼 수 있는 경로입니다. 예를 들어, 사용자 개인의 My Reports 폴더에 있는 report1이라는 보고서의 가상 경로는 /My Reports입니다. 항목의 실제 경로는 /Users/username/My Reports입니다.|  
@@ -58,7 +58,7 @@ ms.locfileid: "62519143"
 |속성|Description|  
 |--------------|-----------------|  
 |**언어**|보고서에서 사용된 언어입니다. 값은 IETF(Internet Engineering Task Force) RFC1766 사양에 정의된 언어 코드입니다. 첫 번째 부분은 기본 언어를 지정하며 2자로 구성되어 있습니다. 하이픈으로 구분된 두 번째 부분은 해당 언어의 변형 또는 방언을 지정합니다. 보고서 정의에서 `Style` 요소와 연관된 `Body` 요소에 값이 지정되지 않은 경우 기본값은 보고서 서버의 언어입니다.|  
-|`ReportProcessingTimeout`|개별 보고서에 대한 제한 시간(초)입니다. 이 값이 설정된 경우 지정된 시간이 경과하면 보고서 서버에서 보고서 처리를 중지합니다. 유효한 값은 `-1`부터 `2`,`147`,`483`,`647`까지입니다. 값이 `-1`이면 보고서 처리 중 시간 제한으로 인한 중지가 발생하지 않습니다. 값이 `null`, 시스템 속성의 값 `ReportProcessingTimeout` 보고서 처리 제한 시간에 사용 됩니다. 기본값은 `null`입니다. 자세한 내용은 [보고서 서버 시스템 속성](reporting-services-properties-report-server-system-properties.md)을 참조하세요.|  
+|`ReportProcessingTimeout`|개별 보고서에 대한 제한 시간(초)입니다. 이 값이 설정된 경우 지정된 시간이 경과하면 보고서 서버에서 보고서 처리를 중지합니다. 유효한 값은 `-1`부터 `2`,`147`,`483`,`647`까지입니다. 값이 `-1`이면 보고서 처리 중 시간 제한으로 인한 중지가 발생하지 않습니다. 값이 `null`이면 시스템 속성 `ReportProcessingTimeout` 의 값이 보고서 처리 제한 시간에 사용 됩니다. 기본값은 `null`입니다. 자세한 내용은 [보고서 서버 시스템 속성](reporting-services-properties-report-server-system-properties.md)을 참조하세요.|  
 |**ExecutionDate**|보고서에 대해 마지막으로 보고서 스냅샷이 만들어진 날짜와 시간입니다.|  
 |**CanRunUnattended**|보고서를 일정에 따라 무인 모드로 실행할 수 있는지 여부를 나타내는 값입니다. 이 속성을 `true`로 설정하면 보고서 매개 변수에 대한 기본값이 정의되고 데이터 원본 자격 증명이 보고서에 저장되거나 자격 증명 검색 옵션이 `None`으로 설정됩니다. 이 속성을 `false`로 설정하면 보고서를 무인 모드로 실행하기 위한 선행 조건이 충족되지 않습니다. 자세한 내용은 [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](../../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)을 참조하세요.|  
 |**HasParameterDefaultValues**|보고서에 모든 보고서 매개 변수에 대해 설정된 유효한 기본값이 있는지 여부를 나타내는 값입니다. 이 값은 보고서에 보고서 매개 변수가 없는 경우에도 `true`입니다. 이 속성을 `false`로 설정하면 보고서 매개 변수 하나 이상에 유효한 기본값이 없습니다.|  
@@ -73,8 +73,8 @@ ms.locfileid: "62519143"
 |--------------|-----------------|  
 |**MimeType**|보고서 서버 데이터베이스에 있는 리소스의 MIME 형식입니다.|  
   
-## <a name="see-also"></a>관련 항목  
- [웹 서비스와 .NET Framework를 사용하여 응용 프로그램 빌드](building-applications-using-the-web-service-and-the-net-framework.md)   
+## <a name="see-also"></a>참고 항목  
+ [웹 서비스와 .NET Framework를 사용하여 애플리케이션 빌드](building-applications-using-the-web-service-and-the-net-framework.md)   
  [보고서 서버 웹 서비스](../report-server-web-service.md)   
  [기술 참조&#40;SSRS&#41;](../../technical-reference-ssrs.md)  
   

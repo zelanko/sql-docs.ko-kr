@@ -11,15 +11,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f109379c49689ba3118a41b414e7a6e1cd3e9027
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62520203"
 ---
-# <a name="localdberrorcannotaccessinstanceregistry"></a>LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_REGISTRY
+# <a name="localdb_error_cannot_access_instance_registry"></a>LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_REGISTRY
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  

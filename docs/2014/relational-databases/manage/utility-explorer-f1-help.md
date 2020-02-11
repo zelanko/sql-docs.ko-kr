@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 402622033abd307d71b0dac8894ff4f6facebef9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467857"
 ---
 # <a name="utility-explorer-f1-help"></a>유틸리티 탐색기 F1 도움말
@@ -25,9 +25,9 @@ ms.locfileid: "62467857"
 ## <a name="in-this-section"></a>섹션 내용  
  [유틸리티 대시보드 &#40;SQL Server 유틸리티&#41;](../../database-engine/utility-dashboard-sql-server-utility.md)  
   
- [데이터 계층 응용 프로그램 세부 정보를 배포 &#40;SQL Server 유틸리티&#41;](../../database-engine/deployed-data-tier-application-details-sql-server-utility.md)  
+ [배포된 데이터 계층 애플리케이션 세부 정보&#40;SQL Server 유틸리티&#41;](../../database-engine/deployed-data-tier-application-details-sql-server-utility.md)  
   
- [관리 인스턴스 세부 정보 &#40;SQL Server 유틸리티&#41;](../../database-engine/managed-instance-details-sql-server-utility.md)  
+ [관리되는 인스턴스 세부 정보&#40;SQL Server 유틸리티&#41;](../../database-engine/managed-instance-details-sql-server-utility.md)  
   
  [유틸리티 관리&#40;SQL Server 유틸리티&#41;](../../database-engine/utility-administration-sql-server-utility.md)  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62467857"
   
  [SQL Server 유틸리티에서 SQL Server 인스턴스 모니터링](monitor-instances-of-sql-server-in-the-sql-server-utility.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 유틸리티 기능 및 태스크](sql-server-utility-features-and-tasks.md)   
  [SQL Server 유틸리티 문제 해결](../../database-engine/troubleshoot-the-sql-server-utility.md)  
   

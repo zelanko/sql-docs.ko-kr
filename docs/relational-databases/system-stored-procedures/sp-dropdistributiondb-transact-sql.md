@@ -16,18 +16,18 @@ ms.assetid: b6dd1846-2259-4d29-93af-a70a5d25a0c5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 960da4d98ea33ceb3ecdb48e36d565854484feb9
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68768864"
 ---
-# <a name="spdropdistributiondb-transact-sql"></a>sp_dropdistributiondb(Transact-SQL)
+# <a name="sp_dropdistributiondb-transact-sql"></a>sp_dropdistributiondb(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   배포 데이터베이스를 삭제합니다. 다른 데이터베이스에 해당 물리적 파일이 사용되지 않는 경우에 한해 데이터베이스에 사용되는 물리적 파일을 삭제합니다. 이 저장 프로시저는 모든 데이터베이스의 배포자에서 실행됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,21 +47,21 @@ sp_dropdistributiondb [ @database= ] 'database'
   
  이 저장 프로시저는 **sp_dropdistributor**를 실행 하 여 배포자를 삭제 하기 전에 실행 해야 합니다.  
   
- 또한 **sp_dropdistributiondb** 는 배포 데이터베이스에 대 한 큐 판독기 에이전트 작업 (있는 경우)을 제거 합니다.  
+ 또한 **sp_dropdistributiondb** 는 배포 데이터베이스 (있는 경우)에 대 한 큐 판독기 에이전트 작업을 제거 합니다.  
   
- 배포를 사용하지 않으려면 배포 데이터베이스가 온라인 상태여야 합니다. 배포 데이터베이스에 대해 데이터베이스 스냅샷이 있으면 배포를 사용하지 않도록 설정하기 전에 이 스냅샷을 먼저 삭제해야 합니다. 데이터베이스 스냅샷은 데이터베이스의 읽기 전용 오프라인 사본이며 복제 스냅샷과 연관되어 있지 않습니다. 자세한 내용은 [데이터베이스 스냅숏&#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)을 참조하세요.  
+ 배포를 사용하지 않으려면 배포 데이터베이스가 온라인 상태여야 합니다. 배포 데이터베이스에 대해 데이터베이스 스냅샷이 있으면 배포를 사용하지 않도록 설정하기 전에 이 스냅샷을 먼저 삭제해야 합니다. 데이터베이스 스냅샷은 데이터베이스의 읽기 전용 오프라인 사본이며 복제 스냅샷과 연관되어 있지 않습니다. 자세한 내용은 [데이터베이스 스냅샷&#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistributiondb-tr_1.sql)]  
   
 ## <a name="permissions"></a>사용 권한  
- **Sysadmin** 고정 서버 역할의 멤버만 **sp_dropdistributiondb**을 실행할 수 있습니다.  
+ **Sysadmin** 고정 서버 역할의 멤버만 **sp_dropdistributiondb**를 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [게시 및 배포 해제](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [sp_adddistributiondb &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
- [sp_changedistributiondb &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
- [sp_helpdistributiondb&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
+ [Transact-sql&#41;sp_adddistributiondb &#40;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
+ [Transact-sql&#41;sp_changedistributiondb &#40;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
+ [Transact-sql&#41;sp_helpdistributiondb &#40;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

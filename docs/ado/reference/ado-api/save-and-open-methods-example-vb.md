@@ -16,18 +16,18 @@ ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6d42488f8f167cc7c98f663478c742963d24253c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931190"
 ---
 # <a name="save-and-open-methods-example-vb"></a>Save 및 Open 메서드 예제(VB)
-이러한 세 가지 예를 보여 줍니다 하는 방법을 [저장](../../../ado/reference/ado-api/save-method.md) 하 고 [오픈](../../../ado/reference/ado-api/open-method-ado-recordset.md) 메서드를 함께 사용할 수 있습니다.  
+다음 세 가지 예제에서는 [Save](../../../ado/reference/ado-api/save-method.md) 및 [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) 메서드를 함께 사용할 수 있는 방법을 보여 줍니다.  
   
- 출장 예정인을 데이터베이스에서 테이블 가져가려는 가정 합니다. 진행 하기 전에으로 데이터에 액세스 하는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 이동 가능한 형식으로 저장 합니다. 대상에 도착 하는 경우 액세스를 **Recordset** 는 로컬 연결이 끊긴 **레코드 집합**. 변경 하는 **레코드 집합**, 한 다음 다시 저장 합니다. 마지막으로, 홈을 반환 하는 경우 데이터베이스에 다시 연결을 이동 중에 변경한 내용으로 업데이트.  
+ 비즈니스 여행에 대해 진행 중 이며 데이터베이스의 테이블을 함께 사용 하려는 경우를 가정 합니다. 이동 하기 전에 데이터를 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 으로 액세스 하 여 전송 가능한 형태로 저장 합니다. 대상에 도착 하면 연결 되지 않은 로컬 **레코드**집합으로 **레코드 집합** 에 액세스 합니다. **레코드 집합**을 변경한 후 다시 저장 합니다. 마지막으로 home을 반환 하는 경우 데이터베이스에 다시 연결 하 여 이동 시 변경한 내용으로 업데이트 합니다.  
   
- 첫째, 액세스 및 저장 합니다 ***작성자*** 테이블입니다.  
+ 먼저 ***Authors*** 테이블을 액세스 하 고 저장 합니다.  
   
 ```  
 'BeginSaveVB  
@@ -84,19 +84,19 @@ End Sub
 'EndSaveVB  
 ```  
   
- 이 시점에서 대상에 도착 했습니다. 액세스는 ***작성자*** 로컬 테이블로 연결 끊김 **레코드 집합**합니다. 있어야 합니다 **MSPersist** 저장된 된 파일에 액세스 하는 데 사용 하는 컴퓨터의 공급자 a:\Pubs.xml 합니다.  
+ 이 시점에서 대상에 도달 했습니다. 연결 되지 않은 로컬 **레코드 집합**으로 ***Authors*** 테이블에 액세스 합니다. 저장 된 파일에 액세스 하는 데 사용 하는 컴퓨터에 **Mspersist** 공급자 (a:\Pubs.xml.)가 있어야 합니다.  
   
 ```  
 Attribute VB_Name = "Save"  
 ```  
   
- 마지막으로 돌아가면 홈입니다. 이제 데이터베이스에서 변경 내용을 업데이트 합니다.  
+ 마지막으로 home을 반환 합니다. 이제 변경 내용으로 데이터베이스를 업데이트 합니다.  
   
 ```  
 Attribute VB_Name = "Save"  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Open 메서드 (ADO 레코드 집합)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [레코드 집합 지 속성에 대 한 자세한 정보](../../../ado/guide/data/more-about-recordset-persistence.md)   

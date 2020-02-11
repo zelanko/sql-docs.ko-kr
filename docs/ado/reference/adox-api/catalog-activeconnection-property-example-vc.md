@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 518905a9-6044-4194-af6c-84952d95939d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: d7808e685792fda9c6a6a6a468a275d9d10bb87f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 976864842781828f3505ed18ab9ff81fda570c86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967105"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76925611"
 ---
 # <a name="catalog-activeconnection-property-example-vc"></a>Catalog ActiveConnection 속성 예제(VC++)
-설정 된 [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) 속성 유효 하 고 열린 연결을 "열립니다" 카탈로그입니다. 열린 카탈로그에서 해당 카탈로그에 포함 된 스키마 개체를 액세스할 수 있습니다.  
+[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) 속성을 유효한 열린 연결로 설정 하면 카탈로그가 열립니다. 열려 있는 카탈로그에서 해당 카탈로그 내에 포함 된 스키마 개체에 액세스할 수 있습니다.  
   
 ```  
 // CatalogActiveConnectionCpp.cpp  
@@ -75,7 +75,7 @@ void OpenConnectionX() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in OpenConnectionX...." << endl;  
+      cout << "Error occurred in OpenConnectionX...." << endl;  
    }  
   
    if (m_pCnn)  
@@ -106,10 +106,10 @@ void OpenConnectionWithStringX() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in OpenConnectionWithStringX...." << endl;  
+      cout << "Error occurred in OpenConnectionWithStringX...." << endl;  
    }  
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ActiveConnection 속성(ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)

@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 867c341443b7ce1c459806eaac5427a06a8bbebe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62473234"
 ---
 # <a name="logon-triggers"></a>LOGON 트리거
@@ -50,11 +50,11 @@ ms.locfileid: "62473234"
 -   심각도가 20 이상인 오류가 트리거 본문 내에 발생합니다.  
   
 ## <a name="disabling-a-logon-trigger"></a>로그온 트리거 비활성화  
- 로그온 트리거를 사용하면 `sysadmin` 고정 서버 역할의 멤버를 비롯한 모든 사용자에 대해 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]에 성공적으로 연결하지 못하도록 효과적으로 차단할 수 있습니다. 로그온 트리거가 연결을 차단 중인 경우 `sysadmin` 고정 서버 역할의 멤버는 관리자 전용 연결을 사용하거나 최소 구성 모드(-f)로 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]을 시작하여 연결할 수 있습니다. 자세한 내용은 [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md)을(를) 참조하세요.  
+ 로그온 트리거를 사용하면 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 고정 서버 역할의 멤버를 비롯한 모든 사용자에 대해 `sysadmin`에 성공적으로 연결하지 못하도록 효과적으로 차단할 수 있습니다. 로그온 트리거가 연결을 차단 중인 경우 `sysadmin` 고정 서버 역할의 멤버는 관리자 전용 연결을 사용하거나 최소 구성 모드(-f)로 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]을 시작하여 연결할 수 있습니다. 자세한 내용은 [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md)을(를) 참조하세요.  
   
 ## <a name="related-tasks"></a>관련 작업  
   
-|태스크|항목|  
+|Task|항목|  
 |----------|-----------|  
 |로그온 트리거를 만드는 방법에 대해 설명합니다. LOGON 트리거는 모든 데이터베이스에서 만들 수 있지만 서버 수준에서 등록되며 **master** 데이터베이스에 저장됩니다.|[CREATE TRIGGER&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)|  
 |로그온 트리거를 수정하는 방법에 대해 설명합니다.|[ALTER TRIGGER&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-trigger-transact-sql)|  
@@ -62,7 +62,7 @@ ms.locfileid: "62473234"
 |로그온 트리거에 대한 정보를 반환하는 방법에 대해 설명합니다.|[sys.server_triggers&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-triggers-transact-sql)<br /><br /> [sys.server_trigger_events&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-trigger-events-transact-sql)|  
 |로그온 트리거 이벤트 데이터를 캡처하는 방법에 대해 설명합니다.||  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [DDL 트리거](../triggers/ddl-triggers.md)  
   
   

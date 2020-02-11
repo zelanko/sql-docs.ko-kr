@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c320db0f568b7182a48e5b1719f68d17ade11629
-ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72688897"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 테이블 및 행 크기
@@ -34,7 +34,7 @@ ms.locfileid: "72688897"
   
  다음 그림에서는 인덱스 및 행을 포함하며 차례로 행 헤더와 본문을 가지는 테이블을 보여줍니다.  
   
- ![메모리 액세스에 최적화된 테이블](../../database-engine/media/hekaton-guide-1.gif "메모리 액세스에 최적화 된 테이블입니다.")  
+ ![메모리 액세스에 최적화 된 테이블입니다.](../../database-engine/media/hekaton-guide-1.gif "메모리 액세스에 최적화된 테이블")  
 인덱스와 행으로 구성된 메모리 액세스에 최적화된 테이블  
   
  테이블의 메모리 내 크기(바이트)는 다음과 같이 계산됩니다.  
@@ -72,17 +72,17 @@ ms.locfileid: "72688897"
   
 |섹션|크기|주석|  
 |-------------|----------|--------------|  
-|단순 형식 열|SUM([size of shallow types])<br /><br /> **개별 형식의 크기는 다음과 같습니다.**<br /><br /> Bit &#124; 1<br /><br /> Tinyint &#124; 1<br /><br /> Smallint &#124; 2<br /><br /> Int &#124; 4<br /><br /> Real &#124; 4<br /><br /> Smalldatetime &#124; 4<br /><br /> Smallmoney &#124; 4<br /><br /> Bigint &#124; 8<br /><br /> Datetime &#124; 8<br /><br /> Datetime2 &#124; 8<br /><br /> Float 8<br /><br /> Money 8<br /><br /> 숫자 (전체 자릿수 < = 18 &#124; ) 8<br /><br /> Time &#124; 8<br /><br /> 숫자 (전체 자릿수 > 18 &#124; ) 16<br /><br /> Uniqueidentifier &#124; 16||  
-|단순 열 패딩|가능한 값은<br /><br /> 전체 형식 열이 있고 단순 열의 총 데이터 크기가 홀수인 경우 1입니다.<br /><br /> 그렇지 않으면 0입니다.|전체 형식은 (var)binary 및 (n)(var)char 형식입니다.|  
-|전체 형식 열의 오프셋 배열|가능한 값은<br /><br /> 전체 형식 열이 없으면 0입니다.<br /><br /> 그렇지 않으면 2 + 2 * [number of deep type columns]입니다.|전체 형식은 (var)binary 및 (n)(var)char 형식입니다.|  
+|단순 형식 열|SUM([size of shallow types])<br /><br /> **개별 형식의 크기는 다음과 같습니다.**<br /><br /> Bit &#124; 1<br /><br /> Tinyint &#124; 1<br /><br /> Smallint &#124; 2<br /><br /> Int &#124; 4<br /><br /> Real &#124; 4<br /><br /> Smalldatetime &#124; 4<br /><br /> Smallmoney &#124; 4<br /><br /> Bigint &#124; 8<br /><br /> Datetime &#124; 8<br /><br /> Datetime2 &#124; 8<br /><br /> Float 8<br /><br /> Money 8<br /><br /> 숫자 (전체 자릿수 <= 18) &#124; 8<br /><br /> Time &#124; 8<br /><br /> 숫자 (전체 자릿수>18) &#124; 16<br /><br /> Uniqueidentifier &#124; 16||  
+|단순 열 패딩|가능한 값은 다음과 같습니다.<br /><br /> 전체 형식 열이 있고 단순 열의 총 데이터 크기가 홀수인 경우 1입니다.<br /><br /> 그렇지 않으면 0입니다.|전체 형식은 (var)binary 및 (n)(var)char 형식입니다.|  
+|전체 형식 열의 오프셋 배열|가능한 값은 다음과 같습니다.<br /><br /> 전체 형식 열이 없으면 0입니다.<br /><br /> 그렇지 않으면 2 + 2 * [number of deep type columns]입니다.|전체 형식은 (var)binary 및 (n)(var)char 형식입니다.|  
 |NULL 배열|[number of nullable columns]/8, 전체 바이트로 반올림|null 허용 열당 1비트가 배열에 포함됩니다. 전체 바이트로 반올림됩니다.|  
-|NULL 배열 패딩|가능한 값은<br /><br /> 전체 형식 열이 있고 NULL 배열의 크기가 홀수 바이트인 경우 1입니다.<br /><br /> 그렇지 않으면 0입니다.|전체 형식은 (var)binary 및 (n)(var)char 형식입니다.|  
-|패딩|전체 형식 열이 없으면 0입니다.<br /><br /> 전체 형식 열이 있는 경우, 단순 열에 필요한 최대 맞춤에 따라 0-7바이트의 패딩이 추가됩니다. 각 단순 열에는 위에 설명한 대로 해당 크기와 동일한 맞춤이 필요하지만, GUID 열은 16바이트가 아니라 1바이트의 맞춤이 필요하고, 숫자 열에는 항상 16이 아닌 8바이트의 맞춤이 필요합니다. 모든 단순 열 사이에 가장 높은 맞춤 요구 사항이 사용되며, 지금까지의 총 크기(전체 형식 열 없음)가 필요한 맞춤의 배수가 되도록 0-7바이트의 패딩이 추가됩니다.|전체 형식은 (var)binary 및 (n)(var)char 형식입니다.|  
+|NULL 배열 패딩|가능한 값은 다음과 같습니다.<br /><br /> 전체 형식 열이 있고 NULL 배열의 크기가 홀수 바이트인 경우 1입니다.<br /><br /> 그렇지 않으면 0입니다.|전체 형식은 (var)binary 및 (n)(var)char 형식입니다.|  
+|안쪽 여백|전체 형식 열이 없으면 0입니다.<br /><br /> 전체 형식 열이 있는 경우, 단순 열에 필요한 최대 맞춤에 따라 0-7바이트의 패딩이 추가됩니다. 각 단순 열에는 위에 설명한 대로 해당 크기와 동일한 맞춤이 필요하지만, GUID 열은 16바이트가 아니라 1바이트의 맞춤이 필요하고, 숫자 열에는 항상 16이 아닌 8바이트의 맞춤이 필요합니다. 모든 단순 열 사이에 가장 높은 맞춤 요구 사항이 사용되며, 지금까지의 총 크기(전체 형식 열 없음)가 필요한 맞춤의 배수가 되도록 0-7바이트의 패딩이 추가됩니다.|전체 형식은 (var)binary 및 (n)(var)char 형식입니다.|  
 |고정 길이 전체 형식 열|SUM([size of fixed length deep type columns])<br /><br /> 각 열의 크기는 다음과 같습니다.<br /><br /> char(i) 및 binary(i)의 경우 i<br /><br /> nchar(i)의 경우 2 * i|고정 길이 전체 형식 열은 char(i), nchar(i) 또는 binary(i) 유형의 열입니다.|  
 |가변 길이 전체 형식 열 [computed size]|SUM([computed size of variable length deep type columns])<br /><br /> 각 열에 대해 계산된 크기는 다음과 같습니다.<br /><br /> varchar(i) 및 varbinary(i)의 경우 i<br /><br /> nvarchar(i)의 경우 2 * i|이 행은 [computed row body size]에만 적용되었습니다.<br /><br /> 가변 길이 전체 형식 열은 varchar(i), nvarchar(i) 또는 varbinary(i) 유형의 열입니다. 계산된 크기는 열의 최대 길이(i)에 의해 결정됩니다.|  
 |가변 길이 전체 형식 열 [actual size]|SUM([actual size of variable length deep type columns])<br /><br /> 각 열의 실제 크기는 다음과 같습니다.<br /><br /> n, 여기서 n은 varchar(i)에 대해 열에 저장된 문자 수입니다.<br /><br /> 2 * n, 여기서 n은 nvarchar(i)에 대해 열에 저장된 문자 수입니다.<br /><br /> n, 여기서 n은 varbinary(i)에 대해 열에 저장된 바이트 수입니다.|이 행은 [actual row body size]에만 적용되었습니다.<br /><br /> 실제 크기는 행의 열에 저장된 데이터에 의해 결정됩니다.|  
   
-##  <a name="bkmk_RowStructure"></a> 행 구조  
+##  <a name="bkmk_RowStructure"></a>행 구조  
  메모리 최적화 테이블의 행에는 다음과 같은 구성 요소가 있습니다.  
   
 -   행 머리글에는 행 버전 관리를 구현하는 데 필요한 타임스탬프가 포함됩니다. 행 머리글에는 위에서 설명한 해시 버킷의 행 체인을 구현하는 인덱스 포인터도 포함됩니다.  
@@ -91,13 +91,13 @@ ms.locfileid: "72688897"
   
  다음 그림에서는 두 개의 인덱스가 있는 테이블에 대한 행 구조를 보여 줍니다.  
   
- ![두 개의 인덱스가 있는 테이블에 대 한 행 구조입니다.](../../database-engine/media/hekaton-tables-4.gif "두 개의 인덱스가 있는 테이블에 대 한 행 구조입니다.")  
+ ![두 개의 인덱스가 있는 테이블에 대한 행 구조](../../database-engine/media/hekaton-tables-4.gif "두 개의 인덱스가 있는 테이블에 대한 행 구조")  
   
  시작 및 종료 타임스탬프는 특정 행 버전의 유효 기간을 나타냅니다. 이 기간에 시작되는 트랜잭션은 이 행 버전을 참조할 수 있습니다. 자세한 내용은 [메모리 액세스에 최적화된 테이블의 트랜잭션](memory-optimized-tables.md)을 참조하세요.  
   
  인덱스 포인터는 체인에서 해시 버킷에 속한 그 다음 행을 가리킵니다. 다음 그림에서는 두 개의 열(이름, 도시)이 있는 테이블의 구조를 보여 줍니다. 여기에는 두 개의 인덱스가 있는데, 하나의 이름 열에 대한 것이고 다른 하나는 도시 열에 대한 것입니다.  
   
- ![두 개의 열과 인덱스가 있는 테이블의 구조입니다.](../../database-engine/media/hekaton-tables-5.gif "두 개의 열과 인덱스가 있는 테이블의 구조입니다.")  
+ ![두 개의 열과 인덱스가 있는 테이블의 구조](../../database-engine/media/hekaton-tables-5.gif "두 개의 열과 인덱스가 있는 테이블의 구조")  
   
  이 그림에서는 John과 Jane이라는 이름이 첫 번째 버킷에 해시됩니다. Susan은 두 번째 버킷에 해시됩니다. 베이징과 보고타는 첫 번째 버킷에 해시됩니다. 파리와 프라하는 두 번째 버킷에 해시됩니다.  
   
@@ -117,20 +117,20 @@ ms.locfileid: "72688897"
   
  200보다 큰 시간의 경우 테이블에 다음 행이 포함됩니다.  
   
-|NAME|특성|  
+|속성|City|  
 |----------|----------|  
 |John|베이징|  
 |Jane|프라하|  
   
  그러나 시작 시간이 100인 활성 트랜잭션은 다음 버전의 테이블을 참조합니다.  
   
-|NAME|특성|  
+|속성|City|  
 |----------|----------|  
 |John|파리|  
 |Jane|프라하|  
 |Susan|보고타|  
   
-##  <a name="bkmk_ExampleComputation"></a> 예제: 테이블 및 행 크기 계산  
+##  <a name="bkmk_ExampleComputation"></a>예: 테이블 및 행 크기 계산  
  해시 인덱스의 경우 실제 버킷 수는 가장 가까운 2의 제곱으로 반올림됩니다. 예를 들어, 지정된 bucket_count가 100000인 경우 인덱스의 실제 버킷 수는 131072입니다.  
   
  다음 정의의 Orders 테이블을 살펴보십시오.  
@@ -188,7 +188,7 @@ GO
   
 -   NULL 배열 크기가 홀수이고 전체 형식 열이 있으므로 NULL 배열 패딩은 1입니다.  
   
--   패딩  
+-   안쪽 여백  
   
     -   가장 큰 맞춤 요구 사항은 8입니다.  
   
@@ -222,7 +222,7 @@ select * from sys.dm_db_xtp_table_memory_stats
 where object_id = object_id('dbo.Orders')  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [메모리 액세스에 최적화된 테이블](memory-optimized-tables.md)  
+## <a name="see-also"></a>참고 항목  
+ [메모리 최적화 테이블](memory-optimized-tables.md)  
   
   

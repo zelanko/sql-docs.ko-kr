@@ -16,32 +16,32 @@ ms.assetid: daa8319a-49aa-4c1c-9af6-0b01e9ab2f9d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dba8636f07b88f1c05d465b844376c6ef3e61240
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931653"
 ---
 # <a name="position-property-ado"></a>Position 속성(ADO)
-내 현재 위치를 나타내는 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다.  
+[스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체 내의 현재 위치를 나타냅니다.  
   
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
- 설정 하거나 반환 된 **긴** 스트림의 현재 위치부터에서의 바이트 수에서 오프셋을 지정 하는 값입니다. 기본값은 스트림의 첫 번째 바이트를 나타내는 0입니다.  
+ 스트림의 시작 부분에서 현재 위치의 오프셋 (바이트 수)을 지정 하는 **Long** 값을 설정 하거나 반환 합니다. 기본값은 0 이며 스트림의 첫 번째 바이트를 나타냅니다.  
   
 ## <a name="remarks"></a>설명  
- 현재 위치가 스트림의 맨 끝 뒤 지점으로 이동할 수 있습니다. 스트림의 끝을 넘어서 현재 위치를 지정 하는 경우는 [크기](../../../ado/reference/ado-api/size-property-ado-stream.md) 의 합니다 **Stream** 개체를 적절 하 게 증가 합니다. 이러한 방식으로 추가 된 새 바이트 null이 됩니다.  
+ 현재 위치를 스트림 끝의 지점으로 이동할 수 있습니다. 스트림의 끝을 넘어 현재 위치를 지정 하면 **스트림** 개체의 [크기가](../../../ado/reference/ado-api/size-property-ado-stream.md) 그에 따라 증가 됩니다. 이러한 방식으로 추가 된 새 바이트는 모두 null이 됩니다.  
   
 > [!NOTE]
->  **위치** 항상 바이트를 측정 합니다. 텍스트 스트림에서 멀티 바이트 문자 집합을 사용 하는 문자 수를 확인 하려면 문자 크기에 따라 위치를 곱하십시오. 예를 들어, 2 바이트 문자 집합에 대 한 첫 번째 문자는 위치 0, 2, 세 번째 문자 위치에 있는 두 번째 문자 위치 4에 있습니다.  
+>  **Position** 은 항상 바이트를 측정 합니다. 멀티 바이트 문자 집합을 사용 하는 텍스트 스트림의 경우 위치를 문자 크기와 곱하여 문자 번호를 결정 합니다. 예를 들어 2 바이트 문자 집합의 경우 첫 번째 문자는 위치 0, 위치 2의 두 번째 문자, 위치 4의 세 번째 문자 등에 있습니다.  
   
 > [!NOTE]
->  현재 위치를 변경 하려면 음수 값을 사용할 수 없습니다는 **Stream**합니다. 양의 정수만 사용할 수 있습니다 **위치**합니다.  
+>  음수 값은 **스트림에서**현재 위치를 변경 하는 데 사용할 수 없습니다. **위치**에는 양수만 사용할 수 있습니다.  
   
 > [!NOTE]
->  에 대 한 읽기 전용 **Stream** 개체, 경우 ADO 오류를 반환 하지 것입니다 **위치** 보다 큰 값으로 설정 되는 **크기** 의 합니다 **Stream**합니다. 크기 변경 되지 않습니다 합니다 **Stream**, alter 또는 합니다 **Stream** 어떤 방식으로든에서 콘텐츠. 그러나이 작업을 수행 하므로 피해 야 그 결과 의미가 **위치**값입니다.  
+>  읽기 전용 **스트림** 개체의 경우 **Position** 이 **스트림의** **크기** 보다 큰 값으로 설정 된 경우 ADO에서 오류를 반환 하지 않습니다. 이는 **스트림**크기를 변경 하거나 **스트림** 내용을 변경 하지 않습니다. 그러나이 작업을 수행 하면 의미 없는 **위치**값이 발생 하므로이 작업을 수행 하지 말아야 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [스트림 개체(ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Charset 속성(ADO)](../../../ado/reference/ado-api/charset-property-ado.md)

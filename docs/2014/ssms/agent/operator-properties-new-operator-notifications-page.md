@@ -1,5 +1,5 @@
 ---
-title: '연산자 속성: 새 운영자 (알림 페이지) | Microsoft Docs'
+title: '운영자 속성: 새 운영자 (알림 페이지) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a04465712667205674ddd8ea8bab7d82c3250261
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62630690"
 ---
-# <a name="operator-properties-new-operator-notifications-page"></a>연산자 속성: 새 연산자(알림 페이지)
+# <a name="operator-properties-new-operator-notifications-page"></a>운영자 속성: 새 운영자(알림 페이지)
   이 페이지를 사용하여 운영자에게 알릴 경고 및 작업을 설정할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **경고**  
  인스턴스의 경고를 표시합니다.  
   
@@ -37,16 +37,17 @@ ms.locfileid: "62630690"
   
  경고 목록과 작업 목록에서는 공통적으로 다음 옵션을 사용할 수 있습니다.  
   
- **전자 메일**  
+ **주소**  
  전자 메일을 사용하여 이 운영자에게 알립니다.  
   
  **호출기**  
  호출기 주소로 전자 메일을 보내 이 운영자에게 알립니다.  
   
  **Net send**  
- **net send**를 사용하여 이 운영자에게 알립니다.  
+ 
+  **net send**를 사용하여 이 운영자에게 알립니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [연산자](operators.md)  
   
   

@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a57f4b1a56c3a23c9be8957f97fa7b352f9674a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638167"
 ---
 # <a name="columns-with-a-name"></a>이름이 있는 열
@@ -33,7 +33,7 @@ ms.locfileid: "62638167"
 -   하나의 열에 다른 이름이 있는 경우  
   
 ## <a name="column-name-starts-with-an-at-sign-"></a>열 이름이 \@ 기호로 시작하는 경우  
- 열 이름을 사용 하 여 시작 하는 경우는 at 기호 (\@)는 슬래시 (/)의 특성을 포함 하지 않습니다는 <`row`> 해당 열 값이 있는 요소가 만들어집니다. 예를 들어 다음 쿼리는 2개의 열(\@PmId, Name)로 구성된 행 집합을 반환합니다. 결과 XML에서 **PmId** 특성이 해당 <`row`> 요소에 추가되고 ProductModelID의 값이 여기에 할당됩니다.  
+ 열 이름이 at 기호 (\@)로 시작 하 고 슬래시 기호 (/)를 포함 하지 않는 경우 해당 열 값을 가진 <`row`> 요소의 특성이 생성 됩니다. 예를 들어 다음 쿼리는 2개의 열(\@PmId, Name)로 구성된 행 집합을 반환합니다. 결과 XML에서 **PmId** 특성이 해당 <`row`> 요소에 추가되고 ProductModelID의 값이 여기에 할당됩니다.  
   
 ```  
   
@@ -66,7 +66,7 @@ go
 ```  
   
 ## <a name="column-name-does-not-start-with-an-at-sign-"></a>열 이름이 \@ 기호로 시작하지 않는 경우  
- 열 이름을 사용 하 여 시작 되지 않으면는 at 기호 (\@), XPath 노드 테스트 중 하나가 아닌 및 행 요소의 하위 요소인 XML 요소 슬래시 기호 (/)를 포함 하지 않는 <`row`> 기본적으로 생성 됩니다.  
+ 열 이름이 기호 (\@)로 시작 하지 않고 XPath 노드 테스트 중 하나가 아니고 슬래시 기호 (/)를 포함 하지 않는 경우 기본적으로 <`row`> ROW 요소의 하위 요소인 XML 요소가 생성 됩니다.  
   
  다음 쿼리는 결과인 열 이름을 지정합니다. 따라서 <`result`> 요소 자식이 <`row`> 요소에 추가됩니다.  
   
@@ -128,7 +128,7 @@ AND    E.EmployeeID=1
 FOR XML PATH  
 ```  
   
- PATH 모드에서 XML을 생성할 때 열 이름이 경로로 사용됩니다. 직원 ID 값을 포함 하는 열 이름을 사용 하 여 시작 '\@'. 따라서 특성을 **EmpID**에 추가 되는 <`row`> 요소입니다. 다른 모든 열에는 계층을 나타내는 열 이름에 슬래시 기호('/')가 있습니다. 결과 XML은 <`row`> 요소 아래에 <`EmpName`> 자식을 포함하고 <`EmpName`> 자식은 <`First`>, <`Middle`> 및 <`Last`> 요소 자식을 갖습니다.  
+ PATH 모드에서 XML을 생성할 때 열 이름이 경로로 사용됩니다. 직원 ID 값을 포함 하는 열 이름은 '\@'로 시작 합니다. 따라서 **EmpID**특성은 <`row`> 요소에 추가 됩니다. 다른 모든 열에는 계층을 나타내는 열 이름에 슬래시 기호('/')가 있습니다. 결과 XML은 <`EmpName`> 요소 아래에 <`row`> 자식을 포함하고 <`EmpName`> 자식은 <`First`>, <`Middle`> 및 <`Last`> 요소 자식을 갖습니다.  
   
 ```  
 <row EmpID="1">  
@@ -239,7 +239,7 @@ FOR XML PATH
 </row>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [FOR XML에서 PATH 모드 사용](use-path-mode-with-for-xml.md)  
   
   

@@ -15,16 +15,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 43f68015c7488c1fcf07ccff612950038f873855
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62518956"
 ---
 # <a name="data-sources-and-connection-methods"></a>데이터 원본 및 연결 메서드
   이러한 메서드를 사용하여 데이터 원본 연결 및 자격 증명을 설정하고 관리할 수 있습니다.  
   
-|메서드|작업|  
+|방법|작업|  
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.CreateDataSource%2A>|보고서 서버 데이터베이스 또는 SharePoint 라이브러리에서 새 데이터 원본을 만듭니다.|  
 |<xref:ReportService2010.ReportingService2010.DisableDataSource%2A>|사용하도록 설정된 데이터 원본을 사용하지 않도록 설정합니다.|  
@@ -39,8 +39,8 @@ ms.locfileid: "62518956"
 |<xref:ReportService2010.ReportingService2010.TestConnectForDataSourceDefinition%2A>|데이터 원본에 대한 연결을 테스트합니다. 이 메서드는 데이터 원본의 직접 테스트를 지원합니다.|  
 |<xref:ReportService2010.ReportingService2010.TestConnectForItemDataSource%2A>|데이터 원본에 대한 연결을 테스트합니다. 이 메서드는 보고서나 모델 및 공유 데이터 원본에서 사용하는 게시된 데이터 원본의 테스트를 지원합니다.|  
   
-## <a name="see-also"></a>관련 항목  
- [웹 서비스와 .NET Framework를 사용하여 응용 프로그램 빌드](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
+## <a name="see-also"></a>참고 항목  
+ [웹 서비스와 .NET Framework를 사용하여 애플리케이션 빌드](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [보고서 서버 웹 서비스](../report-server-web-service.md)   
  [보고서 서버 웹 서비스 메서드](report-server-web-service-methods.md)   
  [기술 참조&#40;SSRS&#41;](../../technical-reference-ssrs.md)  

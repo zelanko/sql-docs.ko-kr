@@ -1,5 +1,5 @@
 ---
-title: 레코드 집합 (시각적 개체에 대 한 ADO C++ 구문) | Microsoft Docs
+title: 레코드 집합 (Visual C++ 구문에 대 한 ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,10 +16,10 @@ ms.assetid: affc847c-a533-4c8a-bdff-3682fdb5df5f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3a8c377ee920122a18f6a848923605c7007c6f25
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931372"
 ---
 # <a name="recordset-ado-for-visual-c-syntax"></a>레코드 집합(Visual C++ 구문에 대한 ADO)
@@ -118,5 +118,5 @@ WillChangeRecordset(EventReasonEnum adReason, EventStatusEnum *adStatus, _ADORec
 WillMove(EventReasonEnum adReason, EventStatusEnum *adStatus, _ADORecordset *pRecordset)  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

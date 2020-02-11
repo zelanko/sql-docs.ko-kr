@@ -1,5 +1,5 @@
 ---
-title: Oracle (OracleToSQL)에 연결 | Microsoft Docs
+title: Oracle에 연결 (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,48 +11,48 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 42ab1e77dbdb7cee237a9ec22c49a725a64390c0
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68264478"
 ---
 # <a name="connect-to-oracle-oracletosql"></a>Oracle에 연결(OracleToSQL)
-사용 된 **Connect to Oracle** 마이그레이션하려는 Oracle 데이터베이스에 연결 대화 상자.  
+**Oracle에 연결** 대화 상자를 사용 하 여 마이그레이션하려는 oracle 데이터베이스에 연결 합니다.  
   
-이 대화 상자에 액세스 하는 **파일** 메뉴에서 **Oracle에 연결**합니다. 이전에 연결한 경우에 명령입니다 **Oracle에 다시 연결**합니다.  
+이 대화 상자에 액세스 하려면 **파일** 메뉴에서 **Oracle에 연결**을 선택 합니다. 이전에 연결한 경우 명령은 **Oracle에 다시 연결**됩니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
 **공급자**  
-Oracle 데이터베이스에 대 한 연결에 대 한 데이터 액세스 공급자를 선택 합니다. 사용 가능한 공급자는 Oracle 클라이언트 공급자 및 OLE DB Provider입니다. 기본값은 Oracle 클라이언트 공급자입니다.  
+Oracle 데이터베이스에 연결 하기 위한 데이터 액세스 공급자를 선택 합니다. 사용 가능한 공급자는 Oracle 클라이언트 공급자와 OLE DB 공급자입니다. 기본값은 Oracle 클라이언트 공급자입니다.  
   
 **모드**  
-Standard, TNSNAME, 또는 연결 문자열 모드를 선택 합니다.  
+표준, TNSNAME 또는 연결 문자열 모드 중 하나를 선택 합니다.  
   
--   표준 모드에서는 입력 하거나 값 공급자, 서버 이름, 서버 포트, Oracle SID, 사용자 이름 및 암호를 선택 합니다.  
+-   표준 모드에서는 공급자, 서버 이름, 서버 포트, Oracle SID, 사용자 이름 및 암호에 대 한 값을 입력 하거나 선택 합니다.  
   
--   TNSNAME 모드에서 Oracle 데이터베이스, 사용자 이름 및 암호의 연결 식별자 (TNS 별칭)를 입력할 수 있습니다.  
+-   TNSNAME 모드에서 Oracle 데이터베이스, 사용자 이름 및 암호의 연결 식별자 (TNS alias)를 입력 합니다.  
   
--   연결 문자열 모드를 연결 문자열을 제공합니다.  
+-   연결 문자열 모드에서는 연결 문자열을 제공 합니다.  
   
     > [!IMPORTANT]  
-    > 텍스트 암호에 포함 될 수 있습니다 및 일반 텍스트로 전송 되기 때문에 연결 문자열 모드를 사용 하는 것은 좋지 않습니다.  
+    > 연결 문자열 모드를 사용 하는 것은 좋지 않습니다. 텍스트에 암호가 포함 될 수 있으며 일반 텍스트로 전송 되기 때문입니다.  
   
-기본값은 표준 모드.  
+기본값은 표준 모드입니다.  
   
 **서버 이름**  
 Oracle 서버 이름을 입력 합니다. 기본 서버 이름은 컴퓨터 이름과 동일 합니다. 표준 모드 옵션입니다.  
   
 **서버 포트**  
-1521 (기본값) 이외의 포트 번호를 Oracle에 대 한 연결을 사용 하는 경우에 포트 번호를 입력 합니다. 표준 모드 옵션입니다.  
+Oracle에 연결 하는 데 1521 (기본값) 이외의 포트 번호를 사용 하는 경우 포트 번호를 입력 합니다. 표준 모드 옵션입니다.  
   
-**식별자를 연결 합니다.**  
-Oracle 입력 식별자를 연결 합니다. 이 로컬 tnsnames.ora 파일에 정의 된 데이터베이스의 별칭입니다.  
+**연결 식별자**  
+Oracle 연결 식별자를 입력 합니다. 로컬 tnsnames. ora 파일에 정의 된 데이터베이스의 별칭입니다.  
   
 TNSNAME 모드 옵션입니다.  
   
 **Oracle SID**  
-데이터베이스에 대 한 SID를 입력 합니다. SID는 컴퓨터에 Oracle 데이터베이스를 구분 하는 식별자입니다. 데이터베이스에 대 한 기본 SID는 데이터베이스 이름의 처음 8 자입니다.  
+데이터베이스에 대 한 SID를 입력 합니다. SID는 컴퓨터의 Oracle 데이터베이스를 구별 하는 식별자입니다. 데이터베이스의 기본 SID는 데이터베이스 이름의 처음 8 자입니다.  
   
 표준 모드 옵션입니다.  
   
@@ -60,17 +60,17 @@ TNSNAME 모드 옵션입니다.
 SSMA가 Oracle 데이터베이스에 연결 하는 데 사용할 사용자 이름을 입력 합니다.  
   
 **암호**  
-사용자 이름에 대한 암호를 입력합니다.  
+사용자 이름 암호를 입력합니다.  
   
 **연결 문자열**  
 > [!IMPORTANT]  
-> 텍스트 암호에 포함 될 수 있습니다 및 일반 텍스트로 전송 되기 때문에 연결 문자열 모드를 사용 하는 것은 좋지 않습니다.  
+> 연결 문자열 모드를 사용 하는 것은 좋지 않습니다. 텍스트에 암호가 포함 될 수 있으며 일반 텍스트로 전송 되기 때문입니다.  
   
-연결 문자열 모드를 사용 하면 Oracle에 연결에 대 한 전체 연결 문자열을 입력 합니다.  
+연결 문자열 모드를 사용 하는 경우 Oracle 연결에 대 한 전체 연결 문자열을 입력 합니다.  
   
-연결 문자열 매개 변수 이름 / 값 쌍으로 구성 됩니다.  
+연결 문자열은 매개 변수 이름 및 값 쌍으로 구성 됩니다.  
   
--   OLE DB 연결 문자열 정보를 참조 하세요 [Microsoft OLE DB Provider for Oracle](https://go.microsoft.com/fwlink/?LinkId=85640) MSDN 라이브러리 문서.  
+-   OLE DB 연결 문자열 정보는 MSDN Library에서 [Microsoft OLE DB Provider for Oracle](https://go.microsoft.com/fwlink/?LinkId=85640) 문서를 참조 하세요.  
   
-SSMA 연결 문자열의 경우 항상 공급자 매개 변수를 포함 합니다. 또한 Oracle에 연결할 때 포트 매개 변수를 포함 해야 합니다.  
+SSMA 연결 문자열의 경우 항상 Provider 매개 변수를 포함 합니다. 또한 Oracle에 연결할 때 Port 매개 변수를 포함 해야 합니다.  
   

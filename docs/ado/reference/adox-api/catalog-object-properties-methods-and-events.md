@@ -13,21 +13,21 @@ ms.assetid: 90a05168-87d0-45e8-8b32-0b64fec74ad2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 32321406d6de6aad4674bdea6ea9a5c086369259
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67967042"
 ---
 # <a name="catalog-object-properties-methods-and-events"></a>카탈로그 개체 속성, 메서드 및 이벤트
 ## <a name="propertiescollections"></a>속성/컬렉션  
  [ActiveConnection 속성](../../../ado/reference/adox-api/activeconnection-property-adox.md)  
   
- [그룹 컬렉션](../../../ado/reference/adox-api/groups-collection-adox.md)  
+ [Groups 컬렉션](../../../ado/reference/adox-api/groups-collection-adox.md)  
   
- [Procedures 컬렉션](../../../ado/reference/adox-api/procedures-collection-adox.md)  
+ [프로시저 컬렉션](../../../ado/reference/adox-api/procedures-collection-adox.md)  
   
- [테이블 컬렉션](../../../ado/reference/adox-api/tables-collection-adox.md)  
+ [Tables 컬렉션](../../../ado/reference/adox-api/tables-collection-adox.md)  
   
  [사용자 컬렉션](../../../ado/reference/adox-api/users-collection-adox.md)  
   
@@ -43,5 +43,5 @@ ms.locfileid: "67967042"
 ## <a name="events"></a>이벤트  
  없음  
   
-## <a name="see-also"></a>관련 항목  
- [Catalog 개체(ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)
+## <a name="see-also"></a>참고 항목  
+ [카탈로그 개체(ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)

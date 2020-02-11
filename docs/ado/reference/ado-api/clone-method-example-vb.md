@@ -15,14 +15,14 @@ ms.assetid: 64cb1753-e074-4a2d-8b74-7c35f3f6f64d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 05bd5c203b252909ad4707681aff49181bfde162
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919994"
 ---
 # <a name="clone-method-example-vb"></a>Clone 메서드 예제(VB)
-이 예제에서는 합니다 [복제](../../../ado/reference/ado-api/clone-method-ado.md) 의 복사본을 만드는 방법을 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 다음 각 복사본의 레코드 포인터를 독립적으로 위치를 지정할 수 있도록 합니다.  
+이 예제에서는 [Clone](../../../ado/reference/ado-api/clone-method-ado.md) 메서드를 사용 하 여 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 의 복사본을 만든 다음 사용자가 각 복사본의 레코드 포인터를 독립적으로 배치할 수 있도록 합니다.  
   
 ```  
 'BeginCloneVB  
@@ -127,6 +127,6 @@ End Sub
 'EndCloneVB  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Clone 메서드 (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

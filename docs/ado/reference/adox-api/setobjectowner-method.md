@@ -17,14 +17,14 @@ ms.assetid: e5170a37-9d6e-43db-bfb6-9b6631fa3048
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 50a02898c1694fa43b8bf522a1a1bca65300efda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965235"
 ---
 # <a name="setobjectowner-method"></a>SetObjectOwner 메서드
-개체의 소유자를 지정 된 [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md)합니다.  
+[카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md)에 있는 개체의 소유자를 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,23 +35,23 @@ Catalog.SetObjectOwner ObjectName, ObjectType, OwnerName [,ObjectTypeId]
   
 #### <a name="parameters"></a>매개 변수  
  *ObjectName*  
- A **문자열** 소유자를 지정 하는 개체의 이름을 지정 하는 값입니다.  
+ 소유자를 지정할 개체의 이름을 지정 하는 **문자열** 값입니다.  
   
  *ObjectType*  
- A **긴** 하나일 수 있는 값의 합니다 [ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md) 소유자 형식을 지정 하는 상수입니다.  
+ 소유자 유형을 지정 하는 [ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md) 상수 중 하나일 수 있는 **Long** 값입니다.  
   
  *OwnerName*  
- **문자열** 지정 하는 값을 [이름](../../../ado/reference/adox-api/name-property-adox.md) 의 [사용자](../../../ado/reference/adox-api/user-object-adox.md) 또는 [그룹](../../../ado/reference/adox-api/group-object-adox.md) 개체를 소유 합니다.  
+ 개체를 소유할 [사용자](../../../ado/reference/adox-api/user-object-adox.md) 또는 [그룹](../../../ado/reference/adox-api/group-object-adox.md) 의 [이름을](../../../ado/reference/adox-api/name-property-adox.md) 지정 하는 **문자열** 값입니다.  
   
  *ObjectTypeId*  
- (선택 사항) A **Variant** OLE DB 사양에 정의 되지 않은 공급자 개체 형식의 GUID를 지정 하는 값입니다. 이 매개 변수는 필요한 경우 *ObjectType* 로 설정 된 **adPermObjProviderSpecific**고, 그렇지 않으면 사용 되지 않습니다.  
+ (선택 사항) OLE DB 사양에서 정의 되지 않은 공급자 개체 유형의 GUID를 지정 하는 **변형** 값입니다. 이 매개 변수는 *ObjectType* 이 **adPermObjProviderSpecific**로 설정 된 경우에 필요 합니다. 그렇지 않은 경우에는 사용 되지 않습니다.  
   
 ## <a name="remarks"></a>설명  
- 공급자를 지정 하 여 개체 소유자를 지원 하지 않는 경우 오류가 발생 합니다.  
+ 공급자가 개체 소유자 지정을 지원 하지 않는 경우 오류가 발생 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [Catalog 개체(ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
+ [카탈로그 개체(ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [GetObjectOwner 및 SetObjectOwner 메서드 예제 (VB)](../../../ado/reference/adox-api/getobjectowner-and-setobjectowner-methods-example-vb.md)   
  [GetObjectOwner 메서드(ADOX)](../../../ado/reference/adox-api/getobjectowner-method-adox.md)

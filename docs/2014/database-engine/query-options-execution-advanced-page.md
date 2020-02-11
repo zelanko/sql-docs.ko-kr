@@ -13,14 +13,15 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/03/2019
 ms.openlocfilehash: 39a43adeb82b154a076fc7bfc24cc56b54cc8640
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71199330"
 ---
 # <a name="query-options-execution-advanced-page"></a>쿼리 옵션 실행(고급 페이지)
 
+  
   **SET** 문을 사용하여 다양한 옵션을 사용할 수 있습니다. 이 페이지를 사용 하 여 Microsoft SQL Server 쿼리를 실행 하는 **SET** 옵션을 지정할 수 있습니다. 이러한 각 옵션에 대한 자세한 내용은 SQL Server 온라인 설명서를 참조하십시오.
   
 **SET NOCOUNT** 는 결과 집합이 포함 된 메시지로 행의 수를 반환 하지 않습니다. 이 옵션은 기본적으로 선택 취소되어 있습니다.
@@ -66,4 +67,4 @@ ms.locfileid: "71199330"
 
 자세한 내용은 [secure enclaves](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions) 및 [secure Enclave 증명](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions#secure-enclave-attestation)을 사용 하는 Always Encrypted를 참조 하세요.
 
-**기본값으로 다시 설정** 이 페이지의 모든 값을 원래 기본값으로 다시 설정합니다.
+**기본값으로 다시 설정** 이 페이지의 모든 값을 원래 기본값으로 다시 설정 합니다.

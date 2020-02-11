@@ -13,14 +13,14 @@ ms.assetid: 189240e8-3ffa-4024-81a9-c6cb5d17eee0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3a8a13ee7637c0cb16e33e626a218e28242dabf4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925771"
 ---
 # <a name="controlling-transactions-ado"></a>트랜잭션 제어(ADO)
-ADO에서는 트랜잭션 처리를 활용 하 여 연결을 지원 합니다 **BeginTrans**, **CommitTrans**, 및 **RollbackTrans** 메서드를  **연결** 개체입니다. ADO에서 트랜잭션 처리를 구현 하는 일반적인 개념은 다음 간단한 코드 조각에 나와 있습니다.  
+ADO **는 연결 개체에** 대 한 **BeginTrans**, **CommitTrans**및 **RollbackTrans** 메서드를 통해 연결 내에서 트랜잭션 처리를 지원 합니다. ADO에서 트랜잭션 처리를 구현 하는 일반적인 개념은 다음 간단한 코드 조각에 설명 되어 있습니다.  
   
 ```  
 Const DS = "MySqlServer"  
@@ -77,6 +77,6 @@ oRs.Close
 oConn.Close  
 ```  
   
- 여기서 트랜잭션 처리 한 단위의 작업으로 두 레코드를 업데이트 하는 두 개의 제품 이름 중 하나는 교환 또는 전혀 변경 되지 않도록 하는 데 사용 됩니다.  
+ 여기에서 트랜잭션 처리를 사용 하 여 두 레코드가 하나의 작업 단위로 업데이트 되 고 두 제품 이름이 함께 사용 되거나 변경 되지 않도록 합니다.  
   
- 트랜잭션 처리의 자세한 토론을 참조 하세요 [업데이트 및 데이터 유지](../../../ado/guide/data/updating-and-persisting-data.md)합니다.
+ 트랜잭션 처리에 대 한 자세한 논의는 [데이터 업데이트 및 유지](../../../ado/guide/data/updating-and-persisting-data.md)를 참조 하세요.

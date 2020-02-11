@@ -13,10 +13,10 @@ ms.assetid: 62bd7dc9-45b5-4ca9-8b52-457325e0ce9e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1811d46bb99b7cdb38bf6508d709826167f787f7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925601"
 ---
 # <a name="data-shaping"></a>데이터 셰이핑
@@ -48,4 +48,4 @@ ms.locfileid: "67925601"
   
 -   [공식적인 셰이프 문법](../../../ado/guide/data/formal-shape-grammar.md)  
   
--   [Visual Basic for Applications 기능](../../../ado/guide/data/visual-basic-for-applications-functions.md)
+-   [Visual Basic for Applications 함수](../../../ado/guide/data/visual-basic-for-applications-functions.md)

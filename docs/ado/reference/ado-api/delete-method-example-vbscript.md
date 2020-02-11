@@ -15,20 +15,20 @@ ms.assetid: 78935d6d-1c1a-4306-a83a-1763210c69f9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9464af64c9b55d49aa23336d48a21480c4c54013
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919113"
 ---
 # <a name="delete-method-example-vbscript"></a>Delete 메서드 예제(VBScript)
-이 예제에서는 합니다 [삭제](../../../ado/reference/ado-api/delete-method-ado-recordset.md) 에서 지정 된 레코드를 제거 하는 메서드를 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
+이 예제에서는 [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) 메서드를 사용 하 여 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)에서 지정 된 레코드를 제거 합니다.  
   
- 다음 예제에는 페이지 ASP (Active Server)를 사용 합니다. 완벽 하 게 작동 예제를 보려면 하거나 있어야 C:\Program Files\Microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb 위치한 AdvWorks.mdb (SDK와 함께 설치 됨)를 원본 또는 경로 반영 하도록 예제 코드를 편집 하는 데이터 이 파일의 실제 위치입니다. Microsoft Access 데이터베이스 파일입니다.  
+ Active Server 페이지 (ASP)에서 다음 예제를 사용 합니다. 이 완전 한 기능 예제를 보려면 C:\Program Files\Microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb에 있는 데이터 원본 AdvWorks (SDK와 함께 설치 됨)을 사용 하거나 예제 코드에서 경로를 편집 하 여 반영 해야 합니다. 이 파일의 실제 위치입니다. 이 파일은 Microsoft Access 데이터베이스 파일입니다.  
   
- 사용 하 여 **찾을** Adovbs.inc 파일을 찾아서을 사용 하려는 디렉터리에 배치 합니다. 메모장 이나 다른 텍스트 편집기에 다음 코드를 붙여 넣습니다. 잘라내기 및 저장 **DeleteVBS.asp**합니다. 모든 클라이언트 브라우저에서 결과 볼 수 있습니다.  
+ **찾기** 를 사용 하 여 Adovbs 파일을 찾은 다음 사용 하려는 디렉터리에 배치 합니다. 다음 코드를 잘라내어 메모장 또는 다른 텍스트 편집기에 붙여 넣고 **DeleteVBS**로 저장 합니다. 모든 클라이언트 브라우저에서 결과를 볼 수 있습니다.  
   
- 예를 실습을 사용해 합니다 [AddNew](../../../ado/reference/ado-api/addnew-method-example-vbscript.md) 일부 레코드를 추가 하려면 먼저 예제입니다. 그런 다음 삭제를 시도할 수 있습니다. 모든 클라이언트 브라우저에서 결과 확인 합니다.  
+ 예제를 실행 하려면 먼저 [AddNew](../../../ado/reference/ado-api/addnew-method-example-vbscript.md) 예제를 사용 하 여 일부 레코드를 추가 합니다. 그런 다음 삭제를 시도할 수 있습니다. 모든 클라이언트 브라우저에서 결과를 확인 합니다.  
   
 ```  
 <!-- BeginDeleteVBS -->  
@@ -169,6 +169,6 @@ End Sub
 <!-- EndDeleteVBS -->  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Delete 메서드 (ADO 레코드 집합)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

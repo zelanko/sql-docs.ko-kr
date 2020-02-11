@@ -18,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 905114d0190a7d1e8441e98249664c985a433988
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62473214"
 ---
 # <a name="assign-alerts-to-an-operator"></a>운영자에게 경고 할당
-  이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 운영자들이 작업에 대한 알림을 받을 수 있도록 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고를 운영자에게 할당하는 방법을 설명합니다.  
+  이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 항목에서는 또는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용 하 여에서 작업에 대 한 알림을 받을 수 있도록 에이전트 경고를 운영자에 게 할당 하는 방법에 대해 설명 합니다.  
   
  **항목 내용**  
   
@@ -35,7 +35,7 @@ ms.locfileid: "62473214"
   
      [보안](#Security)  
   
--   **다음을 사용하여 운영자에게 경고를 할당합니다.**  
+-   **다음을 사용 하 여 운영자에 게 경고를 할당 하려면**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -45,22 +45,26 @@ ms.locfileid: "62473214"
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 그래픽 방식으로 전체 경고 시스템을 간편하게 관리할 수 있도록 해 줍니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하면 경고 인프라를 쉽게 구성할 수 있습니다.  
+-   
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 그래픽 방식으로 전체 경고 시스템을 간편하게 관리할 수 있도록 해 줍니다. 
+  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하면 경고 인프라를 쉽게 구성할 수 있습니다.  
   
--   경고에 대한 응답으로 알림을 보내려면 먼저 메일을 보낼 수 있도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 구성해야 합니다. 자세한 내용은 [Configure SQL Server Agent Mail to Use Database Mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)을 참조하세요.  
+-   경고에 대한 응답으로 알림을 보내려면 먼저 메일을 보낼 수 있도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 구성해야 합니다. 자세한 내용은 [데이터베이스 메일 사용 하도록 메일 SQL Server 에이전트 구성](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)을 참조 하세요.  
   
 -   전자 메일 메시지 또는 호출기 알림을 전송하는 동안 오류가 발생하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 오류 로그에 오류가 보고됩니다.  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
- **sysadmin** 고정 서버 역할의 멤버만 운영자에 경고를 할당할 수 있습니다.  
+####  <a name="Permissions"></a> 권한  
+ 
+  **sysadmin** 고정 서버 역할의 멤버만 운영자에 경고를 할당할 수 있습니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-assign-alerts-to-an-operator"></a>운영자에게 경고를 할당하려면  
   
-1.  **개체 탐색기**에서 더하기 기호를 클릭하여 경고를 할당하려는 운영자가 포함된 서버를 확장합니다.  
+1.  
+  **개체 탐색기**에서 더하기 기호를 클릭하여 경고를 할당하려는 운영자가 포함된 서버를 확장합니다.  
   
 2.  더하기 기호를 클릭하여 **SQL Server 에이전트**를 확장합니다.  
   
@@ -68,9 +72,11 @@ ms.locfileid: "62473214"
   
 4.  경고를 할당하려는 운영자를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택한 후 **알림** 페이지를 선택합니다.  
   
-5.  _operator_name_**속성** 대화 상자의 **페이지 선택**에서 **알림**을 선택합니다.  
+5.  _Operator_name_**속성** 대화 상자의 **페이지 선택**에서 **알림**을 선택 합니다.  
   
-6.  **사용자에게 알림을 보내는 방법**아래에서 **경고** 를 선택하여 이 운영자에게 보내진 경고 목록을 보거나 **작업** 을 선택하여 이 운영자에게 알림을 보내는 작업 목록을 봅니다. 필요에 따라 각 알림에 대한 통지 방법을 정의하려면 다음 확인란을 하나 이상 선택합니다. **이메일**, **호출기** 또는 **Net 보내기**.  
+6.  
+  **사용자에게 알림을 보내는 방법**아래에서 **경고** 를 선택하여 이 운영자에게 보내진 경고 목록을 보거나 **작업** 을 선택하여 이 운영자에게 알림을 보내는 작업 목록을 봅니다. 
+  **전자 메일**, **호출기**또는 **Net send**중 하나 이상의 확인란을 선택하여 필요에 따라 각 알림에 대한 알림 방법을 정의합니다.  
   
 7.  완료되었으면 **확인**을 클릭합니다.  
   
@@ -97,6 +103,6 @@ ms.locfileid: "62473214"
     GO  
     ```  
   
- 자세한 내용은 [sp_add_notification &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)합니다.  
+ 자세한 내용은 [sp_add_notification &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)를 참조 하세요.  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 데이터를 검사 합니다. | Microsoft Docs
+title: 데이터 검사 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,16 +16,16 @@ ms.assetid: de1d74af-89b6-4f3f-a8c9-07c3e2b3c9a5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0245d492b7014b2dfc0097a9d3f2c9a7098eae51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925352"
 ---
 # <a name="examining-data"></a>데이터 검사
-합니다 [데이터 가져오기](../../../ado/guide/data/getting-data.md) 섹션에는 하나 이상의 데이터 원본에서 데이터를 검색 하는 방법을 설명 했습니다 **Recordset** 개체입니다. 이 섹션에서는 설명 **레코드 집합** 자세히 탐색 하는 방법 등을 **레코드 집합** 해당 데이터를 봅니다.  
+데이터 [가져오기](../../../ado/guide/data/getting-data.md) 섹션에서는 데이터 원본에서 하나 이상의 **레코드 집합** 개체로 데이터를 검색 하는 방법에 대해 설명 했습니다. 이 섹션에서는 **레코드** 집합을 탐색 하 고 데이터를 보는 방법을 비롯 하 여 **레코드 집합** 에 대해 자세히 설명 합니다.  
   
- **레코드 집합** 다양 한 지원 [속성 및 메서드](../../../ado/reference/ado-api/recordset-object-properties-methods-and-events.md) 이동한 후에 포함 된 데이터를 검사할 수 있습니다. 이러한 기능은 공급자에 따라 다릅니다. 일부 공급자는 일부 속성 또는 메서드를 지원 하지 않습니다.  
+ **레코드 집합** 은 내에 포함 된 데이터를 탐색 하 고 검사할 수 있는 다양 한 [속성 및 메서드](../../../ado/reference/ado-api/recordset-object-properties-methods-and-events.md) 를 지원 합니다. 이러한 기능은 공급자에 따라 다릅니다. 일부 공급자는 일부 속성 또는 메서드를 지원 하지 않을 수 있습니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

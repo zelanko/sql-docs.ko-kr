@@ -1,5 +1,5 @@
 ---
-title: 개발자&#39;가이드 (Analysis Services) | Microsoft Docs
+title: 개발자&#39;s 가이드 (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1beb0a644edb25537b85c559192ece9288c2de6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638784"
 ---
-# <a name="developer39s-guide-analysis-services"></a>개발자&#39;가이드 (Analysis Services)
+# <a name="developer39s-guide-analysis-services"></a>개발자&#39;s 가이드 (Analysis Services)
     
 ## <a name="in-this-section"></a>섹션 내용  
  [테이블 형식 모델 프로그래밍](tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)  
@@ -35,10 +35,10 @@ ms.locfileid: "62638784"
  [Analysis Services 스키마 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)  
  서버 상태, 서버 작업 및 데이터베이스 개체에 대한 정보를 제공하는 스키마 행 집합에 대해 설명합니다.  
   
- [Analysis Services Scripting Language &#40;ASSL&#41; 참조](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
+ [Analysis Services 스크립팅 언어 &#40;,&#41; 참조](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
  XMLA에 대한 ASSL 확장 프로그램에 대해 설명합니다. ASSL은 XMLA 사양을 보완하는 Analysis Services 다차원 모델에 대한 데이터 정의 및 조작 언어를 제공합니다.  
   
- [XMLA&#40;XML for Analysis&#41; 참조](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
+ [&#40;XMLA&#41; 참조 XML for Analysis](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
  XMLA가 사용자 지정 솔루션에 적용되는 방법을 이해하는 데 도움이 될 수 있는 XMLA 개념에 대해 설명합니다. 또한 XMLA 1.1 사양과의 호환성 수준에 대해서도 설명합니다.  
   
   

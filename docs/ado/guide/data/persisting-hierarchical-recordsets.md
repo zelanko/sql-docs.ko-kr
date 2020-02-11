@@ -1,5 +1,5 @@
 ---
-title: 계층적 레코드 집합 유지 | Microsoft Docs
+title: 계층 구조 레코드 집합 유지 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,18 +15,18 @@ ms.assetid: 43798bb5-98a6-4ad6-9bf8-78154b3a1827
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 34649bba37f922e7597bf09870e3e9d3bcf522dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924623"
 ---
 # <a name="persisting-hierarchical-recordsets"></a>계층적 레코드 집합 유지
-계층을 저장할 수 있습니다 **레코드 집합** ADTG 또는 XML 형식으로 호출 하 여 파일에는 [저장](../../../ado/reference/ado-api/save-method.md) 메서드. 그러나 두 가지 제한 사항 적용 계층을 저장 하는 경우 **레코드 집합**XML 형식에서: 경우 XML에 저장할 수 없습니다는 계층적 **Recordset** 보류 중인 업데이트가 포함 매개 변수가 있는 저장할 수 없습니다 계층적 **레코드 집합**.  
+[Save](../../../ado/reference/ado-api/save-method.md) 메서드를 호출 하 여 ADTG 또는 XML 형식의 파일에 계층적 **레코드 집합** 을 저장할 수 있습니다. 그러나 계층적 **레코드**집합을 xml 형식으로 저장할 때 두 가지 제한 사항이 적용 됩니다. 계층적 **레코드 집합** 에 보류 중인 업데이트가 포함 되어 있고 매개 변수가 있는 계층적 **레코드 집합**을 저장할 수 없는 경우에는 xml로 저장할 수 없습니다.  
   
- 데이터 셰이핑 공급자에 대 한 자세한 내용은 참조 하세요. [OLE DB에 대 한 Microsoft Data Shaping Service](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (ADO) 및 [for OLE DB Data Shaping Service 개요](https://msdn.microsoft.com/9f51e471-8e85-448e-9fb8-b64bbf767bf3)합니다.  
+ 데이터 셰이핑 공급자에 대 한 자세한 내용은 [Microsoft 데이터 셰이핑 service for OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (ADO) 및 [OLE DB 데이터 셰이핑 서비스 개요](https://msdn.microsoft.com/9f51e471-8e85-448e-9fb8-b64bbf767bf3)를 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [데이터 셰이핑 예제](../../../ado/guide/data/data-shaping-example.md)   
- [공식적인 셰이프 문법](../../../ado/guide/data/formal-shape-grammar.md)   
+## <a name="see-also"></a>참고 항목  
+ [데이터 셰이핑 예](../../../ado/guide/data/data-shaping-example.md)   
+ [공식 모양 문법](../../../ado/guide/data/formal-shape-grammar.md)   
  [일반적인 셰이핑 명령](../../../ado/guide/data/shape-commands-in-general.md)

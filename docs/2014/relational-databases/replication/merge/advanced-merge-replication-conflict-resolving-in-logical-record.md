@@ -14,23 +14,23 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ba249d99c991fafc377aee019d666b9fa11df8b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629920"
 ---
 # <a name="detecting-and-resolving-conflicts-in-logical-records"></a>논리적 레코드에서 충돌 감지 및 해결
-  이 항목에서는 논리적 레코드에서 충돌을 감지하고 해결하는 다양한 방법을 설명합니다. 두 개 이상의 노드에서 동일한 데이터를 변경할 때 병합 복제에서 충돌이 발생하거나 병합 복제에서 변경 내용을 복제할 때 제약 조건 위반과 같은 특정 오류 유형이 발생합니다. 충돌 감지 및 해결에 대한 자세한 내용은 [고급 병합 복제 충돌 감지 및 해결](advanced-merge-replication-conflict-detection-and-resolution.md)을 참조하십시오.  
+  이 항목에서는 논리적 레코드에서 충돌을 감지하고 해결하는 다양한 방법을 설명합니다. 두 개 이상의 노드에서 동일한 데이터를 변경할 때 병합 복제에서 충돌이 발생하거나 병합 복제에서 변경 내용을 복제할 때 제약 조건 위반과 같은 특정 오류 유형이 발생합니다. 충돌 감지 및 해결에 대한 자세한 내용은 [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md)을 참조하십시오.  
   
- 아티클의 충돌 추적 및 해결 수준을 지정하려면 [병합 아티클의 충돌 추적 및 해결 수준 지정](../publish/specify-merge-replication-properties.md#interactive-conflict-resolution)을 참조하십시오.  
+ 아티클의 충돌 추적 및 해결 수준을 지정하려면 [병합 아티클에 대 한 충돌 추적 및 해결 수준 지정](../publish/specify-merge-replication-properties.md#interactive-conflict-resolution)을 참조하십시오.  
   
 ## <a name="conflict-detection"></a>충돌 감지  
  논리적 레코드에 대한 충돌을 감지하는 방법은 두 가지 아티클 속성인 **column_tracking** 및 **logical_record_level_conflict_detection**을 확인하는 것입니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이상 버전에서는 논리적 레코드 수준 감지도 지원합니다.  
   
  **logical_record_level_conflict_detection** 아티클 속성은 TRUE 또는 FALSE로 설정할 수 있습니다. 이 값은 최상위 부모 아티클에 대해서만 설정해야 하며 자식 아티클에서는 무시됩니다. 이 값이 FALSE이면 병합 복제에서는 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서처럼 아티클에 대한 **column_tracking** 속성 값만 기반으로 하여 충돌을 감지합니다. 이 값이 TRUE이면 병합 복제에서는 아티클의 **column_tracking** 속성을 무시하고 논리적 레코드가 변경된 경우 충돌을 감지합니다. 예를 들어 다음과 같은 시나리오를 고려할 수 있습니다.  
   
- ![값을 포함하는 3개의 테이블 논리적 레코드](../media/logical-records-05.gif "Three table logical record with values")  
+ ![값을 포함하는 3개 테이블 논리적 레코드](../media/logical-records-05.gif "값을 포함하는 3개 테이블 논리적 레코드")  
   
  두 명의 사용자가 **Customers**, **Orders**또는 **OrderItems** 테이블에서 Customer2 논리적 레코드에 대한 값을 변경하는 경우 충돌이 감지됩니다. 이 예제에서는 주로 UPDATE 문을 통해 값을 변경한 경우를 다루지만 INSERT 또는 DELETE 문을 통해 변경한 경우에도 충돌이 감지될 수 있습니다.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "62629920"
   
  ![관련 행의 변경 내용을 보여 주는 일련의 테이블](../media/logical-records-08.gif "관련 행의 변경 내용을 보여 주는 일련의 테이블")  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [논리적 레코드를 사용하여 관련된 행의 변경 내용 그룹화](group-changes-to-related-rows-with-logical-records.md)  
   
   

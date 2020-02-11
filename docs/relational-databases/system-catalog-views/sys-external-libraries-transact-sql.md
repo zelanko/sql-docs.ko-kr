@@ -1,5 +1,5 @@
 ---
-title: external_libraries (Transact-sql) | Microsoft Docs
+title: sys. external_libraries (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -20,36 +20,36 @@ ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ac6ad0872e813d36d9884a00f979b2a5284cd4a3
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73536164"
 ---
-# <a name="sysexternal_libraries-transact-sql"></a>external_libraries (Transact-sql)  
+# <a name="sysexternal_libraries-transact-sql"></a>sys.external_libraries(Transact-SQL)  
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 는 R, Python 및 Java와 같은 외부 런타임과 관련 된 패키지 라이브러리의 관리를 지원 합니다.
 
 > [!NOTE]
-> SQL Server 2017에서는 R 언어 및 Windows 플랫폼이 지원됩니다. Windows 및 Linux 플랫폼에서 R, Python 및 Java는 SQL Server 2019 이상에서 지원 됩니다.
+> SQL Server 2017에서는 R 언어 및 Windows 플랫폼이 지원됩니다. Windows 및 Linux 플랫폼의 R, Python 및 Java는 SQL Server 2019 이상에서 지원됩니다.
 
 ## <a name="sysexternal_libraries"></a>sys.external_libraries
 
-카탈로그 뷰 external_libraries는 데이터베이스에 업로드 된 각 외부 라이브러리의 행을 나열 합니다.
+카탈로그 뷰 sys. external_libraries는 데이터베이스에 업로드 된 각 외부 라이브러리의 행을 나열 합니다.
 
-|열 이름 |데이터 형식 | 설명|
+|열 이름 |데이터 형식 | Description|
 |------|------|------|
 |external_library_id |int | 외부 라이브러리 개체의 ID입니다. |
 |name |sysname |외부 라이브러리의 이름입니다. 는 소유자 당 데이터베이스 내에서 고유 합니다.|
 |principal_id |int |이 외부 라이브러리를 소유 하는 보안 주체의 ID입니다. |
-|language | sysname | 외부 라이브러리를 지 원하는 언어나 런타임의 이름입니다. 유효한 값은 ' R ', ' Python ' 및 ' Java '입니다. 추가 런타임은 나중에 추가 될 수 있습니다.|
-|범위 |int |public 범위에 대해 0입니다. 1 전용 범위 |  
+|언어 | sysname | 외부 라이브러리를 지 원하는 언어나 런타임의 이름입니다. 유효한 값은 ' R ', ' Python ' 및 ' Java '입니다. 추가 런타임은 나중에 추가 될 수 있습니다.|
+|scope |int |public 범위에 대해 0입니다. 1 전용 범위 |  
 |scope_desc |varchar (7) |패키지가 공용 인지 아니면 전용인 지를 나타냅니다.|
 
 ## <a name="see-also"></a>참고 항목  
 
 + [sys.external_library_files](sys-external-library-files-transact-sql.md)  
 + [외부 라이브러리 만들기](../../t-sql/statements/create-external-library-transact-sql.md)  
-+ [SQL Server에 새로운 R 패키지 설치](../../advanced-analytics/r/install-additional-r-packages-on-sql-server.md)  
-+ [SQL Server에 새로운 Python 패키지 설치](../../advanced-analytics/python/install-additional-python-packages-on-sql-server.md)  
++ [SQL Server에 새 R 패키지 설치](../../advanced-analytics/r/install-additional-r-packages-on-sql-server.md)  
++ [SQL Server에 새 Python 패키지를 설치 합니다.](../../advanced-analytics/python/install-additional-python-packages-on-sql-server.md)  

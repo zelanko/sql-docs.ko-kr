@@ -1,6 +1,6 @@
 - name: SQL Server Machine Learning Services 설명서
   href: ../advanced-analytics/index.yml
-- name: SQL Server 시작 >
+- name: SQL Server 설명서 >
   href: ../sql-server/index.yml
 - name: 개요
   expanded: true
@@ -47,11 +47,11 @@
   items:
     - name: Python
       items:
-        - name: Python 스크립트 만들기
+        - name: Python 스크립트 실행
           href: ../advanced-analytics/tutorials/quickstart-python-create-script.md
-        - name: 데이터 형식 및 개체 처리
+        - name: 데이터 구조 및 개체
           href: ../advanced-analytics/tutorials/quickstart-python-data-structures.md
-        - name: Python 함수 쓰기
+        - name: Python 함수
           href: ../advanced-analytics/tutorials/quickstart-python-functions.md
         - name: 모델 학습 및 점수 매기기
           href: ../advanced-analytics/tutorials/quickstart-python-train-score-model.md
@@ -59,9 +59,9 @@
       items:
         - name: R 스크립트 만들기
           href: ../advanced-analytics/tutorials/quickstart-r-create-script.md
-        - name: 데이터 형식 및 개체 처리
+        - name: 데이터 형식 및 개체
           href: ../advanced-analytics/tutorials/quickstart-r-data-types-and-objects.md
-        - name: R 함수 작성
+        - name: R 함수
           href: ../advanced-analytics/tutorials/quickstart-r-functions.md
         - name: 모델 학습 및 점수 매기기
           href: ../advanced-analytics/tutorials/quickstart-r-train-score-model.md
@@ -139,36 +139,36 @@
               href: ../advanced-analytics/tutorials/walkthrough-deploy-and-use-the-model.md
         - name: RevoScaleR 심층 분석
           items:
-            - name: 1. 소개
+            - name: 소개
               href: ../advanced-analytics/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md
-            - name: 2. 데이터베이스 및 사용 권한 만들기
+            - name: 1. 데이터베이스 및 사용 권한 만들기
               href: ../advanced-analytics/tutorials/deepdive-work-with-sql-server-data-using-r.md
-            - name: 3. RxSqlServerData 개체 만들기
+            - name: 2. RxSqlServerData 개체 만들기
               href: ../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md
-            - name: 4. 데이터 쿼리 및 수정
+            - name: 3. 데이터 쿼리 및 수정
               href: ../advanced-analytics/tutorials/deepdive-query-and-modify-the-sql-server-data.md
-            - name: 5. 컴퓨팅 컨텍스트 정의
+            - name: 4. 컴퓨팅 컨텍스트 정의
               href: ../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md
-            - name: 6. 컴퓨팅 요약 통계
+            - name: 5. 컴퓨팅 요약 통계
               href: ../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md
-            - name: 7. 데이터 시각화
+            - name: 6. 데이터 시각화
               href: ../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md
-            - name: 8. 모델 만들기
+            - name: 7. 모델 만들기
               href: ../advanced-analytics/tutorials/deepdive-create-models.md
-            - name: 9. 새 데이터 점수 매기기
+            - name: 8. 새 데이터 점수 매기기
               href: ../advanced-analytics/tutorials/deepdive-score-new-data.md
-            - name: 10. 데이터 변환
+            - name: 9. 데이터 변환
               href: ../advanced-analytics/tutorials/deepdive-transform-data-using-r.md
-            - name: 11. rxImport를 사용하여 데이터 로드
+            - name: 10. rxImport를 사용하여 데이터 로드
               href: ../advanced-analytics/tutorials/deepdive-load-data-into-memory-using-rximport.md
-            - name: 12. rxDataStep을 사용하여 테이블 만들기
+            - name: 11. rxDataStep을 사용하여 테이블 만들기
               href: ../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md
-            - name: 13. 청크 분석 수행
+            - name: 12. 청크 분석 수행
               href: ../advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md
-            - name: 14. SQL Server와 XDF 파일 간에 데이터 이동
+            - name: 13. XDF 파일로 데이터 이동
               href: ../advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
-            - name: 15. rxExec를 사용하여 사용자 지정 R 보내기
-              href: ../advanced-analytics/tutorials/r-tutorial-custom-r-functions.md
+            - name: 14. rxExec를 사용하여 사용자 지정 R 보내기
+              href: ../advanced-analytics/tutorials/deepdive-custom-r-functions-using-rxexec.md
     - name: 예제 데이터
       items:
         - name: Airline 데이터 집합
@@ -243,14 +243,28 @@
           items:
             - name: Python 패키지 정보 가져오기
               href: ../advanced-analytics/package-management/python-package-information.md
-            - name: Python 패키지 설치
+            - name: sqlmlutils를 사용하여 설치
               href: ../advanced-analytics/package-management/install-additional-python-packages-on-sql-server.md
+            - name: Python 도구를 사용하여 설치
+              href: ../advanced-analytics/package-management/install-python-packages-standard-tools.md
         - name: 새 R 패키지 설치
           items:
             - name: R 패키지 정보 가져오기
               href: ../advanced-analytics/package-management/r-package-information.md
-            - name: R 패키지 설치
+            - name: R 도구를 사용하여 설치
+              href: ../advanced-analytics/package-management/install-r-packages-standard-tools.md
+            - name: sqlmlutils를 사용하여 설치
               href: ../advanced-analytics/package-management/install-additional-r-packages-on-sql-server.md
+            - name: T-SQL을 사용하여 설치
+              href: ../advanced-analytics/package-management/install-r-packages-with-tsql.md
+            - name: RevoScaleR 사용
+              items:
+                - name: RevoScaleR를 사용하여 설치
+                  href: ../advanced-analytics/package-management/install-r-packages-with-revoscaler.md
+                - name: 원격 R 관리 사용
+                  href: ../advanced-analytics/package-management/r-package-how-to-enable-or-disable.md
+                - name: R 패키지 동기화
+                  href: ../advanced-analytics/package-management/package-install-uninstall-and-sync.md
             - name: miniCRAN 리포지토리 만들기
               href: ../advanced-analytics/package-management/create-a-local-package-repository-using-minicran.md
             - name: R 패키지 사용 팁

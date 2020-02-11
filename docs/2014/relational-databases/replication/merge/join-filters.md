@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6bfb1bf3cd43bac47dfb06e4f24c74dc4835709b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629749"
 ---
 # <a name="join-filters"></a>Join Filters
@@ -43,7 +43,7 @@ ms.locfileid: "62629749"
 LoginID = SUSER_SNAME()  
 ```  
   
- 이 필터는 각 직원의 구독이 **HumanResources.Employee** 테이블에서 해당 직원(이 경우에는 단일 행임)과 관련된 데이터만 포함하도록 합니다. 자세한 내용은 [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md)를 참조하세요.  
+ 이 필터는 각 직원의 구독이 **HumanResources.Employee** 테이블에서 해당 직원(이 경우에는 단일 행임)과 관련된 데이터만 포함하도록 합니다. 자세한 내용은 [매개 변수가 있는 행 필터](parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  
   
  다음 단계는 두 테이블 간에 조인을 지정하는 데 사용된 구문과 유사한 구문을 사용하여 이 필터를 각 관련 테이블로 확장하는 것입니다. 첫 번째 조인 필터 절은 다음과 같습니다.  
   
@@ -86,7 +86,7 @@ SalesOrderHeader.SalesOrderID = SalesOrderDetail.SalesOrderID
   
      하지만 이러한 모든 논리를 하위 쿼리가 아닌 조인 필터로 표시하는 것이 좋습니다. 애플리케이션에서 행 필터에 하위 쿼리를 사용해야 할 경우에는 하위 쿼리가 변경하지 않는 조회 데이터만 참조하도록 해야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [병합 복제의 게시된 데이터 필터링](filter-published-data-for-merge-replication.md)   
  [매개 변수가 있는 행 필터](parameterized-filters-parameterized-row-filters.md)  
   

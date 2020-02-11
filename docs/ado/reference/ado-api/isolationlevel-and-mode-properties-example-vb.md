@@ -1,5 +1,5 @@
 ---
-title: IsolationLevel 및 모드 속성 예제 (VB) | Microsoft Docs
+title: IsolationLevel 및 Mode 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 3382fd41-0aa1-4091-97d3-624403111e07
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a5826cc8edcb857ffeb10cc197134708d20468b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918411"
 ---
-# <a name="isolationlevel-and-mode-properties-example-vb"></a>IsolationLevel 및 모드 속성 예제 (VB)
-이 예제에서는 합니다 [모드](../../../ado/reference/ado-api/mode-property-ado.md) 전용 연결을 여는 속성 및 [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) 다른 트랜잭션의 격리 된 상태에서 수행 하는 트랜잭션을 열지 속성.  
+# <a name="isolationlevel-and-mode-properties-example-vb"></a>IsolationLevel 및 Mode 속성 예제 (VB)
+이 예에서는 [Mode](../../../ado/reference/ado-api/mode-property-ado.md) 속성을 사용 하 여 배타적 연결을 열고 [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) 속성을 사용 하 여 다른 트랜잭션과 분리 하 여 수행 되는 트랜잭션을 엽니다.  
   
 ```  
 'BeginIsolationLevelVB  
@@ -115,7 +115,7 @@ End Sub
 'EndIsolationLevelVB  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [연결 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+## <a name="see-also"></a>참고 항목  
+ [Connection 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [IsolationLevel 속성](../../../ado/reference/ado-api/isolationlevel-property.md)   
  [Mode 속성(ADO)](../../../ado/reference/ado-api/mode-property-ado.md)

@@ -16,30 +16,30 @@ ms.assetid: 6aaaf6d0-1376-4473-bea6-b81f2645a9ac
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f242a3596735a4bc43256d05b87100e71295a3da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926433"
 ---
 # <a name="vbscript-ado-programming"></a>VBScript ADO 프로그래밍
 ## <a name="creating-an-ado-project"></a>ADO 프로젝트 만들기  
- Microsoft Visual Basic, Scripting Edition 지원 하지 않으므로 형식 라이브러리 프로젝트에서 ADO를 참조할 필요가 없습니다. 따라서 명령줄 완성과 같은 관련된 없는 기능 지원 됩니다. 또한 기본적으로 ADO 열거 상수 VBScript에서 정의 되지 않습니다.  
+ Microsoft Visual Basic, Scripting Edition은 형식 라이브러리를 지원 하지 않으므로 프로젝트에서 ADO를 참조할 필요가 없습니다. 따라서 명령줄 완성 등의 관련 기능은 지원 되지 않습니다. 또한 기본적으로 ADO 열거 상수는 VBScript에서 정의 되지 않습니다.  
   
- 그러나 ADO 제공 두 명의 VBScript와 함께 사용 될 다음 정의 포함 하는 파일을 포함 합니다.  
+ 그러나 ADO에서는 VBScript와 함께 사용할 다음 정의를 포함 하는 두 개의 포함 파일을 제공 합니다.  
   
--   서버 쪽 스크립팅 사용 Adovbs.inc 기본적으로는 c:\Program Files\Common Files\System\ado\ 폴더에 설치 됩니다.  
+-   서버 쪽 스크립팅에 Adovbs를 사용 합니다 .이는 기본적으로 c:\Program Files\Common Files\System\ado\ 폴더에 설치 됩니다.  
   
--   클라이언트 쪽 스크립팅 사용 Adcvbs.inc 기본적으로는 c:\Program Files\Common Files\System\msdac\ 폴더에 설치 됩니다.  
+-   클라이언트 쪽 스크립팅에 대해 기본적으로 c:\Program Files\Common Files\System\msdac\ 폴더에 설치 되는 Adcvbs inc.를 사용 합니다.  
   
- 복사 및 ASP 페이지에 이러한 파일에서 상수 정의 붙여 하거나, 서버 쪽 스크립팅, 수행 하는 경우 웹 사이트의 폴더로 Adovbs.inc 파일을 복사 하 고 다음과 같은 ASP 페이지에서 참조 합니다.  
+ 이러한 파일의 상수 정의를 복사 하 여 ASP 페이지에 붙여넣거나, 서버 쪽 스크립팅을 수행 하는 경우 Adovbs 파일을 웹 사이트의 폴더에 복사 하 고 다음과 같이 ASP 페이지에서 참조 합니다.  
   
 ```vb
 <!--#include File="adovbs.inc"-->  
 ```  
   
-## <a name="creating-ado-objects-in-vbscript"></a>Vbscript에서 ADO 개체 만들기  
- 사용할 수 없습니다는 **Dim** VBScript의 특정 형식으로 개체를 할당 하는 문입니다. 또한 VBScript을 지원 하지 않습니다는 **새로 만들기** 구문을 사용 합니다 **Dim** 응용 프로그램에 대 한 Visual Basic의 문입니다. 대신 사용 해야 합니다 **CreateObject** 함수 호출:  
+## <a name="creating-ado-objects-in-vbscript"></a>VBScript에서 ADO 개체 만들기  
+ VBScript의 특정 형식에 개체를 할당 하는 데 **Dim** 문을 사용할 수 없습니다. 또한 VBScript는 Visual Basic for Applications에서 **Dim** 문에 사용 되는 **새** 구문을 지원 하지 않습니다. 대신 **CreateObject** 함수 호출을 사용 해야 합니다.  
   
 ```vb
 Dim Rs1  
@@ -47,7 +47,7 @@ Set Rs1 = Server.CreateObject( "ADODB.Recordset" )
 ```  
   
 ## <a name="vbscript-examples"></a>VBScript 예제  
- 다음 코드는 페이지 ASP (Active Server) 파일에서 VBScript 서버 쪽 프로그래밍의 일반적인 예:  
+ 다음 코드는 ASP (Active Server 페이지) 파일에서 VBScript 서버 쪽 프로그래밍의 일반적인 예입니다.  
   
 ```vb
 <%  @LANGUAGE="VBSCRIPT" %>  
@@ -74,13 +74,13 @@ Response.Write("Success!")
 </HTML>  
 ```  
   
- 보다 구체적인 VBScript 예제 ADO 설명서에 포함 됩니다. 자세한 내용은 [Microsoft Visual Basic Scripting Edition의 ADO 코드 예제](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)합니다.  
+ 보다 구체적인 VBScript 예제가 ADO 설명서에 포함 되어 있습니다. 자세한 내용은 [Microsoft Visual Basic Scripting Edition의 ADO 코드 예제](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)를 참조 하세요.  
   
-## <a name="differences-between-vbscript-and-visual-basic"></a>VBScript 및 Visual Basic 간의 차이점  
- Vbscript ADO를 사용 하 여 Visual Basic을 사용 하 여 ADO를 사용 하 여 구문을 사용 하는 방법을 비롯 한 다양 한 방식에 것과 비슷합니다. 그러나 중요 한 차이점이 몇 개 있습니다.  
+## <a name="differences-between-vbscript-and-visual-basic"></a>VBScript와 Visual Basic의 차이점  
+ VBScript와 함께 ado를 사용 하는 것은 구문을 사용 하는 방법을 비롯 하 여 여러 가지 방법으로 Visual Basic ADO를 사용 하는 것과 비슷합니다 그러나 다음과 같은 몇 가지 중요 한 차이점이 있습니다.  
   
--   VBScript만 Variant 데이터 형식의 다양 한 유형의 데이터를 저장할 수 있는 지원 합니다. Variant 데이터 형식에 필요한 데이터를 저장할 수 있습니다 및 VBScript 수행한 캐스팅으로 인해 데이터를 적절 하 게 작동 합니다. ADO에 필요한 형식을 인식 하 고 적절 하 게 변형 값으로 변환 합니다.  
+-   VBScript는 여러 유형의 데이터를 보유할 수 있는 Variant 데이터 형식만 지원 합니다. 필요한 데이터를 Variant 데이터 형식에 저장할 수 있으며 VBScript에서 수행 하는 캐스팅으로 인해 데이터가 제대로 작동 합니다. ADO에서 요구 하는 형식을 인식 하 고이에 따라 변형의 값을 변환 합니다.  
   
--   사용할 수 없습니다 **에서 오류 goto \<레이블 >** VBScript 내에서.  
+-   VBScript 내에서 **오류 goto \<레이블>를** 사용할 수 없습니다.  
   
--   VBScript와 같은 기본 제공 Visual Basic 함수 중 일부를 지원 **Msgbox**하십시오 **날짜**, 및 **IsNumeric**합니다. 그러나 VBScript Visual Basic의 하위 집합 이기 때문에 일부 기본 제공 함수는 지원 됩니다. 예를 들어, VBScript 지원 하지 않습니다 합니다 **형식** 함수와 파일 I/O 함수입니다.
+-   VBScript는 **Msgbox**, **Date**및 **IsNumeric**와 같은 일부 기본 제공 Visual Basic 기능을 지원 합니다. 그러나 VBScript는 Visual Basic의 하위 집합 이기 때문에 일부 기본 제공 함수는 지원 되지 않습니다. 예를 들어 VBScript는 **Format** 함수 및 파일 i/o 함수를 지원 하지 않습니다.

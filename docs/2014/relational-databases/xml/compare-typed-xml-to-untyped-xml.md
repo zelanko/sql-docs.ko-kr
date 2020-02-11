@@ -26,17 +26,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 98cbaa59ea78e0033e9a534915987576347db604
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637621"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>형식화된 XML과 형식화되지 않은 XML 비교
-  `xml` 유형의 변수, 매개 변수 및 열을 만들 수 있습니다. 선택적으로 XML 스키마 컬렉션을 `xml` 유형의 변수, 매개 변수 또는 열과 연결할 수 있습니다. 이 경우에 `xml` 데이터 형식 인스턴스에 라고 *형식화 된*합니다. 그 외의 경우에는 XML 인스턴스를 *형식화되지 않았다*고 합니다.  
+  
+  `xml` 유형의 변수, 매개 변수 및 열을 만들 수 있습니다. 선택적으로 XML 스키마 컬렉션을 `xml` 유형의 변수, 매개 변수 또는 열과 연결할 수 있습니다. 이 경우 `xml` 데이터 형식 인스턴스를 *형식화*됨 이라고 합니다. 그 외의 경우에는 XML 인스턴스를 *형식화되지 않았다*고 합니다.  
   
 ## <a name="well-formed-xml-and-the-xml-data-type"></a>올바른 형식의 XML 및 xml 데이터 형식  
- `xml` 데이터 형식은 ISO 표준 `xml` 데이터 형식을 구현합니다. 따라서 올바른 형식의 XML 버전 1.0 문서를 저장할 수 있으며 텍스트 노드 및 형식화되지 않은 XML 열의 최상위 요소가 임의의 개수로 포함된 XML 내용 조각을 저장할 수 있습니다. 시스템은 데이터가 올바른 형식인지 확인하고, 열이 XML 스키마로 바인딩되도록 요구하지 않으며, 넓은 의미에서 올바른 형식이 아닌 데이터를 거부합니다. 형식화되지 않은 XML 변수 및 매개 변수도 여기에 해당됩니다.  
+ 
+  `xml` 데이터 형식은 ISO 표준 `xml` 데이터 형식을 구현합니다. 따라서 올바른 형식의 XML 버전 1.0 문서를 저장할 수 있으며 텍스트 노드 및 형식화되지 않은 XML 열의 최상위 요소가 임의의 개수로 포함된 XML 내용 조각을 저장할 수 있습니다. 시스템은 데이터가 올바른 형식인지 확인하고, 열이 XML 스키마로 바인딩되도록 요구하지 않으며, 넓은 의미에서 올바른 형식이 아닌 데이터를 거부합니다. 형식화되지 않은 XML 변수 및 매개 변수도 여기에 해당됩니다.  
   
 ## <a name="xml-schemas"></a>XML 스키마  
  XML 스키마는 다음을 제공합니다.  
@@ -52,7 +54,7 @@ ms.locfileid: "62637621"
   
 -   스키마가 있지만 서버에서 데이터 유효성 검사를 수행하지 않습니다. 이러한 경우는 데이터를 서버에 저장하기 전에 애플리케이션이 클라이언트 쪽 유효성 검사를 수행하거나, 스키마에 대해 유효하지 않은 XML 데이터를 임시적으로 저장하거나, 서버에서 지원되지 않는 스키마 구성 요소를 사용하는 경우입니다.  
   
- 사용 하 여 형식화 된 `xml` 다음과 같은 상황에서 데이터 형식:  
+ 다음과 같은 `xml` 상황에서 형식화 된 데이터 형식을 사용 합니다.  
   
 -   XML 데이터에 대한 스키마가 있으며 이 XML 스키마에 따라 서버에서 XML 데이터의 유효성을 검사하려고 합니다.  
   
@@ -63,18 +65,18 @@ ms.locfileid: "62637621"
  형식화된 XML 열, 매개 변수 및 변수는 XML 문서 또는 내용을 저장할 수 있습니다. 그러나 선언 시 문서를 저장하는지 아니면 내용을 저장하는지에 따라 플래그를 지정해야 합니다. 또한 XML 스키마의 컬렉션을 제공해야 합니다. 각 XML 인스턴스에 정확히 하나의 최상위 요소가 있는 경우 DOCUMENT를 지정합니다. 그렇지 않으면 CONTENT를 사용합니다. 쿼리 컴파일러는 쿼리 컴파일 중에 형식 검사에서 DOCUMENT 플래그를 사용하여 단일 항목인 최상위 요소를 유추합니다.  
   
 ## <a name="creating-typed-xml"></a>형식화된 XML 만들기  
- 형식화 된 만들려면 먼저 `xml` 변수, 매개 변수 또는 열을 사용 하 여 XML 스키마 컬렉션을 먼저 등록 해야 합니다 [CREATE XML SCHEMA COLLECTION &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-xml-schema-collection-transact-sql)합니다. 그런 다음 XML 스키마 컬렉션을 `xml` 데이터 형식의 변수, 매개 변수 또는 열과 연결할 수 있습니다.  
+ 형식화 `xml` 된 변수, 매개 변수 또는 열을 만들려면 먼저 [Transact-sql&#41;&#40;CREATE xml schema collection ](/sql/t-sql/statements/create-xml-schema-collection-transact-sql)을 사용 하 여 xml 스키마 컬렉션을 등록 해야 합니다. 그런 다음 XML 스키마 컬렉션을 `xml` 데이터 형식의 변수, 매개 변수 또는 열과 연결할 수 있습니다.  
   
  다음 예에서는 XML 스키마 컬렉션 이름을 지정하기 위해 두 부분으로 된 명명 규칙이 사용됩니다. 첫 번째 부분은 스키마 이름이고 두 번째 부분은 XML 스키마 컬렉션 이름입니다.  
   
-### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>예: Xml 유형 변수와 스키마 컬렉션 연결  
- 다음 예제에서는`xml` 유형 변수에 스키마 컬렉션에 연결 하 고 있습니다. 이 예에서 지정된 스키마 컬렉션은 이미 **AdventureWorks** 데이터베이스로 가져온 상태입니다.  
+### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>예제: xml 유형 변수와 스키마 컬렉션 연결  
+ 다음 예에서는`xml` 형식 변수를 만들고이를 스키마 컬렉션에 연결 합니다. 이 예에서 지정된 스키마 컬렉션은 이미 **AdventureWorks** 데이터베이스로 가져온 상태입니다.  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   
 ```  
   
-### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>예: Xml 유형 열에 스키마 지정  
+### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>예제: xml 유형 열에 스키마 지정  
  다음 예에서는 `xml` 유형 열이 포함된 테이블을 만들고 이 열에 대한 스키마를 지정합니다.  
   
 ```  
@@ -83,7 +85,7 @@ CREATE TABLE T1(
  Col2 xml (Production.ProductDescriptionSchemaCollection)) ;  
 ```  
   
-### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>예: Xml 형식 매개 변수는 저장 프로시저에 전달  
+### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>예제: xml 유형 매개 변수를 저장 프로시저에 전달  
  다음 예에서는 `xml` 유형 매개 변수를 저장 프로시저에 전달하고 해당 변수에 대한 스키마를 지정합니다.  
   
 ```  
@@ -105,7 +107,7 @@ AS
   
  데이터 형식 계층에서 `xml` 데이터 형식은 `sql_variant` 및 사용자 정의 형식 아래, 기본 제공 유형 위에 표시됩니다.  
   
-### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>예: 형식화 된 xml 열을 제한 하기 위한 패싯 지정  
+### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>예제: 형식화된 xml 열을 제한하기 위한 패싯 지정  
  형식화된 `xml` 열의 경우 열에 저장된 각 인스턴스에 대해 최상위의 단일 요소만 허용하도록 열을 제한할 수 있습니다. 이렇게 하려면 다음 예에서와 같이 테이블을 만들 때 선택 항목인 `DOCUMENT` 패싯을 지정합니다.  
   
 ```  
@@ -129,14 +131,16 @@ CREATE TABLE T(Col1 xml(CONTENT Production.ProductDescriptionSchemaCollection));
 GO -- Default  
 ```  
   
- `xml` 유형(형식화된 xml)을 정의할 때 항상 선택 항목인 DOCUMENT/CONTENT 패싯을 지정할 수 있습니다. 예를 들어 형식화된 `xml` 변수를 만들 때 다음과 같이 DOCUMENT/CONTENT 패싯을 추가할 수 있습니다.  
+ 
+  `xml` 유형(형식화된 xml)을 정의할 때 항상 선택 항목인 DOCUMENT/CONTENT 패싯을 지정할 수 있습니다. 예를 들어 형식화된 `xml` 변수를 만들 때 다음과 같이 DOCUMENT/CONTENT 패싯을 추가할 수 있습니다.  
   
 ```  
 declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);  
 ```  
   
 ## <a name="document-type-definition-dtd"></a>DTD(문서 유형 정의)  
- `xml` 데이터 형식의 열, 변수 및 매개 변수는 DTD가 아닌 XML 스키마를 사용하여 형식화될 수 있습니다. 하지만 인라인 DTD는 형식화되지 않은 XML 및 형식화된 XML에 모두 사용하여 기본값을 제공하고 엔터티 참조를 해당 확장 형식으로 바꿀 수 있습니다.  
+ 
+  `xml` 데이터 형식의 열, 변수 및 매개 변수는 DTD가 아닌 XML 스키마를 사용하여 형식화될 수 있습니다. 하지만 인라인 DTD는 형식화되지 않은 XML 및 형식화된 XML에 모두 사용하여 기본값을 제공하고 엔터티 참조를 해당 확장 형식으로 바꿀 수 있습니다.  
   
  타사 도구를 사용하여 DTD를 XML 스키마 문서로 변환하고 XML 스키마를 데이터베이스에 로드할 수 있습니다.  
   
@@ -155,7 +159,7 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
   
  간단한 SQL SELECT 문을 계속 사용하면 음수 연도가 포함될 경우에도 전체 XML 데이터 형식을 검색할 수 있습니다. 음수 연도를 새로 지원되는 범위에 있는 연도로 대체하거나 해당 요소나 특성의 유형을 **xs:string**으로 변경하는 것이 좋습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 데이터 인스턴스 만들기](create-instances-of-xml-data.md)   
  [xml 데이터 형식 메서드](/sql/t-sql/xml/xml-data-type-methods)   
  [XML DML&#40;XML 데이터 수정 언어&#41;](/sql/t-sql/xml/xml-data-modification-language-xml-dml)   

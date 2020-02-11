@@ -60,12 +60,20 @@
               href: big-data-cluster/deploy-big-data-tools.md
             - name: Azdata 설치
               items:
-                - name: Windows Installer 사용
-                  href: big-data-cluster/deploy-install-azdata-installer.md
-                - name: Linux 패키지 관리자 사용
-                  href: big-data-cluster/deploy-install-azdata-linux-package.md
-                - name: pip 사용
+                - name: 설치
                   href: big-data-cluster/deploy-install-azdata.md
+                - name: macOS
+                  href: big-data-cluster/deploy-install-azdata-macos.md
+                - name: Windows
+                  href: big-data-cluster/deploy-install-azdata-installer.md
+                - name: Apt를 사용하는 Linux
+                  href: big-data-cluster/deploy-install-azdata-linux-package.md
+                - name: yum을 사용하는 Linux
+                  href: big-data-cluster/deploy-install-azdata-yum.md
+                - name: zypper를 사용하는 Linux
+                  href: big-data-cluster/deploy-install-azdata-zypper.md
+                - name: pip 사용
+                  href: big-data-cluster/deploy-install-azdata-pip.md
         - name: 배포
           items:
             - name: 배포 지침
@@ -118,7 +126,7 @@
           href: big-data-cluster/concept-security.md
     - name: 방법 가이드
       items:
-        - name: Configuration
+        - name: 구성
           items:
             - name: SQL Server 마스터 인스턴스
               href: big-data-cluster/configure-sql-server-master-instance.md
@@ -186,9 +194,15 @@
               href: big-data-cluster/manage-notebooks.md
             - name: 컨트롤러 대시보드로 관리
               href: big-data-cluster/manage-with-controller-dashboard.md
-        - name: 전자 필기장
+            - name: 보안
+              items:
+                - name: AZDATA_PASSWORD 업데이트
+                  href: big-data-cluster/change-azdata-password.md
+                - name: 사용자 액세스 관리
+                  href: big-data-cluster/manage-user-access.md
+        - name: Notebooks
           items:
-            - name: 전자 필기장 개요
+            - name: Notebooks 개요
               href: big-data-cluster/notebooks-guidance.md
             - name: 전자 필기장 자습서
               href: big-data-cluster/tutorial-notebook-spark.md
@@ -222,7 +236,7 @@
                   href: big-data-cluster/reference-azdata-sql.md
             - name: 앱 배포
               items:
-                - name: 앱
+                - name: app
                   href: big-data-cluster/reference-azdata-app.md
                 - name: 앱 템플릿
                   href: big-data-cluster/reference-azdata-app-template.md
@@ -304,7 +318,7 @@
                       href: relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md
                     - name: 고급 옵션 구성
                       href: relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md
-                    - name: 사용 안함
+                    - name: 사용 안 함
                       href: relational-databases/backup-restore/disable-sql-server-managed-backup-to-microsoft-azure.md
                     - name: SQL Server 2014에서 설정 마이그레이션
                       href: relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md
@@ -394,7 +408,7 @@
                   href: relational-databases/backup-restore/delete-a-backup-device-sql-server.md
                 - name: 디바이스의 콘텐츠 및 속성 보기
                   href: relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md
-            - name: Configuration
+            - name: 구성
               items:
                 - name: 복구 모델 수정
                   href: relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md
@@ -428,7 +442,7 @@
                   href: relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md
                 - name: 파일-스냅샷 백업
                   href: relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md
-            - name: 백업
+            - name: Backup
               href: relational-databases/backup-restore/backup-overview-sql-server.md
               items:
                 - name: 전체 백업
@@ -447,7 +461,7 @@
                   href: relational-databases/backup-restore/transaction-log-backups-sql-server.md
                 - name: 시스템 데이터베이스
                   href: relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md
-            - name: Configuration
+            - name: 구성
               items:
                 - name: 압축
                   href: relational-databases/backup-restore/backup-compression-sql-server.md
@@ -492,7 +506,7 @@
           items:
             - name: 대화 상자 및 페이지
               items:
-                - name: 백업
+                - name: Backup
                   items:
                     - name: Azure 구독에 연결
                       href: relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md
@@ -540,7 +554,7 @@
                       href: relational-databases/backup-restore/vdi-reference/iclientvirtualdevice-getcommand.md
                 - name: IClientVirtualDeviceSet2
                   items:
-                    - name: 닫기
+                    - name: 닫습니다
                       href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-close.md
                     - name: CreateEx
                       href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-createex.md
@@ -568,7 +582,7 @@
                       href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-allocatebuffer.md
                     - name: BeginConfiguration
                       href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-beginconfiguration.md
-                    - name: 닫기
+                    - name: 닫습니다
                       href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-close.md
                     - name: EndConfiguration
                       href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-endconfiguration.md
@@ -580,7 +594,7 @@
                       href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-getconfiguration.md
                     - name: IsSharedBuffer
                       href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-issharedbuffer.md
-                    - name: 파일
+                    - name: 열기
                       href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-open.md
                     - name: OpenDevice
                       href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-opendevice.md
@@ -685,7 +699,7 @@
                   href: database-engine/availability-groups/windows/view-availability-replica-properties-sql-server.md
                 - name: 수신기 속성 보기
                   href: database-engine/availability-groups/windows/view-availability-group-listener-properties-sql-server.md
-            - name: 연산
+            - name: 작업(Operation)
               items:
                 - name: 데이터베이스 추가
                   items:
@@ -731,7 +745,7 @@
                   href: database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md
         - name: 개념
           items:
-            - name: Configuration
+            - name: 구성
               items:
                 - name: 보조 복제본에 대한 자동 시드
                   href: database-engine/availability-groups/windows/automatic-seeding-secondary-replicas.md
@@ -940,10 +954,10 @@
                 - name: 클러스터 제거
                   href: sql-server/failover-clusters/install/remove-a-sql-server-failover-cluster-instance-setup.md
                 - name: 클러스터 업그레이드
-                  href: sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md
+                  href: sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md
                 - name: Windows Server 2012 및 2016으로 마이그레이션
                   href: sql-server/failover-clusters/windows/upgrade-sql-server-failover-cluster-instance-2008-2012.md
-            - name: Configuration
+            - name: 구성
               items:
                 - name: 장애 조치(failover) 클러스터 이름 바꾸기
                   href: sql-server/failover-clusters/install/rename-a-sql-server-failover-cluster-instance.md
@@ -975,10 +989,8 @@
                   href: sql-server/failover-clusters/windows/recover-from-failover-cluster-instance-failure.md
         - name: 개념
           items:
-            - name: Configuration
+            - name: 구성
               items:
-                - name: 업그레이드
-                  href: sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md
                 - name: 쿼럼 모드 및 투표
                   href: sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md
                 - name: 다중 서브넷 클러스터링
@@ -1008,7 +1020,7 @@
               href: database-engine/database-mirroring/database-mirroring-witness.md
         - name: 방법
           items:
-            - name: Configuration
+            - name: 구성
               items:
                 - name: 배포
                   items:
@@ -1101,7 +1113,7 @@
                   href: database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md
                 - name: 역할 전환
                   href: database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md
-                - name: '쿼럼: 미러링 모니터가 데이터베이스 가용성에 미치는 영향'
+                - name: '쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향'
                   href: database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md
                 - name: 오류의 가능한 원인
                   href: database-engine/database-mirroring/possible-failures-during-database-mirroring.md
@@ -1282,13 +1294,13 @@
                   href: relational-databases/databases/estimate-the-size-of-a-heap.md
             - name: 데이터베이스 스냅샷
               items:
-                - name: 만들기
+                - name: 생성
                   href: relational-databases/databases/create-a-database-snapshot-transact-sql.md
                 - name: 보기
                   href: relational-databases/databases/view-a-database-snapshot-sql-server.md
                 - name: 스냅샷으로 되돌리기
                   href: relational-databases/databases/revert-a-database-to-a-database-snapshot.md
-                - name: Drop
+                - name: 드롭
                   href: relational-databases/databases/drop-a-database-snapshot-transact-sql.md
                 - name: 스파스 파일의 크기 보기
                   href: relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md
@@ -1438,7 +1450,7 @@
         - name: 클러스터형 및 비클러스터형 인덱스
           href: relational-databases/indexes/clustered-and-nonclustered-indexes-described.md
           items:
-            - name: 만들기
+            - name: 생성
               items:
                 - name: 클러스터형 인덱스
                   href: relational-databases/indexes/create-clustered-indexes.md
@@ -1460,7 +1472,7 @@
               href: relational-databases/indexes/indexes-on-computed-columns.md
             - name: SORT_IN_TEMPDB
               href: relational-databases/indexes/sort-in-tempdb-option-for-indexes.md
-            - name: 사용 안함
+            - name: 사용 안 함
               href: relational-databases/indexes/disable-indexes-and-constraints.md
             - name: 사용
               href: relational-databases/indexes/enable-indexes-and-constraints.md
@@ -1512,7 +1524,7 @@
       items:
         - name: Architecture
           href: relational-databases/graphs/sql-graph-architecture.md
-        - name: 예제
+        - name: 샘플
           href: relational-databases/graphs/sql-graph-sample.md
         - name: SHORTEST_PATH
           href: relational-databases/graphs/sql-graph-shortest-path.md
@@ -1535,7 +1547,7 @@
       items:
         - name: 데이터 형식
           href: relational-databases/spatial/spatial-data-types-overview.md
-        - name: 점
+        - name: Point
           href: relational-databases/spatial/point.md
         - name: LineString
           href: relational-databases/spatial/linestring.md
@@ -1543,7 +1555,7 @@
           href: relational-databases/spatial/circularstring.md
         - name: CompoundCurve
           href: relational-databases/spatial/compoundcurve.md
-        - name: 다각형
+        - name: Polygon
           href: relational-databases/spatial/polygon.md
         - name: CurvePolygon
           href: relational-databases/spatial/curvepolygon.md
@@ -1570,7 +1582,7 @@
     - name: 저장 프로시저
       href: relational-databases/stored-procedures/stored-procedures-database-engine.md
       items:
-        - name: 만들기
+        - name: 생성
           href: relational-databases/stored-procedures/create-a-stored-procedure.md
         - name: 수정
           href: relational-databases/stored-procedures/modify-a-stored-procedure.md
@@ -1580,7 +1592,7 @@
           href: relational-databases/stored-procedures/execute-a-stored-procedure.md
         - name: 매개 변수 지정
           href: relational-databases/stored-procedures/specify-parameters.md
-        - name: 사용 권한 부여
+        - name: 권한 부여
           href: relational-databases/stored-procedures/grant-permissions-on-a-stored-procedure.md
         - name: 매개 변수
           href: relational-databases/stored-procedures/parameters.md
@@ -1610,7 +1622,7 @@
       items:
         - name: 관리
           items:
-            - name: 만들기
+            - name: 생성
               href: relational-databases/tables/create-tables-database-engine.md
             - name: DELETE
               href: relational-databases/tables/delete-tables-database-engine.md
@@ -1647,7 +1659,7 @@
         - name: 에지 제약 조건
           href: relational-databases/tables/graph-edge-constraints.md
           items:
-            - name: 만들기
+            - name: 생성
               href: relational-databases/tables/create-edge-constraints.md
             - name: DELETE
               href: relational-databases/tables/delete-edge-constraint.md
@@ -1658,7 +1670,7 @@
         - name: 기본 키
           href: relational-databases/tables/primary-and-foreign-key-constraints.md
           items:
-            - name: 만들기
+            - name: 생성
               href: relational-databases/tables/create-primary-keys.md
             - name: 수정
               href: relational-databases/tables/modify-primary-keys.md
@@ -1681,7 +1693,7 @@
         - name: UNIQUE 제약 조건
           href: relational-databases/tables/unique-constraints-and-check-constraints.md
           items:
-            - name: 만들기
+            - name: 생성
               href: relational-databases/tables/create-unique-constraints.md
             - name: 수정
               href: relational-databases/tables/modify-unique-constraints.md
@@ -1689,7 +1701,7 @@
               href: relational-databases/tables/delete-unique-constraints.md
         - name: CHECK 제약 조건
           items:
-            - name: 만들기
+            - name: 생성
               href: relational-databases/tables/create-check-constraints.md
             - name: 수정
               href: relational-databases/tables/modify-check-constraints.md
@@ -1706,7 +1718,7 @@
               items:
                 - name: 시작
                   href: relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md
-                - name: 만들기
+                - name: 생성
                   href: relational-databases/tables/creating-a-system-versioned-temporal-table.md
                 - name: 데이터 수정
                   href: relational-databases/tables/modifying-data-in-a-system-versioned-temporal-table.md
@@ -1733,7 +1745,7 @@
             - name: 메모리 최적화 임시 테이블
               href: relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md
               items:
-                - name: 만들기
+                - name: 생성
                   href: relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md
                 - name: 작업
                   href: relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md
@@ -1828,7 +1840,7 @@
           href: relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md
         - name: 스칼라 인라인 처리
           href: relational-databases/user-defined-functions/scalar-udf-inlining.md
-        - name: 만들기
+        - name: 생성
           href: relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md
         - name: CLR 함수 만들기
           href: relational-databases/user-defined-functions/create-clr-functions.md
@@ -1847,7 +1859,7 @@
     - name: 뷰
       href: relational-databases/views/views.md
       items:
-        - name: 만들기
+        - name: 생성
           href: relational-databases/views/create-views.md
         - name: 인덱싱된 뷰 만들기
           href: relational-databases/views/create-indexed-views.md
@@ -1898,11 +1910,11 @@
         - name: XML 인덱스
           href: relational-databases/xml/xml-indexes-sql-server.md
           items:
-            - name: 만들기
+            - name: 생성
               href: relational-databases/xml/create-xml-indexes.md
             - name: 수정
               href: relational-databases/xml/modify-xml-indexes.md
-            - name: Drop
+            - name: 드롭
               href: relational-databases/xml/drop-xml-indexes.md
         - name: SXI(선택적 XML 인덱스)
           href: relational-databases/xml/selective-xml-indexes-sxi.md
@@ -1969,17 +1981,17 @@
             - name: RAW 모드
               href: relational-databases/xml/use-raw-mode-with-for-xml.md
               items:
-                - name: '예: 제품 모델 정보를 XML로 검색'
+                - name: '예제: 제품 모델 정보를 XML로 검색'
                   href: relational-databases/xml/example-retrieving-product-model-information-as-xml.md
-                - name: '예: ELEMENTS 지시어를 사용하여 XSINIL 지정'
+                - name: '예제: ELEMENTS 지시어를 사용하여 XSINIL 지정'
                   href: relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md
                 - name: '예: XMLDATA 및 XMLSCHEMA 옵션을 사용하여 결과로 스키마 요청'
                   href: relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md
-                - name: '예: 이진 데이터 검색'
+                - name: '예제: 이진 데이터 검색'
                   href: relational-databases/xml/example-retrieving-binary-data.md
-                - name: '예: <row> 요소 이름 바꾸기'
+                - name: '예제: <row> 요소 이름 바꾸기'
                   href: relational-databases/xml/example-renaming-the-row-element.md
-                - name: '예: FOR XML로 생성된 XML에 대한 루트 요소 지정'
+                - name: '예제: FOR XML로 생성된 XML에 대한 루트 요소 지정'
                   href: relational-databases/xml/example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md
                 - name: '예: XMLType 열 쿼리'
                   href: relational-databases/xml/example-querying-xmltype-columns.md
@@ -1990,28 +2002,28 @@
                   href: relational-databases/xml/use-the-binary-base64-option.md
                 - name: 반환된 XML 모양 지정에서 AUTO 모드 추론
                   href: relational-databases/xml/auto-mode-heuristics-in-shaping-returned-xml.md
-                - name: '예: AUTO 모드 사용'
+                - name: '예제: AUTO 모드 사용'
                   href: relational-databases/xml/examples-using-auto-mode.md
             - name: EXPLICIT 모드
               href: relational-databases/xml/use-explicit-mode-with-for-xml.md
               items:
-                - name: '예: 직원 정보 검색'
+                - name: '예제: 직원 정보 검색'
                   href: relational-databases/xml/example-retrieving-employee-information.md
-                - name: '예: ELEMENT 지시어 지정'
+                - name: '예제: ELEMENT 지시어 지정'
                   href: relational-databases/xml/example-specifying-the-element-directive.md
-                - name: '예: ELEMENTXSINIL 지시어 지정'
+                - name: '예제: ELEMENTXSINIL 지시어 지정'
                   href: relational-databases/xml/example-specifying-the-elementxsinil-directive.md
                 - name: '예: EXPLICIT 모드를 사용하여 형제 생성'
                   href: relational-databases/xml/example-constructing-siblings-with-explicit-mode.md
-                - name: '예: ID 및 IDREF 지시어 지정'
+                - name: '예: ID 및 IDREF 지시문 지정'
                   href: relational-databases/xml/example-specifying-the-id-and-idref-directives.md
-                - name: '예: ID 및 IDREFS 지시어 지정'
+                - name: '예: ID 및 IDREFS 지시문 지정'
                   href: relational-databases/xml/example-specifying-the-id-and-idrefs-directives.md
-                - name: '예: HIDE 지시어 지정'
+                - name: '예제: HIDE 지시어 지정'
                   href: relational-databases/xml/example-specifying-the-hide-directive.md
-                - name: '예: ELEMENT 지시어 및 엔터티 인코딩 지정'
+                - name: '예: ELEMENT 지시문 및 엔터티 인코딩 지정'
                   href: relational-databases/xml/example-specifying-the-element-directive-and-entity-encoding.md
-                - name: '예: CDATA 지시어 지정'
+                - name: '예제: CDATA 지시어 지정'
                   href: relational-databases/xml/example-specifying-the-cdata-directive.md
                 - name: '예: XMLTEXT 지시어 지정'
                   href: relational-databases/xml/example-specifying-the-xmltext-directive.md
@@ -2032,7 +2044,7 @@
                   href: relational-databases/xml/columns-that-contain-a-null-value-by-default.md
                 - name: PATH 모드에서의 네임스페이스 지원
                   href: relational-databases/xml/namespace-support-in-path-mode.md
-                - name: '예: PATH 모드 사용'
+                - name: '예제: PATH 모드 사용'
                   href: relational-databases/xml/examples-using-path-mode.md
             - name: 중첩 쿼리
               href: relational-databases/xml/use-nested-for-xml-queries.md
@@ -2063,7 +2075,7 @@
         - name: OPENXML
           href: relational-databases/xml/openxml-sql-server.md
           items:
-            - name: '예: OPENXML 사용'
+            - name: '예제: OPENXML 사용'
               href: relational-databases/xml/examples-using-openxml.md
             - name: 메타 속성 지정
               href: relational-databases/xml/specify-metaproperties-in-openxml.md
@@ -2147,7 +2159,7 @@
         - name: 사용자 정의 형식
           href: relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md
           items:
-            - name: 만들기
+            - name: 생성
               href: relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md
               items:
                 - name: 요구 사항
@@ -2184,7 +2196,7 @@
         - name: 컨텍스트 연결
           href: relational-databases/clr-integration/data-access/context-connection.md
           items:
-            - name: Restrictions
+            - name: 제한
               href: relational-databases/clr-integration/data-access/context-connections-and-regular-connections-restrictions.md
             - name: 컨텍스트 연결 및 일반 연결
               href: relational-databases/clr-integration/data-access/context-connections-vs-regular-connections.md
@@ -2212,15 +2224,15 @@
           items:
             - name: 관리
               href: relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md
-            - name: Alter
+            - name: 변경
               href: relational-databases/clr-integration/assemblies/altering-an-assembly.md
-            - name: 만들기
+            - name: 생성
               href: relational-databases/clr-integration/assemblies/creating-an-assembly.md
-            - name: Drop
+            - name: 드롭
               href: relational-databases/clr-integration/assemblies/dropping-an-assembly.md
             - name: 디자인
               href: relational-databases/clr-integration/assemblies-designing.md
-            - name: 정보 얻기
+            - name: 정보 가져오기
               href: relational-databases/clr-integration/assemblies-getting-information.md
             - name: 구현
               href: relational-databases/clr-integration/assemblies-implementing.md
@@ -2260,7 +2272,7 @@
                   href: relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md
                 - name: Null 허용 여부 및 3개의 값 논리 비교
                   href: relational-databases/clr-integration-database-objects-types-net-framework/nullability-and-three-value-logic-comparisons.md
-    - name: 확장 저장 프로시저
+    - name: 확장된 저장 프로시저
       items:
         - name: 프로그래밍
           href: relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md
@@ -2269,7 +2281,7 @@
               href: relational-databases/extended-stored-procedures-programming/how-extended-stored-procedures-work.md
             - name: 추가
               href: relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md
-            - name: 만들기
+            - name: 생성
               href: relational-databases/extended-stored-procedures-programming/creating-extended-stored-procedures.md
             - name: 실행 특성
               href: relational-databases/extended-stored-procedures-programming/execution-characteristics-of-extended-stored-procedures.md
@@ -2794,7 +2806,7 @@
               href: relational-databases/native-client-ole-db-date-time/new-date-and-time-features-with-previous-sql-server-versions-ole-db.md
             - name: API 지원
               href: relational-databases/native-client-ole-db-date-time/ole-db-api-support-for-date-and-time-enhancements.md
-        - name: 의
+        - name: 트랜잭션
           href: relational-databases/native-client-ole-db-transactions/transactions.md
           items:
             - name: 격리 수준
@@ -3217,7 +3229,7 @@
               href: relational-databases/native-client-odbc-queries/executing-statements/effects-of-iso-options.md
             - name: 준비된 실행
               href: relational-databases/native-client-odbc-queries/executing-statements/prepared-execution.md
-            - name: 절차
+            - name: 프로시저
               href: relational-databases/native-client-odbc-queries/executing-statements/procedures.md
             - name: 문 핸들 할당
               href: relational-databases/native-client-odbc-queries/allocating-a-statement-handle.md
@@ -3296,7 +3308,7 @@
         - name: Text 및 Image 열
           href: relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md
           items:
-            - name: 바인딩된 Text 및 Image 열과 바인딩되지 않은 Text 및 Image 열
+            - name: 바인딩된 Text 및 Image 열과 바인딩되지 않은 Text 및 Image 열 비교
               href: relational-databases/native-client-odbc-text-image-columns/bound-vs-unbound-text-and-image-columns.md
             - name: '실행 시 데이터 및 Text, ntext 또는 Image 열'
               href: relational-databases/native-client-odbc-text-image-columns/data-at-execution-and-text-ntext-or-image-columns.md
@@ -3425,7 +3437,7 @@
               href: relational-databases/server-management-objects-smo/create-program/using-transactions.md
             - name: 데이터 형식 사용
               href: relational-databases/server-management-objects-smo/create-program/working-with-data-types.md
-        - name: 태스크
+        - name: 작업
           items:
             - name: 데이터베이스 및 트랜잭션 로그 백업 및 복원
               href: relational-databases/server-management-objects-smo/tasks/backing-up-and-restoring-databases-and-transaction-logs.md
@@ -3439,7 +3451,7 @@
               href: relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md
             - name: 기본값
               href: relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-defaults.md
-            - name: 키
+            - name: 구성
               href: relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-foreign-keys.md
             - name: 인덱스
               href: relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-indexes.md
@@ -3512,12 +3524,12 @@
               href: relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md
             - name: SQLXML 4.0의 xml 데이터 형식 지원
               href: relational-databases/sqlxml/xml-data-type-support-in-sqlxml-4-0.md
-        - name: 서식
+        - name: 서식 지정
           href: relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md
           items:
             - name: 클라이언트 쪽 및 서버 쪽
               href: relational-databases/sqlxml/formatting/client-side-and-server-side-formatting-sqlxml-4-0.md
-            - name: 클라이언트 쪽 vs. 서버 쪽
+            - name: 클라이언트 쪽과 서버 쪽 비교
               href: relational-databases/sqlxml/formatting/client-side-vs-server-side-xml-formatting-sqlxml-4-0.md
             - name: 클라이언트 쪽
               href: relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md
@@ -4105,9 +4117,9 @@
         - name: 서버 이벤트 개념
           href: relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md
           items:
-            - name: '예제: WMI 공급자를 사용하여 SQL Server 에이전트 경고 만들기'
+            - name: '샘플: WMI 공급자를 사용하여 SQL Server 에이전트 경고 만들기'
               href: relational-databases/wmi-provider-server-events/sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md
-            - name: '예제: .NET Framework에서 WMI 이벤트 공급자 사용'
+            - name: '샘플: .NET Framework에서 WMI 이벤트 공급자 사용'
               href: relational-databases/wmi-provider-server-events/sample-using-the-wmi-event-provider-with-the-net-framework.md
             - name: 서버 이벤트 이해
               href: relational-databases/wmi-provider-server-events/understanding-the-wmi-provider-for-server-events.md
@@ -4178,7 +4190,7 @@
               href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md
             - name: SQL Server 2017 및 이전
               href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
-        - name: 보안 고려 사항
+        - name: 보안 고려사항
           href: sql-server/install/security-considerations-for-a-sql-server-installation.md
         - name: 네트워크 프로토콜 및 네트워크 라이브러리
           href: sql-server/install/network-protocols-and-network-libraries.md
@@ -4203,7 +4215,6 @@
             - name: SQL Server에 대한 로컬 감사
               href: sql-server/usage-and-diagnostic-data-in-local-audit.md
     - name: SQL Server 설치
-      href: database-engine/install-windows/installation-for-sql-server.md
       items:
         - name: 개요
           href: database-engine/install-windows/install-sql-server.md
@@ -4211,7 +4222,7 @@
           href: sql-server/install/instance-configuration.md
         - name: SQL Server 데이터베이스 엔진
           href: database-engine/install-windows/install-sql-server-database-engine.md
-        - name: SQL  Server  복제
+        - name: SQL Server 복제
           href: database-engine/install-windows/install-sql-server-replication.md
         - name: SQL Server PowerShell
           href: database-engine/install-windows/install-sql-server-powershell.md
@@ -4261,11 +4272,9 @@
         - name: 지원되는 버전 업그레이드 - SQL Server 2017
           href: database-engine/install-windows/supported-version-and-edition-upgrades-2017.md
         - name: 지원되는 버전 업그레이드 - SQL Server 2016
-          href: database-engine/install-windows/supported-version-and-edition-upgrades.md
+          href: database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016
         - name: Data Migration Assistant를 실행하여 업그레이드 준비
           href: database-engine/install-windows/prepare-for-upgrade-by-running-data-migration-assistant.md
-        - name: 'SQL 2005, 2008 또는 2008 R2에서 업그레이드'
-          href: database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md
         - name: Analysis Services
           href: database-engine/install-windows/upgrade-analysis-services.md
         - name: 데이터베이스 엔진 서비스
@@ -4299,7 +4308,14 @@
               href: relational-databases/performance/upgrade-dbcompat-using-qta.md
             - name: SQL Server에 대한 최신 업데이트
               href: database-engine/install-windows/latest-updates-for-microsoft-sql-server.md
-    - name: Configuration
+    - name: 지원 종료
+      items:
+        - name: 개요
+          href: sql-server/end-of-support/sql-server-end-of-life-overview.md
+          displayName: 'end of support, end of life'
+        - name: 연장된 보안 업데이트
+          href: sql-server/end-of-support/sql-server-extended-security-updates.md
+    - name: 구성
       href: database-engine/configure-windows/database-engine-instances-sql-server.md
       items:
         - name: Windows 방화벽
@@ -4324,6 +4340,8 @@
           href: relational-databases/in-memory-database.md
         - name: 하이브리드 버퍼 풀
           href: database-engine/configure-windows/hybrid-buffer-pool.md
+        - name: 지속형 로그 버퍼 추가
+          href: relational-databases/databases/add-persisted-log-buffer.md
         - name: 서버 인증 모드 변경
           href: database-engine/configure-windows/change-server-authentication-mode.md
         - name: SQL 기록기 서비스
@@ -4609,6 +4627,8 @@
               href: database-engine/configure-windows/server-properties-advanced-page.md
 - name: 데이터 마이그레이션 및 로드
   items:
+    - name: 마이그레이션 설명서
+      href: sql-server/migrate/index.yml
     - name: SSIS(SQL Server Integration Services) >
       href: integration-services/index.md
     - name: 대량 복사 유틸리티(BCP)
@@ -4785,7 +4805,7 @@
               href: relational-databases/replication/deprecated-features-in-sql-server-replication.md
             - name: 주요 변경 내용
               href: relational-databases/replication/breaking-changes-in-sql-server-replication.md
-            - name: 최선의 구현 방법
+            - name: 모범 사례
               href: relational-databases/replication/administration/best-practices-for-replication-administration.md
             - name: 질문과 대답
               href: relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md
@@ -4856,7 +4876,7 @@
                       href: relational-databases/replication/publish/add-articles-to-and-drop-articles-from-a-publication.md
                     - name: 문서 삭제
                       href: relational-databases/replication/publish/delete-an-article.md
-                - name: 구독
+                - name: Subscriptions
                   href: relational-databases/replication/subscribe-to-publications.md
                   items:
                     - name: 끌어오기 구독 만들기
@@ -5019,7 +5039,7 @@
                   href: relational-databases/replication/security/secure-the-distributor.md
                 - name: 게시자
                   href: relational-databases/replication/security/secure-the-publisher.md
-                - name: 구독자
+                - name: 가입자
                   href: relational-databases/replication/security/secure-the-subscriber.md
                 - name: 스냅샷 폴더
                   href: relational-databases/replication/security/secure-the-snapshot-folder.md
@@ -5220,7 +5240,7 @@
                   href: relational-databases/replication/security/replication-agent-security-model.md
                 - name: 보안 역할 요구 사항
                   href: relational-databases/replication/security/security-role-requirements-for-replication.md
-                - name: 최선의 구현 방법
+                - name: 모범 사례
                   href: relational-databases/replication/security/replication-security-best-practices.md
             - name: 비SQL 복제
               href: relational-databases/replication/non-sql/heterogeneous-database-replication.md
@@ -5352,7 +5372,7 @@
                   items:
                     - name: 구독 조사 목록
                       href: relational-databases/replication/publisher-information-subscription-watch-list-transactional.md
-                    - name: 구독
+                    - name: Subscriptions
                       href: relational-databases/replication/publication-information-all-subscriptions-transactional-publication.md
                     - name: 경고
                       href: relational-databases/replication/publication-information-warnings-transactional-publication.md
@@ -5370,7 +5390,7 @@
                   items:
                     - name: 구독 조사 목록
                       href: relational-databases/replication/publisher-information-subscription-watch-list-merge-publication.md
-                    - name: 구독
+                    - name: Subscriptions
                       href: relational-databases/replication/publication-information-all-subscriptions-merge-publication.md
                     - name: 경고
                       href: relational-databases/replication/publication-information-warnings-merge-publication-sql-server-2005-and-later.md
@@ -5382,7 +5402,7 @@
                   items:
                     - name: 구독 조사 목록
                       href: relational-databases/replication/publisher-information-subscription-watch-list-snapshot.md
-                    - name: 구독
+                    - name: Subscriptions
                       href: relational-databases/replication/publication-information-all-subscriptions-snapshot-publication.md
                     - name: 경고
                       href: relational-databases/replication/publication-information-warnings-snapshot-publication-sql-server-2005-and-later.md
@@ -5399,7 +5419,7 @@
                   href: relational-databases/replication/snapshot-folder.md
                 - name: 배포 데이터베이스
                   href: relational-databases/replication/distribution-database.md
-                - name: 배포자 속성
+                - name: 게시자
                   href: relational-databases/replication/publishers.md
                 - name: 배포자 암호
                   href: relational-databases/replication/distributor-password.md
@@ -5810,10 +5830,10 @@
       items:
         - name: 워크로드 비교 개요
           href: dea/database-experimentation-assistant-get-started.md
-        - name: 추적 캡처
-          href: dea/database-experimentation-assistant-capture-trace.md
         - name: 재생 구성
           href: dea/database-experimentation-assistant-configure-replay.md
+        - name: 추적 캡처
+          href: dea/database-experimentation-assistant-capture-trace.md
         - name: 추적 재생
           href: dea/database-experimentation-assistant-replay-trace.md
         - name: 보고서 만들기
@@ -5822,7 +5842,7 @@
           href: dea/database-experimentation-assistant-view-report.md
         - name: 명령 프롬프트에서 실행
           href: dea/database-experimentation-assistant-run-command-prompt.md
-    - name: DMA(Data Migration Assistant)
+    - name: DMA(Database Migration Assistant)
       href: dma/dma-overview.md
       items:
         - name: 새로운 기능
@@ -5831,6 +5851,8 @@
           href: dma/dma-assesssqlonprem.md
         - name: SSIS(SQL Server Integration Services) 평가
           href: dma/dma-assess-ssis.md
+        - name: 평가 저장 및 로드
+          href: dma/dma-save-load-assessments.md
         - name: 올바른 Azure SQL Database SKU 식별
           href: dma/dma-sku-recommend-sql-db.md
         - name: SQL Server를 상위 버전으로 업그레이드
@@ -5841,667 +5863,18 @@
           href: dma/dma-migrateserverlogins.md
         - name: Azure SQL Database 준비를 위해 SQL Server 데이터 자산 평가
           href: dma/dma-assess-sql-data-estate-to-sqldb.md
-        - name: 최선의 구현 방법
+        - name: 모범 사례
           href: dma/dma-bestpractices.md
         - name: 평가 보고서 통합
           href: dma/dma-consolidatereports.md
-        - name: 평가에 대한 Power BI 보고서
-          href: dma/dma-powerbiassesreport.md
+        - name: 앱의 데이터 액세스 계층 평가
+          href: dma/dma-assess-app-data-layer.md
         - name: 명령줄에서 실행
           href: dma/dma-commandline.md
         - name: 설정 구성
           href: dma/dma-configurationsettings.md
     - name: SSMA(SQL Server Migration Assistant)
-      href: ssma/sql-server-migration-assistant.md
-      items:
-        - name: 액세스 권한
-          href: ssma/access/sql-server-migration-assistant-for-access-accesstosql.md
-          items:
-            - name: SSMA 설치
-              href: ssma/access/installing-sql-server-migration-assistant-for-access-accesstosql.md
-            - name: 시작
-              href: ssma/access/getting-started-with-ssma-for-access-console-accesstosql.md
-            - name: What's New
-              href: ssma/access/what-s-new-in-ssma-for-access-accesstosql.md
-            - name: Access 데이터베이스 준비
-              href: ssma/access/preparing-access-databases-for-migration-accesstosql.md
-            - name: 호환되지 않는 Access 기능
-              href: ssma/access/incompatible-access-features-accesstosql.md
-            - name: SSMA의 새로운 GUI 기능
-              href: ssma/access/new-gui-features-in-ssma-for-access-to-sql.md
-            - name: Access 인벤토리 스키마
-              href: ssma/access/access-inventory-schemas-accesstosql.md
-            - name: 메타데이터 저장
-              href: ssma/access/save-metadata-accesstosql.md
-            - name: SQL Server에 연결
-              href: ssma/access/connecting-to-sql-server-accesstosql.md
-            - name: Access 데이터를 Azure SQL DB로 마이그레이션
-              href: ssma/access/migrating-access-data-into-sql-server-azure-sql-db-accesstosql.md
-            - name: 프로젝트 만들기 및 관리
-              href: ssma/access/creating-and-managing-projects-accesstosql.md
-            - name: Access용 SSMA 콘솔 작업
-              href: ssma/access/working-with-ssma-for-access-console-accesstosql.md
-            - name: 데이터베이스 파일 추가 및 제거
-              href: ssma/access/adding-and-removing-access-database-files-accesstosql.md
-            - name: Access 데이터베이스 개체 변환
-              href: ssma/access/converting-access-database-objects-accesstosql.md
-            - name: 법적 고지 사항
-              href: ssma/access/legal-notice-ssma-for-access.md
-            - name: SQL Server에 연결
-              href: ssma/access/connect-to-sql-server-accesstosql.md
-            - name: 전역 설정
-              href: ssma/access/global-settings-output-window-accesstosql.md
-            - name: 새 프로젝트(SSMA)
-              href: ssma/access/new-project-ssma-accesstosql.md
-            - name: SSMA 콘솔의 명령줄 옵션
-              href: ssma/access/command-line-options-in-ssma-console-accesstosql.md
-            - name: Azure SQL DB에 연결
-              href: ssma/access/connect-to-azure-sql-db-accesstosql.md
-            - name: 평가 보고서
-              href: ssma/access/assessment-report-accesstosql.md
-            - name: 원본 및 대상 데이터 형식 매핑
-              href: ssma/access/mapping-source-and-target-data-types-accesstosql.md
-            - name: 암호 관리
-              href: ssma/access/managing-passwords-accesstosql.md
-            - name: 데이터 마이그레이션 보고서
-              href: ssma/access/data-migration-report-accesstosql.md
-            - name: 사용자 인터페이스 참조
-              href: ssma/access/user-interface-reference-accesstosql.md
-            - name: 샘플 콘솔 스크립트 파일 작업
-              href: ssma/access/working-sample-console-script-filesexecuting-ssma-console-accesstosql.md
-            - name: 보고서 생성
-              href: ssma/access/generating-reports-accesstosql.md
-            - name: SSMA 콘솔 실행
-              href: ssma/access/executing-the-ssma-console-accesstosql.md
-            - name: 변환을 위해 Access 데이터베이스 평가
-              href: ssma/access/assessing-access-database-objects-for-conversion-accesstosql.md
-            - name: 서버 연결 파일 만들기
-              href: ssma/access/creating-the-server-connection-files-accesstosql.md
-            - name: Access 애플리케이션을 Azure SQL DB에 연결
-              href: ssma/access/linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md
-            - name: 변수 값 파일 만들기
-              href: ssma/access/creating-variable-value-files-accesstosql.md
-            - name: 형식 매핑 편집
-              href: ssma/access/edit-type-mapping-accesstosql.md
-            - name: Access 인벤토리 내보내기
-              href: ssma/access/exporting-an-access-inventory-accesstosql.md
-            - name: Access 데이터베이스를 Azure SQL DB로 마이그레이션
-              href: ssma/access/migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md
-            - name: 원본 및 대상 데이터베이스 매핑
-              href: ssma/access/mapping-source-and-target-databases-accesstosql.md
-            - name: 스크립트 파일 만들기
-              href: ssma/access/creating-script-files-accesstosql.md
-            - name: 데이터베이스 찾기 마법사(선택 영역 확인)
-              href: ssma/access/find-databases-wizard-verify-selection-accesstosql.md
-            - name: 마이그레이션 마법사
-              href: ssma/access/migration-wizard-accesstosql.md
-            - name: '변환, 로드 및 마이그레이션'
-              href: ssma/access/convert-load-and-migrate-accesstosql.md
-            - name: 변환된 데이터베이스 개체를 SQL Server로 로드
-              href: ssma/access/loading-converted-database-objects-into-sql-server-accesstosql.md
-            - name: 고급 개체 선택 영역
-              href: ssma/access/advanced-object-selection-accesstosql.md
-            - name: SQL Server Migration Assistant 시작
-              href: ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md
-            - name: 데이터베이스에서 새로 고침
-              href: ssma/access/refresh-from-database-accesstosql.md
-            - name: 데이터베이스 찾기 마법사(파일 선택)
-              href: ssma/access/find-databases-wizard-select-files-accesstosql.md
-            - name: 바로 가기 키
-              href: ssma/access/shortcut-keys-accesstosql.md
-            - name: Azure SQL DB에 연결
-              href: ssma/access/connecting-to-azure-sql-db-accesstosql.md
-            - name: 변환 및 마이그레이션 옵션 설정
-              href: ssma/access/setting-conversion-and-migration-options-accesstosql.md
-            - name: 문제 해결
-              href: ssma/access/troubleshooting-accesstosql.md
-            - name: 메뉴 명령 및 기타 바로 가기 키
-              href: ssma/access/menu-commands-and-other-shortcut-keys-accesstosql.md
-            - name: 데이터베이스 찾기 마법사(위치 선택)
-              href: ssma/access/find-databases-wizard-select-locations-accesstosql.md
-            - name: 부록 - 1
-              href: ssma/access/appendix-1-accesstosql.md
-            - name: 프로젝트 설정
-              items:
-                - name: 마이그레이션
-                  href: ssma/access/project-settings-migration-accesstosql.md
-                - name: GUI
-                  href: ssma/access/project-settings-gui-accesstosql.md
-                - name: 변환
-                  href: ssma/access/project-settings-conversion-accesstosql.md
-                - name: Azure SQL DB
-                  href: ssma/access/project-settings-azure-sql-db-accesstosql.md
-                - name: Type-Mapping
-                  href: ssma/access/project-settings-type-mapping-accesstosql.md
-                - name: 개체 로드
-                  href: ssma/access/project-settings-loading-objects-accesstosql.md
-            - name: 글로벌 설정
-              items:
-                - name: 대화 상자
-                  href: ssma/access/global-settings-dialogs-accesstosql.md
-                - name: 로깅
-                  href: ssma/access/global-settings-logging-accesstosql.md
-                - name: 편집기
-                  href: ssma/access/global-settings-editor-accesstosql.md
-        - name: DB2
-          href: ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md
-          items:
-            - name: SSMA 설치
-              href: ssma/db2/installing-ssma-for-db2-db2tosql.md
-            - name: 시작
-              href: ssma/db2/getting-started-with-ssma-for-db2-console-db2tosql.md
-            - name: What's New
-              href: ssma/db2/what-s-new-in-ssma-for-db2-db2tosql.md
-            - name: 새로운 GUI 기능
-              href: ssma/db2/new-gui-features-in-ssma-for-db2-db2tosql.md
-            - name: DB2용 SSMA 클라이언트 설치
-              href: ssma/db2/installing-ssma-for-db2-client-db2tosql.md
-            - name: 사용자 인터페이스 참조
-              href: ssma/db2/user-interface-reference-db2tosql.md
-            - name: 형식 매핑 편집
-              href: ssma/db2/edit-type-mapping-db2tosql.md
-            - name: 변환된 데이터베이스 개체를 SQL Server로 로드
-              href: ssma/db2/loading-converted-database-objects-into-sql-server-db2tosql.md
-            - name: 프로젝트 옵션 설정
-              href: ssma/db2/setting-project-options-db2tosql.md
-            - name: 스크립트 파일 만들기
-              href: ssma/db2/creating-script-files-db2tosql.md
-            - name: 문제 해결
-              href: ssma/db2/troubleshooting-db2tosql.md
-            - name: DB2 및 SQL Server 데이터 형식 매핑
-              href: ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md
-            - name: 법적 고지 사항
-              href: ssma/db2/legal-notice-db2tosql.md
-            - name: SQL Server에 SSMA 구성 요소 설치
-              href: ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md
-            - name: SSMA 콘솔 실행
-              href: ssma/db2/executing-the-ssma-console-db2tosql.md
-            - name: 바로 가기 키
-              href: ssma/db2/shortcut-keys-db2tosql.md
-            - name: 고급 개체 선택 영역
-              href: ssma/db2/advanced-object-selection-db2tosql.md
-            - name: SQL Server에 연결
-              href: ssma/db2/connect-to-sql-server-db2tosql.md
-            - name: SQL Server에 연결
-              href: ssma/db2/connecting-to-sql-server-db2etosql.md
-            - name: 평가 보고서
-              href: ssma/db2/assessment-report-db2tosql.md
-            - name: DB2에 연결
-              href: ssma/db2/connect-to-db2-db2tosql.md
-            - name: 메타데이터 저장
-              href: ssma/db2/save-metadata-db2tosql.md
-            - name: 변환을 위해 DB2 스키마 평가
-              href: ssma/db2/assessing-db2-schemas-for-conversion-db2tosql.md
-            - name: DB2 스키마 변환
-              href: ssma/db2/converting-db2-schemas-db2tosql.md
-            - name: SQL Server Migration Assistant
-              href: ssma/db2/sql-server-migration-assistant-for-db2-db2tosql.md
-            - name: 보고서 생성
-              href: ssma/db2/generating-reports-db2tosql.md
-            - name: 서버 연결 파일 만들기
-              href: ssma/db2/creating-the-server-connection-files-db2tosql.md
-            - name: 새 프로젝트
-              href: ssma/db2/new-project-db2tosql.md
-            - name: 데이터베이스에서 새로 고침
-              href: ssma/db2/refresh-from-database-db2tosql.md
-            - name: DB2 데이터베이스에 연결
-              href: ssma/db2/connecting-to-db2-database-db2tosql.md
-            - name: 샘플 콘솔 스크립트 파일 작업
-              href: ssma/db2/working-with-the-sample-console-script-files-db2tosql.md
-            - name: 데이터 마이그레이션 설정
-              href: ssma/db2/data-migration-settings-db2tosql.md
-            - name: 암호 관리
-              href: ssma/db2/managing-passwords-db2tosql.md
-            - name: DB2용 SSMA 구성 요소 제거
-              href: ssma/db2/removing-ssma-for-db2-components-db2tosql.md
-            - name: DB2용 SSMA 시작
-              href: ssma/db2/getting-started-with-ssma-for-db2-db2tosql.md
-            - name: 데이터 마이그레이션 보고서
-              href: ssma/db2/data-migration-report-db2tosql.md
-            - name: Oracle용 SSMA 콘솔 작업
-              href: ssma/db2/working-with-ssma-for-oracle-console-db2tosql.md
-            - name: SSMA 콘솔의 명령줄 옵션
-              href: ssma/db2/command-line-options-in-ssma-console-db2tosql.md
-            - name: DB2 데이터베이스를 SQL Server로 마이그레이션
-              href: ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md
-            - name: 메뉴 명령 및 기타 바로 가기 키
-              href: ssma/db2/menu-commands-and-other-shortcut-keys-db2tosql.md
-            - name: 변수 값 파일 만들기
-              href: ssma/db2/creating-variable-value-files-db2tosql.md
-            - name: SSMA 프로젝트 작업
-              href: ssma/db2/working-with-ssma-projects-db2tosql.md
-            - name: DB2 스키마를 SQL Server 스키마에 매핑
-              href: ssma/db2/mapping-db2-schemas-to-sql-server-schemas-db2tosql.md
-            - name: 부록 - 1
-              href: ssma/db2/appendix-1-db2tosql.md
-            - name: 프로젝트 설정
-              items:
-                - name: 마이그레이션
-                  href: ssma/db2/project-settings-migration-db2tosql.md
-                - name: Type-Mapping
-                  href: ssma/db2/project-settings-type-mapping-db2tosql.md
-                - name: 변환
-                  href: ssma/db2/project-settings-conversion-db2tosql.md
-                - name: 시스템 개체 로드
-                  href: ssma/db2/project-settings-loading-system-objects-db2tosql.md
-                - name: GUI
-                  href: ssma/db2/project-settings-gui-db2tosql.md
-                - name: Synchronization
-                  href: ssma/db2/project-settings-synchronization-db2tosql.md
-            - name: 글로벌 설정
-              href: ssma/db2/global-settings-dialogs-db2tosql.md
-              items:
-                - name: 편집기
-                  href: ssma/db2/global-settings-editor-db2tosql.md
-                - name: 출력 창
-                  href: ssma/db2/global-settings-output-window-db2tosql.md
-                - name: 로깅
-                  href: ssma/db2/global-settings-logging-db2tosql.md
-        - name: mySQL
-          href: ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md
-          items:
-            - name: SSMA 설치
-              href: ssma/mysql/installing-ssma-for-mysql-mysqltosql.md
-            - name: MySQL용 SSMA 시작
-              href: ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md
-            - name: 법적 고지 사항
-              href: ssma/mysql/legal-notice-mysqltosql.md
-            - name: 변환 설정
-              href: ssma/mysql/conversion-settings-mysqltosql.md
-            - name: MySQL용 SSMA 클라이언트 설치
-              href: ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md
-            - name: SSMA 콘솔 실행
-              href: ssma/mysql/executing-the-ssma-console-mysqltosql.md
-            - name: 서버 연결 파일 만들기
-              href: ssma/mysql/creating-the-server-connection-files-mysqltosql.md
-            - name: SQL 모드
-              href: ssma/mysql/sql-modes-mysqltosql.md
-            - name: SQL Server에 연결
-              href: ssma/mysql/connect-to-sql-server-mysqltosql.md
-            - name: Azure SQL DB에 연결
-              href: ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md
-            - name: 스크립트 파일 만들기
-              href: ssma/mysql/creating-script-files-mysqltosql.md
-            - name: 변환된 데이터베이스 개체를 SQL Server로 로드
-              href: ssma/mysql/loading-converted-database-objects-into-sql-server-mysqltosql.md
-            - name: MySQL 데이터베이스 변환
-              href: ssma/mysql/converting-mysql-databases-mysqltosql.md
-            - name: SQL Server로 마이그레이션 - Azure SQL DB
-              href: ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md
-            - name: SSMA 콘솔의 명령줄 옵션
-              href: ssma/mysql/command-line-options-in-ssma-console-mysqltosql.md
-            - name: SSMA 프로젝트 작업
-              href: ssma/mysql/working-with-ssma-projects-mysqltosql.md
-            - name: 데이터 마이그레이션 설정
-              href: ssma/mysql/data-migration-settings-mysqltosql.md
-            - name: 메타데이터 저장
-              href: ssma/mysql/save-metadata-mysqltosql.md
-            - name: 메뉴 명령 및 기타 바로 가기 키
-              href: ssma/mysql/menu-commands-and-other-shortcut-keys-mysqltosql.md
-            - name: 문제 해결
-              href: ssma/mysql/troubleshooting-mysqltosql.md
-            - name: MySQL에 연결
-              href: ssma/mysql/connect-to-mysql-mysqltosql.md
-            - name: MySQL용 SSMA 구성 요소 제거
-              href: ssma/mysql/removing-the-ssma-for-mysql-components-mysqltosql.md
-            - name: Azure SQL DB에 연결
-              href: ssma/mysql/connect-to-azure-sql-db-mysqltosql.md
-            - name: MySQL 데이터베이스를 Azure SQL DB로 마이그레이션
-              href: ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md
-            - name: 샘플 콘솔 스크립트 파일 작업
-              href: ssma/mysql/working-with-the-sample-console-script-files-mysqltosql.md
-            - name: 새 프로젝트
-              href: ssma/mysql/new-project-ssma-mysqltosql.md
-            - name: SQL Server에 SSMA 구성 요소 설치
-              href: ssma/mysql/installing-ssma-components-on-sql-server-mysqltosql.md
-            - name: MySQL 데이터베이스를 SQL Server 스키마에 매핑
-              href: ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md
-            - name: 데이터베이스에서 새로 고침
-              href: ssma/mysql/refresh-from-database-mysqltosql.md
-            - name: 바로 가기 키
-              href: ssma/mysql/shortcut-keys-mysqltosql.md
-            - name: 평가 보고서
-              href: ssma/mysql/assessment-report-mysqltosql.md
-            - name: 데이터 마이그레이션 보고서
-              href: ssma/mysql/data-migration-report-mysqltosql.md
-            - name: 암호 관리
-              href: ssma/mysql/managing-passwords-mysqltosql.md
-            - name: 고급 개체 선택 영역
-              href: ssma/mysql/advanced-object-selection-mysqltosql.md
-            - name: 사용자 인터페이스 참조
-              href: ssma/mysql/user-interface-reference-mysqltosql.md
-            - name: 부록 - 1
-              href: ssma/mysql/appendix-1-mysqltosql.md
-            - name: 변환을 위해 MySQL 데이터베이스 평가
-              href: ssma/mysql/assessing-mysql-databases-for-conversion-mysqltosql.md
-            - name: MySQL용 SSMA 콘솔 작업
-              href: ssma/mysql/working-with-ssma-for-mysql-console-mysqltosql.md
-            - name: MySQL용 SSMA 콘솔 시작
-              href: ssma/mysql/getting-started-with-ssma-for-mysql-console-mysqltosql.md
-            - name: MySQL 및 SQL Server 문자 세트 매핑
-              href: ssma/mysql/mapping-mysql-and-sql-server-character-set-mysqltosql.md
-            - name: 변수 값 파일 만들기
-              href: ssma/mysql/creating-variable-value-files-mysqltosql.md
-            - name: 보고서 생성
-              href: ssma/mysql/generating-reports-mysqltosql.md
-            - name: 형식 매핑 편집
-              href: ssma/mysql/edit-type-mapping-mysqltosql.md
-            - name: MySQL 및 SQL Server 데이터 형식 매핑
-              href: ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md
-            - name: MySQL용 SSMA의 새로운 기능
-              href: ssma/mysql/what-s-new-in-ssma-for-mysql-mysqltosql.md
-            - name: MySQL용 SSMA의 새로운 GUI 기능
-              href: ssma/mysql/new-gui-features-in-ssma-for-mysql-mysqltosql.md
-            - name: 프로젝트 옵션 설정
-              href: ssma/mysql/setting-project-options-mysqltosql.md
-            - name: MySQL에 연결
-              href: ssma/mysql/connecting-to-mysql-mysqltosql.md
-            - name: SQL Server에 연결
-              href: ssma/mysql/connecting-to-sql-server-mysqltosql.md
-            - name: 프로젝트 설정
-              items:
-                - name: GUI
-                  href: ssma/mysql/project-settings-gui-mysqltosql.md
-                - name: Azure SQL DB
-                  href: ssma/mysql/project-settings-azure-sql-db-mysqltosql.md
-                - name: Type-Mapping
-                  href: ssma/mysql/project-settings-type-mapping-mysqltosql.md
-                - name: 마이그레이션
-                  href: ssma/mysql/project-settings-migration-mysqltosql.md
-                - name: Synchronization
-                  href: ssma/mysql/project-settings-synchronization-mysqltosql.md
-                - name: 변환
-                  href: ssma/mysql/project-settings-conversion-mysqltosql.md
-            - name: 글로벌 설정
-              href: ssma/mysql/global-settings-output-window-mysqltosql.md
-              items:
-                - name: 대화 상자
-                  href: ssma/mysql/global-settings-dialogs-mysqltosql.md
-                - name: 로깅
-                  href: ssma/mysql/global-settings-logging-mysqltosql.md
-                - name: 편집기
-                  href: ssma/mysql/global-settings-editor-mysqltosql.md
-        - name: Oracle
-          href: ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md
-          items:
-            - name: SSMA의 새로운 기능
-              href: ssma/oracle/what-s-new-in-ssma-for-oracle-oracletosql.md
-            - name: SSMA 설치
-              href: ssma/oracle/installing-ssma-for-oracle-oracletosql.md
-            - name: 시작
-              href: ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md
-            - name: Oracle HR 스키마를 SQL Server로 변환
-              href: ssma/oracle/sql-server-linux-convert-from-oracle.md
-            - name: 법적 고지 사항
-              href: ssma/oracle/legal-notice-ssma-for-oracle.md
-            - name: Oracle용 SSMA 클라이언트 설치
-              href: ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md
-            - name: SSMA의 새로운 GUI 기능
-              href: ssma/oracle/new-gui-features-in-ssma-for-oracle-oracletosql.md
-            - name: 테스트 사례 실행
-              href: ssma/oracle/running-test-cases-oracletosql.md
-            - name: 메뉴 명령 및 기타 바로 가기 키
-              href: ssma/oracle/menu-commands-and-other-shortcut-keys-oracle-to-sql.md
-            - name: 테스트 리포지토리 사용
-              href: ssma/oracle/using-test-repositories-oracletosql.md
-            - name: 변수 값 파일 만들기
-              href: ssma/oracle/creating-variable-value-files-oracletosql.md
-            - name: 마이그레이션된 데이터베이스 개체 테스트
-              href: ssma/oracle/testing-migrated-database-objects-oracletosql.md
-            - name: SSMA 프로젝트 작업
-              href: ssma/oracle/working-with-ssma-projects-oracletosql.md
-            - name: Oracle 데이터베이스에 연결
-              href: ssma/oracle/connecting-to-oracle-database-oracletosql.md
-            - name: Oracle 데이터를 SQL Server로 마이그레이션
-              href: ssma/oracle/migrating-oracle-data-into-sql-server-oracletosql.md
-            - name: Oracle 스키마 변환
-              href: ssma/oracle/converting-oracle-schemas-oracletosql.md
-            - name: 데이터 마이그레이션 보고서
-              href: ssma/oracle/data-migration-report-oracletosql.md
-            - name: 보고서 생성
-              href: ssma/oracle/generating-reports-oracletosql.md
-            - name: 고급 개체 선택 영역
-              href: ssma/oracle/advanced-object-selection-oracletosql.md
-            - name: 샘플 콘솔 스크립트 파일 작업
-              href: ssma/oracle/working-with-the-sample-console-script-files-oracletosql.md
-            - name: SSMA 콘솔의 명령줄 옵션
-              href: ssma/oracle/command-line-options-in-ssma-console-oracletosql.md
-            - name: 바로 가기 키
-              href: ssma/oracle/shortcut-keys-oracle-to-sql.md
-            - name: 변환된 데이터베이스 개체를 SQL Server로 로드
-              href: ssma/oracle/loading-converted-database-objects-into-sql-server-oracletosql.md
-            - name: 프로젝트 옵션 설정
-              href: ssma/oracle/setting-project-options-oracletosql.md
-            - name: 백업 관리
-              href: ssma/oracle/managing-backups-oracletosql.md
-            - name: 메타데이터 저장
-              href: ssma/oracle/save-metadata-oracletosql.md
-            - name: 호출 순서 사용자 지정
-              href: ssma/oracle/customizing-calls-order-oracletosql.md
-            - name: 데이터 마이그레이션 설정
-              href: ssma/oracle/data-migration-settings-oracletosql.md
-            - name: 테스트 사례 보고서 보기
-              href: ssma/oracle/viewing-test-case-reports-oracletosql.md
-            - name: 암호 관리
-              href: ssma/oracle/managing-passwords-oracletosql.md
-            - name: Oracle용 SSMA 구성 요소 제거
-              href: ssma/oracle/removing-ssma-for-oracle-components-oracletosql.md
-            - name: 데이터베이스에서 새로 고침
-              href: ssma/oracle/refresh-from-database-oracletosql.md
-            - name: SSMA 콘솔 실행
-              href: ssma/oracle/executing-the-ssma-console-oracletosql.md
-            - name: 형식 매핑 편집
-              href: ssma/oracle/edit-type-mapping-oracletosql.md
-            - name: Oracle용 SSMA 콘솔 시작
-              href: ssma/oracle/getting-started-with-ssma-for-oracle-console-oracletosql.md
-            - name: 스크립트 파일 만들기
-              href: ssma/oracle/creating-script-files-oracletosql.md
-            - name: 영향을 받는 개체 선택 및 구성
-              href: ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md
-            - name: SQL Server에 연결
-              href: ssma/oracle/connect-to-sql-server-oracletosql.md
-            - name: Oracle용 SSMA 콘솔 작업
-              href: ssma/oracle/working-with-ssma-for-oracle-console-oracletosql.md
-            - name: 변환을 위해 Oracle 스키마 평가
-              href: ssma/oracle/assessing-oracle-schemas-for-conversion-oracletosql.md
-            - name: 테스트 사례 초기화
-              href: ssma/oracle/initializing-test-cases-oracletosql.md
-            - name: SQL Server에 SSMA 구성 요소 설치
-              href: ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md
-            - name: 테스트 사례 준비 완료
-              href: ssma/oracle/finishing-test-case-preparation-oracletosql.md
-            - name: 테스트할 개체 선택 및 구성
-              href: ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md
-            - name: Oracle에 연결
-              href: ssma/oracle/connect-to-oracle-oracletosql.md
-            - name: 테스트 사례 만들기
-              href: ssma/oracle/creating-test-cases-oracletosql.md
-            - name: 문제 해결
-              href: ssma/oracle/troubleshooting-oracletosql.md
-            - name: Oracle 데이터베이스를 SQL Server로 마이그레이션
-              href: ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md
-            - name: SQL Server에 연결
-              href: ssma/oracle/connecting-to-sql-server-oracletosql.md
-            - name: 평가 보고서
-              href: ssma/oracle/assessment-report-oracletosql.md
-            - name: 새 프로젝트
-              href: ssma/oracle/new-project-oracletosql.md
-            - name: 사용자 인터페이스 참조
-              href: ssma/oracle/user-interface-reference-oracletosql.md
-            - name: Oracle 스키마를 SQL Server 스키마에 매핑
-              href: ssma/oracle/mapping-oracle-schemas-to-sql-server-schemas-oracletosql.md
-            - name: Oracle 및 SQL Server 데이터 형식 매핑
-              href: ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md
-            - name: 서버 연결 파일 만들기
-              href: ssma/oracle/creating-the-server-connection-files-oracletosql.md
-            - name: 부록 - 1
-              href: ssma/oracle/appendix-1-oracletosql.md
-            - name: 프로젝트 설정
-              items:
-                - name: 변환
-                  href: ssma/oracle/project-settings-conversion-oracletosql.md
-                - name: 시스템 개체 로드
-                  href: ssma/oracle/project-settings-loading-system-objects-oracletosql.md
-                - name: Synchronization
-                  href: ssma/oracle/project-settings-synchronization-oracletosql.md
-                - name: GUI
-                  href: ssma/oracle/project-settings-gui-oracletosql.md
-                - name: Type-Mapping
-                  href: ssma/oracle/project-settings-type-mapping-oracletosql.md
-                - name: 마이그레이션
-                  href: ssma/oracle/project-settings-migration-oracletosql.md
-            - name: 글로벌 설정
-              items:
-                - name: 테스터
-                  href: ssma/oracle/global-settings-tester-oracletosql.md
-                - name: 편집기
-                  href: ssma/oracle/global-settings-editor-oracletosql.md
-                - name: 로깅
-                  href: ssma/oracle/global-settings-logging-oracletosql.md
-                - name: 대화 상자
-                  href: ssma/oracle/global-settings-dialogs-oracletosql.md
-                - name: 출력 창
-                  href: ssma/oracle/global-settings-output-window-oracletosql.md
-        - name: Sybase
-          href: ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md
-          items:
-            - name: SSMA 설치
-              href: ssma/sybase/installing-ssma-for-sybase-sybasetosql.md
-            - name: Sybase용 SSMA 시작
-              href: ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md
-            - name: Sybase용 SSMA 콘솔 시작
-              href: ssma/sybase/getting-started-with-ssma-for-sybase-console-sybasetosql.md
-            - name: 법적 고지 사항
-              href: ssma/sybase/legal-notice-ssma-for-sybase.md
-            - name: SSMA의 새로운 기능
-              href: ssma/sybase/what-s-new-in-ssma-for-sybase-sybasetosql.md
-            - name: Sybase용 SSMA 클라이언트 설치
-              href: ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md
-            - name: SSMA의 새로운 GUI 기능
-              href: ssma/sybase/new-gui-features-in-ssma-for-sybase-sybasetosql.md
-            - name: 새 프로젝트
-              href: ssma/sybase/new-project-sybasetosql.md
-            - name: 테스트 사례 초기화
-              href: ssma/sybase/initializing-test-cases-sybasetosql.md
-            - name: 샘플 콘솔 스크립트 파일 작업
-              href: ssma/sybase/working-with-the-sample-console-script-files-sybasetosql.md
-            - name: Sybase ASE 데이터베이스를 Azure SQL DB로 마이그레이션
-              href: ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md
-            - name: 변환을 위해 Sybase ASE 데이터베이스 개체 평가
-              href: ssma/sybase/assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md
-            - name: SSMA 콘솔 실행
-              href: ssma/sybase/executing-the-ssma-console-sybasetosql.md
-            - name: 스크립트 파일 만들기
-              href: ssma/sybase/creating-script-files-sybasetosql.md
-            - name: 전역 설정
-              href: ssma/sybase/global-settings-dialogs-sybasetosql.md
-            - name: SQL Server에 연결
-              href: ssma/sybase/connecting-to-sql-server-sybasetosql.md
-            - name: 고급 개체 선택 영역
-              href: ssma/sybase/advanced-object-selection-sybasetosql.md
-            - name: 프로젝트 설정(GUI)
-              href: ssma/sybase/project-settings-gui-sybasetosql.md
-            - name: 테스트 사례 보고서 보기
-              href: ssma/sybase/viewing-test-case-reports-sybasetosql.md
-            - name: Sybase용 SSMA 콘솔 작업
-              href: ssma/sybase/working-with-ssma-for-sybase-console-sybasetosql.md
-            - name: 테스트 리포지토리 사용
-              href: ssma/sybase/using-test-repositories-sybasetosql.md
-            - name: 데이터 마이그레이션 보고서
-              href: ssma/sybase/data-migration-report-sybasetosql.md
-            - name: 테스트 사례 만들기
-              href: ssma/sybase/creating-test-cases-sybasetosql.md
-            - name: 메타데이터 저장
-              href: ssma/sybase/save-metadata-sybasetosql.md
-            - name: 평가 보고서
-              href: ssma/sybase/assessment-report-sybasetosql.md
-            - name: Sybase용 SSMA 구성 요소 제거
-              href: ssma/sybase/removing-ssma-for-sybase-components-sybasetosql.md
-            - name: Sybase ASE에 연결
-              href: ssma/sybase/connecting-to-sybase-ase-sybasetosql.md
-            - name: 영향을 받는 개체 선택 및 구성
-              href: ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md
-            - name: Azure SQL DB에 연결
-              href: ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md
-            - name: 암호 관리
-              href: ssma/sybase/managing-passwords-sybasetosql.md
-            - name: 프로젝트 옵션 설정
-              href: ssma/sybase/setting-project-options-sybasetosql.md
-            - name: Azure SQL DB에 연결
-              href: ssma/sybase/connect-to-azure-sql-db-sybasetosql.md
-            - name: 데이터 마이그레이션 설정
-              href: ssma/sybase/data-migration-settings-sybasetosql.md
-            - name: 테스트 사례 준비 완료
-              href: ssma/sybase/finishing-test-case-preparation-sybasetosql.md
-            - name: 테스트할 개체 선택 및 구성
-              href: ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md
-            - name: 문제 해결
-              href: ssma/sybase/troubleshooting-sybasetosql.md
-            - name: Sybase ASE 및 SQL Server 데이터 형식 매핑
-              href: ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md
-            - name: SQL Server에 SSMA 구성 요소 설치
-              href: ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md
-            - name: Sybase ASE 데이터를 Azure SQL DB로 마이그레이션
-              href: ssma/sybase/migrating-sybase-ase-data-into-sql-server-azure-sql-db-sybasetosql.md
-            - name: Sybase에 연결
-              href: ssma/sybase/connect-to-sybase-sybasetosql.md
-            - name: 형식 매핑 편집
-              href: ssma/sybase/edit-type-mapping-sybasetosql.md
-            - name: Sybase ASE 데이터베이스 개체 변환
-              href: ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md
-            - name: 변환된 데이터베이스 개체를 SQL Server로 로드
-              href: ssma/sybase/loading-converted-database-objects-into-sql-server-sybasetosql.md
-            - name: 마이그레이션된 데이터베이스 개체 테스트
-              href: ssma/sybase/testing-migrated-database-objects-sybasetosql.md
-            - name: 호출 순서 사용자 지정
-              href: ssma/sybase/customizing-calls-order-sybasetosql.md
-            - name: 사용자 인터페이스 참조
-              href: ssma/sybase/user-interface-reference-sybasetosql.md
-            - name: 변수 값 파일 만들기
-              href: ssma/sybase/creating-variable-value-files-sybasetosql.md
-            - name: 서버 연결 파일 만들기
-              href: ssma/sybase/creating-the-server-connection-files-sybasetosql.md
-            - name: SSMA 콘솔의 명령줄 옵션
-              href: ssma/sybase/command-line-options-in-ssma-console-sybasetosql.md
-            - name: SQL Server에 연결
-              href: ssma/sybase/connect-to-sql-server-sybasetosql.md
-            - name: 바로 가기 키
-              href: ssma/sybase/shortcut-keys-sybase-to-sql.md
-            - name: Sybase ASE 스키마를 SQL Server 스키마에 매핑
-              href: ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md
-            - name: 백업 관리
-              href: ssma/sybase/managing-backups-sybasetosql.md
-            - name: 메뉴 명령 및 기타 바로 가기 키
-              href: ssma/sybase/menu-commands-and-other-shortcut-keys-sybase-to-sql.md
-            - name: 테스트 사례 실행
-              href: ssma/sybase/running-test-cases-sybasetosql.md
-            - name: 보고서 생성
-              href: ssma/sybase/generating-reports-sybasetosql.md
-            - name: SSMA 프로젝트 작업
-              href: ssma/sybase/working-with-ssma-projects-sybasetosql.md
-            - name: 부록 - 1
-              href: ssma/sybase/appendix-1-sybasetosql.md
-            - name: 프로젝트 설정
-              items:
-                - name: 변환
-                  href: ssma/sybase/project-settings-conversion-sybasetosql.md
-                - name: Type-Mapping
-                  href: ssma/sybase/project-settings-type-mapping-sybasetosql.md
-                - name: Synchronization
-                  href: ssma/sybase/project-settings-synchronization-sybasetosql.md
-                - name: Azure SQL DB
-                  href: ssma/sybase/project-settings-azure-sql-db-sybasetosql.md
-                - name: (마이그레이션
-                  href: ssma/sybase/project-settings-migration-sybasetosql.md
-            - name: 글로벌 설정
-              href: ssma/sybase/global-settings-output-window-sybasetosql.md
-              items:
-                - name: 편집기
-                  href: ssma/sybase/global-settings-editor-sybasetosql.md
-                - name: 로깅
-                  href: ssma/sybase/global-settings-logging-sybasetosql.md
-                - name: 테스터
-                  href: ssma/sybase/global-settings-tester-sybasetosql.md
+      href: ssma/toc.yml
 - name: '관리, 모니터링 및 튜닝'
   items:
     - name: 관리
@@ -6562,12 +5935,12 @@
               href: relational-databases/data-compression/unicode-compression-implementation.md
             - name: 사용
               href: relational-databases/data-compression/enable-compression-on-a-table-or-index.md
-            - name: 사용 안함
+            - name: 사용 안 함
               href: relational-databases/data-compression/disable-compression-on-a-table-or-index.md
         - name: 유지 관리 계획
           href: relational-databases/maintenance-plans/maintenance-plans.md
           items:
-            - name: 만들기
+            - name: 생성
               href: relational-databases/maintenance-plans/create-a-maintenance-plan.md
             - name: 유지 관리 계획 마법사
               href: relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md
@@ -6733,7 +6106,7 @@
             - name: '자습서: 정책 기반 관리를 사용하여 서버 관리'
               href: relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md
               items:
-                - name: '1단원: Off By Default 정책 만들기 및 적용'
+                - name: '1단원: 기본적으로 사용 안 함 정책 만들기 및 적용'
                   href: relational-databases/policy-based-management/lesson-1-create-and-apply-an-off-by-default-policy.md
                 - name: '2단원: 명명 표준 정책 만들기 및 적용'
                   href: relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md
@@ -6788,7 +6161,7 @@
             - name: 로그 파일 뷰어
               href: relational-databases/logs/log-file-viewer.md
               items:
-                - name: 파일
+                - name: 열기
                   href: relational-databases/logs/open-log-file-viewer.md
                 - name: 오프라인으로 보기
                   href: relational-databases/logs/view-offline-log-files.md
@@ -6946,7 +6319,7 @@
                   href: relational-databases/extended-events/use-the-system-health-session.md
                 - name: Xevent에 PowerShell 공급자 사용
                   href: relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md
-            - name: References
+            - name: 참조
               href: relational-databases/extended-events/xevents-references-system-objects.md
         - name: SQL 추적
           href: relational-databases/sql-trace/sql-trace.md
@@ -6984,7 +6357,7 @@
           items:
             - name: 메모리 내 OLTP
               href: relational-databases/performance/using-the-query-store-with-in-memory-oltp.md
-            - name: 최선의 구현 방법
+            - name: 모범 사례
               href: relational-databases/performance/best-practice-with-the-query-store.md
             - name: 사용 시나리오
               href: relational-databases/performance/query-store-usage-scenarios.md
@@ -7044,16 +6417,16 @@
                       href: relational-databases/performance-monitor/sql-server-xtp-storage.md
                     - name: 트랜잭션 로그
                       href: relational-databases/performance-monitor/sql-server-xtp-transaction-log.md
-                    - name: 의
+                    - name: 트랜잭션
                       href: relational-databases/performance-monitor/sql-server-xtp-transactions.md
                 - name: 개체 사용
                   href: relational-databases/performance-monitor/use-sql-server-objects.md
                   items:
                     - name: SQL Server 에이전트 개체
                       items:
-                        - name: ','
+                        - name: 경고
                           href: relational-databases/performance-monitor/sql-server-agent-alerts-object.md
-                        - name: 에서
+                        - name: 작업
                           href: relational-databases/performance-monitor/sql-server-agent-jobs-object.md
                         - name: JobSteps
                           href: relational-databases/performance-monitor/sql-server-agent-jobsteps-object.md
@@ -7131,7 +6504,7 @@
                           href: relational-databases/performance-monitor/sql-server-sql-errors-object.md
                         - name: SQL 통계
                           href: relational-databases/performance-monitor/sql-server-sql-statistics-object.md
-                        - name: 의
+                        - name: 트랜잭션
                           href: relational-databases/performance-monitor/sql-server-transactions-object.md
                         - name: 사용자 설정 가능
                           href: relational-databases/performance-monitor/sql-server-user-settable-object.md
@@ -7209,7 +6582,7 @@
                 - name: 메모리 내 개요
                   href: relational-databases/in-memory-oltp/overview-and-usage-scenarios.md
                   items:
-                    - name: 메모리 액세스에 최적화된 테이블
+                    - name: 메모리 최적화 테이블
                       href: relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md
                     - name: 빠른 설문 조사
                       href: relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md
@@ -7245,7 +6618,7 @@
                       href: relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md
                     - name: 스칼라 사용자 정의 함수
                       href: relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md
-                    - name: 최선의 구현 방법
+                    - name: 모범 사례
                       href: relational-databases/in-memory-oltp/best-practices-for-calling-natively-compiled-stored-procedures.md
                     - name: 메모리 내 테이블의 해석된 액세스
                       href: relational-databases/in-memory-oltp/accessing-memory-optimized-tables-using-interpreted-transact-sql.md
@@ -7261,7 +6634,7 @@
                   items:
                     - name: 복원 및 복구
                       href: relational-databases/in-memory-oltp/restore-and-recovery-of-memory-optimized-tables.md
-                    - name: 백업
+                    - name: Backup
                       href: relational-databases/in-memory-oltp/backing-up-a-database-with-memory-optimized-tables.md
                     - name: 검사점
                       href: relational-databases/in-memory-oltp/checkpoint-operation-for-memory-optimized-tables.md
@@ -7278,7 +6651,7 @@
                       href: relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md
                     - name: 스토리지 모드 비교
                       href: relational-databases/in-memory-oltp/comparing-disk-based-table-storage-to-memory-optimized-table-storage.md
-                    - name: 영속성
+                    - name: 내구성
                       href: relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md
                     - name: 가비지 수집
                       href: relational-databases/in-memory-oltp/in-memory-oltp-garbage-collection.md
@@ -7309,7 +6682,7 @@
                   href: relational-databases/in-memory-oltp/application-level-partitioning.md
                 - name: 성능 데모
                   href: relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md
-                - name: 모니터 및 문제 해결하기
+                - name: 모니터링 및 문제 해결
                   href: relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md
             - name: 샘플
               items:
@@ -7350,7 +6723,7 @@
                       href: relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md
                     - name: SQL 2016의 계산 열
                       href: relational-databases/in-memory-oltp/migrating-computed-columns.md
-                    - name: 의
+                    - name: 트랜잭션
                       href: relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md
                 - name: 메모리 부족을 포함한 관리
                   href: relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md
@@ -7373,7 +6746,7 @@
         - name: 파티션
           href: relational-databases/partitions/partitioned-tables-and-indexes.md
           items:
-            - name: 만들기
+            - name: 생성
               href: relational-databases/partitions/create-partitioned-tables-and-indexes.md
             - name: 함수 수정
               href: relational-databases/partitions/modify-a-partition-function.md
@@ -7384,7 +6757,7 @@
         - name: 계획 지침
           href: relational-databases/performance/plan-guides.md
           items:
-            - name: 만들기
+            - name: 생성
               href: relational-databases/performance/create-a-new-plan-guide.md
             - name: 매개 변수가 있는 쿼리 만들기
               href: relational-databases/performance/create-a-plan-guide-for-parameterized-queries.md
@@ -7411,7 +6784,7 @@
           items:
             - name: 사용
               href: relational-databases/resource-governor/enable-resource-governor.md
-            - name: 사용 안함
+            - name: 사용 안 함
               href: relational-databases/resource-governor/disable-resource-governor.md
             - name: 템플릿을 사용하여 리소스 관리자 구성
               href: relational-databases/resource-governor/configure-resource-governor-using-a-template.md
@@ -7420,7 +6793,7 @@
             - name: Resource Pool
               href: relational-databases/resource-governor/resource-governor-resource-pool.md
               items:
-                - name: 만들기
+                - name: 생성
                   href: relational-databases/resource-governor/create-a-resource-pool.md
                 - name: 설정 변경
                   href: relational-databases/resource-governor/change-resource-pool-settings.md
@@ -7429,11 +6802,11 @@
             - name: 작업 그룹
               href: relational-databases/resource-governor/resource-governor-workload-group.md
               items:
-                - name: 만들기
+                - name: 생성
                   href: relational-databases/resource-governor/create-a-workload-group.md
                 - name: 설정 변경
                   href: relational-databases/resource-governor/change-workload-group-settings.md
-                - name: 자세히 보기
+                - name: 이동
                   href: relational-databases/resource-governor/move-a-workload-group.md
                 - name: DELETE
                   href: relational-databases/resource-governor/delete-a-workload-group.md
@@ -7445,7 +6818,7 @@
         - name: 통계
           href: relational-databases/statistics/statistics.md
           items:
-            - name: 만들기
+            - name: 생성
               href: relational-databases/statistics/create-statistics.md
             - name: 수정
               href: relational-databases/statistics/modify-statistics.md
@@ -7455,7 +6828,7 @@
               href: relational-databases/statistics/view-statistics-properties.md
             - name: 이름 바꾸기
               href: relational-databases/statistics/rename-statistics.md
-            - name: Update
+            - name: 업데이트
               href: relational-databases/statistics/update-statistics.md
 - name: 쿼리 데이터
   items:
@@ -7493,7 +6866,7 @@
                   href: relational-databases/polybase/polybase-versioned-feature-summary.md
             - name: 외부 데이터 원본 구성
               items:
-                - name: Hadoop
+                - name: Hadoop은
                   items:
                     - name: Hadoop에 연결
                       href: relational-databases/polybase/polybase-configure-hadoop.md
@@ -7694,7 +7067,7 @@
               items:
                 - name: MDS 저장소에 연결
                   href: master-data-services/microsoft-excel-add-in/connect-to-an-mds-repository-mds-add-in-for-excel.md
-            - name: '개요: Excel로 데이터 내보내기(Excel용 MDS 추가 기능)'
+            - name: 'Overview: Exporting Data to Excel (MDS Add-in for Excel)'
               href: master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md
               items:
                 - name: 내보내기 전에 데이터 필터링
@@ -7710,7 +7083,7 @@
                   href: master-data-services/microsoft-excel-add-in/email-a-shortcut-query-file-mds-add-in-for-excel.md
                 - name: 데이터 새로 고침
                   href: master-data-services/microsoft-excel-add-in/refreshing-data-mds-add-in-for-excel.md
-            - name: '개요: Excel로 데이터 가져오기(Excel용 MDS 추가 기능)'
+            - name: '개요: Excel에서 데이터 가져오기(Excel용 MDS 추가 기능)'
               href: master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md
               items:
                 - name: Excel에서 Master Data Services로 데이터 가져오기
@@ -7742,7 +7115,7 @@
         - name: 모델
           href: master-data-services/models-master-data-services.md
           items:
-            - name: 만들기
+            - name: 생성
               href: master-data-services/create-a-model-master-data-services.md
             - name: 편집
               href: master-data-services/edit-model-master-data-services.md
@@ -7753,7 +7126,7 @@
           items:
             - name: 엔터티 종속성 탐색기
               href: master-data-services/entity-dependencies-explorer.md
-            - name: 만들기
+            - name: 생성
               href: master-data-services/create-an-entity-master-data-services.md
             - name: 편집
               href: master-data-services/edit-an-entity-master-data-services.md
@@ -7770,7 +7143,7 @@
         - name: 사용자 지정 인덱스
           href: master-data-services/custom-index-master-data-services.md
           items:
-            - name: 만들기
+            - name: 생성
               href: master-data-services/create-an-index-master-data-services.md
             - name: 편집 및 삭제
               href: master-data-services/edit-and-delete-an-index-master-data-services.md
@@ -7816,7 +7189,7 @@
                   href: master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md
                 - name: 특성 값 변경 기반 동작 시작
                   href: master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md
-        - name: '개요: 테이블에서 데이터를 가져오기'
+        - name: '개요: 테이블에서 데이터 가져오기'
           href: master-data-services/overview-importing-data-from-tables-master-data-services.md
           items:
             - name: 테이블에서 데이터를 가져오기
@@ -7835,7 +7208,7 @@
               href: master-data-services/staging-process-errors-master-data-services.md
             - name: 가져오기 상태
               href: master-data-services/import-statuses-master-data-services.md
-        - name: 멤버
+        - name: 구성원
           href: master-data-services/members-master-data-services.md
           items:
             - name: 리프 멤버 만들기
@@ -7899,12 +7272,12 @@
               href: master-data-services/approve-or-reject-a-changeset-master-data-services.md
             - name: 변경 집합 관리
               href: master-data-services/manage-changesets-master-data-services.md
-        - name: 알림
+        - name: 공지
           href: master-data-services/notifications-master-data-services.md
           items:
             - name: 전자 메일 알림 구성
               href: master-data-services/configure-email-notifications-master-data-services.md
-        - name: 의
+        - name: 트랜잭션
           href: master-data-services/transactions-master-data-services.md
           items:
             - name: 트랜잭션 되돌리기
@@ -7956,7 +7329,7 @@
               href: master-data-services/create-a-collection-master-data-services.md
             - name: 컬렉션에 멤버 추가
               href: master-data-services/add-members-to-a-collection-master-data-services.md
-        - name: '개요: Exporting Data'
+        - name: '개요: 데이터 내보내기'
           href: master-data-services/overview-exporting-data-master-data-services.md
           items:
             - name: 구독 뷰를 만들어 데이터 내보내기
@@ -8148,7 +7521,7 @@
                       href: relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md
                     - name: SSMS를 사용하여 Always Encrypted 키 프로비저닝
                       href: relational-databases/security/encryption/configure-always-encrypted-keys-using-ssms.md
-                    - name: Always Encrypted 키를 사용하여 Always Encrypted 키 프로비저닝
+                    - name: PowerShell을 사용하여 Always Encrypted 키 프로비전
                       href: relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md
                 - name: Always Encrypted 키 순환
                   items:
@@ -8193,7 +7566,11 @@
                       items:
                         - name: 호스트 보호자 서비스 증명 계획
                           href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-plan.md
-                - name: 보안 Enclave를 사용하여 Always Encrypted 키 관리
+                        - name: 호스트 보호 서비스 배포
+                          href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md
+                        - name: 호스트 보호 서비스에 컴퓨터 등록
+                          href: relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-register.md
+                - name: 보안 enclave를 사용한 Always Encrypted용 키 관리
                   items:
                     - name: Enclave 사용 키 관리
                       href: relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md
@@ -8201,23 +7578,23 @@
                       href: relational-databases/security/encryption/always-encrypted-enclaves-provision-keys.md
                     - name: Enclave 사용 키 회전
                       href: relational-databases/security/encryption/always-encrypted-enclaves-rotate-keys.md
-                - name: 보안 enclave로 Always Encrypted를 사용하여 열 구성
+                - name: 보안 enclave를 사용한 Always Encrypted를 이용하여 열 구성
                   items:
                     - name: 열 암호화 구성
                       href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption.md
-                    - name: Transact-sql을 사용하여 내부에서 열 암호화 구성
+                    - name: Transact-SQL을 사용하여 내부 열 암호화 구성
                       href: relational-databases/security/encryption/always-encrypted-enclaves-configure-encryption-tsql.md
-                    - name: 기존 암호화된 열에 대해 보안 enclave를 사용하여 Always Encrypted 사용
+                    - name: 기존 암호화된 열에 대해 보안 enclave를 사용한 Always Encrypted 사용
                       href: relational-databases/security/encryption/always-encrypted-enclaves-enable-for-encrypted-columns.md
-                - name: 보안 enclave로 Always Encrypted를 사용하여 열 쿼리
+                - name: 보안 Enclave를 사용한 Always Encrypted를 이용하는 열 쿼리
                   items:
-                    - name: 보안 enclave로 Always Encrypted를 사용하여 열 쿼리
+                    - name: 보안 Enclave를 사용한 Always Encrypted를 이용하는 열 쿼리
                       href: relational-databases/security/encryption/always-encrypted-enclaves-query-columns.md
-                    - name: SSMS로 보안 enclave와 Always Encrypted를 사용하여 열 쿼리
+                    - name: SSMS로 보안 enclave를 사용한 Always Encrypted를 이용하는 열 쿼리
                       href: relational-databases/security/encryption/always-encrypted-enclaves-query-columns-ssms.md
-                - name: enclave 사용 열에 인덱스 만들기 및 사용
+                - name: Enclave 사용 열에 인덱스 만들기 및 사용
                   href: relational-databases/security/encryption/always-encrypted-enclaves-create-use-indexes.md
-                - name: 보안 enclave로 Always Encrypted를 사용하여 애플리케이션 개발
+                - name: 보안 enclave를 사용한 Always Encrypted를 이용하여 애플리케이션 개발
                   href: relational-databases/security/encryption/always-encrypted-enclaves-client-development.md
             - name: TDE 문제 해결
               href: relational-databases/security/encryption/troubleshoot-tde.md
@@ -8287,7 +7664,7 @@
         - name: 인증 액세스
           href: relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md
           items:
-            - name: 보안 주체
+            - name: Principals
               href: relational-databases/security/authentication-access/principals-database-engine.md
             - name: 서버 수준 역할
               href: relational-databases/security/authentication-access/server-level-roles.md
@@ -8362,20 +7739,21 @@
               href: relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md
             - name: 보안 Enclave 열을 사용한 Always Encrypted 인덱스 만들기 및 사용
               href: relational-databases/security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md
-            - name: 보안 enclave로 Always Encrypted를 사용하여 .NET Framework 애플리케이션 개발
+            - name: 보안 enclave를 사용한 Always Encrypted를 이용하여 .NET Framework 애플리케이션 개발
               href: relational-databases/security/tutorial-always-encrypted-enclaves-develop-net-framework-apps.md
     - name: 참조
       items:
         - name: 사용 권한 또는 보안 개체 페이지
           href: relational-databases/security/permissions-or-securables-page.md
 - name: 도구
-  href: tools/overview-sql-tools.md
   items:
+    - name: 개요
+      href: tools/overview-sql-tools.md
     - name: Azure Data Studio
       href: azure-data-studio/what-is.md
       items:
         - name: 설치
-          href: azure-data-studio/download.md
+          href: azure-data-studio/download-azure-data-studio.md
         - name: 릴리스 정보
           href: azure-data-studio/release-notes-azure-data-studio.md
         - name: 빠른 시작
@@ -8424,7 +7802,7 @@
               href: azure-data-studio/enable-kerberos.md
             - name: 사용량 현황 데이터 수집
               href: azure-data-studio/usage-data-collection.md
-        - name: 확장 프로그램
+        - name: 확장
           href: azure-data-studio/extensions.md
           items:
             - name: PostgreSQL 확장
@@ -8832,7 +8210,7 @@
               href: ssdt/how-to-create-a-new-database-project.md
             - name: '방법: 스키마 비교를 사용하여 서로 다른 데이터베이스 정의 비교'
               href: ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md
-            - name: '방법: 로컬 데이터베이스에 빌드 및 배포'
+            - name: '방법: 로컬 데이터베이스 빌드 및 배포'
               href: ssdt/how-to-build-and-deploy-to-a-local-database.md
             - name: '방법: 프로젝트에서 Microsoft SQL Server 2012 개체 사용'
               href: ssdt/how-to-use-microsoft-sql-server-2012-objects-in-your-project.md
@@ -8891,7 +8269,7 @@
                   href: ssdt/how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects.md
                 - name: '방법: 부분 쿼리 실행'
                   href: ssdt/how-to-execute-a-partial-query.md
-                - name: '방법: 저장된 프로시저 디버깅'
+                - name: '방법: 저장 프로시저 디버깅'
                   href: ssdt/how-to-debug-stored-procedures.md
                 - name: 스크립트 성능 분석
                   href: ssdt/analyze-script-performance.md
@@ -9394,7 +8772,7 @@
                       href: ssms/agent/use-tokens-in-job-steps.md
                     - name: Windows 애플리케이션 로그에 작업 상태 쓰기
                       href: ssms/agent/write-the-job-status-to-the-windows-application-log.md
-                - name: 만들기
+                - name: 생성
                   items:
                     - name: CmdExec 작업 단계
                       href: ssms/agent/create-a-cmdexec-job-step.md
@@ -9430,7 +8808,7 @@
                       href: ssms/agent/create-an-operator.md
                     - name: 일정을 만들어 작업에 연결
                       href: ssms/agent/create-and-attach-schedules-to-jobs.md
-                    - name: 에서
+                    - name: 작업
                       href: ssms/agent/create-jobs.md
                 - name: DEFECT
                   items:
@@ -9456,7 +8834,7 @@
                       href: ssms/agent/delete-an-alert.md
                     - name: 연산자
                       href: ssms/agent/delete-an-operator.md
-                    - name: 에서
+                    - name: 작업
                       href: ssms/agent/delete-jobs.md
                     - name: 하나 이상의 작업
                       href: ssms/agent/delete-one-or-more-jobs.md
@@ -9468,7 +8846,7 @@
                       href: ssms/agent/designate-a-fail-safe-operator.md
                     - name: 이벤트 전달 서버(SSMS)
                       href: ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md
-                - name: 사용 안함
+                - name: 사용 안 함
                   items:
                     - name: Disable or Enable a Job
                       href: ssms/agent/disable-or-enable-a-job.md
@@ -9480,7 +8858,7 @@
                       href: ssms/agent/edit-an-alert.md
                     - name: 운영자 편집
                       href: ssms/agent/edit-an-operator.md
-                - name: Set
+                - name: 설정
                   items:
                     - name: SQL Server 에이전트 서비스의 별칭
                       href: ssms/agent/set-sql-server-alias-for-sql-server-agent-service-ssms.md
@@ -9502,7 +8880,7 @@
                       href: ssms/agent/set-up-the-job-history-log.md
                 - name: 시작 및 중지
                   items:
-                    - name: Start a Job
+                    - name: 작업 시작
                       href: ssms/agent/start-a-job.md
                     - name: 'Start, Stop, or Pause the SQL Server Agent Service'
                       href: ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md
@@ -9611,7 +8989,7 @@
                   href: ssms/scripting/navigate-code-and-text.md
                 - name: 쿼리 편집기로 SQLCMD 스크립트 편집
                   href: ssms/scripting/edit-sqlcmd-scripts-with-query-editor.md
-        - name: References
+        - name: 참조
           items:
             - name: SMO(SQL Server 관리 개체)
               href: relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md
@@ -10217,7 +9595,7 @@
           items:
             - name: 사용 권한
               href: tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md
-            - name: 만들기
+            - name: 생성
               href: tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md
             - name: 수정
               href: tools/sql-server-profiler/modify-trace-templates.md
@@ -10338,6 +9716,10 @@
       items:
         - name: 확장된 기능 및 도구
           href: tools/download-sql-feature-packs.md
+    - name: Visual Studio Code
+      items:
+        - name: T-SQL 스크립트
+          href: visual-studio-code/sql-server-develop-use-vscode.md
 - name: 자습서
   items:
     - name: SQL Server
@@ -10345,7 +9727,7 @@
     - name: 데이터베이스 엔진
       href: relational-databases/database-engine-tutorials.md
       items:
-        - name: 시작
+        - name: 시작하기
           href: relational-databases/tutorial-getting-started-with-the-database-engine.md
           items:
             - name: '1단원: 데이터베이스 엔진에 연결'
@@ -10425,7 +9807,7 @@
               href: linux/sql-server-linux-shared-disk-cluster-configure-nfs.md
             - name: SMB
               href: linux/sql-server-linux-shared-disk-cluster-configure-smb.md
-        - name: 장애 조치(failover) 클러스터 인스턴스 작동 - SQL Server on Linux
+        - name: 장애 조치(Failover) 클러스터 인스턴스 작동
           href: linux/sql-server-linux-shared-disk-cluster-operate.md
         - name: Pacemaker 클러스터 배포
           href: linux/sql-server-linux-deploy-pacemaker-cluster.md
@@ -10467,7 +9849,7 @@
               href: linux/sql-server-linux-configure-pmem.md
             - name: Microsoft로 보낼 사용량 및 진단 데이터 구성
               href: linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md
-        - name: SSIS 로그 구성
+        - name: 컨테이너
           items:
             - name: Docker 컨테이너 구성
               href: linux/sql-server-linux-configure-docker.md
@@ -10582,7 +9964,7 @@
               href: linux/sql-server-linux-encrypted-connections.md
         - name: 성능
           items:
-            - name: 최선의 구현 방법
+            - name: 모범 사례
               href: linux/sql-server-linux-performance-best-practices.md
             - name: 성능 기능 시작
               href: linux/sql-server-linux-performance-get-started.md
@@ -10633,6 +10015,8 @@
   items:
     - name: 배우기
       items:
+        - name: 교육용 리소스
+          href: sql-server/educational-sql-resources.yml
         - name: Microsoft Virtual Academy >>
           href: 'https://mva.microsoft.com/product-training/sql-server'
         - name: Channel 9의 SQL >>
@@ -10661,7 +10045,7 @@
           href: 'https://blogs.msdn.microsoft.com/sqlsecurity/'
         - name: Data Tools >>
           href: 'https://blogs.msdn.microsoft.com/ssdt/'
-    - name: 피드백
+    - name: 사용자 의견
       items:
         - name: SQL 문서 >>
           href: 'https://aka.ms/sqldocsfeedback'
@@ -10671,6 +10055,8 @@
           href: sql-server/sql-server-docs-contribute.md
     - name: 파트너
       items:
+        - name: 빅 데이터 클러스터
+          href: sql-server/partner-big-data-cluster.md
         - name: 모니터링
           href: sql-server/partner-monitor-sql-server.md
         - name: 고가용성 및 재해 복구
@@ -11524,7 +10910,7 @@
         - name: Progress Report 이벤트 범주
           href: relational-databases/event-classes/progress-report-event-category.md
           items:
-            - name: '진행률 보고서: Online Index Operation 이벤트 클래스'
+            - name: 'Progress Report: Online Index Operation 이벤트 클래스'
               href: relational-databases/event-classes/progress-report-online-index-operation-event-class.md
         - name: Query Notifications 이벤트 범주
           href: relational-databases/event-classes/query-notifications-event-category.md
@@ -11805,7 +11191,7 @@
               href: relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql.md
             - name: sys.availability_replicas
               href: relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md
-        - name: Azure SQL 데이터베이스
+        - name: Azure SQL Database
           href: relational-databases/system-catalog-views/azure-sql-database-catalog-views.md
           items:
             - name: sys.bandwidth_usage
@@ -11828,8 +11214,6 @@
               href: relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md
             - name: sys.resource_usage
               href: relational-databases/system-catalog-views/sys-resource-usage-azure-sql-database.md
-            - name: dbo.server_quotas
-              href: relational-databases/system-catalog-views/dbo-server-quotas-azure-sql-database.md
             - name: sys.server_resource_stats
               href: relational-databases/system-catalog-views/sys-server-resource-stats-azure-sql-database.md
         - name: 변경 내용 추적
@@ -12820,7 +12204,7 @@
               href: relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md
             - name: sys.dm_db_missing_index_group_stats
               href: relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md
-        - name: 입력/출력
+        - name: I/O
           href: relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md
           items:
             - name: sys.dm_io_backup_tapes
@@ -13114,7 +12498,7 @@
               href: relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md
             - name: sys.dm_db_rda_schema_update_status
               href: relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-schema-update-status.md
-        - name: 의
+        - name: 트랜잭션
           href: relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md
           items:
             - name: sys.dm_tran_active_snapshot_database_transactions
@@ -13215,7 +12599,7 @@
               href: relational-databases/system-functions/getpathlocator-transact-sql.md
             - name: PathName
               href: relational-databases/system-functions/pathname-transact-sql.md
-        - name: Managed Backup
+        - name: 관리되는 백업
           href: relational-databases/system-functions/managed-backup-functions-transact-sql.md
           items:
             - name: managed_backup.fn_backup_db_config
@@ -13363,7 +12747,7 @@
               href: relational-databases/system-stored-procedures/sp-help-spatial-geometry-histogram-transact-sql.md
             - name: sp_help_spatial_geography_histogram
               href: relational-databases/system-stored-procedures/sp-help-spatial-geography-histogram-transact-sql.md
-        - name: Catalog
+        - name: 카탈로그
           href: relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md
           items:
             - name: sp_column_privileges
@@ -13952,7 +13336,7 @@
               href: relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md
             - name: sp_upgrade_log_shipping
               href: relational-databases/system-stored-procedures/sp-upgrade-log-shipping-transact-sql.md
-        - name: Managed Backup
+        - name: 관리되는 백업
           href: relational-databases/system-stored-procedures/managed-backup-stored-procedures-transact-sql.md
           items:
             - name: managed_backup.sp_backup_config_basic
@@ -15241,17 +14625,17 @@
         - name: 날짜 및 시간
           href: t-sql/data-types/date-and-time-types.md
           items:
-            - name: 날짜
+            - name: date
               href: t-sql/data-types/date-transact-sql.md
-            - name: DATETIME
+            - name: Datetime
               href: t-sql/data-types/datetime-transact-sql.md
-            - name: Datetime2
+            - name: datetime2
               href: t-sql/data-types/datetime2-transact-sql.md
             - name: datetimeoffset
               href: t-sql/data-types/datetimeoffset-transact-sql.md
             - name: smalldatetime
               href: t-sql/data-types/smalldatetime-transact-sql.md
-            - name: Time
+            - name: time
               href: t-sql/data-types/time-transact-sql.md
         - name: hierarchyid 메서드(데이터베이스 엔진)
           href: t-sql/data-types/hierarchyid-data-type-method-reference.md
@@ -15403,7 +14787,7 @@
                   href: t-sql/spatial-geography/isvaliddetailed-geography-data-type.md
                 - name: Lat
                   href: t-sql/spatial-geography/lat-geography-data-type.md
-                - name: Long
+                - name: long
                   href: t-sql/spatial-geography/long-geography-data-type.md
                 - name: M
                   href: t-sql/spatial-geography/m-geography-data-type.md
@@ -15469,7 +14853,7 @@
                   href: t-sql/spatial-geography/null-geography-data-type.md
                 - name: 구문 분석
                   href: t-sql/spatial-geography/parse-geography-data-type.md
-                - name: 점
+                - name: Point
                   href: t-sql/spatial-geography/point-geography-data-type.md
             - name: 정적 지리 집계 메서드
               href: t-sql/spatial-geography/static-aggregate-geography-methods.md
@@ -15665,7 +15049,7 @@
                   href: t-sql/spatial-geometry/null-geometry-data-type.md
                 - name: 구문 분석
                   href: t-sql/spatial-geometry/parse-geometry-data-type.md
-                - name: 점
+                - name: Point
                   href: t-sql/spatial-geometry/point-geometry-data-type.md
             - name: 정적 기하 도형 집계 메서드
               href: t-sql/spatial-geometry/static-aggregate-geometry-methods.md
@@ -15699,9 +15083,9 @@
               href: t-sql/data-types/rowversion-transact-sql.md
             - name: sql_variant
               href: t-sql/data-types/sql-variant-transact-sql.md
-            - name: Table
+            - name: 테이블
               href: t-sql/data-types/table-transact-sql.md
-            - name: UNIQUEIDENTIFIER
+            - name: uniqueidentifier
               href: t-sql/data-types/uniqueidentifier-transact-sql.md
         - name: XML
           href: t-sql/xml/xml-transact-sql.md
@@ -15822,7 +15206,7 @@
               href: t-sql/database-console-commands/dbcc-updateusage-transact-sql.md
             - name: DBCC USEROPTIONS
               href: t-sql/database-console-commands/dbcc-useroptions-transact-sql.md
-        - name: 함수
+        - name: Functions
           href: t-sql/functions/functions.md
           items:
             - name: ODBC 스칼라
@@ -15832,11 +15216,11 @@
               items:
                 - name: APPROX_COUNT_DISTINCT
                   href: t-sql/functions/approx-count-distinct-transact-sql.md
-                - name: AVG
+                - name: 평균
                   href: t-sql/functions/avg-transact-sql.md
                 - name: CHECKSUM_AGG
                   href: t-sql/functions/checksum-agg-transact-sql.md
-                - name: COUNT
+                - name: 개수
                   href: t-sql/functions/count-transact-sql.md
                 - name: COUNT_BIG
                   href: t-sql/functions/count-big-transact-sql.md
@@ -15844,15 +15228,15 @@
                   href: t-sql/functions/grouping-transact-sql.md
                 - name: GROUPING_ID
                   href: t-sql/functions/grouping-id-transact-sql.md
-                - name: MAX
+                - name: 최대
                   href: t-sql/functions/max-transact-sql.md
-                - name: MIN
+                - name: 최소
                   href: t-sql/functions/min-transact-sql.md
                 - name: STDEV
                   href: t-sql/functions/stdev-transact-sql.md
                 - name: STDEVP
                   href: t-sql/functions/stdevp-transact-sql.md
-                - name: SUM
+                - name: 합계
                   href: t-sql/functions/sum-transact-sql.md
                 - name: VAR
                   href: t-sql/functions/var-transact-sql.md
@@ -15883,7 +15267,7 @@
                   href: t-sql/functions/collation-functions-collationproperty-transact-sql.md
                 - name: 데이터 정렬 - TERTIARY_WEIGHTS
                   href: t-sql/functions/collation-functions-tertiary-weights-transact-sql.md
-            - name: Configuration
+            - name: 구성
               href: t-sql/functions/configuration-functions-transact-sql.md
               items:
                 - name: '@@DBTS'
@@ -16228,7 +15612,6 @@
                 - name: PUBLISHINGSERVERNAME
                   href: t-sql/functions/replication-functions-publishingservername.md
             - name: 행 집합
-              href: t-sql/functions/rowset-functions-transact-sql.md
               items:
                 - name: OPENDATASOURCE
                   href: t-sql/functions/opendatasource-transact-sql.md
@@ -16285,7 +15668,7 @@
                   href: t-sql/functions/suser-sname-transact-sql.md
                 - name: SYSTEM_USER
                   href: t-sql/functions/system-user-transact-sql.md
-                - name: User
+                - name: USER
                   href: t-sql/functions/user-transact-sql.md
                 - name: USER_ID
                   href: t-sql/functions/user-id-transact-sql.md
@@ -16506,7 +15889,7 @@
                   href: t-sql/language-elements/use-transact-sql.md
                 - name: 백슬래시(줄 연속)
                   href: t-sql/language-elements/sql-server-utilities-statements-backslash.md
-                - name: GO
+                - name: 이동
                   href: t-sql/language-elements/sql-server-utilities-statements-go.md
             - name: 흐름 제어
               href: t-sql/language-elements/control-of-flow.md
@@ -16656,7 +16039,7 @@
                       href: t-sql/language-elements/or-transact-sql.md
                     - name: SOME | ANY
                       href: t-sql/language-elements/some-any-transact-sql.md
-                - name: ':: (범위 결정)'
+                - name: '::(범위 결정)'
                   href: t-sql/language-elements/scope-resolution-operator-transact-sql.md
                 - name: String
                   href: t-sql/language-elements/string-operators-transact-sql.md
@@ -16675,10 +16058,10 @@
                       href: t-sql/language-elements/wildcard-match-one-character-transact-sql.md
                 - name: 연산자 우선 순위
                   href: t-sql/language-elements/operator-precedence-transact-sql.md
-            - name: 의
+            - name: 트랜잭션
               href: t-sql/language-elements/transactions-transact-sql.md
               items:
-                - name: 의
+                - name: 트랜잭션
                   href: t-sql/language-elements/transactions-sql-data-warehouse.md
                 - name: 트랜잭션 격리 수준
                   href: t-sql/language-elements/transaction-isolation-levels.md
@@ -16696,7 +16079,7 @@
                   href: t-sql/language-elements/rollback-work-transact-sql.md
                 - name: SAVE TRANSACTION
                   href: t-sql/language-elements/save-transaction-transact-sql.md
-            - name: 변수
+            - name: variables
               href: t-sql/language-elements/variables-transact-sql.md
               items:
                 - name: SET @local_variable
@@ -16829,7 +16212,7 @@
                   href: t-sql/statements/alter-availability-group-transact-sql.md
                 - name: BROKER PRIORITY
                   href: t-sql/statements/alter-broker-priority-transact-sql.md
-                - name: CERTIFICATE
+                - name: 인증서
                   href: t-sql/statements/alter-certificate-transact-sql.md
                 - name: COLUMN ENCRYPTION KEY
                   href: t-sql/statements/alter-column-encryption-key-transact-sql.md
@@ -16881,7 +16264,7 @@
                   href: t-sql/statements/alter-index-transact-sql.md
                 - name: INDEX(선택적 XML 인덱스)
                   href: t-sql/statements/alter-index-selective-xml-indexes.md
-                - name: Login
+                - name: LOGIN
                   href: t-sql/statements/alter-login-transact-sql.md
                 - name: MASTER KEY
                   href: t-sql/statements/alter-master-key-transact-sql.md
@@ -16943,7 +16326,7 @@
                   href: t-sql/statements/alter-table-table-constraint-transact-sql.md
                 - name: TRIGGER
                   href: t-sql/statements/alter-trigger-transact-sql.md
-                - name: User
+                - name: USER
                   href: t-sql/statements/alter-user-transact-sql.md
                 - name: VIEW
                   href: t-sql/statements/alter-view-transact-sql.md
@@ -16975,7 +16358,7 @@
                   href: t-sql/statements/restore-statements-labelonly-transact-sql.md
                 - name: RESTORE MASTER KEY
                   href: t-sql/statements/restore-master-key-transact-sql.md
-                - name: 서비스 마스터 키 복원
+                - name: RESTORE SERVICE MASTER KEY
                   href: t-sql/statements/restore-service-master-key-transact-sql.md
                 - name: RESTORE REWINDONLY
                   href: t-sql/statements/restore-statements-rewindonly-transact-sql.md
@@ -16995,7 +16378,7 @@
                   href: t-sql/statements/create-availability-group-transact-sql.md
                 - name: BROKER PRIORITY
                   href: t-sql/statements/create-broker-priority-transact-sql.md
-                - name: CERTIFICATE
+                - name: 인증서
                   href: t-sql/statements/create-certificate-transact-sql.md
                 - name: COLUMNSTORE INDEX
                   href: t-sql/statements/create-columnstore-index-transact-sql.md
@@ -17051,7 +16434,7 @@
                   href: t-sql/statements/create-function-sql-data-warehouse.md
                 - name: INDEX
                   href: t-sql/statements/create-index-transact-sql.md
-                - name: Login
+                - name: LOGIN
                   href: t-sql/statements/create-login-transact-sql.md
                 - name: MASTER KEY
                   href: t-sql/statements/create-master-key-transact-sql.md
@@ -17119,7 +16502,7 @@
                   href: t-sql/statements/create-trigger-transact-sql.md
                 - name: TYPE
                   href: t-sql/statements/create-type-transact-sql.md
-                - name: User
+                - name: USER
                   href: t-sql/statements/create-user-transact-sql.md
                 - name: VIEW
                   href: t-sql/statements/create-view-transact-sql.md
@@ -17157,7 +16540,7 @@
                   href: t-sql/statements/drop-availability-group-transact-sql.md
                 - name: BROKER PRIORITY
                   href: t-sql/statements/drop-broker-priority-transact-sql.md
-                - name: CERTIFICATE
+                - name: 인증서
                   href: t-sql/statements/drop-certificate-transact-sql.md
                 - name: COLUMN ENCRYPTION KEY
                   href: t-sql/statements/drop-column-encryption-key-transact-sql.md
@@ -17209,7 +16592,7 @@
                   href: t-sql/statements/drop-index-transact-sql.md
                 - name: INDEX(선택적 XML 인덱스)
                   href: t-sql/statements/drop-index-selective-xml-indexes.md
-                - name: Login
+                - name: LOGIN
                   href: t-sql/statements/drop-login-transact-sql.md
                 - name: MASTER KEY
                   href: t-sql/statements/drop-master-key-transact-sql.md
@@ -17265,7 +16648,7 @@
                   href: t-sql/statements/drop-trigger-transact-sql.md
                 - name: TYPE
                   href: t-sql/statements/drop-type-transact-sql.md
-                - name: User
+                - name: USER
                   href: t-sql/statements/drop-user-transact-sql.md
                 - name: VIEW
                   href: t-sql/statements/drop-view-transact-sql.md
@@ -17283,7 +16666,7 @@
                   href: t-sql/statements/close-master-key-transact-sql.md
                 - name: CLOSE SYMMETRIC KEY
                   href: t-sql/statements/close-symmetric-key-transact-sql.md
-                - name: DENY
+                - name: 거부
                   href: t-sql/statements/deny-transact-sql.md
                 - name: DENY 어셈블리 사용 권한
                   href: t-sql/statements/deny-assembly-permissions-transact-sql.md
@@ -17371,7 +16754,7 @@
                   href: t-sql/statements/open-master-key-transact-sql.md
                 - name: OPEN SYMMETRIC KEY
                   href: t-sql/statements/open-symmetric-key-transact-sql.md
-                - name: '사용 권한: GRANT, DENY, REVOKE(Azure SQL Data Warehouse, 병렬 Data Warehouse)'
+                - name: '사용 권한: GRANT, DENY, REVOKE(Azure SQL Data Warehouse, 병렬 데이터 웨어하우스)'
                   href: t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md
                 - name: REVERT
                   href: t-sql/statements/revert-transact-sql.md
@@ -17675,3 +17058,5 @@
               href: xquery/string-search-in-xquery.md
             - name: XQuery의 네임스페이스 처리
               href: xquery/handling-namespaces-in-xquery.md
+- name: 기술 자료 지원
+  href: kb-support/toc.yml

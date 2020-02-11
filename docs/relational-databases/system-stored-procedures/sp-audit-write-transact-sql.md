@@ -18,10 +18,10 @@ ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9bef63c267bdf5b7d0c2603ed7a93af329d1992c
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72251974"
 ---
 # <a name="sp_audit_write-transact-sql"></a>sp_audit_write(Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "72251974"
 
   **USER_DEFINED_AUDIT_GROUP**에 사용자 정의 감사 이벤트를 추가 합니다. **USER_DEFINED_AUDIT_GROUP** 을 사용 하지 않는 경우 **sp_audit_write** 무시 됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,13 +42,13 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
   
 ## <a name="arguments"></a>인수  
  `[ @user_defined_event_id = ] user_defined_event_id`  
- 사용자가 정의 하 고 감사 로그의 **user_defined_event_id** 열에 기록 되는 매개 변수입니다. *\@user_defined_event_id* 는 **smallint**유형입니다.  
+ 사용자가 정의 하 고 감사 로그의 **user_defined_event_id** 열에 기록 되는 매개 변수입니다. user_defined_event_id은 **smallint**유형입니다. * \@*  
   
  `[ @succeeded = ] succeeded`  
- 이벤트 성공 여부를 표시하기 위해 사용자가 전달하는 매개 변수입니다. 이 매개 변수는 감사 로그의 succeeded 열에 표시됩니다. `@succeeded` **비트**입니다.  
+ 이벤트 성공 여부를 표시하기 위해 사용자가 전달하는 매개 변수입니다. 이 매개 변수는 감사 로그의 succeeded 열에 표시됩니다. `@succeeded`는 **bit**입니다.  
   
  `[ @user_defined_information = ] 'user_defined_information'`  
- 사용자가 정의하며 감사 로그의 새 user_defined_event_id 열에 기록되는 텍스트입니다. `@user_defined_information`은 **nvarchar (4000)** 입니다.  
+ 사용자가 정의하며 감사 로그의 새 user_defined_event_id 열에 기록되는 텍스트입니다. `@user_defined_information`는 **nvarchar (4000)** 입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -72,7 +72,7 @@ EXEC sp_audit_write @user_defined_event_id =  27 ,
             , @user_defined_information = N'Access to a monitored object.' ;  
 ```  
   
-### <a name="b--creating-a-user-defined-audit-event-without-informational-text"></a>2\.  정보 텍스트 없이 사용자 정의 감사 이벤트 만들기  
+### <a name="b--creating-a-user-defined-audit-event-without-informational-text"></a>B.  정보 텍스트 없이 사용자 정의 감사 이벤트 만들기  
  다음 예에서는 ID가 27인 감사 이벤트와 succeeded 값 0을 작성하되 선택적 정보 텍스트 또는 매개 변수 이름은 포함하지 않습니다.  
   
 ```  
@@ -81,13 +81,13 @@ EXEC sp_audit_write 27, 0;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [보안 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;보안 저장 프로시저](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sys.server_principals&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
- [sp_addrole&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
- [CREATE USER&#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
- [sp_dropuser&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
- [sp_grantdbaccess&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
- [sp_grantlogin&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
+ [Transact-sql&#41;sp_addrole &#40;](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
+ [Transact-sql&#41;사용자 &#40;만들기](../../t-sql/statements/create-user-transact-sql.md)   
+ [Transact-sql&#41;sp_dropuser &#40;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
+ [Transact-sql&#41;sp_grantdbaccess &#40;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
+ [Transact-sql&#41;sp_grantlogin &#40;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

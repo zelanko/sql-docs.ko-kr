@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9bfbb62c58efea29df26cb9fc6e632bc4e2b3642
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62630802"
 ---
 # <a name="specify-synchronization-schedules"></a>동기화 일정 지정
@@ -31,7 +31,7 @@ ms.locfileid: "62630802"
   
 -   **다음을 사용하여 동기화 일정을 지정하려면**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62630802"
   
 3.  구독을 마우스 오른쪽 단추로 클릭한 다음 **자세히 보기**를 클릭합니다.  
   
-4.  에 **구독 \< SubscriptionName >** 창 클릭 **동작**를 클릭 하 고  **\<AgentName > 작업 속성**합니다.  
+4.  **Subscription \< SubscriptionName>** 창에서 **작업**을 클릭 한 다음 ** \<agentname> 작업 속성**을 클릭 합니다.  
   
 5.  **작업 속성 - \<JobName>** 대화 상자의 **일정** 페이지에서 **편집**을 클릭합니다.  
   
@@ -143,49 +143,49 @@ ms.locfileid: "62630802"
   
  일정은 다음 일정 매개 변수로 정의되며 해당 동작은 [sp_add_schedule&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql)에서 상속됩니다.  
   
--   **@frequency_type** - 에이전트를 예약할 때 사용하는 빈도 유형  
+-   **@frequency_type**-에이전트를 예약할 때 사용 되는 빈도 유형입니다.  
   
--   **@frequency_interval** - 에이전트에서 작업을 실행하는 요일  
+-   **@frequency_interval**-에이전트가 실행 되는 요일입니다.  
   
--   **@frequency_relative_interval** - 지정된 월에서 에이전트가 월별로 실행되도록 예약된 주입니다.  
+-   **@frequency_relative_interval**-지정 된 월에서 에이전트가 매월 실행 되도록 예약 된 주입니다.  
   
--   **@frequency_recurrence_factor** - 동기화 사이에 발생하는 frequency-type 단위 수입니다.  
+-   **@frequency_recurrence_factor**-동기화 사이에 발생 하는 빈도 유형 단위 수입니다.  
   
--   **@frequency_subday** - 에이전트가 하루에 두 번 이상 실행할 경우 빈도 단위입니다.  
+-   **@frequency_subday**-에이전트가 하루에 두 번 이상 실행 되는 빈도 단위입니다.  
   
--   **@frequency_subday_interval** - 에이전트가 하루에 두 번 이상 실행할 경우 실행 간의 빈도 단위 수입니다.  
+-   **@frequency_subday_interval**-에이전트가 하루에 두 번 이상 실행 될 때 실행 간의 빈도 단위 수입니다.  
   
--   **@active_start_time_of_day** - 지정된 날짜에서 에이전트가 실행되는 시작 시간  
+-   **@active_start_time_of_day**-지정 된 날짜에서 에이전트가 실행 되기 시작 하는 가장 빠른 시간입니다.  
   
--   **@active_end_time_of_day** - 지정된 날짜에서 에이전트가 실행되는 마지막 시간  
+-   **@active_end_time_of_day**-지정 된 날짜에서 에이전트가 실행 되는 마지막 시간입니다.  
   
--   **@active_start_date** - 에이전트 예약이 처음 적용되는 날짜  
+-   **@active_start_date**-에이전트 예약이 처음 적용 되는 날짜입니다.  
   
--   **@active_end_date** - 에이전트 예약이 마지막으로 적용되는 날짜  
+-   **@active_end_date**-에이전트 예약이 마지막으로 적용 되는 날짜입니다.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-pull-subscription-to-a-transactional-publication"></a>트랜잭션 게시에 대한 끌어오기 구독의 동기화 일정을 정의하려면  
   
 1.  트랜잭션 게시에 대한 새 끌어오기 구독을 만듭니다. 자세한 내용은 [끌어오기 구독 만들기](create-a-pull-subscription.md)를 참조하세요.  
   
-2.  구독자에서 [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)를 실행합니다. **@publisher** , **@publisher_db** , **@publication** 와 **@job_name** 및 **@password** 에 대해 구독자에서 배포 에이전트가 실행되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 자격 증명을 지정합니다. 구독을 동기화하는 배포 에이전트 작업 일정을 정의하는 동기화 매개 변수(위에서 자세히 설명)를 지정합니다.  
+2.  구독자에서 [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)를 실행합니다. , **@publisher** **@publisher_db**, **@publication**를 지정 하 고 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 및 **@job_name** **@password**에 구독자에서 배포 에이전트 실행 되는 Windows 자격 증명을 지정 합니다. 구독을 동기화하는 배포 에이전트 작업 일정을 정의하는 동기화 매개 변수(위에서 자세히 설명)를 지정합니다.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-transactional-publication"></a>트랜잭션 게시에 대한 밀어넣기 구독의 동기화 일정을 정의하려면  
   
 1.  트랜잭션 게시에 대한 새 밀어넣기 구독을 만듭니다. 자세한 내용은 [밀어넣기 구독 만들기](create-a-push-subscription.md)을 참조하세요.  
   
-2.  구독자에서 [sp_addpushsubscription_agent&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql)를 실행합니다. **@subscriber** , **@subscriber_db** , **@publication** 와 **@job_name** 및 **@password** 에 대해 구독자에서 배포 에이전트가 실행되는 Windows 자격 증명을 지정합니다. 구독을 동기화하는 배포 에이전트 작업 일정을 정의하는 동기화 매개 변수(위에서 자세히 설명)를 지정합니다.  
+2.  구독자에서 [sp_addpushsubscription_agent&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql)를 실행합니다. , **@subscriber** **@subscriber_db**, **@publication**를 지정 하 고 및 **@job_name** **@password**에 구독자에서 배포 에이전트 실행 되는 Windows 자격 증명을 지정 합니다. 구독을 동기화하는 배포 에이전트 작업 일정을 정의하는 동기화 매개 변수(위에서 자세히 설명)를 지정합니다.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-pull-subscription-to-a-merge-publication"></a>병합 게시에 대한 끌어오기 구독의 동기화 일정을 정의하려면  
   
 1.  병합 게시에 대한 새 끌어오기 구독을 만듭니다. 자세한 내용은 [끌어오기 구독 만들기](create-a-pull-subscription.md)를 참조하세요.  
   
-2.  구독자에서 [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)를 실행합니다. **@publisher** , **@publisher_db** , **@publication** 와 **@job_name** 및 **@password** 에 대해 구독자에서 병합 에이전트가 실행되는 Windows 자격 증명을 지정합니다. 구독을 동기화하는 병합 에이전트 작업 일정을 정의하는 동기화 매개 변수(위에서 자세히 설명)를 지정합니다.  
+2.  구독자에서 [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)를 실행합니다. , **@publisher** **@publisher_db**, **@publication**를 지정 하 고 및 **@job_name** **@password**에 구독자에서 병합 에이전트 실행 되는 Windows 자격 증명을 지정 합니다. 구독을 동기화하는 병합 에이전트 작업 일정을 정의하는 동기화 매개 변수(위에서 자세히 설명)를 지정합니다.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-merge-publication"></a>병합 게시에 대한 밀어넣기 구독의 동기화 일정을 정의하려면  
   
 1.  병합 게시에 대한 새 밀어넣기 구독을 만듭니다. 자세한 내용은 [밀어넣기 구독 만들기](create-a-push-subscription.md)을 참조하세요.  
   
-2.  구독자에서 [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql)를 실행합니다. **@subscriber** , **@subscriber_db** , **@publication** 와 **@job_name** 및 **@password** 에 대해 구독자에서 병합 에이전트가 실행되는 Windows 자격 증명을 지정합니다. 구독을 동기화하는 병합 에이전트 작업 일정을 정의하는 동기화 매개 변수(위에서 자세히 설명)를 지정합니다.  
+2.  구독자에서 [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql)를 실행합니다. , **@subscriber** **@subscriber_db**, **@publication**를 지정 하 고 및 **@job_name** **@password**에 구독자에서 병합 에이전트 실행 되는 Windows 자격 증명을 지정 합니다. 구독을 동기화하는 병합 에이전트 작업 일정을 정의하는 동기화 매개 변수(위에서 자세히 설명)를 지정합니다.  
   
 ##  <a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
  복제에서는 SQL Server 에이전트를 사용하여 스냅샷 생성이나 구독 동기화와 같이 정기적으로 수행하는 작업의 일정을 지정합니다. RMO(복제 관리 개체)를 사용하여 프로그래밍 방식으로 복제 에이전트 작업의 일정을 지정할 수 있습니다.  
@@ -195,7 +195,7 @@ ms.locfileid: "62630802"
   
 #### <a name="to-define-a-replication-agent-schedule-when-you-create-a-push-subscription-to-a-transactional-publication"></a>트랜잭션 게시에 대한 밀어넣기 구독을 만들 때 복제 에이전트 일정을 정의하려면  
   
-1.  만들려는 구독에 대해 <xref:Microsoft.SqlServer.Replication.TransSubscription> 클래스의 인스턴스를 만듭니다. 자세한 내용은 [Create a Push Subscription](create-a-push-subscription.md)을 참조하세요.  
+1.  만들려는 구독에 대해 <xref:Microsoft.SqlServer.Replication.TransSubscription> 클래스의 인스턴스를 만듭니다. 자세한 내용은 [밀어넣기 구독 만들기](create-a-push-subscription.md)을 참조하세요.  
   
 2.  <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>를 호출하기 전에 <xref:Microsoft.SqlServer.Replication.Subscription.AgentSchedule%2A> 속성의 다음 필드 중 하나 이상을 설정합니다.  
   
@@ -288,7 +288,7 @@ ms.locfileid: "62630802"
   
 #### <a name="to-define-a-replication-agent-schedule-when-you-create-a-push-subscription-to-a-merge-publication"></a>병합 게시에 대한 밀어넣기 구독을 만들 때 복제 에이전트 일정을 정의하려면  
   
-1.  만들려는 구독에 대해 <xref:Microsoft.SqlServer.Replication.MergeSubscription> 클래스의 인스턴스를 만듭니다. 자세한 내용은 [Create a Push Subscription](create-a-push-subscription.md)을 참조하세요.  
+1.  만들려는 구독에 대해 <xref:Microsoft.SqlServer.Replication.MergeSubscription> 클래스의 인스턴스를 만듭니다. 자세한 내용은 [밀어넣기 구독 만들기](create-a-push-subscription.md)을 참조하세요.  
   
 2.  <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>를 호출하기 전에 <xref:Microsoft.SqlServer.Replication.Subscription.AgentSchedule%2A> 속성의 다음 필드 중 하나 이상을 설정합니다.  
   
@@ -324,7 +324,7 @@ ms.locfileid: "62630802"
   
  [!code-vb[HowTo#rmo_vb_CreateMergePushSub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createmergepushsub)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Replication Security Best Practices](security/replication-security-best-practices.md)   
  [Subscribe to Publications](subscribe-to-publications.md)   
  [밀어넣기 구독 동기화](synchronize-a-push-subscription.md)   
