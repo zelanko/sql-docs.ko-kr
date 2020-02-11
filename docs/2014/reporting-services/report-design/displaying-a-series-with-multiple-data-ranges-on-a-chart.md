@@ -1,5 +1,5 @@
 ---
-title: 차트 (보고서 작성기 및 SSRS)에 데이터 범위가 여러 개 있는 계열 표시 | Microsoft Docs
+title: 차트에 데이터 범위가 여러 개 있는 계열 표시 (보고서 작성기 및 SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8c226cc9603aa687616d54fa95ee82c7f2b86792
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106000"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart-report-builder-and-ssrs"></a>차트에 데이터 범위가 여러 개 있는 계열 표시(보고서 작성기 및 SSRS)
@@ -26,17 +26,18 @@ ms.locfileid: "66106000"
   
  가독성을 개선하기 위해 다음과 같이 여러 방식을 사용할 수 있습니다.  
   
--   **배율 구분선 사용**. 데이터가 두 개 이상의 데이터 범위 집합을 형성하는 경우 배율 구분선을 사용하여 범위 간격을 제거합니다. 배율 구분선은 계열에서 높은 값과 낮은 값 사이가 구분되도록 그리기 영역에 표시하는 줄무늬입니다.  
+-   **배율 구분선을 사용**합니다. 데이터가 두 개 이상의 데이터 범위 집합을 형성하는 경우 배율 구분선을 사용하여 범위 간격을 제거합니다. 배율 구분선은 계열에서 높은 값과 낮은 값 사이가 구분되도록 그리기 영역에 표시하는 줄무늬입니다.  
   
--   **불필요한 값 필터링**. 차트에 표시할 중요한 데이터 범위를 가리는 데이터 요소가 있는 경우 보고서 필터를 사용하여 원하지 않는 데이터 요소를 제거합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 차트에 필터를 추가하는 방법에 대한 자세한 내용은 [데이터 세트 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)을 참조하세요.  
+-   **불필요 한 값을 필터링**합니다. 차트에 표시할 중요한 데이터 범위를 가리는 데이터 요소가 있는 경우 보고서 필터를 사용하여 원하지 않는 데이터 요소를 제거합니다. 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 차트에 필터를 추가하는 방법에 대한 자세한 내용은 [데이터 세트 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)을 참조하세요.  
   
--   **여러 계열 비교를 위해 각 데이터 범위를 개별 계열로 그리기**. 데이터 범위가 두 개 이상인 경우 데이터 범위를 개별 계열로 구분하십시오. 자세한 내용은 [차트의 여러 계열&#40;보고서 작성기 및 SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md).  
+-   **여러 계열 비교를 위해 각 데이터 범위를 별도의 계열로 플롯**합니다. 데이터 범위가 두 개 이상인 경우 데이터 범위를 개별 계열로 구분하십시오. 자세한 내용은 [차트의 여러 계열&#40;보고서 작성기 및 SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)을 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="displaying-multiple-data-ranges-using-scale-breaks"></a>배율 구분선을 사용하여 여러 데이터 범위 표시  
- 배율 구분선을 사용하면 차트 위에서 선을 그릴 위치가 계산됩니다. 배율 구분선을 그리기 위해 범위 사이를 충분히 구분해야 합니다. 기본적으로 차트의 25% 이상의 데이터 범위 사이 구분 하는 경우에 배율 구분선을 추가할 수 있습니다.  
+ 배율 구분선을 사용하면 차트 위에서 선을 그릴 위치가 계산됩니다. 배율 구분선을 그리기 위해 범위 사이를 충분히 구분해야 합니다. 기본적으로 차트의 25% 이상의 데이터 범위 사이가 구분되는 경우에만 배율 구분선을 추가할 수 있습니다.  
   
  ![배율 구분선을 포함하는 차트](../media/rs-multipledatarangeschart-scalebreak.gif "배율 구분선을 포함하는 차트")  
   
@@ -58,10 +59,10 @@ ms.locfileid: "66106000"
   
 -   이 차트 종류가 극좌표형, 방사형, 원형, 도넛형, 깔때기형, 피라미드형 또는 모든 누적 차트입니다.  
   
- 배율 구분선이 있는 차트의 예는 예제 보고서로 제공됩니다. 이 샘플 보고서 및 기타 보고서를 다운로드하는 방법은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][보고서 작성기 및 보고서 디자이너 샘플 보고서](https://go.microsoft.com/fwlink/?LinkId=198283).  
+ 배율 구분선이 있는 차트의 예는 예제 보고서로 제공됩니다. 이 예제 보고서 및 기타 보고서를 다운로드 하는 방법에 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]대 한 자세한 내용은 [보고서 작성기 및 보고서 디자이너 샘플 보고서](https://go.microsoft.com/fwlink/?LinkId=198283)를 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [차트의 여러 계열&#40;보고서 작성기 및 SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>참고 항목  
+ [차트의 여러 계열 &#40;보고서 작성기 및 SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
  [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [차트의 3D, 빗면 및 기타 효과&#40;보고서 작성기 및 SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)   
  [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
