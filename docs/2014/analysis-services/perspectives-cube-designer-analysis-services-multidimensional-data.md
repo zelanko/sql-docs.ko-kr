@@ -1,5 +1,5 @@
 ---
-title: 큐브 뷰 (Cube Designer) (Analysis Services-다차원 데이터) | Microsoft Docs
+title: 큐브 뷰 (큐브 디자이너) (Analysis Services 다차원 데이터) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,25 +13,27 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8bc2e3bd77b0a5a7454bd136b7a0dc485180ba28
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072020"
 ---
 # <a name="perspectives-cube-designer-analysis-services---multidimensional-data"></a>큐브 뷰(큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **큐브 뷰** 탭을 사용하여 선택한 큐브에 대한 큐브 뷰를 생성 및 수정할 수 있습니다.  
   
- **큐브 뷰** 탭에는 다음 창이 있습니다.  
+ 
+  **큐브 뷰** 탭에는 다음 창이 있습니다.  
   
 ## <a name="panes"></a>창  
  **도구 모음**  
  도구 모음을 사용하여 탭에서 일반 동작을 수행할 수 있습니다.  
   
  **큐브 뷰 세부 정보**  
- **큐브 뷰 세부 정보** 창을 사용하여 선택한 큐브에 대한 큐브 뷰를 생성 및 수정할 수 있습니다.  
+ 
+  **큐브 뷰 세부 정보** 창을 사용하여 선택한 큐브에 대한 큐브 뷰를 생성 및 수정할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [큐브 뷰](multidimensional-models-olap-logical-cube-objects/perspectives.md)  
   
   

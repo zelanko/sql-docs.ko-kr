@@ -13,20 +13,20 @@ ms.assetid: ba973025-18c8-481b-a383-6ed935237894
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4f21a2b1c7c8573d06f92654f85b4ecaacc1484a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68063280"
 ---
 # <a name="sqlallocstmt-visual-foxpro-odbc-driver"></a>SQLAllocStmt(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
->  이 항목에서는 Visual FoxPro ODBC 드라이버 관련 정보를 포함합니다. 이 함수에 대 한 일반 정보에서 해당 항목을 참조 하세요 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)합니다.  
+>  이 항목에는 Visual FoxPro ODBC 드라이버 관련 정보가 포함 되어 있습니다. 이 함수에 대 한 일반 정보는 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)에서 적절 한 항목을 참조 하세요.  
   
  지원: 전체  
   
  ODBC API 규칙: 코어 수준  
   
- 문 핸들에 대 한 메모리를 할당 하 고 지정 된 연결을 사용 하 여 문 핸들에 연결 *hdbc*합니다. 드라이버 관리자는이 호출에 대 한 메모리를 할당 하는 드라이버에 전달 된 *hstmt* 구조입니다.  
+ 문 핸들에 대해 메모리를 할당 하 고 문 핸들을 *hdbc*에서 지정한 연결과 연결 합니다. 드라이버 관리자는이 호출을 드라이버에 전달 하 여 *hstmt* 구조에 대해 메모리를 할당 합니다.  
   
- 자세한 내용은 [SQLAllocStmt](../../odbc/reference/syntax/sqlallocstmt-function.md) 에 *ODBC 프로그래머 참조*합니다.
+ 자세한 내용은 *ODBC 프로그래머 참조*에서 [sqlallocstmt](../../odbc/reference/syntax/sqlallocstmt-function.md) 를 참조 하세요.

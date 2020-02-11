@@ -17,20 +17,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4b91a2848dda5dff2150d80760c7a43680a8f325
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827018"
 ---
 # <a name="progress-report-event-category"></a>Progress Report 이벤트 범주
-  합니다 **Progress Report** 이벤트 범주를 포함 합니다 **Progress Report: Online Index Operation** 이벤트 클래스가 포함됩니다.  
+  **Progress Report** 이벤트 범주에는 **Progress Report: Online Index Operation** 이벤트 클래스가 포함됩니다.  
   
 |항목|Description|  
 |-----------|-----------------|  
 |[Progress Report: Online Index Operation 이벤트 클래스](progress-report-online-index-operation-event-class.md)|온라인 인덱스 작성 작업 진행률을 나타냅니다.|  
   
-## <a name="see-also"></a>관련 항목  
- [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)  
+## <a name="see-also"></a>참고 항목  
+ [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

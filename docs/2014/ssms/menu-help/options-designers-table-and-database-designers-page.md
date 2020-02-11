@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e0157b94227a36db7f1f961ab0b0a69518a8163b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63283654"
 ---
 # <a name="options-designers-table-and-database-designers-page"></a>옵션 (디자이너-테이블 및 데이터베이스 디자이너 페이지)
@@ -65,7 +65,7 @@ ms.locfileid: "63283654"
   
      열 이름을 표시합니다.  
   
--   **키**  
+-   **Key**  
   
      테이블 머리글과 기본 키 열을 표시합니다.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "63283654"
   
      테이블 이름이 있는 테이블 머리글만 표시합니다.  
   
--   **사용자 지정**  
+-   **Custom**  
   
      표시할 열을 선택할 수 있습니다.  
   

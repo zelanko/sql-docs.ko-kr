@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 34539c79bc0e2d90841837abef895bdceb2eb20d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250846"
 ---
 # <a name="sql-server-agent-statistics-object"></a>SQL Server 에이전트, Statistics 개체
@@ -25,11 +25,11 @@ ms.locfileid: "63250846"
   
  다음 표에서는 **SQLAgent:Statistics** 카운터를 나열합니다.  
   
-|이름|Description|  
+|속성|Description|  
 |----------|-----------------|  
 |**SQL Server Restarted**|SQL Server 에이전트가 시작된 후 Microsoft SQL Server가 SQL Server 에이전트에 의해 성공적으로 다시 시작된 횟수입니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [성능 개체 사용](../../ssms/agent/use-performance-objects.md)   
  [리소스 사용 모니터링&#40;시스템 모니터&#41;](monitor-resource-usage-system-monitor.md)  
   

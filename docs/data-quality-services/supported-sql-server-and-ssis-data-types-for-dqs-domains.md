@@ -12,10 +12,10 @@ ms.assetid: 4931143a-b84d-478b-9b45-174128d36ed3
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: cff5cf3a2a6095b79537571d63ee428c500789c6
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75558173"
 ---
 # <a name="supported-sql-server-and-ssis-data-types-for-dqs-domains"></a>DQS 도메인에 대해 지원 되는 SQL Server 및 SSIS 데이터 형식
@@ -35,7 +35,7 @@ ms.locfileid: "75558173"
 |Date|date|  
 |Decimal|decimal<br /><br /> float<br /><br /> money<br /><br /> numeric<br /><br /> real<br /><br /> smallmoney|  
 |정수|bigint<br /><br /> int<br /><br /> smallint<br /><br /> tinyint|  
-|문자열|char<br /><br /> nchar<br /><br /> nvarchar<br /><br /> varchar|  
+|String|char<br /><br /> nchar<br /><br /> nvarchar<br /><br /> varchar|  
   
  다른 SQL Server 데이터 형식은 DQS에서 지원되지 않습니다. 모든 SQL Server 데이터 형식에 대한 자세한 내용은 [데이터 형식&#40;Transact-SQL&#41;](../t-sql/data-types/data-types-transact-sql.md)을 참조하세요.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "75558173"
 |Date|DT_DATE|  
 |Decimal|DT_DECIMAL<br /><br /> DT_NUMERIC<br /><br /> DT_R4<br /><br /> DT_R8|  
 |정수|DT_I1<br /><br /> DT_I2<br /><br /> DT_I4<br /><br /> DT_I8<br /><br /> DT_U1<br /><br /> DT_U2<br /><br /> DT_U4<br /><br /> DT_U8|  
-|문자열|DT_STR<br /><br /> DT_WSTR|  
+|String|DT_STR<br /><br /> DT_WSTR|  
   
  다른 SSIS 데이터 형식은 DQS에서 지원되지 않습니다. 모든 SSIS 데이터 형식에 대한 자세한 내용은 [Integration Services Data Types](../integration-services/data-flow/integration-services-data-types.md)을 참조하십시오.  
   

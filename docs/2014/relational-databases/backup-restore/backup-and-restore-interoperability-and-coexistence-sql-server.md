@@ -1,5 +1,5 @@
 ---
-title: '백업 및 복원: 상호 운용성 및 공존성 (SQL Server) | Microsoft Docs'
+title: '백업 및 복원: 상호 운용성 및 공존성(SQL Server) | Microsoft 문서'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96fd1b081ec9d990014dc61db7938f745cffa041
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62922438"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>백업 및 복원: 상호 운용성 및 공존성(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 몇 가지 기능에 대한 백업 및 복원 고려 사항에 대해 설명합니다. 이러한 기능에는 파일 복원 및 데이터베이스 시작, 온라인 복원 및 비활성 인덱스, 데이터베이스 미러링, 증분 복원 및 전체 텍스트 인덱스가 포함됩니다.  
   
- **항목 내용**  
+ **항목 내용:**  
   
 -   [파일 복원 및 데이터베이스 시작](#FileRestoreAndDbStartup)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62922438"
   
  데이터베이스 시작 중에 문제가 발생하면 복구에 실패하고 데이터베이스가 주의 대상으로 표시됩니다. 문제를 한 파일이나 몇 개의 파일로 격리시킬 수 있는 경우 데이터베이스 관리자는 해당 파일을 오프라인 상태로 만들고 데이터베이스를 다시 시작할 수 있습니다. 파일을 오프라인 상태로 만들려면 다음 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) 문을 실행합니다.  
   
- ALTER DATABASE *database_name* MODIFY FILE (NAME **=' *`filename`* '** , OFFLINE)  
+ ALTER database *database_name* MODIFY 파일 (이름 **= '*`filename`*'**, 오프 라인)  
   
  데이터베이스가 성공적으로 시작되면 오프라인 파일을 포함하는 모든 파일 그룹은 오프라인 상태로 남게 됩니다.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "62922438"
  이 섹션에서는 여러 개의 파일 그룹이 있는 전체 모델 데이터베이스와 관련된 내용을 다룹니다.  
   
 > [!NOTE]  
->  이후 버전의 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 데이터베이스 미러링 기능이 제거됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. 대신 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 를 사용해야 합니다.  
+>  이후 버전의 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 데이터베이스 미러링 기능이 제거됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. 대신 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]를 사용하세요.  
   
  데이터베이스 미러링은 데이터베이스의 가용성을 높이기 위한 솔루션입니다. 미러링은 데이터베이스 단위로 구현되며 전체 복구 모델을 사용하는 데이터베이스에서만 작동합니다. 자세한 내용은 [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)을 참조하세요.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "62922438"
 >  데이터베이스에서 파일 그룹의 하위 집합 복사본을 배포하려면 복제를 이용하세요. 다른 서버로 복사할 파일 그룹의 개체만 복제해야 합니다. 복제에 대한 자세한 내용은 [SQL Server 복제](../../relational-databases/replication/sql-server-replication.md)를 참조하세요.  
   
 ### <a name="creating-the-mirror-database"></a>미러 데이터베이스 만들기  
- 미러 데이터베이스는 미러 서버에서 주 데이터베이스의 백업을 복구하지 않고 복원함으로써 생성됩니다. 복원 시 동일한 데이터베이스 이름을 유지해야 합니다. 자세한 내용은 [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)의 몇 가지 기능에 대한 백업 및 복원 고려 사항에 대해 설명합니다.  
+ 미러 데이터베이스는 미러 서버에서 주 데이터베이스의 백업을 복구하지 않고 복원함으로써 생성됩니다. 복원 시 동일한 데이터베이스 이름을 유지해야 합니다. 자세한 내용은 [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)을 사용합니다.  
   
  지원되는 경우 증분 복원 시퀀스를 사용하여 미러 데이터베이스를 만들 수 있습니다. 그러나 파일 그룹을 모두 복원하기 전까지는 미러링을 시작할 수 없으며 일반적으로 미러 데이터베이스를 가져오기 위한 복원된 로그 백업은 주 데이터베이스에 의해 지정 시간 내에 닫을 수 있습니다. 자세한 내용은 [증분 복원&#40;SQL Server&#41;](piecemeal-restores-sql-server.md)을 참조하세요.  
   
@@ -123,15 +123,15 @@ ms.locfileid: "62922438"
 > [!NOTE]  
 >  읽기/쓰기 데이터베이스의 로그 파일은 압축 파일 시스템에 저장할 수 없습니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
 -   [전체 텍스트 카탈로그와 인덱스 백업 및 복원](../search/back-up-and-restore-full-text-catalogs-and-indexes.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 데이터베이스 백업 및 복원](back-up-and-restore-of-sql-server-databases.md)   
  [복제된 데이터베이스 백업 및 복원](../replication/administration/back-up-and-restore-replicated-databases.md)   
- [활성 보조 복제본: 보조 복제본에 백업 &#40;AlwaysOn 가용성 그룹&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+ [활성 보조: 보조 복제본에 대 한 백업 &#40;AlwaysOn 가용성 그룹&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   

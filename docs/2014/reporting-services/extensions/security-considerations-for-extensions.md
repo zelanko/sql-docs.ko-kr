@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 128da8d5bb3b956b5b5661ce47ca6e4b741f0bc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63282423"
 ---
 # <a name="security-considerations-for-extensions"></a>확장 프로그램에 대한 보안 고려 사항
@@ -46,7 +46,7 @@ ms.locfileid: "63282423"
 ## <a name="initialization-of-extension-assemblies"></a>확장 프로그램 어셈블리 초기화  
  일부 확장 프로그램 어셈블리에서 시스템 리소스 액세스, 구성 파일 읽기 및 다른 종속 어셈블리 로드 작업을 수행하려면 특정 권한이 필요하므로 보고서 서버에서 확장 프로그램이 메모리로 처음 로드될 때 서비스 계정 자격 증명이 사용됩니다. 하지만 어셈블리가 로드되고 초기화된 후 확장 프로그램 어셈블리에 대한 이후의 모든 호출에서는 현재 로그온한 사용자 계정의 자격 증명을 사용합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services 확장 프로그램](reporting-services-extensions.md)   
  [Reporting Services 확장 라이브러리](reporting-services-extension-library.md)  
   

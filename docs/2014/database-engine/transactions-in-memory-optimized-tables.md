@@ -1,5 +1,5 @@
 ---
-title: 메모리 최적화 테이블의 트랜잭션 | Microsoft Docs
+title: 메모리 액세스에 최적화 된 테이블의 트랜잭션 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bc72eeeb154749b0e889b495fab79bb8bf86db10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62843107"
 ---
 # <a name="transactions-in-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 트랜잭션
@@ -50,7 +50,8 @@ ms.locfileid: "62843107"
  또한 커밋 중인 다른 트랜잭션(TxB)이 삽입하거나 수정한 행을 트랜잭션(TxA)이 읽는 경우 커밋이 발생하기를 기다리는 대신 다른 트랜잭션이 커밋한다고 낙관적으로 가정합니다. 이 경우 트랜잭션 TxA는 트랜잭션 TxB에서 커밋 종속성을 수행합니다.  
   
 ## <a name="conflict-detection-validation-and-commit-dependency-checks"></a>충돌 검색, 유효성 검사 및 커밋 종속성 확인  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 동시 트랜잭션 사이의 충돌, 격리 수준 위반을 감지하고 충돌하는 트랜잭션 중 하나를 종료시킵니다. 이 트랜잭션은 다시 시도해야 합니다. (자세한 내용은 [Retry Logic for Transactions on Memory-Optimized Tables에 대 한 지침](../relational-databases/in-memory-oltp/memory-optimized-tables.md).)  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 동시 트랜잭션 사이의 충돌, 격리 수준 위반을 감지하고 충돌하는 트랜잭션 중 하나를 종료시킵니다. 이 트랜잭션은 다시 시도해야 합니다. (자세한 내용은 메모리 액세스에 [최적화 된 테이블의 트랜잭션에 대 한 재시도 논리에 대 한 지침](../relational-databases/in-memory-oltp/memory-optimized-tables.md)을 참조 하세요.)  
   
  시스템은 아무 충돌도 없고 트랜잭션 격리의 위반이 없다고 낙관적으로 가정합니다. 충돌이 있어 데이터베이스에 불일치가 발생하거나 트랜잭션 격리를 위반할 수 있는 경우 이러한 충돌은 감지되고 트랜잭션이 종료됩니다.  
   
@@ -70,19 +71,19 @@ ms.locfileid: "62843107"
 ### <a name="transaction-lifetime"></a>트랜잭션 수명  
  이전 테이블에서 언급한 오류는 트랜잭션 중 여러 지점에서 발생할 수 있습니다. 다음 그림은 메모리 최적화 테이블에 액세스하는 트랜잭션의 단계를 보여줍니다.  
   
- ![트랜잭션의 수명입니다. ](../../2014/database-engine/media/hekaton-transactions.gif "는 트랜잭션의 수명입니다.")  
+ ![트랜잭션 수명](../../2014/database-engine/media/hekaton-transactions.gif "트랜잭션 수명")  
 메모리 최적화 테이블에 액세스하는 트랜잭션의 수명입니다.  
   
 #### <a name="regular-processing"></a>일반 처리  
  이 단계에서는 사용자가 시작한 [!INCLUDE[tsql](../includes/tsql-md.md)]문이 실행됩니다. 테이블에서 행을 읽고 데이터베이스에 새로운 행 버전을 기록합니다. 트랜잭션은 다른 모든 동시 트랜잭션으로부터 격리됩니다. 트랜잭션은 트랜잭션 시작 시 있는 메모리 최적화 테이블의 스냅샷을 사용합니다.  
   
- 한 가지 예외를 사용 하 여 다른 트랜잭션에 표시 되지 않습니다 트랜잭션의이 단계에서는 테이블에 쓰기: 행 업데이트 및 삭제 표시 업데이트 되며 삭제 작업을 검색 하기 위해 다른 트랜잭션의 쓰기 충돌 합니다.  
+ 트랜잭션의이 단계에서 테이블에 대 한 쓰기는 다른 트랜잭션에 아직 표시 되지 않습니다. 단, 쓰기 충돌을 감지 하기 위해 행 업데이트와 삭제가 다른 트랜잭션의 업데이트 및 삭제 작업에 표시 됩니다.  
   
  업데이트나 삭제 작업 중 트랜잭션의 논리적 시작 이후로 행이 업데이트 또는 삭제된 것이 확인되면 작업은 오류 41302가 발생하며 실패하게 됩니다. 오류 41302의 메시지는 "현재 트랜잭션에서 이 트랜잭션이 시작된 이후로 업데이트된 레코드를 업데이트하려고 시도했습니다. 트랜잭션이 중단되었습니다."입니다.  
   
  이 오류는 XACT_ABORT가 OFF로 설정되어 있어도 트랜잭션을 종료시킵니다. 즉, 사용자 세션이 종료되면 트랜잭션이 롤백됩니다. 종료된 트랜잭션을 커밋할 수 없으며 로그에 쓰지 않는 읽기 작업을 지원하고 메모리 최적화 테이블에 액세스하지 않습니다.  
   
-#####  <a name="cd"></a> 커밋 종속성  
+#####  <a name="cd"></a>커밋 종속성  
  정상적인 처리 중에 트랜잭션은 유효성 검사 또는 커밋 단계에 있지만 아직 커밋되지 않은 다른 트랜잭션에서 기록한 행을 읽을 수 있습니다. 유효성 검사 단계를 시작할 때 트랜잭션의 논리적 종료 시간이 할당되었기 때문에 행을 볼 수 있습니다.  
   
  트랜잭션이 이런 커밋되지 않은 행을 읽는 경우 해당 트랜잭션에서 커밋 종속성을 수행합니다. 여기에는 두 가지 주요 문제점이 있습니다.  
@@ -96,10 +97,10 @@ ms.locfileid: "62843107"
 #### <a name="validation-phase"></a>유효성 검사 단계  
  유효성 검사 단계 동안 시스템은 요청한 트랜잭션 격리 수준에 필요한 가정이 트랜잭션의 논리적 시작과 논리적 종료 사이에 참이었는지 확인합니다.  
   
- 유효성 검사 단계를 시작할 때 트랜잭션에는 논리적 종료 시간이 할당됩니다. 데이터베이스에 기록된 행 버전은 논리적 종료 시간에 다른 트랜잭션에 표시됩니다. 자세한 내용은 [커밋 종속성](#cd)합니다.  
+ 유효성 검사 단계를 시작할 때 트랜잭션에는 논리적 종료 시간이 할당됩니다. 데이터베이스에 기록된 행 버전은 논리적 종료 시간에 다른 트랜잭션에 표시됩니다. 자세한 내용은 [커밋 종속성](#cd)을 참조 하세요.  
   
 ##### <a name="repeatable-read-validation"></a>반복 가능한 읽기 유효성 검사  
- 트랜잭션의 격리 수준이 REPEATABLE READ 또는 SERIALIZABLE 또는 테이블을 REPEATABLE READ 또는 SERIALIZABLE 격리 상태에서 액세스 하는 경우 (자세한 내용은 섹션을 참조에서 개별 작업 격리 [트랜잭션 격리 수준](../../2014/database-engine/transaction-isolation-levels.md)), 시스템은 읽기가 반복 가능한 것을 확인 합니다. 즉, 트랜잭션에서 읽은 행의 버전이 트랜잭션의 논리적 종료 시간에 여전히 유효한 행 버전인 것으로 유효성을 검사합니다.  
+ 트랜잭션의 격리 수준을 반복 읽기 또는 SERIALIZABLE로 설정 하거나 반복 읽기 또는 직렬화 가능 격리에서 테이블에 액세스 하는 경우 (자세한 내용은 [트랜잭션 격리 수준](../../2014/database-engine/transaction-isolation-levels.md)에서 개별 작업의 격리에 대 한 섹션 참조), 시스템은 읽기가 반복 가능한 지 확인 합니다. 즉, 트랜잭션에서 읽은 행의 버전이 트랜잭션의 논리적 종료 시간에 여전히 유효한 행 버전인 것으로 유효성을 검사합니다.  
   
  행이 업데이트 또는 변경된 경우 트랜잭션은 오류 41305가 발생하며 커밋에 실패합니다("반복 읽기 유효성 검사 실패로 인해 현재 트랜잭션을 커밋하지 못했습니다.").  
   
@@ -131,7 +132,7 @@ ms.locfileid: "62843107"
   
 -   메모리 액세스에 최적화된 테이블은 잠금을 지원하지 않습니다. 메모리 최적화 테이블에서 잠금 힌트(예: TABLOCK, XLOCK, ROWLOCK)를 통한 명시적 잠금은 지원되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [메모리 액세스에 최적화된 테이블의 트랜잭션 이해](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 37c3dc20ab537e7cb8bf69099dbd6d24ff384731
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105597"
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>보고서를 스크롤할 때 머리글 계속 표시(보고서 작성기 및 SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "66105597"
   
  행과 열을 제어하는 방법은 테이블 또는 행렬이 있는지 여부에 따라 다릅니다. 테이블이 있는 경우 정적 멤버(행 및 열 머리글)가 계속 표시되도록 구성합니다. 행렬이 있는 경우 행 및 열 그룹 머리글이 계속 표시되도록 구성합니다.  
   
- Excel로 보고서를 내보내는 경우 머리글이 자동으로 고정되지 않습니다. Excel에서 창을 고정할 수 있습니다. 자세한 내용은 [Microsoft Excel로 내보내기&#40;보고서 작성기 및 SSRS&#41;](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)의 **페이지 머리글 및 바닥글** 섹션을 참조하세요.  
+ Excel로 보고서를 내보내는 경우 머리글이 자동으로 고정되지 않습니다. Excel에서 창을 고정할 수 있습니다. 자세한 내용은 **Microsoft Excel로 내보내기&#40;보고서 작성기 및 SSRS&#41;** 의 [페이지 머리글 및 바닥글](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md) 섹션을 참조하세요.  
   
 > [!NOTE]  
 >  테이블에 행 및 열 그룹이 있는 경우에도 스크롤하는 동안 이러한 그룹 머리글이 계속 표시되도록 할 수 없습니다.  
@@ -42,7 +42,8 @@ ms.locfileid: "66105597"
   
 1.  테이블릭스 데이터 영역에서 행, 열 또는 모퉁이 핸들을 마우스 오른쪽 단추로 클릭한 다음 **테이블릭스 속성**을 클릭합니다.  
   
-2.  **일반** 탭의 **행 머리글** 또는 **열 머리글**아래에서 **스크롤하는 동안 머리글 계속 표시**를 선택합니다.  
+2.  
+  **일반** 탭의 **행 머리글** 또는 **열 머리글**아래에서 **스크롤하는 동안 머리글 계속 표시**를 선택합니다.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -60,7 +61,7 @@ ms.locfileid: "66105597"
   
      ![테이블릭스 구성원 속성](../media/grouppane-tablixmember-updated.png "테이블릭스 구성원 속성")  
   
-4.  속성 창에서 설정할 **FixedData** 에 `True`입니다.  
+4.  속성 창에서 **Fixeddata** 를로 `True`설정 합니다.  
   
 5.  스크롤하는 동안 계속 표시할 인접 멤버의 수만큼 이 과정을 반복합니다.  
   
@@ -68,12 +69,12 @@ ms.locfileid: "66105597"
   
  보고서 페이지를 아래로 또는 옆으로 이동할 때 정적 테이블릭스 멤버가 계속 표시됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [보고서를 내보내는 &#40;보고서 작성기 및 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)   
- [그룹과 함께 머리글 및 바닥글 표시&#40;보고서 작성기 및 SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
- [여러 페이지에 행 및 열 머리글 표시&#40;보고서 작성기 및 SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)   
+ [보고서 &#40;보고서 작성기 및 SSRS&#41;내보내기](../report-builder/export-reports-report-builder-and-ssrs.md)   
+ [그룹 &#40;보고서 작성기 및 SSRS를 사용 하 여 머리글 및 바닥글 표시&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
+ [보고서 작성기 및 SSRS &#40;여러 페이지에 행 및 열 머리글 표시&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)   
  [그룹화 창&#40;보고서 작성기&#41;](grouping-pane-report-builder.md)  
   
   

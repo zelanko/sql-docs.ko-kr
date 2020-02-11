@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1115707b08c3068b27d83e3e292e6baf64e6cbeb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035681"
 ---
 # <a name="aliasname-property-sqlserveralias-class"></a>AliasName 속성(SqlServerAlias 클래스)
@@ -37,11 +37,12 @@ object
 ```  
   
 ## <a name="parts"></a>부분  
- *object*  
- [별칭을 나타내는](sqlserveralias-class.md) SqlServerAlias 클래스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 개체입니다.  
+ *개체가*  
+ 
+  [별칭을 나타내는](sqlserveralias-class.md) SqlServerAlias 클래스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  서버 연결 별칭의 이름을 지정하는 `string` 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   

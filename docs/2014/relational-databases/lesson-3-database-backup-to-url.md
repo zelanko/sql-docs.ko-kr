@@ -1,5 +1,5 @@
 ---
-title: '4단원: Azure Storage |에서 데이터베이스 만들기 Microsoft Docs'
+title: '4 단원: Azure Storage에서 데이터베이스 만들기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ee331966984a12d309e71a7040edac6343e296c6
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175634"
 ---
 # <a name="lesson-4-create-a-database-in-azure-storage"></a>4단원: Azure Storage에서 데이터베이스 만들기
@@ -73,11 +73,12 @@ ms.locfileid: "70175634"
   
 6.  이와 마찬가지로 스토리지 계정에서 새로 만든 데이터베이스를 보려면 SSMS(SQL Server Management Studio)를 통해 스토리지 계정에 연결합니다. SQL Server Management Studio를 사용 하 여 Azure storage에 연결 하는 방법에 대 한 자세한 내용은 다음 단계를 수행 합니다.  
   
-    1.  먼저 스토리지 계정 정보를 가져옵니다. 관리 포털에 로그인한 다음 **저장소** 를 클릭하고 저장소 계정을 선택합니다. 스토리지 계정이 선택되면 페이지 아래쪽에서 **액세스 키 관리** 를 클릭합니다. 다음과 유사한 대화 상자가 열립니다.  
+    1.  먼저 스토리지 계정 정보를 가져옵니다. 관리 포털에 로그인합니다. 
+  **스토리지**를 클릭하고 스토리지 계정을 선택합니다. 스토리지 계정이 선택되면 페이지 아래쪽에서 **액세스 키 관리** 를 클릭합니다. 다음과 유사한 대화 상자가 열립니다.  
   
          ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-1.gif "SQL 14 CTP2")  
   
-    2.  **저장소 계정 이름** 및 **기본 액세스 키** 값을 SSMS의 **Azure Storage에 연결** 대화 상자 창에 복사 합니다. **연결**을 클릭합니다. 다음 스크린 샷에서와 같이 스토리지 계정 컨테이너에 대한 정보가 SSMS에 나타납니다.  
+    2.  **저장소 계정 이름** 및 **기본 액세스 키** 값을 SSMS의 **Azure Storage에 연결** 대화 상자 창에 복사 합니다. 그런 다음 **연결**을 클릭합니다. 다음 스크린 샷에서와 같이 스토리지 계정 컨테이너에 대한 정보가 SSMS에 나타납니다.  
   
          ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2.gif "SQL 14 CTP2")  
   
@@ -111,6 +112,6 @@ ms.locfileid: "70175634"
   
  **다음 단원:**  
   
- [5 단원. &#40;Tde를 사용 하 여 데이터베이스 암호화 (옵션)&#41;](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)  
+ [5 단원. TDE를 사용 하 여 데이터베이스를 암호화 &#40;선택&#41;](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)  
   
   

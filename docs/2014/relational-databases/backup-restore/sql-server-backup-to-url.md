@@ -11,17 +11,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 04f8eaf855d33faf0d2eab8fde718c92f9a24906
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232319"
 ---
 # <a name="sql-server-backup-to-url"></a>URL에 대한 SQL Server 백업
   이 항목에서는 Azure Blob 저장소 서비스를 백업 대상으로 사용 하는 데 필요한 개념, 요구 사항 및 구성 요소를 소개 합니다. 백업 및 복원 기능은 디스크나 테이프를 사용하는 경우와 동일하거나 비슷하지만 몇 가지 차이점이 있습니다. 이러한 차이점과 주목할 만한 예외 및 몇 가지 코드 예가 이 항목에서 소개됩니다.  
   
 ## <a name="requirements-components-and-concepts"></a>요구 사항, 구성 요소 및 개념  
- **이 섹션의 내용**  
+ **이 섹션의 설명:**  
   
 -   [보안](#security)  
   
@@ -31,7 +31,7 @@ ms.locfileid: "75232319"
   
 -   [SQL Server 구성 요소](#sqlserver)  
   
--   [제한을](#limitations)  
+-   [제한 사항](#limitations)  
   
 -   [Backup/Restore 문 지원](#Support)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "75232319"
   
 -   [SQL Server Management Studio를 사용 하 여 Azure storage에서 복원](sql-server-backup-to-url.md#RestoreSSMS)  
   
-###  <a name="security"></a>보안  
+###  <a name="security"></a> 보안  
  다음은 Azure Blob 저장소 서비스로 백업 하거나 복원 하는 경우의 보안 고려 사항 및 요구 사항입니다.  
   
 -   Azure Blob 저장소 서비스에 대 한 컨테이너를 만들 때 액세스 권한을 **개인**으로 설정 하는 것이 좋습니다. 액세스 권한을 프라이빗으로 설정하면 Azure 계정에 인증하는 데 필요한 정보를 제공할 수 있는 사용자 또는 계정으로 액세스가 제한됩니다.  
@@ -129,7 +129,7 @@ ms.locfileid: "75232319"
   
 |||||  
 |-|-|-|-|  
-|Backup/Restore 문|지원됨|예외|설명|  
+|Backup/Restore 문|지원됨|예외|주석|  
 |BACKUP|&#x2713;|BLOCKSIZE 및 MAXTRANSFERSIZE는 지원되지 않습니다.|WITH CREDENTIAL 지정 필요|  
 |RESTORE|&#x2713;||WITH CREDENTIAL 지정 필요|  
 |RESTORE FILELISTONLY|&#x2713;||WITH CREDENTIAL 지정 필요|  
@@ -146,7 +146,7 @@ ms.locfileid: "75232319"
   
 |||||  
 |-|-|-|-|  
-|인수|지원됨|예외|설명|  
+|인수|지원됨|예외|주석|  
 |DATABASE|&#x2713;|||  
 |LOG|&#x2713;|||  
 ||  
@@ -182,7 +182,7 @@ ms.locfileid: "75232319"
   
 |||||  
 |-|-|-|-|  
-|인수|지원됨|예외|설명|  
+|인수|지원됨|예외|주석|  
 |DATABASE|&#x2713;|||  
 |LOG|&#x2713;|||  
 |FROM (URL)|&#x2713;||FROM URL 인수는 백업 파일에 대한 URL 경로를 지정하는 데 사용됩니다.|  
@@ -265,11 +265,11 @@ ms.locfileid: "75232319"
 3.  그런 다음 사용자가 제공한 SQL 자격 증명 정보를 사용 하 여 Azure storage에 연결 하 고 **azure에서 백업 파일 찾기** 대화 상자를 엽니다. SQL Server 스토리지에 있는 백업 파일이 이 페이지에 표시됩니다. 복원하는 데 사용할 파일을 선택하고 **확인**을 클릭합니다. 
   **백업 디바이스 선택** 대화 상자가 표시됩니다. 이 대화 상자에서 **확인**을 클릭하면 복원을 완료할 수 있는 기본 **복원** 대화 상자가 표시됩니다.  자세한 내용은 다음 항목을 참조하십시오.  
   
-     [데이터베이스 &#40;일반 페이지&#41;복원](restore-database-general-page.md)  
+     [데이터베이스 복원&#40;일반 페이지&#41;](restore-database-general-page.md)  
   
      [데이터베이스 &#40;파일 복원 페이지&#41;](restore-database-files-page.md)  
   
-     [데이터베이스 &#40;옵션 페이지&#41;복원](restore-database-options-page.md)  
+     [데이터베이스 복원&#40;옵션 페이지&#41;](restore-database-options-page.md)  
   
 ##  <a name="Examples"></a>코드 예제  
  이 섹션에서는 다음과 같은 예를 보여 줍니다.  
@@ -814,4 +814,4 @@ ms.locfileid: "75232319"
   
 ## <a name="see-also"></a>참고 항목  
  [URL에 대 한 백업 SQL Server 모범 사례 및 문제 해결](sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
- [시스템 데이터베이스 백업 및 복원 &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   
+ [시스템 데이터베이스 백업 및 복원&#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   

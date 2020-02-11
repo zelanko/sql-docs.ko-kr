@@ -1,5 +1,5 @@
 ---
-title: sp_dbmmonitordropalert (TRANSACT-SQL) | Microsoft Docs
+title: sp_dbmmonitordropalert (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -19,18 +19,18 @@ ms.assetid: fe4a134b-25bf-464e-a5c4-358de215b65a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4776e043505c787e74c9cecf766325d189c4f702
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108120"
 ---
-# <a name="spdbmmonitordropalert-transact-sql"></a>sp_dbmmonitordropalert(Transact-SQL)
+# <a name="sp_dbmmonitordropalert-transact-sql"></a>sp_dbmmonitordropalert(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   임계값을 NULL로 설정하여 지정한 성능 메트릭에 대한 경고를 삭제합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -56,15 +56,15 @@ sp_dbmmonitordropalert database_name
 |5|보존 기간|데이터베이스 미러링 상태 테이블의 행이 유지되는 기간을 제어하는 메타데이터입니다.|  
   
 > [!NOTE]  
->  이 절차를 사용 하 여 지정 된 여부에 관계 없이 경고 임계값을 삭제 **sp_dbmmonitorchangealert** 또는 데이터베이스 미러링 모니터입니다.  
+>  이 프로시저는 **sp_dbmmonitorchangealert** 또는 데이터베이스 미러링 모니터를 사용 하 여 지정 했는지 여부에 관계 없이 경고 임계값을 삭제 합니다.  
   
- 경고에 해당 하는 이벤트 Id에 대 한 정보를 참조 하세요 [사용 하 여 경고 임계값 및 경고 미러링 성능 메트릭에 대 한 &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)합니다.  
+ 경고에 해당 하는 이벤트 Id에 대 한 자세한 내용은 [SQL Server&#41;&#40;미러링 성능 메트릭에 대해 경고 임계값 및 경고 사용 ](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)을 참조 하세요.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 없음  
+ None  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
@@ -82,8 +82,8 @@ EXEC sp_dbmmonitordropalert AdventureWorks2012, 5;
 EXEC sp_dbmmonitordropalert AdventureWorks2012 ;  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [데이터베이스 미러링 모니터링&#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
+## <a name="see-also"></a>참고 항목  
+ [데이터베이스 미러링 &#40;SQL Server&#41;모니터링](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [sp_dbmmonitorchangealert&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)  
   
   
