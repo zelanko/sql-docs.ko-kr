@@ -18,19 +18,20 @@ ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7409dcee64c7867b8811a282be71070923d48aa1
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68702850"
 ---
-# <a name="spserverinfo-transact-sql"></a>sp_server_info(Transact-SQL)
+# <a name="sp_server_info-transact-sql"></a>sp_server_info(Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 데이터베이스 게이트웨이 또는 기본 데이터 원본에 대해 특성 이름의 목록과 특성 값을 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,36 +44,36 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 `[ @attribute_id = ] 'attribute_id'`특성의 정수 ID입니다. *attribute_id* 은 **int**이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 없음  
+ None  
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**ATTRIBUTE_ID**|**int**|특성의 ID 번호입니다.|  
-|**ATTRIBUTE_NAME**|**varchar(** 60 **)**|특성 이름입니다.|  
-|**ATTRIBUTE_VALUE**|**varchar(** 255 **)**|특성의 현재 설정입니다.|  
+|**ATTRIBUTE_NAME**|**varchar (** 60 **)**|특성 이름입니다.|  
+|**ATTRIBUTE_VALUE**|**varchar (** 255 **)**|특성의 현재 설정입니다.|  
   
  다음 표에서는 특성을 나열합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)]ODBC 클라이언트 라이브러리는 현재 연결 시 특성 **1**, **2**, **18**, **22**및 **500** 을 사용 합니다.  
   
 |ATTRIBUTE_ID|ATTRIBUTE_NAME 설명|ATTRIBUTE_VALUE|  
 |-------------------|---------------------------------|----------------------|  
 |**1**|DBMS_NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|**2**|DBMS_VER|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] - *x.xx.xxxx*|  
-|**10**|OWNER_TERM|owner|  
-|**11**|TABLE_TERM|table|  
+|**2**|DBMS_VER|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] - *x-y. x x x*|  
+|**5-10**|OWNER_TERM|owner|  
+|**11**|TABLE_TERM|테이블|  
 |**12**|MAX_OWNER_NAME_LENGTH|128|  
-|**13**|TABLE_LENGTH<br /><br /> 테이블 이름에 사용할 수 있는 최대 문자 수를 나타냅니다.|128|  
+|**/10**|TABLE_LENGTH<br /><br /> 테이블 이름에 사용할 수 있는 최대 문자 수를 나타냅니다.|128|  
 |**14**|MAX_QUAL_LENGTH<br /><br /> 테이블 한정자 이름(세 부분으로 구성된 테이블 이름의 첫 번째 부분)에 사용할 수 있는 최대 길이를 나타냅니다.|128|  
 |**15**|COLUMN_LENGTH<br /><br /> 열 이름에 사용할 수 있는 최대 문자 수를 나타냅니다.|128|  
-|**16**|IDENTIFIER_CASE<br /><br /> 데이터베이스 내의 테이블, 열, 저장 프로시저(시스템 카탈로그 내의 개체)의 사용자 정의 이름에 대한 대/소문자 구분 여부를 나타냅니다.|SENSITIVE|  
+|**x**|IDENTIFIER_CASE<br /><br /> 데이터베이스 내의 테이블, 열, 저장 프로시저(시스템 카탈로그 내의 개체)의 사용자 정의 이름에 대한 대/소문자 구분 여부를 나타냅니다.|SENSITIVE|  
 |**17**|TX_ISOLATION<br /><br /> 서버가 가정하는 초기 트랜잭션 격리 수준을 나타냅니다. 이 값은 SQL-92에 정의된 격리 수준에 해당합니다.|2|  
-|**18**|COLLATION_SEQ<br /><br /> 해당 서버의 문자 집합 순서를 나타냅니다.|charset=iso_1 sort_order=dictionary_iso charset_num=1 sort_order_num=51|  
-|**19**|SAVEPOINT_SUPPORT<br /><br /> 기본 DBMS가 명명된 저장점을 지원하는지를 나타냅니다.|Y|  
+|**개가**|COLLATION_SEQ<br /><br /> 해당 서버의 문자 집합 순서를 나타냅니다.|charset=iso_1 sort_order=dictionary_iso charset_num=1 sort_order_num=51|  
+|**mb**|SAVEPOINT_SUPPORT<br /><br /> 기본 DBMS가 명명된 저장점을 지원하는지를 나타냅니다.|Y|  
 |**20**|MULTI_RESULT_SETS<br /><br /> 기본 데이터베이스 또는 게이트웨이가 여러 결과 집합을 지원하는지를 나타냅니다. 지원될 경우 게이트웨이를 통해 여러 결과 집합을 클라이언트에 반환하는 여러 문을 보낼 수 있습니다.|Y|  
-|**22**|ACCESSIBLE_TABLES<br /><br /> **Sp_tables**에서 게이트웨이가 현재 사용자가 액세스할 수 있는 테이블, 뷰 등을 반환 하는지 여부를 지정 합니다 (테이블에 대 한 SELECT 권한이 있는 사용자).|Y|  
+|**가로**|ACCESSIBLE_TABLES<br /><br /> **Sp_tables**에서 게이트웨이는 현재 사용자가 액세스할 수 있는 테이블, 뷰 등만 반환 하는지 여부를 지정 합니다. 즉, 테이블에 대 한 SELECT 권한이 있는 사용자는 현재 사용자가 액세스할 수 있습니다.|Y|  
 |**100**|USERID_LENGTH<br /><br /> 사용자 이름에 사용할 수 있는 최대 문자 수를 나타냅니다.|128|  
-|**101**|QUALIFIER_TERM<br /><br /> 세 부분으로 구성된 이름 중 첫 번째 부분인 테이블 한정자에 대한 DBMS 공급업체 용어를 나타냅니다.|database|  
+|**101**|QUALIFIER_TERM<br /><br /> 세 부분으로 구성된 이름 중 첫 번째 부분인 테이블 한정자에 대한 DBMS 공급업체 용어를 나타냅니다.|데이터베이스|  
 |**102**|NAMED_TRANSACTIONS<br /><br /> 기본 DBMS가 명명된 트랜잭션을 지원하는지를 나타냅니다.|Y|  
 |**103**|SPROC_AS_LANGUAGE<br /><br /> 저장 프로시저가 언어 이벤트로 실행될 수 있는지 나타냅니다.|Y|  
 |**104**|ACCESSIBLE_SPROC<br /><br /> **Sp_stored_procedures**에서 게이트웨이가 현재 사용자가 실행 가능한 저장 프로시저만 반환 하는지 여부를 지정 합니다.|Y|  
@@ -88,13 +89,13 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**500**|SYS_SPROC_VERSION<br /><br /> 저장 프로시저가 현재 구현하고 있는 카탈로그의 버전을 나타냅니다.|현재 버전 번호|  
   
 ## <a name="remarks"></a>설명  
- **sp_server_info** 는 ODBC에서 **SQLGetInfo** 가 제공 하는 정보의 하위 집합을 반환 합니다.  
+ **sp_server_info** 은 ODBC에서 **SQLGetInfo** 가 제공 하는 정보의 하위 집합을 반환 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
  스키마에 대한 SELECT 권한이 필요합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [카탈로그 저장 프로시저 &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;카탈로그 저장 프로시저 &#40;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

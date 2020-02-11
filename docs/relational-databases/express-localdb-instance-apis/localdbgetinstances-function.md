@@ -16,17 +16,17 @@ ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 04554c7aa9f891aab414ae5ae77f3c92bb86ac4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036053"
 ---
 # <a name="localdbgetinstances-function"></a>LocalDBGetInstances 함수
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   지정된 버전의 모든 SQL Server Express LocalDB 인스턴스를 반환합니다.  
   
- **헤더 파일:** sqlncli.h  
+ **헤더 파일:** sqlncli  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,12 +40,12 @@ HRESULT LocalDBGetInstances(
   
 ## <a name="parameters"></a>매개 변수  
  *pInstanceNames*  
- [출력] 이 함수는 반환 될 때의 명명 된 이름이 포함 및 기본 사용자의 워크스테이션에서 LocalDB 인스턴스.  
+ 출력 이 함수가 반환 될 때 사용자 워크스테이션의 명명 된 LocalDB 인스턴스 및 기본 LocalDB 인스턴스 이름을 포함 합니다.  
   
  *lpdwNumberOfInstances*  
- [입력/출력] 입력 시 *pInstanceNames* 버퍼의 인스턴스 이름에 대한 슬롯 수를 포함합니다. 출력 시 사용자의 워크스테이션에서 검색 된 LocalDB 인스턴스 수를 포함 합니다.  
+ [입력/출력] 입력 시 *pInstanceNames* 버퍼의 인스턴스 이름에 대한 슬롯 수를 포함합니다. 출력 시 사용자의 워크스테이션에서 발견 된 LocalDB 인스턴스 수를 포함 합니다.  
   
-## <a name="returns"></a>반환 값  
+## <a name="returns"></a>반환  
  S_OK  
  함수가 성공했습니다.  
   
@@ -70,10 +70,10 @@ HRESULT LocalDBGetInstances(
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
  예기치 않은 오류가 발생했습니다. 자세한 내용은 이벤트 로그를 참조하십시오.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  LocalDB API를 사용하는 코드 샘플은 [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference.md)를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Express LocalDB 헤더 및 버전 정보](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
   
   

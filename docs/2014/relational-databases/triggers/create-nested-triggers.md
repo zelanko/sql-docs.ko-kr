@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ba5b5edf57bf877827fefe4f8764b8b71124a550
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196533"
 ---
 # <a name="create-nested-triggers"></a>중첩 트리거 만들기
@@ -35,7 +35,7 @@ ms.locfileid: "68196533"
   
  중첩 트리거가 허용되고 체인에 있는 한 트리거가 무한 루프를 시작하면 중첩 수준을 초과하기 때문에 트리거가 종료됩니다.  
   
- 중첩 트리거를 사용하여 이전 트리거의 영향을 받는 행의 백업 복사본을 저장하는 등의 유용한 정리 작업 기능을 수행할 수 있습니다. 예를 들어 `PurchaseOrderDetail` 트리거가 삭제한 `PurchaseOrderDetail` 행의 백업 복사본을 저장하는 트리거를 `delcascadetrig` 에 만들 수 있습니다. `delcascadetrig` 트리거가 적용 중일 때 `PurchaseOrderID` 에서 `PurchaseOrderHeader` 1965를 삭제하면 `PurchaseOrderDetail`에서 해당 행이 삭제됩니다. 삭제된 데이터를 별도로 만든 다른 테이블 `PurchaseOrderDetail` 에 저장하는 DELETE 트리거를 `del_save`에 만들면 삭제된 데이터를 저장할 수 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ 중첩 트리거를 사용하여 이전 트리거의 영향을 받는 행의 백업 복사본을 저장하는 등의 유용한 정리 작업 기능을 수행할 수 있습니다. 예를 들어 `PurchaseOrderDetail` 트리거가 삭제한 `PurchaseOrderDetail` 행의 백업 복사본을 저장하는 트리거를 `delcascadetrig` 에 만들 수 있습니다. `delcascadetrig` 트리거가 적용 중일 때 `PurchaseOrderID` 에서 `PurchaseOrderHeader` 1965를 삭제하면 `PurchaseOrderDetail`에서 해당 행이 삭제됩니다. 삭제된 데이터를 별도로 만든 다른 테이블 `PurchaseOrderDetail` 에 저장하는 DELETE 트리거를 `del_save`에 만들면 삭제된 데이터를 저장할 수 있습니다. 다음은 그 예입니다.  
   
 ```  
 CREATE TRIGGER Purchasing.savedel  
@@ -184,7 +184,7 @@ Paul                           Alice                          0
   
 -   [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [CREATE TRIGGER&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)   
  [nested triggers 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md)  
   

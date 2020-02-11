@@ -15,18 +15,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 34744bedb701155d2695f6efc5aab3c493e6cf48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011266"
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>OLE Automation 반환 코드 및 오류 정보
-  OLE Automation 시스템 저장 프로시저는 기본 OLE Automation 작업에 의해 반환되는 HRESULT를 `int` 반환 코드로 반환합니다. HRESULT 값이 0이면 성공을 나타냅니다. 0이 아닌 HRESULT는 0x800 16 진수 형태의 OLE 오류 코드*nnnnn*,으로 반환 된 경우를 `int` 값을 저장된 프로시저 반환 코드에서 HRESULT의 형태가 214*nnnnnnn*합니다.  
+  OLE Automation 시스템 저장 프로시저는 기본 OLE Automation 작업에 의해 반환되는 HRESULT를 `int` 반환 코드로 반환합니다. HRESULT 값이 0이면 성공을 나타냅니다. 0이 아닌 HRESULT는 0x800*nnnnn*16 진수 형태의 OLE 오류 코드이 고, 저장 프로시저 반환 코드 `int` 에서 값으로 반환 되는 경우 hresult의 형식은 214*nnnnnnn*입니다.  
   
- 잘못 된 개체 이름 (SQLDMO 예를 들어, 전달입니다. Xyzzy)을 sp_OACreate 하면 반환 하는 절차는 `int` 16 진수로 0x800401f3 인 2147221005, HRESULT입니다.  
+ 예를 들어 잘못 된 개체 이름 (SQLDMO)을 전달 합니다. Sqldmo.xyzzy)로 sp_OACreate 하면 프로시저에서 2147221005의 `int` HRESULT를 반환 합니다 .이 HRESULT는 16 진수의 0x800401f3입니다.  
   
- `CONVERT(binary(4), @hresult)`를 사용하여 `int` HRESULT를 `binary` 값으로 변환할 수 있습니다. 그러나 `CONVERT(char(10), CONVERT(binary(4), @hresult))` 를 사용하면 HRESULT의 각 바이트가 하나의 ASCII 문자로 변환되어 알아볼 수 없는 문자열이 됩니다. 다음 예제 HexToChar 저장 프로시저를 사용 하 여 변환할 수는 `int` HRESULT를를 `char` 읽을 수 있는 16 진수 문자열을 포함 하는 값입니다.  
+ 
+  `CONVERT(binary(4), @hresult)`를 사용하여 `int` HRESULT를 `binary` 값으로 변환할 수 있습니다. 그러나 `CONVERT(char(10), CONVERT(binary(4), @hresult))` 를 사용하면 HRESULT의 각 바이트가 하나의 ASCII 문자로 변환되어 알아볼 수 없는 문자열이 됩니다. 다음 샘플 HexToChar 저장 프로시저를 사용 하 여 `int` HRESULT를 읽을 수 있는 16 `char` 진수 문자열을 포함 하는 값으로 변환할 수 있습니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -76,7 +77,7 @@ SELECT @BinVariable AS BinaryValue,
 GO  
 ```  
   
- 다음 예제 **sp_displayoaerrorinfo** 저장 프로시저를 사용하면 OLE 자동화 프로시저 중 하나가 0이 아닌 HRESULT 반환 코드를 반환할 때 OLE 자동화 오류 정보를 표시할 수 있습니다. 이 예제 저장 프로시저는 `HexToChar`합니다.  
+ 다음 예제 **sp_displayoaerrorinfo** 저장 프로시저를 사용하면 OLE 자동화 프로시저 중 하나가 0이 아닌 HRESULT 반환 코드를 반환할 때 OLE 자동화 오류 정보를 표시할 수 있습니다. 이 예제 저장 프로시저는 `HexToChar`를 사용 합니다.  
   
 ```  
 CREATE PROCEDURE dbo.sp_DisplayOAErrorInfo  

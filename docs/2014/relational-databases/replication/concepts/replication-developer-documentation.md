@@ -1,5 +1,5 @@
 ---
-title: 개발자&#39;가이드 (복제) | Microsoft Docs
+title: 개발자&#39;s 가이드 (복제) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce595518fc33903a9438a9a702d19725fa605f9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721935"
 ---
-# <a name="developer39s-guide-replication"></a>개발자&#39;가이드 (복제)
+# <a name="developer39s-guide-replication"></a>개발자&#39;s 가이드 (복제)
   복제 토폴로지를 프로그래밍 방식으로 구성, 유지 관리 및 모니터링하면 반복되는 복제 태스크를 간소화하고 복제 기반 애플리케이션의 사용자 환경을 향상시킬 수 있습니다. 복제를 프로그래밍하면 최종 사용자가 복제 저장 프로시저와 복제 에이전트 실행 파일에 대해 잘 알지 못하거나 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 구현된 복제 사용자 인터페이스를 사용하지 않아도 사용자 지정 복제 기능을 사용할 수 있습니다.  
   
  다음과 같은 시나리오에서는 애플리케이션에서 복제 서비스에 대한 프로그래밍 방식 액세스의 장점을 활용할 수 있습니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "62721935"
  [복제 관리 개체 개념](replication-management-objects-concepts.md)  
  RMO(복제 관리 개체) 사용과 관련된 개념에 대해 설명합니다. RMO는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 복제 기능을 캡슐화하는 관리 코드 어셈블리입니다.  
   
- [복제 에이전트 실행 파일 개념](replication-agent-executables-concepts.md)  
+ [Replication Agent Executables Concepts](replication-agent-executables-concepts.md)  
  복제 에이전트 실행 파일 사용 방법에 대해 설명합니다.  
 
   
