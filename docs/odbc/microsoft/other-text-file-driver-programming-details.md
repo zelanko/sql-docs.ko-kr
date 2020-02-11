@@ -1,5 +1,5 @@
 ---
-title: 기타 텍스트 파일 드라이버 프로그래밍 세부 정보 | Microsoft Docs
+title: 기타 텍스트 파일 드라이버 프로그래밍 정보 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ ms.assetid: bfa85e91-060e-4d70-88c3-f5c48df634f1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f13193ba437d0da0ee15bd4072fe6f53c7db5b9c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68043777"
 ---
 # <a name="other-text-file-driver-programming-details"></a>기타 텍스트 파일 드라이버 프로그래밍 세부 정보
 > [!NOTE]  
->  이 섹션에서는 ODBC 함수 및 기타 프로그래밍 세부 정보에 대 한 텍스트 파일 드라이버 관련 정보를 제공 합니다. 함수에 대 한 일반 정보에서 해당 항목을 참조 하세요 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)합니다.  
+>  이 섹션에서는 ODBC 함수 및 기타 프로그래밍 정보에 대 한 텍스트 파일 드라이버 관련 정보를 제공 합니다. 함수에 대 한 일반 정보는 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)에서 적절 한 항목을 참조 하세요.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   
@@ -55,6 +55,6 @@ ms.locfileid: "68043777"
   
 -   [SQLTransact(텍스트 파일 드라이버)](../../odbc/microsoft/sqltransact-text-file-driver.md)  
   
--   [테이블 만들기 및 열 (텍스트 파일 드라이버)](../../odbc/microsoft/creating-and-opening-tables-text-file-driver.md)  
+-   [테이블 만들기 및 열기(텍스트 파일 드라이버)](../../odbc/microsoft/creating-and-opening-tables-text-file-driver.md)  
   
 -   [읽기 전용 상태(텍스트 파일 드라이버)](../../odbc/microsoft/read-only-status-text-file-driver.md)

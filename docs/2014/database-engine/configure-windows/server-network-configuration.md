@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3545732db24865e47853b023233a127695ada894
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809484"
 ---
 # <a name="server-network-configuration"></a>서버 네트워크 구성
@@ -42,7 +42,7 @@ ms.locfileid: "62809484"
  지정된 명명된 파이프에서 수신하도록 명명된 파이프 프로토콜을 구성할 수 있습니다. 기본적으로 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 기본 인스턴스는 기본 인스턴스의 경우 \\\\.\pipe\sql\query 파이프에서, 명명된 인스턴스의 경우 \\\\.\pipe\MSSQL$ *\<instancename>* \sql\query 파이프에서 수신 대기합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 하나의 명명된 파이프에서만 수신할 수 있지만 필요한 경우 파이프를 다른 이름으로 변경할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스는 클라이언트에서 연결할 때 파이프를 식별하는 데 도움이 됩니다. 자세한 내용은 [대체 파이프에서 수신하도록 서버 구성&#40;SQL Server 구성 관리자&#41;](configure-a-server-to-listen-on-an-alternate-pipe.md)을 참조하세요.  
   
 ## <a name="force-encryption"></a>암호화 적용  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 클라이언트 응용 프로그램과 통신할 경우 암호화를 요구하도록 구성할 수 있습니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 클라이언트 애플리케이션과 통신할 경우 암호화를 요구하도록 구성할 수 있습니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  
   
 ## <a name="extended-protection-for-authentication"></a>인증에 대한 확장된 보호  
  확장된 보호를 지원하는 운영 체제에서는 채널 바인딩 및 서비스 바인딩을 사용하여 인증에 대한 확장된 보호 지원 기능을 사용할 수 있습니다. 자세한 내용은 [확장된 보호를 사용하여 데이터베이스 엔진에 연결](connect-to-the-database-engine-using-extended-protection.md)을 참조하세요.  

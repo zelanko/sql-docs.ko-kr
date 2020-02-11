@@ -1,5 +1,5 @@
 ---
-title: dbo.systargetservergroups (TRANSACT-SQL) | Microsoft Docs
+title: systargetservergroups (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -20,10 +20,10 @@ ms.assetid: df1195b1-62c3-4b94-8b2e-a646dcaf281b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 220871e8bbfd72958ef23db0980e097e85b4cee9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68076464"
 ---
 # <a name="dbosystargetservergroups-transact-sql"></a>dbo.systargetservergroups(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68076464"
   해당 다중 서버 환경에 현재 참여하는 대상 서버 그룹을 기록합니다.  
   
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**servergroup_id**|**int**|서버 그룹 ID입니다.|  
 |**name**|**sysname**|서버 그룹 이름입니다.|  

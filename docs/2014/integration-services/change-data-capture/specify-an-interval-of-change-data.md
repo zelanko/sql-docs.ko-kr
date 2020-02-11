@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2c5509699945db857bd0b763192c7aea21ac90da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771221"
 ---
 # <a name="specify-an-interval-of-change-data"></a>변경 데이터의 간격 지정
@@ -45,9 +45,11 @@ ms.locfileid: "62771221"
  여러 자식 패키지를 실행하는 마스터 패키지에서 엔드포인트를 계산하는 경우 부모 패키지 변수 구성을 사용하여 이러한 변수 값을 각 자식 패키지에 전달할 수 있습니다. 자세한 내용은 [패키지 실행 태스크](../control-flow/execute-package-task.md) 및 [자식 패키지에서 변수 및 매개 변수의 값 사용](../use-the-values-of-variables-and-parameters-in-a-child-package.md)을 참조하세요.  
   
 ## <a name="calculate-a-starting-point-and-an-ending-point-for-change-data"></a>변경 데이터의 시작 지점 및 끝 지점 계산  
- 간격 엔드포인트에 대한 패키지 변수를 설정한 후 해당 엔드포인트의 실제 값을 계산하고 이러한 값을 해당 패키지 변수에 매핑할 수 있습니다. 이러한 엔드포인트는 `datetime` 값이므로 `datetime` 값을 계산하거나 사용할 수 있는 함수를 사용해야 합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 식 언어와 Transact-SQL 모두에 `datetime` 값을 사용하는 함수가 있습니다.  
+ 간격 엔드포인트에 대한 패키지 변수를 설정한 후 해당 엔드포인트의 실제 값을 계산하고 이러한 값을 해당 패키지 변수에 매핑할 수 있습니다. 이러한 엔드포인트는 `datetime` 값이므로 `datetime` 값을 계산하거나 사용할 수 있는 함수를 사용해야 합니다. 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 식 언어와 Transact-SQL 모두에 `datetime` 값을 사용하는 함수가 있습니다.  
   
- `datetime` 값을 사용하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 식 언어의 함수  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 값을 사용하는 `datetime` 식 언어의 함수  
  -   [DATEADD&#40;SSIS 식&#41;](../expressions/dateadd-ssis-expression.md)  
   
 -   [DATEDIFF&#40;SSIS 식&#41;](../expressions/datediff-ssis-expression.md)  
@@ -64,16 +66,17 @@ ms.locfileid: "62771221"
   
 -   [YEAR&#40;SSIS 식&#41;](../expressions/year-ssis-expression.md)  
   
- `datetime` 값을 사용하는 Transact-SQL의 함수  
- [날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql).  
+ 
+   `datetime` 값을 사용하는 Transact-SQL의 함수  
+[날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql).  
   
  이러한 `datetime` 함수 중 하나를 사용하여 엔드포인트를 계산하기 전에 간격이 고정되어 있고 정기적으로 발생하는지 확인해야 합니다. 일반적으로 원본 테이블에서 발생한 변경 내용을 정기적으로 대상 테이블에 적용합니다. 예를 들어 이러한 변경 내용을 매시간, 매일 또는 매주 적용할 수 있습니다.  
   
  변경 간격이 고정적인지, 아니면 보다 임의적인지 이해한 후 엔드포인트를 계산할 수 있습니다.  
   
--   **시작 날짜 및 시간 계산**. 이전 로드의 종료 날짜 및 시간을 현재 시작 날짜 및 시간으로 사용합니다. 증분 로드에 고정 간격을 사용하는 경우 Transact-SQL 또는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 식 언어의 `datetime` 함수를 사용하여 이 값을 계산할 수 있습니다. 그렇지 않은 경우 실행 간 엔드포인트를 유지하고 SQL 실행 태스크 또는 스크립트 태스크를 사용하여 이전 엔드포인트를 로드해야 할 수 있습니다.  
+-   **시작 날짜 및 시간 계산**. 이전 로드의 종료 날짜 및 시간을 현재 시작 날짜 및 시간으로 사용합니다. 증분 로드에 고정 간격을 사용하는 경우 Transact-SQL 또는 `datetime` 식 언어의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 함수를 사용하여 이 값을 계산할 수 있습니다. 그렇지 않은 경우 실행 간 엔드포인트를 유지하고 SQL 실행 태스크 또는 스크립트 태스크를 사용하여 이전 엔드포인트를 로드해야 할 수 있습니다.  
   
--   **종료 날짜 및 시간 계산**. 증분 로드에 고정 간격을 사용하는 경우 현재 종료 날짜 및 시간을 시작 날짜 및 시간의 오프셋으로 계산합니다. 다시 사용 하 여이 값을 계산할 수 있습니다 합니다 `datetime` TRANSACT-SQL의 함수는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 식 언어입니다.  
+-   **종료 날짜 및 시간 계산**. 증분 로드에 고정 간격을 사용하는 경우 현재 종료 날짜 및 시간을 시작 날짜 및 시간의 오프셋으로 계산합니다. Transact-sql 또는 `datetime` [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 식 언어의 함수를 사용 하 여이 값을 계산할 수 있습니다.  
   
  다음 절차에서는 변경 간격에 고정 간격을 사용하며 증분 로드 패키지가 예외 없이 매일 실행된다고 가정합니다. 그렇지 않으면 누락된 간격의 변경 데이터가 손실됩니다. 간격의 시작 지점은 이틀 전 자정입니다. 즉, 24-48시간 전입니다. 간격의 끝 지점은 어제 자정입니다. 즉, 0-24시간 전의 전날 밤입니다.  
   
@@ -107,7 +110,7 @@ ms.locfileid: "62771221"
   
  **다음 항목:** [변경 데이터의 준비 여부 확인](determine-whether-the-change-data-is-ready.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [패키지에서 변수 사용](../use-variables-in-packages.md)   
  [Integration Services&#40;SSIS&#41; 식](../expressions/integration-services-ssis-expressions.md)   
  [SQL 실행 태스크](../control-flow/execute-sql-task.md)   

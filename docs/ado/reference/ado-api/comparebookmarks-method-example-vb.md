@@ -15,16 +15,16 @@ ms.assetid: f156aa48-bfc2-40d1-962b-7b08855776c6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6f14ad9d6605747b78109e517636e5864847881f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919602"
 ---
 # <a name="comparebookmarks-method-example-vb"></a>CompareBookmarks 메서드 예제(VB)
-이 예제에서는 합니다 [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) 메서드. 책갈피의 상대 값은 특정 책갈피를 소유자가 없는 경우 특별 한 경우가 아니면 필요 하지 않습니다.  
+이 예제에서는 [Comparebookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) 메서드를 보여 줍니다. 특정 책갈피를 특수 한 경우를 제외 하 고는 책갈피의 상대 값이 거의 필요 하지 않습니다.  
   
- 임의 행을 지정는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 에서 파생 된 합니다 ***작성자*** 테이블 검색을 대상으로 합니다. 그런 다음 대상으로 하는 기준으로 각 행의 위치를 표시 합니다.  
+ ***Authors*** 테이블에서 파생 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 의 임의 행을 검색 대상으로 지정 합니다. 그런 다음 해당 대상을 기준으로 각 행의 위치를 표시 합니다.  
   
 ```  
 'BeginCompareBookmarksVB  
@@ -132,7 +132,7 @@ End Sub
 'EndCompareBookmarksVB  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [CompareBookmarks 메서드 (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)   
  [CompareEnum](../../../ado/reference/ado-api/compareenum.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

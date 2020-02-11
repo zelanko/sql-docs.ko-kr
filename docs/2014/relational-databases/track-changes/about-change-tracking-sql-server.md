@@ -17,14 +17,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e2013a604c517ae93ee17640013e2260f50cf28e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62670931"
 ---
 # <a name="about-change-tracking-sql-server"></a>변경 내용 추적 정보(SQL Server)
-  변경 내용 추적은 애플리케이션에 대한 효과적인 변경 내용 추적 메커니즘을 제공하는 간단한 솔루션입니다. 일반적으로 애플리케이션에서 데이터베이스의 데이터에 대한 변경 내용을 쿼리하고 이 변경 내용과 관련된 정보에 액세스하도록 하려면 애플리케이션 개발자가 사용자 지정 변경 내용 추적 메커니즘을 구현해야 했습니다. 이러한 메커니즘을 만드는 데는 일반적으로 많은 작업 및 트리거 조합을 사용 하는 경우가 많았습니다 `timestamp` 열, 추적 정보 및 사용자 지정 정리 프로세스를 저장 하기 위한 새 테이블입니다.  
+  변경 내용 추적은 애플리케이션에 대한 효과적인 변경 내용 추적 메커니즘을 제공하는 간단한 솔루션입니다. 일반적으로 애플리케이션에서 데이터베이스의 데이터에 대한 변경 내용을 쿼리하고 이 변경 내용과 관련된 정보에 액세스하도록 하려면 애플리케이션 개발자가 사용자 지정 변경 내용 추적 메커니즘을 구현해야 했습니다. 이러한 메커니즘을 만드는 데는 일반적으로 많은 작업이 수반 되며 트리거, `timestamp` 열, 추적 정보를 저장 하기 위한 새 테이블 및 사용자 지정 정리 프로세스의 조합을 사용 하는 경우가 많습니다.  
   
  변경 내용에 대해 필요한 정보의 양과 관련된 요구 사항은 애플리케이션 유형마다 다릅니다. 애플리케이션에서는 변경 내용 추적을 사용하여 사용자 테이블에 수행된 변경에 대한 다음 질문에 답할 수 있습니다.  
   
@@ -42,17 +42,17 @@ ms.locfileid: "62670931"
 >  애플리케이션이 적용된 모든 변경 내용에 대한 정보와 변경된 데이터의 중간 값을 요구하면 변경 내용 추적 대신 변경 데이터 캡처를 사용하는 것이 좋습니다. 자세한 내용은 [변경 데이터 캡처 정보&#40;SQL Server&#41;](../track-changes/about-change-data-capture-sql-server.md)를 참조하세요.  
   
 ## <a name="one-way-and-two-way-synchronization-applications"></a>단방향 및 양방향 동기화 애플리케이션  
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스와 데이터를 동기화해야 하는 응용 프로그램은 변경 내용을 쿼리할 수 있어야 합니다. 변경 내용 추적은 단방향 및 양방향 동기화 애플리케이션 모두에 대한 기반으로 사용될 수 있습니다.  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스와 데이터를 동기화해야 하는 애플리케이션은 변경 내용을 쿼리할 수 있어야 합니다. 변경 내용 추적은 단방향 및 양방향 동기화 애플리케이션 모두에 대한 기반으로 사용될 수 있습니다.  
   
 ### <a name="one-way-synchronization-applications"></a>단방향 동기화 애플리케이션  
  클라이언트 또는 중간 계층 캐싱 애플리케이션과 같은 단방향 동기화 애플리케이션은 변경 내용 추적을 사용하도록 구축할 수 있습니다. 다음 그림에서 볼 수 있듯이 캐싱 애플리케이션에서는 데이터가 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에 저장되어야 하고 다른 데이터 저장소에 캐시되어야 합니다. 애플리케이션은 데이터베이스 테이블에 수행된 변경 작업에 대해 캐시를 최신 상태로 유지할 수 있어야 합니다. 변경 내용은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]으로 다시 전달되지 않습니다.  
   
- ![단방향 동기화 응용 프로그램 표시](../../database-engine/media/one-waysync.gif "단방향 동기화 응용 프로그램 표시")  
+ ![단방향 동기화 애플리케이션 표시](../../database-engine/media/one-waysync.gif "단방향 동기화 애플리케이션 표시")  
   
 ### <a name="two-way-synchronization-applications"></a>양방향 동기화 애플리케이션  
  양방향 동기화 애플리케이션도 변경 내용 추적을 사용하도록 구축할 수 있습니다. 이 시나리오에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스의 데이터는 하나 이상의 데이터 저장소와 동기화됩니다. 이러한 저장소의 데이터는 업데이트가 가능하며 변경 내용은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]과 다시 동기화되어야 합니다.  
   
- ![양방향 동기화 응용 프로그램 표시](../../database-engine/media/two-waysync.gif "양방향 동기화 응용 프로그램 표시")  
+ ![양방향 동기화 애플리케이션 표시](../../database-engine/media/two-waysync.gif "양방향 동기화 애플리케이션 표시")  
   
  양방향 동기화 애플리케이션의 좋은 예는 간헐적으로 연결되는 애플리케이션입니다. 이러한 유형의 애플리케이션에서 클라이언트 애플리케이션은 로컬 저장소를 쿼리 및 업데이트합니다. 클라이언트와 서버 간에 연결을 사용할 수 있는 경우 애플리케이션은 서버와 동기화되고 변경된 데이터는 양방향으로 흐르게 됩니다.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62670931"
   
  각 행에 대해 수행된 변경에 대한 정보도 변경 내용 추적을 사용하여 얻을 수 있습니다. 예를 들어 변경을 일으킨 DML 작업의 유형(삽입, 업데이트 또는 삭제) 또는 업데이트 작업의 일부로 변경된 열이 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [변경 내용 추적 설정 및 해제&#40;SQL Server&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
  [변경 내용 추적 사용&#40;SQL Server&#41;](../track-changes/work-with-change-tracking-sql-server.md)   
  [변경 내용 추적 관리&#40;SQL Server&#41;](../track-changes/manage-change-tracking-sql-server.md)   
