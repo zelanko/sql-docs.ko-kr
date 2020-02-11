@@ -15,15 +15,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9aebe73ac73ee09ed2ba6de9162877d0e70bc7e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62867732"
 ---
-# <a name="mssqlserver601"></a>MSSQLSERVER_601
+# <a name="mssqlserver_601"></a>MSSQLSERVER_601
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -42,9 +42,9 @@ ms.locfileid: "62867732"
 ## <a name="user-action"></a>사용자 동작  
  이 오류가 발생하면 쿼리가 취소됩니다. 쿼리를 다시 전송하거나 NOLOCK 잠금 힌트를 제거하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [MSSQLSERVER_605](mssqlserver-605-database-engine-error.md)   
- [테이블 힌트&#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)   
+ [Transact-sql&#41;&#40;테이블 힌트](/sql/t-sql/queries/hints-transact-sql-table)   
  [SELECT&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
  [SET TRANSACTION ISOLATION LEVEL&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)  
   

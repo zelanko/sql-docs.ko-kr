@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a2bc6e2b1becdcecdd6ef7eef5635b6460440b40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63227006"
 ---
 # <a name="view-join-properties-visual-database-tools"></a>조인 속성 보기(Visual Database Tools)
@@ -32,7 +32,7 @@ ms.locfileid: "63227006"
   
      속성 창에 조인의 속성이 표시됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [조인을 사용한 쿼리&#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

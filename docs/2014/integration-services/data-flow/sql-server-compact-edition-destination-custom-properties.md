@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bf554cac0bf20e93826c183c888b1b0176e6e7da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900941"
 ---
 # <a name="sql-server-compact-edition-destination-custom-properties"></a>SQL Server Compact Edition 대상 사용자 지정 속성
@@ -24,13 +24,13 @@ ms.locfileid: "62900941"
   
 |속성 이름|데이터 형식|Description|  
 |-------------------|---------------|-----------------|  
-|TableName|문자열|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 데이터베이스에 있는 대상 테이블의 이름입니다.<br /><br /> 이 속성의 값은 속성 식을 사용하여 지정할 수 있습니다.|  
+|TableName|String|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 데이터베이스에 있는 대상 테이블의 이름입니다.<br /><br /> 이 속성의 값은 속성 식을 사용하여 지정할 수 있습니다.|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 대상의 입력 및 입력 열에는 사용자 지정 속성이 없습니다.  
   
  자세한 내용은 [SQL Server Compact Edition 대상](sql-server-compact-edition-destination.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [공용 속성](../common-properties.md)  
+## <a name="see-also"></a>참고 항목  
+ [Common Properties](../common-properties.md)  
   
   

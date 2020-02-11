@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d125a725a9e1c0cab34c7066fd9554ef0099d6e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901109"
 ---
 # <a name="odbc-source"></a>ODBC 원본
@@ -57,7 +57,7 @@ ms.locfileid: "62901109"
   
  **FetchMethod** 속성에 대한 자세한 내용은 [ODBC Source Custom Properties](odbc-source-custom-properties.md)을 참조하십시오.  
   
-## <a name="parallelism"></a>Parallelism  
+## <a name="parallelism"></a>병렬 처리  
  동일한 컴퓨터 또는 서로 다른 컴퓨터에서 동일한 테이블 또는 서로 다른 테이블에 대해 병렬로 실행될 수 있는 ODBC 원본 구성 요소의 수에는 제한이 없습니다(일반적인 전역 세션 제한 제외).  
   
  그러나 이용 중인 ODBC 공급자의 제한으로 인해 공급자를 통한 동시 연결 수가 제한될 수 있습니다. 이러한 제한으로 인해 ODBC 원본에 대해 지원 가능한 병렬 인스턴스 수가 제한됩니다. SSIS 개발자는 이용 중인 모든 ODBC 공급자의 제한을 이해하고 SSIS 패키지를 작성할 때 해당 제한을 고려해야 합니다.  
@@ -94,6 +94,6 @@ ms.locfileid: "62901109"
   
 -   [ODBC 원본을 사용하여 데이터 추출](odbc-source.md)  
   
--   [ODBC Source Custom Properties](odbc-source-custom-properties.md)  
+-   [ODBC 원본 사용자 지정 속성](odbc-source-custom-properties.md)  
   
   

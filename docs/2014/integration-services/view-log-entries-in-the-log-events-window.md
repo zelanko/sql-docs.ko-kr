@@ -1,5 +1,5 @@
 ---
-title: 이벤트 로그 창에서 로그 항목을 확인 합니다. | Microsoft Docs
+title: 이벤트 로그 창에서 로그 항목 보기 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ed348a4525024052946ac30bfe6ec780ca86a4b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054624"
 ---
 # <a name="view-log-entries-in-the-log-events-window"></a>이벤트 로그 창에서 로그 항목 보기
@@ -50,7 +50,7 @@ ms.locfileid: "66054624"
   
 9. 텍스트 편집기를 열고 로그 항목을 텍스트 파일에 붙여넣은 다음 저장합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services&#40;SSIS&#41; 로깅](performance/integration-services-ssis-logging.md)  
   
   
