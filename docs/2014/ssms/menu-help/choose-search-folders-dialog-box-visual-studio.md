@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6c76fc0d5247d2a9f07fcf97677ac1f24b9635e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62678935"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>검색 폴더 선택 대화 상자(Visual Studio)
@@ -22,7 +22,7 @@ ms.locfileid: "62678935"
   
  **선택한 폴더** 목록에 폴더를 추가하고 **폴더 집합** 필드에 이 폴더 집합의 이름을 입력한 다음 **적용** 을 클릭하여 저장합니다. 이러한 사용자 지정 검색 범위는 이후에 **파일에서 찾기** 및 **파일에서 바꾸기** 의 **찾는 위치**드롭다운 목록에서 이름으로 선택할 수 있습니다. 사용자 지정 폴더 집합을 **찾는 위치** 목록에서 제거하려면 **폴더 집합** 필드에서 해당 이름을 선택하고 **삭제**를 클릭합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  다음 컨트롤은 사용자의 명명된 검색 폴더 집합을 조합, 저장 및 수정하는 데 사용할 수 있습니다.  
   
  **폴더 집합**  
@@ -31,7 +31,7 @@ ms.locfileid: "62678935"
  **적용**  
  **선택한 폴더** 목록에 있는 검색 폴더 집합을 명명된 폴더 집합으로 저장합니다. 이렇게 하면 **찾기 및 바꾸기** 창의 모든 탭에 있는 **찾는 위치** 필드에서 이 폴더 집합을 선택할 수 있습니다. 이 옵션은 검색 폴더 선택 대화 상자를 닫지 않습니다.  
   
- **삭제**  
+ **Delete**  
  선택한 폴더 집합을 **폴더 집합** 필드 및 **찾기 및 바꾸기** 창의 모든 탭에 있는 **찾는 위치** 필드에서 제거합니다.  
   
  **사용 가능한 폴더**  

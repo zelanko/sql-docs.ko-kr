@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5740095752b482430cd718d0e2bff813449d92ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68105219"
 ---
 # <a name="item-tuple-mdx"></a>Item(튜플)(MDX)
@@ -41,24 +41,24 @@ Set_Expression.Item(String_Expression1 [ ,String_Expression2,...n])
  *String_Expression2*  
  유효한 문자열 식으로서, 일반적으로 문자열로 표현된 튜플입니다.  
   
- *Index*  
+ *인덱싱할*  
  반환할 집합 내의 위치로 특정 튜플을 지정하는 유효한 숫자 식입니다.  
   
 ## <a name="remarks"></a>설명  
- 합니다 **항목** 함수에 지정된 된 집합에서 튜플을 반환 합니다. 세 가지 가능한 방법으로 호출 하 여 **항목** 함수:  
+ **Item** 함수는 지정 된 집합에서 튜플을 반환 합니다. **항목** 함수를 호출 하는 방법에는 세 가지가 있습니다.  
   
--   단일 문자열 식이 지정 하는 경우는 **항목** 함수에 지정 된 튜플을 반환 합니다. 예를 들면 "([2005].Q3, [Store05])"와 같습니다.  
+-   단일 문자열 식이 지정 된 경우 **Item** 함수는 지정 된 튜플을 반환 합니다. 예를 들면 "([2005].Q3, [Store05])"와 같습니다.  
   
--   둘 이상의 문자열 식이 지정 된 경우는 **항목** 함수는 지정 된 좌표로 정의 된 튜플을 반환 합니다. 문자열의 번호는 축의 번호와 일치해야 하며 각 문자열은 고유한 계층을 식별해야 합니다. 예를 들면 "[2005].Q3", "[Store05]"와 같습니다.  
+-   둘 이상의 문자열 식이 지정 된 경우 **Item** 함수는 지정 된 좌표로 정의 된 튜플을 반환 합니다. 문자열의 번호는 축의 번호와 일치해야 하며 각 문자열은 고유한 계층을 식별해야 합니다. 예를 들면 "[2005].Q3", "[Store05]"와 같습니다.  
   
--   정수를 지정 합니다 **항목** 함수에 지정 된 0부터 시작 위치에 있는 튜플을 반환 합니다. *인덱스*합니다.  
+-   정수를 지정 하면 **Item** 함수는 *인덱스*에 지정 된 위치 (0부터 시작)에 있는 튜플을 반환 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 ([1996],Sales)를 반환합니다.  
   
  `{([1996],Sales), ([1997],Sales), ([1998],Sales)}.Item(0)`  
   
- 다음 예에서는 수준 식을 사용하고 Australia의 각 State-Province에 대한 Internet Sales Amount와 Australia의 총 Internet Sales Amount에 대한 이 값의 백분율을 반환합니다. 이 예에서는 Item 함수를 사용 하 여 반환한 집합에서 첫 번째 (및 튜플만)를 추출 하는 **상위** 함수입니다.  
+ 다음 예에서는 수준 식을 사용하고 Australia의 각 State-Province에 대한 Internet Sales Amount와 Australia의 총 Internet Sales Amount에 대한 이 값의 백분율을 반환합니다. 이 예에서는 Item 함수를 사용 하 여 **상위** 함수에서 반환 된 집합에서 첫 번째 (및 유일한 튜플) 추출 합니다.  
   
 ```  
 WITH MEMBER Measures.x AS [Measures].[Internet Sales Amount] /   
@@ -77,7 +77,7 @@ SELECT {[Measures].[Internet Sales Amount], Measures.x} ON 0,
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

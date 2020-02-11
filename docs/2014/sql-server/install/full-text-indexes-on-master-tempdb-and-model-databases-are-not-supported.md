@@ -1,5 +1,5 @@
 ---
-title: 전체 텍스트 인덱스가 master, tempdb 및 model 데이터베이스에서 지원 되지 않습니다 | Microsoft Docs
+title: Master, tempdb 및 model 데이터베이스에서는 전체 텍스트 인덱스가 지원 되지 않습니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,21 +13,23 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 743c7153b034cf5e1267c6a0da1e585845800980
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095196"
 ---
 # <a name="full-text-indexes-on-master-tempdb-and-model-databases-are-not-supported"></a>master, tempdb 및 model 데이터베이스에서는 전체 텍스트 인덱스가 지원되지 않습니다.
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 시스템 데이터베이스에 전체 텍스트 인덱스를 사용할 수 없습니다.  
   
 ## <a name="description"></a>Description  
- [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]에서는 전체 텍스트 인덱스가 master, tempdb 및 model 데이터베이스에서 지원되었습니다.  
+ 
+  [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]에서는 전체 텍스트 인덱스가 master, tempdb 및 model 데이터베이스에서 지원되었습니다.  
   
- Master, tempdb 및 model 데이터베이스의 모든 전체 텍스트 카탈로그 업그레이드 하는 동안 제거 됩니다.  
+ Master, tempdb 및 model 데이터베이스의 전체 텍스트 카탈로그는 업그레이드 하는 동안 제거 됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [업그레이드 관리자 작업](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

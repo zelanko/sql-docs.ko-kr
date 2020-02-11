@@ -44,10 +44,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8a76bb95fb3689e6dc7f6de71373152ce36ebd14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022574"
 ---
 # <a name="new-publication-wizard"></a>New Publication Wizard
@@ -77,9 +77,9 @@ ms.locfileid: "63022574"
   
 -   [필터 생성](generate-filters.md)  
   
--   [스냅숏 에이전트&#40;새 게시 마법사&#41;](snapshot-agent-new-publication-wizard.md)  
+-   [스냅샷 에이전트&#40;새 게시 마법사&#41;](snapshot-agent-new-publication-wizard.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Create a Publication](publish/create-a-publication.md)   
  [데이터 및 데이터베이스 개체 게시](publish/publish-data-and-database-objects.md)   
 

@@ -1,5 +1,5 @@
 ---
-title: 정렬 속성 예제 (VB) | Microsoft Docs
+title: Sort 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7dec17461f44c9e461a010e8a0bf5cf3fe3bbbd9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931029"
 ---
 # <a name="sort-property-example-vb"></a>Sort 속성 예제(VB)
-이 예제에서는 합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 [정렬](../../../ado/reference/ado-api/sort-property.md) 의 행 순서를 변경 하려면 속성을 **레코드 집합** 에서 파생 된를 ***작성자*** 목차 합니다 ***Pubs*** 데이터베이스입니다. 보조 유틸리티 루틴을 각 행을 출력합니다.  
+이 예에서는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 [Sort](../../../ado/reference/ado-api/sort-property.md) 속성을 사용 하 여 ***Pubs*** 데이터베이스의 ***Authors*** 테이블에서 파생 된 **레코드 집합** 의 행을 다시 정렬 합니다. 보조 유틸리티 루틴은 각 행을 인쇄 합니다.  
   
 ```  
 'BeginSortVB  
@@ -103,12 +103,12 @@ End Sub
 'EndSortVB  
 ```  
   
- 이 지정 된 제목 및 지정 된 콘텐츠를 인쇄 하는 보조 유틸리티 루틴 **레코드 집합**합니다.  
+ 지정 된 제목 및 지정 된 **레코드 집합**의 내용을 인쇄 하는 보조 유틸리티 루틴입니다.  
   
 ```  
 Attribute VB_Name = "Sort"  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Sort 속성](../../../ado/reference/ado-api/sort-property.md)

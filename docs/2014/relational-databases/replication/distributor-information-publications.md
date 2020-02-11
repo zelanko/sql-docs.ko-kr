@@ -1,5 +1,5 @@
 ---
-title: SQL Server 복제 ' 배포자 정보 ' 대화 상자 | Microsoft Docs
+title: "' 배포자 정보 ' 대화 상자 SQL Server 복제 | Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,20 +17,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2d738066e4832c029743d53f7ec99dbb1b6fe5cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721364"
 ---
 # <a name="distributor-information-dialog-box"></a>배포자 정보 대화 상자 
-이 항목의 정보를 제공 합니다 **배포자** 대화 상자 
+이 항목에서는 **배포자** 대화 상자에 대 한 정보를 제공 합니다. 
 
 ## <a name="publications"></a>게시
 
   **게시** 탭은 왼쪽 창에서 선택한 배포자에서의 모든 게시에 대한 요약 정보를 제공합니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>옵션  
  배포자에서 지원하는 게시에 대해 표시되는 정보에는 게시자의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 있는 열이 포함됩니다. 그 밖에 표시되는 게시 정보는 복제 모니터의 게시자 뷰에서 게시를 볼 때 제공되는 게시 정보와 같습니다. **게시** 탭의 열에 대한 자세한 내용은 [Publisher Information, Publications](publisher-information-publications.md)를 참조하십시오.  
 
 ## <a name="subscription-watch-list"></a>구독 조사 목록
@@ -42,7 +42,7 @@ ms.locfileid: "62721364"
   병합 게시 구독 정보는 게시자 이름을 포함합니다. 그 밖에 이 대화 상자에 제공되는 기능 및 정보는 게시자 뷰와 동일합니다. 이 대화 상자를 사용하는 방법은 [게시자 정보, 구독 조사 목록&#40;병합 게시, SQL Server 2005 이상&#41;](publisher-information-subscription-watch-list-merge-publication.md)을 참조하세요. 
 
 ### <a name="snapshot-replication"></a>스냅샷 복제
-  스냅샷 게시 구독 정보는 게시자 이름을 포함합니다. 그 밖에 이 대화 상자에 제공되는 기능 및 정보는 게시자 뷰와 동일합니다. 이 대화 상자를 사용하는 방법은 [게시자 정보, 구독 조사 목록&#40;스냅숏 게시, SQL Server 2005 이상&#41;](publisher-information-subscription-watch-list-snapshot.md)을 참조하세요.  
+  스냅샷 게시 구독 정보는 게시자 이름을 포함합니다. 그 밖에 이 대화 상자에 제공되는 기능 및 정보는 게시자 뷰와 동일합니다. 이 대화 상자를 사용하는 방법은 [게시자 정보, 구독 조사 목록&#40;스냅샷 게시, SQL Server 2005 이상&#41;](publisher-information-subscription-watch-list-snapshot.md)을 참조하세요.  
 
 ## <a name="agents"></a>에이전트
   **에이전트** 탭에는 게시자 및 구독자와 연결된 에이전트 및 유지 관리 작업에 대한 정보가 표시됩니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "62721364"
   
  스냅샷, 로그 판독기 및 큐 판독기 에이전트와 유지 관리 작업에 대한 자세한 내용은 [Publisher Information, Agents](publisher-information-agents.md)를 참조하십시오. 배포자에 대한 **에이전트** 탭에 있는 에이전트 정보를 표시하면 스냅샷 및 로그 판독기 에이전트에 대한 게시자 정보가 제공됩니다. 그러나 배포자 뷰의 배포자에 대한 **에이전트** 탭에서는 **배포자 에이전트** 및 **병합 에이전트**를 선택할 수도 있습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>옵션  
  다음 섹션에서는 이 탭에서 배포자 에이전트 및 병합 에이전트에 대해 표시되는 데이터를 설명합니다.  
   
 ### <a name="distributor-agent"></a>배포자 에이전트  
@@ -79,7 +79,7 @@ ms.locfileid: "62721364"
  **마지막 시작 시간**  
  마지막으로 에이전트가 시작된 시간입니다.  
   
- **기간**  
+ **Duration**  
  에이전트가 실행된 기간입니다. 에이전트가 현재 실행되고 있는 경우 이 시간은 경과된 시간을 나타내고 에이전트가 이전에 실행된 경우에는 총 시간을 나타냅니다.  
   
  **마지막 동작**  
@@ -125,7 +125,7 @@ ms.locfileid: "62721364"
  **마지막 시작 시간**  
  마지막으로 에이전트가 시작된 시간입니다.  
   
- **기간**  
+ **Duration**  
  에이전트가 실행된 기간입니다. 에이전트가 현재 실행되고 있는 경우 이 시간은 경과된 시간을 나타내고 에이전트가 이전에 실행된 경우에는 총 시간을 나타냅니다.  
   
  **마지막 동작**  
@@ -159,7 +159,7 @@ ms.locfileid: "62721364"
  병합 프로세스 중에 구독자에서 발생한 충돌 수입니다.  
   
  
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [복제 모니터 시작](monitor/start-the-replication-monitor.md)   
  [복제 모니터링](monitoring-replication.md)  
   

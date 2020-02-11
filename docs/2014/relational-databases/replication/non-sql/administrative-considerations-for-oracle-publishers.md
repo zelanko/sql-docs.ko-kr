@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 42791ed9e60ad633ee1331dfc8326d58c0546000
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022560"
 ---
 # <a name="administrative-considerations-for-oracle-publishers"></a>Oracle 게시자에 대한 관리 고려 사항
@@ -62,7 +62,7 @@ ms.locfileid: "63022560"
   
  게시자를 삭제 및 다시 구성하는 방법은 [Troubleshooting Oracle Publishers](troubleshooting-oracle-publishers.md)항목의 "게시자를 다시 구성해야 하는 변경 내용이 적용되었습니다" 섹션을 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Oracle 게시자 구성](configure-an-oracle-publisher.md)   
  [Oracle 게시자에 대한 디자인 고려 사항 및 제한 사항](design-considerations-and-limitations-for-oracle-publishers.md)   
  [Oracle 게시 개요](oracle-publishing-overview.md)  

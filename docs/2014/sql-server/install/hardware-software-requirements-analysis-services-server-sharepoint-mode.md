@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 8f645ca9bdb6176505a6277af0f0482be5b62f09
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245607"
 ---
 # <a name="hardware-and-software-requirements-for-analysis-services-server-in-sharepoint-mode-sql-server-2014"></a>SharePoint 모드의 Analysis Services 서버 하드웨어 및 소프트웨어 요구 사항(SQL Server 2014)
@@ -41,7 +41,7 @@ ms.locfileid: "75245607"
 ##  <a name="bkmk_ssas__sharepoint_2013"></a>SharePoint 2013에 설치 된 Analysis Services  
  서버에 SharePoint 모드의 Analysis Services 서버만 설치할 경우 최소 시스템 요구 사항은 SharePoint Server 요구 사항이 아닌 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 기준으로 합니다.  
   
- [SQL Server 2014를 설치 하기 위한 하드웨어 및 소프트웨어 요구 사항](hardware-and-software-requirements-for-installing-sql-server.md)  
+ [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
   
  SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]은 더욱 높은 RAM 임계값과 향상된 처리 기능을 제공하는 차세대 비즈니스 서버에서 가장 효과적으로 실행됩니다. 메모리에 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 저장하는 데는 많은 양의 RAM이 사용됩니다. RAM은 구조 변경에 맞게 변경되는 기능을 지원합니다. 추가 프로세서는 집계되지 않은 원시 데이터에 대한 장기 실행 검색을 지원합니다. 데이터 구조는 동적 환경에서 Excel 클라이언트 또는 프런트 엔드 인터페이스를 통해 시작된 사용자 기반 데이터 분석에 응답하는 것으로 가정됩니다.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "75245607"
   
  SharePoint 팜 서버에 SharePoint 모드의 Analysis Services 서버를 설치할 경우 다음 링크에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]와 SharePoint Server에 대한 최소 시스템 요구 사항을 검토하십시오.  
   
--   [SQL Server 2014를 설치 하기 위한 하드웨어 및 소프트웨어 요구 사항](hardware-and-software-requirements-for-installing-sql-server.md)  
+-   [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
   
 -   [SharePoint 2013에 대 한 하드웨어 및 소프트웨어 요구 사항](https://technet.microsoft.com/library/cc262485\(office.15\).aspx)  
   

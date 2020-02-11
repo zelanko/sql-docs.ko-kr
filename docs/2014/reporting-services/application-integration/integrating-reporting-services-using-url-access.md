@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fedf4ce3011d9caae9d673acf354265537115057
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126134"
 ---
 # <a name="integrating-reporting-services-using-url-access"></a>URL 액세스를 사용하여 Reporting Services 통합
@@ -35,7 +35,7 @@ ms.locfileid: "63126134"
  [Windows 애플리케이션에서 URL 액세스 사용](integrating-reporting-services-using-url-access-windows-application.md)  
  URL 액세스를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Win32 환경에 통합하는 방법을 설명합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [응용 프로그램에 Reporting Services 통합](../application-integration/integrating-reporting-services-into-applications.md)   
  [URL 액세스&#40;SSRS&#41;](../url-access-ssrs.md)  
   

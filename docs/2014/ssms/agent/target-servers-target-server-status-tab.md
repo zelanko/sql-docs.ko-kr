@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0fc22cd7489294e8623596c1ce1e4f38c90706aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245723"
 ---
 # <a name="target-servers-target-server-status-tab"></a>대상 서버(대상 서버 상태 탭)
   이 페이지를 사용하여 이 마스터 서버와 관련된 대상 서버의 상태를 확인할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **대상 서버**  
  대상 서버의 이름을 표시합니다.  
   
@@ -47,13 +47,13 @@ ms.locfileid: "63245723"
  **명령 게시**  
  선택한 대상 서버에 명령을 게시합니다.  
   
- **자동 새로 고침 설정**  
+ **자동 새로 고침 사용**  
  화면의 정보를 자동으로 새로 고치려면 이 옵션을 선택합니다.  
   
  **새로 고침 간격**  
  페이지의 정보를 새로 고치는 주기를 지정합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [기업 내 관리 자동화](automated-administration-across-an-enterprise.md)  
   
   

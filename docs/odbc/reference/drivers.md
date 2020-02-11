@@ -15,14 +15,14 @@ ms.assetid: d6795d92-877e-44e1-b7d5-2ff2fd3989bd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6460410488186c94713d859bf2912f2844ca2736
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915436"
 ---
 # <a name="drivers"></a>드라이버
-*드라이버* ODBC api에서 함수를 구현 하는 라이브러리입니다. 각각은 특정 DBMS;에 특정 예를 들어, Oracle 드라이버는 Informix DBMS의 데이터에 직접 액세스할 수 없습니다. 기본 Dbms;의 기능을 노출 하는 드라이버 DBMS에 의해 지원 하지 않는 기능이 구현 않아도 함께 제공 됩니다. 예를 들어, 외부 조인, 다음 모두 기본 DBMS를 지원 하지 않는 경우 드라이버를 해야 합니다. 유일한 주요 예외는 Xbase와 같은 독립 실행형 데이터베이스 엔진에 없는 Dbms 용 드라이버 최소한 SQL 최소 크기를 지 원하는 데이터베이스 엔진을 구현 해야 하는 경우  
+*드라이버* 는 ODBC API에서 함수를 구현 하는 라이브러리입니다. 각은 특정 DBMS에만 적용 됩니다. 예를 들어 Oracle 드라이버는 Informix DBMS의 데이터에 직접 액세스할 수 없습니다. 드라이버는 기본 Dbms의 기능을 노출 합니다. DBMS에서 지원 하지 않는 기능을 구현 하는 데 필요 하지 않습니다. 예를 들어 기본 DBMS에서 외부 조인을 지원 하지 않는 경우에는 드라이버를 사용할 수 없습니다. 이에 대 한 유일한 주요 예외는 Xbase와 같이 독립 실행형 데이터베이스 엔진이 없는 Dbms 용 드라이버가 최소한의 SQL을 지 원하는 데이터베이스 엔진을 구현 해야 한다는 것입니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   
@@ -30,5 +30,5 @@ ms.locfileid: "67915436"
   
 -   [드라이버 아키텍처](../../odbc/reference/driver-architecture.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Microsoft 제공 ODBC 드라이버](../../odbc/microsoft/microsoft-supplied-odbc-drivers.md)
