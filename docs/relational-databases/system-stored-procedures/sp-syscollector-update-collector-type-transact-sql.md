@@ -1,5 +1,5 @@
 ---
-title: sp_syscollector_update_collector_type (TRANSACT-SQL) | Microsoft Docs
+title: sp_syscollector_update_collector_type (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,18 +19,18 @@ ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 393b5622964ea3f240d31a2a90c555f7020c500d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68010546"
 ---
-# <a name="spsyscollectorupdatecollectortype-transact-sql"></a>sp_syscollector_update_collector_type(Transact-SQL)
+# <a name="sp_syscollector_update_collector_type-transact-sql"></a>sp_syscollector_update_collector_type(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   컬렉션 항목에 대한 수집기 형식을 업데이트합니다. 수집기 형식의 이름과 GUID가 지정되면 컬렉션 및 업로드 패키지, 매개 변수 스키마, 매개 변수 포맷터 스키마 등의 수집기 형식 구성을 업데이트합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,21 +44,21 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @collector_type_uid = ] 'collector_type_uid'` 수집기 형식에 대 한 GUID입니다. *collector_type_uid* 됩니다 **uniqueidentifier**, 이며이 자동으로 만들어지고 OUTPUT으로 반환 NULL 인 경우.  
+`[ @collector_type_uid = ] 'collector_type_uid'`수집기 유형의 GUID입니다. *collector_type_uid* 은 **uniqueidentifier**이며 NULL 인 경우 자동으로 만들어지고 OUTPUT으로 반환 됩니다.  
   
-`[ @name = ] 'name'` 수집기 유형의 이름이입니다. *이름을* 됩니다 **sysname** 지정 해야 합니다.  
+`[ @name = ] 'name'`수집기 유형의 이름입니다. *name* 은 **sysname** 이며 반드시 지정 해야 합니다.  
   
-`[ @parameter_schema = ] 'parameter_schema'` 이 수집기 유형에 대 한 XML 스키마가입니다. *parameter_schema* 됩니다 **xml** 이며 특정 수집기 유형에 필요할 수 있습니다. 필요하지 않은 경우 이 인수는 NULL일 수 있습니다.  
+`[ @parameter_schema = ] 'parameter_schema'`이 수집기 유형에 대 한 XML 스키마입니다. *parameter_schema* **xml** 이며 특정 수집기 형식에 필요할 수 있습니다. 필요하지 않은 경우 이 인수는 NULL일 수 있습니다.  
   
-`[ @collection_package_id = ] collection_package_id` 가리키는 고유한 로컬 식별자를 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 컬렉션 집합에서 사용 하는 컬렉션 패키지 있습니다. *collection_package_id* 됩니다 **uniqueidentifer** 이며 반드시 지정 해야 합니다. 에 대 한 값을 얻을 *collection_package_id*, msdb 데이터베이스에서 dbo.syscollector_collector_types 시스템 뷰를 쿼리 합니다.  
+`[ @collection_package_id = ] collection_package_id`는 컬렉션 집합에 사용 되는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 컬렉션 패키지를 가리키는 고유한 로컬 식별자입니다. *collection_package_id* **uniqueidentifer** 필요 합니다. *Collection_package_id*에 대 한 값을 가져오려면 msdb 데이터베이스의 dbo. syscollector_collector_types 시스템 뷰를 쿼리 합니다.  
   
-`[ @upload_package_id = ] upload_package_id` 가리키는 고유한 로컬 식별자를 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 컬렉션 집합에서 사용 되는 패키지를 업로드 합니다. *upload_package_id* 됩니다 **uniqueidentifier** 이며 반드시 지정 해야 합니다. 에 대 한 값을 얻을 *upload_package_id*, msdb 데이터베이스에서 dbo.syscollector_collector_types 시스템 뷰를 쿼리 합니다.  
+`[ @upload_package_id = ] upload_package_id`는 컬렉션 집합에 사용 되는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 업로드 패키지를 가리키는 고유한 로컬 식별자입니다. *upload_package_id* 은 **uniqueidentifier** 이며 필수입니다. *Upload_package_id*에 대 한 값을 가져오려면 msdb 데이터베이스의 dbo. syscollector_collector_types 시스템 뷰를 쿼리 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="permissions"></a>사용 권한  
- 멤버 자격이 필요 합니다 **dc_admin** (사용 하 여 EXECUTE 권한 있음) 고정된 데이터베이스 역할.  
+ **Dc_admin** (실행 권한 포함) 고정 데이터베이스 역할의 멤버 자격이 필요 합니다.  
   
 ## <a name="example"></a>예제  
  이 예에서는 일반 T-SQL 쿼리 수집기 형식을 업데이트합니다. 일반 T-SQL 쿼리 수집기 형식의 기본 스키마가 사용됩니다.  
@@ -100,8 +100,8 @@ EXEC sp_syscollector_update_collector_type
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [데이터 컬렉션](../../relational-databases/data-collection/data-collection.md)  
+ [데이터 수집](../../relational-databases/data-collection/data-collection.md)  
   
   

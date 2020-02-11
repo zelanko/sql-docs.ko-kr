@@ -14,35 +14,36 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4797dd3535ff00511594110cd7f2668af2223d3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109966"
 ---
 # <a name="axis-title-properties-dialog-box-general-report-builder-and-ssrs"></a>축 제목 속성 대화 상자, 일반(보고서 작성기 및 SSRS)
+  
   **축 제목 속성** 대화 상자의 **일반** 을 선택하여 축 제목을 정의할 수 있습니다. 축 제목은 x 축 아래나 y 축 옆에 표시됩니다.  
   
-## <a name="options"></a>변수  
- **Title**  
+## <a name="options"></a>옵션  
+ **제목**  
  축 제목을 나타내는 제목 또는 식을 입력합니다.  
   
  **제목 맞춤**  
  축 교차점에 상대적인 축 제목 맞춤을 나타내는 식을 입력하거나 맞춤을 선택합니다.  
   
--   **가까이** 두 축의 교차점을 향하여 축 제목을 표시합니다.  
+-   **Near** 두 축의 교차점을 향하는 축 제목을 표시 합니다.  
   
--   **가운데** 축의 가운데에 축 제목을 표시합니다.  
+-   **가운데** 축의 가운데에 축 제목을 표시 합니다.  
   
--   **멀리** 두 축의 교차점에서 떨어진 곳에 축 제목을 표시합니다.  
+-   **Far** 두 축의 교차점에서 떨어진 축 제목을 표시 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [차트&#40;보고서 작성기 및 SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
  [차트에서 계열 색 서식 지정&#40;보고서 작성기 및 SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [차트의 축 레이블 서식 지정&#40;보고서 작성기 및 SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [축 간격 지정&#40;보고서 작성기 및 SSRS&#41;](report-design/specify-an-axis-interval-report-builder-and-ssrs.md)   
  [축 레이블의 서식을 날짜 또는 통화로 지정&#40;보고서 작성기 및 SSRS&#41;](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [보조 축에 데이터 표시 &#40;보고서 작성기 및 SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
+ [보조 축에 데이터 플롯 &#40;보고서 작성기 및 SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
  [축 속성 대화 상자, 축 옵션&#40;보고서 작성기 및 SSRS&#41;](../../2014/reporting-services/axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)  
   
   

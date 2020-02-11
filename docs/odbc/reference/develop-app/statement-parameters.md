@@ -13,32 +13,32 @@ ms.assetid: 58d5b166-2578-4699-a560-1f1e6d86c49a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0f3aad1537475e288cff06725b5dbd0fe2383924
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107239"
 ---
 # <a name="statement-parameters"></a>명령문 매개 변수
-A *매개 변수* SQL 문에서 변수입니다. 예를 들어 부품 테이블에는 PartID, 설명 및 가격 이라는 열에는 것으로 가정 합니다. 매개 변수 없이 부품을 추가 하는 필요와 같은 SQL 문 생성 합니다.  
+*매개 변수* 는 SQL 문의 변수입니다. 예를 들어 부품 테이블에 PartID, 설명 및 가격 이라는 열이 있다고 가정 합니다. 매개 변수 없이 파트를 추가 하려면 다음과 같은 SQL 문을 생성 해야 합니다.  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  
 ```  
   
- 이 문은 새 주문을 삽입, 이지만 하지 주문 입력 응용 프로그램에 적합 한 솔루션 응용 프로그램에 하드 코드 된 값을 삽입할 수 없기 때문에 있습니다. 대신 삽입할 값을 사용 하 여 런타임 시 SQL 문을 생성 하는 것입니다. 이 아니며 또한 좋은 생성 문 실행 시의 복잡성으로 인해 요소를 대체 하는 가장 적합 한 솔루션을 **값** 물음표 (?)를 사용 하 여 절 또는 *매개 변수 표식을*:  
+ 이 문은 새 주문을 삽입 하지만, 삽입 하는 값은 응용 프로그램에서 하드 코드 될 수 없으므로 주문 입력 응용 프로그램에 적합 한 솔루션이 아닙니다. 다른 방법은 삽입할 값을 사용 하 여 런타임에 SQL 문을 생성 하는 것입니다. 이는 런타임에 문을 생성 하는 복잡성 때문에 좋은 솔루션은 아닙니다. 가장 좋은 해결 방법은 **VALUES** 절의 요소를 물음표 (?) 또는 *매개 변수 표식*으로 바꾸는 것입니다.  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)  
 ```  
   
- 그런 다음 매개 변수 표식이 애플리케이션 변수에 바인딩됩니다. 새 행을 추가할 응용 프로그램에만 변수 값을 설정 하 고 문을 실행 합니다. 그런 다음 드라이버가 변수의 현재 값을 검색하여 데이터 원본에 보냅니다. 문에 여러 번 실행할 수 있으면 응용 프로그램 가능 프로세스가 훨씬 더 효율적으로 문을 준비 하 여 합니다.  
+ 그런 다음 매개 변수 표식이 애플리케이션 변수에 바인딩됩니다. 새 행을 추가 하기 위해 응용 프로그램은 변수의 값을 설정 하 고 문을 실행 하기만 하면 됩니다. 그런 다음 드라이버가 변수의 현재 값을 검색하여 데이터 원본에 보냅니다. 문이 여러 번 실행 되는 경우 응용 프로그램은 문을 준비 하 여 프로세스를 훨씬 더 효율적으로 만들 수 있습니다.  
   
- 앞서 살펴본 문은 새 행을 삽입 하는 주문 입력 응용 프로그램에 하드 코딩 수 있습니다. 그러나 매개 변수 표식을 세로 응용 프로그램에 제한 되지 않습니다. 응용 프로그램의 경우는 텍스트의 변환 방지 하 여 런타임 시 SQL 문을 생성 하는 것이 어렵기를 간소화할 수 있습니다. 예를 들어 앞서 살펴본 파트 ID는 주로 정수로 응용 프로그램에 저장 합니다. SQL 문의 매개 변수 표식을 없이 생성 되 면 응용 프로그램 파트 ID 텍스트 변환 해야 하 고 데이터 소스의 정수도 다시 변환 해야 합니다. 매개 변수 표식을 사용 하 여 응용 프로그램은 일반적으로 보낼 수는 정수 데이터 원본에는 정수 드라이버 파트 ID를 보낼 수 있습니다. 이렇게 하면 두 변환 합니다. 긴 데이터 값에 대 한 왜냐하면 매우 중요 한 SQL 문의 허용된 길이 자주 초과 하는 이러한 값의 텍스트 서식입니다.  
+ 표시 된 문은 주문 입력 응용 프로그램에 하드 코딩 되어 새 행을 삽입할 수 있습니다. 그러나 매개 변수 표식은 수직 응용 프로그램으로 제한 되지 않습니다. 응용 프로그램의 경우에는 텍스트로의 변환과 변환을 피하 여 런타임에 SQL 문을 생성 하는 데 어려움이 있습니다. 예를 들어, 앞서 표시 된 파트 ID는 정수로 응용 프로그램에 저장 될 가능성이 높습니다. 매개 변수 표식을 사용 하지 않고 SQL 문을 생성 하는 경우 응용 프로그램은 파트 ID를 텍스트로 변환 하 고 데이터 원본이 다시 정수로 변환 해야 합니다. 응용 프로그램은 매개 변수 표식을 사용 하 여 파트 ID를 정수로 보낼 수 있습니다 .이는 일반적으로 데이터 원본에 정수로 보낼 수 있습니다. 이렇게 하면 두 개의 변환이 저장 됩니다. Long 데이터 값의 경우 이러한 값의 텍스트 형식이 SQL 문의 허용 된 길이를 초과 하는 경우가 많으므로이는 매우 중요 합니다.  
   
- 매개 변수는 SQL 문에서 특정 위치에만 유효 합니다. 예를 들어 이들은 허용 되지 select 목록에 (반환 될 열 목록을 **선택** 문), 이러한으로 허용 됩니다. 등호 (=)와 같은 이항 연산자의 피연산자가 모두 수 것 때문에 매개 변수 형식을 결정 합니다. 일반적으로 매개 변수는 데이터 정의 언어 (DDL) 문 및 데이터 조작 언어 (DML) 문을 에서만 유효 합니다. 자세한 내용은 [매개 변수 표식을](../../../odbc/reference/appendixes/parameter-markers.md) 부록 c: SQL 문법입니다.  
+ 매개 변수는 SQL 문의 특정 위치 에서만 유효 합니다. 예를 들어 select 목록 ( **select** 문에 의해 반환 될 열 목록)은 허용 되지 않으며, 매개 변수 유형을 확인할 수 없기 때문에 등호 (=)와 같은 이항 연산자의 두 피연산자로도 허용 되지 않습니다. 일반적으로 매개 변수는 DML (데이터 조작 언어) 문에서만 유효 하 고 DDL (데이터 정의 언어) 문은 사용할 수 없습니다. 자세한 내용은 부록 C: SQL 문법의 [매개 변수 표식](../../../odbc/reference/appendixes/parameter-markers.md) 을 참조 하세요.  
   
- SQL 문의 명명 된 매개 변수, 프로시저를 호출 하는 경우 사용할 수 있습니다. 명명 된 매개 변수는 SQL 문에서 해당 위치가 아닌 이름으로 식별 됩니다. 호출 하 여 바인딩할 수 있습니다 **SQLBindParameter**, 되지만 아닌 매개 변수 IPD (구현 매개 변수 설명자)의 SQL_DESC_NAME 필드에 의해 식별 되는 *상태로* 인수 **SQLBindParameter**합니다. 호출 하 여 바인딩될 수도 **SQLSetDescField** 하거나 **SQLSetDescRec**합니다. 명명 된 매개 변수에 대 한 자세한 내용은 참조 하십시오 [Binding Parameters by Name (Named Parameters)](../../../odbc/reference/develop-app/binding-parameters-by-name-named-parameters.md)이 섹션의 뒷부분에 나오는. 설명자에 대 한 자세한 내용은 참조 하세요. [설명자](../../../odbc/reference/develop-app/descriptors.md)합니다.  
+ SQL 문이 프로시저를 호출 하는 경우 명명 된 매개 변수를 사용할 수 있습니다. 명명 된 매개 변수는 SQL 문의 위치가 아니라 이름으로 식별 됩니다. **SQLBindParameter**에 대 한 호출을 통해 바인딩할 수 있지만 매개 변수는 **SQLBindParameter**의 *parameternumber* 인수가 아니라 IPD (구현 매개 변수 설명자)의 SQL_DESC_NAME 필드로 식별 됩니다. **SQLSetDescField** 또는 **SQLSetDescRec**를 호출 하 여 바인딩할 수도 있습니다. 명명 된 매개 변수에 대 한 자세한 내용은이 섹션의 뒷부분에 나오는 [이름으로 매개 변수 바인딩 (명명 된 매개 변수)](../../../odbc/reference/develop-app/binding-parameters-by-name-named-parameters.md)을 참조 하세요. 설명자에 대 한 자세한 내용은 [설명자](../../../odbc/reference/develop-app/descriptors.md)를 참조 하십시오.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   
@@ -48,7 +48,7 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
   
 -   [Long 데이터 전송](../../../odbc/reference/develop-app/sending-long-data.md)  
   
--   [SQLGetData 하 여 출력 매개 변수 검색](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)  
+-   [SQLGetData에서 출력 매개 변수 검색](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)  
   
 -   [프로시저 매개 변수](../../../odbc/reference/develop-app/procedure-parameters.md)  
   

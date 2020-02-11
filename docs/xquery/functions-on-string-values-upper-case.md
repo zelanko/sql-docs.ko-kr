@@ -1,5 +1,5 @@
 ---
-title: upper-case 함수 (XQuery) | Microsoft Docs
+title: 대문자 함수 (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 5bd01ad2-7adf-48fb-bf42-41e200419d37
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0dcbcbc0cd6c0cf479aee7a7c3fd8c5e53a53d28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004611"
 ---
 # <a name="functions-on-string-values---upper-case"></a>문자열 값 함수 - upper-case
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  이 함수에서 각 문자를 변환 *$arg* 를 해당 대문자로 동일 합니다. 유니코드 코드 포인트에 대한 Microsoft Windows 이진 대/소문자 변환은 문자를 대문자로 변환하는 방법을 지정합니다. 이 표준은 유니코드 표준 코드 포인트 표준의 매핑과 다릅니다.  
+  이 함수는 *$arg* 의 각 문자를 해당 하는 대문자로 변환 합니다. 유니코드 코드 포인트에 대한 Microsoft Windows 이진 대/소문자 변환은 문자를 대문자로 변환하는 방법을 지정합니다. 이 표준은 유니코드 표준 코드 포인트 표준의 매핑과 다릅니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,19 +42,19 @@ fn:upper-case($arg as xs:string?) as xs:string
 |*$arg*|대문자로 변환될 문자열 값입니다.|  
   
 ## <a name="remarks"></a>설명  
- 경우 값 *$arg* 는 비어 있는 경우 길이가 0 인 문자열 반환 됩니다.  
+ *$Arg* 값이 비어 있으면 길이가 0 인 문자열이 반환 됩니다.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-changing-a-string-to-upper-case"></a>A. 문자열을 대문자로 변경  
- 다음 예제에서는 입력된 문자열을 변경 ' abcDEF! @4'를 대문자로 변환 합니다.  
+ 다음 예에서는 입력 문자열 ' abcDEF! @4' 대/소문자를 구분 합니다.  
   
 ```  
 DECLARE @x xml = N'abcDEF!@4';  
 SELECT @x.value('fn:upper-case(/text()[1])', 'nvarchar(10)');  
 ```  
   
-### <a name="b-search-for-a-specific-character-string"></a>2\. 특정 문자열 검색  
+### <a name="b-search-for-a-specific-character-string"></a>B. 특정 문자열 검색  
  다음 예에서는 upper-case 함수를 사용하여 대/소문자를 구분하지 않는 검색을 수행하는 방법을 보여 줍니다.  
   
 ```  
@@ -118,7 +118,7 @@ where CatalogDescription.exist('
   
  `</Prod>`  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [xml 데이터 형식에 대한 XQuery 함수](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

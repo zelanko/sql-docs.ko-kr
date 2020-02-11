@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66f1f8f57dca3ad2edba3f4b63100b2de3ae5659
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779115"
 ---
 # <a name="migrate-query-plans"></a>쿼리 계획 마이그레이션
@@ -26,7 +26,7 @@ ms.locfileid: "62779115"
   
  업그레이드 전에 계획 지침을 만들려면 다음 단계를 수행하십시오.  
   
-1.  사용 하 여 각 중요 한 쿼리에 대 한 현재 계획을 기록 합니다 [sp_create_plan_guide](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql) 저장 프로시저 및 쿼리 계획을 USE PLAN 쿼리 힌트에 지정 합니다.  
+1.  [Sp_create_plan_guide](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql) 저장 프로시저를 사용 하 고 use plan 쿼리 힌트에 쿼리 계획을 지정 하 여 각 업무상 중요 한 쿼리에 대 한 현재 계획을 기록 합니다.  
   
 2.  계획 지침이 쿼리에 적용되었는지 확인합니다.  
   
@@ -41,16 +41,16 @@ ms.locfileid: "62779115"
 ## <a name="example"></a>예제  
  다음 예에서는 계획 지침을 만들어 쿼리에 대한 업그레이드 전 계획을 기록하는 방법을 보여 줍니다.  
   
-### <a name="step-1-collect-the-plan"></a>1단계: 계획을 수집  
+### <a name="step-1-collect-the-plan"></a>1 단계: 계획 수집  
  계획 지침에 기록되는 쿼리 계획은 XML 형식이어야 합니다. 다음과 같은 방법으로 XML 형식의 쿼리 계획을 생성할 수 있습니다.  
   
 -   [SET SHOWPLAN_XML](/sql/t-sql/statements/set-showplan-xml-transact-sql)  
   
 -   [SET STATISTICS XML](/sql/t-sql/statements/set-statistics-xml-transact-sql)  
   
--   Query_plan 열 쿼리 합니다 [sys.dm_exec_query_plan](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql) 동적 관리 함수입니다.  
+-   [Dm_exec_query_plan](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql) 동적 관리 함수의 query_plan 열을 쿼리 하는 중입니다.  
   
--   합니다 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] [Showplan XML](../../relational-databases/event-classes/showplan-xml-event-class.md)합니다 [Showplan XML Statistics Profile](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md), 및 [Showplan XML For Query Compile](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md) 이벤트 클래스.  
+-   실행 계획 [xml](../../relational-databases/event-classes/showplan-xml-event-class.md), 실행 [계획 xml 통계 프로필](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md)및 실행 [계획 xml For Query Compile](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md) 이벤트 클래스 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]  
   
  다음 예에서는 동적 관리 뷰를 쿼리하여 `SELECT City, StateProvinceID, PostalCode FROM Person.Address ORDER BY PostalCode DESC;` 문에 대한 쿼리 계획을 수집합니다.  
   
@@ -65,7 +65,7 @@ SELECT query_plan
 GO  
 ```  
   
-### <a name="step-2-create-the-plan-guide-to-force-the-plan"></a>2단계: 계획을 적용할 계획 지침 만들기  
+### <a name="step-2-create-the-plan-guide-to-force-the-plan"></a>2 단계: 계획을 적용 하는 계획 지침 만들기  
  앞에서 설명한 방법 중 하나로 만든 XML 형식의 쿼리 계획을 계획 지침에 사용하려면 sp_create_plan_guide의 OPTION 절에 지정된 USE PLAN 쿼리 힌트 안에 쿼리 계획을 문자열 리터럴로 복사하고 붙여 넣습니다.  
   
  계획 지침을 만들기 전에 XML 계획 내에 표시된 따옴표(')에 두 번째 따옴표를 추가하여 이스케이프 처리합니다. 예를 들어 `WHERE A.varchar = 'This is a string'`이 포함된 계획에서 코드를 `WHERE A.varchar = ''This is a string''`으로 수정하여 이스케이프 처리해야 합니다.  
@@ -88,12 +88,12 @@ EXECUTE sp_create_plan_guide
 GO  
 ```  
   
-### <a name="step-3-verify-that-the-plan-guide-is-applied-to-the-query"></a>3단계: 계획 지침이 쿼리에 적용 되었는지 확인  
+### <a name="step-3-verify-that-the-plan-guide-is-applied-to-the-query"></a>3 단계: 계획 지침이 쿼리에 적용 되는지 확인  
  쿼리를 다시 실행하고 생성되는 쿼리 계획을 확인합니다. 생성된 계획이 계획 지침에 지정한 계획과 일치하는 것을 볼 수 있을 것입니다.  
   
-## <a name="see-also"></a>관련 항목  
- [sp_create_plan_guide&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
- [쿼리 힌트&#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)   
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;sp_create_plan_guide &#40;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [Transact-sql&#41;&#40;쿼리 힌트](/sql/t-sql/queries/hints-transact-sql-query)   
  [계획 지침](../../relational-databases/performance/plan-guides.md)  
   
   
