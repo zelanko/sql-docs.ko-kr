@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_log_info (TRANSACT-SQL) | Microsoft Docs
+title: sys. dm_db_log_info (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -21,16 +21,16 @@ ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7cb87d2d5677085edc8e6bd998f20c3c45013823
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68262077"
 ---
-# <a name="sysdmdbloginfo-transact-sql"></a>sys.dm_db_log_info (Transact-SQL)
+# <a name="sysdm_db_log_info-transact-sql"></a>sys. dm_db_log_info (Transact-sql)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
-반환 [가상 로그 파일 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 트랜잭션 로그의 정보입니다. 참고 모든 트랜잭션 로그 파일은 테이블 출력에 결합 됩니다. 출력의 각 행의 트랜잭션 로그에 VLF를 나타내며 해당 VLF 로그에서 관련 된 정보를 제공 합니다.
+트랜잭션 로그의 [가상 로그 파일 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 정보를 반환 합니다. 모든 트랜잭션 로그 파일은 테이블 출력에 결합 됩니다. 출력의 각 행은 트랜잭션 로그의 VLF를 나타내며 로그에서 해당 VLF와 관련 된 정보를 제공 합니다.
 
 ## <a name="syntax"></a>구문  
   
@@ -39,39 +39,40 @@ sys.dm_db_log_info ( database_id )
 ``` 
 
 ## <a name="arguments"></a>인수  
- *database_id* | NULL | DEFAULT  
- 데이터베이스의 ID입니다. *database_id*는 **int**입니다. 유효한 입력은 database, NULL 또는 기본값의 ID 번호입니다. 기본값은 NULL입니다. NULL 및 DEFAULT는 현재 데이터베이스의 컨텍스트에서 해당 하는 값입니다.
+ *database_id* | NULL | 기본  
+ 데이터베이스의 ID입니다. *database_id* 은 **int**입니다. 올바른 입력은 데이터베이스의 ID 번호, NULL 또는 DEFAULT입니다. 기본값은 NULL입니다. NULL 및 기본값은 현재 데이터베이스의 컨텍스트에서 동일한 값입니다.
  
  현재 데이터베이스의 VLF 정보를 반환 하려면 NULL을 지정 합니다.
 
- 기본 제공 함수 [DB_ID](../../t-sql/functions/db-id-transact-sql.md) 지정할 수 있습니다. 사용 하는 경우 `DB_ID` 데이터베이스 이름을 지정 하지 않고 현재 데이터베이스의 호환성 수준을 90 이상 이어야 합니다.  
+ 
+  [DB_ID](../../t-sql/functions/db-id-transact-sql.md) 기본 제공 함수를 지정할 수 있습니다. 데이터베이스 이름을 `DB_ID` 지정 하지 않고를 사용 하는 경우 현재 데이터베이스의 호환성 수준은 90 이상 이어야 합니다.  
 
 ## <a name="table-returned"></a>반환된 테이블  
 
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|데이터베이스 ID입니다.|
 |file_id|**smallint**|트랜잭션 로그의 파일 id입니다.|  
-|vlf_begin_offset|**bigint** |위치 오프셋 합니다 [가상 로그 파일 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 트랜잭션 로그 파일의 시작 부분에서.|
-|vlf_size_mb |**float** |[가상 로그 파일 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 크기 (mb)을 2 자리로 반올림 합니다.|     
-|vlf_sequence_number|**bigint** |[가상 로그 파일 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 시퀀스 번호 생성 순서에서입니다. 로그 파일에는 Vlf를 고유 하 게 식별 하는 데 사용 합니다.|
-|vlf_active|**bit** |나타냅니다 여부 [가상 로그 파일 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 되었거나 사용에서 되지 않습니다. <br />0-VLF에에서 없는 사용 합니다.<br />1-VLF 활성 상태입니다.|
-|vlf_status|**int** |상태를 [가상 로그 파일 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)합니다. 가능한 값은 <br />0-VLF active입니다. <br />1-VLF는 초기화 되었지만 사용 되지 않는 <br /> 2-VLF 활성 상태입니다.|
-|vlf_parity|**tinyint** |패리티 [가상 로그 파일 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)합니다. 데 내부적으로 VLF 내에서 로그의 끝을 확인 합니다.|
-|vlf_first_lsn|**nvarchar(48)** |[LSN (로그 시퀀스 번호)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 에서 첫 번째 로그 레코드는 [가상 로그 파일 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)합니다.|
-|vlf_create_lsn|**nvarchar(48)** |[LSN (로그 시퀀스 번호)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 로그의 만든를 기록 합니다 [가상 로그 파일 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)합니다.|
-|vlf_encryptor_thumbprint|**varbinary(20)**| **적용 대상:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> VLF를 사용 하 여 암호화 됩니다 VLF의 암호기의 손도장을 표시 [투명 한 데이터 암호화](../../relational-databases/security/encryption/transparent-data-encryption.md)이 고, 그렇지 않으면 NULL입니다. |
+|vlf_begin_offset|**bigint** |트랜잭션 로그 파일의 시작 부분에서 [가상 로그 파일 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 의 오프셋 위치입니다.|
+|vlf_size_mb |**float** |[가상 로그 파일 (VLF) 크기 (MB)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 로, 소수 자릿수 2 자리로 반올림 됩니다.|     
+|vlf_sequence_number|**bigint** |만든 주문의 [가상 로그 파일 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 시퀀스 번호입니다. 로그 파일에서 Vlf를 고유 하 게 식별 하는 데 사용 됩니다.|
+|vlf_active|**bit** |[가상 로그 파일 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 이 사용 중인지 여부를 나타냅니다. <br />0-VLF를 사용 하 고 있지 않습니다.<br />1-VLF가 활성 상태입니다.|
+|vlf_status|**int** |[가상 로그 파일 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)의 상태입니다. 가능한 값은 다음과 같습니다. <br />0-VLF가 비활성 상태임 <br />1-VLF가 초기화 되었지만 사용 되지 않음 <br /> 2-VLF가 활성 상태입니다.|
+|vlf_parity|**tinyint** |[가상 로그 파일 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)의 패리티입니다. VLF 내에서 로그의 끝을 확인 하기 위해 내부적으로 사용 됩니다.|
+|vlf_first_lsn|**nvarchar (48)** |[가상 로그 파일 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)에 있는 첫 번째 로그 레코드의 [LSN (로그 시퀀스 번호)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 입니다.|
+|vlf_create_lsn|**nvarchar (48)** |[가상 로그 파일 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)을 만든 로그 레코드의 [LSN (로그 시퀀스 번호)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 입니다.|
+|vlf_encryptor_thumbprint|**varbinary (20)**| **적용 대상:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> [투명한 데이터 암호화](../../relational-databases/security/encryption/transparent-data-encryption.md)를 사용 하 여 vlf가 암호화 된 경우 vlf의 암호기 지문을 표시 합니다. 그렇지 않으면 NULL입니다. |
 
 ## <a name="remarks"></a>설명
-합니다 `sys.dm_db_log_info` 동적 관리 함수를 대체 합니다 `DBCC LOGINFO` 문입니다.    
+`sys.dm_db_log_info` 동적 관리 함수는 `DBCC LOGINFO` 문을 대체 합니다.    
  
 ## <a name="permissions"></a>사용 권한  
-필요는 `VIEW DATABASE STATE` 데이터베이스의 권한입니다.  
+데이터베이스에 `VIEW DATABASE STATE` 대 한 권한이 필요 합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-determing-databases-in-a-sql-server-instance-with-high-number-of-vlfs"></a>A. 많은 Vlf 사용 하 여 SQL Server 인스턴스에서 데이터베이스 확인
-다음 쿼리는 데이터베이스 시작, 복원 및 복구 시간에 영향을 줄 수 있는 로그 파일에 100 개가 넘는 Vlf 사용 하 여 데이터베이스를 결정 합니다.
+### <a name="a-determing-databases-in-a-sql-server-instance-with-high-number-of-vlfs"></a>A. Vlf 수가 많은 SQL Server 인스턴스의 데이터베이스 판단
+다음 쿼리는 데이터베이스 시작, 복원 및 복구 시간에 영향을 줄 수 있는 로그 파일의 Vlf가 100 이상인 데이터베이스를 결정 합니다.
 
 ```sql
 SELECT [name], COUNT(l.database_id) AS 'vlf_count' 
@@ -81,9 +82,9 @@ GROUP BY [name]
 HAVING COUNT(l.database_id) > 100
 ```
 
-### <a name="b-determing-the-position-of-the-last-vlf-in-transaction-log-before-shrinking-the-log-file"></a>2\. 마지막 위치 확인 `VLF` 로그 파일을 축소 하기 전에 트랜잭션 로그
+### <a name="b-determing-the-position-of-the-last-vlf-in-transaction-log-before-shrinking-the-log-file"></a>B. 로그 파일을 축소 하기 전에 `VLF` 트랜잭션 로그의 마지막 위치를 판단 합니다.
 
-트랜잭션 로그를 축소할 수 있는지 확인 하려면 트랜잭션 로그에 shrinkfile을 실행 하기 전에 마지막 활성 VLF의 위치를 확인 하려면 다음 쿼리를 사용할 수 있습니다.
+다음 쿼리를 사용 하면 트랜잭션 로그에서 shrinkfile를 실행 하기 전에 마지막 활성 VLF의 위치를 확인 하 여 트랜잭션 로그를 축소할 수 있는지 여부를 확인할 수 있습니다.
 
 ```sql
 USE AdventureWorks2016
@@ -109,9 +110,9 @@ FROM cte_vlf_cnt
 GO
 ```
 
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[데이터베이스 관련 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+[Transact-sql&#41;&#40;데이터베이스 관련 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
-[sys.dm_db_log_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)
+[dm_db_log_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)
 
