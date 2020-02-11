@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 536dce64880c1e70b1b8a0c4b419811c1b32a975
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62772149"
 ---
 # <a name="azure-feature-pack"></a>Azure 기능 팩
@@ -37,7 +37,7 @@ Azure용 SSIS(SQL Server Integration Services) 기능 팩은 Azure 서비스에 
     
     -   [Azure HDInsight 연결 관리자](../../2014/integration-services/azure-hdinsight-connection-manager.md)
   
--   태스크  
+-   작업  
   
     -   [Azure Blob 업로드 태스크](control-flow/azure-blob-upload-task.md)  
   
@@ -65,13 +65,13 @@ Azure용 SSIS(SQL Server Integration Services) 기능 팩은 Azure 서비스에 
     
     -   [Azure Data Lake Store 대상](../../2014/integration-services/azure-data-lake-store-destination.md)
   
--   Azure Blob 열거자 및 ADLS File 열거자입니다. [Foreach Loop Container](control-flow/foreach-loop-container.md)을 참조하세요.  
+-   Azure Blob 열거자 & ADLS File 열거자. [Foreach 루프 컨테이너](control-flow/foreach-loop-container.md)를 참조 하세요.  
   
  
 ## <a name="download-the-feature-pack"></a>기능 팩 다운로드  
 Azure용 SSIS(SQL Server Integration Services) 기능 팩을 다운로드합니다.  
   
--   [Microsoft SQL Server 2014 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=47366)  
+-   [Azure용 Microsoft SQL Server 2014 Integration Services 기능 팩](https://www.microsoft.com/download/details.aspx?id=47366)  
 
 ## <a name="prerequisites"></a>사전 요구 사항  
 이 기능 팩을 설치하기 전에 다음과 같은 필수 조건을 설치해야 합니다.  

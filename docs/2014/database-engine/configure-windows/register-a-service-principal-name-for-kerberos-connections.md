@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5acd507be99d7ff36245e723d20aebc36f42a917
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781998"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Kerberos 연결의 서비스 사용자 이름 등록
@@ -40,7 +40,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 ```  
   
 > [!TIP]  
->  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos 구성 관리자**는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]과의 Kerberos 관련 연결 문제를 해결하는 진단 도구입니다. 자세한 내용은 [SQL Server용 Microsoft Kerberos 구성 관리자](https://www.microsoft.com/download/details.aspx?id=39046)를 참조하십시오.  
+>  **[!INCLUDE[msCoName](../../includes/msconame-md.md)]용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Kerberos 구성 관리자**는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]과의 Kerberos 관련 연결 문제를 해결하는 진단 도구입니다. 자세한 내용은 [SQL Server용 Microsoft Kerberos 구성 관리자](https://www.microsoft.com/download/details.aspx?id=39046)를 참조하십시오.  
   
 ##  <a name="Role"></a> 인증에서 SPN의 역할  
  애플리케이션에서 연결을 열고 Windows 인증을 사용할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터 이름, 인스턴스 이름 및 필요에 따라 SPN을 전달합니다. 연결이 SPN을 전달하면 변경 사항 없이 사용됩니다.  
@@ -56,7 +56,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  Windows 인증은 사용자를 SQL Server에 인증하는 데 사용하는 기본 인증 방법입니다. Windows 인증을 사용하는 클라이언트는 NTLM이나 Kerberos를 사용하여 인증됩니다. Active Directory 환경에서는 항상 Kerberos 인증이 먼저 시도됩니다. 명명된 파이프를 사용하는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 클라이언트에는 Kerberos 인증을 사용할 수 없습니다.  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 권한  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스를 시작하면 서비스가 SPN(서비스 사용자 이름)을 등록하려고 합니다. SQL Server를 시작하는 계정에 Active Directory Domain Services에 SPN을 등록할 권한이 없으면 이 호출이 실패하고 애플리케이션 이벤트 로그와 SQL Server 오류 로그에 경고 메시지가 기록됩니다. SPN을 등록하려면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 로컬 시스템(권장되지 않음) 또는 NETWORK SERVICE와 같은 기본 제공 계정이나 도메인 관리자 계정과 같은 SPN 등록 권한이 있는 계정으로 실행되고 있어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가  [!INCLUDE[win7](../../includes/win7-md.md)] 또는  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 운영 체제에서 실행 중인 경우 가상 계정이나 MSA(관리 서비스 계정)를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 실행할 수 있습니다. 가상 계정 및 MSA 모두 SPN을 등록할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 이러한 계정 중 하나로 실행되고 있지 않으면 시작할 때 SPN이 등록되지 않으므로 도메인 관리자가 SPN을 수동으로 등록해야 합니다.  
   
 > [!NOTE]  
@@ -71,11 +71,11 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  **명명된 인스턴스**  
   
--   *MSSQLSvc/FQDN*:[_port_ **|** _instancename_], 여기서:  
+-   *MSSQLSvc/FQDN*: [_port_**|**_instancename_], 여기서:  
   
     -   *MSSQLSvc* 는 등록할 서비스입니다.  
   
-    -   *FQDN* 은 서버의 정규화된 도메인 이름입니다.  
+    -   *FQDN* 은 서버의 정규화 된 도메인 이름입니다.  
   
     -   *port* 는 TCP 포트 번호입니다.  
   
@@ -83,11 +83,11 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  **기본 인스턴스**  
   
--   *MSSQLSvc/FQDN*:_port_ **|** _MSSQLSvc/FQDN_, 여기서:  
+-   *MSSQLSvc/fqdn*:_port_**|**_MSSQLSvc/fqdn_, 여기서:  
   
     -   *MSSQLSvc* 는 등록할 서비스입니다.  
   
-    -   *FQDN* 은 서버의 정규화된 도메인 이름입니다.  
+    -   *FQDN* 은 서버의 정규화 된 도메인 이름입니다.  
   
     -   *port* 는 TCP 포트 번호입니다.  
   
@@ -98,14 +98,14 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
 |||  
 |-|-|  
-|MSSQLSvc/*fqdn:port*|TCP가 사용될 때 공급자가 생성하는 기본 SPN입니다. *port* 는 TCP 포트 번호입니다.|  
+|MSSQLSvc/*fqdn: 포트*|TCP가 사용될 때 공급자가 생성하는 기본 SPN입니다. *port* 는 TCP 포트 번호입니다.|  
 |MSSQLSvc/*fqdn*|TCP 이외의 프로토콜이 사용될 때 기본 인스턴스에 대해 공급자가 생성하는 기본 SPN입니다. *fqdn* 은 정규화된 도메인 이름입니다.|  
-|MSSQLSvc/*fqdn:InstanceName*|TCP 이외의 프로토콜이 사용될 때 명명된 인스턴스에 대해 공급자가 생성하는 기본 SPN입니다. *InstanceName* 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 이름입니다.|  
+|MSSQLSvc/*fqdn: InstanceName*|TCP 이외의 프로토콜이 사용될 때 명명된 인스턴스에 대해 공급자가 생성하는 기본 SPN입니다. *InstanceName* 은 인스턴스의 이름입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ##  <a name="Auto"></a> SPN 자동 등록  
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스가 시작되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대한 SPN을 등록하려고 하고, 인스턴스가 중지되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 SPN의 등록을 취소하려고 합니다. TCP/IP 연결의 경우 SPN은 *MSSQLSvc/\<FQDN>* : *\<tcpport>* 형식으로 등록됩니다. 명명된 인스턴스와 기본 인스턴스는 모두 *MSSQLSvc*로 등록되며, *\<tcpport>* 값을 사용하여 구분합니다.  
   
- Kerberos를 지 원하는 다른 연결 형식의 SPN이 등록 *MSSQLSvc /\<FQDN >* : *\<n a m e >* 명명 된 인스턴스에 대 한 합니다. 기본 인스턴스는 *MSSQLSvc/\<FQDN>* 형식으로 등록됩니다.  
+ Kerberos를 지 원하는 다른 연결의 경우 SPN은 명명 된 인스턴스에 대해 *MSSQLSvc\</FQDN>*:*\<instancename>* 형식으로 등록 됩니다. 기본 인스턴스는 *MSSQLSvc/\<FQDN>* 형식으로 등록됩니다.  
   
  서비스 계정에 이러한 동작을 수행하는 데 필요한 권한이 없는 경우에는 수동으로 SPN을 등록하거나 등록 취소해야 합니다.  
   
@@ -120,7 +120,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 setspn -A MSSQLSvc/myhost.redmond.microsoft.com:1433 accountname  
 ```  
   
- **참고** SPN이 이미 있는 경우에는 해당 SPN을 삭제한 후 다시 등록해야 합니다. 이 작업을 수행하려면 `setspn` 명령을 `-D` 스위치와 함께 사용합니다. 다음 예에서는 새로운 인스턴스 기반 SPN을 수동으로 등록하는 방법을 보여 줍니다. 기본 인스턴스의 경우에는 다음을 사용합니다.  
+ **참고** SPN이 이미 있는 경우에는 해당 SPN을 삭제 한 후 다시 등록 해야 합니다. 이 작업을 수행하려면 `setspn` 명령을 `-D` 스위치와 함께 사용합니다. 다음 예에서는 새로운 인스턴스 기반 SPN을 수동으로 등록하는 방법을 보여 줍니다. 기본 인스턴스의 경우에는 다음을 사용합니다.  
   
 ```  
 setspn -A MSSQLSvc/myhost.redmond.microsoft.com accountname  
@@ -135,7 +135,7 @@ setspn -A MSSQLSvc/myhost.redmond.microsoft.com:instancename accountname
 ##  <a name="Client"></a> 클라이언트 연결  
  사용자 지정 SPN은 클라이언트 드라이버에서 지원됩니다. 하지만 SPN이 제공되지 않은 경우 클라이언트 연결 유형을 기준으로 SPN이 자동 생성됩니다. TCP 연결의 경우 명명된 인스턴스와 기본 인스턴스 모두에 대해 *MSSQLSvc*/*FQDN*:[*port*] 형식의 SPN이 사용됩니다.  
   
- 명명된 파이프와 공유 메모리 연결에서 명명된 인스턴스에는 *MSSQLSvc*/*FQDN*:*instancename* 형식의 SPN이 사용되고 기본 인스턴스에는 *MSSQLSvc*/*FQDN* 형식의 SPN이 사용됩니다.  
+ 명명 된 파이프 및 공유 메모리 연결의 경우 *MSSQLSvc*/*fqdn*:*instancename* 형식의 SPN이 명명 된 인스턴스에 사용 되며 *MSSQLSvc*/*fqdn* 이 기본 인스턴스에 사용 됩니다.  
   
  **서비스 계정을 SPN으로 사용**  
   
@@ -158,8 +158,8 @@ WHERE session_id = @@SPID;
   
 |시나리오|인증 방법|  
 |--------------|---------------------------|  
-|SPN이 올바른 도메인 계정, 가상 계정, MSA 또는 기본 제공 계정에 매핑됩니다. 예를 들어 로컬 시스템 또는 NETWORK SERVICE에 매핑됩니다.<br /><br /> 참고: 매핑되는 등록 된 SPN을 사용 하는 계정이 계정에 SQL Server 서비스를 실행 하는 올바른 방법입니다.|로컬 연결은 NTLM을 사용하고, 원격 연결은 Kerberos를 사용합니다.|  
-|SPN이 올바른 도메인 계정, 가상 계정, MSA 또는 기본 제공 계정입니다.<br /><br /> 참고: 매핑되는 등록 된 SPN을 사용 하는 계정이 계정에 SQL Server 서비스를 실행 하는 올바른 방법입니다.|로컬 연결은 NTLM을 사용하고, 원격 연결은 Kerberos를 사용합니다.|  
+|SPN이 올바른 도메인 계정, 가상 계정, MSA 또는 기본 제공 계정에 매핑됩니다. 예를 들어 로컬 시스템 또는 NETWORK SERVICE에 매핑됩니다.<br /><br /> 참고: 올바른 것은 등록 된 SPN에 의해 매핑되는 계정이 SQL Server 서비스가 실행 되 고 있는 계정 임을 의미 합니다.|로컬 연결은 NTLM을 사용하고, 원격 연결은 Kerberos를 사용합니다.|  
+|SPN이 올바른 도메인 계정, 가상 계정, MSA 또는 기본 제공 계정입니다.<br /><br /> 참고: 올바른 것은 등록 된 SPN에 의해 매핑되는 계정이 SQL Server 서비스가 실행 되 고 있는 계정 임을 의미 합니다.|로컬 연결은 NTLM을 사용하고, 원격 연결은 Kerberos를 사용합니다.|  
 |SPN이 잘못된 도메인 계정, 가상 계정, MSA 또는 기본 제공 계정에 매핑됩니다.|인증에 실패하게 됩니다.|  
 |SPN 조회에 실패했거나 SPN이 올바른 도메인 계정, 가상 계정, MSA 또는 기본 제공 계정에 매핑되지 않거나 SPN이 올바른 도메인 계정, 가상 계정, MSA 또는 기본 제공 계정이 아닙니다.|로컬 및 원격 연결이 NTLM을 사용합니다.|  
   
@@ -170,7 +170,7 @@ WHERE session_id = @@SPID;
   
  종료 시 SPN 등록 취소에 실패하면 해당 내용이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 기록되고 종료가 계속됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [클라이언트 연결의 SPN&#40;서비스 사용자 이름&#41; 지원](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)   
  [클라이언트 연결의 SPN&#40;서비스 사용자 이름&#41;&#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)   
  [클라이언트 연결의 SPN&#40;서비스 사용자 이름&#41;&#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)   

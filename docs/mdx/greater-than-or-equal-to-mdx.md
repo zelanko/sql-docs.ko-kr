@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 0e8599378367dd47bd5858c09327795a25852105
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68005844"
 ---
 # <a name="gt-greater-than-or-equal-to-mdx"></a>&gt;= (크거나 같음) (MDX)
@@ -31,14 +31,14 @@ MDX_Expression >= MDX_Expression
  *MDX_Expression*  
  유효한 MDX 식입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  다음 조건을 기반으로 하는 부울 값입니다.  
   
--   **true** 첫 번째 매개 변수 중 두 번째 매개 변수의 값 보다 크거나는 값을 가진 경우입니다.  
+-   첫 번째 매개 변수의 값이 두 번째 매개 변수의 값 보다 크거나 같으면 **true** 입니다.  
   
--   **false** 첫 번째 매개 변수의 두 번째 매개 변수의 값 보다 낮은 값이 있습니다.  
+-   첫 번째 매개 변수의 값이 두 번째 매개 변수의 값 보다 낮으면 **false** 입니다.  
   
--   **true** 매개 변수가 모두 null 이거나 한 매개 변수가 null 하 고 다른 매개 변수가 0 인 경우.  
+-   두 매개 변수가 모두 null 이거나 한 매개 변수가 null이 고 다른 매개 변수가 0 이면 **true** 입니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 이 연산자의 사용 방법을 보여 줍니다.  
@@ -60,7 +60,7 @@ WHERE
     ([Measures].[HighGPM])  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [MDX 연산자 참조 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [Mdx 연산자 참조 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a356a6bad7b0756f148b43ed0cbf35e8d2ce9cc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62775326"
 ---
 # <a name="upgrade-replicated-databases"></a>복제된 데이터베이스 업그레이드
@@ -40,7 +40,8 @@ ms.locfileid: "62775326"
 >  이 항목은 설치 도움말 설명서와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 사용할 수 있습니다. 설치 도움말 설명서에서 굵게 표시된 항목 링크는 온라인 설명서에만 제공되는 항목을 나타냅니다.  
   
 ## <a name="run-the-log-reader-agent-for-transactional-replication-before-upgrade"></a>업그레이드 전에 트랜잭션 복제용 로그 판독기 에이전트 실행  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드하기 전에 게시된 테이블의 커밋된 모든 트랜잭션을 로그 판독기 에이전트가 처리했는지 확인해야 합니다. 모든 트랜잭션이 처리되었는지 확인하려면 트랜잭션 게시를 포함하는 각 데이터베이스에 대해 다음 단계를 수행하십시오.  
+ 
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드하기 전에 게시된 테이블의 커밋된 모든 트랜잭션을 로그 판독기 에이전트가 처리했는지 확인해야 합니다. 모든 트랜잭션이 처리되었는지 확인하려면 트랜잭션 게시를 포함하는 각 데이터베이스에 대해 다음 단계를 수행하십시오.  
   
 1.  데이터베이스에서 로그 판독기 에이전트가 실행 중인지 확인합니다. 기본적으로 에이전트는 계속 실행됩니다.  
   
@@ -50,9 +51,10 @@ ms.locfileid: "62775326"
   
 4.  [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql) 를 실행하여 모든 트랜잭션이 처리되었는지 확인합니다. 이 프로시저의 결과 집합은 비어 있어야 합니다.  
   
-5.  [sp_replflush](/sql/relational-databases/system-stored-procedures/sp-replflush-transact-sql)를 실행하여 sp_replcmds의 연결을 닫습니다.  
+5.  [sp_replflush](/sql/relational-databases/system-stored-procedures/sp-replflush-transact-sql) 를 실행하여 sp_replcmds의 연결을 닫습니다.  
   
-6.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 서버를 업그레이드합니다.  
+6.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 서버를 업그레이드합니다.  
   
 7.  업그레이드 후에 자동으로 시작되지 않는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 및 로그 판독기 에이전트를 다시 시작합니다.  
   
@@ -63,13 +65,13 @@ ms.locfileid: "62775326"
   
  에이전트는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], 복제 모니터 또는 명령줄에서 실행합니다. 스냅샷 에이전트를 실행하는 방법은 다음 항목을 참조하십시오.  
   
--   [초기 스냅숏 만들기 및 적용](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
+-   [초기 스냅샷 만들기 및 적용](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
   
 -   [복제 에이전트 시작 및 중지&#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)  
   
--   [초기 스냅숏 만들기 및 적용](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
+-   [초기 스냅샷 만들기 및 적용](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
   
--   [복제 에이전트 실행 파일 개념](../../../2014/relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+-   [Replication Agent Executables Concepts](../../../2014/relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
  병합 에이전트를 실행하는 방법은 다음 항목을 참조하십시오.  
   
@@ -80,7 +82,7 @@ ms.locfileid: "62775326"
  병합 복제를 사용하는 토폴로지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 업그레이드한 후에 새 기능을 사용하려면 모든 게시의 게시 호환성 수준을 변경합니다.  
   
 ## <a name="upgrading-to-standard-workgroup-or-express-editions"></a>Standard, Workgroup 또는 Express Edition으로 업그레이드  
- 한 에디션의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 다른 에디션으로 업그레이드하기 전에 현재 사용 중인 기능이 업그레이드할 에디션에서 지원되는지 확인하십시오. 자세한 내용은 복제 섹션을 참조 [SQL Server 2014 버전에서 지 원하는 기능](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
+ 한 에디션의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 다른 에디션으로 업그레이드하기 전에 현재 사용 중인 기능이 업그레이드할 에디션에서 지원되는지 확인하십시오. 자세한 내용은 [SQL Server 2014 버전에서 지 원하는 기능](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)에서 복제에 대 한 섹션을 참조 하세요.  
   
 ## <a name="web-synchronization-for-merge-replication"></a>병합 복제에 대한 웹 동기화  
  병합 복제에 대한 웹 동기화 옵션을 사용하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제 수신기(replisapi.dll)를 동기화에 사용되는 인터넷 정보 서비스(IIS) 서버의 가상 디렉터리에 복사해야 합니다. 웹 동기화를 구성할 때는 웹 동기화 구성 마법사를 실행하여 가상 디렉터리에 파일을 복사합니다. IIS 서버에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 업그레이드하는 경우에는 COM 디렉터리의 replisapi.dll을 IIS 서버의 가상 디렉터리에 수동으로 복사해야 합니다. 웹 동기화를 구성하는 방법은 [웹 동기화 구성](../../../2014/relational-databases/replication/configure-web-synchronization.md)을 참조하세요.  
@@ -88,7 +90,7 @@ ms.locfileid: "62775326"
 ## <a name="restoring-a-replicated-database-from-an-earlier-version"></a>이전 버전에서 복제된 데이터베이스 복원  
  이전 버전에서 복제된 데이터베이스의 백업을 복원할 때 복제 설정이 유지되게 하려면 백업 당시의 서버 및 데이터베이스와 같은 이름의 서버 및 데이터베이스에 복원합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [복제 관리 FAQ](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [복제의 이전 버전과의 호환성](../../../2014/relational-databases/replication/replication-backward-compatibility.md)   
  [지원되는 버전 및 에디션 업그레이드](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   

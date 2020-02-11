@@ -1,5 +1,5 @@
 ---
-title: SQL server 2014 (설치 프로그램) 인스턴스에 기능 추가 | Microsoft Docs
+title: SQL Server 2014의 인스턴스에 기능 추가 (설치 프로그램) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,27 +15,27 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 147fe717919035c365ef2e3507e46a4323694570
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779374"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-2014-setup"></a>SQL Server 2014 인스턴스에 기능 추가(설치 프로그램)
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 인스턴스에 기능을 추가하기 위한 단계별 절차에 대해 설명합니다. 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소 또는 서비스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 특정 인스턴스에 고유합니다. 이를 인스턴스 인식 구성 요소 또는 서비스라고도 합니다. 인스턴스 인식 구성 요소 또는 서비스는 자신을 호스팅하는 인스턴스와 같은 버전을 공유하고 해당 인스턴스에만 독점적으로 사용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 공유 구성 요소(아직 설치되지 않은 경우)와 함께 인스턴스 인식 구성 요소를 추가할 수 있습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]인스턴스에 기능을 추가하기 위한 단계별 절차에 대해 설명합니다. 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소 또는 서비스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 특정 인스턴스에 고유합니다. 이를 인스턴스 인식 구성 요소 또는 서비스라고도 합니다. 인스턴스 인식 구성 요소 또는 서비스는 자신을 호스팅하는 인스턴스와 같은 버전을 공유하고 해당 인스턴스에만 독점적으로 사용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 공유 구성 요소(아직 설치되지 않은 경우)와 함께 인스턴스 인식 구성 요소를 추가할 수 있습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조 하세요.  
   
- 인스턴스에 기능을 추가할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 명령 프롬프트에서 확인할 [명령 프롬프트에서 SQL Server 2014 설치](install-sql-server-from-the-command-prompt.md)합니다.  
+ 명령 프롬프트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 인스턴스에 기능을 추가 하려면 [명령 프롬프트에서 SQL Server 2014 설치](install-sql-server-from-the-command-prompt.md)를 참조 하세요.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
  계속하기 전에 [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md)항목을 검토하십시오.  
   
 > [!NOTE]  
->  로컬 설치의 경우 관리자로 설치 프로그램을 실행해야 합니다. 원격 공유에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하는 경우 원격 공유에 대한 읽기 권한이 있는 도메인 계정을 사용해야 합니다.  
+>  로컬 설치의 경우 관리자로 설치 프로그램을 실행해야 합니다. 원격 공유에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치하는 경우 원격 공유에 대한 읽기 권한이 있는 도메인 계정을 사용해야 합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]인스턴스에 기능을 추가할 경우 기존 사용 보고서 설정이 새로 추가된 기능에 적용됩니다. 이러한 설정을 변경하려면 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 도구** 메뉴의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**오류 및 사용 보고** 도구를 사용합니다.  
   
-## <a name="procedures"></a>절차  
+## <a name="procedures"></a>프로시저  
   
 #### <a name="to-add-features-to-an-instance-of-includesscurrentincludessscurrent-mdmd"></a>명령 프롬프트에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
@@ -51,13 +51,13 @@ ms.locfileid: "62779374"
   
 6.  시스템 구성 검사기는 설치를 계속하기 전에 컴퓨터의 시스템 상태를 확인합니다.  
   
-7.  설치 유형 페이지에서  **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 기존 인스턴스에 기능 추가** 옵션을 선택하고 업데이트하려는 인스턴스를 선택합니다.  
+7.  설치 유형 페이지에서 **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 기존 인스턴스에 기능 추가** 옵션을 선택하고 업데이트하려는 인스턴스를 선택합니다.  
   
-8.  기능 선택 페이지에서 설치할 구성 요소를 선택합니다. 기능 이름을 선택하면 오른쪽 창에 각 구성 요소 그룹에 대한 설명이 나타납니다. 확인란을 자유롭게 조합하여 선택할 수 있습니다. 자세한 내용은 [버전 및 SQL Server 2014 구성 요소](../../sql-server/editions-and-components-of-sql-server-2016.md)합니다. 각 구성 요소는 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 한 번만 설치할 수 있습니다. 여러 구성 요소를 설치하려면 추가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 설치해야 합니다.  
+8.  기능 선택 페이지에서 설치할 구성 요소를 선택합니다. 기능 이름을 선택하면 오른쪽 창에 각 구성 요소 그룹에 대한 설명이 나타납니다. 확인란을 자유롭게 조합하여 선택할 수 있습니다. 자세한 내용은 [SQL Server 2014의 버전 및 구성 요소](../../sql-server/editions-and-components-of-sql-server-2016.md)를 참조 하세요. 각 구성 요소는 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 한 번만 설치할 수 있습니다. 여러 구성 요소를 설치하려면 추가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 설치해야 합니다.  
   
      선택한 기능의 필수 구성 요소가 오른쪽 창에 표시됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서는 이미 설치되어 있지 않은 필수 구성 요소가 있는 경우 이 절차의 뒷부분에 설명된 설치 단계에서 이를 설치합니다.  
   
-     시스템 구성 검사기는 설치를 계속하기 전에 컴퓨터의 시스템 상태를 확인합니다. 계속하려면 **다음** 을 클릭합니다.  
+     시스템 구성 검사기는 설치를 계속하기 전에 컴퓨터의 시스템 상태를 확인합니다. **다음**을 클릭하여 계속합니다.  
   
 9. 디스크 공간 요구 사항 페이지에서는 사용자가 지정한 기능에 필요한 디스크 공간을 계산하여 설치 프로그램을 실행하는 동안 컴퓨터에서 사용 가능한 디스크 공간과 이러한 요구 사항을 비교하여 보여 줍니다.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "62779374"
   
      자세한 내용은 [데이터베이스 엔진 구성 - 데이터 디렉터리](../../sql-server/install/database-engine-configuration-data-directories.md)를 참조하세요.  
   
-15. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성 - FILESTREAM 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 FILESTREAM을 설정합니다. FILESTREAM에 대한 자세한 내용은 [데이터베이스 엔진 구성 - Filestream](../../sql-server/install/database-engine-configuration-filestream.md)을 참조하세요. 계속하려면 다음을 클릭합니다.  
+15. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성 - FILESTREAM 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 FILESTREAM을 설정합니다. FILESTREAM에 대한 자세한 내용은 [데이터베이스 엔진 구성 - Filestream](../../sql-server/install/database-engine-configuration-filestream.md)을 참조하세요. 계속하려면 다음을 클릭합니다.  
   
 16. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 구성 - 계정 프로비전 페이지를 사용하여 서버 모드와 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대해 관리자 권한을 갖는 사용자 또는 계정을 지정합니다. 서버 모드에 따라 해당 서버에서 사용되는 메모리 및 스토리지 하위 시스템이 결정됩니다. 각 솔루션 유형은 서로 다른 서버 모드로 실행됩니다. 서버에서 다차원 큐브 데이터베이스를 실행하려면 기본 옵션인 다차원 및 데이터 마이닝 서버 모드를 선택합니다. 관리자 권한의 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대해 시스템 관리자를 한 명 이상 지정해야 합니다. SQL Server 설치 프로그램을 실행하는 계정을 추가하려면 **현재 사용자 추가(Add Current User)** 를 클릭합니다. 시스템 관리자 목록에 계정을 추가하거나 목록의 계정을 제거하려면 **추가** 또는 **제거**를 클릭한 다음 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대한 관리자 권한을 가질 사용자, 그룹 또는 컴퓨터 목록을 편집합니다. 서버 모드 및 관리자 권한에 대한 자세한 내용은 [Analysis Services 구성 - 계정 프로비전](../../sql-server/install/analysis-services-configuration-account-provisioning.md)을 참조하세요.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "62779374"
   
 20. Distributed Replay Client 구성 페이지를 사용하여 Distributed Replay Client 서비스에 대한 관리 권한을 부여할 사용자를 지정합니다. 관리 권한이 있는 사용자는 Distributed Replay Client 서비스에 무제한으로 액세스할 수 있습니다.  
   
-     **컨트롤러 이름**은 선택적 매개 변수이며 기본값은 \<*빈 값*>입니다. 클라이언트 컴퓨터에서 Distributed Replay Client 서비스를 위해 통신할 컨트롤러의 이름을 입력합니다. 다음에 유의하세요.  
+     **컨트롤러 이름**은 선택적 매개 변수이며 기본값은 \<*빈 값*>입니다. 클라이언트 컴퓨터에서 Distributed Replay Client 서비스를 위해 통신할 컨트롤러의 이름을 입력합니다. 다음 사항에 유의하세요.  
   
     -   컨트롤러를 이미 설정한 경우 각 클라이언트를 구성할 때 컨트롤러의 이름을 입력합니다.  
   
@@ -144,11 +144,11 @@ ms.locfileid: "62779374"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 공격 받을 수 있는 시스템의 노출 영역을 줄이기 위해 핵심 서비스와 기능을 선별하여 설치하고 활성화합니다. 자세한 내용은 [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 설치 로그 파일 보기 및 읽기](view-and-read-sql-server-setup-log-files.md)   
  [SQL Server 설치 유효성 검사](validate-a-sql-server-installation.md)   
  [SQL Server 2014 설치 삭제](repair-a-failed-sql-server-installation.md)   
- [업그레이드 하려면 SQL Server 2014 설치 마법사를 사용 하 여 &#40;설치&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)   
- [명령 프롬프트에서 SQL Server 2014 설치](install-sql-server-from-the-command-prompt.md)  
+ [설치 마법사 &#40;사용 하 여 SQL Server 2014로 업그레이드&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)   
+ [Install SQL Server 2014 from the Command Prompt](install-sql-server-from-the-command-prompt.md)  
   
   
