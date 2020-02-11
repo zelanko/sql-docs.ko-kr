@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: 23683b70d5b0de7b2852187969842702dd925da4
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75241328"
 ---
 # <a name="move-a-registered-server-or-registered-server-group-sql-server-management-studio"></a>등록된 서버 및 등록된 서버 그룹 이동(SQL Server Management Studio)
@@ -37,6 +37,6 @@ ms.locfileid: "75241328"
   
 ## <a name="see-also"></a>참고 항목  
  [서버 등록](register-servers.md)   
- [SQL Server Management Studio&#41;&#40;서버 그룹 만들기 또는 편집](create-or-edit-a-server-group-sql-server-management-studio.md)  
+ [서버 그룹 만들기 또는 편집&#40;SQL Server Management Studio&#41;](create-or-edit-a-server-group-sql-server-management-studio.md)  
   
   
