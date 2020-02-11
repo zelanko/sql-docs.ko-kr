@@ -1,5 +1,5 @@
 ---
-title: (Visual Database Tools) 다이어그램에 표시 된 정보의 양 사용자 지정 | Microsoft Docs
+title: 다이어그램에 표시 되는 정보의 양 사용자 지정 (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a15613c61db7469b242bbd5b76e5d1e51912e6be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63270556"
 ---
 # <a name="customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools"></a>다이어그램에 표시된 정보의 양 사용자 지정(Visual Database Tools)
@@ -31,7 +31,7 @@ ms.locfileid: "63270556"
   
 -   열 이름  
   
--   키  
+-   구성  
   
 -   테이블 이름만  
   
@@ -53,7 +53,7 @@ ms.locfileid: "63270556"
   
 3.  **테이블 뷰** 메뉴에서 **사용자 지정** 을 선택한 경우 표시할 속성을 **열 선택** 대화 상자에서 선택합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 다이어그램 작업&#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

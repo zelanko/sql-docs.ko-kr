@@ -1,7 +1,7 @@
 ---
-title: SQL Server 액세스를 허용하도록 Windows 방화벽 구성 | Microsoft 문서
-ms.custom: sqlfreshmay19
-ms.date: 05/15/2019
+title: Windows 방화벽 구성
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: abae05ff73ff1da46bda029b32320a9deccfbf51
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 5e88b1543490bd0c44abbbdea12bf361ddf43419
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73637976"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253469"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -124,7 +124,7 @@ ms.locfileid: "73637976"
 ####  <a name="BKMK_dynamic_ports"></a> 동적 포트  
  기본적으로 명명된 인스턴스( [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]포함)는 동적 포트를 사용합니다. 즉, [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 시작될 때마다 사용 가능한 포트를 식별하고 해당 포트 번호를 사용합니다. 명명된 인스턴스가 설치된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 유일한 인스턴스인 경우 보통 TCP 포트 1433을 사용합니다. 다른 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스가 설치된 경우 이 인스턴스는 다른 TCP 포트를 사용합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 시작될 때마다 선택되는 포트가 변경될 수 있기 때문에 올바른 포트 번호에 대한 액세스가 가능하도록 방화벽을 구성하기가 어렵습니다. 따라서 방화벽을 사용하는 경우 매번 동일한 포트 번호를 사용하도록 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 을 다시 구성하는 것이 좋습니다. 이러한 방식을 고정 포트 또는 정적 포트라고 합니다. 자세한 내용은 [특정 TCP 포트로 수신하도록 서버 구성&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)을 참조하세요.  
   
- 고정 포트에서 수신하도록 명명된 인스턴스를 구성하는 또 다른 방법은 **sqlservr.exe**와 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로그램에 대한 예외를 방화벽에서 만드는 것입니다([!INCLUDE[ssDE](../../includes/ssde-md.md)]의 경우). 이 방법은 편리하지만 고급 보안이 설정된 Windows 방화벽 MMC 스냅인을 사용할 경우 **인바운드 규칙** 페이지의 **로컬 포트** 열에 포트 번호가 표시되지 않습니다. 따라서 어떤 포트가 열려 있는지 감사하기가 더 어려워집니다. 또 다른 고려 사항은 서비스 팩 또는 누적 업데이트로 인해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행 파일에 대한 경로가 변경되어 방화벽 규칙이 무효화될 수 있다는 점입니다.  
+ 고정 포트에서 수신하도록 명명된 인스턴스를 구성하는 또 다른 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sqlservr.exe **와 같은** 프로그램에 대한 예외를 방화벽에서 만드는 것입니다( [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 경우). 이 방법은 편리하지만 고급 보안이 설정된 Windows 방화벽 MMC 스냅인을 사용할 경우 **인바운드 규칙** 페이지의 **로컬 포트** 열에 포트 번호가 표시되지 않습니다. 따라서 어떤 포트가 열려 있는지 감사하기가 더 어려워집니다. 또 다른 고려 사항은 서비스 팩 또는 누적 업데이트로 인해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행 파일에 대한 경로가 변경되어 방화벽 규칙이 무효화될 수 있다는 점입니다.  
   
 ##### <a name="to-add-a-program-exception-to-the-firewall-using-windows-firewall-with-advanced-security"></a>고급 보안이 포함된 Windows 방화벽 항목을 사용하여 방화벽에 프로그램 예외를 추가하려면
   
@@ -195,7 +195,7 @@ ms.locfileid: "73637976"
 |<a name="BKMK_IPsec"></a> IPsec 트래픽|UDP 포트 500 및 UDP 포트 4500|도메인 정책에 따라 IPSec을 통해 네트워크 통신을 수행해야 하는 경우 예외 목록에 UDP 포트 4500 및 UDP 포트 500도 추가해야 합니다. IPsec은 Windows 방화벽 스냅인의 **새 인바운드 규칙 마법사** 를 사용하는 옵션입니다. 자세한 내용은 아래의 [고급 보안이 포함된 Windows 방화벽 스냅인 사용](#BKMK_WF_msc) 을 참조하세요.|  
 |트러스트된 도메인에 Windows 인증 사용|인증 요청을 허용하도록 방화벽을 구성해야 합니다.|자세한 내용은 [도메인 및 트러스트를 위한 방화벽을 구성하는 방법](https://support.microsoft.com/kb/179442/)을 참조하세요.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 클러스터링|클러스터링을 위해서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 직접 관련되지 않은 추가 포트가 필요합니다.|자세한 내용은 [클러스터 사용을 위한 네트워크 설정(Enable a network for cluster use)](https://go.microsoft.com/fwlink/?LinkId=118372)을 참조하세요.|  
-|HTTP 서버 API(HTTP.SYS)에 예약된 URL 네임스페이스|일반적으로 TCP 포트 80이지만 다른 포트로 구성할 수 있습니다. 자세한 내용은 [HTTP 및 HTTPS 구성(Configuring HTTP and HTTPS)](https://go.microsoft.com/fwlink/?LinkId=118373)을 참조하세요.|HttpCfg.exe를 사용한 HTTP.SYS 엔드포인트 예약에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관련 정보는 [URL 예약 및 등록 정보 &#40;SSRS 구성 관리자 &#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)를 참조하세요.|  
+|HTTP 서버 API(HTTP.SYS)에 예약된 URL 네임스페이스|일반적으로 TCP 포트 80이지만 다른 포트로 구성할 수 있습니다. 자세한 내용은 [HTTP 및 HTTPS 구성(Configuring HTTP and HTTPS)](https://go.microsoft.com/fwlink/?LinkId=118373)을 참조하세요.|HttpCfg.exe를 사용한 HTTP.SYS 엔드포인트 예약에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관련 정보는 [URL 예약 및 등록 정보&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)를 참조하세요.|  
   
 ##  <a name="BKMK_port_135"></a> 포트 135에 대한 특별 고려 사항  
  TCP/IP 또는 UDP/IP를 전송 수단으로 하여 RPC를 사용하는 경우 인바운드 포트는 필요에 따라 시스템 서비스에 동적으로 할당되는 경우가 많습니다. 포트 1024보다 큰 TCP/IP 및 UDP/IP 포트가 사용됩니다. 이러한 포트를 비공식적으로 "임의 RPC 포트"라고 합니다. 이 경우 RPC 클라이언트는 RPC 엔드포인트 매퍼를 사용하여 서버에 할당된 동적 포트를 알려 줍니다. 일부 RPC 기반 서비스의 경우 RPC가 포트를 동적으로 할당하도록 하는 대신 사용자가 직접 특정 포트를 구성할 수 있습니다. 또한 서비스에 관계없이 RPC가 동적으로 할당하는 포트의 범위를 좁은 범위로 제한할 수도 있습니다. 포트 135는 많은 서비스에서 사용되기 때문에 악의적인 사용자로부터 자주 공격을 받습니다. 포트 135를 열 때는 방화벽 규칙의 범위를 제한하는 것이 좋습니다.  
@@ -250,7 +250,7 @@ ms.locfileid: "73637976"
     -   **사용자 지정 목록**: 목록에 있는 IP 주소의 컴퓨터만 연결할 수 있습니다. 이 옵션은 **내 네트워크(서브넷)만**보다 안전할 수 있지만 DHCP를 사용하는 클라이언트 컴퓨터의 IP 주소는 가끔 변경될 수 있습니다. 이 경우 연결이 허용된 컴퓨터가 연결하지 못하게 됩니다. 또한 권한을 부여하지 않은 다른 컴퓨터가 목록에 있는 IP 주소를 획득하여 연결할 수 있습니다. **사용자 지정 목록** 옵션은 고정 IP 주소를 사용하도록 구성된 다른 서버를 나열하는 데는 적합하지만 IP 주소는 침입자의 스푸핑 공격을 받을 수 있습니다. 방화벽 제한 규칙은 네트워크 인프라 자체의 보안 수준 내에서 보호 기능을 제공할 뿐입니다.  
   
 ##  <a name="BKMK_WF_msc"></a> 고급 보안이 설정된 Windows 방화벽 스냅인 사용  
- 고급 보안이 포함된 Windows 방화벽 MMC 스냅인을 사용하여 추가 고급 방화벽 설정을 구성할 수 있습니다. 이 스냅인은 규칙 마법사를 포함하며 제어판의 **Windows 방화벽** 항목에는 제공되지 않는 추가 설정을 제공합니다. 여기에는 다음과 같은 설정이 포함됩니다.  
+ 고급 보안이 포함된 Windows 방화벽 MMC 스냅인을 사용하여 추가 고급 방화벽 설정을 구성할 수 있습니다. 이 스냅인은 규칙 마법사를 포함하며 제어판의 **Windows 방화벽** 항목에는 제공되지 않는 추가 설정을 제공합니다. 이 설정은 다음을 포함합니다.  
   
 -   암호화 설정  
 -   서비스 제한   

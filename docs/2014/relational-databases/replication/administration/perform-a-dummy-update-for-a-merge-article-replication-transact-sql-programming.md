@@ -1,5 +1,5 @@
 ---
-title: (복제 TRANSACT-SQL 프로그래밍) 병합 아티클에 대해 더미 업데이트 수행 | Microsoft Docs
+title: 병합 아티클에 대해 더미 업데이트 수행 (복제 Transact-sql 프로그래밍) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 691988cd229f9b0c9ab81f31713a2b2e46806bdb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63162000"
 ---
 # <a name="perform-a-dummy-update-for-a-merge-article-replication-transact-sql-programming"></a>병합 아티클에 대해 더미 업데이트 수행(복제 Transact-SQL 프로그래밍)
@@ -29,7 +29,7 @@ ms.locfileid: "63162000"
   
 1.  더미 업데이트가 필요한 병합 게시된 테이블의 행에 대해 UPDATETEXT와 같은 작업을 실행합니다.  
   
-2.  변경된 데이터베이스의 서버(게시자 또는 구독자)에서 [sp_mergedummyupdate&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergedummyupdate-transact-sql)를 실행합니다. **@source_object** 에 변경된 테이블을 지정하고 **@rowguid** 에 변경된 행의 고유 식별자를 지정합니다.  
+2.  변경된 데이터베이스의 서버(게시자 또는 구독자)에서 [sp_mergedummyupdate&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergedummyupdate-transact-sql)를 실행합니다. 에 대해 **@source_object**변경 된 테이블을 지정 하 고에 대해 **@rowguid**변경 된 행의 고유 식별자를 지정 합니다.  
   
 3.  구독을 동기화하여 변경된 행을 복제합니다.  
   

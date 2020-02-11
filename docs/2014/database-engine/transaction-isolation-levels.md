@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eea34b8ad278447d9e9085d99acb8500d14d5e7a
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637784"
 ---
 # <a name="transaction-isolation-levels-in-memory-optimized-tables"></a>메모리 액세스에 최적화 된 테이블의 트랜잭션 격리 수준
@@ -25,7 +25,7 @@ ms.locfileid: "73637784"
   
 -   REPEATABLE READ  
   
--   SERIALIZABLE  
+-   직렬화 가능  
   
 -   READ COMMITTED  
   
@@ -39,7 +39,7 @@ ms.locfileid: "73637784"
   
 -   메모리 최적화 테이블에 액세스하는 데 보다 높은 격리 수준 힌트를 명시적으로 사용합니다(예: WITH (SNAPSHOT)).  
   
--   메모리 최적화 테이블에 대한 격리 수준을 SNAPSHOT(메모리 최적화 모든 테이블에 대한 WITH(SNAPSHOT) 힌트를 포함한 것)으로 설정할 `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` 설정 옵션을 지정합니다. `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`에 대 한 자세한 내용은 [ALTER DATABASE SET &#40;옵션 transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)을 참조 하세요.  
+-   메모리 최적화 테이블에 대한 격리 수준을 SNAPSHOT(메모리 최적화 모든 테이블에 대한 WITH(SNAPSHOT) 힌트를 포함한 것)으로 설정할 `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` 설정 옵션을 지정합니다. 에 대 한 `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`자세한 내용은 [ALTER database SET Options &#40;transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)를 참조 하세요.  
   
  또는 세션의 격리 수준이 READ COMMITTED인 경우 자동 커밋 트랜잭션을 사용할 수 있습니다.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "73637784"
  디스크 기반 테이블의 경우 대부분의 격리 수준 보증은 차단을 통해 충돌을 방지하는 잠금을 사용하여 구현됩니다. 메모리 최적화 테이블의 경우 잠금 필요성을 방지하는 충돌 감지 메커니즘을 사용하여 보장이 시행됩니다. 예외는 디스크 기반 테이블의 SNAPSHOT 격리입니다. 이는 충돌 감지 메커니즘을 사용하여 메모리 최적화 테이블에서 SNAPSHOT 격리에 유사하게 구현됩니다.  
   
  SNAPSHOT  
- 이 격리 수준은 트랜잭션의 문이 읽은 데이터가 트랜잭션 시작 시와 트랜잭션별로 데이터 버전의 일관성이 유지되도록 지정합니다. 트랜잭션은 시작되기 전에 커밋된 데이터 수정 내용만 인식할 수 있습니다. 현재 트랜잭션이 시작된 후 다른 트랜잭션에서 수정한 데이터는 현재 트랜잭션에서 실행되는 문에 표시되지 않습니다. 트랜잭션의 문이 트랜잭션 시작 당시 커밋된 데이터의 스냅샷을 가져옵니다.  
+ 이 격리 수준은 트랜잭션의 문이 읽은 데이터가 트랜잭션 시작 시와 트랜잭션별로 데이터 버전의 일관성이 유지되도록 지정합니다. 트랜잭션은 시작되기 전에 커밋된 데이터 수정 내용만 인식할 수 있습니다. 현재 트랜잭션이 시작된 후 다른 트랜잭션에서 수행한 데이터 수정 내용은 현재 트랜잭션에서 실행 중인 문에 표시되지 않습니다. 트랜잭션의 문이 트랜잭션 시작 당시 커밋된 데이터의 스냅샷을 가져옵니다.  
   
  쓰기 작업(업데이트, 삽입 및 삭제)은 항상 다른 트랜잭션에서 완전히 격리됩니다. 따라서 SNAPSHOT 트랜잭션의 쓰기 작업은 다른 트랜잭션의 쓰기 작업과 충돌할 수 있습니다. 현재 트랜잭션이 시작된 후에 커밋된 다른 트랜잭션에 의해 업데이트되거나 삭제된 행을 현재 트랜잭션이 업데이트하거나 삭제하려고 시도하면 트랜잭션은 다음 오류 메시지가 표시되면서 종료됩니다.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "73637784"
   
  오류 41305. 반복 읽기 유효성 검사 실패로 인해 현재 트랜잭션을 커밋하지 못했습니다.  
   
- SERIALIZABLE  
+ 직렬화 가능  
  이 격리 수준은 REPEATABLE READ를 통해 지정된 보증을 포함합니다. 스냅샷과 트랜잭션 종료 사이에 가상 행이 나타나지 않았습니다. 가상 행은 선택, 업데이트 또는 삭제의 필터 조건과 일치합니다.  
   
  트랜잭션은 동시 트랜잭션이 없는 것처럼 실행됩니다. 모든 작업은 거의 단일 직렬화 포인트(커밋 시간)에서 발생합니다.  

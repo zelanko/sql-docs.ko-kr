@@ -10,10 +10,10 @@ ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: f0a79169b3ee192af278aeb4465fb13d7a311783
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251582"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>.dqs 파일에서 도메인 가져오기
@@ -26,14 +26,14 @@ ms.locfileid: "75251582"
   
  도메인을 가져올 때 도메인 이름은 원래 내보내진 도메인의 이름과 동일하게 유지됩니다. 단, 도메인 이름이 이미 있는 경우에는 DQS에서 이름에 "_1"을 추가합니다. 또한 기존 도메인과 동일한 이름을 가진 개별 도메인이 포함된 복합 도메인을 가져오는 경우에도 마찬가지입니다.  
   
-##  <a name="BeforeYouBegin"></a>시작 하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a>사전  
+###  <a name="Prerequisites"></a> 필수 조건  
  .dqs 파일에서 도메인을 가져오려면 단일 도메인 하나 또는 복합 도메인 하나(여러 단일 도메인 포함)를 .dqs 파일로 이미 내보낸 상태여야 합니다. .dqs 파일에는 도메인이 하나만 포함되어야 합니다. 또한 도메인을 가져올 기술 자료를 만들고 열어 두어야 합니다.  
   
-###  <a name="Security"></a>보안  
+###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a>권한에  
+####  <a name="Permissions"></a> 권한  
  .dqs 데이터 파일에서 도메인을 가져오려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
 ##  <a name="Import"></a>Dqs 파일에서 도메인 가져오기  

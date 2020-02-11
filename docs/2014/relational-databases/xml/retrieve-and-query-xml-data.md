@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0f556bfccdd117b23db36bb9551e885f4c38614e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63241206"
 ---
 # <a name="retrieve-and-query-xml-data"></a>XML 데이터 검색 및 쿼리
@@ -27,7 +27,7 @@ ms.locfileid: "63241206"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 XML 인스턴스의 내용을 보존하지만 XML 데이터 모델에서 중요하다고 간주되지 않는 XML 인스턴스의 측면은 보존하지 않습니다. 즉, 검색된 XML 인스턴스는 서버에 저장된 인스턴스와 다를 수 있지만 동일한 정보를 포함한다는 의미입니다.  
   
 ### <a name="xml-declaration"></a>XML 선언  
- 인스턴스가 데이터베이스에 저장될 때 인스턴스에 있는 XML 선언이 보존되지 않습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ 인스턴스가 데이터베이스에 저장될 때 인스턴스에 있는 XML 선언이 보존되지 않습니다. 다음은 그 예입니다.  
   
 ```  
 CREATE TABLE T1 (Col1 int primary key, Col2 xml)  
@@ -40,11 +40,12 @@ FROM T1
   
  결과는 `<doc/>`입니다.  
   
- XML 데이터가 `xml` 데이터 형식 인스턴스에 저장될 때 `<?xml version='1.0'?>`과 같은 XML 선언이 보존되지 않습니다. 이것은 의도적입니다. XML 선언 () 및 해당 특성 (버전/encoding/stand-alone) 없어진다 데이터 형식으로 변환 됩니다 `xml`합니다. XML 선언은 XML 파서에 대한 지시어로 취급됩니다. XML 데이터는 내부적으로 ucs-2로 저장되며 XML 인스턴스의 다른 모든 PI는 보존됩니다.  
+ XML 데이터가 `<?xml version='1.0'?>` 데이터 형식 인스턴스에 저장될 때 `xml`과 같은 XML 선언이 보존되지 않습니다. 이것은 의도적인 것입니다. XML 선언 () 및 해당 특성 (버전/인코딩/독립 실행형)은 데이터가 형식 `xml`으로 변환 된 후 손실 됩니다. XML 선언은 XML 파서에 대한 지시어로 취급됩니다. XML 데이터는 내부적으로 ucs-2로 저장되며 XML 인스턴스의 다른 모든 PI는 보존됩니다.  
   
   
 ### <a name="order-of-attributes"></a>특성 순서  
- XML 인스턴스의 특성 순서는 보존되지 않습니다. `xml` 유형의 열에 저장된 XML 인스턴스를 쿼리할 때 결과 XML의 특성 순서는 원래 XML 인스턴스와 다를 수 있습니다.  
+ XML 인스턴스의 특성 순서는 보존되지 않습니다. 
+  `xml` 유형의 열에 저장된 XML 인스턴스를 쿼리할 때 결과 XML의 특성 순서는 원래 XML 인스턴스와 다를 수 있습니다.  
   
   
 ### <a name="quotation-marks-around-attribute-values"></a>따옴표로 묶는 특성 값  
@@ -67,7 +68,8 @@ GO
   
   
 ### <a name="namespace-prefixes"></a>네임스페이스 접두사  
- 네임스페이스 접두사는 유지되지 않습니다. `xml` 유형의 열에 대해 XQuery를 지정하는 경우 직렬화된 XML 결과는 다른 네임스페이스 접두사를 반환할 수 있습니다.  
+ 네임스페이스 접두사는 유지되지 않습니다. 
+  `xml` 유형의 열에 대해 XQuery를 지정하는 경우 직렬화된 XML 결과는 다른 네임스페이스 접두사를 반환할 수 있습니다.  
   
 ```  
 DECLARE @x xml  
@@ -79,7 +81,7 @@ SELECT @x.query('/*')
 GO  
 ```  
   
- 결과의 네임스페이스 접두사는 다를 수 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ 결과의 네임스페이스 접두사는 다를 수 있습니다. 다음은 그 예입니다.  
   
 ```  
 <p1:root xmlns:p1="abc"><p1:SomeElement/></p1:root>  
@@ -87,22 +89,22 @@ GO
   
   
 ##  <a name="query"></a> 필수 쿼리 옵션 설정  
- 쿼리할 때 `xml` 유형의 열 또는 변수를 사용 하 여 `xml` 표시 된 것 처럼 데이터 형식 메서드를 다음 옵션을 설정 해야 합니다.  
+ 데이터 형식 `xml` 메서드를 사용 하 여 `xml` 형식 열 또는 변수를 쿼리할 때는 다음 옵션을 표시 된 대로 설정 해야 합니다.  
   
 |SET 옵션|필요한 값|  
 |-----------------|---------------------|  
-|ANSI_NULLS|ON|  
-|ANSI_PADDING|ON|  
-|ANSI_WARNINGS|ON|  
-|ARITHABORT|ON|  
-|CONCAT_NULL_YIELDS_NULL|ON|  
+|ANSI_NULLS|켜기|  
+|ANSI_PADDING|켜기|  
+|ANSI_WARNINGS|켜기|  
+|ARITHABORT|켜기|  
+|CONCAT_NULL_YIELDS_NULL|켜기|  
 |NUMERIC_ROUNDABORT|OFF|  
-|QUOTED_IDENTIFIER|ON|  
+|QUOTED_IDENTIFIER|켜기|  
   
- 에 표시 된 대로, 쿼리 및 수정 옵션을 설정 하지 않으면 `xml` 데이터 형식 메서드가 실패 합니다.  
+ 옵션이 표시 된 대로 설정 되어 있지 않으면 데이터 형식 메서드에 대 `xml` 한 쿼리 및 수정이 실패 합니다.  
   
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 데이터 인스턴스 만들기](create-instances-of-xml-data.md)  
   
   

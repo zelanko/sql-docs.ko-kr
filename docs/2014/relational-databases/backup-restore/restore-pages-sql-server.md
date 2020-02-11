@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f45fe94756ffa30a458aabbb078f6b01c9821918
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62921035"
 ---
 # <a name="restore-pages-sql-server"></a>페이지 복원(SQL Server)
@@ -43,7 +43,7 @@ ms.locfileid: "62921035"
   
 -   **페이지를 복원하려면**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62921035"
   
     -   트랜잭션 로그  
   
-    -   할당 페이지: 전역 할당 맵 (GAM) 페이지, 공유 전역 할당 맵 (SGAM) 페이지 및 페이지 여유 공간 (PFS) 페이지.  
+    -   할당 페이지: GAM(전역 할당 맵) 페이지, SGAM(공유 전역 할당 맵) 페이지 및 PFS(페이지 여유 공간) 페이지.  
   
     -   모든 데이터 파일의 0페이지(파일 부트 페이지)  
   
@@ -99,7 +99,7 @@ ms.locfileid: "62921035"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  복원할 데이터베이스가 없으면 CREATE DATABASE 권한이 있어야 RESTORE를 실행할 수 있습니다. 데이터베이스가 있으면 RESTORE 권한은 기본적으로 **sysadmin** 및 **dbcreator** 고정 서버 역할의 멤버와 데이터베이스의 소유자(**dbo**)에 설정됩니다. FROM DATABASE_SNAPSHOT 옵션의 경우 데이터베이스가 항상 있습니다.  
   
  멤버 자격 정보를 서버에서 항상 사용할 수 있는 역할에 RESTORE 권한이 제공됩니다. 고정 데이터베이스 역할의 멤버 자격은 데이터베이스가 액세스 가능한 상태이며 손상되지 않은 경우에만 확인할 수 있는데, RESTORE 실행 시 데이터베이스가 항상 이러한 상태인 것은 아니므로 **db_owner** 고정 데이터베이스 역할의 멤버에게는 RESTORE 권한이 없습니다.  
@@ -118,14 +118,14 @@ ms.locfileid: "62921035"
      **복원**  
      이 섹션은 **데이터베이스 복원(일반 페이지)** 의 [복원 위치](../../integration-services/general-page-of-integration-services-designers-options.md)와 동일한 기능을 수행합니다.  
   
-     **데이터베이스 백업**  
+     **Database**  
      복원할 데이터베이스를 지정합니다. 새 데이터베이스를 입력하거나 드롭다운 목록에서 기존 데이터베이스를 선택할 수 있습니다. 이 목록에는 시스템 데이터베이스인 **master** 및 **tempdb**를 제외한 서버의 모든 데이터베이스가 포함되어 있습니다.  
   
     > [!WARNING]  
     >  암호로 보호된 백업을 복원하려면 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) 문을 사용해야 합니다.  
   
      **비상 로그 백업**  
-     **백업 장치** 에서 데이터베이스에 대한 비상 로그 백업이 저장될 파일 이름을 입력하거나 선택합니다.  
+     **백업 디바이스** 에서 데이터베이스에 대한 비상 로그 백업이 저장될 파일 이름을 입력하거나 선택합니다.  
   
      **백업 세트**  
      이 섹션에는 복원에 관련된 백업 세트가 표시됩니다.  
@@ -133,10 +133,10 @@ ms.locfileid: "62921035"
     |헤더|값|  
     |------------|------------|  
     |**이름**|백업 세트의 이름입니다.|  
-    |**구성 요소**|백업 구성 요소: **데이터베이스**, **파일** 또는 **\<blank>** (트랜잭션 로그의 경우)가 될 수 있습니다.|  
-    |**형식**|수행 된 백업 유형: **전체**, **차등** 또는 **트랜잭션 로그**가 될 수 있습니다.|  
+    |**구성 요소**|백업된 구성 요소: **데이터베이스**, **파일** 또는 **\<비어 있음>** (트랜잭션 로그의 경우)이 될 수 있습니다.|  
+    |**형식**|수행된 백업 유형입니다. **전체**, **차등**또는 **트랜잭션 로그**일 수 있습니다.|  
     |**Server**|백업 작업을 수행한 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스의 이름입니다.|  
-    |**데이터베이스 백업**|백업 작업과 관련된 데이터베이스의 이름입니다.|  
+    |**Database**|백업 작업과 관련된 데이터베이스의 이름입니다.|  
     |**위치**|볼륨에 있는 백업 세트의 위치입니다.|  
     |**첫 번째 LSN**|백업 세트에 있는 첫 번째 트랜잭션의 LSN(로그 시퀀스 번호)입니다. 파일 백업의 경우 비워 둡니다.|  
     |**마지막 LSN**|백업 세트에 있는 마지막 트랜잭션의 LSN(로그 시퀀스 번호)입니다. 파일 백업의 경우 비워 둡니다.|  
@@ -217,7 +217,7 @@ RESTORE LOG <database> FROM <new_log_backup> WITH RECOVERY;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [RESTORE&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [트랜잭션 로그 백업 적용&#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [suspect_pages 테이블 관리&#40;SQL Server&#41;](manage-the-suspect-pages-table-sql-server.md)   

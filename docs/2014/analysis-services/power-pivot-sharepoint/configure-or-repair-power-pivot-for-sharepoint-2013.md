@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac41915ab4b94f1b074874228a14f5ab6363604c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229348"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2013-powerpivot-configuration-tool"></a>SharePoint 2013용 PowerPivot 구성 또는 복구(PowerPivot 구성 도구)
@@ -23,7 +23,7 @@ ms.locfileid: "75229348"
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013  
   
- **이 항목의 내용:**  
+ **항목 내용**  
   
  [시작하기 전에](#bkmk_before)  
   
@@ -60,12 +60,12 @@ ms.locfileid: "75229348"
   
  ![SharePoint용 PowerPivot 2013 구성 도구](../media/ssas-powerpivot-configtool-4-sharepoint2013-mainpage-configure.gif "SharePoint 2013용 PowerPivot 구성 도구")  
   
-||설명|  
+||Description|  
 |-|-----------------|  
-|**(1**|작업 목록 창|  
+|**(1)**|작업 목록 창|  
 |**fs**|개별 동작|  
-|**3**|구성 도구로 만든 Windows PowerShell 스크립트|  
-|**3-4**|유효성 검사를 시작하거나 동작을 실행할 때 생성된 로그 메시지|  
+|**(3)**|구성 도구로 만든 Windows PowerShell 스크립트|  
+|**(4)**|유효성 검사를 시작하거나 동작을 실행할 때 생성된 로그 메시지|  
 |**5**|페이지에 대한 설명|  
 |**6**|입력 매개 변수|  
 |**일**|
@@ -117,7 +117,7 @@ ms.locfileid: "75229348"
   
  다음 표에서는 서버를 구성하는 데 사용되는 값에 대해 설명합니다.  
   
-|Page|입력 값|원본|설명|  
+|호출|입력 값|원본|Description|  
 |----------|-----------------|------------|-----------------|  
 |**SharePoint 용 구성 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 또는 복구**|기본 계정|현재 사용자|기본 계정은 팜에서 공유 서비스를 프로비전하는 데 사용되는 도메인 Windows 사용자 계정입니다. 다음을 프로비전하는 데 사용됩니다.<br />[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]서비스 응용 프로그램<br />보안 저장소 서비스<br />Excel Services<br />웹 애플리케이션 풀 ID<br />사이트 모음 관리자<br />
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 무인 데이터 새로 고침 계정<br /><br /> 기본적으로 현재 사용자의 도메인 계정을 사용합니다. 평가 및 비프로덕션용으로 서버를 구성하는 경우 이외에는 기본값을 바꾸는 것이 좋습니다. 중앙 관리를 사용하여 서비스 ID를 변경할 수 있습니다. 필요에 따라 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구에서 다음에 대한 전용 계정을 지정합니다.<br /><br /> **기본 웹 응용 프로그램 만들기** 페이지를 사용 하는 웹 응용 프로그램 (도구가 팜에 대 한 웹 응용 프로그램을 만드는 것으로 가정)<br />[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]무인 데이터 새로 고침 계정 (이 도구의 **데이터 새로 고침을 위한 무인 계정 만들기** 페이지 사용)|  
@@ -126,10 +126,10 @@ ms.locfileid: "75229348"
 ||SharePoint 중앙 관리 포트|필요한 경우 기본값|팜이 구성되지 않은 경우 이 도구는 중앙 관리에 대한 HTTP 엔드포인트 만들기를 포함하여 팜을 만들 수 있는 옵션을 제공합니다. 이 도구는 사용 중이 아닌 임의로 생성된 포트 번호를 선택합니다.|  
 ||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]for Excel Services ([ServerName] \ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])|사용자 입력|Excel Services에서 핵심 PowerPivot 기능을 사용하려면 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버가 필요합니다. 이 페이지에 입력하는 서버 이름은 **PowerPivot 서버 구성** 페이지의 목록에도 추가됩니다.|  
 |**새 팜 구성**|데이터베이스 서버<br /><br /> 팜 계정<br /><br /> 암호<br /><br /> SharePoint 중앙 관리 포트|필요한 경우 기본값|메인 페이지에 입력한 내용을 기본 설정으로 사용합니다.|  
-|**PowerPivot 서비스 애플리케이션 만들기**|서비스 애플리케이션 이름|Default|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]서비스 응용 프로그램 이름입니다. 기본 이름은 **기본 PowerPivot 서비스 응용 프로그램**입니다. 도구에서 다른 값을 바꿀 수 있습니다.|  
-||데이터베이스 서버|Default|
+|**PowerPivot 서비스 애플리케이션 만들기**|서비스 애플리케이션 이름|기본값|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]서비스 응용 프로그램 이름입니다. 기본 이름은 **기본 PowerPivot 서비스 응용 프로그램**입니다. 도구에서 다른 값을 바꿀 수 있습니다.|  
+||데이터베이스 서버|기본값|
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 애플리케이션 데이터베이스를 호스팅할 데이터베이스 서버입니다. 기본 서버 이름은 팜에 사용되는 데이터베이스 서버와 같습니다. 기본 서버 이름이 아닌 다른 값으로 바꿀 수 있습니다.|  
-||데이터베이스 이름|Default|
+||데이터베이스 이름|기본값|
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 애플리케이션 데이터베이스에 대해 만들려는 데이터베이스의 이름입니다. 기본 데이터베이스 이름은 서비스 애플리케이션 이름을 기반으로 하며 고유의 이름을 GUID가 뒤에 나옵니다. 도구에서 다른 값을 바꿀 수 있습니다.|  
 |**기본 웹 응용 프로그램 만들기**|웹 애플리케이션 이름|필요한 경우 기본값|웹 애플리케이션이 없는 경우 도구에서 만들어집니다. 웹 애플리케이션이 클래식 모드 인증에 대해 구성되고 포트 80에서 수신합니다. 최대 파일 업로드 크기는 SharePoint에서 허용되는 최대값인 2047로 설정됩니다. 더 큰 파일 업로드 크기는 서버에 업로드되는 큰 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 파일을 수용하기 위한 것입니다.|  
 ||URL|필요한 경우 기본값|도구는 SharePoint와 동일한 파일 명명 규칙을 사용하여 서버 이름을 기반으로 URL을 만듭니다.|  
