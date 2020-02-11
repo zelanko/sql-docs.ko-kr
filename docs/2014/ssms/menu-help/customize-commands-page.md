@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 805d500f33c661756d211f081254608eb389f298
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62470020"
 ---
 # <a name="customize-commands-page"></a>사용자 지정(명령 페이지)
@@ -26,7 +26,7 @@ ms.locfileid: "62470020"
  **범주**  
  **명령** 목록 상자에 표시되는 명령 집합을 지정합니다. 명령의 범주는 현재 환경이 지원하는 도구와 디자이너에서 제공하는 메뉴 제목에 따라 결정됩니다. 이 제목 목록은 동적이며 도구와 디자이너 및 해당 도구와 디자이너에 적용된 사용자 지정에 따라 범주 및 메뉴 제목의 순서가 바뀝니다. 따라서 디자이너에 따라 서로 다른 메뉴의 이름이 같을 수도 있기 때문에 같은 제목이 두 번 표시되더라도 제공하는 명령 집합은 다를 수 있습니다.  
   
- **도구**  
+ **명령**  
  선택한 범주를 기준으로 명령과 명령 이미지를 표시합니다. 명령을 도구 모음으로 끌어 사용자 지정할 수 있습니다.  
   
  **선택 사항 수정**  
@@ -38,5 +38,5 @@ ms.locfileid: "62470020"
  **키보드**  
  명령에 대한 바로 가기 키 조합을 지정할 수 있는 **옵션** 대화 상자의 **키보드** 페이지를 표시합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [메뉴 및 바로 가기 키 사용자 지정](../customize-menus-and-shortcut-keys.md)  

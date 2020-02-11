@@ -15,11 +15,11 @@ ms.assetid: 863837be-603b-4c7a-8b96-b71014037ee5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 646d2724489140080a673f31e22429cc7ca39d4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68022108"
 ---
 # <a name="value-list-arguments"></a>값 목록 인수
-값 목록 인수를 일치 하는 데 사용할 쉼표로 구분 된 값 목록으로 구성 됩니다. ODBC 카탈로그 함수에 하나의 값만 목록 인수: 합니다 *TableType* 에서 인수 **SQLTables**합니다. 설정 *TableType* null 포인터로 동일 값 목록의 모든 가능한 멤버를 열거 하는 SQL_ALL_TABLE_TYPES로 설정 된 경우. 이 인수 SQL_ATTR_METADATA_ID 문 특성을 받지 않습니다. 자세한 내용은 참조는 [SQLTables](../../../odbc/reference/syntax/sqltables-function.md) 함수 설명 합니다.
+값 목록 인수는 일치에 사용할 쉼표로 구분 된 값 목록으로 구성 됩니다. ODBC 카탈로그 함수에는 값 목록 인수가 하나 뿐입니다. **Sqltables**의 *TableType* 인수입니다. *TableType* 를 null 포인터로 설정 하는 것은 값 목록에서 가능한 모든 멤버를 열거 하는 SQL_ALL_TABLE_TYPES로 설정 된 것과 동일 합니다. 이 인수는 SQL_ATTR_METADATA_ID statement 특성의 영향을 받지 않습니다. 자세한 내용은 [Sqltables](../../../odbc/reference/syntax/sqltables-function.md) 함수 설명을 참조 하세요.

@@ -1,5 +1,5 @@
 ---
-title: 데이터를 삽입 하는 SQLSetPos 호출 | Microsoft Docs
+title: SQLSetPos를 호출 하 여 데이터 삽입 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ ms.assetid: 03e5c4d0-2bb3-4649-9781-89cab73f78eb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e07bf71f0d622ad9095974cd7020001625edf1f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037710"
 ---
 # <a name="calling-sqlsetpos-to-insert-data"></a>SQLSetPos를 호출하여 데이터 삽입
-때 ODBC *2.x* ODBC를 사용 하는 응용 프로그램 *3.x* 드라이버 호출 **SQLSetPos** 사용 하 여는 *작업* SQL_ADD, 인수는 드라이버 관리자에이 호출으로 매핑되지 **SQLBulkOperations**합니다. 경우 ODBC *3.x* 드라이버를 호출 하는 응용 프로그램과 함께 작동 해야 **SQLSetPos** 드라이버 SQL_ADD를 사용 하 여 해당 작업을 지원 해야 합니다.  
+Odbc 2.x 드라이버를 사용 하 여 작업 하 *는 odbc* *2.x 응용 프로그램이* SQL_ADD의 *작업* 인수를 사용 하 여 **SQLSetPos** 를 호출 하면 드라이버 관리자는이 호출을 **SQLBulkOperations**에 매핑하지 않습니다. ODBC 3.x 드라이버가 SQL_ADD를 사용 하 여 **SQLSetPos** 를 호출 하는 응용 프로그램에서 작동 해야 하는 경우 드라이버에서 해당 작업을 지원 해야 *합니다.*  
   
- 동작에서 한 가지 주요 차이점 때 **SQLSetPos** 와 라고 SQL_ADD S6 상태에서 호출 될 때 발생 합니다. Odbc에서 *2.x*, 드라이버 반환 S1010 때 **SQLSetPos** S6 상태의 SQL_ADD로 호출 되었습니다 (커서를 사용 하 여 배치 된 후 **SQLFetch**). Odbc에서 *3.x*를 **SQLBulkOperations** 사용 하 여는 *작업* SQL_ADD의 S6 상태의 호출할 수 있습니다. 동작의 두 번째 주요 차이점 **SQLBulkOperations** 사용 하 여는 *작업* SQL_ADD의 S5 상태의 호출 하는 동안 **SQLSetPos** 사용 하 여는  **작업** SQL_ADD의 수 없습니다. ODBC의 호출에서는 동일한 경우에 발생할 수 있는 문 전환 *3.x*를 참조 하세요 [부록 b: ODBC 상태 전환 테이블](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)합니다.
+ **SQLSetPos** 를 호출할 때 동작의 한 가지 주요 차이점은 S6 상태에서 호출 될 때 SQL_ADD 발생 합니다. ODBC 2.x에서 드라이버가 **Sqlfetch**를 사용 하 여 커서가 배치 된 후에 상태 S6에서 SQL_ADD를 사용 하 여 **SQLSetPos** *를 호출*하면 드라이버가 S1010를 반환 했습니다. ODBC 3.x에서 SQL_ADD *작업* *을 사용*하는 **SQLBulkOperations** 는 S6 상태에서 호출할 수 있습니다. 두 번째 주요 차이점은 SQL_ADD *작업* 을 사용 하는 **SQLBulkOperations** 은 S5 상태에서 호출 될 수 있지만, SQL_ADD **작업** 을 사용 하는 **SQLSetPos** 는 사용할 수 없다는 것입니다. ODBC 3.x에서 동일한 호출에 대해 발생할 수 있는 문 전환의 *경우* [부록 B: Odbc 상태 전환 표](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)를 참조 하세요.

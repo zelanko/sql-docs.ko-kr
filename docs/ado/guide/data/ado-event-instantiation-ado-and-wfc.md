@@ -11,10 +11,10 @@ ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7dbbbf92c751093d2a7333b7ac1f76888d41d345
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70212335"
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>ADO 이벤트 인스턴스: ADO 및 WFC
@@ -65,4 +65,4 @@ Windows Foundation 클래스 (ADO/WFC) 용 ADO는 ADO 이벤트 모델을 기반
  [ADO-WFC 구문 인덱스](../../../ado/reference/ado-api/ado-wfc-syntax-index.md)   
  [이벤트 매개 변수](../../../ado/guide/data/event-parameters.md)   
  [이벤트 처리기가 함께 작동 하는 방법](../../../ado/guide/data/how-event-handlers-work-together.md)   
- [이벤트 유형](../../../ado/guide/data/types-of-events.md)
+ [이벤트 형식](../../../ado/guide/data/types-of-events.md)

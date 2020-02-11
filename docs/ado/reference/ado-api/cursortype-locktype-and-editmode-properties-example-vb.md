@@ -1,5 +1,5 @@
 ---
-title: CursorType, LockType, EditMode 속성 예제 (VB) | Microsoft Docs
+title: CursorType, LockType 및 EditMode 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 2cb4a304-f40a-4897-8b93-82c2d8e93500
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4556a243206d373a110aaab6a56bd43bf487abff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919274"
 ---
-# <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>CursorType, LockType, EditMode 속성 예제 (VB)
-이 예제에서는 설정 합니다 [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) 및 [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) 열기 전에 속성을 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다. 값도 표시 합니다 [EditMode](../../../ado/reference/ado-api/editmode-property.md) 다양 한 조건 속성입니다. EditModeOutput 함수는이 절차를 실행 하려면 필요 합니다.  
+# <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>CursorType, LockType 및 EditMode 속성 예제 (VB)
+이 예에서는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)을 열기 전에 [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) 및 [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) 속성을 설정 하는 방법을 보여 줍니다. 또한 다양 한 조건에서 [EditMode](../../../ado/reference/ado-api/editmode-property.md) 속성의 값을 보여 줍니다. 이 프로시저를 실행 하려면 EditModeOutput 함수가 필요 합니다.  
   
 ```  
 'BeginEditModeVB  
@@ -122,7 +122,7 @@ End Function
 'EndEditModeVB  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [CursorType 속성 (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
  [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md)   
  [EditMode 속성](../../../ado/reference/ado-api/editmode-property.md)   

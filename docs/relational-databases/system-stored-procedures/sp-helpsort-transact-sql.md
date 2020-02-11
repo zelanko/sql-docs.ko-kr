@@ -1,5 +1,5 @@
 ---
-title: sp_helpsort (TRANSACT-SQL) | Microsoft Docs
+title: sp_helpsort (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,18 +19,19 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 511b5b8f01a96f860d9f0c4266f92b323e6f1240
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67997358"
 ---
-# <a name="sphelpsort-transact-sql"></a>sp_helpsort(Transact-SQL)
+# <a name="sp_helpsort-transact-sql"></a>sp_helpsort(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 정렬 순서와 문자 집합을 표시합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,7 +47,7 @@ sp_helpsort
  서버의 기본 데이터 정렬을 반환합니다.  
   
 ## <a name="remarks"></a>설명  
- 인스턴스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 이전 설치와 호환 되도록 지정 된 데이터 정렬으로 설치 되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **sp_helpsort** 빈 결과 반환 합니다. 이 동작이 발생 하면 같은 SERVERPROPERTY 개체를 쿼리하여 데이터 정렬을 확인할 수 있습니다: `SELECT SERVERPROPERTY ('Collation');`합니다.  
+ 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 설치와 호환 되도록 지정 된 데이터 정렬을 사용 하 여 인스턴스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치 하면 **sp_helpsort** 빈 결과를 반환 합니다. 이 동작이 발생할 때 SERVERPROPERTY 개체 (예: `SELECT SERVERPROPERTY ('Collation');`)를 쿼리하여 데이터 정렬을 확인할 수 있습니다.  
   
 ## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
@@ -66,9 +67,9 @@ sp_helpsort;
   
  `Latin1-General, case-sensitive, accent-sensitive, kanatype-insensitive, width-insensitive for Unicode Data, SQL Server Sort Order 51 on Code Page 1252 for non-Unicode Data.`  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [데이터베이스 엔진 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [COLLATE&#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
  [sys.fn_helpcollations&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)   
  [SERVERPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)  

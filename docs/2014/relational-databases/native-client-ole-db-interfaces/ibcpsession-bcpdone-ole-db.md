@@ -1,5 +1,5 @@
 ---
-title: 'Ibcpsession:: Bcpdone (OLE DB) | Microsoft Docs'
+title: 'IBCPSession:: BCPDone (OLE DB) | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ecbf8d8b11e0804c3621163d38e243bd78259e43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62743199"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone(OLE DB)
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 보낼 나머지 행을 커밋합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -33,8 +34,10 @@ ms.locfileid: "62743199"
 HRESULT BCPDone(void);  
 ```  
   
-## <a name="remarks"></a>Remarks  
- **BCPDone** 메서드를 호출한 후에는 [IBCPSession](ibcpsession-ole-db.md) 인터페이스에 대해 다른 작업을 호출할 수 없습니다. [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) 메서드를 호출하여 새 대량 복사 작업을 시작하는 것만 가능합니다. 이 동작은 [IRowsetFastLoad::Commit](irowsetfastload-commit-ole-db.md) 메서드를 호출하는 것과 유사합니다.  
+## <a name="remarks"></a>설명  
+ 
+  [BCPDone](ibcpsession-ole-db.md) 메서드를 호출한 후에는 **IBCPSession** 인터페이스에 대해 다른 작업을 호출할 수 없습니다. 
+  [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) 메서드를 호출하여 새 대량 복사 작업을 시작하는 것만 가능합니다. 이 동작은 [IRowsetFastLoad::Commit](irowsetfastload-commit-ole-db.md) 메서드를 호출하는 것과 유사합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  S_OK  
@@ -62,7 +65,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  BCP를 사용하여 이 데이터를 테이블에 다시 추가할 수 있습니다. 예를 들어 다음 명령을 사용할 수 있습니다.  
   
- **bcp master..fltest in outfile.dat -n -T -S** *서버*  
+ **bcp 마스터. 출력 자-n-T-S 서버에서 fltest** **  
   
  이 예제를 컴파일할 때 sqlncli11.lib를 지정해야 합니다.  
   
@@ -461,7 +464,7 @@ void wmain() {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [IBCPSession &#40;OLE DB&#41;](ibcpsession-ole-db.md)   
  [대량 복사 작업 수행](../native-client/features/performing-bulk-copy-operations.md)  
   

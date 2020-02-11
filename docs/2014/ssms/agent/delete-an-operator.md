@@ -19,14 +19,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1d3791cc5250442555dd9b090dda549fe2b9feec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524389"
 ---
 # <a name="delete-an-operator"></a>Delete an Operator
-  이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 운영자를 제거하여 더 이상 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고 알림을 받지 않도록 설정하는 방법에 대해 설명합니다.  
+  이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 항목에서는 또는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용 하 여에서 에이전트 경고 알림을 더 이상 수신 하지 않도록 운영자를 제거 하는 방법에 대해 설명 합니다.  
   
  **항목 내용**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62524389"
   
      [보안](#Security)  
   
--   **운영자를 삭제하려면:**  
+-   **다음을 사용 하 여 운영자를 삭제 합니다.**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -49,14 +49,16 @@ ms.locfileid: "62524389"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
- **sysadmin** 고정 서버 역할의 멤버는 운영자를 삭제할 수 있습니다.  
+####  <a name="Permissions"></a> 권한  
+ 
+  **sysadmin** 고정 서버 역할의 멤버는 운영자를 삭제할 수 있습니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-delete-an-operator"></a>운영자를 삭제하려면  
   
-1.  **개체 탐색기**에서 더하기 기호를 클릭하여 삭제할 운영자가 들어 있는 서버를 확장합니다.  
+1.  
+  **개체 탐색기**에서 더하기 기호를 클릭하여 삭제할 운영자가 들어 있는 서버를 확장합니다.  
   
 2.  더하기 기호를 클릭하여 **SQL Server 에이전트**를 확장합니다.  
   
@@ -64,7 +66,8 @@ ms.locfileid: "62524389"
   
 4.  삭제할 운영자를 마우스 오른쪽 단추로 클릭하고 **삭제**를 선택합니다.  
   
-5.  **개체 삭제** 대화 상자에서 올바른 운영자를 선택했는지 확인한 다음 **확인**을 클릭합니다. 삭제한 운영자에게 전송된 경고와 작업을 다른 운영자가 받도록 하려면 **재할당 대상** 을 선택하고 목록에서 운영자를 선택합니다.  
+5.  
+  **개체 삭제** 대화 상자에서 올바른 운영자를 선택했는지 확인한 다음 **확인**을 클릭합니다. 삭제한 운영자에게 전송된 경고와 작업을 다른 운영자가 받도록 하려면 **재할당 대상** 을 선택하고 목록에서 운영자를 선택합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
@@ -86,6 +89,6 @@ ms.locfileid: "62524389"
     GO  
     ```  
   
- 자세한 내용은 [sp_delete_operator &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-operator-transact-sql)합니다.  
+ 자세한 내용은 [sp_delete_operator &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-operator-transact-sql)를 참조 하세요.  
   
   

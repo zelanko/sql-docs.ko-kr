@@ -1,5 +1,5 @@
 ---
-title: sys.remote_data_archive_databases (TRANSACT-SQL) | Microsoft Docs
+title: sys. remote_data_archive_databases (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,24 +19,24 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 339d960a136e9cf939032068c21ec737f4d37ceb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68018202"
 ---
-# <a name="stretch-database-catalog-views---sysremotedataarchivedatabases"></a>카탈로그 뷰-Stretch Database sys.remote_data_archive_databases
+# <a name="stretch-database-catalog-views---sysremote_data_archive_databases"></a>Stretch Database 카탈로그 뷰-sys. remote_data_archive_databases
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  스트레치가 활성화 된 로컬 데이터베이스에서 데이터를 저장 하는 각 원격 데이터베이스에 대해 하나의 행을 포함 합니다.  
+  스트레치 사용 로컬 데이터베이스의 데이터를 저장 하는 각 원격 데이터베이스에 대해 한 행을 포함 합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**remote_database_id**|**int**|자동으로 생성 된 로컬 식별자 원격 데이터베이스의 합니다.|  
+|**remote_database_id**|**int**|원격 데이터베이스의 자동 생성 된 로컬 식별자입니다.|  
 |**remote_database_name**|**sysname**|원격 데이터베이스의 이름입니다.|  
-|**data_source_id**|**int**|원격 서버에 연결할 때 사용할 데이터 원본|  
+|**data_source_id**|**int**|원격 서버에 연결 하는 데 사용 되는 데이터 원본입니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   

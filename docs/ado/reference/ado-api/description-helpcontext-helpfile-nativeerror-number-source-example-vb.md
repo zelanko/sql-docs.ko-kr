@@ -1,5 +1,5 @@
 ---
-title: 오류 개체 속성 예제 (VB) | Microsoft Docs
+title: Error 개체 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -21,14 +21,14 @@ ms.assetid: 5c728458-d85c-497c-afcf-2cfa36c3342a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 90673f82643ae24d242879fb19b748d5d1e3cc43
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919041"
 ---
-# <a name="description-helpcontext-helpfile-nativeerror-number-source-and-sqlstate-properties-example-vb"></a>설명, HelpContext, HelpFile, NativeError, 번호, 원본 및 SQLState 속성 예제 (VB)
-이 예제에서는 오류를 트리거합니다.를 트래핑 하 고 표시 합니다 [설명을](../../../ado/reference/ado-api/description-property.md), [HelpContext](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md), [HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md), [NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md), [ 번호](../../../ado/reference/ado-api/number-property-ado.md), [소스](../../../ado/reference/ado-api/source-property-ado-error.md), 및 [SQLState](../../../ado/reference/ado-api/sqlstate-property.md) 결과 속성 [오류](../../../ado/reference/ado-api/error-object.md) 개체입니다.  
+# <a name="description-helpcontext-helpfile-nativeerror-number-source-and-sqlstate-properties-example-vb"></a>Description, HelpContext, HelpFile, NativeError, Number, Source 및 SQLState 속성 예제 (VB)
+이 예에서는 오류를 트리거하고 트래핑 하 고 결과 [오류](../../../ado/reference/ado-api/error-object.md) 개체의 [Description](../../../ado/reference/ado-api/description-property.md), [HelpContext](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md), [HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md), [NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md), [Number](../../../ado/reference/ado-api/number-property-ado.md), [Source](../../../ado/reference/ado-api/source-property-ado-error.md)및 [SQLState](../../../ado/reference/ado-api/sqlstate-property.md) 속성을 표시 합니다.  
   
 ```  
 'BeginDescriptionVB  
@@ -74,7 +74,7 @@ End Sub
 'EndDescriptionVB  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Description 속성](../../../ado/reference/ado-api/description-property.md)   
  [Error 개체](../../../ado/reference/ado-api/error-object.md)   
  [HelpContext, HelpFile 속성](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   

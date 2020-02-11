@@ -17,14 +17,14 @@ ms.assetid: b3f09bac-4f66-49f6-aa5a-6fbb4fb28338
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 84f1a2f7a80e17571f1b8ad3e63db640fb58dc19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932505"
 ---
 # <a name="getchildren-method-ado"></a>GetChildren 메서드(ADO)
-반환 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 컬렉션의 자식을 나타내는 행이 있는 [레코드](../../../ado/reference/ado-api/record-object-ado.md)합니다.  
+행이 컬렉션 [레코드](../../../ado/reference/ado-api/record-object-ado.md)의 자식을 나타내는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 을 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -33,11 +33,11 @@ ms.locfileid: "67932505"
 Set recordset = record.GetChildren  
 ```  
   
-## <a name="return-value"></a>반환 값  
- A **Recordset** 개체는 각 행이 나타내는 현재 자식 **레코드** 개체입니다. 예를 들어 자식을 **레코드** 나타냅니다 디렉터리는 되도록 파일과 하위 디렉터리의 부모 디렉터리 내에 포함 합니다.  
+## <a name="return-value"></a>Return Value  
+ 각 행이 현재 **Record** 개체의 자식을 나타내는 **레코드 집합** 개체입니다. 예를 들어 디렉터리를 나타내는 **레코드** 의 자식은 부모 디렉터리 내에 포함 된 파일 및 하위 디렉터리입니다.  
   
 ## <a name="remarks"></a>설명  
- 열에 반환 되는 공급자에 따라 결정 **레코드 집합**합니다. 예를 들어, 문서 소스 공급자 리소스를 항상 반환 **레코드 집합**합니다.  
+ 공급자는 반환 된 **레코드 집합**에 존재 하는 열을 결정 합니다. 예를 들어 문서 소스 공급자는 항상 리소스 **레코드 집합**을 반환 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
   

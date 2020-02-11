@@ -1,5 +1,5 @@
 ---
-title: 추적 재생 | Microsoft Docs
+title: 재생 추적 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 69956f6a24ec6f373343cebb4e60fa4ad9fea320
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62740471"
 ---
 # <a name="replay-traces"></a>추적 재생
@@ -33,7 +33,7 @@ ms.locfileid: "62740471"
   
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 사용자 연결 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 시뮬레이션할 수 있는 다중 스레드 재생 엔진을 갖추고 있습니다. 재생 기능은 애플리케이션이나 프로세스 문제 해결에 유용합니다. 문제를 파악하여 수정한 다음에는 수정된 애플리케이션이나 프로세스에 대해 잠재적인 문제가 발견된 추적을 실행하고 원래 추적을 재생한 다음 결과를 비교합니다.  
   
- 추적 재생을 사용 하 여 디버깅 지원는 **중단 점 토글** 및 **커서까지 실행** 옵션에 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **재생** 메뉴. 이 옵션을 사용하면 추적 재생을 짧은 조각으로 분리하고 점차 큰 부분으로 분석 범위를 늘릴 수 있어 긴 스크립트를 분석할 때 유용합니다.  
+ 추적 **재생은** 재생 **메뉴의** 중단점 설정/해제 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **Replay** menu. 이 옵션을 사용하면 추적 재생을 짧은 조각으로 분리하고 점차 큰 부분으로 분석 범위를 늘릴 수 있어 긴 스크립트를 분석할 때 유용합니다.  
   
  추적 재생에 필요한 권한에 대한 자세한 내용은 [SQL Server 프로파일러 실행에 필요한 권한](permissions-required-to-run-sql-server-profiler.md)을 참조하세요.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62740471"
 |[재생 옵션&#40;SQL Server Profiler&#41;](replay-options-sql-server-profiler.md)|**의** 재생 구성 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]대화 상자에서 설정할 수 있는 옵션에 대해 설명합니다.|  
 |[추적 재생에 대한 고려 사항&#40;SQL Server Profiler&#41;](considerations-for-replaying-traces-sql-server-profiler.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 재생할 수 없는 추적 이벤트 및 추적 재생이 서버 성능에 미치는 영향에 대해 설명합니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Distributed Replay](../distributed-replay/sql-server-distributed-replay.md)  
   
   

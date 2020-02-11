@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 9ec9ac3eef28c4deae08d577487599575852c132
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893550"
 ---
 # <a name="unary-operators"></a>단항 연산자
@@ -22,7 +22,7 @@ ms.locfileid: "68893550"
   
  다음 표에서는 MDX가 지원하는 단항 연산자를 나열합니다.  
   
-|Operator|설명|  
+|연산자|Description|  
 |--------------|-----------------|  
 |[-(음수)](../mdx/negative-mdx.md)|숫자 식의 음수 값을 반환합니다.|  
 |[+(양수)](../mdx/positive-mdx.md)|숫자 식의 양수 값을 반환합니다.|  
@@ -42,7 +42,7 @@ WHERE [Product].[Category].[Bikes]
   
  또한 MDX는 특수 단항 연산자를 사용 하 여 [RollupChildren](../mdx/rollupchildren-mdx.md) 함수에서 수행 하는 집계 작업을 결정 합니다. 이러한 특수 단항 연산자에 대 한 자세한 내용은 [차원에 사용자 지정 집계 추가](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension)를 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [Operators &#40;MDX 구문&#41;](../mdx/operators-mdx-syntax.md)  
+## <a name="see-also"></a>참고 항목  
+ [연산자 &#40;MDX 구문&#41;](../mdx/operators-mdx-syntax.md)  
   
   

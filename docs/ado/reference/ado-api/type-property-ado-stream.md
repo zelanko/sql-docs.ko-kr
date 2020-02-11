@@ -1,5 +1,5 @@
 ---
-title: Type 속성 (ADO Stream) | Microsoft Docs
+title: Type 속성 (ADO 스트림) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,26 +18,26 @@ ms.assetid: f6a17e8c-7a28-48d0-bded-76b9e0cf7639
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9b996ba4bedbb4ccf1ccb0453e4da33e09206a18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938234"
 ---
 # <a name="type-property-ado-stream"></a>Type 속성(ADO 스트림)
-에 포함 된 데이터의 형식을 나타내는 합니다 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) (이진 또는 텍스트)입니다.  
+[스트림에](../../../ado/reference/ado-api/stream-object-ado.md) 포함 된 데이터의 형식 (이진 또는 텍스트)을 나타냅니다.  
   
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
- 설정 하거나 반환을 [StreamTypeEnum](../../../ado/reference/ado-api/streamtypeenum.md) 에 포함 된 데이터의 형식을 지정 하는 값을 **Stream** 개체입니다. 기본값은 **adTypeText**합니다. 그러나 이진 데이터는 처음에 새에 기록 하는 경우 빈 **Stream**의 **유형** 로 변경 됩니다 **adTypeBinary**합니다.  
+ **스트림** 개체에 포함 된 데이터의 형식을 지정 하는 [StreamTypeEnum](../../../ado/reference/ado-api/streamtypeenum.md) 값을 설정 하거나 반환 합니다. 기본값은 **adTypeText**입니다. 그러나 처음에는 이진 데이터를 비어 있는 새 **스트림에**쓰면 **형식이** **adtypebinary**로 변경 됩니다.  
   
 ## <a name="remarks"></a>설명  
- **형식** 속성은 읽기/쓰기 시작 부분에는 현재 위치 하는 경우에 합니다 **Stream** ([위치](../../../ado/reference/ado-api/position-property-ado.md) 0), 및 다른 위치에서 읽기 전용입니다.  
+ **형식** 속성은 현재 위치가 **스트림의** 시작 부분에 있는 경우 ([위치](../../../ado/reference/ado-api/position-property-ado.md) 는 0) 다른 위치에서 읽기 전용 인 경우에만 읽기/쓰기입니다.  
   
- **형식** 속성을 읽고 쓰기 위한 메서드를 사용할지 결정 합니다 **Stream**합니다. 텍스트에 대 한 **스트림을**를 사용 하 여 [ReadText](../../../ado/reference/ado-api/readtext-method.md) 하 고 [WriteText](../../../ado/reference/ado-api/writetext-method.md)합니다. 이진 **스트림을**를 사용 하 여 [읽기](../../../ado/reference/ado-api/read-method.md) 및 [작성](../../../ado/reference/ado-api/write-method.md)합니다.  
+ **Type** 속성은 **스트림을**읽고 쓰는 데 사용할 메서드를 결정 합니다. 텍스트 **스트림의**경우 [ReadText](../../../ado/reference/ado-api/readtext-method.md) 및 [WriteText](../../../ado/reference/ado-api/writetext-method.md)를 사용 합니다. 이진 **스트림의**경우 [읽기](../../../ado/reference/ado-api/read-method.md) 및 [쓰기](../../../ado/reference/ado-api/write-method.md)를 사용 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [스트림 개체(ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [RecordType 속성 (ADO)](../../../ado/reference/ado-api/recordtype-property-ado.md)   
  [Type 속성(ADO)](../../../ado/reference/ado-api/type-property-ado.md)

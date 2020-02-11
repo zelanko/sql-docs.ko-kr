@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 35092821d2407e90e550a4351f186de6a585cd64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63071798"
 ---
 # <a name="show-query-properties-visual-database-tools"></a>쿼리 속성 표시(Visual Database Tools)
@@ -31,7 +31,7 @@ ms.locfileid: "63071798"
   
  쿼리의 속성이 **속성** 창에 표시됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [쿼리 관련 기본 작업 수행&#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

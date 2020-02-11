@@ -1,5 +1,5 @@
 ---
-title: sp_refresh_parameter_encryption (TRANSACT-SQL) | Microsoft Docs
+title: sp_refresh_parameter_encryption (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a5f699f21b1f28537da2e2f0033fe6b17908186a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002466"
 ---
-# <a name="sprefreshparameterencryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact SQL)
+# <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-매개 변수는 지정 된 비 스키마 바운드 저장된 프로시저, 사용자 정의 함수, 뷰, DML 트리거, 데이터베이스 수준 DDL 트리거 또는 서버 수준 DDL 트리거가 현재 데이터베이스에서 상시 암호화 메타 데이터를 업데이트합니다. 
+현재 데이터베이스에서 지정 된 비 스키마 바운드 저장 프로시저, 사용자 정의 함수, 뷰, DML 트리거, 데이터베이스 수준 DDL 트리거 또는 서버 수준 DDL 트리거의 매개 변수에 대 한 Always Encrypted 메타 데이터를 업데이트 합니다. 
 
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,9 +46,10 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 ## <a name="arguments"></a>인수
 
-`[ @name = ] 'module_name'` 저장된 프로시저, 사용자 정의 함수, 뷰, DML 트리거, 데이터베이스 수준 DDL 트리거 또는 서버 수준 DDL 트리거 이름이입니다. *module_name* 는 CLR (공용 언어 런타임) 저장 프로시저 또는 CLR 함수 일 수 없습니다. *module_name* 스키마 바인딩할 수 없습니다. *module_name* 는 `nvarchar`, 기본값은 없습니다. *module_name* 다중 부분 식별자가 될 수 있지만 현재 데이터베이스의 개체만 참조할 수 있습니다.
+`[ @name = ] 'module_name'`저장 프로시저, 사용자 정의 함수, 뷰, DML 트리거, 데이터베이스 수준 DDL 트리거 또는 서버 수준 DDL 트리거의 이름입니다. *module_name* 은 clr (공용 언어 런타임) 저장 프로시저 또는 clr 함수가 될 수 없습니다. *module_name* 은 스키마 바인딩될 수 없습니다. *module_name* 는 `nvarchar`이며 기본값은 없습니다. *module_name* 은 여러 부분으로 구성 된 식별자가 될 수 있지만 현재 데이터베이스의 개체만 참조할 수 있습니다.
 
-`[ @namespace = ] ' < class > '` 지정된 된 모듈의 클래스가입니다. 때 *module_name* 이 DDL 트리거인 경우 `<class>` 필요 합니다. `<class>`가 `nvarchar(20)`인 경우 유효한 입력은 `DATABASE_DDL_TRIGGER` 고 `SERVER_DDL_TRIGGER`입니다.    
+`[ @namespace = ] ' < class > '`는 지정 된 모듈의 클래스입니다. *MODULE_NAME* DDL 트리거 인 경우 `<class>` 가 필요 합니다. 
+  `<class>`은 `nvarchar(20)`입니다. 유효한 입력은 `DATABASE_DDL_TRIGGER` 및 `SERVER_DDL_TRIGGER`입니다.    
 
 ## <a name="return-code-values"></a>반환 코드 값  
 
@@ -57,34 +58,34 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 ## <a name="remarks"></a>설명
 
-경우에 모듈의 매개 변수에 대 한 암호화 메타 데이터를 오래 커질 수 있습니다.   
-* 암호화 속성 테이블에 있는 열의 모듈에 대 한 참조를 업데이트 되었습니다. 예를 들어, 삭제 된 열 및 동일한 이름 이지만 다른 암호화 유형을, 암호화 키 또는 암호화 알고리즘을 사용 하 여 새 열이 추가 되었습니다.  
-* 모듈에는 오래 된 매개 변수 암호화 메타 데이터를 사용 하 여 다른 모듈 참조.  
+모듈의 매개 변수에 대 한 암호화 메타 데이터는 다음과 같은 경우 오래 된 상태가 될 수 있습니다.   
+* 모듈에서 참조 하는 테이블에 있는 열의 암호화 속성이 업데이트 되었습니다. 예를 들어 열이 삭제 되 고 이름이 같은 새 열이 있지만 다른 암호화 유형, 암호화 키 또는 암호화 알고리즘이 추가 되었습니다.  
+* 모듈이 오래 된 매개 변수 암호화 메타 데이터를 사용 하는 다른 모듈을 참조 합니다.  
 
-테이블의 암호화 속성을 수정 하는 경우 `sp_refresh_parameter_encryption` 테이블을 직접 또는 간접적으로 참조 하는 모든 모듈에 대 한 실행 해야 합니다. 호출자에 게 진행 하기 전에 사용자가 첫 번째 새로 고침 내부 모듈 없이 순서에 관계 없이 해당 모듈에서이 저장된 프로시저를 호출할 수 있습니다.
+테이블의 암호화 속성이 수정 된 경우에는 `sp_refresh_parameter_encryption` 테이블을 직접 또는 간접적으로 참조 하는 모든 모듈에 대해를 실행 해야 합니다. 이 저장 프로시저는 사용자가 호출자로 이동 하기 전에 먼저 내부 모듈을 새로 고치지 않아도 모든 순서로 해당 모듈에서 호출 될 수 있습니다.
 
-`sp_refresh_parameter_encryption` 확장 속성, 어떠한 사용 권한도 영향을 주지 않습니다 또는 `SET` 개체와 연결 하는 옵션입니다. 
+`sp_refresh_parameter_encryption`는 개체와 연결 된 사용 권한, 확장 속성 `SET` 또는 옵션에는 영향을 주지 않습니다. 
 
 서버 수준 DDL 트리거를 새로 고치려면 아무 데이터베이스 컨텍스트에서 이 저장 프로시저를 실행하세요.
 
 > [!NOTE]
->  실행할 때 개체와 연결 되어 있는 모든 서명이 삭제 됩니다 `sp_refresh_parameter_encryption`합니다.
+>  을 실행 `sp_refresh_parameter_encryption`하면 개체와 연결 된 모든 서명이 삭제 됩니다.
 
 ## <a name="permissions"></a>사용 권한
 
-필요 `ALTER` 모듈에 대 한 권한 및 `REFERENCES` 모든 CLR 사용자 정의 형식 및 개체에 의해 참조 되는 XML 스키마 컬렉션에 대 한 권한이 있습니다.   
+모듈 `ALTER` 에 대 한 `REFERENCES` 권한과 개체에서 참조 하는 모든 CLR 사용자 정의 형식 및 XML 스키마 컬렉션에 대 한 사용 권한이 필요 합니다.   
 
-데이터베이스 수준 DDL 트리거를 지정된 된 모듈을 사용 하는 경우 필요한 `ALTER ANY DATABASE DDL TRIGGER` 현재 데이터베이스의 권한입니다.    
+지정 된 모듈이 데이터베이스 수준 DDL 트리거 인 경우에는 현재 데이터베이스 `ALTER ANY DATABASE DDL TRIGGER` 에 대 한 권한이 필요 합니다.    
 
-서버 수준 DDL 트리거를 지정된 된 모듈을 사용 하는 경우 필요한 `CONTROL SERVER` 권한.
+지정 된 모듈이 서버 수준 DDL 트리거 인 경우에는 권한이 필요 `CONTROL SERVER` 합니다.
 
-정의 된 모듈에 대 한 합니다 `EXECUTE AS` 절 `IMPERSONATE` 지정된 된 보안 주체에 권한이 필요 합니다. 일반적으로 개체를 새로 고치려면 변경 되지 않습니다 해당 `EXECUTE AS` 모듈을 사용 하 여 정의 된 경우가 아니면 주 `EXECUTE AS USER` 및 다른 사용자에 게 확인 수행 했던 것 보다 시 모듈이 만들어진 이제 보안 주체의 사용자 이름입니다.
+`EXECUTE AS` 절로 정의 된 모듈의 경우 지정 된 보안 `IMPERSONATE` 주체에 대 한 권한이 필요 합니다. 일반적으로를 사용 `EXECUTE AS` `EXECUTE AS USER` 하 여 모듈을 정의 하지 않으면 개체를 새로 고치면 해당 보안 주체가 변경 되지 않으며, 보안 주체의 사용자 이름이 모듈이 생성 될 때와 다른 사용자로 확인 됩니다.
  
 ## <a name="examples"></a>예
 
-다음 예제에서는 테이블 및 테이블을 참조 하는 프로시저 상시 암호화를 구성 하 고 다음 테이블을 변경 하 고 실행을 보여 줍니다는 `sp_refresh_parameter_encryption` 프로시저입니다.  
+다음 예에서는 테이블 및 테이블을 참조 하는 프로시저를 만들고 Always Encrypted 구성한 다음 테이블을 변경 하 고 프로시저를 `sp_refresh_parameter_encryption` 실행 하는 방법을 보여 줍니다.  
 
-먼저 초기 테이블 및 테이블을 참조 하는 저장된 프로시저를 만듭니다.
+먼저 테이블을 참조 하는 초기 테이블과 저장 프로시저를 만듭니다.
 ```sql
 CREATE TABLE [Patients]([PatientID] [int] IDENTITY(1,1) NOT NULL,
     [SSN] [char](11), 
@@ -113,7 +114,7 @@ END;
 GO
 ```
 
-상시 암호화 키를 설정 합니다.
+그런 다음 Always Encrypted 키를 설정 합니다.
 ```sql
 CREATE COLUMN MASTER KEY [CMK1]
 WITH
@@ -135,7 +136,7 @@ GO
 ```
 
 
-마지막으로 실행 되 고 암호화 된 열을 사용 하 여 SSN 열을 바꿉니다는 `sp_refresh_parameter_encryption` Always Encrypted 구성 요소를 업데이트 하는 절차입니다.
+마지막으로 SSN 열을 암호화 된 열로 바꾸고 `sp_refresh_parameter_encryption` 프로시저를 실행 하 여 Always Encrypted 구성 요소를 업데이트 합니다.
 ```sql
 ALTER TABLE [Patients] DROP COLUMN [SSN];
 GO
@@ -153,8 +154,8 @@ EXEC sp_refresh_parameter_encryption [find_patient];
 GO
 ```
 
-## <a name="see-also"></a>관련 항목 
+## <a name="see-also"></a>참고 항목 
 
-[상시 암호화](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+[Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
 [Always Encrypted 마법사](../../relational-databases/security/encryption/always-encrypted-wizard.md)   
 

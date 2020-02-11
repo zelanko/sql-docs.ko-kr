@@ -15,16 +15,16 @@ ms.assetid: 59c7cd5e-32d6-43ab-bac3-7010322d105a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bb5f16485312979e9fb2ad6b3a95dacb79b695d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67996174"
 ---
 # <a name="appendix-e-scalar-functions"></a>부록 E: 스칼라 함수
-ODBC이이 부록의 해당 섹션에 제공 된 이러한 함수 형식을 각각에 대 한 자세한 정보를 사용 하 여 다음과 같은 유형의 스칼라 함수를 지정 합니다. 함수 설명에는 연결 된 구문 포함 됩니다.  
+ODBC는 다음과 같은 유형의 스칼라 함수를 지정 하며,이 부록의 해당 섹션에서 제공 하는 각 함수 형식에 대 한 자세한 정보를 제공 합니다. 함수 설명에는 관련 된 구문이 포함 되어 있습니다.  
   
- 이 부록에는 다음 항목에 있습니다.  
+ 이 부록에는 다음 항목이 포함 되어 있습니다.  
   
 -   [문자열 함수](../../../odbc/reference/appendixes/string-functions.md)  
   
@@ -38,11 +38,11 @@ ODBC이이 부록의 해당 섹션에 제공 된 이러한 함수 형식을 각�
   
 -   [SQL-92 CAST 함수](../../../odbc/reference/appendixes/sql-92-cast-function.md)  
   
- 함수는 데이터 소스 관련 경우가 많기 때문에 ODBC 스칼라 함수에서 반환 값에 대 한 데이터 형식을 위임 하지 않습니다. 응용 프로그램 데이터 형식 변환에 적용할 가능한 CONVERT 스칼라 함수를 사용 해야 합니다.  
+ ODBC에서는 스칼라 함수에서 반환 값에 대 한 데이터 형식을 지정 하지 않습니다. 함수는 일반적으로 데이터 소스와 관련 되어 있기 때문입니다. 응용 프로그램은 가능 하면 항상 CONVERT 스칼라 함수를 사용 하 여 데이터 형식 변환을 강제로 수행 해야 합니다.  
   
 ## <a name="odbc-and-sql-92-scalar-functions"></a>ODBC 및 SQL-92 스칼라 함수  
- 이 부록의 표에서 SQL-92에 맞게 ODBC 3.0에서 추가 된 함수를 포함 합니다. ODBC에 정의 된 대로 특정 유형의 스칼라 함수에 대 한 추가 이러한 함수는 각 섹션에 표시 됩니다.  
+ 이 부록의 표에는 SQL-92에 맞게 ODBC 3.0에 추가 된 함수가 포함 되어 있습니다. ODBC에 정의 된 것 처럼 특정 형식의 스칼라 함수에 대해 추가 된 이러한 함수는 각 섹션에 나와 있습니다.  
   
- ODBC 및 SQL-92 다르게 해당 스칼라 함수를 분류 합니다. ODBC 스칼라 함수 인수 형식으로 분류 SQL-92 반환 값으로 분류합니다. 예를 들어, EXTRACT 함수 timedate 함수로 의해 분류 ODBC 필드 추출 인수는 datetime 키워드 이므로 추출 원본 인수는 datetime 또는 간격 식입니다. SQL-92와 다른 한편으로 추출으로 분류 숫자 스칼라 함수인 경우 반환 값은 숫자입니다.  
+ ODBC 및 SQL-92은 스칼라 함수를 다르게 분류 합니다. ODBC에서 스칼라 함수를 인수 형식으로 분류 합니다. SQL-92는 반환 값으로 분류 합니다. 예를 들어 extract 함수는 c #에서 timedate.cpl 함수로 분류 됩니다. 추출 필드 인수는 datetime 키워드이 고 extract 원본 인수는 datetime 또는 interval 식 이기 때문입니다. 반면에 SQL-92는 숫자 스칼라 함수로 EXTRACT를 분류 합니다. 반환 값은 숫자 이기 때문입니다.  
   
- 응용 프로그램에서 드라이버를 호출 하 여 지원 되는 스칼라 함수를 확인할 수 있습니다 **SQLGetInfo**합니다. 정보 유형 ODBC 및 SQL-92 분류 스칼라 함수에 대 한 포함 됩니다. 이러한 분류 다른 이기 때문에 일부 스칼라 함수에 대 한 지원 정보 유형 해당 하지 않는 ODBC 및 SQL-92에에서 표시 될 수 있습니다. 예를 들어 ODBC에서 추출에 대 한 지원을 나타난 SQL_TIMEDATE_FUNCTIONS 정보 형식 반면에 SQL-92에 추출에 대 한 지원은 SQL_SQL92_NUMERIC_VALUE_FUNCTIONS 정보 형식으로 표시 됩니다.
+ 응용 프로그램은 **SQLGetInfo**를 호출 하 여 드라이버가 지 원하는 스칼라 함수를 확인할 수 있습니다. 정보 유형은 ODBC와 스칼라 함수의 SQL-92 분류에 모두 포함 됩니다. 이러한 분류는 서로 다르기 때문에 일부 스칼라 함수에 대 한 지원은 ODBC 및 SQL-92에 해당 하지 않는 정보 형식에 표시 될 수 있습니다. 예를 들어 ODBC에서 추출에 대 한 지원은 SQL_TIMEDATE_FUNCTIONS 정보 형식으로 표시 됩니다. 반면에 SQL-92의 추출에 대 한 지원은 SQL_SQL92_NUMERIC_VALUE_FUNCTIONS 정보 형식으로 표시 됩니다.

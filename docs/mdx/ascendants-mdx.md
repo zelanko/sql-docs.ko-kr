@@ -1,5 +1,5 @@
 ---
-title: Ascendants (MDX) | Microsoft Docs
+title: 상위 항목 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 16c6f812d1d7cae5a81a8e64fb425f4d33f4cb5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017063"
 ---
 # <a name="ascendants-mdx"></a>Ascendants(MDX)
@@ -32,10 +32,10 @@ Ascendants(Member_Expression)
  멤버를 반환하는 유효한 MDX 식입니다.  
   
 ## <a name="remarks"></a>설명  
- 합니다 **상위 항목** 함수 멤버의 계층의 최상위까지 멤버 자체부터 멤버의 상위 항목 모두 반환 합니다; 지정된 된 멤버에 대 한 계층의 후 위 순회 수행 보다 구체적으로, 한 다음 자체를 포함 하 여 집합의 멤버에 관련 된 모든 상위 항목 멤버를 반환 합니다. 이 달리는 합니다 [상위](../mdx/ancestor-mdx.md) 특정 상위 항목 멤버 또는 특정 수준에서 상위 항목을 반환 하는 함수입니다.  
+ **상위 항목** 함수는 멤버의 모든 상위 항목을 멤버 자체에서 멤버 계층의 최상위까지 반환 합니다. 구체적으로 말하면, 지정 된 멤버에 대해 계층 구조의 사후 순서 순회를 수행한 다음 해당 멤버와 관련 된 모든 상위 항목 멤버를 집합에 반환 합니다. 이는 특정 수준에서 특정 상위 항목 멤버 또는 상위 항목을 반환 하는 [상위](../mdx/ancestor-mdx.md) 함수와는 대조적입니다.  
   
 ## <a name="examples"></a>예  
- 다음 예제에 대 한 대리점 주문 수를 반환 합니다.는 `[Sales Territory].[Northwest]` 멤버와 해당 멤버의 모든 상위 항목을 **Adventure Works** 큐브. **상위** 함수를 포함 하는 집합을 구성 합니다 `[Sales Territory].[Northwest]` 멤버 및 ROWS 축에 대 한 해당 상위 항목입니다.  
+ 다음 예에서는 **상위 항목 큐브의 재판매인** 주문 `[Sales Territory].[Northwest]` 수와 해당 멤버의 모든 멤버를 반환 합니다. **상위 항목** 함수는 ROWS 축에 대 한 `[Sales Territory].[Northwest]` 멤버 및 해당 상위 항목를 포함 하는 집합을 생성 합니다.  
   
 ```  
 SELECT  
@@ -50,7 +50,7 @@ FROM
    [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

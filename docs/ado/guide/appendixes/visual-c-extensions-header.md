@@ -16,14 +16,14 @@ ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 675a31ab333a6c2d92e6afcd6a461b3baebd5b3c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926384"
 ---
 # <a name="visual-c-extensions-header"></a>Visual C++ 확장 헤더
-다음 헤더를 **icrsint.h**, 클라이언트가에서 필드를 검색 하도록 허용 하는 인터페이스에 자세히 설명 된 **레코드 집합** 에서 파생 된 클래스에 정의 된 변수로 **CADORecordBinding**. 액세스 하려는 각 필드에 대 한 ADO 바인딩을 매크로 지정 해야 합니다.  
+다음 헤더 **icrsint**는 클라이언트가 **레코드 집합** 의 필드를 **CADORecordBinding**에서 파생 된 클래스에 정의 된 변수로 검색할 수 있도록 하는 인터페이스에 대해 자세히 설명 합니다. 액세스 하려는 각 필드에 대해 ADO 바인딩 매크로를 지정 해야 합니다.  
   
 ```cpp
 #ifndef _ICRSINT_H_  
@@ -207,6 +207,6 @@ public:
 #endif // !_ICRSINT_H_  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Visual C++ 확장 예제](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
  [Visual C++ 확장 사용](../../../ado/guide/appendixes/using-visual-c-extensions.md)

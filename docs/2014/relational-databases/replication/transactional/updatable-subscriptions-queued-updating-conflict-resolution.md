@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b43cdabb83b8f255b315e16b4bbe0d9af1156c51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62655339"
 ---
 # <a name="queued-updating-conflict-detection-and-resolution"></a>Queued Updating Conflict Detection and Resolution
@@ -77,7 +77,7 @@ ms.locfileid: "62655339"
 ### <a name="subscriber-wins"></a>구독자 내용 적용  
  구독자 변경 내용 적용 정책에서 충돌 감지는 게시자 변경 내용 적용 항목을 업데이트하는 마지막 구독자 트랜잭션을 의미합니다. 이 경우 충돌이 감지되면 구독자가 보낸 트랜잭션이 계속 사용되고 게시자가 업데이트됩니다. 이 정책은 이러한 변경 내용이 데이터 무결성을 손상하지 않은 애플리케이션에 적합합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Updatable Subscriptions for Transactional Replication](updatable-subscriptions-for-transactional-replication.md)  
   
   

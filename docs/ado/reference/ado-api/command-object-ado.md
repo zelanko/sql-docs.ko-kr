@@ -1,5 +1,5 @@
 ---
-title: 명령 개체 (ADO) | Microsoft Docs
+title: Command 개체 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,68 +16,68 @@ ms.assetid: a02c22fb-542d-465e-a629-30fd59dcbebf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bbce299e2e9f67b705f940480913c7d8ac367d0d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919793"
 ---
 # <a name="command-object-ado"></a>명령 개체(ADO)
 데이터 원본에 대해 실행 하려는 특정 명령을 정의 합니다.  
   
 ## <a name="remarks"></a>설명  
- 사용 하 여를 **명령** 데이터베이스를 쿼리하고의 레코드를 반환 하는 개체를 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 대량 작업을 실행 하거나 데이터베이스의 구조를 조작 하는 개체. 일부 공급자의 기능에 따라 **명령** 컬렉션, 메서드 또는 속성 참조 될 때 오류를 생성할 수 있습니다.  
+ **명령** 개체를 사용 하 여 데이터베이스를 쿼리하고 레코드 [집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 레코드를 반환 하거나 대량 작업을 실행 하거나 데이터베이스 구조를 조작할 수 있습니다. 공급자의 기능에 따라 일부 **명령** 컬렉션, 메서드 또는 속성을 참조 하는 경우 오류를 생성할 수 있습니다.  
   
- 컬렉션, 메서드 및 속성을 사용 하 여는 **명령** 개체를 다음을 수행할 수 있습니다.  
+ **Command** 개체의 컬렉션, 메서드 및 속성을 사용 하 여 다음을 수행할 수 있습니다.  
   
--   실행 텍스트 명령 (예를 들어, SQL 문)를 사용 하 여 정의 된 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) 속성입니다. 또는 간단한 이외의 명령 또는 쿼리 구조에 대 한 문자열 (예: XML 템플릿 쿼리)를 정의 사용 하 여 명령을 합니다 [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) 속성입니다.  
+-   [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) 속성을 사용 하 여 명령의 실행 파일 텍스트 (예: SQL 문)를 정의 합니다. 또는 단순한 문자열이 아닌 명령 또는 쿼리 구조 (예: XML 템플릿 쿼리)의 경우 [Commandstream](../../../ado/reference/ado-api/commandstream-property-ado.md) 속성을 사용 하 여 명령을 정의 합니다.  
   
--   필요에 따라 사용 되는 명령 언어를 나타내는 합니다 **CommandText** 또는 **CommandStream** 사용 하 여 합니다 [언어](../../../ado/reference/ado-api/dialect-property.md) 속성입니다.  
+-   필요에 따라 [언어](../../../ado/reference/ado-api/dialect-property.md) 속성을 사용 하 여 **CommandText** 또는 **commandstream** 에 사용 되는 명령 언어를 지정 합니다.  
   
--   매개 변수가 있는 쿼리 또는 저장 프로시저 인수를 정의할 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체와 [매개 변수](../../../ado/reference/ado-api/parameters-collection-ado.md) 컬렉션입니다.  
+-   [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체 및 [매개](../../../ado/reference/ado-api/parameters-collection-ado.md) 변수 컬렉션을 사용 하 여 매개 변수가 있는 쿼리 또는 저장 프로시저 인수를 정의 합니다.  
   
--   매개 변수 이름을 사용 하 여 공급자에 전달할지 여부를 표시 합니다 [NamedParameters](../../../ado/reference/ado-api/namedparameters-property-ado.md) 속성입니다.  
+-   [Namedparameters](../../../ado/reference/ado-api/namedparameters-property-ado.md) 속성을 사용 하 여 매개 변수 이름을 공급자에 게 전달할지 여부를 나타냅니다.  
   
--   명령을 실행 하 고 반환 된 **레코드 집합** 개체와 해당 하는 경우를 [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) 메서드.  
+-   명령을 실행 하 고 [execute](../../../ado/reference/ado-api/execute-method-ado-command.md) 메서드에 적절 한 경우 **레코드 집합** 개체를 반환 합니다.  
   
--   사용 하 여 명령의 유형을 지정 합니다 [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) 성능을 최적화 하기 위해 실행 전에 속성입니다.  
+-   성능을 최적화 하기 위해 실행 하기 전에 [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) 속성을 사용 하 여 명령 유형을 지정 합니다.  
   
--   공급자를 사용 하 여 실행 하기 전에 명령의 준비 된 (또는 컴파일된) 버전을 저장할지 여부를 제어 합니다 [Prepared](../../../ado/reference/ado-api/prepared-property-ado.md) 속성입니다.  
+-   [준비](../../../ado/reference/ado-api/prepared-property-ado.md) 된 속성을 사용 하 여 실행 하기 전에 공급자가 명령의 준비 된 버전 (또는 컴파일)을 저장할지 여부를 제어 합니다.  
   
--   명령을 사용 하 여 실행 하는 데 공급자를 대기 하는 시간 (초) 수를 설정 합니다 [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md) 속성입니다.  
+-   [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md) 속성을 사용 하 여 명령이 실행 될 때까지 공급자가 대기할 시간 (초)을 설정 합니다.  
   
--   와 연결 된 연결을 **명령** 개체를 설정 하 여 해당 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) 속성입니다.  
+-   [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) 속성을 설정 하 여 열린 연결을 **명령** 개체와 연결 합니다.  
   
--   설정 합니다 [이름](../../../ado/reference/ado-api/name-property-ado.md) 식별 하는 속성을 **명령** 연결 된 방법으로 개체 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체.  
+-   [이름](../../../ado/reference/ado-api/name-property-ado.md) 속성을 설정 하 여 연결 된 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체에 대 한 메서드로 **명령** 개체를 식별 합니다.  
   
--   전달를 **명령** 개체를 [원본](../../../ado/reference/ado-api/source-property-ado-recordset.md) 의 속성을 **레코드 집합** 데이터를 가져오는.  
+-   **명령** 개체를 **레코드 집합** 의 [원본](../../../ado/reference/ado-api/source-property-ado-recordset.md) 속성에 전달 하 여 데이터를 가져옵니다.  
   
--   공급자별 특성에 액세스 합니다 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션입니다.  
+-   [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션을 사용 하 여 공급자별 특성에 액세스 합니다.  
   
 > [!NOTE]
->  사용 하지 않고 쿼리를 실행 하는 **명령** 개체, 쿼리 문자열을 전달 하는 [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) 메서드를 **연결** 개체 또는 [엽니다](../../../ado/reference/ado-api/open-method-ado-recordset.md)메서드를 **레코드 집합** 개체입니다. 그러나를 **명령** 개체는 명령 텍스트를 유지 하 고 다시 실행 하거나 쿼리 매개 변수를 사용 하려는 경우에 필요 합니다.  
+>  **Command** 개체를 사용 하지 않고 쿼리를 실행 하려면 쿼리 문자열을 **Connection** 개체의 [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) 메서드에 전달 하거나 **레코드 집합** 개체의 [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) 메서드로 전달 합니다. 그러나 명령 텍스트를 유지 하 고 다시 실행 하거나 쿼리 매개 변수를 사용 하려는 경우에는 **command** 개체가 필요 합니다.  
   
- 만들려는 **명령** 독립적으로 미리 정의 된 개체 **연결** 개체, 설정 해당 **ActiveConnection** 유효한 연결 문자열 속성입니다. 만드는 경우 ADO는 **연결** 하지만 개체를 할당 하지 않습니다 해당 개체는 개체 변수입니다. 그러나 여러 연결 하는 경우 **명령** 명시적으로 만들를 열고 동일한 연결을 사용 하 여 개체를 **연결** 개체;이 할당의 **연결** 개체 변수에 개체입니다. 했는지를 **연결** 에 할당 하기 전에 개체가 성공적으로 열렸을 **ActiveConnection** 의 속성을 **명령** 개체를 할당 하기 때문에 닫힌 **연결** 개체 오류가 발생 합니다. 설정 하지 않은 경우는 **ActiveConnection** 의 속성을 **명령** ADO에서는 새 개체를 개체 변수에 **연결** 각각에 대 한 개체  **명령** 개체를 동일한 연결 문자열을 사용 하는 경우에 합니다.  
+ 이전에 정의한 **연결** 개체와는 독립적으로 **Command** 개체를 만들려면 해당 **ActiveConnection** 속성을 유효한 연결 문자열로 설정 합니다. ADO는 여전히 **연결** 개체를 만들지만 개체 변수에는 해당 개체를 할당 하지 않습니다. 그러나 동일한 연결을 사용 하 여 여러 **명령** 개체를 연결 하는 경우에는 명시적으로 **연결** 개체를 만들고 열어야 합니다. 그러면 **연결** 개체가 개체 변수에 할당 됩니다. 닫힌 **연결** 개체를 할당 하면 오류가 발생 하므로 **Command** 개체의 **ActiveConnection** 속성에 연결 개체를 할당 하기 전에 **연결** 개체가 성공적으로 열리는지 확인 합니다. **Command** 개체의 **ActiveConnection** 속성을이 개체 변수로 설정 하지 않으면 동일한 연결 문자열을 사용 하는 경우에도 ADO에서 각 **명령** 개체에 대 한 새 **연결** 개체를 만듭니다.  
   
- 실행 하는 **명령**, 호출 해당 [이름](../../../ado/reference/ado-api/name-property-ado.md) 연결 된 속성 **연결** 개체입니다. **명령** 있어야 해당 **ActiveConnection** 속성이로 설정 합니다 **연결** 개체입니다. 경우는 **명령** 에 매개 변수가 해당 값을 메서드에 인수로 전달 합니다.  
+ **명령을**실행 하려면 연결 된 **연결** 개체에 대 한 [이름](../../../ado/reference/ado-api/name-property-ado.md) 속성으로 호출 합니다. **명령의** **ActiveConnection** 속성을 **Connection** 개체로 설정 해야 합니다. **명령** 에 매개 변수가 있는 경우 해당 값을 메서드에 인수로 전달 합니다.  
   
- 둘 이상의 **명령** 개체는 한 동일한 연결에서 실행 됩니다 **명령** 개체는 저장된 프로시저 출력 매개 변수를 사용 하 여 오류가 발생 합니다. 각 실행 **명령** 개체를 별도 연결을 사용 하거나 다른 모든 연결 끊기 **명령** 연결에서 개체입니다.  
+ 두 개 이상의 **명령** 개체가 동일한 연결에서 실행 되 고 **명령** 개체 중 하나가 output 매개 변수가 있는 저장 프로시저 이면 오류가 발생 합니다. 각 **명령** 개체를 실행 하려면 별도의 연결을 사용 하거나 연결에서 다른 모든 **명령** 개체의 연결을 끊습니다.  
   
- **매개 변수** 수집은의 기본 멤버는 **명령** 개체. 결과적으로, 다음 두 코드 문은 동일합니다.  
+ **Parameters** 컬렉션은 **Command** 개체의 기본 멤버입니다. 따라서 다음 두 코드 문은 동일 합니다.  
   
 ```  
 objCmd.Parameters.Item(0)  
 objCmd(0)  
 ```  
   
--   합니다 **명령** 개체가 스크립팅 작업에 안전 합니다.  
+-   **명령** 개체는 스크립팅에 안전 하지 않습니다.  
   
- 이 섹션에서는 다음 항목을 포함합니다.  
+ 이 섹션에는 다음 항목이 포함 되어 있습니다.  
   
--   [명령 개체 속성, 메서드 및 이벤트](../../../ado/reference/ado-api/command-object-properties-methods-and-events.md)  
+-   [Command 개체 속성, 메서드 및 이벤트](../../../ado/reference/ado-api/command-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>관련 항목  
- [연결 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+## <a name="see-also"></a>참고 항목  
+ [Connection 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Parameters 컬렉션 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Properties 컬렉션 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [부록 A: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)

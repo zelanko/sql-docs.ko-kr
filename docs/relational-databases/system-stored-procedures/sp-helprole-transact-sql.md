@@ -1,5 +1,5 @@
 ---
-title: sp_helprole (TRANSACT-SQL) | Microsoft Docs
+title: sp_helprole (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,18 +19,18 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4caa5d8ab850c06aec62b84088463dc21bb40ea2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67997498"
 ---
-# <a name="sphelprole-transact-sql"></a>sp_helprole(Transact-SQL)
+# <a name="sp_helprole-transact-sql"></a>sp_helprole(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   현재 데이터베이스의 역할에 관한 정보를 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,21 +40,21 @@ sp_helprole [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @rolename = ] 'role'` 현재 데이터베이스에서 역할의 이름이입니다. *역할* 됩니다 **sysname**, 기본값은 NULL입니다. *역할* 현재 데이터베이스에 존재 해야 합니다. 하는 경우 *역할* 은 지정 하지 않으면 현재 데이터베이스의 모든 역할에 대 한 정보 반환 됩니다.  
+`[ @rolename = ] 'role'`현재 데이터베이스에 있는 역할의 이름입니다. *role* 은 **sysname**이며 기본값은 NULL입니다. 현재 데이터베이스에 *역할이* 있어야 합니다. *Role* 을 지정 하지 않으면 현재 데이터베이스의 모든 역할에 대 한 정보가 반환 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**RoleName**|**sysname**|현재 데이터베이스의 역할 이름입니다.|  
-|**RoleId**|**smallint**|ID **RoleName**합니다.|  
-|**IsAppRole**|**int**|0 = **RoleName** 는 응용 프로그램 역할이 아닙니다.<br /><br /> 1 = **RoleName** 응용 프로그램 역할입니다.|  
+|**RoleId**|**smallint**|**RoleName**의 ID입니다.|  
+|**IsAppRole**|**int**|0 = **RoleName** 가 응용 프로그램 역할이 아닙니다.<br /><br /> 1 = **RoleName** 는 응용 프로그램 역할입니다.|  
   
 ## <a name="remarks"></a>설명  
- 역할에 연결 된 사용 권한을 보려면 사용 하 여 **sp_helprotect**합니다. 데이터베이스 역할의 멤버를 보려면 사용 하 여 **sp_helprolemember**합니다.  
+ 역할과 연결 된 사용 권한을 보려면 **sp_helprotect**를 사용 합니다. 데이터베이스 역할의 멤버를 보려면 **sp_helprolemember**를 사용 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
@@ -66,15 +66,15 @@ sp_helprole [ [ @rolename = ] 'role' ]
 EXEC sp_helprole  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;&#40;보안 저장 프로시저](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [서버 수준 역할](../../relational-databases/security/authentication-access/server-level-roles.md)   
  [데이터베이스 수준 역할](../../relational-databases/security/authentication-access/database-level-roles.md)   
- [sp_addapprole &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
- [sp_addrole&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
- [sp_droprole&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)   
- [sp_helprolemember &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
- [sp_helpsrvrolemember &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)   
+ [Transact-sql&#41;sp_addapprole &#40;](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
+ [Transact-sql&#41;sp_addrole &#40;](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
+ [Transact-sql&#41;sp_droprole &#40;](../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)   
+ [Transact-sql&#41;sp_helprolemember &#40;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
+ [Transact-sql&#41;sp_helpsrvrolemember &#40;](../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

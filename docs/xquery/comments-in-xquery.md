@@ -1,5 +1,5 @@
 ---
-title: XQuery의 주석 | Microsoft Docs
+title: XQuery의 설명 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 4d977268-de9d-4bf0-b310-b63f6a0fb0db
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a2c5adad052a33dc4d8b86b488ca1cc44737790e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039023"
 ---
 # <a name="comments-in-xquery"></a>XQuery의 주석
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  XQuery에 주석을 추가할 수 있습니다. 주석 문자열은 "`(:`" 및 "`:)`" 구분 기호를 사용하여 추가됩니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+  XQuery에 주석을 추가할 수 있습니다. 주석 문자열은 "`(:`" 및 "`:)`" 구분 기호를 사용하여 추가됩니다. 다음은 그 예입니다.  
   
 ```  
 declare @x xml  
@@ -36,7 +36,7 @@ SELECT @x.query('
 ')  
 ```  
   
- 다음은 Instruction 열에 대해 쿼리를 지정 하는 또 다른 예는 **xml** 형식:  
+ 다음은 **xml** 유형의 명령 열에 대해 쿼리를 지정 하는 또 다른 예입니다.  
   
 ```  
 SELECT Instructions.query('  

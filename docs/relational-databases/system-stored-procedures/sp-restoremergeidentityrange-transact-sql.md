@@ -1,5 +1,5 @@
 ---
-title: sp_restoremergeidentityrange (TRANSACT-SQL) | Microsoft Docs
+title: sp_restoremergeidentityrange (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: 7923e422-2748-40c0-b5a8-6410c48d5b70
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5160e0f734f68450f868f3b1c670b1e5647524ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68041050"
 ---
-# <a name="sprestoremergeidentityrange-transact-sql"></a>sp_restoremergeidentityrange(Transact-SQL)
+# <a name="sp_restoremergeidentityrange-transact-sql"></a>sp_restoremergeidentityrange(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   이 저장 프로시저는 ID 범위 할당을 업데이트하는 데 사용되며 백업에서 게시자를 복원한 후 자동 ID 범위 관리가 제대로 작동하도록 해 줍니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,24 +38,24 @@ sp_restoremergeidentityrange [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 **모든**합니다. 지정한 경우 해당 게시에 대한 ID 범위만 복원됩니다.  
+`[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 **all**입니다. 지정한 경우 해당 게시에 대한 ID 범위만 복원됩니다.  
   
-`[ @article = ] 'article'` 아티클의 이름이입니다. *문서* 됩니다 **sysname**, 기본값은 **모든**합니다. 지정한 경우 해당 아티클에 대한 ID 범위만 복원됩니다.  
+`[ @article = ] 'article'`아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 **all**입니다. 지정한 경우 해당 아티클에 대한 ID 범위만 복원됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>설명  
- **sp_restoremergeidentityrange** 병합 복제에 사용 됩니다.  
+ **sp_restoremergeidentityrange** 는 병합 복제에 사용 됩니다.  
   
- **sp_restoremergeidentityrange** 배포자 로부터 최대 id 범위 할당 정보를 가져오고 값을 업데이트 합니다 **max_used** 열의 [MSmerge_identity_range_allocations &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msmerge-identity-range-allocations-transact-sql.md) 자동 id 범위 관리를 사용 하는 아티클에 대해 합니다.  
+ 자동 id 범위 관리를 사용 하는 아티클에 대해 [MSmerge_identity_range_allocations &#40;transact-sql&#41;](../../relational-databases/system-tables/msmerge-identity-range-allocations-transact-sql.md) 의 **max_used** 열에서 값을 업데이트 하는 **sp_restoremergeidentityrange** 배포자에서 최대 id 범위 할당 정보를 가져옵니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_restoremergeidentityrange**합니다.  
+ **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_restoremergeidentityrange**을 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [sp_addmergearticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
- [sp_changemergearticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;sp_addmergearticle &#40;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
+ [Transact-sql&#41;sp_changemergearticle &#40;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
  [ID 열 복제](../../relational-databases/replication/publish/replicate-identity-columns.md)  
   
   

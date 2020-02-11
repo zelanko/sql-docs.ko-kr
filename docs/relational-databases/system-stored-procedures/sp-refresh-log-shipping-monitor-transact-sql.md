@@ -1,5 +1,5 @@
 ---
-title: sp_refresh_log_shipping_monitor (TRANSACT-SQL) | Microsoft Docs
+title: sp_refresh_log_shipping_monitor (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c19f9b99173ca04e6ce15862e22a25f8a2bf06e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002503"
 ---
-# <a name="sprefreshlogshippingmonitor-transact-sql"></a>sp_refresh_log_shipping_monitor(Transact-SQL)
+# <a name="sp_refresh_log_shipping_monitor-transact-sql"></a>sp_refresh_log_shipping_monitor(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   이 저장 프로시저는 지정된 로그 전달 에이전트에 대해 주어진 주 서버 또는 보조 서버에서 최신 정보로 원격 모니터 테이블을 새로 고칩니다. 이 프로시저는 주 서버나 보조 서버에서 호출됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,9 +43,9 @@ sp_refresh_log_shipping_monitor
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @agent_id = ] 'agent_id'` 백업에 대 한 주 ID 또는 복사 또는 복원에 대 한 보조 ID입니다. *agent_id* 됩니다 **uniqueidentifier** NULL 일 수 없습니다.  
+`[ @agent_id = ] 'agent_id'`백업에 대 한 주 ID 이거나 복사 또는 복원에 대 한 보조 ID입니다. *agent_id* 은 **uniqueidentifier** 이며 NULL 일 수 없습니다.  
   
-`[ @agent_type = ] 'agent_type'` 로그 전달 작업의 형식입니다.  
+`[ @agent_type = ] 'agent_type'`로그 전달 작업의 유형입니다.  
   
  0 = 백업  
   
@@ -53,11 +53,11 @@ sp_refresh_log_shipping_monitor
   
  2 = 복원  
   
- *agent_type* 됩니다 **tinyint** NULL 일 수 없습니다.  
+ *agent_type* 은 **tinyint** 이며 NULL 일 수 없습니다.  
   
-`[ @database = ] 'database'` 기본 또는 보조 데이터베이스 백업이 나 복원 에이전트가 기록 하는 데 사용 합니다.  
+`[ @database = ] 'database'`백업 또는 복원 에이전트에서 로깅하는 데 사용 하는 주 데이터베이스 또는 보조 데이터베이스입니다.  
   
-`[ @mode ] n` 모니터 데이터 새로 고침 또는 지울 것인지 지정 합니다. 데이터 형식이 *m* tinyint 이며 지원 되는 값:  
+`[ @mode ] n`모니터 데이터를 새로 고칠지 아니면 정리할 지를 지정 합니다. *M* 의 데이터 형식은 tinyint 이며 지원 되는 값은 다음과 같습니다.  
   
  1 = 새로 고침(기본값)  
   
@@ -70,14 +70,14 @@ sp_refresh_log_shipping_monitor
  없음  
   
 ## <a name="remarks"></a>설명  
- **sp_refresh_log_shipping_monitor** 새로 고침 합니다 **log_shipping_monitor_primary**를 **log_shipping_monitor_secondary**, **log_shipping_monitor_history_detail** , 및 **log_shipping_monitor_error_detail** 아직 전송 되지 않은 세션 정보를 사용 하 여 테이블입니다. 이렇게 하면 잠시 동안 모니터가 동기화되지 않는 동안에도 모니터 서버를 주 서버 또는 보조 서버와 동기화할 수 있습니다. 또한 필요하면 모니터 서버에서 모니터 정보를 지울 수 있습니다.  
+ **sp_refresh_log_shipping_monitor** 는 아직 전송 되지 않은 세션 정보를 사용 하 여 **log_shipping_monitor_primary**, **log_shipping_monitor_secondary**, **log_shipping_monitor_history_detail**및 **log_shipping_monitor_error_detail** 테이블을 새로 고칩니다. 이렇게 하면 잠시 동안 모니터가 동기화되지 않는 동안에도 모니터 서버를 주 서버 또는 보조 서버와 동기화할 수 있습니다. 또한 필요하면 모니터 서버에서 모니터 정보를 지울 수 있습니다.  
   
- **sp_refresh_log_shipping_monitor** 에서 실행 되어야 합니다는 **마스터** 기본 또는 보조 서버의 데이터베이스입니다.  
+ **sp_refresh_log_shipping_monitor** 는 주 서버 또는 보조 서버에 있는 **master** 데이터베이스에서 실행 해야 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 멤버는 **sysadmin** 고정된 서버 역할에서이 프로시저를 실행할 수 있습니다.  
+ **Sysadmin** 고정 서버 역할의 멤버만이 프로시저를 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

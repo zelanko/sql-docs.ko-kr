@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47dc8180fd6c8f59050520477724ff8adbc46a6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63061016"
 ---
 # <a name="stored-procedures-event-category"></a>Stored Procedures 이벤트 범주
@@ -45,7 +45,7 @@ ms.locfileid: "63061016"
 |[SP:StmtCompleted 이벤트 클래스](sp-stmtcompleted-event-class.md)|저장 프로시저 내의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 완료했음을 나타냅니다.|  
 |[SP:StmtStarting 이벤트 클래스](sp-stmtstarting-event-class.md)|저장 프로시저 내의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 시작했음을 나타냅니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [확장 이벤트](../extended-events/extended-events.md)   
  [sp_trace_setevent&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   

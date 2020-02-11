@@ -20,19 +20,19 @@ ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4cca223510ebb6838048e3babbf8fdcada42f87a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039742"
 ---
 # <a name="sqlsetdescfield-function"></a>SQLSetDescField 함수
 
 **규칙**  
- 도입 된 버전: ODBC 3.0 표준 준수 합니다. ISO 92  
+ 소개 된 버전: ODBC 3.0 표준 준수: ISO 92  
   
  **요약**  
- **SQLSetDescField** 설명자 레코드의 단일 필드의 값을 설정 합니다.  
+ **SQLSetDescField** 설명자 레코드의 단일 필드 값을 설정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,505 +47,505 @@ SQLRETURN SQLSetDescField(
   
 ## <a name="arguments"></a>인수  
  *DescriptorHandle*  
- [입력] 설명자 핸들입니다.  
+ 입력 설명자 핸들입니다.  
   
- *RecNumber*  
- [입력] 응용 프로그램 검색을 설정 하는 필드를 포함 하는 설명자 레코드를 나타냅니다. 0 책갈피 레코드 중 레코드 번호를 사용 하 여 0, 설명자 레코드 번호가 매겨집니다. 합니다 *RecNumber* 헤더 필드에 대 한 인수는 무시 됩니다.  
+ *개수*  
+ 입력 응용 프로그램에서 설정 하려는 필드가 포함 된 설명자 레코드를 나타냅니다. 설명자 레코드의 번호는 0에서, 레코드 번호 0은 책갈피 레코드입니다. 헤더 필드의 경우에는 *값* 인수가 무시 됩니다.  
   
  *FieldIdentifier*  
- [입력] 설정할 값이 설명자의 필드를 나타냅니다. 자세한 내용은 참조 하세요. "*FieldIdentifier* 인수" "설명" 섹션에 있습니다.  
+ 입력 값을 설정할 설명자의 필드를 나타냅니다. 자세한 내용은 "Comments" 섹션의 "*FieldIdentifier* 인수"를 참조 하세요.  
   
  *ValuePtr*  
- [입력] 설명자 정보 또는 정수 값을 포함 하는 버퍼에 대 한 포인터입니다. 데이터 형식 값에 따라 달라 집니다 *FieldIdentifier*합니다. 하는 경우 *ValuePtr* 는 정수 값을 8 바이트 (SQLLEN), 4 바이트 (SQLINTEGER) 또는 값에 따라 2 바이트 (SQLSMALLINT)로 간주 될 수 있습니다 합니다 *FieldIdentifier* 인수입니다.  
+ 입력 설명자 정보 또는 정수 값을 포함 하는 버퍼에 대 한 포인터입니다. 데이터 형식은 *FieldIdentifier*의 값에 따라 달라 집니다. *Valueptr* 이 정수 값 이면 *FieldIdentifier* 인수의 값에 따라 8 바이트 (sqllen), 4 바이트 (sqllen) 또는 2 바이트 (sqllen)로 간주할 수 있습니다.  
   
  *BufferLength*  
- [입력] 하는 경우 *FieldIdentifier* 은 ODBC 정의 된 필드와 *ValuePtr* 문자열 또는 이진 버퍼를 가리키는,이 인수 길이 여야 합니다 **ValuePtr*합니다. 문자 문자열 데이터의 경우이 인수는 문자열의 바이트 수를 포함 해야 합니다.  
+ 입력 *FieldIdentifier* 가 ODBC에 정의 된 필드 *이 고 요소* 문자열이 나 이진 버퍼를 가리키는 경우이 인수는 **eptr*의 길이 여야 합니다. 문자열 데이터의 경우이 인수는 문자열의 바이트 수를 포함 해야 합니다.  
   
- 경우 *FieldIdentifier* 은 ODBC 정의 된 필드와 *ValuePtr* 정수 이면 *BufferLength* 무시 됩니다.  
+ *FieldIdentifier* 가 ODBC에 정의 된 필드이 고 이상 값 *eptr* 이 정수 이면 *bufferlength* 는 무시 됩니다.  
   
- 하는 경우 *FieldIdentifier* 드라이버에서 정의 된 필드는 응용 프로그램을 설정 하 여 드라이버 관리자에 필드의 특성을 나타내는 합니다 *BufferLength* 인수. *BufferLength* 다음 값을 가질 수 있습니다.  
+ *FieldIdentifier* 가 드라이버 정의 필드인 경우 응용 프로그램은 *bufferlength* 인수를 설정 하 여 필드의 특성을 드라이버 관리자에 게 표시 합니다. *Bufferlength* 에는 다음 값을 사용할 수 있습니다.  
   
--   하는 경우 *ValuePtr* 문자열에 대 한 포인터 이면 *BufferLength* SQL_NTS 또는 문자열의 길이입니다.  
+-   *Valueptr* 이 문자열에 대 한 포인터인 경우 *bufferlength* 는 문자열 또는 SQL_NTS의 길이입니다.  
   
--   하는 경우 *ValuePtr* 이진 버퍼에 대 한 포인터 이면 응용 프로그램을 SQL_LEN_BINARY_ATTR의 결과 배치 (*길이*)에서 매크로 *BufferLength*합니다. 에 음수 값이 배치 *BufferLength*합니다.  
+-   *Valueptr* 이 이진 버퍼에 대 한 포인터인 경우 응용 프로그램은 SQL_LEN_BINARY_ATTR (*길이*) 매크로의 결과를 *bufferlength*로 배치 합니다. 그러면 음수 값이 *Bufferlength*에 배치 됩니다.  
   
--   하는 경우 *ValuePtr* 이 아닌 문자열 또는 이진 문자열 값에 대 한 포인터 이면 *BufferLength* SQL_IS_POINTER 값이 있어야 합니다.  
+-   *Valueptr* 이 문자열 또는 이진 문자열이 아닌 값에 대 한 포인터인 경우 *bufferlength* 의 값은 SQL_IS_POINTER 이어야 합니다.  
   
--   하는 경우 *ValuePtr* 다음을 고정 길이 값이 포함 되어 *BufferLength* 되었거나 SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT, SQL_IS_USMALLINT를 적절 하 게 합니다.  
+-   *Valueptr* 이 고정 길이 값을 포함 하는 경우 *bufferlength* 는 SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT 또는 SQL_IS_USMALLINT 중 하나입니다.  
   
-## <a name="returns"></a>반환 값  
- 관계 없이 SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR를 또는 SQL_INVALID_HANDLE 합니다.  
+## <a name="returns"></a>반환  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR 또는 SQL_INVALID_HANDLE입니다.  
   
 ## <a name="diagnostics"></a>진단  
- 때 **SQLSetDescField** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 연관된 된 SQLSTATE 값 반환을 호출 하 여 얻을 수 있습니다 **SQLGetDiagRec** 사용 하 여는 *HandleType* 의 SQL_HANDLE_DESC와 *처리할* 의 *DescriptorHandle*합니다. 다음 표에서 일반적으로 반환한 SQLSTATE 값 **SQLSetDescField** ;이 함수의 컨텍스트에서 각각에 설명 하 고 "(DM)" 표기법 드라이버 관리자에 의해 반환 된 Sqlstate 설명은 앞에 옵니다. 각 SQLSTATE 값과 연결 된 반환 코드를 다른 설명이 없는 경우 SQL_ERROR를 됩니다.  
+ **SQLSetDescField** 가 SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 하는 경우 SQL_HANDLE_DESC의 *HandleType* 및 *DescriptorHandle* *핸들* 을 사용 하 여 **SQLGetDiagRec** 를 호출 하 여 연결 된 SQLSTATE 값을 얻을 수 있습니다. 다음 표에서는 일반적으로 **SQLSetDescField** 에서 반환 하는 SQLSTATE 값을 나열 하 고이 함수의 컨텍스트에서 각 항목에 대해 설명 합니다. "(DM)" 표기법은 드라이버 관리자에서 반환 된 SQLSTATEs의 설명 보다 앞에 나옵니다. 다른 설명이 없는 한 각 SQLSTATE 값과 연결 된 반환 코드는 SQL_ERROR 됩니다.  
   
-|SQLSTATE|오류|설명|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
-|01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
-|01S02|옵션 값이 변경 됨|드라이버에서 지정 된 값을 지원 하지 않았습니다  *\*ValuePtr* (경우 *ValuePtr* 가 포인터) 값과 *ValuePtr* (경우 *ValuePtr*  는 정수 값), 또는  *\*ValuePtr* 드라이버 유사한 값을 대체 하도록 구현 작업 조건으로 인해 잘못 되었습니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
-|07009|잘못 된 설명자 인덱스입니다.|합니다 *FieldIdentifier* 인수가 레코드 필드를 *RecNumber* 인수가 0, 및 *DescriptorHandle* 인수 IPD 핸들을 참조 합니다.<br /><br /> 합니다 *RecNumber* 인수가 0 보다 작거나, 및 *DescriptorHandle* 인수는 카드가 또는 APD 참조 합니다.<br /><br /> *RecNumber* 인수 열 또는 매개 변수 데이터 원본을 지원할 수 있는 최대 수보다 큽니다. 하며 *DescriptorHandle* APD 또는 카드가 인수 참조 합니다.<br /><br /> (DM)는 *FieldIdentifier* 인수가 SQL_DESC_COUNT, 및  *\*ValuePtr* 인수가 0 보다 작습니다.<br /><br /> *RecNumber* 인수가 0 인 하며 *DescriptorHandle* 인수를 암시적으로 할당 된 APD 참조 합니다. (명시적으로 할당 된 응용 프로그램 설명자를 사용 하 여이 오류가 발생 하지 않습니다 APD 또는까지 카드가 명시적으로 할당 된 응용 프로그램 설명자를 인지 여부를 알 수 없습니다 때문에 실행 시간입니다.)|  
-|08S01|통신 연결 오류|함수가 완료 되었습니다. 처리 하기 전에 드라이버 및 드라이버는 연결 된 데이터 원본 간의 통신 링크 하지 못했습니다.|  
-|22001|문자열 데이터 오른쪽 잘림|합니다 *FieldIdentifier* 인수가 SQL_DESC_NAME, 및 *BufferLength* 인수가 SQL_MAX_IDENTIFIER_LEN 보다 큰 값입니다.|  
-|HY000|일반 오류|오류가 없는 관련 SQLSTATE 했습니다는 및 없습니다 구현 별 SQLSTATE 정의 되었습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에  *\*MessageText* 버퍼 오류 및 해당 원인에 설명 합니다.|  
-|HY001|메모리 할당 오류|드라이버 완료 함수 또는 실행을 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
-|HY010|함수 시퀀스 오류입니다.|(DM)는 *DescriptorHandle* 연관 된를 *StatementHandle* 는 비동기적으로 실행 중인 (이 없는 항목)를 호출한 함수와이 함수가 호출 되었을 때 계속 실행에 대 한 합니다.<br /><br /> (DM) **SQLExecute**를 **SQLExecDirect**를 **SQLBulkOperations**, 또는 **SQLSetPos** 에 대해 호출 된는  *StatementHandle* 있는 합니다 *DescriptorHandle* 연결 되었으며 SQL_NEED_DATA를 반환 합니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대 한 데이터를 전송 하기 전에 호출 되었습니다.<br /><br /> (DM)를 비동기적으로 실행 중인 함수를 호출한 연관 된 연결 핸들에 대 한 합니다 *DescriptorHandle*합니다. 이 비동기 함수가 여전히 실행 시기를 **SQLSetDescField** 함수를 호출 했습니다.<br /><br /> (DM) **SQLExecute**를 **SQLExecDirect**, 또는 **SQLMoreResults** 관련 된 문 핸들 중 하나에 대해 호출한는 *DescriptorHandle* SQL_PARAM_DATA_AVAILABLE를 반환 합니다. 이 함수는 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에 호출 되었습니다.|  
-|HY013|메모리 관리 오류|기본 메모리 개체에 액세스할 수 없습니다, 가능한 경우 메모리 부족으로 인해 함수 호출을 처리할 수 없습니다.|  
-|HY016|구현 행 설명자를 수정할 수 없습니다.|*DescriptorHandle* 인수가 IRD, 연결 및 *FieldIdentifier* 인수 SQL_DESC_ARRAY_STATUS_PTR 또는 SQL_DESC_ROWS_PROCESSED_PTR 없습니다.|  
-|HY021|일관성이 없는 설명자 정보|SQL_DESC_TYPE 및 값을 SQL_DESC_DATETIME_INTERVAL_CODE 필드 (Apd 또는 ARDs)에 유효한 ODBC SQL 형식 또는 올바른 드라이버별 SQL 형식 (IPDs)에 대 한 유효한 ODBC C 형식을 형성 하지 않습니다.<br /><br /> 설명자 정보 일관성 검사를 사용 하는 동안 체크 일관 되지 않았습니다. (의 "일관성 확인"을 참조 하세요 **SQLSetDescRec**.)|  
-|HY090|문자열 또는 버퍼 길이가 잘못 되었습니다.|(DM)  *\*ValuePtr* 문자열, 및 *BufferLength* 0 보다 작거나 같으면 SQL_NTS 없었습니다. 합니다.<br /><br /> (DM) 드라이버는 ODBC 2 되었습니다 *.x* 드라이버 설명자가는 카드가 합니다 *ColumnNumber* 인수는 0이 고, 인수에 지정 된 값으로 설정 된 *BufferLength* 되었습니다 4 같지 않음.|  
-|HY091|잘못 된 설명자 필드 식별자입니다.|지정 된 값을 *FieldIdentifier* 인수 ODBC 정의 필드를 없었으며 구현 시 정의 된 값이 없습니다.<br /><br /> 합니다 *FieldIdentifier* 에 대 한 잘못 된 인수를 *DescriptorHandle* 인수입니다.<br /><br /> 합니다 *FieldIdentifier* 인수가 ODBC 정의 읽기 전용 필드입니다.|  
-|HY092|잘못 된 특성/옵션 식별자입니다.|값  *\*ValuePtr* 없습니다 합니다 *FieldIdentifier* 인수입니다.<br /><br /> 합니다 *FieldIdentifier* 인수가 SQL_DESC_UNNAMED, 및 *ValuePtr* SQL_NAMED 되었습니다.|  
-|HY105|잘못 된 매개 변수 형식|(DM)으로 필드에 대해 지정 된 값을 잘못 되었습니다. (자세한 내용은 참조는 "*InputOutputType* 인수" 섹션 **SQLBindParameter**.)|  
-|HY117|연결 알 수 없는 트랜잭션 상태로 인해 일시 중단 됩니다. 만 연결을 끊고 읽기 전용으로 함수를 사용할 수 있습니다.|(DM) 일시 중단 된 상태에 대 한 자세한 내용은 참조 하세요. [What's New in ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md)합니다.|  
-|HYT01|연결 제한 시간 만료 됨|데이터 원본 요청에 응답 하기 전에 연결 제한 시간에 만료 되었습니다. 연결 제한 시간을 통해 설정 됩니다 **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT 합니다.|  
-|IM001|드라이버는이 함수를 지원 하지 않습니다.|(DM) 드라이버를 사용 하 여 연결 합니다 *DescriptorHandle* 함수를 지원 하지 않습니다.|  
+|01000|일반 경고|드라이버 관련 정보 메시지입니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
+|01 S 02|옵션 값 변경 됨|드라이버가 지정 * \** 된 값을 지원 하지 않았습니다. (값 *eptr* 이 *포인터인 경우)* *또는 (값 eptr이* 정수 값 인 경우) * \** 에는 값이 구현 작업 조건으로 인해 잘못 된 것으로 처리 되므로 드라이버는 유사한 값을 대체 합니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
+|07009|잘못 된 설명자 인덱스|*FieldIdentifier* 인수는 레코드 필드이 고, 인수 *는 0* 이며, *DescriptorHandle* 인수는 IPD 핸들을 참조 합니다.<br /><br /> 인수 *인수가 0* 보다 작고 *DescriptorHandle* 인수는가 나 apd를 참조 합니다.<br /><br /> 인수 *인수가 데이터* 원본이 지원할 수 있는 열 또는 매개 변수의 최대 개수 보다 크거나 apd 또는 *DescriptorHandle* 인수를 참조 합니다.<br /><br /> (DM) *FieldIdentifier* 인수가 SQL_DESC_COUNT 되었으며, * \*eptr* 인수가 0 보다 작은 경우<br /><br /> *DescriptorHandle* *인수는 0* 과 같고 암시적으로 할당 된 apd 인수를 참조 합니다. 명시적으로 할당 된 응용 프로그램 설명자는 명시적으로 할당 된 응용 프로그램 설명자가 APD 인지 아니면 실행 시간이 될 때까지이를 알 수 없기 때문에 명시적으로 할당 된 응용 프로그램 설명자에서는이 오류가 발생 하지 않습니다.|  
+|08S01|통신 연결 오류|드라이버가 연결 된 드라이버와 데이터 원본 간의 통신 연결이 함수 처리를 완료 하기 전에 실패 했습니다.|  
+|22001|문자열 데이터, 오른쪽이 잘렸습니다.|*FieldIdentifier* 인수가 SQL_DESC_NAME 되었으며 *bufferlength* 인수가 SQL_MAX_IDENTIFIER_LEN 보다 큰 값입니다.|  
+|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. MessageText 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다. * \**|  
+|HY001|메모리 할당 오류|드라이버에서 함수 실행 또는 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
+|HY010|함수 시퀀스 오류|(DM) *DescriptorHandle* 가이 함수를 호출 하지 않고 비동기적으로 실행 되는 함수를 호출 하 고이 함수가 호출 될 때 여전히 실행 되는 *StatementHandle* 와 연결 되었습니다.<br /><br /> (DM) **Sqlexecute**, **sqlexecdirect**, **SQLBulkOperations**또는 **SQLSetPos** 는 *DescriptorHandle* 가 연결 되 고 SQL_NEED_DATA 반환 된 *StatementHandle* 에 대해 호출 되었습니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대해 데이터를 보내기 전에 호출 되었습니다.<br /><br /> (DM) *DescriptorHandle*연결 된 연결 핸들에 대해 비동기적으로 실행 되는 함수가 호출 되었습니다. **SQLSetDescField** 함수가 호출 될 때이 비동기 함수는 계속 실행 중입니다.<br /><br /> (DM) **Sqlexecute**, **Sqlexecdirect**또는 **SQLMoreResults** 가 *DescriptorHandle* 와 연결 된 문 핸들 중 하나에 대해 호출 되 고 SQL_PARAM_DATA_AVAILABLE 반환 되었습니다. 이 함수는 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에 호출 되었습니다.|  
+|HY013|메모리 관리 오류|메모리 부족 상태로 인해 기본 메모리 개체에 액세스할 수 없기 때문에 함수 호출을 처리할 수 없습니다.|  
+|HY016|구현 행 설명자를 수정할 수 없습니다.|*DescriptorHandle* 인수가 IRD와 연결 되어 있고 *FieldIdentifier* 인수가 SQL_DESC_ARRAY_STATUS_PTR 되지 않았거나 SQL_DESC_ROWS_PROCESSED_PTR.|  
+|HY021|일관 되지 않은 설명자 정보|SQL_DESC_TYPE 및 SQL_DESC_DATETIME_INTERVAL_CODE 필드는 올바른 ODBC SQL 유형 또는 올바른 드라이버별 SQL 유형 (IPDs의 경우) 또는 유효한 ODBC C 유형 (APDs 또는 ARDs의 경우)이 아닙니다.<br /><br /> 일관성 확인 중에 확인 된 설명자 정보가 일치 하지 않습니다. **SQLSetDescRec**의 "일관성 확인"을 참조 하십시오.|  
+|HY090|잘못 된 문자열 또는 버퍼 길이입니다.|( * \*DM)는* 문자열입니다. *bufferlength* 는 0 보다 작지만 SQL_NTS와 같지 않습니다.<br /><br /> (DM) 드라이버가 ODBC*2.x 드라이버이* 고, 설명자가 되었고, *columnnumber* 인수를 0으로 설정 하 고, 인수 *bufferlength* 에 지정 된 값이 4와 같지 않습니다.|  
+|HY091|잘못 된 설명자 필드 식별자입니다.|*FieldIdentifier* 인수에 지정 된 값이 ODBC 정의 필드가 아니고 구현에서 정의 된 값이 아닙니다.<br /><br /> *FieldIdentifier* 인수가 *DescriptorHandle* 인수에 적합 하지 않습니다.<br /><br /> *FieldIdentifier* 인수는 읽기 전용 ODBC 정의 필드입니다.|  
+|HY092|특성/옵션 식별자가 잘못 되었습니다.|*FieldIdentifier* * \*인수에 대 한 값이 잘못* 되었습니다.<br /><br /> *FieldIdentifier* 인수가 SQL_DESC_UNNAMED 되었으며,이 인수 *를 SQL_NAMED 했습니다.*|  
+|HY105|매개 변수 형식이 잘못 되었습니다.|(DM) SQL_DESC_PARAMETER_TYPE 필드에 지정 된 값이 잘못 되었습니다. 자세한 내용은 **SQLBindParameter**의 "*inputoutputtype* 인수" 섹션을 참조 하세요.|  
+|HY117|알 수 없는 트랜잭션 상태로 인해 연결이 일시 중단 되었습니다. 연결 끊기 및 읽기 전용 함수만 허용 됩니다.|(DM) 일시 중단 된 상태에 대 한 자세한 내용은 [ODBC 3.8의 새로운 기능](../../../odbc/reference/what-s-new-in-odbc-3-8.md)을 참조 하십시오.|  
+|HYT01|연결 제한 시간이 만료 되었습니다.|데이터 원본이 요청에 응답 하기 전에 연결 제한 시간이 만료 되었습니다. 연결 제한 시간은 **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT을 통해 설정 됩니다.|  
+|IM001|드라이버가이 기능을 지원 하지 않습니다.|(DM) *DescriptorHandle* 연결 된 드라이버는 함수를 지원 하지 않습니다.|  
   
 ## <a name="comments"></a>주석  
- 응용 프로그램에서 호출할 수 있습니다 **SQLSetDescField** 한 번에 하나의 모든 설명자 필드를 설정할 수 있습니다. 한 번 호출 **SQLSetDescField** 단일 설명자에서 단일 필드를 설정 합니다. 이 함수 설명자 형식에서 모든 필드를 설정 하기 위해 호출 됩니다, 그리고 필드를 설정할 수 있습니다 제공 될 수 있습니다. (이 섹션의 뒷부분에 나오는 표를 참조 하세요.)  
+ 응용 프로그램은 **SQLSetDescField** 를 호출 하 여 설명자 필드를 한 번에 하나씩 설정할 수 있습니다. **SQLSetDescField** 에 대 한 한 번의 호출은 단일 설명자의 단일 필드를 설정 합니다. 필드를 설정할 수 있는 경우이 함수를 호출 하 여 설명자 형식의 모든 필드를 설정할 수 있습니다. 이 단원의 뒷부분에 나오는 표를 참조 하십시오.  
   
 > [!NOTE]  
->  호출 하는 경우 **SQLSetDescField** 실패 하 여 식별 되는 설명자 레코드의 콘텐츠를 *RecNumber* 인수가 정의 되지 않습니다.  
+>  **SQLSetDescField** 에 대 한 호출이 실패 하는 경우에는 지 *수* 인수로 식별 되는 설명자 레코드의 내용이 정의 되지 않습니다.  
   
- 함수의 단일 호출으로 여러 설명자 필드를 설정 하려면 다른 함수를 호출할 수 있습니다. 합니다 **SQLSetDescRec** 함수는 열 또는 매개 변수 (SQL_DESC_TYPE, 값을 SQL_DESC_DATETIME_INTERVAL_CODE, SQL_DESC_OCTET_LENGTH, 자릿수가 SQL_DESC_PRECISION, SQL_에 바인딩된 데이터 형식 및 버퍼에 영향을 주는 다양 한 필드 설정 DESC_SCALE SQL_DESC_DATA_PTR, SQL_DESC_OCTET_LENGTH_PTR을, SQL_DESC_INDICATOR_PTR 필드)입니다. **SQLBindCol** 나 **SQLBindParameter** 의 열 또는 매개 변수 바인딩에 대 한 완전 한 사양을 만드는 데 사용할 수 있습니다. 이러한 함수는 함수 호출이 하나를 사용 하 여 설명자 필드의 특정 그룹을 설정합니다.  
+ 함수를 한 번 호출 하 여 여러 설명자 필드를 설정 하기 위해 다른 함수를 호출할 수 있습니다. **SQLSetDescRec** 함수는 열 또는 매개 변수에 바인딩된 데이터 형식 및 버퍼에 영향을 주는 다양 한 필드 (SQL_DESC_TYPE, SQL_DESC_DATETIME_INTERVAL_CODE, SQL_DESC_OCTET_LENGTH, SQL_DESC_PRECISION, SQL_DESC_SCALE, SQL_DESC_DATA_PTR, SQL_DESC_OCTET_LENGTH_PTR 필드)를 설정 합니다. **SQLBindCol** 또는 **SQLBindParameter** 를 사용 하 여 열 또는 매개 변수의 바인딩을 완벽 하 게 지정할 수 있습니다. 이러한 함수는 하나의 함수 호출을 사용 하 여 특정 설명자 필드 그룹을 설정 합니다.  
   
- **SQLSetDescField** 호출 (SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, 또는 SQL_DESC_OCTET_LENGTH_PTR)에 대 한 바인딩 포인터에 오프셋을 추가 하 여 바인딩 버퍼를 변경할 수 있습니다. 호출 하지 않고 바인딩 버퍼 변경 **SQLBindCol** 하거나 **SQLBindParameter**, SQL_DESC_DATA_ 같은 기타 필드를 변경 하지 않고 SQL_DESC_DATA_PTR을 변경 하려면 응용 프로그램을 허용 하는 형식입니다.  
+ **SQLSetDescField** 를 호출 하 여 바인딩 포인터 (SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR 또는 SQL_DESC_OCTET_LENGTH_PTR)에 오프셋을 추가 하 여 바인딩 버퍼를 변경할 수 있습니다. **SQLBindCol** 또는 **SQLBindParameter**를 호출 하지 않고 바인딩 버퍼를 변경 하 여 응용 프로그램에서 SQL_DESC_DATA_TYPE 같은 다른 필드를 변경 하지 않고 SQL_DESC_DATA_PTR를 변경할 수 있도록 합니다.  
   
- 응용 프로그램을 호출 하는 경우 **SQLSetDescField** 레코드 SQL_DESC_COUNT 이외의 모든 필드 또는 SQL_DESC_OCTET_LENGTH_PTR을, SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR 지연 된 필드를 설정 하려면 바인딩 해제 됩니다.  
+ 응용 프로그램에서 **SQLSetDescField** 를 호출 하 여 SQL_DESC_COUNT 또는 지연 된 필드 SQL_DESC_DATA_PTR, SQL_DESC_OCTET_LENGTH_PTR 또는 SQL_DESC_INDICATOR_PTR 이외의 필드를 설정 하는 경우 레코드가 바인딩되지 않게 됩니다.  
   
- 설명자 헤더 필드를 호출 하 여 설정 됩니다 **SQLSetDescField** 적절 한 *FieldIdentifier*합니다. 여러 헤더 필드 되므로 문 특성, 호출 하 여 설정할 수도 있습니다 **SQLSetStmtAttr**합니다. 이렇게 하면 응용 프로그램 첫 번째 설명자 핸들을 가져오지 않고도 설명자 필드를 설정할 수 있습니다. 때 **SQLSetDescField** 헤더 필드를 설정 하기 위해 호출 합니다 *RecNumber* 인수는 무시 됩니다.  
+ 설명자 헤더 필드는 적절 한 *FieldIdentifier*로 **SQLSetDescField** 를 호출 하 여 설정 합니다. 많은 헤더 필드는 문 특성 이기도 하므로 **SQLSetStmtAttr**에 대 한 호출로 설정할 수도 있습니다. 이렇게 하면 응용 프로그램에서 설명자 핸들을 먼저 가져오지 않고 설명자 필드를 설정할 수 있습니다. **SQLSetDescField** 을 호출 하 여 헤더 필드를 설정 *하면 해당 인수는 무시* 됩니다.  
   
- A *RecNumber* 0 책갈피 필드 설정에 사용 됩니다.  
+ *번호* 0은 책갈피 필드를 설정 하는 데 사용 됩니다.  
   
 > [!NOTE]  
->  문 특성 SQL_ATTR_USE_BOOKMARKS 항상 설정할 호출 하기 전에 **SQLSetDescField** 책갈피 필드를 설정 합니다. 이것이 필수 것이 좋습니다.  
+>  **SQLSetDescField** 를 호출 하 여 책갈피 필드를 설정 하기 전에 statement 특성 SQL_ATTR_USE_BOOKMARKS 항상 설정 해야 합니다. 반드시 필요한 것은 아니지만, 적극 권장 됩니다.  
   
-## <a name="sequence-of-setting-descriptor-fields"></a>설명자 필드를 설정 하는 시퀀스  
- 호출 하 여 설명자 필드를 설정 하는 경우 **SQLSetDescField**, 응용 프로그램에는 특정 순서를 따라야 합니다.  
+## <a name="sequence-of-setting-descriptor-fields"></a>설정 설명자 필드의 시퀀스  
+ **SQLSetDescField**를 호출 하 여 설명자 필드를 설정 하는 경우 응용 프로그램은 특정 시퀀스를 따라야 합니다.  
   
-1.  응용 프로그램의 SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE, 또는 값을 SQL_DESC_DATETIME_INTERVAL_CODE 필드를 먼저 설정 해야 합니다.  
+1.  응용 프로그램은 먼저 SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE 또는 SQL_DESC_DATETIME_INTERVAL_CODE 필드를 설정 해야 합니다.  
   
-2.  이러한 필드 중 하나를 설정한 후 응용 프로그램의 데이터 형식 특성을 설정할 수 있습니다 및 드라이버 데이터 형식 특성 필드를 설정 하는 데이터 형식에 대 한 적절 한 기본값입니다. 형식 특성 필드를 자동으로 기본값 설명자는 항상 응용 프로그램에는 데이터 형식 지정에 사용할 준비가 되도록 합니다. 응용 프로그램이 데이터 형식 특성에 명시적으로 설정 하는 경우 기본 특성을 재정의 해당 합니다.  
+2.  이러한 필드 중 하나를 설정한 후에는 응용 프로그램에서 데이터 형식의 특성을 설정할 수 있으며 드라이버는 데이터 형식 특성 필드를 데이터 형식에 대 한 적절 한 기본값으로 설정 합니다. 형식 특성 필드의 자동 기본값을 사용 하면 응용 프로그램에서 데이터 형식을 지정한 후에 항상 설명자를 사용할 준비가 됩니다. 응용 프로그램에서 데이터 형식 특성을 명시적으로 설정 하는 경우 기본 특성을 재정의 합니다.  
   
-3.  1 단계에서 나열 된 필드 중 하나를 설정한 후 데이터 형식 특성을 설정한 응용 프로그램 SQL_DESC_DATA_PTR을 설정할 수 있습니다. 이 메시지 설명자 필드의 일관성 확인을 표시합니다. 응용 프로그램 데이터 형식 또는 특성에 SQL_DESC_DATA_PTR 필드가 설정 후 변경 되 면 드라이버는 레코드를 바인딩 해제, null 포인터로 SQL_DESC_DATA_PTR을 설정 합니다. 이렇게 하면 응용 프로그램 설명자 레코드를 사용할 수 전에 순서 대로 적절 한 단계를 완료 합니다.  
+3.  1 단계에 나열 된 필드 중 하나를 설정 하 고 데이터 형식 특성을 설정한 후에는 응용 프로그램에서 SQL_DESC_DATA_PTR 설정할 수 있습니다. 그러면 설명자 필드에 대 한 일관성 확인 메시지가 표시 됩니다. SQL_DESC_DATA_PTR 필드를 설정한 후 응용 프로그램에서 데이터 형식이 나 특성을 변경 하는 경우 드라이버는 SQL_DESC_DATA_PTR를 null 포인터로 설정 하 고 레코드의 바인딩을 해제 합니다. 그러면 설명자 레코드를 사용할 수 있기 전에 응용 프로그램이 순서 대로 적절 한 단계를 완료 합니다.  
   
 ## <a name="initialization-of-descriptor-fields"></a>설명자 필드 초기화  
- 설명자가 할당 된 경우 설명자 필드는 기본값으로 초기화할 수 있습니다 하, 기본값이 없는 초기화 하거나 형식 설명자에 대해 정의 되지 않은. 다음 표에서 각 유형의와 "D" 필드는 기본적으로 초기화 되었음을 나타내는 "ND" 필드 기본값 없이 초기화 되었음을 나타내는 설명자에 대 한 각 필드의 초기화를 나타냅니다. 숫자로 표시 되는 경우 필드의 기본값은 숫자입니다. 테이블 (R/W)에 대 한 읽기/쓰기 또는 읽기 전용 (R) 인지를 나타낼 수도 있습니다.  
+ 설명자가 할당 되 면 설명자의 필드를 기본값으로 초기화 하거나, 기본값 없이 초기화 하거나, 설명자 형식에 대해 정의 되지 않은 상태일 수 있습니다. 다음 표에서는 각 설명자 형식에 대 한 각 필드를 초기화 하 고, 필드가 기본값을 사용 하 여 초기화 되었음을 나타내는 "D"와, 필드가 기본값 없이 초기화 됨을 나타내는 "ND"를 나타냅니다. 숫자가 표시 되는 경우 필드의 기본값은 해당 숫자입니다. 또한이 테이블은 필드가 읽기/쓰기 (R/W) 또는 읽기 전용 (R) 인지를 나타냅니다.  
   
- IRD 필드에 기본값이 및 IRD 채워지면 설명자를 문 핸들 할당 된 때가 아니라 문이 준비 되거나 실행 된 후에 합니다. IRD 채워지면 될 때까지 IRD 필드에 액세스 하려는 모든 시도 오류가 반환 됩니다.  
+ 문 핸들이 나 설명자가 할당 되지 않은 경우에만 IRD의 필드에는 문이 준비 되거나 실행 되 고 IRD가 채워지는 후에만 기본값이 있습니다. IRD이 채워질 때까지 IRD의 필드에 액세스 하려고 하면 오류가 반환 됩니다.  
   
- 일부 설명자 필드 (ARDs IRDs, 및 Apd 및 IPDs) 설명자 형식 중 전부는 아님 하나 이상에 대해 정의 됩니다. 필드 형식 설명자에 대해 정의 되지 않으면, 해당 설명자를 사용 하는 함수 중 하나에서 필요 하지 않습니다.  
+ 일부 설명자 필드는 하나 이상의 설명자 형식 (ARDs 및 IRDs 및 APDs 및 IPDs)에 대해 정의 됩니다. 설명자 형식에 대해 필드가 정의 되어 있지 않으면 해당 설명자를 사용 하는 함수에 필요 하지 않습니다.  
   
- 액세스할 수 있는 필드 **SQLGetDescField** 가 반드시 설정할 수 없습니다 **SQLSetDescField**합니다. 설정할 수 있는 필드 **SQLSetDescField** 다음 표에 나열 됩니다.  
+ **SQLGetDescField** 에서 액세스할 수 있는 필드는 **SQLSetDescField**로 반드시 설정할 수 없습니다. **SQLSetDescField** 에서 설정할 수 있는 필드는 다음 표에 나와 있습니다.  
   
- 헤더 필드의 초기화를 뒤에 오는 테이블에 설명 된 합니다.  
+ 헤더 필드의 초기화는 다음 표에 설명 되어 있습니다.  
   
-|헤더 필드 이름|type|R/W|기본값|  
+|헤더 필드 이름|Type|R/W|기본값|  
 |-----------------------|----------|----------|-------------|  
-|SQL_DESC_ALLOC_TYPE|SQLSMALLINT|카드가: R APD: R IRD: R IPD: R|카드가: 에 대 한 SQL_DESC_ALLOC_AUTO 암시적 또는 SQL_DESC_ALLOC_USER에 대 한 명시적<br /><br /> APD: 에 대 한 SQL_DESC_ALLOC_AUTO 암시적 또는 SQL_DESC_ALLOC_USER에 대 한 명시적<br /><br /> IRD: SQL_DESC_ALLOC_AUTO<br /><br /> IPD: SQL_DESC_ALLOC_AUTO|  
-|SQL_DESC_ARRAY_SIZE|SQLULEN|카드가: R/W APD: R/W IRD: 사용 되지 않는 IPD: 사용 안 함|카드가: [1] APD: [1] IRD: 사용 되지 않는 IPD: 사용 안 함|  
-|SQL_DESC_ARRAY_STATUS_PTR|SQLUSMALLINT*|카드가: R/W APD: R/W IRD: R/W IPD: R/W|카드가: Ptr APD null. Ptr IRD null. Null ptr IPD: Null ptr|  
-|SQL_DESC_BIND_OFFSET_PTR|SQLLEN*|카드가: R/W APD: R/W IRD: 사용 되지 않는 IPD: 사용 안 함|카드가: Ptr APD null. Ptr IRD null. 사용 되지 않는 IPD: 사용 안 함|  
-|SQL_DESC_BIND_TYPE|SQLINTEGER|카드가: R/W APD: R/W IRD: 사용 되지 않는 IPD: 사용 안 함|카드가: SQL_BIND_BY_COLUMN<br /><br /> APD: SQL_BIND_BY_COLUMN<br /><br /> IRD: 사용 안 함<br /><br /> IPD: 사용 안 함|  
-|SQL_DESC_COUNT|SQLSMALLINT|카드가: R/W APD: R/W IRD: R IPD: R/W|카드가: 0 APD: 0 IRD: D IPD: 0|  
-|SQL_DESC_ROWS_PROCESSED_PTR|SQLULEN*|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R/W IPD: R/W|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: Null ptr IPD: Null ptr|  
+|SQL_DESC_ALLOC_TYPE|SQLSMALLINT|작업: R APD: R IRD: R IPD: R|작업: 암시적 또는 SQL_DESC_ALLOC_USER에 대 한 SQL_DESC_ALLOC_AUTO입니다.<br /><br /> APD: explicit 또는 SQL_DESC_ALLOC_USER에 대 한 SQL_DESC_ALLOC_AUTO<br /><br /> IRD: SQL_DESC_ALLOC_AUTO<br /><br /> IPD: SQL_DESC_ALLOC_AUTO|  
+|SQL_DESC_ARRAY_SIZE|SQLULEN|사용: R/W APD: R/W IRD: 사용 되지 않는 IPD: 사용 안 함|사용: [1] APD: [1] IRD: 사용 되지 않는 IPD: 사용 안 함|  
+|SQL_DESC_ARRAY_STATUS_PTR|SQLUSMALLINT*|작업: R/W APD: R/W IRD: R/W IPD: R/W|작업: Null ptr APD: null ptr IRD: null ptr IPD: Null ptr|  
+|SQL_DESC_BIND_OFFSET_PTR|SQLLEN|사용: R/W APD: R/W IRD: 사용 되지 않는 IPD: 사용 안 함|사용: Null ptr APD: Null ptr IRD: 사용 되지 않는 IPD: 사용 되지 않음|  
+|SQL_DESC_BIND_TYPE|SQLINTEGER|사용: R/W APD: R/W IRD: 사용 되지 않는 IPD: 사용 안 함|카드: SQL_BIND_BY_COLUMN<br /><br /> APD: SQL_BIND_BY_COLUMN<br /><br /> IRD: 사용 안 함<br /><br /> IPD: 사용 안 함|  
+|SQL_DESC_COUNT|SQLSMALLINT|작업: R/W APD: R/W IRD: R IPD: R/W|작업: 0 APD: 0 IRD: D IPD: 0|  
+|SQL_DESC_ROWS_PROCESSED_PTR|SQLULEN *|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: R/W IPD: R/W|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: Null ptr IPD: Null ptr|  
   
- [1]이이 필드는 IPD 드라이버에 의해 자동으로 채워지는 경우에 정의 됩니다. 그렇지 않은 경우 정의 되지 않습니다. 응용 프로그램에서 SQLSTATE HY091 이러한 필드를 설정 하려고 하는 경우 (잘못 된 설명자 필드 식별자)가 반환 됩니다.  
+ [1] 이러한 필드는 IPD가 드라이버에 의해 자동으로 채워지는 경우에만 정의 됩니다. 그렇지 않으면 정의 되지 않습니다. 응용 프로그램에서 이러한 필드를 설정 하려고 하면 SQLSTATE HY091 (잘못 된 설명자 필드 식별자)가 반환 됩니다.  
   
- 레코드 필드를 초기화 하는 다음 표에 나와 있는 것 처럼 됩니다.  
+ 레코드 필드의 초기화는 다음 표에 나와 있는 것과 같습니다.  
   
-|레코드 필드 이름|type|R/W|기본값|  
+|레코드 필드 이름|Type|R/W|기본값|  
 |-----------------------|----------|----------|-------------|  
-|SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 안 함|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 안 함|  
-|SQL_DESC_BASE_COLUMN_NAME|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 안 함|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 안 함|  
-|SQL_DESC_BASE_TABLE_NAME|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 안 함|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 안 함|  
-|SQL_DESC_CASE_SENSITIVE|SQLINTEGER|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: R|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: D[1]|  
-|SQL_DESC_CATALOG_NAME|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 안 함|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 안 함|  
-|SQL_DESC_CONCISE_TYPE|SQLSMALLINT|카드가: R/W APD: R/W IRD: R IPD: R/W|카드가: SQL_C_ DEFAULT APD: SQL_C_ DEFAULT IRD: D IPD: ND|  
-|SQL_DESC_DATA_PTR|대 SQLPOINTER|카드가: R/W APD: R/W IRD: 사용 되지 않는 IPD: 사용 안 함|카드가: Ptr APD null. Ptr IRD null. 사용 되지 않는 IPD: [2] 사용 안 함|  
-|SQL_DESC_DATETIME_INTERVAL_CODE|SQLSMALLINT|카드가: R/W APD: R/W IRD: R IPD: R/W|카드가: ND APD: ND IRD: D IPD: ND|  
-|SQL_DESC_DATETIME_INTERVAL_PRECISION|SQLINTEGER|카드가: R/W APD: R/W IRD: R IPD: R/W|카드가: ND APD: ND IRD: D IPD: ND|  
-|SQL_DESC_DISPLAY_SIZE|SQLLEN|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 안 함|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 안 함|  
-|SQL_DESC_FIXED_PREC_SCALE|SQLSMALLINT|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: R|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: D[1]|  
-|SQL_DESC_INDICATOR_PTR|SQLLEN *|카드가: R/W APD: R/W IRD: 사용 되지 않는 IPD: 사용 안 함|카드가: Ptr APD null. Ptr IRD null. 사용 되지 않는 IPD: 사용 안 함|  
-|SQL_DESC_LABEL|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 안 함|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 안 함|  
-|SQL_DESC_LENGTH|SQLULEN|카드가: R/W APD: R/W IRD: R IPD: R/W|카드가: ND APD: ND IRD: D IPD: ND|  
-|SQL_DESC_LITERAL_PREFIX|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 안 함|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 안 함|  
-|SQL_DESC_LITERAL_SUFFIX|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 안 함|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 안 함|  
-|SQL_DESC_LOCAL_TYPE_NAME|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: R|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: D[1]|  
-|SQL_DESC_NAME|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: R/W|카드가: ND APD: ND IRD: D IPD: ND|  
-|SQL_DESC_NULLABLE|SQLSMALLINT|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: R|카드가: ND APD: ND IRD: D IPD: ND|  
-|SQL_DESC_NUM_PREC_RADIX|SQLINTEGER|카드가: R/W APD: R/W IRD: R IPD: R/W|카드가: ND APD: ND IRD: D IPD: ND|  
-|SQL_DESC_OCTET_LENGTH|SQLLEN|카드가: R/W APD: R/W IRD: R IPD: R/W|카드가: ND APD: ND IRD: D IPD: ND|  
-|SQL_DESC_OCTET_LENGTH_PTR|SQLLEN *|카드가: R/W APD: R/W IRD: 사용 되지 않는 IPD: 사용 안 함|카드가: Ptr APD null. Ptr IRD null. 사용 되지 않는 IPD: 사용 안 함|  
-|SQL_DESC_PARAMETER_TYPE|SQLSMALLINT|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: 사용 되지 않는 IPD: R/W|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: 사용 되지 않는 IPD: D=SQL_PARAM_INPUT|  
-|SQL_DESC_PRECISION|SQLSMALLINT|카드가: R/W APD: R/W IRD: R IPD: R/W|카드가: ND APD: ND IRD: D IPD: ND|  
-|SQL_DESC_ROWVER|SQLSMALLINT|카드가: 사용 안 함<br /><br /> APD: 사용 안 함<br /><br /> IRD: R<br /><br /> IPD: R|카드가: 사용 안 함<br /><br /> APD: 사용 안 함<br /><br /> IRD: ND<br /><br /> IPD: ND|  
-|SQL_DESC_SCALE|SQLSMALLINT|카드가: R/W APD: R/W IRD: R IPD: R/W|카드가: ND APD: ND IRD: D IPD: ND|  
-|SQL_DESC_SCHEMA_NAME|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 안 함|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 안 함|  
-|SQL_DESC_SEARCHABLE|SQLSMALLINT|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 안 함|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 안 함|  
-|SQL_DESC_TABLE_NAME|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 안 함|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 안 함|  
-|SQL_DESC_TYPE|SQLSMALLINT|카드가: R/W APD: R/W IRD: R IPD: R/W|카드가: SQL_C_DEFAULT APD: SQL_C_DEFAULT IRD: D IPD: ND|  
-|SQL_DESC_TYPE_NAME|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: R|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: D[1]|  
-|SQL_DESC_UNNAMED|SQLSMALLINT|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: R/W|카드가: ND APD: ND IRD: D IPD: ND|  
-|SQL_DESC_UNSIGNED|SQLSMALLINT|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: R|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: D[1]|  
-|SQL_DESC_UPDATABLE|SQLSMALLINT|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 안 함|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 안 함|  
+|SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 안 함|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않음|  
+|SQL_DESC_BASE_COLUMN_NAME|SQLCHAR|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 안 함|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않음|  
+|SQL_DESC_BASE_TABLE_NAME|SQLCHAR|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 안 함|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않음|  
+|SQL_DESC_CASE_SENSITIVE|SQLINTEGER|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: R|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: D [1]|  
+|SQL_DESC_CATALOG_NAME|SQLCHAR|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 안 함|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않음|  
+|SQL_DESC_CONCISE_TYPE|SQLSMALLINT|작업: R/W APD: R/W IRD: R IPD: R/W|작업: SQL_C_ 기본 APD: SQL_C_ 기본 IRD: D IPD: ND|  
+|SQL_DESC_DATA_PTR|대 한 SQLPOINTER|사용: R/W APD: R/W IRD: 사용 되지 않는 IPD: 사용 안 함|사용: Null ptr APD: Null ptr IRD: 사용 되지 않는 IPD: 사용 되지 않는 [2]|  
+|SQL_DESC_DATETIME_INTERVAL_CODE|SQLSMALLINT|작업: R/W APD: R/W IRD: R IPD: R/W|작업: ND APD: ND IRD: D IPD: ND|  
+|SQL_DESC_DATETIME_INTERVAL_PRECISION|SQLINTEGER|작업: R/W APD: R/W IRD: R IPD: R/W|작업: ND APD: ND IRD: D IPD: ND|  
+|SQL_DESC_DISPLAY_SIZE|SQLLEN|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 안 함|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않음|  
+|SQL_DESC_FIXED_PREC_SCALE|SQLSMALLINT|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: R|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: D [1]|  
+|SQL_DESC_INDICATOR_PTR|SQLLEN|사용: R/W APD: R/W IRD: 사용 되지 않는 IPD: 사용 안 함|사용: Null ptr APD: Null ptr IRD: 사용 되지 않는 IPD: 사용 되지 않음|  
+|SQL_DESC_LABEL|SQLCHAR|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 안 함|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않음|  
+|SQL_DESC_LENGTH|SQLULEN|작업: R/W APD: R/W IRD: R IPD: R/W|작업: ND APD: ND IRD: D IPD: ND|  
+|SQL_DESC_LITERAL_PREFIX|SQLCHAR|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 안 함|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않음|  
+|SQL_DESC_LITERAL_SUFFIX|SQLCHAR|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 안 함|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않음|  
+|SQL_DESC_LOCAL_TYPE_NAME|SQLCHAR|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: R|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: D [1]|  
+|SQL_DESC_NAME|SQLCHAR|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: R/W|작업: ND APD: ND IRD: D IPD: ND|  
+|SQL_DESC_NULLABLE|SQLSMALLINT|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: R|작업: ND APD: ND IRD: D IPD: ND|  
+|SQL_DESC_NUM_PREC_RADIX|SQLINTEGER|작업: R/W APD: R/W IRD: R IPD: R/W|작업: ND APD: ND IRD: D IPD: ND|  
+|SQL_DESC_OCTET_LENGTH|SQLLEN|작업: R/W APD: R/W IRD: R IPD: R/W|작업: ND APD: ND IRD: D IPD: ND|  
+|SQL_DESC_OCTET_LENGTH_PTR|SQLLEN|사용: R/W APD: R/W IRD: 사용 되지 않는 IPD: 사용 안 함|사용: Null ptr APD: Null ptr IRD: 사용 되지 않는 IPD: 사용 되지 않음|  
+|SQL_DESC_PARAMETER_TYPE|SQLSMALLINT|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: 사용 되지 않는 IPD: R/W|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: 사용 되지 않는 IPD: D = SQL_PARAM_INPUT|  
+|SQL_DESC_PRECISION|SQLSMALLINT|작업: R/W APD: R/W IRD: R IPD: R/W|작업: ND APD: ND IRD: D IPD: ND|  
+|SQL_DESC_ROWVER|SQLSMALLINT|사용: 사용 안 함<br /><br /> APD: 사용 안 함<br /><br /> IRD: R<br /><br /> IPD: R|사용: 사용 안 함<br /><br /> APD: 사용 안 함<br /><br /> IRD: ND<br /><br /> IPD: ND|  
+|SQL_DESC_SCALE|SQLSMALLINT|작업: R/W APD: R/W IRD: R IPD: R/W|작업: ND APD: ND IRD: D IPD: ND|  
+|SQL_DESC_SCHEMA_NAME|SQLCHAR|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 안 함|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않음|  
+|SQL_DESC_SEARCHABLE|SQLSMALLINT|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 안 함|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않음|  
+|SQL_DESC_TABLE_NAME|SQLCHAR|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 안 함|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않음|  
+|SQL_DESC_TYPE|SQLSMALLINT|작업: R/W APD: R/W IRD: R IPD: R/W|작업: SQL_C_DEFAULT APD: SQL_C_DEFAULT IRD: D IPD: ND|  
+|SQL_DESC_TYPE_NAME|SQLCHAR|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: R|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: D [1]|  
+|SQL_DESC_UNNAMED|SQLSMALLINT|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: R/W|작업: ND APD: ND IRD: D IPD: ND|  
+|SQL_DESC_UNSIGNED|SQLSMALLINT|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: R|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: D [1]|  
+|SQL_DESC_UPDATABLE|SQLSMALLINT|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 안 함|사용: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않음|  
   
- [1]이이 필드는 IPD 드라이버에 의해 자동으로 채워지는 경우에 정의 됩니다. 그렇지 않은 경우 정의 되지 않습니다. 응용 프로그램에서 SQLSTATE HY091 이러한 필드를 설정 하려고 하는 경우 (잘못 된 설명자 필드 식별자)가 반환 됩니다.  
+ [1] 이러한 필드는 IPD가 드라이버에 의해 자동으로 채워지는 경우에만 정의 됩니다. 그렇지 않으면 정의 되지 않습니다. 응용 프로그램에서 이러한 필드를 설정 하려고 하면 SQLSTATE HY091 (잘못 된 설명자 필드 식별자)가 반환 됩니다.  
   
- [2]에서 SQL_DESC_DATA_PTR 필드는 IPD의 일관성 확인을 강제로 설정할 수 있습니다. 에 대 한 후속 호출에서 **SQLGetDescField** 하거나 **SQLGetDescRec**, 드라이버 SQL_DESC_DATA_PTR 되도록 설정 된 값을 반환 하지 않아도 됩니다.  
+ [2] 일관성 확인을 강제 적용 하도록 IPD의 SQL_DESC_DATA_PTR 필드를 설정할 수 있습니다. **SQLGetDescField** 또는 **SQLGetDescRec**에 대 한 후속 호출에서 드라이버는 SQL_DESC_DATA_PTR 설정 된 값을 반환 하는 데 필요 하지 않습니다.  
   
 ## <a name="fieldidentifier-argument"></a>FieldIdentifier 인수  
- 합니다 *FieldIdentifier* 인수 설정할 설명자 필드를 나타냅니다. 설명자를 포함 합니다 *설명자 헤더* 다음 섹션, "헤더 필드를"와 0 개 이상의에서 설명 하는 헤더 필드 이루어진 *설명자 레코드* 레코드 필드로 구성 된 "헤더 필드" 섹션을 다음 섹션에서 설명 합니다.  
+ *FieldIdentifier* 인수는 설정할 설명자 필드를 나타냅니다. 설명자에는 다음 섹션에 설명 된 헤더 필드 "헤더 필드"와 0 개 이상의 *설명자 레코드가* 포함 된 *설명자 헤더가* 포함 되어 있습니다 .이는 "헤더 필드" 섹션의 섹션에 설명 된 레코드 필드로 구성 됩니다.  
   
 ## <a name="header-fields"></a>헤더 필드  
- 각 설명자에는 다음 필드로 구성 된 헤더에 있습니다.  
+ 각 설명자에는 다음 필드로 구성 된 헤더가 있습니다.  
   
- **SQL_DESC_ALLOC_TYPE [All]**  
- 이 읽기 전용 SQLSMALLINT 헤더 필드 드라이버 또는 응용 프로그램에서 명시적으로 설명자를 자동으로 할당 된 여부를 지정 합니다. 응용 프로그램을 수 있지만 수정할 수 없으며이 필드. 필드는 설명자를 드라이버에 의해 자동으로 할당 된 경우 드라이버에서 SQL_DESC_ALLOC_AUTO에 설정 됩니다. 설정은 SQL_DESC_ALLOC_USER 드라이버에서 설명자 응용 프로그램에서 명시적으로 할당 된 경우.  
+ **SQL_DESC_ALLOC_TYPE [모두]**  
+ 이 읽기 전용 SQLSMALLINT 헤더 필드는 설명자가 자동으로 드라이버에 의해 할당 되었는지 아니면 응용 프로그램에 의해 명시적으로 할당 되었는지를 지정 합니다. 응용 프로그램은이 필드를 가져올 수 있지만 수정할 수는 없습니다. 드라이버에서 설명자가 자동으로 할당 된 경우이 필드는 드라이버에 의해 SQL_DESC_ALLOC_AUTO 설정 됩니다. 응용 프로그램에서 설명자를 명시적으로 할당 한 경우 드라이버에서 SQL_DESC_ALLOC_USER 하도록 설정 됩니다.  
   
  **SQL_DESC_ARRAY_SIZE [응용 프로그램 설명자]**  
- ARDs,이 SQLULEN 헤더 필드를 행 집합의 행 수를 지정합니다. 호출 하 여 반환할 행의 수입니다 **SQLFetch** 하거나 **SQLFetchScroll** 를 호출 하 여 작업할 수 나 **SQLBulkOperations** 또는 **SQLSetPos** .  
+ ARDs에서이 SQLULEN 헤더 필드는 행 집합의 행 수를 지정 합니다. **Sqlfetch** 또는 **sqlfetchscroll** 에 대 한 호출에 의해 반환 되거나 **SQLBulkOperations** 또는 **SQLSetPos**를 호출 하 여 작동 하는 행의 수입니다.  
   
- Apd,이 SQLULEN 헤더 필드는 각 매개 변수에 대해 값의 개수를 지정합니다.  
+ APDs에서이 SQLULEN 헤더 필드는 각 매개 변수의 값 수를 지정 합니다.  
   
- 이 필드의 기본값은 1입니다. SQL_DESC_ARRAY_SIZE 1 보다 큰 경우 SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, 및 카드가 APD의 SQL_DESC_OCTET_LENGTH_PTR 배열을 가리킵니다. 각 배열의 카디널리티가이 필드의 값과 동일합니다.  
+ 이 필드의 기본값은 1입니다. SQL_DESC_ARRAY_SIZE가 1 보다 크면 APD의 SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR 및 SQL_DESC_OCTET_LENGTH_PTR 배열에 대 한 포인터입니다. 각 배열의 카디널리티는이 필드의 값과 같습니다.  
   
- 이 필드는 카드가에서 호출 하 여 설정할 수도 있습니다 **SQLSetStmtAttr** SQL_ATTR_ROW_ARRAY_SIZE 특성을 사용 합니다. APD의이 필드를 호출 하 여 설정할 수도 있습니다 **SQLSetStmtAttr** SQL_ATTR_PARAMSET_SIZE 특성을 사용 합니다.  
+ 이 필드는 SQL_ATTR_ROW_ARRAY_SIZE 특성을 사용 하 여 **SQLSetStmtAttr** 를 호출 하 여 설정할 수도 있습니다. APD의이 필드는 SQL_ATTR_PARAMSET_SIZE 특성을 사용 하 여 **SQLSetStmtAttr** 를 호출 하 여 설정할 수도 있습니다.  
   
- **SQL_DESC_ARRAY_STATUS_PTR [All]**  
- 이 SQLUSMALLINT 각 설명자 형식에 대해 * SQLUSMALLINT 값의 배열에 헤더 필드 지점입니다. 이러한 배열은 다음과 같은 이름이 지정 됩니다: 행 상태 배열 (IRD), 매개 변수 상태 배열을 (IPD), 행 작업 배열을 () 매개 변수 작업 배열 (APD).  
+ **SQL_DESC_ARRAY_STATUS_PTR [모두]**  
+ 각 설명자 형식에 대해이 SQLUSMALLINT * 헤더 필드는 SQLUSMALLINT 값의 배열을 가리킵니다. 이러한 배열은 IRD (행 상태 배열), IPD (parameter status array), 행 작업 배열 () 및 APD (parameter operation array)와 같이 이름이 지정 됩니다.  
   
- IRD이 헤더 필드를 호출한 후 상태 값을 포함 하는 행 상태 배열 가리킵니다 **SQLBulkOperations**, **SQLFetch**합니다 **SQLFetchScroll**, 또는 **SQLSetPos**합니다. 배열에 행 집합의 행이 있는 만큼의 요소가 있습니다. 응용 프로그램 SQLUSMALLINTs 배열을 할당 하 고이 필드는 배열을 가리키도록 설정 해야 합니다. 필드는 기본적으로 null 포인터로 설정 됩니다. 드라이버는 SQL_DESC_ARRAY_STATUS_PTR 필드 없음 상태 값이 생성 되는 경우에 null 포인터로 설정 되 고 배열 채워지지 않는 경우가 아니면 배열을-채워집니다.  
+ IRD에서이 헤더 필드는 **SQLBulkOperations**, **sqlfetch**, **sqlfetchscroll**또는 **SQLSetPos**를 호출한 후 상태 값을 포함 하는 행 상태 배열을 가리킵니다. 배열에 행 집합의 행 수 만큼의 요소가 있습니다. 응용 프로그램은 SQLUSMALLINTs의 배열을 할당 하 고 배열을 가리키도록이 필드를 설정 해야 합니다. 기본적으로이 필드는 null 포인터로 설정 됩니다. SQL_DESC_ARRAY_STATUS_PTR 필드가 null 포인터로 설정 되지 않는 한 드라이버는 배열을 채웁니다 .이 경우 상태 값이 생성 되지 않고 배열이 채워지지 않습니다.  
   
 > [!CAUTION]  
->  응용 프로그램 SQL_DESC_ARRAY_STATUS_PTR IRD 필드에서 가리키는 행 상태 배열 요소를 설정 하는 경우에 드라이버 동작이 정의 되지 않습니다.  
+>  응용 프로그램에서 IRD의 SQL_DESC_ARRAY_STATUS_PTR 필드가 가리키는 행 상태 배열의 요소를 설정 하는 경우 드라이버 동작은 정의 되지 않습니다.  
   
- 호출 하 여 배열의 처음 채워집니다 **SQLBulkOperations**, **SQLFetch**를 **SQLFetchScroll**, 또는 **SQLSetPos**합니다. 호출 SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO 반환 하지 않은 경우이 필드에서 가리키는 배열 콘텐츠가 정의 되지 않습니다. 배열의 요소에는 다음 값을 포함할 수 있습니다.  
+ 배열은 처음에 **SQLBulkOperations**, **sqlfetch**, **sqlfetchscroll**또는 **SQLSetPos**를 호출 하 여 채워집니다. 호출이 SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO를 반환 하지 않은 경우이 필드가 가리키는 배열의 내용이 정의 되지 않습니다. 배열의 요소에는 다음 값이 포함 될 수 있습니다.  
   
--   SQL_ROW_SUCCESS: 행을 성공적으로 가져온 및 마지막 페치된 후 변경 되지 않은 합니다.  
+-   SQL_ROW_SUCCESS: 행이 인출 되었으며 마지막으로 인출 된 이후 변경 되지 않았습니다.  
   
--   SQL_ROW_SUCCESS_WITH_INFO: 행을 성공적으로 가져온 및 마지막 페치된 후 변경 되지 않은 합니다. 그러나 행에 대 한 경고가 반환 되었습니다.  
+-   SQL_ROW_SUCCESS_WITH_INFO: 행이 인출 되었으며 마지막으로 인출 된 이후 변경 되지 않았습니다. 그러나 행에 대 한 경고가 반환 되었습니다.  
   
--   SQL_ROW_ERROR: 행을 인출 하는 동안 오류가 발생 했습니다.  
+-   SQL_ROW_ERROR: 행을 페치하는 동안 오류가 발생 했습니다.  
   
--   SQL_ROW_UPDATED: 행을 성공적으로 가져온 및 마지막으로 가져온 후에 업데이트 되었습니다. 행이 다시 인출 됩니다을 하는 경우 해당 상태가 SQL_ROW_SUCCESS입니다.  
+-   SQL_ROW_UPDATED: 행이 인출 되 고 마지막으로 인출 된 후 업데이트 되었습니다. 다시 인출 된 행의 상태는 SQL_ROW_SUCCESS입니다.  
   
--   SQL_ROW_DELETED: 마지막으로 페치된 이후로 행 삭제 되었습니다.  
+-   SQL_ROW_DELETED: 행이 마지막으로 인출 된 후 삭제 되었습니다.  
   
--   SQL_ROW_ADDED: 행으로 삽입 된 **SQLBulkOperations**합니다. 행이 다시 인출 됩니다을 하는 경우 해당 상태가 SQL_ROW_SUCCESS입니다.  
+-   SQL_ROW_ADDED: **SQLBulkOperations**에 의해 행이 삽입 되었습니다. 다시 인출 된 행의 상태는 SQL_ROW_SUCCESS입니다.  
   
--   SQL_ROW_NOROW: 행 집합 결과 집합의 끝을 중첩 하 고 행이 행 상태 배열이 요소에 해당 하는 반환 된 키를 누릅니다.  
+-   SQL_ROW_NOROW: 행 집합은 결과 집합의 끝을 겹쳐져 행 상태 배열의이 요소로 속하는지를 행이 반환 되지 않습니다.  
   
- IRD에서이 필드를 호출 하 여 설정할 수도 있습니다 **SQLSetStmtAttr** SQL_ATTR_ROW_STATUS_PTR 특성을 사용 합니다.  
+ IRD의이 필드는 SQL_ATTR_ROW_STATUS_PTR 특성을 사용 하 여 **SQLSetStmtAttr** 를 호출 하 여 설정할 수도 있습니다.  
   
- IRD의 SQL_DESC_ARRAY_STATUS_PTR 필드 SQL_SUCCESS 또는 sql_success_with_info가 반환 된 후에 유효 합니다. 반환 코드는 다음 중 하나를 SQL_DESC_ROWS_PROCESSED_PTR 가리키는 위치 정의 되지 않습니다.  
+ IRD의 SQL_DESC_ARRAY_STATUS_PTR 필드는 SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO 반환 된 후에만 유효 합니다. 반환 코드가 이러한 항목 중 하나가 아닌 경우 SQL_DESC_ROWS_PROCESSED_PTR가 가리키는 위치가 정의 되지 않습니다.  
   
- IPD,이 헤더 필드를 호출한 후 각 매개 변수 값 집합에 대 한 상태 정보를 포함 하는 매개 변수 상태 배열을 가리킵니다 **SQLExecute** 하거나 **SQLExecDirect**합니다. 경우에 대 한 호출 **SQLExecute** 하거나 **SQLExecDirect** SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO를이 필드에서 가리키는 배열 콘텐츠가 정의 되지 않습니다. 반환 하지 않았습니다. 응용 프로그램 SQLUSMALLINTs 배열을 할당 하 고이 필드는 배열을 가리키도록 설정 해야 합니다. 드라이버는 SQL_DESC_ARRAY_STATUS_PTR 필드 없음 상태 값이 생성 되는 경우에 null 포인터로 설정 되 고 배열 채워지지 않는 경우가 아니면 배열을-채워집니다. 배열의 요소에는 다음 값을 포함할 수 있습니다.  
+ IPD에서이 헤더 필드는 **Sqlexecute** 또는 **sqlexecdirect**를 호출한 후 각 매개 변수 값 집합에 대 한 상태 정보를 포함 하는 매개 변수 상태 배열을 가리킵니다. **Sqlexecute** 또는 **sqlexecdirect** 호출에서 SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO를 반환 하지 않은 경우이 필드가 가리키는 배열의 내용이 정의 되지 않습니다. 응용 프로그램은 SQLUSMALLINTs의 배열을 할당 하 고 배열을 가리키도록이 필드를 설정 해야 합니다. SQL_DESC_ARRAY_STATUS_PTR 필드가 null 포인터로 설정 되지 않는 한 드라이버는 배열을 채웁니다 .이 경우 상태 값이 생성 되지 않고 배열이 채워지지 않습니다. 배열의 요소에는 다음 값이 포함 될 수 있습니다.  
   
--   SQL_PARAM_SUCCESS: 이 매개 변수이 집합에 대 한 SQL 문이 성공적으로 실행 합니다.  
+-   SQL_PARAM_SUCCESS:이 매개 변수 집합에 대해 SQL 문이 성공적으로 실행 되었습니다.  
   
--   SQL_PARAM_SUCCESS_WITH_INFO: 이 매개 변수이 집합에 대 한 SQL 문이 성공적으로 실행 그러나 경고 정보는 진단 데이터 구조에서 사용할 수 있습니다.  
+-   SQL_PARAM_SUCCESS_WITH_INFO:이 매개 변수 집합에 대해 SQL 문이 성공적으로 실행 되었습니다. 그러나 경고 정보는 진단 데이터 구조에서 사용할 수 있습니다.  
   
--   SQL_PARAM_ERROR: 이 매개 변수이 집합을 처리에서 오류가 발생 했습니다. 추가 오류 정보를 진단 데이터 구조에서 사용할 수 있습니다.  
+-   SQL_PARAM_ERROR:이 매개 변수 집합을 처리 하는 동안 오류가 발생 했습니다. 추가 오류 정보는 진단 데이터 구조에서 사용할 수 있습니다.  
   
--   SQL_PARAM_UNUSED: 이 매개 변수 집합 되지 않았거나 사용할 수 있는 때문에 일부 이전 매개 변수 집합 추가 처리를 중단 하는 오류가 발생 한 SQL_PARAM_IGNORE의 SQL_DESC_ARRAY_STATUS_PTR 필드에 의해 지정 된 배열에 매개 변수 집합에 대 한 설정 되었기 때문에 APD 합니다.  
+-   SQL_PARAM_UNUSED:이 매개 변수 집합은 일부 이전 매개 변수 설정에서 추가 처리를 중단 한 오류가 발생 했거나 SQL_PARAM_IGNORE가 SQL_DESC_ARRAY_ 지정 된 배열에 있는 해당 매개 변수 집합에 대해 설정 되었기 때문에 사용 되지 않았습니다. APD의 STATUS_PTR 필드입니다.  
   
--   SQL_PARAM_DIAG_UNAVAILABLE: 진단 정보를 사용할 수 없는 경우 이 예가 드라이버 모놀리식 단위로 매개 변수 배열을 처리 하는 경우 및이 수준의 오류 정보를 생성 하지 않도록 합니다.  
+-   SQL_PARAM_DIAG_UNAVAILABLE: 진단 정보를 사용할 수 없습니다. 이에 대 한 예는 드라이버에서 매개 변수 배열을 모놀리식 unit으로 처리 하므로이 수준의 오류 정보를 생성 하지 않는 경우입니다.  
   
- 이 필드는 IPD의 호출 하 여 설정할 수도 있습니다 **SQLSetStmtAttr** SQL_ATTR_PARAM_STATUS_PTR 특성을 사용 합니다.  
+ IPD의이 필드는 SQL_ATTR_PARAM_STATUS_PTR 특성을 사용 하 여 **SQLSetStmtAttr** 를 호출 하 여 설정할 수도 있습니다.  
   
- 카드가,이 헤더 필드를이 행에 대해 무시 되도록 인지 여부를 나타내는 응용 프로그램에서 설정할 수 있는 값의 행 작업 배열을 가리킵니다 **SQLSetPos** 작업 합니다. 배열의 요소에는 다음 값을 포함할 수 있습니다.  
+ 이 헤더 필드는 응용 프로그램에서 설정할 수 있는 값의 행 작업 배열을 가리키며 **SQLSetPos** 작업에서이 행을 무시할지 여부를 나타냅니다. 배열의 요소에는 다음 값이 포함 될 수 있습니다.  
   
--   SQL_ROW_PROCEED: 사용 하 여 대량 작업에는 행이 포함 **SQLSetPos**합니다. (이 설정은 보장 하지 않습니다 하 고 작업 행에서 수행 됩니다. 행 IRD 행 상태 배열에서 SQL_ROW_ERROR 상태에 있는 경우 드라이버 못할 행의 작업을 수행할 수 있습니다.)  
+-   SQL_ROW_PROCEED: **SQLSetPos**를 사용 하 여 대량 작업에 행이 포함 됩니다. 이 설정은 행에서 작업이 발생 하는 것을 보장 하지 않습니다. 행의 상태가 IRD row status 배열에 SQL_ROW_ERROR 경우 드라이버는 행에서 작업을 수행 하지 못할 수 있습니다.  
   
--   SQL_ROW_IGNORE: 행을 사용 하 여 대량 작업에서 제외 됩니다 **SQLSetPos**합니다.  
+-   SQL_ROW_IGNORE: **SQLSetPos**를 사용 하 여 대량 작업에서 행이 제외 됩니다.  
   
- 배열의 요소가 설정 된 경우 대량 작업에서 모든 행이 포함 됩니다. 카드가 SQL_DESC_ARRAY_STATUS_PTR 필드에 값이 null 포인터 이면 모든 행의 대량 작업에 포함 됩니다. 해석은은 포인터가 유효한 배열 가리키는 배열의 모든 요소 SQL_ROW_PROCEED 것 처럼 동일 합니다. 배열의 요소 SQL_ROW_IGNORE로 설정 된 경우 무시 행을 행 상태 배열에 값을 변경 되지 않습니다.  
+ 배열의 요소를 설정 하지 않으면 모든 행이 대량 작업에 포함 됩니다. SQL_DESC_ARRAY_STATUS_PTR 필드의 값이 null 포인터인 경우 모든 행이 대량 작업에 포함 됩니다. 해석은 유효한 배열을 가리키는 포인터와 배열의 모든 요소가 SQL_ROW_PROCEED 된 것과 동일 합니다. 배열의 요소가 SQL_ROW_IGNORE로 설정 된 경우 무시 된 행의 행 상태 배열 값은 변경 되지 않습니다.  
   
- 이 필드는 카드가에서 호출 하 여 설정할 수도 있습니다 **SQLSetStmtAttr** SQL_ATTR_ROW_OPERATION_PTR 특성을 사용 합니다.  
+ 이 필드는 SQL_ATTR_ROW_OPERATION_PTR 특성을 사용 하 여 **SQLSetStmtAttr** 를 호출 하 여 설정할 수도 있습니다.  
   
- APD,이 헤더 필드 지 여부를 나타내는이 매개 변수이 집합이 되도록 응용 프로그램에서 설정할 수 있는 값의 매개 변수 작업 배열을 가리킵니다 때 무시 **SQLExecute** 또는 **SQLExecDirect**라고 합니다. 배열의 요소에는 다음 값을 포함할 수 있습니다.  
+ APD에서이 헤더 필드는 **Sqlexecute** 또는 **sqlexecdirect** 를 호출할 때이 매개 변수 집합을 무시할지 여부를 나타내기 위해 응용 프로그램에서 설정할 수 있는 값의 매개 변수 작업 배열을 가리킵니다. 배열의 요소에는 다음 값이 포함 될 수 있습니다.  
   
--   SQL_PARAM_PROCEED: 매개 변수 집합에 포함 되어는 **SQLExecute** 하거나 **SQLExecDirect** 호출 합니다.  
+-   SQL_PARAM_PROCEED: **Sqlexecute** 또는 **sqlexecdirect** 호출에 매개 변수 집합이 포함 됩니다.  
   
--   SQL_PARAM_IGNORE: 매개 변수 집합에서 제외 되는 **SQLExecute** 하거나 **SQLExecDirect** 호출 합니다.  
+-   SQL_PARAM_IGNORE: 매개 변수 집합은 **Sqlexecute** 또는 **sqlexecdirect** 호출에서 제외 됩니다.  
   
- 모든 배열에 매개 변수 집합에 사용 될 배열 요소가 설정 된 경우는 **SQLExecute** 하거나 **SQLExecDirect** 호출 합니다. APD의 SQL_DESC_ARRAY_STATUS_PTR 필드의 값이 null 포인터 이면 모든 매개 변수 집합이 사용 됩니다. 해석은은 포인터가 유효한 배열 가리키는 배열의 모든 요소 SQL_PARAM_PROCEED 것 처럼 동일 합니다.  
+ 배열의 요소를 설정 하지 않은 경우에는 배열의 모든 매개 변수 집합이 **Sqlexecute** 또는 **sqlexecdirect** 호출에 사용 됩니다. APD의 SQL_DESC_ARRAY_STATUS_PTR 필드 값이 null 포인터인 경우 모든 매개 변수 집합이 사용 됩니다. 해석은 유효한 배열을 가리키는 포인터와 배열의 모든 요소가 SQL_PARAM_PROCEED 된 것과 동일 합니다.  
   
- APD의이 필드를 호출 하 여 설정할 수도 있습니다 **SQLSetStmtAttr** SQL_ATTR_PARAM_OPERATION_PTR 특성을 사용 합니다.  
+ APD의이 필드는 SQL_ATTR_PARAM_OPERATION_PTR 특성을 사용 하 여 **SQLSetStmtAttr** 를 호출 하 여 설정할 수도 있습니다.  
   
- **[응용 프로그램 설명자] SQL_DESC_BIND_OFFSET_PTR**  
- 이 SQLLEN * 헤더 필드 가리키는 바인딩 오프셋입니다. 기본적으로 null 포인터로 설정 됩니다. 이 필드는 null 포인터를 없는 경우 드라이버는 포인터를 역참조 하 고 각 설명자 레코드 (SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, 및 SQL_DESC_OCTET_LENGTH_PTR)의 null이 아닌 값이 있는 지연 된 필드에 역참조 된 값을 추가 에 바인딩할 때 시간 및 사용 하 여 새 포인터 값을 가져옵니다.  
+ **SQL_DESC_BIND_OFFSET_PTR [응용 프로그램 설명자]**  
+ 이 SQLLEN * 헤더 필드는 바인딩 오프셋을 가리킵니다. 기본적으로 null 포인터로 설정 됩니다. 이 필드가 null 포인터가 아닌 경우 드라이버는 포인터를 역참조 하 고 설명자 레코드에서 null이 아닌 값 (SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR 및 SQL_DESC_OCTET_LENGTH_PTR)을 포함 하는 각 지연 필드에 역참조 된 값을 추가 합니다. 인출 시 및는 바인딩할 때 새 포인터 값을 사용 합니다.  
   
- 바인딩 오프셋은 항상 SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, 및 SQL_DESC_OCTET_LENGTH_PTR 필드의 값에 직접 추가 됩니다. 오프셋을 다른 값으로 변경 되 면 각 설명자 필드의 값에 직접 새 값 추가 계속 됩니다. 모든 이전 오프셋을 더한 필드 값을 새 오프셋 추가 되지 않습니다.  
+ 바인딩 오프셋은 항상 SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR 및 SQL_DESC_OCTET_LENGTH_PTR 필드의 값에 직접 추가 됩니다. 오프셋이 다른 값으로 변경 되는 경우에도 새 값이 각 설명자 필드의 값에 직접 추가 됩니다. 새 오프셋은 필드 값에 앞의 오프셋을 더한 값에 추가 되지 않습니다.  
   
- 이 필드를 *지연 된 필드*: 설정 되어 있지만 데이터 버퍼에 대 한 주소를 확인 해야 할 경우 드라이버에서 나중에 사용 시 사용 되지 않습니다.  
+ 이 필드는 *지연 된 필드*입니다 .이 필드는 설정 시 사용 되지 않지만 나중에 데이터 버퍼의 주소를 결정 해야 할 때 드라이버에서 사용 됩니다.  
   
- 이 필드는 카드가에서 호출 하 여 설정할 수도 있습니다 **SQLSetStmtAttr** SQL_ATTR_ROW_BIND_OFFSET_PTR 특성을 사용 합니다. 이 필드는 카드가에서 호출 하 여 설정할 수도 있습니다 **SQLSetStmtAttr** SQL_ATTR_PARAM_BIND_OFFSET_PTR 특성을 사용 합니다.  
+ 이 필드는 SQL_ATTR_ROW_BIND_OFFSET_PTR 특성을 사용 하 여 **SQLSetStmtAttr** 를 호출 하 여 설정할 수도 있습니다. 이 필드는 SQL_ATTR_PARAM_BIND_OFFSET_PTR 특성을 사용 하 여 **SQLSetStmtAttr** 를 호출 하 여 설정할 수도 있습니다.  
   
- 자세한 내용은 행 단위 바인딩은에 대 한 설명은 참조 하세요 [SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md) 하 고 [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)합니다.  
+ 자세한 내용은 [Sqlfetchscroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md) 및 [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)의 행 단위 바인딩에 대 한 설명을 참조 하세요.  
   
- **[응용 프로그램 설명자] SQL_DESC_BIND_TYPE**  
- 이 SQLUINTEGER 헤더 필드에는 열 또는 매개 변수를 바인딩하는 데 사용할 바인딩 방향을 설정 합니다.  
+ **SQL_DESC_BIND_TYPE [응용 프로그램 설명자]**  
+ 이 SQLUINTEGER 헤더 필드는 열 또는 매개 변수를 바인딩하는 데 사용할 바인딩 방향을 설정 합니다.  
   
- ARDs에서이 필드는 바인딩 방향을 지정 하면 **SQLFetchScroll** 또는 **SQLFetch** 관련된 문 핸들에서 호출 됩니다.  
+ ARDs에서이 필드는 연결 된 문 핸들에 대해 **Sqlfetchscroll** 또는 **sqlfetch** 를 호출할 때 바인딩 방향을 지정 합니다.  
   
- 열에 대 한 열 단위 바인딩을 선택 하려면을 sql_bind_by_column으로 설정 (기본값)이이 필드를 설정 합니다.  
+ 열에 대 한 열 단위 바인딩을 선택 하려면이 필드가 SQL_BIND_BY_COLUMN (기본값)로 설정 됩니다.  
   
- 이 필드는 카드가에서 호출 하 여 설정할 수도 있습니다 **SQLSetStmtAttr** 를 SQL_ATTR_ROW_BIND_TYPE을 사용 하 여 *특성*합니다.  
+ 이 필드는 SQL_ATTR_ROW_BIND_TYPE *특성*을 사용 하 여 **SQLSetStmtAttr** 를 호출 하 여 설정할 수도 있습니다.  
   
- Apd,이 필드는 데 동적 매개 변수 바인딩 방향을 지정 합니다.  
+ APDs에서이 필드는 동적 매개 변수에 사용할 바인딩 방향을 지정 합니다.  
   
- 열 단위 바인딩 매개 변수를 선택 하려면을 sql_bind_by_column으로 설정 (기본값)이이 필드를 설정 합니다.  
+ 매개 변수에 대 한 열 단위 바인딩을 선택 하려면이 필드가 SQL_BIND_BY_COLUMN (기본값)로 설정 됩니다.  
   
- APD의이 필드를 호출 하 여 설정할 수도 있습니다 **SQLSetStmtAttr** 를 SQL_ATTR_PARAM_BIND_TYPE로 *특성*합니다.  
+ APD의이 필드는 SQL_ATTR_PARAM_BIND_TYPE *특성*을 사용 하 여 **SQLSetStmtAttr** 를 호출 하 여 설정할 수도 있습니다.  
   
- **SQL_DESC_COUNT [All]**  
- 이 SQLSMALLINT 헤더 필드 지정 데이터를 포함 하는 번호가 가장 큰 레코드의 인덱스 1부터 시작 합니다. 드라이버는 설명자에 대 한 데이터 구조를 설정 하면 상당한 수 있는 레코드 수를 표시 하려면 SQL_DESC_COUNT 필드를 설정할 수도 있어야 합니다. 응용 프로그램에서이 데이터 구조체의 인스턴스를 할당 하는 경우를 위한 공간을 예약 하는 레코드 수를 지정 하는 것이 없습니다. 응용 프로그램 레코드의 콘텐츠를 지정 하는 대로 드라이버는 설명자 핸들을 적절 한 크기의 데이터 구조를 가리키는지 확인에 필요한 모든 작업을 수행 합니다.  
+ **SQL_DESC_COUNT [모두]**  
+ 이 SQLSMALLINT 헤더 필드는 데이터를 포함 하는 가장 번호가 매겨진 레코드의 인덱스 (1부터 사용)를 지정 합니다. 드라이버에서 설명자에 대 한 데이터 구조를 설정 하는 경우에는 SQL_DESC_COUNT 필드를 설정 하 여 중요 한 레코드 수를 표시 해야 합니다. 응용 프로그램에서이 데이터 구조의 인스턴스를 할당 하는 경우 공간을 예약 하는 데 사용할 레코드 수를 지정할 필요가 없습니다. 응용 프로그램이 레코드의 내용을 지정할 때 드라이버는 설명자 핸들이 적절 한 크기의 데이터 구조를 참조 하는지 확인 하는 데 필요한 모든 작업을 수행 합니다.  
   
- SQL_DESC_COUNT (필드는 카드가 경우)에 바인딩되는 모든 데이터 열 또는 (필드는 APD 경우)에 바인딩되어 있는 모든 매개 변수의 수 없는 있지만 번호가 가장 큰 레코드의 수입니다. 번호가 가장 높은 열 또는 매개 변수 바인딩 해제 되는 경우에 다음 번호가 가장 높은 열 또는 매개 변수의 수 SQL_DESC_COUNT 변경 됩니다. 열 또는 여러 매개 변수가 하는 경우 가장 높은 열 수가 바인딩되지 미만 (호출 하 여 **SQLBindCol** 사용 하 여 합니다 *TargetValuePtr* 인수가 null 포인터 이거나 로**SQLBindParameter** 사용 하 여는 *ParameterValuePtr* 인수가 null 포인터로 설정), SQL_DESC_COUNT 변경 되지 않습니다. 추가 열 또는 매개 변수 데이터를 포함 하는 번호가 가장 높은 레코드 보다 큰 숫자를 사용 하 여 바인딩된 경우 드라이버 SQL_DESC_COUNT 필드의 값을 자동으로 증가 합니다. 호출 하 여 모든 열은 바인딩되지 않은 경우 **SQLFreeStmt** SQL_UNBIND 옵션과 카드가 및 IRD SQL_DESC_COUNT 필드를 0으로 설정 됩니다. 하는 경우 **SQLFreeStmt** 라고 SQL_RESET_PARAMS 옵션을 사용 하 여 APD IPD의 SQL_DESC_COUNT 필드는 0으로 설정 됩니다.  
+ SQL_DESC_COUNT은 바인딩된 모든 데이터 열의 개수 (필드가 있는 경우) 또는 바인딩된 모든 매개 변수 (필드가 APD 인 경우)가 아니라 가장 높은 번호의 레코드 수입니다. 가장 번호가 매겨진 열 또는 매개 변수가 바인딩 해제 된 경우 SQL_DESC_COUNT는 다음으로 가장 높은 번호의 열 또는 매개 변수 수로 변경 됩니다. **SQLBindCol** 을 호출 하 여 가장 높은 번호의 열 수보다 작은 수의 열 또는 매개 변수가 바인딩 해제 된 경우 ( *Targetvalueptr* 인수를 Null 포인터로 설정 하거나 *parametervalueptr* 인수가 null 포인터로 설정 된 **SQLBindParameter** )에는 SQL_DESC_COUNT 변경 되지 않습니다. 데이터를 포함 하는 번호가 가장 높은 레코드 보다 큰 숫자를 사용 하 여 열 또는 매개 변수를 추가로 바인딩하면 드라이버가 SQL_DESC_COUNT 필드의 값을 자동으로 늘립니다. SQL_UNBIND 옵션을 사용 하 여 **SQLFreeStmt** 를 호출 하 여 모든 열을 바인딩 해제 한 경우에는 IRD의 SQL_DESC_COUNT 필드가 0으로 설정 됩니다. SQL_RESET_PARAMS 옵션을 사용 하 여 **SQLFreeStmt** 를 호출 하면 APD 및 IPD의 SQL_DESC_COUNT 필드가 0으로 설정 됩니다.  
   
- SQL_DESC_COUNT에서 값을 호출 하 여 명시적으로 응용 프로그램에서 설정할 수 있습니다 **SQLSetDescField**합니다. SQL_DESC_COUNT 값을 명시적으로 줄이면 SQL_DESC_COUNT의 새 값 보다 큰 숫자를 사용 하 여 모든 레코드 효과적으로 제거 됩니다. SQL_DESC_COUNT 값 0으로 명시적으로 설정 되는 카드가에 필드가 있는지 바인딩된 책갈피 열을 제외한 모든 데이터 버퍼가 해제 됩니다.  
+ SQL_DESC_COUNT의 값은 응용 프로그램에서 **SQLSetDescField**를 호출 하 여 명시적으로 설정할 수 있습니다. SQL_DESC_COUNT의 값을 명시적으로 줄이면 SQL_DESC_COUNT에서 새 값 보다 큰 숫자가 있는 모든 레코드가 효과적으로 제거 됩니다. SQL_DESC_COUNT 값이 명시적으로 0으로 설정 되 고 필드가 있는 경우 바인딩된 책갈피 열을 제외한 모든 데이터 버퍼가 해제 됩니다.  
   
- Record count는 카드가이 필드에 바인딩된 책갈피 열을 포함 하지 않습니다. 책갈피 열을 바인딩 해제 하는 유일한 방법은 null 포인터로 SQL_DESC_DATA_PTR 필드가 설정 하는 것입니다.  
+ 이 필드의 레코드 수에는 바인딩된 책갈피 열이 포함 되지 않습니다. 책갈피 열을 바인딩 해제 하는 유일한 방법은 SQL_DESC_DATA_PTR 필드를 null 포인터로 설정 하는 것입니다.  
   
  **SQL_DESC_ROWS_PROCESSED_PTR [구현 설명자]**  
- 이 SQLULEN는 ird \* 헤더 필드가 가리키는 버퍼에 대 한 호출 후 가져온 행 수를 포함 하 **SQLFetch** 하거나 **SQLFetchScroll**, 또는 대량 작업에서 영향을 받는 행 수 에 대 한 호출을 수행한 **SQLBulkOperations** 하거나 **SQLSetPos**, 오류 행을 포함 합니다.  
+ IRD \* 에서이 SQLULEN 헤더 필드는 **Sqlfetch** 또는 **sqlulen**을 호출한 후 인출 된 행 수 또는 오류 행을 포함 하 여 **SQLBulkOperations** 또는 **SQLSetPos**를 호출 하 여 수행 된 대량 작업에서 영향을 받는 행 수를 포함 하는 버퍼를 가리킵니다.  
   
- 이 SQLUINTEGER는 IPD의 * 처리 된 경우 오류 집합을 포함 하는 매개 변수 집합 수를 포함 하는 버퍼를 헤더 필드 가리킵니다. 이 null 포인터인 경우 번호가 없으면 반환 됩니다.  
+ IPD에서이 SQLUINTEGER * 헤더 필드는 오류 집합을 포함 하 여 처리 된 매개 변수 집합의 수를 포함 하는 버퍼를 가리킵니다. Null 포인터인 경우에는 숫자가 반환 되지 않습니다.  
   
- SQL_DESC_ROWS_PROCESSED_PTR SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO를 호출한 후 반환 된 후에 유효 **SQLFetch** 하거나 **SQLFetchScroll** IRD 필드) (의 또는 **SQLExecute** , **SQLExecDirect**, 또는 **SQLParamData** (한 IPD 필드). 가리키는 버퍼에 채우는 호출 하는 경우이 필드와 관계 없이 SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO를 반환 하지 않는에서 SQL_NO_DATA를 0으로 설정 되어 있는 경우 버퍼의 값을 반환 하지 않는 한 버퍼의 내용이 정의 되지 않습니다.  
+ SQL_DESC_ROWS_PROCESSED_PTR는 **Sqlfetch** 또는 **SQLFETCHSCROLL** (IRD 필드의 경우) 또는 **sqlfetch**, **SQLEXECDIRECT**또는 **sqlparamdata** (IPD 필드의 경우)를 호출한 후 SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO 반환 된 후에만 유효 합니다. 이 필드가 가리키는 버퍼를 채우는 호출이 SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO를 반환 하지 않는 경우에는 SQL_NO_DATA을 반환 하지 않으면 버퍼의 내용이 정의 되지 않습니다 .이 경우 버퍼의 값이 0으로 설정 됩니다.  
   
- 이 필드는 카드가에서 호출 하 여 설정할 수도 있습니다 **SQLSetStmtAttr** SQL_ATTR_ROWS_FETCHED_PTR 특성을 사용 하 여 합니다. APD의이 필드를 호출 하 여 설정할 수도 있습니다 **SQLSetStmtAttr** SQL_ATTR_PARAMS_PROCESSED_PTR 특성을 사용 하 여 합니다.  
+ 이 필드는 SQL_ATTR_ROWS_FETCHED_PTR 특성을 사용 하 여 **SQLSetStmtAttr** 를 호출 하 여 설정할 수도 있습니다. APD의이 필드는 SQL_ATTR_PARAMS_PROCESSED_PTR 특성을 사용 하 여 **SQLSetStmtAttr** 를 호출 하 여 설정할 수도 있습니다.  
   
- 이 필드에서 가리키는 버퍼는 응용 프로그램에 의해 할당 됩니다. 이 드라이버에 의해 설정 된 지연 된 출력 버퍼입니다. 기본적으로 null 포인터로 설정 됩니다.  
+ 이 필드가 가리키는 버퍼는 응용 프로그램에 의해 할당 됩니다. 드라이버에 의해 설정 되는 지연 된 출력 버퍼입니다. 기본적으로 null 포인터로 설정 됩니다.  
   
 ## <a name="record-fields"></a>레코드 필드  
- 각 설명자 필드 열 데이터 또는 설명자의 유형에 따라 동적 매개 변수를 정의 하는 구성 된 하나 이상의 레코드를 포함 합니다. 각 레코드는 단일 열 또는 매개 변수를의 전체 정의 합니다.  
+ 각 설명자에는 설명자 유형에 따라 열 데이터 또는 동적 매개 변수 중 하나를 정의 하는 필드로 구성 된 하나 이상의 레코드가 포함 되어 있습니다. 각 레코드는 단일 열 또는 매개 변수의 전체 정의입니다.  
   
  **SQL_DESC_AUTO_UNIQUE_VALUE [IRDs]**  
- 이 읽기 전용 SQLINTEGER 레코드 필드 열이 자동 증분 열 또는 SQL_FALSE 열의 자동 증분 열이 아닌 경우 SQL_TRUE를 포함 합니다. 이 필드는 읽기 전용 이며 아닌 내부 자동 증분 열은 읽기 전용 반드시 합니다.  
+ 이 읽기 전용 SQLINTEGER 레코드 필드에는 열이 자동 증분 열인 경우 SQL_TRUE 포함 되 고 열이 자동 증분 열이 아닌 경우에는 SQL_FALSE. 이 필드는 읽기 전용 이지만 기본 자동 증분 열은 반드시 읽기 전용이 아닙니다.  
   
  **SQL_DESC_BASE_COLUMN_NAME [IRDs]**  
- 이 읽기 전용 SQLCHAR * 레코드 필드는 결과 집합 열에 대 한 기본 열 이름을 포함 합니다. 기본 열 이름 (예: 열을 식의 경우) 존재 하지 않는 경우이 변수는 빈 문자열을 포함 합니다.  
+ 이 읽기 전용 SQLCHAR * 레코드 필드에는 결과 집합 열의 기본 열 이름이 포함 되어 있습니다. 식 열의 경우와 같이 기본 열 이름이 없는 경우이 변수에는 빈 문자열이 포함 됩니다.  
   
  **SQL_DESC_BASE_TABLE_NAME [IRDs]**  
- 이 읽기 전용 SQLCHAR * 레코드 필드는 결과 집합 열에 대 한 기본 테이블 이름을 포함 합니다. 기본 테이블 이름을 정의할 수 없습니다 또는 적용할 수 없는 경우이 변수는 빈 문자열을 포함 합니다.  
+ 이 읽기 전용 SQLCHAR * 레코드 필드에는 결과 집합 열에 대 한 기본 테이블 이름이 포함 됩니다. 기본 테이블 이름을 정의할 수 없거나 해당 사항이 적용 되지 않는 경우이 변수에는 빈 문자열이 포함 됩니다.  
   
  **SQL_DESC_CASE_SENSITIVE [구현 설명자]**  
- 이 읽기 전용 SQLINTEGER 레코드 필드 포함 sql_true는 해당 열 또는 매개 변수는 처리 SQL_FALSE 데이터 정렬 및 비교에 대/소문자 구분 문자는 경우 또는 열 데이터 정렬 및 비교에 대 한 대/소문자 구분으로 처리 되 면 열입니다.  
+ 이 읽기 전용 SQLINTEGER 레코드 필드에는 열 또는 매개 변수가 데이터 정렬과 비교 시 대/소문자를 구분 하 여 처리 되는 경우 SQL_TRUE 포함 되 고, 열이 데이터 정렬과 비교 시 대/소문자를 구분 하 여 처리 되지 않거나 문자가 아닌 경우 SQL_FALSE 열의.  
   
  **SQL_DESC_CATALOG_NAME [IRDs]**  
- 이 읽기 전용 SQLCHAR * 레코드 필드 열이 포함 된 기본 테이블에 대 한 카탈로그를 포함 합니다. 반환 값 또는 열이 뷰의 일부 열이 식이면 드라이버에 따라 다릅니다는입니다. 데이터 소스는 카탈로그를 지원 하지 않습니다 또는 카탈로그를 확인할 수 없는 경우이 변수는 빈 문자열을 포함 합니다.  
+ 이 읽기 전용 SQLCHAR * 레코드 필드는 열을 포함 하는 기본 테이블에 대 한 카탈로그를 포함 합니다. 열이 식인 경우 또는 열이 뷰의 일부인 경우 반환 값은 드라이버에 따라 달라 집니다. 데이터 원본에서 카탈로그를 지원 하지 않거나 카탈로그를 확인할 수 없는 경우이 변수에는 빈 문자열이 포함 됩니다.  
   
- **SQL_DESC_CONCISE_TYPE [All]**  
- 이 SQLSMALLINT 헤더 필드에 날짜/시간 및 간격 데이터 유형을 포함 하는 모든 데이터 형식에 대해 간결한 데이터 형식을 지정 합니다.  
+ **SQL_DESC_CONCISE_TYPE [모두]**  
+ 이 SQLSMALLINT header 필드는 datetime 및 interval 데이터 형식을 비롯 한 모든 데이터 형식에 대 한 간결한 데이터 형식을 지정 합니다.  
   
- SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE을 SQL_DESC_DATETIME_INTERVAL_CODE 필드의 값은 상호 종속적입니다. 다른 설정 해야 하는 필드 중 각 시간 설정 됩니다. SQL_DESC_CONCISE_TYPE를 호출 하 여 설정할 수 있습니다 **SQLBindCol** 하거나 **SQLBindParameter**, 또는 **SQLSetDescField**합니다. 호출 하 여 SQL_DESC_TYPE을 설정할 수 있습니다 **SQLSetDescField** 하거나 **SQLSetDescRec**합니다.  
+ SQL_DESC_CONCISE_TYPE, SQL_DESC_TYPE 및 SQL_DESC_DATETIME_INTERVAL_CODE 필드의 값은 상호 종속적입니다. 필드 중 하나가 설정 될 때마다 다른 필드도 설정 해야 합니다. **SQLBindCol** 또는 **SQLBindParameter**또는 **SQLSetDescField**에 대 한 호출을 통해 SQL_DESC_CONCISE_TYPE를 설정할 수 있습니다. **SQLSetDescField** 또는 **SQLSetDescRec**를 호출 하 여 SQL_DESC_TYPE를 설정할 수 있습니다.  
   
- SQL_DESC_CONCISE_TYPE를 간격 또는 날짜/시간 데이터 형식이 아닌 간결한 데이터 형식으로 설정 되어 SQL_DESC_TYPE 필드는 동일한 값으로 설정 됩니다 하 고 값을 SQL_DESC_DATETIME_INTERVAL_CODE 필드 0으로 설정 됩니다.  
+ SQL_DESC_CONCISE_TYPE가 interval 또는 datetime 데이터 형식이 아닌 간결한 데이터 형식으로 설정 된 경우에는 SQL_DESC_TYPE 필드가 동일한 값으로 설정 되 고 SQL_DESC_DATETIME_INTERVAL_CODE 필드가 0으로 설정 됩니다.  
   
- SQL_DESC_CONCISE_TYPE 간결한 datetime 또는 간격 데이터 형식으로 설정 되어 SQL_DESC_TYPE 필드는 해당 세부 정보 표시 형식 (SQL_DATETIME 또는 sql_interval 인)으로 설정 하 고 값을 SQL_DESC_DATETIME_INTERVAL_CODE 필드 적절 한 하위 코드에 설정 됩니다.  
+ SQL_DESC_CONCISE_TYPE를 간결한 datetime 또는 interval 데이터 형식으로 설정 하면 SQL_DESC_TYPE 필드가 해당 하는 자세한 형식 (SQL_DATETIME 또는 SQL_INTERVAL)으로 설정 되 고 SQL_DESC_DATETIME_INTERVAL_CODE 필드가 적절 한 하위 코드로 설정 됩니다.  
   
- **[응용 프로그램 설명자 및 IPDs] SQL_DESC_DATA_PTR**  
- 이 대 SQLPOINTER 레코드 필드에는 매개 변수 값 (Apd) 또는 (ARDs)에 대 한 열 값을 포함 하는 변수를 가리킵니다. 이 필드를 *지연 된 필드*합니다. 설정 되어 있지만 데이터를 검색 하는 드라이버에서 나중에 사용 시 사용 되지 않습니다.  
+ **SQL_DESC_DATA_PTR [응용 프로그램 설명자 및 IPDs]**  
+ 이 SQLPOINTER 레코드 필드는 매개 변수 값 (APDs의 경우) 또는 열 값 (ARDs)을 포함 하는 변수를 가리킵니다. 이 필드는 *지연 된 필드*입니다. 설정 시에는 사용 되지 않지만 나중에 드라이버에서 데이터를 검색 하는 데 사용 됩니다.  
   
- 경우에 카드가의 SQL_DESC_DATA_PTR 필드가 지정 된 열의 바인딩 해제 되었는지 합니다 *TargetValuePtr* 호출에서 인수 **SQLBindCol** 이 null 포인터 이거나는 SQL_DESC_DATA_PTR 필드가 카드가 설정한는 에 대 한 호출 **SQLSetDescField** 또는 **SQLSetDescRec** null 포인터입니다. 다른 필드는 null 포인터는 SQL_DESC_DATA_PTR 필드가 설정 된 경우에 영향이 없습니다.  
+ **SQLBindCol** 에 대 한 호출의 *Targetvalueptr* 인수가 Null 포인터인 경우 또는 SQLSetDescField 또는 **SQLSetDescRec** 에 대 한 호출에서 Null 포인터로 설정 된 SQL_DESC_DATA_PTR 경우 **** 의 SQL_DESC_DATA_PTR 필드로 지정 된 열이 바인딩되지 않습니다. SQL_DESC_DATA_PTR 필드가 null 포인터로 설정 된 경우 다른 필드는 영향을 받지 않습니다.  
   
- 경우에 대 한 호출 **SQLFetch** 하거나 **SQLFetchScroll** 는 SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO를 입력 한 후가이 필드에서 가리키는 버퍼에 반환 하지 않았습니다, 버퍼의 내용을 정의 되지 않습니다.  
+ 이 필드가 가리키는 버퍼를 채우는 **Sqlfetch** 또는 **sqlfetchscroll** 에 대 한 호출이 SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO을 반환 하지 않은 경우 버퍼 내용이 정의 되지 않습니다.  
   
- IPD, 카드가, APD의 SQL_DESC_DATA_PTR 필드가 설정 될 때마다 드라이버 SQL_DESC_TYPE 필드의 값이 유효한 ODBC C 데이터 형식 또는 드라이버별 데이터 형식 중 하나에 및 데이터 형식에 영향을 주는 다른 모든 필드는 일치를 확인 합니다. 일관성 확인 메시지를 표시는 IPD의 SQL_DESC_DATA_PTR 필드가 사용 하는 것입니다. 특히, 응용 프로그램을 IPD 및 나중에 호출 SQL_DESC_DATA_PTR 필드가 설정 **SQLGetDescField** 이 필드에서 반환 되지 않습니다 반드시 설정 해야 하는 값입니다. 자세한 내용은 "일관성 확인"의 참조 [SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)합니다.  
+ APD, IPD 또는의 SQL_DESC_DATA_PTR 필드가 설정 될 때마다 드라이버는 SQL_DESC_TYPE 필드의 값이 유효한 ODBC C 데이터 형식 또는 드라이버별 데이터 형식 중 하나를 포함 하 고 데이터 형식에 영향을 주는 다른 모든 필드가 일치 하는지 확인 합니다. 일관성 확인 메시지를 표시 하는 것은 IPD의 SQL_DESC_DATA_PTR 필드만 사용 한다는 것입니다. 특히, 응용 프로그램이 IPD의 SQL_DESC_DATA_PTR 필드를 설정 하 고 나중에이 필드에 **SQLGetDescField** 를 호출 하는 경우 설정 된 값을 반드시 반환 하는 것은 아닙니다. 자세한 내용은 [SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)의 "일관성 검사"를 참조 하세요.  
   
- **SQL_DESC_DATETIME_INTERVAL_CODE [All]**  
- 이 SQLSMALLINT 레코드 필드 SQL_DESC_TYPE 필드 SQL_DATETIME 또는 sql_interval 인 경우 특정 날짜/시간 또는 간격 데이터 형식에 대 한 하위 코드를 포함 합니다. 이것이 SQL 및 C 데이터 형식에 대해 true입니다. 코드는 데이터 형식 이름 (날짜/시간 형식)에 대 한 "TYPE" 또는 "C_TYPE" 대체 "코드" 또는 "CODE" (간격 유형)에 대 한 "INTERVAL" 또는 "C_INTERVAL"에 대 한 대체를 사용 하 여 구성 됩니다.  
+ **SQL_DESC_DATETIME_INTERVAL_CODE [모두]**  
+ 이 SQLSMALLINT record 필드에는 SQL_DESC_TYPE 필드가 SQL_DATETIME 되거나 SQL_INTERVAL 때 특정 날짜/시간 또는 간격 데이터 형식에 대 한 하위 코드가 포함 됩니다. 이는 SQL 및 C 데이터 형식 모두에 적용 됩니다. 코드는 "TYPE" 또는 "C_TYPE" (datetime 형식의 경우)로 대체 되는 데이터 형식 이름 또는 "INTERVAL" 또는 "C_INTERVAL" (간격 형식의 경우)로 대체 되는 "코드"로 구성 됩니다.  
   
- SQL_DESC_TYPE 및 응용 프로그램 설명자를에서 SQL_DESC_CONCISE_TYPE SQL_C_DEFAULT로 설명자를 문 핸들을 사용 하 여 연결 되지 경우 값을 SQL_DESC_DATETIME_INTERVAL_CODE의 내용을 정의 되지 않습니다.  
+ 응용 프로그램 설명자의 SQL_DESC_TYPE 및 SQL_DESC_CONCISE_TYPE이 SQL_C_DEFAULT로 설정 되 고 설명자가 문 핸들과 연결 되지 않은 경우 SQL_DESC_DATETIME_INTERVAL_CODE의 내용이 정의 되지 않습니다.  
   
- 이 필드는 다음 표에 나열 된 날짜/시간 데이터 형식에 대해 설정할 수 있습니다.  
+ 이 필드는 다음 표에 나열 된 datetime 데이터 형식에 대해 설정할 수 있습니다.  
   
-|날짜/시간 형식|DATETIME_INTERVAL_CODE|  
+|Datetime 형식|DATETIME_INTERVAL_CODE|  
 |--------------------|------------------------------|  
 |SQL_TYPE_DATE/SQL_C_TYPE_DATE|SQL_CODE_DATE|  
 |SQL_TYPE_TIME/SQL_C_TYPE_TIME|SQL_CODE_TIME|  
-|SQL_TYPE_TIMESTAMP / SQL_C_TYPE_TIMESTAMP|SQL_CODE_TIMESTAMP|  
+|SQL_TYPE_TIMESTAMP/SQL_C_TYPE_TIMESTAMP|SQL_CODE_TIMESTAMP|  
   
  이 필드는 다음 표에 나열 된 간격 데이터 형식에 대해 설정할 수 있습니다.  
   
 |간격 유형|DATETIME_INTERVAL_CODE|  
 |-------------------|------------------------------|  
-|SQL_INTERVAL_DAY / SQL_C_INTERVAL_DAY|SQL_CODE_DAY|  
-|SQL_INTERVAL_DAY_TO_HOUR / SQL_C_INTERVAL_DAY_TO_HOUR|SQL_CODE_DAY_TO_HOUR|  
-|SQL_INTERVAL_DAY_TO_MINUTE/ SQL_C_INTERVAL_DAY_TO_MINUTE|SQL_CODE_DAY_TO_MINUTE|  
-|SQL_INTERVAL_DAY_TO_SECOND/ SQL_C_INTERVAL_DAY_TO_SECOND|SQL_CODE_DAY_TO_SECOND|  
-|SQL_INTERVAL_HOUR / SQL_C_INTERVAL_HOUR|SQL_CODE_HOUR|  
-|SQL_INTERVAL_HOUR_TO_MINUTE / SQL_C_INTERVAL_HOUR_TO_MINUTE|SQL_CODE_HOUR_TO_MINUTE|  
-|SQL_INTERVAL_HOUR_TO_SECOND / SQL_C_INTERVAL_HOUR_TO_SECOND|SQL_CODE_HOUR_TO_SECOND|  
-|SQL_INTERVAL_MINUTE/ SQL_C_INTERVAL_MINUTE|SQL_CODE_MINUTE|  
-|SQL_INTERVAL_MINUTE_TO_SECOND/ SQL_C_INTERVAL_MINUTE_TO_SECOND|SQL_CODE_MINUTE_TO_SECOND|  
-|SQL_INTERVAL_MONTH / SQL_C_INTERVAL_MONTH|SQL_CODE_MONTH|  
-|SQL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|  
-|SQL_INTERVAL_YEAR / SQL_C_INTERVAL_YEAR|SQL_CODE_YEAR|  
-|SQL_INTERVAL_YEAR_TO_MONTH / SQL_C_INTERVAL_YEAR_TO_MONTH|SQL_CODE_YEAR_TO_MONTH|  
+|SQL_INTERVAL_DAY/SQL_C_INTERVAL_DAY|SQL_CODE_DAY|  
+|SQL_INTERVAL_DAY_TO_HOUR/SQL_C_INTERVAL_DAY_TO_HOUR|SQL_CODE_DAY_TO_HOUR|  
+|SQL_INTERVAL_DAY_TO_MINUTE/SQL_C_INTERVAL_DAY_TO_MINUTE|SQL_CODE_DAY_TO_MINUTE|  
+|SQL_INTERVAL_DAY_TO_SECOND/SQL_C_INTERVAL_DAY_TO_SECOND|SQL_CODE_DAY_TO_SECOND|  
+|SQL_INTERVAL_HOUR/SQL_C_INTERVAL_HOUR|SQL_CODE_HOUR|  
+|SQL_INTERVAL_HOUR_TO_MINUTE/SQL_C_INTERVAL_HOUR_TO_MINUTE|SQL_CODE_HOUR_TO_MINUTE|  
+|SQL_INTERVAL_HOUR_TO_SECOND/SQL_C_INTERVAL_HOUR_TO_SECOND|SQL_CODE_HOUR_TO_SECOND|  
+|SQL_INTERVAL_MINUTE/SQL_C_INTERVAL_MINUTE|SQL_CODE_MINUTE|  
+|SQL_INTERVAL_MINUTE_TO_SECOND/SQL_C_INTERVAL_MINUTE_TO_SECOND|SQL_CODE_MINUTE_TO_SECOND|  
+|SQL_INTERVAL_MONTH/SQL_C_INTERVAL_MONTH|SQL_CODE_MONTH|  
+|SQL_INTERVAL_SECOND/SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|  
+|SQL_INTERVAL_YEAR/SQL_C_INTERVAL_YEAR|SQL_CODE_YEAR|  
+|SQL_INTERVAL_YEAR_TO_MONTH/SQL_C_INTERVAL_YEAR_TO_MONTH|SQL_CODE_YEAR_TO_MONTH|  
   
- 데이터 간격으로이 필드에 대 한 자세한 내용은 참조 하세요. [데이터 형식 식별자 및 설명자](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md)합니다.  
+ 데이터 간격 및이 필드에 대 한 자세한 내용은 [데이터 형식 식별자 및 설명자](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md)를 참조 하세요.  
   
- **SQL_DESC_DATETIME_INTERVAL_PRECISION [All]**  
- 이 SQLINTEGER 레코드 필드 SQL_DESC_TYPE 필드 sql_interval 인 경우 전체 자릿수를 유도 하는 간격을 포함 합니다. 값을 SQL_DESC_DATETIME_INTERVAL_CODE 필드 간격 데이터 형식으로 설정 되 면이 필드는 전체 자릿수를 유도 기본 간격으로 설정 됩니다.  
+ **SQL_DESC_DATETIME_INTERVAL_PRECISION [모두]**  
+ SQL_DESC_TYPE 필드가 SQL_INTERVAL 되는 경우이 SQLINTEGER 레코드 필드에는 선행 전체 자릿수가 포함 됩니다. SQL_DESC_DATETIME_INTERVAL_CODE 필드가 INTERVAL 데이터 형식으로 설정 된 경우이 필드는 기본 간격으로 선행 전체 자릿수로 설정 됩니다.  
   
  **SQL_DESC_DISPLAY_SIZE [IRDs]**  
- 이 읽기 전용 SQLINTEGER 레코드 필드 열에서 데이터를 표시 하는 데 필요한 문자의 최대 수를 포함 합니다.  
+ 이 읽기 전용 SQLINTEGER 레코드 필드는 열의 데이터를 표시 하는 데 필요한 최대 문자 수를 포함 합니다.  
   
  **SQL_DESC_FIXED_PREC_SCALE [구현 설명자]**  
- 열, 고정된 전체 자릿수와 소수 자릿수를 사용 하 여 정확한 숫자 열이 아닌 경우이 읽기 전용 SQLSMALLINT 레코드 필드는 SQL_FALSE 또는 열이 정확한 숫자 열이 있고 고정 전체 자릿수 및 0이 아닌 확장 SQL_TRUE로 설정 됩니다.  
+ 이 읽기 전용 SQLSMALLINT record 필드는 열이 정확한 숫자 열 이거나 고정 전체 자릿수와 0이 아닌 소수 자릿수를 갖는 경우 SQL_TRUE로 설정 되 고 전체 자릿수 및 소수 자릿수가 고정 된 정확한 숫자 열이 아닌 경우에는 SQL_FALSE로 설정 됩니다.  
   
- **[응용 프로그램 설명자] SQL_DESC_INDICATOR_PTR**  
- ARDs,이 SQLLEN에서에서 * 필드 요소는 표시자 변수를 기록 합니다. 이 변수는 열 값이 NULL은 모두 SQL_NULL_DATA를 포함 합니다. Apd, 표시기 변수의 NULL 동적 인수를 지정 하려면은 모두 SQL_NULL_DATA로 설정 됩니다. 그렇지 않으면 변수는 0 (SQL_DESC_INDICATOR_PTR 및 SQL_DESC_OCTET_LENGTH_PTR 값과 같은 포인터 않는)입니다.  
+ **SQL_DESC_INDICATOR_PTR [응용 프로그램 설명자]**  
+ ARDs에서는이 SQLLEN * 레코드 필드가 표시기 변수를 가리킵니다. 이 변수에는 열 값이 NULL 인 경우 SQL_NULL_DATA 포함 됩니다. APDs의 경우 표시기 변수가 SQL_NULL_DATA로 설정 되어 NULL 동적 인수를 지정 합니다. 그렇지 않으면 SQL_DESC_INDICATOR_PTR 및 SQL_DESC_OCTET_LENGTH_PTR의 값이 같은 포인터인 경우를 제외 하 고는 변수가 0입니다.  
   
- 카드가 SQL_DESC_INDICATOR_PTR 필드가 null 포인터, 드라이버 열 NULL 인지 여부에 대 한 정보를 반환 하지 않습니다. 열이 NULL 이면 SQL_DESC_INDICATOR_PTR가 null 포인터, SQLSTATE 22002 (지표 변수가 필요 하지만 제공 되지)는 반환 드라이버를 호출한 후 버퍼를 채우는 하려고 할 때 **SQLFetch** 또는  **SQLFetchScroll**합니다. 경우에 대 한 호출 **SQLFetch** 하거나 **SQLFetchScroll** SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO를 버퍼의 내용 정의 되지 않습니다. 반환 하지 않았습니다.  
+ 고의 SQL_DESC_INDICATOR_PTR 필드가 null 포인터인 경우 드라이버가 열이 NULL 인지 여부에 대 한 정보를 반환할 수 없습니다. 열이 NULL이 고 SQL_DESC_INDICATOR_PTR null 포인터인 경우 드라이버가 **Sqlfetch** 또는 **sqlfetchscroll**을 호출한 후에 버퍼를 채우려고 할 때 SQLSTATE 22002 (표시기 변수가 필요 하지만 제공 되지 않음)이 반환 됩니다. **Sqlfetch** 또는 **sqlfetchscroll** 에 대 한 호출이 SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO를 반환 하지 않은 경우 버퍼 내용이 정의 되지 않습니다.  
   
- SQL_DESC_INDICATOR_PTR 필드 SQL_DESC_OCTET_LENGTH_PTR 가리키는 필드를 설정할지 여부를 결정 합니다. 열에 대 한 데이터 값이 NULL 인 경우 드라이버는 표시자 변수를 sql_null_data로 설정 합니다. SQL_DESC_OCTET_LENGTH_PTR 가리키는 필드 다음 설정 되지 않았습니다. NULL 값을 인출 하는 동안 발생 하지 않습니다, SQL_DESC_INDICATOR_PTR 가리키는 버퍼를 0으로 설정 되 고 SQL_DESC_OCTET_LENGTH_PTR 가리키는 버퍼 데이터의 길이를 설정 합니다.  
+ SQL_DESC_INDICATOR_PTR 필드는 SQL_DESC_OCTET_LENGTH_PTR가 가리키는 필드가 설정 되어 있는지 여부를 확인 합니다. 열에 대 한 데이터 값이 NULL 이면 드라이버는 표시기 변수를 SQL_NULL_DATA 설정 합니다. SQL_DESC_OCTET_LENGTH_PTR에서 가리키는 필드가 설정 되지 않습니다. 인출 중에 NULL 값이 발견 되지 않으면 SQL_DESC_INDICATOR_PTR에 의해 가리키는 버퍼가 0으로 설정 되 고 SQL_DESC_OCTET_LENGTH_PTR에 의해 가리키는 버퍼가 데이터 길이로 설정 됩니다.  
   
- APD의 SQL_DESC_INDICATOR_PTR 필드가 null 포인터인 경우 응용 프로그램 NULL 인수를 지정 하려면이 설명자 레코드를 사용할 수 없습니다.  
+ APD의 SQL_DESC_INDICATOR_PTR 필드가 null 포인터인 경우 응용 프로그램은이 설명자 레코드를 사용 하 여 NULL 인수를 지정할 수 없습니다.  
   
- 이 필드를 *지연 된 필드*: 설정 되어 있지만 (하기 위한 ARDs) null 허용 여부를 나타내는 또는 null 허용 여부 (Apd)을 결정 하려면 드라이버에서 나중에 사용 시 사용 되지 않습니다.  
+ 이 필드는 *지연 된 필드*입니다 .이 필드는 설정 시 사용 되지 않지만 나중에 드라이버에서 null 허용 여부를 나타내거나 (ARDs) null 허용 여부를 확인 하는 데 사용 됩니다 (apds의 경우).  
   
  **SQL_DESC_LABEL [IRDs]**  
- 이 읽기 전용 SQLCHAR * 열 레이블 또는 제목 레코드 필드에 포함 되어 있습니다. 열에 레이블을 찾을 수 없는 경우이 변수는 열 이름을 포함 합니다. 명명 되지 않은 열은 레이블이 없는 경우,이 변수는 빈 문자열을 포함 합니다.  
+ 이 읽기 전용 SQLCHAR * 레코드 필드에는 열 레이블이나 제목이 포함 됩니다. 열에 레이블이 없으면이 변수에 열 이름이 포함 됩니다. 열이 명명 되지 않은 열이 고 레이블이 지정 되지 않은 경우이 변수에는 빈 문자열이 포함 됩니다.  
   
- **SQL_DESC_LENGTH [All]**  
- 이 SQLULEN 레코드 필드는 문자로 문자열의 최대 또는 실제 길이 이거나 바이트의 이진 데이터 형식입니다. 고정 길이 데이터 형식에 대 한 최대 길이 또는 가변 길이 데이터 형식에 대 한 실제 길이입니다. 해당 값에는 항상 문자열을 종료 하는 null 종결 문자가 제외 됩니다. SQL_TYPE_DATE, SQL_TYPE_TIME, SQL_TYPE_TIMESTAMP, 또는 SQL 간격 데이터 형식 중 하나는 형식의 값에 대 한이 필드는 datetime 또는 간격 값의 문자 문자열 표현의 문자 길이 있습니다.  
+ **SQL_DESC_LENGTH [모두]**  
+ 이 SQLULEN 레코드 필드는 문자 문자열의 최대 길이 또는 실제 길이 (바이트)입니다. 고정 길이 데이터 형식의 최대 길이 또는 가변 길이 데이터 형식의 실제 길이입니다. 해당 값은 항상 문자열을 종료 하는 null 종료 문자를 제외 합니다. 형식이 SQL_TYPE_DATE, SQL_TYPE_TIME, SQL_TYPE_TIMESTAMP 또는 SQL interval 데이터 형식 중 하나인 값의 경우이 필드의 길이는 datetime 또는 interval 값의 문자열 표현 문자 길이입니다.  
   
- 이 필드의 값 길이 대 한""로 ODBC 2에 정의 된 값에서 다를 수 있습니다 *.x*합니다. 자세한 내용은 참조 하세요. [부록 d: 데이터 형식](../../../odbc/reference/appendixes/appendix-d-data-types.md)합니다.  
+ 이 필드의 값은 ODBC 2.x에 정의 된 "길이"의 값과 다를 수 있습니다 *.* 자세한 내용은 [부록 D: 데이터 형식](../../../odbc/reference/appendixes/appendix-d-data-types.md)을 참조 하세요.  
   
  **SQL_DESC_LITERAL_PREFIX [IRDs]**  
- 이 읽기 전용 SQLCHAR *이 데이터 형식의 리터럴에 접두사로 드라이버 인식 하는 문자를 레코드 필드에 포함 되어 있습니다. 이 변수는 리터럴 접두사는 해당 데이터 형식에 대 한 빈 문자열을 포함 합니다.  
+ 이 읽기 전용 SQLCHAR * 레코드 필드는 드라이버에서이 데이터 형식의 리터럴에 대 한 접두사로 인식 하는 문자를 포함 합니다. 이 변수에는 리터럴 접두사가 적용 되지 않는 데이터 형식에 대 한 빈 문자열이 포함 되어 있습니다.  
   
  **SQL_DESC_LITERAL_SUFFIX [IRDs]**  
- 이 읽기 전용 SQLCHAR * 레코드 필드에이 데이터 형식의 리터럴에 접미사로 드라이버 인식 하는 문자를 포함 합니다. 이 변수는에 대 한 리터럴 접미사는 해당 데이터 형식에 대 한 빈 문자열을 포함 합니다.  
+ 이 읽기 전용 SQLCHAR * 레코드 필드는 드라이버에서이 데이터 형식의 리터럴에 대 한 접미사로 인식 하는 문자를 포함 합니다. 이 변수에는 리터럴 접미사가 적용 되지 않는 데이터 형식에 대 한 빈 문자열이 포함 되어 있습니다.  
   
  **SQL_DESC_LOCAL_TYPE_NAME [구현 설명자]**  
- 이 읽기 전용 SQLCHAR * 레코드 필드 데이터 형식의 일반 이름과 다를 수 있는 데이터 형식에 대 한 모든 지역화 된 (native language) 이름이 포함 됩니다. 지역화 된 이름이 없는 경우 빈 문자열이 반환 됩니다. 이 필드는 표시 용도로 됩니다.  
+ 이 읽기 전용 SQLCHAR * 레코드 필드에는 데이터 형식의 일반 이름과 다를 수 있는 데이터 형식에 대 한 지역화 된 (네이티브 언어) 이름이 포함 됩니다. 지역화 된 이름이 없으면 빈 문자열이 반환 됩니다. 이 필드는 표시 목적 으로만 사용 됩니다.  
   
  **SQL_DESC_NAME [구현 설명자]**  
- 이 SQLCHAR * 레코드 필드를 행 설명자에 적용 되는 경우 열 별칭이 포함 되어 있습니다. 열 별칭이 적용 되지 않는 경우 열 이름이 반환 됩니다. 두 경우 모두 드라이버 SQL_DESC_NAME 필드 설정 하는 경우를 SQL_NAMED SQL_DESC_UNNAMED 필드를 설정 합니다. 열 이름 없음 또는 열 별칭을 있으면 드라이버 SQL_DESC_NAME 필드에 빈 문자열을 반환 하 고 하면 SQL_DESC_UNNAMED 필드 설정 됩니다.  
+ 행 설명자의이 SQLCHAR * 레코드 필드는 적용 되는 경우 열 별칭을 포함 합니다. 열 별칭이 적용 되지 않으면 열 이름이 반환 됩니다. 두 경우 모두 드라이버는 SQL_DESC_NAME 필드를 설정 하는 경우 SQL_DESC_UNNAMED 필드를 SQL_NAMED으로 설정 합니다. 열 이름이 나 열 별칭이 없으면 드라이버는 SQL_DESC_NAME 필드에서 빈 문자열을 반환 하 고 SQL_DESC_UNNAMED 필드를 SQL_UNNAMED로 설정 합니다.  
   
- 응용 프로그램 매개 변수 이름 또는 이름으로 저장된 프로시저 매개 변수를 지정 하는 별칭 SQL_DESC_NAME 필드는 IPD의를 설정할 수 있습니다. (자세한 내용은 [Binding Parameters by Name (Named Parameters)](../../../odbc/reference/develop-app/binding-parameters-by-name-named-parameters.md).) IRD의 SQL_DESC_NAME 필드는 읽기 전용 필드입니다. SQLSTATE HY091 응용 프로그램을 설정 하려는 경우 (잘못 된 설명자 필드 식별자)이 반환 됩니다.  
+ 응용 프로그램은 IPD의 SQL_DESC_NAME 필드를 매개 변수 이름 또는 별칭으로 설정 하 여 저장 프로시저 매개 변수를 이름으로 지정할 수 있습니다. 자세한 내용은 [이름으로 매개 변수 바인딩 (명명 된 매개 변수)](../../../odbc/reference/develop-app/binding-parameters-by-name-named-parameters.md)을 참조 하세요. IRD의 SQL_DESC_NAME 필드는 읽기 전용 필드입니다. 응용 프로그램에서 설정 하려고 시도 하는 경우 SQLSTATE HY091 (잘못 된 설명자 필드 식별자)가 반환 됩니다.  
   
- IPDs에서 드라이버 명명 된 매개 변수를 지원 하지 않는 경우이 필드는 정의 되지 않습니다. 드라이버 명명 된 매개 변수를 지원 하는 매개 변수를 설명 하는 수 하는 경우이 필드에 매개 변수 이름이 반환 됩니다.  
+ IPDs에서 드라이버가 명명 된 매개 변수를 지원 하지 않는 경우이 필드는 정의 되지 않습니다. 드라이버가 명명 된 매개 변수를 지원 하 고 매개 변수를 설명할 수 있는 경우이 필드에 매개 변수 이름이 반환 됩니다.  
   
  **SQL_DESC_NULLABLE [구현 설명자]**  
- IRDs,이 읽기 전용 SQLSMALLINT 레코드 필드에서는 SQL_NULLABLE 열 값이 있는 경우 NULL, SQL_NO_NULLS 열에 NULL 값이 없는 경우 또는 SQL_NULLABLE_UNKNOWN 경우 열에 NULL 값 허용 하는지 여부를 알 수 없습니다. 이 필드는 결과 집합 열, 기본 열에 적용 됩니다.  
+ 이 읽기 전용 SQLSMALLINT record 필드는 열이 null 값을 가질 수 있는 경우, 열에 null 값이 없는 경우 SQL_NO_NULLS SQL_NULLABLE_UNKNOWN 또는 열이 NULL 값을 허용 하는지 여부를 알 수 없는 경우에 SQL_NULLABLE 됩니다. 이 필드는 기본 열이 아닌 결과 집합 열과 관련이 있습니다.  
   
- IPDs,이 필드 동적 매개 변수는 항상 null을 허용 하 고 응용 프로그램에서 설정할 수 없습니다 때문에 메시지가 SQL_NULLABLE를 항상 설정 됩니다.  
+ IPDs에서 동적 매개 변수는 항상 null을 허용 하며 응용 프로그램에서 설정할 수 없기 때문에이 필드는 항상 SQL_NULLABLE로 설정 됩니다.  
   
- **[All] SQL_DESC_NUM_PREC_RADIX**  
- 이 SQLINTEGER 필드에 값 2의 SQL_DESC_TYPE 필드의 데이터 형식이 근사 숫자 데이터 형식, SQL_DESC_PRECISION 필드 비트 수 있기 때문에 있습니다. 이 필드에 값 10의 SQL_DESC_TYPE 필드에서 해당 데이터 형식의 경우 정확한 숫자 데이터 형식의 경우 SQL_DESC_PRECISION 필드 10 진수 수 있기 때문에 합니다. 이 필드는 모든 숫자가 아닌 데이터 형식에 대해 0으로 설정 됩니다.  
+ **SQL_DESC_NUM_PREC_RADIX [모두]**  
+ SQL_DESC_TYPE 필드의 데이터 형식이 근사 숫자 데이터 형식인 경우이 SQLINTEGER 필드에는 값 2가 포함 됩니다. SQL_DESC_PRECISION 필드에는 비트 수가 포함 되어 있기 때문입니다. SQL_DESC_TYPE 필드의 데이터 형식이 정확한 숫자 데이터 형식인 경우에는이 필드의 값이 10입니다. SQL_DESC_PRECISION 필드에는 10 진수 숫자가 포함 되어 있기 때문입니다. 숫자가 아닌 모든 데이터 형식에 대해이 필드는 0으로 설정 됩니다.  
   
- **SQL_DESC_OCTET_LENGTH [All]**  
- 이 SQLLEN 레코드 필드에 문자열 또는 이진 데이터 형식의 길이 (바이트)를 포함합니다. 고정 길이 문자 또는 이진 형식의 실제 길이 (바이트)입니다. 가변 길이 문자 또는 이진 형식의 최대 길이 (바이트)입니다. 이 값이 항상 구현 설명자에 대 한 null 종료 문자에 대 한 공간을 제외 하 고 항상 응용 프로그램 설명자에 대 한 null 종료 문자에 대 한 공간을 포함 합니다. 응용 프로그램 데이터에 대 한이 필드는 버퍼의 크기를 포함합니다. Apd, 출력 또는 입출력 매개 변수에만이 필드 정의 됩니다.  
+ **SQL_DESC_OCTET_LENGTH [모두]**  
+ 이 SQLLEN 레코드 필드에는 문자열 또는 이진 데이터 형식의 길이 (바이트)가 포함 됩니다. 고정 길이 문자 또는 이진 형식의 경우 실제 길이 (바이트)입니다. 가변 길이 문자 또는 이진 형식의 경우 최대 길이 (바이트)입니다. 이 값은 항상 구현 설명자의 null 종료 문자에 대 한 공간을 제외 하며, 항상 응용 프로그램 설명자의 null 종료 문자에 대 한 공간을 포함 합니다. 응용 프로그램 데이터의 경우이 필드는 버퍼의 크기를 포함 합니다. APDs의 경우이 필드는 출력 또는 입/출력 매개 변수에 대해서만 정의 됩니다.  
   
- **[응용 프로그램 설명자] SQL_DESC_OCTET_LENGTH_PTR**  
- 이 SQLLEN * 필드 요소 (매개 변수 설명자)에 대 한 동적 인수 또는 바인딩된 열 값 (예: 행 설명자)의 총 길이 (바이트)를 포함 하는 변수에 기록 합니다.  
+ **SQL_DESC_OCTET_LENGTH_PTR [응용 프로그램 설명자]**  
+ 이 SQLLEN * 레코드 필드는 동적 인수 (매개 변수 설명자의 경우) 또는 바인딩된 열 값 (행 설명자의 경우)의 총 길이 (바이트)를 포함 하는 변수를 가리킵니다.  
   
- APD에 대 한이 값은 문자열 및 이진;를 제외한 모든 인수에 대해 무시 됩니다. 이 필드 SQL_NTS를 가리키는 경우 동적 인수 null로 종결 되어야 합니다. SQL_DATA_AT_EXEC 값 또는 SQL_LEN_DATA_AT_EXEC 매크로의 결과가 포함 됩니다, 하는 바인딩된 매개 변수는 실행 시 데이터 매개 변수 수는 응용 프로그램이이 필드는 APD의 적절 한 레코드 변수에 설정, 실행 시간 . 이러한 필드를 둘 이상 있으면 응용 프로그램 매개 변수를 요청 하는 결정 하는 데 매개 변수를 고유 하 게 식별 하는 값에 SQL_DESC_DATA_PTR은 설정할 수 있습니다.  
+ APD의 경우 문자열 및 binary를 제외한 모든 인수에 대해이 값이 무시 됩니다. 이 필드가 SQL_NTS를 가리키는 경우 동적 인수는 null로 종료 되어야 합니다. 바인딩된 매개 변수가 실행 시 데이터 매개 변수가 됨을 나타내기 위해 응용 프로그램은 APD의 적절 한 레코드에 있는이 필드를 실행 시간에 SQL_DATA_AT_EXEC 값 또는 SQL_LEN_DATA_AT_EXEC 매크로의 결과를 포함 하는 변수로 설정 합니다. . 이러한 필드가 둘 이상 있는 경우 매개 변수를 고유 하 게 식별 하는 값으로 설정 하 여 응용 프로그램에서 요청 된 매개 변수를 확인할 수 있도록 SQL_DESC_DATA_PTR 수 있습니다.  
   
- 카드가의 OCTET_LENGTH_PTR 필드가 null 포인터인 경우 드라이버는 열에 대 한 길이 정보를 반환 하지 않습니다. APD의 SQL_DESC_OCTET_LENGTH_PTR 필드에 null 포인터 이면 문자열 및 이진 값은 null로 종료 되는 드라이버를 가정 합니다. (이진 값 null 종료 하지 않아야 하지만 잘리지 않도록 하려면 길이 지정 해야 합니다.)  
+ 가 중의 OCTET_LENGTH_PTR 필드가 null 포인터인 경우 드라이버는 열에 대 한 길이 정보를 반환 하지 않습니다. APD의 SQL_DESC_OCTET_LENGTH_PTR 필드가 null 포인터인 경우 드라이버는 문자열 및 이진 값이 null로 종료 된 것으로 가정 합니다. 이진 값은 null로 종료 되어서는 안 되며 잘림 방지를 위해 길이가 지정 되어야 합니다.  
   
- 경우에 대 한 호출 **SQLFetch** 하거나 **SQLFetchScroll** 는 SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO를 입력 한 후가이 필드에서 가리키는 버퍼에 반환 하지 않았습니다, 버퍼의 내용을 정의 되지 않습니다. 이 필드를 *지연 된 필드*합니다. 설정 되어 있지만 확인 하거나 데이터의 8 진수 길이 나타냅니다 드라이버에 의해 나중에 사용 시 사용 되지 않습니다.  
+ 이 필드가 가리키는 버퍼를 채우는 **Sqlfetch** 또는 **sqlfetchscroll** 에 대 한 호출이 SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO을 반환 하지 않은 경우 버퍼 내용이 정의 되지 않습니다. 이 필드는 *지연 된 필드*입니다. 설정 시에는 사용 되지 않지만 나중에 드라이버에서 데이터의 옥텟 길이를 확인 하거나 나타내는 데 사용 됩니다.  
   
  **SQL_DESC_PARAMETER_TYPE [IPDs]**  
- 이 SQLSMALLINT 레코드 필드를 입력 매개 변수를 입/출력 매개 변수, 출력 매개 변수를 입/출력 스트리밍 매개 변수를 SQL_PARAM_INPUT_OUTPUT_STREAM 또는 SQL_ SQL_PARAM_OUTPUT SQL_PARAM_INPUT_OUTPUT SQL_PARAM_INPUT로 PARAM_OUTPUT_STREAM 스트리밍되는 출력 매개 변수입니다. 기본적으로 SQL_PARAM_INPUT에 설정 됩니다.  
+ 이 SQLSMALLINT record 필드는 입력 매개 변수에 대 한 SQL_PARAM_INPUT, 입력/출력 매개 변수 SQL_PARAM_INPUT_OUTPUT, 출력 매개 변수에 대 한 SQL_PARAM_OUTPUT, 입력/출력 스트리밍된 매개 변수에 대 한 SQL_PARAM_INPUT_OUTPUT_STREAM 또는 출력 스트리밍된 매개 변수의 SQL_PARAM_OUTPUT_STREAM로 설정 됩니다. 기본적으로 SQL_PARAM_INPUT로 설정 됩니다.  
   
- IPD에 대 한 필드는 IPD (SQL_ATTR_ENABLE_AUTO_IPD 문 특성이 SQL_FALSE) 드라이버에 의해 자동으로 채워지지 않는 경우 기본적으로 SQL_PARAM_INPUT에 설정 됩니다. 응용 프로그램은 입력된 매개 변수 없는 매개 변수에 대해 IPD의이 필드를 설정 해야 합니다.  
+ IPD의 경우 IPD가 자동으로 드라이버에 의해 채워지지 않은 경우 (SQL_ATTR_ENABLE_AUTO_IPD 문 특성이 SQL_FALSE) 필드는 기본적으로 SQL_PARAM_INPUT 설정 됩니다. 응용 프로그램에서는 입력 매개 변수가 아닌 매개 변수에 대 한 IPD 필드를 설정 해야 합니다.  
   
- **[All] SQL_DESC_PRECISION**  
- 정확한 숫자 형식가 수 (이진 정밀도)는 근사 숫자 형식에 대 한 비트 수 또는 자릿수 SQL_TYPE SQL_TYPE_TIME, 소수 자릿수 초 구성 요소에서 숫자 자릿수를 포함 하는이 SQLSMALLINT 레코드 필드 _TIMESTAMP, 또는 SQL_INTERVAL_SECOND 데이터 형식입니다. 이 필드를 다른 모든 데이터 형식에 대 한 정의 되지 않습니다.  
+ **SQL_DESC_PRECISION [모두]**  
+ 이 SQLSMALLINT 레코드 필드에는 정확한 숫자 형식의 자릿수, 근사 숫자 형식에 대 한가 수 (이진 전체 자릿수)의 비트 수 또는 SQL_TYPE_TIME에 대 한 소수 자릿수 초의 구성 요소 자릿수가 포함 됩니다 SQL_TYPE _TIMESTAMP 또는 SQL_INTERVAL_SECOND 데이터 형식입니다. 다른 모든 데이터 형식에 대해서는이 필드가 정의 되어 있지 않습니다.  
   
- 이 필드의 값이 "precision"로 ODBC 2에 정의 된 값에서 다를 수 있습니다 *.x*합니다. 자세한 내용은 참조 하세요. [부록 d: 데이터 형식](../../../odbc/reference/appendixes/appendix-d-data-types.md)합니다.  
+ 이 필드의 값은 ODBC 2.x에 정의 된 "전체 자릿수"의 값과 다를 수*있습니다.* 자세한 내용은 [부록 D: 데이터 형식](../../../odbc/reference/appendixes/appendix-d-data-types.md)을 참조 하세요.  
   
  **SQL_DESC_ROWVER [구현 설명자]**  
- 이 SQLSMALLINTrecord 필드 열 수정 되었는지 여부를 자동으로 DBMS에 의해 (예: SQL Server에서 "timestamp" 형식의 열) 행이 업데이트 될 때를 나타냅니다. 그렇지 않은 경우이 레코드 필드의 값은 SQL_FALSE 하는 열이 행 버전 관리 열 이면 SQL_TRUE로 설정 됩니다. 이 열 특성은 호출과 비슷하지만 **SQLSpecialColumns** IdentifierType의 SQL_ROWVER 열을 자동으로 업데이트 되는지 여부를 확인 하려면를 사용 하 여 합니다.  
+ 이 SQLSMALLINTrecord 필드는 행이 업데이트 될 때 DBMS에서 열을 자동으로 수정 하는지 여부를 나타냅니다 (예: SQL Server). 열이 행 버전 관리 열 이면이 레코드 필드의 값이 SQL_TRUE로 설정 되 고, 그렇지 않으면 SQL_FALSE 됩니다. 이 열 특성은 열이 자동으로 업데이트 되는지 여부를 확인 하기 위해 SQL_ROWVER IdentifierType를 사용 하 여 **SQLSpecialColumns** 를 호출 하는 것과 비슷합니다.  
   
- **[All] 자릿수가 SQL_DESC_SCALE**  
- 이 SQLSMALLINT 레코드 필드 decimal 및 numeric 데이터 형식에 대해 정의 된 확장을 포함합니다. 필드를 다른 모든 데이터 형식에 대 한 정의 되지 않습니다.  
+ **SQL_DESC_SCALE [모두]**  
+ 이 SQLSMALLINT record 필드는 decimal 및 numeric 데이터 형식에 대해 정의 된 소수 자릿수를 포함 합니다. 필드는 다른 모든 데이터 형식에 대해 정의 되지 않습니다.  
   
- 이 필드의 값이 "scale" ODBC 2에 정의 된 값에서 다를 수 있습니다 *.x*합니다. 자세한 내용은 참조 하세요. [부록 d: 데이터 형식](../../../odbc/reference/appendixes/appendix-d-data-types.md)합니다.  
+ 이 필드의 값은 ODBC 2.x에 정의 된 "scale"의 값과 다를 수 있습니다 *.* 자세한 내용은 [부록 D: 데이터 형식](../../../odbc/reference/appendixes/appendix-d-data-types.md)을 참조 하세요.  
   
  **SQL_DESC_SCHEMA_NAME [IRDs]**  
- 이 읽기 전용 SQLCHAR * 레코드 필드에 열이 포함 된 기본 테이블의 스키마 이름을 포함 합니다. 반환 값 또는 열이 뷰의 일부 열이 식이면 드라이버에 따라 다릅니다는입니다. 데이터 원본 스키마를 지원 하지 않으므로 또는 스키마 이름을 확인할 수 없는 경우이 변수는 빈 문자열을 포함 합니다.  
+ 이 읽기 전용 SQLCHAR * 레코드 필드에는 열을 포함 하는 기본 테이블의 스키마 이름이 포함 됩니다. 열이 식인 경우 또는 열이 뷰의 일부인 경우 반환 값은 드라이버에 따라 달라 집니다. 데이터 원본에서 스키마를 지원 하지 않거나 스키마 이름을 확인할 수 없는 경우이 변수에는 빈 문자열이 포함 됩니다.  
   
  **SQL_DESC_SEARCHABLE [IRDs]**  
- 이 읽기 전용 SQLSMALLINT 레코드 필드는 다음 값 중 하나로 설정 됩니다.  
+ 이 읽기 전용 SQLSMALLINT record 필드는 다음 값 중 하나로 설정 됩니다.  
   
--   SQL_PRED_NONE 열에서 사용할 수 없는 경우는 **여기서** 절. (이 ODBC 2 SQL_UNSEARCHABLE 값 동일 *.x*.)  
+-   **WHERE** 절에서 열을 사용할 수 없는 경우 SQL_PRED_NONE 합니다. 이 값은 ODBC 2.x의 SQL_UNSEARCHABLE 값과 동일*합니다.*  
   
--   SQL_PRED_CHAR 열에서 사용할 수 있는 경우는 **여기서** 절만 합니다 **같은** 조건자입니다. (이 ODBC 2 SQL_LIKE_ONLY 값 동일 *.x*.)  
+-   **Where** 절에서 열을 사용할 수 있지만 **LIKE** 조건자를 사용 하 여 열을 사용할 수 있는지 여부를 SQL_PRED_CHAR 합니다. 이 값은 ODBC 2.x의 SQL_LIKE_ONLY 값과 동일*합니다.*  
   
--   SQL_PRED_BASIC 열에서 사용할 수 있는 경우는 **여기서** 제외한 모든 비교 연산자를 사용 하 여 절 **와 같은**합니다. (이 ODBC 2 SQL_EXCEPT_LIKE 값 동일 *.x*.)  
+-   **LIKE**를 제외한 모든 비교 연산자가 있는 **WHERE** 절에서 열을 사용할 수 있는지 여부를 SQL_PRED_BASIC 합니다. 이 값은 ODBC 2.x의 SQL_EXCEPT_LIKE 값과 동일*합니다.*  
   
--   SQL_PRED_SEARCHABLE 열에서 사용할 수 있는 경우는 **여기서** 임의의 비교 연산자를 사용 하 여 절.  
+-   **WHERE** 절에서 비교 연산자를 사용 하 여 열을 사용할 수 있는지 여부를 SQL_PRED_SEARCHABLE 합니다.  
   
  **SQL_DESC_TABLE_NAME [IRDs]**  
- 이 읽기 전용 SQLCHAR * 레코드 필드에는이 열이 포함 된 기본 테이블의 이름을 포함 합니다. 반환 값 또는 열이 뷰의 일부 열이 식이면 드라이버에 따라 다릅니다는입니다.  
+ 이 읽기 전용 SQLCHAR * 레코드 필드는이 열을 포함 하는 기본 테이블의 이름을 포함 합니다. 열이 식인 경우 또는 열이 뷰의 일부인 경우 반환 값은 드라이버에 따라 달라 집니다.  
   
- **SQL_DESC_TYPE [All]**  
- 이 SQLSMALLINT 레코드 필드에 날짜/시간 및 간격 데이터 형식 제외한 모든 데이터 형식에 대 한 간단한 SQL 또는 C 데이터 형식을 지정합니다. 날짜/시간 및 간격 데이터 형식에 대 한이 필드는 자세한 데이터 형식을 SQL_DATETIME 또는 sql_interval 인을 지정 합니다.  
+ **SQL_DESC_TYPE [모두]**  
+ 이 SQLSMALLINT record 필드는 datetime 및 interval 데이터 형식을 제외한 모든 데이터 형식에 대 한 간결한 SQL 또는 C 데이터 형식을 지정 합니다. Datetime 및 interval 데이터 형식의 경우이 필드는 SQL_DATETIME 또는 SQL_INTERVAL 상세 데이터 형식을 지정 합니다.  
   
- 이 필드에 SQL_DATETIME 또는 sql_interval 인 때마다 값을 SQL_DESC_DATETIME_INTERVAL_CODE 필드 간결한 형식에 대 한 적절 한 하위 코드를 포함 해야 합니다. 날짜/시간 데이터 형식에 대 한 SQL_DESC_TYPE SQL_DATETIME, 있어서 값을 SQL_DESC_DATETIME_INTERVAL_CODE 필드에 특정 날짜/시간 데이터 형식에 대 한 하위 코드가 포함 되어 있습니다. 간격 데이터 형식에 대 한 SQL_DESC_TYPE SQL_INTERVAL 있어서 값을 SQL_DESC_DATETIME_INTERVAL_CODE 필드에 특정 간격 데이터 형식에 대 한 하위 코드가 포함 되어 있습니다.  
+ 이 필드에 SQL_DATETIME 또는 SQL_INTERVAL 포함 될 때마다 SQL_DESC_DATETIME_INTERVAL_CODE 필드에 간결한 형식에 대 한 적절 한 하위 코드가 포함 되어야 합니다. Datetime 데이터 형식의 경우 SQL_DESC_TYPE에는 SQL_DATETIME 포함 되 고 SQL_DESC_DATETIME_INTERVAL_CODE 필드에는 특정 datetime 데이터 형식에 대 한 하위 코드가 포함 됩니다. Interval 데이터 형식의 경우 SQL_DESC_TYPE에는 SQL_INTERVAL 포함 되 고 SQL_DESC_DATETIME_INTERVAL_CODE 필드에는 특정 interval 데이터 형식에 대 한 하위 코드가 포함 됩니다.  
   
- SQL_DESC_CONCISE_TYPE SQL_DESC_TYPE 필드에서 값은 상호 종속적입니다. 다른 설정 해야 하는 필드 중 각 시간 설정 됩니다. 호출 하 여 SQL_DESC_TYPE을 설정할 수 있습니다 **SQLSetDescField** 하거나 **SQLSetDescRec**합니다. SQL_DESC_CONCISE_TYPE를 호출 하 여 설정할 수 있습니다 **SQLBindCol** 하거나 **SQLBindParameter**, 또는 **SQLSetDescField**합니다.  
+ SQL_DESC_TYPE 및 SQL_DESC_CONCISE_TYPE 필드의 값은 상호 종속적입니다. 필드 중 하나가 설정 될 때마다 다른 필드도 설정 해야 합니다. **SQLSetDescField** 또는 **SQLSetDescRec**를 호출 하 여 SQL_DESC_TYPE를 설정할 수 있습니다. **SQLBindCol** 또는 **SQLBindParameter**또는 **SQLSetDescField**에 대 한 호출을 통해 SQL_DESC_CONCISE_TYPE를 설정할 수 있습니다.  
   
- SQL_DESC_TYPE을 간격 또는 날짜/시간 데이터 형식이 아닌 간결한 데이터 형식으로 설정 되어 SQL_DESC_CONCISE_TYPE 필드는 동일한 값으로 설정 됩니다 하 고 값을 SQL_DESC_DATETIME_INTERVAL_CODE 필드를 0으로 설정 됩니다.  
+ SQL_DESC_TYPE가 interval 또는 datetime 데이터 형식이 아닌 간결한 데이터 형식으로 설정 된 경우에는 SQL_DESC_CONCISE_TYPE 필드가 동일한 값으로 설정 되 고 SQL_DESC_DATETIME_INTERVAL_CODE 필드가 0으로 설정 됩니다.  
   
- SQL_DESC_TYPE을 자세한 날짜/시간 또는 간격 데이터 형식 (SQL_DATETIME 또는 sql_interval 인)로 설정 되어 값을 SQL_DESC_DATETIME_INTERVAL_CODE 필드를 적절 한 하위 코드를로 설정 하 고 SQL_DESC_CONCISE 유형 필드는 해당 간결한 형식으로 설정 됩니다. SQL_DESC_TYPE 간결한 datetime 또는 간격 유형 중 하나를 설정 하려고 하면 SQLSTATE HY021 반환 됩니다 (일관성이 없는 설명자 정보).  
+ SQL_DESC_TYPE이 verbose datetime 또는 interval 데이터 형식 (SQL_DATETIME 또는 SQL_INTERVAL)으로 설정 되 고 SQL_DESC_DATETIME_INTERVAL_CODE 필드가 적절 한 하위 코드로 설정 된 경우 SQL_DESC_CONCISE 형식 필드는 해당 하는 간결한 형식으로 설정 됩니다. SQL_DESC_TYPE를 간결한 datetime 또는 interval 유형 중 하나로 설정 하려고 하면 SQLSTATE HY021 (일치 하지 않는 설명자 정보)가 반환 됩니다.  
   
- SQL_DESC_TYPE 필드를 호출 하 여 설정 되 면 **SQLBindCol**하십시오 **SQLBindParameter**, 또는 **SQLSetDescField**, 다음 필드는 다음과 같은 기본 값으로 설정 됩니다 다음 표에서 같이 합니다. 동일한 레코드의 나머지 필드의 값이 정의 되지 않습니다.  
+ **SQLBindCol**, **SQLBindParameter**또는 **SQLSetDescField**에 대 한 호출로 SQL_DESC_TYPE 필드가 설정 된 경우 다음 필드는 아래 표에 나와 있는 것 처럼 다음과 같은 기본값으로 설정 됩니다. 같은 레코드의 나머지 필드 값은 정의 되지 않습니다.  
   
-|SQL_DESC_TYPE 값|다른 필드 암시적으로 설정합니다.|  
+|SQL_DESC_TYPE의 값|암시적으로 설정 되는 다른 필드|  
 |------------------------------|---------------------------------|  
-|SQL_CHAR, SQL_VARCHAR, SQL_C_CHAR 라는 SQL_C_VARCHAR|SQL_DESC_LENGTH 1로 설정 됩니다. SQL_DESC_PRECISION 0으로 설정 됩니다.|  
-|SQL_DATETIME|값을 SQL_DESC_DATETIME_INTERVAL_CODE SQL_CODE_DATE SQL_CODE_TIME에 설정 되 면 SQL_DESC_PRECISION 0으로 설정 됩니다. 설정은 SQL_DESC_TIMESTAMP, SQL_DESC_PRECISION 6으로 설정 됩니다.|  
-|SQL_DECIMAL, SQL_NUMERIC, SQL_C_NUMERIC|자릿수가 SQL_DESC_SCALE 0으로 설정 됩니다. SQL_DESC_PRECISION 각 데이터 형식에 대 한 구현 시 정의 된 정밀도로 설정 됩니다.<br /><br /> 참조 [c: SQL 숫자](../../../odbc/reference/appendixes/sql-to-c-numeric.md) 수동으로 SQL_C_NUMERIC 값을 바인딩하는 방법에 대 한 정보에 대 한 합니다.|  
-|SQL_FLOAT, SQL_C_FLOAT|SQL_DESC_PRECISION SQL_FLOAT 구현 시 정의 된 기본 정밀도로 설정 됩니다.|  
-|SQL_INTERVAL|값을 SQL_DESC_DATETIME_INTERVAL_CODE 간격 데이터 형식으로 설정 되 면 SQL_DESC_DATETIME_INTERVAL_PRECISION 2 (기본 간격 선행 정밀도)으로 설정 됩니다. 간격의 초 구성 요소에 있는 경우 자릿수가 SQL_DESC_PRECISION (기본 간격 초 전체 자릿수) 6으로 설정 됩니다.|  
+|SQL_CHAR, SQL_VARCHAR, SQL_C_CHAR, SQL_C_VARCHAR|SQL_DESC_LENGTH 1로 설정 됩니다. SQL_DESC_PRECISION는 0으로 설정 됩니다.|  
+|SQL_DATETIME|SQL_DESC_DATETIME_INTERVAL_CODE SQL_CODE_DATE 또는 SQL_CODE_TIME으로 설정 된 경우 SQL_DESC_PRECISION는 0으로 설정 됩니다. SQL_DESC_TIMESTAMP로 설정 된 경우 SQL_DESC_PRECISION는 6으로 설정 됩니다.|  
+|SQL_DECIMAL, SQL_NUMERIC, SQL_C_NUMERIC|SQL_DESC_SCALE는 0으로 설정 됩니다. SQL_DESC_PRECISION는 각 데이터 형식에 대해 구현에 정의 된 전체 자릿수로 설정 됩니다.<br /><br /> SQL_C_NUMERIC 값을 수동으로 바인딩하는 방법에 대 한 자세한 내용은 [SQL에서 C로: Numeric](../../../odbc/reference/appendixes/sql-to-c-numeric.md) 을 참조 하세요.|  
+|SQL_FLOAT, SQL_C_FLOAT|SQL_DESC_PRECISION은 SQL_FLOAT의 구현에서 정의 된 기본 전체 자릿수로 설정 됩니다.|  
+|SQL_INTERVAL|SQL_DESC_DATETIME_INTERVAL_CODE INTERVAL 데이터 형식으로 설정 된 경우 SQL_DESC_DATETIME_INTERVAL_PRECISION는 2 (기본 간격으로 선행 전체 자릿수)로 설정 됩니다. 간격에 초 구성 요소가 있는 경우 SQL_DESC_PRECISION은 6 (기본 간격 초 전체 자릿수)으로 설정 됩니다.|  
   
- 응용 프로그램을 호출할 때 **SQLSetDescField** 호출 하지 않고 설명자 필드를 설정 하려면 **SQLSetDescRec**, 응용 프로그램 데이터 형식을 먼저 선언 해야 합니다. 이 경우 이전 표에 나와 있는 다른 필드는 암시적으로 설정 됩니다. 경우 값 암시적으로 집합 허용 되지 않는 응용 프로그램을 호출할 수 있습니다 **SQLSetDescField** 하거나 **SQLSetDescRec** 사용할 수 없는 값을 명시적으로 설정 합니다.  
+ 응용 프로그램에서 **SQLSetDescField** 를 호출 하 여 **SQLSetDescRec**를 호출 하는 대신 설명자의 필드를 설정 하는 경우 응용 프로그램은 먼저 데이터 형식을 선언 해야 합니다. 이 경우 앞의 표에 나와 있는 다른 필드는 암시적으로 설정 됩니다. 암시적으로 설정 된 값이 허용 되지 않는 경우 응용 프로그램에서 **SQLSetDescField** 또는 **SQLSetDescRec** 를 호출 하 여 허용 되지 않는 값을 명시적으로 설정할 수 있습니다.  
   
- **Sql_desc_type_name으로 [구현 설명자]**  
- 이 읽기 전용 SQLCHAR * 레코드 필드는 데이터 원본에 종속적인 형식 이름 (예를 들어, "CHAR", "VARCHAR", 및 등)를 포함 합니다. 데이터 형식 이름을 알 수 없는 경우이 변수는 빈 문자열을 포함 합니다.  
+ **SQL_DESC_TYPE_NAME [구현 설명자]**  
+ 이 읽기 전용 SQLCHAR * 레코드 필드에는 데이터 원본 종속 형식 이름 (예: "CHAR", "VARCHAR" 등)이 포함 되어 있습니다. 데이터 형식 이름을 알 수 없는 경우이 변수에는 빈 문자열이 포함 됩니다.  
   
  **SQL_DESC_UNNAMED [구현 설명자]**  
- SQL_DESC_NAME 필드 설정 하는 경우이 SQLSMALLINT 레코드 필드를 행 설명자에서 SQL_NAMED 또는 하면 드라이버에 의해 설정 됩니다. SQL_DESC_NAME 필드에는 열 별칭 또는 열 별칭이 적용 되지 않는 경우 드라이버는 SQL_DESC_UNNAMED 필드 SQL_NAMED를 설정 합니다. 매개 변수 이름 또는 별칭에는 IPD의 SQL_DESC_NAME 필드를 설정 하는 응용 프로그램, 드라이버를 SQL_NAMED IPD의 SQL_DESC_UNNAMED 필드를 설정 합니다. 열 이름 없음 또는 열 별칭을 있으면 드라이버 하면 SQL_DESC_UNNAMED 필드를 설정 됩니다.  
+ 행 설명자의이 SQLSMALLINT record 필드는 SQL_DESC_NAME 필드를 설정 하는 경우 SQL_NAMED 또는 SQL_UNNAMED에 의해 설정 됩니다. SQL_DESC_NAME 필드에 열 별칭이 있거나 열 별칭이 적용 되지 않는 경우 드라이버는 SQL_DESC_UNNAMED 필드를 SQL_NAMED로 설정 합니다. 응용 프로그램에서 IPD의 SQL_DESC_NAME 필드를 매개 변수 이름 또는 별칭으로 설정 하는 경우 드라이버는 IPD의 SQL_DESC_UNNAMED 필드를 SQL_NAMED로 설정 합니다. 열 이름이 나 열 별칭이 없으면 드라이버는 SQL_DESC_UNNAMED 필드를 SQL_UNNAMED으로 설정 합니다.  
   
- 응용 프로그램 하면을 SQL_DESC_UNNAMED 필드는 IPD의를 설정할 수 있습니다. 드라이버는 SQLSTATE HY091 반환 (잘못 된 설명자 필드 식별자) 응용 프로그램 SQL_DESC_UNNAMED 필드는 IPD의 SQL_NAMED로 설정 하려고 합니다. IRD의 SQL_DESC_UNNAMED 필드는 읽기 전용입니다. SQLSTATE HY091 응용 프로그램을 설정 하려는 경우 (잘못 된 설명자 필드 식별자)이 반환 됩니다.  
+ 응용 프로그램은 IPD의 SQL_DESC_UNNAMED 필드를 SQL_UNNAMED으로 설정할 수 있습니다. 응용 프로그램에서 IPD의 SQL_DESC_UNNAMED 필드를 SQL_NAMED로 설정 하려고 시도 하는 경우 드라이버는 SQLSTATE HY091 (잘못 된 설명자 필드 식별자)를 반환 합니다. IRD의 SQL_DESC_UNNAMED 필드는 읽기 전용입니다. 응용 프로그램에서 설정 하려고 시도 하는 경우 SQLSTATE HY091 (잘못 된 설명자 필드 식별자)가 반환 됩니다.  
   
  **SQL_DESC_UNSIGNED [구현 설명자]**  
- 이 읽기 전용 SQLSMALLINT 레코드 필드는 열 형식 서명 되 면 SQL_TRUE 열 형식은 부호 없는 또는 숫자가 아닌 경우 또는 SQL_FALSE 설정 됩니다.  
+ 이 읽기 전용 SQLSMALLINT record 필드는 열 유형이 부호가 없거나 숫자가 아닌 경우 SQL_TRUE로 설정 되 고, 열 유형이 서명 된 경우에는 SQL_FALSE.  
   
  **SQL_DESC_UPDATABLE [IRDs]**  
- 이 읽기 전용 SQLSMALLINT 레코드 필드는 다음 값 중 하나로 설정 됩니다.  
+ 이 읽기 전용 SQLSMALLINT record 필드는 다음 값 중 하나로 설정 됩니다.  
   
--   SQL_ATTR_READ_ONLY 결과 집합 열은 읽기 전용입니다.  
+-   결과 집합 열이 읽기 전용인 경우 SQL_ATTR_READ_ONLY 합니다.  
   
--   SQL_ATTR_WRITE 결과 집합 열은 읽기-쓰기입니다.  
+-   결과 집합 열이 읽기/쓰기로 설정 되 면 SQL_ATTR_WRITE 합니다.  
   
--   결과 집합 열이 있는지 여부를 알지 못하는 경우 SQL_ATTR_READWRITE_UNKNOWN 인지 업데이트할 수 있는 합니다.  
+-   결과 집합 열을 업데이트할 수 있는지 여부를 알 수 없는 경우에 SQL_ATTR_READWRITE_UNKNOWN 합니다.  
   
- SQL_DESC_UPDATABLE 결과 집합의 열, 기본 테이블의 열이 아닌 업데이트 가능성을 설명합니다. 이 결과 집합 열 기준으로 하는 기본 테이블의 열 업데이트 가능성은이 필드의 값 보다 달라질 수 있습니다. 열이 업데이트할 수 있는 데이터 형식, 사용자 권한 및 결과 집합 자체의 정의에 기반 할 수 있습니다. 열을 업데이트할 수 있는지 여부에 명확한 아니라면 SQL_ATTR_READWRITE_UNKNOWN 반환 되어야 합니다.  
+ SQL_DESC_UPDATABLE은 기본 테이블의 열이 아니라 결과 집합의 열에 대 한 업데이트 가능성을 설명 합니다. 이 결과 집합 열이 기반으로 하는 기본 테이블의 열에 대 한 업데이트 가능성은이 필드의 값과 다를 수 있습니다. 열을 업데이트할 수 있는지 여부는 데이터 형식, 사용자 권한 및 결과 집합 자체의 정의를 기반으로 할 수 있습니다. 열을 업데이트할 수 있는지 명확 하지 않은 경우 SQL_ATTR_READWRITE_UNKNOWN 반환 되어야 합니다.  
   
-## <a name="consistency-checks"></a>일관성 검사  
- 일관성 확인을 응용 프로그램 카드가, APD, IPD의 SQL_DESC_DATA_PTR 필드에 대 한 값이 전달 될 때마다 드라이버에 의해 수행 됩니다. 필드를 다른 필드와 일치 하지 않습니다 하는 경우 **SQLSetDescField** SQLSTATE HY021를 반환 합니다 (일관성이 없는 설명자 정보). 자세한 내용은 "일관성 확인"의 참조 [SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)합니다.  
+## <a name="consistency-checks"></a>일관성 확인  
+ 응용 프로그램이 IPD, APD 또는의 SQL_DESC_DATA_PTR 필드 값을 전달할 때마다 자동으로 일관성 확인이 수행 됩니다. 필드 중 하나라도 다른 필드와 일치 하지 않는 경우 **SQLSetDescField** 는 SQLSTATE HY021 (일치 하지 않는 설명자 정보)를 반환 합니다. 자세한 내용은 [SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)의 "일관성 확인"을 참조 하십시오.  
   
 ## <a name="related-functions"></a>관련 함수  
   
-|내용|참조 항목|  
+|원하는 정보|참조 항목|  
 |---------------------------|---------|  
 |열 바인딩|[SQLBindCol 함수](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
 |매개 변수 바인딩|[SQLBindParameter 함수](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
-|설명자 필드 가져오기|[SQLGetDescField 함수](../../../odbc/reference/syntax/sqlgetdescfield-function.md)|  
+|설명자 필드 가져오기|[SQLGetDescField 함수(SQLGetDescField Function)](../../../odbc/reference/syntax/sqlgetdescfield-function.md)|  
 |여러 설명자 필드 가져오기|[SQLGetDescRec 함수](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
 |여러 설명자 필드 설정|[SQLSetDescRec 함수](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)   
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)

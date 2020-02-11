@@ -1,5 +1,5 @@
 ---
-title: 개인 설정을 통해 OLAP 확장 | Microsoft Docs
+title: 개인 설정을 통해 OLAP 확장 Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74c5b777dda06cf70a6afa2e6384eb2a3587d431
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62725987"
 ---
 # <a name="extending-olap-through-personalizations"></a>개별화를 통해 OLAP 확장
@@ -30,7 +30,7 @@ ms.locfileid: "62725987"
 ## <a name="personalized-extensions"></a>개인 설정 확장 프로그램  
  SQL Server Analysis Services 개인 설정 확장 프로그램은 플러그 인 아키텍처 구현 개념의 토대입니다. Analysis Services 개인 설정 확장 프로그램은 기존 관리 어셈블리 아키텍처를 간단하고 유용하게 수정하는 한 방법이며, Analysis Services <xref:Microsoft.AnalysisServices.AdomdServer> 개체 모델, MDX(Multidimensional Expression) 구문 및 스키마 행 집합을 통해 노출됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [다차원 모델 어셈블리 관리](../multidimensional-model-assemblies-management.md)   
  [Analysis Services 개인 설정 확장 프로그램](analysis-services-personalization-extensions.md)  
   

@@ -13,13 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b909160a11dbcced44a0c81d92fd28ce02a50906
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761593"
 ---
 # <a name="create-tables-database-engine"></a>테이블 만들기(데이터베이스 엔진)
+  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 새 테이블을 만들고, 테이블 이름을 지정하고, 이 테이블을 기존 데이터베이스에 추가할 수 있습니다.  
   
 > [!NOTE]  
@@ -31,7 +32,7 @@ ms.locfileid: "62761593"
   
      [보안](#Security)  
   
--   **테이블을 만들려면 사용 합니다.**  
+-   **테이블을 만들려면**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -41,7 +42,7 @@ ms.locfileid: "62761593"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  데이터베이스에는 CREATE TABLE 권한이 필요하고 테이블을 만들 구성표에는 ALTER 권한이 필요합니다.  
   
  CREATE TABLE 문에 있는 열을 CLR 사용자 정의 형식으로 정의하는 경우 해당 유형의 소유권이나 이에 대한 REFERENCES 권한이 필요합니다.  
@@ -52,9 +53,11 @@ ms.locfileid: "62761593"
   
 #### <a name="to-create-a-table-with-table-designer"></a>테이블 디자이너로 테이블을 만들려면  
   
-1.  **개체 탐색기**에서 수정할 데이터베이스를 포함하는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결합니다.  
+1.  
+  **개체 탐색기**에서 수정할 데이터베이스를 포함하는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결합니다.  
   
-2.  **개체 탐색기**에서 **데이터베이스** 노드를 확장한 후 새 테이블을 포함할 데이터베이스를 확장합니다.  
+2.  
+  **개체 탐색기**에서 **데이터베이스** 노드를 확장한 후 새 테이블을 포함할 데이터베이스를 확장합니다.  
   
 3.  개체 탐색기에서 데이터베이스의 **테이블** 노드를 마우스 오른쪽 단추로 클릭한 다음 **새 테이블**을 클릭합니다.  
   
@@ -72,15 +75,17 @@ ms.locfileid: "62761593"
   
      이러한 개체에 대한 자세한 내용은 [Create Foreign Key Relationships](../tables/create-foreign-key-relationships.md), [Create Check Constraints](../tables/create-check-constraints.md) 및 [Indexes](../indexes/indexes.md)를 참조하세요.  
   
-8.  기본적으로 테이블은 **dbo** 스키마에 포함되어 있습니다. 테이블에 다른 스키마를 지정하려면 다음 그림과 같이 테이블 디자이너 창에서 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택합니다. **스키마** 드롭다운 목록에서 적절한 스키마를 선택합니다.  
+8.  기본적으로 테이블은 **dbo** 스키마에 포함되어 있습니다. 테이블에 다른 스키마를 지정하려면 다음 그림과 같이 테이블 디자이너 창에서 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택합니다. 
+  **스키마** 드롭다운 목록에서 적절한 스키마를 선택합니다.  
   
      ![Specifyatableschema](../../database-engine/media/specifyatableschema.gif "Specifyatableschema")  
   
      스키마에 대한 자세한 내용은 [Create a Database Schema](../security/authentication-access/create-a-database-schema.md)를 참조하세요.  
   
-9. **파일** 메뉴에서 **저장** *table name*을 선택합니다.  
+9. **파일** 메뉴에서 *테이블 이름* **저장** 을 선택 합니다.  
   
-10. **이름 선택** 대화 상자에서 테이블의 이름을 입력하고 **확인**을 클릭합니다.  
+10. 
+  **이름 선택** 대화 상자에서 테이블의 이름을 입력하고 **확인**을 클릭합니다.  
   
 11. 새 테이블을 보려면 **개체 탐색기**에서 **테이블** 노드를 확장하고 **F5** 를 눌러 개체 목록을 새로 고칩니다. 테이블 목록에 새 테이블이 표시됩니다.  
   

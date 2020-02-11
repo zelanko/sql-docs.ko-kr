@@ -10,10 +10,10 @@ ms.assetid: fe086e53-e2a9-4bb8-9534-94369d32ab41
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c65cc8fa51061ba9f8886bf81e0fa80d53781f91
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68028954"
 ---
 # <a name="legal-notice-ssma-for-sybase"></a>법적 고지 사항(Sybase용 SSMA)
@@ -34,11 +34,11 @@ SAP NetWeaver는 독일 및 기타 여러 국가/지역에서 SAP AG의 등록 �
 다른 모든 상표는 해당 소유자의 자산입니다.  
   
 ## <a name="documentation-policy-for-sql-server-support-and-upgrade"></a>SQL Server 지원 및 업그레이드에 대한 설명서 정책  
-SQL Server 설명서의 콘텐츠는 충분한 테스트를 거친 후에만 게시됩니다. -SQL Server 온라인 설명서, 추가 정보 파일, 알려진된 문제점 문서 및 기술 자료 문서-제품 설명서에는 모든 고객의 일반적 용도 대해 안전 하도록 충분히 강력한 기능과 SQL Server 기능에 대 한 콘텐츠가 포함 됩니다. 이 정책은 릴리스 및 서비스 팩에 대한 추가 정보 파일을 포함한 모든 SQL Server 설명서에 적용됩니다. 추가 정보 파일은 온라인 설명서의 확장으로 간주합니다.  
+SQL Server 설명서의 콘텐츠는 충분한 테스트를 거친 후에만 게시됩니다. 제품 설명서-SQL Server 온라인 설명서, 추가 정보 파일, 알려진 문제점 문서 및 기술 자료 문서에는 모든 고객이 일반적으로 사용 하기에 안전 하 게 사용할 수 있는 강력한 기능 SQL Server 기능에 대 한 내용이 포함 되어 있습니다. 이 정책은 릴리스 및 서비스 팩에 대한 추가 정보 파일을 포함한 모든 SQL Server 설명서에 적용됩니다. 추가 정보 파일은 온라인 설명서의 확장으로 간주합니다.  
   
 경우에 따라 특정 기능은 고객의 직접 사용이 금지되므로 문서화되지 않습니다. Microsoft에서 게시한 SQL Server 설명서에서도 해당 기능을 설명하는 경우 이외에는 타사 서적 또는 웹 사이트의 콘텐츠는 Microsoft 고객 지원에서 지원하지 않으므로 프로덕션 데이터베이스 또는 애플리케이션에 사용하지 않아야 합니다.  
   
-고객은 저장 프로시저, 확장 저장 프로시저, 함수, 뷰, 테이블, 열, 속성 또는 메타데이터 등을 포함하여 문서화되지 않은 API를 사용하지 않아야 합니다. Microsoft 고객 지원에서는 문서화되지 않은 진입점을 활용 또는 사용하는 데이터베이스 또는 애플리케이션을 지원하지 않습니다.  
+고객은 저장 프로시저, 확장 저장 프로시저, 기능, 뷰, 테이블, 열, 속성 또는 메타데이터 등을 포함하여 문서화되지 않은 API를 사용하지 않아야 합니다. Microsoft 고객 지원에서는 문서화되지 않은 진입점을 활용 또는 사용하는 데이터베이스 또는 애플리케이션을 지원하지 않습니다.  
   
 문서화되지 않은 진입점을 사용하는 애플리케이션 및 데이터베이스의 경우 SQL Server의 나중 버전으로 서버 및 데이터베이스를 업그레이드하지 못할 수 있습니다. SQL Server 기능의 사용은 Microsoft SQL Server 설명서에 포함된 기능으로 제한되어야 합니다. 기능이 Microsoft SQL Server 설명서에 문서화되어 있지 않은 경우는 SQL Server의 지원되는 부분이 아닙니다.  
   

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b00a531c3b8abde6e9728039ece1de6a1866d3d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63071872"
 ---
 # <a name="open-a-template"></a>템플릿 열기
@@ -42,7 +42,7 @@ ms.locfileid: "63071872"
   
  새 편집기 창에서 템플릿을 열 경우 현재 활성 연결의 자격 증명을 사용하여 창이 열립니다. 예를 들어 개체 탐색기에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 포커스가 있는 상태에서 CREATE DATABASE 템플릿을 열면 새 편집기 창은 해당 인스턴스에 대한 연결을 사용하여 열립니다. 활성 연결이 없는 경우에는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서 로그인 대화 상자가 표시됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [템플릿 탐색기](template-explorer.md)   
  [템플릿 매개 변수 바꾸기](replace-template-parameters.md)  
   

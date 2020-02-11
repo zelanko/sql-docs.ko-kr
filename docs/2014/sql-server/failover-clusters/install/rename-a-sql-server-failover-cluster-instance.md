@@ -16,20 +16,22 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4ce98bacfcc5f3aa8814a9253d1796fd18c4a735
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126027"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>SQL Server 장애 조치(Failover) 클러스터 인스턴스 이름 변경
+  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 장애 조치 클러스터의 일부인 경우 가상 서버의 이름을 바꾸는 방법은 독립 실행형 인스턴스의 이름을 바꾸는 방법과 다릅니다. 자세한 내용은 [SQL Server의 독립 실행형 인스턴스를 호스팅하는 컴퓨터 이름 바꾸기](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)를 참조하세요.  
   
  가상 서버의 이름은 항상 SQL 네트워크 이름(SQL 가상 서버 네트워크 이름)과 동일합니다. 가상 서버의 이름은 바꿀 수 있지만 인스턴스 이름은 바꿀 수 없습니다. 예를 들어 VS1\instance1이라는 가상 서버 이름을 SQL35\instance1과 같은 다른 이름으로 바꿀 수 있지만 이름 중 인스턴스 부분인 instance1은 바뀌지 않습니다.  
   
  이름 바꾸기 프로세스를 시작하기 전에 아래 항목을 검토하십시오.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 복제와 함께 로그 전달을 사용하는 경우를 제외하고 복제 시 서버 이름 바꾸기를 지원하지 않습니다. 주 서버가 영구적으로 손실되면 로그 전달의 보조 서버 이름을 바꿀 수 있습니다. 자세한 내용은 [로그 전달 및 복제&#40;SQL Server&#41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md)를 참조하세요.  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 복제와 함께 로그 전달을 사용하는 경우를 제외하고 복제 시 서버 이름 바꾸기를 지원하지 않습니다. 주 서버가 영구적으로 손실되면 로그 전달의 보조 서버 이름을 바꿀 수 있습니다. 자세한 내용은 [로그 전달 및 복제&#40;SQL Server&#41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md)를 참조하세요.  
   
 -   데이터베이스 미러링을 사용하도록 구성된 가상 서버 이름을 바꿀 때는 이름 바꾸기 작업을 수행하기 전에 데이터베이스 미러링을 해제한 다음 새로운 가상 서버 이름으로 데이터베이스 미러링을 다시 구성해야 합니다. 데이터베이스 미러링의 메타데이터는 새로운 가상 서버 이름을 반영하도록 자동으로 업데이트되지 않습니다.  
   
@@ -39,12 +41,14 @@ ms.locfileid: "63126027"
   
 2.  네트워크 이름 리소스를 오프라인으로 만듭니다. 이 작업을 수행하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스와 다른 종속된 리소스도 오프라인이 됩니다.  
   
-3.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스를 다시 온라인으로 만듭니다.  
+3.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스를 다시 온라인으로 만듭니다.  
   
 ## <a name="verify-the-renaming-operation"></a>이름 바꾸기 작업 확인  
  가상 서버 이름을 바꾼 후 이전 이름을 사용하던 연결은 새 이름을 사용하여 연결해야 합니다.  
   
- 이러한 남은 작업이 완료되었는지 확인하기 위해 `@@servername` 또는 `sys.servers`에서 정보를 선택합니다. `@@servername` 함수는 새로운 가상 서버 이름을 반환하며 `sys.servers` 테이블은 새로운 가상 서버 이름을 표시합니다. 또한 장애 조치 프로세스가 새 이름으로 제대로 작동하는지 확인하기 위해 다른 노드에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스에 오류를 발생시켜 봐야 합니다.  
+ 이러한 남은 작업이 완료되었는지 확인하기 위해 `@@servername` 또는 `sys.servers`에서 정보를 선택합니다. 
+  `@@servername` 함수는 새로운 가상 서버 이름을 반환하며 `sys.servers` 테이블은 새로운 가상 서버 이름을 표시합니다. 또한 장애 조치 프로세스가 새 이름으로 제대로 작동하는지 확인하기 위해 다른 노드에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스에 오류를 발생시켜 봐야 합니다.  
   
  클러스터 노드로부터의 연결에서는 새 이름을 거의 즉시 사용할 수 있습니다. 하지만 클라이언트 컴퓨터의 새 이름을 사용하는 연결에서는 새 이름이 클라이언트 컴퓨터에 표시되기 전까지 새 이름을 사용하여 서버에 연결할 수 없습니다. 새 이름이 네트워크를 통해 전파되는 데 필요한 시간은 몇 초 정도 걸릴 수 있으며 네트워크 구성에 따라 3-5분까지 걸릴 수도 있습니다. 이전 가상 서버 이름이 네트워크에서 사라지는 데에도 추가 시간이 걸릴 수 있습니다.  
   
@@ -63,19 +67,19 @@ ms.locfileid: "63126027"
 ## <a name="additional-considerations-after-the-renaming-operation"></a>이름 바꾸기 작업 후 추가 고려 사항  
  장애 조치(Failover) 클러스터의 네트워크 이름을 바꾼 후에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 및 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 모든 시나리오를 지원하기 위해 다음 지침을 확인하고 수행해야 합니다.  
   
- **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** 네트워크 이름을 변경한 후는 [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] 장애 조치 이후 업그레이드 Windows 클러스터 관리자 도구를 사용 하 여 인스턴스 클러스터 또는 설치 제거 작업이 실패할 수 있습니다. 이 문제가 업데이트를 확인 하는 **ClusterName** 레지스트리 항목의 해결 방법 섹션의 지침에 따라 [이](https://go.microsoft.com/fwlink/?LinkId=244002) (https://go.microsoft.com/fwlink/?LinkId=244002) 합니다.  
+ **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** Windows 클러스터 관리자 도구를 사용 하 여 [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] 장애 조치 (failover) 클러스터 인스턴스의 네트워크 이름을 변경한 후에는 이후 업그레이드 또는 제거 작업이 실패할 수 있습니다. 이 문제를 해결 하려면 [이](https://go.microsoft.com/fwlink/?LinkId=244002) 문서의 해결 방법 섹션에 있는 지침에 따라 **ClusterName** 레지스트리 항목을https://go.microsoft.com/fwlink/?LinkId=244002)업데이트 합니다.  
   
- **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent Service:** 확인 및 수행 된 아래의 추가 작업에 대 한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 서비스:  
+ ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 서비스:** 에이전트 서비스에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 아래와 같은 추가 작업을 확인 하 고 수행 합니다.  
   
 -   SQL 에이전트가 이벤트를 전달하도록 구성된 경우 레지스트리 설정을 수정합니다. 자세한 내용은 [이벤트 전달 서버 지정&#40;SQL Server Management Studio&#41;](../../../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md)을 참조하세요.  
   
--   컴퓨터/클러스터 네트워크 이름을 바꿀 때 마스터 서버(MSX) 및 대상 서버(TSX) 인스턴스 이름을 수정합니다. 자세한 내용은 다음 항목을 참조하십시오.  
+-   컴퓨터/클러스터 네트워크 이름을 바꿀 때 마스터 서버(MSX) 및 대상 서버(TSX) 인스턴스 이름을 수정합니다. 자세한 내용은 아래 항목을 참조하세요.  
   
-    -   [마스터 서버에서 여러 대상 서버 제거](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
+    -   [Defect Multiple Target Servers from a Master Server](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
   
     -   [다중 서버 환경 만들기](../../../ssms/agent/create-a-multiserver-environment.md)  
   
--   업데이트된 서버 이름을 사용하여 로그를 백업 및 복원할 수 있도록 로그 전달을 다시 구성합니다. 자세한 내용은 다음 항목을 참조하십시오.  
+-   업데이트된 서버 이름을 사용하여 로그를 백업 및 복원할 수 있도록 로그 전달을 다시 구성합니다. 자세한 내용은 아래 항목을 참조하세요.  
   
     -   [로그 전달 구성&#40;SQL Server&#41;](../../../database-engine/log-shipping/configure-log-shipping-sql-server.md)  
   
@@ -83,7 +87,7 @@ ms.locfileid: "63126027"
   
 -   서버 이름을 기반으로 하는 작업 단계를 업데이트합니다. 자세한 내용은 [Manage Job Steps](../../../ssms/agent/manage-job-steps.md)을(를) 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server의 독립 실행형 인스턴스를 호스팅하는 컴퓨터 이름 바꾸기](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  
   
   

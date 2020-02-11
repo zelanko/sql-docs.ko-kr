@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 451b7ca4cc06269f116c62be2ef7f01f0e33abd2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721895"
 ---
 # <a name="replication-agent-executables-concepts"></a>복제 에이전트 실행 파일 개념
@@ -34,7 +34,7 @@ ms.locfileid: "62721895"
   
  실행 파일을 사용하면 다음과 같은 복제 에이전트 인스턴스를 실행할 수 있습니다.  
   
--   [복제 배포 에이전트](../agents/replication-distribution-agent.md)  
+-   [Replication Distribution Agent](../agents/replication-distribution-agent.md)  
   
 -   [복제 로그 판독기 에이전트](../agents/replication-log-reader-agent.md)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62721895"
   
 -   [Replication Snapshot Agent](../agents/replication-snapshot-agent.md)  
   
- 복제 에이전트를 호출할 때 성능 프로필을 사용하여 에이전트 실행 파일에 정의된 매개 변수 집합을 자동으로 전달할 수 있습니다. 자세한 내용은 [Replication Agent Profiles](../agents/replication-agent-profiles.md)을(를) 참조하세요.  
+ 복제 에이전트를 호출할 때 성능 프로필을 사용하여 에이전트 실행 파일에 정의된 매개 변수 집합을 자동으로 전달할 수 있습니다. 자세한 내용은 [Replication Agent Profiles](../agents/replication-agent-profiles.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 명령 프롬프트에서 복제 에이전트를 호출하는 방법을 보여 줍니다. RMO(복제 관리 개체)를 사용하여 복제 에이전트를 호출할 수도 있습니다. 자세한 내용은 [구독 동기화&#40;복제&#41;](../synchronize-data.md)를 참조하세요.  

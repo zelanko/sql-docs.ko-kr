@@ -1,5 +1,5 @@
 ---
-title: sys.transmission_queue (TRANSACT-SQL) | Microsoft Docs
+title: sys. transmission_queue (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ ms.assetid: f3515d1a-be8f-4a27-8058-8865f0919838
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7bd461a677a7bfab145846baaf09c0a8a62d6f8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68022602"
 ---
-# <a name="systransmissionqueue-transact-sql"></a>sys.transmission_queue(Transact-SQL)
+# <a name="systransmission_queue-transact-sql"></a>sys.transmission_queue(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   이 카탈로그 뷰는 다음 표와 같이 전송 큐의 각 메시지에 대한 행을 포함합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**conversation_handle**|**uniqueidentifier**|이 메시지가 속하는 대화의 식별자입니다. NULL을 허용하지 않습니다.|  
 |**to_service_name**|**nvarchar(256)**|이 메시지를 받을 서비스 이름입니다. NULL을 허용합니다.|  
@@ -45,7 +45,7 @@ ms.locfileid: "68022602"
 |**is_end_of_dialog**|**bit**|이 메시지가 대화 메시지의 끝인지 여부를 나타냅니다. NULL을 허용하지 않습니다.<br /><br /> 0 = 대화 메시지의 끝 아님<br /><br /> 1 = 대화 메시지의 끝<br /><br /> NULL을 허용하지 않습니다.|  
 |**message_body**|**varbinary(max)**|이 메시지의 본문입니다. NULL을 허용합니다.|  
 |**transmission_status**|**nvarchar(4000)**|이 메시지가 큐에 있는 이유입니다. 일반적으로 메시지 보내기가 실패한 이유를 설명하는 오류 메시지입니다. 비어 있으면 아직 메시지를 보내지 않은 것입니다. NULL을 허용합니다.|  
-|**priority**|**tinyint**|이 메시지에 할당된 우선 순위 수준입니다. NULL을 허용하지 않습니다.|  
+|**우선 순위**|**tinyint**|이 메시지에 할당된 우선 순위 수준입니다. NULL을 허용하지 않습니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  

@@ -1,5 +1,5 @@
 ---
-title: 셰이프 COMPUTE 절 | Microsoft Docs
+title: Shape COMPUTE 절 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fa6862808643f3d687fa406cb3fc2aa23c9b7d7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924140"
 ---
 # <a name="shape-compute-clause"></a>셰이프 COMPUTE 절
-셰이프 COMPUTE 절 생성 부모 **레코드 집합**, 열이 있는 자식에 대 한 참조를 이루어진 **레코드 집합**; 내용이 새 장에서 또는 계산된 열, 열 또는 자식 요소에서 집계 함수를 실행 한 결과 **Recordset** 이전 가공 **레코드 집합**; 및 자식에서 모든 열 **레코드 집합** 에 나열 된 절에서 선택 사항입니다.  
+Shape COMPUTE 절은 열이 자식 **레코드 집합**에 대 한 참조로 구성 된 부모 **레코드 집합**을 생성 합니다. 내용에 장, 새 열 또는 계산 된 열 또는 자식 **레코드** 집합에 대 한 집계 함수를 실행 한 결과 또는 이전에 지정한 **레코드 집합**에서 집계 함수를 실행 한 결과 선택적 BY 절에 나열 된 자식 **레코드 집합** 의 모든 열  
   
 ## <a name="syntax"></a>구문  
   
@@ -32,61 +32,61 @@ SHAPE child-command [AS] child-alias
    [BY grp-field-list]  
 ```  
   
-## <a name="description"></a>설명  
- 이 절의 일부는 다음과 같습니다.  
+## <a name="description"></a>Description  
+ 이 절의 부분은 다음과 같습니다.  
   
- *child-command*  
+ *자식-명령*  
  다음 중 하나로 구성 됩니다.  
   
--   중괄호 내에서 쿼리 명령 ("{}")를 반환 하는 자식 **레코드 집합** 개체입니다. 기본 데이터 공급자에 게 명령을 실행 하 고 해당 구문은 해당 공급자의 요구 사항에 따라 달라 집니다. ADO 특별 한 쿼리 언어 필요 하지 않지만 SQL 언어에서 일반적으로 됩니다.  
+-   자식 **레코드 집합** 개체를 반환 하는{}중괄호 ("") 내의 쿼리 명령입니다. 명령은 기본 데이터 공급자에 대해 실행 되며 해당 구문은 해당 공급자의 요구 사항에 따라 달라 집니다. ADO에 특정 쿼리 언어가 필요 하지는 않지만 일반적으로 SQL 언어입니다.  
   
--   기존 모양의 이름을 **레코드 집합**합니다.  
+-   기존 모양의 **레코드 집합**의 이름입니다.  
   
--   다른 셰이프 명령입니다.  
+-   다른 shape 명령입니다.  
   
--   데이터 공급자에서 테이블의 이름 뒤에 테이블 키워드입니다.  
+-   테이블 키워드와 데이터 공급자의 테이블 이름이 차례로 나옵니다.  
   
- *child-alias*  
- 참조 하는 데 별칭을 **레코드 집합** 반환한는 *자식 명령입니다.* 합니다 *자식 별칭* COMPUTE 절에 열 목록에서 필요 하 고 부모와 자식 간의 관계 정의 **레코드 집합** 개체입니다.  
+ *자식 별칭*  
+ 자식 명령에서 반환 된 **레코드 집합** 을 참조 하는 데 사용 되는 별칭 *입니다.* *자식 별칭* 은 COMPUTE 절의 열 목록에 필요 하며 부모 및 자식 **레코드 집합** 개체 간의 관계를 정의 합니다.  
   
- *appended-column-list*  
- 각 요소는 생성 된 부모에서 열 정의 목록입니다. 장 열, 새 열, 계산된 열 또는 자식에 집계 함수에서 결과 값을 포함 하는 요소당 **레코드 집합**합니다.  
+ *추가 된 열 목록*  
+ 각 요소가 생성 된 부모에서 열을 정의 하는 목록입니다. 각 요소에는 장 열, 새 열, 계산 열 또는 자식 **레코드 집합**에 대 한 집계 함수로 생성 된 값이 포함 됩니다.  
   
- *grp-field-list*  
- 부모 및 자식 열 목록이 **레코드 집합** 자식에서 행을 그룹화 하는 방법을 지정 하는 개체입니다.  
+ *그룹 필드 목록*  
+ 자식에서 행을 그룹화 하는 방법을 지정 하는 부모 및 자식 **레코드 집합** 개체의 열 목록입니다.  
   
- 각 열에 대해 합니다 *grp-필드-목록* 자식 및 부모에 해당 열이 있는 **레코드 집합** 개체입니다. 상위의 각 행에 대해 **Recordset**, *grp 필드 목록* 열에 고유 값 및 자식 **레코드 집합** 부모 참조 행 으로만 이루어져 자식 행을 갖는 *grp 필드 목록* 열 부모 행을 동일한 값을 갖습니다.  
+ *Grp-필드 목록의* 각 열에 대해 자식 및 부모 **레코드 집합** 개체에 해당 하는 열이 있습니다. 부모 **레코드 집합**의 각 행에 대해 *그룹 필드 목록* 열에는 고유한 값이 있고 부모 행에서 참조 하는 자식 **레코드 집합** 은 부모 행과 동일한 값을 *갖는 자식* 행 으로만 구성 됩니다.  
   
- BY 절이 포함 된 자식 **레코드 집합**의 행에서는 COMPUTE 절에서 열에 따라 그룹화 됩니다. 부모 **Recordset** 각 자식에서 행 그룹에 대해 하나의 행이 포함 됩니다 **Recordset**합니다.  
+ BY 절이 포함 된 경우 자식 **레코드 집합**의 행은 COMPUTE 절의 열을 기준으로 그룹화 됩니다. 부모 **레코드 집합** 은 자식 **레코드 집합**의 각 행 그룹에 대해 하나의 행을 포함 합니다.  
   
- BY 절을 생략 하는 경우 전체 자식 **Recordset** 부모 단일 그룹으로 취급 됩니다 **레코드 집합** 정확히 하나의 행이 포함 됩니다. 해당 행은 전체 자식 참조 **레코드 집합**합니다. 전체 하위를 통해 "총합계" 집계를 계산할 수 있습니다 BY 절을 생략 **레코드 집합**합니다.  
+ BY 절을 생략 하면 전체 자식 **레코드 집합이** 단일 그룹으로 처리 되 고 부모 **레코드 집합** 에는 정확히 한 개의 행이 포함 됩니다. 해당 행은 전체 하위 **레코드 집합**을 참조 합니다. BY 절을 생략 하면 전체 하위 **레코드 집합**에 대 한 "총합계" 집계를 계산할 수 있습니다.  
   
- 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ 다음은 그 예입니다.  
   
 ```  
 SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.OrderAmount) as TotalSales         
 ```  
   
- 방식에 관계 없이 부모 **Recordset** 형식이 장 열을 자식으로 연결 하는 데 사용 되는 계산을 사용 하 여, 추가 사용 하 여 포함 됩니다 **레코드 집합**합니다. 원한다 면 부모 **레코드 집합** 자식 행에 대해 집계 (SUM, MIN, MAX 및 등)를 포함 하는 열이 포함 될 수 있습니다. 부모와 자식 **레코드 집합** 행이 행에서 식을 포함 하는 열이 포함 될 합니다 **레코드 집합**뿐 아니라 새로운과 처음에 있는 열에서 빈 합니다.  
+ 계산 또는 추가를 사용 하 여 부모 **레코드 집합** 을 구성 하는 방법에 관계 없이 자식 **레코드 집합**에 연결 하는 데 사용 되는 챕터 열이 포함 됩니다. 원하는 경우 부모 **레코드 집합** 에 자식 행에 대 한 집계 (SUM, MIN, MAX 등)가 포함 된 열이 포함 될 수도 있습니다. 부모 및 자식 **레코드 집합** 모두에는 **레코드 집합**의 행에 식이 포함 된 열이 포함 될 수 있으며 처음에는 비어 있는 열도 포함 될 수 있습니다.  
   
 ## <a name="operation"></a>작업(Operation)  
- 합니다 *하위 명령* 자식을 반환 하는 공급자에 게 발급 된 **레코드 집합**합니다.  
+ 자식 *명령은* 공급자에 게 실행 되어 자식 **레코드 집합**을 반환 합니다.  
   
- COMPUTE 절에 지정 된 부모 열 **Recordset**, 자식에 대 한 참조를 일 수 있는 **레코드 집합**, 하나 이상의 집계, 계산 된 식 또는 새 열입니다. 부모 열 정의 추가 됩니다 BY 절에 있으면 **레코드 집합**합니다. BY 절을 지정 하는 방법의 자식 행 **레코드 집합** 그룹화 됩니다.  
+ COMPUTE 절은 부모 **레코드 집합**의 열을 지정 합니다 .이 열은 자식 **레코드 집합**, 하나 이상의 집계, 계산 식 또는 새 열에 대 한 참조일 수 있습니다. BY 절이 있는 경우 정의 하는 열도 부모 **레코드 집합**에 추가 됩니다. BY 절은 자식 **레코드 집합** 의 행을 그룹화 하는 방법을 지정 합니다.  
   
- 예를 들어 라는 테이블을 인구 통계, 상태, 도시 및 채우기 필드로 구성 되어 있는 있다고 가정 합니다. (테이블에서 인구 수치를 예제로만 제공 됩니다).  
+ 예를 들어 상태, 구/군/시 및 인구 필드로 구성 된 인구 통계 라는 테이블이 있다고 가정 합니다. (테이블의 채우기 수치는 한 가지 예로만 제공 됩니다.)  
   
-|State|City|모집단|  
+|시스템 상태|City|모집단|  
 |-----------|----------|----------------|  
-|WA|Seattle|700,000|  
+|WA|시애틀|70만|  
 |또는|Medford|200,000|  
 |또는|Portland|400,000|  
-|CA|Los Angeles|800,000|  
-|CA|샌디에이고|600,000|  
+|CA|로스앤젤레스|80만|  
+|CA|샌디에이고|60만|  
 |WA|Tacoma|500,000|  
 |또는|Corvallis|300,000|  
   
- 이제이 shape 명령 실행:  
+ 이제 다음 셰이프 명령을 실행 합니다.  
   
 ```  
 rst.Open  "SHAPE {select * from demographics} AS rs "  & _  
@@ -94,52 +94,52 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
            objConnection  
 ```  
   
- 이 명령은 모양의 **레코드 집합** 두 수준입니다. 부모 수준이 생성 된 **Recordset** 집계 열을 사용 하 여 (`SUM(rs.population)`), 자식 참조 열 **레코드 집합** (`rs`), 자식 그룹화열과**레코드 집합** (`state`). 자식 수준은 합니다 **Recordset** 쿼리 명령에서 반환 된 (`select * from demographics`).  
+ 이 명령은 두 수준이 있는 모양 있는 **레코드 집합** 을 엽니다. 부모 수준은 집계 열 (`SUM(rs.population)`), 자식 **레코드 집합** `rs`을 참조 하는 열 () 및 자식 **레코드 집합** (`state`)을 그룹화 하는 열을 포함 하는 생성 된 **레코드 집합** 입니다. 자식 수준은 쿼리 명령 (`select * from demographics`)에서 반환 하는 **레코드 집합** 입니다.  
   
- 자식 **레코드 집합** 상태별로 그룹화 하지만 특정 순서 없이 그렇지 않으면 세부 정보 행이 됩니다. 즉, 그룹 알파벳순 이나 숫자순 순서 대로 되지 않습니다. 부모를 하려는 경우 **레코드 집합** 정렬할를 사용할 수 있습니다 합니다 **레코드 집합 정렬** 부모를 주문 하는 방법 **레코드 집합**합니다.  
+ 자식 **레코드 집합** 정보 행은 상태별로 그룹화 되지만 그렇지 않은 경우에는 특정 순서로 그룹화 되지 않습니다. 즉, 그룹이 사전순 또는 숫자로 정렬 되지 않습니다. 부모 **레코드 집합** 을 정렬 하려는 경우에는 **레코드 집합 정렬** 메서드를 사용 하 여 부모 **레코드 집합**의 순서를 지정할 수 있습니다.  
   
- 이제 열린된 부모를 탐색할 수 있습니다 **Recordset** 자식 세부 정보에 액세스 하 고 **레코드 집합** 개체입니다. 자세한 내용은 [계층적 레코드 집합에서 행 액세스](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)합니다.  
+ 이제 열린 부모 **레코드 집합** 을 탐색 하 고 자식 세부 정보 **레코드 집합** 개체에 액세스할 수 있습니다. 자세한 내용은 [계층적 레코드 집합의 행에 액세스](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)를 참조 하세요.  
   
 ## <a name="resultant-parent-and-child-detail-recordsets"></a>결과 부모 및 자식 세부 정보 레코드 집합  
   
 ### <a name="parent"></a>Parent  
   
-|SUM (rs 합니다. 채우기)|rs|State|  
+|합계 (rs. 표본의|rs|시스템 상태|  
 |---------------------------|--------|-----------|  
-|1,300,000|Child1이에 대 한 참조|CA|  
-|1,200,000|Child2에 대 한 참조|WA|  
-|1,100,000|Child3에 대 한 참조|또는|  
+|130만|자식 1에 대 한 참조|CA|  
+|120만|자식 2에 대 한 참조|WA|  
+|110만|Child3에 대 한 참조|또는|  
   
 ## <a name="child1"></a>Child1  
   
-|State|City|모집단|  
+|시스템 상태|City|모집단|  
 |-----------|----------|----------------|  
-|CA|Los Angeles|800,000|  
-|CA|샌디에이고|600,000|  
+|CA|로스앤젤레스|80만|  
+|CA|샌디에이고|60만|  
   
 ## <a name="child2"></a>Child2  
   
-|State|City|모집단|  
+|시스템 상태|City|모집단|  
 |-----------|----------|----------------|  
-|WA|Seattle|700,000|  
+|WA|시애틀|70만|  
 |WA|Tacoma|500,000|  
   
 ## <a name="child3"></a>Child3  
   
-|State|City|모집단|  
+|시스템 상태|City|모집단|  
 |-----------|----------|----------------|  
 |또는|Medford|200,000|  
 |또는|Portland|400,000|  
 |또는|Corvallis|300,000|  
   
-## <a name="see-also"></a>관련 항목  
- [계층적 레코드 집합의 행에 액세스](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
+## <a name="see-also"></a>참고 항목  
+ [계층적 레코드 집합의 행 액세스](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [데이터 셰이핑 개요](../../../ado/guide/data/data-shaping-overview.md)   
  [Field 개체](../../../ado/reference/ado-api/field-object.md)   
- [공식적인 셰이프 문법](../../../ado/guide/data/formal-shape-grammar.md)   
+ [공식 모양 문법](../../../ado/guide/data/formal-shape-grammar.md)   
  [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [데이터 셰이프에 필요한 공급자](../../../ado/guide/data/required-providers-for-data-shaping.md)   
- [셰이프 APPEND 절](../../../ado/guide/data/shape-append-clause.md)   
- [일반적인 셰이핑 명령](../../../ado/guide/data/shape-commands-in-general.md)   
+ [데이터 셰이핑에 필요한 공급자](../../../ado/guide/data/required-providers-for-data-shaping.md)   
+ [Shape APPEND 절](../../../ado/guide/data/shape-append-clause.md)   
+ [Shape 명령 일반](../../../ado/guide/data/shape-commands-in-general.md)   
  [Value 속성 (ADO)](../../../ado/reference/ado-api/value-property-ado.md)   
  [Visual Basic for Applications 기능](../../../ado/guide/data/visual-basic-for-applications-functions.md)

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c6828b77af36b5dbbc50fbca0210961a7f2ed20c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68041925"
 ---
 # <a name="predictsequence-dmx"></a>PredictSequence(DMX)
@@ -30,14 +30,14 @@ PredictSequence(\<table column reference, n-start, n-end>)
 ```  
   
 ## <a name="return-type"></a>반환 형식  
- \<테이블 식 >.  
+ \<테이블 식>입니다.  
   
 ## <a name="remarks"></a>설명  
- 경우는 *n* 매개 변수가 지정 된 다음 값을 반환 합니다.  
+ *N* 매개 변수를 지정 하면 다음 값이 반환 됩니다.  
   
--   하는 경우 *n* 가능성이 가장 높은 시퀀스 값 다음에 0 보다 크면 *n* 단계입니다.  
+-   *N* 이 0 보다 크면 다음 *n* 단계에서 가장 가능성이 높은 시퀀스 값이 반환 됩니다.  
   
--   둘 다 *n 시작* 및 *n 엔드* 지정 된 시퀀스에서 값 *n 시작* 하 *n 엔드*합니다.  
+-   *N-시작* 및 *n 끝* 이 모두 지정 된 경우 *n-시작* 에서 *n-end*까지의 시퀀스 값입니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 Sequence Clustering 마이닝 모델을 기반으로 하는 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] 데이터베이스에서 고객이 구매할 가능성이 가장 높은 다섯 개의 제품 시퀀스를 반환합니다.  
@@ -49,9 +49,9 @@ From
   [Sequence Clustering]  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [Data Mining Extensions &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [함수 &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+## <a name="see-also"></a>참고 항목  
+ [데이터 마이닝 확장 &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [DMX &#40;함수&#41;](../dmx/functions-dmx.md)   
+ [DMX&#41;일반 예측 함수 &#40;](../dmx/general-prediction-functions-dmx.md)  
   
   

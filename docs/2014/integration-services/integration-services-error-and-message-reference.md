@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec7f81ec412a2ed597f8cd282b637fc5adf73ebf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892661"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 오류 및 메시지 참조
@@ -44,7 +44,8 @@ ms.locfileid: "62892661"
 -   [데이터 흐름 구성 요소 오류 메시지(DTSBC_E_*)](#msgPipeline)  
   
 ##  <a name="msgError"></a> 오류 메시지  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류 메시지의 심볼 이름은 `DTS_E_`로 시작합니다.  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류 메시지의 심볼 이름은 `DTS_E_`로 시작합니다.  
   
 |16진수 코드|10진수 코드|심볼 이름|Description|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -163,7 +164,7 @@ ms.locfileid: "62892661"
 |0xC0014029|-1073659863|DTS_E_INVALIDCERTHASHFORMAT|해시 값이 1차원 바이트 배열이 아닙니다(오류: %1). 이 오류는 CPackage::LoadUserCertificateByHash에서 발생합니다.|  
 |0xC001402A|-1073659862|DTS_E_CANTACCESSARRAYDATA|배열의 데이터에 액세스할 수 없습니다(오류: %1). 이 오류는 GetDataFromSafeArray가 호출될 때마다 발생할 수 있습니다.|  
 |0xC001402B|-1073659861|DTS_E_CREATEMANAGEDHELPERFAILED|오류 0x%1!8.8X! "%2"(으)로 인해 관리되는 SSIS 도우미 개체를 만들지 "%2"입니다. 이 오류는 CoCreateInstance CLSID_DTSManagedHelper가 실패할 때마다 발생할 수 있습니다.|  
-|0xC001402C|-1073659860|DTS_E_OLEDBTRANSACTIONENLIST|오류 0x%1!8.8X! "%2"(으)로 인해 SSIS 런타임이 OLE DB 연결을 분산 트랜잭션에 참여시키지 못했습니다.|  
+|0xC001402C|-1073659860|DTS_E_OLEDBTRANSACTIONENLIST|오류 0x%1!8.8X! "%2"(으)로 인해 SSIS 런타임이 OLE DB 연결을 분산 트랜잭션에 참여시키지 "%2"입니다.|  
 |0xC001402D|-1073659859|DTS_E_SIGNPACKAGEFAILED|오류 0x%1!8.8X! "%2"(으)로 인해 패키지를 서명하지 "%2"입니다. 이 오류는 ManagedHelper.SignDocument 메서드가 실패할 때 발생합니다.|  
 |0xC001402E|-1073659858|DTS_E_CHECKENVELOPEFAILED|오류 0x%1!8.8X! "%2"(으)로 인해 패키지 XML에서 XML 서명 봉투를 확인하지 "%2"입니다. 이 오류는 CPackage::LoadFromXML에서 발생합니다.|  
 |0xC001402F|-1073659857|DTS_E_GETXMLSOURCEFAILED|오류 0x%1!8.8X! "%2"(으)로 인해 XML DOM 개체에서 XML 원본을 가져오지 "%2"입니다. 이 오류는 IXMLDOMDocument::get_xml이 실패할 때 발생합니다.|  
@@ -1413,7 +1414,7 @@ ms.locfileid: "62892661"
 |0xC02020D6|-1071636266|DTS_E_TXSAMPLINGINVALIDROWS|행 수인 %2!ld!이(가) "%1" 속성에 적합하지 않습니다. 0보다 커야 합니다.|  
 |0xC02020D7|-1071636265|DTS_E_RAWSTRINGINPUTTOOLONG|어댑터가 %1!I64d!바이트 길이의 문자열을 기록하라는 요청을 받았지만 모든 데이터의 길이는 4294967295바이트보다 작아야 합니다.|  
 |0xC02020D9|-1071636263|DTS_E_ATLEASTONEINPUTMUSTBEMAPPEDTOOUTPUT|입력이 출력으로 매핑되지 않았습니다. "%1"에는 적어도 하나 이상의 입력 열이 출력 열로 매핑되어야 합니다.|  
-|0xC02020DB|-1071636261|DTS_E_CANNOTCONVERTDATATYPESWITHDIFFERENTCODEPAGES|코드 페이지가 %2!d!인 "%1"에서 코드 페이지가 %4!d!인 "%3"(으)로의 변환은 지원되지 않습니다.|  
+|0xC02020DB|-1071636261|DTS_E_CANNOTCONVERTDATATYPESWITHDIFFERENTCODEPAGES|코드 페이지가 %2!d!인 "%1"에서 코드 페이지가 %4!d!인 "%3"(으)로의 변환은 은 지원되지 않습니다.|  
 |0xC02020DC|-1071636260|DTS_E_COLUMNNOTMAPPEDTOEXTERNALMETADATACOLUMN|%1에 대한 외부 메타데이터 열 매핑이 잘못되었습니다.  외부 메타데이터 열 ID는 0일 수 없습니다.|  
 |0xC02020DD|-1071636259|DTS_E_COLUMNMAPPEDTONONEXISTENTEXTERNALMETADATACOLUMN|%1이(가) 존재하지 않는 외부 메타데이터 열로 매핑되었습니다.|  
 |0xC02020E5|-1071636251|DTS_E_UNABLETOWRITELOBDATATOBUFFER|열 "%1"에 대해 DT_TEXT, DT_NTEXT 또는 DT_IMAGE 유형의 Long 개체 데이터를 데이터 흐름 태스크 버퍼에 쓰지 못했습니다.|  
@@ -2018,7 +2019,8 @@ ms.locfileid: "62892661"
 |||DTS_E_COMPONENTINITFAILED|0x%2!8.8X! " %3!s!" 오류로 인해 %1!s! 구성 요소를 초기화하지 반환되었습니다|  
   
 ##  <a name="msgWarning"></a> 경고 메시지  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 경고 메시지의 심볼 이름은 `DTS_W_`로 시작합니다.  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 경고 메시지의 심볼 이름은 `DTS_W_`로 시작합니다.  
   
 |16진수 코드|10진수 코드|심볼 이름|Description|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2164,7 +2166,8 @@ ms.locfileid: "62892661"
 |0x930D|37645|DTS_W_EXTERNALTABLECOLSOUTOFSYNC|테이블 "%1"이(가) 변경되었습니다. 이 테이블에 새 열이 추가되었을 수 있습니다.|  
   
 ##  <a name="msgInfo"></a> 정보 메시지  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 정보 메시지의 심볼 이름은 `DTS_I_`로 시작합니다.  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 정보 메시지의 심볼 이름은 `DTS_I_`로 시작합니다.  
   
 |16진수 코드|10진수 코드|심볼 이름|Description|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2263,12 +2266,13 @@ ms.locfileid: "62892661"
 |0x4020F42C|1075901484|DTS_I_OLEDBDESTZEROMAXCOMMITSIZE|OLE DB 대상 "%1"의 최대 삽입 커밋 크기 속성이 0으로 설정되어 있습니다. 이 속성 설정으로 인해 실행 중인 패키지의 작동이 중지될 수 있습니다. 자세한 내용은 F1 도움말 항목의 OLE DB 대상 편집기(연결 관리자 페이지)를 참조하십시오.|  
   
 ##  <a name="msgGeneral"></a> 일반 및 이벤트 메시지  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류 메시지의 심볼 이름은 `DTS_MSG_`로 시작합니다.  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류 메시지의 심볼 이름은 `DTS_MSG_`로 시작합니다.  
   
 |16진수 코드|10진수 코드|심볼 이름|Description|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x1|1|DTS_MSG_CATEGORY_SERVICE_CONTROL|잘못된 함수입니다.|  
-|0x2|2|DTS_MSG_CATEGORY_RUNNING_PACKAGE_MANAGEMENT|시스템에서 지정한 파일을 찾을 수 없습니다.|  
+|0x2|2|DTS_MSG_CATEGORY_RUNNING_PACKAGE_MANAGEMENT|시스템은 지정된 파일을 찾을 수 없습니다.|  
 |0x100|256|DTS_MSG_SERVER_STARTING|Microsoft SSIS 서비스를 시작하고 있습니다.<br /><br /> 서버 버전 %1|  
 |0x101|257|DTS_MSG_SERVER_STARTED|Microsoft SSIS 서비스가 시작되었습니다.<br /><br /> 서버 버전 %1|  
 |0x102|258|DTS_MSG_SERVER_STOPPING|대기 작업의 시간이 초과되었습니다.|  
@@ -2302,7 +2306,8 @@ ms.locfileid: "62892661"
 |0x4010310E|1074802958|DTS_MSG_EVENTLOGENTRY_INFORMATION|이벤트 이름: %1<br /><br /> 메시지: %9<br /><br /> 연산자: %2<br /><br /> 원본 이름: %3<br /><br /> 원본 ID: %4<br /><br /> 실행 ID: %5<br /><br /> 시작 시간: %6<br /><br /> 종료 시간: %7<br /><br /> 데이터 코드: %8|  
   
 ##  <a name="msgSuccess"></a> Success Messages  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 성공 메시지의 심볼 이름은 `DTS_S_`로 시작합니다.  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 성공 메시지의 심볼 이름은 `DTS_S_`로 시작합니다.  
   
 |16진수 코드|10진수 코드|심볼 이름|Description|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2311,7 +2316,8 @@ ms.locfileid: "62892661"
 |0x200001|2097153|DTS_S_EXPREVALTRUNCATIONOCCURRED|식을 계산하는 동안 잘림이 발생했습니다. 계산 중에 잘림이 발생하면 중간 단계에 임의 지점이 포함될 수 있습니다.|  
   
 ##  <a name="msgPipeline"></a> 데이터 흐름 구성 요소 오류 메시지  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류 메시지의 심볼 이름은 `DTSBC_E_`로 시작합니다. 여기서 "BC"는 대부분의 Microsoft 데이터 흐름 구성 요소가 파생되는 네이티브 기본 클래스를 나타냅니다.  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류 메시지의 심볼 이름은 `DTSBC_E_`로 시작합니다. 여기서 "BC"는 대부분의 Microsoft 데이터 흐름 구성 요소가 파생되는 네이티브 기본 클래스를 나타냅니다.  
   
 |16진수 코드|10진수 코드|심볼 이름|Description|  
 |----------------------|------------------|-------------------|-----------------|  

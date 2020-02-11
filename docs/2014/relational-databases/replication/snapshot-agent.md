@@ -15,17 +15,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7cccde764edca2b5552fb22490d971fe095c707e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676544"
 ---
 # <a name="snapshot-agent"></a>스냅샷 에이전트
-  **스냅숏 에이전트** 대화 상자는 상태, 기록, 정보 메시지, 모든 오류 메시지 등 스냅숏 에이전트에 대한 자세한 정보를 표시합니다.  
+  **스냅샷 에이전트** 대화 상자는 상태, 기록, 정보 메시지, 모든 오류 메시지 등 스냅샷 에이전트에 대한 자세한 정보를 표시합니다.  
   
-## <a name="options"></a>변수  
- **보기** 메뉴에서 보려는 스냅숏 에이전트 세션을 선택한 다음 **스냅숏 에이전트의 세션**표에서 특정 세션을 선택합니다. **선택한 세션의 동작**표에 이 세션에 대한 자세한 정보가 표시됩니다. 선택한 세션이 오류로 인해 종료될 경우 **선택한 세션에 대한 오류 정보 또는 메시지** 라는 텍스트 영역 또한 표시됩니다.  
+## <a name="options"></a>옵션  
+ **보기** 메뉴에서 보려는 스냅샷 에이전트 세션을 선택한 다음 **스냅샷 에이전트의 세션**표에서 특정 세션을 선택합니다. **선택한 세션의 동작**표에 이 세션에 대한 자세한 정보가 표시됩니다. 선택한 세션이 오류로 인해 종료될 경우 **선택한 세션에 대한 오류 정보 또는 메시지** 라는 텍스트 영역 또한 표시됩니다.  
   
  **보기**  
  확인할 스냅샷 에이전트 세션을 선택합니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "62676544"
   
 -   실행 중이 아님  
   
--   완료  
+-   Completed  
   
  **Start Time**  
  세션의 시작 시간입니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "62676544"
  **종료 시간**  
  세션의 종료 시간입니다. 에이전트가 중지되지 않은 경우 이 필드는 비어 있습니다.  
   
- **기간**  
+ **Duration**  
  이 세션에서 스냅샷 에이전트가 실행된 시간입니다. 에이전트가 현재 실행되고 있는 경우 이 시간은 경과된 시간을 나타내고 에이전트 세션이 종료된 경우에는 총 세션 시간을 나타냅니다.  
   
  **오류 메시지**  
@@ -62,7 +62,7 @@ ms.locfileid: "62676544"
  **선택한 세션에 대한 오류 정보 또는 메시지**  
  선택한 세션의 **상태** 열에 **오류** 값이 표시되는 경우에만 표시됩니다. 이 텍스트 영역은 오류 발생 시 시도한 명령과 자세한 오류 정보를 표시합니다. 오류와 관련된 추가 내용으로 연결되는 링크도 포함되어 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [복제 모니터 시작](monitor/start-the-replication-monitor.md)   
  [복제 모니터를 사용하여 정보 보기 및 태스크 수행](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [복제 모니터링](monitoring-replication.md)   

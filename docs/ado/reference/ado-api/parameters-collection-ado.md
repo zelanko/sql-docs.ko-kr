@@ -18,31 +18,31 @@ ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4e062c67f0dedf55d63a076725b46d4405918741
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917698"
 ---
 # <a name="parameters-collection-ado"></a>Parameters 컬렉션(ADO)
-모두 포함 합니다 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 의 개체를 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체입니다.  
+[Command](../../../ado/reference/ado-api/command-object-ado.md) 개체의 모든 [Parameter](../../../ado/reference/ado-api/parameter-object.md) 개체를 포함 합니다.  
   
 ## <a name="remarks"></a>설명  
- A **명령** 개체에는 **매개 변수** 컬렉션으로 이루어져 **매개 변수** 개체입니다.  
+ **Command** 개체는 **매개 변수** 개체로 구성 된 **매개 변수** 컬렉션을 포함 합니다.  
   
- 사용 하 여 합니다 [새로 고침](../../../ado/reference/ado-api/refresh-method-ado.md) 메서드를 **명령** 개체의 **매개 변수** 컬렉션 저장된 프로시저 또는 매개 변수가 있는 쿼리를 실행 하는 것에 대 한 공급자 매개 변수 정보를 검색 합니다. 에 지정 된 **명령** 개체입니다. 저장된 프로시저 호출 또는 매개 변수가 있는 쿼리에 일부 공급자를 지원 하지 않습니다. 호출을 **새로 고침** 메서드는 **매개 변수** 컬렉션 이러한 공급자를 사용 하는 경우 오류가 반환 됩니다.  
+ **Command** 개체의 **Parameters** 컬렉션에 [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) 메서드를 사용 하면 **명령** 개체에 지정 된 저장 프로시저 또는 매개 변수가 있는 쿼리에 대 한 공급자 매개 변수 정보를 검색 합니다. 일부 공급자는 저장 프로시저 호출 또는 매개 변수가 있는 쿼리를 지원 하지 않습니다. 이러한 공급자를 사용할 때 **Parameters** 컬렉션에서 **Refresh** 메서드를 호출 하면 오류가 반환 됩니다.  
   
- 정의 하지 않은 고유한 경우 **매개 변수** 개체에 액세스를 **매개 변수** 호출 하기 전에 컬렉션을 **새로 고침** 메서드, ADO를 자동으로 호출 합니다 메서드를 컬렉션을 채웁니다.  
+ 사용자 고유의 **매개 변수** 개체를 정의 하지 않은 경우 **Refresh** 메서드를 호출 하기 전에 **매개 변수** 컬렉션에 액세스 하면 ADO에서 자동으로 메서드를 호출 하 고 컬렉션을 채웁니다.  
   
- 공급자를 호출 하는 저장된 프로시저를 사용 하 여 연결 또는 매개 변수가 있는 쿼리의 매개 변수 속성을 알고 있는 경우 성능 향상을 위해 호출 하려는 최소화할 수 있습니다. 사용 합니다 [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) 메서드를 **매개 변수** 사용 하 여 확인 하 고 적절 한 속성 설정을 사용 하 여 개체를 [추가](../../../ado/reference/ado-api/append-method-ado.md) 메서드를 추가할는  **매개 변수** 컬렉션입니다. 이 방법으로 설정 하 고 매개 변수 정보에 대 한 공급자를 호출 하지 않고 매개 변수 값을 반환할 수 있습니다. 매개 변수 정보를 제공 하지 않는 공급자를 작성 하는 경우 수동으로 채워야 합니다 **매개 변수** 전혀 매개 변수를 사용 하려면이 메서드를 사용 하 여 컬렉션입니다. 사용 된 [삭제](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md) 제거 하는 방법 **매개 변수** 에서 개체를 **매개 변수** 필요한 경우 컬렉션.  
+ 호출할 저장 프로시저 또는 매개 변수가 있는 쿼리와 연결 된 매개 변수의 속성을 알고 있는 경우 공급자에 대 한 호출을 최소화 하 여 성능을 향상 시킬 수 있습니다. [Createparameter](../../../ado/reference/ado-api/createparameter-method-ado.md) 메서드를 사용 하 여 적절 한 속성 설정이 포함 된 **매개 변수** 개체를 만들고 [Append](../../../ado/reference/ado-api/append-method-ado.md) 메서드를 사용 하 여 **Parameters** 컬렉션에 추가 합니다. 이렇게 하면 매개 변수 정보에 대 한 공급자를 호출 하지 않고도 매개 변수 값을 설정 하 고 반환할 수 있습니다. 매개 변수 정보를 제공 하지 않는 공급자에 작성 하는 경우 매개 변수를 사용할 수 있도록이 메서드를 사용 하 여 **매개 변수** 컬렉션을 수동으로 채워야 합니다. 필요한 경우 [Delete](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md) 메서드를 사용 하 **여 매개 변수 컬렉션에서** **매개 변수** 개체를 제거 합니다.  
   
- 개체는 **매개 변수** 의 컬렉션을 **레코드 집합** (따라서 사용할 수 없게 되) 범위를 벗어납니다 이동 때를 **레코드 집합** 닫혀 합니다.  
+ 레코드 **집합의** **Parameters** 컬렉션에 있는 개체는 **레코드 집합** 을 닫을 때 범위를 벗어날 수 있습니다.  
   
- 사용 하 여 저장된 프로시저를 호출할 때 **명령**, 저장된 프로시저의 반환 값/출력 매개 변수는 다음과 같이 검색 됩니다.  
+ **명령을**사용 하 여 저장 프로시저를 호출 하는 경우 저장 프로시저의 반환 값/출력 매개 변수는 다음과 같이 검색 됩니다.  
   
-1.  매개 변수가 있는 저장된 프로시저를 호출 하는 경우는 **새로 고침** 메서드를를 **매개 변수** 컬렉션을 호출 하기 전에 호출 해야 합니다 **Execute** 메서드를는 **명령** 개체입니다.  
+1.  매개 변수가 없는 저장 프로시저를 호출 하는 경우에는 **Command** 개체에서 **Execute** 메서드를 호출 하기 전에 **parameters** 컬렉션의 **Refresh** 메서드를 호출 해야 합니다.  
   
-2.  매개 변수 및 매개 변수를 명시적으로 추가 사용 하 여 저장된 프로시저를 호출할 때 합니다 **매개 변수** 수집과 **추가**, 반환 값/출력 매개 변수는 에추가할것인지**매개 변수** 컬렉션입니다. 반환 값에 먼저 추가 되어야 합니다 **매개 변수** 컬렉션입니다. 사용 하 여 **추가** 에 다른 매개 변수를 추가 합니다 **매개 변수** 정의 순서 대로 컬렉션입니다. 예를 들어 저장된 프로시저 SPWithParam에 두 개의 매개 변수입니다. 첫 번째 매개 변수를 *InParam*입력된 매개 변수 집합이 있으므로 필요 (20)으로 정의 되어 두 번째 매개 변수를 *OutParam*, 출력 매개 변수 집합이 있으므로 필요 (20)으로 정의 합니다. 다음 코드를 사용 하 여 반환 값/출력 매개 변수를 검색할 수 있습니다.  
+2.  매개 변수를 사용 하 여 저장 프로시저를 호출 하 고 **Append**를 사용 하 **여 매개 변수 컬렉션에** 매개 변수를 명시적으로 추가 하는 경우 반환 값/출력 매개 변수를 **parameters** 컬렉션에 추가 해야 합니다. 반환 값은 먼저 **Parameters** 컬렉션에 추가 해야 합니다. Add **를 사용 하 여 다른** 매개 변수를 정의 순서 대로 **parameters** 컬렉션에 추가 합니다. 예를 들어 저장 프로시저 SPWithParam에는 두 개의 매개 변수가 있습니다. 첫 번째 매개 변수인 *Inparam*은 adVarChar (20)으로 정의 된 입력 매개 변수이 고, 두 번째 매개 변수 *Outparam*은 adVarChar (20)로 정의 된 출력 매개 변수입니다. 다음 코드를 사용 하 여 반환 값/출력 매개 변수를 검색할 수 있습니다.  
   
     ```vb
     ' Open Connection Conn  
@@ -63,7 +63,7 @@ ms.locfileid: "67917698"
   
     ```  
   
-3.  매개 변수 및 매개 변수를 호출 하 여 구성를 사용 하 여 저장된 프로시저를 호출할 때 합니다 **항목** 메서드는 **매개 변수** 컬렉션, 저장된 프로시저의 반환 값/출력 매개 변수 수 검색할 수는 **매개 변수** 컬렉션입니다. 예를 들어 저장된 프로시저 SPWithParam에 두 개의 매개 변수입니다. 첫 번째 매개 변수를 *InParam*입력된 매개 변수 집합이 있으므로 필요 (20)으로 정의 되어 두 번째 매개 변수를 *OutParam*, 출력 매개 변수 집합이 있으므로 필요 (20)으로 정의 합니다. 다음 코드를 사용 하 여 반환 값/출력 매개 변수를 검색할 수 있습니다.  
+3.  매개 변수를 사용 하 여 저장 프로시저를 호출 하 **고 매개 변수 컬렉션에서** **Item** 메서드를 호출 하 여 매개 변수를 구성 하는 경우 저장 프로시저의 반환 값/출력 매개 변수를 **parameters** 컬렉션에서 검색할 수 있습니다. 예를 들어 저장 프로시저 SPWithParam에는 두 개의 매개 변수가 있습니다. 첫 번째 매개 변수인 *Inparam*은 adVarChar (20)으로 정의 된 입력 매개 변수이 고, 두 번째 매개 변수 *Outparam*은 adVarChar (20)로 정의 된 출력 매개 변수입니다. 다음 코드를 사용 하 여 반환 값/출력 매개 변수를 검색할 수 있습니다.  
   
     ```vb
     ' Open Connection Conn  
@@ -80,11 +80,11 @@ ms.locfileid: "67917698"
     ' Access ccmd.parameters(2) or ccmd.parameters("OutParam") as the output parameter.  
     ```  
   
- 이 섹션에서는 다음 항목을 포함합니다.  
+ 이 섹션에는 다음 항목이 포함 되어 있습니다.  
   
 -   [Parameters 컬렉션 속성, 메서드 및 이벤트](../../../ado/reference/ado-api/parameters-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Append 메서드 (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [CreateParameter 메서드 (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Parameter 개체](../../../ado/reference/ado-api/parameter-object.md)

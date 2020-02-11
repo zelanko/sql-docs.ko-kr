@@ -15,16 +15,16 @@ ms.assetid: ef514f85-c446-4f05-824e-c9313b2ffae1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8e8fd90849b8e046a7f4fe5d158d4594e612c91f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925498"
 ---
 # <a name="editing-data"></a>데이터 편집
-가 설명한 어떻게 ADO를 사용 하 여 데이터 원본에 연결 명령을 실행, 결과 얻을를 **레코드 집합** 개체를 탐색할 합니다 **레코드 집합**합니다. 이 섹션에서는 다음 기본 ADO 작업에 중점을 둡니다: 데이터를 편집 합니다.  
+ADO를 사용 하 여 데이터 원본에 연결 하 고, 명령을 실행 하 고, **레코드 집합** 개체에서 결과를 가져오고, **레코드 집합**내에서 탐색 하는 방법에 대해 설명 했습니다. 이 섹션에서는 다음 기본 ADO 작업 인 데이터 편집에 대해 중점적으로 설명 합니다.  
   
- 이 섹션에서는 예제를 사용 하려면 계속 **Recordset** 에 도입 된 [데이터 검사](../../../ado/guide/data/examining-data.md), 한 가지 중요 한 변경. 다음 코드는 여는 데 사용 되는 **레코드 집합**:  
+ 이 섹션에서는 중요 한 변경 내용으로 [데이터 검사](../../../ado/guide/data/examining-data.md)에 도입 된 샘플 **레코드 집합** 을 계속 사용 합니다. 다음 코드는 **레코드 집합**을 여는 데 사용 됩니다.  
   
 ```  
 'BeginEditIntro  
@@ -43,13 +43,13 @@ ms.locfileid: "67925498"
 'EndEditIntro  
 ```  
   
- 코드에 중요 한 변화는 설정을 **CursorLocation** 의 속성을 **연결** 개체를 **adUseClient** 에서  *GetNewConnection* 클라이언트 커서를 사용 하는 함수 (다음 예에서 같이). 클라이언트 쪽 및 서버측 커서 간의 차이점에 대 한 자세한 내용은 참조 하세요. [커서 및 잠금 이해](../../../ado/guide/data/understanding-cursors-and-locks.md)합니다.  
+ 코드의 중요 한 변경 내용에는 클라이언트 커서 사용을 나타내는 *Getnewconnection* 함수 (다음 예제에서 표시)에서 **Connection** 개체의 **CursorLocation** 속성을 **adUseClient** 로 설정 하는 작업이 포함 됩니다. 클라이언트 쪽 커서와 서버측 커서 간의 차이점에 대 한 자세한 내용은 [커서 및 잠금 이해](../../../ado/guide/data/understanding-cursors-and-locks.md)를 참조 하세요.  
   
- 합니다 **CursorLocation** 속성의 **adUseClient** 설정은 데이터 원본 (SQL Server,이 경우)에서 클라이언트 코드 (데스크톱 워크스테이션)의 위치에 커서의 위치를 이동 합니다. 이 설정을 사용 하면 커서를 만들고 클라이언트 OLE DB에 대 한 클라이언트 커서 엔진을 호출 하는 ADO.  
+ **CursorLocation** 속성의 **adUseClient** 설정은 커서 위치를 데이터 원본 (이 경우 SQL Server)에서 클라이언트 코드의 위치 (데스크톱 워크스테이션)로 이동 합니다. 이 설정을 통해 ADO는 커서를 만들고 관리 하기 위해 클라이언트에서 OLE DB에 대 한 클라이언트 커서 엔진을 호출 합니다.  
   
- 또한 보았을 것입니다를 **LockType** 의 매개 변수를 **열기** 메서드를 변경 **adLockBatchOptimistic**합니다. 이 일괄 처리 모드에서 커서를 엽니다. (공급자는 여러 변경 내용을 캐시 하 고 호출 된 경우에 기본 데이터 원본에 기록 합니다 **UpdateBatch** 메서드.) 에 대 한 변경 내용을 **레코드 집합** 될 때까지 데이터베이스에서 업데이트 되지 것입니다는 **UpdateBatch** 메서드가 호출 됩니다.  
+ **Open** 메서드의 **LockType** 매개 변수가 **adlockbatchoptimistic**으로 변경 된 것을 알 수도 있습니다. 그러면 커서가 일괄 처리 모드로 열립니다. 이 공급자는 여러 변경 내용을 캐시 하 고 **UpdateBatch** 메서드를 호출 하는 경우에만 기본 데이터 소스에 씁니다. **레코드 집합** 에 대 한 변경 내용은 **UpdateBatch** 메서드가 호출 될 때까지 데이터베이스에서 업데이트 되지 않습니다.  
   
- 마지막으로,이 섹션의 코드는 수정 된 버전의 GetNewConnection 함수를 사용합니다. 이 버전의 함수에는 이제 클라이언트 쪽 커서를 반환합니다. 함수는 다음과 같습니다.  
+ 마지막으로이 섹션의 코드는 수정 된 버전의 GetNewConnection 함수를 사용 합니다. 이 버전의 함수는 이제 클라이언트 쪽 커서를 반환 합니다. 함수는 다음과 같습니다.  
   
 ```  
 'BeginNewConnection  
@@ -89,6 +89,6 @@ End Function
   
 -   [지원되는 기능 확인](../../../ado/guide/data/determining-what-is-supported.md)  
   
--   [삭제 메서드를 사용하여 레코드 삭제](../../../ado/guide/data/deleting-records-using-the-delete-method.md)  
+-   [Delete 메서드를 사용하여 레코드 삭제](../../../ado/guide/data/deleting-records-using-the-delete-method.md)  
   
--   [대안: SQL 문을 사용 하 여](../../../ado/guide/data/alternatives-using-sql-statements.md)
+-   [대안: SQL 문 사용](../../../ado/guide/data/alternatives-using-sql-statements.md)

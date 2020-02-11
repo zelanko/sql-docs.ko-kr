@@ -19,13 +19,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d5ce458ea8f5874620ea0561eeea5c6ff8e56bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62689039"
 ---
-# <a name="bcpexec"></a>bcp_exec
+# <a name="bcp_exec"></a>bcp_exec
   데이터베이스 테이블과 사용자 파일 간에 데이터에 대한 전체 대량 복사를 실행합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -47,19 +47,22 @@ pnRowsProcessed
  대량 복사가 가능한 ODBC 연결 핸들입니다.  
   
  *pnRowsProcessed*  
- DBINT에 대한 포인터입니다. **bcp_exec** 함수는 성공적으로 복사된 행 수로 이 DBINT를 채웁니다. *pnRowsProcessed* 가 NULL이면 **bcp_exec**에서 이 인수를 무시합니다.  
+ DBINT에 대한 포인터입니다. 
+  **bcp_exec** 함수는 성공적으로 복사된 행 수로 이 DBINT를 채웁니다. 
+  *pnRowsProcessed* 가 NULL이면 **bcp_exec**에서 이 인수를 무시합니다.  
   
-## <a name="returns"></a>반환 값  
- SUCCEED, SUCCEED_ASYNC 또는 FAIL. 모든 행이 복사되면 **bcp_exec** 함수가 SUCCEED를 반환합니다 비동기 대량 복사 작업이 보류 중이면**bcp_exec** 가 SUCCEED_ASYNC를 반환합니다. **bcp_exec** 완전히 실패 또는 오류를 생성 하는 행 수가 다음을 사용 하 여 BCPMAXERRS에 지정 된 값에 도달할 경우 FAIL을 반환 합니다 [bcp_control](bcp-control.md)합니다. BCPMAXERRS의 기본값은 10입니다. BCPMAXERRS 옵션은 데이터 파일에서 행을 읽는 동안 공급자가 발견하는 구문 오류의 수에만 영향을 주고 서버로 전송되는 행 수에는 영향을 주지 않습니다. 행에서 오류를 발견하면 서버에서 일괄 처리를 중단합니다. 성공적으로 복사된 행 수를 보려면 *pnRowsProcessed* 매개 변수를 확인하십시오.  
+## <a name="returns"></a>반환  
+ SUCCEED, SUCCEED_ASYNC 또는 FAIL. 모든 행이 복사되면 **bcp_exec** 함수가 SUCCEED를 반환합니다 비동기 대량 복사 작업이 아직 처리 되지 않은 경우 **bcp_exec** SUCCEED_ASYNC를 반환 합니다. 전체 오류가 발생 하거나 오류를 생성 하는 행의 수가 [bcp_control](bcp-control.md)를 사용 하 여 BCPMAXERRS에 지정 된 값에 도달 하면 **bcp_exec** 반환 되지 않습니다. BCPMAXERRS의 기본값은 10입니다. BCPMAXERRS 옵션은 데이터 파일에서 행을 읽는 동안 공급자가 발견하는 구문 오류의 수에만 영향을 주고 서버로 전송되는 행 수에는 영향을 주지 않습니다. 행에서 오류를 발견하면 서버에서 일괄 처리를 중단합니다. 성공적으로 복사된 행 수를 보려면 *pnRowsProcessed* 매개 변수를 확인하십시오.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 함수는 *bcp_init* 의 [eDirection](bcp-init.md)매개 변수 값에 따라 사용자 파일에서 데이터베이스 테이블로 또는 데이터베이스 테이블에서 사용자 파일로 데이터를 복사합니다.  
   
- **bcp_exec**를 호출하기 전에 올바른 사용자 파일 이름을 지정하여 **bcp_init** 를 호출합니다. 그렇게 하지 않으면 오류가 반환됩니다.  
+ 
+  **bcp_exec**를 호출하기 전에 올바른 사용자 파일 이름을 지정하여 **bcp_init** 를 호출합니다. 그렇게 하지 않으면 오류가 반환됩니다.  
   
- **bcp_exec** 는 무한정 보류될 수 있는 유일한 대량 복사 함수입니다. 따라서 비동기 모드를 지원하는 유일한 대량 복사 함수입니다. 비동기 모드를 설정하려면 [bcp_exec](../native-client-odbc-api/sqlsetconnectattr.md) 를 호출하기 전에 **SQLSetConnectAttr**을 사용하여 SQL_ATTR_ASYNC_ENABLE을 SQL_ASYNC_ENABLE_ON으로 설정합니다. 완료 테스트를 하려면 같은 매개 변수를 사용하여 **bcp_exec** 를 호출합니다. 대량 복사가 완료되지 않은 경우 **bcp_exec** 가 SUCCEED_ASYNC를 반환합니다. 또한 서버로 전송된 행 수에 대한 상태 개수를 *pnRowsProcessed* 에 반환합니다. 서버로 전송된 행은 일괄 처리의 끝에 도달할 때까지 커밋되지 않습니다.  
+ **bcp_exec** 는 모든 시간 동안 해결 될 가능성이 있는 유일한 대량 복사 함수입니다. 따라서 비동기 모드를 지원하는 유일한 대량 복사 함수입니다. 비동기 모드를 설정하려면 [bcp_exec](../native-client-odbc-api/sqlsetconnectattr.md) 를 호출하기 전에 **SQLSetConnectAttr**을 사용하여 SQL_ATTR_ASYNC_ENABLE을 SQL_ASYNC_ENABLE_ON으로 설정합니다. 완료 테스트를 하려면 같은 매개 변수를 사용하여 **bcp_exec** 를 호출합니다. 대량 복사가 완료되지 않은 경우 **bcp_exec** 가 SUCCEED_ASYNC를 반환합니다. 또한 서버로 전송된 행 수에 대한 상태 개수를 *pnRowsProcessed* 에 반환합니다. 서버로 전송된 행은 일괄 처리의 끝에 도달할 때까지 커밋되지 않습니다.  
   
- 대량 복사에서 시작 하 여 중단에 대 한 내용은 변경 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]를 참조 하십시오 [대량 복사 작업 수행 &#40;ODBC&#41;](../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
+ 에서 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]시작 하는 대량 복사의 주요 변경 내용에 대 한 자세한 내용은 [ODBC&#41;&#40;대량 복사 작업 수행 ](../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)을 참조 하세요.  
   
 ## <a name="example"></a>예제  
  다음 예에서는 **bcp_exec**를 사용하는 방법을 보여 줍니다.  
@@ -113,7 +116,7 @@ printf_s("%ld rows processed.\n", nRowsProcessed);
 // Carry on.  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [대량 복사 함수](sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>참고 항목  
+ [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   
