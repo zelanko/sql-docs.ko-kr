@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 46e346cf816d265f13120b85839d6a306f0d1dc4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62938575"
 ---
-# <a name="mssqleng020575"></a>MSSQL_ENG020575
+# <a name="mssql_eng020575"></a>MSSQL_ENG020575
     
 ## <a name="message-details"></a>메시지 정보  
   
@@ -35,7 +35,7 @@ ms.locfileid: "62938575"
 ## <a name="explanation"></a>설명  
  구독자의 데이터를 게시자의 데이터와 비교하여 유효성을 검사했는데 데이터가 일치하여 유효성 검사를 통과했습니다. 유효성 검사에 대한 자세한 내용은 [Validate Replicated Data](validate-data-at-the-subscriber.md)를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [오류 및 이벤트 참조&#40;복제&#41;](errors-and-events-reference-replication.md)  
   
   

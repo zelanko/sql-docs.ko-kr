@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 48a335f4cf3dc3990cbcf6bbf68e82ce76a9e54f
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73759346"
 ---
 # <a name="sql-server-native-client"></a>SQL Server Native Client
@@ -29,7 +29,7 @@ SNAC 또는 SQL Server Native Client는 SQL Server에 대 한 ODBC 및 OLE DB �
 > SNAC 또는 ODBC 드라이버를 다운로드 하 고 다운로드 하는 방법에 대 한 자세한 내용은 [SNAC 수명 주기 설명 블로그 게시물](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/)을 참조 하세요.
 > SQL Server에 대 한 ODBC 드라이버에 대 한 자세한 내용은 [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)을 참조 하십시오.  
 
- SQL Server native Client의 마지막 사용 가능한 버전인 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]를 사용 하 여 릴리스된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 기능에 대 한 정보:
+ 최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Server native client와 함께 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]출시 된 native client 기능에 대 한 정보를 제공 합니다.
 
 -   [LocalDB에 대한 SQL Server Native Client 지원](../../relational-databases/native-client/features/sql-server-native-client-support-for-localdb.md)  
 
@@ -41,13 +41,13 @@ SNAC 또는 SQL Server Native Client는 SQL Server에 대 한 ODBC 및 OLE DB �
 
 -   [확장 이벤트 로그의 진단 정보 액세스](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)  
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client의 ODBC에서는 Windows 7 SDK의 표준 ODBC에 추가 된 세 가지 기능을 지원 합니다.  
+Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 Odbc는 WINDOWS 7 SDK의 표준 odbc에 추가 된 세 가지 기능을 지원 합니다.  
 
 -   연결 관련 작업에 대한 비동기 실행. 자세한 내용은 [비동기 실행](https://go.microsoft.com/fwlink/?LinkID=191493)을 참조 하세요.  
 
 -   C 데이터 형식 확장성. 자세한 내용은 [ODBC의 C 데이터 형식](https://go.microsoft.com/fwlink/?LinkID=191495)을 참조 하세요.  
 
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에서이 기능을 지원 하기 위해 SQLGetDescField는 응용 프로그램의 경우 **SQL_C_BINARY**대신 시간 형식에 대 한 **SQL_C_SS_TIME2** ( **시간** 형식) 또는 **SQL_C_SS_TIMESTAMPOFFSET** ( **datetimeoffset**)를 반환할 수 있습니다. ODBC 3.8를 사용 합니다. 자세한 내용은 [ODBC 날짜 및 시간 향상을 위한 데이터 형식 지원](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)을 참조 하세요.  
+     Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서이 기능을 지원 하기 위해 SQLGetDescField는 응용 프로그램에서 ODBC 3.8를 사용 하는 경우 **SQL_C_BINARY**대신 **SQL_C_SS_TIME2** ( **시간** 형식) 또는 **SQL_C_SS_TIMESTAMPOFFSET** ( **datetimeoffset**)를 반환할 수 있습니다. 자세한 내용은 [ODBC 날짜 및 시간 향상을 위한 데이터 형식 지원](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)을 참조 하세요.  
 
 -   작은 버퍼로 **SQLGetData** 를 여러 번 호출 하 여 많은 매개 변수 값을 검색 합니다. 자세한 내용은 [SQLGetData를 사용 하 여 출력 매개 변수 검색](https://go.microsoft.com/fwlink/?LinkID=191494)을 참조 하세요.  
 

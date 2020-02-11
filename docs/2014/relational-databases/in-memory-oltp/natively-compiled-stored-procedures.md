@@ -13,14 +13,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e9bdc0c104b212f3c26389c1792b6b617634a12a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62714920"
 ---
 # <a name="natively-compiled-stored-procedures"></a>Natively Compiled Stored Procedures
-  고유하게 컴파일된 저장 프로시저는 메모리 최적화 테이블에 액세스하는 네이티브 코드로 컴파일된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저입니다. 고유하게 컴파일된 저장 프로시저는 쿼리 및 비즈니스 논리가 저장 프로시저에서 효율적으로 실행되도록 해 줍니다. 네이티브 컴파일 프로세스에 대한 자세한 내용은 [Native Compilation of Tables and Stored Procedures](native-compilation-of-tables-and-stored-procedures.md)을 참조하세요. 디스크 기반 저장 프로시저를 고유하게 컴파일된 저장 프로시저로 마이그레이션하는 방법에 대한 자세한 내용은 [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md)를 참조하세요.  
+  고유하게 컴파일된 저장 프로시저는 메모리 최적화 테이블에 액세스하는 네이티브 코드로 컴파일된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저입니다. 고유하게 컴파일된 저장 프로시저는 쿼리 및 비즈니스 논리가 저장 프로시저에서 효율적으로 실행되도록 해 줍니다. 네이티브 컴파일 프로세스에 대한 자세한 내용은 [Native Compilation of Tables and Stored Procedures](native-compilation-of-tables-and-stored-procedures.md)을 참조하세요. 디스크 기반 저장 프로시저를 고유하게 컴파일된 저장 프로시저로 마이그레이션하는 방법은 [고유하게 컴파일된 저장 프로시저의 마이그레이션 문제](migration-issues-for-natively-compiled-stored-procedures.md)를 참조하세요.  
   
 > [!NOTE]  
 >  해석된(디스크 기반) 저장 프로시저와 고유하게 컴파일된 저장 프로시저 간의 한 가지 차이점은 해석된 저장 프로시저가 처음 실행할 때 컴파일되는 반면 고유하게 컴파일된 저장 프로시저는 생성할 때 컴파일된다는 것입니다. 고유하게 컴파일된 저장 프로시저를 사용하면 만들 때 많은 오류 조건(산술 오버플로, 형식 변환, 일부 0으로 나누기 조건)을 검색하여 고유하게 컴파일된 저장 프로시저 만들기가 실패할 수 있습니다. 해석된 저장된 프로시저를 사용하면 일반적으로 저장 프로시저를 만들 때 이러한 오류 조건으로 인해 오류가 발생하지 않지만 모든 실행이 실패합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "62714920"
   
 -   [고유하게 컴파일된 저장 프로시저 만들기](creating-natively-compiled-stored-procedures.md)  
   
--   [ATOMIC 블록](atomic-blocks-in-native-procedures.md)  
+-   [Atomic 블록](atomic-blocks-in-native-procedures.md)  
   
 -   [고유하게 컴파일된 저장 프로시저에서 지원되는 구문](supported-features-for-natively-compiled-t-sql-modules.md)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62714920"
   
 -   [데이터 액세스 애플리케이션에서 고유하게 컴파일된 저장 프로시저 호출](calling-natively-compiled-stored-procedures-from-data-access-applications.md)  
   
-## <a name="see-also"></a>관련 항목  
- [메모리 액세스에 최적화된 테이블](memory-optimized-tables.md)  
+## <a name="see-also"></a>참고 항목  
+ [메모리 최적화 테이블](memory-optimized-tables.md)  
   
   

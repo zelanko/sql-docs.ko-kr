@@ -14,25 +14,25 @@ ms.assetid: 4d1c8892-4bbc-4e71-bf4b-ba52c0ea9549
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: eaaa72c302c9218810ce653ea59fe5ff29a54ef0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963871"
 ---
 # <a name="internettimeout-property-rds"></a>InternetTimeout 속성(RDS)
-요청 시간이 초과 되기 전에 대기할 시간 (밀리초)의 수를 나타냅니다.  
+요청 시간이 초과 될 때까지 대기 하는 시간 (밀리초)을 나타냅니다.  
   
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
+>  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
   
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
- 설정 하거나 반환을 **긴** 시간 초과 요청 하기 전에 시간을 밀리초 단위로 나타내는 값입니다.  
+ 요청 시간이 초과 되기 전 까지의 시간 (밀리초)을 나타내는 **Long** 값을 설정 하거나 반환 합니다.  
   
-## <a name="remarks"></a>Remarks  
- HTTP 또는 HTTPS 프로토콜을 사용 하 여 전송 된 요청에만이 속성이 적용 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 속성은 HTTP 또는 HTTPS 프로토콜을 사용 하 여 보낸 요청에만 적용 됩니다.  
   
- 3 계층 환경의 요청 실행 하는 데 몇 분 정도 걸릴 수 있습니다. 이 속성을 사용 하 여 장기 실행 요청에 대 한 추가 시간을 지정 합니다.  
+ 3 계층 환경의 요청은 실행 하는 데 몇 분 정도 걸릴 수 있습니다. 이 속성을 사용 하 여 장기 실행 요청에 대 한 추가 시간을 지정 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
   
@@ -40,7 +40,7 @@ ms.locfileid: "67963871"
 |-|-|  
 |[DataControl 개체(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[DataSpace 개체(RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [InternetTimeout 속성 예제 (VB)](../../../ado/reference/rds-api/internettimeout-property-example-vb.md)   
  [InternetTimeout 속성 예제(VC++)](../../../ado/reference/rds-api/internettimeout-property-example-vc.md)   
  

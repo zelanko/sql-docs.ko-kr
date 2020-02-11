@@ -22,21 +22,24 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fd4153aaaf0fdffe32ce48db872a43cb5dbb84c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62894797"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>스크립트 구성 요소 코딩 및 디버깅
-  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서 스크립트 구성 요소에는 메타데이터 디자인 모드와 코드 디자인 모드의 두 가지 모드가 있습니다. **스크립트 변환 편집기**를 열면 구성 요소가 메타데이터 디자인 모드로 전환됩니다. 여기서는 메타데이터를 구성하고 구성 요소 속성을 설정할 수 있습니다. 메타데이터 디자인 모드에서 스크립트 구성 요소 속성을 설정하고 입/출력을 구성한 후에는 코드 디자인 모드로 전환하여 사용자 지정 스크립트를 작성할 수 있습니다. 메타데이터 디자인 모드 및 코드 디자인 모드에 대한 자세한 내용은 [스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성](configuring-the-script-component-in-the-script-component-editor.md)을 참조하세요.  
+  
+  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서 스크립트 구성 요소에는 메타데이터 디자인 모드와 코드 디자인 모드의 두 가지 모드가 있습니다. 
+  **스크립트 변환 편집기**를 열면 구성 요소가 메타데이터 디자인 모드로 전환됩니다. 여기서는 메타데이터를 구성하고 구성 요소 속성을 설정할 수 있습니다. 메타데이터 디자인 모드에서 스크립트 구성 요소 속성을 설정하고 입/출력을 구성한 후에는 코드 디자인 모드로 전환하여 사용자 지정 스크립트를 작성할 수 있습니다. 메타데이터 디자인 모드 및 코드 디자인 모드에 대한 자세한 내용은 [스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성](configuring-the-script-component-in-the-script-component-editor.md)을 참조하세요.  
   
 ## <a name="writing-the-script-in-code-design-mode"></a>코드 디자인 모드에서 스크립트 작성  
   
 ### <a name="script-component-development-environment"></a>스크립트 구성 요소 개발 환경  
  스크립트를 작성하려면 **스크립트 변환 편집기**의 **스크립트** 페이지에서 **스크립트 편집**을 클릭하여 VSTA([!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications) IDE를 엽니다. VSTA IDE에는 색 구분 기능이 포함된 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 편집기, IntelliSense, 개체 브라우저 등 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] .NET 환경의 모든 표준 기능이 포함됩니다.  
   
- 스크립트 코드는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#으로 작성됩니다. **스크립트 변환 편집기**에서 **ScriptLanguage** 속성을 설정하여 스크립트 언어를 지정합니다. 다른 프로그래밍 언어를 사용하고 싶으면 원하는 언어로 사용자 지정 어셈블리를 개발하고 스크립트 구성 요소의 코드에서 해당 기능을 호출할 수 있습니다.  
+ 스크립트 코드는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#으로 작성됩니다. 
+  **스크립트 변환 편집기**에서 **ScriptLanguage** 속성을 설정하여 스크립트 언어를 지정합니다. 다른 프로그래밍 언어를 사용하고 싶으면 원하는 언어로 사용자 지정 어셈블리를 개발하고 스크립트 구성 요소의 코드에서 해당 기능을 호출할 수 있습니다.  
   
  스크립트 구성 요소에서 작성하는 스크립트는 패키지 정의에 저장됩니다. 별도의 스크립트 파일은 없습니다. 따라서 스크립트 구성 요소를 사용해도 패키지 배포에 영향을 주지 않습니다.  
   
@@ -49,19 +52,24 @@ ms.locfileid: "62894797"
  스크립트 구성 요소의 장점은, 개발자가 작성해야 할 코드 분량을 줄여주는 인프라 코드를 생성할 수 있다는 것입니다. 이 기능은 입/출력 및 해당 열과 속성이 고정되어 있고 미리 알려져 있다는 사실을 기반으로 합니다. 따라서 그 이후에 구성 요소의 메타데이터 내용을 변경하면 작성한 코드가 무효화될 수 있습니다. 그러면 패키지 실행 중 컴파일 오류가 발생합니다.  
   
 #### <a name="project-items-and-classes-in-the-script-component-project"></a>스크립트 구성 요소 프로젝트의 프로젝트 항목 및 클래스  
- 코드 디자인 모드로 전환하면 VSTA IDE에서 `ScriptMain` 프로젝트 항목을 열어 표시합니다. `ScriptMain` 프로젝트 항목은 스크립트의 진입점으로 사용되어 코드 작성 위치를 나타내는 편집 가능한 `ScriptMain` 클래스를 포함합니다. 클래스의 코드 요소는 스크립트 태스크용으로 선택한 프로그래밍 언어에 따라 다릅니다.  
+ 코드 디자인 모드로 전환하면 VSTA IDE에서 `ScriptMain` 프로젝트 항목을 열어 표시합니다. 
+  `ScriptMain` 프로젝트 항목은 스크립트의 진입점으로 사용되어 코드 작성 위치를 나타내는 편집 가능한 `ScriptMain` 클래스를 포함합니다. 클래스의 코드 요소는 스크립트 태스크용으로 선택한 프로그래밍 언어에 따라 다릅니다.  
   
  스크립트 프로젝트는 다음과 같은 두 가지 추가 자동 생성 읽기 전용 프로젝트 항목을 포함합니다.  
   
--   `ComponentWrapper` 프로젝트 항목은 다음의 세 클래스를 포함합니다.  
+-   
+  `ComponentWrapper` 프로젝트 항목은 다음의 세 클래스를 포함합니다.  
   
-    -   `UserComponent` 클래스 - <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>에서 상속되며, 데이터를 처리하고 패키지와 상호 작용하는 데 사용할 메서드와 속성을 포함합니다. `ScriptMain` 클래스는 `UserComponent` 클래스에서 상속합니다.  
+    -   
+  `UserComponent` 클래스 - <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>에서 상속되며, 데이터를 처리하고 패키지와 상호 작용하는 데 사용할 메서드와 속성을 포함합니다. 
+  `ScriptMain` 클래스는 `UserComponent` 클래스에서 상속됩니다.  
   
-    -   `Connections` 컬렉션 클래스 - 스크립트 변환 편집기의 연결 관리자 페이지에서 선택한 연결에 대한 참조를 포함합니다.  
+    -   
+  `Connections` 컬렉션 클래스 - 스크립트 변환 편집기의 연결 관리자 페이지에서 선택한 연결에 대한 참조를 포함합니다.  
   
-    -   `Variables` 에 입력 한 변수에 대 한 참조를 포함 하는 컬렉션 클래스를 `ReadOnlyVariable` 및 `ReadWriteVariables` 속성에는 **스크립트** 페이지를 **스크립트 변환 편집기**.  
+    -   `Variables` **스크립트 변환 편집기**의 **스크립트** 페이지에서 `ReadOnlyVariable` 및 `ReadWriteVariables` 속성에 입력 한 변수에 대 한 참조를 포함 하는 컬렉션 클래스입니다.  
   
--   `BufferWrapper` 프로젝트 항목에서 상속 된 클래스를 포함 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> 각 입력 및 출력에서 구성에 대 한 합니다 **입 / 출력** 페이지를 **스크립트 변환 편집기**합니다. 각 클래스는 구성된 입/출력 열과 그 열이 포함된 데이터 흐름 버퍼에 해당하는 형식화된 접근자 속성을 포함합니다.  
+-   프로젝트 `BufferWrapper` 항목에는 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> **스크립트 변환 편집기**의 **입/출력** 페이지에 구성 된 각 입력 및 출력에 대해에서 상속 되는 클래스가 포함 되어 있습니다. 각 클래스는 구성된 입/출력 열과 그 열이 포함된 데이터 흐름 버퍼에 해당하는 형식화된 접근자 속성을 포함합니다.  
   
  이러한 개체, 메서드 및 속성을 사용하는 방법에 대한 자세한 내용은 [스크립트 구성 요소 개체 모델 이해](understanding-the-script-component-object-model.md)를 참조하세요. 특정 유형의 스크립트 구성 요소에서 이러한 클래스의 메서드와 속성을 사용하는 방법에 대한 자세한 내용은 [추가 스크립트 구성 요소 예제](../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md) 섹션을 참조하세요. 예 항목에는 전체 코드 예제도 들어 있습니다.  
   
@@ -156,10 +164,13 @@ public class ScriptMain : UserComponent
  추가하는 모든 항목은 패키지 내부에 지속됩니다.  
   
 #### <a name="references-in-the-script-component-project"></a>스크립트 구성 요소 프로젝트의 참조  
- **프로젝트 탐색기**에서 스크립트 태스크 프로젝트를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 클릭하여 관리되는 어셈블리에 대한 참조를 추가할 수 있습니다. 자세한 내용은 [스크립팅 솔루션에서 다른 어셈블리 참조](../referencing-other-assemblies-in-scripting-solutions.md)를 참조하세요.  
+ 
+  **프로젝트 탐색기**에서 스크립트 태스크 프로젝트를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 클릭하여 관리되는 어셈블리에 대한 참조를 추가할 수 있습니다. 자세한 내용은 [스크립팅 솔루션에서 다른 어셈블리 참조](../referencing-other-assemblies-in-scripting-solutions.md)를 참조하세요.  
   
 > [!NOTE]  
->  프로젝트 참조는 VSTA IDE의 **클래스 뷰** 또는 **프로젝트 탐색기**에서 볼 수 있습니다. **보기** 메뉴에서 이러한 창 중 하나를 엽니다. **프로젝트** 메뉴, **프로젝트 탐색기** 또는 **클래스 뷰**에서 새 참조를 추가할 수 있습니다.  
+>  프로젝트 참조는 VSTA IDE의 **클래스 뷰** 또는 **프로젝트 탐색기**에서 볼 수 있습니다. 
+  **보기** 메뉴에서 이러한 창 중 하나를 엽니다. 
+  **프로젝트** 메뉴, **프로젝트 탐색기** 또는 **클래스 뷰**에서 새 참조를 추가할 수 있습니다.  
   
 ## <a name="interacting-with-the-package-in-the-script-component"></a>스크립트 구성 요소에서 패키지와 상호 작용  
  스크립트 구성 요소에서 작성하는 사용자 지정 스크립트는 자동 생성된 기본 클래스의 강력한 형식의 접근자를 통해 포함하는 패키지에서 변수 및 연결 관리자를 액세스하고 사용할 수 있습니다. 그러나 변수 및 연결 관리자를 스크립트에서 사용할 수 있게 만들려면 코드 디자인 모드로 들어가기 전에 이들을 구성해야 합니다. 또한 스크립트 구성 요소 코드에서 이벤트를 발생시키고 로깅을 수행할 수 있습니다.  
@@ -168,10 +179,15 @@ public class ScriptMain : UserComponent
   
 |패키지 기능|액세스 방법|  
 |---------------------|-------------------|  
-|변수|`Variables` 클래스의 `ComponentWrapper` 속성을 통해 표시되는, `Variables` 프로젝트 항목의 `ScriptMain` 컬렉션 클래스에 있는 명명된 접근자 및 형식화된 접근자 속성을 사용합니다.<br /><br /> `PreExecute` 메서드는 읽기 전용 변수만 액세스할 수 있습니다. `PostExecute` 메서드는 읽기 전용 변수와 읽기/쓰기 변수 모두에 액세스할 수 있습니다.|  
-|Connections|`Connections` 클래스의 `ComponentWrapper` 속성을 통해 표시되는, `Connections` 프로젝트 항목의 `ScriptMain` 컬렉션 클래스에 있는 명명된 접근자 및 형식화된 접근자 속성을 사용합니다.|  
-|이벤트|사용 하 여 이벤트를 발생 시킵니다를 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> 의 속성을 `ScriptMain` 클래스 및 **화재\<X >** 의 메서드는 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 인터페이스.|  
-|로깅|`ScriptMain` 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> 메서드를 사용하여 로깅을 수행합니다.|  
+|variables|
+  `Variables` 클래스의 `ComponentWrapper` 속성을 통해 표시되는, `Variables` 프로젝트 항목의 `ScriptMain` 컬렉션 클래스에 있는 명명된 접근자 및 형식화된 접근자 속성을 사용합니다.<br /><br /> 
+  `PreExecute` 메서드는 읽기 전용 변수만 액세스할 수 있습니다. 
+  `PostExecute` 메서드는 읽기 전용 변수와 읽기/쓰기 변수 모두에 액세스할 수 있습니다.|  
+|Connections|
+  `Connections` 클래스의 `ComponentWrapper` 속성을 통해 표시되는, `Connections` 프로젝트 항목의 `ScriptMain` 컬렉션 클래스에 있는 명명된 접근자 및 형식화된 접근자 속성을 사용합니다.|  
+|이벤트|클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> 속성과 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 인터페이스의 **\<Fire X>** 메서드를 사용 하 여 이벤트를 발생 시킵니다. `ScriptMain`|  
+|로깅|
+  <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> 클래스의 `ScriptMain` 메서드를 사용하여 로깅을 수행합니다.|  
   
 ## <a name="debugging-the-script-component"></a>스크립트 구성 요소 디버깅  
  스크립트 구성 요소의 코드를 디버깅하려면 코드에 하나 이상의 중단점을 설정한 다음 VSTA IDE를 닫고 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에서 패키지를 실행합니다. 패키지 실행 중 스크립트 구성 요소 실행이 시작되면 VSTA IDE가 다시 열리고 코드가 읽기 전용 모드에서 열립니다. 중단점에 도달한 후에는 변수 값을 검사하고 나머지 코드를 단계별로 실행할 수 있습니다.  
@@ -184,9 +200,9 @@ public class ScriptMain : UserComponent
   
  다음 방법을 사용하여 스크립트 구성 요소의 실행을 모니터링할 수도 있습니다.  
   
--   실행을 중단 하 고 모달 메시지를 사용 하 여 표시 합니다 `MessageBox.Show` 의 메서드를 **System.Windows.Forms** 네임 스페이스입니다. (이 코드는 디버깅 프로세스를 완료한 후 제거하십시오.)  
+-   실행을 중단 하 고 **system.object** 네임 스페이스의 메서드 `MessageBox.Show` 를 사용 하 여 모달 메시지를 표시 합니다. (이 코드는 디버깅 프로세스를 완료한 후 제거하십시오.)  
   
--   정보 메시지, 경고 및 오류에 대한 이벤트를 발생시킵니다. FireInformation, FireWarning 및 FireError 메서드는 Visual Studio **출력** 창에 이벤트 설명을 표시합니다. 그러나 FireProgress 메서드, Console.Write 메서드 및 Console.WriteLine 메서드는 **출력** 창에 어떠한 정보도 표시하지 않습니다. FireProgress 이벤트의 메시지는 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너의 **진행률** 탭에 표시됩니다. 자세한 내용은 [스크립트 구성 요소에서 이벤트 발생](../../data-flow/transformations/script-component.md)을 참조하세요.  
+-   정보 메시지, 경고 및 오류에 대한 이벤트를 발생시킵니다. FireInformation, FireWarning 및 FireError 메서드는 Visual Studio **출력** 창에 이벤트 설명을 표시합니다. 그러나 FireProgress 메서드, Console.Write 메서드 및 Console.WriteLine 메서드는 **출력** 창에 어떠한 정보도 표시하지 않습니다. FireProgress 이벤트의 메시지는 ** 디자이너의 **진행률[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 탭에 표시됩니다. 자세한 내용은 [스크립트 구성 요소에서 이벤트 발생](../../data-flow/transformations/script-component.md)을 참조하세요.  
   
 -   이벤트 또는 사용자 정의 메시지를 활성화된 로깅 공급자에 기록합니다. 자세한 내용은 [스크립트 구성 요소의 로깅](logging-in-the-script-component.md)을 참조하세요.  
   
@@ -208,9 +224,9 @@ public class ScriptMain : UserComponent
   
 -   blogs.msdn.com의 블로그 항목 - [SSIS 2008 및 R2 설치의 VSTA 설치 및 구성 문제](https://go.microsoft.com/fwlink/?LinkId=215661)  
   
-![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은 아이콘)](../../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성](configuring-the-script-component-in-the-script-component-editor.md)  
   
   

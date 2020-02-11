@@ -1,5 +1,5 @@
 ---
-title: OUTPUT 절을 사용 하 여 SQL Server Native Client의 OLE DB를 사용 하 여 | Microsoft 문서
+title: SQL Server Native Client에서 OLE DB에 OUTPUT 절 사용 Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ee680b4bf201b5942e66051ac89dba45d05af3c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63183662"
 ---
 # <a name="using-the-output-clause-with-ole-db-in-sql-server-native-client"></a>SQL Server Native Client의 OLE DB에서 OUTPUT 절 사용
   INSERT, UPDATE, DELETE 또는 MERGE 명령에 OUTPUT 절을 사용하는 경우 영향을 받는 행 수를 사용할 수 없습니다. 애플리케이션이 OUTPUT 절에서 반환되는 행 집합의 행 수를 계산해야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [SQL Server Native Client OLE DB 공급자 응용 프로그램 만들기](creating-a-sql-server-native-client-ole-db-provider-application.md)  
+## <a name="see-also"></a>참고 항목  
+ [SQL Server Native Client OLE DB 공급자 애플리케이션 만들기](creating-a-sql-server-native-client-ole-db-provider-application.md)  
   
   

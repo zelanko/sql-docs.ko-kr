@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 39b8e065b6b3cbd013089700de07376edc9a656c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770704"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>파생 열 변환을 사용하여 열 값 파생
@@ -58,7 +58,7 @@ ms.locfileid: "62770704"
   
 12. 업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Derived Column Transformation](derived-column-transformation.md)   
  [Integration Services 데이터 형식](../integration-services-data-types.md)   
  [Integration Services 변환](integration-services-transformations.md)   
