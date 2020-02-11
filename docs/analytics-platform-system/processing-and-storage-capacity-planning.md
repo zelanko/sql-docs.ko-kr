@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 143c37b6b55b96f8a0225c98db2212f07b2cd3a5
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400541"
 ---
 # <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>분석 플랫폼 시스템의 처리 및 저장소 용량
@@ -48,7 +48,7 @@ PDW (병렬 데이터 웨어하우스) SQL Server에 대 한 쿼리 성능은 �
 |24|48|768|12288|20%|  
 |28|56|896|14336|17%|  
   
-설명:  
+보고  
   
 -   어플라이언스 당 **데이터 배율 단위** 입니다. 데이터 배율 단위에 대 한 자세한 내용은 [분석 플랫폼 시스템 하드웨어 구성 요소](hardware-components.md)를 참조 하세요.  
   
@@ -90,7 +90,7 @@ PDW (병렬 데이터 웨어하우스) SQL Server에 대 한 쿼리 성능은 �
 |좋습니다|2TB|32 TB|9|288 TB|720 TB|6|4320 TB|  
 |좋습니다|4 TB|64TB|9|576 TB|1440 TB|6|8640 TB|   
   
-설명:  
+보고  
   
 -   **드라이브 크기** 는 각 하드웨어 공급 업체의 경우 1, 2 또는 4 TB입니다.  
   

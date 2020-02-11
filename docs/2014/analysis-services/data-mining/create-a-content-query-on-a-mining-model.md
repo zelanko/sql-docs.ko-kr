@@ -1,5 +1,5 @@
 ---
-title: 마이닝 모델에 내용 쿼리를 만드는 | Microsoft Docs
+title: 마이닝 모델에 대 한 내용 쿼리 만들기 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d2e3607426ecbc51b1d04dfc97b12f83faf328b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085577"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>마이닝 모델에 내용 쿼리 만들기
@@ -30,21 +30,24 @@ ms.locfileid: "66085577"
   
 #### <a name="to-create-a-dmx-model-content-query"></a>DMX 모델 내용 쿼리를 만들려면  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **보기** 메뉴에서 **템플릿 탐색기**를 클릭합니다.  
+1.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **보기** 메뉴에서 **템플릿 탐색기**를 클릭합니다.  
   
-2.  **템플릿 탐색기** 창에서 큐브 아이콘을 클릭하여 목록을 변경하고 Analysis Services 템플릿을 표시합니다.  
+2.  
+  **템플릿 탐색기** 창에서 큐브 아이콘을 클릭하여 목록을 변경하고 Analysis Services 템플릿을 표시합니다.  
   
 3.  템플릿 범주 목록에서 **DMX**, **모델 콘텐츠**를 차례로 확장하고 **내용 쿼리**를 두 번 클릭합니다.  
   
-4.  **Analysis Services에 연결** 대화 상자에서 쿼리할 마이닝 모델이 포함된 인스턴스를 선택하고 **연결**을 클릭합니다.  
+4.  
+  **Analysis Services에 연결** 대화 상자에서 쿼리할 마이닝 모델이 포함된 인스턴스를 선택하고 **연결**을 클릭합니다.  
   
      적절한 코드 편집기에서 **내용 쿼리** 템플릿이 열립니다. 메타데이터 창에는 현재 데이터베이스에서 사용할 수 있는 모델의 목록이 표시됩니다. 데이터베이스를 변경하려면 **사용 가능한 데이터베이스** 목록에서 다른 데이터베이스를 선택합니다.  
   
-5.  줄에 마이닝 모델의 이름을 입력 `FROM` [ *\<마이닝 모델, 이름, MyModel >* ]`.CONTENT`합니다. 마이닝 모델 이름에 공백이 포함된 경우 이름을 대괄호로 묶어야 합니다.  
+5.  `FROM` *[\<마이닝 모델, 이름, mymodel>*]`.CONTENT`줄에 마이닝 모델의 이름을 입력 합니다. 마이닝 모델 이름에 공백이 포함된 경우 이름을 대괄호로 묶어야 합니다.  
   
      이름을 입력하기가 불편하면 **개체 탐색기** 에서 마이닝 모델을 선택하고 템플릿에 끌어다 놓으면 됩니다.  
   
-6.  줄에서 `SELECT` *\<선택 목록, expr list \* >* , 마이닝 모델 콘텐츠 스키마 행 집합의 열 이름을 입력 합니다.  
+6.  줄 `SELECT`에서 * \<목록, 식 \*목록을 차례로 선택 *하 여 마이닝 모델 콘텐츠 스키마 행 집합의 열 이름을 입력 합니다.  
   
      마이닝 모델 내용 쿼리에서 반환할 수 있는 열의 목록을 보려면 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)에서 제공하는 DMV를 사용해 쿼리를 작성하는 방식으로 데이터 마이닝 스키마 행 집합에 대한 쿼리를 만들 수 있습니다.  
   
@@ -56,9 +59,11 @@ ms.locfileid: "66085577"
   
 #### <a name="to-create-a-query-against-the-data-mining-schema-rowset"></a>데이터 마이닝 스키마 행 집합에 대한 쿼리를 만들려면  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **새 쿼리** 도구 모음에서 **Analysis Services DMX 쿼리**또는 **Analysis Services MDX 쿼리**를 클릭합니다.  
+1.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **새 쿼리** 도구 모음에서 **Analysis Services DMX 쿼리**또는 **Analysis Services MDX 쿼리**를 클릭합니다.  
   
-2.  **Analysis Services에 연결** 대화 상자에서 쿼리할 개체가 포함된 인스턴스를 선택하고 **연결**을 클릭합니다.  
+2.  
+  **Analysis Services에 연결** 대화 상자에서 쿼리할 개체가 포함된 인스턴스를 선택하고 **연결**을 클릭합니다.  
   
      적절한 코드 편집기에서 **내용 쿼리** 템플릿이 열립니다. 메타데이터 창에는 현재 데이터베이스에서 사용할 수 있는 개체의 목록이 표시됩니다. 데이터베이스를 변경하려면 **사용 가능한 데이터베이스** 목록에서 다른 데이터베이스를 선택합니다.  
   
@@ -75,10 +80,10 @@ ms.locfileid: "66085577"
      결과 창에 모델의 콘텐츠가 표시됩니다.  
   
     > [!NOTE]  
-    >  현재 인스턴스에서 쿼리할 수 있는 모든 스키마 행 집합의 목록을 보려면이 쿼리를 사용 합니다. `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS. 또는 데이터 마이닝과 관련된 스키마 행 집합의 목록은 [Data Mining Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)를 참조하십시오.  
+    >  현재 인스턴스에서 쿼리할 수 있는 모든 스키마 행 집합의 목록을 보려면 `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS 쿼리를 사용합니다. 또는 데이터 마이닝과 관련된 스키마 행 집합의 목록은 [Data Mining Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
- [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)   
+## <a name="see-also"></a>참고 항목  
+ [마이닝 모델 콘텐츠 &#40;Analysis Services 데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Data Mining Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets) 
   
   

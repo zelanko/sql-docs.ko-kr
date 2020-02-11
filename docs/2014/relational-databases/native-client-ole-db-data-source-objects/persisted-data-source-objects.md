@@ -16,17 +16,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7a5d50163f439ec3fabd219761f0749c88745c58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63231447"
 ---
 # <a name="persisted-data-source-objects"></a>지속형 데이터 원본 개체
-  합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 지속형된 데이터 원본 개체를 지원 합니다 **IPersistFile** 인터페이스입니다.  
+  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 **IPersistFile** 인터페이스를 사용 하 여 지속형 데이터 원본 개체를 지원 합니다.  
   
 ## <a name="examples"></a>예  
- **A. 데이터 원본 초기화 지속:**  
+ **1. 데이터 원본 초기화 지속:**  
   
  이 예에서는 서버, 데이터베이스 및 연결의 Windows 인증 모드 사용을 정의하는 데이터 원본 초기화 속성을 지속하는 함수를 보여 줍니다. 서버 이름과 데이터베이스 이름은 함수의 *pLocation* 및 *pDatasource* 매개 변수로 받습니다.  
   
@@ -137,7 +137,7 @@ HRESULT SetAndSaveInitProps
     }  
 ```  
   
- **B. 지속형 데이터 원본 초기화 사용:**  
+ **2. 지속형 데이터 원본 초기화 사용:**  
   
  이 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인과 암호를 제공하는 추가 초기화 속성이 있는 지속형 데이터 원본 개체를 사용합니다.  
   
@@ -225,9 +225,11 @@ HRESULT InitFromPersistedDS
     }  
 ```  
   
- **IDBInitialize::Initialize**를 호출하기 전이나 호출한 후에 **IPersistFile::Save** 메서드를 호출할 수 있습니다. **IDBInitialize::Initialize**가 성공적으로 반환된 후에 이 메서드를 호출하면 유효한 데이터 원본 지정이 지속됩니다.  
+ 
+  **IDBInitialize::Initialize**를 호출하기 전이나 호출한 후에 **IPersistFile::Save** 메서드를 호출할 수 있습니다. 
+  **IDBInitialize::Initialize**가 성공적으로 반환된 후에 이 메서드를 호출하면 유효한 데이터 원본 지정이 지속됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 원본 개체 &#40;OLE DB&#41;](data-source-objects-ole-db.md)  
   
   

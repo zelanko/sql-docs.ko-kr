@@ -17,14 +17,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5c53b87f01cd8bbcba4ff8377a98606737654877
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255787"
 ---
 # <a name="clear-query-results-visual-database-tools"></a>쿼리 결과 지우기(Visual Database Tools)
-  **쿼리 및 뷰 디자이너**에서 쿼리를 실행한 후에 결과 창을 지울 수 있습니다. 이 프로시저는 개체 탐색기에서 **뷰 열기** 또는 **테이블 열기** 옵션을 사용하여 만든 쿼리에 적용됩니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 쿼리 편집기에서 쿼리를 실행한 후에는 쿼리 편집기 창을 닫거나 다른 쿼리를 실행하는 경우를 제외하고 결과 창을 지울 수 없습니다.  
+  **쿼리 및 뷰 디자이너**에서 쿼리를 실행한 후에 결과 창을 지울 수 있습니다. 이 프로시저는 개체 탐색기에서 **뷰 열기** 또는 **테이블 열기** 옵션을 사용하여 만든 쿼리에 적용됩니다. 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 쿼리 편집기에서 쿼리를 실행한 후에는 쿼리 편집기 창을 닫거나 다른 쿼리를 실행하는 경우를 제외하고 결과 창을 지울 수 없습니다.  
   
 > [!NOTE]  
 >  쿼리 결과를 지워도 데이터베이스에 대한 변경 내용은 실행 취소되지 않습니다. 결과 창의 작동 방식에 대한 자세한 내용은 [결과 창에서 데이터 작업&#40;Visual Database Tools&#41;](visual-database-tools.md)을 참조하세요.  
@@ -35,9 +36,9 @@ ms.locfileid: "63255787"
   
      결과 창을 지울 때 쿼리가 실행 중이면 쿼리 및 뷰 디자이너가 쿼리를 중지합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [쿼리 실행 &#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)   
- [쿼리 중지 &#40;Visual Database Tools&#41;](stop-a-query-visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools를 &#40;쿼리 실행&#41;](run-queries-visual-database-tools.md)   
+ [Visual Database Tools&#41;&#40;쿼리를 중지 합니다.](stop-a-query-visual-database-tools.md)   
  [결과 창에서 데이터 작업&#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

@@ -140,6 +140,8 @@
               href: ../connect/ado-net/sql/sqlclient-support-high-availability-disaster-recovery.md
             - name: LocalDB에 대한 SqlClient 지원
               href: ../connect/ado-net/sql/sqlclient-support-localdb.md
+            - name: Always Encrypted에 대한 SqlClient 지원
+              href: ../connect/ado-net/sql/sqlclient-support-always-encrypted.md
 - name: JDBC
   items:
     - name: SQL Server용 Microsoft JDBC Driver
@@ -2753,7 +2755,7 @@
   items:
     - name: SQL Server용 Node.js 드라이버
       href: ../connect/node-js/node-js-driver-for-sql-server.md
-    - name: '1단계:  Node.js 개발을 위한 개발 환경 구성'
+    - name: '1단계: Node.js 개발을 위한 개발 환경 구성'
       href: ../connect/node-js/step-1-configure-development-environment-for-node-js-development.md
     - name: '2단계: Node.js 개발을 위한 SQL 데이터베이스 만들기'
       href: ../connect/node-js/step-2-create-a-sql-database-for-node-js-development.md
@@ -3550,7 +3552,7 @@
                           href: ../odbc/reference/develop-app/multithreading.md
                         - name: 맞춤
                           href: ../odbc/reference/develop-app/alignment.md
-                        - name: 유니코드
+                        - name: Unicode
                           href: ../odbc/reference/develop-app/unicode.md
                           items:
                             - name: 유니코드 함수 인수
@@ -4110,11 +4112,11 @@
                           items:
                             - name: 'SQL에서 C로: 이진'
                               href: ../odbc/reference/appendixes/sql-to-c-binary.md
-                            - name: 'SQL에서 C로: bit'
+                            - name: 'SQL에서 C로: 비트'
                               href: ../odbc/reference/appendixes/sql-to-c-bit.md
                             - name: 'SQL에서 C로: 문자'
                               href: ../odbc/reference/appendixes/sql-to-c-character.md
-                            - name: 'SQL에서 C로: date'
+                            - name: 'SQL에서 C로: 날짜'
                               href: ../odbc/reference/appendixes/sql-to-c-date.md
                             - name: 'SQL에서 C로: 날짜-시간 간격'
                               href: ../odbc/reference/appendixes/sql-to-c-day-time-intervals.md
@@ -4124,7 +4126,7 @@
                               href: ../odbc/reference/appendixes/sql-to-c-numeric.md
                             - name: 'SQL에서 C로: 타임스탬프'
                               href: ../odbc/reference/appendixes/sql-to-c-timestamp.md
-                            - name: 'SQL에서 C로: Time'
+                            - name: 'SQL에서 C로: 시간'
                               href: ../odbc/reference/appendixes/sql-to-c-time.md
                             - name: 'SQL에서 C로: 연-월 간격'
                               href: ../odbc/reference/appendixes/sql-to-c-year-month-intervals.md
@@ -4135,11 +4137,11 @@
                           items:
                             - name: 'C에서 SQL로: 이진'
                               href: ../odbc/reference/appendixes/c-to-sql-binary.md
-                            - name: 'C에서 SQL로: bit'
+                            - name: 'C에서 SQL로: 비트'
                               href: ../odbc/reference/appendixes/c-to-sql-bit.md
                             - name: 'C에서 SQL로: 문자'
                               href: ../odbc/reference/appendixes/c-to-sql-character.md
-                            - name: 'C에서 SQL로: date'
+                            - name: 'C에서 SQL로: 날짜'
                               href: ../odbc/reference/appendixes/c-to-sql-date.md
                             - name: 'C에서 SQL로: 날짜-시간 간격'
                               href: ../odbc/reference/appendixes/c-to-sql-day-time-intervals.md
@@ -4149,7 +4151,7 @@
                               href: ../odbc/reference/appendixes/c-to-sql-numeric.md
                             - name: 'C에서 SQL로: 타임스탬프'
                               href: ../odbc/reference/appendixes/c-to-sql-timestamp.md
-                            - name: 'C에서 SQL로: Time'
+                            - name: 'C에서 SQL로: 시간'
                               href: ../odbc/reference/appendixes/c-to-sql-time.md
                             - name: 'C에서 SQL로: 연-월 간격'
                               href: ../odbc/reference/appendixes/c-to-sql-year-month-intervals.md
@@ -4179,7 +4181,7 @@
                           href: ../odbc/reference/appendixes/executing-positioned-update-and-delete-statements.md
                         - name: 커서 라이브러리 코드 예제
                           href: ../odbc/reference/appendixes/cursor-library-code-example.md
-                        - name: 구현 참고
+                        - name: 구현 참고 사항
                           href: ../odbc/reference/appendixes/implementation-notes.md
                           items:
                             - name: 커서 라이브러리 캐시
@@ -5212,7 +5214,7 @@
                   href: ../connect/oledb/ole-db-rowsets/updating-data-in-sql-server-cursors.md
                 - name: 'IRow::GetColumns 사용'
                   href: ../connect/oledb/ole-db-rowsets/using-irow-getcolumns.md
-            - name: BLOB
+            - name: Blob
               href: ../connect/oledb/ole-db-blobs/blobs-and-ole-objects.md
               items:
                 - name: 대규모 데이터 가져오기
@@ -5285,7 +5287,7 @@
                   href: ../connect/oledb/ole-db-date-time/metadata-parameter-and-rowset.md
                 - name: 날짜 및 시간 기능 향상을 위한 OLE DB API 지원
                   href: ../connect/oledb/ole-db-date-time/ole-db-api-support-for-date-and-time-enhancements.md
-            - name: 의
+            - name: 트랜잭션
               href: ../connect/oledb/ole-db-transactions/transactions.md
               items:
                 - name: 격리 수준
@@ -5445,7 +5447,7 @@
   items:
     - name: Microsoft Drivers for PHP for SQL Server
       href: ../connect/php/microsoft-php-driver-for-sql-server.md
-    - name: 시작
+    - name: 시작하기
       href: ../connect/php/getting-started-with-the-php-sql-driver.md
       items:
         - name: '1단계: PHP 개발을 위한 개발 환경 구성'
@@ -5493,7 +5495,7 @@
               href: ../connect/php/how-to-connect-on-a-specified-port.md
             - name: 연결 풀링
               href: ../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md
-            - name: '방법: MARS(Multiple Active Result Set)를 사용하지 않도록 설정'
+            - name: '방법: MARS(Multiple Active Resultsets)를 사용하지 않도록 설정'
               href: ../connect/php/how-to-disable-multiple-active-resultsets-mars.md
             - name: 연결 옵션
               href: ../connect/php/connection-options.md
@@ -5517,7 +5519,7 @@
               items:
                 - name: SQLSRV 드라이버를 사용하여 스트림으로 데이터 형식 지원
                   href: ../connect/php/data-types-with-stream-support-using-the-sqlsrv-driver.md
-                - name: '방법: SQLSRV 드라이버를 사용하여 스트림으로 문자 데이터 검색'
+                - name: '방법: SQLSRV 드라이버를 사용하여 스트림으로 문자 데이터 가져오기'
                   href: ../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md
                 - name: '방법: SQLSRV 드라이버를 사용하여 스트림으로 이진 데이터 검색'
                   href: ../connect/php/how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver.md
@@ -5565,7 +5567,7 @@
               href: ../connect/php/how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md
             - name: '방법: PHP 데이터 형식 지정'
               href: ../connect/php/how-to-specify-php-data-types.md
-            - name: '방법: 기본 제공 UTF-8 지원을 사용하여 UTF-8 데이터 보내기 및 검색'
+            - name: 기본 제공 UTF-8 지원을 사용하여 UTF-8 데이터를 보내고 검색하는 방법
               href: ../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md
             - name: '방법: Linux 및 macOS에서 ASCII 데이터 전송 및 검색'
               href: ../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md
@@ -5712,7 +5714,7 @@
                   href: ../connect/php/pdostatement-setattribute.md
                 - name: 'PDOStatement::setFetchMode'
                   href: ../connect/php/pdostatement-setfetchmode.md
-    - name: 보안 고려 사항
+    - name: 보안 고려사항
       href: ../connect/php/security-considerations-for-php-sql-driver.md
     - name: 코드 예제
       href: ../connect/php/code-samples-for-php-sql-driver.md
@@ -5751,7 +5753,7 @@
       href: ../connect/ruby/step-1-configure-development-environment-for-ruby-development.md
     - name: '2단계: Ruby 개발을 위한 SQL Database 만들기'
       href: ../connect/ruby/step-2-create-a-sql-database-for-ruby-development.md
-    - name: '3단계: Ruby를 사용하여 SQL에 연결하는 개념 증명'
+    - name: '3단계: Ruby를 사용하여 SQL과 연결된 개념 증명'
       href: ../connect/ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md
 - name: ADO
   items:
@@ -5871,7 +5873,7 @@
           href: ../ado/guide/data/determining-what-is-supported.md
         - name: Delete 메서드를 사용하여 레코드 삭제
           href: ../ado/guide/data/deleting-records-using-the-delete-method.md
-        - name: '대체 형식: SQL 문 사용'
+        - name: '대안: SQL 문 사용'
           href: ../ado/guide/data/alternatives-using-sql-statements.md
     - name: 데이터 업데이트 및 유지
       href: ../ado/guide/data/updating-and-persisting-data.md
@@ -5884,7 +5886,7 @@
             - name: 일괄 처리 모드
               href: ../ado/guide/data/batch-mode.md
               items:
-                - name: '업데이트 보내기: UpdateBatch 메서드'
+                - name: '업데이트 전송: UpdateBatch 메서드'
                   href: ../ado/guide/data/sending-the-updates-updatebatch-method.md
                 - name: 업데이트된 레코드 필터링
                   href: ../ado/guide/data/filtering-for-updated-records.md
@@ -6205,7 +6207,7 @@
           items:
             - name: Windows 2000에서 RDS 구성
               href: ../ado/guide/remote-data-service/configuring-rds-on-windows-2000.md
-            - name: '인터넷 서버 오류: 액세스 거부됨'
+            - name: '인터넷 서버 오류: 액세스가 거부되었습니다.'
               href: ../ado/guide/remote-data-service/internet-server-error-access-denied.md
             - name: RDS는 "스트림을 읽지 않았습니다." 오류를 반환합니다.
               href: ../ado/guide/remote-data-service/rds-returns-stream-not-read-error.md

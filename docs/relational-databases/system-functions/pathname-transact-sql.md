@@ -18,10 +18,10 @@ ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b64c1d0d6032ce5032a92c840635fdf0c087e571
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72251954"
 ---
 # <a name="pathname-transact-sql"></a>PathName(Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "72251954"
 
   FILESTREAM BLOB(Binary Large Object)의 경로를 반환합니다. OpenSqlFilestream API는이 경로를 사용 하 여 응용 프로그램이 Win32 Api를 사용 하 여 BLOB 데이터를 작업 하는 데 사용할 수 있는 핸들을 반환 합니다. PathName은 읽기 전용입니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,14 +44,14 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  FILESTREAM 저장소 특성이 없는 **varbinary (max)** 또는 다른 데이터 형식의 열에 대해 PathName을 요청 하면 쿼리 컴파일 시간 오류가 발생 합니다.  
   
- *\@옵션*  
- 경로의 서버 구성 요소에 형식을 지정 하는 방법을 정의 하는 정수 [식](../../t-sql/language-elements/expressions-transact-sql.md) 입니다. *\@옵션* 은 다음 값 중 하나일 수 있습니다. 기본값은 0입니다.  
+ *\@option*  
+ 경로의 서버 구성 요소에 형식을 지정 하는 방법을 정의 하는 정수 [식](../../t-sql/language-elements/expressions-transact-sql.md) 입니다. 옵션은 다음 값 중 하나일 수 있습니다. * \@* 기본값은 0입니다.  
   
-|Value|설명|  
+|값|Description|  
 |-----------|-----------------|  
-|0|BIOS 형식으로 변환 된 서버 이름을 반환 합니다 (예: `\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
-|1\.|변환 없이 서버 이름을 반환 합니다 (예: `\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`).|  
-|2|전체 서버 경로를 반환 합니다 (예: `\\ServerName.MyDomain.com\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
+|0|BIOS 형식으로 변환 된 서버 이름을 반환 합니다. 예를 들면 다음과 같습니다.`\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
+|1|서버 이름을 변환 하지 않고 반환 합니다. 예를 들면 다음과 같습니다.`\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
+|2|전체 서버 경로를 반환 합니다. 예를 들면 다음과 같습니다.`\\ServerName.MyDomain.com\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
   
  *use_replica_computer_name*  
  서버 이름이 Always On 가용성 그룹에서 반환 되는 방법을 정의 하는 비트 값입니다.  
@@ -60,16 +60,16 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  데이터베이스가 Always On 가용성 그룹에 속하는 경우 *use_replica_computer_name* 의 값은 **PathName** 함수의 출력에 다음과 같은 영향을 미칠 수 있습니다.  
   
-|Value|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |지정 안 됨|함수가 경로에 VNN(가상 네트워크 이름)을 반환합니다.|  
 |0|함수가 경로에 VNN(가상 네트워크 이름)을 반환합니다.|  
-|1\.|함수가 경로에 컴퓨터 이름을 반환합니다.|  
+|1|함수가 경로에 컴퓨터 이름을 반환합니다.|  
   
 ## <a name="return-type"></a>반환 형식  
  **nvarchar(max)**  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  반환되는 값은 BLOB의 정규화된 논리적 또는 NETBIOS 경로입니다. PathName은 IP 주소를 반환하지 않습니다. FILESTREAM BLOB가 만들어지지 않은 경우 NULL이 반환됩니다.  
   
 ## <a name="remarks"></a>설명  
@@ -91,7 +91,7 @@ SET @PathName = (
     );  
 ```  
   
-### <a name="b-displaying-the-paths-for-filestream-blobs-in-a-table"></a>2\. 테이블에 FILESTREAM BLOB 경로 표시  
+### <a name="b-displaying-the-paths-for-filestream-blobs-in-a-table"></a>B. 테이블에 FILESTREAM BLOB 경로 표시  
  다음 예에서는 3개의 FILESTREAM BLOB에 대한 경로를 만들고 표시합니다.  
   
 ```sql  
@@ -149,7 +149,7 @@ DROP DATABASE PathNameDB;
   
 ## <a name="see-also"></a>참고 항목  
  [Binary Large Object &#40;Blob&#41; 데이터 &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
- [ &#40;Transact-sql&#41;  GET_FILESTREAM_TRANSACTION_CONTEXT](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)  
+ [Transact-sql&#41;GET_FILESTREAM_TRANSACTION_CONTEXT &#40;](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
  [OpenSqlFilestream을 사용하여 FILESTREAM 데이터 액세스](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   
   

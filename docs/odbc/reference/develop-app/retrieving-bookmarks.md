@@ -15,19 +15,19 @@ ms.assetid: a34c8f09-b786-4835-a44b-b7294c970aff
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f18b87adf31f19d2a93bb3af3e14c265ae3940af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020567"
 ---
 # <a name="retrieving-bookmarks"></a>책갈피 검색
-응용 프로그램에서 책갈피에 사용 하면 SQL_ATTR_USE_BOOKMARKS 문 특성 준비 하거나 문을 실행 하기 전에 SQL_UB_VARIABLE로 설정 합니다. 그 중 빌드 및 책갈피를 만들 수 있으므로 좋은 경우에 책갈피를 사용 해야 하므로 비용이 많이 드는 작업 수를 유지 관리에 사용 하기 때문에 이것이 필요한입니다.  
+응용 프로그램에서 책갈피를 사용 하는 경우 문을 준비 하거나 실행 하기 전에 SQL_ATTR_USE_BOOKMARKS statement 특성을 SQL_UB_VARIABLE으로 설정 해야 합니다. 책갈피를 빌드하고 유지 관리 하는 작업은 비용이 많이 들 수 있으므로 응용 프로그램에서 적절 하 게 사용할 수 있는 경우에만 책갈피를 사용 하도록 설정 해야 합니다.  
   
- 책갈피는 결과 집합의 열 0으로 반환 됩니다. 세 가지 방법으로 응용 프로그램을 검색할 수 있습니다.  
+ 책갈피는 결과 집합의 열 0으로 반환 됩니다. 응용 프로그램에서 검색할 수 있는 방법에는 세 가지가 있습니다.  
   
--   0은 결과 집합의 열을 바인딩하십시오. **SQLFetch** 나 **SQLFetchScroll** 다른 데이터와 함께 행 집합의 각 행 바인딩된 열에 대 한 책갈피를 반환 합니다.  
+-   결과 집합의 열 0을 바인딩합니다. **Sqlfetch** 또는 **sqlfetchscroll** 은 다른 바인딩된 열의 데이터와 함께 행 집합의 각 행에 대 한 책갈피를 반환 합니다.  
   
--   호출 **SQLSetPos** 행 집합의 행에 배치 하 고 호출 하 **SQLGetData** 0 열에 대 한 합니다. 호출 하는 기능은 드라이버 책갈피를 지 원하는 경우 항상 지원 해야 합니다 **SQLGetData** 0, 응용 프로그램이 호출할 수 없도록 하는 경우에 열에 대 한 **SQLGetData** 마지막 바인딩 전에 다른 열에 대 한 열입니다.  
+-   **SQLSetPos** 를 호출 하 여 행 집합의 행에 위치를 지정한 다음 열 0에 대해 **SQLGetData** 를 호출 합니다. 드라이버가 책갈피를 지 원하는 경우 응용 프로그램에서 마지막으로 바인딩된 열 앞의 다른 열에 대해 **sqlgetdata** 를 호출할 수 없는 경우에도 항상 열 0에 대해 **sqlgetdata** 를 호출 하는 기능을 지원 해야 합니다.  
   
--   호출 **SQLBulkOperations** 사용 하 여 합니다 *작업* SQL_ADD로 설정 하는 인수 및 바인딩된 열 0입니다. 커서는 행을 삽입 하 고 바인딩된 버퍼에 행에 대 한 책갈피를 반환 합니다.
+-   SQL_ADD 및 열 0으로 설정 된 *작업* 인수를 사용 하 여 **SQLBulkOperations** 를 호출 합니다. 커서는 행을 삽입 하 고 바인딩된 버퍼의 행에 대 한 책갈피를 반환 합니다.

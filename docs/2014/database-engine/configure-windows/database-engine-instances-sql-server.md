@@ -11,17 +11,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2e38b572535011737f33ba1e4c438540ecdd6849
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62811234"
 ---
 # <a name="database-engine-instances-sql-server"></a>데이터베이스 엔진 인스턴스(SQL Server)
+  
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스는 운영 체제 서비스로 실행되는 `sqlservr.exe` 실행 파일의 복사본입니다. 각 인스턴스는 여러 시스템 데이터베이스와 하나 이상의 사용자 데이터베이스를 관리합니다. 각 컴퓨터에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 여러 인스턴스를 실행할 수 있습니다. 애플리케이션은 인스턴스가 관리하는 데이터베이스에서 작업을 수행하기 위해 인스턴스에 연결합니다.  
   
 ## <a name="instances"></a>인스턴스  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스는 해당 인스턴스에서 관리하는 데이터베이스에 있는 데이터에 대한 응용 프로그램의 모든 작업 요청을 처리하는 서비스로 작동되며, 애플리케이션에서 보내는 연결 요청 (로그인)의 대상이 됩니다. 애플리케이션과 인스턴스가 개별 컴퓨터에 있는 경우 연결은 네트워크 연결을 통해 실행됩니다. 애플리케이션과 인스턴스가 동일한 컴퓨터에 있는 경우 SQL Server 연결은 네트워크 연결 또는 메모리 내 연결로 실행될 수 있습니다. 연결이 완료되면 애플리케이션은 해당 연결을 통해 인스턴스에 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 보냅니다. 인스턴스는 데이터베이스의 데이터 및 개체를 기준으로 작업에 대한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 확인한 후 로그인 자격 증명에 필요한 권한이 부여되어 있는 경우 작업을 수행합니다. 모든 검색된 데이터는 오류 메시지 등과 함께 애플리케이션에 반환됩니다.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스는 해당 인스턴스에서 관리하는 데이터베이스에 있는 데이터에 대한 애플리케이션의 모든 작업 요청을 처리하는 서비스로 작동되며, 애플리케이션에서 보내는 연결 요청 (로그인)의 대상이 됩니다. 애플리케이션과 인스턴스가 개별 컴퓨터에 있는 경우 연결은 네트워크 연결을 통해 실행됩니다. 애플리케이션과 인스턴스가 동일한 컴퓨터에 있는 경우 SQL Server 연결은 네트워크 연결 또는 메모리 내 연결로 실행될 수 있습니다. 연결이 완료되면 애플리케이션은 해당 연결을 통해 인스턴스에 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 보냅니다. 인스턴스는 데이터베이스의 데이터 및 개체를 기준으로 작업에 대한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 확인한 후 로그인 자격 증명에 필요한 권한이 부여되어 있는 경우 작업을 수행합니다. 모든 검색된 데이터는 오류 메시지 등과 함께 애플리케이션에 반환됩니다.  
   
  같은 컴퓨터에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 여러 인스턴스를 실행할 수 있습니다. 하나의 인스턴스가 기본 인스턴스가 될 수 있습니다. 기본 인스턴스는 이름이 없습니다. 연결 요청에 컴퓨터 이름만 지정된 경우 기본 인스턴스에 연결합니다. 인스턴스를 설치할 때 이름을 지정하는 인스턴스가 명명된 인스턴스입니다. 인스턴스에 연결하려면 연결 요청에서 컴퓨터 이름과 인스턴스 이름을 모두 지정해야 합니다. 기본 인스턴스를 설치할 경우 별도의 요구 사항이 없습니다. 컴퓨터에서 실행 중인 모든 인스턴스는 명명된 인스턴스가 될 수 있습니다.  
   
@@ -42,17 +43,17 @@ ms.locfileid: "62811234"
 |데이터베이스 애플리케이션에서 데이터베이스 메일을 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)]로부터 전자 메일 메시지를 보내는 방법에 대해 설명합니다.|[데이터베이스 메일](../../relational-databases/database-mail/database-mail.md)|  
 |확장 이벤트를 사용하여 성능 기준을 작성하거나 성능 문제를 진단하는 데 사용할 수 있는 성능 데이터를 캡처하는 방법에 대해 설명합니다. 확장 이벤트는 성능 데이터 수집을 위한 경량형의 확장성이 뛰어난 시스템입니다.|[확장 이벤트](../../relational-databases/extended-events/extended-events.md)|  
 |SQL 추적을 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 이벤트 캡처 및 기록을 위한 사용자 지정 시스템을 작성하는 방법에 대해 설명합니다.|[SQL 추적](../../relational-databases/sql-trace/sql-trace.md)|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로파일러를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스로 들어오는 응용 프로그램 요청 추적을 캡처하는 방법에 대해 설명합니다. 나중에 성능 테스트, 문제 진단 등과 같은 활동을 위해 이러한 추적을 재생할 수 있습니다.|[SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로파일러를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스로 들어오는 애플리케이션 요청 추적을 캡처하는 방법에 대해 설명합니다. 나중에 성능 테스트, 문제 진단 등과 같은 활동을 위해 이러한 추적을 재생할 수 있습니다.|[SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)|  
 |CDC(변경 데이터 캡처) 및 변경 추적 기능에 대해 설명하고 이러한 기능을 사용하여 데이터베이스의 데이터 변경 사항을 추적하는 방법에 대해 설명합니다.|[데이터 변경 내용 추적&#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)|  
 |로그 파일 뷰어를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업 기록, SQL Server 로그, Windows 이벤트 로그 등과 같은 다양한 로그에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 및 메시지를 찾아서 보는 방법에 대해 설명합니다.|[로그 파일 뷰어](../../relational-databases/logs/log-file-viewer.md)|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자를 사용하여 데이터베이스를 분석하고 잠재적 성능 문제를 해결하기 위한 권장 구성을 만드는 방법에 대해 설명합니다.|[데이터베이스 엔진 튜닝 관리자](../../relational-databases/performance/database-engine-tuning-advisor.md)|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자를 사용하여 데이터베이스를 분석하고 잠재적 성능 문제를 해결하기 위한 권장 구성을 만드는 방법에 대해 설명합니다.|[Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)|  
 |표준 연결이 불가능할 때 프로덕션 데이터베이스 관리자가 인스턴스에 대한 진단 연결을 설정하는 방법에 대해 설명합니다.|[데이터베이스 관리자를 위한 진단 연결](diagnostic-connection-for-database-administrators.md)|  
 |사용되지 않는 원격 서버 기능을 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 한 인스턴스에서 다른 인스턴스로 액세스하는 방법에 대해 설명합니다. 이 기능에 대한 기본 메커니즘은 연결된 서버입니다.|[원격 서버](remote-servers.md)|  
 |메시징 및 큐 애플리케이션에 대한 Service Broker의 기능에 대해 설명하고 Service Broker 설명서에 대한 포인터를 제공합니다.|[Service Broker](sql-server-service-broker.md)|  
 |버퍼 풀 확장을 사용하여 I/O 처리량을 크게 향상하기 위해 비휘발성 임의 액세스 스토리지(솔리드 스테이트 드라이브)를 데이터베이스 엔진 버퍼 풀에 빈틈없이 통합하는 방법을 설명합니다.|[버퍼 풀 확장 파일](buffer-pool-extension.md)|  
   
-## <a name="see-also"></a>관련 항목  
- [sqlservr 응용 프로그램](../../tools/sqlservr-application.md)   
+## <a name="see-also"></a>참고 항목  
+ [sqlservr 애플리케이션](../../tools/sqlservr-application.md)   
  [데이터베이스 기능](../../relational-databases/database-features.md)   
  [데이터베이스 엔진 인스턴스 간 기능](../database-engine-cross-instance-features.md)  
   

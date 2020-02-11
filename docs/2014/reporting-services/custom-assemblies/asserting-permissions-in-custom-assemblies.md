@@ -19,20 +19,21 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f66896479ec06d78b94d6fe084ff806e3af67727
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63265376"
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>사용자 지정 어셈블리에서 권한 어설션
   기본적으로 사용자 지정 어셈블리 코드는 제한된 **Execution** 권한 집합으로 실행됩니다. 경우에 따라 보안 시스템 내에서 보호된 리소스(파일, 레지스트리 등)에 대한 보안 호출을 하는 사용자 지정 어셈블리를 구현하고자 할 수 있습니다. 이렇게 하려면 다음 작업을 수행해야 합니다.  
   
-1.  코드에서 보안 호출을 하는 데 필요한 정확한 권한을 식별합니다. 이 메서드가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 라이브러리의 일부인 경우 이 정보는 메서드 설명서에 포함되어 있습니다.  
+1.  코드에서 보안 호출을 하는 데 필요한 정확한 권한을 식별합니다. 이 메서드가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 라이브러리의 일부인 경우이 정보는 메서드 설명서에 포함 되어야 합니다.  
   
 2.  사용자 지정 어셈블리에 필요한 권한을 부여하기 위해 보고서 서버 정책 구성 파일을 수정합니다. 보안 정책 구성 파일에 대한 자세한 내용은 [Reporting Services 보안 정책 파일 사용](../extensions/secure-development/using-reporting-services-security-policy-files.md)을 참조하세요.  
   
-3.  필요한 권한을 보안 호출이 이루어지는 메서드의 일부로 어설션합니다. 보고서 서버에서 호출되는 사용자 지정 어셈블리 코드는 보고서 식 호스트 어셈블리의 일부로서 기본적으로 **Execution** 권한을 사용하여 실행되므로 이 작업이 필요합니다. **Execution** 권한 집합을 통해 코드를 실행할 수 있지만 보호된 리소스는 사용할 수 없습니다.  
+3.  필요한 권한을 보안 호출이 이루어지는 메서드의 일부로 어설션합니다. 보고서 서버에서 호출되는 사용자 지정 어셈블리 코드는 보고서 식 호스트 어셈블리의 일부로서 기본적으로 **Execution** 권한을 사용하여 실행되므로 이 작업이 필요합니다. 
+  **Execution** 권한 집합을 통해 코드를 실행할 수 있지만 보호된 리소스는 사용할 수 없습니다.  
   
 4.  강력한 이름으로 서명된 경우 사용자 지정 어셈블리를 **AllowPartiallyTrustedCallersAttribute**로 표시합니다. 사용자 지정 어셈블리는 기본적으로 **FullTrust**가 부여되지 않는(즉, "부분적으로 신뢰할 수 있는" 호출자) 보고서 식 호스트 어셈블리의 일부인 보고서 식에서 호출되므로 이 작업이 필요합니다. 자세한 내용은 [강력한 이름의 사용자 지정 어셈블리 사용](using-strong-named-custom-assemblies.md)을 참조하세요.  
   
@@ -89,7 +90,7 @@ try
   
  자세한 내용은 .NET Framework 개발자 가이드의 ".NET Framework Security(.NET Framework 보안)"를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서에서 사용자 지정 어셈블리 사용](using-custom-assemblies-with-reports.md)  
   
   

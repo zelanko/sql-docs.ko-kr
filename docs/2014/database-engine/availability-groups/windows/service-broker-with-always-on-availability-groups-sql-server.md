@@ -1,5 +1,5 @@
 ---
-title: Service Broker AlwaysOn 가용성 그룹 (SQL Server) | Microsoft Docs
+title: AlwaysOn 가용성 그룹로 Service Broker (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,28 +14,28 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fdf98d461039c5c6fb4f25c8cdf543422e5a0a2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62788533"
 ---
 # <a name="service-broker-with-alwayson-availability-groups-sql-server"></a>AlwaysOn 가용성 그룹이 포함된 Service Broker(SQL Server)
   이 항목에서는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 에서 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]과 함께 작동하도록 Service Broker를 구성하는 방법에 대한 정보를 제공합니다.  
   
- **항목 내용:**  
+ **항목 내용**  
   
 -   [가용성 그룹의 서비스가 원격 메시지를 받기 위한 요구 사항](#ReceiveRemoteMessages)  
   
 -   [가용성 그룹의 원격 서비스에 메시지를 보내기 위한 요구 사항](#SendRemoteMessages)  
   
-##  <a name="ReceiveRemoteMessages"></a> 가용성 그룹의 서비스가 원격 메시지를 받기 위한 요구 사항  
+##  <a name="ReceiveRemoteMessages"></a>가용성 그룹의 서비스가 원격 메시지를 받기 위한 요구 사항  
   
-1.  **가용성 그룹에 수신기가 있는지 확인합니다.**  
+1.  **가용성 그룹에 수신기가 있는지 확인 합니다.**  
   
-     자세한 내용은 [가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)인스턴스에 AlwaysOn 가용성 그룹을 만드는 방법을 설명합니다.  
+     자세한 내용은 [가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)가 있어야 합니다.  
   
-2.  **Service Broker 엔드포인트가 존재하고 올바르게 구성되어 있는지 확인합니다.**  
+2.  **Service Broker 끝점이 존재 하 고 올바르게 구성 되어 있는지 확인 하십시오.**  
   
      가용성 그룹에 대한 가용성 복제본을 호스팅하는 모든 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에서 다음과 같이 Service Broker 엔드포인트를 구성해야 합니다.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62788533"
   
      자세한 내용은 [CREATE ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)과 함께 작동하도록 Service Broker를 구성하는 방법에 대한 정보를 제공합니다.  
   
-3.  **엔드포인트에 대한 CONNECT 권한을 부여합니다.**  
+3.  **끝점에 대 한 CONNECT 권한을 부여 합니다.**  
   
      Service Broker 엔드포인트에 대한 CONNECT 권한을 PUBLIC 또는 로그인으로 부여합니다.  
   
@@ -69,16 +69,16 @@ ms.locfileid: "62788533"
   
      자세한 내용은 [GRANT&#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)과 함께 작동하도록 Service Broker를 구성하는 방법에 대한 정보를 제공합니다.  
   
-4.  **msdb에 AutoCreatedLocal 경로 또는 특정 서비스에 대한 경로가 포함되어 있는지 확인합니다.**  
+4.  **Msdb에 AutoCreatedLocal 경로 또는 특정 서비스에 대 한 경로가 포함 되어 있는지 확인 합니다.**  
   
     > [!NOTE]  
-    >  기본적으로 **msdb**를 비롯하여 각 사용자 데이터베이스에는 **AutoCreatedLocal**경로가 포함되어 있습니다. 이 경로는 임의의 서비스 이름 및 Broker 인스턴스와 일치하며 메시지가 현재 인스턴스 내에 배달되도록 지정합니다. **AutoCreatedLocal** 의 우선 순위는 원격 인스턴스와 통신하는 특정 서비스를 명시적으로 지정하는 경로의 우선 순위보다 낮습니다.  
+    >  기본적으로 **msdb**를 비롯하여 각 사용자 데이터베이스에는 **AutoCreatedLocal**경로가 포함되어 있습니다. 이 경로는 임의의 서비스 이름 및 Broker 인스턴스와 일치하며 메시지가 현재 인스턴스 내에 배달되도록 지정합니다. **AutoCreatedLocal** 는 원격 인스턴스와 통신 하는 특정 서비스를 명시적으로 지정 하는 경로 보다 우선 순위가 낮습니다.  
   
      경로를 만드는 방법은 [버전의 온라인 설명서에 있는](https://msdn.microsoft.com/library/ms166090\(SQL.105\).aspx) Service Broker 라우팅 예 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 및 [CREATE ROUTE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-route-transact-sql)과 함께 작동하도록 Service Broker를 구성하는 방법에 대한 정보를 제공합니다.  
   
-##  <a name="SendRemoteMessages"></a> 가용성 그룹의 원격 서비스에 메시지를 보내기 위한 요구 사항  
+##  <a name="SendRemoteMessages"></a>가용성 그룹의 원격 서비스에 메시지를 보내기 위한 요구 사항  
   
-1.  **대상 서비스에 대한 경로를 만듭니다.**  
+1.  **대상 서비스에 대 한 경로를 만듭니다.**  
   
      다음과 같이 경로를 구성합니다.  
   
@@ -97,25 +97,25 @@ ms.locfileid: "62788533"
   
      자세한 내용은 [CREATE ROUTE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-route-transact-sql)과 함께 작동하도록 Service Broker를 구성하는 방법에 대한 정보를 제공합니다.  
   
-2.  **msdb에 AutoCreatedLocal 경로 또는 특정 서비스에 대한 경로가 포함되어 있는지 확인합니다.** 자세한 내용은 이 항목의 앞부분에 나오는 [가용성 그룹의 서비스가 원격 메시지를 받기 위한 요구 사항](#ReceiveRemoteMessages)을 참조하세요.  
+2.  **Msdb에 AutoCreatedLocal 경로 또는 특정 서비스에 대 한 경로가 포함 되어 있는지 확인 합니다.** 자세한 내용은 이 항목의 앞부분에 나오는 [가용성 그룹의 서비스가 원격 메시지를 받기 위한 요구 사항](#ReceiveRemoteMessages)을 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [CREATE ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)  
   
--   [CREATE ROUTE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-route-transact-sql)  
+-   [CREATE ROUTE &#40;Transact-sql&#41;](/sql/t-sql/statements/create-route-transact-sql)  
   
 -   [GRANT&#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)  
   
--   [가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [&#41;SQL Server &#40;가용성 그룹 수신기를 만들거나 구성 ](create-or-configure-an-availability-group-listener-sql-server.md)합니다.  
   
 -   [가용성 그룹의 생성 및 구성&#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)  
   
--   [AlwaysOn 가용성 그룹 또는 데이터베이스 미러링에 대 한 로그인 계정 설정 &#40;SQL Server&#41;](../../database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)  
+-   [데이터베이스 미러링을 위한 로그인 계정을 설정 하거나 &#40;SQL Server를 AlwaysOn 가용성 그룹&#41;](../../database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)  
   
-## <a name="see-also"></a>관련 항목  
- [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+## <a name="see-also"></a>참고 항목  
+ [AlwaysOn 가용성 그룹 &#40;SQL Server 개요&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [SQL Server Service Broker](../../configure-windows/sql-server-service-broker.md)  
   
   

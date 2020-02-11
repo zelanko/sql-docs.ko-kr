@@ -10,16 +10,16 @@ ms.assetid: 626b73d3-a257-4b45-82fb-c6299faa0001
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 365db92740bb7d6f0915201d6d3680a68d7274ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67995989"
 ---
-# <a name="localdberrorcannotcreateinstancefolder"></a>LOCALDB_ERROR_CANNOT_CREATE_INSTANCE_FOLDER
+# <a name="localdb_error_cannot_create_instance_folder"></a>LOCALDB_ERROR_CANNOT_CREATE_INSTANCE_FOLDER
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -27,7 +27,7 @@ ms.locfileid: "67995989"
 |이벤트 ID|256|  
 |이벤트 원본|SQL Server 로컬 데이터베이스 런타임 12.0|  
 |구성 요소|로컬 데이터베이스 런타임 API|  
-|메시지 텍스트|로컬 데이터베이스 인스턴스 폴더를 만들 수 없습니다: SQL Server 로컬 DB\Instances %%LOCALAPPDATA%%\Microsoft\Microsoft\\< 인스턴스 이름\>합니다.|  
+|메시지 텍스트|로컬 데이터베이스 인스턴스에 대 한 폴더를 만들 수 없습니다 .%% LOCALAPPDATA%% \ Microsoft\Microsoft SQL Server 로컬 DB\Instances\\<인스턴스\>이름입니다.|  
   
 ## <a name="explanation"></a>설명  
  %Userprofile% 아래에 폴더를 만들 수 없습니다.  

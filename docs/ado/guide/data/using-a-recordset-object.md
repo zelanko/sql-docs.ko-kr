@@ -1,5 +1,5 @@
 ---
-title: 레코드 집합 개체를 사용 하 여 | Microsoft Docs
+title: 레코드 집합 개체 사용 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,14 +13,14 @@ ms.assetid: 01c630d8-eb35-4bd0-a99f-7c0f85316cc1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dda89464598ddc4ecfee0078b36aadd01b4486f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923639"
 ---
 # <a name="using-a-recordset-object"></a>레코드 집합 개체 사용
-사용할 수 있습니다 **Recordset.Open** 를 암시적으로 연결을 설정 하 고 단일 작업에서 해당 연결을 통해 명령을 실행 합니다. Visual Basic의 예를 들어:  
+또는 **레코드 집합** 을 사용 하 여 암시적으로 연결을 설정 하 고 단일 작업으로 해당 연결을 통해 명령을 실행할 수 있습니다. 예를 들어 Visual Basic에서 다음을 수행 합니다.  
   
 ```  
 Dim oRs As ADODB.Recordset  
@@ -47,4 +47,4 @@ oRs.Close
 Set oRs = Nothing  
 ```  
   
- 있음을 **oRs.Open** 연결 문자열을 사용 (*sConn*)를 대신 한 **연결** 개체 (*oConn*), 해당값으로 **ActiveConnection** 매개 변수입니다. 설정 하 여 클라이언트 쪽 커서 형식이 적용 되는 또한 합니다 **CursorLocation** 속성에는 **레코드 집합** 개체입니다. 다시 사용 하 여이 대조 합니다 **HelloData** 예제입니다.
+ **ORs** 는 **Connection** 개체 (*oconn*) 대신 연결 문자열 (*sconn*)을 **ActiveConnection** 매개 변수의 값으로 사용 합니다. 또한 클라이언트 쪽 커서 형식은 **레코드 집합** 개체에 대해 **CursorLocation** 속성을 설정 하 여 적용 됩니다. 다시, **HelloData** 예제와 대조 합니다.

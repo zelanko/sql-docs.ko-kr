@@ -1,5 +1,5 @@
 ---
-title: 마이닝 구조에 열을 추가 합니다. | Microsoft Docs
+title: 마이닝 구조에 열 추가 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85a713bb9da24a67ebe8fdd097535c5a9d5ac98e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086233"
 ---
 # <a name="add-columns-to-a-mining-structure"></a>마이닝 구조에 열 추가
@@ -33,18 +33,21 @@ ms.locfileid: "66086233"
   
 2.  마이닝 구조를 마우스 오른쪽 단추로 클릭하고 **열 추가**를 선택합니다.  
   
-     **열 선택** 대화 상자가 열립니다.  
+     
+  **열 선택** 대화 상자가 열립니다.  
   
-3.  **원본 테이블**에서 열이 있는 데이터 원본 뷰의 테이블을 선택합니다.  
+3.  
+  **원본 테이블**에서 열이 있는 데이터 원본 뷰의 테이블을 선택합니다.  
   
-4.  **원본 열**에서 마이닝 구조에 추가할 열을 선택합니다.  
+4.  
+  **원본 열**에서 마이닝 구조에 추가할 열을 선택합니다.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 > [!NOTE]  
 >  이미 있는 열을 추가하면 이름에 "1"이 붙은 복사본이 구조에 포함됩니다. 마이닝 구조 열의 **이름** 속성에 새 이름을 입력하여 복사된 열의 이름을 보다 설명적인 이름으로 변경할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [마이닝 구조 태스크 및 방법](mining-structure-tasks-and-how-tos.md)  
   
   

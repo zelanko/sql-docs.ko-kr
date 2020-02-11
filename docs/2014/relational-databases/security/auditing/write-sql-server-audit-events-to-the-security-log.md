@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: bd272abda4b22f220e3fc599111d10cb4979f42e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211974"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>보안 로그에 SQL Server Audit 이벤트 쓰기
@@ -47,13 +47,13 @@ ms.locfileid: "68211974"
   
      [보안](#Security)  
   
--   **보안 로그에 SQL Server Audit 이벤트를 쓰려면**  
+-   **보안 로그에 SQL Server 감사 이벤트를 쓰려면:**  
   
-     [Windows에서 auditpol을 사용하여 감사 개체 액세스 설정 구성](#auditpolAccess)  
+     [Windows에서 auditpol을 사용 하 여 감사 개체 액세스 설정 구성](#auditpolAccess)  
   
-     [Windows에서 secpol을 사용하여 감사 개체 액세스 설정 구성](#secpolAccess)  
+     [Windows에서 secpol.msc를 사용 하 여 감사 개체 액세스 설정 구성](#secpolAccess)  
   
-     [secpol을 사용하여 계정에 보안 감사 생성 권한 부여](#secpolPermission)  
+     [Secpol.msc를 사용 하 여 계정에 보안 감사 생성 권한을 부여 합니다.](#secpolPermission)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -62,7 +62,7 @@ ms.locfileid: "68211974"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  이러한 설정을 구성하려면 Windows 관리자여야 합니다.  
   
 ##  <a name="auditpolAccess"></a> Windows에서 auditpol을 사용하여 감사 개체 액세스 설정을 구성하려면  
@@ -117,7 +117,7 @@ ms.locfileid: "68211974"
   
 7.  보안 정책 도구를 닫습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Audit&#40;데이터베이스 엔진&#41;](sql-server-audit-database-engine.md)  
   
   

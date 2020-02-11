@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be20c79c4c44d65b4d6b1177d06cea5ef66c164b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242064"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>SQL Server 2014 자습서
@@ -46,11 +46,11 @@ ms.locfileid: "75242064"
 ## <a name="in-this-section"></a>섹션 내용  
  다음 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 기술에 대한 자습서가 제공됩니다.  
   
-|기술|설명|  
+|기술|Description|  
 |----------------|-----------------|  
 |[Analysis Services 자습서 &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 의 테이블 형식 모델 또는 다차원 모델을 개발하고 배포하는 방법에 대해 알아봅니다. PowerPivot과 같은 도구를 사용하여 모델의 데이터를 분석하는 방법에 대해서도 알아봅니다.|  
-|[SSRS를 &#40;Reporting Services 자습서&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|기본 보고서와 구독을 만드는 방법에 대해 알아봅니다.|  
+|[Reporting Services&#40;SSRS&#41; 자습서](../reporting-services/reporting-services-tutorials-ssrs.md)|기본 보고서와 구독을 만드는 방법에 대해 알아봅니다.|  
 |[Integration Services 자습서](../integration-services/integration-services-tutorials.md)|
   [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지를 만들고 배포하는 방법에 대해 알아봅니다.|  
 |[데이터베이스 엔진 자습서](../relational-databases/database-engine-tutorials.md)|데이터베이스 엔진 인스턴스에 연결한 다음 Transact-SQL 문을 작성하고 실행하는 방법에 대해 알아봅니다.|  

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 216504cc6145a60e8b7d4996d29f46cb9d08458d
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73882143"
 ---
 # <a name="optimize-parameterized-row-filters"></a>매개 변수가 있는 행 필터 최적화
@@ -41,7 +41,7 @@ ms.locfileid: "73882143"
   
 ###  <a name="Recommendations"></a> 권장 사항  
   
--   매개 변수가 있는 필터를 사용하는 경우 게시를 만들 때 **use partition groups** 옵션 또는 **keep partition changes** 옵션을 지정하여 병합 복제에서 필터가 처리되는 방법을 제어할 수 있습니다. 이러한 옵션은 게시 데이터베이스에 추가 메타데이터를 저장함으로써 필터링된 아티클이 있는 게시의 동기화 성능을 개선합니다. 아티클을 만들 때 **partition options** 를 설정하면 구독자 간에 데이터가 공유되는 방법을 제어할 수 있습니다. 이러한 요구 사항에 대한 자세한 내용은 [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)를 참조하세요.  
+-   매개 변수가 있는 필터를 사용하는 경우 게시를 만들 때 **use partition groups** 옵션 또는 **keep partition changes** 옵션을 지정하여 병합 복제에서 필터가 처리되는 방법을 제어할 수 있습니다. 이러한 옵션은 게시 데이터베이스에 추가 메타데이터를 저장함으로써 필터링된 아티클이 있는 게시의 동기화 성능을 개선합니다. 아티클을 만들 때 **partition options** 를 설정하면 구독자 간에 데이터가 공유되는 방법을 제어할 수 있습니다. 이러한 요구 사항에 대한 자세한 내용은 [매개 변수가 있는 행 필터](../merge/parameterized-filters-parameterized-row-filters.md)를 참조하세요.  
   
      삭제가 올바르게 전파되도록 보장하려면 [!INCLUDE[ssEW](../../../includes/ssew-md.md)]SQL Server Compact 구독자에서 keep_partition_changes를 true로 설정해야 합니다. false로 설정한 경우 구독자에 예상한 것보다 많은 행이 포함될 수 있습니다.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "73882143"
   
 1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 -** 게시> **대화 상자의 \<행 필터** 페이지에서 **추가**를 클릭하고 **필터 추가**를 클릭합니다.  
   
-2.  매개 변수가 있는 필터를 만듭니다. 자세한 내용은 [Define and Modify a Parameterized Row Filter for a Merge Article](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)을 참조하세요.  
+2.  매개 변수가 있는 필터를 만듭니다. 자세한 내용은 [병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)을 참조하세요.  
   
 3.  구독자 간에 데이터를 공유하는 방식과 일치하는 옵션을 선택합니다.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "73882143"
   
     -   **겹치지 않음, 구독 간 공유**  
   
-     이러한 옵션 및 이 옵션이 **필터 추가** 및 **필터 편집** 대화 상자에서 사용 가능한 옵션과 어떻게 관련되어 있는지에 대한 자세한 내용은 [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)의 "'partition options' 설정" 섹션을 참조하십시오.  
+     이러한 옵션 및 이 옵션이 **필터 추가** 및 **필터 편집** 대화 상자에서 사용 가능한 옵션과 어떻게 관련되어 있는지에 대한 자세한 내용은 [매개 변수가 있는 행 필터](../merge/parameterized-filters-parameterized-row-filters.md)의 "'partition options' 설정" 섹션을 참조하십시오.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -111,57 +111,58 @@ ms.locfileid: "73882143"
   
 #### <a name="to-set-optimize-synchronization"></a>동기화 최적화를 설정하려면  
   
-1.  **게시 속성 -** 게시> **대화 상자의 \<구독 옵션** 페이지에서 **동기화 최적화**에 대해 **True** 값을 선택합니다.  
+1.  
+  **게시 속성 - **게시>** 대화 상자의 \<구독 옵션** 페이지에서 **동기화 최적화**에 대해 **True** 값을 선택합니다.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
- **\@keep_partition_changes** 및 **\@use_partition_groups**에 대 한 필터링 옵션의 정의는 [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)을 참조 하세요.  
+ ** \@Keep_partition_changes** 및 ** \@use_partition_groups**에 대 한 필터링 옵션의 정의는 [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)를 참조 하세요.  
   
 #### <a name="to-specify-merge-filter-optimizations-when-creating-a-new-publication"></a>새 게시를 만들 때 병합 필터 최적화를 지정하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)을 실행합니다. 다음 매개 변수 중 하나에 **\@게시** 및 `true` 값을 지정 합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)을 실행합니다. ** \@게시** 를 지정 하 고 다음 `true` 매개 변수 중 하나에 값을 지정 합니다.  
   
-    -   **\@use_partition_groups**:-문서가 사전 계산 파티션에 대 한 요구 사항을 충족 하는 경우 가장 높은 성능 최적화를 제공 합니다. 자세한 내용은 [사전 계산 파티션으로 매개 변수가 있는 필터 성능 최적화](../merge/parameterized-filters-optimize-for-precomputed-partitions.md)를 참조하세요.  
+    -   use_partition_groups:-아티클이 사전 계산 파티션에 대 한 요구 사항을 충족 하는 경우 가장 높은 성능 최적화를 제공 합니다. ** \@** 자세한 내용은 [사전 계산 파티션으로 매개 변수가 있는 필터 성능 최적화](../merge/parameterized-filters-optimize-for-precomputed-partitions.md)를 참조하세요.  
   
-    -   **\@keep_partition_changes** -사전 계산 파티션을 사용할 수 없는 경우이 최적화를 사용 합니다.  
+    -   keep_partition_changes-사전 계산 파티션을 사용할 수 없는 경우이 최적화를 사용 합니다. ** \@**  
   
 2.  게시에 대한 스냅샷 작업을 추가합니다. 자세한 내용은 [게시 만들기](create-a-publication.md)를 참조하세요.  
   
 3.  게시 데이터베이스의 게시자에서 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)을 실행하고 다음 매개 변수를 지정합니다.  
   
-    -   **\@게시** -1 단계에서 게시 한 이름입니다.  
+    -   게시-1 단계에서 게시 한 이름입니다. ** \@**  
   
-    -   **\@문서** -아티클의 이름  
+    -   문서-아티클의 이름 ** \@**  
   
-    -   **\@source_object** -게시 되는 데이터베이스 개체입니다.  
+    -   source_object-게시 되는 데이터베이스 개체입니다. ** \@**  
   
-    -   **\@subset_filterclause** -아티클을 행 필터링 하는 데 사용 되는 선택적 매개 변수가 있는 필터 절입니다.  
+    -   subset_filterclause-아티클을 행 필터링 하는 데 사용 되는 선택적 매개 변수가 있는 필터 절입니다. ** \@**  
   
-    -   **\@partition_options** -필터링 된 아티클에 대 한 파티션 옵션입니다.  
+    -   partition_options-필터링 된 아티클에 대 한 파티션 옵션입니다. ** \@**  
   
 4.  게시의 각 아티클에 대해 3단계를 반복합니다.  
   
-5.  필요에 따라 게시 데이터베이스의 게시자에서 [sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql) 를 실행하여 두 아티클 간의 조인 필터를 정의합니다. 자세한 내용은 [Define and Modify a Join Filter Between Merge Articles](define-and-modify-a-join-filter-between-merge-articles.md)을 참조하세요.  
+5.  필요에 따라 게시 데이터베이스의 게시자에서 [sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql) 를 실행하여 두 아티클 간의 조인 필터를 정의합니다. 자세한 내용은 [병합 아티클 사이에서 조인 필터 정의 및 수정](define-and-modify-a-join-filter-between-merge-articles.md)을 참조하세요.  
   
 #### <a name="to-view-and-modify-merge-filter-behaviors-for-an-existing-publication"></a>기존 게시에 대한 병합 필터 동작을 확인 및 수정하려면  
   
-1.  필드 게시 데이터베이스의 게시자에서 [sp_helpmergepublication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql)를 실행 하 여 **\@게시**를 지정 합니다. 결과 집합에서 **keep_partition_changes** 및 **use_partition_groups** 값을 확인합니다.  
+1.  필드 게시 데이터베이스의 게시자에서 ** \@게시**를 지정 하 여 [sp_helpmergepublication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql)를 실행 합니다. 결과 집합에서 **keep_partition_changes** 및 **use_partition_groups** 값을 확인합니다.  
   
-2.  필요에 따라 게시 데이터베이스의 게시자에서 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)을 실행합니다. **\@속성** 에 **use_partition_groups** 값을 지정 하 고 **\@값**에 대해 `true` 또는 `false`를 지정 합니다.  
+2.  필요에 따라 게시 데이터베이스의 게시자에서 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)을 실행합니다. ** \@속성** 에 **use_partition_groups** 값을 지정 하 고 값 `true` 에 `false` ** \@또는 값**을 지정 합니다.  
   
-3.  필요에 따라 게시 데이터베이스의 게시자에서 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)을 실행합니다. **\@속성** 에 **keep_partition_changes** 값을 지정 하 고 **\@값**에 대해 `true` 또는 `false`를 지정 합니다.  
+3.  필요에 따라 게시 데이터베이스의 게시자에서 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)을 실행합니다. ** \@속성** 에 **keep_partition_changes** 값을 지정 하 고 값 `true` 에 `false` ** \@또는 값**을 지정 합니다.  
   
     > [!NOTE]  
-    >  **Keep_partition_changes**를 사용 하도록 설정 하는 경우 먼저 **use_partition_groups** 를 사용 하지 않도록 설정 하 고 **\@force_reinit_subscription**에 값 **1** 을 지정 해야 합니다.  
+    >  **Keep_partition_changes**를 사용 하도록 설정 하는 경우 먼저 **use_partition_groups** 를 사용 하지 않도록 설정 하 고 ** \@force_reinit_subscription**에 값 **1** 을 지정 해야 합니다.  
   
-4.  필요에 따라 게시 데이터베이스의 게시자에서 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행합니다. **\@속성** 에 **partition_options** 값을 지정 하 고 **\@값**에 적절 한 값을 지정 합니다. 이러한 필터링 옵션의 정의는 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 을 참조하십시오.  
+4.  필요에 따라 게시 데이터베이스의 게시자에서 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행합니다. ** \@속성** 에 **partition_options** 값을 지정 하 고 ** \@값**에 적절 한 값을 지정 합니다. 이러한 필터링 옵션의 정의는 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 을 참조하십시오.  
   
 5.  필요에 따라 스냅샷 에이전트를 시작하여 스냅샷을 다시 생성합니다. 새 스냅샷을 생성해야 하는 변경에 대한 자세한 내용은 [게시 및 아티클 속성 변경](change-publication-and-article-properties.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [병합 아티클 간의 조인 필터 집합 자동 생성&#40;SQL Server Management Studio&#41;](automatically-generate-join-filters-between-merge-articles.md)   
- [Define and Modify a Parameterized Row Filter for a Merge Article](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
+ [병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [매개 변수가 있는 행 필터](../merge/parameterized-filters-parameterized-row-filters.md)  
   
   

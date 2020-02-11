@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 46dbdded5adf41a847f017cf4ee203597df13962
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401340"
 ---
 # <a name="backup-server-capacity-planning-worksheet---parallel-data-warehouse"></a>백업 서버 용량 계획 워크시트-병렬 데이터 웨어하우스
@@ -23,7 +23,7 @@ ms.locfileid: "74401340"
   
 ## <a name="capacity-planning-worksheet-for-backup-servers"></a>Backup Server에 대 한 용량 계획 워크시트  
 
-### <a name="notes"></a>참고  
+### <a name="notes"></a>메모  
   
 1.  이 워크시트는 PDW 데이터베이스의 백업 및 복원 작업을 수행 하는 서버에 적용 됩니다.  
   

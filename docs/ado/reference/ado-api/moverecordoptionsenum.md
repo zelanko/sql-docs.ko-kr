@@ -16,24 +16,24 @@ ms.assetid: f53c2ce4-1021-4a45-92b8-775e8bebad99
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dcdb825073b267c3e3351001ecc7b11c969582e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932043"
 ---
 # <a name="moverecordoptionsenum"></a>MoveRecordOptionsEnum
-동작을 지정 합니다 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체 [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md) 메서드.  
+[Record](../../../ado/reference/ado-api/record-object-ado.md) 개체 [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md) 메서드의 동작을 지정 합니다.  
   
-|상수|값|설명|  
+|지속적임|값|Description|  
 |--------------|-----------|-----------------|  
-|**adMoveUnspecified**|-1|기본. 기본 이동 작업을 수행합니다. 하이퍼텍스트 링크를 업데이트 하는 작업 및 대상 파일 또는 디렉터리가 이미 있으면 작업이 실패 합니다.|  
-|**adMoveOverWrite**|1|이미 존재 하는 경우에 대상 파일 또는 디렉터리를 덮어씁니다.|  
-|**adMoveDontUpdateLinks**|2|기본 동작을 수정 **MoveRecord** 하이퍼텍스트 링크를 통해 소스를 업데이트 하지 않게 메서드 **레코드**합니다. 기본 동작은 공급자의 기능에 따라 달라 집니다. 이동 작업 공급자가 지원 링크를 업데이트 합니다. 공급자 링크를 해결할 수 없는 경우,이 값을 지정 하지 않으면 이동도 경우 링크 수정 되지 않은 성공 후 합니다.|  
-|**adMoveAllowEmulation**|4|요청 공급자 시뮬레이션 (다운로드, 업로드 및 삭제 작업을 사용 하 여) 이동 하려고 합니다. 경우 이동 하려고 합니다 **레코드** 대상 URL은 다른 서버에 또는 소스와 다른 공급자에서 처리 하는,이 손실 될 수 있습니다 증가 대기 시간 또는 데이터를 다른 공급자 기능으로 인해 실패할 경우 공급자 간에 리소스를 이동 합니다.|  
+|**adMoveUnspecified 되지 않음**|-1|Default. 기본 이동 작업을 수행 합니다. 대상 파일이 나 디렉터리가 이미 있는 경우 작업이 실패 하 고 작업에서 하이퍼텍스트 링크를 업데이트 합니다.|  
+|**adMoveOverWrite**|1|이미 존재 하는 경우에도 대상 파일이 나 디렉터리를 덮어씁니다.|  
+|**adMoveDontUpdateLinks**|2|소스 **레코드**의 하이퍼텍스트 링크를 업데이트 하지 않고 **MoveRecord** 메서드의 기본 동작을 수정 합니다. 기본 동작은 공급자의 기능에 따라 달라 집니다. 공급자를 사용할 수 있는 경우 이동 작업은 링크를 업데이트 합니다. 공급자가 링크를 수정할 수 없거나이 값이 지정 되지 않은 경우 링크가 수정 되지 않은 경우에도 이동이 성공 합니다.|  
+|**adMoveAllowEmulation**|4|다운로드, 업로드 및 삭제 작업을 사용 하 여 공급자가 이동 시뮬레이션을 시도 하도록 요청 합니다. 대상 URL이 다른 서버에 있거나 원본과 다른 공급자가 서비스를 제공 하기 때문에 **레코드** 를 이동 하려는 시도가 실패 하는 경우 공급자 간에 리소스를 이동할 때 다른 공급자 기능으로 인해 대기 시간 또는 데이터 손실이 발생할 수 있습니다.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC 해당  
- 이러한 상수는 ADO/wfc 필요가 없습니다.  
+## <a name="adowfc-equivalent"></a>ADO/WFC 동급  
+ 이러한 상수에는 ADO/WFC 해당 항목이 없습니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [MoveRecord 메서드(ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)

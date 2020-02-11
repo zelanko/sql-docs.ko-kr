@@ -5,22 +5,37 @@ description: Kubernetes에서 실행되고 관계형 및 HDFS 데이터 둘 다�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6bbb185936b2a388014a16ae0a6ecc6c52c5d29a
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 23eb15b1f7b763688a3657406bab12106a18f977
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706661"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75720938"
 ---
 # <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]란 무엇인가요?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]부터 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]를 사용하면 Kubernetes에서 실행되는 SQL Server, Spark 및 HDFS 컨테이너의 확장 가능한 클러스터를 배포할 수 있습니다. 이러한 구성 요소는 동시에 실행되므로 Transact-SQL 또는 Spark에서 빅 데이터 읽기, 쓰기 및 처리할 수 있으며, 대용량의 빅 데이터를 사용하여 가치 높은 관계형 데이터를 쉽게 조합하고 분석할 수 있습니다.
+
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]부터 SQL Server 빅 데이터 클러스터가 도입되었습니다.
+
+SQL Server 빅 데이터 클러스터는 다음과 같은 용도로 사용할 수 있습니다.
+
+- Kubernetes에서 실행되는 SQL Server, Spark 및 HDFS 컨테이너의 [확장성 있는 클러스터 배포](../big-data-cluster/deploy-get-started.md) 
+- Transact-SQL 또는 Spark에서 빅 데이터 읽기, 쓰기 및 처리
+- 대용량 빅 데이터를 사용하여 가치 높은 관계형 데이터를 쉽게 조합 및 분석
+- 외부 데이터 원본 쿼리
+- SQL Server에서 관리하는 HDFS에 빅 데이터 저장
+- 클러스터를 통해 여러 외부 데이터 원본에서 데이터 쿼리
+- AI, 기계 학습 및 기타 분석 작업에 데이터 사용
+- [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]에서 [애플리케이션 배포 및 실행](../big-data-cluster/concept-application-deployment.md)
+- [PolyBase](../relational-databases/polybase/polybase-guide.md)를 사용하여 데이터 가상화 외부 테이블을 사용하여 외부 SQL Server, Oracle, Teradata, MongoDB 및 ODBC 데이터 원본의 데이터 쿼리
+- Always On 가용성 그룹 기술을 사용하여 SQL Server 마스터 인스턴스 및 모든 데이터베이스에 관해 고가용성 제공
 
 최신 릴리스의 새로운 기능 및 알려진 문제에 대한 자세한 내용은 [릴리스 정보](release-notes-big-data-cluster.md)를 참조하세요.
 

@@ -20,23 +20,24 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c30e6ca03f1d1d4c794d01bd594efd88306410e3
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73759037"
 ---
 # <a name="stored-procedures---calling"></a>저장 프로시저 - 호출
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  저장 프로시저는 0개 이상의 매개 변수를 가질 수 있으며 값을 반환할 수도 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 사용 하는 경우 저장 프로시저에 대 한 매개 변수를 다음으로 전달할 수 있습니다.  
+  저장 프로시저는 0개 이상의 매개 변수를 가질 수 있으며 값을 반환할 수도 있습니다. Native Client OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 공급자를 사용 하는 경우 저장 프로시저에 대 한 매개 변수를 다음으로 전달할 수 있습니다.  
   
 -   데이터 값을 하드 코딩합니다.  
   
 -   매개 변수 표식(?)을 사용하여 매개 변수를 지정하고, 프로그램 변수를 매개 변수 표식에 바인딩한 후 데이터 값을 프로그램 변수에 넣습니다.  
   
 > [!NOTE]  
->  OLE DB로 명명된 매개 변수를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 저장 프로시저를 호출할 때 매개 변수 이름은 '\@' 문자로 시작해야 합니다. 이는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에만 적용되는 제한 사항입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 MDAC보다 더 엄격하게 이 제한 사항을 적용합니다.  
+>  OLE DB로 명명된 매개 변수를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 저장 프로시저를 호출할 때 매개 변수 이름은 '\@' 문자로 시작해야 합니다. 이는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에만 적용되는 제한 사항입니다. 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 MDAC보다 더 엄격하게 이 제한 사항을 적용합니다.  
   
  매개 변수 지원을 위해 **ICommandWithParameters** 인터페이스가 명령 개체에 표시됩니다. 매개 변수를 사용하려면 소비자는 먼저 **ICommandWithParameters::SetParameterInfo** 메서드를 호출하거나 **GetParameterInfo** 메서드를 호출하는 호출 문을 통해 공급자에게 매개 변수를 설명합니다. 그런 다음 소비자는 버퍼의 구조를 지정하는 접근자를 만들고 매개 변수 값을 이 버퍼에 넣습니다. 마지막으로 소비자는 접근자의 핸들과 버퍼에 대한 포인터를 **Execute**로 전달합니다. 이후의 **Execute**에 대한 호출에서 소비자는 버퍼에 새 매개 변수 값을 넣고 접근자 핸들과 버퍼 포인터를 사용하여 **Execute**를 호출합니다.  
   
@@ -46,7 +47,8 @@ ms.locfileid: "73759037"
   
 1.  DBPARAMBINDINFO 구조의 배열에 매개 변수 정보, 즉 매개 변수 이름, 매개 변수의 데이터 형식에 대한 공급자별 이름 또는 표준 데이터 형식 이름 등을 채웁니다. 배열의 각 구조는 하나의 매개 변수를 설명합니다. 이 배열은 **SetParameterInfo** 메서드로 전달됩니다.  
   
-2.  **ICommandWithParameters::SetParameterInfo** 메서드를 호출하여 공급자에게 매개 변수를 설명합니다. **SetParameterInfo**는 각 매개 변수의 네이티브 데이터 형식을 지정합니다. **SetParameterInfo** 인수는 다음과 같습니다.  
+2.  
+  **ICommandWithParameters::SetParameterInfo** 메서드를 호출하여 공급자에게 매개 변수를 설명합니다. **SetParameterInfo** 는 각 매개 변수의 네이티브 데이터 형식을 지정 합니다. **SetParameterInfo** 인수는 다음과 같습니다.  
   
     -   형식 정보를 설정할 매개 변수의 수  
   
@@ -54,7 +56,9 @@ ms.locfileid: "73759037"
   
     -   DBPARAMBINDINFO 구조의 배열  
   
-3.  **IAccessor::CreateAccessor** 명령을 사용하여 매개 변수 접근자를 만듭니다. 이 접근자는 버퍼의 구조를 지정하고 매개 변수 값을 버퍼에 넣습니다. **CreateAccessor** 명령은 바인딩 집합으로부터 접근자를 만듭니다. 이러한 바인딩은 소비자가 DBBINDING 구조의 배열을 사용하여 설명합니다. 각 바인딩은 단일 매개 변수를 소비자의 버퍼에 연결하며 다음과 같은 정보를 포함합니다.  
+3.  
+  **IAccessor::CreateAccessor** 명령을 사용하여 매개 변수 접근자를 만듭니다. 이 접근자는 버퍼의 구조를 지정하고 매개 변수 값을 버퍼에 넣습니다. 
+  **CreateAccessor** 명령은 바인딩 집합으로부터 접근자를 만듭니다. 이러한 바인딩은 소비자가 DBBINDING 구조의 배열을 사용하여 설명합니다. 각 바인딩은 단일 매개 변수를 소비자의 버퍼에 연결하며 다음과 같은 정보를 포함합니다.  
   
     -   바인딩이 적용되는 매개 변수의 서수  
   
@@ -76,16 +80,18 @@ ms.locfileid: "73759037"
   
     -   3단계에서 만든 접근자 핸들  
   
-5.  **ICommand::Execute**를 사용하여 명령을 실행합니다.  
+5.  
+  **ICommand::Execute**를 사용하여 명령을 실행합니다.  
 
 ## <a name="methods-of-calling-a-stored-procedure"></a>저장 프로시저 호출 방법  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 저장 프로시저를 실행 하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 다음을 지원 합니다.  
+ 에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]저장 프로시저를 실행할 때 Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB 공급자는 다음을 지원 합니다.  
   
 -   ODBC CALL 이스케이프 시퀀스  
   
 -   RPC(원격 프로시저 호출) 이스케이프 시퀀스  
   
--   [!INCLUDE[tsql](../../../includes/tsql-md.md)] EXECUTE 문  
+-   
+  [!INCLUDE[tsql](../../../includes/tsql-md.md)] EXECUTE 문  
   
 ### <a name="odbc-call-escape-sequence"></a>ODBC CALL 이스케이프 시퀀스  
  매개 변수 정보를 알 경우 **ICommandWithParameters::SetParameterInfo** 메서드를 호출하여 공급자에게 매개 변수를 설명합니다. 그렇지 않은 경우 저장 프로시저 호출에 ODBC CALL 구문을 사용하면 공급자는 도우미 함수를 호출하여 저장 프로시저 매개 변수 정보를 찾습니다.  
@@ -94,9 +100,9 @@ ms.locfileid: "73759037"
   
  ODBC CALL 이스케이프 시퀀스를 사용한 프로시저 호출의 일반적인 구문은 다음과 같습니다.  
   
- {[ **? =** ]**call**_procedure_name_[ **(** [*parameter*] [ **,** [*parameter*]] ... **)** ]}  
+ {[**? =**]**call**_procedure_name_[**(**[*parameter*] [**,**[*parameter*]] ... **)**]}  
   
- 예를 들어  
+ 다음은 그 예입니다.  
   
 ```  
 {call SalesByCategory('Produce', '1995')}  
@@ -107,7 +113,7 @@ ms.locfileid: "73759037"
   
  RPC 이스케이프 시퀀스를 사용하여 저장 프로시저를 실행할 경우 공급자는 ODBC CALL 구문에서와는 달리 매개 변수 정보를 확인하기 위한 어떠한 도우미 함수도 호출하지 않습니다. RPC 구문은 ODBC CALL 구문보다 간단하므로 명령이 구문 분석되는 시간이 더 빠르고 성능이 향상됩니다. 이 경우 **ICommandWithParameters::SetParameterInfo**를 실행하여 매개 변수 정보를 제공해야 합니다.  
   
- RPC 이스케이프 시퀀스에서는 반환 값이 있어야 합니다. 저장 프로시저가 값을 반환하지 않으면 서버는 기본적으로 0을 반환합니다. 또한 저장 프로시저에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커서를 열 수 없습니다. 저장 프로시저는 암시적으로 준비되며 **ICommandPrepare::Prepare**에 대한 호출은 실패합니다. RPC 호출을 준비할 수 없으므로 열 메타 데이터를 쿼리할 수 없습니다. IColumnsInfo:: GetColumnInfo 및 IColumnsRowset:: GetColumnsRowset는 DB_E_NOTPREPARED를 반환 합니다.  
+ RPC 이스케이프 시퀀스에서는 반환 값이 있어야 합니다. 저장 프로시저가 값을 반환하지 않으면 서버는 기본적으로 0을 반환합니다. 또한 저장 프로시저에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커서를 열 수 없습니다. 저장 프로시저는 암시적으로 준비되며 **ICommandPrepare::Prepare**에 대한 호출은 실패합니다. RPC 호출을 준비할 수 없기 때문에 열 메타데이터를 쿼리할 수 없습니다. 따라서 IColumnsInfo::GetColumnInfo 및 IColumnsRowset::GetColumnsRowset에서 DB_E_NOTPREPARED를 반환합니다.  
   
  모든 매개 변수 메타데이터를 알고 있다면 RPC 이스케이프 시퀀스를 사용하여 저장 프로시저를 실행하는 것이 좋습니다.  
   
@@ -117,10 +123,10 @@ ms.locfileid: "73759037"
 {rpc SalesByCategory}  
 ```  
   
- RPC 이스케이프 시퀀스를 보여 주는 예제 응용 프로그램은 [ &#40;rpc 구문을&#41; 사용 하 여 저장 프로시저 실행 및 반환 코드 및 출력 매개 변수 &#40;처리 OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md)를 참조 하세요.  
+ RPC 이스케이프 시퀀스를 보여 주는 예제 응용 프로그램에 대해서는 [Rpc 구문을 사용 하 &#40;저장 프로시저 실행&#41; 및 OLE DB&#41;&#40;반환 코드 및 출력 매개 변수 처리 ](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md)를 참조 하세요.  
   
 ### <a name="transact-sql-execute-statement"></a>Transact-SQL EXECUTE 문  
- 저장 프로시저를 호출할 때는 [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md) 문보다 ODBC CALL 이스케이프 시퀀스와 RPC 이스케이프 시퀀스가 더 일반적으로 사용됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 RPC 메커니즘을 사용 하 여 명령 처리를 최적화 합니다. 이 RPC 프로토콜은 서버에서 수행되는 매개 변수 처리와 문 구문 분석의 대부분을 제거하여 성능을 향상시킵니다.  
+ 저장 프로시저를 호출할 때는 [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md) 문보다 ODBC CALL 이스케이프 시퀀스와 RPC 이스케이프 시퀀스가 더 일반적으로 사용됩니다. Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB 공급자는의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] RPC 메커니즘을 사용 하 여 명령 처리를 최적화 합니다. 이 RPC 프로토콜은 서버에서 수행되는 매개 변수 처리와 문 구문 분석의 대부분을 제거하여 성능을 향상시킵니다.  
   
  다음은 [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE** 문의 예입니다.  
   
@@ -128,7 +134,7 @@ ms.locfileid: "73759037"
 EXECUTE SalesByCategory 'Produce', '1995'  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [저장 프로시저](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
   
   

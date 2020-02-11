@@ -17,16 +17,16 @@ ms.assetid: 9b4251f2-6fa6-49df-8abf-7cc1cc35d1c8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4364590e908688fe094da0e7687410bdda3b97cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915775"
 ---
 # <a name="odbc-error-codes-visual-foxpro-odbc-driver"></a>ODBC 오류 코드(Visual FoxPro ODBC 드라이버)
-다음 표에서 ODBC 오류 코드 SQLSTATE 값에 매핑된 Visual FoxPro 오류 코드를 나열 합니다. 매핑된 SQLSTATE 값을 가져오는 [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) 하 고 [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)합니다. 때문에 다른 SQLSTATE 값이 없는 다른 ODBC API에서 매핑됩니다 **SQLExecDirect** 하 고 **SQLPrepare** 은 Visual FoxPro 엔진에 액세스 하는 유일한 기능입니다.  
+다음 표에서는 ODBC 오류 코드 SQLSTATE 값에 매핑되는 Visual FoxPro 오류 코드를 보여 줍니다. 매핑된 SQLSTATE 값은 [Sqlexecdirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) 및 [sqlprepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)에서 제공 됩니다. **Sqlexecdirect** 및 **Sqlprepare** 는 Visual FoxPro 엔진에 액세스 하는 유일한 함수 이므로 다른 ODBC API의 다른 SQLSTATE 값은 매핑되지 않습니다.  
   
- ODBC 오류 코드에 대 한 자세한 내용은 참조 하세요. [부록 a: ODBC 오류 코드](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)에 *ODBC 프로그래머 참조*합니다.  
+ ODBC 오류 코드에 대 한 자세한 내용은 *Odbc 프로그래머 참조*에서 [부록 a: odbc 오류 코드](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)를 참조 하세요.  
   
 |SQLSTATE|Visual FoxPro 오류 코드|  
 |--------------|------------------------------|  

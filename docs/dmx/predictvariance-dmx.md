@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 83bcd95d6eb946d15884d57550b826bc7379fb64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68041688"
 ---
 # <a name="predictvariance-dmx"></a>PredictVariance(DMX)
@@ -31,10 +31,10 @@ PredictVariance(<scalar column reference>)
  스칼라 열  
   
 ## <a name="return-type"></a>반환 형식  
- 지정 된 유형의 스칼라 값을  *\<스칼라 열 참조 >* 합니다.  
+ * \<>스칼라 열 참조 *로 지정 된 형식의 스칼라 값입니다.  
   
 ## <a name="remarks"></a>설명  
- 열 참조가 불연속 유형인 경우 **PredictVariance** 불연속 값의 차이 계산할 수 없기 때문에 0을 반환 합니다.  
+ 열 참조가 불연속 인 경우 불연속 값에서 분산을 계산할 수 없기 때문에 **Predictvariance** 는 0을 반환 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 자연 예측 조인을 사용하여 TM Decision Tree 마이닝 모델을 기반으로 개별 고객이 자전거를 구입할 가능성이 있는지 여부를 확인하고 예측의 분산도 확인합니다.  
@@ -53,9 +53,9 @@ NATURAL PREDICTION JOIN
   0 AS [Number Children At Home]) AS t  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [Data Mining Extensions &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [함수 &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+## <a name="see-also"></a>참고 항목  
+ [데이터 마이닝 확장 &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [DMX &#40;함수&#41;](../dmx/functions-dmx.md)   
+ [DMX&#41;일반 예측 함수 &#40;](../dmx/general-prediction-functions-dmx.md)  
   
   

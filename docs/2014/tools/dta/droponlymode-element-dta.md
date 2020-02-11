@@ -1,5 +1,5 @@
 ---
-title: DropOnlyMode 요소 (DTA) | Microsoft Docs
+title: Droponly 모드 요소 (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1d449defa98112c87a4b5789f1cff6f764252e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62659581"
 ---
 # <a name="droponlymode-element-dta"></a>DropOnlyMode 요소(DTA)
@@ -36,17 +36,18 @@ ms.locfileid: "62659581"
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특성|Description|  
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|없음|  
 |**기본값**|없음|  
-|**발생 빈도**|(선택 사항) 각 `TuningOptions` 요소에 한 번만 사용할 수 있습니다. `TuningOptions` 요소에 다음 요소를 지정한 경우 사용할 수 없습니다.<br /><br /> [FeatureSet 요소&#40;DTA&#41;](featureset-element-dta.md)<br /><br /> [Partitioning 요소&#40;DTA&#41;](partitioning-element-dta.md)<br /><br /> [KeepExisting 요소&#40;DTA&#41;](keepexisting-element-dta.md)는 **ALL**로 설정됨|  
+|**발생 빈도**|(선택 사항) 각 `TuningOptions` 요소에 한 번만 사용할 수 있습니다. 
+  `TuningOptions` 요소에 다음 요소를 지정한 경우 사용할 수 없습니다.<br /><br /> [FeatureSet 요소 &#40;DTA&#41;](featureset-element-dta.md)<br /><br /> [DTA&#41;&#40;분할 요소](partitioning-element-dta.md)<br /><br /> [Keepexisting 요소 &#40;DTA&#41;](keepexisting-element-dta.md) 는 **모두** 로 설정 됩니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
   
 |관계|요소|  
 |------------------|--------------|  
-|**부모 요소**|[TuningOptions 요소&#40;DTA&#41;](tuningoptions-element-dta.md)|  
+|**부모 요소**|[TuningOptions 요소 &#40;DTA&#41;](tuningoptions-element-dta.md)|  
 |**자식 요소**|없음|  
   
 ## <a name="example"></a>예제  
@@ -60,7 +61,7 @@ ms.locfileid: "62659581"
 </TuningOptions>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 입력 파일 참조&#40;데이터베이스 엔진 튜닝 관리자&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

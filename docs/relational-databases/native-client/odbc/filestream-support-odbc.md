@@ -14,18 +14,19 @@ ms.assetid: 87982955-1542-4551-9c06-447ffe8193b9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4e7d2e57b68ed9ab3ae117c543361f810952ba9c
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73761195"
 ---
 # <a name="filestream-support-odbc"></a>FILESTREAM 지원(ODBC)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client의 ODBC에서는 향상된 FILESTREAM 기능을 지원합니다. 이 기능에 대 한 자세한 내용은 [FILESTREAM 지원](../../../relational-databases/native-client/features/filestream-support.md)을 참조 하세요. FILESTREAM에 대 한 ODB 지원을 보여 주는 샘플은 [ &#40;&#41;filestream ODBC를 사용 하 여 증분 방식으로 데이터 전송 및 수신](../../../relational-databases/native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md)을 참조 하세요.  
   
- **Varbinary (max)** 값을 2gb 보다 크게 보내고 받으려면 응용 프로그램에서 *columnsize* 가 **SQL_SS_LENGTH_UNLIMITED**로 설정 된 SQLBindParameter를 사용 하 여 매개 변수를 바인딩하고 *StrLen_or_IndPtr* 의 콘텐츠를로 **설정 해야 합니다.** SQLExecDirect 또는 SQLExecute 이전에 SQL_DATA_AT_EXEC 합니다.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client의 ODBC에서는 향상된 FILESTREAM 기능을 지원합니다. 이 기능에 대 한 자세한 내용은 [FILESTREAM 지원](../../../relational-databases/native-client/features/filestream-support.md)을 참조 하세요. FILESTREAM에 대 한 ODB 지원을 보여 주는 샘플은 [ODBC&#41;&#40;filestream을 사용 하 여 증분 방식으로 데이터 전송 및 수신 ](../../../relational-databases/native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md)을 참조 하세요.  
+  
+ **Varbinary (max)** 값을 2gb 보다 크게 보내고 받으려면 응용 프로그램에서 *columnsize* 가 **SQL_SS_LENGTH_UNLIMITED**로 설정 된 SQLBindParameter를 사용 하 여 매개 변수를 바인딩하고 sqlexecdirect 또는 sqlexecute 이전에 *StrLen_or_IndPtr* 의 내용을 **SQL_DATA_AT_EXEC** 으로 설정 해야 합니다.  
   
  실행 시 데이터 매개 변수와 마찬가지로 SQLParamData 및 Sqlparamdata를 사용 하 여 데이터를 제공 합니다.  
   
@@ -101,7 +102,7 @@ ODBCError(henv, hdbc, hstmt, NULL, true); exit(-1);
 }  
 ```  
   
-### <a name="insert"></a>Insert  
+### <a name="insert"></a>삽입  
   
 ```  
 void insertFilestream(LPCWSTR srcFilePath) {  
@@ -266,7 +267,7 @@ return r;
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Native Client 프로그래밍](../../../relational-databases/native-client/sql-server-native-client-programming.md)  
   
   

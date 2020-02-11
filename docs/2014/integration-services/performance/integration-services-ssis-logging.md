@@ -25,34 +25,38 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2478f1605b7fb67d8328be905956cbaae8e3c243
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62889815"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services(SSIS) 로깅
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 패키지, 컨테이너 및 태스크에서의 로깅 구현을 위해 사용할 수 있는 로그 공급자가 포함됩니다. 로깅을 사용하면 패키지에 대한 런타임 정보를 캡처하여 패키지가 실행될 때마다 패키지를 감사하고 문제를 해결하는 데 활용할 수 있습니다. 예를 들어 로그를 사용하여 패키지를 실행한 운영자의 이름과 패키지가 시작 및 종료된 시간을 캡처할 수 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 패키지, 컨테이너 및 태스크에서 로깅을 구현 하는 데 사용할 수 있는 로그 공급자가 포함 되어 있습니다. 로깅을 사용하면 패키지에 대한 런타임 정보를 캡처하여 패키지가 실행될 때마다 패키지를 감사하고 문제를 해결하는 데 활용할 수 있습니다. 예를 들어 로그를 사용하여 패키지를 실행한 운영자의 이름과 패키지가 시작 및 종료된 시간을 캡처할 수 있습니다.  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에서 패키지 실행 중에 발생하는 로깅 범위를 구성할 수 있습니다. 자세한 내용은 [SSIS 서버에서 패키지 실행에 대한 로깅 설정](../enable-logging-for-package-execution-on-the-ssis-server.md)을 참조하세요.  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에서 패키지 실행 중에 발생하는 로깅 범위를 구성할 수 있습니다. 자세한 내용은 [SSIS 서버에서 패키지 실행에 대한 로깅 설정](../enable-logging-for-package-execution-on-the-ssis-server.md)을 참조하세요.  
   
- **dtexec** 명령 프롬프트 유틸리티를 사용하여 패키지 실행할 때도 로깅을 포함할 수 있습니다. 로깅을 지원하는 명령 프롬프트 인수에 대한 자세한 내용은 [dtexec Utility](../packages/dtexec-utility.md)를 참조하십시오.  
+ 
+  **dtexec** 명령 프롬프트 유틸리티를 사용하여 패키지 실행할 때도 로깅을 포함할 수 있습니다. 로깅을 지원하는 명령 프롬프트 인수에 대한 자세한 내용은 [dtexec Utility](../packages/dtexec-utility.md)를 참조하십시오.  
   
 ## <a name="configure-logging-in-sql-server-data-tools"></a>SQL Server Data Tools에서 로깅 구성  
  로그는 패키지와 연결되며 패키지 수준에서 구성됩니다. 패키지에 있는 각 태스크나 컨테이너는 패키지 로그에 정보를 로깅할 수 있습니다. 패키지 자체가 로깅을 사용하도록 설정되지 않았더라도 패키지의 태스크 및 컨테이너는 로깅을 사용하도록 설정될 수 있습니다. 예를 들어 부모 패키지가 로깅을 사용하지 않더라도 SQL 실행 태스크는 로깅을 사용할 수 있습니다. 패키지, 컨테이너 또는 태스크는 여러 로그에 쓸 수 있습니다. 패키지에만 로깅을 사용하도록 설정하거나 패키지에 포함된 개별 태스크 또는 컨테이너에 로깅을 사용하도록 설정할 수 있습니다.  
   
  패키지에 로그를 추가할 때는 로그 공급자와 로그 위치를 선택합니다. 로그 공급자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 또는 텍스트 파일 같은 로그 데이터 형식을 지정합니다.  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 다음 로그 공급자가 포함됩니다.  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 다음 로그 공급자가 포함됩니다.  
   
 -   텍스트 파일 로그 공급자는 로그 항목을 CSV(쉼표로 구분된 값) 형식으로 ASCII 텍스트 파일에 기록합니다. 이 공급자의 기본 파일 이름 확장명은 .log입니다.  
   
--   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 로그 공급자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler를 사용하여 볼 수 있는 추적을 기록합니다. 이 공급자의 기본 파일 이름 확장명은 .trc입니다.  
+-   
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 로그 공급자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler를 사용하여 볼 수 있는 추적을 기록합니다. 이 공급자의 기본 파일 이름 확장명은 .trc입니다.  
   
     > [!NOTE]  
     >  64비트 모드로 실행 중인 패키지에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 로그 공급자를 사용할 수 없습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 공급자는 로그 항목을 기록 합니다 `sysssislog` 테이블에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스.  
+-   로그 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공급자는 `sysssislog` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 테이블에 로그 항목을 기록 합니다.  
   
 -   Windows 이벤트 로그 공급자는 로컬 컴퓨터의 Windows 이벤트 로그에서 애플리케이션 로그에 항목을 기록합니다.  
   
@@ -65,19 +69,23 @@ ms.locfileid: "62889815"
 |로그 공급자|ProgID|ClassID|위치|  
 |------------------|------------|-------------|--------------|  
 |텍스트 파일|DTS.LogProviderTextFile|{0A039101-ACC1-4E06-943F-279948323883}|텍스트 파일의 경로는 로그 공급자가 사용하는 파일 연결 관리자가 지정합니다.|  
-|SQL Server 프로파일러|DTS.LogProviderSQLProfiler|{E93F6300-AE0C-4916-A7BF-A8D0CE12C77A}|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]가 사용하는 파일의 경로는 로그 공급자가 사용하는 파일 연결 관리자가 지정합니다.|  
+|SQL Server Profiler|DTS.LogProviderSQLProfiler|{E93F6300-AE0C-4916-A7BF-A8D0CE12C77A}|
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]가 사용하는 파일의 경로는 로그 공급자가 사용하는 파일 연결 관리자가 지정합니다.|  
 |SQL Server|DTS.LogProviderSQLServer|{94150B25-6AEB-4C0D-996D-D37D1C4FDEDA}|로그 항목이 포함된 sysssislog 테이블이 들어 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스는 로그 공급자가 사용하는 OLE DB 연결 관리자가 지정합니다.|  
 |Windows 이벤트 로그|DTS.LogProviderEventLog|{071CC8EB-C343-4CFF-8D58-564B92FCA3CF}|Windows 이벤트 뷰어의 애플리케이션 로그에는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 애플리케이션 정보가 들어 있습니다.|  
 |XML 파일|DTS.LogProviderXMLFile|{440945A4-2A22-4F19-B577-EAF5FDDC5F7A}|XML 파일의 경로는 로그 공급자가 사용하는 파일 연결 관리자가 지정합니다.|  
   
  사용자 지정 로그 공급자를 만들 수도 있습니다. 자세한 내용은 [Creating a Custom Log Provider](../extending-packages-custom-objects/log-provider/creating-a-custom-log-provider.md)를 참조하세요.  
   
- 패키지의 로그 공급자는 패키지의 로그 공급자 컬렉션의 멤버입니다. [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하여 패키지를 만들고 로깅을 구현하는 경우 **디자이너의** 패키지 탐색기 **탭에서** 로그 공급자 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 폴더의 컬렉션 멤버 목록을 확인할 수 있습니다.  
+ 패키지의 로그 공급자는 패키지의 로그 공급자 컬렉션의 멤버입니다. 
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하여 패키지를 만들고 로깅을 구현하는 경우 **디자이너의** 패키지 탐색기 **탭에서** 로그 공급자 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 폴더의 컬렉션 멤버 목록을 확인할 수 있습니다.  
   
- 로그 공급자에 대한 이름 및 설명을 제공하고 로그 공급자에서 사용되는 연결 관리자를 지정하여 로그 공급자를 구성합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 공급자는 OLE DB 연결 관리자를 사용합니다. 텍스트 파일, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]및 XML 파일 로그 공급자는 모두 파일 연결 관리자를 사용합니다. Windows 이벤트 로그 공급자는 Windows 이벤트 로그에 직접 쓰기 때문에 연결 관리자를 사용하지 않습니다. 자세한 내용은 [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md) 및 [File Connection Manager](../connection-manager/file-connection-manager.md)를 참조하세요.  
+ 로그 공급자에 대한 이름 및 설명을 제공하고 로그 공급자에서 사용되는 연결 관리자를 지정하여 로그 공급자를 구성합니다. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 공급자는 OLE DB 연결 관리자를 사용합니다. 텍스트 파일, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]및 XML 파일 로그 공급자는 모두 파일 연결 관리자를 사용합니다. Windows 이벤트 로그 공급자는 Windows 이벤트 로그에 직접 쓰기 때문에 연결 관리자를 사용하지 않습니다. 자세한 내용은 [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md) 및 [File Connection Manager](../connection-manager/file-connection-manager.md)를 참조하세요.  
   
 ### <a name="logging-customization"></a>로깅 사용자 지정  
- 이벤트 또는 사용자 지정 메시지 로깅을 사용자 지정하기 위해 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 로그 항목에 포함할 자주 로깅되는 정보를 담은 스키마를 제공합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 로그 스키마는 로깅할 수 있는 정보를 정의합니다. 로그 스키마에서 요소를 선택하여 각 로그 항목으로 사용할 수 있습니다.  
+ 이벤트 또는 사용자 지정 메시지 로깅을 사용자 지정하기 위해 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 로그 항목에 포함할 자주 로깅되는 정보를 담은 스키마를 제공합니다. 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 로그 스키마는 로깅할 수 있는 정보를 정의합니다. 로그 스키마에서 요소를 선택하여 각 로그 항목으로 사용할 수 있습니다.  
   
  패키지 및 패키지에 포함된 컨테이너와 태스크는 같은 정보를 로깅할 필요가 없으며 같은 패키지나 컨테이너 내에 있는 태스크가 서로 다른 정보를 로깅할 수 있습니다. 예를 들어 패키지는 시작할 때 작업자 정보를 로깅하고, 한 태스크는 태스크가 실패한 컨테이너 또는 태스크 이름을 로깅하며, 다른 태스크는 오류가 발생한 시각을 로깅할 수 있습니다. 패키지 및 패키지에 포함된 컨테이너와 태스크가 여러 로그를 사용하는 경우 같은 정보가 모든 로그에 기록됩니다.  
   
@@ -85,14 +93,15 @@ ms.locfileid: "62889815"
   
  로그 파일이 많은 디스크 공간을 사용하거나 과도한 로깅 작업을 하여 성능이 저하되는 것을 막기 위해 로깅할 특정 이벤트 및 정보 항목을 지정하여 로깅을 제한할 수 있습니다. 예를 들어 각 오류의 날짜 및 컴퓨터 이름만 캡처하도록 로그를 구성할 수 있습니다.  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 **SSIS 로그 구성** 대화 상자를 사용하여 로깅 옵션을 정의할 수 있습니다.  
+ 
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 **SSIS 로그 구성** 대화 상자를 사용하여 로깅 옵션을 정의할 수 있습니다.  
   
 #### <a name="log-schema"></a>로그 스키마  
  다음 표에서는 로그 스키마의 요소에 대해 설명합니다.  
   
 |요소|Description|  
 |-------------|-----------------|  
-|Computer|로그 이벤트가 발생한 컴퓨터의 이름입니다.|  
+|컴퓨터|로그 이벤트가 발생한 컴퓨터의 이름입니다.|  
 |연산자|패키지를 시작한 사용자의 ID입니다.|  
 |SourceName|로그 이벤트가 발생한 컨테이너 또는 태스크의 이름입니다.|  
 |SourceID|로그 이벤트가 발생한 패키지, For Loop, Foreach Loop, 시퀀스 컨테이너 또는 태스크의 고유 식별자입니다.|  
@@ -109,7 +118,8 @@ ms.locfileid: "62889815"
 |DataCode|일반적으로 다음과 같이 컨테이너 또는 태스크 실행의 결과를 나타내는 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 열거의 값을 포함하는 선택적 정수 값입니다.<br /><br /> 0 - 성공<br /><br /> 1 - 실패<br /><br /> 2 - 완료<br /><br /> 3 - 취소됨|  
   
 ##### <a name="log-entries"></a>로그 항목  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 미리 정의된 이벤트에 대한 로그 항목을 지원하고 여러 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 개체에 대한 사용자 지정 로그 항목을 제공합니다. **디자이너의** SSIS 로그 구성 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 대화 상자에 이러한 이벤트와 사용자 지정 로그 항목이 나열됩니다.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]는 미리 정의 된 이벤트의 로그 항목을 지원 하 고 여러 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 개체에 대해 사용자 지정 로그 항목을 제공 합니다. 
+  **디자이너의** SSIS 로그 구성 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 대화 상자에 이러한 이벤트와 사용자 지정 로그 항목이 나열됩니다.  
   
  다음 표에서는 런타임 이벤트가 발생했을 때 로그 항목을 쓰도록 설정할 수 있는 미리 정의된 이벤트에 대해 설명합니다. 이러한 로그 항목은 실행 파일과 패키지, 그리고 패키지에 포함된 태스크 및 컨테이너에 적용됩니다. 로그 항목의 이름은 발생한 런타임 이벤트의 이름, 즉 로그 항목을 쓰도록 만든 이벤트의 이름과 같습니다.  
   
@@ -128,22 +138,25 @@ ms.locfileid: "62889815"
 |**OnVariableValueChanged**|변수의 값이 변경될 때 로그 항목을 기록합니다.|  
 |**OnWarning**|경고가 발생할 때 로그 항목을 기록합니다.|  
 |**PipelineComponentTime**|각 데이터 흐름 구성 요소에 대해 유효성 검사 및 실행의 각 단계에 대한 로그 항목을 기록합니다. 로그 항목에서는 각 단계의 처리 시간을 지정합니다.|  
-|**진단**|진단 정보를 제공하는 로그 항목을 기록합니다.<br /><br /> 예를 들어 외부 데이터 공급자에 대한 각 호출 전후의 메시지를 기록할 수 있습니다. 자세한 내용은 [패키지 실행 문제 해결 도구](../troubleshooting/troubleshooting-tools-for-package-execution.md)를 참조하세요.|  
+|**진단용**|진단 정보를 제공하는 로그 항목을 기록합니다.<br /><br /> 예를 들어 외부 데이터 공급자에 대한 각 호출 전후의 메시지를 기록할 수 있습니다. 자세한 내용은 [패키지 실행 문제 해결 도구](../troubleshooting/troubleshooting-tools-for-package-execution.md)를 참조하세요.|  
   
  패키지 및 여러 태스크에는 로깅을 사용하도록 설정할 수 있는 사용자 지정 로그 항목이 있습니다. 예를 들어 메일 보내기 태스크는 태스크가 시작되어 메일 메시지를 보내기 전에 정보를 로깅하는 **SendMailTaskBegin** 사용자 지정 로그 항목을 제공합니다. 자세한 내용은 [Custom Messages for Logging](../custom-messages-for-logging.md)를 참조하세요.  
   
 ### <a name="differentiating-package-copies"></a>패키지 복사본 구분  
  로그 데이터에는 로그 항목이 속하는 패키지의 이름 및 GUID가 포함됩니다. 기존 패키지를 복사하여 새 패키지를 만들 경우 기존 패키지의 이름 및 GUID도 복사됩니다. 따라서 이름과 GUID가 동일한 두 개의 패키지가 있을 수 있으며 이로 인해 로그 데이터에 있는 패키지를 구분하기가 어려울 수 있습니다.  
   
- 이러한 혼동을 피하려면 새 패키지의 이름 및 GUID를 업데이트해야 합니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 `ID` 속성에서 GUID를 다시 생성하고 속성 창에서 `Name` 속성 값을 업데이트할 수 있습니다. 또한 GUID 및 이름을 프로그래밍 방식으로 변경하거나 **dtutil** 명령 프롬프트를 사용하여 변경할 수 있습니다. 자세한 내용은 [패키지 속성 설정](../set-package-properties.md) 및 [dtutil 유틸리티](../dtutil-utility.md)를 참조하세요.  
+ 이러한 혼동을 피하려면 새 패키지의 이름 및 GUID를 업데이트해야 합니다. 
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 `ID` 속성에서 GUID를 다시 생성하고 속성 창에서 `Name` 속성 값을 업데이트할 수 있습니다. 또한 GUID 및 이름을 프로그래밍 방식으로 변경하거나 **dtutil** 명령 프롬프트를 사용하여 변경할 수 있습니다. 자세한 내용은 [패키지 속성 설정](../set-package-properties.md) 및 [dtutil 유틸리티](../dtutil-utility.md)를 참조하세요.  
   
 ### <a name="parent-logging-options"></a>부모 로깅 옵션  
- 태스크, For Loop, Foreach Loop 및 시퀀스 컨테이너의 로깅 옵션은 해당하는 패키지 또는 부모 컨테이너와 일치하는 경우가 많습니다. 이러한 경우 부모 컨테이너에서 로깅 옵션을 상속받도록 구성할 수 있습니다. 예를 들어 For Loop 컨테이너에 포함된 SQL 실행 태스크는 For Loop 컨테이너에 설정된 로깅 옵션을 사용할 수 있습니다. 부모 로깅 옵션을 사용하려면 컨테이너의 LoggingMode 속성을 **UseParentSetting**으로 설정합니다. **의** 속성 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 창 또는 **디자이너의** SSIS 로그 구성 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 대화 상자를 통해 이 속성을 설정할 수 있습니다.  
+ 태스크, For Loop, Foreach Loop 및 시퀀스 컨테이너의 로깅 옵션은 해당하는 패키지 또는 부모 컨테이너와 일치하는 경우가 많습니다. 이러한 경우 부모 컨테이너에서 로깅 옵션을 상속받도록 구성할 수 있습니다. 예를 들어 For Loop 컨테이너에 포함된 SQL 실행 태스크는 For Loop 컨테이너에 설정된 로깅 옵션을 사용할 수 있습니다. 부모 로깅 옵션을 사용하려면 컨테이너의 LoggingMode 속성을 **UseParentSetting**으로 설정합니다. 
+  **의** 속성 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 창 또는 **디자이너의** SSIS 로그 구성 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 대화 상자를 통해 이 속성을 설정할 수 있습니다.  
   
 ### <a name="logging-templates"></a>로깅 템플릿  
- **SSIS 로그 구성** 대화 상자에서 자주 사용하는 로깅 구성을 템플릿으로 만들어 저장한 다음 여러 패키지에서 사용할 수 있습니다. 이렇게 하면 여러 패키지에 대해 일관된 로깅 정책을 적용할 수 있으며 템플릿을 업데이트한 다음 적용하여 여러 패키지에 대한 로그 설정을 쉽게 수정할 수 있습니다. 템플릿은 XML 파일로 저장됩니다.  
+ 
+  **SSIS 로그 구성** 대화 상자에서 자주 사용하는 로깅 구성을 템플릿으로 만들어 저장한 다음 여러 패키지에서 사용할 수 있습니다. 이렇게 하면 여러 패키지에 대해 일관된 로깅 정책을 적용할 수 있으며 템플릿을 업데이트한 다음 적용하여 여러 패키지에 대한 로그 설정을 쉽게 수정할 수 있습니다. 템플릿은 XML 파일로 저장됩니다.  
   
- **SSIS 로그 구성 대화 상자를 사용하여 로깅을 구성하려면**  
+ **SSIS 로그 구성 대화 상자를 사용 하 여 로깅을 구성 하려면**  
   
 1.  패키지 및 패키지에 속한 태스크에 대해 로깅을 사용하도록 설정합니다. 로깅은 패키지, 컨테이너 및 태스크 수준에서 발생할 수 있습니다. 패키지, 컨테이너 및 태스크에 대해 서로 다른 로그를 지정할 수 있습니다.  
   
@@ -154,7 +167,7 @@ ms.locfileid: "62889815"
 ### <a name="configuration-of-log-provider"></a>로그 공급자 구성  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- 로그 공급자는 패키지에서 로깅을 구현하는 단계로 생성 및 구성됩니다. 자세한 내용은 [Integration Services 로깅](integration-services-ssis-logging.md)합니다.  
+ 로그 공급자는 패키지에서 로깅을 구현하는 단계로 생성 및 구성됩니다. 자세한 내용은 [Integration Services 로깅](integration-services-ssis-logging.md)을 참조 하세요.  
   
  로그 공급자를 만든 다음에는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 속성 창에서 해당 속성을 보고 수정할 수 있습니다.  
   
@@ -164,7 +177,8 @@ ms.locfileid: "62889815"
  데이터 흐름 태스크에서는 성능을 모니터링하고 조정하는 데 사용할 수 있는 여러 가지 사용자 지정 로그 항목을 제공합니다. 예를 들어 메모리 손실을 유발할 수 있는 구성 요소를 모니터링하거나 특정 구성 요소를 실행하는 데 소요되는 시간을 추적할 수 있습니다. 이러한 사용자 지정 로그 항목의 목록과 예제 로깅 출력은 [Data Flow Task](../control-flow/data-flow-task.md)을 참조하십시오.  
   
 #### <a name="use-the-pipelinecomponenttime-event"></a>PipelineComponentTime 이벤트 사용  
- 가장 유용한 사용자 지정 로그 항목은 PipelineComponentTime 이벤트일 수 있습니다. 이 로그 항목은 5개의 각 주요 처리 단계에서 데이터 흐름의 각 구성 요소에 소요된 시간(밀리초)을 보고합니다. 다음 표에서는 이러한 처리 단계에 대해 설명합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 개발자는 이러한 단계를 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>을 참조하세요.  
+ 가장 유용한 사용자 지정 로그 항목은 PipelineComponentTime 이벤트일 수 있습니다. 이 로그 항목은 5개의 각 주요 처리 단계에서 데이터 흐름의 각 구성 요소에 소요된 시간(밀리초)을 보고합니다. 다음 표에서는 이러한 처리 단계에 대해 설명합니다. 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 개발자는 이러한 단계를 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>을 참조하세요.  
   
 |단계|Description|  
 |----------|-----------------|  
@@ -212,9 +226,9 @@ ms.locfileid: "62889815"
 -   [이벤트 로그 창에서 로그 항목 보기](../view-log-entries-in-the-log-events-window.md)  
   
 ## <a name="related-content"></a>관련 내용  
- [전체 및 세부 정보 로깅을 위한 DTLoggedExec 도구(CodePlex 프로젝트)](https://go.microsoft.com/fwlink/?LinkId=150579)  
+ [전체 및 자세한 로깅에 대 한 로깅을 위한 dtloggedexec 도구 (CodePlex 프로젝트)](https://go.microsoft.com/fwlink/?LinkId=150579)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [이벤트 로그 창에서 로그 항목 보기](../view-log-entries-in-the-log-events-window.md)  
   
   

@@ -18,24 +18,24 @@ ms.assetid: 790e46a2-13d2-451e-a8be-130bd9a206a4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e832ec871a353b994c1858bb01a2a2ab557f3869
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917313"
 ---
 # <a name="recordtype-property-ado"></a>RecordType 속성(ADO)
-유형을 나타냅니다 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체입니다.  
+[Record](../../../ado/reference/ado-api/record-object-ado.md) 개체의 유형을 나타냅니다.  
   
-## <a name="return-value"></a>반환 값  
- 반환 된 [RecordTypeEnum](../../../ado/reference/ado-api/recordtypeenum.md) 값입니다.  
+## <a name="return-value"></a>Return Value  
+ [RecordTypeEnum](../../../ado/reference/ado-api/recordtypeenum.md) 값을 반환 합니다.  
   
 ## <a name="remarks"></a>설명  
- 합니다 **RecordType** 속성은 읽기 전용입니다.  
+ **RecordType** 속성은 읽기 전용입니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [레코드 개체(ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Type 속성 (ADO)](../../../ado/reference/ado-api/type-property-ado.md)   
  [Type 속성(ADO 스트림)](../../../ado/reference/ado-api/type-property-ado-stream.md)

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2dfc75b2af19165931dc50e76f04bc7362b59ea8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873054"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>DAC를 사용 하여 데이터베이스 배포
@@ -78,65 +78,69 @@ ms.locfileid: "62873054"
   
     -   [결과](#Results)  
   
-##  <a name="Introduction"></a> 소개 페이지  
+##  <a name="Introduction"></a>소개 페이지  
  이 페이지에서는 **데이터베이스 배포** 마법사의 단계를 설명합니다.  
   
  **옵션**  
   
 -   **이 페이지를 다시 표시 안 함** - 앞으로 소개 페이지가 표시되지 않도록 하려면 이 확인란을 클릭합니다.  
   
--   **다음** - **배포 설정** 페이지로 진행합니다.  
+-   **다음** - **배포 설정** 페이지로 진행 합니다.  
   
--   **취소** - 작업을 취소하고 마법사를 닫습니다.  
+-   **취소** -작업을 취소 하 고 마법사를 닫습니다.  
   
-##  <a name="Deployment_settings"></a> 배포 설정 페이지  
+##  <a name="Deployment_settings"></a>배포 설정 페이지  
  이 페이지에서는 대상 서버를 지정하고 새 데이터베이스에 대한 세부 정보를 제공할 수 있습니다.  
   
  **로컬 호스트:**  
   
--   **서버 연결** – 서버 연결 세부 정보를 지정한 다음, **연결** 을 클릭하여 연결을 확인합니다.  
+-   **서버 연결** -서버 연결 정보를 지정한 다음 연결 **을 클릭 하 여 연결을 확인** 합니다.  
   
--   **새 데이터베이스 이름** – 새 데이터베이스 이름을 지정합니다.  
+-   **새 데이터베이스 이름** -새 데이터베이스의 이름을 지정 합니다.  
   
- **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 데이터베이스 설정:**  
+ **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]데이터베이스 설정:**  
   
--   **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 버전** – 드롭다운 메뉴에서 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 버전을 선택합니다.  
+-   버전-드롭다운 메뉴 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에서 버전을 선택 합니다. ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] **  
   
--   **최대 데이터베이스 크기** – 드롭다운 메뉴에서 최대 데이터베이스 크기를 선택합니다.  
+-   **최대 데이터베이스 크기** -드롭다운 메뉴에서 최대 데이터베이스 크기를 선택 합니다.  
   
  **기타 설정:**  
   
 -   BACPAC 아카이브 파일인 임시 파일의 로컬 디렉터리를 지정합니다. 지정된 위치에 파일이 만들어지고 작업이 완료된 후에도 해당 위치에 유지됩니다.  
   
-##  <a name="Summary"></a> 요약 페이지  
- 이 페이지에서 작업에 대해 지정한 원본 및 대상 설정을 검토할 수 있습니다. 지정한 설정을 사용하여 배포 작업을 완료하려면 **마침**을 클릭합니다. 배포 작업을 취소하고 마법사를 종료하려면 **취소**를 클릭합니다.  
+##  <a name="Summary"></a>요약 페이지  
+ 이 페이지에서 작업에 대해 지정한 원본 및 대상 설정을 검토할 수 있습니다. 지정한 설정을 사용하여 배포 작업을 완료하려면 **마침**을 클릭합니다. 배포 작업을 취소 하 고 마법사를 종료 하려면 **취소**를 클릭 합니다.  
   
-##  <a name="Progress"></a> 진행률 페이지  
+##  <a name="Progress"></a>진행률 페이지  
  이 페이지에는 작업 상태를 나타내는 진행률 표시줄이 표시됩니다. 자세한 상태를 보려면 **자세히 보기** 옵션을 클릭합니다.  
   
-##  <a name="Results"></a> 결과 페이지  
+##  <a name="Results"></a>결과 페이지  
  이 페이지에서는 배포 작업의 성공 또는 실패를 보고하고 각 작업의 결과를 보여 줍니다. 오류가 발생한 동작에는 모두 **결과** 열에 링크가 있습니다. 링크를 클릭하면 해당 동작의 오류에 대한 보고서가 표시됩니다.  
   
- **마침** 을 클릭하여 마법사를 닫습니다.  
+ **마침** 을 클릭 하 여 마법사를 닫습니다.  
   
 ## <a name="using-a-net-framework-application"></a>.Net Framework 애플리케이션 사용  
- **.Net Framework 응용 프로그램에서 DacStoreExport() 및 Import() 메서드를 사용하여 데이터베이스를 배포합니다.**  
+ **.Net Framework 응용 프로그램에서 DacStoreExport () 및 Import () 메서드를 사용 하 여 데이터베이스를 배포 합니다.**  
   
  코드 예제를 보려면 [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)에서 DAC 샘플 애플리케이션을 다운로드합니다.  
   
 1.  SMO Server 개체를 만든 후 이 개체를 배포할 데이터베이스를 포함하는 인스턴스 또는 서버로 설정합니다.  
   
-2.  `ServerConnection` 개체를 열고 동일한 인스턴스에 연결합니다.  
+2.  
+  `ServerConnection` 개체를 열고 동일한 인스턴스에 연결합니다.  
   
-3.  `Export` 형식의 `Microsoft.SqlServer.Management.Dac.DacStore` 메서드를 사용하여 데이터베이스를 BACPAC 파일로 내보냅니다. 내보낼 데이터베이스의 이름과 BACPAC 파일을 배치할 폴더의 경로를 지정합니다.  
+3.  
+  `Export` 형식의 `Microsoft.SqlServer.Management.Dac.DacStore` 메서드를 사용하여 데이터베이스를 BACPAC 파일로 내보냅니다. 내보낼 데이터베이스의 이름과 BACPAC 파일을 배치할 폴더의 경로를 지정합니다.  
   
 4.  SMO Server 개체를 만든 다음 대상 인스턴스 또는 서버로 설정합니다.  
   
-5.  `ServerConnection` 개체를 열고 동일한 인스턴스에 연결합니다.  
+5.  
+  `ServerConnection` 개체를 열고 동일한 인스턴스에 연결합니다.  
   
-6.  `Import` 형식의 `Microsoft.SqlServer.Management.Dac.DacStore` 메서드를 사용하여 BACPAC를 가져옵니다. 내보내기에 의해 생성되는 BACPAC 파일을 지정합니다.  
+6.  
+  `Import` 형식의 `Microsoft.SqlServer.Management.Dac.DacStore` 메서드를 사용하여 BACPAC를 가져옵니다. 내보내기에 의해 생성되는 BACPAC 파일을 지정합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 계층 응용 프로그램](data-tier-applications.md)   
  [데이터 계층 응용 프로그램 내보내기](export-a-data-tier-application.md)   
  [BACPAC 파일을 가져와 새 사용자 데이터베이스 만들기](import-a-bacpac-file-to-create-a-new-user-database.md)  

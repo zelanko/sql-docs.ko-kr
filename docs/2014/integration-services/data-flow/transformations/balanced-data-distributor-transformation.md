@@ -13,18 +13,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec61ee62bf952e64e746ae132ce6ee35c89d468a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770620"
 ---
 # <a name="balanced-data-distributor-transformation"></a>분산 데이터 배포자 변환
-  BDD(분산 데이터 배포자) 변환은 최신 CPU의 동시 처리 기능을 이용하며, 들어오는 행의 버퍼를 여러 스레드의 출력에 균일하게 분산합니다. BDD 구성 요소는 각 출력 경로에 별도의 스레드를 사용하여 다중 코어 또는 다중 프로세서 컴퓨터에서 SSIS 패키지의 성능을 향상시킵니다. BDD 구성 요소는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 기능 팩의 일부입니다. 다운로드 및 설치에서 [여기](https://go.microsoft.com/fwlink/p/?LinkId=391999)합니다.  
+  BDD(분산 데이터 배포자) 변환은 최신 CPU의 동시 처리 기능을 이용하며, 들어오는 행의 버퍼를 여러 스레드의 출력에 균일하게 분산합니다. BDD 구성 요소는 각 출력 경로에 별도의 스레드를 사용하여 다중 코어 또는 다중 프로세서 컴퓨터에서 SSIS 패키지의 성능을 향상시킵니다. BDD 구성 요소는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 기능 팩의 일부입니다. 
+  [여기](https://go.microsoft.com/fwlink/p/?LinkId=391999)에서 다운로드하여 설치합니다.  
   
  다음 다이어그램에서는 BDD 변환을 사용하는 간단한 예를 보여 줍니다. 이 예에서 BDD 변환은 플랫 파일 원본의 입력 데이터에서 파이프라인 버퍼를 한 번에 하나씩 선택하여 라운드 로빈 방식으로 세 출력 경로 중 하나로 보냅니다. 데이터 흐름 태스크의 속성을 보여주는 SQL Server Data Tools의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.DefaultBufferSize%2A>창에서 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.DefaultBufferMaxRows%2A>(파이프라인 버퍼의 기본 크기) 및 **DefaultBufferMaxRows** (파이프라인 버퍼의 기본 최대 행 수)의 값을 확인할 수 있습니다.  
   
- ![균형 있는 데이터 배포자](../../media/balanceddatadistributor.JPG "균형 있는 데이터 배포자")  
+ ![분산 데이터 배포자](../../media/balanceddatadistributor.JPG "분산 데이터 배포자")  
   
  분산 데이터 배포자 변환은 다음 조건을 충족하는 시나리오에서 패키지의 성능을 향상시키는 데 도움이 됩니다.  
   

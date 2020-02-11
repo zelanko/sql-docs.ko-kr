@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5f3c354a36f5a3a62120ecc40a815420393648c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62811547"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>여러 TCP 포트에서 수신하도록 데이터베이스 엔진 구성
@@ -74,22 +74,22 @@ ms.locfileid: "62811547"
   
 #### <a name="to-configure-the-sql-server-database-engine-to-listen-on-an-additional-tcp-port"></a>추가 TCP 포트로 수신하도록 SQL Server 데이터베이스 엔진을 구성하려면  
   
-1.  SQL Server 구성 관리자에서 **SQL Server 네트워크 구성**을 확장한 다음 _<instance_name>_**에 대한 프로토콜**을 클릭합니다.  
+1.  SQL Server 구성 관리자에서 **SQL Server 네트워크 구성**을 확장한 다음 **<instance_name>** _에 대한 프로토콜_을 클릭합니다.  
   
-2.  _<instance_name>_**에 대한 프로토콜**을 확장한 다음 **TCP/IP**를 클릭합니다.  
+2.  **<instance_name>** _에 대한 프로토콜_을 확장한 다음 **TCP/IP**를 클릭합니다.  
   
 3.  오른쪽 창에서 설정하려는 해제된 각 IP 주소를 마우스 오른쪽 단추로 클릭한 다음 **설정**을 클릭합니다.  
   
 4.  **IPAll**을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-5.  **TCP 포트** 상자에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 수신하려는 포트를 쉼표로 구분하여 입력합니다. 예제에서는 기본 포트 1433이 나열 된 경우 입력 `,1500` 상자에서 읽고 있으므로 `1433,1500`를 클릭 하 고 **확인**합니다.  
+5.  **TCP 포트** 상자에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 수신하려는 포트를 쉼표로 구분하여 입력합니다. 이 예에서는 기본 포트 1433이 표시 되는 경우 상자에 `,1500` `1433,1500`를 입력 하 고 **확인**을 클릭 합니다.  
   
     > [!NOTE]  
     >  모든 IP 주소에 대한 포트를 설정하지 않으려면 원하는 주소에 대해서만 속성 상자에서 추가 포트로 구성하세요. 그런 다음 콘솔 창에서 **TCP/IP**를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭한 다음 **모두 수신합니다** 상자에서 **아니요**를 선택합니다.  
   
 6.  왼쪽 창에서 **SQL Server 서비스**를 클릭하고  
   
-7.  오른쪽 창에서 **SQL Server**_<instance_name>_ 을 마우스 오른쪽 단추로 클릭한 다음 **다시 시작**을 클릭합니다.  
+7.  오른쪽 창에서 **SQL Server** _<instance_name>_ 을 마우스 오른쪽 단추로 클릭한 다음 **다시 시작**을 클릭합니다.  
   
      [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 다시 시작하면 오류 로그에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 수신 중인 포트 목록이 표시됩니다.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "62811547"
     sqlcmd -SACCT,1500  
     ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [CREATE ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)   
  [DROP ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-endpoint-transact-sql)   
  [GRANT 엔드포인트 사용 권한&#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)   

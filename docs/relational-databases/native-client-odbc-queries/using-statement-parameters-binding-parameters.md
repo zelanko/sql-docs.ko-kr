@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 340a3a0f44201c81eafe8717962b2894709eb65d
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73779529"
 ---
 # <a name="using-statement-parameters---binding-parameters"></a>문 매개 변수 사용 - 매개 변수 바인딩
@@ -49,9 +49,10 @@ ms.locfileid: "73779529"
   
      행 단위 바인딩은 *특성* 을 SQL_ATTR_PARAM_BIND_TYPE로 설정 하 고 *valueptr* 을 프로그램 변수를 포함 하는 구조체의 크기로 설정 하 여 **SQLSetStmtAttr** 를 호출 하 여 지정 합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 문자 또는 이진 문자열 매개 변수를 서버에 보낼 때 **SQLBindParameter** *columnsize* 매개 변수에 지정 된 길이까지 값을 채웁니다. ODBC 2.x 응용 프로그램에서 *Columnsize*에 대해 0을 지정 하는 경우 드라이버는 매개 변수 값을 데이터 형식의 전체 자릿수로 채웁니다. 전체 자릿수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버에 연결할 경우 8000이고 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결할 경우 255입니다. *Columnsize* 는 변형 열의 경우 바이트 단위입니다.  
+ Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버는 문자 또는 이진 문자열 매개 변수를 서버에 보낼 때 **SQLBindParameter** *columnsize* 매개 변수에 지정 된 길이까지 값을 채웁니다. ODBC 2.x 응용 프로그램에서 *Columnsize*에 대해 0을 지정 하는 경우 드라이버는 매개 변수 값을 데이터 형식의 전체 자릿수로 채웁니다. 전체 자릿수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버에 연결할 경우 8000이고 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결할 경우 255입니다. *Columnsize* 는 변형 열의 경우 바이트 단위입니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 저장 프로시저 매개 변수의 이름 정의를 지원합니다. ODBC 3.5에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저를 호출할 때 사용되는 명명된 매개 변수에 대한 지원이 도입되었습니다. 이 지원을 통해 다음을 수행할 수 있습니다.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 저장 프로시저 매개 변수의 이름 정의를 지원합니다. ODBC 3.5에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저를 호출할 때 사용되는 명명된 매개 변수에 대한 지원이 도입되었습니다. 이 지원을 통해 다음을 수행할 수 있습니다.  
   
 -   저장 프로시저를 호출하고 저장 프로시저에 대해 정의된 매개 변수의 하위 집합에 대한 값을 제공할 수 있습니다.  
   
@@ -59,9 +60,9 @@ ms.locfileid: "73779529"
   
  명명 된 매개 변수는 [!INCLUDE[tsql](../../includes/tsql-md.md)] **execute** 문 또는 ODBC CALL 이스케이프 시퀀스를 사용 하 여 저장 프로시저를 실행 하는 경우에만 지원 됩니다.  
   
- 저장 프로시저 매개 변수에 대 한 **SQL_DESC_NAME** 설정 된 경우 쿼리의 모든 저장 프로시저 매개 변수는 **SQL_DESC_NAME**도 설정 해야 합니다.  매개 변수가 **SQL_DESC_NAME** 설정 된 저장 프로시저 호출에 리터럴이 사용 되는 경우 리터럴은 *' name*=*value*' 형식을 사용 해야 합니다. 여기서 *name* 은 저장 프로시저 매개 변수 이름입니다 (예: @p1). 자세한 내용은 [이름으로 매개 변수 바인딩 (명명 된 매개 변수)](https://go.microsoft.com/fwlink/?LinkId=167215)을 참조 하세요.  
+ 저장 프로시저 매개 변수에 대 한 **SQL_DESC_NAME** 설정 된 경우 쿼리의 모든 저장 프로시저 매개 변수는 **SQL_DESC_NAME**도 설정 해야 합니다.  매개 변수가 **SQL_DESC_NAME** 설정 된 저장 프로시저 호출에 리터럴이 사용 되는 경우 리터럴은 *' name*=*value*' 형식을 사용 해야 합니다. 여기서 *name* 은 저장 프로시저 매개 변수 이름 (예: @p1)입니다. 자세한 내용은 [이름으로 매개 변수 바인딩 (명명 된 매개 변수)](https://go.microsoft.com/fwlink/?LinkId=167215)을 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [문 매개 변수 사용](../../relational-databases/native-client-odbc-queries/using-statement-parameters.md)  
   
   

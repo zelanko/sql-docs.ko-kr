@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6d9fb152507979232d27308d107278d4b6d3bccb
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243202"
 ---
 # <a name="run-transact-sql-script-files-using-sqlcmd"></a>sqlcmd를 사용하여 Transact-SQL 스크립트 파일 실행
@@ -26,8 +26,7 @@ ms.locfileid: "75243202"
   
  메모장을 사용하여 간단한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 파일을 만들려면 다음 단계를 따르십시오.  
   
-1.  
-  **시작**을 클릭하고 **모든 프로그램**, **보조프로그램**을 차례로 가리킨 다음 **메모장**을 클릭합니다.  
+1.  **시작**을 클릭하고 **모든 프로그램**, **보조프로그램**을 차례로 가리킨 다음 **메모장**을 클릭합니다.  
   
 2.  다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 복사하여 메모장에 붙여 넣습니다.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "75243202"
   
 2.  명령 프롬프트 창에서 `sqlcmd -S myServer\instanceName -i C:\myScript.sql`을 입력합니다.  
   
-3.  ENTER 키를 누릅니다.  
+3.  Enter 키를 누릅니다.  
   
  명령 프롬프트 창에 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 직원의 이름 및 주소 목록이 출력됩니다.  
   
@@ -64,12 +63,12 @@ ms.locfileid: "75243202"
   
 2.  명령 프롬프트 창에서 `sqlcmd -S myServer\instanceName -i C:\myScript.sql -o C:\EmpAdds.txt`을 입력합니다.  
   
-3.  ENTER 키를 누릅니다.  
+3.  Enter 키를 누릅니다.  
   
  출력이 명령 프롬프트 창에 반환되는 대신 EmpAdds.txt 파일에 보내집니다. EmpAdds.txt 파일을 열어서 이 출력을 확인할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Sqlcmd 유틸리티 시작](sqlcmd-start-the-utility.md)   
+ [sqlcmd 유틸리티 시작](sqlcmd-start-the-utility.md)   
  [sqlcmd 유틸리티](../../tools/sqlcmd-utility.md)  
   
   

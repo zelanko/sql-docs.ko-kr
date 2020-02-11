@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: ef03354afd3aa2318317ca4c946463a5b7355c12
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727523"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services에서 Python 개발을 위한 데이터 과학 클라이언트 설정
@@ -57,7 +57,7 @@ SSMS는 Python 코드를 포함하는 저장 프로시저를 포함하여 SQL Se
 
 2. 관리자 권한으로 PowerShell 창을 엽니다(**관리자 권한으로 실행**을 마우스 오른쪽 단추 클릭).
 
-3. 설치 프로그램을 다운로드한 폴더로 이동하여 스크립트를 실행합니다. `-InstallFolder` 명령줄 인수를 추가하여 라이브러리의 폴더 위치를 지정합니다. 예를 들어 
+3. 설치 프로그램을 다운로드한 폴더로 이동하여 스크립트를 실행합니다. `-InstallFolder` 명령줄 인수를 추가하여 라이브러리의 폴더 위치를 지정합니다. 다음은 그 예입니다. 
 
    ```python
    cd {{download-directory}}
@@ -258,7 +258,7 @@ display.Image(data=image)
 
 개발자가 여러 버전의 Python에서 자주 작업하므로 설치 프로그램은 Python을 경로에 추가하지 않습니다. 설치 프로그램에서 설치된 Python 실행 파일과 라이브러리를 사용하려면 IDE를 **revoscalepy** 및 **microsoftml**을 제공하는 경로의 **Python.exe**에 연결합니다. 
 
-### <a name="command-line"></a>패키지 실행 유틸리티
+### <a name="command-line"></a>명령 줄
 
 C:\Program Files\Microsoft\PyForMLS(또는 Python 클라이언트 라이브러리 설치에 지정한 위치)에서 **Python.exe**를 실행하면 전체 Anaconda 배포 및 Microsoft Python 모듈인 **revoscalepy** 및 **microsoftml**에 액세스할 수 있습니다.
 
@@ -283,7 +283,7 @@ C:\Program Files\Microsoft\PyForMLS 상위 폴더에는 Anaconda 및 Microsoft �
 
 [Visual Studio에 Python](https://code.visualstudio.com/docs/languages/python)이 있는 경우 다음 구성 옵션을 사용하여 Microsoft Python 패키지가 포함된 Python 환경을 만듭니다.
 
-| 구성 설정 | value |
+| 구성 설정 | 값 |
 |-----------------------|-------|
 | **접두사 경로** | C:\Program Files\Microsoft\PyForMLS |
 | **인터프리터 경로** | C:\Program Files\Microsoft\PyForMLS\python.exe |

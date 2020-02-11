@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cc83aca49b6147835353538d809be121756ecda6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072399"
 ---
 # <a name="print-transact-sql"></a>PRINT(Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68072399"
 
   사용자 정의 메시지를 클라이언트에게 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -53,7 +53,7 @@ PRINT msg_str | @local_variable | string_expr
  *string_expr*  
  문자열을 반환하는 식입니다. 연결된 리터럴 값, 함수 및 변수를 포함할 수 있습니다. 자세한 내용은 [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)을 참조하세요.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  메시지 문자열은 비유니코드 문자열일 경우 최대 8,000자까지 가능하며 유니코드 문자열일 경우 최대 4,000자까지 가능합니다. 이보다 긴 문자열은 잘립니다. **varchar(max)** 및 **nvarchar(max)** 데이터 형식은 **varchar(8000)** 및 **nvarchar(4000)** 보다 크지 않은 데이터 형식으로 잘립니다.  
   
  RAISERROR를 사용하여 메시지를 반환할 수도 있습니다. RAISERROR는 PRINT에 비해 3가지 장점이 있습니다.  
@@ -66,7 +66,7 @@ PRINT msg_str | @local_variable | string_expr
   
 ## <a name="examples"></a>예  
   
-### <a name="a-conditionally-executing-print-if-exists"></a>1\. 조건에 따라 실행되는 PRINT 문(IF EXISTS)  
+### <a name="a-conditionally-executing-print-if-exists"></a>A. 조건에 따라 실행되는 PRINT 문(IF EXISTS)  
  다음 예에서는 `PRINT` 문을 사용하여 조건에 따라 메시지를 반환합니다.  
   
 ```  
@@ -77,7 +77,7 @@ ELSE
 GO  
 ```  
   
-### <a name="b-building-and-displaying-a-string"></a>2\. 문자열 만들기 및 표시  
+### <a name="b-building-and-displaying-a-string"></a>B. 문자열 만들기 및 표시  
  다음 예에서는 `GETDATE` 함수의 결과를 `nvarchar` 데이터 형식으로 변환하고 `PRINT`에서 반환되도록 리터럴 텍스트와 연결합니다.  
   
 ```  
@@ -98,7 +98,7 @@ PRINT @PrintMessage;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-conditionally-executing-print"></a>C. 조건에 따라 실행되는 PRINT 문  
  다음 예에서는 `PRINT` 문을 사용하여 조건에 따라 메시지를 반환합니다.  

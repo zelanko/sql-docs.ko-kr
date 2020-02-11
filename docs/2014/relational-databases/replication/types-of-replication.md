@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4dd5d28bb3b40417ab9c16b957b48db04f44599f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255451"
 ---
 # <a name="types-of-replication"></a>복제 유형
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 분산 응용 프로그램에서 사용할 수 있는 다음 유형의 복제를 제공합니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 분산 응용 프로그램에서 사용할 복제 유형을 다음과 같이 제공 합니다.  
   
 -   트랜잭션 복제. 자세한 내용은 [트랜잭션 복제](transactional/transactional-replication.md)를 참조하세요.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "63255451"
   
  스냅샷 복제에 대한 데이터 변경 내용은 추적되지 않으며 스냅샷이 적용될 때마다 이 스냅샷은 기존 데이터를 완전히 덮어씁니다. 트랜잭션 복제는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션 로그를 통해 변경 내용을 추적하고 병합 복제는 트리거 및 메타데이터 테이블을 통해 변경 내용을 추적합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [복제 에이전트 개요](agents/replication-agents-overview.md)  
   
   

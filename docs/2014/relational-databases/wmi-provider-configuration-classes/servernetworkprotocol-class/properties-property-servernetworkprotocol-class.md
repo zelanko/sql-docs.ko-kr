@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 985be289be2bd3a362babeec1235dc594acb6bff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62470080"
 ---
 # <a name="properties-property-servernetworkprotocol-class"></a>Properties 속성(ServerNetworkProtocol 클래스)
@@ -37,11 +37,12 @@ object
 ```  
   
 ## <a name="parts"></a>부분  
- *object*  
- [인스턴스에서 사용하는 네트워크 프로토콜을 나타내는](servernetworkprotocol-class.md) ServerNetworkProtocol 클래스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]개체입니다.  
+ *개체가*  
+ 
+  [인스턴스에서 사용하는 네트워크 프로토콜을 나타내는](servernetworkprotocol-class.md) ServerNetworkProtocol 클래스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  서버 네트워크 프로토콜에서 지원하는 속성을 나타내는 [ServerNetworkProtocolProperty 클래스](../servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md) 개체의 배열입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   

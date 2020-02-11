@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bd614cc08e22b936c0f5f5468ded70d2adb9726f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62663208"
 ---
 # <a name="cursors-event-category"></a>Cursors 이벤트 범주
@@ -38,7 +38,7 @@ ms.locfileid: "62663208"
 |[CursorRecompile 이벤트 클래스](cursorrecompile-event-class.md)|API 커서에서 발생하는 커서 다시 컴파일 이벤트에 대해 설명합니다.|  
 |[CursorUnprepare 이벤트 클래스](cursorunprepare-event-class.md)|API 커서에서 발생하는 커서 준비 취소 이벤트에 대해 설명합니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [확장 이벤트](../extended-events/extended-events.md)  
   
   

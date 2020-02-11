@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d51814a2-ff7d-48ed-b719-99776da2091a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 0b81ad98725bb48fe03e472cdf5cfdbbf047aaef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ce3541843bc0eb82aa035864cd5c2490c4399ff5
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67965536"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76918402"
 ---
 # <a name="primarykey-and-unique-properties-example-vc"></a>PrimaryKey 및 Unique 속성 예제(VC++)
-이 예제에서는 합니다 [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) 및 [Unique](../../../ado/reference/adox-api/unique-property-adox.md) 의 속성을 [인덱스](../../../ado/reference/adox-api/index-object-adox.md)합니다. 코드는 두 개의 열을 사용 하 여 새 테이블을 만듭니다. 합니다 **PrimaryKey** 하 고 **Unique** 속성을 사용 하는 중복 값이 허용 되지 기본 키 열이 하나를 확인 합니다.  
+이 예에서는 [인덱스](../../../ado/reference/adox-api/index-object-adox.md)의 [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) 및 [Unique](../../../ado/reference/adox-api/unique-property-adox.md) 속성을 보여 줍니다. 이 코드는 두 개의 열이 있는 새 테이블을 만듭니다. **PrimaryKey** 및 **Unique** 속성은 중복 값이 허용 되지 않는 기본 키로 한 열을 만드는 데 사용 됩니다.  
   
 ```  
 // BeginPrimaryKeyCpp.cpp  
@@ -117,7 +117,7 @@ int main() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in PrimaryKeyX...." << endl;  
+      cout << "Error occurred in PrimaryKeyX...." << endl;  
    }  
   
    m_pCatalog = NULL;  

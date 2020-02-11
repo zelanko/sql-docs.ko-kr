@@ -13,18 +13,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 024f079d28c5ce144282bf09fff675fd308a8173
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243137"
 ---
 # <a name="transact-sql-breakpoints"></a>Transact-SQL 중단점
   중단점은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거가 특정 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 실행을 일시 중지하도록 지정하여 사용자가 해당 지점에 있는 코드 요소의 상태를 확인할 수 있게 해 줍니다.  
   
 ## <a name="breakpoints"></a>중단점  
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거를 실행하는 경우 특정 문에 대해 중단점을 설정/해제할 수 있습니다. 실행 중에 중단점이 있는 문에 도달하면 디버거는 변수 및 매개 변수 값과 같은 디버깅 정보를 볼 수 있도록 실행을 일시 중지합니다.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거를 실행하는 경우 특정 문에 대해 중단점을 설정/해제할 수 있습니다. 실행 중에 중단점이 있는 문에 도달하면 디버거는 변수 및 매개 변수 값과 같은 디버깅 정보를 볼 수 있도록 실행을 일시 중지합니다.  
   
  중단점은 편집기 창에서 개별적으로 관리하거나 **중단점** 창을 사용하여 전체적으로 관리할 수 있습니다. 실행을 일시 중지할 특정 조건, 중단점이 실행되는 경우에 수행할 동작 등과 같은 항목을 지정하여 중단점을 편집할 수 있습니다.  
   
@@ -41,6 +40,6 @@ ms.locfileid: "75243137"
 |중단점의 위치를 편집하는 방법에 대해 설명합니다.|[중단점 위치 편집](edit-a-breakpoint-location.md)|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql 디버거 정보](transact-sql-debugger-information.md)  
+ [Transact-SQL 디버거 정보](transact-sql-debugger-information.md)  
   
   

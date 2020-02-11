@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8b31b884e0f86bf2aebe4859cd1c7a441669e813
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905996"
 ---
 # <a name="isempty-mdx"></a>IsEmpty(MDX)
@@ -32,15 +32,15 @@ IsEmpty(Value_Expression)
  일반적으로 멤버나 튜플의 셀 좌표를 반환하는 유효한 MDX 식입니다.  
   
 ## <a name="remarks"></a>설명  
- 합니다 **IsEmpty** 함수에서 반환 **true** 평가 식이 빈 셀 값인 경우. 반환이 고, 그렇지 **false**합니다.  
+ **IsEmpty** 함수는 계산 된 식이 빈 셀 값인 경우 **true** 를 반환 합니다. 그렇지 않으면이 함수는 **false**를 반환 합니다.  
   
 > [!NOTE]  
 >  멤버의 기본 속성은 멤버의 값입니다.  
   
- 합니다 **IsEmpty** 함수는 빈 셀 값에서 특별 한 의미를 갖기 때문에 빈 셀을 안정적으로 테스트 하는 유일한 방법은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]합니다.  
+ **IsEmpty** 함수는 빈 셀 값이에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]특수 한 의미를 갖기 때문에 빈 셀을 안정적으로 테스트 하는 유일한 방법입니다.  
   
 > [!IMPORTANT]  
->  값 식의 계산 오류를 반환, 함수는 반환 **false**합니다. 예를 들어 속성 참조가 잘못된 속성이나 존재하지 않는 속성을 참조하는 경우 값 식에서 오류가 반환될 수 있습니다.  
+>  값 식의 계산에서 오류를 반환 하는 경우이 함수는 **false**를 반환 합니다. 예를 들어 속성 참조가 잘못된 속성이나 존재하지 않는 속성을 참조하는 경우 값 식에서 오류가 반환될 수 있습니다.  
   
  빈 셀에 대한 자세한 내용은 OLE DB 설명서를 참조하십시오.  
   
@@ -57,8 +57,8 @@ IsEmpty(Value_Expression)
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [빈 값 작업](../mdx/working-with-empty-values.md)   
- [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

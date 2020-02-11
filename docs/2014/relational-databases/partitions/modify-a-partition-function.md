@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0d43e86596e30352286cb94e8994177247856a7c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206979"
 ---
 # <a name="modify-a-partition-function"></a>파티션 함수 수정
@@ -33,7 +33,7 @@ ms.locfileid: "68206979"
   
 -   **다음을 사용하여 파티션 함수 수정**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "68206979"
   
 -   ALTER PARTITION FUNCTION은 한 파티션을 둘로 분할하거나 두 파티션을 하나로 병합하는 데만 사용할 수 있습니다. 10개의 파티션을 5개로 줄이는 것과 같이 테이블이나 인덱스가 분할되는 방식을 변경하려면 다음 옵션 중 하나를 사용합니다.  
   
-    -   원하는 파티션 함수가 있는 분할된 테이블을 새로 만든 다음 INSERT INTO ... SELECT FROM [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **파티션 관리 마법사**를 사용하여 이전 테이블의 데이터를 새 테이블에 삽입합니다.  
+    -   원하는 파티션 함수가 있는 분할된 테이블을 새로 만든 다음 INSERT INTO ... SELECT FROM [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 **의** 파티션 관리 마법사 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 이전 테이블의 데이터를 새 테이블에 삽입합니다.  
   
     -   힙에 분할된 클러스터형 인덱스를 만듭니다.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "68206979"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  ALTER PARTITION FUNCTION을 실행하려면 다음 중 하나의 권한이 필요합니다.  
   
 -   ALTER ANY DATASPACE 권한. 이 권한은 기본적으로 **sysadmin** 고정 서버 역할 및 **db_owner** 및 **db_ddladmin** 고정 데이터베이스 역할의 멤버에게 부여됩니다.  

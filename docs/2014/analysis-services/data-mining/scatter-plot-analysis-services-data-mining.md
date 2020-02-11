@@ -1,5 +1,5 @@
 ---
-title: 산 점도 (Analysis Services-데이터 마이닝) | Microsoft Docs
+title: 산 점도 (Analysis Services 데이터 마이닝) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,13 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d3319b72f1c3b37805a653d1f315aa0a3363521a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082937"
 ---
 # <a name="scatter-plot-analysis-services---data-mining"></a>산점도(Analysis Services - 데이터 마이닝)
+  
   *산점도* 는 모델로 예측되는 값과 데이터의 실제 값을 비교하여 그래프로 표시합니다. 산점도에서 실제 값은 X축을 따라 표시되고 예측 값은 Y축을 따라 표시됩니다. 또한 예측 값과 실제 값이 정확하게 일치하는 완벽한 예측을 보여 주는 선이 표시됩니다. 이 이상적인 45도 각도 선으로부터 점의 거리는 예측의 정확도를 나타냅니다.  
   
 ## <a name="understanding-the-scatter-plot"></a>산점도 이해  
@@ -31,7 +32,7 @@ ms.locfileid: "66082937"
 ## <a name="interpreting-the-results"></a>결과 해석  
  다음 다이어그램에서는 방금 설명한 시나리오에 맞게 만든 산점도의 예를 보여 줍니다.  
   
- ![선형 회귀에 대 한 산 점도의 예](../media/scatterplot-callctr.gif "선형 회귀에 대 한 산 점도의 예")  
+ ![선형 회귀에 대한 산점도의 예](../media/scatterplot-callctr.gif "선형 회귀에 대한 산점도의 예")  
   
  선 주위에 흩어져 있는 임의의 점 위에 마우스를 놓으면 도구 설명에 예측 값 및 실제 값이 표시됩니다. 산점도에 대한 **마이닝 범례** 는 없지만 차트 자체에 모델과 관련된 점수를 표시하는 범례가 포함되어 있습니다. 점수를 해석하는 방법에 대한 자세한 내용은 [선형 회귀 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)를 참조하세요.  
   
@@ -45,14 +46,14 @@ ms.locfileid: "66082937"
 ## <a name="related-content"></a>관련 내용  
  다음 항목에는 산점도와 관련 정확도 차트를 만들고 사용하는 방법에 대한 자세한 내용이 나와 있습니다.  
   
-|항목|링크|  
+|토픽|링크|  
 |------------|-----------|  
-|타겟 메일링 모델에 대한 리프트 차트를 만드는 방법을 보여 주는 연습을 제공합니다.|[기본 데이터 마이닝 자습서](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [리프트 차트를 사용하여 정확도 테스트&#40;기본 데이터 마이닝 자습서&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
-|관련 차트 종류에 대해 설명합니다.|[리프트 차트&#40;Analysis Services - 데이터 마이닝&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [수익 차트&#40;Analysis Services - 데이터 마이닝&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [분류표&#40;Analysis Services - 데이터 마이닝&#41;](classification-matrix-analysis-services-data-mining.md)|  
-|마이닝 모델 및 마이닝 구조에 대한 교차 유효성 검사의 용도를 설명합니다.|[교차 유효성 검사&#40;Analysis Services - 데이터 마이닝&#41;](cross-validation-analysis-services-data-mining.md)|  
-|리프트 차트 및 기타 정확도 차트를 만드는 단계를 설명합니다.|[테스트 및 유효성 검사 태스크 및 방법&#40;데이터 마이닝&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|타겟 메일링 모델에 대한 리프트 차트를 만드는 방법을 보여 주는 연습을 제공합니다.|[기본 데이터 마이닝 자습서](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [리프트 차트를 사용 하 여 정확도 테스트 &#40;기본 데이터 마이닝 자습서&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
+|관련 차트 종류에 대해 설명합니다.|[리프트 차트 &#40;Analysis Services-데이터 마이닝&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [수익 차트 &#40;Analysis Services 데이터 마이닝&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [분류표 &#40;Analysis Services 데이터 마이닝&#41;](classification-matrix-analysis-services-data-mining.md)|  
+|마이닝 모델 및 마이닝 구조에 대한 교차 유효성 검사의 용도를 설명합니다.|[교차 유효성 검사 &#40;Analysis Services 데이터 마이닝&#41;](cross-validation-analysis-services-data-mining.md)|  
+|리프트 차트 및 기타 정확도 차트를 만드는 단계를 설명합니다.|[테스트 및 유효성 검사 태스크 및 방법 &#40;데이터 마이닝&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
-## <a name="see-also"></a>관련 항목  
- [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](testing-and-validation-data-mining.md)  
+## <a name="see-also"></a>참고 항목  
+ [데이터 마이닝&#41;&#40;테스트 및 유효성 검사](testing-and-validation-data-mining.md)  
   
   

@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 05a8d7a7777731ba23cba08c8f8ba48489231d48
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73780926"
 ---
 # <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>ODBC 드라이버 성능 데이터 프로파일링 - 장기 실행 쿼리 기록
@@ -36,7 +36,8 @@ ms.locfileid: "73780926"
   
 3.  장기 실행 쿼리를 기록할 데이터 원본을 클릭합니다.  
   
-4.  **구성**을 클릭 합니다.  
+4.  
+  **구성**을 클릭합니다.  
   
 5.  Microsoft SQL Server DSN 구성 마법사에서 **장기 실행 쿼리를 로그 파일에 저장**하는 페이지로 이동 합니다.  
   
@@ -46,7 +47,7 @@ ms.locfileid: "73780926"
 
 ### <a name="to-log-long-running-queries-data-programmatically"></a>장기 실행 쿼리 데이터를 프로그래밍 방식으로 기록하려면  
   
-1.  SQL_COPT_SS_PERF_QUERY_LOG와 장기 실행 쿼리 로그 파일의 전체 경로 및 파일 이름을 사용 하 여 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 를 호출 합니다. 예를 들어  
+1.  SQL_COPT_SS_PERF_QUERY_LOG와 장기 실행 쿼리 로그 파일의 전체 경로 및 파일 이름을 사용 하 여 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 를 호출 합니다. 다음은 그 예입니다.  
   
     ```  
     C:\\Odbcqry.log  
@@ -218,7 +219,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [ODBC 드라이버 성능 프로 파일링 방법 항목 &#40;odbc&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+## <a name="see-also"></a>참고 항목  
+ [ODBC 드라이버 성능 프로 파일링 방법 항목 ODBC&#41;&#40;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 2412bfb8bcd3cacc2db2702879353b92e328b09a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727389"
 ---
 # <a name="what-are-standalone-machine-learning-server-or-r-server-in-sql-server"></a>SQL Server의 독립 실행형 Machine Learning Server 또는 R Server란?
@@ -30,7 +30,7 @@ SQL Server 2016에서는 이 기능을 **R Server(독립 실행형)** 라고 하
 
 SQL Server 2016은 R 전용입니다. SQL Server 2017은 R과 Python을 지원합니다. 다음 표에서는 각 버전의 기능을 설명합니다.
 
-| 구성 요소 | 설명 |
+| 구성 요소 | Description |
 |-----------|-------------|
 | R 패키지 | [**RevoScaleR**](ref-r-revoscaler.md)은 데이터 조작, 변환, 시각화 및 분석 기능을 제공하는 확장 가능한 R의 기본 라이브러리입니다.  <br/>[**MicrosoftML**](ref-r-microsoftml.md)은 텍스트 분석, 이미지 분석 및 감정 분석을 위한 사용자 지정 모델을 만들기 위한 기계 학습 알고리즘을 추가합니다. <br/>[**sqlRUtils**](ref-r-sqlrutils.md)는 R 스크립트를 T-SQL 저장 프로시저에 배치하고, 저장 프로시저를 데이터베이스에 등록하고, R 개발 환경에서 저장 프로시저를 실행할 수 있는 도우미 함수를 제공합니다.<br/>[**mrsdeploy**](operationalization-with-mrsdeploy.md)는 웹 서비스 배포를 제공합니다(SQL Server 2017만 해당). <br/>[**olapR**](ref-r-olapr.md)은 R에서 MDX 쿼리를 지정하는 데 사용됩니다.|
 | Microsoft R Open(MRO) | [**MRO**](https://mran.microsoft.com/open)는 Microsoft의 오픈 소스 R 배포판입니다. 패키지와 인터프리터가 포함되어 있습니다. 항상 설치 프로그램에 번들로 제공되는 MRO 버전을 사용합니다. |
@@ -90,7 +90,7 @@ SQL Server는 정기적으로 누적 업데이트가 출시됩니다. 누적 업
 
 기존 인스턴스에 업데이트를 적용하는 방법에 대한 자세한 내용은 설치 지침의 [업데이트 적용](../install/sql-machine-learning-standalone-windows-install.md#apply-cu)을 참조하세요.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
  [R Server(독립 실행형) 또는 Machine Learning Server(독립 실행형) 설치](../install/sql-machine-learning-standalone-windows-install.md)
 
