@@ -22,14 +22,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a1d79bb3810a56e8a1769845131312eab306f223
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084423"
 ---
 # <a name="feature-selection-data-mining"></a>기능 선택(데이터 마이닝)
-  *기능 선택* 도구와 입력 처리 및 분석을 위해 관리 하기 쉬운 크기로 줄이는 데 사용할 수 있는 기법을 설명 하기 위해 데이터 마이닝에서 일반적으로 사용 하는 용어입니다. 기능 선택은 뿐 아니라 *카디널리티 감소가*, 즉, 모델 뿐만 아니라 특성, 즉 선택 빌드할 때 고려할 수 있는 특성의 수에는 임의의 또는 미리 정의 된 구분 나아가 분석가 또는 모델링 도구가 적극적으로 선택 하거나 분석의 유용성을 기반으로 특성을 삭제 합니다.  
+  *기능 선택* 은 처리 및 분석을 위해 입력을 관리 하기 쉬운 크기로 줄이는 데 사용할 수 있는 도구와 기법을 설명 하기 위해 데이터 마이닝에 일반적으로 사용 되는 용어입니다. 기능 선택은 모델을 작성할 때 고려할 수 있는 특성의 수에 대해 임의 또는 미리 정의 된 *구분을 설정*하는 것을 의미 하며,이는 분석가 또는 모델링 도구가 분석에 대 한 유용성을 기준으로 적극적으로 특성을 선택 하거나 삭제 하는 특성을 선택 하는 것을 의미 합니다.  
   
  데이터 세트에는 모델을 작성하는 데 필요한 것보다 훨씬 많은 정보가 자주 포함되기 때문에 기능 선택을 적용하는 기능은 효과적인 분석에 중요합니다. 예를 들어, 데이터 세트에 고객의 특성을 설명하는 열이 500개 있지만 일부 열에 데이터가 매우 드물 경우 해당 열을 모델에 추가하여 얻는 이점이 거의 없을 수 있습니다. 모델을 작성하는 동안 불필요한 열을 그대로 둘 경우 학습 프로세스에 더 많은 CPU와 메모리가 필요하고 완료된 모델에 더 많은 스토리지 공간이 필요합니다.  
   
@@ -44,7 +44,8 @@ ms.locfileid: "66084423"
 ## <a name="feature-selection-in-analysis-services-data-mining"></a>Analysis Services 데이터 마이닝의 기능 선택  
  일반적으로 기능 선택은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 자동으로 수행되며 각 알고리즘에는 기능 축소를 지능형으로 적용하기 위한 기본 기술 집합이 있습니다. 기능 선택은 모델에 사용될 가능성이 가장 높은 특성을 데이터 세트에서 자동으로 선택하기 위해 모델을 학습하기 전에 항상 수행됩니다. 하지만 기능 선택 동작에 영향을 주는 매개 변수를 수동으로 설정할 수도 있습니다.  
   
- 일반적으로 기능 선택은 각 특성에 대한 점수를 계산한 다음 점수가 가장 높은 특성만 선택하는 방식으로 작동합니다. 최고 점수에 대한 임계값도 조정할 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 이러한 점수를 계산하기 위한 여러 방법을 제공하며 특정 모델에 적용되는 정확한 방법은 다음 요소에 따라 결정됩니다.  
+ 일반적으로 기능 선택은 각 특성에 대한 점수를 계산한 다음 점수가 가장 높은 특성만 선택하는 방식으로 작동합니다. 최고 점수에 대한 임계값도 조정할 수 있습니다. 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 이러한 점수를 계산하기 위한 여러 방법을 제공하며 특정 모델에 적용되는 정확한 방법은 다음 요소에 따라 결정됩니다.  
   
 -   모델에 사용되는 알고리즘  
   
@@ -60,16 +61,17 @@ ms.locfileid: "66084423"
 ### <a name="definition-of-feature-selection-methods"></a>기능 선택 방법 정의  
  기능 선택을 구현하는 방법에는 여러 가지가 있는데 작업 중인 데이터의 형식과 분석을 위해 선택한 알고리즘에 따라 이 방법이 달라집니다. SQL Server Analysis Services는 널리 사용되고 잘 알려진 특성 점수 매기기 메서드를 여러 개 제공합니다. 알고리즘 또는 데이터 집합에 적용되는 방법은 데이터 형식 및 열 사용법에 따라 다릅니다.  
   
- *흥미도* 점수는 이진이 아닌 연속 숫자 데이터를 포함하는 열의 특성에 순위를 매기고 정렬하는 데 사용됩니다.  
+ 
+  *흥미도* 점수는 이진이 아닌 연속 숫자 데이터를 포함하는 열의 특성에 순위를 매기고 정렬하는 데 사용됩니다.  
   
- 불연속 데이터와 분할된 데이터가 들어 있는 열에는*Shannon Entropy* 및 두 가지 *Bayesian* 점수를 사용할 수 있습니다. 하지만 모델에 연속 열이 포함된 경우 일관성을 보장하기 위해 흥미도 점수를 사용하여 모든 입력 열을 평가합니다.  
+ 불연속 및 분할 된 데이터를 포함 하는 열에 대해 *Shannon의 엔트로피* 및 두 개의 *Bayesian* 점수를 사용할 수 있습니다. 하지만 모델에 연속 열이 포함된 경우 일관성을 보장하기 위해 흥미도 점수를 사용하여 모든 입력 열을 평가합니다.  
   
  다음 섹션에서는 기능 선택의 각 방법에 대해 설명합니다.  
   
 #### <a name="interestingness-score"></a>흥미도 점수  
- 유용한 정보를 제공하는 기능은 흥미롭습니다. 데이터 마이닝 업계 측정 하는 다양 한 방법 개발한 시나리오에 따라 달라 집니다 무엇이 유용한 정의 되므로 *흥미도*합니다. 예를 들어 *새로 움* 이상 값 검색 하지만 밀접 하 게 관련된 항목을 구분 하는 기능이 유용할 수 있습니다 또는 *판별 가중치*에 대 한 흥미로운 수 분류 합니다.  
+ 유용한 정보를 제공하는 기능은 흥미롭습니다. 유용한 항목에 대 한 정의는 시나리오에 따라 달라 지므로 데이터 마이닝 업계는 *흥미도*을 측정 하는 다양 한 방법을 개발 했습니다. 예를 들어 *새로 움* 은 이상 값 검색에서 흥미롭습니다. 그러나 긴밀 하 게 관련 된 항목 또는 *판별 가중치*사이에서 판별 하는 기능이 분류에 더 적합할 수 있습니다.  
   
- SQL Server Analysis Services에 사용 되는 흥미도 측정은 *entropy 기반*즉, 분포가 특성 보다 높은 엔트로피 있고 낮은 정보 획득, 따라서 이러한 특성은 작은 된 흥미로운 합니다. 특정 특성에 대한 Entropy는 다음과 같이 다른 모든 특성의 Entropy와 비교됩니다.  
+ SQL Server Analysis Services에서 사용 되는 흥미도의 측정값은 *엔트로피 기반*입니다. 즉, 임의 분포를 가진 특성의 엔트로피는 높고 정보 이점은 낮습니다. 따라서 이러한 특성은 별로 흥미롭습니다. 특정 특성에 대한 Entropy는 다음과 같이 다른 모든 특성의 Entropy와 비교됩니다.  
   
  Interestingness(Attribute) = - (m - Entropy(Attribute)) * (m - Entropy(Attribute))  
   
@@ -109,7 +111,7 @@ ms.locfileid: "66084423"
 |의사 결정 트리|흥미도 점수<br /><br /> Shannon Entropy<br /><br /> Bayesian with K2 Prior<br /><br /> Bayesian Dirichlet with uniform prior(기본값)|이진이 아닌 연속 값이 열에 포함되어 있는 경우 일관성을 보장하기 위해 모든 열에 흥미도 점수가 사용됩니다. 그렇지 않으면 기본 기능 선택 방법이 사용되거나 모델을 만들 때 지정한 방법이 사용됩니다.<br /><br /> 이 알고리즘에 대한 자세한 내용은 [Microsoft Decision Trees Algorithm Technical Reference](microsoft-decision-trees-algorithm-technical-reference.md)를 참조하십시오.|  
 |신경망|흥미도 점수<br /><br /> Shannon Entropy<br /><br /> Bayesian with K2 Prior<br /><br /> Bayesian Dirichlet with uniform prior(기본값)|데이터에 연속 열이 포함된 경우 Microsoft 신경망 알고리즘에서는 Bayesian 및 Entropy 기반 방법을 모두 사용할 수 있습니다.<br /><br /> 이 알고리즘에 대한 자세한 내용은 [Microsoft Neural Network Algorithm Technical Reference](microsoft-neural-network-algorithm-technical-reference.md)를 참조하십시오.|  
 |로지스틱 회귀|흥미도 점수<br /><br /> Shannon Entropy<br /><br /> Bayesian with K2 Prior<br /><br /> Bayesian Dirichlet with uniform prior(기본값)|Microsoft 로지스틱 회귀 알고리즘이 Microsoft 신경망 알고리즘을 기반으로 하지만 로지스틱 회귀 모델을 사용자 지정하여 기능 선택 동작을 제어할 수 없습니다. 따라서 기능 선택은 항상 기본적으로 특성에 가장 적합한 방법으로 설정됩니다.<br /><br /> 모든 특성이 불연속 특성 또는 불연속화된 특성인 경우 기본값은 BDEU입니다.<br /><br /> 이 알고리즘에 대한 자세한 내용은 [Microsoft Logistic Regression Algorithm Technical Reference](microsoft-logistic-regression-algorithm-technical-reference.md)를 참조하십시오.|  
-|Clustering|흥미도 점수|Microsoft 클러스터링 알고리즘은 불연속 데이터 또는 불연속화된 데이터를 사용할 수 있습니다. 그러나 각 특성의 점수가 거리로 계산되고 연속 숫자로 표현되기 때문에 흥미도 점수를 사용해야 합니다.<br /><br /> 이 알고리즘에 대한 자세한 내용은 [Microsoft Clustering Algorithm Technical Reference](microsoft-clustering-algorithm-technical-reference.md)를 참조하십시오.|  
+|클러스터링|흥미도 점수|Microsoft 클러스터링 알고리즘은 불연속 데이터 또는 불연속화된 데이터를 사용할 수 있습니다. 그러나 각 특성의 점수가 거리로 계산되고 연속 숫자로 표현되기 때문에 흥미도 점수를 사용해야 합니다.<br /><br /> 이 알고리즘에 대한 자세한 내용은 [Microsoft Clustering Algorithm Technical Reference](microsoft-clustering-algorithm-technical-reference.md)를 참조하십시오.|  
 |선형 회귀|흥미도 점수|Microsoft 선형 회귀 알고리즘은 연속 열만 지원하므로 흥미도 점수만 사용할 수 있습니다.<br /><br /> 이 알고리즘에 대한 자세한 내용은 [Microsoft Linear Regression Algorithm Technical Reference](microsoft-linear-regression-algorithm-technical-reference.md)를 참조하십시오.|  
 |연결 규칙<br /><br /> 시퀀스 클러스터링|사용되지 않음|기능 선택은 이러한 알고리즘을 통해 호출되지 않습니다.<br /><br /> 그러나 MINIMUM_SUPPORT 및 MINIMUM_PROBABILIITY 매개 변수의 값을 설정하여 알고리즘의 동작을 제어하고 필요한 경우 입력 데이터의 크기를 줄일 수 있습니다.<br /><br /> 자세한 내용은 [Microsoft Association Algorithm Technical Reference](microsoft-association-algorithm-technical-reference.md) 및 [Microsoft Sequence Clustering Algorithm Technical Reference](microsoft-sequence-clustering-algorithm-technical-reference.md)를 참조하세요.|  
 |시계열|사용되지 않음|기능 선택은 시계열 모델에 적용되지 않습니다.<br /><br /> 이 알고리즘에 대한 자세한 내용은 [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)(Microsoft Time Series 알고리즘 기술 참조)를 참조하십시오.|  
@@ -118,17 +120,19 @@ ms.locfileid: "66084423"
  기능 선택을 지원하는 알고리즘에서 다음 매개 변수를 사용하여 기능 선택 사용 시기를 제어할 수 있습니다. 각 알고리즘에는 허용되는 입력 수에 대한 기본값이 있지만, 이 기본값을 재정의하거나 특성 수를 지정할 수 있습니다. 이 섹션에서는 기능 선택을 관리하기 위해 제공되는 매개 변수를 나열합니다.  
   
 #### <a name="maximum_input_attributes"></a>MAXIMUM_INPUT_ATTRIBUTES  
- *MAXIMUM_INPUT_ATTRIBUTES* 매개 변수에서 지정한 수보다 더 많은 열이 모델에 있는 경우 알고리즘은 필요 없다고 판단되는 모든 열을 무시합니다.  
+ 
+  *MAXIMUM_INPUT_ATTRIBUTES* 매개 변수에서 지정한 수보다 더 많은 열이 모델에 있는 경우 알고리즘은 필요 없다고 판단되는 모든 열을 무시합니다.  
   
 #### <a name="maximum_output_attributes"></a>MAXIMUM_OUTPUT_ATTRIBUTES  
  마찬가지로 *MAXIMUM_OUTPUT_ATTRIBUTES* 매개 변수에서 지정한 수보다 더 많은 예측 가능한 열이 모델에 있는 경우 알고리즘은 필요 없다고 판단되는 모든 열을 무시합니다.  
   
 #### <a name="maximum_states"></a>MAXIMUM_STATES  
- *MAXIMUM_STATES* 매개 변수에서 지정한 수보다 더 많은 사례가 모델에 있으면 가장 인기가 없는 상태를 함께 그룹화하여 없는 것으로 처리합니다. 이러한 매개 변수 중 하나를 0으로 설정할 경우 기능 선택이 해제되고 처리 시간 및 성능에 영향을 미칩니다.  
+ 
+  *MAXIMUM_STATES* 매개 변수에서 지정한 수보다 더 많은 사례가 모델에 있으면 가장 인기가 없는 상태를 함께 그룹화하여 없는 것으로 처리합니다. 이러한 매개 변수 중 하나를 0으로 설정할 경우 기능 선택이 해제되고 처리 시간 및 성능에 영향을 미칩니다.  
   
  기능 선택에 대한 이러한 방법 외에도, 모델에 *모델링 플래그* 를 설정하거나 구조에 *분산 플래그* 를 설정함으로써 의미 있는 특성을 식별하거나 승격시키는 알고리즘 기능을 강화할 수 있습니다. 이러한 개념에 대한 자세한 내용은 [모델링 플래그&#40;데이터 마이닝&#41;](modeling-flags-data-mining.md) 및 [열 배포&#40;데이터 마이닝&#41;](column-distributions-data-mining.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [마이닝 모델 및 구조 사용자 지정](customize-mining-models-and-structure.md)  
   
   

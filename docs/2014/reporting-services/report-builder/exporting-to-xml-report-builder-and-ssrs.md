@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8e8809b53078387fa58a961458693122753698e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107897"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>XML로 내보내기(보고서 작성기 및 SSRS)
@@ -51,7 +51,8 @@ ms.locfileid: "66107897"
   
 -   토글을 통해 표시할 수 없는 숨겨진 항목은 렌더링되지 않습니다. 처음에 표시되는 항목과 토글을 통해 표시할 수 있는 숨겨진 항목은 렌더링됩니다.  
   
--   `Images, lines, and custom report items`은 무시됩니다.  
+-   
+  `Images, lines, and custom report items`은 무시됩니다.  
   
 ##  <a name="DataTypes"></a> 데이터 형식  
  입력란 요소 또는 특성은 입력란에 표시되는 값에 따라 XSD 데이터 형식이 지정됩니다.  
@@ -59,16 +60,19 @@ ms.locfileid: "66107897"
 |입력란 값|지정되는 데이터 형식|  
 |--------------------------------|---------------------------|  
 |`Int16`, `Int32`, `Int64`, `UInt16`, `UInt32`, `UInt64`, `Byte`, `SByte`|**xsd:integer**|  
-|`Decimal`(또는 `Decimal` 및 정수 또는 바이트 데이터 형식)|**xsd:decimal**|  
-|`Float`(또는 `Decimal` 및 정수 또는 바이트 데이터 형식)|**xsd:float**|  
-|`Double`(또는 `Decimal` 및 정수 또는 바이트 데이터 형식)|**xsd:double**|  
-|`DateTime or DateTime Offset`|**xsd:dateTime**|  
-|`Time`|**xsd:string**|  
-|`Boolean`|**xsd:boolean**|  
-|`String`, `Char`|**xsd:string**|  
-|기타|**xsd:string**|  
+|
+  `Decimal`(또는 `Decimal` 및 정수 또는 바이트 데이터 형식)|**xsd:decimal**|  
+|
+  `Float`(또는 `Decimal` 및 정수 또는 바이트 데이터 형식)|**xsd:float**|  
+|
+  `Double`(또는 `Decimal` 및 정수 또는 바이트 데이터 형식)|**xsd:double**|  
+|`DateTime or DateTime Offset`|**xsd: dateTime**|  
+|`Time`|**xsd: 문자열**|  
+|`Boolean`|**xsd: boolean**|  
+|`String`, `Char`|**xsd: 문자열**|  
+|기타|**xsd: 문자열**|  
   
-##  <a name="XMLSpecificRenderingRules"></a> XML 관련 렌더링 규칙  
+##  <a name="XMLSpecificRenderingRules"></a>XML 특정 렌더링 규칙  
  다음 섹션에서는 XML 렌더링 확장 프로그램을 통해 보고서 내의 항목이 어떻게 해석되는지 설명합니다.  
   
 ### <a name="report-body"></a>보고서 본문  
@@ -76,11 +80,11 @@ ms.locfileid: "66107897"
   
  XML 네임스페이스 정의와 스키마 참조 특성도 보고서 요소에 포함됩니다. 변수는 굵은 글꼴로 표시됩니다.  
   
- \<**Report** xmlns="**SchemaName**" xmlns:xsi="<http://www.w3.org/2001/XMLSchema-instance>" xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc%3aSchema=true" Name="ReportName">  
+ \<**Report** xmlns = "**SchemaName**" xmlns: xsi = "<http://www.w3.org/2001/XMLSchema-instance>" xsi:**schemaLocation**= "**SchemaNameReportURL**&amp;rc% 3aSchema = true" Name = "ReportName" >  
   
  변수의 값은 다음과 같습니다.  
   
-|이름|값|  
+|속성|값|  
 |----------|-----------|  
 |보고서|Report.DataElementName|  
 |ReportURL|서버의 보고서를 가리키는 URL 인코딩된 절대 URL|  
@@ -148,20 +152,20 @@ ms.locfileid: "66107897"
   
  DataElementOutput 속성 값이 Output이면 반복되는 항목의 머리글이 세부 정보 요소의 자식으로 렌더링됩니다.  
   
-##  <a name="CustomFormatsXSLTransformations"></a> 사용자 지정 형식 및 XSL 변환  
+##  <a name="CustomFormatsXSLTransformations"></a>사용자 지정 형식 및 XSL 변환  
  XML 렌더링 확장 프로그램에서 만든 XML 파일은 XSLT(XSL 변환)를 사용하여 거의 모든 형식으로 변환할 수 있습니다. 이 기능을 사용하면 기존 렌더링 확장 프로그램에서 지원하지 않는 형식으로도 데이터를 만들 수 있습니다. 사용자 고유의 렌더링 확장 프로그램을 만들기 전에 XML 렌더링 확장 프로그램과 XSLT 사용을 고려해 보십시오.  
   
-##  <a name="DuplicateName"></a> 중복 이름  
+##  <a name="DuplicateName"></a>중복 이름  
  동일한 범위 내에 데이터 요소 이름이 중복되어 있으면 렌더러를 실행할 때 오류 메시지가 나타납니다.  
   
-##  <a name="XSLTTransformations"></a> XSLT 변환  
+##  <a name="XSLTTransformations"></a>XSLT 변환  
  XML 렌더러로 서버 쪽 XSLT 변환을 원래 XML 데이터에 적용할 수 있습니다. XSLT를 적용하는 경우 렌더러에서는 원래 XML 데이터 대신 변환된 내용을 출력합니다. 변환은 클라이언트가 아니라 서버 쪽에서 진행됩니다.  
   
  출력에 적용할 XSLT는 보고서의 DataTransform 속성을 사용하여 보고서 정의 파일에 정의하거나 XSLT *DeviceInfo* 매개 변수를 사용하여 정의합니다. 이러한 값 중 하나를 설정하면 XML 렌더러를 사용할 때마다 변환이 일어납니다. 구독을 사용하는 경우에는 RDL DataTransform 속성에 XSLT를 정의해야 합니다.  
   
  DataTransform 정의 속성과 디바이스 정보 설정을 모두 사용하여 XSLT 파일을 지정한 경우에는 DataTransform에 지정한 XSLT가 먼저 진행된 다음 디바이스 정보 설정을 통해 설정한 XSLT가 적용됩니다.  
   
-###  <a name="DeviceInfo"></a> 장치 정보 설정  
+###  <a name="DeviceInfo"></a> 디바이스 정보 설정  
  디바이스 정보 설정을 변경하여 이 렌더러의 다음과 같은 일부 기본 설정을 변경할 수 있습니다.  
   
 -   XML에 적용할 변환(XSLT)  
@@ -180,7 +184,7 @@ ms.locfileid: "66107897"
   
  자세한 내용은 [XML Device Information Settings](../xml-device-information-settings.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [여러 보고서 렌더링 확장 프로그램의 대화형 기능&#40;보고서 작성기 및 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
