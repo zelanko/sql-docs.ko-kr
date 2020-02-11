@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3c1785e927bf2d2b90322c90f2adace4555047af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101537"
 ---
 # <a name="system-level-tasks"></a>시스템 수준 태스크
@@ -28,7 +28,7 @@ ms.locfileid: "66101537"
 ## <a name="permissions-in-system-level-tasks"></a>시스템 수준 태스크 사용 권한  
  다음 표에서는 각 시스템 태스크에 대한 사용 권한을 보여 줍니다. 나열된 사용 권한은 각 태스크에서 사용 가능한 기능을 보다 정확하게 설명하기 위한 참고용입니다.  
   
-|태스크|사용 권한|  
+|Task|사용 권한|  
 |----------|-----------------|  
 |보고서 정의 실행|보고서 정의 실행(사용 권한과 태스크 이름이 같음)|  
 |이벤트 생성|이벤트 생성|  
@@ -40,7 +40,7 @@ ms.locfileid: "66101537"
 |보고서 서버 속성 보기|시스템 속성 읽기|  
 |공유 일정 보기|일정 읽기|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [기본 모드 보고서 서버에 대한 사용 권한 부여](granting-permissions-on-a-native-mode-report-server.md)  
   
   

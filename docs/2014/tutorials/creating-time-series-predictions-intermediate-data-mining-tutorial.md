@@ -1,5 +1,5 @@
 ---
-title: 시계열 예측 (중급 데이터 마이닝 자습서) 만들기 | Microsoft Docs
+title: 시계열 예측 만들기 (중급 데이터 마이닝 자습서) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ca1aa4022931c78f6139a8058c05adc707af5e77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63313884"
 ---
 # <a name="creating-time-series-predictions-intermediate-data-mining-tutorial"></a>시계열 예측 만들기(중급 데이터 마이닝 자습서)
@@ -29,53 +29,54 @@ ms.locfileid: "63313884"
   
 #### <a name="to-select-a-model-and-input-table"></a>모델과 입력 테이블을 선택하려면  
   
-1.  에 **마이닝 모델 예측** 데이터 마이닝 디자이너의 탭에서 합니다 **마이닝 모델** 상자를 클릭 합니다 **모델 선택**합니다.  
+1.  데이터 마이닝 디자이너의 **마이닝 모델 예측** 탭에 있는 **마이닝 모델** 상자에서 **모델 선택**을 클릭 합니다.  
   
-2.  에 **마이닝 모델 선택** 대화 상자에서 Forecasting 구조를 확장을 선택 합니다 **Forecasting** 목록에서 모델 및 클릭 **확인**합니다.  
+2.  **마이닝 모델 선택** 대화 상자에서 예측 구조를 확장 하 고 목록에서 **예측** 모델을 선택한 다음 **확인**을 클릭 합니다.  
   
-3.  무시 된 **입력 테이블 선택** 상자입니다.  
+3.  **입력 테이블 선택** 상자를 무시 합니다.  
   
     > [!NOTE]  
     >  시계열 모델의 경우 교차 예측을 수행하지 않는 한 별도의 입력을 지정할 필요가 없습니다.  
   
-4.  에 **원본** 그리드에서 열을 **마이닝 모델 예측** 탭, 첫 번째 빈 행의 셀을 클릭 한 다음 선택 **Forecasting 마이닝 모델**합니다.  
+4.  **마이닝 모델 예측** 탭의 표에 있는 **원본** 열에서 첫 번째 빈 행의 셀을 클릭 한 다음 **마이닝 모델 예측**을 선택 합니다.  
   
-5.  에 **필드** 열 선택 **Model Region**합니다.  
+5.  **필드** 열에서 **모델 영역**을 선택 합니다.  
   
      이렇게 하면 예측이 적용되는 모델 및 지역 조합을 나타내기 위해 예측 쿼리에 계열 식별자가 추가됩니다.  
   
-6.  다음 빈 행을 클릭 합니다 **소스** 열을 선택한 후 **예측 함수**합니다.  
+6.  **원본** 열에서 다음 빈 행을 클릭 한 다음 **예측 함수**를 선택 합니다.  
   
-7.  에 **필드** 열 선택 **PredictTimeSeries**합니다.  
+7.  **필드** 열에서 **PredictTimeSeries**을 선택 합니다.  
   
     > [!NOTE]  
-    >  `Predict` 함수도 시계열 모델에 사용할 수 있습니다. 그러나 기본적으로 Predict 함수는 각 계열에 대해 하나의 예측만 만듭니다. 따라서 여러 예측 단계를 지정 하려면 사용 해야 합니다 **PredictTimeSeries** 함수입니다.  
+    >  
+  `Predict` 함수도 시계열 모델에 사용할 수 있습니다. 그러나 기본적으로 Predict 함수는 각 계열에 대해 하나의 예측만 만듭니다. 따라서 여러 예측 단계를 지정 하려면 **PredictTimeSeries** 함수를 사용 해야 합니다.  
   
-8.  에 **마이닝 모델** 창, 마이닝 모델 열 선택 **크기.** 끌어 크기를 **조건/인수** 상자에 **PredictTimeSeries** 이전에 추가한 함수를 합니다.  
+8.  **마이닝 모델** 창에서 마이닝 모델 열 Amount를 선택 합니다 **.** Amount를 이전에 추가한 **PredictTimeSeries** 함수에 대 한 **조건/인수** 상자로 끕니다.  
   
-9. 클릭 합니다 **조건/인수** 뒤에 쉼표를 입력 **5**, 필드 이름 뒤에 오는 합니다.  
+9. **조건/인수** 상자를 클릭 하 고 필드 이름 다음에 쉼표와 **5**를 입력 합니다.  
   
-     텍스트를 **조건/인수** 상자에는 다음 이제 표시 됩니다.  
+     이제 **조건/인수** 상자의 텍스트가 다음과 같이 표시 됩니다.  
   
      `[Forecasting].[Amount],5`  
   
-10. 에 **별칭** 열, 형식 `PredictAmount`합니다.  
+10. **별칭** 열에을 입력 `PredictAmount`합니다.  
   
-11. 다음 빈 행을 클릭 합니다 **소스** 열을 선택한 후 **예측 함수** 다시 합니다.  
+11. **원본** 열에서 다음 빈 행을 클릭 한 다음 **예측 함수** 를 다시 선택 합니다.  
   
-12. 에 **필드** 열 선택 **PredictTimeSeries**합니다.  
+12. **필드** 열에서 **PredictTimeSeries**을 선택 합니다.  
   
-13. 에 **마이닝 모델** 창, Quantity 열을 선택한 다음으로 끌어 놓습니다 합니다 **조건/인수** 두 번째 상자 **PredictTimeSeries** 함수입니다.  
+13. **마이닝 모델** 창에서 열 수량을 선택한 다음 두 번째 **PredictTimeSeries** 함수에 대 한 **조건/인수** 상자로 끕니다.  
   
-14. 클릭 합니다 **조건/인수** 뒤에 쉼표를 입력 **5**, 필드 이름 뒤에 오는 합니다.  
+14. **조건/인수** 상자를 클릭 하 고 필드 이름 다음에 쉼표와 **5**를 입력 합니다.  
   
-     텍스트를 **조건/인수** 상자에는 다음 이제 표시 됩니다.  
+     이제 **조건/인수** 상자의 텍스트가 다음과 같이 표시 됩니다.  
   
      `[Forecasting].[ Quantity],5`  
   
-15. 에 **별칭** 열, 형식 `PredictQuantity`합니다.  
+15. **별칭** 열에을 입력 `PredictQuantity`합니다.  
   
-16. 클릭 **쿼리 결과 뷰로 전환**합니다.  
+16. **쿼리 결과 뷰로 전환을**클릭 합니다.  
   
      쿼리 결과가 테이블 형식으로 표시됩니다.  
   
@@ -83,7 +84,7 @@ ms.locfileid: "63313884"
   
  결과 예(금액은 소수점 두 자리로 잘림):  
   
- **M200 Europe PredictAmount**  
+ **M200 유럽 PredictAmount**  
   
 |$TIME|Amount|  
 |-----------|------------|  
@@ -93,7 +94,7 @@ ms.locfileid: "63313884"
 |10/25/2008|116537.38|  
 |11/25/2008|107760.55|  
   
- **M200 Europe PredictQuantity**  
+ **M200 유럽 PredictQuantity**  
   
 |$TIME|수량|  
 |-----------|--------------|  
@@ -103,7 +104,7 @@ ms.locfileid: "63313884"
 |10/25/2008|57|  
 |11/25/2008|54|  
   
- **M200 North America - PredictAmount**  
+ **M200 북아메리카-PredictAmount**  
   
 |$TIME|Amount|  
 |-----------|------------|  
@@ -113,7 +114,7 @@ ms.locfileid: "63313884"
 |10/25/2008|374658.24|  
 |11/25/2008|379241.44|  
   
- **M200 North America-PredictQuantity**  
+ **M200 북아메리카-PredictQuantity**  
   
 |$TIME|수량|  
 |-----------|--------------|  
@@ -133,11 +134,12 @@ ms.locfileid: "63313884"
   
 #### <a name="to-flatten-the-results-in-the-results-pane"></a>결과 창에서 결과를 평면화하려면  
   
-1.  예측 쿼리 작성기에서 클릭 **쿼리 디자인 뷰로 전환**합니다.  
+1.  예측 쿼리 작성기에서 **쿼리 디자인 뷰로 전환을**클릭 합니다.  
   
      DMX 쿼리 텍스트를 수동으로 편집할 수 있도록 뷰가 변경됩니다.  
   
-2.  `FLATTENED` 키워드 다음에 `SELECT` 키워드를 입력합니다. 전체 쿼리 텍스트가 다음과 같이 됩니다.  
+2.  
+  `FLATTENED` 키워드 다음에 `SELECT` 키워드를 입력합니다. 전체 쿼리 텍스트가 다음과 같이 됩니다.  
   
     ```  
     SELECT FLATTENED  
@@ -162,15 +164,15 @@ ms.locfileid: "63313884"
   
     ```  
   
-4.  클릭 **쿼리 결과 뷰로 전환**합니다.  
+4.  **쿼리 결과 뷰로 전환을**클릭 합니다.  
   
 #### <a name="to-export-prediction-query-results"></a>예측 쿼리 결과를 내보내려면  
   
-1.  클릭 **쿼리 결과 저장**합니다.  
+1.  **쿼리 결과 저장**을 클릭 합니다.  
   
-2.  에 **데이터 마이닝 쿼리 결과 저장** 대화 상자에 대 한 **데이터 원본**선택, [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]합니다. 데이터를 다른 관계형 데이터베이스에 저장하려는 경우 데이터 원본을 만들 수도 있습니다.  
+2.  데이터 **마이닝 쿼리 결과 저장** 대화 상자에서 **데이터 원본**에 대해를 선택 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]합니다. 데이터를 다른 관계형 데이터베이스에 저장하려는 경우 데이터 원본을 만들 수도 있습니다.  
   
-3.  에 **테이블 이름** 와 같은 새 임시 테이블 이름, 형식, 열 **Test Predictions**합니다.  
+3.  **테이블 이름** 열에 **테스트 예측**등의 새 임시 테이블 이름을 입력 합니다.  
   
 4.  **저장**을 클릭합니다.  
   
@@ -185,7 +187,7 @@ ms.locfileid: "63313884"
 ## <a name="next-lesson"></a>다음 단원  
  [고급 시계열 예측 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/advanced-time-series-predictions-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [시계열 모델 쿼리 예제](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)  
   
   
