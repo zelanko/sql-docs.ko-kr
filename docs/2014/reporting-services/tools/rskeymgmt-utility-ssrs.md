@@ -22,14 +22,15 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c9b5ca361cbfb5de42341fad8625f10d7ce3c2fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099804"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt 유틸리티(SSRS)
-  중요한 보고서 서버 데이터를 무단 액세스로부터 보호하는 데 사용할 대칭 키를 추출, 복원, 생성 및 삭제합니다. 이 유틸리티를 사용하여 수평적 스케일 아웃 배포에서 보고서 서버 인스턴스를 결합할 수도 있습니다. *보고서 서버 수평적 스케일 아웃 배포* 란 하나의 보고서 서버 데이터베이스를 공유하는 여러 보고서 서버 인스턴스를 말합니다.  
+  중요한 보고서 서버 데이터를 무단 액세스로부터 보호하는 데 사용할 대칭 키를 추출, 복원, 생성 및 삭제합니다. 이 유틸리티를 사용하여 수평적 스케일 아웃 배포에서 보고서 서버 인스턴스를 결합할 수도 있습니다. 
+  *보고서 서버 수평적 스케일 아웃 배포* 란 하나의 보고서 서버 데이터베이스를 공유하는 여러 보고서 서버 인스턴스를 말합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -54,7 +55,8 @@ ms.locfileid: "66099804"
   
 ## <a name="arguments"></a>인수  
  **-?**  
- **rskeymgmt** 인수의 구문을 표시합니다.  
+ 
+  **rskeymgmt** 인수의 구문을 표시합니다.  
   
  **-e**  
  파일로 복사할 수 있도록 보고서 서버 인스턴스의 데이터를 암호화 및 해독하는 데 사용할 대칭 키를 추출합니다.  
@@ -66,7 +68,7 @@ ms.locfileid: "66099804"
   
  이 인수는 값을 가지지 않습니다. 그러나 적용된 키가 포함된 파일을 선택하려면 명령줄에 추가 인수를 포함해야 합니다. 지정할 수 있는 인수에는 `-f` 및 `-p` 인수가 있습니다.  
   
- **-d**  
+ **-d.ddd...e**  
  모든 대칭 키 인스턴스를 삭제하고 보고서 서버 데이터베이스에서 암호화된 모든 데이터를 삭제합니다. 이 인수는 값을 가지지 않습니다.  
   
  `-s`  
@@ -76,17 +78,21 @@ ms.locfileid: "66099804"
  로컬 보고서 서버 인스턴스에서 사용하는 보고서 서버 데이터베이스를 공유하도록 원격 보고서 서버 인스턴스를 구성합니다.  
   
  **-r**  *installationID*  
- 특정 보고서 서버 인스턴스에 대한 대칭 키 정보를 제거합니다. 이에 따라 수평적 스케일 아웃 배포에서 보고서 서버도 제거됩니다. *installationID* 는 RSReportserver.config 파일에 포함된 GUID 값입니다.  
+ 특정 보고서 서버 인스턴스에 대한 대칭 키 정보를 제거합니다. 이에 따라 수평적 스케일 아웃 배포에서 보고서 서버도 제거됩니다. 
+  *installationID* 는 RSReportserver.config 파일에 포함된 GUID 값입니다.  
   
- `-f`  *file*  
+ `-f`  *파일과*  
  대칭 키의 백업 복사본을 저장하는 파일의 정규화된 경로를 지정합니다.  
   
- **rskeymgmt -e**의 경우 대칭 키가 지정한 파일에 기록됩니다.  
+ 
+  **rskeymgmt -e**의 경우 대칭 키가 지정한 파일에 기록됩니다.  
   
- **rskeymgmt -a**의 경우 파일에 저장된 대칭 키 값이 보고서 서버 인스턴스에 적용됩니다.  
+ 
+  **rskeymgmt -a**의 경우 파일에 저장된 대칭 키 값이 보고서 서버 인스턴스에 적용됩니다.  
   
- `-p`  *password*  
- `-f`의 경우 필수 인수입니다. 대칭 키를 백업하거나 적용하는 데 사용할 암호를 지정합니다. 이 값은 비워 둘 수 없습니다.  
+ `-p`  *암호*  
+ 
+  `-f`의 경우 필수 인수입니다. 대칭 키를 백업하거나 적용하는 데 사용할 암호를 지정합니다. 이 값은 비워 둘 수 없습니다.  
   
  `-i`  
  로컬 보고서 서버 인스턴스를 지정합니다. 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 보고서 서버를 설치한 경우 이 인수는 옵션입니다. `-i`의 기본값은 MSSQLSERVER입니다. 보고서 서버를 명명된 인스턴스로 설치한 경우 `-i`이 필요합니다.  
@@ -100,17 +106,19 @@ ms.locfileid: "66099804"
  `-u`  *useraccount*  
  수평적 스케일 아웃 배포에 결합하는 원격 컴퓨터의 관리자 계정을 지정합니다. 계정을 지정하지 않으면 현재 사용자의 자격 증명이 사용됩니다.  
   
- `-v`  *password*  
- `-u`의 경우 필수 인수입니다. 수평적 스케일 아웃 배포에 결합할 원격 컴퓨터의 관리자 계정 암호를 지정합니다.  
+ `-v`  *암호*  
+ 
+  `-u`의 경우 필수 인수입니다. 수평적 스케일 아웃 배포에 결합할 원격 컴퓨터의 관리자 계정 암호를 지정합니다.  
   
- **-t**  *trace*  
+ **-t**  *추적*  
  추적 로그에 오류 메시지를 출력합니다. 이 인수는 값을 가지지 않습니다. 자세한 내용은 [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md)을 참조하세요.  
   
 ## <a name="permissions"></a>사용 권한  
  이 도구를 실행하려면 로컬 관리자 권한이 있어야 하며 보고서 서버를 호스팅하는 컴퓨터에서 로컬로 실행해야 합니다. rskeymgmt 유틸리티는 로컬 보고서 서버 Windows 인스턴스에 사용할 수 있습니다. 이 유틸리티는 보고서 서버 Windows 서비스의 원격 인스턴스에 연결할 수 없으므로 원격 보고서 서버 인스턴스의 암호화 키를 관리하는 데 사용할 수 없습니다.  
   
 > [!NOTE]  
->  `-u` 및 `-v` 인수를 사용하는 경우 원격 컴퓨터에 대해 관리자 권한이 있는 계정을 지정해야 합니다.  
+>  
+  `-u` 및 `-v` 인수를 사용하는 경우 원격 컴퓨터에 대해 관리자 권한이 있는 계정을 지정해야 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 **rskeymgmt**를 사용하는 방법을 보여 줍니다. 다음 예에서는 암호화 키를 추출, 복원 및 삭제하는 방법과 보고서 서버 수평적 스케일 아웃 배포를 구성하는 방법을 보여 줍니다.  
@@ -147,9 +155,10 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 >  보고서 서버 수평적 스케일 아웃 배포란 여러 보고서 서버 인스턴스가 같은 보고서 서버 데이터베이스를 공유하는 배포 모델을 말합니다. 보고서 서버 데이터베이스에 대칭 키를 저장하는 모든 보고서 서버 인스턴스에서 이 데이터베이스를 사용할 수 있습니다. 예를 들어 보고서 서버 데이터베이스에 3개의 보고서 서버 인스턴스에 대한 키 정보가 포함된 경우 세 인스턴스는 모두 같은 수평적 스케일 아웃 배포의 멤버로 간주됩니다.  
   
 #### <a name="joining-report-server-instances-on-the-same-computer"></a>같은 컴퓨터에서 보고서 서버 인스턴스 조인  
- 같은 컴퓨터에 설치된 여러 보고서 서버 인스턴스에서 스케일 아웃 배포를 만들 수 있습니다. 로컬로 설치된 보고서 서버 인스턴스를 조인하는 경우에는 `-u` 및 `-v` 인수를 설정하지 마십시오. `-u` 및 `-v` 인수는 원격 컴퓨터에서 인스턴스를 조인하는 경우에만 사용됩니다. 인수를 지정 하는 경우 다음 오류가 표시 됩니다. "로컬 연결에 대 한 사용자 자격 증명을 사용할 수 없습니다."  
+ 같은 컴퓨터에 설치된 여러 보고서 서버 인스턴스에서 스케일 아웃 배포를 만들 수 있습니다. 로컬로 설치된 보고서 서버 인스턴스를 조인하는 경우에는 `-u` 및 `-v` 인수를 설정하지 마십시오. 
+  `-u` 및 `-v` 인수는 원격 컴퓨터에서 인스턴스를 조인하는 경우에만 사용됩니다. 로컬인 경우 이러한 인수를 지정하면 "로컬 연결에 대해 사용자 자격 증명을 사용할 수 없습니다" 오류가 발생합니다.  
   
- 다음 예에서는 여러 로컬 인스턴스를 사용하여 스케일 아웃 배포를 만드는 구문을 보여 줍니다. 이 예제에서는 <`initializedinstance`>은 보고서 서버 데이터베이스를 사용 하도록 이미 초기화 된 인스턴스의 이름 및 <`newinstance`> 배포에 추가할 인스턴스의 이름입니다.  
+ 다음 예에서는 여러 로컬 인스턴스를 사용하여 스케일 아웃 배포를 만드는 구문을 보여 줍니다. 이 예에서 <`initializedinstance`>는 보고서 서버 데이터베이스를 사용 하도록 이미 초기화 된 인스턴스의 이름이 고,> <`newinstance` 은 배포에 추가 하려는 인스턴스의 이름입니다.  
   
 ```  
 rskeymgmt -j -i <initializedinstance> -m <computer name> -n <newinstance>  
@@ -165,19 +174,21 @@ rskeymgmt -r <installationID>
 ```  
   
 ## <a name="file-location"></a>파일 위치  
- Rskeymgmt.exe는 **\<*drive*>:\Program Files\Microsoft SQL Server\110\Tools\Binn** 또는 **\<*drive*>:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn**에 있습니다. 파일 시스템의 모든 폴더에서 유틸리티를 실행할 수 있습니다.  
+ Rskeymgmt는 ** \< *drive*>: fileFiles\Microsoft SQL Server\110\Tools\Binn** 또는 ** \< *drive*>: filefiles (x86) \Microsoft sql Server\110\Tools\Binn**에 있습니다. 파일 시스템의 모든 폴더에서 유틸리티를 실행할 수 있습니다.  
   
-## <a name="remarks"></a>Remarks  
- 보고서 서버는 저장된 자격 증명과 연결 정보를 암호화합니다. 데이터를 암호화하는 데 공개 키와 대칭 키가 사용됩니다. 보고서 서버를 실행하려면 보고서 서버 데이터베이스에 유효한 키가 있어야 합니다. **rskeymgmt** 를 사용하여 키를 백업, 삭제 또는 복원할 수 있습니다. 키를 복원할 수 없을 경우 이 도구는 더 이상 사용할 수 없는 암호화된 내용을 삭제하는 방법을 제공합니다.  
+## <a name="remarks"></a>설명  
+ 보고서 서버는 저장된 자격 증명과 연결 정보를 암호화합니다. 데이터를 암호화하는 데 공개 키와 대칭 키가 사용됩니다. 보고서 서버를 실행하려면 보고서 서버 데이터베이스에 유효한 키가 있어야 합니다. 
+  **rskeymgmt** 를 사용하여 키를 백업, 삭제 또는 복원할 수 있습니다. 키를 복원할 수 없을 경우 이 도구는 더 이상 사용할 수 없는 암호화된 내용을 삭제하는 방법을 제공합니다.  
   
- **rskeymgmt** 유틸리티를 사용하여 설치하는 동안 또는 초기화하는 동안 정의되는 키 집합을 관리할 수 있습니다. 이 유틸리티는 원격 프로시저 호출(RPC) 엔드포인트를 통해 로컬 보고서 서버 Windows 서비스에 연결합니다. 이 유틸리티가 올바르게 작동하려면 보고서 서버 Windows 서비스가 실행 중이어야 합니다.  
+ 
+  **rskeymgmt** 유틸리티를 사용하여 설치하는 동안 또는 초기화하는 동안 정의되는 키 집합을 관리할 수 있습니다. 이 유틸리티는 원격 프로시저 호출(RPC) 엔드포인트를 통해 로컬 보고서 서버 Windows 서비스에 연결합니다. 이 유틸리티가 올바르게 작동하려면 보고서 서버 Windows 서비스가 실행 중이어야 합니다.  
   
  암호화 키에 대한 자세한 내용은 [암호화 키 구성 및 관리&#40;SSRS Configuration Manager&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md) 및 [보고서 서버 초기화&#40;SSRS Configuration Manager&#41;](../install-windows/ssrs-encryption-keys-initialize-a-report-server.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [기본 모드 보고서 서버 스케일 아웃 배포 구성&#40;SSRS Configuration Manager&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
- [Reporting Services 보고서 서버&#40;기본 모드&#41;](../report-server/reporting-services-report-server-native-mode.md)   
- [보고서 서버 명령 프롬프트 유틸리티&#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
+ [보고서 서버 &#40;기본 모드를 Reporting Services&#41;](../report-server/reporting-services-report-server-native-mode.md)   
+ [SSRS&#41;&#40;보고서 서버 명령 프롬프트 유틸리티](report-server-command-prompt-utilities-ssrs.md)   
  [암호화 키 구성 및 관리&#40;SSRS 구성 관리자&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

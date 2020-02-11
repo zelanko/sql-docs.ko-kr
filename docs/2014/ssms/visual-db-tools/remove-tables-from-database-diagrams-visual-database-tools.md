@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 776d5fae1aa295f15238397b439cca1015ebe99c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63180733"
 ---
 # <a name="remove-tables-from-database-diagrams-visual-database-tools"></a>데이터베이스 다이어그램에서 테이블 제거(Visual Database Tools)
@@ -30,7 +30,7 @@ ms.locfileid: "63180733"
   
 2.  테이블을 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 **다이어그램에서 테이블 제거** 를 선택합니다.  
   
-     -또는-  
+     또는  
   
      Esc 키를 누릅니다.  
   
@@ -38,8 +38,8 @@ ms.locfileid: "63180733"
   
  이 테이블은 다이어그램에서 제거되지만 데이터베이스에는 계속 남아 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [데이터베이스 다이어그램 작업 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [테이블 삭제&#40;데이터베이스 엔진&#41;](../../relational-databases/tables/delete-tables-database-engine.md)  
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools를 &#40;데이터베이스 다이어그램 작업&#41;](visual-database-tools.md)   
+ [테이블 삭제 &#40;데이터베이스 엔진&#41;](../../relational-databases/tables/delete-tables-database-engine.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 세션 범위 계산 만들기 Members (MDX) | Microsoft Docs
+title: 세션 범위 계산 멤버 만들기 (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 701d7a49f7ddda60983a03723506442eac17866b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074545"
 ---
 # <a name="creating-session-scoped-calculated-members-mdx"></a>세션 범위 계산 멤버 만들기(MDX)
@@ -40,7 +40,8 @@ CREATE [SESSION] MEMBER [<cube-name>.]<fully-qualified-member-name> AS <expressi
 <property-identifier> ::= VISIBLE | SOLVEORDER | SOLVE_ORDER | FORMAT_STRING | NON_EMPTY_BEHAVIOR <ole db member properties>  
 ```  
   
- CREATE MEMBER 문에 대한 구문에서 `fully-qualified-member-name` 값은 계산 멤버의 정규화된 이름입니다. 이 정규화된 이름에는 계산 멤버가 연결된 차원 또는 수준이 포함됩니다. `expression` 값은 식 값이 계산된 후의 계산 멤버의 값을 반환합니다.  
+ CREATE MEMBER 문에 대한 구문에서 `fully-qualified-member-name` 값은 계산 멤버의 정규화된 이름입니다. 이 정규화된 이름에는 계산 멤버가 연결된 차원 또는 수준이 포함됩니다. 
+  `expression` 값은 식 값이 계산된 후의 계산 멤버의 값을 반환합니다.  
   
 ## <a name="create-member-example"></a>CREATE MEMBER 예  
  다음 예에서는 CREATE MEMBER 문을 사용하여 `LastFourStores` 계산 멤버를 만드는 방법을 보여 줍니다. 이 계산 멤버는 마지막 4개 매장에서 팔린 합계를 반환하고 큐브의 전체 세션에서 사용될 것입니다.  
@@ -51,7 +52,7 @@ sum(([Stores].[ByLocation].Lag(3) :
 [Stores].[ByLocation].NextMember), [Measures].[Units Sold])  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [쿼리 범위 계산 멤버 만들기&#40;MDX&#41;](mdx-calculated-members-query-scoped-calculated-members.md)  
+## <a name="see-also"></a>참고 항목  
+ [MDX&#41;&#40;쿼리 범위 계산 멤버 만들기](mdx-calculated-members-query-scoped-calculated-members.md)  
   
   

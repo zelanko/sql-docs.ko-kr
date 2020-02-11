@@ -1,5 +1,5 @@
 ---
-title: 추적 테이블 (SQL Server Profiler) | Microsoft Docs
+title: 추적 테이블 열기 (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 66329c13eff3d8691e44c5b0ca07171cb9493bc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63240557"
 ---
 # <a name="open-a-trace-table-sql-server-profiler"></a>추적 테이블 열기(SQL Server Profiler)
@@ -32,9 +32,9 @@ ms.locfileid: "63240557"
   
 4.  **테이블** 목록에서 테이블 이름을 선택합니다. **확인**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Profiler를 사용하여 추적 보기 및 분석](view-and-analyze-traces-with-sql-server-profiler.md)   
  [추적 및 추적 템플릿 저장](save-traces-and-trace-templates.md)   
- [SQL Server 프로파일러](sql-server-profiler.md)  
+ [SQL Server Profiler](sql-server-profiler.md)  
   
   

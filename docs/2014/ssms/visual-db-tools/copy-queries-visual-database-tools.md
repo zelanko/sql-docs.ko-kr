@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2ef120e0142b3ccabb03fe8750b02713601d7fd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63224477"
 ---
 # <a name="copy-queries-visual-database-tools"></a>쿼리 복사(Visual Database Tools)
@@ -37,10 +37,10 @@ ms.locfileid: "63224477"
   
 6.  마우스 오른쪽 단추를 클릭하고 바로 가기 메뉴에서 **붙여넣기**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [쿼리 이름 바꾸기 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [쿼리 결과 지우기 &#40;Visual Database Tools&#41;](clear-query-results-visual-database-tools.md)   
- [쿼리 저장 &#40;Visual Database Tools&#41;](save-queries-visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools를 &#40;쿼리 이름 바꾸기&#41;](visual-database-tools.md)   
+ [Visual Database Tools를 &#40;쿼리 결과를 지웁니다&#41;](clear-query-results-visual-database-tools.md)   
+ [Visual Database Tools를 &#40;쿼리 저장&#41;](save-queries-visual-database-tools.md)   
  [쿼리 관련 기본 작업 수행&#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

@@ -23,16 +23,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e7c57cf6444e5833b6deee0dcae36d71b7a6430
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63195131"
 ---
 # <a name="data-at-execution-and-text-ntext-or-image-columns"></a>실행 시 데이터 및 text, ntext 또는 image 열
-  ODBC 실행 시 데이터는 애플리케이션에서 바인딩된 열 또는 매개 변수에 있는 대량의 데이터를 사용할 수 있도록 하는 기능입니다. 매우 큰를 검색할 때 **텍스트**를 **ntext**, 또는 **이미지** 열 응용 프로그램 못할 단순히 큰 버퍼를 할당, 버퍼로 열 바인딩 및 인출 행입니다. 매우 큰 업데이트할 때 **텍스트**를 **ntext**, 또는 **이미지** 열 응용 프로그램 못할 단순히 큰 버퍼를 할당, SQL에서 매개 변수 표식에 바인딩하지 문을 다음 문을 실행 합니다. 이러한 경우 응용 프로그램 사용 해야 합니다 [SQLGetData](../native-client-odbc-api/sqlgetdata.md) 하거나 [SQLPutData](../native-client-odbc-api/sqlputdata.md) 해당 실행 시 데이터 옵션을 사용 하 여 합니다.  
+  ODBC 실행 시 데이터는 애플리케이션에서 바인딩된 열 또는 매개 변수에 있는 대량의 데이터를 사용할 수 있도록 하는 기능입니다. 매우 큰 **text**, **ntext**또는 **image** 열을 검색할 때 응용 프로그램은 단순히 큰 버퍼를 할당 하 고, 열을 버퍼에 바인딩하고, 행을 인출 하지 못할 수 있습니다. 매우 큰 **text**, **ntext**또는 **image** 열을 업데이트할 때 응용 프로그램은 단순히 큰 버퍼를 할당 하 고 SQL 문에서 매개 변수 표식에 바인딩한 다음 문을 실행 하지 못할 수 있습니다. 이러한 경우 응용 프로그램은 실행 시 데이터 옵션과 함께 [SQLGetData](../native-client-odbc-api/sqlgetdata.md) 또는 [sqlputdata](../native-client-odbc-api/sqlputdata.md) 를 사용 해야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [text 및 image 열 관리](managing-text-and-image-columns.md)  
   
   

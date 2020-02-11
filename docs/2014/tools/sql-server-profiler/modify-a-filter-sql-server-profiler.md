@@ -1,5 +1,5 @@
 ---
-title: Modify a Filter (SQL Server Profiler) | Microsoft Docs
+title: 필터 수정 (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: db6d6220fbb0f756b539e63dc2496d9ddb46d9f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63228498"
 ---
 # <a name="modify-a-filter-sql-server-profiler"></a>필터 수정(SQL Server Profiler)
@@ -40,7 +40,7 @@ ms.locfileid: "63228498"
   
 6.  **확인** 을 클릭하여 템플릿을 저장합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [SQL Server 프로파일러](sql-server-profiler.md)  
+## <a name="see-also"></a>참고 항목  
+ [SQL Server Profiler](sql-server-profiler.md)  
   
   

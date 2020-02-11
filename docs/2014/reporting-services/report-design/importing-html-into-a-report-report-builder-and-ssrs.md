@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fcab02cbe7f24da3567fdfa615a6595a268185ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105669"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>보고서로 HTML 가져오기(보고서 작성기 및 SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66105669"
 > [!NOTE]  
 >  HTML 태그가 들어 있는 텍스트를 가져오면 입력란에서 항상 데이터 구문을 분석합니다. HTML 태그의 하위 집합만 지원되기 때문에 렌더링된 보고서에 표시되는 HTML이 원래 HTML과 다를 수 있습니다.  
   
- 빠르게 시작하려면 [자습서: 텍스트 서식 지정&#40;보고서 작성기&#41;](../tutorial-format-text-report-builder.md)를 참조하세요.  
+ 빠르게 시작하려면 [자습서: 텍스트 서식 지정&#40;보고서 작성기&#41;](../tutorial-format-text-report-builder.md)을 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -35,7 +35,7 @@ ms.locfileid: "66105669"
 ## <a name="supported-html-tags"></a>지원되는 HTML 태그  
  다음은 자리 표시자 텍스트로 정의될 때 HTML로 렌더링될 전체 태그 목록입니다.  
   
--   머리글, 스타일 및 블록 요소: \<H{n}>, \<DIV>, \<SPAN>,\<P>, \<LI>  
+-   머리글, 스타일 및 블록 요소: \<H {n} >, \<DIV>, \<범위>,\<P>, \<LI>  
   
  나머지 모든 HTML 태그는 보고서를 처리하는 동안 무시됩니다. 자리 표시자 텍스트에 있는 식이 나타내는 HTML의 형식이 잘못된 경우에는 자리 표시자가 일반 텍스트로 렌더링됩니다. 모든 HTML 태그는 대소문자를 구분하지 않습니다.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66105669"
   
     -   상대 CSS 길이 단위는 무시되고 지원되지 않습니다. 지원되지 않는 단위에는 em, ex, px, %, rem이 있습니다.  
   
--   color  
+-   색  
   
 -   padding, padding-bottom, padding-top, padding-right, padding-left  
   
@@ -70,11 +70,11 @@ ms.locfileid: "66105669"
   
 -   형식이 잘못된 CSS 값은 형식이 잘못된 HTML과 마찬가지로 무시됩니다.  
   
--   같은 태그에 특성 및 CSS 스타일 특성이 모두 있는 경우에는 CSS 속성의 우선 순위가 더 높습니다. 예를 들어 텍스트가 **\<p style="text-align: right" align="left">** 인 경우에는 text-align 특성만 적용되고 텍스트가 오른쪽에 맞춰집니다.  
+-   같은 태그에 특성 및 CSS 스타일 특성이 모두 있는 경우에는 CSS 속성의 우선 순위가 더 높습니다. 예를 들어 텍스트가 ** \<p style = "텍스트 맞춤: 오른쪽" align = "left" >** 이면 텍스트 맞춤 특성만 적용 되 고 텍스트는 오른쪽 맞춤 됩니다.  
   
--   특성 및 CSS 스타일에 대해 속성이 여러 번 지정된 경우에는 속성의 마지막 인스턴스만 적용됩니다. 예를 들어 텍스트가 **\<p align="left" align="right">** 인 경우에는 텍스트가 오른쪽에 맞춰집니다.  
+-   특성 및 CSS 스타일에 대해 속성이 여러 번 지정된 경우에는 속성의 마지막 인스턴스만 적용됩니다. 예를 들어 텍스트가 ** \<p align = "left" align = "right" >** 이면 텍스트는 오른쪽 맞춤 됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [HTML로 렌더링&#40;보고서 작성기 및 SSRS&#41;](../report-builder/rendering-to-html-report-builder-and-ssrs.md)  
   
   

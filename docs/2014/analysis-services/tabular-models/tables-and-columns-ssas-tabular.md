@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4dcab58a876881cc9ca76e9159d5bcc68ffd5fdb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066507"
 ---
 # <a name="tables-and-columns-ssas-tabular"></a>테이블 및 열(SSAS 테이블 형식)
@@ -22,7 +22,7 @@ ms.locfileid: "66066507"
   
  이 항목의 섹션:  
   
--   [이점](#bkmk_benefits)  
+-   [아니라](#bkmk_benefits)  
   
 -   [테이블 및 열 작업](#bkmk_working)  
   
@@ -34,13 +34,13 @@ ms.locfileid: "66066507"
  **테이블 정의**  
  테이블 정의에는 열 집합이 포함됩니다. 데이터 원본에서 열을 가져오거나 계산 열과 같이 열을 수동으로 추가할 수 있습니다.  
   
- **테이블 메타데이터**  
+ **테이블 메타 데이터**  
  관계, 측정값, 역할, 큐브 뷰 및 붙여넣은 데이터는 모두 테이블 컨텍스트 내에서 개체를 정의하는 메타데이터입니다.  
   
  **데이터**  
  테이블 가져오기 마법사를 사용하거나 계산 열에서 새 데이터를 만들어 테이블을 처음 가져오면 데이터가 테이블 열에 채워집니다. 원본에서 데이터가 변경되거나 모델이 메모리에서 제거되면 처리 작업을 실행하여 데이터를 테이블에 다시 채워야 합니다.  
   
-##  <a name="bkmk_working"></a> 테이블 및 열 작업  
+##  <a name="bkmk_working"></a>테이블 및 열 작업  
  모델 디자이너에서는 새 모델 테이블을 직접 만들지 않습니다. 다른 데이터 원본에서 데이터를 가져오거나 복사할 때마다 새 탭이 자동으로 만들어집니다. 모델 디자이너의 각 탭에는 다음을 포함할 수 있는 데이터 테이블이 하나씩 들어 있습니다.  
   
 -   관계형 데이터베이스의 단일 테이블이나 뷰 또는 Analysis Services 큐브와 같은 관계형이 아닌 다른 원본  
@@ -55,20 +55,20 @@ ms.locfileid: "66066507"
   
  매우 큰 데이터 집합을 작업하는 경우 특정 데이터가 표시되지 않도록 필터링할 수 있습니다. 다른 순서로 데이터를 정렬할 수도 있습니다. 모델 디자이너를 사용하면 필터, 정렬 및 숨기기 기능을 사용하여 전체 열 또는 특정 데이터를 표시하거나 표시하지 않을 수 있습니다.  
   
-##  <a name="bkmk_related_tasks"></a> 관련 태스크  
+##  <a name="bkmk_related_tasks"></a> 관련 작업  
   
 |항목|Description|  
 |-----------|-----------------|  
-|[테이블에 열 추가&#40;SSAS 테이블 형식&#41;](add-columns-to-a-table-ssas-tabular.md)|원본 열을 테이블 정의에 추가하는 방법을 설명합니다.|  
-|[열 삭제&#40;SSAS 테이블 형식&#41;](delete-a-column-ssas-tabular.md)|모델 디자이너 또는 테이블 속성 대화 상자를 사용하여 모델 테이블 열을 삭제하는 방법에 대해 설명합니다.|  
-|[테이블, 열 또는 행 필터 매핑 변경&#40;SSAS 테이블 형식&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)|테이블 속성 편집 대화 상자에서 테이블 미리 보기 또는 SQL 쿼리 편집기를 사용하여 테이블, 열 또는 행 필터 매핑을 변경하는 방법을 설명합니다.|  
-|[시간 인텔리전스에 사용할 날짜 테이블로 표시 지정&#40;SSAS 테이블 형식&#41;](specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)|날짜 테이블로 표시 대화 상자를 사용하여 날짜 테이블 및 고유 식별자 열을 지정하는 방법을 설명합니다. 날짜 테이블 및 고유 식별자 지정은 DAX 수식에서 시간 인텔리전스 기능을 사용할 경우에 필요합니다.|  
-|[테이블 추가&#40;SSAS 테이블 형식&#41;](add-a-table-ssas-tabular.md)|기존 데이터 원본 연결을 사용하여 데이터 원본의 테이블을 추가하는 방법을 설명합니다.|  
-|[테이블 삭제&#40;SSAS 테이블 형식&#41;](delete-a-table-ssas-tabular.md)|모델 작업 영역 데이터베이스에서 더 이상 필요하지 않은 테이블을 삭제하는 방법을 설명합니다.|  
-|[테이블 또는 열 이름 바꾸기&#40;SSAS 테이블 형식&#41;](rename-a-table-or-column-ssas-tabular.md)|모델에서 쉽게 식별할 수 있도록 테이블 또는 열의 이름을 바꾸는 방법을 설명합니다.|  
-|[열 데이터 형식 설정&#40;SSAS 테이블 형식&#41;](set-the-data-type-of-a-column-ssas-tabular.md)|열의 데이터 형식을 변경하는 방법을 설명합니다. 데이터 형식은 열의 데이터가 저장되고 표시되는 방법을 정의합니다.|  
-|[열 숨기기 또는 고정&#40;SSAS 테이블 형식&#41;](hide-or-freeze-columns-ssas-tabular.md)|표시 하지 않으려는 열을 숨기는 방법 및 영역의 (잠금) 특정 열을 동결 하 여 모델의 다른 영역으로 스크롤할 때 모델의 영역을 표시 유지 하는 방법을 설명 합니다.|  
-|[계산 열&#40;SSAS 테이블 형식&#41;](ssas-calculated-columns.md)|이 섹션의 항목에서는 계산 열을 사용하여 집계된 데이터를 모델에 추가하는 방법을 설명합니다.|  
-|[데이터 필터링 및 정렬&#40;SSAS 테이블 형식&#41;](../filter-and-sort-data-ssas-tabular.md)|이 섹션의 항목에서는 모델 디자이너의 컨트롤을 사용하여 데이터를 필터링하거나 정렬하는 방법을 설명합니다.|  
+|[테이블에 열 추가 &#40;SSAS 테이블 형식&#41;](add-columns-to-a-table-ssas-tabular.md)|원본 열을 테이블 정의에 추가하는 방법을 설명합니다.|  
+|[SSAS 테이블 형식&#41;&#40;열 삭제](delete-a-column-ssas-tabular.md)|모델 디자이너 또는 테이블 속성 대화 상자를 사용하여 모델 테이블 열을 삭제하는 방법에 대해 설명합니다.|  
+|[SSAS 테이블 형식&#41;&#40;테이블, 열 또는 행 필터 매핑 변경](change-table-column-or-row-filter-mappings-ssas-tabular.md)|테이블 속성 편집 대화 상자에서 테이블 미리 보기 또는 SQL 쿼리 편집기를 사용하여 테이블, 열 또는 행 필터 매핑을 변경하는 방법을 설명합니다.|  
+|[시간 인텔리전스에 사용할 날짜 테이블로 표시 지정 &#40;SSAS 테이블 형식&#41;](specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)|날짜 테이블로 표시 대화 상자를 사용하여 날짜 테이블 및 고유 식별자 열을 지정하는 방법을 설명합니다. 날짜 테이블 및 고유 식별자 지정은 DAX 수식에서 시간 인텔리전스 기능을 사용할 경우에 필요합니다.|  
+|[SSAS 테이블 형식&#41;&#40;테이블 추가](add-a-table-ssas-tabular.md)|기존 데이터 원본 연결을 사용하여 데이터 원본의 테이블을 추가하는 방법을 설명합니다.|  
+|[SSAS 테이블 형식&#41;&#40;테이블 삭제](delete-a-table-ssas-tabular.md)|모델 작업 영역 데이터베이스에서 더 이상 필요하지 않은 테이블을 삭제하는 방법을 설명합니다.|  
+|[SSAS 테이블 형식&#41;&#40;테이블 또는 열 이름 바꾸기](rename-a-table-or-column-ssas-tabular.md)|모델에서 쉽게 식별할 수 있도록 테이블 또는 열의 이름을 바꾸는 방법을 설명합니다.|  
+|[열의 데이터 형식을 SSAS 테이블 형식 &#40;설정&#41;](set-the-data-type-of-a-column-ssas-tabular.md)|열의 데이터 형식을 변경하는 방법을 설명합니다. 데이터 형식은 열의 데이터가 저장되고 표시되는 방법을 정의합니다.|  
+|[SSAS 테이블 형식&#41;&#40;열 숨기기 또는 고정](hide-or-freeze-columns-ssas-tabular.md)|표시 하지 않을 열을 숨기는 방법과 한 영역에서 특정 열을 고정 (잠금) 하 여 모델의 다른 영역으로 스크롤할 때 모델의 영역을 계속 표시 하는 방법을 설명 합니다.|  
+|[SSAS 테이블 형식&#41;&#40;계산 열](ssas-calculated-columns.md)|이 섹션의 항목에서는 계산 열을 사용하여 집계된 데이터를 모델에 추가하는 방법을 설명합니다.|  
+|[SSAS 테이블 형식&#41;&#40;데이터 필터링 및 정렬](../filter-and-sort-data-ssas-tabular.md)|이 섹션의 항목에서는 모델 디자이너의 컨트롤을 사용하여 데이터를 필터링하거나 정렬하는 방법을 설명합니다.|  
   
   

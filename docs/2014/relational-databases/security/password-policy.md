@@ -33,10 +33,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7b28043d797585496686dea6fd0c5fad276f16b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63187973"
 ---
 # <a name="password-policy"></a>암호 정책
@@ -64,10 +64,12 @@ ms.locfileid: "63187973"
  암호 길이는 128자까지 가능하며 되도록 길고 복잡한 암호를 사용해야 합니다.  
   
 ## <a name="password-expiration"></a>암호 만료  
- 암호 만료 정책을 사용하여 암호의 수명을 관리합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 암호 만료 정책을 강제로 적용하면 사용자에게 기존 암호를 변경할 것과 암호가 만료되어 해당 계정을 사용할 수 없게 됨을 알려 줍니다.  
+ 암호 만료 정책을 사용하여 암호의 수명을 관리합니다. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 암호 만료 정책을 강제로 적용하면 사용자에게 기존 암호를 변경할 것과 암호가 만료되어 해당 계정을 사용할 수 없게 됨을 알려 줍니다.  
   
 ## <a name="policy-enforcement"></a>정책 적용  
- 암호 정책 적용은 각 SQL Server 로그인마다 별도로 구성할 수 있습니다. [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql) 을 사용하여 SQL Server 로그인의 암호 정책 옵션을 구성할 수 있습니다. 다음 규칙이 암호 정책 적용 구성에 적용됩니다.  
+ 암호 정책 적용은 각 SQL Server 로그인마다 별도로 구성할 수 있습니다. 
+  [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql) 을 사용하여 SQL Server 로그인의 암호 정책 옵션을 구성할 수 있습니다. 다음 규칙이 암호 정책 적용 구성에 적용됩니다.  
   
 -   CHECK_POLICY가 ON으로 변경되면 다음 동작이 수행됩니다.  
   
@@ -75,7 +77,7 @@ ms.locfileid: "63187973"
   
     -   암호 기록이 현재 암호 해시 값으로 초기화됩니다.  
   
-    -   **계정 잠금 기간**, **계정 잠금 임계값**및 **다음 시간 후 계정 잠금 수를 원래대로 설정** 도 사용하도록 설정됩니다.  
+    -   **계정 잠금 기간**, **계정 잠금 임계값**및 **후 계정 잠금 카운터 재설정** 도 사용 하도록 설정 됩니다.  
   
 -   CHECK_POLICY가 OFF로 변경되면 다음 동작이 수행됩니다.  
   
@@ -83,7 +85,8 @@ ms.locfileid: "63187973"
   
     -   암호 기록이 삭제됩니다.  
   
-    -   `lockout_time` 값이 다시 설정됩니다.  
+    -   
+  `lockout_time` 값이 다시 설정됩니다.  
   
  정책 옵션의 일부 조합은 지원되지 않습니다.  
   
@@ -108,7 +111,7 @@ ms.locfileid: "63187973"
   
  [CREATE USER&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql)  
   
- [ALTER USER&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-user-transact-sql)  
+ [ALTER USER &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-user-transact-sql)  
   
  [로그인 만들기](authentication-access/create-a-login.md)  
   

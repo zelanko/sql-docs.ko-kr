@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8c8dfb41890049918799bb3638f52dc222fc5dcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100637"
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>구독자 데이터에 외부 데이터 원본 사용(데이터 기반 구독)
@@ -60,7 +60,7 @@ ms.locfileid: "66100637"
 -   보고서 서버에서는 결과 집합의 모든 행에 대한 보고서 배달을 만듭니다. 결과 집합이 300개의 행으로 구성된 경우에는 보고서 서버에서 300개의 보고서 배달을 시도합니다.  
   
 ## <a name="setting-delivery-options-using-variable-data-from-a-subscriber-database"></a>구독자 데이터베이스에서 변수 데이터를 사용하여 배달 옵션 설정  
- 구독자 데이터베이스에 있는 데이터를 사용하여 각 받는 사람에 대한 배달 옵션을 사용자 지정할 수 있습니다. 사용하는 배달 확장 프로그램 종류에 따라 사용 가능한 옵션이 결정됩니다. 보고서 서버 전자 메일 배달 확장 프로그램을 사용하는 경우 쿼리에는 각 구독자에 대한 전자 메일 별칭이 포함되어야 합니다. 파일 공유 배달을 사용하고 있는 경우 구독자 데이터에는 구독자별 보고서 파일을 만들거나 배달 대상을 제공하는 데 사용할 수 있는 값이 포함되어야 합니다. 자세한 내용은 [Reporting Services의 파일 공유 배달](file-share-delivery-in-reporting-services.md) 하 고 [Reporting Services의 전자 메일 배달](e-mail-delivery-in-reporting-services.md)합니다.  
+ 구독자 데이터베이스에 있는 데이터를 사용하여 각 받는 사람에 대한 배달 옵션을 사용자 지정할 수 있습니다. 사용하는 배달 확장 프로그램 종류에 따라 사용 가능한 옵션이 결정됩니다. 보고서 서버 전자 메일 배달 확장 프로그램을 사용하는 경우 쿼리에는 각 구독자에 대한 전자 메일 별칭이 포함되어야 합니다. 파일 공유 배달을 사용하고 있는 경우 구독자 데이터에는 구독자별 보고서 파일을 만들거나 배달 대상을 제공하는 데 사용할 수 있는 값이 포함되어야 합니다. 자세한 내용은 [Reporting Services의 파일 공유 배달](file-share-delivery-in-reporting-services.md) 및 [Reporting Services에서 전자 메일 배달](e-mail-delivery-in-reporting-services.md)을 참조 하세요.  
   
 ## <a name="passing-parameter-values-from-the-subscriber-database-to-the-report"></a>구독자 데이터베이스에서 보고서로 매개 변수 값 전달  
  매개 변수가 있는 보고서에 대해 데이터 기반 구독을 만드는 경우 변수 매개 변수 값을 사용하여 각 보고서의 출력을 사용자 지정할 수 있습니다. 예를 들어 구독자 데이터베이스에는 보고서 데이터를 필터링하는 데 사용할 수 있는 직원 ID 번호, 채용일, 직함, 사무실 위치 정보 등이 포함될 수 있습니다. 보고서에서 이러한 열 데이터나 기타 사용 가능한 열 데이터를 기반으로 하는 매개 변수를 사용하면 매개 변수를 해당 열로 매핑할 수 있습니다.  
@@ -78,8 +78,8 @@ ms.locfileid: "66100637"
   
  이렇게 변경하는 경우에는 구독을 업데이트해야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [만들기, 수정 및 데이터 기반 구독을 삭제 합니다.](data-driven-subscriptions.md)   
+## <a name="see-also"></a>참고 항목  
+ [데이터 기반 구독 만들기, 수정 및 삭제](data-driven-subscriptions.md)   
  [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [구독 및 배달&#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)  
   

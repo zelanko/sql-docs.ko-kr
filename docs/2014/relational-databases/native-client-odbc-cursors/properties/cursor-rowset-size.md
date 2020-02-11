@@ -1,5 +1,5 @@
 ---
-title: 커서 행 집합 크기 | Microsoft 문서
+title: 커서 행 집합 크기 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bff145e7e3c6e429ca0877c81c5188b02e428809
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63207169"
 ---
 # <a name="cursor-rowset-size"></a>커서 행 집합 크기
-  ODBC 커서는 한 번에 한 행씩만 인출하도록 제한되지 않습니다. 호출할 때마다 여러 행을 검색할 수 있습니다 **SQLFetch** 또는 [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md). Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와 같은 클라이언트/서버 데이터베이스 작업을 할 때는 한 번에 여러 행을 인출하는 것이 효율적입니다. 인출 시 반환 된 행 수가 행 집합 크기 라고 하며의 SQL_ATTR_ROW_ARRAY_SIZE를 사용 하 여 지정 된 [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)합니다.  
+  ODBC 커서는 한 번에 한 행씩만 인출하도록 제한되지 않습니다. **Sqlfetch** 또는 [sqlfetchscroll](../../native-client-odbc-api/sqlfetchscroll.md)에 대 한 각 호출에서 여러 행을 검색할 수 있습니다. Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와 같은 클라이언트/서버 데이터베이스 작업을 할 때는 한 번에 여러 행을 인출하는 것이 효율적입니다. 인출 시 반환 되는 행 수는 행 집합 크기 라고 하며 [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)의 SQL_ATTR_ROW_ARRAY_SIZE을 사용 하 여 지정 됩니다.  
   
 ```  
 SQLUINTEGER uwRowsize;  
@@ -41,13 +41,13 @@ SQLSetStmtAttr(m_hstmt, SQL_ATTR_ROW_ARRAY_SIZE, (SQLPOINTER)uwRowsetSize, SQL_I
   
      행의 모든 열에 대한 데이터와 표시기가 포함된 구조를 사용하여 배열이 작성됩니다. 배열의 구조 수는 행 집합 크기와 같습니다.  
   
- 열 단위 또는 행 단위 바인딩을 사용 하는 경우, 각 호출에 **SQLFetch** 또는 **SQLFetchScroll** 에서 검색 된 행 집합 데이터 바인딩된 배열을 채웁니다.  
+ 열 단위 또는 행 단위 바인딩을 사용할 경우 **Sqlfetch** 또는 **sqlfetchscroll** 을 호출할 때마다 바인딩된 배열이 검색 된 행 집합의 데이터로 채워집니다.  
   
- [SQLGetData](../../native-client-odbc-api/sqlgetdata.md) 블록 커서에서 데이터 열을 검색 하는 데 사용할 수도 있습니다. 때문에 **SQLGetData** 한 번에 한 행씩 작업 **SQLSetPos** 호출 호출 하기 전에 현재 행을 행 집합의 특정 행을 설정 하 여 **SQLGetData**.  
+ [SQLGetData](../../native-client-odbc-api/sqlgetdata.md) 는 블록 커서에서 열 데이터를 검색 하는 데도 사용할 수 있습니다. **Sqlgetdata** 는 한 번에 한 행씩 작동 하므로 **sqlgetdata**를 호출 하기 전에 **SQLSetPos** 를 호출 하 여 행 집합의 특정 행을 현재 행으로 설정 해야 합니다.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 행 집합을 사용 하 여 전체 결과 집합을 빠르게 검색 하 여 최적화를 제공 하는 네이티브 클라이언트 ODBC 드라이버. 이 최적화를 사용 하려면 커서 특성을 기본값으로 설정 (읽기 전용, 전진 전용 행 집합 크기 = 1) 당시 **SQLExecDirect** 또는 **SQLExecute** 라고 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 네이티브 클라이언트 ODBC 드라이버는 기본 결과 집합을 설정 합니다. 스크롤 없이 결과를 클라이언트로 전송하는 경우 이 방법이 서버 커서보다 더 효율적입니다. 문이 실행된 후 행 집합 크기를 늘리고 열 단위 또는 행 단위 바인딩을 사용합니다. 이렇게 하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 결과 행을 효율적으로 클라이언트에 전송 하는 기본 결과 집합 사용 동안은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 네이티브 클라이언트 ODBC 드라이버 클라이언트의 네트워크 버퍼에서 행을 계속 가져오고.  
+ Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client ODBC 드라이버는 행 집합을 사용 하 여 전체 결과 집합을 신속 하 게 검색 하는 최적화를 제공 합니다. 이 최적화를 사용 하려면 **Sqlexecdirect** 또는 **sqlexecute** 를 호출할 때 커서 특성을 기본값 (앞 으로만 이동, 읽기 전용, 행 집합 크기 = 1)으로 설정 합니다. Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client ODBC 드라이버는 기본 결과 집합을 설정 합니다. 스크롤 없이 결과를 클라이언트로 전송하는 경우 이 방법이 서버 커서보다 더 효율적입니다. 문이 실행된 후 행 집합 크기를 늘리고 열 단위 또는 행 단위 바인딩을 사용합니다. 이렇게 하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기본 결과 집합을 사용 하 여 클라이언트에 결과 행을 효율적으로 보낼 수 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 있으며, Native client ODBC 드라이버는 계속 해 서 클라이언트의 네트워크 버퍼에서 행을 가져옵니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [커서 속성](cursor-properties.md)  
   
   

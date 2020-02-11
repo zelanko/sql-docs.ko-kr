@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aafacefa7a5bab5f8bc828f48384a79e17a13b11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63241194"
 ---
 # <a name="invalid-characters-and-escape-rules"></a>잘못된 문자 및 이스케이프 규칙
@@ -65,7 +65,7 @@ ms.locfileid: "63241194"
   
      XML 네임스페이스를 추가할 때는 WITH XMLNAMESPACES를 사용하는 것이 좋습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [FOR XML&#40;SQL Server&#41;](for-xml-sql-server.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: (SharePoint 용 PowerPivot) 라이브러리에 BI 의미 체계 모델 연결 콘텐츠 형식 추가 | Microsoft Docs
+title: 라이브러리에 BI 의미 체계 모델 연결 콘텐츠 형식 추가 (SharePoint용 PowerPivot) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4712aba656fa111400e41566964cbd9719f778db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071964"
 ---
 # <a name="add-a-bi-semantic-model-connection-content-type-to-a-library-powerpivot-for-sharepoint"></a>라이브러리에 BI 의미 체계 모델 연결 콘텐츠 형식 추가(SharePoint용 PowerPivot)
@@ -23,16 +23,17 @@ ms.locfileid: "66071964"
 > [!NOTE]  
 >  이미 SharePoint 데이터 연결 라이브러리를 사용하는 경우 BI 의미 체계 모델 연결 콘텐츠 형식이 해당 라이브러리 템플릿에 자동으로 추가됩니다. 이미 새 BI 의미 체계 모델 연결 문서를 만들 수 있게 하는 데이터 연결 라이브러리를 사용하는 경우에는 이 섹션의 단계를 건너뛸 수 있습니다.  
   
-##  <a name="bkmk_addtype"></a> 문서 라이브러리에 콘텐츠 형식 추가  
+##  <a name="bkmk_addtype"></a>문서 라이브러리에 콘텐츠 형식 추가  
  콘텐츠 형식을 추가하고 구성하려면 최소한 목록 관리 권한이 있어야 합니다. 이 권한은 디자인 권한 수준 이상에 포함되어 있습니다.  
   
- 문서 라이브러리가 포함된 사이트에서는 SharePoint용 PowerPivot에 대한 기능이 활성화되어 있어야 합니다. 자세한 내용은 [중앙 관리에서 사이트 모음에 대 한 PowerPivot 기능 통합 활성화](activate-power-pivot-integration-for-site-collections-in-ca.md)합니다.  
+ 문서 라이브러리가 포함된 사이트에서는 SharePoint용 PowerPivot에 대한 기능이 활성화되어 있어야 합니다. 자세한 내용은 [중앙 관리에서 사이트 모음에 대 한 PowerPivot 기능 통합 활성화](activate-power-pivot-integration-for-site-collections-in-ca.md)를 참조 하세요.  
   
 1.  BI 의미 체계 모델 연결 콘텐츠 형식을 사용하도록 설정할 문서 라이브러리를 엽니다.  
   
 2.  SharePoint 리본의 라이브러리 도구에서 **라이브러리**를 클릭합니다.  
   
-3.  **라이브러리 설정**을 클릭합니다.  
+3.  
+  **라이브러리 설정**을 클릭합니다.  
   
 4.  일반 설정에서 **고급 설정**을 클릭합니다.  
   
@@ -52,16 +53,16 @@ ms.locfileid: "66071964"
   
 12. 콘텐츠 형식을 추가했는지 확인하려면 라이브러리로 돌아가서 라이브러리 리본 메뉴의 문서 영역에서 **새 문서** 를 클릭합니다. 새 문서 목록에 **BI 의미 체계 모델 연결 파일** 이 표시되어야 합니다.  
   
-     ![SharePoint 라이브러리에 새 문서 하위 메뉴](../media/ssas-bismconnection-new.gif "SharePoint 라이브러리에 새 문서 하위 메뉴")  
+     ![SharePoint 라이브러리의 새 문서 하위 메뉴](../media/ssas-bismconnection-new.gif "SharePoint 라이브러리의 새 문서 하위 메뉴")  
   
  라이브러리에 대한 BI 의미 체계 모델 연결 콘텐츠 형식을 사용하도록 설정한 후 Excel 또는 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 보고서에 사용할 수 있는 비즈니스 의미 체계 모델 데이터에 대한 리디렉션을 제공하는 연결을 만들 수 있습니다. 이 다음 단계에 대해 자세히 알아보려면 다음 링크를 선택하십시오.  
   
  [PowerPivot 통합 문서에 대한 BI 의미 체계 모델 연결 만들기](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   
- [테이블 형식 model 데이터베이스에 대한 BI 의미 체계 모델 연결 만들기](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
+ [Create a BI Semantic Model Connection to a Tabular Model Database](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
-## <a name="see-also"></a>관련 항목  
- [PowerPivot BI 의미 체계 모델 연결 &#40;.bism&#41;](power-pivot-bi-semantic-model-connection-bism.md)   
+## <a name="see-also"></a>참고 항목  
+ [PowerPivot BI 의미 체계 모델 연결 &#40;. bism&#41;](power-pivot-bi-semantic-model-connection-bism.md)   
  [Excel 또는 Reporting Services에서 BI 의미 체계 모델 연결 사용](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
   
   

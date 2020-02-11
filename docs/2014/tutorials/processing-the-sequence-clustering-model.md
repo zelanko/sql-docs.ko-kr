@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 63f46f2d548437a707922bb9cf8b58727061253b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188150"
 ---
 # <a name="processing-the-sequence-clustering-model"></a>시퀀스 클러스터링 모델 처리
@@ -24,24 +24,24 @@ ms.locfileid: "63188150"
   
 ### <a name="to-process-the-mining-structure-and-model"></a>마이닝 구조 및 모델을 처리하려면  
   
-1.  에 **마이닝 모델** 메뉴 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]선택 **모든 모델과 마이닝 구조 처리**합니다.  
+1.  의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] **마이닝 모델** 메뉴에서 **마이닝 구조 및 모든 모델 처리**를 선택 합니다.  
   
-2.  빌드 및 프로젝트를 배포할 것인지 묻는 경고에서 클릭 **예**합니다.  
+2.  프로젝트를 빌드 및 배포할지를 요청 하는 경고에서 **예**를 클릭 합니다.  
   
-3.  에 **마이닝 구조 처리-Sequence Clustering with Region** 대화 상자, 클릭 **실행**합니다.  
+3.  **마이닝 구조 처리-하위 지역에서 시퀀스 클러스터링** 대화 상자에서 **실행**을 클릭 합니다.  
   
-     합니다 **처리 진행률** 대화 상자가 열리고 모델 처리에 대 한 정보를 표시 합니다. 새 구조 및 모델을 처리하는 데에는 시간이 걸릴 수 있습니다.  
+     **처리 진행률** 대화 상자가 열리고 모델 처리에 대 한 정보를 표시 합니다. 새 구조 및 모델을 처리하는 데에는 시간이 걸릴 수 있습니다.  
   
-4.  처리를 완료 한 후 클릭 **닫습니다** 종료 합니다 **처리 진행률** 대화 상자.  
+4.  처리가 완료 되 면 **닫기** 를 클릭 하 여 처리 **진행률** 대화 상자를 종료 합니다.  
   
-5.  클릭 **닫습니다** 종료 하려면 다시 합니다 **마이닝 구조 처리-Sequence Clustering with Region** 대화 상자.  
+5.  [ **닫기** ]를 다시 클릭 하 여 **마이닝 구조 처리-지역에 대 한 시퀀스 클러스터링** 대화 상자를 종료 합니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [시퀀스 클러스터링 모델 탐색 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 마이닝 디자이너](../../2014/analysis-services/data-mining/data-mining-designer.md)   
- [Microsoft Sequence Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [처리 요구 사항 및 고려 사항 & #40; 데이터 마이닝 & #41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Microsoft 시퀀스 클러스터링 알고리즘](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [데이터 마이닝&#41;&#40;처리 요구 사항 및 고려 사항](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

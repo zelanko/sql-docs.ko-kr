@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0f6380144faaa138e558d0118b6620aa22a095e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105582"
 ---
 # <a name="line-charts-report-builder-and-ssrs"></a>꺾은선형 차트(보고서 작성기 및 SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "66105582"
   
 -   **단계별 선형**. 일반적인 선 대신 단계별 선을 사용하는 꺾은선형 차트입니다. 단계별 선형 차트에서는 사다리나 계단의 층과 같은 모양으로 선을 사용하여 점을 연결합니다.  
   
--   **스파크라인 차트**. 테이블 또는 테이블릭스 셀에 선 계열만 표시하는 꺾은선형 차트의 변형입니다. 자세한 내용은 [스파크라인 및 데이터 막대 추가&#40;보고서 작성기 및 SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)를 참조하세요.  
+-   **스파크라인 차트**. 테이블 또는 테이블릭스 셀에 선 계열만 표시하는 꺾은선형 차트의 변형입니다. 자세한 내용은 [스파크라인 및 데이터 막대&#40;보고서 작성기 및 SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="data-considerations-for-line-charts"></a>꺾은선형 차트의 데이터 고려 사항  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66105582"
   
 -   선으로 그려진 계열은 차트 영역 내에서 공간을 많이 차지하지 않습니다.  따라서 꺾은선형 차트는 세로 막대형 차트 같은 다른 차트 종류와 자주 결합하여 사용됩니다. 그러나 가로 막대형, 극좌표형, 원형 또는 셰이프 차트 종류와는 꺾은선형 차트를 결합할 수 없습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [가로 막대형 차트&#40;보고서 작성기 및 SSRS&#41;](bar-charts-report-builder-and-ssrs.md)   
  [세로 막대형 차트&#40;보고서 작성기 및 SSRS&#41;](column-charts-report-builder-and-ssrs.md)   
  [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   

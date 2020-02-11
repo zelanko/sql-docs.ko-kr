@@ -1,5 +1,5 @@
 ---
-title: Visio 데이터 마이닝 다이어그램 (SQL Server 데이터 마이닝 추가 기능) 문제 해결 | Microsoft Docs
+title: Visio 데이터 마이닝 다이어그램 문제 해결 (SQL Server 데이터 마이닝 추가 기능) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 067d3c3a324922a8c8ef19239771c8a8c2305541
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065713"
 ---
 # <a name="troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins"></a>Visio 데이터 마이닝 다이어그램 문제 해결(SQL Server 데이터 마이닝 추가 기능)
@@ -32,9 +32,9 @@ ms.locfileid: "66065713"
 ## <a name="common-issues"></a>일반적인 문제  
  모델에 연결할 수 없습니다.  
   콘텐츠가 표시되지 않습니다.  
-  세부 정보를 확인할 수 없습니다.  
+  세부 정보를 볼 수 없음  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Visio에서 데이터 마이닝 모델 보기 &#40;데이터 마이닝 추가 기능&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)   
  [Visio에서 데이터 마이닝 모델 보기 &#40;데이터 마이닝 추가 기능&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
   

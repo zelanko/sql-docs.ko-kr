@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a3ea199f6e2e86f5dc2e51199386f31b93e9377
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63194992"
 ---
 # <a name="parameter-queries-visual-database-tools"></a>매개 변수 쿼리(Visual Database Tools)
@@ -64,9 +64,9 @@ WHERE au_fname = %first name% AND
   
  쿼리 및 뷰 디자이너에서 쿼리를 실행하면 [쿼리 매개 변수 대화 상자](query-parameters-dialog-box-visual-database-tools.md) 에 명명된 매개 변수의 목록이 나타납니다.  
   
-## <a name="see-also"></a>관련 항목  
- [쿼리 매개 변수를 사용 하 여 &#40;Visual Database Tools&#41;](query-with-parameters-visual-database-tools.md)   
- [지원 되는 쿼리 유형 &#40;Visual Database Tools&#41;](supported-query-types-visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools를 &#40;매개 변수를 사용 하 여 쿼리&#41;](query-with-parameters-visual-database-tools.md)   
+ [Visual Database Tools를 &#40;지원 되는 쿼리 유형&#41;](supported-query-types-visual-database-tools.md)   
  [쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

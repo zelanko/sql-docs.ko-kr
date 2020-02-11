@@ -14,26 +14,29 @@ author: yualan
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ebf686807169bb850e5a3ae8fac8cfb0b8ca7791
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061455"
 ---
 # <a name="azure-data-lake-store-destination"></a>Azure Data Lake Store 대상
-  **Azure Data Lake Store 대상** 구성 요소를 사용하면 SSIS 패키지가 Azure Data Lake Store에 데이터를 쓸 수 있습니다. 지원되는 파일 형식은 다음과 같습니다. 텍스트, Avro 및 ORC. 
+  **Azure Data Lake Store 대상** 구성 요소를 사용하면 SSIS 패키지가 Azure Data Lake Store에 데이터를 쓸 수 있습니다. 지원되는 파일 형식은 텍스트, Avro 및 ORC입니다. 
   
 ## <a name="configure-the-azure-data-lake-store-destination"></a>Azure Data Lake Store 대상 구성 
 
-1. **Azure Data Lake Store 대상** 을 데이터 흐름 디자이너에 끌어서 놓은 다음 두 번 클릭하여 편집기를 표시합니다.  
+1. 
+  **Azure Data Lake Store 대상** 을 데이터 흐름 디자이너에 끌어서 놓은 다음 두 번 클릭하여 편집기를 표시합니다.  
 
 2.  **Azure Data Lake Store 연결 관리자** 필드에서는 기존 Azure Data Lake Store 연결 관리자를 지정하거나 Azure Data Lake Store 서비스를 참조하는 연결 관리자를 새로 만듭니다.  
   
-    1.  **파일 경로** 필드에서는 데이터를 기록할 파일 이름을 지정합니다. 이 파일이 이미 있는 경우 해당 콘텐츠를 덮어쓰게 됩니다.  
+    1.  
+  **파일 경로** 필드에서는 데이터를 기록할 파일 이름을 지정합니다. 이 파일이 이미 있는 경우 해당 콘텐츠를 덮어쓰게 됩니다.  
   
-    2.  **파일 형식** 필드에서는 사용할 파일 형식을 지정합니다.  
+    2.  
+  **파일 형식** 필드에서는 사용할 파일 형식을 지정합니다.  
   
-        파일 형식이 Text이면 **열 구분 기호 문자** 값을 지정해야 합니다. 파일의 첫 행에 열 이름을 포함하려는 경우에는 **첫 번째 데이터 행의 열 이름** 도 선택합니다.  
+        파일 형식이 Text이면 **열 구분 기호 문자** 값을 지정해야 합니다. 또한 파일의 첫 번째 행에 열 이름이 포함 된 경우 **첫 번째 데이터 행에서 열 이름을** 선택 합니다.  
 
         파일 형식이 ORC이면 해당 플랫폼의 JRE를 설치해야 합니다. 
   

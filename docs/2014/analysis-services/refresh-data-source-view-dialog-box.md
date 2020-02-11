@@ -1,5 +1,5 @@
 ---
-title: 데이터 원본 뷰 대화 상자를 새로 고침 | Microsoft Docs
+title: 데이터 원본 뷰 새로 고침 대화 상자 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,28 +15,33 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5ac09961db83c8c0f8906f2bd04ea20638e39b22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070513"
 ---
 # <a name="refresh-data-source-view-dialog-box"></a>데이터 원본 뷰 새로 고침 대화 상자
-  **의** 데이터 원본 뷰 새로 고침 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 데이터 원본 뷰 새로 고침의 결과로 발생하는 변경 내용을 적용하거나 취소할 수 있습니다. 이 대화 상자는 기본 데이터 원본을 변경한 결과로 인해 데이터 원본 뷰에서 변경될 내용을 표시합니다. **확인** 을 클릭하여 변경 내용을 적용하고 데이터 원본 뷰를 새로 고치거나, **취소** 를 클릭하여 변경 내용을 무시하고 데이터 원본 뷰를 변경되지 않은 상태로 그대로 둡니다. 다음 방법으로 **데이터 원본 뷰 새로 고침** 대화 상자를 표시할 수 있습니다.  
   
--   **데이터 원본 뷰 디자이너** 의 **도구 모음** 창에 있는 **데이터 원본 뷰 새로 고침**을 클릭합니다.  
+  **의** 데이터 원본 뷰 새로 고침 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 데이터 원본 뷰 새로 고침의 결과로 발생하는 변경 내용을 적용하거나 취소할 수 있습니다. 이 대화 상자는 기본 데이터 원본을 변경한 결과로 인해 데이터 원본 뷰에서 변경될 내용을 표시합니다. 
+  **확인** 을 클릭하여 변경 내용을 적용하고 데이터 원본 뷰를 새로 고치거나, **취소** 를 클릭하여 변경 내용을 무시하고 데이터 원본 뷰를 변경되지 않은 상태로 그대로 둡니다. 다음 방법으로 **데이터 원본 뷰 새로 고침** 대화 상자를 표시할 수 있습니다.  
+  
+-   
+  **데이터 원본 뷰 디자이너** 의 **도구 모음** 창에 있는 **데이터 원본 뷰 새로 고침**을 클릭합니다.  
   
 -   데이터 원본 뷰 디자이너의 **다이어그램** 창을 마우스 오른쪽 단추를 클릭하고 **새로 고침**을 선택합니다.  
   
-## <a name="options"></a>변수  
- **다음 변경 된 내용이**  
- **확인**을 클릭하면 데이터 원본 뷰에 적용될 변경 내용(업데이트, 추가 및 삭제)이 표시됩니다.  
+## <a name="options"></a>옵션  
+ **다음과 같이 변경됩니다.**  
+ 
+  **확인**을 클릭하면 데이터 원본 뷰에 적용될 변경 내용(업데이트, 추가 및 삭제)이 표시됩니다.  
   
  **보고서 저장**  
- **다른 이름으로 저장** 대화 상자를 표시하고 HTML 보고서를 파일에 저장하려면 클릭합니다.  
+ 
+  **다른 이름으로 저장** 대화 상자를 표시하고 HTML 보고서를 파일에 저장하려면 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [Analysis Services Designers and Dialog Boxes &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [데이터 원본 뷰 디자이너&#40;Analysis Services - 다차원 데이터&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>참고 항목  
+ [Analysis Services 디자이너 및 대화 상자 &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [데이터 원본 뷰 디자이너 &#40;Analysis Services 다차원 데이터&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

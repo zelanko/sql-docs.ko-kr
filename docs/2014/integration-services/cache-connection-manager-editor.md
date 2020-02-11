@@ -13,21 +13,23 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0802ed589813a43ffac516c05a3a52de382d36c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061082"
 ---
 # <a name="cache-connection-manager-editor"></a>캐시 연결 관리자 편집기
   캐시 연결 관리자는 캐시 변환이나 캐시 파일(.caw)에서 참조 데이터 세트를 읽고 데이터를 캐시 파일에 저장할 수 있습니다. 데이터는 항상 메모리에 저장됩니다.  
   
 > [!NOTE]  
->  캐시 연결 관리자는 BLOB(Binary Large Object) 데이터 형식 DT_TEXT, DT_NTEXT 및 DT_IMAGE를 지원하지 않습니다. 참조 데이터 세트에 BLOB 데이터 형식이 있으면 패키지를 실행할 때 구성 요소가 실패합니다. **캐시 연결 관리자 편집기** 를 사용하여 열 데이터 형식을 수정할 수 있습니다.  
+>  캐시 연결 관리자는 BLOB(Binary Large Object) 데이터 형식 DT_TEXT, DT_NTEXT 및 DT_IMAGE를 지원하지 않습니다. 참조 데이터 세트에 BLOB 데이터 형식이 있으면 패키지를 실행할 때 구성 요소가 실패합니다. 
+  **캐시 연결 관리자 편집기** 를 사용하여 열 데이터 형식을 수정할 수 있습니다.  
   
  조회 변환은 참조 데이터 세트에 대해 조회를 수행합니다.  
   
- **캐시 연결 관리자 편집기** 대화 상자에는 다음과 같은 탭이 있습니다.  
+ 
+  **캐시 연결 관리자 편집기** 대화 상자에는 다음과 같은 탭이 있습니다.  
   
 -   [일반 탭](#generaltab)  
   
@@ -35,10 +37,11 @@ ms.locfileid: "66061082"
   
  캐시 연결 관리자에 대한 자세한 내용은 [Cache Connection Manager](connection-manager/cache-connection-manager.md)를 참조하세요.  
   
-##  <a name="generaltab"></a> 일반 탭  
- **캐시 연결 관리자 편집기** 대화 상자의 **일반** 탭을 사용하여 파일에서 캐시를 읽을지 아니면 파일에 캐시를 저장할지 여부를 나타낼 수 있습니다.  
+##  <a name="generaltab"></a>일반 탭  
+ 
+  **캐시 연결 관리자 편집기** 대화 상자의 **일반** 탭을 사용하여 파일에서 캐시를 읽을지 아니면 파일에 캐시를 저장할지 여부를 나타낼 수 있습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>옵션  
  **연결 관리자 이름**  
  워크플로의 캐시 연결에 고유한 이름을 지정합니다. 제공한 이름은 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너에 표시됩니다.  
   
@@ -63,13 +66,14 @@ ms.locfileid: "66061082"
  **찾아보기**  
  캐시 파일을 찾습니다.  
   
- **메타데이터 새로 고침**  
+ **메타 데이터 새로 고침**  
  캐시 연결 관리자에서 열 메타데이터를 삭제하고 선택한 캐시 파일의 열 메타데이터로 캐시 연결 관리자를 채웁니다.  
   
-##  <a name="columnstab"></a> 열 탭  
- **캐시 연결 관리자 편집기** 대화 상자의 **열** 탭을 사용하여 캐시에 있는 각 열의 속성을 구성할 수 있습니다.  
+##  <a name="columnstab"></a>열 탭  
+ 
+  **캐시 연결 관리자 편집기** 대화 상자의 **열** 탭을 사용하여 캐시에 있는 각 열의 속성을 구성할 수 있습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>옵션  
  **열**  
  열 이름을 지정합니다.  
   
@@ -98,7 +102,7 @@ ms.locfileid: "66061082"
  `Code Page`  
  열 형식에 대한 코드 페이지를 지정합니다. 데이터 형식에 적용 가능한 경우 `Code Page`를 업데이트할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [조회 변환](data-flow/transformations/lookup-transformation.md)  
   
   

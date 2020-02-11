@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f679387dd1282dba3a4521f40bd11a2e0ba4b26f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075777"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>다 대 다 관계 및 다 대 다 관계 속성 정의
@@ -43,11 +43,11 @@ ms.locfileid: "66075777"
   
  시각적으로 다 대 다 차원 관계는 큐브 다이어그램에 나타나지 않습니다. 대신 차원 용도 탭을 사용하여 모델에서 다 대 다 관계를 신속하게 식별할 수 있습니다. 다 대 다 관계는 다음 아이콘으로 표시됩니다.  
   
- ![차원 용도의 다 대 다 아이콘](../media/ssas-m2m-icondimusage.png "다 대 다 차원 용도의 아이콘")  
+ ![차원 용도의 다 대 다 아이콘](../media/ssas-m2m-icondimusage.png "차원 용도의 다 대 다 아이콘")  
   
  단추를 클릭하여 관계 정의 대화 상자를 연 다음 관계 유형이 다 대 다인지 확인하고 관계에서 사용되는 중간 측정값 그룹을 확인합니다.  
   
- ![차원 용도 정의 관계 단추](../media/ssas-m2m-btndimusage.png "차원 용도의 관계 정의 단추")  
+ ![차원 사용의 관계 정의 단추](../media/ssas-m2m-btndimusage.png "차원 사용의 관계 정의 단추")  
   
  이후의 섹션들에서는 다 대 다 차원을 설정하고 모엘 동작을 테스트하는 방법을 알아봅니다. 먼저 추가 정보를 검토하거나 자습서를 살펴보려면 이 문서 끝에 있는 **자세한 정보** 를 참조하십시오.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66075777"
   
      다음 예제에서는 이 절차에서 사용되는 테이블이 기본 키를 사용하여 연결되어 있음을 확인합니다.  
   
-     ![관련된 테이블을 표시 하는 DSV](../media/ssas-m2m-dsvpkeys.PNG "관련된 테이블을 표시 하는 DSV")  
+     ![관련 테이블을 표시하는 DSV](../media/ssas-m2m-dsvpkeys.PNG "관련 테이블을 표시하는 DSV")  
   
 #### <a name="step-2-create-dimensions-and-measure-groups"></a>2단계: 차원 및 측정값 그룹 만들기  
   
@@ -93,27 +93,32 @@ ms.locfileid: "66075777"
   
 3.  기존 Fact Internet Sales 테이블을 기반으로 두 번째 차원을 만듭니다. 이 테이블은 팩트 테이블이지만 Sales Order 정보를 포함하고 있습니다. 이 정보를 사용하여 Sales Order 차원을 만들 것입니다.  
   
-4.  원본 정보 지정에서 이름 열을 지정해야 한다는 경고가 표시됩니다. **SalesOrderNumber** 를 이름으로 선택합니다.  
+4.  원본 정보 지정에서 이름 열을 지정해야 한다는 경고가 표시됩니다. 
+  **SalesOrderNumber** 를 이름으로 선택합니다.  
   
-     ![이름 열을 표시 하는 sales Order 차원](../media/ssas-m2m-dimsalesordersource.PNG "이름 열을 표시 하는 Sales Order 차원")  
+     ![이름 열을 표시하는 Sales Order 차원](../media/ssas-m2m-dimsalesordersource.PNG "이름 열을 표시하는 Sales Order 차원")  
   
 5.  마법사의 다음 페이지에서 특성을 선택합니다. 이 예에서는 **SalesOrderNumber**만 선택하면 됩니다.  
   
-     ![판매 주문 차원, 특성 목록 표시](../media/ssas-m2m-dimsalesorderattrib.PNG "Sales order 차원 특성 목록 표시")  
+     ![특성 목록을 보여 주는 Sales Order 차원](../media/ssas-m2m-dimsalesorderattrib.PNG "특성 목록을 보여 주는 Sales Order 차원")  
   
 6.  차원에 대해 일관성 있는 명명 규칙을 사용하기 위해 차원의 이름을 **Dim Sales Orders**로 바꿉니다.  
   
-     ![차원 이름 바꾸기를 표시 하는 마법사 페이지](../media/ssas-m2m-dimsalesorders.PNG "차원 이름 바꾸기를 표시 하는 마법사 페이지")  
+     ![차원 이름 바꾸기를 표시하는 마법사 페이지](../media/ssas-m2m-dimsalesorders.PNG "차원 이름 바꾸기를 표시하는 마법사 페이지")  
   
-7.  **큐브** 를 마우스 오른쪽 단추로 클릭하고 **새 큐브**를 선택하세요.  
+7.  
+  **큐브** 를 마우스 오른쪽 단추로 클릭하고 **새 큐브**를 선택하세요.  
   
 8.  측정값 그룹 테이블에서 **FactInternetSales** 및 **FactInternetSalesReason**을 선택합니다.  
   
-     **FactInternetSales** 는 큐브에서 사용하려는 측정값을 포함하고 있기 때문에 선택하고, **FactInternetSalesReason** 은 판매 주문과 판매 이유의 관계를 설정하는 멤버 연결 데이터를 제공하는 중간 측정값 그룹이기 때문에 선택합니다.  
+     
+  **FactInternetSales** 는 큐브에서 사용하려는 측정값을 포함하고 있기 때문에 선택하고, 
+  **FactInternetSalesReason** 은 판매 주문과 판매 이유의 관계를 설정하는 멤버 연결 데이터를 제공하는 중간 측정값 그룹이기 때문에 선택합니다.  
   
 9. 각 팩트 테이블의 측정값을 선택합니다.  
   
-     모델을 단순하게 만들기 위해 모든 측정값을 지운 다음 목록 아래쪽에서 **Sales Amount** 및 **Fact Internet Sales Count** 만 선택합니다. **FactInternetSalesReason** 은 측정값을 하나만 포함하므로 자동으로 선택됩니다.  
+     모델을 단순하게 만들기 위해 모든 측정값을 지운 다음 목록 아래쪽에서 **Sales Amount** 및 **Fact Internet Sales Count** 만 선택합니다. 
+  **FactInternetSalesReason** 은 측정값을 하나만 포함하므로 자동으로 선택됩니다.  
   
 10. 차원 목록에 **Dim Sales Reason** 및 **Dim Sales Orders**가 표시됩니다.  
   
@@ -121,17 +126,18 @@ ms.locfileid: "66075777"
   
 11. 큐브의 이름을 지정하고 **마침**을 클릭합니다.  
   
-#### <a name="step-3-define-many-to-many-relationship"></a>3단계: 정의 다 대 다 관계  
+#### <a name="step-3-define-many-to-many-relationship"></a>3단계: 다 대 다 관계 정의  
   
-1.  큐브 디자이너에서 차원 용도 탭을 클릭합니다. **Dim Sales Reason** 및 **Fact Internet Sales**간에 이미 다 대 다 관계가 있음을 확인합니다. 이전에 설명한 대로 다음 아이콘은 다 대 다 관계를 나타냅니다.  
+1.  큐브 디자이너에서 차원 용도 탭을 클릭 합니다. **Dim Sales Reason** 과 **Fact Internet Sales**간에 이미 다 대 다 관계가 있음을 확인 합니다. 이전에 설명한 대로 다음 아이콘은 다 대 다 관계를 나타냅니다.  
   
-     ![차원 용도의 다 대 다 아이콘](../media/ssas-m2m-icondimusage.png "다 대 다 차원 용도의 아이콘")  
+     ![차원 용도의 다 대 다 아이콘](../media/ssas-m2m-icondimusage.png "차원 용도의 다 대 다 아이콘")  
   
-2.  **Dim Sales Reason** 과 **Fact Internet Sales**간의 교집합 셀을 클릭한 다음 단추를 클릭하여 관계 정의 대화 상자를 엽니다.  
+2.  
+  **Dim Sales Reason** 과 **Fact Internet Sales**간의 교집합 셀을 클릭한 다음 단추를 클릭하여 관계 정의 대화 상자를 엽니다.  
   
      이 대화 상자가 다 대 다 관계를 지정하는 데 사용됨을 확인할 수 있습니다. 일반 관계가 있는 차원을 대신 추가한 경우에는 이 대화 상자를 사용하여 다 대 다로 변경할 수 있습니다.  
   
-     ![차원 용도 정의 관계 단추](../media/ssas-m2m-btndimusage.png "차원 용도의 관계 정의 단추")  
+     ![차원 사용의 관계 정의 단추](../media/ssas-m2m-btndimusage.png "차원 사용의 관계 정의 단추")  
   
 3.  Analysis Services 다차원 인스턴스에 프로젝트를 배포합니다. 다음 단계에서는 Excel에서 큐브를 탐색하여 동작을 확인합니다.  
   
@@ -142,29 +148,30 @@ ms.locfileid: "66075777"
   
 1.  프로젝트를 배포한 다음 큐브를 탐색하여 집계가 유효한지 확인합니다.  
   
-2.  Excel에서 **데이터** | **기타 원본** | **Analysis Services**를 클릭합니다. 서버의 이름을 입력하고 데이터베이스와 큐브를 선택합니다.  
+2.  Excel의**Analysis Services에서****기타 원본의** |  **데이터** | 를 클릭 합니다. 서버의 이름을 입력하고 데이터베이스와 큐브를 선택합니다.  
   
 3.  다음과 같은 피벗 테이블을 만듭니다.  
   
-    -   **Sales Amount** 를 값으로 사용함  
+    -   **Sales Amount** 를 값으로  
   
-    -   열에서**Sales Reason Name** 을 사용함  
+    -   열의 **Sales Reason Name**  
   
-    -   행에서**Sales Order Number** 를 사용함  
+    -   행의 **판매 주문 번호**  
   
 4.  결과를 분석합니다. 예제 데이터를 사용하고 있기 때문에 처음에는 모든 판매 주문에 동일한 값이 있는 것처럼 보입니다. 그러나 아래로 스크롤하면 데이터 변화를 확인할 수 있습니다.  
   
      어느 정도 내려가면 주문 번호 **SO5382**에 대한 판매액과 판매 이유를 찾을 수 있습니다. 이 특정 주문의 총합계는 **539.99**이고 이 주문에 할당된 구매 이유에는 Promotion, Other 및 Price가 포함되어 있습니다.  
   
-     ![다 대 다 집계를 보여 주는 Excel 워크시트](../media/ssas-m2m-excel.png "다 대 다 집계를 보여 주는 Excel 워크시트")  
+     ![다 대 다 집계를 표시하는 Excel 워크시트](../media/ssas-m2m-excel.png "다 대 다 집계를 표시하는 Excel 워크시트")  
   
-     주문의 판매액은 올바르게 계산되었습니다. 즉, 전체 주문의 판매액은 **539.99** 입니다. **539.99** 가 각 이유에 표시되어 있지만 모든 세 이유의 값에 대한 합계가 계산되지 않아서 총합계가 잘못된 값으로 커지지 않았습니다.  
+     주문의 판매액은 올바르게 계산되었습니다. 즉, 전체 주문의 판매액은 **539.99** 입니다. 
+  **539.99** 가 각 이유에 표시되어 있지만 모든 세 이유의 값에 대한 합계가 계산되지 않아서 총합계가 잘못된 값으로 커지지 않았습니다.  
   
      왜 처음부터 판매액을 각 판매 이유 아래에 넣지 않았을까요? 그것은 바로 각 이유에 할당할 수 있는 판매액을 식별할 수 있도록 하기 위해서입니다.  
   
 5.  워크시트의 아래로 스크롤합니다. 이제 총합계뿐만 아니라 다른 이유에 비해 Price가 고객 구매의 가장 중요한 이유인 것을 쉽게 확인할 수 있습니다.  
   
-     ![다 대 다에서 합계를 표시 하는 Excel 통합 문서](../media/ssas-m2m-excelgrandtotal.png "다 대 다에서 합계를 표시 하는 Excel 통합 문서")  
+     ![다 대 다에서 합계를 표시하는 Excel 통합 문서](../media/ssas-m2m-excelgrandtotal.png "다 대 다에서 합계를 표시하는 Excel 통합 문서")  
   
 #### <a name="tips-for-handling-unexpected-query-results"></a>예기치 않은 쿼리 결과 처리 시 유용한 정보  
   
@@ -176,19 +183,19 @@ ms.locfileid: "66075777"
   
 4.  연결된 측정값 그룹을 여러 다 대 다 관계에서 사용하지 마십시오. 특히 해당 관계가 서로 다른 큐브에 있는 경우에 사용하지 마십시오. 사용하면 모호한 집계가 발생할 수 있습니다. 자세한 내용은 [다 대 다 관계가 포함된 큐브의 연결된 측정값에 대한 잘못된 집계](https://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx)를 참조하세요.  
   
-##  <a name="bkmk_Learn"></a> Learn more  
+##  <a name="bkmk_Learn"></a>더 알아보세요  
  개념을 완전히 이해하는 데 유용한 추가 정보를 얻으려면 다음 링크를 사용하십시오.  
   
- [Analysis Services의 다 대 다 차원 정의](../lesson-5-3-defining-a-many-to-many-relationship.md)  
+ [Analysis Services에서 다 대 다 차원을 정의하는 방법](../lesson-5-3-defining-a-many-to-many-relationship.md)  
   
  [다 대 다 혁명 2.0](https://go.microsoft.com/fwlink/?LinkId=324760)  
   
- [자습서: SQL Server Analysis Services 다 대 다 대 다 차원 예제](https://go.microsoft.com/fwlink/?LinkId=324761)  
+ [자습서: SQL Server Analysis Services에 대 한 다 대 다 차원 예제](https://go.microsoft.com/fwlink/?LinkId=324761)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [차원 관계](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Analysis Services 다차원 모델링 자습서에 대 한 예제 데이터 및 프로젝트 설치](../install-sample-data-and-projects.md)   
- [Analysis Services 프로젝트 & #40; 배포 SSDT & #41;](deploy-analysis-services-projects-ssdt.md)   
+ [Analysis Services 다차원 모델링 자습서에 사용할 샘플 데이터 및 프로젝트 설치](../install-sample-data-and-projects.md)   
+ [SSDT&#41;&#40;Analysis Services 프로젝트 배포](deploy-analysis-services-projects-ssdt.md)   
  [다차원 모델의 큐브 뷰](perspectives-in-multidimensional-models.md)  
   
   

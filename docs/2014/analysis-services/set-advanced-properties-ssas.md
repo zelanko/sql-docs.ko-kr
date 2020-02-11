@@ -1,5 +1,5 @@
 ---
-title: 속성 (SSAS) 고급 설정 | Microsoft Docs
+title: 고급 속성 설정 (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5afadecc745057344fd86df21b4479dabc1f7685
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068829"
 ---
 # <a name="set-advanced-properties-ssas"></a>고급 속성 설정(SSAS)
-  **테이블 가져오기 마법사** 의 이 페이지에서는 데이터 원본 연결에 대한 속성 설정을 추가로 지정할 수 있습니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  
+  
+  **테이블 가져오기 마법사** 의 이 페이지에서는 데이터 원본 연결에 대한 속성 설정을 추가로 지정할 수 있습니다. 
+  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  
   
 ## <a name="uielement-list"></a>UIElement 목록  
  **공급자**  

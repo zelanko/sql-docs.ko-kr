@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e1a884f7c45accefb248029d148feb8b521e6ff4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63240541"
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>표시된 열 추적으로 구성(SQL Server Profiler)
@@ -31,7 +31,7 @@ ms.locfileid: "63240541"
 |Duration|StartTime|EventClass|ClientProcessID|  
 |--------------|---------------|----------------|---------------------|  
 ||12/12/2006 3:16:43 PM|SQL:StmtStarting|2124|  
-|0|12/12/2006 5:39:23 PM|Audit Login|648|  
+|0|12/12/2006 5:39:23 PM|로그인 감사|648|  
 |1|12/12/2006 5:24:44 PM|SQL:StmtStarting|2124|  
 |25|12/12/2006 5:24:44 PM|SQL:StmtCompleted|648|  
   
@@ -82,7 +82,7 @@ ms.locfileid: "63240541"
   
 7.  추적 데이터의 일반 보기로 되돌리려면 **보기** 메뉴에서 **집계 보기** 를 클릭하여 선택을 취소합니다. 집계 보기로 되돌리려면 **보기** 메뉴에서 **집계 보기** 를 다시 클릭하여 다시 선택합니다. **보기** 메뉴에서 **그룹화 보기** 를 클릭해도 그룹화된 추적 이벤트를 축소하지 않고 표시할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [추적 만들기&#40;SQL Server Profiler&#41;](create-a-trace-sql-server-profiler.md)   
  [추적 테이블 열기&#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md)   
  [추적 파일 열기&#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md)  

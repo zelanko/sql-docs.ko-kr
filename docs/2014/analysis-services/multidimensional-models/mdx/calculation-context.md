@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 847e9da07f8c255af8041071c63254b241490761
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074685"
 ---
 # <a name="calculation-context"></a>계산 컨텍스트
@@ -30,7 +30,8 @@ ms.locfileid: "66074685"
 2.  WHERE 절(해당되는 경우) - 이 절은 *slicer 축*이라고도 하며 쿼리에서 열 및 행 축에 반환되는 멤버를 제한하는 집합, 튜플 또는 멤버를 지정하는 데 사용됩니다. 개념적으로 열 또는 행 축에 명시적으로 지정되지 않은 모든 특성 계층의 기본 멤버는 slicer 축의 일부입니다.  
   
     > [!NOTE]  
-    >  특정 특성의 셀 좌표가 slicer 축과 다른 축 모두에서 지정된 경우 축의 집합 멤버를 결정할 때는 함수에 지정된 좌표가 우선합니다. [Filter(MDX)](/sql/mdx/filter-mdx) 및 [Order(MDX)](/sql/mdx/order-mdx) 함수가 이러한 함수의 예입니다. 즉, WHERE 절이나 FROM 절의 SELECT 문을 사용하여 계산 컨텍스트에서 제외된 특성 멤버를 기준으로 결과를 필터링하거나 정렬할 수 있습니다.  
+    >  특정 특성의 셀 좌표가 slicer 축과 다른 축 모두에서 지정된 경우 축의 집합 멤버를 결정할 때는 함수에 지정된 좌표가 우선합니다. 
+  [Filter(MDX)](/sql/mdx/filter-mdx) 및 [Order(MDX)](/sql/mdx/order-mdx) 함수가 이러한 함수의 예입니다. 즉, WHERE 절이나 FROM 절의 SELECT 문을 사용하여 계산 컨텍스트에서 제외된 특성 멤버를 기준으로 결과를 필터링하거나 정렬할 수 있습니다.  
   
 3.  쿼리 또는 식에 정의된 명명된 집합 및 계산 멤버  
   
@@ -69,9 +70,9 @@ WHERE (Customer.Country.France,
 > [!IMPORTANT]  
 >  쿼리 성능을 향상시키려면 멤버와 튜플을 확인 과정에서 가능한 한 빨리 제거해야 합니다. 이렇게 하면 쿼리할 때 최종 멤버 집합에 대한 복잡한 계산이 가능한 가장 적은 수의 셀에 대해 수행됩니다.  
   
-## <a name="see-also"></a>관련 항목  
- [쿼리에 큐브 컨텍스트 설정&#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)   
- [MDX 쿼리 기본 사항 & #40; Analysis Services & #41;](mdx-query-fundamentals-analysis-services.md)   
- [MDX의 주요 개념&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)  
+## <a name="see-also"></a>참고 항목  
+ [MDX&#41;&#40;쿼리에 큐브 컨텍스트 설정](establishing-cube-context-in-a-query-mdx.md)   
+ [MDX 쿼리 기본 사항 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
+ [MDX의 주요 개념 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)  
   
   

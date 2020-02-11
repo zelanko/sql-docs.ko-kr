@@ -19,14 +19,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fcfbbdb1881662401e791ea197115120444cf855
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63225535"
 ---
-# <a name="bcpcolumns"></a>bcp_columns
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서의 대량 복사에 사용하기 위해 사용자 파일에서 찾는 총 열 수를 설정합니다. [bcp_setbulkmode](bcp-setbulkmode.md) bcp_columns 대신 사용할 수 있습니다 하 고 [bcp_colfmt](bcp-colfmt.md)합니다.  
+# <a name="bcp_columns"></a>bcp_columns
+  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서의 대량 복사에 사용하기 위해 사용자 파일에서 찾는 총 열 수를 설정합니다. bcp_columns 및 [bcp_colfmt](bcp-colfmt.md)대신 [bcp_setbulkmode](bcp-setbulkmode.md) 를 사용할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,19 +48,19 @@ nColumns
  대량 복사가 가능한 ODBC 연결 핸들입니다.  
   
  *nColumns*  
- 사용자 파일에 포함된 총 열 수입니다. 대량으로 사용자 파일에서 데이터 복사를 준비 하는 경우에 프로그램 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블 및 사용자 파일의 모든 열을 복사 하지도 설정 해야 합니다 *nColumns* 사용자 파일 열의 총 수입니다.  
+ 사용자 파일에 포함된 총 열 수입니다. 사용자 파일에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블로 데이터를 대량 복사 하 고 사용자 파일의 모든 열을 복사 하지 않으려는 경우에도 *ncolumns* 를 총 사용자 파일 열 수로 설정 해야 합니다.  
   
-## <a name="returns"></a>반환 값  
+## <a name="returns"></a>반환  
  SUCCEED 또는 FAIL  
   
-## <a name="remarks"></a>Remarks  
- 한 후에이 함수를 호출할 수 있습니다 [bcp_init](bcp-init.md) 가 올바른 파일 이름을 사용 하 여 호출 되었습니다.  
+## <a name="remarks"></a>설명  
+ 이 함수는 올바른 파일 이름을 사용 하 여 [bcp_init](bcp-init.md) 를 호출한 후에만 호출할 수 있습니다.  
   
- 기본값과는 다른 사용자 파일 형식을 사용하려는 경우에만 이 함수를 호출해야 합니다. 에 대 한 기본 사용자 파일 형식 설명 하는 방법에 대 한 자세한 내용은 참조 하세요. **bcp_init**합니다.  
+ 기본값과는 다른 사용자 파일 형식을 사용하려는 경우에만 이 함수를 호출해야 합니다. 기본 사용자 파일 형식에 대 한 자세한 내용은 **bcp_init**를 참조 하십시오.  
   
- 호출한 후 `bcp_columns`를 호출 해야 합니다 [bcp_colfmt](bcp-colfmt.md)완전히 사용자 지정 파일 형식을 정의 하는 사용자 파일의 각 열에 대 한 합니다.  
+ 를 호출한 `bcp_columns`후 사용자 파일의 각 열에 대해 [bcp_colfmt](bcp-colfmt.md)를 호출 하 여 사용자 지정 파일 형식을 완전히 정의 해야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [대량 복사 함수](sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>참고 항목  
+ [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

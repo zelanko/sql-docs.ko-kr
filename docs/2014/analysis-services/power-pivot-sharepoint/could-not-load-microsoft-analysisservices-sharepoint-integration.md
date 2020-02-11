@@ -1,5 +1,5 @@
 ---
-title: 파일 또는 어셈블리를 로드할 수 없습니다 &#39;Microsoft.Data.Services, 버전 3.5.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089 =&#39; 또는 해당 종속성 중 하나입니다. 시스템에서 지정한 파일을 찾을 수 없습니다. | Microsoft Docs
+title: 파일이 나 어셈블리 &#39;b77a5c561934e089, Version = 3.5.0.0, Culture = 중립, PublicKeyToken =&#39; 또는 해당 종속성 중 하나를 로드할 수 없습니다. 시스템은 지정된 파일을 찾을 수 없습니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b33e09d4dc7471f6447f1205f5c39746bc247ae7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071625"
 ---
-# <a name="could-not-load-file-or-assembly-39microsoftdataservices-version3500-cultureneutral-publickeytokenb77a5c561934e08939-or-one-of-its-dependencies-the-system-cannot-find-the-file-specified"></a>파일 또는 어셈블리를 로드할 수 없습니다 &#39;Microsoft.Data.Services, 버전 3.5.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089 =&#39; 또는 해당 종속성 중 하나입니다. 시스템에서 지정한 파일을 찾을 수 없습니다.
+# <a name="could-not-load-file-or-assembly-39microsoftdataservices-version3500-cultureneutral-publickeytokenb77a5c561934e08939-or-one-of-its-dependencies-the-system-cannot-find-the-file-specified"></a>파일이 나 어셈블리 &#39;b77a5c561934e089, Version = 3.5.0.0, Culture = 중립, PublicKeyToken =&#39; 또는 해당 종속성 중 하나를 로드할 수 없습니다. 시스템은 지정된 파일을 찾을 수 없습니다.
   SharePoint용 PowerPivot이 설치된 SharePoint 2010 환경에서는 데이터 피드 내보내기를 시도할 때 시스템에 필요한 Microsoft ADO.NET Data Services 버전이 없으면 이 오류가 발생합니다.  
   
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -36,13 +36,14 @@ ms.locfileid: "66071625"
   
 ## <a name="user-action"></a>사용자 동작  
   
-1.  SharePoint 2010의 하드웨어 및 소프트웨어 요구 사항 설명서로 이동 [결정 하드웨어 및 소프트웨어 요구 사항 (SharePoint 2010)](https://go.microsoft.com/fwlink/?LinkId=169734) (https://go.microsoft.com/fwlink/?LinkId=169734)합니다.  
+1.  SharePoint 2010에 대 한 하드웨어 및 소프트웨어 요구 사항 설명서 [하드웨어 및 소프트웨어 요구 사항 확인 (SharePoint 2010)](https://go.microsoft.com/fwlink/?LinkId=169734) (https://go.microsoft.com/fwlink/?LinkId=169734))으로 이동 합니다.  
   
-2.  **소프트웨어 필수 구성 요소 설치**에서 현재 사용 중인 운영 체제(Windows Server 2008 SP2 또는 Windows Server 2008 R2)에 맞는 ADO.NET Data Services 3.5의 링크를 찾습니다.  
+2.  
+  **소프트웨어 필수 구성 요소 설치**에서 현재 사용 중인 운영 체제(Windows Server 2008 SP2 또는 Windows Server 2008 R2)에 맞는 ADO.NET Data Services 3.5의 링크를 찾습니다.  
   
 3.  링크를 클릭하여 서비스를 설치하는 설치 프로그램을 실행합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SharePoint에 PowerPivot 솔루션 배포](deploy-power-pivot-solutions-to-sharepoint.md)  
   
   

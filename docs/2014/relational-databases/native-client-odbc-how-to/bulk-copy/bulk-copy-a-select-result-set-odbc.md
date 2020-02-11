@@ -1,5 +1,5 @@
 ---
-title: SELECT 결과 집합 (ODBC) 대량 복사 | Microsoft 문서
+title: SELECT 결과 집합 대량 복사 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a90937eafc531612968ac4248b329ba7a0a47d83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63225516"
 ---
 # <a name="bulk-copy-a-select-result-set-odbc"></a>SELECT 결과 집합 대량 복사(ODBC)
@@ -35,24 +35,26 @@ ms.locfileid: "63225516"
   
 3.  SQL Server에 연결합니다.  
   
-4.  [bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) 를 호출하여 다음 정보를 설정합니다.  
+4.  
+  [bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) 를 호출하여 다음 정보를 설정합니다.  
   
-    -   NULL을 지정 합니다 *szTable* 매개 변수입니다.  
+    -   *Sztable* 매개 변수에 대해 NULL을 지정 합니다.  
   
     -   결과 집합 데이터를 받는 데이터 파일의 이름입니다.  
   
     -   대량 복사 오류 메시지를 받을 데이터 파일의 이름입니다. 메시지 파일이 필요하지 않으면 NULL을 지정합니다.  
   
-    -   복사본의 방향: DB_OUT.  
+    -   복사 방향: DB_OUT.  
   
-5.  호출 [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md), eOption을 BCPHINTS로 설정 하 고 SELECT 문이 포함 된 SQLTCHAR 배열에 대 한 포인터를 iValue에 배치 합니다.  
+5.  [Bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)를 호출 하 고 EOPTION을 BCPHINTS로 설정 하 고 IVALUE에 SELECT 문을 포함 하는 sql96array에 대 한 포인터를 놓습니다.  
   
-6.  [bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) 를 호출하여 대량 복사 작업을 실행합니다.  
+6.  
+  [bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) 를 호출하여 대량 복사 작업을 실행합니다.  
   
- 이러한 단계를 사용하면 기본 형식으로 파일이 만들어집니다. 사용 하 여 다른 데이터 형식의 데이터 값을 변환할 수 있습니다 [bcp_colfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)합니다. 자세한 내용은 [대량 복사 서식 파일 만들기 &#40;ODBC&#41;](create-a-bulk-copy-format-file-odbc.md)합니다.  
+ 이러한 단계를 사용하면 기본 형식으로 파일이 만들어집니다. [Bcp_colfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)를 사용 하 여 데이터 값을 다른 데이터 형식으로 변환할 수 있습니다. 자세한 내용은 [ODBC&#41;&#40;대량 복사 서식 파일 만들기 ](create-a-bulk-copy-format-file-odbc.md)를 참조 하세요.  
   
 ## <a name="example"></a>예제  
- AdventureWorks 예제 데이터베이스를 기본 데이터베이스로 사용하는 AdventureWorks라는 ODBC 데이터 원본이 필요합니다. AdventureWorks 샘플 데이터베이스는 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384)(Microsoft SQL Server 샘플 및 커뮤니티 프로젝트) 홈 페이지에서 다운로드할 수 있습니다. 이 데이터 원본은 운영 체제에서 제공하는 ODBC 드라이버를 기반으로 해야 합니다. 이 드라이버의 이름은 "SQL Server"입니다. 이 예제를 64비트 운영 체제에서 32비트 애플리케이션으로 작성하여 실행하려는 경우 %windir%\SysWOW64\odbcad32.exe에서 ODBC 관리자를 사용하여 ODBC 데이터 원본을 만들어야 합니다.  
+ AdventureWorks 예제 데이터베이스를 기본 데이터베이스로 사용하는 AdventureWorks라는 ODBC 데이터 원본이 필요합니다. AdventureWorks 샘플 데이터베이스는 [Microsoft SQL Server 샘플 및 커뮤니티 프로젝트](https://go.microsoft.com/fwlink/?LinkID=85384) 홈 페이지에서 다운로드할 수 있습니다. 이 데이터 원본은 운영 체제에서 제공 하는 ODBC 드라이버를 기반으로 해야 합니다. 드라이버 이름은 "SQL Server"입니다. 이 예제를 64비트 운영 체제에서 32비트 애플리케이션으로 작성하여 실행하려는 경우 %windir%\SysWOW64\odbcad32.exe에서 ODBC 관리자를 사용하여 ODBC 데이터 원본을 만들어야 합니다.  
   
  이 예제는 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 명명된 인스턴스에 연결하려면 ODBC 데이터 원본의 정의를 변경하여 server\namedinstance 형식으로 인스턴스를 지정합니다. 기본적으로 [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] 는 명명된 인스턴스에 설치됩니다.  
   
@@ -162,7 +164,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [SQL Server ODBC 드라이버 방법 도움말 항목을 사용한 대량 복사 &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
+## <a name="see-also"></a>참고 항목  
+ [SQL Server ODBC 드라이버를 사용 하 여 대량 복사 방법 도움말 항목 &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
   
   

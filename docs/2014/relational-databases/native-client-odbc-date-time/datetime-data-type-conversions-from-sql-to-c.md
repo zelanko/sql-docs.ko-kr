@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bd19cb92f2d2f333954adeb97229feb718c4b592
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63207039"
 ---
 # <a name="conversions-from-sql-to-c"></a>SQL에서 C로 변환
@@ -27,21 +27,22 @@ ms.locfileid: "63207039"
 ||||||||||  
 |-|-|-|-|-|-|-|-|-|  
 ||SQL_C_DATE|SQL_C_TIME|SQL_C_TIMESTAMP|SQL_C_SS_TIME2|SQL_C_SS_TIMESTAMPOFFSET|SQL_C_BINARY|SQL_C_CHAR|SQL_C_WCHAR|  
-|SQL_CHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
-|SQL_WCHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
-|SQL_TYPE_DATE|확인|12|13|12|13,23|14|16|16|  
-|SQL_SS_TIME2|12|8|15|확인|10,23|17|16|16|  
-|SQL_TYPE_TIMESTAMP|18|7,8|확인|7|23|19|16|16|  
-|SQL_SS_TIMESTAMPOFFSET|18,22|7,8,20|20|7,20|확인|21|16|16|  
+|SQL_CHAR|2, 3, 4, 5|2, 3, 6, 7, 8|2, 3, 9, 10, 11|2, 3, 6, 7|2, 3, 9, 10, 11|1|1|1|  
+|SQL_WCHAR|2, 3, 4, 5|2, 3, 6, 7, 8|2, 3, 9, 10, 11|2, 3, 6, 7|2, 3, 9, 10, 11|1|1|1|  
+|SQL_TYPE_DATE|확인|12|13|12|13, 23|14|16|16|  
+|SQL_SS_TIME2|12|8|15|확인|10, 23|17|16|16|  
+|SQL_TYPE_TIMESTAMP|18|7, 8|확인|7|23|19|16|16|  
+|SQL_SS_TIMESTAMPOFFSET|18, 22|7, 8, 20|20|7, 20|확인|21|16|16|  
   
 ## <a name="key-to-symbols"></a>기호 설명  
   
 |기호|의미|  
 |------------|-------------|  
 |확인|변환 문제가 발생하지 않습니다.|  
-|1|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전의 규칙이 적용됩니다.|  
+|1|
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전의 규칙이 적용됩니다.|  
 |2|선행 공백과 후행 공백이 무시됩니다.|  
-|3|문자열이 날짜, 시간, 표준 시간대 또는 표준 시간대 오프셋으로 구문 분석되고 소수 자릿수 초에 대해 9자리까지 허용합니다. 표준 시간대 오프셋이 구문 분석되는 경우 시간이 클라이언트 표준 시간대로 변환됩니다. 이 변환 중에 오류가 발생 하는 경우 SQLSTATE 22018 및 "Datetime 필드 오버플로" 메시지가 포함 된 진단 레코드가 생성 됩니다.|  
+|3|문자열이 날짜, 시간, 표준 시간대 또는 표준 시간대 오프셋으로 구문 분석되고 소수 자릿수 초에 대해 9자리까지 허용합니다. 표준 시간대 오프셋이 구문 분석되는 경우 시간이 클라이언트 표준 시간대로 변환됩니다. 이 변환 중에 오류가 발생 하면 SQLSTATE 22018 및 "Datetime 필드 오버플로" 라는 메시지가 포함 된 진단 레코드가 생성 됩니다.|  
 |4|값이 유효한 날짜, 타임스탬프 또는 타임스탬프 오프셋 값이 아니면 SQLSTATE 22018 및 "캐스트 사양의 문자 값이 올바르지 않습니다"라는 메시지가 포함된 진단 레코드가 생성됩니다.|  
 |5|시간이 0이 아니면 SQLSTATE 01S07 및 "일부가 잘렸습니다"라는 메시지가 포함된 진단 레코드가 생성됩니다.|  
 |6|값이 유효한 시간, 타임스탬프 또는 타임스탬프 오프셋 값이 아니면 SQLSTATE 22018 및 "캐스트 사양의 문자 값이 올바르지 않습니다"라는 메시지가 포함된 진단 레코드가 생성됩니다.|  
@@ -62,9 +63,9 @@ ms.locfileid: "63207039"
 |21|버퍼의 크기가 작아 SQL_SS_TIMESTAMPOFFSET_STRUCT를 수용할 수 없으면 값이 SQL_SS_TIMESTAMPOFFSET_STRUCT로 반환됩니다. 그렇지 않으면 SQLSTATE 22003 및 "숫자 값이 범위를 벗어났습니다"라는 메시지가 포함된 진단 레코드가 생성됩니다.|  
 |22|날짜가 추출되기 전에 값이 클라이언트 표준 시간대로 변환됩니다. 따라서 타임스탬프 오프셋 형식에 대한 다른 변환에서 일관성이 유지됩니다. 변환 중 오류가 발생하면 SQLSTATE 22008 및 "Datetime 필드 오버플로" 메시지가 포함된 진단 레코드가 생성됩니다. 이로 인해 날짜가 단순 잘림으로 얻은 값과 달라집니다.|  
   
- 이 항목의 표에서는 클라이언트로 반환된 형식과 바인딩 형식 간의 변환에 대해 설명합니다. 출력 매개 변수에 대 한에서 서버 유형을 지정 하는 경우 SQLBindParameter 서버의 실제 형식과 일치 하지 않습니다 서버에서 변환 하는 암시적 변환을 수행할지 하며 클라이언트에 반환 된 형식이 SQLBindParameter을 통해 지정 된 형식과 일치 합니다. 이 서버의 변환 규칙이 앞의 표에 나열 된 것과 다른 경우 예기치 못한 변환 결과가 발생할 수 있습니다. 예를 들어 기본 날짜를 입력해야 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 현재 날짜를 사용하지 않고 1900-1-1을 사용합니다.  
+ 이 항목의 표에서는 클라이언트로 반환된 형식과 바인딩 형식 간의 변환에 대해 설명합니다. 출력 매개 변수의 경우 SQLBindParameter에 지정 된 서버 형식이 서버의 실제 형식과 일치 하지 않으면 서버에 의해 암시적 변환이 수행 되며 클라이언트로 반환 되는 형식은 SQLBindParameter를 통해 지정 된 형식과 일치 합니다. 따라서 서버의 변환 규칙이 앞의 표에 나열 된 것과 다를 경우 예기치 않은 변환 결과가 발생할 수 있습니다. 예를 들어 기본 날짜를 입력해야 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 현재 날짜를 사용하지 않고 1900-1-1을 사용합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [날짜 및 시간 기능 향상 &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
+## <a name="see-also"></a>참고 항목  
+ [ODBC&#41;&#40;날짜 및 시간 기능 향상](date-and-time-improvements-odbc.md)  
   
   

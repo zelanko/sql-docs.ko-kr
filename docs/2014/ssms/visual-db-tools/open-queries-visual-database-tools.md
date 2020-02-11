@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 48d0e96f2cd7b37683399c599f336f78e1ede3fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63195043"
 ---
 # <a name="open-queries-visual-database-tools"></a>쿼리 열기(Visual Database Tools)
@@ -34,9 +34,9 @@ ms.locfileid: "63195043"
 > [!NOTE]  
 >  쿼리 및 뷰 디자이너에서는 기본적으로 모든 창(SQL, 조건, 다이어그램 및 결과)이 열립니다. 이 기본 설정을 변경하려면 **옵션** 대화 상자를 사용해야 합니다. 이러한 창이 닫혀 있는 경우 이를 열려면 **쿼리 디자이너** 메뉴에서 **창**을 가리킨 다음 열려는 창을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [쿼리 관련 기본 작업 수행 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [쿼리 저장 &#40;Visual Database Tools&#41;](save-queries-visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools를 &#40;쿼리를 사용 하 여 기본 작업을 수행&#41;](visual-database-tools.md)   
+ [Visual Database Tools를 &#40;쿼리 저장&#41;](save-queries-visual-database-tools.md)   
  [결과 창에서 데이터 작업&#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)  
   
   

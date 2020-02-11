@@ -13,23 +13,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8703ec6f199290185829a15a0079cd9b04e42fbc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068758"
 ---
 # <a name="set-aggregation-options-usage-based-optimization-wizard"></a>집계 옵션 설정(사용 빈도 기반 최적화 마법사)
+  
   **집계 옵션 설정** 페이지를 사용하여 집계 디자인 프로세스를 시작하고 사용 빈도 기반 최적화 마법사를 사용하여 생성한 집계에 대한 스토리지 또는 성능 제한을 지정할 수 있습니다.  
   
-## <a name="options"></a>변수  
- **예상된 저장소 크기**  
+## <a name="options"></a>옵션  
+ **다음 예상 스토리지 크기까지**  
  집계를 생성하는 데 사용할 수 있는 최대 메가바이트(MB) 또는 기가바이트(GB) 수를 지정하여 집계 디자인을 제한합니다.  
   
- **성능 향상 정도**  
+ **다음 성능 향상 정도까지**  
  집계 디자인이 제공할 수 있는 최대 예상 성능 향상률을 지정하여 집계 디자인을 제한합니다. 최상의 결과를 얻으려면 디스크 공간이나 처리 시간의 제약을 받지 않는 한 성능 향상 값으로 기본 설정인 100%를 사용합니다.  
   
- **중지를 클릭**  
+ **[중지]를 클릭할 때까지**  
  디자인 프로세스 중에 **중지** 를 클릭하여 집계 디자인을 제한합니다.  
   
  **시작**  
@@ -38,11 +39,11 @@ ms.locfileid: "66068758"
  **중지**  
  집계 디자인 프로세스를 끝냅니다.  
   
- **다시 설정**  
+ **재설정**  
  이 페이지의 모든 집계 옵션을 기본값으로 다시 설정합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [사용 빈도 기반 최적화 마법사 F1 도움말](usage-based-optimization-wizard-f1-help.md)   
- [Analysis Services 마법사 &#40;다차원 데이터&#41;](analysis-services-wizards-multidimensional-data.md)  
+ [다차원 데이터를 &#40;마법사 Analysis Services&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

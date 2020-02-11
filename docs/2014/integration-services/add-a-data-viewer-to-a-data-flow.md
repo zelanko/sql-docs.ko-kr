@@ -1,5 +1,5 @@
 ---
-title: 데이터 흐름에 데이터 뷰어를 추가 합니다. | Microsoft Docs
+title: 데이터 흐름에 데이터 뷰어 추가 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cbd45caac75d4fac3b5fffc305a9f359193191a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062090"
 ---
 # <a name="add-a-data-viewer-to-a-data-flow"></a>데이터 흐름에 데이터 뷰어 추가
@@ -34,17 +34,21 @@ ms.locfileid: "66062090"
   
 2.  솔루션 탐색기에서 패키지를 두 번 클릭하여 엽니다.  
   
-3.  **제어 흐름** 이 아직 활성화되어 있지 않으면 탭을 클릭합니다.  
+3.  
+  **제어 흐름** 이 아직 활성화되어 있지 않으면 탭을 클릭합니다.  
   
 4.  데이터 흐름 태스크를 클릭하여 데이터 뷰어를 첨부할 데이터 흐름을 선택하고 **데이터 흐름** 탭을 클릭합니다.  
   
 5.  두 데이터 흐름 구성 요소 간 경로를 마우스 오른쪽 단추로 클릭하고 **편집**을 클릭합니다.  
   
-6.  **일반** 페이지에서 경로 속성을 보고 편집할 수 있습니다. 예를 들어 **PathAnnotation** 드롭다운 목록에서 경로 옆에 표시되는 주석을 선택할 수 있습니다.  
+6.  
+  **일반** 페이지에서 경로 속성을 보고 편집할 수 있습니다. 예를 들어 **PathAnnotation** 드롭다운 목록에서 경로 옆에 표시되는 주석을 선택할 수 있습니다.  
   
-7.  **메타데이터** 페이지에서 열 메타데이터를 보고 메타데이터를 클립보드로 복사할 수 있습니다.  
+7.  
+  **메타데이터** 페이지에서 열 메타데이터를 보고 메타데이터를 클립보드로 복사할 수 있습니다.  
   
-8.  **데이터 뷰어** 페이지에서 **데이터 뷰어 사용**을 클릭합니다.  
+8.  
+  **데이터 뷰어** 페이지에서 **데이터 뷰어 사용**을 클릭합니다.  
   
 9. 표시할 열 영역에서 데이터 뷰어에 표시할 열을 선택합니다. 기본적으로 사용 가능한 열이 모두 선택되어 **표시된 열** 목록에 나열됩니다. 사용하지 않을 열을 선택하고 왼쪽 화살표를 클릭하여 **사용되지 않은 열** 목록으로 이동합니다.  
   
@@ -53,7 +57,7 @@ ms.locfileid: "66062090"
   
 10. **확인**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 변환](data-flow/transformations/integration-services-transformations.md)   
  [Integration Services 경로](data-flow/integration-services-paths.md)   
  [데이터 흐름](data-flow/data-flow.md)   

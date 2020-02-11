@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 01cbf00850c5dd57e7ca1575a1a0cb826c009714
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101455"
 ---
 # <a name="tasks-and-permissions"></a>태스크 및 권한
@@ -38,12 +38,12 @@ ms.locfileid: "66101455"
 ## <a name="system-and-item-level-tasks"></a>시스템 및 항목 수준 태스크  
  태스크는 시스템 수준 아니면 항목 수준 범주에 속합니다. 역할은 단일 범주의 태스크만 포함할 수 있습니다. 다음 표에서는 각 태스크 범주를 설명합니다.  
   
-|범주|Description|  
+|Category|Description|  
 |--------------|-----------------|  
 |[항목 수준의 태스크](tasks-and-permissions-item-level-tasks.md)|폴더, 보고서, 보고서 모델, 리소스 등 보고서 서버에서 관리되는 항목에 대해 수행하는 동작입니다.<br /><br /> 항목 수준 태스크의 범위는 보고서 서버 폴더 네임스페이스로 한정됩니다. 보고서 서버의 폴더 또는 URL 액세스를 통해 액세스하는 모든 항목의 보안은 항목 수준 태스크를 포함하는 역할 할당에 의해 설정됩니다.|  
 |[시스템 수준 태스크](tasks-and-permissions-system-level-tasks.md)|많은 항목에 사용할 수 있는 작업 또는 공유 일정 관리와 같이 시스템 수준에서 수행하는 동작입니다. 시스템 수준 태스크의 범위는 보고서 서버 폴더 네임스페이스 외부로 한정됩니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [역할 정의](role-definitions.md)   
  [미리 정의된 역할](role-definitions-predefined-roles.md)   
  [기본 모드 보고서 서버에 대한 사용 권한 부여](granting-permissions-on-a-native-mode-report-server.md)  

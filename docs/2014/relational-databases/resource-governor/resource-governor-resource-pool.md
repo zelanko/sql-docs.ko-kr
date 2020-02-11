@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4177d7e8ebc96e40e831a6558c7d8b5073c86bc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63209873"
 ---
 # <a name="resource-governor-resource-pool"></a>리소스 관리자 리소스 풀
@@ -63,19 +63,19 @@ ms.locfileid: "63209873"
   
 -   공유 % = 유효한 MAX % - MIN %  
   
-|풀 이름|MIN % 설정|MAX % 설정|계산된 유효한 MAX %|계산된 공유 %|설명|  
+|풀 이름|MIN % 설정|MAX % 설정|계산된 유효한 MAX %|계산된 공유 %|주석|  
 |---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
 |내부|0|100|100|0|유효 MAX % 및 공유 %는 내부 풀에 적용할 수 없습니다.|  
-|기본|0|100|30|30|유효 MAX 값은 min(100,100-(20+50)) = 30으로 계산됩니다. 계산된 공유 백분율(%)은 유효 MAX - MIN = 30입니다.|  
+|기본값|0|100|30|30|유효 MAX 값은 min(100,100-(20+50)) = 30으로 계산됩니다. 계산된 공유 백분율(%)은 유효 MAX - MIN = 30입니다.|  
 |풀 1|20|100|50|30|유효 MAX 값은 min(100,100-50) = 50으로 계산됩니다. 계산된 공유 백분율(%)은 유효 MAX - MIN = 30입니다.|  
 |풀 2|50|70|70|20|유효 MAX 값은 min(70,100-20) = 70으로 계산됩니다. 계산된 공유 백분율(%)은 유효 MAX - MIN = 20입니다.|  
   
  위의 표를 계속 사용하여 다른 풀이 만들어질 때 수행되는 조정 작업을 보다 자세히 설명할 수 있습니다. 이 풀은 풀 3이며 MIN %가 5로 설정되어 있습니다.  
   
-|풀 이름|MIN % 설정|MAX % 설정|계산된 유효한 MAX %|계산된 공유 %|설명|  
+|풀 이름|MIN % 설정|MAX % 설정|계산된 유효한 MAX %|계산된 공유 %|주석|  
 |---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
 |내부|0|100|100|0|유효 MAX % 및 공유 %는 내부 풀에 적용할 수 없습니다.|  
-|기본|0|100|25|25|유효 MAX 값은 min(100,100-(20+50+5)) = 25로 계산됩니다. 계산된 공유 백분율(%)은 유효 MAX - MIN = 25입니다.|  
+|기본값|0|100|25|25|유효 MAX 값은 min(100,100-(20+50+5)) = 25로 계산됩니다. 계산된 공유 백분율(%)은 유효 MAX - MIN = 25입니다.|  
 |풀 1|20|100|45|25|유효 MAX 값은 min(100,100-55) = 45로 계산됩니다. 계산된 공유 백분율(%)은 유효 MAX - MIN = 25입니다.|  
 |풀 2|50|70|70|20|유효 MAX 값은 min(70,100-25) = 70으로 계산됩니다. 계산된 공유 백분율(%)은 유효 MAX - MIN = 20입니다.|  
 |풀 3|5|100|30|25|유효 MAX 값은 min(100,100-70) = 30으로 계산됩니다. 계산된 공유 백분율(%)은 유효 MAX - MIN = 25입니다.|  
@@ -116,11 +116,11 @@ ms.locfileid: "63209873"
 |리소스 풀 설정을 변경하는 방법에 대해 설명합니다.|[리소스 풀 설정 변경](change-resource-pool-settings.md)|  
 |리소스 풀을 삭제하는 방법에 대해 설명합니다.|[리소스 풀 삭제](delete-a-resource-pool.md)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [리소스 관리자](resource-governor.md)   
  [리소스 관리자 작업 그룹](resource-governor-workload-group.md)   
- [리소스 관리자 분류자 함수](resource-governor-classifier-function.md)   
- [템플릿을 사용하여 리소스 관리자 구성](configure-resource-governor-using-a-template.md)   
+ [Resource Governor 분류자 함수](resource-governor-classifier-function.md)   
+ [템플릿을 사용 하 여 Resource Governor 구성](configure-resource-governor-using-a-template.md)   
  [리소스 관리자 속성 보기](view-resource-governor-properties.md)  
   
   

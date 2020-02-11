@@ -19,20 +19,20 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 903c33c2679d4869bd26e95392e6eb5dcd2f9fb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188591"
 ---
 # <a name="sqlserviceadvancedproperty-class"></a>SqlServiceAdvancedProperty 클래스
-  합니다 [SqlServiceAdvancedProperty 클래스](sqlserviceadvancedproperty-class.md) 에서 참조 되는 서비스의 고급 속성을 나타내는 합니다 [SqlService 클래스](../sqlservice-class/sqlservice-class.md) 개체입니다.  
+  [SqlServiceAdvancedProperty 클래스](sqlserviceadvancedproperty-class.md) 는 [sqlservice 클래스](../sqlservice-class/sqlservice-class.md) 개체에서 참조 하는 서비스의 고급 속성을 나타냅니다.  
   
- 합니다 [AdvancedProperties 속성 (SqlService 클래스)](../sqlservice-class/advancedproperties-property-sqlservice-class.md) 배열을 참조 [SqlServiceAdvancedProperty 클래스](sqlserviceadvancedproperty-class.md) 개체입니다.  
+ [AdvancedProperties 속성 (SqlService 클래스)](../sqlservice-class/advancedproperties-property-sqlservice-class.md) 은 [SqlServiceAdvancedProperty 클래스](sqlserviceadvancedproperty-class.md) 개체의 배열을 참조 합니다.  
   
- 합니다 [서비스 시작 및 중지](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx) 클래스는 서비스에 고유한 속성을 나타냅니다. 이러한 속성은 연결 된 속성 목록에는 [SqlService 클래스](https://technet.microsoft.com/library/ms186497.aspx) 클래스입니다. 합니다 [SqlServiceAdvancedProperty 클래스](https://technet.microsoft.com/library/ms182447.aspx) 클래스를 사용 하면 문자열, 숫자 또는 부울 속성의 표현입니다. 지정한 서비스의 고유한 속성을 볼 수 있습니다.  
+ 서비스 [시작 및 중지](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx) 클래스는 서비스에 고유한 속성을 나타냅니다. 이러한 속성은 [Sqlservice 클래스](https://technet.microsoft.com/library/ms186497.aspx) 클래스와 연결 된 속성 목록에 없습니다. [SqlServiceAdvancedProperty class](https://technet.microsoft.com/library/ms182447.aspx) 클래스를 사용 하면 문자열, 숫자 또는 부울 속성을 표현할 수 있습니다. 지정한 서비스의 고유한 속성을 볼 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [서비스 시작, 중지 및 일시 중지](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

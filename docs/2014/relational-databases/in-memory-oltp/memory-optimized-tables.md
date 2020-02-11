@@ -11,13 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9123bf89f75fce68a6edd8ba1becd141821fe326
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63158757"
 ---
 # <a name="memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 내 OLTP는 효율적이고 메모리 최적화 데이터 액세스, 비즈니스 논리의 고유 컴파일, 잠금 및 래치 없는 알고리즘을 통해 OLTP 애플리케이션의 성능을 향상하는 데 도움이 됩니다. 메모리 내 OLTP 기능에는 메모리 최적화 테이블 및 테이블 형식뿐 아니라 이 테이블에 효율적으로 액세스하기 위한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저의 고유 컴파일도 포함됩니다.  
   
  메모리 최적화 테이블에 대한 자세한 내용은 다음을 참조하세요.  
@@ -38,7 +39,7 @@ ms.locfileid: "63158757"
   
      이 섹션에서는 트랜잭션 격리 수준, 크로스 컨테이너 트랜잭션을 비롯하여 메모리 최적화 테이블에서 트랜잭션 수행과 관련된 여러 가지 항목을 제공합니다.  
   
--   [메모리 액세스에 최적화된 테이블 분할을 위한 응용 프로그램 패턴](application-pattern-for-partitioning-memory-optimized-tables.md)  
+-   [메모리 액세스에 최적화된 테이블 분할을 위한 애플리케이션 패턴](application-pattern-for-partitioning-memory-optimized-tables.md)  
   
      메모리 최적화 테이블을 사용할 때 분할된 테이블을 에뮬레이트하는 방법을 보여 주는 자세한 코드 샘플입니다.  
   
@@ -58,7 +59,7 @@ ms.locfileid: "63158757"
   
      메모리 최적화 테이블 및 고유하게 컴파일된 저장 프로시저 모두의 쿼리 처리에 대한 개요를 제공합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP&#40;메모리 내 최적화&#41;](in-memory-oltp-in-memory-optimization.md)  
   
   

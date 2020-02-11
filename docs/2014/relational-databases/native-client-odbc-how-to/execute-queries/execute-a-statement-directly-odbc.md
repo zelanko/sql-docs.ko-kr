@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0597054914dcbce7e7b1fb1475beb29bab7b8a57
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200408"
 ---
 # <a name="execute-a-statement-directly-odbc"></a>직접 문 실행(ODBC)
@@ -25,13 +25,16 @@ ms.locfileid: "63200408"
   
 1.  문에 매개 변수 표식이 있으면 [SQLBindParameter](../../native-client-odbc-api/sqlbindparameter.md) 를 사용하여 프로그램 변수에 각 매개 변수를 바인딩합니다. 프로그램 변수를 데이터 값으로 채운 다음 실행 시 데이터 매개 변수를 설정합니다.  
   
-2.  [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) 를 호출하여 문을 실행합니다.  
+2.  
+  [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) 를 호출하여 문을 실행합니다.  
   
-3.  실행 시 데이터 입력 매개 변수를 사용하면 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) 는 SQL_NEED_DATA를 반환합니다. [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 및 [SQLPutData](../../native-client-odbc-api/sqlputdata.md)를 사용하여 데이터를 청크로 보냅니다.  
+3.  실행 시 데이터 입력 매개 변수를 사용하면 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) 는 SQL_NEED_DATA를 반환합니다. 
+  [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 및 [SQLPutData](../../native-client-odbc-api/sqlputdata.md)를 사용하여 데이터를 청크로 보냅니다.  
   
 ### <a name="to-execute-a-statement-multiple-times-by-using-column-wise-parameter-binding"></a>열 단위 매개 변수 바인딩을 사용하여 문을 여러 번 실행하려면  
   
-1.  [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) 을 호출하여 다음 특성을 설정합니다.  
+1.  
+  [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) 을 호출하여 다음 특성을 설정합니다.  
   
      SQL_ATTR_PARAMSET_SIZE를 매개 변수 집합 수(S)로 설정합니다.  
   
@@ -47,15 +50,18 @@ ms.locfileid: "63200408"
   
      데이터 길이를 저장할 S개의 매개 변수 버퍼 배열을 할당합니다.  
   
-     [SQLBindParameter](../../native-client-odbc-api/sqlbindparameter.md) 를 호출하여 매개 변수 데이터 값과 데이터 길이 배열을 문 매개 변수에 바인딩합니다.  
+     
+  [SQLBindParameter](../../native-client-odbc-api/sqlbindparameter.md) 를 호출하여 매개 변수 데이터 값과 데이터 길이 배열을 문 매개 변수에 바인딩합니다.  
   
      실행 시 데이터 텍스트 또는 이미지 매개 변수를 설정합니다.  
   
      S개의 데이터 값과 S개의 데이터 길이를 바인딩된 매개 변수 배열에 넣습니다.  
   
-3.  [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) 를 호출하여 문을 실행합니다. 드라이버에서는 효율적으로 문을 각 매개 변수 집합에 대해 한 번씩 총 S번 실행합니다.  
+3.  
+  [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) 를 호출하여 문을 실행합니다. 드라이버에서는 효율적으로 문을 각 매개 변수 집합에 대해 한 번씩 총 S번 실행합니다.  
   
-4.  실행 시 데이터 입력 매개 변수를 사용하면 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) 는 SQL_NEED_DATA를 반환합니다. [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 및 [SQLPutData](../../native-client-odbc-api/sqlputdata.md)를 사용하여 데이터를 청크로 보냅니다.  
+4.  실행 시 데이터 입력 매개 변수를 사용하면 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) 는 SQL_NEED_DATA를 반환합니다. 
+  [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 및 [SQLPutData](../../native-client-odbc-api/sqlputdata.md)를 사용하여 데이터를 청크로 보냅니다.  
   
 ### <a name="to-execute-a-statement-multiple-times-by-using-row-wise-parameter-binding"></a>행 단위 매개 변수 바인딩을 사용하여 문을 여러 번 실행하려면  
   
@@ -65,7 +71,8 @@ ms.locfileid: "63200408"
   
      두 번째 부분은 상태 표시를 보유하는 SQLINTEGER 변수입니다.  
   
-2.  [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) 을 호출하여 다음 특성을 설정합니다.  
+2.  
+  [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) 을 호출하여 다음 특성을 설정합니다.  
   
      SQL_ATTR_PARAMSET_SIZE를 매개 변수 집합 수(S)로 설정합니다.  
   
@@ -79,13 +86,15 @@ ms.locfileid: "63200408"
   
 4.  바인딩된 매개 변수 버퍼 배열을 데이터 값으로 채웁니다.  
   
-5.  [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) 를 호출하여 문을 실행합니다. 드라이버에서는 효율적으로 문을 각 매개 변수 집합에 대해 한 번씩 총 S번 실행합니다.  
+5.  
+  [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) 를 호출하여 문을 실행합니다. 드라이버에서는 효율적으로 문을 각 매개 변수 집합에 대해 한 번씩 총 S번 실행합니다.  
   
-6.  실행 시 데이터 입력 매개 변수를 사용하면 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) 는 SQL_NEED_DATA를 반환합니다. [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 및 [SQLPutData](../../native-client-odbc-api/sqlputdata.md)를 사용하여 데이터를 청크로 보냅니다.  
+6.  실행 시 데이터 입력 매개 변수를 사용하면 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) 는 SQL_NEED_DATA를 반환합니다. 
+  [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 및 [SQLPutData](../../native-client-odbc-api/sqlputdata.md)를 사용하여 데이터를 청크로 보냅니다.  
   
- **참고** 열 단위 및 행 단위 바인딩은 일반적으로 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=59360) 보다는 [SQLPrepare 함수](https://go.microsoft.com/fwlink/?LinkId=58400) 및 [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58399)와 함께 사용됩니다.  
+ **참고** 열 단위 및 행 단위 바인딩은 일반적으로 [Sqlexecdirect](https://go.microsoft.com/fwlink/?LinkId=58399)를 사용 하는 것 보다 [sqlprepare 함수](https://go.microsoft.com/fwlink/?LinkId=59360) 및 [sqlprepare](https://go.microsoft.com/fwlink/?LinkId=58400) 와 함께 사용 됩니다.  
   
-## <a name="see-also"></a>관련 항목  
- [방법 도움말 항목 쿼리를 실행할 &#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  
+## <a name="see-also"></a>참고 항목  
+ [쿼리 실행 방법 도움말 항목 &#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  
   
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 74470d40bace6e1443ef9eb94f9698e225ff2946
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63232844"
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>조인 연산자 수정(Visual Database Tools)
@@ -32,9 +32,9 @@ ms.locfileid: "63232844"
   
 3.  **조인** 대화 상자에서 새 연산자를 선택합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [테이블 자동 조인 &#40;Visual Database Tools&#41;](join-tables-automatically-visual-database-tools.md)   
- [테이블 수동 조인 &#40;Visual Database Tools&#41;](join-tables-manually-visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools &#40;자동으로 테이블 조인&#41;](join-tables-automatically-visual-database-tools.md)   
+ [Visual Database Tools를 &#40;테이블을 수동으로 조인&#41;](join-tables-manually-visual-database-tools.md)   
  [조인을 사용한 쿼리&#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)  
   
   

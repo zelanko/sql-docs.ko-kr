@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 520d6f11e5a472d5337a3747cc73c1d3656171c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075176"
 ---
 # <a name="dimensions-in-multidimensional-models"></a>다차원 모델의 차원
@@ -35,7 +35,7 @@ ms.locfileid: "66075176"
  큐브를 만들 때 데이터베이스에 이미 있는 차원을 새 큐브에 추가할 수도 있습니다. 이러한 차원은 다른 큐브에 대해 또는 차원 마법사를 통해 이전에 정의된 것일 수 있습니다. 데이터베이스 차원을 정의한 후에는 차원 디자이너에서 해당 데이터베이스 차원을 수정하고 구성할 수 있습니다. 그리고 큐브 디자이너에서 제한된 범위까지 큐브 차원을 사용자 지정할 수 있습니다.  
   
 > [!NOTE]  
->  또한 XMLA 또는 AMO(Analysis Management Objects)를 사용하여 차원, 특성 및 계층을 프로그래밍 방식으로 디자인하고 구성할 수 있습니다. 자세한 내용은 [Analysis Services Scripting Language &#40;ASSL&#41; 참조](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla) 하 고 [Analysis Management Objects를 사용 하 여 개발 &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo).  
+>  또한 XMLA 또는 AMO(Analysis Management Objects)를 사용하여 차원, 특성 및 계층을 프로그래밍 방식으로 디자인하고 구성할 수 있습니다. 자세한 내용은 [AMO(Analysis Management Object) &#40;AMO&#41;를 사용 하 여 ](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo) [Analysis Services 스크립팅 언어 &#40;&#41; 참조](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla) 및 개발을 참조 하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  다음 표에서는 이 섹션에서 다루는 항목에 대해 설명합니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "66075176"
  [비즈니스 인텔리전스 마법사를 사용하여 차원 향상](../use-the-business-intelligence-wizard-to-enhance-dimensions.md)  
  비즈니스 인텔리전스 마법사를 사용하여 데이터베이스 차원을 향상시키는 방법에 대해 설명합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [다차원 모델의 큐브](cubes-in-multidimensional-models.md)  
   
   

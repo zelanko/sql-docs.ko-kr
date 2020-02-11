@@ -13,14 +13,15 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f09e8b4e31d9826d0988b293e2236676125fc7d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076044"
 ---
 # <a name="start-the-business-intelligence-wizard-in-dimension-designer"></a>차원 디자이너에서 비즈니스 인텔리전스 마법사 시작
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 사용자 지정 롤업 연산자 및 사용자 지정 멤버 수식을 만들고 비즈니스 인텔리전스 마법사 또는 차원 디자이너를 사용하여 쓰기 저장(writeback)에 대한 차원을 구성할 수 있습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 솔루션 탐색기 또는 큐브 디자이너에서 비즈니스 인텔리전스 마법사를 시작할 수 있습니다. 차원 디자이너는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 액세스할 수 있습니다.  
+  에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]비즈니스 인텔리전스 마법사나 차원 디자이너를 사용 하 여 사용자 지정 롤업 연산자와 사용자 지정 멤버 수식을 만들고 쓰기 저장 (writeback)에 대 한 차원을 구성 합니다. 
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 솔루션 탐색기 또는 큐브 디자이너에서 비즈니스 인텔리전스 마법사를 시작할 수 있습니다. 차원 디자이너는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 액세스할 수 있습니다.  
   
 ### <a name="to-start-the-business-intelligence-wizard"></a>비즈니스 인텔리전스 마법사를 시작하려면  
   

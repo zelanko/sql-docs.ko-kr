@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5ef8d77de1df31387d33e6577fe84bd5ef9fa680
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63216020"
 ---
 # <a name="enable-resource-governor"></a>리소스 관리자 사용
@@ -38,7 +38,7 @@ ms.locfileid: "63216020"
 ###  <a name="LimitationsRestrictions"></a> 제한 사항  
  사용자 트랜잭션에 있을 때에는 `ALTER RESOURCE GOVERNOR` 문을 사용하여 리소스 관리자를 사용하도록 설정할 수 없습니다.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 권한  
  리소스 관리자를 사용하도록 설정하려면 CONTROL SERVER 권한이 필요합니다.  
   
 ##  <a name="RGOnObjEx"></a> 개체 탐색기를 사용하여 리소스 관리자를 사용하도록 설정  
@@ -53,7 +53,7 @@ ms.locfileid: "63216020"
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 개체 탐색기를 열고 **리소스 관리자** 까지 **관리**노드를 계속 확장합니다.  
   
-2.  **리소스 관리자** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 그러면 **리소스 관리자 속성** 페이지가 열립니다.  
+2.  **Resource Governor** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 그러면 **Resource Governor** 페이지가 열립니다.  
   
 3.  **리소스 관리자 사용** 확인란을 클릭한 다음 **확인**을 클릭합니다.  
   
@@ -70,7 +70,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [리소스 관리자](resource-governor.md)   
  [리소스 관리자 사용 안 함](disable-resource-governor.md)   
  [리소스 관리자 리소스 풀](resource-governor-resource-pool.md)   

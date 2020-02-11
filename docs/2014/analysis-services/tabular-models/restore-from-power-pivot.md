@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f90ea08269e79e57c623af41fc2f0fbc09e2fb42
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066642"
 ---
 # <a name="restore-from-powerpivot"></a>PowerPivot에서 복원
   SQL Server Management Studio의 PowerPivot 기능에서 복원을 사용하여 테이블 형식 모드에서 실행되는 Analysis Services 인스턴스에서 새 테이블 형식 model 데이터베이스를 만들거나 PowerPivot 통합 문서(.xlsx)에서 기존 데이터베이스를 복원할 수 있습니다.  
   
 > [!NOTE]  
->  SQL Server Data Tools의 PowerPivot 프로젝트 템플릿에서 가져오기가 비슷한 기능을 제공합니다. 자세한 내용은 [PowerPivot에서 가져오기 &#40;SSAS 테이블 형식&#41;](import-from-power-pivot-ssas-tabular.md)합니다.  
+>  SQL Server Data Tools의 PowerPivot 프로젝트 템플릿에서 가져오기가 비슷한 기능을 제공합니다. 자세한 내용은 [PowerPivot에서 가져오기 &#40;SSAS 테이블 형식&#41;](import-from-power-pivot-ssas-tabular.md)을 참조 하세요.  
   
  PowerPivot에서 복원을 사용할 때는 다음 사항에 유의해야 합니다.  
   
@@ -37,18 +37,22 @@ ms.locfileid: "66066642"
   
 ### <a name="to-restore-from-powerpivot"></a>PowerPivot에서 복원하려면  
   
-1.  SSMS의 복원 하려는 Active Directory 인스턴스를 마우스 오른쪽 단추로 클릭 **데이터베이스**를 클릭 하 고 **PowerPivot에서 복원**합니다.  
+1.  SSMS의 복원 하려는 Active Directory 인스턴스에서 **데이터베이스**를 마우스 오른쪽 단추로 클릭 한 다음 **PowerPivot에서 복원**을 클릭 합니다.  
   
-2.  에 **PowerPivot에서 복원** 대화 상자의 **복원 원본**의 **백업 파일**, 클릭 **찾아보기**를 선택한 다음 복원할.abf 또는.xslx를 파일에서 복원입니다.  
+2.  
+  **PowerPivot에서 복원** 대화 상자의 **복원 원본**에 있는 **백업 파일**에서 **찾아보기**를 클릭한 다음 복원할 .abf 또는 .xslx 파일을 선택합니다.  
   
-3.  **대상 복원**의 **데이터베이스 복원**에 새 데이터베이스 또는 기존 데이터베이스의 이름을 입력합니다. 이름을 지정하지 않으면 통합 문서의 이름이 사용됩니다.  
+3.  
+  **대상 복원**의 **데이터베이스 복원**에 새 데이터베이스 또는 기존 데이터베이스의 이름을 입력합니다. 이름을 지정하지 않으면 통합 문서의 이름이 사용됩니다.  
   
-4.  **스토리지 위치**에서 **찾아보기**를 클릭한 다음 데이터베이스를 저장할 위치를 선택합니다.  
+4.  
+  **스토리지 위치**에서 **찾아보기**를 클릭한 다음 데이터베이스를 저장할 위치를 선택합니다.  
   
-5.  **옵션**에서 **보안 정보 포함** 을 선택합니다. PowerPivot 통합 문서에서 복원할 때 이 설정은 적용되지 않습니다.  
+5.  
+  **옵션**에서 **보안 정보 포함** 을 선택합니다. PowerPivot 통합 문서에서 복원할 때 이 설정은 적용되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [테이블 형식 model 데이터베이스&#40;SSAS 테이블 형식&#41;](tabular-model-databases-ssas-tabular.md)   
- [PowerPivot에서 가져오기 &#40;&AMP;#40;SSAS 테이블 형식&#41;](import-from-power-pivot-ssas-tabular.md)  
+## <a name="see-also"></a>참고 항목  
+ [테이블 형식 모델 데이터베이스 &#40;SSAS 테이블 형식&#41;](tabular-model-databases-ssas-tabular.md)   
+ [PowerPivot &#40;SSAS 테이블 형식&#41;에서 가져오기](import-from-power-pivot-ssas-tabular.md)  
   
   

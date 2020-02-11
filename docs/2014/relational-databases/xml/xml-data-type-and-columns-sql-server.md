@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 755685601bb97f7e0b8980024df07e27967f3cd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63193070"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML 데이터 형식 및 열(SQL Server)
-  이 항목에 장점 및 제한 사항에 설명 합니다 `xml` 데이터 형식에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XML 데이터를 저장 하는 방법을 선택할 수 있습니다.  
+  이 항목에서는의 `xml` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터 형식에 대 한 장점과 제한 사항을 설명 하 고 XML 데이터를 저장 하는 방법을 선택 하는 데 도움을 줍니다.  
   
 ## <a name="relational-or-xml-data-model"></a>관계형 데이터 모델 또는 XML 데이터 모델  
  데이터가 알려진 스키마로 복잡하게 구조화된 경우 관계형 모델이 데이터 스토리지에 가장 적합할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 사용자에게 필요한 기능 및 도구를 제공합니다. 반면에 반구조화되어 있거나 구조화되지 않았거나 구조화 상태를 알 수 없는 경우에는 이러한 데이터의 모델링을 고려해야 합니다.  
@@ -55,13 +55,14 @@ ms.locfileid: "63193070"
  이러한 상황에 하나도 해당되지 않으면 `[n]varchar(max)` 또는 `varbinary(max)`와 같은 비-XML의 큰 개체 형식으로 데이터를 저장하는 것이 좋습니다.  
   
 ## <a name="xml-storage-options"></a>XML 스토리지 옵션  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 XML 저장소 옵션에는 다음이 포함됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 XML 스토리지 옵션에는 다음이 포함됩니다.  
   
--   `xml` 데이터 형식의 네이티브 스토리지  
+-   
+  `xml` 데이터 형식의 네이티브 스토리지  
   
      데이터의 XML 내용을 보존하는 내부 표현으로 데이터가 저장됩니다. 이러한 내부 표현에는 포함 계층, 문서 순서, 요소 및 특성 값에 대한 정보가 포함됩니다. 특히 XML 데이터의 InfoSet 내용이 보존됩니다. InfoSet에 대한 자세한 내용을 보려면 [http://www.w3.org/TR/xml-infoset](https://go.microsoft.com/fwlink/?LinkId=48843)를 방문하세요. InfoSet 내용은 다음 정보가 포함되지 않기 때문에 테스트 XML의 동일 복사본이 될 수 없습니다. 제외되는 정보는 중요하지 않은 공백, 특성 순서, 네임스페이스 접두사 및 XML 선언입니다.  
   
-     형식화 된 `xml` 데이터 형식으로는 `xml` post-schema validation InfoSet (PSVI) XML 스키마에 바인딩된 데이터 형식을 InfoSet에 유형 정보를 추가 하 고 내부 표현으로 인코딩됩니다. 이렇게 하면 구문 분석 속도가 크게 향상됩니다. 자세한 내용은 [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?LinkId=48881) 및 [http://www.w3.org/TR/xmlschema-2](https://go.microsoft.com/fwlink/?LinkId=4871)에 있는 W3C XML 스키마 사양을 참조하세요.  
+     XML 스키마 `xml` 에 바인딩된 `xml` 데이터 형식인 형식화 된 데이터 형식의 경우 PSVI (사후 스키마 유효성 검사 infoset)는 InfoSet에 유형 정보를 추가 하 고 내부 표현으로 인코딩됩니다. 이렇게 하면 구문 분석 속도가 크게 향상됩니다. 자세한 내용은 [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?LinkId=48881) 및 [http://www.w3.org/TR/xmlschema-2](https://go.microsoft.com/fwlink/?LinkId=4871)에 있는 W3C XML 스키마 사양을 참조하세요.  
   
 -   XML 및 관계형 스토리지 간 매핑  
   
@@ -71,7 +72,7 @@ ms.locfileid: "63193070"
   
      데이터의 동일 복사본이 저장됩니다. 이 옵션은 법률 문서와 같은 특수한 용도의 애플리케이션에 유용합니다. 대부분의 애플리케이션에는 정확한 복사본이 필요하지 않으며 XML 내용만으로도 충분합니다(InfoSet 정확성).  
   
- 일반적으로 이러한 접근 방식을 조합해서 사용해야 할 수 있습니다. 예를 들어 `xml` 데이터 형식의 열에 XML 데이터를 저장하고 XML 열에서 관계형 열로 속성을 승격해야 할 수 있습니다. 매핑 기술을 사용 하 여 재귀 부분만 비-XML 열에 비재귀적인 부분을 저장 하려는 또는 `xml` 데이터 형식 열입니다.  
+ 일반적으로 이러한 접근 방식을 조합해서 사용해야 할 수 있습니다. 예를 들어 `xml` 데이터 형식의 열에 XML 데이터를 저장하고 XML 열에서 관계형 열로 속성을 승격해야 할 수 있습니다. 또는 매핑 기술을 사용 하 여 비 XML 열에 비재귀 부분을 저장 하 고 `xml` 데이터 형식 열의 재귀 부분만 저장할 수 있습니다.  
   
 ### <a name="choice-of-xml-technology"></a>XML 기술 선택  
  네이티브 XML과 XML 뷰 간의 XML 기술 선택은 일반적으로 다음 요소에 따라 달라집니다.  
@@ -123,7 +124,7 @@ ms.locfileid: "63193070"
   
  쿼리를 위해서는 데이터를 런타임에 `xml` 데이터 형식으로 변환하고 여기에서 Xquery를 실행합니다. 런타임 변환은 특히 문서가 큰 경우 비용이 많이 듭니다. 쿼리를 자주 수행하는 경우 `xml` 데이터 형식의 열에 문서를 중복해서 저장하고 `[n]varchar(max)` 열에서 정확한 문서 복사본을 반환하는 동안 이를 인덱싱할 수 있습니다.  
   
- XML 열은 `[n]varchar(max)` 열을 기반으로 계산을 수행하는 계산 열일 수 있습니다. 그러나 XML 계산된 열을 XML 인덱스를 만들 수 없습니다 또는 XML 인덱스에서 빌드할 수 있습니다 `[n]varchar(max)` 또는 `varbinary(max)` 열입니다.  
+ XML 열은 `[n]varchar(max)` 열을 기반으로 계산을 수행하는 계산 열일 수 있습니다. 그러나 계산 된 XML 열에는 XML 인덱스를 만들 수 없으며 또는 `[n]varchar(max)` `varbinary(max)` 열을 기반으로 xml 인덱스를 작성할 수도 없습니다.  
   
 ### <a name="xml-view-technology"></a>XML 뷰 기술  
  데이터베이스에 있는 테이블과 XML 스키마 간의 매핑을 정의하면 영구적 데이터에 대한 "XML 뷰"를 만들 수 있습니다. XML 대량 로드를 사용하면 XML 뷰를 사용하여 기본 테이블을 채울 수 있습니다. XML 뷰는 XPath 버전 1.0을 사용하여 쿼리할 수 있으며, 이 쿼리는 테이블에서 SQL 쿼리로 변환됩니다. 이와 마찬가지로 이들 테이블에 업데이트를 전파할 수도 있습니다.  
@@ -146,7 +147,7 @@ ms.locfileid: "63193070"
  이해를 돕기 위해 고객, 주문 및 라인 항목 등과 같은 기존 관계형 데이터가 있고 이를 XML로 처리하려는 경우를 가정해 보십시오. 관계형 데이터에 대해 AXSD를 사용하여 XML 뷰를 정의합니다. XML 뷰를 사용하면 XML 데이터를 테이블에 대량 로드하고 XML 뷰를 사용하여 관계형 데이터를 쿼리 및 업데이트할 수 있습니다. 이 모델은 XML 태그가 포함된 데이터를 다른 애플리케이션과 교환하고 SQL 애플리케이션을 방해 받지 않고 실행해야 하는 경우에 유용합니다.  
   
 ### <a name="hybrid-model"></a>하이브리드 모델  
- 관계형의 조합을 자주 및 `xml` 데이터 형식 열은 데이터 모델링에 적합 합니다. XML 데이터의 일부 값은 관계형 열에 저장하고 나머지 값이나 전체 XML 값은 XML 열에 저장할 수 있습니다. 이렇게 하면 관계형 열에서 만든 인덱스와 잠금 특성을 더욱 자세히 제어할 수 있다는 점에서 성능이 향상됩니다.  
+ 관계형 및 `xml` 데이터 형식 열의 조합이 데이터 모델링에 적합 한 경우가 많습니다. XML 데이터의 일부 값은 관계형 열에 저장하고 나머지 값이나 전체 XML 값은 XML 열에 저장할 수 있습니다. 이렇게 하면 관계형 열에서 만든 인덱스와 잠금 특성을 더욱 자세히 제어할 수 있다는 점에서 성능이 향상됩니다.  
   
  관계형 열에 저장하는 값은 작업에 따라 달라집니다. 예를 들어 경로 식 /Customer/@CustId에 따라 모든 XML 값을 검색하는 경우 **CustId** 특성의 값을 관계형 열로 승격하고 이를 인덱싱하면 쿼리 속도가 빨라집니다. 반면에 XML 데이터가 관계형 열로 포괄적으로 중복되지 않게 분해된 경우 리어셈블리 비용이 상당히 높을 수 있습니다.  
   
@@ -166,7 +167,8 @@ ms.locfileid: "63193070"
   
 -   **sql_variant** 인스턴스의 하위 유형으로 사용될 수 없습니다.  
   
--   `text` 또는 `ntext`로의 캐스트 또는 변환을 지원하지 않습니다. 대신 `varchar(max)` 또는 `nvarchar(max)`를 사용합니다.  
+-   
+  `text` 또는 `ntext`로의 캐스트 또는 변환을 지원하지 않습니다. 대신 `varchar(max)` 또는 `nvarchar(max)`를 사용합니다.  
   
 -   비교 또는 정렬할 수 없습니다. 즉, `xml` 데이터 형식은 GROUP BY 문에서 사용할 수 없습니다.  
   
@@ -174,7 +176,7 @@ ms.locfileid: "63193070"
   
 -   인덱스에서 키 열로 사용할 수 없습니다. 하지만 클러스터형 인덱스의 데이터로 포함되거나 비클러스터형 인덱스를 만든 경우 INCLUDE 키워드를 사용하여 비클러스터형 인덱스에 명시적으로 추가할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 문서 대량 가져오기 및 내보내기 예제&#40;SQL Server&#41;](../import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Banner 요소 (ssbdiagnose) | Microsoft Docs
+title: 배너 요소 (ssbdiagnose) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b2f425dd955e0c92daeaa0241e7ea01333222b75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63186872"
 ---
 # <a name="banner-element-ssbdiagnose"></a>Banner 요소(ssbdiagnose)
@@ -38,17 +38,20 @@ ms.locfileid: "63186872"
   
 |attribute|Description|  
 |---------------|-----------------|  
-|`title`|**ssbdiagnose** XML 출력 파일을 생성한 유틸리티를 식별합니다.|  
-|`product`|**ssbdiagnose** XML 출력 파일을 생성한 제품을 식별합니다.|  
+|`title`|
+  **ssbdiagnose** XML 출력 파일을 생성한 유틸리티를 식별합니다.|  
+|`product`|
+  **ssbdiagnose** XML 출력 파일을 생성한 제품을 식별합니다.|  
 |`version`|XML 출력 파일을 생성한 유틸리티의 버전을 식별합니다.|  
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특성|Description|  
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|없음|  
 |**기본값**|없음|  
-|**발생 빈도**|**ssbdiagnose** 출력 XML 파일당 한 번|  
+|**발생 빈도**|
+  **ssbdiagnose** 출력 XML 파일당 한 번|  
   
 ## <a name="element-relationships"></a>요소 관계  
   
@@ -64,7 +67,7 @@ ms.locfileid: "63186872"
 <Banner title="Service Broker Diagnostics Utility" product="Microsoft SQL Server" version="10.0.1073.0" />  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ssbdiagnose 유틸리티&#40;Service Broker&#41;](ssbdiagnose-utility-service-broker.md)  
   
   

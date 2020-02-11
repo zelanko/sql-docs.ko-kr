@@ -16,14 +16,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 85ddbe528734e5824c80bd5cc00a15d3b32c9bec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099547"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>배포 속성 설정(Reporting Services)
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서는 보고서 서버 프로젝트의 항목을 보고서 서버에 게시할 수 있도록 보고서 서버를 지정하고 필요에 따라 보고서 및 공유 데이터 원본의 폴더를 지정해야 합니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 보고서를 빌드, 미리 보기 및 배포하는 데 필요한 속성과 값은 보고서 서버 프로젝트의 프로젝트 구성에 저장됩니다. 속성 집합을 편리하게 전환할 수 있도록 이러한 프로젝트 속성에 대한 명명된 집합을 여러 개 만들 수 있습니다. 각 속성 집합은 하나의 구성입니다. 예를 들어 테스트 서버에 보고서를 게시하는 구성과 프로덕션 서버에 보고서를 게시하는 구성이 각각 존재할 수 있습니다.  
+  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서는 보고서 서버 프로젝트의 항목을 보고서 서버에 게시할 수 있도록 보고서 서버를 지정하고 필요에 따라 보고서 및 공유 데이터 원본의 폴더를 지정해야 합니다. 
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 보고서를 빌드, 미리 보기 및 배포하는 데 필요한 속성과 값은 보고서 서버 프로젝트의 프로젝트 구성에 저장됩니다. 속성 집합을 편리하게 전환할 수 있도록 이러한 프로젝트 속성에 대한 명명된 집합을 여러 개 만들 수 있습니다. 각 속성 집합은 하나의 구성입니다. 예를 들어 테스트 서버에 보고서를 게시하는 구성과 프로덕션 서버에 보고서를 게시하는 구성이 각각 존재할 수 있습니다.  
   
  구성 관리자를 사용하여 프로젝트 구성에서 프로젝트 속성 집합을 만들고 관리할 수 있습니다. 구성 관리자는 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]의 기반이 되는 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 에서 지원하는 기능입니다.  
   
@@ -42,23 +44,23 @@ ms.locfileid: "66099547"
     > [!NOTE]  
     >  여러 구성을 사용하여 서로 다른 보고서 서버 또는 설정 사이에서 빠르게 전환할 수 있습니다.  
   
-3.  에 **OutputPath** 텍스트 상자에 입력 하거나 빌드 확인, 배포 및 보고서의 미리 보기에 사용 되는 보고서 정의를 저장할 로컬 파일 시스템의 경로 붙여 넣습니다. 이 경로는 프로젝트에 사용하는 경로 및 프로젝트 경로 아래의 자식 폴더인 상대 경로와 달라야 합니다.  
+3.  **OutputPath** 텍스트 상자에 보고서의 빌드 확인, 배포 및 미리 보기에 사용 되는 보고서 정의를 저장할 로컬 파일 시스템의 경로를 입력 하거나 붙여 넣습니다. 이 경로는 프로젝트에 사용하는 경로 및 프로젝트 경로 아래의 자식 폴더인 상대 경로와 달라야 합니다.  
   
-4.  에 **ErrorLevel** 텍스트 상자에는 문제의 심각도 빌드 오류로 보고 됩니다. 값 보다 작거나 같은 심각도 사용 하 여 보고서, 데이터 원본 또는 기타 프로젝트 리소스를 빌드할 때 발생 한 문제 수준이 **ErrorLevel** 되 고, 그렇지 않으면 오류로 보고 문제를 경고로 보고 됩니다. 오류가 발생하면 빌드 태스크가 실패합니다. 유효한 심각도 수준은 0에서 4까지입니다. 기본값은 2입니다.  
+4.  **ErrorLevel** 텍스트 상자에 오류로 보고 되는 빌드 문제의 심각도를 입력 합니다. **ErrorLevel** 값 보다 작거나 같은 심각도 수준을 가진 보고서, 데이터 원본 또는 기타 프로젝트 리소스를 빌드할 때 발생 하는 문제는 오류로 보고 됩니다. 그렇지 않으면 문제는 경고로 보고 됩니다. 오류가 발생하면 빌드 태스크가 실패합니다. 유효한 심각도 수준은 0에서 4까지입니다. 기본값은 2입니다.  
   
      **ErrorLevel** 을 사용하여 빌드의 중요도를 높이거나 낮출 수 있습니다. 예를 들어 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 보고서 서버에 배포하는 동안 지도가 있는 보고서를 빌드할 경우 기본적으로 오류가 표시되고 보고서 빌드가 실패합니다. **ErrorLevel** 을 낮추면 지도가 보고서에서 제거되고 경고가 표시되며 보고서 빌드가 계속됩니다.  
   
-5.  에 **StartItem** 목록 보고서 프로젝트가 실행 중일 때 미리 보기 창이 나 브라우저 창에서 표시 하는 보고서를 선택 합니다.  
+5.  **Startitem** 목록에서 보고서를 선택 하 여 보고서 프로젝트가 실행 중일 때 미리 보기 창이 나 브라우저 창에 표시할 보고서를 선택 합니다.  
   
 6.  **OverwriteDataSources** 목록에서 공유 데이터 원본이 게시될 때마다 서버에서 공유 데이터 원본을 덮어쓰게 하려면 **True** 를 선택하고, 서버에서 데이터 원본을 그대로 유지하려면 **False** 를 선택합니다.  
   
-7.  에 **TargetServerVersion** 목록 중 하나를 선택 합니다를 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 또는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 누르거나 **버전 검색** 가 자동으로 설치 된 버전을 확인 식별 하는 서버를 **TargetServer URL** 속성입니다. 기본값은 **SQL Server 2008 R2**입니다.  
+7.  **TargetServerVersion** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 목록에서 또는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 선택 하거나 **버전 검색** 을 선택 하 여 **TargetServer URL** 속성으로 식별 되는 서버에 설치 된 버전을 자동으로 확인 합니다. 기본값은 **SQL Server 2008 R2**입니다.  
   
      **TargetServerVersion** 을 사용하여 **TargetServer URL**에 지정된 보고서 서버의 버전에 맞게 OutputPath에 지정된 경로에 있는 빌드된 보고서를 사용자 지정할 수 있습니다.  
   
 8.  **TargetDataSourceFolder** 입력란에 게시된 공유 데이터 원본을 저장할 보고서 서버의 폴더를 입력합니다. **TargetDataSourceFolder** 의 기본값은 Data Sources입니다. 이 필드를 비워 두면 데이터 원본이 **TargetReportFolder**에 지정된 위치에 게시됩니다.  
   
-9. **TargetReportFolder** 입력란에 게시된 보고서를 저장할 보고서 서버의 폴더를 입력합니다. 에 대 한 기본값 **TargetReportFolder** 보고서 프로젝트의 이름입니다.  
+9. **TargetReportFolder** 입력란에 게시된 보고서를 저장할 보고서 서버의 폴더를 입력합니다. **Targetreportfolder** 의 기본값은 보고서 프로젝트의 이름입니다.  
   
     > [!NOTE]  
     >  기본 모드로 실행 중인 보고서 서버의 경우 대상 폴더에 보고서를 게시하려면 해당 폴더에 대한 **게시** 권한이 있어야 합니다. 게시 권한은 게시 작업을 포함하는 역할에 사용자 계정을 매핑하는 역할 할당을 통해 제공됩니다. 자세한 내용은 [역할 할당 만들기 및 관리](../security/create-and-manage-role-assignments.md)를 참조하세요. SharePoint 통합 모드로 실행 중인 보고서 서버의 경우 SharePoint 사이트에 대한 **멤버** 또는 **소유자** 권한이 있어야 합니다. 자세한 내용은 [보고서 서버 항목에 대한 SharePoint 사이트 및 목록 사용 권한 참조](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)를 참조하세요.  
@@ -80,10 +82,10 @@ ms.locfileid: "66099547"
     > [!NOTE]  
     >  **빌드** 를 선택하면 보고서 디자이너는 보고서 프로젝트를 빌드한 다음 미리 보거나 보고서 서버에 게시하기 전에 오류를 확인합니다. **배포** 를 선택하면 보고서 디자이너는 배포 속성에서 정의된 보고서 서버에 보고서를 게시합니다. **배포** 를 선택하지 않으면 보고서 디자이너는 **StartItem** 속성에 지정된 보고서를 로컬 미리 보기 창에 표시합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 원본 및 보고서 게시](../reports/publishing-data-sources-and-reports.md)   
  [보고서 미리 보기](../reports/previewing-reports.md)   
- [보고서 디자이너 F1 도움말](report-designer-f1-help.md)   
+ [F1 도움말 보고서 디자이너](report-designer-f1-help.md)   
  [SharePoint 모드의 보고서 서버에 게시된 보고서 항목에 대한 URL 예&#40;SSRS&#41;](url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
  [프로젝트 속성 페이지 대화 상자](project-property-pages-dialog-box.md)   
  [보고서 서버에 보고서 게시](../reports/publishing-reports-to-a-report-server.md)  

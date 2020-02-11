@@ -17,45 +17,46 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5a8cdeb912d1ead21571f1ec7f86e15b0d009514
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072858"
 ---
-# <a name="data-sources-supported-ssas-multidimensional"></a>데이터 원본 지원 되는 (SSAS 다차원)
+# <a name="data-sources-supported-ssas-multidimensional"></a>지원 되는 데이터 원본 (SSAS 다차원)
   이 항목에서는 다차원 모델에서 사용할 수 있는 데이터 원본 유형에 대해 설명합니다.  
   
-##  <a name="bkmk_supported_ds"></a> 지원되는 데이터 원본  
- 다음 표에 나와 있는 데이터 원본에서 데이터를 검색할 수 있습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 설치할 경우 각 데이터 원본에 대해 나열된 공급자는 설치되지 않습니다. 일부 공급자는 컴퓨터의 다른 애플리케이션과 함께 이미 설치되어 있을 수 있습니다. 그렇지 않은 경우에는 공급자를 다운로드하여 설치해야 합니다.  
+##  <a name="bkmk_supported_ds"></a>지원 되는 데이터 원본  
+ 다음 표에 나와 있는 데이터 원본에서 데이터를 검색할 수 있습니다. 
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 설치할 경우 각 데이터 원본에 대해 나열된 공급자는 설치되지 않습니다. 일부 공급자는 컴퓨터의 다른 애플리케이션과 함께 이미 설치되어 있을 수 있습니다. 그렇지 않은 경우에는 공급자를 다운로드하여 설치해야 합니다.  
   
 > [!NOTE]  
 >  Oracle OLE DB 공급자와 같은 타사 공급자를 사용하여 타사에서 제공하는 지원을 통해 타사 데이터베이스에 연결할 수도 있습니다.  
   
 |||||  
 |-|-|-|-|  
-|원본|버전|파일 유형|공급자 <sup>1</sup>|  
+|원본|버전|파일 형식|공급자 <sup>1</sup>|  
 |Access 데이터베이스|Microsoft Access 2007, 2010, 2013|.accdb 또는 .mdb|Microsoft Jet 4.0 OLE DB Provider|  
-|SQL Server 관계형 데이터베이스 <sup>5</sup>|Microsoft SQL Server 2005, 2008, 2008 R2, 2012, 2014 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] <sup>2</sup>, SQL Server 병렬 데이터 웨어하우스 (PDW) <sup>3</sup>|(해당 사항 없음)|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB 공급자<br /><br /> SQL Server Native 11.0 Client OLE DB 공급자<br /><br /> .NET Framework Data Provider for SQL Client|  
-|Oracle 관계형 데이터베이스|Oracle 9i, 10g, 11g|(해당 사항 없음)|Oracle OLE DB 공급자<br /><br /> .NET Framework Data Provider for Oracle Client<br /><br /> .NET Framework Data Provider for SQL Server<br /><br /> MSDAORA OLE DB 공급자 <sup>4</sup><br /><br /> OraOLEDB<br /><br /> MSDASQL|  
+|SQL Server 관계형 데이터베이스 <sup>5</sup>|Microsoft SQL Server 2005, 2008, 2008 R2, 2012, 2014 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] <sup>2</sup>, SQL Server PDW (병렬 데이터 웨어하우스) <sup>3</sup>|(해당 사항 없음)|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB 공급자<br /><br /> SQL Server Native 11.0 Client OLE DB 공급자<br /><br /> .NET Framework Data Provider for SQL Client|  
+|Oracle 관계형 데이터베이스|Oracle 9i, 10g, 11g|(해당 사항 없음)|Oracle OLE DB 공급자<br /><br /> .NET Framework Data Provider for Oracle Client<br /><br /> SQL Server용 .NET Framework 데이터 공급자<br /><br /> MSDAORA OLE DB 공급자 <sup>4</sup><br /><br /> OraOLEDB<br /><br /> MSDASQL|  
 |Teradata 관계형 데이터베이스|Teradata V2R6, V12|(해당 사항 없음)|TDOLEDB OLE DB 공급자<br /><br /> .Net Data Provider for Teradata|  
 |Informix 관계형 데이터베이스|V11.10|(해당 사항 없음)|Informix OLE DB 공급자|  
 |IBM DB2 관계형 데이터베이스|8.1|(해당 사항 없음)|DB2OLEDB|  
 |Sybase 적응형 Server Enterprise (ASE) 관계형 데이터베이스|15.0.2|(해당 사항 없음)|Sybase OLE DB 공급자|  
 |기타 관계형 데이터베이스|(해당 사항 없음)|(해당 사항 없음)|OLE DB Provider|  
   
- <sup>1</sup> ODBC 데이터 원본은 다차원 솔루션에 대 한 지원 되지 않습니다. Analysis Services 자체는 연결을 처리하지만 솔루션을 빌드하는 데 사용되는 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 의 디자이너는 MSDASQL 드라이버를 사용하는 경우에도 ODBC 데이터 원본에 연결할 수 없습니다. 비즈니스 요구 사항에 ODBC 데이터 원본이 포함되는 경우 테이블 형식 솔루션을 대신 빌드해 보세요.  
+ <sup>1</sup> ODBC 데이터 원본은 다차원 솔루션에서 지원 되지 않습니다. Analysis Services 자체는 연결을 처리하지만 솔루션을 빌드하는 데 사용되는 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 의 디자이너는 MSDASQL 드라이버를 사용하는 경우에도 ODBC 데이터 원본에 연결할 수 없습니다. 비즈니스 요구 사항에 ODBC 데이터 원본이 포함되는 경우 테이블 형식 솔루션을 대신 빌드해 보세요.  
   
- <sup>2</sup> 자세한 내용은 참조 하십시오 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 [azure.microsoft.com](https://go.microsoft.com/fwlink/?LinkID=157856)합니다.  
+ <sup>2</sup> 자세한 내용은 azure.microsoft.com의를 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]참조 하세요 [](https://go.microsoft.com/fwlink/?LinkID=157856).  
   
- <sup>3</sup> 에 대 한 자세한 내용은 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] PDW를 참조 하십시오 [SQL Server 병렬 데이터 웨어하우스](https://go.microsoft.com/fwlink/?LinkId=150895)합니다.  
+ <sup>3</sup> PDW에 대 한 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 자세한 내용은 [SQL Server Parallel Data Warehouse](https://go.microsoft.com/fwlink/?LinkId=150895)를 참조 하세요.  
   
- <sup>4</sup> 일부 경우에 특히 최신 버전의 Oracle 사용 하 여 연결 오류가 발생할 수 있습니다 MSDAORA OLE DB 공급자를 사용 하 여 합니다. 오류가 발생할 경우 Oracle용으로 제시된 다른 공급자 중 하나를 사용해 보세요.  
+ <sup>4</sup> 경우에 따라 MSDAORA OLE DB 공급자를 사용 하면 특히 최신 버전의 Oracle을 사용 하는 연결 오류가 발생할 수 있습니다. 오류가 발생할 경우 Oracle용으로 제시된 다른 공급자 중 하나를 사용해 보세요.  
   
- <sup>5</sup> 일부 기능 온-프레미스를 실행 하는 SQL Server 관계형 데이터베이스에 필요 합니다. 특히 쓰기 저장 및 ROLAP 스토리지를 사용하려면 기본 데이터 원본이 SQL Server 관계형 데이터베이스여야 합니다.  
+ <sup>5</sup> 일부 기능에는 온-프레미스에서 실행 되는 SQL Server 관계형 데이터베이스가 필요 합니다. 특히 쓰기 저장 및 ROLAP 스토리지를 사용하려면 기본 데이터 원본이 SQL Server 관계형 데이터베이스여야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [지원되는 데이터 원본&#40;SSAS 테이블 형식&#41;](../tabular-models/data-sources-supported-ssas-tabular.md)   
+## <a name="see-also"></a>참고 항목  
+ [SSAS 테이블 형식&#41;&#40;지원 되는 데이터 원본](../tabular-models/data-sources-supported-ssas-tabular.md)   
  [다차원 모델의 데이터 원본](data-sources-in-multidimensional-models.md)   
  [다차원 모델의 데이터 원본 뷰](data-source-views-in-multidimensional-models.md)  
   

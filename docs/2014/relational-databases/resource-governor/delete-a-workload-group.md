@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2daf8fe7e12cec5317335a0dcce273b16d428bcc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63215795"
 ---
 # <a name="delete-a-workload-group"></a>작업 그룹 삭제
@@ -25,7 +25,7 @@ ms.locfileid: "63215795"
   
 -   **시작하기 전 주의 사항:**  [제한 사항](#LimitationsRestrictions), [사용 권한](#Permissions)  
   
--   **작업 그룹을 삭제하려면 다음을 사용합니다.**  [개체 탐색기](#DelWGObjEx), [Resource Governor 속성](#DelWGRGProp), [Transact-SQL](#DelWGTSQL)  
+-   **작업 그룹을 삭제하려면 다음을 사용합니다.**  [개체 탐색기](#DelWGObjEx), [Resource Governor 속성](#DelWGRGProp) 또는 [Transact-SQL](#DelWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  활성 세션이 들어 있는 작업 그룹은 삭제할 수 없습니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "63215795"
   
 -   서버를 다시 시작합니다. 다시 시작 프로세스가 완료되면 삭제한 그룹은 생성되지 않고 이동한 그룹은 새 리소스 풀 할당을 사용합니다.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 권한  
  작업 그룹을 삭제하려면 CONTROL SERVER 권한이 필요합니다.  
   
 ##  <a name="DelWGObjEx"></a> 개체 탐색기를 사용하여 작업 그룹 삭제  
@@ -69,17 +69,20 @@ ms.locfileid: "63215795"
   
 1.  삭제할 작업 그룹의 이름을 지정하여 `DROP WORKLOAD GROUP` 문을 실행합니다.  
   
-2.  `ALTER RESOURCE GOVERNOR RECONFIGURE` 문을 실행하기 전에 삭제할 작업 그룹에 활성 요청이 없어야 합니다. 활성 요청이 있으면 `ALTER RESOURCE GOVERNOR`가 실패합니다. 이 문제를 방지하려면 다음 동작 중 하나를 수행하세요.  
+2.  
+  `ALTER RESOURCE GOVERNOR RECONFIGURE` 문을 실행하기 전에 삭제할 작업 그룹에 활성 요청이 없어야 합니다. 활성 요청이 있으면 `ALTER RESOURCE GOVERNOR`가 실패합니다. 이 문제를 방지하려면 다음 동작 중 하나를 수행하세요.  
   
     -   작업 그룹에서 모든 세션의 연결이 끊어질 때까지 기다립니다.  
   
-    -   `KILL` 명령을 사용하여 작업 그룹에 있는 세션을 명시적으로 중지합니다.  
+    -   
+  `KILL` 명령을 사용하여 작업 그룹에 있는 세션을 명시적으로 중지합니다.  
   
     -   서버를 다시 시작합니다. 작업 그룹은 다시 만들어지지 않습니다.  
   
-    -   `DROP WORKLOAD GROUP` 문을 실행했지만 변경 내용을 적용하기 위해 세션을 명시적으로 중지하지 않으려는 경우 DROP 문을 실행하기 이전의 이름을 사용하여 그룹을 다시 만든 다음 해당 그룹을 원래 리소스 풀로 이동하십시오.  
+    -   
+  `DROP WORKLOAD GROUP` 문을 실행했지만 변경 내용을 적용하기 위해 세션을 명시적으로 중지하지 않으려는 경우 DROP 문을 실행하기 이전의 이름을 사용하여 그룹을 다시 만든 다음 해당 그룹을 원래 리소스 풀로 이동하십시오.  
   
-3.  실행 된 `ALTER RESOURCE GOVERNOR RECONFIGURE` 문입니다.  
+3.  `ALTER RESOURCE GOVERNOR RECONFIGURE` 문을 실행 합니다.  
   
 ### <a name="example-transact-sql"></a>예제(Transact-SQL)  
  다음 예에서는 `groupAdhoc`이라는 작업 그룹을 삭제합니다.  
@@ -91,7 +94,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [리소스 관리자](resource-governor.md)   
  [리소스 풀 만들기](create-a-resource-pool.md)   
  [작업 그룹 만들기](create-a-workload-group.md)   

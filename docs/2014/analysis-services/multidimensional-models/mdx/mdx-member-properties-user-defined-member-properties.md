@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ead5a45bf163ca4e7998c30ab5c83f94cca9075b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074255"
 ---
 # <a name="user-defined-member-properties-mdx"></a>사용자 정의 멤버 속성(MDX)
@@ -30,14 +30,15 @@ ms.locfileid: "66074255"
 -   프로그래밍 방식으로 사용자 정의 멤버 속성을 추가하려면 애플리케이션에서 AMO(Analysis Management Objects)를 사용하거나 XMLA(XML for Analysis) 및 ASSL(Analysis Services Scripting Language)을 조합하여 사용하십시오. 자세한 내용은 [특성 관계](../../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)를 참조하세요.  
   
 ## <a name="retrieving-user-defined-member-properties"></a>사용자 정의 멤버 속성 검색  
- 사용자 정의 멤버 속성 중 하나를 사용 하 여 검색할 수 있습니다 합니다 `PROPERTIES` 키워드와 [속성](/sql/mdx/properties-mdx) 함수입니다.  
+ 키워드 또는 `PROPERTIES` [속성](/sql/mdx/properties-mdx) 함수를 사용 하 여 사용자 정의 멤버 속성을 검색할 수 있습니다.  
   
 ### <a name="using-the-properties-keyword-to-retrieve-user-defined-member-properties"></a>PROPERTIES 키워드를 사용한 사용자 정의 멤버 속성 검색  
  사용자 정의 멤버 속성을 검색하는 구문은 다음 구문과 같이 기본 수준 멤버 속성을 검색하는 구문과 비슷합니다.  
   
  `DIMENSION PROPERTIES [Dimension.]Level.<Custom_Member_Property>`  
   
- `PROPERTIES` 키워드는 축 사양의 집합 식 뒤에 표시됩니다. 예를 들어 다음 MDX 쿼리에는 1월에 판매된 제품을 식별하는 집합 식 뒤에 `List Price` 및 `Dealer Price` 사용자 정의 멤버 속성을 검색하는 `PROPERTIES` 키워드가 있습니다.  
+ 
+  `PROPERTIES` 키워드는 축 사양의 집합 식 뒤에 표시됩니다. 예를 들어 다음 MDX 쿼리에는 1월에 판매된 제품을 식별하는 집합 식 뒤에 `PROPERTIES` 및 `List Price` 사용자 정의 멤버 속성을 검색하는 `Dealer Price` 키워드가 있습니다.  
   
 ```  
 SELECT   
@@ -66,8 +67,8 @@ FROM [Adventure Works]
   
  계산 멤버 작성에 대한 자세한 내용은 [계산 멤버를 MDX로 작성&#40;MDX&#41;](mdx-calculated-members-building-calculated-members.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [멤버 속성 & #40;를 사용 하 여 Mdx& #41;](mdx-member-properties.md)   
- [속성 & #40; Mdx& #41;](/sql/mdx/properties-mdx)  
+## <a name="see-also"></a>참고 항목  
+ [MDX&#41;&#40;멤버 속성 사용](mdx-member-properties.md)   
+ [MDX &#40;속성&#41;](/sql/mdx/properties-mdx)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 책갈피 (OLE DB)를 사용 하 여 행 검색 | Microsoft Docs
+title: 책갈피를 사용 하 여 행 검색 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0bfc6d28eb318bf36217a53873a48ab854d5f12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63218213"
 ---
 # <a name="retrieve-rows-using-bookmarks-ole-db"></a>책갈피를 사용하여 행 검색(OLE DB)
@@ -36,7 +36,8 @@ ms.locfileid: "63218213"
   
 4.  책갈피로 사용할 열에 대해 바인딩 구조의 `dwFlag` 필드를 DBCOLUMNSINFO_ISBOOKMARK 플래그로 설정합니다.  
   
-5.  `IRowsetLocate::GetRowsAt`을 사용하여 책갈피에서의 오프셋으로 지정된 행부터 시작하여 행을 인출합니다.  
+5.  
+  `IRowsetLocate::GetRowsAt`을 사용하여 책갈피에서의 오프셋으로 지정된 행부터 시작하여 행을 인출합니다.  
   
 ## <a name="example"></a>예제  
  이 예제에서는 책갈피를 사용하여 행을 인출하는 방법을 보여 줍니다. 이 예제는 IA64에서 지원되지 않습니다.  

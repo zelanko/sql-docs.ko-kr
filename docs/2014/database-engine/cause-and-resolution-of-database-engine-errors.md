@@ -1,5 +1,5 @@
 ---
-title: 원인 및 해결 방법 데이터베이스 엔진 오류 | Microsoft Docs
+title: 데이터베이스 엔진 오류의 원인 및 해결 방법 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 3c52de15f5f5d06590b74182819804750a957e17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065184"
 ---
 # <a name="cause-and-resolution-of-database-engine-errors"></a>데이터베이스 엔진 오류의 원인 및 해결 방법
@@ -26,7 +26,7 @@ ms.locfileid: "66065184"
 ## <a name="reference"></a>참조  
  [데이터베이스 엔진 오류 이해](../relational-databases/native-client-ole-db-errors/errors.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 엔진 이벤트 및 오류](../relational-databases/errors-events/database-engine-events-and-errors.md)  
   
   

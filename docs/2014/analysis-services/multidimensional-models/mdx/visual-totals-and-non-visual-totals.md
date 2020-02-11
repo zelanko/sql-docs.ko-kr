@@ -1,5 +1,5 @@
 ---
-title: 보이는 값 합계 및 보이지 않는 값 합계 | Microsoft Docs
+title: 보이는 합계 및 비시각적 합계 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f110b54d1a8a057f16b5e5682adc3beb04c54f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073728"
 ---
 # <a name="visual-totals-and-non-visual-totals"></a>보이는 값 합계 및 보이지 않는 값 합계
@@ -36,11 +36,11 @@ ms.locfileid: "66073728"
   
 |||||||  
 |-|-|-|-|-|-|  
-||**All Products**|**Accessories**|**Bikes**|**Clothing**|**Components**|  
-|**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$66,302,381.56**|**$1,777,840.84**|**$11,799,076.66**|  
-|**Specialty Bike Shop**|**$6,756,166.18**|**$65,125.48**|**$6,080,117.73**|**$252,933.91**|**$357,989.07**|  
-|**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$30,892,354.33**|**$592,385.71**|**$3,307,774.48**|  
-|**Warehouse**|**$38,726,913.48**|**$331,169.64**|**$29,329,909.50**|**$932,521.23**|**$8,133,313.11**|  
+||**모든 제품**|**부속**|**Bikes**|**구**|**구성 요소**|  
+|**모든 대리점**|**$80450596.98**|**$571297.93**|**$66302381.56**|**$1777840.84**|**$11799076.66**|  
+|**전문 자전거 상점**|**$6756166.18**|**$65125.48**|**$6080117.73**|**$252933.91**|**$357989.07**|  
+|**부가 가치 재판매인**|**$34,967,517.33**|**$175002.81**|**$30892354.33**|**$592,385.71**|**$3307774.48**|  
+|**웨어하우스와**|**$38,726,913.48**|**$331169.64**|**$29329909.50**|**$932521.23**|**$8133313.11**|  
   
 ## <a name="non-visual-on-rows-and-columns"></a>행과 열에 대한 보이지 않는 값 합계  
  Accessories 및 Clothing 제품과 Value Added Reseller 및 Warehouse 대리점에 대한 데이터만 포함된 테이블을 만들고 전체 합계를 유지하려면 NON VISUAL을 사용하여 다음과 같이 문을 작성할 수 있습니다.  
@@ -61,10 +61,10 @@ ms.locfileid: "66073728"
   
 |||||  
 |-|-|-|-|  
-||**All Products**|**Accessories**|**Clothing**|  
-|**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$1,777,840.84**|  
-|**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$592,385.71**|  
-|**Warehouse**|**$38,726,913.48**|**$331,169.64**|**$932,521.23**|  
+||**모든 제품**|**부속**|**구**|  
+|**모든 대리점**|**$80450596.98**|**$571297.93**|**$1777840.84**|  
+|**부가 가치 재판매인**|**$34,967,517.33**|**$175002.81**|**$592,385.71**|  
+|**웨어하우스와**|**$38,726,913.48**|**$331169.64**|**$932521.23**|  
   
 ## <a name="non-visual-on-rows"></a>행에 대한 보이지 않는 값 합계  
  열에는 보이는 값 합계만 포함하고 행 합계에는 모든 [Category]의 순 합계를 표시하는 테이블을 만들려면 다음과 같은 쿼리를 실행해야 합니다.  
@@ -96,13 +96,13 @@ ms.locfileid: "66073728"
   
  이전 결과와 비교하면 [All Resellers] 행에는 [Value Added Reseller] 및 [Warehouse]에 표시된 값에 대한 합계가 표시되고 [All Products] 열에는 표시되지 않은 제품을 포함한 모든 제품의 합계 값이 표시되는 것을 알 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [MDX의 주요 개념&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+## <a name="see-also"></a>참고 항목  
+ [MDX의 주요 개념 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Autoexist](autoexists.md)   
- [멤버, 튜플 및 집합 작업&#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
- [MDX 쿼리 기본 사항&#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
- [기본 MDX 쿼리&#40;MDX&#41;](mdx-query-the-basic-query.md)   
- [쿼리 및 Slicer 축으로 쿼리 제한&#40;MDX&#41;](mdx-query-and-slicer-axes-restricting-the-query.md)   
- [쿼리에 큐브 컨텍스트 설정&#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)  
+ [MDX &#40;멤버, 튜플 및 집합을 사용 하 여 작업&#41;](working-with-members-tuples-and-sets-mdx.md)   
+ [MDX 쿼리 기본 사항 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
+ [MDX &#40;기본 MDX 쿼리&#41;](mdx-query-the-basic-query.md)   
+ [쿼리 및 Slicer 축을 사용 하 여 쿼리를 제한 &#40;MDX&#41;](mdx-query-and-slicer-axes-restricting-the-query.md)   
+ [MDX&#41;&#40;쿼리에 큐브 컨텍스트 설정](establishing-cube-context-in-a-query-mdx.md)  
   
   

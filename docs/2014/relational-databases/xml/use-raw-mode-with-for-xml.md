@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aec0ec20c9bd46a06560f5ce6ebd374e937f0343
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63193241"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>FOR XML에서 RAW 모드 사용
@@ -33,23 +33,23 @@ ms.locfileid: "63193241"
  이진 데이터를 base64 인코딩 형식으로 반환하기 위해 FOR XML 절에서 BINARY BASE64 옵션을 지정해야 합니다. RAW 모드에서 BINARY BASE64 옵션을 지정하지 않고 이진 데이터를 검색하면 오류가 발생합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- 이 섹션에서는 다음과 같은 예를 보여 줍니다.  
+ 이 섹션에는 다음 예제가 포함되어 있습니다.  
   
--   [예: 제품 모델 정보를 XML로 검색](example-retrieving-product-model-information-as-xml.md)  
+-   [예제: 제품 모델 정보를 XML로 검색](example-retrieving-product-model-information-as-xml.md)  
   
--   [예: ELEMENTS 지시어를 사용하여 XSINIL 지정](example-specifying-xsinil-with-the-elements-directive.md)  
+-   [예제: ELEMENTS 지시어를 사용하여 XSINIL 지정](example-specifying-xsinil-with-the-elements-directive.md)  
   
 -   [예: XMLDATA 및 XMLSCHEMA 옵션을 사용하여 결과로 스키마 요청](example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
   
--   [예: 이진 데이터 검색](example-retrieving-binary-data.md)  
+-   [예제: 이진 데이터 검색](example-retrieving-binary-data.md)  
   
--   [예: &#60;행&#62; 요소 이름 바꾸기](example-renaming-the-row-element.md)  
+-   [예제: &#60;행&#62; 요소 이름 바꾸기](example-renaming-the-row-element.md)  
   
--   [예: FOR XML로 생성된 XML에 대한 루트 요소 지정](example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
+-   [예제: FOR XML로 생성된 XML에 대한 루트 요소 지정](example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
   
--   [예: XMLType 열 쿼리](example-querying-xmltype-columns.md)  
+-   [예제: XMLType 열 쿼리](example-querying-xmltype-columns.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [WITH XMLNAMESPACES를 사용하여 쿼리에 네임스페이스 추가](add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [FOR XML에서 AUTO 모드 사용](use-auto-mode-with-for-xml.md)   
  [FOR XML에서 EXPLICIT 모드 사용](use-explicit-mode-with-for-xml.md)   

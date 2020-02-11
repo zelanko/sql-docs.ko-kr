@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a27720408db760604852410d9733983d7d67f18e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63193336"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>애플리케이션 코드에서 FOR XML 결과 사용
@@ -169,7 +169,7 @@ ms.locfileid: "63193336"
   
 -   **Brands:** 3  
   
--   **인터넷:** DSL  
+-   **Internet:** DSL  
   
 -   **NumberEmployees:** 40  
   
@@ -201,7 +201,8 @@ ms.locfileid: "63193336"
   
  이 예에서는 다음 Microsoft .NET Framework 관리 API를 사용하여 FOR XML 쿼리 결과를 반환 및 렌더링합니다.  
   
-1.  `SqlConnection`을 사용하여 지정된 연결 문자열 변수인 strConn의 내용에 따라 SQL Server에 대한 연결을 엽니다.  
+1.  
+  `SqlConnection`을 사용하여 지정된 연결 문자열 변수인 strConn의 내용에 따라 SQL Server에 대한 연결을 엽니다.  
   
 2.  그런 다음 `SqlDataAdapter`를 데이터 어댑터로 사용하고 SQL 연결 및 지정된 SQL 쿼리 문자열을 사용하여 FOR XML 쿼리를 실행합니다.  
   
@@ -290,9 +291,9 @@ SqlConnection closed.
 ```  
   
 > [!NOTE]  
->  합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml` 데이터 형식으로 FOR XML 쿼리 결과가 반환 되도록 요청할 수 즐길 수 있습니다 `xml` 데이터 형식 대신 문자열이 나 이미지 형식의 데이터를 지정 하 여 합니다 [TYPE 지시어](type-directive-in-for-xml-queries.md)합니다. FOR XML 쿼리에서 TYPE 지시어가 사용된 경우 이 지시어는 [애플리케이션에서 XML 데이터 사용](use-xml-data-in-applications.md)에 표시된 것과 비슷하게 FOR XML 결과에 대한 프로그래밍 방식의 액세스를 제공합니다.  
+>  데이터 형식 지원을 통해 [type 지시어](type-directive-in-for-xml-queries.md)를 지정 하 여 FOR XML 쿼리의 결과가 문자열이 나 이미지 형식의 `xml` 데이터 대신 데이터 형식으로 반환 되도록 요청할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml` FOR XML 쿼리에서 TYPE 지시어가 사용된 경우 이 지시어는 [애플리케이션에서 XML 데이터 사용](use-xml-data-in-applications.md)에 표시된 것과 비슷하게 FOR XML 결과에 대한 프로그래밍 방식의 액세스를 제공합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [FOR XML&#40;SQL Server&#41;](for-xml-sql-server.md)  
   
   

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ed78d5ff91d09f9d8370eef31fd3a6651b301a38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188220"
 ---
 # <a name="manage-events"></a>이벤트 관리
@@ -33,20 +33,20 @@ ms.locfileid: "63188220"
 ## <a name="advantages-of-using-an-alerts-management-server"></a>경고 관리 서버 사용의 장점  
  경고 관리 서버를 설정하면 다음과 같은 장점이 있습니다.  
   
--   **중앙 집중식**- 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이벤트를 단일 서버에서 중앙 집중식으로 제어하고 간편하게 볼 수 있습니다.  
+-   **중앙 집중화**. 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이벤트를 단일 서버에서 중앙 집중식으로 제어하고 간편하게 볼 수 있습니다.  
   
--   **확장성**- 많은 물리적 서버를 한 대의 논리적 서버에서 관리할 수 있습니다. 이 물리적 서버 그룹에 필요한 만큼 서버를 추가하거나 제거할 수 있습니다.  
+-   **확장성**. 많은 물리적 서버를 한 대의 논리적 서버에서 관리할 수 있습니다. 이 물리적 서버 그룹에 필요한 만큼 서버를 추가하거나 제거할 수 있습니다.  
   
--   **효율성**- 경고와 운영자를 한 번만 정의하면 되므로 구성 시간이 줄어듭니다.  
+-   **효율성**. 경고와 운영자를 한 번만 정의하면 되므로 구성 시간이 줄어듭니다.  
   
 ## <a name="disadvantages-of-using-an-alerts-management-server"></a>경고 관리 서버 사용의 단점  
  경고 관리 서버를 설정하면 다음과 같은 단점이 있습니다.  
   
--   **트래픽 증가**- 이벤트를 경고 관리 서버에 전달하면 네트워크 트래픽이 증가할 수 있습니다. 지정한 심각도를 넘는 이벤트만 전달하도록 제한하면 이러한 트래픽 증가를 완화할 수 있습니다.  
+-   **트래픽 증가** 이벤트를 경고 관리 서버에 전달하면 네트워크 트래픽이 증가할 수 있습니다. 지정한 심각도를 넘는 이벤트만 전달하도록 제한하면 이러한 트래픽 증가를 완화할 수 있습니다.  
   
--   **단일 지점에서 실패**- 경고 관리 서버가 오프라인인 경우 관리되는 서버 그룹의 어떠한 이벤트에 대해서도 경고가 발생하지 않습니다.  
+-   **단일 실패 지점**입니다. 경고 관리 서버가 오프라인인 경우 관리되는 서버 그룹의 어떠한 이벤트에 대해서도 경고가 발생하지 않습니다.  
   
--   **서버 부하**- 전달된 이벤트에 대한 경고를 처리하면 경고 관리 서버의 처리량이 증가됩니다.  
+-   **서버 로드**. 전달된 이벤트에 대한 경고를 처리하면 경고 관리 서버의 처리량이 증가됩니다.  
   
 ## <a name="guidelines-for-using-an-alerts-management-server"></a>경고 관리 서버 사용을 위한 지침  
  경고 관리 서버를 구성하는 경우 다음 지침을 따르십시오.  
@@ -57,7 +57,8 @@ ms.locfileid: "63188220"
   
 -   하나의 경고 관리 서버를 많은 서버에서 공유하도록 구성하는 데 있어 네트워크 트래픽을 신중히 계획합니다. 정체되는 경우에는 특정 경고 관리 서버를 사용하는 서버의 수를 줄입니다.  
   
-     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에 등록된 서버는 경고 전달 서버에서 선택할 수 있는 서버 목록의 일부로 구성됩니다.  
+     
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에 등록된 서버는 경고 전달 서버에서 선택할 수 있는 서버 목록의 일부로 구성됩니다.  
   
 -   서버별 응답이 필요한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 로컬 인스턴스에서는 경고를 경고 관리 서버에 전달하지 않고 로컬 인스턴스에 경고를 정의합니다.  
   
@@ -71,13 +72,13 @@ ms.locfileid: "63188220"
   
  다중 서버 환경에서 이벤트를 관리하는 일반 태스크는 다음과 같습니다.  
   
- **경고 관리 서버를 지정하려면**  
+ **경고 관리 서버를 지정 하려면**  
   
--   다른 도구는 [SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
+-   [SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
   
- **경고에 대한 응답을 정의하려면**  
+ **경고에 대 한 응답을 정의 하려면**  
   
--   다른 도구는 [SQL Server Management Studio](define-the-response-to-an-alert-sql-server-management-studio.md)  
+-   [SQL Server Management Studio](define-the-response-to-an-alert-sql-server-management-studio.md)  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)  
   
@@ -87,7 +88,7 @@ ms.locfileid: "63188220"
 > [!NOTE]  
 >  작업에서 이벤트를 발생시킬 수 있으므로 재귀 경고 작업 루프를 만들지 않도록 주의하십시오.  
   
-## <a name="see-also"></a>관련 항목  
- [sys.sysmessages &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-sysmessages-transact-sql)  
+## <a name="see-also"></a>참고 항목  
+ [sysmessages &#40;Transact-sql&#41;](/sql/relational-databases/system-compatibility-views/sys-sysmessages-transact-sql)  
   
   

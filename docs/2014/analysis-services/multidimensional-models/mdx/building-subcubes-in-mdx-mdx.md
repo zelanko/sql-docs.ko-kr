@@ -1,5 +1,5 @@
 ---
-title: MDX (MDX)로 하위 큐브 작성 | Microsoft Docs
+title: MDX로 하위 큐브 작성 (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 197ee30aa65179e8a434d04d20a5f5b643b42efd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074714"
 ---
 # <a name="building-subcubes-in-mdx-mdx"></a>MDX로 하위 큐브 작성(MDX)
@@ -36,7 +36,9 @@ ms.locfileid: "66074714"
 CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression  
 ```  
   
- CREATE SUBCUBE 구문은 꽤 간단합니다. *Subcube_Identifier* 매개 변수는 하위 큐브의 기반이 되는 큐브를 식별합니다. *Subcube_Expression* 매개 변수는 하위 큐브가 될 큐브의 해당 부분을 선택합니다.  
+ CREATE SUBCUBE 구문은 꽤 간단합니다. 
+  *Subcube_Identifier* 매개 변수는 하위 큐브의 기반이 되는 큐브를 식별합니다. 
+  *Subcube_Expression* 매개 변수는 하위 큐브가 될 큐브의 해당 부분을 선택합니다.  
   
  하위 큐브를 만들고 난 후 해당 하위 큐브는 세션을 닫거나 [DROP SUBCUBE](/sql/mdx/mdx-data-definition-drop-subcube) 문을 실행할 때까지는 모든 MDX 쿼리에 대한 컨텍스트가 됩니다.  
   
@@ -51,9 +53,10 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
   
 -   하위 큐브는 항상 큐브의 모든 `(All)` 멤버를 포함합니다.  
   
- 또한 하위 큐브 내의 집계 값은 시각적으로 합쳐집니다. 예를 들어 하위 큐브는 `USA`, `WA`및 `OR`을 포함합니다. `USA` 및 `{WA,OR}` 이 하위 큐브에 의해 정의된 유일한 주이므로 `WA` 에 대한 집계 값은 `OR` 의 합계가 됩니다. 다른 모든 주는 무시합니다.  
+ 또한 하위 큐브 내의 집계 값은 시각적으로 합쳐집니다. 예를 들어 하위 큐브는 `USA`, `WA`및 `OR`을 포함합니다. 
+  `USA` 및 `{WA,OR}` 이 하위 큐브에 의해 정의된 유일한 주이므로 `WA` 에 대한 집계 값은 `OR` 의 합계가 됩니다. 다른 모든 주는 무시합니다.  
   
- 또한 하위 큐브 외부의 셀에 대한 명시적 참조는 전체 큐브의 컨텍스트에서 계산되는 셀 값을 반환합니다. 예를 들어 현재 연도로 제한되는 하위 큐브를 만듭니다. 그런 다음 [ParallelPeriod](/sql/mdx/parallelperiod-mdx) 함수를 사용하여 현재 연도를 이전 연도와 비교합니다. 값의 차이 이전 연도 값은 하위 큐브 외부의 경우에 반환 됩니다.  
+ 또한 하위 큐브 외부의 셀에 대한 명시적 참조는 전체 큐브의 컨텍스트에서 계산되는 셀 값을 반환합니다. 예를 들어 현재 연도로 제한되는 하위 큐브를 만듭니다. 그런 다음 [ParallelPeriod](/sql/mdx/parallelperiod-mdx) 함수를 사용하여 현재 연도를 이전 연도와 비교합니다. 이전 연도 값은 하위 큐브 외부에 있더라도 값의 차이가 반환 됩니다.  
   
  마지막으로 원래 컨텍스트를 덮어쓰지 않은 경우 하위 SELECT에서 계산된 집합 함수는 하위 SELECT의 컨텍스트에서 계산됩니다. 컨텍스트를 덮어쓴 경우 집합 함수는 전체 큐브의 컨텍스트에서 계산됩니다.  
   
@@ -66,8 +69,8 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
   
  `SELECT [Account].[Account].Members ON 0, Measures.Members ON 1 FROM Budget`  
   
-## <a name="see-also"></a>관련 항목  
- [쿼리에 큐브 컨텍스트 설정&#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)   
- [MDX 쿼리 기본 사항&#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+## <a name="see-also"></a>참고 항목  
+ [MDX&#41;&#40;쿼리에 큐브 컨텍스트 설정](establishing-cube-context-in-a-query-mdx.md)   
+ [MDX 쿼리 기본 사항 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

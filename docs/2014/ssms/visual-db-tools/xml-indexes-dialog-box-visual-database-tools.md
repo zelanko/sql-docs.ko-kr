@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a0c946e0e195937dd2e722ac3f092a57e40427b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63228373"
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>XML 인덱스 대화 상자(Visual Database Tools)
   **XML 인덱스** 대화 상자를 사용하면 **인덱스/키** 대화 상자를 통해 인덱싱할 수 없는 XML 데이터 형식의 열에 대한 인덱스를 만들 수 있습니다. 각 XML 열에는 두 개 이상의 XML 인덱스가 있을 수 있지만 첫 번째 작성된 인덱스(기본 인덱스)가 나머지 인덱스(보조 인덱스)의 기준으로 사용됩니다. 기본 XML 인덱스를 삭제하면 보조 인덱스도 함께 삭제됩니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **선택한 XML 인덱스**  
  기존 XML 인덱스가 나열됩니다. 인덱스를 선택하면 오른쪽 표에 해당 속성이 표시됩니다. 목록이 비어 있는 경우 테이블에 정의된 항목이 없음을 의미합니다.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "63228373"
  **행 잠금 허용**  
  현재 인덱스에 대해 행 수준의 잠금이 허용되는지 여부를 지정합니다. 행 수준의 잠금 허용 여부는 데이터베이스 성능에 영향을 줍니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 인덱스 만들기](../../relational-databases/xml/create-xml-indexes.md)  
   
   

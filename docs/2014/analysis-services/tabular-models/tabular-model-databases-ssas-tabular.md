@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 24c9487484857d61acede622b1467a1d8c0b7345
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066417"
 ---
 # <a name="tabular-model-databases-ssas-tabular"></a>테이블 형식 model 데이터베이스(SSAS 테이블 형식)
@@ -24,20 +24,20 @@ ms.locfileid: "66066417"
  테이블 형식 model 데이터베이스는 특히 관계형 데이터베이스 배경인 경우 다차원 데이터베이스에 비해 쉽게 작성할 수 있습니다. 그렇지 않으면 다차원 데이터베이스의 데이터베이스 관리와 동일하지 않을 경우 관리 태스크가 유사합니다. 같은 도구와 접근 방법이 적용됩니다.  
   
 ## <a name="related-content"></a>관련 내용  
- [테이블 형식 모델 솔루션&#40;SSAS 테이블 형식&#41;](../tabular-model-solutions-ssas-tabular.md)  
+ [테이블 형식 모델 솔루션 &#40;SSAS 테이블 형식&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
  [테이블 형식 모델 데이터 액세스](tabular-model-data-access.md)  
   
 ## <a name="related-tasks"></a>관련 작업  
  [데이터베이스, 테이블 또는 파티션 처리](process-database-table-or-partition-analysis-services.md)  
   
- [테이블 형식 모델 역할&#40;SSAS 테이블 형식&#41;](tabular-model-roles-ssas-tabular.md)  
+ [테이블 형식 모델 역할 &#40;SSAS 테이블 형식&#41;](tabular-model-roles-ssas-tabular.md)  
   
- [테이블 형식 모델 파티션&#40;SSAS 테이블 형식&#41;](tabular-model-partitions-ssas-tabular.md)  
+ [테이블 형식 모델 파티션이 SSAS 테이블 형식&#41;을 &#40;](tabular-model-partitions-ssas-tabular.md)  
   
  [테이블 형식 모델 데이터베이스에 대해 메모리 내 또는 DirectQuery 액세스 구성](enable-directquery-mode-in-ssms.md)  
   
- [테이블 형식 model 데이터베이스에 연결&#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)  
+ [SSAS&#41;&#40;테이블 형식 모델 데이터베이스에 연결](connect-to-a-tabular-model-database-ssas.md)  
   
  [PowerPivot에서 복원](restore-from-power-pivot.md)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66066417"
   
  [Analysis Services 데이터베이스 동기화](../multidimensional-models/synchronize-analysis-services-databases.md)  
   
- [ReadOnly 및 ReadWrite 모드 간 Analysis Services 데이터베이스 전환](../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [ReadOnly 모드와 ReadWrite 모드 간 Analysis Services 데이터베이스 전환](../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
  [Analysis Services 데이터베이스 수정 또는 삭제](../multidimensional-models/modify-or-delete-an-analysis-services-database.md)  
   

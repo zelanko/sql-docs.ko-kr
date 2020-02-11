@@ -1,5 +1,5 @@
 ---
-title: 처리 (SSAS 테이블 형식) | Microsoft Docs
+title: 데이터 처리 (SSAS 테이블 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a0ca45681866e0ba96edaa81c21445a89f94275
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070697"
 ---
 # <a name="process-data-ssas-tabular"></a>데이터 처리(SSAS 테이블 형식)
@@ -26,7 +26,7 @@ ms.locfileid: "66070697"
   
 |항목|Description|  
 |-----------|-----------------|  
-|[수동으로 데이터 처리&#40;SSAS 테이블 형식&#41;](manually-process-data-ssas-tabular.md)|모델 작업 영역 데이터를 수동으로 처리하는 방법을 설명합니다.|  
-|[데이터 처리 문제 해결&#40;SSAS 테이블 형식&#41;](troubleshoot-process-data-ssas-tabular.md)|처리 작업의 문제를 해결하는 방법을 설명합니다.|  
+|[SSAS 테이블 형식&#41;&#40;데이터를 수동으로 처리](manually-process-data-ssas-tabular.md)|모델 작업 영역 데이터를 수동으로 처리하는 방법을 설명합니다.|  
+|[SSAS 테이블 형식&#41;&#40;처리 데이터 문제 해결](troubleshoot-process-data-ssas-tabular.md)|처리 작업의 문제를 해결하는 방법을 설명합니다.|  
   
   

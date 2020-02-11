@@ -1,5 +1,5 @@
 ---
-title: UI 디자이너 및 대화 상자 다차원 분석을 위해 | Microsoft Docs
+title: 다차원 분석을 위한 UI 디자이너 및 대화 상자 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2018
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3c2d10e1b117cf88f74523dad6fcec3cfd3ee871
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065666"
 ---
-# <a name="ui-designers-and-dialogs-for-multidimensional-analysis"></a>UI 디자이너 및 다차원 분석을 위한 대화 상자
+# <a name="ui-designers-and-dialogs-for-multidimensional-analysis"></a>다차원 분석을 위한 UI 디자이너 및 대화 상자
 
-이 섹션에서는 사용자 인터페이스 (UI) 디자이너와 다차원 분석을 위한 대화 상자에 대 한 설명서를 포함합니다.
+이 섹션에는 다차원 분석을 위한 UI (사용자 인터페이스) 디자이너 및 대화 상자에 대 한 설명서가 포함 되어 있습니다.
 
 ## <a name="next-steps"></a>다음 단계
 

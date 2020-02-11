@@ -14,23 +14,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9e671905eaf17c5980f2a89a6a8d1b6056dd6831
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245413"
 ---
 # <a name="arguments-dialog-box"></a>인수 대화 상자
   **인수** 대화 상자는 도구에 대한 새 인수나 기존 인수를 지정합니다. **외부 도구** 대화 상자에서 선택한 **인수 확인** 옵션이 있는 외부 도구를 시작하면 이 대화 상자가 나타납니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **인수**  
  **외부 도구** 대화 상자의 도구에 지정된 현재 변수를 나열합니다. 미리 정의된 인수 및 인수 정의의 전체 목록은 [Arguments for External Tools](menu-help/external-tools.md)를 참조하십시오. 사용자 지정 인수를 입력할 수도 있습니다.  
   
  **명령줄**  
  **인수** 대화 상자에 지정된 인수의 값을 표시합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [외부 도구에 대 한 인수](menu-help/external-tools.md)   
  [외부 도구 대화 상자](external-tools-dialog-box.md)   
  [일반 사용자 인터페이스 요소](general-user-interface-elements.md)  

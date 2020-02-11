@@ -1,5 +1,5 @@
 ---
-title: 구성 된 For 루프 컨테이너 | Microsoft Docs
+title: For 루프 컨테이너 구성 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fe51deb631f0c3d794bdce3f05af61b5e030d5e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060824"
 ---
 # <a name="configure-a-for-loop-container"></a>For 루프 컨테이너 구성
@@ -27,13 +27,15 @@ ms.locfileid: "66060824"
   
 ### <a name="to-configure-the-for-loop-container"></a>For 루프 컨테이너를 구성하려면  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 For 루프 컨테이너를 두 번 클릭하여 **For 루프 편집기**를 엽니다.  
+1.  
+  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 For 루프 컨테이너를 두 번 클릭하여 **For 루프 편집기**를 엽니다.  
   
 2.  선택적으로 For 루프 컨테이너의 이름과 설명을 수정합니다.  
   
 3.  선택적으로 **InitExpression** 입력란에 초기화 식을 입력합니다.  
   
-4.  **EvalExpression** 입력란에 계산 식을 입력합니다.  
+4.  
+  **EvalExpression** 입력란에 계산 식을 입력합니다.  
   
     > [!NOTE]  
     >  식은 부울로 계산되어야 합니다. 식 결과가 `false`이면 루프 실행이 중지됩니다.  
@@ -42,9 +44,10 @@ ms.locfileid: "66060824"
   
 6.  선택적으로 **식** 페이지에서 **Expressions** 를 클릭하고 For 루프 컨테이너의 속성에 대한 속성 식을 만듭니다. 자세한 내용은 [속성 식 추가 또는 변경](expressions/add-or-change-a-property-expression.md)을 참조하세요.  
   
-7.  **확인** 을 클릭하여 **For 루프 편집기**를 닫습니다.  
+7.  
+  **확인** 을 클릭하여 **For 루프 편집기**를 닫습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [For 루프 컨테이너](control-flow/for-loop-container.md)   
  [Integration Services&#40;SSIS&#41; 식](expressions/integration-services-ssis-expressions.md)   
  [패키지에서 속성 식 사용](expressions/use-property-expressions-in-packages.md)  

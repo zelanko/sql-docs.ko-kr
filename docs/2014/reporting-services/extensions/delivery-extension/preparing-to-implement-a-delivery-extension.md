@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: abc5b51acc9c6beef6d3a62b95370f5081d5364d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63181362"
 ---
 # <a name="preparing-to-implement-a-delivery-extension"></a>배달 확장 프로그램 구현 준비
@@ -48,7 +48,7 @@ ms.locfileid: "63181362"
 |<xref:Microsoft.ReportingServices.Interfaces.RenderedOutputFile> 클래스|렌더링 확장 프로그램의 출력을 나타냅니다. <xref:Microsoft.ReportingServices.Interfaces.RenderedOutputFile> 개체에는 렌더링 확장 프로그램에서 반환된 스트림을 처리하기 위해 배달 확장 프로그램에서 요구되는 연관 파일 이름 및 형식 정보가 포함됩니다.|  
 |<xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> 인터페이스|보고서 관리자에서 사용자로부터 전자 메일 주소나 파일 공유 경로 등과 같은 배달 확장 프로그램별 구독 정보를 검색할 수 있는 방법을 나타내는 사용자 컨트롤입니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services 확장 프로그램](../reporting-services-extensions.md)   
  [배달 확장 프로그램 구현](implementing-a-delivery-extension.md)   
  [Reporting Services 확장 라이브러리](../reporting-services-extension-library.md)  

@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 32962186ac6fdf7b0cc18801d635e9b5ef9f5d22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63209733"
 ---
 # <a name="resource-governor-classifier-function"></a>Resource Governor Classifier Function
@@ -85,7 +85,7 @@ ms.locfileid: "63209733"
 |----------------------|-----------|  
 |분류자 사용자 정의 함수를 만들고 테스트하는 방법에 대해 설명합니다.|[분류자 사용자 정의 함수 만들기 및 테스트](create-and-test-a-classifier-user-defined-function.md)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [리소스 관리자](resource-governor.md)   
  [리소스 관리자 사용](enable-resource-governor.md)   
  [리소스 관리자 리소스 풀](resource-governor-resource-pool.md)   

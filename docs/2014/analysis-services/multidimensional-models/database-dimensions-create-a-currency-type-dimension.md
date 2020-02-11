@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a9d967d1275c7b682c79313b95af06f3088e7acf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075978"
 ---
 # <a name="create-a-currency-type-dimension"></a>통화 유형 차원 만들기
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 통화 유형 차원은 재무 보고용 통화 목록을 나타내는 특성이 있는 차원입니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]통화 유형 차원은 재무 보고용 통화 목록을 나타내는 특성이 있는 차원입니다.  
   
  통화 차원을 사용하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 통화 변환 기능을 큐브에 추가할 수 있습니다. 통화 변환 기능을 큐브에 추가하려면 비즈니스 인텔리전스 마법사를 사용하여 통화 측정값을 클라이언트 애플리케이션의 로캘에 알맞은 값으로 변환하는 MDX(Multidimensional Expressions) 스크립트 명령을 정의합니다. 이 MDX 스크립트를 만들려면 비즈니스 인텔리전스 마법사에 다음 정보가 필요합니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66075978"
 ## <a name="defining-account-intelligence-with-the-business-intelligence-wizard"></a>비즈니스 인텔리전스 마법사를 사용하여 계정 인텔리전스 정의  
  계정 차원을 정의하여 큐브에 추가한 후에는 비즈니스 인텔리전스 마법사를 사용하여 계정 유형 식별 및 매핑과 같은 계정 인텔리전스 기능을 차원에 추가할 수 있습니다. 자세한 내용은 [차원에 계정 인텔리전스 추가](bi-wizard-add-account-intelligence-to-a-dimension.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [특성 및 특성 계층](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [비즈니스 인텔리전스 마법사 F1 도움말](../business-intelligence-wizard-f1-help.md)   
  [차원 유형](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  

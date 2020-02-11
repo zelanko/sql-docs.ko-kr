@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 54a598ab383773a3ada43f0cc44892f42ac3ba2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63222528"
 ---
 # <a name="maximizing-query-editor"></a>쿼리 편집기 화면 크기
@@ -36,7 +36,8 @@ ms.locfileid: "63222528"
   
 1.  쿼리 편집기 창의 아무 곳이나 클릭합니다.  
   
-2.  **창** 메뉴에서 **모두 자동 숨기기**를 클릭합니다.  
+2.  
+  **창** 메뉴에서 **모두 자동 숨기기**를 클릭합니다.  
   
 3.  도구 창을 복원하려면 각 도구를 연 다음 창에서 **자동 숨기기** 단추를 클릭하여 열린 상태로 고정합니다.  
   

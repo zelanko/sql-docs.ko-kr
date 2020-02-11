@@ -1,5 +1,5 @@
 ---
-title: 중첩된 테이블 키 열 대화 상자 (마이닝 구조 뷰)를 선택 합니다. | Microsoft Docs
+title: 중첩 테이블 키 열 선택 대화 상자 (마이닝 구조 뷰) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8edfea95968bee0dc1103f8069ecfe9e0d08e3ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069767"
 ---
 # <a name="select-a-nested-table-key-column-dialog-box-mining-structure-view"></a>중첩 테이블 키 열 선택 대화 상자(마이닝 구조 뷰)
+  
   **중첩 테이블 키 열 선택** 대화 상자를 사용하여 새 중첩 테이블의 키 역할을 할 열을 지정할 수 있습니다. 대화 상자를 종료하면 지정된 키 열을 포함하는 새 테이블이 마이닝 구조에 추가됩니다. 구조를 마우스 오른쪽 단추로 클릭한 다음 **열 추가**를 선택하여 중첩 테이블에 열을 더 추가할 수 있습니다. 이 대화 상자는 OLAP 마이닝 모델로 작업을 수행하는지, 아니면 관계형 마이닝 모델로 작업을 수행하는지에 따라 옵션이 달라집니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **원본 테이블**  
  마이닝 모델의 기반이 되는 테이블입니다.  
   
@@ -36,7 +37,8 @@ ms.locfileid: "66069767"
  이 옵션은 관계형 마이닝 모델에만 사용됩니다.  
   
  **열 유형 표시**  
- 사용 가능한 열 데이터 형식의 목록입니다. **원본 열**의 열 목록을 필터링할 데이터 형식을 선택하거나 선택 취소합니다. 선택한 데이터 형식과 일치하는 열만 **원본 열** 목록에 표시됩니다.  
+ 사용 가능한 열 데이터 형식의 목록입니다. 
+  **원본 열**의 열 목록을 필터링할 데이터 형식을 선택하거나 선택 취소합니다. 선택한 데이터 형식과 일치하는 열만 **원본 열** 목록에 표시됩니다.  
   
  이 옵션은 관계형 마이닝 모델에만 사용됩니다.  
   
@@ -45,7 +47,7 @@ ms.locfileid: "66069767"
   
  이 옵션은 OLAP 마이닝 모델에만 사용됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [마이닝 구조 뷰 &#40;데이터 마이닝 모델 디자이너&#41;](mining-structure-view-data-mining-model-designer.md)  
   
   

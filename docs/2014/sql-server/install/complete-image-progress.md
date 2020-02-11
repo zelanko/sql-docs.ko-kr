@@ -11,16 +11,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 322fa77d7d8620de87aaf862242da3c5c83126cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096338"
 ---
 # <a name="complete-image-progress"></a>이미지 완료 진행률
-  사용 합니다 **이미지 완료 진행률** 페이지를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 상태를 모니터링 하려면 설치 마법사 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이미지 완료 설치 합니다. 이 단계가 완료되면 이미지 완료 진행률 페이지에는 구성 및 완료된 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능의 상태가 나열됩니다.  
+  설치 마법사의 **이미지 완료 진행률** 페이지를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이미지 완료 설정 상태를 모니터링할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 단계가 완료되면 이미지 완료 진행률 페이지에는 구성 및 완료된 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능의 상태가 나열됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 설치 로그 파일 보기 및 읽기](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 파티션 조각 속성 (Analysis Services) | Microsoft Docs
+title: 파티션 조각 속성 설정 (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/05/2015
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d9d7b41de3505c3b6e3ccf3886254958ee71e456
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072939"
 ---
 # <a name="set-the-partition-slice-property-analysis-services"></a>파티션 조각 속성 설정(Analysis Services)
@@ -41,11 +41,11 @@ ms.locfileid: "66072939"
 > [!NOTE]  
 >  동적 MDX 함수(예: [Generate&#40;MDX&#41;](/sql/mdx/generate-mdx) 또는 [Except&#40;MDX&#41;](/sql/mdx/except-mdx-function))는 파티션에 대한 Slice 속성에서 지원되지 않습니다. 명시적 튜플 또는 멤버 참조를 사용하여 조각을 정의해야 합니다.  
 >   
->  예를 들어, 사용 하는 대신 합니다 [: &#40;범위&#41; &#40;MDX&#41; ](/sql/mdx/range-mdx) 범위를 정의 하는 함수, 특정 연도별로 각 멤버를 열거 해야 합니다.  
+>  예를 들어 &#40;범위를 사용 하 여 범위를 정의 하는 [&#41; &#40;MDX&#41;](/sql/mdx/range-mdx) 함수를 사용 하는 대신 특정 연도를 기준으로 각 멤버를 열거 해야 합니다.  
 >   
 >  복잡한 조각을 정의해야 하는 경우 XMLA Alter 스크립트를 사용하여 조각에서 튜플을 정의하는 것이 좋습니다. 그런 다음 ascmd 명령줄 도구 또는 SSIS [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) 를 사용하여 스크립트를 실행하고 지정된 멤버 집합을 만든 후 곧바로 파티션을 처리할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [로컬 파티션 만들기 및 관리&#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)  
+## <a name="see-also"></a>참고 항목  
+ [Analysis Services&#41;&#40;로컬 파티션 만들기 및 관리](create-and-manage-a-local-partition-analysis-services.md)  
   
   

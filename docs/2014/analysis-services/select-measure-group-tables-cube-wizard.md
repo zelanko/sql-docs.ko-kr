@@ -13,23 +13,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7eea2aaca722ed2621127120f21b2ec350392606
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069465"
 ---
 # <a name="select-measure-group-tables-cube-wizard"></a>측정값 그룹 테이블 선택(큐브 마법사)
+  
   **측정값 그룹 테이블 선택** 페이지를 사용하여 데이터 원본 뷰를 식별하고 큐브에 사용할 측정값 그룹 테이블을 선택할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **데이터 원본 뷰**  
  큐브에 사용할 데이터 원본 뷰를 선택합니다.  
   
  **측정값 그룹 테이블**  
  큐브의 측정값 그룹에 사용할 테이블을 선택합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [다차원 모델의 큐브](multidimensional-models/cubes-in-multidimensional-models.md)   
  [다차원 모델의 차원](multidimensional-models/dimensions-in-multidimensional-models.md)  
   

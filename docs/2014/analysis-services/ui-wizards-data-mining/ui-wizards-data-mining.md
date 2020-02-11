@@ -12,15 +12,15 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e183adbba2007e6ff79361631e23f3f510458e6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065638"
 ---
 # <a name="ui-wizards-for-data-mining-analysis"></a>데이터 마이닝 분석을 위한 UI 마법사
 
-이 섹션에서는 데이터 마이닝 분석을 위한 사용자 인터페이스 (UI) 마법사에 대 한 설명서를 포함합니다.
+이 섹션에는 데이터 마이닝 분석을 위한 UI (사용자 인터페이스) 마법사에 대 한 설명서가 포함 되어 있습니다.
 
 ## <a name="next-steps"></a>다음 단계
 

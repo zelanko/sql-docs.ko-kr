@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 973ad34d5d24eecd0c3af0e0451b0d2ba9058222
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63194920"
 ---
 # <a name="sql-editor-visual-database-tools"></a>SQL 편집기(Visual Database Tools)
@@ -47,7 +47,7 @@ ms.locfileid: "63194920"
   
  SQL 문을 편집할 때 특정 Transact-SQL 문은 얇은 선으로 둘러싸인 상자 안에 들어갑니다. 이로 인해 SQL 코드를 명령 섹션으로 분할하고, 쿼리 디자이너를 사용하여 그래픽으로 디자인할 수 있는 SQL 문 블록을 식별할 수 있습니다. 쿼리 디자이너 사용에 대한 자세한 내용은 [쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

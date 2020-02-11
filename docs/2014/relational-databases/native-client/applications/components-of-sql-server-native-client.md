@@ -16,24 +16,29 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 329ffa78471ead02b1431a41d898cfc43ca65684
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63213520"
 ---
 # <a name="components-of-sql-server-native-client"></a>SQL Server Native Client의 구성 요소
+  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에는 다음 구성 요소가 포함되어 있습니다.  
   
 |구성 요소|Description|  
 |---------------|-----------------|  
-|sqlncli11.dll|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 기능이 모두 포함된 DLL(동적 연결 라이브러리) 파일입니다. 여기에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB Provider와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버가 포함됩니다.|  
-|sqlnclir11.rll|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 라이브러리에 대한 리소스 파일입니다.|  
-|s10ch_sqlncli.chm|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB Provider를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 원본을 만드는 방법을 문서화하는 데이터 원본 마법사 도움말 파일입니다.|  
-|sqlncli.h|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 사용하는 데 필요한 모든 새 정의가 포함된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 헤더 파일입니다. 이 헤더 파일은 odbcss.h 및 sqloledb.h 헤더 파일을 모두 대체합니다. **참고:**  동일한 프로그램에서 sqlncli.h 및 odbcss.h를 참조할 수 없습니다 있지만 sqloledb.h를 먼저 정의 된으로 동일한 프로그램에서 sqlncli.h 및 sqloledb.h를 참조할 수 있습니다.|  
-|sqlncli11.lib|라이브러리 파일 하는 데 필요한 직접 호출 합니다 **bcp** 포함 된 유틸리티 함수를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버. **참고:**  Sqlncli11.dll 파일이 시스템 경로는 사용자의 시스템 경로에 있는지 확인 해야 하는 프로그래밍 코드에서 sqlncli11.lib 파일 참조를 하는 경우 응용 프로그램의 사용 합니다.|  
+|sqlncli11.dll|
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 기능이 모두 포함된 DLL(동적 연결 라이브러리) 파일입니다. 여기에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB Provider와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버가 포함됩니다.|  
+|sqlnclir11.rll|
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 라이브러리에 대한 리소스 파일입니다.|  
+|s10ch_sqlncli.chm|
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB Provider를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 원본을 만드는 방법을 문서화하는 데이터 원본 마법사 도움말 파일입니다.|  
+|sqlncli.h|
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 사용하는 데 필요한 모든 새 정의가 포함된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 헤더 파일입니다. 이 헤더 파일은 odbcss.h 및 sqloledb.h 헤더 파일을 모두 대체합니다. **참고:**  동일한 프로그램에서 sqlncli 및 odbcss.h를 참조할 수 없지만, 먼저 sqloledb가 정의 되어 있는 한 동일한 프로그램에서 sqlncli 및 sqloledb를 참조할 수 있습니다.|  
+|sqlncli11.lib|Native Client ODBC 드라이버의 일부인 bcp 유틸리티 함수를 직접 호출 하는 데 필요한 라이브러리 파일입니다. **** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **참고:**  프로그래밍 코드의 sqlncli11 파일을 참조 하는 경우 sqlncli11 파일이 시스템 경로 및 응용 프로그램을 사용 하는 사용자의 시스템 경로에 있는지 확인 해야 합니다.|  
   
-## <a name="see-also"></a>관련 항목  
- [SQL Server Native Client를 사용하여 응용 프로그램 빌드](building-applications-with-sql-server-native-client.md)  
+## <a name="see-also"></a>참고 항목  
+ [SQL Server Native Client를 사용하여 애플리케이션 빌드](building-applications-with-sql-server-native-client.md)  
   
   
