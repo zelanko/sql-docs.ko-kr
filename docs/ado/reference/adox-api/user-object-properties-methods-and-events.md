@@ -1,5 +1,5 @@
 ---
-title: User 개체 속성, 메서드 및 이벤트 | Microsoft Docs
+title: 사용자 개체 속성, 메서드 및 이벤트 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,10 +13,10 @@ ms.assetid: becd590c-0db7-485c-8bf4-fa3456e4ba20
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d9a7b7f3939ff617ab67589d7566cdbf28719731
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964962"
 ---
 # <a name="user-object-properties-methods-and-events"></a>사용자 개체 속성, 메서드 및 이벤트
@@ -25,7 +25,7 @@ ms.locfileid: "67964962"
   
  [ParentCatalog 속성(ADOX)](../../../ado/reference/adox-api/parentcatalog-property-adox.md)  
   
- [그룹 컬렉션](../../../ado/reference/adox-api/groups-collection-adox.md)  
+ [Groups 컬렉션](../../../ado/reference/adox-api/groups-collection-adox.md)  
   
  [속성 컬렉션](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
@@ -39,5 +39,5 @@ ms.locfileid: "67964962"
 ## <a name="events"></a>이벤트  
  없음  
   
-## <a name="see-also"></a>관련 항목  
- [User 개체(ADOX)](../../../ado/reference/adox-api/user-object-adox.md)
+## <a name="see-also"></a>참고 항목  
+ [사용자 개체(ADOX)](../../../ado/reference/adox-api/user-object-adox.md)

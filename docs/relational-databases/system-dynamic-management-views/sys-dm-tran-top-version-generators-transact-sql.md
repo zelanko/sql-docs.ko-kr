@@ -1,5 +1,5 @@
 ---
-title: sys.dm_tran_top_version_generators (TRANSACT-SQL) | Microsoft Docs
+title: sys. dm_tran_top_version_generators (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,19 +21,19 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e8fb59e9cfe636f6cab775fa2cb000c60ba08ad2
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68262613"
 ---
-# <a name="sysdmtrantopversiongenerators-transact-sql"></a>sys.dm_tran_top_version_generators(Transact-SQL)
+# <a name="sysdm_tran_top_version_generators-transact-sql"></a>sys.dm_tran_top_version_generators(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  버전 저장소의 버전 대부분을 생성하는 개체에 대한 가상 테이블을 반환합니다. **sys.dm_tran_top_version_generators** 상위 256 개의 집계 레코드 길이 그룹화를 반환 합니다 **database_id** 하 고 **rowset_id**합니다. **sys.dm_tran_top_version_generators** 쿼리하여 데이터를 검색 합니다 **dm_tran_version_store** 가상 테이블입니다. **sys.dm_tran_top_version_generators** 버전 저장소에 있으므로 실행 하기에 비효율적인 뷰입니다 이며 버전 저장소가 매우 클 수 있습니다. 버전 저장소를 가장 많이 사용하는 소비자를 찾으려면 이 함수를 사용하는 것이 좋습니다.  
+  버전 저장소의 버전 대부분을 생성하는 개체에 대한 가상 테이블을 반환합니다. **dm_tran_top_version_generators** 은 **database_id** 및 **rowset_id**별로 그룹화 된 상위 256 집계 레코드 길이를 반환 합니다. **dm_tran_top_version_generators** 은 **dm_tran_version_store** 가상 테이블을 쿼리하여 데이터를 검색 합니다. 이 뷰는 버전 저장소를 쿼리 하 고 버전 저장소는 매우 클 수 있기 때문에 dm_tran_top_version_generators를 실행 하는 데 비효율적인 뷰입니다 **.** 버전 저장소를 가장 많이 사용하는 소비자를 찾으려면 이 함수를 사용하는 것이 좋습니다.  
   
 > [!NOTE]  
->  이를 호출 하 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 나 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_tran_top_version_generators**합니다.  
+>  또는 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서이를 호출 하려면 이름 **sys. dm_pdw_nodes_tran_top_version_generators**을 사용 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,20 +44,20 @@ sys.dm_tran_top_version_generators
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|데이터베이스 ID입니다.|  
 |**rowset_id**|**bigint**|행 집합 ID입니다.|  
-|**aggregated_record_length_in_bytes**|**int**|각 레코드 길이 합계 **database_id** 하 고 **rowset_id 쌍** 버전 저장소에 있습니다.|  
-|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
+|**aggregated_record_length_in_bytes**|**int**|버전 저장소의 각 **database_id** 및 **rowset_id 쌍** 에 대 한 레코드 길이의 합계입니다.|  
+|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
 ## <a name="permissions"></a>사용 권한
 
-온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
-온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 프리미엄 계층 필요는 `VIEW DATABASE STATE` 데이터베이스의 권한. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에 필요 합니다 **서버 관리자** 요소나 **Azure Active Directory 관리자** 계정.   
+에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]는 권한이 `VIEW SERVER STATE` 필요 합니다.   
+Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 계층에서는 데이터베이스에 대 `VIEW DATABASE STATE` 한 권한이 필요 합니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
 
 ## <a name="remarks"></a>설명  
- 때문에 **sys.dm_tran_top_version_generators** 실행 하는 전체 버전 저장소를 검색할 때 여러 페이지를 읽을 수 있을 **sys.dm_tran_top_version_generators** 시스템을 방해할 수 있습니다 성능을 제공 합니다.  
+ **Sys. dm_tran_top_version_generators** 는 전체 버전 저장소를 검색할 때 많은 페이지를 읽어야 할 수 있습니다 **. dm_tran_top_version_generators** 를 실행 하면 시스템 성능에 방해가 될 수 있습니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 ALLOW_SNAPSHOT_ISOLATION 및 READ_COMMITTED_SNAPSHOT 옵션이 ON으로 설정된 데이터베이스에서 각각 XSN(트랜잭션 시퀀스 번호)으로 식별되는 4개의 동시 트랜잭션이 실행되는 테스트 시나리오를 사용합니다. 다음 트랜잭션이 실행되고 있습니다.  
@@ -89,9 +89,9 @@ database_id rowset_id            aggregated_record_length_in_bytes
 9           72057594038386688    33  
 ```  
   
- 출력에 표시 하 여 모든 버전을 만들었는지 `database_id``9` 두 테이블에서 버전을 생성 하 고 있습니다.  
+ 출력은 모든 버전이에서 `database_id``9` 만들어지고 버전이 두 테이블에서 생성 됨을 보여 줍니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [트랜잭션 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

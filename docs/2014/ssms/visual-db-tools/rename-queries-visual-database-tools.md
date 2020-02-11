@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab0a4af42a6137a78d1d884d7f00dd37911f9ff4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63316836"
 ---
 # <a name="rename-queries-visual-database-tools"></a>쿼리 이름 바꾸기(Visual Database Tools)
@@ -31,8 +31,8 @@ ms.locfileid: "63316836"
   
 3.  쿼리의 새 이름을 입력한 다음 Enter 키를 누릅니다.  
   
-## <a name="see-also"></a>관련 항목  
- [방법 도움말 항목을 쿼리 및 뷰 디자인 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [쿼리 및 뷰 디자인 방법 도움말 항목 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [쿼리 관련 기본 작업 수행&#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

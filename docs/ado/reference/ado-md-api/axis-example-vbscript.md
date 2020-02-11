@@ -1,5 +1,5 @@
 ---
-title: Axis 예제 (VBScript) | Microsoft Docs
+title: 축 예 (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: b4647211-2566-4657-ae7b-3dd761457d7b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 345b87539452a974b054b3aec07c648a3c2b6fad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67947384"
 ---
 # <a name="axis-example-vbscript"></a>Axis 예제(VBScript)
-Active Server Page이 MDX 쿼리 문자열에서 OLAP 데이터를 표시 하 고 HTML 테이블 구조를 결과 집합을 씁니다.  
+이 Active Server 페이지는 MDX 쿼리 문자열의 OLAP 데이터를 표시 하 고 결과 셀 집합을 HTML 테이블 구조에 기록 합니다.  
   
 ```  
 <%@ Language=VBScript %>  

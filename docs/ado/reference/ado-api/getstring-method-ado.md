@@ -17,14 +17,14 @@ ms.assetid: 92452940-b2a7-456e-94fc-3780c71da33c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 72526eca57d08152d7eaa773be50d68d4b3688e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932467"
 ---
 # <a name="getstring-method-ado"></a>GetString 메서드(ADO)
-반환 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 문자열입니다.  
+[레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 을 문자열로 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -33,32 +33,32 @@ ms.locfileid: "67932467"
 Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimiter, NullExpr)  
 ```  
   
-## <a name="return-value"></a>반환 값  
- 반환 된 **레코드 집합** 문자열 값으로 **Variant** (BSTR).  
+## <a name="return-value"></a>Return Value  
+ **레코드 집합** 을 문자열 반환 **Variant** (BSTR)로 반환 합니다.  
   
 #### <a name="parameters"></a>매개 변수  
  *StringFormat*  
- A [StringFormatEnum](../../../ado/reference/ado-api/stringformatenum.md) 지정 하는 값 방법을 **레코드 집합** 문자열로 변환 합니다. 합니다 *RowDelimiter*를 *ColumnDelimiter*, 및 *NullExpr* 매개 변수 에서만 사용 됩니다는 *StringFormat* 의  **adClipString**합니다.  
+ **레코드 집합** 을 문자열로 변환 하는 방법을 지정 하는 [stringformatenum](../../../ado/reference/ado-api/stringformatenum.md) 값입니다. *Rowdelimiter*, *Columndelimiter*및 *Nullexpr* 매개 변수는 **adClipString**의 *StringFormat* 사용 됩니다.  
   
  *NumRows*  
- (선택 사항) 변환 될 행 수를 **레코드 집합**합니다. 경우 *NumRows* 지정 하지 않으면 행의 총 개수 보다 더 오래 걸리는 경우 또는 **레코드 집합**, 다음의 모든 행의 **레코드 집합** 변환 됩니다.  
+ (선택 사항) **레코드 집합**에서 변환할 행의 수입니다. *Numrows* 를 지정 하지 않거나 **레코드 집합**에 있는 행의 총 수보다 큰 경우에는 **레코드 집합** 의 모든 행이 변환 됩니다.  
   
  *ColumnDelimiter*  
- (선택 사항) 탭 문자를 다르게 지정 하는 경우 열 사이 사용 된 구분 기호입니다.  
+ (선택 사항) 열 사이에 사용 되는 구분 기호입니다 (지정 된 경우). 그렇지 않으면 탭 문자입니다.  
   
  *RowDelimiter*  
- (선택 사항) 행을 캐리지 리턴 문자를 다르게 지정 하는 경우 간에 사용 되는 구분 기호입니다.  
+ (선택 사항) 행 사이에 사용 되는 구분 기호입니다 (지정 된 경우). 그렇지 않으면 캐리지 리턴 문자가 사용 됩니다.  
   
  *NullExpr*  
- (선택 사항) 그렇지 않으면 빈 문자열을 지정 하는 경우 null 값을 대신 사용 하는 식입니다.  
+ (선택 사항) Null 값 대신 사용 되는 식입니다 (지정 된 경우). 그렇지 않으면 빈 문자열입니다.  
   
 ## <a name="remarks"></a>설명  
- 스키마 데이터가 아니라 행 데이터를 문자열에 저장 됩니다. 따라서 한 **레코드 집합** 이 문자열을 사용 하 여 다시 열 수 없습니다.  
+ 행 데이터는 있지만 스키마 데이터는 문자열에 저장 되지 않습니다. 따라서이 문자열을 사용 하 여 **레코드 집합** 을 다시 열 수 없습니다.  
   
- 이 메서드는 해당 하는 RDO **GetClipString** 메서드.  
+ 이 메서드는 RDO **GetClipString** 메서드와 동일 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [GetString 메서드 예제(VB)](../../../ado/reference/ado-api/getstring-method-example-vb.md)

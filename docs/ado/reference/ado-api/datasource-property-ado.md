@@ -1,5 +1,5 @@
 ---
-title: 데이터 원본 속성 (ADO) | Microsoft Docs
+title: DataSource 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,21 +16,21 @@ ms.assetid: 300a702a-3544-48c5-b759-83b511fe97e0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd677e29631e53eeb71c43e8174baff553defc85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933243"
 ---
 # <a name="datasource-property-ado"></a>DataSource 속성(ADO)
-로 나타낼 수 있는 데이터가 포함 된 개체를 나타냅니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  
+[레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체로 표시할 데이터를 포함 하는 개체를 나타냅니다.  
   
 ## <a name="remarks"></a>설명  
- 이 속성은 데이터 환경을 사용 하 여 데이터 바인딩된 컨트롤을 만드는 데 사용 됩니다. 데이터 환경 데이터 (데이터 원본)가 포함 된 컬렉션으로 표현 되는 개체 (데이터 멤버) 라는 유지 관리를 **레코드 집합** 개체입니다.  
+ 이 속성은 데이터 환경을 사용 하 여 데이터 바인딩된 컨트롤을 만드는 데 사용 됩니다. 데이터 환경에서는 **레코드 집합** 개체로 표시 되는 명명 된 개체 (데이터 멤버)를 포함 하는 데이터 (데이터 원본) 컬렉션을 유지 관리 합니다.  
   
- 합니다 [DataMember](../../../ado/reference/ado-api/datamember-property.md) 하 고 **DataSource** 속성을 함께에서 사용 해야 합니다.  
+ [DataMember](../../../ado/reference/ado-api/datamember-property.md) 및 **DataSource** 속성은 함께 사용 해야 합니다.  
   
- 참조 된 개체를 구현 해야 합니다 **IDataSource** 인터페이스를 포함 해야 합니다는 **IRowset** 인터페이스입니다.  
+ 참조 되는 개체는 **IDataSource** 인터페이스를 구현 해야 하며 **IRowset** 인터페이스를 포함 해야 합니다.  
   
 ## <a name="usage"></a>사용  
   
@@ -43,5 +43,5 @@ Set rs.DataSource = myDE      'Name of the object containing an IRowset.
 ## <a name="applies-to"></a>적용 대상  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [DataMember 속성](../../../ado/reference/ado-api/datamember-property.md)

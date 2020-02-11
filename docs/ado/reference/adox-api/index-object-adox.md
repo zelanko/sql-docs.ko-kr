@@ -1,5 +1,5 @@
 ---
-title: 개체 (ADOX) 인덱스 | Microsoft Docs
+title: Index 개체 (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,52 +16,52 @@ ms.assetid: 6b9578c0-bc94-46b9-b801-c18e14b04b31
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7bff462b7c9ffe115cdfd52d1ec1f0a810a50531
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966085"
 ---
 # <a name="index-object-adox"></a>인덱스 개체(ADOX)
-데이터베이스 테이블에서 인덱스를 나타냅니다.  
+데이터베이스 테이블의 인덱스를 나타냅니다.  
   
 ## <a name="remarks"></a>설명  
- 다음 코드를 만듭니다 **인덱스**:  
+ 다음 코드는 새 **인덱스**를 만듭니다.  
   
 ```  
 Dim obj As New Index  
 ```  
   
- 속성 및 컬렉션을 **인덱스** 개체를 할 수 있습니다.  
+ **인덱스** 개체의 속성 및 컬렉션을 사용 하 여 다음을 수행할 수 있습니다.  
   
--   사용 하 여 인덱스를 식별 합니다 [이름을](../../../ado/reference/adox-api/name-property-adox.md) 속성입니다.  
+-   [Name](../../../ado/reference/adox-api/name-property-adox.md) 속성을 사용 하 여 인덱스를 식별 합니다.  
   
--   사용 하 여 인덱스의 데이터베이스 열에 액세스 합니다 [열](../../../ado/reference/adox-api/columns-collection-adox.md) 컬렉션입니다.  
+-   [Columns](../../../ado/reference/adox-api/columns-collection-adox.md) 컬렉션을 사용 하 여 인덱스의 데이터베이스 열에 액세스 합니다.  
   
--   인덱스 키 내에서 고유 해야 하는지 여부를 지정 합니다 [Unique](../../../ado/reference/adox-api/unique-property-adox.md) 속성입니다.  
+-   [고유](../../../ado/reference/adox-api/unique-property-adox.md) 속성을 사용 하 여 인덱스 키를 고유 하 게 지정 해야 하는지 여부를 지정 합니다.  
   
--   인덱스 테이블의 기본 키인지 여부를 지정 합니다 [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) 속성입니다.  
+-   인덱스가 [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) 속성이 있는 테이블의 기본 키인지 여부를 지정 합니다.  
   
--   인덱스 필드에 null 값이 있는 레코드와 인덱스 항목이 있는지 여부를 지정 합니다 [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) 속성입니다.  
+-   인덱스 필드에 null 값이 있는 레코드에 [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) 속성이 있는 인덱스 항목이 있는지 여부를 지정 합니다.  
   
--   인덱스와 클러스터형 인지 여부를 지정 합니다 [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md) 속성입니다.  
+-   [클러스터형](../../../ado/reference/adox-api/clustered-property-adox.md) 속성을 사용 하 여 인덱스를 클러스터링 할지 여부를 지정 합니다.  
   
--   공급자별 인덱스 속성에 액세스 합니다 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션입니다.  
-  
-> [!NOTE]
->  추가할 때 오류가 발생 합니다는 [열](../../../ado/reference/adox-api/column-object-adox.md) 에 **열** 의 컬렉션은 **인덱스** 경우를 **열** 를 에존재하지않는[테이블](../../../ado/reference/adox-api/table-object-adox.md) 개체에 이미 추가 된 [테이블](../../../ado/reference/adox-api/tables-collection-adox.md) 컬렉션입니다.  
+-   [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션을 사용 하 여 공급자별 인덱스 속성에 액세스 합니다.  
   
 > [!NOTE]
->  데이터 공급자의 모든 속성을 지원 하지 않을 수 있습니다 **인덱스** 개체입니다. 공급자가 지원 되지 않는 속성의 값을 사용 하도록 설정한 경우 오류가 발생 합니다. 새로운 **인덱스** 개체는 개체 컬렉션에 추가할 때 오류가 발생 합니다. 기존 개체에 대 한 속성을 설정할 때 오류가 발생 합니다.  
+>  열 **이 테이블** [컬렉션에 이미 추가 된](../../../ado/reference/adox-api/tables-collection-adox.md) [테이블](../../../ado/reference/adox-api/table-object-adox.md) 개체에 없는 경우 **인덱스** 의 **Columns** 컬렉션에 [열](../../../ado/reference/adox-api/column-object-adox.md) 을 추가할 때 오류가 발생 합니다.  
   
 > [!NOTE]
->  만들면 **인덱스** 개체 선택적 속성에 대 한 적절 한 기본값이 있는지 공급자 속성을 지원 하도록 보장 하지 않습니다. 공급자에서 지원 되는 속성에 대 한 자세한 내용은 공급자 설명서를 참조 합니다.  
+>  데이터 공급자가 **인덱스** 개체의 일부 속성을 지원 하지 않을 수 있습니다. 공급자가 지원 하지 않는 속성에 대 한 값을 설정 하면 오류가 발생 합니다. 새 **인덱스** 개체의 경우 개체가 컬렉션에 추가 되 면 오류가 발생 합니다. 기존 개체의 경우 속성을 설정할 때 오류가 발생 합니다.  
   
- 이 섹션에서는 다음 항목을 포함합니다.  
+> [!NOTE]
+>  **인덱스** 개체를 만들 때 선택적 속성에 대해 적절 한 기본값이 있으면 공급자가 속성을 지원 하지 않을 수 있습니다. 공급자가 지 원하는 속성에 대 한 자세한 내용은 공급자 설명서를 참조 하십시오.  
   
--   [Index 개체 속성, 메서드 및 이벤트](../../../ado/reference/adox-api/index-object-properties-methods-and-events.md)  
+ 이 섹션에는 다음 항목이 포함 되어 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+-   [인덱스 개체 속성, 메서드 및 이벤트](../../../ado/reference/adox-api/index-object-properties-methods-and-events.md)  
+  
+## <a name="see-also"></a>참고 항목  
  [Indexes Append 메서드 예제 (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
  [IndexNulls 속성 예제 (VB)](../../../ado/reference/adox-api/indexnulls-property-example-vb.md)   
  [PrimaryKey 및 Unique 속성 예제 (VB)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vb.md)   

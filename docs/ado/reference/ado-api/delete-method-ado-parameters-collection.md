@@ -1,5 +1,5 @@
 ---
-title: Delete 메서드 (ADO 매개 변수 컬렉션) | Microsoft Docs
+title: Delete 메서드 (ADO Parameters Collection) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 160c575e-df63-4ade-a2d3-5fd8f72e70cc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 965ef1bc84961e3358c530180bfe4e99249b0bc7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933174"
 ---
 # <a name="delete-method-ado-parameters-collection"></a>Delete 메서드(ADO 매개 변수 컬렉션)
-개체를 삭제 합니다 [매개 변수](../../../ado/reference/ado-api/parameters-collection-ado.md) 컬렉션입니다.  
+[Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) 컬렉션에서 개체를 삭제 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,16 +34,16 @@ Parameters.Delete Index
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *Index*  
- A **문자열** 컬렉션에서 삭제 하려는 개체 또는 개체의 서 수 위치 (인덱스)의 이름을 포함 하는 값입니다.  
+ *인덱싱할*  
+ 삭제할 개체의 이름 또는 컬렉션의 개체의 서 수 위치 (인덱스)를 포함 하는 **문자열** 값입니다.  
   
 ## <a name="remarks"></a>설명  
- 사용 하는 **삭제** 컬렉션에 대해 메서드를 사용 하면 컬렉션의 개체 중 하나를 제거 합니다. 이 메서드는 에서만 사용할 수 있습니다 합니다 **매개 변수** 의 컬렉션을 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체입니다. 사용 해야 합니다는 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체의 [이름](../../../ado/reference/ado-api/name-property-ado.md) 속성 또는 호출 하는 경우 해당 컬렉션 인덱스는 **삭제** 메서드는 개체 변수는 유효한 인수가 아닙니다.  
+ 컬렉션에서 **Delete** 메서드를 사용 하면 컬렉션의 개체 중 하나를 제거할 수 있습니다. 이 메서드는 [Command](../../../ado/reference/ado-api/command-object-ado.md) 개체의 **Parameters** 컬렉션에 대해서만 사용할 수 있습니다. **Delete** 메서드를 호출할 때 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체의 [Name](../../../ado/reference/ado-api/name-property-ado.md) 속성 또는 해당 컬렉션 인덱스를 사용 해야 합니다. 개체 변수가 올바른 인수가 아닙니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [Parameters 컬렉션(ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)  
   
-## <a name="see-also"></a>관련 항목  
- [Delete 메서드 (ADO 필드 컬렉션)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
+## <a name="see-also"></a>참고 항목  
+ [Delete 메서드 (ADO Fields Collection)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
  [Delete 메서드 (ADO 레코드 집합)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [DeleteRecord 메서드(ADO)](../../../ado/reference/ado-api/deleterecord-method-ado.md)

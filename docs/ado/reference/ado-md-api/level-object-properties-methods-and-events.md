@@ -13,10 +13,10 @@ ms.assetid: fdff70b0-95d0-447f-9359-97b8d159420d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 52008fa75b70bfb4c4b3ea3d25ef1d6fe6977142
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949613"
 ---
 # <a name="level-object-properties-methods-and-events"></a>Level 개체 속성, 메서드 및 이벤트
@@ -41,5 +41,5 @@ ms.locfileid: "67949613"
 ## <a name="events"></a>이벤트  
  없음  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Level 개체(ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)

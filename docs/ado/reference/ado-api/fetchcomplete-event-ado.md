@@ -17,14 +17,14 @@ ms.assetid: a28d3858-566c-468d-b070-d1de4339fbea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f3e5f5ae1c886f8d08d522fac19cee563efbb86c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932831"
 ---
 # <a name="fetchcomplete-event-ado"></a>FetchComplete 이벤트(ADO)
-**FetchComplete** 긴 비동기 작업의 모든 레코드에 검색 된 후 이벤트 라고 합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md).  
+**Fetchcomplete** 이벤트는 긴 비동기 작업의 모든 레코드를 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)으로 검색 한 후에 호출 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,19 +35,19 @@ FetchComplete pError, adStatus, pRecordset
   
 #### <a name="parameters"></a>매개 변수  
  *pError*  
- [오류](../../../ado/reference/ado-api/error-object.md) 개체입니다. 경우에 발생 한 오류에 설명 합니다 값 **adStatus** 됩니다 **adStatusErrorsOccurred**; 설정 되지 않은 고, 그렇지 합니다.  
+ [오류](../../../ado/reference/ado-api/error-object.md) 개체입니다. **Adstatus** 값이 **adStatusErrorsOccurred**인 경우 발생 하는 오류를 설명 합니다. 그렇지 않으면 설정 되지 않습니다.  
   
  *adStatus*  
- [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) 상태 값입니다. 이 매개 변수를로이 이벤트를 호출 하면 **adStatusOK** 이벤트를 발생 시킨 작업에 성공, 또는 **adStatusErrorsOccurred** 작업이 실패 합니다.  
+ [Eventstatusenum](../../../ado/reference/ado-api/eventstatusenum.md) 상태 값입니다. 이 이벤트가 호출 되 면이 매개 변수는 이벤트를 발생 시킨 작업이 성공한 경우 **Adstatusok** 로 설정 되 고, 작업이 실패 한 경우에는 **adStatusErrorsOccurred** 로 설정 됩니다.  
   
- 이 이벤트는 반환 하기 전에이 매개 변수를 설정 **adStatusUnwantedEvent** 후속 알림을 방지 하 합니다.  
+ 이 이벤트가 반환 되기 전에이 매개 변수를 **adStatusUnwantedEvent** 로 설정 하 여 후속 알림이 발생 하지 않도록 합니다.  
   
  *pRecordset*  
- A **레코드 집합** 개체입니다. 검색 된 레코드는 개체입니다.  
+ **레코드 집합** 개체입니다. 레코드를 검색할 개체입니다.  
   
 ## <a name="remarks"></a>설명  
- 사용 하도록 **FetchComplete** with Microsoft Visual Basic, Visual Basic 6.0 이상가 필요 합니다.  
+ Microsoft Visual Basic에서 **Fetchcomplete** 를 사용 하려면 Visual Basic 6.0 이상이 필요 합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [ADO 이벤트 모델 예제 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+## <a name="see-also"></a>참고 항목  
+ [ADO Events 모델 예제 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO 이벤트 처리기 요약](../../../ado/guide/data/ado-event-handler-summary.md)

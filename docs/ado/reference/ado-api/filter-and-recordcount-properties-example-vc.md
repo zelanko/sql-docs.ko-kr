@@ -16,14 +16,14 @@ ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 38f7dc64507e79704a62f321d7513419cc3c15d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932663"
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a>Filter 및 RecordCount 속성 예제 (VC + +)
-이 예제에서는 합니다 [필터](../../../ado/reference/ado-api/filter-property.md) 속성을 새 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 기존에 적용 된 지정 된 조건에 따라 **레코드 집합**합니다. 사용 된 [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) 의 두 레코드의 수를 표시 하는 속성 **레코드 집합**합니다. FilterField 함수는이 절차를 실행 하려면 필요 합니다.  
+이 예에서는 [Filter](../../../ado/reference/ado-api/filter-property.md) 속성을 사용 하 여 기존 **레코드 집합**에 적용 된 지정 된 조건에 따라 새 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 을 엽니다. [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) 속성을 사용 하 여 두 레코드 **집합**의 레코드 수를 표시 합니다. 이 프로시저를 실행 하려면 FilterField 함수를 실행 해야 합니다.  
   
 ## <a name="example"></a>예제  
   
@@ -302,7 +302,7 @@ Ramona Publishers, USA
 Scootney Books, USA  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [필터 속성](../../../ado/reference/ado-api/filter-property.md)   
  [RecordCount 속성 (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -15,14 +15,14 @@ ms.assetid: bbf27dcc-9815-4e2f-8ea8-b8c9fe6dedd6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6513daf2a2d57b0ed2b9d68f6232112d238de037
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932620"
 ---
 # <a name="find-method-example-vb"></a>Find 메서드 예제(VB)
-이 예제에서는 합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 [찾을](../../../ado/reference/ado-api/find-method-ado.md) 찾아에서 직함의 수를 계산 하는 메서드를 ***Pubs*** 데이터베이스. 기본 공급자와 유사한 기능을 지원 하지 않습니다 하는 것을 전제로 합니다.  
+이 예에서는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 [Find](../../../ado/reference/ado-api/find-method-ado.md) 메서드를 사용 하 여 ***Pubs*** 데이터베이스의 비즈니스 타이틀 수를 찾고 계산 합니다. 이 예에서는 기본 공급자가 유사한 기능을 지원 하지 않는다고 가정 합니다.  
   
 ```  
 'BeginFindVB  
@@ -99,6 +99,6 @@ End Sub
 'EndFindVB  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Find 메서드 (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

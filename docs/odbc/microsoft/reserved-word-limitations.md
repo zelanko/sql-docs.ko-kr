@@ -1,5 +1,5 @@
 ---
-title: Word 제한 사항 예약 | Microsoft Docs
+title: 예약어 제한 사항 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2018
 ms.prod: sql
@@ -14,21 +14,21 @@ ms.assetid: ed42f083-c9e8-4ee4-9d64-d879bf955c78
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c884d8594c3c4511bed0e24f9b3dd43092176b4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67988021"
 ---
-# <a name="reserved-keyword-limitations"></a>예약어 제한 사항
+# <a name="reserved-keyword-limitations"></a>예약 키워드 제한 사항
 
-SQL 테이블 또는 관련된 개체에서 식별자로 ODBC 예약 된 키워드를 사용 하지 마십시오. 홀수 사례를 예약된 된 키워드를 식별자로 사용 해야 발생할 경우 식별자의 쌍으로 둘러싸야 *backtick* ('). 에 대해 다른 이름을 *억음* 됩니다 *억음 악센트*합니다.
+SQL 테이블 또는 관련 개체에서 ODBC 예약 키워드를 식별자로 사용 하지 마십시오. 이름으로 예약 된 키워드를 사용 해야 하는 경우를 대비 하 여 식별자를 *backtick* (') 쌍으로 묶어야 합니다. *억음* 의 또 다른 이름은 *back 따옴표*입니다.
 
-예약어 제한 예약 된 키워드의 모든 약식 형태에도 적용 됩니다.
+예약 키워드 제한은 예약 된 키워드의 모든 줄임 형식에도 적용 됩니다.
 
-ODBC 예약 된 키워드 목록입니다는에서 제공 됩니다.
+ODBC 예약 키워드 목록은 다음 위치에서 제공 됩니다.
 
-- [ODBC 예약 된 키워드](https://docs.microsoft.com/sql/odbc/reference/appendixes/reserved-keywords)합니다.
+- [ODBC 예약 키워드](https://docs.microsoft.com/sql/odbc/reference/appendixes/reserved-keywords)입니다.
 
-- 에 *ODBC 프로그래머 참조 가이드*를 참조 하세요 [부록 c: SQL 문법을](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-c-sql-grammar)합니다.
+- *ODBC 프로그래머 참조 가이드*에서 [부록 C: SQL 문법](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-c-sql-grammar)을 참조 하세요.
 

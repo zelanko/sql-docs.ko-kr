@@ -16,14 +16,14 @@ ms.assetid: 55bedd08-7440-4da4-b854-4ac9ef2fdedb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ef4017cce110c9217111df40b833eaf294d52521
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67937830"
 ---
 # <a name="update-and-cancelupdate-methods-example-vb"></a>Update 및 CancelUpdate 메서드 예제(VB)
-이 예제에서는 합니다 [업데이트](../../../ado/reference/ado-api/update-method.md) 메서드와 함께 합니다 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) 메서드.  
+이 예제에서는 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) 메서드와 함께 [Update](../../../ado/reference/ado-api/update-method.md) 메서드를 보여 줍니다.  
   
 ```  
 'BeginUpdateVB  
@@ -114,13 +114,13 @@ End Sub
 ' EndUpdateVB  
 ```  
   
- 이 예제에서는 합니다 **업데이트** 메서드와 함께 합니다 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) 메서드.  
+ 이 예제에서는 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) 메서드와 함께 **업데이트** 메서드를 보여 줍니다.  
   
 ```  
 Attribute VB_Name = "Update"  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [CancelUpdate 메서드 (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
  [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Update 메서드](../../../ado/reference/ado-api/update-method.md)

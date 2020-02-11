@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 74fcbb6fb9e9f4fe3f2b50f5fb434cbae6491113
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091478"
 ---
 # <a name="upgrade-how-to-topics"></a>방법 도움말 항목 업그레이드
@@ -25,11 +25,13 @@ ms.locfileid: "66091478"
   
 |항목|Description|  
 |-----------|-----------------|  
-|[업그레이드 하려면 SQL Server 2014 설치 마법사를 사용 하 여 &#40;설치&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 독립 실행형 인스턴스를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드하는 절차 항목입니다.|  
-|[SQL Server 장애 조치(failover) 클러스터 인스턴스 업그레이드&#40;설치 프로그램&#41;](../failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드하는 절차 항목입니다.|  
-|[명령 프롬프트에서 SQL Server 2014 설치](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)|명령 프롬프트에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 을 설치하기 위한 예제 구문입니다.|  
+|[설치 마법사 &#40;사용 하 여 SQL Server 2014로 업그레이드&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 독립 실행형 인스턴스를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드하는 절차 항목입니다.|  
+|[SQL Server 장애 조치 (Failover) 클러스터 인스턴스를 업그레이드 &#40;설정&#41;](../failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드하는 절차 항목입니다.|  
+|[Install SQL Server 2014 from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)|명령 프롬프트에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 을 설치하기 위한 예제 구문입니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [서버 인스턴스 업그레이드 시 미러된 데이터베이스의 가동 중지 시간 최소화](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)   
  [지원되는 버전 및 에디션 업그레이드](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [이전 버전과의 호환성](../../../2014/getting-started/backward-compatibility.md)  

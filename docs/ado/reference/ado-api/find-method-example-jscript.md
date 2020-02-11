@@ -15,14 +15,14 @@ ms.assetid: adb5c37e-7874-41db-b4ee-572c1323deff
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1b6a81b69fc16c587786685897c476c65937bb4d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932631"
 ---
 # <a name="find-method-example-jscript"></a>Find 메서드 예제(JScript)
-이 예제에서는 합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 [찾을](../../../ado/reference/ado-api/find-method-ado.md) 찾아 회사를 표시 하는 메서드를 ***Northwind*** 데이터베이스 이름이 G. 잘라내기 문자로 시작 하 고 붙여 넣습니다 다음 코드를 메모장 이나 다른 텍스트 편집기 및 저장 **붙여 넣고 FindJS.asp**합니다.  
+이 예에서는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 [Find](../../../ado/reference/ado-api/find-method-ado.md) 메서드를 사용 하 여 ***Northwind*** 데이터베이스에서 이름이 letter로 시작 하는 회사를 찾아서 표시 합니다. 다음 코드를 잘라내어 메모장 또는 다른 텍스트 편집기에 붙여 넣고 **findjs**로 저장 합니다.  
   
 ```  
 <!-- BeginFindJS -->  
@@ -152,6 +152,6 @@ BODY {
 <!-- EndFindJS -->  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Find 메서드 (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -15,16 +15,16 @@ ms.assetid: 2440b6ff-2536-497c-a5f4-41db0cf1945e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 04000b62ea8d48b78d7673444003564ae0701193
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938691"
 ---
 # <a name="version-property-example-vc"></a>Version 속성 예제(VC++)
-이 예제에서는 합니다 [버전](../../../ado/reference/ado-api/version-property-ado.md) 의 속성을 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 현재 ADO 버전을 표시 하는 개체입니다. 또한 여러 동적 속성을 사용 하 여 보여 줍니다.  
+이 예에서는 [Connection](../../../ado/reference/ado-api/connection-object-ado.md) 개체의 [Version](../../../ado/reference/ado-api/version-property-ado.md) 속성을 사용 하 여 현재 ADO 버전을 표시 합니다. 또한 다음과 같은 몇 가지 동적 속성을 사용 하 여 표시 합니다.  
   
--   현재 DBMS 이름과 버전입니다.  
+-   현재 DBMS 이름 및 버전입니다.  
   
 -   OLE DB 버전입니다.  
   
@@ -32,10 +32,10 @@ ms.locfileid: "67938691"
   
 -   ODBC 버전입니다.  
   
--   ODBC 드라이버 이름과 버전입니다.  
+-   ODBC 드라이버 이름 및 버전입니다.  
   
 > [!NOTE]
->  지정 해야 하는 경우 Windows 인증을 지 원하는 데이터 원본 공급자에 연결 하는, **Trusted_Connection = yes** 하거나 **Integrated Security = SSPI** 사용자 ID와 암호 대신 연결 문자열에 대 한 정보입니다.  
+>  Windows 인증을 지 원하는 데이터 원본 공급자에 연결 하는 경우 연결 문자열에 사용자 ID 및 암호 정보 대신 **Trusted_Connection = yes** 또는 **INTEGRATED Security = SSPI** 를 지정 해야 합니다.  
   
 ```  
 // BeginVersionCpp.cpp  
@@ -134,6 +134,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [연결 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+## <a name="see-also"></a>참고 항목  
+ [Connection 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Version 속성(ADO)](../../../ado/reference/ado-api/version-property-ado.md)

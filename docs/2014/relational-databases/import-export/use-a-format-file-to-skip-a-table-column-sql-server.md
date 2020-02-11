@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 80c5c5b2f4e6d4f691b7c3977ae2f715f5424e7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011685"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>서식 파일을 사용하여 테이블 열 건너뛰기(SQL Server)
@@ -47,7 +47,8 @@ GO
   
 ```  
   
- `myTestSkipCol2.dat` 의 데이터를 `myTestSkipCol` 테이블로 대량 가져오려면 서식 파일이 첫 번째 데이터 필드를 `Col1`에 매핑하고 `Col3`는 건너뛴 채 두 번째 필드를 `Col2`에 매핑해야 합니다.  
+ 
+  `myTestSkipCol2.dat` 의 데이터를 `myTestSkipCol` 테이블로 대량 가져오려면 서식 파일이 첫 번째 데이터 필드를 `Col1`에 매핑하고 `Col3`는 건너뛴 채 두 번째 필드를 `Col2`에 매핑해야 합니다.  
   
 ## <a name="using-a-non-xml-format-file"></a>비 XML 서식 파일 사용  
  비 XML 서식 파일을 수정하여 테이블 열을 건너뛸 수 있습니다. 이렇게 하려면 일반적으로 **bcp** 유틸리티를 사용하여 기본 비 XML 서식 파일을 만들고 텍스트 편집기에서 기본 파일을 수정해야 합니다. 수정된 서식 파일은 기존의 각 필드를 해당하는 테이블 열로 매핑하고 건너뛸 테이블 열을 나타내야 합니다. 기본 비 XML 데이터 파일을 수정할 수 있는 두 가지 다른 방법이 있습니다. 각 방법은 데이터 필드가 데이터 파일에 없고 데이터가 해당 테이블 열에 삽입되지 않음을 나타냅니다.  
@@ -62,11 +63,11 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
  위 명령은 `myTestSkipCol_Default.fmt`라는 비 XML 서식 파일을 만듭니다. 이 서식 파일은 *bcp* 에서 생성되는 형식이므로 **기본 서식 파일**이라고 합니다. 일반적으로 기본 서식 파일은 데이터 파일 필드와 테이블 열 간의 일 대 일 대응을 나타내는 파일입니다.  
   
 > [!IMPORTANT]  
->  연결할 서버 인스턴스의 이름을 지정해야 할 수 있으며 사용자 이름과 암호를 지정해야 할 수도 있습니다. 자세한 내용은 [bcp Utility](../../tools/bcp-utility.md)을(를) 참조하세요.  
+>  연결할 서버 인스턴스의 이름을 지정해야 할 수 있으며 사용자 이름과 암호를 지정해야 할 수도 있습니다. 자세한 내용은 [bcp Utility](../../tools/bcp-utility.md)를 참조하세요.  
   
  다음 그림에서는 이 예제 기본 서식 파일의 값을 보여 주며 각 서식 파일 필드의 이름도 보여 줍니다.  
   
- ![myTestSkipCol의 기본 비 XML 형식 파일](../../database-engine/media/mytestskipcol-f-c-default-fmt.gif "default non-XML format file for myTestSkipCol")  
+ ![myTestSkipCol에 대한 비 XML 형식 기본 파일](../../database-engine/media/mytestskipcol-f-c-default-fmt.gif "myTestSkipCol에 대한 비 XML 형식 기본 파일")  
   
 > [!NOTE]  
 >  서식 파일 필드에 대한 자세한 내용은 [비 XML 서식 파일&#40;SQL Server&#41;](xml-format-files-sql-server.md)을 참조하세요.  
@@ -103,7 +104,8 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
  다음 예도 이 항목의 앞부분에 나오는 "예제 테이블 및 데이터 파일"에서 생성된 `myTestSkipCol` 예제 테이블과 `myTestSkipCol2.dat` 예제 데이터 파일을 기반으로 합니다.  
   
 #### <a name="using-bulk-insert"></a>BULK INSERT 사용  
- 이 예는 이 항목의 앞부분에 나오는 "비 XML 서식 파일 수정 방법"에서 생성된 수정 비 XML 서식 파일 중 하나를 사용하여 작동합니다. 이 예에서 수정된 서식 파일의 이름은 `C:\myTestSkipCol2.fmt`입니다. `BULK INSERT` 를 사용하여 `myTestSkipCol2.dat` 데이터 파일을 대량으로 가져오려면 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 다음 코드를 실행합니다.  
+ 이 예는 이 항목의 앞부분에 나오는 "비 XML 서식 파일 수정 방법"에서 생성된 수정 비 XML 서식 파일 중 하나를 사용하여 작동합니다. 이 예에서 수정된 서식 파일의 이름은 `C:\myTestSkipCol2.fmt`입니다. 
+  `BULK INSERT` 를 사용하여 `myTestSkipCol2.dat` 데이터 파일을 대량으로 가져오려면 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 다음 코드를 실행합니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -152,7 +154,8 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
 >  XML 서식 파일의 구조에 대한 자세한 내용은 [XML 서식 파일&#40;SQL Server&#41;](xml-format-files-sql-server.md)을 참조하세요.  
   
 ### <a name="examples"></a>예  
- 이 섹션의 예에서는 이 섹션의 예에서는 이 항목의 앞부분에 나오는 "예제 테이블 및 데이터 파일"에서 생성된 `myTestSkipCol` 예제 테이블과 `myTestSkipCol2.dat` 예제 데이터 파일을 사용합니다. `myTestSkipCol2.dat` 의 데이터를 `myTestSkipCol` 테이블로 가져오기 위해 이 예에서는 수정된 XML 서식 파일인 `myTestSkipCol2-x.xml`을 사용합니다. 이 예는 이 항목의 앞부분에 나오는 "기본 XML 서식 파일 만들기"에서 생성된 서식 파일을 기반으로 합니다.  
+ 이 섹션의 예에서는 이 섹션의 예에서는 이 항목의 앞부분에 나오는 "예제 테이블 및 데이터 파일"에서 생성된 `myTestSkipCol` 예제 테이블과 `myTestSkipCol2.dat` 예제 데이터 파일을 사용합니다. 
+  `myTestSkipCol2.dat` 의 데이터를 `myTestSkipCol` 테이블로 가져오기 위해 이 예에서는 수정된 XML 서식 파일인 `myTestSkipCol2-x.xml`을 사용합니다. 이 예는 이 항목의 앞부분에 나오는 "기본 XML 서식 파일 만들기"에서 생성된 서식 파일을 기반으로 합니다.  
   
 ```  
 <?xml version="1.0"?>  
@@ -171,7 +174,8 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
 #### <a name="using-openrowsetbulk"></a>OPENROWSET(BULK...) 사용  
  다음 예에서는 `OPENROWSET` 대량 행 집합 공급자와 `myTestSkipCol2.xml` 서식 파일을 사용합니다. 또한 `myTestSkipCol2.dat` 데이터 파일을 `myTestSkipCol` 테이블로 대량 가져옵니다. 이 문에는 필요에 따라 SELECT 목록과 대상 테이블의 명시적인 열 목록이 있습니다.  
   
- [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 다음 코드를 실행합니다.  
+ 
+  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 다음 코드를 실행합니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -188,7 +192,8 @@ GO
 #### <a name="using-bulk-import-on-a-view"></a>뷰에서 BULK IMPORT 사용  
  다음 예에서는 `v_myTestSkipCol` 테이블에 `myTestSkipCol` 을 만듭니다. 이 뷰는 두 번째 테이블 열인 `Col2`를 건너뜁니다. 그런 다음 이 예에서는 `BULK INSERT` 를 사용하여 `myTestSkipCol2.dat` 데이터 파일을 이 뷰로 가져옵니다.  
   
- [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 다음 코드를 실행합니다.  
+ 
+  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 다음 코드를 실행합니다.  
   
 ```  
 CREATE VIEW v_myTestSkipCol AS  
@@ -204,8 +209,8 @@ WITH (FORMATFILE='C:\myTestSkipCol2.xml');
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [bcp Utility](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>참고 항목  
+ [bcp 유틸리티](../../tools/bcp-utility.md)   
  [BULK INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET&#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
  [서식 파일을 사용하여 데이터 필드 건너뛰기&#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)   

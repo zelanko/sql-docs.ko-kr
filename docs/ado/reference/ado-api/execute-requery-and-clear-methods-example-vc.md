@@ -1,5 +1,5 @@
 ---
-title: Execute, requery, Clear 메서드 예제 (VC + +) | Microsoft Docs
+title: Execute, Requery 및 Clear 메서드 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: ada6acc1-82eb-4cfa-8f2f-617a916ffd8d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 533ffd2404d445e89dd50695fb6317eb72db1435
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932859"
 ---
-# <a name="execute-requery-and-clear-methods-example-vc"></a>Execute, requery, Clear 메서드 예제 (VC + +)
-이 예제에서는 합니다 **Execute** 둘 다에서 실행 될 경우 메서드는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체 및 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다. 또한 사용 하 여는 [Requery](../../../ado/reference/ado-api/requery-method.md) 의 현재 데이터를 검색 하는 메서드를 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md), 및 [선택을 취소](../../../ado/reference/ado-api/clear-method-ado.md) 내용의 선택을 취소 하는 방법은 [오류](../../../ado/reference/ado-api/errors-collection-ado.md)컬렉션입니다. ExecuteCommand 및 PrintOutput 함수는이 예제를 실행 하려면 필요 합니다.  
+# <a name="execute-requery-and-clear-methods-example-vc"></a>Execute, Requery 및 Clear 메서드 예제 (VC + +)
+이 예제에서는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체와 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 모두에서 실행 되는 경우 **Execute** 메서드를 보여 줍니다. 또한 [Requery](../../../ado/reference/ado-api/requery-method.md) 메서드를 사용 하 여 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)의 현재 데이터를 검색 하 고 [clear](../../../ado/reference/ado-api/clear-method-ado.md) 메서드를 사용 하 여 [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) 컬렉션의 내용을 지웁니다. ExecuteCommand 및 PrintOutput 함수는이 예제를 실행 하는 데 필요 합니다.  
   
 ```  
 // Execute_Requery_Clear_Method_Sample.cpp  
@@ -187,10 +187,10 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Clear 메서드 (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
- [명령 개체 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [연결 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Command 개체 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+ [Connection 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Errors 컬렉션 (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [Execute 메서드 (ADO 명령)](../../../ado/reference/ado-api/execute-method-ado-command.md)   
  [Execute 메서드 (ADO 연결)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   

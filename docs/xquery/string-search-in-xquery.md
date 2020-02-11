@@ -1,5 +1,5 @@
 ---
-title: XQuery에서 검색 문자열 | Microsoft Docs
+title: XQuery에서 문자열 검색 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: edc62024-4c4c-4970-b5fa-2e54a5aca631
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b34570120b22cea1ca12eaf146d41b596e43aecf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946254"
 ---
 # <a name="string-search-in-xquery"></a>XQuery에서 문자열 검색
@@ -44,7 +44,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- 이전 쿼리에서 `where` FLOWR에서 식의 결과 필터링 합니다 `for` 식과 충족 하는 요소만 반환을 **contains ()** 조건.  
+ 위의 쿼리에서 FLOWR 식의 `where` 는 `for` 식의 결과를 필터링 하 고 **contains ()** 조건을 만족 하는 요소만 반환 합니다.  
   
  다음은 결과입니다.  
   
@@ -57,7 +57,7 @@ WHERE ProductModelID=19
 </p1:Maintenance>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 데이터&#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XQuery 언어 참조&#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
   

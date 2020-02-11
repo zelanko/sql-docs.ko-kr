@@ -13,17 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d6c680dd48f3588b92a2c87d9fa8d3c3a04dde39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077604"
 ---
 # <a name="move-table-dialog-box-ssas"></a>테이블 이동 대화 상자(SSAS)
+  
   **테이블 이동** 대화 상자를 사용하면 모델 디자이너에 테이블이 나타나는 순서를 변경할 수 있습니다. 이 대화 상자에 액세스하려면 이동할 테이블 아래쪽의 탭을 마우스 오른쪽 단추로 클릭하고 **이동**을 선택합니다.  
   
 ## <a name="uielement-list"></a>UIElement 목록  
- **선택한 테이블 표에서 앞으로 이동**  
+ **선택한 테이블을 다음 테이블 앞으로 이동**  
  이동하려는 테이블이 이 목록에서 선택한 테이블 앞으로 이동합니다. 테이블을 테이블 집합의 맨 끝으로 이동하려면 **(끝으로 이동)** 을 선택합니다.  
   
   

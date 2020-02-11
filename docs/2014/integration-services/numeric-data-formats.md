@@ -16,17 +16,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0f48c3a6cebe079d93601f53698afafb350587e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057391"
 ---
 # <a name="numeric-data-formats"></a>숫자 데이터 형식
   빠른 구문 분석에서는 데이터 구문 분석을 위해 로캘을 구분하지 않는 신속하고 간단한 루틴을 제공합니다. 빠른 구문 분석은 일부 제한된 정수 데이터 형식만 지원합니다.  
   
 ## <a name="integer-data-types"></a>정수 데이터 형식  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 제공되는 정수 데이터 형식은 DT_I1, DT_UI1, DT_I2, DT_UI2, DT_I4, DT_UI4, DT_I8 및 DT_UI8입니다. 자세한 내용은 [Integration Services Data Types](data-flow/integration-services-data-types.md)을 참조하세요.  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 제공되는 정수 데이터 형식은 DT_I1, DT_UI1, DT_I2, DT_UI2, DT_I4, DT_UI4, DT_I8 및 DT_UI8입니다. 자세한 내용은 [Integration Services 데이터 형식](data-flow/integration-services-data-types.md)을 참조 하세요.  
   
  빠른 구문 분석에서는 정수 데이터에 대해 다음과 같은 형식이 지원됩니다.  
   

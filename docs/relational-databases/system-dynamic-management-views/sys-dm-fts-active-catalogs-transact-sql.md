@@ -1,5 +1,5 @@
 ---
-title: sys.dm_fts_active_catalogs (TRANSACT-SQL) | Microsoft Docs
+title: sys. dm_fts_active_catalogs (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql
@@ -21,10 +21,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 31dd240f15d9d778cbab43f6b4b1bfda2e4e1857
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68265973"
 ---
 # <a name="sysdm_fts_active_catalogs-transact-sql"></a>sys.dm_fts_active_catalogs(Transact-SQL)
@@ -33,20 +33,20 @@ ms.locfileid: "68265973"
   서버에서 일부 채우기 작업이 진행 중인 전체 텍스트 카탈로그에 대한 정보를 반환합니다.  
   
 > [!NOTE]
->  이후 버전에서 다음 열이 제거 됩니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: is_paused, previous_status, previous_status_description, row_count_in_thousands, 상태, status_description 및 worker_count 합니다. 향후 개발 작업에서는 이러한 열을 사용하지 않도록 하고 현재 이러한 열을 사용하는 애플리케이션은 수정하십시오.  
+>  다음 열은의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이후 버전에서 제거 될 예정입니다. is_paused, previous_status, previous_status_description, row_count_in_thousands, 상태, status_description 및 worker_count. 향후 개발 작업에서는 이러한 열을 사용하지 않도록 하고 현재 이러한 열을 사용하는 애플리케이션은 수정하십시오.  
   
  
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|활성 전체 텍스트 카탈로그를 포함하는 데이터베이스의 ID입니다.|  
 |**catalog_id**|**int**|활성 전체 텍스트 카탈로그의 ID입니다.|  
 |**memory_address**|**varbinary(8)**|이 전체 텍스트 카탈로그와 관련된 채우기 작업에 할당된 메모리 버퍼의 주소입니다.|  
 |**name**|**nvarchar(128)**|활성 전체 텍스트 카탈로그의 이름입니다.|  
 |**is_paused**|**bit**|활성 전체 텍스트 카탈로그 채우기가 일시 중지되었는지 나타냅니다.|  
-|**상태**|**int**|전체 텍스트 카탈로그의 현재 상태입니다. 다음 중 하나일 수 있습니다.<br /><br /> 0 = 초기화하는 중입니다.<br /><br /> 1 = 준비되었습니다.<br /><br /> 2 = 일시 중지됨<br /><br /> 3 = 임시 오류입니다.<br /><br /> 4 = 다시 탑재해야 합니다.<br /><br /> 5 = 종료<br /><br /> 6 = 백업을 위해 정지되었습니다.<br /><br /> 7 = 카탈로그를 통해 백업이 완료되었습니다.<br /><br /> 8 = 카탈로그가 손상되었습니다.|  
-|**status_description**|**nvarchar(120)**|활성 전체 텍스트 카탈로그의 현재 상태에 대한 설명입니다.|  
-|**previous_status**|**int**|전체 텍스트 카탈로그의 이전 상태입니다. 다음 중 하나일 수 있습니다.<br /><br /> 0 = 초기화하는 중입니다.<br /><br /> 1 = 준비되었습니다.<br /><br /> 2 = 일시 중지됨<br /><br /> 3 = 임시 오류입니다.<br /><br /> 4 = 다시 탑재해야 합니다.<br /><br /> 5 = 종료<br /><br /> 6 = 백업을 위해 정지되었습니다.<br /><br /> 7 = 카탈로그를 통해 백업이 완료되었습니다.<br /><br /> 8 = 카탈로그가 손상되었습니다.|  
-|**previous_status_description**|**nvarchar(120)**|활성 전체 텍스트 카탈로그의 이전 상태에 대한 설명입니다.|  
+|**업무**|**int**|전체 텍스트 카탈로그의 현재 상태입니다. 다음 중 하나<br /><br /> 0 = 초기화하는 중입니다.<br /><br /> 1 = 준비되었습니다.<br /><br /> 2 = 일시 중지됨<br /><br /> 3 = 임시 오류입니다.<br /><br /> 4 = 다시 탑재해야 합니다.<br /><br /> 5 = 종료<br /><br /> 6 = 백업을 위해 정지되었습니다.<br /><br /> 7 = 카탈로그를 통해 백업이 완료되었습니다.<br /><br /> 8 = 카탈로그가 손상되었습니다.|  
+|**status_description**|**nvarchar (120)**|활성 전체 텍스트 카탈로그의 현재 상태에 대한 설명입니다.|  
+|**previous_status**|**int**|전체 텍스트 카탈로그의 이전 상태입니다. 다음 중 하나<br /><br /> 0 = 초기화하는 중입니다.<br /><br /> 1 = 준비되었습니다.<br /><br /> 2 = 일시 중지됨<br /><br /> 3 = 임시 오류입니다.<br /><br /> 4 = 다시 탑재해야 합니다.<br /><br /> 5 = 종료<br /><br /> 6 = 백업을 위해 정지되었습니다.<br /><br /> 7 = 카탈로그를 통해 백업이 완료되었습니다.<br /><br /> 8 = 카탈로그가 손상되었습니다.|  
+|**previous_status_description**|**nvarchar (120)**|활성 전체 텍스트 카탈로그의 이전 상태에 대한 설명입니다.|  
 |**worker_count**|**int**|이 전체 텍스트 카탈로그에서 현재 작동 중인 스레드 수입니다.|  
 |**active_fts_index_count**|**int**|채울 전체 텍스트 인덱스 수입니다.|  
 |**auto_population_count**|**int**|이 전체 텍스트 카탈로그에 대해 자동 채우기가 진행 중인 테이블 수입니다.|  
@@ -56,22 +56,22 @@ ms.locfileid: "68265973"
 |**is_importing**|**bit**|전체 텍스트 카탈로그를 가져올 것인지 여부를 나타냅니다.<br /><br /> 1 = 카탈로그를 가져옵니다.<br /><br /> 2 = 카탈로그를 가져오지 않습니다.|  
   
 ## <a name="remarks"></a>설명  
- Is_importing 열 였습니다 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]합니다.  
+ Is_importing 열은의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]새 열입니다.  
   
 ## <a name="permissions"></a>사용 권한  
 
-온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
-온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 프리미엄 계층 필요는 `VIEW DATABASE STATE` 데이터베이스의 권한. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에 필요 합니다 **서버 관리자** 요소나 **Azure Active Directory 관리자** 계정.   
+에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]는 권한이 `VIEW SERVER STATE` 필요 합니다.   
+Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 계층에서는 데이터베이스에 대 `VIEW DATABASE STATE` 한 권한이 필요 합니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
    
 ## <a name="physical-joins"></a>물리적 조인  
  ![이 동적 관리 뷰의 유효 조인](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-active-catalogs-1.gif "이 동적 관리 뷰의 유효 조인")  
   
 ## <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-|보낸 사람|수행할 작업|관계|  
+|원본|수행할 작업|관계|  
 |----------|--------|------------------|  
-|dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|일 대 일|  
-|dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|일 대 일|  
+|dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|일대일|  
+|dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|일대일|  
   
 ## <a name="examples"></a>예  
  다음 예에서는 현재 데이터베이스의 활성 전체 텍스트 카탈로그에 대한 정보를 반환합니다.  
@@ -91,8 +91,8 @@ AND catalog.database_id = (SELECT dbid FROM sys.sysdatabases WHERE name = DB_NAM
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  
- [전체 텍스트 검색 및 의미 체계 검색 동적 관리 뷰 및 함수 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
+ [Transact-sql&#41;전체 텍스트 검색 및 의미 체계 검색 동적 관리 뷰 및 함수 &#40;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   
   

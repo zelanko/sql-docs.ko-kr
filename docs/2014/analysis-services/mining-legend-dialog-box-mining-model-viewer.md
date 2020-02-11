@@ -15,13 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44c109694f0a3263ff1ad40d1c343a1af91ce630
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077772"
 ---
 # <a name="mining-legend-dialog-box-mining-model-viewer"></a>마이닝 범례 대화 상자(마이닝 모델 뷰어)
+  
   **마이닝 범례** 대화 상자를 사용하여 마이닝 모델 뷰어에서 선택한 노드 또는 항목에 대한 세부 정보를 볼 수 있습니다.  
   
  마이닝 범례에는 모델 유형에 따라 다른 유형의 정보가 표시됩니다. 예를 들어 시계열 모델에서 기록 데이터를 보여 주는 꺾은선형 그래프의 점을 클릭하면 **마이닝 범례** 에 숫자 값이 표시됩니다. 그러나 클러스터링 모델에 사용되는 뷰어에서는 **마이닝 범례** 에 특성 프로필에 사용되는 색상 키가 표시됩니다. 마이닝 범례가 각 컨텍스트에서 사용되는 방법에 대한 설명은 **옵션** 섹션의 링크를 참조하십시오.  
@@ -34,7 +35,7 @@ ms.locfileid: "66077772"
   
 -   연결 모델  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  의사 결정 트리 모델  
  [Microsoft 트리 뷰어를 사용하여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
@@ -52,9 +53,9 @@ ms.locfileid: "66077772"
  선형 회귀 모델  
  [Microsoft 트리 뷰어를 사용하여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
-## <a name="see-also"></a>관련 항목  
- [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [마이닝 모델 뷰어&#40;데이터 마이닝 모델 디자이너&#41;](mining-model-viewers-data-mining-model-designer.md)   
+## <a name="see-also"></a>참고 항목  
+ [데이터 마이닝 알고리즘 &#40;Analysis Services 데이터 마이닝&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [마이닝 모델 뷰어 &#40;데이터 마이닝 모델 디자이너&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [데이터 마이닝 모델 뷰어](data-mining/data-mining-model-viewers.md)  
   
   

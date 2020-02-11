@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3e29aaf45306c9ed5d8c8dd7c132dacd9af1e926
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70148347"
 ---
 # <a name="using-database-mail"></a>데이터베이스 메일 사용
@@ -30,7 +30,8 @@ ms.locfileid: "70148347"
 ## <a name="examples"></a>예  
  제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio .net에서 Visual C&#35; SMO 프로젝트 만들기](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스 메일을 사용하는 프로그램에 대해 메일 네임스페이스를 한정하는 **Imports** 문을 포함해야 합니다. 다음과 같이 애플리케이션의 선언 앞에, 다른 **Imports** 문 끝에 구문을 삽입하십시오.  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스 메일을 사용하는 프로그램에 대해 메일 네임스페이스를 한정하는 **Imports** 문을 포함해야 합니다. 다음과 같이 애플리케이션의 선언 앞에, 다른 **Imports** 문 끝에 구문을 삽입하십시오.  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   

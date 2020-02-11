@@ -1,5 +1,5 @@
 ---
-title: CLEAR CALCULATIONS 문 (MDX) | Microsoft Docs
+title: CLEAR 계산 문 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1b0766cb002960a96d702184ac9719abe7610afd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938028"
 ---
 # <a name="mdx-data-manipulation---clear-calculations"></a>MDX 데이터 조작 - CLEAR CALCULATIONS
@@ -32,12 +32,12 @@ CLEAR CALCULATIONS [FROMCube_Expression]
  유효한 MDX 큐브 식입니다.  
   
 ## <a name="remarks"></a>설명  
- 합니다 **FROM** 큐브의 컨텍스트가 알려진, MDX 스크립트와 같이 이러한 경우 절을 생략할 수 있습니다.  
+ MDX 스크립트 에서처럼 **FROM** 절은 큐브의 컨텍스트를 알 수 없는 경우 생략 될 수 있습니다.  
   
 > [!NOTE]  
 >  이 문은 서버 또는 데이터베이스 관리자나 큐브의 원본 데이터에 액세스할 수 있는 역할(즉, ReadSourceData=true인 역할)의 멤버만 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [MDX 데이터 조작 문 &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [Mdx 데이터 조작 문은 MDX를 &#40;&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
   
   

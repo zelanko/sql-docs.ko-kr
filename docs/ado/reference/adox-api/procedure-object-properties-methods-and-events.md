@@ -1,5 +1,5 @@
 ---
-title: Procedure 개체 속성, 메서드 및 이벤트 | Microsoft Docs
+title: 프로시저 개체 속성, 메서드 및 이벤트 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,10 +13,10 @@ ms.assetid: 522f6447-ba9e-45f5-a185-37b312e126d4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9bec9c19f406586136ce4181805cf5d1c4333fcf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965467"
 ---
 # <a name="procedure-object-properties-methods-and-events"></a>프로시저 개체 속성, 메서드 및 이벤트
@@ -35,5 +35,5 @@ ms.locfileid: "67965467"
 ## <a name="events"></a>이벤트  
  없음  
   
-## <a name="see-also"></a>관련 항목  
- [Procedure 개체(ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)
+## <a name="see-also"></a>참고 항목  
+ [프로시저 개체(ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)

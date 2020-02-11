@@ -15,18 +15,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b6694741388e649e8a216efad18f48a66de6d61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058255"
 ---
 # <a name="http-connection-manager-editor-proxy-page"></a>HTTP 연결 관리자 편집기(프록시 페이지)
+  
   **HTTP 연결 관리자 편집기** 대화 상자의 **프록시** 탭을 사용하여 프록시 서버를 사용하도록 HTTP 연결 관리자를 구성할 수 있습니다. HTTP 연결을 사용하면 패키지에서 HTTP를 통해 웹 서버에 액세스하고 파일을 보내거나 받을 수 있습니다.  
   
  HTTP 연결 관리자에 대한 자세한 내용은 [HTTP Connection Manager](connection-manager/http-connection-manager.md)를 참조하십시오. HTTP 연결 관리자의 일반적인 사용 시나리오에 대한 자세한 내용은 [Web Service Task](control-flow/web-service-task.md)를 참조하십시오.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **프록시 사용**  
  HTTP 연결 관리자에서 프록시 서버를 통해 연결하도록 할지 여부를 지정합니다.  
   
@@ -57,8 +58,8 @@ ms.locfileid: "66058255"
  **제거**  
  주소를 선택한 다음 **제거**를 클릭하여 삭제합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [HTTP 연결 관리자 편집기&#40;서버 페이지&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
+ [HTTP 연결 관리자 편집기 &#40;서버 페이지&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
   
   

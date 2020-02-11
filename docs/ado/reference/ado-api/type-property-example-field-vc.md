@@ -1,5 +1,5 @@
 ---
-title: 입력 속성 예제 (필드) (VC + +) | Microsoft Docs
+title: Type 속성 예제 (필드) (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8e166b4c7517a6901bb383629821daebe56984a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67936653"
 ---
 # <a name="type-property-example-field-vc"></a>Type 속성 예제(필드)(VC++)
-이 예제에서는 합니다 [형식](../../../ado/reference/ado-api/type-property-ado.md) 속성의 값에 해당 하는 상수의 이름을 표시 하 여를 **형식** 모든 속성을 [필드](../../../ado/reference/ado-api/field-object.md) 개체를 ***직원*** 테이블입니다. FieldType 함수는이 절차를 실행 하려면 필요 합니다.  
+이 예에서는 ***Employees*** 테이블에 있는 모든 [Field](../../../ado/reference/ado-api/field-object.md) 개체의 **type** 속성 값에 해당 하는 상수의 이름을 표시 하 여 [Type](../../../ado/reference/ado-api/type-property-ado.md) 속성을 보여 줍니다. FieldType 함수는이 프로시저를 실행 하는 데 필요 합니다.  
   
 ## <a name="example"></a>예제  
   
@@ -154,22 +154,22 @@ void PrintComError(_com_error &e) {
 ```  
   
  **Employee 테이블의 필드:**  
- **이름: emp_id, 즉**  
+ **이름: emp_id**  
  **형식: adChar**  
  **이름: fname**  
- **형식: 집합이 있으므로 필요**  
+ **유형: adVarChar**  
  **이름: minit**  
  **형식: adChar**  
  **이름: lname**  
- **형식: 집합이 있으므로 필요**  
+ **유형: adVarChar**  
  **이름: job_id**  
  **형식: adSmallInt**  
  **이름: job_lvl**  
- **Type: adUnsignedTinyInt**  
+ **유형: adUnsignedTinyInt**  
  **이름: pub_id**  
  **형식: adChar**  
  **이름: hire_date**  
- **형식: adDBTimeStamp**   
-## <a name="see-also"></a>관련 항목  
+ **유형: adDBTimeStamp**   
+## <a name="see-also"></a>참고 항목  
  [Field 개체](../../../ado/reference/ado-api/field-object.md)   
  [Type 속성(ADO)](../../../ado/reference/ado-api/type-property-ado.md)

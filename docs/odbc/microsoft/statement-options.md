@@ -15,26 +15,26 @@ ms.assetid: cd73b769-c8b5-43e0-9f80-b3011b7a6162
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3bf99aace8b058e429898846466294cc42612070
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67948839"
 ---
 # <a name="statement-options"></a>명령문 옵션
 > [!IMPORTANT]  
->  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. 대신, Oracle에서 제공 하는 ODBC 드라이버를 사용 합니다.  
+>  이 기능은 이후 버전의 Windows에서 제거 될 예정입니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. 대신 Oracle에서 제공 하는 ODBC 드라이버를 사용 합니다.  
   
- 이러한 옵션에는 사용자 지정 응용 프로그램 내에서 특정 실행 문의 수 있습니다.  
+ 이러한 옵션을 사용 하면 응용 프로그램 내에서 특정 실행 문을 사용자 지정할 수 있습니다.  
   
-|문 옵션|참고|  
+|문 옵션|메모|  
 |----------------------|-----------|  
-|SQL_BIND_TYPE|사용 가능한 메모리 또는 2,147,483,647 바이트를 초과할 수 없습니다.|  
-|SQL_CONCURRENCY|허용 되는 값에 대 한 참조를 [커서 유형 및 동시성 조합](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md)합니다.|  
-|SQL_CURSOR_TYPE|드라이버는 SQL_CURSOR_DYNAMIC를 허용 하지 않습니다. 참조 [SQLSetScrollOptions](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md) 자세한 내용은 합니다. 허용 되는 값에 대 한 참조를 [커서 유형 및 동시성 조합](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md)합니다.|  
-|SQL_GET_BOOKMARK|현재 레코드 수에 대 한 책갈피는 32 비트 정수 값을 반환 합니다. Get만 해당 합니다. 설정할 수 없습니다.|  
-|SQL_KEYSET_SIZE|0에만 설정할 수 있습니다.|  
-|SQL_MAX_ROWS|집합을 결과로 반환할 행의 최대 수입니다.|  
-|SQL_ROW_NUMBER|결과 집합 내의 현재 행의 위치를 지정 하는 32 비트 정수를 반환 합니다. Get만 해당 합니다. 설정할 수 없습니다.|  
-|SQL_ROWSET_SIZE|4294967296 행을 초과할 수 없습니다. 그러나 가상 메모리가 부족 하 여 요청을 처리할 컴퓨터에 있어야 합니다.|  
-|SQL_USE_BOOKMARKS|SQL_UB_ON SQL_USE_BOOKMARKS 설정을 지원 하 고 고정 길이 책갈피를 노출 합니다.|
+|SQL_BIND_TYPE|2147483647 바이트 또는 사용 가능한 메모리를 초과할 수 없습니다.|  
+|SQL_CONCURRENCY|허용 되는 값은 [커서 유형 및 동시성 조합](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md)을 참조 하세요.|  
+|SQL_CURSOR_TYPE|드라이버가 SQL_CURSOR_DYNAMIC을 허용 하지 않습니다. 자세한 내용은 [SQLSetScrollOptions](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md) 를 참조 하세요. 허용 되는 값은 [커서 유형 및 동시성 조합](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md)을 참조 하세요.|  
+|SQL_GET_BOOKMARK|현재 레코드 번호의 책갈피 인 32 비트 정수 값을 반환 합니다. 가져오기 전용; 를 설정할 수 없습니다.|  
+|SQL_KEYSET_SIZE|0 으로만 설정할 수 있습니다.|  
+|SQL_MAX_ROWS|결과 집합에서 반환할 최대 행 수입니다.|  
+|SQL_ROW_NUMBER|결과 집합 내에서 현재 행의 위치를 지정 하는 32 비트 정수를 반환 합니다. 가져오기 전용; 를 설정할 수 없습니다.|  
+|SQL_ROWSET_SIZE|4294967296 행을 초과할 수 없습니다. 그러나 사용자의 요청을 처리할 수 있도록 컴퓨터에 충분 한 가상 메모리가 있어야 합니다.|  
+|SQL_USE_BOOKMARKS|SQL_UB_ON SQL_USE_BOOKMARKS를 설정 하 고 고정 길이 책갈피를 노출 하도록 지원 합니다.|

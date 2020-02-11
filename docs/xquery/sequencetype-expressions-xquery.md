@@ -18,39 +18,39 @@ ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e7c3cdf33b0765ba50e5553f3bc31fd5c69312e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946289"
 ---
 # <a name="sequencetype-expressions-xquery"></a>SequenceType 식(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  XQuery에서는 값이 항상 시퀀스입니다. 값 유형을 시퀀스 유형이라고 합니다. 시퀀스 유형을에서 사용할 수는 **인스턴스의** XQuery 식입니다. XQuery 식에서 유형을 참조해야 할 경우 XQuery 사양에 설명된 SequenceType 구문이 사용됩니다.  
+  XQuery에서는 값이 항상 시퀀스입니다. 값 유형을 시퀀스 유형이라고 합니다. 이 시퀀스 유형은 XQuery 식 **의 인스턴스에서** 사용할 수 있습니다. XQuery 식에서 유형을 참조해야 할 경우 XQuery 사양에 설명된 SequenceType 구문이 사용됩니다.  
   
- 에 원자성 유형 이름도 사용할 수도 있습니다는 **로 캐스팅** XQuery 식입니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 **인스턴스의** 하 고 **로 캐스팅** 에서는 Sequencetype의 XQuery 식이 부분적으로 지원 됩니다.  
+ 원자성 형식 이름은 XQuery 식 **으로 캐스트** 에도 사용할 수 있습니다. 에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]SequenceTypes에 대 한 XQuery 식 및 **인스턴스** 는 **부분적으로 지원** 됩니다.  
   
 ## <a name="instance-of-operator"></a>instance of 연산자  
- 합니다 **인스턴스의** 지정한 식의 값의 동적 또는 런타임 형식을 확인 하려면 연산자를 사용할 수 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ 연산자 **의 인스턴스** 를 사용 하 여 지정 된 식의 동적 또는 런타임 형식 값을 확인할 수 있습니다. 다음은 그 예입니다.  
   
 ```  
   
 Expression instance of SequenceType[Occurrence indicator]  
 ```  
   
- 합니다 `instance of` 연산자는 `Occurrence indicator`, 카디널리티, 결과 시퀀스의 항목 수를 지정 합니다. 카디널리티가 지정되지 않은 경우 1로 간주됩니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], 물음표만 ( **?)**  발생 표시 지원 됩니다. **?** 발생 표시 함을 `Expression` 0 개 이상의 항목을 반환할 수 있습니다. 경우는 **?** 발생 표시를 지정 하면 `instance of` 경우 True를 반환 합니다 `Expression` 형식이 지정 된 일치 `SequenceType`여부에 관계 없이 `Expression` 단일 또는 빈 시퀀스를 반환 합니다.  
+ `instance of` 연산자 `Occurrence indicator`는 결과 시퀀스의 카디널리티, 항목 수를 지정 합니다. 카디널리티가 지정되지 않은 경우 1로 간주됩니다. 에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]물음표 (**?)** 발생 표시만 지원 됩니다. **?** 발생 표시기는가 `Expression` 0 개 또는 1 개 항목을 반환할 수 있음을 나타냅니다. 그렇다면 **** 발생 표시기가 지정 된 `instance of` 경우에는가 `Expression` singleton을 반환 하는지 `SequenceType`또는 빈 시퀀스를 `Expression` 반환 하는지 여부에 관계 없이 형식이 지정 된와 일치 하는 경우 True를 반환 합니다.  
   
- 경우는 **?** 발생 표시를 지정 하지 않으면 `sequence of` 경우에만 True를 반환 합니다는 `Expression` 일치 항목을 입력 합니다 `Type` 지정 및 `Expression` 단일 반환 합니다.  
+ 그렇다면 **** 발생 표시기가 지정 되지 않은 `sequence of` 경우 `Expression` 형식이 `Type` 지정 된와 일치 하 고 `Expression` 단일 항목을 반환 하는 경우에만 True를 반환 합니다.  
   
- **참고** 더하기 기호 ( **+** )와 별표 ( **&#42;** ) 발생 표시가 지원 되지 않습니다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **참고** 더하기 기호 (**+**)와 별표 (**&#42;**) 발생 지표는에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]지원 되지 않습니다.  
   
- 다음 예제에서는 사용을 보여 합니다**인스턴스의** XQuery 연산자입니다.  
+ 다음 예에서는 XQuery 연산자**의 인스턴스** 를 사용 하는 방법을 보여 줍니다.  
   
 ### <a name="example-a"></a>예 1  
- 다음 예제는 **xml** 변수를 입력 하 고이 대 한 쿼리를 지정 합니다. 쿼리 식은 `instance of` 연산자를 지정하여 첫 번째 피연산자가 반환한 동적 값 유형이 두 번째 피연산자에 지정된 유형과 일치하는지 여부를 확인합니다.  
+ 다음 예에서는 **xml** 형식 변수를 만들고이에 대 한 쿼리를 지정 합니다. 쿼리 식은 `instance of` 연산자를 지정하여 첫 번째 피연산자가 반환한 동적 값 유형이 두 번째 피연산자에 지정된 유형과 일치하는지 여부를 확인합니다.  
   
- 125 값은 지정 된 형식의 인스턴스가 다음 쿼리는 True를 반환 합니다 **xs: integer**:  
+ 다음 쿼리는 125 값이 지정 된 **xs: integer**형식의 인스턴스인 경우 True를 반환 합니다.  
   
 ```  
 declare @x xml  
@@ -98,7 +98,7 @@ go
 ### <a name="example-b"></a>예 2  
  이 예에서는 AdventureWorks 예제 데이터베이스에 있는 형식화된 XML 열을 쿼리합니다. 쿼리 중인 열과 관련된 XML 스키마 컬렉션이 형식화 정보를 제공합니다.  
   
- 식에서 **data ()** 형식인 열에 연결 된 스키마에 따라 xs: string ProductModelID 특성의 형식화 된 값을 반환 합니다. 따라서 `instance of`에서는 True를 반환합니다.  
+ 식에서 **data ()** 는 열과 연결 된 스키마에 따라 형식이 xs: String 인 제품 modelid 특성의 형식화 된 값을 반환 합니다. 따라서 `instance of`에서는 True를 반환합니다.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -109,9 +109,9 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- 자세한 내용은 [형식화된 XML과 형식화되지 않은 XML 비교](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)를 참조하세요.  
+ 자세한 내용은 [형식화 된 Xml과 형식화 되지 않은 Xml 비교](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)를 참조 하세요.  
   
- 다음 쿼리에서 usetheBoolean `instance of` LocationID 특성 유형이 xs: integer 인지 여부를 결정 하는 식:  
+ 다음 쿼리는 부울 `instance of` 식을 Usetheboolean 특성이 xs: integer 형식 인지 여부를 확인 합니다.  
   
 ```  
 SELECT Instructions.query('  
@@ -138,13 +138,13 @@ where ProductModelID=19
  쿼리에서 True를 반환합니다.  
   
 ### <a name="example-c"></a>예 3  
- 공용 구조체 유형을 사용 하는 경우는 `instance of` 식에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 제한이: 특히 요소나 특성 유형의 경우 구조체 형식 `instance of` 정확 하 게 형식을 확인할 수 있습니다. 따라서 SequenceType에 사용된 원자성 유형이 simpleType 계층에서 실제 식 유형의 최상위 부모가 아닐 경우 쿼리에서 False를 반환합니다. 즉, SequenceType에 지정된 원자성 유형은 anySimpleType의 직계 자식이어야 합니다. 형식 계층 구조에 대 한 자세한 내용은 참조 하세요. [XQuery의 형식 캐스트 규칙](../xquery/type-casting-rules-in-xquery.md)합니다.  
+ Union 형식을 사용할 때의 `instance of` [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 식에는 제한이 있습니다. 특히 요소 또는 특성의 형식이 공용 구조체 형식이 면에서 정확한 형식을 결정 하지 `instance of` 못할 수 있습니다. 따라서 SequenceType에 사용된 원자성 유형이 simpleType 계층에서 실제 식 유형의 최상위 부모가 아닐 경우 쿼리에서 False를 반환합니다. 즉, SequenceType에 지정된 원자성 유형은 anySimpleType의 직계 자식이어야 합니다. 형식 계층 구조에 대 한 자세한 내용은 [XQuery의 형식 캐스팅 규칙](../xquery/type-casting-rules-in-xquery.md)을 참조 하세요.  
   
  다음 쿼리 예에서는 아래의 작업을 수행합니다.  
   
 -   정수, 문자열 유형 등의 공용 구조체 유형이 정의된 XML 스키마 컬렉션을 만듭니다.  
   
--   형식화 된 선언 **xml** XML 스키마 컬렉션을 사용 하 여 변수입니다.  
+-   XML 스키마 컬렉션을 사용 하 여 형식화 된 **xml** 변수를 선언 합니다.  
   
 -   변수에 예제 XML 인스턴스를 할당합니다.  
   
@@ -163,7 +163,8 @@ CREATE XML SCHEMA COLLECTION MyTestSchema AS '
 Go  
 ```  
   
- `instance of` 식에 지정한 SequenceType이 지정된 실제 식 유형의 최상위 부모가 아니므로 다음 쿼리는 False를 반환합니다. 즉, 값은 <`TestElement`> 정수 형식이 합니다. 최상위 부모는 xs:decimal입니다. 그러나 xs:decimal는 `instance of` 연산자의 두 번째 피연산자로 지정되지 않습니다.  
+ 
+  `instance of` 식에 지정한 SequenceType이 지정된 실제 식 유형의 최상위 부모가 아니므로 다음 쿼리는 False를 반환합니다. 즉, <`TestElement`>의 값은 정수 형식입니다. 최상위 부모는 xs:decimal입니다. 그러나 xs:decimal는 `instance of` 연산자의 두 번째 피연산자로 지정되지 않습니다.  
   
 ```  
 SET QUOTED_IDENTIFIER ON  
@@ -188,9 +189,9 @@ go
 ```  
   
 ### <a name="example-d"></a>예 4  
- 이 예제에서는 먼저 XML 스키마 컬렉션을 만들고 사용 하 여 입력 하는 **xml** 변수입니다. 형식화 된 **xml** 변수 보여 주기 위해 다음 쿼리는 `instance of` 기능입니다.  
+ 이 예에서는 먼저 XML 스키마 컬렉션을 만들고이 컬렉션을 사용 하 여 **xml** 변수를 입력 합니다. 그런 다음 형식화 된 **xml** 변수를 쿼리하여 `instance of` 기능을 보여 줍니다.  
   
- 다음 XML 스키마 컬렉션 정의 단순 형식과 요소를 <`root`>, myType의:  
+ 다음 XML 스키마 컬렉션은 단순 형식 myType 및 myType 형식의 요소 <`root`>을 정의 합니다.  
   
 ```  
 drop xml schema collection SC  
@@ -209,7 +210,7 @@ xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes">
 Go  
 ```  
   
- 이제 만들어서 형식화 된 **xml** 변수 및 쿼리:  
+ 이제 형식화 된 **xml** 변수를 만들고 쿼리 합니다.  
   
 ```  
 DECLARE @var XML(SC)  
@@ -234,11 +235,11 @@ go
 ### <a name="example-e"></a>예 5  
  다음 예에서는 식이 IDREFS 특성의 값 중 하나를 검색하고 `instance of`를 사용하여 값이 IDREF 유형인지 여부를 확인합니다. 이 예에서는 다음을 수행합니다.  
   
--   XML 스키마 컬렉션을 만듭니다는 <`Customer`> 요소에는 **OrderList** IDREFS 유형 특성 및 <`Order`> 요소에는 **OrderID** ID 유형 특성입니다.  
+-   <`Customer`> 요소가 **orderlist** IDREFS 유형 특성을 포함 하 고 <`Order`> 요소의 **OrderID** ID 유형 특성이 있는 XML 스키마 컬렉션을 만듭니다.  
   
--   형식화 된 만듭니다 **xml** 변수와 예제 XML 인스턴스를 할당 합니다.  
+-   형식화 된 **xml** 변수를 만들고 여기에 샘플 xml 인스턴스를 할당 합니다.  
   
--   변수에 대한 쿼리를 지정합니다. 첫 번째 OrderList IDRERS 유형 특성에서 첫 번째 순서 ID 값을 검색 하는 쿼리 식 <`Customer`>. 검색된 값은 IDREF 유형입니다. 따라서 `instance of`에서는 True를 반환합니다.  
+-   변수에 대한 쿼리를 지정합니다. 쿼리 식은 첫 번째 <`Customer`>의 orderlist IDRERS 형식 특성에서 첫 번째 주문 ID 값을 검색 합니다. 검색된 값은 IDREF 유형입니다. 따라서 `instance of`에서는 True를 반환합니다.  
   
 ```  
 create xml schema collection SC as  
@@ -308,13 +309,14 @@ select @x.query(' declare namespace CustOrders="Customers";
 ### <a name="implementation-limitations"></a>구현 시 제한 사항  
  제한 사항은 다음과 같습니다.  
   
--   합니다 **schema-element ()** 하 고 **schema-attribute()** 비교 하기 위해 시퀀스 유형은 지원 되지 않습니다는 `instance of` 연산자입니다.  
+-   **스키마 요소 ()** 및 **스키마 특성 ()** 시퀀스 형식은 `instance of` 연산자와 비교할 때 지원 되지 않습니다.  
   
--   `(1,2) instance of xs:integer*`와 같은 전체 시퀀스는 지원되지 않습니다.  
+-   
+  `(1,2) instance of xs:integer*`와 같은 전체 시퀀스는 지원되지 않습니다.  
   
--   한 형태를 사용 하는 경우는 **element()** 시퀀스와 같은 형식 이름을 지정 하는 유형의 `element(ElementName, TypeName)`, 물음표 (?)로 유형을 한 정해야 합니다. 예를 들어 `element(Title, xs:string?)`는 요소가 null일 수 있음을 나타냅니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 런타임 검색을 지원 하지 않습니다 합니다 **xsi: nil** 사용 하 여 속성 `instance of`합니다.  
+-   와 `element(ElementName, TypeName)`같이 형식 이름을 지정 하는 **요소 ()** 시퀀스 형식의 폼을 사용 하는 경우에는 물음표 (?)로 형식을 정규화 해야 합니다. 예를 들어 `element(Title, xs:string?)`는 요소가 null일 수 있음을 나타냅니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는를 사용 `instance of`하 여 **xsi: nil** 속성의 런타임 검색을 지원 하지 않습니다.  
   
--   공용 구조체로 형식화된 요소나 특성에서 `Expression`의 값을 가져올 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 파생되지 않은 기본 유형만 식별할 수 있습니다. 이 기본 유형에서 값 유형이 파생됩니다. 예를 들어 경우 <`e1`>의 정적 형식을 갖도록 정의 됩니다 (xs: integer | xs: string), 다음 False를 반환 합니다.  
+-   공용 구조체로 형식화된 요소나 특성에서 `Expression`의 값을 가져올 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 파생되지 않은 기본 유형만 식별할 수 있습니다. 이 기본 유형에서 값 유형이 파생됩니다. 예를 들어 <`e1`> 정적 형식이 (xs: integer | xs: string)로 정의 된 경우 다음은 False를 반환 합니다.  
   
     ```  
     data(<e1>123</e1>) instance of xs:integer  
@@ -322,17 +324,18 @@ select @x.query(' declare namespace CustOrders="Customers";
   
      그러나 `data(<e1>123</e1>) instance of xs:decimal`에서는 True를 반환합니다.  
   
--   에 대 한는 **processing-instruction()** 하 고 **document-node()** 시퀀스 형식이 인수가 없는 형태만 허용 됩니다. 예를 들어 `processing-instruction()`은 사용할 수 있지만 `processing-instruction('abc')`은 사용할 수 없습니다.  
+-   **처리 명령 ()** 및 **문서 노드 ()** 시퀀스 형식의 경우 인수가 없는 폼만 허용 됩니다. 예를 들어 `processing-instruction()`은 사용할 수 있지만 `processing-instruction('abc')`은 사용할 수 없습니다.  
   
 ## <a name="cast-as-operator"></a>cast as 연산자  
- 합니다 **로 캐스팅** 식 값을 특정 데이터 형식으로 변환할 수 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ **Cast as** expression을 사용 하 여 값을 특정 데이터 형식으로 변환할 수 있습니다. 다음은 그 예입니다.  
   
 ```  
   
 Expression cast as  AtomicType?  
 ```  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 `AtomicType` 뒤에 물음표(?)가 필요합니다. 예를 들어, 다음 쿼리에 표시 된 것 처럼 `"2" cast as xs:integer?` 문자열 값을 정수로 변환 합니다.  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 `AtomicType` 뒤에 물음표(?)가 필요합니다. 예를 들어 다음 쿼리와 같이 문자열 값을 정수로 `"2" cast as xs:integer?` 변환 합니다.  
   
 ```  
 declare @x xml  
@@ -340,7 +343,7 @@ set @x=''
 select @x.query('"2" cast as xs:integer?')  
 ```  
   
- 다음 쿼리에서 **data ()** 문자열 형식 ProductModelID 특성의 형식화 된 값을 반환 합니다. `cast as`연산자 값을 xs: integer로 변환 합니다.  
+ 다음 쿼리에서 **data ()는 데이터** 형식의 제품 modelid 특성의 형식화 된 값을 반환 합니다. 연산자 `cast as`는 값을 xs: integer로 변환 합니다.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
@@ -351,10 +354,11 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- 명시적으로 사용 **data ()** 이 쿼리에서 필요 하지 않습니다. `cast as` 식은 입력 식에 암시적 원자화를 수행합니다.  
+ 이 쿼리에서는 명시적으로 **data ()** 를 사용 하지 않아도 됩니다. 
+  `cast as` 식은 입력 식에 암시적 원자화를 수행합니다.  
   
 ### <a name="constructor-functions"></a>생성자 함수  
- 원자성 유형 생성자 함수를 사용할 수 있습니다. 예를 들어, 사용 하는 대신를 `cast as` 연산자 `"2" cast as xs:integer?`를 사용할 수는 **xs:integer()** 다음 예제와 같이 생성자 함수:  
+ 원자성 유형 생성자 함수를 사용할 수 있습니다. 예를 들어, `cast as` 연산자 `"2" cast as xs:integer?`를 사용 하는 대신 다음 예제와 같이 **xs: integer ()** 생성자 함수를 사용할 수 있습니다.  
   
 ```  
 declare @x xml  
@@ -370,17 +374,17 @@ set @x=''
 select @x.query('xs:date("2000-01-01Z")')  
 ```  
   
- 사용자 정의 원자성 유형에도 생성자를 사용할 수 있습니다. 예를 들어, XML 스키마 컬렉션에 연결 된 XML 데이터 형식, 단순 형식을 정의 **myType()** 생성자를 사용 하 여 해당 형식의 값을 반환할 수 있습니다.  
+ 사용자 정의 원자성 유형에도 생성자를 사용할 수 있습니다. 예를 들어 XML 데이터 형식과 연결 된 XML 스키마 컬렉션에서 단순 형식을 정의 하는 경우 **myType ()** 생성자를 사용 하 여 해당 형식의 값을 반환할 수 있습니다.  
   
 #### <a name="implementation-limitations"></a>구현 시 제한 사항  
   
--   XQuery 식 **typeswitch**하십시오 **캐스팅할 수 있는**, 및 **처리** 지원 되지 않습니다.  
+-   XQuery 식 **typeswitch**, **castable**및 **treat** 는 지원 되지 않습니다.  
   
--   **로 캐스팅** 물음표 (?) 필요 합니다. atomic 형식입니다.  
+-   **로 캐스트** 하려면 물음표 (?)가 필요 합니다. 원자 형식 후  
   
--   **xs: qname** 캐스팅에 대 한 형식으로 지원 되지 않습니다. 사용 하 여 **Expanded-qname** 대신 합니다.  
+-   **xs: QName** 은 캐스팅 형식으로 지원 되지 않습니다. 대신 **확장 된 QName을** 사용 하십시오.  
   
--   **xs: date**, **xs: time**, 및 **xs: datetime** a에서 Z로 표시 되는 시간대가 필요 합니다.  
+-   **xs: date**, **xs: time**및 **Xs: datetime** 에는 Z로 표시 되는 표준 시간대가 필요 합니다.  
   
      표준 시간대를 지정하지 않았으므로 다음 쿼리는 실패합니다.  
   
@@ -406,8 +410,8 @@ select @x.query('xs:date("2000-01-01Z")')
     <a>2002-05-25Z</a>  
     ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [XQuery 식](../xquery/xquery-expressions.md)   
- [형식 시스템 &#40;XQuery&#41;](../xquery/type-system-xquery.md)  
+ [Type System &#40;XQuery&#41;](../xquery/type-system-xquery.md)  
   
   

@@ -15,14 +15,14 @@ ms.assetid: d33467a5-5a56-450d-98c1-c3ce6f9f103c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0ae1a96f2f5a72f354e376faa3e9e7370f9fcb92
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932478"
 ---
 # <a name="getrows-method-example-jscript"></a>GetRows 메서드 예제(JScript)
-이 예제에서는 [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) 의 모든 행을 검색 하는 메서드는 *Custiomers* 에서 테이블을 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 결과 데이터를 사용 하 여 배열을 채우는 합니다. **GetRows** 메서드는 원하는 행 수보다 적은 두 가지 경우에 반환: 경우 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 에 도달한 경우 **GetRows** 했던 레코드를 검색 하려고 했습니다. 다른 사용자가 삭제 합니다. 함수 반환 **False** 두 번째 경우 발생 하는 경우에 합니다. 잘라내기 및 메모장 이나 다른 텍스트 편집기에 다음 코드를 붙여넣고,으로 저장 **GetRowsJS.asp**합니다.  
+이 예에서는 [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) 메서드를 사용 하 여 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 에서 *Custiomers* 테이블의 모든 행을 검색 하 고 결과 데이터로 배열을 채웁니다. **Getrows** 메서드는 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 에 도달 했거나 **getrows** 에서 다른 사용자가 삭제 한 레코드를 검색 하려고 시도 하는 경우 두 경우에 원하는 수의 행 보다 더 작은 값을 반환 합니다. 함수는 두 번째 사례가 발생 하는 경우에만 **False** 를 반환 합니다. 다음 코드를 잘라내어 메모장 또는 다른 텍스트 편집기에 붙여 넣고 **GetRowsJS**로 저장 합니다.  
   
 ```  
 <!-- BeginGetRowsJS -->  
@@ -158,6 +158,6 @@ BODY {
 <!-- EndGetRowsJS -->  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [GetRows 메서드 (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

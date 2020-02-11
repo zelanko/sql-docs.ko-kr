@@ -1,5 +1,5 @@
 ---
-title: 메서드를 작성 | Microsoft Docs
+title: Write 메서드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 02982e6a-ac5f-4af2-b82e-ce12534b84b2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 84e10e8edb6cca3c4e56ac1dd0106b3c641af872
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67945904"
 ---
 # <a name="write-method"></a>Write 메서드
-이진 데이터를 쓰는 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다.  
+[스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체에 이진 데이터를 씁니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,20 +35,20 @@ Stream.Write Buffer
   
 #### <a name="parameters"></a>매개 변수  
  *Buffer*  
- A **Variant** 쓸 바이트의 배열을 포함 하는 합니다.  
+ 쓸 바이트 배열을 포함 하는 **Variant** 입니다.  
   
 ## <a name="remarks"></a>설명  
- 지정 된 바이트는 **Stream** 각 바이트 사이 공백 넣지 않고 개체입니다.  
+ 지정 된 바이트는 각 바이트 사이에 공백을 넣지 않고 **Stream** 개체에 기록 됩니다.  
   
- 현재 [위치](../../../ado/reference/ado-api/position-property-ado.md) 바이트 기록된 된 데이터를 다음으로 설정 됩니다. 합니다 **쓰기** 메서드 스트림에서 데이터의 나머지 부분을 잘라내지 않습니다. 이러한 바이트를 잘라내려면 원한다 면 호출 [SetEOS](../../../ado/reference/ado-api/seteos-method.md)합니다.  
+ 현재 [위치](../../../ado/reference/ado-api/position-property-ado.md) 는 쓴 데이터 다음의 바이트로 설정 됩니다. **Write** 메서드는 스트림의 나머지 데이터를 자르지 않습니다. 이러한 바이트를 잘라내는 경우 [SetEOS](../../../ado/reference/ado-api/seteos-method.md)를 호출 합니다.  
   
- 현재 이전 작성 하는 경우 [EOS](../../../ado/reference/ado-api/eos-property.md) 위치를 [크기](../../../ado/reference/ado-api/size-property-ado-stream.md) 의 **Stream** 포함 된 새 바이트 증가 및 **EOS** 이동 새 마지막 바이트에는 **Stream**합니다.  
+ 현재 [EOS](../../../ado/reference/ado-api/eos-property.md) 위치를 지나서 쓰는 경우 **스트림의** [크기가](../../../ado/reference/ado-api/size-property-ado-stream.md) 새 바이트를 포함 하도록 증가 하 고 **EOS** 가 **스트림의**새 마지막 바이트로 이동 합니다.  
   
 > [!NOTE]
->  합니다 **작성** 이진 스트림을 사용 하 여 메서드를 사용 하는 ([형식](../../../ado/reference/ado-api/type-property-ado-stream.md) 됩니다 **adTypeBinary**). 텍스트 스트림에 대 한 (**형식** 됩니다 **adTypeText**)를 사용 하 여 [WriteText](../../../ado/reference/ado-api/writetext-method.md)합니다.  
+>  **Write** 메서드는 이진 스트림과 함께 사용 됩니다 ( **Adtypebinary**[형식](../../../ado/reference/ado-api/type-property-ado-stream.md) ). 텍스트 스트림의 경우 (**형식** 은 **adTypeText**) [WriteText](../../../ado/reference/ado-api/writetext-method.md)를 사용 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [스트림 개체(ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [WriteText 메서드](../../../ado/reference/ado-api/writetext-method.md)

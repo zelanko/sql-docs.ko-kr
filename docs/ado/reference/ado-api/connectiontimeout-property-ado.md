@@ -16,27 +16,27 @@ ms.assetid: 8904a403-1383-4b4b-b53d-5c01d6f5deac
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 03d3de2c4aabaf4ad8cbc45d9900b33883ff9a48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933460"
 ---
 # <a name="connectiontimeout-property-ado"></a>ConnectionTimeout 속성(ADO)
-종료 하 고 오류를 생성 하기 전에 연결을 설정 하는 동안 대기할 시간을 나타냅니다.  
+시도를 종료 하 고 오류를 생성 하기 전에 연결을 설정 하는 동안 대기 하는 시간을 나타냅니다.  
   
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
- 설정 하거나 반환 된 **긴** 연결이 열릴 때까지 대기 하는 초 단위로 나타내는 값입니다. 기본값은 15입니다.  
+ 연결이 열릴 때까지 대기 하는 시간 (초)을 나타내는 **long** 값을 설정 하거나 반환 합니다. 기본값은 15입니다.  
   
 ## <a name="remarks"></a>설명  
- 사용 합니다 **ConnectionTimeout** 속성을 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 경우 네트워크 트래픽 또는 많은 서버 사용에서 지연이 발생 하 게 연결 시도 중단 하는 데 필요한 개체입니다. 경우에서 시간을 **ConnectionTimeout** 오류가 발생 하는 연결을 열기 전에 속성 설정은 경과 하 고 ADO 시도 취소 합니다. 속성을 0으로 설정 하면 ADO 연결이 열릴 때까지 무한정 기다릴 수 있습니다. 코드를 작성 하는 공급자를 지원 해야 합니다 **ConnectionTimeout** 기능입니다.  
+ 네트워크 트래픽 또는 과도 한 서버 사용의 지연으로 인해 연결 시도를 중단 해야 하는 경우 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체에서 **ConnectionTimeout** 속성을 사용 합니다. 연결을 열기 전에 **ConnectionTimeout** 속성 설정의 시간이 경과 하면 오류가 발생 하 고 ADO에서 시도를 취소 합니다. 속성을 0으로 설정 하면 ADO는 연결이 열릴 때까지 무기한 대기 합니다. 코드를 작성 하는 공급자가 **ConnectionTimeout** 기능을 지원 하는지 확인 합니다.  
   
- 합니다 **ConnectionTimeout** 를 열었을 때 닫혀 있고 읽기 전용으로 연결 되 면 속성은 읽기/쓰기입니다.  
+ **ConnectionTimeout** 속성은 연결이 닫힌 경우 읽기/쓰기이 고, 열려 있으면 읽기 전용입니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목  
- [ConnectionString, ConnectionTimeout, 및 State 속성 예제 (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
- [ConnectionString, ConnectionTimeout, 및 State 속성 예제 (VC + +)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
+## <a name="see-also"></a>참고 항목  
+ [ConnectionString, ConnectionTimeout 및 State 속성 예제 (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
+ [ConnectionString, ConnectionTimeout 및 State 속성 예제 (VC + +)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
  [CommandTimeout 속성(ADO)](../../../ado/reference/ado-api/commandtimeout-property-ado.md)

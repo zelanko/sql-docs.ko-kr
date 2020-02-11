@@ -1,5 +1,5 @@
 ---
-title: Error 개체 속성, 메서드 및 이벤트 | Microsoft Docs
+title: 오류 개체 속성, 메서드 및 이벤트 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,10 +13,10 @@ ms.assetid: cd69e4b7-82bf-4ffc-bc53-c535ba20161f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: def593c725f2faa004e13bbdb3e6ded3287f51ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933019"
 ---
 # <a name="error-object-properties-methods-and-events"></a>Error 개체 속성, 메서드 및 이벤트
@@ -39,5 +39,5 @@ ms.locfileid: "67933019"
 ## <a name="events"></a>이벤트  
  없음  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Error 개체](../../../ado/reference/ado-api/error-object.md)

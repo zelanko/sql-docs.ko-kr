@@ -16,18 +16,18 @@ ms.assetid: de46e0b1-d946-4021-bff6-2d8e3187656d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7927eef8105fff23a3fe790f32794fe5dd44cdae
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68769188"
 ---
-# <a name="spaddmergealternatepublisher-transact-sql"></a>sp_addmergealternatepublisher(Transact-SQL)
+# <a name="sp_addmergealternatepublisher-transact-sql"></a>sp_addmergealternatepublisher(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   동기화 파트너를 대체하기 위한 구독자 기능을 추가합니다. 게시 속성에서 구독자가 다른 게시자와 동기화할 수 있게 지정해야 합니다. 이 저장 프로시저는 구독 데이터베이스의 구독자에서 실행됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -67,13 +67,13 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>설명  
- **sp_addmergealternatepublisher** 은 병합 복제에 사용 됩니다.  
+ **sp_addmergealternatepublisher** 는 병합 복제에 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
- **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만이 **sp_addmergealternatepublisher**을 실행할 수 있습니다.  
+ **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_addmergealternatepublisher**을 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [sp_dropmergealternatepublisher &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergealternatepublisher-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;sp_dropmergealternatepublisher &#40;](../../relational-databases/system-stored-procedures/sp-dropmergealternatepublisher-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

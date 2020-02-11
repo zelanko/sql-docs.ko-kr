@@ -17,14 +17,14 @@ ms.assetid: d187fbc6-5fac-4abb-803d-bf344dcf0302
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: de8baf504a76407037322fd6b799f6d63584eae7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67967031"
 ---
 # <a name="changepassword-method-adox"></a>ChangePassword 메서드(ADOX)
-암호를 변경 된 [사용자](../../../ado/reference/adox-api/user-object-adox.md) 계정.  
+[사용자](../../../ado/reference/adox-api/user-object-adox.md) 계정에 대 한 암호를 변경 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,18 +35,18 @@ User.ChangePassword OldPassword, NewPassword
   
 #### <a name="parameters"></a>매개 변수  
  *OldPassword*  
- A **문자열** 사용자의 기존 암호를 지정 하는 값입니다. 사용자 암호가 현재 없는 경우 빈 문자열을 사용 하 여 ("")에 대 한 *OldPassword*합니다.  
+ 사용자의 기존 암호를 지정 하는 **문자열** 값입니다. 사용자에 게 현재 암호가 없으면 *oldpassword*에 빈 문자열 ("")을 사용 합니다.  
   
  *NewPassword*  
- A **문자열** 새 암호를 지정 하는 값입니다.  
+ 새 암호를 지정 하는 **문자열** 값입니다.  
   
 ## <a name="remarks"></a>설명  
  보안상의 이유로 새 암호 외에도 이전 암호를 지정 해야 합니다.  
   
- 공급자 트러스트를 받을 대상 속성의 관리를 지원 하지 않는 경우 오류가 발생 합니다.  
+ 공급자가 트러스티 속성의 관리를 지원 하지 않는 경우 오류가 발생 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [User 개체(ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
+ [사용자 개체(ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Groups 및 Users Append, ChangePassword 메서드 예제(VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)

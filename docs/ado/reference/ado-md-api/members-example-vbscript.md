@@ -1,5 +1,5 @@
 ---
-title: Members 예제 (VBScript) | Microsoft Docs
+title: Members 예 (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 87bbd4ad-bb1a-4123-93ef-99ef47fd970b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e8f3fc746660b1382d8c06f5ffc343fd52ecf024
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949411"
 ---
 # <a name="members-example-vbscript"></a>Members 예제(VBScript)
-이 샘플 MDX 쿼리 문자열을 사용 하 여 OLAP 데이터를 검색 하 고 열 확장 기능을 사용 하 여 다차원에 대 한 HTML 테이블 구조 결과 셀 집합을 씁니다.  
+이 샘플에서는 MDX 쿼리 문자열을 사용 하 여 OLAP 데이터를 검색 하 고, 여러 차원 셀 집합의 열 확장 기능을 사용 하 여 결과 셀 집합을 HTML 테이블 구조에 기록 합니다.  
   
 ```  
 <%@ Language=VBScript %>  

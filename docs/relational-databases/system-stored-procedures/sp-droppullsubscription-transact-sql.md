@@ -16,18 +16,18 @@ ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f4ad522c13987f7617def29d5ff112a5a26db8b9
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771448"
 ---
-# <a name="spdroppullsubscription-transact-sql"></a>sp_droppullsubscription(Transact-SQL)
+# <a name="sp_droppullsubscription-transact-sql"></a>sp_droppullsubscription(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   구독자의 현재 데이터베이스에서 구독을 삭제합니다. 이 저장 프로시저는 끌어오기 구독 데이터베이스의 구독자에서 실행됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -54,7 +54,7 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ## <a name="remarks"></a>설명  
  **sp_droppullsubscription** 는 스냅숏 복제 및 트랜잭션 복제에 사용 됩니다.  
   
- **sp_droppullsubscription** 는 [MSreplication_subscriptions &#40;transact-sql&#41; ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) 테이블과 구독자의 해당 배포자 에이전트에서 해당 행을 삭제 합니다. [MSreplication_subscriptions &#40;transact-sql&#41;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md)에 남아 있는 행이 없으면 테이블을 삭제 합니다.  
+ **sp_droppullsubscription** [MSreplication_subscriptions &#40;Transact-sql&#41;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) 테이블과 구독자의 해당 배포자 에이전트에서 해당 행을 삭제 합니다. [Transact-sql&#41;MSreplication_subscriptions &#40;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md)행이 남아 있지 않으면 해당 테이블을 삭제 합니다.  
   
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_droptranpullsubscription](../../relational-databases/replication/codesnippet/tsql/sp-droppullsubscription-_1.sql)]  
@@ -62,11 +62,11 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버 또는 끌어오기 구독을 만든 사용자만 **sp_droppullsubscription**을 실행할 수 있습니다. **Db_owner** 고정 데이터베이스 역할은 끌어오기 구독을 만든 사용자가이 역할에 속하는 경우에만 **sp_droppullsubscription** 을 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [끌어오기 구독 삭제](../../relational-databases/replication/delete-a-pull-subscription.md)   
- [sp_addpullsubscription &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [sp_change_subscription_properties &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
- [sp_helppullsubscription &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
- [sp_dropsubscription &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)  
+ [Transact-sql&#41;sp_addpullsubscription &#40;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [Transact-sql&#41;sp_change_subscription_properties &#40;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
+ [Transact-sql&#41;sp_helppullsubscription &#40;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
+ [Transact-sql&#41;sp_dropsubscription &#40;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)  
   
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8d40d6a3b6cacb65cf1463b0eeb8b29e59e079e4
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893511"
 ---
 # <a name="using-member-expressions"></a>멤버 식 사용
@@ -20,7 +20,7 @@ ms.locfileid: "68893511"
 
   멤버 식은 멤버 식별자, 멤버 함수 또는 멤버로 변환될 수 있는 식을 포함합니다.  
   
- 멤버 식별자의 형식은 여러 가지일 수 있습니다. 가장 간단한 형식의 멤버 식별자는 멤버 이름으로 구성됩니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ 멤버 식별자의 형식은 여러 가지일 수 있습니다. 가장 간단한 형식의 멤버 식별자는 멤버 이름으로 구성됩니다. 다음은 그 예입니다.  
   
 ```  
 SELECT Amount ON 0  
@@ -56,12 +56,12 @@ Dimension_Name
   
 ```  
   
- 멤버를 반환하는 여러 MDX 함수가 있습니다. 전체 목록은 [Mdx 함수 참조 &#40;&#41; mdx](../mdx/mdx-function-reference-mdx.md) 를 참조 하십시오.  
+ 멤버를 반환하는 여러 MDX 함수가 있습니다. 전체 목록은 mdx [함수 참조 &#40;mdx](../mdx/mdx-function-reference-mdx.md) 를 참조 하세요&#41;  
   
 > [!NOTE]  
->  멤버 이름 및 멤버 키에 대 한 자세한 내용은 [멤버, 튜플 및 &#40;집합 MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)를 참조 하십시오.  
+>  멤버 이름 및 멤버 키에 대 한 자세한 내용은 [MDX&#41;&#40;멤버, 튜플 및 집합 작업 ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)을 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [식 &#40;MDX&#41;](../mdx/expressions-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [MDX &#40;식&#41;](../mdx/expressions-mdx.md)  
   
   

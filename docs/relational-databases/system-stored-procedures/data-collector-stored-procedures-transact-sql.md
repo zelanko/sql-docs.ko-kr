@@ -1,5 +1,5 @@
 ---
-title: 데이터 수집기 저장 프로시저 (TRANSACT-SQL) | Microsoft Docs
+title: 데이터 수집기 저장 프로시저 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,16 +17,16 @@ ms.assetid: 9dd2824f-ea55-439b-8cd5-3a81fedb1432
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 522efa96e554a7b6eecb6e36c0771cbe95163a37
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942409"
 ---
 # <a name="data-collector-stored-procedures-transact-sql"></a>데이터 수집기 저장 프로시저(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  SQL Server 데이터 수집기 및 다음 구성 요소를 사용 하는 데 사용 되는 다음 시스템 저장 프로시저를 지원 합니다: 컬렉션 집합, 컬렉션 항목 및 컬렉션 형식입니다.  
+  SQL Server은 데이터 수집기 및 컬렉션 집합, 컬렉션 항목, 컬렉션 형식 등의 구성 요소를 사용 하는 데 사용 되는 다음과 같은 시스템 저장 프로시저를 지원 합니다.  
   
 > [!IMPORTANT]  
 >  일반적인 저장 프로시저와 달리 데이터 수집기 저장 프로시저에 대한 매개 변수는 형식이 엄격하게 지정되어 있으며 데이터 형식 자동 변환을 지원하지 않습니다. 이러한 매개 변수를 인수 설명에 지정된 올바른 입력 매개 변수 데이터 형식으로 호출하지 않으면 저장 프로시저가 오류를 반환합니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "67942409"
   
 -   sp_syscollector_event_onstatsupdate  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

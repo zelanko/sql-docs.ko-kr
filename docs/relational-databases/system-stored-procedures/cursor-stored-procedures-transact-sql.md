@@ -1,5 +1,5 @@
 ---
-title: 커서 저장 프로시저 (TRANSACT-SQL) | Microsoft Docs
+title: 커서 저장 프로시저 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,16 +17,16 @@ ms.assetid: a4b6955b-9cae-40fb-99a1-2931e17a8e74
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f817408b30442d85566d094ccbf6491fe260925b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942431"
 ---
 # <a name="cursor-stored-procedures-transact-sql"></a>커서 저장 프로시저(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 커서 변수 기능을 구현 하는 다음 시스템 저장 프로시저를 지원 합니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 커서 변수 기능을 구현 하는 다음과 같은 시스템 저장 프로시저를 지원 합니다.  
   
 |||  
 |-|-|  
@@ -38,7 +38,7 @@ ms.locfileid: "67942431"
 |[sp_cursoropen](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)|[sp_describe_cursor_tables](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)|  
 |[sp_cursoroption](../../relational-databases/system-stored-procedures/sp-cursoroption-transact-sql.md)||  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

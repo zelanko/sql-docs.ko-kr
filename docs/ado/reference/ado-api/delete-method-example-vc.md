@@ -15,14 +15,14 @@ ms.assetid: 7cc78fb5-2701-49dc-bc22-06613b10cecb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: af20890a9c75ee815145b78f1c10de377b861436
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933101"
 ---
 # <a name="delete-method-example-vc"></a>Delete 메서드 예제(VC++)
-이 예제에서는 합니다 [삭제](../../../ado/reference/ado-api/delete-method-ado-recordset.md) 에서 지정 된 레코드를 제거 하는 메서드를 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
+이 예제에서는 [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) 메서드를 사용 하 여 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)에서 지정 된 레코드를 제거 합니다.  
   
 ## <a name="example"></a>예제  
   
@@ -293,6 +293,6 @@ MC2222
 BU7832  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Delete 메서드 (ADO 레코드 집합)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

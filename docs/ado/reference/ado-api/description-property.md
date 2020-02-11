@@ -18,29 +18,29 @@ ms.assetid: 4b5d6790-6c29-42aa-bf78-d9cfb8ad7965
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 48b3a6987e6c7b6c3754f5041d90d248520345ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933083"
 ---
 # <a name="description-property"></a>Description 속성
-에 대해 설명 합니다는 [오류](../../../ado/reference/ado-api/error-object.md) 개체입니다.  
+[오류](../../../ado/reference/ado-api/error-object.md) 개체에 대해 설명 합니다.  
   
-## <a name="return-value"></a>반환 값  
- 반환 된 **문자열** 오류에 대 한 설명을 포함 하는 값입니다.  
+## <a name="return-value"></a>Return Value  
+ 오류에 대 한 설명을 포함 하는 **문자열** 값을 반환 합니다.  
   
 ## <a name="remarks"></a>설명  
- 사용 된 **설명** 속성을 오류에 대 한 간단한 설명을 가져옵니다. 이 속성을 오류를 처리할 수 없거나 처리 하지 않으려는 사용자 경고를 표시 합니다. 문자열은 ADO 또는 공급자를 가져옵니다.  
+ **설명** 속성을 사용 하 여 오류에 대 한 간단한 설명을 가져옵니다. 이 속성을 표시 하 여 사용자에 게 처리 하지 않거나 처리 하지 않을 오류를 사용자에 게 알립니다. 이 문자열은 ADO 또는 공급자에서 제공 됩니다.  
   
- 공급자는 ADO를 관련 오류 텍스트를 전달 하는 일을 담당 합니다. ADO 추가 [오류](../../../ado/reference/ado-api/error-object.md) 개체를 **오류** 컬렉션 각 공급자에 대 한 오류 또는 경고를 수신 합니다. 열거 된 **오류** 공급자를 전달 하는 오류를 추적 하는 컬렉션입니다.  
+ 공급자는 특정 오류 텍스트를 ADO에 전달 하는 일을 담당 합니다. ADO는 받은 각 공급자 오류 또는 경고에 대 한 [오류 개체를](../../../ado/reference/ado-api/error-object.md) **오류 컬렉션에 추가 합니다.** **오류** 컬렉션을 열거 하 여 공급자가 전달 하는 오류를 추적 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [Error 개체](../../../ado/reference/ado-api/error-object.md)  
   
-## <a name="see-also"></a>관련 항목  
- [설명, HelpContext, HelpFile, NativeError, 번호, 원본 및 SQLState 속성 예제 (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
- [설명, HelpContext, HelpFile, NativeError, 번호, 원본 및 SQLState 속성 예제 (VC + +)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
+## <a name="see-also"></a>참고 항목  
+ [Description, HelpContext, HelpFile, NativeError, Number, Source 및 SQLState 속성 예제 (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
+ [Description, HelpContext, HelpFile, NativeError, Number, Source 및 SQLState 속성 예제 (VC + +)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
  [HelpContext, HelpFile 속성](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   
  [Number 속성 (ADO)](../../../ado/reference/ado-api/number-property-ado.md)   
  [Source 속성(ADO 오류)](../../../ado/reference/ado-api/source-property-ado-error.md)

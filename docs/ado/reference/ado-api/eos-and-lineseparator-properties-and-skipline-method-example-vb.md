@@ -1,5 +1,5 @@
 ---
-title: EOS 및 LineSeparator 속성 SkipLine 메서드 예제 (VB) | Microsoft Docs
+title: EOS 및 LineSeparator 속성 및 SkipLine 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 77ce3042-9ebc-44ba-a4ff-0f1b1fd4a9c4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d2a9c5f4f07b22f11869a21fc4855f4ae21b25c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933067"
 ---
-# <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>EOS 및 LineSeparator 속성 SkipLine 메서드 예제 (VB)
-이 예제에서는 한 번에 한 줄씩 텍스트 스트림을 조작 하는 방법을 보여 줍니다. 기본 캐리지 리턴/줄 바꿈에서 줄 구분 기호를 변경 하는 효과 (**adCRLF**)를 간단히 줄 바꿈 (**adLF**) 또는 캐리지 리턴 (**adCR**) 표시 됩니다.  
+# <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>EOS 및 LineSeparator 속성 및 SkipLine 메서드 예제 (VB)
+이 예제에서는 한 번에 한 줄씩 텍스트 스트림을 조작 하는 방법을 보여 줍니다. 줄 구분 기호를 기본 캐리지 리턴/줄 바꿈 (**Adcrlf**)에서 간단히 줄 바꿈 (**adcrlf**) 또는 캐리지 리턴 (**adcrlf**)로 변경 하는 효과가 표시 됩니다.  
   
 ```  
 'BeginSkipLineVB  
@@ -112,7 +112,7 @@ End Sub
 'EndSkipLineVB  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [EOS 속성](../../../ado/reference/ado-api/eos-property.md)   
  [LineSeparator 속성 (ADO)](../../../ado/reference/ado-api/lineseparator-property-ado.md)   
  [SkipLine 메서드](../../../ado/reference/ado-api/skipline-method.md)

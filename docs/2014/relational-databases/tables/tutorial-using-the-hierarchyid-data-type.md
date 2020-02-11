@@ -1,5 +1,5 @@
 ---
-title: '자습서: Hierarchyid 데이터 형식 사용 | Microsoft Docs'
+title: '자습서: hierarchyid 데이터 형식 사용 | Microsoft 문서'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e3718b45b69870969dae85b4eb1ad2e9e80adc85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211771"
 ---
 # <a name="tutorial-using-the-hierarchyid-data-type"></a>자습서: hierarchyid 데이터 형식 사용
@@ -41,9 +41,9 @@ ms.locfileid: "68211771"
   
 -   Internet Explorer 6 이상 버전  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [자습서: 데이터베이스 엔진 시작](../tutorial-getting-started-with-the-database-engine.md)   
- [자습서: TRANSACT-SQL 문 작성](../../t-sql/tutorial-writing-transact-sql-statements.md)   
+ [자습서: Transact-sql 문 작성](../../t-sql/tutorial-writing-transact-sql-statements.md)   
  [hierarchyid 데이터 형식 메서드 참조](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)   
  [계층적 데이터 &#40;SQL Server&#41;](../hierarchical-data-sql-server.md)   
  [hierarchyid&#40;Transact-SQL&#41;](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)  

@@ -10,16 +10,16 @@ ms.assetid: bb14e3c5-5349-47e8-8e6b-16ff26dfb368
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d5619735b0164b337613d160b5057f7514a021af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67995890"
 ---
-# <a name="localdberrorcannotmodifyinstanceregistry"></a>LOCALDB_ERROR_CANNOT_MODIFY_INSTANCE_REGISTRY
+# <a name="localdb_error_cannot_modify_instance_registry"></a>LOCALDB_ERROR_CANNOT_MODIFY_INSTANCE_REGISTRY
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  

@@ -1,5 +1,5 @@
 ---
-title: '필드 (Visual C++ #import 구문 인덱스) | Microsoft Docs'
+title: Field (#import를 사용 하는 Visual C++ 구문 인덱스) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,13 +16,13 @@ ms.assetid: 90cb636a-9416-48a4-b4eb-bb11bbd40950
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 587be8f0686cd7b2498080984d40e79c80bde898
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932692"
 ---
-# <a name="field-visual-c-syntax-index-with-import"></a>필드 (Visual C++ #import 구문 인덱스)
+# <a name="field-visual-c-syntax-index-with-import"></a>Field (#import를 사용 하는 Visual C++ 구문 인덱스)
 ## <a name="methods"></a>메서드  
   
 ```  
@@ -79,5 +79,5 @@ void PutValue( const _variant_t & pvar );
 __declspec(property(get=GetValue,put=PutValue)) _variant_t Value;  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Field 개체](../../../ado/reference/ado-api/field-object.md)

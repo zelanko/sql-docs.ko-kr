@@ -19,31 +19,31 @@ ms.assetid: 43a821fb-97fd-4316-aafe-4ef2de783188
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 54cc247827a176bc9921884ae318120b07108293
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67939865"
 ---
 # <a name="supported-set-commands-visual-foxpro-odbc-driver"></a>지원되는 SET 명령(Visual FoxPro ODBC 드라이버)
-응용 프로그램에 다음 Visual FoxPro 보낼 수 있습니다 **설정** 데이터 원본에 명령 합니다.  
+응용 프로그램은 다음 Visual FoxPro **SET** 명령을 데이터 원본으로 보낼 수 있습니다.  
   
- [SET ANSI](../../odbc/microsoft/set-ansi-command.md)  
+ [ANSI 설정](../../odbc/microsoft/set-ansi-command.md)  
   
- [SET BLOCKSIZE](../../odbc/microsoft/set-blocksize-command.md)  
+ [블록 크기 설정](../../odbc/microsoft/set-blocksize-command.md)  
   
- [SET COLLATE](../../odbc/microsoft/set-collate-command.md)  
+ [COLLATE 설정](../../odbc/microsoft/set-collate-command.md)  
   
- [집합 삭제](../../odbc/microsoft/set-deleted-command.md)  
+ [집합 삭제 됨](../../odbc/microsoft/set-deleted-command.md)  
   
- [정확 하 게 설정](../../odbc/microsoft/set-exact-command.md)  
+ [정확한 설정](../../odbc/microsoft/set-exact-command.md)  
   
- [제외 설정](../../odbc/microsoft/set-exclusive-command.md)  
+ [단독 설정](../../odbc/microsoft/set-exclusive-command.md)  
   
- [NULL 설정](../../odbc/microsoft/set-null-command.md)  
+ [SET NULL](../../odbc/microsoft/set-null-command.md)  
   
  [경로 설정](../../odbc/microsoft/set-path-command.md)  
   
- [집합 다시 처리](../../odbc/microsoft/set-reprocess-command.md)  
+ [다시 처리 설정](../../odbc/microsoft/set-reprocess-command.md)  
   
  [고유 설정](../../odbc/microsoft/set-unique-command.md)

@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 030ebd318b310b2c7ca4f85d1f736d168a7adda8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083509"
 ---
 # <a name="mining-model-properties"></a>마이닝 모델 속성
@@ -41,9 +41,9 @@ ms.locfileid: "66083509"
   
 |속성|Description|  
 |--------------|-----------------|  
-|**알고리즘**|마이닝 모델에 대한 알고리즘 유형을 설정합니다.|  
+|**알고리즘과**|마이닝 모델에 대한 알고리즘 유형을 설정합니다.|  
 |**AlgorithmParameters**|각 알고리즘 유형에 사용할 수 있는 알고리즘 매개 변수의 값을 설정합니다.|  
-|**Assert**|마이닝 모델을 학습하고 테스트할 때 사용하는 데이터에 적용되는 필터를 설정합니다. 필터 정의는 모델에 저장되며 예측 쿼리를 만들거나 모델의 정확도를 테스트할 때 선택적으로 사용할 수 있습니다.<br /><br /> 모델을 학습할 경우 모델 필터는 선택 사항이 아닙니다.|  
+|**Filter**|마이닝 모델을 학습하고 테스트할 때 사용하는 데이터에 적용되는 필터를 설정합니다. 필터 정의는 모델에 저장되며 예측 쿼리를 만들거나 모델의 정확도를 테스트할 때 선택적으로 사용할 수 있습니다.<br /><br /> 모델을 학습할 경우 모델 필터는 선택 사항이 아닙니다.|  
 |**이름**|마이닝 모델의 이름을 설정합니다.|  
 |**AllowDrillThrough**|드릴스루를 마이닝 모델에 설정할지 여부를 지정합니다.|  
   
@@ -56,11 +56,11 @@ ms.locfileid: "66083509"
 |**이름**|마이닝 모델 열의 이름을 설정합니다. 새 이름을 입력하여 마이닝 모델 열의 별칭을 제공할 수 있습니다.|  
 |**ModelingFlags**|열에 대해 알고리즘별 플래그를 설정합니다.|  
 |**SourceColumnID**|모델 열의 기반이 되는 마이닝 구조 열의 이름을 나타냅니다.<br /><br /> 이 속성은 읽기 전용입니다.|  
-|**Usage**|마이닝 모델에서 열을 사용하는 방법을 설정합니다.|  
+|**사용 현황**|마이닝 모델에서 열을 사용하는 방법을 설정합니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [마이닝 모델 열](mining-model-columns.md)   
- [마이닝 구조 & #40; Analysis Services-데이터 마이닝 & #41;](mining-structures-analysis-services-data-mining.md)   
+ [마이닝 구조 &#40;Analysis Services 데이터 마이닝&#41;](mining-structures-analysis-services-data-mining.md)   
  [마이닝 모델 태스크 및 방법](mining-model-tasks-and-how-tos.md)   
  [마이닝 모델의 속성 변경](change-the-properties-of-a-mining-model.md)   
  [데이터 마이닝 도구](data-mining-tools.md)   

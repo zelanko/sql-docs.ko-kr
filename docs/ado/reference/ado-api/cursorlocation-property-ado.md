@@ -17,29 +17,29 @@ ms.assetid: 39c8d86e-7ee9-4182-be5e-aad5ce952f84
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: afee71d4f37e2b3a27247fbeacf51dab66cc1e23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933280"
 ---
 # <a name="cursorlocation-property-ado"></a>CursorLocation 속성(ADO)
 커서 서비스의 위치를 나타냅니다.  
   
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
- 설정 하거나 반환을 **긴** 중 하나로 설정할 수 있는 값을 [CursorLocationEnum](../../../ado/reference/ado-api/cursorlocationenum.md) 값.  
+ [CursorLocationEnum](../../../ado/reference/ado-api/cursorlocationenum.md) 값 중 하나로 설정할 수 있는 **Long** 값을 설정 하거나 반환 합니다.  
   
 ## <a name="remarks"></a>설명  
- 이 속성을 사용 하면 공급자에 액세스할 수 있는 다양 한 커서 라이브러리를 선택할 수 있습니다. 일반적으로 클라이언트 쪽 커서 라이브러리 또는 있는 하나를 사용 하 여 서버에서 선택할 수 있습니다.  
+ 이 속성을 사용 하면 공급자가 액세스할 수 있는 다양 한 커서 라이브러리 중에서 선택할 수 있습니다. 일반적으로 클라이언트 쪽 커서 라이브러리를 사용 하거나 서버에 있는 항목을 사용 하도록 선택할 수 있습니다.  
   
- 이 속성 설정 속성을 설정한 후에 설정 하는 연결을 영향을 줍니다. 변경 된 **CursorLocation** 속성이 기존 연결에 영향을 주지 않습니다.  
+ 이 속성 설정은 속성이 설정 된 후에만 설정 된 연결에 영향을 줍니다. **CursorLocation** 속성을 변경 해도 기존 연결에는 영향을 주지 않습니다.  
   
- 반환 된 커서를 [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) 메서드는이 설정을 상속 합니다. **레코드 집합** 개체 관련된 연결에서이 설정을 자동으로 상속 됩니다.  
+ [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) 메서드에서 반환한 커서는이 설정을 상속 합니다. **레코드 집합** 개체는 연결 된 연결에서이 설정을 자동으로 상속 합니다.  
   
- 이 속성은 읽기/쓰기를 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 또는 닫힌 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md), 및를 열 때 읽기 전용 **레코드 집합**합니다.  
+ 이 속성은 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 또는 닫힌 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)에 대 한 읽기/쓰기 이며 열려 있는 **레코드 집합**에 대 한 읽기 전용입니다.  
   
 > [!NOTE]
->  **원격 데이터 서비스 사용** 클라이언트 쪽에서 사용할 때 **레코드 집합** 하거나 **연결** 개체를 **CursorLocation** 속성 만설정할수있습니다**adUseClient**합니다.  
+>  **원격 데이터 서비스 사용** 클라이언트 쪽 **레코드 집합** 또는 **연결** 개체에서 사용 하는 경우 **CursorLocation** 속성은 **adUseClient**로만 설정할 수 있습니다.  
   
 ## <a name="applies-to"></a>적용 대상  
   
@@ -47,5 +47,5 @@ ms.locfileid: "67933280"
 |-|-|  
 |[연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [부록 A: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)

@@ -1,5 +1,5 @@
 ---
-title: 축 개체 (ADO MD) | Microsoft Docs
+title: Axis 개체 (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,34 +16,34 @@ ms.assetid: 5f498c9a-b1e7-4e6e-9ae6-71eadaf9aada
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bf2b072acfda34ebdcafc1af82cd90c6be5d2537
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67939965"
 ---
 # <a name="axis-object-ado-md"></a>Axis 개체(ADO MD)
-하나 이상의 차원 선택한 멤버를 포함 하는 셀 집합의 필터 축을 또는 위치를 나타냅니다.  
+하나 이상의 차원에서 선택한 멤버를 포함 하는 셀 집합의 위치 또는 필터 축을 나타냅니다.  
   
 ## <a name="remarks"></a>설명  
- **축** 개체에 포함 될 수는 [축](../../../ado/reference/ado-md-api/axes-collection-ado-md.md) 컬렉션 반환 되는 또는 [FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md) 속성을 [셀 집합](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)합니다.  
+ **축** [개체는 축 컬렉션에](../../../ado/reference/ado-md-api/axes-collection-ado-md.md) 포함 되거나 [셀 집합](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)의 [filteraxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md) 속성에 의해 반환 될 수 있습니다.  
   
- 컬렉션 및 속성을 사용 하 여는 **축** 개체를 다음을 수행할 수 있습니다.  
+ **Axis** 개체의 컬렉션 및 속성을 사용 하 여 다음을 수행할 수 있습니다.  
   
--   식별 된 **축** 사용 하 여 합니다 [이름](../../../ado/reference/ado-md-api/name-property-ado-md.md) 속성.  
+-   [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md) 속성을 사용 하 여 **축을** 식별 합니다.  
   
--   각 위치에 따라 반복을 **축** 사용 하는 [위치](../../../ado/reference/ado-md-api/positions-collection-ado-md.md) 컬렉션.  
+-   [위치](../../../ado/reference/ado-md-api/positions-collection-ado-md.md) 컬렉션을 사용 하 여 **축을** 따라 각 위치를 반복 합니다.  
   
--   차원 수를 가져올는 **축** 사용 하 여 합니다 [DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md) 속성입니다.  
+-   [Dimensioncount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md) 속성을 사용 하 여 **축의** 차원 수를 가져옵니다.  
   
--   공급자별 특성을 가져오기 합니다 **축** 표준 ADO를 사용 하 여 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션입니다.  
+-   표준 ADO [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션을 사용 하 여 **축의** 공급자별 특성을 가져옵니다.  
   
- 이 섹션에서는 다음 항목을 포함합니다.  
+ 이 섹션에는 다음 항목이 포함 되어 있습니다.  
   
 -   [속성, 메서드 및 이벤트](../../../ado/reference/ado-md-api/axis-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>관련 항목  
- [Axis 예제 (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
- [Axes 컬렉션 (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)   
- [Positions 컬렉션 (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   
+## <a name="see-also"></a>참고 항목  
+ [축 예 (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
+ [축 컬렉션 (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)   
+ [위치 컬렉션 (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   
  [Properties 컬렉션(ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

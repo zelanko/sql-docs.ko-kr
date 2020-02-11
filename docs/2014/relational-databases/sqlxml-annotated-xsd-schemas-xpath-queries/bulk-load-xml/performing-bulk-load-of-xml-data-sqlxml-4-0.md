@@ -1,5 +1,5 @@
 ---
-title: (SQLXML 4.0) XML 데이터의 대량 로드 수행 | Microsoft 문서
+title: XML 데이터 대량 로드 수행 (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 09f8c1cf3b6c9226dc87a0a95c57f4c5719f0d03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013366"
 ---
 # <a name="performing-bulk-load-of-xml-data-sqlxml-40"></a>XML 데이터 대량 로드 수행(SQLXML 4.0)
@@ -32,22 +32,22 @@ ms.locfileid: "66013366"
  [XML 대량 로드 소개 &#40;SQLXML 4.0&#41;](introduction-to-xml-bulk-load-sqlxml-4-0.md)  
  XML 대량 로드 유틸리티를 사용한 XML 데이터 대량 로드에 대한 일반적인 정보를 제공합니다. XML 데이터 스트리밍, 트랜잭션 및 비트랜잭션 대량 로드 작업 등의 항목이 있습니다.  
   
- [생성 프로세스 기록 &#40;SQLXML 4.0&#41;](record-generation-process-sqlxml-4-0.md)  
+ [레코드 생성 프로세스 &#40;SQLXML 4.0&#41;](record-generation-process-sqlxml-4-0.md)  
  XML 대량 로드에 대해 레코드가 생성되는 프로세스 및 규칙에 대해 설명합니다.  
   
- [주석 해석 &#40;SQLXML 4.0&#41;](annotation-interpretation-sqlxml-4-0.md)  
+ [SQLXML 4.0 &#40;주석 해석&#41;](annotation-interpretation-sqlxml-4-0.md)  
  XML 대량 로드에서 XSD 및 XDR 스키마의 주석을 해석하는 방법에 대해 설명합니다.  
   
  [SQL Server XML 대량 로드 개체 모델 &#40;SQLXML 4.0&#41;](sql-server-xml-bulk-load-object-model-sqlxml-4-0.md)  
- SQLXMLBulkLoad 개체와 해당 메서드 및 속성에 설명합니다.  
+ SQLXMLBulkLoad 개체와 해당 메서드 및 속성에 대해 설명 합니다.  
   
  [XML 대량 로드 예 &#40;SQLXML 4.0&#41;](xml-bulk-load-examples-sqlxml-4-0.md)  
  XML 대량 로드를 사용하는 예제 코드를 제공합니다.  
   
- [데이터 형식 및 XML 대량 로드 &#40;SQLXML 4.0&#41;](data-types-and-xml-bulk-load-behavior-sqlxml-4-0.md)  
+ [SQLXML 4.0&#41;&#40;데이터 형식 및 XML 대량 로드 동작](data-types-and-xml-bulk-load-behavior-sqlxml-4-0.md)  
  XSD 및 XDR의 여러 유형에서의 XML 대량 로드 동작에 대해 설명합니다.  
   
- [지침 및 제한의 XML 대량 로드 &#40;SQLXML 4.0&#41;](guidelines-and-limitations-of-xml-bulk-load-sqlxml-4-0.md)  
+ [XML 대량 로드에 대 한 지침 및 제한 사항 &#40;SQLXML 4.0&#41;](guidelines-and-limitations-of-xml-bulk-load-sqlxml-4-0.md)  
  XML 대량 로드 작업을 수행할 때 주의할 몇 가지 문제를 표시합니다.  
   
   

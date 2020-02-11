@@ -14,18 +14,18 @@ ms.assetid: f7a5cb0a-3be7-4f46-82f9-64ffdbceaa9b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5dd8de055521f4a1831d20a9a34bedb9309d1de6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67939783"
 ---
 # <a name="table-names"></a>테이블 이름
-경우 dBASE, Microsoft Excel, Paradox, 또는 드라이버를 사용 하는 텍스트, 테이블 이름에서에서 발생 하는 SELECT 또는 DELETE FROM 절은 INSERT INTO 절은 후 업데이트를 CREATE TABLE 및 DROP TABLE 올바른 경로 포함할 수 있습니다, 기본 이름 및 파일 이름 확장명 .  
+DBASE, Microsoft Excel, Paradox 또는 텍스트 드라이버를 사용 하는 경우 SELECT 또는 DELETE의 FROM 절에서 발생 하는 테이블 이름 (INSERT에서 INTO 절 이후, UPDATE, CREATE TABLE 및 DROP TABLE은 올바른 경로, 주 이름 및 파일 이름 확장명을 포함할 수 있습니다. .  
   
- SQL 문에서 다른 곳에서 테이블 이름 사용 경로 또는 확장의 사용을 지원 하지 않지만 기본 이름 (예를 들어 EMP에서 C:\ABC\EMP)만 허용 됩니다.  
+ SQL 문의 다른 위치에서 테이블 이름 사용은 경로 또는 확장의 사용을 지원 하지 않지만 기본 이름 (예: C:\ABC\EMP의 EMP)만 허용 합니다.  
   
- 상관 관계 이름 (별칭)을 사용할 수 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ 상관 관계 이름 (별칭)을 사용할 수 있습니다. 다음은 그 예입니다.  
   
 ```  
 SELECT *    

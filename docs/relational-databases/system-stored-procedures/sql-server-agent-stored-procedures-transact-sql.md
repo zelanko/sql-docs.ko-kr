@@ -1,5 +1,5 @@
 ---
-title: SQL Server 에이전트 저장 프로시저 (TRANSACT-SQL) | Microsoft Docs
+title: SQL Server 에이전트 저장 프로시저 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +16,16 @@ ms.assetid: 9c8de925-928b-460c-9455-779c4c37b966
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0396823be5a733acc551dc52a96ff642b67076c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67950370"
 ---
 # <a name="sql-server-agent-stored-procedures-transact-sql"></a>SQL Server 에이전트 저장 프로시저(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 예약된 작업 및 이벤트 기반 작업을 관리하는 데 사용하는 다음과 같은 시스템 저장 프로시저를 지원합니다.  
   
 |||  
@@ -69,7 +70,7 @@ ms.locfileid: "67950370"
 |[sp_help_downloadlist](../../relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql.md)|[sp_update_targetservergroup](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)|  
 |[sp_help_job](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)||  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

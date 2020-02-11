@@ -1,5 +1,5 @@
 ---
-title: sp_filestream_force_garbage_collection (TRANSACT-SQL) | Microsoft Docs
+title: sp_filestream_force_garbage_collection (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
 ms.prod: sql
@@ -19,18 +19,18 @@ ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e836fb2bd64a4fb0be15288322aa8fee30dc763e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942282"
 ---
-# <a name="spfilestreamforcegarbagecollection-transact-sql"></a>sp_filestream_force_garbage_collection(Transact-SQL)
+# <a name="sp_filestream_force_garbage_collection-transact-sql"></a>sp_filestream_force_garbage_collection(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   FILESTREAM 가비지 수집기를 실행하고 불필요한 FILESTREAM 파일을 삭제합니다.  
   
- 가비지 수집기를 사용하여 FILESTREAM 컨테이너 안의 삭제된 파일을 모두 정리해야 해당 컨테이너를 제거할 수 있습니다. FILESTREAM 가비지 수집기는 자동으로 실행됩니다. 그러나 필요한 경우에 가비지 수집기가 되기 전에 컨테이너를 제거 하려면 실행, sp_filestream_force_garbage_collection를 사용 하 여 가비지 수집기를 수동으로 실행할 수 있습니다.  
+ 가비지 수집기를 사용하여 FILESTREAM 컨테이너 안의 삭제된 파일을 모두 정리해야 해당 컨테이너를 제거할 수 있습니다. FILESTREAM 가비지 수집기는 자동으로 실행됩니다. 그러나 가비지 수집기가 실행 되기 전에 컨테이너를 제거 해야 하는 경우 sp_filestream_force_garbage_collection를 사용 하 여 가비지 수집기를 수동으로 실행할 수 있습니다.  
   
   
 ## <a name="syntax"></a>구문  
@@ -46,10 +46,11 @@ sp_filestream_force_garbage_collection
  가비지 수집기를 실행할 데이터베이스 이름을 표시합니다.  
   
 > [!NOTE]  
-> `@dbname` 됩니다 **sysname**합니다. 지정하지 않으면 현재 데이터베이스로 가정합니다.  
+> `@dbname`는 **sysname**입니다. 지정하지 않으면 현재 데이터베이스로 가정합니다.  
   
  `[ @filename = ] 'logical_file_name'`  
- 가비지 수집기를 실행할 FILESTREAM 컨테이너의 논리적 이름을 지정합니다. `@filename` 선택 사항입니다. 없는 논리적 파일 이름을 지정 된 경우 가비지 수집기가 지정한 데이터베이스의 FILESTREAM 컨테이너를 모두 정리 합니다.  
+ 가비지 수집기를 실행할 FILESTREAM 컨테이너의 논리적 이름을 지정합니다. 
+  `@filename` 는 선택 사항입니다. 논리적 파일 이름이 지정 되지 않은 경우에는 가비지 수집기가 지정 된 데이터베이스의 모든 FILESTREAM 컨테이너를 정리 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
   
@@ -61,12 +62,12 @@ sp_filestream_force_garbage_collection
   
 ## <a name="result-sets"></a>결과 집합  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |*file_name*|FILESTREAM 컨테이너 이름을 나타냅니다.|  
 |*num_collected_items*|이 컨테이너에서 가비지 수집된(삭제된) FILESTREAM 항목(파일/디렉터리) 수를 나타냅니다.|  
-|*num_marked_for_collection_items*|이 컨테이너에서 가비지 수집을 위해 표시된 FILESTREAM 항목(파일/디렉터리) 수를 나타냅니다. 이러한 항목은 아직 삭제 되지 않은 되지만 가비지 수집 단계를 수행 하는 삭제할 수 있습니다.|  
-|*num_unprocessed_items*|이 FILESTREAM 컨테이너에서 가비지 수집을 위해 처리되지 적합한 FILESTREAM 항목(파일 또는 디렉터리) 수를 나타냅니다. 다음을 비롯하여 다양한 이유로 항목이 처리되지 않을 수 있습니다.<br /><br /> 로그 백업 또는 검사점을 가져오지 않아 파일이 고정되어야 하는 경우<br /><br /> FULL 또는 BULK_LOGGED 복구 모델의 파일인 경우<br /><br /> 장기 실행 활성 트랜잭션이 있는 경우<br /><br /> 복제 로그 판독기 작업이 실행 되지 않았습니다. 백서를 참조 하세요 [SQL Server 2008의 FILESTREAM 저장소](https://go.microsoft.com/fwlink/?LinkId=209156) 자세한 내용은 합니다.|  
+|*num_marked_for_collection_items*|이 컨테이너에서 가비지 수집을 위해 표시된 FILESTREAM 항목(파일/디렉터리) 수를 나타냅니다. 이러한 항목은 아직 삭제 되지 않았지만 가비지 수집 단계를 수행 하 여 삭제할 수 있습니다.|  
+|*num_unprocessed_items*|이 FILESTREAM 컨테이너에서 가비지 수집을 위해 처리되지 적합한 FILESTREAM 항목(파일 또는 디렉터리) 수를 나타냅니다. 다음을 비롯하여 다양한 이유로 항목이 처리되지 않을 수 있습니다.<br /><br /> 로그 백업 또는 검사점을 가져오지 않아 파일이 고정되어야 하는 경우<br /><br /> FULL 또는 BULK_LOGGED 복구 모델의 파일인 경우<br /><br /> 장기 실행 활성 트랜잭션이 있는 경우<br /><br /> 복제 로그 판독기 작업이 실행 되지 않았습니다. 자세한 내용은 [SQL Server 2008에서 백서 FILESTREAM 저장소](https://go.microsoft.com/fwlink/?LinkId=209156) 를 참조 하세요.|  
 |*last_collected_xact_seqno*|지정한 FILESTREAM 컨테이너에 대해 파일이 가비지 수집된 마지막 해당 LSN(로그 시퀀스 번호)을 반환합니다.|  
   
 ## <a name="remarks"></a>설명  
@@ -77,9 +78,9 @@ sp_filestream_force_garbage_collection
   
 별도의 컨테이너 또는 별도의 데이터베이스에서만 이 저장 프로시저의 여러 호출을 동시에 실행할 수 있습니다.  
 
-2 단계 작업으로 인해 실제로 기본 Filestream 파일을 삭제 하려면 두 번 저장된 프로시저를 실행 해야 합니다.  
+2 단계 작업으로 인해 저장 프로시저를 두 번 실행 하 여 기본 Filestream 파일을 실제로 삭제 해야 합니다.  
 
-GC (가비지 수집) 로그 잘라내기에 의존합니다. 따라서 파일 최근에 전체 복구 모델을 사용 하 여 데이터베이스에서 삭제 한 후에 이러한 트랜잭션 로그 부분의 로그 백업을 수행 되 고 로그 부분을 비활성 상태로 표시 됩니다 GC ed 됩니다. 단순 복구 모델을 사용 하 여 데이터베이스에 대 한 로그 잘림이 `CHECKPOINT` 가 데이터베이스에 대해 발급 되었습니다.  
+GC (가비지 수집)는 로그 잘림에 의존 합니다. 따라서 전체 복구 모델을 사용 하는 데이터베이스에서 최근에 파일을 삭제 한 경우에는 해당 트랜잭션 로그 부분의 로그 백업을 수행 하 고 로그 부분을 비활성으로 표시 한 후에만 GC를 사용 합니다. 단순 복구 모델을 사용 하는 데이터베이스에서 데이터베이스에 대해 `CHECKPOINT` 가 실행 된 후 로그 잘림이 발생 합니다.  
 
 
 ## <a name="permissions"></a>사용 권한  
@@ -96,7 +97,7 @@ GO
 EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB';  
 ```  
   
-### <a name="b-specifying-a-container"></a>2\. 컨테이너 지정  
+### <a name="b-specifying-a-container"></a>B. 컨테이너 지정  
   
 ```sql  
 USE FSDB;  
@@ -105,11 +106,11 @@ EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB',
     @filename = N'FSContainer';  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [Filestream](../../relational-databases/blob/filestream-sql-server.md)
 <br>[Filetable](../../relational-databases/blob/filetables-sql-server.md)
 <br>[Filestream 및 FileTable 동적 관리 뷰(Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
 <br>[Filestream 및 FileTable 카탈로그 뷰(Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
-<br>[sp_kill_filestream_non_transacted_handles (TRANSACT-SQL)](filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)
+<br>[sp_kill_filestream_non_transacted_handles(Transact-SQL)](filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)
   
   

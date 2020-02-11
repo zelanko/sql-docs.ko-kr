@@ -15,14 +15,14 @@ ms.assetid: cdad2d66-6ade-40dc-9e74-e40cfa9bc127
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e0d50c8cab60ddf1839c5683023af0b90ebe527c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964730"
 ---
 # <a name="views-refresh-method-example-vb"></a>Views Refresh 메서드 예제(VB)
-다음 코드를 새로 고치는 방법을 보여 줍니다 합니다 [뷰](../../../ado/reference/adox-api/views-collection-adox.md) 의 컬렉션을 [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md)합니다. 하기 전에 반드시 [뷰](../../../ado/reference/adox-api/view-object-adox.md) 에서 개체를 **카탈로그** 액세스할 수 있습니다.  
+다음 코드에서는 [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md)의 [뷰](../../../ado/reference/adox-api/views-collection-adox.md) 컬렉션을 새로 고치는 방법을 보여 줍니다. 이렇게 하려면 **카탈로그** 의 [보기](../../../ado/reference/adox-api/view-object-adox.md) 개체에 액세스할 수 있어야 합니다.  
   
 ```  
 ' BeginViewsRefreshVB  
@@ -55,6 +55,6 @@ End Sub
 ' EndViewsRefreshVB  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Refresh 메서드 (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)   
  [Views 컬렉션(ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

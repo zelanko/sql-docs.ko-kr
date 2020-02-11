@@ -13,18 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5b0e292589a669155e8dc51da942cf1eca012537
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082453"
 ---
 # <a name="data-source-wizard-f1-help-analysis-services"></a>데이터 원본 마법사 F1 도움말(Analysis Services)
   데이터 원본 마법사를 사용하여 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 다음 비즈니스 인텔리전스 프로젝트에 사용할 데이터 원본을 만듭니다.  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Project  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Project  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트  
   
 -   보고서 모델 프로젝트  
   
@@ -32,14 +32,14 @@ ms.locfileid: "66082453"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [연결 정의 방법 선택 &#40;데이터 원본 마법사&#41; &#40;Analysis Services&#41;](select-how-to-define-the-connection-data-source-wizard-analysis-services.md)  
+-   [연결 &#40;데이터 원본 마법사&#41; &#40;Analysis Services을 정의 하는 방법을 선택&#41;](select-how-to-define-the-connection-data-source-wizard-analysis-services.md)  
   
 -   [기존 개체의 데이터 원본 &#40;데이터 원본 마법사&#41; &#40;Analysis Services&#41;](data-sources-from-existing-objects-data-source-wizard-analysis-services.md)  
   
 -   [마법사 완료 &#40;데이터 원본 마법사&#41; &#40;Analysis Services&#41;](completing-the-wizard-data-source-wizard-analysis-services.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [다차원 모델의 데이터 원본](multidimensional-models/data-sources-in-multidimensional-models.md)   
- [지원 되는 데이터 원본 &#40;SSAS 다차원&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
+ [SSAS 다차원&#41;&#40;지원 되는 데이터 원본](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 입력 속성 예제 (속성) (VC + +) | Microsoft Docs
+title: Type 속성 예제 (속성) (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,16 +15,16 @@ ms.assetid: a4e23508-fbf3-4468-be55-212e7238802b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e13079d18c8887aa0cdba8e5ae06f86eebca897c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938861"
 ---
 # <a name="type-property-example-property-vc"></a>Type 속성 예제(속성)(VC++)
-이 예제에서는 합니다 [형식](../../../ado/reference/ado-api/type-property-ado.md) 속성입니다. 같은 이름 및 컬렉션의 형식을 나열 하는 유틸리티의 모델 이기 [속성](../../../ado/reference/ado-api/properties-collection-ado.md)를 [필드](../../../ado/reference/ado-api/fields-collection-ado.md)등입니다.  
+이 예제에서는 [Type](../../../ado/reference/ado-api/type-property-ado.md) 속성을 보여 줍니다. [속성](../../../ado/reference/ado-api/properties-collection-ado.md), [필드](../../../ado/reference/ado-api/fields-collection-ado.md)등과 같은 컬렉션의 이름 및 형식을 나열 하는 유틸리티의 모델입니다.  
   
- 열 필요가 없습니다를 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 에 액세스 하려면 해당 **속성** 컬렉션 존재에 나올 때 합니다 **레코드 집합** 개체를 인스턴스화할 합니다. 그러나 설정 합니다 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성을 **adUseClient** 여러 동적 속성을 추가 합니다 **레코드 집합** 개체의 **속성** 컬렉션을 좀 더 흥미로운 예제를 수행 합니다. 그림의 일부만 명시적으로 사용 합니다 [항목](../../../ado/reference/ado-api/item-property-ado.md) 속성에 액세스 하는 각 [속성](../../../ado/reference/ado-api/property-object-ado.md) 개체입니다.  
+ **속성** 컬렉션에 액세스 하기 위해 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 을 열 필요는 없습니다. 이는 **레코드 집합** 개체가 인스턴스화될 때 존재 합니다. 그러나 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성을 **adUseClient** 로 설정 하면 **레코드 집합** 개체의 **properties** 컬렉션에 몇 가지 동적 속성을 추가 하 여 예제를 좀 더 흥미로운 방법으로 만들 수 있습니다. 설명을 위해 [항목](../../../ado/reference/ado-api/item-property-ado.md) 속성을 명시적으로 사용 하 여 각 [속성](../../../ado/reference/ado-api/property-object-ado.md) 개체에 액세스 합니다.  
   
 ```  
 // BeginTypePropertyCpp.cpp  
@@ -215,6 +215,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [속성 개체 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
+## <a name="see-also"></a>참고 항목  
+ [Property 개체 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
  [Type 속성(ADO)](../../../ado/reference/ado-api/type-property-ado.md)

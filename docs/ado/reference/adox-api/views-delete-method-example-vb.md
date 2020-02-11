@@ -15,14 +15,14 @@ ms.assetid: 17df2a83-4166-4df8-8c17-0a33aaac8582
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8077e22b2bdbd9fe55cca1ea7306443ee9d61ce7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964748"
 ---
 # <a name="views-delete-method-example-vb"></a>Views Delete 메서드 예제(VB)
-다음 코드를 사용 하는 방법을 보여 줍니다 합니다 [삭제](../../../ado/reference/adox-api/delete-method-adox-collections.md) 카탈로그에서 뷰를 삭제 하는 방법입니다.  
+다음 코드에서는 [delete](../../../ado/reference/adox-api/delete-method-adox-collections.md) 메서드를 사용 하 여 카탈로그에서 뷰를 삭제 하는 방법을 보여 줍니다.  
   
 ```  
 ' BeginDeleteViewVB  
@@ -53,6 +53,6 @@ End Sub
 ' EndDeleteViewVB  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [Delete 메서드 (ADOX 컬렉션)](../../../ado/reference/adox-api/delete-method-adox-collections.md)   
+## <a name="see-also"></a>참고 항목  
+ [Delete 메서드 (ADOX Collections)](../../../ado/reference/adox-api/delete-method-adox-collections.md)   
  [Views 컬렉션(ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

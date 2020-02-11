@@ -14,16 +14,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1df8207ebf479d22f1e67191dfdd254fb6403fea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63276864"
 ---
 # <a name="browse-for-objects-object-explorer"></a>개체 찾아보기(개체 탐색기)
   선택한 유형의 개체 목록을 표시합니다. 해당 확인란을 선택하여 이 목록에서 하나 이상의 개체를 선택합니다. **개체 찾아보기** 상자에는 동작에 해당하는 항목만 표시되며 보기 권한이 있는 항목만 표시됩니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **확인란**  
  개체를 포함하려면 선택합니다.  
   

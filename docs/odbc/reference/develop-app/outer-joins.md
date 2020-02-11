@@ -14,26 +14,26 @@ ms.assetid: be1a0203-5da9-4871-9566-4bd3fbc0895c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a4bf875b3afd21f6b8cb211c999401b0ecb80879
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67987818"
 ---
 # <a name="outer-joins"></a>외부 조인
-ODBC는 SQL-92 left, right 및 full outer join 구문을 지원합니다. 외부 조인 이스케이프 시퀀스는  
+ODBC는 SQL-92 left, right 및 full outer join 구문을 지원 합니다. 외부 조인의 이스케이프 시퀀스는  
   
- **{oj** _outer-join_ **}**  
+ **{oj** _외부 조인_**}**  
   
- 여기서 *외부 조인* 는  
+ 여기서 *outer join* 은  
   
- *테이블 참조* {0}**왼쪽 &#124; 오른쪽 &#124; 전체} 외부 조인** {0}*테이블 참조* &#124; *외부 조인*} **ON**  _검색 조건_  
+ *테이블-참조* {**LEFT &#124; RIGHT &#124; FULL} 외부 조인** {*table-reference* &#124; *outer join* **}** _(검색 조건)_  
   
- *테이블 참조* 테이블 이름을 지정 하 고 *검색 조건* 간에 조인 조건을 지정 합니다 *테이블 참조*합니다.  
+ 테이블 *참조* 는 테이블 이름을 지정 하 고, *검색 조건은* *테이블 참조*사이의 조인 조건을 지정 합니다.  
   
- 외부 조인 요청을 뒤에 나타나야 합니다.는 **FROM** 키워드 및 하기 전에 **여기서** 절 (있는 경우). 전체 구문 정보를 참조 하세요. [외부 조인 이스케이프 시퀀스](../../../odbc/reference/appendixes/outer-join-escape-sequence.md) 부록 c: SQL 문법입니다.  
+ 외부 조인 요청은 **FROM** 키워드 뒤와 **WHERE** 절 (있는 경우) 앞에 나와야 합니다. 전체 구문에 대 한 자세한 내용은 부록 C: SQL 문법의 [외부 조인 이스케이프 시퀀스](../../../odbc/reference/appendixes/outer-join-escape-sequence.md) 를 참조 하세요.  
   
- 예를 들어, 다음 SQL 문을 모든 고객을 나열 하 고 열린 주문의 표시 하는 동일한 결과 집합을 만듭니다. 첫 번째 문은 이스케이프 시퀀스가 구문을 사용 합니다. 두 번째 문은 Oracle에 대 한 기본 구문을 사용 하 고 상호 운용은 불가능 합니다.  
+ 예를 들어 다음 SQL 문은 모든 고객을 나열 하는 동일한 결과 집합과 열린 주문이 있는 표시를 만듭니다. 첫 번째 문은 이스케이프 시퀀스 구문을 사용 합니다. 두 번째 문은 Oracle의 네이티브 구문을 사용 하며 상호 운용할 수 없습니다.  
   
 ```  
 SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status  
@@ -45,4 +45,4 @@ SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status
    WHERE (Orders.Status='OPEN') AND (Customers.CustID= Orders.CustID(+))  
 ```  
   
- 응용 프로그램이 호출 데이터 소스와 드라이버를 지 원하는 외부 조인 형식을 결정할 **SQLGetInfo** 는 SQL_OJ_CAPABILITIES를 사용 하 여 플래그를 지정 합니다. 왼쪽, 오른쪽, 전체 또는 중첩 된 외부 조인; 지원 될 수 있는 외부 조인 유형 외부 조인에 열 이름에 **ON** 절에서 해당 테이블 이름으로 동일한 순서 없는 합니다 **OUTER JOIN** 절; 외부 조인이; 및 외부 조인을 사용 하 여 함께 내부 조인 모든 ODBC 비교 연산자입니다. SQL_OJ_CAPABILITIES 정보 유형 0을 반환 하는 경우에 외부 조인 절 없이 지원 됩니다.
+ 데이터 소스 및 드라이버에서 지 원하는 외부 조인의 유형을 확인 하기 위해 응용 프로그램은 SQL_OJ_CAPABILITIES 플래그를 사용 하 여 **SQLGetInfo** 를 호출 합니다. 지원 될 수 있는 외부 조인 유형은 왼쪽, 오른쪽, 전체 또는 중첩 된 외부 조인입니다. **ON** 절의 열 이름이 **outer join** 절에 있는 해당 테이블 이름과 순서가 같지 않은 외부 조인 외부 조인과 함께 내부 조인 모든 ODBC 비교 연산자를 사용 하 여 outer join을 사용 합니다. SQL_OJ_CAPABILITIES 정보 유형이 0을 반환 하는 경우에는 outer join 절이 지원 되지 않습니다.

@@ -1,5 +1,5 @@
 ---
-title: 마이닝 모델의 복사본 | Microsoft Docs
+title: 마이닝 모델의 복사본 만들기 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7464c7d780a420b0f95b59ebde02494bd40661e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084216"
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>마이닝 모델 복사본 만들기
@@ -31,15 +31,18 @@ ms.locfileid: "66084216"
   
 ### <a name="to-create-a-related-mining-model"></a>관련 마이닝 모델을 만들려면  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 솔루션 탐색기에서 마이닝 모델이 포함된 마이닝 구조를 클릭합니다.  
+1.  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 솔루션 탐색기에서 마이닝 모델이 포함된 마이닝 구조를 클릭합니다.  
   
-2.  **마이닝 모델** 탭을 클릭합니다.  
+2.  
+  **마이닝 모델** 탭을 클릭합니다.  
   
 3.  모델을 선택하고 마우스 오른쪽 단추를 클릭하여 바로 가기 메뉴를 엽니다.  
   
-     -또는-  
+     또는  
   
-     모델을 선택합니다. **마이닝 모델** 메뉴에서 **새 마이닝 모델**을 선택합니다.  
+     모델을 선택합니다. 
+  **마이닝 모델** 메뉴에서 **새 마이닝 모델**을 선택합니다.  
   
 4.  새 마이닝 모델의 이름을 입력하고 알고리즘을 선택합니다. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -47,18 +50,18 @@ ms.locfileid: "66084216"
   
 1.  마이닝 모델을 선택합니다.  
   
-2.  에 **속성** 창에 대 한 입력란을 클릭 합니다 **필터** 속성 및 빌드를 클릭 하 **(...)**  단추입니다.  
+2.  **속성** 창에서 **필터** 속성의 입력란을 클릭 하 고 빌드 **(...)** 단추를 클릭 합니다.  
   
 3.  필터 조건을 변경합니다.  
   
      필터 편집기 대화 상자를 사용하는 방법에 대한 자세한 내용은 [마이닝 모델에 필터 적용](apply-a-filter-to-a-mining-model.md)을 참조하세요.  
   
-4.  에 **속성** 창에서를 `AlgorithmParameters` 텍스트 상자 클릭 **알고리즘 매개 변수**, 고 필요한 경우 알고리즘 매개 변수를 변경 합니다.  
+4.  **속성** 창의 `AlgorithmParameters` 텍스트 상자에서 **setalgorithm 매개 변수**를 클릭 하 고 원하는 경우 알고리즘 매개 변수를 변경 합니다.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>관련 항목  
- [마이닝 모델에 대한 필터&#40;Analysis Services - 데이터 마이닝&#41;](mining-models-analysis-services-data-mining.md)   
+## <a name="see-also"></a>참고 항목  
+ [마이닝 모델 &#40;Analysis Services 데이터 마이닝&#41;필터](mining-models-analysis-services-data-mining.md)   
  [마이닝 모델 태스크 및 방법](mining-model-tasks-and-how-tos.md)   
  [마이닝 모델에서 필터 삭제](delete-a-filter-from-a-mining-model.md)  
   

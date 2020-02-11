@@ -1,5 +1,5 @@
 ---
-title: 쿼리 옵션 결과 (표 형태 페이지) | Microsoft Docs
+title: 쿼리 옵션 결과 (그리드 페이지) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,20 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 7c50957f59ef4e4743ca1667d6eb7a97869bec18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089013"
 ---
 # <a name="query-options-results-grid-page"></a>쿼리 옵션 결과(표 형태 페이지)
   이 페이지를 사용하여 쿼리 결과 집합을 표 형태로 표시하는 옵션을 지정할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **결과 집합에 쿼리 포함**  
  결과 집합의 일부로 쿼리 텍스트를 반환합니다.  
   
- **결과를 복사하거나 저장할 때 열 머리글 포함**  
+ **결과를 복사 하거나 저장할 때 열 머리글 포함**  
  결과를 클립보드에 복사하거나 파일에 저장할 때 열 머리글(제목)을 포함합니다. 저장하거나 복사한 결과 데이터에 열 머리글 없이 데이터만 포함하려면 이 확인란의 선택을 취소합니다.  
   
  **실행 후 결과 삭제**  
@@ -35,11 +35,11 @@ ms.locfileid: "66089013"
  **별도의 탭에 결과 표시**  
  쿼리 문서 창의 아래쪽 대신 새로운 문서 창에 결과 집합을 표시합니다.  
   
- **쿼리 실행 후 결과 탭으로 전환**  
+ **쿼리가 실행 된 후 결과 탭으로 전환**  
  자동으로 화면 포커스를 결과 집합에 둡니다.  
   
- **검색한 최대 문자 수**  
- **비-XML 데이터**:  
+ **검색 되는 최대 문자**  
+ **비 XML 데이터**:  
   
  1에서 65535 사이의 숫자를 입력하여 각 셀에 표시될 최대 문자 수를 지정합니다.  
   
@@ -48,7 +48,8 @@ ms.locfileid: "66089013"
   
  **XML 데이터**:  
   
- **1MB**, **2MB**또는 **5MB**를 선택합니다. 모든 문자를 검색하려면 **제한 없음** 을 선택합니다.  
+ 
+  **1MB**, **2MB**또는 **5MB**를 선택합니다. 모든 문자를 검색하려면 **제한 없음** 을 선택합니다.  
   
  **기본값으로 다시 설정**  
  이 페이지의 모든 값을 원래 기본값으로 다시 설정합니다.  

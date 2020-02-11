@@ -15,16 +15,16 @@ ms.assetid: 708efd50-2905-4168-b7e4-91b2e9b23539
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 023ee009831cb3576691f0af5dfb85752d51fcc1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938743"
 ---
 # <a name="version-property-example-vb"></a>Version 속성 예제(VB)
-이 예제에서는 합니다 [버전](../../../ado/reference/ado-api/version-property-ado.md) 의 속성을 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 현재 ADO 버전을 표시 하는 개체입니다. 또한 여러 동적 속성을 사용 하 여 보여 줍니다.  
+이 예에서는 [Connection](../../../ado/reference/ado-api/connection-object-ado.md) 개체의 [Version](../../../ado/reference/ado-api/version-property-ado.md) 속성을 사용 하 여 현재 ADO 버전을 표시 합니다. 또한 다음과 같은 몇 가지 동적 속성을 사용 하 여 표시 합니다.  
   
--   현재 DBMS 이름과 버전입니다.  
+-   현재 DBMS 이름 및 버전입니다.  
   
 -   OLE DB 버전입니다.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "67938743"
   
 -   ODBC 버전입니다.  
   
--   ODBC 드라이버 이름과 버전입니다.  
+-   ODBC 드라이버 이름 및 버전입니다.  
   
 ```  
 'BeginVersionVB  
@@ -77,6 +77,6 @@ End Sub
 'EndVersionVB  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [연결 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+## <a name="see-also"></a>참고 항목  
+ [Connection 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Version 속성(ADO)](../../../ado/reference/ado-api/version-property-ado.md)

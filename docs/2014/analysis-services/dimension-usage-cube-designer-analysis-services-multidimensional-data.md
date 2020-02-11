@@ -1,5 +1,5 @@
 ---
-title: 차원 용도 (Cube Designer) (Analysis Services-다차원 데이터) | Microsoft Docs
+title: 차원 용도 (큐브 디자이너) (Analysis Services 다차원 데이터) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 90eddd7949cee5067e5a00c4d9918d997a2d0df3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081673"
 ---
 # <a name="dimension-usage-cube-designer-analysis-services---multidimensional-data"></a>차원 용도(큐브 디자이너)(Analysis Services - 다차원 데이터)
@@ -26,19 +26,19 @@ ms.locfileid: "66081673"
   
 |창|정의|  
 |----------|----------------|  
-|**도구 모음**|도구 모음을 사용하여 이 탭에서 일반 작업을 수행할 수 있습니다. 이 창에 대한 자세한 내용은 [도구 모음&#40;차원 용도 탭, 큐브 디자이너&#41;&#40;Analysis Services - 다차원 데이터&#41;](toolbar-dimension-usage-cube-designer-analysis-services-multidimensional-data.md)를 참조하세요.|  
-|**눈금**|표를 사용하여 큐브의 큐브 차원과 측정값 그룹 간의 차원 관계를 보고 편집할 수 있습니다. 이 창에 대한 자세한 내용은 [표&#40;차원 용도 탭, 큐브 디자이너&#41;&#40;Analysis Services - 다차원 데이터&#41;](grid-dimension-usage-tab-cube-designer-analysis-services-multidimensional-data.md)를 참조하세요.|  
+|**도구 모음**|도구 모음을 사용 하 여이 탭에서 일반적인 작업을 수행할 수 있습니다. 이 창에 대 한 자세한 내용은 [도구 모음 &#40;차원 용도 탭, 큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;를 ](toolbar-dimension-usage-cube-designer-analysis-services-multidimensional-data.md)참조 하세요.|  
+|**그리드에**|표를 사용하여 큐브의 큐브 차원과 측정값 그룹 간의 차원 관계를 보고 편집할 수 있습니다. 이 창에 대한 자세한 내용은 [표&#40;차원 용도 탭, 큐브 디자이너&#41;&#40;Analysis Services - 다차원 데이터&#41;](grid-dimension-usage-tab-cube-designer-analysis-services-multidimensional-data.md)를 참조하세요.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [차원 관계](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [큐브 디자이너 &#40;Analysis Services-다차원 데이터&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [큐브 구조 &#40;큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [계산 &#40;큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
- [Kpi &#40;큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
- [작업 &#40;큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
- [파티션 &#40;큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](partitions-cube-designer-analysis-services-multidimensional-data.md)   
- [큐브 뷰 &#40;큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](perspectives-cube-designer-analysis-services-multidimensional-data.md)   
- [번역 &#40;큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](translations-cube-designer-analysis-services-multidimensional-data.md)   
- [브라우저 &#40;큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)  
+ [큐브 디자이너 &#40;Analysis Services 다차원 데이터&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [큐브 구조 &#40;큐브 디자이너&#41; &#40;Analysis Services 다차원 데이터&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
+ [큐브 디자이너의 계산 &#40;다차원 데이터&#41; &#40;Analysis Services&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
+ [큐브 디자이너 &#40;Kpi&#41; &#40;Analysis Services-다차원 데이터&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
+ [큐브 디자이너 Analysis Services&#41; &#40;&#40;작업은 다차원 데이터&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
+ [큐브 디자이너 &#40;파티션&#41; &#40;Analysis Services 다차원 데이터&#41;](partitions-cube-designer-analysis-services-multidimensional-data.md)   
+ [큐브 디자이너 &#40;큐브 디자이너&#41; &#40;Analysis Services 다차원 데이터&#41;](perspectives-cube-designer-analysis-services-multidimensional-data.md)   
+ [큐브 디자이너&#41; &#40;Analysis Services 다차원&#41;데이터를 &#40;번역](translations-cube-designer-analysis-services-multidimensional-data.md)   
+ [브라우저 &#40;큐브 디자이너&#41; &#40;Analysis Services 다차원 데이터&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)  
   
   

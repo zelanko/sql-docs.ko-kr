@@ -14,18 +14,18 @@ ms.assetid: f47fd1a4-5bd8-4b2e-8ae3-e595e49f4f95
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7fcdf9cc41a55d1e529001ae7183ef9fa833363b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949010"
 ---
 # <a name="sqltables-text-file-driver"></a>SQLTables(텍스트 파일 드라이버)
 > [!NOTE]  
->  이 항목에서는 텍스트 파일 드라이버 관련 정보를 제공 합니다. 이 함수에 대 한 일반 정보에서 해당 항목을 참조 하세요 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)합니다.  
+>  이 항목에서는 텍스트 파일 드라이버 관련 정보를 제공 합니다. 이 함수에 대 한 일반 정보는 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)에서 적절 한 항목을 참조 하세요.  
   
 |인수|주석|  
 |--------------|--------------|  
-|*szTableOwner*|에 대 한 유효한 인수 *szTableOwner* 소유자 이름을 지 원하는 드라이버 하나도 NULL입니다. 사용 하 여 *szTableOwner* NULL로 설정한 모든 테이블 반환 됩니다. TABLE_OWNER 열에 NULL이 반환 됩니다.|  
-|*szTableQualifier*|TABLE_QUALIFIER 열의 **SQLTables** 디렉터리 경로 반환 합니다.|  
-|*SzTableType*|"TABLE" 테이블 유형만 지원 됩니다.<br /><br /> 텍스트 드라이버를 사용 하는 경우, 반환한 파일의 목록을 **SQLTables** 의 파일 확장명에 따라 결정 됩니다 합니다 **확장 목록** 상자에 **ODBC 텍스트 설정** 대화 상자.|
+|*szTableOwner*|모든 드라이버가 소유자 이름을 지원 하지 않으므로 *Sztableowner* 에 대해 올바른 인수는 NULL입니다. *Sztableowner* 를 NULL로 설정 하면 모든 테이블이 반환 됩니다. TABLE_OWNER 열에 NULL이 반환 됩니다.|  
+|*szTableQualifier*|TABLE_QUALIFIER 열에서 **Sqltables** 는 디렉터리에 대 한 경로를 반환 합니다.|  
+|*SzTableType*|"TABLE"은 유일 하 게 지원 되는 테이블 유형입니다.<br /><br /> 텍스트 드라이버를 사용 하는 경우 **Sqltables** 에서 반환 되는 파일 목록은 **ODBC 텍스트 설정** 대화 상자의 **확장 목록** 상자에 있는 파일 확장명에 의해 결정 됩니다.|

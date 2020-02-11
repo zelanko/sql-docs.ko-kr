@@ -16,13 +16,13 @@ ms.assetid: 8c6eb282-81b5-4ec4-b691-aa061d9267dc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9bef68803beedbfdb0d6034b2a92665f033d9641
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68768294"
 ---
-# <a name="spdropsubscriber-transact-sql"></a>sp_dropsubscriber(Transact-SQL)
+# <a name="sp_dropsubscriber-transact-sql"></a>sp_dropsubscriber(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   등록된 서버에서 구독자 지정을 제거합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "68768294"
 > [!IMPORTANT]  
 >  이 저장 프로시저는 더 이상 사용되지 않습니다. 더 이상 게시자에서 구독자를 명시적으로 등록할 필요가 없습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -57,16 +57,16 @@ sp_dropsubscriber [ @subscriber= ] 'subscriber'
  이 저장 프로시저는 서버 **하위** 옵션을 제거 하 고 **repl_subscriber**에 대 한 시스템 관리자의 원격 로그인 매핑을 제거 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
- **Sysadmin** 고정 서버 역할의 멤버만 **sp_dropsubscriber**을 실행할 수 있습니다.  
+ **Sysadmin** 고정 서버 역할의 멤버만 **sp_dropsubscriber**를 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [밀어넣기 구독 삭제](../../relational-databases/replication/delete-a-push-subscription.md)   
  [끌어오기 구독 삭제](../../relational-databases/replication/delete-a-pull-subscription.md)   
- [sp_addsubscriber &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
- [sp_changesubscriber &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
- [sp_helpdistributor&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
- [sp_helpserver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
- [sp_helpsubscriberinfo&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
+ [Transact-sql&#41;sp_addsubscriber &#40;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
+ [Transact-sql&#41;sp_changesubscriber &#40;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
+ [Transact-sql&#41;sp_helpdistributor &#40;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
+ [Transact-sql&#41;sp_helpserver &#40;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [Transact-sql&#41;sp_helpsubscriberinfo &#40;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Procedures Refresh 메서드 예제 (VB) | Microsoft Docs
+title: 프로시저 Refresh 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 499679bd-287b-487d-bdfb-3803abffec1c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9b5201be26bfd9df41c9cb1d8908f59499520878
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965372"
 ---
 # <a name="procedures-refresh-method-example-vb"></a>Procedures Refresh 메서드 예제(VB)
-다음 코드를 새로 고치는 방법을 보여 줍니다 합니다 [프로시저](../../../ado/reference/adox-api/procedures-collection-adox.md) 의 컬렉션을 [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md)합니다. 하기 전에 반드시 [프로시저](../../../ado/reference/adox-api/procedure-object-adox.md) 에서 개체를 **카탈로그** 액세스할 수 있습니다.  
+다음 코드에서는 [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md)의 [프로시저](../../../ado/reference/adox-api/procedures-collection-adox.md) 컬렉션을 새로 고치는 방법을 보여 줍니다. **카탈로그** 의 [프로시저](../../../ado/reference/adox-api/procedure-object-adox.md) 개체에 액세스할 수 있으려면이 작업을 수행 해야 합니다.  
   
 ```  
 ' BeginProceduresRefreshVB  
@@ -54,7 +54,7 @@ End Sub
 ' EndProceduresRefreshVB  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Catalog 개체 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Procedures 컬렉션 (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)   
+ [프로시저 컬렉션 (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)   
  [Refresh 메서드(ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

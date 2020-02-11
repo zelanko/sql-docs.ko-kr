@@ -16,35 +16,35 @@ ms.assetid: 3ee27314-a305-4fbc-8433-9ee9a909afd6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4bfb0db701801f1853009594b9d6d24aeb41c629
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933218"
 ---
 # <a name="definedsize-property"></a>DefinedSize 속성
-데이터 용량을 나타냅니다는 [필드](../../../ado/reference/ado-api/field-object.md) 개체입니다.  
+[필드](../../../ado/reference/ado-api/field-object.md) 개체의 데이터 용량을 나타냅니다.  
   
-## <a name="return-value"></a>반환 값  
- 반환 된 **긴** 필드 개체의 데이터 형식에 따라 달라 집니다;을 참조 하는 필드가 정의 된 크기를 반영 하는 값 [형식](../../../ado/reference/ado-api/type-property-ado.md) 자세한. 고정 길이 데이터 형식을 사용 하는 필드의 반환 값은 크기 (바이트)에서 데이터 형식입니다. 가변 길이 데이터 형식을 사용 하는 필드의 경우이 다음 중 하나:  
+## <a name="return-value"></a>Return Value  
+ 필드 개체의 데이터 형식에 따라 결정 되는 필드의 정의 된 크기를 반영 하는 **Long** 값을 반환 합니다. 자세한 내용은 [형식](../../../ado/reference/ado-api/type-property-ado.md) 을 참조 하세요. 고정 길이 데이터 형식을 사용 하는 필드의 경우 반환 값은 데이터 형식의 크기 (바이트)입니다. 가변 길이 데이터 형식을 사용 하는 필드의 경우 다음 중 하나입니다.  
   
-1.  문자에서 필드의 최대 길이 (에 대 한 **집합이 있으므로 필요** 하 고 **adVarWChar**) 또는 바이트 (에 대 한 **adVarBinary**, 및 **adVarNumeric**) 필드에 정의 된 길이입니다. 예를 들어 **adVarChar(5)** 필드의 최대 길이 5입니다.  
+1.  필드의 최대 길이 ( **adVarChar** 및 **adVarWChar**의 경우) 또는 바이트 ( **adVarBinary**의 경우) 또는 (예: **) 필드**의 길이가 정의 된 경우입니다. 예를 들어 **adVarChar (5)** 필드의 최대 길이는 5입니다.  
   
-2.  문자에서 데이터 형식의 최대 길이 (에 대 한 **adChar** 하 고 **adWChar**) 또는 바이트 (에 대 한 **adBinary** 하 고 **adNumeric**) 경우는 필드에 정의 된 길이가 없습니다.  
+2.  필드에 정의 된 길이가 없는 경우 문자 ( **Adchar** 및 **adchar**의 경우) 또는 바이트 ( **adchar** 및 **adchar**의 경우)에 있는 데이터 형식의 최대 길이입니다.  
   
-3.  ~ 0 (비트, 값이 0, 모든 비트가 1로 설정 된) 데이터 형식이 나 필드의 최대 길이 정의 된 경우.  
+3.  ~ 0 (비트, 값은 0이 아닙니다. 모든 비트가 1로 설정 됩니다. 필드와 데이터 형식이 모두 정의 된 최대 길이를 갖고 있지 않은 경우).  
   
-4.  데이터 형식의 길이가 없는 경우이 설정은 ~ 0 (비트, 값이 0, 모든 비트가 1로 설정 됩니다).  
+4.  길이가 없는 데이터 형식의 경우이 값은 ~ 0 (비트)으로 설정 되 고 값이 0이 아닌 경우 모든 비트가 1로 설정 됩니다.  
   
 ## <a name="remarks"></a>설명  
- 사용 된 **DefinedSize** 속성의 데이터 용량을 확인 하는 **필드** 개체.  
+ **DefinedSize** 속성을 사용 하 여 **필드** 개체의 데이터 용량을 확인 합니다.  
   
- 합니다 **DefinedSize** 하 고 [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) 속성이 다릅니다. 예를 들어를 **필드** 개체의 선언 형식과 **집합이 있으므로 필요** 와 **DefinedSize** 50으로 단일 문자가 포함 된 속성 값입니다. 합니다 **ActualSize** 반환 하는 속성 값이 단일 문자의 길이 (바이트)에서입니다.  
+ **DefinedSize** 및 [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) 속성이 다릅니다. 예를 들어 **adVarChar** 의 선언 된 형식이 있는 **Field** 개체와 단일 문자를 포함 하는 **DefinedSize** 속성 값 50이 있다고 가정 합니다. 반환 되는 **ActualSize** 속성 값은 단일 문자의 바이트 길이입니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [Field 개체](../../../ado/reference/ado-api/field-object.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ActualSize 및 DefinedSize 속성 예제 (VB)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vb.md)   
  [ActualSize 및 DefinedSize 속성 예제 (VC + +)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vc.md)   
  [ActualSize 속성(ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)

@@ -1,5 +1,5 @@
 ---
-title: '예: ELEMENT 지시어 지정 | Microsoft Docs'
+title: '예제: ELEMENT 지시어 지정 | Microsoft 문서'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e5fd255c763ca516bce53832884ae57c6c3dd8b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287165"
 ---
-# <a name="example-specifying-the-element-directive"></a>예: ELEMENT 지시어 지정
+# <a name="example-specifying-the-element-directive"></a>예제: ELEMENT 지시어 지정
   이 예에서는 직원 정보를 검색하고 다음과 같이 요소 중심 XML을 생성합니다.  
   
 ```  
@@ -83,7 +83,7 @@ FOR XML EXPLICIT;
   
  `...`  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [FOR XML에서 EXPLICIT 모드 사용](use-explicit-mode-with-for-xml.md)  
   
   
