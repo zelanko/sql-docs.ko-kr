@@ -1,5 +1,5 @@
 ---
-title: '4a단계: 결과 가져올 | Microsoft Docs'
+title: '4a 단계: 결과 가져오기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,23 +14,23 @@ ms.assetid: 77d30142-c774-473c-96fb-b364bb92ac60
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3ab0bdabe8b2d66bf054f07ea51056a4044b4ae8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68114194"
 ---
 # <a name="step-4a-fetch-the-results"></a>4a단계: 결과 페치
-다음 그림에 나와 있는 것 처럼 결과 인출 하는 다음 단계가입니다.  
+다음 단계는 다음 그림과 같이 결과를 인출 하는 것입니다.  
   
- ![ODBC 응용 프로그램에서 결과 페치하](../../../odbc/reference/develop-app/media/pr14.gif "pr14")  
+ ![ODBC 응용 프로그램에서 결과를 페치하는 방법](../../../odbc/reference/develop-app/media/pr14.gif "pr14")  
   
- 문을 실행 하는 경우 "3 단계: "빌드하고 SQL 문을 실행 했습니다를 **선택** 응용 프로그램은 먼저 호출 문 또는 카탈로그 함수 **SQLNumResultCols** 결과 집합의 열 수를 결정 합니다. 이 단계가 응용 프로그램이 이미 SQL 문의 경우 처럼 세로 또는 사용자 지정 응용 프로그램에서 하드 코드 된 열 집합 결과의 수를 아는 경우에 필요 하지 않습니다.  
+ "3 단계: SQL 문 작성 및 실행"에서 실행 된 문이 **SELECT** 문 또는 카탈로그 함수인 경우 응용 프로그램은 먼저 **Sqlnumresultcols** 를 호출 하 여 결과 집합의 열 수를 확인 합니다. 응용 프로그램에서 SQL 문이 수직 또는 사용자 지정 응용 프로그램에 하드 코딩 된 경우와 같이 결과 집합 열의 수를 이미 알고 있는 경우에는이 단계가 필요 하지 않습니다.  
   
- 응용 프로그램 이름, 데이터 형식, 전체 자릿수 및 사용 하 여 각 결과 집합 열의 소수 자릿수를 검색 하는 어 **SQLDescribeCol**합니다. 마찬가지로이 정보를 이미 알고 있는 세로 및 사용자 지정 응용 프로그램과 같은 응용 프로그램에 필요한 아닙니다. 응용 프로그램에는이 정보를 전달 **SQLBindCol**, 결과 집합의 열에 대 한 응용 프로그램 변수에 바인딩하는 합니다.  
+ 그런 다음 응용 프로그램은 **SQLDescribeCol**를 사용 하 여 각 결과 집합 열의 이름, 데이터 형식, 전체 자릿수 및 소수 자릿수를 검색 합니다. 이 정보를 이미 알고 있는 수직 및 사용자 지정 응용 프로그램과 같은 응용 프로그램에는이 작업이 필요 하지 않습니다. 응용 프로그램은이 정보를 **SQLBindCol**에 전달 하 여 응용 프로그램 변수를 결과 집합의 열에 바인딩합니다.  
   
- 응용 프로그램이 이제 호출 **SQLFetch** 데이터의 첫 번째 행을 가져와 바인딩된 변수에서 해당 행에서 데이터를 배치할 **SQLBindCol**합니다. 그런 다음 호출 행에 long 데이터가 있으면 **SQLGetData** 해당 데이터를 검색 합니다. 호출 응용 프로그램을 계속 **SQLFetch** 하 고 **SQLGetData** 추가 데이터를 검색 합니다. 데이터를 가져오는 중, 완료 된 후 호출 **SQLCloseCursor** 를 커서를 닫습니다.  
+ 이제 응용 프로그램은 **Sqlfetch** 를 호출 하 여 첫 번째 데이터 행을 검색 하 고 해당 행의 데이터를 **SQLBindCol**에 바인딩된 변수에 넣습니다. 행에 긴 데이터가 있으면 **SQLGetData** 를 호출 하 여 해당 데이터를 검색 합니다. 응용 프로그램은 계속 해 서 **Sqlfetch** 및 **SQLGetData** 를 호출 하 여 추가 데이터를 검색 합니다. 데이터 페치를 완료 한 후에는 **SQLCloseCursor** 를 호출 하 여 커서를 닫습니다.  
   
- 결과 검색 하는 설명은 참조 하세요 [검색 결과 (Basic)](../../../odbc/reference/develop-app/retrieving-results-basic.md) 하 고 [검색 결과 (고급)](../../../odbc/reference/develop-app/retrieving-results-advanced.md)합니다.  
+ 결과를 검색 하는 방법에 대 한 자세한 내용은 [결과 검색 (기본)](../../../odbc/reference/develop-app/retrieving-results-basic.md) 및 [결과 검색 (고급)](../../../odbc/reference/develop-app/retrieving-results-advanced.md)을 참조 하세요.  
   
- 이제 응용 프로그램에 반환 합니다. "3 단계: 빌드 및 SQL 문을 실행할 "는 동일한 트랜잭션에서 다른 문을 실행 하려면 진행 또는 "5 단계: 트랜잭션 커밋"커밋 또는 트랜잭션을 롤백합니다.
+ 이제 응용 프로그램이 "3 단계: SQL 문 작성 및 실행"으로 반환 되어 동일한 트랜잭션에서 다른 문을 실행 합니다. 또는 트랜잭션을 커밋하거나 롤백하려면 "5 단계: 트랜잭션 커밋"으로 진행 합니다.
