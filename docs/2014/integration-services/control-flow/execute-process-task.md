@@ -15,16 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8b21aa5d2834143ab012b90e0fa6f8a1e22a8314
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831873"
 ---
 # <a name="execute-process-task"></a>프로세스 실행 태스크
-  프로세스 실행 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 워크플로의 일부로 응용 프로그램이나 배치 파일을 실행합니다. 프로세스 실행 태스크를 사용하여 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 또는 [!INCLUDE[ofprword](../../includes/ofprword-md.md)]와 같은 모든 표준 애플리케이션을 열 수 있지만 이 태스크는 일반적으로 데이터 원본에 대해 작동하는 비즈니스 애플리케이션이나 배치 파일을 실행하는 데 사용됩니다. 예를 들어 프로세스 실행 태스크를 사용하여 압축된 텍스트 파일을 확장할 수 있습니다. 패키지는 이 텍스트 파일을 패키지의 데이터 흐름에 대한 데이터 원본으로 사용할 수 있습니다. 예를 들어 프로세스 실행 태스크를 사용하여 일일 판매 보고서를 생성하는 사용자 지정 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 애플리케이션을 실행할 수도 있습니다. 그런 다음 이 보고서를 메일 보내기 태스크에 첨부하여 메일 그룹에 전달할 수 있습니다.  
+  프로세스 실행 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 워크플로의 일부로 응용 프로그램이 나 배치 파일을 실행 합니다. 프로세스 실행 태스크를 사용하여 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 또는 [!INCLUDE[ofprword](../../includes/ofprword-md.md)]와 같은 모든 표준 애플리케이션을 열 수 있지만 이 태스크는 일반적으로 데이터 원본에 대해 작동하는 비즈니스 애플리케이션이나 배치 파일을 실행하는 데 사용됩니다. 예를 들어 프로세스 실행 태스크를 사용하여 압축된 텍스트 파일을 확장할 수 있습니다. 패키지는 이 텍스트 파일을 패키지의 데이터 흐름에 대한 데이터 원본으로 사용할 수 있습니다. 예를 들어 프로세스 실행 태스크를 사용하여 일일 판매 보고서를 생성하는 사용자 지정 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 애플리케이션을 실행할 수도 있습니다. 그런 다음 이 보고서를 메일 보내기 태스크에 첨부하여 메일 그룹에 전달할 수 있습니다.  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 패키지 실행과 같은 워크플로 태스크를 수행하는 기타 태스크가 있습니다. 자세한 내용은 [Execute Package Task](execute-package-task.md)를 참조하세요.  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 패키지 실행과 같은 워크플로 태스크를 수행하는 기타 태스크가 있습니다. 자세한 내용은 [Execute Package Task](execute-package-task.md)를 참조하세요.  
   
 ## <a name="custom-log-entries-available-on-the-execute-process-task"></a>프로세스 실행 태스크에 사용할 수 있는 사용자 지정 로그 항목  
  다음 표에서는 프로세스 실행 태스크에 대한 사용자 지정 로그 항목을 나열합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../performance/integration-services-ssis-logging.md) 및 [로깅할 메시지 사용자 지정](../custom-messages-for-logging.md)을 참조하세요.  
@@ -37,11 +38,12 @@ ms.locfileid: "62831873"
 ## <a name="configuration-of-the-execute-process-task"></a>프로세스 실행 태스크 구성  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
+ 
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [프로세스 실행 태스크 편집기&#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [프로세스 실행 태스크 편집기 &#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [프로세스 실행 태스크 편집기&#40;프로세스 페이지&#41;](../execute-process-task-editor-process-page.md)  
+-   [프로세스 실행 태스크 편집기 &#40;페이지&#41;](../execute-process-task-editor-process-page.md)  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법을 보려면 다음 항목을 클릭하십시오.  
   
@@ -50,9 +52,11 @@ ms.locfileid: "62831873"
 ### <a name="property-settings"></a>속성 설정  
  프로세스 실행 태스크는 사용자 지정 애플리케이션을 실행할 때 다음 방법 중 하나 또는 모두를 통해 애플리케이션에 입력을 제공합니다.  
   
--   **StandardInputVariable** 속성 설정에서 지정하는 변수. 변수에 대한 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](../use-variables-in-packages.md)을 참조하세요.  
+-   
+  **StandardInputVariable** 속성 설정에서 지정하는 변수. 변수에 대한 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](../use-variables-in-packages.md)을 참조하세요.  
   
--   **Arguments** 속성 설정에서 지정하는 인수. 예를 들어 태스크가 Word 문서를 여는 경우 인수에서 .doc 파일의 이름을 지정할 수 있습니다.  
+-   
+  **Arguments** 속성 설정에서 지정하는 인수. 예를 들어 태스크가 Word 문서를 여는 경우 인수에서 .doc 파일의 이름을 지정할 수 있습니다.  
   
  하나의 프로세스 실행 태스크에 있는 사용자 지정 애플리케이션에 여러 인수를 전달하려면 공백으로 인수를 구분합니다. 인수는 공백을 포함할 수 없습니다. 공백을 포함하는 경우 태스크가 실행되지 않습니다. 변수 값을 인수로 전달하는 식을 사용할 수 있습니다. 다음 예에서는 식이 두 변수 값을 인수로 전달하고 공백을 사용하여 인수를 구분합니다.  
   
@@ -60,9 +64,10 @@ ms.locfileid: "62831873"
   
  여러 프로세스 실행 태스크 속성을 설정하는 식을 사용할 수 있습니다.  
   
- 사용 하는 경우는 **StandardInputVariable** 입력을 제공 하는 프로세스 실행 태스크를 구성 하는 속성 호출의 `Console.ReadLine` 입력을 읽어서 응용 프로그램에서 메서드. 자세한 내용은 [Console.ReadLine 메서드](https://go.microsoft.com/fwlink/?LinkId=129201)클래스 라이브러리의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 항목을 참조하세요.  
+ **Standardinputvariable** 속성을 사용 하 여 프로세스 실행 태스크에서 입력을 제공 하도록 구성 하는 경우 `Console.ReadLine` 응용 프로그램에서 메서드를 호출 하 여 입력을 읽습니다. 자세한 내용은 [Console.ReadLine 메서드](https://go.microsoft.com/fwlink/?LinkId=129201)클래스 라이브러리의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Class Library.  
   
- **Arguments** 속성을 사용하여 프로세스 실행 태스크에서 입력을 제공하도록 구성하는 경우 다음 단계 중 하나를 수행하여 인수를 얻습니다.  
+ 
+  **Arguments** 속성을 사용하여 프로세스 실행 태스크에서 입력을 제공하도록 구성하는 경우 다음 단계 중 하나를 수행하여 인수를 얻습니다.  
   
 -   Microsoft Visual Basic을 사용하여 애플리케이션을 작성하는 경우 `My.Application.CommandLineArgs` 속성을 설정합니다. 다음 예에서는 `My.Application.CommandLineArgs` 속성을 설정하여 두 인수를 검색합니다.  
   
@@ -86,7 +91,7 @@ ms.locfileid: "62831873"
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.ExecuteProcess.ExecuteProcess>  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 태스크](integration-services-tasks.md)   
  [제어 흐름](control-flow.md)  
   

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1bb6f278b18381d1b3d3defdb53a7c40a6f673ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62960286"
 ---
 # <a name="secure-the-distributor"></a>배포자 보안 설정
@@ -44,7 +44,7 @@ ms.locfileid: "62960286"
 ## <a name="snapshot-folder-security"></a>스냅샷 폴더 보안  
  스냅샷 공유에 병합 에이전트(병합 게시의 경우)나 배포 에이전트(스냅샷 또는 트랜잭션 복제의 경우)가 실행되는 계정에 대한 읽기 권한이 있고 스냅샷 에이전트가 실행되는 계정에 대한 쓰기 권한이 있는지 확인합니다. 스냅샷 폴더에 대한 자세한 내용은 [스냅샷 폴더 보안 설정](secure-the-snapshot-folder.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [복제 보안 설정 보기 및 수정](view-and-modify-replication-security-settings.md)   
  [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   

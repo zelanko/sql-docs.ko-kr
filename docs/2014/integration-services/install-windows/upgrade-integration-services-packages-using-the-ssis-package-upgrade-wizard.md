@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e44b755748dcbda6af30e0570b667f9ba3ee75a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767893"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>SSIS 패키지 업그레이드 마법사를 사용하여 Integration Services 패키지 업그레이드
@@ -42,7 +42,8 @@ ms.locfileid: "62767893"
 2.  솔루션 탐색기에서 **SSIS 패키지** 노드를 마우스 오른쪽 단추로 클릭하고 **모든 패키지 업그레이드** 를 클릭하여 이 노드의 모든 패키지를 업그레이드합니다.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 또는 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 패키지가 포함된 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 프로젝트를 열면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]는 자동으로 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 업그레이드 마법사를 엽니다.  
+    >  
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 또는 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 패키지가 포함된 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 프로젝트를 열면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]는 자동으로 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 업그레이드 마법사를 엽니다.  
   
 #### <a name="to-run-the-wizard-from-sql-server-management-studio"></a>SQL Server Management Studio에서 마법사를 실행하려면  
   
@@ -50,14 +51,14 @@ ms.locfileid: "62767893"
   
 #### <a name="to-run-the-wizard-at-the-command-prompt"></a>명령 프롬프트에서 마법사를 실행하려면  
   
--   명령 프롬프트에서 SSISUpgrade.exe 파일을 실행 합니다 **C:\Program Files\Microsoft SQL Server\120\DTS\Binn** 폴더입니다.  
+-   명령 프롬프트에서 **C:\Program FILES\MICROSOFT SQL Server\120\DTS\Binn** 폴더에 있는의 ssisupgrade.exe 파일을 실행 합니다.  
   
 ## <a name="backing-up-the-original-packages"></a>원래 패키지 백업  
  원래 패키지를 백업하려면 원래 패키지와 업그레이드된 패키지가 파일 시스템의 같은 폴더에 저장되어 있어야 합니다. 마법사를 실행하는 방법에 따라 이 스토리지 위치는 자동으로 선택될 수 있습니다.  
   
 -   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 에서 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]패키지 업그레이드 마법사를 실행하면 자동으로 원래 패키지와 업그레이드된 패키지가 파일 시스템의 같은 폴더에 저장됩니다.  
   
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 또는 명령 프롬프트에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 패키지 업그레이드 마법사를 실행하면 원래 패키지와 업그레이드된 패키지에 대해 다른 저장 위치를 지정할 수 있습니다. 원래 패키지를 백업하려면 원본 패키지와 업그레이드된 패키지가 파일 시스템의 같은 폴더에 저장되도록 지정해야 합니다. 다른 스토리지 옵션을 지정하면 마법사는 원래 패키지를 백업할 수 없게 됩니다.  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 또는 명령 프롬프트에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 패키지 업그레이드 마법사를 실행하면 원래 패키지와 업그레이드된 패키지에 대해 다른 스토리지 위치를 지정할 수 있습니다. 원래 패키지를 백업하려면 원본 패키지와 업그레이드된 패키지가 파일 시스템의 같은 폴더에 저장되도록 지정해야 합니다. 다른 스토리지 옵션을 지정하면 마법사는 원래 패키지를 백업할 수 없게 됩니다.  
   
  마법사는 원래 패키지를 백업할 때 **SSISBackupFolder** 폴더에 원래 패키지의 복사본을 저장합니다. 마법사는 원래 패키지 및 업그레이드된 패키지가 포함된 폴더에 하위 폴더로 이 **SSISBackupFolder** 폴더를 만듭니다.  
   
@@ -86,7 +87,7 @@ ms.locfileid: "62767893"
 2.  마법사의 **패키지 관리 옵션 선택** 페이지에서 **원래 패키지 백업** 옵션을 선택합니다.  
   
     > [!WARNING]  
-    >  합니다 **원래 패키지 백업** 열면 옵션이 표시 되지 않습니다는 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 또는 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 프로젝트 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], 마법사가 자동으로 시작 됩니다.  
+    >  마법사를 자동으로 실행하는 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)]에서 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 또는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 프로젝트를 열면 **원래 패키지 백업** 옵션이 표시되지 않습니다.  
   
 3.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 업그레이드 마법사를 실행합니다.  
   

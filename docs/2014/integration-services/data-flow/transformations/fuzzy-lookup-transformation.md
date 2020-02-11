@@ -31,10 +31,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0b77d45ca55adaa85e4e37e9da817f325ce0fc7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900334"
 ---
 # <a name="fuzzy-lookup-transformation"></a>유사 항목 조회 변환
@@ -51,7 +51,8 @@ ms.locfileid: "62900334"
   
  이 변환은 하나의 입력과 하나의 출력을 가지며  
   
- `DT_WSTR` 및 `DT_STR` 데이터 형식의 입력 열만 유사 일치에 사용할 수 있습니다. 정확히 일치에는 `DT_TEXT`, `DT_NTEXT` 및 `DT_IMAGE`를 제외한 모든 DTS 데이터 형식을 사용할 수 있습니다. 자세한 내용은 [Integration Services Data Types](../integration-services-data-types.md)을 참조하세요. 입력과 참조 테이블 사이에서 조인에 참여하는 열은 호환 가능한 데이터 형식이어야 합니다. DTS 사용 하 여 열을 조인할 유효 예를 들어, `DT_WSTR` 데이터 형식 열에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nvarchar` 데이터 형식이 아니라 잘못 된 열에 조인 하는 `DT_WSTR` 데이터 형식 열에 `int` 데이터 형식.  
+ 
+  `DT_WSTR` 및 `DT_STR` 데이터 형식의 입력 열만 유사 일치에 사용할 수 있습니다. 정확히 일치에는 `DT_TEXT`, `DT_NTEXT` 및 `DT_IMAGE`를 제외한 모든 DTS 데이터 형식을 사용할 수 있습니다. 자세한 내용은 [Integration Services 데이터 형식](../integration-services-data-types.md)을 참조 하세요. 입력과 참조 테이블 사이에서 조인에 참여하는 열은 호환 가능한 데이터 형식이어야 합니다. 예를 들어 `DT_WSTR` DTS 데이터 형식의 열을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nvarchar` 데이터 형식의 열에 조인 하는 것은 유효 하지만 데이터 형식의 열을 `DT_WSTR` `int` 데이터 형식의 열에 조인 하는 것은 유효 하지 않습니다.  
   
  최대 메모리 양, 행 비교 알고리즘, 변환에서 사용하는 인덱스 및 참조 테이블의 캐싱을 지정하여 이 변환을 사용자 지정할 수 있습니다.  
   
@@ -66,7 +67,8 @@ ms.locfileid: "62900334"
   
  유사성 임계값은 구성 요소 및 조인 수준에서 설정할 수 있습니다. 조인 수준의 유사성 임계값은 변환이 입력 열과 참조 테이블 사이에서 유사 항목 일치를 수행하는 경우에만 사용할 수 있습니다. 유사성 범위는 0에서 1 사이입니다. 임계값이 1에 가까울수록 서로 유사한 행과 열이 중복된 것으로 간주되기 쉽습니다. 구성 요소 및 조인 수준에서 MinSimilarity 속성을 설정하여 유사성 임계값을 지정할 수 있습니다. 구성 요소 수준에서 지정한 유사성에 부합하려면 모든 행의 모든 일치에 대한 유사성이 구성 요소 수준에서 지정한 유사성 임계값보다 크거나 같아야 합니다. 즉, 행 또는 조인 수준의 일치가 특정 유사성에 도달하지 못할 경우 구성 요소 수준의 높은 유사성을 지정할 수 없습니다.  
   
- 각 일치 항목에는 유사성 점수와 신뢰성 점수가 포함됩니다. 유사성 점수는 입력 레코드와 유사 항목 조회 변환이 참조 테이블에서 반환하는 레코드 사이의 문자적 유사성에 대한 수치적 측정 단위입니다. 신뢰성 점수는 특정 값이 참조 테이블에 있는 일치 항목 중에서 가장 유사한 일치 항목이 될 수 있는 가능성을 측정하는 단위입니다. 레코드에 할당되는 신뢰성 점수는 반환되는 다른 일치 레코드에 따라 달라집니다. 예를 들어 *St.* 및 *Saint* 에 대한 조회는 다른 일치 항목에 관계없이 낮은 유사성 점수를 반환합니다. *Saint* 가 반환되는 유일한 일치 항목인 경우 신뢰성 점수는 높아집니다. 하지만 *Saint* 및 *St.* 가 모두 참조 테이블에 있는 경우 *St.* 에 대한 신뢰성은 높고 *Saint* 에 대한 신뢰성은 낮습니다. 높은 유사성이 높은 신뢰성을 의미하지는 않습니다. 예를 들어 *Chapter 4*값을 조회하는 경우 *Chapter 1*, *Chapter 2*및 *Chapter 3* 의 반환 결과는 높은 유사성 점수를 갖지만 어떤 결과가 가장 일치하는 항목인지 분명하지 않기 때문에 신뢰성 점수는 낮습니다.  
+ 각 일치 항목에는 유사성 점수와 신뢰성 점수가 포함됩니다. 유사성 점수는 입력 레코드와 유사 항목 조회 변환이 참조 테이블에서 반환하는 레코드 사이의 문자적 유사성에 대한 수치적 측정 단위입니다. 신뢰성 점수는 특정 값이 참조 테이블에 있는 일치 항목 중에서 가장 유사한 일치 항목이 될 수 있는 가능성을 측정하는 단위입니다. 레코드에 할당되는 신뢰성 점수는 반환되는 다른 일치 레코드에 따라 달라집니다. 예를 들어 *St.* 및 *Saint* 에 대한 조회는 다른 일치 항목에 관계없이 낮은 유사성 점수를 반환합니다. 
+  *Saint* 가 반환되는 유일한 일치 항목인 경우 신뢰성 점수는 높아집니다. 하지만 *Saint* 및 *St.* 가 모두 참조 테이블에 있는 경우 *St.* 에 대한 신뢰성은 높고 *Saint* 에 대한 신뢰성은 낮습니다. 높은 유사성이 높은 신뢰성을 의미하지는 않습니다. 예를 들어 *Chapter 4*값을 조회하는 경우 *Chapter 1*, *Chapter 2*및 *Chapter 3* 의 반환 결과는 높은 유사성 점수를 갖지만 어떤 결과가 가장 일치하는 항목인지 분명하지 않기 때문에 신뢰성 점수는 낮습니다.  
   
  유사성 점수는 0과 1 사이의 소수 값으로 표시되며 여기서 유사성 점수 1은 입력 열의 값과 참조 테이블의 값이 정확히 일치함을 의미합니다. 신뢰성 점수 역시 0과 1 사이의 소수 값으로 표시되며 일치 항목에 대한 신뢰성을 나타냅니다. 사용 가능한 일치 항목이 없는 경우 0의 유사성 및 신뢰성 점수가 해당 행에 할당되고 참조 테이블에서 복사된 출력 열은 Null 값을 포함합니다.  
   
@@ -74,9 +76,9 @@ ms.locfileid: "62900334"
   
  변환의 출력 열에는 통과 열로 표시된 입력 열, 조회 테이블에서 선택된 열, 그리고 다음과 같은 추가 열이 포함됩니다.  
   
--   **_Similarity**- 입력과 참조 열의 값 사이의 유사성을 나타내는 열입니다.  
+-   **_Similarity**입력 열과 참조 열 값의 유사성을 설명 하는 열입니다.  
   
--   **_Confidence**- 일치 항목의 신뢰성을 나타내는 열입니다.  
+-   **_Confidence**일치의 품질을 설명 하는 열입니다.  
   
  변환은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 대한 연결을 사용하여 유사 항목 조회 알고리즘에 필요한 임시 테이블을 만듭니다.  
   
@@ -97,53 +99,59 @@ ms.locfileid: "62900334"
 |**ReuseExistingIndex**|기존 인덱스를 다시 사용합니다.|  
   
 ### <a name="maintenance-of-the-match-index-table"></a>일치 인덱스 테이블의 유지 관리  
- **GenerateAndMaintainNewIndex** 옵션은 참조 테이블에 트리거를 설치하여 일치 인덱스 테이블과 참조 테이블이 계속 동기화되도록 유지합니다. 설치된 트리거를 제거해야 하는 경우 MatchIndexName 속성에서 지정한 이름을 입력 매개 변수 값으로 하여 **sp_FuzzyLookupTableMaintenanceUnInstall** 저장 프로시저를 실행합니다.  
+ 
+  **GenerateAndMaintainNewIndex** 옵션은 참조 테이블에 트리거를 설치하여 일치 인덱스 테이블과 참조 테이블이 계속 동기화되도록 유지합니다. 설치된 트리거를 제거해야 하는 경우 MatchIndexName 속성에서 지정한 이름을 입력 매개 변수 값으로 하여 **sp_FuzzyLookupTableMaintenanceUnInstall** 저장 프로시저를 실행합니다.  
   
- **sp_FuzzyLookupTableMaintenanceUnInstall** 저장 프로시저를 실행하기 전에 유지 관리된 일치 인덱스 테이블을 삭제해서는 안 됩니다. 일치 인덱스 테이블이 삭제되면 참조 테이블의 트리거는 제대로 실행되지 않습니다. 참조 테이블에 대한 모든 후속 업데이트는 참조 테이블의 트리거를 수동으로 제거할 때까지 계속 실패합니다.  
+ 
+  **sp_FuzzyLookupTableMaintenanceUnInstall** 저장 프로시저를 실행하기 전에 유지 관리된 일치 인덱스 테이블을 삭제해서는 안 됩니다. 일치 인덱스 테이블이 삭제되면 참조 테이블의 트리거는 제대로 실행되지 않습니다. 참조 테이블에 대한 모든 후속 업데이트는 참조 테이블의 트리거를 수동으로 제거할 때까지 계속 실패합니다.  
   
  SQL TRUNCATE TABLE 명령은 DELETE 트리거를 호출하지 않습니다. 참조 테이블에서 TRUNCATE TABLE 명령을 사용하면 참조 테이블과 일치 인덱스는 더 이상 동기화되지 않으며 유사 항목 조회 변환이 실패합니다. 일치 인덱스를 유지 관리하는 트리거가 참조 테이블에 설치되어 있으므로 TRUNCATE TABLE 명령 대신 SQL DELETE 명령을 사용해야 합니다.  
   
 > [!NOTE]  
->  **유사 항목 조회 변환 편집기** 의 **참조 테이블** 에서 **저장된 인덱스 유지 관리**를 선택하면 변환은 관리 저장 프로시저를 사용하여 인덱스를 유지 관리합니다. 이러한 관리 저장 프로시저는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 CLR(공용 언어 런타임) 통합 기능을 사용합니다. 기본적으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 CLR 통합은 사용되지 않습니다. **저장된 인덱스 유지 관리** 기능을 사용하려면 CLR 통합을 사용하도록 설정해야 합니다. 자세한 내용은 [Enabling CLR Integration](../../../relational-databases/clr-integration/clr-integration-enabling.md)을 참조하세요.  
+>  
+  **유사 항목 조회 변환 편집기** 의 **참조 테이블** 에서 **저장된 인덱스 유지 관리**를 선택하면 변환은 관리 저장 프로시저를 사용하여 인덱스를 유지 관리합니다. 이러한 관리 저장 프로시저는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 CLR(공용 언어 런타임) 통합 기능을 사용합니다. 기본적으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 CLR 통합은 사용되지 않습니다. 
+  **저장된 인덱스 유지 관리** 기능을 사용하려면 CLR 통합을 사용하도록 설정해야 합니다. 자세한 내용은 [Enabling CLR Integration](../../../relational-databases/clr-integration/clr-integration-enabling.md)을 참조하세요.  
 >   
->  **저장된 인덱스 유지 관리** 옵션에는 CLR 통합이 필요하므로 CLR 통합이 사용되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 인스턴스에 있는 참조 테이블을 선택하는 경우에만 이 기능이 작동합니다.  
+>  
+  **저장된 인덱스 유지 관리** 옵션에는 CLR 통합이 필요하므로 CLR 통합이 사용되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 인스턴스에 있는 참조 테이블을 선택하는 경우에만 이 기능이 작동합니다.  
   
 ## <a name="row-comparison"></a>행 비교  
- 유사 항목 조회 변환을 구성하는 경우 변환에서 참조 테이블에서 일치하는 레코드를 찾는 데 사용할 비교 알고리즘을 지정할 수 있습니다. Exhaustive 속성을 설정 하면 `True`, 변환은 참조 테이블의 모든 행에 대 한 입력의 모든 행을 비교 합니다. 이 비교 알고리즘은 보다 정확한 결과를 생성할 수 있지만 참조 테이블의 행 개수가 많으면 변환이 느리게 수행될 수 있습니다. Exhaustive 속성 설정 된 경우 `True`, 전체 참조 테이블이 메모리로 로드 됩니다. 성능 문제를 방지 하는 것이 좋습니다 Exhaustive 속성 설정 하려면 `True` 패키지 개발 시에만 합니다.  
+ 유사 항목 조회 변환을 구성하는 경우 변환에서 참조 테이블에서 일치하는 레코드를 찾는 데 사용할 비교 알고리즘을 지정할 수 있습니다. 전체 속성을로 `True`설정 하면 변환에서는 입력의 모든 행을 참조 테이블의 모든 행과 비교 합니다. 이 비교 알고리즘은 보다 정확한 결과를 생성할 수 있지만 참조 테이블의 행 개수가 많으면 변환이 느리게 수행될 수 있습니다. 포괄 속성이로 `True`설정 된 경우 전체 참조 테이블이 메모리에 로드 됩니다. 성능 문제를 방지 하려면 패키지 개발 시에만 철저 한 속성을로 `True` 설정 하는 것이 좋습니다.  
   
- Exhaustive 속성 설정 된 경우 `False`, 유사 항목 조회 변환에는 인덱싱된 토큰이 나 부분 문자열을 하나 이상 있는 일치 항목만 반환 합니다 (부분 문자열 이라고는 *질문 및 답변-그램*) 입력된 레코드와 합니다. 조회 효율성을 최대화하기 위해 테이블의 각 행에 있는 토큰의 하위 집합만 유사 항목 조회 변환에서 일치 항목을 찾는 데 사용하는 반전된 인덱스 구조에 인덱싱됩니다. 입력된 데이터 집합이 작은 경우 설정할 수 있습니다 Exhaustive `True` 인덱스 테이블에 존재 하는 공통 된 토큰이 없는 일치 항목이 누락을 방지 하려면.  
+ 포괄 속성이로 `False`설정 된 경우 유사 항목 조회 변환은 입력 레코드와 공통적으로 하나 이상의 인덱싱된 토큰이 나 하위 문자열이 있는 일치 항목만 반환 합니다 (부분 문자열은 *q-영문법*이라고 함). 조회 효율성을 최대화하기 위해 테이블의 각 행에 있는 토큰의 하위 집합만 유사 항목 조회 변환에서 일치 항목을 찾는 데 사용하는 반전된 인덱스 구조에 인덱싱됩니다. 입력 데이터 집합이 작은 경우 전체를로 `True` 설정 하 여 인덱스 테이블에 공통 토큰이 없는 일치 항목이 누락 되지 않도록 할 수 있습니다.  
   
 ## <a name="caching-of-indexes-and-reference-tables"></a>인덱스 및 참조 테이블의 캐싱  
- 유사 항목 조회 변환을 구성할 때 변환이 자체 작업을 수행하기 전에 메모리에서 인덱스와 참조 테이블을 부분적으로 캐시할지 여부를 지정할 수 있습니다. WarmCaches 속성을 설정 하는 경우 `True`, 인덱스와 참조 테이블이 메모리에 로드 됩니다. 입력에 WarmCaches 속성을 설정 하는 많은 행이 있는 경우 `True` 변환의 성능을 향상 시킬 수 있습니다. 입력된 행 개수가 적은 경우 WarmCaches 속성을 설정 `False` 큰 인덱스를 다시를 더 빠르게 사용할 수 있습니다.  
+ 유사 항목 조회 변환을 구성할 때 변환이 자체 작업을 수행하기 전에 메모리에서 인덱스와 참조 테이블을 부분적으로 캐시할지 여부를 지정할 수 있습니다. WarmCaches 속성을로 `True`설정 하면 인덱스와 참조 테이블이 메모리에 로드 됩니다. 입력에 많은 행이 있는 경우 WarmCaches 속성을로 `True` 설정 하면 변환의 성능이 향상 될 수 있습니다. 입력 행 수가 적으면 WarmCaches 속성을로 `False` 설정 하면 많은 인덱스를 더 빨리 재사용할 수 있습니다.  
   
 ## <a name="temporary-tables-and-indexes"></a>임시 테이블 및 인덱스  
  유사 항목 조회 변환은 런타임에 변환이 연결하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에서 테이블 및 인덱스 등의 임시 개체를 만듭니다. 이러한 임시 테이블 및 인덱스의 크기는 참조 테이블에 있는 행 및 토큰 개수와 유사 항목 조회 변환이 만드는 토큰 개수에 비례하므로 많은 양의 디스크 공간을 소모할 수 있습니다. 변환은 또한 이 임시 테이블을 쿼리합니다. 그러므로 특히 프로덕션 서버가 사용 가능한 디스크 공간을 제한한 경우 유사 항목 조회 변환을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스의 비-프로덕션 인스턴스에 연결하는 방법을 고려해야 합니다.  
   
- 변환에서 사용하는 테이블 및 인덱스가 로컬 컴퓨터에 있는 경우 변환의 성능이 향상될 수 있습니다. 유사 항목 조회 변환에서 사용하는 참조 테이블이 프로덕션 서버에 있는 경우 테이블을 비-프로덕션 서버에 복사하고 복사본을 액세스하도록 유사 항목 조회 변환을 구성하는 방법을 고려해야 합니다. 이렇게 하면 조회 쿼리가 프로덕션 서버의 리소스를 소모하지 않도록 방지할 수 있습니다. 또한 유사 항목 조회 변환이 일치 인덱스를 유지 관리하는 경우, 즉 MatchIndexOptions가 **GenerateAndMaintainNewIndex**로 설정되는 경우 변환은 데이터 정리 작업을 수행하는 동안 참조 테이블을 잠그고 다른 사용자와 애플리케이션이 해당 테이블에 액세스하지 못하게 할 수 있습니다.  
+ 변환에서 사용하는 테이블 및 인덱스가 로컬 컴퓨터에 있는 경우 변환의 성능이 향상될 수 있습니다. 유사 항목 조회 변환에서 사용하는 참조 테이블이 프로덕션 서버에 있는 경우 테이블을 비-프로덕션 서버에 복사하고 복사본을 액세스하도록 유사 항목 조회 변환을 구성하는 방법을 고려해야 합니다. 이렇게 하면 조회 쿼리가 프로덕션 서버의 리소스를 소모하지 않도록 방지할 수 있습니다. 또한 유사 항목 조회 변환에서 일치 인덱스를 유지 관리 하는 경우 (즉, MatchIndexOptionsis가 **GenerateAndMaintainNewIndex**로 설정 된 경우) 변환에서 데이터 정리 작업 기간 동안 참조 테이블을 잠그고 다른 사용자 및 응용 프로그램이 테이블에 액세스 하지 못하게 할 수 있습니다.  
   
 ## <a name="configuring-the-fuzzy-lookup-transformation"></a>유사 항목 조회 변환의 구성  
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- **유사 항목 조회 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용은 다음 항목을 참조하십시오.  
+ 
+  **유사 항목 조회 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   
--   [유사 항목 조회 변환 편집기&#40;참조 테이블 탭&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
+-   [유사 항목 조회 변환 편집기 &#40;참조 테이블 탭&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
   
 -   [유사 항목 조회 변환 편집기&#40;열 탭&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)  
   
--   [유사 항목 조회 변환 편집기&#40;고급 탭&#41;](../../fuzzy-lookup-transformation-editor-advanced-tab.md)  
+-   [유사 항목 조회 변환 편집기 &#40;고급 탭&#41;](../../fuzzy-lookup-transformation-editor-advanced-tab.md)  
   
  **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [공용 속성](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [변환 사용자 지정 속성](transformation-custom-properties.md)  
   
 ## <a name="related-tasks"></a>관련 작업  
  데이터 흐름 구성 요소의 속성을 설정하는 방법에 대한 자세한 내용은 [데이터 흐름 구성 요소의 속성 설정](../set-the-properties-of-a-data-flow-component.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [조회 변환](lookup-transformation.md)   
- [유사 항목 그룹화 변환](fuzzy-grouping-transformation.md)   
+ [Fuzzy Grouping Transformation](fuzzy-grouping-transformation.md)   
  [Integration Services 변환](integration-services-transformations.md)  
   
   

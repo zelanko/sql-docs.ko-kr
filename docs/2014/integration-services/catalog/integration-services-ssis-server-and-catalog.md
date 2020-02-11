@@ -14,20 +14,23 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 02966721d1fdfd1c1d3051510e0dd68ed26dcbc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771739"
 ---
 # <a name="integration-services-ssis-server"></a>Integration Services(SSIS) 서버
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 패키지를 디자인하고 테스트한 후에는 이 패키지가 포함된 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다.  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버는 `SSISDB` 데이터베이스를 호스팅하는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스입니다. 데이터베이스는 패키지, 프로젝트, 매개 변수, 사용 권한, 서버 속성 및 작업 기록과 같은 개체를 저장합니다.  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 데이터베이스를 호스팅하는 `SSISDB` 인스턴스입니다. 데이터베이스는 패키지, 프로젝트, 매개 변수, 사용 권한, 서버 속성 및 작업 기록과 같은 개체를 저장합니다.  
   
- `SSISDB` 데이터베이스는 쿼리할 수 있는 공용 보기에 개체 정보를 표시합니다. 또한 이 데이터베이스는 개체를 관리하기 위해 호출할 수 있는 저장 프로시저를 제공합니다.  
+ 
+  `SSISDB` 데이터베이스는 쿼리할 수 있는 공용 보기에 개체 정보를 표시합니다. 또한 이 데이터베이스는 개체를 관리하기 위해 호출할 수 있는 저장 프로시저를 제공합니다.  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 프로젝트를 배포하려면 먼저 `SSISDB` 카탈로그를 만들어야 합니다.  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 프로젝트를 배포하려면 먼저 `SSISDB` 카탈로그를 만들어야 합니다.  
   
  SSISDB 카탈로그 기능에 대한 개요는 [SSIS 카탈로그](ssis-catalog.md)를 참조하세요.  
   
@@ -37,11 +40,12 @@ ms.locfileid: "62771739"
  또한 SSIS 및 AlwaysOn 가용성 그룹을 사용하여 SSISDB의 고가용성 및 해당 콘텐츠를 제공할 수도 있습니다. 자세한 내용은 blogs.msdn.com에서 Matt Masson이 게시한 [AlwaysOn을 사용하는 SSIS](https://go.microsoft.com/fwlink/?LinkId=255873)블로그를 참조하십시오.  
   
 ##  <a name="ssms"></a> SQL Server Management Studio의 Integration Services 서버  
- `SSISDB` 데이터베이스를 호스팅하는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결하면 개체 탐색기에 다음 개체가 표시됩니다.  
+ 
+  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 데이터베이스를 호스팅하는 `SSISDB`의 인스턴스에 연결하면 개체 탐색기에 다음 개체가 표시됩니다.  
   
 -   **SSISDB 데이터베이스**  
   
-     `SSISDB` 데이터베이스 아래에 표시 합니다 **데이터베이스** 개체 탐색기의 노드. 뷰를 쿼리하고 저장 프로시저를 호출하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버와 이 서버에 저장된 개체를 관리할 수 있습니다.  
+     데이터베이스 `SSISDB` 는 개체 탐색기의 **데이터베이스** 노드 아래에 나타납니다. 뷰를 쿼리하고 저장 프로시저를 호출하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버와 이 서버에 저장된 개체를 관리할 수 있습니다.  
   
 -   **Integration Services 카탈로그**  
   
@@ -53,7 +57,7 @@ ms.locfileid: "62771739"
   
 -   [Integration Services 서버의 패키지 목록 보기](view-the-list-of-packages-on-the-integration-services-server.md)  
   
--   [Integration Services 서버에 프로젝트 배포](../deploy-projects-to-integration-services-server.md)  
+-   [Deploy Projects to Integration Services Server](../deploy-projects-to-integration-services-server.md)  
   
 -   [SQL Server Management Studio를 사용하여 SSIS 서버에서 패키지 실행](../run-a-package-on-the-ssis-server-using-sql-server-management-studio.md)  
   

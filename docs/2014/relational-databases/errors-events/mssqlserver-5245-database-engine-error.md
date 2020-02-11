@@ -13,15 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 30b37236b321fc90372914f2af48a652d41fbe03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913601"
 ---
-# <a name="mssqlserver5245"></a>MSSQLSERVER_5245
+# <a name="mssqlserver_5245"></a>MSSQLSERVER_5245
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -30,7 +30,7 @@ ms.locfileid: "62913601"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|DBCC4_TABLE_LOCK_TIMEOUT_EXCEEDED|  
-|메시지 텍스트|개체 ID O_ID (개체 'NAME'): 잠금 요청 제한 시간이 초과 되었으므로 DBCC이이 개체에 대 한 잠금을 가져올 수 없습니다. 이 개체를 건너뛰었으므로 처리되지 않습니다.|  
+|메시지 텍스트|개체 ID O_ID(개체 'NAME'): 잠금 요청 제한 시간이 초과되었으므로 DBCC가 이 개체를 잠글 수 없습니다. 이 개체를 건너뛰었으므로 처리되지 않습니다.|  
   
 ## <a name="explanation"></a>설명  
  DBCC가 지정된 개체에 대한 테이블을 잠그기 위해 기다리는 동안 잠금 제한 시간이 초과되었습니다.  

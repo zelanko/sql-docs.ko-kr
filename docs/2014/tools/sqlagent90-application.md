@@ -16,14 +16,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cf72b26a7b5649b8d48a3d1da6dd6eab8d6c264a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035370"
 ---
 # <a name="sqlagent90-application"></a>sqlagent90 애플리케이션
-  **sqlagent90** 응용 프로그램을 사용하면 명령 프롬프트에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트를 시작할 수 있습니다. 일반적으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 통해 또는 애플리케이션에서 SQL-DMO 메서드를 사용하여 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에이전트를 실행해야 합니다. **에이전트를 진단하거나 주 지원 공급자가 지정하는 경우에만 명령 프롬프트에서** sqlagent90 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 을 실행할 수 있습니다.  
+  **Sqlagent90** 응용 프로그램은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 명령 프롬프트에서 에이전트를 시작 합니다. 일반적으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 통해 또는 애플리케이션에서 SQL-DMO 메서드를 사용하여 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에이전트를 실행해야 합니다. 
+  **에이전트를 진단하거나 주 지원 공급자가 지정하는 경우에만 명령 프롬프트에서** sqlagent90 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 을 실행할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,18 +36,23 @@ sqlagent90
   
 ## <a name="arguments"></a>인수  
  **-c**  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트가 명령 프롬프트에서 실행되고 Microsoft Windows 서비스 제어 관리자와 관계 없음을 나타냅니다. **-c** 를 사용하면 관리 도구의 서비스 응용 프로그램 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트를 제어할 수 없습니다. 이 인수는 필수입니다.  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트가 명령 프롬프트에서 실행되고 Microsoft Windows 서비스 제어 관리자와 관계 없음을 나타냅니다. 
+  **-c** 를 사용하면 관리 도구의 서비스 애플리케이션 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트를 제어할 수 없습니다. 이 인수는 필수입니다.  
   
  **-v**  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트를 자세한 정보 표시 모드로 실행하며 명령 프롬프트 창에 진단 정보를 기록합니다. 진단 정보는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트 오류 로그에 기록되는 정보와 같습니다.  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트를 자세한 정보 표시 모드로 실행하며 명령 프롬프트 창에 진단 정보를 기록합니다. 진단 정보는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트 오류 로그에 기록되는 정보와 같습니다.  
   
  **-i** *instance_name*  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 으로 지정한 명명된 *인스턴스에*에이전트가 연결됨을 나타냅니다.  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 으로 지정한 명명된 *인스턴스에*에이전트가 연결됨을 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
- 저작권 정보가 표시된 다음 **sqlagent90** 은 **-v** 스위치가 지정된 경우에만 명령 프롬프트 창에 출력을 표시합니다. **sqlagent90**을 중지하려면 명령 프롬프트에서 Ctrl+C를 누릅니다. 또한 **sqlagent90**을 중지하기 전에 먼저 명령 프롬프트 창을 닫지 마십시오.  
+## <a name="remarks"></a>설명  
+ 저작권 정보가 표시된 다음 **sqlagent90** 은 **-v** 스위치가 지정된 경우에만 명령 프롬프트 창에 출력을 표시합니다. 
+  **sqlagent90**을 중지하려면 명령 프롬프트에서 Ctrl+C를 누릅니다. 또한 **sqlagent90**을 중지하기 전에 먼저 명령 프롬프트 창을 닫지 마십시오.  
   
-## <a name="see-also"></a>관련 항목  
- [관리 태스크 자동화&#40;SQL Server Agent&#41;](../ssms/agent/automated-administration-tasks-sql-server-agent.md)  
+## <a name="see-also"></a>참고 항목  
+ [관리 태스크 자동화&#40;SQL Server 에이전트&#41;](../ssms/agent/automated-administration-tasks-sql-server-agent.md)  
   
   

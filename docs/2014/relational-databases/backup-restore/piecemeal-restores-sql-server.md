@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 55520388424e110420ad96d329081ee7a61fe028
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876087"
 ---
 # <a name="piecemeal-restores-sql-server"></a>증분 복원(SQL Server)
@@ -56,7 +56,7 @@ ms.locfileid: "62876087"
   
      메모리 내 OLTP 데이터베이스의 증분 복원에 대한 자세한 내용은 [메모리 액세스에 최적화된 테이블이 포함된 데이터베이스의 증분 백업 및 복원](../in-memory-oltp/memory-optimized-tables.md)을 참조하세요.  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>제한  
  부분 복원 순서에서 [FILESTREAM](../blob/filestream-sql-server.md) 파일 그룹이 제외될 경우 지정 시간 복원은 지원되지 않습니다. 복원 순서를 강제로 계속할 수 있지만 RESTORE 문에서 누락된 FILESTREAM 파일 그룹은 복원되지 않습니다. 지정 시간 복원을 강제로 수행하려면 후속 RESTORE LOG 문에도 지정해야 하는 STOPAT, STOPATMARK 또는 STOPBEFOREMARK 옵션과 함께 CONTINUE_AFTER_ERROR 옵션을 지정합니다. CONTINUE_AFTER_ERROR를 지정하면 부분 복원 순서가 성공하고 FILESTREAM 파일 그룹이 복구 불가능한 상태가 됩니다.  
   
 ## <a name="piecemeal-restore-under-the-simple-recovery-model"></a>단순 복구 모델에서의 증분 복원  
@@ -119,9 +119,9 @@ ms.locfileid: "62876087"
   
 ### <a name="examples"></a>예  
   
--   [예: 데이터베이스의 증분 복원&#40;단순 복구 모델&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [예제: 데이터베이스의 증분 복원&#40;단순 복구 모델&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
--   [예: 일부 파일 그룹만 증분 복원&#40;단순 복구 모델&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
+-   [예제: 일부 파일 그룹만 증분 복원&#40;단순 복구 모델&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
 ## <a name="piecemeal-restore-under-the-full-recovery-model"></a>전체 복구 모델에서의 증분 복원  
  전체 복구 모델 또는 대량 로그 복구 모델에서는 여러 파일 그룹이 있는 모든 데이터베이스에 대해 증분 복원을 사용하여 해당 데이터베이스를 임의의 시점으로 복원할 수 있습니다. 증분 복원의 복원 순서는 다음과 같이 동작합니다.  
@@ -147,9 +147,9 @@ ms.locfileid: "62876087"
   
 ### <a name="examples"></a>예  
   
--   [예: 데이터베이스의 증분 복원&#40;전체 복구 모델&#41;](example-piecemeal-restore-of-database-full-recovery-model.md)  
+-   [예제: 데이터베이스의 증분 복원&#40;전체 복구 모델&#41;](example-piecemeal-restore-of-database-full-recovery-model.md)  
   
--   [예: 일부 파일 그룹만 증분 복원&#40;전체 복구 모델&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
+-   [예제: 일부 파일 그룹만 증분 복원&#40;전체 복구 모델&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
 ## <a name="performing-a-piecemeal-restore-of-a-database-whose-recovery-model-has-been-switched-from-simple-to-full"></a>단순 복구 모델에서 전체 복구 모델로 전환된 데이터베이스의 증분 복원 수행  
  전체 또는 부분 데이터베이스 백업 이후 단순 복구 모델에서 전체 복구 모델로 전환된 데이터베이스의 증분 복원을 수행할 수 있습니다. 예를 들어 다음 단계를 수행할 데이터베이스가 있다고 가정합니다.  
@@ -172,7 +172,7 @@ ms.locfileid: "62876087"
   
 4.  데이터를 원래 복구 지점으로 복원하기 위한 원래 증분 복원으로 다른 모든 백업이 복원된 후 이어지는 차등 백업  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [트랜잭션 로그 백업 적용&#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [RESTORE&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [SQL Server 데이터베이스를 지정 시간으로 복원&#40;전체 복구 모델&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   

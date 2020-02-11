@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0f6bcad3636178fb4aebbcdbeee29ba2542f092e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832418"
 ---
 # <a name="data-profile-viewer"></a>데이터 프로필 뷰어(Data Profile Viewer)
@@ -31,7 +31,7 @@ ms.locfileid: "62832418"
   
 -   **디자이너에서** 데이터 프로파일링 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 태스크를 마우스 오른쪽 단추로 클릭하고 **편집**을 클릭합니다. **데이터 프로파일링 태스크 편집기** 의 **일반** 페이지에서 **프로필 뷰어 열기**를 클릭합니다.  
   
--   *\<드라이브>*:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 폴더에서 DataProfileViewer.exe를 실행합니다.  
+-   *\<드라이브>* :\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 폴더에서 DataProfileViewer.exe를 실행합니다.  
   
  이 뷰어는 여러 창을 사용하여 선택적 세부 정보 및 드릴다운 기능과 함께 요청한 프로필과 계산된 결과를 표시합니다.  
   

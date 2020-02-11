@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b27a3cc8a768f60a5e2d430fe04ca514aafe1f37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771659"
 ---
 # <a name="project-properties-dialog-box"></a>프로젝트 속성 대화 상자
@@ -53,7 +53,7 @@ ms.locfileid: "62771659"
  **이름**  
  프로젝트 이름을 나열합니다.  
   
- **ID**  
+ **식별자**  
  프로젝트 ID를 나열합니다.  
   
  **설명**  

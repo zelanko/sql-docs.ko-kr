@@ -18,14 +18,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a05605ca5c2b35b0a5e35c8228a2a144f20d7905
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900193"
 ---
 # <a name="multicast-transformation"></a>멀티캐스트 변환
-  멀티캐스트 변환은 입력을 하나 이상의 출력으로 배포합니다. 이 변환은 조건부 분할 변환과 유사합니다. 둘 다 입력을 여러 출력으로 보냅니다. 두 변환의 차이점은 멀티캐스트 변환은 모든 행을 모든 출력으로 보내고 조건부 분할은 한 행을 단일 출력으로 보낸다는 것입니다. 자세한 내용은 [Conditional Split Transformation](conditional-split-transformation.md)을(를) 참조하세요.  
+  멀티캐스트 변환은 입력을 하나 이상의 출력으로 배포합니다. 이 변환은 조건부 분할 변환과 유사합니다. 둘 다 입력을 여러 출력으로 보냅니다. 두 변환의 차이점은 멀티캐스트 변환은 모든 행을 모든 출력으로 보내고 조건부 분할은 한 행을 단일 출력으로 보낸다는 것입니다. 자세한 내용은 [Conditional Split Transformation](conditional-split-transformation.md)을 참조하세요.  
   
  출력을 추가하여 멀티캐스트 변환을 구성합니다.  
   
@@ -36,14 +36,15 @@ ms.locfileid: "62900193"
 ## <a name="configuration-of-the-multicast-transformation"></a>멀티캐스트 변환 구성  
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- **멀티캐스트 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용은 [Multicast Transformation Editor](../../multicast-transformation-editor.md)를 참조하십시오.  
+ 
+  **멀티캐스트 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용은 [Multicast Transformation Editor](../../multicast-transformation-editor.md)를 참조하십시오.  
   
  프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용은 [Common Properties](../../common-properties.md)을 참조하십시오.  
   
 ## <a name="related-tasks"></a>관련 작업  
  이 구성 요소의 속성을 설정하는 방법에 대한 자세한 내용은 [데이터 흐름 구성 요소의 속성 설정](../set-the-properties-of-a-data-flow-component.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 흐름](../data-flow.md)   
  [Integration Services 변환](integration-services-transformations.md)  
   

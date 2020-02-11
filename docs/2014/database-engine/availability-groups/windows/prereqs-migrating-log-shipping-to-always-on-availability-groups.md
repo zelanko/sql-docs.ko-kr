@@ -1,5 +1,5 @@
 ---
-title: AlwaysOn 가용성 그룹 (SQL Server)에 로그 전달에서 마이그레이션에 대 한 필수 구성 요소 | Microsoft Docs
+title: 로그 전달에서 AlwaysOn 가용성 그룹 (SQL Server)로 마이그레이션하기 위한 필수 구성 요소 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 865e8d720e9977f582ac5ae8a0e75d995fc82629
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62789558"
 ---
 # <a name="prerequisites-for-migrating-from-log-shipping-to-alwayson-availability-groups-sql-server"></a>로그 전달에서 AlwaysOn 가용성 그룹(SQL Server)으로 마이그레이션하기 위한 사전 요구 사항
@@ -26,17 +26,17 @@ ms.locfileid: "62789558"
 > [!NOTE]  
 >  가용성 그룹에서 읽기 가능한 주 데이터베이스 또는 보조 데이터베이스를 로그 전달 주 데이터베이스로 구성할 수 있습니다.  
   
- **항목 내용:**  
+ **항목 내용**  
   
--   [가용성 그룹 사전 요구 사항](#AGPrereqsRealAddress)  
+-   [가용성 그룹 필수 구성 요소](#AGPrereqsRealAddress)  
   
--   [로그 전달 사전 요구 사항](#LogShipPrereqs)  
+-   [로그 전달 필수 조건](#LogShipPrereqs)  
   
 -   [관련 작업](#RelatedTasks)  
   
 -   [관련 내용](#RelatedContent)  
   
-##  <a name="AGPrereqsRealAddress"></a> 가용성 그룹 사전 요구 사항  
+##  <a name="AGPrereqsRealAddress"></a>가용성 그룹 필수 구성 요소  
  가용성 그룹의 주 복제본에서 백업 작업이 실행되도록 허용하려면 다음 AlwaysOn 가용성 그룹 백업 설정을 사용합니다.  
   
 |속성|설정|  
@@ -50,7 +50,7 @@ ms.locfileid: "62789558"
   
  [가용성 복제본에 백업 구성&#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
   
-##  <a name="LogShipPrereqs"></a> 로그 전달 사전 요구 사항  
+##  <a name="LogShipPrereqs"></a>로그 전달 필수 조건  
   
 -   로그 전달 주 데이터베이스가 가용성 그룹의 초기/현재 주 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 있어야 합니다.  
   
@@ -68,10 +68,10 @@ ms.locfileid: "62789558"
   
  [로그 전달 구성을 가용성 그룹으로 변환](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx) (SQL Server 블로그)  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
  **로그 전달**  
   
--   [SQL Server 2014로 로그 전달 업그레이드 &#40;TRANSACT-SQL&#41;](../../log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
+-   [SQL Server 2014 &#40;Transact-sql&#41;로그 전달 업그레이드](../../log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   
 -   [로그 전달 제거&#40;SQL Server&#41;](../../log-shipping/remove-log-shipping-sql-server.md)  
   
@@ -81,9 +81,9 @@ ms.locfileid: "62789558"
   
 -   [새 가용성 그룹 대화 상자 사용&#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
--   [가용성 그룹 만들기&#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md)  
+-   [Transact-sql&#41;&#40;가용성 그룹 만들기](create-an-availability-group-transact-sql.md)  
   
--   [가용성 그룹 만들기&#40;SQL Server PowerShell&#41;](../../../powershell/sql-server-powershell.md)  
+-   [가용성 그룹 &#40;SQL Server PowerShell를 만듭니다&#41;](../../../powershell/sql-server-powershell.md)  
   
 -   [가용성 그룹에 보조 데이터베이스 조인&#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
@@ -91,7 +91,7 @@ ms.locfileid: "62789558"
   
 ##  <a name="RelatedContent"></a> 관련 내용  
   
--   **블로그:**  
+-   **블로그**  
   
      [로그 전달 구성을 가용성 그룹으로 변환](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx)  
   
@@ -101,17 +101,17 @@ ms.locfileid: "62789558"
   
      [CSS SQL Server 엔지니어 블로그](https://blogs.msdn.com/b/psssql/)  
   
--   **백서:**  
+-   **백서**  
   
-     [마이그레이션 가이드: 마이그레이션 AlwaysOn 가용성 그룹으로 결합 하는 이전 배포에서 데이터베이스 미러링 및 로그 전달](https://msdn.microsoft.com/library/jj635217)  
+     [마이그레이션 가이드: 데이터베이스 미러링 및 로그 전달을 조합하는 이전 배포에서 AlwaysOn 가용성 그룹으로 마이그레이션](https://msdn.microsoft.com/library/jj635217)  
   
-     [SQL Server 2012에 대한 Microsoft 백서](https://msdn.microsoft.com/library/hh403491.aspx)  
+     [SQL Server 2012에 대 한 Microsoft 백서](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [SQL Server 고객 자문 팀 백서](http://sqlcat.com/)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [로그 전달 정보&#40;SQL Server&#41;](../../log-shipping/about-log-shipping-sql-server.md)   
- [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [가용성 그룹 모니터링&#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)  
+ [AlwaysOn 가용성 그룹 &#40;SQL Server 개요&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [가용성 그룹 &#40;모니터링 SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)  
   
   

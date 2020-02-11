@@ -1,5 +1,5 @@
 ---
-title: '연결 (Visual C++ #import 구문 인덱스) | Microsoft Docs'
+title: Connection (#import를 사용 하는 Visual C++ 구문 인덱스) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,13 +16,13 @@ ms.assetid: 03f47eda-840d-4cab-83d9-ccddd873f342
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 52ad9e19e07fbe6bff7a23bcd4da8feb2dec93cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933513"
 ---
-# <a name="connection-visual-c-syntax-index-with-import"></a>연결 (Visual C++ #import 구문 인덱스)
+# <a name="connection-visual-c-syntax-index-with-import"></a>Connection (#import를 사용 하는 Visual C++ 구문 인덱스)
 ## <a name="methods"></a>메서드  
   
 ```  
@@ -87,5 +87,5 @@ long GetState( );
 __declspec(property(get=GetState)) long State;  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

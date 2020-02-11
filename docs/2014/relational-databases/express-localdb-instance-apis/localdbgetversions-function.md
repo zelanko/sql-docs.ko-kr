@@ -17,16 +17,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 431124cff2fcf293ccf1e8e8bcb74321245a661e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63032290"
 ---
 # <a name="localdbgetversions-function"></a>LocalDBGetVersions 함수
   컴퓨터에서 사용할 수 있는 모든 SQL Server Express LocalDB 버전을 반환합니다.  
   
- **헤더 파일:** sqlncli.h  
+ **헤더 파일:** sqlncli  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,13 +36,13 @@ ms.locfileid: "63032290"
   
 ## <a name="parameters"></a>매개 변수  
  *pVersionNames*  
- [출력] 사용자의 워크스테이션에서 사용할 수 있는 LocalDB 버전의 이름을 포함 합니다.  
+ 출력 사용자의 워크스테이션에서 사용할 수 있는 LocalDB 버전의 이름을 포함 합니다.  
   
  *lpdwNumberOfVersions*  
  [입력/출력] 입력 시 *pVersionNames* 버퍼의 버전에 대한 슬롯 수를 저장합니다.   
 출력 시 기존 LocalDB 버전의 수를 저장합니다.  
   
-## <a name="returns"></a>반환 값  
+## <a name="returns"></a>반환  
  S_OK  
  함수가 성공했습니다.  
   
@@ -58,10 +58,10 @@ ms.locfileid: "63032290"
  [LOCALDB_ERROR_INTERNAL_ERROR](../express-localdb-error-messages/localdb-error-internal-error.md)  
  예기치 않은 오류가 발생했습니다. 자세한 내용은 이벤트 로그를 참조하십시오.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  LocalDB API를 사용하는 코드 샘플은 [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md)를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Express LocalDB 헤더 및 버전 정보](sql-server-express-localdb-header-and-version-information.md)  
   
   

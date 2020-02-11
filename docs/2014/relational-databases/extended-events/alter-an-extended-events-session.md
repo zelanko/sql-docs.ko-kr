@@ -11,16 +11,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 99984df84d2eb24ebf3d58f3fa697d11c5ad4a1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63128603"
 ---
 # <a name="alter-an-extended-events-session"></a>확장 이벤트 세션 변경
   확장 이벤트 세션을 만든 후 **SQL Server 확장 이벤트 마법사**를 사용하여 필요한 대로 변경할 수 있습니다.  
   
-## <a name="before-you-begin"></a>시작하기 전 주의 사항  
+## <a name="before-you-begin"></a>시작하기 전에  
  활성 및 비활성 세션의 대상과 활성 세션에 대한 고급 속성 구성은 변경할 수 없습니다.  
   
  활성 및 비활성 이벤트 세션 모두에 대해 다음과 같은 변경 작업을 수행할 수 있습니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "63128603"
   
 -   **속성** 대화 상자에서 적절한 변경 작업을 수행한 다음 **확인**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ALTER EVENT SESSION&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)   
  [쿼리 편집기를 사용하여 확장 이벤트 세션 만들기](../../database-engine/create-an-extended-events-session-using-query-editor.md)  
   

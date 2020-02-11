@@ -16,15 +16,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1280bb44d11ce4f8234d544bf113e796a9c3c85c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915431"
 ---
-# <a name="mssqlserver17832"></a>MSSQLSERVER_17832
+# <a name="mssqlserver_17832"></a>MSSQLSERVER_17832
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -55,7 +55,7 @@ ms.locfileid: "62915431"
   
 1.  **시작** 메뉴에서 **실행**을 클릭합니다.  
   
-2.  형식 `regedit`를 클릭 하 고 **확인**합니다. **사용자 계정 컨트롤** 대화 상자가 열리면 **계속**을 클릭합니다.  
+2.  을 `regedit`입력 한 다음 **확인**을 클릭 합니다. **사용자 계정 컨트롤** 대화 상자가 열리면 **계속**을 클릭합니다.  
   
 3.  **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa\Kerberos\Parameters**로 이동합니다.  
   

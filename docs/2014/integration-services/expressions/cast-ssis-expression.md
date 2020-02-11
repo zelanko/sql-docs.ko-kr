@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6549e2ad8faca23e32621e1cc871a62870c9effb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62899041"
 ---
 # <a name="cast-ssis-expression"></a>캐스트(SSIS 식)
@@ -38,13 +38,14 @@ ms.locfileid: "62899041"
  *type_spec*  
  유효한 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 데이터 형식입니다.  
   
- *expression*  
+ *식*  
  유효한 식입니다.  
   
 ## <a name="result-types"></a>결과 형식  
- *type_spec*데이터 형식입니다. 자세한 내용은 [Integration Services Data Types](../data-flow/integration-services-data-types.md)을 참조하세요.  
+ 
+  *type_spec*데이터 형식입니다. 자세한 내용은 [Integration Services 데이터 형식](../data-flow/integration-services-data-types.md)을 참조 하세요.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  다음 다이어그램에서는 유효한 캐스트 연산을 보여 줍니다.  
   
  ![데이터 형식 간 유효한 캐스트 및 유효하지 않은 캐스트](../media/data-conversion.gif "데이터 형식 간 유효한 캐스트 및 유효하지 않은 캐스트")  
@@ -53,12 +54,12 @@ ms.locfileid: "62899041"
   
 |데이터 형식|매개 변수|예제|  
 |---------------|---------------|-------------|  
-|DT_STR|*charcount*<br /><br /> *codepage*|(DT_STR,30,1252)는 1252 코드 페이지를 사용하여 30바이트 또는 30자의 단일 문자를 DT_STR 데이터 형식으로 캐스팅합니다.|  
+|DT_STR|*charcount*<br /><br /> *코드 페이지*|(DT_STR,30,1252)는 1252 코드 페이지를 사용하여 30바이트 또는 30자의 단일 문자를 DT_STR 데이터 형식으로 캐스팅합니다.|  
 |DT_WSTR|*Charcount*|(DT_WSTR,20)은 20바이트 쌍 또는 20자의 유니코드 문자를 DT_WSTR 데이터 형식으로 캐스팅합니다.|  
 |DT_BYTES|*Bytecount*|(DT_BYTES,50)은 50바이트를 DT_BYTES 데이터 형식으로 캐스팅합니다.|  
-|DT_DECIMAL|*소수 자릿수*|(DT_DECIMAL,2)는 소수 자릿수 2를 사용하여 숫자 값을 DT_DECIMAL 데이터 형식으로 캐스팅합니다.|  
-|DT_NUMERIC|*전체 자릿수*<br /><br /> *소수 자릿수*|(DT_NUMERIC,10,3)은 전체 자릿수 10, 소수 자릿수 3을 사용하여 숫자 값을 DT_NUMERIC 데이터 형식으로 캐스팅합니다.|  
-|DT_TEXT|*Codepage*|(DT_TEXT,1252)는 1252 코드 페이지를 사용하여 값을 DT_TEXT 데이터 형식으로 캐스팅합니다.|  
+|DT_DECIMAL|*규모*|(DT_DECIMAL,2)는 소수 자릿수 2를 사용하여 숫자 값을 DT_DECIMAL 데이터 형식으로 캐스팅합니다.|  
+|DT_NUMERIC|*정밀도*<br /><br /> *규모*|(DT_NUMERIC,10,3)은 전체 자릿수 10, 소수 자릿수 3을 사용하여 숫자 값을 DT_NUMERIC 데이터 형식으로 캐스팅합니다.|  
+|DT_TEXT|*코드 페이지*|(DT_TEXT,1252)는 1252 코드 페이지를 사용하여 값을 DT_TEXT 데이터 형식으로 캐스팅합니다.|  
   
  문자열을 DT_DATE로 캐스팅하거나 그 반대의 경우 변환 로캘이 사용됩니다. 단, 로캘 기본 설정이 ISO 형식을 사용하는지 여부에 관계없이 날짜는 ISO 형식 YYYY-MM-DD로 설정됩니다.  
   
@@ -142,7 +143,7 @@ ms.locfileid: "62899041"
 (DT_DBTIMESTAMPOFFSET, 7) "1999-10-11 16:34:52.1234567 + 5:35"  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [연산자 우선 순위 및 계산 방향](operator-precedence-and-associativity.md)   
  [연산자&#40;SSIS 식&#41;](operators-ssis-expression.md)   
  [Integration Services&#40;SSIS&#41; 식](integration-services-ssis-expressions.md)   

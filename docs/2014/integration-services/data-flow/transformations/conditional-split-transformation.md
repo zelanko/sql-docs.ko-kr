@@ -16,14 +16,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dcfbbac9eacc96384a723088cf8f20cc939bdc48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900827"
 ---
 # <a name="conditional-split-transformation"></a>조건부 분할 변환
-  조건부 분할 변환은 데이터 내용에 따라 각 데이터 행을 서로 다른 출력으로 라우팅할 수 있습니다. 조건부 분할 변환의 구현은 프로그래밍 언어의 CASE 의사 결정 구조와 유사합니다. 이 변환은 식을 평가한 후 평가 결과를 기준으로 데이터 행을 지정된 출력으로 보냅니다. 기본 출력도 제공되므로 일치하는 식이 없을 경우 행을 기본 출력으로 보냅니다.  
+  조건부 분할 변환은 데이터 내용에 따라 각 데이터 행을 서로 다른 출력으로 라우팅할 수 있습니다. 조건부 분할 변환의 구현은 프로그래밍 언어의 CASE 결정 구조체와 비슷합니다. 이 변환은 식을 평가한 후 평가 결과를 기준으로 데이터 행을 지정된 출력으로 보냅니다. 이 변환은 기본 출력도 제공하므로, 행과 일치하는 식이 없을 경우 기본 출력으로 보내집니다.  
   
 ## <a name="configuration-of-the-conditional-split-transformation"></a>조건부 분할 변환 구성  
  다음과 같은 방법으로 조건부 분할 변환을 구성할 수 있습니다.  
@@ -52,11 +52,12 @@ ms.locfileid: "62900827"
   
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- **조건부 분할 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용은 [Conditional Split Transformation Editor](../../conditional-split-transformation-editor.md)를 참조하십시오.  
+ 
+  **조건부 분할 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용은 [Conditional Split Transformation Editor](../../conditional-split-transformation-editor.md)를 참조하십시오.  
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [공용 속성](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [변환 사용자 지정 속성](transformation-custom-properties.md)  
   
@@ -69,7 +70,7 @@ ms.locfileid: "62900827"
 ## <a name="related-tasks"></a>관련 작업  
  [조건부 분할 변환을 사용하여 데이터 세트 분할](conditional-split-transformation.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 흐름](../data-flow.md)   
  [Integration Services 변환](integration-services-transformations.md)  
   

@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9d06a2ec19b4a84dcd0d69fb70389d68974813be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62894982"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>스크립트 태스크를 사용하여 ForEach 루프에 사용할 목록 수집
@@ -32,7 +32,9 @@ ms.locfileid: "62894982"
  다음 예에서는 `System.IO` 네임스페이스에서 메서드를 사용하여 컴퓨터에서 만든 날짜 또는 수정한 날짜가 사용자가 변수에 지정한 일 수를 경과하지 않았거나 경과한 Excel 통합 문서의 목록을 수집합니다. 이 예에서는 C 드라이브의 디렉터리에서 확장명이 .xls인 파일을 재귀적으로 검색하고 각 파일을 마지막으로 수정한 날짜를 검사하여 목록에 포함할 파일인지 확인합니다. 그런 다음 조건에 맞는 파일을 `ArrayList`에 추가하고 이 `ArrayList`를 Foreach 루프 컨테이너에서 나중에 사용할 수 있도록 변수에 저장합니다. Foreach 루프 컨테이너는 Foreach from Variable 열거자를 사용하도록 구성됩니다.  
   
 > [!NOTE]  
->  Foreach from Variable 열거자와 함께 사용하는 변수는 `Object` 형식이어야 합니다. 이 변수에 추가하는 개체는 `System.Collections.IEnumerable`, `System.Runtime.InteropServices.ComTypes.IEnumVARIANT`, `System.ComponentModel IListSource` 또는 `Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost` 인터페이스 중 하나를 구현해야 합니다. `Array` 또는 `ArrayList`는 일반적으로 사용됩니다. `ArrayList`가 사용되는 경우에는 `Imports` 네임스페이스에 대한 참조 및 `System.Collections` 문이 필요합니다.  
+>  Foreach from Variable 열거자와 함께 사용하는 변수는 `Object` 형식이어야 합니다. 이 변수에 추가하는 개체는 `System.Collections.IEnumerable`, `System.Runtime.InteropServices.ComTypes.IEnumVARIANT`, `System.ComponentModel IListSource` 또는 `Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost` 인터페이스 중 하나를 구현해야 합니다. 
+  `Array` 또는 `ArrayList`는 일반적으로 사용됩니다. 
+  `ArrayList`가 사용되는 경우에는 `Imports` 네임스페이스에 대한 참조 및 `System.Collections` 문이 필요합니다.  
   
  `FileAge` 패키지 변수에 각기 다른 양수 및 음수 값을 사용하여 이 태스크를 시험해 볼 수 있습니다. 예를 들어 만든 지 5일이 지나지 않은 파일을 검색하려면 5를 입력하고, 만든 지 3일이 지난 파일을 검색하려면 -3을 입력합니다. 드라이브에 검색할 폴더가 많은 경우 이 태스크를 수행하는 데 1~2분 정도 소요될 수 있습니다.  
   
@@ -42,7 +44,7 @@ ms.locfileid: "62894982"
   
 2.  Foreach from Variable 열거자에서 나중에 사용할 수 있도록 스크립트 태스크에서 수집된 파일 목록을 받을 `FileList`라는 `Object` 형식의 패키지 변수를 만듭니다.  
   
-3.  스크립트 태스크의 `ReadOnlyVariables` 속성에 `FileAge` 변수를 추가하고, `ReadWriteVariables` 속성에 `FileList` 변수를 추가합니다.  
+3.  스크립트 태스크의 `FileAge` 속성에 `ReadOnlyVariables` 변수를 추가하고, `FileList` 속성에 `ReadWriteVariables` 변수를 추가합니다.  
   
 4.  코드에서 `System.Collections` 및 `System.IO` 네임스페이스를 가져옵니다.  
   
@@ -245,9 +247,9 @@ MessageBoxButtons.OK, MessageBoxIcon.Information);
     }  
 ```  
   
-![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Foreach 루프 컨테이너](../control-flow/foreach-loop-container.md)   
  [Foreach 루프 컨테이너 구성](../configure-a-foreach-loop-container.md)  
   

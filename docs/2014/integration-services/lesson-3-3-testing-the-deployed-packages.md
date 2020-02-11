@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 92055ceb4226406fe26d7ce23491c81606f292c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891825"
 ---
 # <a name="step-3-testing-the-deployed-packages"></a>3단계: 배포된 패키지 테스트
@@ -22,7 +22,8 @@ ms.locfileid: "62891825"
   
  다른 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 자습서에서는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]디버그 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]메뉴의 **디버깅 시작** 옵션을 사용하여 **용 개발 환경인** 에서 패키지를 실행했습니다. 여기에서는 패키지를 다르게 실행합니다.  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]는 테스트 및 프로덕션 환경에서 패키지를 실행하는 데 사용할 수 있는 명령 프롬프트 유틸리티 `dtexec` 및 패키지 실행 유틸리티와 같은 여러 도구를 제공합니다. 패키지 실행 유틸리티는 `dtexec`에서 작성된 그래픽 도구입니다. 이러한 두 도구는 모두 패키지를 즉시 실행합니다. 또한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 SQL Server 에이전트 작업의 한 단계로 패키지 실행을 예약하기 위해 특별하게 디자인된 SQL Server 에이전트의 하위 시스템을 제공합니다.  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]는 테스트 및 프로덕션 환경에서 패키지를 실행하는 데 사용할 수 있는 명령 프롬프트 유틸리티 `dtexec` 및 패키지 실행 유틸리티와 같은 여러 도구를 제공합니다. 패키지 실행 유틸리티는 `dtexec`에서 작성된 그래픽 도구입니다. 이러한 두 도구는 모두 패키지를 즉시 실행합니다. 또한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 SQL Server 에이전트 작업의 한 단계로 패키지 실행을 예약하기 위해 특별하게 디자인된 SQL Server 에이전트의 하위 시스템을 제공합니다.  
   
  패키지 실행 유틸리티를 사용하여 배포된 패키지를 실행할 수 있습니다. 패키지는 있는 그대로 사용됩니다. 따라서 대화 상자의 어떠한 페이지에서도 정보를 업데이트할 필요가 없습니다. 패키지 실행 유틸리티의 첫 번째 페이지인 일반 페이지에서 패키지를 실행합니다. 필요할 경우 다른 페이지를 클릭하여 각 패키지에 대해 포함된 정보를 볼 수 있습니다.  
   
@@ -103,9 +104,9 @@ ms.locfileid: "62891825"
   
      쿼리는 21개의 데이터 행을 반환합니다. 반환 결과는 XML 데이터 파일 orders.xml의 행으로 구성됩니다. 각 행은 국가/지역별 요약이며 각 행에는 국가/지역의 이름, 각 국가/지역의 주문 수, 최신 주문과 가장 오래된 주문의 날짜가 나열됩니다.  
   
-![Integration Services 아이콘 (작은)](media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은 아이콘)](media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [dtexec 유틸리티](packages/dtexec-utility.md)  
   
   

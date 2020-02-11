@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a43a437b277c0fcc090a4ebd52d9deb14bec9fd0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62872981"
 ---
 # <a name="unicode-compression-implementation"></a>유니코드 압축 구현
@@ -27,7 +27,8 @@ ms.locfileid: "62872981"
  유니코드 압축은 고정 길이의 `nchar(n)` 및 `nvarchar(n)` 데이터 형식을 지원합니다. 행 외부 또는 `nvarchar(max)` 열에 저장된 데이터 값은 압축되지 않습니다.  
   
 > [!NOTE]  
->  `nvarchar(max)` 데이터는 행에 저장되어 있더라도 유니코드 압축이 지원되지 않습니다. 하지만 이 데이터 형식에서 페이지 압축을 활용할 수 있습니다.  
+>  
+  `nvarchar(max)` 데이터는 행에 저장되어 있더라도 유니코드 압축이 지원되지 않습니다. 하지만 이 데이터 형식에서 페이지 압축을 활용할 수 있습니다.  
   
 ## <a name="upgrading-from-earlier-versions-of-sql-server"></a>이전 버전의 SQL Server에서 업그레이드  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스가 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드되는 경우 유니코드 압축과 관련된 변경 내용은 압축 여부에 관계 없이 모든 데이터베이스 개체에 적용되지 않습니다. 데이터베이스가 업그레이드되면 개체는 다음과 같이 영향을 받습니다.  
@@ -46,7 +47,7 @@ ms.locfileid: "62872981"
   
  압축을 통해 절약할 수 있는 스토리지 공간은 압축하고 있는 데이터의 특성과 데이터 로캘에 따라 다릅니다. 다음 표에서는 로캘별로 절약할 수 있는 저장 공간을 보여 줍니다.  
   
-|로캘|압축률|  
+|Locale|압축률|  
 |------------|-------------------------|  
 |영어|50%|  
 |독일어|50%|  
@@ -55,7 +56,7 @@ ms.locfileid: "62872981"
 |베트남어|39%|  
 |일본어|15%|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터 압축](data-compression.md)   
  [sp_estimate_data_compression_savings&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql)   
  [페이지 압축 구현](page-compression-implementation.md)   

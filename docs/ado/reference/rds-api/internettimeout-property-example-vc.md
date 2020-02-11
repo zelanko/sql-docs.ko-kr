@@ -15,17 +15,17 @@ ms.assetid: 88b6d05c-d4eb-4ab1-bbe2-95d146237f94
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7596f9728f7a51a5d28a3c1a19943efff783ac62
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964002"
 ---
 # <a name="internettimeout-property-example-vc"></a>InternetTimeout 속성 예제(VC++)
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
+>  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
   
- 이 예제에서는 합니다 [InternetTimeout](../../../ado/reference/rds-api/internettimeout-property-rds.md) 에 있는 속성을 [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 및 [DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) 개체. 이 경우에 **InternetTimeout** 속성에 설명 되어 합니다 **DataControl** 개체 및 제한 시간을 20 초로 설정 됩니다.  
+ 이 예제에서는 [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 및 [스페이스](../../../ado/reference/rds-api/dataspace-object-rds.md) 개체에 존재 하는 [internettimeout](../../../ado/reference/rds-api/internettimeout-property-rds.md) 속성을 보여 줍니다. 이 경우에는 **internettimeout** 속성이 **DataControl** 개체에서 표시 되 고 timeout은 20 초로 설정 됩니다.  
   
 ```cpp
 // BeginInternetTimeoutCpp  
@@ -155,7 +155,7 @@ void PrintComError(_com_error &e)
 // EndInternetTimeoutCpp  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [InternetTimeout 속성(RDS)](../../../ado/reference/rds-api/internettimeout-property-rds.md)
 
 

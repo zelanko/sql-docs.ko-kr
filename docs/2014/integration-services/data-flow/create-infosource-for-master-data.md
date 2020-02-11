@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 87ada4ef6cf9266720ac0c9742440d0d60345c88
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827954"
 ---
 # <a name="create-infosource-for-master-data"></a>마스터 데이터용 InfoSource 만들기
@@ -37,7 +37,7 @@ ms.locfileid: "62827954"
   
 5.  **InfoSource 만들기** 대화 상자에서 **마스터 데이터**를 선택한 다음 **확인**을 클릭합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **InfoObject 이름**  
  새 InfoSource의 기준으로 사용할 InfoObject 이름을 입력합니다.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "62827954"
  **원본 시스템**  
  새 InfoSource에 연결할 원본 시스템을 선택합니다.  
   
- **응용 프로그램**  
+ **애플리케이션**  
  새 InfoSource에 연결할 애플리케이션의 이름을 입력 합니다.  
   
  **특성**  
@@ -72,7 +72,7 @@ ms.locfileid: "62827954"
  **저장 및 활성화**  
  새 InfoSource를 저장하고 활성화합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [InfoSource 만들기](create-infosource.md)   
  [Microsoft Connector 1.1 for SAP BW F1 도움말](../microsoft-connector-for-sap-bw-f1-help.md)  
   

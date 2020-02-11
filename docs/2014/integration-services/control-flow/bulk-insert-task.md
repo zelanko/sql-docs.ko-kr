@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9b5da9ff28dc658f870033a02fe88b14ea442c51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832875"
 ---
 # <a name="bulk-insert-task"></a>대량 삽입 태스크
@@ -34,7 +34,8 @@ ms.locfileid: "62832875"
   
 -   대상은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 테이블 또는 뷰여야 합니다. 대상 테이블 또는 뷰에 이미 데이터가 포함되어 있으면 대량 삽입 태스크가 실행될 때 새 데이터가 기존 데이터에 추가됩니다. 데이터를 대체하려면 대량 삽입 태스크를 실행하기 전에 DELETE 또는 TRUNCATE 문을 실행하는 SQL 실행 태스크를 실행합니다. 자세한 내용은 [Execute SQL Task](execute-sql-task.md)을 참조하세요.  
   
--   대량 삽입 태스크 개체에 서식 파일을 사용할 수 있습니다. **bcp** 유틸리티로 만든 서식 파일이 있으면 대량 삽입 태스크에 해당 경로를 지정할 수 있습니다. 대량 삽입 태스크는 XML 서식 파일과 비XML 서식 파일을 모두 지원합니다. 서식 파일에 대한 자세한 내용은 [데이터를 가져오거나 내보내기 위한 서식 파일&#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)을 참조하세요.  
+-   대량 삽입 태스크 개체에 서식 파일을 사용할 수 있습니다. 
+  **bcp** 유틸리티로 만든 서식 파일이 있으면 대량 삽입 태스크에 해당 경로를 지정할 수 있습니다. 대량 삽입 태스크는 XML 서식 파일과 비XML 서식 파일을 모두 지원합니다. 서식 파일에 대한 자세한 내용은 [데이터를 가져오거나 내보내기 위한 서식 파일&#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)을 참조하세요.  
   
 -   대량 삽입 태스크가 포함된 패키지는 sysadmin 고정 서버 역할의 멤버만 실행할 수 있습니다.  
   
@@ -87,17 +88,19 @@ ms.locfileid: "62832875"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
+ 
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [대량 삽입 태스크 편집기&#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [대량 삽입 태스크 편집기 &#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [대량 삽입 태스크 편집기&#40;연결 페이지&#41;](../bulk-insert-task-editor-connection-page.md)  
+-   [대량 삽입 태스크 편집기 &#40;연결 페이지&#41;](../bulk-insert-task-editor-connection-page.md)  
   
--   [대량 삽입 태스크 편집기&#40;옵션 페이지&#41;](../bulk-insert-task-editor-options-page.md)  
+-   [대량 삽입 태스크 편집기 &#40;옵션 페이지&#41;](../bulk-insert-task-editor-options-page.md)  
   
 -   [식 페이지](../expressions/expressions-page.md)  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법을 보려면 다음 항목을 클릭하십시오.  
+ 
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법을 보려면 다음 항목을 클릭하십시오.  
   
 -   [태스크 또는 컨테이너의 속성 설정](../set-the-properties-of-a-task-or-container.md)  
   

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ce882ae32718f634efb6b2f39ed397dfb9cbf785
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62897342"
 ---
 # <a name="reverse-ssis-expression"></a>REVERSE(SSIS 식)
@@ -37,7 +37,7 @@ REVERSE(character_expression)
 ## <a name="result-types"></a>결과 형식  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  *character_expression* DT_WSTR 데이터 형식이어야 합니다.  
   
  *character_expression* 이 null인 경우 REVERSE가 null 결과를 반환합니다.  
@@ -55,7 +55,7 @@ REVERSE("Mountain Bike")
 REVERSE(@Name)  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [함수&#40;SSIS 식&#41;](functions-ssis-expression.md)  
   
   

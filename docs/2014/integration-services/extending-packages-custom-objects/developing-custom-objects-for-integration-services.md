@@ -14,14 +14,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: aa5f333b050d817d68c8769d7e53a9455581a3ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768659"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>Integration Services용 사용자 지정 개체 개발
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 포함된 제어 흐름 및 데이터 흐름 개체가 요구 사항을 완전히 충족하지 못하는 경우 다음을 비롯한 여러 가지 유형의 사용자 지정 개체를 직접 개발할 수 있습니다.  
+  에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 포함 된 제어 흐름 및 데이터 흐름 개체가 요구 사항을 완전히 충족 시 키 지 못할 경우 다음을 포함 하 여 다양 한 유형의 사용자 지정 개체를 직접 개발할 수 있습니다.  
   
 -   **사용자 지정 태스크**.  
   
@@ -31,14 +31,16 @@ ms.locfileid: "62768659"
   
 -   **사용자 지정 열거자.** 현재 지원되지 않는 일련의 개체 또는 값 형식에 대한 반복을 지원합니다.  
   
--   **사용자 지정 데이터 흐름 구성 요소.** 원본, 변환 또는 대상으로 구성할 수 있습니다.  
+-   **사용자 지정 데이터 흐름 구성 요소입니다.** 원본, 변환 또는 대상으로 구성할 수 있습니다.  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 개체 모델을 사용하면 사용자 지정 구현을 위한 일관되고 안정적인 프레임워크를 제공하는 기본 클래스를 통해 이러한 사용자 지정 개발을 쉽게 할 수 있습니다.  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 개체 모델을 사용하면 사용자 지정 구현을 위한 일관되고 안정적인 프레임워크를 제공하는 기본 클래스를 통해 이러한 사용자 지정 개발을 쉽게 할 수 있습니다.  
   
  사용자 지정 기능을 여러 패키지에서 다시 사용할 필요가 없는 경우 스크립트 태스크 및 스크립트 구성 요소를 사용하면 매우 적은 양의 인프라 코드로도 관리되는 프로그래밍 언어의 강력한 기능을 사용할 수 있습니다. 자세한 내용은 [스크립팅 솔루션과 사용자 지정 개체 비교](../extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)를 참조하세요.  
   
 ## <a name="steps-in-developing-a-custom-object-for-integration-services"></a>Integration Services용 사용자 지정 개체 개발 단계  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 사용할 사용자 지정 개체를 개발하는 경우 디자인 타임과 런타임에 SSIS 디자이너에서 로드하고 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 런타임에서 로드할 클래스 라이브러리(DLL)를 개발합니다. 구현해야 하는 가장 중요한 메서드는 개발자가 작성하는 코드에서 호출하는 메서드가 아니라 런타임에서 적절한 때에 구성 요소를 초기화하고 구성 요소의 유효성을 검사하고 해당 기능을 실행하기 위해 호출하는 메서드입니다.  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 사용할 사용자 지정 개체를 개발하는 경우 디자인 타임과 런타임에 SSIS 디자이너에서 로드하고 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 런타임에서 로드할 클래스 라이브러리(DLL)를 개발합니다. 구현해야 하는 가장 중요한 메서드는 개발자가 작성하는 코드에서 호출하는 메서드가 아니라 런타임에서 적절한 때에 구성 요소를 초기화하고 구성 요소의 유효성을 검사하고 해당 기능을 실행하기 위해 호출하는 메서드입니다.  
   
  사용자 지정 개체를 개발할 때 따라야 하는 단계는 다음과 같습니다.  
   
@@ -54,14 +56,15 @@ ms.locfileid: "62768659"
   
 6.  필요에 따라 사용자 지정 개체의 샘플 및 도움말 콘텐츠에 대한 링크를 **SSIS 도구 상자**에 표시합니다.  
   
-7.  [사용자 지정 개체 빌드, 배포 및 디버그](building-deploying-and-debugging-custom-objects.md)의 설명에 따라 새 사용자 지정 개체를 빌드, 배포 및 디버그합니다.  
+7.  
+  [사용자 지정 개체 빌드, 배포 및 디버그](building-deploying-and-debugging-custom-objects.md)의 설명에 따라 새 사용자 지정 개체를 빌드, 배포 및 디버그합니다.  
   
 ## <a name="base-classes-attributes-and-important-methods"></a>기본 클래스, 특성 및 주요 메서드  
  다음 표에서는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 개체 모델에서 개발 가능한 각 사용자 지정 개체 유형의 가장 중요한 요소에 대한 참조를 제공합니다.  
   
 |사용자 지정 개체|기본 클래스|attribute|주요 메서드|  
 |-------------------|----------------|---------------|-----------------------|  
-|태스크|<xref:Microsoft.SqlServer.Dts.Runtime.Task>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>|  
+|Task|<xref:Microsoft.SqlServer.Dts.Runtime.Task>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>|  
 |ODBC 대상 편집기|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ReleaseConnection%2A>|  
 |로그 공급자|<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.OpenLog%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.CloseLog%2A>|  
 |Enumerator|<xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.GetEnumerator%2A>|  
@@ -82,7 +85,7 @@ ms.locfileid: "62768659"
   
 -   <xref:Microsoft.SqlServer.Dts.Runtime.DTSTaskAttribute.HelpKeyword%2A>  
   
- 네이티브 코드로 작성된 사용자 지정 개체의 샘플 및 도움말 콘텐츠에 대한 링크를 표시하려면 SamplesTag, HelpKeyword 및 HelpCollection의 레지스트리 스크립트(.rgs) 파일에서 항목을 추가합니다. 다음은 예제입니다.  
+ 네이티브 코드로 작성된 사용자 지정 개체의 샘플 및 도움말 콘텐츠에 대한 링크를 표시하려면 SamplesTag, HelpKeyword 및 HelpCollection의 레지스트리 스크립트(.rgs) 파일에서 항목을 추가합니다. 다음은 이에 대한 예입니다.  
   
  `val HelpKeyword = s 'sql11.dts.designer.executepackagetask.F1'`  
   
@@ -100,9 +103,11 @@ ms.locfileid: "62768659"
   
 |사용자 지정 개체|사용자 인터페이스의 기본 클래스|사용자 지정 사용자 인터페이스가 제공되지 않을 경우의 기본 편집 동작|  
 |-------------------|-----------------------------------|----------------------------------------------------------------------|  
-|태스크|<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI>|속성 창만 표시|  
+|Task|<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI>|속성 창만 표시|  
 |ODBC 대상 편집기|<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI>|속성 창만 표시|  
-|로그 공급자|<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI><br /><br /> [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 구현되지 않음|**구성** 열의 텍스트 상자|  
+|로그 공급자|<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI><br /><br /> 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 구현되지 않음|
+  **구성** 열의 텍스트 상자|  
 |Enumerator|<xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumeratorUI>|속성 창만 표시. 편집기의 열거자 구성 영역은 비어 있음|  
 |데이터 흐름 구성 요소|<xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI>|고급 편집기|  
   
@@ -110,10 +115,10 @@ ms.locfileid: "62768659"
   
 -   blogs.msdn.com의 블로그 항목 - [Visual Studio 솔루션 빌드 프로세스에서 SSIS 참조 때문에 .NET Framework 어셈블리에 대한 간접 종속성 경고를 제공함](https://go.microsoft.com/fwlink/?LinkId=215662)  
   
-![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.  
   
-## <a name="see-also"></a>관련 항목  
- [사용자 지정 개체 지속](persisting-custom-objects.md)   
+## <a name="see-also"></a>참고 항목  
+ [사용자 지정 개체 유지](persisting-custom-objects.md)   
  [사용자 지정 개체 빌드, 배포 및 디버그](building-deploying-and-debugging-custom-objects.md)  
   
   

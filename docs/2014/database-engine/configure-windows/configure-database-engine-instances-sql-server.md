@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 578b870128486285a7c31bf9a860b85d170f8771
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62786606"
 ---
 # <a name="configure-database-engine-instances-sql-server"></a>데이터베이스 엔진 인스턴스 구성(SQL Server)
@@ -31,11 +31,11 @@ ms.locfileid: "62786606"
 |----------------------|-----------|  
 |다양한 인스턴스 구성 옵션과 이러한 옵션을 보거나 변경하는 방법에 대해 설명합니다.|[서버 구성 옵션&#40;SQL Server&#41;](server-configuration-options-sql-server.md)|  
 |인스턴스에서 새 데이터 및 로그 파일의 기본 위치를 보고 구성하는 방법에 대해 설명합니다.|[데이터 및 로그 파일의 기본 위치 보기 또는 변경&#40;SQL Server Management Studio&#41;](view-or-change-the-default-locations-for-data-and-log-files.md)|  
-|소프트 NUMA를 사용하도록 SQL Server를 구성하는 방법에 대해 설명합니다.|[소프트 NUMA를 사용 하도록 SQL Server 구성 &#40;SQL Server&#41;](soft-numa-sql-server.md)|  
+|소프트 NUMA를 사용하도록 SQL Server를 구성하는 방법에 대해 설명합니다.|[소프트 NUMA &#40;SQL Server를 사용 하도록 SQL Server 구성&#41;](soft-numa-sql-server.md)|  
 |TCP/IP 포트를 NUMA(Non-Uniform Memory Access) 노드 선호도에 매핑하는 방법에 대해 설명합니다.|[NUMA 노드에 TCP IP 포트 매핑&#40;SQL Server&#41;](map-tcp-ip-ports-to-numa-nodes-sql-server.md)|  
 |Windows 메모리의 페이지 잠금 정책을 사용하도록 설정하는 방법에 대해 설명합니다. 이 정책은 데이터를 실제 메모리에 유지하는 프로세스를 사용하여 시스템이 디스크의 가상 메모리로 데이터를 페이징하지 않도록 방지할 수 있는 계정을 결정합니다.|[Lock Pages in Memory 옵션 설정&#40;Windows&#41;](enable-the-lock-pages-in-memory-option-windows.md)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 엔진 인스턴스&#40;SQL Server&#41;](database-engine-instances-sql-server.md)  
   
   

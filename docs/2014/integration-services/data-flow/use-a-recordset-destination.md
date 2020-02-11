@@ -13,16 +13,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b87d71f8299c55e033adc21e25e29e8fb3d5e9d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900003"
 ---
 # <a name="use-a-recordset-destination"></a>레코드 집합 대상 사용
-  레코드 집합 대상은 외부 데이터 원본에 데이터를 저장하지 않습니다. 대신 `Object` 데이터 형식의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 변수에 저장된 레코드 집합의 데이터를 메모리에 저장합니다. 레코드 집합 대상이 데이터를 저장한 후에는 일반적으로 Foreach 루프 컨테이너를 Foreach ADO 열거자와 함께 사용하여 레코드 집합의 행을 한 번에 하나씩 처리합니다. Foreach ADO 열거자는 현재 행의 각 열 값을 개별 패키지 변수에 저장합니다. 그러면 Foreach 루프 컨테이너 내에 구성한 태스크가 변수에서 이러한 값을 읽어 와서 이를 가지고 몇 가지 동작을 수행합니다.  
+  레코드 집합 대상은 외부 데이터 원본에 데이터를 저장하지 않습니다. 대신 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식의 `Object` 패키지 변수에 저장된 레코드 집합의 데이터를 메모리에 저장합니다. 레코드 집합 대상이 데이터를 저장한 후에는 일반적으로 Foreach 루프 컨테이너를 Foreach ADO 열거자와 함께 사용하여 레코드 집합의 행을 한 번에 하나씩 처리합니다. Foreach ADO 열거자는 현재 행의 각 열 값을 개별 패키지 변수에 저장합니다. 그러면 Foreach 루프 컨테이너 내에 구성한 태스크가 변수에서 이러한 값을 읽어 와서 이를 가지고 몇 가지 동작을 수행합니다.  
   
- 레코드 집합 대상은 다양한 시나리오에서 사용할 수 있습니다. 다음은 몇 가지 예입니다.  
+ 레코드 집합 대상은 다양한 시나리오에서 사용할 수 있습니다. 예를 들어 다음과 같은 노래를 선택할 수 있다.  
   
 -   메일 보내기 태스크와 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 식 언어를 사용하여 레코드 집합의 각 행에 대해 사용자 지정 전자 메일 메시지를 보낼 수 있습니다.  
   
@@ -68,21 +68,29 @@ ms.locfileid: "62900003"
   
 3.  **변수** 창에서 다음과 같이 레코드 집합과 현재 행의 열 값을 보유할 변수를 만듭니다.  
   
-    1.  `BonusRecordset`이라는 변수를 만들고 이 변수의 유형을 `Object`로 설정합니다.  
+    1.  
+  `BonusRecordset`이라는 변수를 만들고 이 변수의 유형을 `Object`로 설정합니다.  
   
-         `BonusRecordset` 변수는 레코드 집합을 보유합니다.  
+         
+  `BonusRecordset` 변수는 레코드 집합을 보유합니다.  
   
-    2.  `EmailAddress`이라는 변수를 만들고 이 변수의 유형을 `String`로 설정합니다.  
+    2.  
+  `EmailAddress`이라는 변수를 만들고 이 변수의 유형을 `String`로 설정합니다.  
   
-         `EmailAddress` 변수는 판매 직원의 전자 메일 메시지를 보유합니다.  
+         
+  `EmailAddress` 변수는 판매 직원의 전자 메일 메시지를 보유합니다.  
   
-    3.  `FirstName`이라는 변수를 만들고 이 변수의 유형을 `String`로 설정합니다.  
+    3.  
+  `FirstName`이라는 변수를 만들고 이 변수의 유형을 `String`로 설정합니다.  
   
-         `FirstName` 변수는 판매 직원의 이름을 보유합니다.  
+         
+  `FirstName` 변수는 판매 직원의 이름을 보유합니다.  
   
-    4.  `Bonus`이라는 변수를 만들고 이 변수의 유형을 `Double`로 설정합니다.  
+    4.  
+  `Bonus`이라는 변수를 만들고 이 변수의 유형을 `Double`로 설정합니다.  
   
-         `Bonus` 변수는 판매 직원의 보너스를 보유합니다.  
+         
+  `Bonus` 변수는 판매 직원의 보너스를 보유합니다.  
   
 #### <a name="to-configure-the-connection-managers"></a>연결 관리자를 구성하려면  
   
@@ -98,7 +106,7 @@ ms.locfileid: "62900003"
   
 1.  **디자이너의** 제어 흐름 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 탭에서 디자인 화면에 데이터 흐름 태스크를 추가합니다.  
   
-2.   **데이터 흐름** tab, add an OLE DB source to the 데이터 흐름 task, and then open the **OLE DB 원본 편집기**를 엽니다.  
+2.  **데이터 흐름** tab, add an OLE DB source to the 데이터 흐름 task, and then open the **OLE DB 원본 편집기**를 엽니다.  
   
 3.  OLE DB 원본 편집기의 **연결 관리자** 페이지에서 다음과 같이 원본을 구성합니다.  
   
@@ -121,7 +129,7 @@ ms.locfileid: "62900003"
   
 5.  **레코드 집합 대상 편집기**를 열고 다음과 같이 대상을 구성합니다.  
   
-    1.  에 **구성 요소 속성** 탭에 대 한 `VariableName` 속성을 선택 `User::BonusRecordset`합니다.  
+    1.  **구성 요소 속성** 탭에서 속성에 `VariableName` 대해를 선택 `User::BonusRecordset`합니다.  
   
     2.  **입력 열** 탭에서 사용 가능한 열 세 개를 모두 선택합니다.  
   
@@ -131,9 +139,9 @@ ms.locfileid: "62900003"
   
 2.  **Foreach 루프 편집기**를 열고 다음과 같이 컨테이너를 구성합니다.  
   
-    1.  에 **컬렉션** 페이지에 대 한 **열거자**를 선택 **Foreach ADO 열거자**, 및에 대 한 **ADO 개체 원본 변수**, 선택`User::BonusRecordset`.  
+    1.  **컬렉션** 페이지에서 **열거자**에 대해 **Foreach ado 열거자**를 선택 하 고 **ADO 개체 원본 변수**에 대해를 선택 `User::BonusRecordset`합니다.  
   
-    2.  에 **변수 매핑** 페이지, 지도 `User::EmailAddress` 인덱스 0으로, 하 `User::FirstName` , 인덱스 1 및 `User::Bonus` 를 인덱스 2입니다.  
+    2.  **변수 매핑** 페이지에서 인덱스 0, `User::EmailAddress` `User::FirstName` 인덱스 1 및 `User::Bonus` 인덱스 2로 매핑합니다.  
   
 3.  **제어 흐름** 탭에서 Foreach 루프 컨테이너 내에 메일 보내기 태스크를 추가합니다.  
   
@@ -153,7 +161,7 @@ ms.locfileid: "62900003"
   
     5.  **MessageSourceType**에 대해 **직접 입력**을 선택합니다.  
   
-5.  **메일 보내기 태스크 편집기** 의 **식**페이지에서 줄임표 단추(**...**)를 클릭하여 **속성 식 편집기**를 엽니다.  
+5.  **메일 보내기 태스크 편집기** 의 **식**페이지에서 줄임표 단추( **...** )를 클릭하여 **속성 식 편집기**를 엽니다.  
   
 6.  **속성 식 편집기**에서 다음 정보를 입력합니다.  
   
