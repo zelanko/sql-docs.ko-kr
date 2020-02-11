@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ef29435686b14f248cae6646f2c2f299aa882f03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097730"
 ---
-# <a name="installationid-property-wmi-msreportserverconfigurationsetting"></a>InstallationID 속성(WMI MSReportServer_ConfigurationSetting)
+# <a name="installationid-property-wmi-msreportserver_configurationsetting"></a>InstallationID 속성(WMI MSReportServer_ConfigurationSetting)
   이 속성은 특정 보고서 서버 인스턴스의 고유 식별자를 반환합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -39,9 +39,9 @@ public string InstanceID;
 ```  
   
 ## <a name="requirements"></a>요구 사항  
- **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **네임 스페이스:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [MSReportServer_ConfigurationSetting 멤버](msreportserver-configurationsetting-members.md)  
   
   

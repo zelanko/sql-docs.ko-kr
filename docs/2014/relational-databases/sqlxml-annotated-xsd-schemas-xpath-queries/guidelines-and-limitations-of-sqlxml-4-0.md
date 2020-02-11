@@ -1,5 +1,5 @@
 ---
-title: 지침 및 SQLXML 4.0의 제한 사항 | Microsoft Docs
+title: SQLXML 4.0의 지침 및 제한 사항 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dec69250a728edbb61805528320670908a0671bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012714"
 ---
 # <a name="guidelines-and-limitations-of-sqlxml-40"></a>SQLXML 4.0에 대한 지침 및 제한 사항
@@ -28,6 +28,6 @@ ms.locfileid: "66012714"
   
      SQLXML 4.0 및 버전 독립 PROGID를 사용하는 애플리케이션을 실행하고 있는데 다른 몇 가지 소프트웨어 프로그램을 설치하려는 경우. 해당 프로그램에 의해 이전 버전의 SQLXML이 설치될 수 있습니다. 해당 애플리케이션의 버전 독립 PROGID가 애플리케이션에 현재 사용되고 있는 기능이 없을 수도 있는 이전 버전의 SQLXML을 가리키게 되므로 애플리케이션에 문제가 발생할 수 있습니다.  
   
--   SQLXMLOLEDB 공급자를 사용 하려면 하지을 대신 SQLOLEDB를 사용 하려면 어떤 이유로 공급자를 SQLXML 기능을 설정 합니다 **SQLXML Version** 속성을 "SQLXML.4.0" 합니다.  
+-   어떤 이유로 든 SQLXMLOLEDB 공급자를 사용 하지 않고 SQLXML 기능에 대해 SQLOLEDB 공급자를 사용 하려면 **Sqlxml 버전** 속성을 "sqlxml. 4.0"으로 설정 합니다.  
   
   

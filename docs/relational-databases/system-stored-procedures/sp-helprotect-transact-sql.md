@@ -1,5 +1,5 @@
 ---
-title: sp_helprotect (TRANSACT-SQL) | Microsoft Docs
+title: sp_helprotect (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -18,23 +18,23 @@ ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7db43df5d500e56e58e3e8465ac03158fe7e4d21
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67997479"
 ---
-# <a name="sphelprotect-transact-sql"></a>sp_helprotect(Transact-SQL)
+# <a name="sp_helprotect-transact-sql"></a>sp_helprotect(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   현재 데이터베이스의 개체에 대한 사용자 권한 또는 문 사용 권한에 관한 정보가 포함된 보고서를 반환합니다.  
   
 > [!IMPORTANT]  
->  **sp_helprotect** 에 도입 된 보안 개체에 대 한 정보를 반환 하지 않습니다 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]합니다. 사용 하 여 [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) 하 고 [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) 대신 합니다.  
+>  **sp_helprotect** 는에 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]도입 된 보안 개체에 대 한 정보를 반환 하지 않습니다. 대신 [database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) 와 [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) 를 사용 하십시오.  
   
  고정 서버 역할 또는 고정 데이터베이스 역할에 항상 할당된 사용 권한을 나열하지 않습니다. 역할에서의 멤버 자격에 따라 사용 권한을 받는 로그인 또는 사용자를 포함하지 않습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,29 +47,29 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @name = ] 'object_statement'` 현재 데이터베이스 또는 보고서에 사용 권한이 있는 문의 개체의 이름이입니다. *object_statement* 됩니다 **nvarchar(776)** , 기본값은 NULL 반환 하는 모든 개체 및 문 사용 권한. 값이 개체(테이블,  뷰,  저장 프로시저 또는 확장 저장 프로시저)인 경우에는 반드시 현재 데이터베이스의 유효한 개체여야 합니다. 개체 이름 형식에서 소유자의 한정자를 포함할 수 있습니다 _소유자_ **.** _개체_합니다.  
+`[ @name = ] 'object_statement'`현재 데이터베이스에 있는 개체의 이름 또는 보고할 권한이 있는 문입니다. *object_statement* 은 **nvarchar (776)** 이며 기본값은 모든 개체 및 문 사용 권한을 반환 하는 NULL입니다. 값이 개체(테이블,  뷰,  저장 프로시저 또는 확장 저장 프로시저)인 경우에는 반드시 현재 데이터베이스의 유효한 개체여야 합니다. 개체 이름에는 소유자 한정자가 포함 될 수 있습니다 __**.** _개체_입니다.  
   
- 하는 경우 *object_statement* , 문인 CREATE 문일 수 있습니다.  
+ 문이 *object_statement* 경우 CREATE 문이 될 수 있습니다.  
   
-`[ @username = ] 'security_account'` 사용 권한이 반환 되는 보안 주체의 이름이입니다. *security_account* 됩니다 **sysname**, 기본값은 NULL 반환 하는 모든 보안 주체는 현재 데이터베이스에 있습니다. *security_account* 현재 데이터베이스에 존재 해야 합니다.  
+`[ @username = ] 'security_account'`사용 권한이 반환 되는 보안 주체의 이름입니다. *security_account* 는 **sysname**이며 기본값은 현재 데이터베이스의 모든 보안 주체를 반환 하는 NULL입니다. *security_account* 는 현재 데이터베이스에 있어야 합니다.  
   
-`[ @grantorname = ] 'grantor'` 권한을 부여 하는 보안 주체의 이름이입니다. *grantor* 됩니다 **sysname**, 기본값은 NULL 반환 하는 보안 주체는 데이터베이스에 의해 부여 된 권한에 대 한 모든 정보입니다.  
+`[ @grantorname = ] 'grantor'`사용 권한을 부여한 보안 주체의 이름입니다. *grantor* 는 **sysname**이며 기본값은 데이터베이스의 보안 주체에서 부여 된 사용 권한에 대 한 모든 정보를 반환 하는 NULL입니다.  
   
-`[ @permissionarea = ] 'type'` 개체 사용 권한을 표시 여부를 나타내는 문자열 (문자열 **o**), 문 사용 권한 (문자열 **s**), 또는 둘 다 (**os**). *형식* 됩니다 **varchar(10)** , 기본값은 **os**합니다. *형식* 의 조합일 수 있습니다 **o** 및 **s**과 함께 또는 없이 쉼표나 사이 공백이 **o** 하 고 **s**입니다.  
+`[ @permissionarea = ] 'type'`개체 사용 권한 (문자열 **o**), 문 사용 권한 (문자열 **s**) 또는 둘 다 (**os**)를 표시할지 여부를 나타내는 문자열입니다. *type* 은 **varchar (10)** 이며 기본값은 **os**입니다. *type* **은 o와** **s**를 조합 하 여 사용할 수 **있습니다.** ****  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**소유자**|**sysname**|개체 소유자의 이름입니다.|  
-|**개체**|**sysname**|개체 이름입니다.|  
-|**피부 여자에 게**|**sysname**|사용 권한이 부여된 보안 주체의 이름입니다.|  
+|**Object**|**sysname**|개체 이름입니다.|  
+|**피부 여자**|**sysname**|사용 권한이 부여된 보안 주체의 이름입니다.|  
 |**Grantor**|**sysname**|지정된 사람에게 사용 권한을 부여한 보안 주체의 이름입니다.|  
-|**ProtectType**|**nvarchar(10)**|보호의 유형 이름입니다.<br /><br /> GRANT  REVOKE|  
-|**동작**|**nvarchar(60)**|사용 권한의 이름입니다. 유효한 사용 권한 문은 개체의 유형에 따라 달라집니다.|  
+|**ProtectType**|**nvarchar (10)**|보호의 유형 이름입니다.<br /><br /> GRANT  REVOKE|  
+|**동작**|**nvarchar (60)**|사용 권한의 이름입니다. 유효한 사용 권한 문은 개체의 유형에 따라 달라집니다.|  
 |**열**|**sysname**|사용 권한의 유형입니다.<br /><br /> All  =  사용 권한이 개체의 모든 현재 열을 포함합니다.<br /><br /> New  =  사용 권한이 미래의 개체에서 (ALTER문을 사용하여)  변경할 수 있는 모든 새 열을 포함합니다.<br /><br /> All+New  =  All과 New의 조합입니다.<br /><br /> 사용 권한의 유형이 열에 적용되지 않는 경우에는 마침표를 반환합니다.|  
   
 ## <a name="remarks"></a>설명  
@@ -103,21 +103,21 @@ EXEC sp_helprotect @grantorname = 'dbo';
 EXEC sp_helprotect 'titles';  
 ```  
   
-### <a name="b-listing-the-permissions-for-a-user"></a>2\. 사용자에 대한 사용 권한 나열  
+### <a name="b-listing-the-permissions-for-a-user"></a>B. 사용자에 대한 사용 권한 나열  
  다음 예에서는 `Judy`라는 사용자가 현재 데이터베이스에서 갖고 있는 모든 사용 권한을 나열합니다.  
   
 ```  
 EXEC sp_helprotect NULL, 'Judy';  
 ```  
   
-### <a name="c-listing-the-permissions-granted-by-a-specific-user"></a>3\. 특정 사용자에 의해 부여된 사용 권한 나열  
+### <a name="c-listing-the-permissions-granted-by-a-specific-user"></a>C. 특정 사용자에 의해 부여된 사용 권한 나열  
  다음 예에서는 현재 데이터베이스에서 `Judy`라는 사용자에 의해 부여된 모든 사용 권한을 나열하고 누락된 매개 변수에 대해 `NULL`을 자리 표시자로 사용합니다.  
   
 ```  
 EXEC sp_helprotect NULL, NULL, 'Judy';  
 ```  
   
-### <a name="d-listing-the-statement-permissions-only"></a>4\. 문 사용 권한만 나열  
+### <a name="d-listing-the-statement-permissions-only"></a>D. 문 사용 권한만 나열  
  다음 예에서는 현재 데이터베이스의 모든 문 사용 권한을 나열하고 누락된 매개 변수에 대해 `NULL`을 자리 표시자로 사용합니다.  
   
 ```  
@@ -131,9 +131,9 @@ EXEC sp_helprotect NULL, NULL, NULL, 's';
 EXEC sp_helprotect @name = 'CREATE TABLE';  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [DENY&#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;&#40;보안 저장 프로시저](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [DENY &#40;Transact-sql&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [GRANT&#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [REVOKE&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

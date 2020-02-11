@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d156a8f015a45ca257bf4f988cf69d229eafe5f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084228"
 ---
 # <a name="logistic-regression-model-query-examples"></a>로지스틱 회귀 모델 쿼리 예제
@@ -27,22 +27,23 @@ ms.locfileid: "66084228"
   
  **내용 쿼리**  
   
- [데이터 마이닝 스키마 행 집합을 사용하여 모델 매개 변수 검색](#bkmk_Query1)  
+ [데이터 마이닝 스키마 행 집합을 사용 하 여 모델 매개 변수 검색](#bkmk_Query1)  
   
- [DMX를 사용하여 모델에 대한 추가 세부 정보 찾기](#bkmk_Query2)  
+ [DMX를 사용 하 여 모델에 대 한 추가 세부 정보 찾기](#bkmk_Query2)  
   
  **예측 쿼리**  
   
- [연속 값에 대한 예측 만들기](#bkmk_Query3)  
+ [연속 값에 대 한 예측 만들기](#bkmk_Query3)  
   
- [불연속 값에 대한 예측 만들기](#bkmk_Query4)  
+ [불연속 값에 대 한 예측 만들기](#bkmk_Query4)  
   
-##  <a name="bkmk_top"></a> 로지스틱 회귀 모델에 대한 정보 가져오기  
+##  <a name="bkmk_top"></a>로지스틱 회귀 모델에 대 한 정보 가져오기  
  로지스틱 회귀 모델은 Microsoft 신경망 알고리즘과 특수한 매개 변수 집합을 사용하여 만듭니다. 따라서 로지스틱 회귀 모델은 신경망 모델과 동일한 정보를 일부 포함하지만 신경망 모델보다는 덜 복잡합니다. 모델 콘텐츠의 구조와 노드 유형에 따라 저장되는 정보의 종류를 이해하려면 [로지스틱 회귀 분석 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-logistic-regression-models.md)를 참조하세요.  
   
- 쿼리 시나리오에서를 연습할 중급 데이터 마이닝 자습서의 다음 섹션에 설명 된 대로 로지스틱 회귀 모델을 만들 수 있습니다. [5단원: 신경망 및 로지스틱 회귀 모델 작성 &#40;중급 데이터 마이닝 자습서&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)합니다.  
+ 중급 데이터 마이닝 자습서의 [5단원: 신경망 및 로지스틱 회귀 모델 작성&#40;중급 데이터 마이닝 자습서&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)를 참조하세요.  
   
- [기본 데이터 마이닝 자습서](../../tutorials/basic-data-mining-tutorial.md)의 마이닝 구조인 타겟 메일링을 사용할 수도 있습니다.  
+ 
+  [기본 데이터 마이닝 자습서](../../tutorials/basic-data-mining-tutorial.md)의 마이닝 구조인 타겟 메일링을 사용할 수도 있습니다.  
   
 ```  
 ALTER MINING STRUCTURE [Targeted Mailing]  
@@ -64,7 +65,7 @@ Gender,
 USING Microsoft_Logistic_Regression  
 ```  
   
-###  <a name="bkmk_Query1"></a> 예제 쿼리 1: 데이터 마이닝 스키마 행 집합을 사용하여 모델 매개 변수 검색  
+###  <a name="bkmk_Query1"></a>예제 쿼리 1: 데이터 마이닝 스키마 행 집합을 사용 하 여 모델 매개 변수 검색  
  데이터 마이닝 스키마 행 집합을 쿼리하면 모델이 만들어진 날짜, 모델이 마지막으로 처리된 날짜, 모델의 기반이 되는 마이닝 구조의 이름, 예측 가능한 특성으로 사용된 열 이름 등 모델에 대한 메타데이터를 찾을 수 있습니다. 다음 예에서는 모델을 처음 만들 때 사용한 매개 변수와 함께 모델의 이름, 유형 및 작성 날짜를 반환합니다.  
   
 ```  
@@ -79,7 +80,7 @@ WHERE MODEL_NAME = 'Call Center_LR'
 |-----------------|-------------------|-------------------|------------------------|  
 |Call Center_LR|Microsoft_Logistic_Regression|04/07/2009 20:38:33|HOLDOUT_PERCENTAGE=30, HOLDOUT_SEED=1, MAXIMUM_INPUT_ATTRIBUTES=255, MAXIMUM_OUTPUT_ATTRIBUTES=255, MAXIMUM_STATES=100, SAMPLE_SIZE=10000|  
   
-###  <a name="bkmk_Query2"></a> 예제 쿼리 2: DMX를 사용하여 모델에 대한 추가 세부 정보 찾기  
+###  <a name="bkmk_Query2"></a>예제 쿼리 2: DMX를 사용 하 여 모델에 대 한 추가 세부 정보 찾기  
  다음 쿼리에서는 로지스틱 회귀 모델에 대한 몇 가지 기본 정보를 반환합니다. 로지스틱 회귀 모델은 입력으로 사용된 값을 설명하는 한계 통계 노드(NODE_TYPE = 24)가 있다는 점을 비롯하여 여러 면에서 신경망 모델과 비슷합니다. 이 예제 쿼리에서는 Targeted Mailing 모델을 사용하며 NODE_DISTRIBUTION이라는 중첩 테이블에서 값을 검색해 모든 입력의 값을 가져옵니다.  
   
 ```  
@@ -89,17 +90,17 @@ FROM [TM_Logistic Regression].CONTENT
   
  일부 결과:  
   
-|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
+|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
 |-----------------------|------------------------|---------------|-------------------|----------------|-----------------|  
-|나이|Missing|0|0|0|1|  
-|나이|45.43491192|17484|1|126.9544114|3|  
+|Age|Missing|0|0|0|1|  
+|Age|45.43491192|17484|1|126.9544114|3|  
 |Bike Buyer|Missing|0|0|0|1|  
 |Bike Buyer|0|8869|0.507263784|0|4|  
-|Bike Buyer|1\.|8615|0.492736216|0|4|  
+|Bike Buyer|1|8615|0.492736216|0|4|  
 |Commute Distance|Missing|0|0|0|1|  
 |Commute Distance|5-10 Miles|3033|0.173472889|0|4|  
   
- 실제 쿼리는 보다 많은 행을 반환하지만 이 예제에서는 입력에 대해 제공된 정보 유형을 보여 줍니다. 불연속 입력에 가능한 각 값은 테이블에 나열됩니다. Age와 같은 연속 값 입력의 경우 전체를 나열하는 것이 가능하지 않으므로 입력이 평균값으로 불연속화됩니다. 한계 통계 노드의 정보를 사용하는 방법에 대한 자세한 내용은 [로지스틱 회귀 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-logistic-regression-models.md)를 참조하세요.  
+ 실제 쿼리는 보다 많은 행을 반환하지만 이 예제에서는 입력에 대해 제공된 정보 유형을 보여 줍니다. 불연속 입력에 가능한 각 값은 테이블에 나열됩니다. Age와 같은 연속 값 입력의 경우 전체를 나열하는 것이 가능하지 않으므로 입력이 평균값으로 불연속화됩니다. 한계 통계 노드의 정보를 사용하는 방법에 대한 자세한 내용은 [로지스틱 회귀 분석 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-logistic-regression-models.md)를 참조하세요.  
   
 > [!NOTE]  
 >  이 결과는 보기 쉽도록 평면화되었지만 사용 중인 공급자가 계층적 행 집합을 지원하는 경우에는 중첩 테이블을 단일 열에 반환할 수 있습니다.  
@@ -107,10 +108,11 @@ FROM [TM_Logistic Regression].CONTENT
 ## <a name="prediction-queries-on-a-logistic-regression-model"></a>로지스틱 회귀 모델에 대한 예측 쿼리  
  모든 종류의 마이닝 모델에 [Predict&#40;DMX&#41;](/sql/dmx/predict-dmx) 함수를 사용하여 모델에 새 데이터를 제공하고 새 값을 기반으로 예측을 만들 수 있습니다. 함수를 사용하여 예측이 올바를 확률 등 예측에 대한 추가 정보를 반환할 수도 있습니다. 이 섹션에서는 로지스틱 회귀 모델에 대한 예측 쿼리의 몇 가지 예를 제공합니다.  
   
-###  <a name="bkmk_Query3"></a> 예제 쿼리 3: 연속 값에 대한 예측 만들기  
+###  <a name="bkmk_Query3"></a>예제 쿼리 3: 연속 값에 대 한 예측 만들기  
  로지스틱 회귀에서는 입력 및 예측 모두에 연속 특성을 사용할 수 있으므로 데이터에 포함된 다양한 요소와 상관 관계가 있는 모델을 쉽게 만들 수 있습니다. 예측 쿼리를 사용하여 이러한 요소 간의 관계를 탐색할 수 있습니다.  
   
- 다음 예제 쿼리는 중급 자습서에서 만든 콜 센터 모델을 기반으로 하며 금요일 오전 근무조의 서비스 등급을 예측하는 단일 쿼리를 만듭니다. [PredictHistogram(DMX)](/sql/dmx/predicthistogram-dmx) 함수는 예측 값의 유효성을 이해하는 데 관련된 통계를 제공하는 중첩 테이블을 반환합니다.  
+ 다음 예제 쿼리는 중급 자습서에서 만든 콜 센터 모델을 기반으로 하며 금요일 오전 근무조의 서비스 등급을 예측하는 단일 쿼리를 만듭니다. 
+  [PredictHistogram(DMX)](/sql/dmx/predicthistogram-dmx) 함수는 예측 값의 유효성을 이해하는 데 관련된 통계를 제공하는 중첩 테이블을 반환합니다.  
   
 ```  
 SELECT  
@@ -125,7 +127,7 @@ NATURAL PREDICTION JOIN
   
  예제 결과:  
   
- **서비스 등급을 예측**: 0.102601830123659  
+ **예측 된 서비스 등급**: 0.102601830123659  
   
  **결과**  
   
@@ -136,7 +138,7 @@ NATURAL PREDICTION JOIN
   
  중첩 NODE_DISTRIBUTION 테이블의 확률, 지지도 및 표준 편차 값에 대한 자세한 내용은 [로지스틱 회귀 분석 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-logistic-regression-models.md)를 참조하세요.  
   
-###  <a name="bkmk_Query4"></a> 예제 쿼리 4: 불연속 값에 대한 예측 만들기  
+###  <a name="bkmk_Query4"></a>예제 쿼리 4: 불연속 값에 대 한 예측 만들기  
  로지스틱 회귀는 일반적으로 이진 결과에 영향을 주는 요소를 분석하려는 경우에 사용됩니다. 자습서에서 사용된 모델은 **ServiceGrade**라는 연속 값을 예측하지만, 실제 환경에서는 서비스 등급이 불연속화된 목표 값을 만족하는지 여부를 예측하도록 모델을 설정해야 합니다. 또는 연속 값을 사용하여 예측을 출력한 후 나중에 예측된 출력을 **Good**, **Fair**또는 **Poor**로 그룹화하는 방법도 있습니다.  
   
  다음 예제에서는 예측 가능한 특성의 그룹화 방식을 변경하는 방법을 보여 줍니다. 이 작업은 마이닝 구조의 복사본을 만든 다음 값이 연속되는 대신 그룹화되도록 대상 열의 분할 방법을 변경하여 수행할 수 있습니다.  
@@ -145,24 +147,29 @@ NATURAL PREDICTION JOIN
   
 ##### <a name="to-create-a-discretized-version-of-the-call-center-mining-structure-and-models"></a>콜 센터 마이닝 구조 및 모델의 불연속 버전을 만들려면  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 솔루션 탐색기에서 **마이닝 구조**를 확장합니다.  
+1.  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 솔루션 탐색기에서 **마이닝 구조**를 확장합니다.  
   
 2.  Call Center.dmm을 마우스 오른쪽 단추로 클릭하고 **복사**를 선택합니다.  
   
-3.  **마이닝 구조** 를 마우스 오른쪽 단추로 클릭하고 **붙여넣기**를 선택합니다. Call Center 1이라는 새 마이닝 구조가 추가됩니다.  
+3.  
+  **마이닝 구조** 를 마우스 오른쪽 단추로 클릭하고 **붙여넣기**를 선택합니다. Call Center 1이라는 새 마이닝 구조가 추가됩니다.  
   
-4.  새 마이닝 구조를 마우스 오른쪽 단추로 클릭하고 **이름 바꾸기**를 선택합니다. **Call Center Discretized**라는 새 이름을 입력합니다.  
+4.  새 마이닝 구조를 마우스 오른쪽 단추로 클릭하고 **이름 바꾸기**를 선택합니다. 
+  **Call Center Discretized**라는 새 이름을 입력합니다.  
   
 5.  새 마이닝 구조를 두 번 클릭하여 디자이너에서 엽니다. 마이닝 모델까지 모두 복사되었으며 확장명은 모두 1입니다. 지금은 이름을 그대로 둡니다.  
   
-6.  **마이닝 구조** 탭에서 Service Grade에 대한 열을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
+6.  
+  **마이닝 구조** 탭에서 Service Grade에 대한 열을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-7.  변경 된 `Content` 속성을 **연속** 에 **Discretized**합니다. 변경 된 `DiscretizationMethod` 속성을 **클러스터**합니다. Discretization BucketCount에 **3**을 입력합니다.  
+7.  속성을 **연속** 에서 불연속화로 변경 합니다. **** `Content` `DiscretizationMethod` 속성을 **클러스터**로 변경 합니다. Discretization BucketCount에 **3**을 입력합니다.  
   
     > [!NOTE]  
     >  이러한 매개 변수는 프로세스에 대한 이해를 돕기 위해 사용된 것일 뿐 이러한 매개 변수를 통해 유효한 모델이 반드시 생성되는 것은 아닙니다.  
   
-8.  **마이닝 모델** 메뉴에서 **마이닝 구조 및 모든 모델 처리**를 선택합니다.  
+8.  
+  **마이닝 모델** 메뉴에서 **마이닝 구조 및 모든 모델 처리**를 선택합니다.  
   
  다음 예제 쿼리는 이 불연속 모델을 기반으로 하며 특정 요일의 서비스 등급 및 예측된 각 결과에 대한 확률을 예측합니다.  
   
@@ -194,24 +201,24 @@ NATURAL PREDICTION JOIN
 |||  
 |-|-|  
 |예측 함수|사용|  
-|[IsDescendant & #40; DMX & #41;](/sql/dmx/isdescendant-dmx)|한 노드가 모델에서 다른 노드의 자식인지 여부를 확인합니다.|  
-|[PredictAdjustedProbability & #40; DMX & #41;](/sql/dmx/predictadjustedprobability-dmx)|지정한 상태에 대한 조정된 확률을 반환합니다.|  
-|[PredictHistogram & #40; DMX & #41;](/sql/dmx/predicthistogram-dmx)|지정한 열에 대한 예측 값을 반환합니다.|  
-|[PredictProbability & #40; DMX & #41;](/sql/dmx/predictprobability-dmx)|지정한 상태에 대한 확률을 반환합니다.|  
-|[PredictStdev & #40; DMX & #41;](/sql/dmx/predictstdev-dmx)|예측 값의 표준 편차를 반환합니다.|  
-|[PredictSupport&#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|지정한 상태에 대한 지원 값을 반환합니다.|  
-|[PredictVariance & #40; DMX & #41;](/sql/dmx/predictvariance-dmx)|지정한 열의 분산을 반환합니다.|  
+|[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|한 노드가 모델에서 다른 노드의 자식인지 여부를 확인합니다.|  
+|[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|지정한 상태에 대한 조정된 확률을 반환합니다.|  
+|[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|지정한 열에 대한 예측 값을 반환합니다.|  
+|[PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|지정한 상태에 대한 확률을 반환합니다.|  
+|[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|예측 값의 표준 편차를 반환합니다.|  
+|[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|지정한 상태에 대한 지원 값을 반환합니다.|  
+|[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|지정한 열의 분산을 반환합니다.|  
   
  모든 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘에 공통된 함수 목록은 [일반 예측 함수&#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx)를 참조하세요. 특정 함수의 구문은 [DMX&#40;Data Mining Extensions&#41; 함수 참조](/sql/dmx/data-mining-extensions-dmx-function-reference)를 참조하세요.  
   
 > [!NOTE]  
->  신경망 및 로지스틱 회귀 모델의 경우 [PredictSupport&#40;DMX&#41;](/sql/dmx/predictsupport-dmx) 함수는 모델 전체에 대한 학습 집합의 크기를 나타내는 단일 값을 반환합니다.  
+>  신경망 및 로지스틱 회귀 모델의 경우 [PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx) 함수는 모델 전체에 대한 학습 집합의 크기를 나타내는 단일 값을 반환합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 마이닝 쿼리](data-mining-queries.md)   
  [Microsoft 로지스틱 회귀 알고리즘](microsoft-logistic-regression-algorithm.md)   
  [Microsoft 로지스틱 회귀 알고리즘 기술 참조](microsoft-logistic-regression-algorithm-technical-reference.md)   
- [로지스틱 회귀 분석 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-logistic-regression-models.md)   
- [5단원: 신경망 및 로지스틱 회귀 모델 작성 &#40;중급 데이터 마이닝 자습서&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [로지스틱 회귀 모델에 대 한 마이닝 모델 콘텐츠 &#40;Analysis Services 데이터 마이닝&#41;](mining-model-content-for-logistic-regression-models.md)   
+ [5 단원: 중간 데이터 마이닝 자습서 &#40;신경망 및 로지스틱 회귀 모델 작성&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
   
