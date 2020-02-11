@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4c5c4d515ebe6aa9b4b8120ae909f07dccc74de0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101694"
 ---
 # <a name="securable-items"></a>보안 개체 항목
@@ -59,7 +59,7 @@ ms.locfileid: "66101694"
 |공유 데이터 원본|공유 데이터 원본의 보안을 설정하여 항목과 해당 속성 페이지에 대한 액세스를 제한할 수 있습니다. 자세한 내용은 [공유 데이터 원본 항목 보안 설정](secure-shared-data-source-items.md)을 참조하세요.|  
 |공유 데이터 세트|공유 데이터 세트는 해당 공유 데이터 세트의 정의 보기 또는 변경, 속성 변경 등 사용자가 수행할 수 있는 동작의 범위를 제어하여 보안을 설정할 수 있습니다.<br /><br /> 자세한 내용은 [공유 데이터 세트 항목 보안 설정](secure-shared-dataset-items.md)을 참조하세요.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [기본 모드 보고서 서버에 대한 사용 권한 부여](granting-permissions-on-a-native-mode-report-server.md)   
  [역할 만들기, 삭제 또는 수정&#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)   
  [사용자에게 보고서 서버에 대한 액세스 권한 부여&#40;보고서 관리자&#41;](grant-user-access-to-a-report-server.md)   

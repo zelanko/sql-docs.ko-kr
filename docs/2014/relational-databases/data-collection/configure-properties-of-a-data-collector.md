@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 37df9ccdd0bc2b44384bb9fd3d130c8d3bf8ca36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873437"
 ---
 # <a name="configure-properties-of-a-data-collector"></a>데이터 수집기의 속성 구성
@@ -47,7 +47,7 @@ ms.locfileid: "62873437"
  **업로드 실패 시의 다시 시도 횟수**  
  관리 데이터 웨어하우스에 대한 업로드가 실패할 경우 다시 시도할 횟수를 지정합니다. 기본값은 1입니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 컬렉션 관리](data-collection.md)   
  [관리 데이터 웨어하우스 구성&#40;SQL Server Management Studio&#41;](configure-the-management-data-warehouse-sql-server-management-studio.md)  
   

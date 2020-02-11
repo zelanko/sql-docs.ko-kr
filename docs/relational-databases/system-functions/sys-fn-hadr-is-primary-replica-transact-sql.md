@@ -1,5 +1,5 @@
 ---
-title: fn_hadr_is_primary_replica (Transact-sql) | Microsoft Docs
+title: sys. fn_hadr_is_primary_replica (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -21,10 +21,10 @@ ms.assetid: c9b1969f-be1d-4dfb-a33d-551f380b9e27
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: befd4ba78a3d147acd8dd2adbd8fcb81500ec4b8
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811407"
 ---
 # <a name="sysfn_hadr_is_primary_replica-transact-sql"></a>sys.fn_hadr_is_primary_replica(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68811407"
 
   현재 복제본이 주 복제본인지 확인하는 데 사용됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -45,7 +45,7 @@ sys.fn_hadr_is_primary_replica ( 'dbname' )
  '*dbname*'  
  데이터베이스의 이름입니다. *dbname* 은 sysname 형식입니다.  
   
-## <a name="returns"></a>반환 값  
+## <a name="returns"></a>반환  
  현재 인스턴스의 데이터베이스가 주 복제본이면 1을 반환하고, 그렇지 않으면 0을 반환합니다.  
   
 ## <a name="remarks"></a>설명  
@@ -75,11 +75,11 @@ GO
 ### <a name="permissions"></a>사용 권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [Transact-sql AlwaysOn 가용성 그룹 &#40;함수&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
- [_hadr_database_replica_states &#40;&#41; transact-sql](../..//relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) [AlwaysOn 가용성 그룹 &#40;SQL Server&#41; ](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>참고 항목  
+ [AlwaysOn 가용성 그룹 함수 &#40;Transact-sql&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
+ [dm_hadr_database_replica_states &#40;transact-sql&#41;](../..//relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) [AlwaysOn 가용성 그룹 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [CREATE AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
- [AlwaysOn 가용성 그룹 카탈로그 뷰 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)     
+ [ALTER AVAILABILITY GROUP &#40;Transact-sql&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
+ [Transact-sql&#41;&#40;카탈로그 뷰 AlwaysOn 가용성 그룹](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)     
   
   

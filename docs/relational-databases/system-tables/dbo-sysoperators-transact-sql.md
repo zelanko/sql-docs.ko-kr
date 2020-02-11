@@ -1,5 +1,5 @@
 ---
-title: dbo.sysoperators (TRANSACT-SQL) | Microsoft Docs
+title: dbo. sysopersoin (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,10 +20,10 @@ ms.assetid: c2afa20c-b15f-46ca-ae74-2eb65909409e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e4336fdeeb0867018e9a2a630f2212cc06259482
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67984911"
 ---
 # <a name="dbosysoperators-transact-sql"></a>dbo.sysoperators(Transact-SQL)
@@ -33,13 +33,13 @@ ms.locfileid: "67984911"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|운영자의 ID입니다.|  
+|**a-id**|**int**|운영자의 ID입니다.|  
 |**name**|**sysname**|운영자의 이름입니다.|  
-|**enabled**|**tinyint**|경고 알림(부울)의 상태입니다. 하는 경우 **1**,이 연산자는 경고가 발생할 때 알림을 받을 수 있습니다.|  
-|**email_address**|**nvarchar(100)**|해당 운영자의 전자 메일 주소입니다.|  
+|**사용**|**tinyint**|경고 알림(부울)의 상태입니다. **1**인 경우이 운영자는 경고가 발생할 때 알림을 받을 수 있습니다.|  
+|**email_address**|**nvarchar (100)**|해당 운영자의 전자 메일 주소입니다.|  
 |**last_email_date**|**int**|해당 운영자가 마지막으로 전자 메일로 경고 알림을 받은 날짜입니다.|  
 |**last_email_time**|**int**|해당 운영자가 마지막으로 전자 메일로 경고 알림을 받은 시간입니다.|  
-|**pager_address**|**nvarchar(100)**|해당 운영자의 호출기 주소입니다.|  
+|**pager_address**|**nvarchar (100)**|해당 운영자의 호출기 주소입니다.|  
 |**last_pager_date**|**int**|해당 운영자가 마지막으로 호출기로 경고 알림을 받은 날짜입니다.|  
 |**last_pager_time**|**int**|해당 운영자가 마지막으로 호출기로 경고 알림을 받은 시간입니다.|  
 |**weekday_pager_start_time**|**int**|월요일에서 금요일까지의 평일에 해당 운영자가 호출기 경고 알림을 받기 시작하는 시간입니다.|  
@@ -49,12 +49,12 @@ ms.locfileid: "67984911"
 |**sunday_pager_start_time**|**int**|일요일에 해당 운영자가 호출기 경고 알림을 받기 시작하는 시간입니다.|  
 |**sunday_pager_end_time**|**int**|일요일에 해당 운영자가 호출기 경고 알림을 받기를 끝내는 시간입니다.|  
 |**pager_days**|**tinyint**|해당 운영자가 호출기 경고 알림을 받을 수 있는 평일을 표시하는 비트마스크입니다.|  
-|**netsend_address**|**nvarchar(100)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**netsend_address**|**nvarchar (100)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**last_netsend_date**|**int**|가장 최근의 네트워크 메시지가 지정한 운영자 ID에 마지막으로 전달된 날짜입니다.|  
 |**last_netsend_time**|**int**|가장 최근의 네트워크 메시지가 지정한 운영자 ID에 마지막으로 전달된 시간입니다.|  
 |**category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
-## <a name="see-also"></a>관련 항목  
- [SQL Server 에이전트 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;&#40;테이블 SQL Server 에이전트](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  
   
   

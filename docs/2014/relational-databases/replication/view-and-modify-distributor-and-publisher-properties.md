@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e4049cfa36020431e9cae8cbe2431c1c270d5deb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68212024"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>게시자 및 배포자 속성 보기 및 수정
@@ -45,7 +45,7 @@ ms.locfileid: "68212024"
   
 ###  <a name="Recommendations"></a> 권장 사항  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]이전 버전을 실행하는 게시자의 경우 **sysadmin** 고정 서버 역할의 사용자는 **구독자** 페이지에서 구독자를 등록할 수 있습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터는 더 이상 복제에 대해 구독자를 명시적으로 등록하지 않아도 됩니다.  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이전 버전을 실행하는 게시자의 경우, **sysadmin** 고정 서버 역할의 사용자가 **구독자** 페이지에서 구독자를 등록할 수 있습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터는 더 이상 복제에 대해 구독자를 명시적으로 등록하지 않아도 됩니다.  
   
 ###  <a name="Security"></a> 보안  
  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "68212024"
   
 2.  **복제** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **게시자 속성**을 클릭합니다.  
   
-3.  속성 보기 및 수정 합니다 **게시자 속성- \< 게시자 >** 대화 상자.  
+3.  **게시자 속성- \< 게시자 >** 대화 상자에서 속성을 보고 수정 합니다.  
   
     -   **sysadmin** 고정 서버 역할의 사용자는 **게시 데이터베이스** 페이지에서 복제에 사용할 데이터베이스를 설정할 수 있습니다. 데이터베이스를 설정한다고 해서 그 데이터베이스가 게시되는 것은 아닙니다. 데이터베이스를 설정하면 설정된 데이터베이스에 대한 **db_owner** 고정 데이터베이스 역할의 사용자가 그 데이터베이스에 하나 이상의 게시를 만들 수 있습니다.  
   
@@ -197,8 +197,8 @@ ms.locfileid: "68212024"
   
  [!code-vb[HowTo#rmo_vb_ChangeDistPub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changedistpub)]  
   
-## <a name="see-also"></a>관련 항목  
- [복제 관리 개체 개념](concepts/replication-management-objects-concepts.md)   
+## <a name="see-also"></a>참고 항목  
+ [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
  [게시 및 배포 해제](disable-publishing-and-distribution.md)   
  [배포 구성](configure-distribution.md)   
  [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6901123f4a28560c504bc9a83522cb108a6d7b12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104932"
 ---
 # <a name="show-tooltips-on-a-series-report-builder-and-ssrs"></a>계열에 도구 설명 표시(보고서 작성기 및 SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "66104932"
   
 2.  **계열 데이터** 를 클릭하고 **도구 설명** 속성에서 문자열이나 식을 입력합니다. 차트 관련 키워드를 사용하여 차트의 다른 요소를 나타낼 수 있습니다. 자세한 내용은 [차트의 데이터 요소에 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [차트의 데이터 요소에 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [범례 항목의 텍스트 변경&#40;보고서 작성기 및 SSRS&#41;](chart-legend-change-item-text-report-builder.md)   
  [차트에서 계열 색 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   

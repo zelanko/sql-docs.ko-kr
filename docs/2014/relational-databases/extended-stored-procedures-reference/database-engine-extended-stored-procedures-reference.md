@@ -16,18 +16,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 40a621af401b33394b996468c581e85e3635355c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63137602"
 ---
-# <a name="extended-stored-procedures-programmer39s-reference"></a>확장 저장된 프로시저 프로그래머&#39;참조
+# <a name="extended-stored-procedures-programmer39s-reference"></a>확장 저장 프로시저 프로그래머&#39;s 참조
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하세요.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]대신 CLR 통합을 사용 하세요.  
   
- 이전에 개방형 Data Services의 일부였던 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 확장 저장 프로시저 API는 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 확장하기 위한 서버 기반 API(애플리케이션 프로그래밍 인터페이스)를 제공합니다. API는 애플리케이션을 빌드하는 데 사용되는 C 및 C++ 함수와 매크로로 구성됩니다.  
+ 이전 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에 Open Data Services의 일부인 확장 저장 프로시저 api는 기능을 확장 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하기 위한 서버 기반 api (응용 프로그래밍 인터페이스)를 제공 합니다. API는 애플리케이션을 빌드하는 데 사용되는 C 및 C++ 함수와 매크로로 구성됩니다.  
   
  CLR 통합과 같은 보다 강력한 최신 기술이 등장하면서 확장 저장 프로시저의 필요성이 크게 바뀌었습니다.  
   

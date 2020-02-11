@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_table_memory_stats (TRANSACT-SQL) | Microsoft Docs
+title: sys. dm_db_xtp_table_memory_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -22,16 +22,17 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d04238e0f476f39b0158fad4aa3350875d471ecc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097937"
 ---
 # <a name="sysdm_db_xtp_table_memory_stats-transact-sql"></a>sys.dm_db_xtp_table_memory_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  현재 데이터베이스에서 각 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 테이블(사용자 및 시스템)에 대한 메모리 사용량 통계를 반환합니다. 시스템 테이블에는 음수 개체 ID가 있으며 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 엔진에 대한 런타임 정보가 저장됩니다. 사용자 개체와 달리 시스템 테이블은 내부에 있으며 메모리 내에만 존재하므로 카탈로그 뷰를 통해 보이지 않습니다. 시스템 테이블은 스토리지의 모든 데이터/델타 파일에 대한 메타데이터, 병합 요청, 행 필터링을 위한 델타 파일의 워터마크, 삭제된 테이블, 복구 및 백업을 위한 관련 정보 등의 정보를 저장하는 데 사용됩니다. [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 엔진은 최대 8,192개의 데이터 및 델타 파일 쌍을 보유할 수 있으므로 큰 메모리 내 데이터베이스의 경우 시스템 테이블에서 사용하는 메모리가 몇 메가바이트일 수 있습니다.  
+  현재 데이터베이스에서 각 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 테이블(사용자 및 시스템)에 대한 메모리 사용량 통계를 반환합니다. 시스템 테이블에는 음수 개체 ID가 있으며 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 엔진에 대한 런타임 정보가 저장됩니다. 사용자 개체와 달리 시스템 테이블은 내부에 있으며 메모리 내에만 존재하므로 카탈로그 뷰를 통해 보이지 않습니다. 시스템 테이블은 스토리지의 모든 데이터/델타 파일에 대한 메타데이터, 병합 요청, 행 필터링을 위한 델타 파일의 워터마크, 삭제된 테이블, 복구 및 백업을 위한 관련 정보 등의 정보를 저장하는 데 사용됩니다. 
+  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 엔진은 최대 8,192개의 데이터 및 델타 파일 쌍을 보유할 수 있으므로 큰 메모리 내 데이터베이스의 경우 시스템 테이블에서 사용하는 메모리가 몇 메가바이트일 수 있습니다.  
   
  자세한 내용은 [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)를 참조하세요.  
   
@@ -212,7 +213,7 @@ used_memory_mb       target_memory_mb
 1356                 3845  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [메모리 최적화 테이블 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [메모리 액세스에 최적화 된 테이블 동적 관리 뷰 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

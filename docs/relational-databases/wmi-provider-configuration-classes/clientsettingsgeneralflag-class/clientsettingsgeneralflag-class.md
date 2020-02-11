@@ -17,15 +17,15 @@ ms.assetid: 8a0291a8-e8ef-42f6-a521-079410c5eeb1
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 545c13aaa062c0aa55a72d74c52cf4cc112dc9a5
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660664"
 ---
 # <a name="clientsettingsgeneralflag-class"></a>ClientSettingsGeneralFlag 클래스
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  [ClientSettingsGeneralFlag 클래스](../../../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md) 는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] client 인스턴스의 일반 플래그 설정을 나타냅니다.  
+  [ClientSettingsGeneralFlag 클래스](../../../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md) 는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클라이언트 인스턴스의 일반 플래그 설정을 나타냅니다.  
   
  [ClientSettingsGeneralFlag 클래스](../../../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md) 를 사용 하 여 다음을 수행할 수 있습니다.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "73660664"
   
 -   플래그 값을 보고 수정합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [클라이언트 프로토콜 구성](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

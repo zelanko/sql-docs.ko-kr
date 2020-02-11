@@ -2,7 +2,7 @@
 title: 명령 프롬프트에서 데이터베이스 실험 도우미 실행
 description: 명령 프롬프트에서 데이터베이스 실험 도우미 실행
 ms.custom: seo-lt-2019
-ms.date: 11/22/2019
+ms.date: 01/24/2020
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: f5a0f7441dd17aec2587c772a678a3681fd3b423
-ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
+ms.openlocfilehash: 8055ae8b66c2f2b59f18b0ee40dcac8753c0eb7c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74317727"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76831756"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>명령 프롬프트에서 데이터베이스 실험 도우미 실행
 
@@ -29,7 +29,7 @@ ms.locfileid: "74317727"
 
 `Deacmd.exe -o startcapturetrace -s <SQLServerInstance> -e <encryptconnection> -u <trustservercertificate> -d <database name> -p <trace file path> -f <trace file name> -t <Max duration>`
 
-**예 들어**
+**예제**
 
 `Deacmd.exe -o startcapturetrace -s localhost -e -d adventureworks -p c:\test -f sql2008capture -t 60`
 
@@ -46,7 +46,7 @@ ms.locfileid: "74317727"
 
     b.  지정 `Set @durationInMins=0` 된 시간이 지나면 추적 캡처가 자동으로 중지 되지 않도록를 실행 합니다.
 
-    c.  추적 파일당 최대 파일 크기를 설정 하려면를 실행 `Set @maxfilesize`합니다. 권장 크기는 200 (MB)입니다.
+    다.  추적 파일당 최대 파일 크기를 설정 하려면를 실행 `Set @maxfilesize`합니다. 권장 크기는 200 (MB)입니다.
 
     d.  추적 `@Tracefile` 파일에 대 한 고유한 이름을 설정 하려면 편집 합니다.
 
@@ -71,7 +71,7 @@ ms.locfileid: "74317727"
 
 `Deacmd.exe -o analysis -a <Target1 trace filepath> -b <Target2 trace filepath> -r reportname -s <SQLserverInstance> -e <encryptconnection> -u <trustservercertificate>`
 
-**예 들어**
+**예제**
 
 `Deacmd.exe -o analysis -a C:\Trace\SQL2008Source\Trace.trc -b C:\ Trace\SQL2014Trace\Trace.trc -r upgrade20082014 -s localhost -e`
 

@@ -1,5 +1,5 @@
 ---
-title: 선행 제약 조건에서 식을 사용 하 여 | Microsoft Docs
+title: 선행 제약 조건에 식 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 672d9c363f64037f5f40f51fc7c6cb1c4c3bc674
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054745"
 ---
 # <a name="use-an-expression-in-a-precedence-constraint"></a>선행 제약 조건에서 식 사용
@@ -31,17 +31,21 @@ ms.locfileid: "66054745"
   
 3.  **제어 흐름** 탭을 클릭합니다.  
   
-4.  **제어 흐름** 탭의 디자인 화면에서 선행 제약 조건을 두 번 클릭합니다. **선행 제약 조건 편집기** 가 열립니다.  
+4.  
+  **제어 흐름** 탭의 디자인 화면에서 선행 제약 조건을 두 번 클릭합니다. 
+  **선행 제약 조건 편집기** 가 열립니다.  
   
-5.  **평가 작업**목록에서 **식**, **식 및 제약 조건** 또는 **식 또는 제약 조건** 을 선택합니다.  
+5.  
+  **평가 작업**목록에서 **식**, **식 및 제약 조건** 또는 **식 또는 제약 조건** 을 선택합니다.  
   
-6.  **실행** 텍스트 상자에 표현식을 입력하거나 Expression Builder를 실행하여 실행을 만듭니다.  
+6.  
+  **실행** 텍스트 상자에 표현식을 입력하거나 Expression Builder를 실행하여 실행을 만듭니다.  
   
 7.  식 구문의 유효성을 검사하려면 **테스트**를 클릭합니다.  
   
 8.  업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [선행 제약 조건](control-flow/precedence-constraints.md)   
  [기본 선행 제약 조건을 사용하여 태스크 및 컨테이너 연결](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
  [바로 가기 메뉴를 사용 하 여 선행 제약 조건 값 설정](../../2014/integration-services/set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)   

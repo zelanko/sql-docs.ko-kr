@@ -20,14 +20,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97132ff64405df19c56c080cc5a1baa704a700d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083765"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Microsoft Time Series 알고리즘
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘은 시간이 지남에 따라 제품 판매량과 같은 연속 값을 예측에 최적화 된 회귀 알고리즘을 제공 합니다. 의사 결정 트리와 같은 다른 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘에서는 새 정보로 된 추가 열을 입력해야 추세를 예측할 수 있지만, 시계열 모델에서는 이런 열이 필요하지 않습니다. 시계열 모델은 이 모델을 만드는 데 사용되는 원래 데이터 세트만을 기반으로 추세를 예측할 수 있습니다. 또한 예측을 만들고 자동으로 새 데이터를 추세 분석에 통합하는 경우 시계열 모델에 새 데이터를 추가할 수도 있습니다.  
+  시계열 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘은 시간에 따른 제품 판매량 같은 연속 값의 예측에 최적화 된 회귀 알고리즘을 제공 합니다. 의사 결정 트리와 같은 다른 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘에서는 새 정보로 된 추가 열을 입력해야 추세를 예측할 수 있지만, 시계열 모델에서는 이런 열이 필요하지 않습니다. 시계열 모델은 이 모델을 만드는 데 사용되는 원래 데이터 세트만을 기반으로 추세를 예측할 수 있습니다. 또한 예측을 만들고 자동으로 새 데이터를 추세 분석에 통합하는 경우 시계열 모델에 새 데이터를 추가할 수도 있습니다.  
   
  다음 다이어그램에서는 4개의 다른 판매 지역에서 시간에 따른 제품 판매량을 예측하기 위한 일반적인 모델을 보여 줍니다. 다이어그램에 표시된 모델은 빨간색, 노란색, 보라색 및 파란색 선으로 표시된 각 지역별 판매량을 보여 줍니다. 각 지역의 선은 다음 두 부분으로 구성됩니다.  
   
@@ -37,21 +37,23 @@ ms.locfileid: "66083765"
   
  원본 데이터와 예측 데이터의 조합을 *계열*이라고 합니다.  
   
- ![시계열의 예로](../media/time-series.gif "시계열 예")  
+ ![시계열 예](../media/time-series.gif "시계열 예")  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘의 중요한 기능은 교차 예측을 수행할 수 있다는 것입니다. 관련된 두 개의 별도 계열이 있는 알고리즘을 학습하는 경우 결과 모델을 사용하여 한 계열의 동작을 기반으로 다른 계열의 결과를 예측할 수 있습니다. 예를 들어 관찰된 특정 제품의 판매량이 다른 제품의 예측 판매량에 영향을 줄 수 있습니다. 또한 교차 예측은 여러 계열에 적용될 수 있는 일반 모델을 만드는 데에도 유용합니다. 예를 들어 계열에 높은 품질의 데이터가 부족하기 때문에 특정 지역에 대한 예측이 불안정합니다. 4개 지역 모두의 평균으로 일반 모델을 학습한 다음 개별 계열에 이 모델을 적용하여 각 지역에 대해 더 안정된 예측을 만들 수 있습니다.  
+ 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘의 중요한 기능은 교차 예측을 수행할 수 있다는 것입니다. 관련된 두 개의 별도 계열이 있는 알고리즘을 학습하는 경우 결과 모델을 사용하여 한 계열의 동작을 기반으로 다른 계열의 결과를 예측할 수 있습니다. 예를 들어 관찰된 특정 제품의 판매량이 다른 제품의 예측 판매량에 영향을 줄 수 있습니다. 또한 교차 예측은 여러 계열에 적용될 수 있는 일반 모델을 만드는 데에도 유용합니다. 예를 들어 계열에 높은 품질의 데이터가 부족하기 때문에 특정 지역에 대한 예측이 불안정합니다. 4개 지역 모두의 평균으로 일반 모델을 학습한 다음 개별 계열에 이 모델을 적용하여 각 지역에 대해 더 안정된 예측을 만들 수 있습니다.  
   
 ## <a name="example"></a>예제  
- [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 사의 관리 팀은 내년도 월별 자전거 판매량을 예측하려고 합니다. 이 회사에서는 한 자전거 모델의 판매량을 사용하여 다른 모델의 판매량을 예측할 수 있는지 여부에 특히 관심이 많습니다. 지난 3년 동안의 기록 데이터에 대해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘을 사용하여 이 회사에서는 향후 자전거 판매량을 예측하는 데이터 마이닝 모델을 생성할 수 있으며 교차 예측을 수행하여 개별 자전거 모델의 판매 경향이 서로 관련되어 있는지 여부를 확인할 수 있습니다.  
+ 
+  [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 사의 관리 팀은 내년도 월별 자전거 판매량을 예측하려고 합니다. 이 회사에서는 한 자전거 모델의 판매량을 사용하여 다른 모델의 판매량을 예측할 수 있는지 여부에 특히 관심이 많습니다. 지난 3년 동안의 기록 데이터에 대해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘을 사용하여 이 회사에서는 향후 자전거 판매량을 예측하는 데이터 마이닝 모델을 생성할 수 있으며 교차 예측을 수행하여 개별 자전거 모델의 판매 경향이 서로 관련되어 있는지 여부를 확인할 수 있습니다.  
   
  이 회사는 각 분기마다 최신 판매량 데이터로 모델을 업데이트하고 이들의 예측을 업데이트하여 최신 추세로 모델링할 계획입니다. 판매량 데이터를 정확하거나 일관되게 업데이트하지 않는 점포의 문제를 해결하려면 일반 예측 모델을 만들고 이 모델을 사용하여 모든 지역에 대한 예측을 만듭니다.  
   
 ## <a name="how-the-algorithm-works"></a>알고리즘 작동 방법  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘은 단일 알고리즘인 ARTXP를 사용 합니다. ARTXP 알고리즘은 단기 예측에 대해 최적화 된 한 시리즈의 다음 값을 예측 합니다. 부터는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘은 ARTXP 알고리즘 및 두 번째 알고리즘인 ARIMA 모두를 사용 합니다. ARIMA 알고리즘은 장기 예측에 대해 최적화되어 있습니다. ARTXP 및 ARIMA 알고리즘의 구현에 대한 자세한 내용은 [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)(Microsoft Time Series 알고리즘 기술 참조)를 참조하십시오.  
+ 에서 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]시계열 알고리즘 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 은 ARTXP 단일 알고리즘을 사용 했습니다. ARTXP 알고리즘은 단기 예측에 대해 최적화되었으므로 계열의 적절한 다음 값을 예측했습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 시계열 알고리즘은 ARTXP 알고리즘과 두 번째 알고리즘 ARIMA를 모두 사용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 합니다. ARIMA 알고리즘은 장기 예측에 대해 최적화되어 있습니다. ARTXP 및 ARIMA 알고리즘의 구현에 대한 자세한 내용은 [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)(Microsoft Time Series 알고리즘 기술 참조)를 참조하십시오.  
   
- 기본적으로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘은 패턴을 분석하고 예측을 수행할 때 알고리즘을 혼합하여 사용합니다. 알고리즘은 동일한 데이터에서 두 개의 모델을 별도로 학습 합니다: 한 모델은 ARTXP 알고리즘을 사용 하 고 다른 모델은 ARIMA 알고리즘을 사용 합니다. 그러면 알고리즘은 두 모델의 결과를 혼합하여 여러 개의 시간 조각에 대한 최상의 예측을 생성합니다. ARTXP는 단기 예측에 가장 적합하므로 일련의 예측이 시작되는 부분에서는 ARTXP에 더 비중을 둡니다. 그러나 예측하는 시간 조각이 보다 미래로 이동하면 ARIMA에 더 비중을 둡니다.  
+ 기본적으로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘은 패턴을 분석하고 예측을 수행할 때 알고리즘을 혼합하여 사용합니다. 알고리즘은 동일한 데이터에 대해 두 개의 개별 모델을 학습 합니다. 한 모델은 ARTXP 알고리즘을 사용 하 고 한 모델은 ARIMA 알고리즘을 사용 합니다. 그러면 알고리즘은 두 모델의 결과를 혼합하여 여러 개의 시간 조각에 대한 최상의 예측을 생성합니다. ARTXP는 단기 예측에 가장 적합하므로 일련의 예측이 시작되는 부분에서는 ARTXP에 더 비중을 둡니다. 그러나 예측하는 시간 조각이 보다 미래로 이동하면 ARIMA에 더 비중을 둡니다.  
   
- 알고리즘의 혼합을 제어하여 시계열에서 단기 예측 또는 장기 예측 중 하나를 우선시할 수도 있습니다. 부터는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Standard를 지정할 수 있습니다는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 다음 설정 중 하나를 시계열 알고리즘 사용:  
+ 알고리즘의 혼합을 제어하여 시계열에서 단기 예측 또는 장기 예측 중 하나를 우선시할 수도 있습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 표준부터 시계열 알고리즘이 다음 설정 중 하나를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 사용 하도록 지정할 수 있습니다.  
   
 -   단기 예측에 ARTXP만 사용합니다.  
   
@@ -59,7 +61,7 @@ ms.locfileid: "66083765"
   
 -   두 알고리즘의 혼합을 기본값으로 사용합니다.  
   
- 부터는 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]를 사용자 지정할 수 있습니다 하는 방법을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘이 예측 모델을 혼합 합니다. 혼합 모델을 사용하는 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘은 두 가지 알고리즘을 다음과 같은 방식으로 혼합합니다.  
+ [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]부터 시계열 알고리즘이 예측을 위해 모델을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 혼합 하는 방법을 사용자 지정할 수 있습니다. 혼합 모델을 사용하는 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘은 두 가지 알고리즘을 다음과 같은 방식으로 혼합합니다.  
   
 -   처음 두 개의 예측을 수행하는 데 항상 ARTXP만 사용됩니다.  
   
@@ -80,11 +82,11 @@ ms.locfileid: "66083765"
   
  시계열 모델의 요구 사항은 다음과 같습니다.  
   
--   **단일 키 시간 열** 각 모델에는 숫자 열이나 날짜 열이 한 개 있어야 합니다. 이 열은 모델에서 사용할 시간 조각을 정의하는 사례 계열로 사용됩니다. key time 열의 데이터 형식은 datetime 데이터 형식 또는 numeric 데이터 형식 중 하나가 될 수 있습니다. 그러나 열은 연속 값을 포함해야 하고 이 값은 각 계열에 대해 고유해야 합니다. 시계열 모델에 대한 사례 계열은 연도 열 및 월 열과 같은 두 개의 열에 저장될 수 없습니다.  
+-   **단일 키 시간 열** 각 모델에는 모델에서 사용할 시간 조각을 정의 하는 사례 계열로 사용 되는 숫자 열 이나 날짜 열이 하나씩 포함 되어야 합니다. key time 열의 데이터 형식은 datetime 데이터 형식 또는 numeric 데이터 형식 중 하나가 될 수 있습니다. 그러나 열은 연속 값을 포함해야 하고 이 값은 각 계열에 대해 고유해야 합니다. 시계열 모델에 대한 사례 계열은 연도 열 및 월 열과 같은 두 개의 열에 저장될 수 없습니다.  
   
--   **예측 가능한 열** 각 모델에는 알고리즘이 시계열 모델을 작성할 예측 가능한 열이 한 개 이상 있어야 합니다. 예측 가능한 열의 데이터 형식에는 연속 값이 있어야 합니다. 예를 들어 수입, 판매량 또는 기온과 같은 숫자 특성이 시간에 따라 변화하는 방식을 예측할 수 있습니다. 그러나 구매 상태 또는 교육 수준과 같은 불연속 값을 포함하는 열은 예측 가능한 열로 사용할 수 없습니다.  
+-   **예측 가능한 열** 각 모델에는 알고리즘이 시계열 모델을 작성할 예측 가능한 열이 하나 이상 포함 되어야 합니다. 예측 가능한 열의 데이터 형식에는 연속 값이 있어야 합니다. 예를 들어 수입, 판매량 또는 기온과 같은 숫자 특성이 시간에 따라 변화하는 방식을 예측할 수 있습니다. 그러나 구매 상태 또는 교육 수준과 같은 불연속 값을 포함하는 열은 예측 가능한 열로 사용할 수 없습니다.  
   
--   **선택적 계열 키 열** 각 모델에는 계열을 식별하는 고유한 값을 포함하는 추가 키 열이 있을 수 있습니다. 선택적 계열 키 열은 고유한 값을 포함해야 합니다. 예를 들어 모든 시간 조각의 각 제품 이름에 대해 한 개의 레코드만 있으면 단일 모델이 여러 제품 모델의 판매량을 포함할 수 있습니다.  
+-   **선택적 계열 키 열** 각 모델에는 계열을 식별 하는 고유한 값을 포함 하는 추가 키 열이 있을 수 있습니다. 선택적 계열 키 열은 고유한 값을 포함해야 합니다. 예를 들어 모든 시간 조각의 각 제품 이름에 대해 한 개의 레코드만 있으면 단일 모델이 여러 제품 모델의 판매량을 포함할 수 있습니다.  
   
  여러 가지 다양한 방법으로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 모델에 대한 입력 데이터를 정의할 수 있습니다. 그러나 입력 사례의 형식이 마이닝 모델의 정의에 영향을 주기 때문에 업무에 필요한 사항을 고려하여 적절히 데이터를 준비해야 합니다. 다음 두 가지 예에서는 입력 데이터가 모델에 미치는 영향을 보여 줍니다. 두 가지 예에서, 완료된 데이터 마이닝 모델에는 다음과 같은 4개의 고유한 계열에 대한 패턴이 있습니다.  
   
@@ -98,15 +100,15 @@ ms.locfileid: "66083765"
   
  두 가지 예에서 향후 각 제품의 새로운 판매량과 부피를 예측할 수 있지만 제품 또는 시간에 대한 새로운 값을 예측할 수는 없습니다.  
   
-### <a name="example-1-time-series-data-set-with-series-represented-as-column-values"></a>예 1: 계열이 열 값으로 표현 된 시계열 데이터 집합  
+### <a name="example-1-time-series-data-set-with-series-represented-as-column-values"></a>예제 1: 계열이 열 값으로 표현된 시계열 데이터 집합  
  이 예에서는 다음 입력 사례 표를 사용합니다.  
   
 |TimeID|Product|Sales|볼륨|  
 |------------|-------------|-----------|------------|  
 |1/2001|A|1000|600|  
 |2/2001|A|1100|500|  
-|1/2001|B|500|900|  
-|2/2001|B|300|890|  
+|1/2001|b|500|900|  
+|2/2001|b|300|890|  
   
  이 테이블의 TimeID 열은 시간 식별자를 포함하며 각 날짜에 대해 두 개의 항목을 포함합니다. TimeID 열은 사례 계열이 됩니다. 따라서 이 열을 시계열 모델에 대한 key time 열로 지정하게 됩니다.  
   
@@ -114,7 +116,7 @@ ms.locfileid: "66083765"
   
  Sales 열은 지정한 제품의 하루 매출총이익을 나타내고 Volume 열은 창고에 남아 있는 지정한 제품의 수량을 나타냅니다. 이러한 두 개의 열에는 모델을 학습하는 데 사용되는 데이터가 들어 있습니다. Sales와 Volume은 둘 다 Product 열에 있는 각 계열의 예측 가능한 특성일 수 있습니다.  
   
-### <a name="example-2-time-series-data-set-with-each-series-in-separate-column"></a>예 2: 각 계열이 별도 열에 있는 시계열 데이터 집합  
+### <a name="example-2-time-series-data-set-with-each-series-in-separate-column"></a>예제 2: 각 계열이 별도의 열에 있는 시계열 데이터 집합  
  이 예에서는 기본적으로 첫 번째 예와 동일한 입력 데이터를 사용하지만 다음 표와 같이 입력 데이터가 다르게 구성됩니다.  
   
 |TimeID|A_Sales|A_Volume|B_Sales|B_Volume|  
@@ -122,7 +124,7 @@ ms.locfileid: "66083765"
 |1/2001|1000|600|500|900|  
 |2/2001|1100|500|300|890|  
   
- 이 표에서 TimeID 열에는 key time 열로 지정한 시계열 모델에 대한 사례 계열이 계속 포함됩니다. 그러나 이전의 Sales 열 및 Volume 열은 이제 각각 두 개의 열로 분할되고 분할된 각 열 앞에는 제품 이름이 붙습니다. 그 결과 각 날짜에 대해 TimeID 열에 하나의 항목만 존재합니다. 이 4 개의 예측 가능한 열이 포함 된 시계열 모델을 만듭니다. A_Sales, A_Volume, B_Sales 및 B_Volume 합니다.  
+ 이 표에서 TimeID 열에는 key time 열로 지정한 시계열 모델에 대한 사례 계열이 계속 포함됩니다. 그러나 이전의 Sales 열 및 Volume 열은 이제 각각 두 개의 열로 분할되고 분할된 각 열 앞에는 제품 이름이 붙습니다. 그 결과 각 날짜에 대해 TimeID 열에 하나의 항목만 존재합니다. 그리고 A_Sales, A_Volume, B_Sales 및 B_Volume과 같은 4개의 예측 가능한 열이 포함되는 시계열 모델이 생성됩니다.  
   
  또한 제품을 다른 열로 구분했기 때문에 추가 계열 키 열을 지정하지 않아도 됩니다. 모델의 모든 열은 사례 계열 열 또는 예측 가능한 열 중 하나입니다.  
   
@@ -136,13 +138,14 @@ ms.locfileid: "66083765"
 ## <a name="creating-time-series-predictions"></a>시계열 예측 만들기  
  기본적으로 사용자는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 를 통해 한 개의 시계열 모델에 대해 5개의 예측을 확인할 수 있습니다. 그러나 여러 가지 예측을 반환하는 쿼리를 만들 수 있고 예측에 열을 추가하여 기술 통계를 반환할 수 있습니다. 시계열 모델에 대한 쿼리를 만드는 방법에 대한 자세한 내용은 [시계열 모델 쿼리 예제](time-series-model-query-examples.md)를 참조하세요. DMX(Data Mining Extensions)를 사용하여 시계열 예측을 만드는 방법의 예는 [PredictTimeSeries&#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)를 참조하세요.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘을 사용하여 예측을 만들 경우 다음 추가 제한 사항 및 요구 사항을 고려해야 합니다.  
+ 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘을 사용하여 예측을 만들 경우 다음 추가 제한 사항 및 요구 사항을 고려해야 합니다.  
   
 -   교차 예측은 혼합 모델 또는 ARTXP 알고리즘 기반의 모델을 사용하는 경우에만 사용할 수 있습니다. ARIMA 알고리즘에만 기반을 둔 모델을 사용하는 경우 교차 예측은 수행할 수 없습니다.  
   
 -   시계열 모델은 서버에서 사용하는 64비트 운영 체제에 따라 때로는 크게 다른 예측을 만들 수 있습니다. 이러한 차이는 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]기반 시스템이 부동 소수점 산술의 수를 표시하고 처리하는 방식이 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]기반 시스템의 방식과 다르기 때문에 발생합니다. 예측 결과는 운영 체제에 따라 달라질 수 있으므로 프로덕션 환경에서 사용할 운영 체제와 동일한 운영 체제에서 모델을 평가하는 것이 좋습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 -   PMML(Predictive Model Markup Language)을 사용한 마이닝 모델 생성은 지원하지 않습니다.  
   
@@ -152,11 +155,11 @@ ms.locfileid: "66083765"
   
 -   드릴스루를 지원합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+## <a name="see-also"></a>참고 항목  
+ [데이터 마이닝 알고리즘 &#40;Analysis Services 데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [Microsoft 시계열 뷰어를 사용 하 여 모델 찾아보기](browse-a-model-using-the-microsoft-time-series-viewer.md)   
  [Microsoft 시계열 알고리즘 기술 참조](microsoft-time-series-algorithm-technical-reference.md)   
  [시계열 모델 쿼리 예제](time-series-model-query-examples.md)   
- [시계열 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [시계열 모델에 대 한 마이닝 모델 콘텐츠 &#40;Analysis Services 데이터 마이닝&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

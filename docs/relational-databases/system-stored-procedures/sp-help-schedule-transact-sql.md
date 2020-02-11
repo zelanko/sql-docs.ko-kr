@@ -1,5 +1,5 @@
 ---
-title: sp_help_schedule (TRANSACT-SQL) | Microsoft Docs
+title: sp_help_schedule (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: b2fc4ce1-0a8e-44d2-b206-7dc7b258d8c9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f5a68160c8aee1bcb399513051e1f4cc35cea970
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085211"
 ---
-# <a name="sphelpschedule-transact-sql"></a>sp_help_schedule(Transact-SQL)
+# <a name="sp_help_schedule-transact-sql"></a>sp_help_schedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   일정에 관한 정보를 나열합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,13 +43,13 @@ sp_help_schedule
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @schedule_id = ] id` 나열할 일정의 식별자입니다. *schedule_name* 됩니다 **int**, 기본값은 없습니다. 어느 *schedule_id* 하거나 *schedule_name* 지정할 수 있습니다.  
+`[ @schedule_id = ] id`나열할 일정의 식별자입니다. *schedule_name* 는 **int**이며 기본값은 없습니다. *Schedule_id* 또는 *schedule_name* 를 지정할 수 있습니다.  
   
-`[ @schedule_name = ] 'schedule_name'` 나열할 일정의 이름입니다. *schedule_name* 됩니다 **sysname**, 기본값은 없습니다. 어느 *schedule_id* 하거나 *schedule_name* 지정할 수 있습니다.  
+`[ @schedule_name = ] 'schedule_name'`나열할 일정의 이름입니다. *schedule_name* 는 **sysname**이며 기본값은 없습니다. *Schedule_id* 또는 *schedule_name* 를 지정할 수 있습니다.  
   
-`[ @attached_schedules_only = ] attached_schedules_only ]` 작업이 연결 되어 있는 일정만 표시할지 여부를 지정 합니다. *attached_schedules_only* 됩니다 **비트**, 기본값은 **0**합니다. 때 *attached_schedules_only* 됩니다 **0**, 모든 일정이 표시 됩니다. 때 *attached_schedules_only* 됩니다 **1**, 결과 집합은 작업에 연결 되어 있는 일정만 포함 합니다.  
+`[ @attached_schedules_only = ] attached_schedules_only ]`작업이 연결 된 일정만 표시할지 여부를 지정 합니다. *attached_schedules_only* 은 **bit**이며 기본값은 **0**입니다. *Attached_schedules_only* **0**이면 모든 일정이 표시 됩니다. *Attached_schedules_only* **1**이면 결과 집합에는 작업에 연결 된 일정만 포함 됩니다.  
   
-`[ @include_description = ] include_description` 결과 집합에 설명을 포함할지 여부를 지정 합니다. *include_description* 됩니다 **비트**, 기본값은 **0**합니다. 때 *include_description* 됩니다 **0**의 *schedule_description* 자리 표시자를 포함 하는 결과 집합의 열입니다. 때 *include_description* 됩니다 **1**에 일정 설명이 결과 집합에 포함 됩니다.  
+`[ @include_description = ] include_description`결과 집합에 설명을 포함할지 여부를 지정 합니다. *include_description* 은 **bit**이며 기본값은 **0**입니다. *Include_description* 가 **0**이면 결과 집합의 *schedule_description* 열에 자리 표시 자가 포함 됩니다. *Include_description* **1**이면 일정에 대 한 설명이 결과 집합에 포함 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -57,17 +57,17 @@ sp_help_schedule
 ## <a name="result-sets"></a>결과 집합  
  이 프로시저는 다음 결과 집합을 반환합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|일정 ID입니다.|  
 |**schedule_uid**|**uniqueidentifier**|일정에 대한 식별자입니다.|  
 |**schedule_name**|**sysname**|일정 이름입니다.|  
-|**enabled**|**int**|일정을 사용할지 (**1**) 또는 사용 안 함 (**0**).|  
-|**freq_type**|**int**|작업을 실행할 때를 지정하는 값입니다.<br /><br /> **1** = 1<br /><br /> **4** = 매일<br /><br /> **8** = 매주<br /><br /> **16** = 매월<br /><br /> **32** = 매월을 기준으로 **freq_interval**<br /><br /> **64** = SQLServerAgent 서비스를 시작할 때 실행 합니다.|  
-|**freq_interval**|**int**|작업이 실행되는 요일입니다. 값의 값에 따라 달라 집니다 **freq_type**합니다. 자세한 내용은 [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)합니다.|  
-|**freq_subday_type**|**int**|에 대 한 단위 **freq_subday_interval**합니다. 자세한 내용은 [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)합니다.|  
-|**freq_subday_interval**|**int**|수가 **freq_subday_type** 작업의 각 실행 간에 발생 하는 기간. 자세한 내용은 [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)합니다.|  
-|**freq_relative_interval**|**int**|작업의 발생을 예약 합니다 **freq_interval** 매월에서 합니다. 자세한 내용은 [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)합니다.|  
+|**사용**|**int**|일정 사용 (**1**) 또는 사용 안 함 (**0**)을 지정 합니다.|  
+|**freq_type**|**int**|작업을 실행할 때를 지정하는 값입니다.<br /><br /> **1** = 한 번<br /><br /> **4** = 매일<br /><br /> **8** = 매주<br /><br /> **16** = 매월<br /><br /> **32** = 매월, **freq_interval** 기준<br /><br /> **64** = SQLServerAgent 서비스를 시작할 때 실행 합니다.|  
+|**freq_interval**|**int**|작업이 실행되는 요일입니다. 값은 **freq_type**값에 따라 달라 집니다. 자세한 내용은 [sp_add_schedule &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)를 참조 하세요.|  
+|**freq_subday_type**|**int**|**Freq_subday_interval**단위입니다. 자세한 내용은 [sp_add_schedule &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)를 참조 하세요.|  
+|**freq_subday_interval**|**int**|각 작업 실행 사이에 발생 하는 **freq_subday_type** 기간 수입니다. 자세한 내용은 [sp_add_schedule &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)를 참조 하세요.|  
+|**freq_relative_interval**|**int**|매월 **freq_interval** 예약 된 작업의 발생입니다. 자세한 내용은 [sp_add_schedule &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)를 참조 하세요.|  
 |**freq_recurrence_factor**|**int**|작업의 예정된 실행 간의 개월 수입니다.|  
 |**active_start_date**|**int**|일정을 활성화하는 날짜입니다.|  
 |**active_end_date**|**int**|일정을 종료하는 날짜입니다.|  
@@ -78,10 +78,10 @@ sp_help_schedule
 |**job_count**|**int**|이 일정을 참조하는 작업 수를 반환합니다.|  
   
 ## <a name="remarks"></a>설명  
- 매개 변수 없이 제공 하는 경우 **sp_help_schedule** 인스턴스의 모든 일정에 대 한 정보를 나열 합니다.  
+ 매개 변수를 제공 하지 않으면 **sp_help_schedule** 는 인스턴스의 모든 일정에 대 한 정보를 나열 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
+ 기본적으로 **sysadmin** 고정 서버 역할의 멤버는이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
   
 -   **SQLAgentUserRole**  
   
@@ -91,7 +91,7 @@ sp_help_schedule
   
  이러한 역할의 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 고정 데이터베이스 역할](../../ssms/agent/sql-server-agent-fixed-database-roles.md)을 참조하세요.  
   
- 멤버인 **SQLAgentUserRole** 자신이 소유한 일정만 볼 수 있습니다.  
+ **SQLAgentUserRole** 의 멤버는 자신이 소유한 일정만 볼 수 있습니다.  
   
 ## <a name="examples"></a>예  
   
@@ -106,7 +106,7 @@ EXEC dbo.sp_help_schedule ;
 GO  
 ```  
   
-### <a name="b-listing-information-for-a-specific-schedule"></a>2\. 특정 일정에 대한 정보 나열  
+### <a name="b-listing-information-for-a-specific-schedule"></a>B. 특정 일정에 대한 정보 나열  
  다음 예에서는 `NightlyJobs`라는 일정에 대한 정보를 나열합니다.  
   
 ```  
@@ -118,10 +118,10 @@ EXEC dbo.sp_help_schedule
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_attach_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [sp_detach_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;sp_add_schedule &#40;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [Transact-sql&#41;sp_attach_schedule &#40;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
+ [Transact-sql&#41;sp_delete_schedule &#40;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [Transact-sql&#41;sp_detach_schedule &#40;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
   
   

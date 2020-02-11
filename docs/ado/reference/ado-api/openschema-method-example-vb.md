@@ -15,14 +15,14 @@ ms.assetid: 455a02f0-8143-4562-8648-8fb45ffd334c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a16979e7993fd1ac86679d054508b837a0a08c68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931899"
 ---
 # <a name="openschema-method-example-vb"></a>OpenSchema 메서드 예제(VB)
-이 예제에서는 합니다 [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) 에서 각 테이블의 형식과 이름을 표시 하는 메서드는 ***Pubs*** 데이터베이스.  
+이 예에서는 [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) 메서드를 사용 하 여 ***Pubs*** 데이터베이스에 있는 각 테이블의 이름 및 유형을 표시 합니다.  
   
 ```  
 'BeginOpenSchemaVB  
@@ -78,12 +78,12 @@ End Sub
 'EndOpenSchemaVB  
 ```  
   
- 이 예제에서 TABLE_TYPE 쿼리 제약 조건을 지정 합니다 **OpenSchema** 메서드 ***조건*** 인수입니다. 결과적으로,에 지정 된 보기에 대 한 스키마 정보를 ***Pubs*** 데이터베이스 반환 됩니다. 다음 예제에는 이름과 각 테이블의 유형이 표시 됩니다.  
+ 이 예에서는 **OpenSchema** 메서드 ***조건*** 인수에서 TABLE_TYPE 쿼리 제약 조건을 지정 합니다. 따라서 ***Pubs*** 데이터베이스에 지정 된 뷰에 대 한 스키마 정보만 반환 됩니다. 그런 다음이 예에서는 각 테이블의 이름 및 유형을 표시 합니다.  
   
 ```  
 Attribute VB_Name = "OpenSchema"  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [OpenSchema 메서드](../../../ado/reference/ado-api/openschema-method.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

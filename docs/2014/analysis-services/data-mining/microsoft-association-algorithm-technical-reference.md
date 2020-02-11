@@ -21,16 +21,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30310cf891d8b5e7ef9a32b5a8e7254cbca2ecd0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084125"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Microsoft 연결 알고리즘 기술 참조
+  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 알고리즘은 잘 알려진 Apriori 알고리즘을 간단하게 구현한 것입니다.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘과 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 알고리즘은 둘 다 연결을 분석하는 데 사용할 수 있지만 각 알고리즘에서 발견되는 규칙은 서로 다를 수 있습니다. 의사 결정 트리 모델에서 특정 규칙을 생성하는 분류는 정보 획득량을 기반으로 하는 반면 연결 모델에서 규칙은 전적으로 신뢰도를 기반으로 합니다. 따라서 연결 모델에서 강력한 규칙 또는 신뢰도가 높은 규칙은 새로운 정보를 제공하지 않기 때문에 반드시 유용한 것은 아닙니다.  
+ 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘과 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 알고리즘은 둘 다 연결을 분석하는 데 사용할 수 있지만 각 알고리즘에서 발견되는 규칙은 서로 다를 수 있습니다. 의사 결정 트리 모델에서 특정 규칙을 생성하는 분류는 정보 획득량을 기반으로 하는 반면 연결 모델에서 규칙은 전적으로 신뢰도를 기반으로 합니다. 따라서 연결 모델에서 강력한 규칙 또는 신뢰도가 높은 규칙은 새로운 정보를 제공하지 않기 때문에 반드시 유용한 것은 아닙니다.  
   
 ## <a name="implementation-of-the-microsoft-association-algorithm"></a>Microsoft 연결 알고리즘 구현  
  Apriori 알고리즘은 패턴을 분석하는 대신 *후보 항목 집합*을 생성한 다음 그 수를 계산합니다. 분석되는 데이터의 형식에 따라 후보 항목은 이벤트, 제품 또는 특성 값을 나타낼 수 있습니다.  
@@ -42,11 +44,12 @@ ms.locfileid: "66084125"
  숫자 특성에 대해서도 연결 모델을 사용할 수 있습니다. 특성이 연속이면 숫자는 버킷에서 *분할* 또는 그룹화될 수 있습니다. 이렇게 불연속화된 값은 부울 또는 특성-값 쌍으로 처리할 수 있습니다.  
   
 ### <a name="support-probability-and-importance"></a>지지도, 확률 및 중요도  
- *지지도*는 *빈도*라고도 하며 목표 항목 또는 항목 조합을 포함하는 사례 수를 의미합니다. 지정된 지지도보다 높거나 같은 항목만 모델에 포함될 수 있습니다.  
+ *지원*(간혹 *주파수*라고도 함)은 대상 항목 또는 항목 조합을 포함 하는 사례 수를 의미 합니다. 지정된 지지도보다 높거나 같은 항목만 모델에 포함될 수 있습니다.  
   
- *자주 나타나는 항목 집합* 은 항목 조합의 지지도 역시 MINIMUM_SUPPORT 매개 변수에 의해 정의된 임계값보다 큰 항목 모음을 의미합니다. 예를 들어 항목 집합이 {A,B,C}이고 MINIMUM_SUPPORT 값이 10일 경우 개별 항목 A, B, C는 각각 최소 10개의 사례에서 발견되어야 모델에 포함될 수 있으며 항목 조합 {A,B,C}도 최소 10개의 사례에서 발견되어야 합니다.  
+ 
+  *자주 나타나는 항목 집합* 은 항목 조합의 지지도 역시 MINIMUM_SUPPORT 매개 변수에 의해 정의된 임계값보다 큰 항목 모음을 의미합니다. 예를 들어 항목 집합이 {A,B,C}이고 MINIMUM_SUPPORT 값이 10일 경우 개별 항목 A, B, C는 각각 최소 10개의 사례에서 발견되어야 모델에 포함될 수 있으며 항목 조합 {A,B,C}도 최소 10개의 사례에서 발견되어야 합니다.  
   
- **참고** 항목 집합의 최대 길이(항목 수)를 지정하여 마이닝 모델의 항목 집합 수를 제어할 수도 있습니다.  
+ **참고** 항목 집합의 최대 길이를 지정 하 여 마이닝 모델의 항목 집합 수를 제어할 수도 있습니다. 여기서 length는 항목의 수를 의미 합니다.  
   
  기본적으로 특정 항목 또는 항목 집합에 대한 지지도는 해당 항목 또는 항목 집합을 포함하는 사례 수를 나타냅니다. 그러나 이 수를 1보다 작은 10진수 값으로 입력하여 MINIMUM_SUPPORT를 데이터 집합에 있는 총 사례 수에 대한 백분율로 표시할 수도 있습니다. 예를 들어 MINIMUM_SUPPORT 값을 0.03으로 지정할 경우 데이터 집합에 있는 총 사례 수의 3%에 해당하는 사례에 해당 항목 또는 항목 집합이 있어야 모델에 포함될 수 있습니다. 모델에 따라 개수 또는 백분율 중 적절한 방식을 결정해야 합니다.  
   
@@ -54,14 +57,16 @@ ms.locfileid: "66084125"
   
  MINIMUM_PROBABILITY 값을 설정하여 모델이 생성하는 규칙의 수를 제한할 수 있습니다.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 생성되는 각 규칙마다 *리프트*라고도 하는 *중요도*를 나타내는 점수를 출력합니다. 리프트 중요도는 항목 집합 및 규칙마다 서로 다르게 계산됩니다.  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 생성되는 각 규칙마다 *리프트*라고도 하는 *중요도*를 나타내는 점수를 출력합니다. 리프트 중요도는 항목 집합 및 규칙마다 서로 다르게 계산됩니다.  
   
  항목 집합의 중요도는 항목 집합의 확률을 항목 집합에 있는 개별 항목의 복합 확률로 나눠 계산됩니다. 예를 들어 항목 집합에 {A,B}가 있는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 먼저 이 A와 B 조합을 포함하는 모든 사례 수를 계산하고 이 값을 총 사례 수로 나눈 다음 확률을 정규화합니다.  
   
  규칙의 중요도는 규칙 오른쪽에 대한 규칙 왼쪽의 로그 우도로 계산됩니다. 예를 들어 `If {A} Then {B}`규칙에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 B가 있고 A는 없는 사례에 대한 A와 B가 있는 사례의 비율을 계산한 다음 로그 눈금 간격을 사용하여 비율을 정규화합니다.  
   
 ### <a name="feature-selection"></a>기능 선택  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 알고리즘은 어떤 종류의 자동 기능 선택도 수행하지 않습니다. 대신 알고리즘에서 사용하는 데이터를 제어하는 매개 변수를 제공합니다. 이러한 매개 변수에는 각 항목 집합의 크기 제한, 항목 집합을 모델에 추가하는 데 필요한 최대/최소 지지도 설정이 포함될 수 있습니다.  
+ 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 알고리즘은 어떤 종류의 자동 기능 선택도 수행하지 않습니다. 대신 알고리즘에서 사용하는 데이터를 제어하는 매개 변수를 제공합니다. 이러한 매개 변수에는 각 항목 집합의 크기 제한, 항목 집합을 모델에 추가하는 데 필요한 최대/최소 지지도 설정이 포함될 수 있습니다.  
   
 -   너무 흔해서 유용하지 않은 항목과 이벤트를 필터를 사용하여 제외시키려면 MAXIMUM_SUPPORT 값을 낮춰 모델에서 자주 나타나는 항목 집합을 제거합니다.  
   
@@ -70,13 +75,15 @@ ms.locfileid: "66084125"
 -   규칙을 필터를 사용하여 제외시키려면 MINIMUM_PROBABILITY 값을 높입니다.  
   
 ## <a name="customizing-the-microsoft-association-rules-algorithm"></a>Microsoft 연결 규칙 알고리즘 사용자 지정  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 알고리즘은 결과 마이닝 모델의 동작, 성능 및 정확도에 영향을 주는 여러 매개 변수를 지원합니다.  
+ 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 알고리즘은 결과 마이닝 모델의 동작, 성능 및 정확도에 영향을 주는 여러 매개 변수를 지원합니다.  
   
 ### <a name="setting-algorithm-parameters"></a>알고리즘 매개 변수 설정  
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 데이터 마이닝 디자이너를 사용하여 언제든지 마이닝 모델의 매개 변수를 변경할 수 있습니다. 사용 하 여 매개 변수를 프로그래밍 방식으로 변경할 수도 있습니다는 <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> 또는 AMO를 사용 하 여 컬렉션을 [MiningModels 요소 &#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) XMLA의 합니다. 다음 표에서는 각 매개 변수에 대해 설명합니다.  
+ 
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 데이터 마이닝 디자이너를 사용하여 언제든지 마이닝 모델의 매개 변수를 변경할 수 있습니다. AMO에서 <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> 컬렉션을 사용 하거나 XMLA의 [MiningModels 요소 &#40;&#41;요소](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) 를 사용 하 여 매개 변수를 프로그래밍 방식으로 변경할 수도 있습니다. 다음 표에서는 각 매개 변수에 대해 설명합니다.  
   
 > [!NOTE]  
->  DMX 문에;를 사용 하 여 기존 모델의 매개 변수를 변경할 수 없습니다. DMX CREATE MODEL 또는 ALTER STRUCTURE 매개 변수를 지정 해야 하는 중... ADD MODEL에 매개 변수를 지정해야 합니다.  
+>  DMX 문을 사용 하 여 기존 모델의 매개 변수를 변경할 수 없습니다. DMX CREATE MODEL 또는 ALTER STRUCTURE ...에서 매개 변수를 지정 해야 합니다. 모델을 만들 때 모델을 추가 합니다.  
   
  *MAXIMUM_ITEMSET_COUNT*  
  생성할 최대 항목 집합 수를 지정합니다. 값을 지정하지 않으면 기본값이 사용됩니다.  
@@ -107,7 +114,8 @@ ms.locfileid: "66084125"
  기본값은 1입니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 처리의 일부로 단일 항목의 확률을 계산해야 하기 때문에 최소값을 늘려 모델 처리 시간을 줄일 수는 없습니다. 그러나 이 값을 높게 설정하여 작은 항목 집합을 필터를 사용하여 제외시킬 수는 있습니다.  
+>  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 처리의 일부로 단일 항목의 확률을 계산해야 하기 때문에 최소값을 늘려 모델 처리 시간을 줄일 수는 없습니다. 그러나 이 값을 높게 설정하여 작은 항목 집합을 필터를 사용하여 제외시킬 수는 있습니다.  
   
  *MINIMUM_PROBABILITY*  
  규칙이 참이 되는 최소 확률을 지정합니다.  
@@ -130,12 +138,14 @@ ms.locfileid: "66084125"
   
  기본값은 0입니다. 기본값을 사용할 경우 알고리즘은 쿼리에서 요청한 만큼 많은 예측을 생성합니다.  
   
- *OPTIMIZED_PREDICTION_COUNT* 에 대해 0이 아닌 값을 지정하면 추가 예측을 요청한 경우에도 예측 쿼리는 지정된 수 이하의 항목만 반환할 수 있습니다. 그러나 값을 설정하면 예측 성능을 향상시킬 수 있습니다.  
+ 
+  *OPTIMIZED_PREDICTION_COUNT* 에 대해 0이 아닌 값을 지정하면 추가 예측을 요청한 경우에도 예측 쿼리는 지정된 수 이하의 항목만 반환할 수 있습니다. 그러나 값을 설정하면 예측 성능을 향상시킬 수 있습니다.  
   
  예를 들어 이 값을 3으로 설정할 경우 알고리즘은 예측을 위해 3개의 항목만 캐시합니다. 3개의 항목이 반환된다고 균등하게 예상되는 추가 예측을 볼 수 없습니다.  
   
 ### <a name="modeling-flags"></a>모델링 플래그  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 알고리즘과 함께 사용할 수 있는 모델링 플래그는 다음과 같습니다.  
+ 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 알고리즘과 함께 사용할 수 있는 모델링 플래그는 다음과 같습니다.  
   
  NOT NULL  
  열에 null이 포함될 수 없음을 나타냅니다. 따라서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 가 모델 학습 중 null 값을 발견할 경우 오류가 발생합니다.  
@@ -151,9 +161,10 @@ ms.locfileid: "66084125"
  연결 모델에는 하나의 키 열, 여러 개의 입력 열 및 하나의 예측 가능한 열이 있어야 합니다.  
   
 ### <a name="input-and-predictable-columns"></a>입력 열과 예측 가능한 열  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 알고리즘은 다음 표에 나열된 특정 입력 열과 예측 가능한 열을 지원합니다. 마이닝 모델의 콘텐츠 형식에 대한 자세한 내용은 [콘텐츠 형식&#40;데이터 마이닝&#41;](content-types-data-mining.md)을 참조하세요.  
+ 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 알고리즘은 다음 표에 나열된 특정 입력 열과 예측 가능한 열을 지원합니다. 마이닝 모델의 콘텐츠 형식에 대한 자세한 내용은 [콘텐츠 형식&#40;데이터 마이닝&#41;](content-types-data-mining.md)을 참조하세요.  
   
-|Column|내용 유형|  
+|열|내용 유형|  
 |------------|-------------------|  
 |입력 특성|Cyclical, Discrete, Discretized, Key, Table, Ordered|  
 |예측 가능한 특성|Cyclical, Discrete, Discretized, Key, Table, Ordered|  
@@ -161,9 +172,9 @@ ms.locfileid: "66084125"
 > [!NOTE]  
 >  Cyclical  및 Ordered  내용 유형이 지원되기는 하지만 알고리즘은 해당 유형을 불연속 값으로 처리하고 특수한 처리를 수행하지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Microsoft 연결 알고리즘](microsoft-association-algorithm.md)   
  [연결 모델 쿼리 예제](association-model-query-examples.md)   
- [연결 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [연결 모델에 대 한 마이닝 모델 콘텐츠 &#40;Analysis Services 데이터 마이닝&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

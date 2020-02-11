@@ -1,5 +1,5 @@
 ---
-title: 부모 패키지 구현 | Microsoft Docs
+title: 부모 패키지의 구현 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2cec1f30ba728f1cf3b808acb2fb362e21d259a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058162"
 ---
 # <a name="implementation-of-the-parent-package"></a>부모 패키지 구현
@@ -25,11 +25,13 @@ ms.locfileid: "66058162"
  자식 패키지를 실행하는 부모 패키지를 확인하려면 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 의 솔루션 탐색기에서 패키지를 마우스 오른쪽 단추로 클릭한 다음 **진입점 패키지**를 클릭합니다.  
   
 ## <a name="listing-child-packages"></a>하위 패키지 나열  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 상위 패키지와 하위 패키지가 들어 있는 프로젝트를 배포하는 경우, 상위 패키지에서 실행되는 하위 패키지 목록을 볼 수 있습니다. 상위 패키지를 실행할 때 상위 패키지의 **개요** 보고서가 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에 자동으로 생성됩니다. 이 보고서에는 다음 이미지처럼 상위 패키지에 포함되는 패키지 실행 태스크에 의해 수행된 하위 패키지가 나열됩니다.  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 상위 패키지와 하위 패키지가 들어 있는 프로젝트를 배포하는 경우, 상위 패키지에서 실행되는 하위 패키지 목록을 볼 수 있습니다. 상위 패키지를 실행할 때 상위 패키지의 **개요** 보고서가 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에 자동으로 생성됩니다. 이 보고서에는 다음 이미지처럼 상위 패키지에 포함되는 패키지 실행 태스크에 의해 수행된 하위 패키지가 나열됩니다.  
   
- ![자식 패키지 목록이 있는 개요 보고서](media/overviewreport-childpackagelisting.png "자식 패키지 목록이 있는 개요 보고서")  
+ ![하위 패키지 목록이 있는 개요 보고서](media/overviewreport-childpackagelisting.png "하위 패키지 목록이 있는 개요 보고서")  
   
- **개요** 보고서에 액세스하는 방법은 [Reports for the Integration Services Server](../../2014/integration-services/reports-for-the-integration-services-server.md)를 참조하세요.  
+ 
+  **개요** 보고서에 액세스하는 방법은 [Reports for the Integration Services Server](../../2014/integration-services/reports-for-the-integration-services-server.md)를 참조하세요.  
   
 ## <a name="precedence-constraints-in-the-parent-package"></a>부모 패키지의 선행 제약 조건  
  부모 패키지의 여러 SQL Server 에이전트 작업 실행 태스크 간에 선행 제약 조건을 만들면 이러한 선행 제약 조건은 원격 서버의 SQL Server 에이전트 작업이 시작되는 시간만 제어합니다. 선행 제약 조건은 SQL Server 에이전트 작업 단계에서 실행된 자식 패키지의 성공 또는 실패 여부 정보를 받을 수 없습니다.  

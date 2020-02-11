@@ -26,25 +26,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4d9d64edf29d1e494d25474845295c505caedee8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63232424"
 ---
 # <a name="use-xml-data-in-applications"></a>애플리케이션에서 XML 데이터 사용
   이 항목에서는 애플리케이션에서 `xml` 데이터 형식을 사용하기 위해 제공되는 옵션에 대해 설명합니다. 이 항목에는 다음에 대한 정보가 포함됩니다.  
   
--   ADO 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 사용하여 `xml` 유형의 열에서 XML 처리  
+-   ADO 및 `xml` Native Client를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유형의 열에서 XML 처리  
   
 -   ADO.NET을 사용하여 `xml` 유형의 열에서 XML 처리  
   
 -   ADO.NET을 사용하여 매개 변수에서 `xml` 유형 처리  
   
 ## <a name="handling-xml-from-an-xml-type-column-by-using-ado-and-sql-server-native-client"></a>ADO 및 SQL Server Native Client를 사용하여 xml 유형의 열에서 XML 처리  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 제공된 유형 및 기능에 액세스하여 MDAC 구성 요소를 사용하려면 ADO 연결 문자열에 DataTypeCompatibility 초기화 속성을 설정해야 합니다.  
+ 
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 제공된 유형 및 기능에 액세스하여 MDAC 구성 요소를 사용하려면 ADO 연결 문자열에 DataTypeCompatibility 초기화 속성을 설정해야 합니다.  
   
- 예를 들어 다음 Visual Basic Scripting Edition(VBScript) 예제는 `Demographics` 예제 데이터베이스의 `Sales.Store` 테이블에서 `AdventureWorks2012`라는 `xml` 데이터 형식 열을 쿼리한 결과를 보여 줍니다. 특히 이 쿼리는 이 열의 항목 값에서 `CustomerID` 가 `3`인 행을 검색합니다.  
+ 예를 들어 다음 Visual Basic Scripting Edition(VBScript) 예제는 `xml` 예제 데이터베이스의 `Demographics` 테이블에서 `Sales.Store`라는 `AdventureWorks2012` 데이터 형식 열을 쿼리한 결과를 보여 줍니다. 특히 이 쿼리는 이 열의 항목 값에서 `CustomerID` 가 `3`인 행을 검색합니다.  
   
 ```  
 Const DS = "MyServer"  
@@ -90,21 +91,25 @@ Set objConn = Nothing
   
  이 예에서는 데이터 형식 호환성 속성을 설정하는 방법을 보여 줍니다. 기본적으로 이 속성은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 사용할 경우 0으로 설정됩니다. 이 값을 80으로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 공급자가 `xml` 및 사용자 정의 형식 열을 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 데이터 형식으로 나타냅니다. 이러한 유형은 각각 DBTYPE_WSTR 및 DBTYPE_BYTES입니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 클라이언트 컴퓨터에도 설치되어 있어야 하며 연결 문자열에는 "`Provider=SQLNCLI11;...`"에서 데이터 공급자로 사용할 수 있도록 이 클라이언트가 지정되어 있어야 합니다.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 클라이언트 컴퓨터에도 설치되어 있어야 하며 연결 문자열에는 "`Provider=SQLNCLI11;...`"에서 데이터 공급자로 사용할 수 있도록 이 클라이언트가 지정되어 있어야 합니다.  
   
 #### <a name="to-test-this-example"></a>이 예를 테스트하려면  
   
-1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client가 설치되어 있고 MDAC 2.6.0 이상 버전을 클라이언트 컴퓨터에서 사용할 수 있는지 확인하십시오.  
+1.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client가 설치되어 있고 MDAC 2.6.0 이상 버전을 클라이언트 컴퓨터에서 사용할 수 있는지 확인하십시오.  
   
      자세한 내용은 [SQL Server Native Client 프로그래밍](../native-client/sql-server-native-client-programming.md)을 참조하세요.  
   
-2.  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 예제 데이터베이스가 설치되어 있는지 확인합니다.  
+2.  
+  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 예제 데이터베이스가 설치되어 있는지 확인합니다.  
   
      이 예에는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스가 필요합니다.  
   
 3.  이 항목의 앞에 표시된 코드를 복사하여 텍스트 또는 코드 편집기에 붙여 넣습니다. 파일을 HandlingXmlDataType.vbs로 저장합니다.  
   
-4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에 필요한 대로 스크립트를 수정하고 변경 내용을 저장합니다.  
+4.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에 필요한 대로 스크립트를 수정하고 변경 내용을 저장합니다.  
   
      예를 들어 `MyServer` 가 지정된 경우 이를 `(local)` 이나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치된 서버의 실제 이름으로 바꿔야 합니다.  
   
@@ -145,16 +150,17 @@ Row 2
 ```  
   
 ## <a name="handling-xml-from-an-xml-type-column-by-using-adonet"></a>ADO.NET을 사용하여 xml 유형의 열에서 XML 처리  
- XML을 처리 하는 `xml` ADO.NET을 사용 하 여 데이터 형식 열 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 의 표준 동작을 사용할 수는 `SqlCommand` 클래스입니다. 예를 들어 `xml` 데이터 형식 열과 해당 값은 `SqlDataReader`를 사용하여 SQL 열을 검색하는 것과 같은 방식으로 검색할 수 있습니다. 하지만 `xml` 데이터 형식 열의 콘텐츠를 XML로 사용하려는 경우 이 콘텐츠를 먼저 `XmlReader` 유형에 할당해야 합니다.  
+ ADO.NET 및를 `xml` [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 사용 하 여 데이터 형식 열에서 XML을 처리 하려면 `SqlCommand` 클래스의 표준 동작을 사용할 수 있습니다. 예를 들어 `xml` 데이터 형식 열과 해당 값은 `SqlDataReader`를 사용하여 SQL 열을 검색하는 것과 같은 방식으로 검색할 수 있습니다. 하지만 `xml` 데이터 형식 열의 콘텐츠를 XML로 사용하려는 경우 이 콘텐츠를 먼저 `XmlReader` 유형에 할당해야 합니다.  
   
- 자세한 내용과 코드 예는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK 설명서의 "XML Column Values in a Data Reader"를 참조하십시오.  
+ 자세한 내용 및 예제 코드는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK 설명서의 "데이터 판독기의 XML 열 값"을 참조 하십시오.  
   
 ## <a name="handling-an-xml-type-column-in-parameters-by-using-adonet"></a>ADO.NET을 사용하여 매개 변수의 xml 유형 열 처리  
- ADO.NET 및 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]의 매개 변수로 전달된 xml 데이터 형식을 처리하려면 `SqlXml` 데이터 형식의 인스턴스로 값을 제공할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 `xml` 데이터 형식 열은 `string` 또는 `integer`와 같이 다른 열 및 데이터 형식과 동일한 방식으로 매개 변수 값을 수락할 수 있기 때문에 특수한 조치가 필요하지 않습니다.  
+ ADO.NET 및 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]의 매개 변수로 전달된 xml 데이터 형식을 처리하려면 `SqlXml` 데이터 형식의 인스턴스로 값을 제공할 수 있습니다. 
+  `xml`의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식 열은 `string` 또는 `integer`와 같이 다른 열 및 데이터 형식과 동일한 방식으로 매개 변수 값을 수락할 수 있기 때문에 특수한 조치가 필요하지 않습니다.  
   
- 자세한 내용과 코드 예는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK 설명서의 "XML Values as Command Parameters"를 참조하십시오.  
+ 자세한 내용과 예제 코드는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK 설명서의 "XML Values as Command Parameters"를 참조 하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 데이터&#40;SQL Server&#41;](xml-data-sql-server.md)  
   
   

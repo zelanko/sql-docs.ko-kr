@@ -1,5 +1,5 @@
 ---
-title: XSL 변환 (SQLXMLOLEDB 공급자) 적용 | Microsoft 문서
+title: XSL 변환 적용 (SQLXMLOLEDB 공급자) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 39c36831838ef222b4c98befded8af55045a86ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013166"
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>XSL 변환 적용(SQLXMLOLEDB 공급자)
-  이 예제 ADO 애플리케이션에서는 SQL 쿼리를 실행하고 결과에 XSL 변환을 적용합니다. 클라이언트 쪽 행 집합을 처리를에서는 ClientSideXML 속성을 True로 설정 합니다. 이 예에서는 명령 언어가 {5d531cb2-e6ed-11d2-b252-00c04f681b71}로 설정되었는데 그 이유는 SQL 쿼리가 템플릿에 지정되었고, 템플릿을 실행하려면 이 명령 언어를 지정해야 하기 때문입니다. Xsl 속성은 변환을 적용 하는 데 사용할 XSL 파일을 지정 합니다. 자료 경로 속성의 값은 XSL 파일을 검색 하려면 사용 됩니다. Xsl 속성 값에 경로 지정 하면 경로 자료 Path 속성에 지정 된 경로 상대적입니다.  
+  이 예제 ADO 애플리케이션에서는 SQL 쿼리를 실행하고 결과에 XSL 변환을 적용합니다. Clientside Xml 속성을 True로 설정 하면 클라이언트 쪽에서 행 집합의 처리가 적용 됩니다. 이 예에서는 명령 언어가 {5d531cb2-e6ed-11d2-b252-00c04f681b71}로 설정되었는데 그 이유는 SQL 쿼리가 템플릿에 지정되었고, 템플릿을 실행하려면 이 명령 언어를 지정해야 하기 때문입니다. Xsl 속성은 변환을 적용 하는 데 사용할 XSL 파일을 지정 합니다. 기본 경로 속성의 값은 XSL 파일을 검색 하는 데 사용 됩니다. Xsl 속성의 값에 경로를 지정 하는 경우 경로는 기본 경로 속성에 지정 된 경로를 기준으로 합니다.  
   
  이 예에서는 다음 SQLXMLOLEDB 공급자별 속성을 사용하는 방법을 보여 줍니다.  
   
@@ -34,14 +34,14 @@ ms.locfileid: "66013166"
   
  이 클라이언트 쪽 ADO 예제 애플리케이션에서는 SQL 쿼리로 구성된 XML 템플릿을 서버에서 실행합니다.  
   
- ClientSideXML 속성을 True로 설정 하기 때문에 FOR XML 절이 있는 SELECT 문은 서버에 전송 됩니다. 서버는 쿼리를 실행하고 클라이언트로 행 집합을 반환합니다. 그러면 클라이언트에서는 행 집합에 FOR XML 변환을 적용하여 XML 문서를 생성합니다.  
+ ClientSideXML 속성이 True로 설정 되어 있기 때문에 FOR XML 절이 없는 SELECT 문이 서버에 전송 됩니다. 서버는 쿼리를 실행하고 클라이언트로 행 집합을 반환합니다. 그러면 클라이언트에서는 행 집합에 FOR XML 변환을 적용하여 XML 문서를 생성합니다.  
   
- Xsl 속성은 응용 프로그램에 지정 된 따라서 클라이언트에서 생성 되는 XML 문서에 XSL 변환이 적용 되 고 결과 2 열 표.  
+ Xsl 속성은 응용 프로그램에서 지정 됩니다. 따라서 XSL 변환은 클라이언트에서 생성 되는 XML 문서에 적용 되 고 결과는 두 개의 열로 이루어진 테이블입니다.  
   
- 템플릿 명령을 실행 하려면 XML 템플릿 언어-{5d531cb2-e6ed-11d2-b252-00c04f681b71}-지정 되어야 합니다.  
+ 템플릿 명령을 실행 하려면 XML 템플릿 언어 {5d531cb2-e6ed-11d2-b252-00c04f681b71}-를 지정 해야 합니다.  
   
 > [!NOTE]  
->  코드에서 연결 문자열에 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정해야 합니다. 또한 이 예에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 데이터 공급자로 사용하도록 지정하는데 이를 위해서는 추가 네트워크 클라이언트 소프트웨어가 설치되어 있어야 합니다. 자세한 내용은 [SQL Server Native Client에 대 한 시스템 요구 사항](../../native-client/system-requirements-for-sql-server-native-client.md)합니다.  
+>  코드에서 연결 문자열에 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정해야 합니다. 또한 이 예에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 데이터 공급자로 사용하도록 지정하는데 이를 위해서는 추가 네트워크 클라이언트 소프트웨어가 설치되어 있어야 합니다. 자세한 내용은 [SQL Server Native Client에 대 한 시스템 요구 사항](../../native-client/system-requirements-for-sql-server-native-client.md)을 참조 하세요.  
   
 ```  
 Option Explicit  

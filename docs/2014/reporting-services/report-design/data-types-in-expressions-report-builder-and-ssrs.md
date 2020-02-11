@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86aa646865ecfe3da6ed1ad4bacb75907ab39472
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891863"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>식의 데이터 형식(보고서 작성기 및 SSRS)
@@ -31,11 +31,11 @@ ms.locfileid: "68891863"
 |RDL 형식|CLR 형식|  
 |--------------|---------------|  
 |String|기본값: 문자열<br /><br /> Chart, GUID, Timespan|  
-|Boolean|기본값: Boolean|  
+|부울|기본값: 부울|  
 |정수|기본값: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
-|Datetime|기본값: Datetime<br /><br /> DateTimeOffset|  
-|부동|기본값: Double<br /><br /> Single, Decimal|  
-|Binary|기본값: Byte[]|  
+|DateTime|기본값: 날짜/시간<br /><br /> DateTimeOffset|  
+|Float|기본값: Double<br /><br /> Single, Decimal|  
+|이진|기본값: Byte[]|  
 |Variant|Byte[]를 제외한 위의 모든 항목|  
 |VariantArray|Variant의 배열|  
 |직렬화 가능|Serializable로 표시되어 있거나 ISerializable을 구현하는 형식 또는 Variant|  
@@ -65,16 +65,16 @@ ms.locfileid: "68891863"
   
 -   하나의 결과 집합 열에 있는 모든 데이터를 다른 데이터 형식의 새 열로 변환하는 식을 작성하여 기존 보고서 데이터 세트 필드를 기반으로 하는 계산 필드를 만듭니다. 예를 들어 `=CStr(Fields!Year.Value)`식은 Year 필드를 정수 값에서 문자열 값으로 변환합니다. 자세한 내용은 [보고서 데이터 창에서 필드 추가, 편집, 새로 고침&#40;보고서 작성기 및 SSRS&#41;](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)을 참조하세요.  
   
--   사용 중인 데이터 처리 확장 프로그램에 미리 형식이 지정된 데이터를 검색하기 위한 메타데이터가 포함되어 있는지 확인합니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX 쿼리에는 큐브를 처리할 때 이미 형식이 지정된 큐브 값에 대한 FORMATTED_VALUE 확장 속성이 포함되어 있습니다. 자세한 내용은 [Analysis Services 데이터베이스에 대한 확장 필드 속성 &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)을 참조하세요.  
+-   사용 중인 데이터 처리 확장 프로그램에 미리 형식이 지정된 데이터를 검색하기 위한 메타데이터가 포함되어 있는지 확인합니다. 예 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 를 들어 MDX 쿼리에는 큐브를 처리할 때 이미 형식이 지정 된 큐브 값에 대 한 FORMATTED_VALUE 확장 속성이 포함 되어 있습니다. 자세한 내용은 [Analysis Services 데이터베이스에 대한 확장 필드 속성 &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)을 참조하세요.  
   
 ## <a name="understanding-parameter-data-types"></a>매개 변수 데이터 형식 이해  
- 보고서 매개 변수는 다음 5 가지 데이터 형식 중 하나 여야 합니다. Boolean, DateTime, Integer, Float 또는 Text (String이 라고도 함)를 참조 하세요. 데이터 세트 쿼리에 쿼리 매개 변수가 포함되는 경우 보고서 매개 변수가 자동으로 만들어져 쿼리 매개 변수에 연결됩니다. 보고서 매개 변수의 기본 데이터 형식은 String입니다. 보고서 매개 변수의 기본 데이터 형식을 변경하려면 **보고서 매개 변수 속성** 대화 상자의 **일반** 페이지에 있는 **데이터 형식** 드롭다운 목록에서 올바른 값을 선택합니다.  
+ 보고서 매개 변수는 Boolean, DateTime, Integer, Float 또는 Text(String이라고도 함) 데이터 형식 중 하나여야 합니다. 데이터 세트 쿼리에 쿼리 매개 변수가 포함되는 경우 보고서 매개 변수가 자동으로 만들어져 쿼리 매개 변수에 연결됩니다. 보고서 매개 변수의 기본 데이터 형식은 String입니다. 보고서 매개 변수의 기본 데이터 형식을 변경하려면 **보고서 매개 변수 속성** 대화 상자의 **일반** 페이지에 있는 **데이터 형식** 드롭다운 목록에서 올바른 값을 선택합니다.  
   
 > [!NOTE]  
 >  DateTime 데이터 형식인 보고서 매개 변수는 밀리초를 지원하지 않습니다. 밀리초가 포함된 값을 기반으로 하는 매개 변수를 만들 수 있지만 사용 가능한 값 드롭다운 목록에서 밀리초가 포함된 날짜 또는 시간 값이 들어 있는 값을 선택할 수는 없습니다.  
   
 ## <a name="writing-expressions-that-convert-data-types-or-extract-parts-of-data"></a>데이터 형식을 변환하거나 데이터의 일부를 추출하는 식 작성  
- 연결 연산자(&)를 사용하여 텍스트와 데이터 집합 필드를 조합하는 경우 CLR(공용 언어 런타임)에서는 일반적으로 기본 형식을 제공합니다. 데이터 세트 필드 또는 매개 변수를 특정 데이터 형식으로 명시적으로 변환해야 하는 경우에는 CLR 메서드 또는 Visual Basic 런타임 라이브러리 함수를 사용하여 데이터를 변환해야 합니다.  
+ 연결 연산자(&amp;)를 사용하여 텍스트와 데이터 세트 필드를 조합하는 경우 CLR(공용 언어 런타임)에서는 일반적으로 기본 형식을 제공합니다. 데이터 세트 필드 또는 매개 변수를 특정 데이터 형식으로 명시적으로 변환해야 하는 경우에는 CLR 메서드 또는 Visual Basic 런타임 라이브러리 함수를 사용하여 데이터를 변환해야 합니다.  
   
  다음 표에서는 데이터 형식의 변환 예를 보여 줍니다.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "68891863"
  데이터 원본의 모든 데이터 형식에 대한 변환을 지원하지 않는 데이터 공급자를 사용하여 데이터 원본에 연결하는 경우 지원되지 않는 데이터 원본 형식의 기본 데이터 형식은 String이 됩니다. 다음 예제에서는 문자열로 반환되는 특정 데이터 형식에 대한 솔루션을 제공합니다.  
   
 ### <a name="concatenating-a-string-and-a-clr-datetimeoffset-data-type"></a>String 및 CLR DateTimeOffset 데이터 형식 연결  
- 대부분의 데이터 형식에 대해 CLR에서는 사용자가 & 연산자를 사용하여 데이터 형식이 각기 다른 값을 하나의 문자열로 연결할 수 있도록 기본 변환을 제공합니다. 예를 들어 `="The date and time are: " & Fields!StartDate.Value` 식은 "The date and time are: "라는 텍스트와 <xref:System.DateTime> 값인 데이터 세트 필드 StartDate를 연결합니다.  
+ 대부분의 데이터 형식에 대해 CLR에서는 사용자가 & 연산자를 사용하여 데이터 형식이 각기 다른 값을 하나의 문자열로 연결할 수 있도록 기본 변환을 제공합니다. 예를 들어 <xref:System.DateTime> 식은 "The date and time are: "라는 텍스트와 `="The date and time are: " & Fields!StartDate.Value` 값인 데이터 세트 필드 StartDate를 연결합니다.  
   
  일부 데이터 형식의 경우에는 ToString 함수를 포함해야 할 수 있습니다. 예를 들어 <xref:System.DateTimeOffset>System.DateTimeOffset `="The time is: " & Fields!StartDate.Value.ToString()`을 참조하세요.  
   
@@ -104,11 +104,11 @@ ms.locfileid: "68891863"
   
  `2008-07-01 06:05:07.9999999 +08:00`  
   
- 이 예제에서는 날짜(2008년 7월 1일), 소수 자릿수가 7개인 시간(오전 6:05:07.9999999), 시간 및 분 단위의 UTC 표준 시간대 오프셋(더하기 8시간 0분)을 차례로 보여 줍니다. 다음 예제에서 이 값은 `MyDateTime.Value`라는 `String` 필드에 배치됩니다.  
+ 이 예제에서는 날짜(2008년 7월 1일), 소수 자릿수가 7개인 시간(오전 6:05:07.9999999), 시간 및 분 단위의 UTC 표준 시간대 오프셋(더하기 8시간 0분)을 차례로 보여 줍니다. 다음 예제에서 이 값은 `String`라는 `MyDateTime.Value` 필드에 배치됩니다.  
   
  다음 방법 중 하나를 사용하여 이 데이터를 하나 이상의 CLR 값으로 변환할 수 있습니다.  
   
--   입력란에서 식을 사용하여 문자열의 일부를 추출합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+-   입력란에서 식을 사용하여 문자열의 일부를 추출합니다. 다음은 그 예입니다.  
   
     -   다음 식은 UTC 표준 시간대 오프셋의 시간 부분만 추출하여 분으로 변환합니다. `=CInt(Fields!MyDateTime.Value.Substring(Fields!MyDateTime.Value.Length-5,2)) * 60`  
   
@@ -116,13 +116,15 @@ ms.locfileid: "68891863"
   
     -   다음 식은 문자열을 날짜 및 시간 값으로 변환합니다. `=DateTime.Parse(Fields!MyDateTime.Value)`  
   
-         `MyDateTime.Value` 문자열에 UTC 오프셋이 있는 경우 `DateTime.Parse` 함수는 먼저 UTC 오프셋(오전 7시: UTC 시간인 전날 밤 오후 11시 + [`+08:00`])에 맞게 조정합니다. 그런 다음 `DateTime.Parse` 함수는 로컬 보고서 서버의 UTC 오프셋을 적용하고, 필요한 경우 일광 절약 시간제에 맞게 시간을 다시 조정합니다. 예를 들어 워싱턴의 레드몬드에서 일광 절약 시간제에 맞게 조정된 현지 시간 오프셋은 `[-07:00]`이거나 오후 11시로부터 7시간 전입니다. 결과 `DateTime` 값은 다음과 같습니다. `2007-07-06 04:07:07 PM`(2007 년 7 월 6 일 4:07 P. M).  
+         
+  `MyDateTime.Value` 문자열에 UTC 오프셋이 있는 경우 `DateTime.Parse` 함수는 먼저 UTC 오프셋(오전 7시: UTC 시간인 전날 밤 오후 11시 + [`+08:00`])에 맞게 조정합니다. 그런 다음 `DateTime.Parse` 함수는 로컬 보고서 서버의 UTC 오프셋을 적용하고, 필요한 경우 일광 절약 시간제에 맞게 시간을 다시 조정합니다. 예를 들어 워싱턴의 레드몬드에서 일광 절약 시간제에 맞게 조정된 현지 시간 오프셋은 `[-07:00]`이거나 오후 11시로부터 7시간 전입니다. 결과 `DateTime` 값은 `2007-07-06 04:07:07 PM`(2007년 7월 6일 오후 4:07)입니다.  
   
- 문자열을 데이터 `DateTime` 형식으로 변환 하는 방법에 대 한 자세한 내용은 [날짜 및 시간 문자열 구문 분석](https://go.microsoft.com/fwlink/?LinkId=89703), [특정 문화권의 날짜 및 시간 형식 지정](https://go.microsoft.com/fwlink/?LinkId=89704), [DateTime, DateTimeOffset 및 TimeZoneInfo on 선택](https://go.microsoft.com/fwlink/?linkid=110652) 을 참조 하세요. 알려면.  
+ `DateTime` 문자열을 데이터 형식으로 변환 하는 방법에 대 한 자세한 내용은 MSDN의 [날짜 및 시간 문자열 구문 분석](https://go.microsoft.com/fwlink/?LinkId=89703), [특정 문화권의 날짜 및 시간 형식 지정](https://go.microsoft.com/fwlink/?LinkId=89704)및 [DateTime, DateTimeOffset 및 TimeZoneInfo 중에서 선택](https://go.microsoft.com/fwlink/?linkid=110652) 을 참조 하세요.  
   
 -   식을 사용하여 문자열의 일부를 추출하는 새 계산 필드를 보고서 데이터 세트에 추가합니다. 자세한 내용은 [보고서 데이터 창에서 필드 추가, 편집, 새로 고침&#40;보고서 작성기 및 SSRS&#41;](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)을 참조하세요.  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수로 날짜 및 시간 값을 독립적으로 추출하여 별도의 열을 만들도록 보고서 데이터 집합 쿼리를 변경합니다. 다음 예제에서는 `DatePart` 함수를 사용하여 연도에 대한 열과 분으로 변환된 UTC 표준 시간대에 대한 열을 추가하는 방법을 보여 줍니다.  
+-   
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수로 날짜 및 시간 값을 독립적으로 추출하여 별도의 열을 만들도록 보고서 데이터 세트 쿼리를 변경합니다. 다음 예제에서는 `DatePart` 함수를 사용하여 연도에 대한 열과 분으로 변환된 UTC 표준 시간대에 대한 열을 추가하는 방법을 보여 줍니다.  
   
      `SELECT`  
   
@@ -138,11 +140,14 @@ ms.locfileid: "68891863"
   
      `2008-07-01 06:05:07             2008                   480`  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 데이터 형식에 대한 자세한 내용은 [SQL Server 온라인 설명서](https://go.microsoft.com/fwlink/?linkid=120955)의 [데이터 형식&#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql) 및 [날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)을 참조하세요.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 데이터 형식에 대한 자세한 내용은 [SQL Server 온라인 설명서](/sql/t-sql/data-types/data-types-transact-sql)의 [데이터 형식&#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql) 및 [날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;](https://go.microsoft.com/fwlink/?linkid=120955)을 참조하세요.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 형식에 대한 자세한 내용은 [SQL Server 온라인 설명서](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services) 의 [SQL Server Books Onl의e](https://go.microsoft.com/fwlink/?linkid=120955)을 참조하세요.  
+ 
   
-## <a name="see-also"></a>관련 항목  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 형식에 대한 자세한 내용은 [SQL Server 온라인 설명서](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services) 의 [SQL Server Books Onl의e](https://go.microsoft.com/fwlink/?linkid=120955)을 참조하세요.  
+  
+## <a name="see-also"></a>참고 항목  
  [보고서 항목 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-report-items-report-builder-and-ssrs.md)  
   
   

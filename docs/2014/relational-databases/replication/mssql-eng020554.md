@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 744ab7a10db83cffa098bc97aa0ceb2c615481fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63057123"
 ---
-# <a name="mssqleng020554"></a>MSSQL_ENG020554
+# <a name="mssql_eng020554"></a>MSSQL_ENG020554
     
 ## <a name="message-details"></a>메시지 정보  
   
@@ -52,27 +52,29 @@ ms.locfileid: "63057123"
   
      복제 모니터에서 오류 정보를 확인한 다음 중지된 에이전트를 다시 시작합니다. 오류 정보에는 에이전트가 제대로 실행되지 않는 원인에 대한 추가 정보가 포함될 수 있습니다. 에이전트가 실행 중이면 에이전트를 중지했다가 다시 시작하지 마십시오. 이렇게 하면 문제를 악화시킬 수 있습니다. 복제 모니터에서 에이전트 상태 및 오류 정보를 보는 방법은 다음 항목을 참조하십시오.  
   
-    -   스냅숏 에이전트, 로그 판독기 에이전트 및 큐 판독기 에이전트에 대 한 참조 [정보 보기 및 태스크 수행 복제 모니터를 사용 하 여](monitor/view-information-and-perform-tasks-replication-monitor.md)입니다.  
+    -   스냅숏 에이전트, 로그 판독기 에이전트 및 큐 판독기 에이전트는 [복제 모니터를 사용 하 여 정보 보기 및 작업 수행](monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조 하세요.  
   
-    -   배포 에이전트 및 병합 에이전트에 대 한 참조 [정보 보기 및 태스크 수행 복제 모니터를 사용 하 여](monitor/view-information-and-perform-tasks-replication-monitor.md)입니다.  
+    -   배포 에이전트 및 병합 에이전트는 [복제 모니터를 사용 하 여 정보 보기 및 작업 수행](monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조 하세요.  
   
 -   에이전트에서 많은 작업이 수행되고 있어 이 오류가 자주 발생하는 경우  
   
      에이전트에서의 처리 시간을 줄이도록 애플리케이션을 다시 설계해야 할 수 있습니다.  
   
-     **작업 속성** 대화 상자를 사용하여 에이전트 상태의 점검 간격을 늘일 수 있습니다. 복제 작업에 대 한이 대화 상자에 액세스 하는 방법에 대 한 내용은 [정보 보기 및 태스크 수행 복제 모니터를 사용 하 여](monitor/view-information-and-perform-tasks-replication-monitor.md)입니다.  
+     
+  **작업 속성** 대화 상자를 사용하여 에이전트 상태의 점검 간격을 늘일 수 있습니다. 복제 작업에 대 한이 대화 상자에 액세스 하는 방법은 [정보 보기 및 복제 모니터를 사용 하 여 태스크 수행](monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조 하세요.  
   
 -   에이전트가 토폴로지의 한 컴퓨터에 로그인할 수 없는 경우  
   
-     **-LoginTimeOut** 값을 복제 에이전트 점검 작업이 실행되는 간격보다 작게 설정하는 것이 좋습니다. 경우에 따라서는 로그인 제한 시간을 초과하게 하는 네트워크 문제 때문에 **-LoginTimeOut** 의 값이 높게 설정될 수 있습니다. **-LoginTimeOut** 이 작게 설정되면 복제에서 더 구체적인 오류를 보고할 수 있으므로 권한, 네트워크 문제 또는 다른 문제로 인해 일어날 수 있는 로그인 문제를 해결하는 데 도움이 됩니다. 에이전트 프로필 및 명령줄에서 에이전트 매개 변수를 지정할 수 있습니다. 참조 항목:  
+     
+  **-LoginTimeOut** 값을 복제 에이전트 점검 작업이 실행되는 간격보다 작게 설정하는 것이 좋습니다. 경우에 따라 로그인 시간이 초과 되는 네트워크 문제로 인해 **-LoginTimeOut** 의 값이 더 높은 수준으로 설정 됩니다. **-LoginTimeOut** 가 낮게 설정 되 면 복제에서 더 구체적인 오류를 보고할 수 있으므로 권한, 네트워크 문제 또는 다른 문제로 인해 발생할 수 있는 로그인 문제를 해결할 수 있습니다. 에이전트 프로필 및 명령줄에서 에이전트 매개 변수를 지정할 수 있습니다. 자세한 내용은 다음을 참조하세요.  
   
     -   [복제 에이전트 프로필 작업](agents/replication-agent-profiles.md)  
   
-    -   [복제 에이전트의 명령 프롬프트 매개 변수 보기 및 수정&#40;SQL Server Management Studio&#41;](agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+    -   [복제 에이전트의 명령 프롬프트 매개 변수를 보고 수정 &#40;SQL Server Management Studio&#41;](agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [Replication Agent Executables Concepts](concepts/replication-agent-executables-concepts.md)에 할당될 최소 및 최대 메모리 양을 설정합니다.  
+    -   [복제 에이전트 실행 파일 개념](concepts/replication-agent-executables-concepts.md).  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [복제 에이전트 관리](agents/replication-agent-administration.md)   
  [오류 및 이벤트 참조&#40;복제&#41;](errors-and-events-reference-replication.md)   
  [복제 배포 에이전트](agents/replication-distribution-agent.md)   

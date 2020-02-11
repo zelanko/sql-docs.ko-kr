@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f014cb37c6c28a0c9a91bd811b9e94d734167e1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916773"
 ---
 # <a name="rename-a-database"></a>데이터베이스 이름 바꾸기
@@ -31,7 +31,7 @@ ms.locfileid: "62916773"
   
      [보안](#Security)  
   
--   **데이터베이스의 이름을 바꾸려면:**  
+-   **데이터베이스의 이름을 바꾸려면 다음을 사용 합니다.**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -47,18 +47,19 @@ ms.locfileid: "62916773"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  데이터베이스에 대한 ALTER 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-rename-a-database"></a>데이터베이스 이름을 바꾸려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+1.  **개체 탐색기**에서 인스턴스에 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]연결한 다음 해당 인스턴스를 확장 합니다.  
   
 2.  데이터베이스를 사용하고 있지 않는지 확인하고 [데이터베이스를 단일 사용자 모드로 설정](set-a-database-to-single-user-mode.md)합니다.  
   
-3.  **데이터베이스**를 확장하고 이름을 바꿀 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **이름 바꾸기**를 클릭합니다.  
+3.  
+  **데이터베이스**를 확장하고 이름을 바꿀 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **이름 바꾸기**를 클릭합니다.  
   
 4.  새 데이터베이스 이름을 입력하고 **확인**을 클릭합니다.  
   
@@ -81,11 +82,11 @@ GO
 ```  
   
 ###  <a name="TsqlExample"></a>   
-##  <a name="FollowUp"></a> 후속 작업: 데이터베이스의 이름을 바꾼 후  
+##  <a name="FollowUp"></a>후속 작업: 데이터베이스 이름을 바꾼 후  
  데이터베이스 이름을 바꾼 후 **master** 데이터베이스를 백업합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [ALTER DATABASE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+## <a name="see-also"></a>참고 항목  
+ [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [데이터베이스 식별자](database-identifiers.md)  
   
   

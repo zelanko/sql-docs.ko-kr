@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 08a46d5f73c485306be2f6d0b5086f715ebb00d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245105"
 ---
 # <a name="propertyidx-property-clientnetworkprotocolproperty-class"></a>PropertyIdx 속성(ClientNetworkProtocolProperty 클래스)
-  참조 하는 속성 배열 내에서 속성의 인덱스 값을 가져오거나 합니다 [Properties 속성 (ClientNetworkProtocol 클래스)](../clientnetworkprotocol-class/clientnetworkprotocol-class.md) 의 합니다 [ClientNetworkProtocol 클래스](../clientnetworkprotocol-class/clientnetworkprotocol-class.md) 개체입니다.  
+  [Clientnetworkprotocol 클래스](../clientnetworkprotocol-class/clientnetworkprotocol-class.md) 개체의 [Properties 속성 (clientnetworkprotocol 클래스)](../clientnetworkprotocol-class/clientnetworkprotocol-class.md) 에서 참조 하는 속성 배열에서 속성의 인덱스 값을 가져오거나 설정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,15 +37,15 @@ object
 ```  
   
 ## <a name="parts"></a>부분  
- *object*  
- A [ClientNetworkProtocolProperty 클래스](clientnetworkprotocolproperty-class.md) 사용 되는 네트워크 프로토콜의 특성을 나타내는 개체를 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클라이언트입니다.  
+ *개체가*  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클라이언트에서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 사용 하는 네트워크 프로토콜의 특성을 나타내는 [clientnetworkprotocolproperty 클래스](clientnetworkprotocolproperty-class.md) 개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  현재 속성의 배열 인덱스 값을 지정하는 `uint32`값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [클라이언트 프로토콜 구성](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
   

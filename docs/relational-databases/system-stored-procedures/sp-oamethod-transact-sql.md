@@ -18,10 +18,10 @@ ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7f0196a710f9349e109bcf956eca6e2310c1e051
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72252200"
 ---
 # <a name="sp_oamethod-transact-sql"></a>sp_OAMethod(Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "72252200"
 
   OLE 개체의 메서드를 호출합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -64,17 +64,17 @@ sp_OAMethod objecttoken , methodname
   
 -   메서드가 배열을 출력 매개 변수로서 반환합니다.  
   
-`[ _@parametername = ] parameter[ OUTPUT ]`은 메서드 매개 변수입니다. 지정 된 경우 *매개 변수* 는 적절 한 데이터 형식의 값 이어야 합니다.  
+`[ _@parametername = ] parameter[ OUTPUT ]`는 메서드 매개 변수입니다. 지정 된 경우 *매개 변수* 는 적절 한 데이터 형식의 값 이어야 합니다.  
   
  출력 매개 변수의 반환 값을 가져오려면 *매개 변수* 는 적절 한 데이터 형식의 지역 변수 여야 하며 **output** 을 지정 해야 합니다. 상수 매개 변수를 지정 하거나 **output** 을 지정 하지 않은 경우 출력 매개 변수의 모든 반환 값은 무시 됩니다.  
   
- 지정 된 경우 *parametername* 은 명명 된 매개 변수 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 이름 이어야 합니다. **@** _parametername_is [!INCLUDE[tsql](../../includes/tsql-md.md)] 지역 변수가 아닙니다. At 기호 ( **@** )가 제거 되 고 *parametername*이 OLE 개체에 매개 변수 이름으로 전달 됩니다. 모든 명명된 매개 변수는 반드시 모든 위치 매개 변수가 지정된 후에 지정되어야 합니다.  
+ 지정 된 경우 *parametername* 은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 명명 된 매개 변수의 이름 이어야 합니다. **@**_Parametername_is [!INCLUDE[tsql](../../includes/tsql-md.md)] 지역 변수가 아닙니다. At 기호 (**@**)가 제거 되 고 *parametername*이 OLE 개체에 매개 변수 이름으로 전달 됩니다. 모든 명명된 매개 변수는 반드시 모든 위치 매개 변수가 지정된 후에 지정되어야 합니다.  
   
  *n*  
  여러 매개 변수를 지정할 수 있음을 나타내는 자리 표시자입니다.  
   
 > [!NOTE]
->  *\@parametername* 은 지정 된 메서드의 일부이 고 개체로 전달 되기 때문에 명명 된 매개 변수가 될 수 있습니다. 이 저장 프로시저의 다른 매개 변수는 이름이 아니라 위치로 지정됩니다.  
+>  parametername은 지정 된 메서드의 일부 이며 개체로 전달 되기 때문에 명명 된 매개 변수가 될 수 있습니다. * \@* 이 저장 프로시저의 다른 매개 변수는 이름이 아니라 위치로 지정됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 0이 아닌 숫자(실패)이며 OLE Automation 개체가 반환한 HRESULT의 정수 값입니다.  
@@ -92,7 +92,7 @@ sp_OAMethod objecttoken , methodname
   
  하나의 열에 있는 모든 데이터 값이 같은 데이터 형식을 공유하는 경우에는 해당 데이터 형식이 전체 열에 대해 사용됩니다. 한 열의 데이터 값들이 여러 다른 데이터 형식을 가질 경우 전체 열의 데이터 형식이 다음 표를 기준으로 선택됩니다.  
   
-||int|FLOAT|money|datetime|varchar|NVARCHAR|  
+||int|float|money|Datetime|varchar|nvarchar|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
@@ -105,12 +105,12 @@ sp_OAMethod objecttoken , methodname
  **Sp_OAMethod** 를 사용 하 여 속성 값을 가져올 수도 있습니다.  
   
 ## <a name="permissions"></a>사용 권한  
- **Sysadmin** 고정 서버 역할의 멤버 자격 또는이 저장 프로시저에 대 한 execute 권한이 필요 합니다. OLE 자동화와 관련 된 시스템 프로시저를 사용 하려면 `Ole Automation Procedures` 구성을 사용 하도록 **설정** 해야 합니다.  
+ **Sysadmin** 고정 서버 역할의 멤버 자격 또는이 저장 프로시저에 대 한 execute 권한이 필요 합니다. `Ole Automation Procedures`OLE 자동화와 관련 된 시스템 프로시저를 사용 하려면 구성을 사용 하도록 **설정** 해야 합니다.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-calling-a-method"></a>A. 메서드 호출  
- 다음 예에서는 이전에 만든 **SQLServer** 개체의 `Connect` 메서드를 호출 합니다.  
+ 다음 예에서는 이전에 `Connect` 만든 **SQLServer** 개체의 메서드를 호출 합니다.  
   
 ```  
 EXEC @hr = sp_OAMethod @object, 'Connect', NULL, 'my_server',  
@@ -122,8 +122,8 @@ BEGIN
 END;  
 ```  
   
-### <a name="b-getting-a-property"></a>2\. 속성 가져오기  
- 다음 예에서는 이전에 만든 **SQLServer** 개체의 `HostName` 속성을 가져와 지역 변수에 저장 합니다.  
+### <a name="b-getting-a-property"></a>B. 속성 가져오기  
+ 다음 예에서는 이전에 `HostName` 만든 **SQLServer** 개체의 속성을 가져와 지역 변수에 저장 합니다.  
   
 ```  
 DECLARE @property varchar(255);  
@@ -137,7 +137,7 @@ PRINT @property;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [OLE 자동화 저장 프로시저 &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;OLE 자동화 저장 프로시저](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [OLE 자동화 예제 스크립트](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

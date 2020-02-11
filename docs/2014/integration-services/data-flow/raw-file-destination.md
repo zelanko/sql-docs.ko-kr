@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b7996ed3cc3ea209361790f23f6955f09be035e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770863"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
@@ -113,7 +113,7 @@ ms.locfileid: "62770863"
   
 1.  WriteOption 속성을 **CreateOnce** 또는 **CreateAlways**로 설정하고 루프의 반복 하나를 실행합니다. 파일이 생성됩니다. 이렇게 하면 추가된 데이터와 파일의 메타데이터가 일치하게 됩니다.  
   
-2.  WriteOption 속성을 재설정 **Append** ValidateExternalMetadata 속성을 설정 하 고 `False`입니다.  
+2.  WriteOption 속성을 **Append** 로 다시 설정 하 고 ValidateExternalMetadata 속성을 `False`로 설정 합니다.  
   
  **Append** 옵션 대신에 **TruncateAppend** 옵션을 사용할 경우 이전 반복에서 추가된 행이 잘리고 새 행이 추가됩니다. **TruncateAppend** 옵션을 사용할 경우에도 데이터가 파일 형식과 일치해야 합니다.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "62770863"
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [공용 속성](../common-properties.md)  
+-   [Common Properties](../common-properties.md)  
   
 -   [원시 파일 사용자 지정 속성](raw-file-custom-properties.md)  
   
@@ -132,7 +132,7 @@ ms.locfileid: "62770863"
 ## <a name="related-content"></a>관련 내용  
  sqlservercentral.com의 블로그 항목 - [원시 파일의 놀라운 기능](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [원시 파일 원본](raw-file-source.md)   
  [데이터 흐름](data-flow.md)  
   

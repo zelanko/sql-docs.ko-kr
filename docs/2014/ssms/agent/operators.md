@@ -24,14 +24,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 03deab738f374716002c4d78e07078e90fb41822
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68189025"
 ---
 # <a name="operators"></a>연산자
-  운영자는 작업이 완료되거나 경고가 발생할 때 전자 메일 알림을 받을 수 있는 사람이나 그룹의 별칭입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스는 운영자를 통해 관리자 알림을 지원합니다. 운영자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트의 알림 및 모니터링 기능을 사용하도록 설정합니다.  
+  운영자는 작업이 완료되거나 경고가 발생할 때 전자 메일 알림을 받을 수 있는 사람이나 그룹의 별칭입니다. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스는 운영자를 통해 관리자 알림을 지원합니다. 운영자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트의 알림 및 모니터링 기능을 사용하도록 설정합니다.  
   
 ## <a name="operator-attributes-and-concepts"></a>운영자 특성 및 개념  
  운영자의 기본 특성은 다음과 같습니다.  
@@ -47,9 +48,9 @@ ms.locfileid: "68189025"
  운영자의 연락 정보는 운영자가 알림을 받는 방법을 정의합니다. 운영자는 전자 메일, 호출기 또는 **net send** 명령으로 알림을 받을 수 있습니다.  
   
 > [!IMPORTANT]  
->  **이후 버전에서는** 에이전트에서 호출기 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net send [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]옵션이 제거됩니다. 새 개발 작업에서는 이 기능을 사용하지 말고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)]의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이후 버전에서는 에이전트에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 호출기 및 **net send** 옵션이 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 말고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.  
   
--   **전자 메일 알림**  
+-   **이메일 알림**  
   
      전자 메일 알림으로 운영자에게 전자 메일 메시지를 보냅니다. 전자 메일 알림의 경우 운영자의 전자 메일 주소를 입력합니다.  
   
@@ -75,17 +76,20 @@ ms.locfileid: "68189025"
   
          **참조**:  
   
-         **받는 사람**:  
+         **대상**:  
   
     > [!NOTE]  
     >  용량이 낮은 영숫자 페이징 시스템을 사용하면 호출기 알림에서 오류 텍스트를 제외하고 전송하도록 텍스트를 줄일 수 있습니다. 용량이 낮은 영숫자 페이징 시스템의 예로는 페이지당 64자로 제한된 시스템이 있습니다.  
   
 -   **net sendnotification**  
   
-     **net send** 명령을 사용하여 운영자에게 메시지를 보냅니다. **net send**에서는 네트워크 메시지의 수신자(컴퓨터나 사용자)를 지정합니다.  
+     
+  **net send** 명령을 사용하여 운영자에게 메시지를 보냅니다. 
+  **net send**에서는 네트워크 메시지의 수신자(컴퓨터나 사용자)를 지정합니다.  
   
     > [!NOTE]  
-    >  **net send** 명령은 Microsoft Windows Messenger를 사용합니다. 경고를 성공적으로 보내려면 이 서비스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 실행 중인 컴퓨터와 운영자가 사용하는 컴퓨터에서 모두 실행되어야 합니다.  
+    >  
+  **net send** 명령은 Microsoft Windows Messenger를 사용합니다. 경고를 성공적으로 보내려면 이 서비스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 실행 중인 컴퓨터와 운영자가 사용하는 컴퓨터에서 모두 실행되어야 합니다.  
   
 ## <a name="alerting-and-fail-safe-operators"></a>경고 알림 및 유사 시 대기 운영자  
  경고에 응답하여 알림을 받을 운영자를 선택할 수 있습니다. 또한 경고를 예약하여 운영자가 교대로 알림을 받도록 지정할 수도 있습니다. 예를 들어 운영자 A는 월, 수, 금에 발생하는 경고에 대한 알림을 받고 운영자 B는 화, 목, 토에 발생하는 경고에 대한 알림을 받으며  
@@ -98,9 +102,10 @@ ms.locfileid: "68189025"
   
      주 운영자에게 연락하지 못한 이유에는 호출기 주소가 틀리거나 운영자가 근무 중이 아닌 경우가 있습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 **msdb** 데이터베이스의 시스템 테이블에 액세스할 수 없는 경우  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에이전트가 **msdb** 데이터베이스의 시스템 테이블에 액세스할 수 없습니다.  
   
-     **sysnotifications** 시스템 테이블에서 경고에 대해 운영자 업무를 지정합니다.  
+     
+  **sysnotifications** 시스템 테이블에서 경고에 대해 운영자 업무를 지정합니다.  
   
  유사 시 대기 운영자는 보안 기능입니다. 유사 시 대기 근무를 다른 운영자에게 다시 할당하지 않거나 유사 시 대기 근무 할당을 함께 삭제하지 않고 유사 시 대기 근무에 할당된 운영자를 삭제할 수 없습니다.  
   
@@ -111,17 +116,18 @@ ms.locfileid: "68189025"
   
 -   호출할 경우에는 타사 제품 호출기-전자 메일 소프트웨어 및/또는 하드웨어가 있어야 합니다.  
   
--   **net send**를 사용하려면 운영자가 지정된 컴퓨터에 로그온하고 지정된 컴퓨터가 Windows Messenger에서 메시지를 받도록 허용해야 합니다.  
+-   
+  **net send**를 사용하려면 운영자가 지정된 컴퓨터에 로그온하고 지정된 컴퓨터가 Windows Messenger에서 메시지를 받도록 허용해야 합니다.  
   
 ## <a name="related-tasks"></a>관련 작업  
   
 |||  
 |-|-|  
-|**태스크**|**항목**|  
-|운영자 만들기 관련 태스크|[운영자 만들기](create-an-operator.md)<br /><br /> [Designate a Fail-Safe Operator](designate-a-fail-safe-operator.md)|  
-|알림 할당 관련 태스크|[운영자에게 경고 할당](assign-alerts-to-an-operator.md)<br /><br /> [경고에 대한 응답 정의&#40;SQL Server Management Studio&#41;](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [sp_add_notification &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [운영자에게 경고 할당](assign-alerts-to-an-operator.md)|  
+|**작업**|**항목**|  
+|운영자 만들기 관련 태스크|[운영자 만들기](create-an-operator.md)<br /><br /> [유사 시 대기 운영자 지정](designate-a-fail-safe-operator.md)|  
+|알림 할당 관련 태스크|[운영자에게 경고 할당](assign-alerts-to-an-operator.md)<br /><br /> [경고 &#40;SQL Server Management Studio에 대 한 응답을 정의&#41;](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [Transact-sql&#41;sp_add_notification &#40;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [운영자에게 경고 할당](assign-alerts-to-an-operator.md)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 메일](../../relational-databases/database-mail/database-mail.md)  
   
   

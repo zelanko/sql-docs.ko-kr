@@ -15,14 +15,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6c3e4d6a7875969e254874fa3dde101d986a9f9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781318"
 ---
 # <a name="interfaces-ole-db"></a>인터페이스(OLE DB)
-  제공 하 여 데이터 액세스 구성 요소 MDAC (Microsoft)에 핵심 OLE DB 인터페이스 외에도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 다음 추가 OLE DB 인터페이스를 구현 합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 MDAC (Microsoft Data Access Components)에서 제공 하는 핵심 OLE DB 인터페이스 외에 다음과 같은 추가 OLE DB 인터페이스를 구현 합니다.  
   
 -   [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62781318"
   
 -   [ISQLServerErrorInfo &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/isqlservererrorinfo-ole-db.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Native Client &#40;OLE DB&#41; 참조](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
   
   

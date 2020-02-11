@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1b59ebbf4bb56d23009351f4a8fb7f193a59fa66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771449"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Oracle CDC Service 만들기 및 편집
@@ -87,7 +87,7 @@ ms.locfileid: "62771449"
   
  동일한 서비스의 다른 인스턴스가 고가용성 구성에서 한 클러스터의 다른 노드에 대해 구성된 경우에도 동일한 마스터 암호를 사용해야 합니다. 마스터 암호를 잃어버리거나 수정할 경우 CDC Designer 콘솔을 사용하여 Oracle CDC 인스턴스 데이터베이스에 저장된 모든 로그 마이닝 암호를 다시 입력해야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [CDC Service를 만들고 편집하는 방법](how-to-create-and-edit-a-cdc-service.md)  
   
   

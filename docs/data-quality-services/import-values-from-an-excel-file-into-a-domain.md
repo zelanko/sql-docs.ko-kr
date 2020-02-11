@@ -14,10 +14,10 @@ ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 144a2b57fa671842f284445dee859e689e8adbe1
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75254825"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>Excel 파일에서 도메인으로 값 가져오기
@@ -32,14 +32,14 @@ ms.locfileid: "75254825"
   
 -   기존의 채워진 도메인으로 값을 가져옵니다. 이 경우 새 값만 가져옵니다. 기존의 값은 전혀 가져오지 않습니다.  
   
-##  <a name="BeforeYouBegin"></a>시작 하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a>사전  
+###  <a name="Prerequisites"></a> 필수 조건  
  Excel 파일에서 도메인을 가져오려면 도메인 값이나 전체 도메인을 가져오기 위해 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 애플리케이션이 설치된 컴퓨터에 Excel이 설치되어 있어야 합니다. 도메인 값이 포함된 Excel 파일을 만들어 놓은 상태여야 합니다( [How the import works](#How)참조). 그리고 도메인을 가져올 기술 자료를 만들고 열어 두어야 합니다.  
   
-###  <a name="Security"></a>보안  
+###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a>권한에  
+####  <a name="Permissions"></a> 권한  
  Excel 파일에서 도메인 값을 가져오려면 DQS_MAIN 데이터베이스의 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
 ##  <a name="Import"></a>Excel 파일에서 도메인으로 값 가져오기  
@@ -67,8 +67,7 @@ ms.locfileid: "75254825"
   
 9. 스프레드시트의 첫 번째 행이 도메인 이름을 나타내고 나머지 모든 행이 유효한 도메인 값을 나타낼 경우 **첫 번째 행을 헤더로 사용하세요.** 를 선택합니다.  
   
-10. 
-  **확인**을 클릭합니다. 성공적으로 가져온 값의 수, 가져오지 않은 값의 수 및 전체 값 수를 나타내는 진행률 표시줄이 표시됩니다. 프로세스를 취소하려면 **취소** 단추를 클릭합니다.  
+10. **확인**을 클릭합니다. 성공적으로 가져온 값의 수, 가져오지 않은 값의 수 및 전체 값 수를 나타내는 진행률 표시줄이 표시됩니다. 프로세스를 취소하려면 **취소** 단추를 클릭합니다.  
   
 11. "가져오기 완료"가 **도메인 값 가져오기** 대화 상자에 표시되는지 확인합니다. 이 대화 상자에서 성공적으로 가져온 값과 가져오지 않은 값을 확인합니다. 파일 이름과 파일 경로, 작업 완료 상태, 성공적으로 가져온 값의 수, 가져오지 않은 값의 수 및 처리된 전체 값의 수를 나타냅니다.  
   

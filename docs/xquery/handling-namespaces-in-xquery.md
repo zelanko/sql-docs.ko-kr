@@ -17,10 +17,10 @@ ms.assetid: 542b63da-4d3d-4ad5-acea-f577730688f1
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 07158d4131c60cf46f49a860721333c78213c982
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004537"
 ---
 # <a name="handling-namespaces-in-xquery"></a>XQuery의 네임스페이스 처리
@@ -49,9 +49,9 @@ WHERE ProductModelID=7
 ...  
 ```  
   
- 유의 합니다 **네임 스페이스** 키워드 새 네임 스페이스 접두사를 정의 하는 "AWMI:". 그런 다음 해당 네임스페이스의 범위에 포함되는 모든 요소에 대해 쿼리에서 이 접두사를 사용해야 합니다.  
+ **Namespace** 키워드는 새 네임 스페이스 접두사 "awmi:"를 정의 하는 데 사용 됩니다. 그런 다음 해당 네임스페이스의 범위에 포함되는 모든 요소에 대해 쿼리에서 이 접두사를 사용해야 합니다.  
   
-### <a name="b-declaring-a-default-namespace"></a>2\. 기본 네임스페이스 선언  
+### <a name="b-declaring-a-default-namespace"></a>B. 기본 네임스페이스 선언  
  이전 쿼리에서는 새로운 네임스페이스 접두사가 정의되었습니다. 그런 다음 원하는 XML 구조를 선택하기 위해 쿼리에서 이 접두사를 사용해야 했습니다. 이 방법 외에 다음 수정된 쿼리에서와 같이 네임스페이스를 기본 네임스페이스로 선언할 수 있습니다.  
   
 ```  
@@ -63,7 +63,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- 다음은 결과  
+ 다음은 결과입니다.  
   
 ```  
 <step xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">Insert <material>aluminum sheet MS-2341</material> into the <tool>T-85A framing tool</tool>. </step>  
@@ -72,7 +72,7 @@ where ProductModelID=7
   
  이 예에서 정의된 네임스페이스 `"https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"`는 기본 네임스페이스 또는 비어 있는 네임스페이스를 무시하도록 만들어져 있습니다. 이 때문에 쿼리에 사용된 경로 식에 네임스페이스 접두사가 더 이상 없습니다. 또한 결과에 표시되는 요소 이름에도 네임스페이스 접두사가 더 이상 없습니다. 또한 기본 네임스페이스는 해당 특성을 제외한 모든 요소에 적용됩니다.  
   
-### <a name="c-using-namespaces-in-xml-construction"></a>3\. XML 생성에 네임스페이스 사용  
+### <a name="c-using-namespaces-in-xml-construction"></a>C. XML 생성에 네임스페이스 사용  
  새로운 네임스페이스를 정의할 때 이러한 네임스페이스의 범위에는 쿼리 뿐만 아니라 생성 범위도 포함됩니다. 예를 들어 XML 생성 시 "`declare namespace ...`" 선언을 사용하여 새로운 네임스페이스를 정의한 다음 쿼리 결과 내에 표시되도록 생성하는 모든 요소 및 특성에서 해당 네임스페이스를 사용할 수 있습니다.  
   
 ```  
@@ -114,8 +114,8 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
-### <a name="d-construction-using-default-namespaces"></a>4\. 기본 네임스페이스를 사용하여 생성  
- 또한 생성된 XML에서 사용할 기본 네임스페이스를 정의할 수 있습니다. 예를 들어 다음 쿼리는 기본 네임 스페이스 "uri: somenamespace"를 지정 하는 방법 표시\\와 같은 생성 된 로컬로 명명 된 요소에 대 한 기본값으로 사용 하는 `<Result>` 요소입니다.  
+### <a name="d-construction-using-default-namespaces"></a>D. 기본 네임스페이스를 사용하여 생성  
+ 또한 생성된 XML에서 사용할 기본 네임스페이스를 정의할 수 있습니다. 예를 들어 다음 쿼리는 기본 네임 스페이스 "uri: SomeNamespace"\\를 지정 하 여 `<Result>` 요소와 같이 생성 되는 로컬로 명명 된 요소에 대 한 기본값으로 사용 하는 방법을 보여 줍니다.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -145,7 +145,7 @@ where ProductModelID=19
   
  기본 요소 네임스페이스 또는 빈 네임스페이스를 무시하면 생성된 XML에 있는 모든 로컬로 명명된 요소가 이후에 대체되는 기본 네임스페이스로 바인딩됩니다. 따라서 빈 네임스페이스를 사용할 수 있도록 생성 중인 XML에 유연성이 필요하면 기본 요소 네임스페이스를 무시하지 마십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [WITH XMLNAMESPACES를 사용하여 쿼리에 네임스페이스 추가](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [XML 데이터&#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XQuery 언어 참조&#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  

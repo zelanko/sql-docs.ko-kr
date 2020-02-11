@@ -1,5 +1,5 @@
 ---
-title: '컬렉션 (Visual C++ #import 구문 인덱스) | Microsoft Docs'
+title: Collections (#import를 사용 하는 Visual C++ 구문 인덱스) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -19,16 +19,16 @@ ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 77a45203c50555168d2cd163c8b97406b8377694
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919893"
 ---
-# <a name="collections-visual-c-syntax-index-with-import"></a>컬렉션 (Visual C++ #import 구문 인덱스)
-컬렉션 특정 공용 메서드와 속성을 상속 되도록 알고는 것이 유용 합니다.  
+# <a name="collections-visual-c-syntax-index-with-import"></a>Collections (#import를 사용 하는 Visual C++ 구문 인덱스)
+컬렉션이 특정 공용 메서드 및 속성을 상속 한다는 것을 알고 있으면 유용 합니다.  
   
- 모든 컬렉션 상속를 **수** 속성 및 **새로 고침** 메서드 및 모든 컬렉션에 추가 합니다 **항목** 속성. **오류** 컬렉션에 추가 합니다 **지우기** 메서드. **매개 변수** 컬렉션 상속 합니다 **추가** 및 **삭제** 메서드를 하는 동안 합니다 **필드** 컬렉션 추가 합니다 **Append**, **삭제할**, 및 **업데이트** 메서드.  
+ 모든 컬렉션은 **Count** 속성과 **Refresh** 메서드를 상속 하 고 모든 컬렉션은 **Item** 속성을 추가 합니다. **Errors** 컬렉션은 **Clear** 메서드를 추가 합니다. **Parameters** 컬렉션은 **append** 및 **delete** 메서드를 상속 하는 반면, **Fields** 컬렉션은 추가, **삭제**및 **업데이트** 메서드를 추가 합니다. ****  
   
 ## <a name="properties-collection"></a>속성 컬렉션  
   
@@ -96,8 +96,8 @@ long GetCount( ); __declspec(property(get=GetCount)) long Count;
 PropertyPtr GetItem( const _variant_t & Index ); __declspec(property(get=GetItem)) PropertyPtr Item[];  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Errors 컬렉션 (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [필드 컬렉션 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Fields 컬렉션 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Parameters 컬렉션 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Properties 컬렉션(ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
