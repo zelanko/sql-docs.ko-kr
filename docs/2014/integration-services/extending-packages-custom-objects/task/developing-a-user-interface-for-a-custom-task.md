@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6268fe16c31c931dc71ad1a62bd72e08b1ecb537
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768921"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>사용자 지정 태스크의 사용자 인터페이스 개발
@@ -54,7 +54,7 @@ ms.locfileid: "62768921"
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.DisplayName%2A>|제어 흐름 도구 상자에 태스크 이름을 표시합니다.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.Description%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute>에서 상속된 태스크 설명입니다. 이 속성은 도구 설명에 표시됩니다.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.IconResource%2A>|[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에 표시되는 아이콘입니다.|  
-|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.RequiredProductLevel%2A>|사용되는 경우 이 속성은 <xref:Microsoft.SqlServer.Dts.Runtime.DTSProductLevel> 열거형의 값 중 하나로 설정합니다. `RequiredProductLevel = DTSProductLevel.None` )을 입력합니다.|  
+|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.RequiredProductLevel%2A>|사용되는 경우 이 속성은 <xref:Microsoft.SqlServer.Dts.Runtime.DTSProductLevel> 열거형의 값 중 하나로 설정합니다. `RequiredProductLevel = DTSProductLevel.None`)을 입력합니다.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskContact%2A>|태스크에 기술 지원이 필요한 경우를 위해 연락처 정보를 포함합니다.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskType%2A>|태스크에 유형을 할당합니다.|  
 |Attribute.TypeId|파생 클래스에서 구현된 경우 이 특성에 대한 고유 식별자를 가져옵니다. 자세한 내용은 .NET Framework 클래스 라이브러리의 `Attribute.TypeID` 속성을 참조하십시오.|  
@@ -117,7 +117,8 @@ End Class 'MyTask
   
  디자이너에서는 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A> 메서드를 호출하여 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에 표시되는 창을 요청합니다. 태스크에서는 해당 태스크의 사용자 인터페이스가 들어 있는 창의 인스턴스를 만들고 표시를 위해 해당 사용자 인터페이스를 디자이너에 반환합니다. 일반적으로 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 및 <xref:Microsoft.SqlServer.Dts.Runtime.Connections> 개체는 오버로드된 생성자를 통해 창에 제공되므로 이들 개체를 사용하여 태스크를 구성할 수 있습니다.  
   
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서는 태스크 UI의 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A> 메서드를 호출하여 태스크의 사용자 인터페이스를 표시합니다. 태스크 사용자 인터페이스는 이 메서드에서 Windows Form을 반환하고 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서는 이 폼을 모달 대화 상자로 표시합니다. 폼이 닫히면 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서는 폼의 `DialogResult` 속성 값을 검사하여 태스크가 수정되었는지와 수정 내용을 저장해야 하는지를 결정합니다. `DialogResult` 속성 값이 `OK`인 경우 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서는 태스크의 지속성 메서드를 호출하여 변경 내용을 저장하고, 그렇지 않은 경우 변경 내용은 무시됩니다.  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서는 태스크 UI의 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A> 메서드를 호출하여 태스크의 사용자 인터페이스를 표시합니다. 태스크 사용자 인터페이스는 이 메서드에서 Windows Form을 반환하고 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서는 이 폼을 모달 대화 상자로 표시합니다. 폼이 닫히면 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서는 폼의 `DialogResult` 속성 값을 검사하여 태스크가 수정되었는지와 수정 내용을 저장해야 하는지를 결정합니다. 
+  `DialogResult` 속성 값이 `OK`인 경우 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서는 태스크의 지속성 메서드를 호출하여 변경 내용을 저장하고, 그렇지 않은 경우 변경 내용은 무시됩니다.  
   
  다음 코드 예제에서는 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI> 인터페이스를 구현하며 SampleTaskForm이라는 Windows Form 클래스가 있다고 가정합니다.  
   
@@ -197,9 +198,9 @@ Public Class HelloWorldTaskUI
 End Class  
 ```  
   
-![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은 아이콘)](../../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [사용자 지정 태스크 만들기](creating-a-custom-task.md)   
  [사용자 지정 태스크 코딩](coding-a-custom-task.md)   
  [사용자 지정 태스크의 사용자 인터페이스 개발](developing-a-user-interface-for-a-custom-task.md)  

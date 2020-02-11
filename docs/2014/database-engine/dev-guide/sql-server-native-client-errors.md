@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 84ec9e17d525521620abac48fc294461281b50cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780650"
 ---
 # <a name="sql-server-native-client-errors"></a>SQL Server Native Client 오류
@@ -22,7 +22,7 @@ ms.locfileid: "62780650"
   
  [MSSQLSERVER_50000](../../relational-databases/errors-events/sql-server-native-client-error-mssqlserver-50000.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Native Client 프로그래밍](../../relational-databases/native-client/sql-server-native-client-programming.md)  
   
   

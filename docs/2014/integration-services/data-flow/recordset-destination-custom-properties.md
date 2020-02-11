@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6010c87de750c3c23fbd03564887624064286dbd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770779"
 ---
 # <a name="recordset-destination-custom-properties"></a>레코드 집합 대상 사용자 지정 속성
@@ -24,13 +24,13 @@ ms.locfileid: "62770779"
   
 |속성 이름|데이터 형식|Description|  
 |-------------------|---------------|-----------------|  
-|VariableName|문자열|ADO 레코드 집합을 보유하는 변수의 이름입니다.|  
+|VariableName|String|ADO 레코드 집합을 보유하는 변수의 이름입니다.|  
   
  레코드 집합 대상의 입력 및 입력 열에는 사용자 지정 속성이 없습니다.  
   
  자세한 내용은 [Recordset Destination](recordset-destination.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [공용 속성](../common-properties.md)  
+## <a name="see-also"></a>참고 항목  
+ [Common Properties](../common-properties.md)  
   
   

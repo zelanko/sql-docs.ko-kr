@@ -13,20 +13,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ffb9c242b30c3b0ddfc1cadae20ea261c616475b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767905"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>작업을 수행하는 중(SQL Server 가져오기 및 내보내기 마법사)
+  
   **작업을 수행하는 중** 페이지를 사용하여 가져오기/내보내기 작업의 진행률 및 결과를 보고 필요한 경우 작업을 중단할 수 있습니다.  
   
- 이 마법사에 대 한 자세한 내용은 참조 하세요 [SQL Server 가져오기 및 내보내기 마법사](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)합니다. 마법사를 성공적으로 실행 하는 데 필요한 사용 권한 뿐만 아니라 마법사 시작 옵션을 알아보려면 [SQL Server 가져오기 및 내보내기 마법사를 실행](start-the-sql-server-import-and-export-wizard.md)합니다.  
+ 이 마법사에 대해 자세히 알아보려면 [SQL Server 가져오기 및 내보내기 마법사](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)를 참조 하세요. 마법사 시작 옵션 및 마법사를 성공적으로 실행 하는 데 필요한 사용 권한에 대 한 자세한 내용은 [SQL Server 가져오기 및 내보내기 마법사 실행](start-the-sql-server-import-and-export-wizard.md)을 참조 하세요.  
   
  SQL Server 가져오기 및 내보내기 마법사의 목적은 원본에서 대상으로 데이터를 복사하는 것입니다. 이 마법사는 대상 데이터베이스 및 대상 테이블도 만들 수 있습니다. 그러나 여러 개의 데이터베이스 또는 테이블을 복사하거나 다른 종류의 데이터베이스 개체를 복사할 경우 대신 데이터베이스 복사 마법사를 사용해야 합니다. 자세한 내용은 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)을 참조하세요.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **동작**  
  동작의 일부인 각 작업을 표시합니다.  
   
@@ -36,13 +37,14 @@ ms.locfileid: "62767905"
  **메시지**  
  동작에서 생성하는 정보 및 오류 메시지를 표시합니다.  
   
- **Assert**  
- 오류 또는 경고만 표시할 것인지, 아니면 성공한 동작만 표시할 것인지를 선택합니다. **모든 동작 표시**를 선택하여 기본 표시로 되돌릴 수 있습니다.  
+ **Filter**  
+ 오류 또는 경고만 표시할 것인지, 아니면 성공한 동작만 표시할 것인지를 선택합니다. 
+  **모든 동작 표시**를 선택하여 기본 표시로 되돌릴 수 있습니다.  
   
  **중지**  
  필요한 경우 **중지** 단추를 사용하여 작업을 중단합니다.  
   
- **보고서**  
+ **Report**  
  결과 보고서를 보거나, 보고서를 파일에 저장하거나, 보고서를 클립보드에 복사하거나, 보고서를 전자 메일로 보냅니다.  
   
   
