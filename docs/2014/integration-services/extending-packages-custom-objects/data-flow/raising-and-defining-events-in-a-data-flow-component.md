@@ -21,17 +21,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f3d0feff8d95a8fb0d1e7b6279e36567e06c7f81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896315"
 ---
 # <a name="raising-and-defining-events-in-a-data-flow-component"></a>데이터 흐름 구성 요소에서 이벤트 발생 및 정의
-  구성 요소 개발자는 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 속성에 제공된 메서드를 호출하여 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 인터페이스에 정의된 일부 이벤트를 발생시킬 수 있습니다. <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.EventInfos%2A> 컬렉션을 사용하여 사용자 지정 이벤트를 정의하고 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A> 메서드를 사용하여 실행하는 동안 해당 이벤트를 발생시킬 수도 있습니다. 이 섹션에서는 이벤트를 만들고 발생시키는 방법을 설명하고 디자인 타임에 이벤트를 발생시켜야 하는 경우에 대한 지침을 제공합니다.  
+  구성 요소 개발자는 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 속성에 제공된 메서드를 호출하여 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 인터페이스에 정의된 일부 이벤트를 발생시킬 수 있습니다. 
+  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.EventInfos%2A> 컬렉션을 사용하여 사용자 지정 이벤트를 정의하고 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A> 메서드를 사용하여 실행하는 동안 해당 이벤트를 발생시킬 수도 있습니다. 이 섹션에서는 이벤트를 만들고 발생시키는 방법을 설명하고 디자인 타임에 이벤트를 발생시켜야 하는 경우에 대한 지침을 제공합니다.  
   
 ## <a name="raising-events"></a>이벤트 발생  
- 구성 요소에서는 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 인터페이스의 **Fire\<X>** 메서드를 사용하여 이벤트를 발생시킵니다. 구성 요소를 디자인하거나 실행할 때 이벤트를 발생시킬 수 있습니다. 일반적으로 구성 요소를 디자인할 때는 유효성 검사 과정에서 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireError%2A> 및 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireWarning%2A> 메서드가 호출됩니다. 이러한 이벤트는 구성 요소가 잘못 구성되어 있는 경우 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]의 **오류 목록** 창에 메시지를 표시하고 구성 요소 사용자에게 피드백을 제공합니다.  
+ 구성 요소에서는 ** 인터페이스의 \<Fire**X><xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 메서드를 사용하여 이벤트를 발생시킵니다. 구성 요소를 디자인하거나 실행할 때 이벤트를 발생시킬 수 있습니다. 일반적으로 구성 요소를 디자인할 때는 유효성 검사 과정에서 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireError%2A> 및 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireWarning%2A> 메서드가 호출됩니다. 이러한 이벤트는 구성 요소가 잘못 구성되어 있는 경우 **의 **오류 목록[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 창에 메시지를 표시하고 구성 요소 사용자에게 피드백을 제공합니다.  
   
  또한 구성 요소에서는 실행 중 어느 시점에서나 이벤트를 발생시킬 수 있습니다. 구성 요소 개발자는 이벤트를 통해 구성 요소가 실행될 때 구성 요소 사용자에게 피드백을 제공할 수 있습니다. 실행 중 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireError%2A> 메서드를 호출하면 패키지가 실패할 수 있습니다.  
   
@@ -42,10 +43,12 @@ ms.locfileid: "62896315"
   
  구성 요소의 사용자 지정 이벤트는 패키지 XML에 저장되지 않습니다. 따라서 구성 요소가 해당 구성 요소에서 발생하는 이벤트를 정의할 수 있도록 디자인할 때와 실행할 때 모두 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.RegisterEvents%2A> 메서드가 호출됩니다.  
   
- <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSEventInfos100.Add%2A> 메서드의 *allowEventHandlers* 매개 변수는 구성 요소에서 이벤트에 대한 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 개체를 만들 수 있는지 여부를 지정합니다. <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandlers>는 동기 개체이므로 구성 요소에서는 사용자 지정 이벤트에 연결된 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>가 실행을 마칠 때까지 실행을 다시 시작하지 않습니다. 경우는 *allowEventHandlers* 매개 변수가 `true`, 이벤트의 각 매개 변수에 사용할 수 있는 자동 됩니다 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 만들어지고 를자동으로채워지는되는변수를통해개체[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 런타임입니다.  
+ 
+  * 메서드의 *allowEventHandlers<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSEventInfos100.Add%2A> 매개 변수는 구성 요소에서 이벤트에 대한 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 개체를 만들 수 있는지 여부를 지정합니다. 
+  <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandlers>는 동기 개체이므로 구성 요소에서는 사용자 지정 이벤트에 연결된 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>가 실행을 마칠 때까지 실행을 다시 시작하지 않습니다. *AllowEventHandlers* 매개 `true`변수가 인 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 런타임에 의해 자동으로 만들어지고 채워지는 변수를 통해 모든 개체에서 이벤트의 각 매개 변수를 사용할 수 있게 됩니다.  
   
 ### <a name="raising-a-custom-event"></a>사용자 지정 이벤트 발생  
- 구성 요소에서는 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A> 메서드를 호출하고 이벤트의 이름, 텍스트 및 매개 변수를 제공하여 사용자 지정 이벤트를 발생시킵니다. 경우는 *allowEventHandlers* 매개 변수가 `true`모든 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandlers> 의해 실행 되는 사용자 지정 이벤트에 대 한 만든를 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 런타임 엔진입니다.  
+ 구성 요소에서는 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A> 메서드를 호출하고 이벤트의 이름, 텍스트 및 매개 변수를 제공하여 사용자 지정 이벤트를 발생시킵니다. *AllowEventHandlers* 매개 변수가 `true`이면 사용자 지정 이벤트 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandlers> 에 대해 만들어진 모든가 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 런타임 엔진에 의해 실행 됩니다.  
   
 ### <a name="custom-event-sample"></a>사용자 지정 이벤트 예제  
  다음 코드 예에서는 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.RegisterEvents%2A> 메서드 실행 중 사용자 지정 이벤트를 정의한 다음 런타임에 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A> 메서드를 호출하여 이벤트를 발생시키는 구성 요소를 보여 줍니다.  
@@ -90,9 +93,9 @@ Public  Overrides Sub ProcessInput(ByVal inputID As Integer, ByVal buffer As Pip
 End Sub  
 ```  
   
-![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은 아이콘)](../../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services&#40;SSIS&#41; 이벤트 처리기](../../integration-services-ssis-event-handlers.md)   
  [패키지에 이벤트 처리기 추가](../../add-an-event-handler-to-a-package.md)  
   

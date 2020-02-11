@@ -13,15 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2eaaadc4e1cc1f2f360fe3d45e2dea4c082b7b76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915690"
 ---
-# <a name="mssqlserver137"></a>MSSQLSERVER_137
+# <a name="mssqlserver_137"></a>MSSQLSERVER_137
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -33,17 +33,17 @@ ms.locfileid: "62915690"
 |메시지 텍스트|스칼라 변수 "%.*ls"을(를) 선언해야 합니다.|  
   
 ## <a name="explanation"></a>설명  
- 이 오류는 SQL 스크립트에서 변수를 먼저 선언하지 않고 사용하는 경우에 발생합니다. 다음 예제에서는 **@mycol** 이 선언되지 않았으므로 SET 및 SELECT 문에 대해 오류 137이 반환됩니다.  
+ 이 오류는 SQL 스크립트에서 변수를 먼저 선언하지 않고 사용하는 경우에 발생합니다. 다음 예에서는가 선언 되지 않았으므로 **@mycol** SET 및 SELECT 문에 대해 모두 오류 137을 반환 합니다.  
   
  SET @mycol = 'ContactName';  
   
  SELECT @mycol;  
   
- 이 오류의 좀 더 복잡한 원인 중 하나로 EXECUTE 문 외부에서 선언된 변수를 사용하는 경우가 있습니다. 예를 들어 SELECT 문에 지정된 **@mycol** 변수는 SELECT 문에서 로컬로 사용되므로 EXECUTE 문 외부에 있습니다.  
+ 이 오류의 좀 더 복잡한 원인 중 하나로 EXECUTE 문 외부에서 선언된 변수를 사용하는 경우가 있습니다. 예를 들어 SELECT 문에 **@mycol** 지정 된 변수는 select 문에 대해 로컬입니다. 따라서 EXECUTE 문 외부에 있습니다.  
   
  USE AdventureWorks2012;  
   
- GO  
+ 이동  
   
  DECLARE @mycol nvarchar(20);  
   
@@ -54,11 +54,11 @@ ms.locfileid: "62915690"
 ## <a name="user-action"></a>사용자 동작  
  SQL 스크립트에서 변수를 사용하기 전에 해당 변수를 선언했는지 확인하십시오.  
   
- EXECUTE 문 외부에서 선언된 변수를 참조하지 않도록 스크립트를 다시 작성하십시오. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ EXECUTE 문 외부에서 선언된 변수를 참조하지 않도록 스크립트를 다시 작성하십시오. 다음은 그 예입니다.  
   
  USE AdventureWorks2012;  
   
- GO  
+ 이동  
   
  DECLARE @mycol nvarchar(20) ;  
   
@@ -66,7 +66,7 @@ ms.locfileid: "62915690"
   
  EXECUTE ('SELECT ' + @mycol + ' FROM Production.Product';) ;  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [EXECUTE&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql)   
  [SET 문&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statements-transact-sql)   
  [DECLARE @local_variable&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)  
