@@ -1,5 +1,5 @@
 ---
-title: '3단원: 웹 서비스에 액세스 | Microsoft Docs'
+title: '3 단원: 웹 서비스 액세스 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,25 +11,26 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 09671f8880f9f7745359961d9c6c126a893d26a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62653786"
 ---
-# <a name="lesson-3-accessing-the-web-service"></a>3단원: Web Service에 액세스
+# <a name="lesson-3-accessing-the-web-service"></a>3단원: 웹 서비스에 액세스
   보고서 서버 웹 서비스에 대한 참조를 프로젝트에 추가한 후에는 웹 서비스의 프록시 클래스 인스턴스를 만듭니다. 그런 다음 프록시 클래스에서 메서드를 호출하여 웹 서비스의 메서드에 액세스할 수 있습니다. 애플리케이션에서 이러한 메서드를 호출하면 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 에 의해 생성된 프록시 클래스 코드가 사용자 애플리케이션과 웹 서비스간의 통신을 처리합니다.  
   
  먼저 웹 서비스의 프록시 클래스 인스턴스인 <xref:ReportService2010.ReportingService2010>를 만듭니다. 그런 다음 프록시 클래스를 사용하여 웹 서비스의 <xref:ReportService2010.ReportingService2010.GetProperties%2A> 메서드를 호출합니다. 이 호출로 예제 보고서인 Company Sales에 대한 이름 및 설명을 검색할 수 있습니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services에서 실행되고 있는 웹 서비스에 액세스할 경우 "ReportServer" 경로에 "$SQLExpress"를 추가해야 합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+>  
+  [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services에서 실행되고 있는 웹 서비스에 액세스할 경우 "ReportServer" 경로에 "$SQLExpress"를 추가해야 합니다. 다음은 그 예입니다.  
 >   
 >  `http://<Server Name>/reportserver$sqlexpress/reportservice2010.asmx"`  
   
 ### <a name="to-access-the-web-service"></a>웹 서비스에 액세스하려면  
   
-1.  먼저 코드 파일에 `using`([!INCLUDE[vbprvb](../includes/vbprvb-md.md)]의 경우 `Imports`) 지시문을 추가하여 Program.cs 파일([!INCLUDE[vbprvb](../includes/vbprvb-md.md)]의 경우 Module1.vb)에 네임스페이스를 추가해야 합니다. 이 지시문을 사용할 경우에는 네임스페이스에서 형식을 정규화하지 않아도 됩니다.  
+1.  먼저 코드 파일에 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)](`using`의 경우 `Imports`) 지시문을 추가하여 Program.cs 파일([!INCLUDE[vbprvb](../includes/vbprvb-md.md)]의 경우 Module1.vb)에 네임스페이스를 추가해야 합니다. 이 지시문을 사용할 경우에는 네임스페이스에서 형식을 정규화하지 않아도 됩니다.  
   
 2.  이를 위해 코드 파일 시작 위치에 다음 코드를 추가합니다.  
   
@@ -113,7 +114,7 @@ ms.locfileid: "62653786"
   
 4.  솔루션을 저장합니다.  
   
- 연습 예제 코드에서는 웹 서비스의 <xref:ReportService2010.ReportingService2010.GetProperties%2A> 메서드를 사용하여 예제 보고서 Company Sales 2012의 속성을 검색합니다. 합니다 <xref:ReportService2010.ReportingService2010.GetProperties%2A> 메서드는 두 개의 인수: 배열 및 속성 정보를 검색 하려는 보고서의 이름을 **Property** 검색 하려는 값의 속성 이름을 포함 하는 개체입니다. 이 메서드는 또한 속성 인수에 지정된 속성의 이름과 값이 들어 있는 **Property[]** 개체의 배열을 반환합니다.  
+ 연습 예제 코드에서는 웹 서비스의 <xref:ReportService2010.ReportingService2010.GetProperties%2A> 메서드를 사용하여 예제 보고서 Company Sales 2012의 속성을 검색합니다. 메서드 <xref:ReportService2010.ReportingService2010.GetProperties%2A> 는 두 개의 인수를 사용 합니다. 속성 정보를 검색할 보고서의 이름과 값을 검색 하려는 속성의 이름을 포함 하는 **속성 []** 개체의 배열입니다. 이 메서드는 또한 속성 인수에 지정된 속성의 이름과 값이 들어 있는 **Property[]** 개체의 배열을 반환합니다.  
   
 > [!NOTE]  
 >  속성 인수에 빈 **Property[]** 배열을 지정하면 사용 가능한 모든 속성이 반환됩니다.  
@@ -122,8 +123,8 @@ ms.locfileid: "62653786"
   
  보고서 서버 웹 서비스용 프록시 클래스를 만들고 사용하는 방법은 [Creating the Web Service Proxy](../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md)를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
- [4단원: 응용 프로그램을 실행 &#40;VB VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)   
- [Visual Basic 또는 Visual C를 사용 하 여 보고서 서버 웹 서비스에 액세스&#35; &#40;SSRS 자습서&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
+## <a name="see-also"></a>참고 항목  
+ [4 단원: 응용 프로그램 실행 &#40;VB-VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)   
+ [Visual Basic 또는 Visual C&#35; &#40;SSRS 자습서를 사용 하 여 보고서 서버 웹 서비스에 액세스&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
   
   

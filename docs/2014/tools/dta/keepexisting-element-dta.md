@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fc3ae8c7e11a3f5a4aa71e91463cbe80ab70c7e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62735635"
 ---
 # <a name="keepexisting-element-dta"></a>KeepExisting 요소(DTA)
@@ -36,9 +36,10 @@ ms.locfileid: "62735635"
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특성|Description|  
 |--------------------|-----------------|  
-|**데이터 형식 및 길이**|`string`, 서버에서 지정한 길이 제한 적용|  
+|**데이터 형식 및 길이**|
+  `string`, 서버에서 지정한 길이 제한 적용|  
 |**허용된 값**|**NONE**<br /> 기존 구조 없음<br /><br /> **ALL**<br /> 모든 기존 구조<br /><br /> **ALIGNED**<br /> 모든 파티션 정렬 구조<br /><br /> **CL_IDX**<br /> 테이블의 모든 클러스터형 인덱스<br /><br /> **IDX**<br /> 테이블의 모든 클러스터형 및 비클러스터형 인덱스<br /><br /> 이 요소에 이러한 값 중 하나만 사용합니다.|  
 |**기본값**|없음|  
 |**발생 빈도**|(선택 사항) 각 `TuningOptions` 요소에 한 번만 사용할 수 있습니다.|  
@@ -53,7 +54,7 @@ ms.locfileid: "62735635"
 ## <a name="example"></a>예제  
  이 요소의 사용 예제를 보려면 [단순 XML 입력 파일 예제&#40;DTA&#41;](simple-xml-input-file-sample-dta.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 입력 파일 참조&#40;데이터베이스 엔진 튜닝 관리자&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

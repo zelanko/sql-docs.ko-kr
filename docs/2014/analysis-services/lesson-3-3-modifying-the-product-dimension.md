@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ff912ed43048e00f0ed77989a46b3b7d0b111cff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078838"
 ---
 # <a name="modifying-the-product-dimension"></a>Product 차원 수정
@@ -25,13 +25,15 @@ ms.locfileid: "66078838"
   
 #### <a name="to-add-a-named-calculation"></a>명명된 계산을 추가하려면  
   
-1.  **Adventure Works DW 2012** 데이터 원본 뷰를 열려면 솔루션 탐색기의 **데이터 원본 뷰** 폴더에서 **Adventure Works DW 2012** 를 두 번 클릭합니다.  
+1.  
+  **Adventure Works DW 2012** 데이터 원본 뷰를 열려면 솔루션 탐색기의 **데이터 원본 뷰** 폴더에서 **Adventure Works DW 2012** 를 두 번 클릭합니다.  
   
 2.  다이어그램 창의 맨 아래에서 **Product** 테이블 머리글을 마우스 오른쪽 단추로 클릭한 다음 **새 명명된 계산**을 클릭합니다.  
   
-3.  에 **명명 된 계산 만들기** 대화 상자에서 `ProductLineName` 에 **열 이름** 상자입니다.  
+3.  **명명 된 계산 만들기** 대화 상자에서 `ProductLineName` **열 이름** 상자에을 입력 합니다.  
   
-4.  **식** 상자에 다음 **CASE** 문을 입력하거나 복사하여 붙여넣습니다.  
+4.  
+  **식** 상자에 다음 **CASE** 문을 입력하거나 복사하여 붙여넣습니다.  
   
     ```  
     CASE ProductLine  
@@ -45,7 +47,7 @@ ms.locfileid: "66078838"
   
      이 **CASE** 문은 큐브의 각 제품 라인에 대해 알기 쉬운 이름을 만듭니다.  
   
-5.  클릭 **확인** 만들려는 `ProductLineName` 명명 된 계산 합니다. 기다려야 할 수도 있습니다.  
+5.  **확인** 을 클릭 하 여 `ProductLineName` 명명 된 계산을 만듭니다. 기다려야 할 수도 있습니다.  
   
 6.  **파일** 메뉴에서 **모두 저장**을 클릭합니다.  
   
@@ -55,37 +57,42 @@ ms.locfileid: "66078838"
   
 1.  Product 차원에 대한 차원 디자이너로 전환합니다. 이렇게 하려면 솔루션 탐색기의 **차원** 노드에서 **Product** 차원을 두 번 클릭합니다.  
   
-2.  **차원 구조** 탭의 **특성** 창에서 **Product Line**을 선택합니다.  
+2.  
+  **차원 구조** 탭의 **특성** 창에서 **Product Line**을 선택합니다.  
   
-3.  화면의 오른쪽 속성 창에서 클릭 합니다 **NameColumn** 속성 창 맨 아래에 필드 및 클릭 한 다음 ( **...** ) 버튼을 클릭 하 여 **이름 열** 대화 상자. 화면 오른쪽의 **속성** 탭을 클릭하여 속성 창을 열어야 할 수도 있습니다.  
+3.  화면 오른쪽에 있는 속성 창에서 창 맨 아래에 있는 **NameColumn** 속성 필드를 클릭 한 다음 찾아보기 (**...**) 단추를 클릭 하 여 **이름 열** 대화 상자를 엽니다. 화면 오른쪽의 **속성** 탭을 클릭하여 속성 창을 열어야 할 수도 있습니다.  
   
-4.  선택 `ProductLineName` 맨 아래에 **원본 열** 목록을 연 다음 클릭 **확인**합니다.  
+4.  `ProductLineName` **원본 열** 목록의 맨 아래에서를 선택 하 고 **확인**을 클릭 합니다.  
   
-     이제 NameColumn 필드에 **Product.ProductLineName (WChar)** 텍스트가 포함됩니다. **Product Line** 특성 계층의 멤버가 약식 제품 라인 이름이 아니라 전체 제품 라인 이름을 표시합니다.  
+     이제 NameColumn 필드에 **Product.ProductLineName (WChar)** 텍스트가 포함됩니다. 
+  **Product Line** 특성 계층의 멤버가 약식 제품 라인 이름이 아니라 전체 제품 라인 이름을 표시합니다.  
   
-5.  **차원 구조** 탭의 **특성** 창에서 **Product Key**를 선택합니다.  
+5.  
+  **차원 구조** 탭의 **특성** 창에서 **Product Key**를 선택합니다.  
   
-6.  속성 창에서 클릭 합니다 **NameColumn** 속성, 필드 및 줄임표를 클릭 한 다음 ( **...** ) 버튼을 클릭 하 여 **이름 열** 대화 상자.  
+6.  속성 창에서 **NameColumn** 속성 필드를 클릭 한 다음 줄임표 (**...**) 단추를 클릭 하 여 **이름 열** 대화 상자를 엽니다.  
   
-7.  **원본 열** 목록에서 **EnglishProductName** 을 선택하고 **확인**을 클릭합니다.  
+7.  
+  **원본 열** 목록에서 **EnglishProductName** 을 선택하고 **확인**을 클릭합니다.  
   
      이제 NameColumn 필드에 **Product.EnglishProductName (WChar)** 텍스트가 포함됩니다.  
   
-8.  속성 창에서 위로 스크롤하여을 클릭 합니다 **이름을** 속성 필드 및를 입력 한 후 `Product Name`합니다.  
+8.  속성 창에서 위로 스크롤하여 **Name** 속성 필드를 클릭 한 다음를 입력 `Product Name`합니다.  
   
 ## <a name="creating-a-hierarchy"></a>계층 만들기  
   
 #### <a name="to-create-a-hierarchy"></a>계층을 만들려면  
   
-1.  **특성** 창의 **Product Line** 특성을 **계층** 창으로 끌어옵니다.  
+1.  
+  **특성** 창의 **Product Line** 특성을 **계층** 창으로 끌어옵니다.  
   
-2.  끌어서를 **모델 이름** 에서 특성을 **특성** 창의  **\<새 수준 >** 셀에 **계층** 창, 아래 합니다 **Product Line** 수준입니다.  
+2.  **특성** 창의 **Model Name** 특성을 **계층** 창의 **Product Line** 수준 아래에 있는 ** \<새 수준>** 셀로 끕니다.  
   
-3.  끌어서를 `Product Name` 에서 특성을 **특성** 창을  **\<새 수준 >** 셀에 **계층** 합니다 아래창 **모델 이름** 수준입니다. 이전 단원에서 Product Key를 Product Name으로 바꿨습니다.  
+3.  특성 창의 `Product Name` **특성** 을 **계층** 창의 **모델 이름** 수준 아래에 있는 ** \<새 수준>** 셀로 끕니다. 이전 단원에서 Product Key를 Product Name으로 바꿨습니다.  
   
-4.  에 **계층** 창을 **차원 구조** 탭, 제목 표시줄을 마우스 오른쪽 단추로 클릭 합니다 **계층** 계층 클릭 **이름 바꾸기** 를 입력 하 고 `Product Model Lines`입니다.  
+4.  **차원 구조** 탭의 **계층** 창에서 **hierarchy** 계층의 제목 표시줄을 마우스 오른쪽 단추로 클릭 하 고 **이름 바꾸기**를 클릭 한 다음를 입력 `Product Model Lines`합니다.  
   
-     계층 이름이 이제 `Product Model Lines`합니다.  
+     계층 이름이 이제 `Product Model Lines`입니다.  
   
 5.  **파일** 메뉴에서 **모두 저장**을 클릭합니다.  
   
@@ -93,11 +100,12 @@ ms.locfileid: "66078838"
   
 #### <a name="to-specify-the-folder-and-member-names"></a>폴더 이름 및 멤버 이름을 지정하려면  
   
-1.  **특성** 창에서 Ctrl 키를 누른 채 각 항목을 클릭하여 다음 특성을 선택합니다.  
+1.  
+  **특성** 창에서 Ctrl 키를 누른 채 각 항목을 클릭하여 다음 특성을 선택합니다.  
   
     -   **클래스**  
   
-    -   **색**  
+    -   **Color**  
   
     -   **Days To Manufacture**  
   
@@ -109,15 +117,16 @@ ms.locfileid: "66078838"
   
     -   **Size Range**  
   
-    -   **스타일**  
+    -   **Style**  
   
-    -   **Weight**  
+    -   **가중치**  
   
-2.  에 **AttributeHierarchyDisplayFolder** 유형 속성 창에서 속성 필드 `Stocking`합니다.  
+2.  속성 창의 **AttributeHierarchyDisplayFolder** 속성 필드에을 (를) `Stocking`입력 합니다.  
   
      이제 이러한 특성을 단일 표시 폴더로 그룹화했습니다.  
   
-3.  **특성** 창에서 다음 특성을 선택합니다.  
+3.  
+  **특성** 창에서 다음 특성을 선택합니다.  
   
     -   **Dealer Price**  
   
@@ -125,27 +134,29 @@ ms.locfileid: "66078838"
   
     -   **Standard Cost**  
   
-4.  에 **AttributeHierarchyDisplayFolder** 유형 속성 창에서 셀 속성 `Financial`합니다.  
+4.  속성 창의 **AttributeHierarchyDisplayFolder** 속성 셀에를 입력 `Financial`합니다.  
   
      이제 이러한 특성을 두 번째 표시 폴더로 그룹화했습니다.  
   
-5.  **특성** 창에서 다음 특성을 선택합니다.  
+5.  
+  **특성** 창에서 다음 특성을 선택합니다.  
   
-    -   **End Date**  
+    -   **종료 날짜**  
   
-    -   **Start Date**  
+    -   **시작 날짜**  
   
     -   **상태**  
   
-6.  에 **AttributeHierarchyDisplayFolder** 유형 속성 창에서 셀 속성 `History`합니다.  
+6.  속성 창의 **AttributeHierarchyDisplayFolder** 속성 셀에를 입력 `History`합니다.  
   
      이제 이러한 특성을 세 번째 표시 폴더로 그룹화했습니다.  
   
-7.  선택는 `Product Model Lines` 계층에는 **계층** 창과 다음 변경을 **AllMemberName** 속성 창에서 속성 `All Products`합니다.  
+7.  계층 창 `Product Model Lines` 에서 계층을 **** 선택 하 고 속성 창 **AllMemberName** 속성을로 `All Products`변경 합니다.  
   
-8.  열린 영역을 클릭 합니다 **계층** 창과 다음 변경 합니다 **AttributeAllMemberName** 속성 창의 맨 위에 있는 속성 `All Products`합니다.  
+8.  **계층** 창의 열린 영역을 클릭 한 다음 속성 창 맨 위에 있는 **AttributeAllMemberName** 속성을로 `All Products`변경 합니다.  
   
-     열린 영역을 클릭하면 Product 차원 자체의 속성을 수정할 수 있습니다. **특성** 창의 특성 목록 맨 위에 있는 **Product** 를 클릭해도 됩니다.  
+     열린 영역을 클릭하면 Product 차원 자체의 속성을 수정할 수 있습니다. 
+  **특성** 창의 특성 목록 맨 위에 있는 **Product** 를 클릭해도 됩니다.  
   
 9. **파일** 메뉴에서 **모두 저장**을 클릭합니다.  
   
@@ -158,9 +169,11 @@ ms.locfileid: "66078838"
   
 2.  다이어그램에서 **Model Name** 특성을 마우스 오른쪽 단추로 클릭한 다음 **새 특성 관계**를 클릭합니다.  
   
-3.  **특성 관계 만들기** 대화 상자에서 **원본 특성**은 **Model Name**입니다. **관련 특성** 을 **Product Line**으로 설정합니다.  
+3.  
+  **특성 관계 만들기** 대화 상자에서 **원본 특성** 은 **Model Name**입니다. 
+  **관련 특성**을 **Product Line**으로 설정합니다.  
   
-     멤버 간의 관계는 시간이 지나면 변경될 수 있으므로 **관계 유형** 목록에서 관계 유형을 **유동** 으로 설정된 상태로 둡니다. 예를 들어 제품 모델은 나중에 다른 제품 라인으로 이전될 수 있습니다.  
+     멤버 간의 관계는 시간이 지나면 변경될 수 있으므로 **관계 유형** 목록에서 관계 유형을 **유동**으로 설정된 상태로 둡니다. 예를 들어 제품 모델은 나중에 다른 제품 라인으로 이전될 수 있습니다.  
   
 4.  **확인**을 클릭합니다.  
   
@@ -170,20 +183,22 @@ ms.locfileid: "66078838"
   
 #### <a name="to-review-the-product-dimension-changes"></a>Product 차원 변경 내용을 검토하려면  
   
-1.  **의** 빌드 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]메뉴에서 **Analysis Services Tutorial 배포**를 클릭합니다.  
+1.  
+  **의** 빌드 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]메뉴에서 **Analysis Services Tutorial 배포**를 클릭합니다.  
   
-2.  **배포가 완료되었습니다.** 메시지를 받은 후 **Product** 차원에 대한 **차원 디자이너** 의 **브라우저** 탭을 클릭한 다음 디자이너의 도구 모음에 있는 다시 연결 단추를 클릭합니다.  
+2.  
+  **배포가 완료되었습니다.** 메시지를 받은 후 **Product** 차원에 대한 **차원 디자이너** 의 **브라우저** 탭을 클릭한 다음 디자이너의 도구 모음에 있는 다시 연결 단추를 클릭합니다.  
   
-3.  확인 `Product Model Lines` 에서 선택한는 **계층** 목록을 연 다음 확장 `All Products`합니다.  
+3.  계층 목록 `Product Model Lines` 에서가 선택 되어 **** 있는지 확인 한 다음를 확장 `All Products`합니다.  
   
-     이름을 합니다 **모든** 구성원으로 표시 됩니다. `All Products`합니다. 변경 때문에 이것이 합니다 **AllMemberName** 계층에 대 한 속성 `All Products` 단원의 앞부분에서. 또한 **Product Line** 수준의 멤버는 이제 한 자로 된 약어가 아니라 알아보기 쉬운 이름을 갖게 되었습니다.  
+     **All** 멤버의 이름이로 `All Products`표시 됩니다. 이는 이전 단원에서 계층의 **AllMemberName** 속성을로 `All Products` 변경 했기 때문입니다. 또한 **Product Line** 수준의 멤버는 이제 한 자로 된 약어가 아니라 알아보기 쉬운 이름을 갖게 되었습니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [Date 차원 수정](lesson-3-4-modifying-the-date-dimension.md)  
   
-## <a name="see-also"></a>관련 항목  
- [데이터 원본 뷰에서 명명된 계산 정의&#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
+## <a name="see-also"></a>참고 항목  
+ [데이터 원본 뷰에서 명명 된 계산을 정의 하 여 Analysis Services &#40;&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
  [사용자 정의 계층 만들기](multidimensional-models/user-defined-hierarchies-create.md)   
- [특성 계층에 대해 &#40;All&#41; 수준 구성](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [특성 계층에 대 한 모든&#41; 수준 &#40;구성](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

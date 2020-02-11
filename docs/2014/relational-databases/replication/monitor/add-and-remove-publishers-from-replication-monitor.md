@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 484aafea03bb1b053239e9948ac498403b5ac25d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667421"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>복제 모니터에서 게시자 추가 및 제거
@@ -46,7 +46,7 @@ ms.locfileid: "62667421"
   
 2.  **게시자 추가** 대화 상자에서 **추가**를 클릭한 다음 **Oracle 게시자 추가**를 클릭합니다.  
   
-3.  **서버에 연결** 대화 상자에서 Oracle 게시자와 관련된 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자의 이름을 입력한 다음 인증 유형을 선택합니다. **SQL Server 인증**을 선택한 경우 로그인 및 암호를 입력합니다. 지정한 자격 증명은 나중에 이 서버에 연결할 때 사용하기 위해 복제 모니터에 의해 저장됩니다. 지정한 Windows 계정 또는 SQL Server 로그인은 **sysadmin** 고정 서버 역할의 멤버이거나 배포 데이터베이스에 있는 **replmonitor** 고정 데이터베이스 역할의 멤버여야 합니다.  
+3.  **서버에 연결** 대화 상자에서 Oracle 게시자와 연결된 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자의 이름을 입력하고 인증 유형을 선택합니다. **SQL Server 인증**을 선택한 경우 로그인 및 암호를 입력합니다. 지정한 자격 증명은 나중에 이 서버에 연결할 때 사용하기 위해 복제 모니터에 의해 저장됩니다. 지정한 Windows 계정 또는 SQL Server 로그인은 **sysadmin** 고정 서버 역할의 멤버이거나 배포 데이터베이스에 있는 **replmonitor** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
 4.  **연결**을 클릭합니다.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "62667421"
   
 2.  게시자 그룹을 마우스 오른쪽 단추로 클릭한 다음 **제거**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [배포 구성](../configure-distribution.md)   
  [복제 모니터링](../monitoring-replication.md)  
   

@@ -11,27 +11,28 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: f96625c9658c3bd9864f0928e738357b6e14311e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089852"
 ---
 # <a name="options-text-editor---xml---formatting-page"></a>옵션(텍스트 편집기 - XML - 서식 페이지)
 
-이 대화 상자를 사용하여 XML 편집기의 서식 설정을 지정할 수 있습니다. **옵션** 대화 상자는 **도구** 메뉴에서 액세스할 수 있습니다.  
+이 대화 상자를 사용하여 XML 편집기의 서식 설정을 지정할 수 있습니다. 
+  **옵션** 대화 상자는 **도구** 메뉴에서 액세스할 수 있습니다.  
   
 > [!NOTE]  
 > 이러한 설정은 **옵션** 대화 상자에서 **텍스트 편집기** 폴더,**XML** 폴더, **서식** 옵션을 차례로 선택할 때 사용할 수 있습니다.  
   
 ## <a name="attributes"></a>특성  
  **특성 수동 서식 유지**  
- 특성 서식을 다시 설정하지 마십시오. 기본값입니다.  
+ 특성 서식을 다시 설정하지 마십시오. 이것이 기본값입니다.  
   
 > [!NOTE]  
 >  특성이 여러 줄로 된 경우 편집기에서 상위 요소의 들여쓰기에 맞게 특성의 각 줄을 들여씁니다.  
   
- **별도 줄에 특성 맞춤**  
+ **별도의 줄에 각 특성 정렬**  
  첫 번째 특성의 들여쓰기에 맞게 두 번째 및 이후의 특성을 세로로 정렬합니다. 다음 XML 텍스트는 특성 정렬 방법의 예입니다.  
   
 ```  
@@ -42,15 +43,16 @@ ms.locfileid: "66089852"
 ```  
   
 ## <a name="auto-reformat"></a>자동 서식 다시 설정  
- **클립보드에서 붙여 넣을 때.**  
+ **클립보드에서 붙여 넣을 때**  
  클립보드에서 붙여 넣은 XML 텍스트 서식을 다시 설정합니다.  
   
- **끝 태그 완료 시**  
+ **끝 태그가 완료될 때**  
  끝 태그가 완료될 때 요소 서식을 다시 설정합니다.  
   
 ## <a name="mixed-content"></a>혼합된 콘텐츠  
- **기본값으로 혼합된 콘텐츠 서식 지정 합니다.**  
- `xml:space="preserve"` 범위에 콘텐츠가 있을 때를 제외하고 혼합된 콘텐츠 서식을 다시 설정하려고 합니다. 기본값입니다.  
+ **기본값으로 혼합된 콘텐츠 서식 지정**  
+ 
+  `xml:space="preserve"` 범위에 콘텐츠가 있을 때를 제외하고 혼합된 콘텐츠 서식을 다시 설정하려고 합니다. 이것이 기본값입니다.  
   
  요소에 텍스트와 마크업이 혼합되어 있으면 콘텐츠가 혼합된 콘텐츠로 간주됩니다. 다음은 혼합된 콘텐츠가 있는 요소의 예입니다.  
   
@@ -62,5 +64,5 @@ ms.locfileid: "66089852"
   
  \</dir>  
   
-## <a name="see-also"></a>관련 항목  
- [XML 편집기&#40;SQL Server Management Studio&#41;](../ssms/sql-server-management-studio-ssms.md)  
+## <a name="see-also"></a>참고 항목  
+ [XML 편집기 &#40;SQL Server Management Studio&#41;](../ssms/sql-server-management-studio-ssms.md)  

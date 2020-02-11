@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd0d493f71bd0a6ac0e2d81d1427027ccdb6496c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62679801"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>선택적 XML 인덱스에 대한 경로 및 최적화 힌트 지정
@@ -29,7 +29,7 @@ ms.locfileid: "62679801"
  선택적 XML 인덱스에 대한 자세한 내용은 [SXI&#40;선택적 XML 인덱스&#41;](../xml/selective-xml-indexes-sxi.md)를 참조하세요.  
   
 ##  <a name="untyped"></a> 형식화된 XML의 XQuery 및 SQL Server 유형 이해  
- 선택적 XML 인덱스는 두 가지 유형 시스템, XQuery 유형 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유형을 지원합니다. 인덱싱된 경로는 XQuery 식을 일치시키거나 XML 데이터 형식의 value() 메서드에 대한 반환 형식을 일치시키는 데 사용할 수 있습니다.  
+ 선택적 XML 인덱스는 XQuery 유형 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유형의 두 가지 유형 시스템을 지원합니다. 인덱싱된 경로는 XQuery 식을 일치시키거나 XML 데이터 형식의 value() 메서드에 대한 반환 형식을 일치시키는 데 사용할 수 있습니다.  
   
 -   인덱싱할 경로에 주석이 지정되어 있지 않거나 XQUERY 키워드로 주석이 지정된 경우 해당 경로는 XQuery 식과 일치합니다. XQUERY로 주석이 지정된 노드 경로에는 다음과 같은 두 가지 변형이 있습니다.  
   
@@ -76,7 +76,7 @@ mypath03 = '/a/b/d'
   
  형식화되지 않은 XML에 대해 지원되는 XQuery 형식은 다음과 같습니다.  
   
--   **xs:boolean**  
+-   **xs: boolean**  
   
 -   **xs:double**  
   
@@ -110,11 +110,11 @@ pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유형은 value() 메서드의 반환 값과 일치합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유형은 SINGLETON 최적화 힌트를 지원합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유형은 SINGLETON의 최적화 힌트를 지원합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유형을 반환하는 경로에는 유형을 반드시 지정해야 합니다. 이 경우 value() 메서드에서 사용하는 것과 동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유형을 지정해야 합니다.  
   
- 다음 쿼리를 살펴보십시오.  
+ 다음과 같은 쿼리를 고려해 보세요.  
   
 ```sql  
 SELECT T.record,  
@@ -142,7 +142,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
 -   **xs:anyUri**  
   
--   **xs:boolean**  
+-   **xs: boolean**  
   
 -   **xs:date**  
   
@@ -358,27 +358,27 @@ WHERE T.xmldata.exist('
   
 |최적화 힌트|보다 효율적인 스토리지|성능 향상|  
 |-----------------------|----------------------------|--------------------------|  
-|**node()**|사용자 계정 컨트롤|아니요|  
-|**SINGLETON**|아니요|사용자 계정 컨트롤|  
-|**DATA TYPE**|사용자 계정 컨트롤|사용자 계정 컨트롤|  
-|**MAXLENGTH**|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+|**node()**|yes|예|  
+|**SINGLETON**|예|yes|  
+|**DATA TYPE**|yes|yes|  
+|**MAXLENGTH**|yes|yes|  
   
 ### <a name="optimization-hints-and-data-types"></a>최적화 힌트 및 데이터 형식  
  노드를 XQuery 데이터 형식 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식으로 인덱싱할 수 있습니다. 다음 표에서는 각 데이터 형식에서 지원되는 최적화 힌트를 보여 줍니다.  
   
 |최적화 힌트|XQuery 데이터 형식|SQL 데이터 형식|  
 |-----------------------|-----------------------|--------------------|  
-|**node()**|사용자 계정 컨트롤|아니요|  
-|**SINGLETON**|사용자 계정 컨트롤|사용자 계정 컨트롤|  
-|**DATA TYPE**|사용자 계정 컨트롤|아니요|  
-|**MAXLENGTH**|사용자 계정 컨트롤|아니요|  
+|**node()**|yes|예|  
+|**SINGLETON**|yes|yes|  
+|**DATA TYPE**|yes|예|  
+|**MAXLENGTH**|yes|예|  
   
 ### <a name="node-optimization-hint"></a>node() 최적화 힌트  
  적용 대상: XQuery 데이터 형식  
   
  node() 최적화를 사용하여 일반 쿼리를 평가하는 데 필요 없는 값을 가진 노드를 지정합니다. 이 힌트는 일반 쿼리가 노드의 존재 여부를 평가하기만 하면 될 때 스토리지 요구 사항을 줄여줍니다. 기본적으로 선택적 XML 인덱스는 복잡한 노드 유형을 제외하고 승격된 모든 노드의 값을 저장합니다.  
   
- 다음 예를 살펴 보십시오.  
+ 다음과 같은 예제를 참조하세요.  
   
 ```sql  
 SELECT T.record FROM myXMLTable T  
@@ -437,7 +437,7 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
   
 
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SXI&#40;선택적 XML 인덱스&#41;](../xml/selective-xml-indexes-sxi.md)   
  [선택적 XML 인덱스 만들기, 변경 및 삭제](../xml/create-alter-and-drop-selective-xml-indexes.md)  
   

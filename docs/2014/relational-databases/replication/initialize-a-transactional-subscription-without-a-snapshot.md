@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0cef8a7e8a64935cca6b378e14c00eb0d80f6b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721146"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>스냅샷 없이 트랜잭션 구독 초기화
@@ -73,7 +73,7 @@ ms.locfileid: "62721146"
   
  대체 방법으로 구독을 초기화하려면 [Initialize a Subscription Manually](initialize-a-subscription-manually.md)를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [구독 초기화](initialize-a-subscription.md)  
   
   

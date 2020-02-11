@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c4704fc56ae1eacfb8481533c9d743afff80e923
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62757748"
 ---
 # <a name="perspective-representation-tabular"></a>큐브 뷰 표현(테이블 형식)
   큐브 뷰는 클라이언트 애플리케이션을 위해 모델을 더 작은 부분으로 간소화하거나 집중시키는 메커니즘입니다.  
   
- 참조 [큐브 뷰 표현 (테이블 형식)](perspective-representation-tabular.md) 큐브 뷰 표현을 만들고 조작 하는 방법에 대해서는 설명에 대 한 합니다.  
+ 큐브 뷰 표현을 만들고 조작 하는 방법에 대 한 자세한 설명은 [큐브 뷰 표현 (테이블 형식)](perspective-representation-tabular.md) 을 참조 하세요.  
   
 > [!WARNING]  
 >  큐브 뷰는 보안 메커니즘이 아니므로 다른 인터페이스를 통해 큐브 뷰 밖에 있는 개체에 계속 액세스할 수 있습니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "62757748"
  AMO 개체를 기준으로 큐브 뷰 표현은 <xref:Microsoft.AnalysisServices.Perspective>와 일 대 일 매핑 관계를 가지며 그 밖의 주요 AMO 개체는 필수 항목이 아닙니다.  
   
 ### <a name="perspective-in-amo"></a>AMO의 큐브 뷰  
- 다음 코드 조각에서는 테이블 형식 모델에서 큐브 뷰를 만드는 방법을 보여 줍니다. 이 코드 조각의 키 요소는 perspectiveElements입니다. 이 개체는 사용자에게 노출되는 테이블 형식 모델의 모든 개체에 대한 그래픽 표현입니다. *perspectiveElements* 4 개의 열을 포함 하며이 시나리오에 대 한 1, 2 및 3 열만 해당 됩니다. 열 1은 표시되는 요소 형식인 -elementTypeValue-를 포함합니다. 열 2는 요소의 전체 이름인 --를 포함하며 큐브 뷰에 요소를 입력하려면 이 이름을 구문 분석해야 합니다. 열 3은 확인란 항목인 -checkedElement-를 포함하며 이 항목은 요소가 큐브 뷰의 일부인지 여부를 알려줍니다.  
+ 다음 코드 조각에서는 테이블 형식 모델에서 큐브 뷰를 만드는 방법을 보여 줍니다. 이 코드 조각의 키 요소는 perspectiveElements입니다. 이 개체는 사용자에게 노출되는 테이블 형식 모델의 모든 개체에 대한 그래픽 표현입니다. *perspectiveElements* 에는 4 개의 열이 포함 되어 있습니다 .이 시나리오에서는 열 1, 2 및 3만 관련 됩니다. 열 1은 표시되는 요소 형식인 -elementTypeValue-를 포함합니다. 열 2는 요소의 전체 이름인 --를 포함하며 큐브 뷰에 요소를 입력하려면 이 이름을 구문 분석해야 합니다. 열 3은 확인란 항목인 -checkedElement-를 포함하며 이 항목은 요소가 큐브 뷰의 일부인지 여부를 알려줍니다.  
   
 ```  
   

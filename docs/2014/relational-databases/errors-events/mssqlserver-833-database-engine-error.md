@@ -13,15 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: db70d1757073a48ab09f31cfb3570570e54a48cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762070"
 ---
-# <a name="mssqlserver833"></a>MSSQLSERVER_833
+# <a name="mssqlserver_833"></a>MSSQLSERVER_833
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -30,7 +30,7 @@ ms.locfileid: "62762070"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|BUF_LONG_IO|  
-|메시지 텍스트|SQL Server 데이터베이스의 파일 [%ls]를 완료 하려면 %d 초 보다 오래 걸리는 I/O 요청이 %d 개가 발생 합니다.`[%ls] (%d)`합니다.  OS 파일 핸들은 0x%p입니다.  가장 최근의 시간 초과 I/O의 오프셋은 %#016I64x입니다.|  
+|메시지 텍스트|SQL Server 데이터베이스`[%ls] (%d)`에서 파일 [% ls]을 (를) 완료 하는 데% d 초 보다 더 오래 걸린 i/o 요청이% d 개 발견 되었습니다.  OS 파일 핸들은 0x%p입니다.  가장 최근의 시간 초과 I/O의 오프셋은 %#016I64x입니다.|  
   
 ## <a name="explanation"></a>설명  
  이 메시지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 디스크에서 읽기 또는 쓰기 요청을 실행하여 해당 요청이 반환되는 데 15초 이상 소요되었음을 나타냅니다. 이 오류는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 보고하고 IO 하위 시스템에 문제가 있음을 나타냅니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "62762070"
   
 -   **Current Disk Queue Length**  
   
- 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 실행하는 컴퓨터의 **Average Disk Sec/Transfer** 시간은 일반적으로 15밀리초 미만입니다. **Average Disk Sec/Transfer** 값이 증가하는 경우 이는 I/O 하위 시스템이 I/O 요구를 최적으로 따라가고 있지 못함을 나타냅니다.  
+ 예를 들어 **를 실행하는 컴퓨터의**Average Disk Sec/Transfer[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시간은 일반적으로 15밀리초 미만입니다. **Average Disk Sec/Transfer** 값이 증가하는 경우 이는 I/O 하위 시스템이 I/O 요구를 최적으로 따라가고 있지 못함을 나타냅니다.  
   
 > [!NOTE]  
 >  바이러스 백신 프로그램으로 인해 디스크 액세스가 느려질 수 있습니다. 액세스 속도를 높이려면 활성 바이러스 검사의 오류 메시지에서 지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 파일을 제외하십시오.  

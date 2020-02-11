@@ -1,5 +1,5 @@
 ---
-title: 마이닝 로지스틱 회귀 모델에 대 한 모델 콘텐츠 (Analysis Services-데이터 마이닝) | Microsoft Docs
+title: 로지스틱 회귀 모델에 대 한 마이닝 모델 콘텐츠 (Analysis Services 데이터 마이닝) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b463035cc83fafd2b283d85a577616fa962fcd1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083619"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>로지스틱 회귀 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
@@ -31,7 +31,7 @@ ms.locfileid: "66083619"
   
  그러나 로지스틱 회귀 모델에서는 숨겨진 계층을 나타내는 노드가 비어 있으며 자식이 없습니다. 따라서 모델에는 개별 출력(NODE_TYPE = 23) 및 개별 입력(NODE_TYPE = 21)을 나타내는 노드만 있고 숨겨진 개별 노드는 없습니다.  
   
- ![로지스틱 회귀 모델에 대 한 콘텐츠 구조](../media/skt-modelcontentstructure-logregc.gif "로지스틱 회귀 모델에 대 한 콘텐츠 구조")  
+ ![로지스틱 회귀 모델에 대한 콘텐츠 구조](../media/skt-modelcontentstructure-logregc.gif "로지스틱 회귀 모델에 대한 콘텐츠 구조")  
   
  기본적으로 로지스틱 회귀 모델은 **Microsoft 신경망 뷰어**에 표시됩니다. 이 사용자 지정 뷰어를 사용하면 입력 특성과 해당 값을 필터링하고 이러한 항목이 출력에 주는 영향을 그래픽으로 볼 수 있습니다. 뷰어의 도구 설명에는 각 입력 및 출력 값 쌍과 연결된 확률 및 리프트가 표시됩니다. 자세한 내용은 [Microsoft 신경망 뷰어를 사용하여 모델 찾아보기](browse-a-model-using-the-microsoft-neural-network-viewer.md)를 참조하세요.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66083619"
 |출력 노드|출력 특성 이름|  
   
  NODE_NAME  
- 노드 이름입니다. 현재 이 열은 NODE_UNIQUE_NAME과 동일한 값을 포함하지만 이는 이후 릴리스에서 변경될 수 있습니다.  
+ 노드의 이름입니다. 현재 이 열은 NODE_UNIQUE_NAME과 동일한 값을 포함하지만 이는 이후 릴리스에서 변경될 수 있습니다.  
   
  NODE_UNIQUE_NAME  
  노드의 고유한 이름입니다.  
@@ -167,7 +167,7 @@ ms.locfileid: "66083619"
  MSOLAP_NODE_SHORT_CAPTION  
  로지스틱 회귀 모델에서는 항상 비어 있습니다.  
   
-##  <a name="bkmk_NodeIDs"></a> 노드 이름 및 ID 사용  
+##  <a name="bkmk_NodeIDs"></a>노드 이름 및 Id 사용  
  로지스틱 회귀 모델의 노드 이름은 모델에 있는 노드 간의 관계에 대한 추가 정보를 제공합니다. 다음 표에서는 각 계층의 노드에 할당되는 ID의 규칙을 보여 줍니다.  
   
 |노드 유형|노드 ID의 규칙|  
@@ -183,9 +183,9 @@ ms.locfileid: "66083619"
   
  이러한 ID를 통해 출력 노드의 NODE_DISTRIBUTION 테이블을 보고 출력 특성과 특정 입력 계층 특성 간의 관계를 파악할 수 있습니다. 해당 테이블의 각 행에는 다시 특정 입력 특성 노드를 가리키는 ID가 들어 있습니다. NODE_DISTRIBUTION 테이블에는 해당 입력-출력 쌍에 대한 계수도 들어 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Microsoft 로지스틱 회귀 알고리즘](microsoft-logistic-regression-algorithm.md)   
- [신경망 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [신경망 모델에 대 한 마이닝 모델 콘텐츠 &#40;Analysis Services 데이터 마이닝&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [로지스틱 회귀 모델 쿼리 예제](logistic-regression-model-query-examples.md)   
  [Microsoft 로지스틱 회귀 알고리즘 기술 참조](microsoft-logistic-regression-algorithm-technical-reference.md)  
   

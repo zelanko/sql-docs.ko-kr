@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c9b7941f7d85404f56d24252534c518037d30a17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62695653"
 ---
 # <a name="job-propertiesnew-job-steps-page"></a>작업 속성: 새 작업(단계 페이지)
-  이 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업의 단계를 확인하고 구성할 수 있습니다.  
+  이 페이지를 사용 하 여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업에 대 한 작업 단계를 확인 하 고 구성할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **작업 단계 목록**  
  이 작업의 단계를 나열합니다.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "62695653"
  **새로 만들기**  
  선택한 작업 단계 아래에 새 작업 단계를 만듭니다.  
   
- **Insert**  
+ **넣거나**  
  선택한 작업 단계 위에 새 작업 단계를 만듭니다.  
   
  **편집**  
@@ -44,7 +44,7 @@ ms.locfileid: "62695653"
  **Delete**  
  선택한 작업 단계를 삭제합니다. 작업 단계를 삭제하면 해당 출력 로그가 자동으로 삭제됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [작업 구현](implement-jobs.md)  
   
   

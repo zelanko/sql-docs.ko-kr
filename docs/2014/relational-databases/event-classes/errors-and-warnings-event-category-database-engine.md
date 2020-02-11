@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b86b68b0e7273a275c8dd1bd00fe99a7c462a27d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62662629"
 ---
 # <a name="errors-and-warnings-event-category-database-engine"></a>Errors and Warnings 이벤트 범주(데이터베이스 엔진)
@@ -46,7 +46,7 @@ ms.locfileid: "62662629"
 |[Sort Warnings 이벤트 클래스](sort-warnings-event-class.md)|정렬 작업이 메모리에 적합하지 않음을 나타냅니다.|  
 |[User Error Message 이벤트 클래스](user-error-message-event-class.md)|사용자에게 표시되는 오류 메시지를 보여 줍니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [sp_trace_setevent&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

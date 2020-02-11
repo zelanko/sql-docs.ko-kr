@@ -12,11 +12,11 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 184d08a213dfe796421b379fbb1e3deccd0c56e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66090867"
 ---
 # <a name="assembly-load-event-class"></a>Assembly Load 이벤트 클래스
-  참조 [load 이벤트 클래스 어셈블리](../../database-engine/assembly-load-event-class.md)합니다.  
+  [어셈블리-로드-클래스](../../database-engine/assembly-load-event-class.md)를 참조 하세요.  

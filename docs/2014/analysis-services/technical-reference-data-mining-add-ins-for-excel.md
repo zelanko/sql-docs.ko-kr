@@ -1,5 +1,5 @@
 ---
-title: 기술 참조 (데이터 마이닝 추가 기능 Excel 용) | Microsoft Docs
+title: 기술 참조 (Excel 용 데이터 마이닝 추가 기능) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cdf32878788bd68f9f0da36500be75fed5b96691
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066223"
 ---
 # <a name="technical-reference-data-mining-add-ins-for-excel"></a>기술 참조(Excel용 데이터 마이닝 추가 기능)
@@ -30,18 +30,18 @@ ms.locfileid: "66066223"
   
  Excel용 데이터 마이닝 클라이언트에서 마법사를 사용하는 경우 알고리즘 매개 변수를 변경하고 고급 옵션을 설정하여 알고리즘의 데이터 처리 방식을 사용자 지정할 수 있습니다.  
   
--   [알고리즘 매개 변수 &#40;SQL Server 데이터 마이닝 추가 기능&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md)  
+-   [알고리즘 매개 변수 SQL Server 데이터 마이닝 추가 기능을 &#40;&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md)  
   
  **구성 마법사 도움말**  
   
  구성 마법사는 처음 추가 기능을 열 때 실행되어 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 서버에 연결하는 것을 도와 줍니다. 마법사 단계에서 문제가 발생하는 경우 다음 항목에서 추가 도움말을 참조하십시오.  
   
--   [서버 구성 유틸리티 &#40;Excel 용 데이터 마이닝 추가 기능&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
+-   [Excel 용 데이터 마이닝 추가 기능&#41;서버 구성 유틸리티 &#40;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [데이터 마이닝 알고리즘 &#40;SQL Server 데이터 마이닝 추가 기능&#41;](data-mining-algorithms-sql-server-data-mining-add-ins.md)  
+ [데이터 마이닝 알고리즘은 데이터 마이닝 추가 기능 SQL Server &#40;&#41;](data-mining-algorithms-sql-server-data-mining-add-ins.md)  
   
- [서버 구성 유틸리티 &#40;Excel 용 데이터 마이닝 추가 기능&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
+ [Excel 용 데이터 마이닝 추가 기능&#41;서버 구성 유틸리티 &#40;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
   
 ## <a name="related-sections"></a>관련 섹션  
   

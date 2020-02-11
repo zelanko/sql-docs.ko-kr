@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b99fb881fc6bf09aa848bd41a42f8254e5f3acd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754211"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>데이터베이스 미러링 구성 문제 해결(SQL Server)
@@ -28,7 +28,7 @@ ms.locfileid: "62754211"
 > [!NOTE]  
 >  [데이터베이스 미러링을 위한 선행 조건](prerequisites-restrictions-and-recommendations-for-database-mirroring.md)을 모두 충족하는지 확인하세요.  
   
-|문제점|요약|  
+|문제|요약|  
 |-----------|-------------|  
 |오류 메시지 1418|이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메시지는 서버 네트워크 주소가 없거나 도달할 수 없음을 나타내며 네트워크 주소 이름을 확인한 후 명령을 다시 실행하도록 제안합니다. 자세한 내용은 [MSSQLSERVER_1418](../../relational-databases/errors-events/mssqlserver-1418-database-engine-error.md) 을 참조하세요.|  
 |[계정](#Accounts)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 실행되고 있는 계정을 올바르게 구성하기 위한 요구 사항에 대해 설명합니다.|  
@@ -37,7 +37,7 @@ ms.locfileid: "62754211"
 |[네트워크 액세스](#NetworkAccess)|각 서버 인스턴스에서 TCP를 통해 다른 서버 인스턴스의 포트에 액세스할 수 있어야 한다는 요구 사항에 대해 설명합니다.|  
 |[미러 데이터베이스 준비](#MirrorDbPrep)|미러링이 시작될 수 있도록 미러 데이터베이스를 준비하기 위한 요구 사항을 요약합니다.|  
 |[파일 생성 작업 실패](#FailedCreateFileOp)|파일 생성 작업이 실패할 경우의 대처 방법에 대해 설명합니다.|  
-|[Transact-SQL을 사용하여 미러링 시작](#StartDbm)|ALTER DATABASE *database_name* SET PARTNER **='***partner_server***'** 문의 필수 순서에 대해 설명합니다.|  
+|[Transact-SQL을 사용하여 미러링 시작](#StartDbm)|ALTER DATABASE *database_name* SET PARTNER **= '***partner_server***'** 문의 필요한 순서에 대해 설명 합니다.|  
 |[데이터베이스 간 트랜잭션](#CrossDbTxns)|자동 장애 조치(Failover)를 사용할 경우 미결 트랜잭션이 자동으로 잘못 해결될 수 있습니다. 이러한 이유로 데이터베이스 미러링은 데이터베이스 간 트랜잭션을 지원하지 않습니다.|  
   
 ##  <a name="Accounts"></a> 계정  
@@ -126,7 +126,7 @@ ms.locfileid: "62754211"
   
  데이터베이스 미러링이 중지된 경우 주 데이터베이스에서 수행된 모든 후속 로그 백업을 미러 데이터베이스에 적용해야만 미러링을 다시 시작할 수 있습니다.  
   
- 자세한 내용은 [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)의 몇 가지 기능에 대한 백업 및 복원 고려 사항에 대해 설명합니다.  
+ 자세한 내용은 [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)을 사용합니다.  
   
 ##  <a name="FailedCreateFileOp"></a> Failed Create-File Operation  
  미러링 세션에 영향을 주지 않고 파일을 추가하려면 파일의 경로가 두 서버 모두에 있어야 합니다. 따라서 미러 데이터베이스를 만들 때 데이터베이스 파일을 이동하면 나중에 미러 데이터베이스에 파일을 추가할 수 없고 미러링이 일시 중지될 수 있습니다.  
@@ -142,7 +142,7 @@ ms.locfileid: "62754211"
  자세한 내용은 [데이터베이스 미러링 제거&#40;SQL Server&#41;](database-mirroring-sql-server.md), [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md), [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;Transact-SQL&#41;](database-mirroring-establish-session-windows-authentication.md), [데이터베이스 미러링 엔드포인트에 대한 인증서 사용&#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md) 또는 [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)을 참조하세요.  
   
 ##  <a name="StartDbm"></a> Transact-SQL을 사용하여 미러링 시작  
- ALTER DATABASE *database_name* SET PARTNER **='***partner_server***'** 문을 실행하는 순서는 매우 중요합니다.  
+ ALTER DATABASE *database_name* SET PARTNER **= '***partner_server***'** 문이 실행 되는 순서는 매우 중요 합니다.  
   
 1.  미러 서버에서 첫 번째 문을 실행해야 합니다. 이 문을 실행할 때는 미러 서버에서 다른 서버 인스턴스에 연결하지 않고 대신 주 서버가 미러 서버에 접속할 때까지 기다리도록 해당 데이터베이스에 지시합니다.  
   
@@ -160,12 +160,12 @@ ms.locfileid: "62754211"
   
 -   동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 여러 데이터베이스를 업데이트하는 트랜잭션  
   
--   MS DTC([!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator)를 사용하는 트랜잭션  
+-   MS DTC( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator)를 사용하는 트랜잭션  
   
  자세한 내용은 [데이터베이스 미러링 또는 AlwaysOn 가용성 그룹에 대해 지원되지 않는 데이터베이스 간 트랜잭션&#40;SQL Server&#41;](../availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링 설정&#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)   
- [데이터베이스 미러링 및 AlwaysOn 가용성 그룹에 대 한 전송 보안 &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)  
+ [데이터베이스 미러링 및 AlwaysOn 가용성 그룹 &#40;SQL Server에 대 한 전송 보안&#41;](transport-security-database-mirroring-always-on-availability.md)  
   
   

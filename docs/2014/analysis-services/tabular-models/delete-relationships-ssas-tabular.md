@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: abe35e51764a7d16c49c8d15d9e2031e0cdabe05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067332"
 ---
 # <a name="delete-relationships-ssas-tabular"></a>관계 삭제(SSAS 테이블 형식)
@@ -35,24 +35,29 @@ ms.locfileid: "66067332"
   
 #### <a name="to-delete-a-relationship-by-using-diagram-view"></a>다이어그램 뷰를 사용하여 관계를 삭제하려면  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 **모델** 메뉴를 클릭하고 **모델 뷰**를 가리킨 다음 **다이어그램 뷰**를 클릭합니다.  
+1.  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 **모델** 메뉴를 클릭하고 **모델 뷰**를 가리킨 다음 **다이어그램 뷰**를 클릭합니다.  
   
 2.  두 테이블 간의 관계 선을 마우스 오른쪽 단추로 클릭하고 **삭제**를 클릭합니다.  
   
 #### <a name="to-delete-a-relationship-by-using-the-manage-relationships-dialog-box"></a>관계 관리 대화 상자를 사용하여 관계를 삭제하려면  
   
-1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 **테이블** 메뉴를 클릭한 다음 **관계 관리**를 클릭합니다.  
+1.  
+  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 **테이블** 메뉴를 클릭한 다음 **관계 관리**를 클릭합니다.  
   
-2.  **관계 관리** 대화 상자의 목록에서 관계를 하나 이상 선택합니다.  
+2.  
+  **관계 관리** 대화 상자의 목록에서 관계를 하나 이상 선택합니다.  
   
      관계를 여러 개 선택하려면 Ctrl 키를 누른 채 각 관계를 클릭합니다.  
   
-3.  **관계 삭제**를 클릭합니다.  
+3.  
+  **관계 삭제**를 클릭합니다.  
   
-4.  **관계 관리** 대화 상자에서 **닫기**를 클릭합니다.  
+4.  
+  **관계 관리** 대화 상자에서 **닫기**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [관계&#40;SSAS 테이블 형식&#41;](relationships-ssas-tabular.md)   
- [두 테이블 간에 관계 만들기&#40;SSAS 테이블 형식&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)  
+## <a name="see-also"></a>참고 항목  
+ [SSAS 테이블 형식&#41;&#40;관계](relationships-ssas-tabular.md)   
+ [SSAS 테이블 형식&#41;&#40;두 테이블 간에 관계를 만듭니다.](create-a-relationship-between-two-tables-ssas-tabular.md)  
   
   

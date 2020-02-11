@@ -14,13 +14,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 67e79a107c47563e507ad27fb0bd14f703206b4c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088787"
 ---
 # <a name="technical-reference-database-engine"></a>기술 참조(데이터베이스 엔진)
+  
   [!INCLUDE[ssDE](../includes/ssde-md.md)] 의 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에 대한 도구, 언어 및 관리 프로그래밍 참조 설명서를 찾습니다.  
   
  ![작은 파일 폴더 아이콘](../../2014/integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") **기능 참조**  
@@ -37,9 +38,9 @@ ms.locfileid: "66088787"
   
  [SqlLocalDB 유틸리티](../tools/sqllocaldb-utility.md)  
   
- [자세히...](../tools/command-prompt-utility-reference-database-engine.md)  
+ [자세히 ...](../tools/command-prompt-utility-reference-database-engine.md)  
   
- ![작은 파일 폴더 아이콘](../../2014/integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") **데이터베이스 엔진 PowerShell Cmdlet**  
+ ![작은 파일 폴더 아이콘](../../2014/integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") **데이터베이스 엔진 PowerShell cmdlet**  
  [Invoke-PolicyEvaluation cmdlet](../../2014/database-engine/invoke-policyevaluation-cmdlet.md)  
   
  [Invoke-Sqlcmd cmdlet](../../2014/database-engine/invoke-sqlcmd-cmdlet.md)  
@@ -47,7 +48,7 @@ ms.locfileid: "66088787"
  ![작은 파일 폴더 아이콘](../../2014/integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") **오류 및 이벤트 참조**  
  [데이터베이스 엔진 이벤트 및 오류] (.. /relational-databases/errors-events/database-engine-events-and-errors.md0  
   
- ![작은 파일 폴더 아이콘](../../2014/integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") **실행 계획 논리 및 물리 연산자 참조**  
+ ![작은 파일 폴더 아이콘](../../2014/integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") 실행 **계획 논리 및 물리 연산자 참조**  
  [실행 계획 논리 및 물리 연산자 참조](../relational-databases/showplan-logical-and-physical-operators-reference.md)  
   
   

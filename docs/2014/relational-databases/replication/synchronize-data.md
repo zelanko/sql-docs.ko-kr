@@ -22,10 +22,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 15f4d85d117b5af09b0f67ef788364be6adad810
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62745494"
 ---
 # <a name="synchronize-data"></a>데이터 동기화
@@ -49,11 +49,11 @@ ms.locfileid: "62745494"
   
  스냅샷 게시는 동기화가 발생할 때마다 구독자에서 스키마를 완전히 새로 고치므로 모든 스키마 변경 내용이 구독자에 적용됩니다. 트랜잭션 복제 및 병합 복제 또한 가장 일반적인 스키마 변경을 지원합니다. 자세한 내용은 [게시 데이터베이스의 스키마 변경](publish/make-schema-changes-on-publication-databases.md)을 참조하세요.  
   
- 밀어넣기 구독을 동기화하려면 [밀어넣기 구독 동기화](synchronize-a-push-subscription.md)를 참조하십시오.  
+ 밀어넣기 구독을 동기화하려면 [Synchronize a Push Subscription](synchronize-a-push-subscription.md)를 참조하십시오.  
   
- 끌어오기 구독을 동기화하려면 [끌어오기 구독 동기화](synchronize-a-pull-subscription.md)를 참조하십시오.  
+ 끌어오기 구독을 동기화하려면 [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md)를 참조하십시오.  
   
- 동기화 일정을 설정하려면 [동기화 일정 지정](specify-synchronization-schedules.md)을 참조하십시오.  
+ 동기화 일정을 설정하려면 [Specify Synchronization Schedules](specify-synchronization-schedules.md)을 참조하십시오.  
   
  **동기화 충돌을 보고 해결하려면**  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62745494"
   
 -   비즈니스 논리 처리기는 병합 복제에 대해 지원됩니다. 비즈니스 논리 처리기 프레임워크를 사용하면 병합 동기화 과정 동안 호출되는 관리 코드 어셈블리를 작성할 수 있습니다. 이 어셈블리에는 동기화 중 데이터 변경, 충돌, 오류 등의 여러 상황에 응답할 수 있는 비즈니스 논리가 포함되어 있습니다. 자세한 내용은 [병합 동기화 중 비즈니스 논리 실행](merge/execute-business-logic-during-merge-synchronization.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [병합 복제 충돌 감지 및 해결](merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
   
   

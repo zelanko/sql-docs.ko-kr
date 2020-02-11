@@ -13,23 +13,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6592d81e91e0582c79bc1a8bb1264b6ab9a7b733
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080703"
 ---
 # <a name="impersonation-information-dialog-box-table-import-wizard"></a>가장 정보 대화 상자(테이블 가져오기 마법사)
-  **가장 정보** 페이지를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 데이터 원본에 연결하는 데 사용할 자격 증명을 지정할 수 있습니다. 자격 증명 가장에 대 한 자세한 내용은 참조 하세요. [가장 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-models/impersonation-ssas-tabular.md)합니다.  
   
-## <a name="options"></a>변수  
+  **가장 정보** 페이지를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 데이터 원본에 연결하는 데 사용할 자격 증명을 지정할 수 있습니다. 자격 증명 가장에 대 한 자세한 내용은 [가장 &#40;SSAS 테이블 형식&#41;](tabular-models/impersonation-ssas-tabular.md)를 참조 하세요.  
+  
+## <a name="options"></a>옵션  
  **특정 Windows 사용자 이름 및 암호**  
  지정된 Windows 사용자 계정의 보안 자격 증명을 테이블 형식 모델에 사용하려면 이 옵션을 선택합니다.  
   
  **사용자 이름**  
- 사용할 사용자 계정의 도메인과 이름을 입력합니다. 다음 형식을 사용합니다.  
+ 사용할 사용자 계정의 도메인과 이름을 입력합니다. 이때 다음 형식을 사용합니다.  
   
- *\<도메인 이름 >* **\\**  *\<사용자 계정 이름 >*  
+ 도메인 이름>* \<* **\\** 사용자 계정 이름>* \<*  
   
  이 옵션은 **특정 사용자 이름 및 암호 사용** 을 선택한 경우에만 사용할 수 있습니다.  
   
@@ -41,7 +42,7 @@ ms.locfileid: "66080703"
  **서비스 계정**  
  모델을 관리하는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 서비스와 연결된 보안 자격 증명을 사용하려면 이 옵션을 선택합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [가장&#40;SSAS 테이블 형식&#41;](tabular-models/impersonation-ssas-tabular.md)  
+## <a name="see-also"></a>참고 항목  
+ [가장 &#40;SSAS 테이블 형식&#41;](tabular-models/impersonation-ssas-tabular.md)  
   
   

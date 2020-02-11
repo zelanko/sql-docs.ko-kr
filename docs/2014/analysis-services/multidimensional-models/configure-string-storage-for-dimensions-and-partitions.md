@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7fd9d9b293287d76b50c351b29b74df509793168
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076538"
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>차원 및 파티션에 대한 문자열 스토리지 구성
@@ -38,11 +38,11 @@ ms.locfileid: "66076538"
   
 -   [필수 구성 요소](#bkmk_prereq)  
   
--   [1단계: SQL Server Data Tools에서 StringStoreCompatiblityLevel 속성 설정](#bkmk_step1)  
+-   [1 단계: SQL Server Data Tools에서 StringStoreCompatiblityLevel 속성 설정](#bkmk_step1)  
   
--   [2단계: 개체 처리](#bkmk_step2)  
+-   [2 단계: 개체 처리](#bkmk_step2)  
   
-##  <a name="bkmk_background"></a> 문자열 저장소 정보  
+##  <a name="bkmk_background"></a>문자열 저장소 정보  
  문자열 스토리지 구성은 선택 사항이므로 새 데이터베이스를 만들 때에도 최대 파일 크기가 4GB인 기본 문자열 저장소 아키텍처를 사용합니다. 더 큰 문자열 스토리지 아키텍처를 사용하면 성능에 작지만 눈에 띄는 영향을 줍니다. 따라서 문자열 스토리지 파일이 최대 4GB 제한에 근접했거나 도달한 경우에만 이 아키텍처를 사용해야 합니다.  
   
 > [!NOTE]  
@@ -50,20 +50,24 @@ ms.locfileid: "66076538"
   
  Analysis Services 다차원 데이터베이스에서는 데이터의 특성에 따른 최적화를 허용하기 위해 문자열이 숫자 데이터와 별도로 저장됩니다. 일반적으로 문자열 데이터는 이름이나 설명을 나타내는 차원 특성에 있습니다. 고유 카운트 측정값에도 문자열 데이터가 있을 수 있습니다. 문자열 데이터는 키에서도 사용할 수 있습니다.  
   
- 파일 확장명(예: .asstore, .bstore, .ksstore 또는 .string 파일)으로 문자열 저장소를 식별할 수 있습니다. 기본적으로 이러한 각 파일에는 최대 4GB 제한이 적용됩니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서는 필요에 따라 문자열 저장소가 커질 수 있도록 하는 대체 저장소 메커니즘을 지정하여 최대 파일 크기를 무시할 수 있습니다.  
+ 파일 확장명(예: .asstore, .bstore, .ksstore 또는 .string 파일)으로 문자열 저장소를 식별할 수 있습니다. 기본적으로 이러한 각 파일에는 최대 4GB 제한이 적용됩니다. 
+  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서는 필요에 따라 문자열 저장소가 커질 수 있도록 하는 대체 스토리지 메커니즘을 지정하여 최대 파일 크기를 무시할 수 있습니다.  
   
  실제 파일의 크기를 제한하는 기본 문자열 스토리지 아키텍처와 달리, 더 큰 문자열 스토리지는 최대 문자열 수를 기반으로 합니다. 더 큰 문자열 스토리지의 최대 제한은 40억 개의 고유 문자열 또는 40억 개의 레코드 중 먼저 발생하는 것입니다. 더 큰 문자열 스토리지는 짝수 크기의 레코드를 만들며 각 레코드는 64K페이지입니다. 단일 레코드에 맞지 않는 매우 긴 문자열이 있는 경우 효과적인 제한은 40억 개의 문자열 미만입니다.  
   
-##  <a name="bkmk_prereq"></a> 필수 구성 요소  
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상 버전의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]가 있어야 합니다.  
+##  <a name="bkmk_prereq"></a> 필수 조건  
+ 
+  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상 버전의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]가 있어야 합니다.  
   
  차원 및 파티션은 MOLAP 스토리지를 사용해야 합니다.  
   
- 데이터베이스 호환성 수준이 1100으로 설정되어야 합니다. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 및 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상 버전의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 사용하여 데이터베이스를 만들거나 배포하는 경우 데이터베이스 호환성 수준은 이미 1100으로 설정되어 있습니다. 이전 버전의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 만든 데이터베이스를 ssSQL11 이상으로 이동한 경우 호환성 수준을 업데이트해야 합니다. 이동은 하지만 다시 배포하지 않으려는 데이터베이스의 경우 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 호환성 수준을 설정할 수 있습니다. 자세한 내용은 [다차원 데이터베이스의 호환성 수준을 설정 &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)합니다.  
+ 데이터베이스 호환성 수준이 1100으로 설정되어야 합니다. 
+  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 및 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상 버전의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 사용하여 데이터베이스를 만들거나 배포하는 경우 데이터베이스 호환성 수준은 이미 1100으로 설정되어 있습니다. 이전 버전의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 만든 데이터베이스를 ssSQL11 이상으로 이동한 경우 호환성 수준을 업데이트해야 합니다. 이동은 하지만 다시 배포하지 않으려는 데이터베이스의 경우 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 호환성 수준을 설정할 수 있습니다. 자세한 내용은 [다차원 데이터베이스의 호환성 수준 설정 &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)를 참조 하세요.  
   
-##  <a name="bkmk_step1"></a> 1단계: SQL Server Data Tools에서 StringStoreCompatiblityLevel 속성 설정  
+##  <a name="bkmk_step1"></a>1 단계: SQL Server Data Tools에서 StringStoreCompatiblityLevel 속성 설정  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 사용하여 수정할 차원 또는 파티션이 포함된 프로젝트를 엽니다.  
+1.  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 사용하여 수정할 차원 또는 파티션이 포함된 프로젝트를 엽니다.  
   
 2.  차원에 대한 문자열 스토리지를 변경하려면 솔루션 탐색기를 엽니다. 문자열 스토리지를 수정할 차원을 두 번 클릭합니다.  
   
@@ -79,17 +83,17 @@ ms.locfileid: "66076538"
   
 8.  파일을 저장합니다.  
   
-##  <a name="bkmk_step2"></a> 2단계: 개체 처리  
+##  <a name="bkmk_step2"></a>2 단계: 개체 처리  
  새 스토리지 아키텍처는 개체를 처리한 후 사용됩니다. 개체를 처리하면 이전에 문자열 저장소 오버플로 조건을 보고한 오류가 더 이상 발생하지 않으므로 스토리지 제한 문제를 성공적으로 해결한 것도 증명됩니다.  
   
 -   솔루션 탐색기에서 수정한 차원을 마우스 오른쪽 단추로 클릭하고 **처리**를 선택합니다.  
   
  새 문자열 저장소 아키텍처를 사용하는 각 개체에 대해 전체 처리 옵션을 사용해야 합니다. 처리하기 전에 차원에 대한 영향 분석을 실행하여 종속 개체에도 재처리가 필요한지 여부를 확인해야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [도구 및 처리 접근 방법&#40;Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md)   
- [처리 옵션 및 설정 & #40; Analysis Services & #41;](processing-options-and-settings-analysis-services.md)   
- [파티션 스토리지 모드 및 처리](../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
- [차원 저장소](../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)  
+## <a name="see-also"></a>참고 항목  
+ [&#40;Analysis Services를 처리 하는 도구 및 접근 방식&#41;](tools-and-approaches-for-processing-analysis-services.md)   
+ [처리 옵션 및 설정 &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md)   
+ [파티션 저장소 모드 및 처리](../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
+ [차원 스토리지](../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)  
   
   

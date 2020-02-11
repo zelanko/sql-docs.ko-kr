@@ -15,16 +15,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f457c901c4226b9a0ead23de57c2455c619f406e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62714768"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>SQL Server의 버전별 컴퓨팅 용량 제한
   이 항목에서는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 의 서로 다른 버전별 컴퓨팅 용량 제한과 이들 버전이 하이퍼 스레드 프로세서가 있는 물리적 환경 및 가상화된 환경에서 서로 어떻게 다른지에 대해 설명합니다.  
   
- ![계산 용량 제한에 매핑](../../2014/getting-started/media/compute-capacity-limits.gif "계산 용량 제한에 매핑")  
+ ![컴퓨팅 용량 제한에 매핑](../../2014/getting-started/media/compute-capacity-limits.gif "컴퓨팅 용량 제한에 매핑")  
   
  다음 표에서는 위의 다이어그램에 사용되는 표기를 설명합니다.  
   
@@ -80,28 +80,28 @@ ms.locfileid: "62714768"
   
  다음 표에서는 각 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]버전의 단일 인스턴스에 대한 컴퓨팅 용량 제한을 보여 줍니다.  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전|단일 인스턴스에서 사용되는 최대 컴퓨팅 용량([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|단일 인스턴스에서 사용되는 최대 컴퓨팅 용량(AS, RS)|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에디션이|단일 인스턴스에서 사용되는 최대 컴퓨팅 용량([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|단일 인스턴스에서 사용되는 최대 컴퓨팅 용량(AS, RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
-|엔터프라이즈 버전: 코어 기반 라이선스<sup>1</sup>|운영 체제가 지원하는 최대 크기|운영 체제가 지원하는 최대 크기|  
-|개발자|운영 체제가 지원하는 최대 크기|운영 체제가 지원하는 최대 크기|  
-|Evaluation|운영 체제가 지원하는 최대 크기|운영 체제가 지원하는 최대 크기|  
-|Business Intelligence|소켓 4개 또는 코어 16개 미만으로 제한됨|운영 체제가 지원하는 최대 크기|  
-|표준|소켓 4개 또는 코어 16개 미만으로 제한됨|소켓 4개 또는 코어 16개 미만으로 제한됨|  
-|Web|소켓 4개 또는 코어 16개 미만으로 제한됨|소켓 4개 또는 코어 16개 미만으로 제한됨|  
+|Enterprise Edition: 코어 기반 라이선스<sup>1</sup>|운영 체제가 지원하는 최대 크기|운영 체제가 지원하는 최대 크기|  
+|Developer|운영 체제가 지원하는 최대 크기|운영 체제가 지원하는 최대 크기|  
+|평가|운영 체제가 지원하는 최대 크기|운영 체제가 지원하는 최대 크기|  
+|비즈니스 인텔리전스|소켓 4개 또는 코어 16개 미만으로 제한됨|운영 체제가 지원하는 최대 크기|  
+|Standard|소켓 4개 또는 코어 16개 미만으로 제한됨|소켓 4개 또는 코어 16개 미만으로 제한됨|  
+|웹|소켓 4개 또는 코어 16개 미만으로 제한됨|소켓 4개 또는 코어 16개 미만으로 제한됨|  
 |Express|소켓 1개 또는 코어 4개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨|  
 |Express with Tools|소켓 1개 또는 코어 4개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨|  
 |Express with Advanced Services|소켓 1개 또는 코어 4개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨|  
   
- <sup>1</sup> Server + 클라이언트 액세스 라이선스 (CAL) 기반 라이선스가 (새 계약에 사용할 수 없음)를 사용 하 여 Enterprise Edition은 최대 20 개의 코어로 제한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스. 코어 기반 서버 라이선스 모델에서는 제한이 없습니다.  
+ <sup>1</sup> SERVER + CAL (클라이언트 액세스 라이선스) 기반 라이선스가 포함 된 Enterprise Edition (새 계약에 사용할 수 없음)은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스당 최대 20 개의 코어로 제한 됩니다. 코어 기반 서버 라이선스 모델에서는 제한이 없습니다.  
   
- 게스트 애플리케이션에서는 프로세서 아키텍처가 보이지 않으므로 가상화된 환경에서 컴퓨팅 용량 제한은 코어가 아닌 논리적 프로세서 수를 기준으로 합니다.  예를 들어, 쿼드 코어 프로세서 및 코어당 하이퍼 스레드 두 개를 사용할 수 있는 기능이 장착된 소켓 4개짜리 서버에는 하이퍼 스레딩을 사용하는 논리적 프로세서가 32개 포함되어 있지만 하이퍼 스레딩을 사용하지 않는 논리적 프로세서는 16개 밖에 없습니다. 이러한 논리적 프로세서는 호스트 서버의 실제 프로세서에서의 실행 스레드로 매핑된 해당 논리적 프로세서의 가상 컴퓨터 계산 부하를 사용 하 여 서버에서 가상 컴퓨터에 매핑할 수 있습니다.  
+ 게스트 애플리케이션에서는 프로세서 아키텍처가 보이지 않으므로 가상화된 환경에서 컴퓨팅 용량 제한은 코어가 아닌 논리적 프로세서 수를 기준으로 합니다.  예를 들어, 쿼드 코어 프로세서 및 코어당 하이퍼 스레드 두 개를 사용할 수 있는 기능이 장착된 소켓 4개짜리 서버에는 하이퍼 스레딩을 사용하는 논리적 프로세서가 32개 포함되어 있지만 하이퍼 스레딩을 사용하지 않는 논리적 프로세서는 16개 밖에 없습니다. 이러한 논리적 프로세서는 호스트 서버에서 실제 프로세서의 실행 스레드로 매핑된 해당 논리적 프로세서에서의 가상 컴퓨터 계산 부하를 사용 하는 서버의 가상 컴퓨터에 매핑될 수 있습니다.  
   
  가상 프로세서당 성능이 중요한 경우 하이퍼 스레딩을 해제하려 할 수 있습니다. BIOS 설정 중에 프로세서의 BIOS 설정을 사용하여 하이퍼 스레딩을 설정하거나 해제할 수 있지만, 대부분의 경우 이는 서버에서 실행되는 전체 작업에 영향을 주는 서버 범위 작업입니다. 이는 물리적 운영 체제 환경에서 하이퍼 스레딩 성능을 향상시킬 수 있는 가상화된 환경에서 실행되는 별도의 작업을 제안할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [버전 및 SQL Server 2014 구성 요소](../sql-server/editions-and-components-of-sql-server-2016.md)   
+## <a name="see-also"></a>참고 항목  
+ [SQL Server 2014의 버전 및 구성 요소](../sql-server/editions-and-components-of-sql-server-2016.md)   
  [SQL Server 2014 버전에서 지 원하는 기능](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
- [SQL Server의 최대 용량 사양](../sql-server/maximum-capacity-specifications-for-sql-server.md)   
+ [SQL Server에 대 한 최대 용량 사양](../sql-server/maximum-capacity-specifications-for-sql-server.md)   
  [SQL Server 2014 빠른 시작 설치](../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)  
   
   

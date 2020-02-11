@@ -1,5 +1,5 @@
 ---
-title: 정확도 차트 유형 선택 및 집합 차트 옵션 | Microsoft Docs
+title: 정확도 차트 유형 선택 및 차트 옵션 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d9f375eb2d55c396000b7c2d7a14614153861e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085818"
 ---
 # <a name="choose-an-accuracy-chart-type-and-set-chart-options"></a>정확도 차트 유형 선택 및 차트 옵션 설정
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 여러 가지 방법으로 마이닝 모델의 유효성을 확인할 수 있습니다. 각 모델 또는 구조에 대해 만들 수 있는 정확도 차트의 유형은 다음 요소에 따라 달라집니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 마이닝 모델의 유효성을 확인 하기 위한 여러 가지 방법을 제공 합니다. 각 모델 또는 구조에 대해 만들 수 있는 정확도 차트의 유형은 다음 요소에 따라 달라집니다.  
   
 -   모델을 만드는 데 사용된 알고리즘 유형  
   
@@ -33,7 +33,7 @@ ms.locfileid: "66085818"
   
  이 항목에서는 여러 가지 정확도 차트에 대해 간략하게 설명합니다.  
   
- **참고** 차트와 차트 정의는 저장되지 않습니다. 차트가 포함된 창을 닫으면 차트를 다시 만들어야 합니다.  
+ **참고** 차트와 해당 정의는 저장 되지 않습니다. 차트가 포함된 창을 닫으면 차트를 다시 만들어야 합니다.  
   
 ## <a name="accuracy-chart-types"></a>정확도 차트 유형  
  선택하는 차트 종류에 따라 옵션을 추가로 구성하거나, 차트를 찾아보거나, 차트를 클립보드에 복사하고 Excel에서 데이터를 사용할 수 있습니다.  
@@ -44,7 +44,8 @@ ms.locfileid: "66085818"
 #### <a name="profit-chart"></a>수익 차트  
  모델 및 테스트 데이터에 대한 옵션을 구성한 후에는 **리프트 차트** 탭을 클릭하고 **차트 종류** 목록에서 **수익 차트** 를 선택하여 수익 차트 옵션을 설정한 다음 **확인** 을 클릭하여 결과를 볼 수 있습니다.  
   
- **수익 차트 설정** 대화 상자를 원하는 만큼 여러 번 사용하여 다른 비용 옵션을 시도하고 차트를 다시 표시할 수 있습니다. 마이닝 범례에는 각 모델의 예상 수익에 대한 세부 정보가 포함됩니다. 차트와 마이닝 범례의 내용을 클립보드에 복사하고 Excel에서 사용할 수도 있습니다.  
+ 
+  **수익 차트 설정** 대화 상자를 원하는 만큼 여러 번 사용하여 다른 비용 옵션을 시도하고 차트를 다시 표시할 수 있습니다. 마이닝 범례에는 각 모델의 예상 수익에 대한 세부 정보가 포함됩니다. 차트와 마이닝 범례의 내용을 클립보드에 복사하고 Excel에서 사용할 수도 있습니다.  
   
 #### <a name="scatter-plot"></a>산점도  
  적절한 모델 유형을 선택한 경우 **리프트 차트** 탭을 클릭하면 차트 종류가 **산점도** 로 자동 설정되고 산점도가 표시됩니다. 더 이상의 추가 구성은 불가능합니다. 차트를 클립보드에 복사하고 Excel 또는 다른 애플리케이션에 그래픽으로 붙여넣을 수도 있습니다.  

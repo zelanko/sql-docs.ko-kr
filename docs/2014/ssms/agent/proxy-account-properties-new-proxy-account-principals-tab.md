@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f97e8fec31f6011b7a2769753bed35e4ab62b47b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62650224"
 ---
 # <a name="proxy-account-properties-and-new-proxy-account-principals-tab"></a>프록시 계정 속성 및 새 프록시 계정(보안 주체 탭)
-  이 페이지를 사용하여 작업 단계에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시 계정을 사용할 수 있는 보안 주체를 확인하거나 변경할 수 있습니다.  
+  이 페이지를 사용 하 여 작업 단계에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시 계정을 사용할 수 있는 보안 주체를 확인 하거나 변경할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **프록시 계정 보안 주체**  
  이 프록시 계정을 사용할 수 있는 보안 주체를 나열합니다.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62650224"
  **제거**  
  선택한 보안 주체를 목록에서 제거합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 에이전트 프록시 만들기](create-a-sql-server-agent-proxy.md)  
   
   

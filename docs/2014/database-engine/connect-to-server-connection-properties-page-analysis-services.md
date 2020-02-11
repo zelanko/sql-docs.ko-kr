@@ -13,21 +13,23 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8a898990af62b66bb330ad490bc614f23a479ad4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755230"
 ---
 # <a name="connect-to-server-connection-properties-page-analysis-services"></a>서버에 연결(연결 속성 페이지) Analysis Services
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에 연결하거나 [!INCLUDE[ssAS](../includes/ssas-md.md)]를 **등록된 서버**에 등록할 때 이 탭을 사용하여 옵션을 확인하거나 지정할 수 있습니다. **연결** 및 **옵션** 은 연결 시에만 이 대화 상자에 나타납니다. **테스트** 및 **저장** 은 [!INCLUDE[ssAS](../includes/ssas-md.md)]등록 시에만 이 대화 상자에 나타납니다.  
   
-## <a name="options"></a>변수  
+  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에 연결하거나 [!INCLUDE[ssAS](../includes/ssas-md.md)] 를 **등록된 서버**에 등록할 때 이 탭을 사용하여 옵션을 확인하거나 지정할 수 있습니다. **연결** 및 **옵션** 은 연결 시에만이 대화 상자에 나타납니다. **테스트** 및 **저장** 은 등록 [!INCLUDE[ssAS](../includes/ssas-md.md)]시에만이 대화 상자에 나타납니다.  
+  
+## <a name="options"></a>옵션  
  **데이터베이스에 연결**  
- 목록에서 연결할 데이터베이스를 선택합니다. 선택 하는 경우  **\<기본값 >** , 서버에 대 한 기본 데이터베이스에 연결 됩니다. 선택 하는 경우  **\<서버 찾아보기 >** , 연결 하려는 데이터베이스에 대 한 서버를 찾아볼 수 있습니다.  
+ 목록에서 연결할 데이터베이스를 선택합니다. ** \<기본>** 를 선택 하면 서버의 기본 데이터베이스에 연결 됩니다. ** \<서버>찾아보기 **를 선택 하면 연결 하려는 데이터베이스에 대 한 서버를 찾아볼 수 있습니다.  
   
- **연결 제한 시간**  
- 제한 시간이 초과하기 전까지 연결을 대기하는 시간(초)을 입력합니다. 기본값은 15초입니다.  
+ **연결 시간 제한**  
+ 제한 시간이 초과 되기 전까지 연결이 설정 될 때까지 대기 하는 시간 (초)을 입력 합니다. 기본값은 15 초입니다.  
   
  **실행 제한 시간**  
  서버에서 태스크가 실행 완료되기까지 대기하는 시간(초)을 입력합니다. 기본값은 0초이며 시간 제한 없음을 의미합니다.  
@@ -44,10 +46,12 @@ ms.locfileid: "62755230"
  **옵션**  
  대화 상자를 변경하고 암호 저장과 같은 추가 서버 연결 옵션을 숨기려면 클릭합니다.  
   
- **테스트**  
- [!INCLUDE[ssAS](../includes/ssas-md.md)] 을 **등록된 서버**에 등록하는 경우 연결을 테스트하려면 클릭합니다.  
+ **테스트할**  
+ 
+  [!INCLUDE[ssAS](../includes/ssas-md.md)] 을 **등록된 서버**에 등록하는 경우 연결을 테스트하려면 클릭합니다.  
   
- **저장**  
- **등록된 서버**에 설정을 저장합니다.  
+ **Save**  
+ 
+  **등록된 서버**에 설정을 저장합니다.  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 데이터 마이닝 스키마 행 집합 쿼리 (Analysis Services-데이터 마이닝) | Microsoft Docs
+title: 데이터 마이닝 스키마 행 집합 쿼리 (Analysis Services 데이터 마이닝) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,13 +18,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30a4a503b16693a3774aa7f68771fb0f9dd70810
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084905"
 ---
 # <a name="querying-the-data-mining-schema-rowsets-analysis-services---data-mining"></a>데이터 마이닝 스키마 행 집합 쿼리(Analysis Services - 데이터 마이닝)
+  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에는 기존 OLE DB 데이터 마이닝 스키마 행 집합 대부분이 DMX(Data Mining Extensions) 문을 사용하여 쿼리할 수 있는 시스템 테이블 집합으로 노출됩니다. 데이터 마이닝 스키마 행 집합을 대상으로 쿼리를 작성하면 사용할 수 있는 서비스를 식별하고, 모델과 구조의 상태에 대한 업데이트를 가져오고, 모델 콘텐츠나 매개 변수에 대한 정보를 찾을 수 있습니다. 데이터 마이닝 스키마 행 집합에 대한 설명은 [Data Mining Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)을 참조하십시오.  
   
 > [!NOTE]  
@@ -59,7 +60,7 @@ SELECT *
 FROM $system.DMSCHEMA_MINING_SERVICES  
 ```  
   
-### <a name="example-2-list-mining-model-parameters"></a>예 2: 마이닝 모델 매개 변수 목록  
+### <a name="example-2-list-mining-model-parameters"></a>예 2: 마이닝 모델 매개 변수 나열  
  다음 예는 특정 마이닝 모델을 만드는 데 사용된 매개 변수를 반환합니다.  
   
 ```  
@@ -68,7 +69,7 @@ FROM $system.DMSCHEMA_MINING_MODELS
 WHERE MODEL_NAME = 'TM Clustering'  
 ```  
   
-### <a name="example-3-list-all-rowsets"></a>예제 3: 모든 행 집합 나열  
+### <a name="example-3-list-all-rowsets"></a>예 3: 모든 행 집합 나열  
  다음 예에서는 현재 서버에서 사용할 수 있는 행 집합의 전체 목록을 반환합니다.  
   
 ```  
@@ -76,7 +77,7 @@ SELECT *
 FROM $system.DBSCHEMA_TABLES  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [문제 해결 개념 (Analysis Services-데이터 마이닝)](https://msdn.microsoft.com/library/cc645881.aspx)  
+## <a name="see-also"></a>참고 항목  
+ [문제 해결 개념(Analysis Services - 데이터 마이닝)](https://msdn.microsoft.com/library/cc645881.aspx)  
   
   

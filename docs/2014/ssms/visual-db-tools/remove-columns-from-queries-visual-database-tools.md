@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 08230f1937d42247f8eeff09014f7727c6ebfe43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62659642"
 ---
 # <a name="remove-columns-from-queries-visual-database-tools"></a>쿼리에서 열 제거(Visual Database Tools)
@@ -32,14 +32,14 @@ ms.locfileid: "62659642"
   
 -   **조건 창**에서 제거하려는 열이 포함된 표 형태 행을 선택한 다음 Delete 키를 누릅니다.  
   
-     -또는-  
+     또는  
   
 -   [SQL 창](sql-pane-visual-database-tools.md)에서 열에 대한 모든 참조를 제거합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [쿼리에 열 추가 &#40;Visual Database Tools&#41;](add-columns-to-queries-visual-database-tools.md)   
- [쿼리 결과 정렬 및 그룹화 &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
- [쿼리 결과 요약 &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools&#41;&#40;쿼리에 열 추가](add-columns-to-queries-visual-database-tools.md)   
+ [Visual Database Tools&#41;&#40;쿼리 결과 정렬 및 그룹화](sort-and-group-query-results-visual-database-tools.md)   
+ [Visual Database Tools를 &#40;쿼리 결과 요약&#41;](summarize-query-results-visual-database-tools.md)   
  [쿼리 관련 기본 작업 수행&#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

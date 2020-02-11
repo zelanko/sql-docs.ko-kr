@@ -15,16 +15,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b2ecd6ec8584eb4031e7d2c8a0af95204a930498
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721845"
 ---
 # <a name="ltagentprofilenamegt-properties"></a>&lt;AgentProfileName&gt; 속성
   **에이전트 프로필 속성** 대화 상자를 사용하여 프로필의 각 에이전트 매개 변수에 대해 지정된 값을 보고 사용자 정의 프로필의 값을 수정할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **이름**  
  프로필의 이름입니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62721845"
   
 -   [Replication Distribution Agent](agents/replication-distribution-agent.md)  
   
--   [복제 병합 에이전트](agents/replication-merge-agent.md)  
+-   [Replication Merge Agent](agents/replication-merge-agent.md)  
   
 -   [Replication Queue Reader Agent](agents/replication-queue-reader-agent.md)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62721845"
  **이 프로필에서 사용되는 매개 변수만 표시**  
  지정한 에이전트에 유효한 모든 매개 변수를 표시하려면 선택을 취소합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [복제 에이전트 프로필 작업](agents/work-with-replication-agent-profiles.md)   
  [복제 에이전트 개요](agents/replication-agents-overview.md)   
  [복제 에이전트 프로필](agents/replication-agent-profiles.md)  

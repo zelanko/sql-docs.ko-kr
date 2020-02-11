@@ -1,5 +1,5 @@
 ---
-title: (MDX) Slicer 축의 내용 지정 | Microsoft Docs
+title: Slicer 축의 내용 지정 (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 12e2d2f543694a1da418f5e8eb4b900eaa123d97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074056"
 ---
 # <a name="specifying-the-contents-of-a-slicer-axis-mdx"></a>Slicer 축의 내용 지정(MDX)

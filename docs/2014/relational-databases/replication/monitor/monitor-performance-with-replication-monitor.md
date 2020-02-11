@@ -20,14 +20,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e69b1d6ca838334c36ff94037473e5fda45cce43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667219"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>복제 모니터로 성능 모니터링
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 모니터를 사용하여 다음 방법으로 트랜잭션 복제 및 병합 복제의 성능을 모니터링할 수 있습니다.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 모니터를 사용 하면 다음과 같은 방법으로 트랜잭션 복제 및 병합 복제의 성능을 모니터링할 수 있습니다.  
   
 -   경고 및 임계값 설정  
   
@@ -73,9 +73,9 @@ ms.locfileid: "62667219"
   
 -   트랜잭션 복제의 경우 성능 품질은 대기 시간 임계값으로 결정됩니다. 임계값을 설정하지 않으면 값이 표시되지 않습니다. 다음 표에서는 임계값과 성능 품질 값의 상관 관계를 나타냅니다. 예를 들어 임계값이 60초로 설정되고 실제 대기 시간이 30초이면 대기 시간은 임계값의 50%이므로 값은 좋음이 됩니다.  
   
-    |최고|좋음|보통|나쁨|심각|  
+    |최고|좋음|보통|나쁨|위험|  
     |---------------|----------|----------|----------|--------------|  
-    |0 - 34%|35 - 59%|60 - 84%|85 - 99%|100% +|  
+    |0 - 34%|35 - 59%|60-84%|85 - 99%|100% +|  
   
 -   병합 복제의 경우 성능 품질은 임계값과 관련이 없습니다. 행 처리 임계값은 **성능 심각** 값이 **상태** 열에 표시되는지 여부를 확인합니다. 성능 품질은 개별 구독 성능과 게시에 대한 구독(연결 유형이 전화 접속 또는 LAN 등으로 동일한 구독)의 평균 기록 성능을 비교하여 결정됩니다. 복제 모니터는 같은 유형의 연결별로 50개 이상의 변경 사항을 5번 동기화한 후에 값을 표시합니다. 50개 이상 변경 내용이 포함된 동기화가 5회 미만이거나 최신 동기화의 변경 내용 수가 50개 미만이면 복제 모니터에서 값을 표시하지 않습니다.  
   
@@ -91,12 +91,12 @@ ms.locfileid: "62667219"
  트랜잭션 복제를 사용하면 게시 데이터베이스의 트랜잭션 로그에 토큰(소량 데이터)을 삽입하고 배포자 및 구독자에 트랜잭션 로그가 전달되는 시간을 기록하여 시스템의 대기 시간을 측정할 수 있습니다. 또한 데이터가 배포자나 구독자에 도달하지 않았는지 여부를 확인하는 데도 토큰을 사용할 수 있습니다. 자세한 내용은 [트랜잭션 복제에 대한 대기 시간 측정 및 연결 유효성 검사](measure-latency-and-validate-connections-for-transactional-replication.md)을 참조하세요.  
   
 ## <a name="view-detailed-synchronization-performance-for-merge-replication"></a>병합 복제에 대한 자세한 동기화 성능 보기  
- 병합 복제의 경우 복제 모니터는 각 처리 단계(변경 내용 업로드, 변경 내용 다운로드 등)에 소요된 시간을 포함하여 동기화 중에 처리된 각 아티클에 대한 자세한 통계를 표시합니다. 이 통계는 속도 저하의 원인이 되고 병합 구독의 성능 문제를 해결하기에 가장 적합한 특정 테이블을 정확히 찾아내는 데 도움이 될 수 있습니다. 자세한 통계 보기에 대한 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
+ 병합 복제의 경우 복제 모니터는 각 처리 단계(변경 내용 업로드, 변경 내용 다운로드 등)에 소요된 시간을 포함하여 동기화 중에 처리된 각 아티클에 대한 자세한 통계를 표시합니다. 이 통계는 속도 저하의 원인이 되고 병합 구독의 성능 문제를 해결하기에 가장 적합한 특정 테이블을 정확히 찾아내는 데 도움이 될 수 있습니다. 자세한 통계를 보는 방법에 대 한 자세한 내용은 [정보 보기 및 복제 모니터를 사용 하 여 태스크 수행](view-information-and-perform-tasks-replication-monitor.md)을 참조 하세요.  
   
 ## <a name="view-transactions-and-delivery-time-for-transactional-replication"></a>트랜잭션 복제에 대한 트랜잭션 및 배달 시간 보기  
- 트랜잭션 복제의 경우 복제 모니터는 구독자로 아직 배포되지 않은 배포 데이터베이스의 트랜잭션 수와 이러한 트랜잭션에 대한 예상 배포 시간에 대한 정보를 표시합니다. 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
+ 트랜잭션 복제의 경우 복제 모니터는 구독자로 아직 배포되지 않은 배포 데이터베이스의 트랜잭션 수와 이러한 트랜잭션에 대한 예상 배포 시간에 대한 정보를 표시합니다. 자세한 내용은 [복제 모니터를 사용 하 여 정보 보기 및 태스크 수행](view-information-and-perform-tasks-replication-monitor.md)을 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [복제 모니터링](../monitoring-replication.md)   
  [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md)  
   

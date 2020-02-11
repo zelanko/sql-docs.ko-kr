@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8d6ee17a176c77bf29eb308d2af1bae364f37098
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721875"
 ---
 # <a name="ltagentnamegt-agent-location"></a>&lt;AgentName&gt; 에이전트 위치
@@ -25,7 +25,7 @@ ms.locfileid: "62721875"
 > [!NOTE]  
 >  구독 유형은 구독을 만든 후에는 변경할 수 없습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Create a Pull Subscription](create-a-pull-subscription.md)   
  [ssSDSFull](create-a-push-subscription.md)   
  [복제 에이전트 개요](agents/replication-agents-overview.md)  

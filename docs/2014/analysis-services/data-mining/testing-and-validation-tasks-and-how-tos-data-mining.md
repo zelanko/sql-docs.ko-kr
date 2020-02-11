@@ -18,13 +18,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 451efaa1bb6968c2e2f43e5fad01646e507ae8ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082866"
 ---
 # <a name="testing-and-validation-tasks-and-how-tos-data-mining"></a>테스트 및 유효성 검사 태스크 및 방법(데이터 마이닝)
+  
   **에서 데이터 마이닝 디자이너의** 마이닝 정확도 차트 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 탭을 사용하여 마이닝 구조에 있는 마이닝 모델의 예측 정확도를 비교할 수 있습니다.  
   
  다음 4개의 차트를 만들 수 있습니다.  
@@ -39,7 +40,7 @@ ms.locfileid: "66082866"
   
  처음 세 차트는 **입력 선택** 탭을 사용하여 차트를 생성하는 데 사용되는 데이터를 정의합니다.  
   
- **교차 유효성 검사** 탭에서 사용 가능한 추가 입력을 사용하여 교차 유효성 검사 차트를 만들 수 있습니다. 자세한 내용은 [교차 유효성 검사&#40;Analysis Services - 데이터 마이닝&#41;](cross-validation-analysis-services-data-mining.md)를 참조하세요.  
+ 교차 **유효성 검사 탭에서** 사용 가능한 추가 입력을 사용 하 여 교차 유효성 검사 차트를 만들 수 있습니다. 자세한 내용은 [교차 유효성 검사 &#40;Analysis Services-데이터 마이닝&#41;](cross-validation-analysis-services-data-mining.md)를 참조 하세요.  
   
  마이닝 정확도 차트를 사용하는 방법에 대한 자세한 내용은 [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](testing-and-validation-data-mining.md)를 참조하세요.  
   

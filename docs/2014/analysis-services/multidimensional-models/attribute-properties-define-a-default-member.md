@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 959645223eacec6c000ddbfa23615b7949d10d5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077416"
 ---
 # <a name="define-a-default-member"></a>기본 멤버 정의
@@ -33,17 +33,17 @@ ms.locfileid: "66077416"
  특성 계층에 대해 지정된 기본 멤버가 없고 특성 계층이 집계 가능한 경우(특성의 `IsAggregatable` 속성이 `True`로 설정된 경우) (All) 멤버가 기본 멤버입니다. 지정된 기본 멤버가 없고 특성 계층이 집계 가능하지 않은 경우(특성의 `IsAggregatable` 속성이 `False`로 설정된 경우)에는 특성 계층의 최상위 수준에서 기본 멤버가 선택됩니다.  
   
 ## <a name="specifying-the-default-member"></a>기본 멤버 지정  
- 차원의 모든 특성 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 사용 하 여 지정할 수 있는 기본 멤버에는 `DefaultMember` 특성의 속성입니다. 이 설정은 쿼리에 특성이 포함되지 않은 경우 식을 평가하는 데 사용됩니다. 쿼리에서 차원의 계층을 지정하는 경우 계층의 특성에 대한 기본 멤버는 무시됩니다. 쿼리 차원에서 계층을 지정 하지 않는 경우는 `DefaultMember` 차원 특성에 대 한 설정을 적용 합니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 차원의 모든 특성에는 기본 멤버가 있으며이는 특성에 대 한 `DefaultMember` 속성을 사용 하 여 지정할 수 있습니다. 이 설정은 쿼리에 특성이 포함되지 않은 경우 식을 평가하는 데 사용됩니다. 쿼리에서 차원의 계층을 지정하는 경우 계층의 특성에 대한 기본 멤버는 무시됩니다. 쿼리에서 차원의 계층을 지정 하지 않는 경우에는 차원 특성에 `DefaultMember` 대 한 설정이 적용 됩니다.  
   
- 경우는 `DefaultMember` 설정은 특성은 빈 및 해당 `IsAggregatable` 속성이 `True`, 기본 멤버는 All 멤버입니다. 경우는 `IsAggregatable` 속성이 `False`, 기본 멤버는 표시 되는 첫 번째 수준의 첫 번째 멤버에 있습니다.  
+ 특성에 `DefaultMember` 대 한 설정이 비어 있고 해당 `IsAggregatable` 속성이로 `True`설정 된 경우 기본 멤버는 All 멤버입니다. `IsAggregatable` 속성이로 `False`설정 된 경우 기본 멤버는 첫 번째로 표시 되는 수준의 첫 번째 멤버입니다.  
   
- `DefaultMember` 설정은 특성이 참여 하는 모든 계층에 특성을 적용 합니다. 차원에서 다른 계층에 다른 설정을 사용할 수는 없습니다. 예를 들어 [1998] 멤버가 [Year] 특성에 대한 기본 멤버인 경우 이 설정은 차원의 모든 계층에 적용됩니다. `DefaultMember` 설정이 경우 일 수 없습니다 [1998] [1997] 하나의 계층에 다른 계층에서는 합니다.  
+ 특성 `DefaultMember` 에 대 한 설정은 특성이 참여 하는 모든 계층에 적용 됩니다. 차원에서 다른 계층에 다른 설정을 사용할 수는 없습니다. 예를 들어 [1998] 멤버가 [Year] 특성에 대한 기본 멤버인 경우 이 설정은 차원의 모든 계층에 적용됩니다. 이 `DefaultMember` 경우 설정은 한 계층에서 [1998]이 고 다른 계층에서는 [1997] 일 수 없습니다.  
   
- 자연적으로 집계되지 않는 계층의 특정 수준에 대한 기본 멤버를 정의하는 경우 계층에서 해당 수준 위의 모든 수준에 기본 멤버를 정의해야 합니다. 예를 들어, 모든-국가-기후 계층에서 정의할 수 없습니다 Climate에 대 한 기본 멤버를 국가 대 한 기본 멤버를 정의 하지 않으면. 이렇게 정의하면 쿼리 시 오류가 발생합니다.  
+ 자연적으로 집계되지 않는 계층의 특정 수준에 대한 기본 멤버를 정의하는 경우 계층에서 해당 수준 위의 모든 수준에 기본 멤버를 정의해야 합니다. 예를 들어 계층 전체 국가의 기후에서 국가의 기본 멤버를 정의 하지 않으면 기후에 대 한 기본 멤버를 정의할 수 없습니다. 이렇게 정의하면 쿼리 시 오류가 발생합니다.  
   
- 계층의 수준이 자연적으로 집계되는 경우 계층의 다른 특성과 관계없이 계층의 모든 특성에 대한 기본 멤버를 정의할 수 있습니다. 예를 들어 국가-시/도-City 계층의 [City]과 같이 City에 대 한 기본 멤버를 정의할 수 있습니다. [Montreal] 상태에 대 한 또는 국가 대 한 기본 멤버를 정의 하지 않고 있습니다.  
+ 계층의 수준이 자연적으로 집계되는 경우 계층의 다른 특성과 관계없이 계층의 모든 특성에 대한 기본 멤버를 정의할 수 있습니다. 예를 들어, 계층 국내 도시에서 [City]와 같은 City에 대 한 기본 멤버를 정의할 수 있습니다. [몬트리올] State 나 Country에 대 한 기본 멤버를 정의 하지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [특성 계층에 대해 &#40;All&#41; 수준 구성](database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+## <a name="see-also"></a>참고 항목  
+ [특성 계층에 대 한 모든&#41; 수준 &#40;구성](database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

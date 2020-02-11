@@ -1,5 +1,5 @@
 ---
-title: 집계 사용 (사용 빈도 기반 최적화 마법사)를 검토 합니다. | Microsoft Docs
+title: 집계 사용법 검토 (사용 빈도 기반 최적화 마법사) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,23 +13,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a58f7f8620924d4f707fe61c45ae87e19737471f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070167"
 ---
 # <a name="review-aggregation-usage-usage-based-optimiation-wizard"></a>집계 사용법 검토(사용 빈도 기반 최적화 마법사)
+  
   **집계 사용 검토** 페이지를 사용하여 집계 사용 설정을 구성할 수 있습니다.  
   
-## <a name="options"></a>변수  
- **Default**  
+## <a name="options"></a>옵션  
+ **기본**  
  특성의 집계 사용 설정을 기본값으로 설정하려면 선택합니다. 이 설정을 사용하면 디자이너에서 특성 및 차원의 유형을 기반으로 기본 규칙을 적용합니다.  
   
  **전체**  
  특성의 집계 사용 설정을 전체로 설정하려면 선택합니다. 이 설정을 사용하면 큐브의 모든 집계에 이 특성이나 특성 체인에서 이 특성 아래에 있는 관련 특성이 포함되어야 합니다. 특성에 많은 멤버가 포함되어 있는 경우에는 전체 집계 사용 설정을 사용하면 안 됩니다. 이 특성을 여러 특성이나 많은 멤버가 포함된 특성에 지정하면 크기가 너무 커지기 때문에 집계를 디자인할 수 없습니다.  
   
- **없음**  
+ **없음을**  
  특성의 집계 사용 설정을 없음으로 설정하려면 선택합니다. 이 설정을 사용하면 큐브의 집계에 이 특성을 포함할 수 없습니다.  
   
  **Unrestricted**  
@@ -38,8 +39,8 @@ ms.locfileid: "66070167"
  **모두 기본값으로 설정**  
  모든 특성의 집계 사용 설정을 기본값으로 설정하려면 선택합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [집계 디자인 마법사 F1 도움말](aggregation-design-wizard-f1-help.md)   
- [Analysis Services 마법사 &#40;다차원 데이터&#41;](analysis-services-wizards-multidimensional-data.md)  
+ [다차원 데이터를 &#40;마법사 Analysis Services&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

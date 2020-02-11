@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c72cc6b3798d790b4787cb5fcfe3e560b6580fc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075534"
 ---
 # <a name="define-semiadditive-behavior"></a>반가산적 동작 정의
@@ -33,7 +33,7 @@ ms.locfileid: "66075534"
 ## <a name="define-semiadditive-behavior"></a>반가산적 동작 정의  
  마법사의 **반가산적 동작 정의** 페이지에서 다음 옵션 중 하나를 선택하여 반가산성을 정의하는 방법을 선택합니다.  
   
- **반가산적 동작 해제**  
+ **반 가산적 동작 해제**  
  이전에 반가산적 동작이 정의된 큐브에서 반가산적 동작을 제거합니다. 측정값이 다음 집계 함수 유형 중 하나로 설정된 경우 이 옵션을 선택하면 측정값이 `SUM`으로 다시 설정됩니다.  
   
 -   By Account  
@@ -48,17 +48,17 @@ ms.locfileid: "66075534"
   
 -   First Nonempty Child  
   
--   없음  
+-   None  
   
- 이 옵션은 일반 집계 함수로 측정값을 변경 되지 않습니다: `Sum`, `Min`를 `Max`, `Count`, 또는 `Distinct``Count`합니다.  
+ 이 옵션 `Sum`은,,, 또는 `Min` `Max` `Count` `Distinct``Count`등의 일반 집계 함수로 측정값을 변경 하지 않습니다.  
   
- **마법사에서 반가산적 멤버가 포함된 'Account' 계정 차원을 검색했습니다. 서버는 각 계정 유형에 지정 된 반 가산적 동작에 따라이 차원의 멤버를 집계 합니다.**  
+ **마법사에서 반 가산적 멤버가 포함 된 ' Account ' 계정 차원을 검색 했습니다. 서버는 각 계정 유형에 지정 된 반 가산적 동작에 따라이 차원의 멤버를 집계 합니다.**  
  시스템에서 계정 유형 차원별로 차원이 구분된 측정값 그룹의 모든 측정값을 By Account 집계 함수로 설정하도록 하며 서버는 각 계정 유형에 지정된 반가산적 동작에 따라 차원의 멤버를 집계합니다.  
   
 > [!NOTE]  
 >  마법사에서 계정 유형 차원을 찾은 경우 이 옵션이 기본적으로 선택됩니다.  
   
- **개별 측정값에 대한 반가산적 동작 정의**  
+ **개별 측정값에 대 한 반 가산적 동작 정의**  
  각 측정값의 반가산적 동작을 개별적으로 선택합니다. 기본 설정은 `SUM`(완전 가산적)입니다.  
   
 > [!NOTE]  
@@ -78,8 +78,8 @@ ms.locfileid: "66075534"
 |LastNonEmpty|멤버 값이 시간 차원에 따른 데이터를 포함하는 마지막 자식의 값으로 계산됩니다.|  
 |최대값|표준 최대 집계 함수가 적용됩니다.|  
 |최소값|표준 최소 집계 함수가 적용됩니다.|  
-|없음|집계가 적용되지 않습니다.|  
-|SUM|표준 합계 함수가 적용됩니다.|  
+|None|집계가 적용되지 않습니다.|  
+|합계|표준 합계 함수가 적용됩니다.|  
   
  마법사를 완료하면 기존의 모든 반가산적 동작을 덮어씁니다.  
   

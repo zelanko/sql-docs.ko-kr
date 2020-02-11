@@ -24,31 +24,33 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4464b0ca035bc19695b37aea01385f737549fec1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768399"
 ---
 # <a name="connecting-to-data-sources-in-the-script-task"></a>스크립트 태스크에서 데이터 원본에 연결
   연결 관리자를 사용하면 패키지에 구성된 데이터 원본에 액세스할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 연결](../../connection-manager/integration-services-ssis-connections.md)을 참조하세요.  
   
- 스크립트 태스크에서는 **Dts** 개체의 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A> 속성을 통해 이러한 연결 관리자에 액세스합니다. <xref:Microsoft.SqlServer.Dts.Runtime.Connections> 컬렉션의 각 연결 관리자는 기본 데이터 원본에 연결하는 방법에 대한 정보를 저장합니다.  
+ 스크립트 태스크에서는 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A>Dts**개체의** 속성을 통해 이러한 연결 관리자에 액세스합니다. <xref:Microsoft.SqlServer.Dts.Runtime.Connections> 컬렉션의 각 연결 관리자는 기본 데이터 원본에 연결하는 방법에 대한 정보를 저장합니다.  
   
  연결 관리자의 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> 메서드를 호출하면 해당 연결 관리자는 데이터 원본이 아직 연결되어 있지 않은 경우 데이터 원본에 연결하고 개발자가 스크립트 태스크 코드에서 사용할 수 있는 적절한 연결 및 연결 정보를 반환합니다.  
   
 > [!NOTE]  
->  `AcquireConnection`을 호출하려면 먼저 연결 관리자에서 반환하는 연결 유형을 알고 있어야 합니다. 스크립트 태스크에는 `Option Strict`가 설정되어 있으므로 `Object` 형식으로 반환된 연결을 사용하려면 먼저 이 연결을 적절한 연결 유형으로 캐스팅해야 합니다.  
+>  
+  `AcquireConnection`을 호출하려면 먼저 연결 관리자에서 반환하는 연결 유형을 알고 있어야 합니다. 스크립트 태스크에는 `Option Strict`가 설정되어 있으므로 `Object` 형식으로 반환된 연결을 사용하려면 먼저 이 연결을 적절한 연결 유형으로 캐스팅해야 합니다.  
   
  코드에서 연결을 사용하기 전에 <xref:Microsoft.SqlServer.Dts.Runtime.Connections.Contains%2A> 속성에서 반환된 <xref:Microsoft.SqlServer.Dts.Runtime.Connections> 컬렉션의 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A> 메서드를 사용하여 기존 연결을 찾을 수 있습니다.  
   
 > [!IMPORTANT]  
->  스크립트 태스크의 관리 코드에서는 OLE DB 연결 관리자 및 Excel 연결 관리자와 같이 관리되지 않는 개체를 반환하는 연결 관리자의 AcquireConnection 메서드를 호출할 수 없습니다. 그러나 이러한 연결 관리자의 ConnectionString 속성을 읽고 수의 연결 문자열을 사용 하 여 코드에서 직접 데이터 원본에 연결을 `OledbConnection` 에서 **System.Data.OleDb** 네임 스페이스입니다.  
+>  스크립트 태스크의 관리 코드에서는 OLE DB 연결 관리자 및 Excel 연결 관리자와 같이 관리되지 않는 개체를 반환하는 연결 관리자의 AcquireConnection 메서드를 호출할 수 없습니다. 그러나 이러한 연결 관리자의 ConnectionString 속성을 읽고 **system.xml 네임 스페이스** 의와 `OledbConnection` 연결 문자열을 사용 하 여 코드에서 직접 데이터 원본에 연결할 수 있습니다.  
 >   
->  관리되지 않는 개체를 반환하는 연결 관리자의 AcquireConnection 메서드를 호출해야 하는 경우에는 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 연결 관리자를 사용합니다. [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 연결 관리자에서 OLE DB 공급자를 사용하도록 구성할 경우 이 연결 관리자는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB를 사용하여 연결합니다. 이 경우 AcquireConnection 메서드 반환을 `System.Data.OleDb.OleDbConnection` 관리 되지 않는 개체 대신 합니다. [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 연결 관리자를 Excel 데이터 원본에 사용할 수 있도록 구성하려면 **연결 관리자** 대화 상자의 **모두** 페이지에서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB Provider for Jet를 선택하고 Excel 파일을 지정한 다음 **확장 속성** 값으로 `Excel 8.0`(Excel 97 이상의 경우)을 입력합니다.  
+>  관리되지 않는 개체를 반환하는 연결 관리자의 AcquireConnection 메서드를 호출해야 하는 경우에는 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 연결 관리자를 사용합니다. [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 연결 관리자에서 OLE DB 공급자를 사용하도록 구성할 경우 이 연결 관리자는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB를 사용하여 연결합니다. 이 경우 AcquireConnection 메서드는 관리 되지 않는 개체 `System.Data.OleDb.OleDbConnection` 대신을 반환 합니다. [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 연결 관리자를 Excel 데이터 원본에 사용할 수 있도록 구성하려면 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]연결 관리자`Excel 8.0` 대화 상자의 **모두** 페이지에서 **OLE DB Provider for Jet를 선택하고 Excel 파일을 지정한 다음**확장 속성**값으로**(Excel 97 이상의 경우)을 입력합니다.  
   
 ## <a name="connections-example"></a>연결 예  
- 다음 예에서는 스크립트 태스크 내에서 연결 관리자에 액세스하는 방법을 보여 줍니다. 이 예제에서는 **Test ADO.NET Connection**이라는 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 연결 관리자와 **플랫 파일 연결 관리자**라는 플랫 파일 연결 관리자를 만들고 구성했다고 가정합니다. [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 연결 관리자는 데이터 원본에 즉시 연결하는 데 사용할 수 있는 `SqlConnection` 개체를 반환합니다. 반면에 플랫 파일 연결 관리자는 경로와 파일 이름이 들어 있는 문자열만 반환합니다. 플랫 파일을 열어 작업하려면 `System.IO` 네임스페이스의 메서드를 사용해야 합니다.  
+ 다음 예에서는 스크립트 태스크 내에서 연결 관리자에 액세스하는 방법을 보여 줍니다. 이 예제에서는 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]Test ADO.NET Connection**이라는**  연결 관리자와 **플랫 파일 연결 관리자**라는 플랫 파일 연결 관리자를 만들고 구성했다고 가정합니다. 
+  [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 연결 관리자는 데이터 원본에 즉시 연결하는 데 사용할 수 있는 `SqlConnection` 개체를 반환합니다. 반면에 플랫 파일 연결 관리자는 경로와 파일 이름이 들어 있는 문자열만 반환합니다. 플랫 파일을 열어 작업하려면 `System.IO` 네임스페이스의 메서드를 사용해야 합니다.  
   
 ```vb  
 Public Sub Main()  
@@ -98,10 +100,10 @@ public class ScriptMain
   
 ```  
   
-![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은 아이콘)](../../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.  
   
-## <a name="see-also"></a>관련 항목  
- [Integration Services&#40;SSIS&#41; 연결](../../connection-manager/integration-services-ssis-connections.md)   
+## <a name="see-also"></a>참고 항목  
+ [SSIS&#41; 연결을 &#40;Integration Services](../../connection-manager/integration-services-ssis-connections.md)   
  [연결 관리자 만들기](../../create-connection-managers.md)  
   
   

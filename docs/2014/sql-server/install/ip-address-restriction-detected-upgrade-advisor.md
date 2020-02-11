@@ -13,29 +13,30 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 487ced9f103fd10a581841595111f01a5710bd15
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952079"
 ---
 # <a name="ip-address-restriction-detected-upgrade-advisor"></a>IP 주소 제한이 검색됨(업그레이드 관리자)
-  업그레이드 관리자가 보고서 서버 또는 보고서 관리자 가상 디렉터리를 호스팅하는 IIS 웹 사이트에서 하나 이상의 IP 주소 제한을 검색했습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 IP 주소 제한에 대한 기본 지원을 제공하지 않습니다.  
+  업그레이드 관리자가 보고서 서버 또는 보고서 관리자 가상 디렉터리를 호스팅하는 IIS 웹 사이트에서 하나 이상의 IP 주소 제한을 검색했습니다. 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 IP 주소 제한에 대한 기본 지원을 제공하지 않습니다.  
   
 ||  
 |-|  
-|네이티브 **[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 합니다.|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]전용.|  
   
 ## <a name="component"></a>구성 요소  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-## <a name="description"></a>설명  
+## <a name="description"></a>Description  
  설치 프로그램이 업그레이드된 보고서 서버용으로 생성된 URL에 대한 IP 주소 제한을 정의할 수 없습니다. 업그레이드를 계속 진행할 수는 있지만 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL에 대한 IP 주소 제한은 정의되지 않습니다.  
   
 ## <a name="corrective-action"></a>수정 동작  
  업그레이드 후 ISA Server, 방화벽 소프트웨어 또는 다른 솔루션을 사용하여 특정 IP 주소에서 보고서 서버로의 요청을 허용하거나 실행합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [업그레이드 문제 &#40;Reporting Services 업그레이드 관리자&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+ [업그레이드 관리자를 &#40;업그레이드 문제를 Reporting Services&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc8252d0049953f0958ea331015aae51fd737709
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62663486"
 ---
 # <a name="cpu-threshold-exceeded-event-class"></a>CPU Threshold Exceeded 이벤트 클래스
@@ -31,15 +31,15 @@ ms.locfileid: "62663486"
   
 |데이터 열 이름|데이터 형식|Description|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|CPU|`int`|CPU 사용량(밀리초)입니다.|18|사용자 계정 컨트롤|  
-|EventClass|`int`|214|27|아니요|  
-|EventSubClass|`int`|CPU 제한 위반입니다.|21|사용자 계정 컨트롤|  
-|GroupID|`int`|위반이 발생한 그룹 ID입니다.|66|사용자 계정 컨트롤|  
-|OwnerID|`int`|위반을 발생시킨 프로세스의 SPID입니다.|58|사용자 계정 컨트롤|  
-|SPID|`int`|이 이벤트를 발생시키는 서버 프로세스의 ID입니다.<br /><br /> 참고: 이 값은 시스템 스레드를 백그라운드 작업으로 CPU 사용량의 유효성을 검사 하는 경우 실제 사용자 SPID에서에서 달라질 수 있습니다.|12|사용자 계정 컨트롤|  
-|StartTime|`datetime`|이 이벤트가 발생한 시간입니다.|14|사용자 계정 컨트롤|  
+|CPU|`int`|CPU 사용량(밀리초)입니다.|18|yes|  
+|EventClass|`int`|214|27|예|  
+|EventSubClass|`int`|CPU 제한 위반입니다.|21|yes|  
+|GroupID|`int`|위반이 발생한 그룹 ID입니다.|66|yes|  
+|OwnerID|`int`|위반을 발생시킨 프로세스의 SPID입니다.|58|yes|  
+|SPID|`int`|이 이벤트를 발생시키는 서버 프로세스의 ID입니다.<br /><br /> 참고: 이 ID는 시스템 스레드가 CPU 사용량의 유효성을 백그라운드 태스크로 검사할 경우 실제 사용자 SPID와 다를 수 있습니다.|12|yes|  
+|StartTime|`datetime`|이 이벤트가 발생한 시간입니다.|14|yes|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [sp_trace_setevent&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

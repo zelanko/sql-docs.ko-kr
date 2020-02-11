@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59361a2c0428be8ec7f2abc5b3a7fd199611bccc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62650204"
 ---
 # <a name="proxy-account-properties-and-new-proxy-account-general-page"></a>프록시 계정 속성 및 새 프록시 계정(일반 페이지)
-  이 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시 계정의 속성을 확인하거나 변경할 수 있습니다.  
+  이 페이지를 사용 하 여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시 계정의 속성을 확인 하거나 변경할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **프록시 이름**  
  프록시 이름을 입력합니다.  
   
@@ -30,21 +30,22 @@ ms.locfileid: "62650204"
  프록시에 대한 자격 증명 이름을 입력합니다.  
   
 > [!NOTE]  
->  기존 자격 증명의 이름을 제공해야 합니다. 자격 증명 만들기에 대 한 정보를 참조 하세요. [자격 증명 만들기](../../relational-databases/security/authentication-access/create-a-credential.md)  
+>  기존 자격 증명의 이름을 제공해야 합니다. 자격 증명을 만드는 방법에 대 한 자세한 내용은 [자격 증명 만들기](../../relational-databases/security/authentication-access/create-a-credential.md) 를 참조 하세요.  
   
  **...**  
- **자격 증명 선택** 대화 상자를 시작합니다.  
+ 
+  **자격 증명 선택** 대화 상자를 시작합니다.  
   
  **설명**  
  프록시에 대한 설명을 입력합니다.  
   
- **다음 하위 시스템에 대해 활성화**  
+ **다음 하위 시스템에 대해 활성**  
  프록시 계정이 액세스할 수 있는 하위 시스템을 선택합니다.  
   
  **작업 단계 재할당 대상**  
  작업 단계를 다시 할당할 프록시를 선택합니다. 이 목록은 프록시가 이전에 액세스할 수 있었던 하위 시스템에 대한 액세스를 취소할 때 활성화됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 에이전트 프록시 만들기](create-a-sql-server-agent-proxy.md)  
   
   

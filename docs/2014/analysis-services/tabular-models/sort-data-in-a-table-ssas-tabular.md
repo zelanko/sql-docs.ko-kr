@@ -1,5 +1,5 @@
 ---
-title: 테이블 (SSAS 테이블 형식)의 데이터 정렬 | Microsoft Docs
+title: 테이블의 데이터 정렬 (SSAS 테이블 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc53b6ccc800e2986bf7a6bfdd01c0ef3c3208df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066656"
 ---
 # <a name="sort-data-in-a-table-ssas-tabular"></a>테이블의 데이터 정렬(SSAS 테이블 형식)
@@ -46,9 +46,9 @@ ms.locfileid: "66066656"
     > [!NOTE]  
     >  결과가 예상과 다른 경우 열에 숫자가 아니라 텍스트로 저장된 숫자가 포함되어 있을 수 있습니다. 예를 들어 일부 재무 회계 시스템에서 가져온 음수 또는 '(아포스트로피)와 함께 입력한 숫자는 텍스트로 저장됩니다.  
   
-## <a name="see-also"></a>관련 항목  
- [데이터 필터링 및 정렬&#40;SSAS 테이블 형식&#41;](../filter-and-sort-data-ssas-tabular.md)   
- [큐브 뷰&#40;SSAS 테이블 형식&#41;](perspectives-ssas-tabular.md)   
- [역할&#40;SSAS 테이블 형식&#41;](roles-ssas-tabular.md)  
+## <a name="see-also"></a>참고 항목  
+ [SSAS 테이블 형식&#41;&#40;데이터 필터링 및 정렬](../filter-and-sort-data-ssas-tabular.md)   
+ [SSAS 테이블 형식&#41;&#40;큐브 뷰](perspectives-ssas-tabular.md)   
+ [SSAS 테이블 형식&#41;역할 &#40;](roles-ssas-tabular.md)  
   
   

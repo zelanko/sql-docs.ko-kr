@@ -14,13 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a41d72ce6c0234e6419b55a9fe1895226d884fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083492"
 ---
 # <a name="mining-model-tasks-and-how-tos"></a>마이닝 모델 태스크 및 방법
+  
   **의 데이터 마이닝 디자이너에 있는** 마이닝 모델 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 탭을 사용하여 마이닝 구조의 마이닝 모델을 관리하고 처리할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
@@ -35,7 +36,7 @@ ms.locfileid: "66083492"
   
 -   [마이닝 모델에서 열의 분할 변경](change-the-discretization-of-a-column-in-a-mining-model.md)  
   
--   [모델링 플래그 확인 또는 변경&#40;데이터 마이닝&#41;](modeling-flags-data-mining.md)  
+-   [데이터 마이닝&#41;&#40;모델링 플래그 보기 또는 변경](modeling-flags-data-mining.md)  
   
 -   [모델에서 회귀 변수로 사용할 열 지정](specify-a-column-to-use-as-regressor-in-a-model.md)  
   
@@ -47,7 +48,7 @@ ms.locfileid: "66083492"
   
 -   [마이닝 모델에 드릴스루 사용](enable-drillthrough-for-a-mining-model.md)  
   
--   [알고리즘 매개 변수 보기 또는 변경](view-or-change-algorithm-parameters.md)  
+-   [알고리즘 매개 변수 확인 또는 변경](view-or-change-algorithm-parameters.md)  
   
 -   [마이닝 모델 복사본 만들기](make-a-copy-of-a-mining-model.md)  
   
@@ -55,9 +56,9 @@ ms.locfileid: "66083492"
   
 -   [데이터 마이닝 차원 만들기](create-a-data-mining-dimension.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [마이닝 구조 태스크 및 방법](mining-structure-tasks-and-how-tos.md)   
- [마이닝 모델&#40;Analysis Services - 데이터 마이닝&#41;](mining-models-analysis-services-data-mining.md)   
+ [마이닝 모델 &#40;Analysis Services 데이터 마이닝&#41;](mining-models-analysis-services-data-mining.md)   
  [데이터 마이닝 개념](data-mining-concepts.md)  
   
   

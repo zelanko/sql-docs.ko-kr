@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d2ba009efa61cd4694ca0d008d8885ae7ae6c48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072812"
 ---
 # <a name="test-an-action"></a>동작 테스트
-  큐브 디자이너의 브라우저 보기를 사용하여 동작을 테스트합니다. 큐브 디자이너는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 액세스할 수 있습니다. 동작을 만든 후에 동작을 테스트하려면 먼저 큐브를 처리해야 합니다. 자세한 내용은 [다차원 모델 개체 처리](processing-a-multidimensional-model-analysis-services.md)합니다.  
+  큐브 디자이너의 브라우저 보기를 사용하여 동작을 테스트합니다. 큐브 디자이너는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 액세스할 수 있습니다. 동작을 만든 후에 동작을 테스트하려면 먼저 큐브를 처리해야 합니다. 자세한 내용은 [다차원 모델 개체 처리](processing-a-multidimensional-model-analysis-services.md)를 참조 하세요.  
   
 ### <a name="to-test-an-action"></a>동작을 테스트하려면  
   

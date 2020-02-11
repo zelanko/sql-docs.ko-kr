@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9778bfde1e63163c8fae89b93d0673cbde16a8cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062746"
 ---
 # <a name="aggregation-design-wizard-f1-help"></a>집계 디자인 마법사 F1 도움말
-  집계를 사용하면 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 각 쿼리에 대해 기본 데이터 원본의 데이터를 다시 계산할 필요 없이 큐브 저장소에서 직접 미리 계산된 합계를 검색할 수 있으므로 성능이 향상됩니다.  
+  집계는 각 쿼리에 대해 기본 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터 원본의 데이터를 다시 계산할 필요 없이 큐브 저장소에서 직접 미리 계산 된 합계를 검색할 수 있도록 하 여 성능 향상을 제공 합니다.  
   
  이러한 집계를 디자인하려면 집계 디자인 마법사를 사용합니다. 이 마법사는 다음 단계로 이루어져 있습니다.  
   
@@ -36,20 +36,20 @@ ms.locfileid: "66062746"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [수정할 파티션 선택 &#40;집계 디자인 마법사&#41;](select-partitions-to-modify-aggregation-design-wizard.md)  
+-   [&#40;집계 디자인 마법사를 수정할 파티션 선택&#41;](select-partitions-to-modify-aggregation-design-wizard.md)  
   
--   [집계 사용 검토 &#40;집계 디자인 마법사&#41;](review-aggregation-usage-aggregation-design-wizard.md)  
+-   [집계 사용 &#40;집계 디자인 마법사를 검토&#41;](review-aggregation-usage-aggregation-design-wizard.md)  
   
--   [개체 수 지정 &#40;집계 디자인 마법사&#41;](specify-object-counts-aggregation-design-wizard.md)  
+-   [집계 디자인 마법사 &#40;개체 개수 지정&#41;](specify-object-counts-aggregation-design-wizard.md)  
   
--   [집계 옵션 설정 &#40;집계 디자인 마법사&#41;](set-aggregation-options-aggregation-design-wizard.md)  
+-   [집계 옵션 &#40;집계 디자인 마법사를 설정&#41;](set-aggregation-options-aggregation-design-wizard.md)  
   
--   [마법사 완료 &#40;집계 디자인 마법사&#41;](completing-the-wizard-aggregation-design-wizard.md)  
+-   [&#40;집계 디자인 마법사를 완료 하는 중&#41;](completing-the-wizard-aggregation-design-wizard.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [집계 및 집계 디자인](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
  [다차원 모델의 큐브](multidimensional-models/cubes-in-multidimensional-models.md)   
  [사용 빈도 기반 최적화 마법사 F1 도움말](usage-based-optimization-wizard-f1-help.md)   
- [Analysis Services 마법사 &#40;다차원 데이터&#41;](analysis-services-wizards-multidimensional-data.md)  
+ [다차원 데이터를 &#40;마법사 Analysis Services&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

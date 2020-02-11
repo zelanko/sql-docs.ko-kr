@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 43ae01b9173693370d5e422d4f26b6175101ff12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721040"
 ---
 # <a name="recompile-a-stored-procedure"></a>저장 프로시저 다시 컴파일
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 저장 프로시저를 다시 컴파일하는 방법에 대해 설명합니다. 이 작업을 수행 하는 방법은 세 가지가 있습니다: `WITH RECOMPILE` 프로시저 정의 또는 프로시저를 호출할 때 옵션을 `RECOMPILE` 쿼리 힌트를 사용 하 여 또는 개별 문에 `sp_recompile` 시스템 저장 프로시저. 이 항목에서는 프로시저 정의를 만들고 기존 프로시저를 실행할 때 RECOMPILE 옵션을 사용하는 방법에 대해 설명합니다. 또한 sp_recompile 시스템 저장 프로시저를 사용하여 기존 프로시저를 다시 컴파일하는 방법에 대해서도 설명합니다.  
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 저장 프로시저를 다시 컴파일하는 방법에 대해 설명합니다. 이 작업을 수행 하는 방법에 `WITH RECOMPILE` 는 다음 세 가지가 있습니다. 옵션은 프로시저 정의 또는 프로시저가 호출 `RECOMPILE` 될 때, 개별 문에 대해 쿼리 힌트를 사용 `sp_recompile` 하거나 시스템 저장 프로시저를 사용 하 여 수행 합니다. 이 항목에서는 프로시저 정의를 만들고 기존 프로시저를 실행할 때 RECOMPILE 옵션을 사용하는 방법에 대해 설명합니다. 또한 sp_recompile 시스템 저장 프로시저를 사용하여 기존 프로시저를 다시 컴파일하는 방법에 대해서도 설명합니다.  
   
  **항목 내용**  
   
@@ -53,16 +53,16 @@ ms.locfileid: "62721040"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
- `WITH RECOMPILE` 옵션  
+####  <a name="Permissions"></a> 권한  
+ `WITH RECOMPILE`Option  
  프로시저 정의를 만들 때 이 옵션을 사용하는 경우 데이터베이스에서 CREATE PROCEDURE 권한과 프로시저를 만들고 있는 스키마에 대한 ALTER 권한이 있어야 합니다.  
   
  EXECUTE 문에서 이 옵션을 사용하는 경우 프로시저에 대한 EXECUTE 권한이 있어야 합니다. EXECUTE 문 자체에 대한 권한은 필요하지 않지만 EXECUTE 문에서 참조되는 프로시저에 대한 실행 권한이 필요합니다. 자세한 내용은 [EXECUTE&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql)을 참조하세요.  
   
- `RECOMPILE` Query Hint  
+ `RECOMPILE`쿼리 힌트  
  이 기능은 프로시저를 만들고 프로시저의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 힌트를 포함할 때 사용됩니다. 따라서 데이터베이스에서 CREATE PROCEDURE 권한과 프로시저를 만들 스키마에 대한 ALTER 권한이 있어야 합니다.  
   
- `sp_recompile` 시스템 저장 프로시저  
+ `sp_recompile`시스템 저장 프로시저  
  지정된 프로시저에 대한 ALTER 권한이 있어야 합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
@@ -113,7 +113,7 @@ GO
   
 ```  
   
-#### <a name="to-recompile-a-stored-procedure-by-using-sprecompile"></a>sp_recompile을 사용하여 저장 프로시저를 다시 컴파일하려면  
+#### <a name="to-recompile-a-stored-procedure-by-using-sp_recompile"></a>sp_recompile을 사용하여 저장 프로시저를 다시 컴파일하려면  
   
 1.  [!INCLUDE[ssDE](../../../includes/ssde-md.md)]에 연결합니다.  
   
@@ -131,7 +131,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [저장 프로시저 만들기](../stored-procedures/create-a-stored-procedure.md)   
  [저장 프로시저 수정](../stored-procedures/modify-a-stored-procedure.md)   
  [저장 프로시저 이름 바꾸기](rename-a-stored-procedure.md)   

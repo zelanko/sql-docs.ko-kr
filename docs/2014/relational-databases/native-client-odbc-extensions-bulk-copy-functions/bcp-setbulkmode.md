@@ -13,14 +13,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9671447a2fba1cd57b021266f29de7af741f0de6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62688792"
 ---
-# <a name="bcpsetbulkmode"></a>bcp_setbulkmode
-  bcp_setbulkmode를 사용 하면 단일 함수 호출에서 모든 열 특성을 설정 하는 대량 복사 작업에서 열 형식을 지정할 수 있습니다.  
+# <a name="bcp_setbulkmode"></a>bcp_setbulkmode
+  bcp_setbulkmode를 사용 하면 대량 복사 작업에서 열 형식을 지정 하 여 단일 함수 호출에 모든 열 특성을 설정할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -67,28 +67,28 @@ cbRow
  *cbRow*  
  행 종결자 값의 길이(바이트)입니다.  
   
-## <a name="returns"></a>반환 값  
+## <a name="returns"></a>반환  
  SUCCEED 또는 FAIL  
   
-## <a name="remarks"></a>Remarks  
- bcp_setbulkmode 대량 쿼리 또는 테이블에서 복사를 사용할 수 있습니다. Bcp_setbulkmode 대량 쿼리 문을 복사 하 되, bcp_control BCP_HINT로 호출 하기 전에 호출 해야 합니다.  
+## <a name="remarks"></a>설명  
+ bcp_setbulkmode는 쿼리 또는 테이블에서 대량 복사 하는 데 사용할 수 있습니다. 쿼리 문을 대량 복사 하는 데 bcp_setbulkmode를 사용 하는 경우 BCP_HINT를 사용 하 여 bcp_control를 호출 하기 전에 호출 해야 합니다.  
   
- bcp_setbulkmode가 사용 하는 대신 [bcp_setcolfmt](bcp-setcolfmt.md) 하 고 [bcp_columns](bcp-columns.md)는 사용 하 여 함수 호출당 한 열의 형식을 지정 합니다.  
+ bcp_setbulkmode는 함수 호출 당 하나의 열 형식만 지정할 수 있는 [bcp_setcolfmt](bcp-setcolfmt.md) 및 [bcp_columns](bcp-columns.md)를 사용 하는 대신 사용할 수 있습니다.  
   
  다음 표에서는 *property* 매개 변수에 대한 상수를 나열합니다.  
   
-|property|Description|  
+|속성|Description|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|문자 출력 모드를 지정합니다.<br /><br /> BCP의-c 옵션에 해당합니다. EXE를 사용 하 여 bcp_setcolfmt `BCP_FMT_TYPE` 속성이 설정 `SQLCHARACTER`합니다.|  
-|BCP_OUT_WIDE_CHARACTER_MODE|유니코드 출력 모드를 지정합니다.<br /><br /> BCP의-w 옵션에 해당합니다. EXE 및 사용 하 여 bcp_setcolfmt `BCP_FMT_TYPE` 속성이 설정 `SQLNCHAR`합니다.|  
-|BCP_OUT_NATIVE_TEXT_MODE|비문자 유형의 경우 네이티브 유형을 지정하고 문자 유형의 경우 유니코드를 지정합니다.<br /><br /> BCP의-N 옵션에 해당합니다. EXE 및 사용 하 여 bcp_setcolfmt `BCP_FMT_TYPE` 속성이 설정 `SQLNCHAR` 열 유형이 문자열인 경우 (기본, 문자열이 아닌 경우).|  
-|BCP_OUT_NATIVE_MODE|네이티브 데이터베이스 유형을 지정합니다.<br /><br /> BCP의-n 옵션에 해당합니다. EXE 및 사용 하 여 bcp_setcolfmt `BCP_FMT_TYPE` 속성이 기본값으로 설정 합니다.|  
+|BCP_OUT_CHARACTER_MODE|문자 출력 모드를 지정합니다.<br /><br /> 는 BCP의-c 옵션에 해당 합니다. EXE를 사용 하 고 속성 `BCP_FMT_TYPE` 을로 설정 `SQLCHARACTER`하 여 bcp_setcolfmt 합니다.|  
+|BCP_OUT_WIDE_CHARACTER_MODE|유니코드 출력 모드를 지정합니다.<br /><br /> 는 BCP의-w 옵션에 해당 합니다. EXE 및 속성이로 `BCP_FMT_TYPE` 설정 `SQLNCHAR`된 bcp_setcolfmt|  
+|BCP_OUT_NATIVE_TEXT_MODE|비문자 유형의 경우 네이티브 유형을 지정하고 문자 유형의 경우 유니코드를 지정합니다.<br /><br /> 는 BCP의-N 옵션에 해당 합니다. 열 유형이 문자열인 `SQLNCHAR` 경우 `BCP_FMT_TYPE` (기본값은 문자열이 아닌 경우 기본값), 속성이로 설정 된 EXE 및 bcp_setcolfmt입니다.|  
+|BCP_OUT_NATIVE_MODE|네이티브 데이터베이스 유형을 지정합니다.<br /><br /> 는 BCP의-n 옵션에 해당 합니다. EXE와 bcp_setcolfmt 속성이 `BCP_FMT_TYPE` 기본값으로 설정 되어 있습니다.|  
   
- Bcp_setbulkmode bcp_setcolfmt, bcp_control, 및 bcp_readfmt를 포함 하는 함수 호출의 시퀀스를 사용 하 여 사용 하지 않아야 합니다. 예를 들어 bcp_control(BCPTEXTFILE) 및 bcp_setbulkmode 호출 하지 않아야 합니다.  
+ Bcp_setcolfmt, bcp_control 및 bcp_readfmt를 포함 하는 일련의 함수 호출에 bcp_setbulkmode를 사용 하면 안 됩니다. 예를 들어 bcp_control (BCPTEXTFILE) 및 bcp_setbulkmode를 호출 하면 안 됩니다.  
   
- Bcp_control 및 bcp_setbulkmode bcp_setbulkmode와 충돌 하지 않는 bcp_control 옵션에 대해 호출할 수 있습니다. 예를 들어 bcp_control(BCPFIRST) 및 bcp_setbulkmode 호출할 수 있습니다.  
+ Bcp_setbulkmode와 충돌 하지 않는 bcp_control 옵션에 대 한 bcp_control 및 bcp_setbulkmode를 호출할 수 있습니다. 예를 들어 bcp_control (BCPFIRST)를 호출 하 고 bcp_setbulkmode 수 있습니다.  
   
- Bcp_setbulkmode bcp_setcolfmt, bcp_control, 및 bcp_readfmt를 포함 하는 함수 호출의 시퀀스를 사용 하 여 호출 하려고 하면 함수 호출 중 하나는 시퀀스 오류 실패를 반환 합니다. 오류를 해결 하려는 경우 모든 설정을 다시 설정 하 고 다시 시작 하는 bcp_init를 호출 합니다.  
+ Bcp_setcolfmt, bcp_control 및 bcp_readfmt를 포함 하는 일련의 함수 호출을 사용 하 여 bcp_setbulkmode를 호출 하려고 하면 함수 호출 중 하나에서 시퀀스 오류 오류가 반환 됩니다. 오류를 해결 하도록 선택 하는 경우 bcp_init를 호출 하 여 모든 설정을 다시 설정 하 고 다시 시작 합니다.  
   
  다음 표에서는 함수 시퀀스 오류를 발생시키는 일부 함수 호출의 예를 제공합니다.  
   
@@ -295,7 +295,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [대량 복사 함수](sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>참고 항목  
+ [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 파일 또는 어셈블리를 로드할 수 없습니다 &#39;Microsoft.AnalysisServices.SharePoint.Integration&#39; | Microsoft Docs
+title: Microsoft.analysisservices.sharepoint.integration.dll&#39; &#39;파일 또는 어셈블리를 로드할 수 없습니다. Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 42c7b7e876f244831920be390d97c88412eed63f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071673"
 ---
-# <a name="could-not-load-file-or-assembly-39microsoftanalysisservicessharepointintegration39"></a>파일 또는 어셈블리를 로드할 수 없습니다 &#39;Microsoft.AnalysisServices.SharePoint.Integration&#39;
+# <a name="could-not-load-file-or-assembly-39microsoftanalysisservicessharepointintegration39"></a>Microsoft.analysisservices.sharepoint.integration.dll &#39;파일 또는 어셈블리를 로드할 수 없습니다.&#39;
   SharePoint용 PowerPivot이 설치된 SharePoint 2010 환경에서는 PowerPivot용 애플리케이션 수준 솔루션이 제대로 배포되지 않은 경우 이 오류가 발생합니다.  
   
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -37,15 +37,17 @@ ms.locfileid: "66071673"
   
 1.  중앙 관리의 시스템 설정에서 **팜 솔루션 관리**를 클릭합니다.  
   
-2.  **Powerpivotwebapp**를 클릭합니다.  
+2.  
+  **Powerpivotwebapp**를 클릭합니다.  
   
-3.  **솔루션 배포**를 클릭합니다.  
+3.  
+  **솔루션 배포**를 클릭합니다.  
   
 4.  이 오류가 발생하는 웹 애플리케이션을 선택합니다. 웹 애플리케이션이 여러 개인 경우에는 모든 웹 애플리케이션에 대해 솔루션을 다시 배포합니다.  
   
 5.  **확인**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SharePoint에 PowerPivot 솔루션 배포](deploy-power-pivot-solutions-to-sharepoint.md)  
   
   

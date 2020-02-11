@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 398a808ab90ab3ea8b97304d4e22865b40cc0ac4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62661855"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>SQL Server Management Studio 도구 창
@@ -31,13 +31,13 @@ ms.locfileid: "62661855"
 |[템플릿 탐색기](template/template-explorer.md)|기존 템플릿에 기초하여 쿼리를 만듭니다. 특정 시나리오에 맞게 사용자 지정 쿼리를 만들거나 기존 템플릿을 변경할 수 있습니다. 이 도구는 **보기** 메뉴에서 액세스합니다.|  
 |[동적 도움말](sql-server-management-studio-ssms.md)|구성 요소를 클릭하거나 코드를 입력할 때 연관된 도움말 항목의 목록을 표시합니다.|  
   
- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 의 도구는 함께 작동합니다. 예를 들어 다음을 수행할 수 있습니다.  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 의 도구는 함께 작동합니다. 예를 들어, 다음을 수행할 수 있습니다.  
   
 -   개체 탐색기로 서버를 등록합니다.  
   
 -   개체 탐색기에서 특정 데이터베이스에 연결된 SQL 편집기 창을 엽니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Management Studio 사용](../database-engine/use-sql-server-management-studio.md)  
   
   

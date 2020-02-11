@@ -1,5 +1,5 @@
 ---
-title: 옵션 (텍스트 편집기-Transact-SQL-일반 페이지) | Microsoft Docs
+title: 옵션 (텍스트 편집기-Transact-sql-일반 페이지) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,17 +15,20 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: f32377fffb26ac622dc4045d108e491adc2b0342
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089167"
 ---
-# <a name="options-text-editor---transact-sql--general-page"></a>옵션 (텍스트 편집기-Transact-SQL-일반 페이지)
+# <a name="options-text-editor---transact-sql--general-page"></a>옵션 (텍스트 편집기-Transact-sql-일반 페이지)
+  
   **일반 옵션** 대화 상자를 사용하여 [!INCLUDE[ssDE](../includes/ssde-md.md)] 스크립트를 편집하는 데 사용되는 [!INCLUDE[tsql](../includes/tsql-md.md)] 쿼리 편집기의 일반 편집 동작을 변경할 수 있습니다. 이러한 설정을 표시하려면 **도구** 메뉴에서 **옵션** 을 클릭하고 **Transact-SQL** 하위 폴더를 확장한 다음 **일반**을 클릭합니다.  
   
 ## <a name="setting-options-in-multiple-locations"></a>여러 위치에서 옵션 설정  
- [!INCLUDE[ssDE](../includes/ssde-md.md)] 쿼리 편집기에 대한 옵션은 **모든 언어** 대화 상자(일반)에서도 설정할 수 있습니다. **모든 언어** 대화 상자를 사용하여 DMX 또는 MDX 편집기 등의 다른 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 편집기에 대해 다른 옵션을 설정하는 경우에는 이 대화 상자를 사용하여 [!INCLUDE[ssDE](../includes/ssde-md.md)] 쿼리 편집기 옵션을 다시 설정해야 합니다.  
+ 
+  [!INCLUDE[ssDE](../includes/ssde-md.md)] 쿼리 편집기에 대한 옵션은 **모든 언어** 대화 상자(일반)에서도 설정할 수 있습니다. 
+  **모든 언어** 대화 상자를 사용하여 DMX 또는 MDX 편집기 등의 다른 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 편집기에 대해 다른 옵션을 설정하는 경우에는 이 대화 상자를 사용하여 [!INCLUDE[ssDE](../includes/ssde-md.md)] 쿼리 편집기 옵션을 다시 설정해야 합니다.  
   
 ## <a name="statement-completion"></a>문 완성  
  **멤버 목록 자동 표시**  
@@ -47,7 +50,7 @@ ms.locfileid: "66089167"
  **자동 줄 바꿈 시각 문자 표시**  
  이 확인란을 선택하면 긴 줄이 다음 줄로 줄 바꿈될 때 리턴 화살표 표시가 나타납니다.  
   
- **선택 영역이 없는 경우 잘라내기/복사 명령을 빈 줄에 적용**  
+ **선택 영역이 없는 경우 잘라내기 또는 복사 명령을 빈 줄에 적용**  
  이 확인란은 빈 줄에 삽입 포인터를 두고 어떤 영역도 선택하지 않은 채 **복사** 또는 **잘라내기**를 클릭한 경우의 편집기 동작을 설정합니다.  
   
  이 확인란을 선택하면 빈 줄을 복사하거나 잘라냅니다. 그런 다음 **붙여넣기**를 클릭하면 새로운 빈 줄이 삽입됩니다.  
@@ -56,7 +59,7 @@ ms.locfileid: "66089167"
   
  줄이 비어 있지 않으면 이 설정은 **복사** 또는 **잘라내기** 에 영향을 주지 않습니다. 어떤 영역도 선택하지 않으면 줄 전체를 복사하거나 잘라냅니다. 그런 다음 **붙여넣기**를 클릭하면 줄 전체의 텍스트와 줄 끝 문자를 붙여 넣습니다.  
   
-## <a name="display"></a>표시  
+## <a name="display"></a>디스플레이  
  **줄 번호**  
  이 확인란을 선택하면 각 코드 줄 옆에 줄 번호가 표시됩니다.  
   

@@ -15,20 +15,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc810f56d552fa17cb027598a25bde114a696375
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084795"
 ---
 # <a name="data-types-data-mining"></a>데이터 형식(데이터 마이닝)
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 마이닝 모델 또는 마이닝 구조를 만들 때는 마이닝 구조의 각 열에 대한 데이터 형식을 정의해야 합니다. 데이터 형식은 데이터 마이닝 엔진에게 데이터 원본의 데이터가 숫자인지, 아니면 텍스트인지 여부와 데이터 처리 방법을 알려 줍니다. 예를 들어 원본 데이터에 숫자 데이터가 포함되어 있는 경우 숫자를 정수로 처리할지, 아니면 소수 자릿수를 사용하여 처리할지 여부를 지정할 수 있습니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]마이닝 모델 또는 마이닝 구조를 만들 때는 마이닝 구조의 각 열에 대 한 데이터 형식을 정의 해야 합니다. 데이터 형식은 데이터 마이닝 엔진에게 데이터 원본의 데이터가 숫자인지, 아니면 텍스트인지 여부와 데이터 처리 방법을 알려 줍니다. 예를 들어 원본 데이터에 숫자 데이터가 포함되어 있는 경우 숫자를 정수로 처리할지, 아니면 소수 자릿수를 사용하여 처리할지 여부를 지정할 수 있습니다.  
   
  각 데이터 형식은 하나 이상의 내용 유형을 지원합니다. 내용 유형을 설정하여 마이닝 모델에서 열의 데이터를 처리하거나 계산하는 방법을 사용자 지정할 수 있습니다.  
   
  예를 들어 열에 숫자 데이터가 있는 경우 해당 데이터를 숫자 데이터 형식 또는 텍스트 데이터 형식으로 처리하도록 선택할 수 있습니다. 숫자 데이터 형식을 선택하는 경우 여러 개의 서로 다른 내용 유형을 설정할 수 있습니다. 즉, 숫자를 분할하거나 숫자를 연속 값으로 처리할 수 있습니다. 모든 콘텐츠 형식의 목록을 보려면 [콘텐츠 형식&#40;데이터 마이닝&#41;](content-types-data-mining.md)을 참조하세요.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 마이닝 구조 열에 대해 다음과 같은 데이터 형식을 지원합니다.  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 마이닝 구조 열에 대해 다음과 같은 데이터 형식을 지원합니다.  
   
 |데이터 형식|지원하는 내용 유형|  
 |---------------|-----------------------------|  
@@ -47,12 +48,12 @@ ms.locfileid: "66084795"
 ## <a name="changing-a-data-type"></a>데이터 형식 변경  
  열의 데이터 형식을 변경하는 경우 항상 마이닝 구조 및 이 구조를 기반으로 하는 모든 마이닝 모델을 다시 처리해야 합니다. 데이터 형식을 변경하는 경우 특정 모델에서 해당 열을 더 이상 사용할 수 없는 경우가 있습니다. 이 경우 Analysis Services에서는 사용자가 모델을 다시 처리할 때 오류를 발생시키거나 모델을 처리하지만 해당 특정 열을 제외합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [콘텐츠 형식&#40;데이터 마이닝&#41;](content-types-data-mining.md)   
- [콘텐츠 형식&#40;DMX&#41;](/sql/dmx/content-types-dmx)   
- [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [마이닝 구조 & #40; Analysis Services-데이터 마이닝 & #41;](mining-structures-analysis-services-data-mining.md)   
- [데이터 형식&#40;DMX&#41;](/sql/dmx/data-types-dmx)   
+## <a name="see-also"></a>참고 항목  
+ [데이터 마이닝&#41;&#40;내용 유형](content-types-data-mining.md)   
+ [DMX&#41;콘텐츠 형식 &#40;](/sql/dmx/content-types-dmx)   
+ [데이터 마이닝 알고리즘 &#40;Analysis Services 데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [마이닝 구조 &#40;Analysis Services 데이터 마이닝&#41;](mining-structures-analysis-services-data-mining.md)   
+ [DMX&#41;&#40;데이터 형식](/sql/dmx/data-types-dmx)   
  [마이닝 모델 열](mining-model-columns.md)   
  [마이닝 구조 열](mining-structure-columns.md)  
   

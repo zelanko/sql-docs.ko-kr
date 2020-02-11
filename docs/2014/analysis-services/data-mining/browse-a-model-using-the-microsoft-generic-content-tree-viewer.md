@@ -13,13 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bb080721ccb3e5b5aef190eda3d1088df09762c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086065"
 ---
 # <a name="browse-a-model-using-the-microsoft-generic-content-tree-viewer"></a>Microsoft 일반 콘텐츠 트리 뷰어를 사용하여 모델 찾아보기
+  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 일반 마이닝 모델 콘텐츠 뷰어는 마이닝 알고리즘을 통해 발견된 패턴에 대한 자세한 정보를 제공하며, 분석 프로세스 중에 생성된 다양한 통계에 대한 액세스도 제공합니다. 정보의 양과 유형은 사용된 알고리즘에 따라 다르지만 다음과 같은 범주가 있습니다.  
   
 -   데이터 세그먼트 및 특징  
@@ -33,7 +34,8 @@ ms.locfileid: "66086065"
  이러한 정보를 보면 분석 결과를 보다 잘 이해하는 데 도움이 됩니다. 또한 모델을 미세 조정한 다음 다시 학습하는 방법도 확인할 수 있습니다. 또는 다른 알고리즘을 사용하여 다시 학습하도록 결정할 수도 있습니다.  
   
 ## <a name="viewing-mining-model-content"></a>마이닝 모델 콘텐츠 보기  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 일반 콘텐츠 뷰어에는 마이닝 모델 *콘텐츠 스키마 행 집합* 의 열, 규칙, 속성, 특성, 노드 및 기타 콘텐츠가 표시됩니다. 콘텐츠 스키마 행 집합은 데이터 마이닝 모델의 콘텐츠에 대한 세부 정보를 나타내는 일반 프레임워크입니다.  
+ 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 일반 콘텐츠 뷰어에는 마이닝 모델 *콘텐츠 스키마 행 집합* 의 열, 규칙, 속성, 특성, 노드 및 기타 콘텐츠가 표시됩니다. 콘텐츠 스키마 행 집합은 데이터 마이닝 모델의 콘텐츠에 대한 세부 정보를 나타내는 일반 프레임워크입니다.  
   
  이 자세한 정보는 모델의 패턴, 클러스터 또는 트리를 노드로 나타내는 HTML 테이블에 포함되어 있습니다. 각 노드를 클릭하고 확장하여 숫자 특성의 고유 값 개수 또는 수식과 같은 자세한 세부 정보를 볼 수 있습니다. 노드 간의 자식-부모 관계를 탐색할 수도 있습니다.  
   
@@ -48,8 +50,8 @@ SELECT * FROM [<mining model name>].CONTENT
   
  자세한 내용은 [데이터 마이닝 쿼리](data-mining-queries.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [Microsoft 일반 콘텐츠 트리 뷰어&#40;데이터 마이닝&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)   
- [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+## <a name="see-also"></a>참고 항목  
+ [Microsoft 일반 콘텐츠 트리 뷰어 &#40;데이터 마이닝&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)   
+ [데이터 마이닝 알고리즘 &#40;Analysis Services 데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
   

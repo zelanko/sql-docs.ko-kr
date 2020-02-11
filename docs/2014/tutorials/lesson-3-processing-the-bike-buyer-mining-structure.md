@@ -1,5 +1,5 @@
 ---
-title: '3단원: Bike Buyer 마이닝 구조 처리 | Microsoft Docs'
+title: '3 단원: 자전거 구매자 마이닝 구조 처리 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,21 +11,21 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2e3f85016b32884b9a6b809e28d20d9985f97cd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62655809"
 ---
 # <a name="lesson-3-processing-the-bike-buyer-mining-structure"></a>3단원: Bike Buyer 마이닝 구조 처리
-  이 단원에서는 사용 하 여 INSERT INTO 문과의 vTargetMail 뷰를 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 샘플 데이터베이스에서 만든 마이닝 모델과 마이닝 구조를 처리 하는 데 [1 단원: Bike Buyer 마이닝 구조를 만드는](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md) 고 [2 단원: Bike Buyer 마이닝 구조에 마이닝 모델 추가](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)합니다.  
+  이 단원에서는 INSERT INTO 문과 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 예제 데이터베이스의 vTargetMail 뷰를 사용 하 여 [1 단원: 자전거 구매자 마이닝 구조 만들기](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md) 및 [2 단원: 자전거 구매자 마이닝 구조에 마이닝 모델 추가](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)에서 만든 마이닝 구조 및 마이닝 모델을 처리 합니다.  
   
- 마이닝 구조를 처리하면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 원본 데이터를 읽은 다음 마이닝 모델을 지원하는 구조를 작성합니다. 마이닝 모델을 처리하면 마이닝 구조에서 정의한 데이터가 사용자가 선택한 데이터 마이닝 알고리즘을 통해 전달됩니다. 이 알고리즘에서는 경향 및 패턴을 검색한 다음 마이닝 모델에 이 정보를 저장합니다. 따라서 마이닝 모델은 실제 원본 데이터 대신 알고리즘에서 발견한 정보를 포함합니다. 마이닝 모델을 처리 하는 방법에 대 한 자세한 내용은 참조 하세요. [처리 요구 사항 및 고려 사항 &#40;데이터 마이닝&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)합니다.  
+ 마이닝 구조를 처리하면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 원본 데이터를 읽은 다음 마이닝 모델을 지원하는 구조를 작성합니다. 마이닝 모델을 처리하면 마이닝 구조에서 정의한 데이터가 사용자가 선택한 데이터 마이닝 알고리즘을 통해 전달됩니다. 이 알고리즘에서는 경향 및 패턴을 검색한 다음 마이닝 모델에 이 정보를 저장합니다. 따라서 마이닝 모델은 실제 원본 데이터 대신 알고리즘에서 발견한 정보를 포함합니다. 마이닝 모델 처리에 대 한 자세한 내용은 [데이터 마이닝&#41;&#40;처리 요구 사항 및 고려 ](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)사항을 참조 하세요.  
   
  구조 열이나 원본 데이터를 변경하는 경우에만 마이닝 구조를 다시 처리하면 됩니다. 이미 처리된 마이닝 구조에 마이닝 모델을 추가하는 경우에는 INSERT INTO MINING MODEL 문을 사용하여 새 마이닝 모델을 학습합니다.  
   
 ## <a name="train-structure-template"></a>구조 템플릿의 학습  
- 마이닝 구조 및 연결된 된 마이닝 모델을 학습 하기 위해 사용 합니다 [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) 문입니다. 이 문의 코드는 다음 부분으로 나눌 수 있습니다.  
+ 마이닝 구조 및 연결 된 마이닝 모델을 학습 하려면 [INSERT INTO &#40;DMX&#41;](/sql/dmx/insert-into-dmx) 문을 사용 합니다. 이 문의 코드는 다음 부분으로 나눌 수 있습니다.  
   
 -   마이닝 구조 식별  
   
@@ -63,7 +63,7 @@ INSERT INTO MINING STRUCTURE [<mining structure name>]
 OPENQUERY([<datasource>],'<SELECT statement>')  
 ```  
   
- 이 단원에서는 `OPENQUERY`를 사용하여 원본 데이터를 정의합니다. 원본 쿼리를 정의 하는 다른 방법에 대 한 정보를 참조 하세요 [ &#60;원본 데이터 쿼리&#62;](/sql/dmx/source-data-query)합니다.  
+ 이 단원에서는 `OPENQUERY`를 사용하여 원본 데이터를 정의합니다. 원본 쿼리를 정의 하는 다른 방법에 대 한 자세한 내용은 [&#60;원본 데이터 쿼리&#62;](/sql/dmx/source-data-query)를 참조 하세요.  
   
 ## <a name="lesson-tasks"></a>단원 태스크  
  이 단원에서는 다음 태스크를 수행합니다.  
@@ -74,7 +74,8 @@ OPENQUERY([<datasource>],'<SELECT statement>')
   
 #### <a name="to-process-the-mining-structure-by-using-insert-into"></a>INSERT INTO를 사용하여 마이닝 구조를 처리하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX**를 클릭합니다.  
+1.  
+  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX**를 클릭합니다.  
   
      비어 있는 새 쿼리가 포함된 쿼리 편집기가 열립니다.  
   
@@ -86,7 +87,7 @@ OPENQUERY([<datasource>],'<SELECT statement>')
     [<mining structure name>]   
     ```  
   
-     다음 구문으로 바꿉니다.  
+     다음으로 바꿀 수 있습니다.  
   
     ```  
     Bike Buyer  
@@ -98,7 +99,7 @@ OPENQUERY([<datasource>],'<SELECT statement>')
     <mining structure columns>  
     ```  
   
-     다음 구문으로 바꿉니다.  
+     다음으로 바꿀 수 있습니다.  
   
     ```  
     [Customer Key],  
@@ -123,7 +124,7 @@ OPENQUERY([<datasource>],'<SELECT statement>')
     OPENQUERY([<datasource>],'<SELECT statement>')  
     ```  
   
-     다음 구문으로 바꿉니다.  
+     다음으로 바꿀 수 있습니다.  
   
     ```  
     OPENQUERY([Adventure Works DW],  
@@ -168,9 +169,10 @@ OPENQUERY([<datasource>],'<SELECT statement>')
         FROM dbo.vTargetMail')  
     ```  
   
-6.  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
+6.  
+  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
   
-7.  에 **다른 이름으로 저장** 대화 상자에서 적절 한 폴더로 이동 하 고 파일 이름을 `Process Bike Buyer Structure.dmx`입니다.  
+7.  다른 이름 **으로 저장** 대화 상자에서 해당 폴더로 이동한 다음 파일 `Process Bike Buyer Structure.dmx`이름을로 합니다.  
   
 8.  도구 모음에서 **실행** 단추를 클릭합니다.  
   

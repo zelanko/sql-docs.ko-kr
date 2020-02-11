@@ -13,38 +13,41 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c55224b5590d23008de8b6caef7f120748f232bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082903"
 ---
 # <a name="security-overview-data-mining"></a>보안 개요(데이터 마이닝)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 보안은 여러 수준에서 설정해야 합니다. 권한이 있는 사용자만 선택된 차원, 마이닝 모델 및 데이터 원본에 대한 읽기 또는 읽기/쓰기 권한을 갖도록 각 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스와 해당 데이터 원본의 보안을 설정해야 합니다. 또한 권한이 없는 사용자가 중요한 비즈니스 정보를 고의로 손상시킬 수 없도록 기본 데이터 원본의 보안을 설정해야 합니다. 다음 항목에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 보안 설정 과정을 설명합니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로세스는 여러 수준에서 발생 합니다. 권한이 있는 사용자만 선택된 차원, 마이닝 모델 및 데이터 원본에 대한 읽기 또는 읽기/쓰기 권한을 갖도록 각 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스와 해당 데이터 원본의 보안을 설정해야 합니다. 또한 권한이 없는 사용자가 중요한 비즈니스 정보를 고의로 손상시킬 수 없도록 기본 데이터 원본의 보안을 설정해야 합니다. 다음 항목에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 보안 설정 과정을 설명합니다.  
   
-##  <a name="bkmk_Architecture"></a> 보안 아키텍처  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 사용자 액세스 인증에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Windows 인증을 사용하는 방법을 비롯하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 인스턴스의 기본 보안 아키텍처에 대한 자세한 내용은 다음 리소스를 참조하십시오.  
+##  <a name="bkmk_Architecture"></a>보안 아키텍처  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 사용자 액세스 인증에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Windows 인증을 사용하는 방법을 비롯하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 인스턴스의 기본 보안 아키텍처에 대한 자세한 내용은 다음 리소스를 참조하십시오.  
   
--   [보안 역할&#40;Analysis Services - 다차원 데이터&#41;](../multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
+-   [보안 역할 &#40;Analysis Services 다차원 데이터&#41;](../multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   
 -   [보안 속성](../server-properties/security-properties.md)  
   
--   [서비스 계정 구성&#40;Analysis Services&#41;](../instances/configure-service-accounts-analysis-services.md)  
+-   [Analysis Services&#41;&#40;서비스 계정 구성](../instances/configure-service-accounts-analysis-services.md)  
   
--   [개체 및 작업에 대한 액세스 승인&#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [Analysis Services&#41;&#40;개체 및 작업에 대 한 액세스 권한 부여](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
-##  <a name="bkmk_Logon"></a> Analysis Services에 대한 로그온 계정 구성  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에 대한 적절한 로그온 계정을 선택하고 해당 계정의 사용 권한을 지정해야 합니다. 이때 기본 데이터 원본에 대한 적절한 사용 권한과 필수 태스크를 수행하는 데 필요한 사용 권한만 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 로그온 계정에 지정합니다.  
+##  <a name="bkmk_Logon"></a>Analysis Services에 대 한 로그온 계정 구성  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에 대한 적절한 로그온 계정을 선택하고 해당 계정의 사용 권한을 지정해야 합니다. 이때 기본 데이터 원본에 대한 적절한 사용 권한과 필수 태스크를 수행하는 데 필요한 사용 권한만 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 로그온 계정에 지정합니다.  
   
  데이터 마이닝의 경우 모델을 작성하고 처리하려면 모델을 보거나 쿼리하는 데 필요한 권한과 다른 권한 집합이 필요합니다. 모델에 대한 예측을 만드는 것은 쿼리의 일종이므로 관리 권한이 필요하지 않습니다.  
   
-##  <a name="bkmk_Instance"></a> Analysis Services 인스턴스 보안 설정  
+##  <a name="bkmk_Instance"></a>Analysis Services 인스턴스 보안 설정  
  다음으로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 컴퓨터, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 컴퓨터의 Windows 운영 체제, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 자체 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 사용하는 데이터 원본의 보안을 설정해야 합니다.  
   
-##  <a name="bkmk_Access"></a> Analysis Services에 대한 액세스 구성  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 대해 권한 있는 사용자를 설정하고 정의하려면 특정 데이터베이스 개체를 관리할 수 있는 권한을 함께 부여할 사용자, 개체의 정의를 보거나 모델을 찾아볼 수 있는 사용자 및 데이터 원본에 직접 액세스할 수 있는 사용자를 결정해야 합니다.  
+##  <a name="bkmk_Access"></a>Analysis Services에 대 한 액세스 구성  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 대해 권한 있는 사용자를 설정하고 정의하려면 특정 데이터베이스 개체를 관리할 수 있는 권한을 함께 부여할 사용자, 개체의 정의를 보거나 모델을 찾아볼 수 있는 사용자 및 데이터 원본에 직접 액세스할 수 있는 사용자를 결정해야 합니다.  
   
-##  <a name="bkmk_DMspecial"></a> 데이터 마이닝에 대한 특별 고려 사항  
+##  <a name="bkmk_DMspecial"></a>데이터 마이닝에 대 한 특별 고려 사항  
  분석가나 개발자가 데이터 마이닝 모델을 만들고 테스트할 수 있게 하려면 마이닝 모델이 저장되는 데이터베이스에 대한 관리 권한을 부여해야 합니다. 이로 인해 데이터 마이닝 분석가나 개발자가 데이터 마이닝과 관련되지 않은 다른 개체를 만들거나 삭제할 수도 있습니다. 이러한 개체로는 다른 분석가나 개발자가 만들어 사용 중인 데이터 마이닝 개체, 데이터 마이닝 솔루션에 포함되지 않은 OLAP 개체 등이 있습니다.  
   
  따라서 데이터 마이닝 솔루션을 만들 때는 분석가나 개발자가 모델을 개발, 테스트 및 조정하는 데 필요한 사항과 다른 사용자의 필요 사항을 균형 있게 조정하고 기존 데이터베이스 개체를 보호하는 조치를 취해야 합니다. 예를 들어 별도의 데이터 마이닝 전용 데이터베이스를 만들거나 각 분석가가 사용할 별도의 데이터베이스를 만들 수 있습니다.  
@@ -55,7 +58,7 @@ ms.locfileid: "66082903"
   
  Integration Services 패키지를 사용하여 데이터를 정리하거나 마이닝 모델을 업데이트하거나 예측을 만드는 경우 Integration Services 서비스에 모델이 저장된 데이터베이스에 대한 적절한 사용 권한과 원본 데이터에 대한 적절한 사용 권한이 있어야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [역할 및 권한&#40;Analysis Services&#41;](../multidimensional-models/roles-and-permissions-analysis-services.md)  
+## <a name="see-also"></a>참고 항목  
+ [역할 및 사용 권한 &#40;Analysis Services&#41;](../multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   

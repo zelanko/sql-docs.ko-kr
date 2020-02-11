@@ -13,21 +13,22 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6266dd29c3486b6ae4163b15cffbc455eee31c5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62705132"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>정책 평가 대화 상자, 정책 선택 페이지
-  이 대화 상자를 사용하여 정책 기반 관리 정책을 평가합니다. **평가 결과** 페이지를 선택하면 정책을 준수하지 않는 대상 집합의 항목에 정책을 적용할 수 있습니다.  
+  이 대화 상자를 사용하여 정책 기반 관리 정책을 평가합니다. 
+  **평가 결과** 페이지를 선택하면 정책을 준수하지 않는 대상 집합의 항목에 정책을 적용할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **원본**  
- 정책의 원본을 지정합니다. 원본을 변경하려면 찾아보기 단추 ( **...** )를 클릭하여 **원본 선택** 대화 상자를 엽니다.  
+ 정책의 원본을 지정합니다. 원본을 변경하려면 찾아보기 단추 (**...**)를 클릭하여 **원본 선택** 대화 상자를 엽니다.  
   
  **파일**  
- 정책 기반 관리 정책이 포함된 파일의 경로를 입력하거나 찾아보기 단추( **...** )를 사용하여 파일을 선택합니다.  
+ 정책 기반 관리 정책이 포함된 파일의 경로를 입력하거나 찾아보기 단추(**...**)를 사용하여 파일을 선택합니다.  
   
  **Server**  
  원하는 정책이 포함된 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스에 연결하려면 선택합니다.  
@@ -38,10 +39,10 @@ ms.locfileid: "62705132"
  **정책: 범주**  
  정책의 범주입니다. 이 부분은 읽기 전용입니다.  
   
- **정책: Facet**  
+ **정책: 패싯**  
  정책에 의해 구현되는 패싯입니다. 이 부분은 읽기 전용입니다.  
   
- **평가**  
+ **구하려는**  
  평가 모드에서 정책을 실행합니다. 이렇게 하면 대상 집합에 대한 준수 보고서가 생성되지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 다시 구성되거나 앞으로 정책이 준수되도록 하지는 않습니다.  
   
 ## <a name="possible-errors"></a>가능한 오류  
@@ -60,7 +61,7 @@ ms.locfileid: "62705132"
   
     -   대상 서버 유형은 정책을 평가하는 서버 유형과 다릅니다. 예를 들어 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대해 만든 정책을 평가하면 빈 대상 집합을 받게 됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [정책 기반 관리를 사용하여 서버 관리](administer-servers-by-using-policy-based-management.md)   
  [정책 평가 대화 상자, 평가 결과 페이지](evaluate-policies-dialog-box-evaluation-results-page.md)  
   

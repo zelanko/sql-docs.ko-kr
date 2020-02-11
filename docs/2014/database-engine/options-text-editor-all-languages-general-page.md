@@ -11,14 +11,15 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 385380e6e51c3b8519e7dbc6ec3d934e1ef14846
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089244"
 ---
 # <a name="options-text-editor---all-languages---general-page"></a>옵션(텍스트 편집기 - 모든 언어 - 일반 페이지)
-  이 대화 상자를 사용하여 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에 포함된 5개 편집기 모두의 일반 편집 옵션을 설정할 수 있습니다. 이 옵션을 표시하려면 **도구** 메뉴에서 **옵션** 을 클릭하고 **텍스트 편집기** 폴더를 선택한 다음 **모든 언어** 폴더를 확장하고 **일반**을 클릭합니다.  
+  이 대화 상자를 사용하여 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에 포함된 5개 편집기 모두의 일반 편집 옵션을 설정할 수 있습니다. 이 옵션을 표시하려면 **도구** 메뉴에서 **옵션** 을 클릭하고 
+  **텍스트 편집기** 폴더를 선택한 다음 **모든 언어** 폴더를 확장하고 **일반**을 클릭합니다.  
   
 ## <a name="option-settings-by-editor"></a>편집기별 옵션 설정  
  DMX, MDX 및 SQL Server Compact 편집기에 대해 옵션을 설정하려면 **모든 언어** 대화 상자를 사용해야 합니다. 여기서 설정한 옵션은 일반 텍스트, Transact-SQL 및 XML 편집기에도 적용되지만 이러한 언어에 대한 하위 폴더를 확장하고 해당 옵션 페이지를 선택하여 각 편집기에 대해 옵션을 별도로 설정할 수도 있습니다.  
@@ -51,7 +52,7 @@ ms.locfileid: "66089244"
 > [!NOTE]  
 >  이 미리 알림 화살표는 코드에 추가되거나 인쇄되지 않으며 참조용으로만 사용됩니다. 모든 유형의 편집기에서 이 기능을 사용할 수 있는 것은 아닙니다.  
   
- **선택 영역이 없는 경우 잘라내기/복사 명령을 빈 줄에 적용**  
+ **선택 영역이 없는 경우 잘라내기 또는 복사 명령을 빈 줄에 적용**  
  빈 줄에 삽입 포인터를 두고 어떤 영역도 선택하지 않은 채 **복사** 또는 **잘라내기**를 클릭한 경우의 편집기 동작을 설정합니다.  
   
  이 확인란을 선택하면 빈 줄을 복사하거나 잘라냅니다. 그런 다음 **붙여넣기**를 클릭하면 새로운 빈 줄이 삽입됩니다.  
@@ -60,7 +61,7 @@ ms.locfileid: "66089244"
   
  줄이 비어 있지 않으면 이 설정은 **복사** 또는 **잘라내기** 명령에 영향을 주지 않습니다. 어떤 영역도 선택하지 않으면 줄 전체를 복사하거나 잘라냅니다. 그런 다음 **붙여넣기**를 클릭하면 줄 전체의 텍스트와 줄 끝 문자를 붙여 넣습니다.  
   
-## <a name="display"></a>표시  
+## <a name="display"></a>디스플레이  
  **줄 번호**  
  각 코드 줄 옆에 줄 번호를 표시합니다.  
   

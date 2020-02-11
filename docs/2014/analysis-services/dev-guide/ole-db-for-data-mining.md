@@ -1,5 +1,5 @@
 ---
-title: 데이터 마이닝용 OLE DB | Microsoft Docs
+title: 데이터 마이닝에 대 한 OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,21 +14,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7662514939526bd8cdc12d19e5b53e3a4a2f913d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62732038"
 ---
 # <a name="ole-db-for-data-mining"></a>데이터 마이닝용 OLE DB
-  데이터 마이닝 기능은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 준수는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB for Data Mining 1.0 사양 2000 년 6 월에에서 릴리스 합니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 마이닝 기능은 6 월 2000에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 출시 된 데이터 마이닝 1.0 사양에 대 한 OLE DB를 준수 합니다.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 새로운 스키마 행 집합을 추가하고, 기존 스키마 행 집합에 열을 추가하며, 마이닝 구조를 만들고 관리하는 데 사용할 수 있는 DMX(Data Mining Extensions) 언어에 구문을 추가하여 사양을 확장하였습니다.  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 새로운 스키마 행 집합을 추가하고, 기존 스키마 행 집합에 열을 추가하며, 마이닝 구조를 만들고 관리하는 데 사용할 수 있는 DMX(Data Mining Extensions) 언어에 구문을 추가하여 사양을 확장하였습니다.  
   
- **참조 항목:** [데이터 마이닝 스키마 행 집합](../../relational-databases/native-client-ole-db-rowsets/rowsets.md), [마이닝 구조 만들기 &#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx), [ALTER 마이닝 구조 &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx)하십시오 [놓기 마이닝 구조 &#40;DMX&#41;](/sql/dmx/drop-mining-structure-dmx)  
+ **자세한 내용:** [데이터 마이닝 스키마 행 집합](../../relational-databases/native-client-ole-db-rowsets/rowsets.md), [dmx&#41;&#40;마이닝 구조 만들기 ](/sql/dmx/create-mining-structure-dmx), dmx [&#41;ALTER ](/sql/dmx/alter-mining-structure-dmx)마이닝 구조 &#40;dmx, [마이닝 구조 삭제 &#40;](/sql/dmx/drop-mining-structure-dmx)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Analysis Services 스키마 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)   
- [DMX&#40;Data Mining Extensions&#41; 참조](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [DMX&#41; 참조 &#40;데이터 마이닝 확장](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

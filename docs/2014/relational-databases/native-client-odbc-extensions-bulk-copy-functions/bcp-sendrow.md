@@ -19,13 +19,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3e8ef7aa7a4354f5a3fbc334504512b2ee8d131b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62688836"
 ---
-# <a name="bcpsendrow"></a>bcp_sendrow
+# <a name="bcp_sendrow"></a>bcp_sendrow
   프로그램 변수에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 데이터 행을 보냅니다.  
   
 ## <a name="syntax"></a>구문  
@@ -43,21 +43,21 @@ hdbc
  *hdbc*  
  대량 복사가 가능한 ODBC 연결 핸들입니다.  
   
-## <a name="returns"></a>반환 값  
+## <a name="returns"></a>반환  
  SUCCEED 또는 FAIL  
   
-## <a name="remarks"></a>Remarks  
- 합니다 **bcp_sendrow** 함수는 프로그램 변수에서 행을 작성 하 고로 보냅니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+## <a name="remarks"></a>설명  
+ **Bcp_sendrow** 함수는 프로그램 변수에서 행을 빌드하고로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]보냅니다.  
   
- 호출 하기 전에 **bcp_sendrow**를 호출 해야 [bcp_bind](bcp-bind.md) 행 데이터를 포함 하는 프로그램 변수를 지정 합니다.  
+ **Bcp_sendrow**를 호출 하기 전에 [bcp_bind](bcp-bind.md) 를 호출 하 여 행 데이터가 포함 된 프로그램 변수를 지정 해야 합니다.  
   
- 하는 경우 **bcp_bind** 예를 들어, 긴 가변 길이 데이터 형식 지정 이라고는 *eDataType* SQLTEXT 및 null이 아닌 매개 변수 *pData* 매개 변수를 **bcp_sendrow** 다른 데이터 형식에 대해서와 마찬가지로 변수와 값을 보냅니다. 그러나 If, **bcp_bind** NULL이 포함 되어 *pData* 매개 변수 **bcp_sendrow** 지정 된 데이터를 사용 하 여 모든 열을 보낸 후에 즉시 응용 프로그램에 제어를 반환 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 응용 프로그램을 호출할 수 있습니다 [bcp_moretext](bcp-moretext.md) 반복적으로 하는 긴 가변 길이 데이터를 보내도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 한 번에 청크 합니다. 자세한 내용은 [bcp_moretext](bcp-moretext.md)합니다.  
+ Long, 가변 길이 데이터 형식 (예: SQLTEXT의 *Edatatype* 매개 변수 및 Null이 아닌 *.pdata* 매개 변수)을 지정 하 여 **bcp_bind** 를 호출 하는 경우 **bcp_sendrow** 는 다른 데이터 형식에 대해 수행 되는 것과 같은 방법으로 데이터 값을 보냅니다. 그러나 **bcp_bind** 에 NULL *.pdata* 매개 변수가 있는 경우에는 지정 된 데이터가 있는 모든 열이로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]전송 되는 즉시 응용 프로그램에 제어를 반환 **bcp_sendrow** . 그런 다음 응용 프로그램은 [bcp_moretext](bcp-moretext.md) 를 반복적으로 호출 하 여 긴 가변 길이 데이터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 한 번에 청크로 보낼 수 있습니다. 자세한 내용은 [bcp_moretext](bcp-moretext.md)를 참조 하세요.  
   
- 때 **bcp_sendrow** 행을 대량 복사할 프로그램 변수에서 하는 데 사용 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 행이 커밋됩니다 사용자를 호출 하는 경우에 [bcp_batch](bcp-batch.md) 하거나 [bcp_done](bcp-done.md) . 사용자 호출 하도록 선택할 수 있습니다 **bcp_batch** 되 면 모든 *n* 행 들어오는 데이터의 기간 사이의 소강 상태가 있는 경우 또는 합니다. 하는 경우 **bcp_batch** 가 호출 되지 행 시 커밋됩니다 **bcp_done** 라고 합니다.  
+ **Bcp_sendrow** 를 사용 하 여 프로그램 변수에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블로 행을 대량 복사 하는 경우 사용자가 [bcp_batch](bcp-batch.md) 또는 [bcp_done](bcp-done.md)를 호출 하는 경우에만 행이 커밋됩니다. 사용자는 *n 개* 행 마다 또는 들어오는 데이터 기간 사이에 소강 상태가이 있는 경우 **bcp_batch** 를 호출 하도록 선택할 수 있습니다. **Bcp_batch** 를 호출 하지 않으면 **bcp_done** 를 호출할 때 행이 커밋됩니다.  
   
- 대량 복사에서 시작 하 여 중단에 대 한 내용은 변경 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]를 참조 하십시오 [대량 복사 작업 수행 &#40;ODBC&#41;](../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
+ 에서 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]시작 하는 대량 복사의 주요 변경 내용에 대 한 자세한 내용은 [ODBC&#41;&#40;대량 복사 작업 수행 ](../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)을 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [대량 복사 함수](sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>참고 항목  
+ [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

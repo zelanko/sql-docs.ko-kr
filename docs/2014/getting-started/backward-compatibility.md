@@ -1,5 +1,5 @@
 ---
-title: 이전 버전과 호환성 | Microsoft Docs
+title: 이전 버전과의 호환성 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -26,10 +26,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4619eeea35df4de16c3b980ecc0ea685488970eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088583"
 ---
 # <a name="backward-compatibility"></a>Backward Compatibility
@@ -44,10 +44,10 @@ ms.locfileid: "66088583"
 |[Analysis Services 이전 버전과의 호환성](../../2014/analysis-services/analysis-services-backward-compatibility.md)|사용 중인 애플리케이션을 변경해야 할 수도 있는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 변경 내용을 설명하는 항목이 포함되어 있습니다.|  
 |[Integration Services의 이전 버전과의 호환성](../integration-services/integration-services-backward-compatibility.md)|기존 데이터 변환 서비스 애플리케이션을 변경해야 할 수도 있는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 변경 내용을 설명합니다.|  
 |[Reporting Services의 이전 버전과의 호환성](../reporting-services/reporting-services-backward-compatibility.md)|기존 [!INCLUDE[ssRS](../includes/ssrs.md)] 솔루션을 변경해야 할 수도 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 변경 내용을 설명하는 항목이 포함되어 있습니다.|  
-|[이전 버전과 호환성 &#40;Master Data Services&#41;](../master-data-services/backward-compatibility-master-data-services.md)|기존 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 솔루션을 변경해야 할 수도 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 변경 내용을 설명하는 항목이 포함되어 있습니다.|  
+|[이전 버전과의 호환성 &#40;MDS(Master Data Services)&#41;](../master-data-services/backward-compatibility-master-data-services.md)|기존 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 솔루션을 변경해야 할 수도 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 변경 내용을 설명하는 항목이 포함되어 있습니다.|  
 |[복제의 이전 버전과의 호환성](../../2014/relational-databases/replication/replication-backward-compatibility.md)|기존 복제 솔루션을 변경해야 할 수도 있는 [!INCLUDE[ssDE](../includes/ssde-md.md)]의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 변경 내용을 설명하는 항목이 포함되어 있습니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 2014 설치](../database-engine/install-windows/install-sql-server.md)   
  [SQL Server 2014로 업그레이드](../database-engine/install-windows/upgrade-sql-server.md)  
   

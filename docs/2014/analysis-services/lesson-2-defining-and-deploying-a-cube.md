@@ -1,5 +1,5 @@
 ---
-title: '2단원: 정의 및 큐브를 배포 합니다. | Microsoft Docs'
+title: '2 단원: 큐브 정의 및 배포 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 298f07b5a73e7dfd38ef8eef19893813d96e1892
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078941"
 ---
 # <a name="lesson-2-defining-and-deploying-a-cube"></a>2단원: 큐브 정의 및 배포
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트에서 데이터 원본 뷰를 정의하면 초기 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 큐브를 정의할 준비가 됩니다.  
+  프로젝트에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] 데이터 원본 뷰를 정의 하면 초기 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 큐브를 정의할 준비가 된 것입니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
  큐브 마법사를 사용하여 단일 패스에서 큐브와 차원을 정의할 수 있습니다. 또는 하나 이상의 차원을 정의한 다음 큐브 마법사를 사용하여 이러한 차원을 사용하는 큐브를 정의할 수 있습니다. 복잡한 솔루션을 디자인하는 경우 일반적으로 차원을 정의하는 작업부터 시작합니다. 자세한 내용은 [다차원 모델의 차원](multidimensional-models/dimensions-in-multidimensional-models.md) 또는 [다차원 모델의 큐브](multidimensional-models/cubes-in-multidimensional-models.md)를 참조하세요.  
   
 > [!NOTE]  
->  이 자습서의 모든 단원에 대한 완료된 프로젝트를 온라인으로 사용할 수 있습니다. 이전 단원에서 완료된 프로젝트를 시작 지점으로 사용하여 어떠한 단원으로든 이동할 수 있습니다. 이 자습서와 함께 제공되는 샘플 프로젝트를 다운로드하려면[여기를 클릭](https://go.microsoft.com/fwlink/?LinkID=221866) 하십시오.  
+>  이 자습서의 모든 단원에 대한 완료된 프로젝트를 온라인으로 사용할 수 있습니다. 이전 단원에서 완료된 프로젝트를 시작 지점으로 사용하여 어떠한 단원으로든 이동할 수 있습니다. 이 자습서와 함께 사용 되는 샘플 프로젝트를 다운로드 하려면 [여기를 클릭](https://go.microsoft.com/fwlink/?LinkID=221866) 하세요.  
   
  이 단원에서는 다음 태스크를 다룹니다.  
   
@@ -48,13 +48,13 @@ ms.locfileid: "66078941"
 ## <a name="next-lesson"></a>다음 단원  
  [3단원: 측정값, 특성 및 계층 수정](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
   
-## <a name="see-also"></a>관련 항목  
- [Analysis Services Tutorial 시나리오](analysis-services-tutorial-scenario.md)   
- [다차원 모델링 &#40;Adventure Works 자습서&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
+## <a name="see-also"></a>참고 항목  
+ [Analysis Services 자습서 시나리오](analysis-services-tutorial-scenario.md)   
+ [&#40;의 다차원 모델링은 놀이 Works 자습서&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [다차원 모델의 차원](multidimensional-models/dimensions-in-multidimensional-models.md)   
  [다차원 모델의 큐브](multidimensional-models/cubes-in-multidimensional-models.md)   
- [Analysis Services 프로젝트 속성 구성&#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   
- [Analysis Services 프로젝트 빌드&#40;SSDT&#41;](multidimensional-models/build-analysis-services-projects-ssdt.md)   
- [Analysis Services 프로젝트 배포&#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+ [SSDT&#41;&#40;Analysis Services 프로젝트 속성 구성](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   
+ [SSDT &#40;Analysis Services 프로젝트 빌드&#41;](multidimensional-models/build-analysis-services-projects-ssdt.md)   
+ [SSDT&#41;&#40;Analysis Services 프로젝트 배포](multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
   

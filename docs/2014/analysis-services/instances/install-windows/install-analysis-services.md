@@ -1,5 +1,5 @@
 ---
-title: 테이블 형식 모드에서 Analysis Services 설치 | Microsoft Docs
+title: 테이블 형식 모드로 Analysis Services 설치 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2bf1a8ee0d5dd3dde585a027fd08fd833fb40304
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079907"
 ---
 # <a name="install-analysis-services-in-tabular-mode"></a>테이블 형식 모드에서 Analysis Services 설치
@@ -29,11 +29,11 @@ ms.locfileid: "66079907"
   
 1.  설치 프로그램의 기능 트리에서 **Analysis Services** 를 선택합니다.  
   
-     ![Analsyis 서비스를 보여 주는 설치 기능 트리에](../../../sql-server/install/media/ssas-setupas.gif "Analsyis 서비스를 보여 주는 설치 기능 트리")  
+     ![Analysis Services를 보여 주는 설치 기능 트리](../../../sql-server/install/media/ssas-setupas.gif "Analysis Services를 보여 주는 설치 기능 트리")  
   
 2.  Analysis Services 구성 페이지에서 **테이블 형식 모드**를 선택해야 합니다.  
   
-     ![Analysis Services 구성 옵션을 사용 하 여 설치 페이지](../../../sql-server/install/media/ssas-setupasconfig.gif "Analysis Services 구성 옵션을 사용 하 여 설정 페이지")  
+     ![Analysis Services 구성 옵션이 포함된 설치 페이지](../../../sql-server/install/media/ssas-setupasconfig.gif "Analysis Services 구성 옵션이 포함된 설치 페이지")  
   
  테이블 형식 모드는 xVelocity 메모리 내 분석 엔진(VertiPaq)을 사용합니다. 이 엔진은 Analysis Services에 배포하는 테이블 형식 모델에 대한 기본 스토리지입니다. 테이블 형식 모델 솔루션을 서버에 배포한 이후에 테이블 형식 솔루션을 선택적으로 구성하여 메모리 집중형 스토리지 대신에 DirectQuery 디스크 스토리지를 사용할 수 있습니다.  
   
@@ -45,23 +45,26 @@ ms.locfileid: "66079907"
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVERMODE=TABULAR /INSTANCENAME=ASTabular /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
 ```  
   
- `INSTANCENAME`은 17자 미만이어야 합니다.  
+ 
+  `INSTANCENAME`은 17자 미만이어야 합니다.  
   
  모든 자리 표시자 계정 값을 유효한 계정 및 암호로 바꾸어야 합니다.  
   
- SQL Server Management Studio 또는 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]와 같은 도구는 제공되는 명령줄 구문 예를 사용하여 설치되지 않습니다. 기능을 추가 하는 방법에 대 한 자세한 내용은 참조 하세요. [명령 프롬프트에서 SQL Server 2014 설치](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)합니다.  
+ SQL Server Management Studio 또는 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 와 같은 도구는 제공되는 명령줄 구문 예를 사용하여 설치되지 않습니다. 기능을 추가 하는 방법에 대 한 자세한 내용은 [명령 프롬프트에서 SQL Server 2014 설치](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)를 참조 하세요.  
   
- `ASSERVERMODE`은 대/소문자를 구분합니다.  모든 값은 대문자로 표시해야 합니다. 다음 표에는 `ASSERVERMODE`의 유효한 값에 대한 설명이 나와 있습니다.  
+ 
+  `ASSERVERMODE`는 대/소문자를 구분합니다.  모든 값은 대문자로 표시해야 합니다. 다음 표에는 `ASSERVERMODE`의 유효한 값에 대한 설명이 나와 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
-|MULTIDIMENSIONAL|이것은 기본값입니다. `ASSERVERMODE`를 설정하지 않은 경우 서버는 다차원 서버 모드에 설치됩니다.|  
+|MULTIDIMENSIONAL|이것은 기본값입니다. 
+  `ASSERVERMODE`를 설정하지 않은 경우 서버는 다차원 서버 모드에 설치됩니다.|  
 |POWERPIVOT|이 값은 선택 사항입니다. 실제로 `ROLE` 매개 변수를 설정한 경우 서버 모드는 자동으로 1로 설정되며 `ASSERVERMODE`를 SharePoint용 PowerPivot 설치에 대한 옵션으로 만듭니다. 자세한 내용은 [Install PowerPivot from the Command Prompt](../../../sql-server/install/install-powerpivot-from-the-command-prompt.md)를 참조하십시오.|  
 |TABULAR|명령줄 설치를 사용하여 테이블 형식 모드에 Analysis Services를 설치하는 경우 이 값이 필요합니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Analysis Services 인스턴스의 서버 모드 확인](../determine-the-server-mode-of-an-analysis-services-instance.md)   
- [메모리 내 또는 테이블 형식 모델 데이터베이스에 대 한 DirectQuery 액세스 구성](../../tabular-models/enable-directquery-mode-in-ssms.md)   
- [테이블 형식 모델링(SSAS 테이블 형식)](../../tabular-models/tabular-models-ssas.md)  
+ [테이블 형식 모델 데이터베이스에 대 한 메모리 내 또는 DirectQuery 액세스 구성](../../tabular-models/enable-directquery-mode-in-ssms.md)   
+ [테이블 형식 모델링 &#40;SSAS 테이블 형식&#41;](../../tabular-models/tabular-models-ssas.md)  
   
   

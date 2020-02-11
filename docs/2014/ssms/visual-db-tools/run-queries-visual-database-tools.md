@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6a06f177f541e6bca5eb24da5e8a709673ab7d5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62710808"
 ---
 # <a name="run-queries-visual-database-tools"></a>쿼리 실행(Visual Database Tools)
@@ -29,7 +29,7 @@ ms.locfileid: "62710808"
   
 2.  쿼리 창에서 아무 곳이나 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 **SQL 실행** 을 선택합니다.  
   
-     -또는-  
+     또는  
   
      Ctrl+R을 누릅니다.  
   
@@ -39,8 +39,8 @@ ms.locfileid: "62710808"
   
  업데이트, 삽입 원본, 삽입 위치, 삭제 또는 테이블 만들기 쿼리를 만드는 경우 쿼리 및 뷰 디자이너는 쿼리가 적용되는 행의 수를 메시지로 표시합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [결과 창에서 데이터 작업을 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [결과 창에서 데이터 작업 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [쿼리 관련 기본 작업 수행&#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

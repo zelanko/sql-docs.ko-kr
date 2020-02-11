@@ -1,5 +1,5 @@
 ---
-title: 구조에 마이닝 모델 추가 (Analysis Services-데이터 마이닝) | Microsoft Docs
+title: 구조에 마이닝 모델 추가 (Analysis Services 데이터 마이닝) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bd25682f12ce0a3ddad5e8f135d82aaf08115762
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086245"
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>구조에 마이닝 모델 추가(Analysis Services - 데이터 마이닝)
@@ -28,7 +28,7 @@ ms.locfileid: "66086245"
  데이터 마이닝 마법사를 사용하여 새 마이닝 모델을 만드는 경우 항상 기본적으로 먼저 마이닝 구조를 만들어야 합니다. 그러면 마법사에서 구조에 초기 모델을 추가할 수 있는 옵션을 제공합니다. 하지만 모델은 바로 만들 필요가 없습니다. 구조만 만들 경우 예측 가능한 특성으로 사용할 열이나 특정 모델에서 데이터를 사용하는 방법을 결정할 필요가 없습니다. 대신 나중에 사용할 일반 데이터 구조만 설정하고 나중에 [Data Mining Designer](data-mining-designer.md) 에서 해당 구조를 기반으로 하는 새 마이닝 모델을 추가할 수 있습니다.  
   
 > [!NOTE]  
->  DMX에서 CREATE MINING MODEL 문은 마이닝 모델에서 시작됩니다. 즉, 사용자가 선택한 마이닝 모델을 정의하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 자동으로 기본 구조를 생성합니다. 나중에 ALTER STRUCTURE를 사용 하 여 해당 구조에 새 마이닝 모델을 추가 할 수 있습니다... ADD MODEL 문입니다.  
+>  DMX에서 CREATE MINING MODEL 문은 마이닝 모델에서 시작됩니다. 즉, 사용자가 선택한 마이닝 모델을 정의하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 자동으로 기본 구조를 생성합니다. 나중에 ALTER STRUCTURE ...를 사용 하 여 해당 구조에 새 마이닝 모델을 계속 추가할 수 있습니다. ADD MODEL 문입니다.  
   
 ## <a name="choosing-an-algorithm"></a>알고리즘 선택  
  기존 구조에 새 마이닝 모델을 추가하려면 먼저 해당 모델에서 사용할 데이터 마이닝 알고리즘을 선택해야 합니다. 각 알고리즘에서 서로 다른 유형의 분석을 수행하고 요구 사항이 서로 다르기 때문에 알고리즘의 선택이 중요합니다.  
@@ -48,17 +48,21 @@ ms.locfileid: "66086245"
   
 -   입력 열은 예측의 기반이 되는 정보를 제공합니다. 데이터 마이닝 마법사에서는 예측 가능한 열을 선택하면 설정되는 **제안** 기능을 사용할 수 있습니다. 이 단추를 클릭하면 마법사에서 예측 가능한 값을 샘플링하여 구조의 다른 열 중 적절한 변수를 만드는 열을 결정합니다. 키 열 또는 고유 값이 많은 다른 열을 거부하고 결과와 상관 관계가 있을 것 같은 열을 제안합니다.  
   
-     이 기능은 데이터 세트에 마이닝 모델을 작성하는 데 필요한 것보다 많은 열이 포함되어 있는 경우에 특히 편리합니다. **제안** 기능은 데이터 집합의 각 열과 예측 가능한 열 사이의 관계를 설명하는 0에서 1 사이의 점수를 계산합니다. 제안 기능은 이 점수를 기준으로 마이닝 모델에 대한 입력으로 사용할 열을 제안합니다. **제안** 기능을 사용하는 경우 제안된 열을 사용하거나, 필요에 맞게 선택 사항을 수정하거나, 제안을 무시할 수 있습니다.  
+     이 기능은 데이터 세트에 마이닝 모델을 작성하는 데 필요한 것보다 많은 열이 포함되어 있는 경우에 특히 편리합니다. 
+  **제안** 기능은 데이터 세트의 각 열과 예측 가능한 열 사이의 관계를 설명하는 0에서 1 사이의 점수를 계산합니다. 제안 기능은 이 점수를 기준으로 마이닝 모델에 대한 입력으로 사용할 열을 제안합니다. 
+  **제안** 기능을 사용하는 경우 제안된 열을 사용하거나, 필요에 맞게 선택 사항을 수정하거나, 제안을 무시할 수 있습니다.  
   
 -   예측 가능한 열은 마이닝 모델에서 예측하려는 정보를 포함합니다. 여러 열을 예측 가능한 특성으로 선택할 수 있습니다. 클러스터링 모델은 예측 가능한 특성이 선택 사항이므로 예외입니다.  
   
      예측 가능한 열은 모델 유형에 따라 특정 데이터 형식이어야 할 수 있습니다. 예를 들어 선형 회귀 모델에는 예측 값인 숫자 열이 필요하고, Naïve Bayes 알고리즘에는 불연속 값이 필요(모든 입력도 불연속이어야 함)합니다.  
   
 ## <a name="specifying-column-content"></a>열 내용 지정  
- *열 내용*을 지정해야 하는 열도 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 마이닝에서는 각 데이터 열의 내용 유형 속성을 통해 알고리즘이 해당 열의 데이터를 처리하는 방식을 알 수 있습니다. 예를 들어 데이터에 Income 열이 있는 경우 내용 유형을 Continuous로 설정하여 열이 연속 숫자를 포함하도록 지정해야 합니다. 그러나 내용 유형을 Discretized로 설정하고 선택적으로 정확한 버킷 수를 지정하여 Income 열의 숫자를 버킷으로 그룹화하도록 지정할 수도 있습니다. 고객을 세 개의 연령 그룹으로 버킷팅하는 모델과 고객을 10개의 연령 그룹으로 버킷팅하는 또 다른 모델을 만들려는 경우와 같이 열을 다르게 처리하는 다른 모델을 만들 수 있습니다.  
+ 
+  *열 내용*을 지정해야 하는 열도 있습니다. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 마이닝에서는 각 데이터 열의 내용 유형 속성을 통해 알고리즘이 해당 열의 데이터를 처리하는 방식을 알 수 있습니다. 예를 들어 데이터에 Income 열이 있는 경우 내용 유형을 Continuous로 설정하여 열이 연속 숫자를 포함하도록 지정해야 합니다. 그러나 내용 유형을 Discretized로 설정하고 선택적으로 정확한 버킷 수를 지정하여 Income 열의 숫자를 버킷으로 그룹화하도록 지정할 수도 있습니다. 고객을 세 개의 연령 그룹으로 버킷팅하는 모델과 고객을 10개의 연령 그룹으로 버킷팅하는 또 다른 모델을 만들려는 경우와 같이 열을 다르게 처리하는 다른 모델을 만들 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [마이닝 구조 & #40; Analysis Services-데이터 마이닝 & #41;](mining-structures-analysis-services-data-mining.md)   
+## <a name="see-also"></a>참고 항목  
+ [마이닝 구조 &#40;Analysis Services 데이터 마이닝&#41;](mining-structures-analysis-services-data-mining.md)   
  [관계형 마이닝 구조 만들기](create-a-relational-mining-structure.md)   
  [마이닝 모델 속성](mining-model-properties.md)   
  [마이닝 모델 열](mining-model-columns.md)  

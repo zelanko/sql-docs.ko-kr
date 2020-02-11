@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f28d0503497fd066de2d328e75813f7b77026b2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085236"
 ---
 # <a name="create-drillthrough-queries-using-dmx"></a>DMX를 사용하여 드릴스루 쿼리 만들기
@@ -43,8 +43,8 @@ WHERE [Model Region] = 'M200 Pacific'
   
  이 예에서는 별칭을 사용하여 구조 열의 이름을 바꾸었습니다. 구조 열에 별칭을 할당하지 않는 경우 열은 'Expression'이라는 이름으로 반환됩니다. 이 동작은 명명되지 않은 모든 열의 기본 동작입니다.  
   
-## <a name="see-also"></a>관련 항목  
- [드릴스루 쿼리&#40;데이터 마이닝&#41;](drillthrough-queries-data-mining.md)   
- [마이닝 구조에 대한 드릴스루](drillthrough-on-mining-structures.md)  
+## <a name="see-also"></a>참고 항목  
+ [드릴스루 쿼리 &#40;데이터 마이닝&#41;](drillthrough-queries-data-mining.md)   
+ [마이닝 구조에서의 드릴스루](drillthrough-on-mining-structures.md)  
   
   

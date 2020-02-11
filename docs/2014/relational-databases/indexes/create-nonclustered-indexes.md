@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3dc7c4b9b32ee872ec48e78ecb05a713f2cf8a12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62651492"
 ---
 # <a name="create-nonclustered-indexes"></a>비클러스터형 인덱스 만들기
@@ -34,7 +34,7 @@ ms.locfileid: "62651492"
   
      [보안](#Security)  
   
--   **비클러스터형 인덱스를 만들려면:**  
+-   **다음을 사용 하 여 비클러스터형 인덱스를 만듭니다.**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62651492"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  테이블이나 뷰에 대한 ALTER 권한이 필요합니다. 사용자는 **sysadmin** 고정 서버 역할의 멤버 또는 **db_ddladmin** 및 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -72,7 +72,7 @@ ms.locfileid: "62651492"
   
 3.  비클러스터형 인덱스를 만들 테이블을 마우스 오른쪽 단추로 클릭하고 **디자인**을 선택합니다.  
   
-4.  **테이블 디자이너** 메뉴에서 **인덱스/키**를 클릭합니다.  
+4.  **테이블 디자이너** 메뉴에서 **인덱스/키**를 클릭 합니다.  
   
 5.  **인덱스/키** 대화 상자에서 **추가**를 클릭합니다.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "62651492"
   
 8.  **닫기**를 클릭합니다.  
   
-9. **파일** 메뉴에서 _table name_ **저장**을 클릭합니다.  
+9. **파일** 메뉴에서_table_name_ **저장**을 클릭 합니다.  
   
 #### <a name="to-create-a-nonclustered-index-by-using-object-explorer"></a>개체 탐색기를 사용하여 비클러스터형 인덱스를 만들려면  
   
@@ -98,7 +98,7 @@ ms.locfileid: "62651492"
   
 6.  **인덱스 키 열** 아래에서 **추가...** 를 클릭합니다.  
   
-7.  **table_name**_에서 열 선택_ 대화 상자에서 비클러스터형 인덱스에 추가할 테이블 열의 확인란을 선택합니다.  
+7.  _Table_name_ **에서 열 선택**대화 상자에서 비클러스터형 인덱스에 추가할 테이블 열의 확인란을 선택 합니다.  
   
 8.  **확인**을 클릭합니다.  
   

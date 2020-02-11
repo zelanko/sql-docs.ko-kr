@@ -1,5 +1,5 @@
 ---
-title: 옵션 (텍스트 편집기-Transact-SQL-IntelliSense) | Microsoft Docs
+title: 옵션 (텍스트 편집기-Transact-sql-IntelliSense) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,17 +16,19 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: fd2cf2be2102aeed1c853ce1b9a198c2b196d26a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089817"
 ---
-# <a name="options-text-editor-transact-sql-intellisense"></a>옵션 (텍스트 편집기-Transact-SQL-IntelliSense)
+# <a name="options-text-editor-transact-sql-intellisense"></a>옵션 (텍스트 편집기-Transact-sql-IntelliSense)
+  
   **옵션** 대화 상자를 사용하여 [!INCLUDE[ssDE](../includes/ssde-md.md)] 쿼리 편집기에 대한 IntelliSense 설정을 변경할 수 있습니다. 이러한 설정은 **도구** 메뉴에서 **옵션**을 클릭하고 **텍스트 편집기** 폴더와 **Transact-SQL** 폴더를 차례로 확장한 다음 **고급**을 클릭하면 볼 수 있습니다.  
   
 ## <a name="transact-sql-intellisense-settings"></a>Transact-SQL IntelliSense 설정  
- [!INCLUDE[ssDE](../includes/ssde-md.md)] 쿼리 편집기에 대한 IntelliSense 옵션을 지정합니다.  
+ 
+  [!INCLUDE[ssDE](../includes/ssde-md.md)] 쿼리 편집기에 대한 IntelliSense 옵션을 지정합니다.  
   
 ### <a name="enable-intellisense"></a>IntelliSense 사용  
  IntelliSense 기능을 사용하도록 설정합니다. 이 상자가 선택되어 있지 않으면 특정 IntelliSense 옵션을 사용할 수 없습니다. 이 확인란은 기본적으로 선택되어 있습니다.  
@@ -43,7 +45,7 @@ ms.locfileid: "66089817"
  **기본 제공 함수 이름의 대/소문자 구분**  
  완성 목록에 포함된 기본 제공 [!INCLUDE[tsql](../includes/tsql-md.md)] 함수 이름에서 대문자(예: DATEADD) 또는 소문자(예: dateadd) 중 어떤 문자를 사용할 것인지를 지정합니다. 사용 중인 [!INCLUDE[tsql](../includes/tsql-md.md)] 코딩 규칙에 가장 적합한 옵션을 선택합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [IntelliSense 문제 해결 &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/troubleshooting-intellisense.md)  
+## <a name="see-also"></a>참고 항목  
+ [IntelliSense &#40;SQL Server Management Studio&#41;문제 해결](../relational-databases/scripting/troubleshooting-intellisense.md)  
   
   

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ce2086e998704e893beaa92aabd2e51129a0450f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084208"
 ---
 # <a name="manually-edit-a-prediction-query"></a>예측 쿼리 수동 편집
@@ -29,22 +29,25 @@ ms.locfileid: "66084208"
  예측 쿼리 작성기의 표를 사용하여 개체 및 열 이름을 삽입하고 개별 예측 함수의 구문을 설정한 다음 수동 편집 모드로 전환하여 매개 변수 값을 변경할 수 있습니다.  
   
 > [!NOTE]  
->  **쿼리 텍스트** 뷰에서 **디자인** 뷰로 다시 전환하면 **쿼리 텍스트** 뷰에서 변경한 내용이 모두 손실됩니다.  
+>  
+  **쿼리 텍스트** 뷰에서 **디자인** 뷰로 다시 전환하면 **쿼리 텍스트** 뷰에서 변경한 내용이 모두 손실됩니다.  
   
 ### <a name="modify-a-query"></a>쿼리 수정  
   
-1.  **의 데이터 마이닝 디자이너에 있는** 마이닝 모델 예측 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]탭에서 **SQL**을 클릭합니다.  
+1.  
+  **의 데이터 마이닝 디자이너에 있는** 마이닝 모델 예측 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]탭에서 **SQL**을 클릭합니다.  
   
      화면 맨 아래의 표가 쿼리를 포함하는 텍스트 편집기로 바뀝니다. 이 편집기에서 쿼리 변경 내용을 입력할 수 있습니다.  
   
 2.  쿼리를 실행하려면 **마이닝 모델** 메뉴에서 **결과**를 선택하거나 단추를 클릭하여 쿼리 결과로 전환합니다.  
   
     > [!NOTE]  
-    >  만든 쿼리가 유효하지 않을 경우 결과 창에 오류도 표시되지 않고 결과도 표시되지 않습니다. **디자인** 단추를 클릭하거나 **마이닝 모델** 메뉴에서 **디자인** 또는 **쿼리** 를 선택하여 문제를 해결하고 쿼리를 다시 실행하십시오.  
+    >  만든 쿼리가 유효하지 않을 경우 결과 창에 오류도 표시되지 않고 결과도 표시되지 않습니다. 
+  **디자인** 단추를 클릭하거나 **마이닝 모델** 메뉴에서 **디자인** 또는 **쿼리** 를 선택하여 문제를 해결하고 쿼리를 다시 실행하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 마이닝 쿼리](data-mining-queries.md)   
- [예측 쿼리 작성기&#40;데이터 마이닝&#41;](../prediction-query-builder-data-mining.md)   
- [6단원: 만들기 및 예측 작업 &#40;기본 데이터 마이닝 자습서&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [예측 쿼리 작성기 &#40;데이터 마이닝&#41;](../prediction-query-builder-data-mining.md)   
+ [6 단원: 예측 만들기 및 작업 &#40;기본 데이터 마이닝 자습서&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
   

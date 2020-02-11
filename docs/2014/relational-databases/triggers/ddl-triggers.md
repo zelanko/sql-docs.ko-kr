@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 87f260bc69a582726c2e995ed1934d10a1481db9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62654979"
 ---
 # <a name="ddl-triggers"></a>DDL 트리거
@@ -110,7 +110,7 @@ GO
   
 ## <a name="related-tasks"></a>관련 작업  
   
-|태스크|항목|  
+|Task|항목|  
 |----------|-----------|  
 |DDL 트리거 생성, 수정 또는 삭제하거나 사용하지 않도록 설정하는 방법에 대해 설명합니다.|[DDL 트리거 구현](implement-ddl-triggers.md)|  
 |CLR DDL 트리거를 만드는 방법에 대해 설명합니다.|[CLR 트리거 만들기](create-clr-triggers.md)|  
@@ -118,7 +118,7 @@ GO
 |EVENTDATA 함수를 사용하여 DDL 트리거를 발생하는 이벤트에 대한 정보를 반환하는 방법에 대해 설명합니다.|[EVENTDATA 함수 사용](use-the-eventdata-function.md)|  
 |트리거 보안을 관리하는 방법에 대해 설명합니다.|[트리거 보안 관리](manage-trigger-security.md)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [DML 트리거](dml-triggers.md)   
  [LOGON 트리거](logon-triggers.md)   
  [CREATE TRIGGER&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)  

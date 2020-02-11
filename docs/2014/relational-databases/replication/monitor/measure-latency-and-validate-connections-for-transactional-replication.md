@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 89149645524adedf01b8d9fb7c116cf0ab0f26c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667890"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>트랜잭션 복제에 대한 대기 시간 측정 및 연결 유효성 검사
@@ -55,7 +55,7 @@ ms.locfileid: "62667890"
 ###  <a name="Restrictions"></a> 제한 사항  
  또한 추적 프로그램 토큰은 모든 작업을 중지하고 모든 노드가 처리 중인 변경 내용을 모두 받았는지 확인하므로 시스템을 중지시킬 때 유용할 수 있습니다. 자세한 내용은 [복제 토폴로지 정지&#40;복제 Transact-SQL 프로그래밍&#41;](../administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)를 참조하세요.  
   
- 추적 프로그램 토큰을 사용하려면 다음과 같이 특정 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]버전을 사용해야 합니다.  
+ 추적 토큰을 사용하려면 다음과 같이 특정 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전을 사용해야 합니다.  
   
 -   배포자는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이후 버전이어야 합니다.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "62667890"
   
 3.  **추적 프로그램 삽입**을 클릭합니다.  
   
-4.  다음 열에 추적 프로그램 토큰에 대 한 경과 시간을 확인 합니다. **게시자에서 배포자로 연결 시 대기 시간**, **배포자에서 구독자로 연결 시 대기 시간** 및 **총 대기 시간**. 값 **보류 중** 은 토큰이 지정된 지점에 아직 도달하지 않았음을 나타냅니다.  
+4.  다음 열에서 추적 프로그램 토큰에 대한 경과된 시간을 확인합니다. **게시자에서 배포자로 연결 시 대기 시간**, **배포자에서 구독자로 연결 시 대기 시간** 및 **총 대기 시간**. 값 **보류 중** 은 토큰이 지정된 지점에 아직 도달하지 않았음을 나타냅니다.  
   
 #### <a name="to-view-information-on-a-tracer-token-inserted-previously"></a>이전에 삽입한 추적 프로그램 토큰에 대한 정보를 보려면  
   
@@ -98,7 +98,7 @@ ms.locfileid: "62667890"
   
 3.  **삽입된 시간** 드롭다운 목록에서 시간을 선택합니다.  
   
-4.  다음 열에 추적 프로그램 토큰에 대 한 경과 시간을 확인 합니다. **게시자에서 배포자로 연결 시 대기 시간**, **배포자에서 구독자로 연결 시 대기 시간** 및 **총 대기 시간**. 값 **보류 중** 은 토큰이 지정된 지점에 아직 도달하지 않았음을 나타냅니다.  
+4.  다음 열에서 추적 프로그램 토큰에 대한 경과된 시간을 확인합니다. **게시자에서 배포자로 연결 시 대기 시간**, **배포자에서 구독자로 연결 시 대기 시간** 및 **총 대기 시간**. 값 **보류 중** 은 토큰이 지정된 지점에 아직 도달하지 않았음을 나타냅니다.  
   
     > [!NOTE]  
     >  추적 프로그램 토큰 정보는 배포 데이터베이스의 기록 보존 기간에 의해 제어되는 다른 기록 데이터와 같은 시간 동안 유지됩니다. 배포 데이터베이스 속성 변경에 대한 자세한 내용은 [게시자 및 배포자 속성 보기 및 수정](../view-and-modify-distributor-and-publisher-properties.md)을 참조하세요.  
@@ -111,21 +111,21 @@ ms.locfileid: "62667890"
   
 2.  (옵션) 게시 데이터베이스의 게시자에서 [sp_helpsubscription&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql)을 실행합니다. 해당 구독이 있는지 그리고 상태가 활성 상태인지 확인합니다.  
   
-3.  게시 데이터베이스의 게시자에서 [sp_posttracertoken&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql)을 실행하여 **@publication** 을 지정합니다. **@tracer_token_id** 출력 매개 변수의 값을 확인합니다.  
+3.  게시 데이터베이스의 게시자에서 [sp_posttracertoken&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql)을 실행하여 **@publication**을 지정합니다. **@tracer_token_id** 출력 매개 변수의 값을 확인 합니다.  
   
 #### <a name="to-determine-latency-and-validate-connections-for-a-transactional-publication"></a>트랜잭션 복제에 대한 대기 시간을 확인하고 연결 유효성을 검사하려면  
   
 1.  이전 절차를 따라 게시에 추적 프로그램 토큰을 게시합니다.  
   
-2.  게시 데이터베이스의 게시자에서 [sp_helptracertokens&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql)를 실행하여 **@publication** 을 지정합니다. 그러면 해당 게시에 게시된 모든 추적 프로그램 토큰의 목록이 반환됩니다. 결과 집합에서 원하는 **tracer_id** 를 확인합니다.  
+2.  게시 데이터베이스의 게시자에서 [sp_helptracertokens&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql)를 실행하여 **@publication**을 지정합니다. 그러면 해당 게시에 게시된 모든 추적 프로그램 토큰의 목록이 반환됩니다. 결과 집합에서 원하는 **tracer_id** 를 확인합니다.  
   
-3.  게시 데이터베이스의 게시자에서 [sp_helptracertokenhistory&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql)를 실행하여 **@publication** 을 지정하고 **@tracer_id** 에 대해 2단계에서 얻은 추적 프로그램 토큰 ID를 지정합니다. 그러면 선택한 추적 프로그램 토큰에 대한 대기 시간 정보가 반환됩니다.  
+3.  게시 데이터베이스의 게시자에서 [sp_helptracertokenhistory&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql)를 실행하여 **@publication**을 지정하고 **@tracer_id**에 대해 2단계에서 얻은 추적 프로그램 토큰 ID를 지정합니다. 그러면 선택한 추적 프로그램 토큰에 대한 대기 시간 정보가 반환됩니다.  
   
 #### <a name="to-remove-tracer-tokens"></a>추적 프로그램 토큰을 제거하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_helptracertokens&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql)를 실행하여 **@publication** 을 지정합니다. 그러면 해당 게시에 게시된 모든 추적 프로그램 토큰의 목록이 반환됩니다. 결과 집합에서 삭제할 추적 프로그램 토큰의 **tracer_id** 를 확인합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_helptracertokens&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql)를 실행하여 **@publication**을 지정합니다. 그러면 해당 게시에 게시된 모든 추적 프로그램 토큰의 목록이 반환됩니다. 결과 집합에서 삭제할 추적 프로그램 토큰의 **tracer_id** 를 확인합니다.  
   
-2.  게시 데이터베이스의 게시자에서 [sp_deletetracertokenhistory&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql)를 실행하여 **@publication** 을 지정하고 **@tracer_id** 에 대해 2단계에서 얻은 삭제할 추적 프로그램의 ID를 지정합니다.  
+2.  게시 데이터베이스의 게시자에서 [sp_deletetracertokenhistory&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql)를 실행하여 **@publication**을 지정하고 **@tracer_id**에 대해 2단계에서 얻은 삭제할 추적 프로그램의 ID를 지정합니다.  
   
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
  이 예제에서는 추적 프로그램 토큰 레코드를 게시하고 게시된 추적 프로그램 토큰의 반환된 ID를 사용하여 대기 시간 정보를 봅니다.  

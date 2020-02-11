@@ -13,22 +13,22 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c77f6ce464540cd74f67af73d63a20f5d94fdfc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721863"
 ---
 # <a name="configure-distribution-wizard"></a>Configure Distribution Wizard
   이 섹션에서는 배포 구성 마법사의 다음 페이지에 대한 정보를 제공합니다.  
   
 -   [배포자](distributor.md)
--   [스냅숏 폴더](snapshot-folder.md)  
+-   [스냅샷 폴더](snapshot-folder.md)  
 -   [배포 데이터베이스](distribution-database.md)  
 -   [게시자](publishers.md)  
 -   [배포자 암호](distributor-password.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [배포 구성](configure-distribution.md)   
  [게시 및 배포 구성](configure-publishing-and-distribution.md)   
 

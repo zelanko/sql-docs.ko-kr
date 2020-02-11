@@ -17,14 +17,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c81d64d8aee6bb44451ab8d2e9a7b671af2ac06a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62727859"
 ---
 # <a name="user-defined-functions-and-stored-procedures"></a>사용자 정의 함수 및 저장 프로시저
-  ADOMD.NET 서버 개체를 사용 하 여 UDF (사용자 정의 함수) 또는 저장된 프로시저를 만들 수 있습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 메타 데이터 및 서버에서 데이터 상호 작용 하는 합니다. 이러한 in-process 메서드는 MDX(Multidimensional Expressions) 또는 DMX(Data Mining Extensions) 문을 통해 호출되어 네트워크 통신에 따른 지연 시간 없이 추가 기능을 제공합니다.  
+  ADOMD.NET 서버 개체를 사용 하 여 서버에서 메타 데이터 및 데이터와 상호 작용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 하는 UDF (사용자 정의 함수) 또는 저장 프로시저를 만들 수 있습니다. 이러한 in-process 메서드는 MDX(Multidimensional Expressions) 또는 DMX(Data Mining Extensions) 문을 통해 호출되어 네트워크 통신에 따른 지연 시간 없이 추가 기능을 제공합니다.  
   
 ## <a name="udf-examples"></a>UDF 예  
  UDF는 MDX 또는 DMX 문의 컨텍스트 내에서 호출할 수 있는 메서드로, 사용 가능한 매개 변수 수와 반환하는 데이터 형식에 제한이 없습니다.  
@@ -81,7 +81,7 @@ public Set RandomSample(Set set, int returnCount)
 }  
 ```  
   
- 위의 예는 다음 MDX 예에서 호출됩니다. 다섯 개의 국가 또는 시/도이 MDX 예에서는 검색 된 **Adventure Works** 데이터베이스입니다.  
+ 위의 예는 다음 MDX 예에서 호출됩니다. 이 MDX 예제에서는 5 개의 무작위 상태 또는도를 **놀이 Works** 데이터베이스에서 검색 합니다.  
   
 ```  
 SELECT SampleAssembly.RandomSample([Geography].[State-Province].Members, 5) on ROWS,   

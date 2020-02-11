@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fcd6e438327d88b79a88b5026f28e24e19fffb5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066875"
 ---
 # <a name="perspectives-ssas-tabular"></a>큐브 뷰(SSAS 테이블 형식)
@@ -22,7 +22,7 @@ ms.locfileid: "66066875"
   
  이 항목의 섹션:  
   
--   [이점](#bkmk_understanding)  
+-   [아니라](#bkmk_understanding)  
   
 -   [큐브 뷰 테스트](#bkmk_testpersp)  
   
@@ -35,19 +35,19 @@ ms.locfileid: "66066875"
   
  정의된 큐브 뷰가 있는 모델(데이터 원본)에 연결하는 경우 사용자는 사용할 큐브 뷰를 선택할 수 있습니다. 예를 들어 Excel의 모델 데이터 원본에 연결할 경우 인사부의 사용자는 데이터 연결 마법사의 테이블 및 뷰 선택 페이지에서 인적 자원 큐브 뷰를 선택할 수 있습니다. 이 경우 인적 자원 큐브 뷰에 대해 정의된 필드(테이블, 열 및 측정값)만 피벗 테이블 필드 목록에 표시됩니다.  
   
- 큐브 뷰는 보안 수단이 아니라 더 나은 사용자 환경을 제공하기 위한 도구입니다. 특정 큐브 뷰에 대한 모든 보안은 기본 모델에서 상속됩니다. 큐브 뷰에서 사용자에게 액세스 권한이 없는 모델 개체에 대한 액세스 권한을 부여할 수는 없습니다. 큐브 뷰를 통해 모델의 개체에 대한 액세스를 제공하려면 먼저 model 데이터베이스에 대한 보안을 해결해야 합니다. 보안 역할을 사용하여 모델 메타데이터 및 데이터에 보안을 설정할 수 있습니다. 자세한 내용은 [역할&#40;SSAS 테이블 형식&#41;](roles-ssas-tabular.md)을 참조하세요.  
+ 큐브 뷰는 보안 수단이 아니라 더 나은 사용자 환경을 제공하기 위한 도구입니다. 특정 큐브 뷰에 대한 모든 보안은 기본 모델에서 상속됩니다. 큐브 뷰에서 사용자에게 액세스 권한이 없는 모델 개체에 대한 액세스 권한을 부여할 수는 없습니다. 큐브 뷰를 통해 모델의 개체에 대한 액세스를 제공하려면 먼저 model 데이터베이스에 대한 보안을 해결해야 합니다. 보안 역할을 사용하여 모델 메타데이터 및 데이터에 보안을 설정할 수 있습니다. 자세한 내용은 [역할&#40;SSAS 테이블 형식&#41;](roles-ssas-tabular.md)를 참조하세요.  
   
-##  <a name="bkmk_testpersp"></a> 큐브 뷰 테스트  
+##  <a name="bkmk_testpersp"></a>큐브 뷰 테스트  
  모델 제작 시 모델 디자이너의 Excel에서 분석 기능을 사용하여 정의한 큐브 뷰의 효율성을 테스트할 수 있습니다. 모델 디자이너의 **모델** 메뉴에서 **Excel에서 분석**을 클릭하면 Excel이 열리기 전에 **자격 증명 및 큐브 뷰 선택** 대화 상자가 나타납니다. 이 대화 상자에서 현재 사용자 이름, 다른 사용자, 역할, 그리고 데이터 원본 및 뷰 데이터로 모델 작업 영역 데이터베이스에 연결하는 데 사용할 큐브 뷰를 지정할 수 있습니다.  
   
-##  <a name="bkmk_related_tasks"></a> 관련 태스크  
+##  <a name="bkmk_related_tasks"></a> 관련 작업  
   
 |항목|Description|  
 |-----------|-----------------|  
-|[큐브 뷰 만들기 및 관리&#40;SSAS 테이블 형식&#41;](perspectives-ssas-tabular.md)|모델 디자이너의 큐브 뷰 대화 상자를 사용하여 큐브 뷰를 만들고 관리하는 방법에 대해 설명합니다.|  
+|[SSAS 테이블 형식&#41;&#40;큐브 뷰 만들기 및 관리](perspectives-ssas-tabular.md)|모델 디자이너의 큐브 뷰 대화 상자를 사용하여 큐브 뷰를 만들고 관리하는 방법에 대해 설명합니다.|  
   
-## <a name="see-also"></a>관련 항목  
- [역할&#40;SSAS 테이블 형식&#41;](roles-ssas-tabular.md)   
- [계층 구조&#40;SSAS 테이블 형식&#41;](hierarchies-ssas-tabular.md)  
+## <a name="see-also"></a>참고 항목  
+ [SSAS 테이블 형식&#41;역할 &#40;](roles-ssas-tabular.md)   
+ [계층 &#40;SSAS 테이블 형식&#41;](hierarchies-ssas-tabular.md)  
   
   

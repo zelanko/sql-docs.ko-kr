@@ -1,5 +1,5 @@
 ---
-title: Excel (SQL Server 데이터 마이닝 추가 기능)에서 모델 찾아보기 | Microsoft Docs
+title: Excel에서 모델 찾아보기 (SQL Server 데이터 마이닝 추가 기능) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 961b32e84d41e021fbad185189981adb90ba44b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088457"
 ---
 # <a name="browsing-models-in-excel-sql-server-data-mining-add-ins"></a>Excel에서 모델 찾아보기(SQL Server 데이터 마이닝 추가 기능)
@@ -30,16 +30,16 @@ ms.locfileid: "66088457"
   
 ## <a name="using-the-browse-model-wizard"></a>모델 찾아보기 마법사 사용  
   
-1.  클릭 합니다 **데이터 마이닝** 탭 합니다.  
+1.  **데이터 마이닝** 탭을 클릭 합니다.  
   
-2.  에 **모델 사용법** 그룹에서 클릭 **찾아보기**합니다.  
+2.  **모델 사용** 그룹에서 **찾아보기**를 클릭 합니다.  
   
-3.  에 **모델 선택** 대화 상자, 목록에서 마이닝 모델을 선택 하 고 클릭 **다음**합니다.  
+3.  **모델 선택** 대화 상자의 목록에서 마이닝 모델을 선택 하 고 **다음**을 클릭 합니다.  
   
-4.  마법사가 열립니다는 **찾아보기** 창에 선택한 모델의 유형에 적합 합니다.  
+4.  마법사에서 선택한 모델 유형에 적합 한 **찾아보기** 창이 열립니다.  
   
 ## <a name="list-of-data-mining-viewers"></a>데이터 마이닝 뷰어 목록  
- 모델을 만들 때 사용한 데이터 마이닝 알고리즘에 따라 합니다 **찾아보기** 창 약간 다르게 보입니다. 이 창에는 결과 해석에 도움이 되는 그래프, 추가 정보가 포함된 범례 및 데이터와 상호 작용하기 위한 컨트롤이 포함될 수 있습니다.  
+ 모델을 만들 때 사용한 데이터 마이닝 알고리즘에 따라 **찾아보기** 창이 약간 다르게 표시 됩니다. 이 창에는 결과 해석에 도움이 되는 그래프, 추가 정보가 포함된 범례 및 데이터와 상호 작용하기 위한 컨트롤이 포함될 수 있습니다.  
   
  다음 항목에서는 복잡한 그래프 해석을 위한 팁을 비롯한 각 뷰어 사용 방법과 결과를 변경, 복사 또는 사용하는 방법에 대한 지침을 제공합니다.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66088457"
   
  [신경망 모델 찾아보기](browsing-a-neural-network-model.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Visio에서 데이터 마이닝 모델 보기 &#40;데이터 마이닝 추가 기능&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)   
  [모델 관리 &#40;SQL Server 데이터 마이닝 추가 기능&#41;](manage-models-sql-server-data-mining-add-ins.md)  
   

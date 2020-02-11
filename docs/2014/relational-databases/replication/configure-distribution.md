@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f001652af1f6ed627ded9be287b4910059cce9cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721718"
 ---
 # <a name="configure-distribution"></a>배포 구성
@@ -48,7 +48,7 @@ ms.locfileid: "62721718"
   
 -   배포 데이터베이스 크기를 적절히 조정합니다. 시스템에서 명령 저장에 필요한 공간을 결정할 수 있도록 일반적인 로드 상태에서 복제를 테스트합니다. 데이터베이스는 자주 자동 증가되지 않고도 명령을 저장할 수 있을 만큼 충분히 커야 합니다. 데이터베이스의 크기 변경에 대한 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)를 참조하세요.  
   
--   배포 데이터베이스에 **sync with backup** 옵션을 설정합니다. 자세한 내용은 [스냅숏 및 트랜잭션 복제의 백업 및 복원을 위한 전략](administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md) 및 [트랜잭션 복제에 통합 백업 사용&#40;복제 Transact-SQL 프로그래밍&#41;](administration/enable-coordinated-backups-for-transactional-replication.md)을 참조하세요.  
+-   배포 데이터베이스에 **sync with backup** 옵션을 설정합니다. 자세한 내용은 [스냅샷 및 트랜잭션 복제의 백업 및 복원을 위한 전략](administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md) 및 [트랜잭션 복제에 통합 백업 사용&#40;복제 Transact-SQL 프로그래밍&#41;](administration/enable-coordinated-backups-for-transactional-replication.md)을 참조하세요.  
   
 ## <a name="local-and-remote-distributors"></a>로컬 및 원격 배포자  
  기본적으로 배포자는 게시자와 같은 서버(로컬 배포자)이지만 게시자와는 다른 별도의 서버(원격 배포자)일 수도 있습니다. 일반적으로 다음 작업을 수행하려는 경우 원격 배포자를 사용합니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "62721718"
   
  게시자 및 배포자 속성을 수정하려면 [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md)을 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 및 데이터베이스 개체 게시](publish/publish-data-and-database-objects.md)   
  [배포자 보안 설정](security/secure-the-distributor.md)  
   

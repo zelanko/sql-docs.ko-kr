@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a102991d08085f093e08a068a3d3127c9d7f7fc6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62666699"
 ---
-# <a name="mssqleng002627"></a>MSSQL_ENG002627
+# <a name="mssql_eng002627"></a>MSSQL_ENG002627
     
 ## <a name="message-details"></a>메시지 정보  
   
@@ -29,7 +29,7 @@ ms.locfileid: "62666699"
 |이벤트 ID|2627|  
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
-|심볼 이름|해당 사항 없음|  
+|심볼 이름|해당 없음|  
 |메시지 텍스트|%ls 제약 조건 '%.*ls'을(를) 위반했습니다. 개체 '%.\*ls'에 중복 키를 삽입할 수 없습니다.|  
   
 ## <a name="explanation"></a>설명  
@@ -56,10 +56,10 @@ ms.locfileid: "62666699"
   
      병합 복제 및 업데이트할 수 있는 구독이 있는 트랜잭션 복제의 경우 ID 열은 복제에 의해 자동으로 관리됩니다. 피어 투 피어 트랜잭션 복제의 경우 ID 열을 수동으로 관리해야 합니다. 자세한 내용은 [ID 열 복제](publish/replicate-identity-columns.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [오류 및 이벤트 참조&#40;복제&#41;](errors-and-events-reference-replication.md)   
  [병합 복제](merge/merge-replication.md)   
  [Peer-to-Peer Transactional Replication](transactional/peer-to-peer-transactional-replication.md)   
- [트랜잭션 복제를 위한 업데이트 가능 구독](transactional/updatable-subscriptions-for-transactional-replication.md)  
+ [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

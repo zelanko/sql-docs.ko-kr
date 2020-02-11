@@ -1,5 +1,5 @@
 ---
-title: (비즈니스 인텔리전스 마법사) 계산 범위 정의 | Microsoft Docs
+title: 계산 범위 정의 (비즈니스 인텔리전스 마법사) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,28 +13,31 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e017a792f2554b757170a7669b83fada43dfb6a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082031"
 ---
 # <a name="define-scope-of-calculations-business-intelligence-wizard"></a>계산 범위 정의(비즈니스 인텔리전스 마법사)
+  
   **계산 범위 정의** 페이지를 사용하여 새 시간 계산을 개별 측정값과 연결할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **사용 가능한 측정값**  
  시간 계산을 적용할 측정값을 선택합니다.  
   
  **모두 선택**  
- **사용 가능한 측정값**에 나열된 모든 측정값을 선택합니다.  
+ 
+  **사용 가능한 측정값**에 나열된 모든 측정값을 선택합니다.  
   
  **모두 지우기**  
- **사용 가능한 측정값**에 나열된 모든 측정값의 선택을 취소합니다.  
+ 
+  **사용 가능한 측정값**에 나열된 모든 측정값의 선택을 취소합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [비즈니스 인텔리전스 마법사 F1 도움말](business-intelligence-wizard-f1-help.md)   
- [큐브 디자이너 &#40;Analysis Services-다차원 데이터&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [차원 디자이너 &#40;Analysis Services-다차원 데이터&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+ [큐브 디자이너 &#40;Analysis Services 다차원 데이터&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [차원 디자이너 &#40;Analysis Services 다차원 데이터&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SQL Server 이전 버전과 호환성 | Microsoft Docs
+title: SQL Server 이전 버전과의 호환성 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dd93707ef139b1751d918af43efed72574d58aa5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088513"
 ---
 # <a name="sql-server-backward-compatibility"></a>이전 SQL Server 버전과의 호환성
@@ -29,7 +29,7 @@ ms.locfileid: "66088513"
 |[SQL Server 2014에서 SQL Server 기능의 주요 변경 내용](../../2014/getting-started/breaking-changes-to-sql-server-features-in-sql-server-2014.md)|애플리케이션을 변경해야 할 수도 있는 변경 내용입니다. 이 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 및 설치 기능을 설명합니다.|  
 |[SQL Server 2014에서 SQL Server 기능의 동작 변경 내용](../../2014/getting-started/behavior-changes-to-sql-server-features-in-sql-server-2014.md)|이 릴리스에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 기능의 동작 변경 내용. 이 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 및 설치 기능을 설명합니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [이전 버전과의 호환성](../../2014/getting-started/backward-compatibility.md)  
   
   

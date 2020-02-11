@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2b5d1a63937a11da4703ec4ef0338dee89a5c33f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667308"
 ---
 # <a name="monitoring-replication-with-system-monitor"></a>시스템 모니터로 복제 모니터링
@@ -29,19 +29,19 @@ ms.locfileid: "62667308"
 |에이전트|성능 개체|카운터|Description|  
 |-----------|------------------------|-------------|-----------------|  
 |모든 에이전트|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 복제 에이전트|실행 중|현재 실행 중인 복제 에이전트 수입니다.|  
-|스냅샷 에이전트|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 복제 스냅샷|스냅숏: 배달 된 명령 수/초|배포자로 배달된 초당 명령 수입니다.|  
-|스냅샷 에이전트|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 복제 스냅샷|스냅숏: 배달 된 트랜잭션 수/초|배포자로 배달된 초당 트랜잭션 수입니다.|  
-|로그 판독기 에이전트|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 복제 로그 판독기|로그 판독기: 배달 된 명령 수/초|배포자로 배달된 초당 명령 수입니다.|  
-|로그 판독기 에이전트|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 복제 로그 판독기|로그 판독기: 배달 된 트랜잭션 수/초|배포자로 배달된 초당 트랜잭션 수입니다.|  
-|로그 판독기 에이전트|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 복제 로그 판독기|로그 판독기: 배달 대기 시간|트랜잭션이 게시자에 적용되었다가 배포자로 배달되기까지 경과한 현재 시간(밀리초)입니다.|  
-|배포 에이전트|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 복제 Dist.|배포: 배달 된 명령 수/초|구독자로 배달된 초당 명령 수입니다.|  
-|배포 에이전트|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 복제 Dist.|배포: 배달 된 트랜잭션 수/초|구독자로 배달된 초당 트랜잭션 수입니다.|  
-|배포 에이전트|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 복제 Dist.|배포: 배달 대기 시간|트랜잭션이 배포자로 배달되었다가 구독자에 적용되기까지 경과한 현재 시간(밀리초)입니다.|  
+|스냅샷 에이전트|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 복제 스냅샷|스냅샷: Delivered Cmds/sec|배포자로 배달된 초당 명령 수입니다.|  
+|스냅샷 에이전트|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 복제 스냅샷|스냅샷: Delivered Trans/sec|배포자로 배달된 초당 트랜잭션 수입니다.|  
+|로그 판독기 에이전트|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Replication Logreader|Logreader: Delivered Cmds/sec|배포자로 배달된 초당 명령 수입니다.|  
+|로그 판독기 에이전트|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Replication Logreader|Logreader: Delivered Trans/sec|배포자로 배달된 초당 트랜잭션 수입니다.|  
+|로그 판독기 에이전트|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Replication Logreader|Logreader: Delivery Latency|트랜잭션이 게시자에 적용되었다가 배포자로 배달되기까지 경과한 현재 시간(밀리초)입니다.|  
+|배포 에이전트|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Replication Dist.|Dist: Delivered Cmds/sec|구독자로 배달된 초당 명령 수입니다.|  
+|배포 에이전트|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Replication Dist.|Dist: Delivered Trans/sec|구독자로 배달된 초당 트랜잭션 수입니다.|  
+|배포 에이전트|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Replication Dist.|Dist: Delivery Latency|트랜잭션이 배포자로 배달되었다가 구독자에 적용되기까지 경과한 현재 시간(밀리초)입니다.|  
 |병합 에이전트|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 복제 병합|Conflicts/sec|병합 프로세스 중 발생하는 초당 충돌 수입니다.|  
 |병합 에이전트|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 복제 병합|Downloaded Changes/sec|게시자에서 구독자로 복제된 초당 행 수입니다.|  
 |병합 에이전트|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 복제 병합|Uploaded Changes/sec|구독자에서 게시자로 복제된 초당 행 수입니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [모니터링&#40;복제&#41;](../monitoring-replication.md)  
   
   

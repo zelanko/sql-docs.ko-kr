@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6f240973def97dea739c21381f38dc366deb8920
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62691478"
 ---
 # <a name="server-public-permissions"></a>서버 public 사용 권한
@@ -26,7 +26,7 @@ ms.locfileid: "62691478"
  서버 public 역할에 서버 사용 권한을 부여하지 마십시오.  
   
 > [!IMPORTANT]  
->  설치가 완료 된 후 합니다 **공용** 역할에 `CONNECT` 를 제외한 모든 끝점에 대 한 권한이 합니다 **관리자 전용 연결**합니다. 이것은 정상이며 일반적으로 변경할 수 없습니다. 새 로그인을 만들 때 자동으로 부여되는 `CONNECT SQL` 권한으로 액세스가 제어됩니다.  
+>  설치가 완료 되 면 **PUBLIC** 역할에 `CONNECT` 는 **관리자 전용 연결**을 제외한 모든 끝점에 대 한 권한이 있습니다. 이것은 정상이며 일반적으로 변경할 수 없습니다. 새 로그인을 만들 때 자동으로 부여되는 `CONNECT SQL` 권한으로 액세스가 제어됩니다.  
   
 ### <a name="for-more-information"></a>참조 항목  
  [SQL Server 보안 설정](../security/securing-sql-server.md)  

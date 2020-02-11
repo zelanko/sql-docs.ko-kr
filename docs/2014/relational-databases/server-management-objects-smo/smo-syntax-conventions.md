@@ -1,5 +1,5 @@
 ---
-title: SMO 구문 표기 규칙 | Microsoft 문서
+title: SMO 구문 표기 규칙 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,19 +16,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a19c67f19c6b1b73947ef752a09516449eeec1a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62655356"
 ---
 # <a name="smo-syntax-conventions"></a>SMO 구문 표기 규칙
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) 표기 규칙에 사용 되는 기반한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual STUDIO.NET 참조 자료입니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SMO (Management Objects) 표기 규칙은 Visual Studio .NET 참조 자료 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서 사용 되는 규칙을 기반으로 합니다.  
   
 |규칙|사용 대상|  
 |----------------|--------------|  
 |대문자|운영 체제 수준에서 사용하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문, 매크로 이름 및 용어, 텍스트의 파일 이름|  
-|고정 폭|예제 명령줄 및 프로그램 코드입니다.|  
+|고정|예제 명령줄 및 프로그램 코드입니다.|  
 |*기울임꼴*|텍스트의 변수, 텍스트의 수식 또는 텍스트로 정의된 용어. 구문에서 기울임꼴 문자는 제공하는 정보의 자리 표시자를 나타냅니다.|  
 |**굵게**|SMO 개체, 이벤트, 메서드 또는 속성, 텍스트의 프로그래밍 용어|  
   

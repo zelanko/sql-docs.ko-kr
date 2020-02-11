@@ -1,5 +1,5 @@
 ---
-title: 대량 로드에서에서 데이터를 테이블로 병합 게시 (복제 TRANSACT-SQL 프로그래밍) | Microsoft Docs
+title: 병합 게시에서 데이터를 테이블로 대량 로드 (복제 Transact-sql 프로그래밍) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 09e535057fcf573dfa189b7e5fdc0e0df06e5d4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721765"
 ---
 # <a name="bulk-load-data-into-tables-in-a-merge-publication-replication-transact-sql-programming"></a>병합 게시에서 데이터를 테이블로 대량 로드(복제 Transact-SQL 프로그래밍)
@@ -34,6 +34,6 @@ ms.locfileid: "62721765"
   
     -   FIRE_TRIGGERS 옵션을 사용하여 대량 복사를 실행합니다.  
   
-    -   데이터가 삽입된 데이터베이스에서 [sp_addtabletocontents&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addtabletocontents-transact-sql)를 실행합니다. 데이터가 삽입된 테이블 이름을 **@table_name** 를 실행합니다.  
+    -   데이터가 삽입된 데이터베이스에서 [sp_addtabletocontents&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addtabletocontents-transact-sql)를 실행합니다. 데이터가 삽입 된 테이블 이름을 지정 **@table_name**합니다.  
   
   

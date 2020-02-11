@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5e65c2b8d543455a168bddc1be5ae5594c2ba8c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076415"
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>기존 테이블을 사용하여 차원 만들기
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 의 차원 마법사를 사용하여 기존 테이블에서 차원을 만들 수 있습니다. 이렇게 하려면 마법사의 **생성 방법 선택** 페이지에서 **기존 테이블 사용** 옵션을 선택하십시오. 이 옵션을 선택할 경우 마법사는 기존 데이터 원본 뷰에 있는 차원 테이블, 차원 테이블 열, 차원 테이블 열 간의 관계를 기반으로 하여 차원 구조를 만듭니다. 마법사는 원본 테이블과 관련 테이블의 데이터를 샘플링한 다음 이 데이터를 사용하여 차원 테이블 열을 기반으로 하는 특성 열을 정의하고 특성의 계층( *사용자 정의* 계층이라고 함)을 정의합니다. 차원 마법사를 사용하여 차원을 만든 후에는 차원 디자이너를 사용하여 차원의 특성과 계층을 추가, 제거 및 구성할 수 있습니다.  
+  에서는의 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 차원 마법사를 사용 하 여 기존 테이블에서 차원을 만들 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 이렇게 하려면 마법사의 **생성 방법 선택** 페이지에서 **기존 테이블 사용** 옵션을 선택하십시오. 이 옵션을 선택할 경우 마법사는 기존 데이터 원본 뷰에 있는 차원 테이블, 차원 테이블 열, 차원 테이블 열 간의 관계를 기반으로 하여 차원 구조를 만듭니다. 마법사는 원본 테이블과 관련 테이블의 데이터를 샘플링한 다음 이 데이터를 사용하여 차원 테이블 열을 기반으로 하는 특성 열을 정의하고 특성의 계층( *사용자 정의* 계층이라고 함)을 정의합니다. 차원 마법사를 사용하여 차원을 만든 후에는 차원 디자이너를 사용하여 차원의 특성과 계층을 추가, 제거 및 구성할 수 있습니다.  
   
  기존 테이블을 사용하여 차원을 만드는 경우 차원 마법사는 다음 단계로 이루어집니다.  
   
@@ -67,13 +67,16 @@ ms.locfileid: "66076415"
 > [!NOTE]  
 >  차원 마법사의 **차원 특성 선택** 페이지에서 **계정 유형** 차원 특성을 정의한 경우에만 이 단계가 표시됩니다.  
   
- **계정 인텔리전스 정의** 페이지를 사용하여 계정 유형 차원을 만듭니다. 계정 유형 차원을 만드는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 지원하는 표준 계정 유형을 차원의 계정 유형 특성 멤버에 매핑해야 합니다. 서버에서는 이러한 매핑을 사용하여 각 유형의 계정 데이터에 대해 별개의 집계 함수와 별칭을 제공합니다.  
+ 
+  **계정 인텔리전스 정의** 페이지를 사용하여 계정 유형 차원을 만듭니다. 계정 유형 차원을 만드는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 지원하는 표준 계정 유형을 차원의 계정 유형 특성 멤버에 매핑해야 합니다. 서버에서는 이러한 매핑을 사용하여 각 유형의 계정 데이터에 대해 별개의 집계 함수와 별칭을 제공합니다.  
   
  이러한 계정 유형을 매핑하기 위해 마법사에서 다음 열을 포함하는 테이블을 제공합니다.  
   
--   **원본 테이블 계정 유형** 열 데이터 원본 테이블의 계정 유형이 나열됩니다.  
+-   
+  **원본 테이블 계정 유형** 열 데이터 원본 테이블의 계정 유형이 나열됩니다.  
   
--   **기본 제공 계정 유형** 열에 서버에서 지원하는 해당 표준 계정 유형이 나열됩니다. 원본 데이터에서 표준 이름을 사용하는 경우 자동으로 원본 유형이 서버 유형에 매핑되며 **기본 제공 계정 유형** 열이 이 정보로 채워집니다. 서버에서 계정 유형을 매핑하지 않거나 매핑을 변경하려는 경우 **기본 제공 계정 유형** 열의 목록에서 다른 유형을 선택합니다.  
+-   
+  **기본 제공 계정 유형** 열에 서버에서 지원하는 해당 표준 계정 유형이 나열됩니다. 원본 데이터에서 표준 이름을 사용하는 경우 자동으로 원본 유형이 서버 유형에 매핑되며 **기본 제공 계정 유형** 열이 이 정보로 채워집니다. 서버에서 계정 유형을 매핑하지 않거나 매핑을 변경하려는 경우 **기본 제공 계정 유형** 열의 목록에서 다른 유형을 선택합니다.  
   
 > [!NOTE]  
 >  마법사에서 계정 차원을 만들 때 계정 유형이 매핑되어 있지 않은 경우 차원을 만든 후 비즈니스 인텔리전스 마법사를 사용하여 이러한 매핑을 구성하십시오. 자세한 내용은 [차원에 계정 인텔리전스 추가](bi-wizard-add-account-intelligence-to-a-dimension.md)를 참조하세요.  
@@ -83,13 +86,14 @@ ms.locfileid: "66076415"
   
  또한 차원에 부모-자식 관계가 있는지도 자동으로 찾습니다. 부모-자식 관계는 부모 특성이 차원의 키 특성 멤버를 참조할 때 존재합니다. 이 관계는 차원의 리프 멤버 간 집계 경로와 계층 관계를 정의합니다. 부모-자식 계층에 대한 자세한 내용은 [부모-자식 계층의 특성](parent-child-dimension-attributes.md)을 참조하세요.  
   
- **마법사 완료** 페이지에서 새 차원의 이름을 입력하고 차원 구조를 검토하여 마법사를 완료합니다.  
+ 
+  **마법사 완료** 페이지에서 새 차원의 이름을 입력하고 차원 구조를 검토하여 마법사를 완료합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터 원본에 시간이 아닌 테이블을 생성 하 여 차원 만들기](create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)   
  [시간 테이블을 생성 하 여 시간 차원 만들기](create-a-time-dimension-by-generating-a-time-table.md)   
  [차원 특성 속성 참조](dimension-attribute-properties-reference.md)   
  [시간 테이블을 생성 하 여 시간 차원 만들기](create-a-time-dimension-by-generating-a-time-table.md)   
- [데이터 원본에 시간이 아닌 테이블을 생성 하 여 차원 만들기](create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
+ [데이터 원본에 시간이 아닌 테이블을 생성하여 차원 만들기](create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
   
   

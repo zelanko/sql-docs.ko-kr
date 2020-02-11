@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6c0a98aa13b4453244c8ed565a950660a20e5a3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721302"
 ---
 # <a name="distributor"></a>배포자
@@ -32,7 +32,7 @@ ms.locfileid: "62721302"
   
  배포자로 선택된 서버는 복제 및 해당 서버의 다른 작업을 지원하기 위해 충분한 디스크 공간과 처리 성능이 있어야 합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **'\<ServerName>'을 자체 배포자로 사용합니다. SQL Server에서 배포 데이터베이스와 로그를 만듭니다.**  
  연결된 서버를 배포자로 구성하려면 이 옵션을 선택합니다.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62721302"
 > [!NOTE]  
 >  원격 서버를 배포자로 사용하려면 원격 서버가 이미 배포자로 구성되어 있어야 합니다. 이 마법사가 실행 중인 서버는 해당 배포자에서 게시자로 설정되어 있어야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [배포 구성](configure-distribution.md)   
  [게시 및 배포 구성](configure-publishing-and-distribution.md)  
   

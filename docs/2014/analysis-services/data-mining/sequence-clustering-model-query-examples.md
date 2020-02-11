@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d871ba87147f24fdd60c9effe5f279d9ea355db1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082919"
 ---
 # <a name="sequence-clustering-model-query-examples"></a>시퀀스 클러스터링 모델 쿼리 예제
@@ -30,9 +30,9 @@ ms.locfileid: "66082919"
   
  **내용 쿼리**  
   
- [데이터 마이닝 스키마 행 집합을 사용하여 모델 매개 변수 반환](#bkmk_Query1)  
+ [데이터 마이닝 스키마 행 집합을 사용 하 여 모델 매개 변수 반환](#bkmk_Query1)  
   
- [상태에 대한 시퀀스 목록 가져오기](#bkmk_Query2)  
+ [상태에 대 한 시퀀스 목록 가져오기](#bkmk_Query2)  
   
  [시스템 저장 프로시저 사용](#bkmk_Query3)  
   
@@ -40,10 +40,10 @@ ms.locfileid: "66082919"
   
  [다음 상태 예측](#bkmk_Query4)  
   
-##  <a name="bkmk_ContentQueries"></a> 시퀀스 클러스터링 모델에 대한 정보 찾기  
+##  <a name="bkmk_ContentQueries"></a>시퀀스 클러스터링 모델에 대 한 정보 찾기  
  마이닝 모델의 콘텐츠에 대한 의미 있는 쿼리를 만들려면 모델 콘텐츠의 구조와 노드 유형에 따라 저장되는 정보의 종류를 이해해야 합니다. 자세한 내용은 [시퀀스 클러스터링 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-sequence-clustering-models.md)를 참조하세요.  
   
-###  <a name="bkmk_Query1"></a> 예제 쿼리 1: 데이터 마이닝 스키마 행 집합을 사용 하 여 모델 매개 변수를 반환 합니다.  
+###  <a name="bkmk_Query1"></a>예제 쿼리 1: 데이터 마이닝 스키마 행 집합을 사용 하 여 모델 매개 변수 반환  
  데이터 마이닝 스키마 행 집합을 쿼리하면 기본적인 메타데이터, 모델이 만들어진 날짜 및 시간, 모델이 마지막으로 처리된 날짜 및 시간, 모델의 기반이 되는 마이닝 구조의 이름, 예측 가능한 특성으로 사용된 열 등을 비롯하여 모델에 대한 다양한 종류의 정보를 찾을 수 있습니다.  
   
  다음 쿼리는 `[Sequence Clustering]`모델의 작성 및 학습에 사용된 매개 변수를 반환합니다. 이 모델은 [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md)의 5단원에서 만들 수 있습니다.  
@@ -54,7 +54,7 @@ from $system.DMSCHEMA_MINING_MODELS
 WHERE MODEL_NAME = 'Sequence Clustering'  
 ```  
   
- 예제 결과:  
+ 결과 예:  
   
 |MINING_PARAMETERS|  
 |------------------------|  
@@ -66,7 +66,7 @@ WHERE MODEL_NAME = 'Sequence Clustering'
   
  클러스터 수를 줄이면 대부분의 사용자가 데이터의 그룹화를 쉽게 찾아보고 이해할 수 있으므로 기본적으로 값 10이 사용됩니다. 그러나 각 모델 및 데이터 집합은 서로 다릅니다. 클러스터 수를 다르게 하여 시험해 보면 어떤 매개 변수 값이 가장 정확한 모델을 생성하는지 확인할 수 있습니다.  
   
-###  <a name="bkmk_Query2"></a> 예제 쿼리 2: 상태에 대 한 시퀀스 목록 가져오기  
+###  <a name="bkmk_Query2"></a>예제 쿼리 2: 상태에 대 한 시퀀스 목록 가져오기  
  마이닝 모델 콘텐츠에는 학습 데이터에서 찾은 시퀀스가 첫 번째 상태에 관련된 모든 두 번째 상태의 목록이 결합되어 저장됩니다. 첫 번째 상태는 시퀀스의 레이블로 사용되며, 관련된 두 번째 상태는 전환이라고 합니다.  
   
  예를 들어 다음 쿼리는 시퀀스가 클러스터로 그룹화되기 전에 모델의 첫 번째 상태가 모두 들어 있는 목록을 반환합니다.  모델 루트 노드를 부모(PARENT_UNIQUE_NAME = 0)로 갖는 시퀀스(NODE_TYPE = 13) 목록을 반환하면 이 목록을 가져올 수 있습니다. FLATTENED 키워드는 결과를 읽기 쉽게 해 줍니다.  
@@ -95,7 +95,8 @@ AND [PARENT_UNIQUE_NAME] = 0
 |1081327|(4-36행 생략)|||  
 |1081327|Women's Mountain Shorts|506|0.03307|  
   
- 모델의 시퀀스 목록은 항상 알파벳 오름차순으로 정렬됩니다. 시퀀스의 순서 번호를 보면 관련된 전환을 알 수 있으므로 시퀀스의 순서는 중요합니다. `Missing` 값은 항상 전환 0입니다.  
+ 모델의 시퀀스 목록은 항상 알파벳 오름차순으로 정렬됩니다. 시퀀스의 순서 번호를 보면 관련된 전환을 알 수 있으므로 시퀀스의 순서는 중요합니다. 
+  `Missing` 값은 항상 전환 0입니다.  
   
  예를 들어 앞의 결과에서 "Women's Mountain Shorts" 제품은 모델에서 시퀀스 번호 37에 해당합니다. 이 정보를 사용하여 "Women's Mountain Shorts" 다음에 구매된 모든 제품을 볼 수 있습니다.  
   
@@ -108,7 +109,7 @@ WHERE NODE_DESCRIPTION = 'Transition row for sequence state 37'
 AND [PARENT_UNIQUE_NAME] = '1081327'  
 ```  
   
- 예제 결과:  
+ 결과 예:  
   
 |NODE_UNIQUE_NAME|  
 |------------------------|  
@@ -126,7 +127,7 @@ FROM [Sequence Clustering].CONTENT
 WHERE NODE_UNIQUE_NAME = '1081365'  
 ```  
   
- 예제 결과:  
+ 결과 예:  
   
 |t.Product2|t.P2 Support|t.P2 Probability|  
 |----------------|------------------|----------------------|  
@@ -142,7 +143,7 @@ WHERE NODE_UNIQUE_NAME = '1081365'
   
  예를 들어 네 개의 클러스터가 있고 특정 시퀀스가 클러스터 1, 클러스터 2, 클러스터 3 및 클러스터 4에 속할 가능성이 각각 40%, 30%, 20% 및 10%라면 알고리즘은 해당 전환이 속할 가능성이 가장 큰 클러스터를 확인한 후 클러스터의 이전 확률에 따라 클러스터 내의 확률에 가중치를 적용합니다.  
   
-###  <a name="bkmk_Query3"></a> 예제 쿼리 3: 시스템 저장 프로시저 사용  
+###  <a name="bkmk_Query3"></a>예제 쿼리 3: 시스템 저장 프로시저 사용  
  앞의 쿼리 예제에서는 모델에 저장된 정보가 복잡하며 필요한 정보를 얻으려면 여러 쿼리를 만들어야 할 수도 있다는 것을 보여 줍니다. 그러나 Microsoft 시퀀스 클러스터링 뷰어에서는 시퀀스 클러스터링 모델에 들어 있는 정보를 그래픽 방식으로 찾아보기 위한 강력한 여러 도구를 제공하며, 이 뷰어를 사용하여 모델을 쿼리하고 드릴다운할 수도 있습니다.  
   
  대부분의 경우 Microsoft 시퀀스 클러스터링 뷰어에서 보여 주는 정보는 Analysis Services 시스템 저장 프로시저를 사용하여 모델을 쿼리하는 방법으로 생성됩니다. 모델 콘텐츠에 대한 DMX(Data Mining Extensions) 쿼리를 작성하여 동일한 정보를 검색할 수도 있지만 Analysis Services 시스템 저장 프로시저를 사용하면 모델을 보다 편리하게 탐색하거나 테스트할 수 있습니다.  
@@ -155,9 +156,11 @@ WHERE NODE_UNIQUE_NAME = '1081365'
 #### <a name="cluster-profiles-and-sample-cases"></a>클러스터 프로필 및 예제 사례  
  클러스터 프로필 탭에서는 모델에 있는 클러스터의 목록과 각 클러스터의 크기, 그리고 클러스터에 포함된 상태를 나타내는 히스토그램을 보여 줍니다. 쿼리에서 비슷한 정보를 검색하는 데 사용할 수 있는 시스템 저장 프로시저는 다음 두 가지가 있습니다.  
   
--   `GetClusterProfile` 은(는) 클러스터의 특성과 해당 클러스터의 NODE_DISTRIBUTION 테이블에서 찾은 모든 정보를 반환합니다.  
+-   
+  `GetClusterProfile` 은(는) 클러스터의 특성과 해당 클러스터의 NODE_DISTRIBUTION 테이블에서 찾은 모든 정보를 반환합니다.  
   
--   `GetNodeGraph` - 시퀀스 클러스터링 보기의 첫 번째 탭에서 표시되는 내용에 해당하는 클러스터의 수학적 그래프 표현을 생성하는 데 사용할 수 있는 노드 및 가장자리를 반환합니다. 노드는 클러스터이고 가장자리는 가중치 또는 수준을 나타냅니다.  
+-   
+  `GetNodeGraph` - 시퀀스 클러스터링 보기의 첫 번째 탭에서 표시되는 내용에 해당하는 클러스터의 수학적 그래프 표현을 생성하는 데 사용할 수 있는 노드 및 가장자리를 반환합니다. 노드는 클러스터이고 가장자리는 가중치 또는 수준을 나타냅니다.  
   
  다음 예에서는 시스템 저장 프로시저인 `GetClusterProfiles`를 사용하여 각각의 프로필이 있는 모델 내의 모든 클러스터를 반환합니다. 이 저장 프로시저는 모델의 전체 프로필 집합을 반환하는 일련의 DMX 문을 실행합니다. 그러나 이 저장 프로시저를 사용하려면 모델의 주소를 알고 있어야 합니다.  
   
@@ -175,7 +178,8 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetNodeGraph
 CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetNodeGraph('Sequence Clustering','',0)  
 ```  
   
- **클러스터 프로필** 탭에는 모델 예제 사례의 히스토그램도 표시됩니다. 이러한 예제 사례는 모델의 이상적인 사례를 나타냅니다. 이 사례는 모델에 학습 데이터와 동일한 방식으로 저장되지 않으므로 모델의 예제 사례를 검색하려면 특수한 구문을 사용해야 합니다.  
+ 
+  **클러스터 프로필** 탭에는 모델 예제 사례의 히스토그램도 표시됩니다. 이러한 예제 사례는 모델의 이상적인 사례를 나타냅니다. 이 사례는 모델에 학습 데이터와 동일한 방식으로 저장되지 않으므로 모델의 예제 사례를 검색하려면 특수한 구문을 사용해야 합니다.  
   
 ```  
 SELECT * FROM [Sequence Clustering].SAMPLE_CASES WHERE IsInNode('12')  
@@ -184,7 +188,8 @@ SELECT * FROM [Sequence Clustering].SAMPLE_CASES WHERE IsInNode('12')
  자세한 내용은 [SELECT FROM &#60;model&#62;.SAMPLE_CASES&#40;DMX&#41;](/sql/dmx/select-from-model-dmx)를 참조하세요.  
   
 #### <a name="cluster-characteristics-and-cluster-discrimination"></a>클러스터 특징 및 클러스터 차원  
- **클러스터 특징** 탭에는 각 클러스터의 주요 특성이 확률에 따라 순위가 지정되어 요약됩니다. 클러스터에 속하는 사례의 수와 클러스터의 사례 분포 어떤는 찾을 수 있습니다. 각 특징에는 특정 지지도 있습니다. 특정 클러스터의 특징을 보려면 해당 클러스터의 ID를 알고 있어야 합니다.  
+ 
+  **클러스터 특징** 탭에는 각 클러스터의 주요 특성이 확률에 따라 순위가 지정되어 요약됩니다. 여기에서 클러스터에 속하는 사례의 수와 클러스터의 사례 분포를 확인할 수 있습니다. 각 특징에는 특정 지지도가 있습니다. 특정 클러스터의 특징을 보려면 해당 클러스터의 ID를 알고 있어야 합니다.  
   
  다음 예에서는 시스템 저장 프로시저인 `GetClusterCharacteristics`를 사용하여 클러스터 12의 특징 중 확률 점수가 지정된 임계값 0.0005를 초과하는 모든 특징을 반환합니다.  
   
@@ -212,10 +217,11 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
  그러나 [내용 쿼리](#bkmk_ContentQueries)섹션의 예 2에 설명된 DMX 쿼리를 사용하면 시퀀스나 개별 전환에 대한 확률 및 상태를 검색할 수 있습니다.  
   
 ## <a name="using-the-model-to-make-predictions"></a>모델을 사용하여 예측 만들기  
- 시퀀스 클러스터링 모델에 대한 예측 쿼리에서는 다른 클러스터링 모델에서 사용되는 예측 함수를 상당수 사용할 수 있습니다. 또한 특수한 예측 함수인 [PredictSequence&#40;DMX&#41;](/sql/dmx/predictsequence-dmx)를 사용하여 권장 구성을 생성하거나 다음 상태를 예측할 수 있습니다.  
+ 시퀀스 클러스터링 모델에 대한 예측 쿼리에서는 다른 클러스터링 모델에서 사용되는 예측 함수를 상당수 사용할 수 있습니다. 또한 특수한 예측 함수인 [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx)를 사용하여 권장 구성을 생성하거나 다음 상태를 예측할 수 있습니다.  
   
-###  <a name="bkmk_Query4"></a> 예제 쿼리 4: 다음 상태 예측  
- [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) 함수를 사용하여 특정 값에 대해 다음으로 가능성이 높은 상태를 예측할 수 있습니다. 여러 개의 다음 상태를 예측할 수도 있습니다. 예를 들어 고객이 구입할 가능성이 가장 높은 세 가지 제품의 목록을 반환하여 권장 제품 목록을 표시할 수 있습니다.  
+###  <a name="bkmk_Query4"></a>예제 쿼리 4: 다음 상태 예측  
+ 
+  [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) 함수를 사용하여 특정 값에 대해 다음으로 가능성이 높은 상태를 예측할 수 있습니다. 여러 개의 다음 상태를 예측할 수도 있습니다. 예를 들어 고객이 구입할 가능성이 가장 높은 세 가지 제품의 목록을 반환하여 권장 제품 목록을 표시할 수 있습니다.  
   
  다음 예제 쿼리는 상위 5개의 예측과 해당 확률을 반환하는 단일 예측 쿼리입니다. 해당 모델에는 중첩 테이블이 포함되어 있으므로 예측을 만들 때는 중첩 테이블 `[v Assoc Seq Line Items]`를 열 참조로 사용해야 합니다. 또한 입력 값을 지정할 때는 중첩된 SELECT 문에 표시된 것과 같이 사례 테이블 및 중첩 테이블 열을 모두 조인해야 합니다.  
   
@@ -228,7 +234,7 @@ NATURAL PREDICTION JOIN
 AS t  
 ```  
   
- 예제 결과:  
+ 결과 예:  
   
 |Expression.$Sequence|Expression.Line Number|Expression.Model|  
 |--------------------------|----------------------------|----------------------|  
@@ -242,7 +248,8 @@ AS t
   
  한 열만 반환될 것으로 예상했을 수 있지만 이 쿼리는 항상 사례 테이블에 대한 열을 반환하므로 결과에는 세 개의 열이 포함되어 있습니다. 이 경우 결과는 결합됩니다. 그렇지 않으면 쿼리에서는 두 개의 중첩된 테이블 열이 들어 있는 단일 열을 반환합니다.  
   
- $sequence 열은 예측 결과를 정렬하기 위해 `PredictSequence` 함수에서 기본적으로 반환되는 열입니다. `[Line Number]`열은 모델의 시퀀스 키와 일치시키는 데 필요하지만 키는 출력되지 않습니다.  
+ $sequence 열은 예측 결과를 정렬하기 위해 `PredictSequence` 함수에서 기본적으로 반환되는 열입니다. 
+  `[Line Number]`열은 모델의 시퀀스 키와 일치시키는 데 필요하지만 키는 출력되지 않습니다.  
   
  흥미로운 점은 All-Purpose Bike Stand 이후의 예측된 최상위 시퀀스가 Cycling Cap과 Cycling Cap이라는 것입니다. 이는 오류가 아닙니다. 고객에게 데이터가 제공되는 방식과 모델을 학습할 때 데이터가 그룹화되는 방식에 따라 이러한 종류의 시퀀스도 얼마든지 있을 수 있습니다. 예를 들어 고객이 빨간색 Cycling Cap을 구입한 뒤 파란색 Cycling Cap을 하나 더 구입했을 수도 있고, 수량을 지정할 방법이 없어서 두 개의 Cycling Cap을 연달아 구입했을 수도 있습니다.  
   
@@ -254,27 +261,27 @@ AS t
 |||  
 |-|-|  
 |예측 함수|사용|  
-|[Cluster&#40;DMX&#41;](/sql/dmx/cluster-dmx)|입력 사례가 포함되었을 가능성이 가장 높은 클러스터를 반환합니다.|  
-|[ClusterDistance&#40;DMX&#41;](/sql/dmx/clusterdistance-dmx)|입력 사례와 지정된 클러스터 사이의 거리를 반환합니다. 클러스터가 지정되지 않은 경우에는 입력 사례와 가장 가능성 있는 클러스터 사이의 거리를 반환합니다.<br /><br /> 이 함수는 EM과 K-Means를 비롯한 모든 종류의 클러스터링 모델과 함께 사용할 수 있지만 알고리즘에 따라 결과가 달라집니다.|  
-|[ClusterProbability&#40;DMX&#41;](/sql/dmx/clusterprobability-dmx)|입력 사례가 지정한 클러스터에 속할 확률을 반환합니다.|  
-|[IsInNode&#40;DMX&#41;](/sql/dmx/isinnode-dmx)|지정한 노드에 현재 사례가 포함되었는지 여부를 나타냅니다.|  
-|[PredictAdjustedProbability & #40; DMX & #41;](/sql/dmx/predictadjustedprobability-dmx)|지정한 상태에 대한 조정된 확률을 반환합니다.|  
-|[PredictAssociation&#40;DMX&#41;](/sql/dmx/predictassociation-dmx)|연관된 멤버 자격을 예측합니다.|  
-|[PredictCaseLikelihood&#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx)|입력 사례가 기존 모델에 적합할 가능성을 반환합니다.|  
-|[PredictHistogram & #40; DMX & #41;](/sql/dmx/predicthistogram-dmx)|지정된 열의 예측에 대한 히스토그램을 나타내는 테이블을 반환합니다.|  
-|[PredictNodeId & #40; DMX & #41;](/sql/dmx/predictnodeid-dmx)|사례가 분류되어 있는 노드의 Node_ID를 반환합니다.|  
-|[PredictProbability & #40; DMX & #41;](/sql/dmx/predictprobability-dmx)|지정한 상태에 대한 확률을 반환합니다.|  
-|[PredictSequence&#40;DMX&#41;](/sql/dmx/predictsequence-dmx)|지정한 시퀀스 데이터 집합에 대한 미래의 시퀀스 값을 예측합니다.|  
-|[PredictStdev&#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|지정된 열의 예측 표준 편차를 반환합니다.|  
-|[PredictSupport & #40; DMX & #41;](/sql/dmx/predictsupport-dmx)|지정한 상태에 대한 지원 값을 반환합니다.|  
-|[PredictVariance & #40; DMX & #41;](/sql/dmx/predictvariance-dmx)|지정한 열의 분산을 반환합니다.|  
+|[클러스터 &#40;DMX&#41;](/sql/dmx/cluster-dmx)|입력 사례가 포함되었을 가능성이 가장 높은 클러스터를 반환합니다.|  
+|[ClusterDistance &#40;DMX&#41;](/sql/dmx/clusterdistance-dmx)|입력 사례와 지정된 클러스터 사이의 거리를 반환합니다. 클러스터가 지정되지 않은 경우에는 입력 사례와 가장 가능성 있는 클러스터 사이의 거리를 반환합니다.<br /><br /> 이 함수는 EM과 K-Means를 비롯한 모든 종류의 클러스터링 모델과 함께 사용할 수 있지만 알고리즘에 따라 결과가 달라집니다.|  
+|[ClusterProbability &#40;DMX&#41;](/sql/dmx/clusterprobability-dmx)|입력 사례가 지정한 클러스터에 속할 확률을 반환합니다.|  
+|[IsInNode &#40;DMX&#41;](/sql/dmx/isinnode-dmx)|지정한 노드에 현재 사례가 포함되었는지 여부를 나타냅니다.|  
+|[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|지정한 상태에 대한 조정된 확률을 반환합니다.|  
+|[PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)|연관된 멤버 자격을 예측합니다.|  
+|[PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx)|입력 사례가 기존 모델에 적합할 가능성을 반환합니다.|  
+|[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|지정된 열의 예측에 대한 히스토그램을 나타내는 테이블을 반환합니다.|  
+|[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|사례가 분류되어 있는 노드의 Node_ID를 반환합니다.|  
+|[PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|지정한 상태에 대한 확률을 반환합니다.|  
+|[PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx)|지정한 시퀀스 데이터 집합에 대한 미래의 시퀀스 값을 예측합니다.|  
+|[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|지정된 열의 예측 표준 편차를 반환합니다.|  
+|[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|지정한 상태에 대한 지원 값을 반환합니다.|  
+|[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|지정한 열의 분산을 반환합니다.|  
   
  모든 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘에 공통된 함수 목록은 [일반 예측 함수&#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx)를 참조하세요. 특정 함수의 구문은 [DMX&#40;Data Mining Extensions&#41; 함수 참조](/sql/dmx/data-mining-extensions-dmx-function-reference)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 마이닝 쿼리](data-mining-queries.md)   
  [Microsoft 시퀀스 클러스터링 알고리즘 기술 참조](microsoft-sequence-clustering-algorithm-technical-reference.md)   
- [Microsoft Sequence Clustering Algorithm](microsoft-sequence-clustering-algorithm.md)   
- [시퀀스 클러스터링 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](mining-model-content-for-sequence-clustering-models.md)  
+ [Microsoft 시퀀스 클러스터링 알고리즘](microsoft-sequence-clustering-algorithm.md)   
+ [시퀀스 클러스터링 모델에 대 한 마이닝 모델 콘텐츠 &#40;Analysis Services 데이터 마이닝&#41;](mining-model-content-for-sequence-clustering-models.md)  
   
   

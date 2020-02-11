@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 037eb57f53bf583195efdf1f91fcd55f94ebaddc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676909"
 ---
 # <a name="working-with-policy-based-management-facets"></a>정책 기반 관리 패싯 작업
@@ -29,7 +29,7 @@ ms.locfileid: "62676909"
   
  이 항목에서는 패싯 상태를 XML 파일에 복사하는 방법에 대해 설명합니다.  
   
-##  <a name="BeforeYouBegin"></a> 사용 권한  
+##  <a name="BeforeYouBegin"></a> 권한  
  이 항목의 절차를 수행하려면 msdb 데이터베이스에서 PolicyAdministratorRole 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="viewing-and-copying-facet-states"></a>패싯 상태 보기 및 복사  
@@ -37,7 +37,7 @@ ms.locfileid: "62676909"
   
  [XML 파일로 정책 기반 관리 패싯 상태 복사](copy-a-policy-based-management-facet-state-to-an-xml-file.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [정책 기반 관리를 사용하여 서버 관리](administer-servers-by-using-policy-based-management.md)  
   
   

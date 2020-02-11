@@ -1,5 +1,5 @@
 ---
-title: 차원을 정의 | Microsoft Docs
+title: 차원 정의 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74561047f149ae6a6bdcd0cd54347d842e49569f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079093"
 ---
 # <a name="defining-a-dimension"></a>차원 정의
@@ -27,17 +27,22 @@ ms.locfileid: "66079093"
   
 1.  Microsoft Visual Studio의 오른쪽에 있는 솔루션 탐색기에서 **차원**을 마우스 오른쪽 단추로 클릭한 다음 **새 차원**을 클릭합니다. 차원 마법사가 표시됩니다.  
   
-2.  **차원 마법사 시작** 페이지에서 **다음**을 클릭합니다.  
+2.  
+  **차원 마법사 시작** 페이지에서 **다음**을 클릭합니다.  
   
-3.  **생성 방법 선택** 페이지에서 **기존 테이블 사용** 옵션이 선택되어 있는지 확인하고 **다음**을 클릭합니다.  
+3.  
+  **생성 방법 선택** 페이지에서 **기존 테이블 사용** 옵션이 선택되어 있는지 확인하고 **다음**을 클릭합니다.  
   
-4.  **원본 정보 지정** 페이지에서 **Adventure Works DW 2012** 데이터 원본 뷰가 선택되어 있는지 확인합니다.  
+4.  
+  **원본 정보 지정** 페이지에서 **Adventure Works DW 2012** 데이터 원본 뷰가 선택되어 있는지 확인합니다.  
   
-5.  **주 테이블** 목록에서 **Date**를 선택합니다.  
+5.  
+  **주 테이블** 목록에서 **Date**를 선택합니다.  
   
 6.  **다음**을 클릭합니다.  
   
-7.  **차원 특성 선택** 페이지에서 다음 특성 옆에 있는 확인란을 선택합니다.  
+7.  
+  **차원 특성 선택** 페이지에서 다음 특성 옆에 있는 확인란을 선택합니다.  
   
     -   **Date Key**  
   
@@ -51,21 +56,24 @@ ms.locfileid: "66079093"
   
     -   **Calendar Semester**  
   
-8.  **Full Date Alternate Key** 특성의 **특성 유형** 열 설정을 **일반** 에서 **날짜**로 변경합니다. 이렇게 하려면 **특성 유형** 열에서 **일반** 을 클릭합니다. 그런 다음 화살표를 클릭하여 옵션을 확장합니다. **날짜** > **달력** > **날짜**를 클릭합니다. **확인**을 클릭합니다. 이 단계를 반복하여 특성의 특성 유형을 다음과 같이 변경합니다.  
+8.  
+  **Full Date Alternate Key** 특성의 **특성 유형** 열 설정을 **일반** 에서 **날짜**로 변경합니다. 이렇게 하려면 **특성 유형** 열에서 **일반** 을 클릭합니다. 그런 다음 화살표를 클릭하여 옵션을 확장합니다. 그런 다음 **날짜** > **달력** > **날짜**를 클릭 합니다. **확인**을 클릭합니다. 이 단계를 반복하여 특성의 특성 유형을 다음과 같이 변경합니다.  
   
-    -   **English Month Name** 에서 **Month**  
+    -   **English Month Name** to **month**  
   
-    -   **Calendar Quarter** 에서 **Quarter**  
+    -   **Calendar quarter** 에서 **quarter**  
   
-    -   **Calendar Year** 에서 **Year**  
+    -   **역 년** 대비 **연도**  
   
-    -   **Calendar Semester** 에서 **Half Year**  
+    -   **반기 대비** 반기 ****  
   
 9. **다음**을 클릭합니다.  
   
-10. **마법사 완료** 페이지의 미리 보기 창에서 **Date** 차원 및 해당 특성을 볼 수 있습니다.  
+10. 
+  **마법사 완료** 페이지의 미리 보기 창에서 **Date** 차원 및 해당 특성을 볼 수 있습니다.  
   
-11. **마침** 을 클릭하여 마법사를 완료합니다.  
+11. 
+  **마침** 을 클릭하고 마법사를 완료합니다.  
   
      솔루션 탐색기의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 프로젝트에서 Date 차원은 **차원** 폴더에 표시됩니다. 차원 디자이너는 개별 환경의 가운데에 Date 차원을 표시합니다.  
   
@@ -74,7 +82,7 @@ ms.locfileid: "66079093"
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [큐브 정의](lesson-2-2-defining-a-cube.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [다차원 모델의 차원](multidimensional-models/dimensions-in-multidimensional-models.md)   
  [기존 테이블을 사용 하 여 차원 만들기](multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
  [차원 마법사를 사용하여 차원 만들기](multidimensional-models/create-a-dimension-using-the-dimension-wizard.md)  

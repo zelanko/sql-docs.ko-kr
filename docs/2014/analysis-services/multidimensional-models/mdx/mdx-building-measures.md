@@ -1,5 +1,5 @@
 ---
-title: MDX로 측정값 구축 | Microsoft Docs
+title: MDX로 측정값 작성 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7587e3304d1464beb7ef94cd7d3093982f394bcc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074584"
 ---
 # <a name="building-measures-in-mdx"></a>MDX로 측정값 만들기
@@ -42,9 +42,9 @@ from [Model]
 |2003|41993729.72||  
 |2004|25808962.34||  
   
-## <a name="see-also"></a>관련 항목  
- [MEMBER 문 & #40; 만들기 Mdx& #41;](/sql/mdx/mdx-data-definition-create-member)   
- [MDX 함수 참조 & #40; Mdx& #41;](/sql/mdx/mdx-function-reference-mdx)   
- [SELECT 문 & #40; Mdx& #41;](/sql/mdx/mdx-data-manipulation-select)  
+## <a name="see-also"></a>참고 항목  
+ [CREATE MEMBER 문 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)   
+ [Mdx 함수 참조 &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
+ [SELECT 문 &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)  
   
   

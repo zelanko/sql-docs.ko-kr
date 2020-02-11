@@ -1,5 +1,5 @@
 ---
-title: 범위 및 컨텍스트 (MDX) 관리 | Microsoft Docs
+title: 범위 및 컨텍스트 관리 (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,14 +18,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bec0dc51a4f91ba4ca8f71a0a3caba387d37bf1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074639"
 ---
 # <a name="managing-scope-and-context-mdx"></a>범위 및 컨텍스트 관리(MDX)
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 MDX(Multidimensional Expressions) 스크립트는 스크립트 실행의 특정 시점에 전체 큐브나 큐브의 특정 부분에 적용될 수 있습니다. MDX 스크립트는 계산 패스를 사용하여 큐브 내에서의 계산에 계층화된 방법을 취할 수 있습니다.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]MDX (Multidimensional Expressions) 스크립트는 스크립트 실행 내의 특정 지점에서 전체 큐브나 큐브의 특정 부분에 적용 될 수 있습니다. MDX 스크립트는 계산 패스를 사용하여 큐브 내에서의 계산에 계층화된 방법을 취할 수 있습니다.  
   
 > [!NOTE]  
 >  계산 패스가 계산에 미치는 영향에 대한 자세한 내용은 [패스 순서 및 계산 순서 이해&#40;MDX&#41;](mdx-data-manipulation-understanding-pass-order-and-solve-order.md)를 참조하세요.  
@@ -41,7 +41,9 @@ ms.locfileid: "66074639"
 >  스크립트에 CALCULATE 문을 포함한 SCOPE 문이 들어 있는 경우 MDX는 전체 큐브에 대해서가 아니라 SCOPE 문으로 정의되는 하위 큐브의 컨텍스트 내에서 CALCULATE 문을 계산합니다.  
   
 ## <a name="using-the-this-function"></a>This 함수 사용  
- `This` 함수를 사용하면 MDX 스크립트 내의 현재 하위 큐브를 검색할 수 있습니다. `This` 함수를 사용하여 현재 하위 큐브 내에 있는 셀의 값을 MDX 식으로 빠르게 설정할 수 있습니다. SCOPE 문과 함께 `This` 함수를 사용하여 특정 계산 패스 중에 특정 하위 큐브의 내용을 변경하는 경우도 있습니다.  
+ 
+  `This` 함수를 사용하면 MDX 스크립트 내의 현재 하위 큐브를 검색할 수 있습니다. 
+  `This` 함수를 사용하여 현재 하위 큐브 내에 있는 셀의 값을 MDX 식으로 빠르게 설정할 수 있습니다. SCOPE 문과 함께 `This` 함수를 사용하여 특정 계산 패스 중에 특정 하위 큐브의 내용을 변경하는 경우도 있습니다.  
   
 > [!NOTE]  
 >  스크립트에 `This` 함수를 포함한 SCOPE 문이 들어 있는 경우 MDX는 전체 큐브에 대해서가 아니라 SCOPE 문으로 정의되는 하위 큐브의 컨텍스트 내에서 `This` 함수를 계산합니다.  
@@ -58,7 +60,7 @@ SCOPE([Customer].&[Redmond].MEMBERS,
 END SCOPE;  
 ```  
   
- 구문에 대 한 자세한 내용은 합니다 `This` 함수를 참조 하세요 [이 &#40;MDX&#41;](/sql/mdx/this-mdx)합니다.  
+ `This` 함수 구문에 대 한 자세한 내용은 [이 &#40;MDX&#41;](/sql/mdx/this-mdx)를 참조 하세요.  
   
 ## <a name="using-the-scope-statement"></a>SCOPE 문 사용  
  SCOPE 문은 MDX 스크립트 내의 다른 MDX 식과 문을 포함하고 해당 범위를 지정하는 현재 하위 큐브를 정의합니다. MDX는 하위 큐브의 컨텍스트 내에서 `This` 함수와 CALCULATE 문을 포함하여 이런 다른 MDX 식과 문을 계산합니다.  
@@ -113,9 +115,9 @@ END SCOPE;
   
  SCOPE 문의 구문에 대한 자세한 내용은 [SCOPE 문&#40;MDX&#41;](/sql/mdx/mdx-scripting-scope)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [MDX 언어 참조 & #40; Mdx& #41;](/sql/mdx/mdx-language-reference-mdx)   
- [기본 MDX 스크립트&#40;MDX&#41;](the-basic-mdx-script-mdx.md)   
- [MDX 쿼리 기본 사항&#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+## <a name="see-also"></a>참고 항목  
+ [Mdx 언어 참조 &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
+ [MDX &#40;기본 MDX 스크립트&#41;](the-basic-mdx-script-mdx.md)   
+ [MDX 쿼리 기본 사항 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

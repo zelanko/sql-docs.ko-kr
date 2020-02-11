@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c4c2c6e01fd3e0b862511f71d90baf31d28948ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62666709"
 ---
-# <a name="mssqleng003165"></a>MSSQL_ENG003165
+# <a name="mssql_eng003165"></a>MSSQL_ENG003165
     
 ## <a name="message-details"></a>메시지 정보  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62666709"
  이 오류의 원인은 복원된 데이터베이스와 복제 메타데이터 **msdb**, **master**또는 배포 데이터베이스가 포함된 하나 이상의 시스템 데이터베이스의 상태가 일치하지 않기 때문일 수 있습니다.  
   
 ## <a name="user-action"></a>사용자 동작  
- 이 문제를 해결하려면 다음을 수행하십시오.  
+ 이 문제를 해결하려면:  
   
 1.  예를 들면 `ALTER DATABASE AdventureWorks SET ONLINE`과 같이 ALTER DATABASE를 실행하여 데이터베이스를 온라인 상태로 만듭니다. 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)를 참조하세요. 복제 설정을 유지하려면 2단계로 이동하고, 그렇지 않은 경우에는 3단계로 이동합니다.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62666709"
   
      필요한 경우 복제를 다시 구성합니다. 복제 토폴로지를 권장 사항대로 스크립팅한 경우에는 스크립트를 사용하여 토폴로지를 다시 구성합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 데이터베이스 백업 및 복원](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [복제된 데이터베이스 백업 및 복원](administration/back-up-and-restore-replicated-databases.md)   
  [오류 및 이벤트 참조&#40;복제&#41;](errors-and-events-reference-replication.md)  

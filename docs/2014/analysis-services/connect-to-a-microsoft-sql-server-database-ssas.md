@@ -1,5 +1,5 @@
 ---
-title: Microsoft SQL Server 데이터베이스 (SSAS)에 연결 | Microsoft Docs
+title: Microsoft SQL Server 데이터베이스에 연결 (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cc3530c7bc316c0dbdc3271d456d4f7adf05038a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087223"
 ---
 # <a name="connect-to-a-microsoft-sql-server-database-ssas"></a>Microsoft SQL Server 데이터베이스에 연결(SSAS)
-  **테이블 가져오기 마법사** 의 이 페이지에서는 Microsoft SQL Server 데이터베이스에 연결하기 위한 설정을 지정할 수 있습니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  
+  
+  **테이블 가져오기 마법사** 의 이 페이지에서는 Microsoft SQL Server 데이터베이스에 연결하기 위한 설정을 지정할 수 있습니다. 
+  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  
   
  데이터 원본에 연결하려면 컴퓨터에 적절한 공급자를 설치해야 합니다.  
   
@@ -57,13 +59,15 @@ ms.locfileid: "66087223"
  데이터베이스 연결의 암호를 지정합니다. 이 옵션은 SQL Server 인증을 사용하여 연결하도록 선택한 경우에만 편집할 수 있습니다.  
   
  **암호 저장**  
- **암호** 상자에 입력한 암호를 저장할지 여부를 지정합니다. 이 옵션은 SQL Server 인증을 사용하여 연결하도록 선택한 경우에만 사용할 수 있습니다.  
+ 
+  **암호** 상자에 입력한 암호를 저장할지 여부를 지정합니다. 이 옵션은 SQL Server 인증을 사용하여 연결하도록 선택한 경우에만 사용할 수 있습니다.  
   
  **데이터베이스 이름**  
  데이터베이스 목록에서 데이터베이스를 선택합니다.  
   
  **고급**  
- **고급 속성 설정** 대화 상자를 사용하여 추가 연결 속성을 설정합니다. 자세한 내용은 [고급 속성 설정&#40;SSAS&#41;](set-advanced-properties-ssas.md)을 참조하세요.  
+ 
+  **고급 속성 설정** 대화 상자를 사용하여 추가 연결 속성을 설정합니다. 자세한 내용은 [고급 속성 설정&#40;SSAS&#41;](set-advanced-properties-ssas.md)을 참조하세요.  
   
  **연결 테스트**  
  현재 설정을 사용하여 데이터 원본에 대한 연결을 설정해 봅니다. 연결이 성공적인지 여부를 나타내는 메시지가 표시됩니다.  

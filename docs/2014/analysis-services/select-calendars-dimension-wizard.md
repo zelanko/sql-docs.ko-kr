@@ -1,5 +1,5 @@
 ---
-title: 달력 (차원 마법사) | Microsoft Docs
+title: 달력 선택 (차원 마법사) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,19 +13,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fde8172abbebe08fc4aae4cc0282955c2a582d02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069687"
 ---
 # <a name="select-calendars-dimension-wizard"></a>달력 선택(차원 마법사)
+  
   **달력 선택** 페이지를 사용하여 시간 차원에 대한 회계 달력, 보고 달력, 제조 달력 또는 ISO(International Standards Organization) 8601 달력을 나타내는 추가 계층을 만들 수 있습니다.  
   
 > [!NOTE]  
 >  이 페이지는 **차원 유형 선택** 페이지에서 **서버 시간 차원** 을 선택했거나 **차원 정의** 페이지에서 **데이터 원본을 사용하지 않고 차원 생성** 을 선택한 다음 **차원 유형 선택** 페이지에서 **시간 차원** 을 선택한 경우에만 표시됩니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **회계 달력**  
  회계 달력을 기반으로 시간 계층을 만들려면 선택합니다.  
   
@@ -36,12 +37,13 @@ ms.locfileid: "66069687"
 >  이 옵션은 **회계 달력** 을 선택한 경우에만 사용할 수 있습니다.  
   
  **회계 달력 명명 규칙**  
- 회계 달력에 사용할 명명 규칙을 선택합니다. **역년 이름** 또는 **역년 이름 + 1**을 선택합니다.  
+ 회계 달력에 사용할 명명 규칙을 선택합니다. 
+  **역년 이름** 또는 **역년 이름 + 1**을 선택합니다.  
   
 > [!NOTE]  
 >  이 옵션은 **회계 달력** 을 선택한 경우에만 사용할 수 있습니다.  
   
- **보고 / 마케팅 달력**  
+ **보고/마케팅 달력**  
  보고 달력을 기반으로 시간 계층을 만들려면 선택합니다.  
   
  **시작 주 및 월**  
@@ -61,7 +63,7 @@ ms.locfileid: "66069687"
 |값|Description|  
 |-----------|-----------------|  
 |**주 445**|사분기의 첫 번째 달에 4주, 두 번째 달에 4주, 세 번째 달에 5주가 있습니다.|  
-|**454 주**|사분기의 첫 번째 달에 4주, 두 번째 달에 5주, 세 번째 달에 4주가 있습니다.|  
+|**주 454**|사분기의 첫 번째 달에 4주, 두 번째 달에 5주, 세 번째 달에 4주가 있습니다.|  
 |**주 544**|사분기의 첫 번째 달에 5주, 두 번째 달에 4주, 세 번째 달에 4주가 있습니다.|  
   
  **제조 달력**  
@@ -82,9 +84,9 @@ ms.locfileid: "66069687"
  **ISO 8601 달력**  
  ISO 8601 달력을 기반으로 계층을 만들려면 선택합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [차원 마법사 F1 도움말](dimension-wizard-f1-help.md)   
- [차원 &#40;Analysis Services-다차원 데이터&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [차원 &#40;Analysis Services 다차원 데이터&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [다차원 모델의 차원](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

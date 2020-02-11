@@ -13,16 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 793c83dba01be84fb468b0be54bb7d0405e39467
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069627"
 ---
 # <a name="select-creation-method-cube-wizard"></a>생성 방법 선택(큐브 마법사)
+  
   **생성 방법 선택** 페이지를 사용하여 큐브를 만드는 방법을 지정할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **기존 테이블 사용**  
  데이터 원본에 있는 기존 테이블을 사용하여 큐브를 만들려면 선택합니다. 마법사가 새 큐브를 만들기 위해 기존 테이블을 기반으로 측정값 그룹과 차원을 선택하고 정의하는 과정을 안내합니다.  
   
@@ -46,8 +47,8 @@ ms.locfileid: "66069627"
 > [!NOTE]  
 >  이 옵션은 **데이터 원본에 테이블 생성** 옵션을 선택한 경우에만 사용할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [큐브 개체 &#40;Analysis Services-다차원 데이터&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>참고 항목  
+ [큐브 개체는 Analysis Services 다차원 데이터를 &#40;&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [다차원 모델의 큐브](multidimensional-models/cubes-in-multidimensional-models.md)   
  [다차원 모델의 차원](multidimensional-models/dimensions-in-multidimensional-models.md)  
   

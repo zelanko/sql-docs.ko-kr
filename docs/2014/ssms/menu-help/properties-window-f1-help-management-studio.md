@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7fbfa9066f5531eead9b12a3f1ebc8c2f110a56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62661760"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>속성 창 F1 도움말(Management Studio)
@@ -35,7 +35,7 @@ ms.locfileid: "62661760"
   
  **속성** 창에는 특정 속성의 필요 여부에 따라 다른 유형의 편집 필드가 표시됩니다. 회색으로 표시된 속성은 읽기 전용입니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **개체 이름**  
  현재 선택한 개체가 나열됩니다. 활성 편집기 또는 디자이너의 개체만 표시됩니다.  
   
@@ -45,13 +45,13 @@ ms.locfileid: "62661760"
  **사전순**  
  선택한 개체에 대한 모든 디자인 타임 속성과 이벤트를 사전순으로 정렬합니다.  
   
- **Properties**  
+ **속성**  
  개체에 대한 속성을 표시합니다.  
   
  **설명 창**  
  설명 창은 **속성** 창의 맨 아래에 나타나며 속성 유형과 속성에 대한 간단한 설명을 표시합니다. 바로 가기 메뉴의 **설명** 명령을 사용하여 속성 설명을 설정 및 해제할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Management Studio에서 속성 창 사용](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)  
   
   

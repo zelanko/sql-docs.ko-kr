@@ -19,16 +19,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 10a63e84fcad55b6dfaec286d0d47b686d395f5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62693518"
 ---
 # <a name="clientnetworkprotocol-class"></a>ClientNetworkProtocol 클래스
+  
   [ClientNetworkProtocol 클래스](clientnetworkprotocol-class.md) 는 클라이언트 인스턴스에 설치되어 네트워크를 통해 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스와의 통신을 허용하는 네트워크 프로토콜을 나타냅니다.  
   
- [ClientNetworkProtocol 클래스](clientnetworkprotocol-class.md)를 사용하여 다음 태스크를 수행할 수 있습니다.  
+ 
+  [ClientNetworkProtocol 클래스](clientnetworkprotocol-class.md)를 사용하여 다음 태스크를 수행할 수 있습니다.  
   
 -   프로토콜 목록에서 클라이언트 네트워크 프로토콜을 선택하는 데 사용할 인덱스 값을 설정합니다.  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2d4d08795351b93615954ad64e004482745f768d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62725957"
 ---
 # <a name="extending-olap-functionality"></a>OLAP 기능 확장
@@ -25,7 +25,7 @@ ms.locfileid: "62725957"
  개인 설정은 사용자마다 다른 동작을 제공하기 위해 큐브에 추가하는 사용자 지정 개체입니다. 개인 설정은 큐브에서 영구 개체는 아니지만 사용자 세션 중 클라이언트 애플리케이션에서 동적으로 적용되는 개체입니다. 예를 들어 데이터에 액세스하는 개인에 따라 통화 값의 통화를 변경하거나 개별화된 KPI를 제공하거나 온라인으로 구매하는 단골 고객에 대한 목표 제안 목록을 작성합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [개인 설정을 통해 OLAP 확장](extending-olap-through-personalizations.md)  
+ [개별화를 통해 OLAP 확장](extending-olap-through-personalizations.md)  
   
  [Analysis Services 개인 설정 확장 프로그램](analysis-services-personalization-extensions.md)  
   

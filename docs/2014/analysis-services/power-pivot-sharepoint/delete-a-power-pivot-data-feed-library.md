@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f2e12e536cfaf91bab25e958ba279b072b39259
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071478"
 ---
 # <a name="delete-a-powerpivot-data-feed-library"></a>PowerPivot 데이터 피드 라이브러리 삭제
@@ -24,17 +24,18 @@ ms.locfileid: "66071478"
   
 ### <a name="delete-a-data-feed-library"></a>데이터 피드 라이브러리 삭제  
   
-1.  **사이트 작업**을 클릭합니다.  
+1.  
+  **사이트 작업**을 클릭합니다.  
   
-2.  **사이트 설정**을 클릭합니다.  
+2.  **사이트 설정**을 클릭 합니다.  
   
 3.  사이트 관리에서 **사이트 라이브러리 및 목록**을 클릭합니다.  
   
-4.  클릭 **사용자 지정 "\<라이브러리 이름 >"**  
+4.  **\<"라이브러리 이름>" 사용자 지정을 클릭 합니다** .  
   
 5.  사용 권한 및 관리에서 **이 라이브러리 삭제**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [PowerPivot 데이터 피드](power-pivot-data-feeds.md)  
   
   

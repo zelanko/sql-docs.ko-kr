@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 175c1f5b1f507078f461a07e30c62fb68f7cfb02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62678997"
 ---
 # <a name="advanced-save-options"></a>저장 고급 옵션
-  이 대화 상자를 사용하여 언어 인코딩 스키마를 선택하고 각 줄 끝에 삽입할 문자를 지정할 수 있습니다. 액세스는 **고급 저장 옵션** 대화 상자의 합니다 **파일** 메뉴에서 클릭 **저장** \<쿼리 이름 > **.sql** 를 엽니다는 **다른 이름으로 파일 저장** 대화 상자에서 아래쪽 화살표를 클릭 합니다 **저장** 단추를 클릭 한 다음 클릭 **인코딩하여 저장**합니다.  
+  이 대화 상자를 사용하여 언어 인코딩 스키마를 선택하고 각 줄 끝에 삽입할 문자를 지정할 수 있습니다. **저장 고급 옵션** 대화 상자에 액세스 하려면 **파일** 메뉴에서 다른 이름으로 쿼리>이름 **저장** \<을 **클릭 하 여** 다른 이름 **으로 파일 저장** 대화 상자를 열고 **저장** 단추에서 아래쪽 화살표를 클릭 한 다음 **인코딩하여 저장**을 클릭 합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **인코딩**  
  이 목록 상자를 사용하여 대상 파일에 새 언어 인코딩 스키마를 적용할 수 있습니다.  
   

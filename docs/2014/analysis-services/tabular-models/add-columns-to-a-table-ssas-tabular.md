@@ -1,5 +1,5 @@
 ---
-title: 열 테이블에 추가 (SSAS 테이블 형식) | Microsoft Docs
+title: 테이블에 열 추가 (SSAS 테이블 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a62460a63bab15499f9aeb4c6510c0e4a9652a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067766"
 ---
 # <a name="add-columns-to-a-table-ssas-tabular"></a>테이블에 열 추가(SSAS 테이블 형식)
@@ -37,10 +37,11 @@ ms.locfileid: "66067766"
   
 1.  모델 디자이너에서 열을 추가할 테이블을 클릭한 다음 **테이블** 메뉴를 클릭하고  **테이블 속성**을 클릭합니다.  
   
-2.  **테이블 속성 편집** 대화 상자의 테이블 미리 보기 창에서 추가할 원본 열을 선택한 다음 확인을 클릭합니다. 이때 모델 테이블 정의에 이미 포함된 열은 확인란이 선택되어 있습니다.  
+2.  
+  **테이블 속성 편집** 대화 상자의 테이블 미리 보기 창에서 추가할 원본 열을 선택한 다음 확인을 클릭합니다. 이때 모델 테이블 정의에 이미 포함된 열은 확인란이 선택되어 있습니다.  
   
 ## <a name="add-a-calculated-column"></a>계산 열 추가  
- 계산 열에서는 DAX 수식에 따라 각 행의 값이 정해집니다. 예를 들어 각 행에 값으로 1을 추가하는 간단한 수식(=1)으로 계산된 열을 만들 수 있습니다. 또는 모델의 다른 데이터를 바탕으로 값을 계산하는 좀 더 복잡한 수식의 계산된 열을 만들 수도 있습니다. 계산 열은 다른 항목에서 더 자세히 다룹니다. 자세한 내용은 [계산 열&#40;SSAS 테이블 형식&#41;](ssas-calculated-columns.md)을 참조하세요.  
+ 계산 열에서는 DAX 수식에 따라 각 행의 값이 정해집니다. 예를 들어 각 행에 값으로 1을 추가하는 간단한 수식(=1)으로 계산된 열을 만들 수 있습니다. 또는 모델의 다른 데이터를 바탕으로 값을 계산하는 좀 더 복잡한 수식의 계산된 열을 만들 수도 있습니다. 계산 열은 다른 항목에서 더 자세히 다룹니다. 자세한 내용은 [계산 열&#40;SSAS 테이블 형식&#41;](ssas-calculated-columns.md)에서 작성된 테이블 형식 모델 프로젝트에 대해 설명합니다.  
   
 #### <a name="to-create-a-calculated-column"></a>계산 열을 만들려면  
   
@@ -61,8 +62,8 @@ ms.locfileid: "66067766"
   
 2.  맨 위 셀을 클릭하고 이름을 입력한 다음 Enter 키를 누릅니다.  
   
-## <a name="see-also"></a>관련 항목  
- [테이블 속성 편집 대화 상자&#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)   
- [테이블, 열 또는 행 필터 매핑 변경&#40;SSAS 테이블 형식&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
+## <a name="see-also"></a>참고 항목  
+ [테이블 속성 편집 대화 상자 &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)   
+ [SSAS 테이블 형식&#41;&#40;테이블, 열 또는 행 필터 매핑 변경](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
   
   
