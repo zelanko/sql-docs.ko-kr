@@ -1,5 +1,5 @@
 ---
-title: 기본 자릿수와 소수 자릿수 숫자 데이터 형식에 대 한 재정의 | Microsoft Docs
+title: 숫자 데이터 형식에 대 한 기본 전체 자릿수 및 소수 자릿수 재정의 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,17 +17,17 @@ ms.assetid: 84292334-0e33-4a1b-84de-8c018dd787f3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 66fc728440808314dbdaa30065c68232f4a89fba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68100610"
 ---
 # <a name="overriding-default-precision-and-scale-for-numeric-data-types"></a>숫자 데이터 형식에 대한 기본 전체 자릿수 및 소수 자릿수 재정의
-호출 하 여 SQL_DESC_TYPE 필드는 카드가 SQL_C_NUMERIC로 설정 되 면 **SQLBindCol** 하거나 **SQLSetDescField**는 카드가 자릿수가 SQL_DESC_SCALE 필드는 0으로 설정 되어 및 SQL_DESC_PRECISION 필드가 설정 되 고, 에 기본 드라이버에서 정의 된 전체 자릿수입니다. 에 마찬가지는 APD의 SQL_DESC_TYPE 필드 중 하나를 호출 하 여 SQL_C_NUMERIC로 설정 된 경우 **SQLBindParameter** 하거나 **SQLSetDescField**합니다. 입력, 입/출력 또는 출력 매개 변수는 것과 마찬가지입니다.  
+**SQLBindCol** 또는 SQLSetDescField를 호출 하 여 **** 의 SQL_DESC_TYPE 필드가 SQL_C_NUMERIC로 설정 된 경우, 나의 SQL_DESC_SCALE 필드는 0으로 설정 되 고 SQL_DESC_PRECISION 필드는 드라이버 정의 기본 전체 자릿수로 설정 됩니다. **SQLBindParameter** 또는 **SQLSetDescField**를 호출 하 여 apd의 SQL_DESC_TYPE 필드가 SQL_C_NUMERIC으로 설정 된 경우에도 마찬가지입니다. 입력, 입/출력 또는 출력 매개 변수의 경우에도 마찬가지입니다.  
   
- 설명 된 기본값 중 이전에 허용 되지 않는 응용 프로그램의 경우 응용 프로그램 호출 하 여 자릿수가 SQL_DESC_SCALE 또는 SQL_DESC_PRECISION 필드를 설정 해야 **SQLSetDescField** 또는 **SQLSetDescRec**.  
+ 이전에 설명한 기본값 중 하나를 응용 프로그램에 사용할 수 없는 경우 응용 프로그램은 **SQLSetDescField** 또는 **SQLSetDescRec**를 호출 하 여 SQL_DESC_SCALE 또는 SQL_DESC_PRECISION 필드를 설정 해야 합니다.  
   
- 응용 프로그램을 호출 하는 경우 **SQLGetData** SQL_C_NUMERIC 구조로 데이터를 반환 하는 기본 자릿수가 SQL_DESC_SCALE 및 자릿수가 SQL_DESC_PRECISION 필드를 사용 합니다. 기본값 허용 되지 않는 경우에 응용 프로그램 호출 해야 합니다 **SQLSetDescRec** 하거나 **SQLSetDescField** 필드를 설정 하 여 호출 **SQLGetData** 를사용하여*TargetType* 설명자 필드에 값을 사용 하도록 SQL_ARD_TYPE입니다.  
+ 응용 프로그램이 **SQLGetData** 를 호출 하 여 데이터를 SQL_C_NUMERIC 구조체로 반환 하는 경우 기본 SQL_DESC_SCALE 및 SQL_DESC_PRECISION 필드가 사용 됩니다. 기본값을 사용할 수 없는 경우 응용 프로그램에서 **SQLSetDescRec** 또는 **SQLSetDescField** 를 호출 하 여 필드를 설정한 다음, SQL_ARD_TYPE *TargetType* 과 함께 **SQLGetData** 를 호출 하 여 설명자 필드의 값을 사용 해야 합니다.  
   
- 때 **SQLPutData** 은 실행 시 데이터 매개 변수 또는 열에 해당 하는 설명자 레코드의 자릿수가 SQL_DESC_SCALE 및 자릿수가 SQL_DESC_PRECISION 필드를 사용 하 여 호출 호출에 대 한 호출에 대 한 APD 필드는  **SQLExecute** 또는 **SQLExecDirect**, 또는 필드에 대 한 호출 **SQLBulkOperations** 하거나 **SQLSetPos**합니다.
+ **Sqlputdata** 가 호출 되 면 호출은 **Sqlexecute** 또는 **sqlputdata**에 대 한 호출에 대 한 Apd 필드 또는 **SQLBulkOperations** 또는 **SQLSetPos**호출의 필드를 사용 하 여 실행 시 데이터 매개 변수 또는 열에 해당 하는 설명자 레코드의 SQL_DESC_SCALE 및 SQL_DESC_PRECISION 필드를 사용 합니다.

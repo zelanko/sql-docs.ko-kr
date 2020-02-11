@@ -1,5 +1,5 @@
 ---
-title: sp_cycle_agent_errorlog (TRANSACT-SQL) | Microsoft Docs
+title: sp_cycle_agent_errorlog (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 8aa96182-60b7-4d7b-b2a7-ccce70378c6e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c95cc2db84bdf059437a45e2719bbc63d6eb6829
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108347"
 ---
-# <a name="spcycleagenterrorlog-transact-sql"></a>sp_cycle_agent_errorlog(Transact-SQL)
+# <a name="sp_cycle_agent_errorlog-transact-sql"></a>sp_cycle_agent_errorlog(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   현재의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 오류 로그 파일을 닫고 서버를 다시 시작하는 것처럼 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 오류 로그 확장 번호를 순환시킵니다. 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 오류 로그에는 새 로그가 생성되었음을 나타내는 줄이 포함됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,15 +42,15 @@ sp_cycle_agent_errorlog
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="remarks"></a>설명  
- 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 시작 하 고, 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 오류 로그로 바뀌었습니다 **SQLAgent.1**; **SQLAgent.1** 됩니다 **SQLAgent.2**합니다 **SQLAgent.2** 됩니다 **SQLAgent.3**등입니다. **sp_cycle_agent_errorlog** 중지 하 고 서버를 시작 하지 않고 오류 로그 파일을 순환 시킬 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 시작 될 때마다 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 오류 로그의 이름이 **SQLAgent. 1**로 바뀝니다. **SQLAgent** 는 **SQLAgent**가 되 고 **SQLAgent** 는 **SQLAgent. 3**이 됩니다. **sp_cycle_agent_errorlog** 를 사용 하면 서버를 중지 하 고 시작 하지 않고 오류 로그 파일을 순환할 수 있습니다.  
   
- 이 저장된 프로시저에서 실행 되어야 합니다는 **msdb** 데이터베이스입니다.  
+ 이 저장 프로시저는 **msdb** 데이터베이스에서 실행 해야 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 실행 권한은 **sp_cycle_agent_errorlog** 의 멤버로 제한 되는 **sysadmin** 고정된 서버 역할입니다.  
+ **Sp_cycle_agent_errorlog** 에 대 한 실행 권한은 **sysadmin** 고정 서버 역할의 멤버로 제한 됩니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 오류 로그를 순환시킵니다.  
@@ -63,7 +63,7 @@ EXEC dbo.sp_cycle_agent_errorlog ;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [sp_cycle_errorlog &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cycle-errorlog-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;sp_cycle_errorlog &#40;](../../relational-databases/system-stored-procedures/sp-cycle-errorlog-transact-sql.md)  
   
   

@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9865425573ae3d9c8f2e16af0da283c5ea684150
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62990200"
 ---
 # <a name="column-properties-visual-database-tools"></a>열 속성(Visual Database Tools)
-  열 속성 집합에는 테이블 디자이너([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서만 사용 가능) 내 **열 속성** 탭에서 볼 수 있는 전체 집합과 서버 탐색기를 사용하여 속성 창에서 볼 수 있는 하위 집합이 있습니다.  
+  열 속성 집합에는 테이블 디자이너(**** 데이터베이스에서만 사용 가능) 내 열 속성[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 탭에서 볼 수 있는 전체 집합과 서버 탐색기를 사용하여 속성 창에서 볼 수 있는 하위 집합이 있습니다.  
   
 > [!NOTE]  
 >  이 항목의 속성은 사전순 대신 범주별로 정렬됩니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "62990200"
  **이름**  
  열의 이름을 표시합니다.  
   
- **데이터베이스 백업**  
+ **Database**  
  선택한 열에 대한 데이터 원본의 이름을 표시합니다. OLE DB에만 적용됩니다.  
   
  **기타 범주**  
@@ -68,10 +68,10 @@ ms.locfileid: "62990200"
  **Null 허용**  
  열에 Null 값이 허용되는지 여부를 표시합니다.  
   
- **전체 자릿수**  
+ **정밀도**  
  숫자 데이터 형식에 허용되는 최대 자릿수를 표시합니다. 이 속성은 숫자가 아닌 데이터 형식에 대해 **0** 을 표시합니다.  
   
- **소수 자릿수**  
+ **규모**  
  숫자 데이터 형식에 대해 소수점 오른쪽에 나타날 수 있는 최대 자릿수를 표시합니다. 이 값은 전체 자릿수보다 작거나 같아야 합니다. 이 속성은 숫자가 아닌 데이터 형식에 대해 **0** 을 표시합니다.  
   
 ## <a name="column-properties-tab"></a>열 속성 탭  
@@ -101,10 +101,10 @@ ms.locfileid: "62990200"
  **길이**  
  문자 기반 데이터 형식에 허용되는 문자 수를 표시합니다. 이 속성은 문자 기반 데이터 형식에 대해서만 사용할 수 있습니다.  
   
- **전체 자릿수**  
+ **정밀도**  
  숫자 데이터 형식에 허용되는 최대 자릿수를 표시합니다. 이 속성은 숫자가 아닌 데이터 형식에 대해 **0** 을 표시합니다. 이 속성은 숫자 데이터 형식에만 사용할 수 있습니다.  
   
- **소수 자릿수**  
+ **규모**  
  숫자 데이터 형식에 대해 소수점 오른쪽에 나타날 수 있는 최대 자릿수를 표시합니다. 이 값은 전체 자릿수보다 작거나 같아야 합니다. 이 속성은 숫자가 아닌 데이터 형식에 대해 **0** 을 표시합니다. 이 속성은 숫자 데이터 형식에만 사용할 수 있습니다.  
   
  **테이블 디자이너 범주**  
@@ -179,12 +179,13 @@ ms.locfileid: "62990200"
  이 열이 다른 위치에 복제되었는지 여부를 표시합니다.  
   
  **RowGuid**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 열을 ROWGUID로 사용하는지 여부를 나타냅니다. 이 값을 설정할 수 있습니다 **Yes** 데이터 형식의 열에 대해서만 `uniqueidentifier`합니다. 이 속성을 편집하려면 해당 값을 클릭하고 드롭다운 목록을 확장한 다음 다른 값을 선택합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 열을 ROWGUID로 사용하는지 여부를 나타냅니다. 데이터 형식이 인 열에 대해서만이 값을 **예** 로 설정할 수 있습니다 `uniqueidentifier`. 이 속성을 편집하려면 해당 값을 클릭하고 드롭다운 목록을 확장한 다음 다른 값을 선택합니다.  
   
  **크기**  
  열의 데이터 형식에 허용되는 크기(바이트)를 표시합니다. 예를 들어 `nchar` 데이터 형식의 길이가 10(문자 수)까지 허용되면 유니코드 문자 집합 크기는 20까지 허용됩니다.  
   
 > [!NOTE]  
->  `varchar(max)` 데이터 형식의 길이는 각 행별로 다릅니다. sp_help 길이로 (-1)를 반환 합니다. `varchar(max)` 열입니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 는 열 크기로 -1을 표시합니다.  
+>  
+  `varchar(max)` 데이터 형식의 길이는 각 행별로 다릅니다. sp_help은 `varchar(max)` 열 길이로 (-1)을 반환 합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 는 열 크기로 -1을 표시합니다.  
   
   

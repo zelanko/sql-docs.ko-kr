@@ -1,5 +1,5 @@
 ---
-title: sp_delete_database_backuphistory (TRANSACT-SQL) | Microsoft Docs
+title: sp_delete_database_backuphistory (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 4c237944-453d-49fb-8d0e-4596945ac147
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ff85b52e0b0ed6715b64287f0c0e5abd5a0ae9c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085810"
 ---
-# <a name="spdeletedatabasebackuphistory-transact-sql"></a>sp_delete_database_backuphistory(Transact-SQL)
+# <a name="sp_delete_database_backuphistory-transact-sql"></a>sp_delete_database_backuphistory(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   백업 및 복원 기록 테이블에서 지정된 데이터베이스에 관한 정보를 삭제합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,16 +39,16 @@ sp_delete_database_backuphistory [ @database_name = ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @database_name = ] database_name` 백업 및 복원 작업에 포함 된 데이터베이스의 이름을 지정합니다. *database_name* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @database_name = ] database_name`백업 및 복원 작업에 관련 된 데이터베이스의 이름을 지정 합니다. *database_name* 는 **sysname**이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="remarks"></a>설명  
- **sp_delete_database_backuphistory** 에서 실행 해야 합니다 **msdb** 데이터베이스입니다.  
+ **sp_delete_database_backuphistory** 는 **msdb** 데이터베이스에서 실행 해야 합니다.  
   
  이 저장 프로시저는 다음 테이블에 영향을 줍니다.  
   
@@ -81,8 +81,8 @@ EXEC sp_delete_database_backuphistory @database_name = 'AdventureWorks2012';
   
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [sp_delete_backuphistory &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)   
- [백업 기록 및 헤더 정보&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;sp_delete_backuphistory &#40;](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)   
+ [백업 기록 및 헤더 정보 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   

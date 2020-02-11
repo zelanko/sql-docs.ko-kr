@@ -19,20 +19,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f6c6afc1822e2f56189aace2836a15486d1b73b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62922021"
 ---
-# <a name="manage-the-suspectpages-table-sql-server"></a>suspect_pages 테이블 관리(SQL Server)
+# <a name="manage-the-suspect_pages-table-sql-server"></a>suspect_pages 테이블 관리(SQL Server)
   이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] suspect_pages [!INCLUDE[tsql](../../includes/tsql-md.md)]테이블을 관리하는 방법에 대해 설명합니다. 주의 대상 페이지에 대한 정보를 유지 관리하는 데 사용되는 **suspect_pages** 테이블은 복원이 필요한지 여부를 결정하는 데 사용됩니다. [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) 테이블은 [msdb 데이터베이스](../databases/msdb-database.md)에 상주합니다.  
   
  [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 에서 데이터 페이지를 읽으려고 할 때 다음 오류 중 하나가 발생하면 페이지가 "주의 대상"으로 간주됩니다.  
   
--   디스크 오류(특정 하드웨어 오류)와 같이 운영 체제에서 실행되는 CRC(순환 중복 검사)로 인해 발생하는 [823 오류](../errors-events/mssqlserver-823-database-engine-error.md)  
+-   디스크 오류 (특정 하드웨어 오류)와 같이 운영 체제에서 실행 되는 CRC (순환 중복 검사)로 인해 발생 한 [823 오류](../errors-events/mssqlserver-823-database-engine-error.md) 입니다.  
   
--   조각난 페이지(논리적 오류)와 같은 [824 오류](../errors-events/mssqlserver-824-database-engine-error.md)  
+-   조각난 페이지 (논리적 오류)와 같은 [824 오류](../errors-events/mssqlserver-824-database-engine-error.md)  
   
  모든 주의 대상 페이지의 페이지 ID는 **suspect_pages** 테이블에 기록됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 다음과 같은 정상적인 처리 중에 발생하는 모든 주의 대상 페이지를 기록합니다.  
   
@@ -117,12 +117,12 @@ ms.locfileid: "62922021"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  **msdb** 에 대한 액세스 권한이 있는 사용자는 **suspect_pages** 테이블의 데이터를 읽을 수 있습니다. suspect_pages 테이블에 대한 UPDATE 권한이 있는 사용자는 레코드를 업데이트할 수 있습니다. **msdb** 의 **db_owner** 고정 데이터베이스 역할 또는 **sysadmin** 고정 서버 역할의 멤버는 레코드를 삽입, 업데이트 및 삭제할 수 있습니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### <a name="to-manage-the-suspectpages-table"></a>suspect_pages 테이블을 관리하려면  
+#### <a name="to-manage-the-suspect_pages-table"></a>suspect_pages 테이블을 관리하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]의 인스턴스에 연결하고 해당 인스턴스를 확장한 다음 **데이터베이스**를 확장합니다.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "62922021"
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### <a name="to-manage-the-suspectpages-table"></a>suspect_pages 테이블을 관리하려면  
+#### <a name="to-manage-the-suspect_pages-table"></a>suspect_pages 테이블을 관리하려면  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
@@ -160,13 +160,13 @@ GO
   
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [DROP DATABASE&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-database-audit-specification-transact-sql)   
  [RESTORE&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [BACKUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [DBCC&#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)   
  [페이지 복원&#40;SQL Server&#41;](restore-pages-sql-server.md)   
- [suspect_pages &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-tables/suspect-pages-transact-sql)   
+ [Transact-sql&#41;suspect_pages &#40;](/sql/relational-databases/system-tables/suspect-pages-transact-sql)   
  [MSSQLSERVER_823](../errors-events/mssqlserver-823-database-engine-error.md)   
  [MSSQLSERVER_824](../errors-events/mssqlserver-824-database-engine-error.md)  
   

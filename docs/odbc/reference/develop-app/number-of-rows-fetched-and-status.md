@@ -15,13 +15,13 @@ ms.assetid: a069b979-5108-4905-932f-8ae8e7905ff2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bc1f556873221faa3f86c5272120a786f6f25025
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086330"
 ---
 # <a name="number-of-rows-fetched-and-status"></a>페치된 행 수 및 상태
-호출에 의해 인출 된 행 수를 반환 하는 버퍼 지정 SQL_ATTR_ROWS_FETCHED_PTR 문 특성에 설정한 경우 **SQLFetch** 하거나 **SQLFetchScroll**, 및 오류 행. (이 숫자는 SQL_ROW_NO_ROWS 상태에 있지 않은 모든 행의 수입니다.) 호출한 후 **SQLBulkOperations** 또는 **SQLSetPos**, 버퍼 함수에서 수행 하는 대량 작업에 의해 영향을 받는 행 수를 포함 합니다. SQL_ATTR_ROW_STATUS_PTR 문 특성에 설정한 경우 **SQLFetch** 또는 **SQLFetchScroll** 반환 된 *행 상태 배열* 각 상태를 제공 하는 반환 된 행입니다. 이러한 필드에서 가리키는 버퍼의 두 응용 프로그램에 의해 할당 되 고 드라이버에서 채워집니다. 응용 프로그램은 커서를 닫을 때까지 이러한 포인터 유효 하 고 있는지 확인 해야 합니다.  
+SQL_ATTR_ROWS_FETCHED_PTR statement 특성이 설정 된 경우 **Sqlfetch** 또는 **sqlfetchscroll**에 대 한 호출에서 인출 된 행 수를 반환 하는 버퍼와 오류 행을 지정 합니다. 이 수는 SQL_ROW_NO_ROWS 상태가 없는 모든 행의 수입니다. **SQLBulkOperations** 또는 **SQLSetPos**를 호출한 후에는 함수에 의해 수행 된 대량 작업의 영향을 받은 행 수가 버퍼에 포함 됩니다. SQL_ATTR_ROW_STATUS_PTR statement 특성이 설정 된 경우 **Sqlfetch** 또는 **sqlfetchscroll** 은 반환 된 각 행의 상태를 제공 하는 *행 상태 배열을* 반환 합니다. 이러한 필드가 가리키는 버퍼는 모두 응용 프로그램에 의해 할당 되 고 드라이버에 의해 채워집니다. 응용 프로그램은 커서가 닫힐 때까지 이러한 포인터가 유효한 상태로 남아 있는지 확인 해야 합니다.  
   
- 행 상태 배열 상태의 항목 업데이트 된 여부를 각 행 성공적으로 가져온 지 여부를 추가 또는 마지막 페치된 이후로 및 행을 인출 하는 동안 오류가 발생 했는지 여부를 삭제 합니다. 하는 경우 **SQLFetch** 하거나 **SQLFetchScroll** 다중 행 집합의 한 행을 검색 하는 동안 오류가 발생 이거나 **SQLBulkOperations** 사용 하 여는 *작업*  대량 페치를 수행 하는 동안 오류가 발생 하는 인수의 SQL_FETCH_BY_BOOKMARK SQL_ROW_ERROR 행 상태 배열에서 해당 값을 설정, 행을 인출 합니다. 계속 하 고 SQL_SUCCESS_WITH_INFO를 반환 합니다. 오류 처리 및 행 상태 배열에 대 한 자세한 내용은 참조 하세요. 합니다 [SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md) 하 고 [SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md) 함수 설명 합니다.
+ 행 상태 배열 상태에서 항목은 각 행이 성공적으로 인출 되었는지, 업데이트, 추가 또는 삭제 되었는지, 마지막으로 인출 된 이후 삭제 되었는지 여부 및 행을 페치하는 동안 오류가 발생 했는지 여부를 나타냅니다. 다중 행 집합의 한 행을 검색 하는 동안 **Sqlfetch** 또는 **sqlfetchscroll** 에서 오류가 발생 하거나 대량 페치를 수행 하는 동안 SQL_FETCH_BY_BOOKMARK의 *작업* 인수를 사용 하는 **SQLBulkOperations** 에 오류가 발생 하는 경우 행 상태 배열의 해당 값을 SQL_ROW_ERROR로 설정 하 고, 행을 계속 가져오고 SQL_SUCCESS_WITH_INFO을 반환 합니다. 오류 처리 및 행 상태 배열에 대 한 자세한 내용은 [Sqlfetch](../../../odbc/reference/syntax/sqlfetch-function.md) 및 [sqlfetchscroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md) 함수 설명을 참조 하세요.

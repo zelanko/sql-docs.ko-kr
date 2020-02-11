@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 71a3d8f8ce28fcc8918f2058d08f99df2982be5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086709"
 ---
 # <a name="is_rolemember-transact-sql"></a>IS_ROLEMEMBER(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68086709"
 
   지정된 데이터베이스 보안 주체가 지정된 데이터베이스 역할의 멤버인지 여부를 나타냅니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -51,13 +51,13 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
 ## <a name="return-types"></a>반환 형식  
  **int**  
   
-|반환 값|설명|  
+|반환 값|Description|  
 |------------------|-----------------|  
 |0|*database_principal*은 *역할*의 구성원이 아닙니다.|  
 |1|*database_principal*은 *역할*의 구성원입니다.|  
 |NULL|*database_principal* 또는 *역할*이 올바르지 않거나 역할 멤버 자격을 볼 수 있는 사용 권한이 없습니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  IS_ROLEMEMBER를 사용하여 현재 사용자가 데이터베이스 역할의 사용 권한이 필요한 동작을 수행할 수 있는지 여부를 확인할 수 있습니다.  
   
  *database_principal*에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 직접 액세스가 부여 또는 거부되지 않은 경우 *database_principal*이 Contoso\Mary5 등의 Windows 로그인 기반이면 IS_ROLEMEMBER가 NULL을 반환합니다.  
@@ -101,7 +101,7 @@ ELSE IF IS_ROLEMEMBER ('db_datareader') IS NULL
  [CREATE SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-role-transact-sql.md)   
  [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)   
  [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md)   
- [IS_MEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md)   
+ [IS_MEMBER&#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md)   
  [IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md)   
  [보안 함수&#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   
