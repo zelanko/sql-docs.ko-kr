@@ -16,20 +16,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1517e17a7b0ecaf9137e3af21e076dacc2fd98f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68207061"
 ---
 # <a name="executing-statements-odbc"></a>문 실행(ODBC)
-  합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에서 SQL 문을 실행 하는 다양 한 방법을 제공을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스:  
+  Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client ODBC 드라이버는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에서 SQL 문을 실행 하는 다양 한 방법을 제공 합니다.  
   
 -   직접 실행  
   
 -   준비된 실행  
   
- 직접 실행에서는 포함 하는 문자 문자열을 작성을 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문과 사용 하 여 실행에 대 한 제출 합니다 **SQLExecDirect** 함수. 준비된 실행에서는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문이 포함된 문자열을 작성한 다음 두 가지 단계로 실행합니다. 첫 번째 단계에서 사용 하는 [SQLPrepare 함수](https://go.microsoft.com/fwlink/?LinkId=59360) 함수를 구문 분석에서 문의 실행 계획을 컴파일하는 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]합니다. 두 번째 단계에서 사용 하 여 **SQLExecute** 이전에 준비 된 실행 계획을 실행 하는 함수입니다. 이렇게 하면 각각의 실행에서 구문 분석 및 컴파일 오버헤드를 줄일 수 있습니다. 준비된 실행은 애플리케이션에서 매개 변수가 있는 동일한 SQL 문을 반복적으로 실행하는 데 많이 사용됩니다.  
+ 직접 실행에는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 포함 하는 문자열을 작성 하 고 **sqlexecdirect** 함수를 사용 하 여 실행을 위해 제출 해야 합니다. 준비된 실행에서는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문이 포함된 문자열을 작성한 다음 두 가지 단계로 실행합니다. 첫 번째 단계에서는 [Sqlprepare 함수](https://go.microsoft.com/fwlink/?LinkId=59360) 함수를 사용 하 여의 문에 대 한 실행 계획을 구문 분석 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]하 고 컴파일합니다. 두 번째 단계는 **Sqlexecute** 함수를 사용 하 여 이전에 준비 된 실행 계획을 실행 합니다. 이렇게 하면 각각의 실행에서 구문 분석 및 컴파일 오버헤드를 줄일 수 있습니다. 준비된 실행은 애플리케이션에서 매개 변수가 있는 동일한 SQL 문을 반복적으로 실행하는 데 많이 사용됩니다.  
   
  직접 실행과 준비된 실행에서 모두 단일 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문이나 SQL 문의 일괄 처리를 실행하거나 저장 프로시저를 호출할 수 있습니다.  
   
@@ -39,13 +39,13 @@ ms.locfileid: "68207061"
   
 -   [준비된 실행](prepared-execution.md)  
   
--   [절차](procedures.md)  
+-   [프로시저](procedures.md)  
   
--   [문 일괄 처리](batches-of-statements.md)  
+-   [문의 일괄 처리](batches-of-statements.md)  
   
 -   [ISO 옵션의 효과](effects-of-iso-options.md)  
   
-## <a name="see-also"></a>관련 항목  
- [쿼리 실행 &#40;ODBC&#41;](../executing-queries-odbc.md)  
+## <a name="see-also"></a>참고 항목  
+ [ODBC&#41;&#40;쿼리 실행](../executing-queries-odbc.md)  
   
   

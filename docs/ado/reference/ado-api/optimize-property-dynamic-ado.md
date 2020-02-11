@@ -14,24 +14,24 @@ ms.assetid: a491c4ce-2b04-4c84-be83-3846bde8d16b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3e8bb3c3787effe8418db735a72425a793b73e35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931857"
 ---
 # <a name="optimize-property-dynamic-ado"></a>Optimize 속성-동적(ADO)
-인덱스를 만들어야 하는지 여부를 지정 된 [필드](../../../ado/reference/ado-api/field-object.md)합니다.  
+[필드](../../../ado/reference/ado-api/field-object.md)에 인덱스를 만들지 여부를 지정 합니다.  
   
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
- 설정 하거나 반환 된 **부울** 인덱스를 만들어야 하는지 여부를 나타내는 값입니다.  
+ 인덱스를 만들어야 하는지 여부를 나타내는 **부울** 값을 설정 하거나 반환 합니다.  
   
 ## <a name="remarks"></a>설명  
- 인덱스를 찾거나 값이 정렬 하는 작업의 성능을 향상 시킬 수 있습니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다. 인덱스는 ADO; 내부 명시적으로 액세스 하거나 응용 프로그램에서 사용할 수 없습니다.  
+ 인덱스는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)에서 값을 찾거나 정렬 하는 작업의 성능을 향상 시킬 수 있습니다. 인덱스는 ADO 내부에 있습니다. 응용 프로그램에서 명시적으로 액세스 하거나 사용할 수 없습니다.  
   
- 인덱스를 만들려면 필드를 설정 합니다 **최적화** 속성을 **True**합니다. 인덱스를 삭제 하려면이 속성을 설정 **False**합니다.  
+ 필드에 인덱스를 만들려면 **Optimize** 속성을 **True**로 설정 합니다. 인덱스를 삭제 하려면이 속성을 **False**로 설정 합니다.  
   
- **최적화** 에 추가 하는 동적 속성을 [필드](../../../ado/reference/ado-api/field-object.md) 개체 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션 때 합니다 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성이**adUseClient**합니다.  
+ **Optimize** 는 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성이 **AdUseClient**로 설정 된 경우 [Field](../../../ado/reference/ado-api/field-object.md) object [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션에 추가 되는 동적 속성입니다.  
   
 ## <a name="usage"></a>사용  
   
@@ -49,7 +49,7 @@ fld.Properties("Optimize") = False   'Delete an index
 ## <a name="applies-to"></a>적용 대상  
  [Field 개체](../../../ado/reference/ado-api/field-object.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Optimize 속성 예제 (VB)](../../../ado/reference/ado-api/optimize-property-example-vb.md)   
  [Optimize 속성 예제 (VC + +)](../../../ado/reference/ado-api/optimize-property-example-vc.md)   
  [필터 속성](../../../ado/reference/ado-api/filter-property.md)   

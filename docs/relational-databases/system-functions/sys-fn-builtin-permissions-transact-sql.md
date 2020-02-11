@@ -1,5 +1,5 @@
 ---
-title: sys.fn_builtin_permissions (TRANSACT-SQL) | Microsoft Docs
+title: sys. fn_builtin_permissions (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/16/2016
 ms.prod: sql
@@ -28,18 +28,18 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 730508fca6b6f9d3e9515e9ec496971a4b758279
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046518"
 ---
-# <a name="sysfnbuiltinpermissions-transact-sql"></a>sys.fn_builtin_permissions(Transact-SQL)
+# <a name="sysfn_builtin_permissions-transact-sql"></a>sys.fn_builtin_permissions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  서버의 기본 제공 사용 권한 계층에 대한 설명을 반환합니다. `sys.fn_builtin_permissions` 호출할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], 현재 플랫폼에서 지원 되는지 여부에 관계 없이 모든 사용 권한을 반환 합니다. 대부분의 권한은 모든 플랫폼에 적용되지만 그렇지 않은 경우도 있습니다. 예를 들어 SQL Database에서 서버 수준 사용 권한은 부여할 수 없습니다. 각 사용 권한에 지 원하는 플랫폼에 대 한 내용은 [권한 &#40;데이터베이스 엔진&#41;](../../relational-databases/security/permissions-database-engine.md)합니다.  
+  서버의 기본 제공 사용 권한 계층에 대한 설명을 반환합니다. `sys.fn_builtin_permissions`는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서만 호출할 수 있으며, 현재 플랫폼에서 지원 되는지 여부에 관계 없이 모든 사용 권한을 반환 합니다. 대부분의 권한은 모든 플랫폼에 적용되지만 그렇지 않은 경우도 있습니다. 예를 들어 SQL Database에 대해 서버 수준 권한을 부여할 수 없습니다. 각 사용 권한을 지 원하는 플랫폼에 대 한 자세한 내용은 [사용 권한 &#40;데이터베이스 엔진&#41;](../../relational-databases/security/permissions-database-engine.md)를 참조 하세요.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -59,7 +59,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
   
 ## <a name="arguments"></a>인수  
  DEFAULT  
- 기본 옵션 (따옴표 제외)를 사용 하 여 호출 되 면 전체 기본 제공된 사용 권한 목록을 반환 합니다.  
+ 기본 옵션 (따옴표 제외)을 사용 하 여 호출 하는 경우 함수는 기본 제공 사용 권한의 전체 목록을 반환 합니다.  
   
  NULL  
  DEFAULT와 동일합니다.  
@@ -67,21 +67,21 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
  *empty_string*  
  DEFAULT와 동일합니다.  
   
- **'** <securable_class> **'**  
- 보안 개체 클래스의 이름으로 호출 되 면 sys.fn_builtin_permissions는 클래스에 적용 되는 모든 사용 권한을 반환 합니다. < securable_class >는 따옴표로 묶어야 하는 문자열 리터럴입니다. **nvarchar(60)**  
+ **'**<securable_class>**'**  
+ 하나의 보안 가능한 클래스 이름으로 호출 되는 경우 fn_builtin_permissions는 클래스에 적용 되는 모든 사용 권한을 반환 합니다. <securable_class>는 따옴표를 필요로 하는 문자열 리터럴입니다. **nvarchar (60)**  
   
 ## <a name="tables-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|데이터 정렬|설명|  
+|열 이름|데이터 형식|데이터 정렬|Description|  
 |-----------------|---------------|---------------|-----------------|  
-|class_desc|**nvarchar(60)**|서버의 데이터 정렬|보안 개체 클래스에 대한 설명입니다.|  
-|permission_name|**nvarchar(60)**|서버의 데이터 정렬|사용 권한 이름입니다.|  
-|type|**varchar(4)**|서버의 데이터 정렬|단축 사용 권한 유형 코드입니다. 다음 표를 참조하십시오.|  
-|covering_permission_name|**nvarchar(60)**|서버의 데이터 정렬|NULL이 아니면 이 클래스에 대한 다른 사용 권한을 포함하는 사용 권한의 이름입니다.|  
-|parent_class_desc|**nvarchar(60)**|서버의 데이터 정렬|NULL이 아니면 현재 클래스를 포함하는 부모 클래스의 이름입니다.|  
-|parent_covering_permission_name|**nvarchar(60)**|서버의 데이터 정렬|NULL이 아니면 부모 클래스에 대한 다른 모든 사용 권한을 포함하는 사용 권한의 이름입니다.|  
+|class_desc|**nvarchar (60)**|서버의 데이터 정렬|보안 개체 클래스에 대한 설명입니다.|  
+|permission_name|**nvarchar (60)**|서버의 데이터 정렬|사용 권한 이름입니다.|  
+|type|**varchar (4)**|서버의 데이터 정렬|단축 사용 권한 유형 코드입니다. 다음 표를 참조하십시오.|  
+|covering_permission_name|**nvarchar (60)**|서버의 데이터 정렬|NULL이 아니면 이 클래스에 대한 다른 사용 권한을 포함하는 사용 권한의 이름입니다.|  
+|parent_class_desc|**nvarchar (60)**|서버의 데이터 정렬|NULL이 아니면 현재 클래스를 포함하는 부모 클래스의 이름입니다.|  
+|parent_covering_permission_name|**nvarchar (60)**|서버의 데이터 정렬|NULL이 아니면 부모 클래스에 대한 다른 모든 사용 권한을 포함하는 사용 권한의 이름입니다.|  
   
-### <a name="permission-types"></a>사용 권한 유형  
+### <a name="permission-types"></a>권한 유형  
   
 |사용 권한 유형|사용 권한 이름|적용되는 보안 개체 또는 클래스|  
 |---------------------|---------------------|-----------------------------------|  
@@ -95,10 +95,10 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |AL|ALTER|ASSEMBLY|  
 |AL|ALTER<br />**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|AVAILABILITY GROUP|  
 |AL|ALTER|ASYMMETRIC KEY|  
-|AL|ALTER|CERTIFICATE|  
+|AL|ALTER|인증서|  
 |AL|ALTER|CONTRACT|  
 |AL|ALTER|DATABASE|  
-|AL|ALTER<br /> **T o 적용**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 고 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]입니다. |DATABASE SCOPED CREDENTIAL|
+|AL|ALTER<br /> **T o**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및를 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]적용 합니다. |DATABASE SCOPED CREDENTIAL|
 |AL|ALTER|엔드포인트|  
 |AL|ALTER|FULLTEXT CATALOG|  
 |AL|ALTER|FULLTEXT STOPLIST|  
@@ -160,10 +160,10 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CL|CONTROL|ASSEMBLY|  
 |CL|CONTROL|ASYMMETRIC KEY|  
 |CL|CONTROL<br />**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|AVAILABILITY GROUP|  
-|CL|CONTROL|CERTIFICATE|  
+|CL|CONTROL|인증서|  
 |CL|CONTROL|CONTRACT|  
 |CL|CONTROL|DATABASE|  
-|CL|CONTROL<br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. |DATABASE SCOPED CREDENTIAL|
+|CL|CONTROL<br /> **적용**대상: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] |DATABASE SCOPED CREDENTIAL|
 |CL|CONTROL|엔드포인트|  
 |CL|CONTROL|FULLTEXT CATALOG|  
 |CL|CONTROL|FULLTEXT STOPLIST|  
@@ -220,9 +220,9 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CRVW|CREATE VIEW|DATABASE|  
 |CRXS|CREATE XML SCHEMA COLLECTION|DATABASE|  
 |DABO|ADMINISTER DATABASE BULK OPERATIONS<br /> **적용 대상**: [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].|DATABASE|  
-|DL|DELETE|DATABASE|  
-|DL|DELETE|OBJECT|  
-|DL|DELETE|SCHEMA|  
+|DL|Delete|DATABASE|  
+|DL|Delete|OBJECT|  
+|DL|Delete|SCHEMA|  
 |EAES|EXECUTE ANY EXTERNAL SCRIPT<br />**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
 |EX|CREATE 문을 실행하기 전에|DATABASE|  
 |EX|CREATE 문을 실행하기 전에|OBJECT|  
@@ -239,10 +239,10 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |RC|RECEIVE|OBJECT|  
 |RF|REFERENCES|ASSEMBLY|  
 |RF|REFERENCES|ASYMMETRIC KEY|  
-|RF|REFERENCES|CERTIFICATE|  
+|RF|REFERENCES|인증서|  
 |RF|REFERENCES|CONTRACT|  
 |RF|REFERENCES|DATABASE|  
-|RF|REFERENCES<br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. |DATABASE SCOPED CREDENTIAL|
+|RF|REFERENCES<br /> **적용**대상: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] |DATABASE SCOPED CREDENTIAL|
 |RF|REFERENCES|FULLTEXT CATALOG|  
 |RF|REFERENCES|FULLTEXT STOPLIST|  
 |RF|REFERENCES|SEARCH PROPERTY LIST|  
@@ -263,10 +263,10 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |TO|TAKE OWNERSHIP|ASSEMBLY|  
 |TO|TAKE OWNERSHIP|ASYMMETRIC KEY|  
 |TO|TAKE OWNERSHIP<br />**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|AVAILABILITY GROUP|  
-|TO|TAKE OWNERSHIP|CERTIFICATE|  
+|TO|TAKE OWNERSHIP|인증서|  
 |TO|TAKE OWNERSHIP|CONTRACT|  
 |TO|TAKE OWNERSHIP|DATABASE|  
-|TO|TAKE OWNERSHIP<br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. |DATABASE SCOPED CREDENTIAL|
+|TO|TAKE OWNERSHIP<br /> **적용**대상: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] |DATABASE SCOPED CREDENTIAL|
 |TO|TAKE OWNERSHIP|엔드포인트|  
 |TO|TAKE OWNERSHIP|FULLTEXT CATALOG|  
 |TO|TAKE OWNERSHIP|FULLTEXT STOPLIST|  
@@ -290,10 +290,10 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |VW|VIEW DEFINITION|ASSEMBLY|  
 |VW|VIEW DEFINITION|ASYMMETRIC KEY|  
 |VW|VIEW DEFINITION<br />**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|AVAILABILITY GROUP|  
-|VW|VIEW DEFINITION|CERTIFICATE|  
+|VW|VIEW DEFINITION|인증서|  
 |VW|VIEW DEFINITION|CONTRACT|  
 |VW|VIEW DEFINITION|DATABASE|  
-|VW|VIEW DEFINITION<br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. |DATABASE SCOPED CREDENTIAL|
+|VW|VIEW DEFINITION<br /> **적용**대상: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] |DATABASE SCOPED CREDENTIAL|
 |VW|VIEW DEFINITION|엔드포인트|  
 |VW|VIEW DEFINITION|FULLTEXT CATALOG|  
 |VW|VIEW DEFINITION|FULLTEXT STOPLIST|  
@@ -323,9 +323,11 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |XU|UNSAFE ASSEMBLY|SERVER|  
   
 ## <a name="remarks"></a>설명  
- `sys.fn_builtin_permissions`는 미리 정의된 사용 권한 계층의 복사본을 생성하는 테이블 반환 함수입니다. 이 계층에는 적용되는 모든 사용 권한이 포함됩니다. `DEFAULT` 결과 집합의 루트는 사용 권한 계층의 방향이 지정 된, 방향이 있는 비순환 그래프에 설명 합니다 (클래스 = SERVER, 사용 권한 = CONTROL SERVER).  
+ 
+  `sys.fn_builtin_permissions`는 미리 정의된 사용 권한 계층의 복사본을 생성하는 테이블 반환 함수입니다. 이 계층에는 적용되는 모든 사용 권한이 포함됩니다. 결과 `DEFAULT` 집합은 root가 (CLASS = SERVER, PERMISSION = CONTROL SERVER) 인 사용 권한 계층의 방향이 지정 된 비순환 그래프를 설명 합니다.  
   
- `sys.fn_builtin_permissions`는 상호 관련된 매개 변수를 허용하지 않습니다.  
+ 
+  `sys.fn_builtin_permissions`는 상호 관련된 매개 변수를 허용하지 않습니다.  
   
  유효하지 않은 클래스 이름으로 `sys.fn_builtin_permissions`를 호출하면 빈 집합이 반환됩니다.  
  
@@ -337,32 +339,32 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 ## <a name="examples"></a>예  
   
 ### <a name="a-listing-all-built-in-permissions"></a>A. 모든 기본 제공 사용 권한 나열   
-사용 하 여 `DEFAULT` 또는 모든 사용 권한을 반환 하는 빈 문자열입니다.   
+또는 `DEFAULT` 빈 문자열을 사용 하 여 모든 사용 권한을 반환 합니다.   
 ```sql  
 SELECT * FROM sys.fn_builtin_permissions(DEFAULT);
 SELECT * FROM sys.fn_builtin_permissions('');  
 ```  
   
-### <a name="b-listing-permissions-that-can-be-set-on-a-symmetric-key"></a>2\. 대칭 키에 설정할 수 있는 사용 권한 나열   
-해당 클래스의 모든 가능한 사용 권한을 반환 하는 클래스를 지정 합니다.   
+### <a name="b-listing-permissions-that-can-be-set-on-a-symmetric-key"></a>B. 대칭 키에 설정할 수 있는 사용 권한 나열   
+클래스를 지정 하 여 해당 클래스에 대해 가능한 모든 권한을 반환 합니다.   
 ```sql  
 SELECT * FROM sys.fn_builtin_permissions(N'SYMMETRIC KEY');  
 ```  
   
-### <a name="c-listing-classes-on-which-there-is-a-select-permission"></a>3\. SELECT 사용 권한이 있는 클래스 나열   
+### <a name="c-listing-classes-on-which-there-is-a-select-permission"></a>C. SELECT 사용 권한이 있는 클래스 나열   
   
 ```sql  
 SELECT * FROM sys.fn_builtin_permissions(DEFAULT)   
     WHERE permission_name = 'SELECT';  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [사용 권한 계층&#40;데이터베이스 엔진&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [GRANT&#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [CREATE SCHEMA&#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
  [DROP SCHEMA&#40;Transact-SQL&#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
- [사용 권한&#40;데이터베이스 엔진&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [권한 &#40;데이터베이스 엔진&#41;](../../relational-databases/security/permissions-database-engine.md)   
+ [fn_my_permissions &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME&#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   

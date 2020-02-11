@@ -1,5 +1,5 @@
 ---
-title: 실패 한 업데이트를 사용 하 여 처리 | Microsoft Docs
+title: 실패 한 업데이트 처리 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,19 +13,19 @@ ms.assetid: 299c37bd-19ff-4261-8571-b9665687e075
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d442a9c397ad184658f9101343e139697c9b3756
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925633"
 ---
 # <a name="dealing-with-failed-updates"></a>실패한 업데이트 처리
-업데이트 오류 끝납니다, 경우 오류를 해결 하는 방법을 특성 및 오류의 심각도 및 응용 프로그램의 논리에 따라 달라 집니다. 그러나 데이터베이스는 다른 사용자와 공유 하는 경우 일반적인 오류 수행 하기 전에 필드를 수정 누군가 합니다. 이러한 종류의 오류 충돌을 이라고 합니다. ADO에서이 상황을 감지 하 고 오류를 보고 합니다.  
+업데이트를 종료 하는 경우 오류를 해결 하는 방법은 오류 및 응용 프로그램의 논리에 대 한 특성 및 심각도에 따라 달라 집니다. 그러나 데이터베이스가 다른 사용자와 공유 되는 경우 일반적인 오류는 다른 사용자가 필드를 수정 하는 것입니다. 이러한 유형의 오류를 충돌 이라고 합니다. ADO에서이 상황을 감지 하 고 오류를 보고 합니다.  
   
 ## <a name="remarks"></a>설명  
- 업데이트 오류가 있는 경우 오류 처리 루틴에서 포착 됩니다. 충돌 하는 행만 표시 되도록 adFilterConflictingRecords 상수를 사용 하 여 레코드 집합을 필터링 합니다. 이 예제에서는 오류 해결 전략은 단지 인쇄 작성자의 이름과 성을 (au_fname 및 au_lname).  
+ 업데이트 오류가 발생 하면 오류 처리 루틴에 트래핑 됩니다. 충돌 하는 행만 표시 되도록 adFilterConflictingRecords 상수를 사용 하 여 레코드 집합을 필터링 합니다. 이 예제에서 오류 해결 전략은 단순히 저자의 성과 이름을 인쇄 하는 것입니다 (au_fname 및 au_lname).  
   
- 사용자 업데이트 충돌을 경고 하는 코드는 다음과 같습니다.  
+ 사용자에 게 업데이트 충돌을 경고 하는 코드는 다음과 같습니다.  
   
 ```  
 objRs.Filter = adFilterConflictingRecords  
@@ -36,5 +36,5 @@ Do While Not objRst.EOF
 Loop  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [일괄 처리 모드](../../../ado/guide/data/batch-mode.md)

@@ -18,10 +18,10 @@ ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 4215cda5bfc82f0c6d195f336a1099309ab18154
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75255638"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>DQS 로그 파일에 대한 심각도 수준 구성
@@ -42,11 +42,11 @@ ms.locfileid: "75255638"
   
  다양한 DQS 작업 및 모듈의 심각도를 구성하면 해당 DQS 작업 또는 모듈에 대한 DQS 로그 파일에 로깅하고 기록할 정보가 필터링됩니다. 예를 들어 DQS 작업의 심각도를 **경고**로 설정하면 해당 DQS 작업과 관련된 경고 이상의 심각도 메시지만 로깅됩니다(오류 및 치명적).  
   
-##  <a name="BeforeYouBegin"></a>시작 하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Security"></a>보안  
+###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a>권한에  
+####  <a name="Permissions"></a> 권한  
  로그 심각도 설정을 구성하려면 DQS_MAIN 데이터베이스에 대한 dqs_administrator 역할이 있어야 합니다.  
   
 ##  <a name="ConfigureActivity"></a>활동 수준에서 심각도 수준 구성  
@@ -64,8 +64,7 @@ ms.locfileid: "75255638"
     > [!NOTE]  
     >  기본적으로 각 작업에 대해 **오류** 가 선택됩니다. 이는 각 작업에 대한 DQS 로그 파일에 기본적으로 오류 및 치명적 메시지가 기록됨을 의미합니다.  
   
-5.  
-  **닫기**를 클릭합니다.  
+5.  **닫기**를 클릭합니다.  
   
 ##  <a name="ConfigureModule"></a>모듈 수준에서 심각도 구성 (고급)  
  
@@ -92,10 +91,9 @@ ms.locfileid: "75255638"
   
 4.  필요한 경우 다른 모듈에 대해 2단계와 3단계를 반복합니다. 또한 **모듈 추가** 및 **모듈 제거** 아이콘을 클릭하여 표에서 행을 추가하거나 삭제할 수도 있습니다.  
   
-5.  
-  **닫기**를 클릭합니다.  
+5.  **닫기**를 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [DQS 로그 파일에 대 한 고급 설정 구성](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)  
+ [Configure Advanced Settings for DQS Log Files](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)  
   
   

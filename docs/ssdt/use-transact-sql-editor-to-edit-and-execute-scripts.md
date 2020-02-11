@@ -1,25 +1,26 @@
 ---
-title: Transact-SQL 편집기를 사용하여 스크립트 편집 및 실행 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Transact-SQL 편집기를 사용하여 스크립트 편집 및 실행
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.SQLEDITOR
 ms.assetid: fa78e2cf-3c64-49f5-93cc-a3d50b1e7d05
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2c2b84cb9f75987995e9e0cdbf92165fa28f61a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: c3eaaa53b87d2e360503a087b8978f507d6a6023
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006037"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256204"
 ---
 # <a name="use-transact-sql-editor-to-edit-and-execute-scripts"></a>Transact-SQL 편집기를 사용하여 스크립트 편집 및 실행
+
 Transact\-SQL 편집기에서는 스크립트 작업에 사용할 수 있는 다양한 기능의 편집 및 디버깅 환경을 제공합니다. 이 편집기는 **코드 보기** 상황에 맞는 메뉴를 사용하여 연결된 데이터베이스 또는 프로젝트의 데이터베이스 엔터티를 열 때 호출됩니다. SQL Server 개체 탐색기의 **새 쿼리** 상황에 맞는 메뉴를 사용하거나 데이터베이스 프로젝트에 새 스크립트 개체를 추가하는 경우에도 이 편집기가 자동으로 열립니다.  
   
 데이터베이스에 연결되어 있지 않지만 데이터베이스에 쿼리를 실행하려면 **SQL** -> **Transact\-SQL** 편집기 메뉴 옵션의 **새 쿼리 연결** 대화 상자를 사용하여 데이터베이스에 연결하고 Transact\-SQL 편집기를 시작할 수 있습니다.  
@@ -28,7 +29,7 @@ Transact\-SQL 편집기에는 Transact\-SQL 스크립트를 작성하고 편집�
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |---------|---------------|  
 |[방법: 코드 조각 개요 표시 및 Transact-SQL 스크립트에 코드 조각 추가](../ssdt/how-to-outline-and-add-snippets-to-transact-sql-script.md)|코드 조각 선택기를 사용하여 만들어 둔 Transact\-SQL 코드를 쿼리에 삽입합니다.|  
 |[방법: 스크립트 간 이동](../ssdt/how-to-navigate-between-scripts.md)|정의로 이동 및 모든 참조 찾기를 사용하여 스크립트 간을 이동합니다.|  
@@ -37,6 +38,6 @@ Transact\-SQL 편집기에는 Transact\-SQL 스크립트를 작성하고 편집�
 |[방법: 저장된 프로시저 디버깅](../ssdt/how-to-debug-stored-procedures.md)|Transact\-SQL 저장 프로시저를 만들고 이를 한 단계씩 실행하여 디버그합니다.|  
 |[스크립트 성능 분석](../ssdt/analyze-script-performance.md)|실행 계획, 클라이언트 통계 및 코드 분석을 사용하여 쿼리, 저장 프로시저 또는 스크립트의 성능을 향상시킬 수 있는지 여부를 확인합니다.|  
   
-## <a name="see-also"></a>참고 항목  
-[방법: 쿼리를 사용하여 새 데이터베이스 개체 만들기](../ssdt/how-to-create-new-database-objects-using-queries.md)  
-  
+## <a name="see-also"></a>참고 항목
+
+[방법: 쿼리를 사용하여 새 데이터베이스 개체 만들기](../ssdt/how-to-create-new-database-objects-using-queries.md)

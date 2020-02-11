@@ -1,5 +1,5 @@
 ---
-title: Data Quality 클라이언트 애플리케이션
+title: 데이터 품질 클라이언트 애플리케이션
 ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -10,13 +10,13 @@ ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 4a789386fbbef91590ec025787e47c7655753a3b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251739"
 ---
-# <a name="data-quality-client-application"></a>Data Quality 클라이언트 애플리케이션
+# <a name="data-quality-client-application"></a>데이터 품질 클라이언트 애플리케이션
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -38,16 +38,16 @@ ms.locfileid: "75251739"
 |
   [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 애플리케이션을 사용하는 방법에 대해 설명합니다.|[데이터 품질 클라이언트 애플리케이션 실행](../data-quality-services/run-the-data-quality-client-application.md)|  
   
-## <a name="related-content"></a>관련 콘텐츠  
+## <a name="related-content"></a>관련 내용  
   
 |콘텐츠 설명|항목|  
 |-------------------------|-----------|  
 |DQS에서 기술 자료 및 도메인을 사용하는 방법에 대해 설명합니다.|[DQS 기술 자료 및 도메인](../data-quality-services/dqs-knowledge-bases-and-domains.md)|  
-|DQS에서 데이터를 정리하는 방법에 대해 설명합니다.|[데이터 정리](../data-quality-services/data-cleansing.md)|  
+|DQS에서 데이터를 정리하는 방법에 대해 설명합니다.|[Data Cleansing](../data-quality-services/data-cleansing.md)|  
 |DQS에서 일치 작업을 수행하는 방법에 대해 설명합니다.|[데이터 일치](../data-quality-services/data-matching.md)|  
-|DQS를 관리하는 방법에 대해 설명합니다.|[DQS 관리](../data-quality-services/dqs-administration.md)|  
+|DQS를 관리하는 방법에 대해 설명합니다.|[dqs 관리](../data-quality-services/dqs-administration.md)|  
   
 ## <a name="see-also"></a>참고 항목  
- [Data Quality Client 홈 화면](../data-quality-services/data-quality-client-home-screen.md)  
+ [데이터 품질 클라이언트 홈 화면](../data-quality-services/data-quality-client-home-screen.md)  
   
   

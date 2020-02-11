@@ -16,14 +16,14 @@ ms.assetid: e44ec3d4-42ae-447d-aaed-bdea53cb0cca
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 03850fdaef19ece963bb7b196ab14edccd290fde
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966380"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vb"></a>GetObjectOwner 및 SetObjectOwner 메서드 예제(VB)
-이 예제에서는 합니다 [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) 하 고 [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) 메서드. 이 코드 그룹의 가정 계정 (참조를 [그룹과 사용자 Append, ChangePassword 메서드 예제 (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md) 시스템에이 그룹에 추가 하는 방법을 보려면). Categories 테이블의 소유자는 계정으로 설정 됩니다.  
+이 예제에서는 [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) 및 [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) 메서드를 보여 줍니다. 이 코드는 그룹 계정이 존재 한다고 가정 합니다 (이 그룹을 시스템에 추가 하는 방법을 보려면 그룹 [및 사용자 Append, ChangePassword 메서드 예제 (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md) 참조). Categories 테이블의 소유자는 Accounting로 설정 됩니다.  
   
 ```  
 ' BeginOwnersVB  
@@ -61,7 +61,7 @@ End Sub
 ' EndOwnersVB  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Catalog 개체 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [GetObjectOwner 메서드 (ADOX)](../../../ado/reference/adox-api/getobjectowner-method-adox.md)   
  [SetObjectOwner 메서드](../../../ado/reference/adox-api/setobjectowner-method.md)

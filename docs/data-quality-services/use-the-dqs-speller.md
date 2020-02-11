@@ -10,10 +10,10 @@ ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 087d7c7636b456e9cba07eb16abdd135abb43c4e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257755"
 ---
 # <a name="use-the-dqs-speller"></a>DQS 맞춤법 검사기 사용
@@ -33,14 +33,14 @@ ms.locfileid: "75257755"
   
  맞춤법 검사기는 문자열 데이터 형식인 단일 도메인에 대해서만 작동합니다. 문자열 데이터 형식인 단일 도메인의 모든 값은 유효성 검사를 위해 맞춤법 검사기에 전송됩니다. 맞춤법 검사기는 복합 도메인에 대해 작동하지 않으며 문자열, 혼합 값(예: 공백 없는 문자와 숫자의 조합), 로마 숫자, 단일 문자 및 대문자로만 이루어진 값을 제외한 도메인 형식에 대해 작동하지 않습니다.  
   
-##  <a name="BeforeYouBegin"></a>시작 하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a>사전  
+###  <a name="Prerequisites"></a> 필수 조건  
  맞춤법 검사기를 실행하려면 기술 자료 검색 또는 도메인 관리 작업에서 기술 자료와 도메인을 열어 두어야 합니다. 맞춤법 검사기를 실행하려는 도메인과 페이지에서 맞춤법 검사기를 설정한 상태여야 합니다. 그리고 도메인의 언어 속성이 지정되어 있어야 합니다.  
   
-###  <a name="Security"></a>보안  
+###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a>권한에  
+####  <a name="Permissions"></a> 권한  
  맞춤법 검사기를 실행하려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
 ##  <a name="Enable"></a>맞춤법 검사기 사용  

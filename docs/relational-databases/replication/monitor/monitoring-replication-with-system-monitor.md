@@ -15,10 +15,10 @@ ms.assetid: 8cd3a270-0328-4bfd-bf23-b1d759cc120c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 91db0303326c74b710e7755de5a9573539e61425
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082979"
 ---
 # <a name="monitoring-replication-with-system-monitor"></a>시스템 모니터로 복제 모니터링
@@ -27,7 +27,7 @@ ms.locfileid: "68082979"
   
  시스템 모니터는 여러 가지 프로세스의 성능에 대한 정보를 제공하는 성능 개체 및 카운터를 사용합니다. 복제 에이전트와 관련된 카운터를 통해 복제 성능을 측정할 수 있습니다.  
   
-|에이전트|성능 개체|카운터|설명|  
+|에이전트|성능 개체|카운터|Description|  
 |-----------|------------------------|-------------|-----------------|  
 |모든 에이전트|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 복제 에이전트|실행 중|현재 실행 중인 복제 에이전트 수입니다.|  
 |스냅샷 에이전트|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 복제 스냅샷|스냅샷: Delivered Cmds/sec|배포자로 배달된 초당 명령 수입니다.|  

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8f177f8b2c399be020817ccc4228c58f11976512
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63228341"
 ---
 # <a name="rename-a-database-diagram-visual-database-tools"></a>데이터베이스 다이어그램 이름 바꾸기(Visual Database Tools)
@@ -39,7 +39,7 @@ ms.locfileid: "63228341"
   
      새 이름으로 된 데이터베이스 다이어그램이 개체 탐색기에 표시됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 다이어그램 작업&#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

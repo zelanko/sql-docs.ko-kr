@@ -18,10 +18,10 @@ ms.assetid: 4ca7e569-f097-49f7-b83c-795b0f1319ec
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: afbbebcfb2d569479ba502e19564adf4df4a70f6
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73659614"
 ---
 # <a name="date-property-clientnetlibinfo-class"></a>Date 속성(ClientNetLibInfo 클래스)
@@ -36,15 +36,15 @@ object.Date [= value]
 ```  
   
 ## <a name="parts"></a>부분  
- *object*  
+ *개체가*  
  클라이언트 네트워크 라이브러리에 대한 정보를 나타내는 [ClientNetLibInfo 클래스](../../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md) 개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  클라이언트 네트워크 라이브러리 파일의 날짜를 지정하는 uint32 값입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [클라이언트 프로토콜 구성](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

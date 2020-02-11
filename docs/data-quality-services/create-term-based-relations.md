@@ -12,10 +12,10 @@ ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: a982279e06a1968cf80335cd16dd9eb74e458c3e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251774"
 ---
 # <a name="create-term-based-relations"></a>용어 기반 관계 만들기
@@ -52,14 +52,14 @@ ms.locfileid: "75251774"
   
  정리 프로세스 중에 수집된 데이터 품질 기술 자료를 도메인으로 가져올 경우 TBR에 의해 변경된 값은 올바른 값으로 가져오게 됩니다.  
   
-##  <a name="BeforeYouBegin"></a>시작 하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a>사전  
+###  <a name="Prerequisites"></a> 필수 조건  
  용어 기반 관계를 만들려면 도메인 관리 작업에서 도메인을 열어 두어야 합니다.  
   
-###  <a name="Security"></a>보안  
+###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a>권한에  
+####  <a name="Permissions"></a> 권한  
  용어 기반 관계를 만들려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
 ##  <a name="Create"></a>용어 기반 관계 만들기  

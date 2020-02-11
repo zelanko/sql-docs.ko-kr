@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a1dfcdc52bb52652c204e31c28ccf5ec48ca7a00
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893593"
 ---
 # <a name="expressions-mdx"></a>식(MDX)
@@ -25,14 +25,14 @@ ms.locfileid: "68893593"
   
  단순 식에는 다음과 같은 식이 있습니다.  
   
- 상수  
+ 지속적임  
  상수는 MDX의 특정 단일 값을 나타내는 기호입니다. 문자열, 숫자 및 날짜 값을 상수로 나타낼 수 있습니다. 숫자 상수와 달리 문자열 및 날짜 상수는 작은따옴표(')로 구분해야 합니다.  
   
  스칼라 함수  
  스칼라 함수는 MDX 내의 계산에서 단일 값을 반환합니다. 대부분의 MDX 식, 문, 및 스크립트는 단일 데이터 요소로 계산되지 않고 셀 또는 멤버와 같은 데이터 요소 그룹을 대상으로 반복적으로 계산되므로 이러한 차이는 MDX의 스칼라 함수 계산 방식을 이해하는 데 중요합니다. 스칼라 함수를 계산할 때 함수는 보통 단일 데이터 요소를 검토합니다.  
   
  개체 식별자  
- 다차원 데이터의 특성에 의해 MDX는 개체 지향적입니다. 개체 식별자는 MDX에서 단순 식으로 간주됩니다. 식별자에 대 한 자세한 내용은 [식별자 &#40;MDX&#41;](../mdx/identifiers-mdx.md)를 참조 하십시오.  
+ 다차원 데이터의 특성에 의해 MDX는 개체 지향적입니다. 개체 식별자는 MDX에서 단순 식으로 간주됩니다. 식별자에 대 한 자세한 내용은 [MDX&#41;&#40;식별자 ](../mdx/identifiers-mdx.md)를 참조 하세요.  
   
  이러한 엔터티를 연산자로 연결하여 복합 식을 만들 수도 있습니다.  
   
@@ -58,7 +58,8 @@ ms.locfileid: "68893593"
   
  `FROM [Adventure Works]`  
   
- `[Measures].[Discount Amount] * 1.5`와 같은 계산도 식으로 취급됩니다. 다음 예에서는 MDX SELECT 문에서 멤버를 정의하는 데 계산을 사용하는 방법을 설명합니다.  
+ 
+  `[Measures].[Discount Amount] * 1.5`와 같은 계산도 식으로 취급됩니다. 다음 예에서는 MDX SELECT 문에서 멤버를 정의하는 데 계산을 사용하는 방법을 설명합니다.  
   
 ```  
 WITH   
@@ -73,7 +74,7 @@ WHERE [Product].[Category].[Bikes]
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[큐브 및 하위 큐브 식 사용](../mdx/using-cube-and-subcube-expressions.md)|큐브 및 하위 큐브 식을 정의합니다.|  
 |[차원 식 사용](../mdx/using-dimension-expressions.md)|차원 식을 정의합니다.|  
@@ -83,8 +84,8 @@ WHERE [Product].[Category].[Bikes]
 |[스칼라 식 사용](../mdx/using-scalar-expressions.md)|스칼라 식을 정의합니다.|  
 |[빈 값 작업](../mdx/working-with-empty-values.md)|비어 있는 값의 의미와 처리 방법을 설명합니다.|  
   
-## <a name="see-also"></a>관련 항목  
- [MDX 언어 참조 & #40; Mdx& #41;](../mdx/mdx-language-reference-mdx.md)   
- [MDX 쿼리 기본 사항&#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)  
+## <a name="see-also"></a>참고 항목  
+ [Mdx 언어 참조 &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
+ [MDX 쿼리 기본 사항 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)  
   
   

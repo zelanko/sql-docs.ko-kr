@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 50b051cf2780fc1a94830c461d9ae30674bb7dad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481151"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>DQS 데이터베이스 백업 및 복원
@@ -22,7 +22,7 @@ ms.locfileid: "65481151"
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 조건  
   
 -   DQS 서버 설치 중에 제공한 데이터베이스 마스터 키에 대한 암호를 알고 있어야 합니다.  
   
@@ -32,13 +32,13 @@ ms.locfileid: "65481151"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
   
 -   백업 및 복원 작업을 수행하려면 Windows 사용자 계정이 SQL Server 인스턴스에서 sysadmin 고정 서버 역할의 멤버여야 합니다.  
   
 -   DQS에서 실행 중인 작업을 종료하거나 실행 중인 프로세스를 중지하려면 DQS_MAIN 데이터베이스에 대한 dqs_administrator 역할이 있어야 합니다.  
   
-##  <a name="BackupRestore"></a> DQS 데이터베이스 백업 및 복원  
+##  <a name="BackupRestore"></a>DQS 데이터베이스 백업 및 복원  
   
 1.  Microsoft SQL Server Management Studio를 시작하고 적합한 SQL Server 인스턴스에 연결합니다.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "65481151"
   
 6.  SQL Server의 현재 인스턴스에 대한 연결을 끊고 이러한 데이터베이스를 복원할 SQL Server 인스턴스에 연결합니다.  
   
-7.  DQS_MAIN 데이터베이스를 복원합니다. SQL Server 데이터베이스를 복원 하는 단계별 지침은 참조 하세요 [데이터베이스 백업 복원 &#40;SQL Server Management Studio&#41;](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)합니다.  
+7.  DQS_MAIN 데이터베이스를 복원합니다. SQL Server 데이터베이스를 복원 하는 방법에 대 한 단계별 지침은 [데이터베이스 백업 복원 &#40;SQL Server Management Studio&#41;](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)를 참조 하세요.  
   
 8.  DQS_PROJECTS 데이터베이스를 복원합니다.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "65481151"
   
 10. 개체 탐색기에서 서버를 마우스 오른쪽 단추로 클릭한 다음 **새 쿼리**를 클릭합니다.  
   
-11. 쿼리 편집기 창에서 다음 SQL 문을 복사하고 *\<<PASSWORD>* 를 DQS를 설치할 때 데이터베이스 마스터 키에 대해 제공한 암호로 바꿉니다.  
+11. 쿼리 편집기 창에서 다음 SQL 문을 복사 하 고 데이터베이스 마스터 키에 대해 DQS 설치 중에 제공한 암호로 * \<password>* 를 바꿉니다.  
   
     ```  
     USE [DQS_MAIN]  
@@ -70,9 +70,10 @@ ms.locfileid: "65481151"
   
     ```  
   
-12. F5 키를 눌러 문을 실행합니다. **결과** 창에서 문이 성공적으로 실행되었는지 확인합니다.  
+12. F5 키를 눌러 문을 실행합니다. 
+  **결과** 창에서 문이 성공적으로 실행되었는지 확인합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [DQS 데이터베이스 관리](../../2014/data-quality-services/manage-dqs-databases.md)  
+## <a name="see-also"></a>참고 항목  
+ [Manage DQS Databases](../../2014/data-quality-services/manage-dqs-databases.md)  
   
   

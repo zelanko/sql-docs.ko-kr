@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 54603fc6e4945fde0e7b506d9aca9886b6194fdf
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73784706"
 ---
 # <a name="how-cursors-are-implemented"></a>커서 구현 방법
@@ -40,7 +40,7 @@ ms.locfileid: "73784706"
   
  커서 유형을 설정하는 것 외에도 ODBC 애플리케이션은 각 인출에서 반환된 행 수, 동시 옵션 및 트랜잭션 격리 수준과 같은 다른 옵션을 설정합니다. ODBC 스타일 커서(정방향 전용, 정적, 키 집합, 혼합 및 동적) 또는 ISO 스타일 커서(스크롤 가능 여부 및 민감도)에 대해 이러한 옵션을 설정할 수 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 다양 한 유형의 커서를 물리적으로 구현 하는 여러 가지 방법을 지원 합니다. 이 드라이버는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기본 결과 집합을 사용하여 일부 커서 유형을 구현합니다. 다른 커서는 서버 커서로 구현하거나 ODBC 커서 라이브러리를 사용하여 구현합니다.  
+ Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client ODBC 드라이버는 다양 한 유형의 커서를 물리적으로 구현 하는 여러 가지 방법을 지원 합니다. 이 드라이버는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기본 결과 집합을 사용하여 일부 커서 유형을 구현합니다. 다른 커서는 서버 커서로 구현하거나 ODBC 커서 라이브러리를 사용하여 구현합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -50,7 +50,7 @@ ms.locfileid: "73784706"
   
 -   [ODBC 커서 라이브러리](../../../relational-databases/native-client-odbc-cursors/implementation/odbc-cursor-library.md)  
   
-## <a name="see-also"></a>관련 항목:  
- [커서 &#40;ODBC 사용&#41;](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
+## <a name="see-also"></a>참고 항목  
+ [ODBC&#41;&#40;커서 사용](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: log_shipping_monitor_error_detail (TRANSACT-SQL) | Microsoft Docs
+title: log_shipping_monitor_error_detail (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,20 +18,20 @@ ms.assetid: 0c38a625-60d2-4ee2-bcf3-2ba367914220
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5e441e5165262a4455e34cb9a0adb55b9679578f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67990048"
 ---
-# <a name="logshippingmonitorerrordetail-transact-sql"></a>log_shipping_monitor_error_detail(Transact-SQL)
+# <a name="log_shipping_monitor_error_detail-transact-sql"></a>log_shipping_monitor_error_detail(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  로그 전달 작업에 대한 오류 정보를 저장합니다. 이 테이블에 저장 되는 **msdb** 데이터베이스입니다.  
+  로그 전달 작업에 대한 오류 정보를 저장합니다. 이 테이블은 **msdb** 데이터베이스에 저장 됩니다.  
   
  기록 및 모니터링과 연관된 테이블은 주 서버와 보조 서버에서도 사용됩니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**uniqueidentifier**|백업의 경우 주 ID, 복사나 복원의 경우 보조 ID입니다.|  
 |**agent_type**|**tinyint**|로그 전달 작업의 유형입니다.<br /><br /> 0 = 백업<br /><br /> 1 = 복사<br /><br /> 2 = 복원|  
@@ -40,24 +40,24 @@ ms.locfileid: "67990048"
 |**sequence_number**|**int**|여러 개의 레코드에 걸친 오류 정보의 올바른 순서를 나타내는 증분값입니다.|  
 |**log_time**|**datetime**|레코드가 생성된 날짜와 시간입니다.|  
 |**log_time_utc**|**datetime**|레코드가 생성된 날짜와 시간(UTC)입니다.|  
-|**message**|**nvarchar**|메시지 내용입니다.|  
-|**source**|**nvarchar**|오류 메시지 또는 이벤트의 원본입니다.|  
+|**메시지**|**nvarchar**|메시지 내용입니다.|  
+|**원본**|**nvarchar**|오류 메시지 또는 이벤트의 원본입니다.|  
 |**help_url**|**nvarchar**|오류에 대한 자세한 내용을 참조할 수 있는 URL(사용 가능한 경우)입니다.|  
   
 ## <a name="remarks"></a>설명  
  이 테이블은 로그 전달 에이전트에 대한 오류 세부 정보를 포함합니다. 각 오류는 예외 시퀀스로 기록됩니다. 각 에이전트 세션에 여러 개의 오류(시퀀스)가 있을 수 있습니다.  
   
- 주 서버와 관련 된 정보에서 주 서버에 저장 됩니다 원격 모니터 서버에 저장 되는 것 외에도 해당 **log_shipping_monitor_error_detail** 테이블 및 보조 서버와 관련 된 정보 또한의 보조 서버에 저장 된 해당 **log_shipping_monitor_error_detail** 테이블입니다.  
+ 주 서버와 관련 된 정보는 원격 모니터 서버에 저장 되는 것 외에도 주 서버에 **log_shipping_monitor_error_detail** 테이블에 저장 되 고 보조 서버와 관련 된 정보는 **log_shipping_monitor_error_detail** 테이블의 보조 서버에도 저장 됩니다.  
   
- 에이전트 세션을 식별 하려면 열을 사용 **agent_id**하십시오 **agent_type**, 및 **session_id**합니다. 정렬할 **log_time** 에 기록 된 순서 대로 오류를 참조 하세요.  
+ 에이전트 세션을 식별 하려면 **agent_id**, **agent_type**및 **session_id**열을 사용 합니다. **Log_time** 기준으로 정렬 하 여 기록 된 순서 대로 오류를 확인 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [log_shipping_monitor_history_detail &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/log-shipping-monitor-history-detail-transact-sql.md)   
- [sp_cleanup_log_shipping_history&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
- [sp_delete_log_shipping_primary_database &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   
- [sp_delete_log_shipping_secondary_database &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   
- [sp_refresh_log_shipping_monitor &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
+ [Transact-sql&#41;log_shipping_monitor_history_detail &#40;](../../relational-databases/system-tables/log-shipping-monitor-history-detail-transact-sql.md)   
+ [Transact-sql&#41;sp_cleanup_log_shipping_history &#40;](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
+ [Transact-sql&#41;sp_delete_log_shipping_primary_database &#40;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   
+ [Transact-sql&#41;sp_delete_log_shipping_secondary_database &#40;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   
+ [Transact-sql&#41;sp_refresh_log_shipping_monitor &#40;](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
  [시스템 테이블&#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

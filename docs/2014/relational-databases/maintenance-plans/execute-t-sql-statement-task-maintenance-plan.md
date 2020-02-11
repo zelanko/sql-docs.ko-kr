@@ -15,17 +15,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: aac0c6b837fcd25b0e1f06344a2745c68b05dea3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206039"
 ---
 # <a name="execute-t-sql-statement-task-maintenance-plan"></a>T-SQL 문 실행 태스크(유지 관리 계획)
-  **T-SQL 문 실행 태스크** 대화 상자를 사용하여 선택한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 유지 관리 계획에 추가하여 유지 관리 계획을 사용자 지정할 수 있습니다.  
+  **T-sql 문 실행 태스크** 대화 상자를 사용 하 여 선택한 문을이 유지 관리 계획 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에 추가 하 여 유지 관리 계획을 사용자 지정할 수 있습니다.  
   
-## <a name="options"></a>변수  
- **대량 삽입 태스크 편집기**  
+## <a name="options"></a>옵션  
+ **연결**  
  이 태스크를 수행할 때 사용할 서버 연결을 선택합니다.  
   
  **새로 만들기**  
@@ -34,10 +34,11 @@ ms.locfileid: "68206039"
  **실행 제한 시간**  
  태스크를 종료하기 전에 태스크가 완료되기를 기다리는 시간(초)입니다.  
   
- **T-SQL 문**  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행합니다.  
+ **T-sql 문**  
+ 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행합니다.  
   
- **T-SQL 보기**  
+ **T-sql 보기**  
  선택한 옵션을 기반으로 서버에 대해 수행한 이 태스크의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 표시합니다.  
   
 > [!NOTE]  
@@ -56,11 +57,12 @@ ms.locfileid: "68206039"
  **서버 로그온 정보 입력**  
  서버에 대한 인증 방법을 지정합니다.  
   
- **Windows NT 통합 보안 사용**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 인스턴스에 연결합니다.  
+ **Windows 통합 보안 사용**  
+ Windows 인증 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 을 사용 하 여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 인스턴스에 연결 합니다.  
   
  **특정 사용자 이름 및 암호 사용**  
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다. 이 옵션은 사용할 수 없습니다.  
+ 
+  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다. 이 옵션은 사용할 수 없습니다.  
   
  **사용자 이름**  
  인증 시 사용할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 입력합니다. 이 옵션은 사용할 수 없습니다.  

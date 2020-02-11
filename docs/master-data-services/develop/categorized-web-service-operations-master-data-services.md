@@ -11,16 +11,17 @@ ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a629ead2f102c20466126bdfa9952962311bb750
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728297"
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>범주별로 분류한 웹 서비스 작업(Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
+  
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 웹 서비스에는 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 가 해당 사용자 인터페이스를 통해 사용하는 모든 기능을 제어하기 위한 코드를 작성할 수 있는 완전한 작업 집합이 포함되어 있습니다. 웹 서비스 작업은 <xref:Microsoft.MasterDataServices.IService> 인터페이스를 통해 정의되며 <xref:Microsoft.MasterDataServices.ServiceClient>에서 메서드로 구현됩니다. 이 항목에서는 웹 서비스 API를 사용하는 방법을 이해하는 데 도움이 되도록 웹 서비스 작업을 개념적 범주로 그룹화하였습니다.  
   
 ## <a name="model-operations"></a>모델 작업  
@@ -149,7 +150,7 @@ ms.locfileid: "73728297"
 |<xref:Microsoft.MasterDataServices.ServiceClient.ExportViewListGet%2A>|  
 |<xref:Microsoft.MasterDataServices.ServiceClient.ExportViewUpdate%2A>|  
   
-## <a name="security-operations"></a>보안 작업  
+## <a name="security-operations"></a>보안 운영  
  이러한 작업은 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스에 대한 액세스를 제어하는 보안 설정을 수정하는 데 사용됩니다. 자세한 내용은 [보안&#40;Master Data Services&#41;](../../master-data-services/security-master-data-services.md)을 참조하세요.  
   
 ||  

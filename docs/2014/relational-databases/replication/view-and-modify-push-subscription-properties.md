@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5dc55cc688f4e40d188492636c3653556f88b1c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68212013"
 ---
 # <a name="view-and-modify-push-subscription-properties"></a>밀어넣기 구독 속성 보기 및 수정
@@ -29,7 +29,7 @@ ms.locfileid: "68212013"
   
  **항목 내용**  
   
--   **다음을 사용하여 밀어넣기 구독 속성을 보고 수정하려면**  
+-   **다음을 사용 하 여 밀어넣기 구독 속성을 보고 수정 하려면**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -40,9 +40,11 @@ ms.locfileid: "68212013"
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  다음 위치에서 게시자의 밀어넣기 구독 속성을 보고 수정합니다.  
   
--   **구독 속성 - \<Publisher>: [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 사용할 수 있는 \<PublicationDatabase>** 대화 상자.  
+-   
+  **구독 속성 - \<Publisher>: \<PublicationDatabase>** 대화 상자 - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 사용 가능합니다.  
   
--   **모든 구독** 탭 - 복제 모니터에서 사용 가능합니다. 복제 모니터를 시작하는 방법은 [복제 모니터 시작](monitor/start-the-replication-monitor.md)을 참조하세요.  
+-   
+  **모든 구독** 탭 - 복제 모니터에서 사용 가능합니다. 복제 모니터를 시작하는 방법은 [복제 모니터 시작](monitor/start-the-replication-monitor.md)을 참조하세요.  
   
 #### <a name="to-view-and-modify-push-subscription-properties-in-management-studio"></a>Management Studio에서 밀어넣기 구독 속성을 보고 수정하려면  
   
@@ -69,17 +71,17 @@ ms.locfileid: "68212013"
   
 #### <a name="to-view-the-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 대한 밀어넣기 구독의 속성을 보려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql)을 실행합니다. 이때 **@publication** 또는 RMO(복제 관리 개체)를 사용하여 **@subscriber** 를 지정하고 **@article** 에 값 **@article** 에서 사용 가능합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql)을 실행합니다. , **@publication** **@subscriber**및에 **@article** **all** 값을 지정 합니다.  
   
-2.  게시 데이터베이스의 게시자에서 [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql)를 실행하고 **@subscriber** 에서 사용 가능합니다.  
+2.  게시 데이터베이스의 게시자에서 [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql)를 실행하고 **@subscriber**에서 사용 가능합니다.  
   
 #### <a name="to-change-the-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 대한 밀어넣기 구독의 속성을 변경하려면  
   
 1.  게시 데이터베이스의 게시자에서 [sp_changesubscriber](/sql/relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql)를 실행하고 **@subscriber** 를 지정하며 변경할 구독자 속성의 매개 변수를 지정합니다.  
   
-2.  게시 데이터베이스의 게시자에서 [sp_changesubscription](/sql/relational-databases/system-stored-procedures/sp-changesubscription-transact-sql)을 실행합니다. 이때 **@publication** 또는 RMO(복제 관리 개체)를 사용하여 **@subscriber** 또는 RMO(복제 관리 개체)를 사용하여 **@destination_db** 를 지정하고 **@article** 에 값 **@article** 값을, **@property** 에 변경할 구독 속성을, **@value** 에서 사용 가능합니다. 이렇게 하면 밀어넣기 구독의 보안 설정이 변경됩니다.  
+2.  게시 데이터베이스의 게시자에서 [sp_changesubscription](/sql/relational-databases/system-stored-procedures/sp-changesubscription-transact-sql)을 실행합니다. , **@publication** **@subscriber**, **@destination_db**, 값을 **모두** **@article**로 지정 하 고, 구독 속성을로 **@property**변경 하 고, 새 값을 **@value**로 지정 합니다. 이렇게 하면 밀어넣기 구독의 보안 설정이 변경됩니다.  
   
-3.  (옵션) 구독의 DTS(데이터 변환 서비스) 패키지 속성을 변경하려면 구독 데이터베이스의 구독자에서 [sp_changesubscriptiondtsinfo](/sql/relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql) 를 실행합니다. **@jobid** 에 배포 에이전트 작업의 ID를 지정하고 다음과 같은 DTS 패키지 속성을 지정합니다.  
+3.  (옵션) 구독의 DTS(데이터 변환 서비스) 패키지 속성을 변경하려면 구독 데이터베이스의 구독자에서 [sp_changesubscriptiondtsinfo](/sql/relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql) 를 실행합니다. 에 **@jobid** 배포 에이전트 작업의 ID를 지정 하 고 다음과 같은 DTS 패키지 속성을 지정 합니다.  
   
     -   **@dts_package_name**  
   
@@ -94,13 +96,13 @@ ms.locfileid: "68212013"
   
 #### <a name="to-view-the-properties-of-a-push-subscription-to-a-merge-publication"></a>병합 게시에 대한 밀어넣기 구독의 속성을 보려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_helpmergesubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql)을 실행합니다. 이때 **@publication** 및 **@subscriber** 에서 사용 가능합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_helpmergesubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql)을 실행합니다. 및 **@publication** 를 **@subscriber**지정 합니다.  
   
-2.  게시자에서 [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql)를 실행하고 **@subscriber** 에서 사용 가능합니다.  
+2.  게시자에서를 지정 **@subscriber**하 여 [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql)를 실행 합니다.  
   
 #### <a name="to-change-the-properties-of-a-push-subscription-to-a-merge-publication"></a>병합 게시에 대한 밀어넣기 구독의 속성을 변경하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_changemergesubscription](/sql/relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql)을 실행합니다. 이때 **@publication** 또는 RMO(복제 관리 개체)를 사용하여 **@subscriber** 또는 RMO(복제 관리 개체)를 사용하여 **@subscriber_db** 값을, **@property** 에 변경할 구독 속성을, **@value** 에서 사용 가능합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_changemergesubscription](/sql/relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql)을 실행합니다. , **@publication** **@subscriber**, **@subscriber_db**, 변경 되는 구독 속성 **@property**, 새 값을로 지정 합니다. **@value**  
   
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
   
@@ -115,7 +117,8 @@ ms.locfileid: "68212013"
   
 3.  <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>및 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> 속성을 설정합니다.  
   
-4.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 속성 설정에 1단계의 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 을 설정합니다.  
+4.  
+  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 속성 설정에 1단계의 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 을 설정합니다.  
   
 5.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 `false`를 반환하는 경우 3단계에서 구독 속성이 올바르게 정의되지 않았거나 구독이 없는 것입니다.  
   
@@ -131,7 +134,8 @@ ms.locfileid: "68212013"
   
 3.  <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>및 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> 속성을 설정합니다.  
   
-4.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 속성 설정에 1단계의 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 을 설정합니다.  
+4.  
+  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 속성 설정에 1단계의 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 을 설정합니다.  
   
 5.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 `false`를 반환하는 경우 3단계에서 구독 속성이 올바르게 정의되지 않았거나 구독이 없는 것입니다.  
   
@@ -139,7 +143,7 @@ ms.locfileid: "68212013"
   
 7.  (옵션) 새 설정을 보려면 <xref:Microsoft.SqlServer.Replication.ReplicationObject.Refresh%2A> 메서드를 호출하여 구독에 대한 속성을 다시 로드합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [복제 모니터를 사용하여 정보 보기 및 태스크 수행](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)   
  [게시 구독](subscribe-to-publications.md)  

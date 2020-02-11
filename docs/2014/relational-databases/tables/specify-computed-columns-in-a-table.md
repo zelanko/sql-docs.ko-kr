@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3ca62d8d45ab5a116ab657646abf2393c69e73c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211804"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>테이블에서 계산 열 지정
@@ -46,7 +46,7 @@ ms.locfileid: "68211804"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  테이블에 대한 ALTER 사용 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -62,11 +62,11 @@ ms.locfileid: "68211804"
 4.  **(수식)** 자식 속성에서 오른쪽에 있는 표 형태 셀에 현재 열의 식을 입력합니다. 예를 들어 `SalesTotal` 열에 입력한 수식이 `SubTotal+TaxAmt+Freight`일 경우 이 수식은 테이블의 각 행에 대해 이 열에 값을 추가합니다.  
   
     > [!IMPORTANT]  
-    >  수식으로 데이터 형식이 다른 두 식을 결합할 경우 데이터 형식 우선 순위 규칙에 따라 우선 순위가 낮은 데이터 형식이 우선 순위가 높은 데이터 형식으로 변환됩니다. 이 암시적 변환이 지원되지 않으면 "`Error validating the formula for column column_name.`" 오류가 반환됩니다. CAST 또는 CONVERT 함수를 사용하여 데이터 형식 충돌을 해결합니다. 예를 들어 `nvarchar` 형식 열을 `int` 형식 열과 결합할 경우 `('Prod'+CONVERT(nvarchar(23),ProductID))` 수식에 표시된 대로 정수 형식을 `nvarchar`으로 변환해야 합니다. 자세한 내용은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)를 참조하세요.  
+    >  수식으로 데이터 형식이 다른 두 식을 결합할 경우 데이터 형식 우선 순위 규칙에 따라 우선 순위가 낮은 데이터 형식이 우선 순위가 높은 데이터 형식으로 변환됩니다. 이 암시적 변환이 지원되지 않으면 "`Error validating the formula for column column_name.`" 오류가 반환됩니다. CAST 또는 CONVERT 함수를 사용하여 데이터 형식 충돌을 해결합니다. 예를 들어 `nvarchar` 형식 열을 `int` 형식 열과 결합할 경우 `nvarchar` 수식에 표시된 대로 정수 형식을 `('Prod'+CONVERT(nvarchar(23),ProductID))`으로 변환해야 합니다. 자세한 내용은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)를 참조하세요.  
   
-5.  **지속형** 자식 속성 드롭다운에서 **예** 또는 **아니요**를 선택하여 데이터를 지속할지 여부를 지정합니다.  
+5.  **지속형** 자식 속성 드롭다운에서 **예** 또는 **아니요** 를 선택하여 데이터를 지속할지 여부를 지정합니다.  
   
-6.  **파일** 메뉴에서 **저장**_table name_을 클릭합니다.  
+6.  **파일** 메뉴에서 **테이블 이름**_저장_을 클릭합니다.  
   
 #### <a name="to-add-a-computed-column-definition-to-an-existing-column"></a>기존 열에 계산 열 정의를 추가하려면  
   
@@ -84,7 +84,7 @@ ms.locfileid: "68211804"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣은 후 **실행**을 클릭합니다. 이 예에서는 `QtyAvailable` 열의 값을 `UnitPrice` 열의 값으로 곱하는 계산 열을 포함하는 테이블을 만듭니다.  
+3.  다음 예를 복사 하 여 쿼리 창에 붙여 넣고 **실행**을 클릭 합니다. 이 예에서는 `QtyAvailable` 열의 값을 `UnitPrice` 열의 값으로 곱하는 계산 열을 포함하는 테이블을 만듭니다.  
   
     ```  
     CREATE TABLE dbo.Products   
@@ -111,7 +111,7 @@ ms.locfileid: "68211804"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣은 후 **실행**을 클릭합니다. 다음 예에서는 이전 예에서 만든 테이블에 새 열을 추가합니다.  
+3.  다음 예를 복사 하 여 쿼리 창에 붙여 넣고 **실행**을 클릭 합니다. 다음 예에서는 이전 예에서 만든 테이블에 새 열을 추가합니다.  
   
     ```  
     ALTER TABLE dbo.Products ADD RetailValue AS (QtyAvailable * UnitPrice * 1.35);  
@@ -124,7 +124,7 @@ ms.locfileid: "68211804"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  기존 열을 계산 열로 변경하려면 계산 열을 삭제한 후 다시 만들어야 합니다. 다음 예를 복사하여 쿼리 창에 붙여 넣은 후 **실행**을 클릭합니다. 다음 예에서는 이전 예에서 추가한 열을 수정합니다.  
+3.  기존 열을 계산 열로 변경하려면 계산 열을 삭제한 후 다시 만들어야 합니다. 다음 예를 복사 하 여 쿼리 창에 붙여 넣고 **실행**을 클릭 합니다. 다음 예에서는 이전 예에서 추가한 열을 수정합니다.  
   
     ```  
     ALTER TABLE dbo.Products DROP COLUMN RetailValue;  
@@ -133,6 +133,6 @@ ms.locfileid: "68211804"
   
     ```  
   
-     자세한 내용은 [ALTER TABLE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)을 참조하세요.  
+     자세한 내용은 [ALTER TABLE &#40;transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)을 참조 하세요.  
   
 ###  <a name="TsqlExample"></a>  
