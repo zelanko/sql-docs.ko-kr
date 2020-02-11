@@ -1,5 +1,5 @@
 ---
-title: 연결 문자열 (SSAS)를 지정 합니다. | Microsoft Docs
+title: 연결 문자열 지정 (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: de31c9c5aae35b07cee0574730e12e51726921e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068546"
 ---
 # <a name="specify-a-connection-string-ssas"></a>연결 문자열 지정(SSAS)
-  **테이블 가져오기 마법사** 의 이 페이지에서는 OLE DB 또는 ODBC 데이터 원본에 연결하기 위한 연결 문자열을 지정할 수 있습니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  
+  
+  **테이블 가져오기 마법사** 의 이 페이지에서는 OLE DB 또는 ODBC 데이터 원본에 연결하기 위한 연결 문자열을 지정할 수 있습니다. 
+  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  
   
  데이터 원본에 연결하려면 컴퓨터에 적절한 공급자를 설치해야 합니다. 지원되는 데이터 원본 및 공급자에 대한 자세한 내용은 [지원되는 데이터 원본&#40;SSAS 테이블 형식&#41;](tabular-models/data-sources-supported-ssas-tabular.md)을 참조하세요.  
   
@@ -32,7 +34,8 @@ ms.locfileid: "66068546"
  OLE DB 또는 ODBC 데이터 원본에 연결하기 위한 연결 문자열을 입력합니다.  
   
  **빌드**  
- **데이터 연결 속성** 대화 상자를 사용하여 연결 문자열의 속성을 지정합니다. 자세한 내용은 이 대화 상자에서 Microsoft 데이터 연결 도움말을 참조하십시오.  
+ 
+  **데이터 연결 속성** 대화 상자를 사용하여 연결 문자열의 속성을 지정합니다. 자세한 내용은 이 대화 상자에서 Microsoft 데이터 연결 도움말을 참조하십시오.  
   
  **연결 테스트**  
  지정한 연결 문자열을 사용하여 데이터 원본에 대한 연결을 설정해 봅니다. 연결이 성공적인지 여부를 나타내는 메시지가 표시됩니다.  

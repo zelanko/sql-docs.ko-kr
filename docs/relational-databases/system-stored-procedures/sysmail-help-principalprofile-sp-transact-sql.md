@@ -1,5 +1,5 @@
 ---
-title: sysmail_help_principalprofile_sp (TRANSACT-SQL) | Microsoft Docs
+title: sysmail_help_principalprofile_sp (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -18,19 +18,19 @@ ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5bc48bb3edbeaad5593f574676e61ab2ca7f727f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68044525"
 ---
-# <a name="sysmailhelpprincipalprofilesp-transact-sql"></a>sysmail_help_principalprofile_sp(Transact-SQL)
+# <a name="sysmail_help_principalprofile_sp-transact-sql"></a>sysmail_help_principalprofile_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   데이터베이스 메일 프로필과 데이터베이스 보안 주체 간 연결에 대한 정보를 나열합니다.  
   
  
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,13 +41,13 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @principal_id = ] principal_id` 데이터베이스 사용자 또는 역할의 id를 **msdb** 나열할 연결에 대 한 데이터베이스입니다. *principal_id* 됩니다 **int**, 기본값은 NULL입니다. 어느 *principal_id* 하거나 *principal_name* 지정할 수 있습니다.  
+`[ @principal_id = ] principal_id`나열할 연결의 **msdb** 데이터베이스에 있는 데이터베이스 사용자 또는 역할의 ID입니다. *principal_id* 은 **int**이며 기본값은 NULL입니다. *Principal_id* 또는 *principal_name* 를 지정할 수 있습니다.  
   
-`[ @principal_name = ] 'principal_name'` 데이터베이스 사용자 또는 역할의 이름인 합니다 **msdb** 나열할 연결에 대 한 데이터베이스. *principal_name* 됩니다 **sysname**, 기본값은 NULL입니다. 어느 *principal_id* 하거나 *principal_name* 지정할 수 있습니다.  
+`[ @principal_name = ] 'principal_name'`나열할 연결의 **msdb** 데이터베이스에 있는 데이터베이스 사용자 또는 역할의 이름입니다. *principal_name* 는 **sysname**이며 기본값은 NULL입니다. *Principal_id* 또는 *principal_name* 를 지정할 수 있습니다.  
   
-`[ @profile_id = ] profile_id` 나열할 연결에 대 한 프로필의 ID입니다. *profile_id* 됩니다 **int**, 기본값은 NULL입니다. 어느 *profile_id* 하거나 *profile_name* 지정할 수 있습니다.  
+`[ @profile_id = ] profile_id`나열할 연결에 대 한 프로필의 ID입니다. *profile_id* 은 **int**이며 기본값은 NULL입니다. *Profile_id* 또는 *profile_name* 를 지정할 수 있습니다.  
   
-`[ @profile_name = ] 'profile_name'` 나열할 연결에 대 한 프로필의 이름이입니다. *profile_name* 됩니다 **sysname**, 기본값은 NULL입니다. 어느 *profile_id* 하거나 *profile_name* 지정할 수 있습니다.  
+`[ @profile_name = ] 'profile_name'`나열할 연결에 대 한 프로필의 이름입니다. *profile_name* 는 **sysname**이며 기본값은 NULL입니다. *Profile_id* 또는 *profile_name* 를 지정할 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -57,7 +57,7 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
   
 ||||  
 |-|-|-|  
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |**principal_id**|**int**|데이터베이스 사용자의 ID입니다.|  
 |**principal_name**|**sysname**|데이터베이스 사용자의 이름입니다.|  
 |**profile_id**|**int**|데이터베이스 메일 프로필의 ID입니다.|  
@@ -65,9 +65,9 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 |**is_default**|**bit**|프로필이 해당 사용자의 기본 프로필인지 여부를 나타내는 플래그입니다.|  
   
 ## <a name="remarks"></a>설명  
- 하는 경우 **sysmail_help_principalprofile_sp** 호출 되는 반환 된 결과 집합 나열 모든 인스턴스의 연결 매개 변수 없이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 그렇지 않으면 결과 집합은 제공된 매개 변수와 일치하는 연결에 대한 정보를 포함합니다. 예를 들어 프로필 이름이 제공된 경우 프로시저가 해당 프로필에 대한 모든 연결을 나열합니다.  
+ **Sysmail_help_principalprofile_sp** 매개 변수 없이 호출 되는 경우 반환 되는 결과 집합에는 인스턴스의 모든 연결이 나열 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]됩니다. 그렇지 않으면 결과 집합은 제공된 매개 변수와 일치하는 연결에 대한 정보를 포함합니다. 예를 들어 프로필 이름이 제공된 경우 프로시저가 해당 프로필에 대한 모든 연결을 나열합니다.  
   
- **sysmail_help_principalprofile_sp** 에 **msdb** 데이터베이스 및 소유 하는 **dbo** 스키마입니다. 현재 데이터베이스에는 없는 경우 세 부분으로 된 이름을 사용 하 여 프로시저를 실행 해야 합니다 **msdb**합니다.  
+ **sysmail_help_principalprofile_sp** **msdb** 데이터베이스에 있으며 **dbo** 스키마가 소유 합니다. 현재 데이터베이스가 **msdb**가 아닌 경우 세 부분으로 된 이름을 사용 하 여 프로시저를 실행 해야 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
@@ -91,7 +91,7 @@ principal_id principal_name     profile_id  profile_name                   is_de
 5            danw               9           AdventureWorks Administrator   1  
 ```  
   
-### <a name="b-listing-information-for-all-associations"></a>2\. 모든 연결에 대한 정보 나열  
+### <a name="b-listing-information-for-all-associations"></a>B. 모든 연결에 대한 정보 나열  
  다음 예에서는 인스턴스의 모든 연결에 대한 정보 목록을 보여 줍니다.  
   
 ```  
@@ -107,8 +107,8 @@ principal_id principal_name     profile_id  profile_name                   is_de
 5            danw               9           AdventureWorks Administrator   1  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 메일](../../relational-databases/database-mail/database-mail.md)   
- [데이터베이스 메일 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 메일](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

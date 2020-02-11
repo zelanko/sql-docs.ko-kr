@@ -1,5 +1,5 @@
 ---
-title: 날짜 및 시간과 스키마 행 집합 | Microsoft Docs
+title: 날짜 및 시간 및 스키마 행 집합 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 710fbfdfd57608c24c56def1f2f9c4ec373f1957
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63238018"
 ---
-# <a name="date-and-time-and-schema-rowsets"></a>날짜 및 시간과 스키마 행 집합
+# <a name="date-and-time-and-schema-rowsets"></a>날짜 및 시간 및 스키마 행 집합
   이 항목에서는 COLUMNS 및 PROCEDURE_PARAMETERS 행 집합에 대한 정보를 제공합니다. 이 정보는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에 새로 추가된 향상된 OLE DB 날짜 및 시간 기능과 관련이 있습니다.  
   
 ## <a name="columns-rowset"></a>COLUMNS 행 집합  
@@ -28,11 +28,11 @@ ms.locfileid: "63238018"
 |열 유형|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
 |date|DBTYPE_DBDATE|지우기|0|  
-|Time|DBTYPE_DBTIME2|Set|0..7|  
-|Smalldatetime|DBTYPE_DBTIMESTAMP|지우기|0|  
+|time|DBTYPE_DBTIME2|설정|0..7|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|지우기|0|  
 |Datetime|DBTYPE_DBTIMESTAMP|지우기|3|  
-|Datetime2|DBTYPE_DBTIMESTAMP|Set|0..7|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|Set|0..7|  
+|datetime2|DBTYPE_DBTIMESTAMP|설정|0..7|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|설정|0..7|  
   
  COLUMN_FLAGS에서 날짜/시간 형식에 대해 DBCOLUMNFLAGS_ISFIXEDLENGTH는 항상 true이지만 다음과 같은 플래그는 항상 false입니다.  
   
@@ -64,33 +64,33 @@ ms.locfileid: "63238018"
 ## <a name="provider_types-rowset"></a>PROVIDER_TYPES 행 집합  
  날짜/시간 형식에 대해 다음 행이 반환됩니다.  
   
-|형식-><br /><br /> Column|date|Time|Smalldatetime|Datetime|Datetime2|datetimeoffset|  
+|형식 -><br /><br /> 열|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|date|Time|Smalldatetime|Datetime|Datetime2|datetimeoffset|  
+|TYPE_NAME|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_DBDATE|DBTYPE_DBTIME2|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMPOFFSET|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|'|'|'|'|'|'|  
 |LITERAL_SUFFIX|'|'|'|'|'|'|  
-|CREATE_PARAMS|NULL|소수 자릿수|NULL|NULL|소수 자릿수|소수 자릿수|  
+|CREATE_PARAMS|NULL|크기 조정|NULL|NULL|크기 조정|크기 조정|  
 |IS_NULLABLE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|  
 |CASE_SENSITIVE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|  
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FIXED_PREC_SCALE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |AUTO_UNIQUE_VALUE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|LOCAL_TYPE_NAME|date|Time|Smalldatetime|Datetime|Datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|0|NULL|NULL|0|0|  
 |MAXIMUM_SCALE|NULL|7|NULL|NULL|7|7|  
 |GUID|NULL|NULL|NULL|NULL|NULL|NULL|  
 |TYPELIB|NULL|NULL|NULL|NULL|NULL|NULL|  
 |VERSION|NULL|NULL|NULL|NULL|NULL|NULL|  
 |IS_LONG|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|BEST_MATCH|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE(다음 중 하나에 해당하지 않을 경우)<br /><br /> -하위 수준 서버에 연결 하는 클라이언트가입니다.<br />-데이터 형식 호환성 연결 속성이 80과 동일한 호환성 수준을 지정 합니다.|VARIANT_TRUE(다음 중 하나에 해당하지 않을 경우)<br /><br /> -하위 수준 서버에 연결 하는 클라이언트가입니다.<br />-데이터 형식 호환성 연결 속성이 80과 동일한 호환성 수준을 지정 합니다.|VARIANT_TRUE|  
+|BEST_MATCH|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE(다음 중 하나에 해당하지 않을 경우)<br /><br /> -클라이언트가 하위 수준 서버에 연결 되어 있습니다.<br />-데이터 형식 호환성 연결 속성은 80와 동일한 호환성 수준을 지정 합니다.|VARIANT_TRUE(다음 중 하나에 해당하지 않을 경우)<br /><br /> -클라이언트가 하위 수준 서버에 연결 되어 있습니다.<br />-데이터 형식 호환성 연결 속성은 80와 동일한 호환성 수준을 지정 합니다.|VARIANT_TRUE|  
 |IS_FIXEDLENGTH|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|  
   
  OLE DB는 numeric 및 decimal 형식의 MINIMUM_SCALE 및 MAXIMUM_SCALE만 정의하므로 일반적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에서는 time, datetime2 및 datetimeoffset에 이러한 열을 사용하지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [메타 데이터 &#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
   
   

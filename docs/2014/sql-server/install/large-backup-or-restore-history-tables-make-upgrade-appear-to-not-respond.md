@@ -14,19 +14,20 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e4d994eb6d345ab98e6cd51a44c7c90a74bafd3a
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874605"
 ---
 # <a name="large-backup-or-restore-history-tables-make-upgrade-appear-to-not-respond"></a>큰 백업 또는 복원 기록 테이블이 있으면 업그레이드가 응답하지 않는 것으로 나타납니다.
+  
   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 경우 일부 백업 및 복원 기록 테이블에 새 열이 추가되었습니다. 이러한 테이블을 업그레이드하려면 새 열을 추가하도록 이러한 테이블을 변경해야 합니다. 이러한 테이블 중 하나 이상에 많은 수의 행이 포함되어 있으면 해당 테이블에 열을 추가하는 ALTER TABLE 문에서 업그레이드가 오랫동안 지체됩니다.  
   
 ## <a name="component"></a>구성 요소  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>설명  
+## <a name="description"></a>Description  
  다음 백업 또는 복원 기록 테이블에 많은 수의 행이 포함 되어 있으면 업그레이드가 응답 하지 않는 것 처럼 보일 수 있습니다.  
   
 -   **backupfile**  
@@ -52,7 +53,7 @@ ms.locfileid: "70874605"
 >  백업 및 복원 기록 테이블에 10,000개 이상의 행이 있는 데이터베이스를 업그레이드할 수 있습니다. 그러나 큰 테이블이 변경되는 동안에는 업그레이드가 중지된 것처럼 보일 수 있습니다. 테이블이 클수록 업그레이드를 완료하는 데 걸리는 시간도 길어집니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [업그레이드 문제를 데이터베이스 엔진](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](sql-server-2014-upgrade-advisor.md)  
+ [업그레이드 문제 데이터베이스 엔진](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 업그레이드 관리자 &#91;새&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

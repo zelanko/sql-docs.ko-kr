@@ -1,5 +1,5 @@
 ---
-title: 새로운&#39;기능 (데이터베이스 엔진) | Microsoft Docs
+title: 새&#39;s (데이터베이스 엔진) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/22/2016
 ms.prod: sql-server-2014
@@ -14,14 +14,15 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 5e51cda61bb44d1f143cab50901276b927cca73a
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70176073"
 ---
-# <a name="what39s-new-database-engine"></a>새로운&#39;기능 (데이터베이스 엔진)
-  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]의 최신 릴리스에는 데이터 저장소 시스템을 디자인, 개발 및 유지 관리하는 설계자, 개발자 및 관리자의 작업 효율성과 생산성을 증대시키는 새로운 기능과 향상된 기능이 추가되었습니다. 다음은 [!INCLUDE[ssDE](../includes/ssde-md.md)]에서 향상된 기능에 대한 설명입니다.  
+# <a name="what39s-new-database-engine"></a>새&#39;s (데이터베이스 엔진)
+  
+  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 의 최신 릴리스에는 데이터 스토리지 시스템을 디자인, 개발 및 유지 관리하는 설계자, 개발자 및 관리자의 작업 효율성과 생산성을 증대시키는 새로운 기능과 향상된 기능이 추가되었습니다. 다음은 [!INCLUDE[ssDE](../includes/ssde-md.md)] 에서 향상된 기능에 대한 설명입니다.  
   
 ##  <a name="Feature"></a>데이터베이스 엔진 기능 향상  
   
@@ -34,19 +35,21 @@ ms.locfileid: "70176073"
   
   
 ###  <a name="AzureVM"></a>Azure 가상 머신에서 SQL Server 데이터베이스 호스팅  
- Azure 가상 컴퓨터에 [SQL Server 데이터베이스 배포](https://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx) 마법사를 사용 하 여 azure 가상 컴퓨터의 인스턴스에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스를 호스팅할 수 있습니다.  
+ Azure 가상 컴퓨터에 [SQL Server 데이터베이스 배포](https://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx) 마법사를 사용 하 여 Azure 가상 컴퓨터의 인스턴스에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스를 호스팅할 수 있습니다.  
   
   
 ###  <a name="Backup"></a>향상 된 백업 및 복원 기능  
- [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에서는 다음과 같이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 백업 및 복원 기능이 향상되었습니다.  
+ [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에는 백업 및 복원 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 대 한 다음과 같은 향상 된 기능이 포함 되어 있습니다.  
   
--   **URL에 대한 SQL Server 백업**  
+-   **URL에 SQL Server Backup**  
   
-     [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], PowerShell 및 SMO에서만 지원되는 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] SP1 CU2에 [!INCLUDE[tsql](../includes/tsql-md.md)] URL 백업이 도입되었습니다. 에서 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 를 사용 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 하 여 Azure Blob storage 서비스에 백업 하거나 복원할 수 있습니다. 새로운 옵션은 백업 태스크와 유지 관리 계획에 사용할 수 있습니다. 자세한 내용은 [SQL Server Management Studio에서 백업 작업 사용](../relational-databases/backup-restore/sql-server-backup-to-url.md#BackupTaskSSMS), [유지 관리 계획 마법사를 사용 하 여 URL에 백업 SQL Server](../relational-databases/backup-restore/sql-server-backup-to-url.md#MaintenanceWiz)및 [SQL Server Management Studio를 사용 하 여 Azure storage에서 복원](../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS)을 참조 하세요.  
+     [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]URL에 대 한 Backup은 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[tsql](../includes/tsql-md.md)], PowerShell 및 SMO 에서만 지원 되는 SP1 CU2에 도입 되었습니다. 에서 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 를 사용 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 하 여 Azure Blob storage 서비스에 백업 하거나 복원할 수 있습니다. 새로운 옵션은 백업 태스크와 유지 관리 계획에 사용할 수 있습니다. 자세한 내용은 [SQL Server Management Studio에서 백업 작업 사용](../relational-databases/backup-restore/sql-server-backup-to-url.md#BackupTaskSSMS), [유지 관리 계획 마법사를 사용 하 여 URL에 백업 SQL Server](../relational-databases/backup-restore/sql-server-backup-to-url.md#MaintenanceWiz)및 [SQL Server Management Studio를 사용 하 여 Azure storage에서 복원](../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS)을 참조 하세요.  
   
--   **Azure에 대 한 관리 되는 백업 SQL Server**  
+-   **Azure에 SQL Server 관리 백업**  
   
-     [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] URL 백업을 기반으로 하는 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]는 데이터베이스 및 로그 백업을 관리하고 예약하기 위해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 제공하는 서비스입니다. 이 릴리스에서는 Azure storage에 대 한 백업만 지원 됩니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 데이터베이스 수준뿐만 아니라 인스턴스 수준에서도 구성될 수 있으므로 데이터베이스 수준의 세부 제어와 인스턴스 수준의 자동화를 활용할 수 있도록 합니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]온- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프레미스로 실행 되는 인스턴스와 Azure virtual machines에서 실행 되는 인스턴스에 대해 구성할 수 있습니다. Azure virtual machines에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 실행 되는 인스턴스에 대해 권장 됩니다. 자세한 내용은 [Azure에 대 한 관리 되는 백업 SQL Server](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)를 참조 하세요.  
+     
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] URL 백업을 기반으로 하는 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 는 데이터베이스 및 로그 백업을 관리하고 예약하기 위해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 제공하는 서비스입니다. 이 릴리스에서는 Azure storage에 대 한 백업만 지원 됩니다. 
+  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 데이터베이스 수준뿐만 아니라 인스턴스 수준에서도 구성될 수 있으므로 데이터베이스 수준의 세부 제어와 인스턴스 수준의 자동화를 활용할 수 있도록 합니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]온-프레미스 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 실행 되는 인스턴스와 Azure virtual machines에서 실행 되는 인스턴스에 대해 구성할 수 있습니다. Azure virtual machines에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 실행 되는 인스턴스에 대해 권장 됩니다. 자세한 내용은 [Azure에 대 한 관리 되는 백업 SQL Server](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)를 참조 하세요.  
   
 -   **백업용 암호화**  
   
@@ -58,15 +61,17 @@ ms.locfileid: "70176073"
    
   
 ###  <a name="Durability"></a>지연 된 내구성  
- [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에는 일부 또는 모든 트랜잭션을 지연된 내구성을 갖도록 지정하여 대기 시간을 줄이는 기능이 도입되었습니다. 지연된 내구성이 있는 트랜잭션은 트랜잭션 로그 레코드가 디스크에 기록되기 전에 클라이언트에 제어를 반환합니다. 내구성은 데이터베이스 수준, COMMIT 수준 또는 ATOMIC 블록 수준에서 제어할 수 있습니다.  
+ 
+  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에는 일부 또는 모든 트랜잭션을 지연된 내구성을 갖도록 지정하여 대기 시간을 줄이는 기능이 도입되었습니다. 지연된 내구성이 있는 트랜잭션은 트랜잭션 로그 레코드가 디스크에 기록되기 전에 클라이언트에 제어를 반환합니다. 내구성은 데이터베이스 수준, COMMIT 수준 또는 ATOMIC 블록 수준에서 제어할 수 있습니다.  
   
  자세한 내용은 [트랜잭션 내구성 제어](../relational-databases/logs/control-transaction-durability.md)항목을 참조 하세요.  
   
   
 ###  <a name="AlwaysOn"></a>AlwaysOn 기능 향상  
- [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에는 AlwaysOn 장애 조치(Failover) 클러스터 인스턴스와 AlwaysOn 가용성 그룹에 대한 다음과 같은 향상된 기능이 포함되어 있습니다.  
+ 
+  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에는 AlwaysOn 장애 조치(Failover) 클러스터 인스턴스와 AlwaysOn 가용성 그룹에 대한 다음과 같은 향상된 기능이 포함되어 있습니다.  
   
--   Azure 복제본 추가 마법사는 AlwaysOn 가용성 그룹에 대한 하이브리드 솔루션을 만드는 작업을 단순화합니다. 자세한 내용은 [Azure 복제본 추가 마법사 &#40;&#41;SQL Server 사용](availability-groups/windows/use-the-add-azure-replica-wizard-sql-server.md)을 참조 하세요.  
+-   Azure 복제본 추가 마법사는 AlwaysOn 가용성 그룹에 대한 하이브리드 솔루션을 만드는 작업을 단순화합니다. 자세한 내용은 [Azure 복제본 추가 마법사를 사용 하 &#40;SQL Server&#41;](availability-groups/windows/use-the-add-azure-replica-wizard-sql-server.md)를 참조 하세요.  
   
 -   보조 복제본의 최대 개수는 4개에서 8개로 증가되었습니다.  
   
@@ -76,18 +81,21 @@ ms.locfileid: "70176073"
   
 -   새로운 시스템 함수인 [sys.fn_hadr_is_primary_replica](/sql/relational-databases/system-functions/sys-fn-hadr-is-primary-replica-transact-sql)와 새로운 DMV인 [sys.dm_io_cluster_valid_path_names](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql)를 사용할 수 있습니다.  
   
--   [sys.dm_hadr_cluster](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql), [sys.dm_hadr_cluster_members](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql)및 [sys.dm_hadr_cluster_networks](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql)등의 DMV가 향상되어 이제 FCI 정보를 반환합니다.  
+-   
+  [sys.dm_hadr_cluster](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql), [sys.dm_hadr_cluster_members](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql)및 [sys.dm_hadr_cluster_networks](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql)등의 DMV가 향상되어 이제 FCI 정보를 반환합니다.  
   
   
 ###  <a name="OIR"></a>파티션 전환 및 인덱싱  
- 이제 분할 테이블의 개별 파티션을 다시 작성할 수 있습니다. 자세한 내용은 [ALTER INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)를 참조하세요.  
+ 이제 분할 테이블의 개별 파티션을 다시 작성할 수 있습니다. 자세한 내용은 [ALTER INDEX &#40;transact-sql&#41;](/sql/t-sql/statements/alter-index-transact-sql)를 참조 하세요.  
    
   
 ###  <a name="Lock"></a>온라인 작업의 잠금 우선 순위 관리  
- `ONLINE = ON` 옵션에 포함된 `WAIT_AT_LOW_PRIORITY` 옵션을 통해 다시 작성 프로세스에서 필요한 잠금을 대기해야 하는 시간을 지정할 수 있습니다. `WAIT_AT_LOW_PRIORITY` 옵션에서는 또한 해당 REBUILD 문에 관련된 차단 프로세스 종료를 구성할 수 있습니다. 자세한 내용은 [ALTER TABLE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql) 및 [ALTER INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)를 참조하세요. 새 잠금 상태 유형에 대 한 문제 해결 정보는 _os_wait_stats [ &#40;&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql) 에서 [ &#40;&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql)사용할 수 있습니다. 자세한 내용은  
+ 
+  `ONLINE = ON` 옵션에 포함된 `WAIT_AT_LOW_PRIORITY` 옵션을 통해 다시 작성 프로세스에서 필요한 잠금을 대기해야 하는 시간을 지정할 수 있습니다. 
+  `WAIT_AT_LOW_PRIORITY` 옵션에서는 또한 해당 REBUILD 문에 관련된 차단 프로세스 종료를 구성할 수 있습니다. 자세한 내용은 [ALTER TABLE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql) 및 [ALTER INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)를 참조하세요. 새 잠금 상태 유형에 대 한 문제 해결 정보는 [sys. dm_tran_locks &#40;transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql) 및 [dm_os_wait_stats &#40;transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql)에서 사용할 수 있습니다.  
  
   
-###  <a name="CCI"></a> Columnstore 인덱스  
+###  <a name="CCI"></a>Columnstore 인덱스  
  이러한 새로운 기능은 columnstore 인덱스에 사용할 수 있습니다.  
   
 -   **클러스터형 columnstore 인덱스**  
@@ -96,68 +104,75 @@ ms.locfileid: "70176073"
   
 -   **SHOWPLAN**  
   
-     SHOWPLAN에서는 columnstore 인덱스 정보를 표시합니다. **EstimatedExecutionMode** 및 **ActualExecutionMode** 속성에는 두 가지 가능한 값이 있습니다. **일괄 처리** 또는 **행**  **저장소** 속성은 다음과 같은 두 가지 값을 사용할 수 있습니다. **Rowstore** 및 **ColumnStore**.  
+     SHOWPLAN에서는 columnstore 인덱스 정보를 표시합니다. 
+  **EstimatedExecutionMode** 및 **ActualExecutionMode** 속성에 가능한 두 개의 값은 **Batch** 또는 **Row**입니다.  
+  **Storage** 속성에 가능한 두 개의 값은 **RowStore** 및 **ColumnStore**입니다.  
   
 -   **보관 데이터 압축**  
   
-     ALTER INDEX... REBUILD에는 columnstore 인덱스의 지정된 파티션을 추가로 압축하는 새로운 COLUMNSTORE_ARCHIVE 데이터 압축 옵션이 있습니다. 이 옵션을 보관 또는 데이터 스토리지 크기를 줄여야 하는 기타 상황에 사용할 수 있으며 스토리지 및 검색에 더 많은 시간을 이용할 수 있습니다. 자세한 내용은 [ALTER INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)를 참조하세요.  
+     인덱스 변경 ... REBUILD에는 COLUMNSTORE 인덱스의 지정 된 파티션을 추가로 압축 하는 새로운 COLUMNSTORE_ARCHIVE 데이터 압축 옵션이 있습니다. 이 옵션을 보관 또는 데이터 스토리지 크기를 줄여야 하는 기타 상황에 사용할 수 있으며 스토리지 및 검색에 더 많은 시간을 이용할 수 있습니다. 자세한 내용은 [ALTER INDEX &#40;transact-sql&#41;](/sql/t-sql/statements/alter-index-transact-sql)를 참조 하세요.  
    
   
 ###  <a name="Buffer"></a>버퍼 풀 확장  
- [버퍼 풀 확장](configure-windows/buffer-pool-extension.md) 에서는 I/O 처리량을 크게 향상하기 위해 NvRAM(비휘발성 RAM) 확장인 SSD(반도체 드라이브)를 [!INCLUDE[ssDE](../includes/ssde-md.md)] 버퍼 풀에 원활하게 통합할 수 있는 기능을 제공합니다.  
+ 
+  [버퍼 풀 확장](configure-windows/buffer-pool-extension.md) 에서는 I/O 처리량을 크게 향상하기 위해 NvRAM(비휘발성 RAM) 확장인 SSD(반도체 드라이브)를 [!INCLUDE[ssDE](../includes/ssde-md.md)] 버퍼 풀에 원활하게 통합할 수 있는 기능을 제공합니다.  
    
   
 ###  <a name="Stats"></a>증분 통계  
- 이제 CREATE STATISTICS 및 관련 통계 문이 INCREMENTAL 옵션을 사용한 파티션별 통계 생성을 허용합니다. 관련 문은 증분 통계를 허용 또는 보고합니다. 영향을 받는 구문은 UPDATE STATISTICS, sp_createstats, CREATE INDEX, ALTER INDEX, ALTER DATABASE SET 옵션, DATABASEPROPERTYEX, sys.databases 및 sys.stats입니다. 자세한 내용은 [CREATE STATISTICS&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)를 참조하세요.  
+ 이제 CREATE STATISTICS 및 관련 통계 문이 INCREMENTAL 옵션을 사용한 파티션별 통계 생성을 허용합니다. 관련 문은 증분 통계를 허용 또는 보고합니다. 영향을 받는 구문은 UPDATE STATISTICS, sp_createstats, CREATE INDEX, ALTER INDEX, ALTER DATABASE SET 옵션, DATABASEPROPERTYEX, sys. databases 및 sys. stats를 포함 합니다. 자세한 내용은 [CREATE STATISTICS &#40;transact-sql&#41;](/sql/t-sql/statements/create-statistics-transact-sql)를 참조 하세요.  
   
   
 ###  <a name="RG"></a>물리적 IO 제어를 위한 향상 된 Resource Governor  
- 리소스 관리자를 사용하면 들어오는 애플리케이션 요청이 리소스 풀에서 사용할 수 있는 CPU, 물리적 IO 및 메모리 양에 대한 제한을 지정할 수 있습니다. [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에서는 새로운 MIN_IOPS_PER_VOLUME 및 MAX_IOPS_PER_VOLUME 설정을 사용하여 지정된 리소스 풀의 사용자 스레드에 대해 발생하는 물리적 IO를 제어할 수 있습니다. 자세한 내용은 [리소스 풀 Resource Governor](../relational-databases/resource-governor/resource-governor-resource-pool.md) 및 [ &#40;리소스 풀 만들기 transact-sql&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)을 참조 하세요.  
+ 리소스 관리자를 사용하면 들어오는 애플리케이션 요청이 리소스 풀에서 사용할 수 있는 CPU, 물리적 IO 및 메모리 양에 대한 제한을 지정할 수 있습니다. 
+  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에서는 새로운 MIN_IOPS_PER_VOLUME 및 MAX_IOPS_PER_VOLUME 설정을 사용하여 지정된 리소스 풀의 사용자 스레드에 대해 발생하는 물리적 IO를 제어할 수 있습니다. 자세한 내용은 [리소스 풀 Resource Governor](../relational-databases/resource-governor/resource-governor-resource-pool.md) [만들기 및 TRANSACT-SQL&#41;&#40;리소스 풀 만들기 ](/sql/t-sql/statements/create-resource-pool-transact-sql)를 참조 하세요.  
   
  ALTER RESOURCE GOVENOR의 MAX_OUTSTANDING_IO_PER_VOLUME 설정은 디스크 볼륨당 최대 미해결 I/O 작업을 설정합니다. 이 설정을 사용하여 디스크 볼륨의 IO 특성에 맞게 IO 리소스 관리를 튜닝할 수 있으며 SQL Server 인스턴스 경계에서 발생하는 IO 수를 제한할 수 있습니다. 자세한 내용은 [ALTER RESOURCE GOVERNOR&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)를 참조하세요.  
   
   
 ###  <a name="OnlineEvent"></a>Online Index Operation 이벤트 클래스  
- 이제 Progress Report: Online Index Operation 이벤트 클래스에 **PartitionId** 및 **파티션 번호**입니다. 자세한 내용은 진행률 보고서를 [참조 하세요. Online Index Operation 이벤트 클래스](../relational-databases/event-classes/progress-report-online-index-operation-event-class.md)입니다.  
+ 이제 Progress Report: Online Index Operation 이벤트 클래스에 **PartitionId** 및 **PartitionNumber**라는 두 개의 새 데이터 열이 있습니다. 자세한 내용은 [Progress Report: Online Index Operation Event Class](../relational-databases/event-classes/progress-report-online-index-operation-event-class.md)을 참조하세요.  
   
   
 ###  <a name="Compat"></a>데이터베이스 호환성 수준  
- [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에서는 호환성 수준 90이 올바르지 않습니다. 자세한 내용은 [ALTER Database 호환성 &#40;수준 transact-sql&#41; ](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) 을 참조 하세요.  
+ 
+  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에서는 호환성 수준 90이 올바르지 않습니다. 자세한 내용은 [ALTER Database Compatibility Level &#40;transact-sql](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) 을 참조 하세요&#41;  
   
-##  <a name="TSQL"></a> 향상된 Transact-SQL 기능  
+##  <a name="TSQL"></a>향상 된 transact-sql 기능  
   
 ### <a name="inline-specification-of-clustered-and-nonclustered"></a>CLUSTERED 및 NONCLUSTERED의 인라인 사양  
- `CLUSTERED` 및 `NONCLUSTERED` 인덱스의 인라인 사양은 이제 디스크 기반 테이블에 허용됩니다. 인라인 인덱스를 사용하여 테이블을 만드는 것은 해당 `CREATE INDEX` 문 다음에 테이블 만들기를 실행하는 것과 같습니다. 포함된 열 및 필터 조건은 인라인 인덱스에서는 지원되지 않습니다.  
+ 
+  `CLUSTERED` 및 `NONCLUSTERED` 인덱스의 인라인 사양은 이제 디스크 기반 테이블에 허용됩니다. 인라인 인덱스를 사용하여 테이블을 만드는 것은 해당 `CREATE INDEX` 문 다음에 테이블 만들기를 실행하는 것과 같습니다. 포함된 열 및 필터 조건은 인라인 인덱스에서는 지원되지 않습니다.  
   
-### <a name="select--into"></a>...를 선택 합니다. INTO  
- `SELECT ... INTO` 문이 향상되어 이제 병렬로 실행될 수 있습니다. 데이터베이스 호환성 수준은 110 이상이어야 합니다.  
+### <a name="select--into"></a>...를 선택 합니다. 범주로  
+ 
+  `SELECT ... INTO` 문이 향상되어 이제 병렬로 실행될 수 있습니다. 데이터베이스 호환성 수준은 110 이상이어야 합니다.  
   
 ### <a name="includetsqlincludestsql-mdmd-enhancements-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 향상된 [!INCLUDE[tsql](../includes/tsql-md.md)] 기능  
- 메모리 내 oltp를 지원 하기 위한 [!INCLUDE[tsql](../includes/tsql-md.md)] 변경내용에대한자세한내용은[메모리내oltp에대한transact-sql지원](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)을참조하세요.  
+ 메모리 내 OLTP를 [!INCLUDE[tsql](../includes/tsql-md.md)] 지원 하기 위한 변경 내용에 대 한 자세한 내용은 [메모리 내 oltp에 대 한 transact-sql 지원](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)을 참조 하세요.  
   
   
-##  <a name="SystemTable"></a> 향상된 시스템 뷰 기능  
+##  <a name="SystemTable"></a>향상 된 시스템 뷰 기능  
   
 ### <a name="sysxml_indexes"></a>sys.xml_indexes  
- [sys .xml 인덱스 &#40;&#41; transact-sql](/sql/relational-databases/system-catalog-views/sys-xml-indexes-transact-sql) 에는 `xml_index_type`, `xml_index_type_description`및 `path_id`라는 3 개의 새 열이 있습니다.  
+ [xml_indexes &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-xml-indexes-transact-sql) 에는 `xml_index_type`, `xml_index_type_description`및 `path_id`라는 3 개의 새 열이 있습니다.  
   
 ### <a name="sysdm_exec_query_profiles"></a>sys.dm_exec_query_profiles  
- [_exec_query_profiles &#40;transact-sql&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql) 은 쿼리가 실행 되는 동안 실시간 쿼리 진행률을 모니터링 합니다.  
+ [dm_exec_query_profiles &#40;transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql) 쿼리를 실행 하는 동안 실시간 쿼리 진행률을 모니터링 합니다.  
   
 ### <a name="syscolumn_store_row_groups"></a>sys.column_store_row_groups  
- [column_store_row_groups &#40;transact-sql&#41; ](/sql/relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql) 은 관리자가 시스템 관리에 대 한 결정을 내리는 데 도움이 되도록 클러스터형 columnstore 인덱스 정보를 세그먼트 단위로 제공 합니다.  
+ [column_store_row_groups &#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql) 는 클러스터 된 columnstore 인덱스 정보를 제공 하 여 관리자가 시스템 관리를 결정 하도록 지원 합니다.  
   
 ### <a name="sysdatabases"></a>sys.databases  
- [&#40;sys 데이터베이스&#41; transact-sql](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 에는 `is_auto_create_stats_incremental_on`, `is_query_store_on`및 `resource_pool_id`라는 3 개의 새 열이 있습니다.  
+ [&#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 에는 `is_auto_create_stats_incremental_on`, `is_query_store_on`및 `resource_pool_id`라는 3 개의 새 열이 있습니다.  
   
 ### <a name="system-view-enhancements-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 향상된 시스템 뷰 기능  
  메모리 내 OLTP를 지 원하는 시스템 뷰 향상에 대 한 자세한 내용은 [메모리 내 oltp에 대 한 시스템 뷰, 저장 프로시저, dmv 및 대기 유형](../../2014/database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md)을 참조 하세요.  
    
   
-##  <a name="Security"></a> 향상된 보안 기능  
+##  <a name="Security"></a>향상 된 보안 기능  
   
 ### <a name="connect-any-database-permission"></a>CONNECT ANY DATABASE 권한  
- 새로운 서버 수준 사용 권한입니다. 현재 있는 모든 데이터베이스와 향후 만들 수 있는 새로운 데이터베이스에 연결해야 하는 로그인에 **CONNECT ANY DATABASE** 를 부여합니다. 연결을 벗어나는 데이터베이스에서는 사용 권한을 부여하지 않습니다. **SELECT all USER 보안 개체** 또는 `VIEW SERVER STATE` 를 사용 하 여 인스턴스의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]모든 데이터 또는 모든 데이터베이스 상태를 보기 위한 감사 프로세스를 허용 합니다.  
+ 새로운 서버 수준 사용 권한입니다. 현재 있는 모든 데이터베이스와 향후 만들 수 있는 새로운 데이터베이스에 연결해야 하는 로그인에 **CONNECT ANY DATABASE** 를 부여합니다. 연결을 벗어나는 데이터베이스에서는 사용 권한을 부여하지 않습니다. **SELECT ALL USER 보안 개체** 또는 `VIEW SERVER STATE` 를 사용 하 여 인스턴스의 모든 데이터 또는 모든 데이터베이스 상태를 보기 위한 감사 프로세스를 허용 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다.  
   
 ### <a name="impersonate-any-login-permission"></a>IMPERSONATE ANY LOGIN 권한  
  새로운 서버 수준 사용 권한입니다. 허용하면 데이터베이스에 연결할 때 중간 계층 프로세스가 클라이언트 계정을 가장하여 연결할 수 있습니다. 거부하면 높은 권한 로그인이 다른 로그인을 가장하지 못하도록 차단할 수 있습니다. 예를 들어, **CONTROL SERVER** 권한이 있는 로그인이 다른 로그인을 가장하지 못하도록 차단할 수 있습니다.  
@@ -173,6 +188,6 @@ ms.locfileid: "70176073"
 ### <a name="refs"></a>ReFS
 이제 참조에 데이터베이스 배포가 지원 됩니다.   
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 2014 버전에서 지원하는 기능](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
    

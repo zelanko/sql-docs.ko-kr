@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0ffe1ae426b39742e9d50f343daf913777836cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63225475"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>결과 처리 방법 도움말 항목(OLE DB)
@@ -24,15 +24,15 @@ ms.locfileid: "63225475"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [저장 프로시저 실행&#40;ODBC CALL 구문 사용&#41; 및 반환 코드와 출력 매개 변수 처리&#40;OLE DB&#41;](execute-stored-procedure-with-odbc-call-and-process-output.md)  
+-   [ODBC CALL 구문을 사용 하 여 &#40;저장 프로시저를 실행&#41; 하 고 반환 코드 및 출력 매개 변수 &#40;OLE DB를 처리&#41;](execute-stored-procedure-with-odbc-call-and-process-output.md)  
   
--   [저장 프로시저 실행&#40;RPC 구문 사용&#41; 및 반환 코드와 출력 매개 변수 처리&#40;OLE DB&#41;](execute-stored-procedure-with-rpc-and-process-output.md)  
+-   [RPC 구문&#41;를 사용 하 &#40;저장 프로시저를 실행 하 고 반환 코드 및 출력 매개 변수 &#40;OLE DB를 처리&#41;](execute-stored-procedure-with-rpc-and-process-output.md)  
   
--   [사용자 정의 함수 실행 및 반환 코드 처리&#40;OLE DB&#41;](execute-a-user-defined-function-and-process-return-code-ole-db.md)  
+-   [사용자 정의 함수를 실행 하 고 OLE DB &#40;반환 코드를 처리&#41;](execute-a-user-defined-function-and-process-return-code-ole-db.md)  
   
--   [결과 집합에서 행 인출&#40;OLE DB&#41;](fetch-rows-from-a-result-set-ole-db.md)  
+-   [결과 집합에서 행을 인출 &#40;OLE DB&#41;](fetch-rows-from-a-result-set-ole-db.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [OLE DB 방법 도움말 항목](../ole-db-how-to-topics.md)  
   
   

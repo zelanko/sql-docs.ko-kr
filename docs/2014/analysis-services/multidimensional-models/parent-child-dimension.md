@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d0eac17d30d8a8870d03a0b5b81610fad1344333
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073392"
 ---
 # <a name="parent-child-hierarchy"></a>부모-자식 계층
@@ -44,14 +44,15 @@ ms.locfileid: "66073392"
   
  그러나 부모-자식 차원은 차원 주 테이블에 포함된 데이터를 검사하여 부모-자식 계층을 구성한 다음 테이블에 있는 레코드 간의 부모-자식 관계를 평가합니다. 부모-자식 계층에 대한 자세한 내용은 [사용자 계층](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)을 참조하세요.  
   
- 부모-자식 계층에서는 계층의 수준 이름이 계층을 만드는 데 사용되는 특성에서 파생되지 않습니다. 이러한 차원 수준 이름을 만듭니다 하는 대신 자동으로 명명 템플릿 문자열 식으로 지정할 수 있습니다 특성이 특성 계층을 생성 하는 방법을 제어 하는 부모 특성의 수준입니다. 부모 특성의 명명 템플릿을 설정하는 방법에 대한 자세한 내용은 [특성 및 특성 계층](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)을 참조하세요.  
+ 부모-자식 계층에서는 계층의 수준 이름이 계층을 만드는 데 사용되는 특성에서 파생되지 않습니다. 대신 이러한 차원은 명명 템플릿을 사용 하 여 자동으로 수준 이름을 만듭니다. 특성은 특성 계층을 생성 하는 방법을 제어 하는 부모 특성의 수준에서 지정할 수 있는 문자열 식입니다. 부모 특성의 명명 템플릿을 설정하는 방법에 대한 자세한 내용은 [특성 및 특성 계층](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)을 참조하세요.  
   
 ## <a name="data-members"></a>데이터 멤버  
  일반적으로 차원의 리프 멤버는 기본 데이터 원본에서 직접 파생된 데이터를 포함하는 반면 리프가 아닌 멤버는 자식 멤버에 대해 수행된 집계에서 파생된 데이터를 포함합니다.  
   
- 그러나 부모-자식 계층에는 자식 멤버에서 집계되는 데이터뿐 아니라 기본 데이터 원본에서 파생되는 데이터를 포함하는 리프가 아닌 멤버가 있을 수 있습니다. 부모-자식 계층의 이러한 리프가 아닌 멤버에 대해서는 기본 팩트 테이블 데이터가 포함된 특별한 시스템 생성 자식 멤버를 만들 수 있습니다. *데이터 멤버*라고 하는 이러한 특수 자식 멤버에는 리프가 아닌 멤버와 직접 연결되며 리프가 아닌 멤버의 하위 항목에서 계산되는 요약 값에 독립적인 값이 포함됩니다. 데이터 멤버에 대한 자세한 내용은 [부모-자식 계층의 특성](parent-child-dimension-attributes.md)을 참조하세요.  
+ 그러나 부모-자식 계층에는 자식 멤버에서 집계되는 데이터뿐 아니라 기본 데이터 원본에서 파생되는 데이터를 포함하는 리프가 아닌 멤버가 있을 수 있습니다. 부모-자식 계층의 이러한 리프가 아닌 멤버에 대해서는 기본 팩트 테이블 데이터가 포함된 특별한 시스템 생성 자식 멤버를 만들 수 있습니다. 
+  *데이터 멤버*라고 하는 이러한 특수 자식 멤버에는 리프가 아닌 멤버와 직접 연결되며 리프가 아닌 멤버의 하위 항목에서 계산되는 요약 값에 독립적인 값이 포함됩니다. 데이터 멤버에 대한 자세한 내용은 [부모-자식 계층의 특성](parent-child-dimension-attributes.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [부모-자식 계층의 특성](parent-child-dimension-attributes.md)   
  [데이터베이스 차원 속성](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)  
   

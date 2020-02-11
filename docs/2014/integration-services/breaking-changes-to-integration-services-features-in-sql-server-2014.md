@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2014의에서 기능을 서비스 통합의 주요 변경 내용 | Microsoft Docs
+title: SQL Server 2014의 Integration Services 기능에 대 한 주요 변경 내용 Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b59a9846f856871baa96822f6fffea3b69be7a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061248"
 ---
 # <a name="breaking-changes-to-integration-services-features-in-sql-server-2014"></a>SQL Server 2014 Integration Services 기능의 주요 변경

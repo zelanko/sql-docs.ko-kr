@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5c407efc18790b4d8ed8912e47248f4d04de9fca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062098"
 ---
 # <a name="add-an-annotation-to-a-package"></a>패키지에 주석 추가
@@ -47,7 +47,7 @@ ms.locfileid: "66062098"
   
 8.  업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **모두 저장**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [패키지에서 주석 사용](use-annotations-in-packages.md)  
   
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a87af3febdab1e98dac0b1546b8b2b8939b739d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061122"
 ---
 # <a name="cdc-control-task-editor"></a>CDC 제어 태스크 편집기
@@ -30,7 +30,7 @@ ms.locfileid: "66061122"
   
 2.  **제어 흐름** 탭에서 CDC 제어 태스크를 두 번 클릭합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **SQL Server CDC 데이터베이스 ADO.NET 연결 관리자**  
  목록에서 기존 연결 관리자를 선택하거나 **새로 만들기** 를 클릭하여 새 연결을 만듭니다. CDC에 사용할 수 있고 선택한 변경 테이블이 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스에 연결해야 합니다.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66061122"
   
  상태 변수를 정의하는 방법에 대한 자세한 내용은 [상태 변수 정의](data-flow/define-a-state-variable.md)를 참조하세요.  
   
- **CDC/스냅숏 이름을 시작하는 SQL Server LSN:**  
+ **CDC/스냅샷 이름을 시작하는 SQL Server LSN:**  
  CDC가 시작되는 위치를 결정하기 위해 초기 로드가 수행되는 스냅샷 데이터베이스의 이름 또는 현재 원본 데이터베이스 LSN을 입력합니다. 이 작업은 **CDC 제어 작업** 이 **CDC 시작 표시**로 설정되어 있는 경우에만 사용할 수 있습니다.  
   
  이러한 작업에 대한 자세한 내용은 [CDC Control Task](control-flow/cdc-control-task.md)를 참조하세요.  
@@ -89,7 +89,7 @@ ms.locfileid: "66061122"
  **상태 이름**  
  영구 CDC 상태에 연결할 이름을 입력합니다. 동일한 CDC 컨텍스트를 사용하는 CDC 패키지 및 전체 로드는 일반적인 상태 이름을 지정합니다. 이 이름은 상태 테이블에서 상태 행을 조회하는 데 사용됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [CDC 제어 태스크 사용자 지정 속성](control-flow/cdc-control-task-custom-properties.md)  
   
   

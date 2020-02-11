@@ -1,5 +1,5 @@
 ---
-title: 작업 (Cube Designer) (Analysis Services-다차원 데이터) | Microsoft Docs
+title: 동작 (큐브 디자이너) (Analysis Services 다차원 데이터) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 67c2def091fe6e1282e00c65c23e8d98544e970f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062900"
 ---
 # <a name="actions-cube-designer-analysis-services---multidimensional-data"></a>동작(큐브 디자이너)(Analysis Services - 다차원 데이터)
@@ -24,32 +24,34 @@ ms.locfileid: "66062900"
   
 ## <a name="panes"></a>창  
  **도구 모음**  
- 도구 모음을 사용하여 이 탭에서 일반 동작을 수행할 수 있습니다. 이 창에 대 한 자세한 내용은 참조 하세요. [도구 모음 &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services-Multidimensional Data&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)합니다.  
+ 이 탭에서 일반 동작을 수행 하려면 도구 모음을 사용 합니다. 이 창에 대 한 자세한 내용은 [도구 모음 &#40;동작 탭, 큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)를 참조 하세요.  
   
  **동작 구성 도우미**  
- 폼 보기의 **동작 구성 도우미** 창을 사용하여 큐브에 포함된 동작을 정렬된 형식으로 표시할 수 있습니다. 이 창에 대 한 자세한 내용은 참조 하세요. [동작 구성 도우미 &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services-Multidimensional Data&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)합니다.  
+ 폼 보기의 **동작 구성 도우미** 창을 사용하여 큐브에 포함된 동작을 정렬된 형식으로 표시할 수 있습니다. 이 창에 대 한 자세한 내용은 [작업 구성 도우미 &#40;동작 탭, 큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)를 참조 하세요.  
   
  **계산 도구**  
- 폼 보기의 **계산 도구** 창을 사용하여 큐브에 사용 가능한 메타데이터, 함수 및 도구를 표시할 수 있습니다. 이 창에 대 한 자세한 내용은 참조 하세요. [계산 도구 &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services-Multidimensional Data&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)합니다.  
+ 폼 보기의 **계산 도구** 창을 사용하여 큐브에 사용 가능한 메타데이터, 함수 및 도구를 표시할 수 있습니다. 이 창에 대 한 자세한 내용은 [계산 도구 &#40;동작 탭, 큐브 디자이너&#41; &#40;Analysis Services 다차원 데이터&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)를 참조 하세요.  
   
  **동작 폼 편집기**  
- 폼 보기의 **동작 폼 편집기** 창을 사용하여 큐브에 포함된 표준 동작을 편집할 수 있습니다. 이 창에 대 한 자세한 내용은 참조 하세요. [동작 폼 편집기 &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services-Multidimensional Data&#41;](action-form-editor-cube-designer-analysis-services-multidimensional-data.md)합니다.  
+ 폼 보기의 **동작 폼 편집기** 창을 사용하여 큐브에 포함된 표준 동작을 편집할 수 있습니다. 이 창에 대 한 자세한 내용은 [동작 폼 편집기 &#40;동작 탭, 큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](action-form-editor-cube-designer-analysis-services-multidimensional-data.md)를 참조 하세요.  
   
  **드릴스루 동작 폼 편집기**  
- **드릴스루 동작 폼 편집기** 창을 사용하여 큐브에 포함된 드릴스루 동작을 편집할 수 있습니다. 이 창에 대 한 자세한 내용은 참조 하세요. [드릴스루 동작 폼 편집기 &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services-Multidimensional Data&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)합니다.  
+ 
+  **드릴스루 동작 폼 편집기** 창을 사용하여 큐브에 포함된 드릴스루 동작을 편집할 수 있습니다. 이 창에 대 한 자세한 내용은 [드릴스루 동작 폼 편집기 &#40;동작 탭, 큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)를 참조 하세요.  
   
  **보고 동작 폼 편집기**  
- **보고서 동작 폼 편집기** 창을 사용하여 큐브에 포함된 보고서 동작을 편집할 수 있습니다. 이 창에 대 한 자세한 내용은 참조 하세요. [보고 동작 폼 편집기 &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services-Multidimensional Data&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)합니다.  
+ 
+  **보고서 동작 폼 편집기** 창을 사용하여 큐브에 포함된 보고서 동작을 편집할 수 있습니다. 이 창에 대 한 자세한 내용은 [보고서 동작 폼 편집기 &#40;동작 탭, 큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)를 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [작업 &#40;Analysis Services-다차원 데이터&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
- [MDX 스크립팅 기본 사항 & #40; Analysis Services & #41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
- [도구 모음 &#40;동작 탭, 큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [동작 구성 도우미 &#40;동작 탭, 큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
- [계산 도구 &#40;동작 탭, 큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   
- [동작 폼 편집기 &#40;동작 탭, 큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [드릴스루 동작 폼 편집기 &#40;동작 탭, 큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [보고 동작 폼 편집기 &#40;동작 탭, 큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [큐브 디자이너 &#40;Analysis Services-다차원 데이터&#41;](cube-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>참고 항목  
+ [작업 &#40;Analysis Services 다차원 데이터&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
+ [MDX 스크립팅 기본 사항 &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [도구 모음 &#40;동작 탭, 큐브 디자이너&#41; &#40;Analysis Services 다차원 데이터&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [동작 구성 도우미 &#40;동작 탭, 큐브 디자이너&#41; &#40;Analysis Services 다차원 데이터&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
+ [계산 도구 &#40;동작 탭, 큐브 디자이너&#41; &#40;Analysis Services 다차원 데이터&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   
+ [작업 폼 편집기 &#40;동작 탭, 큐브 디자이너&#41; &#40;Analysis Services 다차원 데이터&#41;](action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [드릴스루 동작 폼 편집기 &#40;동작 탭, 큐브 디자이너&#41; &#40;Analysis Services 다차원 데이터&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [보고서 동작 폼 편집기 &#40;동작 탭, 큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [큐브 디자이너 &#40;Analysis Services 다차원 데이터&#41;](cube-designer-analysis-services-multidimensional-data.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Analysis Services Tutorial 시나리오 | Microsoft Docs
+title: Analysis Services 자습서 시나리오 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 323c98b56e2d77c529fb2adf913b15e51bd77900
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062435"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Analysis Services Tutorial 시나리오
-  이 자습서는 가상 회사인 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]를 기반으로 합니다. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 는 북미, 유럽 및 아시아 시장에서 금속 및 합성 소재 자전거를 생산하고 판매하는 대규모 다국적 제조 회사입니다. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 의 본사는 워싱턴 주 보셀에 위치하고 있으며 직원 수는 500명입니다. 또한 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 는 판매 시장에 전반에 걸쳐 몇몇 지역에 영업 팀을 운영하고 있습니다.  
+  이 자습서는 가상 회사인 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]를 기반으로 합니다. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]는 금속 및 복합 자전거를 생산 하 고 북아메리카, 유럽 및 아시아의 상용 시장에 배포 하는 다국적 다국적 제조 회사입니다. 
+  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 의 본사는 워싱턴 주 보셀에 위치하고 있으며 직원 수는 500명입니다. 또한 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 는 판매 시장에 전반에 걸쳐 몇몇 지역에 영업 팀을 운영하고 있습니다.  
   
- [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 는 최근에 멕시코에 위치한 소규모 제조업체인 Importadores Neptuno를 인수했습니다. Importadores Neptuno는 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 제품 라인에서 중요한 여러 가지 하위 구성 요소를 제조합니다. 이러한 하위 구성 요소는 Bothell로 운송된 후 최종 제품 조립에 사용됩니다. 2005년에 Importadores Neptuno는 여행용 자전거 제품 그룹의 유일한 제조업체이자 유통업체가 되었습니다.  
+ 
+  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 는 최근에 멕시코에 위치한 소규모 제조업체인 Importadores Neptuno를 인수했습니다. Importadores Neptuno는 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 제품 라인에서 중요한 여러 가지 하위 구성 요소를 제조합니다. 이러한 하위 구성 요소는 Bothell로 운송된 후 최종 제품 조립에 사용됩니다. 2005년에 Importadores Neptuno는 여행용 자전거 제품 그룹의 유일한 제조업체이자 유통업체가 되었습니다.  
   
  회계 연도를 성공적으로 마무리한 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 는 우수 고객 중심으로 광고를 제공해 시장 점유율을 높이고 외부 웹 사이트를 통해 제품 사용 가능성을 높이며 생산 비용을 절감하여 판매 비용을 낮추려고 합니다.  
   
@@ -31,7 +33,8 @@ ms.locfileid: "66062435"
   
 -   쿼리 성능은 크게 다릅니다. 예를 들어 일부 쿼리는 몇 초만에 빠르게 결과를 반환하지만 다른 쿼리는 결과 반환에 몇 분이 걸립니다.  
   
--   집계 테이블은 관리하기가 어렵습니다. [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 의 데이터 웨어하우스 팀은 쿼리 응답 시간을 향상시키기 위해 **AdventureWorksDW2012** 데이터베이스에 몇 개의 집계 테이블을 작성했습니다. 예를 들어 월간 판매를 요약하는 테이블을 작성했습니다. 그러나 이러한 집계 테이블은 쿼리 성능을 크게 향상시키는 반면 시간에 따라 테이블을 유지하기 위해 구축한 인프라는 오류가 쉽게 발생합니다.  
+-   집계 테이블은 관리하기가 어렵습니다. 
+  [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 의 데이터 웨어하우스 팀은 쿼리 응답 시간을 향상시키기 위해 **AdventureWorksDW2012** 데이터베이스에 몇 개의 집계 테이블을 작성했습니다. 예를 들어 월간 판매를 요약하는 테이블을 작성했습니다. 그러나 이러한 집계 테이블은 쿼리 성능을 크게 향상시키는 반면 시간에 따라 테이블을 유지하기 위해 구축한 인프라는 오류가 쉽게 발생합니다.  
   
 -   복잡한 계산 논리가 보고서 정의에 포함되어 있고 보고서 간에 공유되기가 어렵습니다. 이 비즈니스 논리는 각 보고서마다 별도로 생성되므로 보고서 간 요약 정보가 다를 수도 있습니다. 따라서 경영진의 데이터 웨어하우스 보고서에 대한 신뢰성이 제한적이었습니다.  
   
@@ -46,7 +49,7 @@ ms.locfileid: "66062435"
 -   정보는 감사하기가 어렵습니다. 재무 부서에서는 대량 쿼리할 데이터 원본으로 현재 **AdventureWorksDW2012** 데이터베이스만 사용합니다. 데이터를 개별 스프레드시트에 다운로드하고 데이터 준비와 스프레드시트 조작에 상당한 시간을 소비합니다. 따라서 회사 전체에서 기업 재무 보고서를 준비, 감사 및 관리하기가 어렵습니다.  
   
 ## <a name="the-solution"></a>솔루션  
- 최근 데이터 웨어하우스 팀은 현재 분석 시스템의 설계를 검토했습니다. 검토에는 현재의 문제와 향후 요구 사항에 대한 차이점 분석이 포함됩니다. 데이터 웨어하우스 팀은 **AdventureWorksDW2012** 데이터베이스가 일치된 차원과 대리 키가 있는 잘 설계된 차원 데이터베이스임을 확인했습니다. 일치된 차원이 제공되므로 시간 차원이나 제품 차원과 같은 여러 데이터 마트에 차원을 사용할 수 있습니다. 대리 키는 차원과 팩트 테이블을 연결하는 인공 키로 고유성을 확보하고 성능을 향상시키는 데 사용됩니다. 또한 데이터 웨어하우스 팀은 현재 **AdventureWorksDW2012** 데이터베이스의 기준 테이블을 로드하고 관리하는 데 큰 문제가 없음을 확인했습니다. 따라서 이 팀은 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 를 사용하여 다음을 수행하도록 결정했습니다.  
+ 최근 데이터 웨어하우스 팀은 현재 분석 시스템의 설계를 검토했습니다. 검토에는 현재의 문제와 향후 요구 사항에 대한 차이점 분석이 포함됩니다. 데이터 웨어하우스 팀은 **AdventureWorksDW2012** 데이터베이스가 일치된 차원과 대리 키가 있는 잘 설계된 차원 데이터베이스임을 확인했습니다. 일치된 차원이 제공되므로 시간 차원이나 제품 차원과 같은 여러 데이터 마트에 차원을 사용할 수 있습니다. 대리 키는 차원과 팩트 테이블을 연결하는 인공 키로 고유성을 확보하고 성능을 향상시키는 데 사용됩니다. 또한 데이터 웨어하우스 팀은 현재 **AdventureWorksDW2012** 데이터베이스의 기준 테이블을 로드하고 관리하는 데 큰 문제가 없음을 확인했습니다. 따라서 팀은를 사용 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 하 여 다음을 수행 하기로 결정 했습니다.  
   
 -   분석적인 분석 및 보고를 위해 공통 메타데이터 계층을 통해 통합된 데이터 액세스를 제공합니다.  
   
@@ -60,9 +63,9 @@ ms.locfileid: "66062435"
   
 -   미국 외부에 있는 비즈니스 사용자에게 지역화된 경험을 제공합니다.  
   
- Analysis Services 자습서의 단원에서는 이러한 모든 목표에 맞는 큐브 데이터베이스를 작성하는 데 필요한 지침을 제공합니다. 시작 하려면 첫 번째 단원으로 이동 합니다. [1단원: 새 테이블 형식 모델 프로젝트를 만들](lesson-1-create-a-new-tabular-model-project.md)합니다.  
+ Analysis Services 자습서의 단원에서는 이러한 모든 목표에 맞는 큐브 데이터베이스를 작성하는 데 필요한 지침을 제공합니다. 시작하려면 첫 번째 단원인 [1단원: 새 테이블 형식 모델 프로젝트를 만들기](lesson-1-create-a-new-tabular-model-project.md)로 이동하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [다차원 모델링 & #40; Adventure Works 자습서 & #41;](multidimensional-modeling-adventure-works-tutorial.md)  
+## <a name="see-also"></a>참고 항목  
+ [&#40;의 다차원 모델링은 놀이 Works 자습서&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

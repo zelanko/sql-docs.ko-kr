@@ -17,13 +17,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3835f83efff9e720f7f8631d527b9547e3b4239a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245607"
 ---
-# <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>SQL Server 에이전트 오류 로그 보기(SQL Server Management Studio)
+# <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>View SQL Server Agent Error Log (SQL Server Management Studio)
   이 항목에서는  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에이전트 오류 로그를 보는 방법에 대해 설명합니다.  
   
  로그 파일 뷰어는 다양한 구성 요소의 로그 정보를 표시합니다. 로그 파일 뷰어를 연 다음 **로그 선택** 창을 사용하여 표시할 로그를 선택할 수 있습니다. 각 로그는 해당 로그 유형에 적합한 열을 표시합니다. 사용 가능한 로그는 로그 파일 뷰어를 여는 방법에 따라 다릅니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "63245607"
   
      [보안](#Security)  
   
--   [SQL Server Management Studio를 사용하여 SQL Server 에이전트 오류 로그를 보려면](#SSMSProcedure)  
+-   [SQL Server 에이전트 오류 로그를 보려면 SQL Server Management Studio를 사용 하십시오.](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -45,7 +45,7 @@ ms.locfileid: "63245607"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  해당 기능을 수행하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 **sysadmin** 고정 서버 역할 멤버인 계정의 자격 증명을 사용하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에이전트를 구성해야 합니다. 이 계정에는 다음과 같은 Windows 사용 권한이 필요합니다.  
   
 -   서비스로 로그온(SeServiceLogonRight)  
@@ -56,13 +56,15 @@ ms.locfileid: "63245607"
   
 -   프로세스의 메모리 할당량 조정(SeIncreaseQuotaPrivilege)  
   
- 에 필요한 Windows 사용 권한에 대 한 자세한 내용은 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정 참조 [SQL Server 에이전트 서비스 계정 선택](select-an-account-for-the-sql-server-agent-service.md) 및 [Configure Windows Service Accounts 및 사용 권한](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정에 필요한 windows 사용 권한에 대 한 자세한 내용은 [SQL Server 에이전트 서비스에 대 한 계정 선택](select-an-account-for-the-sql-server-agent-service.md) 및 [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)을 참조 하세요.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### <a name="to-view-the-includessnoversionincludesssnoversion-mdmd-agent-error-log"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 오류 로그를 보려면  
+#### <a name="to-view-the-includessnoversionincludesssnoversion-mdmd-agent-error-log"></a>
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 오류 로그를 보려면  
   
-1.  **개체 탐색기**에서 더하기 기호를 클릭하여 보려는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 오류 로그가 포함된 서버를 확장합니다.  
+1.  
+  **개체 탐색기**에서 더하기 기호를 클릭하여 보려는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 오류 로그가 포함된 서버를 확장합니다.  
   
 2.  더하기 기호를 클릭하여 **SQL Server 에이전트**를 확장합니다.  
   
@@ -70,19 +72,22 @@ ms.locfileid: "63245607"
   
 4.  보려는 오류 로그를 마우스 오른쪽 단추로 클릭하고 **에이전트 로그 보기**를 선택합니다.  
   
-     다음 옵션은 **로그 파일 뷰어-** _server_name_ 대화 상자에서 사용할 수 있습니다.  
+     다음 옵션은 **로그 파일 뷰어-**_server_name_ 대화 상자에서 사용할 수 있습니다.  
   
      **로그 로드**  
      로드할 로그 파일을 지정할 수 있는 대화 상자를 엽니다.  
   
      **내보내기**  
-     **로그 파일 요약** 표에 표시된 정보를 텍스트 파일로 내보낼 수 있는 대화 상자를 엽니다.  
+     
+  **로그 파일 요약** 표에 표시된 정보를 텍스트 파일로 내보낼 수 있는 대화 상자를 엽니다.  
   
      **새로 고침**  
-     선택한 로그의 뷰를 새로 고칩니다. **새로 고침** 단추를 누르면 필터 설정을 적용하는 동안 대상 서버에서 선택한 로그를 다시 읽습니다.  
+     선택한 로그의 뷰를 새로 고칩니다. 
+  **새로 고침** 단추를 누르면 필터 설정을 적용하는 동안 대상 서버에서 선택한 로그를 다시 읽습니다.  
   
-     **필터**  
-     **연결**, **날짜**또는 기타 **일반** 필터 조건과 같이 로그 파일 필터링에 사용되는 설정을 지정할 수 있는 대화 상자를 엽니다.  
+     **Filter**  
+     
+  **연결**, **날짜**또는 기타 **일반** 필터 조건과 같이 로그 파일 필터링에 사용되는 설정을 지정할 수 있는 대화 상자를 엽니다.  
   
      **검색**  
      로그 파일에서 특정 텍스트를 검색합니다. 와일드카드 문자를 사용한 검색은 지원되지 않습니다.  
@@ -97,7 +102,7 @@ ms.locfileid: "63245607"
      선택한 이벤트 행에 대한 추가 정보를 페이지 아래쪽에 표시하려면 해당 행을 선택합니다. 열을 표의 새 위치로 끌어서 다시 정렬할 수 있습니다. 표 머리글의 열 구분선을 왼쪽이나 오른쪽으로 끌어 열의 크기를 조정할 수도 있습니다. 열 내용에 맞게 열 너비를 자동 조정하려면 표 머리글의 열 구분선을 두 번 클릭합니다.  
   
      **인스턴스**  
-     이벤트가 발생한 인스턴스의 이름입니다. 이 이름은 *컴퓨터 이름*\\*인스턴스 이름*으로 표시됩니다.  
+     이벤트가 발생한 인스턴스의 이름입니다. *컴퓨터 이름*\\*인스턴스 이름*으로 표시 됩니다.  
   
      **Date**  
      이벤트의 날짜를 표시합니다.  
@@ -108,7 +113,7 @@ ms.locfileid: "63245607"
      **메시지**  
      이벤트와 관련된 메시지를 표시합니다.  
   
-     **로그 유형**  
+     **로그 형식**  
      이벤트가 속한 로그의 유형을 표시합니다. 선택한 모든 로그가 로그 파일 요약 창에 나타납니다.  
   
      **로그 원본**  

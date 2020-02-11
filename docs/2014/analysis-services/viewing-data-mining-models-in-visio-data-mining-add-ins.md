@@ -1,5 +1,5 @@
 ---
-title: Visio (데이터 마이닝 추가 기능)에서 데이터 마이닝 모델 보기 | Microsoft Docs
+title: Visio에서 데이터 마이닝 모델 보기 (데이터 마이닝 추가 기능) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,17 +16,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c287e840c07d11a527e980f9f07fb39fb3852739
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065514"
 ---
 # <a name="viewing-data-mining-models-in-visio-data-mining-add-ins"></a>Visio에서 데이터 마이닝 모델 보기(데이터 마이닝 추가 기능)
   데이터 마이닝용 Visio 셰이프를 사용하여 서버에 연결하고 기존 데이터 마이닝 모델을 나타내는 다이어그램을 만들 수 있습니다. 그런 다음 Visio 컨트롤을 사용하여 다이어그램을 사용자 지정할 수 있지만, 데이터로 드릴다운하고, 일부 기본 통계를 노출하고, 기본 모델을 사용할 수도 있습니다.  
   
 ## <a name="building-a-model-diagram"></a>모델 다이어그램 작성  
- 데이터 마이닝용 Visio 셰이프를 포함 하는 파일을 열면 합니다 **셰이프** 창에는 다음 셰이프가 표시 됩니다.  
+ 데이터 마이닝용 Visio 셰이프를 포함 하는 파일을 열면 **셰이프** 창에 다음과 같은 모양이 표시 됩니다.  
   
  Visio를 열 때 데이터 마이닝 셰이프가 표시되지 않으면 설치 폴더에서 템플릿 파일을 엽니다.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66065514"
 |Visio 셰이프|지원되는 모델|  
 |-----------------|----------------------|  
 |의사 결정 트리|의사 결정 트리 또는 선형 회귀 알고리즘을 기반으로 하는 모델에 이 셰이프를 사용합니다.|  
-|종속성 네트워크|다음 알고리즘 중 하나에 따라 모델에 대 한이 셰이프를 사용 합니다. Naive Bayes, 의사 결정 트리 또는 연결 규칙|  
+|종속성 네트워크|Naive Bayes, 의사 결정 트리 또는 연결 규칙 알고리즘을 기반으로 하는 모델에이 셰이프를 사용 합니다.|  
 |클러스터|클러스터링 알고리즘을 기반으로 하는 모델에 이 셰이프를 사용합니다.|  
   
  마이닝 모델의 데이터 형식에 따라 마법사에서 제공하는 옵션이 다를 수 있습니다. 예를 들어, 연속 숫자를 포함하는 열은 범주 변수를 포함하는 열과 다르게 시각화됩니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "66065514"
   
  [의사 결정 트리 다이어그램 연습](decision-tree-diagram-walkthrough-data-mining-add-ins.md)  
   
-## <a name="see-also"></a>관련 항목  
- [Excel에서 모델 찾아보기 &#40;SQL Server 데이터 마이닝 추가 기능&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
+## <a name="see-also"></a>참고 항목  
+ [Excel &#40;SQL Server 데이터 마이닝 추가 기능을 검색 하는 모델&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   
   

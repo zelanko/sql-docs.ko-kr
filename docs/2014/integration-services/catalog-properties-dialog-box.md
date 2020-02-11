@@ -14,14 +14,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d3492cce19906322ef9b420718aae0ae9e0e62d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061108"
 ---
 # <a name="catalog-properties-dialog-box"></a>카탈로그 속성 대화 상자
-  카탈로그 속성 대화 상자를 사용하여 SSISDB 카탈로그를 구성할 수 있습니다. 카탈로그 속성은 중요한 데이터가 암호화되는 방법, 작업 및 프로젝트 버전 관리 데이터가 보존되는 방법 및 유효성 검사 작업의 제한 시간을 정의합니다. SSISDB 카탈로그는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트, 패키지, 매개 변수 및 환경에 대한 중앙 스토리지 및 관리 지점 역할을 합니다.  
+  카탈로그 속성 대화 상자를 사용하여 SSISDB 카탈로그를 구성할 수 있습니다. 카탈로그 속성은 중요 한 데이터가 암호화 되는 방법, 작업 및 프로젝트 버전 관리 데이터가 보존 되는 방법 및 유효성 검사 작업의 제한 시간이 초과 되는 경우를 정의 합니다. SSISDB 카탈로그는 프로젝트, 패키지, 매개 변수 및 환경 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에 대 한 중앙 저장소 및 관리 지점입니다.  
   
  또한 catalog.catalog_property 뷰에서 카탈로그 속성을 보고 catalog.configure_catalog 저장 프로시저를 사용하여 속성을 설정할 수 있습니다. 자세한 내용은 [catalog.catalog_properties&#40;SSISDB 데이터베이스&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database) 및 [catalog.configure_catalog&#40;SSISDB 데이터베이스&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database)를 참조하세요.  
   
@@ -33,9 +33,9 @@ ms.locfileid: "66061108"
   
 -   [옵션 구성](#options)  
   
-##  <a name="open_dialog"></a> 카탈로그 속성 대화 상자 열기  
+##  <a name="open_dialog"></a>카탈로그 속성 대화 상자 열기  
   
-1.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]를 엽니다.  
+1.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]열기  
   
 2.  Microsoft SQL Server 데이터베이스 엔진에 연결합니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66061108"
   
 ##  <a name="options"></a> 옵션 구성  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>옵션  
  다음 표에서는 대화 상자의 특정 속성과 catalog.catalog_property 뷰의 해당 속성에 대해 설명합니다.  
   
 |속성 이름(카탈로그 속성 대화 상자)|속성 이름(catalog.catalog_property 뷰)|Description|  

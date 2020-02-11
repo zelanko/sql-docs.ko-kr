@@ -1,5 +1,5 @@
 ---
-title: 데이터 원본 (데이터 원본 뷰 마법사)를 선택 (Analysis Services) | Microsoft Docs
+title: 데이터 원본 선택 (데이터 원본 뷰 마법사) (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: be1ceb4135118197317e7b8a320c7a82d09ffda5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069856"
 ---
 # <a name="select-a-data-source-data-source-view-wizard-analysis-services"></a>데이터 원본 선택(데이터 원본 뷰 마법사)(Analysis Services)
+  
   **데이터 원본 선택** 페이지를 사용하여 데이터 원본 뷰에 대한 데이터 원본을 선택할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **관계형 데이터 원본**  
  데이터 원본 뷰를 만들 데이터 원본을 선택합니다.  
   
@@ -37,7 +38,7 @@ ms.locfileid: "66069856"
  **새 데이터 원본**  
  프로젝트에 추가될 새 데이터 원본을 만들 수 있는 데이터 원본 마법사를 엽니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 원본 뷰 마법사 F1 도움말 &#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
  [다차원 모델의 데이터 원본 뷰](multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [데이터 원본 마법사 F1 도움말 &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)  

@@ -10,25 +10,25 @@ ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Jtoland
 ms.author: Jtoland
 ms.openlocfilehash: fa87f4ac6f5a4caf5da8d5b00200b1dd8c92d53a
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72252129"
 ---
-# <a name="sql-server-migration-assistant"></a>SQL Server 마이그레이션 길잡이
+# <a name="sql-server-migration-assistant"></a>SQL Server Migration Assistant
 
-SSMA (Microsoft SQL Server Migration Assistant)는 Microsoft Access, DB2, MySQL, Oracle 및 SAP ASE에서 SQL Server로 데이터베이스 마이그레이션을 자동화 하도록 디자인 된 도구입니다.  
+Microsoft SSMA(SQL Server Migration Assistant)는 Microsoft Access, DB2, MySQL, Oracle 및 SAP ASE에서 SQL Server로 데이터베이스 마이그레이션을 자동화하기 위해 설계된 도구입니다.  
   
 ## <a name="migration-sources"></a>마이그레이션 원본  
   
-- [액세스 SQL Server Migration Assistant](../ssma/access/sql-server-migration-assistant-for-access-accesstosql.md)  
+- [Access용 SQL Server Migration Assistant](../ssma/access/sql-server-migration-assistant-for-access-accesstosql.md)  
   
-- [DB2 용 SQL Server Migration Assistant](../ssma/db2/sql-server-migration-assistant-for-db2-db2tosql.md)  
+- [DB2용 SQL Server Migration Assistant](../ssma/db2/sql-server-migration-assistant-for-db2-db2tosql.md)  
   
-- [MySQL에 대 한 SQL Server Migration Assistant](../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md)  
+- [MySQL용 SQL Server Migration Assistant](../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md)  
   
-- [Oracle에 대 한 SQL Server Migration Assistant](../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md)  
+- [Oracle용 SQL Server Migration Assistant](../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md)  
   
 - [SAP ASE에 대 한 SQL Server Migration Assistant](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
 
@@ -43,18 +43,18 @@ SSMA에 대해 지원 되는 대상 버전은 다음과 같습니다.
 - SQL Server 2016
 - Windows 및 Linux의 SQL Server 2017
 - Windows 및 Linux의 SQL Server 2019
-- Azure SQL 데이터베이스
+- Azure SQL Database
 - Azure SQL Data Warehouse * *
 
-\* *이 대상은 Oracle 용 SSMA 에서만 지원 됩니다.
+* *이 대상은 Oracle 용 SSMA 에서만 지원 됩니다.
 
 ## <a name="downloads"></a>다운로드
 
-- [SSMA for Access](https://aka.ms/ssmaforaccess)
-- [SSMA for DB2](https://aka.ms/ssmafordb2)
-- [MySQL용 SSMA](https://aka.ms/ssmaformysql)
-- [SSMA for Oracle](https://aka.ms/ssmafororacle)
-- [SSMA for SAP ASE](https://aka.ms/ssmaforsybase)
+- [Access 용 SSMA](https://aka.ms/ssmaforaccess)
+- [D b 2 용 SSMA](https://aka.ms/ssmafordb2)
+- [MySql 용 SSMA](https://aka.ms/ssmaformysql)
+- [Oracle 용 SSMA](https://aka.ms/ssmafororacle)
+- [SAP ASE 용 SSMA](https://aka.ms/ssmaforsybase)
  
 ## <a name="getting-ssma-support"></a>SSMA 지원 받기  
 
@@ -68,7 +68,7 @@ SSMA에 대해 지원 되는 대상 버전은 다음과 같습니다.
   
   - 개발자를 SQL Server 하는 데 유용한 [SQL Server Developer 센터 커뮤니티](https://go.microsoft.com/fwlink/?LinkId=42456) -뉴스 그룹, 포럼 및 기타 커뮤니티 리소스  
   
-- **지원 지원** - [https://support.microsoft.com/assistedsupportproducts](https://support.microsoft.com/assistedsupportproducts) 로 이동 하 여 ' SQL Server Migration Assistant '을 검색 합니다.  버전을 선택 하 고 "요청 시작"을 선택 합니다.  보조 지원은 SQL Server Migration Assistant 도구에 포함 됩니다.  
+- **지원 지원** -로 [https://support.microsoft.com/assistedsupportproducts](https://support.microsoft.com/assistedsupportproducts) 이동 하 여 ' SQL Server Migration Assistant '을 검색 합니다.  버전을 선택 하 고 "요청 시작"을 선택 합니다.  보조 지원은 SQL Server Migration Assistant 도구에 포함 됩니다.  
   
 - **프리미어 지원** -프리미어 계약이 있는 경우 프리미어 [온라인 포털](https://premier.microsoft.com/)에서 프리미어 지원을 받을 수 있습니다.  
   
@@ -96,7 +96,7 @@ SAP NetWeaver는 독일 및 기타 여러 국가/지역에서 SAP AG의 등록 �
 
 SQL Server 설명서의 콘텐츠는 충분한 테스트를 거친 후에만 게시됩니다. 제품 설명서-SQL Server 온라인 설명서, 추가 정보 파일, 알려진 문제점 문서 및 기술 자료 문서에는 모든 고객이 일반적으로 사용 하기에 안전 하 게 사용할 수 있는 강력한 기능 SQL Server 기능에 대 한 내용이 포함 되어 있습니다. 이 정책은 릴리스 및 서비스 팩에 대한 추가 정보 파일을 포함한 모든 SQL Server 설명서에 적용됩니다. 추가 정보 파일은 온라인 설명서의 확장으로 간주합니다.  
   
-경우에 따라 특정 기능은 고객의 직접 사용이 금지되므로 문서화되지 않습니다. Microsoft에서 게시한 SQL Server 설명서에서도 해당 기능을 설명하는 경우 이외에는 타사 서적 또는 웹 사이트의 콘텐츠는 Microsoft 고객 지원에서 지원하지 않으므로 프로덕션 데이터베이스 또는 응용 프로그램에 사용하지 않아야 합니다.  
+경우에 따라 특정 기능은 고객의 직접 사용이 금지되므로 문서화되지 않습니다. Microsoft에서 게시한 SQL Server 설명서에서도 해당 기능을 설명하는 경우 이외에는 타사 서적 또는 웹 사이트의 콘텐츠는 Microsoft 고객 지원에서 지원하지 않으므로 프로덕션 데이터베이스 또는 애플리케이션에 사용하지 않아야 합니다.  
   
 고객은 저장 프로시저, 확장 저장 프로시저, 기능, 뷰, 테이블, 열, 속성 또는 메타데이터 등을 포함하여 문서화되지 않은 API를 사용하지 않아야 합니다. Microsoft 고객 지원에서는 문서화 되지 않은 진입점을 활용 하거나 사용 하는 데이터베이스 또는 응용 프로그램을 지원 하지 않습니다.  
   

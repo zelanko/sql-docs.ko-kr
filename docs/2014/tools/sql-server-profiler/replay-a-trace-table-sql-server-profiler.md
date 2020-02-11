@@ -1,5 +1,5 @@
 ---
-title: 재생 추적 테이블 (SQL Server Profiler) | Microsoft Docs
+title: 추적 테이블 재생 (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6e80a18cef595ae3543aba8a656aca9267607e38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63240484"
 ---
 # <a name="replay-a-trace-table-sql-server-profiler"></a>추적 테이블 재생(SQL Server Profiler)
@@ -58,10 +58,10 @@ ms.locfileid: "63240484"
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 재생 중 프로세스를 관리하는 방법을 제어하려면 **상태 모니터 옵션**을 구성합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 프로파일러 실행에 필요한 권한](sql-server-profiler.md)   
  [추적 재생](replay-traces.md)   
  [추적 테이블 열기&#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md)   
- [SQL Server 프로파일러](sql-server-profiler.md)  
+ [SQL Server Profiler](sql-server-profiler.md)  
   
   

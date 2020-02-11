@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7ce00bc87ca17c97996023d7cb9a4745b9882f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076113"
 ---
 # <a name="cubes-in-multidimensional-models"></a>다차원 모델의 큐브
@@ -39,7 +39,7 @@ ms.locfileid: "66076113"
 |큐브 뷰|[다차원 모델의 큐브 뷰](perspectives-in-multidimensional-models.md)|  
 |계층 구조|[사용자 정의 계층 만들기](user-defined-hierarchies-create.md)|  
 |동작|[다차원 모델의 동작](actions-in-multidimensional-models.md)|  
-|KPI(핵심 성과 지표)|[핵심 성과 지표 & #40; Kpi & #41; 다차원 모델의](key-performance-indicators-kpis-in-multidimensional-models.md)|  
+|KPI(핵심 성과 지표)|[다차원 모델의 Kpi&#41; &#40;핵심 성과 지표](key-performance-indicators-kpis-in-multidimensional-models.md)|  
 |새 명명된 집합|[다차원 모델의 계산](calculations-in-multidimensional-models.md)|  
 |Translations|[다차원 모델의 번역](translations-in-multidimensional-models-analysis-services.md)|  
   

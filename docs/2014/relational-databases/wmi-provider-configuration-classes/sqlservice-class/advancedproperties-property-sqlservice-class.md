@@ -19,13 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: abe9d977dfcde5523e875881b1a5b80be7b1b887
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63223229"
 ---
 # <a name="advancedproperties-property-sqlservice-class"></a>AdvancedProperties 속성(SqlService 클래스)
+  
   `SqlService` 개체에 대한 고급 속성이 포함된 개체 참조의 배열을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
@@ -37,15 +38,15 @@ object
 ```  
   
 ## <a name="parts"></a>부분  
- *object*  
+ *개체가*  
  서비스를 나타내는 [SqlService 클래스](sqlservice-class.md) 개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
- 배열을 [SqlServiceAdvancedProperty 클래스](../sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) 에 대 한 고급 속성이 포함 된 개체는 `SqlService` 개체입니다.  
+ 개체에 대 한 고급 속성을 포함 하는 [SqlServiceAdvancedProperty 클래스](../sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) 개체의 배열입니다. `SqlService`  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [서비스 시작 및 중지](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

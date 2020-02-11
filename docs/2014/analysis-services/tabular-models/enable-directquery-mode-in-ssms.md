@@ -1,5 +1,5 @@
 ---
-title: 메모리 내 또는 테이블 형식 모델 데이터베이스에 대 한 DirectQuery 액세스 구성 | Microsoft Docs
+title: 테이블 형식 모델 데이터베이스에 대 한 메모리 내 또는 DirectQuery 액세스 구성 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 55a1a296e6a7b2a2155dea590be9321b22e73451
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067190"
 ---
 # <a name="configure-in-memory-or-directquery-access-for-a-tabular-model-database"></a>테이블 형식 모델 데이터베이스에 대해 메모리 내 또는 DirectQuery 액세스 구성
   이 항목에서는 직접 쿼리 모드에서 모델을 사용할 수 있도록 이미 배포된 테이블 형식 모델의 연결 속성을 변경하는 방법에 대해 설명합니다.  
   
- 이러한 속성 및 가장 일반적인 시나리오에 대 한 구성에 대 한 자세한 내용은 참조 하세요. [DirectQuery 배포 시나리오 &#40;&#40;SSAS 테이블 형식&#41;](../directquery-deployment-scenarios-ssas-tabular.md)합니다.  
+ 이러한 속성에 대 한 자세한 내용과 가장 일반적인 시나리오에 대 한 구성 정보는 [DirectQuery 배포 시나리오 &#40;SSAS 테이블 형식&#41;](../directquery-deployment-scenarios-ssas-tabular.md)을 참조 하세요.  
   
 ## <a name="requirements"></a>요구 사항  
- 테이블 형식 모델에서 직접 쿼리 모드를 사용하도록 설정하는 작업은 다단계 프로세스입니다. 다음을 수행해야 합니다.  
+ 테이블 형식 모델에서 직접 쿼리 모드를 사용하도록 설정하는 작업은 다단계 프로세스입니다. 다음이 필요합니다.  
   
 1.  모델에 직접 쿼리 모드에서 유효성 검사 오류를 일으킬 수 있는 기능이 없는지 확인  
   
@@ -43,7 +43,8 @@ ms.locfileid: "66067190"
   
 2.  개체 탐색기에서 모델 데이터베이스 이름을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
   
-3.  **DirectQueryMode**속성을 찾습니다. 관계형 데이터 원본을 사용하려면 이 속성을 다음 값 중 하나로 설정해야 합니다.  
+3.  
+  **DirectQueryMode**속성을 찾습니다. 관계형 데이터 원본을 사용하려면 이 속성을 다음 값 중 하나로 설정해야 합니다.  
   
     -   **DirectQuery**  
   

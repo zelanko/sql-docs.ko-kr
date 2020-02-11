@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 864a310044d2bf6b903b69b1b53bd6cd5bd3b38d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63240726"
 ---
 # <a name="revoke-permissions-on-an-xml-schema-collection"></a>XML 스키마 컬렉션에 대한 사용 권한 취소
@@ -44,7 +44,7 @@ ms.locfileid: "63240726"
 ## <a name="examples"></a>예  
  다음 예의 시나리오에서는 XML 스키마 권한의 작동 방식을 보여 줍니다. 각 예에서는 필요한 테스트 데이터베이스, 관계형 스키마 및 로그인을 만듭니다. 이러한 로그인에는 필요한 XML 스키마 컬렉션 권한이 부여됩니다. 각 예에서는 종료 시 필요한 정리를 수행합니다.  
   
-### <a name="a-revoking-permissions-to-create-an-xml-schema-collection"></a>1. XML 스키마 컬렉션을 만드는 권한 취소  
+### <a name="a-revoking-permissions-to-create-an-xml-schema-collection"></a>A. XML 스키마 컬렉션을 만드는 권한 취소  
  이 예에서는 로그인 계정과 예제 데이터베이스를 만듭니다. 또한 데이터베이스에 관계형 스키마를 추가합니다. 초기에 로그인 계정에는 관계형 스키마에 대한 ALTER 권한과 XML 스키마 컬렉션을 만들기 위한 다른 필수 권한이 부여됩니다. 이 예에서는 데이터베이스에 있는 관계형 스키마 중 하나에 대한 ALTER 권한을 취소합니다. 이렇게 하면 로그인 계정이 XML 스키마 컬렉션을 만들 수 없습니다.  
   
 ```  
@@ -141,7 +141,7 @@ DROP LOGIN TestLogin1
 Go  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 데이터&#40;SQL Server&#41;](xml-data-sql-server.md)   
  [형식화된 XML과 형식화되지 않은 XML 비교](compare-typed-xml-to-untyped-xml.md)   
  [XML 스키마 컬렉션&#40;SQL Server&#41;](xml-schema-collections-sql-server.md)   

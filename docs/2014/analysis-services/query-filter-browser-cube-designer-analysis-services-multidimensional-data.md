@@ -1,5 +1,5 @@
 ---
-title: 쿼리 및 필터 (브라우저 탭, 큐브 디자이너) (Analysis Services-다차원 데이터) | Microsoft Docs
+title: 쿼리 및 필터 (브라우저 탭, 큐브 디자이너) (Analysis Services 다차원 데이터) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d788a4957d7c6b3ea02e407f8b09fa80b957a4b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070535"
 ---
 # <a name="query-and-filter-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>쿼리 및 필터(브라우저 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
@@ -27,27 +27,35 @@ ms.locfileid: "66070535"
   
  기본적으로 쿼리를 실행할 때 **가장 정보** 페이지에 지정된 자격 증명이 아니라 현재 사용자의 자격 증명을 사용하여 데이터 원본에 연결합니다. 하지만 **도구 모음** 에서 **사용자 변경**을 클릭하여 쿼리 또는 보고서의 사용자 컨텍스트를 변경할 수도 있습니다.  
   
-## <a name="options"></a>변수  
- **Dimension**  
+## <a name="options"></a>옵션  
+ **차원**  
  하위 큐브를 조각화할 차원을 선택합니다.  
   
- **Hierarchy**  
+ **계층**  
  하위 큐브를 조각화할 계층을 선택합니다.  
   
  **연산자**  
- **필터 식** 의 식이 선택한 계층에 적용되는 방법을 정의하는 연산자를 선택합니다. 다음 표에서는 사용 가능한 연산자에 대해 설명합니다.  
+ 
+  **필터 식** 의 식이 선택한 계층에 적용되는 방법을 정의하는 연산자를 선택합니다. 다음 표에서는 사용 가능한 연산자에 대해 설명합니다.  
   
 |값|Description|  
 |-----------|-----------------|  
-|**같음**|**필터 식**에서 정의한 집합으로 결과가 제한됩니다.|  
-|**같지 않음**|**필터 식**에서 정의한 집합에서 제외된 멤버로 결과가 제한됩니다.|  
-|**입력**|**필터 식**에서 선택한 명명된 집합으로 결과가 제한됩니다.|  
-|**In이 아님**|**필터 식**에서 선택한 명명된 집합에서 제외된 멤버로 결과가 제한됩니다.|  
-|**포함**|이름에 **필터 식**의 문자열이 포함된 멤버로 결과가 제한됩니다.|  
-|**시작**|이름이 **필터 식**의 문자열로 시작하는 멤버로 결과가 제한됩니다.|  
-|**범위 (포함)**|**필터 식**에서 선택한 범위로 결과가 제한됩니다.|  
-|**범위 (제외)**|**필터 식**에서 선택한 범위에서 제외된 멤버로 결과가 제한됩니다.|  
-|**MDX**|**필터 식**에서 설정한 MDX(Multidimensional Expression) 식으로 결과가 제한됩니다.|  
+|**다릅니다**|
+  **필터 식**에서 정의한 집합으로 결과가 제한됩니다.|  
+|**같지 않음**|
+  **필터 식**에서 정의한 집합에서 제외된 멤버로 결과가 제한됩니다.|  
+|**진행**|
+  **필터 식**에서 선택한 명명된 집합으로 결과가 제한됩니다.|  
+|**속하지 않음**|
+  **필터 식**에서 선택한 명명된 집합에서 제외된 멤버로 결과가 제한됩니다.|  
+|**에서는**|이름에 **필터 식**의 문자열이 포함된 멤버로 결과가 제한됩니다.|  
+|**시작 문자**|이름이 **필터 식**의 문자열로 시작하는 멤버로 결과가 제한됩니다.|  
+|**범위(포함)**|
+  **필터 식**에서 선택한 범위로 결과가 제한됩니다.|  
+|**범위(제외)**|
+  **필터 식**에서 선택한 범위에서 제외된 멤버로 결과가 제한됩니다.|  
+|**MDX**|
+  **필터 식**에서 설정한 MDX(Multidimensional Expression) 식으로 결과가 제한됩니다.|  
   
  **필터 식**  
  검색 결과가 제한되도록 **연산자**로 계산할 식을 입력합니다.  
@@ -55,11 +63,11 @@ ms.locfileid: "66070535"
 > [!NOTE]  
 >  이 필드는 선택한 연산자에 필요한 데이터 형식에 따라 모양이 변경되는 동적 데이터 입력 요소입니다.  
   
-## <a name="see-also"></a>관련 항목  
- [큐브 디자이너 &#40;Analysis Services-다차원 데이터&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [브라우저 &#40;큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
- [도구 모음 &#40;브라우저 탭, 큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Excel에서 분석 &#40;브라우저 탭, 큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md)   
- [메타 데이터 &#40;브라우저 탭, 큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>참고 항목  
+ [큐브 디자이너 &#40;Analysis Services 다차원 데이터&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [브라우저 &#40;큐브 디자이너&#41; &#40;Analysis Services 다차원 데이터&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
+ [도구 모음 &#40;브라우저 탭, 큐브 디자이너&#41; &#40;Analysis Services 다차원 데이터&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Excel에서 분석 &#40;브라우저 탭, 큐브 디자이너&#41; &#40;Analysis Services 다차원 데이터&#41;](analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md)   
+ [메타 데이터 &#40;브라우저 탭, 큐브 디자이너&#41; &#40;Analysis Services 다차원 데이터&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)  
   
   

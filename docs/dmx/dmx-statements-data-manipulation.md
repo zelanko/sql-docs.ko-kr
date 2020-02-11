@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 14464ec054826cd9072d059a8ad308da51e50b03
-ms.sourcegitcommit: bb56808dd81890df4f45636b600aaf3269c374f2
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72890497"
 ---
 # <a name="dmx-statements---data-manipulation"></a>DMX 문 - 데이터 조작
@@ -20,16 +20,16 @@ ms.locfileid: "72890497"
 
   다음 표에서는 DMX(Data Mining Extensions)에서 데이터 마이닝 DML(데이터 조작 언어)의 일부분인 문을 설명합니다.  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
-|[DMX &#40;삭제&#41;](../dmx/delete-dmx.md)|마이닝 모델에서 학습한 내용을 지웁니다.|  
-|[DMX에 &#40;삽입&#41;](../dmx/insert-into-dmx.md)|마이닝 모델을 학습합니다.|  
+|[DMX&#41;&#40;삭제](../dmx/delete-dmx.md)|마이닝 모델에서 학습한 내용을 지웁니다.|  
+|[&#40;DMX&#41;에 삽입](../dmx/insert-into-dmx.md)|마이닝 모델을 학습합니다.|  
 |[DMX &#40;선택&#41;](../dmx/select-dmx.md)|마이닝 모델을 찾습니다.|  
 |[&#60;원본 데이터 쿼리&#62;](../dmx/source-data-query.md)|**INSERT INTO** 및 **SELECT** 문의 데이터 원본을 쿼리 합니다.|  
-|[DMX &#40;업데이트&#41;](../dmx/update-dmx.md)|마이닝 모델의 내용을 변경합니다.|  
+|[DMX&#41;&#40;업데이트](../dmx/update-dmx.md)|마이닝 모델의 내용을 변경합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 마이닝 확장 &#40;DMX&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
- [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
+ [데이터 마이닝 확장 &#40;DMX&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
