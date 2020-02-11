@@ -2,7 +2,7 @@
 title: SQL Server 업그레이드를 위한 재생 구성
 description: 데이터베이스 실험 도우미에 대 한 Distributed Replay 구성
 ms.custom: seo-lt-2019
-ms.date: 11/21/2019
+ms.date: 01/24/2020
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: 2ef570f531bcd37a2a5f7be1f3a900c4b8a4c112
-ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
+ms.openlocfilehash: ae7c3c2a987d9fb048c1c3fa494978626abce06a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74317734"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76761537"
 ---
 # <a name="configure-distributed-replay-for-database-experimentation-assistant"></a>데이터베이스 실험 도우미에 대 한 Distributed Replay 구성
 
@@ -48,10 +48,12 @@ Distributed Replay 컴퓨터 간에 공통 계정을 사용 해야 합니다. �
 3. Services.msc를 열고 **SQL Server Distributed Replay Controller** 서비스로 이동 합니다.
 4. 서비스를 마우스 오른쪽 단추로 클릭 한 다음 **속성**을 선택 합니다. 서비스 계정을 네트워크의 컨트롤러 및 클라이언트 컴퓨터에 공통적인 계정으로 설정 합니다.
 5. **확인** 을 선택 하 여 **속성** 창을 닫습니다.
-6. Services.msc에서 **SQL Server Distributed Replay Controller** 서비스를 다시 시작 합니다. 명령줄에서 다음 명령을 실행 하 여 서비스를 다시 시작할 수도 있습니다.<br/>
-   `NET STOP "SQL Server Distributed Replay Controller"`<br/>
+6. Services.msc에서 **SQL Server Distributed Replay Controller** 서비스를 다시 시작 합니다. 명령줄에서 다음 명령을 실행 하 여 서비스를 다시 시작할 수도 있습니다.
+
+   `NET STOP "SQL Server Distributed Replay Controller"`</br>
    `NET START "SQL Server Distributed Replay Controller"`
-7. 추가 구성 옵션은 [Configure Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay)를 참조 하세요.
+
+추가 구성 옵션은 [Configure Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay)를 참조 하세요.
 
 ## <a name="configure-dcom"></a>DCOM 구성
 
@@ -69,9 +71,10 @@ Distributed Replay 컴퓨터 간에 공통 계정을 사용 해야 합니다. �
 9. 재생을 시작할 사용자를 추가 합니다. 사용자에 게 로컬 액세스 권한을 부여 합니다. 사용자가 컨트롤러 서비스에 원격으로 액세스 하려는 경우 사용자에 게 원격 액세스 권한을 제공 합니다.
 10. **확인** 을 선택 하 여 변경 내용을 커밋하고 **보안** 탭으로 돌아갑니다.
 11. **확인** 을 선택 하 여 변경 내용을 커밋합니다.
-12. Services.msc에서 SQL Server Distributed Replay Controller 서비스를 다시 시작 합니다. 명령줄에서 다음 명령을 실행 하 여 서비스를 다시 시작할 수도 있습니다.<br/>
-   `NET STOP "SQL Server Distributed Replay Controller"`<br/>
-   `NET START "SQL Server Distributed Replay Controller"`
+12. Services.msc에서 SQL Server Distributed Replay Controller 서비스를 다시 시작 합니다. 명령줄에서 다음 명령을 실행 하 여 서비스를 다시 시작할 수도 있습니다.
+
+    `NET STOP "SQL Server Distributed Replay Controller"`</br>
+    `NET START "SQL Server Distributed Replay Controller"`
 
 ## <a name="set-up-the-client-service"></a>클라이언트 서비스 설정
 
@@ -82,12 +85,16 @@ Distributed Replay 컴퓨터 간에 공통 계정을 사용 해야 합니다. �
 3. 서비스를 마우스 오른쪽 단추로 클릭 한 다음 **속성**을 선택 합니다. 서비스 계정을 네트워크의 컨트롤러 및 클라이언트 컴퓨터에 공통 되는 계정으로 설정 합니다.
 4. **확인** 을 선택 하 여 **속성** 창을 닫습니다. Distributed Replay 클라이언트를 구성 하는 SQL Server 설치 관리자 마법사 단계를 건너뛴 경우 구성 파일을 통해 구성할 수 있습니다. 일반적인 설치에서 구성 파일은 C:\Program Files (x86) \Microsoft SQL Server\<version\>\Tools\DReplayClient\DReplayClient.config.에 있습니다.
 5. DReplayClient 파일에 컨트롤러 컴퓨터의 이름을 등록을 위한 컨트롤러로 포함 하는지 확인 합니다.
-6. Services.msc에서 클라이언트 서비스 Distributed Replay SQL Server을 다시 시작 합니다. 명령줄에서 다음 명령을 실행 하 여 서비스를 다시 시작할 수도 있습니다.<br/>
-    `NET STOP "SQL Server Distributed Replay Client"`<br/>
+6. Services.msc에서 클라이언트 서비스 Distributed Replay SQL Server을 다시 시작 합니다. 명령줄에서 다음 명령을 실행 하 여 서비스를 다시 시작할 수도 있습니다.
+
+    `NET STOP "SQL Server Distributed Replay Client"`</br>
     `NET START "SQL Server Distributed Replay Client"`
-7. Distributed Replay 컨트롤러 로그는 C:\Program Files (x86) \Microsoft SQL Server\<version\>\Tools\DReplayClient\Log.에 있습니다. 로그는 클라이언트가 컨트롤러에 자체 등록할 수 있는지 여부를 나타냅니다.
-8. 구성에 성공 하면 "컨트롤러 <컨트롤러 이름\>으로 등록 되었습니다." 라는 메시지가 로그에 표시 됩니다.
-9. 추가 구성 옵션은 [Configure Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay)를 참조 하세요.
+
+    Distributed Replay 컨트롤러 로그는 C:\Program Files (x86) \Microsoft SQL Server\<version\>\Tools\DReplayClient\Log.에 있습니다. 로그는 클라이언트가 컨트롤러에 자체 등록할 수 있는지 여부를 나타냅니다.
+
+    구성에 성공 하면 컨트롤러 **<컨트롤러 이름\>에 등록**된 메시지가 로그에 표시 됩니다.
+
+추가 구성 옵션은 [Configure Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay)를 참조 하세요.
 
 ## <a name="set-up-distributed-replay-administration-tools"></a>Distributed Replay 관리 도구 설정
 

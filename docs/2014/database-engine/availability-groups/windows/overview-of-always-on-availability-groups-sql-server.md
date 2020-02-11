@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a047a41769467d243b146f304c71662328b50cfb
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228748"
 ---
 # <a name="overview-of-alwayson-availability-groups-sql-server"></a>AlwaysOn 가용성 그룹 개요(SQL Server)
@@ -110,7 +110,7 @@ ms.locfileid: "75228748"
   
  자세한 내용은 [장애 조치(Failover) 및 장애 조치(Failover) 모드&#40;AlwaysOn 가용성 그룹&#41;](failover-and-failover-modes-always-on-availability-groups.md)를 참조하세요.  
   
-##  <a name="ClientConnections"></a>클라이언트 연결  
+##  <a name="ClientConnections"></a> 클라이언트 연결  
  가용성 그룹 수신기를 만들어 지정된 가용성 그룹의 주 복제본에 대한 클라이언트 연결을 제공할 수 있습니다. 
   *가용성 그룹 수신기* 는 지정된 가용성 그룹에 연결된 리소스 집합을 해당 가용성 복제본에 대한 직접 클라이언트 연결에 제공합니다.  
   
@@ -148,11 +148,11 @@ ms.locfileid: "75228748"
   
  자세한 내용은 [자동 페이지 복구&#40;가용성 그룹 및 데이터베이스 미러링&#41;](../../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)를 참조하세요.  
   
-##  <a name="RelatedTasks"></a>관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [AlwaysOn 가용성 그룹 &#40;SQL Server 시작 하기&#41;](getting-started-with-always-on-availability-groups-sql-server.md)  
   
-##  <a name="RelatedContent"></a>관련 내용  
+##  <a name="RelatedContent"></a> 관련 내용  
   
 -   **블로그**  
   
@@ -186,5 +186,5 @@ ms.locfileid: "75228748"
  [SQL Server&#41;&#40;가용성 그룹 만들기 및 구성](creation-and-configuration-of-availability-groups-sql-server.md)   
  [활성 보조: 읽기 가능한 보조 복제본 &#40;AlwaysOn 가용성 그룹&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [활성 보조: 보조 복제본에 대 한 백업 &#40;AlwaysOn 가용성 그룹&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
- [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치 (Failover) &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)  
+ [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)  
   

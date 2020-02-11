@@ -1,5 +1,5 @@
 ---
-title: Change Domain Values
+title: 도메인 값 변경
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -12,13 +12,13 @@ ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 5e792a15670c50b918eabbf371258aa9b62cab82
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242127"
 ---
-# <a name="change-domain-values"></a>Change Domain Values
+# <a name="change-domain-values"></a>도메인 값 변경
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -34,14 +34,14 @@ ms.locfileid: "75242127"
   
 -   Excel 파일에서 도메인 값 가져오기  
   
-##  <a name="BeforeYouBegin"></a>시작 하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a>사전  
+###  <a name="Prerequisites"></a> 필수 조건  
  도메인 값을 변경하려면 도메인 관리 작업에서 기술 자료와 도메인을 열어 두어야 합니다.  
   
-###  <a name="Security"></a>보안  
+###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a>권한에  
+####  <a name="Permissions"></a> 권한  
  도메인 값을 변경하려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
 ##  <a name="Change"></a>도메인 값 변경  
@@ -107,8 +107,7 @@ ms.locfileid: "75242127"
   
 9. **Excel에서 도메인 값 가져오기**: excel 스프레드시트에서 새 값을 추가 하려면 **값 가져오기** 아이콘에 대해 아래쪽 화살표를 클릭 한 다음 **Excel에서 도메인 값 가져오기**를 선택 합니다. 파일 이름을 입력하고 해당하는 경우 **첫 번째 행을 헤더로 사용하세요** 를 선택한 다음 **확인**을 클릭합니다. 자세한 내용은 [Excel 파일에서 도메인으로 값 가져오기](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)을 참조하세요.  
   
-10. **프로젝트 값 가져오기**: 데이터 품질 프로젝트에서 새 값을 추가 하려면 **값 가져오기** 아이콘에 대해 아래쪽 화살표를 클릭 하 고 **프로젝트 값 가져오기**를 선택 합니다. 파일 이름을 입력하고 해당하는 경우 **첫 번째 행을 헤더로 사용하세요** 를 선택한 다음 **확인**을 클릭합니다. 값을 가져올 프로젝트를 선택한 후 **확인**을 클릭합니다. 가져온 값이 표시됩니다. 
-  **마침**을 클릭합니다. 자세한 내용은 도메인에 프로젝트 값 가져오기를 참조하세요.  
+10. **프로젝트 값 가져오기**: 데이터 품질 프로젝트에서 새 값을 추가 하려면 **값 가져오기** 아이콘에 대해 아래쪽 화살표를 클릭 하 고 **프로젝트 값 가져오기**를 선택 합니다. 파일 이름을 입력하고 해당하는 경우 **첫 번째 행을 헤더로 사용하세요** 를 선택한 다음 **확인**을 클릭합니다. 값을 가져올 프로젝트를 선택한 후 **확인**을 클릭합니다. 가져온 값이 표시됩니다. **Finish**를 클릭합니다. 자세한 내용은 도메인에 프로젝트 값 가져오기를 참조하세요.  
   
 11. **선택한 도메인 값 삭제**: 도메인에서 하나 이상의 기존 값을 제거 하려면 값 테이블에서 값을 선택한 다음 **선택한 도메인 값 삭제** 아이콘을 클릭 합니다. DQS_NULL 항목은 삭제할 수 없으므로 삭제할 값을 여러 개 선택한 경우 그중 DQS_NULL 항목이 포함되어 있으면 작업이 실패합니다.  
   

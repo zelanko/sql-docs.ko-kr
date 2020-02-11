@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cea7295b67cd53844b29e876e8a0635de9cad46a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246368"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>실행 시 데이터를 사용하여 테이블 반환 매개 변수로 데이터 전송(ODBC)
@@ -186,7 +186,7 @@ from @Items
   
 ## <a name="example"></a>예제  
   
-### <a name="description"></a>설명  
+### <a name="description"></a>Description  
  이 샘플에서는 BCP를 사용 하 여 데이터베이스에 데이터를 로드 하는 방법과 유사 하 게 ODBC TVP를 사용 하 여 SQLPutData에 대 한 호출 당 행 스트리밍을 사용할 수 있음을 보여 줍니다.  
   
  예제를 빌드하기 전에 연결 문자열의 서버 이름을 변경합니다.  
@@ -374,7 +374,7 @@ EXIT:
   
 ## <a name="example"></a>예제  
   
-### <a name="description"></a>설명  
+### <a name="description"></a>Description  
  이 샘플에서는 BCP를 사용 하 여 데이터베이스에 데이터를 로드 하는 방법과 유사 하 게 ODBC TVP를 사용 하 여 SQLPutData에 대 한 호출 당 여러 행의 행 스트리밍을 사용할 수 있음을 보여 줍니다.  
   
  예제를 빌드하기 전에 연결 문자열의 서버 이름을 변경합니다.  

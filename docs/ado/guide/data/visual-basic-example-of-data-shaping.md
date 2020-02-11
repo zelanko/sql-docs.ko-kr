@@ -15,10 +15,10 @@ ms.assetid: d95dd499-19e2-4ce7-b16e-f56a04a9519c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5a21eda26bab7f5bc5d678c6763c803323ffcff8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923502"
 ---
 # <a name="visual-basic-example-of-data-shaping"></a>데이터 셰이핑의 Visual Basic 예제
@@ -90,16 +90,16 @@ End Function
   
 ```  
   
-#### <a name="try-it"></a>지금 사용해 보세요!  
+#### <a name="try-it"></a>시도해 보세요.  
   
-1.  표준 EXE Visual Basic 응용 프로그램 프로젝트 만들기  
+1.  Visual Basic Standard EXE 응용 프로그램 프로젝트 만들기  
   
-2.  선택 **구성 요소** 에서 합니다 **프로젝트** Visual Studio의 메뉴  
+2.  Visual Studio의 **프로젝트** 메뉴에서 **구성 요소** 선택  
   
-3.  "Microsoft 계층적 FlexGrid 컨트롤 6.0 (OLEDB)"를 선택 합니다 **구성 요소** 팝업 창과 클릭 **저장**합니다.  
+3.  **구성 요소** 팝업 창에서 "Microsoft 계층적 FlexGrid 컨트롤 6.0 (OLEDB)"을 선택 하 고 **저장**을 클릭 합니다.  
   
-4.  Visual Basic 작업 영역의 도구 상자 창에서 FlexGrid 컨트롤을 두 번 클릭 합니다. MSHFLEXGRID이 인스턴스의 이름을 변경 합니다.  
+4.  Visual Basic 작업 영역의 도구 상자 창에서 FlexGrid 컨트롤을 두 번 클릭 합니다. 이 인스턴스의 이름을 MSHFLEXGRID로 변경 합니다.  
   
-5.  앞의 코드를 복사 하 고 붙여 넣습니다 합니다 **코드** 기존 코드를 바꿀 페이지입니다.  
+5.  위의 코드를 복사 하 여 **코드** 페이지에 붙여넣어 기존 코드를 바꿉니다.  
   
-6.  선택 **시작** 에서 합니다 **실행** 메뉴는 응용 프로그램을 실행 합니다.
+6.  응용 프로그램을 실행 하려면 **실행** 메뉴에서 **시작** 을 선택 합니다.

@@ -10,12 +10,12 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 6552e6e2ed1ad168fb5e5ff9c0715227870bcb92
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: 7c76ec1a74032b5f35bc42ab4a901d95574e0900
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493953"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "75688212"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Microsoft BI(business intelligence) 도구로 분석 및 보고
 
@@ -25,20 +25,20 @@ ms.locfileid: "69493953"
   
  사용자에게 적합한 도구를 결정하는 데 도움이 되도록 이러한 도구에 대한 간략한 개요를 알아보려면 [Microsoft BI(비즈니스 인텔리전스) 도구 소개](https://www.digitalvidya.com/blog/introduction-to-microsoft-power-bi/)를 참조하세요.  
   
-|작업|사용자|||BI 도구|||  
+|워크로드|사용자|||BI 도구|||  
 |---------------|----------|-|-|--------------|-|-|  
 |||**Excel**|**SharePoint**|**SharePoint Online**|**Power BI**|**SQL Server**|  
 |**셀프 서비스 BI**|분석가/최종 사용자||||||  
 |쉽게 공용 및 회사 데이터 검색 및 액세스||[파워 쿼리](https://go.microsoft.com/fwlink/p/?LinkId=391845)||[Azure Data Catalog](https://azure.microsoft.com/services/data-catalog/)<br /><br />||  
 |강력한 데이터 모델 만들기||[Power Pivot](https://support.office.com/article/power-pivot-overview-and-learning-f9001958-7901-4caa-ad80-028a6d2432ed?ui=en-US&rs=en-US&ad=US)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  
 |셀프 서비스 예측 분석 수행||||||[Excel 용 데이터 마이닝 추가 기능](../analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins.md)|  
-|데이터 시각화 및 탐색||[파워 뷰](https://go.microsoft.com/fwlink/p/?LinkId=391847)<br /><br /> [파워 맵](https://go.microsoft.com/fwlink/p/?LinkId=391848)|||||  
-|자연어 쿼리를 사용하여 질문|||||[질문과 대답](https://docs.microsoft.com/power-bi/consumer/end-user-q-and-a)||  
-|모바일 디바이스를 사용하여 보고서 액세스||||[HTML 5(10MB 미만의 파일을 볼 수 있도록 지원)](https://go.microsoft.com/fwlink/p/?LinkId=391853)|[HTML 5(250MB 미만의 파일을 볼 수 있도록 지원)](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [iOS 디바이스의 Power BI 모바일 앱](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Android 디바이스의 Power BI 모바일 앱](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br />[Windows 10용 Power BI 모바일 앱](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)||  
+|데이터 시각화 및 탐색||[파워 뷰](https://go.microsoft.com/fwlink/p/?LinkId=391847)<br /><br /> [3D 맵](https://support.office.com/article/visualize-your-data-in-3d-maps-ce6b1d5c-4602-4dae-b487-91ec0268e75d)|||||  
+|자연어 쿼리를 사용하여 질문|||||[Q & A](https://docs.microsoft.com/power-bi/consumer/end-user-q-and-a)||  
+|모바일 디바이스를 사용하여 보고서 액세스||||[HTML 5 (10mb 파일 <보기 지원)](https://go.microsoft.com/fwlink/p/?LinkId=391853)|[HTML 5 (<250) 보기 지원](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [IOS 장치에서 모바일 앱 Power BI](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Android 장치에서 모바일 앱 Power BI](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br />[Windows 10 용 모바일 앱 Power BI](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)||  
 |공동 작업 및 공유|||[SharePoint 사이트](https://go.microsoft.com/fwlink/p/?LinkId=391849)|[SharePoint 팀 사이트](https://go.microsoft.com/fwlink/p/?LinkId=391850)|[Power BI 사이트](https://docs.microsoft.com/power-bi/service-how-to-collaborate-distribute-dashboards-reports)||  
-|**기업 BI**|IT 전문가||||||  
+|**회사 BI**|IT 전문가||||||  
 |다차원/테이블 형식 기업 모델 만들기||||||[Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services-overview)|  
-|임시 데이터 시각화 만들기|||[SharePoint용 파워 뷰](https://go.microsoft.com/fwlink/p/?LinkId=391858)||||  
+|임시 데이터 시각화 만들기|||[SharePoint 용 파워 뷰](https://go.microsoft.com/fwlink/p/?LinkId=391858)||||  
 |대시보드 만들기|||[SharePoint 대시보드](https://go.microsoft.com/fwlink/p/?LinkId=391859)<br /><br /> [PerformancePoint Services](https://technet.microsoft.com/library/ee424392.aspx)||||  
 |작업 보고서 만들기||||||<sup>1</sup> [Reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |사용자 지정 및 포함된 보고서 만들기||||||<sup>1</sup> [Reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)|  

@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e7b0d6e4d99c08556cefb31c33deb5238f33c636
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75225394"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Analysis Services 다차원에 대한 세계화 시나리오
@@ -75,7 +75,7 @@ ms.locfileid: "75225394"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[언어 및 데이터 정렬 &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)|
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 대한 기본 언어 및 Windows 데이터 정렬을 지정합니다. 선택 내용은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 관리하는 데이터 및 메타데이터에 영향을 줍니다.|  

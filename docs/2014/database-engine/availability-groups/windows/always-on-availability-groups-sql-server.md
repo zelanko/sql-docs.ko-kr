@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2e040fb9c05683be9d737ea134710c03d36317cd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229005"
 ---
 # <a name="always-on-availability-groups-sql-server"></a>Always On 가용성 그룹(SQL Server)
@@ -31,7 +31,7 @@ ms.locfileid: "75229005"
  가용성 그룹은 가용성 복제본의 수준에서 장애 조치(Failover)됩니다. 따라서 데이터 파일 손실, 데이터베이스 삭제, 트랜잭션 로그 손상 등으로 인해 주의 대상 데이터베이스가 발생할 경우 이러한 데이터베이스 문제로는 장애 조치(Failover)가 수행되지 않습니다.  
   
   
-##  <a name="Benefits"></a>아니라  
+##  <a name="Benefits"></a> 이점  
  
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 에서는 데이터베이스 가용성을 향상시키고 리소스 사용을 개선시켜 주는 다양한 옵션을 제공합니다. 주요 구성 요소는 다음과 같습니다.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "75229005"
   
 -   [변경 내용 추적 정보 SQL 서비스](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)  
   
--   [포함 된 데이터베이스](../../../relational-databases/databases/contained-databases.md)  
+-   [포함된 데이터베이스](../../../relational-databases/databases/contained-databases.md)  
   
 -   [데이터베이스 암호화](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
   
@@ -144,7 +144,7 @@ ms.locfileid: "75229005"
   
 -   [로그 전달](../../log-shipping/about-log-shipping-sql-server.md)  
   
--   [RBS (Remote Blob Store)](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md)  
+-   [RBS(Remote Blob Store)](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md)  
   
 -   [복제](../../install-windows/install-sql-server-replication.md)  
   
@@ -157,11 +157,11 @@ ms.locfileid: "75229005"
 > [!WARNING]  
 >  에서 다른 기능 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 사용 하는 경우의 제한 사항에 대 한 자세한 내용은 [Always On 가용성 그룹: 상호 운용성;을 참조 하세요. SQL Server;](always-on-availability-groups-interoperability-sql-server.md).  
   
-##  <a name="RelatedTasks"></a>관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [Always On 가용성 그룹 시작 하기 SQL Server;](getting-started-with-always-on-availability-groups-sql-server.md)  
   
-##  <a name="RelatedContent"></a>관련 내용  
+##  <a name="RelatedContent"></a> 관련 내용  
   
 -   **블로그**  
   
@@ -187,7 +187,7 @@ ms.locfileid: "75229005"
  [Always On 가용성 그룹에 대 한 서버 인스턴스 구성 SQL Server;](always-on-availability-groups-sql-server.md)   
  [가용성 그룹 만들기 및 구성 SQL Server;](creation-and-configuration-of-availability-groups-sql-server.md)   
  [가용성 그룹 관리 SQL Server;](administration-of-an-availability-group-sql-server.md)   
- [가용성 그룹 &#40;모니터링 SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
+ [가용성 그룹 모니터링&#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
  [Always On 가용성 그룹에 대 한 Transact-sql 문 개요 SQL Server;](transact-sql-statements-for-always-on-availability-groups.md)   
  [AlwaysOn 가용성 그룹에 대 한 PowerShell Cmdlet 개요 SQL Server;](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   

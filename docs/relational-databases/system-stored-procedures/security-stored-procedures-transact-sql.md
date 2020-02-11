@@ -1,5 +1,5 @@
 ---
-title: 보안 저장 프로시저 (거래 SQL) | Microsoft 문서
+title: 보안 저장 프로시저 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -17,33 +17,34 @@ ms.assetid: 62b72907-7e95-4c97-9891-0c45d5b678ce
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 94fdd6946cbc2800a8f0f16e706e784ff0933f73
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 05131814c390373261ae492235f36a7841d2f5f3
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941854"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76315633"
 ---
 # <a name="security-stored-procedures-transact-sql"></a>보안 저장 프로시저(Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 다음과 같은 시스템 저장 프로시저 보안을 관리 하는 데 사용 되는. 이러한 저장된 프로시저 중 일부는 사용 되지 않지만 이전 버전과 호환성을 지원 하기 위해 사용할 수 있습니다. 사용되지 않는 프로시저에 대한 항목에는 대신 사용 가능한 프로시저가 나와 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 보안을 관리 하는 데 사용 되는 다음과 같은 시스템 저장 프로시저를 지원 합니다. 이러한 저장 프로시저 중 일부는 더 이상 사용되지 않지만 이전 버전과의 호환성을 지원하기 위해 계속 제공됩니다. 사용되지 않는 프로시저에 대한 항목에는 대신 사용 가능한 프로시저가 나와 있습니다.  
 
 |||  
 |-|-|  
-|[sys.sp_add_trusted_assembly]( sys-sp-add-trusted-assembly-transact-sql.md) |[sp_addapprole](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md) (사용 되지 않음)|
+|[sys. sp_add_trusted_assembly]( sys-sp-add-trusted-assembly-transact-sql.md) |[sp_addapprole](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md) (사용 되지 않음)|
 |[sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)|[sp_addlinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)
 |[sp_addlogin](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md) (사용 되지 않음) |[sp_addremotelogin](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md) (사용 되지 않음)
 |[sp_addrole](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md) (사용 되지 않음) |[sp_addrolemember](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) (사용 되지 않음)
 |[sp_addserver](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md) (사용 되지 않음) |[sp_addsrvrolemember](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md) (사용 되지 않음)
 |[sp_adduser](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md) (사용 되지 않음) |[sp_approlepassword](../../relational-databases/system-stored-procedures/sp-approlepassword-transact-sql.md) (사용 되지 않음)
 |[sp_audit_write](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md) |[sp_change_users_login](../../relational-databases/system-stored-procedures/sp-change-users-login-transact-sql.md)
-|[sp_changedbowner](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md) |[sp_changeobjectowner](../../relational-databases/system-stored-procedures/sp-changeobjectowner-transact-sql.md) (사용 되지 않음)
+|[sp_changedbowner](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md) (사용 되지 않음) 
+|[sp_changeobjectowner](../../relational-databases/system-stored-procedures/sp-changeobjectowner-transact-sql.md) (사용 되지 않음)
 |[sp_control_dbmasterkey_password](../../relational-databases/system-stored-procedures/sp-control-dbmasterkey-password-transact-sql.md) |[sp_dbfixedrolepermission](../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md) (사용 되지 않음)
 |[sp_defaultdb](../../relational-databases/system-stored-procedures/sp-defaultdb-transact-sql.md) (사용 되지 않음) |[sp_defaultlanguage](../../relational-databases/system-stored-procedures/sp-defaultlanguage-transact-sql.md) (사용 되지 않음)
 |[sp_denylogin](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md) (사용 되지 않음) |[sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)
-|[sp_dropalias](../../relational-databases/system-stored-procedures/sp-dropalias-transact-sql.md) (사용 되지 않음) |[sys.sp_drop_trusted_assembly]( sys-sp-drop-trusted-assembly-transact-sql.md) |
+|[sp_dropalias](../../relational-databases/system-stored-procedures/sp-dropalias-transact-sql.md) (사용 되지 않음) |[sys. sp_drop_trusted_assembly]( sys-sp-drop-trusted-assembly-transact-sql.md) |
 |[sp_dropapprole](../../relational-databases/system-stored-procedures/sp-dropapprole-transact-sql.md) (사용 되지 않음) |[sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) |
 |[sp_droplogin](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md) (사용 되지 않음) |[sp_dropremotelogin](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md) (사용 되지 않음) |
 |[sp_droprole](../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md) (사용 되지 않음) |[sp_droprolemember](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) (사용 되지 않음) |
@@ -65,7 +66,7 @@ ms.locfileid: "67941854"
 
  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [보안 함수&#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   

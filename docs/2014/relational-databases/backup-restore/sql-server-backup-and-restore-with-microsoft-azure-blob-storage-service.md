@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 38c92e397c971f6e9976bb857c63410fa60b7e85
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232427"
 ---
 # <a name="sql-server-backup-and-restore-with-azure-blob-storage-service"></a>Azure Blob Storage Service로 SQL Server 백업 및 복원
@@ -55,7 +55,7 @@ ms.locfileid: "75232427"
   
 ## <a name="see-also"></a>참고 항목  
  [URL에 대 한 백업 SQL Server 모범 사례 및 문제 해결](sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
- [시스템 데이터베이스 백업 및 복원 &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   
+ [시스템 데이터베이스 백업 및 복원&#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   
  [자습서: Azure Blob Storage 서비스로 백업 및 복원 SQL Server](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)   
- [URL에 백업 SQL Server](sql-server-backup-to-url.md)  
+ [URL에 SQL Server Backup](sql-server-backup-to-url.md)  
   

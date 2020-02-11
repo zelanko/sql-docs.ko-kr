@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ddcb099e81ef99ff3a2f0d0cf7bbf23adc0bc16b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242967"
 ---
 # <a name="use-the-properties-window-in-management-studio"></a>Management Studio에서 속성 창 사용
@@ -42,8 +42,7 @@ ms.locfileid: "75242967"
   
 ### <a name="to-view-the-properties-of-a-showplan-operator"></a>실행 계획 연산자의 속성을 보려면  
   
-1.  
-  **쿼리** 메뉴에서 **실제 실행 계획 포함**을 클릭합니다.  
+1.  **쿼리** 메뉴에서 **실제 실행 계획 포함**을 클릭합니다.  
   
 2.  SQL 쿼리 편집기에서 쿼리를 입력 및 실행합니다.  
   
@@ -52,6 +51,6 @@ ms.locfileid: "75242967"
 4.  SQL 쿼리 편집기의 **실행 계획** 탭에서 연산자의 아이콘을 클릭하여 속성 창에서 연산자에 대한 정보를 확인합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [속성 창 &#40;Management Studio&#41;](../../ssms/properties-window-management-studio.md)  
+ [속성 창&#40;Management Studio&#41;](../../ssms/properties-window-management-studio.md)  
   
   

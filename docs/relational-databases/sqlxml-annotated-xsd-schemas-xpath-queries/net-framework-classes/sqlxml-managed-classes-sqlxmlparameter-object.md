@@ -18,20 +18,20 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6d86e6d3a6e910dbd18f2038f127ba99bfd65369
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75252616"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlparameter-object"></a>SQLXML 관리되는 클래스 - SqlXmlParameter 개체
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   SqlXmlParameter 개체는 다음 속성을 지원 합니다.  
   
- 이름  
+ 속성  
  매개 변수의 이름입니다. 명령에 매개 변수가 전달될 수 있습니다. SqlXmlCommand 개체의 CreateParameter 메서드를 호출 하면 매개 변수 개체가 만들어집니다.  
   
- Value  
+ 값  
  매개 변수의 값입니다. 작업 예제는 [SQL 쿼리 실행 &#40;SQLXML 관리 되는 클래스&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md)를 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  

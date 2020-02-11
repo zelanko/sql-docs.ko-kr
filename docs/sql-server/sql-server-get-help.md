@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9192afa87b3a035bbc048fa2476c18c1673a7a39
-ms.sourcegitcommit: 3ec48823bee1c092ce2aba6011b95174de03fb65
+ms.openlocfilehash: 71864b1670d61448b48e3acdc89d9c2d231c782d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926946"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244413"
 ---
 # <a name="sql-server-help-and-feedback"></a>SQL Server 도움말 및 피드백
 
@@ -22,7 +22,7 @@ ms.locfileid: "68926946"
 
 ## <a name="contact-microsoft-support"></a>Microsoft 지원에 문의
 
-지원 계획이 있는 고객은 Microsoft 지원으로 [티켓을 열 수](https://support.microsoft.com/en-us/hub/4343728/support-for-business) 있습니다.  자세한 내용은 [비즈니스에 지원 옵션](https://support.microsoft.com/en-us/help/4341255/support-for-business)을 참조하세요. 
+지원 계획이 있는 고객은 Microsoft 지원으로 [티켓을 열 수](https://support.microsoft.com/hub/4343728/support-for-business) 있습니다.  자세한 내용은 [비즈니스에 지원 옵션](https://support.microsoft.com/help/4341255/support-for-business)을 참조하세요. 
 
 지원 계획이 없는 고객은 커뮤니티에서 도움을 요청하거나 [https://aka.ms/sqlfeedback](https://aka.ms/sqlfeedback)에서 UserVoice를 통해 버그를 제출할 수 있습니다.
 
@@ -50,12 +50,12 @@ SQL Server 질문에 도움이 될 수 있는 많은 MSDN 포럼이 있습니다
 
 SQL Server 문제에 도움이 될 수 있는 몇 가지 커뮤니티가 있습니다. 
 
-- [Stack Overflow](https://stackoverflow.com/questions/tagged/sql-server)
+- [스택 오버플로](https://stackoverflow.com/questions/tagged/sql-server)
 - [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
 - [Reddit](https://www.reddit.com/r/SQLServer/)
 - [Twitter에서 #sqlhelp 해시 태그를 사용하여 커뮤니티의 도움 받기](https://twitter.com/hashtag/sqlhelp?src=hash) 
  
-## <a name="feedback"></a>피드백
+## <a name="feedback"></a>사용자 의견
 
 개선 내용 제안 및 다음 항목에 대한 버그를 제출할 수 있습니다.
 

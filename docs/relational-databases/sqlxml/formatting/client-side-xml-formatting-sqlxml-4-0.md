@@ -17,10 +17,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 968af0ed24f14b4766e312a0cec0e9d3e7b5022b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75247018"
 ---
 # <a name="client-side-xml-formatting-sqlxml-40"></a>클라이언트 쪽 XML 서식 지정(SQLXML 4.0)
@@ -54,7 +54,7 @@ FROM   Person.Contact
   
  다음 표에서는 클라이언트 쪽 FOR XML에서 지정할 수 있는 모드를 보여 줍니다.  
   
-|클라이언트 쪽 FOR XML 모드|설명|  
+|클라이언트 쪽 FOR XML 모드|주석|  
 |-------------------------------|-------------|  
 |RAW|클라이언트 쪽 또는 서버 쪽 FOR XML에 지정될 경우 동일한 결과를 생성합니다.|  
 |NESTED|서버 쪽의 FOR XML AUTO 모드와 비슷합니다.|  
@@ -132,6 +132,6 @@ AS
  [SQLXML 관리 되는 클래스](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)   
  [클라이언트 쪽 및 서버 쪽 XML 서식 지정 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/client-side-vs-server-side-xml-formatting-sqlxml-4-0.md)   
  [SqlXmlCommand 개체 &#40;SQLXML 관리 되는 클래스&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlcommand-object.md)   
- [XML 데이터 &#40;SQL Server&#41;](../../../relational-databases/xml/xml-data-sql-server.md)  
+ [XML 데이터&#40;SQL Server&#41;](../../../relational-databases/xml/xml-data-sql-server.md)  
   
   

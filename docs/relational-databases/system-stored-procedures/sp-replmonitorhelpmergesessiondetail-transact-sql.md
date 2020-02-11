@@ -17,10 +17,10 @@ ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b5e29916d4dc8419311c9639cc5321b1cf391940
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75321625"
 ---
 # <a name="sp_replmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail(Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "75321625"
 
   병합 복제를 모니터링하는 데 사용되는 특정 복제 병합 에이전트 세션에 대한 자세한 아티클 수준 정보를 반환합니다. 결과 집합에는 세션 중에 동기화된 각 아티클에 대한 정보 행이 포함됩니다. 또한 세션 초기화를 나타내는 행과 세션의 업로드 및 다운로드 단계를 요약하는 행도 포함됩니다. 이 저장 프로시저는 배포 데이터베이스의 배포자 또는 구독 데이터베이스의 구독자에서 실행됩니다.  
   
- ![토픽 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-sql 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,13 +42,13 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**PhaseID**|**int**|동기화 세션의 단계를 나타내며 다음 중 하나일 수 있습니다.<br /><br /> **0** = 초기화 또는 요약 행<br /><br /> **1** = 업로드<br /><br /> **2** = 다운로드|  
-|**ArticleName**|**sysname 이며**|동기화 중인 아티클의 이름입니다. 또한 **m e** 에는 아티클 정보를 나타내지 않는 결과 집합의 행에 대 한 요약 정보가 포함 되어 있습니다.|  
+|**ArticleName**|**sysname**|동기화 중인 아티클의 이름입니다. 또한 **m e** 에는 아티클 정보를 나타내지 않는 결과 집합의 행에 대 한 요약 정보가 포함 되어 있습니다.|  
 |**PercentComplete**|**진수가**|현재 실행 중이거나 실패한 세션에 대해 지정한 아티클 정보 행에 적용된 전체 변경 내용의 비율을 나타냅니다.|  
 |**RelativeCost**|**진수가**|아티클을 동기화하는 데 소요된 시간을 세션의 전체 동기화 시간에 대한 비율로 나타냅니다.|  
-|**작업**|**int**|에이전트 세션의 길이입니다.|  
+|**Duration**|**int**|에이전트 세션의 길이입니다.|  
 |**클립보드**|**int**|세션의 삽입 수입니다.|  
 |**업데이트**|**int**|세션의 업데이트 수입니다.|  
 |**되며**|**int**|세션의 삭제 수입니다.|  
@@ -66,7 +66,7 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
   
  구독자에서 실행 되는 경우 **sp_replmonitorhelpmergesessiondetail** 는 지난 5 병합 에이전트 세션에 대 한 자세한 정보만 반환 합니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  배포자의 배포 데이터베이스 또는 구독자의 구독 데이터베이스에 대 한 **db_owner** 또는 **replmonitor** 고정 데이터베이스 역할의 멤버만 **sp_replmonitorhelpmergesessiondetail**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -14,18 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 49b121f776ec6a9d363236fab03a1da2228311a6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244795"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>구문 쌍의 자동 일치 기능
   구문 쌍 자동 맞추기 기능은 쌍으로 코드를 작성해야 하는 구문 요소가 제대로 쌍을 이루는지 여부에 대한 즉각적인 피드백을 제공합니다. 이를 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에서는 구분 기호 짝 맞추기, Analysis Services XMLA 쿼리 편집기에서는 중괄호 짝 맞추기, MDX 및 DMX 편집기에서는 괄호 짝 맞추기라고 합니다.  
   
 ## <a name="database-engine-query-editor-delimiter-matching"></a>데이터베이스 엔진 쿼리 편집기의 구분 기호 짝 맞추기  
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에서는 코드 블록의 경계를 식별하는 구분 기호의 짝을 맞춥니다. 짝 맞추기 작업은 다음 두 가지 방법으로 수행됩니다.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에서는 코드 블록의 경계를 식별하는 구분 기호의 짝을 맞춥니다. 짝 맞추기 작업은 다음 두 가지 방법으로 수행됩니다.  
   
 -   사용자가 쌍의 두 번째 구분 기호 입력을 완료하면 편집기에서 쌍의 두 구분 기호를 모두 강조 표시합니다.  
   
@@ -36,10 +35,10 @@ ms.locfileid: "75244795"
   
 |여는 구분 기호|닫는 구분 기호|  
 |--------------------|-----------------------|  
-|**(**|**)**|  
-|**시작**|**종단**|  
-|**시도 시작**|**시도 종료**|  
-|**CATCH 시작**|**종료 CATCH**|  
+|**(**|**).**|  
+|**BEGIN**|**END**|  
+|**BEGIN TRY**|**END TRY**|  
+|**BEGIN CATCH**|**END CATCH**|  
   
  구분 기호 쌍 자동 맞추기 기능은 대괄호로 묶은 식별자([ObjectName]) 또는 따옴표 붙은 식별자("ObjectName")의 구분 기호를 인식하지 않습니다. 이미 색 구분을 통해 문자열이 구분 기호로 분리되었는지 여부가 표시되므로 쌍 맞추기 기능이 문자열 리터럴에 대해 작은따옴표 구분 기호('문자열') 쌍을 맞추지는 않습니다.  
   

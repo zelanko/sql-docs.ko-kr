@@ -12,10 +12,10 @@ ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 91f5e7effe54b9955537d90d639a820b5428a5c3
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246005"
 ---
 # <a name="open-a-knowledge-base"></a>기술 자료 열기
@@ -24,14 +24,14 @@ ms.locfileid: "75246005"
 
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 기존 기술 자료를 열어 도메인 관리, 기술 자료 검색 또는 일치 정책 추가를 수행할 준비를 갖추는 방법에 대해 설명합니다.  
   
-##  <a name="BeforeYouBegin"></a>시작 하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a>사전  
+###  <a name="Prerequisites"></a> 필수 조건  
  기술 자료를 열려면 기술 자료가 이미 생성되어 있고 게시되었거나(다른 사람이 생성한 경우) 닫혀 있어야 합니다(본인이 생성한 경우).  
   
-###  <a name="Security"></a>보안  
+###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a>권한에  
+####  <a name="Permissions"></a> 권한  
  기술 자료를 열려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
 ##  <a name="Open"></a>기술 자료 열기  
@@ -58,8 +58,7 @@ ms.locfileid: "75246005"
     -   
   **일치 정책** 을 선택하여 일치 정책을 만들고 기술 자료에 추가합니다.  
   
-5.  
-  **열기**를 클릭합니다.  
+5.  **열기**를 클릭합니다.  
   
     > [!NOTE]  
     >  기술 자료를 마우스 오른쪽 단추로 클릭한 다음 열기를 클릭하여 기술 자료를 열 수도 있습니다. 상황에 맞는 메뉴의 다른 명령을 사용하여 기술 자료를 다른 이름으로 저장하거나, 잠금을 해제하거나, 작업을 취소하거나, 이름을 바꾸거나, 속성을 표시할 수 있습니다.  

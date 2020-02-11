@@ -15,10 +15,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: f2aa6c25f8e8741308ff8f8b5df93cb2af67ad91
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957099"
 ---
 # <a name="sql-server-encryption"></a>SQL Server 암호화
@@ -31,47 +31,43 @@ ms.locfileid: "74957099"
   
 ## <a name="in-this-section"></a>섹션 내용  
  [암호화 계층](encryption-hierarchy.md)  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 암호화 계층에 대한 정보입니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 암호화 계층에 대한 정보입니다.  
   
  [암호화 알고리즘 선택](choose-an-encryption-algorithm.md)  
  효과적인 암호화 알고리즘을 선택하는 방법에 대한 정보입니다.  
   
- [투명한 데이터 암호화 &#40;TDE&#41;](transparent-data-encryption.md)  
+ [투명한 데이터 암호화&#40;TDE&#41;](transparent-data-encryption.md)  
  데이터를 명시적으로 암호화하는 방법에 대한 일반적인 정보입니다.  
   
- [SQL Server 및 데이터베이스 암호화 키 &#40;데이터베이스 엔진&#41;](sql-server-and-database-encryption-keys-database-engine.md)  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 암호화 키에는 중요한 데이터를 보호하는 데 사용되는 퍼블릭 키, 프라이빗 키 및 대칭 키의 조합이 포함됩니다. 이 섹션에서는 암호화 키를 구현하고 관리하는 방법에 대해 설명합니다.  
+ [SQL Server 및 데이터베이스 암호화 키&#40;데이터베이스 엔진&#41;](sql-server-and-database-encryption-keys-database-engine.md)  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 암호화 키에는 중요한 데이터를 보호하는 데 사용되는 퍼블릭 키, 프라이빗 키 및 대칭 키의 조합이 포함됩니다. 이 섹션에서는 암호화 키를 구현하고 관리하는 방법에 대해 설명합니다.  
   
-## <a name="related-content"></a>관련 콘텐츠  
- [SQL Server 보안](../securing-sql-server.md)  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 플랫폼에 보안을 설정하는 방법 및 사용자 및 보안 개체 작업을 수행하는 방법에 대한 개요입니다.  
+## <a name="related-content"></a>관련 내용  
+ [SQL Server 보안 설정](../securing-sql-server.md)  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 플랫폼에 보안을 설정하는 방법 및 사용자 및 보안 개체 작업을 수행하는 방법에 대한 개요입니다.  
   
- [Transact-sql&#41;&#40;암호화 함수](/sql/t-sql/functions/cryptographic-functions-transact-sql)  
+ [암호화 함수&#40;Transact-SQL&#41;](/sql/t-sql/functions/cryptographic-functions-transact-sql)  
  암호화 함수 구현 방법에 대한 정보입니다.  
   
- [ENCRYPTBYPASSPHRASE &#40;Transact-sql&#41;](/sql/t-sql/functions/encryptbypassphrase-transact-sql)  
+ [ENCRYPTBYPASSPHRASE&#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbypassphrase-transact-sql)  
  데이터를 암호화하기 위해 암호를 사용하는 방법에 대한 정보입니다.  
   
- [ENCRYPTBYKEY &#40;Transact-sql&#41;](/sql/t-sql/functions/encryptbykey-transact-sql)  
+ [ENCRYPTBYKEY&#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbykey-transact-sql)  
  데이터를 암호화하기 위해 대칭 키를 사용하는 방법에 대한 정보입니다.  
   
- [ENCRYPTBYASYMKEY &#40;Transact-sql&#41;](/sql/t-sql/functions/encryptbyasymkey-transact-sql)  
+ [ENCRYPTBYASYMKEY&#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbyasymkey-transact-sql)  
  데이터를 암호화하기 위해 비대칭 키를 사용하는 방법에 대한 정보입니다.  
   
- [ENCRYPTBYCERT &#40;Transact-sql&#41;](/sql/t-sql/functions/encryptbycert-transact-sql)  
+ [ENCRYPTBYCERT&#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbycert-transact-sql)  
  데이터를 암호화하기 위해 인증서를 사용하는 방법에 대한 정보입니다.  
   
 ## <a name="external-resources"></a>외부 리소스  
  [SQL Server 2005 보안에 대 한 10 단계](https://www.itprotoday.com/sql-server/10-steps-sql-server-2005-security)  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 보안에 대한 현재 정보입니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 보안에 대한 현재 정보입니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [key_encryptions &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-key-encryptions-transact-sql)   
- [SQL Server 및 데이터베이스 암호화 키 &#40;데이터베이스 엔진&#41;](sql-server-and-database-encryption-keys-database-engine.md)   
+ [sys.key_encryptions&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-key-encryptions-transact-sql)   
+ [SQL Server 및 데이터베이스 암호화 키&#40;데이터베이스 엔진&#41;](sql-server-and-database-encryption-keys-database-engine.md)   
  [Reporting Services 암호화 키 백업 및 복원](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
   

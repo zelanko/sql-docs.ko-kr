@@ -16,25 +16,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2db2ac49f1caa455c8c05529437a385d360ecaf6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242999"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>IntelliSense에서 지원되는 Transact-SQL 구문
   이 항목에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 의 IntelliSense에서 지원하는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]문 및 구문 요소에 대해 설명합니다.  
   
 ## <a name="statements-supported-by-intellisense"></a>IntelliSense에서 지원하는 문  
- 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 IntelliSense는 가장 일반적으로 사용되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문만 지원합니다. 일부 일반적인 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 조건으로 인해 IntelliSense가 제대로 작동하지 않을 수 있습니다. 자세한 내용은 [IntelliSense 문제 해결&#40;SQL Server Management Studio&#41;](troubleshooting-intellisense.md)을 참조하세요.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 IntelliSense는 가장 일반적으로 사용되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문만 지원합니다. 일부 일반적인 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 조건으로 인해 IntelliSense가 제대로 작동하지 않을 수 있습니다. 자세한 내용은 [IntelliSense 문제 해결&#40;SQL Server Management Studio&#41;](troubleshooting-intellisense.md)을 참조하세요.  
   
 > [!NOTE]  
 >  암호화된 저장 프로시저 또는 사용자 정의 함수와 같이 암호화된 데이터베이스 개체에 대해 IntelliSense를 사용할 수 없습니다. 확장 저장 프로시저 및 CLR 통합 사용자 정의 유형의 매개 변수에 대해 매개 변수 도움말 및 요약 정보를 사용할 수 없습니다.  
   
 ### <a name="select-statement"></a>SELECT 문  
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에서는 SELECT 문의 다음 구문 요소에 대한 IntelliSense 지원을 제공합니다.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에서는 SELECT 문의 다음 구문 요소에 대한 IntelliSense 지원을 제공합니다.  
   
 |||  
 |-|-|  
@@ -45,23 +43,22 @@ ms.locfileid: "75242999"
 |맨 위로 이동|OPTION (hint)|  
   
 ### <a name="additional-transact-sql-statements-that-are-supported"></a>지원되는 추가 Transact-SQL 문  
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에서는 다음 표에 표시된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 대한 IntelliSense 지원도 제공합니다.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에서는 다음 표에 표시된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 대한 IntelliSense 지원도 제공합니다.  
   
 |Transact-SQL 문|지원되는 구문|  
 |-----------------------------|----------------------|  
-|[넣거나](/sql/t-sql/statements/insert-transact-sql)|
+|[INSERT](/sql/t-sql/statements/insert-transact-sql)|
   *execute_statement* 절을 제외한 모든 구문|  
-|[고침](/sql/t-sql/queries/update-transact-sql)|모든 구문|  
-|[제거](/sql/t-sql/statements/delete-transact-sql)|모든 구문|  
-|[있다고@local_variable](/sql/t-sql/language-elements/declare-local-variable-transact-sql)|모든 구문|  
-|[설정@local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|모든 구문|  
-|[실행할](/sql/t-sql/language-elements/execute-transact-sql)|사용자 정의 저장 프로시저, 시스템 저장 프로시저, 사용자 정의 함수 및 시스템 함수 실행|  
+|[UPDATE](/sql/t-sql/queries/update-transact-sql)|모든 구문|  
+|[DELETE](/sql/t-sql/statements/delete-transact-sql)|모든 구문|  
+|[선언 @local_variable](/sql/t-sql/language-elements/declare-local-variable-transact-sql)|모든 구문|  
+|[SET @local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|모든 구문|  
+|[CREATE 문을 실행하기 전에](/sql/t-sql/language-elements/execute-transact-sql)|사용자 정의 저장 프로시저, 시스템 저장 프로시저, 사용자 정의 함수 및 시스템 함수 실행|  
 |[CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql)|모든 구문|  
-|[뷰 만들기](/sql/t-sql/statements/create-view-transact-sql)|모든 구문|  
-|[프로시저 만들기](/sql/t-sql/statements/create-procedure-transact-sql)|모든 구문. 단, 다음 항목은 예외입니다.<br /><br /> EXTERNAL NAME 절에 대한 IntelliSense 지원은 없습니다.<br /><br /> AS 절에서 IntelliSense는 이 항목에 나열된 문과 구문만 지원합니다.|  
-|[ALTER 프로시저](/sql/t-sql/statements/alter-procedure-transact-sql)|모든 구문. 단, 다음 항목은 예외입니다.<br /><br /> EXTERNAL NAME 절에 대한 IntelliSense 지원은 없습니다.<br /><br /> AS 절에서 IntelliSense는 이 항목에 나열된 문과 구문만 지원합니다.|  
-|[사용](/sql/t-sql/language-elements/use-transact-sql)|모든 구문|  
+|[CREATE VIEW](/sql/t-sql/statements/create-view-transact-sql)|모든 구문|  
+|[CREATE PROCEDURE](/sql/t-sql/statements/create-procedure-transact-sql)|모든 구문. 단, 다음 항목은 예외입니다.<br /><br /> EXTERNAL NAME 절에 대한 IntelliSense 지원은 없습니다.<br /><br /> AS 절에서 IntelliSense는 이 항목에 나열된 문과 구문만 지원합니다.|  
+|[ALTER PROCEDURE](/sql/t-sql/statements/alter-procedure-transact-sql)|모든 구문. 단, 다음 항목은 예외입니다.<br /><br /> EXTERNAL NAME 절에 대한 IntelliSense 지원은 없습니다.<br /><br /> AS 절에서 IntelliSense는 이 항목에 나열된 문과 구문만 지원합니다.|  
+|[USE](/sql/t-sql/language-elements/use-transact-sql)|모든 구문|  
   
 ## <a name="intellisense-in-supported-statements"></a>지원되는 문의 IntelliSense  
  

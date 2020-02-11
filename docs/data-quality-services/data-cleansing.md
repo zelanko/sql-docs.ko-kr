@@ -10,10 +10,10 @@ ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 46ca0fe453548cab780d1e2b32c6a8d98a32de11
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251770"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
@@ -102,11 +102,11 @@ ms.locfileid: "75251770"
   
  정리 데이터 품질 프로젝트 마법사의 **내보내기** 페이지에서 정리된 데이터를 내보내는 동안 **출력 표준화** 확인란을 선택하여 정리된 데이터를 표준화된 형식으로 내보낼지 여부를 지정할 수 있습니다. 기본적으로 정리된 데이터는 표준화된 형식으로 내보냅니다. 즉, 확인란이 기본적으로 선택됩니다. 정리된 데이터 내보내기에 대한 자세한 내용은 [DQS&#40;내부&#41; 기술 자료를 사용하여 데이터 정리](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)를 참조하세요.  
   
-##  <a name="Related"></a>관련 태스크  
+##  <a name="Related"></a> 관련 작업  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|정리 활동을 위한 임계값 구성 방법을 설명합니다.|[정리 및 일치에 대 한 임계값 구성](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
+|정리 활동을 위한 임계값 구성 방법을 설명합니다.|[정리 및 일치에 대한 임계값 구성](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
 |DQS에 기본 제공되는 지식을 사용하여 데이터를 정리하는 방법을 설명합니다.|[DQS &#40;내부&#41; 기술 자료를 사용 하 여 데이터 정리](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)|  
 |참조 데이터 서비스의 지식을 사용하여 데이터를 정리하는 방법을 설명합니다.|[외부&#41; 기술 &#40;참조 데이터를 사용 하 여 데이터 정리](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
 |복합 도메인을 정리하는 방법을 설명합니다.|[복합 도메인의 데이터 정리](../data-quality-services/cleanse-data-in-a-composite-domain.md)|  

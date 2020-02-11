@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e89f4835b95b1fe497df32ad9f773be84ccb161b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232734"
 ---
 # <a name="xml-task"></a>XML 태스크
@@ -53,7 +53,7 @@ ms.locfileid: "75232734"
 ## <a name="predefined-xml-operations"></a>미리 정의된 XML 작업  
  XML 태스크에는 XML 문서 작업을 위해 미리 정의된 일련의 작업이 포함됩니다. 다음 표에서는 이러한 작업을 설명합니다.  
   
-|작업|설명|  
+|작업(Operation)|Description|  
 |---------------|-----------------|  
 |Diff|두 개의 XML 문서를 비교합니다. 원본 XML 문서를 기본 문서로 사용하는 비교 작업은 원본 XML 문서를 보조 XML 문서와 비교하고, 차이점을 검색하고, 해당 차이점을 XML Diffgram 문서에 기록합니다. 이 작업에는 비교를 사용자 지정하기 위한 속성이 포함됩니다.|  
 |병합|두 개의 XML 문서를 병합합니다. 원본 XML 문서를 기본 문서로 사용하는 병합 작업은 보조 문서의 내용을 기본 문서에 추가합니다. 이 작업에서는 기본 문서 내의 병합 위치를 지정할 수 있습니다.|  
@@ -67,7 +67,7 @@ ms.locfileid: "75232734"
   
  비교 작업에는 XML 비교를 사용자 지정하는 일련의 옵션이 포함됩니다. 다음 표에서는 옵션에 대해 설명합니다.  
   
-|옵션|설명|  
+|옵션|Description|  
 |------------|-----------------|  
 |**IgnoreComments**|열 노드가 비교되는지 여부를 지정하는 값입니다.|  
 |**IgnoreNamespaces**|요소의 네임스페이스 URI(Uniform Resource Identifier)와 해당 특성 이름이 비교되는지 여부를 지정하는 값입니다. 이 옵션을 `true`로 설정하면 로컬 이름이 같지만 네임스페이스가 다른 두 요소는 동일한 것으로 간주됩니다.|  
@@ -111,20 +111,19 @@ ms.locfileid: "75232734"
 ## <a name="custom-logging-messages-available-on-the-xml-task"></a>XML 태스크에 사용할 수 있는 사용자 지정 로깅 메시지  
  다음 표에서는 XML 태스크에 대한 사용자 지정 로그 항목을 설명합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../performance/integration-services-ssis-logging.md) 및 [로깅할 메시지 사용자 지정](../custom-messages-for-logging.md)을 참조하세요.  
   
-|로그 항목|설명|  
+|로그 항목|Description|  
 |---------------|-----------------|  
 |`XMLOperation`|태스크에서 수행한 작업에 대한 정보를 제공합니다.|  
   
 ## <a name="configuration-of-the-xml-task"></a>XML 태스크 구성  
- 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
  
   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
 -   [XML 태스크 편집기 &#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [XML 태스크를 사용 하 여 XML 유효성 검사](xml-task.md)  
+-   [Validate XML with the XML Task](xml-task.md)  
   
 -   [식 페이지](../expressions/expressions-page.md)  
   
@@ -141,7 +140,7 @@ ms.locfileid: "75232734"
 ## <a name="related-tasks"></a>관련 작업  
  [태스크 또는 컨테이너의 속성 설정](../set-the-properties-of-a-task-or-container.md)  
   
-## <a name="related-content"></a>관련 콘텐츠  
+## <a name="related-content"></a>관련 내용  
   
 -   agilebi.com의 블로그 항목 - [XML 대상 스크립트 구성 요소](http://agilebi.com/jwelch/2007/06/02/xml-destination-script-component/)  
   

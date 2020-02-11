@@ -15,19 +15,19 @@ ms.assetid: 729ba55f-743b-4a04-8c39-ac0a9914211d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3bc4d8378c243edf9f01cca58ff8be11d675711a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68079001"
 ---
 # <a name="quoted-identifiers"></a>따옴표 붙은 식별자
-SQL 문에서 특수 문자나 일치 키워드를 포함 하는 식별자 묶어야 *식별자 따옴표*;와 같은 문자 묶인 식별자 라고 *따옴표 붙은 식별자*(라고도 *구분 식별자* SQL-92에). 예를 들어, Accounts Payable 식별자 다음에 나와 **선택** 문:  
+SQL 문에서 특수 문자 또는 match 키워드를 포함 하는 식별자는 *식별자 따옴표 문자로*묶어야 합니다. 이러한 문자로 묶인 식별자를 *따옴표 붙은 식별자* (SQL-92에서는 *구분 식별자* 라고도 함) 라고 합니다. 예를 들어 외상 매입금 식별자는 다음 **SELECT** 문에서 따옴표로 묶여 있습니다.  
   
 ```  
 SELECT * FROM "Accounts Payable"  
 ```  
   
- 따옴표 식별자에 대 한 원인은 문을 구문 분석할 되도록 합니다. 예를 들어, Accounts Payable 따옴표가 붙지 않았습니다 이전 문에서 경우 파서는 있었습니다 계정과 Payable, 두 테이블을 가정 되 고 쉼표로 구분 된 올바르지 않은 구문 오류를 반환 합니다. 인용 문자는 식별자는 드라이버 및 SQL_IDENTIFIER_QUOTE_CHAR 옵션을 사용 하 여 검색 **SQLGetInfo**합니다. 키워드 및 특수 문자의 목록을 SQL_SPECIAL_CHARACTERS 및 SQL_KEYWORDS 옵션을 사용 하 여 검색 됩니다 **SQLGetInfo**합니다.  
+ 식별자를 따옴표로 묶는 이유는 문을 구문 분석할 하는 것입니다. 예를 들어 외상 매입금 계정이 이전 문에서 따옴표로 묶여 있지 않은 경우 파서는 외상 and 매입금 라는 두 개의 테이블이 있다고 가정 하 고 쉼표로 구분 되지 않는 구문 오류를 반환 합니다. 식별자 따옴표 문자는 드라이버에 한정 되며 **SQLGetInfo**의 SQL_IDENTIFIER_QUOTE_CHAR 옵션을 사용 하 여 검색 됩니다. 특수 문자 및 키워드의 목록은 **SQLGetInfo**의 SQL_SPECIAL_CHARACTERS 및 SQL_KEYWORDS 옵션을 사용 하 여 검색 됩니다.  
   
- 안전 하 게 하려면 상호 운용 가능한 응용 프로그램은 Oracle ROWID 열과 같이 의사 (pseudo) 열을 제외한 모든 식별자를 자주 측정 합니다. **SQLSpecialColumns** 의사 (pseudo) 열 목록을 반환 합니다. 또한 개체 이름에 특수 한 문자가 나타나는 수에 대 한 응용 프로그램별 제한의 경우 것이 좋습니다 상호 운용 가능한 응용 프로그램의 해당 위치에 특수 문자는 사용할 수 없습니다.
+ 안전 하 게 보호 하기 위해 상호 운용 가능한 응용 프로그램은 종종 Oracle의 ROWID 열과 같은 의사 (pseudo) 열에 대 한 식별자를 제외한 모든 식별자를 따옴표로 묶습니다. **SQLSpecialColumns** 는 의사 (pseudo) 열 목록을 반환 합니다. 또한 개체 이름에 특수 문자가 나타날 수 있는 위치에 대 한 응용 프로그램별 제한이 있는 경우 해당 위치에서 특수 문자를 사용 하지 않는 상호 운용 가능한 응용 프로그램에 가장 적합 합니다.

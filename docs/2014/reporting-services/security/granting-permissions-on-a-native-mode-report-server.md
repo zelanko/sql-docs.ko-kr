@@ -22,12 +22,12 @@ ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 310ab4f332c3262b20e73211f5ec3d4a5f19786a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d779c02d895088cff2ae59aff6722acd8db79adf
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66101939"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76971389"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>기본 모드 보고서 서버에 대한 사용 권한 부여
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 역할 기반 권한 부여 및 인증 하위 시스템을 통해 보고서 서버에서 작업을 수행하거나 항목에 액세스할 수 있는 사용자를 지정합니다. 역할 기반 권한 부여는 사용자 또는 그룹이 수행할 수 있는 동작을 역할별로 분류합니다. 인증은 기본 제공 Windows 인증이나 사용자가 제공하는 사용자 지정 인증 모듈을 기반으로 합니다. 이러한 인증 유형 중 하나에 미리 정의된 역할이나 사용자 지정 역할을 사용할 수 있습니다.  
@@ -53,11 +53,9 @@ ms.locfileid: "66101939"
 >  SharePoint 통합 모드에서 실행되도록 보고서 서버를 구성한 경우 보고서 서버 항목에 대한 액세스 권한을 부여하려면 SharePoint 사이트에 대한 사용 권한을 설정해야 합니다. 자세한 내용은 [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 부여](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)를 참조하세요.  
   
 ## <a name="who-sets-permissions"></a>사용 권한 설정의 주체  
- 기본적으로 로컬 관리자 그룹의 멤버인 사용자만 보고서 서버에 액세스할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 로컬 관리자 그룹 멤버에게 항목 수준 및 시스템 수준 액세스 권한을 부여하는 두 개의 기본 역할 할당과 함께 설치됩니다. 이러한 기본 제공 역할 할당을 통해 로컬 관리자는 다른 사용자에게 보고서 서버 액세스 권한을 부여하고 보고서 서버 항목을 관리할 수 있습니다. 기본 제공 역할 할당은 삭제할 수 없습니다. 로컬 관리자는 항상 보고서 서버 인스턴스를 완전히 관리할 수 있는 권한을 가집니다.  
-  
- 보고서 서버에 대한 모든 권한에는 항목 수준 및 시스템 수준 권한이 포함되므로 로컬 관리자는 다음 역할에 할당됩니다.  
-  
- 사용자가 Windows Vista 또는 Windows Server 2008을 실행하는 로컬 컴퓨터에서 보고서 서버 인스턴스를 관리하려면 추가 구성이 필요합니다. 자세한 내용은 [로컬 관리에 대해 기본 모드 보고서 서버 구성&#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)을 참조하세요.  
+ 기본적으로 로컬 관리자 그룹의 멤버인 사용자만 보고서 서버에 액세스할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 로컬 관리자 그룹 멤버에게 항목 수준 및 시스템 수준 액세스 권한을 부여하는 두 개의 기본 역할 할당과 함께 설치됩니다. 로컬 관리자는 이러한 기본 제공 역할 할당을 사용 하 여 보고서 서버에 다른 사용자에 게 액세스 권한을 부여 하 고 보고서 서버 항목을 관리할 수 있습니다. 기본 제공 역할 할당은 삭제할 수 없습니다. 로컬 관리자는 항상 보고서 서버 인스턴스를 완전히 관리할 수 있는 권한을 가집니다.  
+ 
+ 사용자가 Windows Vista 또는 Windows Server 2008을 실행하는 로컬 컴퓨터에서 보고서 서버 인스턴스를 관리하려면 추가 구성이 필요합니다. 자세한 내용은 [로컬 관리에 대해 기본 모드 보고서 서버 구성&#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)를 참조하세요.  
   
 ## <a name="how-permissions-are-stored"></a>사용 권한 저장 방식  
  역할 할당 및 정의는 보고서 서버 데이터베이스에 저장됩니다. 여러 개의 클라이언트 도구나 프로그래밍 인터페이스를 사용하고 있다면 모든 액세스에는 보고서 서버 인스턴스에 대해 전체적으로 정의된 권한이 필요합니다. 스케일 아웃 배포에 다중 보고서 서버를 구성하는 경우 한 인스턴스에 정의하는 역할 할당은 공유 데이터베이스에 저장되어 동일한 스케일 아웃 배포에 있는 다른 모든 인스턴스에 사용됩니다. 역할 할당은 보안을 설정하는 항목과 함께 저장되므로 사용자가 정의한 권한을 잃지 않고도 데이터베이스를 다른 보고서 서버 인스턴스로 이동할 수 있습니다.  
@@ -65,12 +63,12 @@ ms.locfileid: "66101939"
 ## <a name="tasks-and-tools-for-managing-permissions"></a>사용 권한 관리에 사용되는 태스크 및 도구  
  다음 도구를 사용하여 역할 정의 및 할당을 관리할 수 있습니다.  
   
-|도구|태스크|  
+|도구|작업|  
 |----------|-----------|  
 |Management Studio - 역할 정의를 확인, 수정, 작성 및 삭제하는 데 사용됩니다.|[역할 만들기, 삭제 또는 수정&#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)|  
 |보고서 관리자 - 사용자 및 그룹을 역할에 할당하는 데 사용됩니다.|[사용자에게 보고서 서버에 대한 액세스 권한 부여&#40;보고서 관리자&#41;](grant-user-access-to-a-report-server.md)<br /><br /> [역할 할당 수정 또는 삭제&#40;보고서 관리자&#41;](role-assignments-modify-or-delete.md)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [미리 정의된 역할](role-definitions-predefined-roles.md)   
  [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 부여](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [보고서 서버 인증](authentication-with-the-report-server.md)   

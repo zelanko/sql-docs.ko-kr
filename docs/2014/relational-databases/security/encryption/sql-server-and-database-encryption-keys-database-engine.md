@@ -13,22 +13,19 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: e9ddec585f530cf57481c56477d5be4aeaedb44a
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957127"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server 및 데이터베이스 암호화 키(데이터베이스 엔진)
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 암호화 키를 사용 하 여 데이터, 자격 증명 및 서버 데이터베이스에 저장 된 연결 정보의 보안을 유지할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에는 두 가지 종류의 키, 즉 *대칭* 및 *비대칭*이 있습니다. 대칭 키는 동일한 암호를 사용하여 데이터를 암호화하고 해독합니다. 비대칭 키는 한 암호를 사용하여 데이터를 암호화하고(*퍼블릭* 키라고 함) 다른 암호를 사용하여 데이터를 해독합니다(*프라이빗* 키라고 함).  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 암호화 키를 사용하여 데이터, 자격 증명 및 서버 데이터베이스에 저장된 연결 정보의 보안을 유지할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에는 *대칭* 과 *비대칭*등, 두 종류의 키가 있습니다. 대칭 키는 동일한 암호를 사용하여 데이터를 암호화하고 해독합니다. 비대칭 키는 한 암호를 사용하여 데이터를 암호화하고(*퍼블릭* 키라고 함) 다른 암호를 사용하여 데이터를 해독합니다(*프라이빗* 키라고 함).  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 암호화 키에는 중요한 데이터를 보호하는 데 사용되는 퍼블릭 키, 프라이빗 키 및 대칭 키의 조합이 포함됩니다. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 처음 시작할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 초기화하는 동안 대칭 키가 생성됩니다. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 이 키를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 저장된 중요한 데이터를 암호화합니다. 퍼블릭 키 및 프라이빗 키는 운영 체제에서 생성되며 대칭 키를 보호하는 데 사용됩니다. 데이터베이스의 중요한 데이터를 저장하는 각 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스당 하나의 퍼블릭 키 및 프라이빗 키 쌍이 생성됩니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 암호화 키에는 중요한 데이터를 보호하는 데 사용되는 퍼블릭 키, 프라이빗 키 및 대칭 키의 조합이 포함됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 처음 시작할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 초기화하는 동안 대칭 키가 생성됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 이 키를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 저장된 중요한 데이터를 암호화합니다. 퍼블릭 키 및 프라이빗 키는 운영 체제에서 생성되며 대칭 키를 보호하는 데 사용됩니다. 데이터베이스의 중요한 데이터를 저장하는 각 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스당 하나의 퍼블릭 키 및 프라이빗 키 쌍이 생성됩니다.  
   
 ## <a name="applications-for-sql-server-and-database-keys"></a>SQL Server 애플리케이션 및 데이터베이스 키  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에는 키에 대 한 두 가지 기본 응용 프로그램, 즉 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대해 생성 되는 SMK ( *서비스 마스터 키* )와 데이터베이스에 사용 되는 DMK ( *데이터베이스 마스터 키* )가 있습니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 두 가지 주요한 용도로 키를 사용합니다. 이러한 키에는 *인스턴스에서 해당 인스턴스를 위해 생성되는 SMK(* 서비스 마스터 키 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] )와 데이터베이스에 사용되는 DMK( *데이터베이스 마스터 키* )가 있습니다.  
   
  SMK는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 시작되고 연결된 서버 암호, 자격 증명 및 데이터베이스 마스터 키를 암호화하는 데 사용될 때 처음으로 자동 생성됩니다. SMK는 Windows DPAPI(데이터 보호 API)를 사용하는 로컬 컴퓨터 키로 암호화됩니다. DPAPI는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정의 Windows 자격 증명 및 컴퓨터의 자격 증명에서 파생된 키를 사용합니다. 서비스 마스터 키의 암호는 해당 키가 만들어진 서비스 계정이나 해당 컴퓨터의 자격 증명에 대한 액세스 권한이 있는 보안 주체에 의해서만 해독될 수 있습니다.  
   
@@ -68,7 +65,7 @@ ms.locfileid: "74957127"
  [서비스 마스터 키](service-master-key.md)  
  서비스 마스터 키 및 이 키를 사용하는 최상의 방법에 대해 간략하게 설명합니다.  
   
- [EKM&#41;&#40;확장 가능 키 관리](extensible-key-management-ekm.md)  
+ [확장 가능 키 관리 &#40;EKM&#41;](extensible-key-management-ekm.md)  
  타사 키 관리 시스템을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와 함께 사용하는 방법에 대해 설명합니다.  
   
 ## <a name="related-tasks"></a>관련 작업  
@@ -84,21 +81,21 @@ ms.locfileid: "74957127"
   
  [두 서버에서 동일한 대칭 키 만들기](create-identical-symmetric-keys-on-two-servers.md)  
   
- [Azure Key Vault &#40;SQL Server를 사용 하는 확장 가능 키 관리&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
+ [Azure Key Vault를 사용한 확장 가능 키 관리&#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
   
  [EKM을 사용 하 여 TDE 사용](enable-tde-on-sql-server-using-ekm.md)  
   
-## <a name="related-content"></a>관련 콘텐츠  
- [Transact-sql&#41;&#40;마스터 키 만들기](/sql/t-sql/statements/create-master-key-transact-sql)  
+## <a name="related-content"></a>관련 내용  
+ [CREATE MASTER KEY&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)  
   
- [ALTER SERVICE MASTER KEY &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-service-master-key-transact-sql)  
+ [ALTER SERVICE MASTER KEY&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-service-master-key-transact-sql)  
   
  [데이터베이스 마스터 키 복원](restore-a-database-master-key.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [Reporting Services 암호화 키 백업 및 복원](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
- [SSRS Configuration Manager &#40;암호화 키를 삭제 하 고 다시 만듭니다&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
- [SSRS Configuration Manager &#40;스케일 아웃 배포의 암호화 키 추가 및 제거&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
- [투명한 데이터 암호화 &#40;TDE&#41;](transparent-data-encryption.md)  
+ [암호화 키 삭제 및 다시 만들기&#40;SSRS 구성 관리자&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
+ [확장 배포의 암호화 키 추가 및 제거&#40;SSRS 구성 관리자&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
+ [투명한 데이터 암호화&#40;TDE&#41;](transparent-data-encryption.md)  
   
   

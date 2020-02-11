@@ -19,16 +19,16 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 660405e7e7592557422e43655c35ec27c194aad3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130676"
 ---
-# <a name="spdeletedatabasefirewallrule-azure-sql-database"></a>sp_delete_database_firewall_rule(Azure SQL Database)
+# <a name="sp_delete_database_firewall_rule-azure-sql-database"></a>sp_delete_database_firewall_rule(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  데이터베이스 수준 방화벽 설정을 제거 프로그램 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다. 데이터베이스 방화벽 규칙을 구성에 사용자 데이터베이스 및 master 데이터베이스에 대 한 삭제 하 고 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]입니다.   
+  에서 데이터베이스 수준 방화벽 설정을 제거 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다. 데이터베이스 방화벽 규칙은 master 데이터베이스 및의 사용자 데이터베이스에 대해 구성 및 삭제할 수 있습니다 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].   
   
  
 ## <a name="syntax"></a>구문  
@@ -40,13 +40,13 @@ sp_delete_database_firewall_rule [@name =] [N]'name'
   
 ## <a name="arguments"></a>인수  
  `[@name =] [N]'name'`  
- 제거할 데이터베이스 수준 방화벽 설정의 이름입니다. *이름을* 됩니다 **nvarchar (128)** 이며 기본값은 없습니다. 유니코드 식별자 `N` 사항임 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]합니다. 
+ 제거할 데이터베이스 수준 방화벽 설정의 이름입니다. *name* 은 **nvarchar (128)** 이며 기본값은 없습니다. 유니코드 식별자 `N` 는의 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]경우 선택 사항입니다. 
   
 ## <a name="permissions"></a>사용 권한  
- 서버 수준 보안 주체 로그인만 프로 비전 프로세스 또는 관리자는 데이터베이스 수준 방화벽 규칙을 삭제할 수로 할당 된 Azure Active Directory 주체를 생성 합니다.  
+ 프로 비전 프로세스에서 생성 된 서버 수준 보안 주체 로그인 또는 관리자로 할당 된 Azure Active Directory 보안 주체가 데이터베이스 수준 방화벽 규칙을 삭제할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예에서는 데이터베이스 수준 이라는 방화벽 설정을 제거 `Example DB Setting 1`합니다.
+ 다음 예에서는 이라는 `Example DB Setting 1`데이터베이스 수준 방화벽 설정을 제거 합니다.
   
 ```  
 -- Remove database-level firewall setting  
@@ -54,12 +54,12 @@ EXECUTE sp_delete_database_firewall_rule N'Example DB Setting 1';
   
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Azure SQL Database 방화벽](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
  [방법: 방화벽 설정 구성 (Azure SQL Database)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
  [sp_set_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
  [sp_set_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)   
- [sys.database_firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
+ [database_firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
   
   
 

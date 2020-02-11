@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2eddd2284ec77a1a4979389f964baeafb6932dc5
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243806"
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>SQL Server 2005 Native Client에서 애플리케이션 업데이트
@@ -33,7 +33,7 @@ ms.locfileid: "75243806"
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]와 함께 제공되는 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Native Client 11.0.  
   
 |
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이후에 SQL Server Native Client에서 변경된 동작|설명|  
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이후에 SQL Server Native Client에서 변경된 동작|Description|  
 |------------------------------------------------------------------------------------|-----------------|  
 |OLE DB가 정의된 배율로만 패딩됩니다.|변환 된 데이터가 서버로 전송 되는 변환의 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (부터 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)])는 데이터의 후행 0을 **datetime** 값의 최대 길이 까지만 채웁니다. 9자리까지 패딩된 SQL Server Native Client 9.0입니다.|  
 |ICommandWithParameter:: SetParameterInfo에 대 한 DBTYPE_DBTIMESTAMP 유효성을 검사 합니다.|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client (부터 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)])는 DBTYPE_DBTIMESTAMP에 대 한 소수 자릿수 초의 소수 자릿수를 설정 하기 위해 ICommandWithParameter:: SetParameterInfo의 *bscale* 에 대 한 OLE DB 요구 사항을 구현 합니다.|  
@@ -46,7 +46,7 @@ ms.locfileid: "75243806"
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 이전에는 서버로 전송된 **datetime** 값에 대한 클라이언트 동작에 의해 값이 1초의 1/300에 가깝게 반올림됩니다. 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0부터 이 시나리오를 사용하면 반올림으로 인해 일이 변경되는 경우 소수 자릿수 초가 잘립니다.|  
 |**Datetime** 값에 대해 가능한 trunction (초)입니다.|
-  [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] Native Client 이상 버전을 사용하여 빌드한 애플리케이션에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2005 서버에 연결할 경우 유형 식별자인 DBTYPE_DBTIMESTAMP(OLE DB) 또는 SQL_TIMESTAMP(ODBC) 및 소수 자릿수 0을 사용하여 datetime 열에 바인딩하면 서버에 전송된 시간 데이터 부분에서 초 및 초의 소수 자리 부분이 잘립니다.<br /><br /> 예:<br /><br /> 입력 데이터: 1994-08-21 21:21:36.000<br /><br /> 삽입된 데이터: 1994-08-21 21:21:00.000|  
+  [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] Native Client 이상 버전을 사용하여 빌드한 애플리케이션에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2005 서버에 연결할 경우 유형 식별자인 DBTYPE_DBTIMESTAMP(OLE DB) 또는 SQL_TIMESTAMP(ODBC) 및 소수 자릿수 0을 사용하여 datetime 열에 바인딩하면 서버에 전송된 시간 데이터 부분에서 초 및 초의 소수 자리 부분이 잘립니다.<br /><br /> 다음은 그 예입니다.<br /><br /> 입력 데이터: 1994-08-21 21:21:36.000<br /><br /> 삽입된 데이터: 1994-08-21 21:21:00.000|  
 |DBTYPE_DBTIME에서 DBTYPE_DATE로 OLE DB 데이터 변환을 수행할 때 더 이상 일이 변경되지 않습니다.|
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 이전에는 DBTYPE_DATE의 시간 부분이 자정의 1/2초 내에 있는 경우 OLE DB 변환 코드로 인해 일이 변경되었습니다. 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0부터 일이 변경되지 않습니다(소수 자릿수 초가 잘리고 반올림되지 않음).|  

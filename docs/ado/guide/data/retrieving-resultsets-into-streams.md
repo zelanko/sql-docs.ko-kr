@@ -1,5 +1,5 @@
 ---
-title: 스트림으로 결과 집합 검색 | Microsoft Docs
+title: 결과 집합을 스트림으로 검색 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,19 +15,19 @@ ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2f0c76a668c7191467e9f66ba48c486aceea16df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924342"
 ---
 # <a name="retrieving-resultsets-into-streams"></a>스트림으로 결과 집합 검색
-기존에 결과 수신 하는 대신 **레코드 집합** 개체, ADO 스트림으로 대신 쿼리 결과 검색할 수 있습니다. ADO **Stream** 개체 (또는 COM을 지 원하는 다른 개체 **IStream** ASP 같은 인터페이스 **요청** 고 **응답** 개체 ) 이러한 결과 포함 하기 위해 사용할 수 있습니다. XML 형식으로 결과 검색 하는 데이 기능에 대 한 하나의 사용이 됩니다. SQL Server를 사용 하 여 예를 들어, XML 결과 반환할 수 있습니다 SQL SELECT 쿼리를 사용 하 여 FOR XML 절을 사용 하 여 XPath 쿼리를 사용 하 여 등 여러 가지 방법으로.  
+기존 **Recordset** 개체에서 결과를 수신 하는 대신 ADO는 대신 스트림에 쿼리 결과를 검색할 수 있습니다. ADO **Stream** 개체 또는 ASP **요청** 및 **응답** 개체와 같은 COM **IStream** 인터페이스를 지 원하는 다른 개체를 사용 하 여 이러한 결과를 포함할 수 있습니다. 이 기능을 사용 하는 한 가지 방법은 XML 형식의 결과를 검색 하는 것입니다. 예를 들어 SQL Server를 사용 하는 경우 FOR XML 절을 SQL SELECT 쿼리와 함께 사용 하거나 XPath 쿼리를 사용 하는 등의 여러 가지 방법으로 XML 결과를 반환할 수 있습니다.  
   
- 대신 스트림 형식으로 쿼리 결과 수신 하는 **레코드 집합**를 지정 해야 합니다는 **adExecuteStream** 에서 상수 **ExecuteOptionEnum** 매개 변수로 **Execute** 메서드를 **명령** 개체입니다. 공급자가이 기능을 지 원하는 경우 실행 시 스트림에서 결과가 반환 됩니다. 코드를 실행 하기 전에 추가 공급자별 속성을 지정 해야 할 수 있습니다. 예를 들어, Microsoft OLE DB Provider for SQL Server와 같은 속성을 사용 하 여 **출력 Stream** 에 **속성** 의 컬렉션을 **명령** 개체 여야 합니다 지정 합니다. 이 기능과 관련 된 SQL Server 관련 동적 속성에 대 한 자세한 내용은 SQL Server 온라인 설명서의 XML-Related 속성을 참조 하세요.  
+ **레코드 집합**대신 스트림 형식으로 쿼리 결과를 받으려면 **Executeoptionenum** 의 **adExecuteStream** 상수를 **명령** 개체의 **Execute** 메서드 매개 변수로 지정 해야 합니다. 공급자가이 기능을 지 원하는 경우 실행 시 스트림에 결과가 반환 됩니다. 코드를 실행 하기 전에 추가 공급자별 속성을 지정 해야 할 수도 있습니다. 예를 들어 SQL Server에 대 한 Microsoft OLE DB 공급자를 사용 하는 경우 **명령** 개체의 **properties** 컬렉션에 있는 **출력 스트림과** 같은 속성을 지정 해야 합니다. 이 기능과 관련 된 SQL Server 특정 동적 속성에 대 한 자세한 내용은 SQL Server 온라인 설명서의 XML 관련 속성을 참조 하십시오.  
   
-## <a name="for-xml-query-example"></a>XML 쿼리 예  
- 다음 예에서는 VBScript에서 Northwind 데이터베이스에 기록 됩니다.  
+## <a name="for-xml-query-example"></a>FOR XML 쿼리 예제  
+ 다음 예제는 Northwind 데이터베이스에 VBScript로 작성 되었습니다.  
   
 ```html
 <!-- BeginRecordAndStreamVBS -->  
@@ -140,37 +140,37 @@ ms.locfileid: "67924342"
   
 ```  
   
- FOR XML 절은 SQL Server 데이터 형식으로 XML 문서를 반환 하도록 지시 합니다.  
+ FOR XML 절은 XML 문서 형식으로 데이터를 반환 하도록 SQL Server에 지시 합니다.  
   
-### <a name="for-xml-syntax"></a>XML 구문에 대 한  
+### <a name="for-xml-syntax"></a>FOR XML 구문  
   
 ```syntax
 FOR XML [RAW|AUTO|EXPLICIT]  
 ```  
   
- 원시 XML 특성으로 열 값이 있는 일반 행 요소를 생성 합니다. FOR XML AUTO 추론을 사용 하 여 테이블 이름에 따라 요소 이름이 포함 된 계층적 트리를 생성 합니다. FOR XML EXPLICIT 메타 데이터에서 완벽 하 게 설명 하는 관계를 사용 하 여 범용 테이블을 생성 합니다.  
+ FOR XML RAW는 열 값이 특성으로 포함 된 일반 행 요소를 생성 합니다. FOR XML AUTO는 추론을 사용 하 여 테이블 이름에 따라 요소 이름이 있는 계층적 트리를 생성 합니다. FOR XML EXPLICIT는 메타 데이터에 의해 완전히 설명 된 관계로 범용 테이블을 생성 합니다.  
   
- SQL SELECT FOR XML 문을 예제는 다음과 같습니다.  
+ 예제 SQL SELECT FOR XML 문은 다음과 같습니다.  
   
 ```sql
 SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO  
 ```  
   
- 명령에 할당 된 앞서 보았던 문자열에 지정할 수 있습니다 **CommandText**, 또는 형식에 할당 된 XML 템플릿 쿼리의 **CommandStream**합니다. XML 템플릿 쿼리에 대 한 자세한 내용은 참조 하세요. [스트림을 명령을](../../../ado/guide/data/command-streams.md) ADO 또는 SQL Server 온라인 설명서에 명령 입력 스트림을 사용 합니다.  
+ 명령은 앞에서 설명한 대로 문자열에 지정 하거나, **CommandText**에 할당 하거나, **commandstream**에 할당 된 XML 템플릿 쿼리 형식으로 지정할 수 있습니다. XML 템플릿 쿼리에 대 한 자세한 내용은 ADO의 [명령 스트림](../../../ado/guide/data/command-streams.md) 또는 SQL Server 온라인 설명서에서 명령 입력에 대 한 스트림 사용을 참조 하세요.  
   
- XML 서식 파일 쿼리로 FOR XML 쿼리는 다음과 같이 나타납니다.  
+ FOR XML 쿼리는 XML 템플릿 쿼리로 다음과 같이 표시 됩니다.  
   
 ```xml
 <sql:query> SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO </sql:query>  
 ```  
   
- 이 예제에서는 지정 된 ASP **응답** 개체에 대 한 합니다 **출력 Stream** 속성:  
+ 이 예에서는 **출력 스트림** 속성에 대해 ASP **Response** 개체를 지정 합니다.  
   
 ```vb
 adoCmd.Properties("Output Stream") = Response  
 ```  
   
- 다음으로, 지정 **adExecuteStream** 의 매개 변수 **Execute**합니다. 이 예제에서는 XML 데이터 아일랜드를 만들려면 XML 태그에서 스트림을 래핑합니다.  
+ 그런 다음 **Execute**의 **adExecuteStream** 매개 변수를 지정 합니다. 이 예에서는 xml 태그의 스트림을 래핑하여 XML 데이터 아일랜드를 만듭니다.  
   
 ```vb
 Response.write "<XML ID=MyDataIsle>"  
@@ -179,4 +179,4 @@ Response.write "</XML>"
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 시점에서 XML을 클라이언트 브라우저에 스트리밍된 및 표시할 준비가 된 것입니다. 이 XML 문서를 DOM 및 각 자식 노드를 통해 반복를 HTML에서 제품 목록을 작성할 인스턴스에 바인딩할 클라이언트 측 VBScript를 사용 하 여 이루어집니다.
+ 이 시점에서 XML은 클라이언트 브라우저로 스트리밍 되었으며 표시 될 준비가 되었습니다. 이 작업은 클라이언트 쪽 VBScript를 사용 하 여 XML 문서를 DOM 인스턴스에 바인딩하고 각 자식 노드를 반복 하 여 HTML로 제품 목록을 작성 하는 방법으로 수행 됩니다.

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c9858638287876d31733035d1a6bb6d95705708f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228715"
 ---
 # <a name="creation-and-configuration-of-availability-groups-sql-server"></a>가용성 그룹의 생성 및 구성(SQL Server)
@@ -34,16 +34,16 @@ ms.locfileid: "75228715"
   
  
   
-##  <a name="RelatedTasks"></a>관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
  **에 대 한 서버 인스턴스를 구성 하려면[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]**  
   
--   [AlwaysOn 가용성 그룹 &#40;SQL Server 사용 및 사용 안 함&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)  
+-   [AlwaysOn 가용성 그룹 활성화 및 비활성화&#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)  
   
 -   [AlwaysOn 가용성 그룹 &#40;SQL Server PowerShell에 대 한 데이터베이스 미러링 끝점을 만듭니다&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
--   [Transact-sql&#41;&#40;Windows 인증에 대 한 데이터베이스 미러링 끝점 만들기](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
+-   [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&#40;Transact-SQL&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
--   [Transact-sql&#41;&#40;데이터베이스 미러링 끝점의 아웃 바운드 연결에 대 한 인증서 사용 허용](../../database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
+-   [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL&#41;](../../database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
  **AlwaysOn 가용성 그룹 구성을 시작하려면**  
   
@@ -51,33 +51,33 @@ ms.locfileid: "75228715"
   
  **새 가용성 그룹을 만들고 구성 하려면**  
   
--   [가용성 그룹 마법사를 사용 하 여 SQL Server Management Studio &#40;&#41;](use-the-availability-group-wizard-sql-server-management-studio.md)  
+-   [가용성 그룹 마법사 사용&#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md)  
   
 -   [Transact-sql&#41;&#40;가용성 그룹 만들기](create-an-availability-group-transact-sql.md)  
   
 -   [가용성 그룹 &#40;SQL Server PowerShell를 만듭니다&#41;](../../../powershell/sql-server-powershell.md)  
   
--   [새 가용성 그룹 대화 상자를 사용 하 여 SQL Server Management Studio &#40;&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
+-   [새 가용성 그룹 대화 상자 사용&#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
 -   [가용성 복제본 &#40;SQL Server를 추가 하거나 수정할 때 끝점 URL을 지정&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
--   [SQL Server&#41;&#40;가용성 그룹 수신기 만들기 또는 구성](create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
 -   [유연한 장애 조치(failover) 정책을 구성하여 자동 장애 조치의 상태 제어(AlwaysOn 가용성 그룹)](configure-flexible-automatic-failover-policy.md)  
   
--   [가용성 복제본에 대 한 백업 구성 &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
+-   [가용성 복제본에 백업 구성&#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
   
--   [SQL Server&#41;&#40;가용성 복제본에 대 한 읽기 전용 액세스를 구성 합니다.](configure-read-only-access-on-an-availability-replica-sql-server.md)  
+-   [가용성 복제본에 대한 읽기 전용 액세스 구성&#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
--   [가용성 그룹에 대 한 읽기 전용 라우팅 구성 &#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md)  
+-   [가용성 그룹에 대한 읽기 전용 라우팅 구성&#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
--   [보조 복제본을 가용성 그룹 &#40;SQL Server에 조인&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
+-   [가용성 그룹에 보조 복제본 조인&#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
 -   [AlwaysOn 보조 데이터베이스에서 데이터 이동을 시작 &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md)  
   
--   [가용성 그룹에 대 한 보조 데이터베이스를 수동으로 준비 &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
+-   [가용성 그룹에 대한 보조 데이터베이스 준비&#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
--   [보조 데이터베이스를 가용성 그룹 &#40;SQL Server에 조인&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
+-   [가용성 그룹에 보조 데이터베이스 조인&#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
 -   [가용성 그룹의 데이터베이스에 대 한 로그인 및 작업 관리 SQL Server &#40;&#41;](../../logins-and-jobs-for-availability-group-databases.md)  
   
@@ -87,7 +87,7 @@ ms.locfileid: "75228715"
   
 -   [실패 한 파일 추가 작업 문제 해결 AlwaysOn 가용성 그룹 &#40;&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a>관련 내용  
+##  <a name="RelatedContent"></a> 관련 내용  
   
 -   **블로그**  
   
@@ -113,8 +113,8 @@ ms.locfileid: "75228715"
   
 ## <a name="see-also"></a>참고 항목  
  [AlwaysOn 가용성 그룹 &#40;SQL Server 개요&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [가용성 그룹 관리 &#40;SQL Server&#41;](administration-of-an-availability-group-sql-server.md)   
+ [가용성 그룹 관리&#40;SQL Server&#41;](administration-of-an-availability-group-sql-server.md)   
  [AlwaysOn 가용성 그룹의 작업 문제에 대 한 AlwaysOn 정책 (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md)   
- [가용성 그룹 &#40;모니터링 SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
+ [가용성 그룹 모니터링&#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
  [AlwaysOn 가용성 그룹: 상호 운용성(SQL Server)](always-on-availability-groups-interoperability-sql-server.md)  
   

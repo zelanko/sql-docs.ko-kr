@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 5435b9056d98a5b2dc0835bfcd0e60865c1686b4
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957267"
 ---
 # <a name="back-up-a-database-master-key"></a>데이터베이스 마스터 키 백업
@@ -24,7 +24,7 @@ ms.locfileid: "74957267"
   
  **항목 내용**  
   
--   **시작 하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [제한 사항](#Restrictions)  
   
@@ -32,25 +32,24 @@ ms.locfileid: "74957267"
   
 -   [Transact-sql을 사용 하 여 데이터베이스 마스터 키를 백업 하려면](#Procedure)  
   
-##  <a name="BeforeYouBegin"></a>시작 하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a>제한 사항  
+###  <a name="Restrictions"></a> 제한 사항  
   
 -   마스터 키를 열어야 하기 때문에 백업하기 전에 암호를 해독해야 합니다. 서비스 마스터 키를 사용하여 암호화된 경우 마스터 키를 명시적으로 열 필요가 없습니다. 하지만 마스터 키가 암호로만 암호화된 경우 명시적으로 열어야 합니다.  
   
 -   마스터 키는 만들자 마자 백업하고 외부의 안전한 위치에 보관하는 것이 좋습니다.  
   
-###  <a name="Security"></a>보안  
+###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a>권한에  
+####  <a name="Permissions"></a> 권한  
  데이터베이스에 대한 CONTROL 권한이 필요합니다.  
   
 ##  <a name="Procedure"></a>Transact-sql과 함께 SQL Server Management Studio 사용  
   
 #### <a name="to-back-up-the-database-master-key"></a>데이터베이스 마스터 키를 백업하려면  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 백업할 데이터베이스 마스터 키가 들어 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다.  
+1.  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 백업할 데이터베이스 마스터 키가 들어 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다.  
   
 2.  백업 미디어에 데이터베이스 마스터 키를 암호화하는 데 사용할 암호를 선택합니다. 이 암호의 복잡성을 확인해야 합니다.  
   
@@ -58,11 +57,9 @@ ms.locfileid: "74957267"
   
 4.  키의 백업을 만들 NTFS 디렉터리를 식별합니다. 다음 단계에서 지정하는 파일을 만들 위치인 이 디렉터리는 매우 제한적인 ACL(액세스 제한 목록)로 보호되어야 합니다.  
   
-5.  
-  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+5.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-6.  
-  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+6.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
 7.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
   

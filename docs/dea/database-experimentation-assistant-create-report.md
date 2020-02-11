@@ -1,7 +1,7 @@
 ---
 title: 분석 보고서 만들기
 description: 데이터베이스 실험 도우미에서 분석 보고서 만들기
-ms.date: 11/21/2019
+ms.date: 01/24/2020
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -12,12 +12,12 @@ author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4d3f057ffcfb1030b473b69f96b7204b3a975613
-ms.sourcegitcommit: aaa42f26c68abc2de10eb58444fe6b490c174eab
+ms.openlocfilehash: f82aba87632abea4ac5fbc8b54daa6dfd0eb5b4a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74307971"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76831877"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant-sql-server"></a>데이터베이스 실험 도우미에서 분석 보고서 만들기 (SQL Server)
 
@@ -25,29 +25,24 @@ ms.locfileid: "74307971"
 
 ## <a name="create-an-analysis-report"></a>분석 보고서 만들기
 
-DEA에서 메뉴 아이콘을 선택 합니다. 확장 된 메뉴에서 검사 목록 아이콘 옆에 있는 **분석 보고서** 를 선택 합니다.
+1. DEA에서 목록 아이콘을 선택 하 고, 서버 이름 및 인증 유형을 지정 하 고, 시나리오에 적절 하 게 **연결 암호화** 및 **서버 인증서 신뢰** 확인란을 선택 하거나 선택 취소 한 다음 **연결**을 선택 합니다.
 
-![분석 메뉴](./media/database-experimentation-assistant-create-report/dea-create-reports-menu.png)
+   ![추적 파일을 사용 하 여 서버에 연결](./media/database-experimentation-assistant-create-report/dea-connect-to-server-with-trace-files.png)
 
-**분석 보고서**에서 **새 분석 보고서**를 선택 합니다.
+2. **분석 보고서** 화면에서 **새 분석 보고서**를 선택 합니다.
 
-![새 분석 보고서 메뉴](./media/database-experimentation-assistant-create-report/dea-create-reports-new-report.png)
+   ![새 분석 보고서 만들기](./media/database-experimentation-assistant-create-report/dea-create-an-analysis-report.png)
 
-다음 정보를 입력 하거나 선택 합니다.
+3. **새 분석 보고서** 화면에서 보고서 이름, 저장소 위치 및 대상 1과 대상 2 추적 파일의 경로를 지정 하 고 **시작**을 선택 합니다.
 
-- **보고서 이름**: 보고서의 이름을 입력 합니다. 보고서 이름은 A 및 B 데이터베이스에 모두 사용 됩니다. 예: *A (또는 B)* + *보고서 이름* + *고유 식별자*입니다.
-- **서버 이름**:, B 및 분석 데이터베이스에 포함 하려는 서버 컴퓨터의 이름을 입력 합니다.
-- **SQL Server 인스턴스 이름**: 보고서에 사용할 SQL Server 인스턴스의 이름을 입력 합니다.
-- **원본 서버 추적**: SQL Server (2008 R2) 첫 번째 추적 (.trc) 파일을 입력 합니다.
-- **대상 서버에 대 한 추적**: 대상 SQL Server (2014) 첫 번째 .trc 파일을 입력 합니다.
+   ![새 분석 보고서 정보 지정](./media/database-experimentation-assistant-create-report/dea-new-analysis-report-details.png)
 
-![새 분석 보고서 페이지](./media/database-experimentation-assistant-create-report/dea-create-reports-inputs.png)
+   입력 한 정보가 올바르면 분석 보고서가 생성 됩니다.
 
-## <a name="generate-a-report"></a>보고서 생성
+   ![새로 만든 분석 보고서](./media/database-experimentation-assistant-create-report/dea-newly-created-analysis-report.png)
 
-**새 분석 보고서** 페이지에서 필요한 정보를 입력 하거나 선택한 후 **시작** 을 선택 하 여 보고서 만들기를 시작 합니다. 입력 한 정보가 올바르면 분석 보고서가 생성 됩니다. 그렇지 않으면 잘못 된 정보가 있는 입력란이 빨간색으로 강조 표시 됩니다. 올바른 값을 입력 했는지 확인 한 다음 **시작**을 선택 합니다.
-
-새 분석 보고서가 생성 됩니다. 분석 데이터베이스는 명명 체계 분석 + *사용자 지정 보고서 이름* + *고유 식별자*를 따릅니다.
+      > [!NOTE]
+      > 입력 한 정보가 잘못 된 경우 잘못 된 정보를 포함 하는 입력란은 빨간색으로 강조 표시 됩니다. 필요한 수정 작업을 수행 하 고 다시 **시작** 을 선택 합니다.
 
 ## <a name="frequently-asked-questions-about-analysis-reports"></a>분석 보고서에 대 한 질문과 대답
 
@@ -58,10 +53,6 @@ DEA는 통계 테스트를 사용 하 여 워크 로드를 분석 하 고 각 �
 **Q: 다른 보고서를 생성 하는 동안 새 분석 보고서를 만들 수 있나요?**
 
 아니요.  현재는 충돌을 방지 하기 위해 한 번에 하나의 보고서만 생성할 수 있습니다. 그러나 둘 이상의 캡처 및 재생을 동시에 실행할 수 있습니다.
-
-**Q: DEA를 버전 2.0로 업그레이드 했습니다. 이전 보고서를 계속 보고 사용할 수 있나요?**
-
-예. 이전에 생성 된 보고서를 보려면 보고서의 스키마를 업데이트 해야 합니다. 자세한 내용은 [DEA 2.0: Update database schema for analysis report IN DEA](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-updating-db-schema-for-analysis-report-in-the-database-experimentation-assistant/)을 참조 하세요.
 
 **Q: 명령 프롬프트를 사용 하 여 분석 보고서를 생성할 수 있습니까?**
 
@@ -105,7 +96,7 @@ SQL Server를 실행 하 고 있는 분석 컴퓨터의 데이터베이스를 �
 
 데이터가 없으면 데이터가 올바르게 복사 되지 않았거나 데이터베이스가 손상 되었을 수 있습니다. 일부 데이터만 누락 된 경우 캡처 또는 재생 시 생성 된 추적 파일에서 작업을 정확 하 게 캡처하지 못할 수 있습니다. 데이터가 있는 경우% temp%\\DEA의 로그 파일을 확인 하 여 오류가 기록 되었는지 확인 하십시오. 그런 다음, 다시 시도 하 여 분석 보고서를 생성 합니다.
 
-추가 질문이 나 피드백이 있나요? 왼쪽 아래 모서리에서 웃는 얼굴 아이콘을 선택 하 여 DEA 도구를 통해 피드백을 제출 합니다. 
+추가 질문이 나 피드백이 있나요? 왼쪽 아래 모서리에서 웃는 얼굴 아이콘을 선택 하 여 DEA 도구를 통해 피드백을 제출 합니다.
 
 ## <a name="see-also"></a>참고 항목
 

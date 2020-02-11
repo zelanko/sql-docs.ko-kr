@@ -15,10 +15,10 @@ ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 02adc815ee969af43b56e51966ded1b1fde6f101
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244146"
 ---
 # <a name="perform-knowledge-discovery"></a>기술 자료 검색 수행
@@ -29,14 +29,14 @@ ms.locfileid: "75244146"
   
  기술 자료 검색은 마법사 기반 프로세스로, 각각 완료되어야 하는 3단계를 포함합니다.  
   
-##  <a name="BeforeYouBegin"></a>시작 하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a>사전  
+###  <a name="Prerequisites"></a> 필수 조건  
  검색을 실행하려는 원본 데이터가 Excel 파일 형식일 경우 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 컴퓨터에 Microsoft Excel을 설치해야 합니다. 그렇지 않으면 매핑 단계에서 Excel 파일을 선택할 수 없습니다. Microsoft Excel에서 만든 파일은 .xlsx, .xls 또는.csv 확장명을 가질 수 있습니다. 64비트 버전의 Excel이 사용된 경우 Excel 2003 파일 (.xls)만 지원됩니다. Excel 2007 또는 2010 파일(.xlsx)은 지원되지 않습니다. 64비트 버전의 Excel 2007 또는 2010을 사용 중인 경우 파일을 .xls 파일 또는 .csv 파일로 저장하거나 32비트 버전의 Excel을 대신 설치하세요.  
   
-###  <a name="Security"></a>보안  
+###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a>권한에  
+####  <a name="Permissions"></a> 권한  
  기술 자료를 만들려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
 ##  <a name="FirstStep"></a>첫 번째 단계: 기술 자료 검색 시작  
@@ -206,8 +206,7 @@ ms.locfileid: "75244146"
   
 8.  **Excel에서 도메인 값 가져오기**: **값 가져오기** 아이콘에 대해 아래쪽 화살표를 클릭 한 다음 **excel에서 도메인 값 가져오기**를 선택 하 여 excel 스프레드시트에서 새 값을 추가 합니다. 파일 이름을 입력하고 해당하는 경우 **첫 번째 행을 헤더로 사용하세요** 를 선택한 다음 **확인**을 클릭합니다. 자세한 내용은 [Excel 파일에서 도메인으로 값 가져오기](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)을 참조하세요.  
   
-9. **프로젝트 값 가져오기**: **값 가져오기** 아이콘에 대해 아래쪽 화살표를 클릭 하 고 **프로젝트 값 가져오기**를 선택 하 여 데이터 품질 프로젝트에서 새 값을 추가 합니다. 파일 이름을 입력하고 해당하는 경우 **첫 번째 행을 헤더로 사용하세요** 를 선택한 다음 **확인**을 클릭합니다. 값을 가져올 프로젝트를 선택한 후 **확인**을 클릭합니다. 가져온 값이 표시됩니다. 
-  **마침**을 클릭합니다. 자세한 내용은 도메인에 프로젝트 값 가져오기를 참조하세요.  
+9. **프로젝트 값 가져오기**: **값 가져오기** 아이콘에 대해 아래쪽 화살표를 클릭 하 고 **프로젝트 값 가져오기**를 선택 하 여 데이터 품질 프로젝트에서 새 값을 추가 합니다. 파일 이름을 입력하고 해당하는 경우 **첫 번째 행을 헤더로 사용하세요** 를 선택한 다음 **확인**을 클릭합니다. 값을 가져올 프로젝트를 선택한 후 **확인**을 클릭합니다. 가져온 값이 표시됩니다. **Finish**를 클릭합니다. 자세한 내용은 도메인에 프로젝트 값 가져오기를 참조하세요.  
   
 10. **선택한 도메인 값 삭제**: 값을 선택한 다음 **선택한 도메인 값 삭제** 단추를 클릭 하 여 도메인에서 하나 이상의 기존 값을 제거 합니다. DQS_NULL 항목은 삭제할 수 없으므로 삭제할 값을 여러 개 선택한 경우 그중 DQS_NULL 항목이 포함되어 있으면 작업이 실패합니다.  
   

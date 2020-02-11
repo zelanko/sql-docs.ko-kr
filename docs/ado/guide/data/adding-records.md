@@ -16,18 +16,18 @@ ms.assetid: dd34669e-6f06-403b-9241-1c85c82aecc2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1f4ec0934fbf75de18f460abae84b8117e99f452
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926260"
 ---
-# <a name="adding-records-to-a-recordset"></a>레코드 집합에 레코드를 추가합니다.
-사용 된 **AddNew** 메서드를 만들고 기존에서 새 레코드를 초기화할 **레코드 집합**합니다. 사용할 수는 **지원** 메서드를 **CursorOptionEnum** 의 값 **adAddNew** 현재 레코드를 추가할 수 있는지 여부를 확인 하려면 **레코드집합** 개체입니다.
+# <a name="adding-records-to-a-recordset"></a>레코드 집합에 레코드 추가
+**AddNew** 메서드를 사용 하 여 기존 레코드 **집합**에 새 레코드를 만들고 초기화 합니다. **CursorOptionEnum** 값이 **Adaddnew** 인 **Supports** 메서드를 사용 하 여 현재 **레코드 집합** 개체에 레코드를 추가할 수 있는지 여부를 확인할 수 있습니다.
 
- 호출한 후 합니다 **AddNew** 메서드 새 레코드를 현재 레코드가 호출한 후에 현재 상태로 유지 됩니다 합니다 **업데이트** 메서드. 경우는 **레코드 집합** 개체가 책갈피를 지원 하지 않습니다, 다른 레코드로 이동 되 면 새 레코드에 액세스할 수 있습니다. 따라서 커서 유형에 따라 수 호출 해야 합니다 **Requery** 새 레코드에 액세스할 수 있도록 하는 방법입니다.
+ **AddNew** 메서드를 호출 하면 새 레코드가 현재 레코드가 되며 **Update** 메서드를 호출한 후에는 현재 레코드가 됩니다. **레코드 집합** 개체가 책갈피를 지원 하지 않는 경우에는 다른 레코드로 이동 하는 동안 새 레코드에 액세스 하지 못할 수 있습니다. 따라서 커서 유형에 따라 **Requery** 메서드를 호출 하 여 새 레코드를 액세스할 수 있도록 해야 할 수도 있습니다.
 
- 호출 하는 경우 **AddNew** ADO를 호출 하는 현재 레코드를 편집 하는 동안 또는 새 레코드를 추가 하는 동안 합니다 **업데이트** 메서드 하나를 변경 하 고 새 레코드를 만듭니다.
+ 현재 레코드를 편집 하는 동안 **AddNew** 를 호출 하거나 새 레코드를 추가 하는 동안 ADO에서 **Update** 메서드를 호출 하 여 변경 내용을 저장 한 다음 새 레코드를 만듭니다.
 
  이 섹션에서는 다음 항목을 다룹니다.
 

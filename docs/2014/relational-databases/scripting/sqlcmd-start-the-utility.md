@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 80f8f63b4ddb3e8641ef503a615d57c63be35164
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243266"
 ---
 # <a name="start-the-sqlcmd-utility"></a>sqlcmd 유틸리티 시작
@@ -38,7 +38,7 @@ ms.locfileid: "75243266"
   
 2.  명령 프롬프트에 `sqlcmd`을 입력합니다.  
   
-3.  ENTER 키를 누릅니다.  
+3.  Enter 키를 누릅니다.  
   
      이제 트러스트된 연결을 사용하여 컴퓨터에서 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 인스턴스에 연결되었습니다.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "75243266"
 1.  명령 프롬프트 창을 열고 `sqlcmd -S` *myServer\instanceName*를 입력 합니다. 
   *myServer\instanceName* 을 연결하려는 컴퓨터 이름 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 바꿉니다.  
   
-2.  ENTER 키를 누릅니다.  
+2.  Enter 키를 누릅니다.  
   
      `sqlcmd` 프롬프트 (1>)는 사용자가 지정 된 인스턴스에 연결 되었음을 나타냅니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -59,6 +59,6 @@ ms.locfileid: "75243266"
     >  입력한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 버퍼에 저장되며 GO 명령이 발견되면 일괄 처리로 실행됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Sqlcmd를 사용 하 여 Transact-sql 스크립트 파일 실행](sqlcmd-run-transact-sql-script-files.md)  
+ [sqlcmd를 사용하여 Transact-SQL 스크립트 파일 실행](sqlcmd-run-transact-sql-script-files.md)  
   
   

@@ -19,23 +19,23 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: e73098a63f193ab868854674d2e77c3ba372c29c
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957117"
 ---
 # <a name="transparent-data-encryption-tde"></a>TDE(투명한 데이터 암호화)
-  Tde ( *투명한 데이터 암호화* )는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 미사용 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 데이터 암호화 라고 하는 및 데이터 파일을 암호화 합니다. 보안 시스템 설계, 중요한 자산 암호화 및 데이터베이스 서버 방화벽 구축과 같은 데이터베이스 보호에 도움이 되는 몇 가지 예방 조치를 취할 수 있습니다. 그러나 물리적 미디어(예: 드라이브 또는 백업 테이프)가 도난되는 시나리오에서는 악의적인 사용자가 데이터베이스를 단순히 복원하거나 연결하여 데이터를 찾아 볼 수 있습니다. 한 가지 해결 방법으로 데이터베이스의 중요한 데이터를 암호화하고 인증서로 데이터를 암호화하는 데 사용되는 키를 보호합니다. 이 경우 키가 없으면 누구도 데이터를 사용할 수 없지만 이러한 보호 방법은 사전에 계획해야 합니다.  
+  Tde ( *투명한 데이터 암호화* )는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 미사용 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 데이터 암호화 라고 하는 및 데이터 파일을 암호화 합니다. 보안 시스템 설계, 중요한 자산 암호화 및 데이터베이스 서버 방화벽 구축과 같은 데이터베이스 보호에 도움이 되는 몇 가지 예방 조치를 취할 수 있습니다. 그러나 물리적 미디어(예: 드라이브 또는 백업 테이프)가 도난되는 시나리오에서는 악의적인 사용자가 데이터베이스를 단순히 복원하거나 연결하여 데이터를 찾아 볼 수 있습니다. 한 가지 해결 방법은 데이터베이스의 중요한 데이터를 암호화하고 인증서와 함께 데이터를 암호화하는 데 사용된 키를 보호하는 것입니다. 이 경우 키가 없으면 누구도 데이터를 사용할 수 없지만 이러한 보호 방법은 사전에 계획해야 합니다.  
   
- TDE는 데이터 및 로그 파일에 대한 실시간 I/O 암호화 및 암호 해독을 수행합니다. 암호화에는 복구 중에 사용 가능하도록 데이터베이스 부트 레코드에 저장된 DEK(데이터베이스 암호화 키)가 사용됩니다. DEK는 서버의 master 데이터베이스에 저장된 인증서 또는 EKM 모듈로 보호되는 비대칭 키를 사용하여 보호되는 대칭 키입니다. TDE는 데이터와 로그 파일을 의미하는 미사용 데이터를 보호합니다. 다양한 산업 분야에서 제정된 많은 법률, 규정 및 지침을 준수하는 기능을 제공합니다. 이를 통해 소프트웨어 개발자는 AES 및 3DES 암호화 알고리즘을 사용하여 기존의 애플리케이션을 변경하지 않고 데이터를 암호화할 수 있습니다.  
+ TDE는 데이터 및 로그 파일에 대한 실시간 I/O 암호화 및 암호 해독을 수행합니다. 암호화에는 복구 중에 사용 가능하도록 데이터베이스 부트 레코드에 저장된 DEK(데이터베이스 암호화 키)가 사용됩니다. DEK는 서버의 master 데이터베이스에 저장된 인증서 또는 EKM 모듈로 보호되는 비대칭 키를 사용하여 보호되는 대칭 키입니다. TDE는 데이터 및 로그 파일을 의미하는 "유휴" 데이터를 보호하고 다양한 업계에서 확립된 법, 규정 및 지침에 부합하는 기능을 제공합니다. 이를 통해 소프트웨어 개발자는 AES 및 3DES 암호화 알고리즘을 사용하여 기존의 애플리케이션을 변경하지 않고 데이터를 암호화할 수 있습니다.  
   
 > [!IMPORTANT]
 >  TDE에서는 통신 채널을 통한 암호화를 제공하지 않습니다. 통신 채널을 통해 데이터를 암호화하는 방법은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  
 > 
 >  **관련 항목:**  
 > 
->  -   [Azure SQL Database 투명한 데이터 암호화](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)  
+>  -   [Azure SQL Database를 사용한 투명한 데이터 암호화](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)  
 > -   [TDE로 보호 되는 데이터베이스를 다른 SQL Server 이동](move-a-tde-protected-database-to-another-sql-server.md)  
 > -   [EKM을 사용 하 여 TDE 사용](enable-tde-on-sql-server-using-ekm.md)  
   
@@ -53,9 +53,9 @@ ms.locfileid: "74957117"
   [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 에 대한 TDE는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 이(가) TDE가 미리보기에서 GA로 승격되었음을 알릴 때까지 제품 데이터베이스에서 사용하기 위한 것이 아닙니다. 
   [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] V12에 대한 자세한 내용은 [Azure SQL 데이터베이스의 새로운 소식](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/)을 참조합니다.  
   
- **적용 되는 정보[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
+ **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 적용되는 정보**  
   
- 보안이 설정된 후 올바른 인증서를 사용하여 데이터베이스를 복원할 수 있습니다. 인증서에 대한 자세한 내용은 [SQL Server Certificates and Asymmetric Keys](../sql-server-certificates-and-asymmetric-keys.md)를 참조하세요.  
+ 보안이 설정된 후 올바른 인증서를 사용하여 데이터베이스를 복원할 수 있습니다. 인증서에 대한 자세한 내용은 [SQL Server Certificates and Asymmetric Keys](../sql-server-certificates-and-asymmetric-keys.md)를 참조하십시오.  
   
  TDE를 설정할 경우 인증서 및 인증서와 연결된 프라이빗 키를 즉시 백업해야 합니다. 인증서를 사용할 수 없게 되거나 다른 서버에서 데이터베이스를 복원하거나 연결해야 할 경우 인증서와 프라이빗 키의 백업본이 있어야 합니다. 그렇지 않으면 데이터베이스를 열 수 없습니다. 데이터베이스에서 TDE를 해제하더라도 인증서 암호화는 그대로 유지해야 합니다. 데이터베이스가 암호화되지 않더라도 트랜잭션 로그 부분은 그대로 보호될 수 있으며, 일부 작업의 경우 데이터베이스 전체 백업을 수행할 때까지는 인증서가 필요할 수 있습니다. 만료 날짜가 지난 인증서도 여전히 데이터를 TDE로 암호화하고 해독하는 데 사용할 수 있습니다.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "74957117"
   
  다음 그림에서는 TDE 암호화의 아키텍처를 보여 줍니다. 데이터베이스 수준 항목만(데이터베이스 암호화 키 및 ALTER DATABASE 부분은 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]에서 TDE를 사용하는 경우 사용자가 구성활 수 있습니다.  
   
- ![이 항목에서 설명하는 계층 표시](../../../database-engine/media/tde-architecture.gif "이 항목에서 설명하는 계층 표시")  
+ ![이 항목에서 설명하는 계층 구조를 표시합니다.](../../../database-engine/media/tde-architecture.gif "이 항목에서 설명하는 계층 표시")  
   
 ## <a name="using-transparent-data-encryption"></a>투명한 데이터 암호화 사용  
  TDE를 사용하려면 다음 단계를 수행합니다.  
@@ -115,21 +115,21 @@ GO
   
 |명령 또는 함수|목적|  
 |-------------------------|-------------|  
-|[Transact-sql&#41;&#40;데이터베이스 암호화 키 만들기](/sql/t-sql/statements/create-database-encryption-key-transact-sql)|데이터베이스 암호화에 사용할 키를 만듭니다.|  
-|[ALTER DATABASE ENCRYPTION KEY &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-encryption-key-transact-sql)|데이터베이스 암호화에 사용할 키를 변경합니다.|  
-|[DROP DATABASE ENCRYPTION KEY &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-database-transact-sql)|데이터베이스 암호화에 사용한 키를 제거합니다.|  
-|[ALTER DATABASE SET 옵션 &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)|TDE를 설정하는 데 사용된 `ALTER DATABASE` 옵션에 대해 설명합니다.|  
+|[CREATE DATABASE ENCRYPTION KEY&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)|데이터베이스 암호화에 사용할 키를 만듭니다.|  
+|[ALTER DATABASE ENCRYPTION KEY&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-encryption-key-transact-sql)|데이터베이스 암호화에 사용할 키를 변경합니다.|  
+|[DROP DATABASE ENCRYPTION KEY&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-database-transact-sql)|데이터베이스 암호화에 사용한 키를 제거합니다.|  
+|[ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)|TDE를 설정하는 데 사용된 `ALTER DATABASE` 옵션에 대해 설명합니다.|  
   
 ## <a name="catalog-views-and-dynamic-management-views"></a>카탈로그 뷰 및 동적 관리 뷰  
  다음 표에서는 TDE 카탈로그 뷰 및 동적 관리 뷰를 보여 줍니다.  
   
 |카탈로그 뷰 또는 동적 관리 뷰|목적|  
 |---------------------------------------------|-------------|  
-|[sys.debug &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)|데이터베이스 정보를 보여 주는 카탈로그 뷰입니다.|  
-|[sys. 인증서 &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)|데이터베이스의 인증서를 보여 주는 카탈로그 뷰입니다.|  
-|[dm_database_encryption_keys &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)|데이터베이스에 사용된 암호화 키 및 데이터베이스 암호화의 상태에 대한 정보를 보여 주는 동적 관리 뷰입니다.|  
+|[sys.databases&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)|데이터베이스 정보를 보여 주는 카탈로그 뷰입니다.|  
+|[sys.certificates&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)|데이터베이스의 인증서를 보여 주는 카탈로그 뷰입니다.|  
+|[sys.dm_database_encryption_keys&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)|데이터베이스에 사용된 암호화 키 및 데이터베이스 암호화의 상태에 대한 정보를 보여 주는 동적 관리 뷰입니다.|  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  위에 표시된 표에서 설명한 것처럼 TDE의 기능 및 명령에는 각각의 사용 권한 요구 사항이 있습니다.  
   
  TDE와 관련된 메타데이터를 보려면 인증서에 대한 VIEW DEFINITION 권한이 필요합니다.  
@@ -240,9 +240,9 @@ GO
  [TDE로 보호 되는 데이터베이스를 다른 SQL Server 이동](move-a-tde-protected-database-to-another-sql-server.md)   
  [EKM을 사용 하 여 TDE 사용](enable-tde-on-sql-server-using-ekm.md)   
  [Azure SQL Database 투명한 데이터 암호화](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)   
- [암호화 SQL Server](sql-server-encryption.md)   
- [SQL Server 및 데이터베이스 암호화 키 &#40;데이터베이스 엔진&#41;](sql-server-and-database-encryption-keys-database-engine.md)   
+ [SQL Server 암호화](sql-server-encryption.md)   
+ [SQL Server 및 데이터베이스 암호화 키&#40;데이터베이스 엔진&#41;](sql-server-and-database-encryption-keys-database-engine.md)   
  [SQL Server 데이터베이스 엔진 및 Azure SQL Database에 대 한 Security Center](../security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
- [FILESTREAM &#40;SQL Server&#41;](../../blob/filestream-sql-server.md)  
+ [FILESTREAM&#40;SQL Server&#41;](../../blob/filestream-sql-server.md)  
   
   

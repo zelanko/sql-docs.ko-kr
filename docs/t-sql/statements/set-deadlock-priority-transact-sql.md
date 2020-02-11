@@ -25,18 +25,18 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a56192c7aa54d9b5fe215b8f793d90d6e814238e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929057"
 ---
-# <a name="set-deadlockpriority-transact-sql"></a>SET DEADLOCK_PRIORITY(Transact-SQL)
+# <a name="set-deadlock_priority-transact-sql"></a>SET DEADLOCK_PRIORITY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   현재 세션이 다른 세션과 교착 상태에 있는 경우 현재 세션이 계속 실행되도록 하는 상대적 중요도를 지정합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -66,7 +66,7 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
  **@** *deadlock_intvar*  
  교착 상태 우선 순위를 지정하는 정수 변수입니다. 변수는 범위가 -10에서 10 사이인 정수 값으로 설정해야 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  교착 상태는 두 세션이 모두 다른 세션에서 잠근 리소스에 액세스하려고 대기할 때 발생합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 두 세션이 교착 상태인 것이 감지되면 세션 중 하나를 교착 상태가 발생한 것으로 선택하여 교착 상태를 해결합니다. 교착 상태가 발생한 현재 트랜잭션이 롤백되고 교착 상태 오류 메시지 1205가 클라이언트로 반환됩니다. 이렇게 하면 해당 세션이 보유한 모든 잠금이 해제되어 다른 세션을 계속할 수 있습니다.  
   
  교착 상태가 발생한 것으로 선택하는 세션은 각 세션의 교착 상태 우선 순위에 따라 다릅니다.  

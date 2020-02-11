@@ -11,10 +11,10 @@ ms.assetid: 241d46d7-8008-47f6-bebd-0dfff1cc856a
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 0c0bf0cacc1fa1a1d042633531840ba46d1fae2b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75253075"
 ---
 # <a name="create-a-master-data-manager-web-application-master-data-services"></a>마스터 데이터 관리자 웹 응용 프로그램 만들기 (MDS(Master Data Services))
@@ -34,7 +34,7 @@ ms.locfileid: "75253075"
   
  웹 애플리케이션을 만든 후 이를 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스에 연결합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
   
 -   웹 애플리케이션을 호스트하는 컴퓨터의 요구 사항에 대한 자세한 내용은 [웹 애플리케이션 요구 사항&#40;Master Data Services&#41;](../../master-data-services/install-windows/web-application-requirements-master-data-services.md)을 참조하세요.  
   
@@ -49,8 +49,7 @@ ms.locfileid: "75253075"
   
 #### <a name="to-create-a-master-data-manager-web-application-in-a-new-website"></a>새 웹 사이트에서 마스터 데이터 관리자 웹 애플리케이션을 만들려면  
   
-1.  
-  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]를 엽니다.  
+1.  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]를 엽니다.  
   
 2.  왼쪽 창에서 **웹 구성**을 클릭합니다.  
   
@@ -60,16 +59,14 @@ ms.locfileid: "75253075"
 4.  
   **웹 사이트 만들기** 대화 상자에서 새 웹 사이트에 대한 정보를 지정합니다. 대화 상자의 UI(사용자 인터페이스) 옵션에 대한 자세한 내용은 [웹 사이트 만들기 대화 상자&#40;Master Data Services 구성 관리자&#41;](../../master-data-services/create-website-dialog-box-master-data-services-configuration-manager.md)를 참조하세요.  
   
-5.  
-  **확인**을 클릭합니다.  
+5.  **확인**을 클릭합니다.  
   
 ## <a name="to-create-a-master-data-manager-web-application-in-an-existing-website"></a>기존 웹 사이트에서 마스터 데이터 관리자 웹 애플리케이션을 만들려면  
  기존 웹 사이트에서 웹 애플리케이션을 만드는 경우 웹 애플리케이션의 가상 경로 및 별칭을 선택할 수 있습니다. 이 웹 애플리케이션은 새 애플리케이션 풀에 추가됩니다.  
   
 #### <a name="to-create-a-master-data-manager-web-application-in-an-existing-website"></a>기존 웹 사이트에서 마스터 데이터 관리자 웹 애플리케이션을 만들려면  
   
-1.  
-  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]를 엽니다.  
+1.  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]를 엽니다.  
   
 2.  왼쪽 창에서 **웹 구성**을 클릭합니다.  
   
@@ -82,8 +79,7 @@ ms.locfileid: "75253075"
 5.  
   **웹 애플리케이션 만들기** 대화 상자에서 새 웹 애플리케이션에 대한 정보를 지정합니다. 대화 상자의 UI(사용자 인터페이스) 옵션에 대한 자세한 내용은 [웹 애플리케이션 만들기 대화 상자&#40;Master Data Services 구성 관리자&#41;](../../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md)를 참조하세요.  
   
-6.  
-  **확인**을 클릭합니다.  
+6.  **확인**을 클릭합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
   

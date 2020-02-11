@@ -1,5 +1,5 @@
 ---
-title: Create a Domain Rule
+title: 도메인 규칙 만들기
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -13,26 +13,26 @@ ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: c6a73d3f0dca65d0feb74cf572754351ccf86c7a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245477"
 ---
-# <a name="create-a-domain-rule"></a>Create a Domain Rule
+# <a name="create-a-domain-rule"></a>도메인 규칙 만들기
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 도메인 규칙을 만드는 방법에 대해 설명합니다. 도메인 규칙은 도메인 값의 유효성 검사, 수정 및 표준화를 수행하는 데 사용되는 조건입니다. 도메인 값이 정확하고 비즈니스 요구 사항에 맞는 것으로 간주되려면 도메인 규칙이 도메인 전체에서 유효해야 합니다. 도메인 규칙은 도메인 값의 유효성을 검사하는 데 사용되는 유효성 검사 규칙을 포함할 수 있지만 데이터 품질 프로젝트의 데이터를 수정하는 데 사용되지는 않습니다. 규칙은 또한 유효한 데이터에 대해 적용되고 데이터 수정에 사용되는 표준화 규칙을 포함합니다.  
   
-##  <a name="BeforeYouBegin"></a>시작 하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a>사전  
+###  <a name="Prerequisites"></a> 필수 조건  
  도메인 규칙을 만들려면 도메인 관리 작업에 기술 자료와 도메인이 열려 있어야 합니다.  
   
-###  <a name="Security"></a>보안  
+###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a>권한에  
+####  <a name="Permissions"></a> 권한  
  도메인 규칙을 만들려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
 ##  <a name="Build"></a>도메인 규칙 빌드  
@@ -124,7 +124,7 @@ ms.locfileid: "75245477"
   
  도메인 규칙을 만들 때 대체 방법 중 하나를 선택할 수 있습니다. 예를 들어 값이 A, B 또는 C 문자로 시작하는지 확인하려면 복잡한 조건이 하나 있는 단순한 규칙(예: 파이프 문자가 있는 정규식)을 만들거나 단순한 조건이 여러 개 포함된 복잡한 규칙을 만들면 됩니다. 첫 번째 규칙의 예는 "값이 다음을 포함 정규식 (^A|^B|^C)"입니다. 두 번째 규칙의 예는 "'값이 다음으로 시작 A' OR '값이 다음으로 시작 B' OR '값이 다음으로 시작 C'"입니다.  
   
-|조건|설명|예제|  
+|조건|Description|예제|  
 |---------------|-----------------|-------------|  
 |길이가 다음 값과 같음|피연산자에 지정된 문자 수로 구성된 값만 유효합니다.|피연산자 예: 3<br /><br /> 유효한 값: BB1<br /><br /> 유효하지 않은 값: AA|  
 |길이가 다음 값보다 크거나 같음|피연산자에 지정된 문자 수 또는 그보다 큰 문자 수로 구성된 값만 유효합니다.|피연산자 예: 3<br /><br /> 유효한 값: BB1, BBAA<br /><br /> 유효하지 않은 값: AA|  

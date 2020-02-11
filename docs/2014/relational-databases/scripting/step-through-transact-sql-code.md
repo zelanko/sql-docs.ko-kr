@@ -16,22 +16,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 66c7e777c2970677616bbd81ac4a9d7f633742a2
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243163"
 ---
 # <a name="step-through-transact-sql-code"></a>Transact-SQL 코드 단계별 실행
-  
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거를 사용하면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 편집기 창에서 실행되는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 문을 제어할 수 있습니다. 개별 문에서 디버거를 일시 중지한 다음 해당 지점에서의 코드 요소 상태를 볼 수 있습니다.  
   
 ## <a name="breakpoints"></a>중단점  
  중단점은 디버거에게 특정 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 실행을 일시 중지하라는 신호를 보냅니다. 중단점에 대한 자세한 내용은 Transact-SQL 중단점 사용을 참조하십시오.  
   
 ## <a name="controlling-statement-execution"></a>문 실행 제어  
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드의 현재 문에서 실행하기 위해 다음 옵션을 지정할 수 있습니다.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드의 현재 문에서 실행하기 위해 다음 옵션을 지정할 수 있습니다.  
   
 -   다음 중단점까지 실행합니다.  
   
@@ -60,6 +58,6 @@ ms.locfileid: "75243163"
 |현재 커서 위치까지 실행합니다.|쿼리 편집기 창에서 마우스 오른쪽을 클릭한 다음 **커서까지 실행**을 클릭합니다.<br /><br /> Ctrl+F10을 누릅니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql 디버거 정보](transact-sql-debugger-information.md)  
+ [Transact-SQL 디버거 정보](transact-sql-debugger-information.md)  
   
   

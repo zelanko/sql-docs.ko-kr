@@ -2,23 +2,36 @@
 title: Oracle 용 SSMA의 새로운 기능 (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 12/04/2019
+ms.date: 01/22/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: f196932ee9a37c9a814ad619b604520093b6098d
-ms.sourcegitcommit: 26868c8ac3217176b370d972a26d307598a10328
+ms.openlocfilehash: d78f7c213c6e745ecd99ff31d078f1383b4792e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74834279"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76516591"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Oracle 용 SSMA의 새로운 기능 (OracleToSQL)
 
 이 문서에서는 각 릴리스의 Oracle 변경 내용에 대 한 SSMA (SQL Server Migration Assistant)를 나열 합니다.
+
+## <a name="ssma-v86"></a>SSMA v 8.6
+
+사용자가 변환 된 코드에서 SSMA 확장 속성을 생략할 수 있도록 하는 설정을 추가 하 여 Oracle 용 SSMA의 hyper-v 8.6 릴리스를 향상 시켰습니다.
+
+이 설정을 활용 하려면 Oracle 용 ssma에서 **도구** > **프로젝트 설정** > **일반** > **변환**으로 이동한 다음 **기타**에서 **확장 속성 생략** 설정의 값을 **예**로 업데이트 합니다.
+
+![확장 속성 설정 생략](../oracle/media/ssma-omit-extended-properties.png)
+
+또한 Oracle 용 SSMA는 이제 XMLTABLE 절의 구문 분석을 향상 시킵니다.
+
+> [!IMPORTANT]
+> SSMA v 8.5 이상에서 .Net 4.7.2는 설치 필수 구성 요소입니다. 이 버전을 설치 해야 하는 경우 [여기](https://dotnet.microsoft.com/download/dotnet-framework/net472)에서 런타임 파일을 다운로드할 수 있습니다.
 
 ## <a name="ssma-v85"></a>SSMA v 8.5
 
@@ -208,7 +221,7 @@ Oracle 용 SSMA의 v 7.1 릴리스에는 다음과 같은 변경 내용이 포�
 
 * 이제 Windows 및 Linux CTP1의 SQL Server 2017는 마이그레이션에 지원 되는 대상 플랫폼입니다. 이 기능은 technical preview 이며 SQL server를 대상으로 하는 스키마 및 데이터 이동을 허용 합니다.
 * 이제 SSMA가 자동 업데이트를 지원 하 여 최신 버전의 SSMA를 사용할 수 있는 즉시 다운로드 합니다.
-* 이제 Windows installer 패키지 파일 (.msi)을 통해 SSMA를 설치할 수 있는 이진 파일이 제공 됩니다.
+* 이제 Windows Installer 패키지 파일 (.msi)을 통해 SSMA를 설치할 수 있는 이진 파일이 제공 됩니다.
 
 ## <a name="may-2016"></a>2016년 5월
 

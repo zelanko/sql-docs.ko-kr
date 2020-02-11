@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5a007b9a-be11-4fba-96db-6252993f97b8
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b3c1a54ea3f101449d18fcae00373344b7ecf11c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1dace0f436d748ca3ab6d482a9eda4920f2f866d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966739"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76910520"
 ---
 # <a name="command-and-commandtext-properties-example-vc"></a>Command 및 CommandText 속성 예제(VC++)
-다음 코드를 사용 하는 방법에 설명 합니다 [명령](../../../ado/reference/adox-api/command-property-adox.md) 프로시저의 텍스트를 업데이트 하는 속성입니다.  
+다음 코드에서는 [Command](../../../ado/reference/adox-api/command-property-adox.md) 속성을 사용 하 여 프로시저의 텍스트를 업데이트 하는 방법을 보여 줍니다.  
   
 ```  
 // BeginCommandTextCpp  
@@ -83,12 +83,12 @@ int main() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in ProcedureTextX...."<< endl;  
+      cout << "Error occurred in ProcedureTextX...."<< endl;  
    }  
   
    ::CoUninitialize();  
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Command 속성(ADOX)](../../../ado/reference/adox-api/command-property-adox.md)

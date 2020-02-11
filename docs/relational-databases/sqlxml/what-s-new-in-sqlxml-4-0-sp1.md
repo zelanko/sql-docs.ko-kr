@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 64d531dc8eeee5a55cb0bcabbee14c06e1e5db93
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75252163"
 ---
 # <a name="what39s-new-in-sqlxml-40-sp1"></a>SQLXML 4.0 s p 1의 새로운&#39;기능
@@ -153,7 +153,7 @@ ms.locfileid: "75252163"
   
      이 키는 데이터의 공백 문자를 유지할 수 있도록 도입되었습니다. 이 레지스트리 키를 추가하고 해당 값을 0으로 설정하면 특성 값의 경우 XML의 공백 문자(LF, CR 및 탭)가 인코딩되어 반환됩니다. 요소 값의 경우 CR만 인코딩되어 반환됩니다.  
   
-     예:  
+     다음은 그 예입니다.  
   
     ```  
     CREATE TABLE T( Col1 int, Col2 nvarchar(100));  

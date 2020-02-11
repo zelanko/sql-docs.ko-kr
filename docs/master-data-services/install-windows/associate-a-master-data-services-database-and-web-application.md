@@ -11,10 +11,10 @@ ms.assetid: ccb25672-f71d-4135-b548-f50eb45d8fa5
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: d82bee5e275365b72adb3700cae8c11e6e67c9e7
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75253080"
 ---
 # <a name="associate-a-master-data-services-database-and-web-application"></a>Master Data Services 데이터베이스와 웹 애플리케이션 연결
@@ -24,7 +24,7 @@ ms.locfileid: "75253080"
   
   [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 애플리케이션을 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스와 연결하여 웹 작업에 사용할 데이터베이스를 지정할 수 있습니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
   
 -   
   [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 가 로컬 컴퓨터에 설치되어야 합니다. 자세한 내용은 [Master Data Services 설치](../../master-data-services/install-windows/install-master-data-services.md)를 참조하세요.  
@@ -35,8 +35,7 @@ ms.locfileid: "75253080"
   
 ### <a name="to-associate-a-master-data-services-database-and-web-application"></a>Master Data Services 데이터베이스 및 웹 애플리케이션을 연결하려면  
   
-1.  
-  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]를 엽니다.  
+1.  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]를 엽니다.  
   
 2.  왼쪽 창에서 **웹 구성**을 클릭합니다.  
   

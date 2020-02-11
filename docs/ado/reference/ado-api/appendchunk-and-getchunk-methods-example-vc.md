@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 51aa99be-d5ca-46ac-8b3f-1b03ce4f0b2a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e68bbb558a3cc7fef9428fd63a4fecc4881c997d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 991c295f5437d16ed10aafeacf184722046941a8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67920614"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76922559"
 ---
 # <a name="appendchunk-and-getchunk-methods-example-vc"></a>AppendChunk 및 GetChunk 메서드 예제(VC++)
-이 예제에서는 합니다 [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) 하 고 [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) 이미지 필드를 다른 레코드의 데이터로 채우는 방법입니다.  
+이 예제에서는 [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) 및 [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) 메서드를 사용 하 여 다른 레코드의 데이터로 이미지 필드를 채웁니다.  
   
 ```  
 // BeginAppendChunkCpp.cpp  
@@ -183,7 +183,7 @@ void AppendChunkX() {
       while (lngOffSet < lngLogoSize) {  
          varChunk = pRstPubInfo->Fields->Item["logo"]->GetChunk(ChunkSize);  
   
-         // Copy the data only upto the Actual Size of Field.    
+         // Copy the data only up to the Actual Size of Field.    
          for (long index = 0 ; index <= (ChunkSize - 1) ; index++) {  
             hr = SafeArrayGetElement(varChunk.parray, &index, &chData);  
             if (SUCCEEDED(hr)) {  
@@ -265,7 +265,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [AppendChunk 메서드 (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
  [Field 개체](../../../ado/reference/ado-api/field-object.md)   
  [GetChunk 메서드(ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)

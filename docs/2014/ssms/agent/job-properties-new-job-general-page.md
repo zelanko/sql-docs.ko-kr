@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47f4f0abf784118dd94b62d7b8e08a2e060c639a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211382"
 ---
 # <a name="job-properties-and-new-job-general-page"></a>작업 속성 및 새 작업(일반 페이지)
-  이 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업의 일반 속성을 확인하고 수정할 수 있습니다.  
+  이 페이지를 사용 하 여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업의 일반 속성을 확인 하 고 수정할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **이름**  
  작업 이름을 변경합니다.  
   
@@ -42,21 +42,26 @@ ms.locfileid: "68211382"
  작업을 설정합니다. 작업을 설정하지 않은 경우 일정 또는 경고에 따라 작업이 실행되지는 않지만 **sp_start_job** 저장 프로시저를 사용하여 작업을 시작할 수 있습니다.  
   
  **원본**  
- 작업에 사용되는 마스터 서버를 표시합니다. **작업 속성 일반** 페이지에서만 사용할 수 있습니다.  
+ 작업에 사용되는 마스터 서버를 표시합니다. 
+  **작업 속성 일반** 페이지에서만 사용할 수 있습니다.  
   
  **만든 날짜**  
- 작업을 만든 날짜와 시간을 표시합니다. **작업 속성 일반** 페이지에서만 사용할 수 있습니다.  
+ 작업을 만든 날짜와 시간을 표시합니다. 
+  **작업 속성 일반** 페이지에서만 사용할 수 있습니다.  
   
  **마지막으로 수정한 날짜**  
- 작업을 마지막으로 수정한 날짜와 시간을 표시합니다. **작업 속성 일반** 페이지에서만 사용할 수 있습니다.  
+ 작업을 마지막으로 수정한 날짜와 시간을 표시합니다. 
+  **작업 속성 일반** 페이지에서만 사용할 수 있습니다.  
   
- **마지막으로 실행한 날짜**  
- 마지막으로 작업 실행을 시작한 날짜 및 시간을 표시합니다. **작업 속성 일반** 페이지에서만 사용할 수 있습니다.  
+ **마지막 실행**  
+ 마지막으로 작업 실행을 시작한 날짜 및 시간을 표시합니다. 
+  **작업 속성 일반** 페이지에서만 사용할 수 있습니다.  
   
  **작업 기록 보기**  
- 작업의 기록을 확인합니다. **작업 속성 일반** 페이지에서만 사용할 수 있습니다.  
+ 작업의 기록을 확인합니다. 
+  **작업 속성 일반** 페이지에서만 사용할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [작업 구현](implement-jobs.md)   
  [작업 범주: 작업 범주 관리](job-categories-manage-job-categories.md)  
   

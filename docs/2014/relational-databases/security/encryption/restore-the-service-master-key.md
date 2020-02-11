@@ -14,10 +14,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 21abdf4e5781f179c8168ff02aa611bd7dffd39f
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957176"
 ---
 # <a name="restore-the-service-master-key"></a>서비스 마스터 키 복원
@@ -28,7 +28,7 @@ ms.locfileid: "74957176"
   
  **항목 내용**  
   
--   **시작 하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [제한 사항](#Restrictions)  
   
@@ -36,9 +36,9 @@ ms.locfileid: "74957176"
   
 -   [Transact-sql을 사용 하 여 서비스 마스터 키를 복원 하려면](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a>시작 하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a>제한 사항  
+###  <a name="Restrictions"></a> 제한 사항  
   
 -   서비스 마스터 키가 복원되면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 현재 서비스 마스터 키로 암호화된 모든 키 및 암호를 해독한 다음 백업 파일에서 로드된 서비스 마스터 키로 암호화합니다.  
   
@@ -49,22 +49,20 @@ ms.locfileid: "74957176"
 > [!CAUTION]  
 >  서비스 마스터 키는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 암호화 계층의 루트입니다. 서비스 마스터 키는 트리에 있는 모든 다른 키를 직접 또는 간접적으로 보호합니다. 강제 복원 중에 종속 키의 암호를 해독할 수 없으면 해당 키로 보호되는 데이터가 손실됩니다.  
   
-###  <a name="Security"></a>보안  
+###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a>권한에  
+####  <a name="Permissions"></a> 권한  
  서버에 대한 CONTROL SERVER 권한이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a>Transact-sql 사용  
+##  <a name="SSMSProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-restore-the-service-master-key"></a>서비스 마스터 키를 복원하려면  
   
 1.  물리적 백업 미디어 또는 로컬 파일 시스템의 디렉터리에서 백업한 서비스 마스터 키의 복사본을 검색합니다.  
   
-2.  
-  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+2.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-3.  
-  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+3.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
 4.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
   

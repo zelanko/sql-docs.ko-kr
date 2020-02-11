@@ -20,18 +20,17 @@ ms.assetid: 6160f15d-1b68-411e-ab6d-491ec288f264
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fedb0808c6071ec6a6ba9bb7bd985a43890cce3d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245066"
 ---
 # <a name="srv_setutype-extended-stored-procedure-api"></a>srv_setutype(확장 저장 프로시저 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하세요.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]대신 CLR 통합을 사용 하세요.  
   
  행의 열에 대해 사용자 정의 데이터 형식을 설정합니다.  
   
@@ -61,7 +60,7 @@ user_type
  *user_type*  
  사용자 정의 데이터 형식 코드를 지정합니다.  
   
-## <a name="returns"></a>Returns  
+## <a name="returns"></a>반환  
  SUCCEED 또는 FAIL 열이 없는 경우 FAIL을 반환합니다.  
   
 ## <a name="remarks"></a>설명  

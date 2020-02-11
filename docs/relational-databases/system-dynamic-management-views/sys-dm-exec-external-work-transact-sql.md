@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b0ba7eecc8e117e429f6992622d0c7bb2073f86a
-ms.sourcegitcommit: 26868c8ac3217176b370d972a26d307598a10328
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74834331"
 ---
 # <a name="sysdm_exec_external_work-transact-sql"></a>sys. dm_exec_external_work (Transact-sql)
@@ -36,7 +36,7 @@ ms.locfileid: "74834331"
   
  분리를 dm_exec_external_work 쿼리하여 외부 데이터 원본 (예: Hadoop 또는 외부 SQL Server)과 통신 하는 작업을 식별 합니다.  
   
-|열 이름|데이터 형식|설명|범위|  
+|열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|`nvarchar(32)`|연결 된 PolyBase 쿼리의 고유 식별자입니다.|[Dm_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)에서 *request_ID* 를 참조 하세요.|  
 |step_index|`int`|이 작업자에서 수행 하는 요청입니다.|[Dm_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)에서 *step_index* 를 참조 하세요.|  
@@ -48,7 +48,7 @@ ms.locfileid: "74834331"
 |read_location|`bigint`|오프셋 또는 읽기 위치입니다.|읽을 파일의 오프셋입니다.|  
 |bytes_processed|`bigint`|이 작업자의 데이터 처리를 위해 할당 된 총 바이트 수입니다. 쿼리에서 반환 되는 총 데이터를 반드시 나타내는 것은 아닙니다. |0 보다 크거나 같습니다.|  
 |length|`bigint`|Hadoop의 경우 분할 또는 HDFS 블록의 길이|사용자 정의 가능. 기본값은 64M입니다.|  
-|status|`nvarchar(32)`|작업자의 상태|보류 중, 처리 중, 완료 됨, 실패, 중단 됨|  
+|상태|`nvarchar(32)`|작업자의 상태|보류 중, 처리 중, 완료 됨, 실패, 중단 됨|  
 |start_time|`datetime`|작업 시작||  
 |end_time|`datetime`|작업의 끝||  
 |total_elapsed_time|`int`|총 시간 (밀리초)||
@@ -56,7 +56,7 @@ ms.locfileid: "74834331"
 
 ## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰를 사용한 PolyBase 문제 해결](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
- [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Transact-sql&#41;&#40;데이터베이스 관련 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

@@ -30,7 +30,7 @@
           href: ../integration-services/ssis-quickstart-deploy-powershell.md
         - name: 'C#을 사용하여 배포'
           href: ../integration-services/ssis-quickstart-deploy-dotnet.md
-    - name: 실행
+    - name: 다음을 실행합니다.
       items:
         - name: SSMS를 사용하여 실행
           href: ../integration-services/ssis-quickstart-run-ssms.md
@@ -78,6 +78,8 @@
   href: ../integration-services/integration-services-ssis-development-and-management-tools.md
 - name: 프로젝트 및 솔루션
   href: ../integration-services/integration-services-ssis-projects-and-solutions.md
+- name: SSIS DevOps
+  href: ../integration-services/devops/ssis-devops-overview.md
 - name: 사용자 인터페이스
   href: ../integration-services/integration-services-user-interface.md
   items:
@@ -731,7 +733,7 @@
       href: ../integration-services/data-flow/extract-data-by-using-the-xml-source.md
     - name: XML 원본 사용자 지정 속성
       href: ../integration-services/data-flow/xml-source-custom-properties.md
-- name: 변수
+- name: variables
   href: ../integration-services/integration-services-ssis-variables.md
   items:
     - name: 변수 창
@@ -819,7 +821,7 @@
           href: ../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md
         - name: <=(작거나 같음)(SSIS 식)
           href: ../integration-services/expressions/less-than-or-equal-to-ssis-expression.md
-        - name: '? 으로 디코딩된 문자입니다. (조건부)(SSIS 식)'
+        - name: '? : (조건부)(SSIS 식)'
           href: ../integration-services/expressions/conditional-ssis-expression.md
     - name: 함수(SSIS 식)
       href: ../integration-services/expressions/functions-ssis-expression.md
@@ -906,7 +908,7 @@
   href: ../integration-services/integration-services-ssis-event-handlers.md
 - name: 쿼리
   href: ../integration-services/integration-services-ssis-queries.md
-- name: 의
+- name: 트랜잭션
   href: ../integration-services/integration-services-transactions.md
 - name: Integration Services(SSIS) 프로젝트 및 패키지 배포
   href: ../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md
@@ -931,7 +933,7 @@
       href: ../integration-services/scale-out/integration-services-ssis-scale-out.md
     - name: 단일 컴퓨터에서 SSIS Scale Out 시작
       href: ../integration-services/scale-out/get-started-with-ssis-scale-out-onebox.md
-    - name: '연습: Integration Services 스케일 아웃 설정'
+    - name: '연습: Integration Services 규모 확장 설치'
       href: ../integration-services/scale-out/walkthrough-set-up-integration-services-scale-out.md
     - name: 규모 확장에서 패키지 실행
       href: ../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md
@@ -1103,7 +1105,7 @@
       href: ../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md
     - name: catalog.configure_catalog
       href: ../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md
-    - name: 만들기
+    - name: 생성
       items:
         - name: catalog.create_customized_logging_level
           href: ../integration-services/system-stored-procedures/catalog-create-customized-logging-level.md
@@ -1153,7 +1155,7 @@
           href: ../integration-services/system-stored-procedures/catalog-get-project-ssisdb-database.md
     - name: catalog.grant_permission
       href: ../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md
-    - name: 자세히 보기
+    - name: 이동
       items:
         - name: catalog.move_environment
           href: ../integration-services/system-stored-procedures/catalog-move-environment-ssisdb-database.md
@@ -1173,7 +1175,7 @@
       href: ../integration-services/system-stored-procedures/catalog-restore-project-ssisdb-database.md
     - name: catalog.revoke_permission
       href: ../integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database.md
-    - name: Set
+    - name: 설정
       items:
         - name: catalog.set_customized_logging_level_description
           href: ../integration-services/system-stored-procedures/catalog-set-customized-logging-level-description.md
@@ -1205,7 +1207,7 @@
       href: ../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md
     - name: catalog.stop_operation
       href: ../integration-services/system-stored-procedures/catalog-stop-operation-ssisdb-database.md
-    - name: Update
+    - name: 업데이트
       items:
         - name: catalog.update_logdb_info(SSISDB 데이터베이스)
           href: ../integration-services/system-stored-procedures/catalog-update-logdb-info.md
@@ -1471,6 +1473,17 @@
       href: ../integration-services/data-flow/oracle-destination.md
     - name: 데이터 형식 지원
       href: ../integration-services/data-flow/oracle-data-type-support.md
+- name: Microsoft Connector for Teradata
+  href: ../integration-services/data-flow/Teradata-connector.md
+  items:
+    - name: Teradata 연결 관리자
+      href: ../integration-services/data-flow/Teradata-connection-manager.md
+    - name: Teradata 원본
+      href: ../integration-services/data-flow/Teradata-source.md
+    - name: Teradata 대상
+      href: ../integration-services/data-flow/Teradata-destination.md
+    - name: 데이터 형식 지원
+      href: ../integration-services/data-flow/Teradata-data-type-support.md
 - name: Attunity의 Oracle 및 Teradata용 Microsoft Connectors
   href: ../integration-services/attunity-connectors.md
 - name: SQL Server 가져오기 및 내보내기 마법사
@@ -1612,7 +1625,7 @@
                   href: ../integration-services/change-data-capture/generate-and-run-the-supplemental-logging-script.md
                 - name: 미러 테이블 및 CDC 캡처 인스턴스 생성
                   href: ../integration-services/change-data-capture/generate-mirror-tables-and-cdc-capture-instances.md
-                - name: 마침
+                - name: Finish
                   href: ../integration-services/change-data-capture/finish.md
             - name: 인스턴스 속성 편집
               href: ../integration-services/change-data-capture/edit-instance-properties.md
@@ -1636,7 +1649,7 @@
               href: ../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md
             - name: SQL Server 변경 데이터베이스 인스턴스를 만드는 방법
               href: ../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md
-            - name: CDC 인스턴스 관리 방법
+            - name: How to Manage a CDC Instance
               href: ../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md
             - name: CDC 인스턴스 속성을 편집하는 방법
               href: ../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md
@@ -1679,7 +1692,7 @@
               href: ../integration-services/change-data-capture/connection-to-sql-server-for-delete.md
             - name: Oracle CDC Service 만들기 및 편집
               href: ../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md
-            - name: Oracle CDC Service 관리
+            - name: Manage an Oracle CDC Service
               href: ../integration-services/change-data-capture/manage-an-oracle-cdc-service.md
             - name: CDC를 위한 SQL Server 준비
               href: ../integration-services/change-data-capture/prepare-sql-server-for-cdc.md

@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 689c3a734a5b4eb424511da52032dc348b5757ea
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75231802"
 ---
-# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-azure"></a>6 단원: 온-프레미스의 원본 컴퓨터에서 Azure의 대상 컴퓨터로 데이터베이스 마이그레이션
+# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-azure"></a>6단원: 온-프레미스의 원본 머신에서 Azure의 대상 머신으로 데이터베이스 마이그레이션
   이 단원에서는 다른 온-프레미스 컴퓨터 또는 Azure의 가상 컴퓨터에 있을 수 있는 다른 SQL Server 이미 있다고 가정 합니다. Azure에서 SQL Server 가상 머신을 만드는 방법에 대 한 자세한 내용은 [azure에서 SQL Server 가상 머신 프로 비전](https://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/)을 참조 하세요. Azure에서 SQL Server 가상 컴퓨터를 프로 비전 한 후 다른 컴퓨터의 SQL Server Management Studio을 통해이 가상 컴퓨터의 SQL Server 인스턴스에 연결할 수 있는지 확인 합니다.  
   
  이 단원에서는 다음 단계를 이미 완료했다고 가정합니다.  
@@ -129,9 +129,7 @@ ms.locfileid: "75231802"
 1.  
   **개체 탐색기**에서 SQL Server 데이터베이스 엔진의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  
-  **데이터베이스**를 마우스 오른쪽 단추로 클릭한 다음 **새 데이터베이스**를 클릭합니다. TestDB1을 마우스 오른쪽 단추로 클릭합니다. 태스크를 클릭한 다음 분리를 클릭합니다. 분리 대화 상자에서 연결 삭제를 선택합니다. 
-  **확인**을 클릭합니다.  
+2.  **데이터베이스**를 마우스 오른쪽 단추로 클릭한 다음 **새 데이터베이스**를 클릭합니다. TestDB1을 마우스 오른쪽 단추로 클릭합니다. 태스크를 클릭한 다음 분리를 클릭합니다. 분리 대화 상자에서 연결 삭제를 선택합니다. **확인**을 클릭합니다.  
   
 3.  SQL Server 2014 CTP2 이상이 설치된 대상 컴퓨터에 연결합니다. 대상 컴퓨터를 준비하려면 TestDB1을 배치한 동일한 컨테이너를 가리키도록 대상 컴퓨터에서 SQL Server 자격 증명을 만들어야 합니다. 동일한 컴퓨터에서 다시 연결할 경우 다른 자격 증명을 만들 필요가 없습니다.  
   
@@ -146,12 +144,11 @@ ms.locfileid: "75231802"
   
      파일 이름에을 입력 `TestDB1Data.mdf`합니다.  
   
-6.  
-  **확인**을 클릭합니다.  
+6.  **확인**을 클릭합니다.  
   
      ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-6-7.gif "SQL 14 CTP2")  
   
  **다음 단원:**  
   
- [7 단원: Azure Storage로 데이터 파일 이동](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
+ [7단원: Azure Storage에 데이터 파일 이동](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
   

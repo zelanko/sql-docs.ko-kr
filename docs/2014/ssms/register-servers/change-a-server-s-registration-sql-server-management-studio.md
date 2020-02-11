@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: 05161b2c9e3266b57841ff4268f4dc64ede90434
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244646"
 ---
 # <a name="change-a-server39s-registration-sql-server-management-studio"></a>서버 등록 변경(SQL Server Management Studio)
@@ -29,8 +29,7 @@ ms.locfileid: "75244646"
   
 1.  등록된 서버에서 서버를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-2.  
-  **서버 등록 속성 편집** 대화 상자에서 서버, 로그인 정보 또는 연결 속성을 수정한 다음 **저장**을 클릭합니다.  
+2.  **서버 등록 속성 편집** 대화 상자에서 서버, 로그인 정보 또는 연결 속성을 수정한 다음 **저장**을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [서버 등록](register-servers.md)  

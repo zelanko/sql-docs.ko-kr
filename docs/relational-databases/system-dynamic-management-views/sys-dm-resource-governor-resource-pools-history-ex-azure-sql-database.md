@@ -21,10 +21,10 @@ author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
 ms.openlocfilehash: ae34c89fd570921bec26d8a11537c58b6bba2302
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75247305"
 ---
 # <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys. dm_resource_governor_resource_pools_history_ex (Transact-sql)
@@ -33,10 +33,10 @@ ms.locfileid: "75247305"
 
 Azure SQL Database에 대 한 리소스 풀 통계의 마지막 32 분 (128 개 합계)에 대 한 스냅숏을 20 초 간격으로 반환 합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|int|리소스 풀의 ID입니다. Null을 허용하지 않습니다.
-|**이름의**|sysname|리소스 풀의 이름입니다. Null을 허용하지 않습니다.|
+|**name**|sysname|리소스 풀의 이름입니다. Null을 허용하지 않습니다.|
 |**snapshot_time**|datetime2|리소스 풀 통계 스냅숏의 날짜/시간|
 |**duration_ms**|int|현재 스냅숏과 이전 스냅숏 간의 지속 시간|
 |**statistics_start_time**|datetime2|이 풀에 대해 통계가 다시 설정된 시간입니다. Null을 허용하지 않습니다.|
@@ -99,7 +99,7 @@ Azure SQL Database에 대 한 리소스 풀 통계의 마지막 32 분 (128 개 
 |**max_session_percent**|decimal (5, 2)|풀의 한도에 따른 백분율로 최대 동시 세션|
 |||
 
-## <a name="permissions"></a>권한
+## <a name="permissions"></a>사용 권한
 
 이 보기에는 VIEW SERVER STATE 권한이 필요 합니다.
 

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 56ddfce4fc1812e99870c22eeb0e15be64c5decb
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245631"
 ---
 # <a name="hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode"></a>SharePoint 모드의 Reporting Services에 대한 하드웨어 및 소프트웨어 요구 사항
@@ -30,7 +30,7 @@ ms.locfileid: "75245631"
   
 -   [추가 정보](#bkmk_more_information)  
   
-##  <a name="bkmk_prereq"></a>사전  
+##  <a name="bkmk_prereq"></a> 필수 조건  
   
 -   로컬 설치의 경우 SharePoint 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치 중 로그인된 계정은 로컬 운영 체제의 administrators 그룹의 구성원이어야 합니다. 설치 계정이 SharePoint 팜 관리자 그룹의 구성원이 될 필요는 없습니다.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "75245631"
  Office.Microsoft.com에서 최신 [Power View 설명서](https://office.microsoft.com/excel-help/power-view-explore-visualize-and-present-your-data-HA102835634.aspx) 를 참조하세요. 
   [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]는 Microsoft Excel 2013의 기능이며, Microsoft SharePoint Server 2010 및 2013 Enterprise Edition용 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Reporting Services 추가 기능의 일부입니다.  
   
-##  <a name="bkmk_more_information"></a>추가 정보
+##  <a name="bkmk_more_information"></a> 자세한 정보
 
  SharePoint 변경 내용에 대 한 자세한 내용은 [sharepoint 2010에서 sharepoint 2013로 변경](https://technet.microsoft.com/library/ff607742\(office.15\).aspx) ()https://technet.microsoft.com/library/ff607742(office.15).aspx)을 참조 하세요.  
   

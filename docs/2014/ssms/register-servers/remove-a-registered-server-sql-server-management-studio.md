@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: caae0e0b81c29454a8d7825e8077690369c76805
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75254456"
 ---
 # <a name="remove-a-registered-server-sql-server-management-studio"></a>등록된 서버 제거(SQL Server Management Studio)
@@ -30,7 +30,6 @@ ms.locfileid: "75254456"
   
 1.  등록된 서버에서 서버를 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다.  
   
-2.  
-  **삭제 확인** 대화 상자에서 **예**를 클릭합니다.  
+2.  **삭제 확인** 대화 상자에서 **예**를 클릭합니다.  
   
   

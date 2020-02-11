@@ -23,10 +23,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 98f2ee047bccf7cd3843fe34aaf8f5caec0dc11a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257473"
 ---
 # <a name="data-type-conversions-and-the-sqldatatype-annotation-sqlxml-40"></a>데이터 형식 변환 및 sql: datatype 주석 (SQLXML 4.0)
@@ -42,12 +42,12 @@ ms.locfileid: "75257473"
   
 |XSD 데이터 형식|SQL Server 변환|  
 |-------------------|---------------------------|  
-|Boolean|CONVERT(bit, COLUMN)|  
+|부울|CONVERT(bit, COLUMN)|  
 |Date|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
 |decimal|CONVERT(money, COLUMN)|  
 |id/idref/idrefs|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
 |nmtoken/nmtokens|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
-|시간|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
+|Time|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
 |나머지|추가 변환 없음|  
   
 > [!NOTE]  
@@ -60,27 +60,27 @@ ms.locfileid: "75257473"
 |SQL Server 데이터 형식|XSD 데이터 형식|  
 |--------------------------|-------------------|  
 |**bigint**|**시간과**|  
-|**바이너리**|**base64Binary**|  
+|**binary**|**base64Binary**|  
 |**bit**|**부울**|  
 |**char**|**문자열**|  
-|**날짜**|**날짜**|  
+|**datetime**|**날짜**|  
 |**진수가**|**진수가**|  
 |**float**|**차례로**|  
-|**이미지로**|**base64Binary**|  
+|**image**|**base64Binary**|  
 |**int**|**int**|  
 |**money**|**진수가**|  
 |**nchar**|**문자열**|  
 |**ntext**|**문자열**|  
 |**nvarchar**|**문자열**|  
-|**numeric**|**진수가**|  
-|**real**|**float**|  
+|**번호**|**진수가**|  
+|**실제로**|**float**|  
 |**smalldatetime**|**날짜**|  
 |**smallint**|**short**|  
 |**smallmoney**|**진수가**|  
 |**sql_variant**|**문자열**|  
-|**sysname 이며**|**문자열**|  
-|**본문**|**문자열**|  
-|**timestamp**|**날짜**|  
+|**sysname**|**문자열**|  
+|**text**|**문자열**|  
+|**없으면**|**날짜**|  
 |**tinyint**|**Un바이트**|  
 |**varbinary**|**base64Binary**|  
 |**varchar**|**문자열**|  

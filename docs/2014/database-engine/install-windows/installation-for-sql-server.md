@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 96afef098b711c65e1bcb46d5f687c95061f2c94
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228407"
 ---
 # <a name="installation-for-sql-server-2014"></a>SQL Server 2014 설치
@@ -74,11 +74,11 @@ ms.locfileid: "75228407"
  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 업그레이드하기 위한 옵션에 대해 설명합니다.  
   
- [2014 SQL Server 제거](../../sql-server/install/uninstall-sql-server.md)  
+ [SQL Server 2014 제거](../../sql-server/install/uninstall-sql-server.md)  
  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]를 제거하는 절차에 대해 설명합니다.  
   
- [장애 조치 (Failover) 클러스터 설치 SQL Server](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)  
+ [SQL Server 장애 조치(Failover) 클러스터 설치](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)  
  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 설명서 중 이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터를 설치 및 구성하는 방법에 대해 설명합니다.  
   
@@ -100,5 +100,5 @@ ms.locfileid: "75228407"
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 설치의 새로운 기능](../../sql-server/install/what-s-new-in-sql-server-installation.md)   
- [SQL Server 2014를 설치 하기 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+ [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   

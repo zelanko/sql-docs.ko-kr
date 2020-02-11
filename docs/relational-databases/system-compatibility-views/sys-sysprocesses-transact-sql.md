@@ -21,10 +21,10 @@ ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d9da0f09c2506e0d596a485aee112f9f188b6d12
-ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74947160"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses(Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "74947160"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |spid|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]세션 ID입니다.|  
 |kpid|**smallint**|Windows 스레드 ID입니다.|  
@@ -50,11 +50,11 @@ ms.locfileid: "74947160"
 |cpu|**int**|프로세스의 누적 CPU 시간입니다. 항목은 SET STATISTICS TIME 옵션의 ON/OFF 여부와 관계없이 모든 프로세스에 대해 업데이트됩니다.|  
 |physical_io|**bigint**|프로세스에 대한 누적 디스크 읽기/쓰기입니다.|  
 |memusage|**int**|현재 해당 프로세스에 할당된 프로시저 캐시에 있는 페이지 수입니다. 음수는 프로세스가 다른 프로세스에 의해 할당된 메모리를 해제하고 있음을 의미합니다.|  
-|login_time|**날짜**|클라이언트 프로세스가 서버에 로그인한 시간입니다.|  
-|last_batch|**날짜**|클라이언트 프로세스가 원격 저장 프로시저 호출 또는 EXECUTE 문을 마지막으로 실행한 시간입니다.|  
+|login_time|**datetime**|클라이언트 프로세스가 서버에 로그인한 시간입니다.|  
+|last_batch|**datetime**|클라이언트 프로세스가 원격 저장 프로시저 호출 또는 EXECUTE 문을 마지막으로 실행한 시간입니다.|  
 |ecid|**smallint**|단일 프로세스 대신 작업하고 있는 하위 스레드를 고유하게 식별하는 데 사용하는 실행 컨텍스트 ID입니다.|  
 |open_tran|**smallint**|프로세스의 열려 있는 트랜잭션 수입니다.|  
-|status|**nchar (30)**|프로세스 ID 상태입니다. 사용 가능한 값은<br /><br /> **** =  유휴[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 상태에서 세션을 다시 설정 하는 중입니다.<br /><br /> **running** = 세션에서 하나 이상의 일괄 처리를 실행 하 고 있습니다. MARS(Multiple Active Result Sets)를 설정하면 세션에서 여러 개의 일괄 처리를 실행할 수 있습니다. 자세한 내용은 [MARS&#40;Multiple Active Result Sets&#41; 사용](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)을 참조하세요.<br /><br /> **background** = 세션에서 교착 상태 감지와 같은 백그라운드 작업을 실행 하 고 있습니다.<br /><br /> **rollback** = 세션에서 트랜잭션 롤백이 진행 중입니다.<br /><br /> **보류 중** = 세션이 작업자 스레드를 사용할 수 있을 때까지 기다리고 있습니다.<br /><br /> 실행 **가능 = 시간** 퀀텀 가져오기를 기다리는 동안 세션의 태스크가 스케줄러의 실행 가능한 큐에 있습니다.<br /><br /> **spinloop** = 세션의 태스크가 spinlock이 사용 가능 해질 때까지 대기 하 고 있습니다.<br /><br /> **suspended** = 세션이 i/o와 같은 이벤트가 완료 되기를 기다리고 있습니다.|  
+|상태|**nchar (30)**|프로세스 ID 상태입니다. 사용 가능한 값은<br /><br /> **** =  유휴[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 상태에서 세션을 다시 설정 하는 중입니다.<br /><br /> **running** = 세션에서 하나 이상의 일괄 처리를 실행 하 고 있습니다. MARS(Multiple Active Result Sets)를 설정하면 세션에서 여러 개의 일괄 처리를 실행할 수 있습니다. 자세한 내용은 [MARS&#40;Multiple Active Result Sets&#41; 사용](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)을 참조하세요.<br /><br /> **background** = 세션에서 교착 상태 감지와 같은 백그라운드 작업을 실행 하 고 있습니다.<br /><br /> **rollback** = 세션에서 트랜잭션 롤백이 진행 중입니다.<br /><br /> **보류 중** = 세션이 작업자 스레드를 사용할 수 있을 때까지 기다리고 있습니다.<br /><br /> 실행 **가능 = 시간** 퀀텀 가져오기를 기다리는 동안 세션의 태스크가 스케줄러의 실행 가능한 큐에 있습니다.<br /><br /> **spinloop** = 세션의 태스크가 spinlock이 사용 가능 해질 때까지 대기 하 고 있습니다.<br /><br /> **suspended** = 세션이 i/o와 같은 이벤트가 완료 되기를 기다리고 있습니다.|  
 |sid|**binary (86)**|사용자의 GUID(Globally Unique Identifier)입니다.|  
 |hostname|**nchar (128)**|워크스테이션의 이름입니다.|  
 |program_name|**nchar (128)**|애플리케이션의 이름입니다.|  

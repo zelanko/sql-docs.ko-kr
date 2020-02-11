@@ -20,18 +20,17 @@ ms.assetid: 2a509206-a1b8-4b20-b0a2-ef680cef7bd8
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c3ec0de44aacbcfb2d4e6b96d7525da900017e01
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75253549"
 ---
 # <a name="srv_paramset-extended-stored-procedure-api"></a>srv_paramset(확장 저장 프로시저 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하세요.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]대신 CLR 통합을 사용 하세요.  
   
  원격 저장 프로시저 호출 반환 매개 변수의 값을 설정합니다. 이 함수는 **srv_paramsetoutput** 함수로 대체되었습니다.  
   
@@ -58,7 +57,7 @@ len
  *srvproc*  
  특정 클라이언트 연결에 대한 핸들(이 경우 원격 저장 프로시저 호출을 수신한 핸들)인 SRV_PROC 구조에 대한 포인터입니다. 이 구조에는 확장 저장 프로시저 API 라이브러리가 애플리케이션과 클라이언트 간 통신 및 데이터를 관리하는 데 사용하는 정보가 들어 있습니다.  
   
- *개의*  
+ *n*  
  설정할 매개 변수의 번호를 나타냅니다. 첫 번째 매개 변수는 1입니다.  
   
  *데이터로*  
@@ -67,7 +66,7 @@ len
  *길이가*  
  반환할 데이터의 실제 길이를 지정합니다. 매개 변수의 데이터 형식이 상수 길이이고 Null 값을 허용하지 않는 경우(예: *srvbit* 또는 *srvint1*) *len*이 무시됩니다.  
   
-## <a name="returns"></a>Returns  
+## <a name="returns"></a>반환  
  매개 변수 값이 성공적으로 설정된 경우 SUCCEED이고, 그렇지 않으면 FAIL입니다. 현재 원격 저장 프로시저가 없는 경우, *n*번째 원격 저장 프로시저 매개 변수가 없는 경우, 매개 변수가 반환 매개 변수가 아닌 경우 및 *len* 인수가 유효하지 않은 경우 FAIL이 반환됩니다.  
   
  

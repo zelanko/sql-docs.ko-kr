@@ -12,10 +12,10 @@ ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 19805b5c5d41b5b39217c88cf565d9bd64c1ed9c
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75558002"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>DQSInstaller.exe를 실행하여 Data Quality 서버 설치 완료
@@ -25,7 +25,7 @@ ms.locfileid: "75558002"
   
   [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 설치를 완료하려면 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 설치한 후 DQSInstaller.exe 파일을 실행해야 합니다. 이 항목에서는 **시작** 화면, **시작** 메뉴, Windows 탐색기 또는 명령 프롬프트에서 DQSInstaller.exe를 실행하는 방법에 대해 설명합니다. DQSInstaller.exe 파일을 실행하기 위해 어떤 방법이나 선택할 수 있습니다.  
   
-##  <a name="Prerequisites"></a>사전  
+##  <a name="Prerequisites"></a> 필수 조건  
   
 -   SQL Server를 설치하는 동안 SQL Server 설치 프로그램의 기능 선택 페이지에 있는 **데이터베이스 엔진 서비스** 에서 **Data Quality Services** 를 선택하고 SQL Server 설치를 완료해야 합니다. 자세한 내용은 [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)을 참조하세요.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "75558002"
 ##  <a name="CommandPrompt"></a>명령 프롬프트에서 Dqsinstaller.exe를 실행 합니다.  
  다음 명령줄 매개 변수를 사용하여 명령 프롬프트에서 DQSInstaller.exe를 실행할 수 있습니다.  
   
-|DQSInstaller.exe 매개 변수|설명|예제 구문|  
+|DQSInstaller.exe 매개 변수|Description|예제 구문|  
 |--------------------------------|-----------------|-------------------|  
 |-collation|
   [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]설치에 사용되는 서버 데이터 정렬입니다.<br /><br /> DQS는 대/소문자를 구분하지 않는 데이터 정렬만 지원합니다. 대/소문자를 구분하는 데이터 정렬을 지정하는 경우 설치 프로그램은 지정된 데이터 정렬의 대/소문자 구분 없는 버전을 사용하려고 합니다. 대/소문자 구분 없는 버전이 없거나 해당 데이터 정렬을 SQL에서 지원하지 않는 경우 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 설치가 실패합니다.<br /><br /> 서버 데이터 정렬이 지정되지 않는 경우 기본 데이터 정렬 SQL_Latin1_General_CP1_CI_AS가 사용됩니다.|`dqsinstaller.exe -collation <collation_name>`|  
@@ -116,6 +116,6 @@ ms.locfileid: "75558002"
 ## <a name="see-also"></a>참고 항목  
  [Data Quality Services 설치](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [.NET Framework 업데이트 후 SQLCLR 어셈블리 업그레이드](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
- [Dqsinstaller.exe를 사용 하 여 DQS 기술 자료 내보내기 및 가져오기](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)  
+ [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)  
   
   

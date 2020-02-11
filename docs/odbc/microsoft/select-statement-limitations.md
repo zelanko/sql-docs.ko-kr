@@ -14,23 +14,23 @@ ms.assetid: c6b05955-f8fd-4706-a1a7-a8dbd74870c2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0cde0158e72d1e24c112c8e7955f0d6b317bd729
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67987854"
 ---
 # <a name="select-statement-limitations"></a>SELECT 문 제한 사항
-SELECT 문에서 비 집계 열이 있는 열을 집계 함수를 혼합할 수 없습니다.  
+집계 함수 열은 SELECT 문에서 집합체가 아닌 열과 혼합할 수 없습니다.  
   
- GROUP BY 절이 있는 SELECT 문의 select 목록에 GROUP BY 절에서 식을 하나만 사용할 수 있습니다 하거나 함수를 설정 합니다.  
+ GROUP BY 절이 있는 SELECT 문의 select 목록에는 GROUP BY 절 또는 set 함수의 식만 사용할 수 있습니다.  
   
- GROUP BY 절이 포함 된 SELECT 문에서 별표 (모든 열을 선택)를 사용 하 여 지원 되지 않습니다. 선택 열의 이름은 지정 해야 합니다.  
+ GROUP BY 절을 포함 하는 SELECT 문에서 별표를 사용 하 여 모든 열을 선택할 수 있는 것은 지원 되지 않습니다. 선택할 열의 이름을 지정 해야 합니다.  
   
- SELECT 문에서 세로 막대의 사용이 지원 되지 않습니다. 세로 막대를 포함 하는 데이터 값을 참조 하는 경우에 SELECT 문에서 매개 변수를 사용 합니다.  
+ SELECT 문에서 세로 막대를 사용 하는 것은 지원 되지 않습니다. 세로 막대를 포함 하는 데이터 값을 참조 해야 하는 경우 SELECT 문에 매개 변수를 사용 합니다.  
   
- SELECT 문에서 열 별칭을 사용 하는 경우 단어 "as" 별칭 앞에 야 합니다. 예를 들어 "SELECT col1으로는 b에서." 합니다 "와" 하지 않고 문이 오류를 반환 합니다.  
+ SELECT 문에서 열 별칭을 사용 하는 경우 "as" 라는 단어는 별칭 앞에와 야 합니다. 예를 들어, "a에서 a로 col1 선택"을 선택 합니다. "As"를 사용 하지 않을 경우 문은 오류를 반환 합니다.  
   
- "잘못 된 수의 매개 변수를" 오류를 SQLSTATE 07001 SQLSTATE S0022 오류 대신 "열 Not Found."이 반환 됩니다 SELECT 문으로 잘못 된 열 이름을 입력 하는 경우  
+ SELECT 문에 잘못 된 열 이름을 입력 하면 sqlstate S0022 오류 "열을 찾을 수 없습니다." 대신 SQLSTATE 07001 오류가 반환 됩니다.  
   
- 빈 문자열을 NULL 변환할 Microsoft Excel 드라이버를 사용 하면 빈 문자열 열에 삽입 하는 경우, 해당 열에 WHERE 절에 빈 문자열을 사용 하 여 실행 되는 SELECT 문의 검색된에 실패 합니다.
+ Microsoft Excel 드라이버를 사용 하는 경우 빈 문자열을 열에 삽입 하면 빈 문자열이 NULL로 변환 됩니다. WHERE 절에서 빈 문자열을 사용 하 여 실행 되는 검색 된 SELECT 문은 해당 열에서 실패 합니다.

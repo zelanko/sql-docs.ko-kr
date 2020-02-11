@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 69072514931e7e449893124a8f192043b2bf87d7
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: f240938196d50b76b182e994000727c4f3e30d58
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908336"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287132"
 ---
 # <a name="specify-synchronization-schedules"></a>동기화 일정 지정
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -197,7 +197,7 @@ ms.locfileid: "72908336"
   
 #### <a name="to-define-a-replication-agent-schedule-when-you-create-a-push-subscription-to-a-transactional-publication"></a>트랜잭션 게시에 대한 밀어넣기 구독을 만들 때 복제 에이전트 일정을 정의하려면  
   
-1.  만들려는 구독에 대해 <xref:Microsoft.SqlServer.Replication.TransSubscription> 클래스의 인스턴스를 만듭니다. 자세한 내용은 [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)을 참조하세요.  
+1.  만들려는 구독에 대해 <xref:Microsoft.SqlServer.Replication.TransSubscription> 클래스의 인스턴스를 만듭니다. 자세한 내용은 [밀어넣기 구독 만들기](../../relational-databases/replication/create-a-push-subscription.md)을 참조하세요.  
   
 2.  <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>를 호출하기 전에 <xref:Microsoft.SqlServer.Replication.Subscription.AgentSchedule%2A> 속성의 다음 필드 중 하나 이상을 설정합니다.  
   
@@ -290,7 +290,7 @@ ms.locfileid: "72908336"
   
 #### <a name="to-define-a-replication-agent-schedule-when-you-create-a-push-subscription-to-a-merge-publication"></a>병합 게시에 대한 밀어넣기 구독을 만들 때 복제 에이전트 일정을 정의하려면  
   
-1.  만들려는 구독에 대해 <xref:Microsoft.SqlServer.Replication.MergeSubscription> 클래스의 인스턴스를 만듭니다. 자세한 내용은 [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)을 참조하세요.  
+1.  만들려는 구독에 대해 <xref:Microsoft.SqlServer.Replication.MergeSubscription> 클래스의 인스턴스를 만듭니다. 자세한 내용은 [밀어넣기 구독 만들기](../../relational-databases/replication/create-a-push-subscription.md)을 참조하세요.  
   
 2.  <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>를 호출하기 전에 <xref:Microsoft.SqlServer.Replication.Subscription.AgentSchedule%2A> 속성의 다음 필드 중 하나 이상을 설정합니다.  
   

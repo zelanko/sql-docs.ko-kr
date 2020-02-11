@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a2808ff3bb6cfab084854a8d9cd7cf5511dfd0fc
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244496"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Microsoft Word로 내보내기(보고서 작성기 및 SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "75244496"
   
  회보 스타일 열 보고서는 Word에서 렌더링되지 않습니다. 보고서 본문 및 페이지의 배경 이미지와 색은 렌더링되지 않습니다.  
   
-##  <a name="Pagination"></a>페이지 매김  
+##  <a name="Pagination"></a> 페이지 매김  
  Word에서 보고서를 열면 페이지 크기를 기준으로 하여 전체 보고서의 페이지가 다시 매겨집니다. 페이지를 다시 매기는 과정에서 의도하지 않았던 자리에 페이지 나누기가 삽입될 수도 있고, 경우에 따라서는 내보낸 보고서에 페이지 나누기가 두 번 연속으로 삽입되거나 빈 페이지가 추가될 수도 있습니다. 페이지 여백을 조정하여 Word의 페이지 매김을 변경할 수도 있습니다.  
   
  이 렌더러에서는 논리적 페이지 나누기만 지원합니다.  
@@ -59,11 +59,11 @@ ms.locfileid: "75244496"
 ##  <a name="DocumentProperties"></a>문서 속성  
  Word 렌더러는 DOCX 파일에 다음과 같은 메타데이터를 기록합니다.  
   
-|보고서 요소 속성|설명|  
+|보고서 요소 속성|Description|  
 |-------------------------------|-----------------|  
 |Report Title(보고서 제목)|제목|  
 |Report.Author|작성자|  
-|Report.Description|설명|  
+|Report.Description|주석|  
   
 ##  <a name="ReportHeadersFooters"></a>페이지 머리글 및 바닥글  
  페이지 머리글 및 바닥글은 Word에서 머리글 및 바닥글 영역으로 렌더링됩니다. 보고서 페이지 번호나 보고서 페이지의 총 수를 나타내는 식이 페이지 머리글이나 바닥글에 있으면 렌더링된 보고서에 정확한 페이지를 표시할 수 있도록 해당 페이지 번호나 식이 Word 필드로 변환됩니다. 보고서에 머리글 또는 바닥글 높이가 설정되어 있더라도 이 설정은 Word에서 지원되지 않습니다. PrintOnFirstPage 속성은 일부 환경에서 보고서의 첫 번째 페이지에 페이지 머리글 및 페이지 바닥글을 인쇄할지 여부를 지정할 수 있습니다. 렌더링된 보고서에 여러 페이지가 있고 각 페이지에 단일 섹션만 포함되는 경우 PrintOnFirstPage를 False로 설정할 수 있으며 이렇게 하면 텍스트가 첫 번째 페이지에 표시되지 않습니다. 그렇지 않은 경우 텍스트는 PrintOnFirstPage 속성의 값에 상관없이 인쇄됩니다.  
@@ -84,7 +84,7 @@ ms.locfileid: "75244496"
   
  이러한 문제를 방지하려면 머리글 및 바닥글에서 식을 사용할 때 하나의 복합 식 대신 여러 텍스트를 사용해 실행하세요. 다음은 이와 동등한 두 가지 식입니다. 첫 번째 식은 복합식이고 두 번째 식은 텍스트 실행을 사용합니다. Word 렌더러는 두 번째 식만 성공적으로 구문 분석합니다.  
   
-##  <a name="Interactivity"></a>대화형 작업  
+##  <a name="Interactivity"></a> 상호 작용  
  Word에서는 일부 대화형 요소가 지원됩니다. 다음은 특정 동작에 대한 설명입니다.  
   
 ### <a name="show-and-hide"></a>표시 및 숨기기  
@@ -193,13 +193,13 @@ ms.locfileid: "75244496"
 ##  <a name="Differences"></a>Word와 Word 2003 렌더러의 차이점  
  Word 또는 Word 2003 렌더러를 사용하여 렌더링된 보고서는 대개 시각적으로는 구분되지 않습니다. 그러나 Word 형식과 Word 2003 형식에는 약간의 차이점이 있습니다.  
   
-##  <a name="DeviceInfo"></a>장치 정보 설정  
+##  <a name="DeviceInfo"></a> 디바이스 정보 설정  
  디바이스 정보 설정을 변경하여 이 렌더러의 일부 기본 설정을 변경할 수 있습니다. 예를 들어 하이퍼링크 및 드릴스루 링크를 생략할 수 있고 렌더링 시 항목의 원래 상태와 상관없이 설정/해제 전환이 가능한 모든 항목을 확장할 수 있습니다. 자세한 내용은 [Word Device Information Settings](../word-device-information-settings.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Reporting Services &#40;보고서 작성기 및 SSRS의 페이지 매김&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [보고서 작성기 및 SSRS&#41;&#40;렌더링 동작](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [여러 보고서 렌더링 확장 프로그램에 대 한 대화형 기능 &#40;보고서 작성기 및 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
- [보고서 항목 &#40;보고서 작성기 및 SSRS&#41;렌더링](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [테이블, 행렬 및 목록 &#40;보고서 작성기 및 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
+ [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [여러 보고서 렌더링 확장 프로그램의 대화형 기능&#40;보고서 작성기 및 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [보고서 항목 렌더링&#40;보고서 작성기 및 SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 'ADO 이벤트 인스턴스: Visual C++ | Microsoft Docs'
+title: 'ADO 이벤트 인스턴스화: Visual C++ | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,16 +13,16 @@ ms.assetid: 385ad90a-37d0-497c-94aa-935d21fed78f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a839ffc977981c977c2675f25dae4d505e89b081
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926052"
 ---
 # <a name="ado-event-instantiation-visual-c"></a>ADO 이벤트 인스턴스: Visual C++
-Microsoft® C++®에서 ADO 이벤트를 인스턴스화하는 방법에 도식 설명입니다. 참조 [ADO 이벤트 모델 예제 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md) 설명은 합니다.  
+Microsoft® Visual C++®에서 ADO 이벤트를 인스턴스화하는 방법에 대 한 구조 설명입니다. 전체 설명은 [ADO Events 모델 예제 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md) 를 참조 하세요.  
   
- 파생 된 클래스를 만들기는 **ConnectionEventsVt** 하 고 **RecordsetEventsVt** 인터페이스 파일 adoint.h 있는 합니다.  
+ Adoint 파일에 있는 **ConnectionEventsVt** 및 **RecordsetEventsVt** 인터페이스에서 파생 된 클래스를 만듭니다.  
   
 ```  
 // BeginEventExampleVC01  
@@ -49,7 +49,7 @@ class CRstEvent : public RecordsetEventsVt
 // EndEventExampleVC01  
 ```  
   
- 두 클래스 모두에서 각 이벤트 처리기 메서드를 구현 합니다. 각 메서드는 S_OK HRESULT는 단순히 반환 부족 합니다. 그러나 하는 경우이 알려진 이벤트 처리기는 사용 가능한에 기본적으로 지속적으로 호출 합니다. 설정 하 여 처음으로 후 추가 알림이 요청 하려는 하는 대신 **adStatus** 하 **adStatusUnwantedEvent**합니다.  
+ 두 클래스 모두에서 각 이벤트 처리기 메서드를 구현 합니다. 각 메서드는 S_OK의 HRESULT만 반환 하면 됩니다. 그러나 이벤트 처리기를 사용할 수 있다는 것을 알고 있는 경우에는 기본적으로 계속 호출 됩니다. 대신 **Adstatus** 를 **adStatusUnwantedEvent**로 설정 하 여 추가 알림을 처음으로 요청 하는 것이 좋습니다.  
   
 ```  
 // BeginEventExampleVC02  
@@ -65,11 +65,11 @@ STDMETHODIMP CConnEvent::ConnectComplete(
 // EndEventExampleVC02  
 ```  
   
- 이벤트 클래스에서 상속 **IUnknown**이므로 구현 해야 합니다 **QueryInterface**를 **AddRef**, 및 **릴리스** 메서드. 또한 클래스 생성자와 소멸자를 구현 합니다. 시각적 개체 선택 C++ 도구는 가장 편리한 작업의이 부분을 간소화 합니다.  
+ 이벤트 클래스는 **IUnknown**에서 상속 하므로 **QueryInterface**, **AddRef**및 **Release** 메서드도 구현 해야 합니다. 클래스 생성자 및 소멸자도 구현 합니다. 작업의이 부분을 간소화 하는 데 가장 친숙 한 Visual C++ 도구를 선택 합니다.  
   
- 확인 하는 알려진 해당 이벤트 처리기를 사용할 수 있습니다 실행 **QueryInterface** 에 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 하 고 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 에 대 한 개체는  **IConnectionPointContainer** 하 고 **IConnectionPoint** 인터페이스입니다. 그런 다음 실행할 **IConnectionPoint::Advise** 각 클래스에 대 한 합니다.  
+ **IConnectionPointContainer** 및 **IConnectionPoint** 인터페이스에 대 한 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 및 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체에 대해 **QueryInterface** 를 실행 하 여 이벤트 처리기를 사용할 수 있다는 것을 알고 있어야 합니다. 그런 다음 각 클래스에 대해 **IConnectionPoint:: Advise** 를 실행 합니다.  
   
- 예를 들어, 반환 하는 부울 함수를 사용 하는 것으로 가정 **True** 성공적으로 알리는 경우를 **Recordset** 이벤트 처리기를 사용할 수 있는 개체입니다.  
+ 예를 들어, 사용할 수 있는 이벤트 처리기가 있는 **레코드 집합** 개체에 성공적으로 알리는 경우 **True** 를 반환 하는 부울 함수를 사용 한다고 가정 합니다.  
   
 ```  
 // BeginEventExampleVC03  
@@ -98,9 +98,9 @@ return TRUE;
 // EndEventExampleVC03  
 ```  
   
- 이 시점에 대 한 이벤트를 **RecordsetEvent** 제품군 설정 되 고 메서드를 호출할 **레코드 집합** 이벤트가 발생 합니다.  
+ 이 시점에서 **RecordsetEvent** 제품군에 대 한 이벤트가 활성화 되 고 **레코드 집합** 이벤트가 발생 하는 경우 메서드가 호출 됩니다.  
   
- 나중에 이벤트 처리기를 사용할 수 없게 하려는 경우 연결 지점을 다시 가져오고 실행 합니다 **iconnectionpoint:: Unadvise** 메서드.  
+ 나중에 이벤트 처리기를 사용할 수 없게 하려면 연결 지점을 다시 가져오고 **IConnectionPoint:: Unadvise** 메서드를 실행 합니다.  
   
 ```  
 // BeginEventExampleVC04  
@@ -112,9 +112,9 @@ if (FAILED(hr)) return FALSE;
 // EndEventExampleVC04  
 ```  
   
- 인터페이스를 해제 하 고 적절 하 게 클래스 개체를 제거 해야 합니다.  
+ 인터페이스를 해제 하 고 클래스 개체를 적절 하 게 삭제 해야 합니다.  
   
- 다음 코드와의 완전 한 예제는 **레코드 집합** 이벤트 싱크 클래스입니다.  
+ 다음 코드에서는 **레코드 집합** 이벤트 싱크 클래스의 전체 예를 보여 줍니다.  
   
 ```  
 // BeginEventExampleVC05.cpp  

@@ -14,10 +14,10 @@ ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 3a50b48b4c498020b3428af2eca2c9d045187682
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251790"
 ---
 # <a name="create-a-matching-policy"></a>일치 정책 만들기
@@ -28,14 +28,14 @@ ms.locfileid: "75251790"
   
  일치 정책 만들기는 데이터 원본을 확인하고 도메인을 열에 매핑하는 매핑 프로세스, 하나 이상의 일치 규칙을 만들고 각 일치 규칙을 개별적으로 테스트하는 일치 정책 프로세스, 그리고 모든 일치 규칙을 동시에 실행하여 결과에 만족하는 경우 정책을 기술 자료에 추가하는 일치 결과 프로세스의 3단계로 수행됩니다. 이러한 각 프로세스는 일치 정책 작업 마법사의 개별 페이지에서 수행되므로 여러 페이지를 앞뒤로 이동하고, 프로세스를 다시 실행하고, 특정 일치 정책 프로세스를 닫은 후 프로세스의 같은 단계로 돌아갈 수 있습니다. 모든 규칙을 동시에 테스트한 후 필요에 따라 **일치 정책** 페이지로 돌아가서 개별 규칙을 수정하고 별도로 다시 테스트한 다음 **일치 결과** 페이지로 돌아가서 모든 규칙을 다시 한번 동시에 실행할 수 있습니다. DQS에서는 원본 데이터, 일치 규칙 및 일치 결과에 대한 통계를 제공하므로 정보를 바탕으로 일치 정책에 대한 의사를 결정하고 이를 구체화할 수 있습니다.  
   
-##  <a name="BeforeYouBegin"></a>시작 하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a>사전  
+###  <a name="Prerequisites"></a> 필수 조건  
  원본 데이터가 Excel 파일 형식인 경우 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 컴퓨터에 Microsoft Excel이 설치되어 있어야 합니다. 그렇지 않으면 매핑 단계에서 Excel 파일을 선택할 수 없습니다. Microsoft Excel에서 만든 파일은 .xlsx, .xls 또는.csv 확장명을 가질 수 있습니다. 64비트 버전의 Excel이 사용된 경우 Excel 2003 파일 (.xls)만 지원됩니다. Excel 2007 또는 2010 파일(.xlsx)은 지원되지 않습니다. 64비트 버전의 Excel 2007 또는 2010을 사용 중인 경우 파일을 .xls 파일 또는 .csv 파일로 저장하거나 32비트 버전의 Excel을 대신 설치하세요.  
   
-###  <a name="Security"></a>보안  
+###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a>권한에  
+####  <a name="Permissions"></a> 권한  
  일치 정책을 만들려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
 ##  <a name="MatchingRules"></a>일치 규칙 매개 변수를 설정 하는 방법  
@@ -66,8 +66,7 @@ ms.locfileid: "75251790"
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client 응용 프로그램을 실행](../data-quality-services/run-the-data-quality-client-application.md)합니다.  
   
 2.  
-  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면에서 **새 기술 자료** 를 클릭하여 새 기술 자료에 일치 정책을 만듭니다. 기술 자료의 이름과 설명을 입력하고 원하는 대로 **기술 자료 만들기** 를 설정합니다. 작업에 대해 **일치 정책** 을 클릭합니다. 
-  **다음**을 클릭하여 계속합니다.  
+  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면에서 **새 기술 자료** 를 클릭하여 새 기술 자료에 일치 정책을 만듭니다. 기술 자료의 이름과 설명을 입력하고 원하는 대로 **기술 자료 만들기** 를 설정합니다. 작업에 대해 **일치 정책** 을 클릭합니다. **다음** 을 클릭하여 진행합니다.  
   
 3.  
   **기술 자료 열기** 를 클릭하여 기존 기술 자료에서 일치 정책을 만들거나 수정합니다. 기술 자료를 선택한 다음 **일치 정책**을 선택하고 **다음**을 클릭합니다. 

@@ -19,10 +19,10 @@ ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 666e7fdbc080af3ed259dae978bd782e437eae2e
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75557810"
 ---
 # <a name="open-unlock-rename-and-delete-a-data-quality-project---data-quality-services-dqs"></a>데이터 품질 프로젝트 열기, 잠금 해제, 이름 바꾸기 및 삭제-DQS (Data Quality Services)
@@ -31,9 +31,9 @@ ms.locfileid: "75557810"
 
   이 항목에서는 데이터 품질 프로젝트 열기, 잠금 해제, 이름 바꾸기, 삭제 등 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 를 사용하여 데이터 품질 프로젝트를 관리하는 방법에 대해 설명합니다.  
   
-##  <a name="BeforeYouBegin"></a>시작 하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="LimitationsRestrictions"></a>제한 사항  
+###  <a name="LimitationsRestrictions"></a> 제한 사항  
   
 -   다른 사용자가 만든 잠긴 프로젝트는 열 수 없습니다.  
   
@@ -43,12 +43,12 @@ ms.locfileid: "75557810"
   
 -   자신이 만든 데이터 품질 프로젝트만 잠금을 해제할 수 있습니다.  
   
-###  <a name="Prerequisites"></a>사전  
+###  <a name="Prerequisites"></a> 필수 조건  
  관리할 데이터 품질 프로젝트가 하나 이상 있어야 합니다.  
   
-###  <a name="Security"></a>보안  
+###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a>권한에  
+####  <a name="Permissions"></a> 권한  
  데이터 품질 프로젝트를 관리하려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_kb_operator 역할이 있어야 합니다.  
   
 ##  <a name="Open"></a>데이터 품질 프로젝트 열기  
@@ -108,7 +108,6 @@ ms.locfileid: "75557810"
 3.  
   **프로젝트 열기** 화면에서 자신이 만든 잠겨 있지 않은 데이터 품질 프로젝트를 마우스 오른쪽 단추로 클릭한 다음 바로 가기 메뉴에서 **삭제** 를 클릭합니다.  
   
-4.  확인 메시지가 표시됩니다. 
-  **예**를 클릭합니다.  
+4.  확인 메시지가 표시됩니다. **예**를 클릭합니다.  
   
   

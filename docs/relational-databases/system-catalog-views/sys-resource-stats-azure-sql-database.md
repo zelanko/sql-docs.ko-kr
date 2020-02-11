@@ -20,10 +20,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: e88d3916f5122564b443bc3c439200526b1f2d5e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246908"
 ---
 # <a name="sysresource_stats-azure-sql-database"></a>sys.resource_stats(Azure SQL Database)
@@ -35,10 +35,10 @@ ms.locfileid: "75246908"
   
  다음 표에는 v12 서버에서 사용할 수 있는 열이 설명되어 있습니다.  
   
-|열|데이터 형식|설명|  
+|열|데이터 형식|Description|  
 |----------------------------|---------------|-----------------|  
-|start_time|**날짜**|5 분 보고 간격의 시작을 나타내는 UTC 시간입니다.|  
-|end_time|**날짜**|5 분 보고 간격의 끝을 나타내는 UTC 시간입니다.|  
+|start_time|**datetime**|5 분 보고 간격의 시작을 나타내는 UTC 시간입니다.|  
+|end_time|**datetime**|5 분 보고 간격의 끝을 나타내는 UTC 시간입니다.|  
 |database_name|**nvarchar(128)**|사용자 데이터베이스의 이름입니다.|  
 |sku|**nvarchar(128)**|데이터베이스의 서비스 계층입니다. 가능한 값은 다음과 같습니다.<br /><br /> 기본<br /><br /> Standard<br /><br /> Premium<br /><br />범용<br /><br />중요 비즈니스|  
 |storage_in_megabytes|**float**|데이터베이스 데이터, 인덱스, 저장 프로시저 및 메타 데이터를 포함 하 여 기간에 대 한 최대 저장소 크기 (mb)입니다.|  
@@ -58,7 +58,7 @@ ms.locfileid: "75246908"
 > [!TIP]  
 >  이러한 제한 및 서비스 계층에 대 한 자세한 컨텍스트는 [서비스 계층](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)항목을 참조 하세요.  
     
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  이 보기는 가상 **master** 데이터베이스에 연결할 수 있는 권한이 있는 모든 사용자 역할에 사용할 수 있습니다.  
   
 ## <a name="remarks"></a>설명  

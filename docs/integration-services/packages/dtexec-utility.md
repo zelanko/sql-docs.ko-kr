@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b27fc68fc3c7685583248b39a7c27d4d33efa38c
-ms.sourcegitcommit: e0067f3687003e1b59a83619fdd19b666cf61e10
+ms.openlocfilehash: 7f2e417ddefc0094fc6320deafea40251ba77372
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74249738"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761857"
 ---
 # <a name="dtexec-utility"></a>dtexec 유틸리티
 
@@ -424,7 +424,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/SQ[L]** _package_path_: **msdb** 데이터베이스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장된 패키지를 로드합니다. **msdb** 데이터베이스에 저장된 패키지는 패키지 배포 모델을 사용하여 배포됩니다. 프로젝트 배포 모델을 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포된 패키지를 실행하려면 **/ISServer** 옵션을 사용합니다. 패키지 및 프로젝트 배포 모델에 대한 자세한 내용은 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)를 참조하십시오.   
   
-     *package_path* 인수는 검색할 패키지의 이름을 지정합니다. 경로에 폴더가 포함된 경우 백슬래시("\\")로 끝납니다. *package_path* 값은 따옴표로 묶을 수 있습니다. *package_path* 인수에 지정된 경로나 파일 이름에 공백이 있는 경우 *package_path* 인수를 따옴표로 묶어야 합니다.  
+-   *package_path* 인수는 검색할 패키지의 이름을 지정합니다. 경로에 폴더가 포함된 경우 백슬래시("\\")로 끝납니다. *package_path* 값은 따옴표로 묶을 수 있습니다. *package_path* 인수에 지정된 경로나 파일 이름에 공백이 있는 경우 *package_path* 인수를 따옴표로 묶어야 합니다.  
   
      **/SQL**옵션과 함께 **/User**, **/Password** , **/Server** 옵션을 사용할 수 있습니다.  
   
@@ -434,7 +434,7 @@ dtexec /option [value] [/option [value]]...
   
     > **중요!!** [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-     **/Server** 옵션을 생략할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 기본 로컬 인스턴스가 사용됩니다.  
+-   **/Server** 옵션을 생략할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 기본 로컬 인스턴스가 사용됩니다.  
   
      **/SQL** 옵션은 **/DTS** 또는 **/File** 옵션과 함께 사용할 수 없습니다. 여러 개의 옵션을 지정하는 경우 **dtexec** 는 실패합니다.  
   

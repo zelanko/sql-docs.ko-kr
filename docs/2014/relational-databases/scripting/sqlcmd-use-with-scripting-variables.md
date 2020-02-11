@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6893d00a1fa7fb0986be2eb6241c596160085e2f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243174"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>스크립팅 변수와 함께 sqlcmd 사용
@@ -110,7 +110,7 @@ ms.locfileid: "75243174"
  
   **sqlcmd** 에서 정의하는 변수를 스크립팅 변수라고 합니다. 다음 표에는 **sqlcmd** 스크립팅 변수가 나와 있습니다.  
   
-|변수|관련 옵션|R/W|Default|  
+|변수|관련 옵션|R/W|기본값|  
 |--------------|--------------------|----------|-------------|  
 |SQLCMDUSER*|-U|R|""|  
 |SQLCMDPASSWORD*|-P|--|""|  
@@ -123,7 +123,7 @@ ms.locfileid: "75243174"
 |SQLCMDCOLSEP|-s|R/W|" "|  
 |SQLCMDCOLWIDTH|-w|R/W|"0"|  
 |SQLCMDPACKETSIZE|지정하지 않을 경우|R|"4096"|  
-|SQLCMDERRORLEVEL|-m|R/W|"0"|  
+|SQLCMDERRORLEVEL|-M|R/W|"0"|  
 |SQLCMDMAXVARTYPEWIDTH|-y|R/W|"256"|  
 |SQLCMDMAXFIXEDTYPEWIDTH|-y|R/W|"0" = 제한 없음|  
 |SQLCMDEDITOR||R/W|"edit.com"|  

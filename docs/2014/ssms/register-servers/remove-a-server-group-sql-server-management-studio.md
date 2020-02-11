@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: 00ddaf35a859c0d95172e240537f825b3e9e8b1a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251804"
 ---
 # <a name="remove-a-server-group-sql-server-management-studio"></a>서버 그룹 제거(SQL Server Management Studio)
@@ -32,10 +32,9 @@ ms.locfileid: "75251804"
   
 1.  등록된 서버에서 서버 그룹을 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다.  
   
-2.  
-  **삭제 확인** 대화 상자에서 **예**를 클릭합니다.  
+2.  **삭제 확인** 대화 상자에서 **예**를 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [등록 된 서버 또는 등록 된 서버 그룹 &#40;SQL Server Management Studio으로 이동&#41;](move-a-registered-server-or-registered-server-group.md)  
+ [등록된 서버 및 등록된 서버 그룹 이동&#40;SQL Server Management Studio&#41;](move-a-registered-server-or-registered-server-group.md)  
   
   

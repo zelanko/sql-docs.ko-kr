@@ -1,27 +1,28 @@
 ---
-title: 추적 만들기 (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 08/01/2016
+title: 추적 만들기
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- traces [SQL Server], creating
 ms.assetid: 0302fa6d-d2b5-43fe-ad70-7a337575b112
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cb6a3f10f93d7bba147dca0cc9f7bbb879a82d68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 08/01/2016
+ms.openlocfilehash: 5a5c004bbc7e93720f18df998b989c46ced0188e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930163"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307338"
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>추적 만들기(SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 추적을 만드는 방법에 대해 설명합니다.  
+
+이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 추적을 만드는 방법에 대해 설명합니다.  
   
 ### <a name="to-create-a-trace"></a>추적 만들기  
   
@@ -29,7 +30,7 @@ ms.locfileid: "67930163"
   
      **추적 속성** 대화 상자가 나타납니다.  
   
-    > **참고:** **연결한 후 즉시 추적 시작** 을 선택한 경우에는 **추적 속성** 대화 상자가 나타나지 않고 추적이 시작됩니다. 이 설정을 해제하려면 **도구* *메뉴에서 **옵션**을 클릭한 다음, 연결하고 즉시 추적 시작 확인란의 선택을 취소합니다.  
+    > **참고:** 연결한 후 즉시 추적 시작 을 선택한 경우에는 **추적 속성** 대화 상자가 나타나지 않고 추적이 시작됩니다. 이 설정을 해제하려면 **도구* *메뉴에서 **옵션**을 클릭한 다음, 연결하고 즉시 추적 시작 확인란의 선택을 취소합니다.  
   
 2.  **추적 이름** 입력란에 추적의 이름을 입력합니다.  
   
@@ -49,11 +50,11 @@ ms.locfileid: "67930163"
   
 5.  필요에 따라 **추적 중지 시간 설정** 확인란을 선택하여 중지 날짜 및 시간을 지정합니다.  
   
-6.  이벤트, 데이터 열 또는 필터를 추가하거나 제거하려면 **이벤트 선택**  탭을 클릭합니다. 자세한 내용은 [추적 파일에 대해 이벤트 및 데이터 열 지정&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)을 참조하세요.  
+6.  이벤트, 데이터 열 또는 필터를 추가하거나 제거하려면 **이벤트 선택**  탭을 클릭합니다. 자세한 내용은 다음을 참조하세요. [추적 파일에 대해 이벤트 및 데이터 열 지정&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
   
 7.  **실행** 을 클릭하여 추적을 시작합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 프로파일러 실행에 필요한 권한](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)   
  [SQL Server Profiler 템플릿 및 권한](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)   

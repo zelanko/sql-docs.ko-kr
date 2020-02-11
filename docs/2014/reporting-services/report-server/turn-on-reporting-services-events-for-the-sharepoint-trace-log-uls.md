@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8b9cbd080a138b939224d6bb88218b46e52a23f4
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75255446"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정(ULS)
@@ -41,7 +41,7 @@ ms.locfileid: "75255446"
 ##  <a name="bkmk_general"></a>일반 ULS 로그 권장 사항  
  다음 표에서는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 환경을 모니터링하는 데 권장되는 이벤트 범주 및 수준을 나열합니다. 이벤트를 기록하면 각 항목에 이벤트 기록 시간, 프로세스 이름 및 스레드 ID가 포함됩니다.  
   
-|Category|수준|설명|  
+|Category|Level|Description|  
 |--------------|-----------|-----------------|  
 |데이터베이스|Verbose|데이터베이스 액세스를 포함하는 이벤트를 기록합니다.|  
 |일반|Verbose|다음 항목에 대한 액세스를 포함하는 이벤트를 기록합니다.<br /><br /> [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]웹 페이지<br /><br /> 보고서 뷰어 HTTP 처리기<br /><br /> 보고서 액세스 파일(.rdl)<br /><br /> 데이터 원본 파일(.rsds)<br /><br /> SharePoint 사이트의 URL(.smdl 파일)|  
@@ -107,7 +107,7 @@ Get-SPDiagnosticConfig
 |로컬 모드 렌더링||  
 |SOAP 클라이언트 프록시||  
 |UI 페이지||  
-|Power View|
+|파워 뷰|
   **LogClientTraceEvents** API에 쓴 로그 항목입니다. 이러한 항목은 Enterprise Edition [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]용 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 추가 기능의 기능인를 포함 하 여 클라이언트 응용 프로그램에서 시작 됩니다.<br /><br /> LogClientTraceEvents API의 모든 로그 항목은 "SQL Server Reporting Services" 및 "파워 뷰" **영역**의 **범주**에 기록됩니다.<br /><br /> "파워 뷰" 영역으로 기록된 항목의 내용은 클라이언트 애플리케이션에 의해 결정됩니다.|  
 |보고서 서버 경고 런타임||  
 |보고서 서버 응용 프로그램 도메인 관리자||  

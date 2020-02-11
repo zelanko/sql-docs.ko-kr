@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 999fd3f6caca13ecd768a9560915c53c732af27c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 1c87d791d5a5a16ec3b0d07c6a630f133a7f673c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258530"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76831542"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>데이터베이스 실험 도우미에서 추적 캡처
 
@@ -133,7 +133,7 @@ DEA를 사용 하 여 서버 또는 단일 데이터베이스의 모든 데이�
 
 - SQL Server를 실행 하는 컴퓨터의 이름이 유효 합니다. 확인 하려면 SSMS (SQL Server Management Studio)를 사용 하 여 SQL Server를 실행 하는 컴퓨터에 연결을 시도 합니다.
 - 방화벽 구성은 SQL Server를 실행 하는 컴퓨터에 대 한 연결을 차단 하지 않습니다.
-- 사용자에 게 블로그 게시 [재생 FAQ](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-replay-faq/)에 나열 된 사용 권한이 있습니다.
+- 사용자에 게 [재생 FAQ](https://docs.microsoft.com/sql/dea/database-experimentation-assistant-replay-trace?view=sql-server-ver15#frequently-asked-questions-about-trace-replay)에 나열 된 사용 권한이 있습니다.
 - 추적 이름은 표준 롤오버 규칙 (캡처\_1)을 따르지 않습니다. 대신 Capture\_1A 또는 Capture1와 같은 추적 이름을 사용해 보세요.
 
 다음은 표시 될 수 있는 몇 가지 오류와 해결 방법입니다.

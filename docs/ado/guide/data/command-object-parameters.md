@@ -1,5 +1,5 @@
 ---
-title: 개체 매개 변수를 명령 | Microsoft Docs
+title: Command 개체 매개 변수 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,14 +13,14 @@ ms.assetid: 10e7ef4a-78bf-4e91-931e-cbc6c065dd4c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 29ad7f3aa9347af77080b04fb309f8b50b95dbe4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925872"
 ---
 # <a name="command-object-parameters"></a>명령 개체 매개 변수
-이전에 설명 된 항목 [만들고 간단한 명령 실행](../../../ado/guide/data/creating-and-executing-a-simple-command.md)합니다. 더 흥미로운 하는 데는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체는 SQL 명령의 매개 변수가 다음 예제에 표시 됩니다. 이 수정 될 때마다 매개 변수에 대해 다른 값에서 전달 하는 명령은 다시 사용할 수 있습니다. 때문에 합니다 [준비 속성](../../../ado/reference/ado-api/prepared-property-ado.md) 속성을 **명령** 개체로 설정 됩니다 **true**, ADO 공급자에 지정 된 명령을 걸립니다 [ CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) 처음으로 실행 하기 전에 합니다. 또한 메모리에서 컴파일된 명령 또한 유지 합니다. 이 속도 느려집니다 명령의 실행 약간는 첫 번째 있지만 명령 이후에 호출 될 때마다 향상 된 성능이에서 결과 준비 하는 데 필요한 오버 헤드로 인해 실행 됩니다. 따라서 여러 번 사용 될 경우에 명령 준비 해야 합니다.  
+이전 항목에서는 [간단한 명령 만들기 및 실행](../../../ado/guide/data/creating-and-executing-a-simple-command.md)에 대해 설명 했습니다. [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체에 대 한 더 흥미로운 사용은 SQL 명령이 매개 변수화 된 다음 예제에 나와 있습니다. 이렇게 수정 하면 매번 매개 변수에 다른 값을 전달 하 여 명령을 다시 사용할 수 있습니다. **Command** 개체의 [준비 된 속성](../../../ado/reference/ado-api/prepared-property-ado.md) 속성이 **true**로 설정 되어 있기 때문에 ADO에서는 처음으로 실행 하기 전에 해당 공급자가 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) 에 지정 된 명령을 컴파일해야 합니다. 또한 컴파일된 명령을 메모리에 유지 합니다. 이렇게 하면 명령 실행이 처음 실행 될 때 약간 느리게 실행 되 고,이를 준비 하는 데 필요한 오버 헤드로 인해 성능이 저하 되지만 그 이후에 명령이 호출 될 때마다 성능이 향상 됩니다. 따라서 명령은 두 번 이상 사용 되는 경우에만 준비 해야 합니다.  
   
 ```  
 'BeginManualParamCmd  
@@ -118,4 +118,4 @@ End Function
 'EndNewConnection  
 ```  
   
- 준비 된 명령을 지원 하지 않는 공급자입니다. 이 속성이 즉시 오류가 공급자 명령 준비를 지원 하지 않는 경우 반환할 수 있습니다 **True**합니다. 오류를 반환 하지는 않습니다, 명령 및 집합을 준비 하려면 요청을 무시 합니다 **Prepared** 속성을 **false**합니다.
+ 모든 공급자가 준비 된 명령을 지 원하는 것은 아닙니다. 공급자가 명령 준비를 지원 하지 않는 경우이 속성이 **True**로 설정 되 면 즉시 오류를 반환할 수 있습니다. 오류가 반환 되지 않으면 명령 준비 요청을 무시 하 고 **준비** 된 속성을 **false**로 설정 합니다.

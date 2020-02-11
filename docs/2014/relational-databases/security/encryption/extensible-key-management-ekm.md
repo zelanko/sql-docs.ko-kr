@@ -15,14 +15,14 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 7d4fb415f9fbb556240d626aa48453d6d69d8072
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957187"
 ---
 # <a name="extensible-key-management-ekm"></a>EKM(확장 가능 키 관리)
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]암호화 및 키 생성을 위해 MSCAPI ( *Microsoft 암호화 API* ) 공급자를 사용 하 여 EKM ( *확장 가능 키 관리* )과 함께 데이터 암호화 기능을 제공 합니다. 데이터 및 키 암호화를 위한 암호화 키는 임시 키 컨테이너에서 생성되며 데이터베이스에 저장되기 전에 공급자로부터 내보내져야 합니다. 이 방법을 사용하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 암호화 키 계층 및 키 백업을 포함한 키 관리를 처리할 수 있습니다.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 암호화 및 키 생성용 MSCAPI( *Microsoft Cryptographic API* ) 공급자를 사용하여 EKM( *Extensible Key Management* )과 함께 데이터 암호화 기능을 제공합니다. 데이터 및 키 암호화를 위한 암호화 키는 임시 키 컨테이너에서 생성되며 데이터베이스에 저장되기 전에 공급자로부터 내보내져야 합니다. 이 방법을 사용하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 암호화 키 계층 및 키 백업을 포함한 키 관리를 처리할 수 있습니다.  
   
  규정 준수에 대한 요구와 데이터에 포함된 개인 정보 보호에 대한 관심이 증가함에 따라 조직에서는 "심층 방어" 솔루션을 제공하기 위해 암호화를 활용하고 있습니다. 일반적으로 이 방법은 데이터베이스 암호화 관리 도구만 사용하므로 유용한 방법이 아닙니다. 하드웨어 공급업체에서는 HSM( *하드웨어 보안 모듈* )을 사용하여 엔터프라이즈 키 관리를 해결하는 제품을 제공합니다. HSM 디바이스는 하드웨어나 소프트웨어 모듈에 암호화 키를 저장합니다. 이 방법은 암호화 키와 암호화 데이터가 별도로 보관되므로 더욱 안전한 솔루션입니다.  
   
@@ -30,8 +30,7 @@ ms.locfileid: "74957187"
   
  HSM 구현은 공급업체마다 다르며 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 사용하려면 공용 인터페이스가 필요합니다. MSCAPI는 이 인터페이스를 제공하지만 HSM 기능의 하위 집합만 지원합니다. 이외에도 MSCAPI에는 기본적으로 대칭 키를 지속할 수 없고 세션 지향이 지원되지 않는 등의 제한 사항이 있습니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 확장 가능 키 관리를 사용하면 타사 EKM/HSM 공급업체가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 해당 모듈을 등록할 수 있습니다. EKM 모듈이 등록되면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 이러한 모듈에 저장된 암호화 키를 사용할 수 있고, 이를 통해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 이러한 모듈이 지원하는 대량 암호화 및 암호 해독 같은 고급 암호화 기능과 키 에이징 및 키 회전 같은 키 관리 함수에 액세스할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 확장 가능 키 관리를 사용하면 타사 EKM/HSM 공급업체가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 해당 모듈을 등록할 수 있습니다. EKM 모듈이 등록되면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 이러한 모듈에 저장된 암호화 키를 사용할 수 있고, 이를 통해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 이러한 모듈이 지원하는 대량 암호화 및 암호 해독 같은 고급 암호화 기능과 키 에이징 및 키 회전 같은 키 관리 함수에 액세스할 수 있습니다.  
   
  Azure VM에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 실행할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 [Azure 키 자격 증명 모음](https://go.microsoft.com/fwlink/?LinkId=521401)에 저장된 키를 사용할 수 있습니다. 자세한 내용은 [Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리&#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)에서 암호화 키 계층 및 키 백업을 포함한 키 관리를 처리할 수 있습니다.  
   
@@ -57,8 +56,7 @@ GO
  기능을 사용하지 않으려면 값을 **0**으로 설정합니다. 서버 옵션을 설정하는 방법은 [sp_configure&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)를 참조하세요.  
   
 ## <a name="how-to-use-ekm"></a>EKM 사용 방법  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 확장 가능 키 관리를 사용하면 데이터베이스 파일을 보호하는 암호화 키를 스마트 카드, USB 디바이스 또는 EKM/HSM 모듈과 같은 외부 디바이스에 저장할 수 있을 뿐 아니라 또한 데이터베이스 관리자(sysadmin 그룹의 멤버 제외)로부터 데이터를 보호할 수 있습니다. 데이터베이스 사용자만 외부 EKM/HSM 모듈에 액세스할 수 있는 암호화 키를 사용하여 데이터를 암호화할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 확장 가능 키 관리를 사용하면 데이터베이스 파일을 보호하는 암호화 키를 스마트 카드, USB 디바이스 또는 EKM/HSM 모듈과 같은 외부 디바이스에 저장할 수 있을 뿐 아니라 데이터베이스 관리자(sysadmin 그룹의 멤버 제외)로부터 데이터를 보호할 수도 있습니다. 즉, 외부 EKM/HSM 모듈에서 데이터베이스 사용자만 액세스할 수 있는 암호화 키를 사용하여 데이터를 암호화할 수 있습니다.  
   
  또한 확장 가능 키 관리는 다음과 같은 이점을 제공합니다.  
   
@@ -89,8 +87,7 @@ GO
  EKM 모듈은 둘 이상의 인증 유형을 지원할 수 있습니다. 각 공급자는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 한 가지 유형의 인증만 제공합니다. 즉, 모듈에서 기본 또는 기타 인증 유형을 지원하는 경우 둘 다가 아닌 둘 중 하나만 제공합니다.  
   
 #### <a name="ekm-device-specific-basic-authentication-using-usernamepassword"></a>사용자 이름/암호를 통한 EKM 디바이스별 기본 인증  
- 
-  *사용자 이름/암호* 쌍을 사용한 기본 인증을 지원하는 EKM 모듈의 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 자격 증명을 사용하여 투명한 인증을 제공합니다. 자격 증명에 대한 자세한 내용은 [자격 증명&#40;데이터베이스 엔진&#41;](../authentication-access/credentials-database-engine.md)을 참조하세요.  
+ *사용자 이름/암호* 쌍을 사용한 기본 인증을 지원하는 EKM 모듈의 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 자격 증명을 사용하여 투명한 인증을 제공합니다. 자격 증명에 대한 자세한 내용은 [자격 증명&#40;데이터베이스 엔진&#41;](../authentication-access/credentials-database-engine.md)을 참조하세요.  
   
  로그온할 때마다 EKM 공급자에 대해 자격 증명을 만든 후 로그인(Windows 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 계정 모두)에 매핑하여 EKM 모듈에 액세스할 수 있습니다. 자격 증명의 *Identify* 필드에는 사용자 이름이 포함되고 *secret* 필드에는 EKM 모듈에 연결할 암호가 포함됩니다.  
   
@@ -106,16 +103,15 @@ GO
   
 |함수 또는 기능|참조|  
 |-------------------------|---------------|  
-|대칭 키 암호화|[Transact-sql&#41;&#40;대칭 키 만들기](/sql/t-sql/statements/create-symmetric-key-transact-sql)|  
-|비대칭 키 암호화|[Transact-sql&#41;&#40;비대칭 키 만들기](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|  
-|EncryptByKey(key_guid, 'cleartext', ...)|[ENCRYPTBYKEY &#40;Transact-sql&#41;](/sql/t-sql/functions/encryptbykey-transact-sql)|  
-|DecryptByKey(ciphertext, ...)|[DECRYPTBYKEY &#40;Transact-sql&#41;](/sql/t-sql/functions/decryptbykey-transact-sql)|  
-|EncryptByAsmKey(key_guid, 'cleartext')|[ENCRYPTBYASYMKEY &#40;Transact-sql&#41;](/sql/t-sql/functions/encryptbyasymkey-transact-sql)|  
-|DecryptByAsmKey(ciphertext)|[DECRYPTBYASYMKEY &#40;Transact-sql&#41;](/sql/t-sql/functions/decryptbyasymkey-transact-sql)|  
+|대칭 키 암호화|[CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)|  
+|비대칭 키 암호화|[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|  
+|EncryptByKey(key_guid, 'cleartext', ...)|[ENCRYPTBYKEY&#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbykey-transact-sql)|  
+|DecryptByKey(ciphertext, ...)|[DECRYPTBYKEY&#40;Transact-SQL&#41;](/sql/t-sql/functions/decryptbykey-transact-sql)|  
+|EncryptByAsmKey(key_guid, 'cleartext')|[ENCRYPTBYASYMKEY&#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbyasymkey-transact-sql)|  
+|DecryptByAsmKey(ciphertext)|[DECRYPTBYASYMKEY&#40;Transact-SQL&#41;](/sql/t-sql/functions/decryptbyasymkey-transact-sql)|  
   
 #### <a name="database-keys-encryption-by-ekm-keys"></a>EKM 키로 데이터베이스 키 암호화  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 EKM 키를 사용하여 데이터베이스에 있는 다른 키를 암호화할 수 있습니다. EKM 디바이스에서 대칭 키 및 비대칭 키 모두를 만들고 사용할 수 있습니다. EKM 비대칭 키를 사용하여 네이티브(비 EKM) 대칭 키를 암호화할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 EKM 키를 사용하여 데이터베이스에 있는 다른 키를 암호화할 수 있습니다. EKM 디바이스에서 대칭 키 및 비대칭 키 모두를 만들고 사용할 수 있습니다. EKM 비대칭 키를 사용하여 네이티브(비 EKM) 대칭 키를 암호화할 수 있습니다.  
   
  다음 예에서는 데이터베이스 대칭 키를 만들고 EKM 모듈에 저장된 키를 사용하여 이 키를 암호화합니다.  
   
@@ -129,44 +125,42 @@ OPEN SYMMETRIC KEY Key1
 DECRYPTION BY EKM_AKey1  
 ```  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 데이터베이스 및 서버 키에 대한 자세한 내용은 [SQL Server 및 데이터베이스 암호화 키&#40;데이터베이스 엔진&#41;](sql-server-and-database-encryption-keys-database-engine.md)를 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 데이터베이스 및 서버 키에 대한 자세한 내용은 [SQL Server 및 데이터베이스 암호화 키&#40;데이터베이스 엔진&#41;](sql-server-and-database-encryption-keys-database-engine.md)를 참조하세요.  
   
 > [!NOTE]  
 >  한 EKM 키로 다른 EKM 키를 암호화할 수는 없습니다.  
 >   
->  
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 EKM 공급자에서 생성된 비대칭 키를 사용한 서명 모듈을 지원하지 않습니다.  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 EKM 공급자에서 생성된 비대칭 키를 사용한 서명 모듈을 지원하지 않습니다.  
   
 ## <a name="related-tasks"></a>관련 작업  
  [EKM provider enabled 서버 구성 옵션](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)  
   
  [EKM을 사용 하 여 TDE 사용](enable-tde-on-sql-server-using-ekm.md)  
   
- [Azure Key Vault &#40;SQL Server를 사용 하는 확장 가능 키 관리&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
+ [Azure Key Vault를 사용한 확장 가능 키 관리&#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;&#40;암호화 공급자 만들기](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)   
- [Transact-sql&#41;&#40;암호화 공급자를 삭제 합니다.](/sql/t-sql/statements/drop-cryptographic-provider-transact-sql)   
- [ALTER 암호화 공급자 &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-cryptographic-provider-transact-sql)   
- [cryptographic_providers &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-cryptographic-providers-transact-sql)   
- [dm_cryptographic_provider_sessions &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-sessions-transact-sql)   
- [dm_cryptographic_provider_properties &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-properties-transact-sql)   
- [dm_cryptographic_provider_algorithms &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-algorithms-transact-sql)   
- [dm_cryptographic_provider_keys &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-keys-transact-sql)   
- [sys. 자격 증명 &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql)   
- [Transact-sql&#41;자격 증명 &#40;만들기](/sql/t-sql/statements/create-credential-transact-sql)   
- [ALTER LOGIN &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-login-transact-sql)   
- [Transact-sql&#41;&#40;비대칭 키 만들기](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
- [ALTER 비대칭 KEY &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-asymmetric-key-transact-sql)   
- [DROP 비대칭 KEY &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-asymmetric-key-transact-sql)   
- [Transact-sql&#41;&#40;대칭 키 만들기](/sql/t-sql/statements/create-symmetric-key-transact-sql)   
- [ALTER 대칭 키 &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-symmetric-key-transact-sql)   
- [Transact-sql&#41;&#40;대칭 키 삭제](/sql/t-sql/statements/drop-symmetric-key-transact-sql)   
- [Transact-sql&#41;&#40;대칭 키를 엽니다.](/sql/t-sql/statements/open-symmetric-key-transact-sql)   
+ [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)   
+ [DROP CRYPTOGRAPHIC PROVIDER&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-cryptographic-provider-transact-sql)   
+ [ALTER CRYPTOGRAPHIC PROVIDER&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-cryptographic-provider-transact-sql)   
+ [sys.cryptographic_providers&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-cryptographic-providers-transact-sql)   
+ [sys.dm_cryptographic_provider_sessions&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-sessions-transact-sql)   
+ [sys.dm_cryptographic_provider_properties&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-properties-transact-sql)   
+ [sys.dm_cryptographic_provider_algorithms&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-algorithms-transact-sql)   
+ [sys.dm_cryptographic_provider_keys&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-cryptographic-provider-keys-transact-sql)   
+ [sys.credentials&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql)   
+ [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)   
+ [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)   
+ [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
+ [ALTER ASYMMETRIC KEY&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-asymmetric-key-transact-sql)   
+ [DROP ASYMMETRIC KEY&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-asymmetric-key-transact-sql)   
+ [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)   
+ [ALTER SYMMETRIC KEY&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-symmetric-key-transact-sql)   
+ [DROP SYMMETRIC KEY&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-symmetric-key-transact-sql)   
+ [OPEN SYMMETRIC KEY&#40;Transact-SQL&#41;](/sql/t-sql/statements/open-symmetric-key-transact-sql)   
  [Reporting Services 암호화 키 백업 및 복원](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
- [SSRS Configuration Manager &#40;암호화 키를 삭제 하 고 다시 만듭니다&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
- [SSRS Configuration Manager &#40;스케일 아웃 배포의 암호화 키 추가 및 제거&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
+ [암호화 키 삭제 및 다시 만들기&#40;SSRS 구성 관리자&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
+ [확장 배포의 암호화 키 추가 및 제거&#40;SSRS 구성 관리자&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
  [서비스 마스터 키 백업](service-master-key.md)   
  [서비스 마스터 키 복원](restore-the-service-master-key.md)   
  [데이터베이스 마스터 키 만들기](create-a-database-master-key.md)   

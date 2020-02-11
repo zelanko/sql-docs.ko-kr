@@ -13,10 +13,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: 17c1e63789e9c2069d8fdecd8bd62b64bf8a886d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244657"
 ---
 # <a name="create-a-central-management-server-and-server-group-sql-server-management-studio"></a>중앙 관리 서버 및 서버 그룹 만들기(SQL Server Management Studio)
@@ -28,7 +28,7 @@ ms.locfileid: "75244657"
   
  **항목 내용**  
   
--   **시작 하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [보안](#Security)  
   
@@ -36,16 +36,16 @@ ms.locfileid: "75244657"
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a>시작 하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Security"></a>보안  
+###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a>권한에  
+####  <a name="Permissions"></a> 권한  
  msdb 데이터베이스의 두 데이터베이스 역할을 통해 중앙 관리 서버에 대한 액세스 권한을 부여합니다. 이 중 ServerGroupAdministratorRole 역할의 멤버만 중앙 관리 서버를 관리할 수 있으며 중앙 관리 서버에 연결하려면 ServerGroupReaderRole 역할의 멤버 자격이 필요합니다.  
   
  중앙 관리 서버에서 유지 관리하는 연결은 Windows 인증을 사용하여 사용자 컨텍스트 내에서 실행되므로 등록된 서버에 대한 유효 사용 권한은 달라질 수 있습니다. 예를 들어 사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A 인스턴스에서는 sysadmin 고정 서버 역할의 멤버이지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] B 인스턴스에서는 제한된 사용 권한을 가질 수 있습니다.  
   
-##  <a name="SSMSProcedure"></a>SQL Server Management Studio 사용  
+##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  다음 절차에서는 다음 단계를 수행하는 방법에 대해 설명합니다.  
   
 1.  중앙 관리 서버를 만듭니다.  
@@ -54,8 +54,7 @@ ms.locfileid: "75244657"
   
 #### <a name="create-a-central-management-server"></a>중앙 관리 서버 만들기  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **보기** 메뉴에서 **등록된 서버**를 클릭합니다.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **보기** 메뉴에서 **등록된 서버**를 클릭합니다.  
   
 2.  등록된 서버에서 **데이터베이스 엔진**을 확장하고 **중앙 관리 서버**를 마우스 오른쪽 단추로 클릭한 다음 **중앙 관리 서버 등록**을 클릭합니다.  
   
@@ -71,8 +70,7 @@ ms.locfileid: "75244657"
 6.  
   **테스트**를 클릭하여 연결을 테스트합니다.  
   
-7.  
-  **저장**을 클릭합니다. 
+7.  **저장**을 클릭합니다. 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 중앙 관리 서버 **폴더 아래에** 인스턴스가 표시됩니다.  
   
 #### <a name="create-a-new-server-group-and-add-servers-to-the-group"></a>새 서버 그룹을 만들고 그룹에 서버 추가  
@@ -93,6 +91,6 @@ ms.locfileid: "75244657"
 -   하나의 중앙 관리 서버, 하나 이상의 서버 그룹 및 하나 이상의 등록된 서버를 만든 후에는 전체 그룹에 대해 동시에 쿼리를 실행할 수 있습니다. 서버 그룹의 서버에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 동시에 실행하는 방법에 대한 자세한 내용은 [여러 서버에 대해 동시에 문 실행&#40;SQL Server Management Studio&#41;](execute-statements-against-multiple-servers-simultaneously.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [중앙 관리 서버를 사용 하 여 여러 서버 관리](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
+ [중앙 관리 서버를 사용하여 여러 서버 관리](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
   
   

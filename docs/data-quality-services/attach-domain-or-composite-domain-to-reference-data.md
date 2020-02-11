@@ -15,10 +15,10 @@ ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: df671e83d80175f154a4008270c3b68dc2581b59
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75557918"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data---data-quality-services-dqs"></a>참조 데이터에 도메인 또는 복합 도메인 연결-DQS (Data Quality Services)
@@ -39,13 +39,13 @@ ms.locfileid: "75557918"
   
 ## <a name="before-you-begin"></a>시작하기 전에  
   
-###  <a name="Prerequisites"></a>사전  
+###  <a name="Prerequisites"></a> 필수 조건  
  참조 데이터 서비스를 사용하도록 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )를 구성한 상태여야 합니다. 
   [참조 데이터를 사용하도록 DQS 구성](../data-quality-services/configure-dqs-to-use-reference-data.md)을 참조하세요.  
   
-###  <a name="Security"></a>보안  
+###  <a name="Security"></a> 보안  
   
-#### <a name="permissions"></a>권한  
+#### <a name="permissions"></a>사용 권한  
  참조 데이터에 도메인을 매핑하려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 역할이 있어야 합니다.  
   
 ##  <a name="Map"></a>Melissa 데이터에서 참조 데이터에 도메인 매핑  
@@ -63,8 +63,7 @@ ms.locfileid: "75557918"
   
 5.  
   **복합 도메인 만들기** 아이콘을 클릭하여 복합 도메인을 만듭니다. 
-  **복합 도메인 만들기** 대화 상자에서 **복합 도메인 이름** 입력란에 **Address Verification** 을 입력하고 3단계에서 만든 모든 도메인을 복합 도메인에 포함합니다. 
-  **확인**을 클릭합니다.  
+  **복합 도메인 만들기** 대화 상자에서 **복합 도메인 이름** 입력란에 **Address Verification** 을 입력하고 3단계에서 만든 모든 도메인을 복합 도메인에 포함합니다. **확인**을 클릭합니다.  
   
 6.  왼쪽에 있는 **도메인** 창에서 **Address Verification**을 클릭하여 복합 도메인을 선택한 다음 오른쪽에서 **참조 데이터** 탭을 클릭합니다.  
   
@@ -107,6 +106,6 @@ ms.locfileid: "75557918"
   
 ## <a name="see-also"></a>참고 항목  
  [DQS의 참조 Data Services](../data-quality-services/reference-data-services-in-dqs.md)   
- [데이터 정리](../data-quality-services/data-cleansing.md)  
+ [Data Cleansing](../data-quality-services/data-cleansing.md)  
   
   

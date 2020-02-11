@@ -15,10 +15,10 @@ ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 280149ccb0e94b1ca7bcca75616ec5353f41e62b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75255686"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>DQS(내부) 기술 자료를 사용하여 데이터 정리
@@ -31,7 +31,7 @@ ms.locfileid: "75255686"
   
 ## <a name="before-you-begin"></a>시작하기 전에  
   
-###  <a name="Prerequisites"></a>사전  
+###  <a name="Prerequisites"></a> 필수 조건  
   
 -   정리 작업에 대한 적절한 임계값을 지정해야 합니다. 이렇게 하는 방법은 [정리 및 일치에 대한 임계값 구성](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)을 참조하세요.  
   
@@ -39,9 +39,9 @@ ms.locfileid: "75255686"
   
 -   정리할 원본 데이터가 Excel 파일 형식인 경우 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 컴퓨터에 Microsoft Excel이 설치되어 있어야 합니다. 그렇지 않으면 매핑 단계에서 Excel 파일을 선택할 수 없습니다. Microsoft Excel에서 만든 파일은 .xlsx, .xls 또는.csv 확장명을 가질 수 있습니다. 64비트 버전의 Excel이 사용된 경우 Excel 2003 파일 (.xls)만 지원됩니다. Excel 2007 또는 2010 파일(.xlsx)은 지원되지 않습니다. 64비트 버전의 Excel 2007 또는 2010을 사용 중인 경우 파일을 .xls 파일 또는 .csv 파일로 저장하거나 32비트 버전의 Excel을 대신 설치하세요.  
   
-###  <a name="Security"></a>보안  
+###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a>권한에  
+####  <a name="Permissions"></a> 권한  
  데이터 정리를 수행하려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_kb_operator 역할이 있어야 합니다.  
   
 ##  <a name="Create"></a>정리 데이터 품질 프로젝트 만들기  
@@ -116,7 +116,7 @@ ms.locfileid: "75255686"
   
  값은 신뢰도 수준에 따라 다음 5개의 탭에 표시됩니다.  
   
-|탭|설명|  
+|탭|Description|  
 |---------|-----------------|  
 |**제안**|DQS에서 신뢰도 수준이 *자동 제안 임계값* 보다 높고 *자동 수정 임계값* 보다 낮은 제안 값을 검색한 도메인 값을 표시합니다.<br /><br /> 제안 값은 원래 값에 대해 **다음으로 수정** 열에 표시됩니다. 상단 표의 값에 대해 **승인** 또는 **거부** 열에 있는 라디오 단추를 클릭하여 해당 값의 모든 인스턴스에 대해 제안을 허용하거나 거부할 수 있습니다. 이 경우 허용된 값은 **수정됨** 탭으로 이동하고, 거부된 값은 **잘못됨** 탭으로 이동합니다.|  
 |**새로 만들기**|DQS에 정보가 충분 하지 않아 다른 탭에 매핑할 수 없는 유효한 도메인을 표시 합니다. 또한이 탭에는 신뢰도 수준이 *자동 제안 임계값* 보다 낮지만 유효한 것으로 표시 될 수 있는 값도 포함 됩니다.<br /><br /> 값이 올바르다고 생각되면 **승인** 열의 라디오 단추를 클릭하고, 그렇지 않으면 **거부** 열의 라디오 단추를 클릭합니다. 허용 된 값은 **올바른** 탭으로 이동 하 고, 거부 된 값은 **잘못** 됨 탭으로 이동 합니다. 올바른 값을 다음 **으로 수정** 열의 원래 값에 대 한 대체 값으로 직접 입력 한 다음 **승인** 열의 라디오 단추를 클릭 하 여 변경 내용을 적용할 수도 있습니다. 이 경우 값이 **수정됨** 탭으로 이동합니다.|  

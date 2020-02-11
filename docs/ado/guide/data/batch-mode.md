@@ -1,5 +1,5 @@
 ---
-title: 배치 모드 | Microsoft Docs
+title: 일괄 처리 모드 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,20 +15,20 @@ ms.assetid: 0cb548e0-fcb4-4c49-98c8-be287911f826
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 188a95f985ac1d578bca8c7e10ac4c4054c935c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925951"
 ---
 # <a name="batch-mode"></a>일괄 처리 모드
-일괄 처리 모드에 적용 되는 경우는 **LockType** 속성이 **adLockBatchOptimistic** 공급자 일괄 처리 업데이트를 지원 합니다. 특정 잠금 유형을 커서 위치에 따라 사용할 수 없는 경우 예를 들어 비관적 잠금 유형에 사용할 수 없는 경우는 **CursorLocation** 로 설정 된 **adUseClient**합니다. 반대로, 커서 위치는 서버의 경우 공급자를 일괄 처리 낙관적 잠금을 지원할 수 없습니다. 키 집합 또는 정적 커서에만 사용 하 여 업데이트 하는 일괄 처리를 사용 해야 합니다.  
+배치 모드는 **LockType** 속성이 **Adlockbatchoptimistic** 으로 설정 되 고 일괄 업데이트가 공급자에 의해 지원 되는 경우에 적용 됩니다. 특정 잠금 유형 설정은 커서 위치에 따라 사용할 수 없습니다. 예를 들어 **CursorLocation** 이 **adUseClient**로 설정 된 경우 비관적 잠금 유형을 사용할 수 없습니다. 반대로 커서 위치가 서버에 있는 경우에는 공급자가 일괄 처리 낙관적 잠금을 지원할 수 없습니다. 일괄 처리 업데이트는 키 집합 또는 정적 커서로만 사용 해야 합니다.  
   
- 합니다 **UpdateBatch** 메서드는 보내는 데 **레코드 집합** 변경 내용이 데이터 소스를 업데이트 하려면 서버에 복사 버퍼에서 유지 합니다. 다음 섹션에서는 열립니다는 **레코드 집합** 일괄 처리 모드로 변경 버퍼에 복사 하 고 다음에 대 한 호출을 사용 하 여 데이터 원본에 변경 내용을 보내는 **UpdateBatch**합니다.  
+ **UpdateBatch** 메서드는 복사 버퍼에 저장 된 **레코드 집합** 변경 내용을 서버에 전송 하 여 데이터 원본을 업데이트 하는 데 사용 됩니다. 다음 섹션에서는 일괄 처리 모드로 **레코드 집합** 을 열고, 복사 버퍼를 변경한 다음, **UpdateBatch**호출을 사용 하 여 변경 내용을 데이터 원본으로 보냅니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   
--   [업데이트를 전송 합니다. UpdateBatch 메서드](../../../ado/guide/data/sending-the-updates-updatebatch-method.md)  
+-   [업데이트 전송: UpdateBatch 메서드](../../../ado/guide/data/sending-the-updates-updatebatch-method.md)  
   
 -   [업데이트된 레코드 필터링](../../../ado/guide/data/filtering-for-updated-records.md)  
   
@@ -38,4 +38,4 @@ ms.locfileid: "67925951"
   
 -   [레코드 집합 연결 끊기 및 다시 연결](../../../ado/guide/data/disconnecting-and-reconnecting-the-recordset.md)  
   
--   [Join 결과 업데이트: 고유 테이블](../../../ado/guide/data/updating-joined-results-unique-table.md)
+-   [조인된 결과 업데이트: 고유한 테이블](../../../ado/guide/data/updating-joined-results-unique-table.md)

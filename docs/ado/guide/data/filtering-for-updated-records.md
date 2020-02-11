@@ -13,17 +13,17 @@ ms.assetid: 4a798921-d7bb-47c9-a252-550fd9463ec9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0b5afe84664719da5a1dbc7777aef524be28c459
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925330"
 ---
 # <a name="filtering-for-updated-records"></a>업데이트된 레코드 필터링
-UpdateBatch을 호출 하기 전에 레코드 집합을 연 후 변경 된 레코드만 표시할 레코드 집합 필터 속성 또는 UpdateBatch 마지막 호출을 사용할 수 있습니다. 이렇게 하려면 필터를 그 다음 섹션의 코드 예제에 표시 된 대로 업데이트할 레코드 수를 확인 하려면 같음 설정 합니다.  
+UpdateBatch를 호출 하기 전에 레코드 집합 필터 속성을 사용 하 여 레코드 집합을 연 이후 변경 된 레코드 또는 UpdateBatch에 대 한 마지막 호출을 볼 수 있습니다. 이렇게 하려면 다음 섹션의 코드 예제에 표시 된 것 처럼 필터를 adFilterPendingRecords로 설정 하 여 업데이트할 레코드 수를 결정 합니다.  
   
 ## <a name="remarks"></a>설명  
- 이 예제는 UpdateBatch 호출 직전 레코드 집합을 필터링 하 고 레코드를 변경 하는 사용자를 보여 주는 (CancelBatch 메서드 사용) 업데이트를 취소할 수 있도록 하 여 이전 UpdateBatch 예제를 확장 합니다.  
+ 이 예에서는 사용자가 UpdateBatch를 호출 하기 직전에 레코드 집합을 필터링 하 여 이전 UpdateBatch 예를 확장 하 고 레코드가 변경 되는 사용자를 표시 하 고 CancelBatch 메서드를 사용 하 여 업데이트를 취소할 수 있도록 허용 합니다.  
   
 ```  
 'BeginFilterPend  
@@ -54,5 +54,5 @@ UpdateBatch을 호출 하기 전에 레코드 집합을 연 후 변경 된 레�
 'EndFilterPend  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [일괄 처리 모드](../../../ado/guide/data/batch-mode.md)

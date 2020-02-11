@@ -11,10 +11,10 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 12/26/2019
 ms.openlocfilehash: a6907422afd32296b88d8160af4c35692277e94e
-ms.sourcegitcommit: 3c65b43ba5a00585be7840df300d9183dc6fb606
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/28/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75521733"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio의 릴리스 정보
@@ -564,7 +564,7 @@ _0.32.8에는 0.32.7의 몇 가지 기능 저하_에 대한 수정([#1971](https
 | 변경 | 세부 정보 |
 | :----- | :------ |
 | SQL 에이전트 미리 보기 확장 기능 개선: | &nbsp; |
-| &nbsp; &nbsp; &nbsp; 파일 지원 개선 | &bull; &nbsp; 큰 파일<br/>&bull; &nbsp; 관리자 권한으로 보호된 파일을 저장하기 위한 보호된 파일<br/>&bull; &nbsp; SQL Operations Studio에서 \>256M보다 큰 파일 저장 |
+| &nbsp; &nbsp; &nbsp; 파일 지원 개선 | &bull; &nbsp; 큰 파일<br/>&bull; &nbsp; 관리자 권한으로 보호된 파일을 저장하기 위한 보호된 파일<br/>&bull; &nbsp; SQL Operations Studio에서 256M보다 큰 파일 저장 |
 | &nbsp; &nbsp; &nbsp; 통합 터미널 분할 | 동시에 여러 개의 열린 터미널에서 작업합니다. |
 | &nbsp; &nbsp; &nbsp; 더 빨라진 설치 및 시작 시간 | 디스크에 있는 파일 수의 설치 공간을 줄였습니다. |
 | &nbsp; | &nbsp; |
@@ -598,7 +598,7 @@ _0.32.8에는 0.32.7의 몇 가지 기능 저하_에 대한 수정([#1971](https
 | :----- | :------ |
 | [새 알림 UI](https://code.visualstudio.com/updates/v1_21#_new-notifications-ui) | SQL Operations Studio 알림을 쉽게 관리하고 검토합니다. |
 | [통합 터미널 분할](https://code.visualstudio.com/updates/v1_21#_split-terminals) | 한 번에 여러 개의 열린 터미널에서 작업합니다. |
-| [보호된 큰 파일 저장](https://code.visualstudio.com/updates/v1_20#_save-files-that-need-admin-privileges) | SQL Operations Studio에서 관리자 권한으로 보호된 \>256M보다 큰 파일을 저장합니다. |
+| [보호된 큰 파일 저장](https://code.visualstudio.com/updates/v1_20#_save-files-that-need-admin-privileges) | SQL Operations Studio에서 관리자 권한으로 보호된 256M보다 큰 파일을 저장합니다. |
 | [향상된 큰 파일 지원](https://code.visualstudio.com/updates/v1_21#_text-buffer-improvements) | 큰 파일을 위해 텍스트 버퍼 최적화가 지원됩니다. |
 | [향상된 설정 검색 기능](https://code.visualstudio.com/updates/v1_20#_settings-search) | 자연어 검색을 사용하여 적절한 설정을 쉽게 찾습니다. |
 | [전역 코드 조각](https://code.visualstudio.com/updates/v1_20#_global-snippets) | 모든 파일 형식에서 사용할 수 있는 코드 조각을 만듭니다. |

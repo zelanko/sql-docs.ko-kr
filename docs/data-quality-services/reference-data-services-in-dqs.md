@@ -10,10 +10,10 @@ ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 6d3c4f15dcb62e36918c81baa5f2bd40c38b7c6a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244143"
 ---
 # <a name="reference-data-services-in-dqs"></a>DQS의 참조 데이터 서비스
@@ -72,7 +72,7 @@ ms.locfileid: "75244143"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|Marketplace 또는 다이렉트 온라인 타사 데이터 공급자의 참조 데이터 서비스를 사용하도록 DQS를 구성하는 방법에 대해 설명합니다.|[참조 데이터를 사용 하도록 DQS 구성](../data-quality-services/configure-dqs-to-use-reference-data.md)|  
+|Marketplace 또는 다이렉트 온라인 타사 데이터 공급자의 참조 데이터 서비스를 사용하도록 DQS를 구성하는 방법에 대해 설명합니다.|[참조 데이터를 사용하도록 DQS 구성](../data-quality-services/configure-dqs-to-use-reference-data.md)|  
 |기술 자료의 도메인/복합 도메인을 참조 데이터 서비스에 매핑하는 방법에 대해 설명합니다.|[참조 데이터에 도메인 또는 복합 도메인 연결](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)|  
 |참조 데이터 서비스를 사용하여 데이터를 정리하는 방법에 대해 설명합니다.|[외부&#41; 기술 &#40;참조 데이터를 사용 하 여 데이터 정리](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
   

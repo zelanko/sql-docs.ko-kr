@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 2fef7b88514357deb6cf0a009d12272cc3cf79a2
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.openlocfilehash: 089b76d7167b8561c93b01837dc2189c833362fd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74401407"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76761907"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>분석 플랫폼 시스템에서 Windows Server Update Services (WSUS) 구성
 이 지침에서는 WSUS (Windows Server Update Services) 구성 마법사를 사용 하 여 분석 플랫폼 시스템용 WSUS를 구성 하는 단계를 안내 합니다. 어플라이언스에 소프트웨어 업데이트를 적용 하려면 먼저 WSUS를 구성 해야 합니다. WSUS가 이미 어플라이언스의 VMM 가상 컴퓨터에 설치 되어 있습니다.  
@@ -83,8 +83,7 @@ WSUS를 구성 하려면 다음을 수행 해야 합니다.
   
     #### <a name="to-update-by-using-microsoft-update"></a>Microsoft 업데이트를 사용 하 여 업데이트 하려면  
   
-    1.  Microsoft 업데이트와 동기화 하도록 선택 하면 **업스트림 서버 선택** 페이지를 변경할 필요가 없습니다. 
-  **다음**을 클릭합니다.  
+    1.  Microsoft 업데이트와 동기화 하도록 선택 하면 **업스트림 서버 선택** 페이지를 변경할 필요가 없습니다. **다음**을 클릭합니다.  
   
         ![WSUS 업스트림 서버 동기화](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
   
@@ -140,11 +139,14 @@ WSUS를 구성 하려면 다음을 수행 해야 합니다.
 8.  제품을 선택 합니다.  
   
     > [!NOTE]  
-    > 업스트림 서버를 사용 하는 경우 제품을 선택 하지 못할 수 있습니다. 이 옵션을 사용할 수 없는 경우이 단계를 건너뜁니다.  
+    > 업스트림 서버를 사용 하는 경우 제품을 선택 하지 못할 수 있습니다. 이 옵션을 사용할 수 없는 경우이 단계를 건너뜁니다.
+
+    > [!WARNING]  
+    > SQL Server 2016 업데이트를 제외 하세요.
   
     선택한 모든 업데이트를 선택 취소 합니다.  
   
-    **Windows Server 2012 r2**및 **System Center 2012 R2-Virtual Machine Manager**를 선택한 후 **다음**을 클릭 합니다.  
+    **SQL Server 2012**, **SQL Server 2014**, **Windows Server 2012 R2**및 **System Center 2012 R2-Virtual Machine Manager**을 선택 하 고 **다음**을 클릭 합니다.  
   
 9. 분류를 선택 합니다.  
   
@@ -169,8 +171,7 @@ WSUS를 구성 하려면 다음을 수행 해야 합니다.
   
 12. 마치고.  
   
-    
-  **마침**을 클릭합니다.  
+    **Finish**를 클릭합니다.  
   
 ## <a name="bkmk_WSUSGroup"></a>WSUS에서 어플라이언스 서버 그룹화  
 분석 플랫폼 시스템에 대해 WSUS를 구성한 후 다음 단계는 어플라이언스 서버를 그룹화 하는 것입니다. 모든 어플라이언스 서버를 그룹에 추가 하면 WSUS는 기기의 모든 서버에 소프트웨어 업데이트를 적용할 수 있습니다.  

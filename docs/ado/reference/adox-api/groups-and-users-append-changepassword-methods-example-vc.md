@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 7e7067d0-6405-4c09-bff3-b1c2f2d783e0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ff06ece1485ce8f140e1295e8bee3036cc1686a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a98b92b4aaad14ec507b10a345bb8200b1169f0d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966196"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76918079"
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vc"></a>Groups 및 Users Append, ChangePassword 메서드 예제(VC++)
-이 예제에서는 [Append](../../../ado/reference/adox-api/append-method-adox-groups.md) 메서드의 [그룹](../../../ado/reference/adox-api/groups-collection-adox.md), 뿐만 [추가](../../../ado/reference/adox-api/append-method-adox-users.md) 메서드의 [사용자](../../../ado/reference/adox-api/users-collection-adox.md) 새 추가하여[그룹](../../../ado/reference/adox-api/group-object-adox.md) 및 새 [사용자](../../../ado/reference/adox-api/user-object-adox.md) 시스템입니다. 새 **그룹** 에 추가 되는 **그룹** 새 컬렉션 **사용자**합니다. 따라서 새 **사용자** 에 추가 되는 **그룹**합니다. 또한 합니다 [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) 메서드를 지정 하는 합니다 **사용자** 암호.  
+이 예제에서는 시스템에 새 [그룹](../../../ado/reference/adox-api/group-object-adox.md) 및 새 [사용자](../../../ado/reference/adox-api/user-object-adox.md) 를 추가 하 여 [사용자](../../../ado/reference/adox-api/users-collection-adox.md) 의 [추가](../../../ado/reference/adox-api/append-method-adox-users.md) 방법 뿐만 아니라 [그룹](../../../ado/reference/adox-api/groups-collection-adox.md)의 [추가](../../../ado/reference/adox-api/append-method-adox-groups.md) 메서드를 보여 줍니다. 새 **그룹** 은 새 **사용자**의 **그룹** 컬렉션에 추가 됩니다. 따라서 새 **사용자** 가 **그룹**에 추가 됩니다. 또한 [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) 메서드를 사용 하 여 **사용자** 암호를 지정 합니다.  
   
 > [!NOTE]
->  지정 해야 하는 경우 Windows 인증을 지 원하는 데이터 원본 공급자에 연결 하는, **Trusted_Connection = yes** 하거나 **Integrated Security = SSPI** 사용자 ID와 암호 대신 연결 문자열에 대 한 정보입니다.  
+>  Windows 인증을 지 원하는 데이터 원본 공급자에 연결 하는 경우 연결 문자열에 사용자 ID 및 암호 정보 대신 **Trusted_Connection = yes** 또는 **INTEGRATED Security = SSPI** 를 지정 해야 합니다.  
   
 ```  
 // BeginGroupCpp.cpp  
@@ -124,7 +124,7 @@ int main() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in include files...." << endl;  
+      cout << "Error occurred in include files...." << endl;  
    }  
   
    ::CoUninitialize();  

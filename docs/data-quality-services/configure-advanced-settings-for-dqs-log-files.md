@@ -13,10 +13,10 @@ ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: f4c0431afb7d1c2de0fc5e4fae5e7c7c25639002
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75255608"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>Configure Advanced Settings for DQS Log Files
@@ -28,11 +28,11 @@ ms.locfileid: "75255608"
 > [!NOTE]  
 >  이러한 작업은 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]를 사용하여 수행할 수 없으며 고급 사용자 전용입니다.  
   
-##  <a name="BeforeYouBegin"></a>시작 하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Security"></a>보안  
+###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a>권한에  
+####  <a name="Permissions"></a> 권한  
   
 -   DQS_MAIN 데이터베이스에서 A_CONFIGURATION 테이블의 구성 설정을 수정하려면 Windows 사용자 계정이 SQL Server 인스턴스에서 sysadmin 고정 서버 역할의 멤버여야 합니다.  
   
@@ -131,6 +131,6 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
 3.  필요한 사항을 변경하고 파일을 저장하여 새 로깅 변경 내용을 적용합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [DQS 로그 파일에 대 한 심각도 수준 구성](../data-quality-services/configure-severity-levels-for-dqs-log-files.md)  
+ [DQS 로그 파일에 대한 심각도 수준 구성](../data-quality-services/configure-severity-levels-for-dqs-log-files.md)  
   
   

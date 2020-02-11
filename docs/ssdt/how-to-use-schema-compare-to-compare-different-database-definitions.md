@@ -1,11 +1,7 @@
 ---
-title: '방법: 스키마 비교를 사용하여 서로 다른 데이터베이스 정의 비교 | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 스키마 비교를 사용하여 서로 다른 데이터베이스 정의 비교
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.schemacompare.SchemaCompareOptionsDialog
@@ -16,14 +12,19 @@ f1_keywords:
 ms.assetid: 7f0905a4-081c-46e2-bd7d-325b63e5c675
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ce83808ac5953902f8f655c619f87feeffa4e8c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: f31d543906e4bfedb16e412be703ebc8cd797a04
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097511"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75226848"
 ---
 # <a name="how-to-use-schema-compare-to-compare-different-database-definitions"></a>방법: 스키마 비교를 사용하여 서로 다른 데이터베이스 정의 비교
+
 SSDT(SQL Server Data Tools)에는 두 데이터베이스 정의를 비교하는 데 사용할 수 있는 스키마 비교 유틸리티가 포함되어 있습니다.  비교의 원본 및 대상으로는 연결된 데이터베이스, SQL Server 데이터베이스 프로젝트, 스냅샷 또는 .dacpac 파일의 임의 조합을 사용할 수 있습니다.  비교 결과는 대상을 원본과 동일하게 만들기 위해 수행해야 하는 일련의 작업으로 표시됩니다.  비교가 완료되면 대상을 직접 업데이트하거나(대상이 프로젝트 또는 데이터베이스인 경우) 같은 효과가 있는 업데이트 스크립트를 생성할 수 있습니다.  
   
 원본과 대상의 차이는 검토하기 쉽게 표로 표시됩니다.  결과 표를 통해서나 스크립트 형태로 각 차이를 자세히 보고 검토할 수 있습니다.  그런 다음 특정 차이를 선택적으로 제외할 수 있습니다.  

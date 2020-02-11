@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 50d1eb4d7a6070572e674f5ee7f8794837e63aa1
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75225261"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>향상된 날짜 및 시간 형식에 대한 대량 복사 변경 사항(OLE DB 및 ODBC)
@@ -33,7 +33,7 @@ ms.locfileid: "75225261"
 |DateTime|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
 |Date|SQLDATE|de|  
-|시간|SQLTIME|te|  
+|Time|SQLTIME|te|  
 |Datetime2|SQLDATETIME2|d2|  
 |Datetimeoffset|SQLDATETIMEOFFSET|do|  
 ||||
@@ -95,12 +95,12 @@ ms.locfileid: "75225261"
 ## <a name="bcp-types-in-sqlnclih"></a>sqlncli.h의 BCP 형식  
  다음 형식은 ODBC에 대한 BCP API 확장에 사용할 수 있도록 sqlncli.h에 정의됩니다. 이러한 형식은 OLE DB에서 IBCPSession:: BCPColFmt의 *Euserdatatype* 매개 변수와 함께 전달 됩니다.  
   
-|파일 스토리지 유형|호스트 파일 데이터 형식|IBCPSession:: BCPColFmt에 사용할 sqlncli을 입력 합니다.|Value|  
+|파일 스토리지 유형|호스트 파일 데이터 형식|IBCPSession:: BCPColFmt에 사용할 sqlncli을 입력 합니다.|값|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
 |DateTime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
 |Date|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
-|시간|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
+|Time|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
 |Datetimeoffset|SQLDATETIMEOFFSET|BCP_TYPE_SQLDATETIMEOFFSET|0x2b|  
 |||||
@@ -113,7 +113,7 @@ ms.locfileid: "75225261"
 |대상 --><br /><br /> 원본|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
 |Date|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
-|시간|해당 없음|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
+|Time|해당 없음|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
 |Smalldatetime|1,2|1,4,10|1|1|1,10|1,5,10|1,11|1,11|  
 |DateTime|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
 |Datetime2|1,2|1,4,10|1,10(ODBC)1,12(OLE DB)|1,10|1,10|1,5,10|1,3|1,3|  

@@ -14,10 +14,10 @@ ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 88ce592ebbf5a1b44d55b1b3119ef96e713112bc
-ms.sourcegitcommit: 26868c8ac3217176b370d972a26d307598a10328
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74833024"
 ---
 # <a name="unicode-function-arguments"></a>유니코드 함수 인수
@@ -70,7 +70,7 @@ ODBC 3.5 이상 드라이버 관리자는 해당 인수에서 문자 문자열 �
   
  이 섹션에서는 다음 항목을 다룹니다.  
   
--   [유니코드 응용 프로그램](../../../odbc/reference/develop-app/unicode-applications.md)  
+-   [유니코드 애플리케이션](../../../odbc/reference/develop-app/unicode-applications.md)  
   
 -   [유니코드 드라이버](../../../odbc/reference/develop-app/unicode-drivers.md)  
   
