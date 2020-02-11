@@ -20,18 +20,18 @@ ms.assetid: 4c60d827-b2d2-4f27-b220-daa9e1fcdd8d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0d5e0a10b8c530494fa3c026be0d36fde066a97c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053675"
 ---
 # <a name="sqlpostinstallererror-function"></a>SQLPostInstallerError 함수
 **규칙**  
- 도입 된 버전: ODBC 3.0  
+ 소개 된 버전: ODBC 3.0  
   
  **요약**  
- **SQLPostInstallerError** 드라이버나 translator 설치 라이브러리에 대 한 오류 보고를 위한 메커니즘을 제공 합니다 **ConfigDriver**합니다 **ConfigDSN**, 및 **ConfigTranslator**  설치 관리자 오류 큐로 함수입니다. 이 API를 사용 하지 않는 응용 사용 하 여 **SQLInstallerError** 오류를 검색 하려면.  
+ **SQLPostInstallerError** 는 드라이버 또는 번역기 설치 라이브러리에서 **configdriver**, **ConfigDSN**및 **configdriver** 함수에 대 한 오류를 설치 관리자 오류 큐에 보고 하는 메커니즘을 제공 합니다. 응용 프로그램은이 API를 사용 하지 않습니다. **SQLInstallerError** 를 사용 하 여 오류를 검색 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,21 +44,21 @@ RETCODE SQLPostInstallerError(
   
 ## <a name="arguments"></a>인수  
  *fErrorCode*  
- [입력] 설치 관리자 오류 코드입니다.  
+ 입력 설치 관리자 오류 코드입니다.  
   
  *szErrorMsg*  
- [입력] 오류 메시지 텍스트입니다.  
+ 입력 오류 메시지 텍스트입니다.  
   
-## <a name="returns"></a>반환 값  
- SQL_SUCCESS 또는 SQL_ERROR 합니다.  
+## <a name="returns"></a>반환  
+ SQL_SUCCESS 또는 SQL_ERROR.  
   
 ## <a name="diagnostics"></a>진단  
- **SQLPostInstallerError** 자체에 대 한 오류 값을 게시 하지 않습니다. 오류 설치 관리자 오류 큐에 성공적으로 게시 된 경우 (사용 하 여 검색 가능 **SQLInstallerError**), SQL_SUCCESS가 반환 됩니다. 경우 SQL_ERROR가 반환 됩니다의 값을 *dwErrorCode* 인수가 지정 된 설치 관리자 오류 코드 중 하나가 아닙니다.  
+ **SQLPostInstallerError** 는 자체에 대 한 오류 값을 게시 하지 않습니다. 오류가 설치 관리자 오류 큐에 성공적으로 게시 된 경우 ( **SQLInstallerError**를 사용 하 여 검색할 수 있는 경우) SQL_SUCCESS 반환 됩니다. *Dwerrorcode* 인수의 값이 지정 된 설치 관리자 오류 코드 중 하나가 아닌 경우 SQL_ERROR 반환 됩니다.  
   
 ## <a name="related-functions"></a>관련 함수  
   
-|내용|참조 항목|  
+|원하는 정보|참조 항목|  
 |---------------------------|---------|  
-|추가, 수정 또는 드라이버를 제거 합니다.|[ConfigDriver](../../../odbc/reference/syntax/configdriver-function.md)|  
-|추가, 수정 또는 데이터 원본 제거|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)|  
+|드라이버 추가, 수정 또는 제거|[ConfigDriver](../../../odbc/reference/syntax/configdriver-function.md)|  
+|데이터 원본 추가, 수정 또는 제거|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)|  
 |변환 옵션 설정|[ConfigTranslator](../../../odbc/reference/syntax/configtranslator-function.md)|

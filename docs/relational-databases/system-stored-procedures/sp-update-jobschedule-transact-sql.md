@@ -1,5 +1,5 @@
 ---
-title: sp_update_jobschedule (TRANSACT-SQL) | Microsoft Docs
+title: sp_update_jobschedule (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,27 +18,27 @@ ms.assetid: 4df02594-4cd1-49a9-8d97-37c44e4d5423
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ebdaa23db8602b608498b4012ffd71367bb99a0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68084899"
 ---
-# <a name="spupdatejobschedule-transact-sql"></a>sp_update_jobschedule(Transact-SQL)
+# <a name="sp_update_jobschedule-transact-sql"></a>sp_update_jobschedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   지정한 작업에 대한 일정 설정을 변경합니다.  
   
- **sp_update_jobschedule** 이전 버전과 호환성만 제공 됩니다.  
+ **sp_update_jobschedule** 은 이전 버전과의 호환성을 위해서만 제공 됩니다.  
   
 > [!IMPORTANT]
->  이전 버전의 Microsoft SQL Server에 사용 된 구문에 대 한 자세한 내용은 TRANSACT-SQL Referencefor Microsoft SQL Server 2000을 참조 하세요.*합니다.*  
+>  이전 버전의 Microsoft SQL Server에서 사용 된 구문에 대 한 자세한 내용은 Microsoft SQL Server 2000에 대 한 Transact-sql Referencefor 참조 하십시오 *.*  
   
 ## <a name="remarks"></a>설명  
- 이제 작업 일정을 작업과 독립적으로 관리할 수 있습니다. 일정을 업데이트 하려면 사용 하 여 **sp_update_schedule**합니다.  
+ 이제 작업 일정을 작업과 독립적으로 관리할 수 있습니다. 일정을 업데이트 하려면 **sp_update_schedule**을 사용 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
+ 기본적으로 **sysadmin** 고정 서버 역할의 멤버는이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
   
 -   **SQLAgentUserRole**  
   
@@ -48,10 +48,10 @@ ms.locfileid: "68084899"
   
  이러한 역할의 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 고정 데이터베이스 역할](../../ssms/agent/sql-server-agent-fixed-database-roles.md)을 참조하세요.  
   
- 멤버만 **sysadmin** 다른 사용자가 소유한 작업 일정을 업데이트 하려면이 저장된 프로시저를 사용할 수 있습니다.  
+ **Sysadmin** 의 멤버만이 저장 프로시저를 사용 하 여 다른 사용자가 소유한 작업 일정을 업데이트할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [SQL Server 에이전트 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_update_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;&#40;저장 프로시저 SQL Server 에이전트](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;sp_update_schedule &#40;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)  
   
   

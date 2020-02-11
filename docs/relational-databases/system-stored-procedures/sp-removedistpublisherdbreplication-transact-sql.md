@@ -16,18 +16,18 @@ ms.assetid: 9bfe002a-25b5-4226-bcfb-feb2060d6b4a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 49c06ac45a91014199caa75c5893971f6f3de715
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771028"
 ---
-# <a name="spremovedistpublisherdbreplication-transact-sql"></a>sp_Removedistpublisherdbreplication(Transact-SQL)
+# <a name="sp_removedistpublisherdbreplication-transact-sql"></a>sp_Removedistpublisherdbreplication(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   배포자의 특정 게시에 속한 게시 메타데이터를 제거합니다. 이 저장 프로시저는 배포 데이터베이스의 배포자에서 실행됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -48,7 +48,7 @@ sp_removedistpublisherdbreplication [ @publisher = ] 'publisher'
 ## <a name="remarks"></a>설명  
  **sp_removedistpublisherdbreplication** 는 트랜잭션 및 스냅숏 복제에 사용 됩니다.  
   
- **sp_removedistpublisherdbreplication** 는 배포 데이터베이스를 삭제 하지 않고 게시 된 데이터베이스를 다시 만들어야 하는 경우에 사용 합니다. 다음 메타 데이터가 제거됩니다.  
+ 배포 데이터베이스를 삭제 하지 않고 게시 된 데이터베이스를 다시 만들어야 하는 경우에 **sp_removedistpublisherdbreplication** 사용 됩니다. 다음 메타 데이터가 제거됩니다.  
   
 -   모든 게시 메타 데이터  
   
@@ -59,9 +59,9 @@ sp_removedistpublisherdbreplication [ @publisher = ] 'publisher'
 -   게시에 속한 모든 복제 에이전트 작업의 메타 데이터  
   
 ## <a name="permissions"></a>사용 권한  
- 배포자에서 **sysadmin** 고정 서버 역할의 멤버 또는 배포 데이터베이스의 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_removedistpublisherdbreplication**을 실행할 수 있습니다.  
+ 배포자에서 **sysadmin** 고정 서버 역할의 멤버 또는 배포 데이터베이스에 있는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_removedistpublisherdbreplication**을 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

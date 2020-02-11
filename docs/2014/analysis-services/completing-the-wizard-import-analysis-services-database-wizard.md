@@ -1,5 +1,5 @@
 ---
-title: 완료 마법사 (Analysis Services 데이터베이스 가져오기 마법사) | Microsoft Docs
+title: 마법사 완료 (데이터베이스 Analysis Services 가져오기 마법사) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,21 +13,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 99624a05ba543e59e6c85ea616c200c246371488
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087565"
 ---
 # <a name="completing-the-wizard-import-analysis-services-database-wizard"></a>마법사 완료(Analysis Services 데이터베이스 가져오기 마법사)
+  
   **마법사 완료** 페이지를 사용하여 선택한 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스의 데이터 및 메타데이터를 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트로 가져올 때 마법사 진행률을 표시할 수 있습니다.  
   
-## <a name="options"></a>변수  
- **(Progress)**  
+## <a name="options"></a>옵션  
+ **이므로**  
  데이터베이스의 각 개체를 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트로 가져올 때 마법사의 진행률을 표시합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [가져오기 Analysis Services 데이터베이스 마법사 F1 도움말](import-analysis-services-database-wizard-f1-help.md)   
- [Analysis Services 마법사 &#40;다차원 데이터&#41;](analysis-services-wizards-multidimensional-data.md)  
+## <a name="see-also"></a>참고 항목  
+ [Analysis Services 데이터베이스 가져오기 마법사 F1 도움말](import-analysis-services-database-wizard-f1-help.md)   
+ [다차원 데이터를 &#40;마법사 Analysis Services&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

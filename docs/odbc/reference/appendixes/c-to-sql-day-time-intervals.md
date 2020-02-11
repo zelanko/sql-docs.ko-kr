@@ -16,14 +16,14 @@ ms.assetid: f9ee1ddb-dec7-4f78-b6e2-5ba34e7d6f59
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a3a4df236273b5afcaba78052ac236669bb133f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019371"
 ---
 # <a name="c-to-sql-day-time-intervals"></a>C에서 SQL로: 날짜-시간 간격
-날짜-시간 간격 ODBC C 데이터 형식에 대 한 식별자를 다음과 같습니다.  
+일자 시간 간격 ODBC C 데이터 형식에 대 한 식별자는 다음과 같습니다.  
   
  SQL_C_INTERVAL_DAY  
   
@@ -45,24 +45,24 @@ ms.locfileid: "68019371"
   
  SQL_C_INTERVAL_MINUTE_TO_SECOND  
   
- 다음 표에서 ODBC SQL 데이터 형식을 C 데이터 간격 변환할 수를 보여 줍니다. 열과 테이블의 용어 설명은 참조 하세요 [C에서 SQL 데이터 형식으로 변환 데이터](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)입니다.  
+ 다음 표에서는 간격 C 데이터가 변환 될 수 있는 ODBC SQL 데이터 형식을 보여 줍니다. 테이블의 열 및 용어에 대 한 설명은 [C에서 SQL 데이터 형식으로 데이터 변환](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)을 참조 하세요.  
   
 |SQL 유형 식별자|테스트|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR[a]<br /><br /> SQL_VARCHAR[a]<br /><br /> SQL_LONGVARCHAR[a]|열의 바이트 길이 > = 문자 바이트 길이<br /><br /> 열의 바이트 길이 < 문자 바이트 길이 [a]<br /><br /> 데이터 값은 리터럴 유효한 간격이 아닙니다.|n/a<br /><br /> 22001<br /><br /> 22015|  
-|SQL_WCHAR[a]<br /><br /> SQL_WVARCHAR[a]<br /><br /> SQL_WLONGVARCHAR[a]|열의 문자 길이 > 데이터의 문자 길이 =<br /><br /> 열의 문자 길이 < [a] 데이터의 길이 문자<br /><br /> 데이터 값은 리터럴 유효한 간격이 아닙니다.|n/a<br /><br /> 22001<br /><br /> 22015|  
-|SQL_TINYINT[b]<br /><br /> SQL_SMALLINT [b] SQL_INTEGER [b]<br /><br /> SQL_BIGINT [b] SQL_NUMERIC [b]<br /><br /> SQL_DECIMAL[b]|변환 된 단일 필드 간격의 전체 자릿수는 잘림이 발생 하지<br /><br /> 변환 결과 전체 자릿수는 잘림이 발생 했습니다.|n/a<br /><br /> 22003|  
-|SQL_INTERVAL_DAY<br /><br /> SQL_INTERVAL_HOUR<br /><br /> SQL_INTERVAL_MINUTE<br /><br /> SQL_INTERVAL_SECOND<br /><br /> SQL_INTERVAL_DAY_TO_HOUR<br /><br /> SQL_INTERVAL_DAY_TO_MINUTE<br /><br /> SQL_INTERVAL_DAY_TO_SECOND<br /><br /> SQL_INTERVAL_HOUR_TO_MINUTE<br /><br /> SQL_INTERVAL_HOUR_TO_SECOND<br /><br /> SQL_INTERVAL_MINUTE_TO_SECOND|필드의 잘림 없이 데이터 값이 변환 된<br /><br /> 변환 중 데이터 값의 하나 이상의 필드를 잘렸습니다.|n/a<br /><br /> 22015|  
+|SQL_CHAR [a]<br /><br /> SQL_VARCHAR [a]<br /><br /> SQL_LONGVARCHAR [a]|열 바이트 길이 >= 문자 바이트 길이<br /><br /> 열 바이트 길이 < 문자 바이트 길이 [a]<br /><br /> 데이터 값이 올바른 간격 리터럴이 아닙니다.|해당 없음<br /><br /> 22001<br /><br /> 22015|  
+|SQL_WCHAR [a]<br /><br /> SQL_WVARCHAR [a]<br /><br /> SQL_WLONGVARCHAR [a]|열 문자 길이 >= 데이터의 문자 길이<br /><br /> 열 문자 길이 < 데이터의 문자 길이 [a]<br /><br /> 데이터 값이 올바른 간격 리터럴이 아닙니다.|해당 없음<br /><br /> 22001<br /><br /> 22015|  
+|SQL_TINYINT [b]<br /><br /> SQL_SMALLINT [b] SQL_INTEGER [b]<br /><br /> SQL_BIGINT [b] SQL_NUMERIC [b]<br /><br /> SQL_DECIMAL [b]|단일 필드 간격을 변환 하지 못해 전체 자릿수가 잘렸습니다.<br /><br /> 변환 결과로 전체 자릿수가 잘렸습니다.|해당 없음<br /><br /> 22003|  
+|SQL_INTERVAL_DAY<br /><br /> SQL_INTERVAL_HOUR<br /><br /> SQL_INTERVAL_MINUTE<br /><br /> SQL_INTERVAL_SECOND<br /><br /> SQL_INTERVAL_DAY_TO_HOUR<br /><br /> SQL_INTERVAL_DAY_TO_MINUTE<br /><br /> SQL_INTERVAL_DAY_TO_SECOND<br /><br /> SQL_INTERVAL_HOUR_TO_MINUTE<br /><br /> SQL_INTERVAL_HOUR_TO_SECOND<br /><br /> SQL_INTERVAL_MINUTE_TO_SECOND|필드 잘림 없이 데이터 값이 변환 되었습니다.<br /><br /> 변환 하는 동안 하나 이상의 데이터 값 필드가 잘렸습니다.|해당 없음<br /><br /> 22015|  
   
- [a] 모든 C는 interval 데이터 형식은 문자 데이터 형식으로 변환할 수 있습니다.  
+ [a] 모든 C interval 데이터 형식을 문자 데이터 형식으로 변환할 수 있습니다.  
   
- [b] 이면 간격 구조에 유형 필드는 간격 (SQL_DAY, SQL_HOUR, SQL_MINUTE, 또는 SQL_SECOND) 단일 필드 간격 C 형식 변환할 수 있습니다 (SQL_TINYINT, SQL_SMALLINT, SQL_INTEGER, SQL_BIGINT 있는 정확한 숫자 를 SQL_DECIMAL, 또는 SQL_NUMERIC).  
+ [b] interval 구조의 type 필드가 간격이 단일 필드 (SQL_DAY, SQL_HOUR, SQL_MINUTE 또는 SQL_SECOND) 인 경우 간격 C 유형을 정확한 숫자 (SQL_TINYINT, SQL_SMALLINT, SQL_INTEGER, SQL_BIGINT으로 변환할 수 있습니다 , SQL_DECIMAL 또는 SQL_NUMERIC).  
   
- 기본 C 간격 유형 변환이 해당 날짜-시간 간격 SQL 형식입니다.  
+ 간격 C 형식의 기본 변환은 해당 하는 날짜-시간 간격 SQL 형식입니다.  
   
- 드라이버 C 간격 데이터 형식에서 데이터를 변환할 때 길이/표시기 값을 무시 하 고 데이터 버퍼의 크기가 C 간격 데이터 형식의 크기를 가정 합니다. 길이/표시기 값이 전달 합니다 *StrLen_or_Ind* 인수에 **SQLPutData** 에 지정 된 버퍼는 *StrLen_or_IndPtr* 에서인수**SQLBindParameter**합니다. 지정 된 데이터 버퍼를 *DataPtr* 에서 인수 **SQLPutData** 및 *ParameterValuePtr* 인수에서 **SQLBindParameter**.  
+ 이 드라이버는 interval C 데이터 형식에서 데이터를 변환할 때 길이/표시기 값을 무시 하 고 데이터 버퍼의 크기가 간격 C 데이터 형식의 크기인 것으로 가정 합니다. 길이/표시기 값은 **Sqlputdata** 의 *StrLen_or_Ind* 인수와 **SQLBindParameter**의 *StrLen_or_IndPtr* 인수를 사용 하 여 지정 된 버퍼에 전달 됩니다. 데이터 버퍼는 **Sqlputdata** 의 *Dataptr* 인수와 **SQLBindParameter**의 *parametervalueptr* 인수를 사용 하 여 지정 됩니다.  
   
- 다음 예제에서는 SQL_INTERVAL_STRUCT 구조를 데이터베이스 열에 저장 된 데이터 간격 C 전송 하는 방법을 보여 줍니다. 한 DAY_TO_SECOND 간격;을 포함 하는 간격 구조 SQL_INTERVAL_DAY_TO_MINUTE 형식의 데이터베이스 열에 저장 됩니다.  
+ 다음 예에서는 SQL_INTERVAL_STRUCT 구조에 저장 된 interval C 데이터를 데이터베이스 열에 보내는 방법을 보여 줍니다. 간격 구조에 DAY_TO_SECOND 간격이 포함 되어 있습니다. SQL_INTERVAL_DAY_TO_MINUTE 형식의 데이터베이스 열에 저장 됩니다.  
   
 ```  
 SQL_INTERVAL_STRUCT is;  

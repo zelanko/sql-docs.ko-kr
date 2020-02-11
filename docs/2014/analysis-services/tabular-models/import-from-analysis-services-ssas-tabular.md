@@ -1,5 +1,5 @@
 ---
-title: Analysis Services (SSAS 테이블 형식)에서 가져오기 | Microsoft Docs
+title: Analysis Services에서 가져오기 (SSAS 테이블 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d864b2f8256bdd33cd2f595274a7894b4ea5e89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067052"
 ---
 # <a name="import-from-analysis-services-ssas-tabular"></a>Analysis Services에서 가져오기(SSAS 테이블 형식)
@@ -25,17 +25,22 @@ ms.locfileid: "66067052"
   
 #### <a name="to-create-a-new-model-by-importing-metadata-from-an-existing-model"></a>기존 모델에서 메타데이터를 가져와서 새 모델을 만들려면  
   
-1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 **파일** 메뉴에서 **새로 만들기**를 클릭한 다음 **프로젝트**를 클릭합니다.  
+1.  
+  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 **파일** 메뉴에서 **새로 만들기**를 클릭한 다음 **프로젝트**를 클릭합니다.  
   
-2.  **새 프로젝트** 대화 상자의 **설치된 템플릿**에서 **비즈니스 인텔리전스**를 클릭한 다음 **서버에서 가져오기**를 클릭합니다.  
+2.  
+  **새 프로젝트** 대화 상자의 **설치된 템플릿**에서 **비즈니스 인텔리전스**를 클릭한 다음 **서버에서 가져오기**를 클릭합니다.  
   
-3.  **이름**에 프로젝트의 이름을 입력하고 위치 및 솔루션 이름을 지정한 다음 **확인**을 클릭합니다.  
+3.  
+  **이름**에 프로젝트의 이름을 입력하고 위치 및 솔루션 이름을 지정한 다음 **확인**을 클릭합니다.  
   
-4.  **Analysis Services에서 가져오기** 대화 상자의 **서버 이름**에서 가져올 모델 메타데이터가 포함된 Analysis Services 서버의 이름을 지정합니다.  
+4.  
+  **Analysis Services에서 가져오기** 대화 상자의 **서버 이름**에서 가져올 모델 메타데이터가 포함된 Analysis Services 서버의 이름을 지정합니다.  
   
-5.  **데이터베이스 이름**에서 가져올 모델 메타데이터가 포함된 테이블 형식 model 데이터베이스를 선택한 다음 **확인**을 클릭합니다.  
+5.  
+  **데이터베이스 이름**에서 가져올 모델 메타데이터가 포함된 테이블 형식 model 데이터베이스를 선택한 다음 **확인**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [프로젝트 속성&#40;SSAS 테이블 형식&#41;](properties-ssas-tabular.md)  
+## <a name="see-also"></a>참고 항목  
+ [프로젝트 속성 &#40;SSAS 테이블 형식&#41;](properties-ssas-tabular.md)  
   
   

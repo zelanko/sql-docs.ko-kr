@@ -13,20 +13,20 @@ ms.assetid: a2308f6c-2fa1-47e9-903f-37c2a03c723a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0055013e27f56dd76565ece3fa90f7a331208672
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002215"
 ---
 # <a name="sqlparamdata-visual-foxpro-odbc-driver"></a>SQLParamData(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
->  이 항목에서는 Visual FoxPro ODBC 드라이버 관련 정보를 포함합니다. 이 함수에 대 한 일반 정보에서 해당 항목을 참조 하세요 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)합니다.  
+>  이 항목에는 Visual FoxPro ODBC 드라이버 관련 정보가 포함 되어 있습니다. 이 함수에 대 한 일반 정보는 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)에서 적절 한 항목을 참조 하세요.  
   
  지원: 전체  
   
  ODBC API 규칙: 수준 1  
   
- 와 함께 사용할 [SQLPutData](../../odbc/microsoft/sqlputdata-visual-foxpro-odbc-driver.md) 문 실행 시 데이터 매개 변수를 지정 합니다.  
+ [Sqlputdata](../../odbc/microsoft/sqlputdata-visual-foxpro-odbc-driver.md) 와 함께 사용 되어 문 실행 시 매개 변수 데이터를 지정 합니다.  
   
- 자세한 내용은 [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md) 에 *ODBC 프로그래머 참조*합니다.
+ 자세한 내용은 *ODBC 프로그래머 참조*에서 [sqlparamdata](../../odbc/reference/syntax/sqlparamdata-function.md) 를 참조 하세요.

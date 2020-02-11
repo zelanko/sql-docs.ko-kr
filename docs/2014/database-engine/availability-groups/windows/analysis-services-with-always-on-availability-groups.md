@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a0ccca3f8c9f6307f9715286a3496002dd7e1278
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889231"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Always On 가용성 그룹이 포함된 Analysis Services
@@ -23,7 +23,7 @@ ms.locfileid: "68889231"
  처리 및 쿼리는 읽기 전용 작업입니다. 이러한 작업을 읽기 가능한 보조 복제본으로 오프로드하면 성능을 향상시킬 수 있습니다. 이 시나리오를 위해 추가적인 구성이 필요합니다. 이 항목의 검사 목록을 따라 모든 단계를 수행하십시오.  
   
   
-##  <a name="bkmk_prereq"></a> 필수 구성 요소  
+##  <a name="bkmk_prereq"></a> 필수 조건  
  모든 복제본에 대한 SQL Server 로그인이 있어야 합니다. 가용성 그룹, 수신기 및 데이터베이스를 구성하려면 **sysadmin** 이어야 하지만, 사용자인 경우 **db_datareader** 권한만 있으면 Analysis Services 클라이언트에서 데이터베이스에 액세스할 수 있습니다.  
   
  TDS(Tabular Data Stream) 프로토콜 버전 7.4 이상을 지원하는 데이터 공급자(예: SQL Server Native Client 11.0 또는 .NET Framework 4.02의 SQL Server용 공급자)를 사용하십시오.  
@@ -45,7 +45,8 @@ ms.locfileid: "68889231"
     > [!NOTE]  
     >  이러한 단계는 [가용성 복제본에 대한 읽기 전용 액세스 구성&#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)에서 가져왔으며, 이 링크는 이 작업 수행에 대한 추가 정보 및 다른 지침도 제공합니다.  
   
-2.  **AlwaysOn 고가용성** 및 **가용성 그룹** 노드를 확장합니다.  
+2.  
+  **AlwaysOn 고가용성** 및 **가용성 그룹** 노드를 확장합니다.  
   
 3.  복제본을 변경할 가용성 그룹을 클릭합니다. **가용성 복제본**을 확장합니다.  
   
@@ -55,7 +56,7 @@ ms.locfileid: "68889231"
   
     -   **읽을 수 있는 보조** 드롭 목록에서 **읽기 전용만**을 선택합니다.  
   
-    -   **주 역할의 연결** 드롭 목록에서 **모든 연결 허용**을 선택합니다. 기본값입니다.  
+    -   **주 역할의 연결** 드롭 목록에서 **모든 연결 허용**을 선택합니다. 이것이 기본값입니다.  
   
     -   필요에 따라 **가용성 모드** 드롭 목록에서 **동기 커밋**을 선택합니다. 이 단계는 필수는 아니지만 이 설정을 하면 주 복제본과 보조 복제본 사이에 데이터 패리티를 보장해 줍니다.  
   
@@ -118,7 +119,7 @@ ms.locfileid: "68889231"
 ##  <a name="bkmk_ssasAODB"></a>AlwaysOn 가용성 데이터베이스를 사용 하 여 Analysis Services 데이터 원본 만들기  
  이 섹션에서는 가용성 그룹의 데이터베이스에 연결하는 Analysis Services 데이터 원본을 만드는 방법을 설명합니다. 이 지침을 따르면 이전 섹션의 단계에 따라 구성한 주 복제본(기본값) 또는 읽기 가능한 보조 복제본에 대한 연결을 구성할 수 있습니다. AlwaysOn 구성 설정 및 클라이언트의 연결 속성 설정이 주 복제복 또는 보조 복제본 사용 여부를 결정합니다.  
   
-1.  [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]의 Analysis Services 다차원 및 데이터 마이닝 모델 프로젝트에서 **데이터 원본**을 마우스 오른쪽 단추로 클릭하고 **새 데이터 원본**을 선택합니다. **새로 만들기** 를 클릭하여 새 데이터 원본을 만듭니다.  
+1.  [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]의 Analysis Services 다차원 및 데이터 마이닝 모델 프로젝트에서 **데이터 원본** 을 마우스 오른쪽 단추로 클릭하고 **새 데이터 원본**을 선택합니다. **새로 만들기** 를 클릭하여 새 데이터 원본을 만듭니다.  
   
      또는 테이블 형식 모델 프로젝트에서 모델 메뉴를 클릭한 다음 **데이터 원본에서 가져오기**를 클릭합니다.  
   
@@ -167,7 +168,7 @@ ms.locfileid: "68889231"
   
      추적 창에 **Microsoft SQL Server Analysis Services**애플리케이션의 이벤트가 표시됩니다. 보조 복제본을 호스팅하는 서버 인스턴스의 데이터베이스에서 데이터를 검색하는 `SELECT` 문이 표시되면 수신기를 통해 보조 복제본에 연결되었음을 알 수 있습니다.  
   
-#### <a name="step-2-perform-a-planned-failover-to-test-the-configuration"></a>2단계: 계획된 장애 조치를 수행하여 구성 테스트  
+#### <a name="step-2-perform-a-planned-failover-to-test-the-configuration"></a>2단계: 계획된 장애 조치(failover)를 수행하여 구성 테스트  
   
 1.  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 에서 주 복제본 및 보조 복제본 둘 다 동기 커밋 모드로 구성되었고 현재 동기화되어 있는지 확인합니다.  
   
@@ -184,7 +185,8 @@ ms.locfileid: "68889231"
   
 4.  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]에서 보조 복제본에 연결합니다.  
   
-5.  **AlwaysOn 고가용성** 및 **가용성 그룹** 노드를 확장합니다.  
+5.  
+  **AlwaysOn 고가용성** 및 **가용성 그룹** 노드를 확장합니다.  
   
 6.  장애 조치할 가용성 그룹을 마우스 오른쪽 단추로 클릭하고 **장애 조치(Failover)** 명령을 선택합니다. 그러면 가용성 그룹 장애 조치(failover) 마법사가 시작됩니다. 마법사에서 새로운 주 복제본으로 설정할 복제본을 선택합니다.  
   
@@ -201,7 +203,7 @@ ms.locfileid: "68889231"
 ##  <a name="bkmk_whathappens"></a> 장애 조치 발생 후의 상황  
  장애 조치(failover) 중에 보조 복제본은 주 역할로 전환되고 이전의 주 복제본은 보조 역할로 전환됩니다. 모든 클라이언트 연결이 종료되고 가용성 그룹 수신기의 소유권은 주 복제본 역할과 함께 새 SQL Server 인스턴스로 옮겨지며 수신기 엔드포인트는 새 인스턴스의 가상 IP 주소 및 TCP 포트에 바인딩됩니다. 자세한 내용은 이 항목 뒷부분에 있는 [가용성 복제본에 대한 클라이언트 연결 액세스 정보&#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)와 같은 시스템 데이터베이스, 사용자 데이터베이스를 비롯하여 보조 복제본을 호스트하는 서버 인스턴스의 읽기/쓰기 데이터베이스에는 데이터를 쓸 수 있습니다.  
   
- 처리 중 장애 조치가 발생하면 Analysis Services의 로그 파일 또는 출력 창에 다음과 같은 오류가 나타납니다. "OLE DB 오류: OLE DB 또는 ODBC 오류: 통신 연결 오류입니다. 08S01; TPC 공급자: 현재 연결은 원격 호스트에 의해 강제로 끊겼습니다. ; 08S01."  
+ 처리 중 장애 조치(failover)가 발생하면 Analysis Services의 로그 파일 또는 출력 창에 다음과 같은 오류가 나타납니다. "OLE DB 또는 ODBC 오류: 통신 연결 오류입니다. 08S01; TPC 공급자: 현재 연결은 원격 호스트에 의해 강제로 끊겼습니다. ; 08S01."  
   
  이 오류는 잠시 기다렸다가 다시 시도하면 해결됩니다. 가용성 그룹이 읽기 가능한 보조 복제본에 대해 올바로 구성된 경우 처리를 재시도하면 새 보조 복제본에서 처리가 재개됩니다.  
   
@@ -210,15 +212,15 @@ ms.locfileid: "68889231"
 ##  <a name="bkmk_writeback"></a>AlwaysOn 가용성 데이터베이스를 사용할 때의 쓰기 저장  
  쓰기 저장은 Excel의 가상 분석을 지원하는 Analysis Services 기능입니다. 또한 이 기능은 사용자 지정 애플리케이션에서 예산 작성 및 예측 태스크에 일반적으로 사용됩니다.  
   
- 쓰기 저장을 지원하려면 READWRITE 클라이언트 연결이 필요합니다. Excel에서 읽기 전용 연결에 대한 쓰기 저장을 시도하면 다음과 같은 오류가 발생합니다. 오류가 발생합니다. 오류가 발생합니다.  
+ 쓰기 저장을 지원하려면 READWRITE 클라이언트 연결이 필요합니다. Excel에서 읽기 전용 연결에 대한 쓰기 저장을 시도하면 "외부 데이터 원본에서 데이터를 검색할 수 없습니다." 오류가 발생합니다.  
   
  항상 읽기 가능한 보조 복제본에 액세스하도록 연결을 구성했다면 이제 주 복제본에 대한 READWRITE 연결을 사용하는 새 연결을 구성해야 합니다.  
   
  이렇게 하려면 Analysis Services 모델에 읽기/쓰기 연결을 지원하는 데이터 원본을 추가로 만들어야 합니다. 추가 데이터 원본을 만들 때는 읽기 전용 연결에 지정한 동일한 수신기 이름 및 데이터베이스를 사용합니다. 단, **애플리케이션 의도**는 수정하지 않고 READWRITE 연결을 지원하는 기본값을 그대로 둡니다. 이제 읽기/쓰기 데이터 원본을 기반으로 하는 새 팩트 또는 차원 테이블을 데이터 원본 뷰에 추가하고, 새 테이블에 쓰기 저장을 설정할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
- [활성 보조 복제본: 읽을 수 있는 &#40;보조 복제본 AlwaysOn 가용성 그룹&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+## <a name="see-also"></a>참고 항목  
+ [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [활성 보조: 읽기 가능한 보조 복제본 &#40;AlwaysOn 가용성 그룹&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [AlwaysOn 가용성 그룹 &#40;SQL Server의 운영 문제에 대 한 AlwaysOn 정책&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
  [데이터 원본 만들기&#40;SSAS 다차원&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
  [차원 쓰기 저장(writeback) 설정](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback)  

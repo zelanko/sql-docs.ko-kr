@@ -15,14 +15,14 @@ ms.assetid: b5b4c082-ac29-4f49-a8b8-e21b554c9b0d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 50b24a21c54fcf23dba0748dfba31a99b5bbb1ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964798"
 ---
 # <a name="views-append-method-example-vb"></a>Views Append 메서드 예제(VB)
-다음 코드를 사용 하는 방법에 설명를 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체와 [뷰](../../../ado/reference/adox-api/views-collection-adox.md) 컬렉션 [추가](../../../ado/reference/adox-api/append-method-adox-views.md) 기본 데이터 원본에 새 보기를 만드는 방법.  
+다음 코드에서는 [Command](../../../ado/reference/ado-api/command-object-ado.md) 개체 및 [Views](../../../ado/reference/adox-api/views-collection-adox.md) collection [Append](../../../ado/reference/adox-api/append-method-adox-views.md) 메서드를 사용 하 여 기본 데이터 원본에 새 뷰를 만드는 방법을 보여 줍니다.  
   
 ```  
 ' BeginCreateViewVB  
@@ -61,9 +61,9 @@ End Sub
 ' EndCreateViewVB  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ActiveConnection 속성 (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [Append 메서드 (ADOX Views)](../../../ado/reference/adox-api/append-method-adox-views.md)   
  [Catalog 개체 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [뷰 개체 (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
+ [View 개체 (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
  [Views 컬렉션(ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

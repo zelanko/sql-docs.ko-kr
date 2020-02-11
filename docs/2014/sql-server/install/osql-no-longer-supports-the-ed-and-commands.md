@@ -15,22 +15,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6ce7bfa0bbeec5c5ca83b7139f0ff28e3994021d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093723"
 ---
 # <a name="osql-no-longer-supports-the-ed-and--commands"></a>osql은 더 이상 ED 및 !! 명령
-  합니다 **osql** 유틸리티를 지원 하지 않습니다는 **ED** 고 **!!** 명령을 지원하지 않습니다.  
+  **Osql** 유틸리티는 **ED** 및!!!을 지원 하지 않습니다 **.** 명령을 지원하지 않습니다.  
   
 ## <a name="corrective-action"></a>수정 동작  
- 에 대 한 참조를 제거 합니다 **ED** 고 **!!** 명령에 대한 참조를 제거합니다.  
+ **ED** 및!!에 대 한 참조를 제거 합니다 **.** 명령에 대한 참조를 제거합니다.  
   
- 사용 하려는 경우는 **ED** 고 **!!** 명령을 사용 합니다 **sqlcmd** 대신 유틸리티 **osql**합니다.  
+ **을 사용** 하려는 경우 **** 명령을 사용 합니다. **osql**대신 **sqlcmd** 유틸리티를 사용 합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [데이터베이스 엔진 업그레이드 문제](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>참고 항목  
+ [업그레이드 문제 데이터베이스 엔진](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 업그레이드 관리자 &#91;새&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

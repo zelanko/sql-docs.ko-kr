@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 410cb4de6b89052493618404df3e595fd6999936
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107574"
 ---
 # <a name="using-my-reports-report-builder-and-ssrs"></a>내 보고서 사용(보고서 작성기 및 SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "66107574"
 ## <a name="searching-my-reports"></a>내 보고서 검색  
  보고서 서버 데이터베이스를 검색할 때 검색 범위에 해당 사용자의 내 보고서 폴더 내용만 포함되고 다른 사용자의 내 보고서 폴더 내용은 포함되지 않습니다. 검색 결과에는 사용자가 액세스할 수 있는 보고서만 나열됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

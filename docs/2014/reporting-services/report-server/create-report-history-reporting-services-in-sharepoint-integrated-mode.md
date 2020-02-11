@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f9018ebb8225ee1d8f313474e82ac521b2646e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103903"
 ---
 # <a name="create-report-history-reporting-services-in-sharepoint-integrated-mode"></a>보고서 기록 만들기(SharePoint 통합 모드의 Reporting Services)
@@ -30,7 +30,7 @@ ms.locfileid: "66103903"
   
 2.  클릭하여 아래쪽 화살표를 표시한 다음 **보고서 기록 보기**를 선택합니다.  
   
-3.  **새 스냅숏**을 클릭합니다. 단추가 표시되지 않는 경우 보고서 기록에 스냅샷을 만들 수 있는 권한이 없기 때문입니다.  
+3.  **새 스냅샷**을 클릭합니다. 단추가 표시되지 않는 경우 보고서 기록에 스냅샷을 만들 수 있는 권한이 없기 때문입니다.  
   
 4.  방금 만든 스냅샷을 보려면 목록에서 선택합니다. 각 스냅샷은 스냅샷이 생성된 시기를 보여 주는 타임스탬프로 식별됩니다. 스냅샷의 이름을 바꾸거나, 다른 위치로 이동하거나, 수정할 수는 없습니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66103903"
   
 2.  클릭하여 아래쪽 화살표를 표시한 다음 **처리 옵션 관리**를 선택합니다.  
   
-3.  **기록 스냅숏 옵션**에서 **일정에 따라 보고서 기록 스냅숏 만들기**를 클릭합니다.  
+3.  **기록 스냅샷 옵션**에서 **일정에 따라 보고서 기록 스냅샷 만들기**를 클릭합니다.  
   
 4.  사용할 일정 정보가 포함된 공유 일정이 있는 경우 **공유 일정** 을 클릭하고 사용할 일정을 선택합니다. 또는 **사용자 지정 일정**, **구성** 을 차례로 클릭하여 되풀이 일정으로 보고서 기록을 만드는 옵션을 지정합니다.  
   
@@ -50,9 +50,9 @@ ms.locfileid: "66103903"
   
 2.  클릭하여 아래쪽 화살표를 표시한 다음 **처리 옵션 관리**를 선택합니다.  
   
-3.  **기록 스냅숏 옵션**에서 **보고서 기록에 모든 보고서 데이터 스냅숏 저장**을 클릭합니다.  
+3.  **기록 스냅샷 옵션**에서 **보고서 기록에 모든 보고서 데이터 스냅샷 저장**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [처리 옵션 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
   
   

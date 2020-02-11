@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d7dceef4651804dabf4080d6f8b85d0597b1957b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919625"
 ---
 # <a name="dropping-an-assembly"></a>어셈블리 삭제
@@ -43,7 +43,7 @@ DROP ASSEMBLY MyDotNETAssembly
 -   데이터베이스에 WITH SCHEMABINDING 절로 만든 함수, 저장 프로시저 또는 트리거가 있고 이러한 루틴이 UDT의 변수 또는 매개 변수를 사용하는 경우  
   
 ### <a name="finding-udt-dependencies"></a>UDT 종속성 찾기  
- 따라서 먼저 모든 종속 개체를 삭제한 다음 DROP TYPE 문을 실행해야 합니다. 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 쿼리 매개 변수에서 UDT를 사용 하는 열을 모두 찾습니다 합니다 **AdventureWorks** 데이터베이스입니다.  
+ 따라서 먼저 모든 종속 개체를 삭제한 다음 DROP TYPE 문을 실행해야 합니다. 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 쿼리는 **ADVENTUREWORKS** 데이터베이스에서 UDT를 사용 하는 모든 열과 매개 변수를 찾습니다.  
   
 ```  
 USE Adventureworks;  
@@ -63,14 +63,14 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
     ON at.user_type_id = c.user_type_id;   
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [CLR 통합 어셈블리 관리](managing-clr-integration-assemblies.md)   
  [어셈블리 변경](altering-an-assembly.md)   
  [어셈블리 만들기](creating-an-assembly.md)   
- [DROP AGGREGATE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/drop-aggregate-transact-sql)   
- [DROP FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-function-transact-sql)   
- [DROP PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-procedure-transact-sql)   
+ [DROP AGGREGATE &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-aggregate-transact-sql)   
+ [DROP FUNCTION &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-function-transact-sql)   
+ [DROP PROCEDURE &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-procedure-transact-sql)   
  [DROP TRIGGER&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-trigger-transact-sql)   
- [삭제 유형을 &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/drop-type-transact-sql)  
+ [DROP TYPE &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-type-transact-sql)  
   
   

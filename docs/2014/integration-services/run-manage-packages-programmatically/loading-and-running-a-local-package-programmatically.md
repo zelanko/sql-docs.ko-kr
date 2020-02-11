@@ -21,14 +21,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 00d213bf8ca554b60edc8dc3de3f1290cd00f538
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62766895"
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>프로그래밍 방식으로 로컬 패키지 로드 및 실행
-  [패키지 실행](../packages/run-integration-services-ssis-packages.md)에 설명된 방법을 사용하여 필요에 따라 또는 미리 지정한 시간에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 실행할 수 있습니다. 그러나 단 몇 줄의 코드로도 Windows Forms 애플리케이션, 콘솔 애플리케이션, ASP.NET Web Form 또는 웹 서비스, Windows 서비스 등의 사용자 지정 애플리케이션에서 패키지를 실행할 수 있습니다.  
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]패키지 실행[에 설명된 방법을 사용하여 필요에 따라 또는 미리 지정한 시간에 ](../packages/run-integration-services-ssis-packages.md) 패키지를 실행할 수 있습니다. 그러나 단 몇 줄의 코드로도 Windows Forms 애플리케이션, 콘솔 애플리케이션, ASP.NET Web Form 또는 웹 서비스, Windows 서비스 등의 사용자 지정 애플리케이션에서 패키지를 실행할 수 있습니다.  
   
  이 항목에서는 다음과 같은 주제를 다룹니다.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62766895"
   
 -   프로그래밍 방식으로 패키지 실행  
   
- 이 항목에서 설명하는 패키지 로드 및 실행 방법을 사용할 경우에는 항상 `Microsoft.SqlServer.ManagedDTS` 어셈블리에 대한 참조가 필요합니다. 새 프로젝트에 참조를 추가한 후에는 `using` 또는 `Imports` 문을 사용하여 <xref:Microsoft.SqlServer.Dts.Runtime> 네임스페이스를 가져옵니다.  
+ 이 항목에서 설명하는 패키지 로드 및 실행 방법을 사용할 경우에는 항상 `Microsoft.SqlServer.ManagedDTS` 어셈블리에 대한 참조가 필요합니다. 새 프로젝트에 참조를 추가한 후에는 <xref:Microsoft.SqlServer.Dts.Runtime> 또는 `using` 문을 사용하여 `Imports` 네임스페이스를 가져옵니다.  
   
 ## <a name="loading-a-package-programmatically"></a>프로그래밍 방식으로 패키지 로드  
  로컬 컴퓨터에서 프로그래밍 방식으로 패키지를 로드하려면 패키지가 로컬 위치에 저장되어 있든 원격 위치에 저장되어 있든 관계없이 다음 메서드 중 하나를 호출합니다.  
@@ -59,12 +59,12 @@ ms.locfileid: "62766895"
   
 2.  **프로젝트** 메뉴에서 **참조 추가**를 클릭하고 **Microsoft.SqlServer.ManagedDTS.dll**에 대한 참조를 추가합니다. **확인**을 클릭합니다.  
   
-3.  Visual Basic을 사용 하 여 `Imports` 문 또는 C# `using` 을 가져오기 위한 문 합니다 **Microsoft.SqlServer.Dts.Runtime** 네임 스페이스입니다.  
+3.  Visual Basic `Imports` 문 또는 c # `using` 문을 사용 하 여 **Microsoft sql server Runtime** 네임 스페이스를 가져옵니다.  
   
 4.  기본 루틴에 다음 코드를 추가합니다. 완성된 콘솔 애플리케이션은 다음 예와 같습니다.  
   
     > [!NOTE]  
-    >  예제 코드에서는 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadPackage%2A> 메서드를 사용하여 파일 시스템에서 패키지를 로드하는 방법을 보여 줍니다. 그러나 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromSqlServer%2A> 메서드를 호출하여 MSDB 데이터베이스에서 패키지를 로드하거나 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> 메서드를 호출하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 저장소에서 패키지를 로드할 수도 있습니다.  
+    >  예제 코드에서는 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadPackage%2A> 메서드를 사용하여 파일 시스템에서 패키지를 로드하는 방법을 보여 줍니다. 그러나 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromSqlServer%2A> 메서드를 호출하여 MSDB 데이터베이스에서 패키지를 로드하거나 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 메서드를 호출하여 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> 패키지 저장소에서 패키지를 로드할 수도 있습니다.  
   
 5.  프로젝트를 실행합니다. 예제 코드에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 예제와 함께 설치된 CalculatedColumns 예제 패키지를 실행합니다. 패키지 실행 결과는 콘솔 창에 표시됩니다.  
   
@@ -223,9 +223,9 @@ namespace RunFromClientAppWithEventsCS
 }  
 ```  
   
-![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [로컬 실행과 원격 실행의 차이점 이해](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
  [프로그래밍 방식으로 원격 패키지 로드 및 실행](../run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)   
  [로컬 패키지의 출력 로드](../run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  

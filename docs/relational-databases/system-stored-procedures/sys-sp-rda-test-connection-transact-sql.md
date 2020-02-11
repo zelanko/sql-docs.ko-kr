@@ -17,10 +17,10 @@ ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 69b3b9eae6c292b9501dfbe74b84d7399304a291
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72305156"
 ---
 # <a name="syssp_rda_test_connection-transact-sql"></a>sys. sp_rda_test_connection (Transact-sql)
@@ -42,23 +42,23 @@ EXECUTE sys.sp_rda_test_connection
 ```  
   
 ## <a name="arguments"></a>인수  
- @database_name = N'*db_name*'  
+ @database_name= N '*db_name*'  
  스트레치 사용 SQL Server 데이터베이스의 이름입니다. 이 매개 변수는 선택 사항입니다.  
   
- @server_address = N'*azure_server_fully_qualified_address*'  
+ @server_address= N '*azure_server_fully_qualified_address*'  
  Azure 서버의 정규화 된 주소입니다.  
   
--   **\@database_name**에 값을 제공 했지만 지정 된 데이터베이스가 스트레치를 사용 하도록 설정 되어 있지 않은 경우에는 **\@server_address**에 대 한 값을 제공 해야 합니다.  
+-   ** \@Database_name**에 대 한 값을 제공 하지만 지정 된 데이터베이스가 스트레치를 사용 하도록 설정 되어 있지 않은 경우에는 ** \@server_address**에 대 한 값을 제공 해야 합니다.  
   
--   **\@database_name**에 값을 제공 하 고 지정 된 데이터베이스를 스트레치를 사용 하는 경우 **\@server_address**에 대 한 값을 제공할 필요가 없습니다. **\@server_address**값을 제공 하는 경우 저장 프로시저는이를 무시 하 고 스트레치 사용 데이터베이스에 이미 연결 되어 있는 기존 Azure 서버를 사용 합니다.  
+-   ** \@Database_name**에 대 한 값을 제공 하 고 지정 된 데이터베이스가 스트레치를 사용 하도록 설정 된 경우에는 ** \@server_address**에 대 한 값을 제공할 필요가 없습니다. ** \@Server_address**에 대 한 값을 제공 하는 경우 저장 프로시저는이를 무시 하 고 스트레치 사용 데이터베이스에 이미 연결 되어 있는 기존 Azure 서버를 사용 합니다.  
   
- @azure_username = N'*azure_username*  
+ @azure_username= N '*azure_username*  
  원격 Azure 서버에 대 한 사용자 이름입니다.  
   
- @azure_password = N'*azure_password*'  
+ @azure_password= N '*azure_password*'  
  원격 Azure 서버에 대 한 암호입니다.  
   
- @credential_name = N'*credential_name*'  
+ @credential_name= N '*credential_name*'  
  사용자 이름 및 암호를 제공 하는 대신 스트레치 사용 데이터베이스에 저장 된 자격 증명의 이름을 제공할 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -68,12 +68,12 @@ EXECUTE sys.sp_rda_test_connection
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|link_state|int|**Link_state_desc**값에 해당 하는 다음 값 중 하나입니다.<br /><br /> -   0<br />-   1<br />-   2<br />-   3<br />-   4|  
-|link_state_desc|varchar(32)|**Link_state**의 앞에 있는 값에 해당 하는 다음 값 중 하나입니다.<br /><br /> -정상<br />     SQL Server와 원격 Azure 서버가 정상입니다.<br />-   ERROR_AZURE_FIREWALL<br />     Azure 방화벽에서 SQL Server와 원격 Azure 서버 간의 연결을 방지 하 고 있습니다.<br />-   ERROR_NO_CONNECTION<br />     SQL Server 원격 Azure 서버에 연결할 수 없습니다.<br />-   ERROR_AUTH_FAILURE<br />     인증 오류가 발생 하 여 SQL Server와 원격 Azure 서버 간의 연결을 방지 하 고 있습니다.<br />-   ERROR<br />     인증 문제, 연결 문제 또는 방화벽 문제로 인 한 오류는 SQL Server와 원격 Azure 서버 간의 연결을 방지 하는 것입니다.|  
-|error_number|int|오류 수입니다. 오류가 없으면이 필드는 NULL입니다.|  
-|error_message|nvarchar(1024)|오류 메시지. 오류가 없으면이 필드는 NULL입니다.|  
+|link_state|int|**Link_state_desc**값에 해당 하는 다음 값 중 하나입니다.<br /><br /> -0<br />-1<br />-2<br />-3<br />-4|  
+|link_state_desc| varchar(32)|**Link_state**의 앞에 있는 값에 해당 하는 다음 값 중 하나입니다.<br /><br /> -정상<br />     SQL Server와 원격 Azure 서버가 정상입니다.<br />-ERROR_AZURE_FIREWALL<br />     Azure 방화벽에서 SQL Server와 원격 Azure 서버 간의 연결을 방지 하 고 있습니다.<br />-ERROR_NO_CONNECTION<br />     SQL Server 원격 Azure 서버에 연결할 수 없습니다.<br />-ERROR_AUTH_FAILURE<br />     인증 오류가 발생 하 여 SQL Server와 원격 Azure 서버 간의 연결을 방지 하 고 있습니다.<br />-오류<br />     인증 문제, 연결 문제 또는 방화벽 문제로 인 한 오류는 SQL Server와 원격 Azure 서버 간의 연결을 방지 하는 것입니다.|  
+|error_number|int|오류 번호입니다. 오류가 없으면이 필드는 NULL입니다.|  
+|error_message|nvarchar(1024)|오류 메시지입니다. 오류가 없으면이 필드는 NULL입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  Db_owner 권한이 필요 합니다.  
@@ -92,7 +92,7 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|2|ERROR_NO_CONNECTION|*연결 관련 오류 번호를 \<>*|*연결 관련 오류 메시지를 \<>*|  
+|2|ERROR_NO_CONNECTION|*\<연결 관련 오류 번호>*|*\<연결 관련 오류 메시지>*|  
   
 ### <a name="check-the-azure-firewall"></a>Azure 방화벽 확인  
   
@@ -108,7 +108,7 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|1\.|ERROR_AZURE_FIREWALL|*\<방화벽 관련 오류 번호 >*|*방화벽 관련 오류 메시지를 \<>*|  
+|1|ERROR_AZURE_FIREWALL|*\<방화벽 관련 오류 번호>*|*\<방화벽 관련 오류 메시지>*|  
   
 ### <a name="check-authentication-credentials"></a>인증 자격 증명 확인  
   
@@ -124,7 +124,7 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|3|ERROR_AUTH_FAILURE|*\<인증 관련 오류 번호 >*|*인증 관련 오류 메시지를 \<>*|  
+|3|ERROR_AUTH_FAILURE|*\<인증 관련 오류 번호>*|*\<인증 관련 오류 메시지>*|  
   
 ### <a name="check-the-status-of-the-remote-azure-server"></a>원격 Azure 서버의 상태를 확인 합니다.  
   

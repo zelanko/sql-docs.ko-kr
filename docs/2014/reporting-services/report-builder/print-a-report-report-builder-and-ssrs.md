@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 737e8ebfd96d98bff9ed144db33189e141dc0cfd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107764"
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>보고서 인쇄(보고서 작성기 및 SSRS)
   보고서 서버에 보고서를 저장한 후에는 내보낸 보고서를 보는 데 사용되는 애플리케이션, 보고서 관리자 또는 브라우저에서 보고서를 보고 인쇄할 수 있습니다. 보고서를 저장하기 전 미리 볼 때 해당 보고서를 인쇄할 수 있습니다.  
   
- 보고서를 인쇄할 때 사용할 용지 크기를 지정할 수 있습니다. 용지 크기에 따라 보고서의 페이지 수와 각 페이지에 맞는 보고서 데이터가 결정됩니다. 용지 크기는 하드 페이지 나누기 렌더러를 사용 하 여 렌더링 된 보고서를만 영향을 줍니다. PDF, 이미지 및 인쇄 합니다. 용지 크기 설정 작업은 다른 렌더러에 영향을 주지 않습니다. 자세한 내용은 [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)을 참조하세요.  
+ 보고서를 인쇄할 때 사용할 용지 크기를 지정할 수 있습니다. 용지 크기에 따라 보고서의 페이지 수와 각 페이지에 맞는 보고서 데이터가 결정됩니다. 용지 크기는 PDF, 이미지 및 인쇄 하드 페이지 나누기 렌더러로 렌더링되는 보고서에만 적용됩니다. 용지 크기 설정 작업은 다른 렌더러에 영향을 주지 않습니다. 자세한 내용은 [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)을 참조하세요.  
   
  보고서 관리자의 보고서 뷰어 도구 모음 또는 보고서 작성기의 미리 보기에서 보고서를 하드 페이지 나누기 렌더러로 내보내거나 인쇄 단추를 클릭하여 보고서의 복사본을 인쇄할 수 있습니다. 용지 크기 또는 다른 페이지 설정 속성을 지정해야 할 수 있습니다. 용지 크기를 비롯한 페이지 설정 속성을 변경하려면 **보고서 속성** 대화 상자를 사용합니다.  
   
@@ -95,9 +95,9 @@ ms.locfileid: "66107764"
   
 -   **실행** 탭에서 **페이지 설정** 을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서 인쇄&#40;보고서 작성기 및 SSRS&#41;](print-reports-report-builder-and-ssrs.md)   
- [보고서를 내보내는 &#40;보고서 작성기 및 SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
+ [보고서 &#40;보고서 작성기 및 SSRS&#41;내보내기](export-reports-report-builder-and-ssrs.md)   
  [보고서 속성 대화 상자, 페이지 설정&#40;보고서 작성기&#41;](../report-properties-dialog-box-page-setup-report-builder.md)   
  [보고서 디자인 뷰&#40;보고서 작성기&#41;](report-design-view-report-builder.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_cryptographic_provider_sessions (TRANSACT-SQL) | Microsoft Docs
+title: sys. dm_cryptographic_provider_sessions (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,13 +19,13 @@ ms.assetid: 9a4de02b-1a07-4850-979a-0861fddb7f9d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ff099e48540b7255e2453bfb9b90c9515196449c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68005090"
 ---
-# <a name="sysdmcryptographicprovidersessions-transact-sql"></a>sys.dm_cryptographic_provider_sessions(Transact-SQL)
+# <a name="sysdm_cryptographic_provider_sessions-transact-sql"></a>sys.dm_cryptographic_provider_sessions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   암호화 공급자에 대해 열려 있는 세션에 대한 정보를 반환합니다.  
@@ -47,18 +47,18 @@ sys.dm_cryptographic_provider_sessions(session_identifier)
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**provider_id**|**int**|암호화 공급자의 ID 번호입니다.|  
-|**session_handle**|**varbytes(8)**|암호화 세션 처리입니다.|  
-|**identity**|**nvarchar(128)**|암호화 공급자로 인증하는 데 사용되는 ID입니다.|  
+|**session_handle**|**varbytes (8)**|암호화 세션 처리입니다.|  
+|**신분을**|**nvarchar(128)**|암호화 공급자로 인증하는 데 사용되는 ID입니다.|  
 |**spid**|**short**|연결의 세션 ID SPID입니다. 자세한 내용은 [@@SPID&#40;Transact-SQL&#41;](../../t-sql/functions/spid-transact-sql.md)을 참조하세요.|  
   
 ## <a name="remarks"></a>설명  
- 합니다 **sys.dm_cryptographic_provider_sessions** 뷰는 현재 연결 사용자에 게 표시 됩니다. 모든 암호화 연결을 보려면 있어야 합니다 **제어** 서버 사용 권한.  
+ 현재 연결에 대 한 **dm_cryptographic_provider_sessions** 뷰가 public에 표시 됩니다. 모든 암호화 연결을 보려면 **CONTROL** server 권한이 있어야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [보안 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;&#40;보안 카탈로그 뷰](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [확장 가능 키 관리 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
  [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)  

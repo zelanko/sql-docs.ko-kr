@@ -21,17 +21,18 @@ author: Minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cdd9e34e57694efc1234a2f0245833596644cb73
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889189"
 ---
 # <a name="upgrade-analysis-services"></a>Analysis Services 업그레이드
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 업그레이드할 수 있습니다. SharePoint 모드에서 업그레이드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하는 방법에 대 한 자세한 내용은 [SharePoint용 PowerPivot 업그레이드](upgrade-power-pivot-for-sharepoint.md)를 참조 하세요. 기존 SQL Server 인스턴스를 업그레이드 하는 방법에 대 한 자세한 내용은 [설치 &#40;마법사 설치&#41;를 사용 하 여 SQL Server 2014로 업그레이드를](upgrade-sql-server-using-the-installation-wizard-setup.md)참조 하세요.  
+  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 업그레이드할 수 있습니다. SharePoint 모드에서 업그레이드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하는 방법에 대 한 자세한 내용은 [SharePoint용 PowerPivot 업그레이드](upgrade-power-pivot-for-sharepoint.md)를 참조 하세요. 기존 SQL Server 인스턴스를 업그레이드 하는 방법에 대 한 자세한 내용은 [설치 마법사를 사용 하 여 SQL Server 2014로 업그레이드 &#40;설치&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)를 참조 하세요.  
   
 ## <a name="known-upgrade-issues"></a>알려진 업그레이드 문제  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]로 업그레이드하기 전에 다음을 검토하십시오.  
+ 로 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]업그레이드 하기 전에 다음을 검토 하십시오.  
   
 -   [SQL Server 2014 릴리스 정보](https://go.microsoft.com/fwlink/?LinkID=296445)  
   
@@ -42,7 +43,7 @@ ms.locfileid: "68889189"
   
 -   [지원되는 버전 및 에디션 업그레이드](supported-version-and-edition-upgrades.md)  
   
--   [SQL Server 2014 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+-   [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 -   [시스템 구성 검사기의 검사 매개 변수](check-parameters-for-the-system-configuration-checker.md)  
   
@@ -55,19 +56,19 @@ ms.locfileid: "68889189"
 ## <a name="upgrading-analysis-services"></a>Analysis Services 업그레이드  
  다음의 여러 방법 중에서 선택하여 서버 및 데이터를 업그레이드할 수 있습니다.  
   
--   **내부 업그레이드** 는 기존 프로그램 파일 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 을 프로그램 파일로 바꿉니다. 데이터베이스 위치는 동일하게 유지됩니다. 프로그램 폴더는 새 이름을 반영하여 업데이트됩니다.  
+-   **내부 업그레이드** 는 기존 프로그램 파일을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 프로그램 파일로 바꿉니다. 데이터베이스 위치는 동일하게 유지됩니다. 프로그램 폴더는 새 이름을 반영하여 업데이트됩니다.  
   
 -   **Side-by-side 업그레이드** 는 기존 Analysis Services 인스턴스가 있는 동일한 컴퓨터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에를 새로 설치 하는 것입니다. 같은 컴퓨터의 새 인스턴스로 데이터베이스를 이동한 후에 더 이상 사용하지 않는 이전 버전을 제거할 수 있습니다.  
   
 -   새 하드웨어에 Analysis Services를 설치한 후에 기존 데이터베이스를 해당 서버로 마이그레이션할 수도 있습니다.  
   
 ## <a name="in-place-upgrade"></a>내부 업그레이드  
- 기존 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and, as part of the upgrade process, au인스턴스를matically migrate existing databases from the old instance 인스턴스를 the new instance. 메타데이터와 이진 데이터는 두 버전 간에 호환되므로 업그레이드 후 이 데이터를 보존하면 수동으로 마이그레이션할 필요가 없습니다.  
+ 기존 인스턴스를 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 로 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 업그레이드 하 고, 업그레이드 프로세스의 일부로 기존 인스턴스에서 기존 데이터베이스를 새 인스턴스로 자동 마이그레이션할 수 있습니다. 메타데이터와 이진 데이터는 두 버전 간에 호환되므로 업그레이드 후 이 데이터를 보존하면 수동으로 마이그레이션할 필요가 없습니다.  
   
  기존 인스턴스를 업그레이드하려면 설치 프로그램을 실행하고 기존 인스턴스의 이름을 새 인스턴스의 이름으로 지정합니다.  
   
 ## <a name="upgrading-databases"></a>데이터베이스 업그레이드  
- 이전 버전 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 작성된 데이터베이스는 이전 데이터베이스 호환성 수준 설정을 사용하여 업그레이드된 서버에서 실행됩니다. 다음 버전에서 만든 데이터베이스의 데이터베이스 호환성 수준은 105입니다. 새로운 데이터베이스 호환성 수준을 필요로 하는 기능을 사용하려면 호환성 수준을 변경할 수 있습니다. 그렇지 않은 경우에는 원래 설정을 사용하여 업그레이드된 서버에서 데이터베이스를 실행하면 됩니다. 자세한 내용은 [다차원 데이터베이스 &#40;의 호환성 수준 설정 Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services)을 참조 하세요.  
+ 이전 버전 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 작성된 데이터베이스는 이전 데이터베이스 호환성 수준 설정을 사용하여 업그레이드된 서버에서 실행됩니다. 다음 버전에서 만든 데이터베이스의 데이터베이스 호환성 수준은 105입니다. 새로운 데이터베이스 호환성 수준을 필요로 하는 기능을 사용하려면 호환성 수준을 변경할 수 있습니다. 그렇지 않은 경우에는 원래 설정을 사용하여 업그레이드된 서버에서 데이터베이스를 실행하면 됩니다. 자세한 내용은 [다차원 데이터베이스의 호환성 수준 설정 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services)를 참조 하세요.  
   
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
@@ -77,7 +78,7 @@ ms.locfileid: "68889189"
   
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [SQL Server 설치 계획](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Microsoft OLAP 아키텍처 이해](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture)   

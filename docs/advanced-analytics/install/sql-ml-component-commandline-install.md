@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2bc231a064862c5e2a16f60d85a5166fd4765566
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727584"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>명령줄에서 SQL Server 기계 학습 R 및 Python 구성 요소 설치
@@ -48,7 +48,7 @@ FEATURES 인수는 사용 약관과 마찬가지로 필수입니다.
 명령 프롬프트에서 설치할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 /Q 매개 변수를 사용하는 완전 자동 모드 또는 /QS 매개 변수를 사용하는 단순 자동 모드를 지원합니다. /QS 스위치를 사용하면 진행률만 표시되고 입력이 허용되지 않으므로 오류가 발생해도 오류 메시지가 표시되지 않습니다. /QS 매개 변수는 /Action=install이 지정된 경우에만 지원됩니다.
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-| 인수 | 설명 |
+| 인수 | Description |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | 데이터베이스 내 버전을 설치합니다. (SQL Server R Services(데이터베이스 내))  |
 | /FEATURES = SQL_SHARED_MR | 독립 실행형 버전용 R 기능을 설치합니다. (SQL Server R Server(독립 실행형)) 독립 실행형 서버는 데이터베이스 엔진 인스턴스에 바인딩되지 않은 "공유 기능"입니다.|
@@ -59,7 +59,7 @@ FEATURES 인수는 사용 약관과 마찬가지로 필수입니다.
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-| 인수 | 설명 |
+| 인수 | Description |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | 데이터베이스 내 버전을 설치합니다. (SQL Server Machine Learning Services(데이터베이스 내))  |
 | /FEATURES = SQL_INST_MR | AdvancedAnalytics와 페어링합니다. Microsoft R Open 및 전용 R 패키지를 포함하여 R 기능(데이터베이스 내)을 설치합니다. |
@@ -70,11 +70,11 @@ FEATURES 인수는 사용 약관과 마찬가지로 필수입니다.
 | /IACCEPTPYTHONLICENSETERMS | Python 구성 요소의 사용 약관에 동의했음을 나타냅니다. |
 | /IACCEPTSQLSERVERLICENSETERMS | SQL Server 사용 약관에 동의했음을 나타냅니다.|
 | /MRCACHEDIRECTORY | 오프라인 설치의 경우 R 구성 요소 CAB 파일이 포함된 폴더를 설정합니다. |
-| /MPYCACHEDIRECTORY | 나중에 사용하도록 예약되어 있습니다. %TEMP%를 사용하여 인터넷이 연결되지 않은 컴퓨터에 설치할 Python 구성 요소 CAB 파일을 저장합니다. |
+| /MPYCACHEDIRECTORY | 다음에 사용하도록 예약됩니다. %TEMP%를 사용하여 인터넷이 연결되지 않은 컴퓨터에 설치할 Python 구성 요소 CAB 파일을 저장합니다. |
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-| 인수 | 설명 |
+| 인수 | Description |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | 데이터베이스 내 버전을 설치합니다. (SQL Server Machine Learning Services(데이터베이스 내))  |
 | /FEATURES = SQL_INST_MR | AdvancedAnalytics와 페어링합니다. Microsoft R Open 및 전용 R 패키지를 포함하여 R 기능(데이터베이스 내)을 설치합니다. |
@@ -86,7 +86,7 @@ FEATURES 인수는 사용 약관과 마찬가지로 필수입니다.
 | /IACCEPTPYTHONLICENSETERMS | Python 구성 요소의 사용 약관에 동의했음을 나타냅니다. |
 | /IACCEPTSQLSERVERLICENSETERMS | SQL Server 사용 약관에 동의했음을 나타냅니다.|
 | /MRCACHEDIRECTORY | 오프라인 설치의 경우 R 구성 요소 CAB 파일이 포함된 폴더를 설정합니다. |
-| /MPYCACHEDIRECTORY | 나중에 사용하도록 예약되어 있습니다. %TEMP%를 사용하여 인터넷이 연결되지 않은 컴퓨터에 설치할 Python 구성 요소 CAB 파일을 저장합니다. |
+| /MPYCACHEDIRECTORY | 다음에 사용하도록 예약됩니다. %TEMP%를 사용하여 인터넷이 연결되지 않은 컴퓨터에 설치할 Python 구성 요소 CAB 파일을 저장합니다. |
 ::: moniker-end
 
 ## <a name="indb"></a> 데이터베이스 내 인스턴스 설치

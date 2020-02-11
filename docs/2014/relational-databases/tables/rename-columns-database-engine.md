@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f5fca9032df4f1327933580a306215fd2fd47854
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211812"
 ---
 # <a name="rename-columns-database-engine"></a>열 이름 바꾸기(데이터베이스 엔진)
@@ -45,7 +45,7 @@ ms.locfileid: "68211812"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  개체에 대한 ALTER 사용 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -64,7 +64,7 @@ ms.locfileid: "68211812"
   
 2.  **열 이름**아래에서 변경하려는 이름을 선택하고 새 이름을 입력합니다.  
   
-3.  **파일** 메뉴에서 **저장**_table name_을 클릭합니다.  
+3.  **파일** 메뉴에서 **테이블 이름**_저장_을 클릭합니다.  
   
 > [!NOTE]  
 >  **열 속성** 탭에서 열 이름을 변경할 수도 있습니다. 이름을 변경하려는 열을 선택하고 **이름**에 새 이름을 입력합니다.  

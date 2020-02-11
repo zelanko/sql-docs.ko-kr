@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c552ef16cc2f9502a365ba09c7f8868eccd53396
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62836085"
 ---
 # <a name="access-the-cdc-designer-console"></a>CDC Designer 콘솔 액세스
@@ -40,7 +40,7 @@ ms.locfileid: "62836085"
   
  MSXCDCDB 데이터베이스에 대한 액세스를 허용하는 데이터베이스 역할이 로그인에 있어야 합니다. 사용 중인 모든 추가 데이터베이스에 대한 액세스 권한도 있는 것이 좋습니다. 그렇지 않으면 사용자가 해당 데이터베이스의 데이터를 볼 수 없습니다.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>옵션  
  화살표를 클릭하면 구성할 수 있는 옵션을 볼 수 있습니다. 이러한 옵션을 기본값으로 그대로 둘 수 있습니다. 사용 가능한 옵션은 다음과 같습니다.  
   
  **연결 제한 시간**  
@@ -57,7 +57,7 @@ ms.locfileid: "62836085"
   
  고급 연결 속성 대화 상자에 대한 자세한 내용은 [Advanced Connection Properties](advanced-connection-properties.md)을 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 연결을 위해 CDC Designer에 대해 필요한 권한](sql-server-connection-required-permissions-for-the-cdc-designer.md)  
   
   

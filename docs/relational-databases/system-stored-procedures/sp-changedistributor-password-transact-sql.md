@@ -16,18 +16,18 @@ ms.assetid: 4a496e60-414a-4026-ba7a-3e89391d39b7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3715bfacd1a94f588992d7e6832814f50c076d1c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68768898"
 ---
-# <a name="spchangedistributorpassword-transact-sql"></a>sp_changedistributor_password(Transact-SQL)
+# <a name="sp_changedistributor_password-transact-sql"></a>sp_changedistributor_password(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   배포자의 암호를 변경합니다. 이 저장 프로시저는 모든 데이터베이스의 배포자에서 실행됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,7 +37,7 @@ sp_changedistributor_password [ @password= ] 'password'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @password = ] 'password'`새 암호입니다. *password* 는 **sysname**이며 기본값은 없습니다. 배포자가 로컬 이면 **distributor_admin** 시스템 로그인의 암호가 변경 됩니다.  
+`[ @password = ] 'password'`새 암호입니다. *password* 는 **sysname**이며 기본값은 없습니다. 배포자가 로컬 인 경우 **distributor_admin** 시스템 로그인의 암호가 변경 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -49,12 +49,12 @@ sp_changedistributor_password [ @password= ] 'password'
  [!code-sql[HowTo#sp_changedistributor_password](../../relational-databases/replication/codesnippet/tsql/sp-changedistributor-pas_1.sql)]  
   
 ## <a name="permissions"></a>사용 권한  
- **Sysadmin** 고정 서버 역할의 멤버만 **sp_changedistributor_password**을 실행할 수 있습니다.  
+ **Sysadmin** 고정 서버 역할의 멤버만 **sp_changedistributor_password**를 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [복제 보안 설정 보기 및 수정](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [배포자 보안 설정](../../relational-databases/replication/security/secure-the-distributor.md)   
- [sp_adddistributor &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
+ [Transact-sql&#41;sp_adddistributor &#40;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

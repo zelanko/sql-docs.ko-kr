@@ -18,22 +18,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 65c61f6e4b571880b6607bb647d2629a3b6864f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083147"
 ---
 # <a name="processing-data-mining-objects"></a>데이터 마이닝 개체 처리
-  데이터 마이닝 개체는 처리되기 전까지는 단순히 빈 컨테이너입니다. 데이터 마이닝 모델을*처리* 하는 작업을 *학습*이라고도 합니다.  
+  데이터 마이닝 개체는 처리되기 전까지는 단순히 빈 컨테이너입니다. 데이터 마이닝 모델을 *처리* 하는 작업을 *학습*이 라고도 합니다.  
   
- **마이닝 구조 처리:** 마이닝 구조 열 바인딩 및 사용법 메타 데이터에 의해 정의 된 대로 외부 데이터 원본의 데이터를 가져옵니다 하 고 데이터를 읽습니다. 이 데이터 전체를 읽은 다음 분석하여 다양한 통계를 추출합니다. Analysis Services에서는 데이터 마이닝 알고리즘으로 분석하는 데 적합한 데이터의 압축된 표현을 로컬 캐시에 저장합니다. 이 캐시는 보관하거나 모델 처리 후 제거할 수 있습니다. 기본적으로 캐시는 저장됩니다. 자세한 내용은 [Process a Mining Structure](process-a-mining-structure.md)를 참조하세요.  
+ **마이닝 구조 처리:** 마이닝 구조는 열 바인딩 및 사용 메타 데이터에 정의 된 대로 외부 데이터 원본에서 데이터를 가져와 데이터를 읽습니다. 이 데이터 전체를 읽은 다음 분석하여 다양한 통계를 추출합니다. Analysis Services에서는 데이터 마이닝 알고리즘으로 분석하는 데 적합한 데이터의 압축된 표현을 로컬 캐시에 저장합니다. 이 캐시는 보관하거나 모델 처리 후 제거할 수 있습니다. 기본적으로 캐시는 저장됩니다. 자세한 내용은 [Process a Mining Structure](process-a-mining-structure.md)를 참조하세요.  
   
- **마이닝 모델 처리:** 마이닝 모델은 처리 될 때까지 정의 들어 있는 빈 합니다. 마이닝 모델을 처리하려면 먼저 해당 모델의 기반이 되는 마이닝 구조를 처리해야 합니다. 마이닝 모델은 마이닝 구조 캐시에서 데이터를 가져오고, 모델에 필터가 만들어진 경우 이를 적용한 다음, 알고리즘을 통해 데이터 집합을 전달하여 패턴을 검색합니다. 모델이 처리된 후 모델에는 데이터 자체가 아니라 처리 결과만 저장됩니다. 자세한 내용은 [마이닝 모델 처리](process-a-mining-model.md)를 참조하세요.  
+ **마이닝 모델 처리:** 마이닝 모델은 처리 되기 전 까지는 정의만 들어 있는 빈 개체입니다. 마이닝 모델을 처리하려면 먼저 해당 모델의 기반이 되는 마이닝 구조를 처리해야 합니다. 마이닝 모델은 마이닝 구조 캐시에서 데이터를 가져오고, 모델에 필터가 만들어진 경우 이를 적용한 다음, 알고리즘을 통해 데이터 집합을 전달하여 패턴을 검색합니다. 모델이 처리된 후 모델에는 데이터 자체가 아니라 처리 결과만 저장됩니다. 자세한 내용은 [마이닝 모델 처리](process-a-mining-model.md)를 참조하세요.  
   
  다음 다이어그램에서는 마이닝 구조가 처리될 때와 마이닝 모델이 처리될 때의 데이터 흐름을 보여 줍니다.  
   
- ![데이터 처리: 원본 구조에 모델](../media/dmcon-modelarch.gif "데이터 처리: 원본 구조에 모델")  
+ ![데이터 처리: 원본, 구조, 모델 순으로 처리](../media/dmcon-modelarch.gif "데이터 처리: 원본, 구조, 모델 순으로 처리")  
   
 ## <a name="viewing-the-results-of-processing"></a>처리 결과 보기  
  마이닝 구조가 처리된 후 해당 마이닝 구조에는 통계 분석에 사용할 데이터의 압축된 표현이 포함됩니다. 캐시가 지워지지 않은 경우 다음 방법으로 이 캐시의 데이터에 액세스할 수 있습니다.  
@@ -44,7 +44,8 @@ ms.locfileid: "66083147"
   
 -   구조 사례에 대한 DMX 쿼리를 만듭니다. 자세한 내용은 [SELECT FROM &#60;structure&#62;.CASES](/sql/dmx/select-from-structure-cases)를 참조하세요.  
   
- 마이닝 모델이 처리된 후 해당 마이닝 모델에는 분석에서 얻은 패턴과 모델 결과에서 캐시된 학습 데이터로의 매핑만 포함됩니다. *모델 콘텐츠*라는 모델 결과를 찾아보거나 쿼리할 수도 있고, 모델 결과가 캐시된 경우 모델 및 구조 사례를 쿼리할 수도 있습니다.  
+ 마이닝 모델이 처리된 후 해당 마이닝 모델에는 분석에서 얻은 패턴과 모델 결과에서 캐시된 학습 데이터로의 매핑만 포함됩니다. 
+  *모델 콘텐츠*라는 모델 결과를 찾아보거나 쿼리할 수도 있고, 모델 결과가 캐시된 경우 모델 및 구조 사례를 쿼리할 수도 있습니다.  
   
  각 마이닝 모델의 모델 콘텐츠는 마이닝 모델을 만드는 데 사용된 알고리즘에 따라 달라집니다. 예를 들어 한 모델은 클러스터링 모델이고 다른 모델은 의사 결정 트리 모델인 경우 모델이 동일한 데이터를 사용하더라도 모델 콘텐츠는 매우 달라집니다. 자세한 내용은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
   
@@ -55,10 +56,10 @@ ms.locfileid: "66083147"
   
  자세한 내용은 [처리 요구 사항 및 고려 사항&#40;데이터 마이닝&#41;](processing-requirements-and-considerations-data-mining.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [드릴스루 쿼리&#40;데이터 마이닝&#41;](drillthrough-queries-data-mining.md)   
- [마이닝 구조 & #40; Analysis Services-데이터 마이닝 & #41;](mining-structures-analysis-services-data-mining.md)   
- [마이닝 모델&#40;Analysis Services - 데이터 마이닝&#41;](mining-models-analysis-services-data-mining.md)   
- [논리적 아키텍처&#40;Analysis Services - 데이터 마이닝&#41;](logical-architecture-analysis-services-data-mining.md)  
+## <a name="see-also"></a>참고 항목  
+ [드릴스루 쿼리 &#40;데이터 마이닝&#41;](drillthrough-queries-data-mining.md)   
+ [마이닝 구조 &#40;Analysis Services 데이터 마이닝&#41;](mining-structures-analysis-services-data-mining.md)   
+ [마이닝 모델 &#40;Analysis Services 데이터 마이닝&#41;](mining-models-analysis-services-data-mining.md)   
+ [논리적 아키텍처 &#40;Analysis Services 데이터 마이닝&#41;](logical-architecture-analysis-services-data-mining.md)  
   
   

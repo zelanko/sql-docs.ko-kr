@@ -15,16 +15,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 77a8a9ac44b35f338f978913985617e4f264ddb7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62988061"
 ---
 # <a name="removing-a-rendering-extension"></a>렌더링 확장 프로그램 제거
-  제거할를 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 렌더링 확장 프로그램 제거 하기만 하면 합니다 `Extension` 요소에 있는 rsreportserver.config 파일에서 렌더링 확장 프로그램에 대해 **%ProgramFiles%\Microsoft SQL Server\MSRS10_50.\< 인스턴스 이름 > \reporting** 폴더입니다. 보고서 서버 뿐만 아니라 보고서 디자이너에 대 한 항목을 만든 경우 제거 합니다 `Extension` 요소를 [RSReportDesigner Configuration File](../../report-server/rsreportdesigner-configuration-file.md) 도 합니다. 구성 정보를 제거한 후에는 구성 요소에서 렌더링 확장 프로그램을 사용할 수 없습니다.  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 렌더링 확장 프로그램을 제거 하려면 `Extension` **%ProgramFiles%\Microsoft SQL Server \ MSRS10_50에 있는 rsreportserver.config 파일에서 렌더링 확장 프로그램에 대 한 요소를 제거 하면 됩니다.\< 인스턴스 이름> \Reporting Services\ReportServer** 폴더입니다. 보고서 디자이너 및 보고서 서버에 대 한 항목을 만든 경우 [Rsreportdesigner.config 구성 파일](../../report-server/rsreportdesigner-configuration-file.md) 에서도 요소 `Extension` 를 제거 합니다. 구성 정보를 제거한 후에는 구성 요소에서 렌더링 확장 프로그램을 사용할 수 없습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services 구성 파일](../../report-server/reporting-services-configuration-files.md)   
  [렌더링 확장 프로그램 구현](implementing-a-rendering-extension.md)   
  [렌더링 확장 프로그램 개요](rendering-extensions-overview.md)   

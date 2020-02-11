@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5df70271c281673c71fb378564f454f0822998ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68210711"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>시간 기반 행 필터에 대한 최상의 구현 방법
@@ -26,7 +26,7 @@ ms.locfileid: "68210711"
 WHERE SalesPersonID = CONVERT(INT,HOST_NAME()) AND OrderDate >= (GETDATE()-6)  
 ```  
   
- 이 유형의 필터를 사용하면 일반적으로 병합 에이전트가 실행될 때 항상 두 가지 작업이 실행됩니다. 즉, 이 필터를 만족하는 행은 구독자에 복제되고 이 필터를 더 이상 만족하지 않는 행은 구독자에서 정리됩니다. (사용 하 여 필터링 하는 방법에 대 한 자세한 내용은 `HOST_NAME()`를 참조 하세요 [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md).) 그러나 병합 복제에서는 데이터에 대한 행 필터 정의 방식에 관계없이 마지막 동기화 이후에 변경된 데이터만 복제되고 정리됩니다.  
+ 이 유형의 필터를 사용하면 일반적으로 병합 에이전트가 실행될 때 항상 두 가지 작업이 실행됩니다. 즉, 이 필터를 만족하는 행은 구독자에 복제되고 이 필터를 더 이상 만족하지 않는 행은 구독자에서 정리됩니다. 로 `HOST_NAME()`필터링 하는 방법에 대 한 자세한 내용은 [매개 변수가 있는 행 필터](parameterized-filters-parameterized-row-filters.md)를 참조 하세요. 그러나 병합 복제는 데이터에 대 한 행 필터를 정의 하는 방법에 관계 없이 마지막 동기화 이후 변경 된 데이터만 복제 하 고 정리 합니다.  
   
  행을 처리하는 병합 복제의 경우 행에 있는 데이터는 행 필터를 만족하고 마지막 동기화 이후에 변경된 데이터여야 합니다. **SalesOrderHeader** 테이블의 경우 행이 삽입될 때 **OrderDate** 가 입력됩니다. 행 삽입은 데이터 변경에 해당하므로 해당 행은 구독자에 예상대로 복제됩니다. 그러나 구독자에 필터를 더 이상 만족하지 않는 행(예: 7일 이상 경과된 주문)이 있는 경우 해당 행은 다른 이유로 업데이트되지 않았으면 구독자에서 제거되지 않습니다.  
   
@@ -49,7 +49,8 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
 ## <a name="recommendations-for-using-time-based-row-filters"></a>시간 기반 행 필터 사용에 대한 권장 사항  
  시간을 기반으로 필터링하기 위한 강력하고 간단한 방법은 다음과 같습니다.  
   
--   `bit` 데이터 형식의 테이블에 열을 추가합니다. 이 열은 행이 복제되는지 여부를 나타내는 데 사용합니다.  
+-   
+  `bit` 데이터 형식의 테이블에 열을 추가합니다. 이 열은 행이 복제되는지 여부를 나타내는 데 사용합니다.  
   
 -   시간 기반 열 이외의 새 열을 참조하는 행 필터를 사용합니다.  
   
@@ -60,7 +61,7 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**복제**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
 |1|Reception|112|2006-10-04|1|  
-|2|Dinner|112|2006-10-10|0|  
+|2|저녁|112|2006-10-10|0|  
 |3|Party|112|2006-10-11|0|  
 |4|Wedding|112|2006-10-12|0|  
   
@@ -84,13 +85,13 @@ GO
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**복제**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
 |1|Reception|112|2006-10-04|0|  
-|2|Dinner|112|2006-10-10|1|  
+|2|저녁|112|2006-10-10|1|  
 |3|Party|112|2006-10-11|1|  
 |4|Wedding|112|2006-10-12|1|  
   
  이제 다음 주의 행사가 복제할 행사로 플래그가 지정됩니다. 다음에 행사 코디네이터 112가 사용하는 구독에 대해 병합 에이전트가 실행되면 행 2, 3 및 4는 구독자에 다운로드되고 행 1은 구독자에서 제거됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [GETDATE&#40;Transact-SQL&#41;](/sql/t-sql/functions/getdate-transact-sql)   
  [작업 구현](../../../ssms/agent/implement-jobs.md)   
  [매개 변수가 있는 행 필터](parameterized-filters-parameterized-row-filters.md)  

@@ -12,10 +12,10 @@ ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 8aaf6c9cb9f4c7ed0f006492e6e11ce82ef333f2
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251725"
 ---
 # <a name="data-quality-client-home-screen"></a>데이터 품질 클라이언트 홈 화면
@@ -54,7 +54,7 @@ ms.locfileid: "75251725"
  **최근 데이터 품질 프로젝트**  
  화면의 목록에서 이미 만든 프로젝트를 선택합니다. 잠긴 프로젝트는 자신이 직접 잠근 프로젝트만 열 수 있습니다. 이 경우, 닫혔을 때의 상태로 프로젝트가 열리고 이러한 정보를 나타내기 위해 괄호로 표시됩니다. 프로젝트가 완료된 경우 활동의 내보내기 단계에서 열립니다.  
   
-### <a name="administration"></a>관리자  
+### <a name="administration"></a>관리  
  DQS 관리를 통해 DQS를 모니터링, 구성 및 유지 관리할 수 있습니다.  
   
  **작업 모니터링**  
@@ -66,6 +66,6 @@ ms.locfileid: "75251725"
 ## <a name="see-also"></a>참고 항목  
  [DQS 기술 자료 및 도메인](../data-quality-services/dqs-knowledge-bases-and-domains.md)   
  [DQS&#41;&#40;데이터 품질 프로젝트](../data-quality-services/data-quality-projects-dqs.md)   
- [DQS 관리](../data-quality-services/dqs-administration.md)  
+ [dqs 관리](../data-quality-services/dqs-administration.md)  
   
   

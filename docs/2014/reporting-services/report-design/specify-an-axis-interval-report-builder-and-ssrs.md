@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9d862ac509af3936a9f09cadd01667cbe81a679c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104845"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>축 간격 지정(보고서 작성기 및 SSRS)
@@ -27,16 +27,17 @@ ms.locfileid: "66104845"
 > [!NOTE]  
 >  일반적으로 범주 축은 가로 축 또는 x축이지만 가로 막대형 차트에서는 범주 축이 세로 축 또는 y축입니다.  
   
- 다른 축 간격을 지정하는 차트의 예는 예제 보고서로 제공됩니다. 이 샘플 보고서 및 기타 보고서를 다운로드하는 방법은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][보고서 작성기 및 보고서 디자이너 샘플 보고서](https://go.microsoft.com/fwlink/?LinkId=198283).  
+ 다른 축 간격을 지정하는 차트의 예는 예제 보고서로 제공됩니다. 이 예제 보고서 및 기타 보고서를 다운로드 하는 방법에 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]대 한 자세한 내용은 [보고서 작성기 및 보고서 디자이너 샘플 보고서](https://go.microsoft.com/fwlink/?LinkId=198283)를 참조 하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ### <a name="to-show-all-category-labels-on-the-x-axis"></a>X축에 모든 범주 레이블을 표시하려면  
   
-1.  범주 축을 마우스 오른쪽 단추로 클릭하고 **축 속성**을 클릭합니다. **축 속성** 대화 상자가 열립니다.  
+1.  범주 축을 마우스 오른쪽 단추로 클릭하고 **축 속성**을 클릭합니다. 
+  **축 속성** 대화 상자가 열립니다.  
   
-2.  **축 옵션**설정 `Interval` 하려면 **1**합니다. 모든 범주 그룹 레이블이 표시됩니다. x축에 다른 모든 범주 그룹 레이블을 표시하려면 **2**를 입력합니다.  
+2.  **축 옵션**에서을 `Interval` **1**로 설정 합니다. 모든 범주 그룹 레이블이 표시됩니다. x축에 다른 모든 범주 그룹 레이블을 표시하려면 **2**를 입력합니다.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -45,18 +46,19 @@ ms.locfileid: "66104845"
   
 ### <a name="to-enable-a-variable-interval-calculation-on-an-axis"></a>축에서 가변 간격 계산을 사용하려면  
   
-1.  변경할 차트 축을 마우스 오른쪽 단추로 클릭한 다음 **축 속성**을 클릭합니다. **축 속성** 대화 상자가 열립니다.  
+1.  변경할 차트 축을 마우스 오른쪽 단추로 클릭한 다음 **축 속성**을 클릭합니다. 
+  **축 속성** 대화 상자가 열립니다.  
   
-2.  **축 옵션**설정 `Interval` 하려면 **자동**합니다. 차트에 축을 따라 배치할 수 있는 최적의 범주 레이블 수가 표시됩니다.  
+2.  **축 옵션**에서 자동으로 `Interval` 설정 **** 합니다. 차트에 축을 따라 맞출 수 있는 최적의 범주 레이블 수가 표시 됩니다.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [차트의 데이터 요소에 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [데이터 영역의 데이터 정렬&#40;보고서 작성기 및 SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
  [축 속성 대화 상자, 축 옵션&#40;보고서 작성기 및 SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)   
  [로그 눈금 간격 지정&#40;보고서 작성기 및 SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
- [보조 축에 데이터 표시&#40;보고서 작성기 및 SSRS&#41;](plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)  
+ [보조 축에 데이터 플롯 &#40;보고서 작성기 및 SSRS&#41;](plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)  
   
   

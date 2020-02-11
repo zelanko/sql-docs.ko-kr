@@ -16,18 +16,18 @@ ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4db6a29d92fe093e9704f88fcc528c9fa687ccff
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68768955"
 ---
-# <a name="spchangedynamicsnapshotjob-transact-sql"></a>sp_changedynamicsnapshot_job(Transact-SQL)
+# <a name="sp_changedynamicsnapshot_job-transact-sql"></a>sp_changedynamicsnapshot_job(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   매개 변수가 있는 행 필터를 사용하여 구독에 대한 스냅샷을 생성하는 에이전트 작업을 게시로 수정합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -53,22 +53,22 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="arguments"></a>인수  
 `[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`변경 될 스냅숏 작업의 이름입니다. *dynamic_snapshot_jobname*는 **sysname**이며 기본값은 N '% '입니다. *Dynamic_snapshot_jobid* 를 지정 하는 경우 *dynamic_snapshot_jobname*에 대 한 기본값을 사용 해야 합니다.  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`변경 될 스냅숏 작업의 이름입니다. *dynamic_snapshot_jobname*는 **sysname**이며 기본값은 N '% '입니다. *Dynamic_snapshot_jobid* 지정 된 경우에는 *dynamic_snapshot_jobname*에 대 한 기본값을 사용 해야 합니다.  
   
-`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'`변경 중인 스냅숏 작업의 ID입니다. *dynamic_snapshot_jobid* 은 **uniqueidentifier**이며 기본값은 NULL입니다. *Dynamic_snapshot_jobname*를 지정 하는 경우 *dynamic_snapshot_jobid*에 대 한 기본값을 사용 해야 합니다.  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'`변경 중인 스냅숏 작업의 ID입니다. *dynamic_snapshot_jobid* 은 **uniqueidentifier**이며 기본값은 NULL입니다. *Dynamic_snapshot_jobname*지정 된 경우에는 *dynamic_snapshot_jobid*에 대 한 기본값을 사용 해야 합니다.  
   
 `[ @frequency_type = ] frequency_type`에이전트를 예약 하는 빈도입니다. *frequency_type* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
-|**2**|요청 시|  
-|**4**|일별|  
-|**8**|매주|  
-|**16**|매월|  
+|**2**|주문형|  
+|**4**|매일|  
+|**20cm(8**|매주|  
+|**x**|매월|  
 |**32**|매월 상대적|  
 |**64**|자동 시작|  
-|**128**|되풀이|  
+|**128**|Recurring|  
 |NULL(기본값)||  
   
 `[ @frequency_interval = ] frequency_interval`에이전트가 실행 되는 요일입니다. *frequency_interval* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
@@ -81,10 +81,10 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**4**|수요일|  
 |**5**|목요일|  
 |**6**|금요일|  
-|**7**|토요일|  
-|**8**|Day|  
-|**9**|평일|  
-|**10**|주말|  
+|**일**|토요일|  
+|**20cm(8**|일|  
+|**되었는지**|평일|  
+|**5-10**|주말|  
 |NULL(기본값)||  
   
 `[ @frequency_subday = ] frequency_subday`정의 된 기간 동안 다시 예약 하는 빈도입니다. *frequency_subday* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
@@ -93,8 +93,8 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |-----------|-----------------|  
 |**1**|한 번|  
 |**2**|Second|  
-|**4**|Minute|  
-|**8**|Hour|  
+|**4**|분|  
+|**20cm(8**|Hour|  
 |NULL(기본값)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*에 대 한 간격입니다. *frequency_subday_interval* 은 **int**이며 기본값은 NULL입니다.  
@@ -103,11 +103,11 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 |값|Description|  
 |-----------|-----------------|  
-|**1**|첫째|  
+|**1**|처음|  
 |**2**|Second|  
 |**4**|셋째|  
-|**8**|넷째|  
-|**16**|마지막|  
+|**20cm(8**|넷째|  
+|**x**|마지막|  
 |NULL(기본값)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*에서 사용 하는 되풀이 비율입니다. *frequency_recurrence_factor* 은 **int**이며 기본값은 NULL입니다.  
@@ -120,7 +120,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @active_end_time_of_day = ] active_end_time_of_day`하루 중 병합 에이전트이 예약 된 시간이 며 HHMMSS 형식으로 표시 됩니다. *active_end_time_of_day* 은 **int**이며 기본값은 NULL입니다.  
   
-`[ @job_login = ] 'job_login'`매개 변수가 있는 행 필터를 사용 하 여 구독에 대 한 스냅숏을 생성할 때 스냅숏 에이전트 실행 되는 Windows계정입니다.[!INCLUDE[msCoName](../../includes/msconame-md.md)] *job_login* 은 **nvarchar (257)** 이며 기본값은 NULL입니다.  
+`[ @job_login = ] 'job_login'`매개 변수가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 있는 행 필터를 사용 하 여 구독에 대 한 스냅숏을 생성할 때 스냅숏 에이전트 실행 되는 Windows 계정입니다. *job_login* 은 **nvarchar (257)** 이며 기본값은 NULL입니다.  
   
 `[ @job_password = ] 'job_password'`매개 변수가 있는 행 필터를 사용 하 여 구독에 대 한 스냅숏을 생성할 때 스냅숏 에이전트 실행 되는 Windows 계정의 암호입니다. *job_password* 은 **nvarchar (257)** 이며 기본값은 NULL입니다.  
   
@@ -131,14 +131,14 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>설명  
- **sp_changedynamicsnapshot_job** 는 매개 변수가 있는 행 필터를 사용 하는 게시에 대 한 병합 복제에 사용 됩니다.  
+ **sp_changedynamicsnapshot_job** 은 매개 변수가 있는 행 필터를 사용 하는 게시에 대 한 병합 복제에 사용 됩니다.  
   
  에이전트 로그인 또는 암호를 변경한 후 에이전트를 중지하고 다시 시작해야 변경 내용이 적용됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
- **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만이 **sp_changedynamicsnapshot_job**을 실행할 수 있습니다.  
+ **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_changedynamicsnapshot_job**을 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [복제 보안 설정 보기 및 수정](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [매개 변수가 있는 필터를 사용하는 병합 게시의 스냅샷](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
   

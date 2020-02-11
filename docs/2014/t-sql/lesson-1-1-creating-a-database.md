@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: c0353c89dbfc14032d33dfa49fa0c08e698cb5c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211215"
 ---
 # <a name="creating-a-database-tutorial"></a>데이터베이스 만들기(자습서)
@@ -41,9 +41,9 @@ ms.locfileid: "68211215"
 >  단일 일괄 처리에서 둘 이상의 문을 전송할 경우 GO 키워드는 문을 구분합니다. 일괄 처리에 문이 하나만 포함된 경우 GO는 선택 사항입니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
- [테이블 만들기&#40;자습서&#41;](lesson-1-2-creating-a-table.md)  
+ [표 만들기 &#40;자습서&#41;](lesson-1-2-creating-a-table.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   
   

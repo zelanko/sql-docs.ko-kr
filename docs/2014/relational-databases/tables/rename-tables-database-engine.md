@@ -16,13 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3fc62dc5f0e716273df257aba7fdc137391d3055
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196734"
 ---
 # <a name="rename-tables-database-engine"></a>테이블 이름 바꾸기(데이터베이스 엔진)
+  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 테이블 이름을 바꿀 수 있습니다.  
   
 > [!CAUTION]  
@@ -36,7 +37,7 @@ ms.locfileid: "68196734"
   
      [보안](#Security)  
   
--   **테이블 이름을 바꾸려면**  
+-   **다음을 사용 하 여 테이블 이름을 바꿉니다.**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -49,7 +50,7 @@ ms.locfileid: "68196734"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  테이블에 대한 ALTER 사용 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -58,13 +59,16 @@ ms.locfileid: "68196734"
   
 1.  개체 탐색기에서 이름을 바꾸려는 테이블을 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 **디자인** 을 선택합니다.  
   
-2.  **보기** 메뉴에서 **속성**을 선택합니다.  
+2.  
+  **보기** 메뉴에서 **속성**을 선택합니다.  
   
-3.  **속성** 창의 **이름** 값 필드에 테이블의 새 이름을 입력합니다.  
+3.  
+  **속성** 창의 **이름** 값 필드에 테이블의 새 이름을 입력합니다.  
   
 4.  이 동작을 취소하려면 이 필드를 나가기 전에 Esc 키를 누릅니다.  
   
-5.  **파일** 메뉴에서 **테이블 이름**_저장_을 선택합니다.  
+5.  
+  **파일** 메뉴에서 **저장**_테이블 이름_을 선택합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   

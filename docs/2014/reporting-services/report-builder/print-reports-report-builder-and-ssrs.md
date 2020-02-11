@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7f916e8acf45c822439a116bc5ad1ff40a11d2de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107702"
 ---
 # <a name="print-reports-report-builder-and-ssrs"></a>보고서 인쇄(보고서 작성기 및 SSRS)
@@ -46,10 +46,10 @@ ms.locfileid: "66107702"
  다른 애플리케이션으로 내보낸 보고서를 인쇄하는 방법을 설명합니다.  
   
  [보고서 인쇄&#40;보고서 작성기 및 SSRS&#41;](print-a-report-report-builder-and-ssrs.md)  
- 보고서를 인쇄 하는 방법에 대 한 단계별 지침을 제공 하는 하드 페이지 나누기 렌더러로 렌더링할 보고서의 용지 크기를 지정 하는 방법에는 페이지 여백을 조절 하는 방법. PDF, 이미지 또는 인쇄 합니다.  
+ 보고서를 인쇄하는 방법, 페이지 여백을 조절하는 방법, 하드 페이지 나누기 렌더러(PDF, 이미지 또는 인쇄)로 렌더링할 보고서의 용지 크기를 지정하는 방법에 대한 단계별 지침을 제공합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [보고서를 내보내는 &#40;보고서 작성기 및 SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>참고 항목  
+ [보고서 &#40;보고서 작성기 및 SSRS&#41;내보내기](export-reports-report-builder-and-ssrs.md)   
  [페이지 머리글 및 바닥글&#40;보고서 작성기 및 SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [이미지&#40;보고서 작성기 및 SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)   
  [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)  

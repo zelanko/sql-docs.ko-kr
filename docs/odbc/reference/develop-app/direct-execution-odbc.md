@@ -1,5 +1,5 @@
 ---
-title: 직접 실행 ODBC | Microsoft Docs
+title: ODBC 직접 실행 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ ms.assetid: dd00a535-b136-494f-913b-410838e3de7e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 72d9222be541a8d41b5b9935ac7cbbcfde4da19c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039803"
 ---
 # <a name="direct-execution-odbc"></a>직접 실행 ODBC
-직접 실행은 문을 실행에 대 한 가장 간단한 방법입니다. 문 실행에 대 한 전송 되 면 데이터 원본 액세스 계획으로 컴파일합니다 하 고 그런 다음 해당 액세스 계획을 실행 합니다.  
+직접 실행은 문을 실행 하는 가장 간단한 방법입니다. 실행을 위해 문이 전송 되 면 데이터 원본에서 액세스 계획으로 컴파일한 다음 해당 액세스 계획을 실행 합니다.  
   
- 직접 실행 빌드 및 런타임 시 문을 실행 하는 일반 응용 프로그램에서 흔히 사용 됩니다. 예를 들어, 다음 코드는 SQL 문을 작성 하 고 한 번 실행:  
+ 직접 실행은 일반적으로 런타임에 문을 빌드하고 실행 하는 제네릭 응용 프로그램에서 사용 됩니다. 예를 들어 다음 코드는 SQL 문을 작성 하 고 한 번 실행 합니다.  
   
 ```  
 SQLCHAR *SQLStatement;  
@@ -36,20 +36,20 @@ BuildStatement(SQLStatement);
 SQLExecDirect(hstmt, SQLStatement, SQL_NTS);  
 ```  
   
- 직접 실행은 한 번 실행 될 문이 적합 합니다. 주요 단점은 해당 실행 될 때마다 SQL 문을 구문 분석을 보여 줍니다. 또한 응용 프로그램 문에 의해 생성 된 (있는 경우) 될 때까지 문을 실행 한 후 결과 집합에 대 한 정보를 검색할 수 없습니다. 문이 준비 되어 별도 두 단계에서 실행 하는 경우 이것이 가능 합니다.  
+ 직접 실행은 한 번 실행 되는 문에 가장 적합 합니다. 주요 단점은 SQL 문이 실행 될 때마다 구문 분석 된다는 것입니다. 또한 문이 실행 될 때까지 응용 프로그램은 문 (있는 경우)에서 만든 결과 집합에 대 한 정보를 검색할 수 없습니다. 문을 준비 하 고 별도의 두 단계로 실행 하는 경우이 작업을 수행할 수 있습니다.  
   
- 직접 문을 실행 하려면 응용 프로그램이 다음 작업을 수행 합니다.  
+ 문을 직접 실행 하기 위해 응용 프로그램은 다음 작업을 수행 합니다.  
   
-1.  매개 변수의 값을 설정합니다. 자세한 내용은 [문 매개 변수](../../../odbc/reference/develop-app/statement-parameters.md)이 섹션의 뒷부분에 나오는.  
+1.  매개 변수의 값을 설정 합니다. 자세한 내용은이 섹션의 뒷부분에 나오는 [문 매개 변수](../../../odbc/reference/develop-app/statement-parameters.md)를 참조 하세요.  
   
-2.  호출 **SQLExecDirect** SQL 문을 포함 하는 문자열을 전달 합니다.  
+2.  **Sqlexecdirect** 를 호출 하 고 SQL 문을 포함 하는 문자열을 전달 합니다.  
   
-3.  때 **SQLExecDirect** 호출 되는 드라이버:  
+3.  **Sqlexecdirect** 를 호출 하는 경우 드라이버는 다음과 같습니다.  
   
-    -   문이; 구문 분석 하지 않고 데이터 원본의 SQL 문법을 사용 하는 SQL 문을 수정 합니다. 여기에 나오는 이스케이프 시퀀스가 교체 [ODBC의 이스케이프 시퀀스](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md)합니다. 응용 프로그램 호출 하 여 수정 된 형식의 SQL 문 검색할 수 있습니다 **SQLNativeSql**합니다. SQL_ATTR_NOSCAN 문 특성 설정 된 경우에 이스케이프 시퀀스 바뀌지 않습니다.  
+    -   문을 구문 분석 하지 않고 데이터 원본의 SQL 문법을 사용 하도록 SQL 문을 수정 합니다. 여기에는 [ODBC의 이스케이프 시퀀스](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md)에 설명 된 이스케이프 시퀀스 바꾸기가 포함 됩니다. 응용 프로그램은 **SQLNativeSql**를 호출 하 여 SQL 문의 수정 된 형태를 검색할 수 있습니다. SQL_ATTR_NOSCAN statement 특성이 설정 된 경우 이스케이프 시퀀스는 대체 되지 않습니다.  
   
-    -   현재 매개 변수 값을 검색 하 고 필요에 따라 변환 합니다. 자세한 내용은 [문 매개 변수](../../../odbc/reference/develop-app/statement-parameters.md)이 섹션의 뒷부분에 나오는.  
+    -   현재 매개 변수 값을 검색 하 고 필요에 따라 변환 합니다. 자세한 내용은이 섹션의 뒷부분에 나오는 [문 매개 변수](../../../odbc/reference/develop-app/statement-parameters.md)를 참조 하세요.  
   
-    -   실행에 대 한 데이터 소스에 문 및 변환 된 매개 변수 값을 보냅니다.  
+    -   실행을 위해 문과 변환 된 매개 변수 값을 데이터 원본으로 보냅니다.  
   
-    -   오류를 반환합니다. 여기에 시퀀싱 또는 (잘못 된 커서 상태) SQLSTATE 24000 같은 상태 진단, SQLSTATE 42000 (구문 오류 또는 액세스 위반)와 같은 구문 오류 및 SQLSTATE 42S02 같은 의미 체계 오류가 포함 됩니다 (기본 테이블 또는 뷰를 찾을 수 없음).
+    -   모든 오류를 반환 합니다. 여기에는 SQLSTATE 24000 (잘못 된 커서 상태)와 같은 시퀀싱 또는 상태 진단, SQLSTATE 42000 (구문 오류 또는 액세스 위반)와 같은 구문 오류 및 SQLSTATE 42S02 (기본 테이블 또는 뷰를 찾을 수 없음)와 같은 의미 오류가 포함 됩니다.

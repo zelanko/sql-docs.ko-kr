@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d440aace866527797252b67e3b397cc76d7dbdc7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62787979"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>가용성 그룹 장애 조치(Failover) 마법사 사용(SQL Server Management Studio)
@@ -33,24 +33,24 @@ ms.locfileid: "62787979"
 
 
   
--   **[!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] 페이지:**  
+-   **[!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)]마주보**  
   
-     [새로운 주 복제본 선택 페이지](#SelectNewPrimaryReplica) (이 항목의 뒷부분에 나옴)  
+     [새 주 복제본 선택 페이지](#SelectNewPrimaryReplica) (이 항목의 뒷부분에 나오는)  
   
-     [복제본에 연결 페이지](#ConnectToReplica) (이 항목의 뒷부분에 나옴)  
+     [복제본에 연결 페이지](#ConnectToReplica) (이 항목의 뒷부분)  
   
-     [잠재적인 데이터 손실 확인 페이지](#ConfirmPotentialDataLoss) (이 항목의 뒷부분에 나옴)  
+     [잠재적인 데이터 손실 확인 페이지](#ConfirmPotentialDataLoss) (이 항목의 뒷부분에 있음)  
   
-     [요약 페이지 &#40;AlwaysOn 가용성 그룹 마법사&#41;](summary-page-always-on-availability-group-wizards.md)  
+     [AlwaysOn 가용성 그룹 마법사의 요약 페이지 &#40;&#41;](summary-page-always-on-availability-group-wizards.md)  
   
-     [진행률 페이지 &#40;AlwaysOn 가용성 그룹 마법사&#41;](progress-page-always-on-availability-group-wizards.md)  
+     [AlwaysOn 가용성 그룹 마법사 &#40;진행률 페이지&#41;](progress-page-always-on-availability-group-wizards.md)  
   
-     [결과 페이지 &#40;AlwaysOn 가용성 그룹 마법사&#41;](results-page-always-on-availability-group-wizards.md)  
+     [AlwaysOn 가용성 그룹 마법사를 &#40;결과 페이지&#41;](results-page-always-on-availability-group-wizards.md)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  첫 번째 계획된 수동 장애 조치를 시작하기 전에 [가용성 그룹의 계획된 수동 장애 조치(Failover) 수행&#40;SQL Server&#41;](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹에 대해 계획된 수동 장애 조치(failover) 또는 강제 수동 장애 조치(강제 장애 조치)를 수행하는 방법을 설명합니다.  
   
- 첫 번째 강제 장애 조치(failover)를 시작하기 전에 "시작하기 전 주의 사항" 및 "후속 작업: [가용성 그룹의 강제 수동 장애 조치(failover) 수행&#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)의 강제 장애 조치(failover) 후의 필수 작업" 세션을 참조하세요.  
+ 첫 번째 강제 장애 조치를 시작하기 전에 [가용성 그룹의 강제 수동 장애 조치(failover) 수행&#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹에 대해 계획된 수동 장애 조치(failover) 또는 강제 수동 장애 조치(강제 장애 조치)를 수행하는 방법을 설명합니다.  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62787979"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  가용성 그룹에 대한 ALTER AVAILABILITY GROUP 권한, CONTROL AVAILABILITY GROUP 권한, ALTER ANY AVAILABILITY GROUP 권한 또는 CONTROL SERVER 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -75,13 +75,14 @@ ms.locfileid: "62787979"
   
 1.  개체 탐색기에서 장애 조치해야 할 가용성 그룹의 보조 복제본을 호스팅하는 서버 인스턴스에 연결하고 서버 트리를 확장합니다.  
   
-2.  **AlwaysOn 고가용성** 및 **가용성 그룹** 노드를 확장합니다.  
+2.  
+  **AlwaysOn 고가용성** 및 **가용성 그룹** 노드를 확장합니다.  
   
 3.  가용성 그룹 장애 조치 마법사를 시작하려면 장애 조치할 가용성 그룹을 마우스 오른쪽 단추로 클릭하고 **장애 조치(Failover)** 를 선택합니다.  
   
 4.  **소개** 페이지에 제공되는 정보는 보조 복제본에 대해 계획된 장애 조치를 수행할 수 있는지 여부에 따라 달라집니다. 페이지에 "**이 가용성 그룹에 대해 계획된 장애 조치(Failover)를 수행합니다.** "라고 표시되면 데이터 손실 없이 가용성 그룹을 장애 조치할 수 있습니다.  
   
-5.  새로운 주 복제본( **장애 조치 대상** )이 될 보조 복제본을 선택하기 전에 *새로운 주 복제본 선택*페이지에서 현재 주 복제본의 상태와 WSFC 쿼럼의 상태를 볼 수 있습니다. 계획된 수동 장애 조치를 수행할 경우 **장애 조치(Failover) 준비** 값이 "**데이터 손실 없음**"인 보조 복제본을 선택해야 합니다. 강제 장애 조치의 경우 가능한 모든 장애 조치 대상에 대해 이 값이 "**데이터 손실, 경고(***#***)** "로 표시되며 여기서 *#* 는 지정된 보조 복제본에 대한 경고 수를 나타냅니다. 지정된 장애 조치 대상에 대한 경고를 보려면 해당 "장애 조치(Failover) 준비" 값을 클릭합니다.  
+5.  새로운 주 복제본( **장애 조치 대상** )이 될 보조 복제본을 선택하기 전에 *새로운 주 복제본 선택*페이지에서 현재 주 복제본의 상태와 WSFC 쿼럼의 상태를 볼 수 있습니다. 계획된 수동 장애 조치를 수행할 경우 **장애 조치(Failover) 준비** 값이 "**데이터 손실 없음**"인 보조 복제본을 선택해야 합니다. 강제 장애 조치 (failover)의 경우 가능한 모든 장애 조치 대상에 대해이 값이 "**데이터 손실,***#*** 경고 ()**" *#* 로 표시 됩니다. 여기서은 지정 된 보조 복제본에 대해 존재 하는 경고 수를 나타냅니다. 지정된 장애 조치 대상에 대한 경고를 보려면 해당 "장애 조치(Failover) 준비" 값을 클릭합니다.  
   
      자세한 내용은 이 항목의 뒷부분에 나오는 [새로운 주 복제본 선택 페이지](#SelectNewPrimaryReplica)를 참조하세요.  
   
@@ -99,7 +100,7 @@ ms.locfileid: "62787979"
   
      자세한 내용은 [결과 페이지&#40;AlwaysOn 가용성 그룹 마법사&#41;](results-page-always-on-availability-group-wizards.md)를 참조하세요.  
   
-11. 강제 장애 조치(failover) 작업이 끝나면 "후속 작업: [가용성 그룹의 강제 수동 장애 조치(failover) 수행&#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)의 강제 장애 조치(failover) 후의 필수 작업" 세션을 참조하세요.  
+11. 강제 장애 조치 작업이 끝나면 [가용성 그룹의 강제 수동 장애 조치(failover) 수행&#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹에 대해 계획된 수동 장애 조치(failover) 또는 강제 수동 장애 조치(강제 장애 조치)를 수행하는 방법을 설명합니다.  
   
 ## <a name="help-for-pages-that-are-exclusive-to-this-wizard"></a>이 마법사에만 있는 페이지에 대한 도움말  
  이 섹션에서는 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)]에만 있는 페이지에 대해 설명합니다.  
@@ -144,7 +145,7 @@ ms.locfileid: "62787979"
 |**동기 커밋**|동기-커밋 모드에서는 동기-커밋 주 복제본이 트랜잭션을 커밋하기 전에 동기-커밋 보조 복제본이 로그 확정을 완료했음을 확인할 때까지 기다립니다. 동기-커밋 모드에서는 지정된 보조 데이터베이스가 주 데이터베이스와 동기화되고 나면 커밋된 트랜잭션이 완전히 보호됩니다.|  
 |**비동기 커밋**|비동기-커밋 모드에서는 주 복제본이 비동기-커밋 보조 복제본이 로그를 확정할 때까지 기다리지 않고 트랜잭션을 커밋합니다. 비동기-커밋 모드에서는 보조 데이터베이스의 트랜잭션 대기 시간이 최소화되지만 보조 데이터베이스가 주 데이터베이스보다 뒤쳐질 수 있어 일부 데이터가 손실될 수 있습니다.|  
   
- 자세한 내용은 [가용성 모드 (AlwaysOn 가용성 그룹)](availability-modes-always-on-availability-groups.md)합니다.  
+ 자세한 내용은 [가용성 모드 (AlwaysOn 가용성 그룹)](availability-modes-always-on-availability-groups.md)를 참조 하세요.  
   
  **장애 조치(Failover) 모드**  
  서버 인스턴스의 장애 조치(failover) 모드를 표시하며 다음 중 하나입니다.  
@@ -199,10 +200,10 @@ ms.locfileid: "62787979"
  **취소**  
  마법사를 취소하려면 클릭합니다. **복제본에 연결** 페이지에서 마법사를 취소하면 동작이 수행되지 않고 마법사가 종료됩니다.  
   
-## <a name="see-also"></a>관련 항목  
- [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>참고 항목  
+ [AlwaysOn 가용성 그룹 &#40;SQL Server 개요&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [가용성 모드 (AlwaysOn 가용성 그룹)](availability-modes-always-on-availability-groups.md)   
- [장애 조치 및 장애 조치 모드 &#40;AlwaysOn 가용성 그룹&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
+ [장애 조치 (failover) 및 장애 조치 (failover) 모드 &#40;AlwaysOn 가용성 그룹&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
  [가용성 그룹의 계획된 수동 장애 조치(Failover) 수행&#40;SQL Server&#41;](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)   
  [가용성 그룹의 강제 수동 장애 조치(Failover) 수행&#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)   
  [강제 쿼럼을 통해 WSFC 재해 복구&#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  

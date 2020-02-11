@@ -10,16 +10,16 @@ ms.assetid: f2a04023-ed42-4516-b59c-7a1b8a5395d4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cebad908d9177c7dd432c56f8dfa3c15c4e95f66
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68127018"
 ---
-# <a name="localdberrorunknownversion"></a>LOCALDB_ERROR_UNKNOWN_VERSION
+# <a name="localdb_error_unknown_version"></a>LOCALDB_ERROR_UNKNOWN_VERSION
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  

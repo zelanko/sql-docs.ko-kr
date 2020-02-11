@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 23d5180928f4f3335aa17dff61b50e6fdd19549f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196474"
 ---
 # <a name="create-user-defined-aggregates"></a>사용자 정의 집계 만들기
@@ -51,7 +51,7 @@ ms.locfileid: "68196474"
   
 -   [CREATE AGGREGATE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-aggregate-transact-sql)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [CLR&#40;공용 언어 런타임&#41; 통합 프로그래밍 개요](../clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
   

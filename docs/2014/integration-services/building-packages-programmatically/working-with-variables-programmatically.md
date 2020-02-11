@@ -23,10 +23,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4833ee0dd6514b6a05118b80b756c5fd2de069a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62836812"
 ---
 # <a name="working-with-variables-programmatically"></a>프로그래밍 방식으로 변수 사용
@@ -44,7 +44,7 @@ ms.locfileid: "62836812"
   
 -   변수 값이 포함된 식을 작성합니다.  
   
--   사용자 지정 변수는 패키지, **Foreach 루프** 컨테이너, **For 루프** 컨테이너, **시퀀스** 컨테이너, TaskHost 및 이벤트 처리기와 같은 모든 컨테이너 유형에 대해 만들 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](../use-variables-in-packages.md)을 참조하세요.  
+-   사용자 지정 변수는 패키지, **Foreach 루프** 컨테이너, **For 루프** 컨테이너, **시퀀스** 컨테이너, TaskHost 및 이벤트 처리기와 같은 모든 컨테이너 유형에 대해 만들 수 있습니다. 자세한 내용은 [Integration Services &#40;SSIS&#41; 변수](../integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](../use-variables-in-packages.md)을 참조 하세요.  
   
 ## <a name="scope"></a>범위  
  각 컨테이너에는 고유한 <xref:Microsoft.SqlServer.Dts.Runtime.Variables> 컬렉션이 있습니다. 새 변수를 만들면 해당 변수는 부모 컨테이너의 범위 내에서 작동합니다. 패키지 컨테이너는 컨테이너 계층 구조의 최상위에 있으므로 패키지 범위의 변수는 전역 변수와 같은 기능을 수행하며 해당 패키지 내의 모든 컨테이너에 표시됩니다. 또한 컨테이너의 자식 컨테이너에서는 변수 이름이나 컬렉션에서의 변수 인덱스를 사용하여 <xref:Microsoft.SqlServer.Dts.Runtime.Variables> 컬렉션을 통해 컨테이너의 변수 컬렉션에 액세스할 수 있습니다.  
@@ -158,7 +158,8 @@ End Module
  범위가 **System** 네임스페이스인 모든 변수는 패키지에서 사용할 수 있습니다. 자세한 내용은 [System Variables](../system-variables.md)을 참조하세요.  
   
 ## <a name="namespaces"></a>네임스페이스  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)])에서는 변수가 존재하는 두 개의 기본 네임스페이스인 **User** 및 **System** 네임스페이스를 제공합니다. 기본적으로 개발자가 만드는 모든 사용자 지정 변수는 **User** 네임스페이스에 추가됩니다. 시스템 변수는 **System** 네임스페이스에 있습니다. **User** 네임스페이스 외의 추가 네임스페이스를 만들어 사용자 지정 변수를 저장하거나, **User** 네임스페이스의 이름을 변경할 수는 있지만 **System** 네임스페이스의 변수를 추가 또는 수정하거나, 시스템 변수를 다른 네임스페이스에 할당할 수는 없습니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)])는 변수가 있는 두 개의 기본 네임 스페이스 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 를 제공 합니다. **사용자** 및 **시스템** 네임 스페이스 기본적으로 개발자가 만드는 모든 사용자 지정 변수는 **User** 네임스페이스에 추가됩니다. 시스템 변수는 **System** 네임스페이스에 있습니다. 
+  **User** 네임스페이스 외의 추가 네임스페이스를 만들어 사용자 지정 변수를 저장하거나, **User** 네임스페이스의 이름을 변경할 수는 있지만 **System** 네임스페이스의 변수를 추가 또는 수정하거나, 시스템 변수를 다른 네임스페이스에 할당할 수는 없습니다.  
   
  사용할 수 있는 시스템 변수는 컨테이너 유형에 따라 달라집니다. 패키지, 컨테이너, 태스크 및 이벤트 처리기에서 사용할 수 있는 시스템 변수의 목록은 [시스템 변수](../system-variables.md)를 참조하세요.  
   
@@ -169,7 +170,8 @@ End Module
   
 -   식의 결과를 값으로 사용할 수 있도록 변수에 식을 포함하려면 변수의 <xref:Microsoft.SqlServer.Dts.Runtime.Variable.EvaluateAsExpression%2A> 속성을 `true`로 설정하고 <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Expression%2A> 속성에서 식을 지정합니다. 런타임에는 이 식이 계산되고 식 결과가 변수 값으로 사용됩니다. 예를 들어 변수의 식 속성이 `"100 * 2""100 * 2"`이면 이 변수는 값 200으로 계산됩니다.  
   
- 변수의 경우에는 <xref:Microsoft.SqlServer.Dts.Runtime.Variable.DataType%2A> 값을 명시적으로 설정할 수 없습니다. <xref:Microsoft.SqlServer.Dts.Runtime.Variable.DataType%2A> 값은 변수에 할당된 초기 값에서 유추되며 이후에는 변경할 수 없습니다. 변수 데이터 형식에 대한 자세한 내용은 [Integration Services 데이터 형식](../data-flow/integration-services-data-types.md)을 참조하세요.  
+ 변수의 경우에는 <xref:Microsoft.SqlServer.Dts.Runtime.Variable.DataType%2A> 값을 명시적으로 설정할 수 없습니다. 
+  <xref:Microsoft.SqlServer.Dts.Runtime.Variable.DataType%2A> 값은 변수에 할당된 초기 값에서 유추되며 이후에는 변경할 수 없습니다. 변수 데이터 형식에 대한 자세한 내용은 [Integration Services 데이터 형식](../data-flow/integration-services-data-types.md)을 참조하세요.  
   
  다음 코드 예에서는 새 변수를 만들고, <xref:Microsoft.SqlServer.Dts.Runtime.Variable.EvaluateAsExpression%2A>을 `true`로 설정하고, 변수의 식 속성에 `"100 * 2"` 식을 할당한 다음, 변수 값을 출력합니다.  
   
@@ -228,9 +230,9 @@ End Module
 ## <a name="configuration-files"></a>구성 파일  
  구성 파일에 사용자 지정 변수가 포함된 경우 런타임에 해당 변수를 업데이트할 수 있습니다. 즉, 패키지를 실행할 때 패키지의 원래 변수 값을 구성 파일의 새 값으로 바꿀 수 있습니다. 이 기술은 패키지가 각기 다른 변수 값이 필요한 여러 서버에 배포된 경우에 유용합니다. 예를 들어 변수는 **Foreach 루프** 컨테이너가 워크플로를 반복하는 횟수를 지정하거나, 오류가 발생할 경우 이벤트 처리기에서 보내는 전자 메일의 받는 사람을 나열하거나, 패키지가 실패한 것으로 처리되기 전에 발생할 수 있는 오류 횟수를 변경할 수 있습니다. 이러한 변수는 각 환경의 구성 파일에서 동적으로 제공됩니다. 따라서 구성 파일에는 읽기/쓰기가 가능한 변수만 포함될 수 있습니다. 자세한 내용은 [패키지 구성 만들기](../create-package-configurations.md)를 참조하세요.  
   
-![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services&#40;SSIS&#41; 변수](../integration-services-ssis-variables.md)   
  [패키지에서 변수 사용](../use-variables-in-packages.md)  
   

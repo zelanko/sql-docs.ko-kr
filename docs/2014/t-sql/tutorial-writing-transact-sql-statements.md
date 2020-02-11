@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 67e09713fdec72313bde6ba81e1cc169467fda0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211193"
 ---
 # <a name="tutorial-writing-transact-sql-statements"></a>자습서: Transact-SQL 문 작성
@@ -41,7 +41,7 @@ ms.locfileid: "68211193"
  [2단원: 데이터베이스 개체에 대한 사용 권한 구성](lesson-2-configuring-permissions-on-database-objects.md)  
  이 단원에서는 로그인 및 사용자를 만듭니다. 또한 뷰와 저장 프로시저를 만든 다음 저장 프로시저에 대한 사용 권한을 사용자에게 부여합니다.  
   
- [3단원: 데이터베이스 개체 삭제](lesson-3-1-deleting-database-objects.md)  
+ [3단원: 데이터베이스 개체에 대한 액세스 권한 부여](lesson-3-1-deleting-database-objects.md)  
  이 단원에서는 데이터 액세스 권한 제거, 테이블에서 데이터 삭제, 테이블 삭제, 데이터베이스 삭제 등을 수행합니다.  
   
 ## <a name="requirements"></a>요구 사항  
@@ -51,11 +51,12 @@ ms.locfileid: "68211193"
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)](버전은 관계 없음)  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 또는 Management Studio Express  
+-   
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 또는 Management Studio Express  
   
--   Internet Explorer 6 이상입니다.  
+-   Internet Explorer 6 이상  
   
 > [!NOTE]  
->  이 자습서를 검토할 때는 추가 하는 것이 좋습니다는 **다음** 하 고 **이전** 문서 뷰어 도구 모음 단추입니다.  
+>  자습서를 검토할 때는 문서 뷰어 도구 모음에 **다음** 단추 및 **이전** 단추를 추가 하는 것이 좋습니다.  
   
   

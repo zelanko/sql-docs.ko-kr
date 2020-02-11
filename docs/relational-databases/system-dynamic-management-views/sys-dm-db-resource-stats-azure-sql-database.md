@@ -20,10 +20,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 1dd66834788896e6952a0352eb2a19fd1a828513
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245959"
 ---
 # <a name="sysdm_db_resource_stats-azure-sql-database"></a>sys.dm_db_resource_stats(Azure SQL 데이터베이스)
@@ -32,9 +32,9 @@ ms.locfileid: "75245959"
   
   [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 데이터베이스에 대해 CPU, I/O 및 메모리 사용을 반환합니다. 데이터베이스에 작업이 없는 경우에도 한 행은 15초 간격으로 존재합니다. 기록 데이터는 약 1 시간 동안 유지 관리 됩니다.  
   
-|열|데이터 형식|설명|  
+|열|데이터 형식|Description|  
 |-------------|---------------|-----------------|  
-|end_time|**날짜**|현재 보고 간격의 끝을 나타내는 UTC 시간입니다.|  
+|end_time|**datetime**|현재 보고 간격의 끝을 나타내는 UTC 시간입니다.|  
 |avg_cpu_percent|**decimal (5, 2)**|서비스 계층 한도의 비율로 계산된 평균 계산 활용률입니다.|  
 |avg_data_io_percent|**decimal (5, 2)**|서비스 계층 한도의 백분율로 나타낸 평균 데이터 i/o 사용률입니다. Hyperscale 데이터베이스의 경우 [리소스 사용률 통계의 데이터 IO](https://docs.microsoft.com/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics)를 참조 하세요.|  
 |avg_log_write_percent|**decimal (5, 2)**|서비스 계층 한도의 백분율로 나타낸 평균 트랜잭션 로그 쓰기 (MBps)입니다.|  
@@ -53,7 +53,7 @@ ms.locfileid: "75245959"
 > [!TIP]  
 >  이러한 제한 및 서비스 계층에 대 한 자세한 컨텍스트는 [서비스](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) 계층 및 [서비스 계층 기능 및 제한](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)항목을 참조 하세요.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  이 뷰에는 VIEW DATABASE STATE 권한이 필요합니다.  
   
 ## <a name="remarks"></a>설명  

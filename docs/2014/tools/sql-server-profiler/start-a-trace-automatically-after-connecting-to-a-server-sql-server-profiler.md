@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: facde89ad6b476fa01b34badce10dd3cae52ecac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68186123"
 ---
 # <a name="start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler"></a>서버 연결 후 자동으로 추적 시작(SQL Server Profiler)
@@ -33,7 +33,7 @@ ms.locfileid: "68186123"
 > [!NOTE]  
 >  **연결한 후 즉시 추적 시작**을 선택한 경우에는 **추적 속성**대화 상자가 나타나지 않고 추적이 시작됩니다. 추적 속성을 편집하려면 먼저 이 옵션을 선택 취소해야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [SQL Server 프로파일러](sql-server-profiler.md)  
+## <a name="see-also"></a>참고 항목  
+ [SQL Server Profiler](sql-server-profiler.md)  
   
   

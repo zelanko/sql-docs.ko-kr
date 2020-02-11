@@ -1,5 +1,5 @@
 ---
-title: sys.http_endpoints (TRANSACT-SQL) | Microsoft Docs
+title: sys. http_endpoints (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,21 +20,21 @@ ms.assetid: 16f59695-ecd9-457e-8874-055af63f8ea7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 41ca717399a3cd86f2137de6ae474d89e3eb819e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68122729"
 ---
-# <a name="syshttpendpoints-transact-sql"></a>sys.http_endpoints(Transact-SQL)
+# <a name="syshttp_endpoints-transact-sql"></a>sys.http_endpoints(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   HTTP 프로토콜을 사용하는 서버에 생성된 각 엔드포인트당 하나의 행을 포함합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**< 상속 된 열 >**||열을 상속 [sys.endpoints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)합니다.|  
-|**site**|**nvarchar(128)**|이 사이트에 대한 호스트 컴퓨터의 이름이며 SITE = 옵션으로 지정됩니다.|  
+|**상속 된 열<>**||[&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)에서 열을 상속 합니다.|  
+|**사이트별**|**nvarchar(128)**|이 사이트에 대한 호스트 컴퓨터의 이름이며 SITE = 옵션으로 지정됩니다.|  
 |**url_path**|**nvarchar(4000)**|이 HTTP 엔드포인트에 대한 URL의 경로 부분이며 PATH= 옵션으로 지정됩니다.|  
 |**is_clear_port_enabled**|**bit**|1 = CLEAR 포트가 PORT = CLEAR 옵션을 사용하여 활성화되었습니다.|  
 |**clear_port**|**int**|CLEAR PORT = 옵션에 지정된 포트 번호입니다.<br /><br /> NULL = 지정되지 않음|  
@@ -53,8 +53,8 @@ ms.locfileid: "68122729"
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [끝점 카탈로그 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)  
+ [Transact-sql&#41;&#40;끝점 카탈로그 뷰](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)  
   
   

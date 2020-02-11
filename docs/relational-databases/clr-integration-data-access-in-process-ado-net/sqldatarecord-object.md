@@ -14,17 +14,19 @@ ms.assetid: 2ed667fb-749c-4280-a8fb-650643683c8f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 76f89af5ea6a7b1ab7a01bda14cce391a1b4b750
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68122768"
 ---
 # <a name="sqldatarecord-object"></a>SqlDataRecord 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  
   **SqlDataRecord** 개체는 관련 메타데이터와 함께 하나의 데이터 행을 나타냅니다.  
   
- 관리되는 저장 프로시저는 **SqlDataReader**에서 제공되지 않은 결과 집합을 클라이언트로 보낼 수 있습니다. **SqlDataRecord** 클래스와 함께 **SendResultsStart**개체의 **SendResultsRow**, **SendResultsEnd** 및 **SqlPipe** 메서드를 사용하면 저장 프로시저에서 사용자 지정 결과 집합을 클라이언트로 보낼 수 있습니다.  
+ 관리되는 저장 프로시저는 **SqlDataReader**에서 제공되지 않은 결과 집합을 클라이언트로 보낼 수 있습니다. 
+  **SqlDataRecord** 클래스와 함께 **SendResultsStart**개체의 **SendResultsRow**, **SendResultsEnd** 및 **SqlPipe** 메서드를 사용하면 저장 프로시저에서 사용자 지정 결과 집합을 클라이언트로 보낼 수 있습니다.  
   
  자세한 내용은 .NET Framework SDK 설명서의 **Microsoft.SqlServer.Server.SqlDataRecord** 클래스 참조 설명서를 참조하십시오.  
   
@@ -87,7 +89,7 @@ Public Shared Sub  CreateNewRecordVBProc ()
 End Sub  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SqlPipe 개체](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 고유 하 게 컴파일된 저장된 프로시저에 구문이 지원 | Microsoft Docs
+title: 고유 하 게 컴파일된 저장 프로시저에서 지원 되는 구문 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc064eb8a4c6b206d3b690a4c4e7ca196c7475dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467877"
 ---
 # <a name="supported-constructs-on-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저의 지원되는 구문
@@ -40,11 +40,11 @@ ms.locfileid: "62467877"
 ## <a name="security"></a>보안  
  다음 항목이 지원됩니다.  
   
--   프로시저: EXECUTE AS OWNER, SELF 및 사용자입니다.  
+-   프로시저: EXECUTE AS OWNER, SELF 및 사용자  
   
 -   테이블 및 프로시저에 대한 GRANT 및 DENY 권한  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [고유하게 컴파일된 저장 프로시저](natively-compiled-stored-procedures.md)  
   
   

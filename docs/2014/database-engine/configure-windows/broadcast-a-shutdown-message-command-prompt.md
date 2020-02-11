@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5349f45891dbca2c9135c38c1976f71c87491212
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62786658"
 ---
 # <a name="broadcast-a-shutdown-message-command-prompt"></a>종료 메시지 브로드캐스트(명령 프롬프트)
@@ -43,7 +43,7 @@ ms.locfileid: "62786658"
   
  네트워크에서는 전자 메일이나 전화로 사용자에게 연락하는 것이 더 적절합니다. 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결된 사용자를 확인하려면 작업 모니터를 사용합니다. 작업 모니터에 대한 자세한 내용은 [작업 모니터](../../relational-databases/performance-monitor/activity-monitor.md) 및 [작업 모니터 열기&#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](start-stop-pause-resume-restart-sql-server-services.md)  
   
   

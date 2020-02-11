@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c8ea6a5fcfe99926c264fc2116a637f8d30c05df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010148"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>FileTable과 기타 SQL Server 기능 간 호환성
@@ -41,10 +41,10 @@ ms.locfileid: "66010148"
  복제 및 관련 기능(트랜잭션 복제, 병합 복제, 변경 데이터 캡처 및 변경 내용 추적 포함)은 FileTable에서 지원되지 않습니다.  
   
 ##  <a name="OtherIsolation"></a> 트랜잭션 의미 체계와 FileTable  
- **Windows 응용 프로그램**  
+ **Windows 애플리케이션**  
  Windows 애플리케이션은 데이터베이스 트랜잭션을 인식하지 못하므로 Windows 쓰기 작업에서는 데이터베이스 트랜잭션의 ACID 속성을 제공하지 않습니다. 따라서 Windows 업데이트 작업에는 트랜잭션 롤백 및 복구를 수행할 수 없습니다.  
   
- **Transact-SQL 응용 프로그램**  
+ **Transact-SQL 애플리케이션**  
  FileTable의 FILESTREAM(file_stream) 열에서 작동하는 TSQL 애플리케이션의 경우 격리 의미 체계는 일반적인 사용자 테이블의 FILESTREAM 데이터 형식을 사용할 때와 동일합니다.  
   
 ##  <a name="OtherQueryNot"></a> 쿼리 알림과 FileTable  
@@ -87,14 +87,14 @@ ms.locfileid: "66010148"
   
 -   "업데이트 가능한 뷰" 의미 체계에 따라 뷰를 업데이트할 수 있지만 테이블에서와 마찬가지로 기본 테이블 제약 조건에 따라 업데이트가 거부될 수 있습니다.  
   
--   파일의 경로를 뷰의 명시적 열로 추가하여 뷰에 시각화할 수 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+-   파일의 경로를 뷰의 명시적 열로 추가하여 뷰에 시각화할 수 있습니다. 다음은 그 예입니다.  
   
      `CREATE VIEW MP3FILES AS SELECT column1, column2, ..., GetFileNamespacePath() AS PATH, column3,...  FROM Documents`  
   
  **인덱싱된 뷰**  
  현재 인덱싱된 뷰에는 FILESTREAM 열이나 FILESTREAM 열에 종속된 계산/지속형 계산 열이 포함될 수 없습니다. 이 동작은 FileTable에 정의된 뷰에도 그대로 적용됩니다.  
   
-##  <a name="OtherSnapshots"></a> 스냅숏 격리와 FileTable  
+##  <a name="OtherSnapshots"></a> 스냅샷 격리와 FileTable  
  RCSI(커밋된 읽기 스냅샷 격리)와 SI(스냅샷 격리)는 데이터에 대한 업데이트 작업이 수행 중인 경우에도 판독기에서 데이터의 스냅샷을 사용할 수 있도록 하는 기능에 의존합니다. 그러나 FileTable을 사용하면 Filestream 데이터에 대한 비트랜잭션 쓰기 액세스가 허용됩니다. 따라서 FileTable이 포함된 데이터베이스에서 이러한 기능을 사용하는 경우에는 다음 제한 사항이 적용됩니다.  
   
 -   FileTable이 포함된 데이터베이스를 변경하여 RCSI/SI를 사용하도록 설정할 수 있습니다.  
@@ -119,7 +119,7 @@ ms.locfileid: "66010148"
   
  포함된 사용자와 같은 포함된 데이터베이스의 특정 기능을 사용하려면 데이터베이스 포함 옵션을 PARTIAL로 설정하면 됩니다. 그러나 이 경우 일부 데이터베이스 설정은 데이터베이스에 포함되지 않으며 데이터베이스를 이동할 때 자동으로 이동되지 않는다는 것을 알고 있어야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [FileTable 관리](manage-filetables.md)  
   
   

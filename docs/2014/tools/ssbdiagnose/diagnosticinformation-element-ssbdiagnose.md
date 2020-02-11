@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 55da8efd6ee5b330e259ed78bdd152720403f310
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63186907"
 ---
 # <a name="diagnosticinformation-element-ssbdiagnose"></a>DiagnosticInformation 요소(ssbdiagnose)
@@ -37,15 +37,16 @@ ms.locfileid: "63186907"
   
 |attribute|Description|  
 |---------------|-----------------|  
-|`None`|해당 사항 없음|  
+|`None`|해당 없음|  
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특성|Description|  
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|없음|  
 |**기본값**|없음|  
-|**발생 빈도**|**ssbdiagnose** XML 출력 파일당 한 번|  
+|**발생 빈도**|
+  **ssbdiagnose** XML 출력 파일당 한 번|  
   
 ## <a name="element-relationships"></a>요소 관계  
   
@@ -54,10 +55,10 @@ ms.locfileid: "63186907"
 |**부모 요소**|없음|  
 |**자식 요소**|[Banner 요소&#40;ssbdiagnose&#41;](banner-element-ssbdiagnose.md)<br /><br /> [Issue 요소&#40;ssbdiagnose&#41;](issue-element-ssbdiagnose.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  XML 네임스페이스에 대한 자세한 내용은 [MSDN Library의](https://go.microsoft.com/fwlink/?LinkId=7341) XML 문서의 네임스페이스 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ssbdiagnose 유틸리티&#40;Service Broker&#41;](ssbdiagnose-utility-service-broker.md)  
   
   

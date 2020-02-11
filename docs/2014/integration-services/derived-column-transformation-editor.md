@@ -15,18 +15,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4fc2701ad53cd0071be40100d168d5d5571d2958
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059566"
 ---
 # <a name="derived-column-transformation-editor"></a>파생 열 변환 편집기
+  
   **파생 열 변환 편집기** 대화 상자를 사용하여 새 열 또는 대체 열을 채우는 식을 만들 수 있습니다.  
   
  파생 열 변환에 대한 자세한 내용은 [Derived Column Transformation](data-flow/transformations/derived-column-transformation.md)을 참조하십시오.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **변수 및 열**  
  사용 가능한 변수 및 열 목록에서 아래 창의 기존 테이블 행이나 목록 아래쪽의 새 행으로 변수 또는 열을 끌어 변수 또는 입력 열을 사용하는 식을 작성합니다.  
   
@@ -44,27 +45,29 @@ ms.locfileid: "66059566"
   
  이 속성의 값은 속성 식을 사용하여 지정할 수 있습니다.  
   
- **관련 항목**: [Integration Services&#40;SSIS&#41; 식](expressions/integration-services-ssis-expressions.md), [연산자&#40;SSIS 식&#41;](expressions/operators-ssis-expression.md) 및 [함수&#40;SSIS 식&#41;](expressions/functions-ssis-expression.md)  
+ **관련 항목**: Ssis&#41; 식, [연산자 &#40;ssis 식&#41;](expressions/operators-ssis-expression.md)및 [함수 &#40;ssis 식](expressions/functions-ssis-expression.md)&#41;[&#40;Integration Services](expressions/integration-services-ssis-expressions.md)  
   
  **데이터 형식**  
- 새 열에 데이터를 추가하는 경우 **파생 열 변환 편집기** 대화 상자가 식을 자동으로 계산하고 데이터 형식을 적절하게 설정합니다. 이 열의 값은 읽기 전용입니다. 자세한 내용은 [Integration Services Data Types](data-flow/integration-services-data-types.md)을 참조하세요.  
+ 새 열에 데이터를 추가하는 경우 **파생 열 변환 편집기** 대화 상자가 식을 자동으로 계산하고 데이터 형식을 적절하게 설정합니다. 이 열의 값은 읽기 전용입니다. 자세한 내용은 [Integration Services 데이터 형식](data-flow/integration-services-data-types.md)을 참조 하세요.  
   
  **길이**  
  새 열에 데이터를 추가하는 경우 **파생 열 변환 편집기** 대화 상자가 식을 자동으로 계산하고 문자열 데이터의 열 길이를 설정합니다. 이 열의 값은 읽기 전용입니다.  
   
- **전체 자릿수**  
+ **정밀도**  
  새 열에 데이터를 추가하는 경우 **파생 열 변환 편집기** 대화 상자가 데이터 형식을 기반으로 숫자 데이터의 전체 자릿수를 자동으로 설정합니다. 이 열의 값은 읽기 전용입니다.  
   
- **소수 자릿수**  
+ **규모**  
  새 열에 데이터를 추가하는 경우 **파생 열 변환 편집기** 대화 상자가 데이터 형식을 기반으로 숫자 데이터의 소수 자릿수를 자동으로 설정합니다. 이 열의 값은 읽기 전용입니다.  
   
  **코드 페이지**  
- 새 열에 데이터를 추가하는 경우 **파생 열 변환 편집기** 대화 상자가 DT_STR 데이터 형식에 대한 코드 페이지를 자동으로 설정합니다. **코드 페이지**를 업데이트할 수 있습니다.  
+ 새 열에 데이터를 추가하는 경우 **파생 열 변환 편집기** 대화 상자가 DT_STR 데이터 형식에 대한 코드 페이지를 자동으로 설정합니다. 
+  **코드 페이지**를 업데이트할 수 있습니다.  
   
  **오류 출력 구성**  
- [오류 출력 구성](../../2014/integration-services/configure-error-output.md) 대화 상자를 사용하여 오류 처리 방법을 지정합니다.  
+ 
+  [오류 출력 구성](../../2014/integration-services/configure-error-output.md) 대화 상자를 사용하여 오류 처리 방법을 지정합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [파생 열 변환을 사용하여 열 값 파생](data-flow/transformations/derive-column-values-by-using-the-derived-column-transformation.md)  
   

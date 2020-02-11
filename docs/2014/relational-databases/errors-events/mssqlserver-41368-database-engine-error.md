@@ -13,15 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a2206980d241d3ef0aa683e4f987a4e337a86855
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913808"
 ---
-# <a name="mssqlserver41368"></a>MSSQLSERVER_41368
+# <a name="mssqlserver_41368"></a>MSSQLSERVER_41368
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -38,9 +38,9 @@ ms.locfileid: "62913808"
  BEGIN TRANSACTION으로 시작된 명시적 트랜잭션에서 메모리 최적화 테이블에 액세스할 때 IMPLICIT_TRANSACTIONS가 ON으로 설정되어 있으면 READ COMMITTED 격리 수준이 지원되지 않습니다.  
   
 ## <a name="user-action"></a>사용자 동작  
- 명시적 또는 암시적 READ COMMITTED 트랜잭션에서 메모리 최적화 테이블에 액세스할 때는 SNAPSHOT을 사용하여 테이블에 액세스합니다. 테이블 힌트 WITH (SNAPSHOT)을 사용 하 여 수행할 수 있습니다 (자세한 내용은 [메모리 최적화 테이블이 있는 트랜잭션 격리 수준에 대 한 지침](../in-memory-oltp/memory-optimized-tables.md)) 또는 데이터베이스를 설정 하 여 MEMORY_OPTIMIZED_ELEVATE_TO_ 옵션 ON으로 스냅숏 (자세한 내용은 [ALTER DATABASE SET 옵션 &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)).  
+ 명시적 또는 암시적 READ COMMITTED 트랜잭션에서 메모리 최적화 테이블에 액세스할 때는 SNAPSHOT을 사용하여 테이블에 액세스합니다. 이는 테이블 힌트 WITH (SNAPSHOT)을 사용 하 여 수행할 수 있습니다. 자세한 내용은 [메모리 최적화 테이블을 사용 하는 트랜잭션 격리 수준에 대 한 지침](../in-memory-oltp/memory-optimized-tables.md)을 참조 하거나 데이터베이스 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT 옵션을 ON으로 설정 하 여 수행할 수 있습니다. 자세한 내용은 [ALTER database SET Options &#40;transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)를 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

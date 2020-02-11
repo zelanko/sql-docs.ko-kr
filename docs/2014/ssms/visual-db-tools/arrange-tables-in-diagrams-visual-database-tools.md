@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0fb65d55d2b6b135c562f9dd4b02170de6b7df3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63297865"
 ---
 # <a name="arrange-tables-in-diagrams-visual-database-tools"></a>다이어그램에서 테이블 정렬(Visual Database Tools)
@@ -30,7 +30,7 @@ ms.locfileid: "63297865"
   
 2.  바로 가기 메뉴에서 **테이블 정렬**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 다이어그램 작업&#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

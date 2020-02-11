@@ -1,5 +1,5 @@
 ---
-title: 저장된 프로시저를 실행 | Microsoft Docs
+title: 저장 프로시저 실행 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6bdf66ed9214a151886caedcf2247935a07f7811
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206734"
 ---
 # <a name="running-stored-procedures"></a>저장 프로시저 실행
-  저장 프로시저는 데이터베이스에 저장된 실행 가능한 개체입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 다음과 같은 프로시저를 지원합니다.  
+  저장 프로시저는 데이터베이스에 저장된 실행 가능한 개체입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]지원함  
   
 -   저장 프로시저:  
   
@@ -55,7 +55,7 @@ ms.locfileid: "68206734"
   
      확장 저장 프로시저는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 제공되지 않는 C 및 C++ 기능을 사용할 수 있습니다.  
   
-     저장된 프로시저를 호출 하는 방법에 대 한 예제를 보려면 [프로세스 반환 코드 및 출력 매개 변수 &#40;ODBC&#41;](../native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md).  
+     저장 프로시저를 호출 하는 방법에 대 한 예제는 [ODBC&#41;&#40;반환 코드 및 출력 매개 변수 처리 ](../native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)를 참조 하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -65,8 +65,8 @@ ms.locfileid: "68206734"
   
 -   [저장 프로시저 결과 처리](processing-stored-procedure-results.md)  
   
-## <a name="see-also"></a>관련 항목  
- [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)   
- [저장된 프로시저 방법 도움말 항목을 실행 &#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
+## <a name="see-also"></a>참고 항목  
+ [ODBC&#41;SQL Server Native Client &#40;](../native-client/odbc/sql-server-native-client-odbc.md)   
+ [저장 프로시저 실행 방법 항목 ODBC&#41;&#40;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
   
   

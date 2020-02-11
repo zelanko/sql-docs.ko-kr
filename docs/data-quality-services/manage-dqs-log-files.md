@@ -14,10 +14,10 @@ ms.assetid: 4fccfd24-aede-4882-be69-ec1e82682e16
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 6edcf577b7783662a02efc3531ac02c2535ef078
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245423"
 ---
 # <a name="manage-dqs-log-files"></a>DQS 로그 파일 관리
@@ -80,15 +80,15 @@ ms.locfileid: "75245423"
   [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)] 구성 요소 로그 파일은 %APPDATA%\SSDQS\Log에 있습니다. 
   [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)] 로그 파일에는 서버 로그 파일과 유사하지만 [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)]에 대한 정보 집합이 포함됩니다.  
   
-##  <a name="RT"></a>관련 태스크  
+##  <a name="RT"></a> 관련 작업  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
 |
-  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]를 사용하여 DQS 로그 파일의 로그 심각도 설정을 구성하는 방법에 대해 설명합니다.|[DQS 로그 파일에 대 한 심각도 수준 구성](../data-quality-services/configure-severity-levels-for-dqs-log-files.md)|  
-|DQS 로그 파일의 고급 설정을 수동으로 구성하는 방법에 대해 설명합니다.|[DQS 로그 파일에 대 한 고급 설정 구성](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)|  
+  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]를 사용하여 DQS 로그 파일의 로그 심각도 설정을 구성하는 방법에 대해 설명합니다.|[DQS 로그 파일에 대한 심각도 수준 구성](../data-quality-services/configure-severity-levels-for-dqs-log-files.md)|  
+|DQS 로그 파일의 고급 설정을 수동으로 구성하는 방법에 대해 설명합니다.|[Configure Advanced Settings for DQS Log Files](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)|  
   
 ## <a name="see-also"></a>참고 항목  
- [DQS 관리](../data-quality-services/dqs-administration.md)  
+ [dqs 관리](../data-quality-services/dqs-administration.md)  
   
   

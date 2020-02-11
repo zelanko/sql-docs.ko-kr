@@ -1,5 +1,5 @@
 ---
-title: 결과 집합 정보 (ODBC) 검색 | Microsoft Docs
+title: 결과 집합 정보 검색 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,28 +14,28 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a39a6715a9ba8ab08d846aabb96e5b0665a2aa43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200299"
 ---
 # <a name="retrieve-result-set-information-odbc"></a>결과 집합 정보 검색(ODBC)
     
 ### <a name="to-get-information-about-a-result-set"></a>결과 집합에 대한 정보를 가져오려면  
   
-1.  호출 [SQLNumResultCols](../native-client-odbc-api/sqlnumresultcols.md) 결과 집합의 열 개수를 가져올 수 있습니다.  
+1.  [Sqlnumresultcols](../native-client-odbc-api/sqlnumresultcols.md) 를 호출 하 여 결과 집합의 열 수를 가져옵니다.  
   
 2.  결과 집합의 각 열에 대해 다음을 수행합니다.  
   
-    -   호출 [SQLDescribeCol](../native-client-odbc-api/sqldescribecol.md) 결과 열에 대 한 정보를 가져오려고 합니다.  
+    -   [SQLDescribeCol](../native-client-odbc-api/sqldescribecol.md) 를 호출 하 여 결과 열에 대 한 정보를 가져옵니다.  
   
      또는  
   
-    -   호출 [SQLColAttribute](../native-client-odbc-api/sqlcolattribute.md) 결과 열에 대 한 특정 설명자 정보를 얻을 수 있습니다.  
+    -   [Sqlcolattribute](../native-client-odbc-api/sqlcolattribute.md) 를 호출 하 여 결과 열에 대 한 특정 설명자 정보를 가져옵니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [결과 처리 방법 도움말 항목 &#40;ODBC&#41;](../../database-engine/dev-guide/processing-results-how-to-topics-odbc.md)   
- [결과 집합의 특징을 확인 &#40;ODBC&#41;](../native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md)  
+ [ODBC&#41;&#40;결과 집합의 특징 확인](../native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md)  
   
   

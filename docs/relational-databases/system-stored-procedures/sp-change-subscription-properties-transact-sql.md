@@ -16,18 +16,18 @@ ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cfc42dbf08b6718e72970a703f56fb0bfff850f4
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771414"
 ---
-# <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties(Transact-SQL)
+# <a name="sp_change_subscription_properties-transact-sql"></a>sp_change_subscription_properties(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   끌어오기 구독에 대한 정보를 업데이트합니다. 이 저장 프로시저는 구독 데이터베이스의 구독자에서 실행됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -57,13 +57,13 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |값|게시 유형|  
 |-----------|----------------------|  
 |**0**|트랜잭션|  
-|**1**|스냅숏|  
+|**1**|스냅샷|  
 |**2**|병합|  
 |NULL(기본값)|복제가 게시 유형을 결정합니다. 저장 프로시저가 여러 테이블을 통해 검사하므로 이 옵션은 정확한 게시 유형을 제공하는 경우보다 느립니다.|  
   
  다음 표에서는 아티클의 속성 및 해당 속성의 값을 설명합니다.  
   
-|속성|값|설명|  
+|속성|값|Description|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||스냅샷의 대체 폴더 위치를 지정합니다. NULL로 설정하면 게시자가 지정한 기본 위치에서 스냅샷 파일이 선택됩니다.|  
 |**distrib_job_login**||에이전트가 실행되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정의 로그인입니다.|  
@@ -80,10 +80,10 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**ftp_login**||이전 버전과의 호환성을 위해서만 지원됩니다.|  
 |**ftp_password**||이전 버전과의 호환성을 위해서만 지원됩니다.|  
 |**ftp_port**||이전 버전과의 호환성을 위해서만 지원됩니다.|  
-|**hostname**||게시자에 연결할 때 사용하는 호스트 이름입니다.|  
+|**n**||게시자에 연결할 때 사용하는 호스트 이름입니다.|  
 |**internet_login**||기본 인증을 사용하여 웹 동기화를 호스팅하는 웹 서버에 연결할 때 병합 에이전트가 사용하는 로그인입니다.|  
 |**internet_password**||기본 인증을 사용하여 웹 동기화를 호스팅하는 웹 서버에 연결할 때 병합 에이전트가 사용하는 암호입니다.|  
-|**internet_security_mode**|**1**|웹 동기화에 Windows 통합 인증을 사용합니다. 웹 동기화에는 기본 인증을 사용하는 것이 좋습니다. 자세한 내용은 [웹 동기화 구성](../../relational-databases/replication/configure-web-synchronization.md)을 참조하세요.|  
+|**internet_security_mode**|**1**|웹 동기화에 Windows 통합 인증을 사용합니다. 웹 동기화에는 기본 인증을 사용하는 것이 좋습니다. 자세한 내용은 [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)을 참조하세요.|  
 ||**0**|웹 동기화에 기본 인증을 사용합니다.<br /><br /> 참고: 웹 동기화를 사용 하려면 웹 서버에 대 한 SSL 연결이 필요 합니다.|  
 |**internet_timeout**||웹 동기화 요청이 만료되기 전까지의 시간(초)입니다.|  
 |**internet_url**||웹 동기화를 위한 복제 수신기의 위치를 나타내는 URL입니다.|  
@@ -94,9 +94,9 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**publisher_security_mode**|**1**|게시자에 연결할 때 Windows 인증을 사용합니다. *Publisher_security_mode* 변경은 병합 게시에 대 한 구독에 대해서만 지원 됩니다.|  
 ||**0**|게시자에 연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용합니다.|  
 |**use_ftp**|**true**|일반 프로토콜 대신 FTP를 사용하여 스냅샷을 검색합니다.|  
-||**false**|일반 프로토콜을 사용하여 스냅샷을 검색합니다.|  
+||**허위**|일반 프로토콜을 사용하여 스냅샷을 검색합니다.|  
 |**use_web_sync**|**true**|웹 동기화를 사용합니다.|  
-||**false**|웹 동기화를 사용하지 않습니다.|  
+||**허위**|웹 동기화를 사용하지 않습니다.|  
 |**working_directory**||FTP(파일 전송 프로토콜)를 사용하여 스냅샷 파일을 전송할 때 게시를 위해 데이터 및 스키마를 임시로 저장하는 데 사용하는 작업 디렉터리의 이름입니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -110,14 +110,14 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
  Oracle 게시자의 경우 Oracle에서는 서버 인스턴스당 하나의 데이터베이스만 허용 하므로 *publisher_db* 값은 무시 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
- **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만이 **sp_change_subscription_properties**을 실행할 수 있습니다.  
+ **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_change_subscription_properties**을 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [끌어오기 구독 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
- [sp_addmergepullsubscription &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
- [sp_addmergepullsubscription_agent &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   
- [sp_addpullsubscription &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [sp_addpullsubscription_agent &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
+ [Transact-sql&#41;sp_addmergepullsubscription &#40;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
+ [Transact-sql&#41;sp_addmergepullsubscription_agent &#40;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   
+ [Transact-sql&#41;sp_addpullsubscription &#40;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [Transact-sql&#41;sp_addpullsubscription_agent &#40;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

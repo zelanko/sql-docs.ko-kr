@@ -1,5 +1,5 @@
 ---
-title: 예를 들면 다음과 같습니다. PATH 모드 사용 | Microsoft Docs
+title: '예제: PATH 모드 사용 | Microsoft 문서'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5a566d9684341b7aa20342147aab950ebd4047c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287778"
 ---
-# <a name="examples-using-path-mode"></a>예를 들면 다음과 같습니다. PATH 모드 사용
+# <a name="examples-using-path-mode"></a>예제: PATH 모드 사용
   다음 예에서는 SELECT 쿼리에서 XML을 생성할 때 PATH 모드를 사용하는 방법을 보여 줍니다. 이러한 쿼리는 대부분 ProductModel 테이블의 Instructions 열에 저장된 자전거 제조 지침 XML 문서에 대해 지정됩니다.  
   
 ## <a name="specifying-a-simple-path-mode-query"></a>간단한 PATH 모드 쿼리 지정  
@@ -200,7 +200,7 @@ FOR XML PATH ('ProductModelData'), root ('Root');
 GO  
 ```  
   
- 다음은 결과의 일부입니다. XML 반환한 쿼리 ManuInstr을 열 이름으로 지정 합니다 `query()` 메서드 래핑됩니다를 <`ManuInstr`> 다음에 표시 된 대로 태그:  
+ 다음은 결과의 일부입니다. 쿼리에서 ManuInstr를 열 이름으로 지정 하므로 `query()` 메서드에 의해 반환 된 XML은 다음과 같이 <`ManuInstr`> 태그로 래핑됩니다.  
   
  `<Root>`  
   
@@ -315,7 +315,7 @@ FOR XML PATH('ProductModelData');
   
 -   첫 번째 중첩 `SELECT` 는 `data()` 를 열 이름으로 사용하여 ProductID 목록을 반환합니다. 쿼리에서 빈 문자열을 `FOR XML PATH`의 행 요소 이름으로 지정하므로 요소가 생성되지 않습니다. 대신 값 목록이 `ProductID` 특성에 할당됩니다.  
   
--   두 번째 중첩 `SELECT`는 제품 모델에 속한 제품에 대해 제품 이름을 검색합니다. 쿼리에서 `ProductNames`를 열 이름으로 지정하므로 <`ProductNames`> 요소에 래핑되어 반환되는 <`ProductName`> 요소를 생성합니다.  
+-   두 번째 중첩 `SELECT` 는 제품 모델에 속한 제품에 대해 제품 이름을 검색합니다. 쿼리에서 `ProductName`를 열 이름으로 지정하므로 <`ProductNames`> 요소에 래핑되어 반환되는 <`ProductNames`> 요소를 생성합니다.  
   
  다음은 결과의 일부입니다.  
   
@@ -393,7 +393,7 @@ FOR XML PATH ('Translation')
 GO  
 ```  
   
- <`English`> 요소에 추가된 `@xml:lang` 특성이 미리 정의된 xml 네임스페이스에 정의됩니다.  
+ <`@xml:lang`> 요소에 추가된 `English` 특성이 미리 정의된 xml 네임스페이스에 정의됩니다.  
   
  다음은 결과입니다.  
   
@@ -464,7 +464,7 @@ FOR XML PATH('ProductModelData'), root('root');
   
  `</root>`  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [FOR XML에서 PATH 모드 사용](use-path-mode-with-for-xml.md)  
   
   

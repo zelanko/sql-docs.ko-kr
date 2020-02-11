@@ -15,16 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 12f9b5ad88ce49eb13b4aa460e02e295b13135ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058545"
 ---
 # <a name="for-each-item-columns-dialog-box-ui-reference"></a>For Each Item 열 대화 상자 UI 참조
+  
   **For Each Item 열** 대화 상자를 사용하여 Foreach Item 열거자에서 열거하는 항목에 열을 정의할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **열**  
  열을 나열합니다.  
   
@@ -37,7 +38,7 @@ ms.locfileid: "66058545"
  **제거**  
  열을 선택한 다음 **제거**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Foreach 루프 편집기 &#40;컬렉션 페이지&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
  [Foreach 루프 컨테이너](control-flow/foreach-loop-container.md)  
   

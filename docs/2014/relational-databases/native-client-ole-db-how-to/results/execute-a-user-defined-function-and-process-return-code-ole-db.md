@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1c5a54f678f9b52551523b04af4658539d98ef56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206698"
 ---
 # <a name="execute-a-user-defined-function-and-process-return-code-ole-db"></a>사용자 정의 함수 실행 및 반환 코드 처리(OLE DB)
@@ -363,7 +363,7 @@ drop function fn_RectangleArea
 go  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [결과 처리 방법 도움말 항목&#40;OLE DB&#41;](processing-results-how-to-topics-ole-db.md)  
+## <a name="see-also"></a>참고 항목  
+ [결과 처리 방법 도움말 항목 &#40;OLE DB&#41;](processing-results-how-to-topics-ole-db.md)  
   
   

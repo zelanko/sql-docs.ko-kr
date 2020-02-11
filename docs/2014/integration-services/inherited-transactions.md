@@ -1,5 +1,5 @@
 ---
-title: 트랜잭션을 상속 | Microsoft Docs
+title: 상속 된 트랜잭션 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d8e22375e660e6bcd55c8075edaaba067160279d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058060"
 ---
 # <a name="inherited-transactions"></a>상속된 트랜잭션
@@ -37,11 +37,11 @@ ms.locfileid: "66058060"
   
  패키지 및 태스크는 다음 트랜잭션 특성을 가집니다.  
   
--   패키지 A 및 C의**트랜잭션 옵션** 은 **필수** 로 설정됩니다.  
+-   **TransactionOption** 은 패키지 A와 C에서 **필수** 로 설정 됩니다.  
   
--   패키지 B 및 D, 패키지 실행 태스크 B, 패키지 실행 D 및 패키지 실행 F의**트랜잭션 옵션** 은 **지원** 으로 설정됩니다.  
+-   **TransactionOption** 은 패키지 b 및 d에서 지원 되는로 설정 되 고, 패키지 실행 b, 패키지 실행 D 및 패키지 실행 F에서 **지원** 됩니다.  
   
--   패키지 E, 패키지 실행 태스크 C 및 패키지 실행 E의**트랜잭션 옵션** 은 **지원되지 않음** 으로 설정됩니다.  
+-   **TransactionOption** 는 패키지 E, 패키지 실행 C 및 패키지 실행 E에서 **notsupported** 로 설정 됩니다.  
   
  ![상속된 트랜잭션의 흐름](media/mw-dts-executepack.gif "상속된 트랜잭션의 흐름")  
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 618a155390d8719e639d0e12d241b2f824e5375d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835991"
 ---
 # <a name="edit-the-table-properties"></a>테이블 속성 편집
@@ -40,7 +40,7 @@ ms.locfileid: "62835991"
   
 2.  캡처 인스턴스를 다음 중 하나로 저장합니다.  
   
-    -   **새 캡처 인스턴스**: 이 경우 새 캡처 인스턴스는 저장되지만 이전 캡처 인스턴스는 삭제되지 않습니다.  
+    -   **새 캡처 인스턴스**: 이 경우 새 캡처 인스턴스는 저장되지만, 이전 캡처 인스턴스는 삭제되지 않습니다.  
   
          **참고**: 캡처 인스턴스는 테이블당 두 개를 초과할 수 없습니다. 이미 두 개의 캡처 인스턴스가 있는 경우에는 이 옵션을 사용할 수 없습니다.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62835991"
   
  이 대화 상자에 정보를 입력한 후 **확인** 을 클릭하여 변경 내용을 적용할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [CDC 인스턴스 속성을 편집하는 방법](how-to-edit-the-cdc-instance-properties.md)   
  [변경 캡처를 위해 선택된 테이블 변경](make-changes-to-the-tables-selected-for-capturing-changes.md)  
   

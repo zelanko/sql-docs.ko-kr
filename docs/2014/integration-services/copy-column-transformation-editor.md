@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 03d8cdb35372ed9850f3329f26e2647e018d9583
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060299"
 ---
 # <a name="copy-column-transformation-editor"></a>열 복사 변환 편집기
@@ -29,7 +29,7 @@ ms.locfileid: "66060299"
 > [!NOTE]  
 >  사용자가 모든 원본 데이터를 대상에 간단하게 복사할 경우 열 복사 변환을 사용할 필요가 없을 수 있습니다. 일부 시나리오에서는 데이터 변환이 필요하지 않을 때 원본을 대상에 직접 연결할 수 있습니다. 이러한 상황에서는 SQL Server 가져오기 및 내보내기 마법사를 사용하여 패키지를 만드는 것이 좋습니다. 필요한 경우 나중에 패키지를 향상시키고 다시 구성할 수 있습니다. 자세한 내용은 [SQL Server Import and Export Wizard](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)를 참조하세요.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **사용 가능한 입력 열**  
  확인란을 사용하여 복사할 열을 선택합니다. 선택한 항목은 아래의 입력 열에 추가됩니다.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66060299"
  **출력 별칭**  
  각 새 출력 열의 별칭을 입력합니다. 기본값은 **사본 -** 뒤에 입력 열의 이름이 오는 형식이지만 설명이 포함된 고유 이름을 임의로 선택할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

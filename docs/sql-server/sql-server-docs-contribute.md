@@ -9,10 +9,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5b63711b537358db7cbf3fa34dcbfdf7444d4b7a
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68693186"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>SQL Server 설명서에 기여하는 방법
@@ -49,7 +49,7 @@ ms.locfileid: "68693186"
 
 다음 GIF는 브라우저에서 변경 사항을 제출하는 엔드투엔드 프로세스를 보여 줍니다.
 
-![SQL 문서 편집](media/sql-server-docs-navigation-guide/edit-sql-docs.gif)
+![SQL 설명서 편집](media/sql-server-docs-navigation-guide/edit-sql-docs.gif)
 
 ## <a id="tools"></a> 도구를 사용하여 로컬로 편집
 
@@ -79,7 +79,7 @@ ms.locfileid: "68693186"
 
 [sql-docs](https://github.com/MicrosoftDocs/sql-docs) 리포지토리는 콘텐츠를 구성하기 위해 여러 개의 표준 폴더를 사용합니다.
 
-| Folder | 설명 |
+| 폴더 | Description |
 |---|---|
 | [docs](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs) | 게시된 모든 SQL Server 콘텐츠를 포함합니다. 하위 폴더는 논리적으로 다양한 영역의 콘텐츠를 구성합니다. |
 | [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) | include 파일을 포함합니다. 이러한 파일은 하나 이상의 다른 항목에 포함될 수 있는 콘텐츠의 블록입니다. |

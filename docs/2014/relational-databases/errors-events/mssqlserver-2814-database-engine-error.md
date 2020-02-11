@@ -13,15 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4c8def0fad1ae7eddb9de2e7206923b872c41ed2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67046775"
 ---
-# <a name="mssqlserver2814"></a>MSSQLSERVER_2814
+# <a name="mssqlserver_2814"></a>MSSQLSERVER_2814
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -53,7 +53,7 @@ ms.locfileid: "67046775"
   
 ## <a name="user-action"></a>사용자 동작  
   
-1.  다음 쿼리를 실행하여 재컴파일을 발생시키는 문을 봅니다. *sql_handle*, *starting_offset*, *ending_offset* 및 *plan_handle* 자리 표시자를 오류 메시지에 지정된 값으로 바꿉니다. 임시 및 준비된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 경우 **database_name** 및 **object_name** 열은 NULL입니다.  
+1.  다음 쿼리를 실행하여 재컴파일을 발생시키는 문을 봅니다. *sql_handle*, *starting_offset*, *ending_offset* 및 *plan_handle* 자리 표시자를 오류 메시지에 지정된 값으로 바꿉니다. 임시 및 준비된 ** 문의 경우 **database_name** 및 **object_name[!INCLUDE[tsql](../../includes/tsql-md.md)] 열은 NULL입니다.  
   
      SELECT DB_NAME(st.dbid) AS database_name  
   
@@ -75,7 +75,7 @@ ms.locfileid: "67046775"
   
 3.  문제가 지속되면 Microsoft 고객 지원 서비스에 문의하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL:StmtRecompile 이벤트 클래스](../event-classes/sql-stmtrecompile-event-class.md)  
   
   

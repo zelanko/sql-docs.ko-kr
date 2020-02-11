@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_session_space_usage (TRANSACT-SQL) | Microsoft Docs
+title: sys. dm_db_session_space_usage (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2015
 ms.prod: sql
@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5e4febf0882f57f7d1545f86cbe4c65e322226dc
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68263968"
 ---
 # <a name="sysdm_db_session_space_usage-transact-sql"></a>sys.dm_db_session_space_usage(Transact-SQL)
@@ -33,26 +33,26 @@ ms.locfileid: "68263968"
   데이터베이스의 각 세션에 의해 할당되고 할당 취소된 페이지 수를 반환합니다.  
   
 > [!NOTE]  
->  이 보기에만 적용 됩니다는 [tempdb 데이터베이스](../../relational-databases/databases/tempdb-database.md)합니다.  
+>  이 뷰는 [tempdb 데이터베이스](../../relational-databases/databases/tempdb-database.md)에만 적용 됩니다.  
   
 > [!NOTE]  
->  이를 호출 하 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 나 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_db_session_space_usage**합니다.  
+>  또는 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서이를 호출 하려면 이름 **sys. dm_pdw_nodes_db_session_space_usage**을 사용 합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**smallint**|세션 ID입니다.<br /><br /> **session_id** 매핑됩니다 **session_id** 에서 [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)합니다.|  
+|**session_id**|**smallint**|세션 ID.<br /><br /> **session_id** 는 [dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)의 **session_id** 에 매핑됩니다.|  
 |**database_id**|**smallint**|데이터베이스 ID입니다.|  
 |**user_objects_alloc_page_count**|**bigint**|이 세션에 의해 사용자 개체에 예약되거나 할당된 페이지 수입니다.|  
 |**user_objects_dealloc_page_count**|**bigint**|이 세션에 의해 사용자 개체에서 할당 취소되고 더 이상 예약되지 않는 페이지 수입니다.|  
 |**internal_objects_alloc_page_count**|**bigint**|이 세션에 의해 내부 개체에 예약되거나 할당된 페이지 수입니다.|  
 |**internal_objects_dealloc_page_count**|**bigint**|이 세션에 의해 내부 개체에서 할당 취소되고 더 이상 예약되지 않는 페이지 수입니다.|  
-|**user_objects_deferred_dealloc_page_count**|**bigint**|지연 된 할당 취소에 대 한 표시 된 페이지 수입니다.<br /><br /> **참고:** 서비스 팩에 도입 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 고 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]입니다.|  
-|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
+|**user_objects_deferred_dealloc_page_count**|**bigint**|지연 된 할당 취소로 표시 된 페이지 수입니다.<br /><br /> **참고:** 및 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]용 서비스 팩에 도입 되었습니다.|  
+|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
 
-온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
-온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 프리미엄 계층 필요는 `VIEW DATABASE STATE` 데이터베이스의 권한. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에 필요 합니다 **서버 관리자** 요소나 **Azure Active Directory 관리자** 계정.   
+에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]는 권한이 `VIEW SERVER STATE` 필요 합니다.   
+Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 계층에서는 데이터베이스에 대 `VIEW DATABASE STATE` 한 권한이 필요 합니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
 
 ## <a name="remarks"></a>설명  
  IAM 페이지는 이 뷰에서 보고되는 모든 할당 또는 할당 취소 수에 포함되지 않습니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "68263968"
   
  한 세션에서 여러 개의 요청이 동시에 활성화될 수 있습니다. 요청이 병렬 쿼리인 경우 여러 개의 스레드나 태스크를 시작할 수 있습니다.  
   
- 세션, 요청 및 작업에 대 한 자세한 내용은 참조 하세요. [sys.dm_exec_sessions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)합니다 [sys.dm_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md), 및 [sys.dm_os_tasks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)합니다.  
+ 세션, 요청 및 태스크에 대 한 자세한 내용은 [dm_exec_sessions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md), [dm_exec_requests &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)transact-sql&#41;및 dm_os_tasks [&#40;transact-sql ](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)&#41;을 참조 하십시오.  
   
 ## <a name="user-objects"></a>사용자 개체  
  사용자 개체 페이지 카운터에 포함되는 개체는 다음과 같습니다.  
@@ -79,7 +79,7 @@ ms.locfileid: "68263968"
 -   테이블 반환 함수에서 반환된 테이블  
   
 ## <a name="internal-objects"></a>내부 개체  
- 내부 개체는만 **tempdb**합니다. 내부 개체 페이지 카운터에 포함되는 개체는 다음과 같습니다.  
+ 내부 개체는 **tempdb**에만 있습니다. 내부 개체 페이지 카운터에 포함되는 개체는 다음과 같습니다.  
   
 -   커서 또는 스풀 작업에 대한 작업 테이블 및 임시 LOB(Large Object) 스토리지  
   
@@ -88,22 +88,22 @@ ms.locfileid: "68263968"
 -   정렬 실행  
   
 ## <a name="physical-joins"></a>물리적 조인  
- ![Sys.dm_db_session_space_usage에 대 한 물리적 조인](../../relational-databases/system-dynamic-management-views/media/join-dm-db-session-space-usage-1.gif "sys.dm_db_session_space_usage에 대 한 물리적 조인")  
+ ![sys.dm_db_session_space_usage에 대한 물리적 조인](../../relational-databases/system-dynamic-management-views/media/join-dm-db-session-space-usage-1.gif "sys.dm_db_session_space_usage에 대한 물리적 조인")  
   
 ## <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-|보낸 사람|수행할 작업|관계|  
+|원본|수행할 작업|관계|  
 |----------|--------|------------------|  
-|dm_db_session_space_usage.session_id|dm_exec_sessions.session_id|일 대 일|  
+|dm_db_session_space_usage.session_id|dm_exec_sessions.session_id|일대일|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [데이터베이스 관련 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;데이터베이스 관련 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
- [sys.dm_os_tasks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)   
- [sys.dm_db_task_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
- [sys.dm_db_file_space_usage&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)  
+ [dm_os_tasks &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)   
+ [dm_db_task_space_usage &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
+ [dm_db_file_space_usage &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)  
   
   
 

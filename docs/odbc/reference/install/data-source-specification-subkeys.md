@@ -1,5 +1,5 @@
 ---
-title: 데이터 소스 사양 하위 키 | Microsoft Docs
+title: 데이터 원본 사양 하위 키 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,27 +15,27 @@ ms.assetid: d7e88a07-e6ab-4258-a45d-1ca21234fbec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fae642b46b4c652583622ec4832b3217d0b1681c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68068558"
 ---
 # <a name="data-source-specification-subkeys"></a>데이터 소스 사양 하위 키
-ODBC 데이터 원본 하위 키에 나열 된 각 데이터 원본에는 자체의 하위 키를 있습니다. 이 하위 키는 ODBC 데이터 원본 하위 키 아래에서 해당 값으로 동일한 이름이 있습니다. 이 하위 키 아래의 값 드라이버 DLL을 나열 해야 및 데이터 원본에 대 한 설명을 나열할 수 있습니다. 드라이버에서 번역을 지 원하는 경우 값을 기본 변환기, DLL, 기본 변환 및 기본 변환 옵션 이름을 나열할 수 있습니다. 값은 드라이버에서 데이터 원본에 연결 하는 데 필요한 기타 정보를 나열할 수도 있습니다. 예를 들어, 서버 이름, 데이터베이스 이름 또는 스키마 이름 드라이버가 필요할 수 있습니다.  
+ODBC 데이터 원본 하위 키에 나열 된 각 데이터 원본에는 자체의 하위 키가 있습니다. 이 하위 키는 ODBC 데이터 원본 하위 키 아래에 있는 해당 값과 동일한 이름을 갖습니다. 이 하위 키의 값은 드라이버 DLL을 나열 하 고 데이터 원본에 대 한 설명을 나열할 수 있습니다. 드라이버가 번역기를 지 원하는 경우에는이 값에 기본 변환기의 이름, 기본 변환 DLL 및 기본 변환 옵션이 나열 될 수 있습니다. 값은 데이터 원본에 연결 하는 드라이버에 필요한 기타 정보를 나열할 수도 있습니다. 예를 들어 드라이버에는 서버 이름, 데이터베이스 이름 또는 스키마 이름이 필요할 수 있습니다.  
   
- 값의 형식은 다음 표에 나와 있는 것 처럼입니다. 만 드라이버 값이 필요 합니다.  
+ 값의 형식은 다음 표에 나와 있습니다. 드라이버 값만 필요 합니다.  
   
-|이름|데이터 형식|data|  
+|속성|데이터 형식|data|  
 |----------|---------------|----------|  
-|설명|REG_SZ|*description*|  
-|드라이버|REG_SZ|*driver-DLL-path*|  
-|TranslationDLL|REG_SZ|*translator-DLL-path*|  
-|TranslationName|REG_SZ|*translator-name*|  
-|TranslationOption|REG_SZ|*translation-option*|  
-|*opt-value-name*|*opt-value-type*|*opt-value-data*|  
+|Description|REG_SZ|*한*|  
+|드라이버|REG_SZ|*드라이버 DLL-경로*|  
+|TranslationDLL|REG_SZ|*translator-DLL 경로*|  
+|TranslationName|REG_SZ|*번역기-이름*|  
+|TranslationOption|REG_SZ|*번역-옵션*|  
+|*opt-value-name*|*opt-값 형식*|*opt 값-데이터*|  
   
- 예를 들어 SQL Server 드라이버 OEM에 대 한 서버 이름과 플래그를 ANSI 변환 하는 데 필요한 하 고 이러한 서버 및 OEMTOANSI 값을 정의 합니다. 또한 Microsoft® 코드 페이지 Translator를 사용 하 여 Windows® 라틴어 1 (1250) 및 다국어 (850) 코드 페이지 사이 변환 인벤토리 데이터 소스는 가정 합니다. 인벤토리 하위 키 아래의 값은 다음과 같을 수 있습니다.  
+ 예를 들어 SQL Server 드라이버에서 서버 이름과 ANSI 간 변환을 위한 플래그를 요구 하 고 이러한에 대 한 서버 및 OEMTOANSI 값을 정의 한다고 가정 합니다. 또한 인벤토리 데이터 원본에서 Microsoft® 코드 페이지 변환기를 사용 하 여 Windows® 라틴어 1 (1250) 및 다국어 (850) 코드 페이지 간을 변환 한다고 가정 합니다. 인벤토리 하위 키 아래에 있는 값은 다음과 같을 수 있습니다.  
   
 ```  
 Description : REG_SZ : Inventory database on server InvServ  

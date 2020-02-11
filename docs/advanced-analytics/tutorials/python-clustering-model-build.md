@@ -12,10 +12,10 @@ ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9669686d0163b9ce1c362e7cdf2814c7a95bfaa8
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727109"
 ---
 # <a name="tutorial-build-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>자습서: Python에서 SQL Server Machine Learning Services을 사용하여 고객을 분류하기 위한 모델 빌드
@@ -24,7 +24,7 @@ ms.locfileid: "73727109"
 
 4부로 구성된 자습서 시리즈의 3부에서는 Python에서 K-평균 모델을 빌드하여 클러스터링을 수행합니다. 이 시리즈의 다음 이야기에서는 SQL Server Machine Learning Services를 사용하여 SQL 데이터베이스에 이 모델을 배포합니다.
 
-이 문서에서는 다음과 같은 방법을 알아봅니다.
+이 문서에서는 다음을 수행하는 방법을 알아봅니다.
 
 > [!div class="checklist"]
 > * KI-평균 알고리즘에 대한 클러스터 수 정의

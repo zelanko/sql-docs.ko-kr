@@ -18,10 +18,10 @@ ms.assetid: 83dfb6bd-dbd5-45d8-aad2-a11926317f91
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 67297de6badb15b493a5f17cbfe63bacc940a882
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660836"
 ---
 # <a name="startservice-method-sqlservice-class"></a>StartService 메서드(SqlService 클래스)
@@ -36,7 +36,7 @@ object.StartService()
 ```  
   
 ## <a name="parts"></a>부분  
- *object*  
+ *개체가*  
  서비스를 나타내는 [SqlService 클래스](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
@@ -45,8 +45,8 @@ object.StartService()
  0  
  성공했습니다. 요청이 수락되었습니다.  
   
- 1\.  
- 지원되지 않음. 요청이 지원되지 않습니다.  
+ 1  
+ 지원되지 않습니다. 요청이 지원되지 않습니다.  
   
  2  
  액세스가 거부되었습니다.)가 나타납니다. 사용자에게 적절한 액세스 권한이 없습니다.  
@@ -117,9 +117,9 @@ object.StartService()
  24  
  서비스가 이미 일시 중지되었습니다. 서비스가 현재 시스템에서 일시 중지되었습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [서비스 시작 및 중지](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

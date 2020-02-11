@@ -1,5 +1,5 @@
 ---
-title: 주제 영역 데이터베이스 스키마 옵션 (스키마 생성 마법사) (Analysis Services-다차원 데이터) | Microsoft Docs
+title: 주제 영역 데이터베이스 스키마 옵션 (스키마 생성 마법사) (Analysis Services 다차원 데이터) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2173255654b9ef02c269ec34bd21f93f8bf629a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067981"
 ---
 # <a name="subject-area-database-schema-options-schema-generation-wizard-analysis-services---multidimensional-data"></a>주제 영역 데이터베이스 스키마 옵션(스키마 생성 마법사)(Analysis Services - 다차원 데이터)
+  
   **주제 영역 데이터베이스 스키마 옵션** 페이지를 사용하여 스키마 생성 방법을 제어하고 데이터 유지 방법을 정의할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **소유 스키마**  
  새 주제 영역 데이터베이스 내 스키마의 이름을 지정합니다.  
   
@@ -53,7 +54,7 @@ ms.locfileid: "66067981"
 |채우지 않음|주제 영역 시간 테이블을 채우지 않습니다.|  
 |비어 있는 경우에만 채우기|비어 있는 경우에만 주제 영역 시간 테이블을 채웁니다.|  
   
-## <a name="see-also"></a>관련 항목  
- [스키마 생성 마법사 F1 도움말 &#40;Analysis Services-다차원 데이터&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>참고 항목  
+ [스키마 생성 마법사 F1 도움말 &#40;Analysis Services 다차원 데이터&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)  
   
   

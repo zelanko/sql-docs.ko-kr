@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 076db2370f027b0d7dffeccb294899b48a065c40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188661"
 ---
 # <a name="understand-sql-server-management-studio-windows-management"></a>SQL Server Management Studio의 창 관리 이해
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 도구 창은 많은 기능을 가진 유연하고 효율적인 시스템입니다. 이 시스템을 사용하여 다음을 수행할 수 있습니다.  
+  의 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 도구 창은 다음과 같은 기능을 갖춘 유연 하 고 효율적인 시스템입니다.  
   
 -   개발 및 관리를 위한 사용자 작업 영역을 최대화합니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "63188661"
 > [!IMPORTANT]  
 >  로그인 계정(또는 포함된 데이터베이스 사용자)이 연결되고 인증되면 해당 연결에 해당 로그인에 대한 ID 정보가 캐시됩니다. Windows 인증 로그인을 위해 Windows 그룹의 멤버 자격에 대한 정보가 포함됩니다. 연결이 유지되는 한 로그인의 ID가 인증된 상태로 유지됩니다. 암호 재설정이나 Windows 그룹 멤버 자격 변경 등의 ID 변경 사항을 적용하려면 인증 기관(Windows 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])에서 로그오프한 후 다시 로그인해야 합니다. **sysadmin** 고정 서버 역할의 멤버나 **ALTER ANY CONNECTION** 권한이 있는 로그인은 **KILL** 명령을 사용하여 연결을 종료하고 다시 연결하도록 할 수 있습니다. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 개체 탐색기 또는 쿼리 편집기 창에 다중 연결할 때 연결 정보를 다시 사용합니다. 다시 연결하도록 모든 연결을 닫습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Management Studio 사용](../database-engine/use-sql-server-management-studio.md)   
  [SQL Server Management Studio 환경](the-sql-server-management-studio-environment.md)  
   

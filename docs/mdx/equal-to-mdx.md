@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 189facb54de244ff220b41ec08c8b02faf5a2c27
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139319"
 ---
 # <a name="-equal-to-mdx"></a>=(같음)(MDX)
@@ -21,7 +21,7 @@ ms.locfileid: "68139319"
   하나의 MDX 식의 값이 다른 MDX 식의 값과 같은지 확인하는 비교 연산을 수행합니다.  
   
 > [!NOTE]  
->  개체 비교를 사용 합니다 [IS &#40;MDX&#41; ](../mdx/is-mdx.md) 연산자입니다. 예를 들어 쿼리 축에 있는 현재 멤버가 특정 멤버인지 확인할 때 IS 연산자를 사용합니다.  
+>  개체를 비교 하려면 [IS &#40;MDX&#41;](../mdx/is-mdx.md) 연산자를 사용 합니다. 예를 들어 쿼리 축에 있는 현재 멤버가 특정 멤버인지 확인할 때 IS 연산자를 사용합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,14 +34,14 @@ MDX_Expression = MDX_Expression
  *MDX_Expression*  
  유효한 MDX 식입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  다음 조건을 기반으로 하는 부울 값입니다.  
   
--   **true** 경우 첫 번째 매개 변수의 값은 두 번째 매개 변수의 값과 같습니다.  
+-   첫 번째 매개 변수의 값이 두 번째 매개 변수의 값과 같으면 **true** 입니다.  
   
--   **false** 첫 번째 매개 변수의 두 번째 매개 변수의 값과 같지 않으면.  
+-   첫 번째 매개 변수의 값이 두 번째 매개 변수의 값과 같지 않으면 **false** 입니다.  
   
--   **true** 경우 매개 변수가 모두 null이 또는 하나의 매개 변수가 null 및 다른 매개 변수는 0입니다.  
+-   두 매개 변수가 모두 null 이거나 한 매개 변수가 null이 고 다른 매개 변수가 0 이면 **true** 입니다.  
   
 ## <a name="examples"></a>예  
  다음 쿼리에서는 이러한 조건의 예를 보여 줍니다.  
@@ -74,7 +74,7 @@ MDX_Expression = MDX_Expression
   
  `From [Adventure Works]`  
   
-## <a name="see-also"></a>관련 항목  
- [MDX 연산자 참조 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [Mdx 연산자 참조 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

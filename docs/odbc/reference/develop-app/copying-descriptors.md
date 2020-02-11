@@ -14,13 +14,13 @@ ms.assetid: 949a860d-6579-4218-882e-8c061688dd87
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7d41cd744d39113c556c4ee8bc17411b7992e596
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002145"
 ---
 # <a name="copying-descriptors"></a>설명자 복사
-합니다 **SQLCopyDesc** 함수가 호출 되어 다른 설명자에 하나의 설명자 필드를 복사 합니다. IRD 아니라 응용 프로그램 설명자를 또는 IPD 필드를 복사할 수 있습니다. 설명자의 모든 형식에서 필드를 복사할 수 있습니다. 원본 및 대상 모두 설명자에 대해 정의 된 필드에만 복사 됩니다. **SQLCopyDesc** 설명자의 할당 유형을 변경할 수 없으므로 SQL_DESC_ALLOC_TYPE 필드를 복사 하지 않습니다. 복사 된 필드는 기존 필드를 덮어씁니다.  
+**Sqlcopydesc** 함수를 호출 하 여 한 설명자의 필드를 다른 설명자에 복사 합니다. 필드는 응용 프로그램 설명자 또는 IPD 복사할 수 있지만 IRD에 복사할 수는 없습니다. 모든 유형의 설명자에서 필드를 복사할 수 있습니다. 원본 설명자와 대상 설명자 모두에 대해 정의 된 필드만 복사 됩니다. 설명자의 할당 유형을 변경할 수 없으므로 **Sqlcopydesc** 는 SQL_DESC_ALLOC_TYPE 필드를 복사 하지 않습니다. 복사 된 필드는 기존 필드를 덮어씁니다.  
   
- 카드가 하나 문 핸들에서 다른 문 핸들에서 APD 역할도 할 수 있습니다. 이 응용 프로그램을 간에 응용 프로그램 수준에서 데이터를 복사 하지 않고 테이블 행을 복사할 수 있습니다. 이 위해 테이블의 인출한 행에 설명 하는 행 설명자를 문에서 매개 변수에 대해 매개 변수 설명자 다시 사용 됩니다. SQL_MAX_CONCURRENT_ACTIVITIES 정보 유형을이 작업을 수행 하려면 1 보다 커야 합니다.
+ 하나의 문 핸들을 사용 하는 경우 다른 문 핸들의 APD로 사용할 수 있습니다. 이렇게 하면 응용 프로그램 수준에서 데이터를 복사 하지 않고 테이블 간에 행을 복사할 수 있습니다. 이렇게 하기 위해 테이블의 인출 된 행을 설명 하는 행 설명자가 INSERT 문의 매개 변수에 대 한 매개 변수 설명자로 다시 사용 됩니다. 이 작업이 성공 하려면 SQL_MAX_CONCURRENT_ACTIVITIES 정보 유형이 1 보다 커야 합니다.

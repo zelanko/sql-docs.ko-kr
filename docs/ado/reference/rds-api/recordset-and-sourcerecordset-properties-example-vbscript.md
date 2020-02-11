@@ -1,5 +1,5 @@
 ---
-title: Recordset 및 SourceRecordset 속성 예제 (VBScript) | Microsoft Docs
+title: 레코드 집합 및 SourceRecordset 속성 예제 (VBScript) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,19 +16,19 @@ ms.assetid: 95175316-cd10-4cf7-96ba-2a226fd97701
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 30b5a463c2180a4cc39ac1a0d2333b8b75d02bab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963582"
 ---
 # <a name="recordset-and-sourcerecordset-properties-example-vbscript"></a>Recordset 및 SourceRecordset 속성 예제(VBScript)
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
+>  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
   
- 다음 예제에서는 필요한 매개 변수를 설정 하는 방법을 보여 줍니다 합니다 [업데이트할](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 런타임 시 기본 비즈니스 개체입니다.  
+ 다음 예에서는 런타임에 [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 기본 비즈니스 개체의 필수 매개 변수를 설정 하는 방법을 보여 줍니다.  
   
- 이 예제를 테스트 하려면에서 잘라내기 및 붙여넣기 사이 다음이 코드를 \<본문 > 및 \</b > 일반 HTML 태그를에서 문서화 하 고 이름을 **RecordsetVBS.asp**합니다. ASP 스크립트에서 서버를 식별 합니다.  
+ 이 예를 테스트 하려면이 코드를 잘라내어 \<본문>와 \<> 태그 사이에 붙여넣고 **RecordsetVBS**. ASP 스크립트는 서버를 식별 합니다.  
   
 ```  
 <!-- BeginRecordSetVBS -->  
@@ -127,7 +127,7 @@ CLASSID="CLSID:BD96C556-65A3-11D0-983A-00C04FC29E36">
 <!-- EndRecordsetVBS -->  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [DataFactory 개체 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
  [Recordset, SourceRecordset 속성(RDS)](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)
 

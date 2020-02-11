@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5d87430c64bac133523d7001a88a894bb3985a5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211678"
 ---
 # <a name="modify-data-through-a-view"></a>뷰를 통해 데이터 수정
@@ -32,7 +32,7 @@ ms.locfileid: "68211678"
   
      [보안](#Security)  
   
--   **뷰를 통해 테이블 데이터를 수정 하려면 사용 합니다.**  
+-   **뷰를 통해 테이블 데이터를 수정하려면:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -42,24 +42,27 @@ ms.locfileid: "68211678"
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
--   [CREATE VIEW&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql)의 '업데이트할 수 있는 뷰' 섹션을 참조하세요.  
+-   
+  [CREATE VIEW&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql)의 '업데이트할 수 있는 뷰' 섹션을 참조하세요.  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  수행하는 동작에 따라 대상 테이블에 대한 UPDATE, INSERT 또는 DELETE 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-modify-table-data-through-a-view"></a>뷰를 통해 테이블 데이터를 수정하려면  
   
-1.  **개체 탐색기**에서 뷰가 포함된 데이터베이스를 확장한 다음 **뷰**를 확장합니다.  
+1.  
+  **개체 탐색기**에서 뷰가 포함된 데이터베이스를 확장한 다음 **뷰**를 확장합니다.  
   
 2.  뷰를 마우스 오른쪽 단추로 클릭하고 **상위 200개의 행 편집**을 선택합니다.  
   
 3.  수정될 행을 반환하기 위해 **SQL** 창에서 SELECT 문을 수정해야 할 수도 있습니다.  
   
-4.  **결과** 창에서 변경하거나 삭제할 행을 찾습니다. 행을 삭제하려면 행을 마우스 오른쪽 단추로 클릭하고 **삭제**를 선택합니다. 하나 이상의 열에서 데이터를 변경하려면 열에서 데이터를 수정합니다.  
+4.  
+  **결과** 창에서 변경하거나 삭제할 행을 찾습니다. 행을 삭제하려면 행을 마우스 오른쪽 단추로 클릭하고 **삭제**를 선택합니다. 하나 이상의 열에서 데이터를 변경하려면 열에서 데이터를 수정합니다.  
   
     > [!IMPORTANT]  
     >  뷰가 여러 개의 기본 테이블을 참조하는 경우 행을 삭제할 수 없습니다. 단일 기본 테이블에 속하는 열만 업데이트할 수 있습니다.  

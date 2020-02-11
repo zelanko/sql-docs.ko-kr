@@ -1,5 +1,5 @@
 ---
-title: 계산 된 열 (SSAS 테이블 형식) | Microsoft Docs
+title: 계산 열 (SSAS 테이블 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,21 +11,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e9a93fffba5c34d26cdb0305b0f6a97369e51b3e
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67284888"
 ---
 # <a name="calculated-columns-ssas-tabular"></a>계산 열(SSAS 테이블 형식)
-  테이블 형식 모델에서 계산 열을 사용하여 새 데이터를 모델에 추가할 수 있습니다. 붙여넣기 또는 열에 값을 가져오는 대신 열 행 수준 값을 정의 하는 DAX 수식을 만듭니다. 그러면 보고서, 피벗 테이블 또는 피벗 차트에서 다른 열과 마찬가지로 계산 열을 사용할 수 있습니다.  
+  테이블 형식 모델에서 계산 열을 사용하여 새 데이터를 모델에 추가할 수 있습니다. 열에 값을 붙여 넣거나 가져오는 대신 열의 행 수준 값을 정의 하는 DAX 수식을 만듭니다. 그러면 보고서, 피벗 테이블 또는 피벗 차트에서 다른 열과 마찬가지로 계산 열을 사용할 수 있습니다.  
   
 > [!NOTE]  
 >  DirectQuery 모드의 테이블 형식 모델에 대해서는 계산 열이 지원되지 않습니다. 자세한 내용은 [DirectQuery 모드&#40;SSAS 테이블 형식&#41;](directquery-mode-ssas-tabular.md)를 참조하세요.  
   
  이 항목의 섹션:  
   
--   [이점](#bkmk_understanding)  
+-   [아니라](#bkmk_understanding)  
   
 -   [계산 열 이름 지정](#bkmk_naming)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "67284888"
   
  이 수식은 StartDate 열에서 월을 추출합니다. 그런 다음 테이블의 각 행에 대해 월의 마지막 날을 계산합니다. 두 번째 매개 변수는 StartDate에서 해당 월의 이전 또는 이후의 월 수를 지정합니다. 이 경우 0이며 같은 달임을 나타냅니다. 예를 들어 StartDate 열의 값이 6/1/2001일 경우 계산 열의 값은 6/30/2001이 됩니다.  
   
-##  <a name="bkmk_naming"></a> 계산 열 이름 지정  
+##  <a name="bkmk_naming"></a>계산 열 이름 지정  
  기본적으로 새 계산 열은 테이블의 다른 열 오른쪽에 추가되며, **CalculatedColumn1**, **CalculatedColumn2**등의 기본 이름이 열에 자동으로 할당됩니다. 열을 마우스 오른쪽 단추로 클릭한 다음 열 삽입을 클릭하여 두 개의 기존 열 사이에 새 열을 만들 수도 있습니다. 동일한 테이블 내에서 열을 클릭하고 끌어서 다시 정렬할 수 있으며 열을 만든 후에 열의 이름을 바꿀 수 있습니다. 하지만 계산 열의 변경에 대해 다음과 같은 제한 사항을 알고 있어야 합니다.  
   
 -   각 열 이름은 테이블에서 고유해야 합니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "67284888"
   
 -   열 이름 내에 사용할 수 없는 몇 가지 문자가 있습니다. 자세한 내용은 [DAX Syntax Specification for PowerPivot](/dax/dax-syntax-reference)의 "명명 요구 사항"을 참조하십시오.  
   
-##  <a name="bkmk_perf"></a> 계산 열의 성능  
+##  <a name="bkmk_perf"></a>계산 열의 성능  
  계산 열의 수식은 측정값에 사용된 수식보다 더 많은 리소스가 필요할 수 있습니다. 한 가지 이유는 계산 열의 결과는 테이블의 각 행에 대해 항상 계산되지만 측정값은 보고서, 피벗 테이블 또는 피벗 차트에 사용된 필터에 의해 정의된 셀에 대해서만 계산된다는 것입니다. 예를 들어 백만 개의 행이 있는 테이블에는 항상 백만 개의 결과가 있는 계산 열이 있으며 성능에 대한 영향이 각각 다릅니다. 하지만 피벗 테이블은 일반적으로 행 및 열 머리글을 적용하여 데이터를 필터링하므로 피벗 테이블의 각 셀에 있는 데이터의 하위 집합에 대해서만 측정값이 계산됩니다.  
   
  수식에는 값을 평가하는 식이나 다른 열과 같은 수식에서 참조되는 개체에 대한 종속성이 있습니다. 예를 들어 다른 열을 기반으로 하는 계산된 열을 계산하거나 열 참조가 있는 식을 포함하는 계산을 수행하려면 먼저 다른 열을 계산해야 합니다. 통합 문서에는 기본적으로 자동 새로 고침이 사용되도록 설정되어 있으므로 값이 업데이트되고 수식이 새로 고쳐지는 동안에는 해당 종속성이 성능에 영향을 줄 수 있습니다.  
@@ -81,11 +81,11 @@ ms.locfileid: "67284888"
   
 |항목|Description|  
 |-----------|-----------------|  
-|[계산 열 만들기&#40;SSAS 테이블 형식&#41;](ssas-calculated-columns-create-a-calculated-column.md)|이 항목의 태스크에서는 새 계산 열을 테이블에 추가하는 방법을 설명합니다.|  
+|[SSAS 테이블 형식&#41;&#40;계산 열 만들기](ssas-calculated-columns-create-a-calculated-column.md)|이 항목의 태스크에서는 새 계산 열을 테이블에 추가하는 방법을 설명합니다.|  
   
-## <a name="see-also"></a>관련 항목  
- [테이블 및 열&#40;SSAS 테이블 형식&#41;](tables-and-columns-ssas-tabular.md)   
- [측정값&#40;SSAS 테이블 형식&#41;](measures-ssas-tabular.md)   
- [계산&#40;SSAS 테이블 형식&#41;](calculations-ssas-tabular.md)  
+## <a name="see-also"></a>참고 항목  
+ [SSAS 테이블 형식&#41;&#40;테이블 및 열](tables-and-columns-ssas-tabular.md)   
+ [SSAS 테이블 형식&#41;&#40;측정값](measures-ssas-tabular.md)   
+ [SSAS 테이블 형식&#41;계산 &#40;](calculations-ssas-tabular.md)  
   
   

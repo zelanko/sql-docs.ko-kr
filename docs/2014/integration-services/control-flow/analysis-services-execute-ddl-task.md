@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a74ab896e974410e8357a22546cb63ed7365a149
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833158"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Analysis Services DDL 실행 태스크
@@ -38,7 +38,7 @@ ms.locfileid: "62833158"
 ## <a name="ddl-statements"></a>DDL 문  
  DDL 문은 ASSL( [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language) 문으로 표현되고 XML for Analysis(XMLA) 명령에 포함됩니다.  
   
--   ASSL은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스와 이 인스턴스에 포함된 데이터베이스 및 데이터베이스 개체를 정의하고 설명하는 데 사용합니다. 자세한 내용은 [Analysis Services Scripting Language &#40;ASSL&#41; 참조](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)합니다.  
+-   ASSL은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스와 이 인스턴스에 포함된 데이터베이스 및 데이터베이스 개체를 정의하고 설명하는 데 사용합니다. 자세한 내용은 [Analysis Services 스크립팅 언어 &#40;,&#41; 참조](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)를 참조 하세요.  
   
 -   XMLA는 만들기, 변경 또는 처리와 같은 동작 명령을 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스로 보내는 데 사용하는 명령 언어입니다. 자세한 내용은 [XMLA&#40;XML for Analysis&#41; 참조](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)를 참조하세요.  
   
@@ -216,15 +216,17 @@ ms.locfileid: "62833158"
 ## <a name="configuration-of-the-analysis-services-execute-ddl-task"></a>Analysis Services DDL 실행 태스크 구성  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
+ 
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [Analysis Services DDL 실행 태스크 편집기&#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Analysis Services DDL 실행 태스크 편집기 &#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Analysis Services DDL 실행 태스크 편집기&#40;DDL 페이지&#41;](../analysis-services-execute-ddl-task-editor-ddl-page.md)  
+-   [Ddl 실행 태스크 편집기 &#40;DDL 페이지를 Analysis Services&#41;](../analysis-services-execute-ddl-task-editor-ddl-page.md)  
   
 -   [식 페이지](../expressions/expressions-page.md)  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법을 보려면 다음 항목을 클릭하십시오.  
+ 
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법을 보려면 다음 항목을 클릭하십시오.  
   
 -   [태스크 또는 컨테이너의 속성 설정](../set-the-properties-of-a-task-or-container.md)  
   

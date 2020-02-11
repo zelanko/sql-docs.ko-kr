@@ -1,5 +1,5 @@
 ---
-title: 테이블 반환 매개 변수 (OLE DB)를 사용 하 여 | Microsoft Docs
+title: 테이블 반환 매개 변수 (OLE DB) 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ee2ff452e8544e37977e46055fdb9b32af877366
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206668"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>테이블 반환 매개 변수 사용(OLE DB)
-  이 예제는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상에서만 작동합니다. 이 예제에서는 다음을 수행합니다.  
+  이 예제는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상에서만 작동합니다. 이 샘플 애플리케이션은 다음을 수행합니다.  
   
 -   IOpenRowset::OpenRowset을 통해 동적 검색을 사용하여 테이블 반환 매개 변수를 만듭니다.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "68206668"
   
 -   SQLNCLI11 오류를 처리하는 방법을 보여 줍니다.  
   
- 테이블 반환 매개 변수에 대 한 자세한 내용은 참조 하세요. [테이블 반환 매개 변수 &#40;SQL Server Native Client&#41;](../native-client/features/table-valued-parameters-sql-server-native-client.md)합니다.  
+ 테이블 반환 매개 변수에 대 한 자세한 내용은 [테이블 반환 매개 변수 &#40;SQL Server Native Client&#41;](../native-client/features/table-valued-parameters-sql-server-native-client.md)를 참조 하세요.  
   
 ## <a name="example"></a>예제  
  첫 번째([!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은 예제에서 사용하는 데이터베이스를 만듭니다.  
