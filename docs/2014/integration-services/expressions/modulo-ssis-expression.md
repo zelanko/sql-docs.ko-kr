@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 163dbfecd4605c6c9624d94c047b1c7e893d8fcd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768879"
 ---
 # <a name="modulo-ssis-expression"></a>(모듈로)(SSIS 식)
@@ -42,7 +42,7 @@ dividend % divisor
 ## <a name="result-types"></a>결과 형식  
  두 인수의 데이터 형식에 따라 결정됩니다. 자세한 내용은 [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md)을 참조하세요.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  두 식이 모두 부호 있는 정수 또는 부호 없는 정수 데이터 형식이어야 합니다.  
   
  두 피연산자 중 하나가 Null이면 결과도 Null입니다.  
@@ -74,7 +74,7 @@ SalesQuota % 12
 @Value % 2 == 0? "even":"odd"  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [연산자 우선 순위 및 계산 방향](operator-precedence-and-associativity.md)   
  [연산자&#40;SSIS 식&#41;](operators-ssis-expression.md)  
   

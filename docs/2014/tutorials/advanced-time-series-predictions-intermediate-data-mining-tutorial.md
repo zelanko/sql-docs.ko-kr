@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ca144d1d473f7df49f73d5ed170052c61ce6107d
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893695"
 ---
 # <a name="advanced-time-series-predictions-intermediate-data-mining-tutorial"></a>고급 시계열 예측(중급 데이터 마이닝 자습서)
@@ -26,17 +26,17 @@ ms.locfileid: "68893695"
   
  **단계**  
   
-1.  [확장 된 판매 데이터 준비 (예측 용)](#bkmk_newExtendData)  
+1.  [확장 판매 데이터 준비(예측용)](#bkmk_newExtendData)  
   
-2.  [집계 된 데이터 준비 (모델 작성)](#bkmk_newReplaceData)  
+2.  [집계된 데이터 준비(모델 작성용)](#bkmk_newReplaceData)  
   
-3.  [계열 데이터 준비 (교차 예측 용)](#bkmk_CrossData2)  
+3.  [계열 데이터 준비(교차 예측용)](#bkmk_CrossData2)  
   
 4.  [EXTEND를 사용한 예측](../../2014/tutorials/time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md)  
   
 5.  [교차 예측 모델 만들기](../../2014/tutorials/time-series-predictions-replacement-data-intermediate-data-mining.md)  
   
-6.  [REPLACE를 사용 하 여 예측](../../2014/tutorials/time-series-predictions-replacement-data-intermediate-data-mining.md)  
+6.  [REPLACE를 사용한 예측](../../2014/tutorials/time-series-predictions-replacement-data-intermediate-data-mining.md)  
   
 7.  [새 예측 검토](../../2014/tutorials/comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md)  
   
@@ -101,9 +101,9 @@ ms.locfileid: "68893695"
   
      **데이터 원본**:[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
-     **테이블 및 뷰 선택**: 방금 만든 테이블 NewSalesData를 선택 합니다.  
+     **테이블 및 뷰 선택**: 방금 만든 테이블 (NewSalesData)을 선택 합니다.  
   
-3.  **마침**을 클릭합니다.  
+3.  **Finish**를 클릭합니다.  
   
 4.  데이터 원본 뷰 디자인 화면에서 NewSalesData를 마우스 오른쪽 단추로 클릭 한 다음 **데이터 탐색** 을 선택 하 여 데이터를 확인 합니다.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "68893695"
 >  이 데이터는 예측에만 사용하므로 데이터는 불완전해도 상관없습니다.  
   
 ##  <a name="bkmk_CrossData2"></a>교차 예측 모델에 대 한 데이터 만들기  
- 원래 예측 모델에 사용 된 데이터는 이미 여러 자전거 모델을 더 적은 수의 범주로 축소 하 고 개별 국가의 결과를 지역으로 병합 하는 뷰 vTimeSeries에 의해 약간 그룹화 되었습니다. 전 세계 예측에 사용할 수 있는 모델을 만들기 위해 데이터 원본 뷰 디자이너에서 직접 추가 단순 집계를 생성합니다. 새 데이터 원본 뷰에는 전 지역의 모든 제품 판매에 대한 합계와 평균만 포함됩니다.  
+ 여러 자전거 모델이 더 적은 수의 범주로 축소되고 개별 국가의 결과가 지역별로 병합되는 등, 원래 예측 모델에 사용된 데이터는 vTimeSeries 뷰에 의해 이미 일부 그룹화되어 있습니다. 전 세계 예측에 사용할 수 있는 모델을 만들기 위해 데이터 원본 뷰 디자이너에서 직접 추가 단순 집계를 생성합니다. 새 데이터 원본 뷰에는 전 지역의 모든 제품 판매에 대한 합계와 평균만 포함됩니다.  
   
  모델에 사용할 데이터 원본을 만든 후에는 예측에 사용할 새 데이터 원본 뷰를 만들어야 합니다. 예를 들어, 새로운 전 세계 모델을 사용하여 유럽 지역의 판매를 예측하려는 경우 유럽 지역의 데이터만 넣어야 합니다. 따라서 원래 데이터를 필터링하는 새 데이터 원본 뷰를 설정하고 각 예측 쿼리 집합에 대한 필터 조건을 변경합니다.  
   
@@ -121,7 +121,8 @@ ms.locfileid: "68893695"
   
 2.  마법사 시작 페이지에서 **다음**을 클릭합니다.  
   
-3.  **데이터 원본 선택** 페이지에서 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]를 선택한 후 **다음**을 클릭합니다.  
+3.  
+  **데이터 원본 선택** 페이지에서 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]를 선택한 후 **다음**을 클릭합니다.  
   
 4.  **테이블 및 뷰 선택**페이지에서 테이블을 추가 하지 않습니다. **다음**을 클릭 하면 됩니다.  
   
@@ -129,7 +130,7 @@ ms.locfileid: "68893695"
   
 6.  다음으로 빈 데이터 원본 뷰 디자인 화면을 마우스 오른쪽 단추로 클릭 한 다음 **새 명명 된 쿼리**를 선택 합니다.  
   
-7.  **명명 된 쿼리 만들기** 대화 상자에서 **이름**에를 입력 `AllRegions`하 고 **설명**에 **모든 모델 및 지역에 대 한 매출 합계 및 평균**을 입력 합니다.  
+7.  **명명 된 쿼리 만들기** 대화 상자에서 **이름** `AllRegions`에를 입력 하 고 **설명**에 **모든 모델 및 지역에 대 한 매출 합계 및 평균**을 입력 합니다.  
   
 8.  SQL 텍스트 창에 다음 문을 입력한 다음 확인을 클릭합니다.  
   
@@ -154,15 +155,16 @@ ms.locfileid: "68893695"
   
      **테이블 및 뷰 선택**: 테이블을 선택 하지 않습니다.  
   
-     **이름**: `T1000 Pacific Region`  
+     **이름**:`T1000 Pacific Region`  
   
-3.  **마침**을 클릭합니다.  
+3.  **Finish**를 클릭합니다.  
   
 4.  **T1000 태평양 지역**에 대 한 빈 디자인 화면을 마우스 오른쪽 단추로 클릭 한 다음 **새 명명 된 쿼리**를 선택 합니다.  
   
-     **명명된 쿼리 만들기** 대화 상자가 나타납니다. 이름을 다시 입력한 후 설명을 추가합니다.  
+     
+  **명명된 쿼리 만들기** 대화 상자가 나타납니다. 이름을 다시 입력한 후 설명을 추가합니다.  
   
-     **이름**: `T1000 Pacific Region`  
+     **이름**:`T1000 Pacific Region`  
   
      **설명**: **영역`vTimeSeries`및 모델로 필터링**  
   
@@ -182,9 +184,9 @@ ms.locfileid: "68893695"
      교차 예측 쿼리를 생성할 때 이 데이터를 모델에 대한 입력으로 사용합니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
- [업데이트 된 데이터 &#40;를 사용한 시계열 예측 중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md)  
+ [업데이트 된 데이터를 사용한 시계열 예측 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Microsoft 시계열 알고리즘](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [Microsoft 시계열 알고리즘 기술 참조](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
  [다차원 모델의 데이터 원본 뷰](https://docs.microsoft.com/analysis-services/multidimensional-models/data-source-views-in-multidimensional-models)  

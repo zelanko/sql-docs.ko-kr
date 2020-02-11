@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: af4f0f53a1822d2fd45fdbaacfd9ab05d783c237
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769330"
 ---
 # <a name="divide-ssis-expression"></a>Divide (SSIS Expression)
@@ -41,7 +41,7 @@ dividend / divisor
 ## <a name="result-types"></a>결과 형식  
  두 인수의 데이터 형식에 따라 결정됩니다. 자세한 내용은 [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md)을 참조하세요.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  두 피연산자 중 하나가 Null이면 결과도 Null입니다.  
   
  0으로 나눌 수는 없습니다. *divisor* 하위 식의 계산 방법에 따라 다음 오류 중 하나가 발생합니다.  
@@ -65,7 +65,7 @@ dividend / divisor
 ListPrice / StandardCost  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [연산자 우선 순위 및 계산 방향](operator-precedence-and-associativity.md)   
  [연산자&#40;SSIS 식&#41;](operators-ssis-expression.md)  
   

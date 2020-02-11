@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f567c92632e99bef38fc1a6eb7a0179929f467c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871215"
 ---
 # <a name="shrink-a-file"></a>파일 축소
@@ -59,7 +59,7 @@ ms.locfileid: "62871215"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  **sysadmin** 고정 서버 역할의 멤버 또는 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -72,7 +72,7 @@ ms.locfileid: "62871215"
   
 3.  **태스크**, **축소**를 차례로 가리킨 다음 **파일**을 클릭합니다.  
   
-     **데이터베이스 백업**  
+     **Database**  
      선택한 데이터베이스의 이름을 표시합니다.  
   
      **파일 유형**  
@@ -131,11 +131,11 @@ ms.locfileid: "62871215"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [DBCC SHRINKFILE](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql) 을 사용하여 `UserDB` 데이터베이스에 있는 `DataFile1` 이라는 데이터 파일의 크기를 7MB로 축소합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [DBCC SHRINKFILE](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql) 을 사용하여 `DataFile1` 데이터베이스에 있는 `UserDB` 이라는 데이터 파일의 크기를 7MB로 축소합니다.  
   
  [!code-sql[DBCC#DBCC_SHRINKFILE1](../../snippets/tsql/SQL14/tsql/dbcc/transact-sql/dbcc_other.sql#dbcc_shrinkfile1)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [DBCC SHRINKDATABASE&#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql)   
  [데이터베이스 축소](shrink-a-database.md)   
  [데이터베이스에서 데이터 또는 로그 파일 삭제](delete-data-or-log-files-from-a-database.md)   

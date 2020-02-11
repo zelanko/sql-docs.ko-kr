@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: eaafa011f1b99ea90afce2902c877d0a25b9e6e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63269885"
 ---
 # <a name="work-with-change-data-sql-server"></a>변경 데이터 작업(SQL Server)
@@ -36,7 +36,8 @@ ms.locfileid: "63269885"
   
  `An insufficient number of arguments were supplied for the procedure or function cdc.fn_cdc_get_all_changes_ ...`  
   
- `net changes` 쿼리에 대해 반환되는 해당 오류는 다음과 같습니다.  
+ 
+  `net changes` 쿼리에 대해 반환되는 해당 오류는 다음과 같습니다.  
   
  `Msg 313, Level 16, State 3, Line 1`  
   
@@ -67,12 +68,12 @@ ms.locfileid: "63269885"
   
 -   [cdc.fn_cdc_get_all_changes_<capture_instance>](/sql/relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql) 함수는 지정된 간격 동안 발생한 모든 변경 내용을 반환합니다. 이 함수는 항상 생성됩니다. 항목은 항상 먼저 변경 내용의 트랜잭션 커밋 LSN순으로 정렬된 다음 해당 트랜잭션 내의 변경을 순서대로 나열하는 값순으로 정렬되어 반환됩니다. 선택한 행 필터 옵션에 따라 업데이트 시 최종 행이 반환(행 필터 옵션 "all")되거나 업데이트 시 새 값과 이전 값이 모두 반환(행 필터 옵션 "all update old")됩니다.  
   
--   원본 테이블을 사용하도록 설정된 경우 @supports_net_changes 매개 변수가 1로 설정되면 [cdc.fn_cdc_get_net_changes_<capture_instance>](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql) 함수가 생성됩니다.  
+-   원본 테이블을 사용하도록 설정된 경우 [ 매개 변수가 1로 설정되면 ](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql)cdc.fn_cdc_get_net_changes_<capture_instance>@supports_net_changes 함수가 생성됩니다.  
   
     > [!NOTE]  
     >  이 옵션은 원본 테이블에 정의된 기본 키가 있거나 @index_name 매개 변수를 사용하여 고유 인덱스를 식별한 경우에만 지원됩니다.  
   
-     **netchanges** 함수는 수정된 원본 테이블 행당 하나의 변경 내용을 반환합니다. 지정된 간격 동안 해당 행에 대해 둘 이상의 변경 내용이 기록되는 경우 열 값에는 행의 마지막 내용이 반영됩니다. 대상 환경을 업데이트하는 데 필요한 작업을 올바르게 식별하려면 TVF에서 해당 간격 동안 행에 수행한 초기 작업과 행에 수행한 마지막 작업을 모두 고려해야 합니다. 행 필터 옵션 'all'을 지정한 경우 `net changes` 쿼리에서 반환하는 작업은 삽입, 삭제 또는 업데이트(새 값) 중 하나입니다. 집계 마스크를 계산하는 데 비용이 들기 때문에 이 옵션은 항상 업데이트 마스크를 Null로 반환합니다. 행에 대한 모든 변경 내용을 반영하는 집계 마스크가 필요한 경우 'all with mask' 옵션을 사용합니다. 다운스트림 처리에서 삽입과 업데이트를 구분할 필요가 없는 경우 'all with merge' 옵션을 사용합니다. 이 경우 작업 값만 두 값에 걸립니다. 삭제 및 삽입 이나 업데이트가 될 수 있는 작업에 대 한 5에 대 한 1입니다. 이 옵션을 사용하면 파생된 작업이 삽입인지 업데이트인지를 결정하는 데 필요한 추가 처리를 수행하지 않아도 되므로 이러한 구분이 필요하지 않은 경우 쿼리 성능을 향상시킬 수 있습니다.  
+     **netchanges** 함수는 수정된 원본 테이블 행당 하나의 변경 내용을 반환합니다. 지정된 간격 동안 해당 행에 대해 둘 이상의 변경 내용이 기록되는 경우 열 값에는 행의 마지막 내용이 반영됩니다. 대상 환경을 업데이트하는 데 필요한 작업을 올바르게 식별하려면 TVF에서 해당 간격 동안 행에 수행한 초기 작업과 행에 수행한 마지막 작업을 모두 고려해야 합니다. 행 필터 옵션 'all'을 지정한 경우 `net changes` 쿼리에서 반환하는 작업은 삽입, 삭제 또는 업데이트(새 값) 중 하나입니다. 집계 마스크를 계산하는 데 비용이 들기 때문에 이 옵션은 항상 업데이트 마스크를 Null로 반환합니다. 행에 대한 모든 변경 내용을 반영하는 집계 마스크가 필요한 경우 'all with mask' 옵션을 사용합니다. 다운스트림 처리에서 삽입과 업데이트를 구분할 필요가 없는 경우 'all with merge' 옵션을 사용합니다. 이 경우 작업 값에는 두 개의 값만 사용됩니다. 즉, 삭제에 대해 1을 사용하고 삽입이나 업데이트가 될 수 있는 작업에 대해서는 5를 사용합니다. 이 옵션을 사용하면 파생된 작업이 삽입인지 업데이트인지를 결정하는 데 필요한 추가 처리를 수행하지 않아도 되므로 이러한 구분이 필요하지 않은 경우 쿼리 성능을 향상시킬 수 있습니다.  
   
  쿼리 함수에서 반환되는 업데이트 마스크는 변경 데이터의 행에서 변경된 모든 열을 식별하는 간단한 표현입니다. 일반적으로 이 정보는 캡처된 열로 구성된 일부 하위 집합에만 필요합니다. 함수를 사용하여 애플리케이션에서 보다 직접 사용할 수 있는 형식으로 마스크에서 정보를 추출할 수 있습니다. [sys.fn_cdc_get_column_ordinal](/sql/relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql) 함수는 지정한 캡처 인스턴스에 대해 명명된 열의 서수 위치를 반환하는 반면 [sys.fn_cdc_is_bit_set](/sql/relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql) 함수는 제공된 마스크에 있는 비트의 패리티를 함수 호출에서 전달된 서수를 기반으로 반환합니다. 이러한 두 함수를 함께 사용하면 업데이트 마스크의 정보를 효율적으로 추출하고 변경 데이터에 대한 요청과 함께 반환할 수 있습니다. 이러한 함수를 사용하는 방법을 보려면 Enumerate Net Changes Using All With Mask 템플릿을 참조하십시오.  
   
@@ -112,7 +113,7 @@ ms.locfileid: "63269885"
   
  모든 변경 내용 쿼리를 래핑하는 함수의 이름은 캡처 인스턴스 이름 앞에 fn_all_changes_가 붙는 형태입니다. 순 변경 내용 함수에 사용되는 접두사는 fn_net_changes_입니다. 두 함수는 모두 연결된 변경 데이터 캡처 TVF와 마찬가지로 3개의 인수를 사용합니다. 그러나 래퍼에 대한 쿼리 간격은 두 개의 LSN 값 대신 두 개의 datetime 값에 의해 제한됩니다. 두 함수 집합에 대한 @row_filter_option 매개 변수는 같습니다.  
   
- 생성된 된 래퍼 함수는 변경 데이터 캡처 시간대를 체계적으로 탐색 하기 위한 규칙을 지원 합니다. 이전 간격의 @end_time 매개 변수는 후속 간격의 @start_time 매개 변수로 사용될 것으로 예상됩니다. 래퍼 함수는 이 규칙이 준수되는 경우 datetime 값을 LSN 값에 매핑하고 데이터가 손실되거나 반복되지 않도록 합니다.  
+ 생성된 래퍼 함수는 변경 데이터 캡처 시간대를 체계적으로 탐색하기 위해 이전 간격의 @end_time 매개 변수가 후속 간격의 @start_time 매개 변수로 사용된다는 규칙을 지원합니다. 래퍼 함수는 이 규칙이 준수되는 경우 datetime 값을 LSN 값에 매핑하고 데이터가 손실되거나 반복되지 않도록 합니다.  
   
  지정된 쿼리 창에서 닫힌 상한이나 열린 상한을 지원하는 래퍼를 생성할 수 있습니다. 즉, 호출자가 커밋 시간이 추출 간격의 상한과 같은 항목을 간격 내에 포함할지 여부를 지정할 수 있습니다. 기본적으로 상한이 포함됩니다.  
   
@@ -127,7 +128,7 @@ ms.locfileid: "63269885"
 ### <a name="using-the-datetime-wrapper-functions-to-transition-between-capture-instances"></a>datetime 래퍼 함수를 사용하여 캡처 인스턴스 간 전환  
  변경 데이터 캡처는 하나의 추적된 원본 테이블당 최대 두 개의 캡처 인스턴스를 지원합니다. 이 기능은 주로 원본 테이블의 DDL(데이터 정의 언어)을 변경할 경우 추적에 사용할 수 있는 열 집합이 확장될 때 여러 인스턴스 간에 전환하는 데 사용됩니다. 새 캡처 인스턴스로 전환할 때 기본 쿼리 함수 이름의 변경으로부터 더 높은 애플리케이션 수준을 보호하는 한 가지 방법은 래퍼 함수를 사용하여 기본 호출을 래핑하는 것입니다. 그런 다음 래퍼 함수의 이름이 그대로 유지되는지 확인합니다. 전환 작업을 수행할 예정인 경우 이전 래퍼 함수를 삭제하고 이전 래퍼 함수와 동일한 이름을 사용하는 새 래퍼 함수를 만들어 새 쿼리 함수를 참조할 수 있습니다. 먼저 생성된 스크립트를 수정하여 동일한 이름의 래퍼 함수를 만들면 더 높은 애플리케이션 계층에 영향을 주지 않고 새 캡처 인스턴스로 전환할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 변경 내용 추적&#40;SQL Server&#41;](../track-changes/track-data-changes-sql-server.md)   
  [변경 데이터 캡처 정보&#40;SQL Server&#41;](../track-changes/about-change-data-capture-sql-server.md)   
  [변경 데이터 캡처 설정 및 해제&#40;SQL Server&#41;](../track-changes/enable-and-disable-change-data-capture-sql-server.md)   

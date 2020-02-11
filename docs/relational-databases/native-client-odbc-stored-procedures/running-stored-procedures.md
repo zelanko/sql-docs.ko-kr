@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 05956ff9111fe9b296da0a35acba42e46e1a47a2
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73778083"
 ---
 # <a name="running-stored-procedures"></a>저장 프로시저 실행
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  저장 프로시저는 데이터베이스에 저장된 실행 가능한 개체입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 다음과 같은 프로시저를 지원합니다.  
+  저장 프로시저는 데이터베이스에 저장된 실행 가능한 개체입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]지원함  
   
 -   저장 프로시저:  
   
@@ -58,7 +58,7 @@ ms.locfileid: "73778083"
   
      확장 저장 프로시저는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 제공되지 않는 C 및 C++ 기능을 사용할 수 있습니다.  
   
-     저장 프로시저를 호출 하는 방법에 대 한 예는 [프로세스 반환 코드 및 출력 매개 &#40;변수&#41;ODBC](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)를 참조 하세요.  
+     저장 프로시저를 호출 하는 방법에 대 한 예제는 [ODBC&#41;&#40;반환 코드 및 출력 매개 변수 처리 ](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)를 참조 하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -69,7 +69,7 @@ ms.locfileid: "73778083"
 -   [저장 프로시저 결과 처리](../../relational-databases/native-client-odbc-stored-procedures/processing-stored-procedure-results.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [ &#40;ODBC&#41;  SQL Server Native Client](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
- [저장 프로시저 실행 방법 항목 &#40;ODBC&#41;](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)  
+ [ODBC&#41;SQL Server Native Client &#40;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [저장 프로시저 실행 방법 항목 ODBC&#41;&#40;](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)  
   
   

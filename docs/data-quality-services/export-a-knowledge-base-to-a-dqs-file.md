@@ -1,5 +1,5 @@
 ---
-title: Export a Knowledge Base to a .dqs File
+title: .dqs 파일로 기술 자료 내보내기
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -10,13 +10,13 @@ ms.assetid: a324ead5-c8aa-4e26-abe3-ef415add00f8
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 1462fe698ada4786bd0c252f33c8c19e0c5bae7e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251604"
 ---
-# <a name="export-a-knowledge-base-to-a-dqs-file"></a>Export a Knowledge Base to a .dqs File
+# <a name="export-a-knowledge-base-to-a-dqs-file"></a>.dqs 파일로 기술 자료 내보내기
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -26,14 +26,14 @@ ms.locfileid: "75251604"
   
  내보내기 프로세스에서 만든 .dqs 데이터 파일은 암호화되므로 내용을 볼 수 없습니다.  
   
-##  <a name="BeforeYouBegin"></a>시작 하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a>사전  
+###  <a name="Prerequisites"></a> 필수 조건  
  기술 자료를 .dqs 데이터 파일로 내보내려면 기술 자료를 만들고 열어 두어야 합니다. 기술 자료를 내보낼 .dqs 파일은 자동으로 생성되므로 필요하지 않습니다.  
   
-###  <a name="Security"></a>보안  
+###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a>권한에  
+####  <a name="Permissions"></a> 권한  
  기술 자료를 .dqs 데이터 파일로 내보내려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
 ##  <a name="Export"></a>기술 자료를 dqs 파일로 내보내기  
@@ -49,8 +49,7 @@ ms.locfileid: "75251604"
   **데이터 파일로 내보내기** 대화 상자에서 파일을 저장할 폴더로 이동하여 파일의 이름을 지정하거나 기술 자료 이름을 유지한 후 **다른 이름으로 저장\* 형식으로 **DQS 데이터 파일(**.dqs)** 을 지정하고 **저장**을 클릭합니다.  
   
 5.  
-  **기술 자료 내보내기** 대화 상자에서 상태 줄에 내보내기가 완료되었다고 표시되는지 확인합니다. 
-  **확인**을 클릭합니다.  
+  **기술 자료 내보내기** 대화 상자에서 상태 줄에 내보내기가 완료되었다고 표시되는지 확인합니다. **확인**을 클릭합니다.  
   
 ##  <a name="FollowUp"></a>후속 작업: 도메인을 dqs 파일로 내보낸 후  
  기술 자료를 .dqs 파일로 내보낸 후 기술 자료를 동일한 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] (새 이름 적용) 또는 다른 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]로 가져올 수 있습니다.  

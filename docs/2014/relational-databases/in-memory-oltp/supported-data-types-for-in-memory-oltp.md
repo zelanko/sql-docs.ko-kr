@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de5f805a9d722974adf7975f713436bc7b1ca4d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63155154"
 ---
 # <a name="supported-data-types"></a>지원되는 데이터 형식
@@ -24,28 +24,28 @@ ms.locfileid: "63155154"
   
 |데이터 형식|참조 항목|  
 |---------------|--------------------------|  
-|ssNoversion|[int, bigint, smallint 및 tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
-|BIGINT|[int, bigint, smallint 및 tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
-|SMALLINT|[int, bigint, smallint 및 tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
-|TINYINT|[int, bigint, smallint 및 tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
-|Decimal|[decimal 및 numeric&#40;Transact-SQL&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)|  
-|NUMERIC|[decimal 및 numeric&#40;Transact-SQL&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)|  
-|FLOAT|[float 및 real&#40;Transact-SQL&#41;](/sql/t-sql/data-types/float-and-real-transact-sql)|  
-|REAL|[float 및 real&#40;Transact-SQL&#41;](/sql/t-sql/data-types/float-and-real-transact-sql)|  
+|int|[int, bigint, smallint 및 tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
+|bigint|[int, bigint, smallint 및 tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
+|smallint|[int, bigint, smallint 및 tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
+|tinyint|[int, bigint, smallint 및 tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
+|decimal|[decimal 및 numeric&#40;Transact-SQL&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)|  
+|numeric|[decimal 및 numeric&#40;Transact-SQL&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)|  
+|float|[float 및 real&#40;Transact-SQL&#41;](/sql/t-sql/data-types/float-and-real-transact-sql)|  
+|real|[float 및 real&#40;Transact-SQL&#41;](/sql/t-sql/data-types/float-and-real-transact-sql)|  
 |money|[money 및 smallmoney&#40;Transact-SQL&#41;](/sql/t-sql/data-types/money-and-smallmoney-transact-sql)|  
-|SMALLMONEY|[money 및 smallmoney&#40;Transact-SQL&#41;](/sql/t-sql/data-types/money-and-smallmoney-transact-sql)|  
+|smallmoney|[money 및 smallmoney&#40;Transact-SQL&#41;](/sql/t-sql/data-types/money-and-smallmoney-transact-sql)|  
   
  **문자열 데이터 형식**  
   
 |데이터 형식|참조 항목|  
 |---------------|--------------------------|  
 |char(n)|[char 및 varchar&#40;Transact-SQL&#41;](/sql/t-sql/data-types/char-and-varchar-transact-sql)|  
-|varchar(n) <sup>1</sup>|[char 및 varchar&#40;Transact-SQL&#41;](/sql/t-sql/data-types/char-and-varchar-transact-sql)|  
+|varchar (n) <sup>1</sup>|[char 및 varchar&#40;Transact-SQL&#41;](/sql/t-sql/data-types/char-and-varchar-transact-sql)|  
 |nchar(n)|[nchar 및 nvarchar&#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
-|nvarchar(n) <sup>1</sup>|[nchar 및 nvarchar&#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
+|nvarchar (n) <sup>1</sup>|[nchar 및 nvarchar&#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
 |sysname|[nchar 및 nvarchar&#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
   
- <sup>1</sup> 제한은 가변 길이 형식의 (n) 계산 행 합계 당 8060 바이트입니다.  
+ <sup>1</sup> 제한은 가변 길이 형식의 계산 (n)을 통해 8060 바이트의 행 합계입니다.  
   
  지원되는 데이터 정렬에 대한 자세한 내용은 [Collations and Code Pages](../../database-engine/collations-and-code-pages.md)를 참조하세요.  
   
@@ -54,10 +54,10 @@ ms.locfileid: "63155154"
 |데이터 형식|참조 항목|  
 |---------------|--------------------------|  
 |date|[date&#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|  
-|Time|[time &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql)|  
+|time|[time &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql)|  
 |Datetime|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql)|  
-|Datetime2|[datetime2&#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|  
-|Smalldatetime|[smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|  
+|datetime2|[datetime2&#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|  
+|smalldatetime|[smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|  
   
  **이진 데이터 형식**  
   
@@ -65,17 +65,17 @@ ms.locfileid: "63155154"
 |---------------|--------------------------|  
 |bit|[bit &#40;Transact-SQL&#41;](/sql/t-sql/data-types/bit-transact-sql)|  
 |binary(n)|[binary 및 varbinary&#40;Transact-SQL&#41;](/sql/t-sql/data-types/binary-and-varbinary-transact-sql)|  
-|varbinary(n) <sup>1</sup>|[binary 및 varbinary&#40;Transact-SQL&#41;](/sql/t-sql/data-types/binary-and-varbinary-transact-sql)|  
+|varbinary (n) <sup>1</sup>|[binary 및 varbinary&#40;Transact-SQL&#41;](/sql/t-sql/data-types/binary-and-varbinary-transact-sql)|  
   
- <sup>1</sup> 제한은 가변 길이 형식의 (n) 계산 행 합계 당 8060 바이트입니다.  
+ <sup>1</sup> 제한은 가변 길이 형식의 계산 (n)을 통해 8060 바이트의 행 합계입니다.  
   
- **다른 데이터 형식**  
+ **기타 데이터 형식**  
   
 |데이터 형식|참조 항목|  
 |---------------|--------------------------|  
-|uniqueidentifier|[uniqueidentifier &#40;Transact-SQL&#41;](/sql/t-sql/data-types/uniqueidentifier-transact-sql)|  
+|uniqueidentifier|[uniqueidentifier &#40;Transact-sql&#41;](/sql/t-sql/data-types/uniqueidentifier-transact-sql)|  
   
- **지원 되지 않는 데이터 형식**  
+ **지원되지 않는 데이터 형식**  
   
  다음 데이터 형식은 지원되지 않습니다.  
   
@@ -85,9 +85,9 @@ ms.locfileid: "63155154"
 |HIERARCHYID|LOB(Large Object). 예: varchar(max), nvarchar(max), varbinary(max), image, xml, text 및 ntext|ROWVERSION|  
 |sql_variant|CLR 함수|UDT(사용자 정의 형식)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP에 대한 Transact-SQL 지원](transact-sql-support-for-in-memory-oltp.md)   
- [메모리 액세스에 최적화된 테이블에서 LOB 열 구현](../../database-engine/implementing-lob-columns-in-a-memory-optimized-table.md)   
+ [메모리 액세스에 최적화 된 테이블에서 LOB 열 구현](../../database-engine/implementing-lob-columns-in-a-memory-optimized-table.md)   
  [메모리 액세스에 최적화된 테이블에서 SQL_VARIANT 구현](implementing-sql-variant-in-a-memory-optimized-table.md)  
   
   

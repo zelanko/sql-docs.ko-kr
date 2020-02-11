@@ -1,5 +1,5 @@
 ---
-title: '명령줄 관리 도구: SqlLocalDB.exe | Microsoft Docs'
+title: '명령줄 관리 도구: SqlLocalDB | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: dd0882b1-a8a9-447a-8bdf-0f9d7f36d336
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: a41daed808b51df59ba80e0113b84e46c501c9b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68126953"
 ---
 # <a name="command-line-management-tool-sqllocaldbexe"></a>명령줄 관리 도구: SqlLocalDB.exe
@@ -28,7 +28,7 @@ ms.locfileid: "68126953"
 ## <a name="sqllocaldb-options"></a>SqlLocalDB 옵션  
  SqlLocalDB에서는 다음과 같은 옵션을 지원합니다.  
   
-|옵션|수행하는 작업|  
+|옵션|기능|  
 |------------|------------------|  
 |`-?`|도움말 텍스트를 인쇄합니다.|  
 |`create\|c "instance name" [version-number] [-s]`|지정한 이름과 버전으로 새 LocalDB 인스턴스를 만듭니다.<br /><br /> [버전 번호] 매개 변수를 생략하면 기본값으로 SqlLocalDB 빌드 버전이 사용됩니다.<br /><br /> -s는 인스턴스가 만들어진 후 새 LocalDB 인스턴스를 시작합니다.|  
@@ -43,7 +43,7 @@ ms.locfileid: "68126953"
 |||  
 |`trace\|t on\|off`|추적을 설정하고 해제합니다.|  
   
- SqlLocalDB에서는 공백을 구분 기호로 처리하므로 공백 및 공백 문자가 포함된 인스턴스 이름은 따옴표로 묶어야 합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ SqlLocalDB에서는 공백을 구분 기호로 처리하므로 공백 및 공백 문자가 포함된 인스턴스 이름은 따옴표로 묶어야 합니다. 다음은 그 예입니다.  
   
  `SqlLocalDB create "My instance name with spaces"`  
   

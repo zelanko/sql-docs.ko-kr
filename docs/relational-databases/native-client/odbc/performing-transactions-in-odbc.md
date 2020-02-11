@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bffb00c2e6a4879befb91f002ac581c79251bfdf
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73760486"
 ---
 # <a name="performing-transactions-in-odbc"></a>ODBC에서 트랜잭션 수행
@@ -35,15 +35,17 @@ ms.locfileid: "73760486"
   
 -   수동 커밋 모드  
   
-     **SQLEndTran**을 호출하여 중지하기 전까지는 실행된 모든 문이 동일한 트랜잭션에 포함됩니다.  
+     
+  **SQLEndTran**을 호출하여 중지하기 전까지는 실행된 모든 문이 동일한 트랜잭션에 포함됩니다.  
   
- 자동 커밋 모드는 ODBC의 기본 트랜잭션 모드입니다. 연결을 설정하면 **SQLSetConnectAttr** 호출을 통해 자동 커밋 모드를 해제하고 수동 커밋 모드로 전환하기 전까지 자동 커밋 모드가 사용됩니다. 애플리케이션에서 자동 커밋을 해제하면 데이터베이스에 보내는 다음 문부터 트랜잭션이 시작되고, 이 트랜잭션은 애플리케이션에서 SQL_COMMIT 또는 SQL_ROLLBACK 옵션을 사용하여 **SQLEndTran** 을 호출하기 전까지 유효한 상태로 유지됩니다. **SQLEndTran** 을 호출한 이후에 데이터베이스에 보내는 명령부터 다음 트랜잭션이 시작됩니다.  
+ 자동 커밋 모드는 ODBC의 기본 트랜잭션 모드입니다. 연결을 설정하면 **SQLSetConnectAttr** 호출을 통해 자동 커밋 모드를 해제하고 수동 커밋 모드로 전환하기 전까지 자동 커밋 모드가 사용됩니다. 애플리케이션에서 자동 커밋을 해제하면 데이터베이스에 보내는 다음 문부터 트랜잭션이 시작되고, 이 트랜잭션은 애플리케이션에서 SQL_COMMIT 또는 SQL_ROLLBACK 옵션을 사용하여 **SQLEndTran** 을 호출하기 전까지 유효한 상태로 유지됩니다. 
+  **SQLEndTran** 을 호출한 이후에 데이터베이스에 보내는 명령부터 다음 트랜잭션이 시작됩니다.  
   
  애플리케이션에서 수동 커밋 모드에서 자동 커밋 모드로 전환하면 드라이버에서는 연결에 현재 열려 있는 모든 트랜잭션을 커밋합니다.  
   
  BEGIN TRANSACTION, COMMIT TRANSACTION 또는 ROLLBACK TRANSACTION 같은 Transact-SQL 트랜잭션 문을 사용하면 드라이버에서 예기치 않은 동작이 발생할 수 있으므로 ODBC 애플리케이션에서는 이러한 문을 사용하지 않는 것이 좋습니다. ODBC 애플리케이션은 자동 커밋 모드로 실행하면서 다른 트랜잭션 관리 함수나 문을 실행하지 않거나, 수동 커밋 모드로 실행하면서 ODBC **SQLEndTran** 함수를 사용하여 트랜잭션을 커밋하거나 롤백해야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [트랜잭션 &#40;수행 ODBC&#41;](https://msdn.microsoft.com/library/f431191a-5762-4f0b-85bb-ac99aff29724)  
+## <a name="see-also"></a>참고 항목  
+ [ODBC&#41;&#40;트랜잭션 수행](https://msdn.microsoft.com/library/f431191a-5762-4f0b-85bb-ac99aff29724)  
   
   

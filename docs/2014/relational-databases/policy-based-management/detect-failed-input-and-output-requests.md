@@ -1,5 +1,5 @@
 ---
-title: 실패 한 입된/출력 요청 검색 | Microsoft Docs
+title: 실패 한 입력 출력 요청 검색 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0abd1541baeda6152a80980e85e6c902b45e886c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62705166"
 ---
-# <a name="detect-failed-input-output-request"></a>실패 한 입된/출력 요청 검색
+# <a name="detect-failed-input-output-request"></a>실패 한 입력 출력 요청 검색
   이 규칙은 시스템 이벤트 로그에서 EventId 50을 검사합니다. 이 오류는 실패한 I/O 요청으로 인해 발생합니다.  
   
 ## <a name="best-practices-recommendations"></a>최선의 구현 방법 권장 사항  
