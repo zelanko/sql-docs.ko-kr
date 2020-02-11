@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5c0c6449082f1c5ca016cfdb0a0f18430cf74731
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63156816"
 ---
 # <a name="create-indexes-with-included-columns"></a>포괄 열을 사용하여 인덱스 만들기
@@ -43,13 +43,13 @@ ms.locfileid: "63156816"
   
 -   **시작하기 전 주의 사항:**  
   
-     [디자인 권장 구성](#DesignRecs)  
+     [디자인 권장 사항](#DesignRecs)  
   
      [제한 사항](#Restrictions)  
   
      [보안](#Security)  
   
--   **키가 아닌 열이 있는 인덱스를 만들려면:**  
+-   **다음을 사용 하 여 키가 아닌 열이 있는 인덱스를 만들려면**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -67,11 +67,13 @@ ms.locfileid: "63156816"
   
 -   키가 아닌 열은 비클러스터형 인덱스에 대해서만 정의할 수 있습니다.  
   
--   `text`, `ntext` 및 `image`를 제외한 모든 데이터 형식을 키가 아닌 열로 사용할 수 있습니다.  
+-   
+  `text`, `ntext` 및 `image`를 제외한 모든 데이터 형식을 키가 아닌 열로 사용할 수 있습니다.  
   
 -   결정적이면서 정확하거나 정확하지 않은 계산 열은 키가 아닌 열이 될 수 있습니다. 자세한 내용은 [Indexes on Computed Columns](indexes-on-computed-columns.md)을 참조하세요.  
   
--   `image`, `ntext` 및 `text` 데이터 형식에서 파생된 계산 열은 계산 열 데이터 형식이 키가 아닌 인덱스 열로 허용되는 한 키가 아닌 열이 될 수 있습니다.  
+-   
+  `image`, `ntext` 및 `text` 데이터 형식에서 파생된 계산 열은 계산 열 데이터 형식이 키가 아닌 인덱스 열로 허용되는 한 키가 아닌 열이 될 수 있습니다.  
   
 -   해당 테이블의 인덱스를 먼저 삭제하지 않는 경우 키가 아닌 열을 테이블에서 삭제할 수 없습니다.  
   
@@ -79,11 +81,12 @@ ms.locfileid: "63156816"
   
     -   열의 Null 허용 여부를 NOT NULL에서 NULL로 변경합니다.  
   
-    -   `varchar`, `nvarchar` 또는 `varbinary` 열의 길이를 늘립니다.  
+    -   
+  `varchar`, `nvarchar` 또는 `varbinary` 열의 길이를 늘립니다.  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  테이블이나 뷰에 대한 ALTER 권한이 필요합니다. 사용자는 **sysadmin** 고정 서버 역할의 멤버 또는 **db_ddladmin** 및 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -102,13 +105,13 @@ ms.locfileid: "63156816"
   
 6.  **인덱스 키 열** 탭 아래에서 **추가...** 를 클릭합니다.  
   
-7.  **table_name**_에서 열 선택_ 대화 상자에서 인덱스에 추가할 테이블 열의 확인란을 선택합니다.  
+7.  _Table_name_ **에서 열 선택**대화 상자에서 인덱스에 추가할 테이블 열에 대 한 확인란을 선택 합니다.  
   
 8.  **확인**을 클릭합니다.  
   
 9. **포괄 열** 탭 아래에서 **추가...** 를 클릭합니다.  
   
-10. **table_name**_에서 열 선택_ 대화 상자에서 키가 아닌 열로 인덱스에 추가할 테이블 열의 확인란을 선택합니다.  
+10. _Table_name_ **에서 열 선택**대화 상자에서 키가 아닌 열로 인덱스에 추가할 테이블 열의 확인란을 선택 합니다.  
   
 11. **확인**을 클릭합니다.  
   

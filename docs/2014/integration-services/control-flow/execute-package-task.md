@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 37d0edcabdb0171c8ca83c79080d59fdd8aafb76
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67284948"
 ---
 # <a name="execute-package-task"></a>패키지 실행 태스크
@@ -56,7 +56,7 @@ ms.locfileid: "67284948"
   
  또는 한 단위의 부모 패키지와 해당 자식 패키지가 함께 실행되지 못하게 하거나 다른 프로세스의 추가 오버헤드를 발생시키지 않으려는 경우도 있습니다. 예를 들어 패키지 부모 프로세스의 후속 처리가 자식 프로세스의 성공 여부에 따라 달라지는 경우 자식 프로세스가 실패하면 부모 패키지 프로세스에서 자식 패키지를 실행해야 합니다.  
   
- 기본적으로 패키지 실행 태스크의 ExecuteOutOfProcess 속성 설정 `False`, 및 자식 패키지가 부모 패키지와 동일한 프로세스에서 실행 합니다. 이 속성을 `True`로 설정하면 하위 패키지가 개별 프로세스로 실행됩니다. 이렇게 하면 하위 패키지의 실행 속도가 느려집니다. 또한 속성을 `True`로 설정하면 도구만 설치로 패키지를 디버깅할 수 없습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 설치해야 합니다. 자세한 내용은 [Integration Services 설치](../install-windows/install-integration-services.md)를 참조하세요.  
+ 기본적으로 패키지 실행 태스크의 ExecuteOutOfProcess 속성은로 `False`설정 되 고 자식 패키지는 부모 패키지와 같은 프로세스에서 실행 됩니다. 이 속성을 `True`로 설정하면 하위 패키지가 개별 프로세스로 실행됩니다. 이렇게 하면 하위 패키지의 실행 속도가 느려집니다. 또한 속성을 `True`로 설정하면 도구만 설치로 패키지를 디버깅할 수 없습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 설치해야 합니다. 자세한 내용은 [Integration Services 설치](../install-windows/install-integration-services.md)를 참조하세요.  
   
 ## <a name="extending-transactions"></a>트랜잭션 확장  
  부모 패키지가 사용하는 트랜잭션은 자식 패키지로 확장될 수 있으므로 두 패키지가 수행한 작업을 모두 커밋하거나 롤백할 수 있습니다. 예를 들어 자식 패키지가 수행한 데이터베이스 삽입에 따라 부모 패키지가 수행한 데이터베이스 삽입을 커밋하거나 롤백할 수 있고 그 반대의 경우도 마찬가지로 적용됩니다. 자세한 내용은 [Inherited Transactions](../inherited-transactions.md)을 참조하세요.  
@@ -97,14 +97,15 @@ ms.locfileid: "67284948"
  자세한 내용은 [자식 패키지에서 변수 및 매개 변수의 값 사용](../use-the-values-of-variables-and-parameters-in-a-child-package.md)을 참조하세요.  
   
 ### <a name="accessing-parent-package-variables"></a>부모 패키지 변수 액세스  
- 자식 패키지는 스크립트 태스크를 사용하여 부모 패키지 변수에 액세스할 수 있습니다. **스크립트 태스크 편집기**의 **스크립트** 페이지에 부모 패키지 변수의 이름을 입력하는 경우 변수 이름에 **User:** 를 포함하지 마십시오. 그렇지 않으면 부모 패키지를 실행할 때 자식 패키지에서 변수를 찾을 수 없습니다. 스크립트 태스크를 사용 하 여 부모 패키지 변수에 액세스 하는 방법에 대 한 자세한 내용은이 블로그 항목을 참조 하세요. [SSIS: 부모 패키지의 변수 액세스](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/)합니다.  
+ 자식 패키지는 스크립트 태스크를 사용하여 부모 패키지 변수에 액세스할 수 있습니다. **스크립트 태스크 편집기**의 **스크립트** 페이지에 부모 패키지 변수의 이름을 입력하는 경우 변수 이름에 **User:** 를 포함하지 마십시오. 그렇지 않으면 부모 패키지를 실행할 때 자식 패키지에서 변수를 찾을 수 없습니다. 스크립트 태스크를 사용 하 여 부모 패키지 변수에 액세스 하는 방법에 대 한 자세한 내용은 [SSIS: 부모 패키지의 변수 액세스](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/)블로그 항목을 참조 하세요.  
   
 ## <a name="configuring-the-execute-package-task"></a>패키지 실행 태스크 구성  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
+ 
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [Execute Package Task Editor](../execute-package-task-editor.md)  
+-   [패키지 실행 태스크 편집기](../execute-package-task-editor.md)  
   
 -   [식 페이지](../expressions/expressions-page.md)  
   
@@ -114,6 +115,6 @@ ms.locfileid: "67284948"
   
 ## <a name="related-content"></a>관련 내용  
 
-블로그 항목, [SSIS: 부모 패키지의 변수 액세스](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/), andyleonard.blog에 있습니다. 
+Andyleonard의 블로그 항목인 [SSIS: 부모 패키지의 변수 액세스](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/) 
   
   

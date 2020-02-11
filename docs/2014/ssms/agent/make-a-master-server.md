@@ -22,13 +22,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca0e79c617db6cc2906ac9225efd92e156699951
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68189136"
 ---
-# <a name="make-a-master-server"></a>마스터 서버 만들기
+# <a name="make-a-master-server"></a>Make a Master Server
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 마스터 서버 [!INCLUDE[tsql](../../includes/tsql-md.md)]를 만드는 방법에 대해 설명합니다.  
   
  **항목 내용**  
@@ -37,7 +37,7 @@ ms.locfileid: "68189136"
   
      [보안](#Security)  
   
--   **마스터 서버를 만들려면:**  
+-   **다음을 사용 하 여 마스터 서버를 만듭니다.**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68189136"
 ###  <a name="Security"></a> 보안  
  프록시와 연관된 단계가 있는 배포된 작업은 대상 서버의 프록시 계정 컨텍스트로 실행됩니다. 다음 조건이 만족되는지 또는 프록시와 연관된 작업 단계가 마스터 서버에서 대상으로 다운로드되지 않는지 확인하세요.  
   
--   마스터 서버 레지스트리 하위 키 **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<*instance_name*> \SQL Server Agent\AllowDownloadedJobsToMatchProxyName**  (REG_DWORD) 1(true)로 설정 합니다. 기본적으로 이 하위 키는 0(false)으로 설정됩니다.  
+-   마스터 서버 레지스트리 하위 키 **\ HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\<*instance_name*> \sql server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD)는 1 (true)로 설정 됩니다. 기본적으로 이 하위 키는 0(false)으로 설정됩니다.  
   
 -   프록시 계정이 작업 단계가 실행되는 마스터 서버 프록시 계정과 동일한 이름을 가진 대상 서버에 있는지 여부  
   
@@ -62,18 +62,23 @@ ms.locfileid: "68189136"
   
      이 오류를 해결하려면 프록시 계정이 작업 단계가 실행되는 마스터 서버 프록시 계정과 동일한 이름을 가진 대상 서버에 있는지 확인합니다.  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  이 프로시저를 실행할 수 있는 권한은 기본적으로 `sysadmin` 고정 서버 역할의 멤버로 설정됩니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-make-a-master-server"></a>마스터 서버를 만들려면  
   
-1.  **개체 탐색기** 에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+1.  
+  **개체 탐색기** 에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **SQL Server 에이전트**를 마우스 오른쪽 단추로 클릭하고 **다중 서버 관리**를 가리킨 다음 **마스터로 만들기**를 클릭합니다. **마스터 서버 마법사** 는 마스터 서버를 만들고 대상 서버를 추가하는 프로세스를 안내합니다.  
+2.  
+  **SQL Server 에이전트**를 마우스 오른쪽 단추로 클릭하고 **다중 서버 관리**를 가리킨 다음 **마스터로 만들기**를 클릭합니다. 
+  **마스터 서버 마법사** 는 마스터 서버를 만들고 대상 서버를 추가하는 프로세스를 안내합니다.  
   
-3.  **마스터 서버 운영자** 페이지에서 마스터 서버 운영자를 구성합니다. 전자 메일 또는 호출기를 사용하여 운영자에게 알림을 보내려면 전자 메일을 보내도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 구성해야 합니다. **net send**를 사용하여 운영자에게 알림을 보내려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 설치된 서버에서 메신저 서비스가 실행되고 있어야 합니다.  
+3.  
+  **마스터 서버 운영자** 페이지에서 마스터 서버 운영자를 구성합니다. 전자 메일 또는 호출기를 사용하여 운영자에게 알림을 보내려면 전자 메일을 보내도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 구성해야 합니다. 
+  **net send**를 사용하여 운영자에게 알림을 보내려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 설치된 서버에서 메신저 서비스가 실행되고 있어야 합니다.  
   
      **전자 메일 주소**  
      운영자의 전자 메일 주소를 설정합니다.  
@@ -81,10 +86,11 @@ ms.locfileid: "68189136"
      **호출기 주소**  
      운영자의 호출기 전자 메일 주소를 설정합니다.  
   
-     **Net Send 주소**  
+     **Net send 주소**  
      운영자에 대한 **net send** 주소를 설정합니다.  
   
-4.  **대상 서버** 페이지에서 마스터 서버의 대상 서버를 선택합니다.  
+4.  
+  **대상 서버** 페이지에서 마스터 서버의 대상 서버를 선택합니다.  
   
      **등록된 서버**  
      Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에 등록된 서버 중 대상 서버가 아닌 서버를 나열합니다.  
@@ -110,9 +116,10 @@ ms.locfileid: "68189136"
      **연결**  
      선택한 서버의 연결 속성을 변경합니다.  
   
-5.  **마스터 서버 로그인 자격 증명** 페이지에서 대상 서버에 대해 새 로그인을 만들지 여부와 필요한 경우 해당 로그인에 마스터 서버에 대한 권한을 부여할지 여부를 지정할 수 있습니다.  
+5.  
+  **마스터 서버 로그인 자격 증명** 페이지에서 대상 서버에 대해 새 로그인을 만들지 여부와 필요한 경우 해당 로그인에 마스터 서버에 대한 권한을 부여할지 여부를 지정할 수 있습니다.  
   
-     **필요한 경우 새 로그인을 만들고 MSX에 대한 권한을 할당합니다.**  
+     **필요한 경우 새 로그인을 만들고 MSX에 대 한 권한을 할당 합니다.**  
      지정한 로그인이 없으면 대상 서버에 새 로그인을 만듭니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
@@ -134,9 +141,9 @@ EXEC dbo.sp_msx_enlist N'AdventureWorks1',
 GO;  
 ```  
   
- 자세한 내용은 [sp_msx_enlist &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)합니다.  
+ 자세한 내용은 [sp_msx_enlist &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)를 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [다중 서버 환경 만들기](create-a-multiserver-environment.md)   
  [기업 내 관리 자동화](automated-administration-across-an-enterprise.md)  
   

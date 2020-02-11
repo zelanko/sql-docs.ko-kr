@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c6711b736f0313508f74b6c30253e7b2e2a3f93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63154717"
 ---
 # <a name="move-items-in-a-solution"></a>솔루션에서 항목 이동
@@ -39,7 +39,7 @@ ms.locfileid: "63154717"
 > [!NOTE]  
 >  연결된 쿼리를 이동할 경우 연결이 대상 프로젝트로 이동하지는 않습니다. 해당 쿼리를 대상 프로젝트로 이동하면 연결이 손실됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [솔루션 탐색기](solution-explorer.md)   
  [솔루션에서 항목 복사](copy-items-in-a-solution.md)  
   

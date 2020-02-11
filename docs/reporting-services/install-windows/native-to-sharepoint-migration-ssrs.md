@@ -24,7 +24,7 @@ ms.locfileid: "65570704"
 ##  <a name="bkmk_native_to_sharepoint"></a> Reporting Services 마이그레이션 도구  
  이 도구는 기본 모드 배포에서 SharePoint 모드 배포로의 콘텐츠 마이그레이션을 지원합니다. 이 도구는 SharePoint 모드에서 SharePoint 모드로 또는 SharePoint 모드에서 기본 모드로의 마이그레이션을 지원하지 않습니다.  
   
- 자세한 내용은 [Reporting Services 마이그레이션 도구](https://www.microsoft.com/download/details.aspx?id=29560)(https://www.microsoft.com/download/details.aspx?id=29560) 를 참조하세요.  
+ 자세한 내용은 [Reporting Services 마이그레이션 도구](https://www.microsoft.com/download/details.aspx?id=29560)(https://www.microsoft.com/download/details.aspx?id=29560)를 참조하세요.  
   
 ## <a name="use-script-to-migrate-content"></a>스크립트를 사용하여 콘텐츠 마이그레이션  
  마이그레이션 도구가 사용자 요구에 맞지 않는 경우 수동으로 보고서 서버 데이터를 마이그레이션할 수 있습니다. 다음은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 배포 간에 보고서 항목을 마이그레이션하는 데 필요한 단계를 요약한 내용입니다. 이 방법은 기본 또는 SharePoint 모드를 원본 또는 대상 서버로 지원하지 않습니다.  

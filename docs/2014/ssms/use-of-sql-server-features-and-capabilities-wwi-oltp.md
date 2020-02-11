@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2365ec137329675e2cd88e7f5bf7e1781aa3308f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63280487"
 ---
 # <a name="arguments-for-external-tools"></a>Arguments for External Tools
@@ -25,7 +25,7 @@ ms.locfileid: "63280487"
   
  다음 표에서는 외부 도구에 대한 인수를 나열합니다.  
   
-|이름|인수|Description|  
+|속성|인수|Description|  
 |----------|--------------|-----------------|  
 |**항목 경로**|$(ItemPath)|현재 원본의 전체 파일 이름(드라이브 + 경로 + 파일 이름으로 정의됨)이며 비원본 창이 활성화된 경우에는 비어 있음|  
 |**항목 디렉터리**|$(ItemDir)|현재 원본의 디렉터리(드라이브 + 경로로 정의됨)이며 비원본 창이 활성화된 경우에는 비어 있음|  
@@ -43,9 +43,9 @@ ms.locfileid: "63280487"
 |**솔루션 디렉터리**|$(SolutionDir)|현재 솔루션의 디렉터리(드라이브 + 경로로 정의됨)|  
 |**솔루션 파일 이름**|$(SolutionFileName)|현재 솔루션의 파일 이름(드라이브 + 경로 + 파일 이름으로 정의됨)|  
   
- <sup>1</sup> 상태 표시줄에 표시 된 것 처럼 현재 줄, 현재 열 또는 현재 텍스트 텍스트 편집기에서 커서의 위치에 따라 됩니다.  
+ <sup>1</sup> 현재 줄, 현재 열 또는 현재 텍스트는 상태 표시줄에 표시 된 텍스트 편집기의 커서 위치를 기반으로 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [외부 도구 대화 상자](external-tools-dialog-box.md)   
  [일반 사용자 인터페이스 요소](general-user-interface-elements.md)  
   
