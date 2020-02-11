@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 80fc899400be167badaae9d617d43a61e0d346b5
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401461"
 ---
 # <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>분석 플랫폼 시스템에 대 한 어플라이언스 구성 검사 목록
@@ -22,9 +22,9 @@ ms.locfileid: "74401461"
 > [!WARNING]  
 > 분석 플랫폼 시스템**Configuration Manager** 를 사용 하는 것이 가장 좋은 방법 이며, 도구에서 사용할 수 있는 작업을 수행 하는 데 지원 되는 유일한 방법입니다.  
   
-## <a name="BeforeTasks"></a>시작 하기 전에  
+## <a name="BeforeTasks"></a>시작하기 전 주의 사항  
   
-### <a name="prerequisites"></a>필수 구성 요소  
+### <a name="prerequisites"></a>사전 요구 사항  
   
 1.  어플라이언스는 데이터 센터에 설치 되어 있어야 합니다.  
   
@@ -49,7 +49,7 @@ Systemwcm (SQL Server PDW**Configuration Manager** )는 시스템 관리자가 �
   
 **Configuration Manager** 를 사용 하 여 다음 구성 작업을 수행 합니다.  
   
-|구성 태스크|설명|  
+|구성 태스크|Description|  
 |----------------------|---------------|  
 |물리적 구성 요소 이름에 익숙해져야 합니다.|[PDW 및 어플라이언스 패브릭 물리적 구성 요소 &#40;Analytics Platform System&#41;](pdw-and-appliance-fabric-physical-components.md)|  
 |시작 SQL Server PDW Configuration Manager|[Configuration Manager &#40;Analytics Platform System을 시작&#41;](launch-the-configuration-manager.md)|  
@@ -67,7 +67,7 @@ Systemwcm (SQL Server PDW**Configuration Manager** )는 시스템 관리자가 �
 ## <a name="AddTasks"></a>추가 구성 작업을 수행 합니다.  
 **Configuration Manager** 작업을 수행한 후 다음 추가 구성 작업 목록을 수행 합니다. 이러한 작업 중 일부는 선택 사항입니다.  
   
-|구성 태스크|설명|  
+|구성 태스크|Description|  
 |----------------------|---------------|  
 |외부에 연결 된 노드에 대해 SQL Server PDW 어플라이언스에서 타사 바이러스 백신 소프트웨어를 설치 하 고 구성할 수 있습니다.<br /><br />(선택 사항)|자세한 내용은 [바이러스 백신 소프트웨어 &#40;분석 플랫폼 시스템&#41;](antivirus-software.md)을 참조 하세요.|  
 |DSRM의 암호를 변경할 수 있습니다.<br /><br />(선택 사항)|자세한 내용은 [디렉터리 서비스 복원 모드에서 AD 노드에 로그온 하기 위한 관리자 암호 설정 &#40;DSRM&#41; &#40;Analytics Platform System&#41;](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md)을 참조 하세요.|  

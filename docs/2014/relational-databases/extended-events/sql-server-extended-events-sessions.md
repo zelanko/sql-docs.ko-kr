@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6e589ccad75cea729913b10b6232f61693446595
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62705757"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server Extended Events Sessions
@@ -31,16 +31,16 @@ ms.locfileid: "62705757"
 ## <a name="session-states"></a>세션 상태  
  다음 그림에서는 확장 이벤트 세션의 다양한 상태를 보여 줍니다.  
   
- ![확장 이벤트 세션 상태](../../database-engine/media/xesessionstate.gif "Extended event session state")  
+ ![확장 이벤트 세션 상태](../../database-engine/media/xesessionstate.gif "확장 이벤트 세션 상태")  
   
  위 그림을 보면 이벤트 세션에 대해 다른 DDL 명령이 실행됨에 따라 세션 상태가 바뀜을 알 수 있습니다. 다음 표에서는 이러한 상태 변경을 설명합니다.  
   
 |그림 레이블|DDL 문|Description|  
 |------------------------|-------------------|-----------------|  
-|만들기|CREATE EVENT SESSION|호스트 프로세스는 CREATE EVENT SESSION 문에서 제공된 메타데이터가 포함된 세션 개체를 만듭니다. 호스트 프로세스는 세션 정의 및 사용자 권한 수준을 검사하고 master 데이터베이스에 메타데이터를 저장합니다. 이 시점에서 세션은 활성 상태가 아닙니다.|  
-|Alter|ALTER EVENT SESSION, STATE=START|호스트 프로세스가 세션을 시작합니다. 호스트 프로세스는 저장된 메타데이터를 읽고 세션 정의를 검사하며 사용자 권한 수준을 확인하고 세션을 만듭니다. 이벤트 및 대상과 같은 세션 개체가 로드되며 이벤트 처리는 활성 상태입니다.|  
-|Alter|ALTER EVENT SESSION, STATE=STOP|호스트 프로세스가 활성 세션을 중지하지만 메타데이터는 유지됩니다.|  
-|Drop|DROP EVENT SESSION|세션이 활성 상태인지 여부에 따라 Drop(DROP SESSION)은 메타데이터를 삭제하고 활성 세션을 종료하거나 세션 메타데이터를 삭제합니다.|  
+|생성|CREATE EVENT SESSION|호스트 프로세스는 CREATE EVENT SESSION 문에서 제공된 메타데이터가 포함된 세션 개체를 만듭니다. 호스트 프로세스는 세션 정의 및 사용자 권한 수준을 검사하고 master 데이터베이스에 메타데이터를 저장합니다. 이 시점에서 세션은 활성 상태가 아닙니다.|  
+|변경|ALTER EVENT SESSION, STATE=START|호스트 프로세스가 세션을 시작합니다. 호스트 프로세스는 저장된 메타데이터를 읽고 세션 정의를 검사하며 사용자 권한 수준을 확인하고 세션을 만듭니다. 이벤트 및 대상과 같은 세션 개체가 로드되며 이벤트 처리는 활성 상태입니다.|  
+|변경|ALTER EVENT SESSION, STATE=STOP|호스트 프로세스가 활성 세션을 중지하지만 메타데이터는 유지됩니다.|  
+|드롭|DROP EVENT SESSION|세션이 활성 상태인지 여부에 따라 Drop(DROP SESSION)은 메타데이터를 삭제하고 활성 세션을 종료하거나 세션 메타데이터를 삭제합니다.|  
   
 > [!NOTE]  
 >  ALTER EVENT SESSION과 DROP EVENT SESSION 두 가지 모두 메타데이터에 적용되거나 활성 세션과 메타데이터에 적용될 수 있습니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "62705757"
   
  다음 그림에서는 세션 내용, 그리고 패키지와 세션 간의 관계를 보여 줍니다.  
   
- ![세션에서의 개체 공존 및 공유] (../../database-engine/media/xesessions.gif "Object co-existance and sharing in sessions")  
+ ![세션에서의 개체 공존 및 공유](../../database-engine/media/xesessions.gif "세션에서의 개체 공존 및 공유")  
   
  위 그림을 보면 다음과 같은 사실을 알 수 있습니다.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "62705757"
   
  확장 이벤트 아키텍처는 다양한 개체를 함께 사용하여 특정 문제를 처리할 수 있는 유연한 시스템을 제공합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [확장 이벤트](extended-events.md)  
   
   

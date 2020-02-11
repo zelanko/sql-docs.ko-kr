@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 78573a21a5aa6a719a9bb55d0ee17bf9837258f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63277078"
 ---
 # <a name="filter-settings-object-explorer-and-utility-explorer"></a>필터 설정(개체 탐색기 및 유틸리티 탐색기)
@@ -66,13 +66,13 @@ ms.locfileid: "63277078"
   
      이 필터는 날짜에 사용할 수 있으며 해당 날짜가 제공된 두 날짜보다 이전이거나 이후인 항목을 보여 줍니다. **사이에 있지 않음** 을 선택하고 **연산자** 열에서 Tab 키를 누르면 두 번째 날짜를 입력할 다른 행이 추가됩니다.  
   
- **Value**  
+ **값**  
  속성과 비교할 값을 입력합니다. 날짜의 경우 아래쪽 화살표를 클릭하면 날짜를 선택할 수 있는 달력이 표시됩니다.  
   
  **필터 지우기**  
  현재 필터 설정을 모두 제거합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Management Studio 사용](../sql-server-management-studio-ssms.md)   
  [SQL Server 유틸리티 기능 및 태스크](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 083fa7998e347b3aa3abe7aacbf9585a18047b20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100231"
 ---
 # <a name="new-shared-schedule-management-studio"></a>새 공유 일정(Management Studio)
@@ -31,11 +31,11 @@ ms.locfileid: "66100231"
 > [!NOTE]  
 >  이 기능은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서는 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2012 버전에서 지원하는 기능](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473) 을 참조하세요.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **이름**  
  공유 일정의 이름을 입력합니다. 이 이름은 사용자가 보고서 및 구독에 대한 공유 일정을 선택할 때 드롭다운 목록에 나타납니다. 공유 일정의 이름은 목록에 넣기에 적합한 길이로, 알아보기 쉽고 서로 구분이 잘 되도록 지정하십시오. 이름은 하나 이상의 영숫자 문자를 포함해야 합니다. 공백과 특정 기호도 포함할 수 있습니다. 이름 지정 시에는 다음 문자를 사용하지 마십시오.  
   
- ; ? : \@ & = + , $ / * \< >  
+ ; ? : \@ & = +, $/*\< >  
   
  " /  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66100231"
  **한 번**  
  특정 날짜 및 시간에 한 번만 실행되는 일정을 만들려면 이 옵션을 선택합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Management Studio의 보고서 서버 F1 도움말](report-server-in-management-studio-f1-help.md)   
  [Management Studio에서 보고서 서버에 연결](connect-to-a-report-server-in-management-studio.md)   
  [일정 만들기, 수정 및 삭제](../subscriptions/create-modify-and-delete-schedules.md)   

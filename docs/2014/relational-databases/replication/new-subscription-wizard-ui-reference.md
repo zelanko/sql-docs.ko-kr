@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ace6059545a4c46e3af279ad7c6104456478801c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022542"
 ---
 # <a name="new-subscription-wizard-ui-reference"></a>새 구독 마법사(UI 참조)
@@ -24,7 +24,7 @@ ms.locfileid: "63022542"
   
 -   [&#60;AgentName&#62; 에이전트 위치](agentname-agent-location.md)  
   
--   [구독자](subscribers.md)  
+-   [게시자 속성](subscribers.md)  
   
 -   [SQL Server 이외 구독자 추가](add-non-sql-server-subscriber.md)  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63022542"
   
 -   [HOST_NAME 값](host-name-values.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Create a Pull Subscription](create-a-pull-subscription.md)   
  [ssSDSFull](create-a-push-subscription.md)   
  [게시 구독](subscribe-to-publications.md)   

@@ -1,5 +1,5 @@
 ---
-title: 데이터베이스 미러링 Windows 인증 (Transact SQL)를 사용 하 여 세션 구성 | Microsoft Docs
+title: Windows 인증을 사용 하 여 데이터베이스 미러링 세션 설정 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c1ea3cd62c97cecd9af0b8b696156b9f2622f5b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755515"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-transact-sql"></a>Windows 인증을 사용하여 데이터베이스 미러링 세션 구성(Transact-SQL)
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]을 대신 사용합니다.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)]을 대신 사용합니다.  
   
  미러 데이터베이스를 준비한 후( [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)참조) 데이터베이스 미러링 세션을 구성합니다. 주 서버, 미러 서버 및 미러링 모니터 서버 인스턴스는 다른 호스트 시스템에 있는 별도의 서버 인스턴스여야 합니다.  
   
@@ -31,20 +31,20 @@ ms.locfileid: "62755515"
 >  미러링 구성은 성능에 영향을 줄 수 있으므로 사용률이 낮은 시간에 데이터베이스 미러링을 구성하는 것이 좋습니다.  
   
 > [!NOTE]  
->  지정된 서버 인스턴스는 같은 파트너 또는 다른 파트너에 있는 여러 개의 동시 데이터베이스 미러링 세션에 참여할 수 있습니다. 서버 인스턴스는 한 세션에서는 파트너가 되고, 다른 세션에서는 미러링 모니터 서버가 될 수 있습니다. 미러 서버 인스턴스는 주 서버 인스턴스와 동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 실행해야 합니다. 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서는 데이터베이스 미러링을 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다. 또한 서버 인스턴스는 동일한 작업을 처리할 수 있는 동등한 시스템에서 실행하는 것이 좋습니다.  
+>  지정된 서버 인스턴스는 같은 파트너 또는 다른 파트너에 있는 여러 개의 동시 데이터베이스 미러링 세션에 참여할 수 있습니다. 서버 인스턴스는 한 세션에서는 파트너가 되고, 다른 세션에서는 미러링 모니터 서버가 될 수 있습니다. 미러 서버 인스턴스는 주 서버 인스턴스와 동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 실행해야 합니다. 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서는 데이터베이스 미러링을 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조 하세요. 또한 서버 인스턴스는 동일한 작업을 처리할 수 있는 동등한 시스템에서 실행하는 것이 좋습니다.  
   
 ### <a name="to-establish-a-database-mirroring-session"></a>데이터베이스 미러링 세션을 구성하려면  
   
-1.  미러 데이터베이스를 만듭니다. 자세한 내용은 [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)버전에서는 데이터베이스 미러링을 사용할 수 없습니다.  
+1.  미러 데이터베이스를 만듭니다. 자세한 내용은 [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)을 사용합니다.  
   
 2.  각 서버 인스턴스에서 보안을 설정합니다.  
   
      데이터베이스 미러링 세션의 각 서버 인스턴스에는 데이터베이스 미러링 엔드포인트가 필요합니다. 따라서 엔드포인트가 없으면 만들어야 합니다.  
   
     > [!NOTE]  
-    >  서버 인스턴스에서 데이터베이스 미러링에 사용하는 인증 형식은 데이터베이스 미러링 엔드포인트의 속성입니다. 데이터베이스 미러링에서 사용할 수 있는 두 가지 전송 보안 유형으로 Windows 인증과 인증서 기반 인증이 있습니다. 자세한 내용은 [데이터베이스 미러링 및 AlwaysOn 가용성 그룹에 대 한 전송 보안 &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)합니다.  
+    >  서버 인스턴스에서 데이터베이스 미러링에 사용하는 인증 형식은 데이터베이스 미러링 엔드포인트의 속성입니다. 데이터베이스 미러링에서 사용할 수 있는 두 가지 전송 보안 유형으로 Windows 인증과 인증서 기반 인증이 있습니다. 자세한 내용은 [데이터베이스 미러링에 대 한 전송 보안 및 AlwaysOn 가용성 그룹 &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)를 참조 하세요.  
   
-     각 파트너 서버에서 데이터베이스 미러링의 엔드포인트가 있는지 확인합니다. 지원할 미러링 세션의 수에 관계없이 서버 인스턴스에는 데이터베이스 미러링 엔드포인트가 하나만 있어야 합니다. 이 서버 인스턴스를 데이터베이스 미러링 세션의 파트너 전용으로 사용하려면 엔드포인트에 파트너 역할을 할당합니다(ROLE **=** PARTNER). 이 서버를 다른 데이터베이스 미러링 세션에서 미러링 모니터 서버로도 사용하려면 엔드포인트 역할을 ALL로 지정합니다.  
+     각 파트너 서버에서 데이터베이스 미러링의 엔드포인트가 있는지 확인합니다. 지원할 미러링 세션의 수에 관계없이 서버 인스턴스에는 데이터베이스 미러링 엔드포인트가 하나만 있어야 합니다. 이 서버 인스턴스를 데이터베이스 미러링 세션의 파트너 전용으로 사용 하려는 경우에는 파트너의 역할을 끝점 (역할**=** 파트너)에 할당할 수 있습니다. 이 서버를 다른 데이터베이스 미러링 세션에서 미러링 모니터 서버로도 사용하려면 엔드포인트 역할을 ALL로 지정합니다.  
   
      SET PARTNER 문을 실행하려면 두 파트너의 엔드포인트에 대한 STATE가 STARTED로 설정되어 있어야 합니다.  
   
@@ -59,17 +59,17 @@ ms.locfileid: "62755515"
   
      파트너 중 하나에 엔드포인트가 없는 경우 [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)버전에서는 데이터베이스 미러링을 사용할 수 없습니다.  
   
-3.  서버 인스턴스가 여러 도메인 사용자 계정으로 실행되는 경우 각 인스턴스는 다른 인스턴스의 **master** 데이터베이스에서 로그인을 필요로 합니다. 따라서 로그인이 없으면 만들어야 합니다. 자세한 내용은 [Windows 인증을 사용하여 데이터베이스 미러링 엔드포인트에 대한 네트워크 액세스 허용 &#40;SQL Server &#41;](../database-mirroring-allow-network-access-windows-authentication.md)을 참조하세요.  
+3.  서버 인스턴스가 여러 도메인 사용자 계정으로 실행되는 경우 각 인스턴스는 다른 인스턴스의 **master** 데이터베이스에서 로그인을 필요로 합니다. 따라서 로그인이 없으면 만들어야 합니다. 자세한 내용은 [Windows 인증을 사용하여 데이터베이스 미러링 엔드포인트에 대한 네트워크 액세스 허용&#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md)을 참조하세요.  
   
 4.  미러 데이터베이스에서 주 서버를 파트너로 설정하려면 미러 서버에 연결하여 다음 문을 실행합니다.  
   
-     ALTER DATABASE *<database_name>* SET PARTNER **=** _<server_network_address>_  
+     ALTER database *<database_name>* SET PARTNER **=** _<server_network_address>_  
   
-     여기서 *<database_name>* 은 미러링할 데이터베이스의 이름(두 파트너에서 이 이름은 동일함)이고 *<server_network_address>* 는 주 서버의 서버 네트워크 주소입니다.  
+     여기서 *<database_name>* 은 미러링할 데이터베이스의 이름 (두 파트너에서이 이름은 동일)이 고 *<server_network_address>* 는 주 서버의 서버 네트워크 주소입니다.  
   
      서버 네트워크 주소 구문은 다음과 같습니다.  
   
-     TCP<strong>://</strong>\<*system-address>* <strong>:</strong>\<*port>*  
+     TCP:<strong>//</strong>\<*시스템 주소>* <strong>:</strong>\<*포트>*  
   
      여기서 \<*system-address&gt;* 는 대상 컴퓨터 시스템을 명확하게 식별하는 문자열이고, \<*포트&gt;* 는 파트너 서버 인스턴스의 미러링 엔드포인트에서 사용되는 포트 번호입니다. 자세햔 내용은 [서버 네트워크 주소 지정&#40;데이터베이스 미러링&#41;](specify-a-server-network-address-database-mirroring.md)을 사용합니다.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62755515"
   
 5.  주 데이터베이스에서 미러 서버를 파트너로 설정하려면 주 서버에 연결하여 다음 문을 실행합니다.  
   
-     ALTER DATABASE *<database_name>* SET PARTNER **=** _<server_network_address>_  
+     ALTER database *<database_name>* SET PARTNER **=** _<server_network_address>_  
   
      자세한 내용은 4단계를 참조하십시오.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "62755515"
     ```  
   
     > [!NOTE]  
-    >  로그인을 설정하는 방법의 예제는 [Windows 인증을 사용하여 데이터베이스 미러링 엔드포인트에 대한 네트워크 액세스 허용 &#40;SQL Server &#41;](../database-mirroring-allow-network-access-windows-authentication.md)버전에서는 데이터베이스 미러링을 사용할 수 없습니다.  
+    >  로그인을 설정하는 방법의 예제는 [Windows 인증을 사용하여 데이터베이스 미러링 엔드포인트에 대한 네트워크 액세스 허용&#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md)버전에서는 데이터베이스 미러링을 사용할 수 없습니다.  
   
 2.  미러 서버 인스턴스(PARTNERHOST5의 기본 인스턴스)에서 포트 7022를 사용하여 모든 역할을 지원하는 엔드포인트를 만듭니다.  
   
@@ -152,7 +152,8 @@ ms.locfileid: "62755515"
     GO  
     ```  
   
-4.  `PARTNERHOST5`의 미러 서버 인스턴스에서 데이터베이스를 복원합니다.  
+4.  
+  `PARTNERHOST5`의 미러 서버 인스턴스에서 데이터베이스를 복원합니다.  
   
     ```  
     RESTORE DATABASE AdventureWorks   
@@ -209,17 +210,17 @@ ms.locfileid: "62755515"
 > [!NOTE]  
 >  보안 설정 표시, 미러 데이터베이스 준비, 파트너 설정 및 미러링 모니터 서버 추가 등의 작업을 수행하는 전체 예제는 [데이터베이스 미러링 설정&#40;SQL Server&#41;](database-mirroring-sql-server.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링 설정&#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [ALTER DATABASE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
- [Windows 인증을 사용하여 데이터베이스 미러링 엔드포인트에 대한 네트워크 액세스 허용 &#40;SQL Server &#41;](../database-mirroring-allow-network-access-windows-authentication.md)   
+ [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [Windows 인증 &#40;SQL Server를 사용 하 여 데이터베이스 미러링 끝점에 대 한 네트워크 액세스 허용&#41;](../database-mirroring-allow-network-access-windows-authentication.md)   
  [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)   
- [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기 &#40;Transact-SQL &#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
- [데이터베이스 미러링 및 로그 전달&#40;SQL Server&#41;](database-mirroring-and-log-shipping-sql-server.md)   
+ [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
+ [데이터베이스 미러링 및 로그 전달 &#40;SQL Server&#41;](database-mirroring-and-log-shipping-sql-server.md)   
  [데이터베이스 미러링&#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [데이터베이스 미러링 및 복제&#40;SQL Server&#41;](database-mirroring-and-replication-sql-server.md)   
  [데이터베이스 미러링 설정&#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [서버 네트워크 주소 지정&#40;데이터베이스 미러링&#41;](specify-a-server-network-address-database-mirroring.md)   
- [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)  
+ [데이터베이스 미러링 &#40;서버 네트워크 주소를 지정&#41;](specify-a-server-network-address-database-mirroring.md)   
+ [데이터베이스 미러링 운영 모드](database-mirroring-operating-modes.md)  
   
   

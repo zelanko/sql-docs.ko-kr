@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f7a18a44a0f71254342f8fc29c38f0993fc05bfb
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637891"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>검색 속성의 속성 집합 GUID 및 속성 정수 ID찾기
   이 항목에서는 검색 속성 목록에 속성을 추가하고 전체 텍스트 검색으로 검색할 수 있도록 설정하기 전에 필요한 값을 가져오는 방법에 대해 설명합니다. 이러한 값에는 문서 속성의 속성 집합 GUID와 속성 정수 식별자가 포함됩니다.  
   
- 이진 데이터에서 Ifilter로 추출 된 문서 속성 (즉, `varbinary`에 저장 된 데이터, `varbinary(max)` (`FILESTREAM`포함) 또는 `image` 데이터 형식 열-전체 텍스트 검색에 사용할 수 있습니다. 추출된 속성을 검색할 수 있도록 설정하려면 속성을 검색 속성 목록에 수동으로 추가해야 합니다. 또한 검색 속성 목록은 하나 이상의 전체 텍스트 인덱스와 연결되어야 합니다. 자세한 내용은 [검색 속성 목록을 사용하여 문서 속성 검색](search-document-properties-with-search-property-lists.md)을 참조하세요.  
+ 이진 데이터에서 ifilter로 추출 된 문서 속성 ( `varbinary`즉, `varbinary(max)` 포함 `FILESTREAM`) 또는 `image` 데이터 형식 열에 저장 된 데이터에서 전체 텍스트 검색에 사용할 수 있습니다. 추출된 속성을 검색할 수 있도록 설정하려면 속성을 검색 속성 목록에 수동으로 추가해야 합니다. 또한 검색 속성 목록은 하나 이상의 전체 텍스트 인덱스와 연결되어야 합니다. 자세한 내용은 [검색 속성 목록을 사용하여 문서 속성 검색](search-document-properties-with-search-property-lists.md)을 참조하세요.  
   
  사용 가능한 속성을 속성 목록에 추가하려면 먼저 속성에 대한 다음 두 가지 정보를 찾아야 합니다.  
   
@@ -38,11 +38,11 @@ ms.locfileid: "73637891"
 ##  <a name="wellknown"></a> 널리 사용되고 잘 알려진 Microsoft 속성에 대한 정보 찾기  
  Microsoft에서는 여러 컨텍스트에서 사용할 수 있도록 수백 개의 문서 속성을 정의하지만 각 파일 형식에서는 사용 가능한 속성 중 일부만 사용합니다. 자주 사용되는 Windows 속성 중에는 작은 일반 속성 집합이 있습니다. 다음 표에서는 잘 알려진 일반 속성의 몇 가지 예를 보여 줍니다. 이 표에는 잘 알려진 이름, Windows 정식 이름(Microsoft에서 게시한 속성 설명에 포함됨), 속성 집합 GUID, 속성 정수 식별자 및 간단한 설명이 들어 있습니다.  
   
-|잘 알려진 이름|Windows 정식 이름|속성 집합 GUID|정수 ID|설명|  
+|잘 알려진 이름|Windows 정식 이름|속성 집합 GUID|정수 ID|Description|  
 |----------------------|----------------------------|-----------------------|----------------|-----------------|  
 |Authors|`System.Author`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|지정된 항목의 작성자입니다.|  
-|Tags|`System.Keywords`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|항목에 할당된 키워드(태그라고도 함) 집합입니다.|  
-|형식|`System.PerceivedType`|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|정식 유형을 기반으로 인식되는 파일 유형입니다.|  
+|태그들|`System.Keywords`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|항목에 할당된 키워드(태그라고도 함) 집합입니다.|  
+|Type|`System.PerceivedType`|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|정식 유형을 기반으로 인식되는 파일 유형입니다.|  
 |제목|`System.Title`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|항목의 제목입니다. 예를 들어 문서의 제목, 메시지의 제목, 사진의 캡션 또는 음악 트랙의 이름이 여기에 해당합니다.|  
   
  파일 형식 간 일관성을 유지하기 위해 Microsoft에서는 몇 가지 문서 범주에 대해 자주 사용되고 우선 순위가 높은 문서 속성의 하위 집합을 식별했습니다. 여기에는 통신, 연락처, 문서, 음악 파일, 그림 및 동영상이 포함됩니다. 각 범주에서 순위가 높은 속성에 대한 자세한 내용은 Windows Search 설명서에서 [사용자 지정 파일 형식에 대한 시스템 정의 속성](https://go.microsoft.com/fwlink/?LinkId=144336) 을 참조하세요.  

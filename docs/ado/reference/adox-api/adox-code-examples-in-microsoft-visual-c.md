@@ -1,5 +1,5 @@
 ---
-title: Microsoft Visual의 ADOX 코드 예제에서는 C++ | Microsoft Docs
+title: Microsoft Visual C++에서 ADOX 코드 예제 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,21 +15,21 @@ ms.assetid: b63ec31e-488c-4677-ab58-01371015e692
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d8ee6ac768cc7cb0225f78602754c64e0363786f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67952124"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-c"></a>Microsoft Visual C++의 ADOX 코드 예제
-이러한 항목 ADOX를 사용 하는 방법을 이해할 수 있도록 하는 샘플 코드를 제공 합니다. 모든 코드 예제는 Microsoft Visual를 사용 하 여 작성 된 C++입니다.  
+이러한 항목에서는 ADOX를 사용 하는 방법을 이해 하는 데 도움이 되는 샘플 코드를 제공 합니다. 모든 코드 예제는 Microsoft Visual C++을 사용 하 여 작성 됩니다.  
   
 > [!NOTE]
->  전체 코드 예제를부터 끝까지, 코드 편집기에 붙여 넣습니다. 예제 부분 예제를 사용 하는 경우 또는 단락 서식이 손실 된 경우 올바르게 실행 되지 않을 수 있습니다.  
+>  전체 코드 예제를 처음부터 끝까지 코드 편집기에 붙여 넣습니다. 부분 예제를 사용 하거나 단락 서식이 손실 된 경우 예제가 올바르게 실행 되지 않을 수 있습니다.  
   
 ## <a name="methods"></a>메서드  
   
--   [Columns 및 Tables Append 메서드, Name 속성 예제 (VC++)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vc.md)  
+-   [Columns 및 Tables Append 메서드, Name 속성 예제(VC++)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vc.md)  
   
 -   [Connection Close 메서드, Table Type 속성 예제(VC++)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vc.md)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "67952124"
   
 -   [Indexes Append 메서드 예제(VC++)](../../../ado/reference/adox-api/indexes-append-method-example-vc.md)  
   
--   [Keys Append 메서드, 키 유형, RelatedColumn, RelatedTable 및 UpdateRule 속성 예제 (VC + +)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
+-   [Keys Append 메서드, Key Type, RelatedColumn, RelatedTable 및 UpdateRule 속성 예제 (VC + +)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
   
 ## <a name="properties"></a>속성  
   
@@ -55,7 +55,7 @@ ms.locfileid: "67952124"
   
 -   [Command 및 CommandText 속성 예제(VC++)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vc.md)  
   
--   [Command 속성을 매개 변수 컬렉션 예제 (VC + +)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vc.md)  
+-   [Command 속성, Parameters 컬렉션 예제 (VC + +)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vc.md)  
   
 -   [DateCreated 및 DateModified 속성 예제(VC++)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vc.md)  
   
@@ -65,7 +65,7 @@ ms.locfileid: "67952124"
   
 -   [IndexNulls 속성 예제(VC++)](../../../ado/reference/adox-api/indexnulls-property-example-vc.md)  
   
--   [키 유형, RelatedColumn, RelatedTable, UpdateRule 속성, 키 Append 메서드 예제 (VC + +)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
+-   [Key Type, RelatedColumn, RelatedTable, UpdateRule Properties, Keys Append 메서드 예제 (VC + +)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
   
 -   [Name 속성, Columns 및 Tables Append 메서드 예제 (VC + +)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vc.md)  
   
@@ -75,7 +75,7 @@ ms.locfileid: "67952124"
   
 -   [PrimaryKey 및 Unique 속성 예제(VC++)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vc.md)  
   
--   [테이블 형식 속성, 연결 닫기 메서드 예제 (VC + +)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vc.md)  
+-   [Table Type 속성, Connection Close 메서드 예제 (VC + +)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vc.md)  
   
 ## <a name="collections"></a>컬렉션  
   

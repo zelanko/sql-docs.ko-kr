@@ -1,5 +1,5 @@
 ---
-title: SQLXMLOLEDB 공급자 (SQLXML 4.0)를 사용 하 여 | Microsoft Docs
+title: SQLXMLOLEDB 공급자 사용 (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 67a5486816f5af652e111372c9cb492ba3cdb3c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012947"
 ---
 # <a name="using-the-sqlxmloledb-provider-sqlxml-40"></a>SQLXMLOLEDB 공급자 사용(SQLXML 4.0)
@@ -29,36 +29,36 @@ ms.locfileid: "66012947"
   
 1.  Microsoft Visual Basic .exe 애플리케이션을 만들고 다음 참조 중 하나를 추가합니다.  
   
-    -   Microsoft ActiveX Data Objects 2.6 라이브러리  
+    -   Microsoft ADO(ActiveX Data Objects) 2.6 라이브러리  
   
-    -   Microsoft ActiveX Data Objects 2.7 라이브러리  
+    -   Microsoft ADO(ActiveX Data Objects) 2.7 라이브러리  
   
     -   Microsoft ActiveX Data Objects 2.8 라이브러리  
   
 2.  SQLXML 4.0과 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 배포 및 설치합니다.  
   
-     자세한 내용은에서 참조 [SQLXML 4.0 프로그래밍 개념](../../sqlxml/sqlxml-4-0-programming-concepts.md) 하 고 [SQL Server Native Client 설치](../../native-client/applications/installing-sql-server-native-client.md)합니다.  
+     자세한 내용은 [SQLXML 4.0 프로그래밍 개념](../../sqlxml/sqlxml-4-0-programming-concepts.md) 및 [SQL Server Native Client 설치](../../native-client/applications/installing-sql-server-native-client.md)를 참조 하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [SQL 쿼리 실행 &#40;SQLXMLOLEDB 공급자&#41;](executing-sql-queries-sqlxmloledb-provider.md)  
- SQL 쿼리를 실행할 ClientSideXML 및 xml 루트 속성의 사용을 보여 줍니다.  
+ [SQLXMLOLEDB 공급자&#41;&#40;SQL 쿼리 실행](executing-sql-queries-sqlxmloledb-provider.md)  
+ ClientSideXML 및 xml 루트 속성을 사용 하 여 SQL 쿼리를 실행 하는 방법을 보여 줍니다.  
   
- [SQL 쿼리를 포함 하는 템플릿 실행 &#40;SQLXMLOLEDB 공급자&#41;](executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md)  
- ClientSideXML 속성의 사용을 보여 줍니다.  
+ [SQLXMLOLEDB Provider &#40;SQL 쿼리를 포함 하는 템플릿 실행&#41;](executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md)  
+ ClientSideXML 속성을 사용 하는 방법을 보여 줍니다.  
   
- [XPath 쿼리 실행 &#40;SQLXMLOLEDB 공급자&#41;](executing-xpath-queries-sqlxmloledb-provider.md)  
- ClientSideXML, 기본 경로 및 매핑 스키마 속성의 사용을 보여 줍니다.  
+ [SQLXMLOLEDB 공급자를 &#40;XPath 쿼리 실행&#41;](executing-xpath-queries-sqlxmloledb-provider.md)  
+ ClientSideXML, 기본 경로 및 매핑 스키마 속성을 사용 하는 방법을 보여 줍니다.  
   
- [네임 스페이스를 사용 하 여 XPath 쿼리 실행 &#40;SQLXMLOLEDB 공급자&#41;](executing-xpath-queries-with-namespaces-sqlxmloledb-provider.md)  
+ [SQLXMLOLEDB 공급자를 사용 하 &#40;네임 스페이스가 있는 XPath 쿼리 실행&#41;](executing-xpath-queries-with-namespaces-sqlxmloledb-provider.md)  
  네임스페이스로 한정된 스키마에 대해 쿼리하는 방법을 설명합니다.  
   
- [XPath 쿼리를 포함 하는 템플릿 실행 &#40;SQLXMLOLEDB 공급자&#41;](executing-templates-that-contain-xpath-queries-sqlxmloledb-provider.md)  
+ [SQLXMLOLEDB Provider &#40;XPath 쿼리를 포함 하는 템플릿 실행&#41;](executing-templates-that-contain-xpath-queries-sqlxmloledb-provider.md)  
  ClientSideXML, 기본 경로 및 매핑 스키마 속성을 사용 하 여 SQL 쿼리를 사용 하 여 템플릿을 실행 하는 방법을 보여 줍니다.  
   
- [XSL 변환 적용 &#40;SQLXMLOLEDB 공급자&#41;](applying-an-xsl-transformation-sqlxmloledb-provider.md)  
- XSL 변환 적용에 ClientSideXML 및 xsl 속성의 사용을 보여 줍니다.  
+ [SQLXMLOLEDB 공급자&#41;&#40;XSL 변환 적용](applying-an-xsl-transformation-sqlxmloledb-provider.md)  
+ Xml 및 xsl 속성을 사용 하 여 XSL 변환을 적용 하는 방법을 보여 줍니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Native Client의 시스템 요구 사항](../../native-client/system-requirements-for-sql-server-native-client.md)  
   
   

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cd0b8c5e1957a6cf803fbb741d6b9bad5bbb9613
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721775"
 ---
 # <a name="breaking-changes-in-sql-server-replication"></a>SQL Server 복제의 주요 변경 내용
@@ -26,7 +26,7 @@ ms.locfileid: "62721775"
 ## <a name="breaking-changes-made-in-sql-server-2014"></a>SQL Server 2014의 주요 변경 내용  
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 또는 [!INCLUDE[ssEW](../../includes/ssew-md.md)]에 대한 복제를 지원하지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [복제의 이전 버전과의 호환성](replication-backward-compatibility.md)  
   
   

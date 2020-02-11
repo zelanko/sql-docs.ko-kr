@@ -33,10 +33,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f70e66a02637b65e96cccc6001c9702d5253d5cd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257373"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>XML 대량 로드 예(SQLXML 4.0)
@@ -952,7 +952,7 @@ End Sub
 </Schema>  
 ```  
   
-## <a name="h-specifying-the-file-path-for-temp-files-in-transaction-mode"></a>H 트랜잭션 모드에서 임시 파일에 대한 파일 경로 지정  
+## <a name="h-specifying-the-file-path-for-temp-files-in-transaction-mode"></a>H. 트랜잭션 모드에서 임시 파일에 대한 파일 경로 지정  
  트랜잭션 모드에서 대량 로드 하는 경우, 즉 Transaction 속성이 TRUE로 설정 된 경우 다음 조건 중 하나에 해당 하는 경우에도 TempFilePath 속성을 설정 해야 합니다.  
   
 -   원격 서버에 대량 로드하는 경우  
@@ -1086,7 +1086,7 @@ set objBL=Nothing
 </Schema>  
 ```  
   
-## <a name="i-using-an-existing-database-connection-with-the-connectioncommand-property"></a>I. ConnectionCommand 속성으로 기존 데이터베이스 연결 사용  
+## <a name="i-using-an-existing-database-connection-with-the-connectioncommand-property"></a>9\. ConnectionCommand 속성으로 기존 데이터베이스 연결 사용  
  기존 ADO 연결을 사용하여 XML을 대량 로드할 수 있습니다. 이 방법은 XML 대량 로드 외에도 많은 작업이 데이터 원본에 대해 수행되는 경우 유용합니다.  
   
  ConnectionCommand 속성을 사용 하면 ADO 명령 개체를 사용 하 여 기존 ADO 연결을 사용할 수 있습니다. 다음 Visual Basic 예에서 확인할 수 있습니다.  

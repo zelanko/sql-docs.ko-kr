@@ -15,14 +15,14 @@ ms.assetid: 3675f641-b4b1-48ff-ba33-8d9ea064cd04
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ac48cd3397905a3ab0d14d65006cbd4a7656555b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920263"
 ---
 # <a name="cachesize-property-example-jscript"></a>CacheSize 속성 예제(JScript)
-이 예제에서는 합니다 [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) 작업에 대 한 성능 차이 표시 하는 속성 30 개의 레코드가 캐시 하지 않고 사용 하 여 수행 합니다. 잘라내기 및 메모장 이나 다른 텍스트 편집기에 다음 코드를 붙여넣고,으로 저장 **CacheSizeJS.asp**합니다.  
+이 예에서는 [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) 속성을 사용 하 여 30 레코드 캐시 없이 수행 된 작업의 성능 차이를 표시 합니다. 다음 코드를 잘라내어 메모장 또는 다른 텍스트 편집기에 붙여 넣고 **CacheSizeJS**로 저장 합니다.  
   
 ```  
 <!-- BeginCacheSizeJS -->  
@@ -148,6 +148,6 @@ body {
 <!-- EndCacheSizeJS -->  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [CacheSize 속성 (ADO)](../../../ado/reference/ado-api/cachesize-property-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

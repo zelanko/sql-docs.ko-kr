@@ -1,5 +1,5 @@
 ---
-title: '- (빼기) (MDX) | Microsoft Docs'
+title: '- 빼는 (MDX) | Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 3b8003bdeddea32f80636dc10a78e200d6b0e0be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036678"
 ---
 # <a name="--subtract-mdx"></a>-(빼기)(MDX)
@@ -31,7 +31,7 @@ Numeric_Expression - Numeric_Expression
  *Numeric_Expression*  
  숫자 값을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  우선 순위가 더 높은 매개 변수의 데이터 형식을 갖는 값입니다.  
   
 ## <a name="remarks"></a>설명  
@@ -61,7 +61,7 @@ WHERE
 ([Measures].[GPM Delta])  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [MDX 연산자 참조 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [Mdx 연산자 참조 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 프로젝트 옵션 (MySQLToSQL) 설정 | Microsoft Docs
+title: 프로젝트 옵션 설정 (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,19 +12,19 @@ ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 346fcd2ea7f83abcb9a5c23a22cb0eded76acc0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67944685"
 ---
 # <a name="setting-project-options-mysqltosql"></a>프로젝트 옵션 설정(MySQLToSQL)
-각 SSMA 프로젝트에 대 한 프로젝트 수준 옵션을 설정할 수 있습니다. 이러한 옵션에는 개체를 변환 하는 방법을, 데이터가 마이그레이션되는 방식 및 원본 데이터 형식을 대상 데이터 형식에 매핑하는 방법을 지정 합니다.  SQL Server 또는 SQL Azure 개체를 변환 하거나 SQL Server 또는 SQL Azure 데이터를 마이그레이션할 하기 전에 구성 옵션을 프로젝트에 적절 하 게 확인 합니다.  
+각 SSMA 프로젝트에 대해 프로젝트 수준 옵션을 설정할 수 있습니다. 이러한 옵션은 개체가 변환 되는 방법, 데이터를 마이그레이션하는 방법 및 원본 데이터 형식을 대상 데이터 형식에 매핑하는 방법을 지정 합니다.  개체를 SQL Server 또는 SQL Azure 데이터를 SQL Server 또는 SQL Azure로 변환 하기 전에 구성 옵션이 프로젝트에 적합 한지 확인 합니다.  
   
-SSMA를 사용 하면 모든 프로젝트에 대 한 기본 옵션을 구성할 수 있습니다. 이러한 옵션은 사용자가 만든 모든 새 프로젝트에 적용 됩니다. 그런 다음 각 프로젝트에 대 한 옵션을 사용자 지정할 수 있습니다.  
+SSMA를 사용 하면 모든 프로젝트에 대 한 기본 옵션을 구성할 수 있습니다. 이러한 옵션은 사용자가 만드는 모든 새 프로젝트에 적용 됩니다. 그런 다음 각 프로젝트에 대 한 옵션을 사용자 지정할 수 있습니다.  
   
 ## <a name="configuration-options-and-modes"></a>구성 옵션 및 모드  
-SSMA는 프로젝트 설정의 5 개 집합에 있습니다.  
+SSMA에는 5 개의 프로젝트 설정 집합이 있습니다.  
   
 -   프로젝트 정보  
   
@@ -36,7 +36,7 @@ SSMA는 프로젝트 설정의 5 개 집합에 있습니다.
   
 -   형식 매핑  
   
-프로젝트 설정 네 가지 방법으로 구성할 수 있습니다.  
+프로젝트 설정은 다음 네 가지 방법으로 구성할 수 있습니다.  
   
 -   기본값  
   
@@ -46,60 +46,62 @@ SSMA는 프로젝트 설정의 5 개 집합에 있습니다.
   
 -   사용자 지정  
   
-대부분의 사용자에 대 한 기본 모드를 사용 하는 것이 좋습니다. 최적 모드 현재 MySQL 구문의 자세히 유지 및 읽기가 쉽습니다. 그러나 현재 구문을 유지 정확 하지 않을 합니다. MySQL 구문을 해야 SQL Server 또는 SQL Azure 대 한 해당 구문을 변환할 수 있으면 전체 모드를 가장 완벽 변환을 수행 합니다. 그러나 결과 코드를 않을 읽기가 더 어려워집니다. 사용자 지정 모드로 옵션을 설정할 수 있습니다.  
+대부분의 사용자에 게 기본 모드를 권장 합니다. 낙관적 모드는 현재 MySQL 구문을 더 많이 유지 하 고 더 쉽게 읽을 수 있습니다. 그러나 현재 구문을 유지 하는 것은 정확 하지 않을 수 있습니다. MySQL 구문을 동등한 SQL Server 또는 SQL Azure 구문으로 변환 해야 하는 경우 전체 모드에서 가장 완전 한 변환을 수행 합니다. 그러나 결과 코드를 읽기가 더 어려울 수 있습니다. 사용자 지정 모드에서 옵션을 설정할 수 있습니다.  
   
-설정 및 각 모드에는 설정 적용 방법에 대 한 자세한 내용은 다음 항목을 참조 합니다.  
+설정 및 설정 설정에 대 한 자세한 내용은 다음 항목을 참조 하십시오.  
   
--   [프로젝트 설정 &#40;변환&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
+-   [프로젝트 설정 &#40;MySQLToSQL&#41;&#41; &#40;변환](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
   
 -   [프로젝트 설정 &#40;마이그레이션&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-migration-mysqltosql.md)  
   
--   [프로젝트 설정 (GUI) (SSMA 공통)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)  
+-   [프로젝트 설정 (GUI) (SSMA Common)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)  
   
 -   [프로젝트 설정 &#40;형식 매핑&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)  
   
 -   [프로젝트 설정 &#40;동기화&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
   
--   [프로젝트 설정 &#40;Azure SQL DB&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)  
+-   [Azure SQL DB&#41; &#40;MySQLToSQL&#41;&#40;프로젝트 설정](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)  
   
 ## <a name="setting-project-options"></a>프로젝트 옵션 설정  
-SSMA에 모든 프로젝트에 대 한 기본 설정을 구성할 수 있습니다. 이러한 설정은 SSMA 구성 파일에 저장 되며 사용자가 만든 모든 새 프로젝트에 적용 됩니다.  
+SSMA에서 모든 프로젝트에 대 한 기본 설정을 구성할 수 있습니다. 이러한 설정은 SSMA 구성 파일에 저장 되 고 사용자가 만드는 모든 새 프로젝트에 적용 됩니다.  
   
 **기본 프로젝트 옵션을 설정 하려면**  
   
-1.  에 **도구** 메뉴에서 클릭 **기본 프로젝트 설정**합니다.  
+1.  **도구** 메뉴에서 **기본 프로젝트 설정**을 클릭 합니다.  
   
-2.  에 **기본 프로젝트 설정** 대화 상자에서 다음 절차 중 하나를 사용 합니다.  
+2.  **기본 프로젝트 설정** 대화 상자에서 다음 절차 중 하나를 사용 합니다.  
   
-    1.  설정을 볼 /에서 변경 하는 데 필요한는 마이그레이션 프로젝트 형식을 선택 **마이그레이션 대상 버전** 드롭다운을 클릭 합니다 **일반** 선택 고왼쪽된창맨아래에**변환 또는 SQL Azure 마이그레이션** 옵션입니다.  
+    1.  마이그레이션 **대상 버전** 드롭다운에서 설정 하거나 변경 해야 하는 설정에 대 한 마이그레이션 프로젝트 유형을 선택 하 고 왼쪽 창의 맨 아래에서 **일반** 을 클릭 한 다음 **변환 또는 마이그레이션 또는 SQL Azure** 옵션을 선택 합니다.  
   
-    2.  미리 정의 된 모드를 선택 하려면 **기본**를 **Optimistic**, 또는 **전체** 에서 **모드** 드롭다운 목록 상자입니다.  
+    2.  미리 정의 된 모드를 선택 하려면 **모드** 드롭다운 상자에서 **기본**, **낙관적**또는 **전체** 를 선택 합니다.  
   
-    3.  사용자 지정 설정을 지정 하려면 선택 하거나 새 설정이 나 값을 입력 합니다.  
+    3.  사용자 지정 설정을 지정 하려면 새 설정 또는 값을 선택 하거나 입력 합니다.  
   
-3.  **확인**을 클릭하여 설정을 저장합니다.  
+3.  
+  **확인**을 클릭하여 설정을 저장합니다.  
   
-현재 프로젝트에 대 한 설정을 사용자 지정할 수도 있습니다. 현재 프로젝트 파일에 설정은 저장 합니다.  
+현재 프로젝트에 대 한 설정을 사용자 지정할 수도 있습니다. 설정은 현재 프로젝트 파일에 저장 됩니다.  
   
 **현재 프로젝트에 대 한 설정을 사용자 지정 하려면**  
   
-1.  에 **도구** 메뉴에서 클릭 **ProjectSettings**합니다.  
+1.  **도구** 메뉴에서 **projectsettings**를 클릭 합니다.  
   
-2.  에 **ProjectSettings** 대화 상자에서 다음 절차 중 하나를 사용 합니다.  
+2.  **Projectsettings** 대화 상자에서 다음 절차 중 하나를 사용 합니다.  
   
-    1.  미리 정의 된 모드를 선택 하려면 **기본**를 **Optimistic**, 또는 **전체** 에서 **모드** 드롭다운 목록 상자입니다.  
+    1.  미리 정의 된 모드를 선택 하려면 **모드** 드롭다운 상자에서 **기본**, **낙관적**또는 **전체** 를 선택 합니다.  
   
-    2.  사용자 지정 모드를 지정 하려면 **사용자 지정** 에서 합니다 **모드** 드롭다운 목록 상자입니다. 선택한 후 적절 한 프로젝트 설정 합니다.  
+    2.  사용자 지정 모드를 지정 하려면 **모드** 드롭다운 상자에서 **사용자 지정** 을 선택 합니다. 그런 다음 적절 한 프로젝트 설정을 선택 합니다.  
   
-3.  **확인**을 클릭하여 설정을 저장합니다.  
+3.  
+  **확인**을 클릭하여 설정을 저장합니다.  
   
 ## <a name="next-step"></a>다음 단계  
-다음 단계는 마이그레이션 프로젝트 요구 사항에 따라 달라 집니다.  
+마이그레이션의 다음 단계는 프로젝트 요구 사항에 따라 달라 집니다.  
   
--   원본 및 대상 데이터 형식 매핑 사용자 지정을 참조 하세요 [매핑 MySQL 및 SQL Server 데이터 형식 &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
+-   원본 및 대상 데이터 형식의 매핑을 사용자 지정 하려면 [MySQL 및 SQL Server 데이터 형식 &#40;MySQLToSQL에 매핑](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md) 을 참조 하세요&#41;  
   
--   그렇지 않은 경우 SQL Server 또는 SQL Azure 개체 정의에 MySQL 데이터베이스 개체 정의 변환할 수 있습니다. 자세한 내용은 [MySQL 데이터베이스 변환 &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
+-   그렇지 않으면 MySQL 데이터베이스 개체 정의를 SQL Server 또는 SQL Azure 개체 정의로 변환할 수 있습니다. 자세한 내용은 [&#40;MySQLToSQL&#41;MySQL 데이터베이스 변환](../../ssma/mysql/converting-mysql-databases-mysqltosql.md) (영문)을 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
-[MySQL 및 SQL Server 데이터 형식 매핑 &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
+## <a name="see-also"></a>참고 항목  
+[MySQL 및 SQL Server 데이터 형식 &#40;MySQLToSQL&#41;매핑](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f29ddee8456149ca16dd886935138b0cc915f42d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229292"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>PowerPivot 갤러리 만들기 및 사용자 지정
@@ -24,7 +24,7 @@ ms.locfileid: "75229292"
   
 -   [필수 구성 요소](#prereq)  
   
--   [설명은](#overview)  
+-   [개요](#overview)  
   
 -   [PowerPivot  갤러리 만들기](#createlib)  
   
@@ -34,7 +34,7 @@ ms.locfileid: "75229292"
   
 -   [극장 보기 또는 갤러리 보기로 전환](#switch)  
   
-##  <a name="prereq"></a>사전  
+##  <a name="prereq"></a> 필수 조건  
   
 -   Silverlight가 있어야 합니다. Silverlight는 Microsoft Update를 통해 다운로드하여 설치할 수 있습니다. Silverlight가 없는 브라우저를 사용하여 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리 라이브러리를 보는 경우 페이지의 링크를 클릭하여 Silverlight를 설치합니다. 설치한 다음에는 브라우저를 닫은 후 다시 열어야 합니다.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "75229292"
   
  다음 표에서는 각 미리 보기 페이지의 축소판 그림 스케치를 표시하는 데 사용할 수 있는 여러 레이아웃을 설명합니다.  
   
-|보기|설명|  
+|보기|Description|  
 |----------|-----------------|  
 |갤러리 보기(기본)|갤러리는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리의 기본 보기입니다. 미리 보기가 왼쪽에 나타납니다. 미리 보기 옆에 각 워크시트에 대한 더 작은 축소판 그림이 왼쪽에서 오른쪽의 순서로 순차적으로 나타납니다.|  
 |모든 문서|문서 라이브러리의 표준 레이아웃입니다. 이 보기를 선택하여 개별 문서를 관리하거나 라이브러리 내용을 목록 형식으로 볼 수 있습니다.<br /><br /> 이 보기를 사용하여 속성을 편집하거나, 개별 문서를 삭제하거나 이동합니다.<br /><br /> 버전 관리를 사용하는 경우 이 보기를 사용하여 라이브러리에서 문서를 체크 인 또는 체크 아웃해야 합니다.|  

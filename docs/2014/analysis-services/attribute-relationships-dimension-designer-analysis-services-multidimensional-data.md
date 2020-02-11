@@ -1,5 +1,5 @@
 ---
-title: 특성 관계 (Dimension Designer) (Analysis Services-다차원 데이터) | Microsoft Docs
+title: 특성 관계 (차원 디자이너) (Analysis Services 다차원 데이터) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 08d01bb328bcf3e693724475532b6c9a39c79be2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66063184"
 ---
 # <a name="attribute-relationships-dimension-designer-analysis-services---multidimensional-data"></a>특성 관계(차원 디자이너)(Analysis Services - 다차원 데이터)
   차원 디자이너의 **특성 관계** 탭을 사용하여 선택한 차원의 특성 관계를 만들거나 수정하거나 삭제할 수 있습니다.  
   
 ## <a name="panes"></a>창  
- **특성 관계** 페이지에는 다음과 같은 창이 있습니다.  
+ 
+  **특성 관계** 페이지에는 다음과 같은 창이 있습니다.  
   
  [도구 모음](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)  
  도구 모음을 사용하여 차원 디자이너의 **특성 관계** 탭에서 작업을 수행할 수 있습니다.  
@@ -37,11 +38,11 @@ ms.locfileid: "66063184"
  [특성 관계 목록](attribute-relationships-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)  
  이 목록을 사용하여 특성 관계 다이어그램에서 특정 특성 관계를 찾고 해당 관계를 관리할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [차원 구조 &#40;차원 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
- [번역 &#40;차원 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)   
- [브라우저 &#40;차원 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)   
- [차원 &#40;Analysis Services-다차원 데이터&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>참고 항목  
+ [차원 구조 &#40;차원 디자이너&#41; &#40;Analysis Services 다차원 데이터&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
+ [번역 &#40;차원 디자이너&#41; &#40;Analysis Services 다차원 데이터&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)   
+ [브라우저 &#40;차원 디자이너&#41; &#40;Analysis Services 다차원 데이터&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)   
+ [차원 &#40;Analysis Services 다차원 데이터&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [다차원 모델의 차원](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

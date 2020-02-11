@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_rda_schema_update_status (TRANSACT-SQL) | Microsoft Docs
+title: sys. dm_db_rda_schema_update_status (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,35 +17,35 @@ ms.assetid: 364e3caa-a7c6-4be5-a029-0b19da34de3e
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 611fe9d5bea47204b655f2defe5072d2dd17be92
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67937010"
 ---
-# <a name="stretch-database---sysdmdbrdaschemaupdatestatus"></a>Stretch Database - sys.dm_db_rda_schema_update_status
+# <a name="stretch-database---sysdm_db_rda_schema_update_status"></a>Stretch Database dm_db_rda_schema_update_status
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  현재 데이터베이스의 각 스트레치 사용 테이블의 원격 데이터 보관에 대 한 각 스키마 업데이트 작업에 대 한 하나의 행을 포함 합니다. 작업은 해당 작업 id로 식별 됩니다.  
+  현재 데이터베이스의 각 스트레치 사용 테이블에 대 한 원격 데이터 보관에 대 한 각 스키마 업데이트 태스크에 대해 하나의 행을 포함 합니다. 태스크는 작업 id로 식별 됩니다.  
   
- **dm_db_rda_schema_update_status** 범위 현재 데이터베이스 컨텍스트를 지정 합니다. 스트레치 사용 테이블 스키마 업데이트 상태를 보려는 데이터베이스 컨텍스트에서 되는지 확인 합니다.  
+ **dm_db_rda_schema_update_status** 은 현재 데이터베이스 컨텍스트로 범위가 지정 됩니다. 스키마 업데이트 상태를 보려는 스트레치 사용 테이블의 데이터베이스 컨텍스트에 있는지 확인 합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**table_id**|**int**|원격 데이터 보관 스키마 로컬 스트레치 사용 테이블의 ID는 업데이트 중입니다.|  
+|**table_id**|**int**|원격 데이터 보관 스키마가 업데이트 되 고 있는 로컬 스트레치 사용 테이블의 ID입니다.|  
 |**database_id**|**int**|로컬 스트레치 사용 테이블을 포함 하는 데이터베이스의 ID입니다.|  
-|**task_id**|**bigint**|원격 데이터 보관 스키마 업데이트 작업의 ID입니다.|  
-|**task_type**|**int**|원격 데이터 보관 스키마 업데이트 작업의 형식입니다.|  
-|**task_type_desc**|**nvarchar**|원격 데이터 보관 스키마 업데이트 작업의 형식 설명입니다.|  
-|**task_state**|**int**|원격 데이터 보관 스키마 업데이트 작업의 상태입니다.|  
-|**task_state_des**|**nvarchar**|원격 데이터 보관 스키마 업데이트 작업의 상태 설명입니다.|  
-|**start_time_utc**|**datetime**|원격 데이터 보관 스키마 업데이트를 시작 하는 UTC 시간입니다.|  
-|**end_time_utc**|**datetime**|UTC에 원격 데이터 보관 스키마 업데이트를 완료 했습니다.|  
-|**error_number**|**int**|원격 데이터 보관 스키마 업데이트에 실패 하면 발생 한 오류의 오류 번호 그렇지 않으면 null입니다.|  
-|**error_severity**|**int**|원격 데이터 보관 스키마 업데이트에 실패 하면 발생 한 오류의 심각도 그렇지 않으면 null입니다.|  
-|**error_state**|**int**|원격 데이터 보관 스키마 업데이트에 실패 하면 발생 한 오류의 상태 그렇지 않으면 null입니다. Error_state는 조건 또는 오류가 발생 하는 위치를 나타냅니다.|  
+|**task_id**|**bigint**|원격 데이터 보관 스키마 업데이트 태스크의 ID입니다.|  
+|**task_type**|**int**|원격 데이터 보관 스키마 업데이트 태스크의 유형입니다.|  
+|**task_type_desc**|**nvarchar**|원격 데이터 보관 스키마 업데이트 태스크의 유형에 대 한 설명입니다.|  
+|**task_state**|**int**|원격 데이터 보관 스키마 업데이트 태스크의 상태입니다.|  
+|**task_state_des**|**nvarchar**|원격 데이터 보관 스키마 업데이트 태스크의 상태에 대 한 설명입니다.|  
+|**start_time_utc**|**datetime**|원격 데이터 보관 스키마 업데이트가 시작 된 UTC 시간입니다.|  
+|**end_time_utc**|**datetime**|원격 데이터 보관 스키마 업데이트가 완료 된 UTC 시간입니다.|  
+|**error_number**|**int**|원격 데이터 보관 스키마 업데이트가 실패할 경우 발생 한 오류의 오류 번호입니다. 그렇지 않으면 null입니다.|  
+|**error_severity**|**int**|원격 데이터 보관 스키마 업데이트가 실패 하는 경우 발생 한 오류의 심각도입니다. 그렇지 않으면 null입니다.|  
+|**error_state**|**int**|원격 데이터 보관 스키마 업데이트가 실패 하는 경우 발생 한 오류의 상태입니다. 그렇지 않으면 null입니다. Error_state은 오류가 발생 한 조건 또는 위치를 나타냅니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   

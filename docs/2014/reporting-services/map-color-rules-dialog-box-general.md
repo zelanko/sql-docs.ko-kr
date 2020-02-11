@@ -14,18 +14,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e97de85cdd57fdb21aa82379243eb6954358ea38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108316"
 ---
 # <a name="map-color-rules-dialog-box-general"></a>지도 색 규칙 대화 상자, 일반
+  
   **색 규칙 속성** 대화 상자에서 **일반** 을 선택하여 이 계층의 지도 요소에 대한 색 옵션을 정의할 수 있습니다. 지도 요소에는 다각형, 선 및 점이 포함됩니다. 공간 데이터 기반의 지도 요소와 데이터 세트 필드 또는 공간 데이터 원본 필드의 분석 데이터 간 관계를 만든 경우 색 규칙을 적용할 수 있습니다.  
   
  서로 다른 기본 색과 보조 색으로 장식 그라데이션을 지정하여 계층의 모든 지도 요소를 표시하려면 지도 다각형 속성 대화 상자의 **채우기** 페이지를 사용합니다. 색 규칙은 계층의 표시 속성보다 우선합니다. 자세한 내용은 [지도 또는 지도 계층의 데이터 및 표시 사용자 지정&#40;보고서 작성기 및 SSRS&#41;](report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)을 참조하세요.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **템플릿 스타일 적용**  
  마법사에서 선택하거나 다각형, 선 또는 점 계층 속성에서 설정한 테마에 따라 색을 사용하려면 이 옵션을 선택합니다. 테마에 따라 지도의 색, 글꼴 및 테두리에 대한 기본 옵션이 설정됩니다. 이 옵션의 경우 각 지도 요소에 색을 할당하기 위해 규칙이 적용되지 않습니다.  
   
@@ -43,7 +44,7 @@ ms.locfileid: "66108316"
   
  드롭다운 목록에서 사용할 분석 데이터 필드를 선택합니다. 공간 데이터의 원본에 따라 목록에는 공간 데이터 원본의 필드와 공간 데이터와 분석 데이터 간의 관계가 있는 보고서 데이터 세트의 필드가 표시됩니다. 이러한 관계를 만들려면 선택된 지도 계층에 대한 분석 데이터 페이지에서 데이터 옵션을 설정합니다.  
   
- **색상표**  
+ **색**  
  색상표의 이름을 입력하거나 선택합니다.  
   
  **시작 색**  
@@ -58,7 +59,7 @@ ms.locfileid: "66108316"
  **추가**  
  색 규칙의 색을 직접 지정하려면 **추가** 를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [지도&#40;보고서 작성기 및 SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
  [지도 범례, 색 눈금 및 관련 규칙 변경&#40;보고서 작성기 및 SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   

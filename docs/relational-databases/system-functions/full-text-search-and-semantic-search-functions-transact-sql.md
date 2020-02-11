@@ -1,5 +1,5 @@
 ---
-title: 전체 텍스트 검색과 의미 체계 Search 함수 (TRANSACT-SQL) | Microsoft Docs
+title: 전체 텍스트 검색 및 의미 체계 검색 함수 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ ms.assetid: a61a3694-7604-4583-962e-fc30f771c6fa
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 58bf5650a5ab06783ad0c889bc3286184a7d73ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68042747"
 ---
 # <a name="full-text-search-and-semantic-search-functions-transact-sql"></a>전체 텍스트 Search 및 의미 체계 Search 함수(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68042747"
  특정 단어나 구와 정확히 일치하거나 비슷하게 일치하는 단어 검색, 서로 근접한 단어 검색 또는 가중치 검색에서 일치하는 항목이 포함된 열에 대해 0개 이상의 행이 있는 테이블을 반환합니다.  
   
  [FREETEXTTABLE&#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)  
- 0, 1 또는 지정 된 텍스트의 정확한 단어가 아니라와 의미는 일치 하는 값이 포함 된 열에 대 한 더 많은 행의 테이블을 반환 *freetext_string*합니다.  
+ 지정 된 *freetext_string*에 있는 텍스트의 정확한 단어 뿐만 아니라 의미와 일치 하는 값을 포함 하는 열에 대해 0 개 이상의 행이 포함 된 테이블을 반환 합니다.  
   
 ## <a name="semantic-search-functions"></a>의미 체계 Search 함수  
  [semantickeyphrasetable&#40;Transact-SQL&#41;](../../relational-databases/system-functions/semantickeyphrasetable-transact-sql.md)  

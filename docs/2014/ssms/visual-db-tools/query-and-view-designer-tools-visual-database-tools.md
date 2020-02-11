@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 639e6b7640f3463bfe100345d044437d619a5546
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63460007"
 ---
 # <a name="query-and-view-designer-tools-visual-database-tools"></a>쿼리 및 뷰 디자이너 도구(Visual Database Tools)
@@ -47,9 +47,9 @@ ms.locfileid: "63460007"
 ## <a name="displaying-and-hiding-panes"></a>창 표시 및 숨기기  
  창을 숨기거나 보이지 않는 창을 표시하려면 디자인 화면을 마우스 오른쪽 단추로 클릭하고 **창**을 가리킨 다음 창 이름을 클릭합니다. 쿼리 및 뷰 디자이너가 쿼리 디자이너 모드로 열리면 **결과** 창을 사용할 수 없습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [방법 도움말 항목을 쿼리 및 뷰 디자인 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
- [쿼리 및 뷰 디자이너를 열려면 &#40;Visual Database Tools&#41;](open-the-query-and-view-designer-visual-database-tools.md)   
- [SQL 편집기&#40;Visual Database Tools&#41;](sql-editor-visual-database-tools.md)  
+## <a name="see-also"></a>참고 항목  
+ [쿼리 및 뷰 디자인 방법 도움말 항목 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [Visual Database Tools를 &#40;쿼리 및 뷰 디자이너를 엽니다&#41;](open-the-query-and-view-designer-visual-database-tools.md)   
+ [SQL 편집기 &#40;Visual Database Tools&#41;](sql-editor-visual-database-tools.md)  
   
   

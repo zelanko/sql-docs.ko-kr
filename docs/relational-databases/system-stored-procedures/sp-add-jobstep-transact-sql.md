@@ -18,10 +18,10 @@ ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c312f8798ba4ad42eed327123c9adc5feacba8a8
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74412851"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep(Transact-SQL)
@@ -30,10 +30,10 @@ ms.locfileid: "74412851"
 
   SQL 에이전트 작업에 단계 (작업)를 추가 합니다.  
   
- ![토픽 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-sql 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
-  > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서는 대부분의 SQL Server 에이전트 작업 유형이 지원 되지 않습니다. 자세한 내용은 [Azure SQL Database Managed Instance t-sql 차이점 SQL Server을](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) 참조 하세요.
+  > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서는 대부분의 SQL Server 에이전트 작업 유형이 지원 되지 않습니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
   
 ## <a name="syntax"></a>구문  
   
@@ -75,7 +75,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @subsystem = ] 'subsystem'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스에서 *명령을*실행 하는 데 사용 하는 하위 시스템입니다. *하위 시스템* 은 **nvarchar (40)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|Value|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |'**ACTIVESCRIPTING**'|액티브 스크립트<br /><br /> ** \* 중요 \* \* **[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |'**CMDEXEC**'|운영 체제 명령 또는 실행 프로그램|  
@@ -93,7 +93,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 `[ @command = ] 'command'`*하위 시스템*을 통해 **SQLServerAgent** 서비스에서 실행할 명령입니다. *명령은* **nvarchar (max)** 이며 기본값은 NULL입니다. SQL Server 에이전트에는 소프트웨어 프로그램 작성 시 변수를 사용하는 것과 같은 유연성을 제공하는 토큰 대체 기능이 있습니다.  
   
 > [!IMPORTANT]  
->  작업 단계에서 사용되는 모든 토큰에 이스케이프 매크로를 사용해야 하며 그렇지 않으면 작업 단계가 실패합니다. 또한 이제 토큰 이름을 괄호로 묶고 토큰 구문의 시작 부분에 달러 기호(`$`)를 사용해야 합니다. 예:  
+>  작업 단계에서 사용되는 모든 토큰에 이스케이프 매크로를 사용해야 하며 그렇지 않으면 작업 단계가 실패합니다. 또한 이제 토큰 이름을 괄호로 묶고 토큰 구문의 시작 부분에 달러 기호(`$`)를 사용해야 합니다. 다음은 그 예입니다.  
 >   
 >  `$(ESCAPE_`*매크로 이름*`(DATE))`  
   
@@ -110,23 +110,23 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @on_success_action = ] success_action`단계가 성공할 경우 수행할 동작입니다. *success_action* 은 **tinyint**이며 다음 값 중 하나일 수 있습니다.  
   
-|Value|설명(동작)|  
+|값|설명(동작)|  
 |-----------|----------------------------|  
 |**1** (기본값)|성공적으로 종료|  
-|**sr-2**|실패로 종료|  
+|**2**|실패로 종료|  
 |**3**|다음 단계로 이동|  
-|**3-4**|단계로 이동 *on_success_step_id*|  
+|**4**|단계로 이동 *on_success_step_id*|  
   
 `[ @on_success_step_id = ] success_step_id`단계가 성공 하 고 *success_action* **4**인 경우이 작업을 실행할 단계의 ID입니다. *success_step_id* 은 **int**이며 기본값은 **0**입니다.  
   
 `[ @on_fail_action = ] fail_action`단계가 실패할 경우 수행할 동작입니다. *fail_action* 은 **tinyint**이며 다음 값 중 하나일 수 있습니다.  
   
-|Value|설명(동작)|  
+|값|설명(동작)|  
 |-----------|----------------------------|  
-|**1(sp1)**|성공적으로 종료|  
+|**1**|성공적으로 종료|  
 |**2** (기본값)|실패로 종료|  
 |**3**|다음 단계로 이동|  
-|**3-4**|단계로 이동 *on_fail_step_id*|  
+|**4**|단계로 이동 *on_fail_step_id*|  
   
 `[ @on_fail_step_id = ] fail_step_id`단계가 실패 하 고 *fail_action* **4**이면이 작업에서 실행할 단계의 ID입니다. *fail_step_id* 은 **int**이며 기본값은 **0**입니다.  
   
@@ -146,11 +146,11 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @flags = ] flags`는 동작을 제어 하는 옵션입니다. *flags* 는 **int**이며 다음 값 중 하나일 수 있습니다.  
   
-|Value|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**0** (기본값)|출력 파일을 덮어씁니다.|  
-|**sr-2**|출력 파일에 추가합니다.|  
-|**3-4**|
+|**2**|출력 파일에 추가합니다.|  
+|**4**|
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업 단계 출력을 단계 기록에 씁니다.|  
 |**20cm(8**|테이블에 로그를 씁니다(기존 기록을 덮어씀).|  
 |**x**|테이블에 로그를 씁니다(기존 기록에 추가).|  
@@ -165,7 +165,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="remarks"></a>설명  
  **sp_add_jobstep** 는 **msdb** 데이터베이스에서 실행 해야 합니다.  
@@ -176,7 +176,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
  프록시는 *proxy_name* 또는 *proxy_id*로 식별할 수 있습니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버는이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
   
 -   **SQLAgentUserRole**  
@@ -216,6 +216,6 @@ GO
  [Transact-sql&#41;sp_help_job &#40;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [Transact-sql&#41;sp_help_jobstep &#40;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
  [Transact-sql&#41;sp_update_jobstep &#40;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
- [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

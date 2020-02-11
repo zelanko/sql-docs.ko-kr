@@ -1,5 +1,5 @@
 ---
-title: 결정 트리 탭 (마이닝 모델 뷰어) | Microsoft Docs
+title: 의사 결정 트리 탭 (마이닝 모델 뷰어) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,28 +13,29 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cee721aca66f5266a29d3bf61babf9060e9aef32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082297"
 ---
 # <a name="decision-tree-tab-mining-model-viewer"></a>의사 결정 트리 탭(마이닝 모델 뷰어)
+  
   **의사 결정 트리** 창에서는 의사 결정 트리 모델에서 만들어진 의사 결정 규칙을 시각적으로 표현합니다. 의사 결정 규칙은 특정 결과로 가는 경로를 설명합니다.  
   
- **참조 항목:** [Microsoft 의사 결정 트리 알고리즘](data-mining/microsoft-decision-trees-algorithm.md), [Microsoft 트리 뷰어를 사용 하 여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
+ **자세한 내용:** [Microsoft 의사 결정 트리 알고리즘](data-mining/microsoft-decision-trees-algorithm.md), [Microsoft 트리 뷰어를 사용 하 여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **뷰어 내용 새로 고침**  
  뷰어에서 마이닝 모델을 다시 로드합니다.  
   
  **마이닝 모델**  
  현재 마이닝 구조에서 마이닝 모델을 선택합니다. 관련 뷰어에서 마이닝 모델이 열립니다.  
   
- **Viewer**  
+ **뷰어**  
  선택한 마이닝 모델을 탐색하는 데 사용할 뷰어를 선택합니다. 사용자 지정 뷰어나 [!INCLUDE[msCoName](../includes/msconame-md.md)] 마이닝 콘텐츠 뷰어를 사용할 수 있습니다. 또한 사용 가능한 경우 플러그 인 뷰어를 사용할 수 있습니다.  
   
- **확대/축소**  
+ **확대**  
  의사 결정 트리의 노드와 분기를 자세하게 표시하려면 확대합니다. 복잡한 모델에서는 의사 결정 트리에 많은 수준의 분기가 있을 수 있습니다.  
   
  **축소**  
@@ -52,7 +53,7 @@ ms.locfileid: "66082297"
  **히스토그램**  
  각 노드에 대해 히스토그램에 표시될 수 있는 상태 수를 선택합니다. 모델의 상태 수가 선택한 값보다 적으면 추가 막대가 표시되지 않습니다.  
   
- **트리**  
+ **Tree**  
  뷰어에 표시할 트리를 선택합니다. 예측 가능한 여러 특성이 있는 모델을 만드는 경우 알고리즘은 각각의 예측 가능한 특성에 대해 별도의 트리를 만듭니다.  
   
  **배경**  
@@ -64,9 +65,9 @@ ms.locfileid: "66082297"
  **수준 표시**  
  트리 그래프에 표시되는 수준 수를 조정하려면 슬라이더 막대를 오른쪽이나 왼쪽으로 이동합니다. 모델의 모든 노드를 보려면 막대를 맨 오른쪽으로 이동합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [마이닝 모델 뷰어&#40;데이터 마이닝 모델 디자이너&#41;](mining-model-viewers-data-mining-model-designer.md)   
+## <a name="see-also"></a>참고 항목  
+ [데이터 마이닝 알고리즘 &#40;Analysis Services 데이터 마이닝&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [마이닝 모델 뷰어 &#40;데이터 마이닝 모델 디자이너&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [데이터 마이닝 모델 뷰어](data-mining/data-mining-model-viewers.md)  
   
   

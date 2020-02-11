@@ -1,5 +1,5 @@
 ---
-title: Access 데이터베이스 (AccessToSQL) 마이그레이션에 대 한 준비 | Microsoft Docs
+title: 마이그레이션을 위해 Access 데이터베이스 준비 (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/15/2017
@@ -22,59 +22,59 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 58988d31687cacdce2954d8e4098d509a9dcbb2b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68260219"
 ---
-# <a name="preparing-access-databases-for-migration-accesstosql"></a>Access 데이터베이스 (AccessToSQL) 마이그레이션 준비
-Access 데이터베이스를 마이그레이션하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 마이그레이션하고 해당 데이터베이스 마이그레이션에 대 한 준비 되었는지 확인 하는 데이터베이스를 결정 해야 합니다.  
+# <a name="preparing-access-databases-for-migration-accesstosql"></a>마이그레이션을 위해 Access 데이터베이스 준비 (AccessToSQL)
+Access 데이터베이스를로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]마이그레이션하기 전에 마이그레이션할 데이터베이스를 결정 하 고 해당 데이터베이스를 마이그레이션할 준비가 되었는지 확인 해야 합니다.  
   
 ## <a name="determining-when-to-migrate-to-sql-server"></a>SQL Server로 마이그레이션할 시기 결정  
-Jet 데이터베이스 엔진에 사용 되는 데이터베이스 엔진 액세스에 대 한 데이터 관리를 위한 유연 하 고 사용 하기 쉬운 솔루션을입니다. 그러나 커질수록 데이터베이스와 더 많은 업무에 중요 한 많은 사용자가 찾을 이들이 필요로 하는 뛰어난 성능, 보안 또는 가용성. 보다 강력한 데이터 플랫폼을 필요로 하는 응용 프로그램의 경우 해당 응용 프로그램에 대 한 기본 데이터베이스를 이동할 것이 좋습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 마이그레이션 시기를 결정 하는 방법에 대 한 자세한 내용은 참조는 [마이그레이션 정보 페이지](https://go.microsoft.com/fwlink/?LinkId=68571) 에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 웹 사이트입니다.  
+액세스를 위한 데이터베이스 엔진으로 사용 되는 Jet 데이터베이스 엔진은 데이터 관리를 위한 유연 하 고 사용 하기 쉬운 솔루션입니다. 그러나 데이터베이스가 커지고 업무에 중요 한 영향을 받을 수 있으므로 많은 사용자가 더 높은 성능, 보안 또는 가용성을 요구 하는 것을 알게 됩니다. 더 강력한 데이터 플랫폼이 필요한 응용 프로그램의 경우 해당 응용 프로그램에 대 한 기본 데이터베이스를로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이동 하는 것이 좋습니다. 마이그레이션 시기를 결정 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 웹 사이트의 [마이그레이션 정보 페이지](https://go.microsoft.com/fwlink/?LinkId=68571) 를 참조 하십시오.  
   
-데이터베이스를 마이그레이션한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]연결 된 테이블을 사용 하 여 액세스를 사용 하는 것, 응용 프로그램을 수동으로 마이그레이션할 수 있습니다 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 직접 상호 작용 하는.NET Framework 기반 코드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터베이스를 마이그레이션한 후에는 연결 된 테이블을 사용 하 여 계속 액세스를 사용 하거나와 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]직접 상호 작용 하는 .NET Framework 기반 코드로 응용 프로그램을 수동으로 마이그레이션할 수 있습니다.  
   
-## <a name="determining-which-databases-to-migrate"></a>마이그레이션할 데이터베이스를 결정 합니다.  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) 액세스를 Access 데이터베이스를 찾을 수 있습니다. 그런 다음 해당 데이터베이스에 대 한 메타 데이터를 내보낼 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 내보내기 및 메타 데이터를 쿼리 하는 방법에 대 한 자세한 내용은 참조 하세요. [Access 인벤토리 내보내기](exporting-an-access-inventory-accesstosql.md)합니다.  
+## <a name="determining-which-databases-to-migrate"></a>마이그레이션할 데이터베이스 결정  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Access 용 SSMA (Migration Assistant)는 Access 데이터베이스를 찾을 수 있습니다. 그런 다음 해당 데이터베이스에 대 한 메타 데이터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를로 내보낼 수 있습니다. 메타 데이터를 내보내고 쿼리 하는 방법에 대 한 자세한 내용은 [액세스 인벤토리 내보내기](exporting-an-access-inventory-accesstosql.md)를 참조 하세요.  
 
    > [!NOTE]
-   > 일부 기능에 액세스 및 설정, 지 또는으로 쉽게 변환 될 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 마이그레이션하기 전에 데이터베이스를 참조 하세요 [호환 되지 않는 기능에 액세스](incompatible-access-features-accesstosql.md)합니다.
+   > 모든 액세스 기능 및 설정이에서 지원 되는 것은 아닙니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 또는로 쉽게 변환할 수 있습니다. 데이터베이스 마이그레이션을 시작 하기 전에 [호환 되지 않는 액세스 기능](incompatible-access-features-accesstosql.md)을 참조 하세요.
   
 ## <a name="preparing-for-migration"></a>마이그레이션 준비  
-다음 지침을 사용 하 여 Access 데이터베이스에 마이그레이션을 준비 하는 데 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 마이그레이션을 위해 Access 데이터베이스를 준비 하려면 다음 지침을 따르십시오.  
   
-### <a name="upgrading-older-access-databases"></a>이전의 Access 데이터베이스를 업그레이드합니다.  
-Access 용 SSMA는 Access 97 및 이상 버전을 지원합니다. 이전 버전의 Access에서 데이터베이스에 있는 경우 열고 Access 97 이상에서 데이터베이스를 저장 합니다.  
+### <a name="upgrading-older-access-databases"></a>이전 Access 데이터베이스 업그레이드  
+Access 용 SSMA는 97 이상 버전에 대 한 액세스를 지원 합니다. 이전 버전의 Access에서 데이터베이스를 사용 하는 경우 데이터베이스를 열고 Access 97 이상 버전에서 저장 합니다.  
   
-### <a name="removing-workgroup-protection"></a>작업 그룹 보호를 제거합니다.  
+### <a name="removing-workgroup-protection"></a>작업 그룹 보호 제거  
 SSMA는 작업 그룹 보호를 사용 하는 데이터베이스를 마이그레이션할 수 없습니다. Access 데이터베이스에서 작업 그룹 보호를 제거 하려면 다음 단계를 수행 합니다.  
   
-1.  Access 데이터베이스 파일을 다른 위치로 복사 합니다.  
+1.  Access 데이터베이스 파일을 다른 위치에 복사 합니다.  
   
-2.  복사 된 데이터베이스를 엽니다.  
+2.  복사한 데이터베이스를 엽니다.  
   
-3.  에 **도구** 메뉴에서 **보안**를 선택한 후 **사용자 및 그룹 권한**합니다.  
+3.  **도구** 메뉴에서 **보안**을 가리킨 다음 **사용자 및 그룹 권한**을 선택 합니다.  
   
-4.  선택를 **사용자** 옵션을 선택 합니다 **관리자** 사용자 있는지를 확인 합니다 **관리** 권한이 선택 됩니다.  
+4.  **사용자** 옵션을 선택 하 고 **관리** 사용자를 선택한 다음 **관리** 권한이 선택 되어 있는지 확인 합니다.  
   
-5.  선택는 **그룹** 옵션을 선택 합니다 **사용자** 그룹화 및 확인 한 다음를 **관리** 권한이 선택 됩니다.  
+5.  **그룹** 옵션을 선택 하 고 **사용자** 그룹을 선택한 다음 **관리** 권한이 선택 되어 있는지 확인 합니다.  
   
-6.  클릭 **확인**를 선택한 다음는 **파일** 메뉴에서 클릭 **종료**합니다.  
+6.  **확인**을 클릭 한 다음 **파일** 메뉴에서 **끝내기**를 클릭 합니다.  
   
-복사 된 데이터베이스를 마이그레이션하려면 SSMA를 이제 사용할 수 있습니다. 스키마를 로드 한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 데이터베이스에서 수동으로 보호할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+이제 SSMA를 사용 하 여 복사 된 데이터베이스를 마이그레이션할 수 있습니다. 에 스키마 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 로드 한 후에는에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터베이스를 수동으로 보호할 수 있습니다.  
   
 ### <a name="backing-up-databases"></a>데이터베이스 백업  
-액세스 하려면 데이터베이스를 마이그레이션하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 마이그레이션하는 경우 모두는 Access 데이터베이스를 백업 해야 뿐만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 마이그레이션하려는 데이터베이스 개체 및 데이터에 액세스 합니다.  
+Access 데이터베이스를로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]마이그레이션하기 전에 마이그레이션할 access 데이터베이스 뿐만 아니라 액세스 개체와 데이터를 마이그레이션할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 모두 백업 해야 합니다.  
   
-Access 데이터베이스를 백업 하는 **도구** 메뉴에서 **Database Utilities**를 선택한 후 **데이터베이스 백업**합니다.  
+Access 데이터베이스를 백업 하려면 **도구** 메뉴에서 **데이터베이스 유틸리티**를 가리킨 다음 **데이터베이스 백업**을 선택 합니다.  
   
-백업 하는 방법에 대 한 자세한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 참조 하세요. "백업에서 데이터베이스 및 복원 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]"의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Onl 온라인 설명서.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 백업 하는 방법에 대 한 자세한 내용은 온라인 설명서의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "의 데이터베이스 백업 및 복원"을 참조 하십시오.  
   
 ### <a name="documenting-databases"></a>데이터베이스 문서화  
-데이터베이스 개체, 파일 크기 및 사용 권한과 액세스 데이터베이스의 목록과 같은 속성을 문서화할 수도 있습니다. Access에서이 문서에서 생성 하는 **도구** 메뉴에서 **분석**를 클릭 하 고 **문서화**합니다.  
+Access 데이터베이스의 데이터베이스 개체 목록, 파일 크기, 권한 등의 속성을 문서화할 수도 있습니다. Access에서이 설명서를 생성 하려면 **도구** 메뉴에서 **분석**을 가리킨 다음 **문서화**를 클릭 합니다.  
   
-## <a name="see-also"></a>참조  
-[SQL Server에 대 한 액세스 데이터베이스 마이그레이션](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
-[SQL Server에 대 한 액세스 응용 프로그램 연결](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)
+## <a name="see-also"></a>참고 항목  
+[SQL Server로 Access 데이터베이스 마이그레이션](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
+[SQL Server에 액세스 응용 프로그램 연결](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)

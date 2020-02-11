@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9f0c4b1dbdaa7a2b4a15dd8e28586b182d93374a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63241162"
 ---
 # <a name="save-dialog-box-visual-database-tools"></a>저장 대화 상자(Visual Database Tools)
@@ -26,14 +26,14 @@ ms.locfileid: "63241162"
 > [!NOTE]  
 >  테이블 디자이너에서 테이블에 대해 변경한 내용을 데이터베이스에 커밋하려면 테이블을 저장해야 합니다. 테이블을 저장한 후에는 변경 내용을 취소할 수 없습니다. 저장되지 않은 변경 내용을 취소하려면 열려 있는 모든 테이블을 저장하지 않은 채 닫습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **영향을 받는 테이블 경고**  
  선택한 테이블을 다음에 저장할 때 이 대화 상자를 표시할지 여부를 지정합니다. 이 확인란은 기본적으로 선택되어 있습니다. 이 옵션을 해제한 경우 **옵션** 대화 상자에서 다시 선택할 수 있습니다.  
   
  **텍스트 파일 저장**  
  **다른 이름으로 저장** 대화 상자를 표시합니다. 이 대화 상자에서는 테이블이 나열된 텍스트 파일의 저장 위치를 지정할 수 있습니다. 이 파일에는 변경 내용의 영향을 받는 테이블 목록이 기록됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [테이블 디자인&#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

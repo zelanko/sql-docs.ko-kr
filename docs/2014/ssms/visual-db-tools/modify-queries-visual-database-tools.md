@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f88c78aa67d65eb84bfaa282fe46a122dd2a382a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63306032"
 ---
 # <a name="modify-queries-visual-database-tools"></a>쿼리 수정(Visual Database Tools)
@@ -33,9 +33,9 @@ ms.locfileid: "63306032"
   
  쿼리 디자이너가 열립니다. 이 디자이너를 사용하여 필요한 내용을 수정할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [쿼리 실행 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [결과 창에서 데이터 작업을 &#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools를 &#40;쿼리 실행&#41;](visual-database-tools.md)   
+ [결과 창에서 데이터 작업 &#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)   
  [쿼리 관련 기본 작업 수행&#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

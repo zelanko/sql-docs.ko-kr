@@ -18,10 +18,10 @@ ms.assetid: 49c408aa-6eb4-45cd-8d5c-60f065f24f5c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 3103c9d91b8cc55c5f99f3cfa545207483e97e35
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73659709"
 ---
 # <a name="displayname-property-sqlservice-class"></a>DisplayName 속성(SqlService 클래스)
@@ -36,14 +36,15 @@ object.DisplayName [= value]
 ```  
   
 ## <a name="parts"></a>부분  
- *object*  
+ *개체가*  
  서비스를 나타내는 [SqlService 클래스](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  서비스의 표시 이름을 지정하는 문자열 값입니다.  
   
-## <a name="remarks"></a>주의  
- 이 문자열의 최대 길이는 256자입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 관리자에서는 이름의 대/소문자가 유지되지만 표시 이름을 비교할 때는 항상 대/소문자가 무시됩니다.  
+## <a name="remarks"></a>설명  
+ 이 문자열의 최대 길이는 256자입니다. 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 관리자에서는 이름의 대/소문자가 유지되지만 표시 이름을 비교할 때는 항상 대/소문자가 무시됩니다.  
   
 ## <a name="example"></a>예제  
   
@@ -51,7 +52,7 @@ object.DisplayName [= value]
 mysqlservice.DisplayName = "Atdisk"  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [서비스 시작 및 중지](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

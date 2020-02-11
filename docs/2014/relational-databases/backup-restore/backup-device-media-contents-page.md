@@ -13,22 +13,22 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 524e6d8e5ec987a20d693cb1f7e06b30bc27c0b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876695"
 ---
 # <a name="backup-device-media-contents-page"></a>백업 디바이스(미디어 내용 페이지)
-  **백업 장치** 대화 상자를 사용하여 백업 정보를 볼 수 있습니다. 이 정보에는 디바이스, 미디어, 미디어 세트 및 백업 세트에 대한 설명이 포함됩니다.  
+  **백업 디바이스** 대화 상자를 사용하여 백업 정보를 볼 수 있습니다. 이 정보에는 디바이스, 미디어, 미디어 세트 및 백업 세트에 대한 설명이 포함됩니다.  
   
- **SQL Server Management Studio를 사용하여 백업 장치의 내용을 보려면**  
+ **SQL Server Management Studio를 사용하여 백업 디바이스의 내용을 보려면**  
   
 -   [백업 테이프 또는 파일의 내용 보기&#40;SQL Server&#41;](view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
--   [논리적 백업 장치의 속성 및 내용 보기&#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
+-   [논리적 백업 디바이스의 속성 및 내용 보기&#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  개별 미디어, 미디어 세트 및 백업 세트에 대한 정보를 봅니다.  
   
  **미디어**  
@@ -55,28 +55,28 @@ ms.locfileid: "62876695"
  **백업 세트**  
  미디어에 포함된 백업 세트에 대한 정보를 표시합니다. 백업 세트는 성공적인 백업 작업의 결과이며 백업 디바이스 집합의 미디어 간에 해당 내용이 분산됩니다.  
   
-|머리글|값|  
+|헤더|값|  
 |------------|------------|  
 |**이름**|백업 세트의 이름입니다.|  
-|**형식**|백업 개체: 데이터베이스, 파일 또는  *\<빈 >* (트랜잭션 로그의 경우)에 대 한 합니다.|  
-|**구성 요소**|수행 된 백업 유형: 전체, 차등 또는 트랜잭션 로그입니다.|  
+|**형식**|백업된 개체입니다. 데이터베이스, 파일 또는 *\<비어 있음>* (트랜잭션 로그의 경우)이 될 수 있습니다.|  
+|**구성 요소**|수행된 백업 유형입니다. 전체, 차등 또는 트랜잭션 로그일 수 있습니다.|  
 |**Server**|백업 작업을 수행한 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스의 이름입니다.|  
-|**데이터베이스 백업**|백업한 데이터베이스 이름입니다.|  
+|**Database**|백업한 데이터베이스 이름입니다.|  
 |**위치**|볼륨에 있는 백업 세트의 위치입니다.|  
-|**날짜**|클라이언트의 국가별 설정으로 표시되는 백업 작업 완료 날짜 및 시간입니다.|  
+|**Date**|클라이언트의 국가별 설정으로 표시되는 백업 작업 완료 날짜 및 시간입니다.|  
 |**크기**|백업 세트의 크기를 바이트 단위로 표시한 것입니다.|  
 |**사용자 이름**|백업 작업을 수행한 사용자의 이름입니다.|  
 |**만료**|백업 세트가 만료되는 날짜 및 시간입니다.|  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
--   [디스크 파일에 대한 논리적 백업 장치 정의&#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
+-   [디스크 파일에 대한 논리적 백업 디바이스 정의&#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   
--   [테이프 드라이브에 대한 논리적 백업 장치 정의&#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
+-   [테이프 드라이브에 대한 논리적 백업 디바이스 정의&#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
 -   [디스크 또는 테이프를 백업 대상으로 지정&#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
   
--   [백업 장치 삭제&#40;SQL Server&#41;](delete-a-backup-device-sql-server.md)  
+-   [백업 디바이스 삭제&#40;SQL Server&#41;](delete-a-backup-device-sql-server.md)  
   
 -   [백업의 만료 날짜 설정&#40;SQL Server&#41;](set-the-expiration-date-on-a-backup-sql-server.md)  
   
@@ -84,12 +84,12 @@ ms.locfileid: "62876695"
   
 -   [백업 세트의 데이터와 로그 파일 보기&#40;SQL Server&#41;](view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
   
--   [논리적 백업 장치의 속성 및 내용 보기&#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
+-   [논리적 백업 디바이스의 속성 및 내용 보기&#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
--   [장치에서 백업 복원&#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)  
+-   [디바이스에서 백업 복원&#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)  
   
-## <a name="see-also"></a>관련 항목  
- [백업 장치&#40;SQL Server&#41;](backup-devices-sql-server.md)   
+## <a name="see-also"></a>참고 항목  
+ [백업 디바이스&#40;SQL Server&#41;](backup-devices-sql-server.md)   
  [미디어 세트, 미디어 패밀리 및 백업 세트&#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)  
   
   

@@ -11,16 +11,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f3f3967b31331471d1ad0a886cc9eda853a25931
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771079"
 ---
 # <a name="the-oracle-cdc-service"></a>Oracle CDC Service
   Oracle CDC Service는 xdbcdcsvc.exe 프로그램을 실행하는 Windows 서비스입니다. 동일한 컴퓨터에서 각각 다른 Windows 서비스 이름이 있는 여러 Windows 서비스를 실행하도록 Oracle CDC Service를 구성할 수 있습니다. 일반적으로 서비스 간을 더 잘 분리하기 위해 또는 각 서비스가 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 작업해야 하는 경우에 단일 컴퓨터에서 여러 Oracle CDC Windows 서비스를 만듭니다.  
   
- Oracle CDC Service는 Oracle CDC Service 구성 콘솔을 사용하여 만들어지거나 xdbcdcsvc.exe 프로그램에 기본 제공되는 명령줄 인터페이스를 통해 정의됩니다. 두 경우 모두 만들어진 각 Oracle CDC Service는 연결 된 단일 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 (클러스터링 하거나 미러링할 수 있음 **AlwaysOn** 설치) 및 연결 정보 (연결 문자열 및 자격 증명에 액세스)는 서비스 구성의 일부입니다.  
+ Oracle CDC Service는 Oracle CDC Service 구성 콘솔을 사용하여 만들어지거나 xdbcdcsvc.exe 프로그램에 기본 제공되는 명령줄 인터페이스를 통해 정의됩니다. 두 경우 모두 생성 되는 각 Oracle CDC Service는 단일 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 ( **AlwaysOn** 설치로 클러스터링 되거나 미러링된 상태)와 연결 되며 연결 정보 (연결 문자열 및 액세스 자격 증명)는 서비스 구성의 일부입니다.  
   
  Oracle CDC Service가 시작되면 관련된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결을 시도하고, 처리해야 할 Oracle CDC 인스턴스 목록을 가져온 다음, 초기 환경 유효성 검사를 수행합니다. 서비스 시작 중 오류와 모든 시작/중지 정보가 항상 Windows 애플리케이션 이벤트 로그에 기록됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결이 설정되면 모든 오류와 정보 메시지가 **인스턴스의 MSXDBCDC 데이터베이스에 있는** dbo.xdbcdc_trace [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 기록됩니다. 시작 중에 수행되는 확인 중 하나는 같은 이름의 다른 Oracle CDC Service가 현재 작업 중이 아닌지 확인하는 것입니다. 같은 이름의 서비스가 다른 컴퓨터에서 현재 연결되어 있는 경우 Oracle CDC Service는 대기 루프를 시작하여 다른 서비스의 연결이 끊어질 때까지 기다린 후 Oracle CDC 작업 처리를 진행합니다.  
   
@@ -43,7 +43,7 @@ GO
   
  Oracle CDC 인스턴스 구성은 Oracle CDC Designer 콘솔이 작업하는 테이블인 **cdc.xdbcdc_config** 테이블에 저장됩니다. Oracle CDC 인스턴스의 전체 구성이 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 및 CDC 데이터베이스에 있으므로 Oracle CDC 인스턴스에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 배포 스크립트를 만들 수 있습니다. 이 작업은 Oracle CDC Service 구성 및 Oracle CDC Designer 콘솔을 사용하여 수행됩니다.  
   
-## <a name="security-considerations"></a>보안 고려 사항  
+## <a name="security-considerations"></a>보안 고려사항  
  다음에서는 Oracle CDC Service에서 작업하는 데 필요한 보안 요구 사항에 대해 설명합니다.  
   
 ### <a name="protection-of-source-oracle-data"></a>원본 Oracle 데이터의 보호  
@@ -92,7 +92,7 @@ CREATE ASYMMETRIC KEY xdbcdc_asym_key
   
 -   [Oracle CDC Service 작업](the-oracle-cdc-service.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [로컬 CDC Service를 관리하는 방법](how-to-manage-a-local-cdc-service.md)   
  [Oracle CDC Service 관리](manage-an-oracle-cdc-service.md)  
   

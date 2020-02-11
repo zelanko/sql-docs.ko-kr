@@ -1,5 +1,5 @@
 ---
-title: SQL Server Management Objects | Microsoft Docs
+title: SQL Server 관리 개체 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,12 +11,12 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 81f996b167cfbf4b22f7d6d2420cdb9720c59574
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780736"
 ---
 # <a name="sql-server-management-objects"></a>SQL Server 관리 개체
 
-[SQL Server 관리 개체 프로그래밍 가이드를 참조 하세요.](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)합니다.
+[SQL Server 관리 개체 프로그래밍 가이드를 참조](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)하세요.

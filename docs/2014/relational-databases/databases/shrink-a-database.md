@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 21f58cd6991b760edeefb81c37e02c617f8e09cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917010"
 ---
 # <a name="shrink-a-database"></a>데이터베이스 축소
@@ -58,32 +58,34 @@ ms.locfileid: "62917010"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  **sysadmin** 고정 서버 역할의 멤버 또는 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-shrink-a-database"></a>데이터베이스를 축소하려면  
   
-1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+1.  **개체 탐색기**에서 인스턴스에 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]연결한 다음 해당 인스턴스를 확장 합니다.  
   
-2.  **데이터베이스**를 확장한 다음 축소할 데이터베이스를 마우스 오른쪽 단추로 클릭합니다.  
+2.  
+  **데이터베이스**를 확장한 다음 축소할 데이터베이스를 마우스 오른쪽 단추로 클릭합니다.  
   
-3.  **태스크**, **축소**를 차례로 가리킨 다음 **데이터베이스**를 클릭합니다.  
+3.  
+  **태스크**, **축소**를 차례로 가리킨 다음 **데이터베이스**를 클릭합니다.  
   
-     **데이터베이스 백업**  
+     **Database**  
      선택한 데이터베이스의 이름을 표시합니다.  
   
-     **현재 할당된 공간**  
+     **현재 할당 된 공간**  
      선택한 데이터베이스의 총 사용 공간 및 사용되지 않은 공간을 표시합니다.  
   
      **사용 가능한 공간**  
      선택한 데이터베이스의 로그 및 데이터 파일의 총 사용 가능한 공간을 표시합니다.  
   
-     **사용하지 않은 공간을 해제하기 전에 파일을 다시 구성합니다.**  
+     **사용 하지 않은 공간을 해제 하기 전에 파일 다시 구성**  
      이 옵션을 선택하는 것은 목표 백분율 옵션을 지정하여 DBCC SHRINKDATABASE를 실행하는 것과 같습니다. 또한 이 옵션의 선택을 취소하는 것은 TRUNCATEONLY 옵션을 사용하여 DBCC SHRINKDATABASE를 실행하는 것과 같습니다. 기본적으로 대화 상자를 열 때 이 옵션은 선택되어 있지 않습니다. 이 옵션을 선택하면 목표 백분율 옵션을 지정해야 합니다.  
   
-     **축소 후 파일에 남는 최대 여유 공간**  
+     **축소 후 파일의 최대 여유 공간**  
      데이터베이스를 축소한 후 데이터베이스 파일에 남겨둘 여유 공간의 최대 비율을 입력합니다. 허용되는 값은 0에서 99까지입니다.  
   
 4.  **확인**을 클릭합니다.  
@@ -100,15 +102,15 @@ ms.locfileid: "62917010"
   
  [!code-sql[DBCC#DBCC_SHRINKDB1](../../snippets/tsql/SQL14/tsql/dbcc/transact-sql/dbcc_other.sql#dbcc_shrinkdb1)]  
   
-##  <a name="FollowUp"></a> 후속 작업: 데이터베이스를 축소 한 후  
+##  <a name="FollowUp"></a>후속 작업: 데이터베이스를 축소 한 후  
  파일 축소를 위해 이동되는 데이터는 파일 내의 모든 사용 가능한 위치로 분산될 수 있습니다. 이로 인해 인덱스 조각화가 발생하여 인덱스 범위를 검색하는 쿼리 성능이 저하될 수 있습니다. 조각화를 방지하려면 축소 후 파일에 대한 인덱스를 다시 작성하는 것이 좋습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [파일 축소](shrink-a-file.md)   
  [sys.databases&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
  [sys.database_files&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
  [DBCC&#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)   
- [DBCC SHRINKFILE&#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql)   
+ [Transact-sql&#41;DBCC SHRINKFILE &#40;](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql)   
  [데이터베이스 파일 및 파일 그룹](database-files-and-filegroups.md)  
   
   

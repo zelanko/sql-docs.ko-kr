@@ -1,5 +1,5 @@
 ---
-title: 개체 속성, 메서드 및 이벤트 필드 | Microsoft Docs
+title: Field 개체 속성, 메서드 및 이벤트 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,17 +13,17 @@ ms.assetid: 1e0fc395-14f3-499a-9309-701e9905729f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 556ac82e9f588183effe2abe2e4b15e279258a3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932760"
 ---
 # <a name="field-object-properties-methods-and-events"></a>Field 개체 속성, 메서드 및 이벤트
 ## <a name="propertiescollections"></a>속성/컬렉션  
  [ActualSize 속성](../../../ado/reference/ado-api/actualsize-property-ado.md)  
   
- [특성 속성](../../../ado/reference/ado-api/attributes-property-ado.md)  
+ [Attributes 속성](../../../ado/reference/ado-api/attributes-property-ado.md)  
   
  [DefinedSize 속성](../../../ado/reference/ado-api/definedsize-property.md)  
   
@@ -33,13 +33,13 @@ ms.locfileid: "67932760"
   
  [OriginalValue 속성](../../../ado/reference/ado-api/originalvalue-property-ado.md)  
   
- [전체 자릿수 속성](../../../ado/reference/ado-api/precision-property-ado.md)  
+ [Precision 속성](../../../ado/reference/ado-api/precision-property-ado.md)  
   
  [속성 컬렉션](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
  [Status 속성(ADO 필드)](../../../ado/reference/ado-api/status-property-ado-field.md)  
   
- [형식 속성](../../../ado/reference/ado-api/type-property-ado.md)  
+ [Type 속성](../../../ado/reference/ado-api/type-property-ado.md)  
   
  [UnderlyingValue 속성](../../../ado/reference/ado-api/underlyingvalue-property.md)  
   
@@ -53,5 +53,5 @@ ms.locfileid: "67932760"
 ## <a name="events"></a>이벤트  
  없음  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Field 개체](../../../ado/reference/ado-api/field-object.md)

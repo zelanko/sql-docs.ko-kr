@@ -1,5 +1,5 @@
 ---
-title: 기본 멤버 속성 (MDX) | Microsoft Docs
+title: 내장 멤버 속성 (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 65688b553aab7bf35313a45e9c945f6d3031d127
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074212"
 ---
 # <a name="intrinsic-member-properties-mdx"></a>기본 멤버 속성(MDX)
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에서는 차원 멤버의 기본 속성을 표시합니다. 이러한 기본 속성을 쿼리에 포함하면 사용자 지정 응용 프로그램에 사용할 추가 데이터 또는 메타데이터를 반환하거나 모델을 간편하게 검토 또는 생성할 수 있습니다. SQL Server 클라이언트 도구를 사용하는 경우 SSMS(SQL Server Management Studio)에서 기본 속성을 볼 수 있습니다.  
+  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]사용자 지정 응용 프로그램에서 사용할 추가 데이터 또는 메타 데이터를 반환 하거나 모델 조사 또는 생성을 지원 하기 위해 쿼리에 포함할 수 있는 차원 멤버의 기본 속성을 노출 합니다. SQL Server 클라이언트 도구를 사용하는 경우 SSMS(SQL Server Management Studio)에서 기본 속성을 볼 수 있습니다.  
   
  기본 속성으로는 모든 멤버가 모든 수준에서 표시하는 `ID`, `KEY`, `KEYx` 및 `NAME`이 있습니다. 특히 `LEVEL_NUMBER` 또는 `PARENT_UNIQUE_NAME`과 같은 위치 정보를 반환할 수도 있습니다.  
   
@@ -29,12 +29,14 @@ ms.locfileid: "66074212"
  차원 멤버 속성을 사용하고 보는 방법에 대한 개요를 보려면 [SSMS에서 MDX 쿼리 창에서 SSAS 멤버 속성 보기](https://go.microsoft.com/fwlink/?LinkId=317362)를 참조하십시오.  
   
 > [!NOTE]  
->  1999년 3월자(2.6) OLE DB 사양의 OLAP 섹션을 준수하는 공급자로서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 는 이 항목에 나열된 기본 멤버 속성을 지원합니다.  
+>  1999 년 3 월 (2.6) [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에 설명 된 OLE DB 사양의 OLAP 섹션을 준수 하는 공급자는이 항목에 나열 된 기본 멤버 속성을 지원 합니다.  
 >   
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 이외의 공급자가 기본 멤버 속성을 추가로 지원할 수도 있습니다. 다른 공급자가 지원하는 기본 멤버 속성에 대한 자세한 내용은 해당 공급자가 제공하는 설명서를 참조하십시오.  
+>  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
+  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 이외의 공급자가 기본 멤버 속성을 추가로 지원할 수도 있습니다. 다른 공급자가 지원하는 기본 멤버 속성에 대한 자세한 내용은 해당 공급자가 제공하는 설명서를 참조하십시오.  
   
 ## <a name="types-of-member-properties"></a>멤버 속성의 유형  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에서 지원하는 기본 멤버 속성은 다음 두 가지 유형입니다.  
+ 에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 지 원하는 기본 멤버 속성은 다음 두 가지 유형입니다.  
   
  상황에 맞는 멤버 속성  
  이 유형의 멤버 속성은 특정 계층 또는 수준의 컨텍스트에서 사용해야 하고 지정한 차원 또는 수준의 각 멤버에 대한 값을 제공합니다.  
@@ -52,9 +54,10 @@ ms.locfileid: "66074212"
   
 -   상황에 맞지 않는 기본 멤버 속성을 가진 같은 쿼리에서 상황에 맞는 멤버 속성에 대한 요청을 혼합할 수 있습니다.  
   
--   `PROPERTIES` 키워드를 사용하여 속성에 대해 쿼리합니다.  
+-   
+  `PROPERTIES` 키워드를 사용하여 속성에 대해 쿼리합니다.  
   
- 다음 섹션에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 사용할 수 있는 다양한 상황에 맞는 기본 멤버 속성과 상황에 맞지 않는 기본 멤버 속성을 모두 설명하고 `PROPERTIES` 키워드를 각 유형의 속성과 함께 사용하는 방법을 설명합니다.  
+ 다음 섹션에서는에서 사용할 수 있는 다양 한 상황에 맞는 기본 멤버 속성과 상황에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]맞지 않는 기본 멤버 속성을 모두 설명 `PROPERTIES` 하 고 각 속성 형식에 키워드를 사용 하는 방법에 대해 설명 합니다.  
   
 ## <a name="context-sensitive-member-properties"></a>상황에 맞는 멤버 속성  
  모든 차원 멤버와 수준 멤버는 상황에 맞는 기본 멤버 속성 목록을 지원합니다. 다음 표에서는 이러한 상황에 맞는 속성을 나열합니다.  
@@ -63,7 +66,8 @@ ms.locfileid: "66074212"
 |--------------|-----------------|  
 |`ID`|내부적으로 유지 관리되는 멤버 ID입니다.|  
 |`Key`|원본 데이터 형식에서 멤버 키의 값입니다. MEMBER_KEY는 이전 버전과의 호환성을 위해 제공됩니다.  비복합 키의 경우 MEMBER_KEY 값이 KEY0과 동일하고 복합 키의 경우 MEMBER_KEY 속성이 Null입니다.|  
-|`KEYx`|멤버에 대한 키이며 x는 키의 서수 값(0부터 시작)입니다. KEY0은 복합 키와 비복합 키에 모두 사용할 수 있지만 주로 복합 키에 사용합니다.<br /><br /> KEY0, KEY1, KEY2 등이 모여 복합 키가 형성됩니다. 쿼리에서 각 키를 사용하여 복합 키의 해당 부분을 반환할 수 있습니다. 예를 들어 KEY0을 지정하면 복합 키의 첫 번째 부분이 반환되고 KEY1을 지정하면 복합 키의 다음 부분이 반환됩니다.<br /><br /> 복합 키가 아닌 경우 KEY0은 `Key`와 같습니다.<br /><br /> `KEYx`는 컨텍스트 내에서는 물론 컨텍스트 없이도 사용할 수 있습니다. 이러한 이유로 이 키는 두 목록에 모두 나와 있습니다.<br /><br /> 이 멤버 속성을 사용 하는 방법의 예제를 참조 하세요. [간단한 MDX Tidbit: Key0, Key1, Key2](https://go.microsoft.com/fwlink/?LinkId=317364)합니다.|  
+|`KEYx`|멤버에 대한 키이며 x는 키의 서수 값(0부터 시작)입니다. KEY0은 복합 키와 비복합 키에 모두 사용할 수 있지만 주로 복합 키에 사용합니다.<br /><br /> KEY0, KEY1, KEY2 등이 모여 복합 키가 형성됩니다. 쿼리에서 각 키를 사용하여 복합 키의 해당 부분을 반환할 수 있습니다. 예를 들어 KEY0을 지정하면 복합 키의 첫 번째 부분이 반환되고 KEY1을 지정하면 복합 키의 다음 부분이 반환됩니다.<br /><br /> 복합 키가 아닌 경우 KEY0은 `Key`와 같습니다.<br /><br /> 
+  `KEYx`는 컨텍스트 내에서는 물론 컨텍스트 없이도 사용할 수 있습니다. 이러한 이유로 이 키는 두 목록에 모두 나와 있습니다.<br /><br /> 이 멤버 속성을 사용하는 방법에 대한 예는 [간단한 MDX Tidbit: Key0, Key1, Key2](https://go.microsoft.com/fwlink/?LinkId=317364)를 참조하세요.|  
 |`Name`|멤버의 이름입니다.|  
   
 ### <a name="properties-syntax-for-context-sensitive-properties"></a>상황에 맞는 속성에 대한 PROPERTIES 구문  
@@ -84,10 +88,10 @@ ms.locfileid: "66074212"
 ## <a name="non-context-sensitive-member-properties"></a>상황에 맞지 않는 멤버 속성  
  모든 멤버가 컨텍스트에 상관없이 동일한 기본 멤버 속성 목록을 지원합니다. 이러한 속성들은 사용자에게 보다 나은 경험을 주기 위해 애플리케이션에서 사용할 수 있는 정보를 추가로 제공합니다.  
   
- 다음 표에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 지원하는 상황에 맞지 않는 기본 속성에 대해 설명합니다.  
+ 다음 표에서는에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]지 원하는 상황에 맞지 않는 기본 속성을 보여 줍니다.  
   
 > [!NOTE]  
->  MEMBERS 스키마 행 집합의 열은 다음 표에 나열된 기본 멤버 속성을 지원합니다. 에 대 한 자세한 내용은 합니다 `MEMBERS` 스키마 행 집합 참조 [MDSCHEMA_MEMBERS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset)합니다.  
+>  MEMBERS 스키마 행 집합의 열은 다음 표에 나열된 기본 멤버 속성을 지원합니다. `MEMBERS` 스키마 행 집합에 대 한 자세한 내용은 [MDSCHEMA_MEMBERS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset)을 참조 하세요.  
   
 |속성|Description|  
 |--------------|-----------------|  
@@ -100,7 +104,8 @@ ms.locfileid: "66074212"
 |`HIERARCHY_UNIQUE_NAME`|계층의 고유한 이름입니다. 멤버가 둘 이상의 계층에 속한 경우 멤버가 속한 각 계층마다 하나의 행이 있습니다. 자격에 따라 고유한 이름을 생성하는 공급자의 경우 이 이름의 각 구성 요소는 구분 기호로 분리됩니다.|  
 |`IS_DATAMEMBER`|멤버가 데이터 멤버인지 여부를 나타내는 부울입니다.|  
 |`IS_PLACEHOLDERMEMBER`|멤버가 자리 표시자인지 여부를 나타내는 부울입니다.|  
-|`KEYx`|멤버에 대한 키이며 x는 키의 서수 값(0부터 시작)입니다. KEY0은 복합 키와 비복합 키에 모두 사용할 수 있습니다.<br /><br /> 복합 키가 아닌 경우 KEY0은 `Key`와 같습니다.<br /><br /> KEY0, KEY1, KEY2 등이 모여 복합 키가 형성됩니다. 쿼리에서 각 키를 참조하여 복합 키의 해당 부분을 반환할 수 있습니다. 예를 들어 KEY0을 지정하면 복합 키의 첫 번째 부분이 반환되고 KEY1을 지정하면 복합 키의 다음 부분이 반환됩니다.<br /><br /> `KEYx`는 컨텍스트 내에서는 물론 컨텍스트 없이도 사용할 수 있습니다. 이러한 이유로 이 키는 두 목록에 모두 나와 있습니다.<br /><br /> 이 멤버 속성을 사용 하는 방법의 예제를 참조 하세요. [간단한 MDX Tidbit: Key0, Key1, Key2](https://go.microsoft.com/fwlink/?LinkId=317364)합니다.|  
+|`KEYx`|멤버에 대한 키이며 x는 키의 서수 값(0부터 시작)입니다. KEY0은 복합 키와 비복합 키에 모두 사용할 수 있습니다.<br /><br /> 복합 키가 아닌 경우 KEY0은 `Key`와 같습니다.<br /><br /> KEY0, KEY1, KEY2 등이 모여 복합 키가 형성됩니다. 쿼리에서 각 키를 참조하여 복합 키의 해당 부분을 반환할 수 있습니다. 예를 들어 KEY0을 지정하면 복합 키의 첫 번째 부분이 반환되고 KEY1을 지정하면 복합 키의 다음 부분이 반환됩니다.<br /><br /> 
+  `KEYx`는 컨텍스트 내에서는 물론 컨텍스트 없이도 사용할 수 있습니다. 이러한 이유로 이 키는 두 목록에 모두 나와 있습니다.<br /><br /> 이 멤버 속성을 사용하는 방법에 대한 예는 [간단한 MDX Tidbit: Key0, Key1, Key2](https://go.microsoft.com/fwlink/?LinkId=317364)를 참조하세요.|  
 |`LCID` *x*|로캘 ID 16진수 값으로 멤버 캡션을 변환한 값이며 *x* 는 로캘 ID 10진수 값(예: 영어-캐나다의 경우 LCID1009)입니다. 데이터 원본에 바인딩된 캡션 열이 변환에 있는 경우에만 이 값을 사용할 수 있습니다.|  
 |`LEVEL_NUMBER`|계층 루트에서 멤버까지의 거리입니다. 루트 수준은 0입니다.|  
 |`LEVEL_UNIQUE_NAME`|이 멤버가 속한 수준의 고유한 이름입니다. 자격에 따라 고유한 이름을 생성하는 공급자의 경우 이 이름의 각 구성 요소는 구분 기호로 분리됩니다.|  
@@ -128,7 +133,7 @@ ms.locfileid: "66074212"
   
  `DIMENSION PROPERTIES DESCRIPTION`  
   
- 이 문은 축 차원의 각 멤버에 대한 설명을 반환합니다. *Dimension*`.DESCRIPTION` 또는 *Level*`.DESCRIPTION`에서와 같이 차원이나 수준으로 속성을 정규화하려 한 경우 이 문은 유효성을 검사하지 못했을 것입니다.  
+ 이 문은 축 차원의 각 멤버에 대한 설명을 반환합니다. *차원* `.DESCRIPTION` 또는 *수준*`.DESCRIPTION`에서와 같이 차원이 나 수준으로 속성을 정규화 하 려 한 경우이 문은 유효성을 검사 하지 않습니다.  
   
 ### <a name="example"></a>예제  
  다음 예에서는 기본 속성을 반환하는 MDX 쿼리를 보여 줍니다.  
@@ -151,7 +156,7 @@ SELECT
 FROM [Adventure Works]  
 ```  
   
- **예제 2: 상황에 맞는 중요 하지 않은 기본 속성**  
+ **예제 2: 상황에 맞지 않는 기본 속성**  
   
  다음 예는 상황에 맞지 않는 기본 속성의 전체 목록입니다. SSMS에서 쿼리를 실행한 후 개별 멤버를 클릭하여 멤버 속성 대화 상자에서 속성을 볼 수 있습니다.  
   
@@ -189,7 +194,7 @@ FROM [Adventure Works]
 WHERE [Employee].[Employee Department].[Department].&[Sales]  
 ```  
   
- **예제 3: 멤버 속성을 결과 집합에 데이터로 반환**  
+ **예제 3: 멤버 속성을 결과 집합의 데이터로 반환**  
   
  다음 예에서는 지정된 로캘에 대한 Adventure Works 큐브의 Product 차원에 있는 제품 카테고리 멤버의 번역된 캡션을 반환합니다.  
   
@@ -205,17 +210,17 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [PeriodsToDate&#40;MDX&#41;](/sql/mdx/periodstodate-mdx)   
- [Children&#40;MDX&#41;](/sql/mdx/children-mdx)   
- [Hierarchize&#40;MDX&#41;](/sql/mdx/hierarchize-mdx)   
- [개수&#40;Set&#41;&#40;MDX&#41;](/sql/mdx/count-set-mdx)   
- [필터&#40;MDX&#41;](/sql/mdx/filter-mdx)   
- [AddCalculatedMembers&#40;MDX&#41;](/sql/mdx/addcalculatedmembers-mdx)   
- [DrilldownLevel&#40;MDX&#41;](/sql/mdx/drilldownlevel-mdx)   
- [속성&#40;MDX&#41;](/sql/mdx/properties-mdx)   
- [PrevMember&#40;MDX&#41;](/sql/mdx/prevmember-mdx)   
- [멤버 속성 사용&#40;MDX&#41;](mdx-member-properties.md)   
- [MDX 함수 참조&#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
+## <a name="see-also"></a>참고 항목  
+ [PeriodsToDate &#40;MDX&#41;](/sql/mdx/periodstodate-mdx)   
+ [MDX &#40;자식&#41;](/sql/mdx/children-mdx)   
+ [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx)   
+ [MDX&#41; &#40;&#40;집합 수&#41;](/sql/mdx/count-set-mdx)   
+ [MDX &#40;필터&#41;](/sql/mdx/filter-mdx)   
+ [AddCalculatedMembers &#40;MDX&#41;](/sql/mdx/addcalculatedmembers-mdx)   
+ [DrilldownLevel &#40;MDX&#41;](/sql/mdx/drilldownlevel-mdx)   
+ [MDX &#40;속성&#41;](/sql/mdx/properties-mdx)   
+ [PrevMember &#40;MDX&#41;](/sql/mdx/prevmember-mdx)   
+ [MDX&#41;&#40;멤버 속성 사용](mdx-member-properties.md)   
+ [Mdx 함수 참조 &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
   
   

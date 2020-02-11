@@ -1,5 +1,5 @@
 ---
-title: 연결 Close 메서드, Table Type 속성 예제 (VC + +) | Microsoft Docs
+title: Connection Close 메서드, Table Type 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d0e250aa-fc57-4fd3-9610-d64f50c5507f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4ff8cf50279d9be6b3ed334982e2140f0bd41f4d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 980b0eb874781c50f8881f2dc5e4b295d6ba2a87
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966690"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76910508"
 ---
 # <a name="connection-close-method-table-type-property-example-vc"></a>Connection Close 메서드, Table Type 속성 예제(VC++)
-설정 된 [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) 속성을 **Nothing** 해야 "닫기" 카탈로그입니다. 연결 된 컬렉션은 비어 있게 됩니다. 카탈로그에서 스키마 개체에서 만들어진 모든 개체가 분리 됩니다. 캐시 된 해당 개체에 속성을 사용할 수 있습니다 하지만 공급자에 대 한 호출을 필요로 하는 속성을 읽는 시도 실패 합니다.  
+[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) 속성을 **Nothing** 으로 설정 하면 카탈로그를 "닫아야" 합니다. 연결 된 컬렉션은 비어 있습니다. 카탈로그의 스키마 개체에서 만든 개체는 분리 됩니다. 캐시 된 개체의 모든 속성을 계속 사용할 수 있지만 공급자를 호출 해야 하는 속성을 읽으려고 하면 오류가 발생 합니다.  
   
 ```  
 // BeginCloseConnectionCpp.cpp  
@@ -92,7 +92,7 @@ void CloseConnectionByNothingX() {
       printf("\nError\n\tSource :  %s \n\tdescription : %s \n", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in CloseConnectionByNothingX...." << endl;  
+      cout << "Error occurred in CloseConnectionByNothingX...." << endl;  
    }  
 }  
   
@@ -137,10 +137,10 @@ void CloseConnectionX() {
       printf("\nError\n\tSource :  %s \n\tdescription : %s \n", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in CloseConnectionX...." << endl;  
+      cout << "Error occurred in CloseConnectionX...." << endl;  
    }  
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ActiveConnection 속성(ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)

@@ -11,24 +11,24 @@ ms.assetid: c56aedc9-f7f7-4641-b605-f0f98ed4400c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 96073b8d5e68d10caaff268aae4c5af60554ef76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915539"
 ---
 # <a name="sqlasyncnotificationcallback-function"></a>SQLAsyncNotificationCallback 함수
 **규칙**  
- 도입 된 버전: ODBC 3.8  
+ 소개 된 버전: ODBC 3.8  
   
- 표준 준수 합니다. 없음  
+ 표준 준수: 없음  
   
  **요약**  
- **SQLAsyncNotificationCallback** 드라이버 SQL_STILL_EXECUTING을 반환 된 후 현재 비동기 작업의 진행률이 어느 정도 있을 때 드라이버 관리자를 다시 호출 하는 드라이버를 허용 합니다. **SQLAsyncNotificationCallback** 드라이버에서 호출할 수 있습니다.  
+ **Sqlasyncnotificationcallback** 은 드라이버가 SQL_STILL_EXECUTING 반환 된 후 현재 비동기 작업에 대 한 진행률이 있는 경우 드라이버에서 드라이버 관리자에 게 콜백할 수 있도록 허용 합니다. **Sqlasyncnotificationcallback** 은 드라이버에 의해서만 호출 될 수 있습니다.  
   
- 드라이버를 호출 하지 마십시오 **SQLAsyncNotificationCallback** 함수 이름의 **SQLAsyncNotificationCallback**합니다. 대신 드라이버 관리자 함수 포인터를 전달 하는 드라이버 문 핸들을 해당 연결 핸들의 SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK 또는 SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK 특성 값으로 각각. 다른 핸들 다른 함수 포인터 값을 할당할 수 있습니다. 함수 포인터 형식의 SQL_ASYNC_NOTIFICATION_CALLBACK으로 정의 됩니다.  
+ 드라이버는 Sqlasyncnotificationcallback 함수 이름을 사용 하 여 **** **sqlasyncnotificationcallback** 을 호출 하지 않습니다. 대신, 드라이버 관리자는 해당 하는 연결 핸들이 나 문 핸들의 SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK 또는 SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK 특성에 대 한 값으로 드라이버에 대 한 함수 포인터를 전달 합니다. 각기. 여러 핸들에 다른 함수 포인터 값을 할당할 수 있습니다. 함수 포인터의 형식은 SQL_ASYNC_NOTIFICATION_CALLBACK로 정의 됩니다.  
   
- **SQLAsyncNotificationCallback** 는 스레드로부터 안전 합니다. 드라이버를 호출 하는 여러 스레드를 사용 하도록 선택할 수 **SQLAsyncNotificationCallback** 에서 다른 처리 동시에 합니다.  
+ **Sqlasyncnotificationcallback** 은 스레드로부터 안전 합니다. 드라이버는 서로 다른 핸들에서 **Sqlasyncnotificationcallback** 을 동시에 호출 하는 여러 스레드를 사용 하도록 선택할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,23 +40,23 @@ typedef SQLRETURN (SQL_API *SQL_ASYNC_NOTIFICATION_CALLBACK)(
   
 ## <a name="arguments"></a>인수  
  *pContex*  
- 드라이버 관리자에 의해 정의 된 데이터 구조에 대 한 포인터입니다. 값은 SQLSetConnectAttr(SQL_ATTR_ASYNC_DBC_NOTIFICATION_CONTEXT) 또는 SQLSetStmtAttr(SQL_ATTR_ASYNC_STMT_NOTIFICATION_CONTEXT) 통해 드라이버에 전달 됩니다.  드라이버에는 값에 액세스할 수 없습니다.  
+ 드라이버 관리자가 정의 하는 데이터 구조에 대 한 포인터입니다. 이 값은 SQLSetConnectAttr (SQL_ATTR_ASYNC_DBC_NOTIFICATION_CONTEXT) 또는 SQLSetStmtAttr (SQL_ATTR_ASYNC_STMT_NOTIFICATION_CONTEXT)를 통해 드라이버에 전달 됩니다.  드라이버에서 값에 액세스할 수 없습니다.  
   
  *fLast*  
- 드라이버에서 사용이 콜백 함수 호출은 현재 비동기 작업의 마지막 항목 임을 나타냅니다. 드라이버 관리자는 함수를 다시 호출 하면 드라이버에서 SQL_STILL_EXECUTING 이외의 반환 코드를 반환 합니다. 드라이버 관리자는 응용 프로그램 미리 비동기 작업은 완료를 알리기 위해 예를 들어이 정보를 사용할 수 있습니다.  
+ 드라이버가 현재 비동기 작업에 대 한 마지막 콜백 함수 호출을 나타내는 데 사용 됩니다. 드라이버 관리자가 함수를 다시 호출 하는 경우 드라이버는 SQL_STILL_EXECUTING 이외의 반환 코드를 반환 합니다. 예를 들어 드라이버 관리자는이 정보를 사용 하 여 비동기 작업이 완료 될 때까지 응용 프로그램을 미리 알릴 수 있습니다.  
   
- 경우 *처리할* 하 여 지정 된 형식의 유효한 핸들이 아닙니다 *HandleType*를 **SQLCancelHandle** 에서 SQL_INVALID_HANDLE을 반환 합니다.  
+ *Handle* 이 *HandleType*에 의해 지정 된 형식의 유효한 핸들이 아닌 경우 **sqlcancelhandle** 은 SQL_INVALID_HANDLE를 반환 합니다.  
   
-## <a name="returns"></a>반환 값  
- SQL_SUCCESS 또는 SQL_ERROR 합니다.  
+## <a name="returns"></a>반환  
+ SQL_SUCCESS 또는 SQL_ERROR.  
   
 ## <a name="diagnostics"></a>진단  
- **SQLAsyncNotificationCallback** (드라이버 또는 드라이버 관리자에서 구현 문제를 나타냅니다 다음 두 가지 상황에서 SQL_ERROR를 반환할 수 있습니다.  
+ **Sqlasyncnotificationcallback** 은 다음 두 가지 상황에 대 한 SQL_ERROR를 반환할 수 있습니다 .이는 드라이버 또는 드라이버 관리자의 구현 문제를 의미 합니다.  
   
-|오류|설명|  
+|Error|Description|  
 |-----------|-----------------|  
-|연결 또는 명령문 알림을 요청 하지 않았습니다.||  
-|잘못 된 *처리*|드라이버는 내부 드라이버 관리자 유효성 검사 테스트를 하지 못한 잘못 된 핸들을 전달 합니다.|  
+|연결 또는 문이 알림을 요청 하지 않았습니다.||  
+|잘못 된 *핸들*|드라이버가 잘못 된 핸들을 전달 하 여 내부 드라이버 관리자 유효성 검사 테스트에 실패 했습니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [비동기 실행(폴링 메서드)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)

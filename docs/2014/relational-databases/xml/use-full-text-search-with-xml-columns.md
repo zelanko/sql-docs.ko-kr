@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 897002d437dcee8a6c64750f964c957c18a077f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63193255"
 ---
 # <a name="use-full-text-search-with-xml-columns"></a>XML 열에 전체 텍스트 검색 사용
@@ -33,7 +33,7 @@ ms.locfileid: "63193255"
   
 2.  그런 다음 XML 열에서 XML 인덱스를 사용하는 해당 XML 값을 쿼리합니다.  
   
-## <a name="example-combining-full-text-search-with-xml-querying"></a>예: 전체 텍스트 검색과 XML 쿼리 조합  
+## <a name="example-combining-full-text-search-with-xml-querying"></a>예제: 전체 텍스트 검색을 XML 쿼리와 결합  
  XML 열에 전체 텍스트 인덱스를 만든 후 다음 쿼리는 XML 값에 책 제목 중 "custom"이라는 단어가 포함되어 있는지 확인합니다.  
   
 ```  
@@ -49,7 +49,7 @@ AND    xCol.exist('/book/title/text()[contains(.,"custom")]') =1
   
  또한 전체 텍스트 검색은 단어 형태소 분석을 사용하지만 XQuery **contains()** 는 리터럴 일치 검색입니다. 이러한 차이점은 다음 예에서 확인할 수 있습니다.  
   
-## <a name="example-full-text-search-on-xml-values-using-stemming"></a>예: 형태소 분석을 사용하여 XML 값에서 전체 텍스트 검색  
+## <a name="example-full-text-search-on-xml-values-using-stemming"></a>예제: 형태소 분석을 사용하여 XML 값에서 전체 텍스트 검색  
  이전 예에서 수행된 XQuery **contains()** 검사는 일반적으로 제거할 수 없습니다. 다음 쿼리를 살펴보십시오.  
   
 ```  
@@ -62,7 +62,7 @@ WHERE  CONTAINS(xCol,'run')
   
  전체 텍스트 인덱싱되는 AXSD를 사용하여 XML을 관계형 열로 분해하는 경우 XML 뷰에 대해 발생하는 XPath 쿼리는 기본 테이블에서 전체 텍스트 검색을 수행하지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 인덱스&#40;SQL Server&#41;](xml-indexes-sql-server.md)  
   
   

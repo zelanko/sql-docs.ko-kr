@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b5fe3b032491371eb53a5f1663e8e6778ce60871
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73785833"
 ---
 # <a name="sqlprocedures"></a>SQLProcedures
@@ -33,7 +33,7 @@ ms.locfileid: "73785833"
  **Sqlprocedures** 는 이름이 *ProcName* 와 일치 하 고 현재 사용자가 실행 하거나 현재 사용자에 게 VIEW DEFINITION 권한이 부여 된 프로시저에 대 한 정보를 반환 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Sqlprocedures 함수](https://go.microsoft.com/fwlink/?LinkId=59364)   
+ [SQLProcedures 함수](https://go.microsoft.com/fwlink/?LinkId=59364)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

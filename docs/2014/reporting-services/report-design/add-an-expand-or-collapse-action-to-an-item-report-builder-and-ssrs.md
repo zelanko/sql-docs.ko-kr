@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c1db711e5a1eec51323b38ee34bd1df08ed8aa9e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106750"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>항목에 확장 또는 축소 동작 추가(보고서 작성기 및 SSRS)
@@ -44,15 +44,16 @@ ms.locfileid: "66106750"
     > [!NOTE]  
     >  속성 창이 표시되지 않으면 리본에서 **보기** 를 클릭한 다음 **속성**을 클릭합니다.  
   
-4.  `Hidden`, 처음 보고서를 실행 하면이 보고서 항목의 표시 유형을 설정 하려면 다음 옵션 중 하나를 선택 합니다.  
+4.  에서 `Hidden`다음 옵션 중 하나를 선택 하 여 보고서를 처음 실행할 때이 보고서 항목의 표시 유형을 설정 합니다.  
   
-    -   선택 `False` 보고서 항목을 표시 합니다.  
+    -   보고서 `False` 항목을 표시 하려면 선택 합니다.  
   
-    -   선택 `True` 보고서 항목을 숨기려면 합니다.  
+    -   보고서 `True` 항목을 숨기려면 선택 합니다.  
   
-    -   보고서 항목을 표시하려면 **\<Expression>** 을 선택하여 **식** 대화 상자를 열고 런타임에 평가되어 표시 유형을 결정할 식을 만듭니다.  
+    -   식 ** \<>** 를 선택 하 여 **식** 대화 상자를 열고 런타임에 평가 되어 표시 유형을 결정 하는 식을 만듭니다.  
   
-5.  **ToggleItem**의 드롭다운 상자에서 토글 이미지를 추가할 입력란의 이름을 선택합니다.  
+5.  
+  **ToggleItem**의 드롭다운 상자에서 토글 이미지를 추가할 입력란의 이름을 선택합니다.  
   
      다음 이미지에서 Color 행 그룹은 사용자가 연결된 행을 확장 및 축소할 수 있도록 구성되어 있습니다.  
   
@@ -67,11 +68,12 @@ ms.locfileid: "66106750"
   
 ### <a name="to-add-expand-and-collapse-action-to-a-report-item"></a>확장 및 축소 동작을 보고서 항목에 추가하려면  
   
-1.  보고서 디자인 뷰에서 표시하거나 숨길 보고서 항목을 마우스 오른쪽 단추로 클릭한 다음 *\<report item>* **속성**을 클릭합니다. 보고서 항목에 대한 *\<report item>* **속성** 대화 상자가 열립니다.  
+1.  보고서 디자인 뷰에서 표시 하거나 숨길 보고서 항목을 마우스 오른쪽 단추로 클릭 한 다음 * \<보고서 항목>* **속성**을 클릭 합니다. 보고서 항목에 대 한 * \<보고서 항목>* **속성** 대화 상자가 열립니다.  
   
-2.  **표시 유형**을 클릭합니다.  
+2.  **표시 유형**을 클릭 합니다.  
   
-3.  **보고서를 처음 실행할 때**에서 다음 옵션 중 하나를 선택하여 보고서를 처음 실행할 때 보고서 항목이 표시되는 방식을 설정합니다.  
+3.  
+  **보고서를 처음 실행할 때**에서 다음 옵션 중 하나를 선택하여 보고서를 처음 실행할 때 보고서 항목이 표시되는 방식을 설정합니다.  
   
     -   보고서 항목을 표시하려면 **표시** 를 선택합니다.  
   
@@ -82,7 +84,8 @@ ms.locfileid: "66106750"
         > [!NOTE]  
         >  표시 유형에 대한 식을 지정할 때는 보고서 항목의 Hidden 속성을 설정하게 됩니다. 식은 `Boolean`인 경우 항목을 숨기고 `True`인 경우 항목을 표시하는 `False` 값을 반환합니다.  
   
-4.  **이 보고서 항목으로 표시 또는 숨기기 가능**의 드롭다운 상자에서 토글 이미지를 표시할 보고서 입력란의 이름(예: Textbox1)을 입력 또는 선택합니다.  
+4.  
+  **이 보고서 항목으로 표시 또는 숨기기 가능**의 드롭다운 상자에서 토글 이미지를 표시할 보고서 입력란의 이름(예: Textbox1)을 입력 또는 선택합니다.  
   
      다음 이미지에서 테이블은 사용자가 확장 및 축소할 수 있도록 구성되어 있습니다. 테이블의 표시는 Products Table 텍스트 상자로 전환됩니다.  
   
@@ -95,8 +98,8 @@ ms.locfileid: "66106750"
   
      ![확장하는 테이블이 있는 실행 중인 보고서](../media/expandcollapse-runreport-reporttable.png "확장하는 테이블이 있는 실행 중인 보고서")  
   
-## <a name="see-also"></a>관련 항목  
- [드릴다운 동작&#40;보고서 작성기 및 SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)   
- [항목 숨기기&#40;보고서 작성기 및 SSRS&#41;](../report-builder/hide-an-item-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>참고 항목  
+ [드릴 다운 동작 &#40;보고서 작성기 및 SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)   
+ [항목 &#40;보고서 작성기 및 SSRS&#41;숨기기](../report-builder/hide-an-item-report-builder-and-ssrs.md)  
   
   

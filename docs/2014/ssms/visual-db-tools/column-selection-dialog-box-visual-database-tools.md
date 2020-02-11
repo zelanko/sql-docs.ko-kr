@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 70d6cc06b0e53754c22e6a8233f529b03c8e4371
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63224648"
 ---
 # <a name="column-selection-dialog-box-visual-database-tools"></a>열 선택 대화 상자(Visual Database Tools)
@@ -25,7 +25,7 @@ ms.locfileid: "63224648"
   
  이 대화 상자를 열려면 테이블을 마우스 오른쪽 단추로 클릭한 다음 바로 가기 메뉴에서 **사용자 지정 보기 수정** 을 선택합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **사용 가능한 열**  
  선택한 데이터베이스 테이블에 있는 모든 열이 나열됩니다. 여기에 나열되는 열은 데이터베이스 테이블의 속성과 데이터베이스 형식에 따라 달라집니다. 원하는 열을 선택하여 강조 표시하고 화살표 단추를 사용하여 열을 **선택한 열** 상자로 옮깁니다.  
   
@@ -48,8 +48,8 @@ ms.locfileid: "63224648"
  **취소**  
  사용자 지정 보기에 대한 수정 내용을 취소합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [데이터베이스 다이어그램 작업 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools를 &#40;데이터베이스 다이어그램 작업&#41;](visual-database-tools.md)   
  [다이어그램에 표시된 정보의 양 사용자 지정&#40;Visual Database Tools&#41;](customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools.md)  
   
   

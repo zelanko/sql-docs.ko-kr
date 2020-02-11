@@ -16,18 +16,18 @@ ms.assetid: b52b37e6-4fec-40cf-abba-7dce4ff395fd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2bbcd4c8c70d2d381df77ccf8a4a99cec82d3e49
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68768234"
 ---
-# <a name="spdroppublication-transact-sql"></a>sp_droppublication(Transact-SQL)
+# <a name="sp_droppublication-transact-sql"></a>sp_droppublication(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   게시 및 이와 연결된 스냅샷 에이전트를 삭제합니다. 게시를 삭제하기 전에 반드시 모든 구독을 삭제해야 합니다. 게시에 있는 아티클은 자동으로 삭제됩니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -50,19 +50,19 @@ sp_droppublication [ @publication= ] 'publication'
   
  **sp_droppublication** 는 게시와 연결 된 모든 아티클을 재귀적으로 삭제 한 다음 게시 자체를 삭제 합니다. 게시에 구독이 한 개 이상 있는 경우에는 게시를 제거할 수 없습니다. 구독을 제거 하는 방법에 대 한 자세한 내용은 [delete a Push subscription](../../relational-databases/replication/delete-a-push-subscription.md) 및 [Delete a Pull subscription](../../relational-databases/replication/delete-a-pull-subscription.md)을 참조 하세요.  
   
- **Sp_droppublication** 를 실행 하 여 게시를 삭제 해도 게시 데이터베이스의 게시 된 개체 또는 구독 데이터베이스의 해당 개체는 제거 되지 않습니다. 필요한 경우 \<DROP object >를 사용 하 여 이러한 개체를 수동으로 제거 합니다.  
+ 게시를 삭제 하기 위해 **sp_droppublication** 를 실행 해도 게시 데이터베이스의 게시 된 개체 또는 구독 데이터베이스의 해당 개체는 제거 되지 않습니다. 필요한 경우 \<DROP object>를 사용 하 여 이러한 개체를 수동으로 제거 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
- **Sysadmin** 고정 서버 역할의 멤버만 **sp_droppublication**을 실행할 수 있습니다.  
+ **Sysadmin** 고정 서버 역할의 멤버만 **sp_droppublication**를 실행할 수 있습니다.  
   
 ## <a name="examples"></a>예  
  [!code-sql[HowTo#sp_droppublication](../../relational-databases/replication/codesnippet/tsql/sp-droppublication-trans_1.sql)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [게시 삭제](../../relational-databases/replication/publish/delete-a-publication.md)   
- [sp_addpublication &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
- [sp_changepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
- [sp_helppublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
+ [Transact-sql&#41;sp_addpublication &#40;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+ [Transact-sql&#41;sp_changepublication &#40;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
+ [Transact-sql&#41;sp_helppublication &#40;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 스칼라 식을 사용 하 여 | Microsoft Docs
+title: 스칼라 식 사용 | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b87fad1b9c568f4ebd5f65ef3705001b12d26693
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038044"
 ---
 # <a name="using-scalar-expressions"></a>스칼라 식 사용
@@ -68,7 +68,7 @@ ON COLUMNS
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [식 &#40;MDX&#41;](../mdx/expressions-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [MDX &#40;식&#41;](../mdx/expressions-mdx.md)  
   
   

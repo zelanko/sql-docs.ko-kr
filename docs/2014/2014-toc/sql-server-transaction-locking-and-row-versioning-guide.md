@@ -11,19 +11,19 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b49007cb51a2990ea90eb67b6e71087f59018d37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62513277"
 ---
 # <a name="sql-server-transaction-locking-and-row-versioning-guide"></a>SQL Server 트랜잭션 잠금 및 행 버전 관리 지침
 
   어느 데이터베이스에서든 트랜잭션을 제대로 관리하지 않으면 사용자가 많은 시스템에 경합 및 성능 문제가 발생할 수 있습니다. 데이터에 액세스하는 사용자 수가 늘어나면 애플리케이션에서 트랜잭션을 효율적으로 사용하는 것이 중요합니다. 이 지침에서는 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서 각 트랜잭션의 물리적 무결성을 유지하는 데 사용하는 잠금 및 행 버전 관리 메커니즘과 애플리케이션에서 트랜잭션을 효율적으로 제어할 수 있는 방법에 대해 설명합니다.  
   
-**적용 대상**: 별도로 언급하지 않는 한 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 부터 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 까지  
+**적용 대상**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 별도로 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 언급 하지 않는 한부터까지  
   
-##  <a name="Top"></a> 이 가이드의  
+##  <a name="Top"></a>이 가이드의  
 
  [트랜잭션 기본 사항](#Basics)  
   
@@ -33,29 +33,31 @@ ms.locfileid: "62513277"
   
  [데이터베이스 엔진의 행 버전 관리 기반 격리 수준](#Row_versioning)  
   
- [인덱스 잠금 사용자 지정](#Customize)  
+ [인덱스에 대 한 잠금 사용자 지정](#Customize)  
   
  [고급 트랜잭션 정보](#Advanced)  
   
-##  <a name="Basics"></a> 트랜잭션 기본 사항  
+##  <a name="Basics"></a>트랜잭션 기본 사항  
 
- 트랜잭션은 하나의 논리적 작업 단위로 수행되는 일련의 작업입니다. 작업의 논리적 단위는 ACID(원자성, 일관성, 격리성 및 영속성) 속성이라고 하는 네 가지 속성을 통해 트랜잭션으로서의 자격을 부여합니다.  
+ 트랜잭션은 작업의 단일 논리적 단위로 수행되는 작업 시퀀스입니다. 작업의 논리적 단위는 ACID(원자성, 일관성, 격리성 및 영속성) 속성이라고 하는 네 가지 속성을 통해 트랜잭션으로서의 자격을 부여합니다.  
   
  원자성  
  트랜잭션은 더 이상 분류할 수 없는 작업 단위여야 하며 모든 데이터 수정 작업이 수행되거나 하나도 수행되지 말아야 합니다.  
   
  일관성  
- 완료된 트랜잭션의 모든 데이터는 일관되어야 합니다. 관계형 데이터베이스에서는 트랜잭션 수정에 모든 규칙을 적용하여 모든 데이터 무결성을 유지해야 합니다. 트랜잭션 마지막에는 B-tree 인덱스 또는 이중 연결 목록 등 모든 내부적 데이터 구조를 반드시 수정해야 합니다.  
+ 완료되면 트랜잭션은 모든 데이터를 일관된 상태로 유지해야 합니다. 관계형 데이터베이스에서는 트랜잭션 수정에 모든 규칙을 적용하여 모든 데이터 무결성을 유지해야 합니다. 트랜잭션 마지막에는 B-tree 인덱스 또는 이중 연결 목록 등 모든 내부적 데이터 구조를 반드시 수정해야 합니다.  
   
- 격리성  
+ 격리  
  동시 트랜잭션에 의한 수정은 다른 동시 트랜잭션에 의한 수정과 격리되어야 합니다. 트랜잭션에서 다른 동시 트랜잭션이 수정하기 전 상태의 데이터를 보거나 두 번째 트랜잭션이 완료된 후의 데이터를 볼 수는 있지만 중간 상태는 볼 수 없습니다. 결과적으로 시작 데이터를 다시 로드하고 일련의 트랜잭션을 재생하여 원래 트랜잭션이 수행된 후의 상태로 데이터를 되돌릴 수 있는데 이를 순차성이라고 합니다.  
   
- 영속성  
- 완전 내구성이 있는 트랜잭션이 완료되고 나면 그 영향이 영구적으로 시스템에 적용됩니다. 수정은 시스템에 오류가 발생한 경우에도 지속됩니다. [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 이상에서 지연된 영구 트랜잭션을 사용할 수 있습니다. 지연된 영구적 트랜잭션은 트랜잭션 로그 레코드가 디스크에 유지되기 전에 커밋됩니다. 지연된 트랜잭션 내구성에 대한 자세한 내용은 [트랜잭션 내구성](../relational-databases/logs/control-transaction-durability.md) 항목을 참조하세요.  
+ 내구성  
+ 완전 내구성이 있는 트랜잭션이 완료되고 나면 그 영향이 영구적으로 시스템에 적용됩니다. 수정은 시스템 오류가 발생하는 경우에도 지속됩니다. 
+  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 이상에서 지연된 영구 트랜잭션을 사용할 수 있습니다. 지연된 영구적 트랜잭션은 트랜잭션 로그 레코드가 디스크에 유지되기 전에 커밋됩니다. 지연된 트랜잭션 내구성에 대한 자세한 내용은 [트랜잭션 내구성](../relational-databases/logs/control-transaction-durability.md) 항목을 참조하세요.  
   
  SQL 프로그래머는 적시에 트랜잭션을 시작하고 끝내 데이터의 논리적 일관성을 유지하는 책임을 맡고 있습니다. 프로그래머는 조직의 업무 규칙과 관련하여 데이터를 일관된 상태로 유지할 수 있도록 데이터 수정 순서를 정의해야 합니다. 그런 다음 이러한 수정 문을 하나의 트랜잭션에 포함하여 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]가 트랜잭션의 물리적 무결성을 유지할 수 있게 해야 합니다.  
   
- 각 트랜잭션의 물리적 무결성을 유지하는 메커니즘을 제공하는 것은 [!INCLUDE[ssDE](../includes/ssde-md.md)]과 같은 기업 데이터베이스 시스템의 책임입니다. [!INCLUDE[ssDE](../includes/ssde-md.md)]은 다음을 제공합니다.  
+ 각 트랜잭션의 물리적 무결성을 유지하는 메커니즘을 제공하는 것은 [!INCLUDE[ssDE](../includes/ssde-md.md)]과 같은 기업 데이터베이스 시스템의 책임입니다. 
+  [!INCLUDE[ssDE](../includes/ssde-md.md)]은 다음을 제공합니다.  
   
 -   트랜잭션 격리성을 유지하는 잠금 기능  
   
@@ -65,9 +67,9 @@ ms.locfileid: "62513277"
   
 ### <a name="controlling-transactions"></a>트랜잭션 제어  
 
- 애플리케이션은 주로 트랜잭션 시작 및 종료 시기를 지정하여 트랜잭션을 제어합니다. 트랜잭션 시작 및 종료 시기는 [!INCLUDE[tsql](../includes/tsql-md.md)] 문 또는 데이터베이스 API(응용 프로그래밍 인터페이스) 함수를 사용하여 지정할 수 있습니다. 시스템은 트랜잭션을 불완전하게 종료하는 오류를 올바르게 처리할 수도 있어야 합니다. 자세한 내용은 참조 하세요. [Transaction 문을 &#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/transactions-transact-sql), [ODBC의 트랜잭션](https://technet.microsoft.com/library/ms131281.aspx) 하 고 [트랜잭션을에서 SQL Server Native Client (OLEDB)](https://msdn.microsoft.com/library/ms130918.aspx).  
+ 애플리케이션은 주로 트랜잭션 시작 및 종료 시기를 지정하여 트랜잭션을 제어합니다. 트랜잭션 시작 및 종료 시기는 [!INCLUDE[tsql](../includes/tsql-md.md)] 문 또는 데이터베이스 API(응용 프로그래밍 인터페이스) 함수를 사용하여 지정할 수 있습니다. 시스템은 트랜잭션을 불완전하게 종료하는 오류를 올바르게 처리할 수도 있어야 합니다. 자세한 내용은 [트랜잭션 문 &#40;transact-sql&#41;](/sql/t-sql/language-elements/transactions-transact-sql), [ODBC의 트랜잭션](https://technet.microsoft.com/library/ms131281.aspx) 및 [OLEDB (SQL Server Native Client)의](https://msdn.microsoft.com/library/ms130918.aspx)트랜잭션을 참조 하세요.  
   
- 기본적으로 트랜잭션은 연결 수준에서 관리됩니다. 한 연결에서 트랜잭션이 시작되면 트랜잭션이 끝날 때까지 해당 연결에서 실행되는 모든 [!INCLUDE[tsql](../includes/tsql-md.md)] 문은 트랜잭션의 일부가 됩니다. 그러나 MARS(Multiple Active Result Set) 세션에서는 [!INCLUDE[tsql](../includes/tsql-md.md)] 명시적 또는 암시적 트랜잭션이 일괄 처리 수준에서 관리되는 일괄 처리 범위의 트랜잭션이 됩니다. 일괄 처리가 완료될 때 일괄 처리 범위의 트랜잭션이 커밋되거나 롤백되지 않으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 해당 트랜잭션을 자동으로 롤백합니다. 자세한 내용은 [결과 집합 MARS (Multiple Active) SQL Server에서](https://msdn.microsoft.com/library/ms345109(v=SQL.90).aspx)합니다.  
+ 기본적으로 트랜잭션은 연결 수준에서 관리됩니다. 한 연결에서 트랜잭션이 시작되면 트랜잭션이 끝날 때까지 해당 연결에서 실행되는 모든 [!INCLUDE[tsql](../includes/tsql-md.md)] 문은 트랜잭션의 일부가 됩니다. 그러나 MARS(Multiple Active Result Set) 세션에서는 [!INCLUDE[tsql](../includes/tsql-md.md)] 명시적 또는 암시적 트랜잭션이 일괄 처리 수준에서 관리되는 일괄 처리 범위의 트랜잭션이 됩니다. 일괄 처리가 완료될 때 일괄 처리 범위의 트랜잭션이 커밋되거나 롤백되지 않으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 해당 트랜잭션을 자동으로 롤백합니다. 자세한 내용은 [SQL Server에서 MARS (Multiple Active Result Sets)](https://msdn.microsoft.com/library/ms345109(v=SQL.90).aspx)를 참조 하세요.  
   
 #### <a name="starting-transactions"></a>트랜잭션 시작  
 
@@ -104,7 +106,7 @@ ms.locfileid: "62513277"
 |Delete|INSERT|TRUNCATE TABLE|  
 |DROP|OPEN|UPDATE|  
   
- **일괄 처리 범위의 트랜잭션**  
+ **일괄 처리 범위 트랜잭션**  
  MARS(Multiple Active Result Sets)에만 해당되며, MARS 세션에서 시작되는 [!INCLUDE[tsql](../includes/tsql-md.md)] 명시적 또는 암시적 트랜잭션이 일괄 처리 범위 트랜잭션이 됩니다. 일괄 처리가 완료될 때 커밋되거나 롤백되지 않은 일괄 처리 범위의 트랜잭션은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 자동으로 롤백합니다.  
   
  **분산 트랜잭션**  
@@ -115,12 +117,14 @@ ms.locfileid: "62513277"
  애플리케이션에서의 분산 트랜잭션 관리 방법은 로컬 트랜잭션과 많은 부분이 동일합니다. 트랜잭션이 끝나면 애플리케이션이 트랜잭션을 커밋 또는 롤백하도록 요청합니다. 트랜잭션 관리자는 분산 커밋을 다른 방법으로 관리하여 일부 리소스 관리자는 성공적으로 커밋하고 일부는 트랜잭션을 롤백하는 네트워크 오류의 발생 가능성을 최소화해야 합니다. 이렇게 하려면 커밋 프로세스를 준비 단계와 커밋 단계로 관리해야 하는데 이러한 방법을 2단계 커밋(2PC)이라고 합니다.  
   
  준비 단계  
- 트랜잭션 관리자가 커밋 요청을 수신하면 트랜잭션과 관련된 모든 리소스 관리자에게 준비 명령을 보냅니다. 그런 다음 각 리소스 관리자는 트랜잭션을 지속적으로 만들고 트랜잭션에 대한 로그 이미지를 갖고 있는 버퍼를 디스크로 플러시하는 데 필요한 모든 작업을 수행합니다. 각 리소스 관리자가 준비 단계를 완료하면 준비 성공 또는 실패 여부를 트랜잭션 관리자에게 반환합니다. [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에서 지연된 트랜잭션 내구성이 도입되었습니다. 지연된 영구적 트랜잭션은 트랜잭션 로그 이미지가 디스크에 플러시되기 전에 커밋됩니다. 지연된 트랜잭션 내구성에 대한 자세한 내용은 [트랜잭션 내구성](../relational-databases/logs/control-transaction-durability.md) 항목을 참조하세요.  
+ 트랜잭션 관리자가 커밋 요청을 수신하면 트랜잭션과 관련된 모든 리소스 관리자에게 준비 명령을 보냅니다. 그런 다음 각 리소스 관리자는 트랜잭션을 지속적으로 만들고 트랜잭션에 대한 로그 이미지를 갖고 있는 버퍼를 디스크로 플러시하는 데 필요한 모든 작업을 수행합니다. 각 리소스 관리자가 준비 단계를 완료하면 준비 성공 또는 실패 여부를 트랜잭션 관리자에게 반환합니다. 
+  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에서 지연된 트랜잭션 내구성이 도입되었습니다. 지연된 영구적 트랜잭션은 트랜잭션 로그 이미지가 디스크에 플러시되기 전에 커밋됩니다. 지연된 트랜잭션 내구성에 대한 자세한 내용은 [트랜잭션 내구성](../relational-databases/logs/control-transaction-durability.md) 항목을 참조하세요.  
   
  커밋 단계  
  트랜잭션 관리자가 모든 리소스 관리자로부터 준비 성공 알림을 받으면 각 리소스 관리자에게 커밋 명령을 보냅니다. 그런 다음에는 리소스 관리자가 커밋을 완료할 수 있습니다. 모든 리소스 관리자가 성공적인 커밋을 보고하면 트랜잭션 관리자가 애플리케이션에 성공을 알립니다. 준비 실패를 보고한 리소스 관리자가 있으면 트랜잭션 관리자가 각 리소스 관리자에게 롤백 명령을 보내서 애플리케이션에게 커밋 실패를 알립니다.  
   
- [!INCLUDE[ssDE](../includes/ssde-md.md)] 애플리케이션은 [!INCLUDE[tsql](../includes/tsql-md.md)] 또는 데이터베이스 API를 통해 분산 트랜잭션을 관리할 수 있습니다. 자세한 내용은 [BEGIN DISTRIBUTED TRANSACTION&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/begin-distributed-transaction-transact-sql)를 참조하세요.  
+ 
+  [!INCLUDE[ssDE](../includes/ssde-md.md)] 애플리케이션은 [!INCLUDE[tsql](../includes/tsql-md.md)] 또는 데이터베이스 API를 통해 분산 트랜잭션을 관리할 수 있습니다. 자세한 내용은 [BEGIN DISTRIBUTED TRANSACTION&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/begin-distributed-transaction-transact-sql)를 참조하세요.  
   
 #### <a name="ending-transactions"></a>트랜잭션 종료  
 
@@ -141,7 +145,7 @@ ms.locfileid: "62513277"
   
  일괄 처리에서 제약 조건 위반 등 런타임 문 오류가 발생하면 [!INCLUDE[ssDE](../includes/ssde-md.md)]에서는 기본적으로 오류를 발생시킨 문만 롤백합니다. 이 동작은 SET XACT_ABORT 문을 사용하여 변경할 수 있습니다. SET XACT_ABORT ON이 실행된 후에는 모든 런타임 문 오류 발생 시 자동으로 현재 트랜잭션이 롤백됩니다. 구문 오류와 같은 컴파일 오류는 SET XACT_ABORT 옵션 설정으로 영향을 받지 않습니다. 자세한 내용은 [SET XACT_ABORT&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-xact-abort-transact-sql)를 참조하세요.  
   
- 오류가 발생하면 수정 동작(COMMIT 또는 ROLLBACK)을 애플리케이션 코드에 포함해야 합니다. 트랜잭션을 포함 하 여 오류 처리에 대 한 효과적으로 도구로 [!INCLUDE[tsql](../includes/tsql-md.md)] 시도 하는 중... 구문을 파악할 수 있습니다. 트랜잭션이 포함된 예를 보려면 [TRY...CATCH&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql)를 참조하십시오. 부터는 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], THROW 문을 사용 하 여 예외 및 전송의 CATCH 블록으로 실행을 발생 시키는 중... 구문을 파악할 수 있습니다. 자세한 내용은 [THROW&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/throw-transact-sql)을 참조하세요.  
+ 오류가 발생하면 수정 동작(COMMIT 또는 ROLLBACK)을 애플리케이션 코드에 포함해야 합니다. 트랜잭션 오류를 포함 하 여 오류를 처리 하는 효과적인 도구 중 [!INCLUDE[tsql](../includes/tsql-md.md)] 하나는 TRY ... 구문을 CATCH 합니다. 트랜잭션이 포함된 예를 보려면 [TRY...CATCH&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql)를 참조하십시오. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터는 THROW 문을 사용 하 여 예외를 발생 시키고 try ...의 CATCH 블록으로 실행을 전송할 수 있습니다. 구문을 CATCH 합니다. 자세한 내용은 [THROW&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/throw-transact-sql)을 참조하세요.  
   
 ##### <a name="compile-and-run-time-errors-in-autocommit-mode"></a>자동 커밋 모드에서 컴파일 오류 및 런타임 오류  
 
@@ -171,7 +175,8 @@ SELECT * FROM TestBatch;  -- Returns rows 1 and 2.
 GO  
 ```  
   
- [!INCLUDE[ssDE](../includes/ssde-md.md)]에서는 실행 시간까지 개체 이름이 확인되지 않는 지연된 이름 확인 기능을 사용합니다. 다음 예에서는 처음 두 `INSERT` 문이 실행되어 커밋되므로 세 번째 `TestBatch` 문이 존재하지 않는 테이블을 참조하여 런타임 오류를 생성한 후에도 처음 두 행은 `INSERT` 테이블에 유지됩니다.  
+ 
+  [!INCLUDE[ssDE](../includes/ssde-md.md)]에서는 실행 시간까지 개체 이름이 확인되지 않는 지연된 이름 확인 기능을 사용합니다. 다음 예에서는 처음 두 `INSERT` 문이 실행되어 커밋되므로 세 번째 `TestBatch` 문이 존재하지 않는 테이블을 참조하여 런타임 오류를 생성한 후에도 처음 두 행은 `INSERT` 테이블에 유지됩니다.  
   
 ```sql
 CREATE TABLE TestBatch (Cola INT PRIMARY KEY, Colb CHAR(3));  
@@ -184,11 +189,12 @@ SELECT * FROM TestBatch;  -- Returns rows 1 and 2.
 GO  
 ```  
   
- ![맨 위 링크와 함께 사용 되는 화살표 아이콘](media/uparrow16x16.gif "맨 위 링크와 함께 사용 되는 화살표 아이콘") [이 가이드의](#Top)  
+ [이 가이드의](#Top) ![맨 위 링크와 함께 사용 되는 화살표 아이콘](media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘")  
   
-##  <a name="Lock_Basics"></a> 잠금 및 행 버전 관리 기본 사항  
+##  <a name="Lock_Basics"></a>잠금 및 행 버전 관리 기본 사항  
 
- [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서는 여러 사용자가 동시에 데이터를 액세스하는 경우 다음 메커니즘을 사용하여 트랜잭션의 무결성을 확인하고 데이터베이스의 일관성을 유지합니다.  
+ 
+  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서는 여러 사용자가 동시에 데이터를 액세스하는 경우 다음 메커니즘을 사용하여 트랜잭션의 무결성을 확인하고 데이터베이스의 일관성을 유지합니다.  
   
 -   잠금  
   
@@ -260,7 +266,7 @@ GO
   
     -   업데이트 대상이 아니었던 하나 이상의 행이 누락됨  
   
-         READ UNCOMMITTED 쿼리에서 할당 순서 검색 (IAM 페이지 사용)를 사용 하 여 행을 읽는 경우를 사용할 때 다른 트랜잭션 페이지 분할 되도록 하는 경우 행을 누락 될 수 있습니다. 페이지 분할 중에 테이블 잠금이 유지되므로 커밋된 읽기를 사용할 때는 누락이 발생하지 않습니다. 또한 업데이트로 인해 페이지 분할이 발생하지 않으므로 테이블에 클러스터형 인덱스가 없는 경우 누락이 발생하지 않습니다.  
+         READ UNCOMMITTED를 사용할 때 사용자 쿼리에서 할당 순서 검색(IAM 페이지 사용)을 사용하여 행을 읽는 경우 다른 트랜잭션에 의해 페이지 분할이 발생하면 행이 누락될 수 있습니다. 페이지 분할 중에 테이블 잠금이 유지되므로 커밋된 읽기를 사용할 때는 누락이 발생하지 않습니다. 또한 업데이트로 인해 페이지 분할이 발생하지 않으므로 테이블에 클러스터형 인덱스가 없는 경우 누락이 발생하지 않습니다.  
   
 #### <a name="types-of-concurrency"></a>동시성 유형  
 
@@ -276,7 +282,8 @@ GO
   
      낙관적 동시성 제어에서는 사용자가 데이터를 읽을 때 해당 데이터를 잠그지 않습니다. 사용자가 데이터를 업데이트할 때는 다른 사용자가 해당 데이터를 읽은 후 변경하지 않았는지 검사가 진행됩니다. 다른 사용자가 데이터를 업데이트한 경우에는 오류가 발생합니다. 일반적으로 오류를 수신한 사용자의 트랜잭션이 롤백되고 다시 시작됩니다. 이러한 방식은 가끔씩 트랜잭션을 롤백하는 비용이 데이터를 읽을 때 잠그는 비용보다 작고 데이터에 대한 경합이 낮은 환경에 주로 사용되기 때문에 낙관적 제어라고 합니다.  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 다양한 동시성 제어 유형을 지원합니다. 사용자는 연결에 대한 트랜잭션 격리 수준 또는 커서에 대한 동시성 옵션을 선택하여 동시성 제어 유형을 지정하게 됩니다. 이러한 특성은 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 사용하거나 ADO, ADO.NET, OLE DB 및 ODBC 등의 데이터베이스 API(응용 프로그래밍 인터페이스) 속성과 특성을 통해 정의할 수 있습니다.  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 다양한 동시성 제어 유형을 지원합니다. 사용자는 연결에 대한 트랜잭션 격리 수준 또는 커서에 대한 동시성 옵션을 선택하여 동시성 제어 유형을 지정하게 됩니다. 이러한 특성은 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 사용하거나 ADO, ADO.NET, OLE DB 및 ODBC 등의 데이터베이스 API(응용 프로그래밍 인터페이스) 속성과 특성을 통해 정의할 수 있습니다.  
   
 #### <a name="isolation-levels-in-the-database-engine"></a>데이터베이스 엔진의 격리 수준  
 
@@ -308,53 +315,59 @@ GO
 |격리 수준|정의|  
 |---------------------|----------------|  
 |커밋되지 않은 읽기|물리적으로 손상된 데이터만 읽지 않도록 트랜잭션을 격리하는 최하위 격리 수준입니다. 이 수준에서는 더티 읽기가 허용되므로 한 트랜잭션에서 변경한 아직 커밋되지 않은 내용을 다른 트랜잭션에서 볼 수 있습니다.|  
-|커밋된 읽기|트랜잭션에서는 처음 트랜잭션이 완료될 때까지 기다리지 않고 다른 트랜잭션에서 이전에 읽은 수정되지 않은 데이터를 읽을 수 있습니다. [!INCLUDE[ssDE](../includes/ssde-md.md)]에서는 트랜잭션이 끝날 때까지 쓰기 잠금이 유지되지만(일부 데이터에서 적용됨) 읽기 잠금은 SELECT 작업이 수행되는 즉시 해제됩니다. 이 값은 [!INCLUDE[ssDE](../includes/ssde-md.md)] 기본 수준입니다.|  
-|반복 읽기|[!INCLUDE[ssDE](../includes/ssde-md.md)]에서는 트랜잭션이 끝날 때까지 일부 데이터에서 획득되는 읽기 잠금 및 쓰기 잠금이 유지됩니다. 그러나 범위 잠금이 관리되지 않으므로 가상 읽기가 발생할 수 있습니다.|  
-|직렬화 가능|트랜잭션이 서로 완전히 격리되는 최상위 수준입니다. [!INCLUDE[ssDE](../includes/ssde-md.md)]에서는 일부 데이터에서 획득되는 읽기 잠금 및 쓰기 잠금이 유지되고 트랜잭션이 끝날 때 해제됩니다. 범위 잠금은 SELECT 작업에서 특히 가상 읽기를 방지하기 위해 범위가 지정된 WHERE 절을 사용할 때 필요합니다.<br /><br /> **참고:** 직렬화 가능 격리 수준이 요청 된 경우 DDL 작업 및 복제 된 테이블에서 트랜잭션이 실패할 수 있습니다. 이는 복제 쿼리가 직렬화 가능 격리 수준과 호환되지 않을 수 있는 힌트를 사용하기 때문입니다.|  
+|커밋된 읽기|트랜잭션에서는 처음 트랜잭션이 완료될 때까지 기다리지 않고 다른 트랜잭션에서 이전에 읽은 수정되지 않은 데이터를 읽을 수 있습니다. 
+  [!INCLUDE[ssDE](../includes/ssde-md.md)]에서는 트랜잭션이 끝날 때까지 쓰기 잠금이 유지되지만(일부 데이터에서 적용됨) 읽기 잠금은 SELECT 작업이 수행되는 즉시 해제됩니다. 이 값은 [!INCLUDE[ssDE](../includes/ssde-md.md)] 기본 수준입니다.|  
+|반복 읽기|
+  [!INCLUDE[ssDE](../includes/ssde-md.md)]에서는 트랜잭션이 끝날 때까지 일부 데이터에서 획득되는 읽기 잠금 및 쓰기 잠금이 유지됩니다. 그러나 범위 잠금이 관리되지 않으므로 가상 읽기가 발생할 수 있습니다.|  
+|직렬화 가능|트랜잭션이 서로 완전히 격리되는 최상위 수준입니다. 
+  [!INCLUDE[ssDE](../includes/ssde-md.md)]에서는 일부 데이터에서 획득되는 읽기 잠금 및 쓰기 잠금이 유지되고 트랜잭션이 끝날 때 해제됩니다. 범위 잠금은 SELECT 작업에서 특히 가상 읽기를 방지하기 위해 범위가 지정된 WHERE 절을 사용할 때 필요합니다.<br /><br /> **참고:** 직렬화 가능 격리 수준이 요청 된 경우 복제 된 테이블에 대 한 DDL 작업 및 트랜잭션이 실패할 수 있습니다. 이는 복제 쿼리가 직렬화 가능 격리 수준과 호환되지 않을 수 있는 힌트를 사용하기 때문입니다.|  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 행 버전 관리를 사용하는 두 개의 추가 트랜잭션 격리 수준을 지원합니다. 하나는 커밋된 읽기 격리를 구현한 것이고 다른 하나는 트랜잭션 격리 수준인 스냅샷입니다.  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 행 버전 관리를 사용하는 두 개의 추가 트랜잭션 격리 수준을 지원합니다. 하나는 커밋된 읽기 격리를 구현한 것이고 다른 하나는 트랜잭션 격리 수준인 스냅샷입니다.  
   
 |행 버전 관리 기반 격리|정의|  
 |------------------------------------|----------------|  
 |커밋된 스냅샷 읽기|READ_COMMITTED_SNAPSHOT 데이터베이스 옵션을 ON으로 설정하면 커밋된 읽기 격리가 행 버전 관리를 통해 문 수준의 읽기 일관성을 제공합니다. 읽기 작업에 SCH-S 테이블 수준 잠금만 필요하고 페이지 또는 행 잠금은 필요하지 않습니다. 즉, 데이터베이스 엔진은 행 버전 관리를 사용하여 문 시작 시와 트랜잭션별로 데이터의 일관성이 유지된 스냅샷을 각 문에 제공합니다. 다른 트랜잭션에 의한 데이터 업데이트 차단을 위해 잠금이 사용되지는 않습니다. 사용자 정의 함수는 UDF를 포함하는 구문 시간이 시작된 후에 커밋된 데이터를 반환할 수 있습니다.<br /><br /> READ_COMMITTED_SNAPSHOT 데이터베이스 옵션을 기본값인 OFF로 설정하면 커밋된 격리 읽기는 공유 잠금을 사용하여 현재 트랜잭션이 읽기 작업을 실행하는 동안 다른 트랜잭션이 행을 수정하지 못하도록 합니다. 또한 공유 잠금은 다른 트랜잭션이 완료될 때까지 해당 트랜잭션이 수정한 행을 문이 읽을 수 없도록 합니다. 두 구현 모두 커밋된 읽기 격리에 대한 ISO 정의를 충족합니다.|  
-|스냅샷|스냅샷 격리 수준은 행 버전 관리를 통해 트랜잭션 수준의 읽기 일관성을 제공합니다. 읽기 작업에 SCH-S 테이블 잠금만 필요하고 페이지 또는 행 잠금은 필요하지 않습니다. 다른 트랜잭션에서 수정한 행을 읽을 때 트랜잭션 시작 당시의 행 버전을 검색합니다. ALLOW_SNAPSHOT_ISOLATION 데이터베이스 옵션을 ON으로 설정하면 데이터베이스에 대해 스냅샷 격리만 사용할 수 있습니다. 기본적으로 사용자 데이터베이스에 대해서는 이 옵션이 OFF로 설정되어 있습니다.<br /><br /> **참고:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 메타데이터의 버전 관리를 지원하지 않습니다. 따라서 스냅샷 격리에서 실행하는 명시적 트랜잭션에서 수행할 수 있는 DDL 작업에 대한 제한 사항이 있습니다. 다음 DDL 문은 BEGIN TRANSACTION 문 이후 스냅숏 격리에서 허용 되지 않습니다. ALTER TABLE, CREATE INDEX, CREATE XML INDEX, ALTER INDEX, DROP INDEX, DBCC REINDEX, ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME 또는 모든 공용 언어 런타임 (CLR) DDL 문. 이러한 문은 암시적 트랜잭션 내에서 스냅샷 격리를 사용할 때 허용됩니다. 기본적으로 암시적 트랜잭션은 DDL 문에서도 스냅샷 격리의 의미 체계를 적용할 수 있게 하는 단일 문입니다. 이 원칙을 위반 하면 오류 3961이 발생할 수 있습니다. "데이터베이스에서 스냅숏 격리 트랜잭션이 실패 ' %. * l s 문에서 액세스 한 개체에 의해 수정 되어이 트랜잭션이 시작 된 이후에 다른 동시 트랜잭션의 DDL 문에 합니다. 메타데이터에 버전이 지정되지 않았으므로 이 트랜잭션은 허용되지 않습니다. 스냅샷 격리를 함께 사용하여 메타데이터에 대해 동시 업데이트를 수행하면 일관되지 않은 결과가 발생할 수 있습니다."|  
+|스냅샷|스냅샷 격리 수준은 행 버전 관리를 통해 트랜잭션 수준의 읽기 일관성을 제공합니다. 읽기 작업에 SCH-S 테이블 잠금만 필요하고 페이지 또는 행 잠금은 필요하지 않습니다. 다른 트랜잭션에서 수정한 행을 읽을 때 트랜잭션 시작 당시의 행 버전을 검색합니다. ALLOW_SNAPSHOT_ISOLATION 데이터베이스 옵션을 ON으로 설정하면 데이터베이스에 대해 스냅샷 격리만 사용할 수 있습니다. 기본적으로 사용자 데이터베이스에 대해서는 이 옵션이 OFF로 설정되어 있습니다.<br /><br /> **참고:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서는 메타 데이터의 버전 관리를 지원 하지 않습니다.   따라서 스냅샷 격리에서 실행하는 명시적 트랜잭션에서 수행할 수 있는 DDL 작업에 대한 제한 사항이 있습니다. ALTER TABLE, CREATE INDEX, CREATE XML INDEX, ALTER INDEX, DROP INDEX, DBCC REINDEX, ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME 또는 CLR(공용 언어 런타임) DDL 문과 같은 DDL 문은 BEGIN TRANSACTION 문 다음에 스냅샷 격리에서 허용되지 않습니다. 다음 명령문은 암시적 트랜잭션 내에서 스냅샷 격리를 사용하는 경우 허용됩니다. 기본적으로 암시적 트랜잭션은 DDL 문에서도 스냅샷 격리의 의미 체계를 적용할 수 있게 하는 단일 문입니다. 이 원칙을 위반하면 오류 3961이 발생할 수 있습니다. "문에서 액세스한 개체가 이 트랜잭션이 시작된 후 다른 동시 트랜잭션의 DDL 문에 의해 수정되어 데이터베이스 '%.*ls'에서 스냅샷 격리 트랜잭션이 실패했습니다. 메타데이터에 버전이 지정되지 않았으므로 이 트랜잭션은 허용되지 않습니다. 스냅샷 격리를 함께 사용하여 메타데이터에 대해 동시 업데이트를 수행하면 일관되지 않은 결과가 발생할 수 있습니다."|  
   
  다음 표에서는 각 격리 수준에서 사용되는 동시성 부작용을 보여 줍니다.  
   
 |격리 수준|커밋되지 않은 읽기|반복되지 않는 읽기|가상|  
 |---------------------|----------------|------------------------|-------------|  
-|**READ UNCOMMITTED**|사용자 계정 컨트롤|예|사용자 계정 컨트롤|  
-|**READ COMMITTED**|아니요|예|사용자 계정 컨트롤|  
-|**REPEATABLE READ**|아니요|아니요|사용자 계정 컨트롤|  
-|**스냅숏**|아니요|아니요|아니요|  
-|**직렬화 가능**|아니요|아니요|아니요|  
+|**커밋되지 않은 읽기**|yes|yes|yes|  
+|**커밋된 읽기**|예|yes|yes|  
+|**반복 읽기**|예|예|yes|  
+|**스냅숏에**|예|예|예|  
+|**가능**|예|예|예|  
   
  각 트랜잭션 격리 수준에서 제어하는 특정 종류의 잠금 또는 행 버전 관리에 대한 자세한 내용은 [SET TRANSACTION ISOLATION LEVEL&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)을 참조하십시오.  
   
  트랜잭션 격리 수준은 [!INCLUDE[tsql](../includes/tsql-md.md)]이나 데이터베이스 API를 통해 설정할 수 있습니다.  
   
  [!INCLUDE[tsql](../includes/tsql-md.md)]  
- [!INCLUDE[tsql](../includes/tsql-md.md)] 스크립트는 SET TRANSACTION ISOLATION LEVEL 문을 사용합니다.  
+ 
+  [!INCLUDE[tsql](../includes/tsql-md.md)] 스크립트는 SET TRANSACTION ISOLATION LEVEL 문을 사용합니다.  
   
  ADO  
- ADO 애플리케이션은 **Connection** 개체의 `IsolationLevel` 속성을 adXactReadUncommitted, adXactReadCommitted, adXactRepeatableRead 또는 adXactReadSerializable로 설정합니다.  
+ ADO 애플리케이션은 `IsolationLevel`Connection** 개체의 ** 속성을 adXactReadUncommitted, adXactReadCommitted, adXactRepeatableRead 또는 adXactReadSerializable로 설정합니다.  
   
  ADO.NET  
- `System.Data.SqlClient` 관리 네임스페이스를 사용하는 ADO.NET 응용 프로그램은 `SqlConnection.BeginTransaction` 메서드를 호출하고 *IsolationLevel* 옵션을 Unspecified, Chaos, ReadUncommitted, ReadCommitted, RepeatableRead, Serializable 및 Snapshot으로 설정할 수 있습니다.  
+ 
+  `System.Data.SqlClient` 관리 네임스페이스를 사용하는 ADO.NET 애플리케이션은 `SqlConnection.BeginTransaction` 메서드를 호출하고 *IsolationLevel* 옵션을 Unspecified, Chaos, ReadUncommitted, ReadCommitted, RepeatableRead, Serializable 및 Snapshot으로 설정할 수 있습니다.  
   
  OLE DB  
- OLE DB를 사용하는 애플리케이션은 트랜잭션을 시작할 때 *isoLevel*을 ISOLATIONLEVEL_READUNCOMMITTED, ISOLATIONLEVEL_READCOMMITTED, ISOLATIONLEVEL_REPEATABLEREAD, ISOLATIONLEVEL_SNAPSHOT 또는 ISOLATIONLEVEL_SERIALIZABLE로 설정하고 `ITransactionLocal::StartTransaction`을 호출합니다.  
+ OLE DB를 사용하는 애플리케이션은 트랜잭션을 시작할 때 `ITransactionLocal::StartTransaction`isoLevel*을 ISOLATIONLEVEL_READUNCOMMITTED, ISOLATIONLEVEL_READCOMMITTED, ISOLATIONLEVEL_REPEATABLEREAD, ISOLATIONLEVEL_SNAPSHOT 또는 ISOLATIONLEVEL_SERIALIZABLE로 설정하고 *을 호출합니다.  
   
  OLE DB 애플리케이션은 자동 커밋 모드로 트랜잭션 격리 수준을 지정할 때 DBPROPSET_SESSION 속성인 DBPROP_SESS_AUTOCOMMITISOLEVELS를 DBPROPVAL_TI_CHAOS, DBPROPVAL_TI_READUNCOMMITTED, DBPROPVAL_TI_BROWSE, DBPROPVAL_TI_CURSORSTABILITY, DBPROPVAL_TI_READCOMMITTED, DBPROPVAL_TI_REPEATABLEREAD, DBPROPVAL_TI_SERIALIZABLE, DBPROPVAL_TI_ISOLATED 또는 DBPROPVAL_TI_SNAPSHOT으로 설정할 수 있습니다.  
   
  ODBC  
- ODBC 애플리케이션은 *Attribute*를 SQL_ATTR_TXN_ISOLATION으로 설정하고 *ValuePtr*을 SQL_TXN_READ_UNCOMMITTED, SQL_TXN_READ_COMMITTED, SQL_TXN_REPEATABLE_READ 또는 SQL_TXN_SERIALIZABLE로 설정하고 `SQLSetConnectAttr`을 호출합니다.  
+ ODBC 애플리케이션은 `SQLSetConnectAttr`Attribute*를 SQL_ATTR_TXN_ISOLATION으로 설정하고 *ValuePtr*을 SQL_TXN_READ_UNCOMMITTED, SQL_TXN_READ_COMMITTED, SQL_TXN_REPEATABLE_READ 또는 SQL_TXN_SERIALIZABLE로 설정하고 *을 호출합니다.  
   
  스냅샷 트랜잭션의 경우 애플리케이션은 Attribute를 SQL_COPT_SS_TXN_ISOLATION으로, ValuePtr을 SQL_TXN_SS_SNAPSHOT으로 설정하고 `SQLSetConnectAttr`을 호출합니다. SQL_COPT_SS_TXN_ISOLATION이나 SQL_ATTR_TXN_ISOLATION을 사용하여 스냅샷 트랜잭션을 검색할 수 있습니다.  
   
- ![맨 위 링크와 함께 사용 되는 화살표 아이콘](media/uparrow16x16.gif "맨 위 링크와 함께 사용 되는 화살표 아이콘") [이 가이드의](#Top)  
+ [이 가이드의](#Top) ![맨 위 링크와 함께 사용 되는 화살표 아이콘](media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘")  
   
-##  <a name="Lock_Engine"></a> 데이터베이스 엔진에서의 잠금  
+##  <a name="Lock_Engine"></a>데이터베이스 엔진 잠금  
 
  잠금은 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서 사용하는 메커니즘으로 동시에 여러 사용자가 동일한 데이터에 액세스하는 것을 동기화합니다.  
   
@@ -362,13 +375,16 @@ GO
   
  트랜잭션을 통해 데이터를 수정하는 경우 해당 트랜잭션이 끝날 때까지 잠금을 지속하여 수정한 내용이 유지되도록 보호합니다. 읽기 작업을 보호할 수 있도록 획득한 잠금을 트랜잭션에서 지속하는 기간은 트랜잭션 격리 수준 설정에 따라 다릅니다. 트랜잭션을 통해 지속되는 모든 잠금은 트랜잭션이 완료되어 커밋되거나 롤백될 때 해제됩니다.  
   
- 일반적으로 애플리케이션은 잠금을 직접 요청하지 않습니다. 잠금은 잠금 관리자라고 하는 [!INCLUDE[ssDE](../includes/ssde-md.md)]의 일부를 통해 내부적으로 관리됩니다. [!INCLUDE[ssDE](../includes/ssde-md.md)] 인스턴스가 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 처리할 때 [!INCLUDE[ssDE](../includes/ssde-md.md)] 쿼리 프로세서는 액세스할 리소스를 확인합니다. 쿼리 프로세서는 액세스 유형과 트랜잭션 격리 수준 설정에 따라 각 리소스를 보호하는 데 필요한 잠금 유형을 결정합니다. 그런 다음 쿼리 프로세서는 잠금 관리자에게 적절한 잠금을 요청합니다. 잠금 관리자는 다른 트랜잭션에서 지속되는 잠금과 충돌되지 않는 잠금을 허용합니다.  
+ 일반적으로 애플리케이션은 잠금을 직접 요청하지 않습니다. 잠금은 잠금 관리자라고 하는 [!INCLUDE[ssDE](../includes/ssde-md.md)]의 일부를 통해 내부적으로 관리됩니다. 
+  [!INCLUDE[ssDE](../includes/ssde-md.md)] 인스턴스가 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 처리할 때 [!INCLUDE[ssDE](../includes/ssde-md.md)] 쿼리 프로세서는 액세스할 리소스를 확인합니다. 쿼리 프로세서는 액세스 유형과 트랜잭션 격리 수준 설정에 따라 각 리소스를 보호하는 데 필요한 잠금 유형을 결정합니다. 그런 다음 쿼리 프로세서는 잠금 관리자에게 적절한 잠금을 요청합니다. 잠금 관리자는 다른 트랜잭션에서 지속되는 잠금과 충돌되지 않는 잠금을 허용합니다.  
   
 ### <a name="lock-granularity-and-hierarchies"></a>잠금 세분성 및 계층  
 
- [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 한 트랜잭션으로 여러 유형의 리소스를 잠글 수 있는 다양한 세분성의 잠금을 제공합니다. 잠금 비용을 최소화하기 위해 [!INCLUDE[ssDE](../includes/ssde-md.md)]은 자동으로 태스크에 맞는 수준에서 리소스를 잠급니다. 행과 같이 작은 세분성에서 잠그면 동시성이 향상되지만 많은 행을 잠글 경우 더 많은 잠금을 보유해야 하므로 오버헤드가 늘어납니다. 테이블과 같이 큰 세분성에서 잠그면 전체 테이블이 잠겨 다른 트랜잭션이 테이블에 액세스하지 못하게 제한되므로 동시성은 떨어지지만 유지 관리할 잠금 수가 적으므로 오버헤드가 줄어듭니다.  
+ 
+  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 한 트랜잭션으로 여러 유형의 리소스를 잠글 수 있는 다양한 세분성의 잠금을 제공합니다. 잠금 비용을 최소화하기 위해 [!INCLUDE[ssDE](../includes/ssde-md.md)]은 자동으로 태스크에 맞는 수준에서 리소스를 잠급니다. 행과 같이 작은 세분성에서 잠그면 동시성이 향상되지만 많은 행을 잠글 경우 더 많은 잠금을 보유해야 하므로 오버헤드가 늘어납니다. 테이블과 같이 큰 세분성에서 잠그면 전체 테이블이 잠겨 다른 트랜잭션이 테이블에 액세스하지 못하게 제한되므로 동시성은 떨어지지만 유지 관리할 잠금 수가 적으므로 오버헤드가 줄어듭니다.  
   
- [!INCLUDE[ssDE](../includes/ssde-md.md)]이 리소스를 완전히 보호하기 위해 여러 수준의 세분성에서 잠금을 획득해야 하는 경우가 많습니다. 이러한 여러 수준의 세분성 잠금 그룹을 잠금 계층 구조라고 합니다. 예를 들어 인덱스 읽기를 완전히 보호하기 위해 [!INCLUDE[ssDE](../includes/ssde-md.md)]의 인스턴스에서는 행에 대한 공유 잠금과 페이지와 테이블에 대한 내재된 공유 잠금을 획득해야 합니다.  
+ 
+  [!INCLUDE[ssDE](../includes/ssde-md.md)]이 리소스를 완전히 보호하기 위해 여러 수준의 세분성에서 잠금을 획득해야 하는 경우가 많습니다. 이러한 여러 수준의 세분성 잠금 그룹을 잠금 계층 구조라고 합니다. 예를 들어 인덱스 읽기를 완전히 보호하기 위해 [!INCLUDE[ssDE](../includes/ssde-md.md)]의 인스턴스에서는 행에 대한 공유 잠금과 페이지와 테이블에 대한 내재된 공유 잠금을 획득해야 합니다.  
   
  다음 표에서는 [!INCLUDE[ssDE](../includes/ssde-md.md)]이 잠글 수 있는 리소스를 보여 줍니다.  
   
@@ -391,7 +407,8 @@ GO
   
 ### <a name="lock-modes"></a>잠금 모드  
 
- [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 동시 트랜잭션이 리소스에 액세스할 수 있는 방법을 결정하는 여러 가지 잠금 모드를 사용하여 리소스를 잠급니다.  
+ 
+  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 동시 트랜잭션이 리소스에 액세스할 수 있는 방법을 결정하는 여러 가지 잠금 모드를 사용하여 리소스를 잠급니다.  
   
  다음 표에서는 [!INCLUDE[ssDE](../includes/ssde-md.md)]에서 사용하는 리소스 잠금 모드를 보여 줍니다.  
   
@@ -400,9 +417,9 @@ GO
 |공유(S)|SELECT 문처럼 데이터를 변경하거나 업데이트하지 않는 읽기 작업에 사용합니다.|  
 |업데이트(U)|업데이트할 수 있는 리소스에 사용합니다. 여러 개의 세션이 리소스를 읽고, 잠그고, 나중에 업데이트할 때 발생하는 일반적인 교착 상태를 방지합니다.|  
 |배타적(X)|INSERT, UPDATE, DELETE와 같은 데이터 수정 작업에 사용합니다. 여러 개의 업데이트 작업이 같은 리소스에 대해 동시에 이루어지지 못하게 합니다.|  
-|의도|잠금 계층 구조를 만드는 데 사용합니다. 의도 잠금의 종류에는 내재된 공유(IS), 내재된 배타(IX), 공유 내재된 배타(SIX)가 있습니다.|  
+|Intent|잠금 계층 구조를 만드는 데 사용합니다. 의도 잠금의 종류에는 내재된 공유(IS), 내재된 배타(IX), 공유 내재된 배타(SIX)가 있습니다.|  
 |스키마|테이블의 스키마에 종속되는 작업이 실행될 때 사용합니다. 스키마 잠금에는 스키마 수정(Sch-M)과 스키마 안정성(Sch-S) 잠금이 있습니다.|  
-|대량 업데이트(BU)|경우에 사용 되는 데이터를 대량 복사 테이블 및 **TABLOCK** 힌트를 지정 합니다.|  
+|대량 업데이트(BU)|테이블에 데이터를 대량 복사 하는 경우와 **TABLOCK** 힌트가 지정 된 경우 사용 됩니다.|  
 |키 범위|직렬화 가능 트랜잭션 격리 수준을 사용할 때 쿼리가 읽는 행 범위를 보호합니다. 쿼리가 다시 실행될 경우 직렬화 가능 트랜잭션의 쿼리에 대해 반환되는 행을 다른 트랜잭션이 삽입할 수 없도록 합니다.|  
   
 #### <a name="shared-locks"></a>공유 잠금  
@@ -423,15 +440,18 @@ GO
   
 #### <a name="intent-locks"></a>의도 잠금  
 
- [!INCLUDE[ssDE](../includes/ssde-md.md)]에서는 의도 잠금을 사용하여 잠금 계층 구조 아래쪽에 있는 하위 수준 리소스에 설정되는 공유(S) 잠금 또는 배타적(X) 잠금을 보호합니다. 하위 수준의 잠금보다 먼저 확보되어 하위 수준에 잠금을 설정하려고 하는 의도를 나타내므로 의도 잠금이라고 합니다.  
+ 
+  [!INCLUDE[ssDE](../includes/ssde-md.md)]에서는 의도 잠금을 사용하여 잠금 계층 구조 아래쪽에 있는 하위 수준 리소스에 설정되는 공유(S) 잠금 또는 배타적(X) 잠금을 보호합니다. 하위 수준의 잠금보다 먼저 확보되어 하위 수준에 잠금을 설정하려고 하는 의도를 나타내므로 의도 잠금이라고 합니다.  
   
  의도 잠금은 다음과 같은 두 가지 역할을 합니다.  
   
 -   다른 트랜잭션이 상위 수준 리소스를 수정하여 하위 수준 잠금을 무효화하는 것을 방지합니다.  
   
--   [!INCLUDE[ssDE](../includes/ssde-md.md)]에서 상위 수준 세분성에서 발생하는 잠금 충돌을 보다 효율적으로 발견할 수 있도록 해 줍니다.  
+-   
+  [!INCLUDE[ssDE](../includes/ssde-md.md)]에서 상위 수준 세분성에서 발생하는 잠금 충돌을 보다 효율적으로 발견할 수 있도록 해 줍니다.  
   
- 예를 들어 테이블 내의 페이지 또는 행에 대한 공유(S) 잠금이 요청되기 전에 해당 테이블 수준에서 공유 의도 잠금이 요청됩니다. 테이블 수준에서 의도 잠금을 설정하면 이후에 다른 트랜잭션이 해당 페이지를 포함하는 테이블에 대해 배타적(X) 잠금을 얻을 수 없습니다. [!INCLUDE[ssDE](../includes/ssde-md.md)]은 테이블 수준에서만 의도 잠금을 확인하여 트랜잭션이 해당 테이블에 대해 잠금을 얻을 수 있는지 확인하므로 의도 잠금을 사용하면 성능이 향상됩니다. 이 경우 테이블의 모든 행 또는 페이지 잠금을 확인하여 트랜잭션이 전체 테이블을 잠글 수 있는지 확인할 필요가 없습니다.  
+ 예를 들어 테이블 내의 페이지 또는 행에 대한 공유(S) 잠금이 요청되기 전에 해당 테이블 수준에서 공유 의도 잠금이 요청됩니다. 테이블 수준에서 의도 잠금을 설정하면 이후에 다른 트랜잭션이 해당 페이지를 포함하는 테이블에 대해 배타적(X) 잠금을 얻을 수 없습니다. 
+  [!INCLUDE[ssDE](../includes/ssde-md.md)]은 테이블 수준에서만 의도 잠금을 확인하여 트랜잭션이 해당 테이블에 대해 잠금을 얻을 수 있는지 확인하므로 의도 잠금을 사용하면 성능이 향상됩니다. 이 경우 테이블의 모든 행 또는 페이지 잠금을 확인하여 트랜잭션이 전체 테이블을 잠글 수 있는지 확인할 필요가 없습니다.  
   
  의도 잠금에는 내재된 공유(IS) 잠금, 의도 배타(IX) 잠금, 의도 배타 공유(SIX) 잠금이 있습니다.  
   
@@ -446,22 +466,26 @@ GO
   
 #### <a name="schema-locks"></a>스키마 잠금  
 
- [!INCLUDE[ssDE](../includes/ssde-md.md)]은 열을 추가하거나 테이블을 삭제하는 등의 테이블 DDL(데이터 정의 언어) 작업 중에 스키마 수정(Sch-M) 잠금을 사용합니다. Sch-M 잠금이 유지되는 동안에는 테이블에 대한 동시 액세스가 방지됩니다. 즉, 잠금이 해제되기 전까지는 Sch-M 잠금이 모든 외부 작업을 차단합니다.  
+ 
+  [!INCLUDE[ssDE](../includes/ssde-md.md)]은 열을 추가하거나 테이블을 삭제하는 등의 테이블 DDL(데이터 정의 언어) 작업 중에 스키마 수정(Sch-M) 잠금을 사용합니다. Sch-M 잠금이 유지되는 동안에는 테이블에 대한 동시 액세스가 방지됩니다. 즉, 잠금이 해제되기 전까지는 Sch-M 잠금이 모든 외부 작업을 차단합니다.  
   
  테이블 잘림 등의 일부 DML(데이터 조작 언어)은 Sch-M 잠금을 사용하여 영향을 받는 테이블에 대한 동시 작업의 액세스를 방지합니다.  
   
- [!INCLUDE[ssDE](../includes/ssde-md.md)]은 쿼리를 컴파일하고 실행할 때 스키마 안정성(Sch-S) 잠금을 사용합니다. Sch-S 잠금은 배타적(X) 잠금 등의 트랜잭션 잠금을 차단하지 않습니다. 따라서 쿼리가 컴파일되는 동안 테이블에 대한 X 잠금이 있는 트랜잭션을 포함하여 다른 트랜잭션이 계속 실행됩니다. 그러나 Sch-M 잠금을 획득하는 동시 DML 작업과 동시 DDL 작업은 테이블에서 수행할 수 없습니다.  
+ 
+  [!INCLUDE[ssDE](../includes/ssde-md.md)]은 쿼리를 컴파일하고 실행할 때 스키마 안정성(Sch-S) 잠금을 사용합니다. Sch-S 잠금은 배타적(X) 잠금 등의 트랜잭션 잠금을 차단하지 않습니다. 따라서 쿼리가 컴파일되는 동안 테이블에 대한 X 잠금이 있는 트랜잭션을 포함하여 다른 트랜잭션이 계속 실행됩니다. 그러나 Sch-M 잠금을 획득하는 동시 DML 작업과 동시 DDL 작업은 테이블에서 수행할 수 없습니다.  
   
 #### <a name="bulk-update-locks"></a>대량 업데이트 잠금  
 
- 대량 업데이트(BU) 잠금을 사용하면 여러 스레드가 데이터를 동시에 같은 테이블로 대량 로드하는 것은 허용하고, 데이터를 대량 로드하지 않는 다른 프로세스가 테이블에 액세스하는 것은 방지할 수 있습니다. [!INCLUDE[ssDE](../includes/ssde-md.md)]에서는 다음 조건이 모두 충족되면 대량 업데이트(BU) 잠금을 사용합니다.  
+ 대량 업데이트(BU) 잠금을 사용하면 여러 스레드가 데이터를 동시에 같은 테이블로 대량 로드하는 것은 허용하고, 데이터를 대량 로드하지 않는 다른 프로세스가 테이블에 액세스하는 것은 방지할 수 있습니다. 
+  [!INCLUDE[ssDE](../includes/ssde-md.md)]에서는 다음 조건이 모두 충족되면 대량 업데이트(BU) 잠금을 사용합니다.  
   
 -   Transact-SQL BULK INSERT 문 또는 OPENROWSET(BULK) 함수를 사용하거나 .NET SqlBulkCopy, OLEDB 빠른 로드 API 또는 ODBC 대량 복사 API와 같은 BULK INSERT 명령 중 하나를 사용하여 데이터를 테이블에 대량 복사합니다.  
   
--   **TABLOCK** 힌트를 지정하거나 **sp_tableoption**을 사용하여 **table lock on bulk load** 테이블 옵션을 설정합니다.  
+-   
+  **TABLOCK** 힌트를 지정하거나 **sp_tableoption**을 사용하여 **table lock on bulk load** 테이블 옵션을 설정합니다.  
   
 > [!TIP]  
->  덜 제한적인 대량 업데이트 잠금을 보유하는 BULK INSERT 문과 달리 TABLOCK 힌트를 사용하는 INSERT INTO...SELECT는 테이블에 대해 배타적(X) 잠금을 보유합니다. 즉, 병렬 삽입 작업을 사용하여 행을 삽입할 수 없습니다.  
+>  덜 제한적인 대량 업데이트 잠금을 보유하는 BULK INSERT 문과 달리 TABLOCK 힌트를 사용하는 INSERT INTO...SELECT 문은 테이블에 대해 배타적(X) 잠금을 보유합니다. 즉, 병렬 삽입 작업을 사용하여 행을 삽입할 수 없습니다.  
   
 #### <a name="key-range-locks"></a>키 범위 잠금  
 
@@ -475,20 +499,21 @@ GO
   
 ||기존의 허가 모드||||||  
 |------|---------------------------|------|------|------|------|------|  
-|**요청 모드**|**IS**|**S**|**U**|**IX**|**SIX**|**X**|  
-|**내재된 공유(IS)(IS)**|사용자 계정 컨트롤|예|예|예|예|아니요|  
-|**공유(S)**|사용자 계정 컨트롤|예|예|아니오|아니요|아니요|  
-|**업데이트(U)**|사용자 계정 컨트롤|예|아니오|아니요|아니요|아니요|  
-|**의도 배타(IX)**|사용자 계정 컨트롤|아니오|아니요|사용자 계정 컨트롤|아니오|아니요|  
-|**의도 배타 공유(SIX)**|사용자 계정 컨트롤|아니오|아니요|아니요|아니요|아니요|  
-|**배타적(X)**|아니요|아니요|아니요|아니요|아니요|아니요|  
+|**요청 된 모드**|**IS**|**삭제**|**U**|**IX**|**가지**|**.X**|  
+|**내재된 공유(IS)**|yes|yes|yes|yes|yes|예|  
+|**공유(S)**|yes|yes|yes|예|예|예|  
+|**업데이트(U)**|yes|yes|예|예|예|예|  
+|**의도 배타(IX)**|yes|예|예|yes|예|예|  
+|**의도 배타 공유(SIX)**|yes|예|예|예|예|예|  
+|**배타적(X)**|예|예|예|예|예|예|  
   
 > [!NOTE]  
 >  의도 배타(IX) 잠금은 모든 행이 아닌 일부 행만 업데이트하기 위한 것이므로 IX 잠금 모드와 호환됩니다. 일부 행을 읽거나 업데이트하려고 하는 다른 트랜잭션도 허용됩니다. 단, 해당 행을 다른 트랜잭션이 업데이트하고 있지 않아야 합니다. 두 트랜잭션이 같은 행을 업데이트하려고 시도하는 경우 두 트랜잭션 모두에 테이블 및 페이지 수준의 IX 잠금이 부여됩니다. 하지만 한 트랜잭션에 행 수준의 X 잠금이 부여되므로 다른 트랜잭션은 행 수준 잠금이 제거될 때까지 대기해야 합니다.  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 사용할 수 있는 모든 잠금 모드의 호환성을 확인하려면 다음 표를 사용합니다.  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 사용할 수 있는 모든 잠금 모드의 호환성을 확인하려면 다음 표를 사용합니다.  
   
- ![다이어그램 표시 잠금 호환성 매트릭스](media/lockconflicttable.gif "다이어그램 표시 잠금 호환성 매트릭스")  
+ ![잠금 호환성 행렬을 보여 주는 다이어그램](media/lockconflicttable.gif "잠금 호환성 행렬을 보여 주는 다이어그램")  
   
 ### <a name="key-range-locking"></a>키 범위 잠금  
 
@@ -496,7 +521,8 @@ GO
   
  키 범위 잠금은 가상 읽기를 방지합니다. 또한 행 사이에서 키 범위를 보호하여 트랜잭션에서 액세스하는 레코드 집합에 대한 가상 삽입을 방지합니다.  
   
- 키 범위 잠금은 인덱스에 배치되어 시작 키 값과 종료 키 값을 지정합니다. 이 잠금은 키 값이 해당 범위에 속하는 모든 행의 삽입, 업데이트 또는 삭제 시도를 차단합니다. 이는 이러한 작업을 수행하려면 먼저 인덱스에 대한 잠금을 획득해야 하기 때문입니다. 예를 들어 직렬화 가능 트랜잭션은 해당 키 값이 **'** AAA **'** 및 **'** CZZ **'** 까지인 모든 행을 읽는 SELECT 문을 실행할 수 있습니다. **'** AAA **'** 부터 **'** CZZ **'** 까지의 범위에 있는 키 값에 대한 키 범위 잠금은 다른 트랜잭션에서 해당 키 값이 **'** ADG **'** , **'** BBD **'** 또는 **'** CAL **'** 과 같이 해당 범위에 있는 행을 삽입하지 못하도록 합니다.  
+ 키 범위 잠금은 인덱스에 배치되어 시작 키 값과 종료 키 값을 지정합니다. 이 잠금은 키 값이 해당 범위에 속하는 모든 행의 삽입, 업데이트 또는 삭제 시도를 차단합니다. 이는 이러한 작업을 수행하려면 먼저 인덱스에 대한 잠금을 획득해야 하기 때문입니다. 예를 들어 직렬화 가능 트랜잭션은 해당 키 값이 **'** AAA **'** 및 **'** CZZ **'** 까지인 모든 행을 읽는 SELECT 문을 실행할 수 있습니다. 
+  **'** AAA **'** 부터 **'** CZZ **'** 까지의 범위에 있는 키 값에 대한 키 범위 잠금은 다른 트랜잭션에서 해당 키 값이 **'** ADG **'**, **'** BBD **'** 또는 **'** CAL **'** 과 같이 해당 범위에 있는 행을 삽입하지 못하도록 합니다.  
   
 #### <a name="key-range-lock-modes"></a>키 범위 잠금 모드  
 
@@ -506,12 +532,12 @@ GO
   
 -   행은 인덱스 항목을 보호하는 잠금 모드를 나타냅니다.  
   
--   모드는 사용된 혼합 잠금 모드를 나타냅니다. 키 범위 잠금 모드는 두 부분으로 구성됩니다. 첫 번째는 인덱스 범위(Range*T*)를 잠그는 데 사용하는 잠금 유형을 나타내고 두 번째는 특정 키(*K*)를 잠그는 데 사용하는 잠금 유형을 나타냅니다. 두 부분은 *T*-*K*와 같이 하이픈(-)으로 연결됩니다.  
+-   모드는 사용된 혼합 잠금 모드를 나타냅니다. 키 범위 잠금 모드는 두 부분으로 구성됩니다. 첫 번째는 인덱스 범위(Range*T*)를 잠그는 데 사용하는 잠금 유형을 나타내고 두 번째는 특정 키(*K*)를 잠그는 데 사용하는 잠금 유형을 나타냅니다. 두 부분은 범위*T*-*K*와 같이 하이픈 (-)으로 연결 됩니다.  
   
     |범위|행|모드|Description|  
     |-----------|---------|----------|-----------------|  
     |RangeS|S|RangeS-S|공유 범위, 공유 리소스 잠금. 직렬화 가능한 범위 검색입니다.|  
-    |RangeS|U|RangeS-U|공유 범위, 업데이트 리소스 잠금. 직렬화 가능한 업데이트 검색입니다.|  
+    |RangeS|U|RangeS-U|공유 범위, 업데이트 리소스 잠금, 직렬화 가능한 업데이트 검색입니다.|  
     |RangeI|Null|RangeI-N|삽입 범위, null 리소스 잠금. 인덱스에 새 키를 삽입하기 전에 범위를 테스트하는 데 사용됩니다.|  
     |RangeX|X|RangeX-X|배타적 범위, 배타적 리소스 잠금. 범위 내의 키를 업데이트할 때 사용됩니다.|  
   
@@ -522,14 +548,14 @@ GO
   
 ||기존의 허가 모드|||||||  
 |------|---------------------------|------|------|------|------|------|------|  
-|**요청 모드**|**S**|**U**|**X**|**RangeS-S**|**RangeS-U**|**RangeI-N**|**RangeX-X**|  
-|**공유(S)**|사용자 계정 컨트롤|예|아니요|예|예|예|아니요|  
-|**업데이트(U)**|사용자 계정 컨트롤|아니오|아니요|사용자 계정 컨트롤|아니요|사용자 계정 컨트롤|아니요|  
-|**배타적(X)**|아니요|아니요|아니요|아니요|아니요|사용자 계정 컨트롤|아니요|  
-|**RangeS-S**|사용자 계정 컨트롤|예|아니요|예|예|아니오|아니요|  
-|**RangeS-U**|사용자 계정 컨트롤|아니오|아니요|사용자 계정 컨트롤|아니오|아니요|아니요|  
-|**RangeI-N**|사용자 계정 컨트롤|예|예|아니오|아니요|사용자 계정 컨트롤|아니요|  
-|**RangeX-X**|아니요|아니요|아니요|아니요|아니요|아니요|아니요|  
+|**요청 된 모드**|**삭제**|**U**|**.X**|**RangeS-S**|**범위-U**|**RangeI-N**|**RangeX-X**|  
+|**공유(S)**|yes|yes|예|yes|yes|yes|예|  
+|**업데이트(U)**|yes|예|예|yes|예|yes|예|  
+|**배타적(X)**|예|예|예|예|예|yes|예|  
+|**RangeS-S**|yes|yes|예|yes|yes|예|예|  
+|**범위-U**|yes|예|예|yes|예|예|예|  
+|**RangeI-N**|yes|yes|yes|예|예|yes|예|  
+|**RangeX-X**|예|예|예|예|예|예|예|  
   
 #### <a name="conversion-locks"></a>변환 잠금  
 
@@ -561,13 +587,13 @@ GO
   
 -   트랜잭션 격리 수준을 SERIALIZABLE로 설정해야 합니다.  
   
--   쿼리 프로세서가 인덱스를 사용하여 범위 필터 조건자를 구현해야 합니다. 예를 들어 SELECT 문에서 WHERE 절이이 조건자를 사용 하 여 범위 조건을 설정할 수 없습니다. ColumnX BETWEEN N **'** AAA **'** AND N **'** CZZ **'** . 키 범위 잠금은 **ColumnX**가 인덱스 키 내에 있는 경우에만 얻을 수 있습니다.  
+-   쿼리 프로세서가 인덱스를 사용하여 범위 필터 조건자를 구현해야 합니다. 예를 들어 SELECT 문의 WHERE 절은 다음 조건자를 사용하여 범위 조건을 설정할 수 있습니다. ColumnX BETWEEN N **'** AAA **'** AND N **'** CZZ **'**. 키 범위 잠금은 **ColumnX**가 인덱스 키 내에 있는 경우에만 얻을 수 있습니다.  
   
 #### <a name="examples"></a>예  
 
  다음 테이블 및 인덱스는 이어지는 키 범위 잠금 예의 기준으로 사용됩니다.  
   
- ![인덱스 b-트리 그림을 사용 하 여 데이터베이스 테이블](media/btree4.gif "인덱스 b-트리 그림을 사용 하 여 데이터베이스 테이블")  
+ ![인덱스 B-트리가 있는 데이터베이스 테이블 그림](media/btree4.gif "인덱스 B-트리가 있는 데이터베이스 테이블 그림")  
   
 ##### <a name="range-scan-query"></a>범위 검색 쿼리  
 
@@ -623,23 +649,27 @@ INSERT mytable VALUES ('Dan');
 
  행 잠금과 같이 낮은 수준의 잠금을 사용하면 두 트랜잭션이 동일한 데이터에 대해 동시에 잠금을 요청할 확률이 줄어들어 동시성이 증가합니다. 또한 잠금 수 및 잠금 관리에 필요한 리소스 수도 늘어납니다. 테이블 또는 페이지 잠금과 같이 높은 수준의 잠금을 사용하면 오버헤드는 줄어들지만 동시성이 감소합니다.  
   
- ![원가 대 세분성을 보여 주는 다이어그램](media/lockcht.gif "원가 대 세분성 보여 주는 다이어그램")  
+ ![원가 대 세분성을 보여 주는 다이어그램](media/lockcht.gif "원가 대 세분성을 보여 주는 다이어그램")  
   
- 합니다 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 동적 잠금 전략을 사용 하 여 가장 비용 효율적인 잠금을 결정 합니다. [!INCLUDE[ssDE](../includes/ssde-md.md)]에서는 스키마 및 쿼리의 특징을 기준으로 쿼리를 실행할 때 가장 적합한 잠금을 자동으로 결정합니다. 예를 들어 잠금 오버헤드를 줄이기 위해서 인덱스 검색을 수행할 때 최적화 프로그램이 인덱스에서 페이지 수준 잠금을 선택할 수 있습니다.  
+ 
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서는 동적 잠금 전략을 사용하여 가장 비용 효율적인 잠금을 결정합니다. 
+  [!INCLUDE[ssDE](../includes/ssde-md.md)]에서는 스키마 및 쿼리의 특징을 기준으로 쿼리를 실행할 때 가장 적합한 잠금을 자동으로 결정합니다. 예를 들어 잠금 오버헤드를 줄이기 위해서 인덱스 검색을 수행할 때 최적화 프로그램이 인덱스에서 페이지 수준 잠금을 선택할 수 있습니다.  
   
  동적 잠금을 사용하면 다음과 같은 장점이 있습니다.  
   
 -   데이터베이스 관리가 간단해집니다. 데이터베이스 관리자가 잠금 에스컬레이션 임계값을 조정할 필요가 없습니다.  
   
--   성능이 향상됩니다. [!INCLUDE[ssDE](../includes/ssde-md.md)]에서 태스크에 적합한 잠금을 사용하므로 시스템 오버헤드가 줄어듭니다.  
+-   성능이 향상됩니다. 
+  [!INCLUDE[ssDE](../includes/ssde-md.md)]에서 태스크에 적합한 잠금을 사용하므로 시스템 오버헤드가 줄어듭니다.  
   
--   애플리케이션 개발자가 개발에만 전념할 수 있습니다. [!INCLUDE[ssDE](../includes/ssde-md.md)]에서 잠금을 자동으로 조정합니다.  
+-   애플리케이션 개발자가 개발에만 전념할 수 있습니다. 
+  [!INCLUDE[ssDE](../includes/ssde-md.md)]에서 잠금을 자동으로 조정합니다.  
   
- [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 이상 버전에서 잠금 에스컬레이션의 동작은 LOCK_ESCALATION 옵션의 도입으로 변경 되었습니다. 자세한 내용은의 LOCK_ESCALATION 옵션을 참조 하세요 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql)합니다.  
+ 이상 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 버전에서 잠금 에스컬레이션의 동작은 LOCK_ESCALATION 옵션의 도입으로 변경 되었습니다. 자세한 내용은 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql)의 LOCK_ESCALATION 옵션을 참조 하십시오.  
   
 ### <a name="deadlocking"></a>교착 상태  
 
- 한 태스크에서 잠근 리소스를 다른 태스크에서 잠그려고 하여 둘 이상의 태스크가 서로 영구적으로 차단하면 교착 상태가 발생합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ 한 태스크에서 잠근 리소스를 다른 태스크에서 잠그려고 하여 둘 이상의 태스크가 서로 영구적으로 차단하면 교착 상태가 발생합니다. 다음은 그 예입니다.  
   
 -   트랜잭션 A가 1행에 대한 공유 잠금을 획득합니다.  
   
@@ -649,21 +679,23 @@ INSERT mytable VALUES ('Dan');
   
 -   트랜잭션 B가 1행에 대한 배타적 잠금을 요청하고 트랜잭션 A가 1행에 대해 소유하고 있는 공유 잠금을 종료 및 해제할 때까지 트랜잭션 B가 차단됩니다.  
   
- 트랜잭션 A는 트랜잭션 B가 완료 되 면 A. 트랜잭션에서 트랜잭션 B는 차단 될 때까지 완료할 수 없습니다. 이 조건을 순환 종속 관계 라고 합니다. 트랜잭션 A는 트랜잭션 B에 종속 되 고 트랜잭션 B가 순환 됩니다. 1. 트랜잭션 종속성이 있는  
+ 트랜잭션 A는 트랜잭션 B가 완료 될 때까지 완료될 수 없지만 트랜잭션 B는 트랜잭션 A에 의해 차단됩니다. 이러한 상태를 순환 종속 관계라고 합니다. 트랜잭션 A는 트랜잭션 B에 종속되고 트랜잭션 B는 트랜잭션 A에 종속된 형태로 순환됩니다.  
   
- 교착 상태의 트랜잭션은 둘 다 외부 프로세스에서 교착 상태를 해제할 때까지 기다립니다. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 교착 상태 모니터는 교착 상태에 있는 태스크가 있는지 주기적으로 검사합니다. 순환 종속 관계가 발견되면 모니터는 두 작업 중 처리하지 않을 태스크를 하나 선택하고 해당 트랜잭션을 오류와 함께 종료합니다. 이렇게 하여 다른 태스크가 해당 트랜잭션을 완료할 수 있습니다. 오류와 함께 종료된 트랜잭션의 애플리케이션은 해당 트랜잭션을 다시 시도하며 이 트랜잭션은 대개 교착 상태의 다른 트랜잭션이 완료된 후에 끝납니다.  
+ 교착 상태의 트랜잭션은 둘 다 외부 프로세스에서 교착 상태를 해제할 때까지 기다립니다. 
+  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 교착 상태 모니터는 교착 상태에 있는 태스크가 있는지 주기적으로 검사합니다. 순환 종속 관계가 발견되면 모니터는 두 작업 중 처리하지 않을 태스크를 하나 선택하고 해당 트랜잭션을 오류와 함께 종료합니다. 이렇게 하여 다른 태스크가 해당 트랜잭션을 완료할 수 있습니다. 오류와 함께 종료된 트랜잭션의 애플리케이션은 해당 트랜잭션을 다시 시도하며 이 트랜잭션은 대개 교착 상태의 다른 트랜잭션이 완료된 후에 끝납니다.  
   
  교착 상태는 종종 일반적인 차단과 혼동됩니다. 트랜잭션이 다른 트랜잭션에서 잠근 리소스에 대한 잠금을 요청하면 잠금이 해제될 때까지 잠금을 요청한 트랜잭션이 기다립니다. 기본적으로 LOCK_TIMEOUT이 설정되지 않은 한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 트랜잭션 시간은 제한되지 않습니다. 잠금을 요청하는 트랜잭션은 잠금을 소유하는 트랜잭션을 차단하기 위한 작업을 수행하지 않으므로 교착 상태에 빠지지 않고 차단됩니다. 결국 잠금을 소유하는 트랜잭션이 완료되고 잠금을 해제하면 잠금을 요청하는 트랜잭션에 잠금이 허가되고 트랜잭션이 진행됩니다.  
   
  교착 상태는 deadly embrace(치명적인 포옹)라고도 합니다.  
   
- 교착 상태는 관계형 데이터베이스 관리 시스템뿐만 아니라 다중 스레드를 사용하는 어느 시스템에서나 발생할 수 있으며 데이터베이스 개체에 대한 잠금 이외의 리소스에 대해 발생할 수 있습니다. 예를 들어 다중 스레드 운영 체제의 스레드는 메모리 블록과 같은 하나 이상의 리소스를 획득할 수 있습니다. 획득하려는 리소스를 현재 다른 스레드가 소유하고 있으면 대상 리소스가 해제될 때까지 첫 번째 스레드가 기다려야 할 수 있습니다. 이렇게 대기 중인 스레드는 해당 리소스에 대해 리소스를 소유하는 스레드에 종속됩니다. [!INCLUDE[ssDE](../includes/ssde-md.md)]의 인스턴스에서 세션은 메모리나 스레드 등의 데이터베이스가 아닌 리소스를 획득할 때 교착 상태에 빠질 수 있습니다.  
+ 교착 상태는 관계형 데이터베이스 관리 시스템뿐만 아니라 다중 스레드를 사용하는 어느 시스템에서나 발생할 수 있으며 데이터베이스 개체에 대한 잠금 이외의 리소스에 대해 발생할 수 있습니다. 예를 들어 다중 스레드 운영 체제의 스레드는 메모리 블록과 같은 하나 이상의 리소스를 획득할 수 있습니다. 획득하려는 리소스를 현재 다른 스레드가 소유하고 있으면 대상 리소스가 해제될 때까지 첫 번째 스레드가 기다려야 할 수 있습니다. 이렇게 대기 중인 스레드는 해당 리소스에 대해 리소스를 소유하는 스레드에 종속됩니다. 
+  [!INCLUDE[ssDE](../includes/ssde-md.md)]의 인스턴스에서 세션은 메모리나 스레드 등의 데이터베이스가 아닌 리소스를 획득할 때 교착 상태에 빠질 수 있습니다.  
   
- ![표시 된 트랜잭션 교착 상태 다이어그램](media/dedlck1.gif "보여 주는 트랜잭션 교착 상태 다이어그램")  
+ ![트랜잭션 교착 상태를 보여 주는 다이어그램](media/dedlck1.gif "트랜잭션 교착 상태를 보여 주는 다이어그램")  
   
  이 그림에서 트랜잭션 T1은 **Part** 테이블 잠금 리소스에 대해 트랜잭션 T2에 종속됩니다. 마찬가지로 스레드 T2는 **Supplier** 테이블 잠금 리소스에 대해 트랜잭션 T1에 종속됩니다. 이러한 종속 관계는 순환적이므로 스레드 T1과 T2 간에 교착 상태가 발생합니다.  
   
- 테이블이 분할되고 ALTER TABLE의 LOCK_ESCALATION 설정이 AUTO로 설정된 경우에도 교착 상태가 발생할 수 있습니다. LOCK_ESCALATION이 AUTO로 설정 된, 동시성 함으로써 증가 [!INCLUDE[ssDE](../includes/ssde-md.md)] 에서 TABLE 수준이 아니라 HoBT 수준에서 테이블 파티션을 잠그도록 합니다. 그러나 개별 트랜잭션이 테이블에 파티션 잠금을 보유하고 다른 트랜잭션 파티션에서 잠금을 원하면 교착 상태가 발생합니다. 이런이 유형의 교착 상태는 LOCK_ESCALATION 테이블을 설정 하 여 방지할 수 있습니다. 하지만이 설정은 테이블 잠금을 기다리도록 파티션에 대규모 업데이트가 강제 적용 되어 동시성이 감소 됩니다.  
+ 테이블이 분할되고 ALTER TABLE의 LOCK_ESCALATION 설정이 AUTO로 설정된 경우에도 교착 상태가 발생할 수 있습니다. LOCK_ESCALATION를 AUTO로 설정 하면에서 [!INCLUDE[ssDE](../includes/ssde-md.md)] 테이블 수준 대신 HoBT 수준으로 테이블 파티션을 잠글 수 있으므로 동시성이 늘어납니다. 그러나 개별 트랜잭션이 테이블에 파티션 잠금을 보유하고 다른 트랜잭션 파티션에서 잠금을 원하면 교착 상태가 발생합니다. 이런 유형의 교착 상태는 LOCK_ESCALATION을 TABLE로 설정하면 방지할 수 있습니다. 하지만 이 설정으로 인해 테이블 잠금을 기다리도록 파티션에 대규모 업데이트가 강제 적용되어 동시성이 감소됩니다.  
   
 #### <a name="detecting-and-ending-deadlocks"></a>교착 상태 검색 및 종료  
 
@@ -675,9 +707,10 @@ INSERT mytable VALUES ('Dan');
   
 -   리소스가 사용 가능한 상태가 되어야 태스크를 계속할 수 있고 태스크가 계속되어야 리소스를 해제할 수 있으므로 교착 상태가 발생합니다.  
   
- ![교착 상태에 있는 작업을 보여 주는 다이어그램](media/task-deadlock-state.gif "교착 상태에 있는 태스크를 보여 주는 다이어그램")  
+ ![교착 상태에 있는 태스크를 보여 주는 다이어그램](media/task-deadlock-state.gif "교착 상태에 있는 태스크를 보여 주는 다이어그램")  
   
- [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 교착 상태 순환을 자동으로 검색합니다. 그런 다음 [!INCLUDE[ssDE](../includes/ssde-md.md)]에서 교착 상태에 있는 세션 중 처리하지 않을 세션을 하나 선택하면 현재 트랜잭션이 오류와 함께 종료되면서 교착 상태가 해제됩니다.  
+ 
+  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 교착 상태 순환을 자동으로 검색합니다. 그런 다음 [!INCLUDE[ssDE](../includes/ssde-md.md)]에서 교착 상태에 있는 세션 중 처리하지 않을 세션을 하나 선택하면 현재 트랜잭션이 오류와 함께 종료되면서 교착 상태가 해제됩니다.  
   
 ##### <a name="resources-that-can-deadlock"></a>교착 상태를 일으킬 수 있는 리소스  
 
@@ -689,9 +722,9 @@ INSERT mytable VALUES ('Dan');
   
 -   **메모리**. 동시 요청이 사용 가능한 메모리보다 많은 메모리 부여를 대기하는 경우 교착 상태가 발생할 수 있습니다. 예를 들어 두 개의 동시 쿼리 Q1과 Q2가 각각 10MB와 20MB의 메모리를 획득하는 사용자 정의 함수를 실행합니다. 각 쿼리에 30MB가 필요하고 사용 가능한 총 메모리는 20MB인 경우 Q1과 Q2는 서로 메모리를 해제할 때까지 대기해야 하며 이로 인해 교착 상태가 발생합니다.  
   
--   **병렬 쿼리 실행 관련 리소스**. 교환 포트와 관련된 코디네이터, 제작자 및 소비자 스레드는 대개 병렬 쿼리에 속하지 않는 하나 이상의 다른 프로세스를 포함할 경우 서로 차단하여 교착 상태를 일으킵니다. 또한 병렬 쿼리 실행을 시작할 때 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 현재 작업을 기반으로 병렬 처리 수준, 즉 작업자 스레드 수를 결정합니다. 예를 들어 서버에서 새 쿼리 실행이 시작되거나 시스템에 작업자 스레드가 부족하여 시스템 작업이 예기치 않게 변경되면 교착 상태가 발생할 수 있습니다.  
+-   **병렬 쿼리 실행 관련 리소스** Exchange 포트와 연결 된 코디네이터, 생산자 또는 소비자 스레드는 대개 병렬 쿼리에 속하지 않는 하나 이상의 다른 프로세스를 포함 하는 경우 교착 상태를 발생 시킬 수 있습니다. 또한 병렬 쿼리 실행을 시작할 때 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 현재 작업을 기반으로 병렬 처리 수준, 즉 작업자 스레드 수를 결정합니다. 예를 들어 서버에서 새 쿼리 실행이 시작되거나 시스템에 작업자 스레드가 부족하여 시스템 작업이 예기치 않게 변경되면 교착 상태가 발생할 수 있습니다.  
   
--   **MARS(Multiple Active Result Sets) 리소스**. MARS 리소스는 MARS에서 여러 활성 요청의 인터리브를 제어하는 데 사용합니다. 자세한 내용은 [결과 집합 MARS (Multiple Active) SQL Server에서](https://msdn.microsoft.com/library/ms345109(v=SQL.90).aspx)합니다.  
+-   **MARS (Multiple Active Result Sets) 리소스**. MARS 리소스는 MARS에서 여러 활성 요청의 인터리브를 제어하는 데 사용합니다. 자세한 내용은 [SQL Server에서 MARS (Multiple Active Result Sets)](https://msdn.microsoft.com/library/ms345109(v=SQL.90).aspx)를 참조 하세요.  
   
     -   **사용자 리소스**. 스레드가 사용자 애플리케이션에서 제어하는 리소스를 대기할 때 해당 리소스는 외부 또는 사용자 리소스로 간주되고 잠금처럼 처리됩니다.  
   
@@ -708,7 +741,7 @@ INSERT mytable VALUES ('Dan');
   
      사용자 요청 U1에서 실행되는 저장 프로시저가 세션 뮤텍스를 획득합니다. 저장 프로시저를 실행하는 데 시간이 오래 걸리면 [!INCLUDE[ssDE](../includes/ssde-md.md)]은 저장 프로시저가 사용자 입력을 대기하고 있는 것으로 간주합니다. 사용자가 사용자 요청 U2의 결과 집합을 대기하는 동안 U2는 세션 뮤텍스를 대기하고 U1은 사용자 리소스를 대기합니다. 다음 그림에서는 이 교착 상태를 논리적으로 보여 줍니다.  
   
- ![보여 주는 사용자 프로세스 교착 상태 논리 다이어그램. ](media/udb9-logicflowexamplec.gif "사용자 프로세스 교착 상태 논리 다이어그램 표시 합니다.")  
+ ![사용자 프로세스 교착 상태를 보여 주는 논리 다이어그램](media/udb9-logicflowexamplec.gif "사용자 프로세스 교착 상태를 보여 주는 논리 다이어그램")  
   
 ##### <a name="deadlock-detection"></a>교착 상태 검색  
 
@@ -726,7 +759,8 @@ INSERT mytable VALUES ('Dan');
   
  특정 스레드에 대해 교착 상태 검색을 시작할 때 잠금 모니터는 스레드가 대기하고 있는 리소스를 확인합니다. 그런 다음 잠금 모니터는 해당 리소스의 소유자를 찾은 후 순환을 발견할 때까지 이러한 스레드에 대한 교착 상태 검색을 반복적으로 수행합니다. 이러한 방법을 통해 확인된 순환으로 교착 상태가 일어납니다.  
   
- 교착 상태가 검색되면 [!INCLUDE[ssDE](../includes/ssde-md.md)]은 교착 상태에 있는 스레드 중 처리하지 않을 스레드를 하나 선택하여 교착 상태를 끝냅니다. [!INCLUDE[ssDE](../includes/ssde-md.md)]은 스레드에 대해 실행되고 있는 현재 일괄 처리를 종료하고 해당 트랜잭션을 롤백한 후 애플리케이션에 1205 오류를 반환합니다. 처리하지 않도록 선택된 스레드의 트랜잭션이 롤백되면 이 트랜잭션에서 보유하는 모든 잠금이 해제됩니다. 이를 통해 다른 스레드의 트랜잭션이 차단 해제되고 계속됩니다. 1205 교착 상태 미처리 오류는 교착 상태와 관련된 스레드와 리소스에 대한 정보를 오류 로그에 기록합니다.  
+ 교착 상태가 검색되면 [!INCLUDE[ssDE](../includes/ssde-md.md)]은 교착 상태에 있는 스레드 중 처리하지 않을 스레드를 하나 선택하여 교착 상태를 끝냅니다. 
+  [!INCLUDE[ssDE](../includes/ssde-md.md)]은 스레드에 대해 실행되고 있는 현재 일괄 처리를 종료하고 해당 트랜잭션을 롤백한 후 애플리케이션에 1205 오류를 반환합니다. 처리하지 않도록 선택된 스레드의 트랜잭션이 롤백되면 이 트랜잭션에서 보유하는 모든 잠금이 해제됩니다. 이를 통해 다른 스레드의 트랜잭션이 차단 해제되고 계속됩니다. 1205 교착 상태 미처리 오류는 교착 상태와 관련된 스레드와 리소스에 대한 정보를 오류 로그에 기록합니다.  
   
  기본적으로 [!INCLUDE[ssDE](../includes/ssde-md.md)]은 롤백 비용이 가장 저렴한 트랜잭션을 실행하는 세션을 처리하지 않도록 선택합니다. 또는 사용자가 SET DEADLOCK_PRIORITY 문을 사용하여 교착 상태에 있는 세션의 우선 순위를 지정할 수 있습니다. DEADLOCK_PRIORITY를 LOW, NORMAL 또는 HIGH로 설정하거나 -10에서 10 사이의 정수 값으로 설정할 수 있습니다. 교착 상태 우선 순위는 기본적으로 NORMAL입니다. 두 세션의 교착 상태 우선 순위가 다르면 교착 상태 우선 순위가 낮은 세션이 처리하지 않을 세션으로 선택됩니다. 두 세션의 교착 상태 우선 순위가 같으면 롤백 비용이 가장 저렴한 트랜잭션의 세션이 선택됩니다. 교착 상태 순환과 관련된 세션의 교착 상태 우선 순위와 비용이 같으면 임의의 세션이 선택됩니다.  
   
@@ -744,9 +778,12 @@ INSERT mytable VALUES ('Dan');
   
 |속성|추적 플래그 1204 및 추적 플래그 1222|추적 플래그 1204만 해당|추적 플래그 1222만 해당|  
 |--------------|-----------------------------------------|--------------------------|--------------------------|  
-|출력 형식|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 오류 로그에 출력이 캡처됩니다.|교착 상태와 관련된 노드에 초점을 둡니다. 각 노드에 해당하는 섹션이 있으며 마지막 섹션에서 교착 상태에 대해 설명합니다.|XSD(XML 스키마 정의) 스키마를 따르지 않는 XML과 유사한 형식으로 정보를 반환합니다. 형식은 3가지 주요 섹션으로 이루어져 있습니다. 첫 번째 섹션에서는 교착 상태를 선언합니다. 두 번째 섹션에서는 교착 상태와 관련된 각 프로세스에 대해 설명합니다. 세 번째 섹션에서는 추적 플래그 1204의 노드와 같은 리소스에 대해 설명합니다.|  
-|식별 특성|**SPID:\<x> ECID:\<x>.** 병렬 프로세스의 경우 시스템 프로세스 ID 스레드를 식별합니다. 항목 `SPID:<x> ECID:0`여기서 \<x >는 SPID 값으로 대체 되는 주 스레드를 나타냅니다. 항목 `SPID:<x> ECID:<y>`, 여기서 \<x >는 SPID 값으로 대체 됩니다 및 \<y > 0 보다 크면은 동일한 SPID의 하위 스레드를 나타냅니다.<br /><br /> **BatchID**(추적 플래그 1222의 경우 **sbid**). 잠금을 요청하거나 보유하고 있는 코드 실행이 속한 일괄 처리를 식별합니다. MARS(Multiple Active Result Sets)가 해제되어 있으면 BatchID 값은 0입니다. MARS가 설정되어 있으면 활성 일괄 처리 값은 1에서 *n* 사이입니다. 세션에 활성 일괄 처리가 없는 경우 BatchID는 0입니다.<br /><br /> **모드**. 스레드가 요청, 부여 또는 대기한 특정 리소스에 대한 잠금 유형을 지정합니다. Mode는 IS(내재된 공유), S(공유), U(업데이트), IX(의도 배타), SIX(의도 배타 공유) 및 X(배타)가 될 수 있습니다.<br /><br /> **Line #** (추적 플래그 1222의 경우 **line**). 현재 문 일괄 처리에서 교착 상태 발생 시 실행 중이었던 줄 번호를 나열합니다.<br /><br /> **Input Buf** (추적 플래그 1222의 경우 **inputbuf**). 현재 일괄 처리에 있는 모든 문을 나열합니다.|**노드**. 교착 상태 체인에서 항목 번호를 나타냅니다.<br /><br /> **목록**. 잠금 소유자는 다음 목록에 포함될 수 있습니다.<br /><br /> **Grant List**. 리소스의 현재 소유자를 열거합니다.<br /><br /> **Convert List**. 잠금을 더 높은 수준으로 변환 중인 현재 소유자를 열거합니다.<br /><br /> **Wait List**. 리소스에 대한 현재 새 잠금 요청을 열거합니다.<br /><br /> **Statement Type**. 스레드에 사용 권한이 있는 DML 문의 유형(SELECT, INSERT, UPDATE 또는 DELETE)에 대해 설명합니다.<br /><br /> **Victim Resource Owner**. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 교착 상태 순환을 끊도록 선택되는 참여하는 스레드를 지정합니다. 선택된 스레드와 기존의 모든 하위 스레드가 종료됩니다.<br /><br /> **Next Branch**. 교착 상태 순환과 관련된 동일한 SPID의 하위 스레드 두 개 이상을 나타냅니다.|**deadlock victim**. 교착 상태에 있는 태스크 중 처리하지 않도록 선택된 태스크의 실제 메모리 주소를 나타냅니다. [sys.dm_os_tasks&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql)를 참조하십시오. 해결되지 않은 교착 상태의 경우 이 속성이 0일 수 있습니다. 롤백하고 있는 태스크를 처리하지 않도록 선택할 수는 없습니다.<br /><br /> **executionstack**. 교착 상태 발생 시 실행 중인 [!INCLUDE[tsql](../includes/tsql-md.md)] 코드를 나타냅니다.<br /><br /> **priority**. 교착 상태 우선 순위를 나타냅니다. 특정 경우에 동시성 향상을 위해 [!INCLUDE[ssDE](../includes/ssde-md.md)]에서 잠시 교착 상태 우선 순위를 바꿀 수 있습니다.<br /><br /> **logused**. 태스크에서 사용하는 로그 공간입니다.<br /><br /> **소유자 ID**. 요청을 제어하는 트랜잭션의 ID입니다.<br /><br /> **상태**. 태스크의 상태입니다. 다음 값 중 하나입니다.<br /><br /> >> **보류 중**. 작업자 스레드 대기 중입니다.<br /><br /> >> **실행 가능**. 실행 준비가 완료되었지만 퀀텀 대기 중입니다.<br /><br /> >> **실행**. 현재 스케줄러에서 실행 중입니다.<br /><br /> >> **일시 중지됨**. 실행이 일시 중지되었습니다.<br /><br /> >> **완료**. 태스크가 완료되었습니다.<br /><br /> >> **spinloop**. spinlock이 사용 가능할 때까지 대기합니다.<br /><br /> **waitresource**. 태스크에 필요한 리소스입니다.<br /><br /> **waittime**. 리소스 대기 시간(밀리초)입니다.<br /><br /> **schedulerid**. 이 태스크와 관련된 스케줄러입니다. [sys.dm_os_schedulers&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql) 참조.<br /><br /> **hostname**. 워크스테이션의 이름입니다.<br /><br /> **isolationlevel**. 현재 트랜잭션 격리 수준입니다.<br /><br /> **Xactid**. 요청을 제어하는 트랜잭션의 ID입니다.<br /><br /> **currentdb**. 데이터베이스의 ID입니다.<br /><br /> **lastbatchstarted**. 클라이언트 프로세스에서 일괄 처리 실행을 마지막으로 시작한 시간입니다.<br /><br /> **lastbatchcompleted**. 클라이언트 프로세스에서 일괄 처리 실행을 마지막으로 완료한 시간입니다.<br /><br /> **clientoption1 및 clientoption2**. 이 클라이언트 연결의 옵션을 설정합니다. 대개 SET NOCOUNT와 SET XACTABORT 등의 SET 문으로 제어하는 옵션에 대한 정보가 포함된 비트 마스크입니다.<br /><br /> **associatedObjectId**. HoBT(힙 또는 B-트리) ID를 나타냅니다.|  
-|리소스 특성|**RID**. 잠금이 보유 또는 요청된 테이블 내의 단일 행을 식별합니다. RID는 RID로 표시됩니다. *db_id:file_id:page_no:row_no*. `RID: 6:1:20789:0`) 을 입력합니다.<br /><br /> **OBJECT**. 잠금이 보유 또는 요청된 테이블을 식별합니다. OBJECT는 OBJECT로 표시됩니다. *db_id:object_id*. `TAB: 6:2009058193`) 을 입력합니다.<br /><br /> **KEY**. 잠금이 보유 또는 요청된 인덱스 내의 키 범위를 식별합니다. KEY는 KEY로 표시됩니다. *db_id:hobt_id* (*index key hash value*). `KEY: 6:72057594057457664 (350007a4d329)`) 을 입력합니다.<br /><br /> **PAG**. 잠금이 보유 또는 요청된 페이지 리소스를 식별합니다. PAG는 PAG로 표시됩니다. *db_id:file_id:page_no*. `PAG: 6:1:20789`) 을 입력합니다.<br /><br /> **EXT**. 익스텐트 구조를 식별합니다. EXT는 EXT로 표시됩니다. *db_id:file_id:extent_no*. `EXT: 6:1:9`) 을 입력합니다.<br /><br /> **DB**. 데이터베이스 잠금을 식별합니다. **DB는 다음 방법 중 하나로 표시됩니다.**<br /><br /> DB: *db_id*<br /><br /> DB: *db_id*[BULK-OP-DB]. 이 방법은 백업 데이터베이스에서 수행된 데이터베이스 잠금을 식별합니다.<br /><br /> DB: *db_id*[BULK-OP-LOG]. 이 방법은 특정 데이터베이스에 대해 백업 로그에서 수행된 잠금을 식별합니다.<br /><br /> **APP**. 애플리케이션 리소스에서 수행된 잠금을 식별합니다. APP는 APP로 표시됩니다. *lock_resource*. `APP: Formf370f478`) 을 입력합니다.<br /><br /> **METADATA**. 교착 상태와 관련된 메타데이터 리소스를 나타냅니다. METADATA에는 많은 하위 리소스가 있으므로 반환되는 값은 교착 상태가 발생한 하위 리소스에 따라 달라집니다. 예를 들어, 메타 데이터입니다. USER_TYPE 반환 `user_type_id =` \< *integer_value*>. METADATA 리소스 및 하위 리소스에 대한 자세한 내용은 [sys.dm_tran_locks&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql)를 참조하십시오.<br /><br /> **HOBT**. 교착 상태와 관련된 힙 또는 B-트리를 나타냅니다.|이 추적 플래그에만 관련된 사항이 없습니다.|이 추적 플래그에만 관련된 사항이 없습니다.|  
+|출력 형식|
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 오류 로그에 출력이 캡처됩니다.|교착 상태와 관련된 노드에 초점을 둡니다. 각 노드에 해당하는 섹션이 있으며 마지막 섹션에서 교착 상태에 대해 설명합니다.|XSD(XML 스키마 정의) 스키마를 따르지 않는 XML과 유사한 형식으로 정보를 반환합니다. 형식은 3가지 주요 섹션으로 이루어져 있습니다. 첫 번째 섹션에서는 교착 상태를 선언합니다. 두 번째 섹션에서는 교착 상태와 관련된 각 프로세스에 대해 설명합니다. 세 번째 섹션에서는 추적 플래그 1204의 노드와 같은 리소스에 대해 설명합니다.|  
+|식별 특성|**SPID:\<x> ECID:\<x>.** 병렬 프로세스의 경우 시스템 프로세스 ID 스레드를 식별합니다. X> `SPID:<x> ECID:0`는 SPID 값으로 대체 되는 항목으로, 주 스레드를 나타냅니다. \< X> `SPID:<x> ECID:<y>`spid 값으로 대체 되 고 \<y> 0 보다 큰 항목은 동일한 SPID의 하위 스레드를 나타냅니다. \<<br /><br /> **Batchid** (추적 플래그 1222에 대 한**sbid** ). 잠금을 요청하거나 보유하고 있는 코드 실행이 속한 일괄 처리를 식별합니다. MARS(Multiple Active Result Sets)가 해제되어 있으면 BatchID 값은 0입니다. MARS가 설정되어 있으면 활성 일괄 처리 값은 1에서 *n* 사이입니다. 세션에 활성 일괄 처리가 없는 경우 BatchID는 0입니다.<br /><br /> **모드**. 스레드가 요청, 부여 또는 대기한 특정 리소스에 대한 잠금 유형을 지정합니다. Mode는 IS(내재된 공유), S(공유), U(업데이트), IX(의도 배타), SIX(의도 배타 공유) 및 X(배타)가 될 수 있습니다.<br /><br /> **줄 #** (추적 플래그 1222에 대 한**줄** ). 현재 문 일괄 처리에서 교착 상태 발생 시 실행 중이었던 줄 번호를 나열합니다.<br /><br /> **입력 Buf** (추적 플래그 1222에 대 한**의 경우 inputbuf** ). 현재 일괄 처리에 있는 모든 문을 나열합니다.|**노드**. 교착 상태 체인에서 항목 번호를 나타냅니다.<br /><br /> **나열**합니다. 잠금 소유자는 다음 목록에 포함될 수 있습니다.<br /><br /> **허용 목록**. 리소스의 현재 소유자를 열거합니다.<br /><br /> **변환 목록**입니다. 잠금을 더 높은 수준으로 변환 중인 현재 소유자를 열거합니다.<br /><br /> **대기 목록**. 리소스에 대한 현재 새 잠금 요청을 열거합니다.<br /><br /> **문 유형**입니다. 스레드에 사용 권한이 있는 DML 문의 유형(SELECT, INSERT, UPDATE 또는 DELETE)에 대해 설명합니다.<br /><br /> **리소스 소유자**가 중지 되었습니다. 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 교착 상태 순환을 끊도록 선택되는 참여하는 스레드를 지정합니다. 선택된 스레드와 기존의 모든 하위 스레드가 종료됩니다.<br /><br /> **다음 분기**. 교착 상태 순환과 관련된 동일한 SPID의 하위 스레드 두 개 이상을 나타냅니다.|**교착 상태가**발생 했습니다. 교착 상태에 있는 태스크 중 처리하지 않도록 선택된 태스크의 실제 메모리 주소를 나타냅니다. [sys.dm_os_tasks&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql)를 참조하십시오. 해결되지 않은 교착 상태의 경우 이 속성이 0일 수 있습니다. 롤백하고 있는 태스크를 처리하지 않도록 선택할 수는 없습니다.<br /><br /> **executionstack**. 교착 상태 발생 시 실행 중인 [!INCLUDE[tsql](../includes/tsql-md.md)] 코드를 나타냅니다.<br /><br /> **우선 순위**입니다. 교착 상태 우선 순위를 나타냅니다. 특정 경우에 동시성 향상을 위해 [!INCLUDE[ssDE](../includes/ssde-md.md)]에서 잠시 교착 상태 우선 순위를 바꿀 수 있습니다.<br /><br /> **logused**. 태스크에서 사용하는 로그 공간입니다.<br /><br /> **소유자 id**입니다. 요청에 대 한 제어 권한이 있는 트랜잭션의 ID입니다.<br /><br /> **상태**. 태스크의 상태입니다. 다음 값 중 하나입니다.<br /><br /> >> **보류 중**. 작업자 스레드 대기 중입니다.<br /><br /> >> 실행 **가능.** 실행 준비가 완료되었지만 퀀텀 대기 중입니다.<br /><br /> >> **실행 중**. 현재 스케줄러에서 실행 중입니다.<br /><br /> >> **일시 중단 됨**. 실행이 일시 중지되었습니다.<br /><br /> >> **완료**. 태스크가 완료되었습니다.<br /><br /> >> **spinloop**. spinlock이 사용 가능할 때까지 대기합니다.<br /><br /> **waitresource**. 태스크에 필요한 리소스입니다.<br /><br /> **waittime**. 리소스 대기 시간(밀리초)입니다.<br /><br /> **schedulerid**. 이 태스크와 관련된 스케줄러입니다. 
+  [sys.dm_os_schedulers&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql) 참조.<br /><br /> **호스트 이름**. 워크스테이션의 이름입니다.<br /><br /> **isolationlevel**. 현재 트랜잭션 격리 수준입니다.<br /><br /> **Xactid**. 요청을 제어하는 트랜잭션의 ID입니다.<br /><br /> **currentdb**. 데이터베이스의 ID입니다.<br /><br /> **lastbatchstarted**. 클라이언트 프로세스에서 일괄 처리 실행을 마지막으로 시작한 시간입니다.<br /><br /> **lastbatchcompleted**. 클라이언트 프로세스에서 일괄 처리 실행을 마지막으로 완료한 시간입니다.<br /><br /> **clientoption1 및 clientoption2**. 이 클라이언트 연결의 옵션을 설정합니다. 대개 SET NOCOUNT와 SET XACTABORT 등의 SET 문으로 제어하는 옵션에 대한 정보가 포함된 비트 마스크입니다.<br /><br /> **associatedObjectId**. HoBT(힙 또는 B-트리) ID를 나타냅니다.|  
+|리소스 특성|**RID**. 잠금이 보유 또는 요청된 테이블 내의 단일 행을 식별합니다. RID는 RID로 표시됩니다. *db_id:file_id:page_no:row_no*. `RID: 6:1:20789:0`)을 입력합니다.<br /><br /> **개체**입니다. 잠금이 보유 또는 요청된 테이블을 식별합니다. OBJECT는 OBJECT로 표시됩니다. *db_id:object_id*. `TAB: 6:2009058193`)을 입력합니다.<br /><br /> **키**. 잠금이 보유 또는 요청된 인덱스 내의 키 범위를 식별합니다. KEY는 KEY로 표시됩니다. *db_id:hobt_id* (*index key hash value*). `KEY: 6:72057594057457664 (350007a4d329)`)을 입력합니다.<br /><br /> **PAG**. 잠금이 보유 또는 요청된 페이지 리소스를 식별합니다. PAG는 PAG로 표시됩니다. *db_id:file_id:page_no*. `PAG: 6:1:20789`)을 입력합니다.<br /><br /> **EXT**. 익스텐트 구조를 식별합니다. EXT는 EXT로 표시됩니다. *db_id:file_id:extent_no*. `EXT: 6:1:9`)을 입력합니다.<br /><br /> **DB**. 데이터베이스 잠금을 식별합니다. **DB는 다음 방법 중 하나로 표시 됩니다.**<br /><br /> DB: *db_id*<br /><br /> DB: *db_id*[BULK-OP-DB]. 이 방법은 백업 데이터베이스에서 수행된 데이터베이스 잠금을 식별합니다.<br /><br /> DB: *db_id*[BULK-OP-LOG]. 이 방법은 특정 데이터베이스에 대해 백업 로그에서 수행된 잠금을 식별합니다.<br /><br /> **앱**. 애플리케이션 리소스에서 수행된 잠금을 식별합니다. APP는 APP로 표시됩니다. *lock_resource*. `APP: Formf370f478`)을 입력합니다.<br /><br /> **메타 데이터**. 교착 상태와 관련된 메타데이터 리소스를 나타냅니다. METADATA에는 많은 하위 리소스가 있으므로 반환되는 값은 교착 상태가 발생한 하위 리소스에 따라 달라집니다. 예를 들어 METADATA.USER_TYPE는 `user_type_id =` \<*integer_value*>를 반환합니다. METADATA 리소스 및 하위 리소스에 대한 자세한 내용은 [sys.dm_tran_locks&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql)를 참조하십시오.<br /><br /> **HOBT**. 교착 상태와 관련된 힙 또는 B-트리를 나타냅니다.|이 추적 플래그에만 관련된 사항이 없습니다.|이 추적 플래그에만 관련된 사항이 없습니다.|  
   
 ###### <a name="trace-flag-1204-example"></a>추적 플래그 1204 예  
 
@@ -860,17 +897,19 @@ deadlock-list
 
  교착 상태와 관련된 태스크 및 리소스를 그림으로 설명하는 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]의 이벤트입니다. 다음 예에서는 교착 상태 그래프 이벤트가 설정되어 있을 때 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]의 출력을 보여 줍니다.  
   
- ![논리 흐름 다이어그램 보여 주는 사용자 프로세스 교착 상태입니다. ](media/udb9-profilerdeadlockgraphc.gif "사용자 프로세스 교착 상태 논리 흐름 다이어그램 표시 합니다.")  
+ ![사용자 프로세스 교착 상태를 보여 주는 논리 흐름 다이어그램](media/udb9-profilerdeadlockgraphc.gif "사용자 프로세스 교착 상태를 보여 주는 논리 흐름 다이어그램")  
   
- 실행에 대 한 자세한 내용은 합니다 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 교착 상태 그래프를 참조 하십시오 [교착 상태 그래프 저장 &#40;SQL Server Profiler&#41;](../relational-databases/performance/save-deadlock-graphs-sql-server-profiler.md)합니다.  
+ 교착 상태 그래프를 실행 하 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 는 방법에 대 한 자세한 내용은 [SQL Server Profiler&#41;&#40;교착 상태 그래프 저장 ](../relational-databases/performance/save-deadlock-graphs-sql-server-profiler.md)을 참조 하세요.  
   
 #### <a name="handling-deadlocks"></a>교착 상태 처리  
 
- [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 인스턴스에서 교착 상태의 트랜잭션 중 처리하지 않을 트랜잭션이 선택되면 현재 배치가 종료되고 해당 트랜잭션이 롤백된 후 응용 프로그램에 오류 메시지 1205가 반환됩니다.  
+ 
+  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 인스턴스에서 교착 상태의 트랜잭션 중 처리하지 않을 트랜잭션이 선택되면 현재 배치가 종료되고 해당 트랜잭션이 롤백된 후 애플리케이션에 오류 메시지 1205가 반환됩니다.  
   
  `Your transaction (process ID #52) was deadlocked on {lock | communication buffer | thread} resources with another process and has been chosen as the deadlock victim. Rerun your transaction.`  
   
- [!INCLUDE[tsql](../includes/tsql-md.md)] 쿼리를 전달하는 모든 애플리케이션은 교착 상태에서 처리되지 않을 수 있으므로 애플리케이션에 오류 메시지 1205를 트래핑할 수 있는 오류 처리기가 있어야 합니다. 애플리케이션에서 오류를 트래핑하지 않으면 해당 트랜잭션이 롤백된 것을 모르고 계속 진행하여 오류가 발생할 수 있습니다.  
+ 
+  [!INCLUDE[tsql](../includes/tsql-md.md)] 쿼리를 전달하는 모든 애플리케이션은 교착 상태에서 처리되지 않을 수 있으므로 애플리케이션에 오류 메시지 1205를 트래핑할 수 있는 오류 처리기가 있어야 합니다. 애플리케이션에서 오류를 트래핑하지 않으면 해당 트랜잭션이 롤백된 것을 모르고 계속 진행하여 오류가 발생할 수 있습니다.  
   
  오류 메시지 1205를 트래핑하는 오류 처리기를 구현하면 애플리케이션에서 교착 상황을 처리하고 자동으로 교착 상태와 관련된 쿼리를 다시 전송하는 등의 동작을 취할 수 있습니다. 쿼리를 자동으로 다시 전송하므로 사용자는 교착 상태가 발생한 것을 알 필요가 없습니다.  
   
@@ -969,7 +1008,8 @@ deadlock-list
   
  sys.dm_tran_locks 동적 관리 뷰의 resource_lock_partition 열은 잠금 분할 리소스에 대한 잠금 파티션 ID를 제공합니다. 자세한 내용은 [sys.dm_tran_locks&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql)를 참조하세요.  
   
- [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]의 잠금 이벤트 아래에서 BigintData1 열에는 잠금 분할 리소스에 대한 잠금 파티션 ID가 제공됩니다.  
+ 
+  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]의 잠금 이벤트 아래에서 BigintData1 열에는 잠금 분할 리소스에 대한 잠금 파티션 ID가 제공됩니다.  
   
 #### <a name="working-with-lock-partitioning"></a>잠금 분할 작업  
 
@@ -997,7 +1037,8 @@ GO
 
  세션 1:  
   
- 트랜잭션에서 `SELECT` 문이 실행됩니다. `HOLDLOCK` 잠금 힌트로 인해 이 문은 해당 테이블에 대해 IS(내재된 공유) 잠금을 획득하여 유지합니다. 이 그림에서는 행 잠금 및 페이지 잠금이 무시됩니다. IS 잠금은 트랜잭션에 할당된 파티션에 대해서만 획득할 수 있습니다. 이 예에서는 파티션 ID 7에 대해 IS 잠금을 획득했다고 가정합니다.  
+ 트랜잭션에서 `SELECT` 문이 실행됩니다. 
+  `HOLDLOCK` 잠금 힌트로 인해 이 문은 해당 테이블에 대해 IS(내재된 공유) 잠금을 획득하여 유지합니다. 이 그림에서는 행 잠금 및 페이지 잠금이 무시됩니다. IS 잠금은 트랜잭션에 할당된 파티션에 대해서만 획득할 수 있습니다. 이 예에서는 파티션 ID 7에 대해 IS 잠금을 획득했다고 가정합니다.  
   
 ```  
 -- Start a transaction.  
@@ -1033,7 +1074,8 @@ SELECT col1
 
  세션 1:  
   
- 트랜잭션에서 `SELECT` 문이 실행됩니다. `HOLDLOCK` 잠금 힌트로 인해 이 문은 해당 테이블에 대해 IS(내재된 공유) 잠금을 획득하여 유지합니다. 이 그림에서는 행 잠금 및 페이지 잠금이 무시됩니다. IS 잠금은 트랜잭션에 할당된 파티션에 대해서만 획득할 수 있습니다. 이 예에서는 파티션 ID 6에 대해 IS 잠금을 획득했다고 가정합니다.  
+ 트랜잭션에서 `SELECT` 문이 실행됩니다. 
+  `HOLDLOCK` 잠금 힌트로 인해 이 문은 해당 테이블에 대해 IS(내재된 공유) 잠금을 획득하여 유지합니다. 이 그림에서는 행 잠금 및 페이지 잠금이 무시됩니다. IS 잠금은 트랜잭션에 할당된 파티션에 대해서만 획득할 수 있습니다. 이 예에서는 파티션 ID 6에 대해 IS 잠금을 획득했다고 가정합니다.  
   
 ```  
 -- Start a transaction.  
@@ -1046,7 +1088,8 @@ BEGIN TRANSACTION
   
  세션 2:  
   
- 트랜잭션에서 `SELECT` 문이 실행됩니다. `TABLOCKX` 잠금 힌트로 인해 트랜잭션이 테이블에 대해 X(배타적) 잠금을 획득하려 합니다. 파티션 ID가 0으로 시작하는 모든 파티션에 대해 획득되어야 하므로 X 잠금은 0-5의 모든 파티션 ID에 대해 획득되지만 파티션 ID 6에 획득된 IS 잠금에 의해 차단됩니다.  
+ 트랜잭션에서 `SELECT` 문이 실행됩니다. 
+  `TABLOCKX` 잠금 힌트로 인해 트랜잭션이 테이블에 대해 X(배타적) 잠금을 획득하려 합니다. 파티션 ID가 0으로 시작하는 모든 파티션에 대해 획득되어야 하므로 X 잠금은 0-5의 모든 파티션 ID에 대해 획득되지만 파티션 ID 6에 획득된 IS 잠금에 의해 차단됩니다.  
   
  아직 X 잠금이 획득되지 않은 파티션 ID 7-15에서 다른 트랜잭션이 계속 잠금을 획득할 수 있습니다.  
   
@@ -1057,13 +1100,14 @@ BEGIN TRANSACTION
         WITH (TABLOCKX, HOLDLOCK);  
 ```  
   
- ![맨 위 링크와 함께 사용 되는 화살표 아이콘](media/uparrow16x16.gif "맨 위 링크와 함께 사용 되는 화살표 아이콘") [이 가이드의](#Top)  
+ [이 가이드의](#Top) ![맨 위 링크와 함께 사용 되는 화살표 아이콘](media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘")  
   
-##  <a name="Row_versioning"></a> 데이터베이스 엔진의 행 버전 관리 기반 격리 수준  
+##  <a name="Row_versioning"></a>데이터베이스 엔진의 행 버전 관리 기반 격리 수준  
 
  SQL Server 2005부터 데이터베이스 엔진에서는 기존 격리 수준을 구현한 커밋된 읽기를 제공하여 행 버전 관리를 사용하는 문 수준 스냅샷을 제공합니다. 또한 SQL Server 데이터베이스 엔진에서는 트랜잭션 격리 수준인 스냅샷이 도입되어 행 버전 관리를 사용하는 트랜잭션 수준 스냅샷을 제공합니다.  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 행 버전 관리는 행을 수정하거나 삭제할 때 쓰기 시 복사 메커니즘을 호출하는 일반적인 방법입니다. 이렇게 하려면 트랜잭션을 실행하는 동안 트랜잭션의 일관성 있는 이전 상태가 요구되는 트랜잭션에서 이전 기존 행 버전을 사용할 수 있어야 합니다. 행 버전 관리는 다음 용도로 사용됩니다.  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 행 버전 관리는 행을 수정하거나 삭제할 때 쓰기 시 복사 메커니즘을 호출하는 일반적인 방법입니다. 이렇게 하려면 트랜잭션을 실행하는 동안 트랜잭션의 일관성 있는 이전 상태가 요구되는 트랜잭션에서 이전 기존 행 버전을 사용할 수 있어야 합니다. 행 버전 관리는 다음 용도로 사용됩니다.  
   
 -   트리거에 **inserted** 및 **deleted** 테이블 작성. 트리거에 의해 수정된 모든 행의 버전이 지정됩니다. 여기에는 트리거를 실행한 문에 의해 수정된 행과 트리거에 의해 수정된 모든 데이터가 포함됩니다.  
   
@@ -1077,7 +1121,9 @@ BEGIN TRANSACTION
   
     -   트랜잭션 수준의 읽기 일관성을 유지하는 새로운 스냅샷 격리 수준  
   
- `tempdb` 데이터베이스에는 버전 저장소로 사용할 공간이 충분해야 합니다. `tempdb`이 꽉 차면 업데이트 작업이 버전 생성을 중단하고 계속 진행되지만 필요한 특정 행 버전이 더 이상 존재하지 않으므로 읽기 작업이 실패할 수 있습니다. 이것은 트리거, MARS 및 온라인 인덱싱 등의 작업에 영향을 줍니다.  
+ 
+  `tempdb` 데이터베이스에는 버전 저장소로 사용할 공간이 충분해야 합니다. 
+  `tempdb`이 꽉 차면 업데이트 작업이 버전 생성을 중단하고 계속 진행되지만 필요한 특정 행 버전이 더 이상 존재하지 않으므로 읽기 작업이 실패할 수 있습니다. 이것은 트리거, MARS 및 온라인 인덱싱 등의 작업에 영향을 줍니다.  
   
  커밋된 읽기 및 스냅샷 트랜잭션에 행 버전 관리를 사용하는 과정은 다음 두 단계로 이루어집니다.  
   
@@ -1096,7 +1142,8 @@ BEGIN TRANSACTION
 > [!NOTE]  
 >  LOB(Large Object) 수정 내용의 경우 변경된 조각만 `tempdb`의 버전 저장소에 복사됩니다.  
   
- 행 버전은 행 버전 관리 기반 격리 수준으로 실행되는 트랜잭션의 요구 사항을 만족할 때까지 유지됩니다. [!INCLUDE[ssDE](../includes/ssde-md.md)]은 가장 오래된 유용한 트랜잭션 시퀀스 번호를 추적하여 해당 번호보다 낮은 트랜잭션 시퀀스 번호로 표시된 모든 행 버전을 주기적으로 삭제합니다.  
+ 행 버전은 행 버전 관리 기반 격리 수준으로 실행되는 트랜잭션의 요구 사항을 만족할 때까지 유지됩니다. 
+  [!INCLUDE[ssDE](../includes/ssde-md.md)]은 가장 오래된 유용한 트랜잭션 시퀀스 번호를 추적하여 해당 번호보다 낮은 트랜잭션 시퀀스 번호로 표시된 모든 행 버전을 주기적으로 삭제합니다.  
   
  두 가지 데이터베이스 옵션을 모두 OFF로 설정하면 트리거 또는 MARS 세션에 의해 수정되었거나 ONLINE 인덱스 작업에서 읽은 행에만 버전이 지정됩니다. 이러한 행 버전은 더 이상 필요하지 않을 경우 해제됩니다. 백그라운드 스레드가 주기적으로 실행되어 오래되어 필요 없는 행 버전을 제거합니다.  
   
@@ -1126,7 +1173,8 @@ BEGIN TRANSACTION
 
  행 버전 관리가 사용되는 커밋된 읽기 트랜잭션에서는 데이터 값을 읽을 때 데이터 행에 업데이트(U) 잠금이 적용되는 차단 검색을 사용하여 업데이트할 행을 선택합니다. 이것은 행 버전 관리를 사용하지 않는 커밋된 읽기 트랜잭션과 동일합니다. 데이터 행이 업데이트 조건에 맞지 않으면 해당 행의 업데이트 잠금이 해제되고 그 다음 행이 잠겨 검색됩니다.  
   
- 스냅샷 격리 수준으로 실행되는 트랜잭션은 제약 조건을 적용하기 위해 수정 내용을 수행하기 전에 데이터에 대한 잠금을 획득하는 낙관적 데이터 수정 방법을 사용합니다. 그렇지 않으면 데이터가 수정될 때까지 데이터에 대한 잠금도 획득되지 않습니다. 스냅샷 트랜잭션은 데이터 행이 업데이트 조건에 맞으면 이 스냅샷 트랜잭션이 시작된 후 커밋된 동시 트랜잭션에 의해 해당 데이터 행이 수정되지 않았는지 확인합니다. 스냅샷 트랜잭션이 아닌 다른 트랜잭션에 의해 데이터 행이 수정된 경우에는 업데이트 충돌이 발생하고 스냅샷 트랜잭션이 종료됩니다. [!INCLUDE[ssDE](../includes/ssde-md.md)]은 업데이트 충돌을 처리합니다. 업데이트 충돌 검색 기능은 해제할 수 없습니다.  
+ 스냅샷 격리 수준으로 실행되는 트랜잭션은 제약 조건을 적용하기 위해 수정 내용을 수행하기 전에 데이터에 대한 잠금을 획득하는 낙관적 데이터 수정 방법을 사용합니다. 그렇지 않으면 데이터가 수정될 때까지 데이터에 대한 잠금도 획득되지 않습니다. 스냅샷 트랜잭션은 데이터 행이 업데이트 조건에 맞으면 이 스냅샷 트랜잭션이 시작된 후 커밋된 동시 트랜잭션에 의해 해당 데이터 행이 수정되지 않았는지 확인합니다. 스냅샷 트랜잭션이 아닌 다른 트랜잭션에 의해 데이터 행이 수정된 경우에는 업데이트 충돌이 발생하고 스냅샷 트랜잭션이 종료됩니다. 
+  [!INCLUDE[ssDE](../includes/ssde-md.md)]은 업데이트 충돌을 처리합니다. 업데이트 충돌 검색 기능은 해제할 수 없습니다.  
   
 > [!NOTE]  
 >  내부적으로 스냅샷 격리 수준으로 실행되는 업데이트 작업은 스냅샷 트랜잭션이 다음 항목에 액세스할 때는 커밋된 읽기 격리 수준으로 실행됩니다.  
@@ -1220,17 +1268,20 @@ BEGIN TRANSACTION
   
  행 버전 관리 기능을 사용하는 경우에는 데이터베이스 행당 14바이트를 사용할 수 있도록 데이터베이스에 더 많은 디스크 공간을 할당해야 할 수 있습니다. 행 버전 관리 정보를 추가하면 인덱스 페이지가 분할되거나 현재 페이지에 사용 가능한 공간이 충분하지 않은 경우에는 새 데이터 페이지가 할당될 수 있습니다. 예를 들어 평균 행 길이가 100바이트인 경우 14바이트를 추가하면 기존 테이블이 최대 14% 증가할 수 있습니다.  
   
- [채우기 비율](../relational-databases/indexes/specify-fill-factor-for-an-index.md)을 낮추면 인덱스 페이지의 조각화를 방지하거나 줄일 수 있습니다. 데이터 및 테이블 또는 뷰의 인덱스에 대 한 조각화 정보를 보려면 사용할 수 있습니다 [DBCC SHOWCONTIG](/sql/t-sql/database-console-commands/dbcc-showcontig-transact-sql)합니다.  
+ 
+  [채우기 비율](../relational-databases/indexes/specify-fill-factor-for-an-index.md)을 낮추면 인덱스 페이지의 조각화를 방지하거나 줄일 수 있습니다. 테이블 또는 뷰의 데이터 및 인덱스에 대 한 조각화 정보를 보려면 [DBCC SHOWCONTIG](/sql/t-sql/database-console-commands/dbcc-showcontig-transact-sql)를 사용 하면 됩니다.  
   
 #### <a name="space-used-in-large-objects"></a>큰 개체의 공간 사용량  
 
- [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서는 최대 2GB의 큰 문자열을 저장할 수 있는 6개의 데이터 형식을 지원합니다. 6개의 데이터 형식은 `nvarchar(max)`, `varchar(max)`, `varbinary(max)`, `ntext`, `text` 및 `image`입니다. 이러한 데이터 형식을 사용하여 저장된 큰 문자열은 데이터 행에 연결된 일련의 데이터 조각에 저장됩니다. 행 버전 관리 정보는 큰 문자열이 저장된 각 조각에 저장됩니다. 데이터 조각은 테이블의 큰 개체에만 사용되는 페이지의 모음입니다.  
+ 
+  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서는 최대 2GB의 큰 문자열을 저장할 수 있는 6개의 데이터 형식을 지원합니다. 6개의 데이터 형식은 `nvarchar(max)`, `varchar(max)`, `varbinary(max)`, `ntext`, `text` 및 `image`입니다. 이러한 데이터 형식을 사용하여 저장된 큰 문자열은 데이터 행에 연결된 일련의 데이터 조각에 저장됩니다. 행 버전 관리 정보는 큰 문자열이 저장된 각 조각에 저장됩니다. 데이터 조각은 테이블의 큰 개체에만 사용되는 페이지의 모음입니다.  
   
  데이터베이스에 새로 큰 값이 추가될 때 조각당 최대 8040바이트의 데이터가 할당됩니다. 이전 버전의 [!INCLUDE[ssDE](../includes/ssde-md.md)]에서는 조각당 최대 8080바이트의 `ntext`, `text` 또는 `image` 데이터를 저장했습니다.  
   
- 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로 데이터베이스를 업그레이드한 경우에는 행 버전 관리 정보를 저장할 공간을 만들기 위해 기존 `ntext`, `text` 및 `image` LOB(Large Object) 데이터가 업데이트되지 않습니다. 그러나 LOB 데이터가 처음 수정될 때는 버전 관리 정보를 스토리지할 수 있도록 데이터가 동적으로 업그레이드됩니다. 이는 행 버전이 생성되지 않은 경우에도 마찬가지입니다. LOB 데이터가 업그레이드된 후에는 조각당 저장되는 최대 바이트 수가 8080바이트에서 8040바이트로 줄어듭니다. 업그레이드 프로세스에서는 LOB 값을 삭제하고 동일한 값을 다시 삽입합니다. 1바이트만 수정되더라도 LOB 데이터가 업그레이드됩니다. 이 작업은 각 `ntext`, `text` 또는 `image` 열에 대해 한 번 수행되지만 LOB 데이터의 크기에 따라 각 작업 수행 시 대량의 페이지 할당 및 I/O 작업이 발생할 수 있습니다. 수정 내용 전체가 로깅되는 경우에는 대량의 로깅 작업이 발생할 수도 있습니다. 데이터베이스 복구 모드를 FULL로 설정하지 않으면 WRITETEXT와 UPDATETEXT 작업에서 최소한의 정보만 로깅합니다.  
+ 이전 버전의 `ntext`에서 `text`로 데이터베이스를 업그레이드한 경우에는 행 버전 관리 정보를 저장할 공간을 만들기 위해 기존 `image`, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] LOB(Large Object) 데이터가 업데이트되지 않습니다. 그러나 LOB 데이터가 처음 수정될 때는 버전 관리 정보를 스토리지할 수 있도록 데이터가 동적으로 업그레이드됩니다. 이는 행 버전이 생성되지 않은 경우에도 마찬가지입니다. LOB 데이터가 업그레이드된 후에는 조각당 저장되는 최대 바이트 수가 8080바이트에서 8040바이트로 줄어듭니다. 업그레이드 프로세스에서는 LOB 값을 삭제하고 동일한 값을 다시 삽입합니다. 1바이트만 수정되더라도 LOB 데이터가 업그레이드됩니다. 이 작업은 각 `ntext`, `text` 또는 `image` 열에 대해 한 번 수행되지만 LOB 데이터의 크기에 따라 각 작업 수행 시 대량의 페이지 할당 및 I/O 작업이 발생할 수 있습니다. 수정 내용 전체가 로깅되는 경우에는 대량의 로깅 작업이 발생할 수도 있습니다. 데이터베이스 복구 모드를 FULL로 설정하지 않으면 WRITETEXT와 UPDATETEXT 작업에서 최소한의 정보만 로깅합니다.  
   
- `nvarchar(max)`, `varchar(max)` 및 `varbinary(max)` 데이터 형식은 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 사용할 수 없으므로 업그레이드 문제가 발생하지 않습니다.  
+ 
+  `nvarchar(max)`, `varchar(max)` 및 `varbinary(max)` 데이터 형식은 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 사용할 수 없으므로 업그레이드 문제가 발생하지 않습니다.  
   
  이 요구 사항을 충족하는 충분한 디스크 공간을 할당해야 합니다.  
   
@@ -1238,7 +1289,7 @@ BEGIN TRANSACTION
 
  행 버전 관리, 버전 저장소 및 스냅샷 격리 프로세스의 성능과 문제를 모니터링하기 위해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 DMV(동적 관리 뷰) 및 Windows 시스템 모니터의 성능 카운터 형태로 도구를 제공합니다.  
   
-##### <a name="dmvs"></a>DMV  
+##### <a name="dmvs"></a>Dmv  
 
  다음 DMV는 tempdb와 버전 저장소 및 행 버전 관리를 사용하는 트랜잭션의 현재 상태에 대한 정보를 제공합니다.  
   
@@ -1265,9 +1316,10 @@ BEGIN TRANSACTION
   
 ##### <a name="performance-counters"></a>성능 카운터  
 
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 성능 카운터는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로세스의 영향을 받는 시스템 성능에 대한 정보를 제공합니다. 다음 성능 카운터는 tempdb와 버전 저장소 및 행 버전 관리를 사용하는 트랜잭션을 모니터링합니다. 이러한 성능 카운터는 SQLServer:Transactions 성능 개체에 포함되어 있습니다.  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 성능 카운터는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로세스의 영향을 받는 시스템 성능에 대한 정보를 제공합니다. 다음 성능 카운터는 tempdb와 버전 저장소 및 행 버전 관리를 사용하는 트랜잭션을 모니터링합니다. 이러한 성능 카운터는 SQLServer:Transactions 성능 개체에 포함되어 있습니다.  
   
- **Free Space in tempdb (KB)** . tempdb 데이터베이스의 사용 가능한 공간(KB)을 모니터링합니다. tempdb에는 스냅샷 격리를 지원하는 버전 저장소를 처리하기에 충분한 공간이 있어야 합니다.  
+ **Tempdb의 사용 가능한 공간 (KB)** 입니다. tempdb 데이터베이스의 사용 가능한 공간(KB)을 모니터링합니다. tempdb에는 스냅샷 격리를 지원하는 버전 저장소를 처리하기에 충분한 공간이 있어야 합니다.  
   
  다음 공식을 사용하여 버전 저장소의 예상 크기를 대략적으로 계산할 수 있습니다. 장기 실행 트랜잭션의 경우 생성 및 정리 속도를 모니터링하여 버전 저장소의 예상 최대 크기를 결정하면 유용합니다.  
   
@@ -1275,32 +1327,33 @@ BEGIN TRANSACTION
   
  트랜잭션의 최장 실행 시간에는 온라인 인덱스 작성이 포함되지 않습니다. 큰 테이블의 경우 온라인 인덱스 작성 작업에 많은 시간이 소요되므로 이 작업은 별도의 버전 저장소를 사용합니다. 온라인 인덱스 작성 버전 저장소의 크기는 온라인 인덱스 작성을 수행하는 동안 모든 인덱스를 포함하여 테이블에서 수정된 전체 데이터 양과 거의 같습니다.  
   
- **Version Store Size (KB)** . 모든 버전 저장소의 크기(KB)를 모니터링합니다. 이 정보를 통해 tempdb 데이터베이스의 버전 저장소에 필요한 공간을 결정할 수 있습니다. 이 카운터를 지속적으로 모니터링하면 tempdb에 필요한 추가 공간을 예측할 수 있습니다.  
+ **버전 저장소 크기 (KB)** 입니다. 모든 버전 저장소의 크기(KB)를 모니터링합니다. 이 정보를 통해 tempdb 데이터베이스의 버전 저장소에 필요한 공간을 결정할 수 있습니다. 이 카운터를 지속적으로 모니터링하면 tempdb에 필요한 추가 공간을 예측할 수 있습니다.  
   
- `Version Generation rate (KB/s)` 을 참조하세요. 모든 버전 저장소의 버전 생성 속도(KB/초)를 모니터링합니다.  
+ `Version Generation rate (KB/s)`. 모든 버전 저장소의 버전 생성 속도(KB/초)를 모니터링합니다.  
   
- `Version Cleanup rate (KB/s)` 을 참조하세요. 모든 버전 저장소의 버전 정리 속도(KB/초)를 모니터링합니다.  
+ `Version Cleanup rate (KB/s)`. 모든 버전 저장소의 버전 정리 속도(KB/초)를 모니터링합니다.  
   
 > [!NOTE]  
 >  Version Generation rate (KB/s) 및 Version Cleanup rate (KB/s)에서 제공하는 정보를 통해 tempdb에 필요한 공간을 예측할 수 있습니다.  
   
- **Version Store unit count**. 버전 저장소 단위 수를 모니터링합니다.  
+ **버전 저장소 단위 개수**입니다. 버전 저장소 단위 수를 모니터링합니다.  
   
- **Version Store unit creation**. 인스턴스가 시작된 이후 행 버전을 저장하기 위해 생성된 버전 저장소 단위의 총 수를 모니터링합니다.  
+ **버전 저장소 장치를 만듭니다**. 인스턴스가 시작된 이후 행 버전을 저장하기 위해 생성된 버전 저장소 단위의 총 수를 모니터링합니다.  
   
- **Version Store unit truncation**. 인스턴스가 시작된 이후 잘린 버전 저장소 단위의 총 수를 모니터링합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 버전 저장소 단위에 저장된 버전 행이 활성 트랜잭션을 실행하는 데 불필요하다고 결정하면 버전 저장소 단위가 잘립니다.  
+ **버전 저장소 단위가 잘렸습니다**. 인스턴스가 시작된 이후 잘린 버전 저장소 단위의 총 수를 모니터링합니다. 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 버전 저장소 단위에 저장된 버전 행이 활성 트랜잭션을 실행하는 데 불필요하다고 결정하면 버전 저장소 단위가 잘립니다.  
   
- **Update conflict ratio**. 총 업데이트 스냅샷 트랜잭션 중 업데이트 충돌이 있는 업데이트 스냅샷 트랜잭션의 비율을 모니터링합니다.  
+ **업데이트 충돌 비율**입니다. 총 업데이트 스냅샷 트랜잭션 중 업데이트 충돌이 있는 업데이트 스냅샷 트랜잭션의 비율을 모니터링합니다.  
   
- **Longest Transaction Running Time**. 행 버전 관리를 사용하는 트랜잭션의 가장 긴 실행 시간(초)을 모니터링합니다. 이 정보를 사용하면 특별한 이유 없이 오래 실행되는 트랜잭션이 있는지를 확인할 수 있습니다.  
+ **가장 긴 트랜잭션 실행 시간**입니다. 행 버전 관리를 사용하는 트랜잭션의 가장 긴 실행 시간(초)을 모니터링합니다. 이 정보를 사용하면 특별한 이유 없이 오래 실행되는 트랜잭션이 있는지를 확인할 수 있습니다.  
   
  **트랜잭션**. 활성 트랜잭션의 총 수를 모니터링합니다. 시스템 트랜잭션은 포함되지 않습니다.  
   
- `Snapshot Transactions` 을 참조하세요. 활성 스냅샷 트랜잭션의 총 수를 모니터링합니다.  
+ `Snapshot Transactions`. 활성 스냅샷 트랜잭션의 총 수를 모니터링합니다.  
   
- `Update Snapshot Transactions` 을 참조하세요. 업데이트 작업을 수행하는 활성 스냅샷 트랜잭션의 총 수를 모니터링합니다.  
+ `Update Snapshot Transactions`. 업데이트 작업을 수행하는 활성 스냅샷 트랜잭션의 총 수를 모니터링합니다.  
   
- `NonSnapshot Version Transactions` 을 참조하세요. 버전 레코드를 생성하는 활성 비스냅샷 트랜잭션의 총 수를 모니터링합니다.  
+ `NonSnapshot Version Transactions`. 버전 레코드를 생성하는 활성 비스냅샷 트랜잭션의 총 수를 모니터링합니다.  
   
 > [!NOTE]  
 >  Update Snapshot Transactions와 NonSnapshot Version Transactions의 합은 버전 생성에 참여하는 트랜잭션의 총 수를 나타냅니다. Snapshot Transactions와 Update Snapshot Transactions 값의 차이를 보고 읽기 전용 스냅샷 트랜잭션의 수를 알 수 있습니다.  
@@ -1309,7 +1362,7 @@ BEGIN TRANSACTION
 
  다음 예에서는 스냅샷 격리 트랜잭션과 행 버전 관리를 사용하는 커밋된 읽기 트랜잭션 동작의 차이를 보여 줍니다.  
   
-#### <a name="a-working-with-snapshot-isolation"></a>1\. 스냅샷 격리 작업  
+#### <a name="a-working-with-snapshot-isolation"></a>A. 스냅샷 격리 작업  
 
  이 예에서는 스냅샷 격리에서 실행되는 트랜잭션이 다른 트랜잭션에서 수정한 데이터를 읽습니다. 스냅샷 트랜잭션은 다른 트랜잭션에서 실행하는 업데이트 작업을 차단하지 않으며 데이터 수정을 무시하고 계속 버전이 지정된 행에서 데이터를 읽습니다. 그러나 스냅샷 트랜잭션이 다른 트랜잭션에서 이미 수정한 데이터를 수정할 경우 스냅샷 트랜잭션은 오류를 생성하고 종료됩니다.  
   
@@ -1406,7 +1459,7 @@ ROLLBACK TRANSACTION
 GO  
 ```  
   
-#### <a name="b-working-with-read-committed-using-row-versioning"></a>2\. 행 버전 관리를 사용한 커밋된 읽기 작업  
+#### <a name="b-working-with-read-committed-using-row-versioning"></a>B. 행 버전 관리를 사용한 커밋된 읽기 작업  
 
  이 예에서 행 버전 관리를 사용하는 커밋된 읽기 트랜잭션은 다른 트랜잭션과 동시에 실행됩니다. 커밋된 읽기 트랜잭션은 스냅샷 트랜잭션과 다르게 동작합니다. 스냅샷 트랜잭션과 마찬가지로 커밋된 읽기 트랜잭션도 다른 트랜잭션이 데이터를 수정한 이후에 버전이 지정된 행을 읽습니다. 그러나 커밋된 읽기 트랜잭션은 스냅샷 트랜잭션과 달리 다음 작업을 수행합니다.  
   
@@ -1539,7 +1592,7 @@ ALTER DATABASE AdventureWorks2012
 |----------------------------------------------------------------|-----------------|  
 |OFF|스냅샷 격리 트랜잭션에 대한 지원이 활성화되지 않았습니다. 스냅샷 격리 트랜잭션이 허용되지 않습니다.|  
 |PENDING_ON|스냅샷 격리 트랜잭션에 대한 지원이 OFF에서 ON으로 전환되는 중입니다. 열린 트랜잭션을 완료해야 합니다.<br /><br /> 스냅샷 격리 트랜잭션이 허용되지 않습니다.|  
-|ON|스냅샷 격리 트랜잭션에 대한 지원이 활성화되었습니다.<br /><br /> 스냅샷 트랜잭션이 허용됩니다.|  
+|켜기|스냅샷 격리 트랜잭션에 대한 지원이 활성화되었습니다.<br /><br /> 스냅샷 트랜잭션이 허용됩니다.|  
 |PENDING_OFF|스냅샷 격리 트랜잭션에 대한 지원이 ON에서 OFF로 전환되는 중입니다.<br /><br /> 이 시점 이후에 시작된 스냅샷 트랜잭션은 이 데이터베이스에 액세스할 수 없습니다. 업데이트 트랜잭션은 이 데이터베이스에서 계속해서 버전 관리를 수행합니다. 기존 스냅샷 트랜잭션은 문제 없이 이 데이터베이스에 액세스할 수 있습니다. 데이터베이스 스냅샷 격리 상태가 ON이었을 때 활성화되어 있던 스냅샷 트랜잭션이 모두 완료되어야 PENDING_OFF 상태가 OFF로 변경됩니다.|  
   
  두 행 버전 관리 데이터베이스 옵션의 상태를 확인하려면 sys.databases 카탈로그 뷰를 사용합니다.  
@@ -1615,7 +1668,8 @@ ALTER DATABASE AdventureWorks2012
   
 -   분산 분할된 데이터베이스의 쿼리를 포함하여 분산 트랜잭션은 스냅샷 격리로 지원되지 않습니다.  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 여러 버전의 시스템 메타데이터를 보관하지 않습니다. 테이블의 DDL(데이터 정의 언어) 문이나 기타 데이터베이스 개체(인덱스, 뷰, 데이터 형식, 저장 프로시저 및 공용 언어 런타임 함수)는 메타데이터를 변경합니다. DDL 문이 개체를 수정하면 스냅샷 격리의 개체에 대한 동시 참조로 인해 스냅샷 트랜잭션이 실패합니다. READ_COMMITTED_SNAPSHOT 데이터베이스 옵션이 ON이면 커밋된 읽기 트랜잭션에 이러한 제한 사항이 없습니다.  
+-   
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 여러 버전의 시스템 메타데이터를 보관하지 않습니다. 테이블의 DDL(데이터 정의 언어) 문이나 기타 데이터베이스 개체(인덱스, 뷰, 데이터 형식, 저장 프로시저 및 공용 언어 런타임 함수)는 메타데이터를 변경합니다. DDL 문이 개체를 수정하면 스냅샷 격리의 개체에 대한 동시 참조로 인해 스냅샷 트랜잭션이 실패합니다. READ_COMMITTED_SNAPSHOT 데이터베이스 옵션이 ON이면 커밋된 읽기 트랜잭션에 이러한 제한 사항이 없습니다.  
   
      예를 들어 데이터베이스 관리자가 다음 `ALTER INDEX` 문을 실행합니다.  
   
@@ -1627,27 +1681,29 @@ ALTER DATABASE AdventureWorks2012
     GO  
     ```  
   
-     `ALTER INDEX` 문이 실행된 후 `HumanResources.Employee` 테이블을 참조하려고 하면 `ALTER INDEX` 문 실행 시 활성 상태인 모든 스냅숏 트랜잭션에 오류가 발생합니다. 행 버전 관리를 사용하는 커밋된 읽기 트랜잭션은 영향을 받지 않습니다.  
+     
+  `ALTER INDEX` 문이 실행된 후 `HumanResources.Employee` 테이블을 참조하려고 하면 `ALTER INDEX` 문 실행 시 활성 상태인 모든 스냅샷 트랜잭션에 오류가 발생합니다. 행 버전 관리를 사용하는 커밋된 읽기 트랜잭션은 영향을 받지 않습니다.  
   
     > [!NOTE]  
     >  BULK INSERT 작업을 수행할 때 대상 테이블 메타데이터가 변경될 수 있습니다. 제약 조건 검사를 해제한 경우를 예로 들 수 있습니다. 이렇게 대상 테이블 메타데이터가 변경되면 동시 스냅샷 격리 트랜잭션이 대량 삽입된 테이블에 액세스할 수 없습니다.  
   
- ![맨 위 링크와 함께 사용 되는 화살표 아이콘](media/uparrow16x16.gif "맨 위 링크와 함께 사용 되는 화살표 아이콘") [이 가이드의](#Top)  
+ [이 가이드의](#Top) ![맨 위 링크와 함께 사용 되는 화살표 아이콘](media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘")  
   
 ## <a name="customizing-locking-and-row-versioning"></a>잠금 및 행 버전 관리 사용자 지정  
   
 ### <a name="customizing-the-lock-time-out"></a>잠금 제한 시간 사용자 지정  
 
- 다른 트랜잭션에서 이미 리소스에 대해 충돌되는 잠금을 소유하고 있어 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]의 인스턴스에서 트랜잭션에 잠금을 허가할 수 없는 경우 이 트랜잭션은 기존 잠금이 해제되기를 기다리면서 차단됩니다. 기본적으로 정해진 제한 시간은 없으며 리소스를 잠그기 전에 해당 리소스가 잠겨 있는지 여부를 확인할 수 없습니다. 단, 데이터에 대한 액세스를 시도할 수는 있으나 이로 인해 무기한으로 차단될 수 있습니다.  
+ 다른 트랜잭션이 이미 리소스에 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 대해 충돌 하는 잠금을 소유 하 고 있으므로의 인스턴스에서 트랜잭션에 잠금을 허가할 수 없는 경우 기존 잠금이 해제 될 때까지 첫 번째 트랜잭션이 차단 됩니다. 기본적으로 정해진 제한 시간은 없으며 리소스를 잠그기 전에 해당 리소스가 잠겨 있는지 여부를 확인할 수 없습니다. 단, 데이터에 대한 액세스를 시도할 수는 있으나 이로 인해 무기한으로 차단될 수 있습니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 **sys.dm_os_waiting_tasks** 동적 관리 뷰를 사용하여 프로세스가 차단되었는지 여부와 프로세스를 차단하고 있는 주체를 확인할 수 있습니다. 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 **sp_who** 시스템 저장 프로시저를 사용합니다.  
+>  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 **sys.dm_os_waiting_tasks** 동적 관리 뷰를 사용하여 프로세스가 차단되었는지 여부와 프로세스를 차단하고 있는 주체를 확인할 수 있습니다. 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 **sp_who** 시스템 저장 프로시저를 사용합니다.  
   
  LOCK_TIMEOUT 설정을 사용하여 문이 차단된 리소스를 기다리는 최대 시간을 설정할 수 있습니다. 문이 LOCK_TIMEOUT 설정보다 오래 기다린 경우 차단된 문은 자동으로 취소되고 오류 메시지 1222(`Lock request time-out period exceeded`)가 애플리케이션으로 반환됩니다. 그러나 문을 포함하는 트랜잭션은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 롤백되거나 취소되지 않습니다. 따라서 애플리케이션에는 오류 메시지 1222를 트래핑할 수 있는 오류 처리기가 있어야 합니다. 애플리케이션에서 오류를 트래핑하지 않으면 트랜잭션 내의 각 문이 취소된 것을 모르고 애플리케이션이 계속 진행하여 나중에 트랜잭션의 문이 실행되지 않은 문을 참조할 경우 오류가 발생할 수 있습니다.  
   
  오류 메시지 1222를 트래핑하는 오류 처리기를 구현하면 애플리케이션에서 시간 초과 상황을 처리하고 차단된 문을 자동으로 다시 전송하거나 전체 트랜잭션을 롤백하는 등의 해결 동작을 취할 수 있습니다.  
   
- 현재 LOCK_TIMEOUT 설정을 확인 하려면 실행을 @@LOCK_TIMEOUT 함수:  
+ 현재 LOCK_TIMEOUT 설정을 확인 하려면 @@LOCK_TIMEOUT 함수를 실행 합니다.  
   
 ```  
 SELECT @@lock_timeout;  
@@ -1656,9 +1712,10 @@ GO
   
 ### <a name="customizing-transaction-isolation-level"></a>트랜잭션 격리 수준 사용자 지정  
 
- READ COMMITTED는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]의 기본 격리 수준입니다. 애플리케이션을 다른 격리 수준에서 실행해야 하는 경우 다음과 같은 방법으로 격리 수준을 설정할 수 있습니다.  
+ READ COMMITTED는의 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]기본 격리 수준입니다. 애플리케이션을 다른 격리 수준에서 실행해야 하는 경우 다음과 같은 방법으로 격리 수준을 설정할 수 있습니다.  
   
--   [SET TRANSACTION ISOLATION LEVEL](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql) 문을 실행합니다.  
+-   
+  [SET TRANSACTION ISOLATION LEVEL](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql) 문을 실행합니다.  
   
 -   System.Data.SqlClient 관리 네임스페이스를 사용하는 ADO.NET 애플리케이션에서는 SqlConnection.BeginTransaction 메서드를 사용하여 *IsolationLevel* 옵션을 지정할 수 있습니다.  
   
@@ -1731,7 +1788,8 @@ GO
  특정 잠금 힌트와 해당 동작에 대한 자세한 내용은 [Table Hints&#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)를 참조하십시오.  
   
 > [!NOTE]  
->  [!INCLUDE[ssDE](../includes/ssde-md.md)] 쿼리 최적화 프로그램에서는 거의 대부분 올바른 잠금 수준을 선택합니다. 필요할 때만 테이블 수준의 잠금 힌트를 사용하여 기본 잠금 동작을 변경하는 것이 좋습니다. 잠금 수준의 허용을 취소하면 동시성에 영향을 줄 수 있습니다.  
+>  
+  [!INCLUDE[ssDE](../includes/ssde-md.md)] 쿼리 최적화 프로그램에서는 거의 대부분 올바른 잠금 수준을 선택합니다. 필요할 때만 테이블 수준의 잠금 힌트를 사용하여 기본 잠금 동작을 변경하는 것이 좋습니다. 잠금 수준의 허용을 취소하면 동시성에 영향을 줄 수 있습니다.  
   
  데이터를 읽을 때 공유 잠금 요청을 막는 잠금 힌트를 사용하여 SELECT를 처리하는 경우에도 메타데이터를 읽을 때 [!INCLUDE[ssDE](../includes/ssde-md.md)]에서 잠금을 획득해야 할 수 있습니다. 예를 들어 NOLOCK 힌트를 사용하는 SELECT는 데이터를 읽을 때 공유 잠금을 획득하지 않지만 시스템 카탈로그 뷰를 읽을 때는 경우에 따라 잠금을 요청할 수 있습니다. 즉, NOLOCK을 사용하는 SELECT 문을 차단할 수 있습니다.  
   
@@ -1762,13 +1820,16 @@ ROLLBACK;
 GO  
 ```  
   
- `HumanResources.Employee`를 참조하는 유일한 잠금은 스키마 안정성(Sch-S) 잠금입니다. 이 경우 순차성은 더 이상 보장되지 않습니다.  
+ 
+  `HumanResources.Employee`를 참조하는 유일한 잠금은 스키마 안정성(Sch-S) 잠금입니다. 이 경우 순차성은 더 이상 보장되지 않습니다.  
   
- [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에서는 ALTER TABLE의 LOCK_ESCALATION 옵션에서 테이블 잠금을 선호하지 않을 수 있으며 분할된 테이블에 HoBT 잠금을 설정할 수 있습니다. 이 옵션은 잠금 힌트가 아니지만 잠금 에스컬레이션을 줄이는 데 사용할 수 있습니다. 자세한 내용은 [ALTER TABLE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)을 참조하세요.  
+ 
+  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에서는 ALTER TABLE의 LOCK_ESCALATION 옵션에서 테이블 잠금을 선호하지 않을 수 있으며 분할된 테이블에 HoBT 잠금을 설정할 수 있습니다. 이 옵션은 잠금 힌트가 아니지만 잠금 에스컬레이션을 줄이는 데 사용할 수 있습니다. 자세한 내용은 [ALTER TABLE &#40;transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)을 참조 하세요.  
   
-###  <a name="Customize"></a> 인덱스 잠금 사용자 지정  
+###  <a name="Customize"></a>인덱스에 대 한 잠금 사용자 지정  
 
- [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 대부분의 경우 쿼리에 가장 적합한 잠금 세분성을 자동으로 선택하는 동적 잠금 전략을 사용합니다. 페이지 잠금 및 행 잠금이 설정되어 있는 기본 잠금 수준은 잘 알려져 있으며 일관적인 테이블 또는 인덱스 액세스 패턴이 아닌 경우 및 리소스 충돌 문제를 해결해야 하는 경우 재정의하지 않는 것이 좋습니다. 잠금 수준을 재정의하면 테이블 또는 인덱스에 대한 동시 액세스에 심각한 방해가 될 수 있습니다. 예를 들어 사용자의 액세스가 빈번한 대규모 테이블에 테이블 수준 잠금만을 지정하는 경우, 사용자가 테이블에 액세스하려면 테이블 수준 잠금이 해제될 때까지 기다려야 하므로 병목 현상이 발생할 수 있습니다.  
+ 
+  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 대부분의 경우 쿼리에 가장 적합한 잠금 세분성을 자동으로 선택하는 동적 잠금 전략을 사용합니다. 페이지 잠금 및 행 잠금이 설정되어 있는 기본 잠금 수준은 잘 알려져 있으며 일관적인 테이블 또는 인덱스 액세스 패턴이 아닌 경우 및 리소스 충돌 문제를 해결해야 하는 경우 재정의하지 않는 것이 좋습니다. 잠금 수준을 재정의하면 테이블 또는 인덱스에 대한 동시 액세스에 심각한 방해가 될 수 있습니다. 예를 들어 사용자의 액세스가 빈번한 대규모 테이블에 테이블 수준 잠금만을 지정하는 경우, 사용자가 테이블에 액세스하려면 테이블 수준 잠금이 해제될 때까지 기다려야 하므로 병목 현상이 발생할 수 있습니다.  
   
  잘 알려져 있으며 일관된 액세스 패턴의 경우 페이지 잠금 또는 행 잠금을 허용하지 않는 것이 좋은 경우가 있습니다. 예를 들어 데이터베이스 애플리케이션에서 일괄 처리를 통해 매주 업데이트되는 조회 테이블을 사용하는 경우를 가정합니다. 동시 판독기는 공유(S) 잠금으로 테이블에 액세스하고, 주간 일괄 업데이트는 배타적(X) 잠금으로 테이블에 액세스합니다. 테이블에서 페이지 및 행 잠금을 해제하면 판독기가 공유 테이블 잠금을 통해 동시에 테이블에 액세스할 수 있어 주중 잠금 오버헤드가 줄어듭니다. 일괄 작업을 실행하면 배타적 테이블 잠금을 얻어 업데이트를 효율적으로 완료할 수 있습니다.  
   
@@ -1776,7 +1837,7 @@ GO
   
  2건의 동시 작업에서 모두 페이지 잠금이 필요하여 동일 테이블에서 행 잠금을 구한 다음 차단함에 따라 교착 상태가 발생하는 경우가 있습니다. 행 잠금을 허용하지 않으면 두 작업 중 하나를 대기시켜 교착 상태를 방지합니다.  
   
- 인덱스에 사용되는 잠금의 세분성은 CREATE INDEX 및 ALTER INDEX 문을 사용하여 설정할 수 있습니다. 잠금 설정은 인덱스 페이지와 테이블 페이지에 모두 적용됩니다. 또한 CREATE TABLE 및 ALTER TABLE 문을 사용하여 PRIMARY KEY 및 UNIQUE 제약 조건에 대한 잠금 세분성을 설정할 수도 있습니다. 에 대 한 이전 버전과 호환성을 위해 합니다 **sp_indexoption** 시스템 저장 프로시저 에서도 세분성을 설정할 수 있습니다. 특정 인덱스에 대한 현재 잠금 옵션을 표시하려면 INDEXPROPERTY 함수를 사용합니다. 페이지 수준 잠금, 행 수준 잠금 또는 페이지 수준 및 행 수준 잠금의 혼합 방법은 인덱스에 따라 허용되지 않을 수 있습니다.  
+ 인덱스에 사용되는 잠금의 세분성은 CREATE INDEX 및 ALTER INDEX 문을 사용하여 설정할 수 있습니다. 잠금 설정은 인덱스 페이지와 테이블 페이지에 모두 적용됩니다. 또한 CREATE TABLE 및 ALTER TABLE 문을 사용하여 PRIMARY KEY 및 UNIQUE 제약 조건에 대한 잠금 세분성을 설정할 수도 있습니다. 이전 버전과의 호환성을 위해 **sp_indexoption** 시스템 저장 프로시저 에서도 세분성을 설정할 수 있습니다. 특정 인덱스에 대한 현재 잠금 옵션을 표시하려면 INDEXPROPERTY 함수를 사용합니다. 페이지 수준 잠금, 행 수준 잠금 또는 페이지 수준 및 행 수준 잠금의 혼합 방법은 인덱스에 따라 허용되지 않을 수 있습니다.  
   
 |허용되지 않는 잠금|허용되는 잠금|  
 |----------------------|-----------------------|  
@@ -1784,15 +1845,16 @@ GO
 |행 수준|페이지 수준 및 테이블 수준 잠금|  
 |페이지 수준 및 행 수준|테이블 수준 잠금|  
   
- ![맨 위 링크와 함께 사용 되는 화살표 아이콘](media/uparrow16x16.gif "맨 위 링크와 함께 사용 되는 화살표 아이콘") [이 가이드의](#Top)  
+ [이 가이드의](#Top) ![맨 위 링크와 함께 사용 되는 화살표 아이콘](media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘")  
   
-##  <a name="Advanced"></a> 고급 트랜잭션 정보  
+##  <a name="Advanced"></a>고급 트랜잭션 정보  
   
 ### <a name="nesting-transactions"></a>중첩 트랜잭션  
 
  명시적 트랜잭션은 중첩할 수 있습니다. 중첩 트랜잭션은 주로 트랜잭션의 기존 프로세스나 활성 트랜잭션이 없는 프로세스에서 호출할 수 있는 저장 프로시저의 트랜잭션을 지원하기 위한 것입니다.  
   
- 다음 예에서는 중첩된 트랜잭션의 용도를 보여 줍니다. `TransProc` 프로시저는 프로시저를 실행하는 프로세스의 트랜잭션 모드에 관계없이 트랜잭션을 강제 실행합니다. 트랜잭션이 활성 중일 때 `TransProc`를 호출하면 `TransProc`에서 중첩된 트랜잭션이 대부분 무시되고 바깥쪽 트랜잭션에서 수행된 최종 동작을 기준으로 INSERT 문이 커밋 또는 롤백됩니다. 처리 중인 트랜잭션이 없는 프로세스에서 `TransProc`를 실행하면 실제로 프로시저 마지막에서 COMMIT TRANSACTION이 INSERT 문이 커밋됩니다.  
+ 다음 예에서는 중첩된 트랜잭션의 용도를 보여 줍니다. 
+  `TransProc` 프로시저는 프로시저를 실행하는 프로세스의 트랜잭션 모드에 관계없이 트랜잭션을 강제 실행합니다. 트랜잭션이 활성 중일 때 `TransProc`를 호출하면 `TransProc`에서 중첩된 트랜잭션이 대부분 무시되고 바깥쪽 트랜잭션에서 수행된 최종 동작을 기준으로 INSERT 문이 커밋 또는 롤백됩니다. 처리 중인 트랜잭션이 없는 프로세스에서 `TransProc`를 실행하면 실제로 프로시저 마지막에서 COMMIT TRANSACTION이 INSERT 문이 커밋됩니다.  
   
 ```  
 SET QUOTED_IDENTIFIER OFF;  
@@ -1829,20 +1891,20 @@ GO
   
  안쪽 트랜잭션 커밋은 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서 무시합니다. 트랜잭션은 가장 바깥쪽 트랜잭션 마지막에 수행된 동작을 기준으로 커밋 또는 롤백됩니다. 바깥쪽 트랜잭션이 커밋되면 안쪽 중첩 트랜잭션도 커밋됩니다. 바깥쪽 트랜잭션이 롤백되면 안쪽 트랜잭션이 개별적으로 커밋되었는지에 관계없이 모든 안쪽 트랜잭션이 롤백됩니다.  
   
- COMMIT TRANSACTION 또는 COMMIT WORK에 대한 각 호출은 마지막으로 실행한 BEGIN TRANSACTION에 적용됩니다. BEGIN TRANSACTION 문을 중첩하면 COMMIT 문이 마지막으로 중첩된 트랜잭션, 즉 가장 안쪽의 트랜잭션에만 적용됩니다. COMMIT TRANSACTION 경우에 *transaction_name* 중첩된 된 트랜잭션 내의 문이 바깥쪽 트랜잭션의 트랜잭션 이름을 참조, 커밋은 가장 안쪽의 트랜잭션에만 적용 됩니다.  
+ COMMIT TRANSACTION 또는 COMMIT WORK에 대한 각 호출은 마지막으로 실행한 BEGIN TRANSACTION에 적용됩니다. BEGIN TRANSACTION 문을 중첩하면 COMMIT 문이 마지막으로 중첩된 트랜잭션, 즉 가장 안쪽의 트랜잭션에만 적용됩니다. 중첩 된 트랜잭션 내의 COMMIT TRANSACTION *transaction_name* 문이 외부 트랜잭션의 트랜잭션 이름을 참조 하는 경우에도 커밋은 가장 안쪽의 트랜잭션에만 적용 됩니다.  
   
- 에 대 한 올바르지 합니다 *transaction_name* 명명 된 중첩된 트랜잭션 집합의 안쪽 트랜잭션을 참조할 ROLLBACK TRANSACTION 문의 매개 변수입니다. *transaction_name*은 가장 바깥쪽 트랜잭션의 트랜잭션 이름만 참조할 수 있습니다. 바깥쪽 트랜잭션의 이름을 사용하는 ROLLBACK TRANSACTION *transaction_name* 문이 중첩 트랜잭션 집합의 특정 수준에서 실행되면 중첩된 트랜잭션이 모두 롤백됩니다. 경우 ROLLBACK WORK 또는 ROLLBACK TRANSACTION 문을 없이 *transaction_name* 매개 변수는 중첩 된 트랜잭션 집합의 모든 수준에서 실행 되 고, 롤백됩니다 모든 중첩된 트랜잭션을 가장 바깥쪽 트랜잭션을 포함 합니다.  
+ ROLLBACK TRANSACTION 문의 *transaction_name* 매개 변수는 명명 된 중첩 트랜잭션 집합의 내부 트랜잭션을 참조할 수 없습니다. *transaction_name* 은 가장 바깥쪽 트랜잭션의 트랜잭션 이름만 참조할 수 있습니다. 바깥쪽 트랜잭션의 이름을 사용하는 ROLLBACK TRANSACTION *transaction_name* 문이 중첩 트랜잭션 집합의 특정 수준에서 실행되면 중첩된 트랜잭션이 모두 롤백됩니다. *Transaction_name* 매개 변수 없이 rollback WORK 또는 rollback transaction 문이 중첩 된 트랜잭션 집합의 모든 수준에서 실행 되는 경우 가장 바깥쪽 트랜잭션을 포함 하 여 중첩 된 모든 트랜잭션을 롤백합니다.  
   
- @@TRANCOUNT 함수는 현재 트랜잭션 중첩 수준을 기록 합니다. 각 BEGIN TRANSACTION 문은 증가@TRANCOUNT 1만 합니다. 각 COMMIT TRANSACTION 또는 COMMIT WORK 문 감소 @@TRANCOUNT 1만 합니다. ROLLBACK WORK 또는 트랜잭션 이름이 없는 ROLLBACK TRANSACTION 문을 롤백합니다 모든 중첩된 트랜잭션을 롤백하고 @@TRANCOUNT 0입니다. 중첩된 트랜잭션 집합에서 가장 바깥쪽 트랜잭션의 트랜잭션 이름을 사용 하는 ROLLBACK TRANSACTION은 롤업 모든는 중첩된 트랜잭션을 롤백하고 @@TRANCOUNT 0입니다. 트랜잭션 안에 있는지 없는 경우, @ 선택@TRANCOUNT 1 이상 인지 확인 하려면. @ If@TRANCOUNT 가 0 이면 트랜잭션에 없는 합니다.  
+ @@TRANCOUNT 함수는 현재 트랜잭션 중첩 수준을 기록 합니다. 각 BEGIN TRANSACTION 문은 @@TRANCOUNT 을 1 씩 증가 시킵니다. 각 COMMIT TRANSACTION 또는 COMMIT WORK 문은 @@TRANCOUNT 를 1 씩 감소 시킵니다. 트랜잭션 이름이 없는 ROLLBACK WORK 또는 ROLLBACK TRANSACTION 문은 모든 중첩 트랜잭션을 롤백하고 @@TRANCOUNT 를 0으로 감소 시킵니다. 중첩 된 트랜잭션 집합에서 가장 바깥쪽 트랜잭션의 트랜잭션 이름을 사용 하는 ROLLBACK 트랜잭션은 중첩 된 모든 트랜잭션을 롤백하고 @@TRANCOUNT 을 0으로 줄입니다. 트랜잭션에 이미 있는지 확실 하지 않은 경우 @@TRANCOUNT 를 선택 하 여 1 이상 인지 확인 합니다. @@TRANCOUNT 가 0 이면 트랜잭션에 있지 않습니다.  
   
 ### <a name="using-bound-sessions"></a>바운드 세션 사용  
 
  바운드 세션을 통해 같은 서버의 여러 세션 간에 동작을 편리하게 조정할 수 있습니다. 바운드 세션을 사용하면 두 개 이상의 세션에서 같은 트랜잭션과 잠금을 공유할 수 있으며 여러 바운드 세션이 잠금 충돌 없이 같은 데이터 작업을 수행할 수 있습니다. 바운드 세션은 같은 애플리케이션 내의 여러 세션에서 생성되거나 개별 세션의 여러 애플리케이션에서 생성될 수 있습니다.  
   
- 세션을 호출 하면 바인딩된 세션이 바인딩, 참여 **sp_getbindtoken** 또는 **srv_getbindtoken** (통해 개방형 Data Services)에 바인드 토큰을 가져와야 합니다. 바인드 토큰은 각 바운드 트랜잭션을 고유하게 식별하는 문자열입니다. 가져온 바인드 토큰은 현재 세션과 바인딩할 다른 세션으로 전송됩니다. 다른 세션은 첫 번째 세션으로부터 받은 바인드 토큰으로 **sp_bindsession**을 호출하여 트랜잭션에 바인딩합니다.  
+ 바운드 세션에 참여하려면 세션에서 개방형 Data Services를 통한 **srv_getbindtoken**이나 **sp_getbindtoken**을 호출하여 바인드 토큰을 가져와야 합니다. 바인드 토큰은 각 바운드 트랜잭션을 고유하게 식별하는 문자열입니다. 가져온 바인드 토큰은 현재 세션과 바인딩할 다른 세션으로 전송됩니다. 다른 세션은 첫 번째 세션으로부터 받은 바인드 토큰으로 **sp_bindsession**을 호출하여 트랜잭션에 바인딩합니다.  
   
 > [!NOTE]  
->  세션에서에서 활성 사용자 트랜잭션이 있어야 **sp_getbindtoken** 또는 **srv_getbindtoken** 성공 합니다.  
+>  **Sp_getbindtoken** 또는 **srv_getbindtoken** 성공 하려면 세션에 활성 사용자 트랜잭션이 있어야 합니다.  
   
  애플리케이션 코드에 대한 첫 번째 세션을 만들고 애플리케이션 코드의 세션을 첫 번째 세션에 바인딩하는 애플리케이션 코드에서 바인드 토큰을 전송해야 합니다. 애플리케이션이 다른 프로세스에서 시작한 트랜잭션에 대한 바인드 토큰을 얻을 수 있는 [!INCLUDE[tsql](../includes/tsql-md.md)] 문이나 API 함수는 없습니다. 다음과 같은 방법으로 바인드 토큰을 전송할 수 있습니다.  
   
@@ -1874,13 +1936,16 @@ GO
 
  이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 바운드 세션은 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 호출하는 프로세스를 대신하여 이 문을 실행해야 하는 확장 저장 프로시저를 개발하는 데 주로 사용되었습니다. 호출 프로세스에서 바인드 토큰을 확장 저장 프로시저의 한 매개 변수로 전달하도록 설정하면 프로시저가 호출 프로세스의 트랜잭션 공간에 참여하여 호출 프로시저와 확장 저장 프로시저가 통합됩니다.  
   
- [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서는 저장 프로시저를 CLR로 작성하여 확장 저장 프로시저보다 뛰어난 안전성, 확장성 및 안정성을 제공합니다. CLR 저장 프로시저를 사용 합니다 **SqlContext** 아닌 호출 세션의 컨텍스트에 참여 하는 개체 **sp_bindsession**합니다.  
+ 
+  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서는 저장 프로시저를 CLR로 작성하여 확장 저장 프로시저보다 뛰어난 안전성, 확장성 및 안정성을 제공합니다. CLR 저장 프로시저는 **Sqlcontext** 개체를 사용 하 여 **sp_bindsession**이 아닌 호출 세션의 컨텍스트에 참여 합니다.  
   
  바운드 세션을 사용하여 단일 업무 트랜잭션에서 함께 작업하는 여러 개별 프로그램에 비즈니스 논리가 통합되는 3계층 애플리케이션을 개발할 수 있습니다. 이러한 프로그램의 경우 데이터베이스 액세스를 잘 조정하도록 코드를 작성해야 합니다. 두 세션이 같은 잠금을 공유하기 때문에 두 프로그램이 동시에 같은 데이터를 수정할 수 없습니다. 항상 한 세션만 트랜잭션의 일부로 작업을 수행할 수 있으므로 병렬 실행은 불가능합니다. 모든 DML 문이 완료되어 결과가 검색된 경우와 같이 잘 정의된 양보점(yield point)에서만 세션 간에 트랜잭션이 전환될 수 있습니다.  
   
 ### <a name="coding-efficient-transactions"></a>효율적인 트랜잭션 코딩  
 
- 트랜잭션을 되도록 짧게 유지하는 것이 중요합니다. 트랜잭션이 시작되면 DBMS(데이터베이스 관리 시스템)가 트랜잭션이 끝날 때까지 많은 리소스를 보유하여 트랜잭션의 ACID(원자성, 일관성, 격리성, 영속성) 속성을 보호합니다. 데이터가 수정되면 다른 트랜잭션이 읽을 수 없도록 수정된 행이 배타적 잠금으로 보호되어야 하며 트랜잭션이 커밋되거나 롤백될 때까지 배타적 잠금이 유지되어야 합니다. 트랜잭션 격리 수준 설정에 따라 SELECT 문에서 트랜잭션이 커밋 또는 롤백될 때까지 보유해야 하는 잠금을 획득할 수 있습니다. 특히 많은 사용자가 사용하는 시스템에서는 트랜잭션을 되도록 짧게 유지하여 동시 연결 간에 리소스에 대한 잠금 경합을 줄여야 합니다. 실행 시간이 긴 비효율적인 트랜잭션은 사용자 수가 적을 때는 별로 문제가 되지 않지만 사용자가 많을 때는 심각한 문제가 됩니다. [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]부터 지연된 영구 트랜잭션이 지원됩니다. 지연된 내구성 있는 트랜잭션은 내구성을 보장하지 않습니다. 자세한 내용은 [트랜잭션 내구성](../relational-databases/logs/control-transaction-durability.md) 항목을 참조하세요.  
+ 트랜잭션을 되도록 짧게 유지하는 것이 중요합니다. 트랜잭션이 시작되면 DBMS(데이터베이스 관리 시스템)가 트랜잭션이 끝날 때까지 많은 리소스를 보유하여 트랜잭션의 ACID(원자성, 일관성, 격리성, 영속성) 속성을 보호합니다. 데이터가 수정되면 다른 트랜잭션이 읽을 수 없도록 수정된 행이 배타적 잠금으로 보호되어야 하며 트랜잭션이 커밋되거나 롤백될 때까지 배타적 잠금이 유지되어야 합니다. 트랜잭션 격리 수준 설정에 따라 SELECT 문에서 트랜잭션이 커밋 또는 롤백될 때까지 보유해야 하는 잠금을 획득할 수 있습니다. 특히 많은 사용자가 사용하는 시스템에서는 트랜잭션을 되도록 짧게 유지하여 동시 연결 간에 리소스에 대한 잠금 경합을 줄여야 합니다. 실행 시간이 긴 비효율적인 트랜잭션은 사용자 수가 적을 때는 별로 문제가 되지 않지만 사용자가 많을 때는 심각한 문제가 됩니다. 
+  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]부터 지연된 영구 트랜잭션이 지원됩니다. 지연된 내구성 있는 트랜잭션은 내구성을 보장하지 않습니다. 자세한 내용은 [트랜잭션 내구성](../relational-databases/logs/control-transaction-durability.md) 항목을 참조하세요.  
   
 #### <a name="coding-guidelines"></a>코딩 지침  
 
@@ -1920,13 +1985,14 @@ GO
   
 ### <a name="managing-long-running-transactions"></a>장기 실행 트랜잭션 관리  
 
- *장기 실행 트랜잭션*은 제때에 커밋되거나 롤백되지 않은 활성 트랜잭션입니다. 예를 들어 트랜잭션의 시작과 끝을 사용자가 제어하는 경우에는 대개 사용자가 트랜잭션을 시작한 후 트랜잭션에서 사용자의 응답을 기다리는 동안 자리를 비울 때 장기 실행 트랜잭션이 발생합니다.  
+ 
+  *장기 실행 트랜잭션*은 제때에 커밋되거나 롤백되지 않은 활성 트랜잭션입니다. 예를 들어 트랜잭션의 시작과 끝을 사용자가 제어하는 경우에는 대개 사용자가 트랜잭션을 시작한 후 트랜잭션에서 사용자의 응답을 기다리는 동안 자리를 비울 때 장기 실행 트랜잭션이 발생합니다.  
   
  장기 실행 트랜잭션으로 인해 데이터베이스에 대해 다음과 같은 심각한 문제가 발생할 수 있습니다.  
   
--   활성 트랜잭션이 커밋되지 않은 많은 수정 작업을 수행한 후 서버 인스턴스를 종료 하 고, 다시 시작의 복구 단계에서 지정한 시간 보다 훨씬 더 오래 걸릴 수 있습니다 합니다 **복구 간격** 서버 구성 옵션 또는 ALTER database... SET TARGET_RECOVERY_TIME 옵션에서 지정한 시간보다 훨씬 더 오래 걸릴 수 있습니다. 이러한 옵션은 활성 검사점 및 간접 검사점의 빈도를 각각 지정합니다. 검사점 형식에 대한 자세한 내용은 [데이터베이스 검사점&#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md)을 참조하세요.  
+-   활성 트랜잭션이 커밋되지 않은 많은 수정 작업을 수행한 후에 서버 인스턴스가 종료 되 면 이후 다시 시작의 복구 단계는 **recovery interval** 서버 구성 옵션 또는 ALTER database ...에서 지정한 시간 보다 훨씬 더 오래 걸릴 수 있습니다. TARGET_RECOVERY_TIME 옵션을 설정 합니다. 이러한 옵션은 활성 검사점 및 간접 검사점의 빈도를 각각 지정합니다. 검사점 형식에 대한 자세한 내용은 [데이터베이스 검사점&#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md)을 참조하세요.  
   
--   무엇보다도 대기 중인 트랜잭션은 로그를 거의 생성하지 않을 수 있지만 로그 잘림을 무한정 방해하여 트랜잭션 로그가 커져 가득 찰 수 있습니다. 트랜잭션 로그가 꽉 차면 데이터베이스에서 업데이트를 더 이상 수행할 수 없습니다. 자세한 내용은 [찬 트랜잭션 로그 문제 해결 &#40;SQL Server 오류 9002&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md), 및 [트랜잭션 로그 &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md).  
+-   무엇보다도 대기 중인 트랜잭션은 로그를 거의 생성하지 않을 수 있지만 로그 잘림을 무한정 방해하여 트랜잭션 로그가 커져 가득 찰 수 있습니다. 트랜잭션 로그가 꽉 차면 데이터베이스에서 업데이트를 더 이상 수행할 수 없습니다. 자세한 내용은 [전체 트랜잭션 로그 &#40;문제 해결 SQL Server 오류 9002&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)및 [트랜잭션 로그 &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md)을 참조 하세요.  
   
 #### <a name="discovering-long-running-transactions"></a>장기 실행 트랜잭션 검색  
 
@@ -1946,12 +2012,12 @@ GO
 
  KILL 문을 사용해야 하는 경우도 있습니다. 그러나 특히 중요한 프로세스가 실행 중일 때는 이 문을 신중하게 사용하십시오. 자세한 내용은 [KILL&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/kill-transact-sql)을 참조하세요.  
   
- ![맨 위 링크와 함께 사용 되는 화살표 아이콘](media/uparrow16x16.gif "맨 위 링크와 함께 사용 되는 화살표 아이콘") [이 가이드의](#Top)  
+ [이 가이드의](#Top) ![맨 위 링크와 함께 사용 되는 화살표 아이콘](media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘")  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 
- [SQL Server 2005 행 버전 관리 기반의 트랜잭션 격리](https://msdn.microsoft.com/library/ms345124(v=sql.90).aspx)   
- [행 버전 관리 오버헤드](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2008/03/30/overhead-of-row-versioning.aspx)   
+ [SQL Server 2005 행 버전 관리 기반 트랜잭션 격리](https://msdn.microsoft.com/library/ms345124(v=sql.90).aspx)   
+ [행 버전 관리 오버 헤드](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2008/03/30/overhead-of-row-versioning.aspx)   
  [SQL Server 2008에서 자치 트랜잭션을 만드는 방법](https://blogs.msdn.com/b/sqlprogrammability/archive/2008/08/22/how-to-create-an-autonomous-transaction-in-sql-server-2008.aspx)  
   
   

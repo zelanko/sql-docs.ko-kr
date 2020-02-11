@@ -1,5 +1,5 @@
 ---
-title: sys.sp_rda_reconcile_indexes (TRANSACT-SQL) | Microsoft Docs
+title: sys. sp_rda_reconcile_indexes (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,20 +17,20 @@ ms.assetid: 96b31ab9-bf84-46d6-9990-81f5c51f885a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0e439a04e55816f25cae318a8451452bf09dee0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905042"
 ---
-# <a name="syssprdareconcileindexes-transact-sql"></a>sys.sp_rda_reconcile_indexes (Transact SQL)
+# <a name="syssp_rda_reconcile_indexes-transact-sql"></a>sys. sp_rda_reconcile_indexes (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  원격 테이블의 인덱스를 조정 하는 스키마 작업 큐에 넣습니다. 이 태스크를 성공적으로 완료 되 면 원격 테이블에 로컬 스트레치 사용 테이블에 존재 하는 동일한 인덱스입니다.  
+  원격 테이블의 인덱스를 조정 하는 스키마 태스크를 큐에 대기 시킵니다. 이 작업이 성공적으로 완료 되 면 원격 테이블에는 로컬 스트레치 사용 테이블에 존재 하는 것과 동일한 인덱스가 있습니다.  
   
- 다른 작업을 호출 하는 경우 인덱스를 조정 하려면 지연 없는 경우 **sp_rda_reconcile_indexes**,이 저장된 프로시저는 중복 작업 큐 대기 하지 않습니다.  
+ **Sp_rda_reconcile_indexes**를 호출할 때 인덱스를 조정 하기 위해 대기 중인 다른 태스크가 있는 경우이 저장 프로시저는 중복 태스크를 큐에 대기 하지 않습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,13 +41,13 @@ sp_rda_reconcile_indexes [@objname = ] 'objname'
 ```  
   
 ## <a name="arguments"></a>인수  
- [@objname = ] *'objname'*  
- 인덱스를 조정 하려는 스트레치 사용 테이블의 정규화 되거나 정규화 되지 않은 이름이입니다. 따옴표는 정규화 된 개체를 지정 하는 경우에 필요 합니다.  
+ [@objname = ] *' objname '*  
+ 인덱스를 조정 하려는 스트레치 사용 테이블의 정규화 된 이름 또는 정규화 되지 않은 이름입니다. 따옴표는 정규화 된 개체를 지정 하는 경우에만 필요 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 0 (성공) 또는 > 0 (실패)  
+ 0 (성공) 또는 >0 (실패)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   

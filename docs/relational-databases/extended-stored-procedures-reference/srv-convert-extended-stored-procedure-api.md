@@ -20,17 +20,17 @@ ms.assetid: 216b4a31-786e-4361-8a33-e5f6e9790f90
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b6ba4c356411800dc7c5e52907b0baccd5682f09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68064139"
 ---
 # <a name="srv_convert-extended-stored-procedure-api"></a>srv_convert(확장 저장 프로시저 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하세요.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]대신 CLR 통합을 사용 하세요.  
   
  한 데이터 형식에서 다른 데이터 형식으로 데이터를 변경합니다.  
   
@@ -64,16 +64,18 @@ destlen
   
 ## <a name="arguments"></a>인수  
  *srvproc*  
- 특정 클라이언트 연결에 대한 핸들인 SRV_PROC 구조에 대한 포인터입니다. 이 구조에는 확장 저장 프로시저 API가 애플리케이션과 클라이언트 간 통신 및 데이터를 관리하는 데 사용하는 모든 제어 정보가 들어 있습니다. *srvproc* 핸들을 제공하면 오류가 발생할 경우 확장 저장 프로시저 API 오류 처리기로 해당 핸들이 전달됩니다.  
+ 특정 클라이언트 연결에 대한 핸들인 SRV_PROC 구조에 대한 포인터입니다. 이 구조에는 확장 저장 프로시저 API가 애플리케이션과 클라이언트 간 통신 및 데이터를 관리하는 데 사용하는 모든 제어 정보가 들어 있습니다. 
+  *srvproc* 핸들을 제공하면 오류가 발생할 경우 확장 저장 프로시저 API 오류 처리기로 해당 핸들이 전달됩니다.  
   
- *srctype*  
+ *중 유형이*  
  변환할 데이터의 데이터 형식을 지정합니다. 이 매개 변수는 임의의 확장 저장 프로시저 API 데이터 형식일 수 있습니다.  
   
- *src*  
+ *소스*  
  변환할 데이터에 대한 포인터입니다. 이 매개 변수는 임의의 확장 저장 프로시저 API 데이터 형식일 수 있습니다.  
   
  *srclen*  
- 변환할 데이터의 길이(바이트)를 지정합니다. *srclen*이 0이면 **srv_convert**는 대상 변수에 Null 값을 넣습니다. 0이 아니면 고정 길이 데이터 형식의 경우 이 매개 변수가 무시되며, 이때 원본 데이터는 NULL인 것으로 가정됩니다. SRVCHAR 데이터 형식의 데이터에서 길이 -1은 문자열이 Null로 종결됨을 나타냅니다.  
+ 변환할 데이터의 길이(바이트)를 지정합니다. 
+  *srclen*이 0이면 **srv_convert**는 대상 변수에 Null 값을 넣습니다. 0이 아니면 고정 길이 데이터 형식의 경우 이 매개 변수가 무시되며, 이때 원본 데이터는 NULL인 것으로 가정됩니다. SRVCHAR 데이터 형식의 데이터에서 길이 -1은 문자열이 Null로 종결됨을 나타냅니다.  
   
  *desttype*  
  원본을 변환할 데이터 형식을 지정합니다. 이 매개 변수는 임의의 확장 저장 프로시저 API 데이터 형식일 수 있습니다.  
@@ -81,16 +83,20 @@ destlen
  *dest*  
  변환된 데이터를 받는 대상 변수에 대한 포인터입니다. 이 포인터가 NULL이면 **srv_convert**에서 사용자가 제공한 오류 처리기(있는 경우)를 호출하고 -1을 반환합니다.  
   
- *desttype*이 SRVDECIMAL이나 SRVNUMERIC인 경우 *dest* 매개 변수는 구조의 전체 자릿수 및 소수 자릿수 필드가 원하는 값으로 설정되어 있는 DBNUMERIC 또는 DBDECIMAL 구조에 대한 포인터여야 합니다. DEFAULTPRECISION을 사용하여 기본 전체 자릿수를 지정하고 DEFAULTSCALE을 사용하여 기본 소수 자릿수를 지정할 수 있습니다.  
+ 
+  *desttype*이 SRVDECIMAL이나 SRVNUMERIC인 경우 *dest* 매개 변수는 구조의 전체 자릿수 및 소수 자릿수 필드가 원하는 값으로 설정되어 있는 DBNUMERIC 또는 DBDECIMAL 구조에 대한 포인터여야 합니다. DEFAULTPRECISION을 사용하여 기본 전체 자릿수를 지정하고 DEFAULTSCALE을 사용하여 기본 소수 자릿수를 지정할 수 있습니다.  
   
  *destlen*  
- 대상 변수의 길이(바이트)를 지정합니다. 고정 길이 데이터 형식의 경우 이 매개 변수가 무시됩니다. SRVCHAR 유형의 대상 변수에서 *destlen* 값은 대상 버퍼 공간의 총 길이여야 합니다. SRVCHAR 또는 SRVBINARY 유형의 대상 변수에서 길이 -1은 사용 가능한 충분한 공간이 있음을 나타냅니다. *srvchar* 유형의 대상 변수에서 길이가 -1이면 문자열이 Null로 종결됩니다.  
+ 대상 변수의 길이(바이트)를 지정합니다. 고정 길이 데이터 형식의 경우 이 매개 변수가 무시됩니다. SRVCHAR 유형의 대상 변수에서 *destlen* 값은 대상 버퍼 공간의 총 길이여야 합니다. SRVCHAR 또는 SRVBINARY 유형의 대상 변수에서 길이 -1은 사용 가능한 충분한 공간이 있음을 나타냅니다. 
+  *srvchar* 유형의 대상 변수에서 길이가 -1이면 문자열이 Null로 종결됩니다.  
   
-## <a name="returns"></a>반환 값  
- 데이터 형식 변환에 성공할 경우 변환된 데이터의 길이(바이트)입니다. **srv_convert**에서 지원하지 않는 변환 요청을 발견하면 개발자가 제공한 오류 처리기(있는 경우)를 호출하며, 전역 오류 번호를 설정하고 -1을 반환합니다.  
+## <a name="returns"></a>반환  
+ 데이터 형식 변환에 성공할 경우 변환된 데이터의 길이(바이트)입니다. 
+  **srv_convert**에서 지원하지 않는 변환 요청을 발견하면 개발자가 제공한 오류 처리기(있는 경우)를 호출하며, 전역 오류 번호를 설정하고 -1을 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
- **srv_willconvert** 함수는 특정 변환의 허용 여부를 결정합니다.  
+## <a name="remarks"></a>설명  
+ 
+  **srv_willconvert** 함수는 특정 변환의 허용 여부를 결정합니다.  
   
  근사치 데이터 형식 SRVFLT4 또는 SRVFLT8로 변환하면 전체 자릿수 손실이 발생할 수 있습니다. 근사치 데이터 형식 SRVFLT4 또는 SRVFLT8을 SRVCHAR 또는 SRVTEXT로 변환하는 경우에도 전체 자릿수 손실이 발생할 수 있습니다.  
   
@@ -102,7 +108,8 @@ destlen
   
  데이터 형식 및 확장 저장 프로시저 API 데이터 형식 변환에 대한 설명은 [데이터 형식(확장 저장 프로시저 API)](../../relational-databases/extended-stored-procedures-reference/data-types-extended-stored-procedure-api.md)을 참조하세요.  
   
- **srv_convert** 함수는 여러 가지 이유로 실패할 수 있습니다.  
+ 
+  **srv_convert** 함수는 여러 가지 이유로 실패할 수 있습니다.  
   
 -   요청된 변환을 사용할 수 없습니다.  
   
@@ -114,7 +121,7 @@ destlen
 >  확장 저장 프로시저의 원본 코드를 철저히 검토하고 프로덕션 서버에 DLL을 설치하기 전에 컴파일한 DLL을 테스트해야 합니다. 보안 검토 및 테스트에 대한 자세한 내용은 [Microsoft 웹 사이트](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)를 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
- [srv_setutype(확장 저장 프로시저 API)](../../relational-databases/extended-stored-procedures-reference/srv-setutype-extended-stored-procedure-api.md)   
- [srv_willconvert(확장 저장 프로시저 API)](../../relational-databases/extended-stored-procedures-reference/srv-willconvert-extended-stored-procedure-api.md)  
+ [srv_setutype &#40;확장 저장 프로시저 API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-setutype-extended-stored-procedure-api.md)   
+ [srv_willconvert &#40;확장 저장 프로시저 API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-willconvert-extended-stored-procedure-api.md)  
   
   

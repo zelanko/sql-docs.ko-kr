@@ -1,5 +1,5 @@
 ---
-title: 테이블 및 뷰 (SSAS) 선택 | Microsoft Docs
+title: 테이블 및 뷰 선택 (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8ff8ada00af8b70659a19f863a52a5f1005e20b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069236"
 ---
 # <a name="select-tables-and-views-ssas"></a>테이블 및 뷰 선택(SSAS)
-  **테이블 가져오기 마법사** 의 이 페이지에서는 가져올 데이터가 포함되어 있는 테이블과 뷰를 선택할 수 있습니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  
+  
+  **테이블 가져오기 마법사** 의 이 페이지에서는 가져올 데이터가 포함되어 있는 테이블과 뷰를 선택할 수 있습니다. 
+  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  
   
  이 페이지에 테이블과 뷰가 표시되었다고 해서 가져오기 작업이 반드시 성공하는 것은 아닙니다. 가장 정보 페이지에 지정된 사용자에게 선택한 데이터베이스를 읽을 수 있는 권한이 없는 경우 가져오기 작업이 실패합니다.  
   
@@ -30,7 +32,7 @@ ms.locfileid: "66069236"
  **Server**  
  연결된 서버를 표시합니다.  
   
- **데이터베이스 백업**  
+ **Database**  
  선택한 데이터베이스를 표시합니다.  
   
  **테이블 및 뷰**  
@@ -42,7 +44,7 @@ ms.locfileid: "66069236"
  **스키마**  
  원본 테이블이 포함된 스키마를 지정합니다. 데이터베이스 유형에 따라 스키마는 테이블과 같은 다른 개체의 컨테이너로 작동하며 해당 개체의 소유권을 나타낼 수도 있습니다.  
   
- **이름**  
+ **친숙한 이름**  
  원본 테이블의 이름을 지정합니다. 기본적으로 이 열에는 **원본 테이블** 열에 나타나는 원본 테이블의 이름이 표시됩니다. 원본 데이터베이스에 사용된 것과 다른 이름을 사용하려면 이름을 변경하십시오.  
   
  **필터 세부 정보**  
@@ -51,7 +53,7 @@ ms.locfileid: "66069236"
  **미리 보기 및 필터**  
  가져오고 있는 데이터에 필터를 적용하는 데 사용되는 **선택한 테이블 미리 보기** 대화 상자를 표시합니다. 자세한 내용은 [선택한 테이블 미리 보기&#40;SSAS&#41;](preview-selected-table-ssas.md)를 참조하세요.  
   
- **관련된 테이블 선택**  
+ **관련 테이블 선택**  
  이미 선택한 테이블 및 뷰와 관련된 가져올 테이블 및 뷰를 선택합니다.  
   
   

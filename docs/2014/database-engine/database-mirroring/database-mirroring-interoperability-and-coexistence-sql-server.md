@@ -1,5 +1,5 @@
 ---
-title: '데이터베이스 미러링: 상호 운용성 및 공존 성 (SQL Server) | Microsoft Docs'
+title: '데이터베이스 미러링: 상호 운용성 및 공존성 (SQL Server) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,20 +14,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2f38e7bac91c4d65e9c6209d693a598466096069
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807309"
 ---
-# <a name="database-mirroring-interoperability-and-coexistence-sql-server"></a>데이터베이스 미러링: 상호 운용성 및 공존 성 (SQL Server)
+# <a name="database-mirroring-interoperability-and-coexistence-sql-server"></a>데이터베이스 미러링: 상호 운용성 및 공존성 (SQL Server)
   데이터베이스 미러링은 다음의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]기능 또는 구성 요소와 함께 사용할 수 있습니다.  
   
--   [AlwaysOn 장애 조치 클러스터 인스턴스 (SQL Server 장애 조치 클러스터링)](database-mirroring-and-sql-server-failover-cluster-instances.md)  
+-   [AlwaysOn 장애 조치(Failover) 클러스터 인스턴스(SQL Server 장애 조치(Failover) 클러스터링)](database-mirroring-and-sql-server-failover-cluster-instances.md)  
   
 -   [변경 데이터 캡처 및 변경 내용 추적](../../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md)  
   
--   [데이터베이스 스냅숏](../../relational-databases/databases/database-snapshots-sql-server.md)  
+-   [데이터베이스 스냅샷](../../relational-databases/databases/database-snapshots-sql-server.md)  
   
 -   [전체 텍스트 카탈로그](database-mirroring-and-full-text-catalogs-sql-server.md)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62807309"
   
 -   [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링&#40;SQL Server&#41;](database-mirroring-sql-server.md)  
   
   

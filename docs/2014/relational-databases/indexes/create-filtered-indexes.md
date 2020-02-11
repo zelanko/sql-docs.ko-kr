@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: de9a9d71a90f33db85636b1bd0344023f1a86c91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63155396"
 ---
 # <a name="create-filtered-indexes"></a>필터링된 인덱스 만들기
@@ -36,7 +36,7 @@ ms.locfileid: "63155396"
   
      인덱스의 DML(데이터 조작 언어) 문이 데이터에 영향을 줄 때에만 인덱스가 유지 관리됩니다. 필터링된 인덱스는 크기가 더 작고 인덱스의 데이터가 변경될 때에만 유지 관리되기 때문에 전체 테이블 비클러스터형 인덱스에 비해 인덱스 유지 관리 비용이 줄어듭니다. 자주 변경되지 않는 데이터를 포함하는 경우 필터링된 인덱스 수가 많을 수도 있습니다. 마찬가지로 필터링된 인덱스에 자주 수정되는 데이터만 들어 있을 경우 인덱스 크기가 작으므로 통계를 업데이트하는 비용이 줄어듭니다.  
   
--   **줄어든 인덱스 저장소 비용**  
+-   **줄어든 인덱스 스토리지 비용**  
   
      필터링된 인덱스를 만들면 전체 테이블 인덱스가 필요하지 않은 경우 비클러스터형 인덱스의 디스크 스토리지를 줄일 수 있습니다. 스토리지 요구 사항을 크게 증가시키지 않고 전체 테이블 비클러스터형 인덱스를 여러 필터링된 인덱스로 바꿀 수 있습니다.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "63155396"
   
 -   **필터링된 인덱스를 만들려면:**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -92,7 +92,7 @@ ms.locfileid: "63155396"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  테이블이나 뷰에 대한 ALTER 권한이 필요합니다. 사용자는 **sysadmin** 고정 서버 역할의 멤버 또는 **db_ddladmin** 및 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다. 필터링된 인덱스를 수정하려면 CREATE INDEX WITH DROP_EXISTING을 사용합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -111,11 +111,12 @@ ms.locfileid: "63155396"
   
 6.  **인덱스 키 열** 아래에서 **추가...** 를 클릭합니다.  
   
-7.  **table_name**_에서 열 선택_ 대화 상자에서 고유 인덱스에 추가할 테이블 열의 확인란을 선택합니다.  
+7.  _Table_name_ **에서 열 선택**대화 상자에서 고유 인덱스에 추가할 테이블 열의 확인란을 선택 합니다.  
   
 8.  **확인**을 클릭합니다.  
   
-9. **필터** 페이지의 **필터 식**에 필터링된 인덱스를 만드는 데 사용할 SQL 식을 입력합니다.  
+9. 
+  **필터** 페이지의 **필터 식**에 필터링된 인덱스를 만드는 데 사용할 SQL 식을 입력합니다.  
   
 10. **확인**을 클릭합니다.  
   
@@ -180,6 +181,6 @@ ms.locfileid: "63155396"
     GO  
     ```  
   
- 자세한 내용은 [CREATE INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)를 참조하세요.  
+ 자세한 내용은 [CREATE INDEX &#40;transact-sql&#41;](/sql/t-sql/statements/create-index-transact-sql)를 참조 하세요.  
   
   

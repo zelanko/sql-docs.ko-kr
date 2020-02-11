@@ -15,30 +15,30 @@ ms.assetid: 96f97ba3-7e73-4196-abfb-036c5f6d1903
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 99ac5b590fc631292c5fe8ab91e0fafd58c38c70
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68093972"
 ---
 # <a name="odbc-header-files"></a>ODBC 헤더 파일
 > [!NOTE]  
->  ODBC 헤더 파일의 재배포 필요 하지 않습니다. None "Core" 라고 합니다.  
+>  ODBC 헤더 파일은 재배포할 필요가 없습니다. "Core"로 간주 되지 않습니다.  
   
  **헤더 파일**  
   
- Odbcinst.h  
+ Odbcinst.ini  
   
- Sql.h  
+ Sql .h  
   
- Sqlext.h  
+ Sqlext .h  
   
- Sqltypes.h  
+ Sqltypes  
   
- Sqlucode.h  
+ Sqlucode .h  
   
- Msdasql.h  
+ Msdasql  
   
- Msdadc.h  
+ Msdadc  
   
- Sqlspi.h (드라이버 개발에 대 한 사용을 참조 하세요 [ODBC 서비스 공급자 인터페이스 (SPI) 참조](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md) 자세한)는 Windows 8 SDK부터 사용할 수 있습니다.
+ Sqlspi. (드라이버 개발에 사용 되는 추가 정보는 [ODBC spi (서비스 공급자 인터페이스) 참조](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md) ) WINDOWS 8 SDK에서 시작 하 여 사용할 수 있습니다.

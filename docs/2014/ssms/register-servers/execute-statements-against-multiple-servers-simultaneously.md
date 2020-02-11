@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: 55b77ddf4284dc4f06e8036d0ae1b0c86b3544f7
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244639"
 ---
 # <a name="execute-statements-against-multiple-servers-simultaneously-sql-server-management-studio"></a>여러 서버에 대해 동시에 문 실행(SQL Server Management Studio)
@@ -29,7 +29,7 @@ ms.locfileid: "75244639"
   
  **항목 내용**  
   
--   **시작 하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [보안](#Security)  
   
@@ -37,19 +37,18 @@ ms.locfileid: "75244639"
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a>시작 하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Security"></a>보안  
+###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a>권한에  
+####  <a name="Permissions"></a> 권한  
  중앙 관리 서버에서 유지 관리하는 연결은 Windows 인증을 사용하여 사용자 컨텍스트에서 실행되기 때문에 등록된 서버에 대한 유효 사용 권한이 달라질 수 있습니다. 예를 들어 사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A 인스턴스에서는 sysadmin 고정 서버 역할의 멤버이지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] B 인스턴스에서는 제한된 사용 권한을 가질 수 있습니다.  
   
-##  <a name="SSMSProcedure"></a>SQL Server Management Studio 사용  
+##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-execute-statements-against-multiple-configuration-targets-simultaneously"></a>여러 구성 대상에 대해 동시에 문을 실행하려면  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **보기** 메뉴에서 **등록된 서버**를 클릭합니다.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **보기** 메뉴에서 **등록된 서버**를 클릭합니다.  
   
 2.  중앙 관리 서버를 확장하고 서버 그룹을 마우스 오른쪽 단추로 클릭하고 **연결**을 가리킨 다음 **새 쿼리**를 클릭합니다.  
   
@@ -66,16 +65,13 @@ ms.locfileid: "75244639"
   
 #### <a name="to-change-the-multiserver-results-options"></a>다중 서버 결과 옵션을 변경하려면  
   
-1.  
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 **도구** 메뉴에서 **옵션**을 클릭합니다.  
+1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 **도구** 메뉴에서 **옵션**을 클릭합니다.  
   
-2.  
-  **쿼리 결과**를 확장하고 **SQL Server**를 확장한 다음 **다중 서버 결과**를 클릭합니다.  
+2.  **쿼리 결과**를 확장하고 **SQL Server**를 확장한 다음 **다중 서버 결과**를 클릭합니다.  
   
-3.  
-  **다중 서버 결과** 페이지에서 원하는 옵션 설정을 지정한 다음 **확인**을 클릭합니다.  
+3.  **다중 서버 결과** 페이지에서 원하는 옵션 설정을 지정한 다음 **확인**을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [중앙 관리 서버를 사용 하 여 여러 서버 관리](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
+ [중앙 관리 서버를 사용하여 여러 서버 관리](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
   
   

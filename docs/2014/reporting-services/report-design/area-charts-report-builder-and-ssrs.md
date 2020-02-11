@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0c914c31f760021a10c4f26a85bcd1d995f3ef07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106480"
 ---
 # <a name="area-charts-report-builder-and-ssrs"></a>영역형 차트(보고서 작성기 및 SSRS)
@@ -31,9 +31,9 @@ ms.locfileid: "66106480"
   
 -   **누적 영역형**. 여러 계열이 세로로 누적되는 영역형 차트입니다. 차트의 계열이 한 개뿐이면 누적 영역형 차트가 영역형 차트와 같은 모양으로 표시됩니다.  
   
--   **100% 기준 누적 영역형**. 전체 차트 영역에 꼭 맞도록 여러 계열을 세로로 누적하여 표시하는 영역형 차트입니다. 차트의 계열이 한 개뿐이면 누적 영역형 차트가 영역형 차트와 같은 모양으로 표시됩니다.  
+-   **% 기준 누적 영역형**. 전체 차트 영역에 꼭 맞도록 여러 계열을 세로로 누적하여 표시하는 영역형 차트입니다. 차트의 계열이 한 개뿐이면 누적 영역형 차트가 영역형 차트와 같은 모양으로 표시됩니다.  
   
--   **곡선 영역형**. 일반적인 직선 대신 매끄러운 곡선을 사용하여 데이터 요소를 연결하는 영역형 차트입니다. 개별 데이터 요소의 값을 표시하는 것보다 추세를 표시하는 것이 더 중요한 경우 영역형 차트 대신 곡선 영역형 차트를 사용합니다.  
+-   **부드러운 영역**. 일반적인 직선 대신 매끄러운 곡선을 사용하여 데이터 요소를 연결하는 영역형 차트입니다. 개별 데이터 요소의 값을 표시하는 것보다 추세를 표시하는 것이 더 중요한 경우 영역형 차트 대신 곡선 영역형 차트를 사용합니다.  
   
 ## <a name="data-considerations-for-area-charts"></a>영역형 차트의 데이터 고려 사항  
   
@@ -45,15 +45,15 @@ ms.locfileid: "66106480"
   
 -   일반 영역형 차트에서는 여러 계열의 값이 유사한 경우 영역이 겹쳐 표시되어 중요한 데이터 요소 값을 식별하기가 쉽지 않을 수 있습니다. 영역형 차트에 여러 계열을 표시하도록 디자인된 누적 영역형 차트로 차트 종류를 변경하면 이 문제를 해결할 수 있습니다.  
   
--   누적 영역형 차트에 간격이 포함되어 있으면 데이터 세트에 빈 값이 포함되었음을 의미하는 것일 수 있습니다. 빈 값은 누적 영역형 차트에서 빈 섹션으로 표시됩니다. 데이터 세트에 빈 값이 포함되어 있으면 차트에 빈 요소를 삽입하는 것이 좋습니다. 빈 요소를 추가하면 차트의 빈 영역을 다른 색으로 채워 Null 값이나 0인 값을 쉽게 구별할 수 있습니다. 자세한 내용은 [차트에 빈 요소 추가 &#40;보고서 작성기 및 SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)합니다.  
+-   누적 영역형 차트에 간격이 포함되어 있으면 데이터 세트에 빈 값이 포함되었음을 의미하는 것일 수 있습니다. 빈 값은 누적 영역형 차트에서 빈 섹션으로 표시됩니다. 데이터 세트에 빈 값이 포함되어 있으면 차트에 빈 요소를 삽입하는 것이 좋습니다. 빈 요소를 추가하면 차트의 빈 영역을 다른 색으로 채워 Null 값이나 0인 값을 쉽게 구별할 수 있습니다. 자세한 내용은 [차트에 빈 요소 추가 &#40;보고서 작성기 및 SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)를 참조 하세요.  
   
 -   영역형 차트 종류의 동작 방식은 세로 막대형 및 꺾은선형 차트와 매우 비슷합니다. 여러 계열을 서로 비교하려는 경우에는 세로 막대형 차트를 대신 사용하는 것이 좋습니다. 일정 기간 동안의 추세를 분석하려는 경우에는 꺾은선형 차트를 사용하는 것이 좋습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [차트 종류&#40;보고서 작성기 및 SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
- [꺾은선형 차트&#40;보고서 작성기 및 SSRS&#41;](line-charts-report-builder-and-ssrs.md)   
- [차트 종류 변경&#40;보고서 작성기 및 SSRS&#41;](change-a-chart-type-report-builder-and-ssrs.md)   
+ [꺾은선형 차트는 보고서 작성기 및 SSRS를 &#40;&#41;](line-charts-report-builder-and-ssrs.md)   
+ [보고서 작성기 및 SSRS &#40;차트 종류를 변경&#41;](change-a-chart-type-report-builder-and-ssrs.md)   
  [차트의 빈 데이터 요소 및 Null 데이터 요소&#40;보고서 작성기 및 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
   
   

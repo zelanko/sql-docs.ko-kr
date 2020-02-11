@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c8030a0005f0f5b949a3eecd12d73f3a3aa709c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876866"
 ---
 # <a name="back-up-database-backup-options-page"></a>데이터베이스 백업(백업 옵션 페이지)
@@ -35,7 +35,7 @@ ms.locfileid: "62876866"
 > [!NOTE]  
 >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 백업 태스크를 지정할 때 [!INCLUDE[tsql](../../includes/tsql-md.md)][스크립트](/sql/t-sql/statements/backup-transact-sql) 단추를 클릭한 다음 스크립트에 대한 대상을 선택하여 해당되는 **BACKUP** 스크립트를 생성할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
   
 ### <a name="backup-set"></a>백업 세트  
  **백업 세트** 패널의 옵션을 사용하면 백업 작업으로 생성된 백업 세트에 대한 선택 가능한 정보를 지정할 수 있습니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "62876866"
   
 |||  
 |-|-|  
-|**After**|만료되기 전에 이 백업 세트를 덮어쓰지 않고 보존할 일 수를 지정합니다. 이 값은 0일에서 99999일 사이일 수 있습니다. 값 0일은 백업 세트 기간 제한이 없음을 의미합니다.<br /><br /> 백업 만료 기본값은 **백업 미디어 기본 보존 기간(일)** 옵션에 설정된 값입니다. 이 페이지에 액세스하려면 개체 탐색기에서 서버 이름을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택한 다음 **서버 속성** 대화 상자의 **데이터베이스 설정** 페이지를 클릭합니다.|  
+|**이후**|만료되기 전에 이 백업 세트를 덮어쓰지 않고 보존할 일 수를 지정합니다. 이 값은 0일에서 99999일 사이일 수 있습니다. 값 0일은 백업 세트 기간 제한이 없음을 의미합니다.<br /><br /> 백업 만료 기본값은 **백업 미디어 기본 보존 기간(일)** 옵션에 설정된 값입니다. 이 페이지에 액세스하려면 개체 탐색기에서 서버 이름을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택한 다음 **서버 속성** 대화 상자의 **데이터베이스 설정** 페이지를 클릭합니다.|  
 |**위치**|백업 세트가 만료되어 덮어쓸 수 있는 특정 날짜를 지정합니다.|  
   
 ### <a name="compression"></a>압축  
@@ -86,7 +86,7 @@ ms.locfileid: "62876866"
 >   
 >  EKM(Extensible Key Management)에 있는 키만 지원됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [BACKUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [트랜잭션 로그 백업&#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
  [파일 및 파일 그룹 백업&#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   

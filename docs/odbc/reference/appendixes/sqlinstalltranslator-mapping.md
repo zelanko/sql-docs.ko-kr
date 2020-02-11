@@ -14,11 +14,11 @@ ms.assetid: bcd9ba4f-7834-4bc4-876e-c7478998e524
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6433df796c88abd7873915266d1a2ca4041a5c62
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125734"
 ---
 # <a name="sqlinstalltranslator-mapping"></a>SQLInstallTranslator 매핑
-때 ODBC *2.x* 응용 프로그램 호출 **SQLInstallTranslator** ODBC를 통해 *3.x* 드라이버를 드라이버 관리자에 대 한 호출 매핑합니다  **SQLInstallTranslatorEx**합니다. 응용 프로그램을 호출 하지 않아야 **SQLInstallTranslator** odbc에서 *3.x* 사용 하 여 드라이버 관리자는 *lpszInfFile* 인수는 NULL이 아닌 값으로 설정 합니다. ODBC입니다. ODBC에서 사용 되는 INF 파일 *2.x* ODBC에서 더 이상 지원 되지 *3.x*이전 버전과 호환성을 위해서도 합니다.
+*Odbc 2.x 응용 프로그램이* odbc *3.x 드라이버를* 통해 **Sqlinstalltranslator** 를 호출 하면 드라이버 관리자는 호출을 **SQLInstallTranslatorEx**에 매핑합니다. 응용 프로그램은 *lpszInfFile* 인수가 NULL이 아닌 값으로 설정 *된 ODBC 3.x* 드라이버 관리자에서 **sqlinstalltranslator** 를 호출 하면 안 됩니다. ODBC입니다. ODBC 2.x에서 사용 되는 INF 파일은 이전 버전과의 *호환성을 위해서도 odbc 3.x*에서 더 이상 지원 *되지 않습니다.*

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 00c5e0017b8d81eaea6960f016e40dbc381e69e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63049138"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>공간 인덱스 대화 상자(Visual Database Tools)
@@ -24,7 +24,7 @@ ms.locfileid: "63049138"
   
  공간 인덱스 만들기의 제한 사항에 대한 자세한 내용은 [공간 인덱스 개요](../../relational-databases/spatial/spatial-indexes-overview.md)를 참조하세요.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **선택한 공간 인덱스**  
  기존 공간 인덱스의 목록을 표시합니다. 속성을 표시할 인덱스를 선택합니다. 이 목록이 비어 있으면 테이블에 정의된 공간 인덱스가 없는 것입니다.  
   
@@ -62,9 +62,9 @@ ms.locfileid: "63049138"
   
  **기하 도형** 열 옵션:  
   
--   기하 도형 열에 대한**기하 도형 표**   
+-   기하 도형 열에 대한**기하 도형 표**  
   
--   지리 열에 대한**지리 표**   
+-   지리 열에 대한**지리 표**  
   
  **형식**  
  공간 인덱스가 선택되어 있음을 나타냅니다.  
@@ -88,7 +88,7 @@ ms.locfileid: "63049138"
  공간 인덱스의 이름을 표시합니다. 새 인덱스를 만들면 테이블 디자이너의 활성 창에 있는 테이블을 기반으로 한 기본 이름이 지정됩니다. 언제든지 이름을 변경할 수 있습니다.  
   
  **설명**  
- 인덱스에 대해 설명합니다. 자세한 설명을 기록하려면 **설명**을 클릭한 다음, 속성 필드의 오른쪽에 있는 줄임표 단추(**...**)를 클릭합니다. 이렇게 하면 텍스트를 쓸 수 있는 더 큰 영역이 제공됩니다.  
+ 인덱스에 대해 설명합니다. 자세한 설명을 기록하려면 **설명**을 클릭한 다음, 속성 필드의 오른쪽에 있는 줄임표 단추( **...** )를 클릭합니다. 이렇게 하면 텍스트를 쓸 수 있는 더 큰 영역이 제공됩니다.  
   
  **테이블 디자이너 범주**  
  확장하면 현재 공간 인덱스의 속성에 대한 정보가 표시됩니다.  
@@ -115,7 +115,7 @@ ms.locfileid: "63049138"
  **행 잠금 허용**  
  현재 인덱스에 대해 행 수준의 잠금이 허용되는지 여부를 지정합니다. 행 수준의 잠금 허용 여부는 데이터베이스 성능에 영향을 줍니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [공간 인덱스 개요](../../relational-databases/spatial/spatial-indexes-overview.md)  
   
   

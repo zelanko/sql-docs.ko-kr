@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a30424ce322ed356870465422c4f82fb8d7d88d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079027"
 ---
 # <a name="adding-attributes-to-dimensions"></a>차원에 특성 추가
@@ -28,17 +28,20 @@ ms.locfileid: "66079027"
   
 1.  Customer 차원에 대한 차원 디자이너를 엽니다. 이렇게 하려면 솔루션 탐색기의 **차원** 노드에서 **Customer** 차원을 두 번 클릭합니다.  
   
-2.  **특성** 창에서 큐브 마법사에 의해 만들어진 Customer Key 및 Geography Key 특성을 확인합니다.  
+2.  
+  **특성** 창에서 큐브 마법사에 의해 만들어진 Customer Key 및 Geography Key 특성을 확인합니다.  
   
-3.  **차원 구조** 탭의 도구 모음에서 확대/축소 아이콘을 사용하여 **데이터 원본 뷰** 창의 테이블을 100%로 볼 수 있습니다.  
+3.  
+  **차원 구조** 탭의 도구 모음에서 확대/축소 아이콘을 사용하여 **데이터 원본 뷰** 창의 테이블을 100%로 볼 수 있습니다.  
   
-4.  **데이터 원본 뷰** 창의 **Customer** 테이블에서 다음 열을 **특성** 창으로 끕니다.  
+4.  
+  **데이터 원본 뷰** 창의 **Customer** 테이블에서 다음 열을 **특성** 창으로 끕니다.  
   
     -   **BirthDate**  
   
     -   **MaritalStatus**  
   
-    -   **Gender**  
+    -   **구분**  
   
     -   **EmailAddress**  
   
@@ -56,13 +59,14 @@ ms.locfileid: "66079027"
   
     -   **NumberCarsOwned**  
   
-    -   **전화**  
+    -   **내선**  
   
     -   **DateFirstPurchase**  
   
     -   **CommuteDistance**  
   
-5.  **데이터 원본 뷰** 창의 **Geography** 테이블에서 다음 열을 **특성** 창으로 끕니다.  
+5.  
+  **데이터 원본 뷰** 창의 **Geography** 테이블에서 다음 열을 **특성** 창으로 끕니다.  
   
     -   **City**  
   
@@ -80,15 +84,18 @@ ms.locfileid: "66079027"
   
 1.  Product 차원에 대한 차원 디자이너를 엽니다. 솔루션 탐색기에서 **Product** 차원을 두 번 클릭합니다.  
   
-2.  **특성** 창에서 큐브 마법사에 의해 만들어진 Product Key 특성을 확인합니다.  
+2.  
+  **특성** 창에서 큐브 마법사에 의해 만들어진 Product Key 특성을 확인합니다.  
   
-3.  **차원 구조** 탭의 도구 모음에서 확대/축소 아이콘을 사용하여 **데이터 원본 뷰** 창의 테이블을 100%로 볼 수 있습니다.  
+3.  
+  **차원 구조** 탭의 도구 모음에서 확대/축소 아이콘을 사용하여 **데이터 원본 뷰** 창의 테이블을 100%로 볼 수 있습니다.  
   
-4.  **데이터 원본 뷰** 창의 **Product** 테이블에서 다음 열을 **특성** 창으로 끕니다.  
+4.  
+  **데이터 원본 뷰** 창의 **Product** 테이블에서 다음 열을 **특성** 창으로 끕니다.  
   
     -   **StandardCost**  
   
-    -   **색**  
+    -   **Color**  
   
     -   **SafetyStockLevel**  
   
@@ -100,7 +107,7 @@ ms.locfileid: "66079027"
   
     -   **SizeRange**  
   
-    -   **Weight**  
+    -   **가중치**  
   
     -   **DaysToManufacture**  
   
@@ -110,7 +117,7 @@ ms.locfileid: "66079027"
   
     -   **클래스**  
   
-    -   **스타일**  
+    -   **Style**  
   
     -   **ModelName**  
   
@@ -125,7 +132,7 @@ ms.locfileid: "66079027"
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [큐브 및 차원 속성 검토](lesson-2-4-reviewing-cube-and-dimension-properties.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [차원 특성 속성 참조](multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

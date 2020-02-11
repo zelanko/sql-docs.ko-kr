@@ -14,10 +14,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: 83009008745a696919aa5ae5795d60ddfe9ba80b
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73632889"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Data Migration Assistant의 새로운 기능
@@ -31,7 +31,7 @@ Data Migration Assistant의 v 5.0 릴리스는 다음에 대 한 지원을 제�
 - 평가 및 업그레이드를 위한 대상으로 Windows 용 SQL Server 2019 및 Linux 용 SQL Server 2019
 - 이전 버전의 Data Migration Assistant에서 만든 평가를 저장 하 고 로드 하는 기능을 포함 하 여 평가를 저장 하 고 로드 합니다.
 - SSISDB에서 호스트 되는 SSIS (SQL Server Integration Services) 프로젝트 및 패키지 저장소에서 호스트 되는 SSIS 패키지를 평가 합니다. 데이터베이스 Migration Assistant는 지원 되지 않거나 부분적으로 지원 되거나 지원 되지 않는 기능 및 원본 패키지에서 사용 되는 호환성 문제를 검색 하 고 이러한 문제를 해결 하는 데 도움이 되는 권장 사항을 제공 합니다
-- 외부 응용 프로그램의 SQL 쿼리 (예: 소스 코드의 C# sql 쿼리)를 평가 합니다. 사용자는 데이터 액세스 마이그레이션 도구 키트를 사용 하 여 소스 코드에서 C# 사용 되는 SQL 쿼리에 대 한 전체 JSON 보고서를 생성 한 다음 Data Migration Assistant에 업로드할 수 있습니다.
+- 외부 응용 프로그램의 SQL 쿼리 (예: c # 소스 코드의 SQL 쿼리)를 평가 합니다. 사용자는 데이터 액세스 마이그레이션 도구 키트를 사용 하 여 c # 소스 코드에서 사용 되는 SQL 쿼리에 대 한 전체 JSON 보고서를 생성 한 다음 Data Migration Assistant에 업로드할 수 있습니다.
 
 또한이 Data Migration Assistant 릴리스에서는 향상 된 추가 및 버그 수정이 제공 되며이 도구는 .Net 4.7.2 업데이트 되었습니다.
 
@@ -118,7 +118,7 @@ Data Migration Assistant의 v 3.4 릴리스에는 다음과 같은 추가 내용
 - Azure SQL Database에 대 한 마이그레이션의 소스로 SQL Server 2017를 지원 합니다.
 - 안정성, 성능 및 평가 규칙 정확성 향상.
 
-## <a name="ddata-migration-assistant-v33"></a>3\.3 데이터 Migration Assistant v 3.3
+## <a name="ddata-migration-assistant-v33"></a>3.3 데이터 Migration Assistant v 3.3
 
 Data Migration Assistant의 v 3.3 릴리스를 사용 하면 Windows 및 Linux 모두에서 온-프레미스 SQL Server 인스턴스를 SQL Server 2017의 새 버전으로 마이그레이션할 수 있습니다. Windows 및 Linux에 대 한 전체 마이그레이션 워크플로는 동일 하지만 Linux 용 SQL Server 2017로 이동 하려면 몇 가지 추가 고려 사항이 필요 합니다.
 

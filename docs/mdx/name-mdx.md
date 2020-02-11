@@ -1,5 +1,5 @@
 ---
-title: Name (MDX) | Microsoft Docs
+title: 이름 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8fd8aa240a72dacc67e7cd09cb058192cddee282
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68088385"
 ---
 # <a name="name-mdx"></a>Name(MDX)
@@ -51,7 +51,7 @@ Member_Expression.Name
  멤버를 반환하는 유효한 MDX 식입니다.  
   
 ## <a name="remarks"></a>설명  
- 합니다 **이름을** 고유 이름이 아니라 개체의 이름을 반환 합니다.  
+ **Name** 함수는 고유 이름이 아니라 개체의 이름을 반환 합니다.  
   
 ## <a name="examples"></a>예  
   
@@ -80,7 +80,7 @@ SELECT {Measures.MemberName, Measures.ValueColumn, Measures.KeyColumn, Measures.
 from [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

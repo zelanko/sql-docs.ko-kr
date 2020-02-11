@@ -22,10 +22,10 @@ ms.assetid: aea495f4-ce26-4952-b019-38f012625f3f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 8386da85d22f50b45492ecd52588e6d06fe80590
-ms.sourcegitcommit: 0d34b654f0b3031041959e87f5b4d4f0a1af6a29
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74901952"
 ---
 # <a name="working-with-user-defined-types---defining-udt-tables-and-columns"></a>사용자 정의 형식 작업 - UDT 테이블 및 열 정의

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 02b55465cc4aed912e6e955883ca8fdbfa4be870
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228205"
 ---
 # <a name="implementing-the-or-operator-in-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저에서 OR 연산자 구현
@@ -246,5 +246,5 @@ GO
  WHERE 절 또는 JOIN 조건에 OR 연산자가 둘 이상 있는 경우 동작을 시뮬레이션하는 데 실행해야 하는 쿼리 수가 기하급수적으로 증가할 수 있습니다. 이로 인해 쿼리 성능이 저하되고, 메모리 최적화 테이블 변수를 사용해야 하므로 메모리 사용량이 증가할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [고유 하 게 컴파일된 저장 프로시저의 마이그레이션 문제](../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
+ [고유하게 컴파일된 저장 프로시저의 마이그레이션 문제](../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
   

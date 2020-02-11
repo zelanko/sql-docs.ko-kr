@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 51cf4acc8ed270c8302137fe5050c06cb35e91ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63023528"
 ---
-# <a name="mssqleng021798"></a>MSSQL_ENG021798
+# <a name="mssql_eng021798"></a>MSSQL_ENG021798
     
 ## <a name="message-details"></a>메시지 정보  
   
@@ -39,14 +39,14 @@ ms.locfileid: "63023528"
   
 -   저장 프로시저 **sp_addpublication**은 [sp_addlogreader_agent&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)가 실행되기 전에 실행됩니다. 이 조건은 모든 트랜잭션 게시에 적용됩니다.  
   
--   저장 프로시저 **sp_addpublication**은 [sp_addqreader_agent&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql)가 실행되기 전에 실행됩니다. 이 조건은 지연 업데이트 구독에 대해 설정된( **@allow_queued_tran** 의 **sp_addpublication**매개 변수 값을 TRUE로 설정) 트랜잭션 게시에 적용됩니다.  
+-   저장 프로시저 **sp_addpublication**은 [sp_addqreader_agent&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql)가 실행되기 전에 실행됩니다. 이는 지연 업데이트 구독에 대해 설정 된 트랜잭션 게시에 적용 됩니다 ( **@allow_queued_tran** **sp_addpublication**매개 변수의 값이 TRUE 인 경우).  
   
  저장 프로시저 **sp_addlogreader_agent** 와 **sp_addqreader_agent** 는 각각 에이전트 작업을 만들고 에이전트가 실행되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정을 지정할 수 있게 해줍니다. **sysadmin** 역할의 사용자인 경우 **sp_addlogreader_agent** 와 **sp_addqreader_agent** 가 실행되지 않으면 에이전트 작업이 암시적으로 생성됩니다. 에이전트는 배포자의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 컨텍스트에서 실행됩니다. **sysadmin** 역할의 사용자에 **sp_addlogreader_agent** 와 **sp_addqreader_agent** 가 필요한 것은 아니지만 에이전트에 대해 별도의 계정을 지정하는 것이 보안을 위한 최선의 구현 방법입니다. 자세한 내용은 [복제 에이전트 보안 모델](security/replication-agent-security-model.md)을 참조하세요.  
   
 ## <a name="user-action"></a>사용자 동작  
- 프로시저를 올바른 순서로 실행하십시오. 자세한 내용은 [Create a Publication](publish/create-a-publication.md), 저장된 프로시저 및 필요한 매개 변수를 포함 하도록이 스크립트를 업데이트 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전. 자세한 내용은 [복제 스크립트 업그레이드&#40;복제 Transact-SQL 프로그래밍&#41;](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)를 참조하세요.  
+ 프로시저를 올바른 순서로 실행하십시오. 자세한 내용은 [게시 만들기](publish/create-a-publication.md)를 참조 하 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 고,이 스크립트를 업데이트 하 여 이상 버전에 필요한 저장 프로시저와 매개 변수를 포함 합니다. 자세한 내용은 [복제 스크립트 업그레이드&#40;복제 Transact-SQL 프로그래밍&#41;](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [오류 및 이벤트 참조&#40;복제&#41;](errors-and-events-reference-replication.md)  
   
   

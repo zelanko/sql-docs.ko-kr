@@ -20,25 +20,25 @@ ms.assetid: cb54c6bc-2be2-40b1-bc11-90c10651b878
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 885d643bd6d75bfd20310dd450e09d772a105f51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965343"
 ---
 # <a name="relatedtable-property-adox"></a>RelatedTable 속성(ADOX)
-관련된 테이블의 이름을 나타냅니다.  
+관련 테이블의 이름을 나타냅니다.  
   
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
- 설정 하 고 반환 된 **문자열** 값입니다.  
+ **문자열** 값을 설정 하 고 반환 합니다.  
   
 ## <a name="remarks"></a>설명  
  기본값은 빈 문자열("")입니다.  
   
- 키가 외래 키를 한 다음 **RelatedTable** 키가 포함 된 테이블의 이름입니다.  
+ 키가 외래 키인 경우 **RelatedTable** 는 키가 포함 된 테이블의 이름입니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [Key 개체(ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
+ [키 개체(ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Keys Append 메서드, Key Type, RelatedColumn, RelatedTable 및 UpdateRule 속성 예제(VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)

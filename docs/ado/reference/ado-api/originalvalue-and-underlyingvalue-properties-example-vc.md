@@ -16,14 +16,14 @@ ms.assetid: c5762ad2-f43b-453d-b44a-9c70210eb00f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b4950634f473ca70c26b7b2b2c8159fb9a75fb0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931821"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>OriginalValue 및 UnderlyingValue 속성 예제 (VC + +)
-이 예제에서는 합니다 [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) 및 [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) 중에 변경 된 레코드를 데이터 원본으로 사용 하는 경우 메시지를 표시 하 여 속성을 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 일괄 처리 업데이트 합니다.  
+이 예제에서는 레코드 [집합](../../../ado/reference/ado-api/recordset-object-ado.md) 일괄 처리를 업데이트 하는 동안 레코드의 기본 데이터가 변경 된 경우 메시지를 표시 하 여 [Originalvalue](../../../ado/reference/ado-api/originalvalue-property-ado.md) 및 [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) 속성을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
   
@@ -198,28 +198,28 @@ void PrintComError(_com_error &e) {
 **제목 ID: PS1372**  
 **현재 값: self_help**   
 **원래 값: 심리학**   
-**내부 값: 사회학**   
+**내부 값: sociology**   
 **데이터가 변경 되었습니다.**  
-**제목 ID: PS2091**  
+**제목 ID: P S 2091**  
 **현재 값: self_help**   
 **원래 값: 심리학**   
-**내부 값: 사회학**   
+**내부 값: sociology**   
 **데이터가 변경 되었습니다.**  
 **제목 ID: PS2106**  
 **현재 값: self_help**   
 **원래 값: 심리학**   
-**내부 값: 사회학**   
+**내부 값: sociology**   
 **데이터가 변경 되었습니다.**  
 **제목 ID: PS3333**  
 **현재 값: self_help**   
 **원래 값: 심리학**   
-**내부 값: 사회학**   
+**내부 값: sociology**   
 **데이터가 변경 되었습니다.**  
 **제목 ID: PS7777**  
 **현재 값: self_help**   
 **원래 값: 심리학**   
-**내부 값: 사회학**    
-## <a name="see-also"></a>관련 항목  
+**내부 값: sociology**    
+## <a name="see-also"></a>참고 항목  
  [OriginalValue 속성 (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
  [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [UnderlyingValue 속성](../../../ado/reference/ado-api/underlyingvalue-property.md)

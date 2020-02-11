@@ -26,10 +26,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: af4229037b9c34bbc9a0316ef073f294209be6d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629644"
 ---
 # <a name="back-up-and-restore-replicated-databases"></a>복제된 데이터베이스 백업 및 복원
@@ -50,18 +50,18 @@ ms.locfileid: "62629644"
   
 -   게시자, 배포자 및 모든 구독자의 **master** 및 **msdb** 시스템 데이터베이스. 이러한 데이터베이스는 각각 그리고 관련 복제 데이터베이스와 동시에 백업되어야 합니다. 예를 들어 게시 데이터베이스를 백업할 때 게시자의 **master** 및 **msdb** 데이터베이스를 동시에 백업합니다. 게시 데이터베이스를 복원한 경우 **master** 및 **msdb** 데이터베이스의 복제 구성 및 설정이 게시 데이터베이스와 일치하는지 확인하십시오.  
   
- 정기적인 로그 백업을 수행할 경우 모든 복제 관련 변경 내용은 로그 백업에 캡처됩니다. 로그 백업을 수행하지 않는 경우 복제와 관련된 설정이 변경될 때마다 백업을 수행해야 합니다. 자세한 내용은 [Common Actions Requiring an Updated Backup](common-actions-requiring-an-updated-backup.md)을(를) 참조하세요.  
+ 정기적인 로그 백업을 수행할 경우 모든 복제 관련 변경 내용은 로그 백업에 캡처됩니다. 로그 백업을 수행하지 않는 경우 복제와 관련된 설정이 변경될 때마다 백업을 수행해야 합니다. 자세한 내용은 [Common Actions Requiring an Updated Backup](common-actions-requiring-an-updated-backup.md)을 참조하세요.  
   
 ## <a name="backup-and-restore-strategies"></a>백업 및 복원 전략  
  복제 토폴로지의 각 노드를 백업하고 복원하는 전략은 사용하는 복제 유형에 따라 달라집니다. 각 복제 유형의 백업 및 복원 전략에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   
--   [스냅숏 및 트랜잭션 복제의 백업 및 복원을 위한 전략](strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)  
+-   [스냅샷 및 트랜잭션 복제의 백업 및 복원을 위한 전략](strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)  
   
 -   [병합 복제 백업 및 복원 전략](strategies-for-backing-up-and-restoring-merge-replication.md)  
   
  어떤 복구 전략을 사용하는지에 관계없이 항상 현재 복제 설정 스크립트를 안전한 위치에 보관해야 합니다. 서버에 오류가 발생하거나 테스트 환경을 설정해야 할 때는 서버 이름 참조를 변경하여 스크립트를 수정하고 이를 사용하여 복제 설정을 다시 만들 수 있습니다. 현재 복제 설정을 스크립팅할 뿐만 아니라 복제의 활성화 및 비활성화도 스크립팅해야 합니다. 복제 개체 스크립팅에 대한 자세한 내용은 [Scripting Replication](../scripting-replication.md)을 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 데이터베이스 백업 및 복원](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Best Practices for Replication Administration](best-practices-for-replication-administration.md)  
   

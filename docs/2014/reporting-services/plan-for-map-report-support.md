@@ -11,19 +11,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: df796e2dd4e132164f00716a9cb12f7b498d8984
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108076"
 ---
 # <a name="plan-for-map-report-support"></a>지도 보고서 지원 계획
-  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 공간 데이터 원본을 사용 하는 지도 보고서를 지원 합니다. 공간 데이터는 SQL Server 데이터베이스, ESRI 셰이프 파일 또는 Reporting Services나 보고서 작성기에 설치된 지도 갤러리에서 가져올 수 있습니다. 지도에 Bing 지도 타일 배경을 표시할 수도 있습니다. 보고서 작성자는 공간 데이터나 Bing 지도 타일을 런타임에 검색되는 동적 스타일 또는 보고서 정의에 포함된 정적 스타일로 지정하는 보고서를 만들 수 있습니다.  
+  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]에서는 공간 데이터 원본을 사용 하는 지도 보고서를 지원 합니다. 공간 데이터는 SQL Server 데이터베이스, ESRI 셰이프 파일 또는 Reporting Services나 보고서 작성기에 설치된 지도 갤러리에서 가져올 수 있습니다. 지도에 Bing 지도 타일 배경을 표시할 수도 있습니다. 보고서 작성자는 공간 데이터나 Bing 지도 타일을 런타임에 검색되는 동적 스타일 또는 보고서 정의에 포함된 정적 스타일로 지정하는 보고서를 만들 수 있습니다.  
   
 ## <a name="support-for-bing-maps"></a>Bing Maps 지원  
  지도는 Bing 지도 타일을 표시하는 배경 계층을 포함할 수 있습니다. 지도 타일 계층을 포함하는 게시된 보고서를 보려면 보고서 서버가 Bing Maps 웹 서비스에서 타일을 검색하도록 구성되어 있어야 합니다. 자세한 내용은 [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)을 참조하세요.  
   
- 보고서 작성자는 각 보고서에서 SSL(Secure Sockets Layer) 연결을 사용하여 타일 서버에서 타일을 검색할지 여부를 지정할 수 있습니다. 이렇게 하려면, 타일 계층에 대 한 속성 창에서 UseSecureConnection 부울 속성을 설정 해야 이러한를 `true`입니다.  
+ 보고서 작성자는 각 보고서에서 SSL(Secure Sockets Layer) 연결을 사용하여 타일 서버에서 타일을 검색할지 여부를 지정할 수 있습니다. 이렇게 하려면 타일 계층의 속성 창에서 부울 속성 UseSecureConnection을로 `true`설정 해야 합니다.  
   
 > [!NOTE]  
 >  보고서에서 Bing 지도 타일을 사용하는 방법은 [추가 사용 조건(Additional Terms of Use)](https://go.microsoft.com/fwlink/?LinkId=151371) 및 [개인 정보 취급 방침](https://go.microsoft.com/fwlink/?LinkId=151372)을 참조하십시오.  
@@ -41,15 +41,16 @@ ms.locfileid: "66108076"
   
  지도를 포함하는 보고서 정의의 크기를 줄이기 위해 보고서 작성자는 다음과 같은 옵션을 하나 이상 사용할 수 있습니다.  
   
--   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너에서 공간 데이터 원본, 즉 ESRI 셰이프 파일을 보고서 서버 프로젝트에 추가합니다. 프로젝트를 배포하면 보고서와 함께 ESRI 셰이프 파일이 보고서 서버에 게시됩니다. 보고서 작성자가 지도 마법사를 실행하면 보고서 서버 프로젝트에서 공간 데이터 원본을 지정할 수 있으며 기본적으로 지도 요소는 보고서 정의에 포함되지 않습니다.  
+-   
+  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너에서 공간 데이터 원본, 즉 ESRI 셰이프 파일을 보고서 서버 프로젝트에 추가합니다. 프로젝트를 배포하면 보고서와 함께 ESRI 셰이프 파일이 보고서 서버에 게시됩니다. 보고서 작성자가 지도 마법사를 실행하면 보고서 서버 프로젝트에서 공간 데이터 원본을 지정할 수 있으며 기본적으로 지도 요소는 보고서 정의에 포함되지 않습니다.  
   
 -   보고서 작성기를 실행한 후 보고서 서버에서 셰이프 파일을 선택하여 공간 데이터 원본, 즉 ESRI 셰이프 파일을 추가합니다. 보고서 작성자가 지도 마법사를 실행하면 보고서 서버에서 공간 데이터 원본을 찾아 선택할 수 있으며 기본적으로 지도 요소는 보고서 정의에 포함되지 않습니다.  
   
 -   지도 데이터가 포함되어 있어야 할 경우에는 보고서에 필요한 지도 데이터만 포함되도록 뷰포트 중심 및 확대/축소 수준을 조정합니다.  
   
- 자세한 내용은 [Maps &#40;보고서 작성기 및 SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)합니다.  
+ 자세한 내용은 [&#40;보고서 작성기 및 SSRS&#41;를 매핑합니다 ](report-design/maps-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>관련 항목  
- [보고서 문제 해결: 맵 보고서&#40;보고서 작성기 및 SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>참고 항목  
+ [보고서 문제 해결: 보고서 작성기 및 SSRS&#41;&#40;지도 보고서](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

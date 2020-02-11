@@ -14,29 +14,29 @@ ms.assetid: c2ba486e-5e01-4e67-adb1-68511f5f0206
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e17ca12e0c8745dcad30a3e5ce2c9689b041e7d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67967489"
 ---
 # <a name="sqldriverconnect-paradox-driver"></a>SQLDriverConnect(Paradox 드라이버)
 > [!NOTE]  
->  이 항목에서는 Paradox 드라이버 관련 정보를 제공 합니다. 이 함수에 대 한 일반 정보에서 해당 항목을 참조 하세요 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)합니다.  
+>  이 항목에서는 Paradox 드라이버 관련 정보를 제공 합니다. 이 함수에 대 한 일반 정보는 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)에서 적절 한 항목을 참조 하세요.  
   
- **SQLDriverConnect** 데이터 소스 (DSN)를 만들지 않고 드라이버에 연결할 수 있습니다.  
+ **SQLDriverConnect** 를 사용 하면 DSN (데이터 원본)을 만들지 않고도 드라이버에 연결할 수 있습니다.  
   
- 다음 키워드는 모든 드라이버에 대 한 연결 문자열에 지원 됩니다. **DSN**하십시오 **DBQ**, 및 **FIL**합니다.  
+ 모든 드라이버에 대 한 연결 문자열에서 지원 되는 키워드는 **DSN**, **Dbq**및 **FIL**입니다.  
   
- 합니다 **PWD** 키워드도 지원 됩니다. PWD 키워드는 특수 문자를 포함 하지 않아야 (SQL_SPECIAL_CHARACTERS의를 참조 하세요 **SQLGetInfo** 반환 값).  
+ 또한 **PWD** 키워드가 지원 됩니다. PWD 키워드는 특수 문자를 포함할 수 없습니다 ( **SQLGetInfo** 반환 값의 SQL_SPECIAL_CHARACTERS 참조).  
   
- 암호로 보호 된 파일을 연 후에 사용자를 다른 사용자에 게 동일한 파일을 열에 허용 되지 않습니다.  
+ 사용자가 암호로 보호 된 파일을 연 후에는 다른 사용자가 동일한 파일을 열 수 없습니다.  
   
- 다음 표에서 각 드라이버에 연결 하는 데 필요한 최소 키워드를 보여 줍니다 하 고 사용 하는 키워드/값 쌍의 예가 **SQLDriverConnect**합니다. DRIVERID 값의 전체 목록을 참조 하세요 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)합니다.  
+ 다음 표에서는 각 드라이버에 연결 하는 데 필요한 최소 키워드를 보여 주며, **SQLDriverConnect**에 사용 되는 키워드/값 쌍의 예를 제공 합니다. DRIVERID 값의 전체 목록은 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)를 참조 하세요.  
   
 > [!NOTE]  
->  DBQ 또는 DefaultDir Paradox 드라이버에 대 한 지정 하지 않으면 드라이버는 현재 디렉터리에 연결 됩니다.  
+>  Paradox 드라이버에 대해 DBQ 또는 DefaultDir를 지정 하지 않으면 드라이버가 현재 디렉터리에 연결 됩니다.  
   
 |드라이버|필요한 키워드|예제|  
 |------------|-----------------------|-------------|  
-|Paradox|드라이버를 DriverID|Driver={Microsoft Paradox Driver (*.db )}; DBQ=c:\temp;DriverID=26|
+|Paradox|드라이버, DriverID|Driver = {Microsoft Paradox Driver (* db-library)}; DBQ = c:\temp; DriverID = 26|

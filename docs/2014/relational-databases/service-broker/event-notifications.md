@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1d7c74ee9963d93d289f589115712614a745dad1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68197773"
 ---
 # <a name="event-notifications"></a>이벤트 알림
@@ -59,7 +59,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |트리거|이벤트 알림|  
 |--------------|-------------------------|  
 |DML 트리거는 DML(데이터 조작 언어) 이벤트에 응답하고 DDL 트리거는 DDL(데이터 정의 언어) 이벤트에 응답합니다.|이벤트 알림은 DDL 이벤트와 SQL 추적 이벤트의 하위 집합에 응답합니다.|  
-|트리거는 Transact-SQL 또는 CLR(공용 언어 런타임) 관리 코드를 실행할 수 있습니다.|이벤트 알림은 코드를 실행하지 않는 보내는 대신 `xml` Service Broker 서비스에 메시지를 합니다.|  
+|트리거는 Transact-SQL 또는 CLR(공용 언어 런타임) 관리 코드를 실행할 수 있습니다.|이벤트 알림은 코드를 실행하지 않는 대신 Service Broker 서비스에 `xml` 메시지를 보냅니다.|  
 |트리거는 트리거를 시작하는 트랜잭션 범위 내에서 동기적으로 처리됩니다.|이벤트 알림은 비동기적으로 처리될 수 있으며 해당 이벤트 알림을 시작하는 트랜잭션 범위 내에서 실행되지 않습니다.|  
 |트리거의 소비자는 트리거를 실행하는 이벤트에 밀접하게 결합됩니다.|이벤트 알림의 소비자는 이벤트 알림을 시작하는 이벤트와 분리됩니다.|  
 |트리거는 로컬 서버에서 처리해야 합니다.|이벤트 알림은 원격 서버에서 처리할 수 있습니다.|  
@@ -67,7 +67,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |DML 트리거 이름은 스키마 범위입니다. DDL 트리거 이름은 데이터베이스 범위이거나 서버 범위입니다.|이벤트 알림 이름은 서버 또는 데이터베이스 범위입니다. QUEUE_ACTIVATION 이벤트에 대한 이벤트 알림의 범위는 특정 큐로 한정됩니다.|  
 |DML 트리거는 트리거가 적용되는 테이블과 동일한 소유자에 의해 소유됩니다.|큐에 대한 이벤트 알림의 소유자는 해당 이벤트 알림이 적용되는 개체의 소유자와 다를 수 있습니다.|  
 |트리거는 EXECUTE AS 절을 지원합니다.|이벤트 알림은 EXECUTE AS 절을 지원하지 않습니다.|  
-|DDL 트리거 이벤트 정보를 반환 하는 EVENTDATA 함수를 사용 하 여 캡처할 수 있습니다는 `xml` 데이터 형식입니다.|이벤트 알림을 보낼 `xml` Service Broker 서비스에 이벤트 정보입니다. 해당 정보는 EVENTDATA 함수와 같은 스키마 형식으로 지정됩니다.|  
+|DDL 트리거 이벤트 정보는 `xml` 데이터 형식을 반환 하는 EVENTDATA 함수를 사용 하 여 캡처할 수 있습니다.|이벤트 알림은 Service Broker `xml` 서비스로 이벤트 정보를 보냅니다. 해당 정보는 EVENTDATA 함수와 같은 스키마 형식으로 지정됩니다.|  
 |트리거의 메타데이터는 **sys.triggers** 및 **sys.server_triggers** 카탈로그 뷰에 포함됩니다.|이벤트 알림의 메타데이터는 **sys.event_notifications** 및 **sys.server_event_notifications** 카탈로그 뷰에 포함됩니다.|  
   
 ### <a name="event-notifications-vs-sql-trace"></a>이벤트 알림과 SQL 추적  
@@ -89,13 +89,13 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
   
 ## <a name="event-notification-tasks"></a>이벤트 알림 태스크  
   
-|태스크|항목|  
+|Task|항목|  
 |----------|-----------|  
 |이벤트 알림을 만들고 구현하는 방법에 대해 설명합니다.|[이벤트 알림 구현](implement-event-notifications.md)|  
 |원격 서버의 Service Broker로 메시지를 보내는 이벤트 알림에 대해 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화 보안을 구성하는 방법에 대해 설명합니다.|[이벤트 알림에 대한 대화 보안 구성](configure-dialog-security-for-event-notifications.md)|  
 |이벤트 알림에 대한 정보를 반환하는 방법에 대해 설명합니다.|[이벤트 알림에 대한 정보 가져오기](get-information-about-event-notifications.md)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [DDL 트리거](../triggers/ddl-triggers.md)   
  [DML 트리거](../triggers/dml-triggers.md)   
  [SQL 추적](../sql-trace/sql-trace.md)  

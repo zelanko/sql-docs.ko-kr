@@ -1,5 +1,5 @@
 ---
-title: sys.security_policies (TRANSACT-SQL) | Microsoft Docs
+title: sys. security_policies (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,26 +22,26 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d6eec5c523e2bdd321af145f19d0b5e7e7cba39b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135308"
 ---
-# <a name="syssecuritypolicies-transact-sql"></a>sys.security_policies (Transact SQL)
+# <a name="syssecurity_policies-transact-sql"></a>sys. security_policies (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  데이터베이스의 각 보안 정책에 대 한 행을 반환 합니다.  
+  데이터베이스의 각 보안 정책에 대해 하나의 행을 반환 합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |name|**sysname**|데이터베이스 내에서 고유한 보안 정책의 이름입니다.|  
 |object_id|**int**|보안 정책의 ID입니다.|  
 |principal_id|**int**|데이터베이스에 등록된 보안 정책 소유자의 ID입니다. 소유자가 스키마를 통해 결정되는 경우 NULL입니다.|  
 |schema_id|**int**|개체가 상주하는 스키마의 ID입니다.|  
 |parent_object_id|**int**|정책이 속하는 개체의 ID입니다. 0이어야 합니다.|  
-|type|**vachar(2)**|여야 **SP**합니다.|  
-|type_desc|**nvarchar(60)**|**SECURITY_POLICY**.|  
+|type|**vachar (2)**|**SP**여야 합니다.|  
+|type_desc|**nvarchar (60)**|**SECURITY_POLICY**.|  
 |create_date|**datetime**|보안 정책이 만들어진 UTC 날짜입니다.|  
 |modify_date|**datetime**|보안 정책이 마지막으로 수정된 UTC 날짜입니다.|  
 |is_ms_shipped|**bit**|항상 false입니다.|  
@@ -51,13 +51,13 @@ ms.locfileid: "68135308"
 |is_schemabinding_enabled|**bit**|보안 정책에 대 한 Schemabinding 상태:<br /><br /> 0 또는 NULL = 사용<br /><br /> 1 = 사용 안 함|  
   
 ## <a name="permissions"></a>사용 권한  
- 사용 하 여 보안 주체를 **ALTER ANY SECURITY POLICY** 이 카탈로그 뷰에 뿐만 아니라 사용 하 여 사용자의 모든 개체에 액세스할 권한이 **VIEW DEFINITION** 개체에서.  
+ **ALTER ANY SECURITY POLICY** 권한이 있는 보안 주체는이 카탈로그 뷰의 모든 개체 뿐만 아니라 개체에 대 한 **뷰 정의가** 있는 모든 사용자에 게 액세스할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [행 수준 보안](../../relational-databases/security/row-level-security.md)   
- [sys.security_predicates&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)   
+ [security_predicates &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)   
  [CREATE SECURITY POLICY&#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
- [보안 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;보안 카탈로그 뷰](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [보안 주체&#40;데이터베이스 엔진&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   

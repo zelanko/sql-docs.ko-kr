@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 38c29f8d70b3cc72baf81e2ae23082fe270ba573
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874034"
 ---
 # <a name="set-or-change-the-database-collation"></a>데이터베이스 데이터 정렬 설정 또는 변경
@@ -57,15 +57,17 @@ ms.locfileid: "62874034"
   
     -   저장 프로시저 및 사용자 정의 함수에 대한 모든 기존 `char`, `varchar`, `text`, `nchar`, `nvarchar` 또는 `ntext` 매개 변수와 스칼라 반환 값이 새 데이터 정렬로 변경됩니다.  
   
-    -   `char`, `varchar`, `text`, `nchar`, `nvarchar` 또는 `ntext` 시스템 데이터 형식 및 이러한 시스템 데이터 형식에 기반을 두는 모든 사용자 정의 데이터 형식이 새 기본 데이터 정렬로 변경됩니다.  
+    -   
+  `char`, `varchar`, `text`, `nchar`, `nvarchar` 또는 `ntext` 시스템 데이터 형식 및 이러한 시스템 데이터 형식에 기반을 두는 모든 사용자 정의 데이터 형식이 새 기본 데이터 정렬로 변경됩니다.  
   
 -   사용자 데이터베이스에서 새로 만든 새 개체의 데이터 정렬은 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) 문의 COLLATE 절을 사용하여 변경할 수 있습니다. 이 문은 기존 사용자 정의 테이블에 있는 열의 데이터 정렬은 변경하지 않습니다. 이러한 열은 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql)문의 COLLATE 절을 사용하여 변경할 수 있습니다.  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  CREATE DATABASE  
- **master** 데이터베이스의 CREATE DATABASE 권한이 있거나 CREATE ANY DATABASE 또는 ALTER ANY DATABASE 권한이 있어야 합니다.  
+ 
+  **master** 데이터베이스의 CREATE DATABASE 권한이 있거나 CREATE ANY DATABASE 또는 ALTER ANY DATABASE 권한이 있어야 합니다.  
   
  ALTER DATABASE  
  데이터베이스에 대한 ALTER 권한이 필요합니다.  
@@ -133,7 +135,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 정렬 및 유니코드 지원](collation-and-unicode-support.md)   
  [sys.fn_helpcollations&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)   
  [sys.databases&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   

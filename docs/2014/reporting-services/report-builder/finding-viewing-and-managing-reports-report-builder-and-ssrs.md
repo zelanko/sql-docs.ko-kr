@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6e2dc5a7ff69a61aae3d72fb9d9feca6abc3253c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107831"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>보고서 찾기, 보기 및 관리(보고서 작성기 및 SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "66107831"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="FindingAndViewingReportsRB30"></a> 보고서 작성기에서 보고서 찾기 및 보기  
+##  <a name="FindingAndViewingReportsRB30"></a>보고서 작성기에서 보고서 찾기 및 보기  
  작업할 보고서를 찾거나 보고서에 사용할 공유 데이터 원본, 이미지 또는 하위 보고서를 선택하려면 컴퓨터, 보고서 서버의 폴더 또는 Reporting Services와 통합된 SharePoint 사이트를 찾아봅니다.  
   
  보고서 서버의 보고서를 찾으려면 보고서 서버의 URL을 지정해야 하고 보고서 항목을 읽고 저장하려면 해당 폴더에 대한 적절한 권한이 있어야 합니다. 시스템 관리자에게 보고서 서버의 URL 및 적절한 권한을 요청하십시오.  
@@ -43,15 +43,15 @@ ms.locfileid: "66107831"
   
  보고서 작성기를 사용하면 다음 태스크를 수행할 수 있습니다.  
   
--   **보고서 찾기** 보고서를 찾을 때 보고서 작성기에 맞게 설계된 친숙한 Microsoft Office 스타일의 **파일 열기** 대화 상자를 사용할 수 있습니다. 내 보고서, 사이트 및 서버, 바탕 화면, 내 문서, 내 컴퓨터를 비롯한 보고서 서버나 파일 시스템의 폴더를 찾아볼 수 있습니다. 사이트 및 서버에는 최근에 사용한 서버 목록이 있습니다.  
+-   **보고서 찾기** 보고서를 찾을 때 보고서 작성기에 대해 사용자 지정 된 친숙 한 Microsoft Office 스타일의 **파일 열기** 대화 상자를 사용할 수 있습니다. 내 보고서, 사이트 및 서버, 바탕 화면, 내 문서, 내 컴퓨터를 비롯한 보고서 서버나 파일 시스템의 폴더를 찾아볼 수 있습니다. 사이트 및 서버에는 최근에 사용한 서버 목록이 있습니다.  
   
--   **공유 데이터 원본 찾기** 공유 데이터 원본을 찾을 때 최근에 사용한 목록에서 데이터 원본을 선택하거나 보고서와 동일한 보고서 서버에 있는 다른 폴더를 찾아볼 수 있습니다.  
+-   **공유 데이터 원본 찾기** 공유 데이터 원본을 찾을 때 최근에 사용한 목록에서 선택 하거나 보고서와 동일한 보고서 서버에 있는 다른 폴더를 찾아볼 수 있습니다.  
   
 -   **보고서 보기** 보고서를 만들거나 업데이트할 때 보고서 작성기에서 보고서를 미리 볼 수 있습니다. 보고서 작성기가 보고서 서버에 연결되어 있으면 보고서 서버가 보고서를 로드하여 처리하고, 그렇지 않으면 보고서가 로컬로 처리됩니다. 보고서 작성기의 보고서 뷰어가 렌더링된 보고서를 표시합니다.  
   
 
   
-##  <a name="ViewingAndManagingReportServer"></a> 보고서 서버에서 보고서 보기 및 관리  
+##  <a name="ViewingAndManagingReportServer"></a>보고서 서버에서 보고서 보기 및 관리  
  보고서 관리자를 사용하여 보고서 서버의 보고서를 보고 관리합니다. 서버의 폴더에서 보고서를 찾아 실행하여 브라우저에 표시한 다음 관리 태스크를 수행합니다.  
   
  보고서 관리자를 사용하면 다음 관리 태스크를 수행할 수 있습니다.  
@@ -80,7 +80,7 @@ ms.locfileid: "66107831"
  ![보고서 도구 모음](../media/htmlviewer-toolbar.gif "보고서 도구 모음")  
 보고서 도구 모음  
   
- 보고서를 실행한 후 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Excel 또는 PDF와 같은 다른 형식으로 내보낼 수 있습니다. 또한 쉼표로 구분된 값(CSV) 렌더링 확장 프로그램 등의 데이터 렌더링 확장 프로그램을 사용해 보고서를 내보낸 다음 CSV 데이터 파일을 다른 애플리케이션의 입력으로 사용할 수도 있습니다. 보고서 내보내기에 대 한 자세한 내용은 참조 하세요. [보고서 내보내기 &#40;보고서 작성기 및 SSRS&#41; ](export-reports-report-builder-and-ssrs.md) 하 고 [다른 파일 형식으로 보고서 내보내기 &#40;보고서 작성기 및 SSRS&#41; ](../export-a-report-as-another-file-type-report-builder-and-ssrs.md).  
+ 보고서를 실행한 후 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Excel 또는 PDF와 같은 다른 형식으로 내보낼 수 있습니다. 또한 쉼표로 구분된 값(CSV) 렌더링 확장 프로그램 등의 데이터 렌더링 확장 프로그램을 사용해 보고서를 내보낸 다음 CSV 데이터 파일을 다른 애플리케이션의 입력으로 사용할 수도 있습니다. 보고서를 내보내는 방법에 대 한 자세한 내용은 [보고서 작성기 및 ssrs&#41;&#40;보고서 내보내기](export-reports-report-builder-and-ssrs.md) 및 [다른 파일 형식으로 보고서 내보내기 &#40;보고서 작성기 및 ssrs&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md)을 참조 하세요.  
   
  보고서를 선택하여 실행하는 가장 쉬운 방법은 보고서 관리자를 연 다음 원하는 보고서를 검색하거나 직접 찾아가는 것입니다. 보고서를 여는 방법에 대한 단계별 지침은 [보고서 열기 및 닫기&#40;보고서 관리자&#41;](../reports/open-and-close-a-report-report-manager.md)를 참조하세요.  
   
@@ -91,49 +91,53 @@ ms.locfileid: "66107831"
   
 |옵션|결과|  
 |------------|------------|  
-|브라우저 창의**새로 고침** 단추|세션 캐시에 저장된 보고서를 표시합니다. 세션 캐시는 사용자가 보고서를 열 때 생성됩니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 는 보고서가 열려 있는 동안 일관된 보기 상태를 유지하기 위해 브라우저 세션을 사용합니다.|  
+|브라우저 창의 **새로 고침** 단추|세션 캐시에 저장된 보고서를 표시합니다. 세션 캐시는 사용자가 보고서를 열 때 생성됩니다. 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 는 보고서가 열려 있는 동안 일관된 보기 상태를 유지하기 위해 브라우저 세션을 사용합니다.|  
 |![보고서 도구 모음의 브라우저 새로 고침 단추](../media/htmlviewer-refresh.GIF "보고서 도구 모음의 브라우저 새로 고침 단추")|보고서 도구 모음에서 **새로 고침** 단추를 클릭하면 보고서 서버에서 쿼리가 다시 실행되며 보고서가 요청 시 실행되는 경우 보고서 데이터가 업데이트됩니다. 보고서가 캐시되었거나 스냅샷일 경우 **새고 고침** 단추를 클릭하면 보고서 서버 데이터베이스에 저장된 보고서가 표시됩니다.|  
 |Ctrl+F5 키 조합|보고서 도구 모음의 **새로 고침** 단추를 클릭할 때와 동일한 결과를 나타냅니다.|  
   
 
   
-##  <a name="ViewingAndManagingSharePointSite"></a> SharePoint 사이트에서 보고서 서버 항목 보기 및 관리  
+##  <a name="ViewingAndManagingSharePointSite"></a>SharePoint 사이트에서 보고서 서버 항목 보기 및 관리  
  시스템 관리자가 SharePoint 통합 모드에서 실행되도록 보고서 서버를 구성하면 SharePoint 사이트에서 보고서 및 기타 보고서 서버 항목을 보고 관리할 수 있습니다.  
   
- SharePoint 사이트에는 데이터 원본 속성, 보고서 기록, 보고서 처리 옵션, 일정, 구독 및 보고서 매개 변수를 설정하고 공유 일정을 만들 수 있는 페이지가 포함되어 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 다른 도구에서와 같은 방식으로 SharePoint 사이트에서 보고서 서버 항목을 관리할 수 있습니다.  
+ SharePoint 사이트에는 데이터 원본 속성, 보고서 기록, 보고서 처리 옵션, 일정, 구독 및 보고서 매개 변수를 설정하고 공유 일정을 만들 수 있는 페이지가 포함되어 있습니다. 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 다른 도구에서와 같은 방식으로 SharePoint 사이트에서 보고서 서버 항목을 관리할 수 있습니다.  
   
  애플리케이션 페이지에 액세스하려면 보고서의 드롭다운 메뉴에서 항목과 관련된 동작을 선택하거나 이전에 SharePoint 라이브러리에 추가했던 기타 보고서 서버 항목을 선택합니다. 항목 및 사용자 권한에 따라 보고서 작성기에서 보고서를 만들고 모델을 생성하며 모델 항목 보안을 설정할 수도 있습니다.  
   
- Reporting Services 및 SharePoint 기술에 대한 자세한 내용은 msdn.microsoft.com의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?LinkId=154888)에서 [보고서 서버의 구성 및 관리&#40;Reporting Services SharePoint 모드&#41;](../configure-administer-report-server-reporting-services-sharepoint-mode.md)를 참조하세요.  
+ Reporting Services 및 SharePoint 기술에 대한 자세한 내용은 msdn.microsoft.com의 [](../configure-administer-report-server-reporting-services-sharepoint-mode.md)온라인 설명서에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [보고서 서버의 구성 및 관리&#40;Reporting Services SharePoint 모드&#41;](https://go.microsoft.com/fwlink/?LinkId=154888)를 참조하세요.  
   
 ### <a name="finding-report-server-items-on-a-sharepoint-site"></a>SharePoint 사이트에서 보고서 서버 항목 찾기  
  속성을 설정하려면 먼저 항목을 찾아야 합니다. 보고서 서버 항목은 항상 라이브러리나 라이브러리 내의 폴더에 저장됩니다.  
   
- SharePoint 사이트에 액세스하면 찾아보기 페이지와 라이브러리 도구 탭이 표시됩니다. 찾아보기 페이지에는 라이브러리와 선택한 라이브러리의 콘텐츠가 나열됩니다. 보고서, 보고서 모델 및 라이브러리의 기타 항목을 보고 폴더를 탐색하고 사이트를 검색하여 항목을 찾을 수 있습니다.  
+ SharePoint 사이트에 액세스 하면 찾아보기 페이지와 라이브러리 도구 탭이 표시 됩니다. 찾아보기 페이지에는 선택한 라이브러리의 라이브러리와 콘텐츠가 나열 됩니다. 보고서, 보고서 모델 및 라이브러리의 기타 항목을 보고 폴더를 탐색하고 사이트를 검색하여 항목을 찾을 수 있습니다.  
   
  보고서 서버 항목을 SharePoint 사이트의 다른 항목과 구분하기 위해 아이콘을 사용하여 항목을 시각적으로 식별하거나 유형 위에 마우스 커서를 놓아 파일 확장명을 읽을 수 있습니다. 다음 이미지에서는 **보고서** 라이브러리의 폴더, 보고서 모델 및 보고서 정의를 보여 줍니다.  
   
  ![보고서 서버 항목이 있는 SharePoint 라이브러리](../media/rs-sharepointlibrary.gif "보고서 서버 항목이 있는 SharePoint 라이브러리")  
   
 ### <a name="viewing-reports"></a>보고서 보기  
- SharePoint 라이브러리에 업로드한 보고서 정의 파일(.rdl)은 Reporting Services 추가 기능을 통해 설치되는 보고서 뷰어 웹 파트를 통해 렌더링됩니다. .rdl 파일 연결은 추가 기능을 설치할 때 자동으로 정의됩니다. 보고서를 선택하면 보고서가 자동으로 웹 파트에서 열립니다. 보고서가 열리면 웹 파트에 포함되어 있는 보고서 도구 모음을 사용하여 페이지를 탐색하고 보고서에 대해 검색, 확대 및 인쇄 작업을 수행할 수 있습니다. 도구 모음에는 보고서를 Atom 데이터 피드로 내보내기 위한 데이터 피드로 내보내기 옵션과 보고서를 인쇄 및 구독하고 PDF, Word, Excel 등의 다른 형식으로 내보내기 위한 옵션이 있는 **동작** 메뉴가 있습니다. **동작** 메뉴에서 보고서 작성기를 통해 보고서를 열 수도 있습니다. 다음 이미지에서는 보고서와 **동작** 메뉴에 있는 내보내기 옵션의 옵션을 보여 줍니다.  
+ SharePoint 라이브러리에 업로드한 보고서 정의 파일(.rdl)은 Reporting Services 추가 기능을 통해 설치되는 보고서 뷰어 웹 파트를 통해 렌더링됩니다. .rdl 파일 연결은 추가 기능을 설치할 때 자동으로 정의됩니다. 보고서를 선택하면 보고서가 자동으로 웹 파트에서 열립니다. 보고서가 열리면 웹 파트에 포함되어 있는 보고서 도구 모음을 사용하여 페이지를 탐색하고 보고서에 대해 검색, 확대 및 인쇄 작업을 수행할 수 있습니다. 도구 모음에는 보고서를 Atom 데이터 피드로 내보내기 위한 데이터 피드로 내보내기 옵션과 보고서를 인쇄 및 구독하고 PDF, Word, Excel 등의 다른 형식으로 내보내기 위한 옵션이 있는 **동작** 메뉴가 있습니다. 
+  **동작** 메뉴에서 보고서 작성기를 통해 보고서를 열 수도 있습니다. 다음 이미지에서는 보고서와 **동작** 메뉴에 있는 내보내기 옵션의 옵션을 보여 줍니다.  
   
  ![rs_SharePointRunReport](../media/rs-sharepointrunreport.gif "rs_SharePointRunReport")  
   
 ### <a name="managing-items-through-actions"></a>동작을 통한 항목 관리  
- 관리 태스크는 각 항목에 대한 드롭다운 메뉴의 동작을 통해 지원됩니다. 사용 권한에 따라 각 항목에는 SharePoint 라이브러리에 저장되어 있는 항목에 대한 표준 공통 동작이 있습니다. 이러한 동작의 예로는**속성 보기** 및 **속성 편집** 을 들 수 있습니다. 사용자 지정 동작은 항목별 관리 기능을 제공합니다. 다음 이미지에서는 보고서 정의에 대한 동작을 보여 줍니다. 보고서 정의에 대한 사용자 지정 동작의 예로는 **구독 관리** 와 **처리 옵션 관리**를 들 수 있습니다.  
+ 관리 태스크는 각 항목에 대한 드롭다운 메뉴의 동작을 통해 지원됩니다. 사용 권한에 따라 각 항목에는 SharePoint 라이브러리에 저장되어 있는 항목에 대한 표준 공통 동작이 있습니다. **속성 보기** 및 **속성 편집** 은 일반적인 동작의 예입니다. 사용자 지정 동작은 항목별 관리 기능을 제공합니다. 다음 이미지에서는 보고서 정의에 대한 동작을 보여 줍니다. 보고서 정의에 대한 사용자 지정 동작의 예로는 **구독 관리** 와 **처리 옵션 관리**를 들 수 있습니다.  
   
  ![보고서 서버 항목에 대한 메뉴 명령](../media/rs-ecbforrsitems.gif "보고서 서버 항목에 대한 메뉴 명령")  
   
 
   
-##  <a name="DeskTop"></a> 데스크톱 응용 프로그램에서 보고서 보기  
+##  <a name="DeskTop"></a>데스크톱 응용 프로그램에서 보고서 보기  
  브라우저 대신 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Excel과 같은 데스크톱 애플리케이션을 보고서 뷰어로 사용할 수 있습니다. 이렇게 하려면 데스크톱 애플리케이션 형식과 공유 폴더 대상을 지정하는 구독을 정의합니다. 그러면 보고서 서버에서 보고서를 애플리케이션 파일로 생성하고 파일 이름 확장명을 추가한 후 하드 디스크에 파일로 저장합니다. 그런 다음 브라우저 대신 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Excel 또는 다른 애플리케이션을 사용하여 보고서를 볼 수 있습니다.  
   
 
   
-##  <a name="AboutUserSessions"></a> 사용자 세션 정보  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 는 브라우저 세션을 사용하여 보고서를 보는 동안 일관성을 유지합니다. 세션은 인증된 사용자가 아니라 브라우저 연결을 기반으로 합니다. 사용자가 새 브라우저 창에서 보고서를 열 때마다 세션이 새로 만들어집니다. 브라우저 세션이 구성되면 나중에 보고서가 보고서 서버에서 수정되더라도 세션이 시작될 때 열었던 보고서 버전으로 계속 작업하게 됩니다. 예를 들어 보고서를 오후 11시에 열면 보고서 작성자가 같은 보고서를 오후 11시 1분에 다시 게시하더라도 세션에는 오후 11시에 열었던 버전이 유지됩니다.  
+##  <a name="AboutUserSessions"></a>사용자 세션 정보  
+ 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 는 브라우저 세션을 사용하여 보고서를 보는 동안 일관성을 유지합니다. 세션은 인증된 사용자가 아니라 브라우저 연결을 기반으로 합니다. 사용자가 새 브라우저 창에서 보고서를 열 때마다 세션이 새로 만들어집니다. 브라우저 세션이 구성되면 나중에 보고서가 보고서 서버에서 수정되더라도 세션이 시작될 때 열었던 보고서 버전으로 계속 작업하게 됩니다. 예를 들어 보고서를 오후 11시에 열면 보고서 작성자가 같은 보고서를 오후 11시 1분에 다시 게시하더라도 세션에는 오후 11시에 열었던 버전이 유지됩니다.  
   
  브라우저의 **새로 고침** 단추를 사용하여 같은 세션 내에서 보고서를 새로 고치면 원래 세션 버전의 보고서가 표시됩니다. 보고서 도구 모음의 **새로 고침** 단추를 사용하여 요청 시 실행 보고서를 새로 고치면 보고서가 다시 실행되고 새 데이터가 있는 경우 해당 데이터가 표시됩니다.  
   
@@ -144,16 +148,16 @@ ms.locfileid: "66107831"
 ##  <a name="InThisSection"></a> 섹션 내용  
  다음 항목에서는 보고서 보기 및 관리에 대한 추가 정보를 제공합니다.  
   
- [찾기 및 보고서 관리자에서 보고서 보기 &#40;보고서 작성기 및 SSRS&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+ [보고서 관리자 &#40;보고서 작성기 및 SSRS에서 보고서 찾기 및 보기&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
  보고서 관리자를 사용하여 보고서를 찾고 보고 관리하는 방법에 대해 설명합니다.  
   
- [브라우저를 사용하여 보고서 찾기 및 보기&#40;보고서 작성기 및 SSRS&#41;](finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)  
+ [브라우저 &#40;보고서 작성기 및 SSRS를 사용 하 여 보고서 찾기 및 보기&#41;](finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)  
  URL을 사용하여 보고서를 찾고 보는 방법에 대해 설명합니다.  
   
- [보고서 및 기타 항목 검색&#40;보고서 작성기 및 SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)  
+ [보고서 작성기 및 SSRS &#40;보고서 및 기타 항목 검색&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)  
  보고서 관리자의 검색 기능을 사용하여 보고서 서버에서 항목을 찾는 방법에 대해 설명합니다.  
   
- [내 보고서 사용&#40;보고서 작성기 및 SSRS&#41;](using-my-reports-report-builder-and-ssrs.md)  
+ [내 보고서 &#40;보고서 작성기 및 SSRS를 사용 하 여&#41;](using-my-reports-report-builder-and-ssrs.md)  
  내 보고서 폴더를 개인 작업 영역으로 사용하여 소유한 보고서를 저장하고 작업하는 방법에 대해 설명합니다.  
   
  [보고서 작성기에서 보고서 미리 보기](previewing-reports-in-report-builder.md)  
@@ -161,9 +165,9 @@ ms.locfileid: "66107831"
   
 
   
-## <a name="see-also"></a>관련 항목  
- [보고서 저장&#40;보고서 작성기&#41;](saving-reports-report-builder.md)   
- [SQL Server 2014의에서 보고서 작성기](report-builder-in-sql-server-2016.md)   
+## <a name="see-also"></a>참고 항목  
+ [보고서 저장 &#40;보고서 작성기&#41;](saving-reports-report-builder.md)   
+ [2014 SQL Server의 보고서 작성기](report-builder-in-sql-server-2016.md)   
  [설치, 제거 및 보고서 작성기 지원](../install-uninstall-and-report-builder-support.md)  
   
   

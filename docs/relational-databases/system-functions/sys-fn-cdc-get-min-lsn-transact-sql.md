@@ -1,5 +1,5 @@
 ---
-title: sys.fn_cdc_get_min_lsn (TRANSACT-SQL) | Microsoft Docs
+title: sys. fn_cdc_get_min_lsn (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,18 +21,18 @@ ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 52c6b8d2db395560524c2a9fa46aca680ca9eea2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046405"
 ---
-# <a name="sysfncdcgetminlsn-transact-sql"></a>sys.fn_cdc_get_min_lsn(Transact-SQL)
+# <a name="sysfn_cdc_get_min_lsn-transact-sql"></a>sys.fn_cdc_get_min_lsn(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  지정 된 캡처 인스턴스의 start_lsn 열 값을 반환 합니다 [cdc.change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md) 시스템 테이블입니다. 이 값은 캡처 인스턴스에 대한 유효성 간격의 하위 엔드포인트를 나타냅니다.  
+  [Change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md) 시스템 테이블에서 지정 된 캡처 인스턴스에 대 한 start_lsn 열 값을 반환 합니다. 이 값은 캡처 인스턴스에 대한 유효성 간격의 하위 엔드포인트를 나타냅니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,10 +43,10 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
   
 ## <a name="arguments"></a>인수  
  **'** *capture_instance_name* **'**  
- 캡처 인스턴스의 이름입니다. *capture_instance_name* 됩니다 **sysname**합니다.  
+ 캡처 인스턴스의 이름입니다. *capture_instance_name* 는 **sysname**입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **binary(10)**  
+ **binary (10)**  
   
 ## <a name="remarks"></a>설명  
  캡처 인스턴스가 없거나 호출자가 캡처 인스턴스와 관련된 변경 데이터에 액세스할 권한이 없는 경우 0x00000000000000000000을 반환합니다.  
@@ -59,7 +59,7 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
 ## <a name="examples"></a>예  
   
 ### <a name="a-returning-the-minimum-lsn-value-for-a-specified-capture-instance"></a>A. 지정된 캡처 인스턴스에 대한 최소 LSN 값 반환  
- 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `HumanResources_Employee` 캡처 인스턴스에 대한 최소 LSN 값을 반환합니다.  
+ 다음 예에서는 `HumanResources_Employee` 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 캡처 인스턴스에 대한 최소 LSN 값을 반환합니다.  
   
 ```  
 USE AdventureWorks2-12;  
@@ -68,7 +68,7 @@ SELECT sys.fn_cdc_get_min_lsn ('HumanResources_Employee')AS min_lsn;
   
 ```  
   
-### <a name="b-verifying-the-low-endpoint-of-a-query-range"></a>2\. 쿼리 범위의 하위 엔드포인트 확인  
+### <a name="b-verifying-the-low-endpoint-of-a-query-range"></a>B. 쿼리 범위의 하위 엔드포인트 확인  
  다음 예에서는 `sys.fn_cdc_get_min_lsn`에서 반환된 최소 LSN 값을 사용하여 변경 데이터 쿼리에 대해 제안된 하위 엔드포인트가 `HumanResources_Employee` 캡처 인스턴스의 현재 시간대에 유효한지 확인합니다. 이 예에서는 캡처 인스턴스에 대한 이전 상위 엔드포인트 LSN이 저장되었고 `@save_to_lsn` 변수를 설정하는 데 사용할 수 있다고 가정합니다. 설명을 위해 오류 처리 섹션이 실행되도록 예의 `@save_to_lsn`은 0x000000000000000000으로 설정되어 있습니다.  
   
 ```  
@@ -94,8 +94,8 @@ ELSE
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [sys.fn_cdc_get_max_lsn &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [fn_cdc_get_max_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
  [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   
   

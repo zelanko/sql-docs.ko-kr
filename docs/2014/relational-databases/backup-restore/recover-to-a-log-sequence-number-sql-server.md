@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 835057cdef6b7d2a336b64480515a5046cfde070
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875766"
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>로그 시퀀스 번호로 복구(SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "62875766"
   
  트랜잭션 로그의 모든 레코드는 LSN(로그 시퀀스 번호)으로 고유하게 식별됩니다. LSN은 변경이 발생한 순서에 따라 번호가 매겨집니다. 예를 들어 LSN2가 LSN1보다 큰 경우 로그 레코드 LSN1에 해당하는 변경이 먼저 발생하고 로그 레코드 LSN2에 해당하는 변경이 이후에 발생한 것입니다.  
   
- 중요한 이벤트가 발생한 로그 레코드의 LSN은 올바른 복원 시퀀스를 생성하는 데 도움이 될 수 있습니다. LSN은 정렬되기 때문에 같음 또는 같지 않음을 확인할 수 있습니다. 즉, **\<** , **>** , **=** , **\<=** , **>=** 과 같은 비교가 가능합니다. 이러한 비교 방식은 복원 시퀀스를 만들 때 유용하게 사용할 수 있습니다.  
+ 중요한 이벤트가 발생한 로그 레코드의 LSN은 올바른 복원 시퀀스를 생성하는 데 도움이 될 수 있습니다. Lsn은 정렬 되기 때문에 같음 및 같지 않음을 비교할 수 있습니다 **\<**( **>** **=** ** \< **즉,,,,, **>=**). 이러한 비교 방식은 복원 시퀀스를 만들 때 유용하게 사용할 수 있습니다.  
   
 > [!NOTE]  
 >  LSN은 `numeric`(25,0) 데이터 형식의 값입니다. 더하기나 빼기와 같은 산술 연산은 의미가 없으며 LSN과 함께 사용하면 안 됩니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "62875766"
   
 -   [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql)  
   
--   [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql); [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)  
+-   [sys. database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql); [sys. master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)  
   
 -   [RESTORE HEADERONLY](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)  
   
@@ -62,13 +62,14 @@ ms.locfileid: "62875766"
 >  LSN은 일부 메시지 텍스트에도 나타납니다.  
   
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>LSN으로 복원하기 위한 Transact-SQL 구문  
- [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) 문을 사용하여 다음과 같은 LSN에서 또는 이전에 즉시 중지할 수 있습니다.  
+ 
+  [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) 문을 사용하여 다음과 같은 LSN에서 또는 이전에 즉시 중지할 수 있습니다.  
   
--   WITH STOPATMARK **='** lsn: _<lsn_number>_ **'** 절을 사용합니다. 여기서 lsn: *\<lsnNumber>* 는 지정한 LSN이 포함된 로그 레코드가 복구 지점이 되도록 지정하는 문자열입니다.  
+-   WITH stopatmark **= '** lsn:_<lsn_number>_ **'** 절을 사용 합니다. 여기서 lsn:*\<lsnnumber>* 는 지정 된 lsn이 포함 된 로그 레코드가 복구 지점이 되도록 지정 하는 문자열입니다.  
   
      STOPATMARK는 복구 중지 지점을 나타내며 지정된 로그 레코드를 포함하는 지점까지 롤포워드됩니다.  
   
--   WITH STOPBEFOREMARK **='** lsn: _<lsn_number>_ **'** 절을 사용합니다. 여기서 lsn: *\<lsnNumber>* 는 지정한 LSN 번호가 포함된 로그 레코드 바로 앞의 로그 레코드가 복구 지점이 되도록 지정하는 문자열입니다.  
+-   WITH STOPBEFOREMARK **= '** lsn:_<lsn_number>_ **'** 절을 사용 합니다. 여기서 lsn:*\<lsnnumber>* 는 지정 된 lsn 번호가 포함 된 로그 레코드 바로 앞의 로그 레코드가 복구 지점이 되도록 지정 하는 문자열입니다.  
   
      STOPBEFOREMARK는 LSN에 롤포워드하고 롤포워드의 해당 로그 레코드를 제외합니다.  
   
@@ -83,7 +84,7 @@ WITH STOPATMARK = 'lsn:15000000040000037'
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [데이터베이스 백업 복원 &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
@@ -97,9 +98,9 @@ GO
   
 -   [SQL Server 데이터베이스를 지정 시간으로 복원&#40;전체 복구 모델&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [트랜잭션 로그 백업 적용&#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [트랜잭션 로그&#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   
- [복원&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
+ [RESTORE&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
   

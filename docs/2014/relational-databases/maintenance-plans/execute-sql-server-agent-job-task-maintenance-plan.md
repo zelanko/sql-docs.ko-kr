@@ -15,14 +15,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 33f037f4d82cbf5bbdebde01a5c4492128ecc8ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206022"
 ---
 # <a name="execute-sql-server-agent-job-task-maintenance-plan"></a>SQL Server 에이전트 작업 실행 태스크(유지 관리 계획)
-  **SQL Server 에이전트 작업 실행 태스크** 대화 상자를 사용하여 유지 관리 계획 내의 Microsoft SQL Server 에이전트 작업을 실행할 수 있습니다. 선택한 연결에 SQL Server 에이전트 작업이 없으면 이 옵션을 사용할 수 없습니다.  
+  **SQL Server 에이전트 작업 실행 태스크** 대화 상자를 사용 하 여 유지 관리 계획 내에서 Microsoft SQL Server 에이전트 작업을 실행할 수 있습니다. 선택한 연결에 SQL Server 에이전트 작업이 없으면 이 옵션을 사용할 수 없습니다.  
   
  이 태스크에서는 **sp_start_job** 문을 사용합니다.  
   
@@ -33,10 +33,10 @@ ms.locfileid: "68206022"
  **새로 만들기**  
  이 태스크를 수행할 때 사용할 새 서버 연결을 만듭니다. 아래에서는 **새 연결** 대화 상자에 대해 설명합니다.  
   
- **사용 가능한 SQL Server 에이전트 작업**  
+ **사용 가능한 SQL 에이전트 작업**  
  실행할 작업을 선택합니다. 표에는 작업을 식별할 수 있는 **작업 이름** 과 **설명** 이 표시됩니다.  
   
- **T-SQL 보기**  
+ **T-sql 보기**  
  선택한 옵션을 기반으로 서버에 대해 수행한 이 태스크의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 표시합니다.  
   
 > [!NOTE]  
@@ -55,11 +55,12 @@ ms.locfileid: "68206022"
  **서버 로그온 정보 입력**  
  서버에 대한 인증 방법을 지정합니다.  
   
- **Windows NT 통합 보안 사용**  
+ **Windows 통합 보안 사용**  
  Microsoft Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결합니다.  
   
  **특정 사용자 이름 및 암호 사용**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다. 이 옵션은 사용할 수 없습니다.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다. 이 옵션은 사용할 수 없습니다.  
   
  **사용자 이름**  
  인증 시 사용할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 입력합니다. 이 옵션은 사용할 수 없습니다.  
@@ -67,9 +68,9 @@ ms.locfileid: "68206022"
  **암호**  
  인증 시 사용할 암호를 입력합니다. 이 옵션은 사용할 수 없습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [sp_add_job&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)   
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;sp_add_job &#40;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)   
  [작업 만들기](../../ssms/agent/create-a-job.md)   
- [sp_start_job&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql)  
+ [Transact-sql&#41;sp_start_job &#40;](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql)  
   
   

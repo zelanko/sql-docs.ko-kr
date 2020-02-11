@@ -1,5 +1,5 @@
 ---
-title: '3단원: 모델 추가 및 처리 | Microsoft Docs'
+title: '3 단원: 모델 추가 및 처리 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2596ed7eb2d714ff0790daa013a5e47ecd134b38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62653712"
 ---
 # <a name="lesson-3-adding-and-processing-models"></a>3단원: 모델 추가 및 처리
@@ -26,20 +26,20 @@ ms.locfileid: "62653712"
   
  이 단원에서는 다음 태스크를 다룹니다.  
   
- [대상된 메일 구조에 새 모델 추가 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/adding-new-models-to-the-targeted-mailing-structure-basic-data-mining-tutorial.md)  
+ [&#40;기본 데이터 마이닝 자습서를 대상으로 지정 된 메일링 구조에 새 모델 추가&#41;](../../2014/tutorials/adding-new-models-to-the-targeted-mailing-structure-basic-data-mining-tutorial.md)  
   
- [대상된 메일 구조에서 모델 처리 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/processing-models-in-the-targeted-mailing-structure-basic-data-mining-tutorial.md)  
+ [기본 데이터 마이닝 자습서 &#40;대상 메일 구조에서 모델 처리&#41;](../../2014/tutorials/processing-models-in-the-targeted-mailing-structure-basic-data-mining-tutorial.md)  
   
 ## <a name="first-task-in-lesson"></a>단원의 첫 번째 태스크  
- [대상된 메일 구조에 새 모델 추가 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/adding-new-models-to-the-targeted-mailing-structure-basic-data-mining-tutorial.md)  
+ [&#40;기본 데이터 마이닝 자습서를 대상으로 지정 된 메일링 구조에 새 모델 추가&#41;](../../2014/tutorials/adding-new-models-to-the-targeted-mailing-structure-basic-data-mining-tutorial.md)  
   
 ## <a name="previous-lesson"></a>이전 단원  
- [2단원: 타겟된 메일링 구조 구축 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
+ [2 단원: 기본 데이터 마이닝 자습서 &#40;대상 메일링 구조 구축&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>다음 단원  
- [4단원: 타겟된 메일링 모델 탐색 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
+ [4 단원: 기본 데이터 마이닝 자습서 &#40;대상 메일링 모델 탐색&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>관련 항목  
- [마이닝 모델 구조 & #40;에 추가 Analysis Services-데이터 마이닝 & #41;](../../2014/analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)  
+## <a name="see-also"></a>참고 항목  
+ [Analysis Services 데이터 마이닝 &#40;구조에 마이닝 모델을 추가&#41;](../../2014/analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)  
   
   

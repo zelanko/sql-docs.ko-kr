@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 2d89e80a89df53e85ef8d2bf53c369d9e4dc0d49
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401159"
 ---
 # <a name="error-messages-in-parallel-data-warehouse"></a>병렬 데이터 웨어하우스의 오류 메시지
@@ -27,7 +27,7 @@ PDW (병렬 데이터 웨어하우스) 오류 메시지는 PDW 구성 요소에�
   
 각 필드에 대 한 가능한 값은 다음과 같습니다.  
   
-|필드|설명|예제|  
+|필드|Description|예제|  
 |---------|---------------|-----------|  
 |*Error_Indicator*|문제에 대해 사용자에 게 경고 하는 "오류" 또는 기타 텍스트입니다.|오류|  
 |*SQL_State_Code*|ODBC 사양에 따른 SQL 상태 코드입니다. 드라이버는 응용 프로그램에 메시지를 반환할 때마다 적절 한 SQL 상태 코드를 생성 합니다. "Microsoft" 텍스트는 오류의 원인을 나타냅니다.|42000|  

@@ -1,5 +1,5 @@
 ---
-title: 차원 (Analysis Services)에 대 한 권한 부여 | Microsoft Docs
+title: 차원에 대 한 권한 부여 (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3efce85f27db9d0695ea56e9940ab563ed40537a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074956"
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>차원에 대한 권한 부여(Analysis Services)
@@ -45,33 +45,37 @@ ms.locfileid: "66074956"
 ## <a name="set-permissions-on-a-database-dimension"></a>데이터베이스 차원에 대한 권한 설정  
  데이터베이스 차원은 데이터베이스 내의 독립적인 개체로, 동일한 모델 내에서 차원 재사용이 가능합니다. 모델에서 여러 번 사용되는 DATE 데이터베이스 차원의 예로 주문일, 운송일 및 기한 큐브 차원을 생각해 볼 수 있습니다. 큐브 및 데이터베이스 차원은 데이터베이스의 피어 개체이므로, 각 개체에 대해 독립적으로 처리 권한을 설정할 수 있습니다.  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 연결하고 개체 탐색기에서 해당 데이터베이스에 대한 **역할** 을 확장한 다음 데이터베이스 역할을 클릭하거나 새 데이터베이스 역할을 만듭니다.  
+1.  에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]인스턴스에 연결 하 고 개체 탐색기에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]해당 데이터베이스에 대 한 **역할** 을 확장 한 다음 데이터베이스 역할을 클릭 하거나 새 데이터베이스 역할을 만듭니다.  
   
-2.  **차원** 창에서 차원 집합은 **모든 데이터베이스 차원**으로 설정해야 합니다.  
+2.  
+  **차원** 창에서 차원 집합은 **모든 데이터베이스 차원**으로 설정해야 합니다.  
   
      기본적으로 권한은 **읽기**로 설정됩니다.  
   
-     **읽기/쓰기** 가 사용 가능하지만 이 권한을 사용하지 않는 것이 좋습니다. **읽기/쓰기** 는 더 이상 사용되지 않는 차원 쓰기 저장 시나리오에 사용됩니다. 참조 [SQL Server 2014에서에서 사용 되지 않는 Analysis Services 기능](../deprecated-analysis-services-features-in-sql-server-2014.md)합니다.  
+     
+  **읽기/쓰기** 가 사용 가능하지만 이 권한을 사용하지 않는 것이 좋습니다. **읽기/쓰기** 는 더 이상 사용 되지 않는 차원 쓰기 저장 시나리오에 사용 됩니다. [SQL Server 2014에서 사용 되지 않는 Analysis Services 기능을](../deprecated-analysis-services-features-in-sql-server-2014.md)참조 하세요.  
   
      선택적으로, **정의 읽기** 및 **처리** 권한이 아직 데이터베이스 수준으로 설정되지 않은 경우 개별 차원 개체에 대해 이러한 권한을 설정할 수 있습니다. 자세한 내용은 [처리 권한 부여&#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md) 및 [개체 메타데이터에 대한 정의 읽기 권한 부여&#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)를 참조하세요.  
   
 ## <a name="set-permissions-on-a-cube-dimension"></a>큐브 차원에 대한 권한 설정  
  큐브 차원은 큐브에 추가된 데이터베이스 차원입니다. 따라서 연결된 측정값 그룹에 구조적으로 종속됩니다. 이러한 개체를 개별적으로 처리할 수 있지만 권한 부여의 측면에서 큐브 및 큐브 차원을 단일 개체로 처리하는 것이 좋습니다.  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 연결하고 개체 탐색기에서 해당 데이터베이스에 대한 **역할** 을 확장한 다음 데이터베이스 역할을 클릭하거나 새 데이터베이스 역할을 만듭니다.  
+1.  에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]인스턴스에 연결 하 고 개체 탐색기에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]해당 데이터베이스에 대 한 **역할** 을 확장 한 다음 데이터베이스 역할을 클릭 하거나 새 데이터베이스 역할을 만듭니다.  
   
-2.  에 **차원** 차원 설정 창에서 변경 \<큐브-이름 > **큐브 차원**합니다.  
+2.  **차원** 창에서 차원 집합을 큐브 이름> \< **큐브 차원**으로 변경 합니다.  
   
-     기본적으로 권한은 해당 데이터베이스 차원에서 상속됩니다. **상속** 확인란 선택을 취소하여 **읽기** 에서 **읽기/쓰기**로 사용 권한을 변경합니다. **읽기/쓰기**를 사용하기 전에 앞의 섹션에 나와 있는 참고 사항을 읽어보시기 바랍니다.  
+     기본적으로 권한은 해당 데이터베이스 차원에서 상속됩니다. 
+  **상속** 확인란 선택을 취소하여 **읽기** 에서 **읽기/쓰기**로 사용 권한을 변경합니다. 
+  **읽기/쓰기**를 사용하기 전에 앞의 섹션에 나와 있는 참고 사항을 읽어보시기 바랍니다.  
   
 > [!IMPORTANT]  
 >  AMO(Analysis Management Object)를 사용하여 데이터베이스 역할의 사용 권한을 구성하면 큐브의 DimensionPermission 특성에 있는 큐브 차원에 대한 모든 참조가 데이터베이스의 DimensionPermission 특성으로부터 사용 권한 상속을 분리합니다. AMO에 대한 자세한 내용은 [AMO&#40;Analysis Management Objects&#41;를 사용하여 개발](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [역할 및 권한&#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
- [큐브 또는 모델 권한 부여&#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
- [데이터 마이닝 구조 및 모델에 대한 권한 부여&#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [데이터 & #40; 차원에 대 한 사용자 지정 액세스 부여 Analysis Services & #41;](grant-custom-access-to-dimension-data-analysis-services.md)   
- [셀 데이터에 대한 사용자 지정 액세스 권한 부여&#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
+## <a name="see-also"></a>참고 항목  
+ [역할 및 사용 권한 &#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
+ [큐브 또는 모델 권한 부여 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
+ [데이터 마이닝 구조 및 모델 &#40;Analysis Services&#41;에 대 한 권한을 부여 합니다.](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [차원 데이터 &#40;Analysis Services&#41;에 대 한 사용자 지정 액세스 권한 부여](grant-custom-access-to-dimension-data-analysis-services.md)   
+ [셀 데이터 &#40;Analysis Services&#41;에 대 한 사용자 지정 액세스 권한 부여](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

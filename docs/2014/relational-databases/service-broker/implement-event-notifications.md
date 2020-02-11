@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8c5b17b45b50634806c60e5064efc6ebd9d03f8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68197750"
 ---
 # <a name="implement-event-notifications"></a>이벤트 알림 구현
@@ -86,7 +86,7 @@ TO SERVICE 'NotifyService', '8140a771-3c4b-4479-8ac0-81008ab17984' ;
 >   
 >  `CREATE TABLE t1 (col1 int)`  
 >   
->  이 경우 이벤트 알림은 두 번 발생 합니다. CREATE_SCHEMA 이벤트가 발생할 때 각각 한 번씩, 시간 및 CREATE_TABLE 이벤트가 발생할 때 다시 합니다. CREATE_SCHEMA 이벤트 및 해당하는 CREATE SCHEMA 정의의 &lt;schema_element&gt; 텍스트 둘 다에 대해 이벤트 알림이 생성되는 것을 방지하거나 필요 없는 이벤트 데이터의 캡처를 방지하는 논리를 애플리케이션에 구축하는 것이 좋습니다.  
+>  이 경우 이벤트 알림은 CREATE_SCHEMA 이벤트가 발생할 때와 CREATE_TABLE 이벤트가 발생할 때 각각 한 번씩, 두 번 발생합니다. CREATE_SCHEMA 이벤트 및 해당하는 CREATE SCHEMA 정의의 &lt;schema_element&gt; 텍스트 둘 다에 대해 이벤트 알림이 생성되는 것을 방지하거나 필요 없는 이벤트 데이터의 캡처를 방지하는 논리를 애플리케이션에 구축하는 것이 좋습니다.  
   
  **이벤트 알림을 만들려면**  
   
@@ -96,7 +96,7 @@ TO SERVICE 'NotifyService', '8140a771-3c4b-4479-8ac0-81008ab17984' ;
   
 -   [DROP EVENT NOTIFICATION&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-event-notification-transact-sql)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [이벤트 알림에 대한 정보 가져오기](event-notifications.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql)  
   

@@ -18,56 +18,56 @@ ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4932d3349c2d4e2948ddd28d9df3a30424064dcb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920383"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF, EOF 속성(ADO)
--   **BOF** 레코드의 현재 위치에서 첫 번째 레코드 앞에 있는 나타냅니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  
+-   **BOF** 현재 레코드 위치가 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 첫 번째 레코드 앞에 있음을 나타냅니다.  
   
--   **EOF** 레코드의 현재 위치에 있는 마지막 레코드 뒤에 오는 나타냅니다는 **레코드 집합** 개체입니다.  
+-   **EOF** 현재 레코드 위치가 **레코드 집합** 개체의 마지막 레코드 뒤에 있음을 나타냅니다.  
   
-## <a name="return-value"></a>반환 값  
- 합니다 **BOF** 하 고 **EOF** 속성 반환 **부울** 값입니다.  
+## <a name="return-value"></a>Return Value  
+ **BOF** 및 **EOF** 속성은 **부울** 값을 반환 합니다.  
   
 ## <a name="remarks"></a>설명  
- 사용 하 여는 **BOF** 및 **EOF** 속성을 확인 하는지 여부를 **레코드 집합** 개체에 레코드 또는 한도 범위를 벗어났는지 여부를 **레코드 집합**  레코드 간을 이동할 때 개체입니다.  
+ **BOF** 및 **EOF** 속성을 사용 하 여 레코드에서 레코드로 이동할 때 **레코드 집합 개체** 의 제한을 초과 했는지 여부를 확인할 수 **** 있습니다.  
   
- 합니다 **BOF** 속성이 반환 **True** (-1) 현재 레코드 위치가 첫 번째 레코드 앞 이면 및 **False** 현재 레코드 위치가 첫 번째 이후인 경우 (0) 레코드입니다.  
+ 현재 레코드 위치가 첫 번째 레코드 앞에 있으면 **BOF** 속성은 **True** (-1)를 반환 하 고 현재 레코드 위치가 첫 번째 레코드에 있거나 첫 번째 레코드 뒤에 있으면 **False** (0)를 반환 합니다.  
   
- **EOF** 속성에서 반환 **True** 마지막 레코드 다음 레코드 현재 위치 하는 경우 및 **False** 인지 레코드의 현재 위치에서 마지막 레코드 앞입니다.  
+ **EOF** 속성은 현재 레코드 위치가 마지막 레코드 뒤에 있으면 **True** 를 반환 하 고 현재 레코드 위치가 마지막 레코드 앞에 있으면 **False** 를 반환 합니다.  
   
- 경우는 **BOF** 하거나 **EOF** 속성은 **True**, 현재 레코드가 없습니다.  
+ **BOF** 또는 **EOF** 속성이 **True**이면 현재 레코드가 없습니다.  
   
- 열면를 **레코드 집합** 없는 레코드를 포함 하는 개체를 **BOF** 하 고 **EOF** 속성으로 설정 됩니다 **True** (참조를 [ RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) 이 상태에 대 한 자세한 내용은 속성을 **레코드 집합**). 여는 경우는 **레코드 집합** 첫 번째 레코드를 하나 이상의 레코드를 포함 하는 개체는 현재 레코드와 **BOF** 및 **EOF** 속성은 **False** .  
+ 레코드를 포함 하지 않는 **레코드 집합** 개체를 여는 경우에는 **BOF** 및 **EOF** 속성이 **True** 로 설정 됩니다 .이 **레코드 집합**상태에 대 한 자세한 내용은 [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) 속성을 참조 하세요. 하나 이상의 레코드를 포함 하는 **레코드 집합** 개체를 열 때 첫 번째 레코드는 현재 레코드이 고, **BOF** 및 **EOF** 속성은 **False**입니다.  
   
- 마지막 남은 레코드를 삭제 하는 경우는 **레코드 집합** 개체를 **BOF** 및 **EOF** 속성 유지 **False** 할 때까지 현재 레코드의 위치를 변경 하려고 시도 합니다.  
+ **레코드 집합** 개체에서 마지막으로 남아 있는 레코드를 삭제 하는 경우 현재 레코드의 위치를 변경할 때까지 **BOF** 및 **EOF** 속성이 **False로** 유지 될 수 있습니다.  
   
- 이 표에서 **이동** 메서드를 가진 여러 조합으로 사용할 수는 **BOF** 하 고 **EOF** 속성입니다.  
+ 다음 표에서는 다양 한 **BOF** 및 **EOF** 속성 조합을 사용 하 여 허용 되는 **이동** 메서드를 보여 줍니다.  
   
-||MoveFirst,<br /><br /> MoveLast|MovePrevious,<br /><br /> Move < 0|0 이동|MoveNext<br /><br /> > 0 이동|  
+||MoveFirst<br /><br /> MoveLast|MovePrevious<br /><br /> Move < 0|0 이동|MoveNext<br /><br /> Move > 0|  
 |------|-----------------------------|---------------------------------|------------|-----------------------------|  
-|**BOF**=**True**, **EOF**=**False**|허용함|오류|오류|허용함|  
-|**BOF**=**False**, **EOF**=**True**|허용함|허용함|오류|오류|  
-|둘 다 **True**|오류|오류|오류|오류|  
-|둘 다 **False**|허용함|허용함|허용함|허용함|  
+|**BOF**=**True**, **EOF**=**False**|허용됨|Error|Error|허용됨|  
+|**BOF**=**False**, **EOF**=**True**|허용됨|허용됨|Error|Error|  
+|모두 **True**|Error|Error|Error|Error|  
+|모두 **False**|허용됨|허용됨|허용됨|허용됨|  
   
- 허용 된 **이동** 메서드는 메서드는 레코드를 제대로 찾는 것은 보장 하지 않으면 호출 된 것만 의미 **이동** 메서드는 오류가 생성 되지 것입니다.  
+ **Move** 메서드를 허용 해도 메서드가 레코드를 성공적으로 찾을 수 있도록 보장 하는 것은 아닙니다. 이는 지정 된 **Move** 메서드를 호출 해도 오류가 생성 되지 않는다는 것을 의미 합니다.  
   
- 다음 표에서 어떻게 되나요 합니다 **BOF** 하 고 **EOF** 속성 설정을 호출 하면 다양 한 **이동** 메서드 하지만 수 없는 레코드를 제대로 찾는 합니다.  
+ 다음 표에서는 다양 한 **Move** 메서드를 호출 하지만 레코드를 찾을 수 없는 경우에 발생 하는 **BOF** 및 **EOF** 속성 설정을 보여 줍니다.  
   
 ||BOF|EOF|  
 |------|---------|---------|  
-|**MoveFirst**, **MoveLast**|로 **True**|로 **True**|  
-|**이동** 0|변경 안 함|변경 안 함|  
-|**MovePrevious**, **Move** < 0|로 **True**|변경 안 함|  
-|**MoveNext**, **Move** > 0|변경 안 함|로 **True**|  
+|**MoveFirst**, **MoveLast**|**True** 로 설정|**True** 로 설정|  
+|0 **이동**|변경 내용 없음|변경 내용 없음|  
+|**MovePrevious**, **Move** < 0|**True** 로 설정|변경 내용 없음|  
+|**MoveNext**, **Move** > 0|변경 내용 없음|**True** 로 설정|  
   
 ## <a name="applies-to"></a>적용 대상  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목  
- [BOF, EOF 및 책갈피 속성 예제 (VB)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
- [BOF, EOF 및 책갈피 속성 예제 (VC + +)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   
+## <a name="see-also"></a>참고 항목  
+ [BOF, EOF 및 Bookmark 속성 예제 (VB)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
+ [BOF, EOF 및 Bookmark 속성 예제 (VC + +)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b6aab8fc0c8e083181779c13654b0d7d42531e50
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108164"
 ---
 # <a name="new-linked-report-page-report-manager"></a>새 링크된 보고서 페이지(보고서 관리자)
@@ -43,9 +43,9 @@ ms.locfileid: "66108164"
   
 4.  항목 도구 모음에서 **링크된 보고서 만들기**를 클릭합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **이름**  
- 링크된 보고서의 이름을 지정합니다. 이름은 하나 이상의 영숫자 문자를 포함해야 합니다. 공백과 특정 기호도 포함할 수 있습니다. 그러나 이름을 지정할 때 ; ? : \@ & = +, $ / * \< > | "또는 / 이름을 지정 합니다.  
+ 링크된 보고서의 이름을 지정합니다. 이름은 하나 이상의 영숫자 문자를 포함해야 합니다. 공백과 특정 기호도 포함할 수 있습니다. 그러나 이름을 지정할 때 ; ? : \@ & = +, $/* \< > | "로 지정 합니다.  
   
  **설명**  
  보고서 내용에 대한 설명을 입력합니다. 이 설명은 보고서 액세스 권한이 있는 사용자의 내용 페이지에 표시됩니다.  
@@ -56,9 +56,9 @@ ms.locfileid: "66108164"
  **확인**  
  변경 내용을 저장하고 기준 보고서의 일반 속성 페이지로 돌아가려면 **확인** 을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [링크 된 보고서 만들기](reports/create-a-linked-report.md)   
- [일반 속성 페이지, 보고서&#40;보고서 관리자&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
+ [일반 속성 페이지, 보고서 &#40;보고서 관리자&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.servers (TRANSACT-SQL) | Microsoft Docs
+title: sys. servers (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/07/2018
 ms.prod: sql
@@ -21,30 +21,30 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: b17296d558c078d3f580e63bf662bb975615ad94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68132946"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  등록 하는 연결 된 서버나 원격 서버 마다 행 및 로컬 서버에 대 한 행을 포함 **server_id** = 0.  
+  등록 된 원격 서버 또는 등록 된 원격 서버 당 행과 **server_id** = 0 인 로컬 서버에 대 한 행을 포함 합니다.  
 
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|연결된 서버의 로컬 ID입니다.|  
-|**name**|**sysname**|때 **server_id** = 0, 반환된 된 값은 서버 이름입니다.<br /><br /> 때 **server_id** > 0 이면 반환 되는 값은 연결 된 서버의 로컬 이름입니다.|  
-|**product**|**sysname**|연결된 서버의 제품 이름입니다. "SQL Server" 값의 다른 인스턴스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.|  
-|**provider**|**sysname**|연결된 서버에 연결하기 위한 OLE DB 공급자 이름입니다.|  
+|**name**|**sysname**|**Server_id** = 0 인 경우 반환 되는 값은 서버 이름입니다.<br /><br /> **Server_id** > 0 인 경우 반환 되는 값은 연결 된 서버의 로컬 이름입니다.|  
+|**제품은**|**sysname**|연결된 서버의 제품 이름입니다. "SQL Server" 값은의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]다른 인스턴스를 나타냅니다.|  
+|**공급자별**|**sysname**|연결된 서버에 연결하기 위한 OLE DB 공급자 이름입니다.|  
 |**data_source**|**nvarchar(4000)**|OLE DB 데이터 원본 연결 속성입니다.|  
-|**location**|**nvarchar(4000)**|OLE DB 위치 연결 속성입니다. 이 속성이 없으면 NULL입니다.|  
+|**위치도**|**nvarchar(4000)**|OLE DB 위치 연결 속성입니다. 이 속성이 없으면 NULL입니다.|  
 |**provider_string**|**nvarchar(4000)**|OLE DB 공급자 문자열 연결 속성입니다.<br /><br /> 호출자에게 ALTER ANY LINKED SERVER 권한이 없으면 NULL이 됩니다.|  
 |**catalog**|**sysname**|OLEDB 카탈로그 연결 속성입니다. 이 속성이 없으면 NULL입니다.|  
 |**connect_timeout**|**int**|연결 제한 시간(초)이며 제한 시간이 없으면 0입니다.|  
 |**query_timeout**|**int**|쿼리 제한 시간(초)이며 제한 시간이 없으면 0입니다.|  
-|**is_linked**|**bit**|0 =를 사용 하 여 추가 이전 스타일 서버인 **sp_addserver**다른 RPC 및 분산 트랜잭션 동작을 사용 하 여 합니다.<br /><br /> 1 = 표준 연결된 서버입니다.|  
+|**is_linked**|**bit**|0 = 다른 RPC 및 분산 트랜잭션 동작을 통해 **sp_addserver**를 사용 하 여 추가 된 이전 스타일의 서버입니다.<br /><br /> 1 = 표준 연결된 서버입니다.|  
 |**is_remote_login_enabled**|**bit**|이 서버에 들어오는 원격 로그인을 허용하도록 RPC 옵션이 설정됩니다.|  
 |**is_rpc_out_enabled**|**bit**|이 서버에서 보내는 RPC가 가능합니다.|  
 |**is_data_access_enabled**|**bit**|서버에서 분산 쿼리 사용이 가능합니다.|  
@@ -61,21 +61,21 @@ ms.locfileid: "68132946"
 |**modify_date**|**datetime**|서버 정보가 마지막으로 변경된 날짜입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
- 값 **provider_string** 은 항상 NULL 호출자에 게 ALTER ANY LINKED SERVER 권한이 있습니다.  
+ 호출자에 게 ALTER ANY 연결 된 서버 권한이 없으면 **provider_string** 의 값은 항상 NULL입니다.  
   
- 로컬 서버를 보려면 권한이 필요 하지 않습니다 (**server_id** = 0).  
+ 로컬 서버 (**server_id** = 0)를 보는 데 사용 권한이 필요 하지 않습니다.  
   
- 연결 된 서버나 원격 서버를 만들면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하는 기본 로그인 매핑을 만듭니다 합니다 **공용** 서버 역할입니다. 기본 로그인 매핑이 모든 로그인이 모든 연결 및 원격 서버를 볼 수 있음을 의미 합니다. 표시를 제한 하려면 이러한 서버를 실행 하 여 기본 로그인 매핑 제거 [sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) NULL을 지정 하는 *locallogin* 매개 변수입니다.  
+ 연결 된 서버 또는 원격 서버를 만들 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 **public** 서버 역할에 대 한 기본 로그인 매핑을 만듭니다. 기본 로그인 매핑은 모든 로그인이 모든 연결 된 서버 및 원격 서버를 볼 수 있음을 의미 합니다. 이러한 서버에 대 한 표시 여부를 제한 하려면 [sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) 를 실행 하 고 *locallogin* 매개 변수에 NULL을 지정 하 여 기본 로그인 매핑을 제거 합니다.  
   
- 기본 로그인 매핑이 삭제되면 연결된 로그인 또는 원격 로그인으로 명시적으로 추가된 사용자만 로그인 권한이 있으며 연결된 서버 또는 원격 서버를 볼 수 있습니다.  기본 로그인 매핑을 후 모든 연결 및 원격 서버를 보는 데 필요한 권한은 다음 같습니다.  
+ 기본 로그인 매핑이 삭제되면 연결된 로그인 또는 원격 로그인으로 명시적으로 추가된 사용자만 로그인 권한이 있으며 연결된 서버 또는 원격 서버를 볼 수 있습니다.  기본 로그인 매핑 후에 모든 연결 된 서버 및 원격 서버를 보려면 다음 권한이 필요 합니다.  
   
-- `ALTER ANY LINKED SERVER` 또는 `ALTER ANY LOGIN ON SERVER`  
-- 멤버 자격에는 **setupadmin** 하거나 **sysadmin** 고정 서버 역할  
+- `ALTER ANY LINKED SERVER`디스크나`ALTER ANY LOGIN ON SERVER`  
+- **Setupadmin** 또는 **sysadmin** 고정 서버 역할의 멤버 자격  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [연결 된 서버 카탈로그 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
- [sp_addlinkedsrvlogin &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
- [sp_addremotelogin&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
+ [연결 된 서버 카탈로그 뷰 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
+ [Transact-sql&#41;sp_addlinkedsrvlogin &#40;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [Transact-sql&#41;sp_addremotelogin &#40;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
   
   

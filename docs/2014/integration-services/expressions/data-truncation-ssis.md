@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ce2b4a14d78c4e855c4af1d8b5fdd972b1d28c27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62898336"
 ---
 # <a name="data-truncation-ssis"></a>데이터 잘림(SSIS)
@@ -34,6 +34,6 @@ ms.locfileid: "62898336"
  식 계산기는 잘림을 발생시킬 수 있는 명시적 캐스트를 식별하고 식을 구문 분석할 때 경고를 표시합니다. 예를 들어 30자 문자열을 20자 문자열로 캐스팅하면 식 계산기가 경고를 표시합니다.  
   
 > [!NOTE]  
->  런타임에는 잘림을 확인하지 않으므로 경고 없이 데이터가 잘립니다. 그러나 대부분의 데이터 어댑터와 변환은 오류 행 처리를 수행할 수 있는 오류 출력을 지원합니다. 데이터 잘림 처리에 대 한 자세한 내용은 참조 하세요. [데이터 오류 처리](../data-flow/error-handling-in-data.md)합니다.  
+>  런타임에는 잘림을 확인하지 않으므로 경고 없이 데이터가 잘립니다. 그러나 대부분의 데이터 어댑터와 변환은 오류 행 처리를 수행할 수 있는 오류 출력을 지원합니다. 데이터 잘림을 처리 하는 방법에 대 한 자세한 내용은 [데이터의 오류 처리](../data-flow/error-handling-in-data.md)를 참조 하세요.  
   
   

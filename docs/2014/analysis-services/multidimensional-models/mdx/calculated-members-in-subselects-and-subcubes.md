@@ -1,5 +1,5 @@
 ---
-title: 계산 멤버를 하위 Select 및 하위 | Microsoft Docs
+title: 하위 select 및 하위 큐브의 계산 멤버 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 57a7a9597be4b7a662fddd9550fdf341be44f922
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074790"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>하위 SELECT 및 하위 큐브의 계산 멤버
   이전 릴리스에서는 계산 멤버가 하위 SELECT 또는 하위 큐브에서 허용되지 않았습니다. 그러나 SQL Server 2008부터 계산 멤버가 허용되며 연결 속성에 의해 활성화됩니다. 또한 하위 SELECT 및 하위 큐브의 계산 멤버에 대한 새 동작이 SQL Server 2008 R2에서 도입되었습니다.  
   
 ## <a name="calculated-members-in-subselects-and-subcubes"></a>하위 SELECT 및 하위 큐브의 계산 멤버  
- 합니다 `SubQueries` 연결 문자열 속성 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 또는 `DBPROPMSMDSUBQUERIES` 속성에서 [지원 되는 XMLA 속성 &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 동작이 나 허용 계산된 멤버의 정의 또는 계산 하위 select 또는 하위 큐브에서에 설정 합니다. 특별한 언급이 없으면 이 문서의 컨텍스트에서 하위 SELECT는 하위 SELECT 및 하위 큐브를 말합니다.  
+ 의 `SubQueries` <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 연결 문자열 속성 또는 `DBPROPMSMDSUBQUERIES` [지원 되는 xmla 속성 &#40;xmla&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 의 속성은 하위 select 또는 하위 큐브에서 계산 멤버 또는 계산 집합의 동작이 나 허용을 정의 합니다. 특별한 언급이 없으면 이 문서의 컨텍스트에서 하위 SELECT는 하위 SELECT 및 하위 큐브를 말합니다.  
   
  SubQueries 속성은 다음 값을 허용합니다.  
   
@@ -82,7 +82,7 @@ Where [Measures].[Reseller Sales Amount]
 ||All Periods|CY 2001|CY 2002|CY 2003|CY 2004|  
 |All Geographies|(null)|(null)|(null)|(null)|(null)|  
 |미국|(null)|(null)|(null)|(null)|(null)|  
-|Washington|(null)|(null)|(null)|(null)|(null)|  
+|워싱턴|(null)|(null)|(null)|(null)|(null)|  
 |Seattle Metro Agg|$2,383,545.69|$291,248.93|$763,557.02|$915,832.36|$412,907.37|  
   
  이전에 언급한 것처럼 SubQueries=2를 사용하면 [Seattle Metro]의 상위 항목이 반환된 하위 공간에 있지만 집계에 제공할 일반 멤버가 없으므로 이러한 멤버에 대한 값이 존재하지 않습니다. 따라서 이 예에서는 계산 멤버의 모든 상위 항목 멤버에 대해 NULL 값이 제공됩니다.  
@@ -111,19 +111,19 @@ Where [Measures].[Reseller Sales Amount]
 |Oregon|$30,968.25|$419.46|$4,996.25|$17,442.97|$8,109.56|  
 |Portland|$30,968.25|$419.46|$4,996.25|$17,442.97|$8,109.56|  
 |97205|$30,968.25|$419.46|$4,996.25|$17,442.97|$8,109.56|  
-|Washington|$204,203.37|(null)|(null)|$114,345.85|$89,857.52|  
+|워싱턴|$204,203.37|(null)|(null)|$114,345.85|$89,857.52|  
 |Spokane|$204,203.37|(null)|(null)|$114,345.85|$89,857.52|  
 |99202|$204,203.37|(null)|(null)|$114,345.85|$89,857.52|  
 |Seattle Metro Agg|$2,383,545.69|$291,248.93|$763,557.02|$915,832.36|$412,907.37|  
   
  위 결과에서 [All Geographies], [United States], [Oregon] 및 [Washington]에 대한 집계 값은 &[Portland]&[OR] 및 &[Spokane]&[WA]의 하위 항목에 대한 집계에서 제공됩니다. 계산 멤버에서는 아무 것도 제공되지 않습니다.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>설명  
  전역 또는 세션 계산 멤버만 하위 SELECT 또는 하위 큐브 식에서 허용됩니다. MDX 식에 쿼리 계산 멤버가 있으면 하위 SELECT 또는 하위 큐브 식이 평가될 때 오류가 발생합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
- [쿼리의 하위 SELECT](subselects-in-queries.md)   
- [지원되는 XMLA 속성&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)  
+ [쿼리의 하위 select](subselects-in-queries.md)   
+ [XMLA&#41;&#40;XMLA 속성이 지원 됩니다.](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)  
   
   

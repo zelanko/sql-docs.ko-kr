@@ -1,5 +1,5 @@
 ---
-title: Access 데이터베이스 개체 (AccessToSQL) 변환 | Microsoft Docs
+title: Access 데이터베이스 개체 변환 (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -30,93 +30,93 @@ ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 56c55dbc5df61bfdb9013e505335af16fccbeecd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68006624"
 ---
-# <a name="converting-access-database-objects-accesstosql"></a>Access 데이터베이스 개체 (AccessToSQL) 변환
-Access 데이터베이스를 추가 하 고 연결한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure, SSMA 액세스에 대 한 메타 데이터를 표시 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 데이터베이스 개체입니다. 이제 Access 데이터베이스 개체를 선택 하 고 다음 스키마를 변환할 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 스키마입니다.  
+# <a name="converting-access-database-objects-accesstosql"></a>Access 데이터베이스 개체 변환 (AccessToSQL)
+Access 데이터베이스를 추가 하 고 SQL Azure 또는에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 하 고 나면 ssma에서 access 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure database 개체에 대 한 메타 데이터를 표시 합니다. 이제 데이터베이스 개체에 액세스를 선택한 다음 스키마를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 스키마로 변환할 수 있습니다.  
   
 ## <a name="the-conversion-process"></a>변환 프로세스  
-액세스 메타 데이터에서 개체 정의 데이터베이스 개체 변환, 해당 변환 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문, 한 다음 프로젝트에이 정보를 로드 합니다. 볼 수 있습니다 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 개체와 해당 속성을 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 메타 데이터 탐색기입니다.  
+데이터베이스 개체를 변환 하면 액세스 메타 데이터의 개체 정의를 가져와 동일한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문으로 변환한 다음 프로젝트에이 정보를 로드 합니다. 그런 다음 또는 SQL Azure 메타 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 탐색기를 사용 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 여 또는 SQL Azure 개체와 해당 속성을 볼 수 있습니다.  
   
 > [!IMPORTANT]  
-> 개체 변환에서 개체를 만들지 않으므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure입니다. 만 개체 정의 변환 하 고 SSMA 프로젝트에서 정보를 저장 합니다.  
+> 개체를 변환 해도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 개체는 생성 되지 않습니다. 개체 정의를 변환 하 고 정보를 SSMA 프로젝트에 저장 합니다.  
   
-변환 중 SSMA 상태 출력 창 및 오류, 경고 및 오류 목록 창에 정보 메시지를 인쇄합니다. 이 정보를 사용 하 여 Access 데이터베이스 또는 원하는 변환 결과 얻으려면 변환 프로세스를 수정 해야 하는지 여부를 결정 합니다. 정보를 사용할 수도 있습니다는 [Access 데이터베이스 마이그레이션에 대 한 준비](preparing-access-databases-for-migration-accesstosql.md) 항목 확인 하는 고 변환할 수 없습니다.  
+변환 하는 동안 SSMA는 출력 창에 상태를 인쇄 하 고, 오류, 경고 및 정보 메시지를 오류 목록 창에 인쇄 합니다. 이 정보를 사용 하 여 원하는 변환 결과를 얻기 위해 액세스 데이터베이스 또는 변환 프로세스를 수정 해야 하는지 여부를 결정할 수 있습니다. [마이그레이션에 대 한 액세스 데이터베이스 준비](preparing-access-databases-for-migration-accesstosql.md) 항목의 정보를 사용 하 여 변환 되지 않을 항목을 확인할 수도 있습니다.  
   
 ## <a name="setting-conversion-options"></a>변환 옵션 설정  
-개체를 변환 하기 전에 프로젝트 변환 옵션을 검토 합니다 **프로젝트 설정** 대화 상자. 이 대화 상자를 사용 하 여 SSMA 인덱싱된 메모 열, 기본 키, 외래 키 제약 조건, 타임 스탬프 및 인덱스가 없는 테이블을 변환 하는 방법을 설정할 수 있습니다. 자세한 내용은 참조 하세요. [프로젝트 설정 (변환)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
+개체를 변환 하기 전에 **프로젝트 설정** 대화 상자에서 프로젝트 변환 옵션을 검토 합니다. 이 대화 상자를 사용 하면 SSMA가 인덱싱된 메모 열, 기본 키, 외래 키 제약 조건, 타임 스탬프 및 인덱스 없이 테이블을 변환 하는 방법을 설정할 수 있습니다. 자세한 내용은 [프로젝트 설정 (변환)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388) 을 참조 하세요.  
   
 ## <a name="conversion-results"></a>변환 결과  
-다음 표에서 변환 되는 경우 개체를 액세스 하 고 결과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 개체:  
+다음 표에서는 변환 된 액세스 개체 및 결과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 개체를 보여 줍니다.  
   
-|개체 액세스|결과 SQL Server 개체|  
+|Access 개체|결과 SQL Server 개체|  
 |-----------------|-------------------------------|  
-|table|table|  
-|column|column|  
+|테이블|테이블|  
+|열|열|  
 |인덱스|인덱스|  
 |외래 키(foreign key)|외래 키(foreign key)|  
-|query|뷰<br /><br />가장 선택 쿼리 보기로 변환 됩니다. 업데이트 쿼리와 같은 다른 쿼리는 마이그레이션되지 않습니다.<br /><br />크로스탭 쿼리 매개 변수를 사용 하는 SELECT 쿼리가 없으며 변환 되지 않습니다.|  
-|보고서|변환 되지 않음|  
-|폼|변환 되지 않음|  
+|쿼리|뷰<br /><br />대부분의 SELECT 쿼리가 뷰로 변환 됩니다. 업데이트 쿼리와 같은 다른 쿼리는 마이그레이션되지 않습니다.<br /><br />매개 변수를 사용 하는 SELECT 쿼리는 변환 되지 않으며 다중 탭 쿼리가 됩니다.|  
+|report|변환 되지 않음|  
+|form|변환 되지 않음|  
 |매크로|변환 되지 않음|  
 |module|변환 되지 않음|  
 |기본값|기본값|  
-|0 길이 열 속성 허용|check 제약 조건|  
+|길이가 0 인 열 속성 허용|check 제약 조건|  
 |열 유효성 검사 규칙|check 제약 조건|  
 |테이블 유효성 검사 규칙|check 제약 조건|  
 |기본 키(primary key)|기본 키(primary key)|  
   
-## <a name="converting-access-objects"></a>변환 개체에 액세스  
-Access 데이터베이스 개체를 변환 하려면 먼저 변환 하 고을 SSMA 변환을 수행 하려는 개체를 선택 해야 합니다. 변환 하는 동안 출력 메시지를 볼 수는 **뷰** 메뉴에서 **출력**합니다.  
+## <a name="converting-access-objects"></a>액세스 개체 변환  
+Access 데이터베이스 개체를 변환 하려면 먼저 변환할 개체를 선택 하 고 SSMA에서 변환을 수행 하도록 해야 합니다. 변환 하는 동안 출력 메시지를 보려면 **보기** 메뉴에서 **출력**을 선택 합니다.  
   
-**선택한 SQL Server 또는 SQL Azure 구문에 Access 데이터베이스 개체 변환**  
+**Access 데이터베이스 개체를 선택 하 여 SQL Server 또는 SQL Azure 구문으로 변환 하려면**  
   
-1.  액세스 메타 데이터 탐색기에서 확장 **액세스-메타 베이스**를 차례로 확장 하 고 **데이터베이스**합니다.  
+1.  액세스 메타 데이터 탐색기에서 **액세스-메타 베이스**를 확장 한 다음 **데이터베이스**를 확장 합니다.  
   
-2.  다음 중 하나 이상을 수행 합니다.  
+2.  다음 중 하나 이상을 수행합니다.  
   
-    -   모든 데이터베이스를 변환 하려면 확인란을 선택 합니다 옆 **데이터베이스**합니다.  
+    -   모든 데이터베이스를 변환 하려면 **데이터베이스**옆의 확인란을 선택 합니다.  
   
-    -   변환 또는 생략 개별 데이터베이스를 선택 하거나 데이터베이스 이름 옆에 있는 확인란의 선택을 취소 합니다.  
+    -   개별 데이터베이스를 변환 하거나 생략 하려면 데이터베이스 이름 옆의 확인란을 선택 하거나 선택 취소 합니다.  
   
-    -   를 변환 하거나 쿼리를 생략 하려면 데이터베이스를 확장 하 고 다음 선택 하거나 선택을 취소 합니다 **쿼리** 확인란 합니다.  
+    -   쿼리를 변환 하거나 생략 하려면 데이터베이스를 확장 한 다음 **쿼리** 확인란을 선택 하거나 선택 취소 합니다.  
   
-    -   를 변환 하거나 개별 테이블을 생략 하려면 데이터베이스를 확장 **테이블**, 다음을 선택 하거나 표 옆의 확인란의 선택을 취소 합니다.  
+    -   개별 테이블을 변환 하거나 생략 하려면 데이터베이스를 확장 하 고 **테이블**을 확장 한 다음 테이블 옆의 확인란을 선택 하거나 선택 취소 합니다.  
   
-3.  다음 작업 중 하나를 수행합니다.  
+3.  다음 중 하나를 수행합니다.  
   
-    -   스키마로 변환 하려면 마우스 오른쪽 단추로 클릭 **데이터베이스** 선택한 **스키마 변환**합니다.  
+    -   스키마를 변환 하려면 **데이터베이스** 를 마우스 오른쪽 단추로 클릭 하 고 **스키마 변환**을 선택 합니다.  
   
-        또한 개별 개체를 변환할 수 있습니다. 에 관계 없이 선택한 개체가 개체를 변환 하는 개체를 마우스 오른쪽 단추로 클릭 하 고 선택 **스키마 변환**합니다.  
+        개별 개체를 변환할 수도 있습니다. 개체를 변환 하려면 선택 된 개체에 관계 없이 개체를 마우스 오른쪽 단추로 클릭 하 고 **스키마 변환**을 선택 합니다.  
   
-        개체로 변환 될 때 액세스 메타 데이터 탐색기에서 굵게 표시 됩니다.  
+        개체가 변환 되 면 Access 메타 데이터 탐색기에서 굵게 표시 됩니다.  
   
-    -   변환, 로드 하 고 한 번의 스키마 및 데이터 마이그레이션, 데이터베이스 및 선택을 마우스 오른쪽 단추로 **변환, 로드 및 마이그레이션**합니다.  
+    -   한 단계에서 스키마 및 데이터를 변환, 로드 및 마이그레이션하려면 데이터베이스를 마우스 오른쪽 단추로 클릭 하 고 **변환, 로드 및 마이그레이션**을 선택 합니다.  
   
-4.  메시지를 검토 합니다 **출력** 창 및 모든 오류 및 경고에는 **오류 목록** 창입니다.  
+4.  **출력** 창의 메시지와 **오류 목록** 창에서 발생 하는 오류 및 경고를 검토 합니다.  
   
 ## <a name="altering-tables-and-indexes"></a>테이블 및 인덱스 변경  
-액세스 메타 데이터를 변환한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 메타 데이터 및 개체를 로드 하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변경할 수 있습니다 SQL Azure 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 테이블 및 인덱스입니다.  
+액세스 메타 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 메타 데이터로 변환 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 개체를 로드 하기 전에 테이블 및 인덱스를 변경 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하거나 SQL Azure 수 있습니다.  
   
 **테이블 또는 인덱스 속성을 변경 하려면**  
   
-1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 메타 데이터 탐색기에서 테이블이 나 인덱스를 변경 하려면 선택 합니다.  
+1.  또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure Metadata 탐색기에서 변경 하려는 테이블이 나 인덱스를 선택 합니다.  
   
-2.  에 **테이블** 탭을 변경 하 고을 입력 하거나 새 설정을 선택 하려면 속성을 클릭 합니다. 예를 들어 nvarchar(20), nvarchar(15) 변경 하거나 테이블 열을 null을 허용 하도록 확인란을 선택 수 있습니다.  
+2.  **테이블** 탭에서 변경할 속성을 클릭 한 다음 새 설정을 입력 하거나 선택 합니다. 예를 들어 nvarchar (15)를 nvarchar (20)로 변경 하거나 확인란을 선택 하 여 테이블 열을 nullable로 설정할 수 있습니다.  
   
-    변경 된 속성 셀에서 커서를 이동 합니다. Tab 키를 누르거나 다른 행을 클릭 하 여이 수행할 수 있습니다.  
+    커서를 변경 된 속성 셀에서 밖으로 이동 합니다. 이렇게 하려면 다른 행을 클릭 하거나 Tab 키를 누릅니다.  
   
 3.  **적용**을 클릭합니다.  
   
-코드에서 변경 내용을 볼 수 있습니다 합니다 **SQL** 탭 합니다.  
+이제 **SQL** 탭에서 코드의 변경 내용을 볼 수 있습니다.  
   
 ## <a name="next-step"></a>다음 단계  
-마이그레이션 프로세스의 다음 단계는 [SQL Server로 변환 된 데이터베이스 개체를 로드](loading-converted-database-objects-into-sql-server-accesstosql.md)  
+마이그레이션 프로세스의 다음 단계는 변환 된 [데이터베이스 개체를로 로드](loading-converted-database-objects-into-sql-server-accesstosql.md) 하는 것입니다 SQL Server  
   
-## <a name="see-also"></a>관련 항목  
-[SQL Server에 대 한 액세스 데이터베이스 마이그레이션](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
+## <a name="see-also"></a>참고 항목  
+[SQL Server로 Access 데이터베이스 마이그레이션](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

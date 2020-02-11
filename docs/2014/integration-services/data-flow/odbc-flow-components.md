@@ -11,16 +11,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e42099ede229ef7d0b10cf8d88b4ac92c60d3370
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901434"
 ---
 # <a name="odbc-flow-components"></a>ODBC 흐름 구성 요소
   이 항목에서는 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
   
- [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 용 Connector for ODBC(Open Database Connectivity) by Attunity는 SSIS 개발자가 데이터를 ODBC 지원 데이터베이스로 로드하거나 해당 데이터베이스에서 언로드하는 패키지를 쉽게 만드는 데 도움이 됩니다.  
+ 
+  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 용 Connector for ODBC(Open Database Connectivity) by Attunity는 SSIS 개발자가 데이터를 ODBC 지원 데이터베이스로 로드하거나 해당 데이터베이스에서 언로드하는 패키지를 쉽게 만드는 데 도움이 됩니다.  
   
  ODBC Connector는 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]의 컨텍스트에서 데이터를 ODBC 지원 데이터베이스로 로드하거나 해당 데이터베이스에서 언로드할 때 최적의 성능을 얻기 위해 디자인되었습니다.  
   
@@ -110,13 +111,14 @@ ODBC 3.8 사양에 설명된 대로 확장 가능한 C 형식에 대한 데이�
 |SQL_DOUBLE|DT_R8|  
 |SQL_FLOAT|DT_R8|  
 |SQL_REAL|DT_R4|  
-|SQL_NUMERIC(p,s)|DT_NUMERIC(p,s)<br /><br />DT_R8<br /><br />DT_CY|숫자 데이터 형식이 DT_NUMERIC에 매핑됩니다. P가 38 보다 크거나 같고 S가 0 보다 크거나 같으며 P. 보다 작거나가 하는 경우 다음 중 적어도 하나가 충족 될 경우 숫자 데이터 형식이 DT_R8에 매핑됩니다.<br /><br />전체 자릿수가 38보다 큼<br /><br />소수 자릿수가 0보다 작음<br /><br />소수 자릿수가 38보다 큼<br /><br />소수 자릿수가 전체 자릿수보다 큼<br /><br /><br /><br />Money 데이터 형식으로 선언 되 면 숫자 데이터 형식이 DT_CY에 매핑되는 참고 합니다.|  
-|SQL_DECIMAL(p, s)|DT_NUMERIC(p,s)<br /><br />DT_R8<br /><br />DT_CY|Decimal 데이터 형식이 DT_NUMERIC에 매핑됩니다. P가 38 보다 크거나 같고 S가 0 보다 크거나 같으며 P. 보다 작거나가 하는 경우 다음 중 적어도 하나가 충족 될 경우 decimal 데이터 형식이 DT_R8에 매핑됩니다.<br /><br />전체 자릿수가 38보다 큼<br /><br />소수 자릿수가 0보다 작음<br /><br />소수 자릿수가 38보다 큼<br /><br />소수 자릿수가 전체 자릿수보다 큼<br /><br />Money 데이터 형식으로 선언 되 면 decimal 데이터 형식이 DT_CY에 매핑되는 참고 합니다.|  
+|SQL_NUMERIC(p,s)|DT_NUMERIC(p,s)<br /><br />DT_R8<br /><br />DT_CY|P가 38 보다 크거나 같고 S가 0 보다 크거나 같고 S가 P 보다 작거나 같으면 숫자 데이터 형식이 DT_NUMERIC 매핑됩니다. 숫자 데이터 형식은 다음 중 하나 이상이 true 인 경우 DT_R8에 매핑됩니다.<br /><br />전체 자릿수가 38보다 큼<br /><br />소수 자릿수가 0보다 작음<br /><br />소수 자릿수가 38보다 큼<br /><br />소수 자릿수가 전체 자릿수보다 큼<br /><br /><br /><br />숫자 데이터 형식은 money 데이터 형식으로 선언 될 때 DT_CY에 매핑됩니다.|  
+|SQL_DECIMAL(p, s)|DT_NUMERIC(p,s)<br /><br />DT_R8<br /><br />DT_CY|P가 38 보다 크거나 같고 S가 0 보다 크거나 같고 S가 P 보다 작거나 같으면 decimal 데이터 형식이 DT_NUMERIC 매핑됩니다. 다음 중 하나 이상이 true 인 경우 decimal 데이터 형식이 DT_R8 매핑됩니다.<br /><br />전체 자릿수가 38보다 큼<br /><br />소수 자릿수가 0보다 작음<br /><br />소수 자릿수가 38보다 큼<br /><br />소수 자릿수가 전체 자릿수보다 큼<br /><br />Decimal 데이터 형식은 money 데이터 형식으로 선언 될 때 DT_CY에 매핑됩니다.|  
 |SQL_DATE<br /><br />SQL_TYPE_DATE|DT_DBDATE|  
 |SQL_TIME<br /><br />SQL_TYPE_TIME|DT_DBTIME|  
 |SQL_TIMESTAMP<br /><br />SQL_TYPE_TIMESTAMP|DT_DBTIMESTAMP<br /><br />DT_DBTIMESTAMP2|소수 자릿수가 3보다 크면 SQL_TIMESTAMP 데이터 형식이 DT_DBTIMESTAMP2에 매핑됩니다. 다른 모든 경우에는 DT_DBTIMESTAMP에 매핑됩니다.|  
 |SQL_CHAR<br /><br />SQLVARCHAR|DT_STR<br /><br />DT_WSTR<br /><br />DT_TEXT<br /><br />DT_NTEXT|열 길이가 8000보다 작거나 같고 **ExposeStringsAsUnicode** 속성이 false이면 DT_STR이 사용됩니다.<br /><br />열 길이가 8000보다 작거나 같고 **ExposeStringsAsUnicode** 속성이 true이면 DT_WSTR이 사용됩니다.<br /><br />열 길이가 8000보다 크고 **ExposeStringsAsUnicode** 속성이 false이면 DT_TEXT가 사용됩니다.<br /><br />열 길이가 8000보다 크고 **ExposeStringsAsUnicode** 속성이 true이면 DT_NTEXT가 사용됩니다.|  
-|SQL_LONGVARCHAR|DT_TEXT<br /><br />DT_NTEXT|**ExposeStringsAsUnicode** 속성이 true이면 DT_NTEXT가 사용됩니다.|  
+|SQL_LONGVARCHAR|DT_TEXT<br /><br />DT_NTEXT|
+  **ExposeStringsAsUnicode** 속성이 true이면 DT_NTEXT가 사용됩니다.|  
 |SQL_WCHAR<br /><br />SQL_WVARCHAR|DT_WSTR<br /><br />DT_NTEXT|열 길이가 4000보다 작거나 같으면 DT_WSTR이 사용됩니다.<br /><br />열 길이가 4000보다 크면 DT_NTEXT가 사용됩니다.|  
 |SQL_WLONGVARCHAR|DT_NTEXT|  
 |SQL_BINARY|DT_BYTE<br /><br />DT_IMAGE|열 길이가 8000보다 작거나 같으면 DT_BYTES가 사용됩니다.<br /><br />열 길이가 8000보다 크면 DT_IMAGE가 사용됩니다.|  

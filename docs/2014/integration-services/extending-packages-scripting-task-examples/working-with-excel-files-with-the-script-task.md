@@ -17,89 +17,107 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 10fcf850a770296a81c99bc9b8168857b443df41
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62894787"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>스크립트 태스크를 사용한 Excel 파일 작업
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 파일 형식으로 스프레드시트에 저장된 데이터를 작업하기 위한 Excel 연결 관리자, Excel 원본 및 Excel 대상을 제공합니다. 이 항목에서는 스크립트 태스크를 사용하여 사용 가능한 Excel 데이터베이스(통합 문서 파일) 및 테이블(워크시트 및 명명된 범위)에 대한 정보를 가져오는 기술을 설명합니다. 이러한 예제는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet OLE DB 공급자가 지원하는 다른 파일 기반 데이터 원본에도 사용할 수 있도록 쉽게 수정할 수 있습니다.  
   
- [예제를 테스트하기 위한 패키지 구성](#configuring)  
+ [예제를 테스트 하기 위한 패키지 구성](#configuring)  
   
- [예 1: Excel 파일의 존재 여부 확인](#example1)  
+ [Example1: Excel 파일이 있는지 여부를 확인 합니다.](#example1)  
   
- [예제 2: Excel 테이블의 존재 여부 확인](#example2)  
+ [예 2: Excel 테이블의 존재 여부 확인](#example2)  
   
- [예제 3: 폴더의 Excel 파일 목록 가져오기](#example3)  
+ [예 3: 폴더의 Excel 파일 목록 가져오기](#example3)  
   
- [예제 4: Excel 파일의 테이블 목록 가져오기](#example4)  
+ [예 4: Excel 파일의 테이블 목록 가져오기](#example4)  
   
- [예제 결과 표시](#testing)  
+ [샘플 결과 표시](#testing)  
   
 > [!NOTE]  
 >  여러 패키지에서 쉽게 다시 사용할 수 있는 태스크를 만들려면 이 스크립트 태스크 예제에 있는 코드를 바탕으로 사용자 지정 태스크를 만들어 보십시오. 자세한 내용은 [사용자 지정 태스크 개발](../extending-packages-custom-objects/task/developing-a-custom-task.md)을 참조하세요.  
   
-##  <a name="configuring"></a> 예제를 테스트하기 위한 패키지 구성  
+##  <a name="configuring"></a>예제를 테스트 하기 위한 패키지 구성  
  단일 패키지에서 이 항목의 모든 예제를 테스트할 수 있도록 구성할 수 있습니다. 이 항목의 예제에서는 대개 동일한 여러 패키지 변수와 동일한 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 클래스를 사용합니다.  
   
 #### <a name="to-configure-a-package-for-use-with-the-examples-in-this-topic"></a>패키지를 이 항목의 예에 사용할 수 있도록 구성하려면  
   
-1.  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 새 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 프로젝트를 만들고 편집을 위해 기본 패키지를 엽니다.  
+1.  
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 새 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 프로젝트를 만들고 편집을 위해 기본 패키지를 엽니다.  
   
-2.  **변수**. **변수** 창을 열고 다음 변수를 정의합니다.  
+2.  **변수**. 
+  **변수** 창을 열고 다음 변수를 정의합니다.  
   
-    -   `String` 형식의 `ExcelFile` 기존 Excel 통합 문서의 전체 경로와 파일 이름을 입력합니다.  
+    -   
+  `ExcelFile` 형식의 `String` 기존 Excel 통합 문서의 전체 경로와 파일 이름을 입력합니다.  
   
-    -   `String` 형식의 `ExcelTable` 기존 워크시트의 이름이나 `ExcelFile` 변수의 값에 명명된 통합 문서의 명명된 범위를 입력합니다. 이 값은 대/소문자를 구분합니다.  
+    -   
+  `ExcelTable` 형식의 `String` 기존 워크시트의 이름이나 `ExcelFile` 변수의 값에 명명된 통합 문서의 명명된 범위를 입력합니다. 이 값은 대/소문자를 구분합니다.  
   
-    -   `Boolean` 형식의 `ExcelFileExists`  
+    -   
+  `ExcelFileExists` 형식의 `Boolean`  
   
-    -   `Boolean` 형식의 `ExcelTableExists`  
+    -   
+  `ExcelTableExists` 형식의 `Boolean`  
   
-    -   `String` 형식의 `ExcelFolder` 적어도 하나의 Excel 통합 문서가 들어 있는 폴더의 전체 경로를 입력합니다.  
+    -   
+  `ExcelFolder` 형식의 `String` 적어도 하나의 Excel 통합 문서가 들어 있는 폴더의 전체 경로를 입력합니다.  
   
-    -   `Object` 형식의 `ExcelFiles`  
+    -   
+  `ExcelFiles` 형식의 `Object`  
   
-    -   `Object` 형식의 `ExcelTables`  
+    -   
+  `ExcelTables` 형식의 `Object`  
   
-3.  **Imports 문**. 대부분의 코드 예제에서는 스크립트 파일의 맨 위에서 다음 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 네임스페이스 중 하나 또는 둘 모두를 가져와야 합니다.  
+3.  **문을 가져옵니다**. 대부분의 코드 예제에서는 스크립트 파일의 맨 위에서 다음 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 네임스페이스 중 하나 또는 둘 모두를 가져와야 합니다.  
   
-    -   `System.IO` - 파일 시스템 작업의 경우  
+    -   
+  `System.IO` - 파일 시스템 작업의 경우  
   
-    -   `System.Data.OleDb` - Excel 파일을 데이터 원본으로 열려는 경우  
+    -   
+  `System.Data.OleDb` - Excel 파일을 데이터 원본으로 열려는 경우  
   
-4.  **References**. Excel 파일에서 스키마 정보를 읽는 코드 예제에는 스크립트 프로젝트에는 `System.Xml` 네임스페이스에 대한 추가 참조가 필요합니다.  
+4.  **참조**. Excel 파일에서 스키마 정보를 읽는 코드 예제에는 스크립트 프로젝트에는 `System.Xml` 네임스페이스에 대한 추가 참조가 필요합니다.  
   
-5.  **옵션** 대화 상자의 **일반** 페이지에 있는 **스크립트 언어** 옵션을 사용하여 스크립트 구성 요소에 대한 기본 스크립트 언어를 설정합니다. 자세한 내용은 [General Page](../general-page-of-integration-services-designers-options.md)을 참조하세요.  
+5.  
+  **옵션** 대화 상자의 **일반** 페이지에 있는 **스크립트 언어** 옵션을 사용하여 스크립트 구성 요소에 대한 기본 스크립트 언어를 설정합니다. 자세한 내용은 [General Page](../general-page-of-integration-services-designers-options.md)을 참조하세요.  
   
-##  <a name="example1"></a> 예 1 설명: Excel 파일의 존재 여부 확인  
+##  <a name="example1"></a>예제 1 설명: Excel 파일의 존재 여부 확인  
  이 예에서는 `ExcelFile` 변수에 지정된 Excel 통합 문서 파일이 존재하는지 확인한 다음 `ExcelFileExists` 변수의 부울 값을 이 결과로 설정합니다. 이 부울 값은 패키지의 워크플로에서 분기하는 데 사용할 수 있습니다.  
   
 #### <a name="to-configure-this-script-task-example"></a>이 스크립트 태스크 예를 구성하려면  
   
-1.  패키지에 새 스크립트 태스크를 추가 하 고 해당 이름을 변경 `ExcelFileExists`합니다.  
+1.  패키지에 새 스크립트 태스크를 추가 하 고 이름을로 `ExcelFileExists`변경 합니다.  
   
-2.  **스크립트 태스크 편집기**의 **스크립트** 탭에서 **ReadOnlyVariables**를 클릭하고 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
+2.  
+  **스크립트 태스크 편집기**의 **스크립트** 탭에서 **ReadOnlyVariables**를 클릭하고 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
   
-    -   `ExcelFile`.  
+    -   
+  `ExcelFile`을 입력합니다.  
   
-         -또는-  
+         또는  
   
-    -   줄임표 ( **...** ) 및 속성 필드에 다음 단추를 **변수 선택** 대화 상자에서를 `ExcelFile` 변수입니다.  
+    -   속성 필드 옆의 줄임표 (**...**) 단추를 클릭 하 고 **변수 선택** 대화 상자에서 `ExcelFile` 변수를 선택 합니다.  
   
-3.  **ReadWriteVariables**를 클릭하고 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
+3.  
+  **ReadWriteVariables**를 클릭하고 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
   
-    -   `ExcelFileExists`.  
+    -   
+  `ExcelFileExists`을 입력합니다.  
   
-         -또는-  
+         또는  
   
-    -   줄임표 ( **...** ) 및 속성 필드에 다음 단추를 **변수 선택** 대화 상자에서를 `ExcelFileExists` 변수입니다.  
+    -   속성 필드 옆의 줄임표 (**...**) 단추를 클릭 하 고 **변수 선택** 대화 상자에서 `ExcelFileExists` 변수를 선택 합니다.  
   
-4.  **스크립트 편집**을 클릭하여 스크립트 편집기를 엽니다.  
+4.  
+  **스크립트 편집**을 클릭하여 스크립트 편집기를 엽니다.  
   
-5.  `Imports` 네임스페이스에 대한 `System.IO` 문을 스크립트 파일의 맨 위에 추가합니다.  
+5.  
+  `Imports` 네임스페이스에 대한 `System.IO` 문을 스크립트 파일의 맨 위에 추가합니다.  
   
 6.  다음 코드를 추가합니다.  
   
@@ -144,34 +162,39 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example2"></a> 예 2 설명: Excel 테이블의 존재 여부 확인  
+##  <a name="example2"></a>예 2 설명: Excel 테이블의 존재 여부 확인  
  이 예에서는 `ExcelTable` 변수에 지정된 Excel 워크시트 또는 명명된 범위가 `ExcelFile` 변수에 지정된 Excel 통합 문서 파일에 있는지 여부를 확인한 다음 `ExcelTableExists` 변수의 부울 값을 이 결과로 설정합니다. 이 부울 값은 패키지의 워크플로에서 분기하는 데 사용할 수 있습니다.  
   
 #### <a name="to-configure-this-script-task-example"></a>이 스크립트 태스크 예를 구성하려면  
   
-1.  패키지에 새 스크립트 태스크를 추가 하 고 해당 이름을 변경 `ExcelTableExists`합니다.  
+1.  패키지에 새 스크립트 태스크를 추가 하 고 이름을로 `ExcelTableExists`변경 합니다.  
   
-2.  **스크립트 태스크 편집기**의 **스크립트** 탭에서 **ReadOnlyVariables**를 클릭하고 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
+2.  
+  **스크립트 태스크 편집기**의 **스크립트** 탭에서 **ReadOnlyVariables**를 클릭하고 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
   
-    -   형식 `ExcelTable` 고 `ExcelFile` 쉼표로 구분 하 여`.`  
+    -   쉼표로 `ExcelTable` 구분 `ExcelFile` 하 여 입력`.`  
   
-         -또는-  
+         또는  
   
-    -   줄임표 ( **...** ) 및 속성 필드에 다음 단추를 **변수 선택** 대화 상자를 선택 합니다 `ExcelTable` 및 `ExcelFile` 변수.  
+    -   속성 필드 옆의 줄임표 (**...**) 단추를 클릭 하 고 **변수 선택** 대화 상자에서 `ExcelTable` 및 `ExcelFile` 변수를 선택 합니다.  
   
-3.  **ReadWriteVariables**를 클릭하고 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
+3.  
+  **ReadWriteVariables**를 클릭하고 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
   
-    -   `ExcelTableExists`.  
+    -   
+  `ExcelTableExists`을 입력합니다.  
   
-         -또는-  
+         또는  
   
-    -   줄임표 ( **...** ) 및 속성 필드에 다음 단추를 **변수 선택** 대화 상자에서를 `ExcelTableExists` 변수입니다.  
+    -   속성 필드 옆의 줄임표 (**...**) 단추를 클릭 하 고 **변수 선택** 대화 상자에서 `ExcelTableExists` 변수를 선택 합니다.  
   
-4.  **스크립트 편집**을 클릭하여 스크립트 편집기를 엽니다.  
+4.  
+  **스크립트 편집**을 클릭하여 스크립트 편집기를 엽니다.  
   
 5.  스크립트 프로젝트에 `System.Xml` 어셈블리에 대한 참조를 추가합니다.  
   
-6.  `Imports` 및 `System.IO` 네임스페이스에 대한 `System.Data.OleDb` 문을 스크립트 파일의 맨 위에 추가합니다.  
+6.  
+  `Imports` 및 `System.IO` 네임스페이스에 대한 `System.Data.OleDb` 문을 스크립트 파일의 맨 위에 추가합니다.  
   
 7.  다음 코드를 추가합니다.  
   
@@ -251,32 +274,38 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example3"></a> 예 3 설명: 폴더의 Excel 파일 목록 가져오기  
+##  <a name="example3"></a>예제 3 설명: 폴더의 Excel 파일 목록 가져오기  
  이 예에서는 `ExcelFolder` 변수 값에 지정된 폴더에 있는 Excel 파일의 목록으로 배열을 채운 다음 이 배열을 `ExcelFiles` 변수에 복사합니다. Foreach from Variable 열거자를 사용하여 배열의 파일을 반복할 수 있습니다.  
   
 #### <a name="to-configure-this-script-task-example"></a>이 스크립트 태스크 예를 구성하려면  
   
 1.  패키지에 새 스크립트 태스크를 추가하고 해당 이름을 **GetExcelFiles**로 바꿉니다.  
   
-2.  **스크립트 태스크 편집기**를 열고 **스크립트** 탭에서 **ReadOnlyVariables**를 클릭한 후 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
+2.  
+  **스크립트 태스크 편집기**를 열고 **스크립트** 탭에서 **ReadOnlyVariables**를 클릭한 후 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
   
-    -   형식 `ExcelFolder`  
+    -   
+  `ExcelFolder`를 입력합니다.  
   
-         -또는-  
+         또는  
   
-    -   속성 필드 옆의 줄임표( **...** ) 단추를 클릭하고 **변수 선택** 대화 상자에서 ExcelFolder 변수를 선택합니다.  
+    -   속성 필드 옆의 줄임표(**...**) 단추를 클릭하고 **변수 선택** 대화 상자에서 ExcelFolder 변수를 선택합니다.  
   
-3.  **ReadWriteVariables**를 클릭하고 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
+3.  
+  **ReadWriteVariables**를 클릭하고 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
   
-    -   `ExcelFiles`.  
+    -   
+  `ExcelFiles`을 입력합니다.  
   
-         -또는-  
+         또는  
   
-    -   속성 필드 옆의 줄임표( **...** ) 단추를 클릭하고 **변수 선택** 대화 상자에서 ExcelFiles 변수를 선택합니다.  
+    -   속성 필드 옆의 줄임표(**...**) 단추를 클릭하고 **변수 선택** 대화 상자에서 ExcelFiles 변수를 선택합니다.  
   
-4.  **스크립트 편집**을 클릭하여 스크립트 편집기를 엽니다.  
+4.  
+  **스크립트 편집**을 클릭하여 스크립트 편집기를 엽니다.  
   
-5.  `Imports` 네임스페이스에 대한 `System.IO` 문을 스크립트 파일의 맨 위에 추가합니다.  
+5.  
+  `Imports` 네임스페이스에 대한 `System.IO` 문을 스크립트 파일의 맨 위에 추가합니다.  
   
 6.  다음 코드를 추가합니다.  
   
@@ -323,7 +352,7 @@ public class ScriptMain
 ### <a name="alternate-solution"></a>대체 솔루션  
  스크립트 태스크를 사용하여 Excel 파일의 목록을 배열로 수집하는 대신 ForEach File 열거자를 사용하여 폴더의 모든 Excel 파일을 반복할 수도 있습니다. 자세한 내용은 [Foreach 루프 컨테이너를 사용하여 Excel 파일 및 테이블 루핑](../control-flow/foreach-loop-container.md)을 참조하세요.  
   
-##  <a name="example4"></a> 예 4 설명: Excel 파일의 테이블 목록 가져오기  
+##  <a name="example4"></a>예제 4 설명: Excel 파일의 테이블 목록 가져오기  
  이 예에서는 `ExcelFile` 변수 값으로 지정된 Excel 통합 문서 파일에 있는 워크시트 및 명명된 범위의 목록으로 배열을 채운 다음 이 배열을 `ExcelTables`에 복사합니다. Foreach from Variable 열거자를 사용하여 배열의 테이블을 반복할 수 있습니다.  
   
 > [!NOTE]  
@@ -333,27 +362,33 @@ public class ScriptMain
   
 1.  패키지에 새 스크립트 태스크를 추가하고 해당 이름을 **GetExcelTables**로 바꿉니다.  
   
-2.  **스크립트 태스크 편집기**를 열고 **스크립트** 탭에서 **ReadOnlyVariables**를 클릭한 후 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
+2.  
+  **스크립트 태스크 편집기**를 열고 **스크립트** 탭에서 **ReadOnlyVariables**를 클릭한 후 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
   
-    -   `ExcelFile`.  
+    -   
+  `ExcelFile`을 입력합니다.  
   
-         -또는-  
+         또는  
   
-    -   속성 필드 옆의 줄임표( **...** ) 단추를 클릭하고 **변수 선택** 대화 상자에서 ExcelFile 변수를 선택합니다.  
+    -   속성 필드 옆의 줄임표(**...**) 단추를 클릭하고 **변수 선택** 대화 상자에서 ExcelFile 변수를 선택합니다.  
   
-3.  **ReadWriteVariables**를 클릭하고 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
+3.  
+  **ReadWriteVariables**를 클릭하고 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
   
-    -   `ExcelTables`.  
+    -   
+  `ExcelTables`을 입력합니다.  
   
-         -또는-  
+         또는  
   
-    -   속성 필드 옆의 줄임표( **...** ) 단추를 클릭하고 **변수 선택** 대화 상자에서 ExcelTablesvariable 변수를 선택합니다.  
+    -   속성 필드 옆의 줄임표(**...**) 단추를 클릭하고 **변수 선택** 대화 상자에서 ExcelTablesvariable 변수를 선택합니다.  
   
-4.  **스크립트 편집**을 클릭하여 스크립트 편집기를 엽니다.  
+4.  
+  **스크립트 편집**을 클릭하여 스크립트 편집기를 엽니다.  
   
 5.  스크립트 프로젝트에 `System.Xml` 네임스페이스에 대한 참조를 추가합니다.  
   
-6.  `Imports` 네임스페이스에 대한 `System.Data.OleDb` 문을 스크립트 파일의 맨 위에 추가합니다.  
+6.  
+  `Imports` 네임스페이스에 대한 `System.Data.OleDb` 문을 스크립트 파일의 맨 위에 추가합니다.  
   
 7.  다음 코드를 추가합니다.  
   
@@ -435,7 +470,7 @@ public class ScriptMain
 ### <a name="alternate-solution"></a>대체 솔루션  
  스크립트 태스크를 사용하여 Excel 테이블의 목록을 배열로 수집하는 대신 ForEach ADO.NET 스키마 행 집합 열거자를 사용하여 Excel 통합 문서 파일의 모든 테이블, 즉 워크시트와 명명된 범위를 반복할 수도 있습니다. 자세한 내용은 [Foreach 루프 컨테이너를 사용하여 Excel 파일 및 테이블 루핑](../control-flow/foreach-loop-container.md)을 참조하세요.  
   
-##  <a name="testing"></a> 예제 결과 표시  
+##  <a name="testing"></a>샘플 결과 표시  
  이 항목의 각 예를 동일한 패키지에서 구성한 경우 모든 스크립트 태스크를 모든 예의 출력을 표시하는 추가 스크립트 태스크에 연결할 수 있습니다.  
   
 #### <a name="to-configure-a-script-task-to-display-the-output-of-the-examples-in-this-topic"></a>이 항목의 예 출력을 표시하도록 스크립트 태스크를 구성하려면  
@@ -444,19 +479,23 @@ public class ScriptMain
   
 2.  각 태스크가 이전 태스크가 성공적으로 완료된 후 실행되도록 네 개의 예 스크립트 태스크를 서로 연결하고, 네 번째 예 태스크를 **DisplayResults** 태스크에 연결합니다.  
   
-3.  **스크립트 태스크 편집기**에서 **DisplayResults** 태스크를 엽니다.  
+3.  
+  **스크립트 태스크 편집기**에서 **DisplayResults** 태스크를 엽니다.  
   
-4.  **스크립트** 탭에서 **ReadOnlyVariables**를 클릭하고 다음 방법 중 하나를 사용하여 [예제를 테스트하기 위한 패키지 구성](#configuring)에 나열된 7개의 변수를 모두 추가합니다.  
+4.  
+  **스크립트** 탭에서 **ReadOnlyVariables**를 클릭하고 다음 방법 중 하나를 사용하여 [예제를 테스트하기 위한 패키지 구성](#configuring)에 나열된 7개의 변수를 모두 추가합니다.  
   
     -   각 변수의 이름을 쉼표로 구분하여 입력합니다.  
   
-         -또는-  
+         또는  
   
-    -   속성 필드 옆의 줄임표( **...** ) 단추를 클릭하고 **변수 선택** 대화 상자에서 해당 변수를 선택합니다.  
+    -   속성 필드 옆의 줄임표(**...**) 단추를 클릭하고 **변수 선택** 대화 상자에서 해당 변수를 선택합니다.  
   
-5.  **스크립트 편집**을 클릭하여 스크립트 편집기를 엽니다.  
+5.  
+  **스크립트 편집**을 클릭하여 스크립트 편집기를 엽니다.  
   
-6.  `Imports` 및 `Microsoft.VisualBasic` 네임스페이스에 대한 `System.Windows.Forms` 문을 스크립트 파일의 맨 위에 추가합니다.  
+6.  
+  `Imports` 및 `Microsoft.VisualBasic` 네임스페이스에 대한 `System.Windows.Forms` 문을 스크립트 파일의 맨 위에 추가합니다.  
   
 7.  다음 코드를 추가합니다.  
   
@@ -541,9 +580,9 @@ public class ScriptMain
 }  
 ```  
   
-![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Excel 연결 관리자](../connection-manager/excel-connection-manager.md)   
  [Foreach 루프 컨테이너를 사용하여 Excel 파일 및 테이블 루핑](../control-flow/foreach-loop-container.md)  
   

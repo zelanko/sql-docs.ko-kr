@@ -1,5 +1,5 @@
 ---
-title: Axis (MDX) | Microsoft Docs
+title: 축 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: fa65c1531be29273c0a838b978109bbd1c8a2b18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68016984"
 ---
 # <a name="axis-mdx"></a>Axis(MDX)
@@ -32,7 +32,7 @@ Axis(Axis_Number)
  축 번호를 지정하는 유효한 숫자 식입니다.  
   
 ## <a name="remarks"></a>설명  
- 합니다 **축** 함수 축 0부터 시작 위치를 사용 하 여 축의 튜플 집합을 반환 합니다. 예를 들어 `Axis(0)`은 COLUMNS 축을 반환하고, `Axis(1)`은 ROWS 축을 반환하는 식으로 진행됩니다. 합니다 **축** 필터 축에 함수를 사용할 수 없습니다. 이 함수를 사용하면 계산 멤버에서 실행될 쿼리의 컨텍스트를 인식하도록 지정할 수 있습니다. 예를 들어 Rows 축에서 선택한 계산 멤버의 합계만 제공하는 계산 멤버가 필요할 수 있습니다. 또한 이 함수를 사용하여 한 축의 정의가 다른 축의 정의에 종속되도록 지정할 수 있습니다. 예를 들어 Columns 축의 첫 번째 항목 값에 따라 Rows 축의 내용을 정렬할 수 있습니다.  
+ 축 **함수는** 축에 대 한 0부터 시작 하는 위치를 사용 하 여 축의 튜플 집합을 반환 합니다. 예를 들어 `Axis(0)`은 COLUMNS 축을 반환하고, `Axis(1)`은 ROWS 축을 반환하는 식으로 진행됩니다. **축** 함수는 필터 축에 사용할 수 없습니다. 이 함수를 사용하면 계산 멤버에서 실행될 쿼리의 컨텍스트를 인식하도록 지정할 수 있습니다. 예를 들어 Rows 축에서 선택한 계산 멤버의 합계만 제공하는 계산 멤버가 필요할 수 있습니다. 또한 이 함수를 사용하여 한 축의 정의가 다른 축의 정의에 종속되도록 지정할 수 있습니다. 예를 들어 Columns 축의 첫 번째 항목 값에 따라 Rows 축의 내용을 정렬할 수 있습니다.  
   
 > [!NOTE]  
 >  축은 이전 축만 참조할 수 있습니다. 예를 들어 `Axis(0)`은 ROW 또는 PAGE 축과 같이 COLUMNS 축이 계산된 다음에만 발생해야 합니다.  
@@ -62,7 +62,7 @@ Axis(Axis_Number)
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

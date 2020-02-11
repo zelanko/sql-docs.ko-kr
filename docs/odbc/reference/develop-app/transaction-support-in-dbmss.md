@@ -14,11 +14,11 @@ ms.assetid: 0fc2ae34-4748-4120-9fc3-bb28c8ed867e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 72353e9917996ecacdc5971b4a11f9c73718ba43
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037636"
 ---
 # <a name="transaction-support-in-dbmss"></a>DBMS의 트랜잭션 지원
-일부 데이터베이스, Paradox, dBASE와 Btrieve, 특히 데스크톱 데이터베이스 트랜잭션을 지원 하지 않습니다. 트랜잭션을 지 원하는 데이터베이스 간에 트랜잭션에서 될 수 있는 SQL 문의 종류의 변형이 있습니다. 자세한 내용은 SQL_TXN_CAPABLE 옵션을 참조 합니다 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) 함수 설명 합니다.
+일부 데이터베이스, 특히 dBASE, Paradox, Btrieve 등의 데스크톱 데이터베이스는 트랜잭션을 지원 하지 않습니다. 트랜잭션을 지 원하는 데이터베이스 간에도 트랜잭션에 있을 수 있는 SQL 문의 종류에는 변형이 있습니다. 자세한 내용은 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) 함수 설명의 SQL_TXN_CAPABLE 옵션을 참조 하십시오.

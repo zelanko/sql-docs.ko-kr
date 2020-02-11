@@ -1,5 +1,5 @@
 ---
-title: '&lt;모델&gt;에서 선택 합니다. 콘텐츠 (DMX) | Microsoft Docs'
+title: 모델&gt;에서 &lt;선택 합니다. 콘텐츠 (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,13 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 61cbacee45147b7b6203e9cb2164c02cdc2c7453
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892837"
 ---
-# <a name="select-from-ltmodelgtcontent-dmx"></a>&lt;모델&gt;에서 선택 합니다. 콘텐츠 (DMX)
+# <a name="select-from-ltmodelgtcontent-dmx"></a>모델&gt;에서 &lt;선택 합니다. 콘텐츠 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   지정한 데이터 마이닝 모델의 마이닝 모델 스키마 행 집합을 반환합니다.  
@@ -42,26 +42,26 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  *조건 식*  
  (선택 사항) 열 목록에서 반환되는 값을 제한하는 조건입니다.  
   
- *expression*  
+ *식*  
  (선택 사항) 스칼라 값을 반환하는 식입니다.  
   
 ## <a name="remarks"></a>설명  
- **SELECT**  _FROM\<model >_ **입니다. CONTENT** 문은 각 알고리즘과 관련 된 콘텐츠를 반환 합니다. 예를 들어 사용자 지정 애플리케이션에서 연결 규칙 모델의 모든 규칙 설명을 사용하려는 경우 **SELECT FROM \<model >를 사용할 수 있습니다.** 모델의 NODE_RULE 열에 있는 값을 반환 하는 내용 문입니다.  
+ **SELECT FROM** _ \<model>_ **입니다. CONTENT** 문은 각 알고리즘과 관련 된 콘텐츠를 반환 합니다. 예를 들어 사용자 지정 애플리케이션에서 연결 규칙 모델의 모든 규칙 설명을 사용하려는 경우 **SELECT FROM \<model>를 사용할 수 있습니다. **모델의 NODE_RULE 열에서 값을 반환 하는 내용 문입니다.  
   
  다음 표에서는 마이닝 모델 콘텐츠에 포함된 열을 나열합니다.  
   
 > [!NOTE]  
->  알고리즘은 콘텐츠를 올바르게 표시하기 위해 열을 다르게 해석할 수 있습니다. 각 알고리즘에 대 한 마이닝 모델 콘텐츠 및 각 모델 유형에 대 한 마이닝 모델 콘텐츠를 해석 하 고 쿼리 하는 방법에 대 한 설명은 [마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)을 참조 하세요.  
+>  알고리즘은 콘텐츠를 올바르게 표시하기 위해 열을 다르게 해석할 수 있습니다. 각 알고리즘에 대 한 마이닝 모델 콘텐츠 및 각 모델 유형에 대 한 마이닝 모델 콘텐츠를 해석 하 고 쿼리 하는 방법에 대 한 설명은 [마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)를 참조 하세요.  
   
-|CONTENT 행 집합 열|설명|  
+|CONTENT 행 집합 열|Description|  
 |---------------------------|-----------------|  
 |MODEL_CATALOG|카탈로그 이름입니다. 공급자가 카탈로그를 지원하지 않을 경우 NULL입니다.|  
 |MODEL_SCHEMA|정규화되지 않은 스키마 이름입니다. 공급자가 스키마를 지원하지 않을 경우 NULL입니다.|  
 |MODEL_NAME|모델 이름입니다. 이 열에는 NULL이 포함될 수 없습니다.|  
 |ATTRIBUTE_NAME|노드에 해당하는 특성 이름입니다.|  
-|NODE_NAME|노드 이름입니다.|  
+|NODE_NAME|노드의 이름입니다.|  
 |NODE_UNIQUE_NAME|모델 내에서 노드의 고유한 이름입니다.|  
-|NODE_TYPE|노드 유형을 나타내는 정수입니다. 을 선택합니다.|  
+|NODE_TYPE|노드 유형을 나타내는 정수입니다. .|  
 |NODE_GUID|노드 GUID입니다. GUID가 없는 경우 NULL입니다.|  
 |NODE_CAPTION|노드에 연결된 레이블 또는 캡션이며 주로 표시 목적으로 사용됩니다. 캡션이 없는 경우 NODE_NAME이 반환됩니다.|  
 |CHILDREN_CARDINALITY|노드에 있는 자식 수입니다.|  
@@ -91,7 +91,7 @@ WHERE NODE_TYPE = 1
  다음 쿼리에서는 **Isdescendant** 함수를 사용 하 여 이전 쿼리에서 반환 된 노드의 직계 자식을 반환 합니다.  
   
 > [!NOTE]  
->  NODE_NAME의 값은 문자열 이므로 하위 select 문을 사용 하 여 NODE_ID를 **Isdescendant** 함수에 대 한 인수로 반환할 수 없습니다.  
+>  NODE_NAME 값이 문자열 이기 때문에 하위 select 문을 사용 하 여 NODE_ID을 **isdescendant** 함수에 대 한 인수로 반환할 수 없습니다.  
   
 ```  
 SELECT NODE_NAME, NODETYPE, NODE_CAPTION   
@@ -116,11 +116,11 @@ FROM [TM_NaiveBayes].CONTENT
 WHERE NODE_TYPE = 26  
 ```  
   
- 예제 결과:  
+ 결과 예:  
   
 |MODEL_NAME|NODE_DISTRIBUTION.ATTRIBUTE_NAME|NODE_DISTRIBUTION.ATTRIBUTE_VALUE|NODE_DISTRIBUTION.SUPPORT|NODE_DISTRIBUTION.PROBABILITY|NODE_DISTRIBUTION.VARIANCE|NODE_DISTRIBUTION.VALUETYPE|  
 |-----------------|----------------------------------------|-----------------------------------------|--------------------------------|------------------------------------|---------------------------------|----------------------------------|  
-|TM_NaiveBayes|Bike Buyer|Missing|0|0|0|1\.|  
+|TM_NaiveBayes|Bike Buyer|Missing|0|0|0|1|  
 |TM_NaiveBayes|Bike Buyer|0|6556|0.506685215240745|0||  
 |TM_NaiveBayes|Bike Buyer|1|6383|0.493314784759255|0||  
   
@@ -134,17 +134,17 @@ FROM TM_NaiveBayes.CONTENT
 WHERE NODE_TYPE = 26  
 ```  
   
- 예제 결과:  
+ 결과 예:  
   
-|MODEL_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|  
+|MODEL_NAME|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|  
 |-----------------|-----------------------|------------------------|---------------|  
 |TM_NaiveBayes|Bike Buyer|Missing|0|  
 |TM_NaiveBayes|Bike Buyer|0|6556|  
 |TM_NaiveBayes|Bike Buyer|1|6383|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [DMX &#40;선택&#41;](../dmx/select-dmx.md)   
  [데이터 마이닝 확장 &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
- [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
+ [데이터 마이닝 확장 &#40;DMX&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

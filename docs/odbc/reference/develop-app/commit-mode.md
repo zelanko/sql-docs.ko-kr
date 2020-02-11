@@ -15,14 +15,14 @@ ms.assetid: 963fe470-f7cb-4dbe-a779-05f98d7ff17d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22519e6d3be8ab4474fd88309da1b7e8be0fb49e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083330"
 ---
 # <a name="commit-mode"></a>커밋 모드
-ODBC의 트랜잭션 두 가지 모드 중 하나일 수 있습니다: 수동 커밋 모드나 자동 커밋 모드입니다.  
+ODBC의 트랜잭션은 자동 커밋 모드 또는 수동 커밋 모드의 두 가지 모드 중 하나일 수 있습니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   
