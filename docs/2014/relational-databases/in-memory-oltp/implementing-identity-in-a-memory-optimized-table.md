@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 591d86011ee769d054c069db98a40e2765b1ec27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63157824"
 ---
 # <a name="implementing-identity-in-a-memory-optimized-table"></a>메모리 액세스에 최적화된 테이블에서 IDENTITY 구현
@@ -51,7 +51,7 @@ insert into T1 values (@c1, 'test', getdate())
   
  삽입을 여러 번 수행하면 [c1] 열에 단순하게 증가하는 유효한 값이 나타납니다. 이 결과 집합은 `ORDER BY` 없이 테이블 검색과 해시 인덱스를 사용하여 생성되므로 행은 정렬되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP로 마이그레이션](migrating-to-in-memory-oltp.md)  
   
   

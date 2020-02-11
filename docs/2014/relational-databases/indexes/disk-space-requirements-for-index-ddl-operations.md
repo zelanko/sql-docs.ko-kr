@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7dbb3fafd32ead6587d9c64eb6ccf2294ed4918b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63161798"
 ---
 # <a name="disk-space-requirements-for-index-ddl-operations"></a>Disk Space Requirements for Index DDL Operations
@@ -48,7 +48,7 @@ ms.locfileid: "63161798"
   
 -   CREATE  INDEX  WITH  DROP_EXISTING  
   
--   ALTER  INDEX  REBUILD  
+-   ALTER INDEX REBUILD  
   
 -   ALTER  TABLE  ADD  CONSTRAINT(PRIMARY  KEY  또는 UNIQUE)  
   
@@ -78,7 +78,7 @@ ms.locfileid: "63161798"
  온라인 인덱스 작업은 행 버전 관리를 사용하여 다른 트랜잭션에서 수정하는 내용의 영향을 받지 않습니다. 따라서 이미 읽은 행에 대한 공유 잠금을 요청할 필요가 없습니다. 온라인 인덱스 작업 중 여러 사용자가 동시에 업데이트 및 삭제 작업을 수행하려면 **tempdb**의 버전 레코드를 위한 공간이 필요합니다. 자세한 내용은 [온라인으로 인덱스 작업 수행](perform-index-operations-online.md) 을 참조하세요.  
   
 ## <a name="related-tasks"></a>관련 작업  
- [Index Disk Space Example](index-disk-space-example.md)  
+ [인덱스 디스크 공간 예](index-disk-space-example.md)  
   
  [인덱스 작업에 필요한 트랜잭션 로그 디스크 공간](transaction-log-disk-space-for-index-operations.md)  
   

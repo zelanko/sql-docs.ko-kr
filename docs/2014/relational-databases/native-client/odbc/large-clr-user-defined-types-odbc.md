@@ -1,5 +1,5 @@
 ---
-title: 큰 CLR 사용자 정의 형식 (ODBC) | Microsoft 문서
+title: 대량 CLR 사용자 정의 형식 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,18 +14,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5af4f85652fc1a8a333912c741f96df014655ebe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144313"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>큰 CLR 사용자 정의 형식(ODBC)
   이 항목에서는 큰 CLR(공용 언어 런타임) UDT(사용자 정의 형식)를 지원하기 위한 SQL Server Native Client의 ODBC 변경 내용에 대해 설명합니다.  
   
- 큰 CLR Udt에 대 한 ODBC 지원을 보여 주는 샘플을 참조 하세요 [큰 Udt에 대 한 지원](../../native-client-odbc-how-to/support-for-large-udts.md)합니다.  
+ 대량 CLR Udt에 대 한 ODBC 지원을 보여 주는 예제는 [Large udt에 대 한 지원](../../native-client-odbc-how-to/support-for-large-udts.md)을 참조 하세요.  
   
- SQL Server Native Client의 큰 CLR Udt 지원에 대 한 자세한 내용은 참조 하세요. [Large CLR User-Defined 형식](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)합니다.  
+ SQL Server Native Client의 large CLR Udt 지원에 대 한 자세한 내용은 [LARGE Clr 사용자 정의 형식](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)을 참조 하세요.  
   
 ## <a name="data-format"></a>데이터 형식  
  SQL Server Native Client는 SQL_SS_LENGTH_UNLIMITED를 사용하여 LOB(Large Object) 형식에 대해 8,000바이트 이상인 열의 크기를 나타냅니다. SQL Server 2008부터 크기가 8,000바이트보다 큰 CLR UDT에도 같은 값이 사용됩니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "63144313"
   
 |SQL 데이터 형식|메모리 레이아웃|C 데이터 형식|값(sqlext.h)|  
 |-------------------|-------------------|-----------------|------------------------|  
-|SQL_SS_UDT|SQLCHAR * (unsigned char \*)|SQL_C_BINARY|SQL_BINARY (-2)|  
+|SQL_SS_UDT|SQLCHAR * (부호 없는 \*문자)|SQL_C_BINARY|SQL_BINARY (-2)|  
   
 ## <a name="descriptor-fields-for-parameters"></a>매개 변수의 설명자 필드  
  IPD 필드에 반환되는 정보는 다음과 같습니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "63144313"
 |SQL_CA_SS_UDT_TYPE_NAME|UDT의 이름입니다.|UDT의 이름입니다.|  
 |SQL_CA_SS_UDT_ASSEMBLY_TYPE_NAME|UDT의 정규화된 이름입니다.|UDT의 정규화된 이름입니다.|  
   
- UDT 매개 변수의 경우 SQL_CA_SS_UDT_TYPE_NAME 항상 설정 해야 통해 **SQLSetDescField**합니다. SQL_CA_SS_UDT_CATALOG_NAME 및 SQL_CA_SS_UDT_SCHEMA_NAME은 선택 사항입니다.  
+ UDT 매개 변수의 경우 SQL_CA_SS_UDT_TYPE_NAME는 항상 **SQLSetDescField**을 통해 설정 해야 합니다. SQL_CA_SS_UDT_CATALOG_NAME 및 SQL_CA_SS_UDT_SCHEMA_NAME은 선택 사항입니다.  
   
  UDT가 테이블과 다른 스키마가 있는 동일한 데이터베이스에 정의되어 있으면 SQL_CA_SS_UDT_SCHEMA_NAME을 설정해야 합니다.  
   
@@ -120,32 +120,32 @@ ms.locfileid: "63144313"
 |SS_UDT_SCHEMA_NAME|UDT가 포함된 스키마의 이름입니다.|UDT가 포함된 스키마의 이름입니다.|  
 |SS_UDT_ASSEMBLY_TYPE_NAME|UDT의 정규화된 이름입니다.|UDT의 정규화된 이름입니다.|  
   
- 마지막 세 개의 열은 드라이버 관련 열입니다. SQLColumns SQLProcedureColumns의 결과 집합의 모든 기존 드라이버별 열 앞 있지만 모든 ODBC 정의 열 이후 추가 됩니다.  
+ 마지막 세 개의 열은 드라이버 관련 열입니다. 이러한 열은 ODBC 정의 열 뒤에 추가 되 고 SQLColumns 또는 SQLProcedureColumns 결과 집합의 기존 드라이버별 열 앞에 추가 됩니다.  
   
- 개별 Udt 또는 일반 유형 "udt"에 대 한 SQLGetTypeInfo에서 아무 행도 반환 합니다.  
+ 개별 Udt 또는 제네릭 형식 "udt"에 대해 SQLGetTypeInfo에서 행을 반환 하지 않습니다.  
   
 ## <a name="bindings-and-conversions"></a>바인딩 및 변환  
  SQL에서 C 데이터 형식으로 지원되는 변환은 다음과 같습니다.  
   
 |변환 원본 및 대상|SQL_SS_UDT|  
 |-----------------------------|------------------|  
-|SQL_C_WCHAR|지원 *|  
+|SQL_C_WCHAR|되지|  
 |SQL_C_BINARY|지원됨|  
-|SQL_C_CHAR|지원 *|  
+|SQL_C_CHAR|되지|  
   
- \* 이진 데이터가 16 진수 문자열로 변환 됩니다.  
+ \*이진 데이터가 16 진수 문자열로 변환 됩니다.  
   
  C에서 SQL 데이터 형식으로 지원되는 변환은 다음과 같습니다.  
   
 |변환 원본 및 대상|SQL_SS_UDT|  
 |-----------------------------|------------------|  
-|SQL_C_WCHAR|지원 *|  
+|SQL_C_WCHAR|되지|  
 |SQL_C_BINARY|지원됨|  
-|SQL_C_CHAR|지원 *|  
+|SQL_C_CHAR|되지|  
   
- \* 16 진수 문자열에서 이진 데이터 변환이 발생합니다.  
+ \*16 진수 문자열에서 이진 데이터로의 변환이 발생 합니다.  
   
-## <a name="sqlvariant-support-for-udts"></a>UDT에 대한 SQL_VARIANT 지원  
+## <a name="sql_variant-support-for-udts"></a>UDT에 대한 SQL_VARIANT 지원  
  UDT는 SQL_VARIANT 열에서 지원되지 않습니다.  
   
 ## <a name="bcp-support-for-udts"></a>UDT에 대한 BCP 지원  
@@ -163,7 +163,7 @@ ms.locfileid: "63144313"
  이 섹션에서는 큰 CLR UDT를 지원하는 SQL Server Native Client ODBC 함수의 변경 내용에 대해 설명합니다.  
   
 ### <a name="sqlbindcol"></a>SQLBindCol  
- UDT 결과 열 값은 SQL에서이 항목 앞부분의 "바인딩 및 변환" 섹션에서 설명 된 대로 C 데이터 형식으로 변환 됩니다.  
+ UDT 결과 열 값은이 항목의 앞부분에 있는 "바인딩 및 변환" 섹션에 설명 된 대로 SQL에서 C 데이터 형식으로 변환 됩니다.  
   
 ### <a name="sqlbindparameter"></a>SQLBindParameter  
  UDT에 필요한 값은 다음과 같습니다.  
@@ -196,13 +196,13 @@ ms.locfileid: "63144313"
 |SQL_SS_UDT<br /><br /> (8,000바이트를 초과하는 길이)|SQL_SS_UDT|SQL_SS_LENGTH_UNLIMITED (0)|0|  
   
 ### <a name="sqlfetch"></a>SQLFetch  
- UDT 결과 열 값은 SQL에서이 항목 앞부분의 "바인딩 및 변환" 섹션에서 설명 된 대로 C 데이터 형식으로 변환 됩니다.  
+ UDT 결과 열 값은이 항목의 앞부분에 있는 "바인딩 및 변환" 섹션에 설명 된 대로 SQL에서 C 데이터 형식으로 변환 됩니다.  
   
 ### <a name="sqlfetchscroll"></a>SQLFetchScroll  
- UDT 결과 열 값은 SQL에서이 항목 앞부분의 "바인딩 및 변환" 섹션에서 설명 된 대로 C 데이터 형식으로 변환 됩니다.  
+ UDT 결과 열 값은이 항목의 앞부분에 있는 "바인딩 및 변환" 섹션에 설명 된 대로 SQL에서 C 데이터 형식으로 변환 됩니다.  
   
 ### <a name="sqlgetdata"></a>SQLGetData  
- UDT 결과 열 값은 SQL에서이 항목 앞부분의 "바인딩 및 변환" 섹션에서 설명 된 대로 C 데이터 형식으로 변환 됩니다.  
+ UDT 결과 열 값은이 항목의 앞부분에 있는 "바인딩 및 변환" 섹션에 설명 된 대로 SQL에서 C 데이터 형식으로 변환 됩니다.  
   
 ### <a name="sqlgetdescfield"></a>SQLGetDescField  
  새 형식과 함께 사용할 수 있는 설명자 필드는 이 항목의 앞부분에 있는 "매개 변수의 설명자 필드" 및 "결과의 설명자 필드" 섹션에 설명되어 있습니다.  
@@ -210,7 +210,7 @@ ms.locfileid: "63144313"
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  UDT에 대해 반환되는 값은 다음과 같습니다.  
   
-|SQL 데이터 형식|형식|하위 유형|길이|전체 자릿수|소수 자릿수|  
+|SQL 데이터 형식|Type|하위 유형|길이|자릿수|확장|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (8,000바이트 이하 길이)|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> (8,000바이트를 초과하는 길이)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -222,7 +222,7 @@ ms.locfileid: "63144313"
  UDT에 대해 반환되는 값은 이 항목의 앞부분에 있는 "SQLColumns 및 SQLProcedureColumns가 반환하는 열 메타데이터(카탈로그 메타데이터)" 섹션에 설명되어 있습니다.  
   
 ### <a name="sqlputdata"></a>SQLPutData  
- UDT 매개 변수 값은 C에서이 항목 앞부분의 "바인딩 및 변환" 섹션에서 설명 된 대로 SQL 데이터 형식으로 변환 됩니다.  
+ UDT 매개 변수 값은이 항목의 앞부분에 있는 "바인딩 및 변환" 섹션에 설명 된 대로 C에서 SQL 데이터 형식으로 변환 됩니다.  
   
 ### <a name="sqlsetdescfield"></a>SQLSetDescField  
  새 형식과 함께 사용할 수 있는 설명자 필드는 이 항목의 앞부분에 있는 "매개 변수의 설명자 필드" 및 "결과의 설명자 필드" 섹션에 설명되어 있습니다.  
@@ -230,7 +230,7 @@ ms.locfileid: "63144313"
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  UDT에 허용되는 값은 다음과 같습니다.  
   
-|SQL 데이터 형식|형식|하위 유형|길이|전체 자릿수|소수 자릿수|  
+|SQL 데이터 형식|Type|하위 유형|길이|자릿수|확장|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (8,000바이트 이하 길이)|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> (8,000바이트를 초과하는 길이)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -238,7 +238,7 @@ ms.locfileid: "63144313"
 ### <a name="sqlspecialcolumns"></a>SQLSpecialColumns  
  DATA_TYPE, TYPE_NAME, COLUMN_SIZE, BUFFER_LENGTH 및 DECIMAL_DIGTS UDT 열에 대해 반환되는 값은 이 항목의 앞부분에 있는 "SQLColumns 및 SQLProcedureColumns가 반환하는 열 메타데이터(카탈로그 메타데이터)" 섹션에 설명되어 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [큰 CLR 사용자 정의 형식](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

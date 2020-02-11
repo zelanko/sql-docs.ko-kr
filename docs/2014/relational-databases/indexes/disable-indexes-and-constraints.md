@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 047fffdc729b276979720e9d245862a692a86be0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63162407"
 ---
 # <a name="disable-indexes-and-constraints"></a>인덱스 및 제약 조건 비활성화
@@ -87,7 +87,7 @@ ms.locfileid: "63162407"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  ALTER INDEX를 실행하려면 최소한 테이블이나 뷰에 대한 ALTER 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -127,7 +127,7 @@ ms.locfileid: "63162407"
  인덱스가 생성된 테이블 또는 뷰의 이름을 표시합니다.  
   
  **인덱스 유형**  
- 인덱스의 유형을 표시합니다. **클러스터형**, **비클러스터형**합니다 **공간**, 또는 **XML**합니다.  
+ 인덱스의 유형( **클러스터형**, **비클러스터형**, **공간**또는 **XML**)을 표시합니다.  
   
  **상태**  
  비활성화 작업의 상태를 표시합니다. 실행 후에 표시될 수 있는 값은 다음과 같습니다.  
@@ -140,7 +140,7 @@ ms.locfileid: "63162407"
   
      인덱스 비활성화가 시작되었지만 아직 완료되지 않았습니다.  
   
--   **성공**  
+-   **Success**  
   
      비활성화 작업이 성공적으로 완료되었습니다.  
   

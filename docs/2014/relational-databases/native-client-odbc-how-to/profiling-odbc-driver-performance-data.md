@@ -1,5 +1,5 @@
 ---
-title: 드라이버 성능 데이터 (ODBC) 프로 파일링 | Microsoft Docs
+title: 드라이버 성능 데이터 프로 파일링 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,56 +13,57 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a7de38f3c91814dbd364caee84b34dacdfbdf475
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200307"
 ---
 # <a name="profile-driver-performance-data-odbc"></a>드라이버 성능 데이터 프로파일링(ODBC)
-  이 예제에서는 성능 통계를 기록하기 위한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버 관련 옵션을 보여 줍니다. 샘플 파일을 만듭니다: odbcperf.log 성능 데이터 로그 파일 및 (SQLPERF 구조는 Odbcss.h에 정의 됨). SQLPERF 데이터 구조에서 직접 성능 데이터를 표시를 만드는 방법을 보여 줍니다. 이 예제는 ODBC 버전 3.0 이상용으로 개발되었습니다.  
+  이 예제에서는 성능 통계를 기록하기 위한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버 관련 옵션을 보여 줍니다. 이 예제는 odbcperf.log 파일을 만듭니다. 또한 SQLPERF 데이터 구조에서 직접 성능 데이터 로그 파일을 만들고 성능 데이터를 표시하는 방법을 보여 줍니다. SQLPERF 구조는 Odbcss.h에 정의되어 있습니다. 이 예제는 ODBC 버전 3.0 이상용으로 개발되었습니다.  
   
 > [!IMPORTANT]  
 >  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
   
 ### <a name="to-log-driver-performance-data-using-odbc-administrator"></a>ODBC 관리자를 사용하여 드라이버 성능 데이터를 기록하려면  
   
-1.  **Control Panel**를 두 번 클릭 **관리 도구** 두 번 클릭 **데이터 원본 (ODBC)** 합니다. 또는 odbcad32.exe를 호출할 수도 있습니다.  
+1.  **제어판**에서 **관리 도구** 를 두 번 클릭 한 다음 **데이터 원본 (ODBC)** 을 두 번 클릭 합니다. 또는 odbcad32.exe를 호출할 수도 있습니다.  
   
-2.  클릭 합니다 **사용자 DSN**를 **시스템 DSN**, 또는 **파일 DSN** 탭 합니다.  
+2.  **사용자 dsn**, **시스템 DSN**또는 **파일 dsn** 탭을 클릭 합니다.  
   
 3.  성능 데이터를 기록할 데이터 원본을 클릭합니다.  
   
-4.  클릭 **구성**합니다.  
+4.  
+  **구성**을 클릭합니다.  
   
-5.  Microsoft SQL Server DSN 구성 마법사에서를 사용 하 여 페이지를 탐색할 **로그 파일에 ODBC 드라이버 통계**합니다.  
+5.  Microsoft SQL Server DSN 구성 마법사에서 **로그 파일에 ODBC 드라이버 통계 로그**를 포함 하는 페이지로 이동 합니다.  
   
-6.  선택 **로그 파일에 ODBC 드라이버 통계**합니다. 상자에서 통계를 기록할 파일 이름을 입력합니다. 필요에 따라 클릭 **찾아보기** 의 통계 로그에 대 한 파일 시스템에서 찾아보려면 합니다.  
+6.  **로그 파일에 ODBC 드라이버 통계 기록을**선택 합니다. 상자에서 통계를 기록할 파일 이름을 입력합니다. 필요에 따라 **찾아보기** 를 클릭 하 여 파일 시스템에서 통계 로그를 찾습니다.  
   
 ### <a name="to-log-driver-performance-data-programmatically"></a>드라이버 성능 데이터를 프로그래밍 방식으로 기록하려면  
   
-1.  호출 [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_DATA_LOG 및 성능 데이터 로그 파일의 전체 경로 및 파일 이름을 사용 하 여 합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+1.  SQL_COPT_SS_PERF_DATA_LOG와 성능 데이터 로그 파일의 전체 경로 및 파일 이름을 사용 하 여 [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) 를 호출 합니다. 다음은 그 예입니다.  
   
     ```  
     "C:\\Odbcperf.log"  
     ```  
   
-2.  호출 [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) 성능 데이터 기록을 시작 하려면 SQL_COPT_SS_PERF_DATA 및 SQL_PERF_START를 사용 하 여 합니다.  
+2.  SQL_COPT_SS_PERF_DATA 및 SQL_PERF_START를 사용 하 여 [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) 를 호출 하 여 성능 데이터 로깅을 시작 합니다.  
   
-3.  필요에 따라 호출할 [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) 성능 데이터 로그 파일에 성능 데이터의 탭으로 구분 된 레코드를 쓸 SQL_COPT_SS_LOG_NOW 및 NULL입니다. 이 작업은 애플리케이션 실행 시 여러 번 수행할 수 있습니다.  
+3.  필요에 따라 SQL_COPT_SS_LOG_NOW 및 NULL로 [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) 를 호출 하 여 성능 데이터 로그 파일에 대 한 탭으로 구분 된 성능 데이터 레코드를 작성 합니다. 이 작업은 애플리케이션 실행 시 여러 번 수행할 수 있습니다.  
   
-4.  호출 [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) 성능 데이터 기록을 중지 하려면 SQL_COPT_SS_PERF_DATA 및 SQL_PERF_STOP을 사용 하 여 합니다.  
+4.  SQL_COPT_SS_PERF_DATA 및 SQL_PERF_STOP를 사용 하 여 [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) 를 호출 하 여 성능 데이터 로깅을 중지 합니다.  
   
 ### <a name="to-pull-driver-performance-data-into-an-application"></a>드라이버 성능 데이터를 애플리케이션으로 가져오려면  
   
-1.  호출 [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) 성능 데이터 프로 파일링을 시작 하려면 SQL_COPT_SS_PERF_DATA 및 SQL_PERF_START를 사용 하 여 합니다.  
+1.  SQL_COPT_SS_PERF_DATA 및 SQL_PERF_START를 사용 하 여 [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) 를 호출 하 여 성능 데이터 프로 파일링을 시작 합니다.  
   
-2.  호출 [SQLGetConnectAttr](../native-client-odbc-api/sqlgetconnectattr.md) SQL_COPT_SS_PERF_DATA 및 SQLPERF 구조에 대 한 포인터의 주소를 사용 하 여 합니다. 첫 번째 호출에서는 현재 성능 데이터가 포함된 올바른 SQLPERF 구조의 주소에 대한 포인터를 설정합니다. 드라이버는 성능 구조의 데이터를 지속적으로 새로 고치지 않습니다. 응용 프로그램에 대 한 호출을 반복 해야 합니다 [SQLGetConnectAttr](../native-client-odbc-api/sqlgetconnectattr.md) 최신 성능 데이터로 구조를 새로 고쳐야 할 때마다 합니다.  
+2.  SQL_COPT_SS_PERF_DATA와 SQLPERF 구조체에 대 한 포인터의 주소를 사용 하 여 [SQLGetConnectAttr](../native-client-odbc-api/sqlgetconnectattr.md) 를 호출 합니다. 첫 번째 호출에서는 현재 성능 데이터가 포함된 올바른 SQLPERF 구조의 주소에 대한 포인터를 설정합니다. 드라이버는 성능 구조의 데이터를 지속적으로 새로 고치지 않습니다. 응용 프로그램은 현재 성능 데이터를 더 많이 사용 하 여 구조를 새로 고쳐야 할 때마다 [SQLGetConnectAttr](../native-client-odbc-api/sqlgetconnectattr.md) 에 대 한 호출을 반복 해야 합니다.  
   
-3.  호출 [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) 성능 데이터 기록을 중지 하려면 SQL_COPT_SS_PERF_DATA 및 SQL_PERF_STOP을 사용 하 여 합니다.  
+3.  SQL_COPT_SS_PERF_DATA 및 SQL_PERF_STOP를 사용 하 여 [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) 를 호출 하 여 성능 데이터 로깅을 중지 합니다.  
   
 ## <a name="example"></a>예제  
- AdventureWorks 예제 데이터베이스를 기본 데이터베이스로 사용하는 AdventureWorks라는 ODBC 데이터 원본이 필요합니다. AdventureWorks 샘플 데이터베이스는 [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384)(Microsoft SQL Server 샘플 및 커뮤니티 프로젝트) 홈 페이지에서 다운로드할 수 있습니다. 이 데이터 원본은 운영 체제에서 제공하는 ODBC 드라이버를 기반으로 해야 합니다. 이 드라이버의 이름은 "SQL Server"입니다. 이 예제를 64비트 운영 체제에서 32비트 애플리케이션으로 작성하여 실행하려는 경우 %windir%\SysWOW64\odbcad32.exe에서 ODBC 관리자를 사용하여 ODBC 데이터 원본을 만들어야 합니다.  
+ AdventureWorks 예제 데이터베이스를 기본 데이터베이스로 사용하는 AdventureWorks라는 ODBC 데이터 원본이 필요합니다. AdventureWorks 샘플 데이터베이스는 [Microsoft SQL Server 샘플 및 커뮤니티 프로젝트](https://go.microsoft.com/fwlink/?LinkID=85384) 홈 페이지에서 다운로드할 수 있습니다. 이 데이터 원본은 운영 체제에서 제공 하는 ODBC 드라이버를 기반으로 해야 합니다. 드라이버 이름은 "SQL Server"입니다. 이 예제를 64비트 운영 체제에서 32비트 애플리케이션으로 작성하여 실행하려는 경우 %windir%\SysWOW64\odbcad32.exe에서 ODBC 관리자를 사용하여 ODBC 데이터 원본을 만들어야 합니다.  
   
  이 예제는 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 명명된 인스턴스에 연결하려면 ODBC 데이터 원본의 정의를 변경하여 server\namedinstance 형식으로 인스턴스를 지정합니다. 기본적으로 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 는 명명된 인스턴스에 설치됩니다.  
   
@@ -237,8 +238,8 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [ODBC 드라이버 성능 방법 도움말 항목을 프로 파일링 &#40;ODBC&#41;](profiling-odbc-driver-performance-odbc.md)   
+## <a name="see-also"></a>참고 항목  
+ [ODBC 드라이버 성능 프로 파일링 방법 항목 ODBC&#41;&#40;](profiling-odbc-driver-performance-odbc.md)   
  [ODBC 드라이버 성능 프로파일링](../native-client/odbc/profiling-odbc-driver-performance.md)  
   
   

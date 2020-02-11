@@ -11,16 +11,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b591aa8e89200ca863b1e8196c383c506401fc3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151061"
 ---
 # <a name="xtp-cursors"></a>XTP 커서
   XTP 커서 성능 개체에는 내부 XTP 엔진 커서와 관련된 카운터가 포함됩니다. 커서는 XTP 엔진이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 처리하기 위해 사용하는 하위 수준의 기본 구성 요소입니다. 따라서 사용자는 일반적으로 이를 직접 제어하지 않습니다.  
   
- 이 테이블에 설명 합니다 **XTP 커서** 카운터입니다.  
+ 이 표에서는 **XTP 커서** 카운터에 대해 설명 합니다.  
   
 |카운터|Description|  
 |-------------|-----------------|  
@@ -37,7 +37,7 @@ ms.locfileid: "63151061"
 |**Rows touched/sec**|커서에 의해 처리된 초당 행 수입니다(평균).|  
 |**Tentatively-deleted rows touched/sec**|커서에 의해 처리된 만료되는 초당 행 수입니다(평균). 만료되는 행은 행을 삭제한 트랜잭션이 여전히 활성 상태인 경우의 행을 의미합니다(즉, 아직 커밋되거나 중단되지 않음).|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [XTP &#40;메모리 내 OLTP&#41; 성능 카운터](../../integration-services/performance/performance-counters.md)  
   
   

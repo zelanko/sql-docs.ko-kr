@@ -1,5 +1,5 @@
 ---
-title: URL 액세스와 SOAP 중 선택 | Microsoft Docs
+title: URL 액세스와 SOAP 중에서 선택 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,19 +16,22 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 070d37a1e6ca210694d16ab593e9de40882611f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192988"
 ---
 # <a name="choosing-between-url-access-and-soap"></a>URL 액세스와 SOAP 중 선택
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 사용자 지정 애플리케이션에 통합하는 작업은 까다로울 수 있습니다. 하지만 문제는 프로그래밍 모델이나 API의 복잡성이 아니라 통합에 사용할 수 있는 방법이 다양하다는 점입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 처음부터 개발자 플랫폼으로 디자인되었기 때문에 프로그래밍 유연성을 염두에 두고 만들어졌습니다. 이러한 유연성으로 인해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 탐색 및 관리 기능을 기존 비즈니스 애플리케이션에 통합하는 데 있어서 중요한 결정이 필요합니다.  
+  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 사용자 지정 애플리케이션에 통합하는 작업은 까다로울 수 있습니다. 하지만 문제는 프로그래밍 모델이나 API의 복잡성이 아니라 통합에 사용할 수 있는 방법이 다양하다는 점입니다. 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 처음부터 개발자 플랫폼으로 디자인되었기 때문에 프로그래밍 유연성을 염두에 두고 만들어졌습니다. 이러한 유연성으로 인해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 탐색 및 관리 기능을 기존 비즈니스 애플리케이션에 통합하는 데 있어서 중요한 결정이 필요합니다.  
   
  ![Reporting Services 프로그래밍 시나리오](../../../2014/reporting-services/media/bk-ext-04.gif "Reporting Services 프로그래밍 시나리오")  
 Reporting Services 프로그래밍에서는 다양한 시나리오를 지원합니다.  
   
- 통합 하는 방법은 두 가지 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 사용자 지정 응용 프로그램에: URL 액세스와 Reporting Services SOAP API를 제공 합니다. 어느 방법을 사용할지는 여러 요소에 따라 달라집니다. 경우에 따라 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 사용자 지정 비즈니스 애플리케이션에 통합하려면 URL 액세스와 SOAP 두 가지 모두를 사용해야 할 수 있습니다. 다음과 같은 질문을 고려해야 합니다.  
+ 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 사용자 지정 애플리케이션에 통합하는 방법에는 URL 액세스와 Reporting Services SOAP API 두 가지가 있습니다. 어느 방법을 사용할지는 여러 요소에 따라 달라집니다. 경우에 따라 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 사용자 지정 비즈니스 애플리케이션에 통합하려면 URL 액세스와 SOAP 두 가지 모두를 사용해야 할 수 있습니다. 다음과 같은 질문을 고려해야 합니다.  
   
 -   자신 또는 최종 사용자에게 어떤 유형의 엔터프라이즈 보고 기능이 필요합니까? 보고서를 간단하게 시작하고 탐색할 수 있는 방법이 필요합니까 아니면 사용자 지정 비즈니스 솔루션에서 고급 보고서 서버 관리 기능이 필요합니까?  
   
@@ -41,7 +44,7 @@ Reporting Services 프로그래밍에서는 다양한 시나리오를 지원합�
   
  보고서 도구 모음에 대한 자세한 내용은 [HTML 뷰어 및 보고서 도구 모음](../html-viewer-and-the-report-toolbar.md)을 참조하세요.  
   
- URL 액세스에 대 한 자세한 내용은 참조 하세요. [URL 액세스 &#40;SSRS&#41;](../url-access-ssrs.md)합니다.  
+ URL 액세스에 대 한 자세한 내용은 [Url 액세스 &#40;SSRS&#41;](../url-access-ssrs.md)를 참조 하세요.  
   
  URL 액세스는 보고서를 보는 데 유용하지만 엔터프라이즈 보고 시나리오에 필수적일 수 있는 보고서 및 네임스페이스 관리 기능을 제공하지 않습니다. 이 경우 Reporting Services SOAP API에서 제공되는 다양하고 풍부한 기능을 사용하는 것이 좋습니다. SOAP API를 통해 보고서 관리 및 배포, 일정 만들기, 서버 속성 구성, 보고서 서버 네임스페이스 관리, 구독 만들기 등의 작업을 수행할 수 있습니다. SOAP API는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 전체 관리 기능 집합을 표시합니다. 또한 SOAP API에서는 API의 <xref:ReportExecution2005.ReportExecutionService.Render%2A> 메서드를 통해 보고서 보기 및 탐색이 가능합니다. 하지만 SOAP API를 통한 보고서 보기에서는 보고서 도구 모음에 기본 제공되는 보기 기능을 사용할 수 없을 뿐만 아니라 URL 액세스에서 제공하는 보고서 대화형 작업을 자동으로 처리하지도 못합니다.  
   
@@ -51,10 +54,10 @@ Reporting Services 프로그래밍에서는 다양한 시나리오를 지원합�
   
  URL 액세스와 웹 서비스를 결합하여 통합 보고 기능을 제공하는 예는 [SQL Server Reporting Services 제품 예제](https://go.microsoft.com/fwlink/?LinkId=177889)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [응용 프로그램에 Reporting Services 통합](../../../2014/reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
- [SOAP를 사용하여 Reporting Services 통합](../application-integration/integrating-reporting-services-using-soap.md)   
- [URL 액세스를 사용하여 Reporting Services 통합](../application-integration/integrating-reporting-services-using-url-access.md)   
+ [SOAP를 사용 하 여 Reporting Services 통합](../application-integration/integrating-reporting-services-using-soap.md)   
+ [URL 액세스를 사용 하 여 Reporting Services 통합](../application-integration/integrating-reporting-services-using-url-access.md)   
  [기술 참조&#40;SSRS&#41;](../../../2014/reporting-services/technical-reference-ssrs.md)  
   
   

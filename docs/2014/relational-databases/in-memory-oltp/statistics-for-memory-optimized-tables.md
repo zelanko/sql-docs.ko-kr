@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4e47a8c6f5b0da31aea9168bbbc56bd9b28afb96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63155798"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 대한 통계
@@ -24,13 +24,13 @@ ms.locfileid: "63155798"
   
  일반적으로 통계 데이터는 행이 삽입, 업데이트 및 삭제되면서 시간이 지남에 따라 변경됩니다. 따라서 통계를 정기적으로 업데이트해야 합니다. 기본적으로 최적화 프로그램에서 통계가 최신 상태가 아닐 수 있다고 확인하면 디스크 기반 테이블에 대한 통계가 자동으로 업데이트됩니다.  
   
- 메모리 최적화 테이블에 대한 통계는 기본적으로 업데이트되지 않습니다. 그 대신 이 통계를 수동으로 업데이트해야 합니다. 사용 하 여 [UPDATE STATISTICS &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/update-statistics-transact-sql) 개별 열, 인덱스 또는 테이블에 대 한 합니다. 사용 하 여 [sp_updatestats &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) 모든 사용자 및 데이터베이스의 내부 테이블에 대 한 통계를 업데이트 합니다.  
+ 메모리 최적화 테이블에 대한 통계는 기본적으로 업데이트되지 않습니다. 그 대신 이 통계를 수동으로 업데이트해야 합니다. 개별 열, 인덱스 또는 테이블에 대해 [UPDATE STATISTICS &#40;transact-sql&#41;](/sql/t-sql/statements/update-statistics-transact-sql) 를 사용 합니다. [Sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) 을 사용 하 여 데이터베이스의 모든 사용자 및 내부 테이블에 대 한 통계를 업데이트 합니다.  
   
- 사용 하는 경우 [CREATE STATISTICS &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-statistics-transact-sql) 또는 [UPDATE STATISTICS &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql)를 지정 해야 `NORECOMPUTE` 자동 통계를 사용 하지 않도록 설정 메모리 최적화 테이블에 대 한 업데이트입니다. 디스크 기반 테이블에 대 한 [sp_updatestats &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) 테이블에 마지막 수정한 경우에 통계를 업데이트 [sp_updatestats &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql). 메모리 최적화 테이블에 대 한 [sp_updatestats &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) 항상 업데이트 된 통계를 생성 합니다. [sp_updatestats &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) 하는 메모리 최적화 테이블에 대 한 좋은 테이블 통계를 개별적으로 업데이트할 수 있도록 중요 한 변경 내용이 알아야 할 그렇지 않은 경우.  
+ [CREATE statistics &#40;transact-sql&#41;](/sql/t-sql/statements/create-statistics-transact-sql) 또는 [UPDATE statistics &#40;transact-sql&#41;](/sql/t-sql/statements/update-statistics-transact-sql)를 사용 하는 경우 메모리 최적화 테이블에 대해 `NORECOMPUTE` 자동 통계 업데이트를 사용 하지 않도록 지정 해야 합니다. 디스크 기반 테이블의 경우 transact-sql [&#40;&#41;마지막 sp_updatestats ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)이후 테이블이 수정 된 경우에만 [sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) 에서 통계를 업데이트 합니다. 메모리 최적화 테이블의 경우 [sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) 는 항상 업데이트 된 통계를 생성 합니다. [sp_updatestats &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) 는 메모리 최적화 테이블에 대 한 좋은 옵션입니다. 그렇지 않으면 통계를 개별적으로 업데이트할 수 있도록 중요 한 변경 내용이 있는 테이블을 알아야 합니다.  
   
  데이터를 샘플링하거나 전체 검사를 수행하여 통계를 생성할 수 있습니다. 샘플링된 통계만 테이블 데이터 샘플을 사용하여 데이터 분포를 예상합니다. 전체 검사 통계는 전체 테이블을 검사하여 데이터 분포를 결정합니다. 전체 검사 통계는 일반적으로 더 정확하지만 컴퓨팅하는 데 시간이 더 오래 걸립니다. 샘플링된 통계는 더 빠르게 수집할 수 있습니다.  
   
- 디스크 기반 테이블은 샘플링된 통계를 기본적으로 사용합니다. 메모리 액세스에 최적화된 테이블만 전체 검사 통계를 지원합니다. 사용 하는 경우 [CREATE STATISTICS &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-statistics-transact-sql) 또는 [UPDATE STATISTICS &#40;Transact SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql)를 지정 해야 합니다는 `FULLSCAN` 옵션에 대 한 메모리 최적화 테이블입니다.  
+ 디스크 기반 테이블은 샘플링된 통계를 기본적으로 사용합니다. 메모리 액세스에 최적화된 테이블만 전체 검사 통계를 지원합니다. [CREATE statistics &#40;transact-sql&#41;](/sql/t-sql/statements/create-statistics-transact-sql) 또는 [UPDATE statistics &#40;transact-sql&#41;](/sql/t-sql/statements/update-statistics-transact-sql)를 사용 하는 `FULLSCAN` 경우 메모리 최적화 테이블에 대 한 옵션을 지정 해야 합니다.  
   
  메모리 최적화 테이블 통계에 대한 추가 고려 사항:  
   
@@ -64,11 +64,11 @@ ms.locfileid: "63155798"
   
  통계를 업데이트하려면:  
   
--   사용 하 여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 하 [유지 관리 계획을 만듭니다](../maintenance-plans/create-a-maintenance-plan.md) 사용 하 여는 [업데이트 통계 태스크](../maintenance-plans/update-statistics-task-maintenance-plan.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [통계 업데이트 태스크](../maintenance-plans/update-statistics-task-maintenance-plan.md) 를 사용 하 여 [유지 관리 계획을 만드는](../maintenance-plans/create-a-maintenance-plan.md) 데 사용  
   
 -   또는 아래 설명과 같이 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 스크립트를 통해 통계를 업데이트합니다.  
   
- 단일 메모리 최적화 테이블에 대 한 통계를 업데이트 하려면 (*myschema*합니다. *Mytable*), 다음 스크립트를 실행 합니다.  
+ 단일 메모리 최적화 테이블 (*myschema.xml*)에 대 한 통계를 업데이트 합니다. *Mytable*)에서 다음 스크립트를 실행 합니다.  
   
 ```  
 UPDATE STATISTICS myschema.Mytable WITH FULLSCAN, NORECOMPUTE  
@@ -86,7 +86,7 @@ FROM sys.tables WHERE is_memory_optimized=1
 EXEC sp_executesql @sql  
 ```  
   
- 데이터베이스의 모든 테이블에 대 한 통계를 업데이트 하려면 실행 [sp_updatestats &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)합니다.  
+ 데이터베이스의 모든 테이블에 대 한 통계를 업데이트 하려면 [transact-sql&#41;&#40;sp_updatestats ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)를 실행 합니다.  
   
  다음 예에서는 메모리 최적화 테이블의 통계가 마지막으로 업데이트된 시기를 보고합니다. 이 정보로 통계를 업데이트해야 할지 여부를 결정할 수 있습니다.  
   
@@ -96,7 +96,7 @@ from sys.tables t join sys.stats s on t.object_id=s.object_id cross apply sys.dm
 where t.is_memory_optimized=1  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [메모리 액세스에 최적화된 테이블](memory-optimized-tables.md)  
+## <a name="see-also"></a>참고 항목  
+ [메모리 최적화 테이블](memory-optimized-tables.md)  
   
   

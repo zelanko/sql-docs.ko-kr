@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ea11c177533a6101bb0654ca0450e85ea855d9a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150825"
 ---
 # <a name="plan-guides"></a>계획 지침
@@ -33,7 +33,7 @@ ms.locfileid: "63150825"
  만들 수 있는 총 계획 지침 수는 사용 가능한 시스템 리소스에 의해서만 제한됩니다. 그러나 계획 지침은 성능 향상이나 안정화를 목적으로 하는 중요 업무용 쿼리로 제한되어야 합니다. 배포된 애플리케이션의 쿼리 로드 대부분에 영향을 주기 위해 계획 지침을 사용하면 안 됩니다.  
   
 > [!NOTE]  
->  계획 지침은 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 일부 버전에서 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다. 계획 지침은 모든 버전에 표시됩니다. 계획 지침이 포함된 데이터베이스를 모든 버전에 추가할 수 있습니다. 업그레이드된 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 데이터베이스를 복원하거나 첨부해도 계획 지침은 그대로 유지됩니다.  
+>  계획 지침은 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 일부 버전에서 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조 하세요. 계획 지침은 모든 버전에 표시됩니다. 계획 지침이 포함된 데이터베이스를 모든 버전에 추가할 수 있습니다. 업그레이드된 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 데이터베이스를 복원하거나 첨부해도 계획 지침은 그대로 유지됩니다.  
   
 ## <a name="types-of-plan-guides"></a>계획 지침의 유형  
  다음과 같은 계획 지침 유형을 만들 수 있습니다.  
@@ -41,7 +41,8 @@ ms.locfileid: "63150825"
  OBJECT 계획 지침  
  OBJECT 계획 지침은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저, 사용자 정의 스칼라 함수, 다중 문 사용자 정의 테이블 반환 함수 및 DML 트리거의 컨텍스트에서 실행되는 쿼리와 일치합니다.  
   
- `@Country`데이터베이스에 대해 배포되는 데이터베이스 응용 프로그램에`region` _ [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 매개 변수를 가져오는 다음 저장 프로시저가 있다고 가정합니다.  
+ 
+  `@Country`데이터베이스에 대해 배포되는 데이터베이스 애플리케이션에`region` _ [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 매개 변수를 가져오는 다음 저장 프로시저가 있다고 가정합니다.  
   
 ```  
 CREATE PROCEDURE Sales.GetSalesOrderByCountry (@Country_region nvarchar(60))  
@@ -97,7 +98,8 @@ sp_create_plan_guide
 ```  
   
 > [!IMPORTANT]  
->  `@module_or_batch` 문의 `@params` 및 `sp_create_plan guide` 인수에 대해 제공되는 값은 실제 쿼리에서 전송되는 해당 텍스트와 일치해야 합니다. 자세한 내용은 [sp_create_plan_guide&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql) 문의 [SQL Server Profiler를 사용하여 계획 지침 작성 및 테스트](plan-guides.md)에서 실제 쿼리의 텍스트를 직접 변경할 수 없거나 직접 변경하지 않으려는 경우 계획 지침에 따라 쿼리 성능을 최적화할 수 있습니다.  
+>  
+  `@module_or_batch` 문의 `@params` 및 `sp_create_plan guide` 인수에 대해 제공되는 값은 실제 쿼리에서 전송되는 해당 텍스트와 일치해야 합니다. 자세한 내용은 [sp_create_plan_guide&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql) 문의 [SQL Server Profiler를 사용하여 계획 지침 작성 및 테스트](plan-guides.md)에서 실제 쿼리의 텍스트를 직접 변경할 수 없거나 직접 변경하지 않으려는 경우 계획 지침에 따라 쿼리 성능을 최적화할 수 있습니다.  
   
  PARAMETERIZATION 데이터베이스 옵션을 FORCED로 설정했거나 쿼리 클래스를 매개 변수화하도록 지정하는 TEMPLATE 계획 지침을 만든 경우에 같은 형식으로 매개 변수화된 쿼리에 대해서도 SQL 계획 지침을 만들 수 있습니다.  
   
@@ -115,7 +117,8 @@ sp_create_plan_guide
   
  `SELECT FirstName, LastName FROM Person.Person;`  
   
- [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 계획 지침만 이 쿼리에 일치될 수 있습니다. 그러나 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 가 현재 데이터베이스이면 다음 문이 실행됩니다.  
+ 
+  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 계획 지침만 이 쿼리에 일치될 수 있습니다. 그러나 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 가 현재 데이터베이스이면 다음 문이 실행됩니다.  
   
  `USE DB1;`  
   
@@ -125,7 +128,7 @@ sp_create_plan_guide
   
  SQL 또는 TEMPLATE 기반 계획 지침을 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 두 값의 문자를 비교하여 @module_or_batch 및 @params 인수의 값을 일치시킵니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 실제 일괄 처리에서 수신한 것과 똑같이 텍스트를 제공해야 합니다.  
   
- @type이 'SQL'이고 @module_or_batch가 NULL로 설정된 경우 @module_or_batch 값은 @stmt 값으로 설정됩니다. 이는 *statement_text* 의 값이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 전송된 것과 문자 수준까지 같은 형식으로 제공되어야 함을 의미합니다. 이 일치 작업을 더 효과적으로 처리하기 위해 내부 변환은 수행되지 않습니다.  
+ = @type ' SQL '이 고 @module_or_batch 가 NULL로 설정 된 경우의 @module_or_batch 값은의 @stmt값으로 설정 됩니다. 즉, *statement_text* 의 값은에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]전송 될 때 문자에 대해 문자를 사용 하 여 동일한 형식으로 제공 되어야 합니다. 이 일치 작업을 더 효과적으로 처리하기 위해 내부 변환은 수행되지 않습니다.  
   
  일반(SQL 또는 OBJECT) 계획 지침 및 TEMPLATE 계획 지침 모두 문에 적용할 수 있을 경우 일반 계획 지침만 사용됩니다.  
   
@@ -137,7 +140,7 @@ sp_create_plan_guide
   
 ## <a name="related-tasks"></a>관련 작업  
   
-|태스크|항목|  
+|Task|항목|  
 |----------|-----------|  
 |계획 지침을 만드는 방법에 대해 설명합니다.|[새 계획 지침 만들기](create-a-new-plan-guide.md)|  
 |매개 변수가 있는 쿼리에 대한 계획 지침을 만드는 방법에 대해 설명합니다.|[매개 변수가 있는 쿼리를 위한 계획 지침 만들기](create-a-plan-guide-for-parameterized-queries.md)|  
@@ -148,11 +151,11 @@ sp_create_plan_guide
 |SQL Server Profiler를 사용하여 계획 지침을 작성 및 테스트하는 방법에 대해 설명합니다.|[SQL Server Profiler를 사용하여 계획 지침 작성 및 테스트](plan-guides.md)|  
 |계획 지침의 유효성을 검사하는 방법에 대해 설명합니다.|[업그레이드 후 계획 지침의 유효성 검사](validate-plan-guides-after-upgrade.md)|  
   
-## <a name="see-also"></a>관련 항목  
- [sp_create_plan_guide&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
- [sp_create_plan_guide_from_handle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)   
- [sp_control_plan_guide&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql)   
- [sys.plan_guides&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-plan-guides-transact-sql)   
- [sys.fn_validate_plan_guide&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql)  
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;sp_create_plan_guide &#40;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [Transact-sql&#41;sp_create_plan_guide_from_handle &#40;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)   
+ [Transact-sql&#41;sp_control_plan_guide &#40;](/sql/relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql)   
+ [plan_guides &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-plan-guides-transact-sql)   
+ [fn_validate_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql)  
   
   

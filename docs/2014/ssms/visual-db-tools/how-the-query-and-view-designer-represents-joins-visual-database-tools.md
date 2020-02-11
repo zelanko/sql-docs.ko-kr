@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: abd8dd7c3c23a13b1cdff7a2d6f76fb99375a641
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63155267"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>쿼리 및 뷰 디자이너의 조인 표시 방법(Visual Database Tools)
-  테이블이 조인되면 [쿼리 및 뷰 디자이너](visual-database-tools.md) 는 [다이어그램 창](diagram-pane-visual-database-tools.md) 에 조인을 그래픽으로 나타내고 [SQL 창](sql-pane-visual-database-tools.md)에 SQL 구문을 사용합니다.  
+  테이블이 조인 된 경우 [쿼리 및 뷰 디자이너](visual-database-tools.md) 는 [다이어그램 창](diagram-pane-visual-database-tools.md) 에 조인을 그래픽으로 나타내고 [sql 창](sql-pane-visual-database-tools.md)에 sql 구문을 사용 합니다.  
   
 ## <a name="diagram-pane"></a>다이어그램 창  
  다이어그램 창에서 쿼리 및 뷰 디자이너는 조인에 포함된 데이터 열 사이에 조인 선을 표시합니다. 쿼리 및 뷰 디자이너는 각 조인 조건에 대해 한 개의 조인 선을 표시합니다. 예를 들어, 아래 그림은 조인된 두 테이블 사이에 있는 조인 선을 보여 줍니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "63155267"
   
  조인 선의 끝에 있는 기호는 조인 형식을 나타냅니다. 다음 표는 조인 형식과 조인 선의 끝에 표시되는 아이콘 목록입니다.  
   
-|**조인 선 끝의 아이콘**|**조인 형식**|  
+|**조인 선 끝의 아이콘**|**조인 유형**|  
 |-----------------------------------|----------------------|  
 |![Visual Database Tools 아이콘](../../database-engine/media//dv3wbim.gif "Visual Database Tools 아이콘")|일 대 일 조인|  
 |![Visual Database Tools 아이콘](../../database-engine/media//dv3wbin.gif "Visual Database Tools 아이콘")|일 대 다 조인|  
@@ -58,7 +58,7 @@ ms.locfileid: "63155267"
   
  테이블 조인과 관련된 구문 옵션은 다음과 같습니다.  
   
--   **FROM 절의 JOIN 한정자**.   키워드 INNER 및 OUTER가 조인 형식을 지정합니다. 이 구문은 ANSI 92 SQL 표준입니다.  
+-   **From 절에 대 한 조인 한정자**입니다.   키워드 INNER 및 OUTER가 조인 형식을 지정합니다. 이 구문은 ANSI 92 SQL 표준입니다.  
   
      예를 들어, 각 테이블의 `publishers` 열을 기반으로 하여 `pub_info` 테이블과 `pub_id` 테이블을 조인하는 경우 결과 SQL 문은 다음과 같습니다.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "63155267"
   
      외부 조인을 만드는 경우 INNER 대신에 LEFT OUTER 또는 RIGHT OUTER가 나타납니다.  
   
--   **두 테이블의 열을 비교하는 WHERE 절**.   데이터베이스에서 JOIN 구문이 지원되지 않거나 사용자가 JOIN 구문을 직접 입력한 경우 WHERE 절이 나타납니다. WHERE 절에서 조인을 만들면 두 테이블 이름이 FROM 절에 나타납니다.  
+-   **Where 절은 두 테이블의 열을 비교**합니다.   데이터베이스에서 JOIN 구문이 지원되지 않거나 사용자가 JOIN 구문을 직접 입력한 경우 WHERE 절이 나타납니다. WHERE 절에서 조인을 만들면 두 테이블 이름이 FROM 절에 나타납니다.  
   
      예를 들어, 아래 문은 `publishers` 테이블과 `pub_info` 테이블을 조인합니다.  
   
@@ -80,8 +80,8 @@ ms.locfileid: "63155267"
     WHERE publishers.pub_id = pub_info.pub_id  
     ```  
   
-## <a name="see-also"></a>관련 항목  
- [조인을 사용한 쿼리 &#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools를 &#40;조인을 사용 하 여 쿼리&#41;](query-with-joins-visual-database-tools.md)   
  [조인 대화 상자&#40;Visual Database Tools&#41;](join-dialog-box-visual-database-tools.md)  
   
   

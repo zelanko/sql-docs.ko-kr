@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fc4e2ecd81b6bf0a6c24aff8e89dc31c95e04625
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63191444"
 ---
-# <a name="mssqleng014150"></a>MSSQL_ENG014150
+# <a name="mssql_eng014150"></a>MSSQL_ENG014150
     
 ## <a name="message-details"></a>메시지 정보  
   
@@ -50,12 +50,12 @@ ms.locfileid: "63191444"
 ## <a name="user-action"></a>사용자 동작  
  다른 에이전트가 요청 시 또는 예약 시에 실행되는 반면 로그 판독기 에이전트, 큐 판독기 에이전트 및 배포 에이전트는 일반적으로 계속 실행됩니다. 에이전트의 실행을 완료하지 않도록 하려면 에이전트의 상태를 확인하십시오. 자세한 내용은 [Monitor Replication Agents](agents/replication-agents-overview.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [복제 에이전트 관리](agents/replication-agent-administration.md)   
  [오류 및 이벤트 참조&#40;복제&#41;](errors-and-events-reference-replication.md)   
- [복제 배포 에이전트](agents/replication-distribution-agent.md)   
- [복제 로그 판독기 에이전트](agents/replication-log-reader-agent.md)   
- [복제 병합 에이전트](agents/replication-merge-agent.md)   
+ [Replication Distribution Agent](agents/replication-distribution-agent.md)   
+ [Replication Log Reader Agent](agents/replication-log-reader-agent.md)   
+ [Replication Merge Agent](agents/replication-merge-agent.md)   
  [복제 큐 판독기 에이전트](agents/replication-queue-reader-agent.md)   
  [Replication Snapshot Agent](agents/replication-snapshot-agent.md)  
   

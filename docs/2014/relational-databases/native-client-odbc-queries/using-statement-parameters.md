@@ -1,5 +1,5 @@
 ---
-title: 문 매개 변수를 사용 하 여 | Microsoft 문서
+title: 문 매개 변수 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a16f070623503dcb17788bc75bd5695bc1584d7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200249"
 ---
 # <a name="using-statement-parameters"></a>문 매개 변수 사용
@@ -32,9 +32,9 @@ ms.locfileid: "63200249"
   
 -   쿼리 조건을 생성하여 사용자 상호 작용을 향상시킵니다.  
   
--   관리할 **텍스트**를 **ntext**, 및 **이미지** 데이터 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-관련 C 데이터 형식입니다.  
+-   **Text**, **ntext**및 **image** 데이터와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]관련 C 데이터 형식을 관리 합니다.  
   
- 예를 들어를 **파트** 테이블에 열 이름이 **PartID**를 **설명**, 및 **가격**합니다. 매개 변수 없이 부품을 추가하려면 다음과 같이 SQL 문을 생성해야 합니다.  
+ 예를 들어 **부품** 테이블에는 **PartID**, **설명**및 **가격**이라는 열이 있습니다. 매개 변수 없이 부품을 추가하려면 다음과 같이 SQL 문을 생성해야 합니다.  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  
@@ -54,7 +54,7 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
   
 -   [매개 변수 바인딩](using-statement-parameters-binding-parameters.md)  
   
-## <a name="see-also"></a>관련 항목  
- [쿼리 실행 &#40;ODBC&#41;](executing-queries-odbc.md)  
+## <a name="see-also"></a>참고 항목  
+ [ODBC&#41;&#40;쿼리 실행](executing-queries-odbc.md)  
   
   

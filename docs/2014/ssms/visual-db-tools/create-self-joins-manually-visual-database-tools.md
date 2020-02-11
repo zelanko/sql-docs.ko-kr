@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dd8e26099ec7152aac08a11b6f7e38550834d248
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184248"
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>수동으로 자체 조인 만들기(Visual Database Tools)
@@ -124,8 +124,8 @@ Cheryl Carson       Abraham Bennet
   
 7.  출력 열, 검색 조건, 정렬 순서 등의 기타 쿼리 옵션을 지정합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [만들 자체 조인 자동으로 &#40;Visual Database Tools&#41;](create-self-joins-automatically-visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools를 &#40;자동으로 자체 조인 만들기&#41;](create-self-joins-automatically-visual-database-tools.md)   
  [조인을 사용한 쿼리&#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)  
   
   

@@ -16,16 +16,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c912d6ac343bbcb3f908596a8ea804ad8f21dd82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63164035"
 ---
 # <a name="using-an-external-dataset-with-reporting-services"></a>Reporting Services에서 외부 데이터 세트 사용
-  **DataSet** 개체는 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]에서 연결이 끊긴 분산 데이터 시나리오를 지원하는 데 있어 핵심적인 역할을 합니다. **DataSet** 개체는 데이터 원본과 상관없이 일관성 있는 관계형 프로그래밍 모델을 제공하는 데이터의 메모리 상주 표현입니다. 다양한 데이터 원본 또는 XML 데이터와 함께 사용하거나 애플리케이션의 로컬 데이터를 관리하는 데 사용할 수 있습니다. **DataSet** 개체는 관련 테이블, 제약 조건, 테이블 간의 관계 등을 포함한 전체 데이터 집합을 나타냅니다. **DataSet** 개체는 데이터를 유연하게 저장하고 표시할 수 있기 때문에 데이터에 대한 보고가 이루어지기 전에 데이터가 처리되고 **DataSet** 개체로 변환되는 경우도 있습니다.  
+  **DataSet** 개체는 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]에서 연결이 끊긴 분산 데이터 시나리오를 지원하는 데 있어 핵심적인 역할을 합니다. **DataSet** 개체는 데이터 원본과 상관없이 일관성 있는 관계형 프로그래밍 모델을 제공하는 데이터의 메모리 상주 표현입니다. 다양한 데이터 원본 또는 XML 데이터와 함께 사용하거나 애플리케이션의 로컬 데이터를 관리하는 데 사용할 수 있습니다. **DataSet** 개체는 관련 테이블, 제약 조건, 테이블 간의 관계 등을 포함한 전체 데이터 세트를 나타냅니다. **DataSet** 개체는 데이터를 유연하게 저장하고 표시할 수 있기 때문에 데이터에 대한 보고가 이루어지기 전에 데이터가 처리되고 **DataSet** 개체로 변환되는 경우도 있습니다.  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램을 사용하여 외부 응용 프로그램으로 만든 사용자 지정 **DataSet** 개체를 통합할 수 있습니다. 그러려면 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 **DataSet** 개체와 보고서 서버를 연결하는 사용자 지정 데이터 처리 확장 프로그램을 만듭니다. 이 **DataSet** 개체를 처리하기 위한 코드의 대부분은 사용자가 만드는 **DataReader** 클래스에 포함됩니다.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램을 사용하여 외부 애플리케이션으로 만든 사용자 지정 **DataSet** 개체를 통합할 수 있습니다. 그러려면 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 **DataSet** 개체와 보고서 서버를 연결하는 사용자 지정 데이터 처리 확장 프로그램을 만듭니다. 이 **DataSet** 개체를 처리하기 위한 코드의 대부분은 사용자가 만드는 **DataReader** 클래스에 포함됩니다.  
   
  **DataSet** 개체를 보고서 서버에 표시하는 첫 단계는 **DataReader** 클래스에서 **DataSet** 개체를 채울 수 있는 공급자별 메서드를 구현하는 것입니다. 다음 예는 **DataReader** 클래스에서 공급자별 메서드를 사용하여 **DataSet** 개체에 정적 데이터를 로드하는 방법을 보여 줍니다.  
   
@@ -162,7 +162,7 @@ public int GetOrdinal(string name)
   
  데이터 세트를 만들거나 검색하면 **DataReader** 클래스의 **Read**, **GetValue**, **GetName**, **GetOrdinal**, **GetFieldType** 및 **FieldCount** 멤버 구현에서 **DataSet** 개체를 사용할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services 확장 프로그램](../reporting-services-extensions.md)   
  [데이터 처리 확장 프로그램 구현](implementing-a-data-processing-extension.md)   
  [Reporting Services 확장 라이브러리](../reporting-services-extension-library.md)  

@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4b382545e9f7e5af1607d67539f2ae9f29cfdce3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150888"
 ---
 # <a name="establish-a-performance-baseline"></a>성능 기준선 설정
@@ -52,7 +52,7 @@ ms.locfileid: "63150888"
   
  서버 성능 기준선을 설정한 후 현재 서버의 성능을 기준선 통계와 비교하십시오. 기준선과 지나치게 많은 차이가 나면 더 자세하게 조사해야 합니다. 이것은 해당 영역에 대한 튜닝 또는 재구성이 필요함을 의미할 수 있습니다. 예를 들어 쿼리 집합을 실행하는 시간이 늘어나면 쿼리를 검사하여 다시 작성할 수 있는지 확인하거나 열 통계 또는 새 인덱스를 추가해야 하는지 확인할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   
   

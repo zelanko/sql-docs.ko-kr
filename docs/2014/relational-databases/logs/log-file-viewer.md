@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f72f8e40374198a5230e32b8ec5b3974fdb6b971
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144643"
 ---
 # <a name="log-file-viewer"></a>로그 파일 뷰어
@@ -27,7 +27,7 @@ ms.locfileid: "63144643"
   
 -   감사 컬렉션  
   
--   데이터 컬렉션  
+-   데이터 수집  
   
 -   데이터베이스 메일  
   
@@ -51,7 +51,7 @@ ms.locfileid: "63144643"
 |등록된 서버를 통해 오프라인 로그 파일을 보는 방법과 WMI 사용 권한을 확인하는 방법에 대해 설명합니다.|[오프라인 로그 파일 보기](view-offline-log-files.md)|  
 |로그 파일 뷰어 F1 도움말을 제공합니다.|[로그 파일 뷰어 F1 도움말](log-file-viewer-f1-help.md)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Audit&#40;데이터베이스 엔진&#41;](../security/auditing/sql-server-audit-database-engine.md)   
  [SQL Server 에이전트 오류 로그](../../ssms/agent/sql-server-agent-error-log.md)  
   

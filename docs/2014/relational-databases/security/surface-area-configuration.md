@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 811db11aecb5e6c0f4c68d272040aea3f8e38ca4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184531"
 ---
 # <a name="surface-area-configuration"></a>노출 영역 구성
@@ -60,7 +60,8 @@ ms.locfileid: "63184531"
   
  정책 기반 관리를 사용하여 패싯 구성을 주기적으로 확인할 수 있습니다. 정책 기반 관리에 대한 자세한 내용은 [정책 기반 관리를 사용하여 서버 관리](../policy-based-management/administer-servers-by-using-policy-based-management.md)를 참조하세요.  
   
- `sp_configure` 저장 프로시저를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 옵션을 설정할 수도 있습니다. 자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다.  
+ 
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 저장 프로시저를 사용하여 `sp_configure` 옵션을 설정할 수도 있습니다. 자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다.  
   
  **의** EnableIntegratedSecurity [!INCLUDE[ssRS](../../includes/ssrs.md)]속성을 변경하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 속성 설정을 사용합니다. **예약 이벤트 및 보고서 배달** 속성과 **웹 서비스 및 HTTP 액세스** 속성을 변경하려면 **RSReportServer.config** 구성 파일을 편집합니다.  
   
@@ -71,7 +72,7 @@ ms.locfileid: "63184531"
  엔드포인트를 끄려면 정책 기반 관리를 사용하고 엔드포인트의 속성을 만들고 변경하려면 [CREATE ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql) 및 [ALTER ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)를 사용합니다.  
   
 ## <a name="related-content"></a>관련 내용  
- [SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 보안 센터](security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+ [SQL Server 데이터베이스 엔진 및 Azure SQL Database 보안 센터](security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   

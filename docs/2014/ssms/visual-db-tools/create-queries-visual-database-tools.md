@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7140e3b4511417952246093e5ed82da9f2c099b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184311"
 ---
 # <a name="create-queries-visual-database-tools"></a>쿼리 만들기(Visual Database Tools)
@@ -43,11 +43,11 @@ ms.locfileid: "63184311"
   
  **SQL 창** 에서 SQL 코드를 변경하거나 **조건 창**에서 정렬 순서 및 열 별칭 등과 같은 옵션을 선택하여 쿼리를 더 구체화할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [쿼리 저장 &#40;Visual Database Tools&#41;](save-queries-visual-database-tools.md)   
- [쿼리의 형식은 &#40;Visual Database Tools&#41;](types-of-queries-visual-database-tools.md)   
- [검색 조건 지정 &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)   
- [쿼리 결과 요약 &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools를 &#40;쿼리 저장&#41;](save-queries-visual-database-tools.md)   
+ [Visual Database Tools를 &#40;쿼리 유형&#41;](types-of-queries-visual-database-tools.md)   
+ [Visual Database Tools &#40;검색 조건을 지정&#41;](specify-search-criteria-visual-database-tools.md)   
+ [Visual Database Tools를 &#40;쿼리 결과 요약&#41;](summarize-query-results-visual-database-tools.md)   
  [쿼리 관련 기본 작업 수행&#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   
