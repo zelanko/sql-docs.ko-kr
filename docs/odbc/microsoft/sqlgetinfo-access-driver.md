@@ -14,85 +14,85 @@ ms.assetid: c226aba7-a2f4-4b32-b640-92654b40e5a7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8d71e3522ab46116e378b2ee17689a7048af04c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68003309"
 ---
 # <a name="sqlgetinfo-access-driver"></a>SQLGetInfo(Access 드라이버)
 > [!NOTE]  
->  이 항목에서는 액세스 드라이버 관련 정보를 제공 합니다. 이 함수에 대 한 일반 정보에서 해당 항목을 참조 하세요 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)합니다.  
+>  이 항목에서는 드라이버 관련 정보에 대 한 액세스를 제공 합니다. 이 함수에 대 한 일반 정보는 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)에서 적절 한 항목을 참조 하세요.  
   
- **SQLGetInfo** SQL_FILE_USAGE 정보 유형을 지원 합니다. 반환된 값은 드라이버 파일을 데이터 원본에서 직접 처리 하는 방법을 나타내는 16 비트 정수.  
+ **SQLGetInfo** 는 SQL_FILE_USAGE 정보 유형을 지원 합니다. 반환 된 값은 드라이버가 데이터 원본에서 파일을 직접 처리 하는 방법을 나타내는 16 비트 정수입니다.  
   
--   SQL_FILE_NOT_SUPPORTED-드라이버는 단일 계층 드라이버 없습니다.  
+-   SQL_FILE_NOT_SUPPORTED-드라이버가 단일 계층 드라이버가 아닙니다.  
   
--   SQL_FILE_TABLE-단일 계층 드라이버 파일 데이터 원본에서 테이블로 처리합니다.  
+-   SQL_FILE_TABLE-단일 계층 드라이버는 데이터 원본의 파일을 테이블로 처리 합니다.  
   
--   단일 계층 드라이버 SQL_FILE_QUALIFIER-파일 데이터 원본에 한정자로 처리합니다.  
+-   SQL_FILE_QUALIFIER-단일 계층 드라이버는 데이터 원본의 파일을 한정자로 처리 합니다.  
   
- ODBC 드라이버는 각 파일의 전체 데이터베이스 이므로 SQL_FILE_QUALIFIER를 반환 합니다.  
+ ODBC 드라이버는 각 파일이 전체 데이터베이스 이기 때문에 SQL_FILE_QUALIFIER를 반환 합니다.  
   
-## <a name="sqlbookmarkpersistence"></a>SQL_BOOKMARK_PERSISTENCE  
- SQL_BP_SCROLL &#124;  SQL_BP_UPDATE[1]  
+## <a name="sql_bookmark_persistence"></a>SQL_BOOKMARK_PERSISTENCE  
+ SQL_BP_SCROLL &#124; SQL_BP_UPDATE [1]  
   
- [1] 책갈피는 커밋 후에 유지 하지만 롤백 후 지속 되지 않습니다.  
+ [1] 책갈피는 커밋 후 유지 되지만 롤백 후에는 유지 되지 않습니다.  
   
-## <a name="sqlconvertbinary"></a>SQL_CONVERT_BINARY  
- SQL_CVT_DOUBLE &#124;  SQL_CVT_FLOAT &#124;  SQL_CVT_INTEGER &#124;  SQL_CVT_NUMERIC &#124;  SQL_CVT_REAL &#124;  SQL_CVT_SMALLINT &#124;  SQL_CVT_VARCHAR &#124; SQL_CVT_WVARCHAR  
+## <a name="sql_convert_binary"></a>SQL_CONVERT_BINARY  
+ SQL_CVT_DOUBLE &#124; SQL_CVT_FLOAT &#124; SQL_CVT_INTEGER &#124; SQL_CVT_NUMERIC &#124; SQL_CVT_REAL &#124; SQL_CVT_SMALLINT &#124; SQL_CVT_VARCHAR &#124; SQL_CVT_WVARCHAR  
   
-## <a name="sqlconvertchar"></a>SQL_CONVERT_CHAR  
- SQL_CVT_DOUBLE &#124;  SQL_CVT_FLOAT &#124;  SQL_CVT_INTEGER &#124;  SQL_CVT_NUMERIC &#124;  SQL_CVT_REAL &#124;  SQL_CVT_SMALLINT &#124;  SQL_CVT_VARCHAR &#124; SQL_CVT_WVARCHAR  
+## <a name="sql_convert_char"></a>SQL_CONVERT_CHAR  
+ SQL_CVT_DOUBLE &#124; SQL_CVT_FLOAT &#124; SQL_CVT_INTEGER &#124; SQL_CVT_NUMERIC &#124; SQL_CVT_REAL &#124; SQL_CVT_SMALLINT &#124; SQL_CVT_VARCHAR &#124; SQL_CVT_WVARCHAR  
   
-## <a name="sqlconvertdate"></a>SQL_CONVERT_DATE  
- SQL_CVT_DOUBLE &#124;  SQL_CVT_FLOAT &#124;  SQL_CVT_INTEGER &#124;  SQL_CVT_NUMERIC &#124;  SQL_CVT_REAL &#124;  SQL_CVT_SMALLINT &#124;  SQL_CVT_VARCHAR &#124; SQL_CVT_WVARCHAR  
+## <a name="sql_convert_date"></a>SQL_CONVERT_DATE  
+ SQL_CVT_DOUBLE &#124; SQL_CVT_FLOAT &#124; SQL_CVT_INTEGER &#124; SQL_CVT_NUMERIC &#124; SQL_CVT_REAL &#124; SQL_CVT_SMALLINT &#124; SQL_CVT_VARCHAR &#124; SQL_CVT_WVARCHAR  
   
-## <a name="sqlconvertdouble"></a>SQL_CONVERT_DOUBLE  
- SQL_CVT_DOUBLE &#124;  SQL_CVT_FLOAT &#124;  SQL_CVT_INTEGER &#124;  SQL_CVT_NUMERIC &#124;  SQL_CVT_REAL &#124;  SQL_CVT_SMALLINT &#124;  SQL_CVT_VARCHAR &#124; SQL_CVT_WVARCHAR  
+## <a name="sql_convert_double"></a>SQL_CONVERT_DOUBLE  
+ SQL_CVT_DOUBLE &#124; SQL_CVT_FLOAT &#124; SQL_CVT_INTEGER &#124; SQL_CVT_NUMERIC &#124; SQL_CVT_REAL &#124; SQL_CVT_SMALLINT &#124; SQL_CVT_VARCHAR &#124; SQL_CVT_WVARCHAR  
   
-## <a name="sqlconvertfloat"></a>SQL_CONVERT_FLOAT  
- SQL_CVT_DOUBLE &#124;  SQL_CVT_FLOAT &#124;  SQL_CVT_INTEGER &#124;  SQL_CVT_NUMERIC &#124;  SQL_CVT_REAL &#124;  SQL_CVT_SMALLINT &#124;  SQL_CVT_VARCHAR &#124; SQL_CVT_WVARCHAR  
+## <a name="sql_convert_float"></a>SQL_CONVERT_FLOAT  
+ SQL_CVT_DOUBLE &#124; SQL_CVT_FLOAT &#124; SQL_CVT_INTEGER &#124; SQL_CVT_NUMERIC &#124; SQL_CVT_REAL &#124; SQL_CVT_SMALLINT &#124; SQL_CVT_VARCHAR &#124; SQL_CVT_WVARCHAR  
   
-## <a name="sqlconvertinteger"></a>SQL_CONVERT_INTEGER  
- SQL_CVT_DOUBLE &#124; SQL_CVT_FLOAT &#124;  SQL_CVT_INTEGER &#124;  SQL_CVT_NUMERIC &#124;  SQL_CVT_REAL &#124;  SQL_CVT_SMALLINT &#124;  SQL_CVT_VARCHAR &#124; SQL_CVT_WVARCHAR  
+## <a name="sql_convert_integer"></a>SQL_CONVERT_INTEGER  
+ SQL_CVT_DOUBLE &#124; SQL_CVT_FLOAT &#124; SQL_CVT_INTEGER &#124; SQL_CVT_NUMERIC &#124; SQL_CVT_REAL &#124; SQL_CVT_SMALLINT &#124; SQL_CVT_VARCHAR &#124; SQL_CVT_WVARCHAR  
   
-## <a name="sqlconvertlongvarbinary"></a>SQL_CONVERT_LONGVARBINARY  
- SQL_CVT_DOUBLE &#124; SQL_CVT_FLOAT &#124;  SQL_CVT_INTEGER &#124;  SQL_CVT_NUMERIC &#124;  SQL_CVT_REAL &#124;  SQL_CVT_SMALLINT &#124;  SQL_CVT_VARCHAR &#124; SQL_CVT_WVARCHAR  
+## <a name="sql_convert_longvarbinary"></a>SQL_CONVERT_LONGVARBINARY  
+ SQL_CVT_DOUBLE &#124; SQL_CVT_FLOAT &#124; SQL_CVT_INTEGER &#124; SQL_CVT_NUMERIC &#124; SQL_CVT_REAL &#124; SQL_CVT_SMALLINT &#124; SQL_CVT_VARCHAR &#124; SQL_CVT_WVARCHAR  
   
-## <a name="sqlconvertlongvarchar"></a>SQL_CONVERT_LONGVARCHAR  
- SQL_CVT_DOUBLE &#124; SQL_CVT_FLOAT &#124;  SQL_CVT_INTEGER &#124;  SQL_CVT_NUMERIC &#124;  SQL_CVT_REAL &#124;  SQL_CVT_SMALLINT &#124;  SQL_CVT_VARCHAR &#124; SQL_CVT_WVARCHAR  
+## <a name="sql_convert_longvarchar"></a>SQL_CONVERT_LONGVARCHAR  
+ SQL_CVT_DOUBLE &#124; SQL_CVT_FLOAT &#124; SQL_CVT_INTEGER &#124; SQL_CVT_NUMERIC &#124; SQL_CVT_REAL &#124; SQL_CVT_SMALLINT &#124; SQL_CVT_VARCHAR &#124; SQL_CVT_WVARCHAR  
   
-## <a name="sqlconvertnumeric"></a>SQL_CONVERT_NUMERIC  
- SQL_CVT_DOUBLE &#124; SQL_CVT_FLOAT &#124;  SQL_CVT_INTEGER &#124;  SQL_CVT_NUMERIC &#124;  SQL_CVT_REAL &#124;  SQL_CVT_SMALLINT &#124;  SQL_CVT_VARCHAR &#124; SQL_CVT_WVARCHAR  
+## <a name="sql_convert_numeric"></a>SQL_CONVERT_NUMERIC  
+ SQL_CVT_DOUBLE &#124; SQL_CVT_FLOAT &#124; SQL_CVT_INTEGER &#124; SQL_CVT_NUMERIC &#124; SQL_CVT_REAL &#124; SQL_CVT_SMALLINT &#124; SQL_CVT_VARCHAR &#124; SQL_CVT_WVARCHAR  
   
-## <a name="sqlconvertreal"></a>SQL_CONVERT_REAL  
- SQL_CVT_DOUBLE &#124; SQL_CVT_FLOAT &#124;  SQL_CVT_INTEGER &#124;  SQL_CVT_NUMERIC &#124;  SQL_CVT_REAL &#124;  SQL_CVT_SMALLINT &#124;  SQL_CVT_VARCHAR &#124; SQL_CVT_WVARCHAR  
+## <a name="sql_convert_real"></a>SQL_CONVERT_REAL  
+ SQL_CVT_DOUBLE &#124; SQL_CVT_FLOAT &#124; SQL_CVT_INTEGER &#124; SQL_CVT_NUMERIC &#124; SQL_CVT_REAL &#124; SQL_CVT_SMALLINT &#124; SQL_CVT_VARCHAR &#124; SQL_CVT_WVARCHAR  
   
-## <a name="sqlconvertsmallint"></a>SQL_CONVERT_SMALLINT  
- SQL_CVT_DOUBLE &#124; SQL_CVT_FLOAT &#124;  SQL_CVT_INTEGER &#124;  SQL_CVT_NUMERIC &#124;  SQL_CVT_REAL &#124;  SQL_CVT_SMALLINT &#124;  SQL_CVT_VARCHAR &#124; SQL_CVT_WVARCHAR  
+## <a name="sql_convert_smallint"></a>SQL_CONVERT_SMALLINT  
+ SQL_CVT_DOUBLE &#124; SQL_CVT_FLOAT &#124; SQL_CVT_INTEGER &#124; SQL_CVT_NUMERIC &#124; SQL_CVT_REAL &#124; SQL_CVT_SMALLINT &#124; SQL_CVT_VARCHAR &#124; SQL_CVT_WVARCHAR  
   
-## <a name="sqlconverttime"></a>SQL_CONVERT_TIME  
- SQL_CVT_DOUBLE &#124; SQL_CVT_FLOAT &#124;  SQL_CVT_INTEGER &#124;  SQL_CVT_NUMERIC &#124;  SQL_CVT_REAL &#124;  SQL_CVT_SMALLINT &#124;  SQL_CVT_VARCHAR &#124; SQL_CVT_WVARCHAR  
+## <a name="sql_convert_time"></a>SQL_CONVERT_TIME  
+ SQL_CVT_DOUBLE &#124; SQL_CVT_FLOAT &#124; SQL_CVT_INTEGER &#124; SQL_CVT_NUMERIC &#124; SQL_CVT_REAL &#124; SQL_CVT_SMALLINT &#124; SQL_CVT_VARCHAR &#124; SQL_CVT_WVARCHAR  
   
-## <a name="sqlconverttimestamp"></a>SQL_CONVERT_TIMESTAMP  
- SQL_CVT_DOUBLE &#124; SQL_CVT_FLOAT &#124;  SQL_CVT_INTEGER &#124;  SQL_CVT_NUMERIC &#124;  SQL_CVT_REAL &#124;  SQL_CVT_SMALLINT &#124;  SQL_CVT_VARCHAR &#124; SQL_CVT_WVARCHAR  
+## <a name="sql_convert_timestamp"></a>SQL_CONVERT_TIMESTAMP  
+ SQL_CVT_DOUBLE &#124; SQL_CVT_FLOAT &#124; SQL_CVT_INTEGER &#124; SQL_CVT_NUMERIC &#124; SQL_CVT_REAL &#124; SQL_CVT_SMALLINT &#124; SQL_CVT_VARCHAR &#124; SQL_CVT_WVARCHAR  
   
-## <a name="sqlconverttinyint"></a>SQL_CONVERT_TINYINT  
- SQL_CVT_DOUBLE &#124; SQL_CVT_FLOAT &#124;  SQL_CVT_INTEGER &#124;  SQL_CVT_NUMERIC &#124;  SQL_CVT_REAL &#124;  SQL_CVT_SMALLINT &#124;  SQL_CVT_VARCHAR &#124; SQL_CVT_WVARCHAR  
+## <a name="sql_convert_tinyint"></a>SQL_CONVERT_TINYINT  
+ SQL_CVT_DOUBLE &#124; SQL_CVT_FLOAT &#124; SQL_CVT_INTEGER &#124; SQL_CVT_NUMERIC &#124; SQL_CVT_REAL &#124; SQL_CVT_SMALLINT &#124; SQL_CVT_VARCHAR &#124; SQL_CVT_WVARCHAR  
   
-## <a name="sqlconvertvarbinary"></a>SQL_CONVERT_VARBINARY  
- SQL_CVT_DOUBLE &#124; SQL_CVT_FLOAT &#124;  SQL_CVT_INTEGER &#124;  SQL_CVT_NUMERIC &#124;  SQL_CVT_REAL &#124;  SQL_CVT_SMALLINT &#124;  SQL_CVT_VARCHAR &#124; SQL_CVT_WVARCHAR  
+## <a name="sql_convert_varbinary"></a>SQL_CONVERT_VARBINARY  
+ SQL_CVT_DOUBLE &#124; SQL_CVT_FLOAT &#124; SQL_CVT_INTEGER &#124; SQL_CVT_NUMERIC &#124; SQL_CVT_REAL &#124; SQL_CVT_SMALLINT &#124; SQL_CVT_VARCHAR &#124; SQL_CVT_WVARCHAR  
   
-## <a name="sqlconvertvarchar"></a>SQL_CONVERT_VARCHAR  
- SQL_CVT_DOUBLE &#124; SQL_CVT_FLOAT &#124;  SQL_CVT_INTEGER &#124;  SQL_CVT_NUMERIC &#124;  SQL_CVT_REAL &#124;  SQL_CVT_SMALLINT &#124;  SQL_CVT_VARCHAR &#124; SQL_CVT_WVARCHAR  
+## <a name="sql_convert_varchar"></a>SQL_CONVERT_VARCHAR  
+ SQL_CVT_DOUBLE &#124; SQL_CVT_FLOAT &#124; SQL_CVT_INTEGER &#124; SQL_CVT_NUMERIC &#124; SQL_CVT_REAL &#124; SQL_CVT_SMALLINT &#124; SQL_CVT_VARCHAR &#124; SQL_CVT_WVARCHAR  
   
-## <a name="sqlunion"></a>SQL_UNION  
+## <a name="sql_union"></a>SQL_UNION  
  SQL_U_UNION_ALL &#124; SQL_U_UNION  
   
-## <a name="sqldbmsver"></a>SQL_DBMS_VER  
+## <a name="sql_dbms_ver"></a>SQL_DBMS_VER  
   
-|ISAM|버전|버전 번호의 형식|  
+|ISAM|버전|버전 번호 형식|  
 |----------|-------------|-------------------------------|  
 |Microsoft Access|2.0|02.00.0000|  
 ||3.0|03.00.0000|  
@@ -100,20 +100,20 @@ ms.locfileid: "68003309"
 ||4.0|04.00.0000|  
   
 > [!NOTE]  
->  버전 1.0 및 1.1을 사용 하는 것이 없습니다. 또한 Microsoft Access 버전 3.0, 7.0 및 97 데이터 형식에 차이가 없습니다.  
+>  버전 1.0 및 1.1은 지원 되지 않습니다. 또한 Microsoft Access 버전 3.0, 7.0 및 97의 데이터 형식에는 차이가 없습니다.  
   
-## <a name="sqlddlindex"></a>SQL_DDL_INDEX  
+## <a name="sql_ddl_index"></a>SQL_DDL_INDEX  
  SQL_DL_CREATE_INDEX  
   
  SQL_DL_DROP_INDEX  
   
-## <a name="sqlgetdataextensions"></a>SQL_GETDATA_EXTENSIONS  
+## <a name="sql_getdata_extensions"></a>SQL_GETDATA_EXTENSIONS  
  SQL_GD_ANY_ORDER &#124; SQL_GD_ANY_COLUMN &#124; SQL_GD_BLOCK &#124; SQL_GD_BOUND  
   
-## <a name="sqlkeywords"></a>SQL_KEYWORDS  
- ALPHANUMERIC  
+## <a name="sql_keywords"></a>SQL_KEYWORDS  
+ 영숫자만  
   
- 자동 증가  
+ 증가  
   
  BINARY  
   
@@ -121,7 +121,7 @@ ms.locfileid: "68003309"
   
  BYTE  
   
- 카운터  
+ COUNTER  
   
  Currency  
   
@@ -131,7 +131,7 @@ ms.locfileid: "68003309"
   
  DATETIME  
   
- 허용 안 함  
+ 않도록  
   
  DISTINCTROW  
   
@@ -143,7 +143,7 @@ ms.locfileid: "68003309"
   
  GENERAL  
   
- IEEEDOUBLE  
+ IEEEDOUNEA  
   
  IEEESINGLE  
   
@@ -157,7 +157,7 @@ ms.locfileid: "68003309"
   
  INTEGER4  
   
- 논리  
+ 논리곱  
   
  LOGICAL1  
   
@@ -165,11 +165,11 @@ ms.locfileid: "68003309"
   
  LONGBINARY  
   
- LONGCHAR  
+ 이상 문자  
   
  LONGTEXT  
   
- 메모  
+ MEMO  
   
  MONEY  
   
@@ -181,15 +181,15 @@ ms.locfileid: "68003309"
   
  OWNERACCESS  
   
- 매개 변수  
+ PARAMETERS  
   
  PERCENT  
   
  PIVOT  
   
- 짧은  
+ 간략히  
   
- 단일  
+ 단  
   
  SINGLEFLOAT  
   
@@ -197,7 +197,7 @@ ms.locfileid: "68003309"
   
  STDEVP  
   
- 문자열  
+ STRING  
   
  TABLEID  
   
@@ -207,7 +207,7 @@ ms.locfileid: "68003309"
   
  변환  
   
- UNSIGNEDBYTE  
+ UN바이트  
   
  VAR  
   
@@ -217,23 +217,23 @@ ms.locfileid: "68003309"
   
  YESNO  
   
-## <a name="sqlnumericfunctions"></a>SQL_NUMERIC_FUNCTIONS  
- SQL_FN_NUM_ABS &#124; SQL_FN_NUM_ATAN &#124; SQL_FN_NUM_CEILING &#124; SQL_FN_NUM_COS &#124; SQL_FN_NUM_EXP &#124; SQL_FN_NUM_FLOOR &#124; SQL_FN_NUM_LOG &#124; SQL_FN_NUM_MOD &#124; SQL_FN_NUM_POWER &#124; SQL_FN_ NUM_RAND &#124; SQL_FN_NUM_SIGN &#124; SQL_FN_NUM_SIN &#124; SQL_FN_NUM_SQRT &#124; SQL_FN_NUM_TAN  
+## <a name="sql_numeric_functions"></a>SQL_NUMERIC_FUNCTIONS  
+ SQL_FN_NUM_ABS &#124; SQL_FN_NUM_ATAN &#124; SQL_FN_NUM_CEILING &#124; SQL_FN_NUM_COS &#124; SQL_FN_NUM_EXP &#124; SQL_FN_NUM_FLOOR &#124; SQL_FN_NUM_LOG &#124; SQL_FN_NUM_MOD &#124; SQL_FN_NUM_POWER &#124; SQL_FN_NUM_RAND &#124; SQL_FN_NUM_SIGN &#124;  
   
-## <a name="sqlojcapabilities"></a>SQL_OJ_CAPABILITIES  
+## <a name="sql_oj_capabilities"></a>SQL_OJ_CAPABILITIES  
  SQL_OJ_LEFT SQL_OJ_RIGHT SQL_OJ_NOT_ORDERED SQL_OJ_INNER SQL_OJ_ALL_COMPARISON_OPS  
   
-## <a name="sqlcatalogusage"></a>SQL_CATALOG_USAGE  
+## <a name="sql_catalog_usage"></a>SQL_CATALOG_USAGE  
  SQL_QU_DML_STATEMENTS &#124; SQL_QU_TABLE_DEFINITION &#124; SQL_QU_INDEX_DEFINITION &#124; SQL_QU_PROCEDURE_INVOCATION  
   
-## <a name="sqlscrolloptions"></a>SQL_SCROLL_OPTIONS  
+## <a name="sql_scroll_options"></a>SQL_SCROLL_OPTIONS  
  SQL_SO_FORWARD_ONLY &#124; SQL_SO_STATIC &#124; SQL_SO_KEYSET_DRIVEN  
   
-## <a name="sqlstringfunctions"></a>SQL_STRING_FUNCTIONS  
- SQL_FN_STR_ASCII &#124; SQL_FN_STR_CHAR &#124; SQL_FN_STR_CONCAT &#124; SQL_FN_STR_LCASE &#124; SQL_FN_STR_LEFT &#124; SQL_FN_STR_LENGTH &#124; SQL_FN_STR_LOCATE &#124; SQL_FN_STR_LOCATE_2 SQL_FN_STR_LTRIM &#124; SQL_ FN_STR_RIGHT &#124; SQL_FN_STR_RTRIM &#124; SQL_FN_STR_SPACE &#124; SQL_FN_STR_SUBSTRING &#124; SQL_FN_STR_UCASE  
+## <a name="sql_string_functions"></a>SQL_STRING_FUNCTIONS  
+ SQL_FN_STR_ASCII &#124; SQL_FN_STR_CHAR &#124; SQL_FN_STR_CONCAT &#124; SQL_FN_STR_LCASE &#124; SQL_FN_STR_LEFT &#124; SQL_FN_STR_LENGTH &#124; SQL_FN_STR_LOCATE &#124; SQL_FN_STR_LOCATE_2 SQL_FN_STR_LTRIM &#124; SQL_FN_STR_RIGHT &#124; SQL_FN_STR_RTRIM &#124;  
   
-## <a name="sqlsubqueries"></a>SQL_SUBQUERIES  
+## <a name="sql_subqueries"></a>SQL_SUBQUERIES  
  SQL_SQ_COMPARISON &#124; SQL_SQ_EXISTS &#124; SQL_SQ_IN &#124; SQL_SQ_QUANTIFIED &#124; SQL_SQ_CORRELATED_SUBQUERIES  
   
-## <a name="sqltimedatefunctions"></a>SQL_TIMEDATE_FUNCTIONS  
- SQL_FN_TD_CURDATE &#124; SQL_FN_TD_CURTIME &#124; SQL_FN_TD_DAYOFMONTH &#124; SQL_FN_TD_DAYOFWEEK &#124; SQL_FN_TD_DAYOFYEAR &#124; SQL_FN_TD_HOUR &#124; SQL_FN_TD_MINUTE &#124; SQL_FN_TD_MONTH &#124; SQL_FN_TD_NOW &#124; SQL_FN_TD_SECOND &#124; SQL_FN_TD_WEEK &#124; SQL_FN_TD_YEAR
+## <a name="sql_timedate_functions"></a>SQL_TIMEDATE_FUNCTIONS  
+ SQL_FN_TD_CURDATE &#124; SQL_FN_TD_CURTIME &#124; SQL_FN_TD_DAYOFMONTH &#124; SQL_FN_TD_DAYOFWEEK &#124; SQL_FN_TD_DAYOFYEAR &#124; SQL_FN_TD_HOUR &#124; SQL_FN_TD_MINUTE &#124; SQL_FN_TD_MONTH &#124; SQL_FN_TD_NOW &#124; SQL_FN_TD_SECOND &#124; SQL_FN_TD_WEEK &#124;

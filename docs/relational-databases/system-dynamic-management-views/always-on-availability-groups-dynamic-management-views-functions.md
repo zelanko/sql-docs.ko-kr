@@ -14,10 +14,10 @@ ms.assetid: 17a77e24-d8b8-4f8a-8a7c-05d6c5d32d96
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 732f1f84d7bc336969d2484f18eb2dae8ebfab76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68018041"
 ---
 # <a name="always-on-availability-groups-dynamic-management-views---functions"></a>Always On 가용성 그룹 동적 관리 뷰-함수
@@ -37,9 +37,9 @@ ms.locfileid: "68018041"
 |[sys.dm_hadr_cluster](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md)|[sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md)|  
 |[sys.dm_hadr_cluster_members](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md)||  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [AlwaysOn 가용성 그룹 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [AlwaysOn 가용성 그룹 카탈로그 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;카탈로그 뷰 AlwaysOn 가용성 그룹](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
  [가용성 그룹 모니터링&#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   
   

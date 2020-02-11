@@ -14,17 +14,17 @@ ms.assetid: a676f0a7-7d17-45db-87c1-3fc78627465f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 85851159f02c6d1fee02d1beac8bd71d04f36a6e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922568"
 ---
 # <a name="rds-fundamentals"></a>RDS 기본 사항
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
+>  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
   
- 다음 항목을 rds. 소개  
+ 다음 항목에서는 RDS를 소개 합니다.  
   
 -   [원격 데이터 액세스에 대한 솔루션](../../../ado/guide/remote-data-service/solutions-for-remote-data-access.md)  
   
@@ -36,7 +36,7 @@ ms.locfileid: "67922568"
   
 -   [RDS 개체 모델 요약](../../../ado/guide/remote-data-service/rds-object-model-summary.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [원격 데이터 액세스를 위한 솔루션](../../../ado/guide/remote-data-service/solutions-for-remote-data-access.md)   
  [RDS 시나리오](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS 자습서](../../../ado/guide/remote-data-service/rds-tutorial.md)   

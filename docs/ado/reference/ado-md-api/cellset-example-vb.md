@@ -1,5 +1,5 @@
 ---
-title: Cellset 예제 (VB) | Microsoft Docs
+title: 셀 집합 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 2666ad1c-b48e-4b2c-b269-5a9f4e4a7810
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1b099a1eb5d513285b33b26f5623f1e14b322731
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67911586"
 ---
 # <a name="cellset-example-vb"></a>Cellset 예제(VB)
-이 Visual Basic 프로젝트에는 ADO MD를 사용 하 여 큐브 데이터에 액세스 하는 기본 사항을 보여줍니다. 열 및 행 헤더에 대 한 멤버 캡션을 표시 한 다음 서식이 지정 된 값은 셀 집합 내의 특정 셀을 표시 합니다.  
+이 Visual Basic 프로젝트에서는 ADO MD를 사용 하 여 큐브 데이터에 액세스 하는 기본적인 방법을 보여 줍니다. 열 및 행 머리글에 대 한 멤버 캡션을 표시 한 다음 셀 집합 내에 있는 특정 셀의 형식이 지정 된 값을 표시 합니다.  
   
 ```  
 Private Sub cmdCellSettoDebugWindow_Click()  

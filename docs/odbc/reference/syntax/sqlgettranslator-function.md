@@ -20,18 +20,18 @@ ms.assetid: 33879db3-5ef9-4585-9be5-69376157e017
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f769d3c5b2dcfe5d2aa8a431695cb18a52893b91
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68030656"
 ---
 # <a name="sqlgettranslator-function"></a>SQLGetTranslator 함수
 **규칙**  
- 도입 된 버전: ODBC 2.0  
+ 소개 된 버전: ODBC 2.0  
   
  **요약**  
- **SQLGetTranslator** 사용자 변환기를 선택할 수 있는 대화 상자를 표시 합니다.  
+ **SQLGetTranslator** 사용자가 번역기를 선택할 수 있는 대화 상자를 표시 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -50,60 +50,60 @@ BOOL SQLGetTranslator(
   
 ## <a name="arguments"></a>인수  
  *hwndParent*  
- [입력] 부모 창 핸들입니다.  
+ 입력 부모 창 핸들입니다.  
   
  *lpszName*  
- [입력/출력] 시스템 정보에서 변환기의 이름입니다.  
+ [입/출력] 시스템 정보에서 변환기의 이름입니다.  
   
  *cbNameMax*  
- [입력] 최대 길이 *lpszName* 버퍼입니다.  
+ 입력 *LpszName* 버퍼의 최대 길이입니다.  
   
  *pcbNameOut*  
- [입력/출력] 총 바이트 (null 종료 바이트 제외)에서 반환 된 지났거나 *lpszName*합니다. 반환할 사용 가능한 바이트 수가 보다 크거나 같은 경우 *cbNameMax*, translator 이름을 *lpszName* 잘립니다 *cbNameMax* 빼기는 null 종료 문자입니다. 합니다 *pcbNameOut* 인수로 null 포인터를 사용할 수 있습니다.  
+ [입/출력] *LpszName*에 전달 되거나 반환 된 총 바이트 수입니다 (null 종결 바이트 제외). 반환 하는 데 사용할 수 있는 바이트 수가 *cbNameMax*보다 크거나 같으면 *lpszName* 의 변환기 이름이 *cbNameMax* 에서 null 종료 문자를 뺀 값으로 잘립니다. *Pcbnameout* 인수는 null 포인터 일 수 있습니다.  
   
  *lpszPath*  
- [출력] 변환 DLL의 전체 경로입니다.  
+ 출력 변환 DLL의 전체 경로입니다.  
   
  *cbPathMax*  
- [입력] 최대 길이 *lpszPath* 버퍼입니다.  
+ 입력 *LpszPath* 버퍼의 최대 길이입니다.  
   
  *pcbPathOut*  
- [출력] 총 바이트 (null 종료 바이트 제외)에서 반환 된 *lpszPath*합니다. 반환할 사용 가능한 바이트 수가 보다 크거나 같은 경우 *cbPathMax*, 번역 DLL 경로 *lpszPath* 잘립니다 *cbPathMax* 빼기는 null 종료 문자입니다. 합니다 *pcbPathOut* 인수로 null 포인터를 사용할 수 있습니다.  
+ 출력 *LpszPath*에 반환 된 총 바이트 수입니다 (null 종결 바이트 제외). 반환할 수 있는 바이트 수가 *Cbpathmax*보다 크거나 같으면 *LPSZPATH* 의 변환 DLL 경로가 *cbpathmax* 에서 null 종료 문자를 뺀 값으로 잘립니다. *Pcbpathout* 인수는 null 포인터 일 수 있습니다.  
   
  *pvOption*  
- [출력] 32 비트 변환 옵션입니다.  
+ [출력] 32-비트 번역 옵션입니다.  
   
-## <a name="returns"></a>반환 값  
- 함수가 실패 한 경우 또는 사용자가 대화 상자를 취소 하는 경우 성공적이 고 FALSE 인 경우 TRUE를 반환 합니다.  
+## <a name="returns"></a>반환  
+ 이 함수는 성공 하면 TRUE를 반환 하 고, 실패 하면 FALSE를 반환 하 고, 사용자가 대화 상자를 취소 합니다.  
   
 ## <a name="diagnostics"></a>진단  
- 때 **SQLGetTranslator** 연결 된 FALSE를 반환  *\*pfErrorCode* 호출 하 여 값을 얻을 수 있습니다 **SQLInstallerError**합니다. 다음 표에서  *\*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 이 함수의 컨텍스트에서 각각 설명 합니다.  
+ **SQLGetTranslator** 가 FALSE를 반환 하면 **SQLInstallerError**을 호출 하 여 연결 된 * \*pfErrorCode* 값을 얻을 수 있습니다. 다음 표에서는 **SQLInstallerError** 에서 반환 될 수 있는 * \*pfErrorCode* 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다.  
   
-|*\*pfErrorCode*|오류|설명|  
+|*\*pfErrorCode*|Error|Description|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|일반 설치 관리자 오류|오류가 발생 했습니다에 대 한 특정 설치 관리자 오류가 없습니다.|  
-|ODBC_ERROR_INVALID_BUFF_LEN|잘못 된 버퍼 길이|합니다 *cbNameMax* 하거나 *cbPathMax* 인수가 0 보다 작거나 합니다.|  
-|ODBC_ERROR_INVALID_HWND|잘못 된 창 핸들|합니다 *hwndParent* 인수가 잘못 되었거나 NULL입니다.|  
-|ODBC_ERROR_INVALID_NAME|잘못 된 드라이버 또는 변환기 이름|합니다 *lpszName* 인수가 잘못 되었습니다. 레지스트리에서 찾을 수 없습니다.|  
-|ODBC_ERROR_LOAD_LIBRARY_FAILED|드라이버 또는 translator 설치 라이브러리를 로드할 수 없습니다.|변환기 라이브러리를 로드할 수 없습니다.|  
-|ODBC_ERROR_INVALID_OPTION|잘못 된 트랜잭션 옵션|합니다 *pvOption* 인수에 잘못 된 값을 포함 합니다.|  
-|ODBC_ERROR_OUT_OF_MEM|메모리가 부족합니다.|설치 관리자의 메모리 부족으로 인해 함수를 수행할 수 있습니다.|  
+|ODBC_ERROR_GENERAL_ERR|일반 설치 관리자 오류|특정 설치 관리자 오류가 없는 오류가 발생 했습니다.|  
+|ODBC_ERROR_INVALID_BUFF_LEN|잘못 된 버퍼 길이|*CbNameMax* 또는 *cbpathmax* 인수가 0 보다 작거나 같습니다.|  
+|ODBC_ERROR_INVALID_HWND|창 핸들이 잘못 되었습니다.|*HwndParent* 인수가 잘못 되었거나 NULL입니다.|  
+|ODBC_ERROR_INVALID_NAME|드라이버 또는 번역기 이름이 잘못 되었습니다.|*LpszName* 인수가 잘못 되었습니다. 레지스트리에서 찾을 수 없습니다.|  
+|ODBC_ERROR_LOAD_LIBRARY_FAILED|드라이버 또는 번역기 설치 라이브러리를 로드할 수 없습니다.|변환기 라이브러리를 로드할 수 없습니다.|  
+|ODBC_ERROR_INVALID_OPTION|트랜잭션 옵션이 잘못 되었습니다.|*PvOption* 인수에 잘못 된 값이 있습니다.|  
+|ODBC_ERROR_OUT_OF_MEM|메모리가 부족합니다.|메모리가 부족 하 여 설치 관리자가 함수를 수행할 수 없습니다.|  
   
 ## <a name="comments"></a>주석  
- 하는 경우 *hwndParent* 가 null 이거나 *lpszName*를 *lpszPath*, 또는 *pvOption* 가 null 포인터인 경우 **SQLGetTranslator** FALSE를 반환 합니다. 이 고, 그렇지 다음 대화 상자에서 설치 된 변환기 목록을 표시합니다.  
+ *HwndParent* 가 Null 이거나 *lpszName*, *lpszPath*또는 *PVOPTION* 가 null 포인터인 경우 **SQLGetTranslator** 는 FALSE를 반환 합니다. 그렇지 않으면 다음 대화 상자에서 설치 된 번역기의 목록이 표시 됩니다.  
   
- ![변환기 대화 상자를 선택](../../../odbc/reference/syntax/media/ch23j.gif "CH23J")  
+ ![변환기 선택 대화 상자](../../../odbc/reference/syntax/media/ch23j.gif "CH23J")  
   
- 하는 경우 *lpszName* 유효한 translator 이름을 포함을 선택 합니다. 이 고, 그렇지 \<아니요 Translator >을 선택 합니다.  
+ *LpszName* 에 올바른 번역기 이름이 포함 된 경우이를 선택 합니다. 그렇지 않으면 \<번역기> 선택 되지 않습니다.  
   
- 사용자가 선택 하는 경우 \<No Translator >, 내용의 *lpszName*를 *lpszPath*, 및 *pvOption* 는 그대로 유지 합니다. **SQLGetTranslator** 설정 *pcbNameOut* 하 고 *pcbPathOut* 0과 TRUE 반환 합니다.  
+ 사용자가> 번역기 \<를 선택 하지 않으면 *lpszName*, *lpszPath*및 *pvOption* 의 내용이 처리 되지 않습니다. **SQLGetTranslator** 는 *pcbnameout* 및 *pcbnameout* 을 0으로 설정 하 고 TRUE를 반환 합니다.  
   
- 사용자는 translator 싶다면 **SQLGetTranslator** 호출 **ConfigTranslator** 변환기 설치 DLL에서에서. 하는 경우 **ConfigTranslator** FALSE를 반환 **SQLGetTranslator** 해당 대화 상자로 돌아갑니다. 하는 경우 **ConfigTranslator** TRUE를 반환 **SQLGetTranslator** 선택한 translator 이름, 경로 및 변환 옵션을 함께 TRUE를 반환 합니다.  
+ 사용자가 번역기를 선택 하는 경우 **SQLGetTranslator** 은 변환기의 설치 DLL에서 **configtranslator** 를 호출 합니다. **Configtranslator** 가 FALSE를 반환 하는 경우 **SQLGetTranslator** 는 해당 대화 상자로 돌아갑니다. **Configtranslator** 가 true를 반환 하는 경우 **SQLGetTranslator** 는 선택한 번역기 이름, 경로 및 번역 옵션과 함께 true를 반환 합니다.  
   
 ## <a name="related-functions"></a>관련 함수  
   
-|내용|참조 항목|  
+|원하는 정보|참조 항목|  
 |---------------------------|---------|  
-|변환기를 구성합니다.|[ConfigTranslator](../../../odbc/reference/syntax/configtranslator-function.md)|  
-|변환 특성을 가져오기|[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
-|변환 특성을 설정합니다.|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|
+|번역기 구성|[ConfigTranslator](../../../odbc/reference/syntax/configtranslator-function.md)|  
+|번역 특성 가져오기|[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
+|번역 특성 설정|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|

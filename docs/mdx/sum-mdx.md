@@ -1,5 +1,5 @@
 ---
-title: Sum (MDX) | Microsoft Docs
+title: 합계 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: eb4e9d55ef2228404dd9113170066e4a3612a0a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036668"
 ---
 # <a name="sum-mdx"></a>Sum(MDX)
@@ -66,7 +66,7 @@ SELECT Measures.x ON 0
 FROM [Adventure Works]  
 ```  
   
- 다음 예에서는 WITH MEMBER 키워드와 **합계** 의 Canada 및 United States 멤버에 대 한 Reseller Sales Amount 측정값의 합계가 들어 있는 Measures 차원의 계산된 멤버를 정의 하는 함수는 Geography 차원의 country 특성 계층입니다.  
+ 다음 예에서는 WITH MEMBER 키워드와 **SUM** 함수를 사용 하 여 Geography 차원에 있는 Country 특성 계층의 캐나다 및 미국 구성원에 대 한 재판매인 Sales Amount 측정값의 합계를 포함 하는 측정값 차원의 계산 멤버를 정의 합니다.  
   
 ```  
 WITH MEMBER Measures.NorthAmerica AS SUM   
@@ -80,7 +80,7 @@ SELECT {[Measures].[NorthAmerica]} ON 0,
 FROM [Adventure Works]  
 ```  
   
- 종종를 **합계** 함수에 사용 합니다 **CURRENTMEMBER** 함수 또는 함수 같은 **YTD** 계층의 currentmember에 따라 달라 지는 집합을 반환 하는 합니다. 예를 들어, 다음 쿼리는 연도의 시작부터 행 축에 표시된 날짜까지 모든 날짜에 대한 Internet Sales Amount 측정값의 합계를 반환합니다.  
+ **합계** 함수는 **currentmember&lt** 함수 또는 계층의 currentmember&lt에 따라 달라 지는 집합을 반환 하는 **YTD** 와 같은 함수와 함께 사용 되는 경우가 많습니다. 예를 들어, 다음 쿼리는 연도의 시작부터 행 축에 표시된 날짜까지 모든 날짜에 대한 Internet Sales Amount 측정값의 합계를 반환합니다.  
   
  `WITH MEMBER MEASURES.YTDSUM AS`  
   
@@ -92,7 +92,7 @@ FROM [Adventure Works]
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

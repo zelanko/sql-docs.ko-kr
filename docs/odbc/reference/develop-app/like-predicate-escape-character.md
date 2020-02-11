@@ -14,22 +14,22 @@ ms.assetid: 185d6109-48cf-4981-bc40-ec2a4a90cafc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 20310c60759aea17d61b9252fd73d226567a7a54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68027234"
 ---
 # <a name="like-predicate-escape-character"></a>LIKE 조건자 이스케이프 문자
-에 **같은** 조건자 백분율 기호 (%) 일치 항목 0 개 이상의 문자 및 밑줄 (_)에 하나의 문자와 일치 합니다. 실제 백분율 기호를 검색 하거나 검색할에서 밑줄을 **같은** 조건자에 이스케이프 문자가 앞에 나와야 합니다 백분율 기호 또는 밑줄. 정의 하는 이스케이프 시퀀스를 **같은** 조건자 이스케이프 문자는:  
+**LIKE** 조건자에서 백분율 기호 (%) 는 임의의 문자를 0 개 이상 찾지만 밑줄 (_)은 임의의 문자 하나에 대응 합니다. **LIKE** 조건자에서 실제 백분율 기호 또는 밑줄을 일치 시키려면 이스케이프 문자가 백분율 부호 또는 밑줄 앞에와 야 합니다. **LIKE** 조건자 이스케이프 문자를 정의 하는 이스케이프 시퀀스는 다음과 같습니다.  
   
- **{escape '** *escape-character* **'}**  
+ **{escape '** *이스케이프 문자* **'}**  
   
  여기서 *이스케이프 문자* 는 데이터 원본에서 지 원하는 모든 문자입니다.  
   
- 자세한 내용은 같은 이스케이프 시퀀스를 참조 하세요 [이스케이프 시퀀스와 같은](../../../odbc/reference/appendixes/like-escape-sequence.md) 부록 c: SQL 문법입니다.  
+ LIKE 이스케이프 시퀀스에 대 한 자세한 내용은 부록 C: SQL 문법의 [Like 이스케이프 시퀀스](../../../odbc/reference/appendixes/like-escape-sequence.md) 를 참조 하세요.  
   
- 예를 들어, 다음 SQL 문을 이름이 "%AAA" 문자로 시작 하는 고객의 동일한 결과 집합을 만듭니다. 첫 번째 문은 이스케이프 시퀀스가 구문을 사용 합니다. 두 번째 문은 Microsoft® Access에 대 한 기본 구문을 사용 하 고 상호 운용은 불가능 합니다. 두 번째 % 각 문자는 **같은** 조건자는 0 개 이상의 문자와 일치 하는 와일드 카드 문자입니다.  
+ 예를 들어 다음 SQL 문은 "% AAA" 문자로 시작 하는 동일한 고객 이름 결과 집합을 만듭니다. 첫 번째 문은 이스케이프 시퀀스 구문을 사용 합니다. 두 번째 문은 Microsoft® Access의 기본 구문을 사용 하며 상호 운용할 수 없습니다. 각 **LIKE** 조건자에서 두 번째 백분율 문자는 0 개 이상의 문자와 일치 하는 와일드 카드 문자입니다.  
   
 ```  
 SELECT Name FROM Customers WHERE Name LIKE '\%AAA%' {escape '\'}  
@@ -37,4 +37,4 @@ SELECT Name FROM Customers WHERE Name LIKE '\%AAA%' {escape '\'}
 SELECT Name FROM Customers WHERE Name LIKE '[%]AAA%'  
 ```  
   
- 결정할 여부를 합니다 **와 같은** 조건자 이스케이프 문자는 데이터 원본에서 지 원하는, 응용 프로그램이 호출 **SQLGetInfo** SQL_LIKE_ESCAPE_CLAUSE 옵션을 사용 하 여 합니다.
+ **LIKE** 조건자 이스케이프 문자가 데이터 소스에서 지원 되는지 여부를 확인 하기 위해 응용 프로그램은 SQL_LIKE_ESCAPE_CLAUSE 옵션으로 **SQLGetInfo** 를 호출 합니다.

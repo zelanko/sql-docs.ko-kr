@@ -1,5 +1,5 @@
 ---
-title: 위치 지정 업데이트 및 Delete 문을 처리 | Microsoft Docs
+title: 위치 지정 업데이트 및 Delete 문 처리 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,27 +19,27 @@ ms.assetid: 2975dd97-48e6-4d0a-a9c7-40759a7d94c8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 41b4fe248f815e63c48a8da70edc88a1cc173667
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68028432"
 ---
 # <a name="processing-positioned-update-and-delete-statements"></a>위치 지정 업데이트 및 Delete 문 처리
 > [!IMPORTANT]  
->  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는이 기능을 사용 하지 말고 현재이 기능을 사용 하는 응용 프로그램은 수정 합니다. 드라이버의 커서 기능을 사용 하는 것이 좋습니다.  
+>  이 기능은 이후 버전의 Windows에서 제거 될 예정입니다. 새 개발 작업에서는이 기능을 사용 하지 않도록 하 고 현재이 기능을 사용 하는 응용 프로그램은 수정 하십시오. 드라이버의 커서 기능을 사용 하는 것이 좋습니다.  
   
- 배치 커서 라이브러리에서 지 원하는 업데이트 및 교체 하 여 delete 문의 **WHERE CURRENT OF** 사용 하 여 이러한 문에 절을 **여기서** 해당 캐시에 저장 된 값을 열거 하는 절 바인딩된 각 열입니다. 커서 라이브러리를 새로 생성 된 전달 **업데이트** 하 고 **삭제** 실행에 대 한 드라이버는 문입니다. 위치 지정된 update 문에 대 한 커서 라이브러리는 다음 행 집합 버퍼 값에서 캐시를 업데이트 하 고 SQL_ROW_UPDATED 행 상태 배열에서 해당 값을 설정 합니다. 위치 지정된 delete 문에 대 한 sql_row_deleted가 행 상태 배열에서 해당 값을 설정합니다.  
+ 커서 라이브러리는 이러한 문에서 **WHERE CURRENT OF** 절을 where 절로 바꾸고 각 바인딩된 열에 대해 해당 캐시에 저장 된 값을 열거 하는 방법 **으로 위치 지정** update 및 delete 문을 지원 합니다. 커서 라이브러리는 새로 생성 된 **UPDATE** 및 **DELETE** 문을 실행을 위해 드라이버에 전달 합니다. 위치 지정 update 문의 경우 커서 라이브러리는 행 집합 버퍼의 값에서 캐시를 업데이트 하 고 행 상태 배열의 해당 값을 SQL_ROW_UPDATED로 설정 합니다. 배치 된 delete 문의 경우 행 상태 배열의 해당 값을 SQL_ROW_DELETED로 설정 합니다.  
   
 > [!CAUTION]  
->  합니다 **여기서** 절 현재 행을 식별 하려면 커서 라이브러리에 의해 생성 된 모든 행을 식별 하 고, 다른 행을 식별 또는 둘 이상의 행을 식별 하지 못할 수 있습니다. 자세한 내용은 [검색 문을 생성](../../../odbc/reference/appendixes/constructing-searched-statements.md)이 부록의 뒷부분에 나오는.  
+>  현재 행을 식별 하기 위해 커서 라이브러리로 생성 된 **where** 절은 행을 식별 하거나 다른 행을 식별 하거나 둘 이상의 행을 식별 하는 데 실패할 수 있습니다. 자세한 내용은이 부록의 뒷부분에 나오는 [검색 문 생성](../../../odbc/reference/appendixes/constructing-searched-statements.md)을 참조 하세요.  
   
- 위치 지정 업데이트 및 삭제 문을 다음과 같은 제한 사항이 적용 됩니다.  
+ 위치 지정 update 및 delete 문에는 다음과 같은 제한 사항이 적용 됩니다.  
   
--   위치 지정 업데이트 및 삭제 문은 다음과 같은 경우에만 사용할 수 있습니다: 때를 **선택** 문이 결과 집합 생성는 경우를 **선택** 문에 조인이 포함 되지 않았습니다는  **UNION** 절 또는 **GROUP BY** 절 및 select 목록의 식이나 별칭을 사용 하는 열에 없습니다 사용 하 여 바인딩된 **SQLBindCol**합니다.  
+-   위치 지정 업데이트 및 delete 문은 **SELECT** 문에서 결과 집합을 생성 하는 경우에만 사용할 수 있습니다. **SELECT** 문에 Join, **UNION** 절 또는 **group BY** 절이 포함 되지 않은 경우 select 목록에서 별칭이 나 식을 사용한 열이 **SQLBindCol**과 바인딩되지 않은 경우  
   
--   응용 프로그램 위치 지정된 update 또는 delete 문을 준비를 수행 해야 하므로 호출한 후 **SQLFetch** 하거나 **SQLFetchScroll**합니다. 문을 닫습니다 준비에 대 한 드라이버 해당 문을 전송 하는 커서 라이브러리, 있지만 및 응용 프로그램을 호출할 때 직접 실행 **SQLExecute**합니다.  
+-   응용 프로그램에서 위치 지정 update 또는 delete 문을 준비 하는 경우 **Sqlfetch** 또는 **sqlfetchscroll**을 호출한 후에 수행 해야 합니다. 커서 라이브러리는 준비를 위해 문을 드라이버에 제출 하지만 응용 프로그램이 **Sqlexecute**를 호출 하면 문을 닫고 직접 실행 합니다.  
   
--   드라이버 하나의 활성 문만 지 원하는 경우에 결과의 나머지 부분 설정 하 고 배치를 실행 하기 전에 해당 캐시의 현재 행 집합을 한 다음 다시 커서 라이브러리 인출 update 또는 delete 문입니다. 그러면 응용 프로그램이 결과 집합의 메타 데이터를 반환 하는 함수를 호출 하는 경우 (예를 들어 **SQLNumResultCols** 또는 **SQLDescribeCol**), 커서 라이브러리 오류를 반환 합니다.  
+-   드라이버가 하나의 활성 문만 지 원하는 경우 커서 라이브러리는 그 나머지 결과 집합을 인출 하 고 현재 행 집합을 캐시에서 refetches 위치 지정 update 또는 delete 문을 실행 합니다. 그러면 응용 프로그램에서 결과 집합의 메타 데이터를 반환 하는 함수를 호출 하는 경우 (예: **Sqlnumresultcols** 또는 **SQLDescribeCol**) 커서 라이브러리에서 오류를 반환 합니다.  
   
--   위치 지정된 update 또는 delete 문을 업데이트 수행 될 때마다 자동으로 업데이트 되는 타임 스탬프 열이 포함 된 테이블의 열에서 수행 하는 경우 모든 후속 위치 지정된 업데이트 또는 삭제 문을 실행 하지 못합니다 타임 스탬프 열이 바인딩됩니다. 이 때문에 발생 된 검색 업데이트 또는 삭제 문이 커서 라이브러리를 만들기는 업데이트할 행을 정확 하 게 식별 하지 않습니다. 타임 스탬프 열에 대 한 검색 문에서 값을 자동으로 업데이트 된 타임 스탬프 열 값을 일치 하지 않습니다.
+-   업데이트를 수행할 때마다 자동으로 업데이트 되는 타임 스탬프 열을 포함 하는 테이블의 열에 대해 위치 지정 update 또는 delete 문을 수행 하는 경우 타임 스탬프 열이 이면 다음 위치에 있는 모든 update 또는 delete 문이 실패 합니다. 바인딩하면. 이는 커서 라이브러리가 만드는 검색 된 update 또는 delete 문이 업데이트할 행을 정확 하 게 식별 하지 못하기 때문에 발생 합니다. Timestamp 열에 대 한 검색 된 문의 값이 자동으로 업데이트 된 timestamp 열의 값과 일치 하지 않습니다.

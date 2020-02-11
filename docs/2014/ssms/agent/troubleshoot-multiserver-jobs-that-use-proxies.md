@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47e3c3991bd4732d542bf1ce79e83000e738ff77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245420"
 ---
 # <a name="troubleshoot-multiserver-jobs-that-use-proxies"></a>프록시를 사용하는 다중 서버 작업 문제 해결
@@ -25,7 +25,7 @@ ms.locfileid: "63245420"
   
 -   "작업 단계에 프록시 계정이 필요하지만 일치하는 프록시를 대상 서버에서 사용할 수 없습니다."  
   
-     이 오류를 해결하려면 **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.**_\<n_>**\SQLServerAgent\AllowDownloadedJobsToMatchProxyName** 레지스트리 하위 키를 **1(true)** 로 설정합니다. 기본적으로이 하위 키 설정 **0** (`false`). **MSSQL.**\<*n*>의 값은 인스턴스 이름입니다(예: **MSSQL.1** 또는 **MSSQL.3**).  
+     이 오류를 해결 하려면 **\ HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT\MICROSOFT SQL Server\MSSQL.** 를 설정 하십시오. >**** _ \<n_\SQLServerAgent\AllowDownloadedJobsToMatchProxyName 레지스트리 하위 키를 **1 (true)로 설정**합니다. 기본적으로이 하위 키는 **0** (`false`)으로 설정 됩니다. MSSQL의 값입니다 **.** \< *n*>은 인스턴스 이름입니다. 예를 들어 **mssql. 1** 또는 **mssql. 3**입니다.  
   
 -   "프록시를 찾을 수 없습니다."  
   
@@ -34,7 +34,7 @@ ms.locfileid: "63245420"
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [다중 서버 환경 만들기](create-a-multiserver-environment.md)  
   
   

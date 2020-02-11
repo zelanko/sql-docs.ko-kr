@@ -1,5 +1,5 @@
 ---
-title: '부록 G: 이전 버전과 호환성에 대 한 드라이버 지침 | Microsoft Docs'
+title: '부록 G: 이전 버전과의 호환성을 위한 드라이버 지침 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,19 +15,19 @@ ms.assetid: 911cd335-f2c0-4d03-9739-1078308a678a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2a07e936617100c56f8fa873df1b490e1d61e3f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67909950"
 ---
 # <a name="appendix-g-driver-guidelines-for-backward-compatibility"></a>부록 G: 이전 버전과의 호환성을 위한 드라이버 지침
-이 부록에서는 ODBC 3에서 작동 하는 드라이버 작성자에 대 한 정보를 제공 합니다. *x* ODBC 2를 지원 해야 하는 드라이버. *x* 응용 프로그램입니다. 이전 버전과 호환성에 대 한 자세한 내용은 참조 하세요. [이전 버전과 호환성 및 표준 준수](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)합니다.  
+이 부록에서는 ODBC 3에서 작동 하는 드라이버 작성자를 위한 정보를 제공 합니다. ODBC 2를 지원 해야 하는 *x* 드라이버. *x* 응용 프로그램. 이전 버전과의 호환성에 대 한 자세한 내용은 [이전 버전과의 호환성 및 표준 준수](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)를 참조 하세요.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   
--   [블록 커서, 스크롤 가능 커서 및 ODBC 3.x 드라이버에 대 한 이전 버전과 호환성](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) -새 기능은 ODBC 3에 존재 하는 기능. *x* 하며 되지 않는 ODBC 2. *x*합니다. ODBC 3입니다. *x* 드라이버 일반적으로 없는 때문에 새로운 기능을 사용 하 여 이전 버전과 호환성에 대 한 걱정 ODBC 2. *x* 응용 프로그램에서 하지 사용 합니다. 이에 대 한 유일한 예외는 관련 된 기능 **SQLFetch**, **SQLFetchScroll**합니다 **SQLSetPos**, 및 **SQLExtendedFetch**; 자세한 내용은 내용은이 부록의 뒷부분에 나오는 참조 하십시오입니다.  
+-   [Odbc 3.X 드라이버의 블록 커서, 스크롤 가능 커서 및 이전 버전과의 호환성](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) -새 기능은 odbc 3에 존재 하는 기능입니다. ODBC 2가 아닌 *x* *x*. ODBC 3. *x* 드라이버는 일반적으로 ODBC 2 때문에 새로운 기능과의 호환성에 대해 걱정 하지 않아도 됩니다. *x* 응용 프로그램은 사용 하지 않습니다. 이에 대 한 유일한 예외는 **Sqlfetch**, **sqlfetchscroll**, **SQLSetPos**및 **sqlextendedfetch**와 관련 된 기능입니다. 자세한 내용은이 부록의 뒷부분에 나오는을 참조 하세요.  
   
--   [사용 되지 않는 함수 매핑](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) -중복 기능은 ODBC 3에서 다르게 구현 되는 기능. *x* 및 ODBC 2. *x*합니다. ODBC 3입니다. *x* 드라이버를 드라이버 관리자는 항상 ODBC 2 매핑되기 때문에 중복 된 기능을 사용 하 여 이전 버전과 호환성에 걱정할 필요가 없습니다. *x* 기능을 ODBC 3. *x* 기능이 호출 하는 ODBC 3. *x* 드라이버입니다. 따라서 ODBC 3입니다. *x* 드라이버 확인만 ODBC 3. *x* 기능입니다. 자세한 내용은 이러한 매핑에 대 한 참조를이 부록의 뒷부분에 나오는.  
+-   [사용 되지 않는 함수 매핑](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) -중복 기능은 ODBC 3에서 다르게 구현 되는 기능입니다. *x* 및 ODBC 2. *x*. ODBC 3. *x* 드라이버는 항상 ODBC 2를 매핑하기 때문에 중복 된 기능과의 호환성을 걱정 하지 않아도 됩니다. *x* 는 ODBC 3에 기능을 제공 합니다. *x* 는 ODBC 3을 호출할 때 기능을 제공 합니다. *x* 드라이버. 따라서 ODBC 3. *x* 드라이버는 ODBC 3만 봅니다. *x* 기능. 이러한 매핑에 대 한 자세한 내용은이 부록의 뒷부분에 나오는을 참조 하세요.  
   
--   [동작 변경 내용 및 ODBC 3.x 드라이버](../../../odbc/reference/appendixes/behavioral-changes-and-odbc-3-x-drivers.md) -동작 변경이 ODBC 3에서 다르게 처리 되는 기능. *x* 및 ODBC 2. *x*합니다. ODBC 3입니다. *x* 드라이버 동작 변경 내용에 걱정 하 고 응용 프로그램에 의해 설정 된 SQL_ATTR_ODBC_VERSION 환경 특성에 대 한 응답을 수행 해야 합니다.
+-   동작 [변경 내용 및 odbc 3.X 드라이버](../../../odbc/reference/appendixes/behavioral-changes-and-odbc-3-x-drivers.md) -동작 변경 내용은 odbc 3에서 다르게 처리 되는 기능입니다. *x* 및 ODBC 2. *x*. ODBC 3. *x* 드라이버는 동작 변경에 대해 걱정 하 고 응용 프로그램에 의해 설정 된 SQL_ATTR_ODBC_VERSION 환경 특성에 대 한 응답으로 작동 해야 합니다.

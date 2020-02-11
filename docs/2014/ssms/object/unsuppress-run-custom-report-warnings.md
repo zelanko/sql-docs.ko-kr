@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ed653b16fe524f364ba89f13e00715b725080033
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62824399"
 ---
 # <a name="unsuppress-run-custom-report-warnings"></a>사용자 지정 보고서 실행 경고 표시
@@ -28,25 +28,25 @@ ms.locfileid: "62824399"
   
 #### <a name="to-unsuppress-the-main-custom-report-warning-dialog-box"></a>주 사용자 지정 보고서 경고 대화 상자를 표시하려면  
   
-1.  연결할 \< *Server*>\\<*공유*>|\<*드라이브*> \ Documents and Settings\\< UserProfile\>data\microsoft\microsoft SQL Server\120\Tools\Shell\reports.xml 합니다.  
+1.  \< *서버*\<** **\\ 공유 드라이브> \documents 및 설정<UserProfile\>\Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.xml.에 연결 합니다.>|>\\<  
   
-2.  마우스 오른쪽 단추로 클릭 `reports.xml`를 클릭 하 고 **편집**합니다.  
+2.  를 마우스 오른쪽 `reports.xml`단추로 클릭 한 다음 **편집**을 클릭 합니다.  
   
-3.  변경 **\<SuppressWarning > true\</SuppressWarning > 하 \<SuppressWarning > false\</SuppressWarning >** 합니다.  
+3.  **\<SuppressWarning\<>true/SuppressWarning>를 SuppressWarning \<>false\</SuppressWarning>로 **변경 합니다.  
   
 4.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 다시 시작합니다.  
   
 #### <a name="to-unsuppress-the-drill-through-custom-report-warning-dialog-box"></a>드릴스루 사용자 지정 보고서 경고 대화 상자를 표시하려면  
   
-1.  연결할 \< *Server*>\\<*공유*>|\<*드라이브*> \ Documents and Settings\\< UserProfile\>data\microsoft\microsoft SQL Server\120\Tools\Shell\reports.xml 합니다.  
+1.  \< *서버*\<** **\\ 공유 드라이브> \documents 및 설정<UserProfile\>\Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.xml.에 연결 합니다.>|>\\<  
   
-2.  마우스 오른쪽 단추로 클릭 `reports.xml`, 클릭 **편집**합니다.  
+2.  를 마우스 오른쪽 `reports.xml`단추로 클릭 하 고 **편집**을 클릭 합니다.  
   
-3.  변경  **\<SuppressDrillthroughWarning > true\</SuppressDrillthroughWarning > 하 \<SuppressDrillthroughWarning > false\</SuppressDrillthroughWarning >** .  
+3.  ** \<SuppressDrillthroughWarning\<>true/SuppressDrillthroughWarning>를 SuppressDrillthroughWarning \<>false\</SuppressDrillthroughWarning>로 **변경 합니다.  
   
 4.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 다시 시작합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Management Studio의 사용자 지정 보고서](custom-reports-in-management-studio.md)   
  [Management Studio에 사용자 지정 보고서 추가](add-a-custom-report-to-management-studio.md)   
  [개체 탐색기 노드 속성과 함께 사용자 지정 보고서 사용](use-custom-reports-with-object-explorer-node-properties.md)  

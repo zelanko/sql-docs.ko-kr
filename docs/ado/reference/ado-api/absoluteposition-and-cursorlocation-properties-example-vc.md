@@ -16,14 +16,14 @@ ms.assetid: 48c07216-d199-4822-89f8-ce928d3d2b74
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 76ff99822c47ffc14c686b1e6703663c8e309845
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921701"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-vc"></a>AbsolutePosition 및 CursorLocation 속성 예제 (VC + +)
-이 예제에서는 하는 방법을 [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) 속성의 모든 레코드를 열거 하는 루프의 진행률을 추적할 수는 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)합니다. 사용 합니다 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성을 사용 합니다 **AbsolutePosition** 클라이언트 커서에 커서를 설정 하 여 속성입니다.  
+이 예에서는 [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) 속성을 통해 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)의 모든 레코드를 열거 하는 루프의 진행률을 추적할 수 있는 방법을 보여 줍니다. [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성을 사용 하 여 커서를 클라이언트 커서로 설정 하 여 **AbsolutePosition** 속성을 사용 하도록 설정 합니다.  
   
 ```  
 // BeginAbsolutePositionCpp.cpp  
@@ -257,7 +257,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [AbsolutePosition 속성 (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
  [CursorLocation 속성 (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

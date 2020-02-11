@@ -13,15 +13,15 @@ ms.assetid: 53952466-4a9c-4396-bba6-cf44bec1da88
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e20cb08ccfedbc2fa60b703279f8494d0f3f53c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917781"
 ---
 # <a name="parameter-object-properties-methods-and-events"></a>매개 변수 개체 속성, 메서드 및 이벤트
 ## <a name="propertiescollections"></a>속성/컬렉션  
- [특성 속성](../../../ado/reference/ado-api/attributes-property-ado.md)  
+ [Attributes 속성](../../../ado/reference/ado-api/attributes-property-ado.md)  
   
  [Direction 속성](../../../ado/reference/ado-api/direction-property.md)  
   
@@ -29,13 +29,13 @@ ms.locfileid: "67917781"
   
  [NumericScale 속성](../../../ado/reference/ado-api/numericscale-property-ado.md)  
   
- [전체 자릿수 속성](../../../ado/reference/ado-api/precision-property-ado.md)  
+ [Precision 속성](../../../ado/reference/ado-api/precision-property-ado.md)  
   
  [속성 컬렉션](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
  [Size 속성](../../../ado/reference/ado-api/size-property-ado-parameter.md)  
   
- [형식 속성](../../../ado/reference/ado-api/type-property-ado.md)  
+ [Type 속성](../../../ado/reference/ado-api/type-property-ado.md)  
   
  [Value 속성](../../../ado/reference/ado-api/value-property-ado.md)  
   
@@ -45,5 +45,5 @@ ms.locfileid: "67917781"
 ## <a name="events"></a>이벤트  
  없음  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Parameter 개체](../../../ado/reference/ado-api/parameter-object.md)

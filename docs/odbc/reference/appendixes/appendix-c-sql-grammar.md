@@ -13,14 +13,14 @@ ms.assetid: 0ee36f09-59e7-4b94-88ca-7ebc0952a3be
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: de088161519c77ce3b53bbdd49d74c2bf206a831
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67996205"
 ---
 # <a name="appendix-c-sql-grammar"></a>부록 C: SQL 문법
-이 부록에는 다음 항목에 있습니다.  
+이 부록에는 다음 항목이 포함 되어 있습니다.  
   
 -   [SQL 최소 문법](../../../odbc/reference/appendixes/sql-minimum-grammar.md)  
   

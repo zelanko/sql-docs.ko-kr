@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 23c8c3c76b881f342f56490e5722a0ae641464ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755361"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>데이터베이스 미러링 모니터링(SQL Server)
@@ -125,12 +125,12 @@ ms.locfileid: "62755361"
   
      **상태** 페이지 메트릭에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 "데이터베이스 미러링 모니터"에 표시되는 성능 메트릭을 참조하세요.  
   
--    **sp_dbmmonitorresults**사용  
+-   **sp_dbmmonitorresults**사용  
   
      시스템 관리자는 **sp_dbmmonitorresults** 시스템 저장 프로시저를 사용하여 상태 테이블을 볼 수 있으며 이전 15초 내에 업데이트되지 않은 경우 필요에 따라 업데이트할 수 있습니다. 이 프로시저는 **sp_dbmmonitorupdate** 프로시저를 호출한 다음 프로시저 호출에서 요청된 양에 따라 기록 행을 하나 이상 반환합니다. 결과 집합의 상태에 대한 자세한 내용은 [sp_dbmmonitorresults&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql)을 참조하세요.  
   
-#### <a name="monitoring-database-mirroring-status-by-dbmmonitor-members"></a>데이터베이스 미러링 상태 모니터링(dbm_monitor 멤버가 사용하는 경우)  
- 앞에서 설명한 것처럼 **sp_dbmmonitorupdate** 는 처음 실행될 때 **msdb** 데이터베이스에 **dbm_monitor** 고정 데이터베이스 역할을 만듭니다. **dbm_monitor** 고정 데이터베이스 역할의 멤버는 데이터베이스 미러링 모니터 또는 **sp_dbmmonitorresults** 저장 프로시저를 사용하여 기존 미러링 상태를 볼 수 있습니다. 그러나 이러한 사용자는 상태 테이블을 업데이트할 수 없습니다. 표시되는 상태의 수명을 알아보려면 사용자가 **상태** 페이지에서 **보안 주체 로그 (***\<시간>***)** 및 **미러 로그 (***\<시간>***)** 레이블의 시간을 확인하면 됩니다.  
+#### <a name="monitoring-database-mirroring-status-by-dbm_monitor-members"></a>데이터베이스 미러링 상태 모니터링(dbm_monitor 멤버가 사용하는 경우)  
+ 앞에서 설명한 것처럼 **sp_dbmmonitorupdate** 는 처음 실행될 때 **msdb** 데이터베이스에 **dbm_monitor** 고정 데이터베이스 역할을 만듭니다. **dbm_monitor** 고정 데이터베이스 역할의 멤버는 데이터베이스 미러링 모니터 또는 **sp_dbmmonitorresults** 저장 프로시저를 사용하여 기존 미러링 상태를 볼 수 있습니다. 그러나 이러한 사용자는 상태 테이블을 업데이트할 수 없습니다. 표시되는 상태의 수명을 알아보려면 사용자가 **상태*** 페이지에서 \<보안 주체 로그 (***** 시간>**)*** 및 \<미러 로그 (***** 시간>**)** 레이블의 시간을 확인하면 됩니다.  
   
  **dbm_monitor** 고정 데이터베이스 역할의 멤버는 **데이터베이스 미러링 모니터 작업** 을 사용하여 정기적으로 상태 테이블을 업데이트합니다. 작업이 없거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 중지된 경우 상태가 점점 유효하지 않게 되어 미러링 세션의 구성을 더 이상 반영할 수 없습니다. 예를 들어 장애 조치(failover) 후에 파트너가 동일한 역할(주 서버 또는 미러 서버)을 공유하는 것으로 표시되거나 현재 주 서버가 미러 서버로 표시되고 현재 미러 서버가 주 서버로 표시될 수 있습니다.  
   
@@ -170,7 +170,7 @@ ms.locfileid: "62755361"
   
     -   동기화됨  
   
-    -   Suspended  
+    -   일시 중단  
   
     -   연결 끊김  
   
@@ -301,7 +301,7 @@ ms.locfileid: "62755361"
   
      데이터베이스 미러링 전송 보안과 관련된 감사 메시지를 보고합니다. 자세한 내용은 [Audit Database Mirroring Login Event Class](../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md)을 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [미러링 성능 메트릭에 대해 경고 임계값 및 경고 사용&#40;SQL Server&#41;](use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)  
   
@@ -329,7 +329,7 @@ ms.locfileid: "62755361"
   
 -   [sp_dbmmonitorupdate&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링&#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [서버 이벤트용 WMI 공급자 개념](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   

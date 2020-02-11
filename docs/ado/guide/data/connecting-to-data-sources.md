@@ -13,18 +13,18 @@ ms.assetid: 82770486-37bd-4c90-885f-6817a7c77ad7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 000302715e7ce7d3a8ae53f06d61f54e98cbd883
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925794"
 ---
 # <a name="connecting-to-data-sources"></a>데이터 원본에 연결
-ADO **연결** 개체 DBMS, 파일 저장소에 또는 쉼표로 구분 된 텍스트 파일을 포함 하 여 데이터 원본 사용 하 여 고유한 세션을 나타냅니다. 클라이언트/서버 데이터베이스 시스템의 경우 ADO 연결 서버에 실제 네트워크 연결을 수 있습니다.  
+ADO **연결** 개체는 DBMS, 파일 저장소 또는 쉼표로 구분 된 텍스트 파일을 포함 하 여 데이터 원본에 대 한 고유한 세션을 나타냅니다. 클라이언트/서버 데이터베이스 시스템의 경우 ADO 연결은 서버에 대 한 실제 네트워크 연결이 될 수 있습니다.  
   
- 합니다 **연결** 개체를 지 원하는 다양 한 [속성 및 메서드](../../../ado/reference/ado-api/connection-object-properties-methods-and-events.md) 연결 구성에 지정 하기 위한 열기와 연결을 닫는, 만들기 및 실행 명령을 데이터 원본에 대해 및 등의 기본 데이터 원본 스키마 행 집합의 형태로 디자인에 대 한 정보를 제공 합니다. 공급자, 몇 가지 컬렉션, 메서드 또는 속성을 지 원하는 기능에 따라 한 **연결** 개체를 사용할 수 없습니다.  
+ **Connection** 개체는 연결 구성 지정, 연결 열기 및 닫기, 데이터 원본에 대 한 명령 생성 및 실행, 스키마 행 집합 형식으로 기본 데이터 원본의 디자인에 대 한 정보 제공 등을 위한 다양 한 [속성 및 메서드](../../../ado/reference/ado-api/connection-object-properties-methods-and-events.md) 를 지원 합니다. 공급자가 지 원하는 기능에 따라 **연결** 개체의 일부 컬렉션, 메서드 또는 속성을 사용 하지 못할 수도 있습니다.  
   
- 사용 하 여 데이터 원본에 연결할 수는 **연결** 개체 또는 사용 하 여를 **Recordset** 개체입니다.  
+ **연결** 개체를 사용 하거나 **레코드 집합** 개체를 사용 하 여 데이터 원본에 연결할 수 있습니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

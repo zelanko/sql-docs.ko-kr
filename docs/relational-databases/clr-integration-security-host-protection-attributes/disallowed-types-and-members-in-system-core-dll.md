@@ -1,5 +1,5 @@
 ---
-title: 형식 및 멤버 System.Core.dll에 허용 되지 않는 | Microsoft Docs
+title: System.object에서 허용 되지 않는 형식 및 멤버 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.assetid: dcd24cd6-f4ab-42cc-9786-a1604e8a4b4e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 8d3282d3781305e806a6ed5d12c35ae42fd735cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68028143"
 ---
 # <a name="disallowed-types-and-members-in-systemcoredll"></a>System.Core.dll에 허용되지 않는 유형 및 멤버
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공용 언어 통합 (CLR) 프로그래밍 형식 또는 멤버에는 사용할 수 없게 하는 **HostProtectionAttribute** 를 지정 하는 **System.Security.Permissions.HostProtectionResource** 열거형의 값을 사용 하 여 **ExternalProcessMgmt**, **ExternalThreading**하십시오 **MayLeakOnAbort**, **SecurityInfrastructure**, **SelfAffectingProcessMgmnt**합니다 **SelfAffectingThreading**, **: SharedState**, **동기화**, 또는 **UI**합니다. 다음 표에는 HPA(호스트 보호 특성) 값이 허용되지 않는 System.Core.dll 어셈블리의 멤버 및 유형이 나열되어 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]CLR (공용 언어 통합) 프로그래밍에서는 **Externalprocessmgmt**, **externalprocessor**, **MayLeakOnAbort**, **securityinfrastructure**, **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **sharedstate**, **Synchronization**또는 **UI**값을 사용 하 여 **HostProtectionResource** 열거형을 지정 하는 **HostProtectionAttribute** 을 포함 하는 형식 또는 멤버를 사용할 때를 허용 하지 않습니다. 다음 표에는 HPA(호스트 보호 특성) 값이 허용되지 않는 System.Core.dll 어셈블리의 멤버 및 유형이 나열되어 있습니다.  
   
 > [!NOTE]  
 >  이 목록은 지원되는 어셈블리에서 생성되었습니다. 자세한 내용은 [Supported .NET Framework Libraries](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)을 참조하세요.  
@@ -127,11 +127,11 @@ ms.locfileid: "68028143"
 |System.Threading.LockRecursionException|MayLeakOnAbort|  
 |System.Threading.ReaderWriterLockSlim|MayLeakOnAbort|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [호스트 보호 특성 및 CLR 통합 프로그래밍](../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
- [Microsoft.VisualBasic.dll에 허용 되지 않는 유형 및 멤버](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
- [Mscorlib.dll에 허용 되지 않는 유형 및 멤버](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-mscorlib-dll.md)   
- [Disallowed Types and Members in System.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)   
- [System.Data.dll에 허용되지 않는 형식 및 멤버](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md)  
+ [Microsoft.visualbasic에 허용 되지 않는 형식 및 멤버](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
+ [Mscorlib.dll에 허용 되지 않는 형식 및 멤버](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-mscorlib-dll.md)   
+ [System.object의 허용 되지 않는 형식 및 멤버](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)   
+ [System.Data.dll에 허용되지 않는 유형 및 멤버](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md)  
   
   

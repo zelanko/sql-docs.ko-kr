@@ -1,5 +1,5 @@
 ---
-title: 레코드 집합 예제 (VB)의 레코드 포인터를 이동 합니다. | Microsoft Docs
+title: 레코드 집합 예제의 레코드 이동 포인터 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,14 +18,14 @@ ms.assetid: 31d3b083-c677-423e-8d26-a212eaeea281
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4ade95659b1e7111ff2f3c27a04008e859ded605
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932087"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vb"></a>MoveFirst, MoveLast, MoveNext 및 MovePrevious 메서드 예제 (VB)
-이 예제에서는 합니다 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)를 [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)를 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), 및 [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) 를 의레코드포인터를이동하는방법[레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 제공 된 명령을 기반으로 합니다. MoveAny 절차는이 절차를 실행 하려면 필요 합니다.  
+이 예에서는 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)및 [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) 메서드를 사용 하 여 제공 된 명령에 따라 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 의 레코드 포인터를 이동 합니다. 이 프로시저를 실행 하려면 MoveAny 프로시저가 필요 합니다.  
   
 ```  
 'BeginMoveFirstVB  
@@ -123,6 +123,6 @@ End Sub
 'EndMoveFirstVB  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [MoveFirst, MoveLast, MoveNext 및 MovePrevious 메서드 (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -1,5 +1,5 @@
 ---
-title: Prompt 속성-동적 (ADO) | Microsoft Docs
+title: Prompt 속성-Dynamic (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,25 +14,25 @@ ms.assetid: c4f001b5-8d16-4d39-a42e-c0e2faaaceaf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cde7a5ad0324bc7d5cde5e1a794eeb9e2cb3381a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931585"
 ---
 # <a name="prompt-property-dynamic-ado"></a>Prompt 속성-동적(ADO)
-OLE DB 공급자 초기화 정보에 대 한 사용자 메시지를 표시 하는지 여부를 지정 합니다.  
+OLE DB 공급자가 초기화 정보를 묻는 메시지를 사용자에 게 표시할지 여부를 지정 합니다.  
   
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
- 설정 하 고 반환 된 [ConnectPromptEnum](../../../ado/reference/ado-api/connectpromptenum.md) 값입니다.  
+ [ConnectPromptEnum](../../../ado/reference/ado-api/connectpromptenum.md) 값을 설정 하 고 반환 합니다.  
   
 ## <a name="remarks"></a>설명  
- **프롬프트** 에 추가할 수 있습니다는 동적 속성은 합니다 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체의 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) OLE DB 공급자를 사용 하 여 컬렉션입니다. OLE DB 공급자는 초기화 정보를 묻는 메시지를 사용자에 게 대화 상자를 일반적으로 표시 됩니다.  
+ **Prompt** 는 OLE DB 공급자에 의해 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체의 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션에 추가 될 수 있는 동적 속성입니다. 초기화 정보를 요청 하기 위해 OLE DB 공급자는 일반적으로 사용자에 게 대화 상자를 표시 합니다.  
   
- 동적 속성을 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 손실 되는 경우를 **연결** 닫혀 있습니다. **프롬프트** 다시 열기 전에 속성 다시 설정 해야 합니다 **연결** 기본값 이외의 값을 사용 하도록 합니다.  
+ [연결 개체의](../../../ado/reference/ado-api/connection-object-ado.md) 동적 속성은 **연결** 을 닫을 때 손실 됩니다. 기본값 이외의 값을 사용 하려면 **연결** 을 다시 열기 전에 **Prompt** 속성을 다시 설정 해야 합니다.  
   
 > [!NOTE]
->  공급자는 사용자 됩니다 대화 상자에 대처할 수 있도록 하는 시나리오에서 사용자를 메시지를 표시를 지정 하지 마십시오. 예를 들어 사용자 응용 프로그램 사용자의 클라이언트 대신 서버 시스템에서 실행 중인 경우 또는 응용 프로그램 로그온 한 사용자를 사용 하 여 시스템에서 실행 중인 경우에 응답할 수 없습니다. 이러한 경우 응용 프로그램 응답을 무기한 대기 되며를 잠그는 것 같습니다.  
+>  사용자가 대화 상자에 응답할 수 없는 시나리오에서 공급자가 사용자에 게 메시지를 표시 하도록 지정 하지 마십시오. 예를 들어 응용 프로그램이 사용자의 클라이언트 대신 서버 시스템에서 실행 되 고 있거나 사용자가 로그온 하지 않은 시스템에서 실행 되 고 있는 경우 사용자가 응답할 수 없습니다. 이러한 경우 응용 프로그램은 응답을 무기한 대기 하 고 잠금 상태로 보일 것입니다.  
   
 ## <a name="usage"></a>사용  
   

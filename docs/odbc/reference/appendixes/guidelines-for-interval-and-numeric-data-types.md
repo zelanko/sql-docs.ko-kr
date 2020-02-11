@@ -11,14 +11,14 @@ ms.assetid: 28a879a1-666e-4183-b731-d36b584d5d86
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ced117b492a366d69e72a5780f8091627ede7921
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68041649"
 ---
 # <a name="guidelines-for-interval-and-numeric-data-types"></a>간격 및 숫자 데이터 형식에 대한 지침
-다음 섹션에서는 주소 간격 및 숫자 데이터 형식입니다.  
+다음 섹션에서는 간격 및 숫자 데이터 형식에 대해 설명 합니다.  
   
 -   [간격 데이터 형식](../../../odbc/reference/appendixes/interval-data-types.md)  
   

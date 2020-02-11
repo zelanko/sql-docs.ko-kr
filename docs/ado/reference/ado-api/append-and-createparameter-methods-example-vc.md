@@ -1,5 +1,5 @@
 ---
-title: 추가 및 CreateParameter 메서드 예제 (VC + +) | Microsoft Docs
+title: Append 및 CreateParameter 메서드 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: b57d144c-0a34-49c8-94cf-e5981edfcca6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f0f23598ac53e1d4d4067721487744c46d819442
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920690"
 ---
-# <a name="append-and-createparameter-methods-example-vc"></a>추가 및 CreateParameter 메서드 예제 (VC + +)
-이 예제에서는 합니다 [Append](../../../ado/reference/ado-api/append-method-ado.md) 및 [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) 입력된 매개 변수를 사용 하 여 저장된 프로시저를 실행 하는 방법입니다.  
+# <a name="append-and-createparameter-methods-example-vc"></a>Append 및 CreateParameter 메서드 예제 (VC + +)
+이 예에서는 [Append](../../../ado/reference/ado-api/append-method-ado.md) 및 [createparameter](../../../ado/reference/ado-api/createparameter-method-ado.md) 메서드를 사용 하 여 입력 매개 변수를 사용 하 여 저장 프로시저를 실행 합니다.  
   
 ## <a name="example"></a>예제  
   
@@ -202,6 +202,6 @@ Authors with 25 percent royalty
 899-46-2035, Anne  Ringer  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Append 메서드 (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [CreateParameter 메서드(ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)

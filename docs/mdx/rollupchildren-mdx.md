@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 89f7545af0d98de2a6bd97630a893057aac36b12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037051"
 ---
 # <a name="rollupchildren-mdx"></a>RollupChildren(MDX)
@@ -35,7 +35,7 @@ RollupChildren(Member_Expression, Unary_Operator)
  단항 연산자를 지정하는 유효한 문자열 식입니다.  
   
 ## <a name="remarks"></a>설명  
- 합니다 **RollupChildren** 함수는 지정 된 단항 연산자를 사용 하 여 지정된 된 멤버의 자식 값을 롤업 합니다.  
+ **RollupChildren** 함수는 지정 된 단항 연산자를 사용 하 여 지정 된 멤버의 자식 값을 롤업 합니다.  
   
  다음은 이 함수에 대해 유효한 단항 연산자입니다.  
   
@@ -51,7 +51,7 @@ RollupChildren(Member_Expression, Unary_Operator)
  위 목록에 표시되지 않은 멤버 속성의 연산자를 사용하면 오류가 발생합니다. 계산 순서는 연산자의 선행 규칙이 아닌 형제 항목의 순서에 따라 결정됩니다.  
   
 ## <a name="example"></a>예제  
- 다음 예에서는 대체 방법으로 단항 연산자의 대체 값이 들어 있는 "Alternate Rollup Operator"라는 멤버 속성을 사용하여 Account 차원에 있는 Net Profit 계층의 자식을 롤업합니다. 이 멤버 속성은 Adventure Works 큐브에는 없지만 만들 수 있습니다. 이 사용 된 **RollupChildren** 가상 분석에 대 한 예산 응용 프로그램에서 함수를 사용할 수 없습니다.  
+ 다음 예에서는 대체 방법으로 단항 연산자의 대체 값이 들어 있는 "Alternate Rollup Operator"라는 멤버 속성을 사용하여 Account 차원에 있는 Net Profit 계층의 자식을 롤업합니다. 이 멤버 속성은 Adventure Works 큐브에는 없지만 만들 수 있습니다. 이러한 **RollupChildren** 함수 사용은 가상 분석을 위한 예산 응용 프로그램에서 사용할 수 있습니다.  
   
 ```  
 RollupChildren  
@@ -59,7 +59,7 @@ RollupChildren
    , [Account].CurrentMember.Properties ('Alternate Rollup Operator') )  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

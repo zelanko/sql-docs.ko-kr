@@ -1,5 +1,5 @@
 ---
-title: XML에서 레코드 집합 동적 속성 | Microsoft Docs
+title: XML의 레코드 집합 동적 속성 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,20 +13,20 @@ ms.assetid: 52f8e379-812a-4db8-9210-94458926301c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a058a2d0c5a808f29807744c6ba01f658bebc120
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924442"
 ---
 # <a name="recordset-dynamic-properties-in-xml"></a>XML의 레코드 집합 동적 속성
-(Client Cursor Engine)에서 다음 레코드 집합 공급자별 속성을 XML 형식으로 현재 유지 됩니다.  
+클라이언트 커서 엔진에서 다음과 같은 레코드 집합 공급자별 속성은 현재 XML 형식으로 유지 됩니다.  
   
--   다시 동기화를 업데이트 합니다.  
+-   업데이트 다시 동기화  
   
 -   고유한 테이블  
   
--   고유한 스키마  
+-   고유 스키마  
   
 -   고유 카탈로그  
   
@@ -42,11 +42,11 @@ ms.locfileid: "67924442"
   
 -   UpdateCriteria  
   
--   변형 이름  
+-   이름 변경  
   
 -   AutoRecalc  
   
- 이러한 속성은 유지 되 고 레코드 집합에 대 한 요소 정의의 특성으로 스키마 섹션에 저장 됩니다. 이러한 특성은 행 집합 스키마 네임 스페이스에 정의 되어 있으며 접두사가 있어야 합니다. "rs:".  
+ 이러한 속성은 유지 되는 레코드 집합에 대 한 요소 정의의 특성으로 스키마 섹션에 저장 됩니다. 이러한 특성은 행 집합 스키마 네임 스페이스에 정의 되며 접두사 "rs:"를 포함 해야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 형식으로 레코드 유지](../../../ado/guide/data/persisting-records-in-xml-format.md)

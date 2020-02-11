@@ -1,5 +1,5 @@
 ---
-title: sp_syscollector_stop_collection_set (TRANSACT-SQL) | Microsoft Docs
+title: sp_syscollector_stop_collection_set (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,18 +19,18 @@ ms.assetid: 4668cfb7-462f-40d0-948c-8f740a792a4d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3e09efe938dabb031e1c57020f051cd5ab03e55a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68010573"
 ---
-# <a name="spsyscollectorstopcollectionset-transact-sql"></a>sp_syscollector_stop_collection_set(Transact-SQL)
+# <a name="sp_syscollector_stop_collection_set-transact-sql"></a>sp_syscollector_stop_collection_set(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   컬렉션 집합을 중지합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,15 +44,15 @@ sp_syscollector_stop_collection_set
   
 ## <a name="arguments"></a>인수  
  [ @collection_set_id = ] *collection_set_id*  
- 컬렉션 집합의 고유한 로컬 식별자입니다. *collection_set_id* 됩니다 **int** 이며 기본값은 NULL입니다. *collection_set_id* 하는 경우 값이 있어야 *이름을* NULL입니다.  
+ 컬렉션 집합의 고유한 로컬 식별자입니다. *collection_set_id* 은 **int** 이며 기본값은 NULL입니다. *name* 이 NULL 인 경우 *collection_set_id* 에 값이 있어야 합니다.  
   
- [ @name = ] '*name*'  
- 컬렉션 집합의 이름입니다. *이름을* 됩니다 **sysname** 이며 기본값은 NULL입니다. *이름을* 하는 경우 값이 있어야 *collection_set_id* NULL입니다.  
+ [ @name = ] '*이름*'  
+ 컬렉션 집합의 이름입니다. *name* 은 **sysname** 이며 기본값은 NULL입니다. *collection_set_id* 가 NULL 이면 *이름* 에 값이 있어야 합니다.  
   
  [ @stop_collection_job = ] *stop_collection_job*  
- 컬렉션 집합의 컬렉션 작업이 실행 중인 경우 중단하도록 지정합니다. *stop_collection_job* 됩니다 **비트** 이며 기본값은 1입니다.  
+ 컬렉션 집합의 컬렉션 작업이 실행 중인 경우 중단하도록 지정합니다. *stop_collection_job* 은 **bit** 이며 기본값은 1입니다.  
   
- *stop_collection_job* 컬렉션 모드가 캐시 된 컬렉션 집합에만 적용 됩니다. 자세한 내용은 [sp_syscollector_create_collection_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)합니다.  
+ *stop_collection_job* 는 컬렉션 모드가 cached로 설정 된 컬렉션 집합에만 적용 됩니다. 자세한 내용은 [sp_syscollector_create_collection_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)를 참조 하세요.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -72,7 +72,7 @@ GO
 EXEC sp_syscollector_stop_collection_set @collection_set_id = 1;  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 컬렉션](../../relational-databases/data-collection/data-collection.md)   
  [데이터 수집기 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)  
   

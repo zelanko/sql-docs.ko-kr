@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 930fe19abe7b1d783b4c69ef54b9b2550a05d538
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017090"
 ---
 # <a name="and-mdx"></a>AND(MDX)
@@ -34,18 +34,18 @@ Expression1 AND Expression2
  *Expression2*  
  숫자 값을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="return-value"></a>반환 값  
- 두 매개 변수를 평가 하는 경우 true를 반환 하는 부울 값 **true**이 고, 그렇지 않으면 **false**합니다.  
+## <a name="return-value"></a>Return Value  
+ 두 매개 변수가 모두 **true**로 평가 되 면 true를 반환 하는 부울 값입니다. 그렇지 않으면 **false**입니다.  
   
 ## <a name="remarks"></a>설명  
- 합니다 **AND** 연산자는 두 식이 모두 부울 값으로 처리 (0으로 **false**이 고, 그렇지 않으면 **true**) 연산자는 논리곱 연산을 수행 하기 전에 합니다. 다음 표에서 설명 하는 방법을 **AND** 연산자로 논리 결합을 수행 합니다.  
+ 연산자 **는 논리** 결합을 수행 하기 전에 두 식을 모두 부울 값 (0, 0, 0, **0, 0)으로**처리 **합니다.** 다음 표에서는 **AND** 연산자가 논리 결합을 수행 하는 방법을 보여 줍니다.  
   
-|*Expression1*|*Expression2*|반환 값|  
+|*Expression1*|*Expression2*|Return Value|  
 |-------------------|-------------------|------------------|  
 |**true**|**true**|**true**|  
-|**true**|**false**|**false**|  
-|**false**|**true**|**false**|  
-|**false**|**false**|**false**|  
+|**true**|**허위**|**허위**|  
+|**허위**|**true**|**허위**|  
+|**허위**|**허위**|**허위**|  
   
 ## <a name="example"></a>예제  
   
@@ -67,7 +67,7 @@ WHERE
     ([Measures].[LowGPM])  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [MDX 연산자 참조 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [Mdx 연산자 참조 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

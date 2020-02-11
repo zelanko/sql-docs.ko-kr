@@ -16,14 +16,14 @@ ms.assetid: f74a81fd-cbcc-4143-b9f8-774c88dd4fad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 436c58b712ee256f6e120b1b30578e8f0cbb4b64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917936"
 ---
 # <a name="open-and-close-methods-example-vc"></a>Open 및 Close 메서드 예제(VC++)
-이 예제에서는 합니다 **열기** 및 [닫기](../../../ado/reference/ado-api/close-method-ado.md) 둘 다에서 메서드 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 및 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 열려 있는 개체입니다.  
+이 예에서는 열려 있는 [레코드 집합과](../../../ado/reference/ado-api/recordset-object-ado.md) [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 모두에서 **Open** 및 [Close](../../../ado/reference/ado-api/close-method-ado.md) 메서드를 사용 합니다.  
   
 ```  
 // Open_Close_Methods.cpp  
@@ -205,9 +205,9 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Close 메서드 (ADO)](../../../ado/reference/ado-api/close-method-ado.md)   
- [연결 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Connection 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Open 메서드 (ADO 연결)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
  [Open 메서드 (ADO 레코드 집합)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

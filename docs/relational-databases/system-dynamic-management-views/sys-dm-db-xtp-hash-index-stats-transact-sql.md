@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_hash_index_stats (TRANSACT-SQL) | Microsoft Docs
+title: sys. dm_db_xtp_hash_index_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f2bbaaaa6770c5644da227c7e64a9ff9e0fc2c13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68026845"
 ---
-# <a name="sysdmdbxtphashindexstats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats(Transact-SQL)
+# <a name="sysdm_db_xtp_hash_index_stats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   이러한 통계는 버킷 수를 이해하고 조정하는 데 유용합니다. 또한 인덱스 키에 중복이 많은 경우 사례를 검색하는 데 사용할 수 있습니다.  
@@ -41,20 +41,20 @@ ms.locfileid: "68026845"
 긴 체인 길이는 SELECT 및 INSERT를 포함하여 개별 행에 대한 모든 DML 작업의 성능에 상당한 영향을 미칠 수 있습니다. 빈 버킷 수가 많은 짧은 체인 길이는 bucket_count가 너무 높다는 것을 나타냅니다. 이것은 인덱스 스캔 성능을 저하시킵니다.  
   
 > [!WARNING]
-> **sys.dm_db_xtp_hash_index_stats** 전체 테이블을 검색 합니다. 따라서 데이터베이스에 큰 테이블이 있는 경우 **sys.dm_db_xtp_hash_index_stats** 실행 시간이 오래 걸릴 수 있습니다.  
+> **dm_db_xtp_hash_index_stats** 는 전체 테이블을 검색 합니다. 따라서 데이터베이스에 규모가 많은 테이블이 있는 경우 **dm_db_xtp_hash_index_stats** 를 실행 하는 데 시간이 오래 걸릴 수 있습니다.  
   
-자세한 내용은 [메모리 최적화 테이블의 해시 인덱스](../../relational-databases/sql-server-index-design-guide.md#hash_index)합니다.  
+자세한 내용은 [메모리 액세스에 최적화 된 테이블의 해시 인덱스](../../relational-databases/sql-server-index-design-guide.md#hash_index)를 참조 하세요.  
   
-|열 이름|형식|설명|  
+|열 이름|Type|Description|  
 |-----------------|----------|-----------------|  
 |object_id|**int**|부모 테이블의 개체 ID입니다.|  
-|xtp_object_id|**bigint**|메모리 최적화 테이블의 ID입니다.|  
+|xtp_object_id|**bigint**|메모리 액세스에 최적화 된 테이블의 ID입니다.|  
 |index_id|**int**|인덱스 ID입니다.|  
 |total_bucket_count|**bigint**|인덱스에서 해시 버킷의 총 수입니다.|  
 |empty_bucket_count|**bigint**|인덱스에서 빈 해시 버킷의 총 수입니다.|  
 |avg_chain_length|**bigint**|인덱스에서 모든 해시 버킷의 낮은 체인 평균 길이입니다.|  
 |max_chain_length|**bigint**|해시 버킷에 있는 행 체인의 최대 길이입니다.|  
-|xtp_object_id|**bigint**|메모리 최적화 테이블에 해당 하는 메모리 내 OLTP 개체 ID입니다.|  
+|xtp_object_id|**bigint**|메모리 액세스에 최적화 된 테이블에 해당 하는 메모리 내 OLTP 개체 ID입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  서버에 대한 VIEW DATABASE STATE 권한이 필요합니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "68026845"
   
 ### <a name="a-troubleshooting-hash-index-bucket-count"></a>A. 해시 인덱스 버킷 수 문제 해결
 
-기존 테이블의 해시 인덱스 버킷 수 문제를 해결 하려면 다음 쿼리를 사용할 수 있습니다. 쿼리는 사용자 테이블에서 모든 해시 인덱스의 체인 길이 및 빈 버킷 백분율에 대 한 통계를 반환합니다.
+다음 쿼리를 사용 하 여 기존 테이블의 해시 인덱스 버킷 수를 해결할 수 있습니다. 이 쿼리는 사용자 테이블의 모든 해시 인덱스에 대 한 빈 버킷 비율 및 체인 길이에 대 한 통계를 반환 합니다.
 
 ```sql
   SELECT  
@@ -87,11 +87,11 @@ ms.locfileid: "68026845"
   ORDER BY [table], [index];  
 ``` 
 
-이 쿼리의 결과 해석 하는 방법에 대 한 자세한 내용은 참조 하세요. [메모리 최적화 테이블의 해시 인덱스 문제 해결](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) 합니다.  
+이 쿼리의 결과를 해석 하는 방법에 대 한 자세한 내용은 [메모리 액세스에 최적화 된 테이블의 해시 인덱스 문제 해결](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) 을 참조 하세요.  
 
-### <a name="b-hash-index-statistics-for-internal-tables"></a>2\. 내부 테이블에 대 한 해시 인덱스 통계
+### <a name="b-hash-index-statistics-for-internal-tables"></a>B. 내부 테이블에 대 한 해시 인덱스 통계
 
-특정 기능 해시 인덱스의 경우 예를 들어 메모리 최적화 테이블에서 columnstore 인덱스를 활용 하는 내부 테이블을 사용 합니다. 다음 쿼리는 사용자 테이블에 연결 된 내부 테이블에 해시 인덱스에 대 한 통계를 반환 합니다.
+특정 기능에서는 해시 인덱스를 활용 하는 내부 테이블을 사용 합니다. 예를 들어 메모리 최적화 테이블의 columnstore 인덱스를 사용 합니다. 다음 쿼리는 사용자 테이블에 연결 된 내부 테이블의 해시 인덱스에 대 한 통계를 반환 합니다.
 
 ```sql
   SELECT  
@@ -112,9 +112,9 @@ ms.locfileid: "68026845"
   ORDER BY [user_table], [internal_table_type], [index]; 
 ```
 
-내부 테이블 인덱스의 BUCKET_COUNT를 변경할 수 없습니다, 따라서이 쿼리의 출력 고려해 야 정보만 note 합니다. 사용자가 조치할 필요는 없습니다.  
+내부 테이블의 인덱스 BUCKET_COUNT를 변경할 수 없으므로이 쿼리의 출력은 정보 제공 용 으로만 고려 되어야 합니다. 추가적인 조치가 필요하지 않습니다.  
 
-이 쿼리는 내부 테이블의 해시 인덱스를 활용 하는 기능을 사용 하지 않는 행을 반환 하려면 사용할 수 없습니다. 다음 메모리 최적화 테이블에 columnstore 인덱스를 포함합니다. 이 테이블을 만든 후 내부 테이블에 해시 인덱스가 표시 됩니다.
+내부 테이블에 해시 인덱스를 사용 하는 기능을 사용 하지 않는 한이 쿼리는 행을 반환 하지 않습니다. 다음 메모리 최적화 테이블에는 columnstore 인덱스가 포함 되어 있습니다. 이 테이블을 만든 후에는 내부 테이블에 대 한 해시 인덱스를 볼 수 있습니다.
 
 ```sql
   CREATE TABLE dbo.table_columnstore
@@ -124,7 +124,7 @@ ms.locfileid: "68026845"
   ) WITH (MEMORY_OPTIMIZED=ON)
 ```
 
-## <a name="see-also"></a>관련 항목  
- [메모리 최적화 테이블 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [메모리 액세스에 최적화 된 테이블 동적 관리 뷰 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

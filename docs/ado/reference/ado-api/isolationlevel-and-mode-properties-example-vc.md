@@ -1,5 +1,5 @@
 ---
-title: IsolationLevel 및 모드 속성 예제 (VC + +) | Microsoft Docs
+title: IsolationLevel 및 Mode 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fb39288499e2a78523ca29f2e1e4feff4ea9a310
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932313"
 ---
-# <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel 및 모드 속성 예제 (VC + +)
-이 예제에서는 합니다 [모드](../../../ado/reference/ado-api/mode-property-ado.md) 전용 연결을 여는 속성 및 [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) 다른 트랜잭션의 격리 된 상태에서 수행 하는 트랜잭션을 열지 속성.  
+# <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel 및 Mode 속성 예제 (VC + +)
+이 예에서는 [Mode](../../../ado/reference/ado-api/mode-property-ado.md) 속성을 사용 하 여 배타적 연결을 열고 [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) 속성을 사용 하 여 다른 트랜잭션과 분리 하 여 수행 되는 트랜잭션을 엽니다.  
   
 ## <a name="example"></a>예제  
   
@@ -223,26 +223,26 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **연결 모드는 전용**  
-**트랜잭션이 격리**  
-**사용 중인 경영진의 데이터베이스 가이드-비즈니스**  
-**컴퓨터를 사용 하 여 요리: Surreptitious 잔고-비즈니스**  
-**컴퓨터 스트레스를 전투 있습니다! -비즈니스**  
-**컴퓨터-비즈니스에 대 한 직접 강연**  
-**실리콘밸리 Gastronomic 처리-mod_cook**  
-**고급 Microwave-mod_cook**  
-**컴퓨터 요리-정하지의 심리학**  
-**하지만 사용자 친숙 한이? -popular_comp**  
-**Popular_comp 실리콘밸리의 비밀**  
-**Net 티켓-popular_comp**  
-**Phobic 및 비 Phobic 개인용 컴퓨터: 동작의 변형을-self_help**  
-**분노 적 인지 확인 합니다. -self_help**  
-**걱정-self_help 없이 수명**  
-**장기적인된 데이터 Deprivation: 네 가지 사례 연구-self_help**  
-**감정적인 보안: 새 알고리즘-self_help**  
-**Onions, Leeks, 및 마늘: 요리 지중해-trad_cook의 비밀**  
-**50 년 Buckingham Palace 사용-trad_cook에**  
-**Sushi, 누구나? -trad_cook**   
-## <a name="see-also"></a>관련 항목  
+ **연결 모드는 배타적입니다.**  
+**트랜잭션이 격리 되어 있습니다.**  
+**바쁜 임원의 데이터베이스 가이드-비즈니스**  
+**컴퓨터의 요리: Surreptitious 잔액 시트-비즈니스**  
+**컴퓨터의 스트레스 상태를 확인할 수 있습니다. -비즈니스**  
+**컴퓨터에 대 한 직접적인 통신-비즈니스**  
+**실리콘 유역 Gastronomic 처리-mod_cook**  
+**Gourmet 전자 mod_cook**  
+**심리학 컴퓨터의 요리 UNDECIDED**  
+**하지만 사용자에 게 친숙 한가요? -popular_comp**  
+**실리콘 유역-popular_comp의 비밀**  
+**Net에 티켓-popular_comp**  
+**컴퓨터 Phobic 및 비 Phobic 개인: 동작 변형-self_help**  
+**적군을 분노? -self_help**  
+**걱정 없이 수명-self_help**  
+**장기간 데이터 Deprivation: 4 대 사례 연구-self_help**  
+**감정적 Security: 새 알고리즘-self_help**  
+**Onions, Leeks 및 마늘: trad_cook 지중해의 요리 비밀**  
+**Buckingham 왕궁 Kitchens 50 년 trad_cook**  
+**초밥, 누구 인가요? -trad_cook**   
+## <a name="see-also"></a>참고 항목  
  [IsolationLevel 속성](../../../ado/reference/ado-api/isolationlevel-property.md)   
  [Mode 속성(ADO)](../../../ado/reference/ado-api/mode-property-ado.md)

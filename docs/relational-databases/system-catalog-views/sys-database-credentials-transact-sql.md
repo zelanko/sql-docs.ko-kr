@@ -1,5 +1,5 @@
 ---
-title: sys.database_credentials (TRANSACT-SQL) | Microsoft Docs
+title: sys. database_credentials (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/27/2017
 ms.prod: sql
@@ -19,33 +19,33 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2521d9543c71d9dee298fbb58518163fd45fbfdc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67999531"
 ---
-# <a name="sysdatabasecredentials-transact-sql"></a>sys.database_credentials (Transact SQL)
+# <a name="sysdatabase_credentials-transact-sql"></a>sys. database_credentials (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  각 데이터베이스에 한 행씩 반환 범위 데이터베이스의 자격 증명.  
+  데이터베이스의 각 데이터베이스 범위 자격 증명에 대해 하나의 행을 반환 합니다.  
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 사용 하 여 [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md) 대신 합니다.    
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]대신 [database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md) 를 사용 해야 합니다.    
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |credential_id|**int**|데이터베이스 범위 자격 증명의 ID입니다. 데이터베이스에서 고유 합니다.|  
-|name|**sysname**|데이터베이스의 이름 범위 자격 증명. 데이터베이스에서 고유 합니다.|  
-|credential_identity|**nvarchar(4000)**|사용할 ID의 이름입니다. 일반적으로 Windows 사용자입니다. 고유 하지 않아도 됩니다.|  
-|create_date|**datetime**|데이터베이스 범위 자격 증명을 만든 시간입니다.|  
-|modify_date|**datetime**|데이터베이스 범위 자격 증명을 마지막으로 수정 된 시간입니다.|  
-|target_type|**nvarchar(100)**|유형의 데이터베이스 범위 자격 증명. 범위 자격 증명을 데이터베이스에 대 한 NULL을 반환 합니다.|  
-|target_id|**int**|데이터베이스 범위 자격 증명에 매핑되는 개체의 ID입니다. 범위 자격 증명을 데이터베이스에 대 한 0을 반환 합니다.|  
+|name|**sysname**|데이터베이스 범위 자격 증명의 이름입니다. 데이터베이스에서 고유 합니다.|  
+|credential_identity|**nvarchar(4000)**|사용할 ID의 이름입니다. 일반적으로 Windows 사용자입니다. 중복되어도 문제가 없습니다.|  
+|create_date|**datetime**|데이터베이스 범위 자격 증명이 만들어진 시간입니다.|  
+|modify_date|**datetime**|데이터베이스 범위 자격 증명이 마지막으로 수정 된 시간입니다.|  
+|target_type|**nvarchar (100)**|데이터베이스 범위 자격 증명의 유형입니다. 데이터베이스 범위 자격 증명에 대해 NULL을 반환 합니다.|  
+|target_id|**int**|데이터베이스 범위 자격 증명이 매핑되는 개체의 ID입니다. 데이터베이스 범위 자격 증명에 대해 0을 반환 합니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 `CONTROL` 권한이 필요합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [자격 증명&#40;데이터베이스 엔진&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
  [CREATE DATABASE SCOPED CREDENTIAL&#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)   
  [ALTER DATABASE SCOPED CREDENTIAL&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)   

@@ -20,17 +20,17 @@ ms.assetid: 86cecd45-0b09-42e9-8152-32a12a1c2b7a
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9898dbde804b0c4615a5dc4ad6b8fefa79000ccb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68005576"
 ---
 # <a name="srv_paramstatus-extended-stored-procedure-api"></a>srv_paramstatus(확장 저장 프로시저 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하세요.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]대신 CLR 통합을 사용 하세요.  
   
  특정 원격 저장 프로시저 호출 매개 변수의 상태를 반환합니다.  
   
@@ -54,22 +54,23 @@ n
  *n*  
  매개 변수의 번호를 나타냅니다. 첫 번째 매개 변수의 번호는 1입니다.  
   
-## <a name="returns"></a>반환 값  
- 매개 변수의 상태 플래그가 들어 있는 **int** 입니다. 현재는 플래그가 하나만 있습니다. 비트 0을 1로 설정하면 매개 변수가 반환 매개 변수입니다. *n*번째 매개 변수가 없거나 원격 저장 프로시저가 없으면 -1이 반환됩니다.  
+## <a name="returns"></a>반환  
+ 매개 변수의 상태 플래그가 들어 있는 **int** 입니다. 현재는 플래그가 하나만 있습니다. 비트 0을 1로 설정하면 매개 변수가 반환 매개 변수입니다. 
+  *n*번째 매개 변수가 없거나 원격 저장 프로시저가 없으면 -1이 반환됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 루틴은 원격 저장 프로시저 호출 매개 변수의 상태 플래그를 반환합니다.  
   
  매개 변수에는 원격 저장 프로시저를 사용하여 클라이언트와 애플리케이션 간에 전달되는 데이터가 포함되어 있습니다. 클라이언트는 특정 매개 변수를 반환 매개 변수로 지정할 수 있습니다. 이러한 반환 매개 변수에는 애플리케이션이 다시 클라이언트에 전달하는 값이 포함될 수 있습니다.  
   
  현재 유일한 상태 플래그는 매개 변수가 반환 매개 변수인지 여부를 나타내는 상태 플래그입니다.  
   
- 매개 변수를 사용하여 원격 저장 프로시저를 호출하는 경우 매개 변수를 이름 또는 위치(이름 없음)로 전달할 수 있습니다. 일부 매개 변수는 이름으로 전달하고 일부 매개 변수는 위치로 전달하여 원격 저장 프로시저를 호출하면 오류가 발생합니다. 오류가 발생해도 SRV_RPC 처리기는 계속 호출되지만 매개 변수가 없는 것과 같이 처리되며 **srv_rpcparams** 는 0을 반환합니다.  
+ 매개 변수를 사용하여 원격 저장 프로시저를 호출하는 경우 매개 변수를 이름 또는 위치(이름 없음)로 전달할 수 있습니다. 일부 매개 변수는 이름으로 전달하고 일부 매개 변수는 위치로 전달하여 원격 저장 프로시저를 호출하면 오류가 발생합니다. 오류가 발생 하면 SRV_RPC 처리기가 계속 호출 되지만 매개 변수가 없는 것 처럼 표시 되 고 **srv_rpcparams** 0을 반환 합니다.  
   
 > [!IMPORTANT]  
 >  확장 저장 프로시저의 원본 코드를 철저히 검토하고 프로덕션 서버에 DLL을 설치하기 전에 컴파일한 DLL을 테스트해야 합니다. 보안 검토 및 테스트에 대한 자세한 내용은 [Microsoft 웹 사이트](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)를 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
- [srv_rpcparams(확장 저장 프로시저 API)](../../relational-databases/extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md)  
+ [srv_rpcparams &#40;확장 저장 프로시저 API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md)  
   
   

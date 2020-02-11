@@ -15,16 +15,16 @@ ms.assetid: 8269ea29-912a-4d20-9360-f48b3746081f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e8d189646cc421eb05d9f49d2da08dfe39d9cb34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921644"
 ---
 # <a name="activecommand-property-example-vc"></a>ActiveCommand 속성 예제(VC++)
-이 예제에서는 합니다 [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) 속성입니다.  
+이 예제에서는 [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) 속성을 보여 줍니다.  
   
- 서브루틴을 지정 하는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다 **ActiveCommand** 속성은 명령 텍스트와 생성 매개 변수를 표시 하려면 사용 합니다 **레코드 집합**합니다.  
+ 서브루틴에는 **ActiveCommand** 속성을 사용 하 여 **레코드 집합**을 만든 명령 텍스트 및 매개 변수를 표시 하는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체가 제공 됩니다.  
   
 ## <a name="example"></a>예제  
   
@@ -220,6 +220,6 @@ Parameter = 'Ringer'
 Name = 'Anne  Ringer'  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ActiveCommand 속성 (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

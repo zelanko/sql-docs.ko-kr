@@ -1,5 +1,5 @@
 ---
-title: 복제 테이블 (TRANSACT-SQL) | Microsoft Docs
+title: 복제 테이블 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 5696ee73-5d7c-4f26-b7ee-6831c9c3edf7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3dc89ce68529212246d85bdbafa8d9487b77a067
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67910233"
 ---
 # <a name="replication-tables-transact-sql"></a>복제 테이블(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  복제 시스템 테이블은 복제 토폴로지를 지원합니다. 사용자 데이터베이스가 게시자 또는 구독자로 구성되는 경우 복제는 데이터베이스에 시스템 테이블을 추가합니다. 이러한 테이블은 사용자 데이터베이스가 복제 토폴로지에서 제거될 때 제거됩니다. 일반 규칙에 대 한에 대 한 시스템 테이블을 사용 하 여 확인할 [시스템 테이블 &#40;TRANSACT-SQL&#41;](system-tables-transact-sql.md)합니다.  
+  복제 시스템 테이블은 복제 토폴로지를 지원합니다. 사용자 데이터베이스가 게시자 또는 구독자로 구성되는 경우 복제는 데이터베이스에 시스템 테이블을 추가합니다. 이러한 테이블은 사용자 데이터베이스가 복제 토폴로지에서 제거될 때 제거됩니다. 시스템 테이블 사용과 관련 된 일반적인 규칙은 [시스템 테이블 &#40;transact-sql&#41;](system-tables-transact-sql.md)를 참조 하세요.  
   
 ## <a name="replication-tables"></a>복제 테이블  
  다음은 복제에서 사용되고 데이터베이스에서 그룹화되는 시스템 테이블의 목록입니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "67910233"
   
 |||  
 |-|-|  
-|[MSreplication_options &#40;TRANSACT-SQL&#41;](msreplication-options-transact-sql.md)||  
+|[Transact-sql&#41;MSreplication_options &#40;](msreplication-options-transact-sql.md)||  
 | &nbsp; | &nbsp; |
  
 ### <a name="replication-tables-in-the-msdb-database"></a>msdb 데이터베이스에 있는 복제 테이블  
@@ -73,7 +73,7 @@ ms.locfileid: "67910233"
 |[MSqreader_history](msqreader-history-transact-sql.md)            ||
 | &nbsp; | &nbsp; |
   
- 배포 데이터베이스에서 이러한 테이블에서 데이터를 복제에 사용 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. 자세한 내용은 [아닌 SQL Server 이외 게시자](../../relational-databases/replication/non-sql/non-sql-server-publishers.md)합니다.  
+ 배포 데이터베이스의 이러한 테이블은 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자의 데이터를 복제 하는 데 사용 됩니다. 자세한 내용은 [비 SQL Server 게시자](../../relational-databases/replication/non-sql/non-sql-server-publishers.md)를 참조 하세요.  
   
 |||  
 |-|-|  
@@ -91,7 +91,7 @@ ms.locfileid: "67910233"
  
 |||  
 |-|-|  
-|[conflict_\<schema>_\<table>](conflict-schema-table-transact-sql.md)       |[MSpeer_request](mspeer-request-transact-sql.md)|
+|[conflict_\<스키마>_\<테이블>](conflict-schema-table-transact-sql.md)       |[MSpeer_request](mspeer-request-transact-sql.md)|
 |[MSdynamicsnapshotjobs](msdynamicsnapshotjobs-transact-sql.md)             |[MSpeer_response](mspeer-response-transact-sql.md)|
 |[MSdynamicsnapshotviews](msdynamicsnapshotviews-transact-sql.md)           |[MSpeer_topologyrequest](mspeer-topologyrequest-transact-sql.md)|  
 |[MSmerge_altsyncpartners](msmerge-altsyncpartners-transact-sql.md)         |[MSpeer_topologyresponse](mspeer-topologyresponse-transact-sql.md)|  
@@ -138,7 +138,7 @@ ms.locfileid: "67910233"
 |[MSmerge_settingshistory](msmerge-settingshistory-transact-sql.md)               |[systranschemas](../../relational-databases/system-views/systranschemas-transact-sql.md)| 
 | &nbsp; | &nbsp; |
 
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [게시 및 배포 구성](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [게시 및 배포 해제](../../relational-databases/replication/disable-publishing-and-distribution.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
