@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3d58ac84e394d7b8dfe342430991f2ddefa678be
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74684455"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>SQL Server Management Studio의 사용자 지원
@@ -75,8 +75,7 @@ ms.locfileid: "74684455"
   
 #### <a name="to-enable-online-search"></a>온라인 검색을 설정하려면  
   
-1.  
-  **도구** 메뉴에서 **옵션**을 클릭합니다. 
+1.  **도구** 메뉴에서 **옵션**을 클릭합니다. 
   **옵션** 대화 상자에서 **환경** 및 **도움말** 노드를 확장하고(필요한 경우) **온라인**을 클릭합니다.  
   
 2.  
@@ -88,8 +87,7 @@ ms.locfileid: "74684455"
 4.  
   **Codezone 커뮤니티** 가 선택한 검색 공급자 중 하나인 경우 **Codezone 커뮤니티** 목록에서 항목을 적절하게 선택하거나 선택을 취소합니다.  
   
-5.  
-  **확인**을 클릭합니다.  
+5.  **확인**을 클릭합니다.  
   
 #### <a name="to-search-msdn-online-and-sql-server-focused-communities-from-the-search-page"></a>검색 페이지에서 MSDN 온라인 및 SQL Server 관련 커뮤니티를 검색하려면  
   
