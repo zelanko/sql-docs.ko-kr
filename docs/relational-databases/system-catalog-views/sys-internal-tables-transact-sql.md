@@ -1,5 +1,5 @@
 ---
-title: sys.internal_tables (TRANSACT-SQL) | Microsoft Docs
+title: sys. internal_tables (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2019
 ms.prod: sql
@@ -21,29 +21,30 @@ ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0b3f262943d41f1cd9592ab805d02bce3ade77a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68044543"
 ---
 # <a name="sysinternal_tables-transact-sql"></a>sys.internal_tables(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  내부 테이블인 각 개체당 한 개의 행을 반환합니다. 내부 테이블은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 다양한 기능을 지원하기 위해 자동으로 생성됩니다. 예를 들어 기본 XML 인덱스를 만들면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 자동으로 내부 테이블을 만들어 단편 형태의 XML 문서 데이터를 저장합니다. 내부 테이블에 표시 된 **sys** 모든 데이터베이스의 스키마, 고유한 시스템 생성 이름을 예를 들어, 해당 기능을 나타내는 있고 **xml_index_nodes_2021582240_32001** 또는  **queue_messages_1977058079**  
+  내부 테이블인 각 개체당 한 개의 행을 반환합니다. 내부 테이블은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 다양한 기능을 지원하기 위해 자동으로 생성됩니다. 예를 들어 기본 XML 인덱스를 만들면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 자동으로 내부 테이블을 만들어 단편 형태의 XML 문서 데이터를 저장합니다. 내부 테이블은 모든 데이터베이스의 **sys** 스키마에 표시 되 고 해당 기능을 나타내는 고유한 시스템 생성 이름 (예: **xml_index_nodes_2021582240_32001** 또는 **queue_messages_1977058079**  
   
- 내부 테이블에는 사용자가 액세스할 수 있는 데이터가 포함되지 않으며 스키마가 고정되어 변경할 수 없습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서는 내부 테이블 이름을 참조할 수 없습니다. 예를 들어 선택과 같은 문은 실행할 수 없습니다 \* FROM  *\<sys.internal_table_name >* 합니다. 그러나 카탈로그 뷰를 쿼리하여 내부 테이블의 메타데이터를 볼 수 있습니다.  
+ 내부 테이블에는 사용자가 액세스할 수 있는 데이터가 포함되지 않으며 스키마가 고정되어 변경할 수 없습니다. 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서는 내부 테이블 이름을 참조할 수 없습니다. 예를 들어 select \* FROM * \<sys. internal_table_name>* 와 같은 문은 실행할 수 없습니다. 그러나 카탈로그 뷰를 쿼리하여 내부 테이블의 메타데이터를 볼 수 있습니다.  
   
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**\<Sys.objects에서 상속 된 열 >**||이 뷰가 상속 하는 열 목록은 참조 하세요 [sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)합니다.|  
+|**\<Sys. 개체에서 상속 된 열>**||이 뷰가 상속 하는 열 목록은 [sys. 개체 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)를 참조 하세요.|  
 |**internal_type**|**tinyint**|내부 테이블의 유형입니다.<br /><br /> 3 = **query_disk_store_query_hints**<br /><br /> 4 = **query_disk_store_query_template_parameterization**<br /><br /> 6 = **query_disk_store_wait_stats**<br /><br /> 201 = **queue_messages**<br /><br /> 202 = **xml_index_nodes**<br /><br /> 203 = **fulltext_catalog_freelist**<br /><br /> 205 = **query_notification**<br /><br /> 206 = **service_broker_map**<br /><br /> 207 = **extended_indexes** (예: 공간 인덱스)<br /><br /> 208 = **filestream_tombstone**<br /><br /> 209 = **change_tracking**<br /><br /> 210 = **tracked_committed_transactions**<br /><br /> 220 = **contained_features**<br /><br /> 225 = **filetable_updates**<br /><br /> 236 = **selective_xml_index_node_table**<br /><br /> 240 = **query_disk_store_query_text**<br /><br /> 241 = **query_disk_store_query**<br /><br /> 242 = **query_disk_store_plan**<br /><br /> 243 = **query_disk_store_runtime_stats**<br /><br /> 244 = **query_disk_store_runtime_stats_interval**<br /><br /> 245 = **query_context_settings**|  
-|**internal_type_desc**|**nvarchar(60)**|내부 테이블의 유형에 대한 설명입니다.<br /><br /> QUERY_DISK_STORE_QUERY_HINTS<br /><br /> QUERY_DISK_STORE_QUERY_TEMPLATE_PARAMETERIZATION<br /><br /> QUERY_DISK_STORE_WAIT_STATS<br /><br /> QUEUE_MESSAGES<br /><br /> XML_INDEX_NODES<br /><br /> FULLTEXT_CATALOG_FREELIST<br /><br /> FULLTEXT_CATALOG_MAP<br /><br /> QUERY_NOTIFICATION<br /><br /> SERVICE_BROKER_MAP<br /><br /> EXTENDED_INDEXES<br /><br /> FILESTREAM_TOMBSTONE<br /><br /> CHANGE_TRACKING<br /><br /> TRACKED_COMMITTED_TRANSACTIONS<br /><br /> CONTAINED_FEATURES<br /><br /> FILETABLE_UPDATES<br /><br /> SELECTIVE_XML_INDEX_NODE_TABLE<br /><br /> QUERY_DISK_STORE_QUERY_TEXT<br /><br /> QUERY_DISK_STORE_QUERY<br /><br /> QUERY_DISK_STORE_PLAN<br /><br /> QUERY_DISK_STORE_RUNTIME_STATS<br /><br /> QUERY_DISK_STORE_RUNTIME_STATS_INTERVAL<br /><br /> QUERY_CONTEXT_SETTINGS|  
-|**parent_id**|**int**|부모의 ID입니다(스키마 범위 여부에 관계없이). 부모가 없는 경우 0입니다.<br /><br /> **queue_messages** = **object_id** 큐<br /><br /> **xml_index_nodes** = **object_id** xml 인덱스<br /><br /> **fulltext_catalog_freelist** = **fulltext_catalog_id** 전체 텍스트 카탈로그의<br /><br /> **fulltext_index_map** = **object_id** 전체 텍스트 인덱스<br /><br /> **query_notification**, 또는 **service_broker_map** = 0<br /><br /> **extended_indexes** = **object_id** 의 공간 인덱스와 같은 확장된 인덱스<br /><br /> **object_id** = 테이블에 대 한 추적이 설정 된 테이블의 **change_tracking**|  
-|**parent_minor_id**|**int**|부모의 보조 ID입니다.<br /><br /> **xml_index_nodes** = **index_id** XML 인덱스<br /><br /> **extended_indexes** = **index_id** 의 공간 인덱스와 같은 확장된 인덱스<br /><br /> 0 = **queue_messages**, **fulltext_catalog_freelist**를 **fulltext_index_map**하십시오 **query_notification**,  **service_broker_map**, 또는 **change_tracking**|  
+|**internal_type_desc**|**nvarchar (60)**|내부 테이블의 유형에 대한 설명입니다.<br /><br /> QUERY_DISK_STORE_QUERY_HINTS<br /><br /> QUERY_DISK_STORE_QUERY_TEMPLATE_PARAMETERIZATION<br /><br /> QUERY_DISK_STORE_WAIT_STATS<br /><br /> QUEUE_MESSAGES<br /><br /> XML_INDEX_NODES<br /><br /> FULLTEXT_CATALOG_FREELIST<br /><br /> FULLTEXT_CATALOG_MAP<br /><br /> QUERY_NOTIFICATION<br /><br /> SERVICE_BROKER_MAP<br /><br /> EXTENDED_INDEXES<br /><br /> FILESTREAM_TOMBSTONE<br /><br /> CHANGE_TRACKING<br /><br /> TRACKED_COMMITTED_TRANSACTIONS<br /><br /> CONTAINED_FEATURES<br /><br /> FILETABLE_UPDATES<br /><br /> SELECTIVE_XML_INDEX_NODE_TABLE<br /><br /> QUERY_DISK_STORE_QUERY_TEXT<br /><br /> QUERY_DISK_STORE_QUERY<br /><br /> QUERY_DISK_STORE_PLAN<br /><br /> QUERY_DISK_STORE_RUNTIME_STATS<br /><br /> QUERY_DISK_STORE_RUNTIME_STATS_INTERVAL<br /><br /> QUERY_CONTEXT_SETTINGS|  
+|**parent_id**|**int**|부모의 ID입니다(스키마 범위 여부에 관계없이). 부모가 없는 경우 0입니다.<br /><br /> **큐의 queue_messages** = **object_id**<br /><br /> **** = xml 인덱스의 xml_index_nodes**object_id**<br /><br /> **** = 전체 텍스트 카탈로그의 fulltext_catalog_freelist**fulltext_catalog_id**<br /><br /> **** = 전체 텍스트 인덱스의 fulltext_index_map**object_id**<br /><br /> **query_notification**또는 **service_broker_map** = 0<br /><br /> **** = 확장 된 인덱스의 extended_indexes**object_id** (예: 공간 인덱스)<br /><br /> 테이블 추적을 사용 하도록 설정 된 테이블의 **object_id** = **change_tracking**|  
+|**parent_minor_id**|**int**|부모의 보조 ID입니다.<br /><br /> **** = XML 인덱스의 xml_index_nodes**index_id**<br /><br /> **** = 확장 된 인덱스의 extended_indexes**index_id** (예: 공간 인덱스)<br /><br /> 0 = **queue_messages**, **fulltext_catalog_freelist**, **fulltext_index_map**, **query_notification**, **service_broker_map**또는 **change_tracking**|  
 |**lob_data_space_id**|**int**|0이 아닌 값은 이 테이블의 LOB(Large Object) 데이터를 보관하는 데이터 공간(파일 그룹 또는 파티션 구성표)의 ID입니다.|  
-|**filestream_data_space_id**|**int**|나중에 사용하도록 예약되어 있습니다.|  
+|**filestream_data_space_id**|**int**|향후 사용을 위해 예약되어 있습니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
@@ -51,11 +52,11 @@ ms.locfileid: "68044543"
 ## <a name="remarks"></a>설명  
  내부 테이블은 부모 엔터티와 동일한 파일 그룹에 저장됩니다. 아래의 예 6에 표시된 카탈로그 쿼리를 사용하여 내부 테이블에서 행 내부, 행 외부 및 LOB(Large Object) 데이터에 사용되는 페이지 수를 반환할 수 있습니다.  
   
- 사용할 수는 [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) 시스템 프로시저를 내부 테이블에 대 한 공간 사용 현황 데이터를 반환 합니다. **sp_spaceused** 다음과 같은 방법으로 내부 테이블 공간을 보고 합니다.  
+ [Sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) 시스템 프로시저를 사용 하 여 내부 테이블에 대 한 공간 사용 데이터를 반환할 수 있습니다. **sp_spaceused** 는 다음과 같은 방법으로 내부 테이블 공간을 보고 합니다.  
   
 -   큐 이름을 지정하면 큐와 연결된 기본 내부 테이블을 참조하여 해당 스토리지 사용을 보고합니다.  
   
--   XML 인덱스, 공간 인덱스 및 전체 텍스트 인덱스의 내부 테이블에서 사용 되는 페이지에 포함 되는 **index_size** 열입니다. XML 인덱스, 공간 인덱스 및 해당 개체에 대 한 전체 텍스트 인덱스에 대 한 페이지를 열에 포함 된 테이블 또는 인덱싱된 뷰 이름을 지정 하면 **예약** 하 고 **index_size**합니다.  
+-   XML 인덱스, 공간 인덱스 및 전체 텍스트 인덱스의 내부 테이블에 사용 되는 페이지는 **index_size** 열에 포함 됩니다. 테이블이 나 인덱싱된 뷰 이름을 지정 하면 해당 개체에 대 한 XML 인덱스, 공간 인덱스 및 전체 텍스트 인덱스에 대 한 페이지가 **예약** 된 열 및 **index_size**에 포함 됩니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 카탈로그 뷰를 사용하여 내부 테이블 메타데이터를 쿼리하는 방법을 보여 줍니다.  
@@ -66,13 +67,13 @@ ms.locfileid: "68044543"
 SELECT * FROM sys.objects WHERE type = 'IT';  
 ```  
   
-### <a name="b-return-all-internal-table-metadata-including-that-which-is-inherited-from-sysobjects"></a>2\. 모든 내부 테이블 메타데이터 반환(sys.objects에서 상속된 메타데이터 포함)  
+### <a name="b-return-all-internal-table-metadata-including-that-which-is-inherited-from-sysobjects"></a>B. 모든 내부 테이블 메타데이터 반환(sys.objects에서 상속된 메타데이터 포함)  
   
 ```  
 SELECT * FROM sys.internal_tables;  
 ```  
   
-### <a name="c-return-internal-table-columns-and-column-data-types"></a>3\. 내부 테이블 열과 열 데이터 형식 반환  
+### <a name="c-return-internal-table-columns-and-column-data-types"></a>C. 내부 테이블 열과 열 데이터 형식 반환  
   
 ```  
 SELECT SCHEMA_NAME(itab.schema_id) AS schema_name  
@@ -85,7 +86,7 @@ JOIN sys.types AS typ ON typ.user_type_id = col.user_type_id
 ORDER BY itab.name, col.column_id;  
 ```  
   
-### <a name="d-return-internal-table-indexes"></a>4\. 내부 테이블 인덱스 반환  
+### <a name="d-return-internal-table-indexes"></a>D. 내부 테이블 인덱스 반환  
   
 ```  
 SELECT SCHEMA_NAME(itab.schema_id) AS schema_name  
@@ -96,7 +97,7 @@ JOIN sys.indexes AS idx ON itab.object_id = idx.object_id
 ORDER BY itab.name, idx.index_id;  
 ```  
   
-### <a name="e-return-internal-table-statistics"></a>5\. 내부 테이블 통계 반환  
+### <a name="e-return-internal-table-statistics"></a>E. 내부 테이블 통계 반환  
   
 ```  
 SELECT SCHEMA_NAME(itab.schema_id) AS schema_name  
@@ -107,7 +108,7 @@ JOIN sys.stats AS s ON itab.object_id = s.object_id
 ORDER BY itab.name, s.stats_id;  
 ```  
   
-### <a name="f-return-internal-table-partition-and-allocation-unit-information"></a>6\. 내부 테이블 파티션 및 할당 단위 정보 반환  
+### <a name="f-return-internal-table-partition-and-allocation-unit-information"></a>F. 내부 테이블 파티션 및 할당 단위 정보 반환  
   
 ```  
 SELECT SCHEMA_NAME(itab.schema_id) AS schema_name  
@@ -132,7 +133,7 @@ ON au.container_id =
 ORDER BY itab.name, idx.index_id;  
 ```  
   
-### <a name="g-return-internal-table-metadata-for-xml-indexes"></a>7\. XML 인덱스에 대한 내부 테이블 메타데이터 반환  
+### <a name="g-return-internal-table-metadata-for-xml-indexes"></a>G. XML 인덱스에 대한 내부 테이블 메타데이터 반환  
   
 ```  
 SELECT t.name AS parent_table  
@@ -151,7 +152,7 @@ WHERE it.internal_type_desc = 'XML_INDEX_NODES';
 GO  
 ```  
   
-### <a name="h-return-internal-table-metadata-for-service-broker-queues"></a>8\. Service Broker 큐에 대한 내부 테이블 메타데이터 반환  
+### <a name="h-return-internal-table-metadata-for-service-broker-queues"></a>H. Service Broker 큐에 대한 내부 테이블 메타데이터 반환  
   
 ```  
 SELECT q.name AS queue_name  
@@ -173,8 +174,8 @@ WHERE internal_type_desc = 'SERVICE_BROKER_MAP';
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [개체 카탈로그 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
+ [Transact-sql&#41;&#40;개체 카탈로그 뷰](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
   
   

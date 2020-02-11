@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 812cd16a7d6b7a17d4f2f12098f22e32cf0d3363
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68055634"
 ---
 # <a name="periodstodate-mdx"></a>PeriodsToDate(MDX)
@@ -35,18 +35,19 @@ PeriodsToDate( [ Level_Expression [ ,Member_Expression ] ] )
  멤버를 반환하는 유효한 MDX 식입니다.  
   
 ## <a name="remarks"></a>설명  
- 지정 된 수준의 범위 내에서 **PeriodsToDate** 함수는 첫 번째 기간으로 시작 하 고 지정 된 멤버로 끝나는 지정된 된 멤버와 동일한 수준의 기간 집합을 반환 합니다.  
+ 지정 된 수준의 범위 내에서 **PeriodsToDate** 함수는 지정 된 멤버와 동일한 수준의 기간 집합을 반환 합니다 .이 값은 첫 번째 기간에서 시작 하 여 지정한 멤버로 끝납니다.  
   
--   수준이 지정 된 계층의 현재 멤버는 유추 *계층 구조*. **CurrentMember**, 여기서 *계층*지정 된 수준의 계층 구조입니다.  
+-   수준이 지정 된 경우 계층의 현재 멤버는 *hierarchy 계층*으로 유추 됩니다. **Currentmember**. 여기서 *hierarchy*는 지정 된 수준의 계층입니다.  
   
 -   수준이나 멤버가 지정되지 않은 경우 수준은 측정값 그룹에서 Time 유형의 첫 번째 차원에 있는 첫 번째 계층의 현재 멤버의 부모 수준입니다.  
   
- `PeriodsToDate( Level_Expression, Member_Expression )`은 다음 MDX 식과 기능상 동일합니다.  
+ 
+  `PeriodsToDate( Level_Expression, Member_Expression )`은 다음 MDX 식과 기능상 동일합니다.  
   
  `TopCount(Descendants(Ancestor(Member_Expression, Level_Expression), Member_Expression.Level), 1):Member_Expression`  
   
 ## <a name="examples"></a>예  
- 합계를 반환 하는 다음 예제에서는 합니다 `Measures.[Order Quantity]` 멤버에 포함 된 2003 년의 첫 8 개월 동안 집계를 `Date` 차원에서는 **Adventure Works** 큐브.  
+ 다음 예에서는 **놀이 Works** 큐브에서 `Date` 차원에 `Measures.[Order Quantity]` 포함 된 2003 년의 첫 8 개월 동안 집계 된 멤버의 합계를 반환 합니다.  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  
@@ -84,8 +85,8 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [TopCount &#40;MDX&#41;](../mdx/topcount-mdx.md)   
- [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

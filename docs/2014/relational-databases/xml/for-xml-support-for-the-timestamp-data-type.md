@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 094cd2859c9973c2d91145de5960d4752800ce1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287676"
 ---
 # <a name="for-xml-support-for-the-timestamp-data-type"></a>timestamp 데이터 형식에 대한 FOR XML 지원
@@ -53,7 +53,7 @@ go
 <t xmlns="x-schema:#Schema1" c1="1" c2="AAAAAAAAH04=" />  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [다양한 SQL Server 데이터 형식에 대한 FOR XML 지원](for-xml-support-for-various-sql-server-data-types.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 원본 속성 예제 (VC + +) | Microsoft Docs
+title: Source 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: e10d33da-ea30-4138-ae40-e9f6aa9d17d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: da0bfacc4ab64929bcd37051efa9d36944871253
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930884"
 ---
 # <a name="source-property-example-vc"></a>Source 속성 예제(VC++)
-이 예제에서는 합니다 [원본](../../../ado/reference/ado-api/source-property-ado-recordset.md) 속성 3 개를 열어 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 다른 데이터 원본을 기반으로 개체입니다.  
+이 예에서는 다른 데이터 원본을 기반으로 세 개의 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체를 열어 [원본](../../../ado/reference/ado-api/source-property-ado-recordset.md) 속성을 보여 줍니다.  
   
 ```  
 // Source_Property_Sample.cpp  
@@ -156,6 +156,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Source 속성(ADO 레코드 집합)](../../../ado/reference/ado-api/source-property-ado-recordset.md)

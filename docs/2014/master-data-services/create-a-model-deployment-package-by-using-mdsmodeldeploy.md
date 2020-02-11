@@ -11,13 +11,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0378394c274e66d71eebd642188f20194d29236b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480000"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>MDSModelDeploy를 사용하여 모델 배포 패키지 만들기
+  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 MDSModelDeploy 도구를 사용하여 패키지를 만들 수 있습니다. 지정한 명령에 따라 패키지는 다음 중 하나를 포함할 수 있습니다.  
   
 -   모델 개체만  
@@ -26,7 +27,7 @@ ms.locfileid: "65480000"
   
  모델 개체만 포함하는 패키지를 배포하려면 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션에서 모델 배포 마법사를 대신 사용할 수 있습니다. 자세한 내용은 [마법사를 사용하여 모델 배포 패키지 만들기](../../2014/master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)를 참조하세요.  
 > [!NOTE]  
-> MDSModelDeploy 도구의이 버전 (기가바이트) 메모리 보다 더 사용할 수 없습니다. 만들거나 사용 하 여 큰 모델을 배포할 **개체와 데이터 모델** 옵션을 "Out of Memory" 또는 "Stream을 너무 오래 되었습니다." 오류가 발생할 수 있습니다. MDS 데이터를 배포할 준비를 사용 하 여이 문제를 해결 하려면 또는 MDS 2016 또는 MDSModelDeploy 도구의 업데이트 된 버전을 포함 하는 이후 버전으로 업그레이드 합니다.
+> 이 버전의 MDSModelDeploy 도구는 GB 이상의 메모리를 사용할 수 없습니다. **모델 개체 및 데이터** 옵션을 사용 하 여 대량 모델을 만들거나 배포할 때 "메모리 부족" 또는 "스트림이 너무 깁니다" 오류가 발생할 수 있습니다. 이 문제를 해결 하려면 MDS 준비를 사용 하 여 데이터를 배포 합니다. 또는 업데이트 된 버전의 MDSModelDeploy 도구를 포함 하는 MDS 2016 이상 버전으로 업그레이드할 수 있습니다.
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
@@ -58,7 +59,7 @@ ms.locfileid: "65480000"
   
  패키지를 만들 모델이 있어야 합니다. 자세한 내용은 [모델 만들기&#40;Master Data Services&#41;](create-a-model-master-data-services.md)를 참조하세요.  
   
- 자세한 내용은 [관리자&#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)를 참조하세요.  
+ 자세한 내용은 [관리자&#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
   
 ### <a name="to-create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>MDSModelDeploy를 사용하여 모델 배포 패키지를 만들려면  
   
@@ -66,7 +67,7 @@ ms.locfileid: "65480000"
   
 2.  MDSModelDeploy.exe의 위치로 이동합니다.  
   
-    -   파일은 MDS를 기본 위치에 설치한 경우 *드라이브*: \Program Files\Microsoft SQL Server\120\Master Data services\configuration에 있습니다.  
+    -   MDS를 기본 위치에 설치한 경우 파일은 *드라이브*: Files\Microsoft SQL Server\120\Master Data services\configuration에 있습니다.  
   
     -   MDS를 기본 위치에 설치하지 않은 경우 로컬 컴퓨터에서 MDSModelDeploy.exe를 검색하십시오.  
   
@@ -98,8 +99,8 @@ ms.locfileid: "65480000"
   
 -   [MDSModelDeploy를 사용하여 모델 배포 패키지 배포](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
   
-## <a name="see-also"></a>관련 항목  
- [모델 배포 옵션&#40;Master Data Services&#41;](../../2014/master-data-services/model-deployment-options-master-data-services.md)   
- [모델 배포&#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
+## <a name="see-also"></a>참고 항목  
+ [모델 배포 옵션 &#40;MDS(Master Data Services)&#41;](../../2014/master-data-services/model-deployment-options-master-data-services.md)   
+ [모델 &#40;MDS(Master Data Services)&#41;배포](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
   

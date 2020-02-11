@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e68809c7551e3c6711fadd9973c472dcb4e90307
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63270616"
 ---
 # <a name="create-subqueries-visual-database-tools"></a>하위 쿼리 만들기(Visual Database Tools)
@@ -60,8 +60,8 @@ ms.locfileid: "63270616"
       WHERE (country = 'Sweden'))  
     ```  
   
-## <a name="see-also"></a>관련 항목  
- [지원 되는 쿼리 유형 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools를 &#40;지원 되는 쿼리 유형&#41;](visual-database-tools.md)   
  [검색 조건 지정&#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)  
   
   

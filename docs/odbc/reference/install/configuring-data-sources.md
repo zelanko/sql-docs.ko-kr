@@ -13,20 +13,20 @@ ms.assetid: f11985c2-c054-4ab4-840e-aca4c585c9d8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fa845e44e2f8999ed4e103583acb0536e2aca096
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68068624"
 ---
 # <a name="configuring-data-sources"></a>데이터 원본 구성
-데이터 원본에 대 한 정보를 시스템 레지스트리에 저장 됩니다. 사용자 관리 프로그램을 통해 데이터 원본 정보를 수정 합니다. ODBC 관리자, ODBC 제어판 장치 또는 응용 프로그램 또는 드라이버 개발자가 작성 하는 관리 프로그램을 수 있습니다.  
+데이터 원본에 대 한 정보는 시스템 레지스트리에 저장 됩니다. 사용자는 관리 프로그램을 통해 데이터 원본 정보를 수정 합니다. 이는 ODBC 관리자, ODBC 제어판 장치 또는 응용 프로그램 또는 드라이버 개발자가 작성 한 관리 프로그램 일 수 있습니다.  
   
- 데이터 원본을 수정 하려면 PowerShell 명령을 사용할 수 있습니다. 다음 PowerShell 명령에 대 한 자세한 내용은 참조 하세요. [Windows 데이터 액세스 구성 요소 PowerShell 명령을](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx)합니다.  
+ PowerShell 명령을 사용 하 여 데이터 원본을 수정할 수 있습니다. 이러한 PowerShell 명령에 대 한 자세한 내용은 [Windows Data Access Components PowerShell 명령](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx)을 참조 하세요.  
   
 > [!NOTE]  
->  이 섹션에서는 Microsoft Windows® 플랫폼에 따라 다릅니다. 플랫폼별은 데이터 원본을 다른 플랫폼에서 구성 된 방법입니다.  
+>  이 섹션은 Microsoft Windows® 플랫폼에만 적용 됩니다. 다른 플랫폼에서 데이터 원본을 구성 하는 방법은 플랫폼별로 지정 됩니다.  
   
- 이 단원의 다음 항목:  
+ 이 단원에는 다음 항목이 포함되어 있습니다.  
   
 -   [구성 구성 요소](../../../odbc/reference/install/configuration-components.md)

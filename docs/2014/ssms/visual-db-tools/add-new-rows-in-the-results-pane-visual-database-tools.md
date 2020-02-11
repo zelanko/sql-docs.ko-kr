@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cda813db916faf4819f85d3d09213679fba2eeec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63460009"
 ---
 # <a name="add-new-rows-in-the-results-pane-visual-database-tools"></a>결과 창에서 새 행 추가(Visual Database Tools)
@@ -53,8 +53,8 @@ ms.locfileid: "63460009"
   
 -   Esc 키를 눌러 편집을 취소합니다. 변경한 셀에서 Esc 키를 누르면 해당 셀에 대한 변경이 취소됩니다. 변경하지 않은 셀에서 Esc 키를 누르면 행 전체에 대한 변경이 취소됩니다.  
   
-## <a name="see-also"></a>관련 항목  
- [결과 창에서 데이터 작업을 &#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [결과 창에서 데이터 작업 &#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)   
  [쿼리 관련 기본 작업 수행&#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

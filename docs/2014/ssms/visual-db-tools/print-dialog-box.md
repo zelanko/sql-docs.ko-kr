@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8019f762d6d80ced2688f0e93f7ad0e0a29bd3f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63313017"
 ---
 # <a name="print-dialog-box"></a>인쇄 대화 상자
@@ -32,13 +32,13 @@ ms.locfileid: "63313017"
  **형식**  
  선택한 프린터를 확인합니다.  
   
- **위치**  
+ **Where**  
  선택한 프린터의 위치와 사용하는 프린터 포트를 확인합니다.  
   
  **설명**  
  선택한 프린터에 대한 추가 정보를 포함합니다.  
   
- **Properties**  
+ **속성**  
  \<*printer name properties*> 대화 상자를 열려면 클릭합니다.  
   
  **파일로 인쇄**  
@@ -48,7 +48,7 @@ ms.locfileid: "63313017"
  **모두**  
  전체 문서를 인쇄합니다.  
   
- **선택 영역**  
+ **선택**  
  현재 선택한 영역만 인쇄합니다. 문서의 일부 또는 모두를 선택해야 이 옵션을 사용할 수 있습니다.  
   
  **페이지**  

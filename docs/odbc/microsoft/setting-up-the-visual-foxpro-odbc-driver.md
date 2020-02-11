@@ -15,23 +15,23 @@ ms.assetid: d0aedaa1-ed24-4aa6-92c8-83b0fa8c86fb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 921e9bce35ce9dc2ae91afb2c4cea5badafeaf2e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68063428"
 ---
 # <a name="setting-up-the-visual-foxpro-odbc-driver"></a>Visual FoxPro ODBC 드라이버 설정
-다운로드 및 Visual FoxPro ODBC 드라이버를 설치 하는 방법에 대 한 내용은 [Visual FoxPro ODBC 드라이버](https://go.microsoft.com/fwlink/?LinkId=121318) MSDN 다운로드 합니다.  
+Visual FoxPro ODBC 드라이버를 다운로드 하 고 설치 하는 방법에 대 한 자세한 내용은 MSDN 다운로드의 [Visual FOXPRO Odbc 드라이버](https://go.microsoft.com/fwlink/?LinkId=121318) 를 참조 하십시오.  
   
- Microsoft Visual FoxPro ODBC 드라이버 설치 프로그램을 사용 하 여 다음을 수행 합니다.  
+ Microsoft Visual FoxPro ODBC 드라이버 설치 프로그램을 사용 하 여 다음을 수행할 수 있습니다.  
   
 -   새 구성 요소를 추가 합니다.  
   
 -   설치 된 구성 요소를 제거 합니다.  
   
--   누락 된 파일 및 설정을 복원 하려면 다시 설치 합니다.  
+-   누락 된 파일 및 설정을 복원 하려면 다시 설치 하십시오.  
   
--   이전에 설치 된 모든 구성 요소를 제거 합니다.  
+-   이전에 설치 된 구성 요소를 모두 제거 합니다.  
   
- 시스템에서 드라이버를 설치한 후 설치 프로그램을 설치 된 드라이버 구성 요소를 인식 하 고 드라이버의 구성을 변경할 수 있는 추가 대화 상자를 표시 합니다.
+ 시스템에 드라이버를 설치한 후 설치 프로그램은 설치 된 드라이버 구성 요소를 인식 하 고 드라이버의 구성을 변경할 수 있는 추가 대화 상자를 표시 합니다.

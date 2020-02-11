@@ -1,5 +1,5 @@
 ---
-title: 데이터베이스 (AccessToSQL)에서 새로 고침 | Microsoft Docs
+title: 데이터베이스에서 새로 고침 (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,24 +10,24 @@ ms.assetid: 3b671f49-c4cc-44fd-801e-e738a8c79415
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 209ed616f3993a0a93b802ddeca39a7065485afc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68051536"
 ---
-# <a name="refresh-from-database-accesstosql"></a>데이터베이스 (AccessToSQL)에서 새로 고침
-합니다 **데이터베이스에서 새로 고침** 대화 상자에서는 Access 데이터베이스에서 새로 고칠 개체를 선택할 수 있습니다. 대화 상자에서 행은 색으로 구분 된 메타 데이터의 상태를 기반으로 합니다.  
+# <a name="refresh-from-database-accesstosql"></a>데이터베이스에서 새로 고침 (AccessToSQL)
+**데이터베이스에서 새로 고침** 대화 상자를 사용 하 여 Access 데이터베이스에서 새로 고칠 개체를 선택할 수 있습니다. 대화 상자의 행은 메타 데이터의 상태를 기반으로 하는 색으로 구분 됩니다.  
   
--   개체 메타 데이터를 로컬 및 Access 데이터베이스에서 변경 된 경우 행은 파란색입니다.  
+-   개체 메타 데이터가 로컬 및 Access 데이터베이스에서 변경 된 경우 해당 행은 파랑입니다.  
   
--   SSMA 제외한 Access 데이터베이스에 개체 메타 데이터를 변경 하는 경우 노란색입니다.  
+-   개체 메타 데이터가 Access 데이터베이스에서 변경 되었지만 SSMA에서는 변경 되지 않은 경우에는 해당 행이 노란색입니다.  
   
--   개체 메타 데이터를 로컬에서 변경 된 행은 녹색 Access 데이터베이스에 없는 경우.  
+-   개체 메타 데이터가 로컬에서 변경 되었지만 Access 데이터베이스에서는 변경 되지 않은 경우 행은 녹색입니다.  
   
--   Access 데이터베이스에서 새 개체가 있으면 분홍색입니다.  
+-   Access 데이터베이스의 새 개체인 경우 행은 분홍색입니다.  
   
-기본 개체 새로 고침 설정을 지정할 수 있습니다 합니다 **프로젝트 설정** 대화 상자. 자세한 내용은 [프로젝트 설정 &#40;개체를 로드&#41; &#40;AccessToSQL&#41;](../../ssma/access/project-settings-loading-objects-accesstosql.md)  
+**프로젝트 설정** 대화 상자에서 기본 개체 새로 고침 설정을 지정할 수 있습니다. 자세한 내용은 [프로젝트 설정 &#40;개체 로드&#41; &#40;AccessToSQL](../../ssma/access/project-settings-loading-objects-accesstosql.md) 를 참조 하세요&#41;  
   
-액세스 하는 **데이터베이스에서 새로 고침** 대화 상자에서 마우스 오른쪽 단추로 클릭 **데이터베이스** 하 고 액세스 메타 데이터 탐색기에서 노드 **데이터베이스에서 새로 고침**합니다.  
+**데이터베이스에서 새로 고침** 대화 상자에 액세스 하려면 액세스 메타 데이터 탐색기에서 **데이터베이스** 노드를 마우스 오른쪽 단추로 클릭 하 고 **데이터베이스에서 새로 고침**을 클릭 합니다.  
   

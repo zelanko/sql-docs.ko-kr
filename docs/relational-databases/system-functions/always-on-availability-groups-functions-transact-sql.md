@@ -1,5 +1,5 @@
 ---
-title: Always On 가용성 그룹 함수 (TRANSACT-SQL) | Microsoft Docs
+title: Always On Availability Groups 함수 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ ms.assetid: 293cc233-8688-4823-9887-176ed772f53d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 7168d2f9842c482ff7474e700d0d1a1aa7fd734f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68043144"
 ---
-# <a name="always-on-availability-groups-functions-transact-sql"></a>Always On 가용성 그룹 함수 (TRANSACT-SQL)
+# <a name="always-on-availability-groups-functions-transact-sql"></a>Always On Availability Groups 함수 (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음 Always On 가용성 그룹 기능을 제공합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 다음 Always On 가용성 그룹 함수를 제공 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [sys.fn_hadr_is_primary_replica](../../relational-databases/system-functions/sys-fn-hadr-is-primary-replica-transact-sql.md)  

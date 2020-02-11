@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e406b42346e936fe72c70e5cb13b75ffb3f1f8fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098317"
 ---
-# <a name="listipaddresses-method-wmi-msreportserverconfigurationsetting"></a>ListIPAddresses 메서드(WMI MSReportServer_ConfigurationSetting)
+# <a name="listipaddresses-method-wmi-msreportserver_configurationsetting"></a>ListIPAddresses 메서드(WMI MSReportServer_ConfigurationSetting)
   보고서 서버 컴퓨터의 IP 주소를 나열합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -37,13 +37,13 @@ public void ListIPAddresses (out string[] IPAddress,
 ```  
   
 ## <a name="parameters"></a>매개 변수  
- *IPAddress[]*  
+ *IPAddress []*  
  [out] 컴퓨터의 IP 주소 목록입니다.  
   
- *IPVersion[]*  
+ *IPVersion []*  
  [out] IP 주소의 버전입니다.  
   
- *IsDhcpEnabled[]*  
+ *IsDhcpEnabled []*  
  [out] IP 주소에 DHCP를 사용할 수 있는지 여부를 나타냅니다.  
   
  *길이*  
@@ -52,18 +52,18 @@ public void ListIPAddresses (out string[] IPAddress,
  *HRESULT*  
  [out] 호출의 성공 여부를 나타내는 값입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드 호출의 성공 또는 실패를 나타내는 *HRESULT* 를 반환합니다. 0 값은 메서드 호출이 성공했음을 나타내고 오류 코드는 호출이 실패했음을 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
- *IPVersion* 문자열은 V4, V6입니다.  
+## <a name="remarks"></a>설명  
+ *Ipversion* 문자열은 V4, V6입니다.  
   
- 경우 *IsDhcpEnabled* 됩니다 `True`의 *IPAddress* 동적입니다. SSL 바인딩에 사용해서는 안 됩니다.  
+ *Isdhcpenabled* 가 `True`이면 IPAddress는 동적 *IPAddress* 입니다. SSL 바인딩에 사용해서는 안 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **네임 스페이스:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [MSReportServer_ConfigurationSetting 멤버](msreportserver-configurationsetting-members.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Visual FoxPro ODBC 드라이버 프로그래머&#39;참조 | Microsoft Docs
+title: Visual FoxPro ODBC 드라이버 프로그래머&#39;s 참조 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: 00d722d4-ce99-4dbe-a503-1ab27cb6fe0a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ef140d51bd51295a794352e57a2ef41f96f38c64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67911445"
 ---
-# <a name="visual-foxpro-odbc-driver-programmer39s-reference"></a>Visual FoxPro ODBC 드라이버 프로그래머&#39;참조
-Visual FoxPro ODBC 드라이버 설명서의이 섹션에는 다음 항목이 포함 됩니다.  
+# <a name="visual-foxpro-odbc-driver-programmer39s-reference"></a>Visual FoxPro ODBC 드라이버 프로그래머&#39;s 참조
+Visual FoxPro ODBC 드라이버 설명서의이 섹션에는 다음 항목이 포함 되어 있습니다.  
   
 -   [책갈피 지원](../../odbc/microsoft/bookmark-support-visual-foxpro-odbc-driver.md)  
   
@@ -31,9 +31,9 @@ Visual FoxPro ODBC 드라이버 설명서의이 섹션에는 다음 항목이 �
   
 -   [지원되는 데이터 형식](../../odbc/microsoft/supported-data-types-visual-foxpro-odbc-driver.md)  
   
--   [다국어 기능 지원](../../odbc/microsoft/international-support-visual-foxpro-odbc-driver.md)  
+-   [국제 지원](../../odbc/microsoft/international-support-visual-foxpro-odbc-driver.md)  
   
--   [규칙, 트리거, 기본값 및 저장된 프로시저에 대 한 지원](../../odbc/microsoft/support-rules-triggers-defaults-stored-procedures-visual-foxpro-odbc-driver.md)  
+-   [규칙, 트리거, 기본값 및 저장 프로시저에 대 한 지원](../../odbc/microsoft/support-rules-triggers-defaults-stored-procedures-visual-foxpro-odbc-driver.md)  
   
 -   [지원 되는 ODBC SQL 문법](../../odbc/microsoft/supported-odbc-sql-grammar-visual-foxpro-odbc-driver.md)  
   
@@ -41,7 +41,7 @@ Visual FoxPro ODBC 드라이버 설명서의이 섹션에는 다음 항목이 �
   
 -   [지원 되는 스칼라 함수](../../odbc/microsoft/supported-scalar-functions-visual-foxpro-odbc-driver.md)  
   
--   [지원 되는 명령 집합](../../odbc/microsoft/supported-set-commands-visual-foxpro-odbc-driver.md)  
+-   [지원 되는 SET 명령](../../odbc/microsoft/supported-set-commands-visual-foxpro-odbc-driver.md)  
   
 -   [스레드 지원](../../odbc/microsoft/thread-support-visual-foxpro-odbc-driver.md)  
   

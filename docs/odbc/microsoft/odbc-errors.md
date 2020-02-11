@@ -13,14 +13,14 @@ ms.assetid: 33542afe-4dc7-4db8-b625-fec51a4718d3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7aa5d75b01fc30783505b2e149f3487b50f75150
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915832"
 ---
 # <a name="odbc-errors"></a>ODBC 오류
-오류가 발생 하면 Microsoft ODBC 데스크톱 데이터베이스 드라이버 원시 오류 번호, SQLSTATE (ODBC 오류 코드) 및 오류 메시지를 반환 합니다.  
+오류가 발생 하면 Microsoft ODBC 데스크톱 데이터베이스 드라이버는 원시 오류 번호, SQLSTATE (ODBC 오류 코드) 및 오류 메시지를 반환 합니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

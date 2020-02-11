@@ -1,5 +1,5 @@
 ---
-title: sp_helptrigger (TRANSACT-SQL) | Microsoft Docs
+title: sp_helptrigger (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,18 +19,18 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1e6244443fc1f6ba7d83376226fedd56563e0d39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68048224"
 ---
-# <a name="sphelptrigger-transact-sql"></a>sp_helptrigger(Transact-SQL)
+# <a name="sp_helptrigger-transact-sql"></a>sp_helptrigger(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  현재 데이터베이스의 지정된 테이블에 정의된 DML 트리거의 유형을 반환합니다. sp_helptrigger는 DDL 트리거와 함께 사용할 수 없습니다. 쿼리는 [시스템 저장 프로시저](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) 카탈로그 뷰를 대신 합니다.  
+  현재 데이터베이스의 지정된 테이블에 정의된 DML 트리거의 유형을 반환합니다. sp_helptrigger은 DDL 트리거와 함께 사용할 수 없습니다. 대신 [시스템 저장 프로시저](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) 카탈로그 뷰를 쿼리 합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,11 +41,11 @@ sp_helptrigger [ @tabname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @tabname = ] 'table'` 트리거 정보를 반환할 현재 데이터베이스에서 테이블의 이름이입니다. *테이블* 됩니다 **nvarchar(776)** , 기본값은 없습니다.  
+`[ @tabname = ] 'table'`트리거 정보를 반환할 현재 데이터베이스의 테이블 이름입니다. *테이블* 은 **nvarchar (776)** 이며 기본값은 없습니다.  
   
-`[ @triggertype = ] 'type'` 정보를 반환할 DML 트리거의 유형이입니다. *형식* 됩니다 **char(6)** , 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @triggertype = ] 'type'`정보를 반환할 DML 트리거의 유형입니다. *type* 은 **char (6)** 이며 기본값은 NULL이 고 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**DELETE**|DELETE 트리거 정보를 반환합니다.|  
 |**INSERT**|INSERT 트리거 정보를 반환합니다.|  
@@ -57,7 +57,7 @@ sp_helptrigger [ @tabname = ] 'table'
 ## <a name="result-sets"></a>결과 집합  
  다음 표에서는 결과 집합에 포함된 정보를 보여 줍니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**trigger_name**|**sysname**|트리거의 이름입니다.|  
 |**trigger_owner**|**sysname**|트리거가 정의된 테이블의 소유자 이름입니다.|  
@@ -69,7 +69,7 @@ sp_helptrigger [ @tabname = ] 'table'
 |**trigger_schema**|**sysname**|트리거가 속한 스키마의 이름입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
- 필요 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md) 테이블에 대 한 합니다.  
+ 테이블에 대 한 [메타 데이터 표시 유형 구성](../../relational-databases/security/metadata-visibility-configuration.md) 권한이 필요 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `sp_helptrigger`를 실행하여 `Person.Person` 테이블의 트리거에 대한 정보를 출력합니다.  
@@ -80,8 +80,8 @@ GO
 EXEC sp_helptrigger 'Person.Person';  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [데이터베이스 엔진 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DROP TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: 데이터를 가져오는 | Microsoft Docs
+title: 데이터를 가져오는 중 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: 04a1efc1-0a46-42f9-8c4e-9f063740dd8a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ea322346b955fc8e252dc14b78b055d491d14f69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68069851"
 ---
 # <a name="fetching-data"></a>데이터 페치
-결과 집합에서 행을 검색 하 고 응용 프로그램에 반환 하는 프로세스 라고 *페치*합니다. 이 섹션에서는 데이터를 인출 하는 방법을 설명 합니다.  
+결과 집합에서 행을 검색 하 고 응용 프로그램에 반환 하는 프로세스를 *인출*이라고 합니다. 이 섹션에서는 데이터를 인출 하는 방법을 설명 합니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

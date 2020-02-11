@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 878e9a4bff1625042a08ec7e43699fa067dea532
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101505"
 ---
 # <a name="item-level-tasks"></a>항목 수준의 태스크
@@ -30,7 +30,7 @@ ms.locfileid: "66101505"
   
  공유 데이터 세트는 보고서와 동일한 사용 권한 집합을 사용합니다. 보고서 파트는 리소스와 동일한 사용 권한 집합을 사용합니다.  
   
-|태스크|적용 항목|사용 권한|  
+|Task|적용 항목|사용 권한|  
 |----------|---------------------|-----------------|  
 |보고서 사용|보고서|내용 읽기<br /><br /> 보고서 정의 읽기<br /><br /> 속성 읽기|  
 |보고서 사용|공유 데이터 세트|내용 읽기<br /><br /> 보고서 정의 읽기<br /><br /> 속성 읽기|  
@@ -58,7 +58,7 @@ ms.locfileid: "66101505"
 |리소스 보기|리소스|내용 읽기<br /><br /> 속성 읽기|  
 |리소스 보기|보고서 파트|내용 읽기<br /><br /> 속성 읽기|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [기본 모드 보고서 서버에 대한 사용 권한 부여](granting-permissions-on-a-native-mode-report-server.md)  
   
   

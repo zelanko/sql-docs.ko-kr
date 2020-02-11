@@ -1,5 +1,5 @@
 ---
-title: 스크롤 가능 커서를 사용 하 여 | Microsoft Docs
+title: 스크롤 가능 커서 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,20 +14,20 @@ ms.assetid: c5d795ba-70b0-420f-a944-b1894061a755
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 33f2050be5a0fb1b6d58bf00dd8c76c33219a237
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68079574"
 ---
 # <a name="using-scrollable-cursors"></a>스크롤 가능 커서 사용
-스크롤 가능 커서를 사용 하 여 이러한 세 가지 단계가 필요 합니다.  
+스크롤 가능 커서를 사용 하려면 다음 세 단계가 필요 합니다.  
   
-1.  커서 기능을 확인 합니다.  
+1.  커서 기능을 결정 합니다.  
   
 2.  커서를 설정 합니다.  
   
-3.  행 스크롤 및 인출 합니다.  
+3.  행을 스크롤하고 페치합니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   
@@ -35,6 +35,6 @@ ms.locfileid: "68079574"
   
 -   [커서 설정](../../../odbc/reference/develop-app/setting-up-the-cursor.md)  
   
--   [커서 특징 및 커서 유형](../../../odbc/reference/develop-app/cursor-characteristics-and-cursor-type.md)  
+-   [커서 특징 및 커서 형식](../../../odbc/reference/develop-app/cursor-characteristics-and-cursor-type.md)  
   
--   [행 스크롤 및 페치](../../../odbc/reference/develop-app/scrolling-and-fetching-rows-odbc.md)
+-   [행 스크롤 및 인출](../../../odbc/reference/develop-app/scrolling-and-fetching-rows-odbc.md)

@@ -1,5 +1,5 @@
 ---
-title: 속성 (ServerNetworkProtocolIpAddress 클래스)를 사용 하도록 설정 | Microsoft Docs
+title: Enabled 속성 (ServerNetworkProtocolIpAddress 클래스) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 72505d5c2f00118f3522ac25445822ba17573438
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63277046"
 ---
 # <a name="enabled-property-servernetworkprotocolipaddress-class"></a>Enabled 속성(ServerNetworkProtocolIpAddress 클래스)
@@ -37,13 +37,13 @@ object
 ```  
   
 ## <a name="parts"></a>부분  
- *object*  
- A [ServerNetworkProtocolIPAdress 클래스](servernetworkprotocolipaddress-class.md) 인스턴스의 네트워크 프로토콜에 대 한 IP 주소를 나타내는 개체입니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
+ *개체가*  
+ 인스턴스의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]네트워크 프로토콜에 대 한 IP 주소를 나타내는 [ServerNetworkProtocolIPAdress 클래스](servernetworkprotocolipaddress-class.md) 개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  IP 주소가 설정되었는지 여부를 지정하는 부울 값입니다. `true`는 IP 주소가 설정되었음을 나타내고 `false`는 IP 주소가 해제되었음을 나타냅니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [서버 네트워크 프로토콜 및 네트워크 라이브러리 구성](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

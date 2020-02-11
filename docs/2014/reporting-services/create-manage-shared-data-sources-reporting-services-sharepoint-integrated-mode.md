@@ -1,5 +1,5 @@
 ---
-title: 공유 데이터 원본 (SharePoint 통합된 모드의 Reporting Services) 작성 및 관리 | Microsoft Docs
+title: 공유 데이터 원본 만들기 및 관리 (SharePoint 통합 모드의 Reporting Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5eedb74dd5a24f40469b3ee6a4a24e97e6e59174
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109629"
 ---
 # <a name="create-and-manage-shared-data-sources-reporting-services-in-sharepoint-integrated-mode"></a>공유 데이터 원본 만들기 및 관리(SharePoint 통합 모드의 Reporting Services)
@@ -33,35 +33,43 @@ ms.locfileid: "66109629"
   
 1.  라이브러리 리본 메뉴에 있는 **문서** 탭을 클릭합니다.  
   
-2.  **새 문서** 메뉴에서 **보고서 데이터 원본**을 클릭합니다.  
+2.  
+  **새 문서** 메뉴에서 **보고서 데이터 원본**을 클릭합니다.  
   
     > [!NOTE]  
-    >  메뉴에 **보고서 데이터 원본** 항목이 표시되지 않는 경우 보고서 데이터 원본의 콘텐츠 형식이 설정되어 있지 않은 것입니다. 자세한 내용은 [라이브러리에 보고서 서버 콘텐츠 형식을 추가 &#40;Reporting Services SharePoint 통합 모드의&#41;](../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)합니다.  
+    >  메뉴에 **보고서 데이터 원본** 항목이 표시되지 않는 경우 보고서 데이터 원본의 콘텐츠 형식이 설정되어 있지 않은 것입니다. 자세한 내용은 [SharePoint 통합 모드&#41;에서 &#40;Reporting Services 라이브러리에 보고서 서버 콘텐츠 형식 추가 ](../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)를 참조 하세요.  
   
-3.  **이름**에 .rsds 파일을 설명하는 이름을 입력합니다.  
+3.  
+  **이름**에 .rsds 파일을 설명하는 이름을 입력합니다.  
   
-4.  **데이터 원본 유형**의 목록에서 데이터 원본 유형을 선택합니다. 자세한 내용은 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](create-deploy-and-manage-mobile-and-paginated-reports.md)을 참조하세요.  
+4.  
+  **데이터 원본 유형**의 목록에서 데이터 원본 유형을 선택합니다. 자세한 내용은 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](create-deploy-and-manage-mobile-and-paginated-reports.md)을 참조하세요.  
   
-5.  **연결 문자열**에 데이터 원본에 대한 포인터 및 외부 데이터 원본에 대한 연결을 설정하는 데 필요한 모든 기타 설정을 지정합니다. 사용하는 데이터 원본 유형에 따라 연결 문자열의 구문이 결정됩니다. 자세한 내용 및 예제를 참조 하세요 [데이터 연결, 데이터 원본 및 Reporting Services의 연결 문자열](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)합니다.  
+5.  
+  **연결 문자열**에 데이터 원본에 대한 포인터 및 외부 데이터 원본에 대한 연결을 설정하는 데 필요한 모든 기타 설정을 지정합니다. 사용하는 데이터 원본 유형에 따라 연결 문자열의 구문이 결정됩니다. 자세한 내용 및 예제는 [Reporting Services의 데이터 연결, 데이터 원본 및 연결 문자열](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)을 참조 하세요.  
   
-6.  **자격 증명**에서 보고서 서버가 외부 데이터 원본에 액세스하는 데 필요한 자격 증명을 얻는 방법을 지정합니다. 자격 증명은 저장 및 통합하거나 무인 보고서 처리를 위해 구성할 수 있으며 입력 메시지가 표시되도록 구성할 수도 있습니다.  
+6.  
+  **자격 증명**에서 보고서 서버가 외부 데이터 원본에 액세스하는 데 필요한 자격 증명을 얻는 방법을 지정합니다. 자격 증명은 저장 및 통합하거나 무인 보고서 처리를 위해 구성할 수 있으며 입력 메시지가 표시되도록 구성할 수도 있습니다.  
   
     -   보고서를 연 사용자의 자격 증명을 사용하여 데이터에 액세스하려면 **Windows 인증(통합)** 을 선택합니다. SharePoint 사이트 또는 팜에서 폼 인증을 사용하거나 트러스트된 계정을 통해 보고서 서버에 연결하는 경우 이 옵션을 선택하지 마십시오. 이 보고서에 대한 구독 또는 데이터 처리를 예약하려는 경우 이 옵션을 선택하지 마십시오. 이 옵션은 도메인에 Kerberos 인증을 설정한 경우나 데이터 원본이 보고서 서버와 같은 컴퓨터에 있는 경우에 가장 잘 작동합니다. Kerberos 인증을 해제하면 Windows 자격 증명이 하나의 다른 컴퓨터로만 전달될 수 있습니다. 따라서 추가 연결이 필요한 다른 컴퓨터에 외부 데이터 원본이 있는 경우 원하는 데이터 대신 오류가 표시됩니다.  
   
     -   사용자가 보고서를 실행할 때마다 자격 증명을 입력하도록 하려면 **자격 증명 확인** 을 선택합니다. 이 보고서에 대한 구독 또는 데이터 처리를 예약하려는 경우 이 옵션을 선택하지 마십시오.  
   
-    -   단일 자격 증명 집합을 사용하여 데이터에 액세스하려면 **저장된 자격 증명** 을 선택합니다. 자격 증명은 저장되기 전에 암호화됩니다. 저장된 자격 증명의 인증 방법을 결정하는 옵션을 선택할 수 있습니다. 저장된 자격 증명이 Windows 사용자 계정에 속하면 Windows 자격 증명으로 사용을 선택합니다. 데이터베이스 서버에 대한 실행 컨텍스트를 설정하려면 **이 계정에 대한 실행 컨텍스트 설정** 을 선택합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스의 경우 이 옵션은 SETUSER 함수를 설정합니다. 자세한 내용은 [SETUSER&#40;Transact-SQL&#41;](/sql/t-sql/statements/setuser-transact-sql)를 참조하세요.  
+    -   단일 자격 증명 집합을 사용하여 데이터에 액세스하려면 **저장된 자격 증명** 을 선택합니다. 자격 증명은 저장되기 전에 암호화됩니다. 저장된 자격 증명의 인증 방법을 결정하는 옵션을 선택할 수 있습니다. 저장된 자격 증명이 Windows 사용자 계정에 속하면 Windows 자격 증명으로 사용을 선택합니다. 데이터베이스 서버에 대한 실행 컨텍스트를 설정하려면 **이 계정에 대한 실행 컨텍스트 설정** 을 선택합니다. 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스의 경우 이 옵션은 SETUSER 함수를 설정합니다. 자세한 내용은 [SETUSER&#40;Transact-SQL&#41;](/sql/t-sql/statements/setuser-transact-sql)를 참조하세요.  
   
     -   연결 문자열에 자격 증명을 지정하거나 보고서 서버에서 구성된 최소 권한 계정을 사용하여 보고서를 실행하려면 **자격 증명 필요 없음** 을 선택합니다. 보고서 서버에 이 계정이 구성되어 있지 않으면 사용자에게 자격 증명을 요청하는 메시지가 표시되며 보고서에 대해 정의한 예약된 작업이 실행되지 않습니다.  
   
 7.  데이터 원본을 활성화 하려면 **이 데이터 원본 사용** 을 선택합니다. 데이터 원본이 구성되었으나 활성화되지 않았다면 사용자가 데이터 원본 기반의 보고서를 사용하려는 경우 오류 메시지가 표시됩니다.  
   
-8.  **연결 테스트** 단추를 클릭하여 데이터 원본 구성의 유효성을 검사합니다.  
+8.  
+  **연결 테스트** 단추를 클릭하여 데이터 원본 구성의 유효성을 검사합니다.  
   
     > [!NOTE]  
     >  XML 데이터 원본 유형에서는 연결 테스트 단추를 지원하지 않습니다.  
   
-9. **확인** 을 클릭하여 만들어진 공유 데이터 원본을 저장합니다.  
+9. 
+  **확인** 을 클릭하여 만들어진 공유 데이터 원본을 저장합니다.  
   
 ### <a name="to-view-dependent-items"></a>종속 항목을 보려면  
   
@@ -85,7 +93,7 @@ ms.locfileid: "66109629"
   
  보고서 모델을 삭제할 때는 주의해야 합니다. 모델을 삭제하면 해당 모델을 기반으로 하는 보고서를 보고서 작성기에서 더 이상 열고 수정할 수 없습니다. 기존 보고서에 사용되는 모델을 실수로 삭제한 경우 해당 모델을 다시 생성하고 이 모델을 사용하는 보고서를 다시 만들어 저장한 다음 사용할 모델 항목 보안을 다시 지정해야 합니다. 단순히 모델을 다시 생성한 다음 기존 보고서에 연결할 수는 없습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

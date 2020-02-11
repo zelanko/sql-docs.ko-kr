@@ -14,13 +14,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5435c2a48417156abd6d4f831bf61c9ba6440fab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482572"
 ---
 # <a name="reserved-words-master-data-services"></a>예약어(Master Data Services)
+  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 모델 개체 또는 멤버를 만들 때 일부 단어를 사용할 수 없습니다. 이러한 단어를 사용하면 오류가 발생할 수 있습니다.  
   
 > [!NOTE]  
@@ -34,18 +35,18 @@ ms.locfileid: "65482572"
   
 -   [특성](#attributes)  
   
--   [멤버](#members)  
+-   [구성원](#members)  
   
-##  <a name="models"></a> 모델  
- 로 설정 된 모델을 만드는 경우 **이름을**를 선택 하지 마세요 **모델과 이름이 같은 엔터티 만들기** 때문에 **이름** 엔터티 이름에 사용할 수 없습니다.  
+##  <a name="models"></a>모델인  
+ 이름으로 설정 된 모델을 만드는 경우 **이름을** 엔터티 **이름으로 사용할**수 없으므로 **모델과 이름이 같은 엔터티 만들기** 를 선택 하지 마십시오.  
   
-##  <a name="entities"></a> 엔터티  
+##  <a name="entities"></a>엔터티  
  엔터티 이름의 경우 **Name** 또는 **Code**를 사용할 수 없습니다.  
   
-##  <a name="exhierarchies"></a> 명시적 계층  
+##  <a name="exhierarchies"></a>명시적 계층  
  명시적 계층 이름의 경우 **Name** 또는 **Code**를 사용할 수 없습니다.  
   
-##  <a name="attributes"></a> 특성  
+##  <a name="attributes"></a>특성  
   
 -   **ID**  
   
@@ -55,9 +56,9 @@ ms.locfileid: "65482572"
   
 -   **EnterDTM**  
   
--   **EnterUserID**  
+-   **사용자 Id**  
   
--   **EnterUserName**  
+-   **사용자 이름**  
   
 -   **LastChgDTM**  
   
@@ -69,10 +70,10 @@ ms.locfileid: "65482572"
   
 -   **Version_ID**  
   
-##  <a name="members"></a> 멤버  
- 멤버에 대해 사용할 수 없습니다 **MDMMemberStatus** 하거나 **루트** 에 대 한 합니다 **코드** 특성 값입니다.  
+##  <a name="members"></a>멤버  
+ 멤버의 경우 **코드** 특성 값으로 **MDMMemberStatus** 또는 **ROOT** 를 사용할 수 없습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Master Data Services 개요](master-data-services-overview-mds.md)  
   
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c30c6a4f746ae9aa81b8c1a71c0e380bdd26df03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63268155"
 ---
 # <a name="tuningtimeinmin-element-dta"></a>TuningTimeInMin 요소(DTA)
@@ -36,18 +36,20 @@ ms.locfileid: "63268155"
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특성|Description|  
 |--------------------|-----------------|  
-|**데이터 형식 및 길이**|`unsignedInt`, 길이 제한 없음|  
+|**데이터 형식 및 길이**|
+  `unsignedInt`, 길이 제한 없음|  
 |**기본값**|480분(8시간)|  
-|**발생 빈도**|`NumberOfEvents` 요소에 값을 지정하지 않은 경우 지정해야 합니다.|  
+|**발생 빈도**|
+  `NumberOfEvents` 요소에 값을 지정하지 않은 경우 지정해야 합니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
   
 |관계|요소|  
 |------------------|--------------|  
 |**부모 요소**|[TuningOptions 요소&#40;DTA&#41;](tuningoptions-element-dta.md)|  
-|**자식 요소**|없음|  
+|**자식 요소**|None|  
   
 ## <a name="example"></a>예제  
   
@@ -66,7 +68,7 @@ ms.locfileid: "63268155"
 </DTAInput>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 입력 파일 참조&#40;데이터베이스 엔진 튜닝 관리자&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

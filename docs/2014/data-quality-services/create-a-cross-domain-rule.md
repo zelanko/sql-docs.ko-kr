@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 9478564d6fde6596fe6f407bb9a9a2b389b2a1d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480993"
 ---
 # <a name="create-a-cross-domain-rule"></a>도메인 간 규칙 만들기
@@ -25,7 +25,7 @@ ms.locfileid: "65480993"
   
  도메인 간 규칙의 If 절과 Then 절은 각각 복합 도메인의 단일 도메인 중 하나에 대해 정의됩니다. 각 절은 서로 다른 단일 도메인에 대해 정의되어야 합니다. 도메인 간 규칙은 여러 개의 단일 도메인과 관련되어야 합니다. 복합 도메인에 단순 도메인 규칙(단일 도메인 전용)을 정의할 수는 없습니다. 단일 도메인에 도메인 규칙을 정의하여 이 작업을 수행합니다. If 절과 Then 절은 각각 하나 이상의 조건을 포함할 수 있습니다.  
   
- 결정적 조건이 있는 도메인 간 규칙은 조건 값의 동의어와 값 자체에 규칙 논리를 적용합니다. If 절과 Then 절의 결정적 조건은 값이 다음 값과 같음, 값이 다음 값과 같지 않음, 값이 다음에 속함 또는 값이 다음에 포함되지 않음입니다. 예를 들어, 복합 도메인에 대 한 다음 도메인 간 규칙이 있다고 가정 합니다. "'City'의 경우 값이 'Los Angeles'와 같으면 'State'의 경우 값은 'CA'와 같습니다. ‘Los Angeles’와 ‘LA’가 동의어인 경우 이 규칙은 ‘Los Angeles CA’와 ‘LA CA’에 대해 올바른 결과를, ‘Los Angeles WA’ 및 ‘LA WA’에 대해서는 오류를 반환합니다.  
+ 결정적 조건이 있는 도메인 간 규칙은 조건 값의 동의어와 값 자체에 규칙 논리를 적용합니다. If 절과 Then 절의 결정적 조건은 값이 다음 값과 같음, 값이 다음 값과 같지 않음, 값이 다음에 속함 또는 값이 다음에 포함되지 않음입니다. 예를 들어 복합 도메인에 대해 다음과 같은 도메인 간 규칙이 있다고 가정합니다. "‘City’ 값이 ‘Los Angeles’이면 ‘State’ 값은 ‘CA’입니다." ‘Los Angeles’와 ‘LA’가 동의어인 경우 이 규칙은 ‘Los Angeles CA’와 ‘LA CA’에 대해 올바른 결과를, ‘Los Angeles WA’ 및 ‘LA WA’에 대해서는 오류를 반환합니다.  
   
  도메인 간 규칙 *값이 다음 값과 같음* 에서 결정적 **Then**절은 도메인 간 규칙의 유효성에 대해 알려줄 뿐만 아니라 데이터 정리 작업 시 데이터를 수정합니다. 자세한 내용은 [Data Correction using Definitive Cross-Domain Rules](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md#CDCorrection) 에서 [Cleanse Data in a Composite Domain](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md)를 참조하세요.  
   
@@ -33,30 +33,36 @@ ms.locfileid: "65480993"
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 조건  
  도메인 간 규칙을 만들려면 복합 도메인을 만들어 열어 놓아야 합니다.  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  도메인 간 규칙을 만들려면 DQS_MAIN 데이터베이스의 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
-##  <a name="Create"></a> 도메인 간 규칙 만들기  
+##  <a name="Create"></a>도메인 간 규칙 만들기  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client 응용 프로그램을 실행합니다](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client 응용 프로그램을 실행](../../2014/data-quality-services/run-the-data-quality-client-application.md)합니다.  
   
-2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면에서 기술 자료를 열거나 만듭니다. **도메인 관리** 를 작업으로 선택한 다음 **열기** 또는 **만들기**를 클릭합니다. 자세한 내용은 [기술 자료 만들기](../../2014/data-quality-services/create-a-knowledge-base.md) 또는 [기술 자료 열기](../../2014/data-quality-services/open-a-knowledge-base.md)를 참조하세요.  
+2.  
+  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면에서 기술 자료를 열거나 만듭니다. 
+  **도메인 관리** 를 작업으로 선택한 다음 **열기** 또는 **만들기**를 클릭합니다. 자세한 내용은 [기술 자료 만들기](../../2014/data-quality-services/create-a-knowledge-base.md) 또는 [기술 자료 열기](../../2014/data-quality-services/open-a-knowledge-base.md)를 참조하세요.  
   
     > [!NOTE]  
     >  도메인 관리는 별도의 도메인 관리 작업을 위한 5개 탭이 포함된 Data Quality Services 클라이언트의 페이지에서 수행됩니다. 도메인 관리는 마법사 기반 프로세스가 아닙니다. 모든 관리 작업은 별도로 수행할 수 있습니다.  
   
-3.  **도메인 관리** 페이지의 **도메인 목록** 에서 도메인 규칙을 만들 복합 도메인을 선택하거나 새 복합 도메인을 만듭니다. 새 도메인을 만들어야 하는 경우 [Create a Composite Domain](../../2014/data-quality-services/create-a-composite-domain.md)를 참조하세요.  
+3.  
+  **도메인 관리** 페이지의 **도메인 목록** 에서 도메인 규칙을 만들 복합 도메인을 선택하거나 새 복합 도메인을 만듭니다. 새 도메인을 만들어야 하는 경우 [Create a Composite Domain](../../2014/data-quality-services/create-a-composite-domain.md)를 참조하세요.  
   
-4.  **CD 규칙** 탭을 클릭합니다.  
+4.  
+  **CD 규칙** 탭을 클릭합니다.  
   
-5.  **새 도메인 규칙을 추가합니다.** 를 클릭하고 규칙의 이름과 설명을 입력합니다.  
+5.  
+  **새 도메인 규칙을 추가합니다.** 를 클릭하고 규칙의 이름과 설명을 입력합니다.  
   
-6.  **활성** 을 선택하여 해당 규칙이 실행되도록 지정하거나(기본값) 선택 취소하여 규칙이 실행되지 않도록 합니다.  
+6.  
+  **활성** 을 선택하여 해당 규칙이 실행되도록 지정하거나(기본값) 선택 취소하여 규칙이 실행되지 않도록 합니다.  
   
 7.  다음과 같이 If 절을 만듭니다.  
   
@@ -76,25 +82,27 @@ ms.locfileid: "65480993"
   
 9. 다음 테스트 절차를 진행합니다.  
   
-##  <a name="Test"></a> 도메인 간 규칙 테스트  
+##  <a name="Test"></a>도메인 간 규칙 테스트  
   
 1.  도메인 간 규칙을 다음과 같이 테스트합니다.  
   
     1.  복합 도메인 창의 오른쪽 위 모퉁이에서 **테스트 데이터에서 선택한 도메인 규칙 실행** 아이콘을 클릭합니다.  
   
-    2.  **도메인 규칙 테스트** 대화 상자에서 **도메인 규칙에서 새 테스트 용어를 추가합니다.** 아이콘을 클릭합니다.  
+    2.  
+  **도메인 규칙 테스트** 대화 상자에서 **도메인 규칙에서 새 테스트 용어를 추가합니다.** 아이콘을 클릭합니다.  
   
     3.  If 절과 연결된 단일 도메인 및 Then 절과 연결된 단일 도메인에 대해 테스트 값을 입력합니다. If 절에 입력한 테스트 값은 해당 절의 조건과 일치해야 합니다. 그렇지 않으면 **유효성 검사** 열에 물음표가 입력되어 도메인 간 규칙이 테스트 데이터에 적용되지 않음을 나타냅니다.  
   
-    4.  **도메인 규칙에서 새 테스트 용어를 추가합니다.** 아이콘을 다시 클릭하여 다른 테스트 값 집합을 추가합니다.  
+    4.  
+  **도메인 규칙에서 새 테스트 용어를 추가합니다.** 아이콘을 다시 클릭하여 다른 테스트 값 집합을 추가합니다.  
   
-    5.  **모든 용어에 대해 도메인 규칙 테스트** 아이콘을 클릭합니다. 테스트 값 집합이 유효하면 행의 **유효성 검사** 열에 확인 표시가 입력되고 테스트 값 집합이 유효하지 않으면 행의 유효성 검사 열에 느낌표가 있는 삼각형이 입력됩니다.  
+    5.  **모든 용어에 대해 도메인 규칙 테스트** 아이콘을 클릭 합니다. 테스트 값 집합이 유효하면 행의 **유효성 검사** 열에 확인 표시가 입력되고 테스트 값 집합이 유효하지 않으면 행의 유효성 검사 열에 느낌표가 있는 삼각형이 입력됩니다.  
   
     6.  테스트 완료 후 **복합 도메인 규칙 테스트** 대화 상자에서 **닫기** 를 클릭합니다.  
   
 2.  도메인 간 규칙을 완성하면 **End the Domain Management Activity** 에서 설명한 대로 [마침](../../2014/data-quality-services/end-the-domain-management-activity.md)을 클릭하여 도메인 관리 작업을 완료합니다.  
   
-##  <a name="FollowUp"></a> 후속 작업: 도메인 간 규칙을 만든 후  
+##  <a name="FollowUp"></a>후속 작업: 도메인 간 규칙을 만든 후  
  도메인 간 규칙을 만든 후 도메인에 대해 다른 도메인 관리 태스크를 수행하거나, 기술 자료 검색을 수행하여 도메인에 정보를 추가하거나, 도메인에 일치 정책을 추가할 수 있습니다. 자세한 내용은 [기술 자료 검색 수행](../../2014/data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../../2014/data-quality-services/managing-a-domain.md) 또는 [일치 정책 만들기](../../2014/data-quality-services/create-a-matching-policy.md)를 참조하세요.  
   
   

@@ -14,20 +14,20 @@ ms.assetid: fad34f61-c34f-4c0b-8ce5-3b8872abfe4e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e4e4b071b8c62d3110d9d732d4cc63be3cce084d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920889"
 ---
 # <a name="ado-syntax-indexes"></a>ADO 구문 인덱스
-ADO 메서드 및 속성을 호출 하는 구문은 개발 환경에 따라 달라 집니다. ADO 언어 참조의 나머지 부분에서는 프로그래밍 언어 ADO 메서드 및 속성 구문을 보여 주기 위해 Microsoft Visual Basic을 사용 합니다. 그러나 프로그래밍 언어 및 방법론에 따라 구체적인 구문 예는 다음 섹션을 참조 하세요.  
+ADO 메서드 및 속성을 호출 하는 구문은 개발 환경에 따라 달라 집니다. ADO 언어 참조의 나머지 부분에서는 Microsoft Visual Basic 프로그래밍 언어를 사용 하 여 ADO 메서드와 속성 구문을 보여 줍니다. 그러나 프로그래밍 언어 및 방법론을 기반으로 하는 보다 구체적인 구문 예제를 보려면 다음 섹션을 참조 하십시오.  
   
--   [시각적 개체에 대 한 ADO C++ COM에 대 한 구문 인덱스](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md) ADO 속성 및 메서드를 사용 하지 않고 설명 된 **#import** 컴파일러 지시문을 사용 하 여 Microsoft Visual C++.  
+-   [COM의 Visual C++ 구문 인덱스에 대 한 ado](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md) 는 Microsoft Visual C++에 **#import** 컴파일러 지시문을 사용 하지 않고 ado 속성 및 메서드를 다룹니다.  
   
--   합니다 [시각적 개체에 대 한 ADO C++ #import 구문 인덱스](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md) 사용 하는 경우 ADO 속성 및 메서드를 설명 합니다 **#import** 컴파일러 지시문을 사용 하 여 Microsoft Visual C++.  
+-   [#Import와 함께 Visual C++ 구문 인덱스](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md) 를 사용 하는 ado는 Microsoft Visual C++에서 **#import** 컴파일러 지시문을 사용 하는 경우 ado 속성 및 메서드를 다룹니다.  
   
-## <a name="see-also"></a>관련 항목  
- [Microsoft Visual Basic로 ADO 사용](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
- [Microsoft Visual와 함께 ADO 사용C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   
+## <a name="see-also"></a>참고 항목  
+ [Microsoft Visual Basic에서 ADO 사용](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
+ [Microsoft Visual C++와 함께 ADO 사용](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   
  [스크립트 언어로 ADO 사용](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)

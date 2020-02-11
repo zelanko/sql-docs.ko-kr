@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fd223c0a66b533cb2b405dd0e766f7053b7a4e89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63275972"
 ---
 # <a name="sql-pane-visual-database-tools"></a>SQL Visual Database Tools)
@@ -53,10 +53,10 @@ ms.locfileid: "63275972"
 > [!NOTE]  
 >  SQL 문을 입력한 다음 다이어그램 창과 조건 창을 변경하여 쿼리를 추가로 변경하면 쿼리 및 뷰 디자이너는 SQL 문을 다시 작성하여 표시합니다. 일부 경우 이 동작으로 인해 결과는 같지만 원래 입력한 내용과 다른 SQL 문이 만들어지기도 합니다. 이러한 차이는 AND와 OR로 연결된 여러 절을 포함하는 검색 조건을 사용하여 작업할 때 특히 자주 나타납니다.  
   
-## <a name="see-also"></a>관련 항목  
- [쿼리를 만들 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [쿼리 실행 &#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)   
- [방법 도움말 항목을 쿼리 및 뷰 디자인 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools를 &#40;쿼리 만들기&#41;](visual-database-tools.md)   
+ [Visual Database Tools를 &#40;쿼리 실행&#41;](run-queries-visual-database-tools.md)   
+ [쿼리 및 뷰 디자인 방법 도움말 항목 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [다이어그램 창 &#40;Visual Database Tools&#41;](diagram-pane-visual-database-tools.md)   
  [조건 창 &#40;Visual Database Tools&#41;](criteria-pane-visual-database-tools.md)   
  [결과 창&#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)  

@@ -16,24 +16,24 @@ ms.assetid: c611f857-d6b0-4dca-8925-f4a02e769eb0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7c8c6b10e63e4cacce0124eb11102db796168d9b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919706"
 ---
 # <a name="commandtimeout-property-ado"></a>CommandTimeout 속성(ADO)
-시도 종료 하 고 오류를 생성 하기 전에 명령을 실행 하는 동안 대기할 시간을 나타냅니다.  
+시도를 종료 하 고 오류를 생성 하기 전에 명령을 실행 하는 동안 대기 하는 시간을 나타냅니다.  
   
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
- 설정 하거나 반환을 **긴** 명령을 실행 하는 데 대기 하는 초 단위로 나타내는 값입니다. 기본값은 30입니다.  
+ 명령이 실행 될 때까지 대기 하는 시간 (초)을 나타내는 **long** 값을 설정 하거나 반환 합니다. 기본값은 30입니다.  
   
 ## <a name="remarks"></a>설명  
- 사용 하 여는 **CommandTimeout** 속성을 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 또는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 취소를 허용 하는 개체는 [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) 메서드 네트워크 트래픽 또는 많은 서버 사용에서 지연으로 인해를 호출 합니다. 간격을 설정 합니다 **CommandTimeout** 속성 명령 실행이 완료 오류가 발생 하 고 ADO 명령 취소 되기 전에 경과 합니다. 속성을 0으로 설정 하는 경우 ADO는 무기한 실행이 완료 될 때까지 대기 합니다. 공급자 및 데이터 소스를 작성 하는 코드 지원을 해야 합니다 **CommandTimeout** 기능입니다.  
+ 네트워크 트래픽 또는 과도 한 서버 사용의 지연으로 인해 [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) 메서드 호출을 취소할 수 있도록 하려면 [Connection](../../../ado/reference/ado-api/connection-object-ado.md) 개체 또는 [Command](../../../ado/reference/ado-api/command-object-ado.md) 개체에서 **CommandTimeout** 속성을 사용 합니다. 명령 실행이 완료 되기 전에 **CommandTimeout** 속성에 설정 된 간격이 경과 하면 오류가 발생 하 고 ADO에서 명령이 취소 됩니다. 속성을 0으로 설정 하면 ADO는 실행이 완료 될 때까지 무기한 대기 합니다. 코드를 작성 하는 공급자 및 데이터 소스가 **CommandTimeout** 기능을 지원 하는지 확인 합니다.  
   
- **CommandTimeout** 에 설정를 **연결** 에 영향을 주지 않습니다를 **CommandTimeout** 설정를 **명령** 에서 개체를 동일한 **연결**, 즉 합니다 **명령** 개체의 **CommandTimeout** 속성의 값을 상속 하지 않습니다는 **연결** 개체의 **CommandTimeout** 값입니다.  
+ **연결** 개체에 대 한 **CommandTimeout** 설정은 동일한 **연결**에서 **명령** 개체의 **CommandTimeout** 설정에 영향을 주지 않습니다. 즉, **Command** 개체의 **CommandTimeout** 속성은 **Connection** 개체의 **CommandTimeout** 값을 상속 하지 않습니다.  
   
- 에 **연결** 개체를 **CommandTimeout** 속성 계속 읽기/쓰기 후는 **연결** 열려 합니다.  
+ **연결** 개체에서 **CommandTimeout** 속성은 **연결이** 열린 후 읽기/쓰기 상태로 유지 됩니다.  
   
 ## <a name="applies-to"></a>적용 대상  
   
@@ -41,8 +41,8 @@ ms.locfileid: "67919706"
 |-|-|  
 |[명령 개체(ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|  
   
-## <a name="see-also"></a>관련 항목  
- [ActiveConnection, CommandText, CommandTimeout, CommandType, 크기 및 방향 속성 예제 (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
- [ActiveConnection, CommandText, CommandTimeout, CommandType, 크기 및 방향 속성 예제 (VC + +)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
- [ActiveConnection, CommandText, CommandTimeout, CommandType, 크기 및 방향 속성 예제 (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   
+## <a name="see-also"></a>참고 항목  
+ [ActiveConnection, CommandText, CommandTimeout, CommandType, Size 및 Direction 속성 예제 (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
+ [ActiveConnection, CommandText, CommandTimeout, CommandType, Size 및 Direction 속성 예제 (VC + +)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
+ [ActiveConnection, CommandText, CommandTimeout, CommandType, Size 및 Direction 속성 예제 (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   
  [ConnectionTimeout 속성(ADO)](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)

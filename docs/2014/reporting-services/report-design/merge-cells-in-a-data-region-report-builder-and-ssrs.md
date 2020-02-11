@@ -11,17 +11,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 97e9280512b75aebfccb93c0e11e5402136fa6f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105572"
 ---
 # <a name="merge-cells-in-a-data-region-report-builder-and-ssrs"></a>데이터 영역의 셀 병합(보고서 작성기 및 SSRS)
   데이터 영역의 셀을 병합하여 셀을 결합하거나 데이터 영역 모양을 개선하거나 열 그룹 및 행 그룹에 대한 확장 레이블을 제공할 수 있습니다.  
   
 > [!NOTE]  
->  데이터 영역의 각 영역(모퉁이, 열 머리글, 그룹 정의 또는 행 머리글) 내에서만 셀을 병합할 수 있습니다. 영역의 경계를 넘어서 셀을 병합할 수 없습니다. 예를 들어 데이터 영역 모퉁이 영역의 셀을 행 그룹 영역의 셀과 병합할 수 없습니다. 테이블 릭 스 영역에 대 한 자세한 내용은 참조 하세요. [나열 &#40;보고서 작성기 및 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)합니다.  
+>  데이터 영역의 각 영역(모퉁이, 열 머리글, 그룹 정의 또는 행 머리글) 내에서만 셀을 병합할 수 있습니다. 영역의 경계를 넘어서 셀을 병합할 수 없습니다. 예를 들어 데이터 영역 모퉁이 영역의 셀을 행 그룹 영역의 셀과 병합할 수 없습니다. 테이블 릭 스 영역에 대 한 자세한 내용은 [목록 &#40;보고서 작성기 및 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)를 참조 하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -34,7 +34,7 @@ ms.locfileid: "66105572"
   
 3.  1단계 및 2단계를 반복하여 데이터 영역의 다른 인접 셀을 병합합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [테이블&#40;보고서 작성기 및 SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [행렬&#40;보고서 작성기 및 SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   

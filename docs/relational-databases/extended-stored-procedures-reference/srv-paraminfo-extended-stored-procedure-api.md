@@ -20,19 +20,19 @@ ms.assetid: ee2afd4e-0d91-462b-9403-98d481546330
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 85efd235861522754cbcdc209d6cf28558907d76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68058771"
 ---
 # <a name="srv_paraminfo-extended-stored-procedure-api"></a>srv_paraminfo(확장 저장 프로시저 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하세요.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]대신 CLR 통합을 사용 하세요.  
   
- 매개 변수에 대한 정보를 반환합니다. 이 함수는 [srv_paramtype](../../relational-databases/extended-stored-procedures-reference/srv-paramtype-extended-stored-procedure-api.md), [srv_paramlen](../../relational-databases/extended-stored-procedures-reference/srv-paramlen-extended-stored-procedure-api.md), [srv_parammaxlen](../../relational-databases/extended-stored-procedures-reference/srv-parammaxlen-extended-stored-procedure-api.md) 및 [srv_paramdata](../../relational-databases/extended-stored-procedures-reference/srv-paramdata-extended-stored-procedure-api.md) 함수를 대체합니다. **srv_paraminfo**는 [데이터 형식](../../relational-databases/extended-stored-procedures-reference/data-types-extended-stored-procedure-api.md)의 데이터 형식과 길이가 0인 데이터를 지원합니다.  
+ 매개 변수에 대한 정보를 반환합니다. 이 함수는 [srv_paramtype](../../relational-databases/extended-stored-procedures-reference/srv-paramtype-extended-stored-procedure-api.md), [srv_paramlen](../../relational-databases/extended-stored-procedures-reference/srv-paramlen-extended-stored-procedure-api.md), [srv_parammaxlen](../../relational-databases/extended-stored-procedures-reference/srv-parammaxlen-extended-stored-procedure-api.md) 및 [srv_paramdata](../../relational-databases/extended-stored-procedures-reference/srv-paramdata-extended-stored-procedure-api.md) 함수를 대체합니다. **srv_paraminfo** 는 데이터 [형식과](../../relational-databases/extended-stored-procedures-reference/data-types-extended-stored-procedure-api.md) 길이가 0 인 데이터의 데이터 형식을 지원 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -69,26 +69,28 @@ pfNull
  *n*  
  설정할 매개 변수의 서수입니다. 첫 번째 매개 변수는 1입니다.  
   
- *pbType*  
+ *Ptype*  
  매개 변수의 데이터 형식입니다.  
   
  *pcbMaxLen*  
  매개 변수의 최대 길이에 대한 포인터입니다.  
   
  *pcbActualLen*  
- 매개 변수의 실제 길이에 대한 포인터입니다. **pfNull*이 FALSE로 설정되어 있으면 0 값(\**pcbActualLen* == 0)은 길이가 0인 데이터를 나타냅니다.  
+ 매개 변수의 실제 길이에 대한 포인터입니다. *\*pfNull*이 FALSE로 설정되어 있으면 0 값(**pcbActualLen* == 0)은 길이가 0인 데이터를 나타냅니다.  
   
  *pbData*  
- 매개 변수 데이터의 버퍼에 대한 포인터입니다. *pbData*가 NULL이 아닌 경우 확장 저장 프로시저 API는 \**pcbActualLen* 바이트의 데이터를 \**pbData*에 기록합니다. *pbData*가 NULL인 경우 데이터가 \**pbData*에 기록되지 않지만 함수는 \**pbType*, \**pcbMaxLen*, \**pcbActualLen* 및 **pfNull*을 반환합니다. 이 버퍼에 대한 메모리는 애플리케이션으로 관리해야 합니다.  
+ 매개 변수 데이터의 버퍼에 대한 포인터입니다. 
+  *pbData*가 NULL이 아닌 경우 확장 저장 프로시저 API는 \**pcbActualLen* 바이트의 데이터를 \**pbData*에 기록합니다. 
+  *pbData*가 NULL인 경우 데이터가 \**pbData*에 기록되지 않지만 함수는 \**pbType*, \**pcbMaxLen*, \**pcbActualLen* 및 **pfNull*을 반환합니다. 이 버퍼에 대한 메모리는 애플리케이션으로 관리해야 합니다.  
   
  *pfNull*  
- NULL 플래그에 대한 포인터입니다.매개 변수 값이 NULL인 경우  **pfNull*이 TRUE로 설정됩니다.  
+ NULL 플래그에 대한 포인터입니다. *매개 변수 값이 NULL 이면 *pfNull* 가 TRUE로 설정 됩니다.  
   
-## <a name="returns"></a>반환 값  
+## <a name="returns"></a>반환  
  매개 변수 정보를 성공적으로 가져오면 SUCCEED가 반환되고 그렇지 않으면 FAIL이 반환됩니다. 현재 원격 저장 프로시저가 없고 *n*번째 원격 저장 프로시저 매개 변수가 없으면 FAIL이 반환됩니다.  
   
-## <a name="remarks"></a>Remarks  
- **보안 정보** 확장 저장 프로시저의 원본 코드를 철저히 검토하고 프로덕션 서버에 컴파일한 DLL을 설치하기 전에 해당 DLL을 테스트해야 합니다. 보안 검토 및 테스트에 대한 자세한 내용은 [Microsoft 웹 사이트](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)를 참조하십시오.  
+## <a name="remarks"></a>설명  
+ **보안 정보** 확장 저장 프로시저의 원본 코드를 철저히 검토 하 고 프로덕션 서버에 설치 하기 전에 컴파일된 Dll을 테스트 해야 합니다. 보안 검토 및 테스트에 대한 자세한 내용은 [Microsoft 웹 사이트](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)를 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [확장 저장 프로시저 프로그래머 참조](../../relational-databases/extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md)  

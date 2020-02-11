@@ -23,14 +23,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 71c462baf00d4129b4efaea0eb39b3a08e6c7ce6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63261875"
 ---
 # <a name="replication-publishing-model-overview"></a>복제 게시 모델 개요
-  복제는 복제 토폴로지의 구성 요소를 나타내는 데 게시자, 배포자, 구독자, 게시, 아티클 및 구독을 포함하는 게시 관련 산업의 메타포를 사용합니다.  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제를 잡지의 개념으로 생각하면 이해가 쉽습니다.  
+  복제는 복제 토폴로지의 구성 요소를 나타내는 데 게시자, 배포자, 구독자, 게시, 아티클 및 구독을 포함하는 게시 관련 산업의 메타포를 사용합니다. 잡지의 측면에서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제를 고려 하는 것이 좋습니다.  
   
 -   잡지사(게시자)에서는 하나 이상의 출판물(게시)을 생산합니다.  
   
@@ -42,9 +42,10 @@ ms.locfileid: "63261875"
   
  복제를 이해하는 데 잡지 메타포가 도움이 되기는 하지만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제에는 이 메타포에 나타나지 않은 기능, 특히 구독자가 업데이트를 하고 게시자가 게시의 아티클에 대해 증분 변경 내용을 보낼 수 있는 기능이 포함되어 있습니다.  
   
- *복제 토폴로지* 는 서버와 데이터 복사본 간의 관계를 정의하고 서버 간 데이터 흐름 방식을 결정하는 논리를 명확히 합니다. 게시자와 구독자 간 데이터 복사 및 이동을 담당하는 여러 복제 프로세스( *에이전트*)가 있습니다. 다음 그림에서는 복제와 관련된 구성 요소 및 프로세스를 간략하게 설명합니다.  
+ 
+  *복제 토폴로지* 는 서버와 데이터 복사본 간의 관계를 정의하고 서버 간 데이터 흐름 방식을 결정하는 논리를 명확히 합니다. 게시자와 구독자 간 데이터 복사 및 이동을 담당하는 여러 복제 프로세스( *에이전트*)가 있습니다. 다음 그림에서는 복제와 관련된 구성 요소 및 프로세스를 간략하게 설명합니다.  
   
- ![복제 구성 요소 및 데이터 흐름](../media/replintro1.gif "Replication components and data flow")  
+ ![복제 구성 요소 및 데이터 흐름](../media/replintro1.gif "복제 구성 요소 및 데이터 흐름")  
   
 ## <a name="publisher"></a>게시자  
  게시자는 복제를 통해 데이터를 다른 위치에서 사용할 수 있도록 만드는 데이터베이스 인스턴스입니다. 게시자는 각각 논리적으로 관련된 개체 집합 및 복제할 데이터를 정의하는 게시를 하나 이상 가질 수 있습니다.  
@@ -61,12 +62,12 @@ ms.locfileid: "63261875"
 ## <a name="publication"></a>게시  
  게시는 하나의 데이터베이스에서 하나 이상의 아티클을 모은 것입니다. 여러 아티클을 게시로 그룹화하면 논리적으로 관련된 데이터베이스 개체 집합 및 단위로 복제된 데이터를 쉽게 지정할 수 있습니다.  
   
-## <a name="subscription"></a>구독  
+## <a name="subscription"></a>Subscription  
  구독은 구독자에게 게시 복사본을 배달해 줄 것을 요청하는 것입니다. 구독은 어떤 게시를 언제 어디서 받을 것인지를 정의합니다. 밀어넣기와 끌어오기의 두 가지 구독 유형이 있습니다. 밀어넣기 및 끌어오기 구독에 대한 자세한 내용은 [게시 구독](../subscribe-to-publications.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [복제 에이전트 개요](../agents/replication-agents-overview.md)   
- [Types of Replication](../types-of-replication.md)   
- [AlwaysOn 가용성 그룹 (SQL Server)에 대 한 복제 구성](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) [AlwaysOn 게시 데이터베이스 유지 관리 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
+ [복제 유형](../types-of-replication.md)   
+ [AlwaysOn 게시 데이터베이스를 유지 관리 하는](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md) [AlwaysOn 가용성 그룹 (SQL Server)에 대 한 복제 구성](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) &#40;SQL Server&#41;  
   
   

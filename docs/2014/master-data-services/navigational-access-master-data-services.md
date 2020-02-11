@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1d190d55c45530adde1b41658c975bbfc19c0b91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482633"
 ---
 # <a name="navigational-access-master-data-services"></a>탐색 액세스 권한(Master Data Services)
@@ -41,7 +41,7 @@ ms.locfileid: "65482633"
   
  컬렉션에 사용 권한을 할당할 경우 이름, 코드, 설명 및 소유자 ID를 읽거나 업데이트할 수 있습니다. 모델 이름을 읽을 수도 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [사용 권한이 결정되는 방식&#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md)  
+## <a name="see-also"></a>참고 항목  
+ [MDS(Master Data Services) &#40;사용 권한을 결정 하는 방법&#41;](how-permissions-are-determined-master-data-services.md)  
   
   

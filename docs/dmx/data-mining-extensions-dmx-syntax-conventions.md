@@ -1,5 +1,5 @@
 ---
-title: Data Mining Extensions (DMX) 구문 표기 규칙 | Microsoft Docs
+title: DMX (데이터 마이닝 확장) 구문 규칙 | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,29 +9,30 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a260598d62a3c5fc1304e8b71b8631546731ed07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68070876"
 ---
 # <a name="data-mining-extensions-dmx-syntax-conventions"></a>DMX(데이터 마이닝 확장) 구문 표기 규칙
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Data Mining Extensions (DMX) 참조 설명서 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] DMX 언어를 설명 하기 위해 다음 규칙을 사용 합니다.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dmx (데이터 마이닝 확장) 참조 설명서는 다음 규칙을 사용 하 여 dmx 언어를 설명 합니다.  
   
 |규칙|사용|  
 |----------------|-----------|  
 |**굵게**|표시된 대로 입력해야 하는 DMX 키워드 및 텍스트|  
 |*기울임꼴*|사용자가 제공하는 DMX 구문의 인수|  
-|&#124;(세로 막대)|대괄호 또는 중괄호에서 구문 항목을 구분하는 데 사용합니다. 항목 중 하나만 선택할 수 있습니다.|  
+|&#124; (세로줄)|대괄호 또는 중괄호에서 구문 항목을 구분하는 데 사용합니다. 항목 중 하나만 선택할 수 있습니다.|  
 |`[ ]`(대괄호)|옵션 구문 항목을 포함합니다. 대괄호는 입력하지 않습니다.|  
 |{}(중괄호)|필수 구문 항목을 포함합니다. 중괄호는 입력하지 않습니다.|  
 |, ...|쉼표 앞의 항목이 임의의 횟수만큼 반복될 수 있음을 나타냅니다. 각 항목은 쉼표로 구분됩니다.|  
-|\<label> ::=|구문 블록의 이름입니다. 이 규칙은 문에서 한 번 이상 사용될 수 있는 긴 구문의 섹션 또는 구문 단위를 그룹화하고 레이블을 붙일 때 사용됩니다. 구문 블록이 사용 될 수 있는 각 위치과에서 같은 모양의 레이블로 표시 됩니다 \<레이블 >.|  
+|
+  \<label> ::=|구문 블록의 이름입니다. 이 규칙은 문에서 한 번 이상 사용될 수 있는 긴 구문의 섹션 또는 구문 단위를 그룹화하고 레이블을 붙일 때 사용됩니다. 구문 블록이 사용 될 수 있는 각 위치는 레이블>와 같이 \<갈매기형 수장으로 묶인 레이블로 표시 됩니다.|  
   
-## <a name="see-also"></a>관련 항목  
- [DMX&#40;Data Mining Extensions&#41; 참조](../dmx/data-mining-extensions-dmx-reference.md)  
+## <a name="see-also"></a>참고 항목  
+ [DMX&#41; 참조 &#40;데이터 마이닝 확장](../dmx/data-mining-extensions-dmx-reference.md)  
   
   
 

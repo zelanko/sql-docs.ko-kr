@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d540b299fd08aa78576b19040a4cfafb9046ae7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68055686"
 ---
 # <a name="order-mdx"></a>Order(MDX)
@@ -45,12 +45,12 @@ Order(Set_Expression, String_Expression
  문자열로 표현된 숫자를 반환하는 셀 좌표의 유효한 문자열 식으로서, 일반적으로 유효한 MDX 식입니다.  
   
 ## <a name="remarks"></a>설명  
- **순서** 함수 계층적 일 수 있습니다 (사용 하 여 지정 된 대로 합니다 **ASC** 또는 **DESC** 플래그) 비계층적일 또는 (사용 하 여 지정 된 대로 **BASC**  또는 **BDESC** 플래그를 **B** "break 계층"는 의미). 하는 경우 **ASC** 또는 **DESC** 를 지정 합니다 **순서** 함수는 먼저 계층의 해당 위치에 따라 멤버를 정렬 하 고 다음 각 수준을 정렬 합니다. 경우 **BASC** 또는 **BDESC** 를 지정 합니다 **순서** 함수는 계층과 관계 없이 집합에서 멤버를 정렬 합니다. 플래그가 지정 경우 **ASC** 가 기본값입니다.  
+ **Order** 함수는 계층적 일 수 있습니다 ( **ASC** 또는 **DESC** 플래그를 사용 하 여 지정한 대로) 또는 비계층적 인 ( **c** + + 또는 **Bdesc** 플래그를 사용 하 여 지정). **B** 는 "계층 중단"을 의미 합니다. **ASC** 또는 **DESC** 를 지정 하면 **Order** 함수는 먼저 계층에서 해당 위치에 따라 멤버를 정렬 한 다음 각 수준을 정렬 합니다. **Dec** 또는 **bdesc** 를 지정 하면 **Order** 함수는 계층에 관계 없이 집합의 멤버를 정렬 합니다. 플래그가 지정 되지 않은 경우에는 **ASC** 가 기본값입니다.  
   
- 경우는 **순서** 함수는 집합을 사용 하 여 둘 이상의 계층이 크로스 조인 되 고 **DESC** 플래그를 사용 하는 집합의 마지막 계층의 멤버만 정렬 됩니다. 이 사항은 집합에 있는 모든 계층이 정렬되는 Analysis Services 2000에서 변경되었습니다.  
+ 두 개 이상의 계층이 크로스 조인할 집합에 **Order** 함수를 사용 하 고 **DESC** 플래그를 사용 하는 경우 집합에서 마지막 계층의 멤버만 정렬 됩니다. 이 사항은 집합에 있는 모든 계층이 정렬되는 Analysis Services 2000에서 변경되었습니다.  
   
 ## <a name="examples"></a>예  
- 다음 예제에서는 반환에서 합니다 **Adventure Works** 큐브에 Date 차원의 Calendar 계층의 모든 Calendar Quarters에 대 한 대리점 주문 수입니다. 합니다 **순서** 함수 ROWS 축에 대 한 집합을 다시 정렬 합니다. 합니다 **순서** 함수에서 집합을 정렬 `[Reseller Order Count]` 기준으로 계층적 순서를 내림차순는 `[Calendar]` 계층.  
+ 다음 예에서는 **놀이 Works** 큐브에서 Date 차원의 calendar 계층에 있는 모든 분기의 재판매인 주문 수를 반환 합니다. Order 함수는 ROWS 축에 대해 집합의 순서를 다시 **정렬** 합니다. **Order** 함수는 `[Calendar]` 계층에 의해 결정 `[Reseller Order Count]` 된 대로 내림차순 계층 순서로 집합을 정렬 합니다.  
   
  `SELECT`  
   
@@ -68,7 +68,7 @@ Order(Set_Expression, String_Expression
   
  `FROM [Adventure Works]`  
   
- 알림 방법을이 예제에서는 때 합니다 **DESC** 플래그 변경 됩니다 **BDESC**는 계층이 끊어지고 계층에 관계 없이 Calendar Quarters 목록이 반환 됩니다:  
+ 이 예에서는 **DESC** 플래그가 **bdesc**로 변경 될 때 계층이 중단 되 고 계층에 관계 없이 일정 사분기 목록이 반환 됩니다.  
   
  `SELECT`  
   
@@ -86,7 +86,7 @@ Order(Set_Expression, String_Expression
   
  `FROM [Adventure Works]`  
   
- 다음 예에서는 Reseller Gross Profit를 기준으로 계층에 관계없이 판매량이 상위 5위 안에 속하는 제품 하위 범주에 대한 Reseller Sales 측정값을 반환합니다. 합니다 **하위 집합** 함수를 사용 하 여 결과 정렬 한 후 집합에서 처음 5 개의 튜플만 반환 되는 **순서** 함수입니다.  
+ 다음 예에서는 Reseller Gross Profit를 기준으로 계층에 관계없이 판매량이 상위 5위 안에 속하는 제품 하위 범주에 대한 Reseller Sales 측정값을 반환합니다. **하위 집합** 함수는 **Order** 함수를 사용 하 여 결과를 정렬 한 후 집합에서 처음 5 개의 튜플을 반환 하는 데 사용 됩니다.  
   
  `SELECT Subset`  
   
@@ -108,7 +108,7 @@ Order(Set_Expression, String_Expression
   
  `FROM [Adventure Works]`  
   
- 다음 예제에서는 합니다 **순위** 함수 City 계층의 멤버 순위를 Reseller Sales Amount 측정값을 기반으로 하 고 순위 순서로 표시 합니다. 사용 하 여 합니다 **순서** City 계층의 멤버 집합 함수를 첫 번째, 한 번만 수행 되며 순서 대로 정렬 된 결과가 표시 되기 전에 선형 검색이 다음 정렬 합니다.  
+ 다음 예에서는 **Rank** 함수를 사용 하 여 재판매인 Sales Amount 측정값에 따라 City 계층의 멤버 순위를 지정한 다음 순위가 매겨진 순서로 표시 합니다. **Order** 함수를 사용 하 여 먼저 City 계층의 멤버 집합을 정렬 하면 정렬이 한 번만 수행 된 다음 정렬 된 순서로 표시 되기 전에 선형 검색이 수행 됩니다.  
   
 ```  
 WITH   
@@ -126,7 +126,7 @@ SELECT {[Measures].[City Rank],[Measures].[Reseller Sales Amount]}  ON 0
 FROM [Adventure Works]  
 ```  
   
- 다음 예제에서는 고유한를 사용 하 여 집합의 제품 수를 반환 합니다.는 **순서** 함수를 활용 하기 전에 비어 있지 않은 튜플을 정렬 한를 **필터** 함수입니다. 합니다 **CurrentOrdinal** 함수 비교 하 고 ties 제거를 사용 합니다.  
+ 다음 예에서는 **Filter** 함수를 사용 하기 전에 **order** 함수를 사용 하 여 비어 있지 않은 튜플을 정렬 한 집합의 제품 수를 반환 합니다. **Currentordinal** 함수는 동률을 비교 하 고 제거 하는 데 사용 됩니다.  
   
 ```  
 WITH MEMBER [Measures].[PrdTies] AS Count  
@@ -160,7 +160,7 @@ SELECT {[Measures].[PrdTies]} ON 0
 FROM [Adventure Works]  
 ```  
   
- 알아야 하는 방법을 **DESC** 튜플 집합을 사용 하 여 작동 플래그, 먼저 다음 쿼리의 결과 것이 좋습니다.  
+ **DESC** 플래그가 튜플 집합에서 작동 하는 방식을 이해 하려면 먼저 다음 쿼리의 결과를 고려해 야 합니다.  
   
 ```  
   
@@ -174,7 +174,7 @@ FROM [Adventure Works]
   
 ```  
   
- Rows 축에서 내림차순으로 Tax Amount를 다음과 같이 Sales Territory Groups가 주문 있는지 확인할 수 있습니다. North America, Europe, Pacific, 미정으로 나타납니다. 이제 참조 하는 경우 어떻게 되나요에서는 Sales Territory Groups 집합 제품 하위 범주 집합과 크로스 조인 적용 합니다 **순서** 다음과 같은 방법으로 함수:  
+ 행 축에서 판매 지역 그룹은 북아메리카, 유럽, 태평양, NA와 같이 내림차순으로 내림차순으로 정렬 된 것을 볼 수 있습니다. 이제 다음과 같이 제품 하위 범주 집합을 사용 하 여 영업 지역 그룹 집합을 crossjoin 하 고 동일한 방식으로 **주문** 함수를 적용 하는 경우 어떻게 되는지 확인할 수 있습니다.  
   
 ```  
   
@@ -190,7 +190,7 @@ FROM [Adventure Works]
   
 ```  
   
- 하지만 Product Subcategories 집합 내림차순의 계층 순서로 정렬 되었지만 Sales Territory Groups는 이제 정렬 되지 및 계층에 나타나는 순서로 표시: Europe, NA, North America 및 Pacific입니다. 이유는 튜플 집합의 마지막 계층인 Product Subcategories만 정렬되기 때문입니다. Analysis Services 2000의 동작을 재현 하려면는 일련의 중첩 **생성** 크로스 조인 하기 전에, 예를 들어 각 집합을 정렬 하는 함수:  
+ 제품 하위 범주 집합은 내림차순, 계층 순서로 정렬 되어 있지만 이제 판매 지역 그룹이 계층 구조에 표시 되는 순서 대로 표시 되지 않습니다. 유럽, NA, 북아메리카 및 태평양. 이유는 튜플 집합의 마지막 계층인 Product Subcategories만 정렬되기 때문입니다. Analysis Services 2000의 동작을 재현 하려면 일련의 중첩 된 **생성** 함수를 사용 하 여 각 집합을 크로스 조인할 전에 정렬 합니다. 예를 들면 다음과 같습니다.  
   
 ```  
   
@@ -210,7 +210,7 @@ ON 1
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 976e8452e50d293fb8125bfbdde1bd17a8f3be07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63283485"
 ---
 # <a name="report-server-web-service-endpoints"></a>보고서 서버 웹 서비스 엔드포인트
@@ -33,7 +33,7 @@ ms.locfileid: "63283485"
 >  보고서 서버가 SharePoint 통합 모드로 구성된 경우 <xref:ReportService2005> API는 `rsOperationNotSupportedSharePointMode` 오류를 반환합니다. 보고서 서버가 기본 모드로 구성된 경우 <xref:ReportService2006> API는 `rsOperationNotSupportedNativeMode` 오류를 반환합니다. 마찬가지로 <xref:ReportService2010>의 모드별 API를 잘못된 모드에 사용하면 API에서 해당 오류를 반환합니다.  
   
 > [!NOTE]  
->  <xref:ReportService2005> 및 <xref:ReportService2006> 엔드포인트는 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]에서 더 이상 사용되지 않습니다. <xref:ReportService2010> 엔드포인트에는 두 엔드포인트의 기능이 모두 포함되어 있으며 추가 관리 기능도 포함되어 있습니다.  
+>  <xref:ReportService2005> 및 <xref:ReportService2006> 엔드포인트는 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]에서 더 이상 사용되지 않습니다. <xref:ReportService2010>엔드포인트에는 두 엔드포인트의 기능이 모두 포함되어 있으며 추가 관리 기능도 포함되어 있습니다.  
   
  보고서 서버가 기본 모드 또는 SharePoint 통합 모드로 구성된 경우 관리 엔드포인트용 WSDL은 다음 URL 중 하나를 사용하여 액세스할 수 있습니다.  
   
@@ -65,7 +65,7 @@ http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx?
   
 |프록시 엔드포인트|Description|  
 |--------------------|-----------------|  
-|<xref:ReportService2006>|SharePoint 통합 모드로 구성된 보고서 서버를 관리하기 위한 API를 제공합니다. **참고:**  이 끝점에서 사용 되지 않습니다 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]합니다.|  
+|<xref:ReportService2006>|SharePoint 통합 모드로 구성된 보고서 서버를 관리하기 위한 API를 제공합니다. **참고:**  이 끝점은에서 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]더 이상 사용 되지 않습니다.|  
 |<xref:ReportService2010>|기본 모드 또는 SharePoint 통합 모드로 구성된 보고서 서버를 관리하기 위한 API를 제공합니다.|  
 |<xref:ReportExecution2005>|보고서 실행 및 탐색을 위한 API를 제공합니다.|  
 |<xref:ReportServiceAuthentication>|폼 인증을 위해 SharePoint 웹 애플리케이션이 구성된 경우 보고서 서버에 대해 사용자를 인증하기 위한 API를 제공합니다.|  
@@ -84,7 +84,7 @@ http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx
 http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportServiceAuthentication.asmx  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [웹 서비스 및 .NET Framework를 사용하여 응용 프로그램 빌드](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
+## <a name="see-also"></a>참고 항목  
+ [웹 서비스 및 .NET Framework를 사용하여 애플리케이션 빌드](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
   
   

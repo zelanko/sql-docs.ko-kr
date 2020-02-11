@@ -15,14 +15,14 @@ ms.assetid: 5c0530ad-68d0-4cba-b1af-9386d566c7c5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4274c51be7bc2d94ca26312b246176bd58d197f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920181"
 ---
 # <a name="cancel-method-example-vb"></a>Cancel 메서드 예제(VB)
-이 예제에서는 합니다 [취소](../../../ado/reference/ado-api/cancel-method-ado.md) 에서 명령 실행을 취소 하는 메서드를 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 연결이 사용 중인 경우 개체.  
+이 예에서는 [cancel](../../../ado/reference/ado-api/cancel-method-ado.md) 메서드를 사용 하 여 연결을 사용 하는 경우 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체에서 실행 중인 명령을 취소 합니다.  
   
 ```  
 'BeginCancelVB  
@@ -102,6 +102,6 @@ End Sub
 'EndCancelVB  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Cancel 메서드 (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
  [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

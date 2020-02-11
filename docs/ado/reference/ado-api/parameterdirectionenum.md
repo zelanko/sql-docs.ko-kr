@@ -16,33 +16,33 @@ ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 68aaa0bfb8aa72c9e94a8b5db65768fe85895f0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917746"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
-지정 여부는 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 는 입력된 매개 변수, 출력 매개 변수, 두 입력은 출력 매개 변수 또는 저장된 프로시저에서 반환 값 및.  
+[매개 변수가](../../../ado/reference/ado-api/parameter-object.md) 입력 매개 변수, 출력 매개 변수, 입력 및 출력 매개 변수 또는 저장 프로시저의 반환 값을 나타내는지 여부를 지정 합니다.  
   
-|상수|값|설명|  
+|지속적임|값|Description|  
 |--------------|-----------|-----------------|  
-|**adParamInput**|1|기본. 매개 변수는 입력된 매개 변수를 나타냅니다.|  
-|**adParamInputOutput**|3|매개 변수는 입력 및 출력 매개 변수를 나타냅니다.|  
-|**adParamOutput**|2|매개 변수는 출력 매개 변수를 나타냅니다.|  
-|**adParamReturnValue**|4|매개 변수는 반환 값을 나타냅니다.|  
-|**adParamUnknown**|0|매개 변수 방향은 알려진 임을 나타냅니다.|  
+|**adParamInput**|1|Default. 매개 변수가 입력 매개 변수를 나타내는지 여부를 나타냅니다.|  
+|**adParamInputOutput**|3|매개 변수가 입력 매개 변수 및 출력 매개 변수를 모두 나타내도록 지정 합니다.|  
+|**adParamOutput**|2|매개 변수가 출력 매개 변수를 나타내는지 여부를 나타냅니다.|  
+|**adParamReturnValue**|4|매개 변수가 반환 값 임을 나타냅니다.|  
+|**adParamUnknown**|0|매개 변수 방향을 알 수 없음을 나타냅니다.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC 해당  
+## <a name="adowfc-equivalent"></a>ADO/WFC 동급  
  Package: **com.ms.wfc.data**  
   
-|상수|  
+|지속적임|  
 |--------------|  
-|AdoEnums.ParameterDirection.INPUT|  
-|AdoEnums.ParameterDirection.INPUTOUTPUT|  
-|AdoEnums.ParameterDirection.OUTPUT|  
-|AdoEnums.ParameterDirection.RETURNVALUE|  
-|AdoEnums.ParameterDirection.UNKNOWN|  
+|AdoEnums. ParameterDirection|  
+|AdoEnums. ParameterDirection 출력|  
+|AdoEnums. ParameterDirection|  
+|AdoEnums. ParameterDirection. RETURNVALUE|  
+|AdoEnums. ParameterDirection|  
   
 ## <a name="applies-to"></a>적용 대상  
   

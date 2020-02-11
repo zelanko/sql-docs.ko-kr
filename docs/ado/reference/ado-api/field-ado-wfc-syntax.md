@@ -1,5 +1,5 @@
 ---
-title: 필드 (ADO-WFC 구문) | Microsoft Docs
+title: Field (ADO-WFC 구문) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,14 +14,14 @@ ms.assetid: 7e01cb24-2338-4f92-ad46-8d97248e1a4d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 583e6de7dc8c3ea05d61dda53c3e630d05e4d5f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918757"
 ---
 # <a name="field-ado---wfc-syntax"></a>필드(ADO - WFC 구문)
-## <a name="package-commswfcdata"></a>package com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>package com.  
   
 ### <a name="methods"></a>메서드  
   
@@ -44,7 +44,7 @@ public com.ms.com.IUnknown getDataFormat()
 public void setDataFormat(com.ms.com.IUnknown format)  
 ```  
   
- (자세한 내용은 com.ms.wfc.data.IDataFormat 인터페이스에 대 한 설명서 참조).  
+ (자세한 내용은 IDataFormat 인터페이스에 대 한 설명서를 참조 하세요.)  
   
 ```  
 public int getDefinedSize()  
@@ -63,14 +63,14 @@ public void setValue(Variant value)
 public AdoProperties getProperties()  
 ```  
   
-### <a name="field-accessor-methods"></a>필드 접근자 메서드  
- 합니다 [값](../../../ado/reference/ado-api/value-property-ado.md) 의 속성을 [필드](../../../ado/reference/ado-api/field-object.md) 개체는 개체의 콘텐츠를 가져오거나 설정 합니다. 콘텐츠는 변형에 값을 할당할 수 있는 개체의 형식 및 여러 데이터 형식으로 표시 됩니다.  
+### <a name="field-accessor-methods"></a>Field 접근자 메서드  
+ [Field](../../../ado/reference/ado-api/field-object.md) 개체의 [Value](../../../ado/reference/ado-api/value-property-ado.md) 속성은 해당 개체의 내용을 가져오거나 설정 합니다. 콘텐츠는 값 및 여러 데이터 형식 중 하나를 할당할 수 있는 개체의 유형인 VARIANT로 표시 됩니다.  
   
- ADO/WFC 구현를 **값** 속성을 합니다 **getValue** ; VARIANT를 반환 하는 메서드 및 **setValue** VARIANT를 인수로 사용 하는 메서드를 합니다. 변형은 Microsoft Visual Basic 같은 특정 언어에서 매우 효율적입니다.  
+ ADO/WFC는 VARIANT 개체를 반환 하는 **getValue** 메서드를 사용 하 여 **Value** 속성을 구현 합니다. 그리고 **setValue** 메서드로 VARIANT를 인수로 사용 합니다. 변형은 Microsoft Visual Basic와 같은 특정 언어에서 매우 효율적입니다.  
   
- 외에 **값** 속성인 ADO/WFC 제공 *접근자* Java 데이터 형식 가져오기 및 설정의 콘텐츠를 사용 하는 방법 **필드** 개체입니다. 이러한 메서드 중 대부분은 폼의 이름이 **가져옵니다**_DataType_ 또는 **설정**_DataType_합니다.  
+ ADO/WFC는 **Value** 속성 외에도 Java 데이터 형식을 사용 하 여 **Field** 개체의 내용을 가져오고 설정 하는 *접근자* 메서드를 제공 합니다. 이러한 메서드의 대부분은 **get**_datatype_ 또는 **set**_datatype_형식의 이름을 가집니다.  
   
- 두 가지 주목할 만한 예외가 있습니다. 중 하나는 **getObject** 메서드는 지정 된 클래스도 강제 변환할 개체를 반환 합니다. 방법이 없는 **getNull** 속성 대신는 **isNull** 필드가 null 인지 여부를 나타내는 부울 값을 반환 하는 속성입니다.  
+ 두 가지 주목할 만한 예외가 있습니다. **getObject** 메서드 중 하나가 지정 된 클래스로 강제 변환 된 개체를 반환 합니다. **Getnull** 속성이 없습니다. 대신 필드가 null 인지 여부를 나타내는 부울 값을 반환 하는 **isNull** 속성이 있습니다.  
   
 ```  
 public native boolean getBoolean();  
@@ -98,5 +98,5 @@ public Object getObject(Class c)
 public void setObject(Object value)  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Field 개체](../../../ado/reference/ado-api/field-object.md)

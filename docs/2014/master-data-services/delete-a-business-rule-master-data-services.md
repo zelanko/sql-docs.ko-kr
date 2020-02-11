@@ -14,13 +14,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d294bb2d07d87216fb40fb93267518970fdf4c9d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479743"
 ---
 # <a name="delete-a-business-rule-master-data-services"></a>비즈니스 규칙 삭제(Master Data Services)
+  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 비즈니스 규칙이 더 이상 필요하지 않으면 삭제할 수 있습니다.  
   
 > [!NOTE]  
@@ -29,37 +30,44 @@ ms.locfileid: "65479743"
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
--   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
+-   
+  **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
   
--   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)를 참조하세요.  
+-   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
   
 ### <a name="to-delete-a-business-rule"></a>비즈니스 규칙을 삭제하려면  
   
-1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 **시스템 관리**를 클릭합니다.  
+1.  
+  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 **시스템 관리**를 클릭합니다.  
   
 2.  메뉴 모음에서 **관리** 를 가리키고 **비즈니스 규칙**을 클릭합니다.  
   
-3.  **비즈니스 규칙 유지 관리** 페이지의 **모델** 목록에서 모델을 선택합니다.  
+3.  
+  **비즈니스 규칙 유지 관리** 페이지의 **모델** 목록에서 모델을 선택합니다.  
   
-4.  **엔터티** 목록에서 엔터티를 선택합니다.  
+4.  
+  **엔터티** 목록에서 엔터티를 선택합니다.  
   
-5.  **멤버 유형** 목록에서 비즈니스 규칙을 적용할 멤버 유형을 선택합니다.  
+5.  
+  **멤버 유형** 목록에서 비즈니스 규칙을 적용할 멤버 유형을 선택합니다.  
   
-6.  **특성** 목록에서 특성을 선택하거나 기본값인 **모두**를 그대로 사용합니다.  
+6.  
+  **특성** 목록에서 특성을 선택하거나 기본값인 **모두**를 그대로 사용합니다.  
   
 7.  표 형태에서 삭제할 비즈니스 규칙 행을 클릭합니다.  
   
-8.  클릭 **선택한 비즈니스 규칙 삭제**합니다.  
+8.  **선택한 비즈니스 규칙 삭제**를 클릭 합니다.  
   
-9. 확인 대화 상자에서 **확인**을 클릭합니다. 값을 **상태** 열인지 **삭제 보류 중**합니다.  
+9. 확인 대화 상자에서 **확인**을 클릭합니다. **상태** 열의 값은 **삭제 보류 중**입니다.  
   
-10. **비즈니스 규칙 게시**를 클릭합니다.  
+10. 
+  **비즈니스 규칙 게시**를 클릭합니다.  
   
 11. 확인 대화 상자에서 **확인**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [비즈니스 규칙 제외&#40;Master Data Services&#41;](exclude-a-business-rule-master-data-services.md)   
- [비즈니스 규칙 만들기 및 게시&#40;Master Data Services&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
- [비즈니스 규칙&#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
+## <a name="see-also"></a>참고 항목  
+ [비즈니스 규칙 &#40;MDS(Master Data Services)를 제외&#41;](exclude-a-business-rule-master-data-services.md)   
+ [비즈니스 규칙을 만들고 게시 &#40;MDS(Master Data Services)&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
+ [비즈니스 규칙 &#40;MDS(Master Data Services)&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
   

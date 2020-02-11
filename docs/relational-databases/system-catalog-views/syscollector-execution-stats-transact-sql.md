@@ -1,5 +1,5 @@
 ---
-title: syscollector_execution_stats (TRANSACT-SQL) | Microsoft Docs
+title: syscollector_execution_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,18 +19,18 @@ ms.assetid: 23e35ac5-fbbf-4922-970c-f4fac44c1263
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bca1d879c0988ffb48eb5ae2fd080b1133e24339
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68060336"
 ---
-# <a name="syscollectorexecutionstats-transact-sql"></a>syscollector_execution_stats(Transact-SQL)
+# <a name="syscollector_execution_stats-transact-sql"></a>syscollector_execution_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   컬렉션 집합 또는 패키지에 대한 태스크 실행 정보를 제공합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**log_id**|**bigint**|각 컬렉션 집합의 실행을 식별합니다. 이 뷰와 자세한 다른 로그를 조인하는 데 사용됩니다. Null을 허용하지 않습니다.|  
 |**task_name**|**nvarchar(128)**|이 정보의 대상인 컬렉션 집합 또는 패키지 태스크의 이름입니다. Null을 허용하지 않습니다.|  
@@ -41,11 +41,11 @@ ms.locfileid: "68060336"
 |**log_time**|**datetime**|이 정보가 기록된 시간입니다. Null을 허용하지 않습니다.|  
   
 ## <a name="permissions"></a>사용 권한  
- 에 대 한 SELECT 권한이 필요 **dc_operator**합니다.  
+ **Dc_operator**에 대 한 SELECT 권한이 필요 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 수집기 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [데이터 수집기 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
- [데이터 컬렉션](../../relational-databases/data-collection/data-collection.md)  
+ [Transact-sql&#41;&#40;데이터 수집기 뷰](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
+ [데이터 수집](../../relational-databases/data-collection/data-collection.md)  
   
   

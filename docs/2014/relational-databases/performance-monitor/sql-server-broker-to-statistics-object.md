@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1a8c5bc039e4e6c18680ba4e290ea7e69fa87804
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250779"
 ---
 # <a name="sql-server-broker-to-statistics-object"></a>SQL Server, Broker TO Statistics 개체
@@ -31,13 +31,13 @@ ms.locfileid: "63250779"
 |----------------------------------------------|-----------------|  
 |**Avg. Length of Batched Writes**|일괄 처리에 저장되는 평균 전송 개체 수입니다.|  
 |**Avg. Time To Write Batch (ms)**|전송 개체 일괄 처리를 저장하는 데 필요한 평균 시간(밀리초)입니다.|  
-|**Avg. Time Between Batches (ms)**|전송 개체의 일괄 처리 기록 간 평균 시간(밀리초)입니다.|  
-|**Tran Object Gets/sec**|대화에서 전송 개체를 요청한 초당 횟수입니다.|  
-|**Tran Objects Marked Dirty/sec**|전송 개체가 커밋되지 않은 것으로 표시된 초당 횟수입니다. 전송 개체는 처음 수정하면 커밋된 것으로 표시되어 메모리 내장 복사본이 **tempdb**에 저장된 복사본과 달라지게 됩니다. 전송 개체는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 가 대화의 메시지 전송 상태에 변경 사항을 기록할 때 수정됩니다.|  
-|**Tran Object Writes/sec**|전송 개체의 일괄 처리가 **tempdb** 작업 테이블에 기록된 초당 횟수입니다. 기록된 횟수가 많으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리가 스트레스 상태임을 나타낼 수 있습니다.|  
+|**Avg. Time Between Batches(ms)**|전송 개체의 일괄 처리 기록 간 평균 시간(밀리초)입니다.|  
+|**Tran 개체는/초를 가져옵니다.**|대화에서 전송 개체를 요청한 초당 횟수입니다.|  
+|**더티로 표시 된 Tran 개체/초**|전송 개체가 커밋되지 않은 것으로 표시된 초당 횟수입니다. 전송 개체는 처음 수정하면 커밋된 것으로 표시되어 메모리 내장 복사본이 **tempdb**에 저장된 복사본과 달라지게 됩니다. 전송 개체는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 가 대화의 메시지 전송 상태에 변경 사항을 기록할 때 수정됩니다.|  
+|**Tran 개체 쓰기/초**|전송 개체의 일괄 처리가 **tempdb** 작업 테이블에 기록된 초당 횟수입니다. 기록된 횟수가 많으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리가 스트레스 상태임을 나타낼 수 있습니다.|  
   
-## <a name="see-also"></a>관련 항목  
- [SQL Server, Access Methods 개체](sql-server-access-methods-object.md)   
+## <a name="see-also"></a>참고 항목  
+ [SQL Server, Access 메서드 개체](sql-server-access-methods-object.md)   
  [SQL Server, Memory Manager 개체](sql-server-memory-manager-object.md)   
  [리소스 사용 모니터링&#40;시스템 모니터&#41;](monitor-resource-usage-system-monitor.md)  
   

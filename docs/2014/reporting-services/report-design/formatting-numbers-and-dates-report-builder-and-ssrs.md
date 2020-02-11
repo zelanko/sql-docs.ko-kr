@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0ee681c291d9dd96733f083138af39ef2b280e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105836"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>숫자 및 날짜 서식 지정(보고서 작성기 및 SSRS)
@@ -52,11 +52,11 @@ ms.locfileid: "66105836"
   
 -   잘못된 형식 문자열을 지정하면 형식 지정된 텍스트는 형식 지정을 무시하는 리터럴 문자열로 해석됩니다.  
   
--   같은 입력란에 함께 포함된 숫자와 문자의 형식을 지정할 때는 숫자를 나머지 텍스트와 구분하기 위해 자리 표시자를 사용하는 것을 고려하십시오. 자세한 내용은 [텍스트 및 자리 표시자 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)를 클릭합니다. 입력란의 Format 속성에 잘못된 형식 문자열을 지정하면 형식 문자열이 무시됩니다. 차트나 계기의 Format 속성에 잘못된 형식 문자열을 지정하면 지정한 형식 문자열은 문자열로 해석되고 형식이 적용되지 않습니다.  
+-   같은 입력란에 함께 포함된 숫자와 문자의 형식을 지정할 때는 숫자를 나머지 텍스트와 구분하기 위해 자리 표시자를 사용하는 것을 고려하십시오. 자세한 내용은 [텍스트 및 자리 표시자 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)에 대해 자세히 알아봅니다. 입력란의 Format 속성에 잘못된 형식 문자열을 지정하면 형식 문자열이 무시됩니다. 차트나 계기의 Format 속성에 잘못된 형식 문자열을 지정하면 지정한 형식 문자열은 문자열로 해석되고 형식이 적용되지 않습니다.  
   
 -   **범주** 에서 **통화** 를 선택하고 **값 표시 단위**를 선택한 경우 재무 형식을 사용하여 숫자를 표시하는 단위로 **천**, **백만**또는 **10억** 을 선택할 수 있습니다. 예를 들어 필드 값이 1,789,905,394인 경우 값 표시 단위로 **10억** 을 선택하고 소수 자릿수를 두 자리로 지정하면 보고서에는 1.78이 값으로 표시됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [텍스트 및 자리 표시자 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [선, 색 및 이미지 서식 지정&#40;보고서 작성기 및 SSRS&#41;](images-report-builder-and-ssrs.md)   
  [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   

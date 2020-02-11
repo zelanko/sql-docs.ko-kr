@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f90a3e23dfd22d18d527db73fd0270723f2c44a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100283"
 ---
 # <a name="document-outline"></a>문서 개요
@@ -24,7 +24,7 @@ ms.locfileid: "66100283"
   
  문서 개요 창이 표시되지 않은 경우 **보기** 메뉴에서 **다른 창**, **문서 개요**를 차례로 클릭합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **모두 확장**  
  계층 구조의 모든 노드를 확장하려면 클릭합니다.  
   

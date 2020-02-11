@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6f6bc24d0224e31f008be0ffaf77266446c15527
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481102"
 ---
 # <a name="use-value-relations-in-a-composite-domain"></a>복합 도메인의 값 관계 사용
@@ -24,32 +24,37 @@ ms.locfileid: "65481102"
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 조건  
  값 관계를 보려면 복합 도메인을 만들고 열어 두어야 합니다.  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  복합 도메인의 값 관계를 보려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
-##  <a name="Use"></a> 값 관계 보기  
+##  <a name="Use"></a>값 관계 보기  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client 응용 프로그램을 실행합니다](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client 응용 프로그램을 실행](../../2014/data-quality-services/run-the-data-quality-client-application.md)합니다.  
   
-2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면에서 기술 자료를 열거나 만듭니다. **도메인 관리** 를 작업으로 선택한 다음 **열기** 또는 **만들기**를 클릭합니다. 자세한 내용은 [기술 자료 만들기](../../2014/data-quality-services/create-a-knowledge-base.md) 또는 [기술 자료 열기](../../2014/data-quality-services/open-a-knowledge-base.md)를 참조하세요.  
+2.  
+  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면에서 기술 자료를 열거나 만듭니다. 
+  **도메인 관리** 를 작업으로 선택한 다음 **열기** 또는 **만들기**를 클릭합니다. 자세한 내용은 [기술 자료 만들기](../../2014/data-quality-services/create-a-knowledge-base.md) 또는 [기술 자료 열기](../../2014/data-quality-services/open-a-knowledge-base.md)를 참조하세요.  
   
-3.  **도메인 관리** 페이지의 **도메인 목록** 에서 도메인 규칙을 만들 복합 도메인을 선택하거나 새 복합 도메인을 만듭니다. 새 도메인을 만들어야 하는 경우 [Create a Composite Domain](../../2014/data-quality-services/create-a-composite-domain.md)를 참조하세요.  
+3.  
+  **도메인 관리** 페이지의 **도메인 목록** 에서 도메인 규칙을 만들 복합 도메인을 선택하거나 새 복합 도메인을 만듭니다. 새 도메인을 만들어야 하는 경우 [Create a Composite Domain](../../2014/data-quality-services/create-a-composite-domain.md)를 참조하세요.  
   
-4.  **값 관계** 탭을 클릭합니다.  
+4.  
+  **값 관계** 탭을 클릭합니다.  
   
 5.  각 값 조합에 대해 표시되는 빈도를 봅니다.  
   
     > [!NOTE]  
-    >  **값** 테이블에서는 복합 도메인에 있는 각각의 값 조합을 보여 줍니다. 각 값은 값이 적용되는 단일 도메인에 표시됩니다. 값 관계 테이블은 기본적으로 빈도순으로 정렬되지만 다른 열을 클릭하여 해당 열을 기준으로 정렬할 수 있습니다. 빈도가 20보다 크거나 같은 해당 값만 표시됩니다.  
+    >  
+  **값** 테이블에서는 복합 도메인에 있는 각각의 값 조합을 보여 줍니다. 각 값은 값이 적용되는 단일 도메인에 표시됩니다. 값 관계 테이블은 기본적으로 빈도순으로 정렬되지만 다른 열을 클릭하여 해당 열을 기준으로 정렬할 수 있습니다. 빈도가 20보다 크거나 같은 해당 값만 표시됩니다.  
   
 6.  테이블의 값은 변경할 수 없습니다. 다른 작업을 수행한 경우 **마침** 을 클릭하여 도메인 관리 작업을 완료합니다. 그렇지 않은 경우 **취소**를 클릭합니다.  
   
-##  <a name="FollowUp"></a> 후속 작업: 값 관계를 본 후  
+##  <a name="FollowUp"></a>후속 작업: 값 관계를 본 후  
  값 관계를 본 후 도메인에 대해 다른 도메인 관리 태스크를 수행하거나, 기술 자료 검색을 수행하여 도메인에 정보를 추가하거나, 도메인에 일치 정책을 추가할 수 있습니다. 자세한 내용은 [기술 자료 검색 수행](../../2014/data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../../2014/data-quality-services/managing-a-domain.md) 또는 [일치 정책 만들기](../../2014/data-quality-services/create-a-matching-policy.md)를 참조하세요.  
   
   

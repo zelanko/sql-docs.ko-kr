@@ -17,14 +17,14 @@ ms.assetid: 475de5e2-f634-4954-9edf-0027a6ba38d6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0a83f101d46a94a4ea43a85424677fc1c8da08be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918945"
 ---
 # <a name="endofrecordset-event-ado"></a>EndOfRecordset 이벤트(ADO)
-합니다 **EndOfRecordset** 이벤트의 끝을 지난 행으로 이동 하 려 할 때 호출 됩니다 합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
+**EndOfRecordset** 이벤트는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)의 끝을 지나서 행으로 이동 하려고 할 때 호출 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,23 +35,23 @@ EndOfRecordset fMoreData, adStatus, pRecordset
   
 #### <a name="parameters"></a>매개 변수  
  *fMoreData*  
- **VARIANT_BOOL** 경우는 값을 variant_true로 설정, 더 많은 행에 추가 된 나타냅니다는 **레코드 집합**.  
+ VARIANT_TRUE로 설정 된 경우 **레코드 집합**에 추가 된 행이 있음을 나타내는 **VARIANT_BOOL** 값입니다.  
   
  *adStatus*  
- [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) 상태 값입니다.  
+ [Eventstatusenum](../../../ado/reference/ado-api/eventstatusenum.md) 상태 값입니다.  
   
- 때 **EndOfRecordset** 가 호출 하 고,이 매개 변수는 설정 **adStatusOK** 이벤트를 발생 시킨 작업에 성공 하는 경우. 로 설정 되어 **adStatusCantDeny** 경우이 이벤트는이 이벤트를 발생 시킨 작업의 취소를 요청할 수 없습니다.  
+ **EndOfRecordset** 가 호출 되 면이 매개 변수는 이벤트를 발생 시킨 작업이 성공한 경우 **adstatusok** 로 설정 됩니다. 이 이벤트가이 이벤트를 발생 시킨 작업의 취소를 요청할 수 없는 경우 **adStatusCantDeny** 로 설정 됩니다.  
   
- 앞 **EndOfRecordset** 반환 되는 경우이 매개 변수를 설정 **adStatusUnwantedEvent** 후속 알림을 방지 하 합니다.  
+ **EndOfRecordset** 가 반환 되기 전에이 매개 변수를 **adStatusUnwantedEvent** 로 설정 하 여 후속 알림이 발생 하지 않도록 합니다.  
   
  *pRecordset*  
- A **레코드 집합** 개체입니다. 합니다 **레코드 집합** 이 이벤트가 발생 한입니다.  
+ **레코드 집합** 개체입니다. 이 이벤트가 발생 한 **레코드 집합** 입니다.  
   
 ## <a name="remarks"></a>설명  
- **EndOfRecordset** 이벤트는 경우에 발생할 수 있습니다 합니다 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) 작업이 실패 합니다.  
+ **EndOfRecordset** 이벤트는 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) 작업이 실패 하는 경우 발생할 수 있습니다.  
   
- 끝을 넘어 이동 하려고 시도 하는 경우이 이벤트 처리기가 호출 된 **레코드 집합** 호출 등으로 인해 개체 **MoveNext**합니다. 그러나이 이벤트에서 수를 데이터베이스에서 더 많은 레코드를 검색 하 고 끝에 추가 합니다는 **레코드 집합**합니다. 이 경우에 설정할 *fMoreData* VARIANT_TRUE를 반환 **EndOfRecordset**합니다. 그런 다음 호출 **MoveNext** 새로 검색된 된 레코드에 액세스 하려면 다시 합니다.  
+ 이 이벤트 처리기는 **MoveNext**를 호출한 결과로 **레코드 집합** 개체의 끝을 지나서 이동 하려고 할 때 호출 됩니다. 그러나이 경우에는 데이터베이스에서 더 많은 레코드를 검색 하 여 **레코드 집합**의 끝에 추가할 수 있습니다. 이 경우 *fMoreData* 을 VARIANT_TRUE로 설정 하 고 **EndOfRecordset**에서 반환 합니다. 그런 다음 **MoveNext** 를 다시 호출 하 여 새로 검색 된 레코드에 액세스 합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [ADO 이벤트 모델 예제 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+## <a name="see-also"></a>참고 항목  
+ [ADO Events 모델 예제 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO 이벤트 처리기 요약](../../../ado/guide/data/ado-event-handler-summary.md)

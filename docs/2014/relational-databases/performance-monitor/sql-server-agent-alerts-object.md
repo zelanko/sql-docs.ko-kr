@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d88041f61c2f84e510c637b71f0ebb1bbb2a97cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250933"
 ---
 # <a name="sql-server-agent-alerts-object"></a>SQL Server 에이전트, Alerts 개체
@@ -25,7 +25,7 @@ ms.locfileid: "63250933"
   
  다음 표에서는 **SQLAgent:Alerts** 카운터를 나열합니다.  
   
-|이름|Description|  
+|속성|Description|  
 |----------|-----------------|  
 |**Activated alerts**|이 카운터는 SQL Server 에이전트가 마지막으로 다시 시작된 이후 SQL Server 에이전트가 활성화한 총 경고 수를 보고합니다.|  
 |**Alerts activated/minute**|이 카운터는 마지막 시간(분) 내에 SQL Server 에이전트가 활성화한 경고의 수를 보고합니다.|  
@@ -33,7 +33,7 @@ ms.locfileid: "63250933"
 > [!NOTE]  
 >  이 SQL Server 에이전트 개체를 사용하려면 **sysadmin** 고정 서버 역할의 멤버여야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Alerts](../../ssms/agent/alerts.md)   
  [성능 개체 사용](../../ssms/agent/use-performance-objects.md)   
  [리소스 사용 모니터링&#40;시스템 모니터&#41;](monitor-resource-usage-system-monitor.md)  

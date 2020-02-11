@@ -1,5 +1,5 @@
 ---
-title: SQLSetPos를 호출 합니다. | Microsoft Docs
+title: SQLSetPos 호출 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,14 +17,14 @@ ms.assetid: 846354b8-966c-4c2c-b32f-b0c8e649cedd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c64575777fc9210c36be5d417cd3def0c2c7102a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68068682"
 ---
 # <a name="calling-sqlsetpos"></a>SQLSetPos 호출
-Odbc에서 *2.x*, 행 상태 배열에 대 한 포인터를 인수로 **SQLExtendedFetch**합니다. 호출 하 여 나중에 수정한 행 상태 배열이 **SQLSetPos**합니다. 일부 드라이버는이 배열 간에 변경 되지 않으므로 의존 **SQLExtendedFetch** 하 고 **SQLSetPos**합니다. Odbc에서 *3.x*상태 배열에 대 한 포인터는 설명자 필드 이며 따라서 응용 프로그램 쉽게 변경할 수 있습니다 다른 배열로 가리키도록 합니다. 이 경우 ODBC 문제일 수 있습니다 *3.x* ODBC를 사용 하 여 응용 프로그램이 작동 *2.x* 드라이버를 호출 하는 하지만 **SQLSetStmtAttr** 배열 상태 포인터가 설정 호출및 **SQLFetchScroll** 데이터를 인출 합니다. 드라이버 관리자에 대 한 호출 시퀀스로 매핑합니다 **SQLExtendedFetch**합니다. 다음 코드에서는 일반적으로 될 때 오류가 발생 하 드라이버 관리자를 두 번째 매핑합니다 **SQLSetStmtAttr** ODBC를 사용 하 여 작업 시 호출할 *2.x* 드라이버:  
+ODBC 2.x에서 행 상태 배열에 *대 한 포인터*는 **sqlextendedfetch**에 대 한 인수입니다. 나중에 **SQLSetPos**를 호출 하 여 행 상태 배열을 업데이트 했습니다. 일부 드라이버는이 배열이 **Sqlextendedfetch** 와 **SQLSetPos**사이에서 변경 되지 않는다는 사실에 의존 했습니다. *ODBC 3.x에서 상태*배열에 대 한 포인터는 설명자 필드 이므로 응용 프로그램에서 다른 배열을 가리키도록 쉽게 변경할 수 있습니다. ODBC *3.x 응용 프로그램* 에서 odbc *2.x 드라이버를* 사용 하 고 있지만 배열 상태 포인터를 설정 하 고 **sqlfetchscroll** 을 호출 하 여 데이터를 **인출 하는** 경우에는 문제가 발생할 수 있습니다. 드라이버 관리자는이를 **Sqlextendedfetch**에 대 한 호출 시퀀스로 매핑합니다. 다음 코드에서는 드라이버 관리자 *가 ODBC 2.x* 드라이버를 사용할 때 두 번째 **SQLSetStmtAttr** 호출을 매핑할 때 일반적으로 오류가 발생 합니다.  
   
 ```  
 SQLSetStmtAttr(hstmt, SQL_ATTR_ROW_STATUS_PTR, rgfRowStatus, 0);  
@@ -33,12 +33,12 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ROW_STATUS_PTR, rgfRowStat1, 0);
 SQLSetPos(hstmt, iRow, fOption, fLock);  
 ```  
   
- ODBC에 대 한 포인터 행 상태를 변경할 수 없는 경우 오류가 발생할 것 *2.x* 호출 사이 **SQLExtendedFetch**합니다. ODBC를 사용 하 여 작업할 때 드라이버 관리자는 다음 단계를 수행 하는 대신 *2.x* 드라이버:  
+ **Sqlextendedfetch** *호출 사이에서* ODBC 2.x의 행 상태 포인터를 변경할 방법이 없는 경우 오류가 발생 합니다. 대신, 드라이버 관리자 *는 ODBC 2.x* 드라이버를 사용 하 여 작업 하는 경우 다음 단계를 수행 합니다.  
   
-1.  내부 드라이버 관리자 플래그를 초기화 *fSetPosError* TRUE로 합니다.  
+1.  *FSetPosError* 내부 드라이버 관리자 플래그를 TRUE로 초기화 합니다.  
   
-2.  응용 프로그램 호출 하는 경우 **SQLFetchScroll**를 설정 하는 드라이버 관리자 *fSetPosError* FALSE로 합니다.  
+2.  응용 프로그램이 **Sqlfetchscroll**을 호출 하면 드라이버 관리자는 *fSetPosError* 를 FALSE로 설정 합니다.  
   
-3.  응용 프로그램을 호출할 때 **SQLSetStmtAttr** SQL_ATTR_ROW_STATUS_PTR을 설정 하려면 드라이버 관리자는 다음과 같이 설정 됩니다. *fSetPosError* 같은 toTRUE 합니다.  
+3.  응용 프로그램에서 **SQLSetStmtAttr** 를 호출 하 여 SQL_ATTR_ROW_STATUS_PTR를 설정 하는 경우 드라이버 관리자는 *FSetPosError* equal totrue를 설정 합니다.  
   
-4.  응용 프로그램을 호출할 때 **SQLSetPos**를 사용 하 여 *fSetPosError* 를 TRUE로 드라이버 관리자는 동일한 SQLSTATE HY011를 사용 하 여 SQL_ERROR를 발생 시킵니다. (특성 지금 설정할 수 없습니다) 나타내는 응용 프로그램 호출 하려고 **SQLSetPos** 행 상태 포인터를 변경한 후 하지만 호출 하기 전에 **SQLFetchScroll**합니다.
+4.  응용 프로그램이 **sqlsetpos**를 호출 하 고 *fSetPosError* 가 TRUE 인 경우 드라이버 SQL_ERROR 관리자는 SQLSTATE HY011 (지금 특성을 설정할 수 없음)을 사용 하 여 행 상태 포인터를 변경한 후 **sqlfetchscroll**을 호출 하기 전에 **sqlsetpos** 를 호출 하려고 했음을 나타낼 수 있습니다.

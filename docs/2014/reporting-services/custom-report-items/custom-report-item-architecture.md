@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a053eb55547da9030eebe9036667cca2e14606f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63264956"
 ---
 # <a name="custom-report-item-architecture"></a>사용자 지정 보고서 항목 아키텍처
@@ -32,7 +32,7 @@ ms.locfileid: "63264956"
   
  ![사용자 지정 보고서 항목 디자인 타임 구성 요소](../../../2014/reporting-services/media/customreportitemdesign-timecomponentarchitecture.gif "사용자 지정 보고서 항목 디자인 타임 구성 요소")  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [사용자 지정 보고서 항목 런타임 구성 요소 만들기](../custom-report-items/creating-a-custom-report-item-run-time-component.md)   
  [사용자 지정 보고서 항목 디자인 타임 구성 요소 만들기](../custom-report-items/creating-a-custom-report-item-design-time-component.md)   
  [방법: 사용자 지정 보고서 항목 배포](../custom-report-items/how-to-deploy-a-custom-report-item.md)  

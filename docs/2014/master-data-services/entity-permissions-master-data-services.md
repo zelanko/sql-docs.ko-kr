@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4219830c82710861ee7b079ce78d1b5859681753
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479532"
 ---
 # <a name="entity-permissions-master-data-services"></a>엔터티 권한(Master Data Services)
@@ -37,12 +37,12 @@ ms.locfileid: "65479532"
 |사용 권한|Description|  
 |----------------|-----------------|  
 |**읽기 전용**|엔터티가 표시되지만 사용자가 멤버를 추가, 제거 또는 변경할 수 없습니다.|  
-|**Update**|엔터티가 표시되고 사용자가 멤버를 추가, 제거 및 변경할 수 있습니다.|  
+|**고침**|엔터티가 표시되고 사용자가 멤버를 추가, 제거 및 변경할 수 있습니다.|  
 |**거부**|엔터티가 표시되지 않습니다.|  
   
-## <a name="see-also"></a>관련 항목  
- [모델 개체 사용 권한 할당&#40;Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)   
- [모델 개체 권한&#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
- [엔터티&#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)  
+## <a name="see-also"></a>참고 항목  
+ [모델 개체 사용 권한 할당 &#40;MDS(Master Data Services)&#41;](assign-model-object-permissions-master-data-services.md)   
+ [모델 개체 사용 권한 &#40;MDS(Master Data Services)&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
+ [엔터티 &#40;MDS(Master Data Services)&#41;](../../2014/master-data-services/entities-master-data-services.md)  
   
   

@@ -18,10 +18,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 88f1f0909e667db38c3b9b5d13bf11a2262b405b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480151"
 ---
 # <a name="attributes-master-data-services"></a>특성(Master Data Services)
@@ -30,9 +30,9 @@ ms.locfileid: "65480151"
 ## <a name="how-attributes-relate-to-other-model-objects"></a>다른 모델 개체와 특성의 관계  
  특성은 엔터티 테이블의 열로 생각할 수 있습니다. 특성 값은 특정 멤버를 설명하는 데 사용되는 값입니다.  
   
- ![테이블로 표시된 Master Data Services 엔터티](../../2014/master-data-services/media/mds-conc-entity-table.gif "테이블로 표시된 Master Data Services 엔터티")  
+ ![테이블로 표시된 MDS(Master Data Services) 엔터티](../../2014/master-data-services/media/mds-conc-entity-table.gif "테이블로 표시된 MDS(Master Data Services) 엔터티")  
   
- 다수의 특성이 포함된 엔터티를 만들 때는 특성을 특성 그룹으로 구성할 수 있습니다. 자세한 내용은 [&#40;Master Data Services&#41;](attribute-groups-master-data-services.md)을 참조하세요.  
+ 다수의 특성이 포함된 엔터티를 만들 때는 특성을 특성 그룹으로 구성할 수 있습니다. 자세한 내용은 [특성 그룹&#40;Master Data Services&#41;](attribute-groups-master-data-services.md)을 참조하세요.  
   
 ## <a name="required-attributes"></a>필수 특성  
  엔터티를 만들면 Name 및 Code 특성이 자동으로 만들어집니다. Code는 값이 있어야 하고 엔터티 내에서 고유해야 합니다. Name 및 Code 특성은 제거할 수 없습니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "65480151"
 -   부동 소수점 숫자가 포함된 경우 값은 *왕복* 이 아닐 수 있습니다. 작업이 원래 부동 소수점 숫자를 다른 형식으로 변환하고 역 작업이 변환된 형식을 부동 소수점 숫자로 다시 변환한 다음 최종 부동 소수점 숫자가 원래 부동 소수점 숫자와 같을 경우 값을 왕복이라고 합니다. 하나 이상의 최소 유효 자릿수가 변환 중에 손실되거나 변경되어 왕복이 실패할 수 있습니다.  
   
 ## <a name="attribute-examples"></a>특성 예  
- 다음 예제에서는 엔터티는 특성을 가집니다. 이름, 코드, Subcategory, StandardCost, ListPrice 및 FilePhoto 합니다. 있습니다. 각 멤버는 단일 특성 값 행으로 표시됩니다.  
+ 다음 예의 엔터티에는 멤버를 설명하는 Name, Code, Subcategory, StandardCost, ListPrice 및 FilePhoto 특성이 있습니다. 각 멤버는 단일 특성 값 행으로 표시됩니다.  
   
  ![Bike 제품 엔터티 테이블](../../2014/master-data-services/media/mds-conc-entity-table-w-data.gif "Bike 제품 엔터티 테이블")  
   
@@ -78,26 +78,26 @@ ms.locfileid: "65480151"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|새 자유 형식 텍스트 특성을 만듭니다.|[텍스트 특성 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)|  
-|새 자유 형식 숫자 특성을 만듭니다.|[숫자 특성 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-numeric-attribute-master-data-services.md)|  
-|새 자유 형식 링크 특성을 만듭니다.|[링크 특성 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-link-attribute-master-data-services.md)|  
-|새 파일 특성을 만듭니다.|[파일 특성 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)|  
-|새 도메인 기반 특성을 만듭니다.|[도메인 기반 특성 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
-|기존 특성의 이름을 변경합니다.|[특성 이름 변경 &#40;Master Data Services&#41;](change-an-attribute-name-and-data-type-master-data-services.md)|  
-|추적 그룹을 변경하는 기존 특성을 추가합니다.|[변경 내용 추적 그룹에 특성 추가&#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
-|기존 특성을 삭제합니다.|[특성 삭제&#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-attribute-master-data-services.md)|  
+|새 자유 형식 텍스트 특성을 만듭니다.|[텍스트 특성 &#40;MDS(Master Data Services)를 만듭니다&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)|  
+|새 자유 형식 숫자 특성을 만듭니다.|[숫자 특성 &#40;MDS(Master Data Services)를 만듭니다&#41;](../../2014/master-data-services/create-a-numeric-attribute-master-data-services.md)|  
+|새 자유 형식 링크 특성을 만듭니다.|[MDS(Master Data Services) &#40;링크 특성을 만듭니다&#41;](../../2014/master-data-services/create-a-link-attribute-master-data-services.md)|  
+|새 파일 특성을 만듭니다.|[MDS(Master Data Services)&#41;&#40;파일 특성을 만듭니다.](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)|  
+|새 도메인 기반 특성을 만듭니다.|[도메인 기반 특성 &#40;MDS(Master Data Services)를 만듭니다&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
+|기존 특성의 이름을 변경합니다.|[특성 이름을 MDS(Master Data Services) &#40;변경&#41;](change-an-attribute-name-and-data-type-master-data-services.md)|  
+|추적 그룹을 변경하는 기존 특성을 추가합니다.|[특성을 변경 내용 추적 그룹 &#40;MDS(Master Data Services)에 추가&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
+|기존 특성을 삭제합니다.|[MDS(Master Data Services) &#40;특성을 삭제&#41;](../../2014/master-data-services/delete-an-attribute-master-data-services.md)|  
 |특성 순서를 변경합니다.|[특성 순서 변경](../../2014/master-data-services/change-the-order-of-attributes.md)|  
   
 ## <a name="related-content"></a>관련 내용  
   
--   [도메인 기반 특성&#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
+-   [도메인 기반 특성 &#40;MDS(Master Data Services)&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
   
--   [특성 그룹&#40;Master Data Services&#41;](attribute-groups-master-data-services.md)  
+-   [특성 그룹 &#40;MDS(Master Data Services)&#41;](attribute-groups-master-data-services.md)  
   
--   [멤버&#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
+-   [멤버가 MDS(Master Data Services)를 &#40;&#41;](../../2014/master-data-services/members-master-data-services.md)  
   
--   [리프 권한&#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)  
+-   [리프 권한 &#40;MDS(Master Data Services)&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)  
   
--   [통합 사용 권한 &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
+-   [MDS(Master Data Services)&#41;&#40;통합 된 사용 권한](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
   
   

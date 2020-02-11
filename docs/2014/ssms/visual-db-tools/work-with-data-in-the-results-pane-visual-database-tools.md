@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d5f3dffc7661fc5843dcd220f27beb1117a85729
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63313768"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>결과 창에서 데이터 작업(Visual Database Tools)
@@ -115,12 +115,12 @@ ms.locfileid: "63313768"
 ### <a name="what-can-not-be-represented-fully"></a>완전히 표현할 수 없는 항목  
  데이터베이스에서 결과 창으로 반환되는 내용은 현재 사용 중인 데이터 원본의 공급자를 통해 주로 제어됩니다. 모든 데이터베이스 관리 시스템의 데이터를 결과 창에서 항상 변환할 수 있는 것은 아닙니다. 이와 같은 예외적인 경우는 다음과 같습니다.  
   
--   결과 창에서 작업하는 대부분의 사용자에게는 일반적으로 이진 데이터 형식이 유용하지 않으며 이러한 데이터를 다운로드하는 데도 아주 많은 시간이 필요할 수 있습니다. 로 표시 됩니다 있도록  *\<이진 데이터 >* 하거나 *Null*합니다.  
+-   결과 창에서 작업하는 대부분의 사용자에게는 일반적으로 이진 데이터 형식이 유용하지 않으며 이러한 데이터를 다운로드하는 데도 아주 많은 시간이 필요할 수 있습니다. 따라서 * \<이진 데이터>* 또는 *Null*로 표시 됩니다.  
   
--   경우에 따라 전체 자릿수와 소수 자릿수가 유지되지 않을 수 있습니다. 예를 들어 결과 창에서 전체 자릿수를 27까지 지원하는데 데이터를 더 높은 정밀도 사용 하 여 데이터 형식의 경우 데이터 초과 부분이 잘리거나으로 표시 될 수 있습니다  *\<데이터를 읽을 수 없습니다 >* 합니다.  
+-   경우에 따라 전체 자릿수와 소수 자릿수가 유지되지 않을 수 있습니다. 예를 들어 결과 창에서 전체 자릿수를 27까지 지원하는데 데이터의 전체 자릿수가 더 큰 데이터 형식인 경우 데이터를 자르거나 * \<>데이터를 읽을 수 없는 *것으로 표시 될 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [쿼리 관련 기본 작업 수행 &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools를 &#40;쿼리를 사용 하 여 기본 작업을 수행&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   
  [검색 조건 지정&#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)  
   
   

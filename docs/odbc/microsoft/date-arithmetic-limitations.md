@@ -14,11 +14,11 @@ ms.assetid: 4ae40066-5911-4d32-937a-040bacc853ec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1c15a80ec72e17e1c290a4cf5832b96ec34c3cc7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68081879"
 ---
 # <a name="date-arithmetic-limitations"></a>날짜 산술 제한 사항
-날짜 산술 빼기에서 날짜 데이터 형식의 날짜 데이터 형식에 대 한 지원 되지 않습니다.
+날짜 데이터 형식에서 date 데이터 형식을 빼면 날짜 산술 연산을 지원 하지 않습니다.

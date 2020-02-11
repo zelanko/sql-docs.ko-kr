@@ -1,5 +1,5 @@
 ---
-title: 동적 관리 뷰 (TRANSACT-SQL) | Microsoft Docs
+title: 동적 관리 뷰 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/29/2017
 ms.prod: sql
@@ -25,10 +25,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6ab6b2c35bb3507dbf7debc4b2e0d5f3a27df937
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68043133"
 ---
 # <a name="system-dynamic-management-views"></a>시스템 동적 관리 뷰
@@ -46,7 +46,9 @@ ms.locfileid: "68043133"
 -   데이터베이스 범위 동적 관리 뷰 및 함수. 이 유형에는 데이터베이스에 대한 VIEW DATABASE STATE 권한이 필요합니다.  
   
 ## <a name="querying-dynamic-management-views"></a>동적 관리 뷰 쿼리  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 두 부분, 세 부분 또는 네 부분으로 된 이름을 사용하여 동적 관리 뷰를 참조할 수 있습니다. 한편 동적 관리 함수는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 두 부분이나 세 부분으로 된 이름을 사용하여 참조할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 한 부분으로 된 이름을 사용하여 동적 관리 뷰 및 함수를 참조할 수는 없습니다.  
+ 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 두 부분, 세 부분 또는 네 부분으로 된 이름을 사용하여 동적 관리 뷰를 참조할 수 있습니다. 한편 동적 관리 함수는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 두 부분이나 세 부분으로 된 이름을 사용하여 참조할 수 있습니다. 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 한 부분으로 된 이름을 사용하여 동적 관리 뷰 및 함수를 참조할 수는 없습니다.  
   
  모든 동적 관리 뷰 및 함수는 sys 스키마에 있어야 하며 dm_* 명명 규칙을 따라야 합니다. 동적 관리 뷰 또는 함수를 사용할 경우 뷰 또는 함수 이름에 sys 스키마 접두사를 지정해야 합니다. 예를 들어 dm_os_wait_stats 동적 관리 뷰를 쿼리하려면 다음 쿼리를 실행합니다.  
   
@@ -66,24 +68,24 @@ FROM sys.dm_os_wait_stats;
   
 |||  
 |-|-|  
-|[Always On 가용성 그룹 동적 관리 뷰 및 함수 (TRANSACT-SQL)](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)|[메모리 최적화 테이블 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)|  
-|[변경 데이터 캡처 관련 동적 관리 뷰&#40;Transact-SQL&#41;](change-data-capture-sys-dm-cdc-errors.md)|[개체 관련 동적 관리 뷰 및 함수 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)|  
-|[변경 내용 추적 관련 동적 관리 뷰](change-tracking-sys-dm-tran-commit-table.md)|[쿼리 알림 관련된 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](query-notifications-sys-dm-qn-subscriptions.md)|  
-|[공용 언어 런타임 관련 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)|[복제 관련 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)|  
-|[데이터베이스 미러링 관련된 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](database-mirroring-sys-dm-db-mirroring-auto-page-repair.md)|[리소스 관리자 관련 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)|  
-|[데이터베이스 관련 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)|[보안 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)|  
-|[실행 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)|[서버 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql.md)|  
-|[확장 이벤트 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)|[Service Broker 관련 동적 관리 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)|  
-|[Filestream 및 FileTable 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)|[공간 데이터 관련 동적 관리 뷰 및 함수 &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/c542ac38-451f-43a5-bf8c-4edd38bb738e)|  
-|[전체 텍스트 검색 및 의미 체계 검색 동적 관리 뷰 및 함수 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)|[SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)|  
-|[지리적 복제 동적 관리 뷰 및 함수 &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)|[SQL Server 운영 체제 관련 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)|  
-|[인덱스 관련된 동적 관리 뷰 및 함수 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)|[Stretch Database 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/1193efce-a105-49a9-a8b8-26b063485567)|  
-|[I O 관련 동적 관리 뷰 및 함수 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)|[트랜잭션 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)|  
+|[Always On 가용성 그룹 동적 관리 뷰 및 함수 (Transact-sql)](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)|[메모리 액세스에 최적화 된 테이블 동적 관리 뷰 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)|  
+|[변경 데이터 캡처 관련 동적 관리 뷰&#40;Transact-SQL&#41;](change-data-capture-sys-dm-cdc-errors.md)|[Transact-sql&#41;&#40;개체 관련 동적 관리 뷰 및 함수](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)|  
+|[변경 내용 추적 관련 동적 관리 뷰](change-tracking-sys-dm-tran-commit-table.md)|[쿼리 알림 관련 동적 관리 뷰 &#40;Transact-sql&#41;](query-notifications-sys-dm-qn-subscriptions.md)|  
+|[공용 언어 런타임 관련 동적 관리 뷰 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)|[복제 관련 동적 관리 뷰 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)|  
+|[Transact-sql&#41;&#40;데이터베이스 미러링 관련 동적 관리 뷰](database-mirroring-sys-dm-db-mirroring-auto-page-repair.md)|[Resource Governor 관련 된 동적 관리 뷰 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)|  
+|[Transact-sql&#41;&#40;데이터베이스 관련 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)|[보안 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)|  
+|[Transact-sql&#41;&#40;관련 동적 관리 뷰 및 함수 실행](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)|[Transact-sql&#41;&#40;서버 관련 동적 관리 뷰 및 함수](../../relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql.md)|  
+|[확장 이벤트 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)|[Service Broker 관련 된 동적 관리 뷰 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)|  
+|[Transact-sql&#41;&#40;Filestream 및 FileTable 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)|[Transact-sql&#41;&#40;공간 데이터 관련 동적 관리 뷰 및 함수](https://msdn.microsoft.com/library/c542ac38-451f-43a5-bf8c-4edd38bb738e)|  
+|[Transact-sql&#41;전체 텍스트 검색 및 의미 체계 검색 동적 관리 뷰 및 함수 &#40;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)|[Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)|  
+|[지역에서 복제 동적 관리 뷰 및 함수 &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)|[Transact-sql&#41;&#40;운영 체제 관련 동적 관리 뷰 SQL Server](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)|  
+|[Transact-sql&#41;&#40;인덱스 관련 동적 관리 뷰 및 함수](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)|[Stretch Database 동적 관리 뷰 &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/1193efce-a105-49a9-a8b8-26b063485567)|  
+|[Transact-sql&#41;&#40;동적 관리 뷰 및 함수](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)|[트랜잭션 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)|  
 
   
-## <a name="see-also"></a>관련 항목  
- [GRANT 서버 사용 권한 &#40;TRANSACT-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md)   
- [GRANT 데이터베이스 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)   
- [시스템 뷰 &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;&#40;서버 사용 권한 부여](../../t-sql/statements/grant-server-permissions-transact-sql.md)   
+ [Transact-sql&#41;&#40;데이터베이스 사용 권한 부여](../../t-sql/statements/grant-database-permissions-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 뷰](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

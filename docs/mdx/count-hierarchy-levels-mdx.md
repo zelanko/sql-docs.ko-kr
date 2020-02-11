@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 17fe804de8bf2c20581ca5c00bee3a28dbce4d55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68045213"
 ---
 # <a name="count-hierarchy-levels-mdx"></a>Count(계층 수준)(MDX)
@@ -47,10 +47,10 @@ Select Measures.X ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [Count &#40;차원&#41; &#40;MDX&#41;](../mdx/count-dimension-mdx.md)   
- [Count &#40;튜플&#41; &#40;MDX&#41;](../mdx/count-tuple-mdx.md)   
- [개수&#40;Set&#41;&#40;MDX&#41;](../mdx/count-set-mdx.md)   
- [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [MDX&#41; &#40;&#40;차원 수&#41;](../mdx/count-dimension-mdx.md)   
+ [MDX&#41; &#40;&#40;수&#41;](../mdx/count-tuple-mdx.md)   
+ [MDX&#41; &#40;&#40;집합 수&#41;](../mdx/count-set-mdx.md)   
+ [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

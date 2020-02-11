@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8245c048d4c1a1314835ad70fc7305c7afabd3f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63284468"
 ---
 # <a name="save-queries-visual-database-tools"></a>쿼리 저장(Visual Database Tools)
@@ -27,19 +27,20 @@ ms.locfileid: "63284468"
   
 1.  쿼리를 만듭니다.  
   
-2.  **파일** 메뉴에서 **<query_name> 저장**을 클릭합니다.  
+2.  
+  **파일** 메뉴에서 **<query_name> 저장**을 클릭합니다.  
   
     > [!NOTE]  
     >  시스템에서 자동으로 선택된 이름이 새로 만든 쿼리에 지정됩니다. 쿼리의 고유 이름을 직접 선택하려면 **다른 이름으로 <query_name> 저장**을 선택합니다.  
   
 3.  솔루션 탐색기에서 프로젝트의 쿼리 폴더에 쿼리가 저장됩니다.  
   
-## <a name="see-also"></a>관련 항목  
- [쿼리를 만들 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [쿼리 실행 &#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)   
- [쿼리 변경 내용 취소 &#40;Visual Database Tools&#41;](discard-changes-made-to-queries-visual-database-tools.md)   
- [방법 도움말 항목을 쿼리 및 뷰 디자인 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
- [쿼리의 형식은 &#40;Visual Database Tools&#41;](types-of-queries-visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools를 &#40;쿼리 만들기&#41;](visual-database-tools.md)   
+ [Visual Database Tools를 &#40;쿼리 실행&#41;](run-queries-visual-database-tools.md)   
+ [Visual Database Tools&#41;&#40;쿼리에 대 한 변경 내용을 취소 합니다.](discard-changes-made-to-queries-visual-database-tools.md)   
+ [쿼리 및 뷰 디자인 방법 도움말 항목 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [Visual Database Tools를 &#40;쿼리 유형&#41;](types-of-queries-visual-database-tools.md)   
  [쿼리 관련 기본 작업 수행&#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

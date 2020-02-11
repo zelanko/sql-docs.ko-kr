@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f567da3318c7b8fff799475c638c1086613f45b
-ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67826331"
 ---
 # <a name="powerpivot-authentication-and-authorization"></a>PowerPivot 인증 및 권한 부여
@@ -24,15 +24,15 @@ ms.locfileid: "67826331"
   
  이 항목의 특정 섹션을 보려면 다음 링크를 클릭하십시오.  
   
- [클래식 모드 로그인 요구 사항을 사용한 Windows 인증](power-pivot-authentication-and-authorization.md#bkmk_auth)  
+ [클래식 모드 로그인 요구 사항을 사용 하는 Windows 인증](power-pivot-authentication-and-authorization.md#bkmk_auth)  
   
- [사용자 권한 부여를 요구 하는 PowerPivot 작업](#UserConnections)  
+ [사용자 권한 부여를 요구하는 PowerPivot 작업](#UserConnections)  
   
- [PowerPivot 데이터 액세스에 대 한 SharePoint 사용 권한](#Permissions)  
+ [PowerPivot 데이터 액세스에 대한 SharePoint 사용 권한](#Permissions)  
   
- [PowerPivot 통합 문서에 대 한 Excel 서비스 보안 고려 사항](#excel)  
+ [Excel 서비스 보안 고려 사항: PowerPivot 통합 문서](#excel)  
   
-##  <a name="bkmk_auth"></a> 클래식 모드 로그인 요구 사항을 사용한 Windows 인증  
+##  <a name="bkmk_auth"></a>클래식 모드 로그인 요구 사항을 사용 하는 Windows 인증  
  SharePoint용 PowerPivot은 SharePoint에 제공되는 인증 옵션 중 일부만 지원합니다. 즉, SharePoint용 PowerPivot 배포에서는 사용 가능한 인증 옵션 중 Windows 인증만 지원합니다. 또한 로그인을 실행하는 웹 애플리케이션은 클래식 모드로 구성되어야 합니다.  
   
  SharePoint용 PowerPivot 배포의 Analysis Services 데이터 엔진이 Windows 인증만 지원하므로 Windows 인증은 필수입니다. Excel 서비스는 MSOLAP OLE DB 공급자를 통해 Analysis Services에 대한 연결을 설정할 때 NTLM 또는 Kerberos 프로토콜을 통해 인증되는 Windows 사용자 ID를 사용합니다.  
@@ -56,11 +56,12 @@ ms.locfileid: "67826331"
   
 2.  웹 애플리케이션을 선택합니다.  
   
-3.  **인증 공급자**를 클릭합니다.  
+3.  
+  **인증 공급자**를 클릭합니다.  
   
 4.  각 영역에 대해 공급자가 하나씩 있고 기본 영역이 Windows로 설정되었는지 확인합니다.  
   
-##  <a name="UserConnections"></a> 사용자 권한 부여를 요구 하는 PowerPivot 작업  
+##  <a name="UserConnections"></a>사용자 권한 부여를 요구 하는 PowerPivot 작업  
  SharePoint 인증은 PowerPivot 쿼리 및 데이터 처리에 대한 모든 수준의 액세스에 독점적으로 사용됩니다.  
   
  Analysis Services 역할 기반 권한 부여 모델은 지원되지 않습니다. 셀, 행 또는 테이블 수준에서 PowerPivot 데이터에 대한 역할 기반 권한이 부여되지 않습니다. 따라서 통합 문서의 여러 부분에 각각 보안을 설정하여 특정 사용자에게 해당 부분에 포함된 중요 데이터에 대한 액세스를 허용하거나 거부할 수 없습니다. 포함된 PowerPivot 데이터는 모두 SharePoint 라이브러리의 Excel 통합 문서에 대해 보기 권한이 있는 사용자가 사용할 수 있습니다.  
@@ -71,9 +72,9 @@ ms.locfileid: "67826331"
   
 -   사용 가능한 데이터가 없을 때 캐시 또는 라이브러리에서 PowerPivot 데이터를 로드하는 경우. 시스템에 아직 로드되지 않은 PowerPivot 데이터에 대한 데이터 연결 요청이 이루어지면 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 인스턴스에서 SharePoint 사용자 ID를 사용하여 콘텐츠 라이브러리에서 데이터 원본을 검색한 후 메모리로 로드합니다.  
   
--   데이터 원본의 업데이트된 복사본을 콘텐츠 라이브러리의 통합 문서에 저장하는 데이터 새로 고침 작업을 수행하는 경우. 이 경우 실제 로그온 작업은 Secure Store Service의 대상 애플리케이션에서 검색되는 사용자 이름과 암호를 사용하여 수행됩니다. 자격 증명은 PowerPivot 무인 데이터 새로 고침 계정이거나 만들 때 데이터 새로 고침 일정에 함께 저장된 자격 증명일 수 있습니다. 자세한 내용은 [PowerPivot 데이터 새로 고침을 위한 저장 된 자격 증명 구성 &#40;SharePoint 용 PowerPivot&#41; ](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md) 하 고 [PowerPivot 무인 데이터 새로 고침 계정 구성 &#40; PowerPivot for SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)합니다.  
+-   데이터 원본의 업데이트된 복사본을 콘텐츠 라이브러리의 통합 문서에 저장하는 데이터 새로 고침 작업을 수행하는 경우. 이 경우 실제 로그온 작업은 Secure Store Service의 대상 애플리케이션에서 검색되는 사용자 이름과 암호를 사용하여 수행됩니다. 자격 증명은 PowerPivot 무인 데이터 새로 고침 계정이거나 만들 때 데이터 새로 고침 일정에 함께 저장된 자격 증명일 수 있습니다. 자세한 내용은 powerpivot [데이터 새로 고침을 위한 저장 된 자격 증명 구성 &#40;SharePoint용 PowerPivot&#41;](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md) 및 [Powerpivot 무인 데이터 새로 고침 계정 &#40;SharePoint용 PowerPivot&#41;구성 ](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)을 참조 하세요.  
   
-##  <a name="Permissions"></a> PowerPivot 데이터 액세스에 대 한 SharePoint 사용 권한  
+##  <a name="Permissions"></a>PowerPivot 데이터 액세스에 대 한 SharePoint 사용 권한  
  PowerPivot 통합 문서 게시, 관리 및 보안은 SharePoint 통합을 통해서만 지원됩니다. SharePoint 서버에서는 데이터에 대한 합법적인 액세스를 보장하는 인증 및 권한 부여 하위 시스템을 제공합니다. SharePoint 팜 외부에서 PowerPivot 통합 문서를 안전하게 배포할 수 있는 시나리오는 지원되지 않습니다.  
   
  서버 상의 PowerPivot 데이터에 대한 액세스는 보기 이상의 권한을 보유한 사용자에게 읽기 전용으로 제공됩니다. 참가 권한이 있으면 파일을 추가 및 편집할 수 있습니다. PowerPivot 데이터를 변경하려면 PowerPivot for Excel이 설치된 Excel 데스크톱 애플리케이션으로 통합 문서를 다운로드해야 합니다. 파일에 대한 참가 권한이 있는 사용자는 파일을 로컬로 다운로드하여 수정한 다음 SharePoint에 다시 저장할 수 있습니다.  
@@ -86,16 +87,16 @@ ms.locfileid: "67826331"
 |----------------------|------------------------|  
 |팜 또는 서비스 관리자|서비스 및 애플리케이션 설치, 설정 및 구성<br /><br /> PowerPivot 관리 대시보드 사용 및 관리 보고서 보기|  
 |모든 권한|사이트 모음 수준에서 PowerPivot 기능 통합 활성화<br /><br /> PowerPivot 갤러리 라이브러리 만들기<br /><br /> 데이터 피드 라이브러리 만들기|  
-|참가|PowerPivot 통합 문서 추가, 편집, 삭제 및 다운로드<br /><br /> 데이터 새로 고침 구성<br /><br /> SharePoint 사이트에서 PowerPivot 통합 문서를 기반으로 새 통합 문서 및 보고서 만들기<br /><br /> 데이터 피드 라이브러리에서 데이터 서비스 문서 만들기|  
-|읽기|통합 문서의 URL을 명시적으로 (예: Excel의 데이터 연결 마법사)에 연결 대화 상자에서 입력, 외부 데이터 원본으로 PowerPivot 통합 문서에 액세스 합니다.|  
+|기고|PowerPivot 통합 문서 추가, 편집, 삭제 및 다운로드<br /><br /> 데이터 새로 고침 구성<br /><br /> SharePoint 사이트에서 PowerPivot 통합 문서를 기반으로 새 통합 문서 및 보고서 만들기<br /><br /> 데이터 피드 라이브러리에서 데이터 서비스 문서 만들기|  
+|읽기|PowerPivot 통합 문서를 외부 데이터 원본으로 액세스 합니다 .이 경우 통합 문서 URL은 Excel의 데이터 연결 마법사와 같은 연결 대화 상자에서 명시적으로 입력 됩니다.|  
 |보기만|PowerPivot 통합 문서 보기<br /><br /> 데이터 새로 고침 기록 보기<br /><br /> 로컬 통합 문서를 SharePoint 사이트의 PowerPivot 통합 문서에 연결하여 해당 데이터를 다른 방식으로 용도 변경<br /><br /> 통합 문서의 스냅샷 다운로드. 스냅샷은 데이터의 정적 복사본이며 슬라이서, 필터, 수식 또는 데이터 연결을 포함하지 않습니다. 스냅샷의 콘텐츠는 브라우저 창에서 셀 값을 복사할 때와 비슷합니다.|  
   
-##  <a name="excel"></a> PowerPivot 통합 문서에 대 한 Excel 서비스 보안 고려 사항  
+##  <a name="excel"></a>PowerPivot 통합 문서에 대 한 Excel 서비스 보안 고려 사항  
  PowerPivot 서버 쪽 쿼리는 Excel 서비스와 매우 밀접하게 연관되어 있습니다. 제품 통합은 문서 수준에서 시작되며 PowerPivot 통합 문서는 PowerPivot 데이터를 포함하거나 참조하는 Excel 통합 문서 파일(.xlsx)입니다. PowerPivot 통합 문서에 대해서는 별도의 파일 확장명이 없습니다.  
   
  SharePoint 사이트에서 PowerPivot 통합 문서를 연 경우 Excel 서비스는 포함된 PowerPivot 데이터 연결 문자열을 읽어서 해당 요청을 로컬 SQL Server Analysis Services OLE DB 공급자로 전달합니다. 그러면 공급자는 연결 정보를 팜의 PowerPivot 서버로 전달합니다. 두 서버 간에 요청이 원활하게 전달되려면 SharePoint용 PowerPivot에 필요한 설정을 사용하도록 Excel 서비스를 구성해야 합니다.  
   
- Excel 서비스에서 보안 관련 구성 설정은 신뢰할 수 있는 위치, 신뢰할 수 있는 데이터 공급자 및 신뢰할 수 있는 데이터 연결 라이브러리에서 지정됩니다. 다음 표에서는 PowerPivot 데이터 액세스를 허용하거나 개선하는 설정에 대해 설명합니다. 아래에 나와 있지 않은 설정은 PowerPivot 서버 연결에 영향을 주지 않습니다. "Excel 서비스 설정" 섹션을 참조 하는 이러한 설정을 단계별로 지정 하는 방법에 대 한 지침 [초기 구성 &#40;SharePoint 용 PowerPivot&#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)합니다.  
+ Excel 서비스에서 보안 관련 구성 설정은 신뢰할 수 있는 위치, 신뢰할 수 있는 데이터 공급자 및 신뢰할 수 있는 데이터 연결 라이브러리에서 지정됩니다. 다음 표에서는 PowerPivot 데이터 액세스를 허용하거나 개선하는 설정에 대해 설명합니다. 아래에 나와 있지 않은 설정은 PowerPivot 서버 연결에 영향을 주지 않습니다. 이러한 설정을 단계별로 지정 하는 방법에 대 한 지침은 [초기 구성 &#40;SharePoint용 PowerPivot&#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)에서 "Excel 서비스 설정" 섹션을 참조 하세요.  
   
 > [!NOTE]  
 >  대부분의 보안 관련 설정은 신뢰할 수 있는 위치에 적용됩니다. 기본값을 유지하거나 다른 사이트에 대해 각각 다른 값을 사용하려는 경우에는 PowerPivot 데이터가 포함된 사이트에 추가로 신뢰할 수 있는 위치를 만든 다음 해당 사이트에만 다음 설정을 구성할 수 있습니다. 자세한 내용은 [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)을 참조하세요.  
@@ -108,11 +109,11 @@ ms.locfileid: "67826331"
 ||새로 고칠 때 경고|PowerPivot 갤러리를 사용하여 통합 문서 및 보고서를 저장하는 경우 이 값을 사용하지 않도록 설정해야 합니다. PowerPivot 갤러리에는 열 때마다 새로 고침 및 새로 고칠 때 경고가 모두 해제되어 있을 경우 가장 잘 작동하는 문서 미리 보기 기능이 있습니다.|  
 |신뢰할 수 있는 데이터 공급자|MSOLAP.4<br /><br /> MSOLAP.5|MSOLAP.4는 기본적으로 포함되지만 PowerPivot 데이터에 액세스하려면 MSOLAP.4 공급자가 SQL Server 2008 R2 버전이어야 합니다.<br /><br /> MSOLAP.5는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전의 SharePoint용 PowerPivot과 함께 설치됩니다.<br /><br /> 신뢰할 수 있는 데이터 공급자 목록에서 이 공급자를 제거하지 마십시오. 경우에 따라 팜의 다른 SharePoint 서버에 이 공급자에 대한 복사본을 추가로 설치해야 할 수도 있습니다. 자세한 내용은 [SharePoint 서버에서 Analysis Services OLE DB 공급자 설치](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)를 참조하세요.|  
 |신뢰할 수 있는 데이터 연결 라이브러리|(선택 사항)|PowerPivot 통합 문서에서 Office 데이터 연결 파일(.odc)을 사용할 수 있습니다. .odc 파일을 사용하여 로컬 PowerPivot 통합 문서에 연결 정보를 제공할 경우 동일한 .odc 파일을 이 라이브러리에 추가할 수 있습니다.|  
-|사용자 정의 함수 어셈블리|이 오류에는 이 작업을 적용할 수 없습니다.|SharePoint용 PowerPivot은 Excel 서비스용으로 빌드하고 배포한 사용자 정의 함수 어셈블리를 무시합니다. 특정 동작에 대해 사용자 정의 어셈블리를 사용해야 할 경우에도 PowerPivot 쿼리는 사용자 정의 함수를 사용하지 않고 처리됩니다.|  
+|사용자 정의 함수 어셈블리|해당 사항 없음|SharePoint용 PowerPivot은 Excel 서비스용으로 빌드하고 배포한 사용자 정의 함수 어셈블리를 무시합니다. 특정 동작에 대해 사용자 정의 어셈블리를 사용해야 할 경우에도 PowerPivot 쿼리는 사용자 정의 함수를 사용하지 않고 처리됩니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [PowerPivot 서비스 계정 구성](configure-power-pivot-service-accounts.md)   
- [구성 PowerPivot 무인된 데이터 새로 고침 계정 &#40;SharePoint 용 PowerPivot&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)   
+ [PowerPivot 무인 데이터 새로 고침 계정 &#40;SharePoint용 PowerPivot를 구성&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)   
  [중앙 관리에서 PowerPivot 사이트에 대 한 신뢰할 수 있는 위치 만들기](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [PowerPivot 보안 아키텍처](https://go.microsoft.com/fwlink/?linkID=220970)  
   

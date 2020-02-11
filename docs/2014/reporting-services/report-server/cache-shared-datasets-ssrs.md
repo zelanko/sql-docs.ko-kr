@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8fcb3e8c423e629a33a0c173e3264ee11ee178f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104179"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>공유 데이터 세트 캐시(SSRS)
@@ -53,7 +53,7 @@ ms.locfileid: "66104179"
   
  특정 매개 변수 조합에 대한 쿼리 결과가 캐시에 있는 동안 처리를 위해 실행되는 각 보고서에 해당 매개 변수 값이 지정되어 있는 공유 데이터 세트에 대한 참조가 포함되어 있는 경우 이 보고서는 캐시된 데이터를 사용합니다.  
   
- 캐시에 있는 데이터가 만료되기 전까지의 보관 기간을 지정할 수 있습니다. 자세한 내용은 [캐싱 페이지, 공유 데이터 집합&#40;보고서 관리자&#41;](../caching-page-shared-datasets-report-manager.md)을 참조하세요.  
+ 캐시에 있는 데이터가 만료되기 전까지의 보관 기간을 지정할 수 있습니다. 자세한 내용은 [캐싱 페이지, 공유 데이터 세트&#40;보고서 관리자&#41;](../caching-page-shared-datasets-report-manager.md)을 참조하세요.  
   
 ## <a name="preloading-the-cache"></a>캐시 미리 로드  
  캐시 새로 고침 계획을 만들어 캐시를 미리 로드할 수 있습니다. 새로 고침 계획을 만들면 항목별 일정 또는 공유 일정을 사용하여 캐시를 새로 고칠 빈도를 지정할 수 있습니다. 동일한 항목에 대해 여러 캐시 항목이 생성되는 것을 방지하려면 지정하는 일정에서 외부 데이터 원본에 대한 쿼리 처리 시간이 충분해야 합니다. 예를 들어 쿼리 실행에 20분이 걸리는 경우 새로 고침 일정은 20분보다 커야 합니다. 자세한 내용은 [Schedules](../subscriptions/schedules.md)을(를) 참조하세요.  
@@ -95,7 +95,7 @@ ms.locfileid: "66104179"
   
  공유 데이터 세트에 대한 캐시 새로 고침 계획을 업데이트해도 이미 처리된 보고서에는 영향을 주지 않습니다. 캐시 새로 고침 계획을 업데이트하는 경우 나중에 해당 공유 데이터 세트를 참조하는 보고서를 실행하는 경우에만 영향이 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [공유 데이터 집합 관리](../report-data/manage-shared-datasets.md)  
+## <a name="see-also"></a>참고 항목  
+ [공유 데이터 세트 관리](../report-data/manage-shared-datasets.md)  
   
   

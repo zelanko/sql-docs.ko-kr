@@ -13,15 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6ada58ff37b3fb7dd2760427483b0935d9bc47cb
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67727735"
 ---
-# <a name="mssqlserver1505"></a>MSSQLSERVER_1505
+# <a name="mssqlserver_1505"></a>MSSQLSERVER_1505
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -50,7 +50,7 @@ ms.locfileid: "67727735"
   
  오류 메시지 1505는 고유성 제약 조건을 위반한 첫 번째 행을 반환하므로 테이블에 다른 중복 행이 있을 수 있습니다. 모든 중복 행을 찾으려면 지정된 테이블을 쿼리하고 GROUP BY 및 HAVING 절을 사용하여 중복 행을 반환하십시오. 예를 들어 다음 쿼리는 **Employee** 테이블에서 이름과 성이 중복되는 행을 반환합니다.  
   
- SELECT LastName, FirstName, count(\*) FROM dbo.Employee GROUP BY LastName, FirstName HAVING count(\*) > 1;  
+ Dbo에서 LastName, FirstName, count\*()를 선택 합니다. LastName 별 직원 그룹, 개수 (\*)를 포함 하는 FirstName > 1;  
   
 ## <a name="user-action"></a>사용자 동작  
  다음과 같은 해결 방법을 고려해 보십시오.  
@@ -59,9 +59,9 @@ ms.locfileid: "67727735"
   
 -   고유 인덱스 또는 제약 조건을 만들 열을 선택할 때는 NOT NULL로 정의된 열을 선택합니다. 이렇게 하면 둘 이상의 행에서 키 값이 NULL인 경우 발생하는 고유성 위반의 가능성을 없앨 수 있습니다.  
   
--   중복 값이 데이터 입력 오류로 인한 것이면 데이터를 직접 수정한 다음 인덱스나 제약 조건을 만듭니다. 테이블에서 중복 행을 제거하는 방법에 대한 자세한 내용은 기술 자료 문서 139444: [SQL Server의 테이블에서 중복 행을 제거하는 방법](https://support.microsoft.com/kb/139444)을 참조하세요.  
+-   중복 값이 데이터 입력 오류로 인한 것이면 데이터를 직접 수정한 다음 인덱스나 제약 조건을 만듭니다. 테이블에서 중복 행을 제거하는 방법에 대한 자세한 내용은 기술 자료 문서 139444 [SQL Server의 테이블에서 중복 행을 제거하는 방법](https://support.microsoft.com/kb/139444)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [CREATE INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
  [고유 인덱스 만들기](../indexes/indexes.md)   
  [UNIQUE 제약 조건 만들기](../tables/create-unique-constraints.md)  

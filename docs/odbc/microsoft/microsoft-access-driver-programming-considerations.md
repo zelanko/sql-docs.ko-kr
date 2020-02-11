@@ -16,10 +16,10 @@ ms.assetid: 2d2f09c0-18ef-45a4-a72a-d7a3bdcef646
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9adf9fae067ca87db14138fa267563ddd5dd1c79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68045117"
 ---
 # <a name="microsoft-access-driver-programming-considerations"></a>Microsoft Access 드라이버 프로그래밍 고려 사항

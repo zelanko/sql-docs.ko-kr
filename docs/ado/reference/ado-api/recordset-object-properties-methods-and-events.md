@@ -1,5 +1,5 @@
 ---
-title: 레코드 집합 개체 속성, 메서드 및 이벤트 | Microsoft Docs
+title: Recordset 개체 속성, 메서드 및 이벤트 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,13 +13,13 @@ ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f84faca18ad1f4f4bf7e036fa4ccbe0335154a63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917330"
 ---
-# <a name="recordset-object-properties-methods-and-events"></a>레코드 집합 개체 속성, 메서드 및 이벤트
+# <a name="recordset-object-properties-methods-and-events"></a>Recordset 개체 속성, 메서드 및 이벤트
 ## <a name="propertiescollections"></a>속성/컬렉션  
  [AbsolutePage 속성](../../../ado/reference/ado-api/absolutepage-property-ado.md)  
   
@@ -31,7 +31,7 @@ ms.locfileid: "67917330"
   
  [BOF, EOF 속성](../../../ado/reference/ado-api/bof-eof-properties-ado.md)  
   
- [책갈피 속성](../../../ado/reference/ado-api/bookmark-property-ado.md)  
+ [Bookmark 속성](../../../ado/reference/ado-api/bookmark-property-ado.md)  
   
  [CacheSize 속성](../../../ado/reference/ado-api/cachesize-property-ado.md)  
   
@@ -41,11 +41,11 @@ ms.locfileid: "67917330"
   
  [DataMember 속성](../../../ado/reference/ado-api/datamember-property.md)  
   
- [데이터 원본 속성](../../../ado/reference/ado-api/datasource-property-ado.md)  
+ [DataSource 속성](../../../ado/reference/ado-api/datasource-property-ado.md)  
   
  [EditMode 속성](../../../ado/reference/ado-api/editmode-property.md)  
   
- [필드 컬렉션](../../../ado/reference/ado-api/fields-collection-ado.md)  
+ [Fields 컬렉션](../../../ado/reference/ado-api/fields-collection-ado.md)  
   
  [Filter 속성](../../../ado/reference/ado-api/filter-property.md)  
   
@@ -125,7 +125,7 @@ ms.locfileid: "67917330"
   
  [FetchComplete 이벤트](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)  
   
- [Fetchprogress 및](../../../ado/reference/ado-api/fetchprogress-event-ado.md)  
+ [FetchProgress 이벤트](../../../ado/reference/ado-api/fetchprogress-event-ado.md)  
   
  [WillChangeField 및 FieldChangeComplete 이벤트](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)  
   
@@ -135,5 +135,5 @@ ms.locfileid: "67917330"
   
  [WillMove 및 MoveComplete 이벤트](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

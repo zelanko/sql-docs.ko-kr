@@ -1,5 +1,5 @@
 ---
-title: Excel (SSAS 테이블 형식)에서 테이블 형식 모델 분석 | Microsoft Docs
+title: Excel에서 테이블 형식 모델 분석 (SSAS 테이블 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,25 +13,28 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 17d2b9fee3c4e733ed46f9b975e69f84f05b93f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067756"
 ---
 # <a name="analyze-a-tabular-model-in-excel-ssas-tabular"></a>Excel에서 테이블 형식 모델 분석(SSAS 테이블 형식)
+  
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 의 Excel에서 분석 기능은 Microsoft Excel을 열고 모델 작업 영역 데이터베이스에 데이터 원본을 연결한 후 워크시트에 피벗 테이블을 추가합니다. 피벗 테이블 필드 목록에 모델 개체(테이블, 열, 측정값, 계층 및 KPI)가 필드로 포함됩니다.  
   
 > [!NOTE]  
 >  Excel에서 분석 기능을 사용하려면 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]를 실행하는 컴퓨터에 Microsoft Office 2003 이상 버전이 설치되어 있어야 합니다. 컴퓨터에 Office가 설치되어 있지 않을 경우 다른 컴퓨터의 Excel을 사용하여 데이터 원본으로 모델 작업 영역 데이터베이스에 연결할 수 있습니다. 그런 다음 워크시트에 피벗 테이블을 수동으로 추가할 수 있습니다. 피벗 테이블 필드 목록에 모델 개체(테이블, 열, 측정값 및 KPI)가 필드로 포함됩니다.  
   
-## <a name="tasks"></a>태스크  
+## <a name="tasks"></a>작업  
   
 #### <a name="to-analyze-a-tabular-model-project-by-using-the-analyze-in-excel-feature"></a>Excel에서 분석 기능을 사용하여 테이블 형식 모델 프로젝트를 분석하려면  
   
-1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 **모델** 메뉴를 클릭한 다음 **Excel에서 분석**을 클릭합니다.  
+1.  
+  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 **모델** 메뉴를 클릭한 다음 **Excel에서 분석**을 클릭합니다.  
   
-2.  **자격 증명 및 큐브 뷰 선택** 대화 상자에서 다음 자격 증명 옵션 중 하나를 선택하여 모델 작업 영역 데이터 원본에 연결합니다.  
+2.  
+  **자격 증명 및 큐브 뷰 선택** 대화 상자에서 다음 자격 증명 옵션 중 하나를 선택하여 모델 작업 영역 데이터 원본에 연결합니다.  
   
     -   현재 사용자 계정을 사용하려면 **현재 Windows 사용자**를 선택합니다.  
   
@@ -50,7 +53,7 @@ ms.locfileid: "66067756"
 > [!NOTE]  
 >  모델 디자이너에서 모델 프로젝트를 변경해도 Excel의 피벗 테이블 필드 목록에 자동으로 반영되지 않습니다. 피벗 테이블 필드 목록을 새로 고치려면 Excel의 **옵션** 리본에서 **새로 고침**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [Excel에서 분석&#40;SSAS 테이블 형식&#41;](analyze-in-excel-ssas-tabular.md)  
+## <a name="see-also"></a>참고 항목  
+ [Excel에서 분석 &#40;SSAS 테이블 형식&#41;](analyze-in-excel-ssas-tabular.md)  
   
   

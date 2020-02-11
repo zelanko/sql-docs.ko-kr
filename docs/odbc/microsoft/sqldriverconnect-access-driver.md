@@ -14,26 +14,26 @@ ms.assetid: 9d133e9b-7545-464d-aa3c-677fa7e2a41d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e211797147c4da8f197247244f6f2805185b3b0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053984"
 ---
 # <a name="sqldriverconnect-access-driver"></a>SQLDriverConnect(Access 드라이버)
 > [!NOTE]  
->  이 항목에서는 액세스 드라이버 관련 정보를 제공 합니다. 이 함수에 대 한 일반 정보에서 해당 항목을 참조 하세요 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)합니다.  
+>  이 항목에서는 드라이버 관련 정보에 대 한 액세스를 제공 합니다. 이 함수에 대 한 일반 정보는 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)에서 적절 한 항목을 참조 하세요.  
   
- **SQLDriverConnect** 데이터 소스 (DSN)를 만들지 않고 드라이버에 연결할 수 있습니다.  
+ **SQLDriverConnect** 를 사용 하면 DSN (데이터 원본)을 만들지 않고도 드라이버에 연결할 수 있습니다.  
   
- 다음 키워드는 모든 드라이버에 대 한 연결 문자열에 지원 됩니다. **DSN**하십시오 **DBQ**, 및 **FIL**합니다.  
+ 모든 드라이버에 대 한 연결 문자열에서 지원 되는 키워드는 **DSN**, **Dbq**및 **FIL**입니다.  
   
- 합니다 **UID** 하 고 **PWD** 키워드 에서도 지원 됩니다.  
+ **UID** 및 **PWD** 키워드도 지원 됩니다.  
   
- PWD 키워드는 특수 문자를 포함 하지 않아야 (SQL_SPECIAL_CHARACTERS의를 참조 하세요 **SQLGetInfo** 반환 값).  
+ PWD 키워드는 특수 문자를 포함할 수 없습니다 ( **SQLGetInfo** 반환 값의 SQL_SPECIAL_CHARACTERS 참조).  
   
- 다음 표에서 각 드라이버에 연결 하는 데 필요한 최소 키워드를 보여 줍니다 하 고 사용 하는 키워드/값 쌍의 예가 **SQLDriverConnect**합니다. DRIVERID 값의 전체 목록을 참조 하세요 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)합니다.  
+ 다음 표에서는 각 드라이버에 연결 하는 데 필요한 최소 키워드를 보여 주며, **SQLDriverConnect**에 사용 되는 키워드/값 쌍의 예를 제공 합니다. DRIVERID 값의 전체 목록은 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)를 참조 하세요.  
   
 |드라이버|필요한 키워드|예|  
 |------------|-----------------------|--------------|  
-|Microsoft Access|Driver, DBQ|Driver={Microsoft Access Driver (*.mdb)}; DBQ=c:\\\temp\\\sample.mdb|
+|Microsoft Access|드라이버, DBQ|Driver = {Microsoft Access Driver (* .mdb)}; DBQ = c:\\\temp\\\sample.mdb|

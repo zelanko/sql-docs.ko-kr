@@ -1,5 +1,5 @@
 ---
-title: sys.sp_flush_log (TRANSACT-SQL) | Microsoft Docs
+title: sys. sp_flush_log (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,22 +20,23 @@ ms.assetid: 75cc9f52-3b1f-4754-b1e7-ce0dd3323bc9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 61c4cceab6c816d63226216a54d4f647e92e592d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68066682"
 ---
-# <a name="sysspflushlog-transact-sql"></a>sys.sp_flush_log(Transact-SQL)
+# <a name="syssp_flush_log-transact-sql"></a>sys.sp_flush_log(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   현재 데이터베이스의 트랜잭션 로그를 디스크에 플러시하여 이전에 커밋한 지연된 내구성이 있는 트랜잭션이 모두 강화됩니다.  
   
- 성능상의 이점 때문에 지연된 트랜잭션 내구성을 사용하도록 선택하지만 서버 충돌이나 장애 조치(Failover) 시 손실되는 데이터 양에 대한 보장 한도도 필요한 경우 정기적으로 `sys.sp_flush_log`를 실행하십시오. 예를 들어 있는지 확인 하려는 경우 잃지 x 보다 더 많은 실행 초 분량의 데이터를 `sp_flush_log` x 초 마다.  
+ 성능상의 이점 때문에 지연된 트랜잭션 내구성을 사용하도록 선택하지만 서버 충돌이나 장애 조치(Failover) 시 손실되는 데이터 양에 대한 보장 한도도 필요한 경우 정기적으로 `sys.sp_flush_log`를 실행하십시오. 예를 들어 x 초 이상의 데이터가 손실 되지 않도록 하려면 x 초 마다 실행 `sp_flush_log` 합니다.  
   
- `sys.sp_flush_log`를 실행하면 이전에 커밋한 지연된 내구성이 있는 트랜잭션이 모두 영구적이 됩니다. 개념 항목을 참조 하세요 [트랜잭션 내구성 제어](../../relational-databases/logs/control-transaction-durability.md) 자세한 내용은 합니다.  
+ 
+  `sys.sp_flush_log`를 실행하면 이전에 커밋한 지연된 내구성이 있는 트랜잭션이 모두 영구적이 됩니다. 자세한 내용은 개념 항목 [트랜잭션 내구성 제어](../../relational-databases/logs/control-transaction-durability.md) 를 참조 하세요.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -54,7 +55,7 @@ sys.sp_flush_log
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="sample-code"></a>예제 코드  
+## <a name="sample-code"></a>샘플 코드  
   
 ```sql  
 .  

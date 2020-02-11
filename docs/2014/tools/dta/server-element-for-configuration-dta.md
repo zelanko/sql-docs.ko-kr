@@ -1,5 +1,5 @@
 ---
-title: Server 요소 (DTA) 구성 | Microsoft Docs
+title: Configuration의 Server 요소 (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2bc763d621d15f982a2670483683d3862e678c98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63283681"
 ---
 # <a name="server-element-for-configuration-dta"></a>Configuration의 Server 요소(DTA)
@@ -36,7 +36,7 @@ ms.locfileid: "63283681"
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특성|Description|  
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|없음|  
 |**기본값**|없음|  
@@ -49,13 +49,13 @@ ms.locfileid: "63283681"
 |**부모 요소**|[Configuration 요소&#40;DTA&#41;](configuration-element-dta.md)|  
 |**자식 요소**|[Server의 Name 요소&#40;DTA&#41;](name-element-for-server-dta.md)<br /><br /> [Configuration의 Database 요소&#40;DTA&#41;](database-element-for-configuration-dta.md)|  
   
-## <a name="remarks"></a>Remarks  
- 하나만 지정할 수 있습니다 `Server` 요소는 `Configuration` 요소입니다. **데이터베이스 엔진 튜닝 관리자 XML 스키마** 에서 이 요소의 이름은 [ServerTypecomplexType](https://go.microsoft.com/fwlink/?linkid=43100)입니다. 이 `Server` 요소와 `DTAInput` 요소의 자식 요소를 혼동하지 마십시오. 자세한 내용은 [Server 요소&#40;DTA&#41;](server-element-dta.md)를 참조하세요.  
+## <a name="remarks"></a>설명  
+ 요소에 대해 요소를 `Server` 하나만 지정할 수 있습니다. `Configuration` **데이터베이스 엔진 튜닝 관리자 XML 스키마** 에서 이 요소의 이름은 [ServerTypecomplexType](https://go.microsoft.com/fwlink/?linkid=43100)입니다. 이 `Server` 요소와 `DTAInput` 요소의 자식 요소를 혼동하지 마십시오. 자세한 내용은 [Server 요소&#40;DTA&#41;](server-element-dta.md)를 참조하세요.  
   
 ## <a name="example"></a>예제  
  사용 예를 보려면 [사용자 정의 구성이 포함된 XML 입력 파일 예제&#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 입력 파일 참조&#40;데이터베이스 엔진 튜닝 관리자&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

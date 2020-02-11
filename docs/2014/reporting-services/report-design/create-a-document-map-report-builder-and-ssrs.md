@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 99456151a71e74d0e85baec19cc42d8450c00ae4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106172"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>문서 구조 만들기(보고서 작성기 및 SSRS)
@@ -48,7 +48,7 @@ ms.locfileid: "66106172"
     > [!NOTE]  
     >  테이블릭스 데이터 영역을 선택하려면 아무 셀이나 클릭하여 행 및 열 핸들을 표시한 다음 모퉁이 핸들을 클릭합니다.  
   
-2.  속성 창에서 문서 구조에 표시 하려는 텍스트를 입력 합니다 `DocumentMapLabel` 속성을 입력 하거나 레이블로 계산 되는 식을 입력 합니다. 예를 들어 **Sales Chart**를 입력합니다.  
+2.  속성 창에서 문서 구조에 표시할 텍스트를 `DocumentMapLabel` 속성에 입력 하거나 레이블로 계산 되는 식을 입력 합니다. 예를 들어 **Sales Chart**를 입력합니다.  
   
     > [!NOTE]  
     >  속성 창이 표시되지 않는 경우 **보기** 탭의 **표시/숨기기** 그룹에서 **속성**을 선택합니다.  
@@ -112,13 +112,13 @@ ms.locfileid: "66106172"
 4.  보고서 관리자에 URL을 붙여넣은 다음 Enter 키를 누릅니다. 보고서가 실행되고 문서 구조가 숨겨집니다.  
   
 > [!NOTE]  
->  샘플 보고서를 다운로드하는 방법은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][보고서 작성기 및 보고서 디자이너 샘플 보고서](https://go.microsoft.com/fwlink/?LinkId=198283)를 참조하세요.  
+>  예제 보고서를 다운로드 하는 방법에 대 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]한 자세한 내용은 [보고서 작성기 및 보고서 디자이너 샘플 보고서](https://go.microsoft.com/fwlink/?LinkId=198283)를 참조 하세요.  
 >   
 >  자세한 내용은 SQL Server 온라인 설명서의 [Reporting Services 설명서](https://go.microsoft.com/fwlink/?linkid=121312) 에 있는 "URL 액세스"를 참조하십시오.  
   
  
   
-## <a name="see-also"></a>관련 항목  
- [찾기 및 보고서 관리자에서 보고서 보기 &#40;보고서 작성기 및 SSRS&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>참고 항목  
+ [보고서 관리자 &#40;보고서 작성기 및 SSRS에서 보고서 찾기 및 보기&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
   
   

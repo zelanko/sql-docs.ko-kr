@@ -1,5 +1,5 @@
 ---
-title: 페이지 머리글 또는 바닥글 첫 페이지 또는 마지막 페이지 (보고서 작성기 및 SSRS)에서 숨기기 | Microsoft Docs
+title: 첫 페이지 또는 마지막 페이지에서 페이지 머리글 또는 바닥글 숨기기 (보고서 작성기 및 SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6f3033ea0c95841d15b1b71068c9a566abbfac98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105710"
 ---
 # <a name="hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs"></a>첫 페이지 또는 마지막 페이지에서 페이지 머리글 또는 바닥글 숨기기(보고서 작성기 및 SSRS)
@@ -47,7 +47,7 @@ ms.locfileid: "66105710"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [페이지 머리글 및 바닥글&#40;보고서 작성기 및 SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
  [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [페이지 머리글/바닥글 추가 또는 제거&#40;보고서 작성기 및 SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  

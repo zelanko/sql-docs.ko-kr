@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8bc6234789e85105799a865e46b8b7ffe82286f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107746"
 ---
 # <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>보고서 인쇄(SharePoint 모드의 Reporting Services)
@@ -27,7 +27,7 @@ ms.locfileid: "66107746"
   
 -   **브라우저** 브라우저의 인쇄 기능은 단일 페이지에 맞는 HTML 보고서에 대해 가장 잘 작동합니다. 일반적으로 브라우저에서 인쇄하는 페이지에는 웹 페이지의 모든 시각적 요소뿐만 아니라 페이지나 웹 사이트를 식별하는 머리글 및 바닥글 정보가 포함됩니다. 브라우저에서 인쇄하면 현재 창의 내용만 인쇄됩니다. 보고서가 길 경우 브라우저에서는 보고서의 일부(일반적으로 첫 페이지)만 인쇄합니다.  
   
--   **대상 응용 프로그램** 보고서를 내보내 Microsoft Office Excel 또는 Adobe Acrobat Reader와 같은 대상 응용 프로그램의 인쇄 기능을 사용할 수 있습니다. 여러 페이지로 구성된 보고서를 인쇄할 경우 TIFF 또는 PDF와 같은 일부 애플리케이션 형식이 적합합니다. 보고서를 데스크톱 애플리케이션으로 내보낼 경우 해당 애플리케이션이 제공하는 모든 특수 인쇄 기능을 사용할 수 있습니다. 보고서를 내보내려면 보고서를 열 때 보고서 도구 모음에 나타나는 **동작** 메뉴에서 **내보내기** 를 선택합니다.  
+-   **대상 애플리케이션** 보고서를 내보내 Microsoft Office Excel 또는 Adobe Acrobat Reader와 같은 대상 애플리케이션의 인쇄 기능을 사용할 수 있습니다. 여러 페이지로 구성된 보고서를 인쇄할 경우 TIFF 또는 PDF와 같은 일부 애플리케이션 형식이 적합합니다. 보고서를 데스크톱 애플리케이션으로 내보낼 경우 해당 애플리케이션이 제공하는 모든 특수 인쇄 기능을 사용할 수 있습니다. 보고서를 내보내려면 보고서를 열 때 보고서 도구 모음에 나타나는 **동작** 메뉴에서 **내보내기** 를 선택합니다.  
   
 > [!NOTE]  
 >  보고서를 인쇄하려면 보고서를 볼 권한이 있어야 합니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "66107746"
   
      인쇄하기 전에 보고서를 보려면 **미리 보기** 단추를 클릭합니다. 이렇게 하면 보고서의 첫 페이지가 별도의 미리 보기 창에서 열립니다. 보고서 서버에서 보고서가 렌더링됨에 따라 추가 페이지도 표시됩니다. 미리 보는 보고서는 EMF 형식으로 렌더링됩니다. 이전 페이지나 다음 페이지로 이동할 수 있으며 마지막 페이지에서는 **다음** 단추가 비활성화됩니다. 미리 보기 페이지에서 인쇄 여백을 수정하려면 **여백** 단추를 클릭합니다. 그러면 **여백** 대화 상자가 표시됩니다. 위쪽, 아래쪽, 오른쪽 및 왼쪽 여백을 구성하고 **확인**을 클릭합니다. 대화 상자가 닫히고 미리 보기 및 인쇄 렌더링 설정이 저장됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services에 대한 클라이언트 쪽 인쇄 기능 사용 및 사용 안 함 설정](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  
   
   

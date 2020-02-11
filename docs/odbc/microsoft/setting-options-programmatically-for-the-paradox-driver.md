@@ -1,5 +1,5 @@
 ---
-title: Paradox 드라이버에 프로그래밍 방식으로 옵션 설정 | Microsoft Docs
+title: Paradox 드라이버에 대해 프로그래밍 방식으로 옵션 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,23 +16,23 @@ ms.assetid: 7996d3f8-b5f5-4cac-8a66-fc96a42b603e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 658d03469e2733b0c25513a4d4a89c6ab88b9852
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68063509"
 ---
 # <a name="setting-options-programmatically-for-the-paradox-driver"></a>Paradox 드라이버에 프로그래밍 방식으로 옵션 설정
 
-|옵션|설명|메서드|  
+|옵션|Description|방법|  
 |------------|-----------------|------------|  
-|디렉터리|대상된 디렉터리를 설정합니다.|이 옵션을 동적으로 설정 하려면 합니다 **DEFAULTDIR** 호출에서 키워드 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)합니다.|  
-|정렬 순서|필드 정렬 되는 시퀀스입니다.<br /><br /> 시퀀스는 ASCII (기본값) 일 수 있습니다 국제, 스웨덴어-핀란드어, 노르웨이어 덴마크어 합니다.|이 옵션을 동적으로 설정 하려면 합니다 **COLLATINGSEQUENCE** 호출에서 키워드 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)합니다.|  
-|설명|데이터 소스의 데이터에 대 한 설명 예를 들어, "고용 날짜, 급여 내역, 및 모든 직원의 현재 검토 합니다."|이 옵션을 동적으로 설정 하려면 합니다 **설명** 호출에서 키워드 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
-|전용|경우는 **배타적** 확인란을 선택 하면 데이터베이스에서 단독 모드로 열립니다 및 한 번에 한 명의 사용자만 액세스할 수 있습니다. 전용 모드에서 실행할 때 성능이 향상 됩니다.|이 옵션을 동적으로 설정 하려면를 **배타적** 호출에서 키워드 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)합니다.|  
-|Net 스타일|Paradox 데이터에 액세스할 때 사용할 네트워크 액세스 스타일: 하거나 "3.*x*" Paradox 3. *x* 또는 "4. *x*"Paradox 4에 대 한. *x* 5 또는. *x*합니다. "3 설정할 수 있습니다. *x*"또는" 4. *x*"버전이 4. *x* 5 또는. *x*같으면 버전이 Paradox 3. *x*, 스타일 이어야 합니다 "3. *x*"입니다.|이 옵션을 동적으로 설정 하려면 합니다 **PARADOXNETSTYLE** 호출에서 키워드 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)합니다.|  
-|페이지 시간 제한|1/10 초, 페이지 (사용 되지 않음) 하는 경우 제거 하기 전에 버퍼에 남아 있는 기간을 지정 합니다. 기본값은 600 초 (60 초)의 1/10 초입니다. 이 옵션은 ODBC 드라이버를 사용 하는 모든 데이터 원본에 적용 됩니다.<br /><br /> 페이지 시간 초과 내재 된 지연으로 인해 0 일 수 없습니다. 페이지 시간 제한은 해당 값 보다 작은 페이지 제한 시간 옵션을 설정한 경우에 고유한 지연 보다 작을 수 없습니다.|이 옵션을 동적으로 설정 하려면 합니다 **PAGETIMEOUT** 호출에서 키워드 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)합니다.|  
-|읽기 전용|읽기 전용으로 데이터베이스를 지정합니다.|이 옵션을 동적으로 설정 하려면 합니다 **읽기 전용** 호출에서 키워드 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
-|디렉터리 선택|액세스 하려는 파일이 포함 된 디렉터리를 선택할 수 있는 대화 상자를 표시 합니다.<br /><br /> 데이터 소스 디렉터리를 정의 하는 가장 일반적으로 사용 되는 파일 디렉터리를 지정 하는 경우 배치 됩니다. ODBC 드라이버는 기본 디렉터리로이 디렉터리를 사용 합니다. 자주 사용 되는 경우 다른 파일을이 디렉터리에 복사 합니다. 또는 디렉터리 이름이 포함 된 SELECT 문에서 파일 이름을 한정할 수 있습니다.<br /><br /> SELECT \* FROM C:\MYDIR\EMP<br /><br /> 또는 사용 하 여 새 기본 디렉터리를 지정할 수는 **SQLSetConnectOption** SQL_CURRENT_QUALIFIER 옵션을 사용 하 여 함수입니다.|이 옵션을 동적으로 설정 하려면 합니다 **DEFAULTDIR** 호출에서 키워드 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)합니다.|  
-|네트워크 디렉터리를 선택 합니다.|Pdoxusrs.net 파일을 포함 하기 때문에 Paradox 잠금 데이터베이스를 포함 하는 디렉터리의 전체 경로 (Paradox 4에서. *x*) 또는 Paradox.net 파일 (Paradox 5에서. *x*). 디렉터리에 이러한 파일 중 하나가 없으면 Paradox 드라이버 하나 만듭니다. 이러한 파일에 대 한 내용은 Paradox 설명서를 참조 하십시오.<br /><br /> 네트워크 디렉터리를 선택 하기 전에 있는 Paradox 사용자 이름을 입력 해야 합니다는 **사용자 이름** 입력란입니다. 클릭 **네트워크 디렉터리 선택** 네트워크 디렉터리를 선택 합니다.|이 옵션을 동적으로 설정 하려면 합니다 **PARADOXNETPATH** 호출에서 키워드 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)합니다.|  
-|사용자 이름|Paradox 사용자 이름입니다. 이것이 잠금이 발생 하는 경우 Paradox 파일의 다른 사용자에 게 표시 되는 이름입니다.|이 옵션을 동적으로 설정 하려면 합니다 **PARADOXUSERNAME** 호출에서 키워드 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)합니다.|
+|디렉터리|대상 디렉터리를 설정 합니다.|이 옵션을 동적으로 설정 하려면 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)에 대 한 호출에서 **DEFAULTDIR** 키워드를 사용 합니다.|  
+|데이터 정렬 순서|필드가 정렬 되는 순서입니다.<br /><br /> 시퀀스는 ASCII (기본값), 국제, 스웨덴어-핀란드어 또는 노르웨이어-덴마크어 일 수 있습니다.|이 옵션을 동적으로 설정 하려면 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)에 대 한 호출에서 **COLLATINGSEQUENCE** 키워드를 사용 합니다.|  
+|Description|데이터 원본에 있는 데이터에 대 한 선택적 설명입니다. 예: "채용 날짜, 급여 기록 및 모든 직원의 현재 검토"|이 옵션을 동적으로 설정 하려면 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)에 대 한 호출에서 **DESCRIPTION** 키워드를 사용 합니다.|  
+|단독|**배타** 확인란을 선택 하면 데이터베이스가 단독 모드로 열리고 한 번에 한 사용자만 액세스할 수 있습니다. 배타적 모드로 실행 하면 성능이 향상 됩니다.|이 옵션을 동적으로 설정 하려면 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)에 대 한 호출에 **EXCLUSIVE** 키워드를 사용 합니다.|  
+|네트워크 스타일|Paradox 데이터에 액세스할 때 사용할 네트워크 액세스 스타일입니다. Paradox 3의 경우 "*3(sp3)"입니다.* *x* 또는 "4. *x*"의 경우 4입니다. *x* 또는 5입니다. *x*. "3"으로 설정할 수 있습니다. *x*"or" 4. *x*"버전은 Paradox 4입니다. *x* 또는 5입니다. *x*; 버전이 Paradox 3 인 경우 *x*의 스타일은 "3" 이어야 합니다. *x*".|이 옵션을 동적으로 설정 하려면 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)에 대 한 호출에서 **PARADOXNETSTYLE** 키워드를 사용 합니다.|  
+|페이지 시간 제한|페이지가 제거 되기 전에 버퍼에 유지 되는 시간 (초)을 지정 합니다. 기본값은 600 1/10 초 (60 초)입니다. 이 옵션은 ODBC 드라이버를 사용 하는 모든 데이터 원본에 적용 됩니다.<br /><br /> 고유 지연으로 인해 페이지 시간 제한이 0 일 수 없습니다. 페이지 시간 제한 값이 해당 값 아래에서 설정 된 경우에도 페이지 제한 시간은 내재 된 지연 보다 적을 수 없습니다.|이 옵션을 동적으로 설정 하려면 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)에 대 한 호출에서 **PAGETIMEOUT** 키워드를 사용 합니다.|  
+|읽기 전용|데이터베이스를 읽기 전용으로 지정 합니다.|이 옵션을 동적으로 설정 하려면 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)에 대 한 호출에서 **READONLY** 키워드를 사용 합니다.|  
+|디렉터리 선택|액세스 하려는 파일이 포함 된 디렉터리를 선택할 수 있는 대화 상자를 표시 합니다.<br /><br /> 데이터 원본 디렉터리를 정의할 때 가장 일반적으로 사용 되는 파일이 있는 디렉터리를 지정 합니다. ODBC 드라이버는이 디렉터리를 기본 디렉터리로 사용 합니다. 자주 사용 되는 경우 다른 파일을이 디렉터리에 복사 합니다. 또는 디렉터리 이름을 사용 하 여 SELECT 문에서 파일 이름을 한정할 수 있습니다.<br /><br /> SELECT \* FROM C:\MYDIR\EMP<br /><br /> 또는 SQL_CURRENT_QUALIFIER 옵션과 함께 **SQLSetConnectOption** 함수를 사용 하 여 새 기본 디렉터리를 지정할 수 있습니다.|이 옵션을 동적으로 설정 하려면 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)에 대 한 호출에서 **DEFAULTDIR** 키워드를 사용 합니다.|  
+|네트워크 디렉터리 선택|Pdoxusrs.net 파일 (Paradox 4)이 포함 되어 있기 때문에 Paradox 잠금 데이터베이스를 포함 하는 디렉터리의 전체 경로입니다.* x*) 또는 Paradox.net 파일 (Paradox 5* ) x*). 디렉터리에 이러한 파일 중 하나가 포함 되어 있지 않으면 Paradox 드라이버가 하나를 만듭니다. 이러한 파일에 대 한 자세한 내용은 Paradox 설명서를 참조 하세요.<br /><br /> 네트워크 디렉터리를 선택 하기 전에 **사용자 이름** 텍스트 상자에 Paradox 사용자 이름을 입력 해야 합니다. 네트워크 디렉터리 **선택** 을 클릭 하 여 네트워크 디렉터리를 선택 합니다.|이 옵션을 동적으로 설정 하려면 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)에 대 한 호출에서 **PARADOXNETPATH** 키워드를 사용 합니다.|  
+|사용자 이름|Paradox 사용자 이름입니다. 이 이름은 잠금이 발생 했을 때 Paradox 파일의 다른 사용자에 게 표시 되는 이름입니다.|이 옵션을 동적으로 설정 하려면 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)에 대 한 호출에서 **PARADOXUSERNAME** 키워드를 사용 합니다.|

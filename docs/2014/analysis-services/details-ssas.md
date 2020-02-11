@@ -13,13 +13,15 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6642024b7283c0302d58e77d7657844c27178f41
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081823"
 ---
 # <a name="details-ssas"></a>세부 정보(SSAS)
-  **테이블 가져오기 마법사** 의 이 페이지에서는 성공하거나 실패한 데이터 가져오기 작업에 대한 정보를 볼 수 있습니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  
+  
+  **테이블 가져오기 마법사** 의 이 페이지에서는 성공하거나 실패한 데이터 가져오기 작업에 대한 정보를 볼 수 있습니다. 
+  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  
   
   

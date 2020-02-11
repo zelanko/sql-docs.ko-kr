@@ -17,14 +17,14 @@ ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a2f9efa8f5042fab603c794edada5aacab001936
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921323"
 ---
 # <a name="addnew-method-ado"></a>AddNew 메서드(ADO)
-업데이트할 수 있는 작업에 대 한 새 레코드를 만듭니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  
+업데이트할 수 있는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체에 대 한 새 레코드를 만듭니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,30 +34,30 @@ recordset.AddNew FieldList, Values
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *recordset*  
- A **레코드 집합** 개체입니다.  
+ *집합인*  
+ **레코드 집합** 개체입니다.  
   
  *FieldList*  
- (선택 사항) 단일 이름 또는 이름의 배열을 또는 새 레코드에서 필드의 서 수 위치입니다.  
+ (선택 사항) 단일 이름 이거나 새 레코드에 있는 필드의 이름 또는 서 수 위치 배열입니다.  
   
  *값*  
- (선택 사항) 단일 값 또는 새 레코드의 필드 값의 배열입니다. 경우 *Fieldlist* 배열이 *값* 배열 해야과 동일한 멤버의 수 고, 그렇지 않으면 오류가 발생 합니다. 필드 이름의 순서는 각 배열에 있는 필드 값의 순서가 일치 해야 합니다.  
+ (선택 사항) 단일 값 또는 새 레코드의 필드에 대 한 값의 배열입니다. *Fieldlist)* 가 배열인 경우 *값* 도 멤버 수가 같은 배열 이어야 합니다. 그렇지 않으면 오류가 발생 합니다. 필드 이름의 순서는 각 배열에서 필드 값의 순서와 일치 해야 합니다.  
   
 ## <a name="remarks"></a>설명  
- 사용 된 **AddNew** 메서드를 만들고 새 레코드를 초기화 합니다. 사용 된 [지원](../../../ado/reference/ado-api/supports-method.md) 메서드를 **adAddNew** (을 [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md) 값) 현재 레코드를 추가할 수 있는지 여부를 확인 하려면 **레코드집합**개체입니다.  
+ **AddNew** 메서드를 사용 하 여 새 레코드를 만들고 초기화 합니다. **Adaddnew** ( [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md) 값)와 함께 [지원](../../../ado/reference/ado-api/supports-method.md) 메서드를 사용 하 여 현재 **레코드 집합** 개체에 레코드를 추가할 수 있는지 여부를 확인 합니다.  
   
- 호출한 후 합니다 **AddNew** 메서드 새 레코드를 현재 레코드가 호출한 후에 현재 상태로 유지 됩니다 합니다 [업데이트](../../../ado/reference/ado-api/update-method.md) 메서드. 때문에 새 레코드가 추가 됩니다는 **레코드 집합**에 대 한 호출 **MoveNext** 끝을 지나서 이동 업데이트를 수행 합니다 **레코드 집합**이면 **EOF**  True입니다. 경우는 **레코드 집합** 개체가 책갈피를 지원 하지 않습니다, 다른 레코드로 이동 되 면 새 레코드에 액세스할 수 있습니다. 커서 유형에 따라 호출 해야 합니다 [Requery](../../../ado/reference/ado-api/requery-method.md) 새 레코드에 액세스할 수 있도록 하는 방법입니다.  
+ **AddNew** 메서드를 호출 하면 새 레코드가 현재 레코드가 되며 [Update](../../../ado/reference/ado-api/update-method.md) 메서드를 호출한 후에는 현재 레코드가 됩니다. 새 레코드가 **레코드 집합**에 추가 되기 때문에 업데이트 다음에 오는 **MoveNext** 호출은 **레코드 집합**의 끝을 지나서 이동 하 여 **EOF** True로 설정 됩니다. **레코드 집합** 개체가 책갈피를 지원 하지 않는 경우에는 다른 레코드로 이동 하는 동안 새 레코드에 액세스 하지 못할 수 있습니다. 커서 유형에 따라 [Requery](../../../ado/reference/ado-api/requery-method.md) 메서드를 호출 하 여 새 레코드를 액세스할 수 있도록 해야 할 수도 있습니다.  
   
- 호출 하는 경우 **AddNew** ADO를 호출 하는 현재 레코드를 편집 하는 동안 또는 새 레코드를 추가 하는 동안 합니다 **업데이트** 메서드 하나를 변경 하 고 새 레코드를 만듭니다.  
+ 현재 레코드를 편집 하는 동안 **AddNew** 를 호출 하거나 새 레코드를 추가 하는 동안 ADO에서 **Update** 메서드를 호출 하 여 변경 내용을 저장 한 다음 새 레코드를 만듭니다.  
   
- 동작 합니다 **AddNew** 메서드의 업데이트 모드에 따라 달라 집니다 합니다 **레코드 집합** 개체를 전달 하는지 여부를 *Fieldlist* 및 *값*인수.  
+ **AddNew** 메서드의 동작은 **레코드 집합** 개체의 업데이트 모드와 *fieldlist)* 및 *Values* 인수를 전달 하는지 여부에 따라 달라 집니다.  
   
- *즉시 업데이트 모드* (는 공급자 변경 기록 내부 데이터 소스를 호출 하는 **업데이트** 메서드)를 호출 합니다 **AddNew** 없이 메서드 인수는 [EditMode](../../../ado/reference/ado-api/editmode-property.md) 속성을 **adEditAdd** (프로그램 [EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md) 값). 공급자 필드 값 변경 내용을 로컬로 캐시합니다. 호출을 **업데이트** 메서드는 데이터베이스에 새 레코드를 게시 하 고 다시 설정 합니다 **EditMode** 속성을 **adEditNone** (을 **EditModeEnum**값). 전달 하는 경우는 *Fieldlist* 하 고 *값* 인수, 게시 데이터베이스에 새 레코드를 즉시 ADO (없습니다 **업데이트** 호출 되기), **EditMode**  속성 값이 변경 되지 않습니다 (**adEditNone**).  
+ **업데이트** 메서드를 호출 하면 공급자가 기본 데이터 소스에 변경 내용을 쓰는 *즉시 업데이트 모드* 에서 인수 없이 **AddNew** 메서드를 호출 하면 [EditMode](../../../ado/reference/ado-api/editmode-property.md) 속성이 **adEditAdd** ( [editmodeenum](../../../ado/reference/ado-api/editmodeenum.md) 값)로 설정 됩니다. 공급자는 필드 값 변경 내용을 로컬로 캐시 합니다. **Update** 메서드를 호출 하면 새 레코드가 데이터베이스에 게시 되 고 **EditMode** 속성이 **adEditNone** ( **editmodeenum** 값)로 다시 설정 됩니다. *Fieldlist)* 및 *Values* 인수를 전달 하는 경우 ADO는 새 레코드를 데이터베이스에 즉시 게시 합니다 ( **업데이트** 호출이 필요 하지 않음). **EditMode** 속성 값은 변경 되지 않습니다 (**adEditNone**).  
   
- *일괄 업데이트 모드* (공급자는 여러 변경 내용을 캐시 및 호출 된 경우에 기본 데이터 원본에 기록 합니다 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) 메서드)를 호출 합니다 **AddNew** 인수 집합이 없는 메서드는 **EditMode** 속성을 **adEditAdd**합니다. 공급자 필드 값 변경 내용을 로컬로 캐시합니다. 호출을 **업데이트** 현재 새 레코드를 추가 하는 메서드 **레코드 집합**, 공급자는 기본 데이터베이스에 변경 내용을 게시 하거나 다시 설정 하지만 합니다 **EditMode** 하 **adEditNone**호출할 때까지, 합니다 **UpdateBatch** 메서드. 전달 하는 경우는 *Fieldlist* 하 고 *값* 인수 ADO 새 레코드 집합 및 캐시 저장소에 대 한 공급자를 보냅니다는 **EditMode** 를 **adEditAdd** ; 호출 해야 합니다 **UpdateBatch** 기본 데이터베이스에 새 레코드를 게시 하는 방법입니다.  
+ *일괄 업데이트 모드* 에서 ( [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) 메서드를 호출 하는 경우에만 공급자가 여러 변경 내용을 캐시 하 고 기본 데이터 소스에 쓰도록 함), 인수 없이 **AddNew** 메서드를 호출 하면 **EditMode** 속성이 **adEditAdd**로 설정 됩니다. 공급자는 필드 값 변경 내용을 로컬로 캐시 합니다. **Update** 메서드를 호출 하면 새 레코드가 현재 **레코드 집합**에 추가 되지만, 공급자는 **UpdateBatch** 메서드를 호출할 때까지 기본 데이터베이스에 변경 내용을 게시 하거나 **EditMode** 를 **adEditNone**로 다시 설정 하지 않습니다. *Fieldlist)* 및 *Values* 인수를 전달 하는 경우 ADO는 캐시에 저장 하기 위해 새 레코드를 공급자에 게 보내고 **EditMode** 를 **adEditAdd**로 설정 합니다. 새 레코드를 기본 데이터베이스에 게시 하려면 **UpdateBatch** 메서드를 호출 해야 합니다.  
   
 ## <a name="example"></a>예제  
- 다음 예에서는 필드 목록 및 배열 필드 목록 및 값 목록에 포함 하는 방법을 보려면 포함 하는 값 목록을 사용 하 여 AddNew 메서드를 사용 하는 방법을 보여 줍니다.  
+ 다음 예제에서는 필드 목록 및 값 목록을 포함 하는 AddNew 메서드를 사용 하 여 필드 목록 및 값 목록을 배열로 포함 하는 방법을 보여 줍니다.  
   
 ```  
 create table aa1 (intf int, charf char(10))  
@@ -85,13 +85,13 @@ rs.Update
 ## <a name="applies-to"></a>적용 대상  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [AddNew 메서드 예제 (VB)](../../../ado/reference/ado-api/addnew-method-example-vb.md)   
  [AddNew 메서드 예제 (VBScript)](../../../ado/reference/ado-api/addnew-method-example-vbscript.md)   
  [AddNew 메서드 예제 (VC + +)](../../../ado/reference/ado-api/addnew-method-example-vc.md)   
  [CancelUpdate 메서드 (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
  [EditMode 속성](../../../ado/reference/ado-api/editmode-property.md)   
  [Requery 메서드](../../../ado/reference/ado-api/requery-method.md)   
- [메서드를 지원합니다.](../../../ado/reference/ado-api/supports-method.md)   
+ [지원 메서드](../../../ado/reference/ado-api/supports-method.md)   
  [Update 메서드](../../../ado/reference/ado-api/update-method.md)   
  [UpdateBatch 메서드](../../../ado/reference/ado-api/updatebatch-method.md)

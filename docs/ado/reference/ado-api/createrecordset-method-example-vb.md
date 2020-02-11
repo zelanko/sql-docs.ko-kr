@@ -15,16 +15,16 @@ ms.assetid: 2de8fd02-0f49-4d47-8bd3-397726d1c644
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bb1bda7808b8875da5982b70e749f45ec15e5958
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919340"
 ---
 # <a name="createrecordset-method-example-vb"></a>CreateRecordset 메서드 예제(VB)
-만들 수 있습니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 및 열 정보를 지정 합니다. 데이터를 삽입할 수 있습니다 합니다 **레코드 집합** 개체; 기본 행 집합 버퍼를 삽입 합니다.  
+[레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체를 만들고 열 정보를 지정할 수 있습니다. 그런 다음 **레코드 집합** 개체에 데이터를 삽입할 수 있습니다. 기본 행 집합은 삽입을 버퍼링 합니다.  
   
- 다음 코드 예제에서는 정의 하는 방법을 보여 줍니다.는 **Recordset** 를 사용 하 여는 [업데이트할](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 개체입니다. 이를 수행할 수도 있습니다는 [rds. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체입니다.  
+ 다음 코드 예제에서는 [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 개체를 사용 하 여 **레코드 집합** 을 정의 하는 방법을 보여 줍니다. 또한 RDS를 사용 하 여이 작업을 수행할 수 있습니다 [. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체입니다.  
   
 ```  
 'BeginRsDefineShapeVB  

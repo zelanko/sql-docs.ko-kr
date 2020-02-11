@@ -18,54 +18,54 @@ ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8dabf974e36b1f6beaff36f3a4888c128d7dfe1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921518"
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection 속성(ADO)
-나타냅니다 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 지정 된 개체 [명령](../../../ado/reference/ado-api/command-object-ado.md), [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md), 또는 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체가 현재 속한.  
+지정 된 [명령](../../../ado/reference/ado-api/command-object-ado.md), [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)또는 [Record](../../../ado/reference/ado-api/record-object-ado.md) 개체가 현재 속해 있는 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체를 나타냅니다.  
   
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
- 설정 하거나 반환을 **문자열** 연결이 닫혀 있는 경우 또는 연결에 대 한 정의 포함 하는 값 **Variant** 현재 포함 된 **연결** 경우 개체는 연결이 열려 있습니다. 기본값은 null 개체 참조입니다. 참조 된 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 속성입니다.  
+ 연결이 닫힌 경우에는 연결에 대 한 정의를 포함 하는 **문자열** 값을 설정 하거나 반환 하 고, 연결이 열린 경우에는 현재 **연결** 개체를 포함 하는 **Variant** 를 설정 하거나 반환 합니다. 기본값은 null 개체 참조입니다. [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 속성을 참조 하세요.  
   
 ## <a name="remarks"></a>설명  
- 사용 하 여는 **ActiveConnection** 속성을는 **연결** 개체는 지정 된 **명령** 개체는 실행 또는 지정 된  **레코드 집합** 열립니다.  
+ **ActiveConnection** 속성을 사용 하 여 지정 된 **명령** 개체가 실행 되는 **연결** 개체를 확인 하거나 지정 된 **레코드 집합** 을 열 수 있습니다.  
   
-## <a name="command"></a>Command  
- 에 대 한 **명령** 개체를 **ActiveConnection** 속성은 읽기/쓰기가 가능 합니다.  
+## <a name="command"></a>명령  
+ **Command** 개체의 경우 **ActiveConnection** 속성은 읽기/쓰기입니다.  
   
- 호출 하려는 경우는 [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) 메서드를 **명령** 개방적으로이 속성을 설정 하려면 먼저 개체 **연결** 오류가 발생 하는 개체 또는 올바른 연결 문자열.  
+ 이 속성을 열려 있는 **연결** 개체 또는 유효한 연결 문자열로 설정 하기 전에 **명령** 개체에 대해 [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) 메서드를 호출 하려고 하면 오류가 발생 합니다.  
   
- 경우는 **연결** 개체에 할당 합니다 **ActiveConnection** 속성 개체를 열어야 합니다. 닫힌된 연결 개체를 할당 하면 오류가 발생 합니다.  
+ **연결** 개체가 **ActiveConnection** 속성에 할당 된 경우 개체를 열어야 합니다. 폐쇄형 연결 개체를 할당 하면 오류가 발생 합니다.  
   
 ### <a name="note"></a>참고  
- **Microsoft Visual Basic** 설정 합니다 **ActiveConnection** 속성을 *Nothing* 분리 합니다 **명령** 현재에서개체**연결** 때문에 공급자 데이터 원본에 연결 된 모든 리소스를 해제 하 고 있습니다. 연결할 수 있습니다 합니다 **명령** 개체와 같은 또는 다른 **연결** 개체입니다. 일부 공급자를 사용 하면 하나에서 속성 설정을 변경 하려면 **연결** 먼저 속성을 설정 하지 않고 다른 *Nothing*합니다.  
+ **Microsoft Visual Basic** **ActiveConnection** 속성을로 설정 하면 현재 **연결** 에서 **명령** 개체의 *연결을 해제* 하 고 공급자가 데이터 원본에서 연결 된 모든 리소스를 해제 합니다. 그런 다음 동일한 또는 다른 **연결** 개체와 **명령** 개체를 연결할 수 있습니다. 일부 공급자에서는 먼저 속성을 *Nothing*으로 설정 하지 않고도 속성 설정을 다른 **연결** 로 변경할 수 있습니다.  
   
- 경우는 [매개 변수](../../../ado/reference/ado-api/parameters-collection-ado.md) 의 컬렉션을 **명령** 공급자가 제공한 매개 변수를 포함 하는 개체, 설정 하는 경우 컬렉션은 지워지지 합니다 **ActiveConnection** 속성을 *아무* 또는 다른 **연결** 개체입니다. 수동으로 만들어야 하는 경우 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체를 사용 하 여 입력 합니다 **매개 변수** 컬렉션을 **명령** 개체를 설정는 **ActiveConnection**  속성을 *Nothing* 또는 다른 **연결** 리프 개체를 **매개 변수** 컬렉션 그대로 유지 됩니다.  
+ **명령** 개체의 [parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) 컬렉션에 공급자가 제공 하는 매개 변수가 포함 된 경우 **ActiveConnection** 속성을 *Nothing* 으로 설정 하거나 다른 **연결** 개체로 설정 하면 컬렉션이 지워집니다. 수동으로 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체를 만들고이 개체를 사용 하 여 **명령** 개체의 **Parameters** 컬렉션을 채울 경우 **ActiveConnection** 속성을 *Nothing* 으로 설정 하거나 다른 **연결** 개체로 설정 하 여 **매개 변수** 컬렉션을 그대로 유지 합니다.  
   
- 닫기는 **연결** 개체를 **명령** 개체가 연결된 집합을 **ActiveConnection** 속성을 *Nothing*합니다. 이 속성을 닫힌 **연결** 개체에 오류가 발생 합니다.  
+ **Command** 개체가 연결 된 **연결** 개체를 닫으면 **ActiveConnection** 속성이 *Nothing*으로 설정 됩니다. 이 속성을 닫힌 **연결** 개체로 설정 하면 오류가 발생 합니다.  
   
 ## <a name="recordset"></a>레코드 집합  
- 열기에 대 한 **레코드 집합** 개체 또는 **레코드 집합** 갖는 개체 [원본](../../../ado/reference/ado-api/source-property-ado-recordset.md) 속성은 유효한 **명령** 개체, 합니다 **ActiveConnection** 속성은 읽기 전용입니다. 그렇지 않을 경우 읽기/쓰기입니다.  
+ [원본](../../../ado/reference/ado-api/source-property-ado-recordset.md) 속성이 유효한 **명령** 개체로 설정 **된 레코드 집합 개체 또는** 열려 있는 **레코드** 집합 개체의 경우 **ActiveConnection** 속성은 읽기 전용입니다. 그렇지 않으면 읽기/쓰기가 됩니다.  
   
- 유효한이 속성을 설정할 수 있습니다 **연결** 개체 또는 유효한 연결 문자열입니다. 이 경우 공급자를 만듭니다 **연결** 이 정의 사용 하 여 연결을 엽니다. 공급자가 새이 속성을 설정 수는 또한 **연결** 액세스 하는 방법을 제공 하는 개체를 **연결** 확장된 오류 정보 또는 다른 명령을 실행할 개체입니다.  
+ 이 속성을 유효한 **연결** 개체나 유효한 연결 문자열로 설정할 수 있습니다. 이 경우 공급자는이 정의를 사용 하 여 새 **연결** 개체를 만들고 연결을 엽니다. 또한 공급자는이 속성을 새 **연결** 개체로 설정 하 여 확장 오류 정보에 대 한 **연결** 개체에 액세스 하거나 다른 명령을 실행 하는 방법을 제공할 수 있습니다.  
   
- 사용 하는 경우는 *ActiveConnection* 인수를 [엽니다](../../../ado/reference/ado-api/open-method-ado-recordset.md) 를 여는 메서드를 **레코드 집합** 개체를 **ActiveConnection** 속성은 인수의 값을 상속 합니다.  
+ [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) 메서드의 *ActiveConnection* 인수를 사용 하 여 **레코드 집합** 개체를 열면 **ActiveConnection** 속성이 인수 값을 상속 합니다.  
   
- 설정 하는 경우는 **원본** 의 속성을 **레코드 집합** 유효한 개체 **명령** 개체 변수를를 **ActiveConnection** 의 속성 합니다 **레코드 집합** 의 설정을 상속 합니다 **명령** 개체의 **ActiveConnection** 속성입니다.  
-  
-> [!NOTE]
->  **원격 데이터 서비스 사용** 클라이언트 쪽에서 사용 되 면 **레코드 집합** 개체를 연결 문자열 또는 (Microsoft Visual Basic 또는 Visual Basic Scripting Edition)에이 속성을 설정할 수 있습니다 *Nothing* .  
-  
-## <a name="record"></a>녹음  
- 이 속성은 읽기/쓰기 경우 합니다 **레코드** 개체가 닫혀 있고 연결 문자열 또는 개방적이 고에 대 한 참조를 포함할 수 있습니다 **연결** 개체입니다. 이 속성이 읽기 전용인 경우 합니다 **레코드** 개체를 열면 및 개방적이 고에 대 한 참조를 포함 **연결** 개체입니다.  
-  
- A **연결** 개체는 암시적으로 생성 하면 합니다 **레코드** URL에서 개체를 열입니다. 엽니다는 **레코드** 기존의 엽니다 **연결** 할당 하 여 개체를 **연결** 또는이 속성에 개체를 사용 하 여는 **연결** 매개 변수로 개체를 [열려](../../../ado/reference/ado-api/open-method-ado-record.md) 메서드를 호출 합니다. 경우는 **레코드** 기존에서 열리는 **레코드** 또는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)에 자동으로 연관 됩니다 **레코드** 또는  **레코드 집합** 개체의 **연결** 개체입니다.  
+ **Recordset** 개체의 **Source** 속성을 유효한 **명령** 개체 변수로 설정 하면 **레코드 집합** 의 **ActiveConnection** 속성은 **Command** 개체의 **ActiveConnection** 속성 설정을 상속 합니다.  
   
 > [!NOTE]
->  Http 체계를 사용 하 여 Url은 자동으로 호출 합니다 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)합니다. 자세한 내용은 [절대 및 상대 Url](../../../ado/guide/data/absolute-and-relative-urls.md)합니다.  
+>  **원격 데이터 서비스 사용** 클라이언트 쪽 **레코드 집합** 개체에서 *사용 하는*경우이 속성은 연결 문자열 또는 (Microsoft Visual Basic 또는 Visual Basic Scripting Edition)로만 설정할 수 있습니다.  
+  
+## <a name="record"></a>레코드  
+ **Record** 개체가 닫혀 있는 경우이 속성은 읽기/쓰기이 고, 연결 문자열 또는 열린 **연결** 개체에 대 한 참조를 포함할 수 있습니다. **Record** 개체가 열려 있고 열린 **연결** 개체에 대 한 참조를 포함 하는 경우이 속성은 읽기 전용입니다.  
+  
+ **연결** 개체는 URL에서 **Record** 개체를 열 때 암시적으로 생성 됩니다. **연결** 개체를이 속성에 할당 하거나 **연결** 개체를 [open](../../../ado/reference/ado-api/open-method-ado-record.md) 메서드 호출의 매개 변수로 사용 하 여 열려 있는 기존 **연결** 개체를 사용 하 여 **레코드** 를 엽니다. 기존 **레코드나** 레코드 [집합](../../../ado/reference/ado-api/recordset-object-ado.md)에서 **레코드** 를 **열면 해당 레코드 또는 레코드** **집합** 개체의 **연결** 개체에 자동으로 연결 됩니다.  
+  
+> [!NOTE]
+>  Http 체계를 사용 하는 Url은 자동으로 [Microsoft OLE DB 공급자에 게 Internet 게시용](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)으로 호출 됩니다. 자세한 내용은 [절대 및 상대 url](../../../ado/guide/data/absolute-and-relative-urls.md)을 참조 하세요.  
   
 ## <a name="applies-to"></a>적용 대상  
   
@@ -73,9 +73,9 @@ ms.locfileid: "67921518"
 |-|-|-|  
 |[명령 개체(ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[레코드 개체(ADO)](../../../ado/reference/ado-api/record-object-ado.md)|[레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
-## <a name="see-also"></a>관련 항목  
- [ActiveConnection, CommandText, CommandTimeout, CommandType, 크기 및 방향 속성 예제 (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
- [ActiveConnection, CommandText, CommandTimeout, CommandType, 크기 및 방향 속성 예제 (VC + +)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
- [ActiveConnection, CommandText, CommandTimeout, CommandType, 크기 및 방향 속성 예제 (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   
- [연결 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+## <a name="see-also"></a>참고 항목  
+ [ActiveConnection, CommandText, CommandTimeout, CommandType, Size 및 Direction 속성 예제 (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
+ [ActiveConnection, CommandText, CommandTimeout, CommandType, Size 및 Direction 속성 예제 (VC + +)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
+ [ActiveConnection, CommandText, CommandTimeout, CommandType, Size 및 Direction 속성 예제 (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   
+ [Connection 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [ConnectionString 속성(ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)

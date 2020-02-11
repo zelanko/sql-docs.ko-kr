@@ -16,16 +16,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7834d2f5d0fc8a8e849f796eab93259682ea377c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250666"
 ---
 # <a name="sql-server-database-mirroring-object"></a>SQL Server, Database Mirroring 개체
   **SQLServer:Database Mirroring** 성능 개체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 미러링에 대한 정보를 보고하는 성능 카운터를 포함합니다. 다음 표에서는 이 개체가 포함하는 카운터를 나열합니다.  
   
-|이름|Description|  
+|속성|Description|  
 |----------|-----------------|  
 |**Bytes Received/sec**|초당 받은 바이트 수입니다.|  
 |**Bytes Sent/sec**|초당 보낸 바이트 수입니다.|  
@@ -52,10 +52,10 @@ ms.locfileid: "63250666"
 > [!NOTE]  
 >  각 파트너에서 일부 카운터는 파트너가 현재 수행하고 있는 역할에 따라 0 값을 표시합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  성능 카운터를 사용하면 데이터베이스 미러링 성능을 모니터링할 수 있습니다. 예를 들어 **Transaction Delay** 카운터를 사용하면 데이터베이스 미러링이 주 서버의 성능에 영향을 주는지 여부를 알 수 있고 **Redo Queue** 와 **Log Send Queue** 카운터를 사용하면 미러 데이터베이스가 주 데이터베이스와 동기화가 제대로 이루어지는지 알 수 있습니다. **Log Bytes Sent/sec** 카운터를 사용하면 초당 보낸 로그의 양을 모니터링할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [리소스 사용 모니터링&#40;시스템 모니터&#41;](monitor-resource-usage-system-monitor.md)  
   
   

@@ -13,18 +13,18 @@ ms.assetid: 95a8666a-ad68-4d89-bf65-f2cc797f8820
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7daef4785a77df294a831d69089108cbb1d88489
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68061482"
 ---
 # <a name="sqlgetpoolid-function"></a>SQLGetPoolID 함수
 **규칙**  
- 도입 된 버전: ODBC 3.81 표준 준수 합니다. ODBC  
+ 소개 된 버전: ODBC 3.81 표준 준수: ODBC  
   
  **요약**  
- **SQLGetPoolID** 풀 ID를 검색 합니다.  
+ **SQLGetPoolID** 는 풀 ID를 검색 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,29 +37,29 @@ SQLRETURN  SQLGetPoolID (
   
 ## <a name="arguments"></a>인수  
  *hDbcInfoToken*  
- [입력] 모든 연결 정보를 포함 하는 토큰 핸들입니다.  
+ 입력 모든 연결 정보를 포함 하는 토큰 핸들입니다.  
   
  *pPoolID*  
- [출력] 서로 교환해 서 사용할 수 있는 연결 집합을 식별 하는 데 사용 되는 풀 ID (추가 재설정 필요할 수도 있음).  
+ 출력 풀 ID는 서로 바꿔 사용할 수 있는 연결 집합을 식별 하는 데 사용 됩니다 (추가 재설정을 요구할 수도 있음).  
   
-## <a name="returns"></a>반환 값  
- 관계 없이 SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR를 또는 SQL_INVALID_HANDLE 합니다.  
+## <a name="returns"></a>반환  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR 또는 SQL_INVALID_HANDLE입니다.  
   
 ## <a name="diagnostics"></a>진단  
- 때 **SQLGetPoolID** 반환 SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 드라이버 관리자를 사용 하 여를 **HandleType** SQL_HANDLE_DBC_INFO_TOKEN의와 **처리** 의*hDbcInfoToken*합니다.  
+ **SQLGetPoolID** 가 SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 하는 경우 드라이버 관리자는 **HandleType** SQL_HANDLE_DBC_INFO_TOKEN의 및 *Hdbcinfotoken*의 **핸들** 을 사용 합니다.  
   
 ## <a name="remarks"></a>설명  
- **SQLGetPoolID** 연결 정보 집합이 지정 된 풀 ID를 가져오는 데 사용 됩니다 (에서 **SQLSetConnectAttrForDbcInfo**하십시오 **SQLSetDriverConnectInfo**, 및  **SQLSetConnectInfo**). ID는 서로 교환해 서 사용할 수 있는 연결 집합을 식별 하는이 풀 (추가 재설정 필요할 수도 있음). 풀 ID 연결의 해당 그룹에 대 한 연결 풀 식별에 사용 됩니다.  
+ **SQLGetPoolID** 는 **SQLSetConnectAttrForDbcInfo**, **SQLSetDriverConnectInfo**및 **SQLSetConnectInfo**에서 연결 정보 집합이 제공 된 풀 ID를 가져오는 데 사용 됩니다. 이 풀 ID는 서로 바꿔 사용할 수 있는 연결 집합을 식별 하는 데 사용 됩니다 (추가 재설정을 요구할 수 있음). 풀 ID는 해당 연결 그룹에 대 한 연결 풀을 식별 하는 데 사용 됩니다.  
   
- 드라이버는 SQL_ERROR 또는 SQL_INVALID_HANDLE 반환 될 때마다 응용 프로그램에 드라이버 관리자 오류를 반환 합니다 (에서 [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) 하거나 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)).  
+ 드라이버가 SQL_ERROR 또는 SQL_INVALID_HANDLE를 반환할 때마다 드라이버 관리자는 오류를 응용 프로그램 ( [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) 또는 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md))으로 반환 합니다.  
   
- 드라이버에서 SQL_SUCCESS_WITH_INFO를 반환할 때마다 드라이버 관리자에서 진단 정보를 가져옵니다 *hDbcInfoToken*, 응용 프로그램에 SQL_SUCCESS_WITH_INFO를 반환 하 고 [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)하 고 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)합니다.  
+ 드라이버가 SQL_SUCCESS_WITH_INFO를 반환할 때마다 드라이버 관리자는 *Hdbcinfotoken*에서 진단 정보를 가져오고 [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) 및 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)의 응용 프로그램에 SQL_SUCCESS_WITH_INFO을 반환 합니다.  
   
- 응용 프로그램에서이 함수를 직접 호출 하지 않습니다. 드라이버 인식 연결 풀링을 지 원하는 ODBC 드라이버는이 함수를 구현 해야 합니다.  
+ 응용 프로그램은이 함수를 직접 호출 하면 안 됩니다. 드라이버 인식 연결 풀링을 지 원하는 ODBC 드라이버는이 함수를 구현 해야 합니다.  
   
- ODBC 드라이버 개발을 위한 sqlspi.h 포함 됩니다.  
+ ODBC 드라이버 개발용으로 sqlspi .h를 포함 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ODBC 드라이버 개발](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [드라이버 인식 연결 풀링](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [ODBC 드라이버에서 연결 풀 인식 개발](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

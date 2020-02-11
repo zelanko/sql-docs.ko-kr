@@ -16,53 +16,53 @@ ms.assetid: 7d4a5496-ec2d-4936-b36a-7049a82be4b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c37a7385cc3aabb725f86261203d22b5b10c3be6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918871"
 ---
 # <a name="eventreasonenum"></a>EventReasonEnum
-발생할 이벤트를 발생 시킨 이유를 지정 합니다.  
+이벤트를 발생 시킨 이유를 지정 합니다.  
   
-|상수|값|설명|  
+|지속적임|값|Description|  
 |--------------|-----------|-----------------|  
-|**adRsnAddNew**|1|작업에 새 레코드를 추가 합니다.|  
-|**adRsnClose**|9|작업을 종료 합니다 **레코드 집합**합니다.|  
-|**adRsnDelete**|2|작업 레코드를 삭제 합니다.|  
-|**adRsnFirstChange**|11|작업은 레코드에 변경한 첫 번째입니다.|  
-|**adRsnMove**|10|작업 내에서 레코드 포인터를 이동 합니다 **레코드 집합**합니다.|  
-|**adRsnMoveFirst**|12|작업의 첫 번째 레코드를 레코드 포인터를 이동 합니다 **레코드 집합**합니다.|  
-|**adRsnMoveLast**|15|작업의 마지막 레코드를 레코드 포인터를 이동 합니다 **레코드 집합**합니다.|  
-|**adRsnMoveNext**|13|작업에서 다음 레코드를 레코드 포인터를 이동 합니다 **레코드 집합**합니다.|  
-|**adRsnMovePrevious**|14|작업에서 이전 레코드를 레코드 포인터를 이동 합니다 **레코드 집합**합니다.|  
-|**adRsnRequery**|7|쿼리가 다시 실행 하는 작업은 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.|  
-|**adRsnResynch**|8|작업을 다시 동기화 합니다 **레코드 집합** 데이터베이스를 사용 하 여 합니다.|  
-|**adRsnUndoAddNew**|5|새 레코드 추가 취소 하는 작업입니다.|  
-|**adRsnUndoDelete**|6|작업은 레코드의 삭제를 취소 합니다.|  
-|**adRsnUndoUpdate**|4|레코드의 업데이트를 취소 하는 한 작업입니다.|  
-|**adRsnUpdate**|3|작업은 기존 레코드를 업데이트 합니다.|  
+|**adRsnAddNew**|1|작업에서 새 레코드를 추가 했습니다.|  
+|**adRsnClose**|9|작업에서 **레코드 집합**을 닫았습니다.|  
+|**adRsnDelete**|2|작업에서 레코드를 삭제 했습니다.|  
+|**adRsnFirstChange**|11|레코드에 대 한 첫 번째 변경을 수행 하는 작업입니다.|  
+|**adRsnMove**|10|작업이 레코드 **집합**내에서 레코드 포인터를 이동 했습니다.|  
+|**adRsnMoveFirst**|12|작업에서 레코드 포인터를 레코드 **집합**의 첫 번째 레코드로 이동 했습니다.|  
+|**adRsnMoveLast**|15|작업에서 레코드 포인터를 레코드 **집합**의 마지막 레코드로 이동 했습니다.|  
+|**adRsnMoveNext**|13|작업에서 레코드 포인터를 레코드 **집합**의 다음 레코드로 이동 했습니다.|  
+|**adRsnMovePrevious**|14|작업에서 레코드 포인터를 레코드 **집합**의 이전 레코드로 이동 했습니다.|  
+|**adRsnRequery**|7|작업에서 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)을 쿼리하면|  
+|**adRsnResynch**|8|작업은 데이터베이스와 함께 **레코드 집합** 을 다시 동기화 합니다.|  
+|**Adrsn를 위한 Addnew**|5|새 레코드를 추가 하는 작업을 취소 한 작업입니다.|  
+|**Adrsn제거**|6|레코드 삭제를 취소 한 작업입니다.|  
+|**adRsnUndoUpdate**|4|레코드 업데이트를 취소 한 작업입니다.|  
+|**adRsnUpdate**|3|작업에서 기존 레코드를 업데이트 했습니다.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC 해당  
+## <a name="adowfc-equivalent"></a>ADO/WFC 동급  
  Package: **com.ms.wfc.data**  
   
-|상수|  
+|지속적임|  
 |--------------|  
-|AdoEnums.EventReason.ADDNEW|  
-|AdoEnums.EventReason.CLOSE|  
-|AdoEnums.EventReason.DELETE|  
-|AdoEnums.EventReason.FIRSTCHANGE|  
-|AdoEnums.EventReason.MOVE|  
-|AdoEnums.EventReason.MOVEFIRST|  
-|AdoEnums.EventReason.MOVELAST|  
-|AdoEnums.EventReason.MOVENEXT|  
-|AdoEnums.EventReason.MOVEPREVIOUS|  
-|AdoEnums.EventReason.REQUERY|  
-|AdoEnums.EventReason.RESYNCH|  
-|AdoEnums.EventReason.UNDOADDNEW|  
-|AdoEnums.EventReason.UNDODELETE|  
-|AdoEnums.EventReason.UNDOUPDATE|  
-|AdoEnums.EventReason.UPDATE|  
+|AdoEnums|  
+|AdoEnums 이유. 닫기|  
+|AdoEnums 이유. 삭제|  
+|AdoEnums 이유. FIRSTCHANGE|  
+|AdoEnums|  
+|AdoEnums|  
+|AdoEnums. MOVELAST|  
+|AdoEnums|  
+|AdoEnums. MOVEPREVIOUS|  
+|AdoEnums|  
+|AdoEnums. RESYNCH|  
+|AdoEnums.|  
+|AdoEnums 삭제|  
+|AdoEnums. UNDOUPDATE|  
+|AdoEnums|  
   
 ## <a name="applies-to"></a>적용 대상  
   

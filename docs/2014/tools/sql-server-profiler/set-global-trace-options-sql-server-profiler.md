@@ -1,5 +1,5 @@
 ---
-title: 전역 추적 옵션 (SQL Server Profiler) 설정 | Microsoft Docs
+title: 전역 추적 옵션 설정 (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c09927de3c10ab3b937101edc6b9da37503abb11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63267413"
 ---
 # <a name="set-global-trace-options-sql-server-profiler"></a>전역 추적 옵션 설정(SQL Server Profiler)
@@ -47,7 +47,7 @@ ms.locfileid: "63267413"
         |값|Description|  
         |-----------|-----------------|  
         |**2**|최소값. 두 스레드를 사용하여 재생합니다.|  
-        |**4**|기본 값입니다.|  
+        |**4**|기본값.|  
         |**255**|최대값. 최대값을 설정하면 다른 프로세스 성능이 저하됩니다.|  
   
     -   **기본 상태 모니터 대기 간격(초)** 은 재생 스레드가 다른 프로세스를 차단할 수 있는 최대 시간(초)을 설정합니다. 다음 표에서는 값을 설명합니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "63267413"
         |값|Description|  
         |-----------|-----------------|  
         |**0**|최소값. **0** 은 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 가 차단 프로세스를 절대로 중지하지 않음을 의미합니다.|  
-        |**3600**|기본 값입니다. **3600** 초 또는 한 시간을 초과하지 않는 차단 프로세스를 허용합니다.|  
+        |**3600**|기본값. **3600** 초 또는 한 시간을 초과하지 않는 차단 프로세스를 허용합니다.|  
         |**86400**|최대값. **86400** 초 또는 하루를 초과하지 않는 차단 프로세스를 허용합니다.|  
   
     -   **기본 상태 모니터 폴링 간격(초)** 은 차단 프로세스용 재생 스레드를 폴링하는 빈도를 설정합니다. 다음 표에서는 값을 설명합니다.  
@@ -63,11 +63,11 @@ ms.locfileid: "63267413"
         |값|Description|  
         |-----------|-----------------|  
         |**1**|최소값. **1** 은 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 가 차단 프로세스를 초당 하나만 폴링함을 의미합니다.|  
-        |**60**|기본 값입니다. 차단 프로세스를 _분당 하나만 폴링합니다.|  
+        |**60**|기본값. 차단 프로세스를 _분당 하나만 폴링합니다.|  
         |**86400**|최대값. 차단 프로세스를 **86400** 초당 또는 하루에 하나만 폴링합니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [추적 표시 기본값 설정&#40;SQL Server Profiler&#41;](sql-server-profiler.md)   
- [SQL Server 프로파일러](sql-server-profiler.md)  
+ [SQL Server Profiler](sql-server-profiler.md)  
   
   

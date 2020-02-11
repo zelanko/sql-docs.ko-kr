@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5b07fb1c133bbed21fd74936a38b97fa1778e5ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104547"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>보고서 파트(보고서 작성기 및 SSRS)
@@ -26,9 +26,9 @@ ms.locfileid: "66104547"
   
  보고서에 추가하는 보고서 파트는 고유한 ID를 통해 사이트나 서버에 있는 보고서 파트 인스턴스에 대한 관계를 유지합니다. 사이트 또는 서버의 보고서 파트를 보고서에 추가한 후에는 사이트 또는 서버의 원본 보고서 파트와 독립적으로 추가한 파트를 수정할 수 있습니다. 해당하는 권한이 있는 경우 다른 사람이 사이트 또는 서버에서 보고서 파트에 적용한 업데이트를 허용할 수 있으며, 다른 사람이 수정한 보고서 파트에 새 보고서 파트를 추가하거나 원본을 덮어쓰는 방법으로 사이트 또는 서버에 다시 저장할 수도 있습니다.  
   
- 빠르게 시작 하려면 보고서 파트를 사용 하 여 비디오를 보려면 [SQL Server 2008 R2의 보고서 작성기 3 보고서 파트](https://technet.microsoft.com/edge/Video/ff711300) 고 [어떻게 할까요 SQL Server 보고서 작성기를 사용 하 여 재사용 가능한 보고서 파트 만들기](https://technet.microsoft.com/sqlserver/ff634166.aspx)합니다.  
+ 보고서 파트 작업을 신속하게 시작하려면 [SQL Server 2008 R2의 보고서 작성기 3 보고서 파트](https://technet.microsoft.com/edge/Video/ff711300) 및 [작업 방법: SQL Server 보고서 작성기를 사용하여 재사용 가능한 보고서 파트 만들기](https://technet.microsoft.com/sqlserver/ff634166.aspx)비디오를 참조하십시오.  
   
-##  <a name="ComponentWorkflow"></a> 보고서 파트 수명 주기  
+##  <a name="ComponentWorkflow"></a>보고서 파트의 수명 주기  
  ![rs_ComponentCreation](media/rs-componentcreation.gif "rs_ComponentCreation")  
   
 1.  A라는 사람이 포함된 데이터 세트를 사용하는 보고서(차트 포함)를 만듭니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "66104547"
   
 6.  B가 서버에서 업데이트된 차트를 허용합니다. 그러면 B가 보고서에서 차트에 적용한 변경 내용을 이 업데이트 내용이 덮어쓰게 됩니다.  
 
-##  <a name="PublishingComponents"></a> 보고서 파트 게시  
+##  <a name="PublishingComponents"></a>보고서 파트 게시  
  보고서 파트를 게시하면 보고서 작성기가 보고서 파트에 고유한 ID(보고서 파트 이름과는 다름)를 지정합니다. 보고서 작성기는 보고서 파트에 대한 다른 내용이 변경되어도 이 ID를 그대로 유지합니다. ID는 보고서의 원본 보고서 항목을 보고서 파트에 연결합니다. 다른 보고서 작성자가 보고서 파트를 다시 사용할 때도 이 ID는 다른 작성자의 보고서에 있는 보고서 파트를 보고서 서버의 보고서 파트에 연결합니다.  
   
  다음과 같은 보고서 항목을 보고서 파트로 게시할 수 있습니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "66104547"
   
 -   이미지  
   
--   맵  
+-   지도  
   
 -   매개 변수  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66104547"
   
  속성 창에서 설명을 편집할 수도 있습니다.  
 
-##  <a name="ReusingComponents"></a> 보고서 파트 다시 사용  
+##  <a name="ReusingComponents"></a>보고서 파트 다시 사용  
  보고서를 만드는 가장 쉬운 방법은 테이블, 차트 등의 기존 보고서 파트를 보고서 파트 갤러리에서 보고서에 추가하는 것입니다. 보고서 파트를 보고서에 추가한 후 필요한 만큼 수정하거나 서버의 업데이트를 적용할 수 있습니다. 보고서에서 보고서 항목을 변경해도 사이트 또는 서버에 게시된 보고서 파트 인스턴스에는 아무런 영향이 없으며, 보고서의 인스턴스와 사이트 또는 서버의 인스턴스 간 관계도 제거되지 않습니다. 권한이 있으면 업데이트된 복사본을 사이트 또는 서버로 다시 저장할 수 있습니다. 다른 사람이 사이트 또는 서버에서 복사본을 수정하는 경우에는 자신이 가진 복사본을 그대로 유지할 수도 있고 사이트 또는 서버에 있는 복사본과 같도록 업데이트할 수도 있습니다.  
   
 ### <a name="searching-for-report-parts"></a>보고서 파트 검색  
@@ -94,7 +94,7 @@ ms.locfileid: "66104547"
 ### <a name="what-comes-with-a-report-part"></a>보고서 파트와 함께 추가되는 내용  
  보고서 파트를 보고서에 추가할 때는 해당 파트가 작동하는 데 필요한 모든 항목도 추가하게 됩니다. 예를 들어 데이터를 표시하는 모든 개체는 데이터 세트, 즉 쿼리와 데이터 원본에 대한 연결에 따라 달라집니다. 또한 매개 변수도 하나 이상 있을 수 있습니다. 보고서 파트가 사용하는 모든 항목을 파트의 *종속성*이라고 하며, 이러한 모든 항목 또는 항목에 대한 포인터는 보고서 파트를 보고서에 추가할 때 함께 포함됩니다. 데이터 세트 및 매개 변수는 보고서의 보고서 데이터 창에 나열됩니다.  
   
- 보고서 파트의 데이터 세트는 보고서 파트에 포함되어 있을 수도 있고 보고서 파트가 가리키는 별도의 공유 데이터 세트일 수도 있습니다. 보고서 파트에 포함된 데이터 집합은 수정할 수 있습니다. 공유 데이터 세트의 경우에는 별도의 개체이므로 해당 권한이 필요합니다. 자세한 내용에 대 한 공유 및 포함 된 데이터 집합을 참조 하세요 [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](report-data/report-datasets-ssrs.md)합니다.  
+ 보고서 파트의 데이터 세트는 보고서 파트에 포함되어 있을 수도 있고 보고서 파트가 가리키는 별도의 공유 데이터 세트일 수도 있습니다. 보고서 파트에 포함된 데이터 집합은 수정할 수 있습니다. 공유 데이터 세트의 경우에는 별도의 개체이므로 해당 권한이 필요합니다. 공유 및 포함 된 데이터 집합에 대 한 자세한 내용은 [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](report-data/report-datasets-ssrs.md)를 참조 하세요.  
   
 ### <a name="resolving-naming-conflicts"></a>이름 지정 충돌 해결  
  보고서 파트를 추가할 때 보고서 작성기는 이름 충돌을 해결합니다. 예를 들어 보고서에 이미 Chart1이 있는데 Chart1 보고서 파트를 또 추가하면 보고서 작성기가 자동으로 새 보고서 파트 이름을 Chart2로 바꿉니다. 보고서에 이미 Dataset1이 있는데 역시 이름이 Dataset1인 다른 데이터 세트를 참조하는 보고서 파트를 추가하는 경우에는 보고서 작성기가 새 데이터 세트 이름을 Dataset2로 바꾸고 참조를 업데이트합니다.  
@@ -104,11 +104,11 @@ ms.locfileid: "66104547"
   
  보고서에 이미 있는 데이터 세트와 같은 데이터 세트를 사용하는 다른 보고서 파트를 추가하면 마법사가 해당 데이터 세트의 다른 버전을 보고서에 추가하는 것이 아니라 보고서 파트의 참조를 기존 데이터 세트로 리디렉션합니다. 자세한 내용은 [보고서 작성기의 보고서 파트 및 데이터 세트](report-data/report-parts-and-datasets-in-report-builder.md)를 참조하세요.  
 
-##  <a name="UpdatingComponents"></a> 서버의 변경 내용으로 보고서 파트 업데이트  
+##  <a name="UpdatingComponents"></a>서버의 변경 내용으로 보고서 파트 업데이트  
  보고서를 열 때마다 보고서 작성기는 해당 보고서에 있는 보고서 파트의 서버 인스턴스가 서버에서 업데이트되었는지 확인합니다. 또한 데이터 세트 및 매개 변수와 같은 보고서 파트의 종속 항목에서 변경 내용을 확인합니다. 게시된 보고서 파트나 보고서 파트의 종속성이 서버에서 업데이트되었으면 보고서의 알림 표시줄에 업데이트된 항목의 개수가 표시됩니다. 업데이트를 확인하고 허용 또는 거부하도록 선택하거나 알림 표시줄을 해제할 수 있습니다. 업데이트가 표시되도록 선택하면 보고서 파트의 축소판 그림, 보고서 파트를 마지막으로 수정한 사람 및 시간이 표시됩니다. 그러면 업데이트된 항목 중 일부나 전부를 허용할 수 있습니다.  
   
 > [!NOTE]  
->  알림 표시줄을 사용하지 않도록 설정하고 보고서 파트가 변경된 경우 알림을 받지 않을 수 있습니다. 이 옵션은 보고서에 보고서 파트를 추가할 때 설정합니다. 알림 표시줄을 사용하지 않도록 설정한 경우에도 여전히 업데이트를 확인할 수 있습니다. 자세한 내용은 [업데이트 확인 또는 업데이트 해제 &#40;보고서 작성기 및 SSRS&#41;](../../2014/reporting-services/check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)합니다.  
+>  알림 표시줄을 사용하지 않도록 설정하고 보고서 파트가 변경된 경우 알림을 받지 않을 수 있습니다. 이 옵션은 보고서에 보고서 파트를 추가할 때 설정합니다. 알림 표시줄을 사용하지 않도록 설정한 경우에도 여전히 업데이트를 확인할 수 있습니다. 자세한 내용은 [업데이트 확인 또는 업데이트 해제 &#40;보고서 작성기 및 SSRS&#41;](../../2014/reporting-services/check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)를 참조 하세요.  
   
  보고서 작성기는 보고서 파트를 서버에서 마지막으로 업데이트한 날짜와 보고서 파트를 서버와 마지막으로 동기화한 날짜 간의 차이를 확인합니다. 그러나 보고서에서 보고서 파트를 수정한 날짜는 확인하지 않습니다. 따라서 보고서의 보고서 파트와 서버의 보고서 파트가 크게 다를 수 있지만 보고서 작성기는 업데이트를 확인할 때 이 차이점을 찾지 않습니다.  
   
@@ -120,28 +120,30 @@ ms.locfileid: "66104547"
   
  서버의 버전으로 되돌리려면 보고서의 버전을 삭제한 다음 서버 버전을 새로 추가하면 됩니다.  
 
-##  <a name="RepublishingComponents"></a> 이미 서버에 있는 보고서 파트 업데이트  
+##  <a name="RepublishingComponents"></a>이미 서버에 있는 보고서 파트 업데이트  
  서버에 있는 기존 보고서 파트를 업데이트하거나, 기존 보고서 파트를 바꾸지 않고 새 보고서 파트로 게시할 수 있습니다. 서버에 있는 보고서 파트를 업데이트해도 다른 보고서의 보고서 파트 복사본이 자동으로 수정되지는 않습니다. 다른 보고서 작성자가 해당 보고서 파트를 보고서에 추가한 경우 다음 번에 해당 보고서를 열 때 변경 내용 알림이 표시됩니다. 그러면 변경 내용 허용 여부를 선택할 수 있습니다.  
   
  새 보고서 파트로 게시하도록 선택하는 경우 보고서 작성기가 보고서 파트에 새 고유 ID를 지정합니다. 이 ID는 원래 보고서 파트와는 더 이상 연결되지 않습니다.  
   
  데이터 세트가 보고서 파트에 포함되어 있는 경우 보고서 파트를 게시할 때마다 데이터 세트가 **보고서 파트 게시** 대화 상자에 표시됩니다. 공유 데이터 세트는 **보고서 파트 게시** 대화 상자에 표시되지 않습니다.  
 
-##  <a name="RptPartsRptDesigner"></a> 보고서 디자이너에서 보고서 파트 작업  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너에서는 보고서 파트가 약간 다르게 작동합니다. 보고서 디자이너에서 게시는 단방향으로 수행됩니다. 즉, 보고서 디자이너에서 보고서 파트를 게시할 수는 있지만 보고서 디자이너에서 기존 보고서 파트를 다시 사용할 수는 없습니다. 자세한 내용은 [보고서 디자이너의 보고서 파트&#40;SSRS&#41;](report-design/report-parts-in-report-designer-ssrs.md)를 참조하세요.  
+##  <a name="RptPartsRptDesigner"></a>보고서 디자이너에서 보고서 파트 작업  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너에서는 보고서 파트가 약간 다르게 작동합니다. 보고서 디자이너에서 게시는 단방향으로 수행됩니다. 즉, 보고서 디자이너에서 보고서 파트를 게시할 수는 있지만 보고서 디자이너에서 기존 보고서 파트를 다시 사용할 수는 없습니다. 자세한 내용은 [보고서 디자이너의 보고서 파트&#40;SSRS&#41;](report-design/report-parts-in-report-designer-ssrs.md)를 참조하세요.  
   
-##  <a name="HowTo"></a> 방법 도움말 항목  
+##  <a name="HowTo"></a>방법 도움말 항목  
  [보고서 파트 게시 및 다시 게시&#40;보고서 작성기 및 SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
  [보고서 파트 찾아보기 및 기본 폴더 설정&#40;보고서 작성기 및 SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
- [업데이트 확인 또는 업데이트 &#40;보고서 작성기 및 SSRS&#41;](../../2014/reporting-services/check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)  
+ [업데이트를 확인 하거나 업데이트 &#40;보고서 작성기 및 SSRS를 해제&#41;](../../2014/reporting-services/check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서 작성기의 보고서 파트 및 데이터 세트](report-data/report-parts-and-datasets-in-report-builder.md)   
- [보고서 파트 문제 해결 &#40;보고서 작성기 및 SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
+ [보고서 파트 &#40;보고서 작성기 및 SSRS에 대 한 문제 해결&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [보고서 파트 관리](report-design/managing-report-parts.md)   
- [보고서 작성기 3 보고서 파트 (비디오) SQL Server 2008 R2에서](https://technet.microsoft.com/edge/Video/ff711300)   
- [어떻게 할까요 SQL Server 보고서 작성기 (비디오)를 사용 하 여 재사용 가능한 보고서 파트 만들기](https://technet.microsoft.com/sqlserver/ff634166.aspx)  
+ [SQL Server 2008 r 2의 보고서 작성기 3 보고서 파트 (비디오)](https://technet.microsoft.com/edge/Video/ff711300)   
+ [작업 방법: SQL Server 보고서 작성기를 사용하여 재사용 가능한 보고서 파트 만들기(비디오)](https://technet.microsoft.com/sqlserver/ff634166.aspx)  
   
   

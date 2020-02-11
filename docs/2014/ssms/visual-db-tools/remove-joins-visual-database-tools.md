@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ac2b8ca912f02aecc5e1b3e76d04d84b501db89b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63253491"
 ---
 # <a name="remove-joins-visual-database-tools"></a>조인 제거(Visual Database Tools)
@@ -35,9 +35,9 @@ ms.locfileid: "63253491"
   
  쿼리 및 뷰 디자이너는 조인 선을 제거하고 [SQL 창](sql-pane-visual-database-tools.md)에서 문을 변경합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [테이블 자동 조인 &#40;Visual Database Tools&#41;](join-tables-automatically-visual-database-tools.md)   
- [테이블 수동 조인 &#40;Visual Database Tools&#41;](join-tables-manually-visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools &#40;자동으로 테이블 조인&#41;](join-tables-automatically-visual-database-tools.md)   
+ [Visual Database Tools를 &#40;테이블을 수동으로 조인&#41;](join-tables-manually-visual-database-tools.md)   
  [조인을 사용한 쿼리&#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)  
   
   

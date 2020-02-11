@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f5ea9e6e4e36e62828f3036c3765ba42c202448c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098353"
 ---
-# <a name="initializereportserver-method-wmi-msreportserverconfigurationsetting"></a>InitializeReportServer 메서드(WMI MSReportServer_ConfigurationSetting)
+# <a name="initializereportserver-method-wmi-msreportserver_configurationsetting"></a>InitializeReportServer 메서드(WMI MSReportServer_ConfigurationSetting)
   지정된 보고서 서비스 인스턴스를 초기화합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -47,25 +47,26 @@ public void InitializeReportServer(string InstallationID,
  *HRESULT*  
  [out] 호출의 성공 여부를 나타내는 값입니다.  
   
- *ExtendedErrors[]*  
+ *ExtendedErrors []*  
  [out] 호출에서 반환되는 추가 오류가 들어 있는 문자열 배열입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드 호출의 성공 또는 실패를 나타내는 *HRESULT* 를 반환합니다. 0 값은 메서드 호출이 성공했음을 나타냅니다. 0 이외의 값은 오류가 발생했음을 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 메서드를 호출하면 보고서 서버 데이터베이스 보안 정보에 액세스하는 암호화 키가 *InstallationID*에 의해 식별되는 보고서 서버의 공개 키를 사용하여 암호화됩니다.  
   
  지정된 보고서 서버의 공개 키는 이전에 보고서 서버 데이터베이스에 기록되어 있어야 합니다.  
   
- *InitializeReportServer* 메서드는 암호화 키를 해독할 수 있도록 이미 보안 정보에 대한 액세스 권한이 있는 보고서 서버에 대해 호출되어야 합니다. 그런 다음 암호화된 결과 암호화 키가 보고서 서버 데이터베이스에 저장됩니다.  
+ 
+  *InitializeReportServer* 메서드는 암호화 키를 해독할 수 있도록 이미 보안 정보에 대한 액세스 권한이 있는 보고서 서버에 대해 호출되어야 합니다. 그런 다음 암호화된 결과 암호화 키가 보고서 서버 데이터베이스에 저장됩니다.  
   
- 하는 경우 보고서 서버의 [IsInitialized](configurationsetting-property-isinitialized.md) 속성이 `true` 메서드 암호화 키를 암호화 하지 않고 성공 InitializeReportServer 메서드는 호출 된 경우 반환 합니다.  
+ Inreypservermethod가 호출 될 때 보고서 서버의 `true` [isinitialized](configurationsetting-property-isinitialized.md) 속성이로 설정 된 경우 메서드는 암호화 키를 암호화 하지 않고 success를 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **네임 스페이스:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [MSReportServer_ConfigurationSetting 멤버](msreportserver-configurationsetting-members.md)  
   
   

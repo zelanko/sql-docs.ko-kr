@@ -1,5 +1,5 @@
 ---
-title: 예를 들면 다음과 같습니다. AUTO 모드 사용 | Microsoft Docs
+title: '예제: AUTO 모드 사용 | Microsoft 문서'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 93a26764a7111a01b07d23c61bfbfb5c4a728e72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287806"
 ---
-# <a name="examples-using-auto-mode"></a>예를 들면 다음과 같습니다. AUTO 모드 사용
+# <a name="examples-using-auto-mode"></a>예제: AUTO 모드 사용
   다음 예에서는 AUTO 모드를 사용하는 방법을 보여 줍니다. 이러한 쿼리는 대부분 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 예제 데이터베이스의 ProductModel 테이블에 있는 Instructions 열에 저장된 자전거 제조 지침 XML 문서에 대해 지정됩니다.  
   
-## <a name="example-retrieving-customer-order-and-order-detail-information"></a>예: 고객, 주문 및 주문 세부 정보를 검색합니다.  
+## <a name="example-retrieving-customer-order-and-order-detail-information"></a>예제: 고객, 주문 및 주문 세부 정보 검색  
  이 쿼리는 특정 고객에 대한 고객, 주문 및 주문 세부 정보를 검색합니다.  
   
 ```  
@@ -93,7 +93,7 @@ FOR XML AUTO;
   
  `</Cust>`  
   
-## <a name="example-specifying-group-by-and-aggregate-functions"></a>예: GROUP BY 및 집계 함수 지정  
+## <a name="example-specifying-group-by-and-aggregate-functions"></a>예제: GROUP BY 및 집계 함수 지정  
  다음 쿼리는 개별 고객 ID와 고객이 요청한 주문 번호를 반환합니다.  
   
 ```  
@@ -113,7 +113,7 @@ FOR XML AUTO;This is the partial result:
   
  `...`  
   
-## <a name="example-specifying-computed-columns-in-auto-mode"></a>예: 자동 모드에서 계산된 열 지정  
+## <a name="example-specifying-computed-columns-in-auto-mode"></a>예제: AUTO 모드에서 계산 열 지정  
  이 쿼리는 연결된 개별 고객 이름 및 주문 정보를 반환합니다. 계산 열은 해당 시점에 발생하는 가장 안쪽 수준으로 할당됩니다(이 예에서는 <`SOH`> 요소). 연결된 고객 이름은 결과에서 <`SOH`> 요소의 특성으로 추가됩니다.  
   
 ```  
@@ -136,7 +136,7 @@ FOR XML AUTO;
 <SOH Name="Eugene Huang" SalesOrderID="43767" />  
 ```  
   
- 각 판매 주문 헤더 정보가 하위 요소로 들어 있는 `Name` 특성이 포함된 <`IndividualCustomer`> 요소를 검색하기 위해 하위 SELECT를 사용하여 쿼리가 다시 작성되었습니다. 내부 SELECT는 개별 고객의 이름이 포함된 계산 열이 있는 임시 `IndividualCustomer` 테이블을 만듭니다. 그런 다음 이 테이블이 `SalesOrderHeader` 테이블에 조인되어 결과를 가져옵니다.  
+ 각 판매 주문 헤더 정보가 하위 요소로 들어 있는 `IndividualCustomer` 특성이 포함된 <`Name`> 요소를 검색하기 위해 하위 SELECT를 사용하여 쿼리가 다시 작성되었습니다. 내부 SELECT는 개별 고객의 이름이 포함된 계산 열이 있는 임시 `IndividualCustomer` 테이블을 만듭니다. 그런 다음 이 테이블이 `SalesOrderHeader` 테이블에 조인되어 결과를 가져옵니다.  
   
  `Sales.Customer` 테이블은 해당 고객에 대한 `PersonID` 값을 포함하여 개별 고객 정보를 저장합니다. 그런 다음 이 `PersonID` 는 `Person.Person` 테이블에서 연락처 이름을 찾는 데 사용됩니다.  
   
@@ -166,8 +166,9 @@ ORDER BY IndividualCustomer.CustomerID, SOH.CustomerIDFOR XML AUTO;
   
  `...`  
   
-## <a name="example-returning-binary-data"></a>예: 이진 데이터 반환  
- 이 쿼리는 `ProductPhoto` 테이블에서 제품 사진을 반환합니다. `ThumbNailPhoto`는 `ProductPhoto` 테이블의 `varbinary(max)` 열입니다. 기본적으로 `AUTO` 모드는 이진 데이터에 대해 쿼리가 실행되는 데이터베이스의 가상 루트에 대한 상대 URL인 참조를 반환합니다. 이미지를 식별하기 위해서는 `ProductPhotoID` 키 특성을 지정해야 합니다. 이 예에서 설명된 것과 같이 이미지 참조를 검색할 때 테이블의 기본 키도 행을 고유하게 식별할 수 있도록 `SELECT` 절에서 지정되어야 합니다.  
+## <a name="example-returning-binary-data"></a>예제: 이진 데이터 반환  
+ 이 쿼리는 `ProductPhoto` 테이블에서 제품 사진을 반환합니다. 
+  `ThumbNailPhoto`는 `varbinary(max)` 테이블의 `ProductPhoto` 열입니다. 기본적으로 `AUTO` 모드는 이진 데이터에 대해 쿼리가 실행되는 데이터베이스의 가상 루트에 대한 상대 URL인 참조를 반환합니다. 이미지를 식별하기 위해서는 `ProductPhotoID` 키 특성을 지정해야 합니다. 이 예에서 설명된 것과 같이 이미지 참조를 검색할 때 테이블의 기본 키도 행을 고유하게 식별할 수 있도록 `SELECT` 절에서 지정되어야 합니다.  
   
 ```  
 SELECT ProductPhotoID, ThumbNailPhoto  
@@ -203,7 +204,7 @@ FOR XML AUTO, BINARY BASE64;
   
  기본적으로 이진 데이터를 검색하기 위해 AUTO 모드를 사용하는 경우 쿼리가 실행되는 데이터베이스의 가상 루트에 대한 상대 URL 참조가 이진 데이터 대신 반환됩니다. 이 경우는 BINARY BASE64 옵션이 지정되지 않은 경우에 해당합니다.  
   
- AUTO 모드가 쿼리에 지정된 테이블 또는 열 이름이 데이터베이스에 있는 테이블 또는 열 이름과 일치하지 않는 대/소문자를 구분하지 않는 데이터베이스에 있는 이진 데이터에 대한 URL 참조를 반환하는 경우 쿼리가 실행됩니다. 하지만 참조에 반환된 대/소문자가 일관적이지 않습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ AUTO 모드가 쿼리에 지정된 테이블 또는 열 이름이 데이터베이스에 있는 테이블 또는 열 이름과 일치하지 않는 대/소문자를 구분하지 않는 데이터베이스에 있는 이진 데이터에 대한 URL 참조를 반환하는 경우 쿼리가 실행됩니다. 하지만 참조에 반환된 대/소문자가 일관적이지 않습니다. 다음은 그 예입니다.  
   
 ```  
 SELECT ProductPhotoID, ThumbnailPhoto  
@@ -222,7 +223,7 @@ FOR XML AUTO;
   
  이는 특히 대/소문자를 구분하는 데이터베이스에 대해 dbobject 쿼리를 실행하는 경우에 문제가 될 수 있습니다. 이러한 문제를 방지하려면 쿼리에 지정된 테이블 또는 열 이름의 대/소문자가 데이터베이스에 있는 테이블 또는 열 이름의 대/소문자와 일치해야 합니다.  
   
-## <a name="example-understanding-the-encoding"></a>예: 인코딩 이해  
+## <a name="example-understanding-the-encoding"></a>예제: 인코딩 이해  
  다음 예에서는 결과에서 발생하는 여러 가지 인코딩을 보여 줍니다.  
   
  다음 테이블을 만듭니다.  
@@ -265,11 +266,11 @@ SELECT * FROM [Special Chars] FOR XML AUTO;
   
 -   쿼리 결과에서 반환된 요소와 특성 이름의 특수 XML 및 URL 문자는 그에 해당되는 유니코드 문자의 16진수 값을 사용하여 인코딩됩니다. 이전 결과에서 요소 이름 <`Special Chars`>는 <`Special_x0020_Chars`>로 반환됩니다. 특성 이름 <`Col#&2`>는 <`Col_x0023__x0026_2`>로 반환됩니다. XML 및 URL 특수 문자가 모두 인코딩됩니다.  
   
--   요소나 특성의 값에 5개의 표준 XML 문자 엔터티(', "", \<, > 및 &)가 있는 경우 이 특수 XML 문자는 항상 XML 문자 인코딩을 사용하여 인코딩됩니다. 이전 결과에서 <`Col1`> 특성 값의 `&` 값은 `&`로 인코딩됩니다. 그러나 # 문자는 유효한 XML 문자이고 특수 XML 문자가 아니기 때문에 #로 그대로 유지됩니다.  
+-   요소나 특성의 값에 5개의 표준 XML 문자 엔터티(', "", \<, > 및 &)가 있는 경우 이 특수 XML 문자는 항상 XML 문자 인코딩을 사용하여 인코딩됩니다. 이전 결과에서 <`&`> 특성 값의 `Col1` 값은 `&`로 인코딩됩니다. 그러나 # 문자는 유효한 XML 문자이고 특수 XML 문자가 아니기 때문에 #로 그대로 유지됩니다.  
   
 -   요소나 특성의 값에 URL에서 특수한 의미가 있는 특수 URL 문자가 있으면 이 문자는 DBOBJECT URL 값에서만 인코딩되고 특수 문자가 테이블이나 열 이름의 일부일 경우에만 인코딩됩니다. 결국 테이블 이름 `#` 의 일부인 문자 `Col#&2` 는 `_x0023_ in the DBOJBECT URL`으로 인코딩됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [FOR XML에서 AUTO 모드 사용](use-auto-mode-with-for-xml.md)  
   
   
