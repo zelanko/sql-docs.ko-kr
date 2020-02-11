@@ -1,5 +1,5 @@
 ---
-title: sp_getsubscriptiondtspackagename (TRANSACT-SQL) | Microsoft Docs
+title: sp_getsubscriptiondtspackagename (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: 606c40aa-2593-43af-9762-0f260bbb51f2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f8b8f0a91715a2af0cb794965e2de6ad520cabd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68123930"
 ---
-# <a name="spgetsubscriptiondtspackagename-transact-sql"></a>sp_getsubscriptiondtspackagename(Transact-SQL)
+# <a name="sp_getsubscriptiondtspackagename-transact-sql"></a>sp_getsubscriptiondtspackagename(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   데이터를 구독자로 보내기 전에 변환하는 데 사용되는 DTS(데이터 변환 서비스) 패키지의 이름을 반환합니다. 이 저장 프로시저는 모든 데이터베이스의 게시자에서 실행됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,23 +38,23 @@ sp_getsubscriptiondtspackagename [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'` 게시의 이름이입니다. **'***발행물***'** 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'`게시의 이름입니다. **'***게시***'** 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @subscriber = ] 'subscriber'` 구독자의 이름이입니다. *구독자* 는 sysname 이며 기본값은 NULL입니다.  
+`[ @subscriber = ] 'subscriber'`구독자의 이름입니다. *구독자* 는 sysname 이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**new_package_name**|**sysname**|DTS 패키지의 이름입니다.|  
   
 ## <a name="remarks"></a>설명  
- **sp_getsubscriptiondtspackagename** 스냅숏 복제 및 트랜잭션 복제에 사용 됩니다.  
+ **sp_getsubscriptiondtspackagename** 는 스냅숏 복제 및 트랜잭션 복제에 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_getsubscriptiondtspackagename**합니다.  
+ **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_getsubscriptiondtspackagename**을 실행할 수 있습니다.  
   
   

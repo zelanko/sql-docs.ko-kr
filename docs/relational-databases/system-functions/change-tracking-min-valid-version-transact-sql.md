@@ -1,5 +1,5 @@
 ---
-title: CHANGE_TRACKING_MIN_VALID_VERSION (TRANSACT-SQL) | Microsoft Docs
+title: CHANGE_TRACKING_MIN_VALID_VERSION (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -20,18 +20,18 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5bb0baec2284d17d84c7a8c3dddd13de3fa69510
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68042937"
 ---
-# <a name="changetrackingminvalidversion-transact-sql"></a>CHANGE_TRACKING_MIN_VALID_VERSION(Transact-SQL)
+# <a name="change_tracking_min_valid_version-transact-sql"></a>CHANGE_TRACKING_MIN_VALID_VERSION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  변경 내용 추적 정보가 지정된 된 테이블에서 사용 하는 경우 가져오는 데 사용할 수 있는 클라이언트의 최소 버전을 반환 합니다 [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md) 함수입니다.  
+  [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md) 함수를 사용 하는 경우 지정 된 테이블에서 변경 내용 추적 정보를 가져오는 데 사용할 수 있는 클라이언트의 최소 버전을 반환 합니다.  
     
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,13 +42,13 @@ CHANGE_TRACKING_MIN_VALID_VERSION ( table_object_id )
   
 ## <a name="arguments"></a>인수  
  *table_object_id*  
- 테이블의 개체 ID입니다. *table_object_id* 되는 **int**합니다.  
+ 테이블의 개체 ID입니다. *table_object_id* 은 **int**입니다.  
   
 ## <a name="return-type"></a>반환 형식  
  **bigint**  
   
 ## <a name="remarks"></a>설명  
- 이 함수를 사용 하 여 값의 유효성을 검사 하는 *last_sync_version* CHANGETABLE에 대 한 매개 변수입니다. 하는 경우 *last_sync_version* CHANGETABLE 이후의 호출에서 반환 되는 결과가 유효 하지 않을이 함수로 보고 되는 값 보다 작습니다.  
+ 이 함수를 사용 하 여 CHANGETABLE의 *last_sync_version* 매개 변수 값에 대 한 유효성을 검사 합니다. *Last_sync_version* 이 함수에서 보고 한 값 보다 작은 경우 CHANGETABLE의 이후 호출에서 반환 된 결과가 유효 하지 않을 수 있습니다.  
   
  CHANGE_TRACKING_MIN_VALID_VERSION은 다음 정보를 사용하여 반환 값을 결정합니다.  
   
@@ -67,7 +67,8 @@ CHANGE_TRACKING_MIN_VALID_VERSION ( table_object_id )
 -   개체 ID로 지정한 테이블에 대한 권한이 부족한 경우  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 지정한 버전이 유효한 버전인지 여부를 확인합니다. 예제에는 `dbo.Employees` 테이블의 유효한 최소 버전을 가져와 `@last_sync_version` 변수 값과 비교합니다. `@last_sync_version` 값이 `@min_valid_version` 값보다 작으면 변경된 행 목록이 유효하지 않습니다.  
+ 다음 예에서는 지정한 버전이 유효한 버전인지 여부를 확인합니다. 예제에는 `dbo.Employees` 테이블의 유효한 최소 버전을 가져와 `@last_sync_version` 변수 값과 비교합니다. 
+  `@last_sync_version` 값이 `@min_valid_version` 값보다 작으면 변경된 행 목록이 유효하지 않습니다.  
   
 > [!NOTE]  
 >  일반적으로 데이터를 동기화하는 데 사용된 마지막 버전 번호를 저장한 다른 위치나 테이블에서 값을 가져옵니다.  
@@ -86,7 +87,7 @@ ELSE
 -- Obtain changes using CHANGETABLE(CHANGES ...)  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [변경 내용 추적 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [sys.change_tracking_tables&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)  
   

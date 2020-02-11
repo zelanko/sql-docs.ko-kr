@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6f7b166ae15e403e2a84bc3a7f3902350c805788
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73760594"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>큰 CLR 사용자 정의 형식(ODBC)
@@ -45,7 +45,7 @@ ms.locfileid: "73760594"
   
 |SQL 데이터 형식|메모리 레이아웃|C 데이터 형식|값(sqlext.h)|  
 |-------------------|-------------------|-----------------|------------------------|  
-|SQL_SS_UDT|SQLCHAR * (unsigned char \*)|SQL_C_BINARY|SQL_BINARY (-2)|  
+|SQL_SS_UDT|SQLCHAR * (부호 없는 \*문자)|SQL_C_BINARY|SQL_BINARY (-2)|  
   
 ## <a name="descriptor-fields-for-parameters"></a>매개 변수의 설명자 필드  
  IPD 필드에 반환되는 정보는 다음과 같습니다.  
@@ -136,7 +136,7 @@ ms.locfileid: "73760594"
 |SQL_C_BINARY|지원됨|  
 |SQL_C_CHAR|되지|  
   
- \* 이진 데이터가 16 진수 문자열로 변환 됩니다.  
+ \*이진 데이터가 16 진수 문자열로 변환 됩니다.  
   
  C에서 SQL 데이터 형식으로 지원되는 변환은 다음과 같습니다.  
   
@@ -146,7 +146,7 @@ ms.locfileid: "73760594"
 |SQL_C_BINARY|지원됨|  
 |SQL_C_CHAR|되지|  
   
- 16 진수 문자열에서 이진 데이터를 변환 하는 \* 발생 합니다.  
+ \*16 진수 문자열에서 이진 데이터로의 변환이 발생 합니다.  
   
 ## <a name="sql_variant-support-for-udts"></a>UDT에 대한 SQL_VARIANT 지원  
  UDT는 SQL_VARIANT 열에서 지원되지 않습니다.  
@@ -213,7 +213,7 @@ ms.locfileid: "73760594"
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  UDT에 대해 반환되는 값은 다음과 같습니다.  
   
-|SQL 데이터 형식|형식|하위 유형|길이|전체 자릿수|소수 자릿수|  
+|SQL 데이터 형식|Type|하위 유형|길이|자릿수|확장|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (8,000바이트 이하 길이)|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> (8,000바이트를 초과하는 길이)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -233,7 +233,7 @@ ms.locfileid: "73760594"
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  UDT에 허용되는 값은 다음과 같습니다.  
   
-|SQL 데이터 형식|형식|하위 유형|길이|전체 자릿수|소수 자릿수|  
+|SQL 데이터 형식|Type|하위 유형|길이|자릿수|확장|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (8,000바이트 이하 길이)|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> (8,000바이트를 초과하는 길이)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -241,7 +241,7 @@ ms.locfileid: "73760594"
 ### <a name="sqlspecialcolumns"></a>SQLSpecialColumns  
  DATA_TYPE, TYPE_NAME, COLUMN_SIZE, BUFFER_LENGTH 및 DECIMAL_DIGTS UDT 열에 대해 반환되는 값은 이 항목의 앞부분에 있는 "SQLColumns 및 SQLProcedureColumns가 반환하는 열 메타데이터(카탈로그 메타데이터)" 섹션에 설명되어 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [큰 CLR 사용자 정의 형식](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)  
   
   

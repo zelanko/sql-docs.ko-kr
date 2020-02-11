@@ -13,37 +13,37 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: d0fc42e1ce8d15498caf89582b66549f4e083130
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72305231"
 ---
-# <a name="syspdw_nodes_partitions-transact-sql"></a>sys.pdw_nodes_partitions (Transact-SQL)
+# <a name="syspdw_nodes_partitions-transact-sql"></a>sys. pdw_nodes_partitions (Transact-sql)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  모든 테이블의 각 파티션에 대 한 행과 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 데이터베이스에 있는 대부분의 인덱스 유형을 포함 합니다. 모든 테이블 및 인덱스는 명시적으로 분할 되었는지 여부에 관계 없이 하나 이상의 파티션을 포함 합니다.  
+  모든 테이블의 각 파티션에 대 한 행과 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 데이터베이스의 대부분의 인덱스 유형을 포함 합니다. 모든 테이블 및 인덱스는 명시적으로 분할 되었는지 여부에 관계 없이 하나 이상의 파티션을 포함 합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |partition_id|**bigint**|파티션의 id입니다. 데이터베이스 내에서 고유합니다.|  
 |object_id|**int**|이 파티션이 속한 개체의 id입니다. 모든 테이블 또는 뷰는 최소한 하나 이상의 파티션으로 구성됩니다.|  
 |index_id|**int**|이 파티션이 속한 개체 내의 인덱스 id입니다.|  
-|partition_number|**int**|소유하는 인덱스나 힙 내의 1부터 시작하는 파티션 번호입니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]의 경우이 열의 값은 1입니다.|  
+|partition_number|**int**|소유하는 인덱스나 힙 내의 1부터 시작하는 파티션 번호입니다. 의 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]경우이 열의 값은 1입니다.|  
 |hobt_id|**bigint**|이 파티션에 대 한 행을 포함 하는 데이터 힙 또는 B-트리 (HoBT)의 ID입니다.|  
 |rows|**bigint**|이 파티션에 있는 행의 대략적인 수입니다. |  
 |data_compression|**int**|각 파티션의 압축 상태를 나타냅니다.<br /><br /> 0 = 없음<br /><br /> 1 = ROW<br /><br /> 2 = PAGE<br /><br /> 3 = COLUMNSTORE|  
-|data_compression_desc|**nvarchar(60)**|각 파티션의 압축 상태를 나타냅니다. 가능한 값은 NONE, ROW 및 PAGE입니다.|  
+|data_compression_desc|**nvarchar (60)**|각 파티션의 압축 상태를 나타냅니다. 가능한 값은 NONE, ROW 및 PAGE입니다.|  
 |pdw_node_id|**int**|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 노드의 고유 식별자입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
- 필요한 `CONTROL SERVER` 권한.  
+ `CONTROL SERVER` 권한이 필요합니다.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 ### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>예 A: 각 배포 내의 각 파티션에 행 표시 
 
-**적용 대상:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+**적용 대상:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
  
 각 배포 내의 각 파티션에 있는 행 수를 표시 하려면 [DBCC PDW_SHOWPARTITIONSTATS (SQL Server PDW)](../../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md) 를 사용 합니다.
 
@@ -51,7 +51,7 @@ ms.locfileid: "72305231"
 
 **적용 대상:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
  
-이 쿼리는 테이블 `myTable`각 배포의 각 파티션에 있는 행 수를 반환 합니다.  
+이 쿼리는 테이블 `myTable`의 각 배포에 대 한 각 파티션에 있는 행 수를 반환 합니다.  
  
 ```sql  
 SELECT o.name, pnp.index_id, pnp.partition_id, pnp.rows,   

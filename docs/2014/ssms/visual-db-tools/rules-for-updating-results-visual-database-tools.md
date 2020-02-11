@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8f1814c96a5f58052be6271d2a35c1bbf78f87b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63066481"
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>결과 업데이트 규칙(Visual Database Tools)
@@ -50,7 +50,7 @@ ms.locfileid: "63066481"
 |totals 또는 aggregate 함수를 포함하는 하위 쿼리를 기반으로 하는 쿼리|아니요.|  
 |중복 행을 제외하기 위해 DISTINCT 키워드를 포함하는 쿼리|아니요.|  
 |FROM 절에 테이블을 반환하는 사용자 정의 함수 및 여러 개의 select 문이 들어 있는 사용자 정의 함수를 포함하는 쿼리|아니요.|  
-|FROM 절에 인라인 사용자 정의 함수를 포함하는 쿼리|예|  
+|FROM 절에 인라인 사용자 정의 함수를 포함하는 쿼리|예.|  
   
  또한 쿼리 결과의 특정 열을 업데이트할 수 없는 경우도 있습니다. 다음은 결과 창에서 업데이트할 수 없는 특정 열 형식을 요약한 것입니다.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "63066481"
   
 -   타임스탬프 또는 BLOB 열  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

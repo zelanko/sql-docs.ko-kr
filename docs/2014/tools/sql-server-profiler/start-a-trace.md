@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1c53c039d6194edbc37438ef30ac4fef0113ae87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211032"
 ---
 # <a name="start-a-trace"></a>추적 시작
@@ -43,11 +43,11 @@ ms.locfileid: "68211032"
 > [!NOTE]  
 >  기존의 추적으로 작업하면 속성을 볼 수는 있지만 수정할 수는 없습니다. 속성을 수정하려면 추적을 시작하거나 일시 중지하십시오.  
   
-## <a name="see-also"></a>관련 항목  
- [서버 연결 후 자동으로 추적 시작&#40;SQL Server Profiler&#41;](start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
- [추적 일시 중지&#40;SQL Server Profiler&#41;](pause-a-trace-sql-server-profiler.md)   
- [추적 중지&#40;SQL Server Profiler&#41;](stop-a-trace-sql-server-profiler.md)   
- [추적 창 지우기&#40;SQL Server Profiler&#41;](clear-a-trace-window-sql-server-profiler.md)   
+## <a name="see-also"></a>참고 항목  
+ [서버에 연결한 후 추적을 자동으로 시작 &#40;SQL Server Profiler&#41;](start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
+ [추적 &#40;SQL Server Profiler 일시 중지&#41;](pause-a-trace-sql-server-profiler.md)   
+ [SQL Server Profiler &#40;추적을 중지&#41;](stop-a-trace-sql-server-profiler.md)   
+ [SQL Server Profiler &#40;추적 창 지우기&#41;](clear-a-trace-window-sql-server-profiler.md)   
  [일시 중지 또는 중지 후 추적 실행&#40;SQL Server Profiler&#41;](run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler.md)  
   
   

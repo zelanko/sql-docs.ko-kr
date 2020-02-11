@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d678622c67a83c279cce094b849829e668af30cb
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892157"
 ---
 # <a name="mdx-data-definition---create-global-cube"></a>MDX 데이터 정의 - CREATE GLOBAL CUBE
@@ -104,13 +104,13 @@ FROM source_cube_name (<param list>)
  dimension_name  
  로컬 큐브에 있는 차원의 이름입니다.  
   
- From \<dim from 절 >  
+ FROM \<dim from 절>  
  파생된 차원 정의에 대해서만 유효한 지정입니다.  
   
  NOT_RELATED_TO_FACTS  
  파생된 차원 정의에 대해서만 유효한 지정입니다.  
   
- \<수준 유형 >  
+ \<수준 유형>  
  파생된 차원 정의에 대해서만 유효한 지정입니다.  
   
 ## <a name="remarks"></a>설명  
@@ -196,8 +196,8 @@ MEMBER [Date].[Fiscal].[Fiscal Year].&[2005]
    )  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [Mdx 데이터 정의 문 &#40;mdx&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
+## <a name="see-also"></a>참고 항목  
+ [Mdx 데이터 정의 문은 MDX를 &#40;&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
  [CREATE SESSION CUBE 문 &#40;MDX&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
   
   

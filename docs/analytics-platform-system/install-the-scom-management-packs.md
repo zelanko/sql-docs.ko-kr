@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f3652b767f4628b61f5dd363999838418ff933aa
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401068"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>분석 플랫폼 시스템용 SCOM (SQL Server Operations Manager) 관리 팩 설치
 SQL Server PDW System Center Operations Manager (SCOM) 관리 팩을 다운로드 하 여 설치 하려면 다음 단계를 따르세요. 관리 팩은 SCOM의 SQL Server PDW를 모니터링 하는 데 필요 합니다.  
   
-## <a name="BeforeBegin"></a>시작 하기 전에  
+## <a name="BeforeBegin"></a>시작하기 전 주의 사항  
 **필수 구성 요소**  
   
 System Center Operations Manager를 설치 하 고 실행 해야 합니다. SQL Server PDW 2012에 System Center Operations Manager 2007 R2, System Center Operations Manager 2012 또는 System Center Operations Manager 2012 Service Pack 1이 필요 합니다.  
@@ -52,8 +52,7 @@ APS가 없는 이전 버전의 PDW의 경우[Microsoft SQL Server 2012 병렬 �
   
     ![설치 확인](./media/install-the-scom-management-packs/SCOM_licnse_agrmt3.png "SCOM_licnse_agrmt3")  
   
-5.  
-  **닫기**를 클릭합니다.  
+5.  **닫기**를 클릭합니다.  
   
     ![닫기 클릭](./media/install-the-scom-management-packs/SCOM_licnse_agrmt4.png "SCOM_licnse_agrmt4")  
   
@@ -74,8 +73,7 @@ APS가 없는 이전 버전의 PDW의 경우[Microsoft SQL Server 2012 병렬 �
   
     ![설치 확인](./media/install-the-scom-management-packs/SCOM_licnse_agmtB2.png "SCOM_licnse_agmtB2")  
   
-5.  
-  **닫기**를 클릭합니다.  
+5.  **닫기**를 클릭합니다.  
   
     ![설치 완료](./media/install-the-scom-management-packs/SCOM_licnse_agmtB3.png "SCOM_licnse_agmtB3")  
   

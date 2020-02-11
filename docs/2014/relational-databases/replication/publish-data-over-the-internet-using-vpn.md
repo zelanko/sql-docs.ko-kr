@@ -15,14 +15,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f090e48f97f4756f6c87b7cac2a6db64105ef265
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63021068"
 ---
 # <a name="publish-data-over-the-internet-using-vpn"></a>VPN을 사용하여 인터넷을 통해 데이터 게시
-  VPN(가상 프라이빗 네트워크) 기술을 사용하면 집, 지점, 원격 클라이언트 및 다른 회사에서 사용자가 인터넷을 통해 회사 네트워크에 연결하여 안전하게 통신할 수 있습니다. 사용자는 LAN(근거리 통신망)에서처럼 Windows 인증을 사용할 수 있습니다. 모든 유형의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제는 VPN을 통해 데이터를 복제할 수 있지만 웹 동기화에는 VPN이 필요하지 않으므로 병합 복제를 사용할 경우 웹 동기화 사용을 고려해야 합니다. 자세한 내용은 [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md)을 참조하세요.  
+  VPN(가상 프라이빗 네트워크) 기술을 사용하면 집, 지점, 원격 클라이언트 및 다른 회사에서 사용자가 인터넷을 통해 회사 네트워크에 연결하여 안전하게 통신할 수 있습니다. 사용자는 LAN(근거리 통신망)에서처럼 Windows 인증을 사용할 수 있습니다. 모든 유형의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제는 vpn을 통해 데이터를 복제할 수 있지만 웹 동기화로 인해 vpn이 필요 하지 않으므로 병합 복제를 사용 하는 경우에는 웹 동기화를 사용 하는 것이 좋습니다. 자세한 내용은 [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md)를 참조하세요.  
   
  VPN에는 클라이언트 소프트웨어가 포함되어 있어 컴퓨터에서 인터넷이나 인트라넷(특별한 경우)으로 전용 컴퓨터 또는 서버의 소프트웨어에 연결할 수 있습니다. 사용자 인증 방법 외에도 양쪽 모두에서 암호화할 수도 있습니다. 인터넷을 통한 VPN 연결은 논리적으로 사이트 간에 WAN(광역 통신망)으로 운영됩니다.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "63021068"
   
  VPN 설정 방법은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 설명서를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [인터넷을 통한 복제](replication-over-the-internet.md)  
   
   

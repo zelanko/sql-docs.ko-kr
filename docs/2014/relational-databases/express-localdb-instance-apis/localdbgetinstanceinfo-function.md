@@ -17,16 +17,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 889e5eee49363c71a18808e7c71434110241bc84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63130523"
 ---
 # <a name="localdbgetinstanceinfo-function"></a>LocalDBGetInstanceInfo 함수
   인스턴스가 존재하는지 여부, 인스턴스가 사용하는 LocalDB 버전, 인스턴스가 실행되는지 여부 등과 같이 지정한 SQL Server Express LocalDB 인스턴스에 대한 정보를 반환합니다.  
   
- 반환 되는 정보는를 `struct` 라는 **LocalDBInstanceInfo**를 다음 정의 있는 합니다.  
+ 이 정보는 다음 정의를 `struct` 포함 하는 **Localdbinstanceinfo**라는 이름으로 반환 됩니다.  
   
 ```  
 typedef struct _LocalDBInstanceInfo  
@@ -73,7 +73,7 @@ typedef struct _LocalDBInstanceInfo
   
 ```  
   
- **헤더 파일:** sqlncli.h  
+ **헤더 파일:** sqlncli  
   
 ## <a name="syntax"></a>구문  
   
@@ -93,9 +93,9 @@ HRESULT LocalDBGetInstanceInfo(
  [출력] LocalDB 인스턴스에 대한 정보를 저장하는 버퍼입니다.  
   
  *dwInstanceInfoSize*  
- [입력] 크기를 유지 합니다 *InstanceInfo* 버퍼입니다.  
+ 입력 *Instanceinfo* 버퍼의 크기를 저장 합니다.  
   
-## <a name="returns"></a>반환 값  
+## <a name="returns"></a>반환  
  S_OK  
  함수가 성공했습니다.  
   
@@ -126,12 +126,12 @@ HRESULT LocalDBGetInstanceInfo(
  [LOCALDB_ERROR_INTERNAL_ERROR](../express-localdb-error-messages/localdb-error-internal-error.md)  
  예기치 않은 오류가 발생했습니다. 자세한 내용은 이벤트 로그를 참조하십시오.  
   
-## <a name="details"></a>설명  
- 미치는 근거 합니다 `struct` 크기 인수 (*lpInstanceInfoSize*)의 서로 다른 버전을 반환 하는 API를 사용 하도록 설정 하는 것을 **LocalDBInstanceInfostruct**, 효과적으로 및 이전 버전과 호환성을 사용 하도록 설정 합니다.  
+## <a name="details"></a>세부 정보  
+ `struct` 크기 인수 (*Lpinstanceinfosize*)를 도입 하는 이유는 API에서 다른 버전의 **localdbinstanceinfostruct**를 반환 하 여 이전 버전과 이전 버전과의 호환성을 효과적으로 사용할 수 있도록 하는 것입니다.  
   
- 경우는 `struct` 크기 인수 (*lpInstanceInfoSize*)가 알려진된 버전의 크기와 일치 합니다 **LocalDBInstanceInfostruct**, 해당 버전의는 `struct` 반환 됩니다. 그렇지 않으면 LOCALDB_ERROR_INVALID_PARAMETER가 반환됩니다.  
+ Size 인수 (*Lpinstanceinfosize*)가 알려진 버전의 **Localdbinstanceinfostruct**크기와 일치 하면 해당 버전의 `struct` 이 반환 됩니다. `struct` 그렇지 않으면 LOCALDB_ERROR_INVALID_PARAMETER가 반환됩니다.  
   
- 일반적인 예로 **LocalDBGetInstanceInfo** API 사용법은 다음과 같습니다.  
+ **Localdbgetinstanceinfo** API 사용의 일반적인 예는 다음과 같습니다.  
   
 ```  
 LocalDBInstanceInfo ii;  
@@ -141,7 +141,7 @@ LocalDBInstanceInfo(L"Test", &ii, sizeof(LocalDBInstanceInfo));
   
  LocalDB API를 사용하는 코드 샘플은 [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md)를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Express LocalDB 헤더 및 버전 정보](sql-server-express-localdb-header-and-version-information.md)  
   
   

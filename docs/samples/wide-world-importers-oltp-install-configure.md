@@ -10,17 +10,17 @@ author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: e1683adfa20851d279e8b8e18a3c767db9e5810d
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056271"
 ---
 # <a name="installation-and-configuration"></a>설치 및 구성
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Wide 세계 가져오기 OLTP 데이터베이스 설치 및 구성 지침
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 - [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) 이상 [Azure SQL Database](https://azure.microsoft.com/services/sql-database/)합니다. 샘플의 전체 버전은 SQL Server Evaluation/Developer/Enterprise Edition을 사용 합니다.
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). 최상의 결과를 위해 6 월 2016 릴리스 이상을 사용 합니다.
@@ -29,15 +29,15 @@ Wide 세계 가져오기 OLTP 데이터베이스 설치 및 구성 지침
 
 예제의 최신 릴리스는 다음과 같습니다.
 
-[wide-world-importers-release](https://go.microsoft.com/fwlink/?LinkID=800630)
+[와이드-가져오기-릴리스](https://go.microsoft.com/fwlink/?LinkID=800630)
 
 SQL Server 또는 Azure SQL Database 버전에 해당 하는 샘플 WideWorldImporters database backup/bacpac를 다운로드 합니다.
 
 예제 데이터베이스를 다시 만드는 소스 코드는 다음 위치에서 사용할 수 있습니다. 데이터 생성에 임의 요소가 있으므로 샘플을 다시 만들면 데이터에 약간의 차이가 발생 합니다.
 
-[wide-world-importers](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-database-scripts)
+[넓은 지역에서 가져오기](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-database-scripts)
 
-## <a name="install"></a>Install
+## <a name="install"></a>설치
 
 
 ### <a name="sql-server"></a>SQL Server
@@ -51,7 +51,7 @@ SQL Server 인스턴스에 백업을 복원 하려면 Management Studio를 사�
 5. 필요한 경우 **파일** 창에서 데이터 및 로그 파일의 대상 위치를 변경 합니다. 데이터와 로그 파일을 서로 다른 드라이브에 저장 하는 것이 가장 좋습니다.
 6. **확인**을 클릭합니다. 그러면 데이터베이스 복원이 시작 됩니다. 완료 되 면 데이터베이스 WideWorldImporters이 SQL Server 인스턴스에 설치 됩니다.
 
-### <a name="azure-sql-database"></a>Azure SQL 데이터베이스
+### <a name="azure-sql-database"></a>Azure SQL Database
 
 Bacpac를 새 SQL Database 가져오려면 Management Studio를 사용할 수 있습니다.
 
@@ -63,14 +63,14 @@ Bacpac를 새 SQL Database 가져오려면 Management Studio를 사용할 수 �
 5. **데이터베이스 설정** 에서 데이터베이스 이름을 *WideWorldImporters* 로 변경 하 고 사용할 대상 버전 및 서비스 목표를 선택 합니다.
 6. **다음** 을 클릭 하 고 **마침** 을 클릭 하 여 배포를 시작 합니다. P1에서 완료 하는 데 몇 분이 걸립니다. 낮은 가격 책정 계층을 원하는 경우 새 P1 데이터베이스로 가져온 다음 가격 책정 계층을 원하는 수준으로 변경 하는 것이 좋습니다.
 
-## <a name="configuration"></a>Configuration
+## <a name="configuration"></a>구성
 
 ### <a name="full-text-indexing"></a>전체 텍스트 인덱싱
 
 예제 데이터베이스는 전체 텍스트 인덱싱을 사용할 수 있습니다. 그러나이 기능은 기본적으로 SQL Server와 함께 설치 되지 않습니다. SQL Server 설치 중에 선택 해야 합니다 (Azure SQL DB에서 기본적으로 사용 하도록 설정 됨). 따라서 사후 설치 단계가 필요 합니다.
 
 1. SQL Server Management Studio에서 WideWorldImporters 데이터베이스에 연결 하 고 새 쿼리 창을 엽니다.
-2. 다음 T-sql 명령을 실행 하 여 데이터베이스에서 전체 텍스트 인덱싱을 사용할 수 있도록 설정 합니다. `EXECUTE Application.Configuration_ApplyFullTextIndexing`
+2. 다음 T-sql 명령을 실행 하 여 데이터베이스에서 전체 텍스트 인덱싱을 사용할 수 있도록 합니다.`EXECUTE Application.Configuration_ApplyFullTextIndexing`
 
 
 ### <a name="sql-server-audit"></a>SQL Server Audit

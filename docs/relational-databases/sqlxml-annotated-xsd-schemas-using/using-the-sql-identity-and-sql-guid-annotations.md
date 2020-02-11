@@ -25,10 +25,10 @@ ms.author: genemi
 ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 50483d7f6f84371b42bf0c79fbc74a1f85a65eab
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246815"
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>sql:identity 및 sql:guid 주석 사용
@@ -63,6 +63,6 @@ ms.locfileid: "75246815"
  업데이트 작업 시 해당 열에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 생성한 GUID를 사용하도록 지정합니다.  
   
  useValue  
- updategram에 지정된 값을 해당 열에 사용하도록 지정합니다. 기본값입니다.  
+ updategram에 지정된 값을 해당 열에 사용하도록 지정합니다. 이것은 기본값입니다.  
   
   

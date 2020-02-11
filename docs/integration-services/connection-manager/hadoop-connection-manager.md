@@ -13,10 +13,10 @@ ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4b07af028cd0f2385c447c99192ccc50b65c4925
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74096126"
 ---
 # <a name="hadoop-connection-manager"></a>Hadoop 연결 관리자
@@ -60,7 +60,7 @@ ms.locfileid: "74096126"
   
     5.  **Kerberos** 인증을 선택하는 경우 사용자의 **암호** 및 **도메인**을 입력합니다.  
   
-5.  **연결 테스트**를 선택합니다. 사용하도록 설정한 연결만 테스트합니다.  
+5.  **연결 테스트**를 클릭합니다. 사용하도록 설정한 연결만 테스트합니다.  
   
 6.  **확인**을 선택하여 대화 상자를 닫습니다.  
 
@@ -90,7 +90,7 @@ SSIS 컴퓨터에서 다음을 수행합니다.
 
     이러한 명령을 실행한 후 컴퓨터를 다시 시작합니다.
 
-2.  **Ksetup** 명령으로 구성을 확인합니다. 출력이 다음 샘플과 같아야 합니다.
+2.  **Ksetup** 명령으로 구성을 확인합니다. 출력이 다음 샘플과 유사하게 표시됩니다.
 
     ```
     C:> Ksetup
@@ -206,9 +206,9 @@ KDC 서버에서 다음을 수행합니다.
     C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
     ```
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Hadoop 하이브 태스크](../../integration-services/control-flow/hadoop-hive-task.md)   
- [Hadoop Pig 작업](../../integration-services/control-flow/hadoop-pig-task.md)   
+ [Hadoop Pig 태스크](../../integration-services/control-flow/hadoop-pig-task.md)   
  [Hadoop 파일 시스템 태스크](../../integration-services/control-flow/hadoop-file-system-task.md)  
   
   

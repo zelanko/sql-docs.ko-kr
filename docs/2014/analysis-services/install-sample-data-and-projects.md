@@ -11,25 +11,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0be986ee50599c6e95222bca2eae217b088e2de3
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69530823"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>Analysis Services 다차원 모델링 자습서에 사용할 예제 데이터 및 프로젝트 설치
   이 항목에 제공된 지침과 링크를 사용하여 Analysis Services 자습서에 사용되는 모든 데이터 및 프로젝트 파일을 설치할 수 있습니다.  
   
 ## <a name="step-1-install-sql-server-software"></a>1단계: SQL Server 소프트웨어 설치  
- 이 자습서의 단원에서는 다음 소프트웨어가 설치되어 있다고 가정합니다. 다음 소프트웨어는 모두 SQL Server 설치 미디어를 사용하여 설치됩니다. 배포를 간단하게 하기 위해 모든 기능을 단일 컴퓨터에 설치할 수도 있습니다. 이러한 기능을 설치하려면 SQL Server 설치 프로그램을 실행하고 기능 선택 페이지에서 해당 기능을 선택합니다. 자세한 내용은 설치 [마법사 &#40;&#41;설치에서 SQL Server 2014 설치](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)를 참조 하세요.  
+ 이 자습서의 단원에서는 다음 소프트웨어가 설치되어 있다고 가정합니다. 다음 소프트웨어는 모두 SQL Server 설치 미디어를 사용하여 설치됩니다. 배포를 간단하게 하기 위해 모든 기능을 단일 컴퓨터에 설치할 수도 있습니다. 이러한 기능을 설치하려면 SQL Server 설치 프로그램을 실행하고 기능 선택 페이지에서 해당 기능을 선택합니다. 자세한 내용은 설치 [마법사 &#40;설치&#41;에서 SQL Server 2014 설치 ](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)를 참조 하세요.  
   
 -   데이터베이스 엔진  
   
 -   Analysis Services  
   
-     Analysis Services는 다음 버전 에서만 사용할 수 있습니다. Evaluation, Enterprise, Business Intelligence, Standard.  
+     Analysis Services는 Evaluation, Enterprise, Business Intelligence, Standard 버전에서만 사용할 수 있습니다.  
   
-     SQL Server Express 버전에는 Analysis Services가 포함되어 있지 않습니다. 소프트웨어를 무료로 사용해 보려면 [평가판 버전을 다운로드하세요](https://go.microsoft.com/fwlink/?LinkId=392824).  
+     SQL Server Express 버전에는 Analysis Services가 포함되어 있지 않습니다. 소프트웨어를 무료로 사용해 보려면 [평가판 버전을 다운로드](https://go.microsoft.com/fwlink/?LinkId=392824) 하세요.  
   
      기본적으로 Analysis Services는 다차원 인스턴스로 설치되며 설치 마법사의 서버 구성 페이지에서 테이블 형식 서버 모드를 선택하여 재정의할 수 있습니다. 두 서버 모드를 모두 실행하려는 경우 동일한 컴퓨터의 SQL Server 설치 프로그램을 다시 실행하여 다른 모드에서 Analysis Services의 두 번째 인스턴스를 실행하십시오.  
   
@@ -39,10 +39,10 @@ ms.locfileid: "69530823"
   
  또는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에 기본 제공되는 MDX 쿼리 디자이너를 사용하여 데이터를 검색할 수 있습니다. 쿼리 디자이너는 데이터가 플랫 행 집합으로 제공된다는 점을 제외하면 동일한 데이터를 반환합니다.  
   
-## <a name="step-2-download-sql-server-data-tools---business-intelligence-for-visual-studio-2012"></a>2단계: 다운로드 SQL Server Data Tools-Visual Studio 2012 용 Business Intelligence  
+## <a name="step-2-download-sql-server-data-tools---business-intelligence-for-visual-studio-2012"></a>2 단계: Visual Studio 2012에 대 한 SQL Server Data Tools-Business Intelligence 다운로드  
  이 릴리스에서는 SQL Server Data Tools가 다른 SQL Server 기능과 별도로 다운로드 및 설치됩니다. 이제 BI 모델 및 보고서를 만드는 데 사용되는 디자이너 및 프로젝트 템플릿이 무료 웹 다운로드로 제공됩니다.  
   
--   [Business Intelligence 버전의 SQL Server Data Tools를 다운로드합니다](https://go.microsoft.com/fwlink/p/?LinkID=322038). 파일은 Downloads 폴더에 저장됩니다. 설치 프로그램을 실행하여 도구를 설치합니다.  
+-   [SQL Server Data Tools의 비즈니스 인텔리전스 버전을 다운로드](https://go.microsoft.com/fwlink/p/?LinkID=322038)합니다. 파일은 Downloads 폴더에 저장됩니다. 설치 프로그램을 실행하여 도구를 설치합니다.  
   
      컴퓨터를 다시 부팅하여 설치를 완료합니다.  
   
@@ -51,7 +51,8 @@ ms.locfileid: "69530823"
   
 -   **AdventureWorksDW2012** -데이터베이스 엔진 인스턴스에서 실행 되는 관계형 데이터 웨어하우스입니다. 이 데이터베이스는 자습서 전체에서 작성하고 배포하는 Analysis Services 데이터베이스 및 프로젝트에 사용할 원본 데이터를 제공합니다.  
   
-     [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에서 이 예제 데이터베이스를 사용할 수 있습니다.  
+     
+  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에서 이 예제 데이터베이스를 사용할 수 있습니다.  
   
  이 데이터베이스를 설치하려면 다음을 수행합니다.  
   
@@ -67,11 +68,12 @@ ms.locfileid: "69530823"
   
 5.  **추가**를 클릭합니다.  
   
-6.  **AdventureWorksDW2012_Data.mdf** 데이터베이스 파일을 선택하고 **확인**을 클릭합니다. 이 파일이 목록에 없으면 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Data 폴더에 해당 파일이 있는지 확인합니다.  
+6.  
+  **AdventureWorksDW2012_Data.mdf** 데이터베이스 파일을 선택하고 **확인**을 클릭합니다. 이 파일이 목록에 없으면 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Data 폴더에 해당 파일이 있는지 확인합니다.  
   
 7.  데이터베이스 정보에서 로그 파일 항목을 제거합니다. 예제에는 로그 파일이 없지만 설치 프로그램에서는 로그 파일이 있다고 가정합니다. 데이터베이스를 연결하면 자동으로 새 로그 파일이 만들어집니다. 로그 파일을 선택하고 **제거**를 클릭한 다음 **확인** 을 클릭하여 주 데이터베이스 파일만 연결합니다.  
   
-## <a name="step-4-grant-database-permissions"></a>4단계: 데이터베이스 권한 부여  
+## <a name="step-4-grant-database-permissions"></a>4단계: 데이터베이스 사용 권한 부여  
  예제 프로젝트에서는 데이터를 가져오거나 처리하는 데 사용되는 보안 컨텍스트를 지정하는 데이터 원본 가장을 사용합니다. 기본적으로 가장 설정은 데이터 액세스에 사용할 Analysis Services 서비스 계정을 지정합니다. 이 기본 설정을 사용하려면 Analysis Services를 실행하는 데 사용되는 서비스 계정에 **AdventureWorksDW2012** 데이터베이스에 대한 데이터 읽기 권한이 있는지 확인해야 합니다.  
   
 > [!NOTE]  
@@ -85,16 +87,19 @@ ms.locfileid: "69530823"
   
 4.  일반 페이지의 로그인 이름에 **NT Service\MSSQLServerOLAPService** 또는 서비스를 실행할 계정을 입력합니다.  
   
-5.  **사용자 매핑**을 클릭합니다.  
+5.  
+  **사용자 매핑**을 클릭합니다.  
   
-6.  **AdventureWorksDW2012** 데이터베이스 옆에 있는 확인란을 선택합니다. 역할 멤버 자격에 **db_datareader** 및 **public**이 자동으로 포함됩니다. **확인** 을 클릭하여 기본값을 적용합니다.  
+6.  
+  **AdventureWorksDW2012** 데이터베이스 옆에 있는 확인란을 선택합니다. 역할 멤버 자격에 **db_datareader** 및 **public**이 자동으로 포함됩니다. 
+  **확인** 을 클릭하여 기본값을 적용합니다.  
   
 ## <a name="step-5-install-projects"></a>5단계: 프로젝트 설치  
  이 자습서에는 작업 결과를 완료된 프로젝트와 비교하거나 시퀀스에서 더 많이 진행된 단원을 시작할 수 있도록 예제 프로젝트가 포함되어 있습니다.  
   
  4단원용 프로젝트 파일은 해당 단원뿐 아니라 이후 모든 단원의 기초를 제공하므로 특히 중요합니다. 자습서의 단계를 수행하면 완료된 프로젝트 파일의 정확한 복사본이 생성되는 이전 프로젝트 파일과 달리 4단원의 예제 프로젝트에는 1단원부터 3단원까지 작성한 모델에는 없는 새로운 모델 정보가 포함되어 있습니다. 4단원에서는 다음 다운로드를 통해 사용할 수 있는 예제 프로젝트 파일을 사용하여 시작한다고 가정합니다.  
   
-1.  codeplex의 제품 샘플 페이지에서 [Analysis Services Tutorial SQL Server 2012](https://go.microsoft.com/fwlink/p/?LinkID=221866)를 다운로드합니다.  
+1.  codeplex의 제품 샘플 페이지에서 [Analysis Services Tutorial SQL Server 2012](https://go.microsoft.com/fwlink/p/?LinkID=221866) 를 다운로드합니다.  
   
      2012 자습서를 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 릴리스에 사용할 수 있습니다.  
   
@@ -147,9 +152,9 @@ ms.locfileid: "69530823"
 ## <a name="next-step"></a>다음 단계  
  이제 자습서를 사용할 준비가 되었습니다. 시작하는 방법에 대한 자세한 내용은 [다차원 모델링&#40;Adventure Works 자습서&#41;](multidimensional-modeling-adventure-works-tutorial.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [설치 마법사 &#40;설치에서 SQL Server 2014 설치&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
- [Configure the Windows Firewall to Allow Analysis Services Access](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
+## <a name="see-also"></a>참고 항목  
+ [설치 마법사 &#40;설치 프로그램에서 SQL Server 2014을 설치&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
+ [Analysis Services 액세스를 허용 하도록 Windows 방화벽 구성](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
  [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
   
   

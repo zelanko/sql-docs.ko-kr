@@ -1,5 +1,5 @@
 ---
-title: 실행 관련 동적 관리 뷰 및 함수 (TRANSACT-SQL) | Microsoft Docs
+title: 실행 관련 동적 관리 뷰 및 함수 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2019
 ms.prod: sql
@@ -15,10 +15,10 @@ ms.assetid: aea07b33-f715-4b61-9d1e-8c77b03e9578
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: eaab973d2554e22d9fc7244850dcfbc0e8f3d4e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130828"
 ---
 # <a name="execution-related-dynamic-management-views-and-functions-transact-sql"></a>실행 관련 동적 관리 뷰 및 함수(Transact-SQL)
@@ -53,11 +53,11 @@ ms.locfileid: "68130828"
 
   
 > [!NOTE]  
->  합니다 **sys.dm_exec_query_transformation_stats** 동적 관리 뷰는 정보 제공 용 으로만 식별 됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.  
+>  **Dm_exec_query_transformation_stats** 동적 관리 뷰는 정보를 제공 하기 위해서만 확인 됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [시스템 뷰 &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [Transact-sql&#41;&#40;시스템 뷰](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   
 

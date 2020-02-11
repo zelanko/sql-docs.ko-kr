@@ -10,17 +10,17 @@ ms.assetid: 3d50a66a-1845-4116-8b3a-7b5a2eeb78e6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1d5e44dac2201953858f06d834b1831aa1a22fe3
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 2db6a47de02b49397847dc9d713277ffcb152156
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75247277"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "75656580"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>SQL Server 2005에서 업그레이드하나요?
   SQL Server 2005 지원 연장이 종료되므로 새 버전의 SQL Server와 Azure SQL 데이터베이스로 업그레이드할 이유가 생겼습니다. 업그레이드를 통해 보안 및 규정 준수를 유지할 수 있고, 획기적인 성능을 달성하고 데이터 플랫폼 인프라를 최적화할 수 있습니다.  
   
- 업그레이드 또는 마이그레이션을 계획하고 자동화하기 위한 자세한 정보, 지침 및 도구는 [SQL Server 2005 지원 종료](https://www.microsoft.com/server-cloud/products/sql-server-2005/)를 참조하세요.  
+ 업그레이드 또는 마이그레이션을 계획하고 자동화하기 위한 자세한 정보, 지침 및 도구는 [SQL Server 2005 지원 종료](https://www.microsoft.com/sql-server/sql-server-2005)를 참조하세요.  
   
 ## <a name="why-upgrade"></a>업그레이드가 필요한 이유  
   
@@ -75,14 +75,14 @@ ms.locfileid: "75247277"
   
     -   더 자세한 "기술 업그레이드 가이드"를 PDF 형식으로 다운로드하려면 [여기를 클릭](https://download.microsoft.com/download/7/1/5/715BDFA7-51B6-4D7B-AF17-61E78C7E538F/SQL_Server_2014_Upgrade_technical_guide.pdf)하세요.  
   
--   업그레이드 또는 마이그레이션을 계획하고 자동화하기 위한 자세한 정보, 지침 및 도구는 [SQL Server 2005 지원 종료](https://www.microsoft.com/server-cloud/products/sql-server-2005/)를 참조하세요.  
+-   업그레이드 또는 마이그레이션을 계획하고 자동화하기 위한 자세한 정보, 지침 및 도구는 [SQL Server 2005 지원 종료](https://www.microsoft.com/sql-server/sql-server-2005)를 참조하세요.  
   
 ## <a name="get-sql-server-2014"></a>SQL Server 2014 다운로드  
  SQL Server 2014의 평가 사본을 다운로드 하려면 여기를 [클릭](https://www.microsoft.com/evalcenter/evaluate-sql-server-2014)하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server 2014](https://www.microsoft.com/server-cloud/products/sql-server/default.aspx)   
- [SQL Server 2005 지원 종료](https://www.microsoft.com/server-cloud/products/sql-server-2005/)   
+ [SQL Server 2014](https://docs.microsoft.com/sql/getting-started/getting-started-sql-server-2014)   
+ [SQL Server 2005 지원 종료](https://www.microsoft.com/sql-server/sql-server-2005)   
  [SQL Server 2005에서 SQL Server 2016으로의 업그레이드](https://msdn.microsoft.com/library/mt168847.aspx)  
   
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7298f80a7d3f61b5b00692be8fbc480429487454
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892467"
 ---
 # <a name="concatenation-operators"></a>연결 연산자
@@ -34,8 +34,8 @@ FROM [Adventure Works]
 ## <a name="language-considerations"></a>언어 관련 고려 사항  
  연결할 문자열이 모두 동일한 데이터 정렬을 사용하는 경우 연결된 결과 문자열은 입력과 같은 데이터 정렬을 사용합니다. 연결할 문자열의 데이터 정렬이 서로 다른 경우 데이터 정렬 선행 규칙에 따라 연결된 결과 문자열의 데이터 정렬이 결정됩니다. 자세한 내용은 [언어 및 데이터 정렬&#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/languages-and-collations-analysis-services)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [MDX 연산자 참조 &#40;mdx&#41;](../mdx/mdx-operator-reference-mdx.md)   
- [Operators &#40;MDX 구문&#41;](../mdx/operators-mdx-syntax.md)  
+## <a name="see-also"></a>참고 항목  
+ [Mdx 연산자 참조 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [연산자 &#40;MDX 구문&#41;](../mdx/operators-mdx-syntax.md)  
   
   

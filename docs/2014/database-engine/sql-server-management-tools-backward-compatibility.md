@@ -1,5 +1,5 @@
 ---
-title: SQL Server 관리 도구 이전 버전과 호환성 | Microsoft Docs
+title: SQL Server 관리 도구 이전 버전과의 호환성 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1c61e1b980e729cb936c00410a156d8c0dc47d0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62842979"
 ---
 # <a name="sql-server-management-tools-backward-compatibility"></a>SQL Server 관리 도구 이전 버전과의 호환성
@@ -27,7 +27,7 @@ ms.locfileid: "62842979"
 |[SQL Server 2014에서 관리 도구 기능의 주요 변경 내용](../../2014/database-engine/breaking-changes-to-management-tools-features-in-sql-server-2014.md)|애플리케이션을 변경해야 할 수도 있는 관리 도구 기능 변경 내용|  
 |[SQL Server 2014에서 관리 도구 기능의 동작 변경 내용](../../2014/database-engine/behavior-changes-to-management-tools-features-in-sql-server-2014.md)|이 릴리스에서 변경된 기타 관리 도구 기능|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [이전 버전과의 호환성](../../2014/getting-started/backward-compatibility.md)  
   
   

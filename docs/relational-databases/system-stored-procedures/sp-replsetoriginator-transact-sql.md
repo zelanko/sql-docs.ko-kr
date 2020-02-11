@@ -16,18 +16,18 @@ ms.assetid: 030e5226-0585-439f-b8cd-36f48367d86d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5ca3487a22989261f0d6039f065ae0c102e534a1
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68770870"
 ---
-# <a name="spreplsetoriginator-transact-sql"></a>sp_replsetoriginator(Transact-SQL)
+# <a name="sp_replsetoriginator-transact-sql"></a>sp_replsetoriginator(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   양방향 트랜잭션 복제에서 루프백 검색 및 핸들링을 호출하는 데 사용합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,12 +46,12 @@ sp_replsetoriginator [ @server_name= ] 'server_name'
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>설명  
- **sp_replsetoriginator** 는 복제에 의해 적용 되는 트랜잭션의 원본을 기록 하기 위해 배포 에이전트에 의해 실행 됩니다. 이 정보는 루프백 특성이 설정된 양방향 트랜잭션 구독에 대한 루프백 검색을 호출하기 위해 사용합니다.  
+ 배포 에이전트에서 **sp_replsetoriginator** 를 실행 하 여 복제에 의해 적용 되는 트랜잭션의 원본을 기록 합니다. 이 정보는 루프백 특성이 설정된 양방향 트랜잭션 구독에 대한 루프백 검색을 호출하기 위해 사용합니다.  
   
 ## <a name="permissions"></a>사용 권한  
  게시자에서 **sysadmin** 고정 서버 역할의 멤버, 게시 데이터베이스에 대 한 **db_owner** 고정 데이터베이스 역할의 멤버 또는 PAL (게시 액세스 목록)의 사용자만 **sp_replsetoriginator**을 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

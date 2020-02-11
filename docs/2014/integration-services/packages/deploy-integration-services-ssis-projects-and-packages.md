@@ -11,18 +11,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a2212b44af9eb17625ef296deb9d6223deb313e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62890256"
 ---
 # <a name="deployment-of-projects-and-packages"></a>프로젝트 및 패키지 배포
+  
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]는 프로젝트 배포 모델 및 패키지 배포 모델의 두 가지 배포 모델을 지원합니다. 프로젝트 배포 모델을 사용하면 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다.  
   
  프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포하는 방법에 대한 자세한 내용은 [Integration Services 서버에 프로젝트 배포](../deploy-projects-to-integration-services-server.md)를 참조하세요.  
   
- 패키지 배포 모델에 대 한 자세한 내용은 참조 하세요. [패키지 배포 &#40;SSIS&#41;](legacy-package-deployment-ssis.md)합니다.  
+ 패키지 배포 모델에 대 한 자세한 내용은 [패키지 배포 &#40;SSIS&#41;](legacy-package-deployment-ssis.md)를 참조 하세요.  
   
 ## <a name="compare-project-deployment-and-package-deployment"></a>프로젝트 배포와 패키지 배포 비교  
  프로젝트에 대해 선택한 배포 모델 유형에 따라 해당 프로젝트에 사용할 수 있는 배포 및 관리 옵션이 달라집니다. 다음 표에서는 프로젝트 배포 모델을 사용하는 경우와 패키지 배포 모델을 사용하는 경우의 차이점과 유사점을 보여 줍니다.  
@@ -57,12 +58,12 @@ ms.locfileid: "62890256"
   
 ## <a name="required-tasks"></a>필수 태스크  
   
--   [Integration Services 서버에 프로젝트 배포](../deploy-projects-to-integration-services-server.md)  
+-   [Deploy Projects to Integration Services Server](../deploy-projects-to-integration-services-server.md)  
   
 ## <a name="related-content"></a>관련 내용  
  mattmasson.com의 블로그 항목 [SSIS 프로젝트의 분기 전략에 대한 고려 사항](https://go.microsoft.com/fwlink/?LinkId=245739)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [dtexec 유틸리티](dtexec-utility.md)  
   
   

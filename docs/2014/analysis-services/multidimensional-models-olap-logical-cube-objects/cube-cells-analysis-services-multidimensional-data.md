@@ -27,16 +27,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d9ca444c4e889c68f90abf4cf76c07d1c2d574a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68887920"
 ---
 # <a name="cube-cells-analysis-services---multidimensional-data"></a>큐브 셀(Analysis Services - 다차원 데이터)
   큐브는 셀로 이루어져 있으며 셀은 측정값 그룹과 차원으로 구성됩니다. 셀은 큐브의 모든 차원에서 한 멤버 큐브의 고유한 논리적 교집합을 나타냅니다. 예를 들어 아래 다이어그램의 큐브는 Source, Route 및 Time이라는 세 차원으로 이루어지며 두 측정값을 갖는 측정값 그룹을 하나 포함합니다.  
   
- ![단일 셀을 식별 하는 큐브 다이어그램](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-cubeintro5.gif "단일 셀을 식별 하는 큐브 다이어그램")  
+ ![단일 셀을 식별하는 큐브 다이어그램](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-cubeintro5.gif "단일 셀을 식별하는 큐브 다이어그램")  
   
  이 다이어그램에서 회색으로 표시된 단일 셀은 다음 멤버의 교집합입니다.  
   
@@ -74,15 +74,16 @@ ms.locfileid: "68887920"
   
  예를 들어 아래 다이어그램에 표시된 큐브의 구조는 이 항목의 다른 예제와 비슷합니다. 그러나 이 예제에서는 3사분기 아프리카행 항공 수송 또는 4사분기 오스트레일리아행 항공 수송이 없습니다. 이러한 차원과 측정값의 교집합을 지원하는 데이터가 팩트 테이블에 없으므로 해당 교집합의 셀은 빈 셀이 됩니다.  
   
- ![빈 셀을 식별 하는 큐브 다이어그램](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-cubeintro7.gif "빈 셀을 식별 하는 큐브 다이어그램")  
+ ![빈 셀을 식별하는 큐브 다이어그램](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-cubeintro7.gif "빈 셀을 식별하는 큐브 다이어그램")  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]빈 셀은 특별 한 품질이 있는 셀입니다. 빈 셀은 크로스 조인, 카운트 등의 결과를 달라지게 할 수 있으므로 많은 MDX 함수가 계산을 위한 목적으로 빈 셀을 무시할 수 있는 기능을 제공합니다. 자세한 내용은 MDX [ &#40;&#41; 참조](/sql/mdx/multidimensional-expressions-mdx-reference)및 [mdx &#40;Analysis Services&#41;의 주요 개념](../multidimensional-models/key-concepts-in-mdx-analysis-services.md)을 참조 하세요.  
+ 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]빈 셀은 특별 한 품질이 있는 셀입니다. 빈 셀은 크로스 조인, 카운트 등의 결과를 달라지게 할 수 있으므로 많은 MDX 함수가 계산을 위한 목적으로 빈 셀을 무시할 수 있는 기능을 제공합니다. 자세한 내용은 mdx [&#40;mdx&#41; 참조](/sql/mdx/multidimensional-expressions-mdx-reference)및 [mdx &#40;Analysis Services&#41;에 대 한 주요 개념 ](../multidimensional-models/key-concepts-in-mdx-analysis-services.md)을 참조 하세요.  
   
 ## <a name="security"></a>보안  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 셀 데이터에 대한 액세스는 역할 수준에서 관리되며 MDX 식을 사용하여 정밀하게 제어할 수 있습니다. 자세한 내용은 [차원 데이터 &#40;에 대 한 사용자 지정 액세스 권한 부여&#41;Analysis Services](../multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)및 [셀 데이터 &#40;Analysis Services&#41;에 대 한 사용자 지정 액세스 권한 부여](../multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)를 참조 하세요.  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 셀 데이터에 대한 액세스는 역할 수준에서 관리되며 MDX 식을 사용하여 정밀하게 제어할 수 있습니다. 자세한 내용은 [차원 데이터에 대 한 사용자 지정 액세스 권한 부여 &#40;Analysis Services&#41;](../multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)을 참조 하 고 [셀 데이터 &#40;Analysis Services&#41;에 대 한 사용자 지정 액세스 권한 부여 ](../multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)를 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [큐브 저장소 &#40;Analysis Services-다차원 데이터&#41;](../multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md)   
- [집계 및 집계 디자인](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
+## <a name="see-also"></a>참고 항목  
+ [큐브 저장소 &#40;Analysis Services 다차원 데이터&#41;](../multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md)   
+ [Aggregations and Aggregation Designs](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
   
   

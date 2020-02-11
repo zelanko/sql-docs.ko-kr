@@ -15,30 +15,31 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 89e694b18dc27a739a7e1f4d1e0950ef08a01570
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73785748"
 ---
 # <a name="sqlputdata"></a>SQLPutData
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  SQLPutData를 사용 하 여 SQL_LONGVARCHAR (**텍스트**), SQL_WLONGVARCHAR (**ntext**) 또는 SQL_LONGVARBINARY (**이미지**) 열에 대해 65535 바이트 이상의 데이터 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 4.21 a) 또는 400 KB의 데이터 (SQL Server 버전 6.0 이상)를 전송 하는 경우 다음과 같은 제한 사항이 적용 됩니다.  
+  SQLPutData를 사용 하 여 SQL_LONGVARCHAR (**텍스트**), SQL_WLONGVARCHAR (**ntext**) 또는 SQL_LONGVARBINARY ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **이미지**) 열에 대해 65535 바이트 이상의 데이터 (버전 4.21 a) 또는 400 KB의 데이터 (SQL Server 버전 6.0 이상)를 전송 하는 경우 다음과 같은 제한 사항이 적용 됩니다.  
   
 -   참조 된 매개 변수는 INSERT 문에서 *insert_value* 수 있습니다.  
   
 -   참조 된 매개 변수는 UPDATE 문의 SET 절에 있는 *식일* 수 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행 하는 서버에 블록의 데이터를 제공 하는 SQLPutData 호출의 시퀀스를 취소 하면 버전 6.5 또는 이전 버전을 사용할 때 열의 값이 부분적으로 업데이트 됩니다. SQLCancel이 호출 될 때 참조 된 **text**, **ntext**또는 **image** 열이 중간 자리 표시자 값으로 설정 되어 있습니다.  
+ 을 실행 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하는 서버에 블록의 데이터를 제공 하는 SQLPutData 호출의 시퀀스를 취소 하면 버전 6.5 또는 이전 버전을 사용할 때 열의 값이 부분적으로 업데이트 됩니다. SQLCancel이 호출 될 때 참조 된 **text**, **ntext**또는 **image** 열이 중간 자리 표시자 값으로 설정 되어 있습니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5 및 이전 버전에 대한 연결을 지원하지 않습니다.  
+>  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5 및 이전 버전에 대한 연결을 지원하지 않습니다.  
   
 ## <a name="diagnostics"></a>진단  
- SQLPutData에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 특정 SQLSTATE가 있습니다.  
+ SQLPutData [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대해 하나의 Native CLIENT 특정 SQLSTATE가 있습니다.  
   
-|SQLSTATE|Error|설명|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |22026|문자열 데이터, 길이가 일치하지 않음|전송할 데이터 길이 (바이트)를 응용 프로그램에서 지정 하는*경우 (예*SQL_LEN_DATA_AT_EXEC: *n* 이 0 보다 큰 경우)에는 sqlputdata를 통해 응용 프로그램에서 제공 하는 총 바이트 수가 지정 된 길이와 일치 해야 합니다.|  
   
@@ -55,18 +56,18 @@ ms.locfileid: "73785748"
   
  *StrLen_Or_Ind* 의 값이 SQL_DEFAULT_PARAM 또는 0과 SQL_PARAMSET_SIZE 사이의 숫자 (즉, SQLBindParameter의 *columnsize* 매개 변수) 인 경우에는 오류가 발생 합니다. 이 오류가 발생 하면 SQLPutData에서 SQLSTATE = HY090, "잘못 된 문자열 또는 버퍼 길이" SQL_ERROR 반환 됩니다.  
   
- 테이블 반환 매개 변수에 대 한 자세한 내용은 [테이블 반환 매개 &#40;변수 ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)를 참조 하세요.  
+ 테이블 반환 매개 변수에 대 한 자세한 내용은 [ODBC&#41;&#40;테이블 반환 매개 변수 ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)를 참조 하세요.  
   
 ## <a name="sqlputdata-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 SQLPutData 지원  
  날짜/시간 형식의 매개 변수 값은 [C에서 SQL로 변환](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md)에 설명 된 대로 변환 됩니다.  
   
- 자세한 내용은 [ODBC&#41;의 날짜 및 시간 기능 향상 &#40;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)을 참조 하세요.  
+ 자세한 내용은 [ODBC&#41;&#40;날짜 및 시간 향상 ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)을 참조 하세요.  
   
 ## <a name="sqlputdata-support-for-large-clr-udts"></a>큰 CLR UDT에 대한 SQLPutData 지원  
- **Sqlputdata** 는 크기가 높은 CLR udt (사용자 정의 형식)를 지원 합니다. 자세한 내용은 [ODBC &#40;&#41;의 Large CLR 사용자 정의 형식](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)을 참조 하세요.  
+ **Sqlputdata** 는 크기가 높은 CLR udt (사용자 정의 형식)를 지원 합니다. 자세한 내용은 [ODBC&#41;&#40;LARGE CLR 사용자 정의 형식 ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Sqlputdata 함수](https://go.microsoft.com/fwlink/?LinkId=59365)   
+ [SQLPutData 함수](https://go.microsoft.com/fwlink/?LinkId=59365)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

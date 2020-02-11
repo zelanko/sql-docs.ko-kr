@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9361e08722ae832c9e671cd8b83caa51bddaf4f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62836116"
 ---
 # <a name="configure-dialog-box"></a>구성 대화 상자
@@ -59,7 +59,7 @@ ms.locfileid: "62836116"
  **이름**  
  매개 변수 이름을 나열합니다.  
   
- **Value**  
+ **값**  
  매개 변수 값을 나열합니다. 줄임표 단추를 클릭하여 **매개 변수 값 설정** 대화 상자의 값을 변경합니다.  
   
  다음은 **연결 관리자** 탭의 옵션 목록입니다. 연결 관리자 속성 값을 변경하려면 이 탭을 사용합니다. 속성에 대한 매개 변수가 SSIS 서버에 자동으로 생성됩니다.  
@@ -73,7 +73,7 @@ ms.locfileid: "62836116"
  **속성 이름**  
  연결 관리자 속성 이름을 나열합니다.  
   
- **Value**  
+ **값**  
  연결 관리자 속성에 할당된 값을 나열합니다. 줄임표 단추를 클릭하여 **매개 변수 값 설정** 대화 상자의 값을 변경합니다. 리터럴 값을 입력하거나 사용하려는 값이 포함된 환경 변수를 매핑하거나, 패키지의 기본값을 사용할 수 있습니다.  
   
 ##  <a name="references"></a> 참조 페이지에서 옵션 설정  
@@ -87,7 +87,7 @@ ms.locfileid: "62836116"
  **환경 폴더**  
  환경이 포함된 폴더를 나열합니다.  
   
- **파일**  
+ **열기**  
  **환경 속성** 대화 상자를 열려면 클릭합니다.  
   
  **추가**  

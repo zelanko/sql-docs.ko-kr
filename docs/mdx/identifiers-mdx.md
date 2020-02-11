@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c11561ac71aa72469a809ea25297d62133aa93da
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891216"
 ---
 # <a name="identifiers-mdx"></a>식별자(MDX)
@@ -44,7 +44,7 @@ ms.locfileid: "68891216"
   
     -   밑줄(_)  
   
-3.  MDX 예약어는 식별자로 사용할 수 없습니다. MDX에서 예약어는 대/소문자를 구분하지 않습니다. 자세한 내용은 [예약 된 &#40;키워드 MDX 구문&#41;](../mdx/reserved-keywords-mdx-syntax.md)을 참조 하세요.  
+3.  MDX 예약어는 식별자로 사용할 수 없습니다. MDX에서 예약어는 대/소문자를 구분하지 않습니다. 자세한 내용은 [&#40;MDX 구문&#41;예약 키워드 ](../mdx/reserved-keywords-mdx-syntax.md)를 참조 하세요.  
   
 4.  포함된 공백이나 특수 문자는 사용할 수 없습니다.  
   
@@ -83,7 +83,8 @@ ms.locfileid: "68891216"
   
 -   개체 이름에 정규화된 식별자로 나열되지 않은 문자를 사용하는 경우  
   
-     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 구분 식별자가 현재 코드 페이지에 있는 어떤 문자라도 사용할 수 있습니다. 그러나 개체 이름에 특수 문자를 무분별하게 사용하면 MDX 문 및 스크립트를 읽고 유지 관리하기가 어려워질 수 있습니다.  
+     
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 구분 식별자가 현재 코드 페이지에 있는 어떤 문자라도 사용할 수 있습니다. 그러나 개체 이름에 특수 문자를 무분별하게 사용하면 MDX 문 및 스크립트를 읽고 유지 관리하기가 어려워질 수 있습니다.  
   
 ### <a name="formatting-rules-for-delimited-identifiers"></a>구분 식별자에 대한 서식 설정 규칙  
  구분 식별자의 본문에는 구분 문자 자체를 포함하여 현재 코드 페이지에 있는 문자의 어떤 조합이라도 포함될 수 있습니다. 구분 식별자 본문에 구분 문자가 포함되는 경우에는 특수하게 처리해야 합니다.  
@@ -122,9 +123,9 @@ ms.locfileid: "68891216"
   
  또한 둘 이상의 식별자를 구분하는 것을 보여 주기 위해 이전 예에서는 Measures 식별자를 구분했습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [MDX 언어 참조 & #40; Mdx& #41;](../mdx/mdx-language-reference-mdx.md)   
- [MDX 쿼리 기본 사항 & #40; Analysis Services & #41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)   
- [Mdx 구문 요소 &#40;mdx&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [Mdx 언어 참조 &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
+ [MDX 쿼리 기본 사항 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)   
+ [Mdx 구문 요소 &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

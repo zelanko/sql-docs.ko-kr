@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bad0f660bb6cb08de51a52a951bddca8a6c7eb2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035252"
 ---
 # <a name="filter-traces-with-sql-server-profiler"></a>SQL Server Profiler로 추적 필터링
@@ -31,7 +31,7 @@ ms.locfileid: "63035252"
   
  [추적에서의 이벤트 필터링&#40;SQL Server Profiler&#41;](filter-events-in-a-trace-sql-server-profiler.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [추적 필터링](../../relational-databases/sql-trace/filter-a-trace.md)  
   
   

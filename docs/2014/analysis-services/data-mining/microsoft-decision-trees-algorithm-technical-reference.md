@@ -21,13 +21,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 304cd31b4d89d56bee5dbc903c784ee4bf7af5fe
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637523"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Microsoft 의사 결정 트리 알고리즘 기술 참조
+  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 트리를 만드는 여러 방법을 통합하며 회귀, 분류, 연결 등의 여러 분석 태스크를 지원하는 하이브리드 알고리즘입니다. Microsoft 의사 결정 트리 알고리즘은 불연속 특성과 연속 특성 모두의 모델링을 지원합니다.  
   
  이 항목에서는 알고리즘의 구현을 설명하고, 여러 태스크에 대한 알고리즘 동작을 사용자 지정하는 방법을 설명하며, 의사 결정 트리 모델 쿼리에 대한 추가 정보로 연결되는 링크를 제공합니다.  
@@ -57,7 +58,9 @@ ms.locfileid: "73637523"
   
  예측 가능한 특성이 연속 숫자 데이터 형식일 경우 기능 선택은 출력에도 적용되어 가능한 결과 수를 줄이므로 모델을 보다 빠르게 작성할 수 있습니다. 기능 선택의 임계값을 변경하고 그에 따라 MAXIMUM_OUTPUT_ATTRIBUTES 매개 변수를 설정하여 가능한 값의 수를 늘리거나 줄일 수 있습니다.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘에서 예측 가능한 불연속 열을 사용하는 방법은 [Bayesian 네트워크 학습: 지식 및 통계 데이터의 조합(Learning Bayesian Networks: The Combination of Knowledge and Statistical Data)](https://go.microsoft.com/fwlink/?LinkId=45963)을 참조하세요. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘에서 예측 가능한 연속 열을 사용하는 방법에 대한 자세한 내용은 [시계열 분석을 위한 자동 회귀 트리 모델](https://go.microsoft.com/fwlink/?LinkId=45966)의 부록을 참조하세요.  
+ 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘에서 예측 가능한 불연속 열을 사용하는 방법은 [Bayesian 네트워크 학습: 지식 및 통계 데이터의 조합(Learning Bayesian Networks: The Combination of Knowledge and Statistical Data)](https://go.microsoft.com/fwlink/?LinkId=45963)을 참조하세요. 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘에서 예측 가능한 연속 열을 사용하는 방법에 대한 자세한 내용은 [시계열 분석을 위한 자동 회귀 트리 모델](https://go.microsoft.com/fwlink/?LinkId=45966)의 부록을 참조하세요.  
   
 ### <a name="scoring-methods-and-feature-selection"></a>점수 매기기 방법 및 기능 선택  
  Microsoft 의사 결정 트리 알고리즘에서는 얻은 정보를 평가하기 위한 Shannon's entropy, Bayesian network with K2 prior 및 Bayesian network with a uniform Dirichlet distribution of priors라는 세 개의 수식을 제공합니다. 세 방법 모두 데이터 마이닝 분야에서 잘 수립된 방법입니다., 여러 가지 매개 변수와 점수 매기기 방법을 사용해 보고 어느 것이 최상의 결과를 제공하는지 확인하는 것이 좋습니다. 이러한 점수 매기기 방법에 대한 자세한 내용은 [Feature Selection](../../sql-server/install/feature-selection.md)을 참조하십시오.  
@@ -67,7 +70,7 @@ ms.locfileid: "73637523"
 |알고리즘|분석 방법|주석|  
 |---------------|------------------------|--------------|  
 |의사 결정 트리|흥미도 점수<br /><br /> Shannon Entropy<br /><br /> Bayesian with K2 Prior<br /><br /> Bayesian Dirichlet with uniform prior(기본값)|이진이 아닌 연속 값이 열에 포함되어 있는 경우 일관성을 보장하기 위해 모든 열에 흥미도 점수가 사용됩니다. 그렇지 않을 경우 기본 방법이나 지정된 방법이 사용됩니다.|  
-|선형 회귀|흥미도 점수|선형 회귀는 연속 열만 지원하므로 흥미도 점수만 사용합니다.|  
+|Linear Regression|흥미도 점수|선형 회귀는 연속 열만 지원하므로 흥미도 점수만 사용합니다.|  
   
 ### <a name="scalability-and-performance"></a>확장성 및 성능  
  분류는 중요한 데이터 마이닝 전략입니다. 일반적으로 사례를 분류하는 데 필요한 정보의 양은 입력 레코드의 수에 직접적으로 비례하여 증가합니다. 이로 인해 분류할 수 있는 데이터의 크기가 제한됩니다. Microsoft 의사 결정 트리 알고리즘에서는 다음 방법을 사용하여 이러한 문제를 해결하고 성능을 향상시키고 메모리 제한을 제거합니다.  
@@ -93,13 +96,15 @@ ms.locfileid: "73637523"
 -   모든 특성의 불연속 값 수를 10개 이하로 제한합니다. 다른 모델에서 다른 방법으로 값을 그룹화해 볼 수도 있습니다.  
   
     > [!NOTE]  
-    >  데이터 마이닝을 시작하기 전에  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 에서 제공되는 데이터 탐색 도구를 사용하여 데이터의 값 분포를 시각화하고 적절하게 값을 그룹화할 수 있습니다. 자세한 내용은 [데이터 프로파일링 태스크 및 뷰어](../../integration-services/control-flow/data-profiling-task-and-viewer.md)를 참조하세요. [Excel 2007용 데이터 마이닝 추가 기능](https://www.microsoft.com/download/details.aspx?id=8569)을 사용하여 Microsoft Excel에서 데이터를 탐색하고 그룹화하고 레이블을 재지정할 수도 있습니다.  
+    >  데이터 마이닝을 시작하기 전에  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 에서 제공되는 데이터 탐색 도구를 사용하여 데이터의 값 분포를 시각화하고 적절하게 값을 그룹화할 수 있습니다. 자세한 내용은 [데이터 프로파일링 태스크 및 뷰어](../../integration-services/control-flow/data-profiling-task-and-viewer.md)를 참조하세요. 
+  [Excel 2007용 데이터 마이닝 추가 기능](https://www.microsoft.com/download/details.aspx?id=8569)을 사용하여 Microsoft Excel에서 데이터를 탐색하고 그룹화하고 레이블을 재지정할 수도 있습니다.  
   
 ## <a name="customizing-the-decision-trees-algorithm"></a>의사 결정 트리 알고리즘 사용자 지정  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 결과 마이닝 모델의 성능 및 정확도에 영향을 주는 매개 변수를 지원합니다. 마이닝 모델 열이나 마이닝 구조 열에 모델링 플래그를 설정하여 데이터 처리 방식을 제어할 수도 있습니다.  
+ 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 결과 마이닝 모델의 성능 및 정확도에 영향을 주는 매개 변수를 지원합니다. 마이닝 모델 열이나 마이닝 구조 열에 모델링 플래그를 설정하여 데이터 처리 방식을 제어할 수도 있습니다.  
   
 > [!NOTE]  
->  Microsoft 의사 결정 트리 알고리즘은 모든 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용할 수 있지만 Microsoft 의사 결정 트리 알고리즘의 동작을 사용자 지정하는 고급 매개 변수는 특정 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서만 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2012 버전에서 지원하는 기능](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473)을 참조하세요.  
+>  Microsoft 의사 결정 트리 알고리즘은 모든 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용할 수 있지만 Microsoft 의사 결정 트리 알고리즘의 동작을 사용자 지정하는 고급 매개 변수는 특정 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서만 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2012 버전에서 지원하는 기능](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473) 을 참조하세요.  
   
 ### <a name="setting-algorithm-parameters"></a>알고리즘 매개 변수 설정  
  다음 표에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘에서 사용할 수 있는 매개 변수에 대해 설명합니다.  
@@ -147,11 +152,11 @@ ms.locfileid: "73637523"
  데이터 세트가 매우 큰 경우 과잉 맞춤을 방지하기 위해 이 값을 늘려야 할 수 있습니다.  
   
  *SCORE_METHOD*  
- 분할 점수를 계산하는 데 사용되는 메서드를 결정합니다. 사용할 수 있는 옵션은 다음과 같습니다.  
+ 분할 점수를 계산하는 데 사용되는 메서드를 결정합니다. 다음 옵션을 사용할 수 있습니다.  
   
-|id|이름|  
+|ID|속성|  
 |--------|----------|  
-|1\.|Entropy|  
+|1|Entropy|  
 |3|Bayesian with K2 Prior|  
 |4|Bayesian Dirichlet Equivalent (BDE) with uniform prior<br /><br /> (기본값)|  
   
@@ -160,26 +165,28 @@ ms.locfileid: "73637523"
  이러한 점수 매기기 방법에 대한 자세한 내용은 [Feature Selection](../../sql-server/install/feature-selection.md)을 참조하십시오.  
   
  *SPLIT_METHOD*  
- 노드를 분할하는 데 사용되는 메서드를 결정합니다. 사용할 수 있는 옵션은 다음과 같습니다.  
+ 노드를 분할하는 데 사용되는 메서드를 결정합니다. 다음 옵션을 사용할 수 있습니다.  
   
-|id|이름|  
+|ID|속성|  
 |--------|----------|  
-|1\.|**Binary:** 특성의 실제 값 수에 관계없이 트리가 두 개의 분리로 분할됨을 나타냅니다.|  
-|2|**Complete:** 트리에서 특성 값 수만큼의 분할을 만들 수 있음을 나타냅니다.|  
-|3|**Both:** 최상의 결과를 생성하기 위해 이진(Both) 분할을 사용할지 완전(Complete) 분할을 사용할지를 Analysis Services에서 결정할 수 있도록 지정합니다.|  
+|1|**이진:** 특성에 대 한 실제 값 수에 관계 없이 트리가 두 개의 분기로 분할 되어야 함을 나타냅니다.|  
+|2|**완료:** 는 트리에서 특성 값 만큼의 분할을 만들 수 있음을 나타냅니다.|  
+|3|**모두:** 최상의 결과를 생성 하기 위해 이진 또는 전체 분할을 사용할지 여부를 Analysis Services에서 결정할 수 있도록 지정 합니다.|  
   
  기본값은 3입니다.  
   
 ### <a name="modeling-flags"></a>모델링 플래그  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 다음과 같은 모델링 플래그를 지원합니다. 마이닝 구조나 마이닝 모델을 만들 경우 분석 중 각 열의 값이 처리되는 방법을 지정하기 위해 모델링 플래그를 정의합니다. 자세한 내용은 [모델링 플래그&#40;데이터 마이닝&#41;](modeling-flags-data-mining.md)를 참조하세요.  
+ 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 다음과 같은 모델링 플래그를 지원합니다. 마이닝 구조나 마이닝 모델을 만들 경우 분석 중 각 열의 값이 처리되는 방법을 지정하기 위해 모델링 플래그를 정의합니다. 자세한 내용은 [모델링 플래그&#40;데이터 마이닝&#41;](modeling-flags-data-mining.md)를 참조하세요.  
   
-|모델링 플래그|설명|  
+|모델링 플래그|Description|  
 |-------------------|-----------------|  
 |MODEL_EXISTENCE_ONLY|열이 `Missing` 및 `Existing` 상태를 갖는 것으로 간주됩니다. Null은 누락 값입니다.<br /><br /> 마이닝 모델 열에 적용됩니다.|  
-|NOT NULL|열에 null이 포함될 수 없음을 나타냅니다. 따라서 Analysis Services가 모델 학습 중 Null을 발견할 경우 오류가 발생합니다.<br /><br /> 마이닝 구조 열에 적용됩니다.|  
+|NOT NULL|열에 null이 포함될 수 없음을 나타냅니다. 따라서 Analysis  Services가 모델 학습 중 Null을 발견할 경우 오류가 발생합니다.<br /><br /> 마이닝 구조 열에 적용됩니다.|  
   
 ### <a name="regressors-in-decision-tree-models"></a>의사 결정 트리 모델의 회귀 변수  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘을 사용하지 않는 경우라도 연속 숫자 입력 및 출력을 포함하는 의사 결정 트리 모델에는 연속 특성에 대한 회귀를 나타내는 노드가 포함될 수 있습니다.  
+ 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘을 사용하지 않는 경우라도 연속 숫자 입력 및 출력을 포함하는 의사 결정 트리 모델에는 연속 특성에 대한 회귀를 나타내는 노드가 포함될 수 있습니다.  
   
  연속 숫자 데이터 열이 회귀 변수를 나타내도록 지정할 필요는 없습니다. 열에 REGRESSOR 플래그를 설정하지 않았더라도 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 자동으로 열을 잠재적 회귀 변수로 사용하고 데이터 세트를 의미 있는 패턴이 있는 영역으로 분할합니다.  
   
@@ -191,9 +198,10 @@ ms.locfileid: "73637523"
  의사 결정 트리 모델은 하나의 키 열, 여러 개의 입력 열 및 하나 이상의 예측 가능한 열을 포함해야 합니다.  
   
 ### <a name="input-and-predictable-columns"></a>입력 열과 예측 가능한 열  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 다음 표에 나열된 특정 입력 열과 예측 가능한 열을 지원합니다. 마이닝 모델에 사용되는 경우 콘텐츠 형식의 의미에 대한 자세한 내용은 [콘텐츠 형식&#40;데이터 마이닝&#41;](content-types-data-mining.md)을 참조하세요.  
+ 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 다음 표에 나열된 특정 입력 열과 예측 가능한 열을 지원합니다. 마이닝 모델에 사용되는 경우 콘텐츠 형식의 의미에 대한 자세한 내용은 [콘텐츠 형식&#40;데이터 마이닝&#41;](content-types-data-mining.md)을 참조하세요.  
   
-|Column|내용 유형|  
+|열|내용 유형|  
 |------------|-------------------|  
 |입력 특성|Continuous, Cyclical, Discrete, Discretized, Key, Ordered, Table|  
 |예측 가능한 특성|Continuous, Cyclical, Discrete, Discretized, Ordered, Table|  
@@ -204,6 +212,6 @@ ms.locfileid: "73637523"
 ## <a name="see-also"></a>참고 항목  
  [Microsoft 의사 결정 트리 알고리즘](microsoft-decision-trees-algorithm.md)   
  [의사 결정 트리 모델 쿼리 예제](decision-trees-model-query-examples.md)   
- [의사 결정 트리 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [의사 결정 트리 모델에 대 한 마이닝 모델 콘텐츠 &#40;Analysis Services 데이터 마이닝&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

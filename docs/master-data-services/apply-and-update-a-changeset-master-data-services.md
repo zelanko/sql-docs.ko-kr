@@ -11,10 +11,10 @@ ms.assetid: 3a6a3cf2-1e77-43d3-a64a-855ae51258e7
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: b0e937ff9222553c42eacefc173dfec90bb6ebc6
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728785"
 ---
 # <a name="apply-and-update-a-changeset-master-data-services"></a>변경 집합 적용 및 업데이트(Master Data Services)
@@ -23,9 +23,10 @@ ms.locfileid: "73728785"
 
   변경 집합은 마스터 데이터에 대해 보류 중인 변경 내용의 컬렉션입니다. 변경 집합을 로컬로 적용하면 변경 집합에서 보류 중인 변경 내용을 확인, 추가, 업데이트 및 삭제할 수 있습니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
   
--   **탐색기** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다. 자세한 내용은 [기능 영역 권한&#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)을 참조하세요.  
+-   
+  **탐색기** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다. 자세한 내용은 [기능 영역 권한 &#40;MDS(Master Data Services)&#41;](../master-data-services/functional-area-permissions-master-data-services.md)를 참조 하세요.  
   
 -   엔터티 또는 엔터티의 특성 중 하나에 대한 업데이트 이상의 권한이 있어야 합니다.  
   
@@ -35,9 +36,11 @@ ms.locfileid: "73728785"
   
 ## <a name="to-apply-and-update-a-changeset"></a>변경 집합을 적용 및 업데이트하려면  
   
-1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 홈 페이지에서 모델 및 버전을 선택하고 **탐색기**를 클릭합니다.  
+1.  
+  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 홈 페이지에서 모델 및 버전을 선택하고 **탐색기**를 클릭합니다.  
   
-2.  **엔터티** 메뉴에서 엔터티를 클릭합니다.  
+2.  
+  **엔터티** 메뉴에서 엔터티를 클릭합니다.  
   
 3.  오른쪽 창에서 **변경 집합** 을 선택하고 확인 및 변경할 변경 집합을 두 번 클릭합니다.  
   
@@ -49,11 +52,11 @@ ms.locfileid: "73728785"
   
 5.  보류 중인 변경 내용을 되돌리려면 **변경 집합** 창에서 표를 마우스 오른쪽 단추로 클릭하고 **되돌리기**를 클릭합니다.  
   
-## <a name="next-steps"></a>Next Steps  
- [변경 집합 커밋 또는 제출&#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
+## <a name="next-steps"></a>다음 단계  
+ [MDS(Master Data Services)&#41;&#40;변경 집합 커밋 또는 제출](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [변경 집합 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)   
- [변경 집합 승인 또는 거부&#40;Master Data Services&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
+ [변경 집합 &#40;MDS(Master Data Services)를 만듭니다&#41;](../master-data-services/create-a-changeset-master-data-services.md)   
+ [변경 집합 &#40;MDS(Master Data Services) 승인 또는 거부&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
   
   

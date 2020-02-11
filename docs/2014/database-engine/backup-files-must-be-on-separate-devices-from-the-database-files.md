@@ -1,5 +1,5 @@
 ---
-title: 백업 파일이 데이터베이스 파일과 별개의 장치에 있어야 합니다. | Microsoft Docs
+title: 백업 파일은 데이터베이스 파일에서 별도의 장치에 있어야 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 09c54c8229351cf27e0f42c8895f2633b8aa7ccb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812627"
 ---
 # <a name="backup-files-must-be-on-separate-devices-from-the-database-files"></a>백업 파일을 데이터베이스 파일과 별개의 디바이스에 두어야 함
@@ -29,11 +29,11 @@ ms.locfileid: "62812627"
 >  이 정책은 탑재 지점을 통해 개별 물리적 디바이스를 검색할 수 없습니다.  
   
 ## <a name="for-more-information"></a>참조 항목  
- [백업 장치&#40;SQL Server&#41;](../relational-databases/backup-restore/backup-devices-sql-server.md)  
+ [백업 디바이스&#40;SQL Server&#41;](../relational-databases/backup-restore/backup-devices-sql-server.md)  
   
  [SQL Server 데이터베이스 백업 및 복원](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [정책 기반 관리를 사용하여 최선의 방법 모니터링 및 적용](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

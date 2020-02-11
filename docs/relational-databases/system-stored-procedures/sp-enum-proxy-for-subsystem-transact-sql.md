@@ -1,5 +1,5 @@
 ---
-title: sp_enum_proxy_for_subsystem (TRANSACT-SQL) | Microsoft Docs
+title: sp_enum_proxy_for_subsystem (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,19 +18,20 @@ ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
 ms.author: vanto
 author: VanMSFT
 ms.openlocfilehash: 93a55b28325bd9b04af569120ad34baeb689e8f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124657"
 ---
-# <a name="spenumproxyforsubsystem-transact-sql"></a>sp_enum_proxy_for_subsystem(Transact-SQL)
+# <a name="sp_enum_proxy_for_subsystem-transact-sql"></a>sp_enum_proxy_for_subsystem(Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시가 하위 시스템에 액세스할 수 있는 권한을 나열합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,20 +44,20 @@ sp_enum_proxy_for_subsystem
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @proxy_id = ] proxy_id` 정보를 나열할 프록시의 id. 합니다 *proxy_id* 됩니다 **int**, 기본값은 NULL 사용 하 여 합니다. 중 하나는 *id* 또는 *proxy_name* 지정할 수 있습니다.  
+`[ @proxy_id = ] proxy_id`정보를 나열할 프록시의 id입니다. *Proxy_id* 은 **int**이며 기본값은 NULL입니다. *Id* 또는 *proxy_name* 지정할 수 있습니다.  
   
-`[ @proxy_name = ] 'proxy_name'` 정보를 나열할 프록시의 이름입니다. 합니다 *proxy_name* 됩니다 **sysname**, 기본값은 NULL 사용 하 여 합니다. 중 하나는 *id* 또는 *proxy_name* 지정할 수 있습니다.  
+`[ @proxy_name = ] 'proxy_name'`정보를 나열할 프록시의 이름입니다. *Proxy_name* 는 **sysname**이며 기본값은 NULL입니다. *Id* 또는 *proxy_name* 지정할 수 있습니다.  
   
-`[ @subsystem_id = ] subsystem_id` 정보를 나열할 하위 시스템의 id. 합니다 *subsystem_id* 됩니다 **int**, 기본값은 NULL 사용 하 여 합니다. 중 하나는 *subsystem_id* 또는 *subsystem_name* 지정할 수 있습니다.  
+`[ @subsystem_id = ] subsystem_id`정보를 나열할 하위 시스템의 id입니다. *Subsystem_id* 은 **int**이며 기본값은 NULL입니다. *Subsystem_id* 또는 *subsystem_name* 를 지정할 수 있습니다.  
   
-`[ @subsystem_name = ] 'subsystem_name'` 정보를 나열할 하위 시스템의 이름입니다. 합니다 *subsystem_name* 됩니다 **sysname**, 기본값은 NULL 사용 하 여 합니다. 중 하나는 *subsystem_id* 또는 *subsystem_name* 지정할 수 있습니다.  
+`[ @subsystem_name = ] 'subsystem_name'`정보를 나열할 하위 시스템의 이름입니다. *Subsystem_name* 는 **sysname**이며 기본값은 NULL입니다. *Subsystem_id* 또는 *subsystem_name* 를 지정할 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**subsystem_id**|**int**|하위 시스템의 ID입니다.|  
 |**subsystem_name**|**sysname**|하위 시스템의 이름입니다.|  
@@ -65,16 +66,16 @@ sp_enum_proxy_for_subsystem
 | &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="remarks"></a>설명  
- 매개 변수 없이 제공 하는 경우 **sp_enum_proxy_for_subsystem** 모든 하위 시스템에 대 한 인스턴스의 모든 프록시에 대 한 정보를 나열 합니다.  
+ 매개 변수를 제공 하지 않으면 모든 하위 시스템에 대 한 인스턴스의 모든 프록시에 대 한 정보가 **sp_enum_proxy_for_subsystem** 나열 됩니다.  
   
- 프록시 id 또는 프록시 이름을 제공 하면 **sp_enum_proxy_for_subsystem** 에 대 한 액세스를 프록시 하는 하위 시스템을 나열 합니다. 하위 시스템 id 또는 하위 시스템 이름을 제공 하면 **sp_enum_proxy_for_subsystem** 해당 하위 시스템에 액세스할 수 있는 프록시를 나열 합니다.  
+ 프록시 id 또는 프록시 이름이 제공 되는 경우 **sp_enum_proxy_for_subsystem** 는 프록시가 액세스할 수 있는 하위 시스템을 나열 합니다. 하위 시스템 id 또는 하위 시스템 이름을 제공 하면 **sp_enum_proxy_for_subsystem** 해당 하위 시스템에 대 한 액세스 권한이 있는 프록시가 나열 됩니다.  
   
  프록시 정보와 하위 시스템 정보를 모두 제공한 경우 지정한 프록시가 지정한 하위 시스템에 액세스할 수 있으면 결과 집합은 행을 반환합니다.  
   
- 이 저장된 프로시저에 위치한 **msdb**합니다.  
+ 이 저장 프로시저는 **msdb**에 있습니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 이 프로시저 기본의 멤버에 대 한 실행 권한을 합니다 **sysadmin** 고정된 서버 역할입니다.  
+ 이 프로시저에 대 한 실행 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
 ## <a name="examples"></a>예  
   
@@ -89,7 +90,7 @@ EXEC dbo.sp_enum_proxy_for_subsystem ;
 GO  
 ```  
   
-### <a name="b-determining-if-a-proxy-has-access-to-a-specific-subsystem"></a>2\. 프록시가 특정 하위 시스템에 액세스할 수 있는지 확인  
+### <a name="b-determining-if-a-proxy-has-access-to-a-specific-subsystem"></a>B. 프록시가 특정 하위 시스템에 액세스할 수 있는지 확인  
  다음 예에서는 프록시 `Catalog application proxy`가 `ActiveScripting` 하위 시스템에 액세스할 수 있는 경우 행을 반환합니다. 그렇지 않으면 빈 결과 집합을 반환합니다.  
   
 ```sql
@@ -102,7 +103,7 @@ EXEC dbo.sp_enum_proxy_for_subsystem
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [sp_grant_proxy_to_subsystem &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;sp_grant_proxy_to_subsystem &#40;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
   
   

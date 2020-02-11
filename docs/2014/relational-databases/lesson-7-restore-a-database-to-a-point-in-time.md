@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5b30a9f60f52b8b19875f5fb3c15242ce2c632fd
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175431"
 ---
-# <a name="lesson-8-restore-a-database-to-azure-storage"></a>8단원: Azure Storage로 데이터베이스 복원
+# <a name="lesson-8-restore-a-database-to-azure-storage"></a>8단원: Azure Storage에 데이터베이스 복원
   이 단원에서는 로컬로 백업 파일을 만들고 Azure Storage 복원 하는 방법을 배웁니다. 온-프레미스 또는 Azure의 가상 머신에서 데이터베이스를 사용할 수 있습니다. 이 단원을 수행하기 위해 4, 5, 6, 7단원을 완료할 필요는 없습니다.  
   
  이 단원에서는 다음 단계를 이미 완료했다고 가정합니다.  
@@ -77,9 +77,10 @@ ms.locfileid: "70175431"
   
 4.  **일반** 페이지의 **복원** 원본 섹션에서 **원본** 장치를 클릭 합니다.  
   
-5.  **원본** 장치 텍스트 상자에 대 한 찾아보기 단추를 클릭 하 여 **백업 장치 선택** 대화 상자를 엽니다.  
+5.  
+  **원본** 디바이스 입력란에 대한 찾아보기 단추를 클릭합니다. **백업 디바이스 선택** 대화 상자가 열립니다.  
   
-6.  백업 미디어 텍스트 상자에서 **파일**을 선택 하 고 **추가** 단추를 클릭 하 여 백업 파일 (.bak)을 찾습니다. **확인**을 클릭합니다.  
+6.  백업 미디어 입력란에서 **파일**을 선택하고 **추가** 단추를 클릭하여 백업 파일(.bak)을 찾습니다. **확인**을 클릭합니다.  
   
 7.  첫 번째 페이지에서 **파일** 을 클릭 합니다.  
   
@@ -97,6 +98,6 @@ ms.locfileid: "70175431"
   
  **다음 단원:**  
   
- [9단원. Azure Storage에서 데이터베이스 복원](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)  
+ [단원 9. Azure Storage에서 데이터베이스 복원](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)  
   
   

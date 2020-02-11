@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7c4a82cfa4d8a82db1e01c49899c3c49c2e01ee9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62745722"
 ---
 # <a name="securables"></a>보안 개체
@@ -64,7 +64,7 @@ ms.locfileid: "62745722"
   
 -   (데이터베이스) 역할  
   
--   경로  
+-   라우팅  
   
 -   스키마  
   
@@ -79,7 +79,7 @@ ms.locfileid: "62745722"
 ## <a name="securable-scope-schema"></a>보안 개체 범위: 스키마  
  **스키마** 보안 개체 범위는 다음 보안 개체를 포함합니다.  
   
--   형식  
+-   Type  
   
 -   XML 스키마 컬렉션  
   
@@ -87,15 +87,15 @@ ms.locfileid: "62745722"
   
     -   집계  
   
-    -   기능  
+    -   함수  
   
-    -   프로시저  
+    -   절차  
   
     -   큐  
   
     -   동의어  
   
-    -   Table  
+    -   테이블  
   
     -   보기  
   

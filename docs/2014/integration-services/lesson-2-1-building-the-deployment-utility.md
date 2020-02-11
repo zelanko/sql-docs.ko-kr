@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b788f82fc28ee39e7d65ae484da49313eea7c610
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767585"
 ---
-# <a name="step-1-building-the-deployment-utility"></a>1단계: 배포 유틸리티 빌드
+# <a name="step-1-building-the-deployment-utility"></a>1단계: 배포 유틸리티 작성
   이 태스크에서는 Deployment Tutorial 프로젝트를 위한 배포 유틸리티를 구성 및 작성합니다.  
   
  배포 유틸리티를 작성할 수 있으려면 Deployment Tutorial 프로젝트의 속성을 수정해야 합니다. **Deployment Tutorial 속성 페이지** 대화 상자를 사용하여 이러한 속성을 구성합니다. 이 대화 상자에서 배포 중에 구성을 업데이트하는 기능을 설정하고 빌드 프로세스에서 배포 유틸리티를 생성하도록 지정해야 합니다. 속성을 설정한 후에 프로젝트를 작성합니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "62767585"
   
 4.  **Deployment Tutorial 속성 페이지** 대화 상자에서 구성 속성을 확장하고 배포 유틸리티를 클릭합니다.  
   
-5.  오른쪽 창에서를 **Deployment Tutorial 속성 페이지** 대화 상자에서 확인 하는 `AllowConfigurationChanges` 로 설정 되어 `true`설정 `CreateDeploymentUtility` 에 `true`, 필요에 따라 기본 값을 업데이트 하 고 `DeploymentOutputPath`.  
+5.  **Deployment Tutorial 속성 페이지** 대화 상자의 오른쪽 창에서 `AllowConfigurationChanges` `true`가로 설정 되어 있는지 확인 하 고를로 `CreateDeploymentUtility` `true`설정한 다음 필요에 따라의 `DeploymentOutputPath`기본값을 업데이트 합니다.  
   
 6.  **확인**을 클릭합니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62767585"
   
 4.  출력 창에서 다음 정보를 확인합니다.  
   
-     빌드 시작: SQL Integration Services 프로젝트: 증분 ...  
+     빌드 시작: SQL Integration Services 프로젝트: 증분...  
   
      배포 유틸리티를 만드는 중...  
   
@@ -63,9 +63,9 @@ ms.locfileid: "62767585"
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [2단계: 배포 번들 확인](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
-![Integration Services 아이콘 (작은)](media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은 아이콘)](media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [배포 유틸리티 만들기](../../2014/integration-services/create-a-deployment-utility.md)  
   
   

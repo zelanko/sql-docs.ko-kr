@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5053cc16734cc18c75e163fec4c06b1768e590cc
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68941062"
 ---
 # <a name="view-and-modify-publication-properties"></a>게시 속성 보기 및 수정
@@ -102,29 +102,29 @@ ms.locfileid: "68941062"
   
 #### <a name="to-view-the-properties-of-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시의 속성을 확인하려면  
   
-1.  **\@게시** 매개 변수에 대한 게시의 이름을 지정 하 여 [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql)를 실행 합니다. 이 매개 변수를 지정하지 않으면 게시자에 있는 모든 게시에 대한 정보가 반환됩니다.  
+1.  **\@publication** 매개 변수에 게시 이름을 지정하여 [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql)을 실행합니다. 이 매개 변수를 지정하지 않으면 게시자에 있는 모든 게시에 대한 정보가 반환됩니다.  
   
 #### <a name="to-change-the-properties-of-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시의 속성을 변경하려면  
   
-1.  [Sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)를 실행 하 고  **\@property** 매개 변수에서 변경할 게시 속성을 지정 하 고  **\@value** 매개 변수에이 속성의 새 값을 지정 합니다.  
+1.  **\@property** 매개 변수에 변경할 게시 속성, **\@value** 매개 변수에 이 속성의 새 값을 지정하여 [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)을 실행합니다.  
   
     > [!NOTE]  
-    >  변경 시 새 스냅숏을 생성 해야 하는 경우  **\@force_invalidate_snapshot**에 값 **1** 을 지정 해야 하며, 변경으로 인해 구독자를 다시 초기화 해야 하는 경우 값 1을 지정 해야 합니다.  **\@force_reinit_subscription**의 경우 변경된 경우 새 스냅샷 또는 다시 초기화가 필요한 속성에 대한 자세한 내용은 [게시 및 아티클 속성 변경](change-publication-and-article-properties.md)을 참조하세요.  
+    >  변경 시 새 스냅샷을 생성해야 하는 경우 **\@force_invalidate_snapshot** 값도 **1**로 지정해야 합니다. 변경 시 구독자를 초기화해야 하는 경우 **\@force_reinit_subscription**에 값 **1**을 지정해야 합니다. 변경된 경우 새 스냅샷 또는 다시 초기화가 필요한 속성에 대한 자세한 내용은 [게시 및 아티클 속성 변경](change-publication-and-article-properties.md)을 참조하세요.  
   
 #### <a name="to-view-the-properties-of-a-merge-publication"></a>병합 게시의 속성을 확인하려면  
   
-1.  **\@게시** 매개 변수에 대 한 게시의 이름을 지정 하 여 [sp_helpmergepublication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql)를 실행 합니다. 이 매개 변수를 지정하지 않으면 게시자에 있는 모든 게시에 대한 정보가 반환됩니다.  
+1.  **\@publication** 매개 변수에 게시 이름을 지정하여 [sp_helpmergepublication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql)을 실행합니다. 이 매개 변수를 지정하지 않으면 게시자에 있는 모든 게시에 대한 정보가 반환됩니다.  
   
 #### <a name="to-change-the-properties-of-a-merge-publication"></a>병합 게시의 속성을 변경하려면  
   
-1.  [Sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)을 실행 하 여  **\@property** 매개 변수에 변경 되는 게시 속성을 지정 하 고  **\@value** 매개 변수에이 속성의 새 값을 지정 합니다.  
+1.  **\@property** 매개 변수에 변경할 게시 속성, **\@value** 매개 변수에 이 속성의 새 값을 지정하여 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)을 실행합니다.  
   
     > [!NOTE]  
-    >  변경 시 새 스냅숏을 생성 해야 하는 경우  **\@force_invalidate_snapshot**에 값 **1** 을 지정 해야 하며, 변경으로 인해 구독자를 다시 초기화 해야 하는 경우 값 1을 지정 해야 합니다.  **force_reinit_subscription\@** 의 경우 변경 시 새 스냅숏 또는 다시 초기화가 필요한 속성에 대 한 자세한 내용은 [게시 및 아티클 속성 변경](change-publication-and-article-properties.md)을 참조 하세요.  
+    >  변경 시 새 스냅샷을 생성해야 하는 경우 **\@force_invalidate_snapshot** 값도 **1**로 지정해야 합니다. 변경 시 구독자를 초기화해야 하는 경우 **\@force_reinit_subscription**에 값 **1**을 지정해야 합니다. 변경 시 새 스냅샷 또는 재초기화가 필요한 속성에 관한 자세한 내용은 [게시 및 아티클 속성 변경](change-publication-and-article-properties.md)을 참조하세요.  
   
 #### <a name="to-view-the-properties-of-a-snapshot"></a>스냅샷의 속성을 확인하려면  
   
-1.  **\@게시** 매개 변수에 대 한 게시의 이름을 지정 하 여 [sp_helppublication_snapshot](/sql/relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql)를 실행 합니다.  
+1.  **\@publication** 매개 변수에 게시 이름을 지정하여 [sp_helppublication_snapshot](/sql/relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql)을 실행합니다.  
   
 #### <a name="to-change-the-properties-of-a-snapshot"></a>스냅샷의 속성을 변경하려면  
   
@@ -160,7 +160,8 @@ ms.locfileid: "68941062"
   
 4.  (옵션) 속성을 변경하려면 설정할 수 있는 한 개 이상의 속성에 대해 새 값을 설정합니다. 논리 AND 연산자(Microsoft Visual C#에서는 `&`, Microsoft Visual Basic에서는 `And`)를 사용하여 지정된 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 값이 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 속성에 대해 설정되어 있는지 확인할 수 있습니다. 포함 논리 OR 연산자(Visual C#에서는 `|`, Visual Basic에서는 `Or`) 및 배타적 논리 OR 연산자(Visual C#에서는 `^`, Visual Basic에서는 `Xor`)를 사용하여 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 속성에 대한 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 값을 변경할 수 있습니다.  
   
-5.  (옵션) <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>에 대해 `true` 값을 지정했으면 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 메서드를 호출하여 서버의 변경 내용을 커밋합니다. <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>에 대해 `false` 값을 지정했으면(기본값) 변경 내용이 즉시 서버로 전송됩니다.  
+5.  (옵션) `true`에 대해 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 값을 지정했으면 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 메서드를 호출하여 서버의 변경 내용을 커밋합니다. 
+  `false`에 대해 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 값을 지정했으면(기본값) 변경 내용이 즉시 서버로 전송됩니다.  
   
 #### <a name="to-view-or-modify-properties-of-a-merge-publication"></a>병합 게시의 속성을 보거나 수정하려면  
   
@@ -172,7 +173,8 @@ ms.locfileid: "68941062"
   
 4.  (옵션) 속성을 변경하려면 설정할 수 있는 한 개 이상의 속성에 대해 새 값을 설정합니다. 논리 AND 연산자(Visual C#에서는 `&`, Visual Basic에서는 `And`)를 사용하여 지정된 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 값이 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 속성에 대해 설정되어 있는지 확인할 수 있습니다. 포함 논리 OR 연산자(Visual C#에서는 `|`, Visual Basic에서는 `Or`) 및 배타적 논리 OR 연산자(Visual C#에서는 `^`, Visual Basic에서는 `Xor`)를 사용하여 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 속성에 대한 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 값을 변경할 수 있습니다.  
   
-5.  (옵션) <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>에 대해 `true` 값을 지정했으면 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 메서드를 호출하여 서버의 변경 내용을 커밋합니다. <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>에 대해 `false` 값을 지정했으면(기본값) 변경 내용이 즉시 서버로 전송됩니다.  
+5.  (옵션) `true`에 대해 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 값을 지정했으면 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 메서드를 호출하여 서버의 변경 내용을 커밋합니다. 
+  `false`에 대해 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 값을 지정했으면(기본값) 변경 내용이 즉시 서버로 전송됩니다.  
   
 ###  <a name="PShellExample"></a> 예(RMO)  
  이 예에서는 트랜잭션 게시에 대한 게시 특성을 설정합니다. 변경 내용은 명시적으로 서버로 전송될 때까지 캐시됩니다.  
@@ -187,7 +189,7 @@ ms.locfileid: "68941062"
   
  [!code-vb[HowTo#rmo_vb_ChangeMergePub_ddl](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changemergepub_ddl)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 및 데이터베이스 개체 게시](publish-data-and-database-objects.md)   
  [게시 및 아티클 속성 변경](change-publication-and-article-properties.md)   
  [게시 데이터베이스의 스키마 변경](make-schema-changes-on-publication-databases.md)   

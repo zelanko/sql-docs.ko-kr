@@ -1,5 +1,5 @@
 ---
-title: 공용 언어 런타임 (CLR) 통합에 대 한 예제 및 시나리오 | Microsoft Docs
+title: CLR (공용 언어 런타임) 통합에 대 한 사용 시나리오 및 예제 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,22 +18,23 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3718a084211e7c3b2b7a14973e195a4b1c3b6b1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780726"
 ---
 # <a name="usage-scenarios-and-examples-for-common-language-runtime-clr-integration"></a>CLR(공용 언어 런타임) 통합에 대한 사용 시나리오 및 예
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 CLR(공용 언어 런타임) 통합의 프로그래밍 기능을 알아보는 데 사용할 수 있는 예제 애플리케이션, 패키지 예제 및 여러 코딩 예제가 포함되어 있습니다.  
   
- 이러한 샘플 및 추가 자료를 구현 합니다. 전체 Visual Studio 프로젝트에 대 한 방문 [Microsoft SQL Server 커뮤니티 프로젝트 및 codeplex 샘플](https://go.microsoft.com/fwlink/?LinkID=193935)합니다.  
+ 이러한 샘플과 추가 자료를 구현 하는 전체 Visual Studio 프로젝트에 대해서는 [CodePlex의 샘플 & 커뮤니티 프로젝트 Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=193935)를 참조 하세요.  
   
-|이름|Description|  
+|속성|Description|  
 |----------|-----------------|  
 |[CLR UDF에서 네이티브 코드 액세스](../../../2014/database-engine/dev-guide/accessing-native-code-from-a-clr-udf.md)|데이터베이스의 어셈블리에 있는 사용자 정의 함수에서 네이티브(비관리) C++ 코드의 함수를 호출하는 방법을 보여 줍니다.|  
 |[배열 매개 변수 예제](../../../2014/database-engine/dev-guide/array-parameter-sample.md)|클라이언트에서 서버의 CLR 통합 저장 프로시저로 정보 배열을 전달하여 데이터베이스에 행 집합을 만들거나 업데이트 또는 삭제하는 방법을 보여 줍니다. 이 작업은 UDT를 사용하여 수행합니다.|  
-|[달력 인식 날짜 및 시간 UDT 예제](../../../2014/database-engine/dev-guide/calendar-aware-date-and-time-udt-sample.md)|달력을 사용하여 날짜와 시간을 처리할 수 있는 두 개의 UDT를 정의합니다.|  
+|[달력 인식 날짜 및 시간 UDT 샘플](../../../2014/database-engine/dev-guide/calendar-aware-date-and-time-udt-sample.md)|달력을 사용하여 날짜와 시간을 처리할 수 있는 두 개의 UDT를 정의합니다.|  
 |[CLR 트랜잭션 예제](../../../2014/database-engine/dev-guide/clr-transactions-sample.md)|System.Transactions 네임스페이스에 있는 관리되는 API를 사용하여 트랜잭션을 제어하는 방법을 보여 줍니다.|  
 |[CLR 및 XML을 사용한 연락처 만들기](../../../2014/database-engine/dev-guide/contact-creation-using-clr-and-xml.md)|SQL Server의 연락처 예제는 기본 AdventureWorks2012 예제 데이터베이스의 맨 위에 추가 기능 계층을 형성하는 몇 가지 유용한 유틸리티를 제공합니다. 첫 번째 유틸리티는 AdventureWorks2012 데이터베이스와 관련이 있는 여러 부류의 사람에 대한 연락처 레코드를 만듭니다. 연락처 정보는 XML을 사용하여 지정하고 C# 기반 또는 VB 저장 프로시저로 전달되어 XML을 만들고 이 XML을 데이터베이스의 적합한 테이블에 배치합니다.|  
 |[통화 형식 및 변환 함수](../../../2014/database-engine/dev-guide/currency-type-and-conversion-function.md)|C#을 사용하여 Currency 사용자 정의 데이터 형식을 정의합니다.|  

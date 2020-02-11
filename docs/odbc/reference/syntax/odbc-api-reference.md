@@ -12,20 +12,20 @@ ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5073d7efcb2cb99e51fe0d9cd0382806501cfd0a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085466"
 ---
 # <a name="odbc-api-reference"></a>ODBC API 참조
-이 섹션의에서 항목에서는 알파벳 순서로 각 ODBC 함수를 설명합니다. 각 함수는 프로그래밍 언어 함수를 C로 정의 됩니다. 설명은 다음과 같습니다.  
+이 섹션의 항목에서는 각 ODBC 함수를 알파벳 순서로 설명 합니다. 각 함수는 C 프로그래밍 언어 함수로 정의 됩니다. 설명에는 다음이 포함 됩니다.  
   
--   용도  
+-   목적  
   
 -   ODBC 버전  
   
--   표준 CLI 적합성 수준  
+-   표준 CLI 규칙 수준  
   
 -   구문  
   
@@ -35,20 +35,20 @@ ms.locfileid: "68085466"
   
 -   진단  
   
--   사용량 및 구현에 대 한 설명  
+-   사용 및 구현에 대 한 주석  
   
 -   코드 예제  
   
--   관련된 함수에 대 한 참조  
+-   관련 함수에 대 한 참조  
   
- 표준 CLI 규칙 수준은 다음 중 하나일 수 있습니다. ISO 92 그룹, ODBC, 열거나 사용 되지 않습니다. Open Group ISO 92의 순수 상위 집합 이므로 ISO 92을 준수 하는 Open Group 1, 버전에에서도 나타납니다. 태그를 지정 하는 함수입니다. 열기 그룹 규격으로 태그가 지정 된 함수는 ODBC 3에서도 표시 됩니다. *x*이므로 ODBC 3. *x* Open Group 버전 1의 순수 상위 집합입니다. ODBC 호환으로 태그가 지정 된 함수는 모두 표준에 나타납니다. ODBC 3에서 더 이상 사용 되지 태그가 지정 된 함수에 사용 되지 않습니다. *x*합니다.  
+ 표준 CLI 규칙 수준은 ISO 92, Open Group, ODBC 또는 사용 되지 않는 중 하나일 수 있습니다. Open Group은 ISO 92의 순수 상위 집합 이므로 ISO 92 규격으로 태그가 지정 된 함수가 오픈 그룹 버전 1에도 나타납니다. 개방형 그룹 규격으로 태그가 지정 된 함수는 ODBC 3에도 표시 됩니다. ODBC 3 이기 때문에 *x*입니다. *x* 는 개방형 그룹 버전 1의 순수 상위 집합입니다. ODBC 규격으로 태그가 지정 된 함수가 두 표준 모두에 표시 되지 않습니다. 사용 되지 않는 것으로 태그가 지정 된 함수는 ODBC 3에서 더 이상 사용 되지 않습니다. *x*.  
   
- 에 설명 된 진단 정보를 처리 합니다 [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) 함수 설명 합니다. SQLSTATE 값과 연결 된 텍스트를 조건에 대 한 설명을 제공 되지만 특정 텍스트를 규정 없습니다.  
+ 진단 정보 처리는 [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) 함수 설명에 설명 되어 있습니다. SQLSTATE 값과 연결 된 텍스트는 조건에 대 한 설명을 제공 하기 위해 포함 되지만 특정 텍스트를 규정 하기 위한 것은 아닙니다.  
   
 > [!NOTE]  
->  드라이버 관련 ODBC 함수에 대 한 정보를 드라이버에 대 한 섹션을 참조 합니다.  
+>  ODBC 함수에 대 한 드라이버 관련 정보는 드라이버에 대 한 섹션을 참조 하세요.  
   
- 이 섹션에는 다음 함수에 대 한 항목이 포함 됩니다.  
+ 이 섹션에는 다음 함수에 대 한 항목이 포함 되어 있습니다.  
   
 -   [SQLAllocConnect 함수](../../../odbc/reference/syntax/sqlallocconnect-function.md)  
   
@@ -72,11 +72,11 @@ ms.locfileid: "68085466"
   
 -   [SQLCloseCursor 함수](../../../odbc/reference/syntax/sqlclosecursor-function.md)  
   
--   [SQLColAttribute 함수](../../../odbc/reference/syntax/sqlcolattribute-function.md)  
+-   [SQLColAttribute 함수(SQLColAttribute Function)](../../../odbc/reference/syntax/sqlcolattribute-function.md)  
   
 -   [SQLColAttributes 함수](../../../odbc/reference/syntax/sqlcolattributes-function.md)  
   
--   [SQLColumnPrivileges 함수](../../../odbc/reference/syntax/sqlcolumnprivileges-function.md)  
+-   [SQLColumnPrivileges 함수(SQLColumnPrivileges Function)](../../../odbc/reference/syntax/sqlcolumnprivileges-function.md)  
   
 -   [SQLColumns 함수](../../../odbc/reference/syntax/sqlcolumns-function.md)  
   
@@ -90,15 +90,15 @@ ms.locfileid: "68085466"
   
 -   [SQLDescribeCol 함수](../../../odbc/reference/syntax/sqldescribecol-function.md)  
   
--   [SQLDescribeParam 함수](../../../odbc/reference/syntax/sqldescribeparam-function.md)  
+-   [SQLDescribeParam 함수(SQLDescribeParam Function)](../../../odbc/reference/syntax/sqldescribeparam-function.md)  
   
 -   [SQLDisconnect 함수](../../../odbc/reference/syntax/sqldisconnect-function.md)  
   
--   [SQLDriverConnect 함수](../../../odbc/reference/syntax/sqldriverconnect-function.md)  
+-   [SQLDriverConnect 함수(SQLDriverConnect Function)](../../../odbc/reference/syntax/sqldriverconnect-function.md)  
   
 -   [SQLDrivers 함수](../../../odbc/reference/syntax/sqldrivers-function.md)  
   
--   [SQLEndTran 함수](../../../odbc/reference/syntax/sqlendtran-function.md)  
+-   [SQLEndTran 함수(SQLEndTran Function)](../../../odbc/reference/syntax/sqlendtran-function.md)  
   
 -   [SQLError 함수](../../../odbc/reference/syntax/sqlerror-function.md)  
   
@@ -110,7 +110,7 @@ ms.locfileid: "68085466"
   
 -   [SQLFetch 함수](../../../odbc/reference/syntax/sqlfetch-function.md)  
   
--   [SQLFetchScroll 함수](../../../odbc/reference/syntax/sqlfetchscroll-function.md)  
+-   [SQLFetchScroll 함수(SQLFetchScroll Function)](../../../odbc/reference/syntax/sqlfetchscroll-function.md)  
   
 -   [SQLForeignKeys 함수](../../../odbc/reference/syntax/sqlforeignkeys-function.md)  
   
@@ -122,19 +122,19 @@ ms.locfileid: "68085466"
   
 -   [SQLFreeStmt 함수](../../../odbc/reference/syntax/sqlfreestmt-function.md)  
   
--   [SQLGetConnectAttr 함수](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)  
+-   [SQLGetConnectAttr 함수(SQLGetConnectAttr Function)](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)  
   
 -   [SQLGetConnectOption 함수](../../../odbc/reference/syntax/sqlgetconnectoption-function.md)  
   
--   [SQLGetCursorName 함수](../../../odbc/reference/syntax/sqlgetcursorname-function.md)  
+-   [SQLGetCursorName 함수(SQLGetCursorName Function)](../../../odbc/reference/syntax/sqlgetcursorname-function.md)  
   
--   [SQLGetData 함수](../../../odbc/reference/syntax/sqlgetdata-function.md)  
+-   [SQLGetData 함수(SQLGetData Function)](../../../odbc/reference/syntax/sqlgetdata-function.md)  
   
--   [SQLGetDescField 함수](../../../odbc/reference/syntax/sqlgetdescfield-function.md)  
+-   [SQLGetDescField 함수(SQLGetDescField Function)](../../../odbc/reference/syntax/sqlgetdescfield-function.md)  
   
 -   [SQLGetDescRec 함수](../../../odbc/reference/syntax/sqlgetdescrec-function.md)  
   
--   [SQLGetDiagField 함수](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)  
+-   [SQLGetDiagField 함수(SQLGetDiagField Function)](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)  
   
 -   [SQLGetDiagRec 함수](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)  
   
@@ -148,11 +148,11 @@ ms.locfileid: "68085466"
   
 -   [SQLGetStmtOption 함수](../../../odbc/reference/syntax/sqlgetstmtoption-function.md)  
   
--   [SQLGetTypeInfo 함수](../../../odbc/reference/syntax/sqlgettypeinfo-function.md)  
+-   [SQLGetTypeInfo 함수(SQLGetTypeInfo Function)](../../../odbc/reference/syntax/sqlgettypeinfo-function.md)  
   
 -   [SQLMoreResults 함수](../../../odbc/reference/syntax/sqlmoreresults-function.md)  
   
--   [SQLNativeSql 함수](../../../odbc/reference/syntax/sqlnativesql-function.md)  
+-   [SQLNativeSql 함수(SQLNativeSql Function)](../../../odbc/reference/syntax/sqlnativesql-function.md)  
   
 -   [SQLNumParams 함수](../../../odbc/reference/syntax/sqlnumparams-function.md)  
   
@@ -166,13 +166,13 @@ ms.locfileid: "68085466"
   
 -   [SQLPrimaryKeys 함수](../../../odbc/reference/syntax/sqlprimarykeys-function.md)  
   
--   [SQLProcedureColumns 함수](../../../odbc/reference/syntax/sqlprocedurecolumns-function.md)  
+-   [SQLProcedureColumns 함수(SQLProcedureColumns Function)](../../../odbc/reference/syntax/sqlprocedurecolumns-function.md)  
   
 -   [SQLProcedures 함수](../../../odbc/reference/syntax/sqlprocedures-function.md)  
   
 -   [SQLPutData 함수](../../../odbc/reference/syntax/sqlputdata-function.md)  
   
--   [SQLRowCount 함수](../../../odbc/reference/syntax/sqlrowcount-function.md)  
+-   [SQLRowCount 함수(SQLRowCount Function)](../../../odbc/reference/syntax/sqlrowcount-function.md)  
   
 -   [SQLSetConnectAttr 함수](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)  
   

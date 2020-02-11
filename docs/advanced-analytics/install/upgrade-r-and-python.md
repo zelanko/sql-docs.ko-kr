@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: abc14f78a969abd4adbbb2dcf12b4ee316614d23
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69634545"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>SQL Server 인스턴스에서 Machine Learning(R 및 Python) 구성 요소 업그레이드
@@ -239,7 +239,7 @@ Microsoft Machine Learning Server를 실행한 후에는 SqlBindR.exe라는 명�
 
 <a name="step-1-unbind"></a> 
 
-### <a name="step-1-unbind"></a>1단계: 언바인딩
+### <a name="step-1-unbind"></a>1단계: 바인딩 해제
 
 바인딩 롤백에는 설치 프로그램을 다시 실행하거나 SqlBindR 명령줄 유틸리티를 사용하는 두 가지 옵션이 있습니다.
 
@@ -250,7 +250,7 @@ Microsoft Machine Learning Server를 실행한 후에는 SqlBindR.exe라는 명�
 2. 설치 프로그램이 언바인딩 후보인 로컬 인스턴스를 식별합니다.
 3. 원래 구성으로 되돌리려는 인스턴스 옆에 있는 확인란을 선택 취소합니다.
 4. 라이선스 계약에 동의합니다. 설치하는 경우에도 라이선스 조건에 동의해야 합니다.
-5. **마침**을 클릭합니다. 이 프로세스는 시간이 오래 걸립니다.
+5. **Finish**를 클릭합니다. 이 프로세스는 시간이 오래 걸립니다.
 
 #### <a name="bkmk_cmdunbind"></a> 명령줄을 사용하여 언바인딩
 
@@ -284,7 +284,7 @@ SQL Server 설치 프로그램을 실행하여 R 및 Python 기능이 포함된 
 
 ### <a name="parameters"></a>매개 변수
 
-|속성|설명|
+|속성|Description|
 |------|------|
 |*list*| 현재 컴퓨터의 모든 SQL Database 인스턴스 ID 목록을 표시합니다.|
 |*bind*| 지정된 SQL Database 인스턴스를 최신 버전의 R 서버로 업그레이드하고 인스턴스가 R 서버의 향후 업그레이드를 자동으로 가져오도록 합니다.|
@@ -340,7 +340,7 @@ Microsoft Machine Learning Server 9.2.1 및 9.3에는 이 문제가 없습니다
 > [!NOTE]
 > 설치가 완료될 때까지 기다려야 합니다. 한 버전과 연결된 R 라이브러리를 제거하고 새로운 R 라이브러리를 추가하기 위해서는 시간이 오래 걸릴 수 있습니다. 작업이 완료되면 임시 폴더가 제거됩니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 + [Windows용 Machine Learning Server 설치(인터넷 연결)](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
 + [Windows용 Machine Learning Server 설치(오프라인)](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-offline)

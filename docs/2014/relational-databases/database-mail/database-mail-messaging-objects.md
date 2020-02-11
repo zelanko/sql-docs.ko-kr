@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3657e45d18ac84ad737a016150692730f736b55f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917718"
 ---
 # <a name="database-mail-messaging-objects"></a>데이터베이스 메일 메시징 개체
@@ -32,7 +32,7 @@ ms.locfileid: "62917718"
   
  이러한 개체는 메일 호스트 데이터베이스 내에서 데이터베이스 메일에 대한 인터페이스입니다. 위에 나열된 개체에서 제공하는 기능을 구현하도록 다른 개체가 설치됩니다. 그러나 해당 개체는 내부 사용을 위해 예약됩니다.  
   
-|이름|형식|Description|  
+|속성|Type|Description|  
 |----------|----------|-----------------|  
 |[sysmail_allitems&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sysmail-allitems-transact-sql)|`View`|데이터베이스 메일에 제출된 모든 메시지를 나열합니다.|  
 |[sysmail_event_log&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sysmail-event-log-transact-sql)|`View`|[Database Mail External Program](database-mail-external-program.md)의 동작에 대한 메시지를 나열합니다.|  
@@ -49,7 +49,7 @@ ms.locfileid: "62917718"
   
 
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 메일](database-mail.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   

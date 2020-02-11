@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 156a8e765812c14da0888148505311d52c267916
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62782386"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>시스템 관리자가 잠겨 있는 경우 SQL Server에 연결
@@ -40,7 +40,7 @@ ms.locfileid: "62782386"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 단일 사용자 모드로 시작할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스를 먼저 중지하십시오. 그렇지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 먼저 연결되므로 두 번째 사용자로 연결하지 못합니다.  
   
- **sqlcmd** 와 함께 **-m** 옵션을 사용하거나 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]을 사용할 경우 지정한 클라이언트 응용 프로그램에 대한 연결 수를 제한할 수 있습니다. 예를 들어 **-m"sqlcmd"** 는 연결 수를 단일 연결로 제한하며 이 경우 연결은 자신을 **sqlcmd** 클라이언트 프로그램으로 인식해야 합니다. 단일 사용자 모드에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 시작하며 알 수 없는 클라이언트 애플리케이션에서 사용 가능한 유일한 연결을 사용할 경우 이 옵션을 사용합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 쿼리 편집기를 통해 연결하려면 **-m"Microsoft SQL Server Management Studio - 쿼리"** 를 사용합니다.  
+ **sqlcmd** 와 함께 **-m** 옵션을 사용하거나 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]을 사용할 경우 지정한 클라이언트 애플리케이션에 대한 연결 수를 제한할 수 있습니다. 예를 들어 **-m"sqlcmd"** 는 연결 수를 단일 연결로 제한하며 이 경우 연결은 자신을 **sqlcmd** 클라이언트 프로그램으로 인식해야 합니다. 단일 사용자 모드에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 시작하며 알 수 없는 클라이언트 애플리케이션에서 사용 가능한 유일한 연결을 사용할 경우 이 옵션을 사용합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 쿼리 편집기를 통해 연결하려면 **-m"Microsoft SQL Server Management Studio - 쿼리"** 를 사용합니다.  
   
 > [!IMPORTANT]  
 >  이 옵션을 보안 용도로는 사용하지 마십시오. 클라이언트 애플리케이션에서 클라이언트 애플리케이션 이름을 제공하므로 연결 문자열의 일부로 잘못된 이름을 제공할 수 있습니다.  
@@ -58,12 +58,12 @@ ms.locfileid: "62782386"
   
 4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자의 왼쪽 창에서 **SQL Server 서비스**를 선택합니다. 오른쪽 창에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 찾습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 인스턴스에는 컴퓨터 이름 뒤에 **(MSSQLSERVER)** 가 있습니다. 명명된 인스턴스는 등록된 서버에서와 같은 이름(대문자)으로 나타납니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  
   
-5.  에 **시작 매개 변수** 탭을 **시작 매개 변수를 지정** 상자에 입력 `-m` 클릭 하 고 `Add`합니다. 클릭합니다.  
+5.  **시작 매개** 변수 탭의 **시작 매개 변수 지정** 상자에를 입력 `-m` 한 다음을 클릭 `Add`합니다. 클릭합니다.  
   
     > [!NOTE]  
     >  몇몇 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 **시작 매개 변수** 탭이 없습니다. 이 탭이 없는 경우 **고급** 탭에서 **시작 매개 변수**를 두 번 클릭합니다. 매개 변수가 아주 작은 창에서 열립니다. 기존 매개 변수를 변경하지 않도록 주의하십시오. 맨 끝에 새 매개 변수 `;-m`(세미콜론, 대시 및 소문자 m)을 추가하고 `OK`을 클릭합니다.  
   
-6.  클릭 `OK`, 메시지를 다시 시작 후에 서버 이름을 마우스 오른쪽 단추로 클릭 하 고 클릭 하 고 **다시 시작**합니다.  
+6.  를 `OK`클릭 하 고 메시지를 다시 시작 하 고 나 서 서버 이름을 마우스 오른쪽 단추로 클릭 한 다음 **다시 시작**을 클릭 합니다.  
   
 7.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 다시 시작한 후에 서버는 단일 사용자 모드가 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 실행되고 있지 않은지 확인합니다. 시작된 경우 사용자의 유일한 연결을 사용합니다.  
   
@@ -74,16 +74,16 @@ ms.locfileid: "62782386"
   
      일부 구성에서는 SSMS가 여러 연결을 시도합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 단일 사용자 모드이기 때문에 여러 연결이 실패합니다. 다음 작업 중 하나를 수행하도록 선택할 수 있습니다. 다음 중 하나를 수행합니다.  
   
-    1.  관리자 자격 증명을 포함하는 Windows 인증을 사용하여 개체 탐색기에 연결합니다. **보안**과 **로그인**을 차례로 확장하고 로그인을 두 번 클릭합니다. 에 **서버 역할** 페이지에서 `sysadmin`를 클릭 하 고 `OK`입니다.  
+    1.  관리자 자격 증명을 포함하는 Windows 인증을 사용하여 개체 탐색기에 연결합니다. **보안**과 **로그인**을 차례로 확장하고 로그인을 두 번 클릭합니다. **서버 역할** 페이지에서를 선택한 `sysadmin`다음을 클릭 `OK`합니다.  
   
-    2.  관리자 자격 증명을 포함하는 Windows 인증을 사용하여 개체 탐색기 대신 쿼리 창에 연결합니다. 개체 탐색기에 연결할 수 없는 경우에만 이 방식으로 연결할 수 있습니다. 구성원 인 새 Windows 인증 로그인을 추가 하려면 다음과 같은 코드를 실행 합니다 `sysadmin` 고정된 서버 역할입니다. 다음 예제에서는 `CONTOSO\PatK`이라는 도메인 사용자를 추가합니다.  
+    2.  관리자 자격 증명을 포함하는 Windows 인증을 사용하여 개체 탐색기 대신 쿼리 창에 연결합니다. 개체 탐색기에 연결 하지 않은 경우에만이 방식으로 연결할 수 있습니다. 다음과 같은 코드를 실행 하 여 `sysadmin` 고정 서버 역할의 구성원 인 새 Windows 인증 로그인을 추가 합니다. 다음 예제에서는 `CONTOSO\PatK`이라는 도메인 사용자를 추가합니다.  
   
         ```  
         CREATE LOGIN [CONTOSO\PatK] FROM WINDOWS;  
         ALTER SERVER ROLE sysadmin ADD MEMBER [CONTOSO\PatK];  
         ```  
   
-    3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 혼합 인증 모드에서 실행 중인 경우 관리자 자격 증명을 포함하는 Windows 인증을 사용하여 쿼리 창에 연결합니다. 새 다음과 같은 코드를 실행할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 로그인의 구성원임을 `sysadmin` 고정된 서버 역할입니다.  
+    3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 혼합 인증 모드에서 실행 중인 경우 관리자 자격 증명을 포함하는 Windows 인증을 사용하여 쿼리 창에 연결합니다. 다음과 같은 코드를 실행 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sysadmin` 고정 서버 역할의 구성원 인 새 인증 로그인을 만듭니다.  
   
         ```  
         CREATE LOGIN TempLogin WITH PASSWORD = '************';  
@@ -93,7 +93,7 @@ ms.locfileid: "62782386"
         > [!WARNING]  
         >  ************는 강력한 암호로 대체합니다.  
   
-    4.  경우에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 모드 혼합에서 실행 중 및 암호를 재설정 하려는 `sa` 계정, Windows 인증 (관리자 자격 증명 포함)를 사용 하 여 쿼리 창에 연결 합니다. 암호를 변경 합니다 `sa` 다음 구문 사용 하 여 계정.  
+    4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 혼합 인증 모드에서 실행 중이 고 `sa` 계정의 암호를 재설정 하려는 경우 관리자 자격 증명을 포함 하는 Windows 인증을 사용 하 여 쿼리 창에 연결 합니다. 다음 구문을 사용 하 여 `sa` 계정의 암호를 변경 합니다.  
   
         ```  
         ALTER LOGIN sa WITH PASSWORD = '************';  
@@ -106,16 +106,16 @@ ms.locfileid: "62782386"
   
 10. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자의 왼쪽 창에서 **SQL Server 서비스**를 선택합니다. 오른쪽 창에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-11. 에 **시작 매개 변수** 탭의 **기존 매개 변수** 상자에서 `-m` 클릭 하 고 `Remove`합니다.  
+11. **시작 매개 변수** 탭의 **기존 매개 변수** 상자에서을 선택 `-m` 하 고을 클릭 `Remove`합니다.  
   
     > [!NOTE]  
-    >  몇몇 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 **시작 매개 변수** 탭이 없습니다. 이 탭이 없는 경우 **고급** 탭에서 **시작 매개 변수**를 두 번 클릭합니다. 매개 변수가 아주 작은 창에서 열립니다. 제거 된 `;-m` 는 이전에 추가 하 고 클릭 `OK`합니다.  
+    >  몇몇 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 **시작 매개 변수** 탭이 없습니다. 이 탭이 없는 경우 **고급** 탭에서 **시작 매개 변수**를 두 번 클릭합니다. 매개 변수가 아주 작은 창에서 열립니다. `;-m` 이전에 추가한을 제거 하 고를 클릭 `OK`합니다.  
   
 12. 서버를 마우스 오른쪽 단추로 클릭한 다음 **다시 시작**을 클릭합니다.  
   
- 이제 구성원 인 계정 중 하나를 사용 하 여 정상적으로 연결할 수 있어야 하는 이제의 `sysadmin` 고정된 서버 역할입니다.  
+ 이제 `sysadmin` 고정 서버 역할의 멤버인 계정 중 하나에 정상적으로 연결할 수 있어야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [단일 사용자 모드로 SQL Server 시작](start-sql-server-in-single-user-mode.md)   
  [데이터베이스 엔진 서비스 시작 옵션](database-engine-service-startup-options.md)  
   

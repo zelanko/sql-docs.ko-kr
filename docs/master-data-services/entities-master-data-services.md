@@ -14,10 +14,10 @@ ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 9326cafa216ad11e7b7a818d34fe035220402c33
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728161"
 ---
 # <a name="entities-master-data-services"></a>엔터티(Master Data Services)
@@ -34,7 +34,7 @@ ms.locfileid: "73728161"
 ## <a name="how-entities-relate-to-other-model-objects"></a>다른 모델 개체와 엔터티의 관계  
  엔터티는 마스터 데이터가 포함되어 있으며 멤버를 나타내는 행과 특성을 나타내는 열로 구성된 테이블이라고 생각하면 됩니다.  
   
- ![테이블로 표시 된 MDS(Master Data Services) 엔터티](../master-data-services/media/mds-conc-entity-table.gif "테이블로 표시 된 MDS(Master Data Services) 엔터티")  
+ ![테이블로 표시된 MDS(Master Data Services) 엔터티](../master-data-services/media/mds-conc-entity-table.gif "테이블로 표시된 MDS(Master Data Services) 엔터티")  
   
  관리하려는 마스터 데이터 목록으로 엔터티를 채웁니다.  
   
@@ -46,7 +46,8 @@ ms.locfileid: "73728161"
  사용자가 엔터티의 멤버에 특성을 할당하는 경우 제한된 값 목록에서 선택하도록 사용자에게 허용할 수 있습니다. 그러려면 엔터티를 사용하여 특성 값 목록을 채웁니다. 이를 도메인 기반 특성이라고 합니다. 자세한 내용은 [도메인 기반 특성&#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)을 참조하세요.  
   
 ## <a name="base-entities"></a>기준 엔터티  
- 기준 엔터티는 사용자가 모델의 개체를 탐색하는 시작 지점입니다. 기준 엔터티는 사용자가 **탐색기** 기능 영역을 열고 메뉴 모음에서 **탐색기** 를 클릭할 때 표시되는 화면의 레이아웃을 결정합니다. 엔터티를 기준 엔터티로 지정하려면 **시스템 관리** 기능 영역으로 이동합니다. **모델 뷰** 페이지에서 오른쪽 트리 컨트롤의 엔터티를 왼쪽 트리 컨트롤에 있는 모델 이름으로 끌어옵니다.  
+ 기준 엔터티는 사용자가 모델의 개체를 탐색하는 시작 지점입니다. 기준 엔터티는 사용자가 **탐색기** 기능 영역을 열고 메뉴 모음에서 **탐색기** 를 클릭할 때 표시되는 화면의 레이아웃을 결정합니다. 엔터티를 기준 엔터티로 지정하려면 **시스템 관리** 기능 영역으로 이동합니다. 
+  **모델 뷰** 페이지에서 오른쪽 트리 컨트롤의 엔터티를 왼쪽 트리 컨트롤에 있는 모델 이름으로 끌어옵니다.  
   
 ## <a name="entity-security"></a>엔터티 보안  
  관련 모델 개체를 포함하여 엔터티에 대한 사용 권한을 사용자에게 부여할 수 있습니다. 자세한 내용은 [엔터티 권한&#40;Master Data Services&#41;](../master-data-services/entity-permissions-master-data-services.md)을 참조하세요.  
@@ -54,7 +55,7 @@ ms.locfileid: "73728161"
 ## <a name="entity-examples"></a>엔터티 예  
  다음 예의 엔터티에는 멤버를 설명하는 Name, Code, Subcategory, StandardCost, ListPrice 및 FilePhoto 특성이 있습니다. 각 멤버는 단일 특성 값 행으로 표시됩니다.  
   
- ![자전거 제품 엔터티 테이블](../master-data-services/media/mds-conc-entity-table-w-data.gif "자전거 제품 엔터티 테이블")  
+ ![Bike 제품 엔터티 테이블](../master-data-services/media/mds-conc-entity-table-w-data.gif "Bike 제품 엔터티 테이블")  
   
  다음 예에서 Product 엔터티는 중앙 엔터티입니다. Subcategory 엔터티는 Product 엔터티의 도메인 기반 특성입니다. Category 엔터티는 Subcategory 엔터티의 도메인 기반 특성이고, StandardCost 및 ListPrice는 Product 엔터티의 자유 형식 특성이며, FilePhoto는 Product 엔터티의 파일 특성입니다.  
   
@@ -63,21 +64,21 @@ ms.locfileid: "73728161"
 > [!NOTE]  
 >  이 예는 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] UI(사용자 인터페이스)를 기반으로 합니다. 계층 트리 구조는 엔터티와 도메인 기반 특성의 관계를 표시합니다. 즉, 중요도가 아니라 관계를 보여 줍니다.  
   
-## <a name="related-tasks"></a>관련 태스크  
+## <a name="related-tasks"></a>관련 작업  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|새 엔터티를 만듭니다.|[엔터티 만들기&#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)|  
-|기존 엔터티의 이름을 변경합니다.|[엔터티 편집&#40;Master Data Services&#41;](../master-data-services/edit-an-entity-master-data-services.md)|  
-|기존 엔터티를 삭제합니다.|[엔터티 삭제&#40;Master Data Services&#41;](../master-data-services/delete-an-entity-master-data-services.md)|  
-|엔터티에 사용 권한을 할당합니다.|[모델 개체 사용 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)|  
+|새 엔터티를 만듭니다.|[엔터티 &#40;MDS(Master Data Services)를 만듭니다&#41;](../master-data-services/create-an-entity-master-data-services.md)|  
+|기존 엔터티의 이름을 변경합니다.|[엔터티 &#40;MDS(Master Data Services) 편집&#41;](../master-data-services/edit-an-entity-master-data-services.md)|  
+|기존 엔터티를 삭제합니다.|[엔터티 &#40;MDS(Master Data Services) 삭제&#41;](../master-data-services/delete-an-entity-master-data-services.md)|  
+|엔터티에 사용 권한을 할당합니다.|[모델 개체 사용 권한 할당 &#40;MDS(Master Data Services)&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)|  
   
 ## <a name="related-content"></a>관련 내용  
   
--   [모델&#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)  
+-   [모델 &#40;MDS(Master Data Services)&#41;](../master-data-services/models-master-data-services.md)  
   
--   [멤버&#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
+-   [멤버가 MDS(Master Data Services)를 &#40;&#41;](../master-data-services/members-master-data-services.md)  
   
--   [특성&#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
+-   [특성 &#40;MDS(Master Data Services)&#41;](../master-data-services/attributes-master-data-services.md)  
   
   

@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 201b1496444888b207a1a72be640b9705ff1059d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62960150"
 ---
 # <a name="secure-the-publisher"></a>게시자 보안 설정
@@ -43,7 +43,7 @@ ms.locfileid: "62960150"
  PAL은 게시자의 게시 보안을 유지하는 기본 메커니즘입니다. PAL 기능은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 액세스 제어 목록과 유사하게 작동합니다. 게시를 만들면 복제에서 게시에 대한 PAL을 만듭니다. 게시에 대한 액세스 권한이 부여된 로그인 및 그룹 목록을 포함하도록 PAL을 구성할 수 있습니다. 에이전트가 게시자나 배포자에 연결한 다음 게시에 대한 액세스를 요청하면 PAL의 인증 정보가 에이전트에서 제공한 게시자 로그인과 비교됩니다. 이 프로세스는 클라이언트 도구가 게시자에서 직접 수정 작업을 수행하는 데 게시자 및 배포자 로그인을 사용하지 못하도록 방지하여 게시자에 대한 보안을 강화합니다.  
   
 > [!NOTE]  
->  복제는 각 게시의 게시자에 PAL 멤버 자격을 적용할 역할을 만듭니다. 역할 이름은 병합 복제의 경우 **Msmerge_** _\<PublicationID>_ 형식으로 지정되고 트랜잭션 및 스냅숏 복제의 경우 **MSReplPAL_** _\<PublicationDatabaseID>_ **_** _\<PublicationID>_ 형식으로 지정됩니다.  
+>  복제는 각 게시의 게시자에 PAL 멤버 자격을 적용할 역할을 만듭니다. 역할 이름은 병합 복제의 경우 **Msmerge_** _\<PublicationID&gt;_ 형식으로 지정되고 트랜잭션 및 스냅샷 복제의 경우 **MSReplPAL_** _\<PublicationDatabaseID&gt;_ **_** _\<PublicationID&gt;_ 형식으로 지정됩니다.  
   
  기본적으로 PAL에는 게시 생성 시의 **sysadmin** 고정 서버 역할의 멤버와 게시를 만드는 데 사용된 로그인이 포함됩니다. 기본적으로 게시 데이터베이스에서 **sysadmin** 고정 서버 역할이나 **db_owner** 고정 데이터베이스 역할의 멤버인 모든 로그인은 PAL에 명시적으로 추가하지 않아도 게시를 구독할 수 있습니다.  
   
@@ -60,18 +60,18 @@ ms.locfileid: "62960150"
  PAL을 관리하려면 [게시 액세스 목록에서 로그인 관리](manage-logins-in-the-publication-access-list.md)를 참조하세요.  
   
 ## <a name="snapshot-agent"></a>스냅샷 에이전트  
- 각 게시에 하나의 스냅샷 에이전트가 있습니다. 자세한 내용은 [Create a Publication](../publish/create-a-publication.md)를 참조하세요.  
+ 각 게시에 하나의 스냅샷 에이전트가 있습니다. 자세한 내용은 [게시 만들기](../publish/create-a-publication.md)를 참조하세요.  
   
 ## <a name="ftp-snapshot-delivery"></a>FTP 스냅샷 배달  
  UNC 공유가 아닌 FTP 공유를 통해서만 스냅샷을 사용할 수 있도록 지정한 경우 FTP 액세스를 구성할 때 로그인과 암호를 지정해야 합니다. 자세한 내용은 [FTP를 통해 스냅샷 배달](../publish/deliver-a-snapshot-through-ftp.md)을 참조하세요.  
   
 ## <a name="log-reader-agent"></a>로그 판독기 에이전트  
- 트랜잭션 복제에 대해 게시된 각 데이터베이스에 하나의 로그 판독기 에이전트가 있습니다. 자세한 내용은 [Create a Publication](../publish/create-a-publication.md)를 참조하세요.  
+ 트랜잭션 복제에 대해 게시된 각 데이터베이스에 하나의 로그 판독기 에이전트가 있습니다. 자세한 내용은 [게시 만들기](../publish/create-a-publication.md)를 참조하세요.  
   
 ## <a name="queue-reader-agent"></a>큐 판독기 에이전트  
  지정된 배포자와 관련된 모든 게시자와 게시(지연 업데이트 구독 허용)에 하나의 큐 판독기 에이전트가 있습니다. 자세한 내용은 [트랜잭션 게시에 대해 업데이트할 수 있는 구독 설정](../publish/enable-updating-subscriptions-for-transactional-publications.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
  [SQL Server 복제 보안](view-and-modify-replication-security-settings.md)  

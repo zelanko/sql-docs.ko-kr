@@ -17,11 +17,11 @@ ms.assetid: 84f7ef61-1ef1-46f3-9678-b087aa8e8e34
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4e10460df120451502d798376453d69d111051ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68064409"
 ---
 # <a name="catalog-and-schema-usage"></a>카탈로그 및 스키마 사용
-데이터 원본을 지원 하지 않을 카탈로그 및 스키마 이름이 모든 SQL 문에서 개체 이름 식별자로. 데이터 원본은 수 SQL 문의 다음 클래스 중 하나 이상의 카탈로그 이름과 스키마를 지원 합니다. 데이터 조작 언어 (DML) 문, 프로시저 호출, 테이블 정의 문, 인덱스 정의 문 및 권한 정의 문 카탈로그 및 스키마 이름을 사용할 수는 SQL 문 클래스를 확인 하려면 응용 프로그램 호출 **SQLGetInfo** SQL_CATALOG_USAGE 및 SQL_SCHEMA_USAGE 옵션을 사용 하 여 합니다.
+데이터 원본에서는 모든 SQL 문의 개체 이름 식별자로 카탈로그 및 스키마 이름을 지원 하지 않아도 됩니다. 데이터 원본은 다음과 같은 SQL 문 클래스 중 하나 이상에서 카탈로그 및 스키마 이름을 지원할 수 있습니다. DML (데이터 조작 언어) 문, 프로시저 호출, 테이블 정의 문, 인덱스 정의 문 및 권한 정의 할당문. 카탈로그 및 스키마 이름을 사용할 수 있는 SQL 문의 클래스를 확인 하기 위해 응용 프로그램은 SQL_CATALOG_USAGE 및 SQL_SCHEMA_USAGE 옵션으로 **SQLGetInfo** 를 호출 합니다.

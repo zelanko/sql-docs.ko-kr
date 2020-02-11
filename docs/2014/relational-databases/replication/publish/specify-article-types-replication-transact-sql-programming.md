@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bcd980bb7fe77e2d207e568802dfd7e69e9a1484
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73882123"
 ---
 # <a name="specify-article-types-replication-transact-sql-programming"></a>아티클 유형 정의(복제 Transact-SQL 프로그래밍)
@@ -32,15 +32,15 @@ ms.locfileid: "73882123"
   
 ### <a name="to-publish-a-table-article-in-a-transactional-or-snapshot-publication"></a>트랜잭션 또는 스냅샷 게시에 테이블 아티클을 게시하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)을 실행합니다. **\@형식** 에 대해 다음 값 중 하나를 지정 하 여 아티클 유형을 정의 합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)을 실행합니다. ** \@유형** 에 대해 다음 값 중 하나를 지정 하 여 아티클 유형을 정의 합니다.  
   
-    -   **logbased** - 로그 기반 테이블 아티클로, 트랜잭션 및 스냅샷 복제에 대해 기본값입니다. 행 필터링에 사용되는 저장 프로시저와 열 필터링된 아티클을 정의하는 뷰가 자동으로 생성됩니다.  
+    -   **logbased** -로그 기반 테이블 아티클로, 트랜잭션 및 스냅숏 복제에 대 한 기본값입니다. 행 필터링에 사용되는 저장 프로시저와 열 필터링된 아티클을 정의하는 뷰가 자동으로 생성됩니다.  
   
-    -   **logbased manualfilter** -행 필터링에 사용 되는 저장 프로시저를 사용자가 수동으로 작성 및 정의 하 고 **\@필터**에 지정 하는 로그 기반의 행 필터링 된 아티클입니다. 자세한 내용은 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md)을 참조하세요.  
+    -   **logbased manualfilter** -행 필터링에 사용 되는 저장 프로시저를 사용자가 수동으로 작성 및 정의 하 고 ** \@필터로**지정 하는 로그 기반의 행 필터링 된 아티클입니다. 자세한 내용은 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md)을 참조하세요.  
   
-    -   **logbased manualview** -열 필터링 된 아티클을 정의 하는 뷰를 사용자가 작성 및 정의 하 고 **\@sync_object**에 대해 지정 하는 로그 기반의 열 필터링 된 아티클입니다. 자세한 내용은 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) 및 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)를 참조하세요.  
+    -   **logbased manualview** -열 필터링 된 아티클을 정의 하는 뷰를 사용자가 작성 및 정의 하 고 ** \@sync_object**에 대해 지정 하는 로그 기반의 열 필터링 된 아티클입니다. 자세한 내용은 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) 및 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)를 참조하세요.  
   
-    -   **logbased manualboth** -행 필터링에 사용 되는 저장 프로시저와 열 필터링 된 아티클을 정의 하는 뷰를 사용자가 작성 및 정의 하 고 각각 **\@필터** 및 **\@sync_object**에 대해 지정 하는 로그 기반의 행 필터링 및 열 필터링 된 아티클입니다. 자세한 내용은 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) 및 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)를 참조하세요.  
+    -   **logbased manualboth** -행 필터링에 사용 되는 저장 프로시저와 열 필터링 된 아티클을 정의 하는 뷰를 사용자가 작성 및 정의 하 고 각각 ** \@필터** 및 ** \@sync_object**에 대해 지정 하는 로그 기반의 행 필터링 및 열 필터링 된 아티클입니다. 자세한 내용은 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) 및 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)를 참조하세요.  
   
      게시에 대한 새 아티클을 정의합니다. 자세한 내용은 [아티클을 정의](define-an-article.md)을 참조하세요.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "73882123"
   
 ### <a name="to-publish-a-view-or-indexed-view-article-in-a-transactional-or-snapshot-publication"></a>트랜잭션 또는 스냅샷 게시에 뷰 또는 인덱싱된 뷰 아티클을 게시하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)을 실행합니다. **\@형식** 에 대해 다음 값 중 하나를 지정 하 여 아티클 유형을 정의 합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)을 실행합니다. ** \@유형** 에 대해 다음 값 중 하나를 지정 하 여 아티클 유형을 정의 합니다.  
   
     -   **indexed view logbased** - 로그 기반의 인덱싱된 뷰 아티클입니다. 행 필터링에 사용되는 저장 프로시저와 열 필터링된 아티클을 정의하는 뷰가 자동으로 생성됩니다.  
   
@@ -58,11 +58,11 @@ ms.locfileid: "73882123"
   
     -   **indexed view schema only** - 스키마 전용 인덱싱된 뷰 아티클입니다. 기본 테이블도 복제되어야 합니다.  
   
-    -   **인덱싱된 뷰 logbased manualfilter** -행 필터링에 사용 되는 저장 프로시저를 사용자가 수동으로 작성 및 정의 하 고 **\@필터**에 지정 하는 로그 기반의 행 필터링 된 인덱싱된 뷰 아티클입니다. 자세한 내용은 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md)을 참조하세요.  
+    -   **인덱싱된 뷰 logbased manualfilter** -행 필터링에 사용 되는 저장 프로시저를 사용자가 수동으로 작성 및 정의 하 고 ** \@필터**에 지정 하는 로그 기반의 행 필터링 된 인덱싱된 뷰 아티클입니다. 자세한 내용은 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md)을 참조하세요.  
   
-    -   **인덱싱된 뷰 logbased manualview** -열 필터링 된 아티클을 정의 하는 뷰를 사용자가 작성 및 정의 하 고 **\@sync_object**에 대해 지정 하는 로그 기반의 필터링 된 인덱싱된 뷰 아티클입니다. 자세한 내용은 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) 및 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)를 참조하세요.  
+    -   **인덱싱된 뷰 logbased manualview** -열 필터링 된 아티클을 정의 하는 뷰를 사용자가 작성 및 정의 하 고 ** \@sync_object**에 대해 지정 하는 로그 기반의 필터링 된 인덱싱된 뷰 아티클입니다. 자세한 내용은 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) 및 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)를 참조하세요.  
   
-    -   **인덱싱된 뷰 logbased manualboth** -행 필터링에 사용 되는 저장 프로시저와 열 필터링 된 아티클을 정의 하는 뷰를 사용자가 작성 및 정의 하 고 각각 **\@필터** 및 **\@sync_object**에 대해 지정 하는 로그 기반의 필터링 된 인덱싱된 뷰 아티클입니다. 자세한 내용은 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) 및 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)를 참조하세요.  
+    -   **인덱싱된 뷰 logbased manualboth** -행 필터링에 사용 되는 저장 프로시저와 열 필터링 된 아티클을 정의 하는 뷰를 사용자가 작성 및 정의 하 고 각각 ** \@필터** 및 ** \@sync_object**에 대해 지정 하는 로그 기반의 필터링 된 인덱싱된 뷰 아티클입니다. 자세한 내용은 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) 및 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)를 참조하세요.  
   
      게시에 대한 새 아티클을 정의합니다. 자세한 내용은 [아티클을 정의](define-an-article.md)을 참조하세요.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "73882123"
   
 ### <a name="to-publish-a-stored-procedure-stored-procedure-execution-or-user-defined-function-article-in-a-transactional-or-snapshot-publication"></a>저장 프로시저, 저장 프로시저 실행 또는 사용자 정의 함수 아티클을 트랜잭션 또는 스냅샷 게시에 게시하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)을 실행합니다. **\@형식** 에 대해 다음 값 중 하나를 지정 하 여 아티클 유형을 정의 합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)을 실행합니다. ** \@유형** 에 대해 다음 값 중 하나를 지정 하 여 아티클 유형을 정의 합니다.  
   
     -   **proc schema only** - 스키마 전용 저장 프로시저 아티클입니다.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "73882123"
   
 ### <a name="to-publish-a-table-or-view-article-in-a-merge-publication"></a>병합 게시에 테이블 또는 뷰 아티클을 게시하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)을 실행합니다. **\@형식** 에 대해 다음 값 중 하나를 지정 하 여 아티클 유형을 정의 합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)을 실행합니다. ** \@유형** 에 대해 다음 값 중 하나를 지정 하 여 아티클 유형을 정의 합니다.  
   
     -   **table** - 테이블 아티클입니다.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "73882123"
   
 ### <a name="to-publish-a-stored-procedure-or-user-defined-function-article-in-a-merge-publication"></a>병합 게시에 저장 프로시저 또는 사용자 정의 함수 아티클을 게시하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)을 실행합니다. **\@형식** 에 대해 다음 값 중 하나를 지정 하 여 아티클 유형을 정의 합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)을 실행합니다. ** \@유형** 에 대해 다음 값 중 하나를 지정 하 여 아티클 유형을 정의 합니다.  
   
     -   **func schema only** - 스키마 전용 사용자 정의 함수 아티클입니다.  
   

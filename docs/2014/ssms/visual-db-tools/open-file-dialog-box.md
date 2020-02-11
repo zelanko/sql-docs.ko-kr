@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 57e89016641469cbb3215429ff0f2b9053f758c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63138898"
 ---
 # <a name="open-file-dialog-box"></a>파일 열기 대화 상자
@@ -88,7 +88,7 @@ ms.locfileid: "63138898"
  **웹 보기**  
  이 명령은 사용할 수 없습니다.  
   
-## <a name="tools"></a>Tools  
+## <a name="tools"></a>도구  
  내용 창에서 선택한 항목에 적용할 도구를 선택합니다.  
   
  **Delete**  

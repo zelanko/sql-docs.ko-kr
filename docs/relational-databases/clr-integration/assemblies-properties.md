@@ -12,17 +12,17 @@ ms.assetid: 88d40d3b-8983-4a57-b79d-ed1477a5c3c6
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: cab96fb470e4cc19da0612163f364d6339841985
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68027968"
 ---
 # <a name="assemblies---properties"></a>어셈블리 - 속성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 페이지를 사용하여 어셈블리 속성을 확인하거나 수정할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **어셈블리 이름**  
  항상 CLR 어셈블리 이름과 일치하는 어셈블리 이름을 표시합니다.  
   
@@ -30,9 +30,9 @@ ms.locfileid: "68027968"
  소유자 이름 또는 스키마 이름을 입력하거나 목록에서 선택합니다.  
   
  **권한 집합**  
- 어셈블리에 대한 보안 수준을 설정합니다. 세 가지 보안 수준은 제공 됩니다. **안전한**, **External access**, 및 **Unsafe** 액세스 합니다.  
+ 어셈블리에 대한 보안 수준을 설정합니다. 제공되는 세 가지 보안 수준은 **Safe**, **External access**, **Unsafe** 액세스입니다.  
   
- **어셈블리에 대 한 경로**  
+ **어셈블리 경로**  
  어셈블리 파일의 경로를 입력합니다.  
   
  **찾아보기**  
@@ -45,10 +45,10 @@ ms.locfileid: "68027968"
  **강력한 이름**  
  어셈블리에 디지털 서명된 경우에는 **True** 를 표시하고 디지털 서명되지 않은 경우에는 **False** 를 표시합니다.  
   
- **버전(Version)**  
+ **버전**  
  어셈블리의 버전 번호를 표시합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [CREATE ASSEMBLY&#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)  
   
   

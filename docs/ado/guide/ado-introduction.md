@@ -13,22 +13,22 @@ ms.assetid: c5b3a134-de22-4e9c-9489-9a1cc7a5dcfa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 42bae7f340f7f46bb5a57498b1c846f6d532ff20
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67927134"
 ---
 # <a name="ado-overview-and-benefits"></a>ADO 개요 및 이점
-ActiveX Data Objects(ADO)는 OLE DB에 대한 고수준의 사용하기 쉬운 인터페이스입니다. OLE DB는 다양한 데이터 저장소를 위한 저수준 고성능 인터페이스입니다. ADO와 OLE DB는 관계형(테이블 형식) 데이터와 비관계형(계층형 혹은 스트림) 데이터 모두에서 사용할 수 있습니다.
+ADO (ADO(ActiveX Data Objects))는 OLE DB 하는 데 사용 하기 쉬운 고급 인터페이스입니다. OLE DB은 다양 한 데이터 저장소에 대 한 낮은 수준의 고성능 인터페이스입니다. ADO와 OLE DB 모두 관계형 (테이블 형식) 및 비관계형 (계층적 또는 스트림) 데이터에서 사용할 수 있습니다.
 
- ADO는 클라이언트 또는 중간 계층 응용 프로그램과 저수준 OLE DB 인터페이스 간에 추상화 계층을 제공합니다. ADO는 적은 자동화 개체로 OLE DB에 간단하고 효율적인 인터페이스를 제공합니다. 이 인터페이스는 COM 및 OLE DB의 복잡성을 배울 필요가 없기 때문에, 데이터에 액세스하려는 Visual Basic 및 VBScript와 같은 고급 언어의 개발자에게 적절합니다.
+ ADO는 클라이언트 또는 중간 계층 응용 프로그램과 하위 수준 OLE DB 인터페이스 간의 추상화 계층을 제공 합니다. ADO에서는 몇 가지 자동화 개체 집합을 사용 하 여 OLE DB 하는 간단 하 고 효율적인 인터페이스를 제공 합니다. 이 인터페이스를 사용 하면 복잡 한 COM 및 OLE DB를 배울 필요 없이 데이터에 액세스 하려는 Visual Basic 및 VBScript와 같은 상위 수준 언어의 개발자가 ADO를 선택할 수 있습니다.
 
  이 섹션에서는 다음 항목을 다룹니다.
 
--   [ADO 버전 이력](../../ado/guide/ado-history.md)
+-   [ADO 기록](../../ado/guide/ado-history.md)
 
--   [ADO 문서 사용을 위한 필수 구성 요소](../../ado/guide/prerequisites-for-using-the-ado-documentation.md)
+-   [ADO 설명서 사용을 위한 필수 구성 요소](../../ado/guide/prerequisites-for-using-the-ado-documentation.md)
 
 -   [ADO 라이브러리 참조](../../ado/guide/referencing-the-ado-libraries.md)
 

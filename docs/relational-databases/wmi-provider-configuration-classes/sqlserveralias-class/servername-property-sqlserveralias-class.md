@@ -18,15 +18,15 @@ ms.assetid: 58c82b19-b548-42fa-9c5a-059b606da097
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 979b738b046bb53168bbbbbef4d3d64563f2add0
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73659689"
 ---
 # <a name="servername-property-sqlserveralias-class"></a>ServerName 속성(SqlServerAlias 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  서버 연결 별칭에서 지정한 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름을 가져옵니다.  
+  서버 연결 별칭에서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 지정한 인스턴스의 이름을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,11 +36,12 @@ object.ServerName [= value]
 ```  
   
 ## <a name="parts"></a>부분  
- *object*  
- [별칭을 나타내는](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md) SqlServerAlias 클래스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 개체입니다.  
+ *개체가*  
+ 
+  [별칭을 나타내는](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md) SqlServerAlias 클래스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  서버 연결 별칭에서 참조하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정하는 문자열 값입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
   

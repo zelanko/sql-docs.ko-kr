@@ -81,7 +81,7 @@ REVOKE
  \<permission>[ **,** ...*n* ]  
  부여, 거부 또는 취소할 수있는 하나 이상의 사용 권한.  
   
- ON [ \<class_type> :: ] *securable***ON** 절은 사용 권한을 부여, 거부 또는 취소하는 보안 개체 매개 변수를 설명합니다.  
+ ON [ \<class_type> :: ] *securable* **ON** 절은 사용 권한을 부여, 거부 또는 취소하는 보안 개체 매개 변수를 설명합니다.  
   
  \< class_type> 보안 개체의 클래스 형식입니다. 이 형식으로는 **LOGIN**, **DATABASE**, **OBJECT**, **SCHEMA**, **ROLE**, 또는 **USER**가 될 수 있습니다. 사용 권한은 **SERVER**_class\_type_에도 부여될 수 있지만, 해당 사용 권한에는 **SERVER**가 지정되지 않습니다. 사용 권한에 **DATABASE**(예: **ALTER ANY DATABASE**)와 같은 단어가 포함되어 있으면 **DATABASE**는 지정되지 않습니다. *class_type*이 지정되지 권한 유형이 서버 또는 데이터베이스 클래스에 제한되지 않는 경우 클래스는 **OBJECT**로 간주됩니다.  
   

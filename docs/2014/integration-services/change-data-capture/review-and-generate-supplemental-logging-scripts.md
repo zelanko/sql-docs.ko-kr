@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 68aa51facd21ec09be78e6ad0996131a9ee3cc5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835340"
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>보완 로깅 스크립트 검토 및 생성
@@ -45,7 +45,7 @@ ms.locfileid: "62835340"
   
 ### <a name="to-run-the-scripts-manually"></a>스크립트를 수동으로 실행하려면  
   
-1.  **복사** 를 클릭하여 스크립트를 클립보드에 붙여넣습니다. SQL* Plus를 열고 Oracle 원본 데이터베이스가 들어 있는 디렉터리로 이동합니다. 스크립트를 SQL\*Plus에 붙여넣어서 실행합니다.  
+1.  **복사** 를 클릭하여 스크립트를 클립보드에 붙여 넣습니다. SQL* Plus를 열고 Oracle 원본 데이터베이스가 들어 있는 디렉터리로 이동합니다. 스크립트를 SQL\*Plus에 붙여넣어서 실행합니다.  
   
 ### <a name="to-save-the-supplemental-logging-script-in-a-text-file"></a>텍스트 파일에 보완 로깅 스크립트를 저장하려면  
   
@@ -53,8 +53,8 @@ ms.locfileid: "62835340"
   
 2.  파일 이름을 지정하고 **저장** 을 클릭하여 파일을 저장합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [CDC 인스턴스 속성을 편집하는 방법](how-to-edit-the-cdc-instance-properties.md)   
- [Oracle Credentials for Running Script](oracle-credentials-for-running-script.md)  
+ [스크립트 실행을 위한 Oracle 자격 증명](oracle-credentials-for-running-script.md)  
   
   

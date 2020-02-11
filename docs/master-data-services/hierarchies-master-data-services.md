@@ -14,16 +14,17 @@ ms.assetid: 70dbb1fc-ead7-45be-9552-a45e3ccd8d21
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 6441012078592ba42c8449c794462b06bed845bb
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729228"
 ---
 # <a name="hierarchies-master-data-services"></a>계층(Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
+  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 계층은 다음 작업에 사용할 수 있는 트리 구조입니다.  
   
 -   구성을 목적으로 유사한 멤버 그룹화  
@@ -53,26 +54,26 @@ ms.locfileid: "73729228"
 ## <a name="hierarchy-example"></a>계층 예  
  다음 예에서는 Product 멤버가 Subcategory 멤버로 그룹화됩니다.  
   
- ![하위 범주별로 그룹화 된 계층 예제](../master-data-services/media/mds-conc-hierarchy.gif "하위 범주별로 그룹화 된 계층 예제")  
+ ![하위 범주로 그룹화된 계층 예제](../master-data-services/media/mds-conc-hierarchy.gif "하위 범주로 그룹화된 계층 예제")  
   
-## <a name="related-tasks"></a>관련 태스크  
+## <a name="related-tasks"></a>관련 작업  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|명시적 계층을 만듭니다.|[명시적 계층 만들기&#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
-|파생 계층을 만듭니다.|[파생 계층 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
-|기존 파생 계층의 수준을 숨기거나 삭제합니다.|[파생 계층의 수준 숨기기 또는 삭제&#40;Master Data Services&#41;](../master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|  
+|명시적 계층을 만듭니다.|[명시적 계층 &#40;MDS(Master Data Services)를 만듭니다&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
+|파생 계층을 만듭니다.|[파생 계층 &#40;MDS(Master Data Services)를 만듭니다&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
+|기존 파생 계층의 수준을 숨기거나 삭제합니다.|[파생 계층의 수준 숨기기 또는 삭제 &#40;MDS(Master Data Services)&#41;](../master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|  
   
 ## <a name="related-content"></a>관련 내용  
   
--   [명시적 계층&#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)  
+-   [명시적 계층 &#40;MDS(Master Data Services)&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)  
   
--   [파생 계층&#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
+-   [파생 계층 &#40;MDS(Master Data Services)&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   
--   [재귀 계층 구조&#40;Master Data Services&#41;](../master-data-services/recursive-hierarchies-master-data-services.md)  
+-   [재귀 계층 &#40;MDS(Master Data Services)&#41;](../master-data-services/recursive-hierarchies-master-data-services.md)  
   
--   [명시적 캡이 포함된 파생 계층&#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
+-   [명시적 캡이 포함 된 파생 계층 &#40;MDS(Master Data Services)&#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
   
--   [컬렉션&#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
+-   [컬렉션 &#40;MDS(Master Data Services)&#41;](../master-data-services/collections-master-data-services.md)  
   
   

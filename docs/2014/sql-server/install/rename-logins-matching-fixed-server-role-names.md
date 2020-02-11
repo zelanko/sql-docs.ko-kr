@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: df9d9e51846e286c67a4773823207524755d15dc
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72278209"
 ---
 # <a name="rename-logins-matching-fixed-server-role-names"></a>고정 서버 역할 이름과 일치하는 로그인 이름을 바꿉니다.
@@ -28,7 +28,7 @@ ms.locfileid: "72278209"
 ## <a name="component"></a>구성 요소  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>설명  
+## <a name="description"></a>Description  
  다음과 같은 고정 서버 역할 이름은 예약되어 있으므로 사용자 정의 로그인 이름으로 사용할 수 없습니다.  
   
 -   **sysadmin**  
@@ -60,10 +60,10 @@ ms.locfileid: "72278209"
   
 2.  로그인을 삭제합니다.  
   
-3.  **Sp_addlogin** 시스템 프로시저를 사용 하 여 새 로그인을 만듭니다. 각 해당 로그인에 대 한 **\@sid** 매개 변수에 1 단계에서 반환 된 sid를 지정 합니다.  
+3.  **Sp_addlogin** 시스템 프로시저를 사용 하 여 새 로그인을 만듭니다. 각 해당 로그인에 대 한 ** \@sid** 매개 변수에 1 단계에서 반환 된 sid를 지정 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [업그레이드 문제를 데이터베이스 엔진](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](sql-server-2014-upgrade-advisor.md)  
+ [업그레이드 문제 데이터베이스 엔진](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 업그레이드 관리자 &#91;새&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

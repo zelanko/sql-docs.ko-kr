@@ -21,26 +21,34 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fceb0baa62b7998534a5b7620d2c99fd1afc1f8f
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70148322"
 ---
 # <a name="using-encryption"></a>암호화 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  SMO에서 서비스 마스터 키는 <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey> 개체로 표시됩니다. <xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A> 개체의 <xref:Microsoft.SqlServer.Management.Smo.Server> 속성에서 참조하며, <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A> 메서드를 사용하여 다시 생성할 수 있습니다.  
+  SMO에서 서비스 마스터 키는 <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey> 개체로 표시됩니다. 
+  <xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A> 개체의 <xref:Microsoft.SqlServer.Management.Smo.Server> 속성에서 참조하며, 
+  <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A> 메서드를 사용하여 다시 생성할 수 있습니다.  
   
- 데이터베이스 마스터 키는 <xref:Microsoft.SqlServer.Management.Smo.MasterKey> 개체로 표시됩니다. <xref:Microsoft.SqlServer.Management.Smo.MasterKey.IsEncryptedByServer%2A> 속성은 데이터베이스 마스터 키가 서비스 마스터 키로 암호화되는지 여부를 나타냅니다. 데이터베이스 마스터 키가 변경될 때마다 master 데이터베이스의 암호화된 복사본이 자동으로 업데이트됩니다.  
+ 데이터베이스 마스터 키는 <xref:Microsoft.SqlServer.Management.Smo.MasterKey> 개체로 표시됩니다. 
+  <xref:Microsoft.SqlServer.Management.Smo.MasterKey.IsEncryptedByServer%2A> 속성은 데이터베이스 마스터 키가 서비스 마스터 키로 암호화되는지 여부를 나타냅니다. 데이터베이스 마스터 키가 변경될 때마다 master 데이터베이스의 암호화된 복사본이 자동으로 업데이트됩니다.  
   
- <xref:Microsoft.SqlServer.Management.Smo.MasterKey.DropServiceKeyEncryption%2A> 메서드를 사용하여 서비스 키 암호화를 삭제하고 암호를 사용하여 데이터베이스 암호화 키를 암호화할 수 있습니다. 이 경우 보안 구성된 프라이빗 키에 액세스하기 전에 데이터베이스 마스터 키를 명시적으로 열어야 합니다.  
+ 
+  <xref:Microsoft.SqlServer.Management.Smo.MasterKey.DropServiceKeyEncryption%2A> 메서드를 사용하여 서비스 키 암호화를 삭제하고 암호를 사용하여 데이터베이스 암호화 키를 암호화할 수 있습니다. 이 경우 보안 구성된 프라이빗 키에 액세스하기 전에 데이터베이스 마스터 키를 명시적으로 열어야 합니다.  
   
  데이터베이스가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결되어 있으면 데이터베이스 마스터 키에 대한 암호를 제공하거나 <xref:Microsoft.SqlServer.Management.Smo.MasterKey.AddServiceKeyEncryption%2A> 메서드를 실행하여 서비스 마스터 키와 함께 암호화에 사용되는 데이터베이스 마스터 키의 암호화되지 않은 복사본을 만들어야 합니다. 데이터베이스 마스터 키를 명시적으로 열어야 하는 상황을 피하려면 이 단계를 수행하는 것이 좋습니다.  
   
- <xref:Microsoft.SqlServer.Management.Smo.MasterKey.Regenerate%2A> 메서드는 데이터베이스 마스터 키를 다시 생성합니다. 데이터베이스 마스터 키가 다시 생성되면 데이터베이스 마스터 키로 암호화되었던 모든 키가 해독되고 이들을 새 데이터베이스 마스터 키로 암호화합니다. <xref:Microsoft.SqlServer.Management.Smo.MasterKey.DropServiceKeyEncryption%2A> 메서드는 서비스 마스터 키에 의한 데이터베이스 마스터 키의 암호화를 제거합니다. <xref:Microsoft.SqlServer.Management.Smo.MasterKey.AddServiceKeyEncryption%2A>은 마스터 키의 복사본이 서비스 마스터 키를 사용하여 암호화되도록 하고 현재 데이터베이스와 master 데이터베이스에 모두 저장합니다.  
+ 
+  <xref:Microsoft.SqlServer.Management.Smo.MasterKey.Regenerate%2A> 메서드는 데이터베이스 마스터 키를 다시 생성합니다. 데이터베이스 마스터 키가 다시 생성되면 데이터베이스 마스터 키로 암호화되었던 모든 키가 해독되고 이들을 새 데이터베이스 마스터 키로 암호화합니다. 
+  <xref:Microsoft.SqlServer.Management.Smo.MasterKey.DropServiceKeyEncryption%2A> 메서드는 서비스 마스터 키에 의한 데이터베이스 마스터 키의 암호화를 제거합니다. 
+  <xref:Microsoft.SqlServer.Management.Smo.MasterKey.AddServiceKeyEncryption%2A>은 마스터 키의 복사본이 서비스 마스터 키를 사용하여 암호화되도록 하고 현재 데이터베이스와 master 데이터베이스에 모두 저장합니다.  
   
- SMO에서 인증서는 <xref:Microsoft.SqlServer.Management.Smo.Certificate> 개체로 표시됩니다. <xref:Microsoft.SqlServer.Management.Smo.Certificate> 개체에는 공개 키, 주체 이름, 유효 기간 및 발급자 정보를 지정하는 속성이 있습니다. 인증서에 대한 액세스 권한은 **Grant**, **Revoke** 및 **Deny** 메서드를 사용하여 제어합니다.  
+ SMO에서 인증서는 <xref:Microsoft.SqlServer.Management.Smo.Certificate> 개체로 표시됩니다. 
+  <xref:Microsoft.SqlServer.Management.Smo.Certificate> 개체에는 공개 키, 주체 이름, 유효 기간 및 발급자 정보를 지정하는 속성이 있습니다. 인증서에 대한 액세스 권한은 **Grant**, **Revoke** 및 **Deny** 메서드를 사용하여 제어합니다.  
   
 ## <a name="example"></a>예제  
  다음 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio .net에서 Visual C&#35; SMO 프로젝트 만들기](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  
@@ -93,7 +101,7 @@ $c.Create("pGFD4bb925DGvbd2439587y")
   
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [암호화 키 사용](../../../relational-databases/server-management-objects-smo/tasks/using-encryption.md)  
   
   

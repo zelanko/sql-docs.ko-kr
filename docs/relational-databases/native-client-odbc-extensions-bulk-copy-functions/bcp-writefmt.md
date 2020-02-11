@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 388b51c79681589d3caec2ee3ea03b1ece6ff459
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782337"
 ---
 # <a name="bcp_writefmt"></a>bcp_writefmt
@@ -46,18 +46,18 @@ RETCODE bcp_writefmt (
  *szFormatFile*  
  데이터 파일의 형식 값을 받을 사용자 파일의 경로와 이름입니다.  
   
-## <a name="returns"></a>반환 값  
+## <a name="returns"></a>반환  
  SUCCEED 또는 FAIL  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  서식 파일은 대량 복사를 통해 만들어진 데이터 파일의 데이터 형식을 지정합니다. [Bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) 및 [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) 를 호출 하 여 데이터 파일의 형식을 정의 합니다. **bcp_writefmt** 는이 정의를 *szformatfile*에서 참조 하는 파일에 저장 합니다. 자세한 내용은 [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)를 참조하십시오.  
   
- **Bcp** 데이터 형식 파일의 구조에 대 한 자세한 내용은 [Bcp 유틸리티 &#40;를 사용 하 여 대량 데이터 가져오기 및 내보내기 SQL Server&#41;](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)를 참조 하세요.  
+ **Bcp** 데이터 형식 파일의 구조에 대 한 자세한 내용은 [Bcp 유틸리티를 사용 하 여 대량 데이터 가져오기 및 내보내기 &#40;SQL Server&#41;](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)를 참조 하세요.  
   
  저장 된 서식 파일을 로드 하려면 [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md)을 사용 합니다.  
   
 > [!NOTE]  
->  **Bcp_writefmt** 에서 생성 된 서식 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 7.0 이상 버전으로 배포 된 **bcp** 유틸리티 버전 에서만 지원 됩니다.  
+>  **Bcp_writefmt** 에서 생성 된 서식 파일은 버전 7.0 이상으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 배포 된 **bcp** 유틸리티 버전 에서만 지원 됩니다.  
   
 ## <a name="example"></a>예제  
   
@@ -114,7 +114,7 @@ if (bcp_exec(hdbc, &nRowsProcessed) == SUCCEED)
 // Carry on.  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [대량 복사 함수](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>참고 항목  
+ [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

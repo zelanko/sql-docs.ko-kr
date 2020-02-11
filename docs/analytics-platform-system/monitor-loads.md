@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: b284fdcef506924c26e452196db6e9518faa1351
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400958"
 ---
 # <a name="monitor-loads-into-parallel-data-warehouse"></a>병렬 데이터 웨어하우스로 부하 모니터링
@@ -26,7 +26,7 @@ APS (분석 플랫폼 시스템) 관리 콘솔 또는 PDW (병렬 데이터 웨�
 To monitor this type of load, see [Monitoring Active Queries](monitor-active-queries.md).  
 -->
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
 부하를 모니터링 하는 데 사용 되는 방법에 관계 없이 로그인에는 기본 데이터 원본에 대 한 액세스 권한이 있어야 합니다. 
 
 <!-- MISSING LINKS
@@ -51,9 +51,9 @@ For the permissions to grant, see "Use All of the Admin Console" in [Grant Permi
   
 -   [sys.pdw_loader_run_stages](https://msdn.microsoft.com/library/mt203879.aspx)  
   
--   [sys. pdw_loader_backup_runs](../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
+-   [sys.pdw_loader_backup_runs](../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
   
--   [sys. pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
+-   [sys.pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
   
 ### <a name="to-monitor-loads-by-using-system-views"></a>시스템 뷰를 사용 하 여 로드를 모니터링 하려면  
 SQL Server PDW 보기를 사용 하 여 활성 및 최근 로드를 모니터링 하려면 다음 단계를 수행 합니다. 사용 되는 각 시스템 뷰에 대해 뷰에서 반환 되는 열 및 잠재적 값에 대 한 자세한 내용은 해당 보기에 대 한 설명서를 참조 하십시오.  

@@ -13,16 +13,16 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 61c11ad810109d76a59b9f6d9c1a3620a2866d65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62844101"
 ---
 # <a name="new-full-text-catalog-general-page"></a>새 전체 텍스트 카탈로그(일반 페이지)
   이 대화 상자를 사용하여 새 전체 텍스트 카탈로그를 만들 수 있습니다.  
   
- **전체 텍스트 카탈로그를 만들기 위해 SQL Server Management Studio를 사용 하려면**  
+ **SQL Server Management Studio를 사용하여 전체 텍스트 카탈로그를 만들려면**  
   
 -   [전체 텍스트 카탈로그 만들기 및 관리](../relational-databases/search/create-and-manage-full-text-catalogs.md)  
   
@@ -38,9 +38,10 @@ ms.locfileid: "62844101"
  이 카탈로그를 새 전체 텍스트 카탈로그의 기본 카탈로그로 설정하려면 선택합니다.  
   
  **악센트 구분**  
- 카탈로그에서 물결표(**~**), 양음 악센트 기호(**´**) 또는 움라우트(**¨**) 등의 분음 기호를 구분할지 여부를 나타냅니다. **구분 안 함**을 선택하면 이 전체 텍스트 카탈로그와 연관된 전체 텍스트 인덱스에서 분음 기호가 무시됩니다. 분음 기호에 대 한 정보를 참조 하세요 [분음 부호 표시](https://www.merriam-webster.com/dictionary/diacritic) Merriam-webster가 영국식 웹 사이트에 있습니다.  
+ 카탈로그가 물결표 (**~**), 악센트 부호 (**́**) 또는**움라우트 (?**)와 같이 분음 부호와 구분 되는지 여부를 나타냅니다. 
+  **구분 안 함**을 선택하면 이 전체 텍스트 카탈로그와 연관된 전체 텍스트 인덱스에서 분음 기호가 무시됩니다. 분음 부호에 대 한 자세한 내용은 Merriam-Webster 웹 사이트의 [분음 기호](https://www.merriam-webster.com/dictionary/diacritic) 를 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [CREATE FULLTEXT CATALOG&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  
   
   

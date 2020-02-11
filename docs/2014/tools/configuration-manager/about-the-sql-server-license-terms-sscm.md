@@ -1,5 +1,5 @@
 ---
-title: SQL Server 사용 조건 (SSCM)에 대 한 | Microsoft Docs
+title: SSCM (SQL Server 사용 조건)에 대 한 정보 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,19 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 04231d0020d44107f9c8136aad9f26e8c098df47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035322"
 ---
 # <a name="about-the-sql-server-license-terms-sscm"></a>SQL Server 사용 조건 정보 (SSCM)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]소프트웨어 사용 조건은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치할 때 로컬 컴퓨터에 복사됩니다. 동일한 버전 및 언어의 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 같은 컴퓨터에 설치하는 경우 해당 버전 및 언어의 모든 인스턴스에 단일 사용 조건 복사본이 적용됩니다. 파일에 기록 됩니다. %ProgramFiles%\Microsoft SQL Server\110\License Terms\ 또는 %ProgramFiles (x86) %\Microsoft SQL Server\110\License 조건\\합니다.  
+  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]소프트웨어 사용 조건은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치할 때 로컬 컴퓨터에 복사됩니다. 동일한 버전 및 언어의 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 같은 컴퓨터에 설치하는 경우 해당 버전 및 언어의 모든 인스턴스에 단일 사용 조건 복사본이 적용됩니다. 파일은 다음에 기록 됩니다.:%ProgramFiles%\Microsoft SQL Server\110\license terms\ ts\ 또는% ProgramFiles (x86)% \ Microsoft SQL\\server\110\license terms\ 약관.  
   
  버전 및 언어가 같은 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 같은 컴퓨터에 설치하는 경우 해당 버전 및 언어의 모든 인스턴스에 단일 사용 조건 복사본이 적용됩니다.  
   
- 사용 조건 파일 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 버전과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 언어 버전을 나타냅니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ 사용 조건 파일 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 버전과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 언어 버전을 나타냅니다. 다음은 그 예입니다.  
   
 -   License_DEV_ENU.txt: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer, 영어 버전  
   
@@ -75,10 +76,11 @@ ms.locfileid: "63035322"
 -   RUS - 러시아어  
   
 ## <a name="sql-server-licensing-options"></a>SQL Server 라이선스 옵션  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가격 및 라이선스 옵션에 대한 자세한 내용은 [Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=190955) 웹 사이트를 참조하십시오.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가격 및 라이선스 옵션에 대한 자세한 내용은 [Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=190955) 웹 사이트를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
- [Microsoft SQL Server 개인정보취급방침](../../../2014/getting-started/microsoft-sql-server-privacy-statement.md)   
+## <a name="see-also"></a>참고 항목  
+ [Microsoft SQL Server 개인 정보 취급 방침](../../../2014/getting-started/microsoft-sql-server-privacy-statement.md)   
  [설명서에 대한 법적 고지 사항](../../../2014/getting-started/legal-notice-for-documentation.md)  
   
   

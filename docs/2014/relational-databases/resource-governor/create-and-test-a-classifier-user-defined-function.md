@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5118ebcb3da31b97859ca0b2b38e3ad552604990
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68212009"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>분류자 사용자 정의 함수 만들기 및 테스트
@@ -27,7 +27,7 @@ ms.locfileid: "68212009"
   
  아래 절차에 나오는 예에서는 매우 복잡한 분류자 사용자 정의 함수를 만드는 경우에 대해 설명합니다.  
   
- 이 예에서는 다음과 같은 작업이 수행됩니다.  
+ 이 예제에서는 다음과 같습니다.  
   
 -   지정한 시간 범위 동안의 프로덕션 처리를 위해 리소스 풀(pProductionProcessing) 및 작업 그룹(gProductionProcessing)을 만듭니다.  
   
@@ -118,7 +118,8 @@ ms.locfileid: "68212009"
 4.  조회 테이블의 시간에 대해 계산될 수 있는 시간 함수 및 값을 사용하는 분류자 함수를 만듭니다. 분류자 함수에서 조회 테이블을 사용하는 방법에 대한 자세한 내용은 이 항목의 "분류자 함수에서 조회 테이블을 사용하는 최선의 구현 방법"을 참조하세요.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 에는 날짜 및 시간 데이터 형식 및 함수의 확장된 집합이 도입되었습니다. 자세한 내용은 [날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)를 참조하세요.  
+    >  
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 에는 날짜 및 시간 데이터 형식 및 함수의 확장된 집합이 도입되었습니다. 자세한 내용은 [날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)를 참조하세요.  
   
     ```  
     CREATE FUNCTION fnTimeClassifier()  
@@ -247,7 +248,8 @@ ms.locfileid: "68212009"
   
 3.  조회 테이블에 대한 차단을 방지합니다.  
   
-    1.  `NOLOCK` 힌트를 사용하여 차단을 방지하거나 함수에서 `SET LOCK_TIMEOUT` (최대값 1000밀리초)을 사용합니다.  
+    1.  
+  `NOLOCK` 힌트를 사용하여 차단을 방지하거나 함수에서 `SET LOCK_TIMEOUT` (최대값 1000밀리초)을 사용합니다.  
   
     2.  테이블은 반드시 master 데이터베이스에 있어야 합니다. 클라이언트 컴퓨터가 연결을 시도할 때 복구가 보장되는 데이터베이스는 master 데이터베이스뿐입니다.  
   
@@ -255,24 +257,25 @@ ms.locfileid: "68212009"
   
     4.  테이블에 트리거를 사용하지 않습니다.  
   
-    5.  테이블 콘텐츠를 업데이트하는 경우에는 기록기가 판독기를 차단하지 않도록 스냅샷 격리 수준 트랜잭션을 사용합니다. `NOLOCK` 힌트를 사용해도 차단을 완화할 수 있습니다.  
+    5.  테이블 콘텐츠를 업데이트하는 경우에는 기록기가 판독기를 차단하지 않도록 스냅샷 격리 수준 트랜잭션을 사용합니다. 
+  `NOLOCK` 힌트를 사용해도 차단을 완화할 수 있습니다.  
   
     6.  가능한 경우 테이블 콘텐츠 변경 시 분류자 함수를 사용하지 않도록 설정합니다.  
   
         > [!WARNING]  
         >  이러한 최선의 구현 방법을 따르는 것이 좋습니다. 문제가 발생하여 최선의 구현 방법을 따를 수 없는 경우에는 Microsoft 지원 센터에 문의하여 향후 발생할 수 있는 문제를 예방하는 것이 좋습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [리소스 관리자](resource-governor.md)   
  [리소스 관리자 사용](enable-resource-governor.md)   
  [리소스 관리자 리소스 풀](resource-governor-resource-pool.md)   
  [리소스 관리자 작업 그룹](resource-governor-workload-group.md)   
- [템플릿을 사용하여 리소스 관리자 구성](configure-resource-governor-using-a-template.md)   
- [리소스 관리자 속성 보기](view-resource-governor-properties.md)   
- [ALTER RESOURCE GOVERNOR&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)   
- [CREATE RESOURCE POOL&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)   
- [CREATE WORKLOAD GROUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-workload-group-transact-sql)   
- [CREATE FUNCTION&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)   
+ [템플릿을 사용 하 여 Resource Governor 구성](configure-resource-governor-using-a-template.md)   
+ [Resource Governor 속성 보기](view-resource-governor-properties.md)   
+ [ALTER RESOURCE GOVERNOR &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)   
+ [Transact-sql&#41;&#40;리소스 풀 만들기](/sql/t-sql/statements/create-resource-pool-transact-sql)   
+ [Transact-sql&#41;&#40;작업 그룹 만들기](/sql/t-sql/statements/create-workload-group-transact-sql)   
+ [Transact-sql&#41;함수 &#40;만들기](/sql/t-sql/statements/create-function-transact-sql)   
  [ALTER RESOURCE GOVERNOR&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)  
   
   

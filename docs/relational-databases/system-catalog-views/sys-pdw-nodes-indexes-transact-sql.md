@@ -1,5 +1,5 @@
 ---
-title: _nodes_indexes (Transact-sql) | Microsoft Docs
+title: sys. pdw_nodes_indexes (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -13,24 +13,24 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: bb20ecd4fe212f4004061a6c39ad33c3ffc8ac8e
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68809932"
 ---
-# <a name="syspdw_nodes_indexes-transact-sql"></a>_nodes_indexes (Transact-sql)
+# <a name="syspdw_nodes_indexes-transact-sql"></a>sys. pdw_nodes_indexes (Transact-sql)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   에 대 한 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]인덱스를 반환 합니다.  
   
-|열 이름|데이터 형식|설명|범위|  
+|열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |object_id|**int**|이 인덱스가 속한 개체의 id입니다.||  
 |name|**sysname**|인덱스의 이름입니다. 이름은 개체 내 에서만 고유 합니다. NULL = 힙||  
-|index_id|**int**|인덱스의 id입니다. index_id는 개체 내 에서만 고유 합니다.<br /><br /> 0 = 힙<br /><br /> 1 = 클러스터형 인덱스<br /><br /> > 1 = 비클러스터형 인덱스||  
+|index_id|**int**|인덱스의 id입니다. index_id는 해당 개체 내에서만 고유합니다.<br /><br /> 0 = 힙<br /><br /> 1 = 클러스터형 인덱스<br /><br /> > 1 = 비클러스터형 인덱스||  
 |type|**tinyint**|인덱스의 유형입니다.<br /><br /> 0 = 힙<br /><br /> 1 = 클러스터형<br /><br /> 2 = 비클러스터형<br /><br /> 5 = 클러스터 된 xVelocity 메모리 액세스에 최적화 된 columnstore 인덱스|  
-|type_desc|**nvarchar(60)**|인덱스 유형의 설명입니다.<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> 클러스터형 COLUMNSTORE||  
+|type_desc|**nvarchar (60)**|인덱스 유형의 설명입니다.<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> 클러스터형 COLUMNSTORE||  
 |is_unique|**bit**|0 = 인덱스가 고유하지 않습니다.|항상 0입니다.|  
 |data_space_id|**int**|이 인덱스에 대 한 데이터 공간의 id입니다. 데이터 공간은 파일 그룹 또는 파티션 구성표입니다.<br /><br /> 0 = object_id는 테이블 반환 함수입니다.||  
 |ignore_dup_key|**bit**|0 = IGNORE_DUP_KEY가 OFF입니다.|항상 0입니다.|  
@@ -49,7 +49,7 @@ ms.locfileid: "68809932"
 ## <a name="permissions"></a>사용 권한  
  CONTROL SERVER 권한이 필요합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Data Warehouse 및 병렬 데이터 웨어하우스 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

@@ -25,17 +25,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a6f942e1afe40467e331519f276b360f87f9a6da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62894737"
 ---
 # <a name="referencing-other-assemblies-in-scripting-solutions"></a>스크립팅 솔루션에서 다른 어셈블리 참조
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 클래스 라이브러리에서는 스크립트 개발자가 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에서 사용자 지정 기능을 구현하는 데 사용할 수 있는 강력한 도구 집합을 제공합니다. 스크립트 태스크와 스크립트 구성 요소에서는 관리되는 사용자 지정 어셈블리도 사용할 수 있습니다.  
+  클래스 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 라이브러리는 패키지에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 사용자 지정 기능을 구현 하기 위한 강력한 도구 집합을 스크립트 개발자에 게 제공 합니다. 스크립트 태스크와 스크립트 구성 요소에서는 관리되는 사용자 지정 어셈블리도 사용할 수 있습니다.  
   
 > [!NOTE]  
->  패키지에서 웹 서비스의 개체와 메서드를 사용할 수 있도록 설정하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] VSTA(Tools for Applications)에서 사용할 수 있는 **웹 참조 추가** 명령을 사용하세요. 이전 버전의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 웹 서비스를 사용하려면 프록시 클래스를 생성해야 했습니다.  
+>  패키지에서 웹 서비스의 개체와 메서드를 사용할 수 있도록 하려면 VSTA (Tools for Applications)에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 사용할 수 있는 **웹 참조 추가** 명령을 사용 합니다. 이전 버전의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 웹 서비스를 사용하려면 프록시 클래스를 생성해야 했습니다.  
   
 ## <a name="using-a-managed-assembly"></a>관리되는 어셈블리 사용  
  디자인 타임에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 관리되는 어셈블리를 찾을 수 있게 하려면 다음 단계를 수행해야 합니다.  
@@ -62,29 +62,30 @@ ms.locfileid: "62894737"
   
  다음 목록에서는 자주 사용되는 몇 가지 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 클래스에 대해 설명합니다.  
   
--   `System.Data` ADO.NET 아키텍처를 포함 합니다.  
+-   `System.Data`ADO.NET 아키텍처를 포함 합니다.  
   
--   `System.IO` 파일 시스템 및 스트림에 대 한 인터페이스를 제공합니다.  
+-   `System.IO`파일 시스템 및 스트림에 대 한 인터페이스를 제공 합니다.  
   
--   `System.Windows.Forms` 양식 작성을 제공합니다.  
+-   `System.Windows.Forms`폼을 만드는 기능을 제공 합니다.  
   
--   `System.Text.RegularExpressions` 정규식 작업을 수행 하는 클래스를 제공 합니다.  
+-   `System.Text.RegularExpressions`정규식 작업을 위한 클래스를 제공 합니다.  
   
--   `System.Environment` 로컬 컴퓨터, 현재 사용자 및 컴퓨터 및 사용자 설정에 대 한 정보를 반환합니다.  
+-   `System.Environment`로컬 컴퓨터, 현재 사용자, 컴퓨터 및 사용자 설정에 대 한 정보를 반환 합니다.  
   
--   `System.Net` 네트워크 통신을 제공 합니다.  
+-   `System.Net`네트워크 통신을 제공 합니다.  
   
--   `System.DirectoryServices` Active Directory를 제공 합니다.  
+-   `System.DirectoryServices`Active Directory를 노출 합니다.  
   
--   `System.Drawing` 광범위 한 이미지 조작 라이브러리를 제공 합니다.  
+-   `System.Drawing`광범위 한 이미지 조작 라이브러리를 제공 합니다.  
   
--   `System.Threading` 다중 스레드 프로그래밍을 사용 하도록 설정 합니다.  
+-   `System.Threading`다중 스레드 프로그래밍을 가능 하 게 합니다.  
   
- [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]에 대한 자세한 내용은 MSDN Library를 참조하십시오.  
+ 
+  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]에 대한 자세한 내용은 MSDN Library를 참조하십시오.  
   
-![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [스크립팅을 사용한 패키지 확장](extending-packages-with-scripting.md)  
   
   

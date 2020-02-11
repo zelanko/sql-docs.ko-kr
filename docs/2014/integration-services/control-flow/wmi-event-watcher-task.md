@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4add98b6c085d52238a528c313008bc688ae6e54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829500"
 ---
 # <a name="wmi-event-watcher-task"></a>WMI 이벤트 감시자 태스크
@@ -75,9 +75,9 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
 -   태스크가 이벤트에 대응하는 방법을 정의합니다. 이벤트에 따라 태스크가 성공 또는 실패하도록 구성하거나 단지 태스크에서 이벤트를 다시 감시하도록 할 수 있습니다.  
   
--   WMI 쿼리 시간이 종료될 때 태스크에서 취할 동작을 지정합니다. 시간 제한 및 시간 제한 이후의 상태를 로깅하거나 WMI 이벤트 시간이 종료되었고 해당 제한 시간과 제한 시간 상태를 로깅하도록 나타내는 사용자 지정 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 이벤트를 발생시킬 수 있습니다.  
+-   WMI 쿼리 시간이 초과 될 때 태스크에서 수행 하는 동작을 지정 합니다. 제한 시간 및 시간 제한 이후의 상태를 기록 하거나, WMI 이벤트가 시간 초과 되어 시간 제한 및 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 제한 시간 상태를 기록 함을 나타내는 사용자 지정 이벤트를 발생 시킬 수 있습니다.  
   
--   태스크가 시간 종료에 대응하는 방법을 정의합니다. 태스크가 성공 또는 실패하도록 구성하거나 단지 태스크에서 이벤트를 다시 감시하도록 할 수 있습니다.  
+-   태스크가 시간 초과에 응답 하는 방법을 정의 합니다. 태스크가 성공 또는 실패 하도록 구성 하거나 태스크에서 이벤트를 다시 감시 하도록 할 수 있습니다.  
   
 -   태스크가 이벤트를 감시하는 횟수를 지정합니다.  
   
@@ -89,11 +89,12 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
+ 
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [WMI 이벤트 감시자 태스크 편집기&#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [WMI 이벤트 감시자 태스크 편집기 &#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [WMI 이벤트 감시자 태스크 편집기&#40;WMI 옵션 페이지&#41;](../wmi-event-watcher-task-editor-wmi-options-page.md)  
+-   [Wmi 이벤트 감시자 태스크 편집기 &#40;WMI 옵션 페이지&#41;](../wmi-event-watcher-task-editor-wmi-options-page.md)  
   
 -   [식 페이지](../expressions/expressions-page.md)  
   

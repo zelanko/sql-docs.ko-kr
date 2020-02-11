@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 440419f1fb4670ff5bdfc2e49cd9cfe6fa5df65e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999572"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>병합 동기화 중 비즈니스 논리 실행
@@ -29,7 +29,7 @@ ms.locfileid: "62999572"
   
 -   API(애플리케이션 프로그래밍 인터페이스) 참조: <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  
   
--   비즈니스 논리 처리기를 구현 하는 방법에 대 한 지침: [병합 아티클에 대한 비즈니스 논리 처리기 구현](../implement-a-business-logic-handler-for-a-merge-article.md)  
+-   비즈니스 논리 처리기 구현 방법: [병합 아티클에 대한 비즈니스 논리 처리기 구현](../implement-a-business-logic-handler-for-a-merge-article.md)  
   
 ## <a name="uses-for-business-logic-handlers"></a>비즈니스 논리 처리기 용도  
  병합 동기화 프로세스는 비즈니스 논리 처리기를 호출하여 다음 작업을 수행할 수 있습니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "62999572"
      이 작업은 특정 데이터 값 또는 작업을 재정의할 필요가 있는 애플리케이션에 유용합니다. 예를 들어 애플리케이션은 행의 **status** 열 값을 "deleted"로 설정한 다음 삭제를 수행하는 클라이언트 ID를 추적하는 특수 업데이트로 행 삭제를 변환할 수 있습니다. 이 방법은 감사 또는 워크플로에 유용할 수 있습니다.  
   
 ### <a name="custom-conflict-resolution"></a>사용자 지정 충돌 해결  
- 사용자는 병합 복제에서 제공하는 충돌 감지 및 해결 기능을 사용하여 충돌에 대해 기본 해결 전략을 적용하거나 사용자 지정 해결을 선택할 수 있습니다. 자세한 내용은 [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md)에서 병합 아티클 해결 프로그램을 지정하는 방법에 대해 설명합니다. 비즈니스 논리 처리기는 충돌하는 데이터 변경을 처리하는 중 호출할 수 있으며 다음 두 가지 동작 중 하나를 수행할 수 있습니다.  
+ 사용자는 병합 복제에서 제공하는 충돌 감지 및 해결 기능을 사용하여 충돌에 대해 기본 해결 전략을 적용하거나 사용자 지정 해결을 선택할 수 있습니다. 자세한 내용은 [고급 병합 복제 충돌 감지 및 해결](advanced-merge-replication-conflict-detection-and-resolution.md)을 참조 하세요. 비즈니스 논리 처리기는 충돌하는 데이터 변경을 처리하는 중 호출할 수 있으며 다음 두 가지 동작 중 하나를 수행할 수 있습니다.  
   
 -   기본 해결 적용  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62999572"
   
 -   사용자 지정 해결 수행  
   
-     이 작업은 해당 비즈니스 논리와 관련된 데이터 값을 선택하고 동기화 프로세스에 이 사용자 지정 데이터 집합을 제공해야 하는 애플리케이션에 유용합니다. 예를 들어 애플리케이션은 게시자 데이터 집합의 값과 구독자 데이터 집합의 값을 결합하여 새 버전의 적용되는 행을 제공할 수 있습니다.  
+     이 작업은 해당 비즈니스 논리와 관련된 데이터 값을 선택하고 동기화 프로세스에 이 사용자 지정 데이터 세트를 제공해야 하는 애플리케이션에 유용합니다. 예를 들어 애플리케이션은 게시자 데이터 집합의 값과 구독자 데이터 집합의 값을 결합하여 새 버전의 적용되는 행을 제공할 수 있습니다.  
   
 ### <a name="custom-error-resolution"></a>사용자 지정 오류 해결  
  오류를 일으키는 변경 내용을 전파하는 중 사용자 지정 논리를 호출할 수 있습니다. 사용자 지정 논리는 다음 두 동작 중 하나를 수행할 수 있습니다.  
@@ -78,7 +78,7 @@ ms.locfileid: "62999572"
   
 -   사용자 지정 오류 해결 적용  
   
-     이 작업은 해당 비즈니스 논리와 관련된 데이터 값을 선택하고 동기화 프로세스에 이 사용자 지정 데이터 집합을 제공해야 하는 애플리케이션에 유용합니다. 예를 들어 복제 프로세스에서 중복 키 위반이 발생하면 비즈니스 논리 처리기는 키가 충돌하지 않는 새 버전의 데이터 변경 내용을 제공할 수 있습니다. 이렇게 하면 게시자 및 구독자에서 적용한 변경 내용이 데이터베이스에서 지속되며 복제 프로세스에서 삭제를 사용하여 실패한 삽입을 해결할 필요가 없습니다.  
+     이 작업은 해당 비즈니스 논리와 관련된 데이터 값을 선택하고 동기화 프로세스에 이 사용자 지정 데이터 세트를 제공해야 하는 애플리케이션에 유용합니다. 예를 들어 복제 프로세스에서 중복 키 위반이 발생하면 비즈니스 논리 처리기는 키가 충돌하지 않는 새 버전의 데이터 변경 내용을 제공할 수 있습니다. 이렇게 하면 게시자 및 구독자에서 적용한 변경 내용이 데이터베이스에서 지속되며 복제 프로세스에서 삭제를 사용하여 실패한 삽입을 해결할 필요가 없습니다.  
   
 ## <a name="deployment-scenarios-for-business-logic-handlers"></a>비즈니스 논리 처리기의 배포 시나리오  
  비즈니스 논리 처리기는 다음에 배포할 수 있습니다.  
@@ -89,10 +89,10 @@ ms.locfileid: "62999572"
   
 -   웹 동기화를 사용할 경우 인터넷 정보 서비스(IIS) 서버. 웹 동기화를 통해 동기화된 끌어오기 구독을 사용하며 이로 인해 비즈니스 논리 처리기가 IIS 서버에서 실행됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [병합 복제](merge-replication.md)   
  [Subscribe to Publications](../subscribe-to-publications.md)   
  [데이터 동기화](../synchronize-data.md)   
- [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md)  
+ [병합 복제에 대한 웹 동기화](../web-synchronization-for-merge-replication.md)  
   
   

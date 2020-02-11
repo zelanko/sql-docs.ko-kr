@@ -19,18 +19,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 046058aa9c00cafb9a5ab9aac61b14d1d78668fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62766484"
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
   
-[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 엔터프라이즈 수준 데이터 통합 및 데이터 변환 솔루션을 빌드하는 데 필요한 플랫폼입니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 파일을 복사 또는 다운로드하고 이벤트에 응답하여 전자 메일 메시지를 보내며 데이터 웨어하우스를 업데이트하고 데이터를 정리 및 마이닝하며 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 개체와 데이터를 관리하여 복잡한 비즈니스 문제를 해결할 수 있습니다. 패키지는 단독으로 또는 다른 패키지와 함께 작동하여 복잡한 비즈니스 요구를 처리할 수 있습니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 XML 데이터 파일, 플랫 파일, 관계형 데이터 원본과 같은 다양한 원본에서 데이터를 추출 및 변환한 다음 하나 이상의 대상으로 로드할 수 있습니다.<br /><br /> [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에는 다양한 기본 제공 태스크와 변환 집합, 패키지 생성 도구, 패키지 실행 및 관리를 위한 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스가 포함되어 있습니다. 그래픽 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 도구를 사용하여 코드를 한 줄도 작성하지 않고 솔루션을 만들거나 광범위한 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개체 모델을 프로그래밍하여 패키지를 프로그래밍 방식으로 만들고 사용자 지정 태스크 및 기타 패키지 개체를 코딩할 수 있습니다.<br /><br /> **영역별 내용 찾아보기**<br /> ![작은 파일 폴더 아이콘](media/filefolder-small.gif "작은 파일 폴더 아이콘") [새로운 기능](what-s-new-in-integration-services-in-sql-server-2016.md)<br /><br /> ![작은 파일 폴더 아이콘](media/filefolder-small.gif "작은 파일 폴더 아이콘") [이전 버전과 호환성](integration-services-backward-compatibility.md)<br /><br /> ![작은 파일 폴더 아이콘](media/filefolder-small.gif "작은 파일 폴더 아이콘") [Integration Services 기능 및 태스크](../../2014/integration-services/integration-services-features-and-tasks.md)<br /><br /> ![작은 파일 폴더 아이콘](media/filefolder-small.gif "작은 파일 폴더 아이콘") [기술 참조](../../2014/integration-services/technical-reference-integration-services.md)  
+[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 엔터프라이즈 수준 데이터 통합 및 데이터 변환 솔루션을 빌드하기 위한 플랫폼입니다. 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 파일을 복사 또는 다운로드하고 이벤트에 응답하여 전자 메일 메시지를 보내며 데이터 웨어하우스를 업데이트하고 데이터를 정리 및 마이닝하며 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 개체와 데이터를 관리하여 복잡한 비즈니스 문제를 해결할 수 있습니다. 패키지는 단독으로 또는 다른 패키지와 함께 작동하여 복잡한 비즈니스 요구를 처리할 수 있습니다. 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 XML 데이터 파일, 플랫 파일, 관계형 데이터 원본과 같은 다양한 원본에서 데이터를 추출 및 변환한 다음 하나 이상의 대상으로 로드할 수 있습니다.<br /><br /> [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에는 다양 한 기본 제공 작업 및 변환 집합이 포함 되어 있습니다. 패키지를 생성 하는 도구 패키지를 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 실행 하 고 관리 하는 서비스입니다. 그래픽 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 도구를 사용하여 코드를 한 줄도 작성하지 않고 솔루션을 만들거나 광범위한 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개체 모델을 프로그래밍하여 패키지를 프로그래밍 방식으로 만들고 사용자 지정 태스크 및 기타 패키지 개체를 코딩할 수 있습니다.<br /><br /> **영역별 내용 찾아보기**<br /> ![작은 파일 폴더 아이콘](media/filefolder-small.gif "작은 파일 폴더 아이콘") [새로운 기능](what-s-new-in-integration-services-in-sql-server-2016.md)<br /><br /> ![작은 파일 폴더 아이콘](media/filefolder-small.gif "작은 파일 폴더 아이콘") [이전 버전과의 호환성](integration-services-backward-compatibility.md)<br /><br /> ![작은 파일 폴더 아이콘](media/filefolder-small.gif "작은 파일 폴더 아이콘") [Integration Services 기능 및 작업](../../2014/integration-services/integration-services-features-and-tasks.md)<br /><br /> ![작은 파일 폴더 아이콘](media/filefolder-small.gif "작은 파일 폴더 아이콘") [기술 참조](../../2014/integration-services/technical-reference-integration-services.md)  
   
- 웹캐스트에서 [EIM (엔터프라이즈 정보 관리): SSIS, DQS 및 MDS를 모아](https://go.microsoft.com/fwlink/?LinkId=258672), channel9.msdn.com 합니다.  
+ 웹캐스트, [EIM (엔터프라이즈 정보 관리): channel9.msdn.com에서 SSIS, DQS 및 MDS를 함께](https://go.microsoft.com/fwlink/?LinkId=258672)제공 합니다.  
   
-![Integration Services 아이콘 (작은)](media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
+![Integration Services 아이콘 (작은 아이콘)](media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.  
   
   

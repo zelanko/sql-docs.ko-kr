@@ -1,5 +1,5 @@
 ---
-title: '태스크 9: 참조 데이터 서비스 구성 | Microsoft Docs'
+title: '작업 9: 참조 데이터 서비스 구성 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e4c756463c43ede8c6dae0cda0a184f0ec7f9956
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154929"
 ---
 # <a name="task-9-configuring-a-reference-data-service"></a>태스크 9: 참조 데이터 서비스 구성
@@ -28,7 +28,7 @@ ms.locfileid: "70154929"
   
 4.  **DataMarket 계정 ID** 필드에 대 한 **Azure Marketplace 계정 키** 를 입력 합니다.  
   
-     ![Azure Data Market 참조 데이터 서비스 계정](../../2014/tutorials/media/et-configuringareferencedataservice.jpg "Azure Data Market 참조 데이터 서비스 계정")  
+     ![Azure 데이터 마켓 참조 데이터 서비스 계정](../../2014/tutorials/media/et-configuringareferencedataservice.jpg "Azure 데이터 마켓 참조 데이터 서비스 계정")  
   
 5.  텍스트 상자 옆 **의 유효성 검사** 단추를 클릭 하 여 계정 ID의 유효성을 검사 합니다.  
   
@@ -37,6 +37,6 @@ ms.locfileid: "70154929"
 7.  페이지 맨 아래에 있는 **닫기** 를 클릭 하 여 DQS 클라이언트의 기본 페이지로 전환 합니다.  
   
 ## <a name="next-task"></a>다음 태스크  
- [작업 10: 참조 데이터 서비스를 사용 하도록 복합 도메인 구성](../../2014/tutorials/task-10-configuring-composite-domain-to-use-reference-data-service.md)  
+ [태스크 10: 참조 데이터 서비스를 사용하도록 복합 도메인 구성](../../2014/tutorials/task-10-configuring-composite-domain-to-use-reference-data-service.md)  
   
   

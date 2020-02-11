@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e160c606b19933934ec844b477ffec08475307d8
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401491"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>병렬 데이터 웨어하우스의 백업 서버 가져오기 및 구성
@@ -89,7 +89,7 @@ PDW는 UNC 파일 공유를 통해 백업 서버에 액세스 합니다. 파일 
   
 5.  PDW에 백업 도메인 계정 자격 증명을 추가 합니다.  
   
-    예:  
+    다음은 그 예입니다.  
   
     ```sql  
     EXEC sp_pdw_add_network_credentials '10.192.147.63', 'seattle\david', '********';  
@@ -109,7 +109,7 @@ PDW는 UNC 파일 공유를 통해 백업 서버에 액세스 합니다. 파일 
 > [!IMPORTANT]  
 > 백업 서버의 InfiniBand IP 주소를 사용 해야 합니다. 그렇지 않으면 데이터가 InfiniBand 대신 이더넷을 통해 복사 됩니다.  
   
-예:  
+다음은 그 예입니다.  
   
 ```sql  
 BACKUP DATABASE Invoices TO DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full';  

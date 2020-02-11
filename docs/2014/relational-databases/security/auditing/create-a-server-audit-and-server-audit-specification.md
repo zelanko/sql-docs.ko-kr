@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ec1c7205597224e5fca27942ca25ad4e197ec0d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68198408"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>서버 감사 및 서버 감사 사양 만들기
@@ -37,7 +37,7 @@ ms.locfileid: "68198408"
   
 -   **다음을 사용하여 서버 감사 및 서버 감사 사양을 만듭니다.**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "68198408"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
   
 -   서버 감사를 생성, 변경 또는 삭제하려면 보안 주체에게 ALTER ANY SERVER AUDIT 또는 CONTROL SERVER 권한이 있어야 합니다.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "68198408"
      **감사 대상** 이 파일인 경우 감사 데이터를 쓸 폴더의 위치를 지정합니다.  
   
      **줄임표(...)**  
-     열립니다는 **-폴더 찾기**_server_name_ 대화 상자의 파일 경로 지정 하거나 감사 파일을 쓸 폴더를 만듭니다.  
+     파일 경로를 지정 하거나 감사 파일이 기록 된 폴더를 만들 폴더 **찾기-**_server_name_ 대화 상자를 엽니다.  
   
      **감사 파일의 최대 제한:**  
      **최대 롤오버 파일**  
@@ -152,7 +152,7 @@ ms.locfileid: "68198408"
      **줄임표(...)**  
      **개체 선택** 대화 상자를 열고 지정된 **개체 이름**에 따라 사용 가능한 개체를 찾아 선택합니다.  
   
-3.  작업이 완료되면 **확인**을 클릭합니다.  
+3.  작업을 마쳤으면 **확인**을 클릭합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   

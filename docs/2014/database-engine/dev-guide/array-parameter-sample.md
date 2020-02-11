@@ -11,27 +11,32 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 822dc7f3d66afc44c187d199674a22f20977f535
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74055911"
 ---
 # <a name="array-parameter-sample"></a>배열 매개 변수 예제
   데이터베이스에서 행 집합을 생성, 업데이트 또는 삭제해야 하는 경우가 있습니다. 이러한 작업을 수행하는 방법은 여러 가지가 있습니다. 그 중 한 가지는 CLR(공용 언어 런타임) 통합 사용자 정의 데이터 형식을 사용하여 클라이언트에서 서버의 CLR 통합 저장 프로시저로 정보 배열을 전달하는 것입니다. 서버에 제공되는 데이터의 크기는 이러한 사용자 정의 데이터 형식의 특성으로 인해 8000바이트로 제한됩니다. 따라서 이 방법은 크거나 복잡한 데이터의 경우에는 적합하지 않습니다. 조작 중인 데이터가 작고 단순한 경우에는 각 행에 대해 저장 프로시저를 호출하는 것보다 이 방법이 훨씬 더 효율적일 수 있습니다. 배열을 전달함으로써 순서가 중요한 애플리케이션에 대해 데이터의 순서가 유지됩니다. 이 예제에는 다음이 포함되어 있습니다.  
   
-1.  `ContactTypeNames` 사용자 정의 데이터 형식. 필요한 연락처 유형 이름의 목록이 포함되어 있습니다.  
+1.  
+  `ContactTypeNames` 사용자 정의 데이터 형식. 필요한 연락처 유형 이름의 목록이 포함되어 있습니다.  
   
 2.  Microsoft Visual C# 또는 Microsoft Visual Basic 메서드로 구현된 `usp_EnsureContactTypeNames` 저장 프로시저. 이 저장 프로시저는 `ContactTypeNames` 사용자 정의 데이터 형식의 인스턴스를 받아들여 이 사용자 정의 데이터 형식 인스턴스에 포함된 연락처 이름 중 테이블에는 없는 모든 연락처 이름에 대해 새 행을 `Person.ContactType` 테이블에 삽입합니다.  
   
-3.  `TestArrayParameter` 콘솔 애플리케이션. 이 프로그램은 전달된 명령줄 매개 변수를 기반으로 `ContactTypeNames` 사용자 정의 데이터 형식 인스턴스를 만든 다음 이 사용자 정의 데이터 형식 인스턴스를 매개 변수로 전달하여 `usp_EnsureContactTypeNames` 저장 프로시저를 호출합니다.  
+3.  
+  `TestArrayParameter` 콘솔 애플리케이션. 이 프로그램은 전달된 명령줄 매개 변수를 기반으로 `ContactTypeNames` 사용자 정의 데이터 형식 인스턴스를 만든 다음 이 사용자 정의 데이터 형식 인스턴스를 매개 변수로 전달하여 `usp_EnsureContactTypeNames` 저장 프로시저를 호출합니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 프로젝트를 만들고 실행하려면 다음 소프트웨어가 설치되어 있어야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](https://www.microsoft.com/download/details.aspx?id=42299)에서 무료로 구할 수 있습니다.  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](https://www.microsoft.com/download/details.aspx?id=42299)에서 무료로 구할 수 있습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개발자 [웹 사이트](https://archive.codeplex.com/?p=SqlServerSamples)에서 제공되는 AdventureWorks 데이터베이스  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개발자 [웹 사이트](https://archive.codeplex.com/?p=SqlServerSamples)에서 제공되는 AdventureWorks 데이터베이스  
   
 -   .NET Framework SDK 2.0 이상 또는 Microsoft Visual Studio 2005 이상. .NET Framework SDK는 무료로 구할 수 있습니다.  
   
@@ -68,7 +73,7 @@ ms.locfileid: "74055911"
   
 2.  필요한 경우 예제에 대한 디렉터리를 만듭니다. 이 예에서는 C:\MySample을 사용합니다.  
   
-3.  c:\MySample에서 `ContactTypeNames.vb` (Visual Basic 예제용) 또는 `ContactTypeNames.cs` (C# 예제용)를 만들고 적합한 Visual Basic 또는 C# 예제 코드(아래)를 파일에 복사합니다.  
+3.  c:\MySample에서 `ContactTypeNames.vb`(Visual Basic 예제용) 또는 `ContactTypeNames.cs`(C# 예제용)를 만들고 적합한 Visual Basic 또는 C# 예제 코드(아래)를 파일에 복사합니다.  
   
 4.  선택하는 언어에 따라 다음 중 하나를 실행하여 명령줄 프롬프트에서 예제 코드를 필수 어셈블리로 컴파일합니다.  
   
@@ -76,7 +81,7 @@ ms.locfileid: "74055911"
   
     -   `Csc /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll /target:library ContactTypeNames.cs`  
   
-5.  c:\MySample에서 `Program.vb` (Visual Basic 예제용) 또는 `Program.cs` (C# 예제용)를 만들고 적합한 Visual Basic 또는 C# 예제 코드(아래)를 파일에 복사합니다.  
+5.  c:\MySample에서 `Program.vb`(Visual Basic 예제용) 또는 `Program.cs`(C# 예제용)를 만들고 적합한 Visual Basic 또는 C# 예제 코드(아래)를 파일에 복사합니다.  
   
 6.  Program 파일에서 적합한 줄(줄 24 근처)을 찾아 `XXX`를 해당되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름으로 바꿉니다.  
   
@@ -90,7 +95,8 @@ ms.locfileid: "74055911"
   
     -   `Csc /reference:ContactTypeNames.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll /out:TestArrayParameter.exe Program.cs`  
   
-8.  [!INCLUDE[tsql](../../includes/tsql-md.md)] 설치 코드를 파일에 복사하고 해당 파일을 예제 디렉터리에 `Install.sql` 로 저장합니다.  
+8.  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 설치 코드를 파일에 복사하고 해당 파일을 예제 디렉터리에 `Install.sql` 로 저장합니다.  
   
 9. 예제가 `C:\MySample\`이외의 디렉터리에 설치된 경우 해당 위치를 가리키도록 표시된 대로 `Install.sql` 파일을 편집합니다.  
   
@@ -102,7 +108,8 @@ ms.locfileid: "74055911"
   
     -   `TestArrayParameter "Executive Sales Representative" "Executive Sales Manager"`  
   
-12. [!INCLUDE[tsql](../../includes/tsql-md.md)] 정리 스크립트를 파일에 복사하고 해당 파일을 예제 디렉터리에 `cleanup.sql` 로 저장합니다.  
+12. 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 정리 스크립트를 파일에 복사하고 해당 파일을 예제 디렉터리에 `cleanup.sql` 로 저장합니다.  
   
 13. 다음 명령으로 스크립트를 실행합니다.  
   
@@ -714,7 +721,7 @@ DROP ASSEMBLY ContactTypeNames;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [공용 언어 런타임 &#40;CLR&#41; 통합에 대한 사용 시나리오 및 예제](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+## <a name="see-also"></a>참고 항목  
+ [공용 언어 런타임 &#40;CLR&#41; 통합에 대 한 사용 시나리오 및 예제](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

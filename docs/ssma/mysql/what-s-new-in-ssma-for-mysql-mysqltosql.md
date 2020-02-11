@@ -2,23 +2,34 @@
 title: MySQL 용 SSMA의 새로운 기능 (MySQLToSql) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 12/04/2019
+ms.date: 01/22/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: ccb8c325a2e0b2966c0355be0f9cd84bd8882d24
-ms.sourcegitcommit: 26868c8ac3217176b370d972a26d307598a10328
+ms.openlocfilehash: 96e27e6ec25d500b55ec71f5ca1c24d48c230ac5
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74834306"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76516542"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>MySQL용 SSMA의 새로운 기능(MySQLToSql)
 
 이 문서에서는 각 릴리스의 MySQL 변경 내용에 대 한 SSMA (SQL Server Migration Assistant)를 나열 합니다.
+
+## <a name="ssma-v86"></a>SSMA v 8.6
+
+사용자가 변환 된 코드에서 SSMA 확장 속성을 생략할 수 있도록 하는 설정을 추가 하 여 MySQL 용 SSMA의 v 8.6 릴리스가 향상 되었습니다.
+
+이 설정을 활용 하려면 MySQL 용 ssma에서 **도구** > **프로젝트 설정** > **일반** > **변환**으로 이동한 다음 **기타**에서 **확장 속성 생략** 설정의 값을 **예**로 업데이트 합니다.
+
+![확장 속성 설정 생략](../mysql/media/ssma-omit-extended-properties.png)
+
+> [!IMPORTANT]
+> SSMA v 8.5 이상에서 .Net 4.7.2는 설치 필수 구성 요소입니다. 이 버전을 설치 해야 하는 경우 [여기](https://dotnet.microsoft.com/download/dotnet-framework/net472)에서 런타임 파일을 다운로드할 수 있습니다.
 
 ## <a name="ssma-v85"></a>SSMA v 8.5
 
@@ -155,7 +166,7 @@ MySQL 용 SSMA의 v 7.1 릴리스에는 다음과 같은 변경 내용이 포함
 
 * 이제 Windows 및 Linux CTP1의 SQL Server 2017는 마이그레이션에 지원 되는 대상 플랫폼입니다. 이 기능은 technical preview 이며 SQL server를 대상으로 하는 스키마 및 데이터 이동을 허용 합니다.
 * 이제 SSMA가 자동 업데이트를 지원 하 여 최신 버전의 SSMA를 사용할 수 있는 즉시 다운로드 합니다.
-* 이제 Windows installer 패키지 파일 (.msi)을 통해 SSMA를 설치할 수 있는 이진 파일이 제공 됩니다.
+* 이제 Windows Installer 패키지 파일 (.msi)을 통해 SSMA를 설치할 수 있는 이진 파일이 제공 됩니다.
 
 ## <a name="may-2016"></a>2016년 5월  
 MySQL 용 SSMA의 2016 년 5 월 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.
@@ -201,7 +212,7 @@ MySQL 용 SSMA의 7 월 2014 릴리스에는 다음과 같은 변경 내용이 �
 MySQL 용 SSMA의 4 월 2014 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.  
   
 * MS SQL Server 2014에 대 한 지원이 추가 되었습니다.  
-* Azure로의 변환과 관련 된 버그 수정  
+* Azure로의 변환과 관련 된 버그가 수정 되었습니다.
 * IE 10의 보이지 않는 보고서 페이지와 관련 된 버그가 수정 되었습니다.  
   
 ## <a name="july-2011"></a>2011년 7월

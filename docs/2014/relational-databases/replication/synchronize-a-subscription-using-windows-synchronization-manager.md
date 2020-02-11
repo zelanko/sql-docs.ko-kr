@@ -1,5 +1,5 @@
 ---
-title: Windows Synchronization Manager (Windows Synchronization Manager)을 사용 하 여 구독 동기화 | Microsoft Docs
+title: Windows 동기화 관리자를 사용 하 여 구독 동기화 (Windows 동기화 관리자) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 04b1c5322408f66ab2a4023e3d215cc7e669eab6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62745762"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>Windows 동기화 관리자를 사용하여 구독 동기화(Windows 동기화 관리자)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 가 동기화 관리자와 같은 컴퓨터에서 실행 중인 경우에는 구독을 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시와 동기화하는 데만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 동기화 관리자를 사용할 수 있습니다. 동기화 관리자를 사용하면 오프라인 파일과 웹 페이지를 동기화할 수도 있습니다. 동기화 관리자를 사용하려면 다음을 수행하십시오.  
   
-1.  **구독 속성 - \<Subscriber>: \<SubscriptionDatabase>** 대화 상자에서 Windows 동기화 관리자로 끌어오기 구독 동기화를 설정합니다. 이 대화 상자에 액세스하는 방법은 [끌어오기 구독 속성 보기 및 수정](view-and-modify-pull-subscription-properties.md)을 참조하세요.  
+1.  **구독 속성 - \<Subscriber>:\<SubscriptionDatabase>** 대화 상자에서 Windows 동기화 관리자로 전체 구독의 동기화를 사용할 수 있습니다. 이 대화 상자에 액세스하는 방법은 [끌어오기 구독 속성 보기 및 수정](view-and-modify-pull-subscription-properties.md)을 참조하세요.  
   
 2.  Windows의 **시작** 메뉴를 통해 동기화 관리자에 액세스합니다.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62745762"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>Windows 동기화 관리자를 통한 끌어오기 구독 동기화가 가능하도록 설정하려면  
   
-1.  **구독 속성 - \<구독자>: \<SubscriptionDatabase>** 대화 상자의 일반 페이지에서 **Windows 동기화 관리자 사용** 옵션에 대한 **사용** 값을 선택합니다.  
+1.  **구독 속성-** Subscriber>: **SubscriptionDatabase>\< 대화 상자의 \<일반** 페이지에서 **Windows 동기화 관리자 사용** 옵션에 **사용** 값을 선택합니다.  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62745762"
   
     -   **시작**을 클릭하고 **프로그램** 또는 **모든 프로그램**, **보조프로그램**을 차례로 가리킨 다음 **동기화**를 클릭합니다.  
   
-    -   **시작**, **실행** 에 **실행** 대화 상자에서 `mobsync.exe` 에 **열기** 필드 및 클릭 **확인**합니다.  
+    -   **시작**, **실행** **실행** 대화 상자에서 **열기** 필드에 `mobsync.exe` 를 입력 한 다음 **확인**을 클릭 합니다.  
   
 2.  **동기화할 항목** 대화 상자에서 동기화할 구독을 선택합니다. 구독은 컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 아래에 나열되어 있습니다.  
   
@@ -116,6 +116,6 @@ ms.locfileid: "62745762"
 > [!NOTE]  
 >  편집을 수행한 경우에는 편집 내용이 해결을 위해 선택한 행의 일부인 경우에만 적용됩니다. 예를 들어 **게시자**에서 편집을 수행한 다음 **구독자 허용**을 클릭하면 편집 내용이 무시됩니다.  
   
-## <a name="see-also"></a>관련 항목  
- [대화형 충돌 해결](merge/advanced-merge-replication-conflict-interactive-resolution.md)  
+## <a name="see-also"></a>참고 항목  
+ [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md)  
   

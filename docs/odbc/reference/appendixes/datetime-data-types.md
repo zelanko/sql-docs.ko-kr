@@ -1,5 +1,5 @@
 ---
-title: 날짜/시간 데이터 형식 | Microsoft Docs
+title: Datetime 데이터 형식 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -22,21 +22,21 @@ ms.assetid: 6b9363c9-04bf-4492-a210-7aa15dea4af8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1cb92afa9467717b8a589ddbcaee4ab8a5a529f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130086"
 ---
 # <a name="datetime-data-types"></a>날짜/시간 데이터 형식
-Odbc에서 *3.x*식별자 날짜, 시간 및 타임 스탬프 SQL 데이터 형식 SQL_TIMESTAMP SQL_DATE, SQL_TIME에서 변경 되었습니다. (인스턴스와 **#define** 9, 10 및 11의 헤더 파일에서) SQL_를 TYPE_DATE, SQL_TYPE_TIME 및 SQL_TYPE_TIMESTAMP (인스턴스와 **#define** 91, 92, 및 93 헤더 파일에), 각각. 식별자에서 변경 SQL_C_DATE, SQL_C_TIME, 및 SQL_C_TIMESTAMP SQL_C_TYPE_DATE, SQL_C_TYPE_TIME, 및 SQL_C_TYPE_TIMESTAMP를 각각 해당 C 형식 및 인스턴스 **#define** 변경 적절 하 게 합니다.  
+*ODBC 3.x에서는 date*, time 및 timestamp SQL 데이터 형식에 대 한 식별자가 SQL_DATE, SQL_TIME 및 SQL_TIMESTAMP (헤더 파일의 **#define** 인스턴스를 사용 하 여 9, 10 및 11)에서 SQL_TYPE_DATE, SQL_TYPE_TIME 및 SQL_TYPE_TIMESTAMP (91, 92 및 93의 헤더 파일의 **#define** 인스턴스 사용)로 변경 되었습니다. 해당 C 형식 식별자가 SQL_C_DATE, SQL_C_TIME 및 SQL_C_TIMESTAMP에서 각각 SQL_C_TYPE_DATE, SQL_C_TYPE_TIME 및 SQL_C_TYPE_TIMESTAMP으로 변경 되었으며 그에 따라 **#define** 인스턴스가 변경 되었습니다.  
   
- 열 크기 및 소수 자릿수를 ODBC SQL 날짜/시간 데이터 형식에 대 한 반환 *3.x* 는 odbc에서에 반환 되는 자릿수와 소수 자릿수와 동일 *2.x*합니다. 이러한 값 SQL_DESC_PRECISION 및 자릿수가 SQL_DESC_SCALE 설명자 필드의 값과 다릅니다. (자세한 내용은 [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 d: 데이터 형식입니다.)  
+ ODBC 3.x의 SQL datetime 데이터 형식에 대해 *반환 되는* 열 크기와 소수 자릿수 *는 odbc 2.x*에서 반환 된 전체 자릿수 및 소수 자릿수와 동일 합니다. 이러한 값은 SQL_DESC_PRECISION 및 SQL_DESC_SCALE 설명자 필드의 값과 다릅니다. 자세한 내용은 [열 크기, 10 진수 숫자, 전송 옥텟 길이 및](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 D: 데이터 형식의 표시 크기를 참조 하세요.  
   
- 이러한 변경에 영향을 줍니다 **SQLDescribeCol**하십시오 **SQLDescribeParam**, 및 **SQLColAttributes**; **SQLBindCol**하십시오 **SQLBindParameter**, 및 **SQLGetData**; 및 **SQLColumns**, **SQLGetTypeInfo** , **SQLProcedureColumns**합니다 **SQLStatistics**, 및 **SQLSpecialColumns**합니다.  
+ 이러한 변경 내용은 **SQLDescribeCol**, **SQLDescribeParam**및 **sqlcolattributes**에 영향을 줍니다. **SQLBindCol**, **SQLBindParameter**및 **SQLGetData**; 및 **Sqlcolumns**, **SQLGetTypeInfo**, **SQLProcedureColumns**, **SQLStatistics**및 **SQLSpecialColumns**입니다.  
   
- ODBC *3.x* 드라이버 SQL_ATTR_ODBC_VERSION 환경 특성의 설정에 따라 이전 단락에 나열 된 함수 호출을 처리 합니다. 에 대 한 **SQLColumns**, **SQLGetTypeInfo**, **SQLProcedureColumns**하십시오 **SQLSpecialColumns**, 및 **SQLStatistics** SQL_ATTR_ODBC_VERSION로 설정 된 경우 함수 반환을 SQL_OV_ODBC3 SQL_TYPE_DATE, SQL_TYPE_TIME 및 SQL_TYPE_TIMESTAMP DATA_TYPE 필드에, 합니다. COLUMN_SIZE 열의 (반환한 결과 집합의 **SQLColumns**를 **SQLGetTypeInfo**합니다 **SQLProcedureColumns**, 및 **SQLSpecialColumns**) 대략적인 숫자 형식에 대 한 이진 정밀도 포함합니다. NUM_PREC_RADIX 열 (반환한 결과 집합의 **SQLColumns**를 **SQLGetTypeInfo**, 및 **SQLProcedureColumns**) 2의 값을 포함 합니다. COLUMN_SIZE 열의 대략적인 숫자 형식 및 NUM_PREC_RADIX 열에 대 한 소수점 전체 자릿수를 SQL_ATTR_ODBC_VERSION으로 설정 된 SQL_OV_ODBC2, 다음 함수 반환 SQL_DATE, SQL_TIME, 및 SQL_TIMESTAMP DATA_TYPE 필드에 하는 경우 포함 10의 값을 포함합니다.  
+ ODBC 3.x 드라이버는 SQL_ATTR_ODBC_VERSION 환경 특성의 설정에 따라 이전 단락에 나열 된 함수 호출을 처리 *합니다.* **Sqlcolumns**, **SQLGetTypeInfo**, **SQLProcedureColumns**, **SQLSpecialColumns**및 **SQLStatistics**의 경우 SQL_ATTR_ODBC_VERSION이 SQL_OV_ODBC3으로 설정 된 경우 함수는 SQL_TYPE_TIMESTAMP 필드에서 SQL_TYPE_DATE, SQL_TYPE_TIME 및 DATA_TYPE를 반환 합니다. **Sqlcolumns**, **SQLGetTypeInfo**, **SQLProcedureColumns**및 **SQLSpecialColumns**에서 반환 하는 결과 집합의 COLUMN_SIZE 열에는 근사 숫자 형식에 대 한 이진 전체 자릿수가 포함 됩니다. **Sqlcolumns**, **SQLGetTypeInfo**및 **SQLProcedureColumns**에서 반환 된 결과 집합의 NUM_PREC_RADIX 열에는 값 2가 포함 됩니다. SQL_ATTR_ODBC_VERSION이 SQL_OV_ODBC2으로 설정 된 경우 함수는 SQL_TIMESTAMP 필드에서 SQL_DATE, SQL_TIME 및 DATA_TYPE을 반환 하 고, COLUMN_SIZE 열에는 근사 숫자 형식에 대 한 소수 자릿수와 NUM_PREC_RADIX 열이 포함 됩니다. 값 10을 포함 합니다.  
   
- 모든 데이터 형식에 대 한 호출에서 요청 하는 경우 **SQLGetTypeInfo**, ODBC에 정의 된 대로 함수에서 반환한 결과 집합에는 모두 SQL_TYPE_DATE, SQL_TYPE_TIME 및 SQL_TYPE_TIMESTAMP에 포함 됩니다 *3.x*, SQL_DATE, SQL_TIME, 및 ODBC에 정의 된 대로 SQL_TIMESTAMP *2.x*합니다.  
+ **SQLGetTypeInfo**에 대 한 호출에서 모든 데이터 형식이 요청 될 때 함수에서 반환 되는 결과 집합에 *는 odbc 2.x*에 정의 된 SQL_TYPE_DATE, SQL_TYPE_TIME 및 SQL_TYPE_TIMESTAMP *와 odbc 2.x*에 정의 된 SQL_DATE, SQL_TIME 및 SQL_TIMESTAMP가 모두 포함 됩니다.  
   
- 방식 때문에 ODBC *3.x* 드라이버 관리자는 date, time 및 timestamp 데이터 형식, ODBC의 매핑을 수행 *3.x* 드라이버 인식 해야 **#defines** 의 91, 92, 및 에 입력 한 날짜, 시간 및 타임 스탬프 C 데이터 형식에 대 한 93 합니다 *TargetType* 인수 **SQLBindCol** 하 고 **SQLGetData** 또는  *ValueType* 인수의 **SQLBindParameter**에 인식 해야 **#defines** 91의 92, 및 93 날짜, 시간, 타임 스탬프 SQL 데이터 형식에에서을 입력 합니다 *ParameterType* 인수의 **SQLBindParameter** 나 *DataType* 인수의 **SQLGetTypeInfo**합니다. 자세한 내용은 [날짜/시간 데이터 형식 변경](../../../odbc/reference/develop-app/datetime-data-type-changes.md)합니다.
+ *ODBC 3.X* 드라이버 관리자가 날짜 매핑을 수행 하는 방법 때문에 time 및 timestamp 데이터 형식 *, ODBC 2.X* 드라이버는 **SQLBindCol** 및 **SQLGetData** 의 *TargetType* 인수에 입력 된 날짜, 시간 및 타임 스탬프 C 데이터 형식에 대해 91, 92 및 93의, 및만 인식 하 고, **SQLBindParameter**의 *ValueType* 인수를 **인식** 하며,에 입력 된 날짜, 시간 및 타임 스탬프 SQL #defines 데이터 형식에 대 한 91, 92 및 93 **#defines** **SQLBindParameter** 의 *ParameterType* 인수 또는 **SQLGetTypeInfo**의 *DataType* 인수입니다. 자세한 내용은 [Datetime 데이터 형식 변경](../../../odbc/reference/develop-app/datetime-data-type-changes.md)을 참조 하세요.
