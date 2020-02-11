@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b1baf29a88ff25eb278271719680d1979940c590
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211491"
 ---
 # <a name="planning-a-sql-server-installation"></a>SQL Server 설치 계획
@@ -26,11 +26,12 @@ ms.locfileid: "68211491"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하여 설치하거나 이후 버전으로 업그레이드합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 구성합니다.  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 구성합니다.  
   
  소프트웨어 사용이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 볼륨 라이선스 계약 또는 공급 업체와의 ISV  또는 OEM  계약과 같은 별도의 계약에 의해 관리되지 않는 한 설치 방법에 상관없이 개인 또는 업체 대표로서 소프트웨어 사용 조건에 대한 동의를 확인해야 합니다.  
   
- 사용 조건은 검토 및 동의를 위해 설치 프로그램 사용자 인터페이스에 표시됩니다. /Q 또는 /QS 매개 변수를 사용한 무인 설치는 /IAcceptSQLServerLicenseTerms 매개 변수를 포함해야 합니다. [Microsoft  소프트웨어 사용권 계약(Microsoft  Software  License  Terms)](https://go.microsoft.com/fwlink/?LinkID=148209)에서 사용 조건을 별도로 검토할 수 있습니다.  
+ 사용 조건은 검토 및 동의를 위해 설치 프로그램 사용자 인터페이스에 표시됩니다. /Q 또는 /QS 매개 변수를 사용한 무인 설치는 /IAcceptSQLServerLicenseTerms 매개 변수를 포함해야 합니다. [Microsoft 소프트웨어 사용권 계약(Microsoft Software License Terms)](https://go.microsoft.com/fwlink/?LinkID=148209)에서 사용 조건을 별도로 검토할 수 있습니다.  
   
 > [!NOTE]  
 >  소프트웨어의 수령 방법(예: [!INCLUDE[msCoName](../../includes/msconame-md.md)] 볼륨 라이선스를 통해 수령)에 따라 사용자의 소프트웨어 사용에 추가 조건이 적용될 수 있습니다.  
@@ -39,7 +40,7 @@ ms.locfileid: "68211491"
  [SQL Server 설치의 새로운 기능](../../../2014/sql-server/install/what-s-new-in-sql-server-installation.md)  
  이 항목에서는 이 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]버전의 새로운 기능 및 향상된 기능에 대해 자세히 설명합니다.  
   
- [SQL Server 2014 설치를 위한 하드웨어 및 소프트웨어 요구 사항](hardware-and-software-requirements-for-installing-sql-server.md)  
+ [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)  
  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]인스턴스를 설치 및 실행하기 위한 최소 하드웨어 및 소프트웨어 요구 사항을 나열합니다.  
   
  [SQL Server 설치에 대한 보안 고려 사항](../../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)  
@@ -62,22 +63,25 @@ ms.locfileid: "68211491"
  이 섹션에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]설치를 위해 필요한 여러 설치 옵션에 대한 개요를 제공합니다.  
   
  [SQL Server 2014 BI 기능 설치](install-sql-server-business-intelligence-features.md)  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 설명서 중 이 섹션에서는 Microsoft BI 플랫폼의 일부인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 설치하는 방법에 대해 설명합니다.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 설명서 중 이 섹션에서는 Microsoft BI 플랫폼의 일부인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 설치하는 방법에 대해 설명합니다.  
   
  [SQL Server 2014로 업그레이드](../../database-engine/install-windows/upgrade-sql-server.md)  
  이 섹션에서는 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전의 인스턴스를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드에 대한 개요를 제공합니다.  
   
  [SQL Server 2014 제거](uninstall-sql-server.md)  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 의 기존 인스턴스를 완전히 제거하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 설치할 수 있도록 시스템을 준비하려면 이 섹션을 참조하십시오.  
+ 
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 의 기존 인스턴스를 완전히 제거하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 설치할 수 있도록 시스템을 준비하려면 이 섹션을 참조하십시오.  
   
  [SQL Server 장애 조치(Failover) 클러스터 설치](../failover-clusters/install/sql-server-failover-cluster-installation.md)  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 설명서 중 이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터를 설치 및 구성하는 방법에 대해 설명합니다.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 설명서 중 이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터를 설치 및 구성하는 방법에 대해 설명합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [빠른 시작의 SQL Server 2014 설치](../../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)   
+## <a name="see-also"></a>참고 항목  
+ [SQL Server 2014의 빠른 시작 설치](../../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)   
  [명령 프롬프트에서 SQL Server 2014 설치](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
- [고가용성 솔루션&#40;SQL Server&#41;](../failover-clusters/high-availability-solutions-sql-server.md)   
- [장애 조치(Failover) 클러스터링을 설치하기 전에](../failover-clusters/install/before-installing-failover-clustering.md)   
- [업그레이드 하려면 SQL Server 2014 설치 마법사를 사용 하 여 &#40;설치&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
+ [고가용성 솔루션 &#40;SQL Server&#41;](../failover-clusters/high-availability-solutions-sql-server.md)   
+ [장애 조치 (Failover) 클러스터링을 설치 하기 전에](../failover-clusters/install/before-installing-failover-clustering.md)   
+ [설치 마법사 &#40;사용 하 여 SQL Server 2014로 업그레이드&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   

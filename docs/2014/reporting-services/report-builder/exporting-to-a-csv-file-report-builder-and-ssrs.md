@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6981b756bacd720284fcd38fd29c9ba371db8a87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107932"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>CSV 파일로 내보내기(보고서 작성기 및 SSRS)
@@ -53,9 +53,9 @@ ms.locfileid: "66107932"
   
 -   사용자 지정 보고서 항목  
   
--   선  
+-   꺾은선형  
   
--   image  
+-   이미지  
   
 -   직사각형  
   
@@ -108,7 +108,7 @@ ms.locfileid: "66107932"
   
 -   중첩된 데이터 영역은 동일한 데이터 블록에 대각선 방향으로 렌더링됩니다.  
   
-#### <a name="formatting"></a>서식  
+#### <a name="formatting"></a>서식 지정  
  숫자 값은 지정된 서식 상태로 렌더링됩니다. Excel은 통화, 백분율, 날짜 등 서식이 지정된 숫자 값을 인식하여 CSV 파일을 가져올 때 각 셀에 적절하게 서식을 지정합니다.  
   
 ### <a name="compliant-mode"></a>규격 모드  
@@ -117,7 +117,7 @@ ms.locfileid: "66107932"
 #### <a name="data-regions"></a>데이터 영역  
  파일의 첫 번째 행에만 열 머리글이 들어 있으며 각 행에는 동일한 개수의 열이 있습니다.  
   
-#### <a name="formatting"></a>서식  
+#### <a name="formatting"></a>서식 지정  
  값에는 서식이 지정되지 않습니다.  
   
 ##  <a name="Interactivity"></a> 상호 작용  
@@ -139,12 +139,12 @@ ms.locfileid: "66107932"
   
 
   
-##  <a name="DeviceInfo"></a> 장치 정보 설정  
+##  <a name="DeviceInfo"></a> 디바이스 정보 설정  
  디바이스 정보 설정을 변경하여 렌더링할 모드, 구분 기호로 사용할 문자, 텍스트 한정자 기본 문자열로 사용할 문자 등 이 렌더러의 일부 기본 설정을 변경할 수 있습니다. 자세한 내용은 [CSV Device Information Settings](../csv-device-information-settings.md)을 참조하세요.  
   
   
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [여러 보고서 렌더링 확장 프로그램의 대화형 기능&#40;보고서 작성기 및 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   

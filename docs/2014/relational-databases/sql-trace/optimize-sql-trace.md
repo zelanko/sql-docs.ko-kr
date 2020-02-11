@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3b29965c33270bbf8d9173c55e96af48b9c4f749
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63135539"
 ---
 # <a name="optimize-sql-trace"></a>SQL 추적 최적화
@@ -43,7 +43,7 @@ ms.locfileid: "63135539"
   
 -   반환되는 이벤트의 수를 제한합니다. [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 를 사용하면 추적을 테이블에 저장하고 최대 행 개수를 설정하여 반환되는 이벤트의 수를 제한할 수 있습니다. 최대 행 개수에 도달한 후에도 추적 결과가 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 화면에 반환되지만 테이블에 결과를 기록하는 데 필요한 비용이 없어집니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [추적 필터링](../sql-trace/filter-a-trace.md)  
   
   

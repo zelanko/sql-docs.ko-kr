@@ -15,17 +15,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 70da82ab5d9ecb37ca08f3cf79801f209f25d86e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774746"
 ---
 # <a name="password-expired"></a>암호 만료
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]가 있는 서버에 연결할 때 제공한 암호가 올바르지만 만료된 경우에 나타납니다. **다음 로그인할 때 반드시 암호 변경** 옵션을 사용하여 만든 새 계정으로 서버에 연결할 때도 나타납니다. **암호 만료** 대화 상자를 사용하여 이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증 로그인의 암호를 변경할 수 있습니다.  
+  인증을 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 사용 하 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 여 서버에 연결할 때 제공한 암호가 올바르지만 만료 된 경우에 나타납니다. 
+  **다음 로그인할 때 반드시 암호 변경** 옵션을 사용하여 만든 새 계정으로 서버에 연결할 때도 나타납니다. 
+  **암호 만료** 대화 상자를 사용하여 이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증 로그인의 암호를 변경할 수 있습니다.  
   
-## <a name="options"></a>변수  
- **Login**  
+## <a name="options"></a>옵션  
+ **로그인**  
  사용 중인 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로그인을 표시합니다.  
   
  **새 암호**  
@@ -34,10 +36,10 @@ ms.locfileid: "62774746"
  **암호 확인**  
  새 암호를 다시 입력하여 제대로 입력했는지 확인합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [강력한 암호](../relational-databases/security/strong-passwords.md)   
  [인증 모드 선택](../relational-databases/security/choose-an-authentication-mode.md)   
  [서버 인증 모드 변경](configure-windows/change-server-authentication-mode.md)   
- [SQL Server에서 사용하는 계정의 암호 변경&#40;SQL Server 구성 관리자&#41;](configure-windows/scm-services-change-the-password-of-the-accounts-used.md)  
+ [SQL Server &#40;SQL Server 구성 관리자에서 사용 하는 계정의 암호를 변경&#41;](configure-windows/scm-services-change-the-password-of-the-accounts-used.md)  
   
   

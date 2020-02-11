@@ -17,17 +17,17 @@ ms.assetid: af64753c-c758-4b68-954b-2c84e3bbd93f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 247928cfbc7e051853bba0c7f49644a1a6203614
-ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68794678"
 ---
 # <a name="sqlgetinfo-returned-values-for-dbase"></a>dBASE에 대한 SQLGetInfo 반환 값
 다음 표에서는 *Finfotype* 인수의 C 언어 #defines와 **SQLGetInfo**에서 반환 된 해당 값을 보여 줍니다. 이 정보는 나열 된 C 언어 #defines을 *Finfotype* 인수의 **SQLGetInfo** 에 전달 하 여 검색할 수 있습니다. **SQLGetInfo**에서 반환 하는 값에 대 한 자세한 내용은 *ODBC 프로그래머 참조*를 참조 하세요.  
   
 > [!NOTE]  
->  **SQLGetInfo** 에서 32 비트 비트 마스크를 반환 하는 경우 세로 막대&#124;()는 비트 or를 나타냅니다.  
+>  **SQLGetInfo** 에서 32 비트 비트 마스크를 반환 하는 경우 세로 막대 (&#124;)는 비트 or를 나타냅니다.  
   
 |InfoType|반환 값|  
 |--------------|--------------------|  
@@ -85,7 +85,7 @@ ms.locfileid: "68794678"
 |SQL_DATA_SOURCE_READ_ONLY|"N" (데이터 소스에 따라 달라 짐)|  
 |SQL_DATABASE_NAME|현재 데이터베이스 디렉터리|  
 |SQL_DATETIME_LITERALS|0|  
-|SQL_DBMS_NAME|"DBASE"|  
+|SQL_DBMS_NAME|DBASE|  
 |SQL_DBMS_VER|다중 값|  
 |SQL_DDL_INDEX|다중 값|  
 |SQL_DEFAULT_TXN_ISOLATION|0|  
@@ -94,7 +94,7 @@ ms.locfileid: "68794678"
 |SQL_DRIVER_HENV|드라이버 관리자에 의해 처리 됩니다.|  
 |SQL_DRIVER_HLIB|드라이버 관리자에 의해 처리 됩니다.|  
 |SQL_DRIVER_HSTMT|드라이버 관리자에 의해 처리 됩니다.|  
-|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
+|SQL_DRIVER_NAME|"OdbcJt32"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
 |SQL_DRIVER_VER|"4.00-*nnnn*" (*nnnn* 은 빌드 날짜를 지정)|  
 |SQL_DROP_ASSERTION|0|  
@@ -110,7 +110,7 @@ ms.locfileid: "68794678"
 |SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1|SQL_CA1_NEXT|  
 |SQL_GETDATA_EXTENSIONS|다중 값|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
-|SQL_IDENTIFIER_CASE|SQL_IC_UPPER (Windows NT에서 디렉터리를 찾을 수 있도록 한정자가 대/소문자를 구분 하 여 반환 됩니다.)|  
+|SQL_IDENTIFIER_CASE|SQL_IC_UPPER (Windows NT에서 디렉터리를 찾을 수 있도록 한정자가 혼합 된 경우에 반환 됩니다.)|  
 |SQL_IDENTIFIER_QUOTE_CHAR|"\`" (후방 따옴표)|  
 |SQL_KEYWORDS|다중 값|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
@@ -141,7 +141,7 @@ ms.locfileid: "68794678"
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|다중 값|  
-|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ 준수|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
 |SQL_ODBC_VER|드라이버 관리자에서|  
 |SQL_OJ_CAPABILITIES|다중 값|  
@@ -155,8 +155,8 @@ ms.locfileid: "68794678"
 |SQL_SCHEMA_USAGE|0|  
 |SQL_SCROLL_OPTIONS|다중 값|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
-|SQL_SERVER_NAME|"DBASE"|  
-|SQL_SPECIAL_CHARACTERS|"~\`\@}{\?" ';:/<,.!\>'#$%^&\*\_-+=\\ \[]&#124;"|  
+|SQL_SERVER_NAME|DBASE|  
+|SQL_SPECIAL_CHARACTERS|\`\@#$%^&"~\*\? / } {\> " ';:<,.! '\_-+=\\ \[] &#124; "|  
 |SQL_STRING_FUNCTIONS|다중 값|  
 |SQL_SUBQUERIES|다중 값|  
 |SQL_SYSTEM_FUNCTIONS|0|  

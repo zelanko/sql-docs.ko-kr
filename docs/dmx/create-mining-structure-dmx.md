@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 87b27f9e1c5927392b4ea221dcb6b7468a42ff9c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892821"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  데이터베이스에 새 마이닝 구조를 만들고 필요에 따라 학습 및 테스트 파티션을 정의합니다. 마이닝 구조를 만든 후에는 [ALTER 마이닝 structure &#40;&#41; DMX](../dmx/alter-mining-structure-dmx.md) 문을 사용 하 여 마이닝 구조에 모델을 추가할 수 있습니다.  
+  데이터베이스에 새 마이닝 구조를 만들고 필요에 따라 학습 및 테스트 파티션을 정의합니다. 마이닝 구조를 만든 후에는 [ALTER 마이닝 structure &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md) 문을 사용 하 여 마이닝 구조에 모델을 추가할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,16 +34,16 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 ```  
   
 ## <a name="arguments"></a>인수  
- *structure*  
+ *구조체나*  
  구조의 고유한 이름입니다.  
   
  *열 정의 목록*  
  쉼표로 구분된 열 정의 목록입니다.  
   
- *holdout-maxpercent*  
+ *홀드 아웃-maxpercent*  
  테스트용으로 따로 보관하는 데이터의 비율을 나타내는 1에서 100 사이의 정수입니다.  
   
- *holdout-maxcases*  
+ *홀드 아웃-maxcases*  
  테스트에 사용할 사례의 최대 수를 나타내는 정수입니다.  
   
  최대 사례에 지정된 값이 입력 사례 수보다 크면 모든 입력 사례가 테스트에 사용되며 경고가 발생합니다.  
@@ -59,7 +59,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 > [!NOTE]  
 >  파티션을 다시 만들 수 있도록 하려면 초기값을 지정해야 합니다.  
   
- 기본값: 반복 가능 (0)  
+ 기본값: REPEATABLE(0)  
   
 ## <a name="remarks"></a>설명  
  마이닝 구조 정의는 열 목록을 지정하고 필요에 따라 열 간의 계층 관계를 지정한 다음 역시 필요에 따라 마이닝 구조를 학습 및 테스트 데이터 집합으로 분할하는 작업으로 구성됩니다.  
@@ -95,18 +95,18 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  구조 열을 정의하는 데 사용할 수 있는 데이터 형식, 내용 유형, 열 배포 및 모델링 플래그의 목록은 다음 항목을 참조하십시오.  
   
--   [데이터 형식&#40;데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
+-   [데이터 마이닝 &#40;데이터 형식&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
   
--   [콘텐츠 형식&#40;데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
+-   [데이터 마이닝&#41;&#40;내용 유형](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
   
--   [열 배포&#40;데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
+-   [데이터 마이닝&#41;&#40;열 배포](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
   
--   [모델링 플래그&#40;데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
+-   [데이터 마이닝&#41;&#40;모델링 플래그](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
   
  열 하나에 대해 여러 개의 모델링 플래그 값을 정의할 수 있습니다. 단, 하나의 열에는 각각 하나의 내용 유형과 데이터 형식만 있을 수 있습니다.  
   
 ### <a name="column-relationships"></a>열 관계  
- 열 정의 문에 절을 추가하여 두 열 간의 관계를 설명할 수 있습니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 다음과 같은 \<열 관계 > 절을 사용할 수 있습니다.  
+ 열 정의 문에 절을 추가하여 두 열 간의 관계를 설명할 수 있습니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 다음과 같은 \<열 관계> 절을 사용할 수 있습니다.  
   
  **관련 항목**  
  값 계층 구조를 나타냅니다. RELATED TO 열의 대상은 중첩 테이블의 키 열, 사례 행의 불연속 값 열 또는 RELATED TO 절이 있는 다른 열(중첩된 열을 나타냄)일 수 있습니다.  
@@ -119,7 +119,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 > [!NOTE]  
 >  **ALTER 마이닝 STRUCTURE** 문은 홀드 아웃을 지원 하지 않습니다.  
   
- 홀드아웃 매개 변수는 최대 3개까지 지정할 수 있습니다. 최대 홀드아웃 사례 수와 홀드아웃 비율을 모두 지정하면 최대 사례 제한에 도달할 때까지 사례 비율이 예약됩니다. 홀드 아웃 백분율을 정수로, **PERCENT** 키워드를 차례로 지정 하 고, 사례 키워드 뒤에 정수로 최대 사례 수를 지정 합니다. 다음 예에서 볼 수 있듯이 순서에 관계없이 조건을 결합할 수 있습니다.  
+ 홀드아웃 매개 변수는 최대 3개까지 지정할 수 있습니다. 최대 홀드아웃 사례 수와 홀드아웃 비율을 모두 지정하면 최대 사례 제한에 도달할 때까지 사례 비율이 예약됩니다. 홀드 아웃 백분율을 정수로, **PERCENT** 키워드를 차례로 지정 하 고, **사례 키워드 뒤에 정수** 로 최대 사례 수를 지정 합니다. 다음 예에서 볼 수 있듯이 순서에 관계없이 조건을 결합할 수 있습니다.  
   
 ```  
 WITH HOLDOUT (20 PERCENT)   
@@ -136,8 +136,8 @@ WITH HOLDOUT (2000 CASES OR 20 PERCENT)
 ## <a name="examples"></a>예  
  다음 예에서는 DMX를 사용하여 홀드아웃이 있는 마이닝 구조를 만드는 방법을 보여 줍니다.  
   
-### <a name="example-1-adding-a-structure-with-no-training-set"></a>예제 1: 학습 집합이 없는 구조 추가  
- 다음 예에서는 연결된 마이닝 모델을 만들지 않고 홀드아웃 사용 없이 `New Mailing`이라는 새 마이닝 구조를 만듭니다. 구조에 마이닝 모델을 추가 하는 방법에 대 한 자세한 내용은 [ALTER 마이닝 &#40;structure&#41;DMX](../dmx/alter-mining-structure-dmx.md)를 참조 하세요.  
+### <a name="example-1-adding-a-structure-with-no-training-set"></a>예 1: 학습 집합을 포함하지 않는 구조 추가  
+ 다음 예에서는 연결된 마이닝 모델을 만들지 않고 홀드아웃 사용 없이 `New Mailing`이라는 새 마이닝 구조를 만듭니다. 구조에 마이닝 모델을 추가 하는 방법에 대 한 자세한 내용은 [ALTER 마이닝 structure &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)를 참조 하세요.  
   
 ```  
 CREATE MINING STRUCTURE [New Mailing]  
@@ -149,7 +149,7 @@ CREATE MINING STRUCTURE [New Mailing]
 )  
 ```  
   
-### <a name="example-2-specifying-holdout-percentage-and-seed"></a>예제 2: 홀드 아웃 비율 및 초기값 지정  
+### <a name="example-2-specifying-holdout-percentage-and-seed"></a>예 2: 홀드아웃 비율 및 초기값 지정  
  다음 절은 열 정의 목록 이후에 추가되어 마이닝 구조와 관련된 모든 마이닝 모델을 테스트하는 데 사용할 수 있는 데이터 집합을 정의할 수 있습니다. 다음 문은 최대 사례 수에 제한 없이 전체 입력 사례의 25%에 해당하는 테스트 집합을 만듭니다. 파티션을 만드는 초기값으로 5000이 사용됩니다. 초기값을 지정하는 경우 기본 데이터가 변경되지 않으면 마이닝 구조를 처리할 때마다 테스트 집합에 대해 동일한 사례가 선택됩니다.  
   
 ```  
@@ -163,7 +163,7 @@ CREATE MINING STRUCTURE [New Mailing]
 WITH HOLDOUT(25 PERCENT) REPEATABLE(5000)  
 ```  
   
-### <a name="example-3-specifying-holdout-percentage-and-max-cases"></a>예제 3: 홀드 아웃 비율 및 최대 사례 지정  
+### <a name="example-3-specifying-holdout-percentage-and-max-cases"></a>예 3: 홀드아웃 비율 및 최대 사례 지정  
  다음 절은 전체 입력 사례의 25%와 2000개의 사례 중 더 적은 쪽을 포함하는 테스트 집합을 만듭니다. 초기값으로 0이 지정되므로 입력 사례의 샘플링을 시작하는 데 사용되는 초기값은 마이닝 구조의 이름을 사용하여 생성됩니다.  
   
 ```  
@@ -177,9 +177,9 @@ CREATE MINING STRUCTURE [New Mailing]
 WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 마이닝 확장 &#40;DMX&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
  [데이터 마이닝 확장 &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
- [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
+ [데이터 마이닝 확장 &#40;DMX&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

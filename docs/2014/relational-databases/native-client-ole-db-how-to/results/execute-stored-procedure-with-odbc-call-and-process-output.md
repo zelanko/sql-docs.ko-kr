@@ -1,5 +1,5 @@
 ---
-title: 실행 (ODBC CALL 구문 사용 하 여) 저장된 프로시저 및 프로세스 반환 코드와 출력 매개 변수 (OLE DB) | Microsoft Docs
+title: 저장 프로시저 실행 (ODBC CALL 구문 사용) 및 반환 코드 및 출력 매개 변수 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,17 +14,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 609322d265d18345e7ef39b4598cb6e1c226c97a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206688"
 ---
 # <a name="execute-a-stored-procedure-using-odbc-call-syntax-and-process-return-codes-and-output-parameters-ole-db"></a>저장 프로시저 실행(ODBC CALL 구문 사용) 및 반환 코드와 출력 매개 변수 처리(OLE DB)
+  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 저장 프로시저는 정수 반환 코드 및 출력 매개 변수를 사용할 수 있습니다. 반환 코드와 출력 매개 변수는 서버의 마지막 패킷으로 전달되지 않으므로 행 집합이 완전히 해제될 때까지 애플리케이션에서 사용할 수 없습니다. 명령이 여러 결과를 반환하는 경우 `IMultipleResults::GetResult`에서 DB_S_NORESULT를 반환하거나 `IMultipleResults` 인터페이스가 완전히 해제될 때 출력 매개 변수 데이터를 사용할 수 있습니다.  
   
 > [!IMPORTANT]  
->  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
+>  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지 해야 하는 경우에는 [Win32 CRYPTO API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용 하 여 자격 증명을 암호화 해야 합니다.  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>반환 코드 및 출력 매개 변수를 처리하려면  
   
@@ -32,11 +33,14 @@ ms.locfileid: "68206688"
   
 2.  DBBINDING 구조의 배열을 사용하여 바인딩 집합을 매개 변수 작성자마다 하나씩 만듭니다.  
   
-3.  `IAccessor::CreateAccessor` 메서드를 사용하여 정의된 매개 변수에 대한 접근자를 만듭니다. `CreateAccessor`는 바인딩 집합에서 접근자를 만듭니다.  
+3.  
+  `IAccessor::CreateAccessor` 메서드를 사용하여 정의된 매개 변수에 대한 접근자를 만듭니다. 
+  `CreateAccessor`는 바인딩 집합에서 접근자를 만듭니다.  
   
 4.  DBPARAMS 구조를 채웁니다.  
   
-5.  `Execute` 명령을 호출(이 경우 저장 프로시저 호출)합니다.  
+5.  
+  `Execute` 명령을 호출(이 경우 저장 프로시저 호출)합니다.  
   
 6.  행 집합을 처리하고 `IRowset::Release` 메서드를 사용하여 해제합니다.  
   
@@ -353,7 +357,7 @@ DROP PROCEDURE myProc
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [결과 처리 방법 도움말 항목&#40;OLE DB&#41;](processing-results-how-to-topics-ole-db.md)  
+## <a name="see-also"></a>참고 항목  
+ [결과 처리 방법 도움말 항목 &#40;OLE DB&#41;](processing-results-how-to-topics-ole-db.md)  
   
   

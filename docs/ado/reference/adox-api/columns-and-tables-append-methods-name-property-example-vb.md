@@ -1,5 +1,5 @@
 ---
-title: Columns 및 Tables Append 메서드, 속성 예제 (VB) 이름을 | Microsoft Docs
+title: Columns 및 Tables Append 메서드, Name 속성 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 678e5546-df5d-4cd0-bfe9-6cf13cb385c0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 898efdf4fe33ec3ce08028bd00b5654947048255
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966866"
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vb"></a>Columns 및 Tables Append 메서드, Name 속성 예제 (VB)
-다음 코드를 새 테이블을 만드는 방법을 보여 줍니다.  
+다음 코드에서는 새 테이블을 만드는 방법을 보여 줍니다.  
   
 ```  
 ' BeginCreateTableVB  
@@ -66,9 +66,9 @@ End Sub
 ' EndCreateTableVB  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [Append 메서드 (ADOX 열)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append 메서드 (ADOX 테이블)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
+## <a name="see-also"></a>참고 항목  
+ [Append 메서드 (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
+ [Append 메서드 (ADOX Tables)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Column 개체 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [Columns 컬렉션 (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Name 속성 (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   

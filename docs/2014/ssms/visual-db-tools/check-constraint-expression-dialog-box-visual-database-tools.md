@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5e763c930a37e90d1bf23c186fa5db8a16c5e971
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067889"
 ---
 # <a name="check-constraint-expression-dialog-box-visual-database-tools"></a>CHECK 제약 조건 식 대화 상자(Visual Database Tools)
@@ -61,12 +61,12 @@ NOT (payment_method = 'credit card') OR
 |constant|숫자 또는 문자 데이터 같은 리터럴 값입니다. 문자 데이터는 작은따옴표(')로 묶어야 합니다.|  
 |column_name|열을 지정합니다.|  
 |function|기본 제공 함수입니다.|  
-|적용한 후|산술 연산자, 비트 연산자, 비교 연산자 또는 문자열 연산자입니다.|  
+|operator|산술 연산자, 비트 연산자, 비교 연산자 또는 문자열 연산자입니다.|  
 |AND|두 식을 연결하기 위해 부울 식에 사용됩니다. 두 식이 모두 참인 경우에 결과를 반환합니다.<br /><br /> 문 하나에 AND와 OR를 모두 사용하는 경우 AND가 먼저 처리됩니다. 계산 순서를 변경하려면 괄호를 사용합니다.|  
 |또는|여러 조건을 연결하기 위해 부울 식에 사용됩니다. 한 조건이라도 참이면 결과를 반환합니다.<br /><br /> 문 하나에 AND와 OR를 모두 사용하는 경우 OR는 AND보다 늦게 처리됩니다. 계산 순서를 변경하려면 괄호를 사용합니다.|  
 |NOT|모든 부울 식을 부정합니다. 여기에는 LIKE, NULL, BETWEEN, IN 및 EXISTS 등과 같은 키워드가 포함될 수 있습니다.<br /><br /> 문 하나에 논리 연산자를 두 개 이상 사용하는 경우 NOT은 제일 먼저 처리됩니다. 계산 순서를 변경하려면 괄호를 사용합니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Unique 제약 조건 및 Check 제약 조건](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
  [UNIQUE 제약 조건 만들기](../../relational-databases/tables/create-unique-constraints.md)  
   

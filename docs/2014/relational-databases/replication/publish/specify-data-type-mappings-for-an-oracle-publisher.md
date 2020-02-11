@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99e1d3377cb5ed4afd4577462e0b436bb16d2fee
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68941094"
 ---
 # <a name="specify-data-type-mappings-for-an-oracle-publisher"></a>Oracle 게시자에 대한 데이터 형식 매핑 지정
@@ -26,14 +26,15 @@ ms.locfileid: "68941094"
   
  **항목 내용**  
   
--   **다음을 사용하여 Oracle게시자에 대한 데이터 형식 매핑을 지정하려면**  
+-   **다음을 사용 하 여 Oracle 게시자에 대 한 데이터 형식 매핑을 지정 하려면**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
- **아티클 속성 - \<Article>** 대화 상자의 **데이터 매핑** 탭에서 데이터 형식 매핑을 지정합니다. 이 옵션은 새 게시 마법사의 **아티클** 페이지 및 **게시 속성 - \<게시>** 대화 상자에서 사용할 수 있습니다. 마법사 사용 및 대화 상자 액세스에 대한 자세한 내용은 [Oracle 데이터베이스에서 게시 만들기](create-a-publication-from-an-oracle-database.md) 및 [게시 속성 보기 및 수정](view-and-modify-publication-properties.md)을 참조하세요.  
+ 
+  **아티클 속성 - **Article>** 대화 상자의 \<데이터 매핑** 탭에서 데이터 형식 매핑을 지정합니다. 이 옵션은 새 게시 마법사의 **아티클** 페이지 및 **게시 속성 - \<게시>** 대화 상자에서 사용할 수 있습니다. 마법사 사용 및 대화 상자 액세스에 대한 자세한 내용은 [Oracle 데이터베이스에서 게시 만들기](create-a-publication-from-an-oracle-database.md) 및 [게시 속성 보기 및 수정](view-and-modify-publication-properties.md)을 참조하세요.  
   
 #### <a name="to-specify-a-data-type-mapping"></a>데이터 형식 매핑을 지정하려면  
   
@@ -41,47 +42,54 @@ ms.locfileid: "68941094"
   
 2.  **선택한 테이블 아티클 속성 설정**을 클릭합니다.  
   
-3.  **아티클 속성 - \<Article>** 대화 상자의 **데이터 매핑** 탭에서 **구독자 데이터 형식** 열의 매핑을 선택합니다.  
+3.  
+  **아티클 속성 - **Article>** 대화 상자의 \<데이터 매핑** 탭에서 **구독자 데이터 형식** 열의 매핑을 선택합니다.  
   
     -   하나의 매핑만 사용할 수 있는 데이터 형식의 경우 속성 표의 열이 읽기 전용입니다.  
   
-    -   일부 형식의 경우 두 개 이상의 매핑을 선택할 수 있습니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 는 애플리케이션에 다른 매핑이 필요 하지 않는 한 기본 매핑을 사용할 것을 권장합니다. 자세한 내용은 [Data Type Mapping for Oracle Publishers](../non-sql/data-type-mapping-for-oracle-publishers.md)을 참조하세요.  
+    -   일부 형식의 경우 두 개 이상의 매핑을 선택할 수 있습니다. 
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 는 애플리케이션에 다른 매핑이 필요 하지 않는 한 기본 매핑을 사용할 것을 권장합니다. 자세한 내용은 [Data Type Mapping for Oracle Publishers](../non-sql/data-type-mapping-for-oracle-publishers.md)을 참조하세요.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
- 복제 저장 프로시저를 사용하여 사용자 지정 데이터 형식 매핑을 프로그래밍 방식으로 지정할 수 있습니다. 또한 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 와[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외의 DBMS(데이터베이스 관리 시스템) 사이에 데이터 형식을 매핑할 때 사용되는 기본 매핑을 설정할 수 있습니다. 자세한 내용은 [Data Type Mapping for Oracle Publishers](../non-sql/data-type-mapping-for-oracle-publishers.md)을 참조하세요.  
+ 복제 저장 프로시저를 사용하여 사용자 지정 데이터 형식 매핑을 프로그래밍 방식으로 지정할 수 있습니다. 또한와 DBMS ( [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스 관리 시스템) 간에 데이터 형식을 매핑할 때 사용 되는 기본 매핑을 설정할 수 있습니다. 자세한 내용은 [Data Type Mapping for Oracle Publishers](../non-sql/data-type-mapping-for-oracle-publishers.md)을 참조하세요.  
   
 #### <a name="to-define-custom-data-type-mappings-when-creating-an-article-belonging-to-an-oracle-publication"></a>Oracle 게시에 속한 아티클을 작성할 때 사용자 지정 데이터 형식 매핑을 정의하려면  
   
 1.  Oracle 게시가 아직 없는 경우 만듭니다.  
   
-2.  배포자에서 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)을 실행합니다. **Use_default_datatypes\@** 에 값 **0** 을 지정 합니다. 자세한 내용은 [아티클을 정의](define-an-article.md)을 참조하세요.  
+2.  배포자에서 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)을 실행합니다. 
+  **
+  **use_default_datatypes**에 \@0** 값을 지정합니다. 자세한 내용은 [아티클을 정의](define-an-article.md)을 참조하세요.  
   
 3.  배포자에서 [sp_helparticlecolumns](/sql/relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql) 를 실행하여 게시된 아티클의 열에 대한 기존 매핑을 확인합니다.  
   
-4.  배포자에서 [sp_changearticlecolumndatatype](/sql/relational-databases/system-stored-procedures/sp-changearticlecolumndatatype-transact-sql)을 실행합니다. 게시 된 열을 정의 하는  **\@게시**,  **\@아티클**및  **\@열** 뿐만 아니라  **\@게시자**에 대 한 Oracle 게시자의 이름을 지정 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 해당 하는 경우  **\@형식**  **에대해매핑할데이터형식의이름을지정하고길이,전체자릿수및소수자릿수를지정합니다.\@**  **\@**  **\@**  
+4.  배포자에서 [sp_changearticlecolumndatatype](/sql/relational-databases/system-stored-procedures/sp-changearticlecolumndatatype-transact-sql)을 실행합니다. 게시 된 열을 정의 하는 ** \@게시**, ** \@아티클**및 ** \@열** 뿐만 아니라 ** \@게시자**에 대 한 Oracle 게시자의 이름을 지정 합니다. 해당 하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 경우 ** \@형식**에 대해 매핑할 데이터 형식의 이름을 지정 하 고 ** \@길이**, ** \@전체 자릿수**및 ** \@소수 자릿수**를 지정 합니다.  
   
 5.  배포자에서 [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql)를 실행합니다. 이렇게 하면 Oracle 게시에서 스냅샷을 생성하는 데 사용되는 뷰가 만들어집니다.  
   
 #### <a name="to-specify-a-mapping-as-the-default-mapping-for-a-data-type"></a>매핑을 데이터 형식에 대한 기본 매핑으로 지정하려면  
   
-1.  (옵션) 데이터베이스의 배포자에서 [sp_getdefaultdatatypemapping](/sql/relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql)을 실행합니다. **\@Source_dbms**, **source_type ,\@** **destination_dbms, destination_version및원본dbms를식별하는데필요한기타\@** 매개 변수를 지정 합니다.  **\@** 대상 DBMS의 현재 매핑된 데이터 형식에 대한 정보는 출력 매개 변수를 사용하여 반환됩니다.  
+1.  (옵션) 데이터베이스의 배포자에서 [sp_getdefaultdatatypemapping](/sql/relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql)을 실행합니다. ** \@Source_dbms**, ** \@source_type** **, \@destination_dbms** **, \@destination_version**및 원본 dbms를 식별 하는 데 필요한 기타 매개 변수를 지정 합니다. 대상 DBMS의 현재 매핑된 데이터 형식에 대한 정보는 출력 매개 변수를 사용하여 반환됩니다.  
   
-2.  (옵션) 데이터베이스의 배포자에서 [sp_helpdatatypemap](/sql/relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql)을 실행합니다. **\@Source_dbms** 및 결과 집합을 필터링 하는 데 필요한 기타 매개 변수를 지정 합니다. 결과 집합에서 원하는 매핑에 대한 **mapping_id** 의 값을 확인합니다.  
+2.  (옵션) 데이터베이스의 배포자에서 [sp_helpdatatypemap](/sql/relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql)을 실행합니다. 결과 집합을 필터링 하는 데 필요한 ** \@source_dbms** 및 기타 매개 변수를 지정 합니다. 결과 집합에서 원하는 매핑에 대한 **mapping_id** 의 값을 확인합니다.  
   
 3.  데이터베이스의 배포자에서 [sp_setdefaultdatatypemapping](/sql/relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql)을 실행합니다.  
   
-    -   2 단계에서 얻은 **mapping_id** 의 원하는 값을 알고 있는 경우  **\@mapping_id**에 대해 지정 합니다.  
+    -   2단계에서 얻은 **mapping_id**의 원하는 값을 아는 경우 **\@mapping_id**에 이 값을 지정합니다.  
   
-    -   **Mapping_id**를 모르는 경우  **\@source_dbms**,  **\@source_type**,  **\@destination_dbms**,  **destination_type및기타매개변수를지정합니다.\@** 기존 매핑을 식별 하는 데 필요한 매개 변수입니다.  
+    -   
+  **mapping_id**를 모르는 경우 **\@source_dbms**, **\@source_type**, **\@destination_dbms**, **\@destination_type** 매개 변수 및 기존 매핑을 식별하는 데 필요한 기타 매개 변수를 지정합니다.  
   
 #### <a name="to-find-valid-data-types-for-a-given-oracle-data-type"></a>지정된 Oracle 데이터 형식에 대한 유효한 데이터 형식을 찾으려면  
   
-1.  데이터베이스의 배포자에서 [sp_helpdatatypemap](/sql/relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql)을 실행합니다. **Source_dbms\@** 에 **ORACLE** 값을 지정 하 고 결과 집합을 필터링 하는 데 필요한 기타 매개 변수를 지정 합니다.  
+1.  데이터베이스의 배포자에서 [sp_helpdatatypemap](/sql/relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql)을 실행합니다. 
+  **
+  **source_dbms**의 값을 \@ORACLE**로 지정하고 결과 집합을 필터링하는 데 필요한 기타 매개 변수를 지정합니다.  
   
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
- 다음 예에서는 열을 Oracle 데이터 형식 NUMBER로 변경하여 기본 `numeric` 데이터 형식 대신 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 숫자 데이터 형식 `float`(38,38)에 매핑되도록 합니다.  
+ 다음 예에서는 열을 Oracle 데이터 형식 NUMBER로 변경하여 기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식 대신 `numeric` 숫자 데이터 형식 `float`(38,38)에 매핑되도록 합니다.  
   
  [!code-sql[HowTo#sp_changecolumndatatype](../../../snippets/tsql/SQL15/replication/howto/tsql/datatypemapping.sql#sp_changecolumndatatype)]  
   
@@ -93,8 +101,8 @@ ms.locfileid: "68941094"
   
  [!code-sql[HowTo#sp_helpcolumndatatype_number](../../../snippets/tsql/SQL15/replication/howto/tsql/datatypemapping.sql#sp_helpcolumndatatype_number)]  
   
-## <a name="see-also"></a>관련 항목  
- [Data Type Mapping for Oracle Publishers](../non-sql/data-type-mapping-for-oracle-publishers.md)   
+## <a name="see-also"></a>참고 항목  
+ [Oracle 게시자에 대 한 데이터 형식 매핑](../non-sql/data-type-mapping-for-oracle-publishers.md)   
  [다른 유형의 데이터베이스 복제](../non-sql/heterogeneous-database-replication.md)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [Oracle 게시자 구성](../non-sql/configure-an-oracle-publisher.md)  

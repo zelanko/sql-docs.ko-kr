@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5f24c78e82d437ab7e2147122c5065f0b7274d5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105228"
 ---
 # <a name="lookupset-function-report-builder-and-ssrs"></a>LookupSet 함수(보고서 작성기 및 SSRS)
@@ -32,24 +32,26 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 #### <a name="parameters"></a>매개 변수  
  *source_expression*  
- (`Variant`) 현재 범위에서 평가되고, 조회할 키 또는 이름을 지정하는 식입니다. `=Fields!ID.Value`) 을 입력합니다.  
+ (`Variant`) 현재 범위에서 평가되고, 조회할 키 또는 이름을 지정하는 식입니다. `=Fields!ID.Value`)을 입력합니다.  
   
  *destination_expression*  
- (`Variant`) 데이터 세트의 각 행에 대해 평가되고, 일치시킬 키 또는 이름을 지정하는 식입니다. `=Fields!CustomerID.Value`) 을 입력합니다.  
+ (`Variant`) 데이터 세트의 각 행에 대해 평가되고, 일치시킬 키 또는 이름을 지정하는 식입니다. `=Fields!CustomerID.Value`)을 입력합니다.  
   
  *result_expression*  
- (`Variant`) 데이터 집합의 행에 대해 평가 되는 식을 위치 *source_expression* = *destination_expression*, 검색할 값을 지정 하 고 있습니다. `=Fields!PhoneNumber.Value`) 을 입력합니다.  
+ (`Variant`) *Source_expression* = *destination_expression*되 고 검색할 값을 지정 하는 데이터 집합의 행에 대해 평가 되는 식입니다. `=Fields!PhoneNumber.Value`)을 입력합니다.  
   
- *데이터 집합(dataset)*  
+ *데이터 세트*  
  보고서의 데이터 세트 이름을 지정하는 상수입니다. 예를 들면 "ContactInformation"입니다.  
   
 ## <a name="return"></a>반환 값  
- `VariantArray`를 반환하거나, 일치하는 항목이 없으면 `Nothing`을 반환합니다.  
+ 
+  `VariantArray`를 반환하거나, 일치하는 항목이 없으면 `Nothing`을 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
- `LookupSet`을 사용하여 일 대 다 관계의 이름/값 쌍에 대한 지정된 데이터 세트에서 값 집합을 검색할 수 있습니다. 예를 들어 테이블에 있는 고객 식별자의 경우 `LookupSet`을 사용하여 데이터 영역에 바인딩되지 않은 데이터 세트에서 해당 고객에 대해 연결된 전화 번호를 모두 검색할 수 있습니다.  
+## <a name="remarks"></a>설명  
+ 
+  `LookupSet`을 사용하여 일 대 다 관계의 이름/값 쌍에 대한 지정된 데이터 세트에서 값 집합을 검색할 수 있습니다. 예를 들어 테이블에 있는 고객 식별자의 경우 `LookupSet`을 사용하여 데이터 영역에 바인딩되지 않은 데이터 세트에서 해당 고객에 대해 연결된 전화 번호를 모두 검색할 수 있습니다.  
   
- `LookupSet`에서는 다음을 수행합니다.  
+ `LookupSet`는 다음을 수행 합니다.  
   
 -   현재 범위에서 원본 식을 평가합니다.  
   
@@ -59,11 +61,12 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 -   결과 식 값의 집합을 반환합니다.  
   
- 일 대 일 관계의 이름/값 쌍을 포함하는 데이터 집합에서 지정된 이름에 대한 단일 값을 검색하려면 [Lookup 함수&#40;보고서 작성기 및 SSRS&#41;](report-builder-functions-lookup-function.md)를 사용합니다. 호출할 `Lookup` 값의 집합을 사용 하 여 [Multilookup 함수 &#40;보고서 작성기 및 SSRS&#41;](report-builder-functions-multilookup-function.md)합니다.  
+ 일 대 일 관계의 이름/값 쌍을 포함하는 데이터 세트에서 지정된 이름에 대한 단일 값을 검색하려면 [Lookup 함수&#40;보고서 작성기 및 SSRS&#41;](report-builder-functions-lookup-function.md)을 사용합니다. 값 집합 `Lookup` 에 대해를 호출 하려면 [Multilookup 함수 &#40;보고서 작성기 및 SSRS&#41;](report-builder-functions-multilookup-function.md)를 사용 합니다.  
   
- 다음과 같은 제한 사항이 있습니다.  
+ 다음 제한 사항이 적용됩니다.  
   
--   `LookupSet`은 모든 필터 식이 적용된 후 평가됩니다.  
+-   
+  `LookupSet`은 모든 필터 식이 적용된 후 평가됩니다.  
   
 -   조회 수준이 하나만 지원됩니다. 원본, 대상 또는 결과 식에는 조회 함수에 대한 참조가 포함될 수 없습니다.  
   
@@ -71,7 +74,8 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 -   원본, 대상 및 결과 식에는 보고서 또는 그룹 변수에 대한 참조가 포함될 수 없습니다.  
   
--   `LookupSet`은 다음 보고서 항목에 대한 식으로 사용할 수 없습니다.  
+-   
+  `LookupSet`은 다음 보고서 항목에 대한 식으로 사용할 수 없습니다.  
   
     -   데이터 원본에 대한 동적 연결 문자열  
   
@@ -90,18 +94,20 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ## <a name="example"></a>예제  
  다음 예에서는 영업 지역 식별자 TerritoryGroupID를 포함하는 데이터 세트에 테이블이 바인딩되어 있다고 가정합니다. "Stores"라는 별도의 데이터 세트에는 지역의 모든 매장 목록과 지역 식별자 ID 및 매장 이름 StoreName이 포함되어 있습니다.  
   
- 다음 식에서 `LookupSet`은 TerritoryGroupID 값을 "Stores" 데이터 집합에 있는 각 행의 ID와 비교합니다. 일치 항목을 찾을 때마다 해당 행에 대한 StoreName 필드의 값이 결과 집합에 추가됩니다.  
+ 다음 식에서 `LookupSet`은 TerritoryGroupID 값을 &quot;Stores&quot; 데이터 세트에 있는 각 행의 ID와 비교합니다. 일치 항목을 찾을 때마다 해당 행에 대한 StoreName 필드의 값이 결과 집합에 추가됩니다.  
   
 ```  
 =LookupSet(Fields!TerritoryGroupID.Value, Fields!ID.Value, Fields!StoreName.Value, "Stores")  
 ```  
   
 ## <a name="example"></a>예제  
- `LookupSet`은 개체 컬렉션을 반환하므로 결과 식을 입력란에 직접 표시할 수 없습니다. 컬렉션에 있는 각 개체의 값을 문자열로 연결할 수 있습니다.  
+ 
+  `LookupSet`은 개체 컬렉션을 반환하므로 결과 식을 입력란에 직접 표시할 수 없습니다. 컬렉션에 있는 각 개체의 값을 문자열로 연결할 수 있습니다.  
   
- [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 함수 `Join`을 사용하여 개체 집합에서 구분된 문자열을 만들 수 있습니다. 개체를 한 줄로 결합하려면 쉼표를 구분 기호로 사용합니다. 일부 렌더러에서는 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 줄 바꿈(`vbCrLF`)을 구분 기호로 사용하여 각 값을 새 줄에 나열할 수 있습니다.  
+ 
+  [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 함수 `Join`을 사용하여 개체 집합에서 구분된 문자열을 만들 수 있습니다. 개체를 한 줄로 결합하려면 쉼표를 구분 기호로 사용합니다. 일부 렌더러에서는 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 줄 바꿈(`vbCrLF`)을 구분 기호로 사용하여 각 값을 새 줄에 나열할 수 있습니다.  
   
- 텍스트 상자에 대 한 Value 속성으로 사용할 경우 다음 식을 사용 하 여 `Join` 목록을 만듭니다.  
+ 다음 식을 입력란의 Value 속성으로 사용 하는 경우를 사용 `Join` 하 여 목록을 만듭니다.  
   
 ```  
 =Join(LookupSet(Fields!TerritoryGroupID.Value, Fields!ID.Value, Fields!StoreName.Value, "Stores"),",")  
@@ -146,7 +152,7 @@ End Function
 =Code.MakeList(LookupSet(Fields!TerritoryGroupID.Value, Fields!ID.Value, Fields!StoreName.Value, "Stores"))  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)   

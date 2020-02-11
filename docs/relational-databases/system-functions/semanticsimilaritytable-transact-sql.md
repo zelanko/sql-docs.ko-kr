@@ -1,5 +1,5 @@
 ---
-title: semanticsimilaritytable (TRANSACT-SQL) | Microsoft Docs
+title: semanticsimilaritytable (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 24193b3474b1088a87acb5bdd15a5c5c4459f44d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68140554"
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68140554"
   
  SELECT 문의 FROM 절에서 이 행 집합 함수를 일반 테이블 이름처럼 참조할 수 있습니다.  
 
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -50,7 +50,7 @@ SEMANTICSIMILARITYTABLE
   
  이 이름은 1~4개의 부분으로 구성된 이름일 수 있지만 원격 서버 이름은 사용할 수 없습니다.  
   
- **column**  
+ **열의**  
  결과가 반환될 인덱싱된 열의 이름입니다. 열에 의미 체계 인덱싱이 사용하도록 설정되어 있어야 합니다.  
   
  **column_list**  
@@ -69,18 +69,18 @@ SEMANTICSIMILARITYTABLE
   
  결과가 둘 이상의 열에서 요청된 경우에는 열 단위로 대응 문서가 반환됩니다.  
   
-|Column_name|type|설명|  
+|Column_name|Type|Description|  
 |------------------|----------|-----------------|  
 |**source_column_id**|**int**|유사한 문서를 찾는 데 사용된 원본 문서의 열 ID입니다.<br /><br /> column_id에서 열 이름을 검색하거나 열 이름에서 column_id를 검색하는 방법에 대한 자세한 내용은 COL_NAME 및 COLUMNPROPERTY 함수를 참조하십시오.|  
 |**matched_column_id**|**int**|유사한 문서를 찾은 열의 ID입니다.<br /><br /> column_id에서 열 이름을 검색하거나 열 이름에서 column_id를 검색하는 방법에 대한 자세한 내용은 COL_NAME 및 COLUMNPROPERTY 함수를 참조하십시오.|  
 |**matched_document_key**|**\***<br /><br /> 이 키는 원본 테이블의 고유 키 유형과 일치합니다.|쿼리에서 지정된 문서와 유사한 것으로 확인된 문서나 행의 전체 텍스트 및 의미 체계 추출 고유 키 값입니다.|  
-|**score**|**REAL**|유사한 다른 모든 문서를 기준으로 한 이 문서의 상대적 유사성 값입니다.<br /><br /> 이 값은 [0.0, 1.0] 범위의 소수 10진수 값입니다. 점수가 높을수록 유사성이 높으며 1.0이 최대 점수입니다.|  
+|**점수**|**real**|유사한 다른 모든 문서를 기준으로 한 이 문서의 상대적 유사성 값입니다.<br /><br /> 이 값은 [0.0, 1.0] 범위의 소수 10진수 값입니다. 점수가 높을수록 유사성이 높으며 1.0이 최대 점수입니다.|  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
- 자세한 내용은 [유사한 찾기 및 의미 체계 검색을 사용 하 여 관련 문서](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)합니다.  
+ 자세한 내용은 [의미 체계 검색을 사용 하는 유사 및 관련 문서 찾기](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)를 참조 하세요.  
   
 ## <a name="limitations-and-restrictions"></a>제한 사항  
- 유사한 문서의 열 간에는 쿼리할 수 없습니다. 합니다 **SEMANTICSIMILARITYTABLE** 함수에서 식별 된 원본 열과 동일한 열 에서만 유사한 문서를 검색 합니다 **source_key** 인수입니다.  
+ 유사한 문서의 열 간에는 쿼리할 수 없습니다. **SEMANTICSIMILARITYTABLE** 함수는 **source_key** 인수로 식별 되는 원본 열과 동일한 열에서 유사한 문서만 검색 합니다.  
   
 ## <a name="metadata"></a>메타데이터  
  의미 체계 유사성 추출 및 채우기에 대한 정보와 상태를 보려면 다음 동적 관리 뷰를 쿼리합니다.  

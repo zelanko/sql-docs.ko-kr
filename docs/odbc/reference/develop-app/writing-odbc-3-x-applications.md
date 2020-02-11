@@ -19,72 +19,72 @@ ms.assetid: 19c54fc5-9dd6-49b6-8c9f-a38961b40a65
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9939d11e3a779cc25d7faeb4950783353947f140
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68081453"
 ---
 # <a name="writing-odbc-3x-applications"></a>ODBC 3.x 애플리케이션 작성
-때 ODBC *2.x* odbc 응용 프로그램을 업그레이드할 *3.x*를 모두 ODBC를 사용 하 여 작동 되도록 써야 *2.x* 하 고 *3.x* 드라이버 . 응용 프로그램에서 ODBC를 최대한 활용 하는 조건부 코드를 통합 해야 *3.x* 기능입니다.  
+*Odbc 2.x 응용 프로그램* *을 odbc 2.x*로 업그레이드 하는 *경우 odbc 2.x 및 2.x* 드라이버 모두에서 작동 하도록 작성 해야 *합니다.* 응용 프로그램 *은 ODBC 3.x* 기능을 최대한 활용 하기 위해 조건부 코드를 통합 해야 합니다.  
   
- SQL_ATTR_ODBC_VERSION 환경 특성 SQL_OV_ODBC2로 설정 해야 합니다. ODBC 드라이버가 처럼는 이렇게 *2.x* 섹션에 설명 된 변경 내용에 대해 드라이버 [동작 변경 내용](../../../odbc/reference/develop-app/behavioral-changes.md)합니다.  
+ SQL_ATTR_ODBC_VERSION 환경 특성을 SQL_OV_ODBC2으로 설정 해야 합니다. 이렇게 하면 드라이버가 [동작 변경](../../../odbc/reference/develop-app/behavioral-changes.md)섹션에 설명 된 변경 내용과 관련 *된 ODBC 2.x* 드라이버 처럼 동작 합니다.  
   
- 응용 프로그램 섹션에서 설명 하는 기능 중 하나 사용는 경우 [새로운 기능](../../../odbc/reference/develop-app/new-features.md), 조건부 코드를 사용 하 여 드라이버는 ODBC 인지 여부를 확인 해야 *3.x* 또는 ODBC *2.x* 드라이버입니다. 응용 프로그램에서는 **SQLGetDiagField** 하 고 **SQLGetDiagRec** ODBC를 가져오려고 *3.x* SQLSTATEs 오류 이러한 조건부 코드 조각에 대 한 처리를 수행 하는 동안. 새로운 기능에 대 한 다음 사항은 고려해 야 합니다.  
+ 응용 프로그램에서 [새로운 기능](../../../odbc/reference/develop-app/new-features.md)섹션에 설명 된 기능 중 하나를 사용 하는 경우에는 조건부 코드를 사용 하 여 드라이버가 odbc *2.x 또는 odbc* *2.x 드라이버 인지* 여부를 확인 해야 합니다. 응용 프로그램은 이러한 조건부 코드 조각에서 오류 처리를 수행 하는 동안 **SQLGetDiagField** 및 **SQLGetDiagRec** 를 사용 하 여 ODBC 3.x sqlstates를 *가져옵니다.* 새 기능에 대 한 다음 사항을 고려해 야 합니다.  
   
--   행 집합 크기 동작에서 변경의 영향을 받는 응용 프로그램 호출 하지 않도록 주의 해야 **SQLFetch** 배열 크기가 1 보다 큰 경우. 이러한 응용 프로그램에 대 한 호출을 바꿔야 **SQLExtendedFetch** 를 호출 하 여 **SQLSetStmtAttr** SQL_ATTR_ARRAY_STATUS_PTR 문 특성을 설정 하 고 **SQLFetchScroll**, 두 ODBC를 사용 하 여 작동 하는 일반적인 코드를 갖도록 *3.x* 및 ODBC *2.x* 드라이버입니다. 때문에 **SQLSetStmtAttr** SQL_ATTR_ROW_ARRAY_SIZE를 사용 하 여 매핑될 **SQLSetStmtAttr** SQL_ROWSET_SIZE for ODBC 사용 하 여 *2.x* 드라이버, 응용 프로그램 설정 SQL 다중 행 인출 작업에 대 한 _ATTR_ROW_ARRAY_SIZE 합니다.  
+-   행 집합 크기 동작 변경의 영향을 받는 응용 프로그램은 배열 크기가 1 보다 클 경우 **Sqlfetch** 를 호출 하지 않도록 주의 해야 합니다. 이러한 응용 프로그램은 **SQLSetStmtAttr** 에 대 한 호출로 **sqlextendedfetch** 호출을 대체 하 여 SQL_ATTR_ARRAY_STATUS_PTR Statement 특성과 **sqlextendedfetch**을 설정 해야 합니다. *따라서 odbc 2.x* 와 odbc *2.x 드라이버 모두* 에서 작동 하는 공통 코드가 있습니다. SQL_ATTR_ROW_ARRAY_SIZE 있는 **SQLSetStmtAttr** *는 ODBC 2.x* 드라이버의 SQL_ROWSET_SIZE를 사용 하 여 **SQLSetStmtAttr** 에 매핑되므로 응용 프로그램은 다중 행 페치 작업에 대해 SQL_ATTR_ROW_ARRAY_SIZE을 설정할 수 있습니다.  
   
--   업그레이드 하는 대부분의 응용 프로그램에서 SQLSTATE 코드 변경으로 실제로 받지 않습니다. 이러한 응용 프로그램의 영향을 받는 경우 기계적 검색을 수행 하 고 수 "SQLSTATE 매핑" 섹션에 오류 변환 표를 사용 하 여 ODBC를 변환 하는 대부분의 경우에서 바꾸기 *3.x* odbc 오류 코드 *2.x* 코드입니다. ODBC 이후 *3.x* 드라이버 관리자는 ODBC에서 매핑 수행할지 *2.x* odbc Sqlstate *3.x* SQLSTATEs, 이러한 응용 프로그램 작성자만 확인 ODBC에대한필요 *3.x* Sqlstate 및 ODBC를 포함 하는 방법에 대 한 걱정 하지 *2.x* 조건부 코드의 Sqlstate입니다.  
+-   업그레이드 하는 대부분의 응용 프로그램은 실제로 SQLSTATE 코드의 변경으로 인해 영향을 받지 않습니다. 영향을 받는 응용 프로그램에 대해 기계적 검색을 수행 하 고 대부분의 경우 "SQLSTATE 매핑" 섹션의 오류 변환 표를 사용 하 여 ODBC *2.x 오류 코드* 를 odbc *2.x 코드로 변환할* 수 있습니다. ODBC *3.X 드라이버 관리자는 odbc 2.x* *SQLSTATES* *에서 odbc 3.x* sqlstates로 매핑을 수행 하므로 이러한 응용 프로그램 작성자는 odbc *2.x sqlstates* 에 대 한 검사를 수행 하 고 조건부 코드에 *는 odbc 2.x* sqlstates를 포함 하는 것에 대해 걱정 하지 않아도 됩니다.  
   
--   응용 프로그램 자체가 ODBC 선언할 수는 응용 프로그램에서 날짜, 시간 및 타임 스탬프 데이터 형식을 사용 하면, *2.x* 렌더 코드를 사용 하는 대신 코드의 기존 응용 프로그램 및 사용 합니다.  
+-   응용 프로그램에서 날짜, 시간 및 타임 스탬프 데이터 형식을 효과적으로 사용 하는 경우 응용 프로그램은 스스로 *를 ODBC 2.x* 응용 프로그램으로 선언 하 고 조절 코드를 사용 하는 대신 기존 코드를 사용할 수 있습니다.  
   
- 업그레이드는 다음 단계를 포함도 해야 합니다.  
+ 업그레이드에는 다음 단계도 포함 되어야 합니다.  
   
--   호출 **SQLSetEnvAttr** SQL_OV_ODBC2를 SQL_ATTR_ODBC_VERSION 환경 특성을 설정 하는 연결을 할당 하기 전에 합니다.  
+-   SQL_ATTR_ODBC_VERSION 환경 특성을 SQL_OV_ODBC2로 설정 하려면 연결을 할당 하기 전에 **SQLSetEnvAttr** 를 호출 합니다.  
   
--   에 대 한 모든 호출을 바꿉니다 **SQLAllocEnv**를 **SQLAllocConnect**, 또는 **SQLAllocStmt** 호출 하 여 **SQLAllocHandle** 적절 한 *HandleType* SQL_HANDLE_ENV, SQL_HANDLE_DBC, 또는 호출의 인수입니다.  
+-   **Sqlallocenv**, **sqlallocenv**또는 **sqlallocenv** 에 대 한 모든 호출을 SQL_HANDLE_ENV, SQL_HANDLE_DBC 또는 SQL_HANDLE_STMT의 적절 한 *HandleType* 인수를 사용 하 여 **SQLAllocHandle** 에 대 한 호출로 바꿉니다.  
   
--   에 대 한 모든 호출을 바꿉니다 **SQLFreeEnv** 하거나 **SQLFreeConnect** 호출 하 여 **SQLFreeHandle** 적절 한 *HandleType* 인수 SQL_HANDLE_DBC 또는 호출 합니다.  
+-   **Sqlfreeenv** 또는 **SQLFreeConnect** 에 대 한 모든 호출을 SQL_HANDLE_DBC 또는 SQL_HANDLE_STMT의 적절 한 *HandleType* 인수를 사용 하 여 **sqlfreeenv** 에 대 한 호출로 바꿉니다.  
   
--   에 대 한 모든 호출을 바꿉니다 **SQLSetConnectOption** 를 호출 하 여 **SQLSetConnectAttr**합니다. 이면 특성 값을 설정 하는 문자열을 설정 합니다 *StringLength* 인수 적절 하 게 합니다. 변경 *특성* SQL_ATTR_XXXX SQL_XXXX에서 인수입니다.  
+-   **SQLSetConnectOption** 에 대 한 모든 호출을 **SQLSetConnectAttr**에 대 한 호출로 바꿉니다. 문자열이 값을 갖는 특성을 설정 하는 경우 *Stringlength* 인수를 적절 하 게 설정 합니다. SQL_XXXX에서 SQL_ATTR_XXXX로 *특성* 인수를 변경 하십시오.  
   
--   에 대 한 모든 호출을 바꿉니다 **SQLGetConnectOption** 를 호출 하 여 **SQLGetConnectAttr**합니다. 문자열이 나 이진 특성을 가져올 경우 설정 *BufferLength* 적절 한 값을 전달 된 *StringLength* 인수입니다. 변경 *특성* SQL_ATTR_XXXX SQL_XXXX에서 인수입니다.  
+-   **SQLGetConnectOption** 에 대 한 모든 호출을 **SQLGetConnectAttr**에 대 한 호출로 바꿉니다. 문자열이 나 이진 특성을 가져오는 경우 *Bufferlength* 를 적절 한 값으로 설정 하 고 *stringlength* 인수를 전달 합니다. SQL_XXXX에서 SQL_ATTR_XXXX로 *특성* 인수를 변경 하십시오.  
   
--   에 대 한 모든 호출을 바꿉니다 **SQLSetStmtOption** 를 호출 하 여 **SQLSetStmtAttr**합니다. 이면 특성 값을 설정 하는 문자열을 설정 합니다 *StringLength* 인수 적절 하 게 합니다. 변경 *특성* SQL_ATTR_XXXX SQL_XXXX에서 인수입니다.  
+-   **SQLSetStmtOption** 에 대 한 모든 호출을 **SQLSetStmtAttr**에 대 한 호출로 바꿉니다. 문자열이 값을 갖는 특성을 설정 하는 경우 *Stringlength* 인수를 적절 하 게 설정 합니다. SQL_XXXX에서 SQL_ATTR_XXXX로 *특성* 인수를 변경 하십시오.  
   
--   에 대 한 모든 호출을 바꿉니다 **SQLGetStmtOption** 를 호출 하 여 **SQLGetStmtAttr**합니다. 문자열이 나 이진 특성을 가져올 경우 설정 *BufferLength* 적절 한 값을 전달 된 *StringLength* 인수입니다. 변경 *특성* SQL_ATTR_XXXX SQL_XXXX에서 인수입니다.  
+-   **SQLGetStmtOption** 에 대 한 모든 호출을 **SQLGetStmtAttr**에 대 한 호출로 바꿉니다. 문자열이 나 이진 특성을 가져오는 경우 *Bufferlength* 를 적절 한 값으로 설정 하 고 *stringlength* 인수를 전달 합니다. SQL_XXXX에서 SQL_ATTR_XXXX로 *특성* 인수를 변경 하십시오.  
   
--   에 대 한 모든 호출을 바꿉니다 **SQLTransact** 를 호출 하 여 **SQLEndTran**합니다. 경우의 오른쪽에 있는 유효한 핸들을 **SQLTransact** 호출 되는 환경 핸들을 *HandleType* SQL_HANDLE_ENV의 인수에 사용 해야는 **SQLEndTran** 호출 적절 한 *처리* 인수입니다. 경우의 오른쪽에 있는 유효한 핸들에 **SQLTransact** 호출 되는 연결 핸들을 *HandleType* SQL_HANDLE_DBC의 인수에 사용 해야는 **SQLEndTran** 호출 적절 한 *처리* 인수입니다.  
+-   **Sqlendtran**에 대 한 호출로 **sqltransact** 에 대 한 모든 호출을 바꿉니다. **Sqltransact** 호출의 가장 오른쪽 유효한 핸들이 환경 핸들 인 경우 적절 한 *핸들* 인수를 사용 하 여 **sqlendtran** 호출에 SQL_HANDLE_ENV의 *HandleType* 인수를 사용 해야 합니다. **Sqltransact** 호출의 가장 오른쪽 유효한 핸들이 연결 핸들 인 경우 적절 한 *핸들* 인수를 사용 하 여 **sqlendtran** 호출에 SQL_HANDLE_DBC의 *HandleType* 인수를 사용 해야 합니다.  
   
--   에 대 한 모든 호출을 바꿉니다 **SQLColAttributes** 를 호출 하 여 **SQLColAttribute**합니다. 경우는 *FieldIdentifier* 인수가 SQL_COLUMN_PRECISION, SQL_COLUMN_SCALE, 또는 SQL_COLUMN_LENGTH, 함수 이름 이외의 값을 변경 하지 마십시오. 그렇지 않은 경우 변경 *FieldIdentifier* SQL_COLUMN_XXXX SQL_DESC_XXXX에에서 있습니다. 하는 경우 *FieldIdentifier* SQL_DESC_CONCISE_TYPE 이며 데이터 형식은 datetime 데이터 형식으로 해당 ODBC 변경 *3.x* 데이터 형식입니다.  
+-   **Sqlcolattributes** 에 대 한 모든 호출을 **sqlcolattributes**에 대 한 호출로 바꿉니다. *FieldIdentifier* 인수가 SQL_COLUMN_PRECISION, SQL_COLUMN_SCALE 또는 SQL_COLUMN_LENGTH 인 경우 함수 이름 이외의 값은 변경 하지 마십시오. 그렇지 않으면 *FieldIdentifier* 을 SQL_COLUMN_XXXX에서 SQL_DESC_XXXX로 변경 합니다. *FieldIdentifier* 가 SQL_DESC_CONCISE_TYPE이 고 데이터 형식이 datetime 데이터 형식인 경우 *해당 ODBC 2.x* 데이터 형식으로 변경 합니다.  
   
--   블록 커서, 스크롤 가능 커서 또는 둘 다 사용 하는 경우 응용 프로그램은 다음을 수행 합니다.  
+-   블록 커서, 스크롤 가능 커서 또는 둘 다를 사용 하는 경우 응용 프로그램은 다음을 수행 합니다.  
   
-    -   행 집합 크기, 설정 커서 유형을 사용 하 여 커서 동시성 **SQLSetStmtAttr**합니다.  
+    -   **SQLSetStmtAttr**를 사용 하 여 행 집합 크기, 커서 유형 및 커서 동시성을 설정 합니다.  
   
-    -   호출 **SQLSetStmtAttr** SQL_ATTR_ROW_STATUS_PTR 상태 레코드의 배열을를 가리키도록 설정 합니다.  
+    -   **SQLSetStmtAttr** 를 호출 하 여 상태 레코드의 배열을 가리키도록 SQL_ATTR_ROW_STATUS_PTR를 설정 합니다.  
   
-    -   호출 **SQLSetStmtAttr** 는 SQLINTEGER 가리키도록 SQL_ATTR_ROWS_FETCHED_PTR을 설정 합니다.  
+    -   **SQLSetStmtAttr** 를 호출 하 여 sqlinteger를 가리키도록 SQL_ATTR_ROWS_FETCHED_PTR를 설정 합니다.  
   
     -   필요한 바인딩을 수행 하 고 SQL 문을 실행 합니다.  
   
-    -   호출 **SQLFetchScroll** 행을 인출 하 고 결과에서 이동 하는 루프를 설정 합니다.  
+    -   루프에서 **Sqlfetchscroll** 을 호출 하 여 행을 인출 하 고 결과 집합에서 이동 합니다.  
   
-    -   책갈피 하 여 인출 하려는 경우 응용 프로그램 호출 **SQLSetStmtAttr** 은 SQL_ATTR_FETCH_BOOKMARK_PTR를 페치 하려고 하는 행 및 호출에 대 한 책갈피를 포함 하는 변수를 설정 하려면 **SQLFetchScroll** 사용 하 여는 *FetchOrientation* 에서는 SQL_FETCH_BOOKMARK의 인수입니다.  
+    -   책갈피를 사용 하 여 인출 하려는 경우 응용 프로그램은 **SQLSetStmtAttr** 를 호출 하 여 페치할 행의 책갈피를 포함 하는 변수로 SQL_ATTR_FETCH_BOOKMARK_PTR를 설정 하 고 SQL_FETCH_BOOKMARK의 *fetchorientation* 인수를 사용 하 여 **sqlfetchscroll** 을 호출 합니다.  
   
 -   매개 변수 배열을 사용 하는 경우 응용 프로그램은 다음을 수행 합니다.  
   
-    -   호출 **SQLSetStmtAttr** SQL_ATTR_PARAMSET_SIZE 특성 매개 변수 배열의 크기를 설정 합니다.  
+    -   **SQLSetStmtAttr** 를 호출 하 여 SQL_ATTR_PARAMSET_SIZE 특성을 매개 변수 배열의 크기로 설정 합니다.  
   
-    -   호출 **SQLSetStmtAttr** SQL_ATTR_ROWS_PROCESSED_PTR 내부 UDWORD 변수를 가리키도록 설정 합니다.  
+    -   **SQLSetStmtAttr** 를 호출 하 여 내부 udword 변수를 가리키도록 SQL_ATTR_ROWS_PROCESSED_PTR를 설정 합니다.  
   
-    -   수행 준비, 바인딩 및 적절 하 게 작업을 실행 합니다.  
+    -   준비, 바인딩 및 실행 작업을 적절 하 게 수행 합니다.  
   
-    -   (예: SQL_NEED_DATA) 어떤 이유로 중단 되어 실행 하는 경우 "현재" 매개 변수 행 SQL_ATTR_ROWS_PROCESSED_PTR 가리키는 위치를 검사 하 여 찾을 수 합니다.  
+    -   몇 가지 이유로 실행이 중단 되는 경우 (예: SQL_NEED_DATA) SQL_ATTR_ROWS_PROCESSED_PTR가 가리키는 위치를 검사 하 여 매개 변수의 "current" 행을 찾을 수 있습니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   
--   [응용 프로그램의 이전 버전과의 호환성을 위한 대체 함수 매핑](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)  
+-   [애플리케이션의 이전 버전과의 호환성을 위한 대체 함수 매핑](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)  
   
 -   [SQLCloseCursor 호출](../../../odbc/reference/develop-app/calling-sqlclosecursor.md)  
   
@@ -94,6 +94,6 @@ ms.locfileid: "68081453"
   
 -   [커서 라이브러리 작업](../../../odbc/reference/develop-app/cursor-library-operations.md)  
   
--   [커서 특성 1 정보 유형 매핑](../../../odbc/reference/develop-app/mapping-the-cursor-attributes1-information-types.md)  
+-   [커서 특성 1 정보 형식 매핑](../../../odbc/reference/develop-app/mapping-the-cursor-attributes1-information-types.md)  
   
 -   [SQL_NO_DATA](../../../odbc/reference/develop-app/sql-no-data.md)

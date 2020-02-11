@@ -15,14 +15,14 @@ ms.assetid: 9ba00118-a80d-4a6d-a7d6-4f5492fb7ded
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 95f27c6ad6e4ae7cdfd0938f6c82a9932751fbc4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966409"
 ---
 # <a name="deleterule-property-example-vb"></a>DeleteRule 속성 예제(VB)
-이 예제에서는 합니다 [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) 의 속성을 [키](../../../ado/reference/adox-api/key-object-adox.md) 개체입니다. 새 코드를 추가 [테이블](../../../ado/reference/adox-api/table-object-adox.md) 설정 하는 새 기본 키를 다음 정의 **DeleteRule** 하 **adRICascade**합니다.  
+이 예제에서는 [키](../../../ado/reference/adox-api/key-object-adox.md) 개체의 [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) 속성을 보여 줍니다. 이 코드는 새 [테이블](../../../ado/reference/adox-api/table-object-adox.md) 을 추가 하 고 **DeleteRule** 를 **adRICascade**로 설정 하 여 새 기본 키를 정의 합니다.  
   
 ```  
 ' BeginDeleteRuleVB  
@@ -84,6 +84,6 @@ End Sub
 ' EndDeleteRuleVB  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [DeleteRule 속성 (ADOX)](../../../ado/reference/adox-api/deleterule-property-adox.md)   
- [Key 개체(ADOX)](../../../ado/reference/adox-api/key-object-adox.md)
+ [키 개체(ADOX)](../../../ado/reference/adox-api/key-object-adox.md)

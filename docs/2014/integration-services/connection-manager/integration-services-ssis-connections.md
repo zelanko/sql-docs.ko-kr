@@ -21,14 +21,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 78c3ba452d3ba681823e5c9f473d7a86f55809a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833792"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services(SSIS) 연결
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지는 연결을 사용하여 다음과 같은 다양한 태스크와 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 기능을 수행하거나 구현합니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]패키지는 연결을 사용 하 여 다양 한 작업 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 을 수행 하 고 기능을 구현 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
   
 -   텍스트, XML, Excel 통합 문서 및 관계형 데이터베이스와 같은 원본 및 대상 데이터 저장소에 연결하여 데이터 추출 및 로드  
   
@@ -36,37 +36,42 @@ ms.locfileid: "62833792"
   
 -   관계형 데이터베이스에 연결하여 SELECT, DELETE, INSERT 명령과 같은 SQL 문 및 저장 프로시저 실행  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결하여 유지 관리 수행 및 태스크 전송(예: 데이터베이스 백업 및 로그인 전송)  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결하여 유지 관리 수행 및 태스크 전송(예: 데이터베이스 백업 및 로그인 전송)  
   
 -   텍스트 및 XML 파일과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블 및 패키지 구성의 로그 항목을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 쓰기  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결하여 일부 변환에서 해당 작업을 수행하는 데 필요한 임시 작업 테이블 만들기  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결하여 일부 변환에서 해당 작업을 수행하는 데 필요한 임시 작업 테이블 만들기  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 및 데이터베이스에 연결하여 데이터 마이닝 모델 액세스, 큐브 및 차원 처리, DDL 코드 실행  
+-   
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 및 데이터베이스에 연결하여 데이터 마이닝 모델 액세스, 큐브 및 차원 처리, DDL 코드 실행  
   
 -   Foreach 루프 열거자 및 태스크에 사용할 기존 파일과 폴더 지정 또는 새 파일과 폴더 만들기  
   
--   메시지 큐, WMI(Windows Management Instrumentation), SMO( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects), 웹 및 메일 서버에 연결  
+-   메시지 큐, WMI(Windows Management Instrumentation), SMO([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects), 웹 및 메일 서버에 연결  
   
  이러한 연결을 만들려면 다음 섹션에서 설명한 대로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 연결 관리자를 사용합니다.  
   
 ## <a name="connection-managers"></a>연결 관리자  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 연결 관리자를 연결의 논리적 표현으로 사용합니다. 연결 관리자의 속성은 디자인 타임에 패키지가 실행될 때 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 만드는 물리적 연결을 기술하기 위한 것입니다. 예를 들어 연결 관리자에는 디자인 타임에 설정하는 `ConnectionString` 속성이 포함되며, 런타임에는 연결 문자열 속성의 값을 사용하여 물리적 연결이 생성됩니다.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]연결 관리자를 연결의 논리적 표현으로 사용 합니다. 연결 관리자의 속성은 디자인 타임에 패키지가 실행될 때 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 만드는 물리적 연결을 기술하기 위한 것입니다. 예를 들어 연결 관리자에는 디자인 타임에 설정하는 `ConnectionString` 속성이 포함되며, 런타임에는 연결 문자열 속성의 값을 사용하여 물리적 연결이 생성됩니다.  
   
  패키지에는 하나의 연결 문자열 유형에 대한 여러 항목이 사용될 수 있으며, 각 항목에 대해 속성을 설정할 수 있습니다. 런타임 시 연결 관리자 유형의 각 항목에는 다른 특성을 지닌 연결이 생성됩니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 패키지에서 여러 데이터 원본 및 서버로 연결할 수 있는 여러 유형의 연결 관리자가 제공됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 패키지에서 다양 한 데이터 원본 및 서버에 연결할 수 있도록 하는 다양 한 유형의 연결 관리자를 제공 합니다.  
   
--   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 설치할 때 설치 프로그램에서 기본적으로 설치하는 연결 관리자가 있습니다.  
+-   
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 설치할 때 설치 프로그램에서 기본적으로 설치하는 연결 관리자가 있습니다.  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 웹 사이트에서 다운로드할 수 있는 연결 관리자가 있습니다.  
+-   
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 웹 사이트에서 다운로드할 수 있는 연결 관리자가 있습니다.  
   
 -   기존 연결 관리자가 사용자 요구에 맞지 않는 경우 자체 사용자 지정 연결 관리자를 만들 수 있습니다.  
   
 ### <a name="built-in-connection-managers"></a>기본 제공 연결 관리자  
- 다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 제공하는 연결 관리자 유형을 보여 줍니다.  
+ 다음 표에서는에서 제공 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 연결 관리자 유형을 보여 줍니다.  
   
-|형식|Description|항목|  
+|Type|Description|항목|  
 |----------|-----------------|-----------|  
 |ADO|ADO(ActiveX Data Objects) 개체에 연결합니다.|[ADO 연결 관리자](ado-connection-manager.md)|  
 |ADO.NET|.NET 공급자를 사용하여 데이터 원본에 연결합니다.|[ADO.NET 연결 관리자](ado-net-connection-manager.md)|  
@@ -78,14 +83,15 @@ ms.locfileid: "62833792"
 |FTP|FTP 서버에 연결합니다.|[FTP 연결 관리자](ftp-connection-manager.md)|  
 |HTTP|웹 서버에 연결합니다.|[HTTP 연결 관리자](http-connection-manager.md)|  
 |MSMQ|메시지 큐에 연결합니다.|[MSMQ 연결 관리자](msmq-connection-manager.md)|  
-|MSOLAP100|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 연결합니다.|[Analysis Services 연결 관리자](analysis-services-connection-manager.md)|  
+|MSOLAP100|인스턴스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 연결 합니다.|[Analysis Services 연결 관리자](analysis-services-connection-manager.md)|  
 |MULTIFILE|다중 파일 또는 폴더에 연결합니다.|[다중 파일 연결 관리자](multiple-files-connection-manager.md)|  
 |MULTIFLATFILE|다중 데이터 파일 및 폴더에 연결합니다.|[다중 플랫 파일 연결 관리자](multiple-flat-files-connection-manager.md)|  
 |OLEDB|OLE DB Provider를 사용하여 데이터 원본에 연결합니다.|[OLE DB 연결 관리자](ole-db-connection-manager.md)|  
 |ODBC|ODBC를 사용하여 데이터 원본에 연결합니다.|[ODBC 연결 관리자](odbc-connection-manager.md)|  
 |SMOServer|SMO( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects) 서버에 연결합니다.|[SMO 연결 관리자](smo-connection-manager.md)|  
 |SMTP|SMTP 메일 서버에 연결합니다.|[SMTP 연결 관리자](smtp-connection-manager.md)|  
-|SQLMOBILE|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 데이터베이스에 연결합니다.|[SQL Server Compact Edition 연결 관리자](sql-server-compact-edition-connection-manager.md)|  
+|SQLMOBILE|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 데이터베이스에 연결합니다.|[SQL Server Compact Edition 연결 관리자](sql-server-compact-edition-connection-manager.md)|  
 |WMI|서버에 연결하고 해당 서버에서 WMI(Windows Management Instrumentation)의 범위를 지정합니다.|[WMI 연결 관리자](wmi-connection-manager.md)|  
   
 ### <a name="connection-managers-available-for-download"></a>다운로드할 수 있는 연결 관리자  
@@ -94,11 +100,14 @@ ms.locfileid: "62833792"
 > [!IMPORTANT]  
 >  다음 표에 나열된 연결 관리자는 [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] 및 [!INCLUDE[ssDeveloperEd11](../../includes/ssdevelopered11-md.md)]에서만 작동합니다.  
   
-|형식|Description|항목|  
+|Type|Description|항목|  
 |----------|-----------------|-----------|  
-|ORACLE|Oracle에 연결할 \<버전 정보 > 서버.|Oracle 연결 관리자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity의 연결 관리자 구성 요소입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity에는 원본 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft Connectors for Oracle by Attunity 및 Microsoft Connectors for Teradata by Attunity(Microsoft Connectors for Oracle and Teradata by Attunity)](https://go.microsoft.com/fwlink/?LinkId=251526)다운로드 페이지를 참조하십시오.|  
-|SAPBI|SAP NetWeaver BI 버전 7 시스템에 연결합니다.|SAP BI 연결 관리자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI의 연결 관리자 구성 요소입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI에는 원본 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft SQL Server 2008 기능 팩](https://go.microsoft.com/fwlink/?LinkId=262016)다운로드 페이지를 참조하십시오.|  
-|TERADATA|Teradata 연결 \<버전 정보 > 서버.|Teradata 연결 관리자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity의 연결 관리자 구성 요소입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity에는 원본 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft Connectors for Oracle by Attunity 및 Microsoft Connectors for Teradata by Attunity(Microsoft Connectors for Oracle and Teradata by Attunity)](https://go.microsoft.com/fwlink/?LinkId=251526)다운로드 페이지를 참조하십시오.|  
+|ORACLE|Oracle \<버전 정보> 서버에 연결 합니다.|Oracle 연결 관리자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity의 연결 관리자 구성 요소입니다. 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity에는 원본 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft Connectors for Oracle by Attunity 및 Microsoft Connectors for Teradata by Attunity(Microsoft Connectors for Oracle and Teradata by Attunity)](https://go.microsoft.com/fwlink/?LinkId=251526)다운로드 페이지를 참조하십시오.|  
+|SAPBI|SAP NetWeaver BI 버전 7 시스템에 연결합니다.|SAP BI 연결 관리자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI의 연결 관리자 구성 요소입니다. 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI에는 원본 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft SQL Server 2008 기능 팩](https://go.microsoft.com/fwlink/?LinkId=262016)다운로드 페이지를 참조하십시오.|  
+|TERADATA|Teradata \<버전 정보> 서버에 연결 합니다.|Teradata 연결 관리자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity의 연결 관리자 구성 요소입니다. 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity에는 원본 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft Connectors for Oracle by Attunity 및 Microsoft Connectors for Teradata by Attunity(Microsoft Connectors for Oracle and Teradata by Attunity)](https://go.microsoft.com/fwlink/?LinkId=251526)다운로드 페이지를 참조하십시오.|  
   
 ### <a name="custom-connection-managers"></a>사용자 지정 연결 관리자  
  사용자 지정 연결 관리자를 작성할 수도 있습니다. 자세한 내용은 [Developing a Custom Connection Manager](../extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md)을 참조하세요.  

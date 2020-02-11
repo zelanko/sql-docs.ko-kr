@@ -15,10 +15,10 @@ ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: d9926eb251d109eb8ed9529a4ae739e8a1915b07
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245462"
 ---
 # <a name="monitor-dqs-activities"></a>DQS 작업 모니터링
@@ -27,14 +27,14 @@ ms.locfileid: "75245462"
 
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 기술 자료 검색, 도메인 관리, 일치 정책, 데이터 정리, 데이터 일치 및 SSIS 정리 작업을 중앙에서 모니터링하는 방법에 대해 설명합니다.  
   
-##  <a name="BeforeYouBegin"></a>시작 하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="LimitationsRestrictions"></a>제한 사항  
+###  <a name="LimitationsRestrictions"></a> 제한 사항  
  DQS_Main 데이터베이스에 대해 dqs_administrator 역할을 가진 사용자만 작업을 종료하거나 작업의 프로세스를 중지할 수 있습니다.  
   
-###  <a name="Security"></a>보안  
+###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a>권한에  
+####  <a name="Permissions"></a> 권한  
   
 -   DQS 작업을 보려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_kb_operator 역할이 있어야 합니다.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "75245462"
   
 3.  Excel 파일을 저장할 이름과 위치를 지정하라는 메시지가 나타납니다. 내보낸 Excel 파일에는 다음과 같은 시트가 있습니다.  
   
-    |시트 이름|설명|  
+    |시트 이름|Description|  
     |----------------|-----------------|  
     |작업|작업 표에서와 같이 작업에 대한 정보(열)가 포함됩니다.|  
     |프로세스|
@@ -159,8 +159,7 @@ ms.locfileid: "75245462"
 2.  
   **선택한 작업 종료** 아이콘을 클릭합니다. 또는 작업 표에서 작업을 마우스 오른쪽 단추로 클릭하고 바로가기 메뉴에서 **작업 종료** 를 클릭합니다.  
   
-3.  동작을 확인하는 메시지가 표시됩니다. 
-  **예**를 클릭합니다.  
+3.  동작을 확인하는 메시지가 표시됩니다. **예**를 클릭합니다.  
   
 ##  <a name="Stop"></a>DQS 작업의 프로세스 중지  
  DQS 관리자(dqs_administrator role)는 **SSIS 정리**유형이 아닌 작업에서 실행 중인(활성) 프로세스를 중지할 수 있습니다. 작업 모니터링 화면에서 프로세스를 중지하는 것은 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]의 기능 영역에서 해당 작업의 프로세스를 중지하는 것과 같습니다. 예를 들어 정리 작업의 컴퓨터 기반 정리 프로세스를 중지하거나 일치 작업의 일치 프로세스를 중지합니다. 중지된 프로세스는 작업 모니터링 화면에서 다시 시작할 수 없습니다. 
@@ -171,7 +170,6 @@ ms.locfileid: "75245462"
 2.  
   **선택한 프로세스 중지** 아이콘을 클릭합니다. 또는 작업 세부 정보 표에서 프로세스를 마우스 오른쪽 단추로 클릭하고 단축 메뉴에서 **프로세스 중지** 를 클릭합니다.  
   
-3.  동작을 확인하는 메시지가 표시됩니다. 
-  **예**를 클릭합니다.  
+3.  동작을 확인하는 메시지가 표시됩니다. **예**를 클릭합니다.  
   
   

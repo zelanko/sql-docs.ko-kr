@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a0cfc68f78ae9ca4022abfb59a33d756e82a6f2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875667"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>트랜잭션 로그 백업 복원(SQL Server)
@@ -31,7 +31,7 @@ ms.locfileid: "62875667"
   
  **항목 내용**  
   
--   **시작하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [필수 구성 요소](#Prerequisites)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "62875667"
   
 -   **트랜잭션 로그 백업을 복원하려면:**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "62875667"
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 조건  
   
 -   백업은 만든 순서대로 복원해야 합니다. 특정 트랜잭션 로그 백업을 복원하려면 먼저 커밋되지 않은 트랜잭션을 롤백하지 않고, 즉 WITH NORECOVERY로 다음과 같은 이전 백업을 복원해야 합니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62875667"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  멤버 자격 정보를 서버에서 항상 사용할 수 있는 역할에 RESTORE 권한이 제공됩니다. 고정 데이터베이스 역할의 멤버 자격은 데이터베이스가 액세스 가능한 상태이며 손상되지 않은 경우에만 확인할 수 있는데, RESTORE 실행 시 데이터베이스가 항상 이러한 상태인 것은 아니므로 **db_owner** 고정 데이터베이스 역할의 멤버에게는 RESTORE 권한이 없습니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -69,7 +69,7 @@ ms.locfileid: "62875667"
   
 #### <a name="to-restore-a-transaction-log-backup"></a>트랜잭션 로그 백업을 복원하려면  
   
-1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 다음 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
+1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 후 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
   
 2.  **데이터베이스**를 확장하고 해당 데이터베이스에 따라 사용자 데이터베이스를 선택하거나 **시스템 데이터베이스** 를 확장한 다음 시스템 데이터베이스를 선택합니다.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "62875667"
   
     -   **파일 또는 테이프 원본**  
   
-         찾아보기( **...** ) 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다. **백업 미디어 유형** 상자에서 나열된 장치 유형 중 하나를 선택합니다. **백업 미디어** 상자에 대해 하나 이상의 장치를 선택하려면 **추가**를 클릭합니다.  
+         찾아보기( **...** ) 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다. **백업 미디어 유형** 상자에서 나열된 디바이스 유형 중 하나를 선택합니다. **백업 미디어** 상자에 대해 하나 이상의 디바이스를 선택하려면 **추가**를 클릭합니다.  
   
          원하는 디바이스를 **백업 미디어** 목록 상자에 추가한 후 **확인** 을 클릭하여 **일반** 페이지로 돌아갑니다.  
   
@@ -100,8 +100,8 @@ ms.locfileid: "62875667"
     |------------|-----------|  
     |**복원**|선택된 확인란은 복원될 백업 세트를 나타냅니다.|  
     |**이름**|백업 세트의 이름입니다.|  
-    |**구성 요소**|백업 된 구성 요소: **데이터베이스**하십시오 **파일**, 또는 \<빈 > (트랜잭션 로그의 경우)에 대 한 합니다.|  
-    |**데이터베이스 백업**|백업 작업과 연관된 데이터베이스의 이름입니다.|  
+    |**구성 요소**|백업된 구성 요소입니다. **데이터베이스**, **파일** 또는 \<blank>(트랜잭션 로그의 경우)가 될 수 있습니다.|  
+    |**Database**|백업 작업과 연관된 데이터베이스의 이름입니다.|  
     |**Start Date**|클라이언트의 국가별 설정으로 표시되는 백업 작업 시작 날짜 및 시간입니다.|  
     |**완료 날짜**|클라이언트의 국가별 설정으로 표시되는 백업 작업 완료 날짜 및 시간입니다.|  
     |**첫 번째 LSN**|백업 세트에 있는 첫 번째 트랜잭션의 로그 시퀀스 번호입니다. 파일 백업의 경우 비워 둡니다.|  
@@ -132,10 +132,10 @@ ms.locfileid: "62875667"
         |------------|-----------|  
         |\<비어 있음>|표시 선택을 위한 확인란을 표시합니다.|  
         |**트랜잭션 표시**|트랜잭션이 커밋될 때 사용자가 지정한 표시된 트랜잭션의 이름입니다.|  
-        |**날짜**|트랜잭션이 커밋된 날짜 및 시간입니다. 트랜잭션 날짜 및 시간은 클라이언트 컴퓨터의 날짜 및 시간이 아닌 **msdbgmarkhistory** 테이블에 기록된 날짜 및 시간으로 표시됩니다.|  
+        |**Date**|트랜잭션이 커밋된 날짜 및 시간입니다. 트랜잭션 날짜 및 시간은 클라이언트 컴퓨터의 날짜 및 시간이 아닌 **msdbgmarkhistory** 테이블에 기록된 날짜 및 시간으로 표시됩니다.|  
         |**설명**|트랜잭션이 커밋될 때 사용자가 지정한 표시된 트랜잭션에 대한 설명입니다(있는 경우).|  
         |**LSN**|표시된 트랜잭션의 로그 시퀀스 번호입니다.|  
-        |**데이터베이스 백업**|표시된 트랜잭션이 커밋된 데이터베이스의 이름입니다.|  
+        |**Database**|표시된 트랜잭션이 커밋된 데이터베이스의 이름입니다.|  
         |**사용자 이름**|표시된 트랜잭션을 커밋한 데이터베이스 사용자의 이름입니다.|  
   
 8.  고급 옵션을 보거나 선택하려면 **페이지 선택** 창에서 **옵션** 을 클릭합니다.  
@@ -146,9 +146,9 @@ ms.locfileid: "62875667"
   
          게시된 데이터베이스를 해당 데이터베이스가 생성된 서버 이외의 다른 서버로 복원할 경우 복제 설정을 유지합니다.  
   
-         이 옵션은만 사용할 수는 **커밋되지 않은 트랜잭션을 롤백하여 데이터베이스를 사용할 수 있도록 유지 하는 중...**  해당 백업을 복원 하는 옵션 (뒷부분에서 설명)과 `RECOVERY` 옵션입니다.  
+         이 옵션은 `RECOVERY` 옵션을 사용 하 여 백업을 복원 하는 것과 같은 **커밋되지 않은 트랜잭션을 롤백하여 데이터베이스를 사용할 수 있는 상태로 유지** 합니다. 옵션 (뒷부분에서 설명)과 함께 사용할 수 있습니다.  
   
-         사용 하는이 옵션을 선택 합니다 `KEEP_REPLICATION` 옵션을 [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` 문입니다.  
+         이 옵션을 선택 하는 것은 `KEEP_REPLICATION` [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` 문에서 옵션을 사용 하는 것과 같습니다.  
   
     -   **각 백업 복원 전에 확인**  
   
@@ -162,19 +162,19 @@ ms.locfileid: "62875667"
   
          **db_owner**, **dbcreator**또는 **sysadmin**의 멤버만 복원된 데이터베이스를 사용할 수 있도록 합니다.  
   
-         사용 하 여 동의어는이 옵션을 선택 합니다 `RESTRICTED_USER` 옵션을 [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` 문입니다.  
+         이 옵션을 선택 하는 것은 `RESTRICTED_USER` [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` 문에서 옵션을 사용 하는 것과 같습니다.  
   
 10. **복구 상태** 옵션에서 복원 작업 이후의 데이터베이스 상태를 지정합니다.  
   
     -   **커밋되지 않은 트랜잭션을 롤백하여 데이터베이스를 사용할 수 있는 상태로 유지합니다. 추가 트랜잭션 로그를 복원할 수 없습니다. (RESTORE WITH RECOVERY)**  
   
-         데이터베이스를 복구합니다. 이 옵션은 해당 하는 `RECOVERY` 옵션을 [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` 문입니다.  
+         데이터베이스를 복구합니다. 이 옵션은 `RECOVERY` [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` 문의 옵션과 동일 합니다.  
   
          복원할 로그 파일이 없는 경우에만 이 옵션을 선택합니다.  
   
     -   **데이터베이스를 비작동 상태로 유지하고 커밋되지 않은 트랜잭션을 롤백하지 않습니다. 추가 트랜잭션 로그를 복원할 수 (RESTORE WITH NORECOVERY)**  
   
-         데이터베이스를 복원되지 않은 `RESTORING` 상태로 유지합니다. 이 옵션을 사용 하는 `NORECOVERY` 옵션을 [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` 문입니다.  
+         데이터베이스를 복원되지 않은 `RESTORING` 상태로 유지합니다. 이 옵션은 `NORECOVERY` [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` 문에서 옵션을 사용 하는 것과 같습니다.  
   
          이 옵션을 선택하면 **복제 설정 유지** 옵션을 사용할 수 없습니다.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "62875667"
   
     -   **데이터베이스를 읽기 전용 모드로 유지합니다. 커밋되지 않은 트랜잭션 실행을 취소하지만 복구 결과를 되돌릴 수 있도록 실행 취소 동작을 파일에 (RESTORE WITH STANDBY)**  
   
-         데이터베이스를 대기 모드로 유지합니다. 이 옵션을 사용 하는 `STANDBY` 옵션을 [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` 문입니다.  
+         데이터베이스를 대기 모드로 유지합니다. 이 옵션은 `STANDBY` [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` 문에서 옵션을 사용 하는 것과 같습니다.  
   
          이 옵션을 선택하려면 대기 파일을 지정해야 합니다.  
   
@@ -208,7 +208,7 @@ ms.locfileid: "62875667"
   
      RESTORE LOG *database_name* FROM <backup_device> WITH NORECOVERY.  
   
-     여기서 *database_name*은 데이터베이스의 이름이고 <backup_device>는 복원 중인 로그 백업이 포함된 장치의 이름입니다.  
+     여기서 *database_name*은 데이터베이스의 이름이고 &lt;backup_device&gt;는 복원 중인 로그 백업이 포함된 디바이스의 이름입니다.  
   
 2.  적용해야 할 각 트랜잭션 로그 백업에 대해 1단계를 반복합니다.  
   
@@ -241,7 +241,7 @@ ms.locfileid: "62875667"
 ALTER DATABASE AdventureWorks2012 SET RECOVERY FULL;  
 ```  
   
-#### <a name="a-applying-a-single-transaction-log-backup"></a>1\. 단일 트랜잭션 로그 백업 적용  
+#### <a name="a-applying-a-single-transaction-log-backup"></a>A. 단일 트랜잭션 로그 백업 적용  
  다음 예에서는 먼저 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 이라는 백업 디바이스에 상주하는 전체 데이터베이스 백업을 사용하여 `AdventureWorks2012_1`데이터베이스를 복원합니다. 그런 다음 `AdventureWorks2012_log`라는 백업 디바이스에 상주하는 첫 번째 트랜잭션 로그 백업을 적용합니다. 마지막으로 데이터베이스를 복구합니다.  
   
 ```sql  
@@ -259,7 +259,7 @@ RESTORE DATABASE AdventureWorks2012
 GO  
 ```  
   
-#### <a name="b-applying-multiple-transaction-log-backups"></a>2\. 여러 트랜잭션 로그 백업 적용  
+#### <a name="b-applying-multiple-transaction-log-backups"></a>B. 여러 트랜잭션 로그 백업 적용  
  다음 예에서는 먼저 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 이라는 백업 디바이스에 상주하는 전체 데이터베이스 백업을 사용하여 `AdventureWorks2012_1`데이터베이스를 복원합니다. 그런 다음 `AdventureWorks2012_log`라는 백업 디바이스에 상주하는 처음 3개의 트랜잭션 로그 백업을 하나씩 적용합니다. 마지막으로 데이터베이스를 복구합니다.  
   
 ```sql  
@@ -287,7 +287,7 @@ RESTORE DATABASE AdventureWorks2012
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [트랜잭션 로그 백업&#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
   
@@ -299,7 +299,7 @@ GO
   
 -   [데이터베이스를 표시된 트랜잭션으로 복원&#40;SQL Server Management Studio&#41;](restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [RESTORE&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [트랜잭션 로그 백업 적용&#40;SQL Server&#41;](apply-transaction-log-backups-sql-server.md)  
   

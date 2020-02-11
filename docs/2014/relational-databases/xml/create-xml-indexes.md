@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7da89810a92c14f5b59ebcd546c4fb4cfa256f02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637763"
 ---
 # <a name="create-xml-indexes"></a>XML 인덱스 만들기
@@ -44,7 +44,7 @@ ms.locfileid: "62637763"
   
 -   기본 XML 인덱스 이름에는 뷰 이름과 같은 제한이 있습니다.  
   
- XML 인덱스를 만들 수 없습니다는 `xml` 뷰에서 열에 입력을 **테이블** 반환된 변수 `xml` 유형 열을 또는 `xml` 변수를 입력 합니다.  
+ 뷰의 `xml` 유형 열, 유형 열이 있는 `xml` `xml` **테이블** 반환 변수 또는 유형 변수에서 XML 인덱스를 만들 수 없습니다.  
   
 -   ALTER TABLE ALTER COLUMN 옵션을 사용하여 `xml` 유형 열을 형식화되지 않은 XML에서 형식화된 XML로 변경하거나 그 반대로 변경하려면 열에 XML 인덱스가 있으면 안 됩니다. XML 인덱스가 있으면 열 형식 변경을 시도하기 전에 먼저 삭제해야 합니다.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62637763"
   
  1년 미만의 값이 있는 XML 스키마 유형 **xs:date** 또는 **xs:dateTime** 이나 그 하위 유형의 값을 포함하는 XML 데이터 형식 열에 기본 XML 인덱스를 만들거나 다시 만들 경우 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서 인덱스 만들기에 실패합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 에서는 이러한 값이 허용되었으므로 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 생성된 데이터베이스에 인덱스를 만들 경우 이러한 문제가 발생할 수 있습니다. 자세한 내용은 [형식화된 XML과 형식화되지 않은 XML 비교](../xml/compare-typed-xml-to-untyped-xml.md)를 참조하세요.  
   
-### <a name="example-creating-a-primary-xml-index"></a>예: 기본 XML 인덱스 만들기  
+### <a name="example-creating-a-primary-xml-index"></a>예제: 기본 XML 인덱스 만들기  
  대부분의 예에서는 형식화되지 않은 XML 열이 포함된 테이블 T(pk INT PRIMARY KEY, xCol XML)가 사용됩니다. 이러한 예는 직관적인 방식에 따라 형식화된 XML로 확장될 수 있습니다. 간단한 설명을 위해 쿼리는 다음에 표시된 것과 같이 XML 데이터 인스턴스에 대해 기술됩니다.  
   
 ```  
@@ -99,7 +99,7 @@ FROM    sys.xml_indexes;
   
  **secondary_type_desc** 열에 반환된 값은 NULL, PATH, VALUE 또는 PROPERTY가 될 수 있습니다. 기본 XML 인덱스의 경우 반환된 값은 NULL입니다.  
   
-### <a name="example-creating-secondary-xml-indexes"></a>예: 보조 XML 인덱스 만들기  
+### <a name="example-creating-secondary-xml-indexes"></a>예제: 보조 XML 인덱스 만들기  
  다음 예에서는 보조 XML 인덱스가 만들어지는 방법을 설명합니다. 또한 만들어진 XML 인덱스에 대한 정보도 보여 줍니다.  
   
 ```  
@@ -199,7 +199,7 @@ DROP TABLE T;
 Go  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 인덱스&#40;SQL Server&#41;](xml-indexes-sql-server.md)   
  [XML 데이터&#40;SQL Server&#41;](xml-data-sql-server.md)  
   

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9db326ac27a7137f03f34e242c3c5c3931637f36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68198989"
 ---
 # <a name="conflict-detection-in-peer-to-peer-replication"></a>피어 투 피어 복제에서 충돌 검색
@@ -86,7 +86,7 @@ ms.locfileid: "68198989"
   
 -   배포 에이전트에서 변경 내용 적용을 계속하도록 하여 노드를 다시 동기화합니다.  
   
-    1.  실행 [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql):에 대 한 'p2p_continue_onconflict'를 지정 합니다 @property 매개 변수 및 `true` 에 대 한는 @value 매개 변수입니다.  
+    1.  [Sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)실행: 매개 변수 및 @property `true` @value 매개 변수에 대해 ' p2p_continue_onconflict '를 지정 합니다.  
   
     2.  배포 에이전트를 시작합니다.  
   
@@ -97,9 +97,9 @@ ms.locfileid: "68198989"
         > [!NOTE]  
         >  이 단계를 수행한 이후에도 데이터에 일관성이 없는 경우에는 우선 순위가 가장 높은 노드의 행을 수동으로 업데이트한 후 이 노드에서 변경 내용이 전파되도록 해야 합니다. 토폴로지에 더 이상 충돌하는 변경 내용이 없으면 모든 노드가 일관적인 상태가 됩니다.  
   
-    5.  실행 [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql):에 대 한 'p2p_continue_onconflict'를 지정 합니다 @property 매개 변수 및 `false` 에 대 한는 @value 매개 변수입니다.  
+    5.  [Sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)실행: 매개 변수 및 @property `false` @value 매개 변수에 대해 ' p2p_continue_onconflict '를 지정 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [@loopback_detection](peer-to-peer-transactional-replication.md)  
   
   

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f3612a8b2006978a8098a406a6557d6c9f0f1f7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62960500"
 ---
 # <a name="secure-the-snapshot-folder"></a>스냅샷 폴더 보안 설정
@@ -25,7 +25,7 @@ ms.locfileid: "62960500"
 > [!NOTE]  
 >  UAC(사용자 계정 컨트롤)는 관리자가 승격된 사용자 권한( *권한*이라고도 함)을 관리하는 데 유용합니다. UAC를 사용하도록 설정된 운영 체제에서 실행할 때는 관리자가 해당 관리자 권한을 사용하지 않습니다. 대신 대부분의 동작을 관리 권한이 없는 일반 사용자로 수행하며 필요한 경우에만 임시로 해당 관리자 권한을 사용합니다. UAC에서는 스냅샷 공유에 대한 관리 액세스를 거부할 수 있습니다. 따라서 스냅샷 에이전트, 배포 에이전트 및 병합 에이전트에서 사용하는 Windows 계정에 스냅샷 공유 권한을 명시적으로 부여해야 합니다. Windows 계정이 Administrators 그룹의 멤버인 경우에도 이 작업을 수행해야 합니다.  
   
- 배포 구성 마법사나 새 게시 마법사를 사용하여 배포자를 구성할 때 스냅숏 폴더의 기본값은 로컬 경로인 X:\Program Files\Microsoft SQL Server\\ *\<instance>* \MSSQL\ReplData입니다. 원격 배포자나 끌어오기 구독을 사용하는 경우에는 로컬 경로 대신 UNC 네트워크 공유(예: \\\\<*computername>* \snapshot)를 지정해야 합니다.  
+ 배포 구성 마법사나 새 게시 마법사를 사용하여 배포자를 구성할 때 스냅샷 폴더의 기본값은 로컬 경로인 X:\Program Files\Microsoft SQL Server\\\ *\<instance&gt;* \MSSQL\ReplData입니다. 원격 배포자나 끌어오기 구독을 사용하는 경우에는 로컬 경로 대신 UNC 네트워크 공유(예: \\\\<*computername>* \snapshot)를 지정해야 합니다.  
   
  스냅샷 폴더에 대한 액세스 권한을 부여할 때는 폴더가 액세스되는 방법에 따라 권한을 부여해야 합니다. 다음 대화 상자 탭은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 2003에서 사용됩니다.  
   
@@ -50,11 +50,11 @@ ms.locfileid: "62960500"
   
  FTP를 통해 스냅샷에 액세스하는 데 필요한 암호를 설정하고 변경하는 방법은 [Secure the Publisher](secure-the-publisher.md)항목의 "FTP 스냅샷 배달" 섹션을 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [대체 스냅숏 폴더 위치](../alternate-snapshot-folder-locations.md)   
- [스냅숏으로 구독 초기화](../initialize-a-subscription-with-a-snapshot.md)   
+ [스냅샷으로 구독 초기화](../initialize-a-subscription-with-a-snapshot.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
  [SQL Server 복제 보안](view-and-modify-replication-security-settings.md)   
- [FTP를 통해 스냅숏 전송](../transfer-snapshots-through-ftp.md)  
+ [FTP를 통해 스냅샷 전송](../transfer-snapshots-through-ftp.md)  
   
   

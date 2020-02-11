@@ -13,15 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b409d53b33a7fbe09fb9f74d1a04d3ac38e3b864
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62868699"
 ---
-# <a name="mssqlserver3260"></a>MSSQLSERVER_3260
+# <a name="mssqlserver_3260"></a>MSSQLSERVER_3260
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -36,6 +36,6 @@ ms.locfileid: "62868699"
  서버에 메모리가 부족합니다.  
   
 ## <a name="user-action"></a>사용자 동작  
- 작업을 다시 시도하십시오. 오류가 다시 발생하면 제품 지원 공급자에게 문의하십시오.  
+ 작업을 다시 시도하세요. 오류가 다시 발생하면 제품 지원 공급자에게 문의하십시오.  
   
   

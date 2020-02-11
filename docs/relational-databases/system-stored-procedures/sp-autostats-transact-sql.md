@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e3fdb095ed869ba2e8f060bdba7a3dc9db81a405
-ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70026255"
 ---
 # <a name="sp_autostats-transact-sql"></a>sp_autostats(Transact-SQL)
@@ -30,9 +30,9 @@ ms.locfileid: "70026255"
 
   인덱스, 통계 개체, 테이블 또는 인덱싱된 뷰에 대한 자동 통계 업데이트 옵션 AUTO_UPDATE_STATISTICS를 표시하거나 변경합니다.  
   
- AUTO_UPDATE_STATISTICS 옵션에 대 한 자세한 내용은 [ALTER database SET 옵션 &#40;&#41; transact-sql](../../t-sql/statements/alter-database-transact-sql-set-options.md) 및 [STATISTICS](../../relational-databases/statistics/statistics.md)를 참조 하세요.  
+ AUTO_UPDATE_STATISTICS 옵션에 대 한 자세한 내용은 [ALTER DATABASE SET Options &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) 및 [STATISTICS](../../relational-databases/statistics/statistics.md)를 참조 하세요.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,7 +44,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @tblname = ] 'table_or_indexed_view_name'`AUTO_UPDATE_STATISTICS 옵션을 표시 하는 테이블 또는 인덱싱된 뷰의 이름입니다. *table_or_indexed_view_name* 은 **nvarchar (776)** 이며 기본값은 없습니다.  
+`[ @tblname = ] 'table_or_indexed_view_name'`AUTO_UPDATE_STATISTICS 옵션을 표시할 테이블 또는 인덱싱된 뷰의 이름입니다. *table_or_indexed_view_name* 은 **nvarchar (776)** 이며 기본값은 없습니다.  
   
 `[ @flagc = ] 'stats_flag'`AUTO_UPDATE_STATISTICS 옵션을 다음 값 중 하나로 업데이트 합니다.  
   
@@ -52,7 +52,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  **OFF** = OFF  
   
- *Stats_flag* 을 지정 하지 않으면 현재 AUTO_UPDATE_STATISTICS 설정을 표시 합니다. *stats_flag* 은 **varchar (10)** 이며 기본값은 NULL입니다.  
+ *Stats_flag* 지정 되지 않은 경우 현재 AUTO_UPDATE_STATISTICS 설정을 표시 합니다. *stats_flag* 는 **varchar (10)** 이며 기본값은 NULL입니다.  
   
 `[ @indname = ] 'statistics_name'`AUTO_UPDATE_STATISTICS 옵션을 표시 하거나 업데이트할 통계의 이름입니다. 인덱스에 대한 통계를 표시하려면 인덱스 이름을 사용하면 됩니다. 인덱스와 해당 통계 개체는 동일한 이름을 갖습니다.  
   
@@ -62,17 +62,17 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- *Stats_flag* 를 지정 하면 **sp_autostats** 는 수행 된 작업을 보고 하지만 결과 집합을 반환 하지 않습니다.  
+ *Stats_flag* 지정 하면 **sp_autostats** 는 수행 된 작업을 보고 하지만 결과 집합을 반환 하지 않습니다.  
   
- *Stats_flag* 을 지정 하지 않으면 **sp_autostats** 는 다음 결과 집합을 반환 합니다.  
+ *Stats_flag* 지정 되지 않은 경우 **sp_autostats** 는 다음 결과 집합을 반환 합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**Index Name**|**varchar(60)**|인덱스 또는 통계의 이름입니다.|  
-|**AUTOSTATS**|**varchar(3)**|AUTO_UPDATE_STATISTICS 옵션의 현재 값입니다.|  
+|**인덱스 이름**|**varchar(60)**|인덱스 또는 통계의 이름입니다.|  
+|**AUTOSTATS**|**varchar (3)**|AUTO_UPDATE_STATISTICS 옵션의 현재 값입니다.|  
 |**마지막 업데이트 날짜**|**datetime**|가장 최근의 통계 업데이트 날짜입니다.|  
   
- 테이블 또는 인덱싱된 뷰에 대 한 결과 집합에는 인덱스에 대해 생성 된 통계, AUTO_CREATE_STATISTICS 옵션과 함께 생성 된 단일 열 통계 및 [CREATE statistics](../../t-sql/statements/create-statistics-transact-sql.md) 문으로 만든 통계가 포함 됩니다.  
+ 테이블 또는 인덱싱된 뷰에 대 한 결과 집합에는 인덱스에 대해 생성 된 통계, AUTO_CREATE_STATISTICS 옵션으로 생성 된 단일 열 통계 및 [CREATE statistics](../../t-sql/statements/create-statistics-transact-sql.md) 문으로 만든 통계가 포함 됩니다.  
   
 ## <a name="remarks"></a>설명  
  지정된 인덱스가 비활성화되었거나 지정된 테이블에 비활성화된 클러스터형 인덱스가 있는 경우에는 오류 메시지가 표시됩니다.  
@@ -80,7 +80,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
  메모리 최적화 테이블의 AUTO_UPDATE_STATISTICS는 항상 OFF입니다.  
   
 ## <a name="permissions"></a>사용 권한  
- AUTO_UPDATE_STATISTICS 옵션을 변경 하려면 **db_owner** 고정 데이터베이스 역할의 멤버 자격이 필요 하거나 *table_name*에 대 한 ALTER 권한이 필요 합니다. AUTO_UPDATE_STATISTICS 옵션을 표시 하려면 **public** 역할의 멤버 자격이 필요 합니다.  
+ AUTO_UPDATE_STATISTICS 옵션을 변경 하려면 **db_owner** 고정 데이터베이스 역할의 멤버 자격 또는 *table_name*에 대 한 ALTER 권한이 필요 합니다. AUTO_UPDATE_STATISTICS 옵션을 표시 하려면 **public** 역할의 멤버 자격이 필요 합니다.  
   
 ## <a name="examples"></a>예  
   
@@ -94,7 +94,7 @@ EXEC sp_autostats 'Production.Product';
 GO  
 ```  
   
-### <a name="b-enable-auto_update_statistics-for-all-statistics-on-a-table"></a>2\. 테이블의 모든 통계에 대해 AUTO_UPDATE_STATISTICS 활성화  
+### <a name="b-enable-auto_update_statistics-for-all-statistics-on-a-table"></a>B. 테이블의 모든 통계에 대해 AUTO_UPDATE_STATISTICS 활성화  
  다음은 `Product` 테이블의 모든 통계에 대해 AUTO_UPDATE_STATISTICS 옵션을 활성화합니다.  
   
 ```  
@@ -104,7 +104,7 @@ EXEC sp_autostats 'Production.Product', 'ON';
 GO  
 ```  
   
-### <a name="c-disable-auto_update_statistics-for-a-specific-index"></a>3\. 특정 인덱스에 대해 AUTO_UPDATE_STATISTICS 비활성화  
+### <a name="c-disable-auto_update_statistics-for-a-specific-index"></a>C. 특정 인덱스에 대해 AUTO_UPDATE_STATISTICS 비활성화  
  다음 예에서는 `AK_Product_Name` 테이블의 `Product` 인덱스에 대해 AUTO_UPDATE_STATISTICS 옵션을 비활성화합니다.  
   
 ```  
@@ -114,14 +114,14 @@ EXEC sp_autostats 'Production.Product', 'OFF', AK_Product_Name;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [통계](../../relational-databases/statistics/statistics.md)   
  [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [Transact-sql 저장 프로시저 &#40;데이터베이스 엔진&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [CREATE STATISTICS&#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;통계 만들기](../../t-sql/statements/create-statistics-transact-sql.md)   
  [DBCC SHOW_STATISTICS&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [DROP STATISTICS&#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
- [sp_createstats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
+ [Transact-sql&#41;sp_createstats &#40;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
  [UPDATE STATISTICS&#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

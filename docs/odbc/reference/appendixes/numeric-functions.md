@@ -14,48 +14,48 @@ ms.assetid: 4fa548dc-e8b0-4179-92ff-81d6a79d10c3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6e744d3de177197923540fc3101c58dcbb4d3490
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67990734"
 ---
 # <a name="numeric-functions"></a>숫자 함수
-다음 표에서 ODBC 스칼라 함수 집합에 포함 된 숫자 함수에 설명 합니다. 호출 하 여 **SQLGetInfo** 사용 하 여는 *정보 유형* SQL_NUMERIC_FUNCTIONS의 응용 프로그램을 드라이버에서 지원 되는 숫자 함수 확인할 수 있습니다.  
+다음 표에서는 ODBC 스칼라 함수 집합에 포함 된 숫자 함수에 대해 설명 합니다. 응용 프로그램에서는 *정보 형식이* SQL_NUMERIC_FUNCTIONS 인 **SQLGetInfo** 를 호출 하 여 드라이버에서 지원 되는 숫자 함수를 확인할 수 있습니다.  
   
- 모든 숫자 함수 반환 값 데이터 형식을 SQL_FLOAT ABS 제외 하 고 ROUND, TRUNCATE, 로그인, 바닥 및 천장에 동일한 데이터의 값을 반환 하는 입력된 매개 변수로 입력 합니다.  
+ 모든 숫자 함수는 입력 매개 변수와 동일한 데이터 형식의 값을 반환 하는 ABS, ROUND, TRUNCATE, SIGN, FLOOR 및 상한은 제외 하 고 SQL_FLOAT 데이터 형식의 값을 반환 합니다.  
   
- 로 표시 된 인수 *numeric_exp* 다른 스칼라 함수의 결과 열의 이름이 될 수 있습니다 또는 *숫자 litera*l, SQL_NUMERIC, SQL_로 기본 데이터 형식을 나타낼 수 있습니다 위치 10 진수 SQL_TINYINT, SQL_SMALLINT, SQL_INTEGER, SQL_BIGINT, SQL_FLOAT, SQL_REAL, 또는 SQL_DOUBLE 합니다.  
+ *Numeric_exp* 로 표시 되는 인수는 열 이름, 다른 스칼라 함수의 결과 또는 *숫자 litera*l (기본 데이터 형식이 SQL_NUMERIC, SQL_DECIMAL, SQL_TINYINT, SQL_SMALLINT, SQL_INTEGER, SQL_BIGINT, SQL_FLOAT, SQL_REAL 또는 SQL_DOUBLE로 표시 될 수 있습니다.  
   
- 로 표시 된 인수 *float_exp* 다른 스칼라 함수의 결과 열의 이름이 될 수 있습니다 또는 *숫자 리터럴*이면 기본 데이터 형식을 SQL_FLOAT로 표현할 수 있습니다 위치 합니다.  
+ *Float_exp* 로 표시 되는 인수는 열 이름, 다른 스칼라 함수의 결과 또는 *숫자 리터럴이*될 수 있으며,이 경우 기본 데이터 형식이 SQL_FLOAT으로 표시 될 수 있습니다.  
   
- 로 표시 된 인수 *integer_exp* 다른 스칼라 함수의 결과 열의 이름이 될 수 있습니다 또는 *숫자 리터럴*SQL_TINYINT, SQL_로 기본 데이터 형식을 나타낼 수 있는, SMALLINT, SQL_INTEGER, 또는 SQL_BIGINT 합니다.  
+ *Integer_exp* 로 표시 되는 인수는 열 이름, 다른 스칼라 함수의 결과 또는 *숫자 리터럴이*될 수 있습니다. 여기서 기본 데이터 형식은 SQL_TINYINT, SQL_SMALLINT, SQL_INTEGER 또는 SQL_BIGINT로 표시 될 수 있습니다.  
   
- SQL-92에 맞게 ODBC 3.0에서 CURRENT_DATE 고 CURRENT_TIME, CURRENT_TIMESTAMP 스칼라 함수가 추가 되었습니다.  
+ CURRENT_DATE, CURRENT_TIME 및 CURRENT_TIMESTAMP 스칼라 함수는 SQL-92에 맞게 ODBC 3.0에 추가 되었습니다.  
   
-|함수|설명|  
+|함수|Description|  
 |--------------|-----------------|  
-|**ABS(** _numeric_exp_ **)**  (ODBC 1.0)|절대값을 반환 합니다 *numeric_exp*합니다.|  
-|**ACOS (** _float_exp_ **)** (ODBC 1.0)|아크코사인을 반환 합니다 *float_exp* 각도를 라디안 단위로 표현 됩니다.|  
-|**ASIN(** _float_exp_ **)**  (ODBC 1.0)|아크사인 값을 반환 *float_exp* 각도를 라디안 단위로 표현 됩니다.|  
-|**ATAN(** _float_exp_ **)**  (ODBC 1.0)|아크탄젠트를 반환 *float_exp* 각도를 라디안 단위로 표현 됩니다.|  
-|**ATAN2(** _float_exp1_, _float_exp2_ **)**  (ODBC 2.0)|아크탄젠트를 반환 합니다 *x* 하 고 *y* 으로 지정 된 좌표 *float_exp1* 및 *float_exp2*각각 각도 라디안 단위로 표현 됩니다.|  
-|**CEILING(** _numeric_exp_ **)**  (ODBC 1.0)|보다 크거나 같은 최소 정수를 반환 *numeric_exp*합니다. 반환 값은 입력된 매개 변수로 동일한 데이터 형식입니다.|  
-|**COS (** _float_exp_ **)** (ODBC 1.0)|코사인을 반환 *float_exp*, 여기서 *float_exp* 라디안에서으로 표시 되는 각도입니다.|  
-|**COT(** _float_exp_ **)**  (ODBC 1.0)|코탄젠트를 반환 합니다 *float_exp*, 여기서 *float_exp* 라디안에서으로 표시 되는 각도입니다.|  
-|**DEGREES(** _numeric_exp_ **)**  (ODBC 2.0)|변환 하는 각도 반환 *numeric_exp* 라디안입니다.|  
-|**EXP(** _float_exp_ **)**  (ODBC 1.0)|지 수 값을 반환 *float_exp*합니다.|  
-|**FLOOR(** _numeric_exp_ **)**  (ODBC 1.0)|보다 작거나 같은 최대 정수를 반환 *numeric_exp*합니다. 반환 값은 입력된 매개 변수로 동일한 데이터 형식입니다.|  
-|**로그 (** _float_exp_ **)** (ODBC 1.0)|자연 로그를 반환 *float_exp*합니다.|  
-|**LOG10(** _float_exp_ **)**  (ODBC 2.0)|반환을 밑수 10 로그 *float_exp*합니다.|  
-|**MOD(** _integer_exp1_, _integer_exp2_ **)**  (ODBC 1.0)|나머지를 반환 합니다 (모듈러스) *integer_exp1* 나눈 *integer_exp2*합니다.|  
-|**PI( )**  (ODBC 1.0)|부동 소수점 값으로 pi의 상수 값을 반환합니다.|  
-|**POWER(** _numeric_exp_, _integer_exp_ **)**  (ODBC 2.0)|값을 반환 *numeric_exp* 활용할 *integer_exp*합니다.|  
-|**RADIANS(** _numeric_exp_ **)**  (ODBC 2.0)|변환 하는 라디안 수를 반환 *numeric_exp* 도 합니다.|  
-|**RAND(** [*integer_exp*] **)**  (ODBC 1.0)|사용 하 여 임의의 부동 소수점 값 반환 *integer_exp* 선택적 시드 값으로.|  
-|**ROUND(** _numeric_exp_, _integer_exp_ **)**  (ODBC 2.0)|반환 *numeric_exp* 반올림 *integer_exp* 소수점이 하 자릿수를 배치 합니다. 하는 경우 *integer_exp* 가 음수 이면 *numeric_exp* 반올림 됩니다 &#124; *integer_exp* &#124; 소수점의 왼쪽에 배치 합니다.|  
-|**SIGN(** _numeric_exp_ **)**  (ODBC 1.0)|부호를 나타내는 표시기 반환 *numeric_exp*합니다. 하는 경우 *numeric_exp* 0-1 보다 작은 반환 됩니다. 하는 경우 *numeric_exp* 0, 0이 반환 됩니다. 하는 경우 *numeric_exp* 0 보다 크면 1이 반환 됩니다.|  
-|**SIN(** _float_exp_ **)**  (ODBC 1.0)|사인을 반환 합니다 *float_exp*, 여기서 *float_exp* 라디안에서으로 표시 되는 각도입니다.|  
-|**SQRT(** _float_exp_ **)**  (ODBC 1.0)|제곱근을 반환 합니다 *float_exp*합니다.|  
-|**TAN(** _float_exp_ **)**  (ODBC 1.0)|탄젠트를 반환 *float_exp*, 여기서 *float_exp* 라디안에서으로 표시 되는 각도입니다.|  
-|**TRUNCATE(** _numeric_exp_, _integer_exp_ **)**  (ODBC 2.0)|반환 *numeric_exp* 잘립니다 *integer_exp* 소수점이 하 자릿수를 배치 합니다. 하는 경우 *integer_exp* 가 음수 이면 *numeric_exp* 잘립니다 &#124; *integer_exp* &#124; 소수점의 왼쪽에 배치 합니다.|
+|**ABS (** _numeric_exp_ **)** (ODBC 1.0)|*Numeric_exp*의 절대값을 반환 합니다.|  
+|**ACOS (** _float_exp_ **)** (ODBC 1.0)|각도 (라디안)로 표현 되는 *float_exp* 의 아크코사인을 반환 합니다.|  
+|**ASIN (** _float_exp_ **)** (ODBC 1.0)|*Float_exp* 의 아크사인을 라디안으로 표현 된 각도로 반환 합니다.|  
+|**ATAN (** _float_exp_ **)** (ODBC 1.0)|라디안으로 표시 된 각도 *float_exp* 의 아크탄젠트를 반환 합니다.|  
+|**ATAN2 (** _float_exp1_, _float_exp2_**)** (ODBC 2.0)|각각 *float_exp1* 및 *float_exp2*에 의해 지정 된 *x* 및 *y* 좌표의 아크탄젠트를 라디안으로 표현 된 각도로 반환 합니다.|  
+|**상한 (** _numeric_exp_ **)** (ODBC 1.0)|*Numeric_exp*보다 크거나 같은 최소 정수를 반환 합니다. 반환 값은 입력 매개 변수와 동일한 데이터 형식입니다.|  
+|**COS (** _float_exp_ **)** (ODBC 1.0)|*Float_exp*코사인을 반환 합니다. 여기서 *float_exp* 는 라디안으로 표현 된 각도입니다.|  
+|**COT (** _float_exp_ **)** (ODBC 1.0)|*Float_exp*의 코탄젠트를 반환 합니다. 여기서 *float_exp* 는 라디안으로 표현 된 각도입니다.|  
+|**도 (** _numeric_exp_ **)** (ODBC 2.0)|*Numeric_exp* 라디안에서 변환 된 각도 수를 반환 합니다.|  
+|**EXP (** _float_exp_ **)** (ODBC 1.0)|*Float_exp*의 지 수 값을 반환 합니다.|  
+|**FLOOR (** _numeric_exp_ **)** (ODBC 1.0)|*Numeric_exp*보다 작거나 같은 최대 정수를 반환 합니다. 반환 값은 입력 매개 변수와 동일한 데이터 형식입니다.|  
+|**로그 (** _float_exp_ **)** (ODBC 1.0)|*Float_exp*의 자연 로그를 반환 합니다.|  
+|**LOG10 (** _float_exp_ **)** (ODBC 2.0)|*Float_exp*의 밑이 10 인 로그를 반환 합니다.|  
+|**MOD (** _integer_exp1_, _integer_exp2_**)** (ODBC 1.0)|*Integer_exp2*으로 나눈 *integer_exp1* 나머지 (모듈러스)를 반환 합니다.|  
+|**PI ()** (ODBC 1.0)|Pi의 상수 값을 부동 소수점 값으로 반환 합니다.|  
+|**POWER (** _numeric_exp_, _integer_exp_**)** (ODBC 2.0)|*Numeric_exp* 의 값을 *integer_exp*의 거듭제곱으로 반환 합니다.|  
+|**라디안 (** _numeric_exp_ **)** (ODBC 2.0)|*Numeric_exp* 도에서 변환 된 라디안 수를 반환 합니다.|  
+|**RAND (**[*integer_exp*]**)** (ODBC 1.0)|선택적 초기값으로 *integer_exp* 를 사용 하 여 임의의 부동 소수점 값을 반환 합니다.|  
+|**ROUND (** _numeric_exp_, _integer_exp_**)** (ODBC 2.0)|소수점 오른쪽 *integer_exp* 자릿수로 반올림 *numeric_exp* 를 반환 합니다. *Integer_exp* 음수 이면 *numeric_exp* 소수점 왼쪽에 &#124;*integer_exp*&#124;으로 반올림 됩니다.|  
+|**SIGN (** _numeric_exp_ **)** (ODBC 1.0)|*Numeric_exp*의 부호 표시기를 반환 합니다. *Numeric_exp* 이 0 보다 작은 경우-1이 반환 됩니다. *Numeric_exp* 0 이면 0이 반환 됩니다. *Numeric_exp* 이 0 보다 크면 1이 반환 됩니다.|  
+|**SIN (** _float_exp_ **)** (ODBC 1.0)|*Float_exp*의 사인을 반환 합니다. 여기서 *float_exp* 는 라디안으로 표시 된 각도입니다.|  
+|**SQRT (** _float_exp_ **)** (ODBC 1.0)|*Float_exp*의 제곱근을 반환 합니다.|  
+|**황갈색 (** _float_exp_ **)** (ODBC 1.0)|*Float_exp*의 탄젠트를 반환 합니다. 여기서 *float_exp* 는 라디안으로 표시 된 각도입니다.|  
+|**TRUNCATE (** _numeric_exp_, _integer_exp_**)** (ODBC 2.0)|소수점이 하 *integer_exp* 위치로 잘린 *numeric_exp* 반환 합니다. *Integer_exp* 음수 이면 *numeric_exp* 소수점 왼쪽의&#124; *integer_exp* &#124;으로 잘립니다.|

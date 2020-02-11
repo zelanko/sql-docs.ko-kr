@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f5d61b3880474851aa0c7302e402ff2f0ac0a47
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493788"
 ---
 # <a name="defining-and-browsing-kpis"></a>KPI 정의 및 찾아보기
@@ -53,27 +53,33 @@ ms.locfileid: "69493788"
   
 ## <a name="defining-the-reseller-revenue-kpi"></a>Reseller Revenue KPI 정의  
   
-1.  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브에 대한 큐브 디자이너를 열고 **KPI** 탭을 클릭합니다.  
+1.  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브에 대한 큐브 디자이너를 열고 **KPI** 탭을 클릭합니다.  
   
-     **KPI** 탭에는 여러 개의 창이 포함되어 있습니다. 이 탭 왼쪽에는 **KPI 구성 도우미** 창과 **계산 도구** 창이 있고 탭 중간의 표시 창에는 **KPI 구성 도우미** 창에서 선택한 KPI에 대한 세부 정보가 표시됩니다.  
+     
+  **KPI** 탭에는 여러 개의 창이 포함되어 있습니다. 이 탭 왼쪽에는 **KPI 구성 도우미** 창과 **계산 도구** 창이 있고 탭 중간의 표시 창에는 **KPI 구성 도우미** 창에서 선택한 KPI에 대한 세부 정보가 표시됩니다.  
   
      다음 그림에서는 큐브 디자이너의 **KPI** 탭을 보여 줍니다.  
   
-     ![큐브 디자이너의 Kpi 탭](../../2014/tutorials/media/l7-kpi-1.gif "큐브 디자이너의 Kpi 탭")  
+     ![큐브 디자이너의 KPI 탭](../../2014/tutorials/media/l7-kpi-1.gif "큐브 디자이너의 KPI 탭")  
   
-2.  **KPI** 탭의 도구 모음에서 **새 KPI** 단추를 클릭합니다.  
+2.  
+  **KPI** 탭의 도구 모음에서 **새 KPI** 단추를 클릭합니다.  
   
      다음 그림에 표시된 것처럼 표시 창에 빈 KPI 템플릿이 나타납니다.  
   
      ![표시 창의 빈 KPI 템플릿](../../2014/tutorials/media/l7-kpi-2.gif "표시 창의 빈 KPI 템플릿")  
   
-3.  **이름** 상자에 `Reseller Revenue`를 입력 한 다음 **관련 된 측정값 그룹** 목록에서 **재판매인 Sales** 를 선택 합니다.  
+3.  **이름** 상자에를 입력 `Reseller Revenue`한 다음 **관련 된 측정값 그룹** 목록에서 **재판매인 Sales** 를 선택 합니다.  
   
-4.  **계산 도구** 창의 **메타데이터** 탭에서 **Measures**, **Reseller Sales**를 차례로 확장한 후 **Reseller Sales-Sales Amount** 측정값을 **값 식** 상자로 끌어옵니다.  
+4.  
+  **계산 도구** 창의 **메타데이터** 탭에서 **Measures**, **Reseller Sales**를 차례로 확장한 후 **Reseller Sales-Sales Amount** 측정값을 **값 식** 상자로 끌어옵니다.  
   
-5.  **계산 도구** 창의 **메타데이터** 탭에서 **Measures**, **Sales Quotas**를 차례로 확장한 후 **Sales Amount Quota** 측정값을 **목표 식** 상자로 끌어옵니다.  
+5.  
+  **계산 도구** 창의 **메타데이터** 탭에서 **Measures**, **Sales Quotas**를 차례로 확장한 후 **Sales Amount Quota** 측정값을 **목표 식** 상자로 끌어옵니다.  
   
-6.  **상태 표시** 목록에서 **계기** 가 선택되어 있는지 확인한 후 **상태 식** 상자에 다음 MDX 식을 입력합니다.  
+6.  
+  **상태 표시** 목록에서 **계기** 가 선택되어 있는지 확인한 후 **상태 식** 상자에 다음 MDX 식을 입력합니다.  
   
     ```  
     Case  
@@ -91,7 +97,8 @@ ms.locfileid: "69493788"
   
      이 MDX 식은 목표의 진행률 평가를 위한 기본 사항을 제공합니다. 이 MDX 식에서 실제 대리점 판매가 목표액의 85%보다 많으면 선택된 그래픽이 0으로 채워집니다. 계기는 선택된 그래픽이므로 계기의 포인터는 빈 상태와 꽉 찬 상태의 중간을 가리킵니다. 실제 대리점 판매가 90%보다 많으면 계기의 포인터는 빈 상태와 꽉 찬 상태의 3/4 위치를 가리킵니다.  
   
-7.  **추세 표시** 목록에서 **일반 화살표** 가 선택되어 있는지 확인한 후 **추세 식** 상자에 다음 MDX 식을 입력합니다.  
+7.  
+  **추세 표시** 목록에서 **일반 화살표** 가 선택되어 있는지 확인한 후 **추세 식** 상자에 다음 MDX 식을 입력합니다.  
   
     ```  
     Case  
@@ -134,29 +141,36 @@ ms.locfileid: "69493788"
   
 ## <a name="browsing-the-cube-by-using-the-reseller-revenue-kpi"></a>Reseller Revenue KPI를 사용하여 큐브 찾아보기  
   
-1.  **의** 빌드 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]메뉴에서 **Analysis Services Tutorial 배포**를 클릭합니다.  
+1.  
+  **의** 빌드 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]메뉴에서 **Analysis Services Tutorial 배포**를 클릭합니다.  
   
 2.  배포가 성공적으로 완료되면 **KPI** 탭의 도구 모음에서 **브라우저 보기** 단추를 클릭한 후 **다시 연결**을 클릭합니다.  
   
-     **KPI 브라우저** 창에는 각 차원의 기본 멤버 값을 기반으로 하는 대리점 판매에 대한 상태 및 추세 계기와 해당 값 및 목표가 표시됩니다. 차원의 다른 어떤 멤버도 기본 멤버로 정의하지 않았으므로 각 차원의 기본 멤버는 All 수준의 All 멤버가 됩니다.  
+     
+  **KPI 브라우저** 창에는 각 차원의 기본 멤버 값을 기반으로 하는 대리점 판매에 대한 상태 및 추세 계기와 해당 값 및 목표가 표시됩니다. 차원의 다른 어떤 멤버도 기본 멤버로 정의하지 않았으므로 각 차원의 기본 멤버는 All 수준의 All 멤버가 됩니다.  
   
 3.  필터 창의 **차원** 목록에서 **Sales Territory** 를, **계층** 목록에서 **Sales Territories** 를, **연산자** 목록에서 **같음** 을, **필터 식** 목록에서 **North America** 확인란을 선택한 다음 **확인**을 클릭합니다.  
   
-4.  **필터** 창의 다음 행에서는 **차원** 목록에서 **Date** 를, **계층** 목록에서 **Calendar Date** 를, **연산자** 목록에서 **같음** 을, **필터 식** 목록에서 **Q3 CY 2007** 확인란을 선택한 다음 **확인**을 클릭합니다.  
+4.  
+  **필터** 창의 다음 행에서는 **차원** 목록에서 **Date** 를, **계층** 목록에서 **Calendar Date** 를, **연산자** 목록에서 **같음** 을, **필터 식** 목록에서 **Q3 CY 2007** 확인란을 선택한 다음 **확인**을 클릭합니다.  
   
-5.  **KPI 브라우저** 창을 클릭하여 **Reseller Revenue KPI**의 값을 업데이트합니다.  
+5.  
+  **KPI 브라우저** 창을 클릭하여 **Reseller Revenue KPI**의 값을 업데이트합니다.  
   
      KPI의 **값**, **목표**및 **상태** 섹션은 새 기간에 대한 값을 반영합니다.  
   
 ## <a name="defining-the-product-gross-profit-margin-kpi"></a>Product Gross Profit Margin KPI 정의  
   
-1.  **KPI** 탭의 도구 모음에서 **폼 보기** 단추를 클릭한 후 **새 KPI** 단추를 클릭합니다.  
+1.  
+  **KPI** 탭의 도구 모음에서 **폼 보기** 단추를 클릭한 후 **새 KPI** 단추를 클릭합니다.  
   
-2.  **이름** 상자에 `Product Gross Profit Margin`를 입력 한 다음 **\<All >** 이 **관련 된 측정값 그룹** 목록에 나타나는지 확인 합니다.  
+2.  **이름** 상자에를 입력 `Product Gross Profit Margin`하 고 ** \<모든>** 이 **관련 된 측정값 그룹** 목록에 나타나는지 확인 합니다.  
   
-3.  **계산 도구** 창의 **메타데이터** 탭에서 **Total GPM** 측정값을 **값 식** 상자로 끌어옵니다.  
+3.  
+  **계산 도구** 창의 **메타데이터** 탭에서 **Total GPM** 측정값을 **값 식** 상자로 끌어옵니다.  
   
-4.  **목표 식** 상자에 다음 식을 입력합니다.  
+4.  
+  **목표 식** 상자에 다음 식을 입력합니다.  
   
     ```  
     Case  
@@ -176,9 +190,11 @@ ms.locfileid: "69493788"
     End  
     ```  
   
-5.  **상태 표시** 목록에서 **실린더**를 선택합니다.  
+5.  
+  **상태 표시** 목록에서 **실린더**를 선택합니다.  
   
-6.  **상태 식** 상자에 다음 MDX 식을 입력합니다.  
+6.  
+  **상태 식** 상자에 다음 MDX 식을 입력합니다.  
   
     ```  
     Case  
@@ -197,7 +213,8 @@ ms.locfileid: "69493788"
   
      이 MDX 식은 목표의 진행률 평가를 위한 기본 사항을 제공합니다.  
   
-7.  **추세 표시** 목록에서 **일반 화살표** 가 선택되어 있는지 확인한 후 **추세 식** 상자에 다음 MDX 식을 입력합니다.  
+7.  
+  **추세 표시** 목록에서 **일반 화살표** 가 선택되어 있는지 확인한 후 **추세 식** 상자에 다음 MDX 식을 입력합니다.  
   
     ```  
     Case  
@@ -257,13 +274,15 @@ ms.locfileid: "69493788"
   
 ## <a name="browsing-the-cube-by-using-the-total-gross-profit-margin-kpi"></a>Total Gross Profit Margin KPI를 사용하여 큐브 찾아보기  
   
-1.  **빌드** 메뉴에서 **Analysis Services Tutorial 배포**를 클릭합니다.  
+1.  
+  **빌드** 메뉴에서 **Analysis Services Tutorial 배포**를 클릭합니다.  
   
 2.  배포가 성공적으로 완료되면 **KPI** 탭의 도구 모음에서 **브라우저 보기** 를 클릭한 후 **다시 연결**을 클릭합니다.  
   
-     @No__t_0 KPI가 표시 되 고 **Q3 CY 2007** 및 **북아메리카** 영업 지역에 대 한 kpi 값이 표시 됩니다.  
+     Kpi가 나타나고 **Q3 CY 2007** 및 북아메리카 판매 지역에 대 한 kpi 값이 표시 됩니다. **** `Product Gross Profit Margin`  
   
-3.  **필터** 창의 **차원** 목록에서 **Product** 를, **계층** 목록에서 **Category** 를, **연산자** 목록에서 **같음** 을, **필터 식** 목록에서 **Bikes** 를 선택한 다음 **확인**을 클릭합니다.  
+3.  
+  **필터** 창의 **차원** 목록에서 **Product** 를, **계층** 목록에서 **Category** 를, **연산자** 목록에서 **같음** 을, **필터 식** 목록에서 **Bikes** 를 선택한 다음 **확인**을 클릭합니다.  
   
      North America의 대리점별로 Q3 CY 2007에 해당하는 Bikes 판매의 매출이익률이 표시됩니다.  
   

@@ -20,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 42e52d92d993627129f79f215fa536001f44538d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63074068"
 ---
 # <a name="template-explorer"></a>Template Explorer
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다양한 템플릿을 제공합니다. 템플릿은 데이터베이스에서 개체를 만드는 데 유용한 SQL 스크립트를 포함하는 상용구 파일입니다. 템플릿 탐색기를 열면 처음으로 템플릿 복사본이 사용자의 AppData\Roaming\Microsoft\SQL Server Management Studio\120\Templates 아래 C:\Users 폴더에 배치 됩니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다양한 템플릿을 제공합니다. 템플릿은 데이터베이스에서 개체를 만드는 데 유용한 SQL 스크립트를 포함하는 상용구 파일입니다. 템플릿 탐색기를 처음 열면 AppData\Roaming\Microsoft\SQL Server Management Studio\120\templates 아래에 있는 C:\Users의 사용자 폴더에 템플릿 복사본이 배치 됩니다.  
   
  템플릿 탐색기에서 사용 가능한 템플릿을 찾은 다음 열어서 코드를 코드 편집기 창에 통합할 수 있습니다. 사용자 지정 템플릿을 만들 수도 있습니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "63074068"
 ## <a name="related-tasks"></a>관련 작업  
  템플릿을 시작하려면 다음 항목을 사용하십시오.  
   
-|**Description**|**항목**|  
+|**설명**|**항목**|  
 |---------------------|---------------|  
 |템플릿의 코드를 코드 편집기 창에 통합하는 방법에 대해 설명합니다.|[템플릿 열기](open-a-template.md)|  
 |코드 편집기에서 템플릿을 연 후 템플릿 매개 변수 값을 바꾸는 방법에 대해 설명합니다.|[템플릿 매개 변수 바꾸기](replace-template-parameters.md)|  

@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 60a96db6a7568c2af22242f10f96e7a2abf13937
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637832"
 ---
 # <a name="install-the-stand-alone-version-of-report-builder-report-builder"></a>독립 실행형 버전의 보고서 작성기 설치(보고서 작성기)
-  [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=53613) 의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 기능 팩 이나 보고서 작성기의 Windows Installer 패키지인 ReportBuilder3_x86이 다운로드 된 공용 폴더와 같은 위치에 보고서 작성기를 설치할 수 있습니다.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=53613) 의 기능 팩에서 보고서 작성기를 설치 하거나, 보고서 작성기 용 Windows Installer 패키지가 다운로드 된 ReportBuilder3_x86 공용 폴더 등의 위치를 다운로드할 수 있습니다.  
   
  보고서 작성기의 명령줄 설치를 수행하고 인수를 제공하여 설치를 사용자 지정할 수도 있습니다. 표준 MSI 내장 매개 변수 외에도 RBINSTALLDIR 및 REPORTSERVERURL 보고서 작성기 제공 하는 사용자 지정 매개 변수를 사용할 수 있습니다. RBINSTALLDIR은 보고서 작성기의 루트 설치 폴더를 지정합니다. REPORTSERVERURL은 보고서 작성기에서 보고서를 서버에 저장하기 위해 사용하는 기본 보고서 서버를 지정합니다.  
   
@@ -56,14 +56,15 @@ ms.locfileid: "73637832"
     -   **찾아보기** 를 클릭 하 보고서 작성기 기본 위치를 확인 하 고 업데이트 합니다.  
   
         > [!NOTE]  
-        >  보고서 작성기의 기본 설치 폴더는 \<drive > Program Files\Microsoft SQL Server입니다.  
+        >  보고서 작성기의 기본 설치 폴더는 \<Drive>Program Files\Microsoft SQL Server입니다.  
   
     -   **디스크** 공간을 클릭 하 보고서 작성기 사용 하는 디스크 공간 크기를 확인 합니다.  
   
         > [!NOTE]  
         >  볼륨에 디스크 여유 공간이 충분하지 않은 경우 해당 볼륨이 강조 표시됩니다.  
   
-10. **기본 대상 서버** 페이지에서 필요 시 대상 보고서 서버의 URL을 제공합니다(기본값과 다른 경우). **다음**을 클릭합니다.  
+10. 
+  **기본 대상 서버** 페이지에서 필요 시 대상 보고서 서버의 URL을 제공합니다(기본값과 다른 경우). **다음**을 클릭합니다.  
   
     > [!NOTE]  
     >  보고서 서버에 연결되었을 때 보고서 작성기로 작업할 계획이라면 이 단계에서 서버의 URL을 제공하는 것이 좋습니다. 그러나 보고서 작성기에서 작업할 때 **옵션** 대화 상자에서이 작업을 수행할 수도 있습니다.  
@@ -89,14 +90,15 @@ ms.locfileid: "73637832"
     -   **찾아보기** 를 클릭 하 보고서 작성기 기본 위치를 확인 하 고 업데이트 합니다.  
   
         > [!NOTE]  
-        >  보고서 작성기의 기본 설치 폴더는 \<drive > Program Files\Microsoft SQL Server입니다.  
+        >  보고서 작성기의 기본 설치 폴더는 \<Drive>Program Files\Microsoft SQL Server입니다.  
   
     -   **디스크** 공간을 클릭 하 보고서 작성기 사용 하는 디스크 공간 크기를 확인 합니다.  
   
         > [!NOTE]  
         >  볼륨에 디스크 여유 공간이 충분하지 않은 경우 해당 볼륨이 강조 표시됩니다.  
   
-7.  **기본 대상 서버** 페이지에서 필요 시 대상 보고서 서버의 URL을 제공합니다(기본값과 다른 경우). **다음**을 클릭합니다.  
+7.  
+  **기본 대상 서버** 페이지에서 필요 시 대상 보고서 서버의 URL을 제공합니다(기본값과 다른 경우). **다음**을 클릭합니다.  
   
     > [!NOTE]  
     >  보고서 서버에 연결되었을 때 보고서 작성기로 작업할 계획이라면 이 단계에서 서버의 URL을 제공하는 것이 좋습니다. 그러나 보고서 작성기에서 작업할 때 **옵션** 대화 상자에서이 작업을 수행할 수도 있습니다.  
@@ -115,7 +117,7 @@ ms.locfileid: "73637832"
   
 5.  **시작** 메뉴에서 **실행**을 클릭합니다.  
   
-6.  열기 입력란에을 입력 `cmd.`  
+6.  열기 입력란에 을(를) 입력합니다.`cmd.`  
   
 7.  명령 프롬프트 창에서 ReportBuilder3_x86.msi를 저장한 폴더로 이동합니다.  
   
@@ -131,6 +133,6 @@ ms.locfileid: "73637832"
   
 ## <a name="see-also"></a>참고 항목  
  [설치, 제거 및 보고서 작성기 지원](../install-uninstall-and-report-builder-support.md)   
- [독립 실행형 버전의 보고서 작성기 &#40;보고서 작성기 제거&#41;](install-report-builder.md)  
+ [독립 실행형 버전의 보고서 작성기 &#40;보고서 작성기을 제거&#41;](install-report-builder.md)  
   
   

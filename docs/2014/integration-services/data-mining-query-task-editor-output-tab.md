@@ -15,13 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7b381ec722125bfa6ad8a4b8102e2fa3b7a5c309
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890465"
 ---
 # <a name="data-mining-query-task-editor-output-tab"></a>데이터 마이닝 쿼리 태스크 편집기(출력 탭)
+  
   **데이터 마이닝 쿼리 태스크 편집기** 대화 상자의 **출력** 탭을 사용하여 예측 쿼리의 대상을 지정할 수 있습니다.  
   
  패키지에서 데이터 마이닝을 구현하는 방법에 대한 자세한 내용은 [데이터 마이닝 쿼리 태스크](control-flow/data-mining-query-task.md) 및 [데이터 마이닝 솔루션](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)을 참조하세요.  
@@ -46,13 +47,13 @@ ms.locfileid: "68890465"
  **출력 테이블**  
  예측 쿼리가 결과를 작성할 테이블을 지정합니다.  
   
- **출력 테이블을 삭제하고 다시 만들기**  
+ **출력 테이블을 삭제 하 고 다시 만듭니다.**  
  테이블을 삭제한 다음 다시 만들어 예측 쿼리가 대상 테이블의 내용을 덮어쓸지 여부를 나타냅니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [데이터 마이닝 쿼리 태스크 편집기&#40;마이닝 모델 탭&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
- [데이터 마이닝 쿼리 태스크 편집기&#40;쿼리 탭&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
- [데이터 마이닝 디자이너](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
+ [데이터 마이닝 쿼리 태스크 편집기 &#40;마이닝 모델 탭&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
+ [데이터 마이닝 쿼리 태스크 편집기 &#40;쿼리 탭&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
+ [Data Mining Designer](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
   
   

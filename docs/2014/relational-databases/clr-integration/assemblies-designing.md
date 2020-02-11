@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ad5135eb8141cc84bc6e5bddc8bd8477f4699b9e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874926"
 ---
 # <a name="designing-assemblies"></a>어셈블리 디자인
@@ -34,19 +34,19 @@ ms.locfileid: "62874926"
   
  코드를 어셈블리에 패키징할 때는 다음을 고려해야 합니다.  
   
--   CLR 사용자 정의 함수에 의존하는 CLR 사용자 정의 유형 및 인덱스는 영구 데이터가 어셈블리에 의존하는 데이터베이스에 포함되도록 만들 수 있습니다. 어셈블리의 코드를 수정하면 데이터베이스에 있는 어셈블리에 의존하는 영구 데이터가 있는 경우 보다 복잡해지는 경우가 많습니다. 따라서 일반적으로 사용자 정의 유형과 사용자 정의 함수를 사용하는 인덱스와 같이 영구 데이터 종속 관계에 의존하는 코드를 이러한 영구 데이터 종속 관계가 없는 코드와 구분하는 것이 좋습니다. 자세한 내용은 [Implementing Assemblies](assemblies-implementing.md) 하 고 [ALTER ASSEMBLY &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-assembly-transact-sql).  
+-   CLR 사용자 정의 함수에 의존하는 CLR 사용자 정의 유형 및 인덱스는 영구 데이터가 어셈블리에 의존하는 데이터베이스에 포함되도록 만들 수 있습니다. 어셈블리의 코드를 수정하면 데이터베이스에 있는 어셈블리에 의존하는 영구 데이터가 있는 경우 보다 복잡해지는 경우가 많습니다. 따라서 일반적으로 사용자 정의 유형과 사용자 정의 함수를 사용하는 인덱스와 같이 영구 데이터 종속 관계에 의존하는 코드를 이러한 영구 데이터 종속 관계가 없는 코드와 구분하는 것이 좋습니다. 자세한 내용은 [어셈블리 구현](assemblies-implementing.md) 및 [ALTER ASSEMBLY &#40;transact-sql&#41;](/sql/t-sql/statements/alter-assembly-transact-sql)를 참조 하세요.  
   
 -   관리 코드의 조각에 더 높은 사용 권한이 필요한 경우 해당 코드를 높은 사용 권한이 필요하지 않은 코드와 별개의 어셈블리로 구분하는 것이 좋습니다.  
   
 ## <a name="managing-assembly-security"></a>어셈블리 보안 관리  
- 관리 코드를 실행할 때 .NET Code Access Security로 보호되는 리소스를 어셈블리에서 어느 정도까지 액세스할 수 있는지를 제어할 수 있습니다. 컨트롤을 만들거나 어셈블리를 수정할 때 세 가지 권한 집합 중 하나를 지정 하 여이 수행 합니다. SAFE, EXTERNAL_ACCESS 또는 UNSAFE 합니다.  
+ 관리 코드를 실행할 때 .NET Code Access Security로 보호되는 리소스를 어셈블리에서 어느 정도까지 액세스할 수 있는지를 제어할 수 있습니다. 이렇게 하려면 어셈블리를 만들거나 수정할 때 SAFE, EXTERNAL_ACCESS 또는 UNSAFE의 세 가지 권한 집합 중 하나를 지정 합니다.  
   
 ### <a name="safe"></a>SAFE  
  SAFE는 기본 사용 권한 집합이며 가장 제한적입니다. SAFE 권한을 사용하여 어셈블리에서 실행한 코드는 파일, 네트워크, 환경 변수 또는 레지스트리와 같은 외부 시스템 리소스에 액세스할 수 없습니다. SAFE 코드는 로컬 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스의 데이터에 액세스하거나 로컬 데이터베이스 외부의 리소스에 액세스하지 않는 계산 및 비즈니스 논리를 수행할 수 있습니다.  
   
  대부분의 어셈블리는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 외부에 있는 리소스에 액세스할 필요 없이 계산 및 데이터 관리 태스크를 수행합니다. 따라서 어셈블리 사용 권한 집합으로 SAFE를 사용하는 것이 좋습니다.  
   
-### <a name="externalaccess"></a>EXTERNAL_ACCESS  
+### <a name="external_access"></a>EXTERNAL_ACCESS  
  EXTERNAL_ACCESS를 사용하면 어셈블리에서 파일, 네트워크, 웹 서비스, 환경 변수 및 레지스트리와 같은 특정 외부 시스템 리소스에 액세스할 수 있습니다. EXTERNAL ACCESS 권한이 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인만 EXTERNAL_ACCESS 어셈블리를 만들 수 있습니다.  
   
  SAFE 및 EXTERNAL_ACCESS 어셈블리에는 검증적으로 안전한 유형의 코드만 포함될 수 있습니다. 즉, 이러한 어셈블리에서만 유형 정의에 유효한 잘 정의된 진입점을 통해 클래스에 액세스할 수 있습니다. 따라서 이러한 유형은 코드에서 소유하지 않은 메모리 버퍼에 임의로 액세스할 수 없습니다. 또한 이러한 어셈블리는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 프로세스의 견고성에 악영향을 줄 수 있는 작업을 수행할 수 없습니다.  
@@ -54,10 +54,11 @@ ms.locfileid: "62874926"
 ### <a name="unsafe"></a>UNSAFE  
  UNSAFE는 어셈블리에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 내부 및 외부의 리소스에 대한 무제한적인 액세스를 제공합니다. UNSAFE 어셈블리 내에서 실행되는 코드는 비관리 코드를 호출할 수 있습니다.  
   
- 또한 UNSAFE를 지정하면 어셈블리에 있는 코드에서 CLR 확인 프로그램에 의해 안전하지 않은 유형으로 간주되는 작업을 수행할 수 있습니다. 이러한 작업은 제어되지 않는 방식으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 프로세스 공간에서 메모리 버퍼에 액세스할 가능성이 있습니다. UNSAFE 어셈블리는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 또는 공용 언어 런타임 중 하나의 보안 시스템을 손상시킬 수도 있습니다. UNSAFE 권한은 숙련된 개발자 또는 관리자가 가장 신뢰할 수 있는 어셈블리에만 부여해야 합니다. 멤버는 **sysadmin** 고정된 서버 역할 UNSAFE 어셈블리를 만들 수 있습니다.  
+ 또한 UNSAFE를 지정하면 어셈블리에 있는 코드에서 CLR 확인 프로그램에 의해 안전하지 않은 유형으로 간주되는 작업을 수행할 수 있습니다. 이러한 작업은 제어되지 않는 방식으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 프로세스 공간에서 메모리 버퍼에 액세스할 가능성이 있습니다. UNSAFE 어셈블리는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 또는 공용 언어 런타임 중 하나의 보안 시스템을 손상시킬 수도 있습니다. UNSAFE 권한은 숙련된 개발자 또는 관리자가 가장 신뢰할 수 있는 어셈블리에만 부여해야 합니다. **Sysadmin** 고정 서버 역할의 멤버만 UNSAFE 어셈블리를 만들 수 있습니다.  
   
 ## <a name="restrictions-on-assemblies"></a>어셈블리에 대한 제한  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 어셈블리를 안정적이고 확장 가능한 방식으로 실행할 수 있도록 보장하기 위해 어셈블리에 있는 관리 코드에 특정 제한을 지정합니다. 즉, 서버의 견고성을 손상시킬 수 있는 작업은 SAFE 및 EXTERNAL_ACCESS 어셈블리에서 허용되지 않습니다.  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 어셈블리를 안정적이고 확장 가능한 방식으로 실행할 수 있도록 보장하기 위해 어셈블리에 있는 관리 코드에 특정 제한을 지정합니다. 즉, 서버의 견고성을 손상시킬 수 있는 작업은 SAFE 및 EXTERNAL_ACCESS 어셈블리에서 허용되지 않습니다.  
   
 ### <a name="disallowed-custom-attributes"></a>허용되지 않는 사용자 지정 특성  
  다음과 같은 사용자 지정 특성으로는 어셈블리에 주석을 지정할 수 없습니다.  
@@ -83,7 +84,7 @@ System.Security.UnverifiableCodeAttribute
 ```  
   
 ### <a name="disallowed-net-framework-apis"></a>허용되지 않는 .NET Framework API  
- 모든 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] API는 허용 되지 않는 중 하나를 사용 하 여 주석 **HostProtectionAttributes** SAFE 및 EXTERNAL_ACCESS 어셈블리에서 호출할 수 없습니다.  
+ 허용 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 되지 않는 **HostProtectionAttributes** 중 하나를 사용 하 여 주석이 추가 된 모든 API는 SAFE 및 EXTERNAL_ACCESS 어셈블리에서 호출할 수 없습니다.  
   
 ```  
 eSelfAffectingProcessMgmt  
@@ -116,7 +117,7 @@ System.Data.OracleClient
 System.Configuration  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [어셈블리 &#40;데이터베이스 엔진&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [CLR 통합 보안](security/clr-integration-security.md)  
   

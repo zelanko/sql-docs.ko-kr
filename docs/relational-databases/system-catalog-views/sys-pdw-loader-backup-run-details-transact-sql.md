@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_loader_backup_run_details (TRANSACT-SQL) | Microsoft Docs
+title: sys. pdw_loader_backup_run_details (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,28 +13,28 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: dead5962987f7fb132f21bb4e3517f7cc9249601
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68127652"
 ---
-# <a name="syspdwloaderbackuprundetails-transact-sql"></a>sys.pdw_loader_backup_run_details (Transact SQL)
+# <a name="syspdw_loader_backup_run_details-transact-sql"></a>sys. pdw_loader_backup_run_details (Transact-sql)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  정보 외의 자세한 정보를 포함 [sys.pdw_loader_backup_runs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md), 진행 중인 및 완료 된 백업 및 복원 작업에 대 한 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 지속적인 백업, 복원 및 로드 작업에서 완료 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]합니다. 이 정보는 시스템을 다시 시작해도 유지됩니다.  
+  에는 [pdw_loader_backup_runs &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md),의 진행 중 및 완료 된 백업 및 복원 작업에 대 한 정보 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및의 지속적인 백업, 복원 및 로드 작업 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 대 한 자세한 정보가 포함 되어 있습니다. 이 정보는 시스템을 다시 시작해도 유지됩니다.  
   
-|열 이름|데이터 형식|설명|범위|  
+|열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
-|run_id|**int**|특정 백업 또는 복원을 실행에 대 한 고유 식별자입니다.<br /><br /> run_id 및 pdw_node_id이이 보기에 대 한 키를 구성합니다.||  
-|pdw_node_id|**int**|이 레코드는에 대 한 세부 정보를 포함 하는 어플라이언스 노드의 고유 식별자입니다.<br /><br /> run_id 및 pdw_node_id이이 보기에 대 한 키를 구성합니다.|에 대 한 node_id를 참조 하세요 [sys.dm_pdw_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)합니다.|  
-|상태|**nvarchar(16)**|실행의 현재 상태입니다.|'취소'를 ' 완료 ', '실패', '큐 대기', 'RUNNING'|  
-|start_time|**datetime**|이 특정 노드에서 작업을 시작 하는 시간입니다.||  
-|end_time|**datetime**|작업 종료 된 시간을이 특정 노드에 있는 경우.||  
-|total_elapsed_time|**int**|이 특정 노드에서 작업을 실행 하는 총 시간입니다.|Total_elapsed_time 정수 (밀리초 단위로 24.8 일)에 대 한 최대값을 초과 하는 경우 materialization 오류로 인해 오버플로를 발생 합니다.<br /><br /> 시간 (밀리초)의 최 댓 값 24.8 일 하는 것과 같습니다.|  
-|진행률|**int**|백분율로 표시 된 작업의 진행률입니다.|0에서 100 사이의|  
+|run_id|**int**|특정 백업 또는 복원 실행에 대 한 고유 식별자입니다.<br /><br /> run_id 및 pdw_node_id이 보기의 키를 구성 합니다.||  
+|pdw_node_id|**int**|이 레코드가 세부 정보를 보유 하는 어플라이언스 노드의 고유 식별자입니다.<br /><br /> run_id 및 pdw_node_id이 보기의 키를 구성 합니다.|[Dm_pdw_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)에서 node_id를 참조 하세요.|  
+|상태|**nvarchar (16)**|실행의 현재 상태입니다.|' 취소 됨 ', ' 완료 됨 ', ' 실패 ', ' 대기 중 ', ' 실행 중 '|  
+|start_time|**datetime**|이 특정 노드에서 작업이 시작 된 시간입니다.||  
+|end_time|**datetime**|이 특정 노드에서 작업이 끝난 시간입니다 (있는 경우).||  
+|total_elapsed_time|**int**|이 특정 노드에서 작업이 실행 된 총 시간입니다.|Total_elapsed_time 정수 24.8 (밀리초)의 최대값을 초과 하는 경우 오버플로로 인 한 구체화 실패가 발생 합니다.<br /><br /> 최대 값 (밀리초)은 24.8 일에 해당 합니다.|  
+|진행률|**int**|비율로 표시 되는 작업의 진행률입니다.|0~100|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Data Warehouse 및 병렬 데이터 웨어하우스 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

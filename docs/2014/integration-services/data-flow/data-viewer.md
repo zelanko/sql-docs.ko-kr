@@ -15,16 +15,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b5696b55252a6053b7501eee08dfbe4365678a26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827644"
 ---
 # <a name="data-viewer"></a>데이터 뷰어
   경로에서 데이터 뷰어를 사용하도록 구성한 경우 데이터 뷰어에서는 데이터가 두 데이터 흐름 구성 요소 간을 이동할 때 데이터를 버퍼별로 표시합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **녹색 화살표**  
  다음 버퍼에 데이터를 표시하려면 클릭합니다. 데이터를 단일 버퍼로 이동할 수 있는 경우 이 옵션은 사용할 수 없습니다.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "62827644"
  **데이터 복사**  
  현재 버퍼의 데이터를 클립보드로 복사합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 흐름 디버깅](../troubleshooting/debugging-data-flow.md)  
   
   

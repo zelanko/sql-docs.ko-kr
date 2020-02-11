@@ -20,25 +20,25 @@ ms.assetid: 04510b19-9cb2-4895-b23b-f7790123eb04
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e30d3ba08c10b16768d75a9234cfa15fe501c9b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965212"
 ---
 # <a name="sortorder-property-adox"></a>SortOrder 속성(ADOX)
-열 (인덱스 열에만 해당)에 대 한 정렬 순서를 나타냅니다.  
+열에 대 한 정렬 순서를 나타냅니다 (인덱스 열에만 해당).  
   
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
- 설정 하 고 반환을 **긴** 값 중 하나일 수 있는 합니다 [SortOrderEnum](../../../ado/reference/adox-api/sortorderenum.md) 상수입니다. 기본값은 **adSortAscending**합니다.  
+ [Sortorderenum](../../../ado/reference/adox-api/sortorderenum.md) 상수 중 하나일 수 있는 **Long** 값을 설정 하 고 반환 합니다. 기본값은 **adSortAscending**입니다.  
   
 ## <a name="remarks"></a>설명  
- 이 속성에만 적용 됩니다 [열](../../../ado/reference/adox-api/column-object-adox.md) 개체를 [열](../../../ado/reference/adox-api/columns-collection-adox.md) 의 컬렉션을 [인덱스](../../../ado/reference/adox-api/index-object-adox.md)합니다.  
+ 이 속성은 [인덱스](../../../ado/reference/adox-api/index-object-adox.md)의 [Columns](../../../ado/reference/adox-api/columns-collection-adox.md) 컬렉션에 있는 [열](../../../ado/reference/adox-api/column-object-adox.md) 개체에만 적용 됩니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [Column 개체(ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
+ [열 개체(ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SortOrder 속성 예제 (VB)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
  [Columns 컬렉션 (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Index 개체(ADOX)](../../../ado/reference/adox-api/index-object-adox.md)
+ [인덱스 개체(ADOX)](../../../ado/reference/adox-api/index-object-adox.md)

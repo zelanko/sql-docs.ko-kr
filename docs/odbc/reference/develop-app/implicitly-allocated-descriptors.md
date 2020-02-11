@@ -1,5 +1,5 @@
 ---
-title: 설명자를 암시적으로 할당 | Microsoft Docs
+title: 암시적으로 할당 된 설명자 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ ms.assetid: 9f88c863-affc-4ab4-a558-63a3ef766f37
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c0eb34866b75802a32c63e62b41d384e5a1dea73
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138951"
 ---
 # <a name="implicitly-allocated-descriptors"></a>암시적으로 할당된 설명자
-문 핸들 할당 될 때 응용 프로그램 4 설명자의 집합을 암시적으로 할당 합니다. 응용 프로그램의 문 핸들의 특성으로 설명자를 암시적으로 할당 된 이러한 핸들을 가져올 수 있습니다. 문 핸들 해제 하는 응용 프로그램, 드라이버는 핸들의 모든 암시적으로 할당 된 설명자를 해제 합니다.
+문 핸들이 할당 되 면 응용 프로그램은 네 개의 설명자 집합을 암시적으로 할당 합니다. 응용 프로그램은 이러한 암시적으로 할당 된 설명자의 핸들을 문 핸들의 특성으로 가져올 수 있습니다. 응용 프로그램에서 문 핸들을 해제 하면 드라이버는 해당 핸들에서 암시적으로 할당 된 모든 설명자를 해제 합니다.

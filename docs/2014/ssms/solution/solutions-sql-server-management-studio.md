@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1ef3c378b963168e3c4724033e390803812c5a27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63064904"
 ---
 # <a name="solutions-sql-server-management-studio"></a>솔루션(SQL Server Management Studio)
@@ -52,7 +52,7 @@ ms.locfileid: "63064904"
 |솔루션의 프로젝트 간에 항목을 이동하는 방법에 대해 설명합니다.|[솔루션에서 항목 이동](move-items-in-a-solution.md)|  
 |솔루션 또는 솔루션 항목의 이름을 바꾸는 방법에 대해 설명합니다.|[솔루션 및 프로젝트 항목의 이름 바꾸기](rename-solutions-and-project-items.md)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [솔루션 탐색기](solution-explorer.md)   
  [프로젝트 &#40;SQL Server Management Studio&#41;](projects-sql-server-management-studio.md)   
  [솔루션 탐색기 원본 제어](../../database-engine/solution-explorer-source-control.md)  

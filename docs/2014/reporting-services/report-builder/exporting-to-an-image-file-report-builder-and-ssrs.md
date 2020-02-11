@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fd3a6e7126775479ae7ca0c6b6d138a0625476af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107887"
 ---
 # <a name="exporting-to-an-image-file-report-builder-and-ssrs"></a>이미지 파일로 내보내기(보고서 작성기 및 SSRS)
   이미지 렌더링 확장 프로그램은 보고서를 비트맵이나 메타파일로 렌더링합니다. 기본적으로 이미지 렌더링 확장 프로그램은 보고서를 여러 페이지로 볼 수 있도록 TIFF 파일로 만듭니다. 클라이언트가 이미지를 수신하면 이미지 뷰어에서 확인하거나 인쇄할 수 있습니다. 이 항목에서는 이미지 렌더러 관련 정보를 제공하고 렌더링 규칙의 예외를 설명합니다.  
   
- 이미지 렌더링 확장 프로그램에서 지 원하는 형식으로 파일을 생성할 수 [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]: BMP, EMF, EMFPlus, GIF, JPEG, PNG 및 TIFF입니다. TIFF 형식의 경우 기본 스트림의 파일 이름은 *ReportName*.tif입니다. 파일당 한 페이지로 렌더링되는 기타 모든 형식의 경우 파일 이름은 *ReportName_Page.ext* 입니다. 여기서*ext* 는 선택한 형식의 파일 확장명입니다. 다른 이미지 지원 형식으로 파일을 생성하려면 위에 나와 있는 문자열 중 하나를 **OutputFormatDeviceInfo** 설정에 지정합니다.  
+ 이미지 렌더링 확장 프로그램은 [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]에서 지원하는 BMP, EMF, EMFPlus, GIF, JPEG, PNG 및 TIFF 형식으로 파일을 생성할 수 있습니다. TIFF 형식의 경우 기본 스트림의 파일 이름은 *ReportName*.tif입니다. 파일당 한 페이지로 렌더링되는 기타 모든 형식의 경우 파일 이름은 *ReportName_Page.ext* 입니다. 여기서*ext* 는 선택한 형식의 파일 확장명입니다. 다른 이미지 지원 형식으로 파일을 생성하려면 위에 나와 있는 문자열 중 하나를 **OutputFormatDeviceInfo** 설정에 지정합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -33,10 +33,10 @@ ms.locfileid: "66107887"
 |BMP|BMP|image/bmp|  
 |GIF|GIF|image/gif|  
 |JPEG|JPEG|image/jpeg|  
-|PNG|PNG|image/png|  
+|PNG|png|image/png|  
 |TIFF|tif|image/tiff|  
 |EMF|EMF|image/emf|  
-|EMFPlus|emf|image/emf|  
+|EMFPlus|EMF|image/emf|  
   
   
 ##  <a name="RenderingMultiplePages"></a> 여러 페이지 렌더링  
@@ -61,11 +61,11 @@ ms.locfileid: "66107887"
 -   책갈피  
   
   
-##  <a name="DeviceInfo"></a> 장치 정보 설정  
+##  <a name="DeviceInfo"></a> 디바이스 정보 설정  
  디바이스 정보 설정을 변경하여 이 렌더러의 기본 설정을 일부 변경할 수 있습니다. 자세한 내용은 [Image Device Information Settings](../image-device-information-settings.md)을(를) 참조하세요.  
   
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [여러 보고서 렌더링 확장 프로그램의 대화형 기능&#40;보고서 작성기 및 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   

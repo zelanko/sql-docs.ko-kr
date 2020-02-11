@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: db74bd7de8fcf3cdba6787fda18c510237d63372
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68941079"
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>트랜잭션 아티클의 데이터 변경 내용을 전파하는 방법 설정
@@ -37,7 +37,7 @@ ms.locfileid: "68941079"
   
      [Transact-SQL](#TsqlProcedure)  
   
-## <a name="before-you-begin"></a>시작하기 전 주의 사항  
+## <a name="before-you-begin"></a>시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -116,11 +116,11 @@ ms.locfileid: "68941079"
   
 1.  게시 데이터베이스의 게시자에서 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)을 실행합니다. **\@publication**에 아티클이 속한 게시 이름, **\@article**에 아티클 이름, **\@source_object**에 게시할 데이터베이스 개체, **0x02** 값(사용자 지정 저장 프로시저의 자동 생성 설정)을 포함하는 **\@schema_option** 비트 마스크에 값을 지정하고 다음 매개 변수 중 하나 이상을 지정합니다.  
   
-    -   ins_cmd- <strong>CALL sp_MSins_*article_name*</strong>값을 지정 합니다. 여기서 **_article_name_** 은  **\@article**에 지정 된 값입니다.  **\@**  
+    -   ins_cmd- <strong>호출 sp_MSins_*article_name*</strong>값을 지정 합니다. 여기서 **_article_name_** 은 ** \@아티클에**지정 된 값입니다. ** \@**  
   
-    -   **\@del_cmd** - <strong>CALL sp_MSdel_*article_name ** 또는* XCALL sp_MSdel_</strong>article_name*** 값을 지정합니다. 여기서 <strong>article_name*은*</strong> article**에 지정된 값입니다.  
+    -   **__** \@ <strong>** </strong> ** \@del_cmd** -CALL sp_MSdel_ article_name 또는 <strong>XCALL sp_MSdel_*article_name*</strong>값을 지정 합니다. 여기서 article_name은 _ * article * *에 지정 된 값입니다.  
   
-    -   upd_cmd- <strong>SCALL sp_MSupd_*article_name*</strong>, <strong>CALL sp_MSupd_*article_name*</strong>, <strong>XCALL *</strong>sp_MSupd__article_name 또는 <strong>MCALL sp_MSupd_* article_name *</strong>값을 지정 합니다. 여기서  **\@** _**article_name**_ 는  **\@아티클에**대해 지정 된 값입니다.  
+    -   ** \@** <strong>**</strong> <strong>**</strong> ** \@upd_cmd** -SCALL sp_MSupd_ article_name, CALL sp_MSupd_ article_name, <strong>XCALL sp_MSupd__article_name*</strong>또는 <strong>MCALL sp_MSupd_* article_name *</strong>값을 지정 합니다. 여기서 _**article_name**_ 은 아티클에 지정 된 값입니다.  
   
     > [!NOTE]  
     >  위 명령 매개 변수마다 복제 시 생성되는 저장 프로시저의 이름을 고유하게 지정할 수 있습니다.  
@@ -136,11 +136,11 @@ ms.locfileid: "68941079"
   
 1.  게시 데이터베이스의 게시자에서 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)을 실행합니다. **\@publication**에 아티클이 속한 게시 이름, **\@article**에 아티클 이름, **\@source_object**에 게시할 데이터베이스 개체, **0x02** 값(사용자 지정 저장 프로시저의 자동 생성 설정)을 포함하는 **\@schema_option** 비트 마스크에 값을 지정하고 다음 매개 변수 중 하나 이상을 지정합니다.  
   
-    -   ins_cmd- <strong>CALL sp_MSins_*article_name*</strong>값을 지정 합니다. 여기서 _**article_name**_ 은  **\@article**에 지정 된 값입니다.  **\@**  
+    -   ins_cmd- <strong>호출 sp_MSins_*article_name*</strong>값을 지정 합니다. 여기서 _**article_name**_ 은 ** \@아티클에**지정 된 값입니다. ** \@**  
   
-    -   **\@del_cmd** - <strong>CALL sp_MSdel_*article_name ** 또는* XCALL sp_MSdel_</strong>article_name*** 값을 지정합니다. 여기서 <strong>article_name*은*</strong> article_에 지정된 값입니다.  
+    -   ** \@** _****_ <strong>** </strong> ** \@del_cmd** -CALL sp_MSdel_ article_name 또는 <strong>XCALL sp_MSdel_*article_name*</strong>값을 지정 합니다. 여기서 article_name은 아티클에 지정 된 값입니다.  
   
-    -   **\@upd_cmd** - *<strong>SCALL sp_MSupd_*article_name***, ** CALL sp_MSupd_</strong>article_name***, *<strong>XCALL sp_MSupd_*article_name***, ** MCALL sp_MSupd_</strong>article_name*** 값을 지정합니다. 여기서 <strong>article_name*은*</strong> article<strong>에 지정된 값입니다.  
+    -   ** \@** _****_ <strong>**</strong> <strong>**</strong> <strong>**</strong> ** \@upd_cmd** -SCALL sp_MSupd_ article_name, CALL sp_MSupd_ article_name, <strong>XCALL sp_MSupd_*article_name*</strong>, MCALL sp_MSupd_ article_name 값을 지정 합니다. 여기서 article_name은 아티클에 지정 된 값입니다.  
   
     > [!NOTE]  
     >  위 명령 매개 변수마다 복제 시 생성되는 저장 프로시저의 이름을 고유하게 지정할 수 있습니다.  
@@ -158,7 +158,7 @@ ms.locfileid: "68941079"
   
 2.  변경하려는 각 전파 방법에 대해 1단계를 반복합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [트랜잭션 아티클에 대한 변경 내용을 전파하는 방법 지정](../transactional/transactional-articles-specify-how-changes-are-propagated.md)   
  [게시 만들기](create-a-publication.md)  
   

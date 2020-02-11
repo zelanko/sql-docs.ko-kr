@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fe555d94eb8e00cddd147c2424d0cf60e1d47b34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771619"
 ---
 # <a name="apply-the-changes-to-the-destination"></a>대상에 변경 내용 적용
@@ -102,6 +102,6 @@ ms.locfileid: "62771619"
 ## <a name="optimizing-inserts-and-updates-by-using-merge-functionality"></a>MERGE 기능을 사용하여 삽입 및 업데이트 최적화  
  Transact-SQL MERGE 키워드와 특정 변경 데이터 캡처 옵션을 함께 사용하여 삽입 및 업데이트 처리를 최적화할 수 있습니다. MERGE 키워드에 대한 자세한 내용은 [MERGE&#40;Transact-SQL&#41;](/sql/t-sql/statements/merge-transact-sql)를 참조하세요.  
   
- 변경 데이터를 검색하는 Transact-SQL 문에서 **cdc.fn_cdc_get_net_changes_<capture_instance>** 함수를 호출할 때 *all with merge*를 *row_filter_option* 매개 변수의 값으로 지정할 수 있습니다. 이 변경 데이터 캡처 함수는 삽입과 업데이트를 구분하는 데 필요한 추가 처리를 수행할 필요가 없을 때 보다 효율적으로 작동합니다. *all with merge* 매개 변수 값을 지정할 때 변경 데이터의 **__$operation** 값은 삭제의 경우 1이고 삽입 또는 업데이트로 인한 변경의 경우 5입니다. 변경 데이터를 검색하는 데 사용되는 Transact-SQL 함수에 대한 자세한 내용은 [변경 데이터 검색 및 이해](retrieve-and-understand-the-change-data.md)를 참조하세요. *all with merge* 매개 변수 값을 사용하여 변경 내용을 검색한 후 삭제를 적용하고 나머지 행을 임시 테이블 또는 준비 테이블에 출력할 수 있습니다. 그런 다음 다운스트림 SQL 실행 태스크에서 단일 MERGE 문을 사용하여 준비 테이블의 모든 삽입 또는 업데이트를 대상에 적용할 수 있습니다.  
+ 변경 데이터를 검색하는 Transact-SQL 문에서 *cdc.fn_cdc_get_net_changes_<capture_instance>* 함수를 호출할 때 *all with merge*를 **row_filter_option** 매개 변수의 값으로 지정할 수 있습니다. 이 변경 데이터 캡처 함수는 삽입과 업데이트를 구분하는 데 필요한 추가 처리를 수행할 필요가 없을 때 보다 효율적으로 작동합니다. *all with merge* 매개 변수 값을 지정할 때 변경 데이터의 **__$operation** 값은 삭제의 경우 1이고 삽입 또는 업데이트로 인한 변경의 경우 5입니다. 변경 데이터를 검색하는 데 사용되는 Transact-SQL 함수에 대한 자세한 내용은 [변경 데이터 검색 및 이해](retrieve-and-understand-the-change-data.md)를 참조하세요. *all with merge* 매개 변수 값을 사용하여 변경 내용을 검색한 후 삭제를 적용하고 나머지 행을 임시 테이블 또는 준비 테이블에 출력할 수 있습니다. 그런 다음 다운스트림 SQL 실행 태스크에서 단일 MERGE 문을 사용하여 준비 테이블의 모든 삽입 또는 업데이트를 대상에 적용할 수 있습니다.  
   
   
