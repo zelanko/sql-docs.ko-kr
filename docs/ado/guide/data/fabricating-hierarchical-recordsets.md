@@ -1,5 +1,5 @@
 ---
-title: 계층적 레코드 집합 구성 | Microsoft Docs
+title: Suz 계층 구조 레코드 집합 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,16 +16,16 @@ ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6fcdb630f2391f685080ac594cfdb537edf626a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925321"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>계층적 레코드 집합 구성
-다음 예제는 데이터 셰이핑 부모, 자식 및 손자에 대 한 열을 정의 하는 문법을 사용 하 여 기본 데이터 원본 사용 하지 않고 계층적 레코드 집합을 구성 하는 방법을 보여 줍니다 **레코드 집합**합니다.  
+다음 예에서는 데이터 셰이핑 문법을 사용 하 여 부모, 자식 및 손자 **레코드 집합**에 대 한 열을 정의 하 여 기본 데이터 원본 없이 계층적 레코드 집합을 만드는 방법을 보여 줍니다.  
   
- 계층을 구성 하 **레코드 집합**를 지정 해야 합니다는 [OLE DB (ADO 서비스 공급자)에 대 한 Microsoft Data Shaping Service](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (MSDataShape)에서 NONE 데이터 공급자 값을 지정할 수 있습니다는 연결 문자열 매개 변수를 [엽니다](../../../ado/reference/ado-api/open-method-ado-connection.md) 메서드는 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체. 자세한 내용은 [데이터 셰이프에 필요한 공급자](../../../ado/guide/data/required-providers-for-data-shaping.md)합니다.  
+ 계층적 **레코드 집합**을 만들려면 [OLE DB (ADO 서비스 공급자)에 대 한 Microsoft 데이터 셰이핑 서비스](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) 를 지정 해야 합니다 (MSDataShape). [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체의 [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) 메서드의 CONNECTION string 매개 변수에서 Data Provider 값을 NONE으로 지정할 수 있습니다. 자세한 내용은 [데이터 셰이핑에 필요한 공급자](../../../ado/guide/data/required-providers-for-data-shaping.md)를 참조 하세요.  
   
 ```  
 Dim cn As New ADODB.Connection  
@@ -52,11 +52,11 @@ strShape = _
 rsCustomers.Open strShape, cn, adOpenStatic, adLockOptimistic, -1  
 ```  
   
- 즉시 합니다 **레코드 집합** 되었습니다을 채우거 채워진, 조작 하거나 수를 파일에 저장 합니다.  
+ **레코드 집합** 을 만든 후에는 파일에 대해 채우거 나 조작 하거나 저장할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [계층적 레코드 집합의 행에 액세스](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
- [공식적인 셰이프 문법](../../../ado/guide/data/formal-shape-grammar.md)   
- [데이터 셰이프에 필요한 공급자](../../../ado/guide/data/required-providers-for-data-shaping.md)   
- [셰이프 APPEND 절](../../../ado/guide/data/shape-append-clause.md)   
+## <a name="see-also"></a>참고 항목  
+ [계층적 레코드 집합의 행 액세스](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
+ [공식 모양 문법](../../../ado/guide/data/formal-shape-grammar.md)   
+ [데이터 셰이핑에 필요한 공급자](../../../ado/guide/data/required-providers-for-data-shaping.md)   
+ [Shape APPEND 절](../../../ado/guide/data/shape-append-clause.md)   
  [일반적인 셰이핑 명령](../../../ado/guide/data/shape-commands-in-general.md)
