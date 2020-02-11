@@ -23,10 +23,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 58785d54954278d2dcb839ef3e707859682a9d37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104106"
 ---
 # <a name="caching-reports-ssrs"></a>보고서 캐시(SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "66104106"
  캐싱은 성능을 향상시키는 기술입니다. 캐시의 내용은 휘발성이며 보고서가 추가, 대체 또는 제거되면 그에 따라 변경될 수 있습니다. 좀 더 예측 가능한 캐싱을 위해서는 보고서 스냅샷을 만들어야 합니다. 자세한 내용은 [보고서 처리 속성 설정](set-report-processing-properties.md)을 참조하세요.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 사용자 세션 및 보고서 처리를 지원하기 위해 데이터베이스에 임시 파일을 저장합니다. 이러한 파일은 단일 브라우저 세션 중에 일관된 뷰를 제공하며 내부용으로 사용하기 위해 캐시됩니다. 내부용 임시 파일을 캐시하는 방법에 대한 자세한 내용은 [보고서 서버 데이터베이스&#40;SSRS 기본 모드&#41;](report-server-database-ssrs-native-mode.md)를 참조하세요.  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서는 사용자 세션 및 보고서 처리를 지원하기 위해 데이터베이스에 임시 파일을 저장합니다. 이러한 파일은 단일 브라우저 세션 중에 일관된 뷰를 제공하며 내부용으로 사용하기 위해 캐시됩니다. 내부용 임시 파일을 캐시하는 방법에 대한 자세한 내용은 [보고서 서버 데이터베이스&#40;SSRS 기본 모드&#41;](report-server-database-ssrs-native-mode.md)를 참조하세요.  
   
 ## <a name="cached-instances"></a>캐시된 인스턴스  
  보고서의 캐시된 인스턴스는 보고서의 중간 형식을 기반으로 합니다. 보고서 서버는 일반적으로 보고서 이름에 따라 하나의 보고서 인스턴스를 캐시합니다. 그러나 보고서에 쿼리 매개 변수를 기반으로 하는 다른 데이터가 포함될 수 있는 경우 여러 버전의 보고서가 캐시됩니다. 예를 들어 지역 번호를 매개 변수 값으로 사용하는 매개 변수가 있는 보고서가 있다고 가정해 봅시다. 4명의 사용자가 고유한 지역 번호 4개를 지정하면 캐시된 복사본 4개가 만들어집니다.  
@@ -69,13 +69,13 @@ ms.locfileid: "66104106"
   
  사용자가 지정한 매개 변수 값이 캐시된 보고서를 만드는 데 사용된 값과 다른 경우 등 어떤 이유에서든 캐시된 인스턴스에서 보고서를 렌더링할 수 없으면 보고서 서버에서 보고서를 다시 실행합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [처리 옵션 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [보고서 처리 속성 설정](set-report-processing-properties.md)   
  [Reporting Services 개념&#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
- [캐시 사전 로드&#40;보고서 관리자&#41;](preload-the-cache-report-manager.md)   
+ [캐시를 미리 로드 보고서 관리자 &#40;&#41;](preload-the-cache-report-manager.md)   
  [일정](../subscriptions/schedules.md)   
- [공유 데이터 세트 캐시&#40;SSRS&#41;](cache-shared-datasets-ssrs.md)   
- [캐시 새로 고침 옵션&#40;보고서 관리자&#41;](../cache-refresh-options-report-manager.md)  
+ [SSRS&#41;&#40;공유 데이터 집합 캐시](cache-shared-datasets-ssrs.md)   
+ [캐시 새로 고침 옵션을 보고서 관리자 &#40;&#41;](../cache-refresh-options-report-manager.md)  
   
   

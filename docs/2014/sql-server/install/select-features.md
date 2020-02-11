@@ -11,16 +11,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 92c9ebe68f92a652e8f713ca73dedce6b54443c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092371"
 ---
 # <a name="select-features"></a>기능 선택
   기능 선택 페이지를 사용하여 업데이트할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소 및 기능을 선택할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  언어, 운영 체제, 버전 및 상태 정보를 보려면 왼쪽 창에서 기능 이름을 클릭합니다.  
   
  구성 요소나 기능을 업데이트하려면 기능 이름 옆의 확인란을 선택합니다. 이 업데이트에서 구성 요소나 기능을 제외하려면 기능 이름 옆의 확인란을 선택 취소합니다.  

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 20c37fac040290a057bc03cbeb27cc43246efec2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102909"
 ---
 # <a name="reporting-services-features-and-tasks-ssrs"></a>Reporting Services 기능 및 태스크(SSRS)
@@ -48,8 +48,8 @@ ms.locfileid: "66102909"
   
  [Reporting Services 도구](tools/reporting-services-tools.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services&#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
- [새로운 &#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md)  
+ [새로운 기능 &#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md)  
   
   

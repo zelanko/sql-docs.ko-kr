@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1607637630c507588602dd7e566917ce1eeb6080
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100917"
 ---
 # <a name="pause-report-and-subscription-processing"></a>보고서 및 구독 처리 일시 중지
@@ -44,11 +44,11 @@ ms.locfileid: "66100917"
  데이터 원본을 사용할 수 없는 경우에도 보고서는 로드됩니다. 보고서에는 데이터가 포함되지 않지만 적절한 권한이 있는 사용자는 보고서에 연결된 속성 페이지, 보안 설정, 보고서 기록 및 구독 정보에 액세스할 수 있습니다.  
   
 ## <a name="pause-a-shared-schedule"></a>공유 일정 일시 중지  
- 보고서나 구독을 공유 일정에 따라 실행하는 경우 일정을 일시 중지하여 처리를 중단할 수 있습니다. 일정에 따라 진행되는 모든 보고서와 구독 처리는 일정을 다시 시작할 때까지 중단됩니다. 자세한 내용은 [일시 중지 및 다시 시작 공유 일정](schedules.md)합니다.  
+ 보고서나 구독을 공유 일정에 따라 실행하는 경우 일정을 일시 중지하여 처리를 중단할 수 있습니다. 일정에 따라 진행되는 모든 보고서와 구독 처리는 일정을 다시 시작할 때까지 중단됩니다. 자세한 내용은 [공유 일정 일시 중지 및 다시 시작](schedules.md)을 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [Reporting Services 보고서 서버&#40;기본 모드&#41;](../report-server/reporting-services-report-server-native-mode.md)   
+## <a name="see-also"></a>참고 항목  
+ [보고서 서버 &#40;기본 모드를 Reporting Services&#41;](../report-server/reporting-services-report-server-native-mode.md)   
  [보고서 관리자&#40;SSRS 기본 모드&#41;](../report-manager-ssrs-native-mode.md)   
- [보안 속성 페이지, 항목&#40;보고서 관리자&#41;](../security-properties-page-items-report-manager.md)  
+ [보안 속성 페이지, 항목 &#40;보고서 관리자&#41;](../security-properties-page-items-report-manager.md)  
   
   

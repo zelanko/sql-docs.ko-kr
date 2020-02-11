@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 84f9b681ee632e922f5ab349bf1a72fbea63f911
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105246"
 ---
 # <a name="inscope-function-report-builder-and-ssrs"></a>InScope 함수(보고서 작성기 및 SSRS)
@@ -34,14 +34,16 @@ InScope(scope)
  (`String`) 범위를 지정하는 데이터 세트, 데이터 영역 또는 그룹의 이름입니다.  
   
 ## <a name="return-type"></a>반환 형식  
- `Boolean`를 반환합니다.  
+ 
+  `Boolean`을 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
- 합니다 `InScope` 로 지정 된 범위의 멤버 자격에 대 한 보고서 항목의 현재 인스턴스 범위를 테스트 하는 함수를 *범위*매개 변수입니다.  
+## <a name="remarks"></a>설명  
+ 함수 `InScope` 는 *범위*매개 변수로 지정 된 범위의 멤버 자격에 대해 보고서 항목의 현재 인스턴스 범위를 테스트 합니다.  
   
  *Scope* 는 식이 될 수 없습니다.  
   
- `InScope` 함수는 일반적으로 동적으로 범위가 지정되는 데이터 영역에 사용됩니다. 예를 들어 데이터 영역 셀의 드릴스루 링크에 `InScope`를 사용하여 클릭한 셀에 따라 다양한 보고서 이름과 다양한 매개 변수 집합을 제공할 수 있습니다. 이러한 예는 다음과 같습니다.  
+ 
+  `InScope` 함수는 일반적으로 동적으로 범위가 지정되는 데이터 영역에 사용됩니다. 예를 들어 데이터 영역 셀의 드릴스루 링크에 `InScope`를 사용하여 클릭한 셀에 따라 다양한 보고서 이름과 다양한 매개 변수 집합을 제공할 수 있습니다. 이러한 예는 다음과 같습니다.  
   
 -   드릴스루 링크의 보고서 이름으로 사용된 다음 식은 클릭한 셀이 `ProductDetail` 그룹에 있으면 `Month` 보고서를 열고 그렇지 않으면 `ProductSummary` 보고서를 엽니다.  
   
@@ -64,7 +66,7 @@ InScope(scope)
 =InScope("Product")  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)   

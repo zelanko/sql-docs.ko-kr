@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dac2694101678f8728de4a4bcdd3db416ad4c17f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104914"
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>데이터 영역의 데이터 정렬(보고서 작성기 및 SSRS)
@@ -26,7 +26,7 @@ ms.locfileid: "66104914"
   
 -   계기 데이터 영역에서는 범위에 상대적인 단일 값이 계기에 표시되므로 일반적으로 데이터를 정렬하지 않아도 됩니다. 계기에서 데이터를 정렬해야 하는 경우 그룹을 먼저 정의한 다음 그룹에 대한 정렬 식을 설정해야 합니다.  
   
- 자세한 내용은 [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)을 참조하세요.  
+ 자세한 내용은 [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)를 참조하세요.  
   
  테이블릭스 데이터 영역의 경우 열 머리글 위쪽에 대화형 정렬 단추를 추가하면 사용자가 그룹 또는 정보 행의 정렬 순서를 변경할 수 있습니다. 자세한 내용은 [대화형 정렬&#40;보고서 작성기 및 SSRS&#41;](interactive-sort-report-builder-and-ssrs.md)을 참조하세요.  
   
@@ -125,8 +125,8 @@ ms.locfileid: "66104914"
   
  계기에서 데이터를 그룹화하는 방법에 대한 자세한 내용은 [계기&#40;보고서 작성기 및 SSRS&#41;](gauges-report-builder-and-ssrs.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [대화 상자, 창 및 마법사에 대한 보고서 작성기 도움말](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+## <a name="see-also"></a>참고 항목  
+ [대화 상자, 창 및 마법사에 대 한 보고서 작성기 도움말](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [차트의 축 레이블 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [여러 셰이프 차트에 일관된 색 지정&#40;보고서 작성기 및 SSRS&#41;](shape-charts-report-builder-and-ssrs.md)  

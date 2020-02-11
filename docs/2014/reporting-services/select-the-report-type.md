@@ -13,16 +13,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bcb4a2b4a542409e34eddac45b446cbff15c2821
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101425"
 ---
 # <a name="select-the-report-type"></a>보고서 유형 선택
   보고서 마법사의 보고서 유형 선택 페이지를 사용하여 테이블 형식 보고서 또는 행렬 보고서를 선택할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **테이블 형식**  
  테이블이 들어 있는 보고서를 만듭니다. 테이블은 데이터가 열과 행으로 배열되는 데이터 영역입니다. 테이블에는 정적 열 세트가 있습니다. 테이블의 행 수는 데이터 세트의 데이터에 따라 달라집니다.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "66101425"
   
  마법사의 후속 페이지에는 행렬을 정의할 수 있는 옵션이 들어 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [테이블&#40;보고서 작성기 및 SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
  [행렬&#40;보고서 작성기 및 SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md)   
  [보고서 마법사 도움말](../../2014/reporting-services/report-wizard-help.md)  

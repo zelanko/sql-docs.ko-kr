@@ -1,5 +1,5 @@
 ---
-title: SharePoint 라이브러리 (SharePoint 모드의 Reporting Services)에 문서 업로드 | Microsoft Docs
+title: SharePoint 라이브러리에 문서 업로드 (SharePoint 모드의 Reporting Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 009d7527f71966003d02e5963de451fda9710ae4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098834"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>SharePoint 라이브러리에 문서 업로드(SharePoint 모드의 Reporting Services)
@@ -47,7 +47,7 @@ ms.locfileid: "66098834"
   
  사용자가 데이터를 필터링할 수 있도록 보고서에 매개 변수를 포함할 수 있으며 이러한 매개 변수에 특정 값을 지정하거나 사용자에게 매개 변수가 표시되는 방식을 변경할 수 있습니다. 자세한 내용은 [게시된 보고서에 매개 변수 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SharePoint 라이브러리에 보고서 게시](reports/publish-a-report-to-a-sharepoint-library.md)   
  [SharePoint 라이브러리에 공유 데이터 원본 게시](reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 부여](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  

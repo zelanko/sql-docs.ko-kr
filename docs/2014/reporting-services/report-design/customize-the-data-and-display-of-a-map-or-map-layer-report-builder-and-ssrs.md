@@ -24,10 +24,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3cc939ac63f1b53e2d2d24d70edc5fe0798bcc51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106102"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>지도 또는 지도 계층의 데이터 및 표시 사용자 지정(보고서 작성기 및 SSRS)
@@ -129,7 +129,7 @@ ms.locfileid: "66106102"
   
  그룹 식은 공간 데이터와 관계가 있는 분석 데이터가 계층의 각 지도 요소에 대해 집계되는 방법을 지정합니다. 기본적으로 그룹 식은 공간 데이터와 분석 데이터 간의 관계에 대해 지정된 일치 필드의 집합입니다. 예를 들어 국가 또는 지역의 도시 위치와 인구 크기를 표시하는 거품형 지도의 경우 이름이 같은 도시가 여러 개일 수 있기 때문에 일치 필드에는 도시 이름 [City]와 지역 이름 [Region]이 포함됩니다. 해당 그룹 식에는 두 필드 [City] 및 [Region]이 포함됩니다.  
   
- 자세한 내용은 [맵 팁: 셰이프 파일을 SQL Server로 가져오고 공간 데이터를 집계하는 방법](https://go.microsoft.com/fwlink/?LinkID=214991)을 참조하세요.  
+ 자세한 내용은 [지도 팁: 셰이프 파일을 SQL Server로 가져오고 공간 데이터를 집계하는 방법](https://go.microsoft.com/fwlink/?LinkID=214991)을 참조하세요.  
   
  
   
@@ -142,7 +142,7 @@ ms.locfileid: "66106102"
   
 -   드릴스루 동작  
   
--   표시 옵션  
+-   옵션을 표시합니다.  
   
  지도 요소의 표시 옵션은 계층, 지도 요소, 지도 요소에 대한 규칙 및 포함된 지도 요소의 무시 옵션에 따른 우선 순위를 따릅니다.  
   
@@ -173,7 +173,7 @@ ms.locfileid: "66106102"
   
 
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [지도 마법사 및 지도 계층 마법사&#40;보고서 작성기 및 SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
  [지도&#40;보고서 작성기 및 SSRS&#41;](maps-report-builder-and-ssrs.md)  
   

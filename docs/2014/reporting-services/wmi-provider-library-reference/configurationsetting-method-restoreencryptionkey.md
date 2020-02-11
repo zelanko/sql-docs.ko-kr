@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d4cb556e127fa23f5b16506abdcc8e04ed433878
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098133"
 ---
-# <a name="restoreencryptionkey-method-wmi-msreportserverconfigurationsetting"></a>RestoreEncryptionKey 메서드(WMI MSReportServer_ConfigurationSetting)
+# <a name="restoreencryptionkey-method-wmi-msreportserver_configurationsetting"></a>RestoreEncryptionKey 메서드(WMI MSReportServer_ConfigurationSetting)
   지정된 암호화 키를 보고서 서버 데이터베이스에 다시 적용합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -42,7 +42,7 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
 ```  
   
 ## <a name="parameters"></a>매개 변수  
- *KeyFile[]*  
+ *KeyFile []*  
  [out] 암호화된 암호화 키를 포함하는 배열입니다.  
   
  *길이*  
@@ -54,21 +54,21 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
  *HRESULT*  
  [out] 호출의 성공 여부를 나타내는 값입니다.  
   
- *ExtendedErrors[]*  
+ *ExtendedErrors []*  
  [out] 호출에서 반환되는 추가 오류가 들어 있는 문자열 배열입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드 호출의 성공 또는 실패를 나타내는 *HRESULT* 를 반환합니다. 0 값은 메서드 호출이 성공했음을 나타냅니다. 0 이외의 값은 오류가 발생했음을 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  보고서 서버 데이터베이스에 보고서 서버에 대한 항목이 이미 있으면 삭제됩니다. 그런 다음, 지정된 암호화 키와 보고서 서버의 공개 키를 사용하여 새로운 항목이 만들어집니다.  
   
  이 메서드는 암호화 키 목록을 지우는 [DeleteEncryptionKey](configurationsetting-method-deleteencryptionkey.md) 메서드 다음에 호출하는 것이 가장 효과적입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **네임 스페이스:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [MSReportServer_ConfigurationSetting 멤버](msreportserver-configurationsetting-members.md)  
   
   

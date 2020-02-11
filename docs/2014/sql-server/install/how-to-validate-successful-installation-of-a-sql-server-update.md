@@ -11,20 +11,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 59aa87a0b4df519d6fcc1caab00a8484b43ebe89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094836"
 ---
 # <a name="how-to-validate-successful-installation-of-a-sql-server-update"></a>방법: SQL Server 업데이트의 성공적인 설치 확인
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업데이트가 성공적으로 설치되었는지 확인하려면  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 온라인 상태인지 확인합니다.  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 온라인 상태인지 확인합니다.  
   
--   반환 된 버전 정보를 확인 합니다 @@version 쿼리 합니다.  
+-   @@version Query에서 반환 된 버전 정보를 확인 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 서비스 설치 개요](../../../2014/sql-server/install/overview-of-sql-server-servicing-installation.md)  
   
   

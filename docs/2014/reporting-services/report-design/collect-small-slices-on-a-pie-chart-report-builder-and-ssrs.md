@@ -11,22 +11,22 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 517f5c5dddd809ee71037a95d04109a005968132
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106217"
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>원형 차트에서 작은 조각 수집(보고서 작성기 및 SSRS)
   원형 차트에서 너무 많은 데이터 요소를 표시하면 복잡하게 보일 수 있습니다. 이 문제를 해결하기 위해 특정 값 미만의 모든 데이터를 원형 차트의 한 조각으로 표시할 수 있습니다.  
   
- 여러 개의 작은 조각을 한 조각으로 수집하려면 먼저 작은 조각을 수집하기 위한 임계값을 원형 차트의 백분율과 고정 값 중 어떤 것으로 측정할지 결정해야 합니다. 그런 다음 CollectedThreshold 및 CollectedThresholdUsePercent 속성을 설정합니다. 데이터를 수집할 차트의 백분율(이 백분율 미만의 데이터가 수집됨) 또는 실제 임계 데이터 값으로 CollectedThreshold 속성을 설정합니다. CollectedThresholdUsePercent 속성을 설정 `True` 백분율을 사용 하도록 또는 `False` 실제 값을 사용 하 합니다.  
+ 여러 개의 작은 조각을 한 조각으로 수집하려면 먼저 작은 조각을 수집하기 위한 임계값을 원형 차트의 백분율과 고정 값 중 어떤 것으로 측정할지 결정해야 합니다. 그런 다음 CollectedThreshold 및 CollectedThresholdUsePercent 속성을 설정합니다. 데이터를 수집할 차트의 백분율(이 백분율 미만의 데이터가 수집됨) 또는 실제 임계 데이터 값으로 CollectedThreshold 속성을 설정합니다. CollectedThresholdUsePercent 속성을로 `True` 설정 하 여 백분율을 사용 `False` 하거나 실제 값을 사용 합니다.  
   
  첫 번째 원형 차트에서 수집된 조각으로 만든 두 번째 원형 차트에 작은 조각을 수집할 수도 있습니다. 두 번째 원형 차트는 첫 번째 원형 차트의 오른쪽에 그려집니다.  
   
  깔때기형 차트나 피라미드형 차트의 조각은 한 조각으로 결합할 수 없습니다.  
   
- 이 차트의 예는 예제 보고서로 제공됩니다. 이 샘플 보고서 및 기타 보고서를 다운로드하는 방법은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][보고서 작성기 및 보고서 디자이너 샘플 보고서](https://go.microsoft.com/fwlink/?LinkId=198283).  
+ 이 차트의 예는 예제 보고서로 제공됩니다. 이 예제 보고서 및 기타 보고서를 다운로드 하는 방법에 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]대 한 자세한 내용은 [보고서 작성기 및 보고서 디자이너 샘플 보고서](https://go.microsoft.com/fwlink/?LinkId=198283)를 참조 하세요.  
   
 ### <a name="to-collect-small-slices-into-a-single-slice-on-a-pie-chart"></a>작은 조각을 원형 차트의 한 조각으로 수집하려면  
   
@@ -42,16 +42,16 @@ ms.locfileid: "66106217"
   
     -   **백분율로 설정.** 예를 들어 원형 차트에서 10% 미만의 모든 조각을 한 개의 조각으로 수집하려면  
   
-         CollectedThresholdUsePercent 속성을 설정 `True`합니다.  
+         CollectedThresholdUsePercent 속성을로 `True`설정 합니다.  
   
          CollectedThreshold 속성을 **10**으로 설정합니다.  
   
         > [!NOTE]  
-        >  CollectedStyle을 설정 하면 **SingleSlice**, 보다 큰 값으로 CollectedThreshold **100**, CollectedThresholdUsePercent 이며 `True`, 차트 수 없어서 예외가 throw 됩니다 백분율을 계산 합니다. 이 문제를 해결하려면 CollectedThreshold를 **100**보다 작은 값으로 설정합니다.  
+        >  CollectedStyle를 **singleslice로 설정**로 설정 하 고 CollectedThreshold를 **100**보다 큰 값으로 설정 하 고 CollectedThresholdUsePercent `True`가 인 경우 백분율을 계산할 수 없기 때문에 차트에서 예외가 throw 됩니다. 이 문제를 해결하려면 CollectedThreshold를 **100**보다 작은 값으로 설정합니다.  
   
     -   **데이터 값으로.** 예를 들어 원형 차트에서 5000개 미만의 모든 조각을 한 개의 조각으로 수집하려면  
   
-         CollectedThresholdUsePercent 속성을 설정 `False`합니다.  
+         CollectedThresholdUsePercent 속성을로 `False`설정 합니다.  
   
          CollectedThreshold 속성을 **5000**으로 설정합니다.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66106217"
   
 2.  CollectedStyle 속성을 **CollectedPie**로 설정합니다.  
   
-3.  CollectedThreshold 속성을 작은 조각을 한 조각으로 수집할 임계값을 나타내는 값으로 설정합니다. CollectedStyle 속성으로 설정 된 경우 **CollectedPie**을 항상으로 설정 하면 collectedthresholdusepercent 속성 `True`, 수집 된 임계값은 항상 백분율로 측정 및 합니다.  
+3.  CollectedThreshold 속성을 작은 조각을 한 조각으로 수집할 임계값을 나타내는 값으로 설정합니다. CollectedStyle 속성을 **CollectedPie**로 설정 하면 CollectedThresholdUsePercentproperty은 항상로 `True`설정 되며 수집 된 임계값은 항상 백분율로 측정 됩니다.  
   
 4.  (선택 사항) CollectedColor, CollectedLabel, CollectedLegendText 및 CollectedToolTip 속성을 설정합니다. "Collected"로 명명된 다른 모든 속성은 수집된 원형에 적용되지 않습니다.  
   
@@ -75,11 +75,11 @@ ms.locfileid: "66106217"
 > [!NOTE]  
 >  보조 원형 차트의 서식은 지정할 수 없습니다. 이러한 이유로 원형 조각을 수집할 때는 첫 번째 방법을 사용하는 것이 좋습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [원형 차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [차트의 데이터 요소에 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
- [원형 차트 외부에 데이터 요소 레이블 표시&#40;보고서 작성기 및 SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
- [원형 차트에서 백분율 값 표시&#40;보고서 작성기 및 SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
+ [원형 차트 외부에 데이터 요소 레이블을 표시 하 고 보고서 작성기 및 SSRS를 &#40;&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
+ [원형 차트 &#40;보고서 작성기 및 SSRS에 백분율 값을 표시&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
  [차트에 3D 효과 추가&#40;보고서 작성기 및 SSRS&#41;](chart-effects-add-3d-effects-report-builder.md)  
   
   

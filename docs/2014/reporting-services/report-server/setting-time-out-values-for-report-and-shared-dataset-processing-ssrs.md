@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fdbca5818e3430c0445444f3fb98b426e5f8a79c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103206"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>보고서 및 공유 데이터 세트 처리에 대한 시간 제한 값 설정(SSRS)
@@ -31,10 +31,10 @@ ms.locfileid: "66103206"
   
 -   보고서 실행 제한 시간 값은 보고서 처리가 중지되기까지 계속될 수 있는 최대 시간(초)입니다. 이 값은 시스템 수준에서 정의됩니다. 이 설정은 보고서마다 다르게 설정할 수 있습니다.  
   
- 대부분의 제한 시간 오류는 쿼리가 처리되는 동안 발생합니다. 제한 시간 오류가 발생하면 쿼리 제한 시간 값을 늘려 보십시오. 보고서 실행 제한 시간 값을 쿼리 제한 시간보다 크게 조정해야 합니다. 시간은 쿼리와 보고서 둘 다를 처리하기에 충분해야 합니다.  
+ 대부분의 제한 시간 오류는 쿼리가 처리되는 동안 발생합니다. 제한 시간 오류가 발생하면 쿼리 제한 시간 값을 늘려 보십시오. 보고서 실행 제한 시간 값을 쿼리 제한 시간 보다 크게 조정 해야 합니다. 기간은 쿼리 및 보고서 처리를 모두 완료 하기에 충분 해야 합니다.  
   
 ## <a name="setting-a-query-time-out-for-an-embedded-dataset-in-a-report"></a>보고서에 포함된 데이터 세트의 쿼리 제한 시간 설정  
- 쿼리 제한 시간 값은 보고서를 작성하는 동안 포함된 데이터 세트를 정의할 때 지정됩니다. 쿼리 제한 시간 값은 보고서 정의의 `Timeout` 요소에 보고서와 함께 저장됩니다. 기본적으로 이 값은 30초로 설정됩니다. 자세한 내용은 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)이라는 데이터 집합이 들어 있습니다.  
+ 쿼리 제한 시간 값은 보고서를 작성하는 동안 포함된 데이터 세트를 정의할 때 지정됩니다. 쿼리 제한 시간 값은 보고서 정의의 `Timeout` 요소에 보고서와 함께 저장됩니다. 기본적으로 이 값은 30초로 설정됩니다. 자세한 내용은 [보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.  
   
  게시된 보고서의 속성을 수정할 권한이 있는 사용자는 보고서 정의 파일을 편집하여 이 값을 다시 설정할 수 있습니다.  
   
@@ -54,9 +54,9 @@ ms.locfileid: "66103206"
 > [!NOTE]  
 >  RSReportServer.config 파일에서 `RunningRequestsDbCycle`을 설정하여 실행 작업의 평가 빈도를 변경할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [처리 옵션 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [Reporting Services 보고서 서버&#40;기본 모드&#41;](reporting-services-report-server-native-mode.md)   
+ [보고서 서버 &#40;기본 모드를 Reporting Services&#41;](reporting-services-report-server-native-mode.md)   
  [실행 중인 프로세스 관리](../subscriptions/manage-a-running-process.md)   
  [보고서 관리자&#40;SSRS 기본 모드&#41;](../report-manager-ssrs-native-mode.md)  
   

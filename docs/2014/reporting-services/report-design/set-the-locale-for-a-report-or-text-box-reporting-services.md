@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d65c02df74cb89fca3d861f01c01da87ff589e3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104988"
 ---
 # <a name="set-the-locale-for-a-report-or-text-box-reporting-services"></a>보고서 또는 입력란에 대한 로캘 설정(Reporting Services)
@@ -50,7 +50,7 @@ ms.locfileid: "66104988"
   
     -   **UnicodeBiDi** 속성에서 입력란에 사용할 양방향 포함 수준을 선택합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
   
   

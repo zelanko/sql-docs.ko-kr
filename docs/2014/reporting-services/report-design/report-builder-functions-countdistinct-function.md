@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 33904b979bca1162b8f30009dcde3ac8ce5fd006
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105302"
 ---
 # <a name="countdistinct-function-report-builder-and-ssrs"></a>CountDistinct 함수(보고서 작성기 및 SSRS)
@@ -32,27 +32,30 @@ CountDistinct(expression, scope, recursive)
   
 #### <a name="parameters"></a>매개 변수  
  *expression*  
- `Variant`) 집계를 수행할 식입니다.  
+ 
+  `Variant`) 집계를 수행할 식입니다.  
   
  *범위*  
  (`String`) 선택 사항입니다. 집계 함수를 적용할 보고서 항목을 포함하는 데이터 세트, 그룹 또는 데이터 영역의 이름입니다. *scope* 를 지정하지 않은 경우 현재 범위가 사용됩니다.  
   
  *재귀*  
- (**열거 형식**) 선택 사항입니다. `Simple`(기본값) 또는 `RdlRecursive`로, 집계를 재귀적으로 수행할지 여부를 지정합니다.  
+ (**열거 형식**) 선택 사항입니다. 
+  `Simple`(기본값) 또는 `RdlRecursive`로, 집계를 재귀적으로 수행할지 여부를 지정합니다.  
   
 ## <a name="return-type"></a>반환 형식  
- `Integer`를 반환합니다.  
+ 
+  `Integer`를 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  *scope* 의 값은 문자열 상수여야 하고 식일 수 없습니다. 외부 집계나 다른 집계를 지정하지 않는 집계의 경우 *scope* 는 현재 범위나 포함하는 범위를 참조해야 합니다. 집계의 집계의 경우 중첩 집계는 자식 범위를 지정할 수 있습니다.  
   
  *Expression* 에는 다음 예외와 조건이 있는 중첩 집계 함수에 대한 호출이 포함될 수 있습니다.  
   
 -   중첩 집계의*Scope* 는 외부 집계의 범위와 동일하거나 외부 집계의 범위에 포함되어야 합니다. 식에 있는 모든 고유 범위의 경우 한 범위는 다른 모든 범위에 대한 자식 관계에 있어야 합니다.  
   
--   중첩 집계의*Scope* 는 데이터 집합의 이름일 수 없습니다.  
+-   중첩 집계의 *Scope*는 데이터 세트의 이름일 수 없습니다.  
   
--   *식을* 없어야 `First`, `Last`, `Previous`, 또는 `RunningValue` 함수입니다.  
+-   *식은* `First`,, `Last` `Previous`또는 `RunningValue` 함수를 포함 하지 않아야 합니다.  
   
 -   *Expression* 에는 *recursive*를 지정하는 중첩 집계가 포함되지 않아야 합니다.  
   
@@ -71,7 +74,7 @@ CountDistinct(expression, scope, recursive)
 "Distinct count (Category): " & CountDistinct(Fields!Size.Value,"GroupbyCategory")  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)   

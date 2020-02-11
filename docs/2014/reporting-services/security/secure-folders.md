@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 201facc6500339eb8804f3de22d25337dcc07089
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101705"
 ---
 # <a name="secure-folders"></a>보안 폴더
@@ -36,15 +36,15 @@ ms.locfileid: "66101705"
   
 |태스크 선택|제공되는 사용 권한|  
 |----------------------|---------------------------|  
-|폴더 보기|폴더 계층과 폴더가 생성 및 수정된 시기를 나타내는 읽기 전용 속성을 봅니다.<br /><br /> 또한 다음 작업을 포함 하는 역할에 할당 되지 않으면 사용자 폴더에 항목을 볼 수 없습니다. "보고서 보기" "모델 보기", "리소스 보기" 및 "데이터 원본 보기."|  
+|폴더 보기|폴더 계층과 폴더가 생성 및 수정된 시기를 나타내는 읽기 전용 속성을 봅니다.<br /><br /> 사용자가 "보고서 보기", "모델 보기", "리소스 보기" 및 "데이터 원본 보기"가 포함되는 역할에 할당되지 않으면 폴더의 항목을 볼 수 없습니다.|  
 |폴더 관리|폴더 속성을 보거나, 이름 또는 설명을 변경하거나, 폴더를 다른 위치로 이동합니다. 이 태스크를 지정하면 사용자가 폴더를 만들 수 있습니다.|  
 |보고서 관리|파일 시스템의 보고서를 폴더에 추가하고, 보고서 디자이너의 보고서를 보고서 서버에 게시합니다.|  
 |데이터 원본 관리|폴더에 새 공유 데이터 원본 항목을 추가하거나 기존 공유 데이터 원본을 변경합니다.|  
 |항목의 보안 설정|폴더에 대한 액세스를 제어하는 역할 할당을 생성 및 수정합니다. 이 태스크는 "폴더 보기"나 "폴더 관리"와 함께 사용해야 합니다. 그렇지 않으면 사용자가 항목을 선택할 수 없게 되므로 효과가 없습니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서 및 리소스 보안](secure-reports-and-resources.md)   
- [공유 데이터 원본 항목 보안 설정](secure-shared-data-source-items.md)   
+ [공유 데이터 원본 항목 보안](secure-shared-data-source-items.md)   
  [기본 모드 보고서 서버에 대한 사용 권한 부여](granting-permissions-on-a-native-mode-report-server.md)  
   
   

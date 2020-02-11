@@ -13,20 +13,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 58643214df2caa53ddf88810e1fe519a243fc739
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098646"
 ---
 # <a name="welcome-to-the-report-wizard"></a>보고서 마법사 시작
   보고서 마법사의 보고서 마법사 시작 페이지를 사용하여 수행할 태스크의 요약을 볼 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **이 페이지를 다시 표시 안 함**  
  다음에 마법사를 시작할 때 이 페이지를 건너뛰게 하려면 이 옵션을 선택합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서 마법사 도움말](../../2014/reporting-services/report-wizard-help.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a47169bc3c628e4bf33fb9ed6a19e612320b585c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105271"
 ---
 # <a name="first-function-report-builder-and-ssrs"></a>First 함수(보고서 작성기 및 SSRS)
@@ -40,10 +40,12 @@ First(expression, scope)
 ## <a name="return-type"></a>반환 형식  
  식 유형에 따라 결정됩니다.  
   
-## <a name="remarks"></a>Remarks  
- `First` 함수는 지정된 범위에 모든 정렬 및 필터링을 적용한 후 데이터 집합에서 첫 번째 값을 반환합니다.  
+## <a name="remarks"></a>설명  
+ 
+  `First` 함수는 지정된 범위에 모든 정렬 및 필터링을 적용한 후 데이터 집합에서 첫 번째 값을 반환합니다.  
   
- `First` 함수는 그룹 필터 식에서 현재(기본) 범위 외에는 사용할 수 없습니다.  
+ 
+  `First` 함수는 그룹 필터 식에서 현재(기본) 범위 외에는 사용할 수 없습니다.  
   
  페이지의 첫 번째와 마지막 항목을 표시하는 사전 스타일의 머리글을 만들기 위해 페이지 머리글에 `First`를 사용하여 페이지에 대한 `ReportItems` 컬렉션의 첫 번째 값을 반환할 수도 있습니다.  
   
@@ -53,9 +55,9 @@ First(expression, scope)
   
 -   중첩 집계의*Scope* 는 외부 집계의 범위와 동일하거나 외부 집계의 범위에 포함되어야 합니다. 식에 있는 모든 고유 범위의 경우 한 범위는 다른 모든 범위에 대한 자식 관계에 있어야 합니다.  
   
--   중첩 집계의*Scope* 는 데이터 집합의 이름일 수 없습니다.  
+-   중첩 집계의 *Scope*는 데이터 세트의 이름일 수 없습니다.  
   
--   *식을* 없어야 `First`, `Last`, `Previous`, 또는 `RunningValue` 함수입니다.  
+-   *식은* `First`,, `Last` `Previous`또는 `RunningValue` 함수를 포함 하지 않아야 합니다.  
   
 -   *Expression* 에는 *recursive*를 지정하는 중첩 집계가 포함되지 않아야 합니다.  
   
@@ -70,7 +72,7 @@ First(expression, scope)
 =First(Fields!ProductNumber.Value, "Category")  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)   

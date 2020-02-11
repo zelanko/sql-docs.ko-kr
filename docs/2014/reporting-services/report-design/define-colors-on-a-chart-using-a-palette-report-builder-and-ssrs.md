@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 59fc4a9e46e0dbe0f88047a2804330ba1c6ba18d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106078"
 ---
 # <a name="define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs"></a>색상표를 사용하여 차트에 대한 색 정의(보고서 작성기 및 SSRS)
@@ -42,7 +42,7 @@ ms.locfileid: "66106078"
   
 2.  디자인 화면에서 차트를 클릭합니다. 차트 개체의 속성이 속성 창에 표시됩니다.  
   
-3.  에 **차트** 섹션에 대 한 합니다 `Palette` 속성을 선택 **사용자 지정**합니다.  
+3.  **차트** 섹션에서 `Palette` 속성에 대해 **사용자 지정**을 선택 합니다.  
   
 4.  CustomPaletteColors 속성에서 컬렉션 편집( **...** ) 단추를 클릭합니다. **ReportColorExpression 컬렉션 편집기** 가 열립니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66106078"
   
  사용자 지정 색상표를 사용하면 색의 순서를 변경하여 차트의 다른 계열 색을 변경할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [차트에서 계열 색 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [여러 셰이프 차트에 일관된 색 지정&#40;보고서 작성기 및 SSRS&#41;](shape-charts-report-builder-and-ssrs.md)  

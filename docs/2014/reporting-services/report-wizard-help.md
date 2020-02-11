@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d21fb2c577e6419668a619466dd0d2c94b4a3da2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102986"
 ---
 # <a name="report-wizard-help"></a>보고서 마법사 도움말
@@ -39,7 +39,7 @@ ms.locfileid: "66102986"
   
 -   [보고서 유형 선택](../../2014/reporting-services/select-the-report-type.md)  
   
--   [테이블 디자인 &#40;보고서 마법사&#41;](../../2014/reporting-services/design-the-table-report-wizard.md)  
+-   [테이블 &#40;보고서 마법사 디자인&#41;](../../2014/reporting-services/design-the-table-report-wizard.md)  
   
 -   [테이블 레이아웃 선택](../../2014/reporting-services/choose-the-table-layout.md)  
   

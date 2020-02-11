@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c11c57f7c5f67b2557f5637ad10658abc9f80606
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103136"
 ---
 # <a name="verifying-a-report-run"></a>보고서 실행 확인
@@ -40,11 +40,11 @@ ms.locfileid: "66103136"
   
 |보고서 종류|날짜 및 시간 정보 표시 위치|정보 확인 방법|  
 |-----------------------------|-----------------------------------------------|-----------------------------------------------|  
-|보고서 스냅샷으로 실행되는 보고서|내용 페이지. 자세한 내용은 [내용 페이지&#40;보고서 관리자&#41;](../contents-page-report-manager.md)를 참조하세요.|1) 보고서가 포함된 폴더를 찾습니다.<br />2) 폴더를 자세히 보기로 설정합니다.<br />3) 3) 시간 및 날짜를 확인 합니다 **실행** 열.|  
-|보고서 기록의 스냅샷|기록 속성 페이지. 자세한 내용은 [스냅숏 옵션 속성 페이지&#40;보고서 관리자&#41;](../snapshot-options-properties-page-report-manager.md)를 참조하세요.|1) 보고서를 엽니다.<br />2) **속성** 페이지를 클릭합니다.<br />3) **기록** 탭을 클릭합니다.<br />4) **실행 날짜** 열에서 날짜 및 시간을 확인합니다.|  
+|보고서 스냅샷으로 실행되는 보고서|내용 페이지. 자세한 내용은 [내용 페이지&#40;보고서 관리자&#41;](../contents-page-report-manager.md)를 참조하세요.|1) 보고서가 포함된 폴더를 찾습니다.<br />2) 폴더를 자세히 보기로 설정합니다.<br />3) 3) **실행** 날짜 열에서 날짜 및 시간을 확인 합니다.|  
+|보고서 기록의 스냅샷|기록 속성 페이지. 자세한 내용은 [스냅샷 옵션 속성 페이지&#40;보고서 관리자&#41;](../snapshot-options-properties-page-report-manager.md)를 참조하세요.|1) 보고서를 엽니다.<br />2) **속성** 페이지를 클릭합니다.<br />3) **기록** 탭을 클릭합니다.<br />4) **실행 날짜** 열에서 날짜 및 시간을 확인합니다.|  
 |캐시된 보고서|캐시된 보고서를 만들고 새로 고치는 데 사용되는 일정|1) 보고서를 엽니다.<br />2) **속성** 페이지를 클릭합니다.<br />3) **실행** 탭을 클릭합니다.<br />4) 일정을 엽니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services 로그 파일 및 소스](../report-server/reporting-services-log-files-and-sources.md)   
  [보고서 처리 속성 설정](set-report-processing-properties.md)   
  [보고서 관리자&#40;SSRS 기본 모드&#41;](../report-manager-ssrs-native-mode.md)  

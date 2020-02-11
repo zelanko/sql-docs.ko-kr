@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e3c062c241a6949921b550460488316861e54e8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106012"
 ---
 # <a name="display-the-same-data-on-a-matrix-and-a-chart-report-builder"></a>행렬 및 차트에 같은 데이터 표시(보고서 작성기)
@@ -71,7 +71,7 @@ ms.locfileid: "66106012"
   
 15. **추가**를 클릭합니다. 새로운 행이 정렬 식 표에 나타납니다.  
   
-16. **정렬 기준**의 드롭다운 목록에서 9단계에서 그룹화할 대상으로 선택했던 데이터 집합 필드를 선택합니다.  
+16. **정렬 기준**의 드롭다운 목록에서 9단계에서 그룹화할 대상으로 선택했던 데이터 세트 필드를 선택합니다.  
   
 17. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -89,15 +89,15 @@ ms.locfileid: "66106012"
   
 22. **추가**를 클릭합니다. 새로운 행이 정렬 식 표에 나타납니다.  
   
-23. **정렬 기준**의 드롭다운 목록에서 16단계에서 그룹화할 대상으로 선택했던 데이터 집합 필드를 선택합니다.  
+23. **정렬 기준**의 드롭다운 목록에서 16단계에서 그룹화할 대상으로 선택했던 데이터 세트 필드를 선택합니다.  
   
 24. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 25. 결과를 미리 봅니다. 행렬 행 및 열 그룹에 차트 계열 및 범주 그룹과 같은 데이터가 표시됩니다.  
   
-## <a name="see-also"></a>관련 항목  
- [동일한 데이터 집합에 여러 데이터 영역 연결&#40;보고서 작성기 및 SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
- [데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
+## <a name="see-also"></a>참고 항목  
+ [동일한 데이터 세트에 여러 데이터 영역 연결&#40;보고서 작성기 및 SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
+ [데이터 세트 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [목록&#40;보고서 작성기 및 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)  
   

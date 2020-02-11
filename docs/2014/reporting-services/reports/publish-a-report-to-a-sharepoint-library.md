@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1cc957af5596acbf2478d55645b1386283970e33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102527"
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>SharePoint 라이브러리에 보고서 게시
@@ -36,19 +36,19 @@ ms.locfileid: "66102527"
   
 4.  프로젝트의 공유 데이터 원본을 게시하고 이전에 게시된 공유 데이터 원본을 덮어쓰려면 **OverwriteDataSources** 를 **True**로 설정합니다.  
   
-5.  (선택 사항) 에 대 한 **TargetDataSourceFolder**를 SharePoint 라이브러리 또는 라이브러리 폴더에 대 한 URL을 입력 (예를 들어 *http://TestServer/TestSite/Documents/DataSources)* 합니다.  
+5.  필드 **Targetdatasourcefolder**에 SharePoint 라이브러리 또는 라이브러리 폴더에 대 한 URL을 입력 *http://TestServer/TestSite/Documents/DataSources)* 합니다 (예:).  
   
      값을 지정하지 않으면 **TargetReportFolder** 값이 사용됩니다.  
   
-6.  에 대 한 **TargetReportFolder**, 라이브러리 또는 라이브러리 폴더에 대 한 URL을 입력 (예를 들어 *http://TestServer/TestSite/Documents/Reports)* 합니다.  
+6.  **Targetreportfolder**에 라이브러리 또는 라이브러리 폴더에 대 한 URL을 입력 *http://TestServer/TestSite/Documents/Reports)* 합니다 (예:).  
   
-7.  **TargetServerURL**에 SharePoint 최상위 사이트 또는 하위 사이트에 대한 URL을 입력합니다. 사이트를 지정 하지 않으면 기본 최상위 사이트가 사용 됩니다 (예를 들어 *http://servername* 하십시오 *http://servername/site* , 또는 *http://servername/site/subsite* ).  
+7.  **TargetServerURL**에 SharePoint 최상위 사이트 또는 하위 사이트에 대한 URL을 입력합니다. 사이트를 지정 하지 않으면 기본 최상위 사이트 (예: *http://servername*, *http://servername/site*또는 *http://servername/site/subsite*)가 사용 됩니다.  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 9. 솔루션 탐색기에서 게시하려는 보고서를 마우스 오른쪽 단추로 클릭하고 **배포**를 클릭합니다. 보고서가 **TargetReportFolder**에 지정된 위치에 게시됩니다. 출력 창에 배포 오류가 표시됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [프로젝트 속성 페이지 대화 상자](../tools/project-property-pages-dialog-box.md)   
  [배포 속성 설정&#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)   
  [보고서 서버에 보고서 게시](publishing-reports-to-a-report-server.md)   

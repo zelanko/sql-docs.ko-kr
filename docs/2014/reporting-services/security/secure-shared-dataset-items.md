@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 29b3430e4a29130c4189fbce1a9a023b7a7f26da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101637"
 ---
 # <a name="secure-shared-dataset-items"></a>공유 데이터 세트 항목 보안
@@ -48,7 +48,7 @@ ms.locfileid: "66101637"
   
  자세한 내용은 [항목 수준의 태스크](tasks-and-permissions-item-level-tasks.md) 및 [미리 정의된 역할](role-definitions-predefined-roles.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [공유 데이터 세트 관리](../report-data/manage-shared-datasets.md)   
  [보안 폴더](secure-folders.md)   
  [보고서 및 리소스 보안](secure-reports-and-resources.md)   

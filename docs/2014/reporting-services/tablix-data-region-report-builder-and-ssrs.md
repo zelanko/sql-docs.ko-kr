@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aeb149fe1de94e9942352ca620f26311e252b477
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100626"
 ---
 # <a name="tablix-data-region-report-builder-and-ssrs"></a>테이블릭스 데이터 영역(보고서 작성기 및 SSRS)
@@ -77,8 +77,8 @@ ms.locfileid: "66100626"
   
  합계 추가 기능은 범위가 그룹으로 한정되는 값을 표시하기 위한 행을 현재 그룹 외부에 자동으로 만듭니다. 정적 및 동적 행을 수동으로 추가할 수도 있습니다. 시각적 표시가 어떤 행이 정적이고 어떤 행이 동적인지를 이해하는 데 도움을 줍니다. 자세한 내용은 [테이블릭스 데이터 영역 셀, 행 및 열&#40;보고서 작성기 및 SSRS&#41;](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [동일한 데이터 집합에 여러 데이터 영역 연결&#40;보고서 작성기 및 SSRS&#41;](report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>참고 항목  
+ [동일한 데이터 세트에 여러 데이터 영역 연결&#40;보고서 작성기 및 SSRS&#41;](report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [보고서 페이지에서 테이블릭스 데이터 영역 표시 제어&#40;보고서 작성기 및 SSRS&#41;](report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)   
  [테이블릭스 데이터 영역의 유연성 살펴보기&#40;보고서 작성기 및 SSRS&#41;](report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)   
  [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  

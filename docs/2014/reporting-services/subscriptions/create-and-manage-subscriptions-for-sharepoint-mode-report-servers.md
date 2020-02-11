@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b167aaadfbef817608a2b0dc14954ad7f29f9b97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101005"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>SharePoint 모드 보고서 서버 구독 만들기 및 관리
@@ -30,11 +30,11 @@ ms.locfileid: "66101005"
   
  구독을 만들 때 3가지 방법으로 구독 배달 방식을 지정할 수 있습니다.  
   
--   **문서 라이브러리**: 원래 보고서와 같은 SharePoint 사이트 내의 라이브러리로 원래 보고서 기반의 문서를 배달 하는 구독을 만들 수 있습니다. 다른 서버 또는 동일한 사이트 모음 내 다른 사이트의 라이브러리로는 문서를 배달할 수 없습니다. 문서를 배달하려면 보고서가 배달되는 라이브러리에 대한 항목 추가 권한이 있어야 합니다.  
+-   **문서 라이브러리**: 원래 보고서 기반의 문서를 원래 보고서와 같은 SharePoint 사이트 내의 라이브러리로 배달하는 구독을 만들 수 있습니다. 다른 서버 또는 동일한 사이트 모음 내 다른 사이트의 라이브러리로는 문서를 배달할 수 없습니다. 문서를 배달하려면 보고서가 배달되는 라이브러리에 대한 항목 추가 권한이 있어야 합니다.  
   
--   **파일 폴더:** 파일 시스템에 공유 폴더에 원래 보고서 기반의 문서를 제공할 수 있습니다. 이때 네트워크 연결을 통해 액세스할 수 있는 기존 폴더를 선택해야 합니다.  
+-   **파일 폴더:** 원래 보고서 기반의 문서를 파일 시스템의 공유 폴더로 배달할 수 있습니다. 이때 네트워크 연결을 통해 액세스할 수 있는 기존 폴더를 선택해야 합니다.  
   
--   **전자 메일:** 보고서 서버는 보고서 서버 전자 메일 배달 확장 프로그램을 사용 하도록 구성 된, 경우에 보고서 또는 내보낸된 보고서 파일 (출력 형식으로 저장 됨) 편지 함으로 보내는 구독을 만들 수 있습니다. 보고서 또는 보고서 URL 없이 알림만 받으려면 **보고서에 대한 링크 포함** 및 **메시지 내에 보고서 표시** 확인란의 선택을 취소합니다.  
+-   **메일:** 보고서 서버 메일 배달 확장 프로그램을 사용하도록 보고서 서버가 구성되어 있는 경우 보고서 또는 내보낸 보고서 파일(출력 형식으로 저장됨)을 받은 편지함으로 보내는 구독을 만들 수 있습니다. 보고서 또는 보고서 URL 없이 알림만 받으려면 **보고서에 대한 링크 포함** 및 **메시지 내에 보고서 표시** 확인란의 선택을 취소합니다.  
   
  **항목 내용**  
   
@@ -80,7 +80,7 @@ ms.locfileid: "66101005"
   
 6.  **파일 옵션**에서 구독으로 만들 문서의 파일 이름과 제목을 지정합니다.  
   
-7.  **출력 형식**에서 응용 프로그램 형식을 선택합니다.  
+7.  **출력 형식**에서 애플리케이션 형식을 선택합니다.  
   
      MHTML(웹 보관 파일)은 자체 포함된 HTML 파일을 생성하므로 기본값이지만 원래 보고서에 있을 수 있는 대화형 보고서 기능을 유지하지 않습니다.  
   
@@ -104,11 +104,11 @@ ms.locfileid: "66101005"
   
 6.  **경로**에 컴퓨터의 네트워크 이름을 포함하는 UNC(Uniform Naming Convention) 형식으로 폴더 경로를 입력합니다. 이때 폴더 경로에 후행 백슬래시를 포함하지 마세요. 예를 들어 경로는 `\\ComputerName01\Public\MyReports`가 될 수 있습니다. 여기서 Public 및 MyReports는 공유 폴더입니다.  
   
-7.  **렌더링 형식**에서 보고서의 응용 프로그램 형식을 선택합니다.  
+7.  **렌더링 형식**에서 보고서의 애플리케이션 형식을 선택합니다.  
   
 8.  **쓰기 모드**에서 **없음**, **자동 증가**, **덮어쓰기**중 하나를 선택합니다. 이러한 옵션은 이후 배달 시 파일을 덮어쓸지 여부를 결정합니다. 이전 배달을 유지하려면 **자동 증가**를 선택합니다. 그러면 새 파일에 번호가 추가되어 고유한 파일 이름이 생성됩니다. **없음**을 선택하면 동일한 이름의 파일이 대상 위치에 있는 경우 배달되지 않습니다.  
   
-9. **파일 확장명**에서 응용 프로그램 파일 형식에 해당하는 파일 확장명을 추가하려면 **True** 를 선택하고 확장명 없이 파일을 만들려면 False를 선택합니다.  
+9. **파일 확장명**에서 애플리케이션 파일 형식에 해당하는 파일 확장명을 추가하려면 **True** 를 선택하고 확장명 없이 파일을 만들려면 False를 선택합니다.  
   
 10. **사용자 이름** 및 **암호**에 공유 폴더에 대한 쓰기 권한이 있는 자격 증명을 입력합니다.  
   
@@ -156,11 +156,11 @@ ms.locfileid: "66101005"
   
 3.  구독 옆에 있는 확인란을 클릭하고 **삭제**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [구독 및 배달&#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Reporting Services의 전자 메일 배달](e-mail-delivery-in-reporting-services.md)   
  [Reporting Services의 파일 공유 배달](file-share-delivery-in-reporting-services.md)   
  [Reporting Services의 SharePoint 라이브러리 배달](sharepoint-library-delivery-in-reporting-services.md)   
- [전자 메일 배달을 위한 보고서 서버 구성 &#40;SSRS 구성 관리자&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
+ [SSRS Configuration Manager &#40;전자 메일 배달에 대 한 보고서 서버 구성&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
   
   

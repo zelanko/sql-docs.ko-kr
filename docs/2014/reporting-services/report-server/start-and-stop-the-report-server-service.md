@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bef23ec8291be1a1eeab8796a00e45487b82f60c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103173"
 ---
 # <a name="start-and-stop-the-report-server-service"></a>보고서 서버 서비스 시작 및 중지
@@ -29,7 +29,7 @@ ms.locfileid: "66103173"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows의 서비스 도구를 비롯한 다양한 도구를 사용하여 보고서 서버 서비스를 시작 또는 중지할 수 있습니다.  
   
- 서비스 계정을 바꾸는 경우처럼 서비스를 시작하거나 중지하는 것 외에 다른 작업을 수행하려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용해야 합니다. 다른 도구를 사용하여 서비스 계정을 변경하면 설치된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 사용할 수 없습니다. 자세한 내용은 [보고서 서버 서비스 계정 구성&#40;SSRS 구성 관리자&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)을 참조하세요.  
+ 서비스 계정을 바꾸는 경우처럼 서비스를 시작하거나 중지하는 것 외에 다른 작업을 수행하려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용해야 합니다. 다른 도구를 사용하여 서비스 계정을 변경하면 설치된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 사용할 수 없습니다. 자세한 내용은 [보고서 서버 서비스 계정 구성&#40;SSRS 구성 관리자&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)를 참조하세요.  
   
  이 서비스를 일시 중지하고 다시 시작할 수 없습니다. 시작 매개 변수가 없기 때문입니다. 명시적 종속 관계는 없지만 보고서 서버에서 구독이나 예약된 보고서 작업을 지원하는 경우에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 실행 중이어야 합니다.  
   
@@ -47,11 +47,12 @@ ms.locfileid: "66103173"
   
 ### <a name="to-start-or-stop-the-service-using-sql-server-configuration-manager"></a>SQL Server 구성 관리자를 사용하여 서비스를 시작하거나 중지하려면  
   
-1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 시작합니다.  
+1.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 시작합니다.  
   
 2.  SQL Server 서비스를 선택하고 **SQL Server Reporting Services**를 마우스 오른쪽 단추로 클릭한 다음 **중지** 또는 **다시 시작**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

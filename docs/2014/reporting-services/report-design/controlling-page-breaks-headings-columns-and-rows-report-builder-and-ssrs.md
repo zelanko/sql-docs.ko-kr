@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7dae06129ee5dc9962538e8d025dca9966325f5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106186"
 ---
 # <a name="controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs"></a>페이지 나누기, 머리글, 열 및 행 제어(보고서 작성기 및 SSRS)
@@ -29,7 +29,7 @@ ms.locfileid: "66106186"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [목록&#40;보고서 작성기 및 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [보고서 페이지에서 테이블릭스 데이터 영역 표시 제어&#40;보고서 작성기 및 SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)   
  [그룹화 창&#40;보고서 작성기&#41;](grouping-pane-report-builder.md)   

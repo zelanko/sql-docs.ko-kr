@@ -1,5 +1,5 @@
 ---
-title: (SharePoint 통합된 모드의 Reporting Services) 보고서에서 텍스트, 숫자 또는 날짜 찾기 | Microsoft Docs
+title: 보고서에서 텍스트, 숫자 또는 날짜 찾기 (SharePoint 통합 모드의 Reporting Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6cf40f4d3baa60caa0d9d44f372e41521497e33e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102665"
 ---
 # <a name="find-text-numbers-or-dates-in-a-report-reporting-services-in-sharepoint-integrated-mode"></a>보고서에서 텍스트, 숫자 또는 날짜 찾기(SharePoint 통합 모드의 Reporting Services)
@@ -42,7 +42,7 @@ ms.locfileid: "66102665"
   
 4.  같은 값을 계속 검색하려면 **다음**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [웹 페이지에 보고서 뷰어 웹 파트 추가&#40;SharePoint 통합 모드의 Reporting Services&#41;](../report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
   

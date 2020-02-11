@@ -1,5 +1,5 @@
 ---
-title: 'Reportserver: Service 및 reportserversharepoint: Service 성능 개체에 대 한 성능 카운터 | Microsoft Docs'
+title: 'ReportServer: Service 및 ReportServerSharePoint: Service 성능 개체에 대 한 성능 카운터 Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 001e62869146a7090fe4598650c763a690809cfb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103636"
 ---
 # <a name="performance-counters-for-the-reportserverservice--and-reportserversharepointservice-performance-objects"></a>ReportServer:Service 및 ReportServerSharePoint:Service 성능 개체에 대한 성능 카운터
@@ -29,26 +29,27 @@ ms.locfileid: "66103636"
 > [!NOTE]  
 >  이 성능 개체는 로컬 보고서 서버의 이벤트를 모니터링하는 데 사용됩니다. 스케일 아웃 배포에서 보고서 서버를 실행 중이면 카운터는 현재 서버에만 적용되고 스케일 아웃 배포 전체에는 적용되지 않습니다.  
   
- 성능 개체는 Windows 성능 모니터(**Perfmon.exe**)에서 제공됩니다. 자세한 내용은 Windows 설명서를 참조하십시오. [런타임 프로파일링](https://msdn.microsoft.com/library/w4bz2147.aspx)(https://msdn.microsoft.com/library/w4bz2147.aspx).  
+ 성능 개체는 Windows 성능 모니터(**Perfmon.exe**)에서 제공됩니다. 자세한 내용은 Windows 설명서를 참조하십시오. [런타임 프로 파일링](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx).  
   
- 항목 내용  
+ 이 항목의 내용:  
   
--   [ReportServer:Service 성능 카운터(기본 모드 보고서 서버)](#bkmk_ReportServer)  
+-   [ReportServer: Service 성능 카운터 (기본 모드 보고서 서버)](#bkmk_ReportServer)  
   
--   [ReportServerSharePoint:Service(SharePoint 모드 보고서 서버)](#bkmk_ReportServerSharePoint)  
+-   [ReportServerSharePoint: Service (SharePoint 모드 보고서 서버)](#bkmk_ReportServerSharePoint)  
   
--   [PowerShell Cmdlet을 사용하여 목록 반환](#bkmk_powershell)  
+-   [PowerShell Cmdlet을 사용 하 여 목록 반환](#bkmk_powershell)  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint 모드 | 기본 모드입니다.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint 모드 | 기본 모드입니다.  
   
-##  <a name="bkmk_ReportServer"></a> ReportServer:Service 성능 카운터(기본 모드 보고서 서버)  
- `ReportServer:Service` 성능 개체에는 보고서 서버 인스턴스에 대한 HTTP 관련 이벤트 및 메모리 관련 이벤트를 추적하는 카운터 모음이 들어 있습니다. 이 성능 개체는 컴퓨터의 각 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 인스턴스마다 한 번씩 나타나며 사용자는 각 인스턴스에 대한 성능 카운터에서 카운터를 추가하거나 제거할 수 있습니다. 기본 인스턴스의 카운터는 `ReportServer:Service` 형식으로 나타납니다. 형식으로 명명 된 인스턴스에 대 한 카운터 `ReportServer$<` *instance_name*`>:Service`합니다.  
+##  <a name="bkmk_ReportServer"></a>ReportServer: Service 성능 카운터 (기본 모드 보고서 서버)  
+ 
+  `ReportServer:Service` 성능 개체에는 보고서 서버 인스턴스에 대한 HTTP 관련 이벤트 및 메모리 관련 이벤트를 추적하는 카운터 모음이 들어 있습니다. 이 성능 개체는 컴퓨터의 각 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 인스턴스마다 한 번씩 나타나며 사용자는 각 인스턴스에 대한 성능 카운터에서 카운터를 추가하거나 제거할 수 있습니다. 기본 인스턴스의 카운터는 `ReportServer:Service` 형식으로 나타납니다. 명명 된 인스턴스의 카운터는 `ReportServer$<` *instance_name*`>:Service`형식으로 표시 됩니다.  
   
- 합니다 `ReportServer:Service` 성능 개체 였습니다 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], 인터넷 정보 서비스 (IIS)를 사용 하 여 포함 된 카운터의 하위 집합을 제공 하 고 및 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 이전 버전의 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]합니다. 이러한 새 카운터는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에 한정되며 요청, 연결 및 로그온 시도와 같은 보고서 서버에 대한 HTTP 관련 이벤트를 추적합니다. 또한 이 성능 개체에는 메모리 관리 이벤트를 추적하는 카운터가 포함됩니다.  
+ 성능 `ReportServer:Service` 개체는의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]새로운 기능으로, 인터넷 정보 서비스 (IIS) 및 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 이전 버전의 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에 포함 된 카운터의 하위 집합을 제공 합니다. 이러한 새 카운터는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에 한정되며 요청, 연결 및 로그온 시도와 같은 보고서 서버에 대한 HTTP 관련 이벤트를 추적합니다. 또한 이 성능 개체에는 메모리 관리 이벤트를 추적하는 카운터가 포함됩니다.  
   
  다음 표에서는 `ReportServer:Service` 성능 개체에 포함된 카운터를 나열합니다.  
   
- ![PowerShell 관련 콘텐츠](../media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠") 다음 Windows PowerShell 스크립트는 CounterSetName의 성능 카운터 목록을 반환합니다.  
+ ![PowerShell 관련 콘텐츠](../media/rs-powershellicon.jpg "PowerShell 관련 내용") 다음 Windows PowerShell 스크립트는 CounterSetName에 대 한 성능 카운터 목록을 반환 합니다.  
   
 ```  
 (get-counter -listset "ReportServer:Service").paths  
@@ -67,7 +68,7 @@ ms.locfileid: "66103636"
 |`Logon Attempts/sec`|로그온 시도 비율입니다.|  
 |`Logon Successes Total`|RSWindows 인증 유형에 대해 로그온에 성공한 횟수입니다. RSWindows 인증 유형에는 RSWindowsNegotiate, RSWindowsNTLM, RSWindowsKerberos 및 RSWindowsBasic이 있습니다. 값 0은 사용자 지정 인증을 나타냅니다.|  
 |`Logon Successes/sec`|성공한 로그온 비율입니다.|  
-|`Memory Pressure State`|서버의 현재 메모리 상태를 나타내는 다음 값(1-5) 중 하나입니다.<br /><br /> 1: 가 중 없음<br /><br /> 2: 낮은 중<br /><br /> 3: 보통가 중<br /><br /> 4: 높은 중<br /><br /> 5: 초과 중|  
+|`Memory Pressure State`|서버의 현재 메모리 상태를 나타내는 다음 값(1-5) 중 하나입니다.<br /><br /> 1: 가중 없음<br /><br /> 2: 낮은 가중<br /><br /> 3: 보통 가중<br /><br /> 4: 높은 가중<br /><br /> 5: 초과 가중|  
 |`Memory Shrink Amount`|사용 중인 메모리를 줄이기 위해 서버에서 요청한 바이트 수입니다.|  
 |`Memory Shrink Notifications/sec`|사용 중인 메모리를 줄이기 위해 마지막 1초에 서버에서 발행한 알림 수입니다. 이 값은 서버에서 메모리 가중을 경험하는 횟수를 나타냅니다.|  
 |`Requests Disconnected`|통신 오류로 인해 연결이 끊어진 요청 수입니다.|  
@@ -78,10 +79,10 @@ ms.locfileid: "66103636"
 |`Requests/sec`|초당 처리된 요청 수입니다. 이 값은 애플리케이션 현재 처리량을 나타냅니다.|  
 |`Tasks Queued`|스레드를 사용할 수 있을 때까지 기다리는 태스크 수입니다. 보고서 서버에 대한 각 요청은 하나 이상의 태스크에 해당합니다. 이 카운터는 처리할 준비가 된 태스크의 수만 나타내며 현재 실행 중인 태스크 수는 포함하지 않습니다.|  
   
-##  <a name="bkmk_ReportServerSharePoint"></a> ReportServerSharePoint:Service(SharePoint 모드 보고서 서버)  
- 합니다 `ReportServerSharePoint:Service` 성능 개체가 추가 되었습니다 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]합니다.  
+##  <a name="bkmk_ReportServerSharePoint"></a>ReportServerSharePoint: Service (SharePoint 모드 보고서 서버)  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 에서 `ReportServerSharePoint:Service` [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]성능 개체가 추가 되었습니다.  
   
- ![PowerShell 관련 콘텐츠](../media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠") 다음 Windows PowerShell 스크립트는 CounterSetName의 성능 카운터 목록을 반환합니다.  
+ ![PowerShell 관련 콘텐츠](../media/rs-powershellicon.jpg "PowerShell 관련 내용") 다음 Windows PowerShell 스크립트는 CounterSetName에 대 한 성능 카운터 목록을 반환 합니다.  
   
 ```  
 (get-counter -listset "ReportServerSharePoint:Service").paths  
@@ -93,16 +94,16 @@ ms.locfileid: "66103636"
 |`Memory Shrink Amount`|  
 |`Memory Shrink Notifications/Sec`|  
   
-##  <a name="bkmk_powershell"></a> PowerShell Cmdlet을 사용하여 목록 반환  
- ![PowerShell 관련 콘텐츠](../media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠") 다음 Windows PowerShell 스크립트는 CounterSetName "ReportServerSharePoint:Service"의 성능 카운터 목록을 반환합니다.  
+##  <a name="bkmk_powershell"></a>PowerShell Cmdlet을 사용 하 여 목록 반환  
+ ![PowerShell 관련 콘텐츠](../media/rs-powershellicon.jpg "PowerShell 관련 내용") 다음 Windows PowerShell 스크립트는 CounterSetName "ReportServerSharePoint: Service"의 성능 카운터 목록을 반환 합니다.  
   
 ```  
 (get-counter -listset "ReportServerSharePoint:Service").paths  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서 서버 성능 모니터링](monitoring-report-server-performance.md)   
- [성능 카운터 MSRS 2014 웹 서비스 및 MSRS 2014 Windows 서비스 성능 개체에 대 한 &#40;기본 모드&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
- [성능 카운터 MSRS 2014 웹 서비스 SharePoint 모드 및 MSRS 2014 Windows 서비스 SharePoint 모드 성능 개체에 대 한 &#40;SharePoint 모드&#41;]... / performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
+ [MSRS 2014 웹 서비스 및 MSRS 2014 Windows 서비스 성능 개체에 대 한 성능 카운터는 기본 모드 &#40;&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
+ [MSRS 2014 웹 서비스 SharePoint 모드 및 MSRS 2014 Windows 서비스 SharePoint 모드 성능 개체에 대 한 성능 카운터 &#40;SharePoint 모드&#41;].. /performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
   
   

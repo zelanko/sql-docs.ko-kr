@@ -1,5 +1,5 @@
 ---
-title: sys.change_tracking_tables (TRANSACT-SQL) | Microsoft Docs
+title: sys. change_tracking_tables (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -22,13 +22,13 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 158203b7dedfec3228821f6368c8f6c92b8041f7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68050876"
 ---
-# <a name="change-tracking-catalog-views---syschangetrackingtables"></a>변경 내용 추적 카탈로그 뷰-sys.change_tracking_tables
+# <a name="change-tracking-catalog-views---syschange_tracking_tables"></a>변경 내용 추적 카탈로그 뷰-sys. change_tracking_tables
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   변경 내용 추적이 설정된 현재 데이터베이스의 각 테이블에 대해 한 개의 행을 반환합니다.  
@@ -39,14 +39,14 @@ ms.locfileid: "68050876"
 |is_track_columns_updated_on|**bit**|테이블에서 변경 내용 추적의 현재 상태입니다.<br /><br /> 0 = OFF<br /><br /> 1 = ON|  
 |begin_version|**bigint**|테이블에 대한 변경 내용 추적이 시작된 경우 데이터베이스의 버전입니다. 이 버전은 일반적으로 변경 내용 추적이 설정된 경우를 나타내지만 이 값은 테이블이 잘린 경우에 다시 설정됩니다.|  
 |cleanup_version|**bigint**|정리가 변경 내용 추적 정보를 제거한 최대 버전입니다.|  
-|min_valid_version|**bigint**|테이블에 사용할 수 있는 변경 내용 추적 정보의 최소 유효한 버전입니다.<br /><br /> 이 행에 연결된 테이블의 변경 내용을 가져올 경우 last_sync_version 값은 이 열에 보고된 버전보다 크거나 같아야 합니다. 자세한 내용은 [CHANGE_TRACKING_MIN_VALID_VERSION &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)합니다.|  
+|min_valid_version|**bigint**|테이블에 사용할 수 있는 변경 내용 추적 정보의 최소 유효한 버전입니다.<br /><br /> 이 행에 연결된 테이블의 변경 내용을 가져올 경우 last_sync_version 값은 이 열에 보고된 버전보다 크거나 같아야 합니다. 자세한 내용은 [CHANGE_TRACKING_MIN_VALID_VERSION &#40;transact-sql&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)를 참조 하세요.|  
   
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [CHANGE_TRACKING_MIN_VALID_VERSION&#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)   
- [변경 내용 추적 카탈로그 뷰 &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/6e8fd949-5560-4b34-879f-4e25aa24b183)   
+ [Transact-sql&#41;&#40;카탈로그 뷰 변경 내용 추적](https://msdn.microsoft.com/library/6e8fd949-5560-4b34-879f-4e25aa24b183)   
  [데이터 변경 내용 추적&#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)  
   
   

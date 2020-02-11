@@ -15,11 +15,11 @@ ms.assetid: 9e27c8bd-ee15-4ce9-b70a-34cf1bf16f4c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 68a03de54a8a5f63a994578d64c6bce5a1279138
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68057042"
 ---
-# <a name="sqlctchar"></a>SQL_C_TCHAR
-SQL_C_TCHAR 형식 식별자는 데이터 형식을 실제로 식별 하지 않습니다. 유니코드 변환에 대 한 헤더 파일 내에 존재 하는 매크로 이며 유니코드의 설정에 따라 SQL_C_CHAR 또는 SQL_C_WCHAR 바뀝니다 **#define**합니다. ANSI 및 유니코드 응용 프로그램으로 컴파일되는 문자 데이터를 전송 하는 응용 프로그램에 두는 것이 유용 합니다.
+# <a name="sql_c_tchar"></a>SQL_C_TCHAR
+SQL_C_TCHAR 형식 식별자는 실제로 데이터 형식을 식별 하지 않습니다. 유니코드 변환을 위해 헤더 파일 내에 있는 매크로입니다. 유니코드 **#define**의 설정에 따라 SQL_C_CHAR 또는 SQL_C_WCHAR로 바뀝니다. ANSI 및 유니코드 응용 프로그램으로 컴파일된 문자 데이터를 전송 하는 응용 프로그램에 유용 합니다.

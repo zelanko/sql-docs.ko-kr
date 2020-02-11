@@ -13,16 +13,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 32176543c121e2559ab659030714924e7d23e1b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100097"
 ---
 # <a name="report-designer-f1-help"></a>보고서 디자이너 F1 도움말
-  이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 디자이너 마법사, 뷰 및 대화 상자에 대한 F1 도움말을 설명합니다. 대화 상자에서 작업하는 동안 F1 키를 누르거나 대화 상자에 표시된 도움말 단추를 클릭하여 F1 도움말을 열 수도 있습니다.  
+  이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 디자이너 마법사, 보기 및 대화 상자에 대 한 F1 도움말을 제공 합니다. 대화 상자에서 작업하는 동안 F1 키를 누르거나 대화 상자에 표시된 도움말 단추를 클릭하여 F1 도움말을 열 수도 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [기능 참조 &#40;Reporting Services&#41;](../feature-reference-reporting-services.md)   
  [Reporting Services 보고서&#40;SSRS&#41;](../reports/reporting-services-reports-ssrs.md)  
   

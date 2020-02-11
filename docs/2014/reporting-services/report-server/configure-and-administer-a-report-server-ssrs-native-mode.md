@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e31465f0f1099536e262442db894e5d6bfd6d37e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103994"
 ---
 # <a name="configure-and-administer-a-report-server-ssrs-native-mode"></a>보고서 서버 구성 및 관리(SSRS 기본 모드)
@@ -49,13 +49,13 @@ ms.locfileid: "66103994"
  [보고서 서버 데이터베이스 연결 구성&#40;SSRS 구성 관리자&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
  보고서 서버에서 보고서 서버 데이터베이스에 연결하는 데 사용하는 연결 문자열을 수정하는 방법을 설명합니다.  
   
- [전자 메일 배달을 위한 보고서 서버 구성 &#40;SSRS 구성 관리자&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
+ [SSRS Configuration Manager &#40;전자 메일 배달에 대 한 보고서 서버 구성&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
  전자 메일 보고서 배포를 지원하도록 보고서 서버를 구성하는 방법을 설명합니다.  
   
  [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  
  보고서를 무인 모드로 처리하는 데 필요한 사용자 계정을 구성하는 방법을 설명합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서 작성기 액세스 구성](configure-report-builder-access.md)   
  [Reporting Services 구성 파일](reporting-services-configuration-files.md)   
  [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   

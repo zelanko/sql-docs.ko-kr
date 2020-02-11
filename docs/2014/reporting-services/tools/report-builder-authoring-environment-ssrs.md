@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b431dc6249cfabfb8e943b09304eeb7b10bc7e94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100122"
 ---
 # <a name="report-builder-ssrs"></a>보고서 작성기(SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "66100122"
   
  보고서 작성기와 보고서 디자이너는 많은 기능을 공유합니다. 보고서 작성기에 대한 자세한 내용은 msdn.microsoft.com에서 [보고서 작성기 설명서](https://go.microsoft.com/fwlink/?LinkId=154494) 를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서 작성기 액세스 구성](../report-server/configure-report-builder-access.md)   
  [Reporting Services 도구](reporting-services-tools.md)   
  [보고서 디자이너로 보고서 디자인&#40;SSRS&#41;](design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  

@@ -13,14 +13,15 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: aa6f1df8858f5ba9bf302eb6a415182cfa9442c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095787"
 ---
 # <a name="database-engine-configuration---filestream"></a>데이터베이스 엔진 구성 - Filestream
-  이 페이지를 사용하여 이 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치에 대해 FILESTREAM을 사용하도록 설정할 수 있습니다. FILESTREAM은 `varbinary(max)` BLOB(Binary Large Object) 데이터를 파일 시스템의 파일로 저장하여 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]을 NTFS 파일 시스템과 통합합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 FILESTREAM 데이터를 삽입, 업데이트, 쿼리, 검색 및 백업할 수 있습니다. Win32 파일 시스템 인터페이스에서는 데이터에 대한 스트리밍 액세스를 제공합니다.  
+  이 페이지를 사용하여 이 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치에 대해 FILESTREAM을 사용하도록 설정할 수 있습니다. FILESTREAM은 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] BLOB(Binary Large Object) 데이터를 파일 시스템의 파일로 저장하여 `varbinary(max)`을 NTFS 파일 시스템과 통합합니다. 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 FILESTREAM 데이터를 삽입, 업데이트, 쿼리, 검색 및 백업할 수 있습니다. Win32 파일 시스템 인터페이스에서는 데이터에 대한 스트리밍 액세스를 제공합니다.  
   
 ## <a name="uielement-list"></a>UIElement 목록  
  **Transact-SQL 액세스에 FILESTREAM 사용**  
@@ -35,7 +36,7 @@ ms.locfileid: "66095787"
  **원격 클라이언트가 FILESTREAM 데이터에 대한 스트리밍 액세스를 가질 수 있도록 허용**  
  원격 클라이언트가 이 서버의 이 FILESTREAM 데이터에 액세스할 수 있도록 허용하려면 이 컨트롤을 선택합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [FILESTREAM 사용 및 구성](../../relational-databases/blob/enable-and-configure-filestream.md)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   

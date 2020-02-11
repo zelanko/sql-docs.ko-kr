@@ -20,13 +20,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2a7956d71bf9cf477049864c5f4eb341fd276a48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097336"
 ---
-# <a name="msreportserverconfigurationsetting-class"></a>MSReportServer_ConfigurationSetting 클래스
+# <a name="msreportserver_configurationsetting-class"></a>MSReportServer_ConfigurationSetting 클래스
   보고서 서버 인스턴스의 설치 및 런타임 매개 변수를 나타냅니다. 이러한 매개 변수는 보고서 서버의 구성 파일에 저장됩니다.  
   
  이 유형의 모든 멤버 목록은 [MSReportServer_ConfigurationSetting 멤버](msreportserver-configurationsetting-members.md)를 참조하세요.  
@@ -170,11 +170,11 @@ class Class1
 ```  
   
 ## <a name="requirements"></a>요구 사항  
- **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **네임 스페이스:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
- **플랫폼:** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
+ **플랫폼:**[!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [MSReportServer_ConfigurationSetting 멤버](msreportserver-configurationsetting-members.md)  
   
   

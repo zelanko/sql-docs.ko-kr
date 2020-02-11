@@ -1,5 +1,5 @@
 ---
-title: 게시 된 보고서 (SharePoint 통합된 모드의 Reporting Services)에 매개 변수를 설정 합니다. | Microsoft Docs
+title: 게시 된 보고서에 대 한 매개 변수 설정 (SharePoint 통합 모드의 Reporting Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: da71b511a65758483a9bf207dbe54a484f4f1b26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105022"
 ---
 # <a name="set-parameters-on-a-published-report-reporting-services-in-sharepoint-integrated-mode"></a>게시된 보고서에 매개 변수 설정(SharePoint 통합 모드의 Reporting Services)
@@ -81,7 +81,7 @@ ms.locfileid: "66105022"
   
 7.  **적용**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서 서버 항목에 대한 SharePoint 사이트 및 목록 사용 권한 참조](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
   
   

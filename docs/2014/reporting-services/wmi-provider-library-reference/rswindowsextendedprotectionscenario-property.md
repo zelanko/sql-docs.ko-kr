@@ -11,13 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 60a61ca96aafe0e475d28023276c561f49c13cde
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096974"
 ---
-# <a name="rswindowsextendedprotectionscenario-property-wmi-msreportserverconfigurationsetting"></a>RSWindowsExtendedProtectionScenario 속성(WMI MSReportServer_ConfigurationSetting)
+# <a name="rswindowsextendedprotectionscenario-property-wmi-msreportserver_configurationsetting"></a>RSWindowsExtendedProtectionScenario 속성(WMI MSReportServer_ConfigurationSetting)
   보고서 서버에서 허용하도록 구성된 확장된 보호 시나리오를 나타내는 문자열 값을 반환합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -30,7 +30,7 @@ Public Dim RSWindowsExtendedProtectionScenario As String
 public string RSWindowsExtendedProtectionScenario;  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  보고서 서버에서 허용하도록 구성된 확장된 보호 시나리오를 나타내는 문자열 값을 반환합니다. WMI 공급자가 연결되어 있는 보고서 서버에서 확장된 보호를 지원하지 않으면 ""(빈 문자열)이 반환됩니다.  
   
  다음 목록에서는 유효한 값을 보여 줍니다.  
@@ -40,10 +40,10 @@ public string RSWindowsExtendedProtectionScenario;
 ## <a name="example-code"></a>코드 예  
  [MSReportServer_ConfigurationSetting 클래스](msreportserver-configurationsetting-class.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [RSWindowsExtendedProtectionLevel 속성&#40;WMI MSReportServer_ConfigurationSetting&#41;](rswindowsextendedprotectionlevel-property.md)   
  [SetExtendedProtectionSettings 메서드&#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-setextendedprotectionsettings.md)   
  [Reporting Services 인증에 대한 확장된 보호](../security/extended-protection-for-authentication-with-reporting-services.md)   
- [RSReportServer 구성 파일](../report-server/rsreportserver-config-configuration-file.md)  
+ [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)  
   
   

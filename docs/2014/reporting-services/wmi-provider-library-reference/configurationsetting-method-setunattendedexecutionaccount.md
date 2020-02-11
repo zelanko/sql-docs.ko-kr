@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 095929c60d586fa0ed6c857412a369171acdaa10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097929"
 ---
-# <a name="setunattendedexecutionaccount-method-wmi-msreportserverconfigurationsetting"></a>SetUnattendedExecutionAccount 메서드(WMI MSReportServer_ConfigurationSetting)
+# <a name="setunattendedexecutionaccount-method-wmi-msreportserver_configurationsetting"></a>SetUnattendedExecutionAccount 메서드(WMI MSReportServer_ConfigurationSetting)
   무인 모드로 보고서를 실행하는 데 사용되는 계정을 지정합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -41,7 +41,7 @@ public void SetUnattendedExecutionAccount (string UserName,
 ```  
   
 ## <a name="parameters"></a>매개 변수  
- *UserName*  
+ *이름*  
  무인 실행에 사용할 Windows 계정입니다.  
   
  *암호*  
@@ -50,18 +50,18 @@ public void SetUnattendedExecutionAccount (string UserName,
  *HRESULT*  
  [out] 호출의 성공 여부를 나타내는 값입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드 호출의 성공 또는 실패를 나타내는 *HRESULT* 를 반환합니다. 0 값은 메서드 호출이 성공했음을 나타냅니다. 0 이외의 값은 오류가 발생했음을 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  SetUnattendedExecutionAccount 메서드는 보고서 서버가 지정된 사용자로 로그인할 수 있는지 여부를 확인하지 않습니다.  
   
  보고서 서버의 Windows 서비스 컨텍스트에서 무인 실행을 실행하기 위해 SetUnattendedExecutionAccount 메서드를 사용할 수 없습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **네임 스페이스:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [MSReportServer_ConfigurationSetting 멤버](msreportserver-configurationsetting-members.md)  
   
   

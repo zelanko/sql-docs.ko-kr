@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 619cd537b5ecb45afe2dce3467caa64fc1e9a499
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092744"
 ---
 # <a name="replication-upgrade-issues"></a>복제 업그레이드 문제
@@ -29,8 +29,8 @@ ms.locfileid: "66092744"
   
 -   [기타 복제 업그레이드 문제](../../../2014/sql-server/install/other-replication-upgrade-issues.md)  
   
-## <a name="see-also"></a>관련 항목  
- [업그레이드 관리자를 사용 하 여 작업](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
+## <a name="see-also"></a>참고 항목  
+ [업그레이드 관리자 작업](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
  [업그레이드 문제 해결](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
   
   

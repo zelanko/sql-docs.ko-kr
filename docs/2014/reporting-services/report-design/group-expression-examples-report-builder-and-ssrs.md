@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ce7b42b1c97964108797c58948216aaed0ad5431
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105735"
 ---
 # <a name="group-expression-examples-report-builder-and-ssrs"></a>그룹 식 예(보고서 작성기 및 SSRS)
@@ -42,7 +42,7 @@ ms.locfileid: "66105735"
 |다음과 같은 세 나이 범위를 기준으로 그룹화합니다.<br /><br /> "21세 미만", "21-50세", "51세 이상"|`=IIF(First(Fields!Age.Value)<21,"Under 21",(IIF(First(Fields!Age.Value)>=21 AND First(Fields!Age.Value)<=50,"Between 21 and 50","Over 50")))`|  
 |많은 나이 범위를 기준으로 그룹화합니다. 이 예에서는 다음 범위에 대한 문자열을 반환하는 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET으로 작성된 사용자 지정 코드를 보여 줍니다.<br /><br /> 25세 이하<br /><br /> 26-50세<br /><br /> 51 ~ 75<br /><br /> 76세 이상|`=Code.GetRangeValueByAge(Fields!Age.Value)`<br /><br /> 사용자 지정 코드:<br /><br /> `Function GetRangeValueByAge(ByVal age As Integer) As String`<br /><br /> `Select Case age`<br /><br /> `Case 0 To 25`<br /><br /> `GetRangeValueByByAge = "25 or Under"`<br /><br /> `Case 26 To 50`<br /><br /> `GetRangeValueByByAge = "26 to 50"`<br /><br /> `Case 51 to 75`<br /><br /> `GetRangeValueByByAge = "51 to 75"`<br /><br /> `Case Else`<br /><br /> `GetRangeValueByByAge = "Over 75"`<br /><br /> `End Select`<br /><br /> `Return GetRangeValueByByAge`<br /><br /> `End Function`|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조&#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)  

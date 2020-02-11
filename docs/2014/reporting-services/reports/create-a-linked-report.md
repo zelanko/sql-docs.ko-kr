@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d0df6a3bdb6f542b02b62ccf4aa6614da290551f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102703"
 ---
 # <a name="create-a-linked-report"></a>링크된 보고서 만들기
@@ -34,19 +34,21 @@ ms.locfileid: "66102703"
   
 2.  새 링크된 보고서의 이름을 입력합니다. 설명을 입력합니다(옵션).  
   
-3.  보고서를 다른 폴더에 만들려면 **위치 변경**을 클릭합니다. 사용할 폴더를 클릭하거나 **위치** 상자에 폴더 이름을 입력합니다. [!INCLUDE[clickOK](../../../includes/clickok-md.md)] 다른 폴더를 선택하지 않으면 현재 폴더(기반이 되는 보고서가 저장되어 있는 폴더)에 링크된 보고서가 만들어집니다.  
+3.  보고서를 다른 폴더에 만들려면 **위치 변경**을 클릭합니다. 사용할 폴더를 클릭하거나 **위치** 상자에 폴더 이름을 입력합니다. 
+  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] 다른 폴더를 선택하지 않으면 현재 폴더(기반이 되는 보고서가 저장되어 있는 폴더)에 링크된 보고서가 만들어집니다.  
   
-4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] 링크된 보고서가 열립니다.  
+4.  
+  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] 링크된 보고서가 열립니다.  
   
      링크된 보고서의 아이콘은 보고서 서버가 관리하는 다른 항목의 아이콘과 다릅니다. 다음 아이콘은 링크된 보고서를 나타냅니다.  
   
      ![링크된 보고서 아이콘](../media/hlp-16linked.gif "링크된 보고서 아이콘")  
   
-## <a name="see-also"></a>관련 항목  
- [보고서 열기 및 닫기&#40;보고서 관리자&#41;](../reports/open-and-close-a-report-report-manager.md)   
- [새 링크된 보고서 페이지&#40;보고서 관리자&#41;](../new-linked-report-page-report-manager.md)   
- [항목 위치 선택 페이지&#40;보고서 관리자&#41;](../choose-item-location-page-report-manager.md)   
- [일반 속성 페이지, 보고서&#40;보고서 관리자&#41;](../general-properties-page-reports-report-manager.md)   
+## <a name="see-also"></a>참고 항목  
+ [보고서 &#40;보고서 관리자을 열고 닫습니다&#41;](../reports/open-and-close-a-report-report-manager.md)   
+ [새 링크 된 보고서 페이지 &#40;보고서 관리자&#41;](../new-linked-report-page-report-manager.md)   
+ [항목 위치 선택 페이지 &#40;보고서 관리자&#41;](../choose-item-location-page-report-manager.md)   
+ [일반 속성 페이지, 보고서 &#40;보고서 관리자&#41;](../general-properties-page-reports-report-manager.md)   
  [Reporting Services 개념&#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
  [보고서 관리자&#40;SSRS 기본 모드&#41;](../report-manager-ssrs-native-mode.md)  
   

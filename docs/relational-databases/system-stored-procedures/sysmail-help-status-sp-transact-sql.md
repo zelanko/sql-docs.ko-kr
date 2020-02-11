@@ -1,5 +1,5 @@
 ---
-title: sysmail_help_status_sp (TRANSACT-SQL) | Microsoft Docs
+title: sysmail_help_status_sp (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: b44277c6-81e8-4b4d-85b3-a2f04d602e7a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 764b6154885dbd361f7d7d4a09d8e340b4a62ef5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68044465"
 ---
-# <a name="sysmailhelpstatussp-transact-sql"></a>sysmail_help_status_sp(Transact-SQL)
+# <a name="sysmail_help_status_sp-transact-sql"></a>sysmail_help_status_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  데이터베이스 메일 큐의 상태를 표시합니다. 사용 하 여 **sysmail_start_sp** 데이터베이스 메일 큐를 시작 하 고 **sysmail_stop_sp** 데이터베이스 메일 큐를 중지 하려면.  
+  데이터베이스 메일 큐의 상태를 표시합니다. **Sysmail_start_sp** 를 사용 하 여 데이터베이스 메일 큐를 시작 하 고 **sysmail_stop_sp** 데이터베이스 메일 큐를 중지 합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,12 +43,12 @@ sysmail_help_status_sp
   
 ## <a name="result-set"></a>결과 집합  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**상태**|**nvarchar(7)**|데이터베이스 메일의 상태입니다. 가능한 값은 **STARTED** 하 고 **STOPPED**합니다.|  
+|**상태**|**nvarchar (7)**|데이터베이스 메일의 상태입니다. 가능한 값은 **시작** 및 **중지**됨입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
- 기본적으로의 멤버만 합니다 **sysadmin** 고정된 서버 역할에서이 절차를 사용할 수 있습니다.  
+ 기본적으로 **sysadmin** 고정 서버 역할의 멤버만이 프로시저에 액세스할 수 있습니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 데이터베이스 메일의 상태를 표시합니다.  
@@ -66,9 +66,9 @@ Status
 STARTED  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 메일 외부 프로그램](../../relational-databases/database-mail/database-mail-external-program.md)   
- [sysmail_start_sp &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)   
- [sysmail_stop_sp&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)  
+ [Transact-sql&#41;sysmail_start_sp &#40;](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)   
+ [Transact-sql&#41;sysmail_stop_sp &#40;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)  
   
   

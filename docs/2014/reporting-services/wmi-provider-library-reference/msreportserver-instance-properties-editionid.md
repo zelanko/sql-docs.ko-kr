@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3ad5dfe05037562ac9afbafe56cd76504f7533b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097152"
 ---
-# <a name="editionid-property-wmi-msreportserverinstance"></a>EditionID 속성(WMI MSReportServer_Instance)
+# <a name="editionid-property-wmi-msreportserver_instance"></a>EditionID 속성(WMI MSReportServer_Instance)
   보고서 서버의 버전을 반환합니다. 읽기 전용입니다.  
   
 ## <a name="syntax"></a>구문  
@@ -39,9 +39,9 @@ public uint EditionID;
  [MSReportServer_ConfigurationSetting 클래스](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>요구 사항  
- **네임스페이스:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **네임 스페이스:**[!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [MSReportServer_Instance 멤버](msreportserver-instance-members.md)  
   
   

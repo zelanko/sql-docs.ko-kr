@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff0bd8ce8d5024d0d6e2e624c03bcc675af8fbb8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101665"
 ---
 # <a name="secure-reports-and-resources"></a>보고서 및 리소스 보안
@@ -61,7 +61,9 @@ ms.locfileid: "66101665"
  보고서에 포함한 링크로 인해 실수로 악성 스크립트가 실행되는 위험을 완화하려면 신뢰할 수 있는 출처의 데이터에만 하이퍼링크를 바인딩하십시오. 쿼리 결과의 데이터 및 하이퍼링크에 데이터를 바인딩하는 식으로 악용될 수 있는 링크를 만들지 않았는지 확인하십시오. 예를 들어 여러 데이터 세트 필드의 데이터를 연결하는 식을 기반으로 하이퍼링크를 만들지 않도록 합니다. 필요한 경우 보고서에서 "원본 보기"를 사용하여 의심스러운 스크립트와 URL이 있는지 확인합니다.  
   
 ## <a name="mitigating-sql-injection-attacks-in-a-parameterized-report"></a>매개 변수가 있는 보고서의 SQL 삽입 공격 위험 완화  
- `String` 유형의 매개 변수가 포함된 보고서에서는 유효한 값 목록이라고도 하는 사용 가능한 값 목록을 사용해야 하며 보고서를 실행하는 모든 사용자가 보고서의 데이터를 보는 데 필요한 권한만 갖도록 해야 합니다. `String` 유형의 매개 변수를 정의할 경우 모든 값을 사용할 수 있는 입력란이 사용자에게 제공됩니다. 사용 가능한 값 목록은 입력할 수 있는 값을 제한합니다. 보고서 매개 변수가 쿼리 매개 변수에 연결되어 있고 사용 가능한 값 목록을 사용하지 않는 경우에는 보고서 사용자가 입력란에 SQL 구문을 입력할 수 있으므로 보고서와 서버가 SQL 인젝션 공격을 받을 가능성이 있습니다. 사용자에게 새 SQL 문 실행을 위한 충분한 권한이 있으면 서버에 원하지 않은 결과가 발생할 수 있습니다.  
+ 
+  `String` 유형의 매개 변수가 포함된 보고서에서는 유효한 값 목록이라고도 하는 사용 가능한 값 목록을 사용해야 하며 보고서를 실행하는 모든 사용자가 보고서의 데이터를 보는 데 필요한 권한만 갖도록 해야 합니다. 
+  `String` 유형의 매개 변수를 정의할 경우 모든 값을 사용할 수 있는 입력란이 사용자에게 제공됩니다. 사용 가능한 값 목록은 입력할 수 있는 값을 제한합니다. 보고서 매개 변수가 쿼리 매개 변수에 연결되어 있고 사용 가능한 값 목록을 사용하지 않는 경우에는 보고서 사용자가 입력란에 SQL 구문을 입력할 수 있으므로 보고서와 서버가 SQL 인젝션 공격을 받을 가능성이 있습니다. 사용자에게 새 SQL 문 실행을 위한 충분한 권한이 있으면 서버에 원하지 않은 결과가 발생할 수 있습니다.  
   
  보고서 매개 변수가 쿼리 매개 변수에 연결되어 있지 않고 매개 변수 값이 보고서에 포함된 경우에는 보고서 사용자가 식 구문 또는 URL을 매개 변수 값에 입력하고 보고서를 Excel 또는 HTML로 렌더링할 수 있습니다. 이후 다른 사용자가 보고서를 보면서 렌더링된 매개 변수 내용을 클릭할 경우 악의적인 스크립트나 링크가 실수로 실행될 수 있습니다.  
   
@@ -73,7 +75,7 @@ ms.locfileid: "66101665"
 ## <a name="securing-confidential-reports"></a>기밀 보고서 보안  
  기밀 정보가 들어 있는 보고서의 경우 사용자에게 주요 데이터에 대한 액세스 자격 증명을 요청함으로써 데이터 액세스 수준에서 보안을 유지해야 합니다. 자세한 내용은 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요. 권한이 없는 사용자가 액세스하지 못하도록 폴더에 보안을 지정할 수도 있습니다. 자세한 내용은 [폴더 보안](secure-folders.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  (create-and-manage-role-assignments.md)   
  [보고서 작성기 액세스 구성](../report-server/configure-report-builder-access.md)   
  [기본 모드 보고서 서버에 대한 사용 권한 부여](granting-permissions-on-a-native-mode-report-server.md)   

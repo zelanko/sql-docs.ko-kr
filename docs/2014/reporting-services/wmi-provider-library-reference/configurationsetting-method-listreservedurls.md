@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e6d4cf7f550db88a56b7906fb4487b6c33935636
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098272"
 ---
-# <a name="listreservedurls-method-wmi-msreportserverconfigurationsetting"></a>ListReservedURLs 메서드(WMI MSReportServer_ConfigurationSetting)
+# <a name="listreservedurls-method-wmi-msreportserver_configurationsetting"></a>ListReservedURLs 메서드(WMI MSReportServer_ConfigurationSetting)
   보고서 서버의 모든 애플리케이션용으로 예약된 URL을 나열합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -37,16 +37,16 @@ public void ListReservedUrls(out string[] Application, out string[] UrlString,
 ```  
   
 ## <a name="parameters"></a>매개 변수  
- *Application[]*  
+ *응용 프로그램 []*  
  [out] URL 예약이 있는 애플리케이션입니다.  
   
- *UrlString[]*  
+ *UrlString []*  
  [out] 예약된 URL입니다.  
   
- *Account[]*  
+ *계정 []*  
  [out] URL 예약에 대한 계정에 연결된 계정 이름입니다.  
   
- *AccountSID[]*  
+ *AccountSID []*  
  [out] URL 예약에 대한 계정에 연결된 계정 SID입니다.  
   
  *길이*  
@@ -55,15 +55,15 @@ public void ListReservedUrls(out string[] Application, out string[] UrlString,
  *HRESULT*  
  [out] 호출의 성공 여부를 나타내는 값입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드 호출의 성공 또는 실패를 나타내는 *HRESULT* 를 반환합니다. 0 값은 메서드 호출이 성공했음을 나타내고 오류 코드는 호출이 실패했음을 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 ## <a name="requirements"></a>요구 사항  
- **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **네임 스페이스:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [MSReportServer_ConfigurationSetting 멤버](msreportserver-configurationsetting-members.md)  
   
   

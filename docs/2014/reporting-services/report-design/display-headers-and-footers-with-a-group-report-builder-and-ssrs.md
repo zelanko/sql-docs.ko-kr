@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7b330b5aedaeff4cf73ad6dca3e88860dde0f90b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106057"
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>그룹과 함께 머리글 및 바닥글 표시(보고서 작성기 및 SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66106057"
  그룹화 창에서 테이블릭스 멤버를 선택하고 속성 창에서 **KeepWithGroup**, **KeepTogether**및 **RepeatOnNewPage** 속성을 설정할 수 있습니다. 그룹 머리글 및 바닥글이 그룹과 같은 페이지에 표시되도록 하려면 **KeepWithGroup** 을 사용합니다. 정적 멤버가 그룹의 행이나 열과 함께 표시되도록 하려면 **KeepTogether** 를 사용합니다. **KeepWithGroup** 값으로 지정된 행 그룹 멤버의 전체 인스턴스를 적어도 하나 이상 표시하는 모든 페이지에서 그룹 머리글 또는 바닥글을 반복하려면 **RepeatOnNewPage** 를 사용합니다. 열 그룹 멤버에 대해서는**RepeatOnNewPage** 가 지원되지 않습니다.  
   
 > [!NOTE]  
->  **KeepWithGroup**, **KeepTogether** 및 **RepeatOnNewPage**는 그룹화 창의 **고급 모드**를 사용하여 설정할 수 있는 그룹 멤버 속성입니다. 자세한 내용은 [그룹화 창&#40;보고서 작성기&#41;](grouping-pane-report-builder.md)을 참조하세요.  
+>  **KeepWithGroup**, **KeepTogether** 및 **RepeatOnNewPage**는 그룹화 창의 **고급 모드**를 사용하여 설정할 수 있는 그룹 멤버 속성입니다. 자세한 내용은 [그룹화 창&#40;보고서 작성기#41;](grouping-pane-report-builder.md)을 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -68,7 +68,7 @@ ms.locfileid: "66106057"
   
 5.  (옵션) 보고서를 미리 봅니다. 가능한 경우, 보고서는 이 멤버를 지정된 열 그룹 멤버와 함께 렌더링합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [테이블 릭 스 데이터 영역 셀, 행 및 열 &#40;보고서 작성기&#41; 및 SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
  [테이블 릭 스 데이터 영역 &#40;보고서 작성기 및 SSRS&#41;](tablix-data-region-areas-report-builder-and-ssrs.md)   
  [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   

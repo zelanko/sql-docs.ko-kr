@@ -52,10 +52,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: af164d4db9b6439f0634d113652b95939827b0f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105854"
 ---
 # <a name="formatting-a-chart-report-builder-and-ssrs"></a>차트 서식 지정(보고서 작성기 및 SSRS)
@@ -87,7 +87,7 @@ ms.locfileid: "66105854"
  [차트에 테두리 프레임 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-border-frame-to-a-chart-report-builder-and-ssrs.md)  
  차트에 테두리 프레임을 추가하는 방법을 설명합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [차트에 테두리 프레임 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-border-frame-to-a-chart-report-builder-and-ssrs.md)   
  [색상표를 사용하여 차트에 대한 색 정의&#40;보고서 작성기 및 SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   

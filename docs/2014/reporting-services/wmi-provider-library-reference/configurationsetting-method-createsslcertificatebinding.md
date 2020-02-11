@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f16b86b1343d83c44819427b8ba6c43726798e93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098537"
 ---
-# <a name="createsslcertificatebinding-method-wmi-msreportserverconfigurationsetting"></a>CreateSSLCertificateBinding 메서드(WMI MSReportServer_ConfigurationSetting)
+# <a name="createsslcertificatebinding-method-wmi-msreportserver_configurationsetting"></a>CreateSSLCertificateBinding 메서드(WMI MSReportServer_ConfigurationSetting)
   SSL 인증서 바인딩을 만듭니다.  
   
 ## <a name="syntax"></a>구문  
@@ -38,13 +38,13 @@ public void CreateSSLCertificateBinding(string application,
 ```  
   
 ## <a name="parameters"></a>매개 변수  
- *응용 프로그램*  
+ *프로그램별*  
  인증서 바인딩을 만들어야 하는 애플리케이션의 이름입니다.  
   
  *CertificateHash*  
  인증서에 대한 해시입니다.  
   
- *IPAddress*  
+ *IP 주소*  
  애플리케이션의 IP 주소입니다.  
   
  *포트*  
@@ -59,10 +59,10 @@ public void CreateSSLCertificateBinding(string application,
  *HRESULT*  
  [out] 호출의 성공 여부를 나타내는 값입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드 호출의 성공 또는 실패를 나타내는 *HRESULT* 를 반환합니다. 0 값은 메서드 호출이 성공했음을 나타내고 오류 코드는 호출이 실패했음을 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 메서드는 애플리케이션의 rsreportserver.config에 바인딩을 추가합니다. HTTP.SYS에 바인딩이 없으면 이 파일에 바인딩이 만들어집니다.  
   
  바인딩을 만들기 전에 메서드 호출은 지정된 애플리케이션에 대한 URL 예약을 검사하여 SSL 인증서 바인딩이 유효한지 확인합니다.  
@@ -80,9 +80,9 @@ public void CreateSSLCertificateBinding(string application,
 5.  호스트 이름을 지정하는 URL 예약이 있으나 해당 호스트 이름이 인증서의 호스트 이름과 일치하지 않는 경우  
   
 ## <a name="requirements"></a>요구 사항  
- **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **네임 스페이스:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [MSReportServer_ConfigurationSetting 멤버](msreportserver-configurationsetting-members.md)  
   
   

@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c62e2793f11853158b7b31d1e79feb4ae59977de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098287"
 ---
-# <a name="listreportserversindatabase-method-wmi-msreportserverconfigurationsetting"></a>ListReportServersInDatabase 메서드(WMI MSReportServer_ConfigurationSetting)
+# <a name="listreportserversindatabase-method-wmi-msreportserver_configurationsetting"></a>ListReportServersInDatabase 메서드(WMI MSReportServer_ConfigurationSetting)
   보고서 서버에 보안 정보에 대한 액세스 권한이 있는지 여부에 관계없이 보고서 서버 데이터베이스에 있는 보고서 서버 설치 목록을 반환합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -45,16 +45,16 @@ public void ListReportServersInDatabase (out string[] MachineNames,
 ```  
   
 ## <a name="parameters"></a>매개 변수  
- *MachineNames[]*  
+ *MachineNames []*  
  [out] 데이터베이스에서 설치된 보고서 서버의 컴퓨터 이름이 들어 있는 배열입니다.  
   
- *InstanceNames[]*  
+ *InstanceNames []*  
  [out] 데이터베이스에서 설치된 각 보고서 서버의 인스턴스 이름이 들어 있는 배열입니다.  
   
- *InstallationIDs[]*  
+ *설치 Id []*  
  [out] 데이터베이스에서 설치된 각 보고서 서버의 설치 ID가 들어 있는 배열입니다.  
   
- *IsInitialized[]*  
+ *IsInitialized []*  
  [out] 데이터베이스에서 설치된 각 보고서 서버의 초기화 상태가 들어 있는 배열입니다.  
   
  *길이*  
@@ -63,19 +63,19 @@ public void ListReportServersInDatabase (out string[] MachineNames,
  *HRESULT*  
  [out] 호출의 성공 여부를 나타내는 값입니다.  
   
- *ExtendedErrors[]*  
+ *ExtendedErrors []*  
  [out] 호출에서 반환되는 추가 오류가 들어 있는 문자열 배열입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드 호출의 성공 또는 실패를 나타내는 *HRESULT* 를 반환합니다. 0 값은 메서드 호출이 성공했음을 나타냅니다. 0 이외의 값은 오류가 발생했음을 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  ListReportServersInDatabase는 보고서 서버에 보안 정보에 대한 액세스 권한이 있는지 여부에 관계없이 보고서 서버 데이터베이스에 있는 보고서 서버 설치 목록을 나열하고 각 설치 정보가 들어 있는 일치하는 배열 집합을 반환합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **네임 스페이스:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [MSReportServer_ConfigurationSetting 멤버](msreportserver-configurationsetting-members.md)  
   
   

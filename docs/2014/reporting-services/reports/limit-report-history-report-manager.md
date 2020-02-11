@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fd493fae67e3aa47c5c53cd3ad12d018b0b72f70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102636"
 ---
 # <a name="limit-report-history-report-manager"></a>보고서 기록 제한(보고서 관리자)
@@ -42,12 +42,13 @@ ms.locfileid: "66102636"
   
 2.  **속성** 탭을 클릭합니다.  
   
-3.  **기록** 탭을 클릭합니다.  
+3.  
+  **기록** 탭을 클릭합니다.  
   
-4.  보고서에 대한 옵션을 선택하고 **적용**을 클릭합니다. 각 옵션에 대한 자세한 내용은 [스냅숏 옵션 속성 페이지&#40;보고서 관리자&#41;](../snapshot-options-properties-page-report-manager.md)를 참조하세요.  
+4.  보고서에 대한 옵션을 선택하고 **적용**을 클릭합니다. 각 옵션에 대한 자세한 내용은 [스냅샷 옵션 속성 페이지&#40;보고서 관리자&#41;](../snapshot-options-properties-page-report-manager.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [보고서 기록에 스냅숏 추가&#40;보고서 관리자&#41;](../report-server/add-a-snapshot-to-report-history-report-manager.md)   
+## <a name="see-also"></a>참고 항목  
+ [보고서 기록에 스냅샷 추가&#40;보고서 관리자&#41;](../report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [보고서 관리자&#40;SSRS 기본 모드&#41;](../report-manager-ssrs-native-mode.md)  
   
   

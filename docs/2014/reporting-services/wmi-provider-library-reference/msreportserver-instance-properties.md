@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 27719888e994a9cfc9408901a7d89fcf28220c5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097032"
 ---
-# <a name="msreportserverinstance-properties"></a>MSReportServer_Instance 속성
+# <a name="msreportserver_instance-properties"></a>MSReportServer_Instance 속성
   MSReportServer_Instance 클래스는 클라이언트에서 설치된 보고서 서버에 연결하는 데 필요한 기본 정보를 제공합니다.  
   
 ## <a name="public-properties"></a>Public 속성  
@@ -39,7 +39,7 @@ ms.locfileid: "66097032"
 |[IsSharePointIntegrated](msreportserver-instance-properties-issharepointintegrated.md)|보고서 서버가 SharePoint 통합 모드로 구성되어 있는지 여부를 나타냅니다.|  
 |[버전](msreportserver-instance-properties-version.md)|보고서 서버의 버전을 반환합니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [MSReportServer_Instance 멤버](msreportserver-instance-members.md)  
   
   

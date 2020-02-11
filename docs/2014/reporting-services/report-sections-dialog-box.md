@@ -11,19 +11,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1f634c206a2128369d8eee92a6355d26a620c3c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104305"
 ---
 # <a name="report-sections-dialog-box"></a>보고서 섹션 대화 상자
-  보고서 디자이너는 보고서에 하나만 언어 RDL (Report Definition) 포함 되어 있는지 확인 하는 보고서를 열면  **\<구역 >** 요소입니다. **\<Section>** 요소가 여러 개 포함된 보고서는 열 수 없습니다.  
+  보고서를 열 때 보고서 디자이너는 보고서에 RDL (report Definition Language) ** \<섹션>** 요소가 하나만 포함 되어 있는지 확인 합니다. 여러 ** \<섹션이>** 요소를 사용 하 여 보고서를 열 수 없습니다.  
   
  섹션이 여러 개 포함된 보고서 정의를 프로그래밍 방식으로 생성할 수는 있지만 보고서 작성 환경에서 해당 보고서를 편집할 수는 없습니다.  
   
  보고서, 보고서 서버, 프로젝트 또는 보고서 작성 환경에 대한 현재 보고서 정의 형식을 식별하려면 [보고서 정의 스키마 버전 찾기&#40;SSRS&#41;](reports/find-the-report-definition-schema-version-ssrs.md)를 참조하세요.  
   
- 계속하려면 **확인** 을 클릭합니다.  
+ 
+  **확인**을 클릭하여 계속합니다.  
   
   

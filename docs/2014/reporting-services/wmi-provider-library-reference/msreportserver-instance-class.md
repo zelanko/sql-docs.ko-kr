@@ -20,13 +20,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a88146da815b97cecbdef598d0c75f1f95fcb54c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097215"
 ---
-# <a name="msreportserverinstance-class"></a>MSReportServer_Instance 클래스
+# <a name="msreportserver_instance-class"></a>MSReportServer_Instance 클래스
   MSReportServer_Instance 클래스는 클라이언트에서 설치된 보고서 서버에 연결하는 데 필요한 기본 정보를 제공합니다.  
   
  이 유형의 모든 멤버 목록을 보려면 [MSReportServer_Instance 멤버](msreportserver-instance-members.md)를 참조하세요.  
@@ -45,11 +45,11 @@ public class MSReportServer_Instance
  이 유형의 모든 public static(**의 경우** 공유 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) 멤버는 다중 스레드 작업에 안전합니다. 인스턴스 멤버는 스레드로부터의 안전성이 보장되지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **네임스페이스:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **네임 스페이스:**[!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
- **플랫폼:** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
+ **플랫폼:**[!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [MSReportServer_Instance 멤버](msreportserver-instance-members.md)  
   
   

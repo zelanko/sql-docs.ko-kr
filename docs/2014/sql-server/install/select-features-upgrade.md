@@ -13,20 +13,21 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2d6265fd9d86b96c75fce63a265848f769253024
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092355"
 ---
 # <a name="select-features-upgrade"></a>기능 선택(업그레이드)
+  
   **설치 마법사의** 기능 선택 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 페이지를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드할 기능을 확인할 수 있습니다.  
   
  이번 릴리스에서는 업그레이드할 기능을 변경할 수 없습니다. 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 기능을 추가하려면 업그레이드 프로세스를 완료하고 설치 프로그램을 다시 시작한 다음 설치 센터에서 **새로 설치하거나 기존 설치에 기능을 추가합니다.** 를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [지원되는 버전 및 에디션 업그레이드](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
- [업그레이드 관리자를 사용 하 여 업그레이드를 준비 하려면](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)   
+ [업그레이드 관리자를 사용 하 여 업그레이드 준비](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)   
  [여러 버전 및 인스턴스의 SQL Server 작업](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
   
   

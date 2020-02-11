@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fa98b9f760485b80f4fa4ac74f3b8008dc3bbec3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099376"
 ---
 # <a name="cause-and-resolution-of-reporting-services-errors"></a>Reporting Services 오류의 원인 및 해결 방법
@@ -36,7 +36,7 @@ ms.locfileid: "66099376"
 |[rrRenderingError - Reporting Services 오류](rrrenderingerror-reporting-services-error.md)|보고서를 렌더링하는 동안 오류가 발생했습니다. (rrRenderingError) %1.|  
 |[보고서 서버 Windows 서비스&#40;MSSQLServer&#41; 107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md)|Report Server Windows service (MSSQLSERVER)에서 보고서 서버 데이터베이스에 연결할 수 없습니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services 로그 파일 및 소스](../report-server/reporting-services-log-files-and-sources.md)   
  [오류 및 이벤트 참조&#40;Reporting Services&#41;](errors-and-events-reference-reporting-services.md)  
   

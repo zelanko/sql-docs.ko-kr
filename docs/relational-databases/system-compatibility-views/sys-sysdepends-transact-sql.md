@@ -1,5 +1,5 @@
 ---
-title: sys.sysdepends (TRANSACT-SQL) | Microsoft Docs
+title: sysdepends (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,10 +21,10 @@ ms.assetid: f9c182cb-386f-4e72-859f-9f1115b389f9
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 5d928926294bb3e80f860a535a266b5c106e3f18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053501"
 ---
 # <a name="syssysdepends-transact-sql"></a>sys.sysdepends(Transact-SQL)
@@ -37,22 +37,22 @@ ms.locfileid: "68053501"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|개체 ID입니다.|  
-|**depid**|**int**|종속 개체 ID입니다.|  
+|**a-id**|**int**|개체 ID입니다.|  
+|**가 id**|**int**|종속 개체 ID입니다.|  
 |**number**|**smallint**|프로시저 번호입니다.|  
-|**depnumber**|**smallint**|종속 프로시저 번호입니다.|  
-|**상태**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**deptype**|**tinyint**|다음과 같이 종속 개체 유형을 식별합니다.<br /><br /> 0 = 개체 또는 열(스키마 바운드가 아닌 참조만 해당)<br /><br /> 1 = 개체 또는 열(스키마 바운드 참조)|  
-|**depdbid**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**depsiteid**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**값 개수**|**smallint**|종속 프로시저 번호입니다.|  
+|**업무**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**대만 형식**|**tinyint**|다음과 같이 종속 개체 유형을 식별합니다.<br /><br /> 0 = 개체 또는 열(스키마 바운드가 아닌 참조만 해당)<br /><br /> 1 = 개체 또는 열(스키마 바운드 참조)|  
+|**없음 dbid**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**없음 siteid**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**selall**|**bit**|1 = 개체가 SELECT * 문에 사용됩니다.<br /><br /> 0 = 아니요|  
 |**resultobj**|**bit**|1 = 개체가 업데이트되고 있습니다.<br /><br /> 0 = 아니요|  
 |**readobj**|**bit**|1 = 개체를 읽고 있습니다.<br /><br /> 0 = 아니요|  
   
-## <a name="see-also"></a>관련 항목  
- [시스템 테이블을 시스템 뷰로 매핑 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [호환성 뷰 &#40;TRANSACT-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
- [sp_depends &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-depends-transact-sql.md)   
- [sys.sql_dependencies &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [시스템 테이블을 시스템 뷰로 매핑 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;호환성 뷰](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
+ [Transact-sql&#41;sp_depends &#40;](../../relational-databases/system-stored-procedures/sp-depends-transact-sql.md)   
+ [sql_dependencies &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)  
   
   

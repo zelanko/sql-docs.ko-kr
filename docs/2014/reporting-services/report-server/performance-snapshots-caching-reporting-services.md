@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a5fa14ad158d2b937ecd8c7fa706460ec8ee1aca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103596"
 ---
 # <a name="performance-snapshots-caching-reporting-services"></a>성능, 스냅샷, 캐시(Reporting Services)
-  보고서 서버 성능은 하드웨어, 보고서에 액세스하는 동시 사용자 수, 보고서의 데이터 양, 출력 형식 등을 비롯한 여러 요소 조합의 영향을 받습니다. 설치와 관련된 성능 요소를 이해하고 원하는 결과를 생성하는 해결 방법을 찾으려면 기준선 데이터를 얻고 테스트를 실행해야 합니다. 도구 및 지침에 대한 자세한 내용은 MSDN의 [Reporting Services 성능 최적화](https://blogs.msdn.com/b/sqlcat/archive/2013/10/30/reporting-services-performance-and-optimization.aspx) 하 고 [Visual Studio 2005를 사용 하 여 SQL Server 2005 Reporting Services 보고서 서버에 부하 테스트를 수행할](https://go.microsoft.com/fwlink/?LinkID=77519)합니다.  
+  보고서 서버 성능은 하드웨어, 보고서에 액세스하는 동시 사용자 수, 보고서의 데이터 양, 출력 형식 등을 비롯한 여러 요소 조합의 영향을 받습니다. 설치와 관련된 성능 요소를 이해하고 원하는 결과를 생성하는 해결 방법을 찾으려면 기준선 데이터를 얻고 테스트를 실행해야 합니다. 도구 및 지침에 대한 자세한 내용은 MSDN의 [Reporting Services 성능 최적화](https://blogs.msdn.com/b/sqlcat/archive/2013/10/30/reporting-services-performance-and-optimization.aspx) 및 [Visual Studio 2005를 사용한 SQL Server 2005 Reporting Services 보고서 서버의 부하 테스트 수행](https://go.microsoft.com/fwlink/?LinkID=77519)을 참조하세요.  
   
  고려해야 할 일반 원칙은 다음과 같습니다.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "66103596"
   
 -   PDF로 렌더링할 때처럼 모든 보고서가 특정 형식에서 느리게 처리되는 경우 파일 공유 배달을 사용하거나 메모리를 추가하거나 다른 형식을 선택해 보십시오.  
   
--   보고서 및 기타 사용 메트릭을 처리하는 데 소요되는 시간을 확인하려면 보고서 서버 실행 로그를 검토합니다. 자세한 내용은 [보고서 서버 실행 로그 및 ExecutionLog3 뷰](report-server-executionlog-and-the-executionlog3-view.md)합니다.  
+-   보고서 및 기타 사용 메트릭을 처리하는 데 소요되는 시간을 확인하려면 보고서 서버 실행 로그를 검토합니다. 자세한 내용은 [보고서 서버 실행 로그 및 ExecutionLog3 뷰](report-server-executionlog-and-the-executionlog3-view.md)를 참조 하세요.  
   
 -   메모리 관리 구성 설정을 조정하여 성능 문제를 완화하는 방법에 대한 자세한 내용은 [보고서 서버 애플리케이션을 위한 사용 가능한 메모리 구성](../report-server/configure-available-memory-for-report-server-applications.md)을 참조하세요.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66103596"
  [보고서 처리 속성 설정](set-report-processing-properties.md)  
  보고서가 요청 시 실행되거나 캐시에서 실행되거나 일정에 따라 보고서 스냅샷으로 실행되도록 구성하는 방법에 대해 설명합니다.  
   
- [보고서 서버 응용 프로그램을 위한 사용 가능한 메모리 구성](../report-server/configure-available-memory-for-report-server-applications.md)  
+ [보고서 서버 애플리케이션을 위한 사용 가능한 메모리 구성](../report-server/configure-available-memory-for-report-server-applications.md)  
  기본 메모리 관리 동작을 재정의하는 방법에 대해 설명합니다.  
   
  [보고서 캐시&#40;SSRS&#41;](caching-reports-ssrs.md)  
@@ -61,7 +61,7 @@ ms.locfileid: "66103596"
  [보고서 및 공유 데이터 세트 처리에 대한 제한 시간 값 설정&#40;SSRS&#41;](setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
  쿼리 및 보고서 처리에 대한 제한 시간을 설정하는 방법에 대해 설명합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [실행 중인 프로세스 관리](../subscriptions/manage-a-running-process.md)   
  [보고서 실행 확인](verifying-a-report-run.md)  
   

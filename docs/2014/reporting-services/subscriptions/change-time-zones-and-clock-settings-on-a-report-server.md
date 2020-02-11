@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 566e421cd120010ea32f6936853e4319ec2efa11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101002"
 ---
 # <a name="change-time-zones-and-clock-settings-on-a-report-server"></a>보고서 서버에서 표준 시간대 및 시계 설정 변경
@@ -40,7 +40,7 @@ ms.locfileid: "66101002"
 ## <a name="changing-the-clock-settings"></a>시계 설정 변경  
  컴퓨터 시계를 변경해도 기존 타임스탬프 값에는 영향이 없습니다. 예를 들어 시계를 1시간 앞으로 이동해도 보고서 기록 스냅샷의 타임스탬프는 변경되지 않습니다. 10초 정도 경과 후 일정 예약 및 배달 프로세스에 새 설정이 사용됩니다. 구성 파일의 폴링 간격 설정을 수정한 경우 실제 지연 시간이 다를 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서 서버 서비스 시작 및 중지](../report-server/start-and-stop-the-report-server-service.md)   
  [일정](schedules.md)  
   

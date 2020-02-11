@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 59936989a63e702eba78bca834498f530efdae17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094911"
 ---
 # <a name="how-to-launch-upgrade-advisor"></a>방법: 업그레이드 관리자 시작
@@ -27,10 +27,10 @@ ms.locfileid: "66094911"
   
 ### <a name="to-launch-upgrade-advisor"></a>업그레이드 관리자를 시작하려면  
   
--   업그레이드 관리자를 시작 하려면 **시작**, 클릭 **프로그램도**, 클릭 **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 를 클릭 하 고 **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업그레이드 관리자**.  
+-   업그레이드 관리자를 시작 하려면 **시작**, **모든 프로그램**, **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 을 차례로 클릭 한 다음 ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업그레이드 관리자**를 클릭 합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [업그레이드 관리자 실행 &#40;사용자 인터페이스&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   
+## <a name="see-also"></a>참고 항목  
+ [업그레이드 관리자 &#40;사용자 인터페이스를 실행 하는 중&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   
  [업그레이드 관리자 방법 도움말 항목](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
  [업그레이드 관리자 작업](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   

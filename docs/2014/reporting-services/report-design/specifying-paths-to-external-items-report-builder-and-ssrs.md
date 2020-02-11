@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c7364ad7c7de4678926187cb171e62318c884bd2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104843"
 ---
 # <a name="specifying-paths-to-external-items-report-builder-and-ssrs"></a>외부 항목에 대한 경로 지정(보고서 작성기 및 SSRS)
@@ -39,11 +39,11 @@ ms.locfileid: "66104843"
   
 -   **항목에 대한 전체 경로.**  
   
-    -   **보고서 서버:** 경로는 홈 폴더인 **/** 에서 시작합니다. 예를 들면 /Reports/AllSubreports/Subreport1과 같은 형태입니다.  
+    -   **보고서 서버에서:** 경로는 홈 폴더인 **/** 부터 시작합니다. 예를 들면 /Reports/AllSubreports/Subreport1과 같은 형태입니다.  
   
-    -   **SharePoint 사이트:** 항목 및.rdl 파일 확장명의 전체 URL 사용 하 여 식에서 보고서 이름을 지정 해야 합니다. `="http://server/site/library/folder/Report1.rdl"` )을 입력합니다.  
+    -   **SharePoint 사이트에서:** 항목의 전체 URL 및 파일 확장명 .rdl과 함께 보고서 이름을 식에 지정해야 합니다. `="http://server/site/library/folder/Report1.rdl"`)을 입력합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [외부 이미지 추가&#40;보고서 작성기 및 SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)   
  [하위 보고서 및 매개 변수 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
  [보고서에 드릴스루 동작 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md)  

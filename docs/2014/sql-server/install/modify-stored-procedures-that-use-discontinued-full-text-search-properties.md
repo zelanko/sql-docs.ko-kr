@@ -1,5 +1,5 @@
 ---
-title: 지원 되지 않는 전체 텍스트 검색 속성을 사용 하는 저장된 프로시저 수정 | Microsoft Docs
+title: 지원 되지 않는 전체 텍스트 검색 속성을 사용 하는 저장 프로시저 수정 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5204b27fb4745f8005a328dc62503f7db418387d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093845"
 ---
 # <a name="modify-stored-procedures-that-use-discontinued-full-text-search-properties"></a>지원되지 않는 전체 텍스트 검색 속성을 사용하는 저장 프로시저를 수정합니다.
@@ -46,7 +46,7 @@ ms.locfileid: "66093845"
 ## <a name="corrective-action"></a>수정 동작  
  이러한 속성을 제거하도록 저장 프로시저를 수정합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [업그레이드 관리자 작업](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

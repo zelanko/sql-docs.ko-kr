@@ -1,5 +1,5 @@
 ---
-title: 변환 및 마이그레이션 옵션 (AccessToSQL) 설정 | Microsoft Docs
+title: 변환 및 마이그레이션 옵션 설정 (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,19 +17,19 @@ ms.assetid: 0a7304df-2f35-4453-96ef-7ac83dea1167
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3e89cfd6768aeedd970889cbaea46bb3e1ceae4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68051501"
 ---
-# <a name="setting-conversion-and-migration-options-accesstosql"></a>변환 및 마이그레이션 옵션 (AccessToSQL) 설정
-각 SSMA 프로젝트에 대 한 프로젝트 수준 옵션을 설정할 수 있습니다. 이러한 옵션에는 개체를 변환 하는 방법을, 데이터가 마이그레이션되는 방식 및 원본 데이터 형식을 대상 데이터 형식에 매핑하는 방법을 지정 합니다. 개체를 변환 하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 데이터를 마이그레이션하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure, 구성 옵션을 프로젝트에 적절 한지 확인 합니다.  
+# <a name="setting-conversion-and-migration-options-accesstosql"></a>변환 및 마이그레이션 옵션 설정 (AccessToSQL)
+각 SSMA 프로젝트에 대해 프로젝트 수준 옵션을 설정할 수 있습니다. 이러한 옵션은 개체가 변환 되는 방법, 데이터를 마이그레이션하는 방법 및 원본 데이터 형식을 대상 데이터 형식에 매핑하는 방법을 지정 합니다. 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 변환 하거나 SQL Azure 하거나 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure로 마이그레이션하려면 먼저 구성 옵션이 프로젝트에 적합 한지 확인 합니다.  
   
 ## <a name="configuration-options-and-modes"></a>구성 옵션 및 모드  
-SSMA는 4 개의 집합이 구성 설정과 이러한 설정을 구성 하기 위한 4 가지 모드에 있습니다. 기본적으로 낙관적, 전체 및 사용자 지정 합니다. 대부분의 사용자에 대 한 기본 모드를 사용 하는 것이 좋습니다. 간단한 변환에 대 한 최적 모드를 사용 합니다. 모든 메시지를 확인 하려는 경우 전체 모드를 사용 합니다. 사용자 지정 모드 옵션을 설정합니다.  
+SSMA에는 네 가지 구성 설정 집합과 이러한 설정을 구성 하기 위한 4 가지 모드 (기본, 낙관적, 전체 및 사용자 지정)가 있습니다. 대부분의 사용자에 게 기본 모드를 권장 합니다. 단순 변환에는 낙관적 모드를 사용 합니다. 모든 메시지를 표시 하려면 전체 모드를 사용 합니다. 사용자 지정 모드에서 옵션을 설정 합니다.  
   
-설정은이 설명서의 "사용자 인터페이스 참조" 섹션에 설명 되어 있습니다. 설정 및 각 모드에는 설정 적용 방법에 대 한 자세한 내용은 다음 항목을 참조 합니다.  
+설정은이 설명서의 "사용자 인터페이스 참조" 단원에 설명 되어 있습니다. 설정 및 설정 설정에 대 한 자세한 내용은 다음 항목을 참조 하십시오.  
   
 -   [프로젝트 설정(변환)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
   
@@ -42,48 +42,50 @@ SSMA는 4 개의 집합이 구성 설정과 이러한 설정을 구성 하기 �
 -   [프로젝트 설정 (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)  
   
 ## <a name="setting-project-options"></a>프로젝트 옵션 설정  
-SSMA에 모든 프로젝트에 대 한 기본 설정을 구성할 수 있습니다. 이러한 설정은 SSMA 구성 파일에 저장 되며 사용자가 만든 모든 새 프로젝트에 적용 됩니다.  
+SSMA에서 모든 프로젝트에 대 한 기본 설정을 구성할 수 있습니다. 이러한 설정은 SSMA 구성 파일에 저장 되 고 사용자가 만드는 모든 새 프로젝트에 적용 됩니다.  
   
 **기본 프로젝트 옵션을 설정 하려면**  
   
-1.  에 **도구** 메뉴에서 **기본 프로젝트 설정**합니다.  
+1.  **도구** 메뉴에서 **기본 프로젝트 설정**을 선택 합니다.  
   
-2.  에 **기본 프로젝트 설정** 대화 상자에서 다음 중 하나를 수행 합니다.  
+2.  **기본 프로젝트 설정** 대화 상자에서 다음 중 하나를 수행 합니다.  
   
-    -   설정을 볼 /에서 변경 하는 데 필요한는 마이그레이션 프로젝트 형식을 선택 **마이그레이션 대상 버전** 드롭다운을 클릭 합니다 **일반** 선택 고왼쪽된창맨아래에**변환 또는 SQL Azure 마이그레이션**합니다.  
+    -   마이그레이션 **대상 버전** 드롭다운에서 설정 하거나 변경 해야 하는 설정에 대 한 마이그레이션 프로젝트 유형을 선택 하 고 왼쪽 창의 맨 아래에 있는 **일반** 을 클릭 한 다음 **변환 또는 마이그레이션 또는 SQL Azure**를 선택 합니다.  
   
         > [!NOTE]  
-        > SQL Azure 옵션을 사용할 수는 **일반** 만들 프로젝트 형식에는 SQL Azure 경우에 탭 합니다.  
+        > SQL Azure 옵션은 만든 프로젝트 형식이 SQL Azure 되는 경우에만 **일반** 탭에서 사용할 수 있습니다.  
   
-    -   미리 정의 된 모드를 선택 하려면 **기본**를 **Optimistic**, 또는 **전체** 에 **모드** 드롭다운 목록 상자입니다.  
+    -   미리 정의 된 모드를 선택 하려면 **모드** 드롭다운 상자에서 **기본**, **낙관적**또는 **전체** 를 선택 합니다.  
   
-    -   사용자 지정 모드를 지정 하려면 **사용자 지정** 에 **모드** 상자에서 왼쪽된 창에서 옵션을 선택, 설정 또는 오른쪽 창에서 값을 클릭 한 다음 선택 하거나 새 설정이 나 값을 입력 합니다.  
+    -   사용자 지정 모드를 지정 하려면 **모드** 상자에서 **사용자 지정** 을 선택 하 고 왼쪽 창에서 옵션을 선택한 다음 오른쪽 창에서 설정 또는 값을 클릭 하 고 새 설정 또는 값을 선택 하거나 입력 합니다.  
   
-3.  **확인**을 클릭하여 설정을 저장합니다.  
+3.  
+  **확인**을 클릭하여 설정을 저장합니다.  
   
 현재 프로젝트에 대 한 설정을 사용자 지정할 수도 있습니다. 이러한 설정은 현재 프로젝트 파일에 저장 됩니다.  
   
 **현재 프로젝트에 대 한 설정을 사용자 지정 하려면**  
   
-1.  에 **도구** 메뉴에서 **프로젝트 설정을**합니다.  
+1.  **도구** 메뉴에서 **프로젝트 설정**을 선택 합니다.  
   
-2.  에 **프로젝트 설정** 대화 상자에서 다음 중 하나를 수행 합니다.  
+2.  **프로젝트 설정** 대화 상자에서 다음 중 하나를 수행 합니다.  
   
-    -   미리 정의 된 모드를 선택 하려면 **기본**를 **Optimistic**, 또는 **전체** 에 **모드** 드롭다운 목록 상자입니다.  
+    -   미리 정의 된 모드를 선택 하려면 **모드** 드롭다운 상자에서 **기본**, **낙관적**또는 **전체** 를 선택 합니다.  
   
-    -   사용자 지정 모드를 지정 하려면 **사용자 지정** 에 **모드** 상자에서 왼쪽된 창에서 옵션을 선택, 설정 또는 오른쪽 창에서 값을 클릭 한 다음 선택 하거나 새 설정이 나 값을 입력 합니다.  
+    -   사용자 지정 모드를 지정 하려면 **모드** 상자에서 **사용자 지정** 을 선택 하 고 왼쪽 창에서 옵션을 선택한 다음 오른쪽 창에서 설정 또는 값을 클릭 하 고 새 설정 또는 값을 선택 하거나 입력 합니다.  
   
-3.  **확인**을 클릭하여 설정을 저장합니다.  
+3.  
+  **확인**을 클릭하여 설정을 저장합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
-다음 단계는 마이그레이션 프로젝트 요구 사항에 따라 달라 집니다.  
+마이그레이션의 다음 단계는 프로젝트 요구 사항에 따라 달라 집니다.  
   
--   원본 및 대상 데이터 형식 매핑을 사용자 지정 참조 [매핑 소스 및 대상 데이터 형식](mapping-source-and-target-data-types-accesstosql.md)  
+-   원본 및 대상 데이터 형식의 매핑을 사용자 지정 하려면 [원본 및 대상 데이터 형식 매핑](mapping-source-and-target-data-types-accesstosql.md) 을 참조 하세요.  
   
--   원본 및 대상 데이터베이스의 매핑을 사용자 지정 참조 [매핑 소스 및 대상 데이터베이스](mapping-source-and-target-databases-accesstosql.md)  
+-   원본 및 대상 데이터베이스의 매핑을 사용자 지정 하려면 [원본 및 대상 데이터베이스 매핑](mapping-source-and-target-databases-accesstosql.md) 을 참조 하세요.  
   
--   에 대 한 액세스 데이터베이스 개체 정의 변환할 수이 고, 그렇지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 개체를 정의 합니다. 자세한 내용은 참조 하세요. [Access 데이터베이스 개체 변환](converting-access-database-objects-accesstosql.md)  
+-   그렇지 않은 경우 Access 데이터베이스 개체 정의를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 개체 정의로 변환할 수 있습니다. 자세한 내용은 [Access 데이터베이스 개체 변환](converting-access-database-objects-accesstosql.md) 을 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
-[SQL Server에 대 한 액세스 데이터베이스 마이그레이션](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
+## <a name="see-also"></a>참고 항목  
+[SQL Server로 Access 데이터베이스 마이그레이션](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

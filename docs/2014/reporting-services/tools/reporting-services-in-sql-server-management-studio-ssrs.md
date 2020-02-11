@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e148fa4f7a5340217a2efe2374312568eee43435
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099926"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>SQL Server Management Studio의 Reporting Services(SSRS)
@@ -40,11 +40,11 @@ ms.locfileid: "66099926"
   
 -   [역할 만들기, 삭제 또는 수정&#40;Management Studio&#41;](../security/role-definitions-create-delete-or-modify.md)  
   
--   [항목 삭제 &#40;Management Studio&#41;](delete-an-item-management-studio.md)  
+-   [항목 삭제&#40;Management Studio&#41;](delete-an-item-management-studio.md)  
   
--   [보고서 서버 작업 취소&#40;Management Studio&#41;](cancel-report-server-jobs-management-studio.md)  
+-   [Management Studio&#41;&#40;보고서 서버 작업 취소](cancel-report-server-jobs-management-studio.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Management Studio의 보고서 서버 F1 도움말](report-server-in-management-studio-f1-help.md)   
  [SQL Server Management Studio 소개](../../ssms/sql-server-management-studio-ssms.md)  
   

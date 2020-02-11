@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ca42f1dda184bf5cd99cad7d34f5ae9fce79478b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092955"
 ---
 # <a name="repair-a-distributed-replay-installation"></a>Distributed Replay 설치 복구
@@ -24,16 +24,17 @@ ms.locfileid: "66092955"
   
 2.  해당 서비스 계정이 제거되었으면 Windows 서비스 계정을 다시 만듭니다.  
   
- 복구 작업으로 구성 요소를 추가하거나 제거할 수 없습니다. 를 추가 하거나 구성 요소를 제거 하려면 선택 또는 선택 취소 기능 트리에서 해당 구성 요소에는 **기능 선택** 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 합니다.  
+ 복구 작업으로 구성 요소를 추가하거나 제거할 수 없습니다. 구성 요소를 추가 하거나 제거 하려면 설치 프로그램의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **기능 선택** 페이지에 있는 기능 트리에서 해당 구성 요소를 선택 하거나 선택 취소 합니다.  
   
 ### <a name="to-repair-a-failed-installation-of-distributed-replay"></a>실패한 Distributed Replay 설치를 복구하려면  
   
-1.  **시작** 메뉴에서 클릭 **제어판**를 차례로 클릭 한 다음 **프로그램 추가 / 제거**합니다.  
+1.  **시작** 메뉴에서 **제어판**을 클릭 한 다음 **프로그램 추가/제거**를 두 번 클릭 합니다.  
   
-2.  선택 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에 **제거 또는 변경 프로그램** 창에서를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 대화 상자에서 클릭 **복구**.  
+2.  **프로그램 제거 또는 변경** 창에서를 선택한 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 다음 대화 상자에서 **복구**를 클릭 합니다.  
   
-3.  단계를 수행 합니다 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 마법사 및는 **기능 선택** 페이지를 복구 하 고 클릭 하려는 Distributed Replay 구성 요소를 선택 합니다 **다음.** .  
+3.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 마법사의 단계를 따르고 **기능 선택** 페이지에서 복구 하려는 Distributed Replay 구성 요소를 선택 하 고 **다음**을 클릭 합니다.  
   
-4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 마법사를 완료하여 선택한 Distributed Replay 기능을 복구합니다.  
+4.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 마법사를 완료하여 선택한 Distributed Replay 기능을 복구합니다.  
   
   

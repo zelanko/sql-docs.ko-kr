@@ -11,17 +11,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c4df53093cf7d7dff00a8a5e16fb4bef58442213
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092385"
 ---
 # <a name="select-a-prepared-instance"></a>준비 인스턴스 선택
+  
   **준비 인스턴스 선택** 페이지를 사용하여 준비 인스턴스 중에서 완료할 인스턴스를 지정할 수 있습니다.  
   
-## <a name="options"></a>변수  
- **instanceID 선택** 상자에는 완료할 수 있는 준비 인스턴스 목록이 있습니다. 이 중에서 완료할 인스턴스를 선택하십시오.  
+## <a name="options"></a>옵션  
+ 
+  **instanceID 선택** 상자에는 완료할 수 있는 준비 인스턴스 목록이 있습니다. 이 중에서 완료할 인스턴스를 선택하십시오.  
   
 ## <a name="uielement-list"></a>UIElement 목록  
  **인스턴스 Id 선택**  

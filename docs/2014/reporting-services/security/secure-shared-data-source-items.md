@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2e3c7b1ec37eea31aef0d381815e4286f993c827
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101647"
 ---
 # <a name="secure-shared-data-source-items"></a>공유 데이터 원본 항목 보안 설정
@@ -39,7 +39,7 @@ ms.locfileid: "66101647"
 |데이터 원본 관리|이름, 설명 및 연결 정보를 지정하는 속성을 봅니다. 이 태스크는 폴더 계층에 공유 데이터 원본 항목을 표시하는 데에도 사용됩니다. 이 태스크를 선택하면 "데이터 원본 보기" 작업을 생략할 수 있습니다.|  
 |항목의 보안 설정|공유 데이터 원본에 대한 액세스를 제어하는 역할 할당을 만들고 수정합니다. 이 태스크는 "데이터 원본 보기" 또는 "데이터 원본 관리" 작업과 함께 사용해야 합니다. 그렇지 않으면 사용자가 항목을 선택할 수 없으므로 효과가 없습니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서 데이터 원본 관리](../report-data/manage-report-data-sources.md)   
  [보안 폴더](secure-folders.md)   
  [보고서 및 리소스 보안](secure-reports-and-resources.md)   

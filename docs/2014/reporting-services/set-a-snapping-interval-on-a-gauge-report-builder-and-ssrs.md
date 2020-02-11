@@ -1,5 +1,5 @@
 ---
-title: 계기 (보고서 작성기 및 SSRS)의 맞춤 간격 설정 | Microsoft Docs
+title: 계기의 맞춤 간격 설정 (보고서 작성기 및 SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3e2a35e4d6fefb6830774ffd7b2c3bc13a5e097c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101373"
 ---
 # <a name="set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs"></a>계기의 맞춤 간격 설정(보고서 작성기 및 SSRS)
@@ -30,15 +30,15 @@ ms.locfileid: "66101373"
 2.  속성 창을 엽니다.  
   
     > [!NOTE]  
-    >  속성 창에 표시 되지 않으면 클릭 합니다 **보기** 탭을 선택한 다음는 **속성** 확인란을 선택 합니다.  
+    >  속성 창이 표시 되지 않으면 **보기** 탭을 클릭 한 다음 **속성** 확인란을 선택 합니다.  
   
-3.  에 **포인터** 속성 (...) 단추를 클릭 합니다. Pointer 컬렉션 편집기가 열립니다.  
+3.  **포인터** 속성에서 (...) 단추를 클릭 합니다. Pointer 컬렉션 편집기가 열립니다.  
   
-4.  설정 된 **SnappingEnabled** 속성을 `True`입니다.  
+4.  **SnappingEnabled** 속성을로 `True`설정 합니다.  
   
-5.  설정 된 **SnappingInterval** 맞춤 간격을 나타내는 값입니다. 포인터가 지정한 값의 가장 근사한 반올림 배수로 맞춰집니다.  
+5.  맞춤 간격을 나타내는 값으로 **SnappingInterval** 을 설정 합니다. 포인터가 지정한 값의 가장 근사한 반올림 배수로 맞춰집니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [계기의 눈금 서식 지정&#40;보고서 작성기 및 SSRS&#41;](report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [계기의 포인터 서식 지정&#40;보고서 작성기 및 SSRS&#41;](report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [계기&#40;보고서 작성기 및 SSRS&#41;](report-design/gauges-report-builder-and-ssrs.md)  

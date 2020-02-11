@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7602ce0ef0e75c3c2eb1ee5a5a47e3fe56b87f44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102139"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>보고서 서버에서 사용자 지정 또는 폼 인증 구성
@@ -34,7 +34,7 @@ ms.locfileid: "66102139"
   
 1.  텍스트 편집기에서 RSReportServer.config를 엽니다.  
   
-2.  찾을 <`Authentication`>.  
+2.  <`Authentication`>를 찾습니다.  
   
 3.  다음 XML 구조를 복사합니다.  
   
@@ -47,21 +47,24 @@ ms.locfileid: "66102139"
     </Authentication>  
     ```  
   
-4.  에 대 한 기존 항목 위에 붙여넣습니다 <`Authentication`>.  
+4.  <`Authentication`>의 기존 항목 위에 붙여넣습니다.  
   
-     `Custom`은 다른 인증 유형과 함께 사용할 수 없습니다.  
+     
+  `Custom`은 다른 인증 유형과 함께 사용할 수 없습니다.  
   
 5.  파일을 저장합니다.  
   
 6.  보고서 서버의 Web.config 파일을 엽니다. 기본적으로 이 파일은 \Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\ReportServer에 있습니다.  
   
-7.  `authentication mode`를 찾아 `Forms`로 설정합니다.  
+7.  
+  `authentication mode`를 찾아 `Forms`로 설정합니다.  
   
     ```  
     <authentication mode = "Forms" />  
     ```  
   
-8.  `identity impersonate`를 찾아 `False`로 설정합니다.  
+8.  
+  `identity impersonate`를 찾아 `False`로 설정합니다.  
   
     ```  
     <identity impersonate = "false" />  
@@ -69,13 +72,15 @@ ms.locfileid: "66102139"
   
 9. 보고서 관리자의 Web.config 파일을 엽니다. 기본적으로 이 파일은 \Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\ReportManager에 있습니다.  
   
-10. `authentication mode`를 찾아 `Forms`로 설정합니다.  
+10. 
+  `authentication mode`를 찾아 `Forms`로 설정합니다.  
   
     ```  
     <authentication mode = "Forms" />  
     ```  
   
-11. `identity impersonate`를 찾아 `False`로 설정합니다.  
+11. 
+  `identity impersonate`를 찾아 `False`로 설정합니다.  
   
     ```  
     <identity impersonate = "false" />  
@@ -89,10 +94,10 @@ ms.locfileid: "66102139"
   
 15. 보고서 서버를 다시 시작하여 현재 열려 있는 모든 세션을 지웁니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보안 확장 프로그램 구현](../extensions/security-extension/implementing-a-security-extension.md)   
  [보고서 서버 인증](authentication-with-the-report-server.md)   
- [RSReportServer 구성 파일](../report-server/rsreportserver-config-configuration-file.md)   
+ [Rsreportserver.config 구성 파일](../report-server/rsreportserver-config-configuration-file.md)   
  [보고서 서버의 기본 인증 구성](configure-basic-authentication-on-the-report-server.md)   
  [보고서 서버의 Windows 인증 구성](configure-windows-authentication-on-the-report-server.md)  
   

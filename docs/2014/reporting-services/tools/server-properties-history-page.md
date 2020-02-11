@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5ce48c964ec756668aa12566c494d9ae9a1e5372
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099583"
 ---
 # <a name="server-properties-history-page"></a>서버 속성(기록 페이지)
@@ -26,9 +26,10 @@ ms.locfileid: "66099583"
   
  보고서 기록 스냅샷은 보고서 서버 데이터베이스에 저장됩니다. 스냅샷을 무제한으로 보관하는 경우 데이터베이스 크기를 정기적으로 점검하여 너무 빠른 속도로 커지거나 지나치게 많은 디스크 공간을 소모하지 않도록 하십시오.  
   
- 이 페이지를 열려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 열고 보고서 서버 인스턴스에 연결한 다음 보고서 서버 이름을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **기록** 을 클릭하여 이 페이지를 엽니다.  
+ 이 페이지를 열려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 시작하고 보고서 서버 인스턴스에 연결한 다음 보고서 서버 이름을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. 
+  **기록** 을 클릭하여 이 페이지를 엽니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **보고서 기록에 스냅숏을 무제한으로 보관**  
  모든 보고서 기록 스냅샷을 유지합니다. 보고서 기록 크기를 줄이려면 스냅샷을 수동으로 삭제해야 합니다.  
   
@@ -37,7 +38,7 @@ ms.locfileid: "66099583"
   
  나중에 보고서 기록을 제한하면 기존 보고서 기록이 지정한 제한을 초과하는 경우 보고서 서버에서 기존 보고서 기록을 새 제한으로 축소합니다. 가장 오래된 보고서 스냅샷이 먼저 삭제됩니다. 보고서 기록이 비어 있거나 제한보다 적은 경우 새 보고서 스냅샷이 추가됩니다. 한도에 이르면 새 보고서 스냅샷이 추가될 때 가장 오래된 스냅샷이 삭제됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서 서버 속성 설정&#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
  [Management Studio에서 보고서 서버에 연결](connect-to-a-report-server-in-management-studio.md)   
  [Management Studio의 보고서 서버 F1 도움말](report-server-in-management-studio-f1-help.md)  

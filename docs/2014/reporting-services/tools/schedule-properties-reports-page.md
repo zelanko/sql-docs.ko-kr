@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 08fc68575e2515907f31e82cf3609d73da1c95d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099792"
 ---
 # <a name="schedule-properties-reports-page"></a>일정 속성(보고서 페이지)
@@ -29,18 +29,18 @@ ms.locfileid: "66099792"
 > [!NOTE]  
 >  이 기능은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서는 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2012 버전에서 지원하는 기능](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473) 을 참조하세요.  
   
-## <a name="options"></a>변수  
- **Folder**  
+## <a name="options"></a>옵션  
+ **폴더**  
  보고서의 경로를 지정합니다.  
   
- **보고서**  
+ **Report**  
  일정을 사용하는 보고서의 이름을 지정합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [일정 만들기, 수정 및 삭제](../subscriptions/create-modify-and-delete-schedules.md)   
  [일정](../subscriptions/schedules.md)   
  [Management Studio의 보고서 서버 F1 도움말](report-server-in-management-studio-f1-help.md)   
  [Management Studio에서 보고서 서버에 연결](connect-to-a-report-server-in-management-studio.md)   
- [보고서에 대 한 일반 속성 구성 &#40;보고서 관리자&#41;](../configure-general-properties-for-a-report-report-manager.md)  
+ [보고서 &#40;보고서 관리자의 일반 속성 구성&#41;](../configure-general-properties-for-a-report-report-manager.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e4bb06da4582b5b93f027ac49c8b761705ad4b22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105693"
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>이미지, 입력란, 사각형 및 선(보고서 작성기 및 SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "66105693"
  [이미지&#40;보고서 작성기 및 SSRS&#41;](images-report-builder-and-ssrs.md)  
  이미지는 보고서의 이진 이미지 데이터를 표시합니다. 이미지의 원본은 사용자가 제공합니다. 원본은 웹 서버에 저장된 이미지에 대한 URL 참조, 포함된 이미지 데이터에 대한 참조, 데이터베이스의 이진 이미지 데이터에 대한 참조일 수 있습니다. 보고서 작성기 및 보고서 디자이너에서는 .bmp, .jpeg, .gif 및 .png 파일을 지원합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서 항목 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-report-items-report-builder-and-ssrs.md)  
   
   

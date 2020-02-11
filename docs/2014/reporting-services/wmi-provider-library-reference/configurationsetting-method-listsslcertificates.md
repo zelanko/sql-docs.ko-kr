@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f65926bf982574ee2ae856b5bc4138d065b534bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098328"
 ---
-# <a name="listsslcertificates-method-wmi-msreportserverconfigurationsetting"></a>ListSSLCertificates 메서드(WMI MSReportServer_ConfigurationSetting)
+# <a name="listsslcertificates-method-wmi-msreportserver_configurationsetting"></a>ListSSLCertificates 메서드(WMI MSReportServer_ConfigurationSetting)
   보고서 서버 컴퓨터의 인증서 목록을 반환합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -37,13 +37,13 @@ public void ListSSLCertificates(out string[] CertificateHash,
 ```  
   
 ## <a name="parameters"></a>매개 변수  
- *CertificateHash[]*  
+ *CertificateHash []*  
  [out] 인증서 해시입니다.  
   
  *CertName[]*  
  [out] 인증서 이름입니다.  
   
- *HostName[]*  
+ *호스트 이름 []*  
  [out] 인증서의 호스트 이름입니다.  
   
  *길이*  
@@ -52,15 +52,15 @@ public void ListSSLCertificates(out string[] CertificateHash,
  *HRESULT*  
  [out] 호출의 성공 여부를 나타내는 값입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드 호출의 성공 또는 실패를 나타내는 *HRESULT* 를 반환합니다. 0 값은 메서드 호출이 성공했음을 나타내고 오류 코드는 호출이 실패했음을 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 ## <a name="requirements"></a>요구 사항  
- **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **네임 스페이스:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [MSReportServer_ConfigurationSetting 멤버](msreportserver-configurationsetting-members.md)  
   
   

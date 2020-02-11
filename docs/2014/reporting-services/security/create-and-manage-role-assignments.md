@@ -17,13 +17,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eed9b1a0deb7e88c85283ea3dc7cab9bf893937f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101995"
 ---
 # <a name="create-and-manage-role-assignments"></a>역할 할당 생성 및 관리
+  
   *역할 할당* 은 사용자 또는 그룹이 특정 보고서 서버 항목에 액세스하거나 작업을 수행할 수 있는지 여부를 결정하는 보안 정책입니다. 역할 할당은 단일 사용자 또는 그룹 계정 이름과 하나 이상의 역할 정의로 구성됩니다.  
   
  역할 할당의 범위는 *항목 수준* 또는 *시스템 수준*입니다.  
@@ -41,7 +42,7 @@ ms.locfileid: "66101995"
   
  역할 할당을 만들려면 보고서 서버 컴퓨터에서 사용자가 로컬 관리자 그룹의 멤버여야 합니다. 다른 사용자를 **내용 관리자** 역할에 할당하여 책임을 위임할 수 있습니다.  
   
- 자세한 내용은 [사용자에게 보고서 서버에 대한 액세스 권한 부여&#40;보고서 관리자&#41;](grant-user-access-to-a-report-server.md)를 참조하세요.  
+ 자세한 내용은 [사용자에 게 보고서 서버에 대 한 액세스 권한 부여 &#40;보고서 관리자&#41;](grant-user-access-to-a-report-server.md)를 참조 하세요.  
   
 ## <a name="creating-a-system-level-role-assignment"></a>시스템 수준 역할 할당 만들기  
  시스템 수준 역할 할당을 만들거나 관리하려면 보고서 관리자를 사용하여 사이트 설정 페이지를 엽니다.  
@@ -62,9 +63,9 @@ ms.locfileid: "66101995"
 ## <a name="deleting-a-role-assignment"></a>역할 할당 삭제  
  삭제할 각 할당에 해당하는 확인란을 선택한 다음 **삭제**를 클릭하여 역할 할당을 삭제할 수 있습니다. **부모 보안으로 되돌리기**를 클릭하여 역할 할당을 삭제할 수도 있습니다. 이 단추를 클릭하면 항목에 대한 기존 역할 할당이 삭제되고 부모 항목을 통해 제공되는 역할 할당이 대신 사용됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [사용자에게 보고서 서버에 대한 액세스 권한 부여&#40;보고서 관리자&#41;](grant-user-access-to-a-report-server.md)   
- [역할 할당 수정 또는 삭제&#40;보고서 관리자&#41;](role-assignments-modify-or-delete.md)   
+ [역할 할당을 수정 하거나 삭제 &#40;보고서 관리자&#41;](role-assignments-modify-or-delete.md)   
  [역할 할당](role-assignments.md)   
  [역할 정의](role-definitions.md)   
  [미리 정의된 역할](role-definitions-predefined-roles.md)   

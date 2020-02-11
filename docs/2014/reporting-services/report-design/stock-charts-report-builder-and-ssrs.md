@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8f5b0e6ecc8dab66eb375a568fa1188549ac8ae3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104806"
 ---
 # <a name="stock-charts-report-builder-and-ssrs"></a>주식형 차트(보고서 작성기 및 SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "66104806"
   
  ![주식형 차트](../media/rs-stockchart.gif "주식형 차트")  
   
- 주식형 차트의 예는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 보고서 작성기의 예제 보고서로 제공됩니다. 이 샘플 보고서 및 기타 보고서를 다운로드하는 방법은 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][보고서 작성기 및 보고서 디자이너 샘플 보고서](https://go.microsoft.com/fwlink/?LinkId=198283).  
+ 주식형 차트의 예는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 보고서 작성기의 예제 보고서로 제공됩니다. 이 예제 보고서 및 기타 보고서를 다운로드 하는 방법에 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]대 한 자세한 내용은 [보고서 작성기 및 보고서 디자이너 샘플 보고서](https://go.microsoft.com/fwlink/?LinkId=198283)를 참조 하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -37,9 +37,10 @@ ms.locfileid: "66104806"
   
 -   일반적으로 축 레이블은 생성 시 0에서부터 시작합니다.  주가의 변동 폭은 일반적으로 다른 데이터 집합의 변동 폭과 차이가 있습니다. 따라서 데이터를 보다 수월하게 파악하기 위해 축 레이블이 0부터 시작하지 않도록 할 수 있습니다. 이렇게 하려면 **축 속성** 대화 상자 또는 속성 창에서 **IncludeZero** 를 **false** 로 설정합니다. 차트가 축 레이블을 생성하는 방법은 [차트의 축 레이블 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)을 참조하세요.  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 주식형 차트에서 사용할 수 있는 가격 표시기, 상대 강도 지수, MACD 등의 여러 계산된 수식을 제공합니다.  
+-   
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 주식형 차트에서 사용할 수 있는 가격 표시기, 상대 강도 지수, MACD 등의 여러 계산된 수식을 제공합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [범위형 차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   

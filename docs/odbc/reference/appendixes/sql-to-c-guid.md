@@ -15,29 +15,29 @@ ms.assetid: cf56c684-c261-4b89-994a-db14ab2241d6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1a2ed3cffcb196cb09841df3b54fbfab53e22477
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68056868"
 ---
 # <a name="sql-to-c-guid"></a>SQL에서 C로: GUID
-GUID ODBC SQL 데이터 형식에 대 한 식별자가 있습니다.  
+GUID ODBC SQL 데이터 형식에 대 한 식별자는 다음과 같습니다.  
   
  SQL_GUID  
   
- 다음 표에서 ODBC C 데이터 형식에는 GUID SQL 데이터를 변환 될 수 있습니다를 보여 줍니다. 열과 테이블의 용어 설명은 참조 하세요 [SQL에서 C 데이터 형식으로 변환 데이터](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)입니다.  
+ 다음 표에서는 GUID SQL 데이터가 변환 될 수 있는 ODBC C 데이터 형식을 보여 줍니다. 테이블의 열 및 용어에 대 한 설명은 [SQL에서 C 데이터 형식으로 데이터 변환](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)을 참조 하세요.  
   
 |C 형식 식별자|테스트|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*BufferLength* > 문자 바이트 길이|data|36|n/a|  
-||*BufferLength* < 37|Undefined|Undefined|22003|  
-|SQL_C_WCHAR|*BufferLength* > 문자 길이|data|36|n/a|  
-||*BufferLength* < 37|Undefined|Undefined|22003|  
-|SQL_C_BINARY|데이터의 바이트 길이 \< =  *BufferLength*|data|데이터의 바이트 길이|n/a|  
-||데이터의 바이트 길이 > *BufferLength*|Undefined|Undefined|22003|  
-|SQL_C_GUID|[A] 없음|data|16[b]|n/a|  
+|SQL_C_CHAR|*Bufferlength* > 문자 바이트 길이입니다.|data|36|해당 없음|  
+||*Bufferlength* < 37|정의되지 않음|정의되지 않음|22003|  
+|SQL_C_WCHAR|*Bufferlength* > 문자 길이입니다.|data|36|해당 없음|  
+||*Bufferlength* < 37|정의되지 않음|정의되지 않음|22003|  
+|SQL_C_BINARY|데이터 \< =  *bufferlength* 의 바이트 길이|data|데이터의 길이 (바이트)|해당 없음|  
+||*Bufferlength* > 데이터의 바이트 길이|정의되지 않음|정의되지 않음|22003|  
+|SQL_C_GUID|없음 [a]|data|16 [b]|해당 없음|  
   
- [a] 값 *BufferLength* 이 변환에 대해 무시 됩니다. 드라이버 가정 크기 **TargetValuePtr* C 데이터 형식의 크기입니다.  
+ [a]이 변환에서 *Bufferlength* 값은 무시 됩니다. 이 드라이버는 **Targetvalueptr* 의 크기가 C 데이터 형식의 크기인 것으로 가정 합니다.  
   
- [b] C 데이터 형식에 해당 크기입니다.
+ [b] 해당 C 데이터 형식의 크기입니다.

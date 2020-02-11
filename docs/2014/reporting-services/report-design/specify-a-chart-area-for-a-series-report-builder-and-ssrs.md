@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 14fc5556e430cf364b004cd02ebd0278da650867
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104965"
 ---
 # <a name="specify-a-chart-area-for-a-series-report-builder-and-ssrs"></a>계열에 대한 차트 영역 지정(보고서 작성기 및 SSRS)
@@ -38,16 +38,18 @@ ms.locfileid: "66104965"
   
 2.  차트에서 계열을 마우스 오른쪽 단추로 클릭하거나 차트 데이터 창의 해당하는 영역에서 계열 또는 데이터 필드를 마우스 오른쪽 단추로 클릭하고 **계열 속성**을 클릭합니다.  
   
-3.  **축 및 차트 영역**에서 계열을 표시할 차트 영역을 선택합니다.  
+3.  
+  **축 및 차트 영역**에서 계열을 표시할 차트 영역을 선택합니다.  
   
-4.  (옵션) 차트 영역을 세로로 맞춥니다. 이렇게 하려면 차트를 마우스 오른쪽 단추로 클릭하고 **차트 영역 속성**을 선택합니다. **맞춤**에서, 선택한 차트 영역과 맞출 다른 차트 영역을 선택합니다.  
+4.  (옵션) 차트 영역을 세로로 맞춥니다. 이렇게 하려면 차트를 마우스 오른쪽 단추로 클릭하고 **차트 영역 속성**을 선택합니다. 
+  **맞춤**에서, 선택한 차트 영역과 맞출 다른 차트 영역을 선택합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [차트의 여러 계열&#40;보고서 작성기 및 SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>참고 항목  
+ [차트의 여러 계열 &#40;보고서 작성기 및 SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
  [차트의 데이터 요소에 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [색상표를 사용하여 차트에 대한 색 정의&#40;보고서 작성기 및 SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
- [극좌표형 차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [극좌표 형 차트 &#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [셰이프 차트&#40;보고서 작성기 및 SSRS&#41;](shape-charts-report-builder-and-ssrs.md)   
- [원형 차트&#40;보고서 작성기 및 SSRS&#41;](pie-charts-report-builder-and-ssrs.md)  
+ [원형 차트 &#40;보고서 작성기 및 SSRS&#41;](pie-charts-report-builder-and-ssrs.md)  
   
   

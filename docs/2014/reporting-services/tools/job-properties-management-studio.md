@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f00250011f3c325ca39c3c040e5252b804182d86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100223"
 ---
 # <a name="job-properties-management-studio"></a>작업 속성(Management Studio)
@@ -27,7 +27,7 @@ ms.locfileid: "66100223"
 > [!NOTE]  
 >  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services에서는 이 기능을 지원하지 않습니다. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]를 실행하는 경우 페이지가 나타나지 않습니다.  
   
-## <a name="tasks"></a>태스크  
+## <a name="tasks"></a>작업  
  작업에 대한 정보를 보려면 페이지를 새로 고쳐 현재 보고서 서버에서 실행 중인 작업에 대한 정보를 가져와야 합니다.  
   
 1.  보고서 서버 폴더를 엽니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "66100223"
   
 3.  작업이 표시되면 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **작업 ID**  
  작업이 처리되는 중에 작업에 할당된 GUID입니다. 이 값은 보고서 또는 구독이 실행될 때마다 임의로 생성됩니다.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66100223"
  **사용자 이름**  
  사용자가 시작한 프로세스인 경우 이 열에서 사용자 이름을 표시합니다. 시스템 작업의 경우 보고서 서버의 이름입니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Management Studio의 보고서 서버 F1 도움말](report-server-in-management-studio-f1-help.md)   
  [Management Studio에서 보고서 서버에 연결](connect-to-a-report-server-in-management-studio.md)   
  [실행 중인 프로세스 관리](../subscriptions/manage-a-running-process.md)  

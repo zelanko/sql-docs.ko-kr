@@ -1,5 +1,5 @@
 ---
-title: SharePoint 사이트 (SharePoint 통합된 모드의 Reporting Services)의 보고서 서버 항목에 대 한 권한 설정 | Microsoft Docs
+title: Sharepoint 사이트의 보고서 서버 항목에 대 한 사용 권한 설정 (SharePoint 통합 모드의 Reporting Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9c8c0e8f0714efb337d78d4440938dcb5a332fcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101560"
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site-reporting-services-in-sharepoint-integrated-mode"></a>SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 설정(SharePoint 통합 모드의 Reporting Services)
@@ -71,9 +71,9 @@ ms.locfileid: "66101560"
   
 12. **확인**을 클릭합니다. 특정 모델에 대한 사용 권한 관리 권한이 있는 사용자는 모델을 열어 모델 내에서 사용 권한을 편집할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서 서버 항목에 대해 Windows SharePoint Services의 기본 제공 보안 사용](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)   
- [SharePoint 웹 응용 프로그램에서 보고서 서버 작업에 대한 사용 권한 설정](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
+ [SharePoint 웹 애플리케이션에서 보고서 서버 작업에 대한 사용 권한 설정](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
  [Reporting Services의 역할 및 태스크와 SharePoint 그룹 및 사용 권한 비교](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [보고서 서버 항목에 대한 SharePoint 사이트 및 목록 사용 권한 참조](sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
  [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 부여](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  

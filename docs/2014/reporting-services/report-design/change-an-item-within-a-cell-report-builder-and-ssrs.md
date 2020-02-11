@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7676145c7f1beb28f2d6abedf57c3c33d1a41c9f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106346"
 ---
 # <a name="change-an-item-within-a-cell-report-builder-and-ssrs"></a>셀 내 항목 변경(보고서 작성기 및 SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "66106346"
 > [!NOTE]  
 >  이미지 보고서 항목을 끌어서 셀에 놓으면 **이미지 속성** 대화 상자가 열립니다. 이 대화 상자에서 이미지를 셀에 추가하기 전에 이미지 원본 등의 속성을 설정할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [이미지, 입력란, 사각형 및 선&#40;보고서 작성기 및 SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
  [목록&#40;보고서 작성기 및 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   

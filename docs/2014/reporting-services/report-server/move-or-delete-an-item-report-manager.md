@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aafd2ff32e8c554186d18a6329649081e8babe6b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103733"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>항목 이동 또는 삭제(보고서 관리자)
@@ -32,7 +32,7 @@ ms.locfileid: "66103733"
 |----------|-------------------|  
 |![보고서 아이콘](../media/hlp-16doc.gif "보고서 아이콘")|보고서|  
 |![링크된 보고서 아이콘](../media/hlp-16linked.gif "링크된 보고서 아이콘")|링크된 보고서|  
-|![폴더 아이콘](../media/hlp-16folder.gif "폴더 아이콘")|Folder|  
+|![폴더 아이콘](../media/hlp-16folder.gif "폴더 아이콘")|폴더|  
 |![일반 리소스 아이콘](../media/hlp-16file.gif "일반 리소스 아이콘")|일반 리소스|  
 |![공유 데이터 원본 아이콘](../media/hlp-16datasource.png "공유 데이터 원본 아이콘")|공유 데이터 원본|  
 ||공유 데이터 세트|  
@@ -41,7 +41,7 @@ ms.locfileid: "66103733"
   
 #### <a name="to-move-an-item-from-within-the-contents-page"></a>내용 페이지에서 항목을 이동하려면  
   
-1.  시작 [보고서 관리자 &#40;SSRS 기본 모드&#41;]... / 보고서-manager-ssrs-네이티브-mode.md).  
+1.  [보고서 관리자 &#40;SSRS 기본 모드&#41;]를 시작 합니다. /report-manager-ssrs-native-mode.md).  
   
 2.  보고서 관리자에서 **내용** 페이지로 이동한 다음 이동할 항목을 찾습니다.  
   
@@ -51,18 +51,19 @@ ms.locfileid: "66103733"
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-6.  **위치**에서 항목을 이동할 폴더를 지정합니다. 정규화된 폴더 이름을 입력하거나 트리 컨트롤을 사용하여 해당 폴더로 이동합니다.  
+6.  
+  **위치**에서 항목을 이동할 폴더를 지정합니다. 정규화된 폴더 이름을 입력하거나 트리 컨트롤을 사용하여 해당 폴더로 이동합니다.  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
  또는 이동할 개체로 이동하고 **속성**을 클릭한 후 페이지 맨 위에서 **이동** 을 클릭합니다.  
   
 ## <a name="delete-an-item"></a>항목 삭제  
- 항목을 삭제하기 전에 해당 항목이 다른 항목에 사용되고 있는지 확인하십시오. 예를 들어 공유 데이터 원본을 삭제하는 경우 해당 데이터 원본을 사용하는 보고서와 모델이 더 이상 실행되지 않습니다. 보고서를 삭제하는 경우 해당 보고서와 관련된 구독 및 보고서 기록도 삭제됩니다. 참조 항목에 대 한 종속 항목을 찾으려면 [종속 항목 페이지 &#40;보고서 관리자&#41;]... / 종속-항목-페이지-보고서-manager.md).  
+ 항목을 삭제하기 전에 해당 항목이 다른 항목에 사용되고 있는지 확인하십시오. 예를 들어 공유 데이터 원본을 삭제하는 경우 해당 데이터 원본을 사용하는 보고서와 모델이 더 이상 실행되지 않습니다. 보고서를 삭제하는 경우 해당 보고서와 관련된 구독 및 보고서 기록도 삭제됩니다. 항목에 대 한 종속 항목을 찾으려면 [종속 항목 페이지 &#40;보고서 관리자&#41;]를 참조 하세요. /dependent-items-page-report-manager.md).  
   
 #### <a name="to-delete-a-report-or-item"></a>보고서 또는 항목을 삭제하려면  
   
-1.  시작 [보고서 관리자 &#40;SSRS 기본 모드&#41;]... / 보고서-manager-ssrs-네이티브-mode.md).  
+1.  [보고서 관리자 &#40;SSRS 기본 모드&#41;]를 시작 합니다. /report-manager-ssrs-native-mode.md).  
   
 2.  보고서 관리자에서 **내용** 페이지로 이동한 다음 삭제할 항목을 찾습니다.  
   
@@ -72,8 +73,8 @@ ms.locfileid: "66103733"
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>관련 항목  
- [페이지 콘텐츠를 &#40;보고서 관리자&#41;]... / 콘텐츠 페이지-보고서 manager.md)   
+## <a name="see-also"></a>참고 항목  
+ [내용 페이지 &#40;보고서 관리자&#41;]. /contents-page-report-manager.md)   
  [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c50d242c7528485d5d21aa10f2680094628b484b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105718"
 ---
 # <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>줄무늬 선을 추가하여 차트 데이터 강조 표시(보고서 작성기 및 SSRS)
@@ -60,7 +60,7 @@ ms.locfileid: "66105718"
 > [!NOTE]  
 >  기본적으로 Interval은 Auto로 설정되며 이는 차트가 사용자 지정 줄무늬 선에 대한 간격을 계산하지 않음을 의미합니다. 차트는 간격 값이 설정된 경우에만 줄무늬 선의 간격을 계산합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [차트의 축 레이블 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [차트에 이동 평균 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  

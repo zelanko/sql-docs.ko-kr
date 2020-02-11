@@ -1,5 +1,5 @@
 ---
-title: 사용 되지 않는 시스템 저장 프로시저에 대 한 참조를 제거 합니다. | Microsoft Docs
+title: 사용 되지 않는 시스템 저장 프로시저에 대 한 참조 제거 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2e841956adf08f9ac14a3f1360839e9132bf9cd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093108"
 ---
 # <a name="remove-references-to-deprecated-system-stored-procedures"></a>더 이상 사용되지 않는 시스템 저장 프로시저에 대한 참조를 제거합니다.
@@ -101,8 +101,8 @@ ms.locfileid: "66093108"
 ### <a name="undocmented-system-stored-procedures"></a>문서화되지 않은 시스템 저장 프로시저  
  동일한 기능이 있는 CLR 저장 프로시저를 만들어 문서화되지 않은 시스템 저장 프로시저를 대체할 수 있습니다. 자세한 내용은 SQL Server 온라인 설명서에서 "CLR 저장 프로시저"를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
- [데이터베이스 엔진 업그레이드 문제](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>참고 항목  
+ [업그레이드 문제 데이터베이스 엔진](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 업그레이드 관리자 &#91;새&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

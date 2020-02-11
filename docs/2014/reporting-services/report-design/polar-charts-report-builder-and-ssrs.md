@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a790f3951ce37e714346b8d280547e603cf48c23
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105449"
 ---
 # <a name="polar-charts-report-builder-and-ssrs"></a>극좌표형 차트(보고서 작성기 및 SSRS)
@@ -38,7 +38,7 @@ ms.locfileid: "66105449"
 ## <a name="example"></a>예제  
  다음 예에서는 방사형 차트를 사용하는 방법을 보여 줍니다. 아래 표에는 이 차트에 사용한 데이터가 나와 있습니다.  
   
-|이름|Sales|  
+|속성|Sales|  
 |----------|-----------|  
 |Shrubs|61|  
 |Seeds|78|  
@@ -52,11 +52,11 @@ ms.locfileid: "66105449"
   
  ![방사형 차트](../media/rs-radarchart.gif "방사형 차트")  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [차트 종류&#40;보고서 작성기 및 SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
- [꺾은선형 차트&#40;보고서 작성기 및 SSRS&#41;](line-charts-report-builder-and-ssrs.md)   
+ [꺾은선형 차트는 보고서 작성기 및 SSRS를 &#40;&#41;](line-charts-report-builder-and-ssrs.md)   
  [차트의 빈 데이터 요소 및 Null 데이터 요소&#40;보고서 작성기 및 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
   
   

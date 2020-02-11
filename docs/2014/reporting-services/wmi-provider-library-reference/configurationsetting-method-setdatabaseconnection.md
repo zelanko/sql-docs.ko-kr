@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f722ac82f839b76bfb76d21d4a23aae884ade038
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098098"
 ---
-# <a name="setdatabaseconnection-method-wmi-msreportserverconfigurationsetting"></a>SetDatabaseConnection 메서드(WMI MSReportServer_ConfigurationSetting)
+# <a name="setdatabaseconnection-method-wmi-msreportserver_configurationsetting"></a>SetDatabaseConnection 메서드(WMI MSReportServer_ConfigurationSetting)
   특정 보고서 서버 데이터베이스에 대한 보고서 서버 데이터베이스 연결을 설정합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -50,7 +50,7 @@ public void BackupEncryptionKey(string Server,
  보고서 서버 데이터베이스의 이름입니다.  
   
  *CredentialsType*  
- 연결에 사용할 자격 증명의 유형입니다. 사용할 수 있는 값에는  
+ 연결에 사용할 자격 증명의 유형입니다. 값은  
   
 -   0 - Windows  
   
@@ -58,7 +58,7 @@ public void BackupEncryptionKey(string Server,
   
 -   2 - Windows 서비스  
   
- *UserName*  
+ *이름*  
  보고서 서버 데이터베이스에 연결하는 데 사용되는 계정 이름입니다.  
   
  *암호*  
@@ -67,28 +67,32 @@ public void BackupEncryptionKey(string Server,
  *HRESULT*  
  [out] 호출의 성공 여부를 나타내는 값입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드 호출의 성공 또는 실패를 나타내는 *HRESULT* 를 반환합니다. 0 값은 메서드 호출이 성공했음을 나타냅니다. 0 이외의 값은 오류가 발생했음을 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
- *CredentialsType* 매개 변수를 0(Windows)으로 설정하면 *UserName* 및 *Password* 매개 변수를 설정해야 합니다. *UserName* 매개 변수는 "domain\username" 형식이어야 하며 값은 유효한 Windows 로그온을 나타내야 합니다.  
+## <a name="remarks"></a>설명  
+ 
+  *CredentialsType* 매개 변수를 0(Windows)으로 설정하면 *UserName* 및 *Password* 매개 변수를 설정해야 합니다. 
+  *UserName* 매개 변수는 "domain\username" 형식이어야 하며 값은 유효한 Windows 로그온을 나타내야 합니다.  
   
- *CredentialsType* 매개 변수를 1([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])로 설정하면 *UserName* 매개 변수에 전달되는 값이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 이름의 요구 사항을 따라야 합니다.  
+ 
+  *CredentialsType* 매개 변수를 1([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])로 설정하면 *UserName* 매개 변수에 전달되는 값이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 이름의 요구 사항을 따라야 합니다.  
   
- *CredentialsType* 매개 변수를 2(Windows 서비스)로 설정하면 보고서 서버에서 통합 보안을 사용하여 보고서 서버 데이터베이스에 연결하고 *UserName* 및 *Password* 매개 변수는 무시됩니다. 보고 서버 웹 서비스는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 계정 또는 애플리케이션 풀의 계정과 Windows 서비스 계정을 사용하여 보고서 서버 데이터베이스에 액세스합니다.  
+ 
+  *CredentialsType* 매개 변수를 2(Windows 서비스)로 설정하면 보고서 서버에서 통합 보안을 사용하여 보고서 서버 데이터베이스에 연결하고 *UserName* 및 *Password* 매개 변수는 무시됩니다. 보고 서버 웹 서비스는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 계정 또는 애플리케이션 풀의 계정과 Windows 서비스 계정을 사용하여 보고서 서버 데이터베이스에 액세스합니다.  
   
  SetDatabaseConnection 메서드는 호출되면 지정된 보고서 서버에 대한 구성 파일에 있는 자격 증명과 데이터베이스 정보를 암호화하여 저장합니다.  
   
  SetDatabaseConnection 메서드는 보고서 서버에서 지정된 데이터를 사용하여 보고서 서버 데이터베이스에 연결할 수 있는지 확인하지 않습니다.  
   
- 처음 설정하는 경우 ConnectionPoolSize 속성은 다음 프로세서를 기반으로 설정됩니다. ConnectionPoolSize = #Processors * 75.  
+ 처음 설정하는 경우 ConnectionPoolSize 속성은 ConnectionPoolSize = #Processors * 75 프로세서를 기반으로 설정됩니다.  
   
  SetDatabaseConnection 메서드는 지정된 계정에 권한을 부여하지 않습니다. 보고서 서버 데이터베이스에 액세스하고 결과 스크립트를 실행해야 하는 각 계정에 대해 [GenerateDatabaseRightsScript](configurationsetting-method-generatedatabaserightsscript.md) 메서드를 호출해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **네임 스페이스:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [MSReportServer_ConfigurationSetting 멤버](msreportserver-configurationsetting-members.md)  
   
   

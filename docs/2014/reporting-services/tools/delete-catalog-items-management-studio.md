@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bacb9387a4026fbf6a41f0b5d9cdd0b77594da97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100393"
 ---
 # <a name="delete-catalog-items-management-studio"></a>카탈로그 항목 삭제(Management Studio)
@@ -28,7 +28,7 @@ ms.locfileid: "66100393"
   
  삭제 작업은 실행 취소할 수 없습니다. 삭제한 항목을 복구하려면 해당 항목을 다시 만들거나 보고서 서버 데이터베이스의 백업 복사본을 복원해야 합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **이름**  
  삭제할 항목의 이름을 지정합니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66100393"
  **오류**  
  항목을 삭제하는 동안 오류가 발생할 경우 오류 코드를 표시합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [항목 삭제&#40;Management Studio&#41;](delete-an-item-management-studio.md)   
  [Management Studio의 보고서 서버 F1 도움말](report-server-in-management-studio-f1-help.md)   
  [일정 만들기, 수정 및 삭제](../subscriptions/create-modify-and-delete-schedules.md)  

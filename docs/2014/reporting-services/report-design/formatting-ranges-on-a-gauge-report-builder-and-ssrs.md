@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 29574c58eef6f18d685b48dd8d695a5fc42c3e6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105807"
 ---
 # <a name="formatting-ranges-on-a-gauge-report-builder-and-ssrs"></a>계기에서 범위 서식 지정(보고서 작성기 및 SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66105807"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [계기의 눈금 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [계기의 포인터 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [계기의 최소값 또는 최대값 설정&#40;보고서 작성기 및 SSRS&#41;](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)   

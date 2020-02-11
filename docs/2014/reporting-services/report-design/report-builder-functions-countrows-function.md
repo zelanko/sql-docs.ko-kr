@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f3414498d0ce399607ab0faa1a438dad88efc35c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105275"
 ---
 # <a name="countrows-function-report-builder-and-ssrs"></a>CountRows 함수(보고서 작성기 및 SSRS)
@@ -35,13 +35,16 @@ CountRows(scope, recursive)
  (`String`) 계산할 보고서 항목이 포함된 데이터 세트, 데이터 영역 또는 그룹의 이름입니다.  
   
  *재귀*  
- (**열거 형식**) 선택 사항입니다. `Simple`(기본값) 또는 `RdlRecursive`로, 집계를 재귀적으로 수행할지 여부를 지정합니다.  
+ (**열거 형식**) 선택 사항입니다. 
+  `Simple`(기본값) 또는 `RdlRecursive`로, 집계를 재귀적으로 수행할지 여부를 지정합니다.  
   
 ## <a name="return-type"></a>반환 형식  
- `Integer`를 반환합니다.  
+ 
+  `Integer`를 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
- `CountRows`는 Null 값을 가진 행을 포함하여 지정된 범위의 모든 행을 계산합니다.  
+## <a name="remarks"></a>설명  
+ 
+  `CountRows`는 Null 값을 가진 행을 포함하여 지정된 범위의 모든 행을 계산합니다.  
   
  *scope* 값은 식이 될 수 없으며 현재 범위 또는 포함하는 범위를 참조해야 합니다.  
   
@@ -56,7 +59,7 @@ CountRows(scope, recursive)
 ="Number of rows: " & CountRows("GroupbyCategory")  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)   

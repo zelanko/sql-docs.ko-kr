@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 862e0f5dbe9ef15c33aad13a7f5480ffb7b07150
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104854"
 ---
 # <a name="specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs"></a>식을 사용하여 표시기 크기 지정(보고서 작성기 및 SSRS)
@@ -60,7 +60,7 @@ ms.locfileid: "66104854"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [표시기&#40;보고서 작성기 및 SSRS&#41;](indicators-report-builder-and-ssrs.md)  
   
   

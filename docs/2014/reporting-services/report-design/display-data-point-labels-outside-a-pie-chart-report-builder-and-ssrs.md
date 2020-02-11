@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eb726adbb523f679fd9d59e3e51b2dc1291e6247
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106045"
 ---
 # <a name="display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs"></a>원형 차트 외부에 데이터 요소 레이블 표시(보고서 작성기 및 SSRS)
@@ -41,7 +41,7 @@ ms.locfileid: "66106045"
   
 5.  **PieLabelStyle** 속성을 **Outside**로 설정합니다.  
   
-6.  설정 된 `PieLineColor` 속성을 **검정**합니다. PieLineColor 속성은 각 데이터 요소 레이블에 대한 설명선을 정의합니다.  
+6.  속성을 `PieLineColor` **Black**으로 설정 합니다. PieLineColor 속성은 각 데이터 요소 레이블에 대한 설명선을 정의합니다.  
   
 ### <a name="to-prevent-overlapping-labels-displayed-outside-a-pie-chart"></a>원형 차트 외부에 표시되는 레이블이 겹쳐지지 않도록 하려면  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66106045"
   
 4.  레이블을 위한 공간을 더 확보하면서 차트를 계속 2차원으로 표시하려면 **회전** 및 **기울기** 속성을 **0**으로 설정합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [원형 차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [원형 차트에서 작은 조각 수집&#40;보고서 작성기 및 SSRS&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
  [원형 차트에서 백분율 값 표시&#40;보고서 작성기 및 SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)  

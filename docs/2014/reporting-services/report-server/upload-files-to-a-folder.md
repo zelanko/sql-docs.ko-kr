@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5751941cb8912c527798c9aff5aaac1b46767fd8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103078"
 ---
 # <a name="upload-files-to-a-folder"></a>폴더에 파일 업로드
@@ -52,16 +52,16 @@ ms.locfileid: "66103078"
   
  파일을 업로드하려면 보고서 관리자를 사용합니다. 보고서 서버로 파일을 업로드할 수 있는지 여부는 사용자의 역할 할당에 속하는 태스크에 따라 다릅니다. 기본 보안을 사용할 경우 로컬 관리자는 보고서 서버에 항목을 추가할 수 있습니다. 내 보고서를 설정한 경우 내 보고서 폴더를 갖고 있는 모든 사용자가 해당 폴더로 항목을 업로드할 수 있습니다. 사용자 지정 역할 할당을 사용하는 경우 역할 할당에 폴더 관리 지원 태스크가 포함되어야 합니다.  
   
-|수행 작업|포함되는 태스크|  
+|원하는 작업|포함되는 태스크|  
 |----------------|-------------------------|  
 |폴더에 .rdl 파일 업로드|보고서 관리|  
 |파일을 이진 개체로 업로드|리소스 관리|  
 |폴더의 내용 보기|리소스 보기, 보고서 보기|  
   
-## <a name="see-also"></a>관련 항목  
- [보고서 관리자 &#40;SSRS 기본 모드&#41;]... / 보고서-manager-ssrs-네이티브-mode.md)   
+## <a name="see-also"></a>참고 항목  
+ [보고서 관리자 &#40;SSRS 기본 모드&#41;].. /report-manager-ssrs-native-mode.md)   
  [기본 모드 보고서 서버에 대한 사용 권한 부여](../security/granting-permissions-on-a-native-mode-report-server.md)   
  [태스크 및 권한](../security/tasks-and-permissions.md)   
- [파일 또는 보고서 업로드&#40;보고서 관리자&#41;](../reports/upload-a-file-or-report-report-manager.md)  
+ [보고서 관리자&#41;&#40;파일 또는 보고서 업로드](../reports/upload-a-file-or-report-report-manager.md)  
   
   

@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eba2db61acb691732f81dcd0fa98b0ba48cf921e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103844"
 ---
 # <a name="enable-and-disable-my-reports"></a>내 보고서 설정 및 해제
@@ -50,7 +50,7 @@ ms.locfileid: "66103844"
   
  내 보고서를 활성화하는 경우 내 보고서 링크를 클릭하는 도메인 계정으로 모든 사용자를 위한 내 보고서 폴더가 생성됩니다. 사용자가 원하지 않더라도 내 보고서 폴더는 생성됩니다. 사용되고 있는 폴더를 확인할 체계적인 방식은 없습니다. 폴더에 포함된 내용이 있는지 확인하려면 폴더를 직접 살펴봐야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [내 보고서 보안 설정](../security/secure-my-reports.md)   
  [보고서 서버 콘텐츠 관리&#40;SSRS 기본 모드&#41;](report-server-content-management-ssrs-native-mode.md)  
   

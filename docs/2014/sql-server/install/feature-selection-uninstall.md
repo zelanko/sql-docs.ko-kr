@@ -11,16 +11,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8c5159e9a29da96ca1364658c8dcc3290cb799c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095237"
 ---
 # <a name="feature-selection-uninstall"></a>기능 선택(제거)
-  기능 선택을 사용 하 여 지정 된 인스턴스에서 제거할 기능 선택 페이지를 제거- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+  기능 선택-제거 페이지를 사용 하 여 지정 된 인스턴스에서 제거할 기능을 선택 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  기능을 자유롭게 조합하여 선택할 수 있습니다.  
   
   

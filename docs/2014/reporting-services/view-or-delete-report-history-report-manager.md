@@ -1,5 +1,5 @@
 ---
-title: 보기 보고서 기록 또는 삭제 (보고서 관리자) | Microsoft Docs
+title: 보고서 기록 보기 또는 삭제 (보고서 관리자) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -26,10 +26,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a05c9dccabcf9b937ebd67fb264022761b1ca249
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098712"
 ---
 # <a name="view-or-delete-report-history-report-manager"></a>보고서 기록 보기 또는 삭제(보고서 관리자)
@@ -41,7 +41,7 @@ ms.locfileid: "66098712"
   
 2.  보고서 관리자에서 **내용** 페이지로 이동합니다. 기록 스냅샷을 만들거나 보려는 보고서로 이동한 후 해당 보고서를 클릭하여 엽니다.  
   
-3.  **기록** 탭을 클릭합니다. 기록 스냅숏에 표시 되는 **실행** 열입니다.  
+3.  **기록** 탭을 클릭 합니다. 기록 스냅숏은 **실행 시간** 열에 표시 됩니다.  
   
 4.  기록 스냅샷을 보려면 스냅샷을 클릭합니다.  
   
@@ -49,15 +49,15 @@ ms.locfileid: "66098712"
   
 1.  보고서 관리자에서 **내용** 페이지로 이동합니다. 기록 스냅샷을 삭제할 보고서로 이동한 후 해당 보고서를 클릭하여 엽니다.  
   
-2.  **기록** 탭을 클릭합니다. 기록 스냅숏에 표시 되는 **실행** 열입니다.  
+2.  **기록** 탭을 클릭 합니다. 기록 스냅숏은 **실행 시간** 열에 표시 됩니다.  
   
-3.  를 삭제 하 고 클릭 하려는 기록 스냅숏 옆의 확인란을 선택 **삭제**합니다.  
+3.  삭제 하려는 기록 스냅숏 옆의 확인란을 선택 하 고 **삭제**를 클릭 합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [보고서 기록에 스냅숏 추가&#40;보고서 관리자&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+## <a name="see-also"></a>참고 항목  
+ [보고서 기록에 스냅샷 추가&#40;보고서 관리자&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [보고서 기록 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/report-history-page-report-manager.md)   
  [보고서 처리 속성 설정](report-server/set-report-processing-properties.md)   
  [보고서 관리자&#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [보고서 기록에서 스냅숏 만들기, 수정 및 삭제](report-server/create-modify-and-delete-snapshots-in-report-history.md)  
+ [보고서 기록에서 스냅샷 만들기, 수정 및 삭제](report-server/create-modify-and-delete-snapshots-in-report-history.md)  
   
   

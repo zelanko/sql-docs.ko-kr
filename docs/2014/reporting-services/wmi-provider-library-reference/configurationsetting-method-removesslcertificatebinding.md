@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4c3e943bcf63f4bcdff22d5425bf474d8aa4d80d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098181"
 ---
-# <a name="removesslcertificatebindings-method-wmi-msreportserverconfigurationsetting"></a>RemoveSSLCertificateBindings 메서드(WMI MSReportServer_ConfigurationSetting)
+# <a name="removesslcertificatebindings-method-wmi-msreportserver_configurationsetting"></a>RemoveSSLCertificateBindings 메서드(WMI MSReportServer_ConfigurationSetting)
   SSL 인증서 바인딩을 제거합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -38,13 +38,13 @@ public void RemoveSSLCertificateBindings(string Application,
 ```  
   
 ## <a name="parameters"></a>매개 변수  
- *응용 프로그램*  
+ *프로그램별*  
  인증서 바인딩을 제거해야 하는 애플리케이션의 이름입니다.  
   
  *CertificateHash*  
  인증서에 대한 해시입니다.  
   
- *IPAddress*  
+ *IP 주소*  
  애플리케이션의 IP 주소입니다.  
   
  *포트*  
@@ -59,16 +59,16 @@ public void RemoveSSLCertificateBindings(string Application,
  *HRESULT*  
  [out] 호출의 성공 여부를 나타내는 값입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드 호출의 성공 또는 실패를 나타내는 *HRESULT* 를 반환합니다. 0 값은 메서드 호출이 성공했음을 나타내고 오류 코드는 호출이 실패했음을 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 메서드는 rsreportserver.config 파일에서 특정 바인딩을 제거하고 HTTP.SYS 파일에서 특정 바인딩을 선택적으로 제거합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **네임 스페이스:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [MSReportServer_ConfigurationSetting 멤버](msreportserver-configurationsetting-members.md)  
   
   

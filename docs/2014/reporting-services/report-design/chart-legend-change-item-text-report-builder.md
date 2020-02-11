@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3e34f0a34030dab62a876a41043dc4c4f4c86f0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106309"
 ---
 # <a name="change-the-text-of-a-legend-item-report-builder-and-ssrs"></a>범례 항목의 텍스트 변경(보고서 작성기 및 SSRS)
@@ -31,9 +31,11 @@ ms.locfileid: "66106309"
   
 ### <a name="to-modify-the-text-that-appears-in-the-legend-on-a-shape-chart"></a>셰이프 차트의 범례에 나타나는 텍스트를 수정하려면  
   
-1.  **값** 영역에 포함된 필드 또는 계열을 마우스 오른쪽 단추로 클릭하고 **계열 속성**을 선택합니다.  
+1.  
+  **값** 영역에 포함된 필드 또는 계열을 마우스 오른쪽 단추로 클릭하고 **계열 속성**을 선택합니다.  
   
-2.  **범례** 를 클릭하고 **사용자 지정 범례 텍스트** 상자에서 키워드를 입력합니다.  
+2.  
+  **범례** 를 클릭하고 **사용자 지정 범례 텍스트** 상자에서 키워드를 입력합니다.  
   
  다음 표에서는 **사용자 지정 범례 텍스트** 속성에 사용하는 차트별 키워드의 예를 보여 줍니다. 키워드에 대한 자세한 내용은 [차트의 데이터 요소에 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)을 참조하세요.  
   
@@ -49,13 +51,15 @@ ms.locfileid: "66106309"
   
 ### <a name="to-modify-the-text-that-appears-in-the-legend-on-a-non-shape-chart"></a>셰이프 차트가 아닌 차트의 범례에 나타나는 텍스트를 수정하려면  
   
-1.  **값** 영역에 포함된 필드 또는 계열을 마우스 오른쪽 단추로 클릭하고 **계열 속성**을 선택합니다.  
+1.  
+  **값** 영역에 포함된 필드 또는 계열을 마우스 오른쪽 단추로 클릭하고 **계열 속성**을 선택합니다.  
   
-2.  **범례** 를 클릭하고 **사용자 지정 범례 텍스트** 상자에서 범례 레이블을 입력합니다. 입력한 텍스트로 계열이 업데이트됩니다.  
+2.  
+  **범례** 를 클릭하고 **사용자 지정 범례 텍스트** 상자에서 범례 레이블을 입력합니다. 입력한 텍스트로 계열이 업데이트됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [차트의 범례 서식 지정&#40;보고서 작성기 및 SSRS&#41;](chart-legend-formatting-report-builder.md)   
  [차트에서 계열 색 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [차트에서 범례 항목 숨기기&#40;보고서 작성기 및 SSRS&#41;](chart-legend-hide-items-report-builder.md)  
+ [차트에서 범례 항목 숨기기 &#40;보고서 작성기 및 SSRS&#41;](chart-legend-hide-items-report-builder.md)  
   
   

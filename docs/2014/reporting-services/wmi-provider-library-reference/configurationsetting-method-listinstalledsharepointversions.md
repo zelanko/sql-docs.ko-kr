@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b67f20c8d20e21ac7af197d4d8ec7fe780a8fd83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098336"
 ---
 # <a name="listinstalledsharepointversions-method-wmi"></a>ListInstalledSharePointVersions 메서드(WMI)
@@ -35,7 +35,7 @@ public void ListReportServersInDatabase (out string[] VersionTokens,
 ```  
   
 ## <a name="parameters"></a>매개 변수  
- *VersionTokens[]*  
+ *VersionTokens []*  
  [out] 설치된 보고서 서버와 호환되는 SharePoint 제품 또는 기술의 버전을 나타내는 토큰이 들어 있는 배열입니다.  
   
  *길이*  
@@ -44,24 +44,26 @@ public void ListReportServersInDatabase (out string[] VersionTokens,
  *HRESULT*  
  [out] 호출의 성공 여부를 나타내는 값입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드 호출의 성공 또는 실패를 나타내는 *HRESULT* 를 반환합니다. 0 값은 메서드 호출이 성공했음을 나타냅니다. 0 이외의 값은 오류가 발생했음을 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  반환되는 각 토큰은 현재 설치되어 있는 보고서 서버와 호환되는 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 또는 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 버전을 나타냅니다. 특정 버전의 SharePoint가 이전 SharePoint 버전과 호환되는 경우 호환되는 각 SharePoint 버전에 대한 토큰이 반환됩니다.  
   
  다음 표에서는 반환되는 SharePoint 토큰을 보여 줍니다.  
   
 |**버전 토큰**|**설명**|  
 |------------------------|---------------------|  
-|WSS_V2_Compatible|[!INCLUDE[winSPServ](../../includes/winspserv-md.md)]2.0과 호환되는 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)], [!INCLUDE[offSPServ](../../includes/offspserv-md.md)], [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 또는 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 설치 프로그램이 설치되어 있습니다.|  
-|WSS_V3_Compatible|[!INCLUDE[winSPServ](../../includes/winspserv-md.md)]3.0과 호환되는 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)], [!INCLUDE[offSPServ](../../includes/offspserv-md.md)], [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 또는 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 이 설치되어 있습니다.|  
+|WSS_V2_Compatible|
+  [!INCLUDE[winSPServ](../../includes/winspserv-md.md)]2.0과 호환되는 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)], [!INCLUDE[offSPServ](../../includes/offspserv-md.md)], [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 또는 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 설치 프로그램이 설치되어 있습니다.|  
+|WSS_V3_Compatible|
+  [!INCLUDE[winSPServ](../../includes/winspserv-md.md)]3.0과 호환되는 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)], [!INCLUDE[offSPServ](../../includes/offspserv-md.md)], [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 또는 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 이 설치되어 있습니다.|  
 |WSS_V4_Compatible|Office 14와 호환되는 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 또는 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 이 설치되어 있습니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **네임 스페이스:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [MSReportServer_ConfigurationSetting 멤버](msreportserver-configurationsetting-members.md)  
   
   

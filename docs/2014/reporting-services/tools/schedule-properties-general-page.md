@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 98d013126fe1db1b8101d5ae451f658546f6d1f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099735"
 ---
 # <a name="schedule-properties-general-page"></a>일정 속성(일반 페이지)
@@ -29,9 +29,9 @@ ms.locfileid: "66099735"
  이 페이지를 열려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 시작하고 보고서 서버에 연결한 다음 **공유 일정** 폴더를 열고 공유 일정을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
 > [!NOTE]  
->  이 기능은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서는 사용할 수 없으며 이 페이지는 이 기능이 포함되지 않은 버전을 실행할 경우 표시되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2012 버전에서 지원하는 기능](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473)을 참조하세요.  
+>  이 기능은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서는 사용할 수 없으며 이 페이지는 이 기능이 포함되지 않은 버전을 실행할 경우 표시되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2012 버전에서 지원하는 기능](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473) 을 참조하세요.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **이름**  
  공유 일정의 이름을 지정합니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66099735"
  **한 번**  
  특정 날짜 및 시간에 한 번만 실행되는 일정을 지정합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Management Studio의 보고서 서버 F1 도움말](report-server-in-management-studio-f1-help.md)   
  [Management Studio에서 보고서 서버에 연결](connect-to-a-report-server-in-management-studio.md)   
  [일정 만들기, 수정 및 삭제](../subscriptions/create-modify-and-delete-schedules.md)   

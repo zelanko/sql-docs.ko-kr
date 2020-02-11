@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e6a60f1b47c7015fa0fca27cc7ce68bf4d04b15d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105209"
 ---
 # <a name="multilookup-function-report-builder-and-ssrs"></a>Multilookup 함수(보고서 작성기 및 SSRS)
@@ -35,21 +35,24 @@ Multilookup(source_expression, destination_expression, result_expression, datase
  (`VariantArray`) 현재 범위에서 평가되고, 조회할 키 또는 이름의 집합을 지정하는 식입니다. 예를 들어 다중값 매개 변수의 경우 `=Parameters!IDs.value`입니다.  
   
  *destination_expression*  
- (`Variant`) 데이터 세트의 각 행에 대해 평가되고, 일치시킬 키 또는 이름을 지정하는 식입니다. `=Fields!ID.Value`) 을 입력합니다.  
+ (`Variant`) 데이터 세트의 각 행에 대해 평가되고, 일치시킬 키 또는 이름을 지정하는 식입니다. `=Fields!ID.Value`)을 입력합니다.  
   
  *result_expression*  
- (`Variant`) 데이터 집합의 행에 대해 평가 되는 식을 위치 *source_expression* = *destination_expression*, 검색할 값을 지정 하 고 있습니다. `=Fields!Name.Value`) 을 입력합니다.  
+ (`Variant`) *Source_expression* = *destination_expression*되 고 검색할 값을 지정 하는 데이터 집합의 행에 대해 평가 되는 식입니다. `=Fields!Name.Value`)을 입력합니다.  
   
- *데이터 집합(dataset)*  
+ *데이터 세트*  
  보고서의 데이터 세트 이름을 지정하는 상수입니다. 예를 들면 "Colors"입니다.  
   
 ## <a name="return"></a>반환 값  
- `VariantArray`를 반환하거나, 일치하는 항목이 없으면 `Nothing`을 반환합니다.  
+ 
+  `VariantArray`를 반환하거나, 일치하는 항목이 없으면 `Nothing`을 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
- `Multilookup`을 사용하여 일 대 일 관계가 있는 이름-값 쌍의 데이터 세트에서 값 집합을 검색할 수 있습니다. `MultiLookup`은 이름 또는 키 집합에 대해 `Lookup`을 호출하는 것과 동일합니다. 예를 들어 기본 키 식별자를 기반으로 하는 다중값 매개 변수의 경우 테이블의 입력란에 있는 식에 `Multilookup`을 사용하여 매개 변수 또는 테이블에 바인딩되지 않은 데이터 세트에서 연결된 값을 검색할 수 있습니다.  
+## <a name="remarks"></a>설명  
+ 
+  `Multilookup`을 사용하여 일 대 일 관계가 있는 이름-값 쌍의 데이터 세트에서 값 집합을 검색할 수 있습니다. 
+  `MultiLookup`은 이름 또는 키 집합에 대해 `Lookup`을 호출하는 것과 동일합니다. 예를 들어 기본 키 식별자를 기반으로 하는 다중값 매개 변수의 경우 테이블의 입력란에 있는 식에 `Multilookup`을 사용하여 매개 변수 또는 테이블에 바인딩되지 않은 데이터 세트에서 연결된 값을 검색할 수 있습니다.  
   
- `Multilookup`에서는 다음을 수행합니다.  
+ `Multilookup`는 다음을 수행 합니다.  
   
 -   현재 범위에서 원본 식을 평가하고 변형 개체의 배열을 생성합니다.  
   
@@ -57,11 +60,11 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 -   결과 집합을 반환합니다.  
   
- 일 대 일 관계의 이름-값 쌍을 포함하는 데이터 집합에서 지정된 이름에 대한 단일 값을 검색하려면 [Lookup 함수&#40;보고서 작성기 및 SSRS&#41;](report-builder-functions-lookup-function.md)를 사용합니다. 일 대 다 관계의 이름-값 쌍을 포함하는 데이터 집합에서 이름에 대한 여러 값을 검색하려면 [LookupSet 함수&#40;보고서 작성기 및 SSRS&#41;](report-builder-functions-lookupset-function.md)를 사용합니다.  
+ 일 대 일 관계의 이름-값 쌍을 포함하는 데이터 세트에서 지정된 이름에 대한 단일 값을 검색하려면 [Lookup 함수&#40;보고서 작성기 및 SSRS&#41;](report-builder-functions-lookup-function.md)을 사용합니다. 일 대 다 관계의 이름-값 쌍을 포함하는 데이터 세트에서 이름에 대한 여러 값을 검색하려면 [LookupSet 함수&#40;보고서 작성기 및 SSRS&#41;](report-builder-functions-lookupset-function.md)을 사용합니다.  
   
- 다음과 같은 제한 사항이 있습니다.  
+ 다음 제한 사항이 적용됩니다.  
   
--   `Multilookup`은 모든 필터 식이 적용된 후 평가됩니다.  
+-   `Multilookup`모든 필터 식이 적용 된 후 평가 됩니다.  
   
 -   조회 수준이 하나만 지원됩니다. 원본, 대상 또는 결과 식에는 조회 함수에 대한 참조가 포함될 수 없습니다.  
   
@@ -69,7 +72,8 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 -   원본, 대상 및 결과 식에는 보고서 또는 그룹 변수에 대한 참조가 포함될 수 없습니다.  
   
--   `Multilookup`은 다음 보고서 항목에 대한 식으로 사용할 수 없습니다.  
+-   
+  `Multilookup`은 다음 보고서 항목에 대한 식으로 사용할 수 없습니다.  
   
     -   데이터 원본에 대한 동적 연결 문자열  
   
@@ -90,7 +94,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  CategoryNames 데이터 세트는 다음 표와 같이 범주 식별자와 범주 이름을 포함합니다.  
   
-|ID|이름|  
+|ID|속성|  
 |--------|----------|  
 |1|Accessories|  
 |2|Bikes|  
@@ -122,7 +126,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 =Join(MultiLookup(Parameters!MyColors.Value,Fields!ColorID.Value,Fields!Color.Value,"ProductColors"),", ")  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)   

@@ -14,17 +14,17 @@ ms.assetid: eeb5ab3f-987d-4f30-87d2-7425a81ad1d7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6d0b136b9748de1991888abb0c19bc0d2ac65ea0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046975"
 ---
 # <a name="driver-manager-error-and-warning-checks"></a>드라이버 관리자 오류 및 경고 검사
-드라이버 관리자를 완전히 또는 부분적으로 다양 한 기능을 구현 하 고 오류와 함수에는 경고의 전체 또는 일부 따라서 확인 합니다.  
+드라이버 관리자는 여러 함수를 완전히 또는 부분적으로 구현 하므로 이러한 함수에서 오류 및 경고의 일부 또는 전부를 확인 합니다.  
   
--   드라이버 관리자 구현 **SQLDataSources** 하 고 **SQLDrivers** 및 모든 오류와 이러한 함수에 대 한 경고를 확인 합니다.  
+-   드라이버 관리자는 **Sqldatasources 원본** 및 **sqldatasources** 를 구현 하 고 이러한 함수에서 모든 오류 및 경고를 확인 합니다.  
   
--   드라이버 관리자 드라이버를 구현 하는지 여부를 확인 **SQLGetFunctions**합니다. 드라이버를 구현 하지 않는 경우 **SQLGetFunctions**, 드라이버 관리자를 구현 하 고 모든 오류 및 경고를 확인 합니다.  
+-   드라이버 관리자는 드라이버가 **SQLGetFunctions**를 구현 하는지 여부를 확인 합니다. 드라이버에서 **SQLGetFunctions**를 구현 하지 않는 경우 드라이버 관리자는을 구현 하 고 모든 오류 및 경고를 확인 합니다.  
   
--   드라이버 관리자를 부분적으로 구현 **SQLAllocHandle**, **SQLConnect**를 **SQLDriverConnect**, **SQLBrowseConnect**합니다  **SQLFreeHandle**, **SQLGetDiagRec**, 및 **SQLGetDiagField** 및 이러한 함수에서 일부 오류를 확인 합니다. 둘 다 유사한 작업을 수행 하기 때문에 이러한 함수 중 일부에 대 한 드라이브와 동일한 오류를 반환할 수 있습니다. 드라이버를 드라이버 관리자 SQLSTATE IM008를 반환할 수 있습니다 예를 들어 (실패 대화 상자) 경우에 대 한 로그인 대화 상자를 표시할 수 없는 **SQLDriverConnect**합니다.
+-   드라이버 관리자는 **SQLAllocHandle**, **SQLConnect**, **SQLDriverConnect**, **SQLBrowseConnect**, **sqlfreehandle**, **SQLGetDiagRec**및 **SQLGetDiagField** 을 부분적으로 구현 하 고 이러한 함수에서 일부 오류가 있는지 확인 합니다. 이러한 기능 중 일부에 대 한 드라이버와 동일한 오류를 반환할 수 있습니다 .이는 모두 유사한 작업을 수행 하기 때문입니다. 예를 들어, **SQLDriverConnect**에 대 한 로그인 대화 상자를 표시할 수 없는 경우 드라이버 관리자 또는 드라이버가 SQLSTATE IM008 (대화 상자 실패)를 반환할 수 있습니다.

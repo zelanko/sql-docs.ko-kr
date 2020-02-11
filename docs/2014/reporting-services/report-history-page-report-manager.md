@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 0b0841e031ee1a98f4f678406f790996a709e90f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104477"
 ---
 # <a name="report-history-page-report-manager"></a>보고서 기록 페이지(보고서 관리자)
@@ -28,7 +28,7 @@ ms.locfileid: "66104477"
 보고서 기록 스냅샷을 클릭하면 이 스냅샷을 볼 수 있습니다. 보고서 기록에 표시되는 스냅샷은 스냅샷이 만들어진 날짜와 시간으로만 구별됩니다. 스냅샷이 예약된 작업에 따라 생성된 것인지 수동 작업으로 생성된 것인지는 시각적으로 구분할 수 없습니다.  
   
 > [!NOTE]  
->  이 기능은 일부 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에서는 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
+>  이 기능은 일부 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에서는 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [SQL Server 2014 버전에서 지 원하는 기능](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조 하세요.  
   
 ## <a name="navigation"></a>탐색  
  사용자 인터페이스(UI)에서 이 위치를 탐색하려면 다음 절차를 사용하십시오.  
@@ -41,9 +41,10 @@ ms.locfileid: "66104477"
   
 3.  드롭다운 메뉴에서 **보고서 기록 보기**를 클릭합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **Delete**  
- 하나 이상의 스냅샷을 삭제하려면 클릭합니다. **삭제**를 클릭하기 전에 삭제할 스냅숏 옆의 확인란을 선택하십시오.  
+ 하나 이상의 스냅샷을 삭제하려면 클릭합니다. 
+  **삭제**를 클릭하기 전에 삭제할 스냅샷 옆의 확인란을 선택하십시오.  
   
  **새 스냅숏**  
  보고서 기록에 스냅샷을 추가하려면 클릭합니다. 이 단추는 보고서의 기록 속성 페이지에서 **수동으로 기록 작성 허용** 옵션을 선택하는 경우에 사용할 수 있습니다.  
@@ -54,9 +55,9 @@ ms.locfileid: "66104477"
  **크기**  
  보고서 정의와 보고서 데이터를 합한 크기를 표시합니다. 이 값은 보고서 정의와 데이터에서 사용하는 보고서 서버 데이터베이스 공간 크기를 나타냅니다. 서식을 포함하는 렌더링된 보고서의 크기는 실제로 더 큽니다. 괄호 안에 표시된 전체 크기는 현재 보고서에 대한 보고서 기록의 모든 스냅샷 크기의 합계입니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서 기록을 보거나 삭제 &#40;보고서 관리자&#41;](../../2014/reporting-services/view-or-delete-report-history-report-manager.md)   
- [보고서 기록에 스냅숏 추가&#40;보고서 관리자&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [일반 속성 페이지, 보고서&#40;보고서 관리자&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
- [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)   
+ [보고서 기록에 스냅샷 추가&#40;보고서 관리자&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [일반 속성 페이지, 보고서 &#40;보고서 관리자&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
+ [F1 도움말 보고서 관리자](../../2014/reporting-services/report-manager-f1-help.md)   
  [스냅숏 옵션 속성 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)

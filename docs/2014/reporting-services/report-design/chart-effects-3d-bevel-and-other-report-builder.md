@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7ae056d72d3966a9787ac2d52f89689ae9f6a799
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106302"
 ---
 # <a name="3d-bevel-and-other-effects-in-a-chart-report-builder-and-ssrs"></a>차트의 3D, 빗면 및 기타 효과(보고서 작성기 및 SSRS)
@@ -59,7 +59,7 @@ ms.locfileid: "66106302"
 ## <a name="highlighting-3d-effects"></a>3D 효과 강조  
  **음영** 속성을 통해 3D 차트에 강조 스타일을 추가할 수 있습니다. 이 속성은 차트 영역을 선택할 때 속성 창에 있는 Area3DStyle 아래에 표시됩니다. 단순 조명 스타일은 차트 영역 요소에 동일한 색상을 적용합니다. 현실적인 스타일은 지정된 조명 각도에 따라 차트 영역 요소의 색상을 바꿉니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [차트의 축 레이블 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [차트에 3D 효과 추가&#40;보고서 작성기 및 SSRS&#41;](chart-effects-add-3d-effects-report-builder.md)  

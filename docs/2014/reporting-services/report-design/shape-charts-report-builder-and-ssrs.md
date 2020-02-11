@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a7194147f60fa039caab1f9a712b9f6f75e2617d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104942"
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>셰이프 차트(보고서 작성기 및 SSRS)
@@ -39,9 +39,9 @@ ms.locfileid: "66104942"
   
 -   셰이프 차트에서는 각 데이터 그룹을 차트의 개별 세그먼트로 표시합니다. 적어도 한 개 이상의 데이터 필드와 한 개 이상의 범주 필드를 추가해야 합니다. 셰이프 차트에 여러 개의 데이터 필드를 추가하면 셰이프 차트에서 두 데이터 필드가 동일한 차트에 표시됩니다.  
   
--   셰이프 차트는 백분율을 비례에 따라 정렬된 순서로 표시하는 데 가장 효과적입니다. 그러나 일관성을 유지하기 위해 이 차트에서는 기본적으로 데이터 세트의 값을 정렬하지 않습니다. 데이터를 깔때기형 또는 피라미드형으로 가장 정확하게 나타내려면 값을 내림차순으로 정렬하는 것이 좋습니다. 자세한 내용은 [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)을 참조하세요.  
+-   셰이프 차트는 백분율을 비례에 따라 정렬된 순서로 표시하는 데 가장 효과적입니다. 그러나 일관성을 유지하기 위해 이 차트에서는 기본적으로 데이터 세트의 값을 정렬하지 않습니다. 데이터를 깔때기형 또는 피라미드형으로 가장 정확하게 나타내려면 값을 내림차순으로 정렬하는 것이 좋습니다. 자세한 내용은 [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)를 참조하세요.  
   
--   Null이거나, 비어 있거나, 음수이거나, 0인 값은 비율을 계산하는 데 영향을 주지 않습니다. 따라서 이러한 값은 셰이프 차트에 표시되지 않습니다. 이러한 유형의 값을 차트에서 시각적으로 표현하려면 셰이프 차트가 아닌 다른 차트 종류로 변경해야 합니다. 셰이프 이외의 차트에 빈 요소를 추가 하는 방법에 대 한 자세한 내용은 참조 하세요. [차트에 빈 요소 추가 &#40;보고서 작성기 및 SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)합니다.  
+-   Null이거나, 비어 있거나, 음수이거나, 0인 값은 비율을 계산하는 데 영향을 주지 않습니다. 따라서 이러한 값은 셰이프 차트에 표시되지 않습니다. 이러한 유형의 값을 차트에서 시각적으로 표현하려면 셰이프 차트가 아닌 다른 차트 종류로 변경해야 합니다. 셰이프 차트가 아닌 차트에 빈 요소를 추가 하는 방법에 대 한 자세한 내용은 [차트에 빈 요소 추가 &#40;보고서 작성기 및 SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)를 참조 하세요.  
   
 -   사용자 지정 색상표를 사용하여 셰이프 차트의 색을 직접 정의하는 경우에는 쉽게 구분할 수 있는 고유한 색으로 각 데이터 요소를 강조 표시할 수 있도록 색상표에 다양한 색을 준비해야 합니다. 자세한 내용은 [차트에서 계열 색 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)을 클릭합니다.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66104942"
   
 -   원형 및 도넛형 차트에 그리기 스타일을 추가로 적용하여 시각적 효과를 높일 수 있습니다. 자세한 내용은 [차트에서 계열 색 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [차트의 빈 데이터 요소 및 Null 데이터 요소&#40;보고서 작성기 및 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e8477b4e8e0e6c0fc6e4801a975b11d79dadf83f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106228"
 ---
 # <a name="column-charts-report-builder-and-ssrs"></a>세로 막대형 차트(보고서 작성기 및 SSRS)
@@ -35,21 +35,21 @@ ms.locfileid: "66106228"
   
 -   **3D 원통형**. 3D 차트에서 막대를 실린더 모양으로 표시하는 세로 막대형 차트입니다.  
   
--   `Histogram`에서 분할된 테이블 또는 인덱스를 만들 수 있습니다. 막대가 정규 분포로 정렬되도록 차트를 계산하는 세로 막대형 차트입니다.  
+-   `Histogram`. 막대가 정규 분포로 정렬되도록 차트를 계산하는 세로 막대형 차트입니다.  
   
--   `Pareto`에서 분할된 테이블 또는 인덱스를 만들 수 있습니다. 가장 긴 막대에서 가장 짧은 막대 순서로 막대를 정렬하는 세로 막대형 차트입니다.  
+-   `Pareto`. 가장 긴 막대에서 가장 짧은 막대 순서로 막대를 정렬하는 세로 막대형 차트입니다.  
   
 ## <a name="data-considerations-for-a-column-chart"></a>세로 막대형 차트의 데이터 고려 사항  
   
--   가로 막대형 및 세로 막대형 차트는 그룹 간의 비교에 매우 일반적으로 사용됩니다. 네 개 이상의 계열을 차트에 표시해야 하는 경우에는 누적 가로 막대형 또는 세로 막대형 차트를 사용하는 것이 좋습니다. 차트에 표시할 계열이 여러 개인 경우 누적 가로 막대형 또는 세로 막대형 차트를 여러 개의 그룹으로 묶을 수도 있습니다. 자세한 내용은 [가로 막대형 차트 &#40;보고서 작성기 및 SSRS&#41; ](charts-report-builder-and-ssrs.md) 하 고 *세로 막대형 차트*.  
+-   가로 막대형 및 세로 막대형 차트는 그룹 간의 비교에 매우 일반적으로 사용됩니다. 네 개 이상의 계열을 차트에 표시해야 하는 경우에는 누적 가로 막대형 또는 세로 막대형 차트를 사용하는 것이 좋습니다. 차트에 표시할 계열이 여러 개인 경우 누적 가로 막대형 또는 세로 막대형 차트를 여러 개의 그룹으로 묶을 수도 있습니다. 자세한 내용은 [가로 막대형 차트 &#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md) 및 *세로 막대형 차트*를 참조 하세요.  
   
 -   세로 막대형 차트에서는 범주 축 레이블을 가로로 표시할 수 있는 공간이 충분하지 않습니다. 범주 레이블이 긴 경우 가로 막대형 차트를 사용하거나 레이블의 회전 각도를 변경하는 것이 좋을 수 있습니다.  
   
 -   세로 막대형 차트의 개별 막대에 특별한 그리기 스타일을 추가하여 시각적 효과를 더욱 높일 수 있습니다. 그리기 스타일에는 쐐기형, 볼록, 원통형 및 그라데이션 효과 등이 있습니다. 이러한 효과는 2D 차트의 모양을 향상시킬 목적으로 디자인되었습니다. 3D 차트를 사용할 때도 그리기 스타일을 적용할 수는 있지만 그 효과는 다를 수 있습니다. 막대형 차트에 그리기 스타일을 추가하는 방법에 대한 자세한 내용은 [차트에 빗면 효과, 볼록 효과 및 질감 스타일 추가&#40;보고서 작성기 및 SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)를 참조하세요.  
   
--   세로 막대형 차트에서만 차트를 히스토그램 또는 파레토 차트로 표시할 수 있습니다. 이렇게 하려면 ShowColumnAs 속성을 설정 `Histogram` 나 `Pareto` 속성 창에서 `true`합니다.  
+-   세로 막대형 차트에서만 차트를 히스토그램 또는 파레토 차트로 표시할 수 있습니다. 이렇게 하려면 속성 창에서 ShowColumnAs 속성을 `Histogram` 또는 `Pareto` 로 설정 합니다. `true`  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [차트 종류&#40;보고서 작성기 및 SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [가로 막대형 차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   

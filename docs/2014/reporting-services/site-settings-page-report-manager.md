@@ -11,17 +11,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 07fc0207020887d7e3ceb8716ee76c78a55d2bac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101117"
 ---
 # <a name="site-settings-page-report-manager"></a>사이트 설정 페이지(보고서 관리자)
   사이트 설정 페이지를 사용하여 애플리케이션 제목을 변경하고 보고서 기록 제한 및 보고서 처리 시간 제한 값에 대한 서버 차원 기본값을 설정하고 시스템 수준 역할 할당을 관리하고 공유 일정을 관리할 수 있습니다. 이 페이지를 보려면 내용 관리자 및 시스템 관리자 권한이 있어야 합니다.  
   
 > [!NOTE]  
->  일부 SQL Server 버전에서 보고서 기록, 보고서 실행 및 공유 일정 기능은 지원되지 않습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
+>  일부 SQL Server 버전에서 보고서 기록, 보고서 실행 및 공유 일정 기능은 지원되지 않습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [SQL Server 2014 버전에서 지 원하는 기능](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조 하세요.  
   
 ## <a name="navigation"></a>탐색  
  사용자 인터페이스(UI)에서 이 위치를 탐색하려면 다음 절차를 사용하십시오.  
@@ -32,14 +32,15 @@ ms.locfileid: "66101117"
   
 2.  페이지의 맨 위에서 **사이트 설정**을 클릭합니다. 사이트의 일반 속성 페이지가 열립니다.  
   
-     **참고:** 표시 되지 않으면 합니다 **사이트 설정** 옵션 메뉴에서 필요가 없습니다 필요한 권한, 자세한 내용은의 "사이트 설정" 섹션을 참조 하세요. [로컬 관리를 위한 기본 모드 보고서 서버 구성 &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)합니다.  
+     **참고:** 메뉴에 **사이트 설정** 옵션이 표시 되지 않는 경우 필요한 권한이 없는 것입니다. 자세한 내용은 [로컬 관리를 위한 기본 모드 보고서 서버 구성 &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)의 "사이트 설정" 섹션을 참조 하세요.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **이름**  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 보고서 관리자의 이 인스턴스에 사용할 제목을 지정합니다. 기본적으로 제목은 "[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]"입니다.  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 보고서 관리자의 이 인스턴스에 사용할 제목을 지정합니다. 기본적으로 제목은 "[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]"입니다.  
   
- **보고서 기록에 대 한 기본 설정 선택**  
- 보관할 보고서 기록 복사본 수로 기본값을 선택합니다. 이 기본값은 보고서 기록 제한을 설정하는 초기 설정이 됩니다. 보고서 수준에서 이 설정을 변경할 수 있습니다. 자세한 내용은 [스냅숏 옵션 속성 페이지&#40;보고서 관리자&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)를 참조하세요.  
+ **보고서 기록의 기본 설정 선택**  
+ 보관할 보고서 기록 복사본 수로 기본값을 선택합니다. 이 기본값은 보고서 기록 제한을 설정하는 초기 설정이 됩니다. 보고서 수준에서 이 설정을 변경할 수 있습니다. 자세한 내용은 [스냅샷 옵션 속성 페이지&#40;보고서 관리자&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)를 참조하세요.  
   
  나중에 보고서 기록을 제한하면 기존 보고서 기록이 지정한 제한을 초과하는 경우 보고서 서버에서 기존 보고서 기록을 새 제한으로 축소합니다. 가장 오래된 보고서 스냅샷이 먼저 삭제됩니다. 보고서 기록이 비어 있거나 제한보다 적은 경우 새 보고서 스냅샷이 추가됩니다. 한도에 이르면 새 보고서 스냅샷이 추가될 때 가장 오래된 스냅샷이 삭제됩니다.  
   
@@ -53,9 +54,9 @@ ms.locfileid: "66101117"
  **사용자 지정 보고서 작성기 시작 URL**  
  보고서 서버에서 기본 보고서 작성기 URL을 사용하지 않는 경우에는 사용자 지정 URL을 지정합니다. 이 설정은 선택 사항입니다. 값을 지정하지 않으면 기본 URL이 사용되어 보고서 작성기가 ClickOnce 애플리케이션으로 시작됩니다. 기본 URL은 다음 중 하나입니다.  
   
- **기본 모드 보고서 서버:** 기본 모드 설치에서 기본 URL 인 http:// 형식을 따릅니다\<*computername*> / reportserver/ReportBuilder/ReportBuilder_3_0_0_0.application 합니다.  
+ **기본 모드 보고서 서버:** 기본 모드 설치에서 기본 URL은 http://\<*computername*>/reportserver/reportbuilder/ReportBuilder_3_0_0_0. 응용 프로그램의 형식을 사용 합니다.  
   
- SharePoint 통합된 모드: 기본 URL 인 http:// 형식을 따릅니다\<*SharePoint_site*> / _vti_bin/ReportBuilder/ReportBuilder_3_0_0_0.application. "  
+ SharePoint 통합 모드: 기본 URL은 http://\<*SharePoint_site*>/_vti_bin/reportbuilder/ReportBuilder_3_0_0_0. "형식을 사용 합니다.  
   
  **적용**  
  변경 내용을 보고서 서버에 저장하려면 클릭합니다.  
@@ -66,7 +67,7 @@ ms.locfileid: "66101117"
  **일정**  
  사용자가 자신의 보고서 및 구독용으로 선택 가능한 공유 일정을 미리 정의할 수 있는 일정 페이지를 열려면 이 링크를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서 관리자&#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [기본 모드 보고서 서버에 대한 사용 권한 부여](security/granting-permissions-on-a-native-mode-report-server.md)   
  [미리 정의된 역할](security/role-definitions-predefined-roles.md)   

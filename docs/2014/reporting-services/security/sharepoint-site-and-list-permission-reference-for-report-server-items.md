@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3e97899fb58049b04860a564b3769feb13217fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101533"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>보고서 서버 항목에 대한 SharePoint 사이트 및 목록 사용 권한 참조
@@ -32,7 +32,7 @@ ms.locfileid: "66101533"
 |사용 권한 수준|약어|  
 |----------------------|------------------|  
 |모든 권한|**F**|  
-|참가|**C**|  
+|기고|**C**|  
 |방문자|**V**|  
   
  보고서 서버에 영향을 주지 않는 사용 권한은 나열되어 있지 않습니다. 모든 개인 설정 사용 권한은 이 참조 문서에서 제외됩니다. 개인 설정 웹 사이트에 보고서 서버 항목을 포함할 수 있지만 보고서 서버에서 개인 설정 요청이나 작업을 직접 처리하지는 않습니다.  
@@ -72,7 +72,7 @@ ms.locfileid: "66101533"
 |원격 인터페이스 사용|SOAP, Web DAV 또는 SharePoint Designer 인터페이스를 사용하여 웹 사이트에 액세스합니다.|X|X|X|보고서 서버에 대한 URL 프록시 엔드포인트를 호출하는 데 사용됩니다.|  
 |열기|웹 사이트, 목록 또는 폴더를 열어 해당 컨테이너 내부 항목에 액세스합니다.|X|X|X|일정 및 항목 속성을 읽습니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services의 역할 및 태스크와 SharePoint 그룹 및 사용 권한 비교](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 부여](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2c7a9ad23124105443349720d2d5769fb9227db2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105025"
 ---
 # <a name="set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs"></a>계기의 최소값 또는 최대값 설정(보고서 작성기 및 SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "66105025"
   
 4.  (옵션) 최소값 및 최대값이 큰 경우 **눈금 레이블 곱하기** 옵션의 값을 지정합니다. 눈금을 줄이는 승수를 지정하려면 10진수를 사용합니다. 예를 들어 눈금이 0에서 1000 사이인 경우 승수 값을 0.01로 지정하면 눈금이 줄어 0에서 10 사이로 표시됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [계기의 눈금 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [계기의 포인터 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [계기&#40;보고서 작성기 및 SSRS&#41;](gauges-report-builder-and-ssrs.md)  

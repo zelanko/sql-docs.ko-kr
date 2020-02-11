@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9178caad90bff142996247b1c5befe6dd47c4933
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105408"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>보고서 파트 게시 및 다시 게시(보고서 작성기 및 SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "66105408"
   
      그렇지 않으면 **게시하기 전에 보고서 파트 검토 및 수정**을 클릭합니다.  
   
-3.  보고서 파트 이름 및 설명을 편집 합니다. 이름을 두 번 클릭하여 편집하고 **설명** 필드를 클릭하여 설명을 추가합니다.  
+3.  보고서 파트 이름 및 설명을 편집하려면 이름을 두 번 클릭해 편집하고 **설명** 필드를 클릭해 설명을 추가합니다.  
   
     > [!NOTE]  
     >  다른 사람들이 검색할 때 쉽게 식별할 수 있도록 명확한 보고서 파트 이름과 설명을 지정하는 것이 좋습니다. 보고서 파트 이름의 최대 길이는 260자(전체 경로)입니다. 여기에는 서버의 폴더 이름 뒤에 보고서 파트의 실제 이름이 붙습니다.  
@@ -56,11 +56,11 @@ ms.locfileid: "66105408"
 > [!NOTE]  
 >  새 보고서 파트로 게시하는 경우에는 새 고유 ID가 지정되며 원본 보고서 파트를 변경해도 더 이상 업데이트를 받지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서 파트&#40;보고서 작성기 및 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [보고서 작성기의 보고서 파트 및 데이터 세트](../report-data/report-parts-and-datasets-in-report-builder.md)   
- [보고서 파트 문제 해결 &#40;보고서 작성기 및 SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
- [업데이트 확인 또는 업데이트 &#40;보고서 작성기 및 SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
+ [보고서 파트 &#40;보고서 작성기 및 SSRS에 대 한 문제 해결&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
+ [업데이트를 확인 하거나 업데이트 &#40;보고서 작성기 및 SSRS를 해제&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
  [보고서 파트 찾아보기 및 기본 폴더 설정&#40;보고서 작성기 및 SSRS&#41;](browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
   

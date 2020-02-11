@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ecd7088b9fe76b955cc40dd495d508878b9d0d96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105348"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>보고서 항목 렌더링(보고서 작성기 및 SSRS)
@@ -77,13 +77,14 @@ ms.locfileid: "66105348"
   
 -   반복되는 열 머리글 및 행 머리글  
   
-     머리글이 바닥글보다 우선 순위가 높습니다. 반복되는 내부 그룹이 외부 그룹보다 우선 순위가 높습니다. `RepeatWith` 속성이 설정되어 있고 대상 데이터 영역에 보다 가까이 있는 항목이 데이터 영역에서 멀리 떨어져 있는 항목보다 우선 순위가 높습니다.  
+     머리글이 바닥글보다 우선 순위가 높습니다. 반복되는 내부 그룹이 외부 그룹보다 우선 순위가 높습니다. 
+  `RepeatWith` 속성이 설정되어 있고 대상 데이터 영역에 보다 가까이 있는 항목이 데이터 영역에서 멀리 떨어져 있는 항목보다 우선 순위가 높습니다.  
   
--   입력란 또는 사각형으로 설정 하는 명시적인 KeepTogether 속성이 등의 작은 보고서 항목 `true`합니다.  
+-   명시적 KeepTogether 속성이로 `true`설정 된 입력란 또는 사각형 등의 작은 보고서 항목  
   
--   하위 보고서 또는 명시적인 KeepTogether 속성이 설정 되지 않은 가장 안쪽의 테이블 릭 스 멤버 등의 큰 보고서 항목 `true`합니다.  
+-   명시적 KeepTogether 속성이로 `true`설정 된 하위 보고서 또는 가장 안쪽에 있지 않은 테이블 릭 스 멤버 등의 많은 보고서 항목  
   
--   명시적인 KeepTogether 속성이 테이블 릭 스 데이터 영역으로 `true`합니다.  
+-   명시적 KeepTogether 속성이로 `true`설정 된 테이블 릭 스 데이터 영역  
   
 ### <a name="subreports"></a>하위 보고서  
  하위 보고서는 별도의 보고서 .rdl 파일에 정의된 다른 보고서를 포함하는 사각형으로 렌더링됩니다. 하위 보고서 파일을 부모 보고서에서 액세스할 수 있도록 하려면 먼저 해당 파일을 보고서 서버에 게시해야 합니다.  
@@ -104,7 +105,7 @@ ms.locfileid: "66105348"
   
  하위 보고서에 대한 자세한 내용은 [하위 보고서&#40;보고서 작성기 및 SSRS&#41;](subreports-report-builder-and-ssrs.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)   
  [여러 보고서 렌더링 확장 프로그램의 대화형 기능&#40;보고서 작성기 및 SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   

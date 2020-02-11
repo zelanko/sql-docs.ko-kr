@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cfcfde7491252568ac8dc89b9ceb1da64c6497dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097888"
 ---
-# <a name="databaselogonaccount-property-wmi-msreportserverconfigurationsetting"></a>DatabaseLogonAccount 속성(WMI MSReportServer_ConfigurationSetting)
+# <a name="databaselogonaccount-property-wmi-msreportserver_configurationsetting"></a>DatabaseLogonAccount 속성(WMI MSReportServer_ConfigurationSetting)
   보고서 서버에서 보고서 서버 데이터베이스에 연결할 때 사용하는 로그온 계정을 지정합니다. 읽기 전용입니다.  
   
 ## <a name="syntax"></a>구문  
@@ -44,15 +44,15 @@ public string DatabaseLogonAccount;
 ## <a name="example-code"></a>코드 예  
  [MSReportServer_ConfigurationSetting 클래스](msreportserver-configurationsetting-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 속성의 유효 값은 [DatabaseLogonType](configurationsetting-property-databaselogontype.md) 속성 값에 따라 달라집니다.  
   
- 경우이 속성은 무시 합니다 [DatabaseLogonType](configurationsetting-property-databaselogontype.md) 속성이 `2 (Service)`.  
+ [Databaselogontype](configurationsetting-property-databaselogontype.md) 속성이로 `2 (Service)`설정 된 경우이 속성은 무시 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **네임 스페이스:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [MSReportServer_ConfigurationSetting 멤버](msreportserver-configurationsetting-members.md)  
   
   

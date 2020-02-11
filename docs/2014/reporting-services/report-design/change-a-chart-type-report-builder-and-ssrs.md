@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e20363b7d26b2b668ca52d44615488e06573f730
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106382"
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>차트 종류 변경(보고서 작성기 및 SSRS)
@@ -36,7 +36,7 @@ ms.locfileid: "66106382"
   
 2.  **차트 종류 선택** 대화 상자의 목록에서 차트 종류를 선택합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [계기&#40;보고서 작성기 및 SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [보고서에 차트 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  

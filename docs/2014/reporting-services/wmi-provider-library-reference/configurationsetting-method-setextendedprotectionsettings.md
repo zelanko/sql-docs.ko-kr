@@ -11,13 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0583632b9c9b8548e16b7a74718b48cad8066ced
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098036"
 ---
-# <a name="setextendedprotectionsettings-method-wmi-msreportserverconfigurationsetting"></a>SetExtendedProtectionSettings 메서드(WMI MSReportServer_ConfigurationSetting)
+# <a name="setextendedprotectionsettings-method-wmi-msreportserver_configurationsetting"></a>SetExtendedProtectionSettings 메서드(WMI MSReportServer_ConfigurationSetting)
   SetExtendedProtectionSettings 메서드는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 파일인 RSReportServer.config에서 RSWindowsExtendedProtectionLevel 및 RSWindowsExtendedProtectionScenario 속성을 설정하는 데 사용됩니다.  
   
 ## <a name="syntax"></a>구문  
@@ -55,18 +55,18 @@ public void SetExtendedProtectionSettings(
   
  `"Any" | "Proxy" | "Direct"`  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  RSWindowsExtendedProtectionLevel 및 RSWindowsExtendedProtectionScenario 속성은 RSReportServer.config 파일의 AuthenticationTypes에 RSWindowNTLM, RSWindowsNegotiate, 또는 RSWindowsKerberos가 포함된 경우 적용됩니다. 이러한 속성을 설정하면 사용자와 클라이언트 소프트웨어가 보고서 서버에 인증하는 방식에 영향을 줍니다. 먼저 확장된 보호와 관련된 설명서를 읽은 후 ExtendedProtectionLevel을 `Allow` 또는 `Require`로 설정하는 것이 좋습니다.  
   
  ExtendedProtectionLevel을 설정하려면 사용자가 보고서 서버의 BUILTIN\Administrators 그룹의 멤버여야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **네임 스페이스:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [RSWindowsExtendedProtectionScenario 속성&#40;WMI MSReportServer_ConfigurationSetting&#41;](rswindowsextendedprotectionscenario-property.md)   
  [RSWindowsExtendedProtectionLevel 속성&#40;WMI MSReportServer_ConfigurationSetting&#41;](rswindowsextendedprotectionlevel-property.md)   
  [Reporting Services 인증에 대한 확장된 보호](../security/extended-protection-for-authentication-with-reporting-services.md)   
- [RSReportServer 구성 파일](../report-server/rsreportserver-config-configuration-file.md)  
+ [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)  
   
   

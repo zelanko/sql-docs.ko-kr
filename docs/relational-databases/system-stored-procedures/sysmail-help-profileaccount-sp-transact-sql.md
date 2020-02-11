@@ -1,5 +1,5 @@
 ---
-title: sysmail_help_profileaccount_sp (TRANSACT-SQL) | Microsoft Docs
+title: sysmail_help_profileaccount_sp (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c4f0ceb580ddc7538dd1ea98b9e08a82cd8d35b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68044490"
 ---
-# <a name="sysmailhelpprofileaccountsp-transact-sql"></a>sysmail_help_profileaccount_sp(Transact-SQL)
+# <a name="sysmail_help_profileaccount_sp-transact-sql"></a>sysmail_help_profileaccount_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   하나 이상의 데이터베이스 메일 프로필과 연관된 계정을 나열합니다.  
     
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,13 +43,13 @@ sysmail_help_profileaccount_sp
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @profile_id = ] profile_id` 나열할 프로필의 프로필 ID입니다. *profile_id* 됩니다 **int**, 기본값은 NULL입니다. 어느 *profile_id* 하거나 *profile_name* 지정 해야 합니다.  
+`[ @profile_id = ] profile_id`나열할 프로필의 프로필 ID입니다. *profile_id* 은 **int**이며 기본값은 NULL입니다. *Profile_id* 또는 *profile_name* 를 지정 해야 합니다.  
   
-`[ @profile_name = ] 'profile_name'` 나열할 프로필의 프로필 이름이입니다. *profile_name* 됩니다 **sysname**, 기본값은 NULL입니다. 어느 *profile_id* 하거나 *profile_name* 지정 해야 합니다.  
+`[ @profile_name = ] 'profile_name'`나열할 프로필의 프로필 이름입니다. *profile_name* 는 **sysname**이며 기본값은 NULL입니다. *Profile_id* 또는 *profile_name* 를 지정 해야 합니다.  
   
-`[ @account_id = ] account_id` 목록에 계정 ID입니다. *account_id* 됩니다 **int**, 기본값은 NULL입니다. 때 *account_id* 하 고 *account_name* 이 모두 null 인, 프로필의 모든 계정을 나열 합니다.  
+`[ @account_id = ] account_id`나열할 계정 ID입니다. *account_id* 은 **int**이며 기본값은 NULL입니다. *Account_id* 및 *account_name* 모두 NULL 이면 프로필의 모든 계정을 나열 합니다.  
   
-`[ @account_name = ] 'account_name'` 나열할 계정의 이름이입니다. *account_name* 됩니다 **sysname**, 기본값은 NULL입니다. 때 *account_id* 하 고 *account_name* 이 모두 null 인, 프로필의 모든 계정을 나열 합니다.  
+`[ @account_name = ] 'account_name'`나열할 계정의 이름입니다. *account_name* 는 **sysname**이며 기본값은 NULL입니다. *Account_id* 및 *account_name* 모두 NULL 이면 프로필의 모든 계정을 나열 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -59,7 +59,7 @@ sysmail_help_profileaccount_sp
   
 ||||  
 |-|-|-|  
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |**profile_id**|**int**|프로필의 ID입니다.|  
 |**profile_name**|**sysname**|프로필의 이름입니다.|  
 |**account_id**|**int**|계정의 ID입니다.|  
@@ -67,15 +67,15 @@ sysmail_help_profileaccount_sp
 |**sequence_number**|**int**|프로필 내 계정의 시퀀스 번호입니다.|  
   
 ## <a name="remarks"></a>설명  
- 없는 경우 *profile_id* 하거나 *profile_name* 을 지정 하면이 저장된 프로시저 인스턴스의 모든 프로필에 대 한 정보를 반환 합니다.  
+ *Profile_id* 또는 *profile_name* 지정 되지 않은 경우이 저장 프로시저는 인스턴스의 모든 프로필에 대 한 정보를 반환 합니다.  
   
- 저장된 프로시저 **sysmail_help_profileaccount_sp** 에 **msdb** 데이터베이스 및 소유 하는 **dbo** 스키마입니다. 현재 데이터베이스에는 없는 경우 세 부분으로 된 이름을 사용 하 여 프로시저를 실행 해야 합니다 **msdb**합니다.  
+ **Sysmail_help_profileaccount_sp** 저장 프로시저는 **msdb** 데이터베이스에 있으며 **dbo** 스키마가 소유 합니다. 현재 데이터베이스가 **msdb**가 아닌 경우 세 부분으로 된 이름을 사용 하 여 프로시저를 실행 해야 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 이 프로시저 기본의 멤버에 대 한 권한을 실행 합니다 **sysadmin** 고정된 서버 역할입니다.  
+ 이 프로시저에 대 한 실행 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
 ## <a name="examples"></a>예  
- **A. 이름별으로 특정 프로필에 대 한 계정 나열**  
+ **1. 이름별로 특정 프로필에 대한 계정 나열**  
   
  다음 예에서는 프로필 이름을 지정하여 `AdventureWorks Administrator` 프로필에 대한 정보를 보여 줍니다.  
   
@@ -93,7 +93,7 @@ profile_id  profile_name                 account_id  account_name         sequen
 131         AdventureWorks Administrator 198         Admin-BackupServer   2  
 ```  
   
- **B. 특정 프로필 ID 별로 프로필에 대 한 계정 나열**  
+ **2. 프로필 ID별로 특정 프로필에 대한 계정 나열**  
   
  다음 예에서는 프로필 ID를 지정하여 `AdventureWorks Administrator` 프로필에 대한 정보를 나열합니다.  
   
@@ -111,7 +111,7 @@ profile_id  profile_name                 account_id  account_name         sequen
 131         AdventureWorks Administrator 198         Admin-BackupServer   2  
 ```  
   
- **C. 모든 프로필에 대 한 계정 나열**  
+ **3. 모든 프로필에 대한 계정 나열**  
   
  다음 예에서는 인스턴스에 있는 모든 프로필에 대한 계정을 나열합니다.  
   
@@ -129,10 +129,10 @@ profile_id  profile_name                 account_id  account_name         sequen
 106         AdventureWorks Operator      210         Operator-MainServer  1  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 메일](../../relational-databases/database-mail/database-mail.md)   
  [데이터베이스 메일 계정 만들기](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [데이터베이스 메일 구성 개체](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [데이터베이스 메일 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 메일](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

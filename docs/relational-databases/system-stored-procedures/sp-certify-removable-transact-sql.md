@@ -1,5 +1,5 @@
 ---
-title: sp_certify_removable (TRANSACT-SQL) | Microsoft Docs
+title: sp_certify_removable (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c39665f54a915282a6c59fe7d57b24d0cde0a5e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68045933"
 ---
 # <a name="sp_certify_removable-transact-sql"></a>sp_certify_removable(Transact-SQL)
@@ -29,10 +29,10 @@ ms.locfileid: "68045933"
 
   이동식 미디어에 배포할 수 있도록 데이터베이스가 제대로 구성되었는지 확인하고 사용자에게 발생한 모든 문제를 보고합니다.  
   
-> **중요!!** [!INCLUDE[ssNoteDepFutureAvoid](../../t-sql/statements/create-database-sql-server-transact-sql.md) instead.  
+> **중요!!** [! 대신[ssnotedepfutureavoid&lt](../../t-sql/statements/create-database-sql-server-transact-sql.md) 를 포함 합니다.  
   
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,15 +43,15 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @dbname = ] 'dbname'` 데이터베이스를 확인 하도록 지정 합니다. *dbname* 됩니다 **sysname**합니다.  
+`[ @dbname = ] 'dbname'`확인할 데이터베이스를 지정 합니다. *dbname* 은 **sysname**입니다.  
   
-`[ @autofix = ] 'auto'` 시스템 관리자에 게 데이터베이스 및 모든 데이터베이스 개체의 소유권을 부여 하 고 사용자가 만든 데이터베이스 사용자 및 기본 권한이 아닌 권한을 삭제 합니다. *자동* 됩니다 **nvarchar(4)** , 기본값은 NULL입니다.  
+`[ @autofix = ] 'auto'`는 데이터베이스 및 모든 데이터베이스 개체의 소유권을 시스템 관리자에 게 제공 하 고 사용자가 만든 데이터베이스 사용자 및 기본 권한이 아닌 권한을 모두 삭제 합니다. *auto* 는 **nvarchar (4)** 이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
 ## <a name="remarks"></a>설명  
- 데이터베이스를 올바르게 구성한 경우 **sp_certify_removable** 다음 작업을 수행 합니다.  
+ 데이터베이스가 올바르게 구성 된 경우 **sp_certify_removable** 다음을 수행 합니다.  
   
 -   파일을 복사할 수 있도록 데이터베이스를 오프라인으로 설정합니다.  
   
@@ -59,9 +59,9 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
 -   데이터 파일 그룹을 읽기 전용으로 표시하여 해당 파일이 읽기 전용 미디어에만 복사되도록 합니다.  
   
- 시스템 관리자는 반드시 데이터베이스 및 모든 데이터베이스 개체의 소유자여야 합니다. 시스템 관리자가 실행 되는 모든 서버에 있는 알려진된 사용자 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 데이터베이스를 나중에 배포 하 고 설치 하는 경우를 예상할 수 있습니다.  
+ 시스템 관리자는 반드시 데이터베이스 및 모든 데이터베이스 개체의 소유자여야 합니다. 시스템 관리자는를 실행 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하는 모든 서버에 존재 하며 나중에 데이터베이스를 배포 하 고 설치할 때 존재 하는 것으로 예상할 수 있는 알려진 사용자입니다.  
   
- 실행 하는 경우 **sp_certify_removable** 없이 **자동** 값과 다음 조건 중 하나에 대 한 정보를 반환 합니다.  
+ **Auto** 값 없이 **sp_certify_removable** 를 실행 하는 경우 다음 조건에 대 한 정보를 반환 합니다.  
   
 -   시스템 관리자가 데이터베이스 소유자가 아닌 경우  
   
@@ -73,14 +73,14 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
  이러한 경우 다음과 같은 방법으로 문제를 해결할 수 있습니다.  
   
--   사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도구 및 프로시저를 실행 한 다음 **sp_certify_removable** 다시 합니다.  
+-   도구 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 절차를 사용 하 고 **sp_certify_removable** 를 다시 실행 합니다.  
   
--   실행 하기만 **sp_certify_removable** 사용 하 여 합니다 **자동** 값입니다.  
+-   **Auto** 값을 사용 하 여 **sp_certify_removable** 를 실행 하면 됩니다.  
   
  이 저장 프로시저는 사용자 및 사용자 권한에 관한 것만 확인합니다. 데이터베이스에 그룹을 추가하고 이 그룹에 권한을 부여할 수 있습니다. 자세한 내용은 [GRANT&#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)과 함께 작동하도록 Service Broker를 구성하는 방법에 대한 정보를 제공합니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 실행 권한은의 멤버로 제한 합니다 **sysadmin** 고정된 서버 역할입니다.  
+ Execute 권한은 **sysadmin** 고정 서버 역할의 멤버로 제한 됩니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `inventory` 데이터베이스를 제거할 준비가 되었음을 증명합니다.  
@@ -89,11 +89,11 @@ sp_certify_removable [ @dbname= ] 'dbname'
 EXEC sp_certify_removable inventory, AUTO;  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [데이터베이스 분리 및 연결&#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [sp_create_removable &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-removable-transact-sql.md)   
- [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [sp_dbremove &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [데이터베이스 분리 및 연결 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
+ [Transact-sql&#41;sp_create_removable &#40;](../../relational-databases/system-stored-procedures/sp-create-removable-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [Transact-sql&#41;sp_dbremove &#40;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

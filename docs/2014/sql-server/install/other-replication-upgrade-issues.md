@@ -18,22 +18,24 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dd8ae8bb1080d92bb6a4ad1ba982f1dffc6d51f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093640"
 ---
 # <a name="other-replication-upgrade-issues"></a>기타 복제 업그레이드 문제
   이 항목에서는 업그레이드 관리자가 보고하지 않는 몇 가지 업그레이드 문제에 대해 설명합니다.  
   
 ## <a name="versions-supported"></a>지원되는 버전  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 복제된 데이터베이스를 업그레이드할 수 있도록 지원합니다. 따라서 노드 업그레이드 중에 다른 노드의 작업을 중지할 필요가 없으며 한 토폴로지 내에서 지원되는 버전과 관련된 규칙만 잘 지키면 됩니다.  
+ 
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 복제된 데이터베이스를 업그레이드할 수 있도록 지원합니다. 따라서 노드 업그레이드 중에 다른 노드의 작업을 중지할 필요가 없으며 한 토폴로지 내에서 지원되는 버전과 관련된 규칙만 잘 지키면 됩니다.  
   
  서로 다른 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 간에 복제하는 경우 가장 오래된 버전의 기능으로 제한되는 경우가 많습니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디스크상 스토리지 형식은 64비트 및 32비트 환경에서 동일하므로 복제 토폴로지가 32비트 환경에서 실행되는 서버 인스턴스와 64비트 환경에서 실행되는 서버 인스턴스를 결합할 수 있습니다.  
+>  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디스크상 스토리지 형식은 64비트 및 32비트 환경에서 동일하므로 복제 토폴로지가 32비트 환경에서 실행되는 서버 인스턴스와 64비트 환경에서 실행되는 서버 인스턴스를 결합할 수 있습니다.  
   
  모든 유형의 복제에서 배포자 버전은 게시자 버전과 같거나 그 이후 버전이어야 합니다. 배포자는 게시자와 동일한 인스턴스로 실행되는 경우가 많습니다.  
   
@@ -49,11 +51,12 @@ ms.locfileid: "66093640"
   
 -   모든 ActiveX 컨트롤은 스크립팅 및 초기화에 안전하지 않은 것으로 표시됩니다.  
   
--   스냅샷 ActiveX 컨트롤은 삭제되었습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하거나 복제 저장 프로시저를 사용하여 프로그래밍 방식으로 스냅숏을 만들고 관리할 수 있습니다. 자세한 내용은 항목을 참조 하세요. "방법: 만들기 및 Apply the Initial Snapshot ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) "및" 방법: 초기 스냅숏 (복제 TRANSACT-SQL 프로그래밍) 만들기 "에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인입니다.  
+-   스냅샷 ActiveX 컨트롤은 삭제되었습니다. 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하거나 복제 저장 프로시저를 사용하여 프로그래밍 방식으로 스냅샷을 만들고 관리할 수 있습니다. 자세한 내용은 온라인 설명서의[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "방법: 초기 스냅숏 만들기 및 적용 ()" 및 "방법: 초기 스냅숏 만들기 (복제 transact-sql 프로그래밍)" 항목을 참조 하십시오.  
   
 -   분산 ActiveX 컨트롤 및 병합 ActiveX 컨트롤은 이후에는 지원되지 않습니다. RMO(복제 관리 개체)를 사용한 관리 코드 애플리케이션에 비슷한 기능이 제공됩니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 "구독 동기화(RMO 프로그래밍)"를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [복제 업그레이드 문제](../../../2014/sql-server/install/replication-upgrade-issues.md)  
   
   
