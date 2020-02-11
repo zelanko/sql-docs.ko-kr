@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2808fd4678da29c037592db4eb23c318259f8390
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106194"
 ---
 # <a name="constants-in-expressions-report-builder-and-ssrs"></a>식의 상수(보고서 작성기 및 SSRS)
@@ -26,7 +26,7 @@ ms.locfileid: "66106194"
 ## <a name="literal-text"></a>리터럴 텍스트  
  식에서 리터럴 텍스트는 큰따옴표로 묶인 텍스트입니다. 텍스트가 식의 일부가 아닌 경우에는 큰따옴표를 사용하지 않고 입력란에 직접 입력할 수도 있습니다. 입력란 값이 등호(=)로 시작하지 않으면 해당 텍스트는 리터럴 텍스트로 처리됩니다. 다음 표에서는 식에 사용되는 몇 가지 리터럴 텍스트의 예를 보여 줍니다.  
   
-|상수|표시 텍스트|식 텍스트|  
+|지속적임|표시 텍스트|식 텍스트|  
 |--------------|------------------|---------------------|  
 |Report run at:|<\<Expr>>|`="Report run at: " & Globals!ExecutionTime`|  
 |Adventure Works Cycles|Adventure Works Cycles|Adventure Works Cycles|  
@@ -48,11 +48,11 @@ ms.locfileid: "66106194"
 ## <a name="clr-constants"></a>CLR 상수  
  식에서 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR(공용 언어 런타임)에 정의된 상수를 사용할 수 있습니다. 다음 표에서는 시스템 정의 색의 예를 보여 줍니다.  
   
-|상수|Description|  
+|지속적임|Description|  
 |--------------|-----------------|  
 |MistyRose|배경색을 기반으로 하는 보고서 속성에 대한 식을 만드는 경우 이름으로 색을 지정할 수 있습니다. 유효한 이름은 **식** 대화 상자에 나열됩니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [식 대화 상자](../expression-dialog-box.md)   
  [식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   

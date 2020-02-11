@@ -16,27 +16,27 @@ ms.assetid: 81272ae3-2165-4f4e-adfe-9ede0368cb17
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f8926e932317096cb3891cc8c480164268751cea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917007"
 ---
 # <a name="searchdirectionenum"></a>SearchDirectionEnum
-내에서 레코드 검색 방향을 지정 하는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
+레코드 [집합](../../../ado/reference/ado-api/recordset-object-ado.md)내에서 레코드 검색 방향을 지정 합니다.  
   
-|상수|값|설명|  
+|지속적임|값|Description|  
 |--------------|-----------|-----------------|  
-|**adSearchBackward**|-1|시작 부분에서 중지, 검색 된 **레코드 집합**합니다. 일치 하는 항목이 없으면 레코드 포인터의 위치가 [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)합니다.|  
-|**adSearchForward**|1|끝날 때 중지, 검색에서 전달 된 **레코드 집합**합니다. 일치 하는 항목이 없으면 레코드 포인터의 위치가 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)합니다.|  
+|**adSearchBackward**|-1|뒤로 검색 하 여 **레코드 집합**의 시작 부분에서 중지 합니다. 일치 항목을 찾을 수 없는 경우 레코드 포인터는 [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)에 배치 됩니다.|  
+|**adSearchForward**|1|앞으로 검색 하 여 **레코드 집합**의 끝에서 중지 합니다. 일치 하는 항목이 없으면 레코드 포인터가 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)에 배치 됩니다.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC 해당  
+## <a name="adowfc-equivalent"></a>ADO/WFC 동급  
  Package: **com.ms.wfc.data**  
   
-|상수|  
+|지속적임|  
 |--------------|  
-|AdoEnums.SearchDirection.BACKWARD|  
-|AdoEnums.SearchDirection.FORWARD|  
+|AdoEnums|  
+|AdoEnums|  
   
 ## <a name="applies-to"></a>적용 대상  
  [Find 메서드(ADO)](../../../ado/reference/ado-api/find-method-ado.md)

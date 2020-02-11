@@ -13,29 +13,29 @@ ms.assetid: ff40c9c0-b847-4426-a099-1bff47e6e872
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5962882de08712dcff75790de7c58d69f965a3bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086379"
 ---
 # <a name="sqlgetdata-cursor-library"></a>SQLGetData(커서 라이브러리)
 > [!IMPORTANT]  
->  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는이 기능을 사용 하지 말고 현재이 기능을 사용 하는 응용 프로그램은 수정 합니다. 드라이버의 커서 기능을 사용 하는 것이 좋습니다.  
+>  이 기능은 이후 버전의 Windows에서 제거 될 예정입니다. 새 개발 작업에서는이 기능을 사용 하지 않도록 하 고 현재이 기능을 사용 하는 응용 프로그램은 수정 하십시오. 드라이버의 커서 기능을 사용 하는 것이 좋습니다.  
   
- 이 항목에서는의 사용을 설명 합니다 **SQLGetData** 커서 라이브러리의 함수입니다. 에 대 한 일반 정보에 대 한 **SQLGetData**를 참조 하십시오 [SQLGetData 함수](../../../odbc/reference/syntax/sqlgetdata-function.md)합니다.  
+ 이 항목에서는 커서 라이브러리에서 **SQLGetData** 함수를 사용 하는 방법을 설명 합니다. **Sqlgetdata**에 대 한 일반 정보는 [sqlgetdata 함수](../../../odbc/reference/syntax/sqlgetdata-function.md)를 참조 하세요.  
   
- 커서 라이브러리 구현 **SQLGetData** 첫 번째 구성 하 여를 **선택** 문을 사용 하 여는 **여기서** 각 범위에 대 한 해당 캐시에 저장 된 값을 열거 하는 절 현재 행의 열입니다. 그런 다음 실행 합니다 **선택** 행과 호출을 다시 선택 문을 **SQLGetData** (캐시) 대신 데이터 원본에서 데이터를 검색 하도록 드라이버에.  
+ 커서 라이브러리는 현재 행의 각 바인딩된 열에 대해 해당 캐시에 저장 된 값을 열거 하는 **where** 절을 사용 하 여 **SELECT** 문을 먼저 생성 함으로써 **SQLGetData** 를 구현 합니다. 그런 다음 **SELECT** 문을 실행 하 여 행을 다시 선택 하 고 드라이버의 **SQLGetData** 를 호출 하 여 캐시와는 반대로 데이터 원본에서 데이터를 검색 합니다.  
   
 > [!CAUTION]  
->  합니다 **여기서** 절 현재 행을 식별 하려면 커서 라이브러리에 의해 생성 된 모든 행을 식별 하 고, 다른 행을 식별 또는 둘 이상의 행을 식별 하지 못할 수 있습니다. 자세한 내용은 [검색 문을 생성](../../../odbc/reference/appendixes/constructing-searched-statements.md)합니다.  
+>  현재 행을 식별 하기 위해 커서 라이브러리로 생성 된 **where** 절은 행을 식별 하거나 다른 행을 식별 하거나 둘 이상의 행을 식별 하는 데 실패할 수 있습니다. 자세한 내용은 [검색 문 생성](../../../odbc/reference/appendixes/constructing-searched-statements.md)을 참조 하세요.  
   
- SQL_ATTR_USE_BOOKMARKS 문 특성 SQL_UB_VARIABLE로 설정 된 경우 **SQLGetData** 열 책갈피 데이터를 반환 하는 0에서 호출할 수 있습니다.  
+ SQL_ATTR_USE_BOOKMARKS statement 특성이 SQL_UB_VARIABLE로 설정 된 경우 열 0에서 **SQLGetData** 를 호출 하 여 책갈피 데이터를 반환할 수 있습니다.  
   
- 에 대 한 호출 **SQLGetData** 다음과 같은 제한 사항이 적용 됩니다.  
+ **SQLGetData** 호출에는 다음과 같은 제한 사항이 적용 됩니다.  
   
--   **SQLGetData** 정방향 전용 커서에 대해 호출할 수 없습니다.  
+-   앞 으로만 이동 가능한 커서에 대해서는 **SQLGetData** 를 호출할 수 없습니다.  
   
--   **SQLGetData** 다음 조건에 해당 하는 경우에 호출할 수 있습니다:는 **선택** 문이 결과 집합을 생성, **선택** 문에 조인이 포함 되지 않았습니다를  **UNION** 절 또는 **GROUP BY** 절과 select 목록의 식이나 별칭을 사용 하는 모든 열이 사용 하 여 바인딩되지 되었습니다 **SQLBindCol**합니다.  
+-   **SQLGetData** 는 다음 조건이 충족 될 경우에만 호출할 수 있습니다. **SELECT** 문에서 결과 집합을 생성 했습니다. **SELECT** 문에 Join, **UNION** 절 또는 **GROUP BY** 절이 포함 되어 있지 않습니다. select 목록에서 별칭이 나 식을 사용한 모든 열은 **SQLBindCol**와 바인딩되지 않았습니다.  
   
--   커서 라이브러리는 나머지 결과 집합을 실행 하기 전에 인출 드라이버 하나의 활성 문만 지 원하는 경우는 **선택** 문 및 호출 **SQLGetData**합니다.
+-   드라이버가 하나의 활성 문만 지 원하는 경우 커서 라이브러리는 **SELECT** 문을 실행 하 고 **SQLGetData**를 호출 하기 전에 나머지 결과 집합을 인출 합니다.

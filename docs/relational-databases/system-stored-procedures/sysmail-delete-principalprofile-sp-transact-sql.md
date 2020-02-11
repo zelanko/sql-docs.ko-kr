@@ -1,5 +1,5 @@
 ---
-title: sysmail_delete_principalprofile_sp (TRANSACT-SQL) | Microsoft Docs
+title: sysmail_delete_principalprofile_sp (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 8fc14700-e17a-4073-9a96-7fc23e775c69
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 86f9566ce86423939aff22fc37331c5c9db89904
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67909216"
 ---
-# <a name="sysmaildeleteprincipalprofilesp-transact-sql"></a>sysmail_delete_principalprofile_sp(Transact-SQL)
+# <a name="sysmail_delete_principalprofile_sp-transact-sql"></a>sysmail_delete_principalprofile_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   퍼블릭 또는 프라이빗 데이터베이스 메일 프로필을 사용하는 데이터베이스 사용자 또는 역할의 사용 권한을 제거합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,29 +40,29 @@ sysmail_delete_principalprofile_sp  { [ @principal_id = ] principal_id | [ @prin
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @principal_id = ] principal_id` 데이터베이스 사용자 또는 역할의 id를 **msdb** 삭제할 연결에 대 한 데이터베이스입니다. *principal_id* 됩니다 **int**, 기본값은 NULL입니다. 공개 프로필을 개인 프로필로 되도록 보안 주체 ID를 제공 **0** 주체 이름이 나 **'public'** 합니다. 어느 *principal_id* 하거나 *principal_name* 지정 해야 합니다.  
+`[ @principal_id = ] principal_id`삭제할 연결의 **msdb** 데이터베이스에 있는 데이터베이스 사용자 또는 역할의 ID입니다. *principal_id* 은 **int**이며 기본값은 NULL입니다. 공개 프로필을 개인 프로필로 만들려면 보안 주체 ID **0** 또는 보안 주체 이름 **' public '** 을 제공 합니다. *Principal_id* 또는 *principal_name* 를 지정 해야 합니다.  
   
-`[ @principal_name = ] 'principal_name'` 데이터베이스 사용자 또는 역할의 이름인 합니다 **msdb** 삭제할 연결에 대 한 데이터베이스입니다. *principal_name* 됩니다 **sysname**, 기본값은 NULL입니다. 공개 프로필을 개인 프로필로 되도록 보안 주체 ID를 제공 **0** 주체 이름이 나 **'public'** 합니다. 어느 *principal_id* 하거나 *principal_name* 지정 해야 합니다.  
+`[ @principal_name = ] 'principal_name'`삭제할 연결의 **msdb** 데이터베이스에 있는 데이터베이스 사용자 또는 역할의 이름입니다. *principal_name* 는 **sysname**이며 기본값은 NULL입니다. 공개 프로필을 개인 프로필로 만들려면 보안 주체 ID **0** 또는 보안 주체 이름 **' public '** 을 제공 합니다. *Principal_id* 또는 *principal_name* 를 지정 해야 합니다.  
   
-`[ @profile_id = ] profile_id` 삭제할 연결에 대 한 프로필의 ID입니다. *profile_id* 됩니다 **int**, 기본값은 NULL입니다. 어느 *profile_id* 하거나 *profile_name* 지정 해야 합니다.  
+`[ @profile_id = ] profile_id`삭제할 연결에 대 한 프로필의 ID입니다. *profile_id* 은 **int**이며 기본값은 NULL입니다. *Profile_id* 또는 *profile_name* 를 지정 해야 합니다.  
   
-`[ @profile_name = ] 'profile_name'` 삭제할 연결에 대 한 프로필의 이름이입니다. *profile_name* 됩니다 **sysname**, 기본값은 NULL입니다. 어느 *profile_id* 하거나 *profile_name* 지정 해야 합니다.  
+`[ @profile_name = ] 'profile_name'`삭제할 연결에 대 한 프로필의 이름입니다. *profile_name* 는 **sysname**이며 기본값은 NULL입니다. *Profile_id* 또는 *profile_name* 를 지정 해야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
- 공개 프로필을 개인 프로필로 되도록 제공 **'public'** 주체 이름 또는 **0** 보안 주체 id에 대 한 합니다.  
+## <a name="remarks"></a>설명  
+ 공개 프로필을 개인 프로필로 만들려면 보안 주체 이름으로 **' public '** 을 입력 하거나 보안 주체 id로 **0** 을 입력 합니다.  
   
- 사용자의 기본 프라이빗 프로필이나 기본 퍼블릭 프로필에 대한 사용 권한을 제거할 때는 주의해야 합니다. 사용할 수 있으면 기본 프로필이 없을 **sp_send_dbmail** 인수로 프로필 이름이 필요 합니다. 따라서 기본 프로필을 제거 발생할 수 있습니다에 대 한 호출 **sp_send_dbmail** 실패 합니다. 자세한 내용은 [sp_send_dbmail &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)합니다.  
+ 사용자의 기본 프라이빗 프로필이나 기본 퍼블릭 프로필에 대한 사용 권한을 제거할 때는 주의해야 합니다. 기본 프로필을 사용할 수 없는 경우 **sp_send_dbmail** 는 프로필의 이름을 인수로 사용 해야 합니다. 따라서 기본 프로필을 제거 하면 **sp_send_dbmail** 호출이 실패할 수 있습니다. 자세한 내용은 [sp_send_dbmail &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)를 참조 하세요.  
   
- 저장된 프로시저 **sysmail_delete_principalprofile_sp** 에 **msdb** 데이터베이스 및 소유 하는 **dbo** 스키마입니다. 현재 데이터베이스에는 없는 경우 세 부분으로 된 이름을 사용 하 여 프로시저를 실행 해야 합니다 **msdb**합니다.  
+ **Sysmail_delete_principalprofile_sp** 저장 프로시저는 **msdb** 데이터베이스에 있으며 **dbo** 스키마가 소유 합니다. 현재 데이터베이스가 **msdb**가 아닌 경우 세 부분으로 된 이름을 사용 하 여 프로시저를 실행 해야 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 이 프로시저 기본의 멤버에 대 한 권한을 실행 합니다 **sysadmin** 고정된 서버 역할입니다.  
+ 이 프로시저에 대 한 실행 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
 ## <a name="examples"></a>예  
- 다음 예제에서는 프로필 간의 연결을 삭제 **AdventureWorks Administrator** 로그인 **ApplicationUser** 에 **msdb** 데이터베이스입니다.  
+ 다음 예에서는 **msdb** 데이터베이스에서 프로필 **AdventureWorks 관리자** 와 로그인 **applicationuser** 간의 연결을 삭제 하는 방법을 보여 줍니다.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_delete_principalprofile_sp  
@@ -70,9 +70,9 @@ EXECUTE msdb.dbo.sysmail_delete_principalprofile_sp
     @profile_name = 'AdventureWorks Administrator' ;  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 메일](../../relational-databases/database-mail/database-mail.md)   
  [데이터베이스 메일 구성 개체](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [데이터베이스 메일 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 메일](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

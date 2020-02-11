@@ -1,5 +1,5 @@
 ---
-title: sp_db_selective_xml_index (TRANSACT-SQL) | Microsoft Docs
+title: sp_db_selective_xml_index (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,21 +18,22 @@ ms.assetid: 017301a2-4a23-4e68-82af-134f3d4892b3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1648cca415f37f9c54f13857d25af90a65372c04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108228"
 ---
-# <a name="spdbselectivexmlindex-transact-sql"></a>sp_db_selective_xml_index(Transact-SQL)
+# <a name="sp_db_selective_xml_index-transact-sql"></a>sp_db_selective_xml_index(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 선택적 XML 인덱스 기능을 설정 및 해제합니다. 매개 변수 없이 호출할 경우, 특정 데이터베이스에서 선택적 XML 인덱스가 설정되어 있으면 저장 프로시저에서 1을 반환합니다.  
   
 > [!NOTE]  
->  이 저장된 프로시저를 사용 하 여 선택적 XML 인덱스를 해제 하려면 데이터베이스 해야 단순 복구 모드로 설정 하 여 사용 하는 [ALTER DATABASE SET 옵션 &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md) 명령입니다.  
+>  이 저장 프로시저를 사용 하 여 선택적 XML 인덱스를 사용 하지 않도록 설정 하려면 [transact-sql&#41;명령 &#40;ALTER DATABASE SET 옵션](../../t-sql/statements/alter-database-transact-sql-set-options.md) 을 사용 하 여 데이터베이스를 단순 복구 모드로 설정 해야 합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,9 +44,9 @@ ms.locfileid: "68108228"
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @ db_name = ] 'db_name'` 선택적 XML 인덱스를 사용할지 여부를 데이터베이스의 이름입니다. 하는 경우 *db_name* 가 NULL 이면 현재 데이터베이스로 간주 됩니다.  
+`[ @ db_name = ] 'db_name'`선택적 XML 인덱스를 사용 하거나 사용 하지 않도록 설정할 데이터베이스의 이름입니다. *DB_NAME* NULL 인 경우 현재 데이터베이스를 가정 합니다.  
   
-`[ @action = ] 'action'` 인덱스를 사용할지 여부를 결정 합니다. 다른 값 'on', 'true', 'off' 또는 'f a l' 전달 됩니다 점을 제외 하 고, 오류가 발생 합니다.  
+`[ @action = ] 'action'`인덱스를 사용 하거나 사용 하지 않을 지 여부를 결정 합니다. ' On ', ' true ', ' off ' 또는 ' f a l s e '를 제외한 다른 값이 전달 되 면 오류가 발생 합니다.  
   
 ```  
   
@@ -53,7 +54,7 @@ Allowed values: 'on', 'off', 'true', 'false'
 ```  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- **1** 특정 데이터베이스에서 선택적 XML 인덱스를 사용 하는 경우.  
+ 특정 데이터베이스에서 선택적 XML 인덱스를 사용 하는 경우 **1** 입니다.  
   
 ## <a name="examples"></a>예  
   
@@ -76,7 +77,7 @@ EXECUTE sys.sp_db_selective_xml_index
 GO  
 ```  
   
-### <a name="b-disable-selective-xml-index-functionality"></a>2\. 선택적 XML 인덱스 기능 해제  
+### <a name="b-disable-selective-xml-index-functionality"></a>B. 선택적 XML 인덱스 기능 해제  
  다음 예에서는 현재 데이터베이스에서 선택적 XML 인덱스를 해제합니다.  
   
 ```  
@@ -95,7 +96,7 @@ EXECUTE sys.sp_db_selective_xml_index
 GO  
 ```  
   
-### <a name="c-detect-if-selective-xml-index-is-enabled"></a>3\. 선택적 XML 인덱스가 설정되어 있는지 확인  
+### <a name="c-detect-if-selective-xml-index-is-enabled"></a>C. 선택적 XML 인덱스가 설정되어 있는지 확인  
  다음 예에서는 선택적 XML 인덱스가 설정되어 있는지 확인합니다. 선택적 XML 인덱스가 설정되어 있으면 1이 반환됩니다.  
   
 ```  
@@ -103,7 +104,7 @@ EXECUTE sys.sp_db_selective_xml_index;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SXI&#40;선택적 XML 인덱스&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)  
   
   

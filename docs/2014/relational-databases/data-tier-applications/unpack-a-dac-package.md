@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14e699be884ff24136b8bae1a744593be86c42ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918006"
 ---
 # <a name="unpack-a-dac-package"></a>DAC 패키지 압축 풀기
@@ -32,7 +32,7 @@ ms.locfileid: "62918006"
 ##  <a name="Security"></a> 보안  
  출처를 알 수 없거나 신뢰할 수 없는 DAC 패키지는 배포하지 않는 것이 좋습니다. 이러한 DAC에 포함된 악성 코드가 의도하지 않은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 실행하거나 스키마를 수정하여 오류가 발생할 수 있습니다. 출처를 알 수 없거나 신뢰할 수 없는 DAC를 사용하려면 먼저 격리된 테스트 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 배포하고 DAC 압축을 푼 다음 저장 프로시저나 다른 사용자 정의 코드와 같은 코드를 검사하십시오.  
   
-##  <a name="UnpackDACDial"></a> 데이터 계층 응용 프로그램 압축 풀기 대화 상자  
+##  <a name="UnpackDACDial"></a> 데이터 계층 애플리케이션 압축 풀기 대화 상자  
  **DAC 패키지 파일을 압축을 풀려면**  
   
 -   **Windows 탐색기**에서 DAC 패키지(.dacpac) 파일의 위치로 이동합니다.  
@@ -82,9 +82,9 @@ ms.locfileid: "62918006"
   
  자세한 내용은 [Validate a DAC Package](validate-a-dac-package.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [데이터 계층 응용 프로그램](data-tier-applications.md)   
- [데이터 계층 응용 프로그램 배포](deploy-a-data-tier-application.md)   
- [데이터 계층 응용 프로그램 업그레이드](upgrade-a-data-tier-application.md)  
+## <a name="see-also"></a>참고 항목  
+ [데이터 계층 애플리케이션](data-tier-applications.md)   
+ [데이터 계층 애플리케이션 배포](deploy-a-data-tier-application.md)   
+ [데이터 계층 애플리케이션 업그레이드](upgrade-a-data-tier-application.md)  
   
   
