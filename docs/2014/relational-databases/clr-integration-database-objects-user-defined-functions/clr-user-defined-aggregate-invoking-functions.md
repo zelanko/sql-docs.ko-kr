@@ -1,5 +1,5 @@
 ---
-title: CLR 사용자 정의 집계 함수를 호출 합니다. | Microsoft Docs
+title: CLR 사용자 정의 집계 함수 호출 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,26 +19,27 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8f70a2df2fd824d8a0021a0985d6f75e79efce48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919601"
 ---
 # <a name="invoking-clr-user-defined-aggregate-functions"></a>CLR 사용자 정의 집계 함수 호출
+  
   [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문에서 시스템 집계 함수에 적용되는 모든 규칙을 따르는 CLR(공용 언어 런타임) 사용자 정의 집계를 호출할 수 있습니다.  
   
  다음 추가 규칙이 적용됩니다.  
   
 -   현재 사용자에게 사용자 정의 집계에 대한 `EXECUTE` 권한이 있어야 합니다.  
   
--   형식의 두 부분으로 된 이름을 사용 하 여 사용자 정의 집계를 호출 해야 *schema_name.udagg_name*합니다.  
+-   사용자 정의 집계는 schema_name 형식의 두 부분으로 된 이름을 사용 하 여 호출 해야 합니다 *. udagg_name*.  
   
--   사용자 정의 집계의 인수 형식과 일치 하거나 암시적으로 변환할 수 해야 합니다 *input_type* 에 정의 된 집계의는 `CREATE AGGREGATE` 문입니다.  
+-   사용자 정의 집계의 인수 형식은 `CREATE AGGREGATE` 문에 정의 된 대로 집계의 *input_type* 일치 하거나 암시적으로 변환 될 수 있어야 합니다.  
   
--   사용자 정의 집계의 반환 형식이 일치 해야 합니다 *return_type* 에 `CREATE AGGREGATE` 문.  
+-   사용자 정의 집계의 반환 형식은 `CREATE AGGREGATE` 문의 *return_type* 와 일치 해야 합니다.  
   
-## <a name="example-1"></a>예제 1  
+## <a name="example-1"></a>예 1  
  테이블의 열에서 가져온 문자열 값 집합을 연결하는 사용자 정의 집계 함수의 예는 다음과 같습니다.  
   
  [C#]  
@@ -196,7 +197,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- 에 코드를 컴파일하고 나면 **MyAgg.dll**에서 집계를 등록할 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음과 같습니다.  
+ 코드를 **Myagg .dll**로 컴파일하면에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음과 같이 집계를 등록할 수 있습니다.  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  
@@ -208,7 +209,8 @@ EXTERNAL NAME MyAgg.Concatenate;
 > [!NOTE]  
 >  /clr:pure 컴파일러 옵션을 사용하여 컴파일된 Visual C++ 데이터베이스 개체(예: 스칼라 반환 함수)는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행할 수 없습니다.  
   
- 대부분의 집계와 마찬가지로, 많은 논리가 `Accumulate` 메서드에 있습니다. 여기서 `Accumulate` 메서드에 매개 변수로 전달되는 문자열이 `StringBuilder` 메서드에서 초기화된 `Init` 개체에 추가됩니다. `Accumulate` 메서드가 처음으로 호출된 것이 아닐 경우 전달된 문자열을 추가하기 전에 `StringBuilder`에 쉼표도 추가됩니다. 계산 태스크를 마칠 때 `Terminate` 메서드가 호출되고 `StringBuilder`가 문자열로 반환됩니다.  
+ 대부분의 집계와 마찬가지로, 많은 논리가 `Accumulate` 메서드에 있습니다. 여기서 `Accumulate` 메서드에 매개 변수로 전달되는 문자열이 `StringBuilder` 메서드에서 초기화된 `Init` 개체에 추가됩니다. 
+  `Accumulate` 메서드가 처음으로 호출된 것이 아닐 경우 전달된 문자열을 추가하기 전에 `StringBuilder`에 쉼표도 추가됩니다. 계산 태스크를 마칠 때 `Terminate` 메서드가 호출되고 `StringBuilder`가 문자열로 반환됩니다.  
   
  예를 들어 다음 스키마가 있는 테이블을 고려해 보십시오.  
   
@@ -441,7 +443,7 @@ SELECT dbo.WeightedAvg(ItemValue, ItemWeight) FROM @myTable;
 go  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [CLR 사용자 정의 집계](clr-user-defined-aggregates.md)  
   
   

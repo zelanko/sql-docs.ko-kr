@@ -19,13 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 59bfe26d20ed244c6011a6f4d1f37deccf8607c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63137286"
 ---
 # <a name="serversettingsgeneralflag-class"></a>ServerSettingsGeneralFlag 클래스
+  
   [ServerSettingsGeneralFlag 클래스](serversettingsgeneralflag-class.md) 는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스의 일반 플래그 설정을 나타냅니다.  
   
  이 클래스를 사용하여 다음을 수행할 수 있습니다.  
@@ -34,7 +35,7 @@ ms.locfileid: "63137286"
   
 -   플래그 값을 보고 수정합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [서버 네트워크 프로토콜 및 네트워크 라이브러리 구성](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

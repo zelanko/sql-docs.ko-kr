@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e4e23849b50e8cfa0a0e8d3ef6def4fbd159381c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770855"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>SAP BW 대상 편집기(연결 관리자 페이지)
@@ -33,7 +33,7 @@ ms.locfileid: "62770855"
   
 3.  **SAP BW 대상 편집기**에서 **연결 관리자** 를 클릭하여 편집기의 **연결 관리자** 페이지를 엽니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
   
 > [!NOTE]  
 >  대상을 구성하는 데 필요한 값 중 모르는 것이 있으면 SAP 관리자에게 문의하십시오.  
@@ -59,7 +59,7 @@ ms.locfileid: "62770855"
  **형식**  
  InfoSource의 유형을 식별하는 단일 문자를 입력합니다. 다음 표에서는 허용 가능한 단일 문자 값을 나열합니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**D**|트랜잭션 데이터|  
 |**M**|마스터 데이터|  
@@ -109,7 +109,7 @@ ms.locfileid: "62770855"
 |**InfoSource**|**InfoSource 만들기** 대화 상자를 사용한 다음 **트랜잭션 데이터용 InfoSource 만들기** 또는 **마스터 데이터용 InfoSource 만들기** 대화 상자를 사용하여 새 InfoSource를 만듭니다. 이러한 대화 상자에 대한 자세한 내용은 [Create InfoSource](create-infosource.md), [Create InfoSource for Transaction Data](create-infosource-for-transaction-data.md) 및 [Create InfoSource for Master Data](create-infosource-for-master-data.md)를 참조하십시오.|  
 |**InfoPackage**|**InfoPackage 만들기** 대화 상자를 사용하여 새 InfoPackage를 만듭니다. 이 대화 상자에 대한 자세한 내용은 [Create InfoPackage](create-infopackage.md)을 참조하십시오.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SAP BW 대상 편집기&#40;매핑 페이지&#41;](sap-bw-destination-editor-mappings-page.md)   
  [SAP BW 대상 편집기&#40;오류 출력 페이지&#41;](sap-bw-destination-editor-error-output-page.md)   
  [SAP BW 대상 편집기&#40;고급 페이지&#41;](sap-bw-destination-editor-advanced-page.md)   
