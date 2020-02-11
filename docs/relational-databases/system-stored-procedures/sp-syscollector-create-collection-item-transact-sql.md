@@ -1,5 +1,5 @@
 ---
-title: sp_syscollector_create_collection_item (TRANSACT-SQL) | Microsoft Docs
+title: sp_syscollector_create_collection_item (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,18 +19,18 @@ ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7ba3753a18d8e79848b0674e4738f2d2b811143e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68032671"
 ---
-# <a name="spsyscollectorcreatecollectionitem-transact-sql"></a>sp_syscollector_create_collection_item(Transact-SQL)
+# <a name="sp_syscollector_create_collection_item-transact-sql"></a>sp_syscollector_create_collection_item(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   사용자 정의 컬렉션 집합에 컬렉션 항목을 만듭니다. 컬렉션 항목은 수집할 데이터와 데이터를 수집할 빈도를 정의합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,26 +47,26 @@ sp_syscollector_create_collection_item
   
 ## <a name="arguments"></a>인수  
  [ @collection_set_id = ] *collection_set_id*  
- 컬렉션 집합의 고유한 로컬 식별자입니다. *collection_set_id* 됩니다 **int**합니다.  
+ 컬렉션 집합의 고유한 로컬 식별자입니다. *collection_set_id* 은 **int**입니다.  
   
  [ @collector_type_uid = ] '*collector_type_uid*'  
- 이 항목에 사용할 수집기 형식을 식별 하는 guid *collector_type_uid* 됩니다 **uniqueidentifier** 이며 기본값은 없습니다... 수집기 유형의 목록을 보려면 syscollector_collector_types 시스템 뷰를 쿼리합니다.  
+ 이 항목에 사용할 수집기 유형을 식별 하는 GUID 이며 기본값은 없는 **uniqueidentifier** *collector_type_uid* 입니다. 수집기 유형의 목록을 보려면 syscollector_collector_types 시스템 뷰를 쿼리합니다.  
   
- [ @name = ] '*name*'  
- 컬렉션 항목의 이름입니다. *이름을* 됩니다 **sysname** 이며 빈 문자열 이거나 NULL 일 수 없습니다.  
+ [ @name = ] '*이름*'  
+ 컬렉션 항목의 이름입니다. *name* 은 **sysname** 이며 빈 문자열 또는 NULL 일 수 없습니다.  
   
- *이름* 고유 해야 합니다. 현재 컬렉션 항목 이름의 목록을 보려면 syscollector_collection_items 시스템 뷰를 쿼리합니다.  
+ *이름은* 고유 해야 합니다. 현재 컬렉션 항목 이름의 목록을 보려면 syscollector_collection_items 시스템 뷰를 쿼리합니다.  
   
- [ @frequency = ] *frequency*  
- 이 컬렉션 항목에서 데이터를 수집하는 빈도(초)를 지정하는 데 사용됩니다. *빈도* 됩니다 **int**, 기본값은 5입니다. 지정할 수 있는 최소값은 5초입니다.  
+ [ @frequency = ] *빈도*  
+ 이 컬렉션 항목에서 데이터를 수집하는 빈도(초)를 지정하는 데 사용됩니다. *frequency* 는 **int**이며 기본값은 5입니다. 지정할 수 있는 최소값은 5초입니다.  
   
- 컬렉션 집합이 캐시되지 않은 모드로 설정된 경우 이 모드에서는 데이터 컬렉션과 업로드가 모두 컬렉션 집합에 지정된 일정에 따라 발생하므로 빈도가 무시됩니다. 컬렉션 집합의 컬렉션 모드를 보려면 쿼리를 [syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md) 시스템 뷰.  
+ 컬렉션 집합이 캐시되지 않은 모드로 설정된 경우 이 모드에서는 데이터 컬렉션과 업로드가 모두 컬렉션 집합에 지정된 일정에 따라 발생하므로 빈도가 무시됩니다. 컬렉션 집합의 컬렉션 모드를 보려면 [syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md) 시스템 뷰를 쿼리 합니다.  
   
  [ @parameters = ] '*parameters*'  
- 수집기 유형의 입력 매개 변수입니다. *매개 변수* 됩니다 **xml** 이며 기본값은 NULL입니다. 합니다 *매개 변수* 스키마는 수집기 유형의 매개 변수 스키마와 일치 해야 합니다.  
+ 수집기 유형의 입력 매개 변수입니다. *매개 변수* 는 **xml** 이며 기본값은 NULL입니다. *Parameters* 스키마는 수집기 유형의 매개 변수 스키마와 일치 해야 합니다.  
   
  [ @collection_item_id = ] *collection_item_id*  
- 컬렉션 집합 항목을 식별하는 고유한 식별자입니다. *collection_item_id* 됩니다 **int** 이며 OUTPUT을 가집니다.  
+ 컬렉션 집합 항목을 식별하는 고유한 식별자입니다. *collection_item_id* **int** 이며 출력이 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -80,7 +80,7 @@ sp_syscollector_create_collection_item
  이 프로시저를 실행하려면 dc_admin(EXECUTE 권한 있음) 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 `Generic T-SQL Query Collector Type` 컬렉션 형식 기반의 컬렉션 항목을 만들어서 `Simple collection set test 2`라는 컬렉션 집합에 추가합니다. 지정된 된 컬렉션을 만들려면, 실행 설정의 예제 B [sp_syscollector_create_collection_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)합니다.  
+ 다음 예에서는 `Generic T-SQL Query Collector Type` 컬렉션 형식 기반의 컬렉션 항목을 만들어서 `Simple collection set test 2`라는 컬렉션 집합에 추가합니다. 지정 된 컬렉션 집합을 만들려면 [sp_syscollector_create_collection_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)에서 예제 B를 실행 합니다.  
   
 ```  
 USE msdb;  
@@ -115,13 +115,13 @@ EXEC sp_syscollector_create_collection_item
     @collection_item_id = @collection_item_id OUTPUT;  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [데이터 컬렉션](../../relational-databases/data-collection/data-collection.md)   
- [sp_syscollector_update_collection_item &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-update-collection-item-transact-sql.md)   
- [sp_syscollector_delete_collection_item &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-delete-collection-item-transact-sql.md)   
- [syscollector_collector_types &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md)   
- [sp_syscollector_create_collection_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)   
- [syscollector_collection_items&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
+ [Transact-sql&#41;sp_syscollector_update_collection_item &#40;](../../relational-databases/system-stored-procedures/sp-syscollector-update-collection-item-transact-sql.md)   
+ [Transact-sql&#41;sp_syscollector_delete_collection_item &#40;](../../relational-databases/system-stored-procedures/sp-syscollector-delete-collection-item-transact-sql.md)   
+ [Transact-sql&#41;syscollector_collector_types &#40;](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md)   
+ [Transact-sql&#41;sp_syscollector_create_collection_set &#40;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)   
+ [Transact-sql&#41;syscollector_collection_items &#40;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
   
   
