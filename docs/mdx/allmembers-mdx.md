@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 770d66941af9b42be3c7b26f7e04a60d2a95cac2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017154"
 ---
 # <a name="allmembers-mdx"></a>AllMembers(MDX)
@@ -39,16 +39,16 @@ Level_Expression.AllMembers
  수준을 반환하는 유효한 MDX 식입니다.  
   
 ## <a name="remarks"></a>설명  
- 합니다 **AllMembers** 함수는 지정 된 계층 이나 수준의 계산된 멤버를 포함 하는 모든 멤버가 포함 된 집합을 반환 합니다. 합니다 **AllMembers** 함수는 지정 된 계층 이나 수준에 표시 가능한 멤버가 없는 경우에 계산된 멤버를 반환 합니다.  
+ **Allmembers** 함수는 지정 된 계층 또는 수준에서 계산 멤버를 포함 하는 모든 멤버를 포함 하는 집합을 반환 합니다. **Allmembers** 함수는 지정 된 계층 이나 수준에 표시 가능한 멤버가 없는 경우에도 계산 멤버를 반환 합니다.  
   
 > [!IMPORTANT]  
 >  차원에 표시 가능한 계층이 하나만 있는 경우 해당 차원 이름은 표시 가능한 유일한 계층으로 확인되므로 해당 계층을 차원 이름이나 계층 이름 중 하나로 참조할 수 있습니다. 예를 들어 `Measures.AllMembers`는 Measures 차원의 유일한 계층으로 확인되므로 유효한 MDX 식입니다.  
   
 > [!NOTE]  
->  합니다 **AllMembers** 함수는 의미 체계가 비슷합니다 합니다 [AddCalculatedMembers (MDX)](../mdx/addcalculatedmembers-mdx.md) 함수입니다.  
+>  **Allmembers** 함수는 [AddCalculatedMembers (MDX)](../mdx/addcalculatedmembers-mdx.md) 함수와 의미상 유사 합니다.  
   
 ## <a name="examples"></a>예  
- 모든 멤버를 반환 하는 다음 예제는 [`Date].[Calendar Year]` 열 축에 특성 계층에 여기에 계산된 멤버, 및의 모든 자식 항목 집합을 `[Product].[Model Name]` 특성 계층을 행 축에는 **Adventure Works** 큐브.  
+ 다음 예에서는 열 축에 있는 [`Date].[Calendar Year]` 특성 계층]의 모든 멤버를 반환 합니다. 여기에는 계산 멤버와 **어드벤처 Works** 큐브의 행 축 `[Product].[Model Name]` 에 있는 특성 계층의 모든 자식 항목이 포함 됩니다.  
   
 ```  
 SELECT  
@@ -58,7 +58,7 @@ FROM
    [Adventure Works]  
 ```  
   
- 다음 예제에서 모든 멤버를 반환 합니다 **측정값** 차원 열 축에이 모든 계산된 멤버, 및의 모든 자식 항목 집합을 포함 합니다 `[Product].[Model Name]` 특성 행 축에는 계층에서의 **Adventure Works** 큐브.  
+ 다음 예에서는 열 축에서 **측정값** 차원의 모든 멤버를 반환 합니다. 여기에는 모든 계산 멤버와 `[Product].[Model Name]` **어드벤처 Works** 큐브의 행 축에 있는 특성 계층의 모든 자식 집합이 포함 됩니다.  
   
 ```  
 SELECT  
@@ -68,9 +68,9 @@ FROM
     [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [AddCalculatedMembers&#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)   
- [Children&#40;MDX&#41;](../mdx/children-mdx.md)   
- [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)   
+ [MDX &#40;자식&#41;](../mdx/children-mdx.md)   
+ [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

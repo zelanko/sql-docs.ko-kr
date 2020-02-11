@@ -1,5 +1,5 @@
 ---
-title: Windows에서 ODBC | Microsoft Docs
+title: Windows의 ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.assetid: 98e61767-12ed-4aec-816e-639bd9c27b31
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5f06b10f1d69b7165e1193b6be78e5aa8d38b1b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68104800"
 ---
 # <a name="odbc-in-windows"></a>Windows의 ODBC
-다음 항목은 Microsoft® Windows NT/Windows 2000 및 Microsoft Windows® 95/98 운영 체제에서 실행 되는 ODBC에만 적용 합니다.  
+다음 항목은 Microsoft® Windows NT®/Windows 2000 및 Microsoft Windows® 95/98 운영 체제에서 실행 되는 ODBC에만 적용 됩니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   
@@ -26,6 +26,6 @@ ms.locfileid: "68104800"
   
 -   [헤더 파일](../../../odbc/reference/develop-app/header-files.md)  
   
--   [ODBC 함수에 전달 CString 개체](../../../odbc/reference/develop-app/cstring-class.md)  
+-   [ODBC 함수에 CString 개체 전달](../../../odbc/reference/develop-app/cstring-class.md)  
   
 -   [스레드 생성 및 종료](../../../odbc/reference/develop-app/creating-and-terminating-threads.md)

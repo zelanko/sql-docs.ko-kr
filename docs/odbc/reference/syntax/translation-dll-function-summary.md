@@ -14,16 +14,16 @@ ms.assetid: 76436acc-e6b8-42ec-a4bf-0edea65d0286
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c84528779cf39a08218bff9ba045f49db5f61f8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039359"
 ---
 # <a name="translation-dll-function-summary"></a>변환 DLL 함수 요약
-다음 표에서 변환 DLL 함수에 설명 합니다. 구문 및 각 함수에 대 한 의미 체계에 대 한 자세한 내용은 참조 하세요. [변환 DLL 함수 참조](../../../odbc/reference/syntax/translation-dll-api-reference.md)합니다.  
+다음 표에서는 변환 DLL 함수에 대해 설명 합니다. 각 함수의 구문 및 의미 체계에 대 한 자세한 내용은 [변환 DLL 함수 참조](../../../odbc/reference/syntax/translation-dll-api-reference.md)를 참조 하세요.  
   
-|태스크|함수 이름|용도|  
+|Task|함수 이름|목적|  
 |----------|-------------------|-------------|  
-|데이터 변환|[SQLDataSourceToDriver](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|드라이버는 데이터 소스에서 이동 하는 모든 데이터를 변환 합니다.|  
-||[SQLDriverToDataSource](../../../odbc/reference/syntax/sqldrivertodatasource-function.md)|데이터 원본 드라이버에서 이동 하는 모든 데이터를 변환 합니다.|
+|데이터 변환|[SQLDataSourceToDriver](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|데이터 원본에서 드라이버로 흐르는 모든 데이터를 변환 합니다.|  
+||[SQLDriverToDataSource](../../../odbc/reference/syntax/sqldrivertodatasource-function.md)|드라이버에서 데이터 원본으로 흐르는 모든 데이터를 변환 합니다.|
