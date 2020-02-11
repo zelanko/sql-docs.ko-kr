@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2565eb2be68c1e964b82d46d9aa8fc9f39a01f70
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74165019"
 ---
 # <a name="execute-scripts-during-synchronization-replication-transact-sql-programming"></a>동기화 중 스크립트 실행(복제 Transact-SQL 프로그래밍)
@@ -32,7 +32,7 @@ ms.locfileid: "74165019"
   
 2.  게시에 대한 스냅샷 에이전트가 액세스할 수 있는 위치에 스크립트 파일을 저장합니다.  
   
-3.  게시 데이터베이스의 게시자에서 [sp_addscriptexec&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql)를 실행합니다. **\@게시**, **\@scriptfile**에 대해 2 단계에서 만든 전체 UNC 경로를 사용 하는 스크립트 파일의 이름, **\@skiperror**에 대해 다음 값 중 하나를 지정 합니다.  
+3.  게시 데이터베이스의 게시자에서 [sp_addscriptexec&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql)를 실행합니다. ** \@게시**를 지정 하 고 ** \@scriptfile**에 대해 2 단계에서 만든 전체 UNC 경로를 사용 하는 스크립트 파일의 이름을, ** \@skiperror**에 대해 다음 값 중 하나를 지정 합니다.  
   
     -   **0** - 오류가 발생하면 스크립트 실행이 중지됩니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "74165019"
   
 4.  지정된 스크립트는 구독을 동기화하기 위해 다음에 에이전트가 실행될 때 각 구독자에서 실행됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터 동기화](synchronize-data.md)  
   
   

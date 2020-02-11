@@ -17,14 +17,14 @@ ms.assetid: b80bc5d5-78ca-4f75-956b-2ac658029cc7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 99a21cd5dd32af9e84877865cfe7c0fc92f6c087
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67967221"
 ---
 # <a name="append-method-adox-users"></a>Append 메서드(ADOX 사용자)
-새로 추가 [사용자](../../../ado/reference/adox-api/user-object-adox.md) 개체를 [사용자](../../../ado/reference/adox-api/users-collection-adox.md) 컬렉션입니다.  
+[사용자](../../../ado/reference/adox-api/users-collection-adox.md) 컬렉션에 새 [사용자](../../../ado/reference/adox-api/user-object-adox.md) 개체를 추가 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,28 +35,28 @@ Users.Append User[,Password]
   
 #### <a name="parameters"></a>매개 변수  
  *사용자*  
- **Variant** 포함 하는 값을 **사용자** 추가할 개체 또는 만들고 추가 하는 사용자의 이름입니다.  
+ 추가할 **사용자** 개체 또는 만들고 추가할 사용자의 이름을 포함 하는 **Variant** 값입니다.  
   
  *암호*  
- (선택 사항) A **문자열** 사용자 암호를 포함 하는 값입니다. *암호* 매개 변수에서 지정한 값에 해당 합니다 [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) 메서드를 **사용자** 개체입니다.  
+ (선택 사항) 사용자에 대 한 암호를 포함 하는 **문자열** 값입니다. *Password* 매개 변수는 **사용자** 개체의 [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) 메서드에 지정 된 값에 해당 합니다.  
   
 ## <a name="remarks"></a>설명  
- 합니다 **사용자** 의 컬렉션을 [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md) 카탈로그의 모든 사용자를 나타냅니다. 합니다 **사용자** 에 대 한 컬렉션을 [그룹](../../../ado/reference/adox-api/group-object-adox.md) 특정 그룹의 멤버 자격이 있는 사용자만을 나타냅니다.  
+ [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md) 의 **사용자** 컬렉션은 모든 카탈로그의 사용자를 나타냅니다. [그룹](../../../ado/reference/adox-api/group-object-adox.md) 에 대 한 **사용자** 컬렉션은 특정 그룹의 멤버 자격이 있는 사용자만 나타냅니다.  
   
- 공급자를 만드는 사용자를 지원 하지 않는 경우 오류가 발생 합니다.  
+ 공급자가 사용자 만들기를 지원 하지 않는 경우 오류가 발생 합니다.  
   
 > [!NOTE]
->  추가 하기 전에 **사용자** 개체를 **사용자** 의 컬렉션을 **그룹** 개체를 **사용자** 개체와 같은 [이름 ](../../../ado/reference/adox-api/name-property-adox.md) 추가할 것에 이미 존재 해야 합니다는 **사용자** 컬렉션을 **카탈로그**합니다.  
+>  **Group** 개체의 **사용자 컬렉션에** **사용자** 개체를 추가 하기 전에 추가 될 [이름과](../../../ado/reference/adox-api/name-property-adox.md) 같은 **사용자** 개체가 **카탈로그**의 **사용자** 컬렉션에 이미 존재 해야 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [Users 컬렉션(ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Groups 및 Users Append, ChangePassword 메서드 예제 (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)   
- [Append 메서드 (ADOX 열)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append 메서드 (ADOX 그룹)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
+ [Append 메서드 (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
+ [Append 메서드 (ADOX Groups)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
  [Append 메서드 (ADOX 인덱스)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
  [Append 메서드 (ADOX 키)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
  [Append 메서드 (ADOX 프로시저)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Append 메서드 (ADOX 테이블)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Append 메서드(ADOX Views)](../../../ado/reference/adox-api/append-method-adox-views.md)
+ [Append 메서드 (ADOX Tables)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
+ [Append 메서드(ADOX 보기)](../../../ado/reference/adox-api/append-method-adox-views.md)

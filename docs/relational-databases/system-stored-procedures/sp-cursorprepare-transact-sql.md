@@ -18,10 +18,10 @@ ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2719e330ec2fde61b91ca11ef93784983c6c418c
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74165905"
 ---
 # <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare(Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "74165905"
 
   커서 문이나 일괄 처리를 실행 계획으로 컴파일하되 커서를 만들지는 않습니다. 컴파일된 문은 나중에 sp_cursorexecute에서 사용할 수 있습니다. Sp_cursorexecute와 결합 된이 프로시저는 sp_cursoropen와 동일한 기능을 수행 하지만 두 단계로 분할 됩니다. sp_cursorprepare은 TDS (tabular data stream) 패킷에서 ID = 3을 지정 하 여 호출 합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -58,17 +58,17 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 > [!NOTE]  
 >  *Stmt* 값을 지정 하는 규칙은 sp_cursoropen의 경우와 동일 합니다. 단, *stmt* 문자열 데이터 형식은 **ntext**여야 합니다.  
   
- *options*  
+ *옵션*  
  커서 결과 집합 열의 설명을 반환하는 선택적 매개 변수입니다. *옵션* 에는 다음 **int** 입력 값이 필요 합니다.  
   
-|Value|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
  스크롤 옵션입니다. *scrollopt* 는 다음 **int** 입력 값 중 하나를 필요로 하는 선택적 매개 변수입니다.  
   
-|Value|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -90,7 +90,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  *ccopt*  
  동시성 제어 옵션입니다. *ccopt* 는 다음 **int** 입력 값 중 하나를 필요로 하는 선택적 매개 변수입니다.  
   
-|Value|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS(이전의 LOCKCC)|  
@@ -104,14 +104,14 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
 |0x80000|OPTIMISITC_ACCEPTABLE|  
   
- *Scrollpt*와 마찬가지로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 요청한 것과 다른 값을 할당할 수 있습니다.  
+ *Scrollpt*와 마찬가지로는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 요청한 것과 다른 값을 할당할 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
  RPC 상태 매개 변수는 다음 중 하나일 수 있습니다.  
   
-|Value|설명|  
+|값|Description|  
 |-----------|-----------------|  
-|0|성공|  
+|0|Success|  
 |0x0001|실패|  
 |1FF6|메타데이터를 반환할 수 없습니다.<br /><br /> 참고:이 이유는 문이 결과 집합을 생성 하지 않기 때문입니다. 예를 들어 INSERT 또는 DDL 문입니다.|  
   
@@ -144,12 +144,12 @@ exec sp_cursorclose @p2
  
  *Stmt* 매개 변수화 되 고 *scrollopt* PARAMETERIZED_STMT 값이 ON 이면 문자열 형식은 다음과 같습니다.  
   
- { *\<지역 변수 이름 > * *\<데이터 형식 >* } [ ,... *n* ]  
+ { * \<지역 변수 이름> * *\<데이터 형식>* } [ ,... *n* ]  
   
 ## <a name="see-also"></a>참고 항목  
- [ &#40;transact-sql&#41;  sp_cursorexecute](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)  
- [ &#40;transact-sql&#41;  sp_cursoropen](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)  
- [ &#40;transact-sql&#41;  sp_cursorunprepare](../../relational-databases/system-stored-procedures/sp-cursorunprepare-transact-sql.md)  
+ [Transact-sql&#41;sp_cursorexecute &#40;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
+ [Transact-sql&#41;sp_cursoropen &#40;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+ [Transact-sql&#41;sp_cursorunprepare &#40;](../../relational-databases/system-stored-procedures/sp-cursorunprepare-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
