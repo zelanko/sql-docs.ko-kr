@@ -30,17 +30,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 11aa57037a1ea92bd72ed2eaa581d34baff8a122
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874313"
 ---
 # <a name="manipulating-udt-data"></a>UDT 데이터 조작
-  [!INCLUDE[tsql](../../includes/tsql-md.md)]에서는 UDT(사용자 정의 형식) 열의 데이터를 수정할 때 INSERT, UPDATE 또는 DELETE 문에 대한 특별한 구문을 제공하지 않습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST 또는 CONVERT 함수는 네이티브 데이터 형식을 UDT 형식으로 캐스트하는 데 사용됩니다.  
+  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)]에서는 UDT(사용자 정의 형식) 열의 데이터를 수정할 때 INSERT, UPDATE 또는 DELETE 문에 대한 특별한 구문을 제공하지 않습니다. 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST 또는 CONVERT 함수는 네이티브 데이터 형식을 UDT 형식으로 캐스트하는 데 사용됩니다.  
   
 ## <a name="inserting-data-in-a-udt-column"></a>UDT 열에 데이터 삽입  
- 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 데이터 샘플의 세 개의 행을 삽입 합니다 **지점** 테이블입니다. 합니다 **지점** X 이루어져 있습니다 데이터 형식 및 Y 정수 값 UDT 속성으로 노출 됩니다. 쉼표로 구분 된 하려면 CAST 또는 CONVERT 함수를 사용 해야 X 및 Y 값을 **지점** 형식입니다. 처음 두 문은 CONVERT 함수를 사용 하 여 문자열 값을 변환할 합니다 **지점** 유형 및 세 번째 문은 CAST 함수를 사용 합니다.  
+ 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 세 개의 샘플 데이터 행을 **Points** 테이블에 삽입 합니다. **Point** 데이터 형식은 UDT의 속성으로 노출 되는 X 및 Y 정수 값으로 구성 됩니다. CAST 또는 CONVERT 함수를 사용 하 여 쉼표로 구분 된 X 및 Y 값을 **Point** 형식으로 캐스팅 해야 합니다. 처음 두 문은 CONVERT 함수를 사용 하 여 문자열 값을 **Point** 형식으로 변환 하 고, 세 번째 문은 CAST 함수를 사용 합니다.  
   
 ```  
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '3,4'));  
@@ -55,7 +57,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
 SELECT ID, PointValue FROM dbo.Points  
 ```  
   
- 읽기 쉬운 형식으로 표시 되는 출력을 보려면 호출을 `ToString` 메서드를 **지점** UDT 값을 해당 문자열 표현으로 변환 하는 합니다.  
+ 읽을 수 있는 형식으로 표시 된 출력을 보려면 값을 `ToString` 해당 문자열 표현으로 변환 하는 **Point** UDT의 메서드를 호출 합니다.  
   
 ```  
 SELECT ID, PointValue.ToString() AS PointValue   
@@ -72,7 +74,8 @@ IDPointValue
 31,99  
 ```  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST 및 CONVERT 함수를 사용하여 동일한 결과를 얻을 수도 있습니다.  
+ 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST 및 CONVERT 함수를 사용하여 동일한 결과를 얻을 수도 있습니다.  
   
 ```  
 SELECT ID, CAST(PointValue AS varchar)   
@@ -82,7 +85,7 @@ SELECT ID, CONVERT(varchar, PointValue)
 FROM dbo.Points;  
 ```  
   
- 합니다 **지점** UDT 속성을 개별적으로 선택할 수 있습니다와 X 및 Y 좌표를 노출 합니다. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 X 및 Y 좌표를 개별적으로 선택합니다.  
+ **Point** UDT는 X 및 Y 좌표를 속성으로 노출 하 여 개별적으로 선택할 수 있습니다. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 X 및 Y 좌표를 개별적으로 선택합니다.  
   
 ```  
 SELECT ID, PointValue.X AS xVal, PointValue.Y AS yVal   
@@ -129,7 +132,7 @@ SELECT @PointValue.ToString() AS PointValue;
  변수 할당에 SELECT 및 SET를 사용할 경우의 차이점은 SELECT를 사용하면 하나의 SELECT 문에서 여러 변수를 할당할 수 있는 반면 SET 구문에서는 각 변수 할당에 고유한 SET 문이 필요하다는 것입니다.  
   
 ## <a name="comparing-data"></a>데이터 비교  
- 클래스를 정의할 때 `IsByteOrdered` 속성을 `true`로 설정한 경우 비교 연산자를 사용하여 UDT의 값을 비교할 수 있습니다. 자세한 내용은 [사용자 정의 형식 만들기](creating-user-defined-types.md)합니다.  
+ 클래스를 정의할 때 `IsByteOrdered` 속성을 `true`로 설정한 경우 비교 연산자를 사용하여 UDT의 값을 비교할 수 있습니다. 자세한 내용은 [사용자 정의 형식 만들기](creating-user-defined-types.md)를 참조 하세요.  
   
 ```  
 SELECT ID, PointValue.ToString() AS Points   
@@ -156,7 +159,8 @@ WHERE PointValue = @ComparePoint;
 ```  
   
 ## <a name="invoking-udt-methods"></a>UDT 메서드 호출  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 UDT에 정의된 메서드를 호출할 수도 있습니다. 합니다 **지점** 클래스에는 세 가지 메서드가 포함 되어 있습니다. `Distance`를 `DistanceFrom`, 및 `DistanceFromXY`합니다. 이러한 세 가지 메서드를 정의 코드 샘플을 참조 하세요 [코딩 형식](creating-user-defined-types-coding.md)합니다.  
+ 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 UDT에 정의된 메서드를 호출할 수도 있습니다. **Point** 클래스에는, 및 `Distance` `DistanceFrom` `DistanceFromXY`라는 세 개의 메서드가 있습니다. 이 세 가지 메서드를 정의 하는 코드 목록은 [사용자 정의 형식 코딩](creating-user-defined-types-coding.md)을 참조 하세요.  
   
  다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 `PointValue.Distance` 메서드를 호출합니다.  
   
@@ -167,7 +171,7 @@ SELECT ID, PointValue.X AS [Point.X],
 FROM dbo.Points;  
 ```  
   
- 결과에 표시 되는 `Distance` 열:  
+ 결과는 `Distance` 열에 표시 됩니다.  
   
 ```  
 IDXYDistance  
@@ -177,7 +181,7 @@ IDXYDistance
 319999.0050503762308  
 ```  
   
- `DistanceFrom` 의 인수를 사용 하는 메서드 **가리킨** 데이터 형식 및 지정 된 점에서 PointValue 까지의 거리를 표시 합니다.  
+ 메서드 `DistanceFrom` 는 **point** 데이터 형식의 인수를 사용 하 고 지정 된 점에서 pointvalue 까지의 거리를 표시 합니다.  
   
 ```  
 SELECT ID, PointValue.ToString() AS Pnt,  
@@ -195,7 +199,8 @@ ID PntDistanceFromPoint
 31,990  
 ```  
   
- `DistanceFromXY` 메서드는 개별적으로 점을 인수로 사용합니다.  
+ 
+  `DistanceFromXY` 메서드는 개별적으로 점을 인수로 사용합니다.  
   
 ```  
 SELECT ID, PointValue.X as X, PointValue.Y as Y,   
@@ -231,7 +236,8 @@ WHERE PointValue = '3,4';
 ```  
   
 ### <a name="updating-limitations"></a>업데이트 제한  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 한 번에 여러 속성을 업데이트할 수는 없습니다. 예를 들어 한 UPDATE 문에서 동일한 열 이름을 두 번 사용할 수 없으므로 다음 UPDATE 문은 오류로 인해 실패합니다.  
+ 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 한 번에 여러 속성을 업데이트할 수는 없습니다. 예를 들어 한 UPDATE 문에서 동일한 열 이름을 두 번 사용할 수 없으므로 다음 UPDATE 문은 오류로 인해 실패합니다.  
   
 ```  
 UPDATE dbo.Points  
@@ -263,7 +269,7 @@ SET PointValue = null
 WHERE ID = 2  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [SQL Server의 사용자 정의 형식 작업](working-with-user-defined-types-in-sql-server.md)  
+## <a name="see-also"></a>참고 항목  
+ [SQL 서버의 사용자 정의 형식 작업](working-with-user-defined-types-in-sql-server.md)  
   
   

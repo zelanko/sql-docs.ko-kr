@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bc0f9319e4d598548111b44b1a10542773a7daa4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63049153"
 ---
 # <a name="specify-conditions-for-groups-visual-database-tools"></a>그룹 조건 지정(Visual Database Tools)
@@ -50,7 +50,7 @@ ms.locfileid: "63049153"
   
 4.  추가로 지정할 각 조건에 대하여 2단계와 3단계를 반복합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [쿼리 결과 정렬 및 그룹화&#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)  
   
   

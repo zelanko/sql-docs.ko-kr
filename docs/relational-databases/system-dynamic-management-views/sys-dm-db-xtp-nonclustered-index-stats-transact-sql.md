@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_nonclustered_index_stats (TRANSACT-SQL) | Microsoft Docs
+title: sys. dm_db_xtp_nonclustered_index_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 726fd7d44ed64dfee609ad29181a2077364d72e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68026793"
 ---
-# <a name="sysdmdbxtpnonclusteredindexstats-transact-sql"></a>sys.dm_db_xtp_nonclustered_index_stats(Transact-SQL)
+# <a name="sysdm_db_xtp_nonclustered_index_stats-transact-sql"></a>sys.dm_db_xtp_nonclustered_index_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   sys.dm_db_xtp_nonclustered_index_stats에는 메모리 최적화 테이블의 비클러스터형 인덱스에서 작업에 대한 통계가 포함됩니다. sys.dm_db_xtp_nonclustered_index_stats에는 현재 데이터베이스의 메모리 최적화 테이블에서 각각의 비클러스터형 인덱스의 행 하나가 포함됩니다.  
@@ -38,17 +38,17 @@ ms.locfileid: "68026793"
   
  다시 시도 횟수가 많으면 동시성 오류가 발생할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원을 호출합니다.  
   
- 메모리 액세스에 최적화 된, 비클러스터형 인덱스에 대 한 자세한 내용은 참조 하세요. [SQL Server 메모리 내 OLTP 내부 개요](https://t.co/T6zToWc6y6), 17 페이지입니다.  
+ 메모리 액세스에 최적화 된 비클러스터형 인덱스에 대 한 자세한 내용은 [메모리 내 OLTP 내부 개요](https://t.co/T6zToWc6y6), 페이지 17을 SQL Server 참조 하십시오.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|개체의 ID입니다.|  
-|xtp_object_id|**bigint**|메모리 최적화 테이블의 ID입니다.|  
+|xtp_object_id|**bigint**|메모리 액세스에 최적화 된 테이블의 ID입니다.|  
 |index_id|**int**|인덱스의 ID입니다.|  
 |delta_pages|**bigint**|트리의 이 인덱스에 대한 델타 페이지 수입니다.|  
-|internal_pages|**bigint**|내부적으로만 사용할 수 있습니다. 트리의 이 인덱스에 대한 내부 페이지 수입니다.|  
+|internal_pages|**bigint**|내부에 사용합니다. 트리의 이 인덱스에 대한 내부 페이지 수입니다.|  
 |leaf_pages|**bigint**|트리의 이 인덱스에 대한 리프 페이지 수입니다.|  
-|outstanding_retired_nodes|**bigint**|내부적으로만 사용할 수 있습니다. 내부 구조의 이 인덱스에 대한 전체 노드 수입니다.|  
+|outstanding_retired_nodes|**bigint**|내부에 사용합니다. 내부 구조의 이 인덱스에 대한 전체 노드 수입니다.|  
 |page_update_count|**bigint**|인덱스에서 페이지를 업데이트하는 누적 작업 수입니다.|  
 |page_update_retry_count|**bigint**|인덱스에서 페이지를 업데이트하는 작업의 누적된 다시 시도 횟수입니다.|  
 |page_consolidation_count|**bigint**|인덱스의 누적 페이지 통합 수입니다.|  
@@ -65,7 +65,7 @@ ms.locfileid: "68026793"
 ## <a name="permissions"></a>사용 권한  
  현재 데이터베이스에 대해 VIEW DATABASE STATE 권한이 필요합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [메모리 최적화 테이블 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [메모리 액세스에 최적화 된 테이블 동적 관리 뷰 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

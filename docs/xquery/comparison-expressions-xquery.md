@@ -20,10 +20,10 @@ ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7462e089f70b4da76edea25dcfe6e7e314ad7c46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039036"
 ---
 # <a name="comparison-expressions-xquery"></a>비교 식(XQuery)
@@ -44,12 +44,12 @@ ms.locfileid: "68039036"
   
  일반 연산자는 다음 표에 정의되어 있습니다.  
   
-|연산자|설명|  
+|연산자|Description|  
 |--------------|-----------------|  
 |=|같음|  
-|!=|같지 않음|  
+|!=|다음과 같지 않음|  
 |\<|보다 작음|  
-|>|보다 큼|  
+|>|초과|  
 |\<=|작거나 같음|  
 |>=|크거나 같음|  
   
@@ -79,7 +79,7 @@ set @x='<a>6</a>'
 select @x.query('/a[1] < "17"')  
 ```  
   
- 다음 쿼리는 AdventureWorks 예제 데이터베이스에 제공된 제품 카탈로그의 제품 모델에 대한 크기가 작은 사진을 반환합니다. 이 쿼리는 `PD:ProductDescription/PD:Picture/PD:Size`에서 반환되는 원자 값 시퀀스와 단일 시퀀스 "small"을 비교합니다. 경우 비교는 True를 반환 합니다 < 그림\> 요소입니다.  
+ 다음 쿼리는 AdventureWorks 예제 데이터베이스에 제공된 제품 카탈로그의 제품 모델에 대한 크기가 작은 사진을 반환합니다. 이 쿼리는 `PD:ProductDescription/PD:Picture/PD:Size`에서 반환되는 원자 값 시퀀스와 단일 시퀀스 "small"을 비교합니다. 비교가 True 이면 <그림\> 요소를 반환 합니다.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
@@ -90,7 +90,7 @@ FROM   Production.ProductModel
 WHERE  ProductModelID=19         
 ```  
   
- 다음 쿼리는 전화 번호의 시퀀스를 비교 < 번호\> 요소를 사용 하는 문자열 리터럴 "112-111-1111"입니다. 이 쿼리는 AdditionalContactInfo 열에 있는 전화 번호 요소의 시퀀스를 비교하여 특정 고객에 대한 특정 전화 번호가 문서에 있는지 확인합니다.  
+ 다음 쿼리는 <number\> 요소의 전화 번호 시퀀스를 문자열 리터럴 "112-111-1111"과 비교 합니다. 이 쿼리는 AdditionalContactInfo 열에 있는 전화 번호 요소의 시퀀스를 비교하여 특정 고객에 대한 특정 전화 번호가 문서에 있는지 확인합니다.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -103,7 +103,7 @@ FROM Person.Contact
 WHERE ContactID=1         
 ```  
   
- 쿼리에서 True를 반환합니다. 이는 번호가 문서에 있다는 의미입니다. 다음 쿼리는 위의 쿼리를 약간 수정한 버전입니다. 이 쿼리에서는 문서에서 검색한 전화 번호 값이 두 개의 전화 번호 값 시퀀스와 비교됩니다. 비교가 True 인 경우는 < 번호\> 요소가 반환 됩니다.  
+ 쿼리에서 True를 반환합니다. 이는 번호가 문서에 있다는 의미입니다. 다음 쿼리는 위의 쿼리를 약간 수정한 버전입니다. 이 쿼리에서는 문서에서 검색한 전화 번호 값이 두 개의 전화 번호 값 시퀀스와 비교됩니다. 비교가 True 이면 <number\> 요소가 반환 됩니다.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -139,12 +139,12 @@ WHERE ContactID=1
   
  값 비교 연산자는 다음 표에 정의되어 있습니다.  
   
-|연산자|설명|  
+|연산자|Description|  
 |--------------|-----------------|  
 |eq|같음|  
-|ne|같지 않음|  
+|ne|다음과 같지 않음|  
 |lt|보다 작음|  
-|gt|보다 큼|  
+|gt|초과|  
 |le|작거나 같음|  
 |ge|크거나 같음|  
   
@@ -152,7 +152,7 @@ WHERE ContactID=1
   
  이러한 연산자는 단일 원자 값에서만 사용할 수 있습니다. 즉, 시퀀스를 피연산자 중 하나로 지정할 수 없습니다.  
   
- 예를 들어 다음 쿼리 검색 \<그림 > 요소는 그림 크기가 되는 제품 모델에 대 한 "작은:  
+ 예를 들어 다음 쿼리는 그림 \<크기가 "small" 인 제품 모델에 대 한 그림> 요소를 검색 합니다.  
   
 ```  
 SELECT CatalogDescription.query('         
@@ -167,11 +167,12 @@ WHERE ProductModelID=19
   
  이전 쿼리에서 다음을 유의하세요.  
   
--   `declare namespace`는 다음에 쿼리에서 사용되는 네임스페이스 접두사를 정의합니다.  
+-   
+  `declare namespace`는 다음에 쿼리에서 사용되는 네임스페이스 접두사를 정의합니다.  
   
--   \<크기 > 요소 값이 지정된 된 원자성 값을 "small"과 비교 됩니다.  
+-   \<크기> 요소 값을 지정 된 원자 값 "small"와 비교 합니다.  
   
--   값 연산자는 원자 값 에서만 작동 하기 때문에 유의 합니다 **data ()** 함수는 암시적으로 노드 값을 검색 하는 데 사용 됩니다. 즉 `data($P/PD:Size) eq "small"`은 같은 결과를 생성합니다.  
+-   값 연산자는 원자성 값 에서만 작동 하기 때문에 **data ()** 함수는 노드 값을 검색 하는 데 암시적으로 사용 됩니다. 즉 `data($P/PD:Size) eq "small"`은 같은 결과를 생성합니다.  
   
  다음은 결과입니다.  
   
@@ -187,7 +188,7 @@ WHERE ProductModelID=19
  값 비교에 대한 형식 승격 규칙은 일반 비교의 경우와 동일합니다. 또한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 일반 비교 중에 형식화되지 않은 값에 대해 사용하는 캐스트 규칙을 값 비교 중에도 사용합니다. 이와는 반대로 XQuery 사양의 규칙은 값 비교 중에 형식화되지 않은 값을 항상 xs:string으로 캐스팅합니다.  
   
 ## <a name="node-comparison-operator"></a>노드 비교 연산자  
- 노드 비교 연산자 **는**를 노드 형식에만 적용 됩니다. 이 연산자가 반환하는 결과는 피연산자로 전달된 두 노드가 원본 문서의 같은 노드를 나타내는지 여부를 나타냅니다. 이 연산자는 두 피연산자가 같은 노드이면 True를 반환하고 그렇지 않으면 False를 반환합니다.  
+ 노드 비교 연산자는 **이**노드 형식에만 적용 됩니다. 이 연산자가 반환하는 결과는 피연산자로 전달된 두 노드가 원본 문서의 같은 노드를 나타내는지 여부를 나타냅니다. 이 연산자는 두 피연산자가 같은 노드이면 True를 반환하고 그렇지 않으면 False를 반환합니다.  
   
  다음 쿼리는 업무 센터 위치 10이 특정 제품 모델의 제조 프로세스에서 첫 번째인지 여부를 확인합니다.  
   
@@ -220,11 +221,11 @@ ProductModelID       Result
   
  이러한 연산자는 문서 순서를 기준으로 생성된 비교 연산자입니다.  
   
--   `<<` : 않습니다 **operand 1** 앞에 야 **피연산자 2** 문서 순서에서.  
+-   `<<`: **피연산자 1** 은 문서 순서에서 **피연산자 2** 앞에 옵니다.  
   
--   `>>` : 않습니다 **operand 1** 따릅니다 **피연산자 2** 문서 순서에서.  
+-   `>>`: **피연산자 1** 은 문서 순서에서 **피연산자 2** 를 따릅니다.  
   
- 다음 쿼리는 제품 카탈로그 설명에 있는 경우 True를 반환 합니다는 \<보증 > 앞에 나타나는 요소는 \<유지 관리 > 특정 제품에 대 한 문서 순서로 요소입니다.  
+ 다음 쿼리는 제품 카탈로그 설명에 특정 제품의 문서 순서 \<에서 \<유지 관리> 요소 앞에 표시 되는 보증> 요소가 있는 경우 True를 반환 합니다.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -240,14 +241,14 @@ where ProductModelID=19
   
  이전 쿼리에서 다음을 유의하세요.  
   
--   합니다 **value ()** 메서드는 **xml**데이터 형식은 쿼리에서 사용 됩니다.  
+-   **Xml**데이터 형식의 **value ()** 메서드는 쿼리에 사용 됩니다.  
   
--   쿼리의 부울 결과 변환할 **nvarchar(10)** 반환 합니다.  
+-   쿼리의 부울 결과가 **nvarchar (10)** 로 변환 되 고 반환 됩니다.  
   
 -   쿼리에서 True를 반환합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [형식 시스템 &#40;XQuery&#41;](../xquery/type-system-xquery.md)   
+## <a name="see-also"></a>참고 항목  
+ [Type System &#40;XQuery&#41;](../xquery/type-system-xquery.md)   
  [XQuery 식](../xquery/xquery-expressions.md)  
   
   

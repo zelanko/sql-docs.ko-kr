@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_missing_index_columns (TRANSACT-SQL) | Microsoft Docs
+title: sys. dm_db_missing_index_columns (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,16 +22,16 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 38d21e20ec158ea316caf6acd17f7225c8d3a49d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002656"
 ---
-# <a name="sysdmdbmissingindexcolumns-transact-sql"></a>sys.dm_db_missing_index_columns(Transact-SQL)
+# <a name="sysdm_db_missing_index_columns-transact-sql"></a>sys.dm_db_missing_index_columns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  공간 인덱스를 제외하고 인덱스가 없는 데이터베이스 테이블 열에 대한 정보를 반환합니다. **sys.dm_db_missing_index_columns** 는 동적 관리 함수입니다.  
+  공간 인덱스를 제외하고 인덱스가 없는 데이터베이스 테이블 열에 대한 정보를 반환합니다. **dm_db_missing_index_columns** 은 동적 관리 함수입니다.  
 
 ## <a name="syntax"></a>구문  
   
@@ -44,20 +44,21 @@ sys.dm_db_missing_index_columns(index_handle)
  *index_handle*  
  누락된 인덱스를 고유하게 식별하는 정수로, 다음 동적 관리 개체로부터 얻을 수 있습니다.  
   
- [sys.dm_db_missing_index_details &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)  
+ [dm_db_missing_index_details &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)  
   
- [sys.dm_db_missing_index_groups &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)  
+ [dm_db_missing_index_groups &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)  
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**column_id**|**int**|열의 ID입니다.|  
 |**column_name**|**sysname**|테이블 열의 이름입니다.|  
-|**column_usage**|**varchar(20)**|열이 쿼리에 사용되는 방법입니다. 가능한 값 및 해당 설명을 다음과 같습니다.<br /><br /> 같음: 열 형식으로 같음을 표시 하는 조건자에 적용 됩니다. <br />                        *table.column* = *constant_value*<br /><br /> 같지 않음: 예를 들어 같지 않음을 표시 하는 조건자에 기여 열 형식의 조건자: *테이블. 열* > *constant_value*합니다. "="가 아닌 모든 비교 연산자는 같지 않음을 표시합니다.<br /><br /> 다음과 같습니다. 열을 사용 하지 않고 조건자를 계산 있지만 쿼리를 처리 하기에 예를 들어, 또 다른 이유로 사용 됩니다.|  
+|**column_usage**|**varchar (20)**|열이 쿼리에 사용되는 방법입니다. 가능한 값과 그에 대 한 설명은 다음과 같습니다.<br /><br /> 같음: 열이 같음을 표현 하는 조건자에 적용 되는 형식은 다음과 같습니다. <br />                        *테이블. 열* = *constant_value*<br /><br /> 같지 않음: 열이 같지 않음을 나타내는 조건자에 기여 합니다. 예를 들어 *테이블. 열* > *constant_value*형식에 대 한 조건자를 나타냅니다. "="가 아닌 모든 비교 연산자는 같지 않음을 표시합니다.<br /><br /> INCLUDE: 열은 조건자를 평가 하는 데 사용 되지 않지만, 예를 들어 쿼리를 포함 하는 다른 이유로 사용 됩니다.|  
   
 ## <a name="remarks"></a>설명  
- 반환 된 정보 **sys.dm_db_missing_index_columns** 쿼리는 쿼리 최적화 프로그램이 쿼리 최적화 되 고 지속 되지 않습니다 때 업데이트 됩니다. 누락된 인덱스 정보는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작할 때까지만 유지됩니다. 서버 재활용 후에도 누락된 인덱스 정보를 유지하려면 데이터베이스 관리자가 정기적으로 누락된 인덱스 정보의 백업 복사본을 만들어야 합니다.  
+ 
+  **sys.dm_db_missing_index_columns**에서 반환된 정보는 쿼리 최적화 프로그램이 쿼리를 최적화할 때 업데이트되며 지속되지 않습니다. 누락된 인덱스 정보는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작할 때까지만 유지됩니다. 서버 재활용 후에도 누락된 인덱스 정보를 유지하려면 데이터베이스 관리자가 정기적으로 누락된 인덱스 정보의 백업 복사본을 만들어야 합니다.  
   
 ## <a name="transaction-consistency"></a>트랜잭션 일관성  
  트랜잭션이 테이블을 만들거나 삭제하면 삭제된 개체에 대한 누락된 인덱스 정보가 포함된 행이 이 동적 관리 개체에서 제거되어 트랜잭션 일관성이 유지됩니다.  
@@ -84,9 +85,9 @@ ORDER BY mig.index_group_handle, mig.index_handle, column_id;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [sys.dm_db_missing_index_details &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
- [sys.dm_db_missing_index_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
- [sys.dm_db_missing_index_group_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [dm_db_missing_index_details &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
+ [dm_db_missing_index_groups &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
+ [dm_db_missing_index_group_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  
   
   

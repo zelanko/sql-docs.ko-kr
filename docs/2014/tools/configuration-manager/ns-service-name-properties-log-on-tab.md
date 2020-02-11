@@ -1,5 +1,5 @@
 ---
-title: NS$&lt;서비스 이름은&gt; 속성 (로그에서 탭) | Microsoft Docs
+title: NS $&lt;service name&gt; 속성 (로그온 탭) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14a5fbd6b30003b4eaa0ec1592c9a01c150b7e87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63049241"
 ---
 # <a name="nsltservice-namegt-properties-log-on-tab"></a>NS$&lt;service name&gt; 속성(탭의 로그)
   **Notification Services 속성** 대화 상자의 **로그온** 탭을 사용하여 [!INCLUDE[ssNS](../../includes/ssns-md.md)] 서비스에서 사용할 계정을 지정할 수 있으며 서비스를 시작 및 중지할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **로컬 시스템 계정**  
  암호를 요구하지 않는 로컬 시스템 계정을 지정합니다. 그러나 로컬 시스템 계정은 계정에 부여된 권한에 따라 다른 서버와 상호 작용하지 못하도록 서비스를 제한할 수 있습니다.  
   

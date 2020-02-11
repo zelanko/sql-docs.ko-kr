@@ -14,21 +14,24 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 27d9d7ab4cd29c6eb0ea7ae1c6bddbe8c1b7ef06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63046009"
 ---
 # <a name="detail-property"></a>Detail 속성
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] **SoapException**클래스의 **Detail** 속성은 다음 XML 구조를 가집니다.  
+  
+  **
+  **SoapException클래스의 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] **Detail** 속성은 다음 XML 구조를 가집니다.  
   
 ## <a name="elements"></a>요소  
- **Detail**  
+ **세부 정보**  
  모든 기타 오류 세부 정보 요소를 포함하는 최상위 요소입니다.  
   
  **ErrorCode**  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 특정 오류 코드입니다.  
+ 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 특정 오류 코드입니다.  
   
  **HttpStatus**  
  HTTP 상태 코드입니다.  
@@ -46,13 +49,15 @@ ms.locfileid: "63046009"
  제품의 이름입니다. 기본값은 **Microsoft SQL Server Reporting Services**입니다.  
   
  **ProductVersion**  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 버전입니다. 최대 길이는 15자입니다. 버전 번호의 형식은 다음과 같아야 합니다. 8.00.0xxx.00.  
+ 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 버전입니다. 최대 길이는 15자입니다. 버전 번호의 형식은 8.00.0xxx.00과 같아야 합니다.  
   
- **ProductLocaleId**  
+ **제품 Localeid**  
  애플리케이션 INTL DLL의 로캘 ID 또는 언어 ID입니다(예: 0x41A).  
   
  **OperatingSystem**  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]가 설치된 운영 체제입니다. 유효한 값은 운영 체제에 대해 독립적인 경우 **0**, [!INCLUDE[win2kfamily](../../../includes/win2kfamily-md.md)]의 경우 **1**, Windows XP의 경우 **16**입니다.  
+ 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]가 설치된 운영 체제입니다. 유효한 값은 운영 체제에 대해 독립적인 경우 **0**, **의 경우 **1[!INCLUDE[win2kfamily](../../../includes/win2kfamily-md.md)], Windows XP의 경우 **16**입니다.  
   
  **CountryLocaleId**  
  운영 체제의 로캘 ID 또는 언어 ID입니다. 예를 들어 프랑스어 버전 Windows에 대해 이 값은 0x040c입니다.  
@@ -61,15 +66,17 @@ ms.locfileid: "63046009"
  메서드 실행 중 발생한 중첩된 예외를 포함하는 XML 문자열입니다.  
   
  **원본**  
- **MoreInformation**의 자식 요소입니다. 오류의 출처입니다.  
+ 
+  **MoreInformation**의 자식 요소입니다. 오류의 출처입니다.  
   
  **메시지**  
- **MoreInformation**의 자식 요소입니다. 중첩된 예외의 오류 메시지입니다. 이 요소에는 **ErrorCode** 및 **HelpLink**에 대한 XML 요소가 포함됩니다.  
+ 
+  **MoreInformation**의 자식 요소입니다. 중첩된 예외의 오류 메시지입니다. 이 요소에는 **ErrorCode** 및 **HelpLink**에 대한 XML 요소가 포함됩니다.  
   
  **경고**  
  보고서 처리에서 반환된 경고를 포함하는 XML 문자열입니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services의 예외 처리 소개](../introducing-exception-handling-in-reporting-services.md)   
  [Reporting Services SoapException 클래스](reporting-services-soapexception-class.md)   
  [Detail 속성을 사용하여 특정 오류 처리](../best-practices/using-the-detail-property-to-handle-specific-errors.md)  

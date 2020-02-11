@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_delete_policy_category_subscription (TRANSACT-SQL) | Microsoft Docs
+title: sp_syspolicy_delete_policy_category_subscription (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: eeab0120-c869-4c95-a79d-6dc418d0b23a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 1cc965b55cb1f7216d4711c129a5e99bb4da067f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68010489"
 ---
-# <a name="spsyspolicydeletepolicycategorysubscription-transact-sql"></a>sp_syspolicy_delete_policy_category_subscription(Transact-SQL)
+# <a name="sp_syspolicy_delete_policy_category_subscription-transact-sql"></a>sp_syspolicy_delete_policy_category_subscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   특정 데이터베이스의 정책 범주 구독을 삭제합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,7 +39,7 @@ sp_syspolicy_delete_policy_category_subscription [ @policy_category_subscription
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @policy_category_subscription_id = ] policy_category_subscription_id` 정책 범주 구독의 식별자가입니다. *policy_category_subscription_id* 됩니다 **int**합니다.  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id`정책 범주 구독의 식별자입니다. *policy_category_subscription_id* 은 **int**입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -52,7 +52,7 @@ sp_syspolicy_delete_policy_category_subscription [ @policy_category_subscription
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저는 현재 저장 프로시저 소유자의 컨텍스트에서 실행됩니다.  
   
- 값을 얻으려면 *policy_category_subscription_id*, 다음 쿼리를 사용할 수 있습니다.  
+ *Policy_category_subscription_id*에 대 한 값을 가져오려면 다음 쿼리를 사용할 수 있습니다.  
   
 ```  
 SELECT a.policy_category_subscription_id, a.target_object, b.name AS category_name  
@@ -70,8 +70,8 @@ EXEC msdb.dbo.sp_syspolicy_delete_policy_category_subscription @policy_category_
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [정책 기반 관리 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_update_policy_category_subscription은 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;&#40;정책 기반 관리 저장 프로시저](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;sp_syspolicy_update_policy_category_subscription &#40;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)  
   
   

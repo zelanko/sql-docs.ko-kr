@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 113d84526b34f9f702cd8da68a06c055c3b559e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63062331"
 ---
 # <a name="setserviceaccountpassword-method-sqlservice-class"></a>SetServiceAccountPassword 메서드(SqlService 클래스)
@@ -40,7 +40,7 @@ AccountOldPassword , ServiceStartPassword
 ```  
   
 ## <a name="parts"></a>부분  
- *object*  
+ *개체가*  
  서비스를 나타내는 [SqlService 클래스](sqlservice-class.md) 개체입니다.  
   
 #### <a name="parameters"></a>매개 변수  
@@ -51,7 +51,8 @@ AccountOldPassword , ServiceStartPassword
  계정의 새 암호를 지정하는 문자열 값입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
- `uint32` 값으로, 0은 서비스가 수정되었음을 나타내고 1은 요청이 지원되지 않음을 나타내며 다른 모든 숫자는 오류를 나타냅니다.  
+ 
+  `uint32` 값으로, 0은 서비스가 수정되었음을 나타내고 1은 요청이 지원되지 않음을 나타내며 다른 모든 숫자는 오류를 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   

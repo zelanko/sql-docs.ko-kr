@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 24ab4d509638b3195c7105602c663c04fb47a411
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771130"
 ---
 # <a name="process-inserts-updates-and-deletes"></a>삽입, 업데이트 및 삭제 처리
@@ -69,8 +69,8 @@ select
   
  **다음 항목:** [대상에 변경 내용 적용](apply-the-changes-to-the-destination.md)  
   
-## <a name="see-also"></a>관련 항목  
- [조건부 분할 변환](../data-flow/transformations/conditional-split-transformation.md)   
+## <a name="see-also"></a>참고 항목  
+ [Conditional Split Transformation](../data-flow/transformations/conditional-split-transformation.md)   
  [조건부 분할 변환을 사용하여 데이터 세트 분할](../data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
   

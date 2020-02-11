@@ -1,5 +1,5 @@
 ---
-title: MSpeer_response (TRANSACT-SQL) | Microsoft Docs
+title: MSpeer_response (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,27 +18,27 @@ ms.assetid: 510e24cf-0292-47a9-b1d9-71a30fef030f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c930a5eeae8bfdb7d952610fadc0b7d779033435
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68026675"
 ---
-# <a name="mspeerresponse-transact-sql"></a>MSpeer_response(Transact-SQL)
+# <a name="mspeer_response-transact-sql"></a>MSpeer_response(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  합니다 **MSpeer_response** 테이블은 피어 투 피어 복제에 게시 상태 요청에 대 한 각 노드의 응답을 저장 하는 데 사용 됩니다. 이 테이블은 게시 데이터베이스에 저장됩니다.  
+  **MSpeer_response** 테이블은 피어 투 피어 복제에서 게시 상태 요청에 대 한 각 노드의 응답을 저장 하는 데 사용 됩니다. 이 테이블은 게시 데이터베이스에 저장됩니다.  
   
 ## <a name="definition"></a>정의  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**request_id**|**int**|상태 요청 항목을 식별 합니다 [MSpeer_request](../../relational-databases/system-tables/mspeer-request-transact-sql.md) 테이블입니다.|  
-|**peer**|**sysname**|응답을 생성한 피어입니다.|  
+|**request_id**|**int**|[MSpeer_request](../../relational-databases/system-tables/mspeer-request-transact-sql.md) 테이블의 상태 요청 항목을 식별 합니다.|  
+|**피어는**|**sysname**|응답을 생성한 피어입니다.|  
 |**peer_db**|**sysname**|응답을 생성한 피어에 있는 구독 데이터베이스입니다.|  
 |**received_date**|**datetime**|피어 요청을 받은 날짜 및 시간입니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [복제 테이블&#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

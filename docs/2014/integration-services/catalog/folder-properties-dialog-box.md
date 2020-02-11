@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f7d04a071bd5d74ddff6c2dc682c0f6153a8f8b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771589"
 ---
 # <a name="folder-properties-dialog-box"></a>폴더 속성 대화 상자
@@ -36,8 +36,8 @@ ms.locfileid: "62771589"
   
 5.  **확인** 을 클릭하여 변경 사항을 수락하고 **폴더 속성** 대화 상자를 닫습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [Integration Services&#40;SSIS&#41; 서버](integration-services-ssis-server-and-catalog.md)   
+## <a name="see-also"></a>참고 항목  
+ [Integration Services &#40;SSIS&#41; 서버](integration-services-ssis-server-and-catalog.md)   
  [catalog.grant_permission &#40;SSISDB 데이터베이스&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database)  
   
   

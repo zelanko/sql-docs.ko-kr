@@ -1,5 +1,5 @@
 ---
-title: '데모: 메모리 내 OLTP 성능 향상 | Microsoft Docs'
+title: '데모: 메모리 내 OLTP 성능 향상 | Microsoft 문서'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8c9477a318d2cb4f9886d67da8a4f8b5967cc180
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63071788"
 ---
-# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>데모: 메모리 내 OLTP의 성능 향상
+# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>데모: 메모리 내 OLTP 성능 향상
   이 예제는 메모리 최적화된 테이블과 디스크 기반 테이블에 대해 동일한 Transact-SQL 쿼리를 실행하는 경우 응답 시간의 차이를 비교하여 메모리 내 OLTP 사용 시 성능 향상을 보여줍니다. 또한 고유하게 컴파일된 저장 프로시저가 생성되고(동일한 쿼리를 기반으로) 고유하게 컴파일된 저장 프로시저로 메모리 최적화 테이블을 쿼리하는 경우 일반적으로 최고의 응답 시간을 갖는다는 것을 설명하기 위해 실행됩니다. 이 샘플은 메모리 최적화 테이블에 포함된 데이터에 액세스 하는 경우 성능 향상의 한 가지 측면 즉, 삽입 수행 시 데이터 액세스 효율성만을 보여줍니다. 이 예제는 단일 스레드이며 메모리 내 OLTP의 동시성 이점을 활용하지 않습니다. 동시성을 사용하는 작업에서는 더 큰 성능 향상이 가능합니다.  
   
 > [!NOTE]  
@@ -25,7 +25,8 @@ ms.locfileid: "63071788"
   
  이 샘플을 완료하려면 다음을 수행합니다.  
   
-1.  **imoltp** 라는 데이터베이스를 만들고 메모리 내 OLTP를 사용하여 설정하려는 파일 세부 정보를 변경합니다.  
+1.  
+  **imoltp** 라는 데이터베이스를 만들고 메모리 내 OLTP를 사용하여 설정하려는 파일 세부 정보를 변경합니다.  
   
 2.  샘플에 대한 데이터베이스 개체 즉, 세 테이블 및 고유하게 컴파일된 저장 프로시저를 만듭니다.  
   
@@ -181,14 +182,14 @@ SELECT CAST(@timems AS VARCHAR(10)) + ' ms (memory-optimized table with natively
   
  예상 결과는 메모리 최적화 테이블과 고유하게 컴파일된 저장 프로시저가 기존의 디스크 기반 테이블에 대해 실행되는 동일한 작업보다 지속적으로 빠른 응답 시간을 보여주는 실제 응답 시간을 제공합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [메모리 내 OLTP를 보여주기 위한 adventureworks 확장](../../database-engine/extensions-to-adventureworks-to-demonstrate-in-memory-oltp.md)   
- [메모리 내 OLTP&#40;메모리 내 최적화&#41;](in-memory-oltp-in-memory-optimization.md)   
- [메모리 액세스에 최적화된 테이블](memory-optimized-tables.md)   
- [고유하게 컴파일된 저장 프로시저](natively-compiled-stored-procedures.md)   
- [메모리 액세스에 최적화된 테이블 사용을 위한 요구 사항](requirements-for-using-memory-optimized-tables.md)   
+## <a name="see-also"></a>참고 항목  
+ [메모리 내 OLTP를 보여 주는 AdventureWorks 확장](../../database-engine/extensions-to-adventureworks-to-demonstrate-in-memory-oltp.md)   
+ [메모리 내 OLTP는 메모리 내 최적화를 &#40;&#41;](in-memory-oltp-in-memory-optimization.md)   
+ [메모리 액세스에 최적화 된 테이블](memory-optimized-tables.md)   
+ [고유 하 게 컴파일된 저장 프로시저](natively-compiled-stored-procedures.md)   
+ [메모리 액세스에 최적화 된 테이블 사용을 위한 요구 사항](requirements-for-using-memory-optimized-tables.md)   
  [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [ALTER DATABASE 파일 및 파일 그룹 옵션&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)   
- [CREATE PROCEDURE 및 메모리 최적화 테이블](/sql/t-sql/statements/create-procedure-transact-sql)  
+ [프로시저 및 메모리 액세스에 최적화 된 테이블 만들기](/sql/t-sql/statements/create-procedure-transact-sql)  
   
   

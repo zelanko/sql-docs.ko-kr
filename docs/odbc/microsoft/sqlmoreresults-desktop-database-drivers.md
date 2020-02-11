@@ -13,11 +13,11 @@ ms.assetid: 676da17b-daea-487f-b2d8-e579db6547cc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d7eb0c477d3aaf74583a4cf140f8fca9b3bd62f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002297"
 ---
 # <a name="sqlmoreresults-desktop-database-drivers"></a>SQLMoreResults(데스크톱 데이터베이스 드라이버)
-이 함수는 SQL_NO_DATA_FOUND 항상 반환합니다.
+이 함수는 항상 SQL_NO_DATA_FOUND 반환 합니다.

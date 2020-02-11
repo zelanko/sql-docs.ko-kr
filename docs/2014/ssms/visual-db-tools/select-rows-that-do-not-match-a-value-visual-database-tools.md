@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f84f4fcc8a6dde7dcf9f556a72c2599356e231f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067539"
 ---
 # <a name="select-rows-that-do-not-match-a-value-visual-database-tools"></a>값이 일치하지 않는 행 선택(Visual Database Tools)
@@ -27,7 +27,7 @@ ms.locfileid: "63067539"
   
 ### <a name="to-find-rows-that-do-not-match-a-value"></a>값이 일치하지 않는 행을 찾으려면  
   
-1.  검색 조건 내에 사용할 열이나 식을 [조건 창](visual-database-tools.md)에 아직 추가하지 않았다면 추가합니다.  
+1.  검색 조건 내에 사용할 열 이나 식을 [조건 창](visual-database-tools.md)에 아직 추가 하지 않았다면 추가 합니다.  
   
 2.  검색할 데이터 열이나 식이 포함된 행을 찾은 다음 표 형태 창의 **필터** 열에 NOT 연산자와 검색 값을 차례로 입력합니다.  
   
@@ -37,8 +37,8 @@ ms.locfileid: "63067539"
 NOT LIKE 'A%'  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [검색 값 입력 규칙 &#40;Visual Database Tools&#41;](rules-for-entering-search-values-visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools&#41;&#40;검색 값을 입력 하는 규칙](rules-for-entering-search-values-visual-database-tools.md)   
  [검색 조건 지정&#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)  
   
   

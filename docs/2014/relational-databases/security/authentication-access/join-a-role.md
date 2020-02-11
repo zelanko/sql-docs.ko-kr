@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: d1c846f7ed60bbecac64021e9a881312e1f1f64c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011351"
 ---
 # <a name="join-a-role"></a>역할 조인
@@ -61,8 +61,8 @@ ms.locfileid: "63011351"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
- 필요 `ALTER ANY ROLE` 데이터베이스에 대 한 권한이 `ALTER` 자격이 나 역할에 대 한 권한이 **db_securityadmin**합니다.  
+####  <a name="Permissions"></a> 권한  
+ 데이터베이스 `ALTER ANY ROLE` 에 대 한 사용 권한 `ALTER` , 역할에 대 한 사용 권한 또는 **db_securityadmin**의 멤버 자격이 필요 합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
@@ -76,9 +76,9 @@ ms.locfileid: "63011351"
   
 4.  편집할 역할을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
   
-5.  에 **서버 역할 속성-** _server_role_name_ 대화 상자의 합니다 **멤버** 페이지를 클릭 합니다 **추가**합니다.  
+5.  **서버 역할 속성-**_Server_role_name_ 대화 상자의 **멤버** 페이지에서 **추가**를 클릭 합니다.  
   
-6.  **서버 로그인 또는 역할 선택** 대화 상자의 **선택할 개체 이름을 입력하십시오. (예)** 에 이 서버 역할에 추가할 로그인 또는 서버 역할을 입력합니다. 또는 **찾아보기…** 를 클릭하고 **개체 찾아보기** 대화 상자에서 사용 가능한 모든 개체를 선택합니다. 클릭 **확인** 돌아가려면 합니다 **서버 역할 속성-** _server_role_name_ 대화 상자.  
+6.  **서버 로그인 또는 역할 선택** 대화 상자의 **선택할 개체 이름을 입력하십시오. (예)** 에 이 서버 역할에 추가할 로그인 또는 서버 역할을 입력합니다. 또는 **찾아보기…** 를 클릭하고 **개체 찾아보기** 대화 상자에서 사용 가능한 모든 개체를 선택합니다. **확인** 을 클릭 하 여 **서버 역할 속성-**_server_role_name_ 대화 상자로 돌아갑니다.  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -98,9 +98,9 @@ ms.locfileid: "63011351"
   
 7.  편집할 역할을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
   
-8.  에 **데이터베이스 역할 속성-** _database_role_name_ 대화 상자의 합니다 **일반** 페이지를 클릭 합니다 **추가**합니다.  
+8.  **데이터베이스 역할 속성-**_Database_role_name_ 대화 상자의 **일반** 페이지에서 **추가**를 클릭 합니다.  
   
-9. **데이터베이스 사용자 또는 역할 선택** 대화 상자의 **선택할 개체 이름을 입력하십시오. (예)** 에 이 데이터베이스 역할에 추가할 로그인 또는 데이터베이스 역할을 입력합니다. 또는 **찾아보기…** 를 클릭하고 **개체 찾아보기** 대화 상자에서 사용 가능한 모든 개체를 선택합니다. 클릭 **확인** 돌아가려면 합니다 **데이터베이스 역할 속성-** _database_role_name_ 대화 상자.  
+9. **데이터베이스 사용자 또는 역할 선택** 대화 상자의 **선택할 개체 이름을 입력하십시오. (예)** 에 이 데이터베이스 역할에 추가할 로그인 또는 데이터베이스 역할을 입력합니다. 또는 **찾아보기…** 를 클릭하고 **개체 찾아보기** 대화 상자에서 사용 가능한 모든 개체를 선택합니다. **확인** 을 클릭 하 여 **데이터베이스 역할 속성-**_database_role_name_ 대화 상자로 돌아갑니다.  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -136,7 +136,7 @@ ms.locfileid: "63011351"
   
  자세한 내용은 [sp_addrolemember&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [서버 수준 역할](server-level-roles.md)   
  [데이터베이스 수준 역할](../authentication-access/database-level-roles.md)   
  [애플리케이션 역할](../authentication-access/application-roles.md)  

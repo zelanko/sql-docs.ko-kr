@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a55662b38fbd69dc45d8f0031856ad4da5929038
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63136450"
 ---
 # <a name="save-trace-results-to-a-file"></a>파일에 추적 결과 저장
@@ -34,7 +34,7 @@ ms.locfileid: "63136450"
   
 -   쿼리 최적화 수행  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 **@tracefile** 저장 프로시저의 **@tracefile**인수에 경로 및 파일 이름이 지정되면 추적 결과를 이 파일에 저장합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]저장 프로시저 **@tracefile** **sp_trace_create**의 인수에 경로 및 파일 이름이 지정 되 면 추적 결과를 파일에 저장 합니다.  
   
 > [!NOTE]  
 >  추적 파일을 저장하기 위한 경로가 **sp_trace_create** 저장 프로시저에 지정되는 경우 서버에서 해당 디렉터리에 액세스할 수 있어야 합니다. 또한 로컬 디렉터리가 **sp_trace_create**에 지정되는 경우 이는 서버 컴퓨터의 로컬 디렉터리라는 점을 유의하세요.  
@@ -43,7 +43,7 @@ ms.locfileid: "63136450"
   
  추적 결과를 저장하는 방법은 [테이블에 추적 결과 저장&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md) 및 [파일에 추적 결과 저장&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/save-trace-results-to-a-file-sql-server-profiler.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [sp_trace_create&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-create-transact-sql)   
  [추적 만들기&#40;Transact-SQL&#41;](../sql-trace/create-a-trace-transact-sql.md)   
  [추적 만들기&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  

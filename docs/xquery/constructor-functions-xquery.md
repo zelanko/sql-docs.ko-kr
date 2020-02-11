@@ -15,10 +15,10 @@ ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7f64c9ff6664410983d9c3ce7ebdbf07e493ca03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038996"
 ---
 # <a name="constructor-functions-xquery"></a>생성자 함수(XQuery)
@@ -44,7 +44,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
  기본 제공 XSD 유형입니다.  
   
 ## <a name="remarks"></a>설명  
- 생성자는 기본 및 파생 원자 XSD 유형에 대해 지원됩니다. 그러나 하위 **xs: duration**를 포함 하는 **xdt: yearmonthduration and xdt: daytimeduration**, 및 **xs: qname**, **xs:nmtoken**, 및 **xs: notation** 지원 되지 않습니다. 연결된 스키마 컬렉션에서 사용할 수 있는 사용자 정의 원자 유형도 다음 유형으로부터 직접 또는 간접으로 파생될 수 있는 경우 사용할 수 있습니다.  
+ 생성자는 기본 및 파생 원자 XSD 유형에 대해 지원됩니다. 그러나 **xdt: yearMonthDuration 및 xdt: dayTimeDuration**및 **xs: QName**, **xs: NMTOKEN**및 **xs: NOTATION** 을 포함 하는 **xs: duration**의 하위 유형은 지원 되지 않습니다. 연결된 스키마 컬렉션에서 사용할 수 있는 사용자 정의 원자 유형도 다음 유형으로부터 직접 또는 간접으로 파생될 수 있는 경우 사용할 수 있습니다.  
   
 #### <a name="supported-base-types"></a>지원되는 기본 유형  
  다음은 지원되는 기본 유형입니다.  
@@ -135,12 +135,12 @@ TYP($atomicvalue as xdt:anyAtomicType?
 -   인수가 다른 유형의 리터럴인 경우 식은 컴파일 중에 평가됩니다. 값이 유형 제약 조건에 만족하지 않는 경우 빈 시퀀스가 반환됩니다.  
   
 ## <a name="examples"></a>예  
- 이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예를 제공 **xml** AdventureWorks 데이터베이스의 열을 입력 합니다.  
+ 이 항목에서는 AdventureWorks 데이터베이스의 다양 한 **xml** 유형 열에 저장 된 xml 인스턴스에 대 한 XQuery 예를 제공 합니다.  
   
 ### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>A. dateTime() XQuery 함수를 사용하여 이전 제품 설명 검색  
- 이 예제에서는 샘플 XML 문서를 먼저 할당 됩니다는 **xml** 형식 변수입니다. 이 문서에는 세 가지 예제가 포함 되어 있습니다. <`ProductDescription`> 요소를 포함 하는 각각을 <`DateCreated`> 자식 요소입니다.  
+ 이 예에서는 **xml** 유형 변수에 샘플 xml 문서를 먼저 할당 합니다. 이 문서에는 <`ProductDescription` `DateCreated`> 자식 요소가 포함 된 세 개의 샘플 <> 요소가 포함 되어 있습니다.  
   
- 그런 다음 변수를 쿼리하여 특정 날짜 이전에 생성된 제품 설명만 검색합니다. 비교를 위해 쿼리에서 사용 합니다 **xs:dateTime()** 생성자 함수는 날짜를 입력 합니다.  
+ 그런 다음 변수를 쿼리하여 특정 날짜 이전에 생성된 제품 설명만 검색합니다. 비교를 위해 쿼리에서 **xs: dateTime ()** 생성자 함수를 사용 하 여 날짜를 입력 합니다.  
   
 ```  
 declare @x xml  
@@ -173,9 +173,9 @@ select @x.query('
   
  이전 쿼리에서 다음을 유의하세요.  
   
--   FOR... WHERE 루프 구조 검색 되는 \<ProductDescription > WHERE 절에 지정 된 조건을 충족 하는 요소입니다.  
+-   ... WHERE 루프 구조를 사용 하 여 WHERE \<절에 지정 된 조건을 충족 하는 제품 설명> 요소를 검색 합니다.  
   
--   합니다 **datetime ()** 생성자 함수는 생성 하는 데 사용 됩니다 **dateTime** 적절 하 게 비교할 수 있도록 값을 입력 합니다.  
+-   **Datetime ()** 생성자 함수는 **datetime** 형식 값을 생성 하는 데 사용 되므로 적절 하 게 비교할 수 있습니다.  
   
 -   그런 다음 쿼리가 결과 XML을 생성합니다. 일련의 특성을 생성하기 때문에 쉼표와 괄호가 XML 생성에 사용됩니다.  
   
@@ -187,7 +187,7 @@ select @x.query('
    DateCreated="2000-01-01T00:00:00Z"/>  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 생성 &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)   
  [xml 데이터 형식에 대한 XQuery 함수](../xquery/xquery-functions-against-the-xml-data-type.md)  
   

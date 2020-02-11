@@ -10,16 +10,16 @@ ms.assetid: 2414167c-33cb-4103-8105-994cbda29b9d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 724feba9ea1a54edff757274da836039e69f334f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67996069"
 ---
-# <a name="localdberroradminrightsrequired"></a>LOCALDB_ERROR_ADMIN_RIGHTS_REQUIRED
+# <a name="localdb_error_admin_rights_required"></a>LOCALDB_ERROR_ADMIN_RIGHTS_REQUIRED
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  

@@ -14,18 +14,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef709a48f0c5c162e971cebbdf5d49c4417250ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62889844"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>통합 서비스 패키지에 의해 기록된 이벤트
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지는 Windows 응용 프로그램 로그에 다양한 이벤트 메시지를 기록합니다. 이러한 메시지는 패키지가 시작되거나 중지될 때 또는 특정 문제가 발생할 때 기록됩니다.  
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지는 Windows 애플리케이션 로그에 다양한 이벤트 메시지를 기록합니다. 이러한 메시지는 패키지가 시작되거나 중지될 때 또는 특정 문제가 발생할 때 기록됩니다.  
   
  이 항목에서는 패키지가 애플리케이션 이벤트 로그에 기록하는 일반적인 이벤트 메시지에 대해 설명합니다. 이러한 메시지 중 일부는 패키지에 로깅이 사용되도록 설정되지 않은 경우에도 기본적으로 기록되지만 일부 메시지는 패키지에 로깅이 사용되도록 설정된 경우에만 기록됩니다. 패키지가 이러한 메시지를 기본적으로 기록하는지 아니면 로깅이 사용되도록 설정되어 있기 때문에 기록하는지 여부에 관계없이 메시지의 이벤트 원본은 SQLISPackage입니다.  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 실행하는 방법에 대한 일반적인 내용은 [프로젝트 및 패키지 실행](../packages/run-integration-services-ssis-packages.md)을 참조하세요.  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 실행하는 방법에 대한 일반적인 내용은 [프로젝트 및 패키지 실행](../packages/run-integration-services-ssis-packages.md)을 참조하세요.  
   
  패키지 실행 문제를 해결하는 방법에 대한 자세한 내용은 [패키지 실행 문제 해결 도구](../troubleshooting/troubleshooting-tools-for-package-execution.md)를 참조하세요.  
   
@@ -35,7 +36,7 @@ ms.locfileid: "62889844"
 > [!NOTE]  
 >  다음 표에 나열된 메시지는 패키지에 로깅이 사용되도록 설정되지 않은 경우에도 기록됩니다.  
   
-|이벤트 ID|심볼 이름|텍스트 모드|참고|  
+|이벤트 ID|심볼 이름|텍스트|메모|  
 |--------------|-------------------|----------|-----------|  
 |12288|DTS_MSG_PACKAGESTART|패키지 ""이(가) 시작되었습니다.|패키지의 실행이 시작되었습니다.|  
 |12289|DTS_MSG_PACKAGESUCCESS|패키지 ""이(가) 성공적으로 완료되었습니다.|패키지가 성공적으로 실행되었고 더 이상 실행 중이지 않습니다.|  
@@ -55,7 +56,7 @@ ms.locfileid: "62889844"
   
 ### <a name="messages-about-the-stages-of-package-execution"></a>패키지 실행 단계에 대한 메시지  
   
-|이벤트 ID|심볼 이름|텍스트 모드|참고|  
+|이벤트 ID|심볼 이름|텍스트|메모|  
 |--------------|-------------------|----------|-----------|  
 |12544|DTS_MSG_EVENTLOGENTRY|이벤트 이름: %1%r 메시지: %9%r 연산자: %2%r 원본 이름: %3%r 원본 ID: %4%r 실행 ID: %5%r 시작 시간: %6%r 종료 시간: %7%r 데이터 코드: %8|애플리케이션 이벤트 로그에 메시지를 기록하도록 패키지를 구성한 경우 다양한 메시지에서 이 일반 형식을 사용합니다.|  
 |12556|DTS_MSG_EVENTLOGENTRY_PACKAGESTART|이벤트 이름: %1%r 메시지: %9%r 연산자: %2%r 원본 이름: %3%r 원본 ID: %4%r 실행 ID: %5%r 시작 시간: %6%r 종료 시간: %7%r 데이터 코드: %8|패키지가 시작되었습니다.|  
@@ -66,9 +67,9 @@ ms.locfileid: "62889844"
 |12557|DTS_MSG_EVENTLOGENTRY_PACKAGEEND|이벤트 이름: %1%r 메시지: %9%r 연산자: %2%r 원본 이름: %3%r 원본 ID: %4%r 실행 ID: %5%r 시작 시간: %6%r 종료 시간: %7%r 데이터 코드: %8|패키지의 실행이 완료되었습니다.|  
   
 ### <a name="messages-about-events-that-occur"></a>발생한 이벤트에 대한 메시지  
- 다음 표에서는 이벤트의 결과인 일부 메시지만 나열합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 사용하는 오류, 경고 및 정보 메시지의 보다 포괄적인 목록은 [Integration Services 오류 및 메시지 참조](../integration-services-error-and-message-reference.md)를 참조하세요.  
+ 다음 표에서는 이벤트의 결과인 일부 메시지만 나열합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 사용하는 오류, 경고 및 정보 메시지의 보다 포괄적인 목록은 [Integration Services 오류 및 메시지 참조](../integration-services-error-and-message-reference.md)를 참조하세요.  
   
-|이벤트 ID|심볼 이름|텍스트 모드|참고|  
+|이벤트 ID|심볼 이름|텍스트|메모|  
 |--------------|-------------------|----------|-----------|  
 |12251|DTS_MSG_EVENTLOGENTRY_TASKFAILED|이벤트 이름: %1%r 메시지: %9%r 연산자: %2%r 원본 이름: %3%r 원본 ID: %4%r 실행 ID: %5%r 시작 시간: %6%r 종료 시간: %7%r 데이터 코드: %8|태스크가 실패했습니다.|  
 |12250|DTS_MSG_EVENTLOGENTRY_ERROR|이벤트 이름: %1%r 메시지: %9%r 연산자: %2%r 원본 이름: %3%r 원본 ID: %4%r 실행 ID: %5%r 시작 시간: %6%r 종료 시간: %7%r 데이터 코드: %8|이 메시지는 발생한 오류를 보고합니다.|  
@@ -78,7 +79,7 @@ ms.locfileid: "62889844"
 ## <a name="related-tasks"></a>관련 작업  
  실시간으로 로그 항목을 보는 방법에 대한 자세한 내용은 [이벤트 로그 창에서 로그 항목 보기](../view-log-entries-in-the-log-events-window.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 서비스에서 기록하는 이벤트](../service/events-logged-by-the-integration-services-service.md)  
   
   

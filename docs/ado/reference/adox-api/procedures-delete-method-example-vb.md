@@ -1,5 +1,5 @@
 ---
-title: Procedures Delete 메서드 예제 (VB) | Microsoft Docs
+title: 프로시저 Delete 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 94f1ac93-e778-4a40-a85e-94bce5316ac7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f5c7dfc901434c086b46bfb11c70e1eb2ee3bff7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965364"
 ---
 # <a name="procedures-delete-method-example-vb"></a>Procedures Delete 메서드 예제(VB)
-다음 코드를 사용 하 여 프로시저를 삭제 하는 방법에 설명 합니다 [삭제](../../../ado/reference/adox-api/delete-method-adox-collections.md) 메서드는 [프로시저](../../../ado/reference/adox-api/procedures-collection-adox.md) 컬렉션입니다.  
+다음 코드에서는 프로시저 컬렉션의 [delete](../../../ado/reference/adox-api/delete-method-adox-collections.md) 메서드를 사용 하 [여 프로시저를](../../../ado/reference/adox-api/procedures-collection-adox.md) 삭제 하는 방법을 보여 줍니다.  
   
 ```  
 ' BeginDeleteProcedureVB  
@@ -54,9 +54,9 @@ End Sub
 ' EndDeleteProcedureVB  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ActiveConnection 속성 (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [Catalog 개체 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Delete 메서드 (ADOX 컬렉션)](../../../ado/reference/adox-api/delete-method-adox-collections.md)   
+ [Delete 메서드 (ADOX Collections)](../../../ado/reference/adox-api/delete-method-adox-collections.md)   
  [Procedure 개체 (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
  [Procedures 컬렉션(ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)

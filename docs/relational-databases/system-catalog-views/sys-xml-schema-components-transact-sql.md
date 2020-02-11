@@ -1,5 +1,5 @@
 ---
-title: sys.xml_schema_components (TRANSACT-SQL) | Microsoft Docs
+title: sys. xml_schema_components (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,29 +20,29 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 7b9ab66e0a25067440a496c6c5eb04b5d8b61e64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039282"
 ---
-# <a name="sysxmlschemacomponents-transact-sql"></a>sys.xml_schema_components(Transact-SQL)
+# <a name="sysxml_schema_components-transact-sql"></a>sys.xml_schema_components(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  각 XML 스키마 구성 요소에 대해 행을 반환합니다. 쌍 (**collection_id**를 **namespace_id**) 포함 된 네임 스페이스에 복합 외래 키입니다. 명명 된 구성 요소에 대 한 값 **symbol_space**를 **이름**를 **scoping_xml_component_id**를 **is_qualified**,  **xml_namespace_id**하십시오 **xml_collection_id** 고유 합니다.  
+  각 XML 스키마 구성 요소에 대해 행을 반환합니다. 쌍 (**collection_id**, **namespace_id**)은 포함 하는 네임 스페이스에 대 한 복합 외래 키입니다. 명명 된 구성 요소의 경우 **symbol_space**, **name**, **scoping_xml_component_id**, **is_qualified**, **xml_namespace_id** **xml_collection_id** 값은 고유 합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**xml_component_id**|**int**|데이터베이스에 있는 XML 스키마 구성 요소의 고유 ID입니다.|  
 |**xml_collection_id**|**int**|해당 구성 요소의 네임스페이스를 포함하는 XML 스키마 컬렉션의 ID입니다.|  
 |**xml_namespace_id**|**int**|컬렉션 내의 XML 네임스페이스 ID입니다.|  
-|**is_qualified**|**bit**|1 = 이 구성 요소에 명시적 네임스페이스 한정자가 있습니다.<br /><br /> 0 = 구성 요소가 로컬 범위 구성 요소입니다. 이 예에서 쌍 **namespace_id**를 **collection_id**, "없는 네임 스페이스"를 참조 **targetNamespace**합니다.<br /><br /> 와일드카드 구성 요소의 경우 이 값이 1과 같습니다.|  
+|**is_qualified**|**bit**|1 = 이 구성 요소에 명시적 네임스페이스 한정자가 있습니다.<br /><br /> 0 = 구성 요소가 로컬 범위 구성 요소입니다. 이 경우 **namespace_id** **collection_id**쌍은 "네임 스페이스 없음" **targetNamespace**를 참조 합니다.<br /><br /> 와일드카드 구성 요소의 경우 이 값이 1과 같습니다.|  
 |**name**|**nvarchar**<br /><br /> **(4000)**|XML 스키마 구성 요소의 고유 이름입니다. 구성 요소 이름이 없으면 NULL입니다.|  
-|**symbol_space**|**char(1)**|이 기호 이름이 고유한의 공간에 따라 **종류**:<br /><br /> N = 없음<br /><br /> T = 유형<br /><br /> E = 요소<br /><br /> M = 모델 그룹<br /><br /> A = 특성<br /><br /> G = 특성 그룹|  
-|**symbol_space_desc**|**nvarchar**<br /><br /> **(60)**|이 기호 이름이 고유한의 공간의 설명에 따라 **종류**:<br /><br /> 없음<br /><br /> TYPE<br /><br /> ELEMENT<br /><br /> MODEL_GROUP<br /><br /> ATTRIBUTE<br /><br /> ATTRIBUTE_GROUP|  
-|**kind**|**char(1)**|XML 스키마 구성 요소의 종류입니다.<br /><br /> N = 모든 유형(특수 기본 제공 구성 요소)<br /><br /> Z = 모든 단순 유형(특수 기본 제공 구성 요소)<br /><br /> P = 기본 유형(기본 제공 유형)<br /><br /> S = 단순 유형<br /><br /> L = 목록 유형<br /><br /> U = 공용 구조체 유형<br /><br /> C = 복합 단순 유형(단순 유형에서 파생됨)<br /><br /> K = 복합 유형<br /><br /> E = 요소<br /><br /> M = 모델 그룹<br /><br /> W = 요소 와일드카드<br /><br /> A = 특성<br /><br /> G = 특성 그룹<br /><br /> V = 특성 와일드카드|  
+|**symbol_space**|**char (1)**|**Kind**를 기반으로이 기호 이름이 고유 하 게 사용 되는 공간입니다.<br /><br /> N = 없음<br /><br /> T = 유형<br /><br /> E = 요소<br /><br /> M = 모델 그룹<br /><br /> A = 특성<br /><br /> G = 특성 그룹|  
+|**symbol_space_desc**|**nvarchar**<br /><br /> **(60)**|**Kind**를 기반으로이 기호 이름이 고유한 공간에 대 한 설명입니다.<br /><br /> 없음<br /><br /> TYPE<br /><br /> ELEMENT<br /><br /> MODEL_GROUP<br /><br /> ATTRIBUTE<br /><br /> ATTRIBUTE_GROUP|  
+|**종류로**|**char (1)**|XML 스키마 구성 요소의 종류입니다.<br /><br /> N = 모든 유형(특수 기본 제공 구성 요소)<br /><br /> Z = 모든 단순 유형(특수 기본 제공 구성 요소)<br /><br /> P = 기본 유형(기본 제공 유형)<br /><br /> S = 단순 유형<br /><br /> L = 목록 유형<br /><br /> U = 공용 구조체 유형<br /><br /> C = 복합 단순 유형(단순 유형에서 파생됨)<br /><br /> K = 복합 유형<br /><br /> E = 요소<br /><br /> M = 모델 그룹<br /><br /> W = 요소 와일드카드<br /><br /> A = 특성<br /><br /> G = 특성 그룹<br /><br /> V = 특성 와일드카드|  
 |**kind_desc**|**nvarchar**<br /><br /> **(60)**|XML 스키마 구성 요소의 종류에 대한 설명입니다.<br /><br /> ANY_TYPE<br /><br /> ANY_SIMPLE_TYPE<br /><br /> PRIMITIVE_TYPE<br /><br /> SIMPLE_TYPE<br /><br /> LIST_TYPE<br /><br /> UNION_TYPE<br /><br /> COMPLEX_SIMPLE_TYPE<br /><br /> COMPLEX_TYPE<br /><br /> ELEMENT<br /><br /> MODEL_GROUP<br /><br /> ELEMENT_WILDCARD<br /><br /> ATTRIBUTE<br /><br /> ATTRIBUTE_GROUP<br /><br /> ATTRIBUTE_WILDCARD|  
-|**derivation**|**char(1)**|파생 유형에 대한 파생 방법입니다.<br /><br /> N = 없음(파생되지 않음)<br /><br /> X = 확장<br /><br /> R = 제한<br /><br /> S = 대체|  
+|**derivation**|**char (1)**|파생 유형에 대한 파생 방법입니다.<br /><br /> N = 없음(파생되지 않음)<br /><br /> X = 확장<br /><br /> R = 제한<br /><br /> S = 대체|  
 |**derivation_desc**|**nvarchar**<br /><br /> **(60)**|파생 유형의 파생 방법에 대한 설명입니다.<br /><br /> 없음<br /><br /> EXTENSION<br /><br /> RESTRICTION<br /><br /> SUBSTITUTION|  
 |**base_xml_component_id**|**int**|이 구성 요소가 파생된 원래 구성 요소의 ID입니다. 없으면 NULL입니다.|  
 |**scoping_xml_component_id**|**int**|범위 지정 구성 요소의 고유 ID입니다. 없으면 NULL입니다(전역 범위).|  
@@ -50,8 +50,8 @@ ms.locfileid: "68039282"
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [XML 스키마 &#40;XML 형식 시스템&#41; 카탈로그 뷰 &#40;SQL 트랜잭션&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
+ [Xml 스키마 &#40;XML 형식 시스템&#41; 카탈로그 뷰 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
   
   

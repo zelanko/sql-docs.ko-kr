@@ -1,5 +1,5 @@
 ---
-title: Generate (MDX) | Microsoft Docs
+title: 생성 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c7a6008129d6b0a4c59412428c31f6e5de625f1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68005899"
 ---
 # <a name="generate-mdx"></a>Generate(MDX)
@@ -41,17 +41,17 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  *String_Expression*  
  유효한 문자열 식으로서, 일반적으로 지정된 집합에 있는 각 튜플의 현재 멤버 이름(CurrentMember.Name)입니다.  
   
- *구분 기호*  
+ *Delimiter*  
  문자열 식으로 표현된 유효한 구분 기호입니다.  
   
 ## <a name="remarks"></a>설명  
- 두 번째 집합을 지정 합니다 **생성** 함수는 첫 번째 집합의 각 튜플에 두 번째 집합의 튜플을 적용 하 여 생성 된 집합을 반환 하 고 결과 조인한 다음 집합을 union으로 합니다. 하는 경우 **모든** 지정 된 경우 함수에는 결과 집합에 중복 요소가 유지 됩니다.  
+ 두 번째 집합이 지정 된 경우 **생성** 함수는 첫 번째 집합의 각 튜플에 두 번째 집합의 튜플을 적용 한 다음 결과 집합을 union으로 조인 하 여 생성 된 집합을 반환 합니다. **ALL** 이 지정 된 경우 함수는 결과 집합에 중복 요소를 유지 합니다.  
   
- 문자열 식이 지정 하는 경우는 **생성** 함수는 지정 된 문자열 식을 첫 번째 집합의 각 튜플에 대해 계산한 다음 결과 연결 하 여 생성 된 문자열을 반환 합니다. 연결된 문자열에서 각 결과를 구분하여 문자열을 구분할 수도 있습니다.  
+ 문자열 식이 지정 된 경우 **생성** 함수는 첫 번째 집합의 각 튜플에 대해 지정 된 문자열 식을 계산한 다음 결과를 연결 하 여 생성 된 문자열을 반환 합니다. 연결된 문자열에서 각 결과를 구분하여 문자열을 구분할 수도 있습니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="set"></a>Set  
+### <a name="set"></a>설정  
  다음 예에서 [Date].[Calendar Year].[Calendar Year].MEMBERS 집합에 4개의 멤버가 있으므로 쿼리는 Internet Sales Amount 측정값을 포함하는 집합을 4번 반환합니다.  
   
 ```  
@@ -72,7 +72,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
- 가장 일반적으로 사용 **생성** 집합 복잡 한 계산 하는 멤버 집합에 대해 TopCount와 같은 식에 있습니다. 다음 예제 쿼리에서는 Rows의 각 Calendar Year에 대한 상위 10개의 Product를 표시합니다.  
+ **생성** 의 가장 일반적인 용도는 멤버 집합에 대해 TopCount와 같은 복잡 한 집합 식을 계산 하는 것입니다. 다음 예제 쿼리에서는 Rows의 각 Calendar Year에 대한 상위 10개의 Product를 표시합니다.  
   
 ```  
 SELECT   
@@ -89,7 +89,7 @@ ON 1
 FROM [Adventure Works]  
 ```  
   
- 다른 상위 10 개의 각 연도에 표시 됩니다 사용 **생성** 해야만이 결과 얻을 수 있습니다. 다음 예와 같이 단순히 Calendar Year와 상위 10개의 Product 집합을 Crossjoin하면 매년 상위 10개의 Product가 항상 반복하여 표시됩니다.  
+ 각 연도에 대해 서로 다른 상위 10 개가 표시 되 고 **생성** 을 사용 하 여이 결과를 얻는 유일한 방법이 있습니다. 다음 예와 같이 단순히 Calendar Year와 상위 10개의 Product 집합을 Crossjoin하면 매년 상위 10개의 Product가 항상 반복하여 표시됩니다.  
   
 ```  
 SELECT   
@@ -104,8 +104,8 @@ ON 1
 FROM [Adventure Works]  
 ```  
   
-### <a name="string"></a>문자열  
- 다음 예제에서는 사용을 보여 줍니다 **생성** 문자열을 반환 합니다.  
+### <a name="string"></a>String  
+ 다음 예에서는 **생성** 을 사용 하 여 문자열을 반환 하는 방법을 보여 줍니다.  
   
 ```  
 WITH   
@@ -124,9 +124,9 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  이러한 형태의 합니다 **생성** 함수 유용할 수 있습니다 계산을 디버깅할 때 집합의 모든 멤버의 이름을 표시 하는 문자열을 반환할 수 있습니다. 이 집합의 엄격한 MDX 표현 보다 읽기 쉬울 수 있습니다 하는 [SetToStr &#40;MDX&#41; ](../mdx/settostr-mdx.md) 함수에서 반환 합니다.  
+>  이러한 형태의 **생성** 함수는 계산을 디버깅할 때 유용할 수 있습니다 .이는 집합에 있는 모든 멤버의 이름을 표시 하는 문자열을 반환할 수 있기 때문입니다. 이는 [Settostr &#40;MDX&#41;](../mdx/settostr-mdx.md) 함수가 반환 하는 집합의 엄격한 MDX 표현 보다 읽기 쉬울 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

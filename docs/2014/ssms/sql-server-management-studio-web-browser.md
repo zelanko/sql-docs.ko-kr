@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4d8969e2a299f501fb35eb56a435c6a2e56a5bb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63127028"
 ---
 # <a name="sql-server-management-studio-web-browser"></a>SQL Server Management Studio 웹 브라우저
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 버전을 호스팅합니다. 이 웹 브라우저를 사용하면 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에 있으면서 URL을 탐색하고 MSDN Library 도움말 항목을 볼 수 있습니다. **보기** 메뉴에서 **웹 브라우저** 를 가리킨 다음 **브라우저 표시**를 클릭하여 웹 브라우저에 액세스할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [일반 사용자 인터페이스 요소](general-user-interface-elements.md)  
   
   

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 85bc34af971db386862528ac36ea04fef33f2daa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035689"
 ---
 # <a name="projects-sql-server-management-studio"></a>프로젝트(SQL Server Management Studio)
@@ -55,7 +55,7 @@ ms.locfileid: "63035689"
 |쿼리에 대한 연결 정보를 변경하는 방법에 대해 설명합니다.|[쿼리와 연관된 연결 변경](change-the-connection-associated-with-a-query.md)|  
 |연결 속성을 변경하는 방법에 대해 설명합니다.|[프로젝트의 연결 속성 보기 및 변경](view-or-change-the-properties-of-a-connection-in-a-project.md)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [솔루션 탐색기](solution-explorer.md)   
  [솔루션 &#40;SQL Server Management Studio&#41;](solutions-sql-server-management-studio.md)   
  [솔루션 탐색기 원본 제어](../../database-engine/solution-explorer-source-control.md)  

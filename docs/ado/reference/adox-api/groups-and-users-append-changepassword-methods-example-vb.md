@@ -16,17 +16,17 @@ ms.assetid: c9426757-9cdd-4a95-b506-d3d011569109
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d2b384167358f578835256c0e3f7906db20cf5bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966207"
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vb"></a>Groups 및 Users Append, ChangePassword 메서드 예제(VB)
-이 예제에서는 [Append](../../../ado/reference/adox-api/append-method-adox-groups.md) 메서드의 [그룹](../../../ado/reference/adox-api/groups-collection-adox.md), 뿐만 [추가](../../../ado/reference/adox-api/append-method-adox-users.md) 메서드의 [사용자](../../../ado/reference/adox-api/users-collection-adox.md) 새 추가하여[그룹](../../../ado/reference/adox-api/group-object-adox.md) 및 새 [사용자](../../../ado/reference/adox-api/user-object-adox.md) 시스템입니다. 새 **그룹** 에 추가 되는 **그룹** 새 컬렉션 **사용자**합니다. 따라서 새 **사용자** 에 추가 되는 **그룹**합니다. 또한 합니다 [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) 메서드를 지정 하는 합니다 **사용자** 암호.  
+이 예제에서는 시스템에 새 [그룹](../../../ado/reference/adox-api/group-object-adox.md) 및 새 [사용자](../../../ado/reference/adox-api/user-object-adox.md) 를 추가 하 여 [사용자](../../../ado/reference/adox-api/users-collection-adox.md) 의 [추가](../../../ado/reference/adox-api/append-method-adox-users.md) 방법 뿐만 아니라 [그룹](../../../ado/reference/adox-api/groups-collection-adox.md)의 [추가](../../../ado/reference/adox-api/append-method-adox-groups.md) 메서드를 보여 줍니다. 새 **그룹** 은 새 **사용자**의 **그룹** 컬렉션에 추가 됩니다. 따라서 새 **사용자** 가 **그룹**에 추가 됩니다. 또한 [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) 메서드를 사용 하 여 **사용자** 암호를 지정 합니다.  
   
 > [!NOTE]
->  지정 해야 하는 경우 Windows 인증을 지 원하는 데이터 원본 공급자에 연결 하는, **Trusted_Connection = yes** 하거나 **Integrated Security = SSPI** 사용자 ID와 암호 대신 연결 문자열에 대 한 정보입니다.  
+>  Windows 인증을 지 원하는 데이터 원본 공급자에 연결 하는 경우 연결 문자열에 사용자 ID 및 암호 정보 대신 **Trusted_Connection = yes** 또는 **INTEGRATED Security = SSPI** 를 지정 해야 합니다.  
   
 ```  
 ' BeginGroupVB  
@@ -122,12 +122,12 @@ End Sub
 ' EndGroupVB  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [Append 메서드 (ADOX 그룹)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
+## <a name="see-also"></a>참고 항목  
+ [Append 메서드 (ADOX Groups)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
  [Append 메서드 (ADOX 사용자)](../../../ado/reference/adox-api/append-method-adox-users.md)   
  [Catalog 개체 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [ChangePassword 메서드 (ADOX)](../../../ado/reference/adox-api/changepassword-method-adox.md)   
- [그룹 개체 (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)   
+ [Group 개체 (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)   
  [Groups 컬렉션 (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
- [사용자 개체 (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)   
+ [User 개체 (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)   
  [Users 컬렉션(ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)

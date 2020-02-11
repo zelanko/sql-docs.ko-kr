@@ -1,5 +1,5 @@
 ---
-title: '5단계: 4 단원 자습서 패키지 테스트 | Microsoft Docs'
+title: '5단계: 4단원 자습서 패키지 테스트 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fab91a2df7d0401e8301589b1dd0d21027e579c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891298"
 ---
 # <a name="step-5-testing-the-lesson-4-tutorial-package"></a>5단계: 4단원 자습서 패키지 테스트
@@ -46,6 +46,6 @@ ms.locfileid: "62891298"
   
 -   메모장이나 텍스트 편집기에서 ErrorOutput.txt 파일을 엽니다. 기본 열 순서는 AverageRate, CurrencyID, CurrencyDate, EndOfDateRate, ErrorCode, ErrorColumn, ErrorDescription입니다.  
   
-     파일의 모든 행에 일치하지 않는 CurrencyID 값인 BAD, ErrorCode 값인 -1071607778, ErrorColumn 값인 0 및 ErrorDescription 값인 "조회 중에 행에서 일치하는 항목을 생성하지 않았습니다"가 포함됩니다. 열 관련 오류가 아니라 조회 작업 오류이므로 ErrorColumn 값은 0으로 설정됩니다. 을 선택합니다.  
+     파일의 모든 행에 일치하지 않는 CurrencyID 값인 BAD, ErrorCode 값인 -1071607778, ErrorColumn 값인 0 및 ErrorDescription 값인 "조회 중에 행에서 일치하는 항목을 생성하지 않았습니다"가 포함됩니다. 열 관련 오류가 아니라 조회 작업 오류이므로 ErrorColumn 값은 0으로 설정됩니다. .  
   
   

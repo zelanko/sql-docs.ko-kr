@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 746d547b680817868de33759983dc908e9806bb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63128760"
 ---
 # <a name="permissions-database-engine"></a>사용 권한(데이터베이스 엔진)
@@ -30,9 +30,9 @@ ms.locfileid: "63128760"
   
 -   [사용 권한 명명 규칙](#_conventions)  
   
--   [특정 보안 개체와 관련 된 권한](#_securables)  
+-   [특정 보안 개체와 관련된 사용 권한](#_securables)  
   
--   [SQL Server 사용 권한](#_permissions)  
+-   [SQL Server 권한](#_permissions)  
   
 -   [사용 권한 검사 알고리즘](#_algorithm)  
   
@@ -92,7 +92,7 @@ ms.locfileid: "63128760"
      개체에 대한 REFERENCES 권한은 해당 개체를 참조하는 `WITH SCHEMABINDING` 절을 사용하여 FUNCTION 또는 VIEW를 만드는 데 필요합니다.  
   
 ## <a name="chart-of-sql-server-permissions"></a>SQL Server 사용 권한 차트  
- pdf 형식의 모든 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 권한에 대한 포스터 크기의 차트를 보려면 [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142)를 참조하세요.  
+ Pdf 형식의 모든 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 사용 권한에 대 한 포스터 크기 차트를 보려면을 [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142)참조 하십시오.  
   
 ##  <a name="_securables"></a> 특정 보안 개체에 적용 가능한 사용 권한  
  다음 표에서는 주요 사용 권한 클래스와 사용 권한이 적용될 수 있는 보안 개체 종류를 나열합니다.  
@@ -102,7 +102,7 @@ ms.locfileid: "63128760"
 |SELECT|동의어<br /><br /> 테이블 및 열<br /><br /> 테이블 반환 함수, [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR(공용 언어 런타임) 및 열<br /><br /> 뷰 및 열|  
 |VIEW CHANGE TRACKING|테이블<br /><br /> 스키마|  
 |UPDATE|동의어<br /><br /> 테이블 및 열<br /><br /> 뷰 및 열<br /><br /> 시퀀스 개체|  
-|REFERENCES|스칼라 및 집계 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐<br /><br /> 테이블 및 열<br /><br /> 테이블 반환 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR) 및 열<br /><br /> 유형<br /><br /> 뷰 및 열<br /><br /> 시퀀스 개체|  
+|REFERENCES|스칼라 및 집계 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐<br /><br /> 테이블 및 열<br /><br /> 테이블 반환 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR) 및 열<br /><br /> 형식<br /><br /> 뷰 및 열<br /><br /> 시퀀스 개체|  
 |INSERT|동의어<br /><br /> 테이블 및 열<br /><br /> 뷰 및 열|  
 |Delete|동의어<br /><br /> 테이블 및 열<br /><br /> 뷰 및 열|  
 |CREATE 문을 실행하기 전에|프로시저([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 스칼라 및 집계 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 동의어<br /><br /> CLR 유형|  
@@ -116,7 +116,7 @@ ms.locfileid: "63128760"
 > [!CAUTION]  
 >  설치 시 시스템 개체에 부여되는 기본 사용 권한은 발생할 수 있는 위협이 있는지 신중하게 평가되며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 보안 강화의 일환으로 변경할 필요는 없습니다. 시스템 개체에 대한 사용 권한을 변경하면 기능이 제한 또는 중단될 수 있으며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치가 지원되지 않는 상태가 될 수 있습니다.  
   
-##  <a name="_permissions"></a> SQL Server 및 SQL Database 권한  
+##  <a name="_permissions"></a>SQL Server 및 SQL Database 권한  
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 권한의 전체 목록을 제공합니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 사용 권한은 지원되는 기본 보안 개체에만 사용할 수 있습니다. 서버 수준 사용 권한은 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 부여될 수 없지만 일부 경우에 데이터베이스 사용 권한을 대신 사용할 수 있습니다.  
   
 |기본 보안 개체|기본 보안 개체에 대한 세부적 사용 권한|사용 권한 유형 코드|기본 보안 개체를 포함하는 보안 개체|기본 보안 개체의 세부적 사용 권한을 나타내는 컨테이너 보안 개체의 사용 권한|  
@@ -138,11 +138,11 @@ ms.locfileid: "63128760"
 |AVAILABILITY GROUP|CONTROL|CL|SERVER|CONTROL SERVER|  
 |AVAILABILITY GROUP|TAKE OWNERSHIP|TO|SERVER|CONTROL SERVER|  
 |AVAILABILITY GROUP|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
-|CERTIFICATE|ALTER|AL|DATABASE|ALTER ANY CERTIFICATE|  
-|CERTIFICATE|CONTROL|CL|DATABASE|CONTROL|  
-|CERTIFICATE|REFERENCES|RF|DATABASE|REFERENCES|  
-|CERTIFICATE|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
-|CERTIFICATE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
+|인증서|ALTER|AL|DATABASE|ALTER ANY CERTIFICATE|  
+|인증서|CONTROL|CL|DATABASE|CONTROL|  
+|인증서|REFERENCES|RF|DATABASE|REFERENCES|  
+|인증서|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
+|인증서|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |CONTRACT|ALTER|AL|DATABASE|ALTER ANY CONTRACT|  
 |CONTRACT|CONTROL|CL|DATABASE|CONTROL|  
 |CONTRACT|REFERENCES|RF|DATABASE|REFERENCES|  
@@ -157,7 +157,7 @@ ms.locfileid: "63128760"
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
-|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> 참고: [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에만 적용됩니다.|SERVER|ALTER ANY EVENT SESSION|  
+|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> 참고:에 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]만 적용 됩니다.|SERVER|ALTER ANY EVENT SESSION|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|  
@@ -165,7 +165,7 @@ ms.locfileid: "63128760"
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> 참고: [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에만 적용됩니다.|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> 참고:에 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]만 적용 됩니다.|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
@@ -204,7 +204,7 @@ ms.locfileid: "63128760"
 |DATABASE|Delete|DL|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE 문을 실행하기 전에|EX|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
-|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> 참고: [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에만 적용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 ALTER ANY CONNECTION을 사용합니다.|SERVER|ALTER ANY CONNECTION|  
+|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> 참고:에 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]만 적용 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 ALTER ANY CONNECTION을 사용합니다.|SERVER|ALTER ANY CONNECTION|  
 |DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|  
 |DATABASE|SELECT|SL|SERVER|CONTROL SERVER|  
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  
@@ -228,7 +228,7 @@ ms.locfileid: "63128760"
 |FULLTEXT STOPLIST|REFERENCES|RF|DATABASE|REFERENCES|  
 |FULLTEXT STOPLIST|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |FULLTEXT STOPLIST|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
-|Login|ALTER|AL|SERVER|ALTER ANY LOGIN|  
+|LOGIN|ALTER|AL|SERVER|ALTER ANY LOGIN|  
 |LOGIN|CONTROL|CL|SERVER|CONTROL SERVER|  
 |LOGIN|IMPERSONATE|IM|SERVER|CONTROL SERVER|  
 |LOGIN|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
@@ -278,40 +278,40 @@ ms.locfileid: "63128760"
 |SCHEMA|UPDATE|UP|DATABASE|UPDATE|  
 |SCHEMA|VIEW CHANGE TRACKING|VWCT|DATABASE|VIEW CHANGE TRACKING|  
 |SCHEMA|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
-|SERVER|ADMINISTER BULK OPERATIONS|ADBO|해당 사항 없음|해당 사항 없음|  
-|SERVER|ALTER ANY CONNECTION|ALCO|해당 사항 없음|해당 사항 없음|  
-|SERVER|ALTER ANY CREDENTIAL|ALCD|해당 사항 없음|해당 사항 없음|  
-|SERVER|ALTER ANY DATABASE|ALDB|해당 사항 없음|해당 사항 없음|  
-|SERVER|ALTER ANY ENDPOINT|ALHE|해당 사항 없음|해당 사항 없음|  
-|SERVER|ALTER ANY EVENT NOTIFICATION|ALES|해당 사항 없음|해당 사항 없음|  
-|SERVER|ALTER ANY EVENT SESSION|AAES|해당 사항 없음|해당 사항 없음|  
-|SERVER|ALTER ANY LINKED SERVER|ALLS|해당 사항 없음|해당 사항 없음|  
-|SERVER|ALTER ANY LOGIN|ALLG|해당 사항 없음|해당 사항 없음|  
-|SERVER|ALTER ANY SERVER AUDIT|ALAA|해당 사항 없음|해당 사항 없음|  
-|SERVER|ALTER ANY SERVER ROLE|ALSR|해당 사항 없음|해당 사항 없음|  
-|SERVER|ALTER AVAILABILITY GROUP|ALAG|해당 사항 없음|해당 사항 없음|  
-|SERVER|ALTER RESOURCES|ALRS|해당 사항 없음|해당 사항 없음|  
-|SERVER|ALTER SERVER STATE|ALSS|해당 사항 없음|해당 사항 없음|  
-|SERVER|ALTER SETTINGS|ALST|해당 사항 없음|해당 사항 없음|  
-|SERVER|ALTER TRACE|ALTR|해당 사항 없음|해당 사항 없음|  
-|SERVER|AUTHENTICATE SERVER|AUTH|해당 사항 없음|해당 사항 없음|  
-|SERVER|CONNECT ANY DATABASE|CADB|해당 사항 없음|해당 사항 없음|  
-|SERVER|CONNECT SQL|COSQ|해당 사항 없음|해당 사항 없음|  
-|SERVER|CONTROL SERVER|CL|해당 사항 없음|해당 사항 없음|  
-|SERVER|CREATE ANY DATABASE|CRDB|해당 사항 없음|해당 사항 없음|  
-|SERVER|CREATE AVAILABILTITY GROUP|CRAC|해당 사항 없음|해당 사항 없음|  
-|SERVER|CREATE DDL EVENT NOTIFICATION|CRDE|해당 사항 없음|해당 사항 없음|  
-|SERVER|CREATE ENDPOINT|CRHE|해당 사항 없음|해당 사항 없음|  
-|SERVER|CREATE SERVER ROLE|CRSR|해당 사항 없음|해당 사항 없음|  
-|SERVER|CREATE TRACE EVENT NOTIFICATION|CRTE|해당 사항 없음|해당 사항 없음|  
-|SERVER|EXTERNAL ACCESS ASSEMBLY|XA|해당 사항 없음|해당 사항 없음|  
-|SERVER|IMPERSONATE ANY LOGIN|IAL|해당 사항 없음|해당 사항 없음|  
-|SERVER|SELECT ALL USER SECURABLES|SUS|해당 사항 없음|해당 사항 없음|  
-|SERVER|SHUTDOWN|SHDN|해당 사항 없음|해당 사항 없음|  
-|SERVER|UNSAFE ASSEMBLY|XU|해당 사항 없음|해당 사항 없음|  
-|SERVER|VIEW ANY DATABASE|VWDB|해당 사항 없음|해당 사항 없음|  
-|SERVER|VIEW ANY DEFINITION|VWAD|해당 사항 없음|해당 사항 없음|  
-|SERVER|VIEW SERVER STATE|VWSS|해당 사항 없음|해당 사항 없음|  
+|SERVER|ADMINISTER BULK OPERATIONS|ADBO|해당 없음|해당 없음|  
+|SERVER|ALTER ANY CONNECTION|ALCO|해당 없음|해당 없음|  
+|SERVER|ALTER ANY CREDENTIAL|ALCD|해당 없음|해당 없음|  
+|SERVER|ALTER ANY DATABASE|ALDB|해당 없음|해당 없음|  
+|SERVER|ALTER ANY ENDPOINT|ALHE|해당 없음|해당 없음|  
+|SERVER|ALTER ANY EVENT NOTIFICATION|ALES|해당 없음|해당 없음|  
+|SERVER|ALTER ANY EVENT SESSION|AAES|해당 없음|해당 없음|  
+|SERVER|ALTER ANY LINKED SERVER|ALLS|해당 없음|해당 없음|  
+|SERVER|ALTER ANY LOGIN|ALLG|해당 없음|해당 없음|  
+|SERVER|ALTER ANY SERVER AUDIT|ALAA|해당 없음|해당 없음|  
+|SERVER|ALTER ANY SERVER ROLE|ALSR|해당 없음|해당 없음|  
+|SERVER|ALTER AVAILABILITY GROUP|ALAG|해당 없음|해당 없음|  
+|SERVER|ALTER RESOURCES|ALRS|해당 없음|해당 없음|  
+|SERVER|ALTER SERVER STATE|ALSS|해당 없음|해당 없음|  
+|SERVER|ALTER SETTINGS|ALST|해당 없음|해당 없음|  
+|SERVER|ALTER TRACE|ALTR|해당 없음|해당 없음|  
+|SERVER|AUTHENTICATE SERVER|AUTH|해당 없음|해당 없음|  
+|SERVER|CONNECT ANY DATABASE|CADB|해당 없음|해당 없음|  
+|SERVER|CONNECT SQL|COSQ|해당 없음|해당 없음|  
+|SERVER|CONTROL SERVER|CL|해당 없음|해당 없음|  
+|SERVER|CREATE ANY DATABASE|CRDB|해당 없음|해당 없음|  
+|SERVER|CREATE AVAILABILTITY GROUP|CRAC|해당 없음|해당 없음|  
+|SERVER|CREATE DDL EVENT NOTIFICATION|CRDE|해당 없음|해당 없음|  
+|SERVER|CREATE ENDPOINT|CRHE|해당 없음|해당 없음|  
+|SERVER|CREATE SERVER ROLE|CRSR|해당 없음|해당 없음|  
+|SERVER|CREATE TRACE EVENT NOTIFICATION|CRTE|해당 없음|해당 없음|  
+|SERVER|EXTERNAL ACCESS ASSEMBLY|XA|해당 없음|해당 없음|  
+|SERVER|IMPERSONATE ANY LOGIN|IAL|해당 없음|해당 없음|  
+|SERVER|SELECT ALL USER SECURABLES|SUS|해당 없음|해당 없음|  
+|SERVER|SHUTDOWN|SHDN|해당 없음|해당 없음|  
+|SERVER|UNSAFE ASSEMBLY|XU|해당 없음|해당 없음|  
+|SERVER|VIEW ANY DATABASE|VWDB|해당 없음|해당 없음|  
+|SERVER|VIEW ANY DEFINITION|VWAD|해당 없음|해당 없음|  
+|SERVER|VIEW SERVER STATE|VWSS|해당 없음|해당 없음|  
 |SERVER ROLE|ALTER|AL|SERVER|ALTER ANY SERVER ROLE|  
 |SERVER ROLE|CONTROL|CL|SERVER|CONTROL SERVER|  
 |SERVER ROLE|TAKE OWNERSHIP|TO|SERVER|CONTROL SERVER|  
@@ -332,7 +332,7 @@ ms.locfileid: "63128760"
 |TYPE|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |TYPE|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
 |USER|ALTER|AL|DATABASE|ALTER ANY USER|  
-|User|CONTROL|CL|DATABASE|CONTROL|  
+|USER|CONTROL|CL|DATABASE|CONTROL|  
 |USER|IMPERSONATE|IM|DATABASE|CONTROL|  
 |USER|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |XML SCHEMA COLLECTION|ALTER|AL|SCHEMA|ALTER|  
@@ -399,7 +399,7 @@ ms.locfileid: "63128760"
 ##  <a name="_examples"></a> 예  
  이 섹션의 예에서는 사용 권한 정보를 검색하는 방법을 보여 줍니다.  
   
-### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>1\. 부여 가능한 사용 권한의 전체 목록 반환  
+### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>A. 부여 가능한 사용 권한의 전체 목록 반환  
  다음 문에서는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 함수를 사용하여 모든 `fn_builtin_permissions` 사용 권한을 반환합니다. 자세한 내용은 [sys.fn_builtin_permissions&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql)를 참조하세요.  
   
 ```  
@@ -407,7 +407,7 @@ SELECT * FROM fn_builtin_permissions(default);
 GO  
 ```  
   
-### <a name="b-returning-the-permissions-on-a-particular-class-of-objects"></a>2\. 특정 개체 클래스의 사용 권한 반환  
+### <a name="b-returning-the-permissions-on-a-particular-class-of-objects"></a>B. 특정 개체 클래스의 사용 권한 반환  
  다음 예제에서는 `fn_builtin_permissions` 를 사용하여 보안 개체 범주에 사용할 수 있는 모든 사용 권한을 표시합니다. 다음 예에서는 어셈블리의 사용 권한을 반환합니다.  
   
 ```  
@@ -415,7 +415,7 @@ SELECT * FROM fn_builtin_permissions('assembly');
 GO    
 ```  
   
-### <a name="c-returning-the-permissions-granted-to-the-executing-principal-on-an-object"></a>3\. 개체의 실행 보안 주체에 부여된 사용 권한 반환  
+### <a name="c-returning-the-permissions-granted-to-the-executing-principal-on-an-object"></a>C. 개체의 실행 보안 주체에 부여된 사용 권한 반환  
  다음 예에서는 `fn_my_permissions` 를 사용하여 지정된 보안 개체에 대해 해당 보안 주체가 가진 유효 사용 권한의 목록을 반환합니다. 다음 예에서는 `Orders55`라는 개체의 사용 권한을 반환합니다. 자세한 내용은 [sys.fn_my_permissions&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-my-permissions-transact-sql)를 참조하세요.  
   
 ```  
@@ -423,7 +423,7 @@ SELECT * FROM fn_my_permissions('Orders55', 'object');
 GO  
 ```  
   
-### <a name="d-returning-the-permissions-applicable-to-a-specified-object"></a>4\. 지정된 개체에 적용할 수 있는 사용 권한 반환  
+### <a name="d-returning-the-permissions-applicable-to-a-specified-object"></a>D. 지정된 개체에 적용할 수 있는 사용 권한 반환  
  다음 예에서는 `Yttrium`이라는 개체에 적용할 수 있는 사용 권한을 반환합니다. `OBJECT_ID` 개체의 ID를 검색하는 데 기본 제공 함수인 `Yttrium`가 사용됩니다.  
   
 ```  
@@ -432,8 +432,8 @@ SELECT * FROM sys.database_permissions
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [사용 권한 계층&#40;데이터베이스 엔진&#41;](permissions-hierarchy-database-engine.md)   
- [sys.database_permissions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql)  
+ [sys.database_permissions&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql)  
   
   

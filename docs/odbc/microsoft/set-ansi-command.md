@@ -1,5 +1,5 @@
 ---
-title: SET ANSI 명령 | Microsoft Docs
+title: ANSI 명령 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: cf9a01b2-14bf-458c-a73c-2a58ddef32d8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d32e4dc27568b37f273ef654ebd45d26ca23e555
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67997769"
 ---
 # <a name="set-ansi-command"></a>SET ANSI 명령
-길이가 다른 문자열을 비교 하는 방법을 사용 하 여 결정 됩니다는 = Visual FoxPro SQL 명령에는 연산자입니다.  
+Visual FoxPro SQL 명령의 = 연산자를 사용 하 여 길이가 다른 문자열을 비교 하는 방법을 결정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -30,32 +30,32 @@ SET ANSI ON | OFF
 ```  
   
 ## <a name="arguments"></a>인수  
- ON  
- (드라이버에 대 한 기본; Visual FoxPro에 대 한 기본값은 OFF입니다.) 패드에 있는 공백 사용 하 여 더 짧은 문자열이 하는 데 필요한 있도록 길수록 같음 문자열의 길이입니다. 두 문자열를 해당 전체 길이 대 한 문자에 대 한 문자를 비교 합니다. 이 비교를 것이 좋습니다.  
+ 켜기  
+ (드라이버의 기본값입니다. Visual FoxPro의 기본값은 OFF입니다.) 더 긴 문자열의 길이와 동일 하 게 만드는 데 필요한 공백을 사용 하 여 짧은 문자열을 채웁니다. 그러면 두 문자열은 전체 길이에 대 한 문자의 문자를 비교 합니다. 다음 비교를 참조 하세요.  
   
 ```  
 'Tommy' = 'Tom'  
 ```  
   
- 결과 False (합니다. 6.) ANSI 설정 이므로 경우에 채워질 때 'Tom'가 'Tom' 및 'Tom' 및 'Tommy' 문자열 문자에 대 한 문자 일치 하지 않습니다.  
+ 결과는 False입니다 (. F.)로 설정 된 경우에는가 채워질 때 ' Tom '이 ' e s '가 되 고 ' Tom ' 및 ' Tommy ' 문자열이 문자에 대 한 문자와 일치 하지 않기 때문에 SET ANSI가 on입니다.  
   
- 연산자는이 메서드를 비교 Visual FoxPro SQL 명령에 = =.  
+ = = 연산자는이 메서드를 사용 하 여 Visual FoxPro SQL 명령에서 비교 합니다.  
   
  OFF  
- 더 짧은 문자열이 공백으로 채워지지 않습니다 지정 합니다. 두 문자열을 비교 짧은 문자열의 끝에 도달할 때까지 문자에 대 한 문자입니다. 이 비교를 것이 좋습니다.  
+ 짧은 문자열이 공백으로 채워지지 않도록 지정 합니다. 두 문자열은 짧은 문자열의 끝에 도달할 때까지 문자에 대 한 문자를 비교 합니다. 다음 비교를 참조 하세요.  
   
 ```  
 'Tommy' = 'Tom'  
 ```  
   
- 결과 True (합니다. T.)의 경우 ANSI 설정 꺼져 있으므로 비교를 'Tom' 후 중지 합니다.  
+ 결과는 True입니다. T.)로 설정 하면 ' Tom ' 후 비교가 중지 되기 때문에 ANSI가 off로 설정 됩니다.  
   
 ## <a name="remarks"></a>설명  
- ANSI 설정 여부를 두 문자열 중 짧은 공백으로 SQL 문자열 비교를 수행 하는 경우를 결정 합니다. ANSI 설정에 없는 영향을 주지는 = = 연산자; 사용 하는 경우는 = = 연산자, 더 짧은 문자열에는 항상 비교에 사용할 만큼 공백으로 채워집니다.  
+ SET ANSI는 SQL 문자열 비교가 수행 될 때 두 문자열 중 짧은 것이 공백을 사용 하 여 채워져 있는지 여부를 확인 합니다. SET ANSI는 = = 연산자에 영향을 주지 않습니다. = = 연산자를 사용 하는 경우에는 비교를 위해 짧은 문자열이 항상 공백으로 채워집니다.  
   
 ## <a name="string-order"></a>문자열 순서  
- SQL 명령에서 왼쪽에서 오른쪽 비교에서 두 문자열의 순서가 irrelevantswitching =의 한 쪽에서 문자열 = = 또는 다른 연산자 비교의 결과 영향을 주지 않습니다.  
+ SQL 명령에서 비교 시 두 문자열의 왼쪽에서 오른쪽으로의 순서는 = 또는 = = 연산자의 한 쪽에서 다른 쪽으로의 문자열 irrelevantswitching 비교 결과에 영향을 주지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SELECT-SQL 명령](../../odbc/microsoft/select-sql-command.md)   
  [SET EXACT 명령](../../odbc/microsoft/set-exact-command.md)

@@ -13,15 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ecaffb9e40024eca7cbeac77f4b50058e5440cee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870612"
 ---
-# <a name="mssqlserver10521"></a>MSSQLSERVER_10521
+# <a name="mssqlserver_10521"></a>MSSQLSERVER_10521
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -30,16 +30,20 @@ ms.locfileid: "62870612"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|PG_PARAM_NEEDED|  
-|메시지 텍스트|계획 지침 ' %. \*l s 때문에 `@type` 지정 된 매개 변수 ' % l s '와 ' % l s '은 NULL입니다. 이 유형은 매개 변수에 NULL이 아닌 값이 필요합니다. 매개 변수에 NULL이 아닌 값을 지정하거나, 매개 변수에 NULL 값을 허용하는 유형으로 유형을 변경하십시오.|  
+|메시지 텍스트|
+  \*
+  `@type`
+  이 '%ls'(으)로 지정되었고 매개 변수 '%ls'이(가) NULL이므로 계획 지침 '%.ls'을(를) 만들 수 없습니다. 이 유형은 매개 변수에 NULL이 아닌 값이 필요합니다. 매개 변수에 NULL이 아닌 값을 지정하거나, 매개 변수에 NULL 값을 허용하는 유형으로 유형을 변경하십시오.|  
   
 ## <a name="explanation"></a>설명  
- `@type`에 지정된 유형이 지정된 매개 변수에 대해 NULL 값을 허용하지 않지만 NULL 값이 제공되었습니다.  
+ 
+  `@type`에 지정된 유형이 지정된 매개 변수에 대해 NULL 값을 허용하지 않지만 NULL 값이 제공되었습니다.  
   
 ## <a name="user-action"></a>사용자 동작  
  매개 변수에 NULL이 아닌 값을 지정하거나, 매개 변수에 NULL 값을 허용하는 유형으로 유형을 변경하십시오.  
   
-## <a name="see-also"></a>관련 항목  
- [sp_create_plan_guide&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;sp_create_plan_guide &#40;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [계획 지침](../performance/plan-guides.md)   
  [sp_create_plan_guide_from_handle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)  
   

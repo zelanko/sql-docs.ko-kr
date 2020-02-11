@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 911d0a740a20f74edf9e32d4a6ff69a8d6040f24
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022490"
 ---
 # <a name="backup-and-restore-for-oracle-publishers"></a>Oracle 게시자 백업 및 복원
@@ -35,7 +35,7 @@ ms.locfileid: "63022490"
   
 -   데이터베이스 복원 후 게시자 또는 배포자가 동기화되지 않으면 복제 에이전트가 오류 메시지를 기록합니다. 이런 경우 모든 관련 게시 및 구독을 삭제하고 다시 만들어야 합니다.  
   
-    1.  게시 및 구독의 정의를 스크립팅합니다. 자세한 내용은 [Scripting Replication](../scripting-replication.md)를 참조하세요.  
+    1.  게시 및 구독의 정의를 스크립팅합니다. 자세한 내용은 [Scripting Replication](../scripting-replication.md)을 참조하세요.  
   
          게시자 상태 버전과 배포자 상태 버전 간에 게시 정의가 변경된 경우에는 스크립트를 수정해야 합니다.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "63022490"
   
      게시자를 삭제하고 다시 구성해야 하는 경우 **CASCADE** 옵션으로 **MSSQLSERVERDISTRIBUTOR** 공용 동의어 및 구성된 Oracle 복제 사용자를 삭제하여 Oracle 게시자에서 모든 복제 개체를 제거합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [복제된 데이터베이스 백업 및 복원](../administration/back-up-and-restore-replicated-databases.md)   
  [Oracle 게시자 구성](configure-an-oracle-publisher.md)   
  [Oracle 게시 개요](oracle-publishing-overview.md)  
