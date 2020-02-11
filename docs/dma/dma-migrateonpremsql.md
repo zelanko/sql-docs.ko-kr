@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: fc78354e3b422342e376bd7ebe75233dcd3ffaee
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056530"
 ---
 # <a name="upgrade-sql-server-using-the-data-migration-assistant"></a>Data Migration Assistant를 사용 하 여 SQL Server 업그레이드
@@ -109,6 +109,6 @@ Data Migration Assistant는 백업 폴더, 데이터 및 로그 파일 위치에
 
 ## <a name="see-also"></a>참고 항목
 
-- [Data Migration Assistant (DMA)](../dma/dma-overview.md)
+- [Data Migration Assistant(DMA)](../dma/dma-overview.md)
 - [Data Migration Assistant: 구성 설정](../dma/dma-configurationsettings.md)
 - [Data Migration Assistant: 모범 사례](../dma/dma-bestpractices.md)

@@ -1,5 +1,5 @@
 ---
-title: 날짜 형식 연결 설정 | Microsoft Docs
+title: 연결에 날짜 형식 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ ms.assetid: ba0d5123-db52-448b-8e19-b7647ce4b361
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3075893d37a401110afbecacc68e452425ad684b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68063462"
 ---
 # <a name="setting-the-date-format-on-connection"></a>연결 시 날짜 형식 설정
 > [!IMPORTANT]  
->  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. 대신, Oracle에서 제공 하는 ODBC 드라이버를 사용 합니다.  
+>  이 기능은 이후 버전의 Windows에서 제거 될 예정입니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. 대신 Oracle에서 제공 하는 ODBC 드라이버를 사용 합니다.  
   
- 새 버전의 Microsoft ODBC Driver for Oracle에서는 Oracle 날짜 필드의 날짜 형식을 자동으로 설정 하지 않습니다. 이전에 드라이버를 연결 된 경우 해당 사용 `ALTER SESSION SET NLS_DATE_FORMAT ='YYYY-MM-DD HH:MI:SS'`합니다.  
+ 새 버전의 Oracle 용 Microsoft ODBC 드라이버는 Oracle 날짜 필드의 날짜 형식을 자동으로 설정 하지 않습니다. 이전에는 드라이버가 연결 되었을 때이 `ALTER SESSION SET NLS_DATE_FORMAT ='YYYY-MM-DD HH:MI:SS'`를 사용 했습니다.  
   
- 날짜 형식 설정, ALTER 세션 집합을 호출 하 고 삽입을 수행 합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ 날짜 형식을 설정 하려면 ALTER SESSION SET를 호출한 다음 insert를 수행 합니다. 다음은 그 예입니다.  
   
 ```  
 conn.Execute "ALTER SESSION SET NLS_DATE_FORMAT = 'YYYY-MM-DD HH:MI:SS' "  

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 73e991f46f2cadb0fe7e7e9d10e6e616d2d634c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63270727"
 ---
 # <a name="sort-columns"></a>열 정렬
@@ -26,8 +26,8 @@ ms.locfileid: "63270727"
   
 2.  표의 두 번째 행에서 **열 이름** 열의 **연결 유형** 을 선택하고 **정렬 순서** 열에서 값을 선택합니다.  
   
-## <a name="options"></a>변수  
- **상태**  
+## <a name="options"></a>옵션  
+ **열 이름**  
  정렬 기준으로 사용할 열의 이름입니다. 하나 이상의 열을 기준으로 정렬할 수 있습니다. **게시** 탭의 **현재 평균 성능** 또는 **현재 가장 낮은 성능** 열은 해당 값이 계산되는 방식 때문에 정렬 기준으로 사용할 수 없습니다.  
   
  **정렬 순서**  
@@ -36,7 +36,7 @@ ms.locfileid: "63270727"
  **모두 지우기**  
  정렬 표에서 모든 행을 제거합니다. 단일 행을 제거하려면 행을 선택하고 Delete 키를 누릅니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [복제 모니터링](monitoring-replication.md)  
   
   

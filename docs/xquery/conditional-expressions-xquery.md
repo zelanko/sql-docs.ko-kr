@@ -1,5 +1,5 @@
 ---
-title: 조건부 식 (XQuery) | Microsoft Docs
+title: 조건 식 (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -20,16 +20,16 @@ ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f593455269b8c005a3b4d3725f4360db77ea48f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039011"
 ---
 # <a name="conditional-expressions-xquery"></a>조건 식(XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  XQuery 지원 다음 조건부 **if then else** 문:  
+  XQuery는 다음과 **같은 조건문을** 지원 합니다.  
   
 ```  
 if (<expression1>)  
@@ -39,7 +39,8 @@ else
   <expression3>  
 ```  
   
- `expression1`의 유효한 부울 값에 따라 `expression2`나 `expression3`이 계산됩니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ 
+  `expression1`의 유효한 부울 값에 따라 `expression2`나 `expression3`이 계산됩니다. 다음은 그 예입니다.  
   
 -   테스트 식 `expression1`이 빈 시퀀스가 될 경우 결과는 False입니다.  
   
@@ -49,13 +50,13 @@ else
   
 -   위의 경우 중 하나에 해당하지 않으면 정적 오류가 발생합니다.  
   
- 다음 사항도 유의해야 합니다.  
+ 그리고 다음 사항도 참조하세요.  
   
 -   테스트 식은 괄호로 묶어야 합니다.  
   
--   합니다 **다른** 식이 필요 합니다. 필요 없으면 이 항목의 예에 나오는 대로 " ( ) "을 반환할 수 있습니다.  
+-   **Else** 식이 필요 합니다. 필요 없으면 이 항목의 예에 나오는 대로 " ( ) "을 반환할 수 있습니다.  
   
- 대해 다음 쿼리를 지정 하는 예를 들어 합니다 **xml** 형식 변수입니다. **하는 경우** SQL 변수 값을 테스트 하는 조건 (@v)를 사용 하 여 XQuery 식 안에 [sql: variable 함수](../xquery/xquery-extension-functions-sql-variable.md) 확장 함수입니다. 반환 하는 경우 변수 값이 "FirstName" 이면 합니다 <`FirstName`> 요소입니다. 그러지 않으면 반환 된 <`LastName`> 요소입니다.  
+ 예를 들어 다음 쿼리는 **xml** 유형 변수에 대해 지정 됩니다. **If** 조건은 [sql: variable () 함수](../xquery/xquery-extension-functions-sql-variable.md) 확장 함수를@v사용 하 여 XQuery 식 내에서 sql 변수 ()의 값을 테스트 합니다. 변수 값이 "FirstName" 이면 <`FirstName`> 요소를 반환 합니다. 그렇지 않으면 <`LastName`> 요소를 반환 합니다.  
   
 ```  
 declare @x xml  
@@ -80,7 +81,7 @@ if ( sql:variable("@v")="FirstName" ) then
 <FirstName>fname</FirstName>  
 ```  
   
- 다음 쿼리는 특정 제품 모델의 제품 카탈로그 설명에서 처음 두 개의 기능 설명을 검색합니다. 추가 경우 더 많은 기능 문서에는 <`there-is-more`> 내용이 비어 있는 요소입니다.  
+ 다음 쿼리는 특정 제품 모델의 제품 카탈로그 설명에서 처음 두 개의 기능 설명을 검색합니다. 문서에 더 많은 기능이 있는 경우 빈 콘텐츠가 포함 된 <`there-is-more`> 요소를 추가 합니다.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -104,7 +105,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- 이전 쿼리에서 조건에는 **하는 경우** 식에서 두 개 이상의 자식 요소가 있는지 여부를 확인 <`Features`>. 3개 이상일 경우 결과에 `\<there-is-more/>` 요소를 반환합니다.  
+ 이전 쿼리에서 **if** 식의 조건은 <`Features`>에 자식 요소가 두 개 이상 있는지 여부를 확인 합니다. 3개 이상일 경우 결과에 `\<there-is-more/>` 요소를 반환합니다.  
   
  다음은 결과입니다.  
   
@@ -122,7 +123,7 @@ WHERE ProductModelID = 19
 </Product>  
 ```  
   
- 다음 쿼리에서 <`Location`> LocationID 특성을 가진 요소는 작업 센터 위치에서 설치 시간을 지정 하지 않으면 반환 됩니다.  
+ 다음 쿼리에서는 작업 센터 위치에서 `Location` 설정 시간을 지정 하지 않은 경우 locationid 특성이 있는 <> 요소가 반환 됩니다.  
   
 ```  
 SELECT Instructions.query('  
@@ -149,7 +150,7 @@ where ProductModelID=7
 <WorkCenterLocation LocationID="60" />  
 ```  
   
- 하지 않고이 쿼리를 작성할 수 있습니다 합니다 **경우** 다음 예와에서 같이 절:  
+ 다음 예제와 같이 **if** 절 없이이 쿼리를 작성할 수 있습니다.  
   
 ```  
 SELECT Instructions.query('  
@@ -164,7 +165,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [XQuery 식](../xquery/xquery-expressions.md)  
   
   

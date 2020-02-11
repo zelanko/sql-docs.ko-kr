@@ -16,17 +16,17 @@ ms.assetid: 9f7c0cdb-6d88-44c0-b049-29953ae75717
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 3c22077de3bf41bc09864ac2c7f24dbdd4ecc3e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68032045"
 ---
 # <a name="creating-extended-stored-procedures"></a>확장 저장 프로시저 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하십시오.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]대신 CLR 통합을 사용 하세요.  
   
  확장 저장 프로시저는 프로토타입이 다음과 같은 함수입니다.  
   
@@ -40,11 +40,11 @@ ms.locfileid: "68032045"
   
 -   DLL 외부에서 호출된 모든 함수(모든 확장 저장 프로시저 Efunction)는 내보내야 합니다.  
   
-     .Def 파일의 EXPORTS 섹션에서 해당 이름을 나열 하 여 함수를 내보낼 수 있습니다 또는 Microsoft 컴파일러 확장인 __declspec (dllexport) 사용 하 여 소스 코드에서 함수 이름을 접두사로 붙일 수 있습니다 (유의 \__declspec()에 밑줄 두 개를 사용 하 여 시작)입니다.  
+     .Def 파일의 EXPORTS 섹션에서 이름을 나열 하 여 함수를 내보내거나, Microsoft 컴파일러 확장인 __declspec (dllexport)를 사용 하 여 소스 코드의 함수 이름에 접두사를 지정할 수 있습니다 (_declspec ()는 두 개의 \_밑줄로 시작 됨).  
   
  확장 저장 프로시저 DLL을 만드는 데 필요한 파일은 다음과 같습니다.  
   
-|파일|설명|  
+|파일|Description|  
 |----------|-----------------|  
 |Srv.h|확장 저장 프로시저 API 헤더 파일|  
 |Opends60.lib|Opends60.dll용 가져오기 라이브러리|  
@@ -63,18 +63,19 @@ __declspec(dllexport) ULONG __GetXpVersion()
 > [!NOTE]  
 >  __declspec(dllexport)은 Microsoft 전용 컴파일러 확장입니다. 컴파일러에서 이 지시어를 지원하지 않으면 DEF 파일의 EXPORTS 섹션 아래에서 이 함수를 내보내야 합니다.  
   
- 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 추적을 사용 하 여 시작 플래그-T260 또는 시스템 관리자 권한이 있는 사용자는 DBCC TRACEON (260)를 실행 하는 경우 및 확장 저장 프로시저가 DLL __getxpversion (), 경고 메시지를 지원 하지 않습니다 (오류 8131: 확장된 저장된 프로시저 DLL '%'을 내보내지 않습니다 \__GetXpVersion().) 오류 로그에 출력 됩니다. (유의 \__GetXpVersion()에 밑줄 두 개를 사용 하 여 시작 합니다.)  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 T260 추적 플래그를 사용 하 여 시작 되거나 시스템 관리자 권한이 있는 사용자가 DBCC TRACEON (260)를 실행 하 고 확장 저장 프로시저 dll이 __GetXpVersion ()를 지원 하지 않는 경우 경고 메시지 (오류 8131: 확장 저장 프로시저 dll '% '이 (가) \__GetXpVersion 내보내기 안 함 ()이 오류 로그에 출력 됩니다. _GetXpVersion () \_는 두 개의 밑줄로 시작 합니다.  
   
- 확장 저장 프로시저 DLL이 __GetXpVersion()을 내보내지만 함수에서 반환하는 버전이 서버에 필요한 버전보다 낮을 경우 함수에서 반환한 버전과 서버에 필요한 버전을 알리는 경고 메시지가 오류 로그에 출력됩니다. 잘못 된 값을 반환 하는이 메시지를 받게 되 면 \__GetXpVersion(), 또는 이전 버전 srv.h를 사용 하 여 컴파일하는 합니다.  
+ 확장 저장 프로시저 DLL이 __GetXpVersion()을 내보내지만 함수에서 반환하는 버전이 서버에 필요한 버전보다 낮을 경우 함수에서 반환한 버전과 서버에 필요한 버전을 알리는 경고 메시지가 오류 로그에 출력됩니다. 이 메시지가 표시 되 면 _GetXpVersion ()에서 \_잘못 된 값을 반환 하거나 이전 버전의 srv를 사용 하 여 컴파일하는 것입니다.  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Win32 함수인 SetErrorMode는 확장 저장 프로시저 내에서 호출하지 않아야 합니다.  
+>  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Win32 함수인 SetErrorMode는 확장 저장 프로시저 내에서 호출하지 않아야 합니다.  
   
  장기 실행 확장 저장 프로시저의 경우 연결이 끊기거나 일괄 처리가 중단될 경우 프로시저가 자동으로 종료될 수 있도록 주기적으로 srv_got_attention을 호출하는 것이 좋습니다.  
   
- 확장 저장 프로시저 DLL을 디버깅하려면 DLL을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Binn 디렉터리에 복사합니다. 디버깅 세션에 대 한 실행 파일을 지정 하려면의 경로 및 파일 이름을 입력 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행 파일 (예: C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\MSSQL\Binn\Sqlservr.exe)입니다. Sqlservr 인수에 대 한 자세한 내용은 [응용 프로그램 sqlservr](../../tools/sqlservr-application.md)합니다.  
+ 확장 저장 프로시저 DLL을 디버깅하려면 DLL을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Binn 디렉터리에 복사합니다. 디버깅 세션에 대 한 실행 파일을 지정 하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행 파일의 경로 및 파일 이름 (예: C:\Program Files\Microsoft SQL Server\MSSQL13.을 입력 합니다. MSSQLSERVER\MSSQL\Binn\Sqlservr.exe). Sqlservr.exe 인수에 대 한 자세한 내용은 [Sqlservr.exe 응용 프로그램](../../tools/sqlservr-application.md)을 참조 하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [srv_got_attention &#40;확장 저장 프로시저 API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-got-attention-extended-stored-procedure-api.md)  
   
   

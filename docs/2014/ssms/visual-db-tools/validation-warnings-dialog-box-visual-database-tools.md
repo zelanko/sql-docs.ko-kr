@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 83fde7d8d43086114b2aae4350ce374b713ff4ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204657"
 ---
 # <a name="validation-warnings-dialog-box-visual-database-tools"></a>유효성 검사 경고 대화 상자(Visual Database Tools)
@@ -42,7 +42,7 @@ ms.locfileid: "63204657"
   
 -   수정 결과로 인해 한 테이블 내의 열에 대해 ANSI_NULLS나 ANSI_PADDING 또는 이 둘 모두에 대해 중요한 사항이 설정되는 경우  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **예**  
  작업을 계속하여 변경 스크립트를 만들거나 수정 사항을 데이터베이스에 전송합니다. 데이터베이스를 수정하는 데 필요한 권한이 없거나, 수정 결과로 인해 900바이트보다 큰 인덱스가 생성되거나, 수정 결과로 인해 잘못된 형식의 계산 열, DEFAULT 제약 조건 또는 CHECK 제약 조건이 발생하는 경우에는 커밋 작업이 실패할 수 있습니다.  
   
@@ -52,8 +52,8 @@ ms.locfileid: "63204657"
  **텍스트 파일 저장**  
  **다른 이름으로 저장** 대화 상자가 표시됩니다. 이 대화 상자를 사용하면 경고 목록이 포함된 텍스트 파일의 위치를 지정할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [테이블 디자인 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools를 &#40;테이블 디자인&#41;](visual-database-tools.md)   
  [쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

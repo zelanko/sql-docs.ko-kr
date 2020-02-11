@@ -1,5 +1,5 @@
 ---
-title: 예약 된 키워드 (MDX 구문) | Microsoft Docs
+title: 예약 키워드 (MDX 구문) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,26 +9,27 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d88e78e49a52919ff710cd123ab2b25022aa5d1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037066"
 ---
 # <a name="reserved-keywords-mdx-syntax"></a>예약어(MDX 구문)
 
 
-  Analysis Services 예약어는 배타적으로 사용 합니다. 예약 된 키워드 목록은 참조 하세요 [MDX 예약어](../mdx/mdx-reserved-words.md)합니다.  
+  Analysis Services은 단독으로 사용 하기 위해 특정 키워드를 예약 합니다. 예약 된 키워드 목록은 [MDX 예약어](../mdx/mdx-reserved-words.md)를 참조 하십시오.  
   
  예약어는 다음 지침을 따릅니다.  
   
--   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 정의된 경우를 제외하면 위치를 불문하고 MDX 문에는 예약어를 포함시킬 수 없습니다.  
+-   
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 정의된 경우를 제외하면 위치를 불문하고 MDX 문에는 예약어를 포함시킬 수 없습니다.  
   
 -   데이터베이스의 어떤 개체도 예약어와 일치하는 이름으로 특정되면 안 됩니다. 예약어와 일치하는 이름을 가진 개체가 있다면 항상 구분 식별자를 사용하여 참조해야 합니다. 이 방법에서는 개체 이름이 예약어가 될 수도 있지만 개체 이름을 지정할 때는 키워드를 사용하지 않도록 합니다.  
   
 -   예약어를 사용하지 않는 명명 규칙을 적용하십시오. 개체 이름이 예약어와 같을 때는 자음이나 모음을 제거할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [MDX 구문 요소 &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [Mdx 구문 요소 &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.xml_schema_model_groups (TRANSACT-SQL) | Microsoft Docs
+title: sys. xml_schema_model_groups (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,28 +20,28 @@ ms.assetid: 566556dc-a8c8-465c-9196-c7e0ae092a8a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 041b09d544d5301d42d929e29c7f42b3502e294b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68060532"
 ---
-# <a name="sysxmlschemamodelgroups-transact-sql"></a>sys.xml_schema_model_groups(Transact-SQL)
+# <a name="sysxml_schema_model_groups-transact-sql"></a>sys.xml_schema_model_groups(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  XML 스키마 구성 요소 모델 그룹 행을 반환 **symbol_space** 의 **M**...  
+  **M**.의 모델 그룹인 **symbol_space** XML 스키마 구성 요소별 행을 반환 합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**\<열을 상속 >**||열을 상속 [sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md)합니다.|  
-|**compositor**|**char(1)**|그룹의 복합기 종류로, 다음과 같습니다.<br /><br /> A = XSD \<모든 > 그룹<br /><br /> C = XSD \<선택 > 그룹<br /><br /> S = XSD \<순서 > 그룹|  
+|**\<상속 된 열>**||[Xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md)에서 열을 상속 합니다.|  
+|**compositor**|**char (1)**|그룹의 복합기 종류로, 다음과 같습니다.<br /><br /> A = XSD \<All> 그룹<br /><br /> C = XSD \<Choice> 그룹<br /><br /> S = XSD \<시퀀스> 그룹|  
 |**compositor_desc**|**nvarchar (60)**|그룹의 복합기 종류에 대한 설명으로, 다음과 같습니다.<br /><br /> XSD_ALL_GROUP<br /><br /> XSD_CHOICE_GROUP<br /><br /> XSD_SEQUENCE_GROUP|  
   
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [XML 스키마 &#40;XML 형식 시스템&#41; 카탈로그 뷰 &#40;SQL 트랜잭션&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
+ [Xml 스키마 &#40;XML 형식 시스템&#41; 카탈로그 뷰 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
   
   

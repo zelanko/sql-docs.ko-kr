@@ -1,5 +1,5 @@
 ---
-title: 간격 데이터 형식에 대 한 선행 및 초 전체 자릿수 재정의 | Microsoft Docs
+title: Interval 데이터 형식에 대 한 선행 및 초 전체 자릿수 재정의 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,27 +18,27 @@ ms.assetid: 3d65493f-dce7-4d29-9f59-c63a4e47918c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 13adfb16b772acc5fac30cf3d10c6199f16f479d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68100621"
 ---
 # <a name="overriding-default-leading-and-seconds-precision-for-interval-data-types"></a>간격 데이터 형식에 대한 기본 선행 및 초 전체 자릿수 재정의
-호출 하 여는 카드가의 SQL_DESC_TYPE 필드는 datetime 또는 간격 C 형식으로 설정 하면 **SQLBindCol** 하거나 **SQLSetDescField**, SQL_DESC_PRECISION 필드 (포함 하는 간격 (초) 전체 자릿수)는 다음 기본값으로 설정 됩니다.  
+**SQLBindCol** 또는 SQLSetDescField를 호출 하 여 **** 의 SQL_DESC_TYPE 필드가 datetime 또는 interval C 형식으로 설정 된 경우 간격 (초)의 전체 자릿수가 포함 된 SQL_DESC_PRECISION 필드가 다음 기본값으로 설정 됩니다.  
   
--   두 번째 구성 요소를 사용 하 여 모든 간격 데이터 형식 및 타임 스탬프는 6입니다.  
+-   6 타임 스탬프 및 모든 interval 데이터 형식 (두 번째 구성 요소 포함)  
   
--   다른 모든 데이터 형식에 대 한 0입니다.  
+-   다른 모든 데이터 형식의 경우 0입니다.  
   
- 모든 간격 데이터 형식에 대 한 간격 선행 필드 전체 자릿수를 포함 하는 SQL_DESC_DATETIME_INTERVAL_PRECISION 설명자 필드는 2의 기본 값으로 설정 됩니다.  
+ 모든 interval 데이터 형식에 대해 간격 선행 필드 전체 자릿수를 포함 하는 SQL_DESC_DATETIME_INTERVAL_PRECISION 설명자 필드는 기본값 2로 설정 됩니다.  
   
- 호출 하 여는 APD의 SQL_DESC_TYPE 필드는 datetime 또는 간격 C 형식으로 설정 하면 **SQLBindParameter** 하거나 **SQLSetDescField**, SQL_DESC_PRECISION 및 SQL_DESC_DATETIME_INTERVAL_ APD의 전체 자릿수 필드는 이전에 지정 된 기본값으로 설정 됩니다. 마찬가지 입/출력 또는 출력 매개 변수가 아니라 입력된 매개 변수에 대 한 합니다.  
+ **SQLBindParameter** 또는 **SQLSetDescField**를 호출 하 여 apd의 SQL_DESC_TYPE 필드가 datetime 또는 interval C 형식으로 설정 된 경우 apd의 SQL_DESC_PRECISION 및 SQL_DESC_DATETIME_INTERVAL_PRECISION 필드는 이전에 지정 된 기본값으로 설정 됩니다. 입력 매개 변수의 경우에는 true이 고 입력/출력 또는 출력 매개 변수는 그렇지 않습니다.  
   
- 에 대 한 호출 **SQLSetDescRec** 기본 전체 자릿수를 유도 하는 간격을 설정 하지만 값 (SQL_DESC_PRECISION 필드)에서 간격 초 전체 자릿수를 설정 합니다. 해당 *정밀도* 인수입니다.  
+ **SQLSetDescRec** 에 대 한 호출은 interval 선행 전체 자릿수를 기본값으로 설정 하지만 SQL_DESC_PRECISION 필드에서 간격 초 전체 자릿수를 *전체 자릿수* 인수 값으로 설정 합니다.  
   
- 지정 된 기본값 중 이전에 허용 되지 않는 응용 프로그램에 하는 경우 응용 프로그램 호출 하 여 SQL_DESC_PRECISION 또는 SQL_DESC_DATETIME_INTERVAL_PRECISION 필드를 설정 해야 **SQLSetDescField**합니다.  
+ 이전에 지정 된 기본값 중 하나가 응용 프로그램에 허용 되지 않는 경우 응용 프로그램은 **SQLSetDescField**를 호출 하 여 SQL_DESC_PRECISION 또는 SQL_DESC_DATETIME_INTERVAL_PRECISION 필드를 설정 해야 합니다.  
   
- 응용 프로그램을 호출 하는 경우 **SQLGetData** datetime 또는 간격 C 형식으로 데이터를 반환 하는 기본 간격 선행 자릿수 및 간격 초의 전체 자릿수가 사용 됩니다. 기본값을 적용할 수 있는 경우에 응용 프로그램 호출 해야 합니다 **SQLSetDescField** 설명자 필드 중 하나가 설정 또는 **SQLSetDescRec** SQL_DESC_PRECISION를 설정 하려면. 에 대 한 호출 **SQLGetData** 있어야를 *TargetType* 의 SQL_ARD_TYPE 설명자 필드에 값을 사용 하도록 합니다.  
+ 응용 프로그램이 **SQLGetData** 를 호출 하 여 datetime 또는 interval C 형식으로 데이터를 반환 하는 경우 기본 interval 선행 전체 자릿수 및 간격 (초)의 전체 자릿수가 사용 됩니다. 기본값을 사용할 수 없는 경우 응용 프로그램은 **SQLSetDescField** 를 호출 하 여 설명자 필드를 설정 하거나 **SQLSetDescRec** 를 설정 하 여 SQL_DESC_PRECISION를 설정 해야 합니다. **SQLGetData** 호출에는 설명자 필드의 값을 사용 하는 SQL_ARD_TYPE의 *TargetType* 이 있어야 합니다.  
   
- 때 **SQLPutData** 라고, 호출에 대 한 APD 필드는 전체 자릿수 및 간격 초 실행 시 데이터 매개 변수 또는 열에 해당 하는 설명자 레코드의 필드에서 읽는 전체 자릿수를 유도 하는 간격 하 **SQLExecute** 또는 **SQLExecDirect**, 또는 필드에 대 한 호출 **SQLBulkOperations** 또는 **SQLSetPos**합니다.
+ **Sqlputdata** 를 호출 하는 경우에는 실행 시 데이터 매개 변수 또는 열에 해당 하는 설명자 레코드의 필드에서 ( **Sqlexecute** 또는 **sqlputdata**에 대 한 호출에 대 한 Apd 필드 또는 **SQLBulkOperations** 또는 **SQLSetPos**호출에 대 한 호출에 대 한 필드)에서 간격 선행 전체 자릿수 및 간격 (초)의 전체 자릿수를 읽습니다.

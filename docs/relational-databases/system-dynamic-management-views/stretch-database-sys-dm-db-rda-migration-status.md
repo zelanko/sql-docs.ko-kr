@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_rda_migration_status (TRANSACT-SQL) | Microsoft Docs
+title: sys. dm_db_rda_migration_status (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,33 +19,33 @@ ms.assetid: faf3901c-a0e0-4e0c-8b1b-86d9f15f34dd
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 21e5230e4f3efd86fe90382202f0b21a0187a214
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67937068"
 ---
-# <a name="stretch-database---sysdmdbrdamigrationstatus"></a>Stretch Database - sys.dm_db_rda_migration_status
+# <a name="stretch-database---sysdm_db_rda_migration_status"></a>Stretch Database dm_db_rda_migration_status
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  각 일괄 처리의 로컬 인스턴스에서 각 스트레치 사용 테이블에서 마이그레이션된 데이터의 행이 하나씩 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 일괄 처리의 시작 시간과 종료 시간으로 식별 됩니다.  
+  로컬 인스턴스의 각 스트레치 사용 테이블에서 마이그레이션된 데이터의 각 일괄 처리에 대해 하나의 행을 포함 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 일괄 처리는 시작 시간과 종료 시간으로 식별 됩니다.  
   
- **sys.dm_db_rda_migration_status** 범위 현재 데이터베이스 컨텍스트를 지정 합니다. 마이그레이션 상태를 보려는 스트레치 사용 테이블의 데이터베이스 컨텍스트에 있는지 확인 합니다.  
+ **dm_db_rda_migration_status** 은 현재 데이터베이스 컨텍스트로 범위가 지정 됩니다. 마이그레이션 상태를 보려는 스트레치 사용 테이블의 데이터베이스 컨텍스트에 있는지 확인 합니다.  
   
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], 출력 **sys.dm_db_rda_migration_status** 200 개 행으로 제한 됩니다.  
+ 에서는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] **dm_db_rda_migration_status** 의 출력이 200 개 행으로 제한 됩니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**table_id**|**int**|행 마이그레이션된 테이블의 ID입니다.|  
-|**database_id**|**int**|행 마이그레이션된 데이터베이스의 ID입니다.|  
-|**migrated_rows**|**bigint**|행 수가이 일괄 처리에서 마이그레이션.|  
+|**table_id**|**int**|행이 마이그레이션된 테이블의 ID입니다.|  
+|**database_id**|**int**|행이 마이그레이션되는 데이터베이스의 ID입니다.|  
+|**migrated_rows**|**bigint**|이 일괄 처리로 마이그레이션된 행의 수입니다.|  
 |**start_time_utc**|**datetime**|일괄 처리가 시작 된 UTC 시간입니다.|  
-|**end_time_utc**|**datetime**|일괄 처리의 완료는 UTC 시간입니다.|  
-|**error_number**|**int**|일괄 처리에 실패 하면 발생 한 오류의 오류 번호 그렇지 않으면 null입니다.|  
-|**error_severity**|**int**|일괄 처리에 실패 하면 발생 한 오류의 심각도 그렇지 않으면 null입니다.|  
-|**error_state**|**int**|일괄 처리에 실패 하면 발생 한 오류의 상태 그렇지 않으면 null입니다.<br /><br /> 합니다 **error_state** 조건 또는 오류가 발생 하는 위치를 나타냅니다.|  
+|**end_time_utc**|**datetime**|일괄 처리가 완료 된 UTC 시간입니다.|  
+|**error_number**|**int**|일괄 처리가 실패 한 경우 발생 한 오류의 오류 번호입니다. 그렇지 않으면 null입니다.|  
+|**error_severity**|**int**|일괄 처리가 실패 하는 경우 발생 한 오류의 심각도입니다. 그렇지 않으면 null입니다.|  
+|**error_state**|**int**|일괄 처리에 실패 한 경우 발생 한 오류의 상태입니다. 그렇지 않으면 null입니다.<br /><br /> **Error_state** 은 오류가 발생 한 조건 또는 위치를 나타냅니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.query_store_query (TRANSACT-SQL) | Microsoft Docs
+title: sys. query_store_query (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/23/2019
 ms.prod: sql
@@ -22,64 +22,64 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d5b7eea64a807af96094767ef5aca00167d5946c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68067962"
 ---
-# <a name="sysquerystorequery-transact-sql"></a>sys.query_store_query (Transact SQL)
+# <a name="sysquery_store_query-transact-sql"></a>sys. query_store_query (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  쿼리 및 해당 관련 된 전체 집계 된 런타임 실행 통계에 대 한 정보를 포함합니다.  
+  쿼리와 관련 된 전체 집계 된 런타임 실행 통계에 대 한 정보를 포함 합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**query_id**|**bigint**|기본 키입니다.|  
-|**query_text_id**|**bigint**|외래 키입니다. 에 조인 [sys.query_store_query_text &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|  
-|**context_settings_id**|**bigint**|외래 키입니다. 에 조인 [sys.query_context_settings &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)합니다.<br/>**참고:** Azure SQL Data Warehouse는 영 (0)를 항상 반환 됩니다.|  
-|**object_id**|**bigint**|쿼리가 포함 된 데이터베이스 개체의 ID입니다 (저장 프로시저, 트리거, CLR UDF/UDAgg, 등.). 쿼리는 데이터베이스 개체 (임시 쿼리)의 일부로 실행 되지 않으면 0입니다.<br/>**참고:** Azure SQL Data Warehouse는 영 (0)를 항상 반환 됩니다.|  
-|**batch_sql_handle**|**varbinary(64)**|문 일괄 처리 쿼리 ID의 일부입니다. 임시 테이블 또는 테이블 변수 쿼리가 참조 하는 경우에 채워집니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 반환 *NULL*합니다.|  
-|**query_hash**|**binary(8)**|논리 쿼리 트리를 기반으로 개별 쿼리의 MD5 해시입니다. 최적화 프로그램 힌트를 포함합니다.|  
-|**is_internal_query**|**bit**|쿼리는 내부적으로 생성 되었습니다.<br/>**참고:** Azure SQL Data Warehouse는 영 (0)를 항상 반환 됩니다.|  
-|**query_parameterization_type**|**tinyint**|매개 변수화의 종류:<br /><br /> 0 - 없음<br /><br /> 1-사용자<br /><br /> 2-간단한<br /><br /> 3-강제<br/>**참고:** Azure SQL Data Warehouse는 영 (0)를 항상 반환 됩니다.|  
-|**query_parameterization_type_desc**|**nvarchar(60)**|매개 변수화 형식에 대 한 텍스트 설명입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 반환 *None*합니다.|  
-|**initial_compile_start_time**|**datetimeoffset**|시작 시간을 컴파일하십시오.|  
-|**last_compile_start_time**|**datetimeoffset**|시작 시간을 컴파일하십시오.|  
-|**last_execution_time**|**datetimeoffset**|마지막 실행 시간을 참조 마지막 쿼리/계획의 종료 시간입니다.|  
-|**last_compile_batch_sql_handle**|**varbinary(64)**|쿼리 된 마지막 시간을 사용 하는 데는 마지막 SQL 일괄 처리의 핸들입니다. 입력으로 제공할 수 있습니다 [sys.dm_exec_sql_text &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) 일괄 처리의 전체 텍스트를 가져옵니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 반환 *NULL*합니다.|  
-|**last_compile_batch_offset_start**|**bigint**|Last_compile_batch_sql_handle 함께 sys.dm_exec_sql_text를 제공할 수 있는 정보입니다.<br/>**참고:** Azure SQL Data Warehouse는 영 (0)를 항상 반환 됩니다.|
-|**last_compile_batch_offset_end**|**bigint**|Last_compile_batch_sql_handle 함께 sys.dm_exec_sql_text를 제공할 수 있는 정보입니다.<br/>**참고:** Azure SQL Data Warehouse는 영 (0)를 항상 반환 됩니다.|  
-|**count_compiles**|**bigint**|컴파일 통계입니다.<br/>**참고:** Azure SQL Data Warehouse는 (1)는 항상 반환 됩니다.|  
-|**avg_compile_duration**|**float**|컴파일 통계 (마이크로초)에서입니다.|  
-|**last_compile_duration**|**bigint**|컴파일 통계 (마이크로초)에서입니다.|  
-|**avg_bind_duration**|**float**|바인딩 통계 (마이크로초)에서입니다.<br/>**참고:** Azure SQL Data Warehouse는 영 (0)를 항상 반환 됩니다.|  
-|**last_bind_duration**|**bigint**|바인딩 통계입니다.<br/>**참고:** Azure SQL Data Warehouse는 영 (0)를 항상 반환 됩니다.|  
-|**avg_bind_cpu_time**|**float**|바인딩 통계입니다.<br/>**참고:** Azure SQL Data Warehouse는 영 (0)를 항상 반환 됩니다.|  
-|**last_bind_cpu_time**|**bigint**|바인딩 통계입니다.<br/>**참고:** Azure SQL Data Warehouse는 영 (0)를 항상 반환 됩니다.|  
-|**avg_optimize_duration**|**float**|최적화 통계 (마이크로초)에서입니다.<br/>**참고:** Azure SQL Data Warehouse는 영 (0)를 항상 반환 됩니다.|
-|**last_optimize_duration**|**bigint**|최적화 된 통계입니다.<br/>**참고:** Azure SQL Data Warehouse는 영 (0)를 항상 반환 됩니다.|
-|**avg_optimize_cpu_time**|**float**|최적화 통계 (마이크로초)에서입니다.<br/>**참고:** Azure SQL Data Warehouse는 영 (0)를 항상 반환 됩니다.|
-|**last_optimize_cpu_time**|**bigint**|최적화 된 통계입니다.<br/>**참고:** Azure SQL Data Warehouse는 영 (0)를 항상 반환 됩니다.|
-|**avg_compile_memory_kb**|**float**|메모리 통계를 컴파일하십시오.<br/>**참고:** Azure SQL Data Warehouse는 영 (0)를 항상 반환 됩니다.|
-|**last_compile_memory_kb**|**bigint**|메모리 통계를 컴파일하십시오.<br/>**참고:** Azure SQL Data Warehouse는 영 (0)를 항상 반환 됩니다.|
-|**max_compile_memory_kb**|**bigint**|메모리 통계를 컴파일하십시오.<br/>**참고:** Azure SQL Data Warehouse는 영 (0)를 항상 반환 됩니다.|
-|**is_clouddb_internal_query**|**bit**|항상 0에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온-프레미스입니다.<br/>**참고:** Azure SQL Data Warehouse는 영 (0)를 항상 반환 됩니다.|
+|**query_text_id**|**bigint**|외래 키입니다. [Query_store_query_text &#40;transact-sql](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md) 에 조인&#41;|  
+|**context_settings_id**|**bigint**|외래 키입니다. [Transact-sql&#41;&#40;query_context_settings ](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)에 조인 합니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|  
+|**object_id**|**bigint**|쿼리가 속한 데이터베이스 개체의 ID입니다 (저장 프로시저, 트리거, CLR UDF/UDAgg 등). 쿼리가 데이터베이스 개체 (임시 쿼리)의 일부로 실행 되지 않는 경우 0입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|  
+|**batch_sql_handle**|**varbinary (64)**|쿼리가 속한 문 일괄 처리의 ID입니다. 쿼리가 임시 테이블 또는 테이블 변수를 참조 하는 경우에만 채워집니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 *NULL*을 반환 합니다.|  
+|**query_hash**|**binary (8)**|논리적 쿼리 트리를 기반으로 하는 개별 쿼리의 MD5 해시입니다. 최적화 프로그램 힌트를 포함 합니다.|  
+|**is_internal_query**|**bit**|쿼리가 내부적으로 생성 되었습니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|  
+|**query_parameterization_type**|**tinyint**|매개 변수화의 종류:<br /><br /> 0 - 없음<br /><br /> 1-사용자<br /><br /> 2-단순<br /><br /> 3-강제<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|  
+|**query_parameterization_type_desc**|**nvarchar (60)**|매개 변수화 형식에 대 한 텍스트 설명입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 *None*을 반환 합니다.|  
+|**initial_compile_start_time**|**datetimeoffset**|컴파일 시작 시간입니다.|  
+|**last_compile_start_time**|**datetimeoffset**|컴파일 시작 시간입니다.|  
+|**last_execution_time**|**datetimeoffset**|마지막 실행 시간은 쿼리/계획의 마지막 종료 시간을 나타냅니다.|  
+|**last_compile_batch_sql_handle**|**varbinary (64)**|쿼리가 마지막으로 사용 된 마지막 SQL 일괄 처리의 핸들입니다. 이 파일은 [dm_exec_sql_text &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) 를 입력 하 여 일괄 처리의 전체 텍스트를 가져올 수 있습니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 *NULL*을 반환 합니다.|  
+|**last_compile_batch_offset_start**|**bigint**|Last_compile_batch_sql_handle와 함께 dm_exec_sql_text에 제공할 수 있는 정보입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
+|**last_compile_batch_offset_end**|**bigint**|Last_compile_batch_sql_handle와 함께 dm_exec_sql_text에 제공할 수 있는 정보입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|  
+|**count_compiles**|**bigint**|컴파일 통계.<br/>**참고:** Azure SQL Data Warehouse은 항상 1을 반환 합니다.|  
+|**avg_compile_duration**|**float**|컴파일 통계 (마이크로초)입니다.|  
+|**last_compile_duration**|**bigint**|컴파일 통계 (마이크로초)입니다.|  
+|**avg_bind_duration**|**float**|바인딩 통계 (마이크로초)입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|  
+|**last_bind_duration**|**bigint**|바인딩 통계.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|  
+|**avg_bind_cpu_time**|**float**|바인딩 통계.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|  
+|**last_bind_cpu_time**|**bigint**|바인딩 통계.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|  
+|**avg_optimize_duration**|**float**|최적화 통계 (마이크로초)입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
+|**last_optimize_duration**|**bigint**|최적화 통계.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
+|**avg_optimize_cpu_time**|**float**|최적화 통계 (마이크로초)입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
+|**last_optimize_cpu_time**|**bigint**|최적화 통계.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
+|**avg_compile_memory_kb**|**float**|컴파일 메모리 통계입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
+|**last_compile_memory_kb**|**bigint**|컴파일 메모리 통계입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
+|**max_compile_memory_kb**|**bigint**|컴파일 메모리 통계입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
+|**is_clouddb_internal_query**|**bit**|온-프레미스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 경우 항상 0입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
   
 ## <a name="permissions"></a>사용 권한  
- 필요 합니다 **VIEW DATABASE STATE** 권한.  
+ **VIEW DATABASE STATE** 권한이 필요 합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [sys.database_query_store_options &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [sys.query_context_settings &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
- [sys.query_store_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
- [sys.query_store_query_text &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
- [sys.query_store_wait_stats&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
- [sys.query_store_runtime_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
- [sys.query_store_runtime_stats_interval &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [database_query_store_options &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [query_context_settings &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
+ [query_store_plan &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
+ [query_store_query_text &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
+ [query_store_wait_stats &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
+ [query_store_runtime_stats &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
+ [query_store_runtime_stats_interval &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [관련된 뷰, 함수 및 프로시저](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [쿼리 저장소 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
- [sys.fn_stmt_sql_handle_from_sql_stmt&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  
+ [fn_stmt_sql_handle_from_sql_stmt &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  
   
   

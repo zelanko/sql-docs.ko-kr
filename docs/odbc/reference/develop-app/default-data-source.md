@@ -22,17 +22,17 @@ ms.assetid: dd473cc6-f051-4aa0-ab14-3dd1b37fe99e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8fb016ac7597617b119834e20ffd9e12bd648dc0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68076861"
 ---
 # <a name="default-data-source"></a>기본 데이터 원본
-드라이버는 기본 데이터 원본 특정 응용 프로그램 않습니다 하지 명시적으로 지정 하는 경우 하나에서 데이터 원본을 선택할 수 있습니다.  
+응용 프로그램에서 명시적으로 지정 하지 않는 특정 한 경우 드라이버는 기본 데이터 원본 이라는 데이터 원본을 선택할 수 있습니다.  
   
--   에 대 한 호출에서 **SQLConnect** 여기서 합니다 *ServerName* 인수가 길이가 0 인 문자열로, null 포인터 이거나 기본입니다.  
+-   *ServerName* 인수가 길이가 0 인 문자열, null 포인터 또는 DEFAULT 인 **SQLConnect** 를 호출 합니다.  
   
--   호출에서 **SQLDriverConnect** 여기서 *InConnectionString* 지정 하거나 **DSN**= DEFAULT 또는 사용 하 여 지정 합니다 **DSN** 키워드는 시스템 정보에 포함 되지 않은 데이터 원본입니다.  
+-   **SQLDriverConnect** 에 대 한 호출에서 *inconnectionstring* 은 **dsn**= DEFAULT를 지정 하거나 시스템 정보에 포함 되지 않은 데이터 원본을 **dsn** 키워드를 사용 하 여 지정 합니다.  
   
- 이 경우 드라이버에서 정의 된 기본 데이터 원본을 지정 하는 방법을 이 관리 작업을 포함할 수 있습니다 하 고 사용자에 따라 달라질 수 있습니다.
+ 기본 데이터 원본을 지정 하는 방법에 대 한 드라이버 정의입니다. 여기에는 관리 작업이 포함 될 수 있으며 사용자에 따라 달라질 수 있습니다.

@@ -17,10 +17,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 043e1e570efc42988dcf6b0fb66098cbcd7fc9ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024874"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
@@ -121,7 +121,7 @@ ms.locfileid: "68024874"
   
 |||  
 |-|-|  
-|**태스크**|**항목**|  
+|**작업**|**항목**|  
 |파티션 함수와 파티션 구성표를 만든 다음 테이블 및 인덱스에 적용하는 방법에 대해 설명합니다.|[분할된 테이블 및 인덱스 만들기](../../relational-databases/partitions/create-partitioned-tables-and-indexes.md)|  
 |||  
   

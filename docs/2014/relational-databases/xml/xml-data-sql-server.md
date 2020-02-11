@@ -14,18 +14,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da462979ee21e09a55015f9c9d30d72edd1ce67d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63232364"
 ---
 # <a name="xml-data-sql-server"></a>XML 데이터(SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 반구조화된 데이터 관리를 위한 다양한 애플리케이션을 개발할 수 있는 강력한 플랫폼을 제공합니다. XML에 대한 지원은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 모든 구성 요소에 통합되어 있고 해당되는 지원은 다음과 같습니다.  
   
--   `xml` 데이터 형식입니다. XML 값은 XML 스키마의 컬렉션에 따라 형식화되거나 형식화되지 않은 상태로 유지될 수 있는 `xml` 데이터 형식의 열에 기본적으로 저장될 수 있습니다. XML 열을 인덱싱할 수 있습니다.  
+-   
+  `xml` 데이터 형식입니다. XML 값은 XML 스키마의 컬렉션에 따라 형식화되거나 형식화되지 않은 상태로 유지될 수 있는 `xml` 데이터 형식의 열에 기본적으로 저장될 수 있습니다. XML 열을 인덱싱할 수 있습니다.  
   
--   `xml` 유형의 변수와 열에 저장된 XML 데이터에 대해 XQuery 쿼리를 지정할 수 있는 기능  
+-   
+  `xml` 유형의 변수와 열에 저장된 XML 데이터에 대해 XQuery 쿼리를 지정할 수 있는 기능  
   
 -   XML 데이터를 대량으로 로드할 수 있는 OPENROWSET의 향상  
   

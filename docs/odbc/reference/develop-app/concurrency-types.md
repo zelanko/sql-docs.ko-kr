@@ -1,5 +1,5 @@
 ---
-title: 동시성 유형은 | Microsoft Docs
+title: 동시성 유형 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,19 +17,19 @@ ms.assetid: 46762ae5-17dd-4777-968e-58156f470fe1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 63d7c7dce51fe4f514232cfd0d5ae2e5abeb5b70
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083178"
 ---
 # <a name="concurrency-types"></a>동시성 형식
-ODBC는 커서의 축소 된 동시성 문제를 해결 하려면 네 가지 유형의 커서 동시성을 노출 합니다.  
+커서에서 동시성 감소 문제를 해결 하기 위해 ODBC는 네 가지 유형의 커서 동시성을 노출 합니다.  
   
--   **읽기 전용** 커서 수 데이터를 읽을 하지만 업데이트 하거나 삭제할 수 없습니다 데이터입니다. 기본 동시성 형식입니다. DBMS는 Repeatable Read 및 Serializable 격리 수준을 적용 하는 행 잠금을 수 있지만 쓰기 잠금 대신 읽기 잠금을 사용할 수 있습니다. 다른 트랜잭션을 하나 이상 데이터를 읽을 수 없으므로 더 높은 동시성 깔 합니다.  
+-   **읽기** 전용 커서는 데이터를 읽을 수 있지만 데이터를 업데이트 하거나 삭제할 수는 없습니다. 이는 기본 동시성 유형입니다. DBMS에서 반복 읽기 및 직렬화 가능 격리 수준을 적용 하기 위해 행을 잠글 수 있지만 쓰기 잠금 대신 읽기 잠금을 사용할 수 있습니다. 이로 인해 다른 트랜잭션이 데이터를 최소한으로 읽을 수 있으므로 동시성이 증가 합니다.  
   
--   **잠금** 커서 결과 집합의 행을 삭제 또는 업데이트할 수 있는지 확인 하는 데 필요한 잠금에 대 한 가장 낮은 수준의 사용 합니다. 이 일반적으로 Repeatable Read 및 Serializable 트랜잭션 격리 수준에서 특히 매우 낮은 동시성 수준에서 발생 합니다.  
+-   **잠금** 커서는 결과 집합에서 행을 업데이트 하거나 삭제할 수 있는지 확인 하는 데 필요한 가장 낮은 수준의 잠금을 사용 합니다. 이는 일반적으로 반복 읽기 및 직렬화 가능 트랜잭션 격리 수준에서 매우 낮은 동시성 수준을 생성 합니다.  
   
--   **행 버전을 사용 하 여 낙관적 동시성 및 값을 사용 하 여 낙관적 동시성** 커서가 낙관적 동시성을 사용 합니다. 업데이트 또는 마지막으로 읽은 이후에 변경 되지 않은 경우에 행을 삭제 합니다. 변경 내용을 감지 하는 행 버전이 나 값 비교 합니다. 보장은 없습니다는 커서를 업데이트 하거나 행을 삭제할 수 있지만 동시성 잠금을 사용할 때 보다 훨씬 높습니다. 자세한 내용은 다음 섹션을 참조 하세요 [낙관적 동시성](../../../odbc/reference/develop-app/optimistic-concurrency.md)합니다.  
+-   **값을 사용 하 여 행 버전 및 낙관적 동시성을 사용 하는 낙관적 동시성** 커서는 낙관적 동시성을 사용 합니다. 마지막으로 읽은 이후 변경 되지 않은 경우에만 행을 업데이트 하거나 삭제 합니다. 변경 내용을 검색 하기 위해 행 버전이 나 값을 비교 합니다. 커서에서 행을 업데이트 하거나 삭제할 수는 없지만 잠금이 사용 되는 경우 보다 동시성은 훨씬 더 높습니다. 자세한 내용은 [낙관적 동시성](../../../odbc/reference/develop-app/optimistic-concurrency.md)섹션을 참조 하세요.  
   
- 응용 프로그램 커서 문 특성 SQL_ATTR_CONCURRENCY 사용 하려고 동시성 유형을 지정 합니다. 호출한 지 원하는 형식을 결정할 **SQLGetInfo** SQL_SCROLL_CONCURRENCY 옵션을 사용 합니다.
+ 응용 프로그램은 커서가 SQL_ATTR_CONCURRENCY statement 특성과 함께 사용 하려는 동시성 유형을 지정 합니다. 지원 되는 형식을 확인 하기 위해 SQL_SCROLL_CONCURRENCY 옵션으로 **SQLGetInfo** 를 호출 합니다.

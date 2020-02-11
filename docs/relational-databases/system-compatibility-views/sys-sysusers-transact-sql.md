@@ -1,5 +1,5 @@
 ---
-title: sys.sysusers (TRANSACT-SQL) | Microsoft Docs
+title: sys. sysusers (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,33 +22,33 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1b8bec28a2e7778a449cb36aeee81481a311c6b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68018066"
 ---
 # <a name="syssysusers-transact-sql"></a>sys.sysusers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  각각에 대해 하나의 행을 포함 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 사용자, Windows 그룹, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 역할입니다.  
+  데이터베이스의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 각 windows 사용자, windows 그룹 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , 사용자 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 역할에 대해 한 행을 포함 합니다.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**uid**|**smallint**|해당 데이터베이스에서 고유한 사용자 ID입니다.<br /><br /> 1 = 데이터베이스 소유자<br /><br /> 사용자 및 역할 수가 32,767을 초과하는 경우 오버플로되거나 NULL을 반환합니다.|  
-|**상태**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**업무**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**name**|**sysname**|해당 데이터베이스에서 고유한 사용자 이름 또는 그룹 이름입니다.|  
-|**sid**|**varbinary(85)**|해당 항목에 대한 SID(보안 ID)입니다.|  
-|**역할**|**varbinary(2048)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**s**|**varbinary (85)**|해당 항목에 대한 SID(보안 ID)입니다.|  
+|**역할**|**varbinary (2048)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**createdate**|**datetime**|계정이 추가된 날짜입니다.|  
 |**updatedate**|**datetime**|계정을 마지막으로 변경한 날짜입니다.|  
 |**altuid**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 사용자 및 역할 수가 32,767을 초과하는 경우 오버플로되거나 NULL을 반환합니다.|  
-|**password**|**varbinary(256)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**gid**|**smallint**|해당 사용자가 속한 그룹의 ID입니다. 하는 경우 **uid** 와 같습니다 **gid**,이 항목 그룹을 정의 합니다. 그룹과 사용자를 합한 수가 32,767을 초과하면 오버플로되거나 NULL을 반환합니다.|  
-|**environ**|**varchar(255)**|예약되어 있습니다.|  
+|**암호**|**varbinary (256)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**gid**|**smallint**|해당 사용자가 속한 그룹의 ID입니다. **Uid** 가 **gid**와 같으면이 항목은 그룹을 정의 합니다. 그룹과 사용자를 합한 수가 32,767을 초과하면 오버플로되거나 NULL을 반환합니다.|  
+|**environ**|**varchar (255)**|예약되어 있습니다.|  
 |**hasdbaccess**|**int**|1 = 계정에 데이터베이스 액세스가 있습니다.|  
 |**islogin**|**int**|1 = 계정이 로그인 계정이 있는 Windows 그룹, Windows 사용자 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자입니다.|  
 |**isntname**|**int**|1 = 계정이 Windows 사용자 또는 Windows 그룹입니다.|  
@@ -59,8 +59,8 @@ ms.locfileid: "68018066"
 |**issqlrole**|**int**|1 = 계정이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 역할입니다.|  
 |**isapprole**|**int**|1 = 계정이 애플리케이션 역할입니다.|  
   
-## <a name="see-also"></a>관련 항목  
- [시스템 테이블을 시스템 뷰로 매핑 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [호환성 뷰&#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [시스템 테이블을 시스템 뷰로 매핑 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;호환성 뷰](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

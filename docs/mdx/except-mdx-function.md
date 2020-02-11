@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d53a88ce78eb5a1b106cefb0832ca1023f67c000
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68077259"
 ---
 # <a name="except-mdx-function"></a>Except (MDX) 함수
@@ -35,7 +35,7 @@ Except(Set_Expression1, Set_Expression2 [, ALL ] )
  집합을 반환하는 유효한 MDX 식입니다.  
   
 ## <a name="remarks"></a>설명  
- 하는 경우 **모든** 는 지정 된 함수는 첫 번째 집합에서 발견 된 중복 요소를 유지; 두 번째 집합에서 발견 된 중복 요소 제거 됩니다. 멤버는 첫 번째 집합에 나타나는 순서대로 반환됩니다.  
+ **ALL** 이 지정 된 경우 함수는 첫 번째 집합에서 발견 된 중복 항목을 유지 합니다. 두 번째 집합에서 발견 된 중복은 계속 제거 됩니다. 멤버는 첫 번째 집합에 나타나는 순서대로 반환됩니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 이 함수의 사용 방법을 보여 줍니다.  
@@ -56,8 +56,8 @@ WHERE
    ([Measures].[Order Quantity])  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [- &#40;제외한&#41; &#40;MDX&#41;](../mdx/except-mdx-operator.md)   
- [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [-&#40;&#41; &#40;MDX를 제외 하 고&#41;](../mdx/except-mdx-operator.md)   
+ [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -15,65 +15,65 @@ ms.assetid: 2f2d22c1-51d6-4055-9f5a-53bc31e9fea0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6352a5ae894adb09f714a78386bfecfa3ce1df77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68041626"
 ---
 # <a name="interval-literal-syntax"></a>간격 리터럴 구문
-ODBC의 간격 리터럴에 대 한 구문을 사용 됩니다.  
+다음 구문은 ODBC의 간격 리터럴에 사용 됩니다.  
   
- *간격 리터럴:: 간격 =* [+ *&#124;* -] *간격 문자열 간격-한정자*  
+ *interval-literal:: = interval* [+*&#124;*-] *interval-문자열 interval-한정자*  
   
- *간격-문자열* :: = *견적* {0} *연도-월-리터럴* &#124; *하루 시간 리터럴* } *견적*  
+ *간격-문자열* :: = *따옴표* { *년-월-리터럴* &#124; *일-시간-리터럴* } *따옴표*  
   
- *year-month-literal* ::= *years-value* &#124; [*years-value* -] *months-value*  
+ *년-월-리터럴* :: = *년-값* &#124; [*년-값* -] *월-값*  
   
- *날짜-시간-리터럴이* :: = *날짜-시간 간격* &#124; *시간 간격*  
+ *일-시간-리터럴* :: = *일-시간 간격* &#124; *시간-간격*  
   
- *day-time-interval* ::= *days-value* [*hours-value* [:*minutes-value*[:*seconds-value*]]]  
+ *일-시간-간격* :: = *일-값* [*시간-값* [:*분 값*[:*초-값*]]]  
   
- *time-interval* ::= *hours-value* [:*minutes-value* [:*seconds-value* ] ]  
+ *시간 간격* :: = *시간-값* [:*분-값* [:*초-값* ]]  
   
- &#124;*분 값* [:*초 값* ]  
+ &#124; *분-값* [:*seconds-값* ]  
   
- &#124; *seconds-value*  
+ &#124; *초-값*  
   
- *years-value* ::= *datetime-value*  
+ *연도-값* :: = *datetime-값*  
   
- *months-value* ::= *datetime-value*  
+ *months-value* :: = *datetime-value*  
   
- *days-value* ::= *datetime-value*  
+ *days-value* :: = *datetime-value*  
   
- *hours-value* ::= *datetime-value*  
+ *시간-value* :: = *datetime-value*  
   
- *minutes-value* ::= *datetime-value*  
+ *분-값* :: = *datetime-값*  
   
- *초 값* :: = *정수값 초* [. [ *초의 소수*]]  
+ *초-값* :: = *초-정수 값* [. [ *초-분수*] ]  
   
- *seconds-integer-value* ::= *unsigned-integer*  
+ *초-정수-값* :: = *unsigned-정수*  
   
- *seconds-fraction* ::= *unsigned-integer*  
+ *초-분수* :: = *부호 없는 정수*  
   
- *datetime-value* ::= *unsigned-integer*  
+ *datetime-value* :: = *unsigned-integer*  
   
- *간격 한정자* :: = *시작 필드* TO *끝 필드* &#124; *단일 날짜/시간 필드*  
+ *interval-한정자* :: = *시작 필드* 에서 *끝 필드* &#124; *단일 날짜/시간 필드*  
   
- *start-field* ::= *non-second-datetime-field* [(*interval-leading-field-precision* )]  
+ *시작-field* :: = *second가 아닌-datetime-field* [(*interval-선행-필드-전체 자릿수* )]  
   
- *끝 필드* :: = *비-두 번째-날짜/시간-필드* &#124; 두 번째 [(*간격 소수-시간 (초)-정밀도*)]  
+ *끝 필드* :: = *초 이외의 날짜/시간 필드* &#124; 초 [(*간격-초-전체 자릿수*)]  
   
- *단일 날짜/시간 필드* :: = *비-두 번째-날짜/시간-필드* [(*간격 최고의-필드 정밀도*)] &#124; 두 번째 [(*최고의 필드 정밀도 간격*  [, (*간격 소수-시간 (초)-정밀도*)]  
+ *단일 날짜/시간 필드* :: = *두 번째-날짜/시간 필드* [(*간격-필드-전체 자릿수*)] &#124; second [(간격-*선행-필드-* 전체 자릿수 [, (*간격-초-전체 자릿수*)]  
   
- *날짜/시간 필드* :: = *비-두 번째-날짜/시간-필드* &#124; 두 번째  
+ *datetime-field* :: = *second가 아닌-datetime-field* &#124; second  
   
- *두 번째-날짜/시간-필드가 아닌* :: = 연도 &#124; 월 &#124; 일 &#124; 시간 &#124; 분  
+ *second-datetime-field* :: = YEAR &#124; MONTH &#124; DAY &#124; HOUR &#124; MINUTE  
   
- *interval-fractional-seconds-precision* ::= *unsigned-integer*  
+ *간격-초-초-전체 자릿수* :: = *부호 없는 정수*  
   
- *간격 최고의-필드 정밀도* :: = *부호 없는 정수*  
+ *간격-선행 필드-전체 자릿수* :: = *부호 없는 정수*  
   
- *quote* ::= '  
+ *quote* :: = '  
   
- *unsigned-integer* ::= *digit...*
+ *unsigned-integer* :: = *digit* ...

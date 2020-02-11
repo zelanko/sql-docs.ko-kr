@@ -14,11 +14,11 @@ ms.assetid: 2ac8f012-e46d-41ca-81bb-e4a3246e3241
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 643d7d4174df66abfcee274c1f987e8f405d19b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083342"
 ---
 # <a name="commit-and-rollback-behavior"></a>커밋 및 롤백 동작
-Server Dbms 간에 커서를 닫고 문을 커밋하거나 롤백할 때 준비 된 문은 삭제 하는 일반적인 동작은 합니다. 데스크톱 데이터베이스를 준비 된 문은 커서를 열어 두고 가능성이 높아집니다. 자세한 내용은 SQL_CURSOR_COMMIT_BEHAVIOR 및 SQL_CURSOR_ROLLBACK_BEHAVIOR 옵션을 보려면 합니다 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) 함수 설명 및 [커서 및 준비 된 문에서효과의트랜잭션](../../../odbc/reference/develop-app/effect-of-transactions-on-cursors-and-prepared-statements.md).
+서버 Dbms 간의 일반적인 동작은 문이 커밋되거나 롤백될 때 커서를 닫고 준비 된 문을 삭제 하는 것입니다. 데스크톱 데이터베이스는 커서를 열린 상태로 유지 하 고 준비 된 문을 유지할 가능성이 높습니다. 자세한 내용은 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) 함수 설명의 SQL_CURSOR_COMMIT_BEHAVIOR 및 SQL_CURSOR_ROLLBACK_BEHAVIOR 옵션 및 [커서와 준비 된 문의 트랜잭션 효과](../../../odbc/reference/develop-app/effect-of-transactions-on-cursors-and-prepared-statements.md)를 참조 하세요.

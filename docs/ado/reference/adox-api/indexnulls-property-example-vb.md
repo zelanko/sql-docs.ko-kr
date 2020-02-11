@@ -15,14 +15,14 @@ ms.assetid: 45204669-32c0-4690-aab9-ddf0fd71ae48
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c5976cf913a98e5fa7db313144463ca12373d6bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965999"
 ---
 # <a name="indexnulls-property-example-vb"></a>IndexNulls 속성 예제(VB)
-이 예제에서는 합니다 [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) 의 속성을 [인덱스](../../../ado/reference/adox-api/index-object-adox.md)합니다. 코드는 새 인덱스를 만들고 값을 설정 **IndexNulls** (list1 목록 상자)에서 사용자 입력을 기반으로 합니다. 그런 다음, **인덱스** 에 추가 됩니다 합니다 **직원** [테이블](../../../ado/reference/adox-api/table-object-adox.md) 에 *Northwind* [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md)합니다. 새 **인덱스** 에 적용 되는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 기반으로 **직원** 테이블 및 **레코드 집합** 열려 합니다. 새 레코드에 추가 됩니다는 **직원** 테이블을 사용 하 여를 **Null** 인덱싱된 필드의 값입니다. 설정에 따라 새 레코드가 표시 되는지 여부를 **IndexNulls** 속성입니다.  
+이 예에서는 [인덱스](../../../ado/reference/adox-api/index-object-adox.md)의 [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) 속성을 보여 줍니다. 이 코드는 새 인덱스를 만들고 List1 라는 목록 상자에서 사용자 입력을 기반으로 **IndexNulls** 의 값을 설정 합니다. 그런 다음 **인덱스가** *Northwind* [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md)의 **Employees** [테이블](../../../ado/reference/adox-api/table-object-adox.md) 에 추가 됩니다. 새 **인덱스** 는 **Employees** 테이블을 기반으로 하는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 에 적용 되 고 **레코드 집합** 은 열립니다. 새 레코드가 **Employees** 테이블에 추가 되 고 인덱싱된 필드에 **Null** 값이 추가 됩니다. 이 새 레코드가 표시 되는지 여부는 **IndexNulls** 속성의 설정에 따라 달라 집니다.  
   
 ```  
 ' BeginIndexNullsVB  
@@ -108,6 +108,6 @@ End Sub
 ' EndIndexNullsVB  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Index 개체 (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [IndexNulls 속성(ADOX)](../../../ado/reference/adox-api/indexnulls-property-adox.md)

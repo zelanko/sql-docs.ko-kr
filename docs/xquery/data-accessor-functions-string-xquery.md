@@ -16,16 +16,16 @@ ms.assetid: 7baa2959-9340-429b-ad53-3df03d8e13fc
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9cb30d81102c17f2c3ce04b31ac7ff2b9689343e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038946"
 ---
 # <a name="data-accessor-functions---string-xquery"></a>데이터 접근자 함수 - string(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  값을 반환 *$arg* 문자열로 표시 합니다.  
+  문자열로 표현 된 *$arg* 의 값을 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,21 +41,21 @@ fn:string($arg as item()?) as xs:string
   
 ## <a name="remarks"></a>설명  
   
--   하는 경우 *$arg* 이 빈 시퀀스인 경우 길이가 0 인 문자열이 반환 됩니다.  
+-   *$Arg* 빈 시퀀스인 경우 길이가 0 인 문자열이 반환 됩니다.  
   
--   하는 경우 *$arg* 노드인 경우 함수는 문자열 값 접근자를 사용 하 여 가져온 노드의 문자열 값을 반환 합니다. 이 내용은 W3C XQuery 1.0 및 XPath 2.0 데이터 모델 사양에 정의되어 있습니다.  
+-   *$Arg* 노드인 경우 함수는 문자열-값 접근자를 사용 하 여 가져온 노드의 문자열 값을 반환 합니다. 이 내용은 W3C XQuery 1.0 및 XPath 2.0 데이터 모델 사양에 정의되어 있습니다.  
   
--   하는 경우 *$arg* 원자성 값을로 캐스팅 된 식에서 반환 되는 동일한 문자열이 반환 **xs: string**, *$arg*, 특별히 언급 된 경우를 제외 하 고 있습니다.  
+-   *$Arg* 원자 값인 경우 함수는 **xs: string**으로 캐스팅 된 식에서 반환 된 것과 동일한 문자열을 반환 합니다 .이 문자열은 그렇지 않은 경우를 제외 하 고는 *$arg*.  
   
--   경우 유형의 *$arg* 됩니다 **xs: anyuri**, 특수 문자를 이스케이프 하지 않고 URI를 문자열로 변환 됩니다.  
+-   *$Arg* 형식이 **xs: ANYURI**인 경우 URI는 특수 문자를 이스케이프 하지 않고 문자열로 변환 됩니다.  
   
--   이 구현 **fn: string** 없이 상황별 조건자의 컨텍스트에서 인수로 사용할 수 있습니다. 특히 사용 시 대괄호([])로 묶어야 합니다.  
+-   인수가 없는 **fn: string ()** 구현은 컨텍스트 종속 조건자의 컨텍스트에서만 사용할 수 있습니다. 특히 사용 시 대괄호([])로 묶어야 합니다.  
   
 ## <a name="examples"></a>예  
- 이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예를 제공 **xml** AdventureWorks 데이터베이스의 열을 입력 합니다.  
+ 이 항목에서는 AdventureWorks 데이터베이스의 다양 한 **xml** 유형 열에 저장 된 xml 인스턴스에 대 한 XQuery 예를 제공 합니다.  
   
 ### <a name="a-using-the-string-function"></a>A. 문자열 함수 사용  
- 다음 검색 쿼리는 <`Features`> 자식 요소 노드는 <`ProductDescription`> 요소입니다.  
+ 다음 쿼리는 <`Features` `ProductDescription`> 요소의 <> 자식 요소 노드를 검색 합니다.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -79,7 +79,7 @@ WHERE ProductModelID=19
 </PD:Features>  
 ```  
   
- 지정 하는 경우는 **string ()** 함수를 지정 된 노드의 문자열 값을 수신 합니다.  
+ **String ()** 함수를 지정 하면 지정 된 노드의 문자열 값이 표시 됩니다.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -97,8 +97,8 @@ These are the product highlights.
 3 yearsparts and labor...    
 ```  
   
-### <a name="b-using-the-string-function-on-various-nodes"></a>2\. 여러 노드에서 문자열 함수 사용  
- 다음 예에서는 XML 인스턴스가 xml 유형의 변수에 할당됩니다. 쿼리를 적용 한 결과 보여 주기 위해 지정 된 **string ()** 다양 한 노드에 있습니다.  
+### <a name="b-using-the-string-function-on-various-nodes"></a>B. 여러 노드에서 문자열 함수 사용  
+ 다음 예에서는 XML 인스턴스가 xml 유형의 변수에 할당됩니다. 쿼리는 다양 한 노드에 **문자열 ()** 을 적용 한 결과를 보여 주기 위해 지정 됩니다.  
   
 ```  
 declare @x xml  
@@ -144,7 +144,7 @@ select @x.query('string(/comment()[1])')
 This is a comment   
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [xml 데이터 형식에 대한 XQuery 함수](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: ODBC 서비스 공급자 인터페이스 (SPI) 참조 | Microsoft Docs
+title: ODBC SPI (서비스 공급자 인터페이스) 참조 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,20 +11,20 @@ ms.assetid: cdeffb4a-f344-4abe-97f3-be2ede1c8e59
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 88053620fa413c50a8faff4cc47cbbe1457249f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68073830"
 ---
 # <a name="odbc-service-provider-interface-spi-reference"></a>ODBC SPI(서비스 공급자 인터페이스) 참조
-일반적으로 ODBC는 API (응용 프로그래밍 인터페이스)를 정의 합니다. 응용 프로그램에서 api에서 함수를 호출할 수 있습니다 하 고 드라이버 및 드라이버 관리자 내에서 구현 되어야 합니다.  
+일반적으로 ODBC는 API (응용 프로그래밍 인터페이스)를 정의 했습니다. API의 함수는 응용 프로그램에서 호출할 수 있으며 드라이버 관리자와 드라이버 내에서 구현 해야 합니다.  
   
- 드라이버 인식 연결 풀링 기능을 추가 하 여 ODBC (SPI)의 서비스 공급자 인터페이스를 소개합니다. SPI 함수 드라이버 관리자와 드라이버 간의 통신에 사용 됩니다. SPI 함수 드라이버;에 의해 구현 됩니다. 드라이버 관리자는 응용 프로그램에 SPI 함수를 노출 하지 않습니다. 응용 프로그램에서 이러한 함수를 직접 호출 하지 않습니다.  
+ 드라이버 인식 연결 풀링 기능이 추가 되어 ODBC는 SPI (서비스 공급자 인터페이스)를 소개 합니다. SPI의 함수는 드라이버 관리자와 드라이버 간의 통신에 사용 됩니다. SPI 함수는 드라이버에 의해 구현 됩니다. 드라이버 관리자는 SPI 함수를 응용 프로그램에 노출 하지 않습니다. 응용 프로그램에서는 이러한 함수를 직접 호출 하면 안 됩니다.  
   
- ODBC 드라이버 개발을 위한 sqlspi.h 포함 됩니다.  
+ ODBC 드라이버 개발용으로 sqlspi .h를 포함 합니다.  
   
- 이 섹션에는 다음 항목이 포함 되어 있습니다.  
+ 이 단원에는 다음 항목이 포함되어 있습니다.  
   
 -   [SQLCleanupConnectionPoolID](../../../odbc/reference/syntax/sqlcleanupconnectionpoolid-function.md)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68073830"
   
 -   [SQLSetDriverConnectInfo](../../../odbc/reference/syntax/installation-and-configuration-wwi-oltp.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ODBC 드라이버 개발](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [ODBC 드라이버에서 연결 풀 인식 개발](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)   
  [드라이버 관리자 연결 풀링](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md)

@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_start_job (TRANSACT-SQL) | Microsoft Docs
+title: sys. sp_cdc_start_job (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ ms.assetid: cf443a67-7705-4799-9f39-0e3a6a8a0708
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 5f38224cdd1f2ade609d5b10ba2a6b46f913639d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68066710"
 ---
-# <a name="sysspcdcstartjob-transact-sql"></a>sys.sp_cdc_start_job(Transact-SQL)
+# <a name="syssp_cdc_start_job-transact-sql"></a>sys.sp_cdc_start_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   현재 데이터베이스의 변경 데이터 캡처 정리 또는 캡처 작업을 시작합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,13 +41,13 @@ sys.sp_cdc_start_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ [ @job_type = ] 'job_type' ]` 추가할 작업 유형입니다. *job_type* 됩니다 **nvarchar(20)** 이며 기본값은 **캡처**합니다. 유효한 입력은 **캡처** 하 고 **정리**합니다.  
+`[ [ @job_type = ] 'job_type' ]`추가할 작업 유형입니다. *job_type* 은 **nvarchar (20)** 이며 기본값은 **capture**입니다. 올바른 입력은 **캡처** 및 **정리**입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="remarks"></a>설명  
  sys.sp_cdc_start_job을 사용하면 관리자가 캡처 작업이나 정리 작업을 명시적으로 시작할 수 있습니다.  
@@ -58,7 +58,7 @@ sys.sp_cdc_start_job [ [ @job_type = ] 'job_type' ]
 ## <a name="examples"></a>예  
   
 ### <a name="a-starting-a-capture-job"></a>A. 캡처 작업 시작  
- 다음 예에서는 `AdventureWorks2012` 데이터베이스의 캡처 작업을 시작합니다. 값을 지정 *job_type* 필요 하지 않은 기본 작업 유형이 **캡처**합니다.  
+ 다음 예에서는 `AdventureWorks2012` 데이터베이스의 캡처 작업을 시작합니다. 기본 작업 유형이 **캡처**이기 때문에 *job_type* 값을 지정 하지 않아도 됩니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -67,7 +67,7 @@ EXEC sys.sp_cdc_start_job;
 GO  
 ```  
   
-### <a name="b-starting-a-cleanup-job"></a>2\. 정리 작업 시작  
+### <a name="b-starting-a-cleanup-job"></a>B. 정리 작업 시작  
  다음 예에서는 `AdventureWorks2012` 데이터베이스의 정리 작업을 시작합니다.  
   
 ```  
@@ -76,8 +76,8 @@ GO
 EXEC sys.sp_cdc_start_job @job_type = N'cleanup';  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [dbo.cdc_jobs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
- [sys.sp_cdc_stop_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-stop-job-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [cdc_jobs &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
+ [sp_cdc_stop_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-stop-job-transact-sql.md)  
   
   

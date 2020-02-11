@@ -1,5 +1,5 @@
 ---
-title: sys.fn_cdc_increment_lsn (TRANSACT-SQL) | Microsoft Docs
+title: sys. fn_cdc_increment_lsn (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,18 +21,18 @@ ms.assetid: e53b6703-358b-4c9a-912a-8f7c7331069b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a482acb22ad535e44d6ceb06a20474945a477e58
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046373"
 ---
-# <a name="sysfncdcincrementlsn-transact-sql"></a>sys.fn_cdc_increment_lsn(Transact-SQL)
+# <a name="sysfn_cdc_increment_lsn-transact-sql"></a>sys.fn_cdc_increment_lsn(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   지정된 LSN(로그 시퀀스 번호)을 기준으로 시퀀스의 다음 LSN을 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,10 +43,10 @@ sys.fn_cdc_increment_lsn ( lsn_value )
   
 ## <a name="arguments"></a>인수  
  *lsn_value*  
- LSN 값 *lsn_value* 됩니다 **binary(10)로 표현**합니다.  
+ LSN 값 *lsn_value* 는 **binary (10)** 입니다.  
   
 ## <a name="return-type"></a>반환 형식  
- **binary(10)**  
+ **binary (10)**  
   
 ## <a name="remarks"></a>설명  
  이 함수에 의해 반환된 LSN 값은 지정된 값보다 항상 크며 두 값 사이에는 LSN 값이 없습니다.  
@@ -70,10 +70,10 @@ SELECT * from cdc.fn_cdc_get_all_changes_HumanResources_Employee( @from_lsn, @to
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [sys.fn_cdc_decrement_lsn &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-decrement-lsn-transact-sql.md)   
- [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
- [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [fn_cdc_decrement_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-decrement-lsn-transact-sql.md)   
+ [fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
+ [fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
  [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
  [변경 데이터 캡처 정보&#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   

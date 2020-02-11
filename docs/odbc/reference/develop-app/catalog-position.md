@@ -15,37 +15,37 @@ ms.assetid: 5bc5f64b-c75a-43d2-8745-102ec7a49000
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3d7c320521a9948c7968f4f7f5d42fd715f6c03d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68062677"
 ---
 # <a name="catalog-position"></a>카탈로그 위치
-데이터 원본에 데이터 원본의 식별자 및 식별자의 나머지 부분에서 분리 하는 방식을 카탈로그 이름의 위치가 달라 집니다. 예를 들어, Xbase 데이터 소스의 카탈로그 이름을 디렉터리 이며, Microsoft® Windows®에서 구분 된 테이블 이름 (즉, 파일 이름)에서 백슬래시 (\\). 다음 그림에서는이 문제를 보여 줍니다.  
+식별자에 있는 카탈로그 이름의 위치와 식별자의 나머지와 구분 되는 방법은 데이터 원본에 따라 다릅니다. 예를 들어 Xbase 데이터 원본에서 카탈로그 이름은 디렉터리 이며 Microsoft® Windows®에서 백슬래시 (\\)로 테이블 이름 (파일 이름)과 구분 됩니다. 다음 그림에서는이 상황을 보여 줍니다.  
   
  ![카탈로그 위치: Xbase](../../../odbc/reference/develop-app/media/ch0801.gif "ch0801")  
   
- SQL Server 데이터 원본에서 카탈로그는 데이터베이스 및 스키마와 테이블 이름에서 마침표 (.)로 구분 됩니다.  
+ SQL Server 데이터 원본에서 카탈로그는 데이터베이스 이며 스키마 및 테이블 이름과 마침표 (.)로 구분 됩니다.  
   
  ![카탈로그 위치: SQL Server](../../../odbc/reference/develop-app/media/ch0802.gif "ch0802")  
   
- Oracle 데이터 원본에서 카탈로그 데이터베이스 이기도 하지만 테이블 이름 다음에 나오는 구별 하 여 스키마와 테이블 이름은 at 기호 (@).  
+ Oracle 데이터 원본에서 카탈로그는 데이터베이스 이기도 하지만 테이블 이름을 따르며 스키마 및 테이블 이름과 함께 기호 (@)로 구분 됩니다.  
   
  ![카탈로그 위치: Oracle](../../../odbc/reference/develop-app/media/ch0803.gif "ch0803")  
   
- 카탈로그 구분 기호 및 카탈로그 이름의 위치를 확인 하려면 응용 프로그램 호출 **SQLGetInfo** SQL_CATALOG_NAME_SEPARATOR 및 SQL_CATALOG_LOCATION 옵션을 사용 하 여 합니다. 상호 운용 가능한 응용 프로그램에는 이러한 값에 따라 식별자 생성 해야 합니다.  
+ 카탈로그 구분 기호 및 카탈로그 이름의 위치를 확인 하기 위해 응용 프로그램은 SQL_CATALOG_NAME_SEPARATOR 및 SQL_CATALOG_LOCATION 옵션으로 **SQLGetInfo** 를 호출 합니다. 상호 운용 가능한 응용 프로그램은 이러한 값에 따라 식별자를 생성 해야 합니다.  
   
- 둘 이상의 파트가 포함 된 식별자, 인용 하는 경우 응용 프로그램을 개별적으로 각 부분을 인용 식별자를 구분 하는 문자를 하지 인용 주의 해야 합니다. 모든 행 및 Xbase 테이블의 열을 선택 하려면 다음 문을 카탈로그 (\XBASE\SALES\CORP) 및 (Parts.dbf) 테이블 이름 이지만 카탈로그 구분 기호가 없습니다 따옴표 하는 예를 들어 (\\):  
+ 둘 이상의 파트를 포함 하는 식별자를 따옴표로 묶을 때 응용 프로그램은 식별자를 구분 하는 문자를 제외 하 고 각 부분을 인용 하지 않도록 주의 해야 합니다. 예를 들어 다음 문은 Xbase 테이블의 모든 행 및 열을 선택 하 고 카탈로그 (\XBASE\SALES\CORP) 및 테이블 (.dbf) 이름을 인용 하지만 카탈로그 구분 기호 (\\)는 제외 합니다.  
   
 ```  
 SELECT * FROM "\XBASE\SALES\CORP"\"PARTS.DBF"  
 ```  
   
- 모든 행 및 Oracle 테이블의 열을 선택 하려면 다음 문을 따옴표 (Sales) 카탈로그, 스키마 (회사) 하며 (부분) 테이블 이름을 카탈로그 없습니다 (@) 또는 스키마 (.) 구분:  
+ Oracle 테이블의 모든 행 및 열을 선택 하 여 카탈로그 (판매), 스키마 (회사) 및 테이블 (파트) 이름을 선택 하 고 카탈로그 (@) 또는 스키마 (.) 구분 기호는 제외 하는 문은 다음과 같습니다.  
   
 ```  
 SELECT * FROM "Corporate"."Parts"@"Sales"  
 ```  
   
- 따옴표 식별자에 대 한 내용은 다음 섹션을 참조 하세요 [따옴표 붙은 식별자](../../../odbc/reference/develop-app/quoted-identifiers.md)합니다.
+ 식별자를 인용 하는 방법에 대 한 자세한 내용은 다음 섹션인 [따옴표 붙은 식별자](../../../odbc/reference/develop-app/quoted-identifiers.md)를 참조 하세요.

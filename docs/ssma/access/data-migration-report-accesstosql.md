@@ -10,37 +10,37 @@ ms.assetid: b090b327-cec6-4d9a-a670-8f96e8ff0046
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 4d552114800b2d5d0148e3681f1fd165a914f654
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68006589"
 ---
 # <a name="data-migration-report-accesstosql"></a>데이터 마이그레이션 보고서 (AccessToSQL)
-합니다 **데이터 마이그레이션 보고서** 대화 상자가 나타나면 데이터를 마이그레이션한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+데이터 **마이그레이션 보고서** 대화 상자는 데이터를로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]마이그레이션한 후에 표시 됩니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
 **상태**  
-대상 데이터베이스에 원본에서 데이터 마이그레이션 상태를 보여 줍니다.  
+원본 데이터베이스에서 대상 데이터베이스로 데이터 마이그레이션의 상태를 표시 합니다.  
   
-**From**  
+**보낸 사람**  
 원본 테이블입니다.  
   
-**수행할 작업**  
+**받는 사람**  
 대상 테이블입니다.  
   
 **총 행 수**  
-원본 테이블의 데이터 행의 수입니다.  
+원본 테이블의 데이터 행 수입니다.  
   
-**성공적으로 마이그레이션된 행 개수**  
-대상 테이블에 데이터 행의 수를 마이그레이션 했습니다.  
+**성공적으로 마이그레이션된 행 수**  
+대상 테이블로 성공적으로 마이그레이션된 데이터 행 수입니다.  
   
 **비율**  
-행의 비율을 마이그레이션 했습니다.  
+성공적으로 마이그레이션된 행의 비율입니다.  
   
 **세부 정보**  
-데이터 마이그레이션에 실패 한 경우 보고서에서 선택한 행에 대 한 마이그레이션 세부 정보를 표시 하려면 클릭 합니다. SSMA는 실패 한 이유를 표시 합니다.  
+데이터 마이그레이션이 실패 한 경우 보고서에서 선택한 행에 대 한 마이그레이션 세부 정보를 표시 하려면 클릭 합니다. SSMA에서 오류의 원인을 표시 합니다.  
   
 **보고서 저장**  
-보고서를 저장 하는 합니다. CSV (쉼표로 구분 된 값) 파일, Microsoft Excel을 사용 하 여 검사할 수 있습니다.  
+보고서를에 저장 합니다. Microsoft Excel을 사용 하 여 검사할 수 있는 CSV, (쉼표로 구분 된 값) 파일입니다.  
   

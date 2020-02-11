@@ -14,23 +14,23 @@ ms.assetid: 802ac711-7e5d-4152-9698-db0cafcf6047
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f24a305c2f22ef4cfacbbe4bcbcf498eab648f1c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68064471"
 ---
 # <a name="sqlerror-mapping"></a>SQLError 매핑
-응용 프로그램을 호출할 때 **SQLError** 는 ODBC를 통한 *3.x* 드라이버에 대 한 호출  
+응용 프로그램 *에서 ODBC 3.x* 드라이버를 통해 **SQLError** 를 호출 하는 경우  
   
 ```  
 SQLError(henv, hdbc, hstmt, szSqlState, pfNativeError, szErrorMsg, cbErrorMsgMax, pcbErrorMsg)   
 ```  
   
- 매핑되는  
+ 매핑 대상  
   
 ```  
 SQLGetDiagRec(HandleType, Handle, RecNumber, szSqlstate, pfNativeErrorPtr, szErrorMsg, cbErrorMsgMax, pcbErrorMsg)  
 ```  
   
- 사용 하 여는 *HandleType* 인수를 적절 하 게 SQL_HANDLE_ENV, SQL_HANDLE_DBC를 호출 하 여, 값으로 설정 하며 *처리* 인수 값으로 설정 *henv*하십시오 *hdbc*, 또는 *hstmt*를 적절 하 게 합니다. 합니다 *RecNumber* 인수 드라이버 관리자에 의해 결정 됩니다.
+ *HandleType* 인수를 SQL_HANDLE_ENV 값으로 설정 하 고, SQL_HANDLE_DBC 또는 SQL_HANDLE_STMT 하 고, 적절 하 게 *henv*, *hdbc*또는 *hstmt*의 값으로 *핸들* 인수를 설정 합니다. 지 *수* 인수는 드라이버 관리자에 의해 결정 됩니다.

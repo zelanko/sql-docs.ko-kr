@@ -15,16 +15,16 @@ ms.assetid: 766488cc-450c-434c-9c88-467f6c57e17c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3f7264b17c13d6b66bf1be24da81e96a4ca3e8a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68122827"
 ---
 # <a name="batches-of-sql-statements"></a>SQL 문의 일괄 처리
-SQL 문의 일괄 처리는 그룹 두 개 이상의 SQL 문 또는 두 개 이상의 SQL 문 그룹으로 동일한 영향을 주지 않는 단일 SQL 문입니다. 일부 구현에서는 모든 결과 사용할 수 전에 전체 일괄 처리 문을 실행 됩니다. 이 대개 더 네트워크 트래픽을 줄일 종종 있습니다 이므로 데이터 원본 수 SQL 문의 일괄 처리의 실행을 최적화할 경우에 따라 문을 개별적으로 전송 하는 보다 효율적입니다. 다른 구현에서는 호출 **SQLMoreResults** 일괄 처리의 다음 문으로 실행을 트리거합니다. ODBC는 다음 유형의 일괄 처리를 지원합니다.  
+SQL 문 일괄 처리는 둘 이상의 sql 문 또는 두 개 이상의 SQL 문 그룹과 동일한 영향을 주는 단일 SQL 문 그룹입니다. 일부 구현에서는 전체 일괄 처리 문이 실행 되어 결과를 사용할 수 있습니다. 이는 일반적으로 네트워크 트래픽을 줄일 수 있고 데이터 원본에서 SQL 문 일괄 처리의 실행을 최적화할 수 있기 때문에 문을 개별적으로 전송 하는 것 보다 더 효율적입니다. 다른 구현에서 **SQLMoreResults** 를 호출 하면 일괄 처리에서 다음 문의 실행이 트리거됩니다. ODBC는 다음과 같은 유형의 일괄 처리를 지원 합니다.  
   
--   **명시적 일괄 처리** 는 *명시적 일괄 처리* 두 개 이상의 SQL 문을 세미콜론 (;)으로 구분 됩니다. 예를 들어, 다음 SQL 문 일괄 처리에 새 판매 주문을 열립니다. 이 경우 주문 및 라인 모두 테이블에 행을 삽입 합니다. 마지막 문 다음에 없는 세미콜론은 참고 합니다.  
+-   **명시적 일괄 처리** *명시적 일괄 처리* 는 세미콜론 (;)으로 구분 된 두 개 이상의 SQL 문입니다. 예를 들어 다음 SQL 문 일괄 처리는 새 판매 주문을 엽니다. 이렇게 하려면 Orders 테이블과 Lines 테이블 모두에 행을 삽입 해야 합니다. 마지막 문 뒤에 세미콜론이 없습니다.  
   
     ```  
     INSERT INTO Orders (OrderID, CustID, OpenDate, SalesPerson, Status)  
@@ -39,7 +39,7 @@ SQL 문의 일괄 처리는 그룹 두 개 이상의 SQL 문 또는 두 개 이�
        VALUES (2002, 4, 412, 500)  
     ```  
   
--   **프로시저** 프로시저 SQL 문을 여러 개 있으면 SQL 문의 일괄 처리 수으로 간주 됩니다. 예를 들어, 다음 SQL Server 관련 문은 고객과 해당 고객에 대 한 열린 모든 판매 주문을 나열 하는 설정 결과 대 한 정보를 포함 하는 집합 결과 반환 하는 프로시저를 만듭니다.  
+-   **프로시저** 프로시저에 SQL 문이 두 개 이상 포함 되어 있으면 SQL 문이 일괄 처리 된 것으로 간주 됩니다. 예를 들어 다음 SQL Server 문은 고객에 대 한 정보를 포함 하는 결과 집합을 반환 하는 프로시저와 해당 고객의 모든 오픈 판매 주문을 나열 하는 결과 집합을 만듭니다.  
   
     ```  
     CREATE PROCEDURE GetCustInfo (@CustomerID INT) AS  
@@ -48,22 +48,22 @@ SQL 문의 일괄 처리는 그룹 두 개 이상의 SQL 문 또는 두 개 이�
           WHERE CustID = @CustomerID AND Status = 'OPEN'  
     ```  
   
-     합니다 **CREATE PROCEDURE** 문이나 SQL 문의 일괄 처리 아닙니다. 그러나 만들면 절차는 SQL 문의 일괄 처리 합니다. 두 가지를 구분 하는 세미콜론 없음 **SELECT** 문 때문에 **CREATE PROCEDURE** 문을 SQL Server 관련 이며 SQL Server에는 여러문을세미콜론필요하지않습니다 **CREATE PROCEDURE** 문입니다.  
+     **CREATE PROCEDURE** 문은 SQL 문이 일괄 처리 되지 않습니다. 그러나 생성 되는 프로시저는 SQL 문을 일괄 처리 합니다. **CREATE procedure** 문은 SQL Server에만 적용 되 SQL Server 고 **create** procedure 문에서 여러 문을 구분 하기 위해 세미콜론을 요구 하지 않으므로 두 **SELECT** 문을 세미콜론으로 구분 하지 않습니다.  
   
--   **매개 변수 배열** 매개 변수 배열 대량 작업을 수행 하는 효과적인 방법으로 매개 변수가 있는 SQL 문을 사용 하 여 사용할 수 있습니다. 예를 들어, 매개 변수 배열을 사용 하 여 다음 **삽입** 문을 단일 SQL 문만 실행 하는 동안 줄 테이블에 여러 행을 삽입 합니다.  
+-   **매개 변수 배열** 매개 변수가 있는 SQL 문에 매개 변수 배열을 사용 하 여 대량 작업을 효율적으로 수행할 수 있습니다. 예를 들어 다음 **INSERT** 문에 매개 변수 배열을 사용 하 여 단일 SQL 문만 실행 하면서 여러 행을 Lines 테이블에 삽입할 수 있습니다.  
   
     ```  
     INSERT INTO Lines (OrderID, Line, PartID, Quantity)  
        VALUES (?, ?, ?, ?)  
     ```  
   
-     데이터 소스 매개 변수 배열을 지원 하지 않으면, 드라이버 각 매개 변수 집합에 대해 한 번 SQL 문을 실행 하 여이 에뮬레이트할 수 있습니다. 자세한 내용은 [문 매개 변수](../../../odbc/reference/develop-app/statement-parameters.md) 하 고 [매개 변수 값의 배열](../../../odbc/reference/develop-app/arrays-of-parameter-values.md)이 섹션의 뒷부분에 나오는.  
+     데이터 원본에서 매개 변수 배열을 지원 하지 않는 경우 드라이버는 각 매개 변수 집합에 대해 SQL 문을 한 번씩 실행 하 여이를 에뮬레이트할 수 있습니다. 자세한 내용은이 섹션의 뒷부분에 나오는 [문 매개 변수](../../../odbc/reference/develop-app/statement-parameters.md) 및 [매개 변수 값 배열](../../../odbc/reference/develop-app/arrays-of-parameter-values.md)을 참조 하세요.  
   
- 상호 운용 가능한 방식으로 다양 한 유형의 일괄 처리를 혼합할 수 없습니다. 즉, 매개 변수 배열을 사용 하는 명시적 일괄 처리를 호출, 응용 프로그램에서 프로시저를 포함 하는 명시적 일괄 처리 실행의 결과 결정 하는 방법 이며 매개 변수 배열을 사용 하는 프로시저 호출에 드라이버별 합니다.  
+ 서로 다른 유형의 일괄 처리는 상호 운용 가능한 방식으로 혼합할 수 없습니다. 즉, 응용 프로그램에서 프로시저 호출을 포함 하는 명시적 일괄 처리를 실행 한 결과를 확인 하는 방법, 매개 변수 배열을 사용 하는 명시적 일괄 처리 및 매개 변수 배열을 사용 하는 프로시저 호출이 드라이버와 관련 된 것입니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   
--   [결과 생성 및 결과 없는 문](../../../odbc/reference/develop-app/result-generating-and-result-free-statements.md)  
+-   [결과 생성 및 결과 없는 명령문](../../../odbc/reference/develop-app/result-generating-and-result-free-statements.md)  
   
 -   [일괄 처리 실행](../../../odbc/reference/develop-app/executing-batches.md)  
   

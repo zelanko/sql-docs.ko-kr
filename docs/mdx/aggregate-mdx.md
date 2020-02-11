@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 6c75ab71456dc8b7ffc3efdf6bd157693de14881
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017173"
 ---
 # <a name="aggregate-mdx"></a>Aggregate(MDX)
@@ -37,7 +37,7 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
 ## <a name="remarks"></a>설명  
  일련의 빈 튜플 또는 빈 집합이 지정되면 이 함수가 빈 값을 반환합니다.  
   
- 다음 표에서 설명 하는 방법을 **집계** 함수가 여러 집계 함수와 함께 작동 합니다.  
+ 다음 표에서는 **집계** 함수가 다른 집계 함수를 사용 하 여 동작 하는 방식을 설명 합니다.  
   
 |집계 연산자|결과|  
 |--------------------------|------------|  
@@ -55,7 +55,7 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
 |할당|할당은 측정값 집계 함수에 따라 집계합니다. 측정값 집계 함수가 고유 카운트이면 할당의 합계가 계산됩니다.|  
   
 ## <a name="examples"></a>예  
- 합계를 반환 하는 다음 예제에서는 합니다 `Measures.[Order Quantity]` 멤버에 포함 된 2003 년의 첫 8 개월 동안 집계를 `Date` 차원에서는 **Adventure Works** 큐브.  
+ 다음 예에서는 **놀이 Works** 큐브에서 `Date` 차원에 `Measures.[Order Quantity]` 포함 된 2003 년의 첫 8 개월 동안 집계 된 멤버의 합계를 반환 합니다.  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  
@@ -93,7 +93,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
- 다음 예에서는 사용자가 선택한 State-Province 멤버에 대해 Aggregate 함수를 사용하여 계산한 값에 따라 이전 기간에 비해 판매량이 감소한 대리점의 수를 반환합니다. 합니다 **Hierarchize** 하 고 **DrillDownLevel** 함수는 Product 차원의 제품 범주에에서 대해 판매량 감소 값을 반환 하는 데 사용 됩니다.  
+ 다음 예에서는 사용자가 선택한 State-Province 멤버에 대해 Aggregate 함수를 사용하여 계산한 값에 따라 이전 기간에 비해 판매량이 감소한 대리점의 수를 반환합니다. **Hierarchize** 및 **DrillDownLevel** 함수는 product 차원의 제품 범주에 대 한 판매량 감소 값을 반환 하는 데 사용 됩니다.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS   
@@ -121,16 +121,16 @@ WHERE ([Geography].[State-Province].x,
     [Measures].[Declining Reseller Sales])  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [PeriodsToDate&#40;MDX&#41;](../mdx/periodstodate-mdx.md)   
- [Children&#40;MDX&#41;](../mdx/children-mdx.md)   
- [Hierarchize&#40;MDX&#41;](../mdx/hierarchize-mdx.md)   
- [개수&#40;Set&#41;&#40;MDX&#41;](../mdx/count-set-mdx.md)   
- [필터&#40;MDX&#41;](../mdx/filter-mdx.md)   
- [AddCalculatedMembers&#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)   
- [DrilldownLevel&#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)   
- [속성&#40;MDX&#41;](../mdx/properties-mdx.md)   
- [PrevMember&#40;MDX&#41;](../mdx/prevmember-mdx.md)   
- [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [PeriodsToDate &#40;MDX&#41;](../mdx/periodstodate-mdx.md)   
+ [MDX &#40;자식&#41;](../mdx/children-mdx.md)   
+ [Hierarchize &#40;MDX&#41;](../mdx/hierarchize-mdx.md)   
+ [MDX&#41; &#40;&#40;집합 수&#41;](../mdx/count-set-mdx.md)   
+ [MDX &#40;필터&#41;](../mdx/filter-mdx.md)   
+ [AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)   
+ [DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)   
+ [MDX &#40;속성&#41;](../mdx/properties-mdx.md)   
+ [PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)   
+ [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

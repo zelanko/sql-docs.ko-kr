@@ -14,22 +14,22 @@ ms.assetid: 30e25719-176b-4c48-97d4-920766b22412
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 08abd0128a6fa2a478af0e9dc9c292ff973ace79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68064496"
 ---
 # <a name="sqlcolattributes-mapping"></a>SQLColAttributes 매핑
-응용 프로그램을 호출할 때 **SQLColAttributes** 는 ODBC를 통한 *3.x* 드라이버, 호출 **SQLColAttributes** 매핑되 **SQLColAttribute** 다음과 같습니다.  
+응용 *프로그램이 ODBC 3.x* 드라이버를 통해 **sqlcolattributes** 를 호출 하는 경우 **sqlcolattributes** 에 대 한 호출은 다음과 같이 **sqlcolattributes** 에 매핑됩니다.  
   
 > [!NOTE]
->  에 사용 되는 접두사 *FieldIdentifier* ODBC에 값 *3.x* 에서 사용 되는 해당 ODBC에서 변경 되었습니다 *2.x*합니다. 새 접두사는 "SQL_DESC"; 이전에는 "SQL_COLUMN" 했습니다.  
+>  *Odbc 3.x* 의 *FieldIdentifier* 값에 사용 된 접두사는 odbc 2.x에서 사용 된 접두사에서 변경 되었습니다 *.* 새 접두사는 "SQL_DESC"입니다. 이전 접두사는 "SQL_COLUMN"입니다.  
   
-1.  응용 프로그램이 ODBC 경우 *2.x* 응용 프로그램 *fDescType* SQL_COLUMN_TYPE, 이며 반환 되는 형식은 간결한 DATETIME 형식으로 날짜, 시간 및 타임 스탬프에 대 한 값을 반환 하는 드라이버 관리자 맵 코드입니다.  
+1.  응용 *프로그램이 ODBC 2.x* 응용 프로그램이 고 반환 된 형식이 간결한 날짜/시간 형식인 경우 드라이버 관리자는 날짜, 시간 및 타임 스탬프 코드에 대 한 반환 값을 SQL_COLUMN_TYPE *fDescType* 합니다.  
   
-2.  경우 *fDescType* SQL_COLUMN_NAME, SQL_COLUMN_NULLABLE, 또는 SQL_COLUMN_COUNT, 드라이버 관리자 호출 **SQLColAttribute** 사용 하 여 드라이버에서를 *FieldIdentifier* 인수를 적절 하 게 SQL_DESC_NAME, SQL_DESC_NULLABLE, 또는 SQL_DESC_COUNT에 매핑된*합니다.* 다른 모든 값 *fDescType* 드라이버를 통해 전달 됩니다.  
+2.  *FDescType* 가 SQL_COLUMN_NAME, SQL_COLUMN_NULLABLE 또는 SQL_COLUMN_COUNT 경우 드라이버 관리자는 적절 하 게 SQL_DESC_NAME, SQL_DESC_NULLABLE 또는 SQL_DESC_COUNT에 매핑된 *FieldIdentifier* 인수를 사용 하 여 드라이버에서 **sqlcolattribute** 를 호출 합니다 *.* *FDescType* 의 다른 모든 값은 드라이버에 전달 됩니다.  
   
- ODBC *3.x* 드라이버는 모든 ODBC를 지원 해야 *3.x* *FieldIdentifiers* 에 대해 나열 된 **SQLColAttribute**합니다.  
+ ODBC 3.x *드라이버는* **sqlcolattribute**에 대해 나열 된 모든 odbc *3(sp3)* *FieldIdentifiers* 을 지원 해야 합니다.  
   
- ODBC *3.x* SQL_COLUMN_PRECISION 및 자릿수가 SQL_DESC_PRECISION, SQL_COLUMN_SCALE 및 자릿수가 SQL_DESC_SCALE, 및 SQL_COLUMN_LENGTH 및 SQL_DESC_LENGTH 드라이버를 지원 해야 합니다. 전체 자릿수, 소수 자릿수 및 길이 ODBC에서 다르게 정의 되기 때문에 이러한 값은 다른 *3.x* ODBC에 비해 *2.x*합니다. 자세한 내용은 [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 d: 데이터 형식입니다.
+ ODBC 3.x 드라이버는 SQL_COLUMN_PRECISION 및 SQL_DESC_PRECISION, SQL_COLUMN_SCALE 및 SQL_DESC_SCALE, SQL_COLUMN_LENGTH 및 SQL_DESC_LENGTH를 지원 해야 *합니다.* 이러한 값은 전체 자릿수, 소수 자릿수 및 *길이가 odbc 2.x*와는 *달리 odbc 2.x* 에서 다르게 정의 되기 때문에 다릅니다. 자세한 내용은 [열 크기, 10 진수 숫자, 전송 옥텟 길이 및](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 D: 데이터 형식의 표시 크기를 참조 하세요.

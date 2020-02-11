@@ -13,31 +13,31 @@ ms.assetid: 5a35449e-4694-4ee5-9fa1-45d5a8fe7823
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 48a4c8666ab7aa7e210289564210d99c947e5631
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68071707"
 ---
 # <a name="sqlsetconnectoption-visual-foxpro-odbc-driver"></a>SQLSetConnectOption(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
->  이 항목에서는 Visual FoxPro ODBC 드라이버 관련 정보를 포함합니다. 이 함수에 대 한 일반 정보에서 해당 항목을 참조 하세요 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)합니다.  
+>  이 항목에는 Visual FoxPro ODBC 드라이버 관련 정보가 포함 되어 있습니다. 이 함수에 대 한 일반 정보는 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)에서 적절 한 항목을 참조 하세요.  
   
- 지원: Partial  
+ 지원: 부분  
   
  ODBC API 규칙: 수준 1  
   
- 연결의 측면을 제어 하는 옵션을 설정 합니다. 이 함수는 부분적으로 지원 합니다. 드라이버에 대 한 모든 값을 지원 합니다 *fOption* 인수 하지만 일부 지원 하지 않습니다 *갖고* 에 대 한 값을 *fOption* SQL_TXN_ISOLATION 인수.  
+ 연결의 여러 측면을 제어 하는 옵션을 설정 합니다. 이 함수는 부분적으로 지원 됩니다. 드라이버는 *foption* 인수에 대 한 모든 값을 지원 하지만 SQL_TXN_ISOLATION *foption* 인수에 대 한 *vparam* 값 중 일부를 지원 하지 않습니다.  
   
- 다음 표에서 Visual FoxPro ODBC 드라이버 구현에 특정 동작을 사용 하 여 해당 인수만 **SQLSetConnectOption**합니다.  
+ 다음 표에서는 **SQLSetConnectOption**의 VISUAL FoxPro ODBC 드라이버 구현과 관련 된 동작만 포함 하는 인수만 설명 합니다.  
   
 |*fOption*|설명|  
 |---------------|-------------|  
-|SQL_AUTOCOMMIT|SQL_AUTOCOMMIT_OFF를 선택 하면 응용 프로그램이 명시적으로 커밋하거나 사용 하 여 트랜잭션을 롤백합니다 [SQLTransact](../../odbc/microsoft/sqltransact-visual-foxpro-odbc-driver.md); Visual FoxPro ODBC 드라이버 transactable 문이 완료 될 때를 자동으로 커밋하지 않습니다. 문이 transactable 경우 드라이버에서 트랜잭션을 시작지 않습니다.|  
-|SQL_CURRENT_QUALIFIER|정규화 된 수 [데이터베이스](../../odbc/microsoft/visual-foxpro-terminology.md) 이름 또는 0 개 이상 포함 된 디렉터리에 대 한 정규화 된 경로 [테이블을 무료](../../odbc/microsoft/visual-foxpro-terminology.md)합니다.|  
-|SQL_LOGINTIMEOUT|"드라이버를 사용할 수 없습니다." 오류를 반환합니다.|  
-|SQL_CURSORS|"드라이버를 사용할 수 없습니다." 오류를 반환합니다.|  
-|SQL_PACKET_SIZE|"드라이버를 사용할 수 없습니다." 오류를 반환합니다.|  
-|SQL_TXN_ISOLATION|드라이버 SQL_TXN_READ_COMMITTED만 허용합니다.<br /><br /> 다음 *갖고*s는 지원 되지 않습니다.<br /><br /> SQL_TXN_READ_UNCOMMITTED<br /><br /> SQL_TXN_REAPEATABLE_READ<br /><br /> SQL_TXN_SERIALIZABLE|  
+|SQL_AUTOCOMMIT|SQL_AUTOCOMMIT_OFF를 선택 하는 경우 응용 프로그램에서 [Sqltransact](../../odbc/microsoft/sqltransact-visual-foxpro-odbc-driver.md)을 사용 하 여 트랜잭션을 명시적으로 커밋하거나 롤백해야 합니다. Visual FoxPro ODBC 드라이버는 완료 시 불가능 문을 자동으로 커밋하지 않습니다. 문이 불가능 경우 드라이버가 트랜잭션을 시작 합니다.|  
+|SQL_CURRENT_QUALIFIER|은 (는) 0 개 이상의 [자유 테이블이](../../odbc/microsoft/visual-foxpro-terminology.md)포함 된 디렉터리의 정규화 된 경로 또는 정규화 된 [데이터베이스](../../odbc/microsoft/visual-foxpro-terminology.md) 이름일 수 있습니다.|  
+|SQL_LOGINTIMEOUT|"드라이버를 사용할 수 없음" 오류를 반환 합니다.|  
+|SQL_CURSORS|"드라이버를 사용할 수 없음" 오류를 반환 합니다.|  
+|SQL_PACKET_SIZE|"드라이버를 사용할 수 없음" 오류를 반환 합니다.|  
+|SQL_TXN_ISOLATION|드라이버는 SQL_TXN_READ_COMMITTED만 허용 합니다.<br /><br /> 다음 *Vparam*은 지원 되지 않습니다.<br /><br /> SQL_TXN_READ_UNCOMMITTED<br /><br /> SQL_TXN_REAPEATABLE_READ<br /><br /> SQL_TXN_SERIALIZABLE|  
   
- 자세한 내용은 [SQLSetConnectOption](../../odbc/reference/syntax/sqlsetconnectoption-function.md) 에 *ODBC 프로그래머 참조*합니다.
+ 자세한 내용은 *ODBC 프로그래머 참조*에서 [SQLSetConnectOption](../../odbc/reference/syntax/sqlsetconnectoption-function.md) 를 참조 하세요.

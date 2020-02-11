@@ -20,28 +20,28 @@ ms.assetid: 8cd2c2a2-25c8-4aff-951c-b593bbfc90ad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b429e499cccaad553236b4ebee78374c69c7c4dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68093008"
 ---
 # <a name="sqlsetconnectoption-function"></a>SQLSetConnectOption 함수
 **규칙**  
- 도입 된 버전: ODBC 1.0 표준 준수 합니다. 사용되지 않음  
+ 소개 된 버전: ODBC 1.0 표준 준수: 사용 되지 않음  
   
  **요약**  
- ODBC 3에서 *.x*, ODBC 2.0 함수 **SQLSetConnectOption** 바뀌었습니다 **SQLSetConnectAttr**합니다. 자세한 내용은 [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)을 참조하세요.  
+ ODBC*3.x에서 odbc*2.0 함수 **SQLSetConnectOption** 는 **SQLSetConnectAttr**로 대체 되었습니다. 자세한 내용은 [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)을 참조하세요.  
   
 > [!NOTE]
->  새로운 드라이버 관리자는이 함수를 경우 맵을 ODBC 2 대 한 자세한 내용은 *.x* 는 ODBC 3을 사용 하 여 응용 프로그램이 작동 *.x* 드라이버를 참조 하세요. [사용 되지 않는 함수 매핑](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)".  
+>  ODBC*2.x 응용 프로그램이* odbc*3.x 드라이버를* 사용할 때 드라이버 관리자가이 기능을에 매핑하는 방법에 대 한 자세한 내용은 [사용 되지 않는 함수 매핑](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)"을 참조 하십시오.  
   
 ## <a name="remarks"></a>설명  
- 참조 [ODBC 64-Bit 정보](../../../odbc/reference/odbc-64-bit-information.md)이면 응용 프로그램을 64 비트 운영 체제에서 실행 됩니다.  
+ 응용 프로그램이 64 비트 운영 체제에서 실행 되는 경우 [ODBC 64 비트 정보](../../../odbc/reference/odbc-64-bit-information.md)를 참조 하세요.  
   
 > [!NOTE]  
->  ODBC 3.8에 도입 된 SQL_ASYNC_DBC_FUNCTION_ENABLE 특성에서 지원 되지 않습니다 **SQLSetConnectOption**합니다. 연결 핸들에서 비동기 작업을 사용 하는 응용 프로그램을 사용 해야 합니다 **SQLSetConnectAttr**합니다.  
+>  ODBC 3.8에 도입 된 SQL_ASYNC_DBC_FUNCTION_ENABLE 특성은 **SQLSetConnectOption**에서 지원 되지 않습니다. 연결 핸들에 대해 비동기 작업을 사용 하는 응용 프로그램은 **SQLSetConnectAttr**를 사용 해야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)
