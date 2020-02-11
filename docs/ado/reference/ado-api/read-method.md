@@ -17,14 +17,14 @@ ms.assetid: 838502de-80f1-4eeb-8838-dd3d9403e567
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 992631b8fb3864b6d7404f86d2f65de222f0b1c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917411"
 ---
 # <a name="read-method"></a>Read 메서드
-이진 파일에서 지정 된 바이트 수를 읽고 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다.  
+이진 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체에서 지정 된 바이트 수를 읽습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,19 +35,19 @@ Variant = Stream.Read ( NumBytes)
   
 #### <a name="parameters"></a>매개 변수  
  *NumBytes*  
- (선택 사항) A **긴** 파일에서 읽을 바이트 수를 지정 하는 값 또는 [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) 값 **adReadAll**, 기본값입니다.  
+ (선택 사항) 파일에서 읽을 바이트 수 또는 기본값 인 [Streamreadenum](../../../ado/reference/ado-api/streamreadenum.md) 값 **adreadall**을 지정 하는 **Long** 값입니다.  
   
-## <a name="return-value"></a>반환 값  
- 합니다 **읽기** 메서드는 지정된 된 수의 바이트 또는에서 전체 스트림을 읽습니다를 **Stream** 개체 및 결과 데이터를 반환 합니다를 **Variant**합니다.  
+## <a name="return-value"></a>Return Value  
+ **Read** 메서드는 **stream** 개체에서 지정 된 바이트 수 또는 전체 스트림을 읽고 결과 데이터를 **Variant**로 반환 합니다.  
   
 ## <a name="remarks"></a>설명  
- 하는 경우 *NumBytes* 바이트의 수보다 큰에 그대로 합니다 **Stream**, 남은 바이트만 반환 됩니다. 지정 된 길이 맞게 데이터 읽기는 채워지지 않습니다 *NumBytes*합니다. 읽을 바이트가 없는 경우 null 값을 사용 하 여 변형을 반환 됩니다. **읽기** 이전 버전과 읽는 데 사용할 수 없습니다.  
+ *NumBytes* 가 **스트림에**남아 있는 바이트 수보다 많은 경우 남은 바이트만 반환 됩니다. 읽은 데이터는 *NumBytes*에서 지정한 길이와 일치 하도록 채워지지 않습니다. 읽을 바이트가 남아 있지 않으면 null 값이 있는 변형이 반환 됩니다. **Read** 는 뒤로 읽을 때 사용할 수 없습니다.  
   
 > [!NOTE]
->  *NumBytes* 항상 바이트를 측정 합니다. 텍스트에 대 한 **Stream** 개체 ([유형](../../../ado/reference/ado-api/type-property-ado-stream.md) 됩니다 **adTypeText**)를 사용 하 여 [ReadText](../../../ado/reference/ado-api/readtext-method.md)합니다.  
+>  *NumBytes* 는 항상 바이트를 측정 합니다. 텍스트 **스트림** 개체 (adTypeText[형식](../../../ado/reference/ado-api/type-property-ado-stream.md) ) **** 의 경우 [ReadText](../../../ado/reference/ado-api/readtext-method.md)를 사용 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [스트림 개체(ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ReadText 메서드](../../../ado/reference/ado-api/readtext-method.md)

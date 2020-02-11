@@ -46,14 +46,14 @@ ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6fe7e807fc38d6f1cf6f72e5b19539bb839e9c08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918362"
 ---
 # <a name="item-property-ado"></a>Item 속성(ADO)
-이름 또는 서 수로 컬렉션의 특정 멤버를 나타냅니다.  
+이름 또는 서 수를 기준으로 컬렉션의 특정 멤버를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -61,17 +61,17 @@ ms.locfileid: "67918362"
 Set object = collection.Item ( Index )  
 ```  
   
-## <a name="return-value"></a>반환 값  
- 개체 참조를 반환합니다.  
+## <a name="return-value"></a>Return Value  
+ 개체 참조를 반환 합니다.  
   
 ## <a name="parameters"></a>매개 변수  
- *Index*  
- A **Variant** 이름 또는 컬렉션에 있는 개체의 서 수를 계산 되는 식입니다.  
+ *인덱싱할*  
+ 컬렉션에 있는 개체의 이름 또는 서 수로 계산 되는 **변형** 식입니다.  
   
 ## <a name="remarks"></a>설명  
- 사용 된 **항목** 컬렉션의 특정 개체를 반환 하도록 속성입니다. 하는 경우 **항목** 에 해당 하는 컬렉션에서 개체를 찾을 수 없습니다는 *인덱스* 인수 오류가 발생 합니다. 또한 일부 컬렉션 명명 된 개체를 지원 하지 않습니다. 이러한 컬렉션에 대 한 서 수 참조를 사용 해야 합니다.  
+ **Item** 속성을 사용 하 여 컬렉션에서 특정 개체를 반환 합니다. **항목** 에서 *인덱스* 인수에 해당 하는 컬렉션의 개체를 찾을 수 없는 경우 오류가 발생 합니다. 또한 일부 컬렉션은 명명 된 개체를 지원 하지 않습니다. 이러한 컬렉션의 경우 서 수 참조를 사용 해야 합니다.  
   
- 합니다 **항목** 속성은 모든 컬렉션에 대 한 기본 속성; 따라서 다음 구문 형식 바꾸어 사용할 수 있습니다.  
+ **Item** 속성은 모든 컬렉션에 대 한 기본 속성입니다. 따라서 다음 구문 형식은 서로 바꿔 사용할 수 있습니다.  
   
 ```  
 collection.Item (Index)  
@@ -90,6 +90,6 @@ collection (Index)
 |[Properties 컬렉션(ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)|[Tables 컬렉션(ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|[Users 컬렉션(ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|  
 |[Views 컬렉션(ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Item 속성 예제 (VB)](../../../ado/reference/ado-api/item-property-example-vb.md)   
  [Item 속성 예제(VC++)](../../../ado/reference/ado-api/item-property-example-vc.md)   

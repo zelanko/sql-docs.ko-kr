@@ -1,5 +1,5 @@
 ---
-title: CovarianceN (MDX) | Microsoft Docs
+title: Covarc (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 796dc37127eba984477aef628e4ae9161db4637e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68047185"
 ---
 # <a name="covariancen-mdx"></a>CovarianceN(MDX)
@@ -38,14 +38,14 @@ CovarianceN(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] )
  X축 값을 나타내는 숫자를 반환하는 셀 좌표의 유효한 숫자 식으로서, 일반적으로 MDX 식입니다.  
   
 ## <a name="remarks"></a>설명  
- 합니다 **CovarianceN** 함수 y 축에 대 한 값을 가져오려고 첫 번째 숫자 식에 대해 지정 된 집합을 계산 합니다. 그런 다음 두 번째 숫자 식(지정된 경우)에 대해 지정된 집합을 계산하여 X축 값 집합을 구합니다. 두 번째 숫자 식이 지정되지 않은 경우 이 함수는 지정된 집합의 현재 셀 컨텍스트를 X축 값으로 사용합니다.  
+ **Covariancen** 함수는 첫 번째 숫자 식에 대해 지정 된 집합을 계산 하 여 y 축 값을 구합니다. 그런 다음 두 번째 숫자 식(지정된 경우)에 대해 지정된 집합을 계산하여 X축 값 집합을 구합니다. 두 번째 숫자 식이 지정되지 않은 경우 이 함수는 지정된 집합의 현재 셀 컨텍스트를 X축 값으로 사용합니다.  
   
- 합니다 **CovarianceN** 함수는 비편향된 모집단 수식을 사용 합니다. 이 달리 합니다 [공변성 (covariance)](../mdx/covariance-mdx.md) (x, y 쌍의 개수로 나누는)는 편향된 모집단 수식을 사용 하는 함수입니다.  
+ **Covariancen** 함수는 비편향 모집단 수식을 사용 합니다. 이는 x-y 쌍의 개수로 나누는 편향 모집단 수식을 사용 하는 [공 분산](../mdx/covariance-mdx.md) 함수와 대조 됩니다.  
   
 > [!NOTE]  
->  합니다 **CovarianceN** 함수는 빈 셀 이나 텍스트 또는 논리 값을 포함 하는 셀은 무시 합니다. 그러나 값이 0인 셀은 포함시킵니다.  
+>  **Covarc** # 함수는 빈 셀 이나 텍스트 또는 논리 값을 포함 하는 셀을 무시 합니다. 그러나 값이 0인 셀은 포함시킵니다.  
   
-## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

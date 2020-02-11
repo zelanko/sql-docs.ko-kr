@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8387cdaf85d6fd7750229fda86c8cb3122b61d90
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913559"
 ---
 # <a name="create-scripts-using-templates"></a>템플릿을 사용하여 스크립트 만들기
@@ -24,15 +24,21 @@ ms.locfileid: "62913559"
   
 #### <a name="to-create-a-script-using-a-template"></a>템플릿을 사용하여 스크립트를 만들려면  
   
-1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 **보기** 메뉴에서 **템플릿 탐색기**를 클릭합니다.  
+1.  
+  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 **보기** 메뉴에서 **템플릿 탐색기**를 클릭합니다.  
   
-2.  템플릿 탐색기에 있는 템플릿이 그룹으로 구성됩니다. **데이터베이스**를 확장한 다음 **데이터베이스 만들기**를 두 번 클릭합니다.  
+2.  템플릿 탐색기에 있는 템플릿이 그룹으로 구성됩니다. 
+  **데이터베이스**를 확장한 다음 **데이터베이스 만들기**를 두 번 클릭합니다.  
   
-3.  **데이터베이스 엔진에 연결** 대화 상자에서 연결 정보를 지정한 다음 **연결**을 클릭합니다. **데이터베이스 만들기** 템플릿의 내용을 포함하는 새 쿼리 편집기 창이 열립니다.  
+3.  
+  **데이터베이스 엔진에 연결** 대화 상자에서 연결 정보를 지정한 다음 **연결**을 클릭합니다. 
+  **데이터베이스 만들기** 템플릿의 내용을 포함하는 새 쿼리 편집기 창이 열립니다.  
   
 4.  **쿼리** 메뉴에서 **템플릿 매개 변수 값 지정**을 클릭합니다.  
   
-5.  **템플릿 매개 변수 값 지정** 대화 상자의 **값** 열에는 **Database_Name** 매개 변수에 대해 제안된 값이 포함되어 있습니다. **Database Name** 매개 변수 상자에 **Marketing**을 입력한 다음 **확인**을 클릭합니다. "Marketing"이 어떻게 스크립트의 여러 위치에 삽입되는지 확인합니다.  
+5.  
+  **템플릿 매개 변수 값 지정** 대화 상자의 **값** 열에는 **Database_Name** 매개 변수에 대해 제안된 값이 포함되어 있습니다. 
+  **Database Name** 매개 변수 상자에 **Marketing**을 입력한 다음 **확인**을 클릭합니다. "Marketing"이 어떻게 스크립트의 여러 위치에 삽입되는지 확인합니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [사용자 지정 템플릿 만들기](lesson-3-2-create-custom-templates.md)  

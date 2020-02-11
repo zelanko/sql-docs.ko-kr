@@ -1,5 +1,5 @@
 ---
-title: Size 속성 (ADO Stream) | Microsoft Docs
+title: Size 속성 (ADO 스트림) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,26 +16,26 @@ ms.assetid: a487c241-d953-4c31-ae7e-6358d5cf6733
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e52d05cdbc0fe0ca397c3a7b417fec72703b8e1d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67916934"
 ---
 # <a name="size-property-ado-stream"></a>Size 속성(ADO 스트림)
-바이트 수가 스트림의 크기를 나타냅니다.  
+스트림의 크기 (바이트 수)를 나타냅니다.  
   
 ## <a name="return-values"></a>반환 값  
- 반환 된 **긴** 바이트 수에서를 스트림의 크기를 지정 하는 값입니다. 기본값 스트림의 크기를 알 수 없는 경우를 스트림 또는-1의 크기는 합니다.  
+ 스트림의 크기 (바이트 수)를 지정 하는 **Long** 값을 반환 합니다. 기본값은 스트림의 크기 이며 스트림의 크기를 알 수 없는 경우에는-1입니다.  
   
 ## <a name="remarks"></a>설명  
- **크기** 오픈 에서만 사용할 수 있습니다 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다.  
+ **크기** 는 열려 있는 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체에만 사용할 수 있습니다.  
   
 > [!NOTE]
->  비트에 저장할 수는 **Stream** 개체, 시스템 리소스에 의해서만 제한 됩니다. 경우는 **Stream** 로 나타낼 수 있습니다 보다 더 많은 비트가 포함을 **긴** 값 **크기** 잘리고 따라서 정확 하 게 나타내지 합니다 길이의**Stream**합니다.  
+>  모든 수의 비트는 시스템 리소스에 의해서만 제한 되는 **스트림** 개체에 저장할 수 있습니다. **스트림에** **Long** 값으로 표현할 수 있는 것 보다 많은 비트가 포함 된 경우 **크기가** 잘리고 **스트림의**길이를 정확 하 게 나타내지 않습니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [스트림 개체(ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Size 속성(ADO 매개 변수)](../../../ado/reference/ado-api/size-property-ado-parameter.md)
