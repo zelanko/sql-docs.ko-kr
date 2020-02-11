@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 99c11795cb51e66b9fc1590351445ffcd14aeb34
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73763564"
 ---
 # <a name="ibcpsessionbcpinit-ole-db"></a>IBCPSession::BCPInit(OLE DB)
@@ -40,24 +40,31 @@ HRESULT BCPInit(
 ```  
   
 ## <a name="remarks"></a>설명  
- **BCPInit** 메서드는 다른 대량 복사 메서드를 호출하기 전에 호출해야 합니다. **BCPInit** 메서드는 워크스테이션과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 간의 데이터 대량 복사에 필요한 초기화를 수행합니다.  
+ 
+  **BCPInit** 메서드는 다른 대량 복사 메서드를 호출하기 전에 호출해야 합니다. 
+  **BCPInit** 메서드는 워크스테이션과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 간의 데이터 대량 복사에 필요한 초기화를 수행합니다.  
   
- **BCPInit** 메서드는 데이터 파일이 아니라 데이터베이스 원본 또는 대상 테이블의 구조를 검사합니다. 또한 데이터베이스 테이블, 뷰 또는 SELECT 결과 집합에 있는 각 열을 기반으로 데이터 파일의 데이터 형식 값을 지정합니다. 이 지정에는 각 열의 데이터 형식, 데이터에 길이 또는 Null 표시자 및 종결자 바이트 문자열이 있는지 여부, 고정 길이 데이터 형식의 길이가 포함됩니다. **BCPInit** 메서드는 이러한 값을 다음과 같이 설정합니다.  
+ 
+  **BCPInit** 메서드는 데이터 파일이 아니라 데이터베이스 원본 또는 대상 테이블의 구조를 검사합니다. 또한 데이터베이스 테이블, 뷰 또는 SELECT 결과 집합에 있는 각 열을 기반으로 데이터 파일의 데이터 형식 값을 지정합니다. 이 지정에는 각 열의 데이터 형식, 데이터에 길이 또는 Null 표시자 및 종결자 바이트 문자열이 있는지 여부, 고정 길이 데이터 형식의 길이가 포함됩니다. 
+  **BCPInit** 메서드는 이러한 값을 다음과 같이 설정합니다.  
   
--   지정되는 데이터 형식은 데이터베이스 테이블, 뷰 또는 SELECT 결과 집합에 있는 열의 데이터 형식입니다. 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 헤더 파일 (sqlncli)에 지정 된 네이티브 데이터 형식 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의해 열거 됩니다. 이 값은 BCP_TYPE_XXX 패턴을 사용합니다. 데이터는 해당 컴퓨터 형식으로 표현됩니다. 즉, integer 데이터 형식의 열에서 가져온 데이터는 데이터 파일을 만든 컴퓨터에 따라 Big Endian 또는 Little Endian인 4바이트 시퀀스로 표현됩니다.  
+-   지정되는 데이터 형식은 데이터베이스 테이블, 뷰 또는 SELECT 결과 집합에 있는 열의 데이터 형식입니다. 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native Client 헤더 파일 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (sqlncli)에 지정 된 네이티브 데이터 형식으로 열거 됩니다. 이 값은 BCP_TYPE_XXX 패턴을 사용합니다. 데이터는 해당 컴퓨터 형식으로 표현됩니다. 즉, integer 데이터 형식의 열에서 가져온 데이터는 데이터 파일을 만든 컴퓨터에 따라 Big Endian 또는 Little Endian인 4바이트 시퀀스로 표현됩니다.  
   
 -   데이터베이스 데이터 형식의 길이가 고정된 경우 데이터 파일 데이터의 길이도 고정됩니다. 데이터를 처리하는 대량 복사 메서드(예: [IBCPSession::BCPExec](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpexec-ole-db.md))는 데이터 파일에 있는 데이터의 길이가 데이터베이스 테이블, 뷰 또는 SELECT 열 목록에 지정된 데이터의 길이와 동일할 것이라 예상하고 데이터 행을 구문 분석합니다. 예를 들어 `char(13)`로 정의된 데이터베이스 열의 데이터에서 파일의 각 데이터 행은 13자로 표현되어야 합니다. 데이터베이스 열이 Null 값을 허용하는 경우에는 고정 길이 데이터 앞에 Null 표시자를 붙일 수 있습니다.  
   
--   데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 복사하는 경우 데이터 파일에 데이터베이스 테이블의 각 열에 대한 데이터가 있어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터를 복사하는 경우 데이터베이스 테이블, 뷰 또는 SELECT 결과 집합에 있는 모든 열의 데이터가 데이터 파일로 복사됩니다.  
+-   데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 복사하는 경우 데이터 파일에 데이터베이스 테이블의 각 열에 대한 데이터가 있어야 합니다. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터를 복사하는 경우 데이터베이스 테이블, 뷰 또는 SELECT 결과 집합에 있는 모든 열의 데이터가 데이터 파일로 복사됩니다.  
   
--   데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 복사하는 경우 데이터 파일에 있는 열의 서수 위치가 데이터베이스 테이블에 있는 열의 서수 위치와 같아야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터를 복사하는 경우 **BCPExec** 메서드는 데이터베이스 테이블에 있는 열의 서수 위치를 기반으로 데이터를 배치합니다.  
+-   데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 복사하는 경우 데이터 파일에 있는 열의 서수 위치가 데이터베이스 테이블에 있는 열의 서수 위치와 같아야 합니다. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터를 복사하는 경우 **BCPExec** 메서드는 데이터베이스 테이블에 있는 열의 서수 위치를 기반으로 데이터를 배치합니다.  
   
--   데이터베이스 데이터 형식의 길이가 가변적(예: `varbinary(22)`)이거나 데이터베이스 열이 Null 값을 포함할 수 있는 경우 데이터 파일의 데이터 앞에 길이/Null 표시자가 옵니다. 표시자의 길이는 데이터 형식 및 대량 복사 버전에 따라 다릅니다. [IBCPSession::BCPControl](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) 메서드 옵션 BCP_OPTION_FILEFMT는 데이터에 있는 표시자의 너비가 예상보다 짧은 경우를 표시하여 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 서버와 이전 대량 복사 데이터 파일 간의 호환성을 제공합니다.  
+-   데이터베이스 데이터 형식의 길이가 가변적(예: `varbinary(22)`)이거나 데이터베이스 열이 Null 값을 포함할 수 있는 경우 데이터 파일의 데이터 앞에 길이/Null 표시자가 옵니다. 표시자의 길이는 데이터 형식 및 대량 복사 버전에 따라 다릅니다. 
+  [IBCPSession::BCPControl](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) 메서드 옵션 BCP_OPTION_FILEFMT는 데이터에 있는 표시자의 너비가 예상보다 짧은 경우를 표시하여 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 서버와 이전 대량 복사 데이터 파일 간의 호환성을 제공합니다.  
   
 > [!NOTE]  
 >  데이터 파일에 대해 지정된 데이터 형식 값을 변경하려면 [IBCPSession::BCPColumns](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) 및 [IBCPSession::BCPColFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) 메서드를 사용합니다.  
   
- 데이터베이스 옵션 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]select into/bulkcopy**를 설정하면 인덱스가 없는 테이블에 대해** 로의 대량 복사를 최적화할 수 있습니다.  
+ 데이터베이스 옵션 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]select into/bulkcopy**를 설정하면 인덱스가 없는 테이블에 대해 **로의 대량 복사를 최적화할 수 있습니다.  
   
 ## <a name="arguments"></a>인수  
  *pwszTable*[in]  
@@ -73,7 +80,7 @@ HRESULT BCPInit(
  *pwszErrorFile*[in]  
  진행 메시지, 오류 메시지 및 어떤 이유로든 사용자 파일에서 테이블로 복사하지 못한 모든 행의 복사본으로 채워질 오류 파일의 이름입니다. *PwszErrorFile* 인수가 NULL로 설정 된 경우에는 오류 파일이 사용 되지 않습니다.  
   
- *eDirection*[in]  
+ *Edirection*[in]  
  복사 작업의 방향(BCP_DIRECTION_IN 또는 BCP_DIRECTION _OUT)입니다. BCP_DIRECTION _IN은 사용자 파일에서 데이터베이스 테이블로의 복사본을 나타내고, BCP_DIRECTION _OUT은 데이터베이스 테이블에서 사용자 파일로의 복사본을 나타냅니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -81,7 +88,7 @@ HRESULT BCPInit(
  메서드가 성공했습니다.  
   
  E_FAIL  
- 공급자 관련 오류가 발생했습니다. 자세한 내용을 보려면 [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) 인터페이스를 사용하세요.  
+ 공급자별 오류가 발생 했습니다. 자세한 내용은 [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) 인터페이스를 사용 하십시오.  
   
  E_OUTOFMEMORY  
  메모리 부족 오류가 발생했습니다.  
@@ -90,7 +97,7 @@ HRESULT BCPInit(
  하나 이상의 인수가 잘못 지정되었습니다. 예를 들어 잘못된 파일 이름이 제공되었습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [IBCPSession &#40;OLE DB&#41; ](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
+ [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [대량 복사 작업 수행](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   
   

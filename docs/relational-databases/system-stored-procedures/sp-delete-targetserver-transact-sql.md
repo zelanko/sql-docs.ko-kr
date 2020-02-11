@@ -1,5 +1,5 @@
 ---
-title: sp_delete_targetserver (TRANSACT-SQL) | Microsoft Docs
+title: sp_delete_targetserver (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 487d88a7580432bf947893920d307e2f0adffd18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68111987"
 ---
-# <a name="spdeletetargetserver-transact-sql"></a>sp_delete_targetserver(Transact-SQL)
+# <a name="sp_delete_targetserver-transact-sql"></a>sp_delete_targetserver(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   사용할 수 있는 대상 서버의 목록에서 지정된 서버를 제거합니다.  
    
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,23 +41,23 @@ sp_delete_targetserver [ @server_name = ] 'server'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @server_name = ] 'server'` 사용 가능한 대상 서버를 제거할 서버의 이름입니다. *서버* 됩니다 **nvarchar(30)** , 기본값은 없습니다.  
+`[ @server_name = ] 'server'`사용 가능한 대상 서버로 제거할 서버의 이름입니다. *서버* 는 **nvarchar (30)** 이며 기본값은 없습니다.  
   
-`[ @clear_downloadlist = ] clear_downloadlist` 대상 서버의 다운로드 목록을 지울 것인지 지정 합니다. *clear_downloadlist* 형식인 **bit**, 기본값은 **1**합니다. 때 *clear_downloadlist* 됩니다 **1**, 프로시저는 서버를 삭제 하기 전에 서버의 다운로드 목록을 지웁니다. 때 *clear_downloadlist* 됩니다 **0**, 다운로드 목록이 지워지지 않습니다.  
+`[ @clear_downloadlist = ] clear_downloadlist`대상 서버에 대 한 다운로드 목록을 지울지 여부를 지정 합니다. *clear_downloadlist* 형식은 **bit**이며 기본값은 **1**입니다. *Clear_downloadlist* **1**인 경우이 프로시저는 서버를 삭제 하기 전에 서버에 대 한 다운로드 목록을 지웁니다. *Clear_downloadlist* **0**이면 다운로드 목록이 지워지지 않습니다.  
   
-`[ @post_defection = ] post_defection` 제거 명령을 대상 서버에 게시할 것인지 여부를 지정 합니다. *post_defection* 형식인 **비트**, 기본값은 1입니다. 때 *post_defection* 됩니다 **1**, 프로시저는 서버를 삭제 하기 전에 제거 명령을 대상 서버에 게시 합니다. 때 *post_defection* 됩니다 **0**, 절차 제거 명령을 대상 서버에 게시 하지 않습니다.  
+`[ @post_defection = ] post_defection`대상 서버에 결함 명령을 게시할 것인지 여부를 지정 합니다. *post_defection* 형식은 **bit**이며 기본값은 1입니다. *Post_defection* **1**인 경우 프로시저는 서버를 삭제 하기 전에 대상 서버에 오류 명령을 게시 합니다. *Post_defection* 가 **0**이면 프로시저에서 대상 서버에 오류 명령을 게시 하지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="remarks"></a>설명  
- 대상 서버를 삭제 하는 일반적인 방법은 호출 하는 것 **sp_msx_defect** 대상 서버에서. 사용 하 여 **sp_delete_targetserver** 은 수동으로 제거 해야 하는 데 필요한 경우에 합니다.  
+ 대상 서버를 삭제 하는 일반적인 방법은 대상 서버에서 **sp_msx_defect** 를 호출 하는 것입니다. 수동 제거를 필요한 경우에만 **sp_delete_targetserver** 을 사용 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 이 저장된 프로시저를 실행 하려면 사용자에 부여 해야 합니다 **sysadmin** 고정된 서버 역할입니다.  
+ 이 저장 프로시저를 실행 하려면 사용자에 게 **sysadmin** 고정 서버 역할을 부여 해야 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 사용할 수 있는 작업 서버에서 `LONDON1`이라는 서버를 제거합니다.  
@@ -71,9 +71,9 @@ EXEC dbo.sp_delete_targetserver
 GO  
 ```  
   
-## <a name="see-also"></a>참조  
- [sp_help_targetserver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md)   
- [sp_msx_defect &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;sp_help_targetserver &#40;](../../relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md)   
+ [Transact-sql&#41;sp_msx_defect &#40;](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

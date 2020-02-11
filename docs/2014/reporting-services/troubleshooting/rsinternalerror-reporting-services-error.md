@@ -13,15 +13,15 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 302772c87a1e1d4e5cf3ab1e7c5a304e6100b785
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099162"
 ---
 # <a name="rsinternalerror---reporting-services-error"></a>rsInternalError - Reporting Services 오류
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -45,7 +45,7 @@ ms.locfileid: "66099162"
   
 ## <a name="internal-only"></a>내부 전용  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서 서버 서비스 시작 및 중지](../report-server/start-and-stop-the-report-server-service.md)  
   
   

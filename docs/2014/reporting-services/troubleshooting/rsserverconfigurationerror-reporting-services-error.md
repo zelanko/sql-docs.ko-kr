@@ -13,15 +13,15 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 19778bce64e5779471e78b8c4305e1bd6315c0ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099204"
 ---
 # <a name="rsserverconfigurationerror---reporting-services-error"></a>rsServerConfigurationError - Reporting Services 오류
     
-## <a name="details"></a>설명  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -47,11 +47,11 @@ ms.locfileid: "66099204"
 ## <a name="user-action"></a>사용자 동작  
  구성 파일을 수동으로 편집한 후에 이 오류가 발생하기 시작했다면 변경 내용을 제거하고 이전 값을 입력하거나 백업이 있는 경우 이전 버전을 복원하세요.  
   
- 와 함께 제공 되는 추가 오류 메시지 정보를 검토 하는 `rsServerConfiguration` 오류 \Microsoft SQL Server\MSRS12에 있는 보고서 서버 추적 로그 파일을 검토 합니다.\< n a m e > services\logfiles입니다. 자세한 내용은 [Reporting Services 로그 파일 및 소스](../report-server/reporting-services-log-files-and-sources.md)를 참조하세요.  
+ `rsServerConfiguration` 오류와 함께 발생 하는 추가 오류 메시지 정보를 검토 하려면 \Microsoft SQL Server\MSRS12.에 있는 보고서 서버 추적 로그 파일을 검토 합니다. \<instancename > \Reporting services\logfiles 자세한 내용은 [Reporting Services 로그 파일 및 소스](../report-server/reporting-services-log-files-and-sources.md)를 참조하세요.  
   
 ## <a name="internal-only"></a>내부 전용  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services 구성 파일](../report-server/reporting-services-configuration-files.md)   
  [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
   

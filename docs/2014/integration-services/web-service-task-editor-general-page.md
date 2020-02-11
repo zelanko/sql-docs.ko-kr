@@ -15,25 +15,26 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c6f993f1f2386782bf8225f22b285b9385e2f8e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054535"
 ---
 # <a name="web-service-task-editor-general-page"></a>웹 서비스 태스크 편집기(일반 페이지)
+  
   **웹 서비스 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 HTTP 연결 관리자를 지정하고, 웹 서비스 태스크에 사용하는 WSDL(웹 서비스 기술 언어) 파일의 위치를 지정하고, 웹 서비스 태스크를 설명하고, WSDL 파일을 다운로드할 수 있습니다.  
   
  이 태스크에 대한 자세한 내용은 [웹 서비스 태스크](control-flow/web-service-task.md)를 참조하세요.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **HTTPConnection**  
- 목록에서 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 새 연결 관리자를 만듭니다.  
+ 목록에서 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
 > [!IMPORTANT]  
 >  HTTP 연결 관리자는 익명 인증과 기본 인증만 지원하며 Windows 인증은 지원하지 않습니다.  
   
- **관련 항목:**  [HTTP 연결 관리자](connection-manager/http-connection-manager.md), [HTTP 연결 관리자 편집기&#40;서버 페이지&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
+ **관련 항목:**  [http 연결 관리자](connection-manager/http-connection-manager.md), [Http 연결 관리자 편집기 &#40;서버 페이지&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
   
  **WSDLFile**  
  컴퓨터에 로컬인 WSDL 파일의 정규화된 경로를 입력하거나 찾아보기 단추 **(...)** 를 클릭하여 이 파일을 찾습니다.  
@@ -42,19 +43,22 @@ ms.locfileid: "66054535"
   
 -   파일 이름 확장명이 ".wsdl"인 빈 파일을 만듭니다.  
   
--   **WSDLFile** 옵션으로 이 빈 파일을 선택합니다.  
+-   
+  **WSDLFile** 옵션으로 이 빈 파일을 선택합니다.  
   
--   값을 설정할 **OverwriteWSDLFile** 에 `True` 빈 파일을 실제 WSDL 파일로 덮어쓸 수 있도록 합니다.  
+-   **OverwriteWSDLFile** 의 값을로 `True` 설정 하 여 빈 파일을 실제 WSDL 파일로 덮어쓸 수 있도록 합니다.  
   
--   **WSDL 다운로드** 를 클릭하여 실제 WSDL 파일을 다운로드하고 빈 파일을 덮어씁니다.  
+-   
+  **WSDL 다운로드** 를 클릭하여 실제 WSDL 파일을 다운로드하고 빈 파일을 덮어씁니다.  
   
     > [!NOTE]  
-    >  **WSDL 다운로드** 옵션은 **WSDLFile** 상자에 기존 로컬 파일의 이름을 입력할 때까지 사용할 수 없습니다.  
+    >  
+  **WSDL 다운로드** 옵션은 **WSDLFile** 상자에 기존 로컬 파일의 이름을 입력할 때까지 사용할 수 없습니다.  
   
  **OverwriteWSDLFile**  
  웹 서비스 태스크에 대한 WSDL 파일을 덮어쓸지 여부를 나타냅니다.  
   
- 사용 하 여 WSDL 파일을 다운로드 하려는 경우는 **WSDL 다운로드** 단추를이 값을 설정 `True`합니다.  
+ **Wsdl 다운로드** 단추를 사용 하 여 wsdl 파일을 다운로드 하려는 경우이 값을로 `True`설정 합니다.  
   
  **이름**  
  웹 서비스 태스크에 사용할 고유 이름을 제공합니다. 이 이름은 태스크 아이콘에서 레이블로 사용됩니다.  
@@ -70,10 +74,10 @@ ms.locfileid: "66054535"
   
  이 단추는 **WSDLFile** 상자에 기존 로컬 파일의 이름을 입력할 때까지 사용할 수 없습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [웹 서비스 태스크 편집기&#40;입력 페이지&#41;](../../2014/integration-services/web-service-task-editor-input-page.md)   
- [웹 서비스 태스크 편집기&#40;출력 페이지&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
+ [웹 서비스 태스크 편집기 &#40;입력 페이지&#41;](../../2014/integration-services/web-service-task-editor-input-page.md)   
+ [웹 서비스 태스크 편집기 &#40;출력 페이지&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
  [식 페이지](expressions/expressions-page.md)  
   
   

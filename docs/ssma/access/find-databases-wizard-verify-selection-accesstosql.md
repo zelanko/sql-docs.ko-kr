@@ -12,27 +12,27 @@ ms.assetid: 62e20e03-50cc-4ac8-8072-524d194d2ec3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2edf02c31b8b52d6743113e6c6c5878bf5180a83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68024742"
 ---
 # <a name="find-databases-wizard-verify-selection-accesstosql"></a>데이터베이스 찾기 마법사 (선택 확인) (AccessToSQL)
-데이터베이스 찾기 마법사의 확인 선택 페이지 SSMA에 추가할 파일을 나열 합니다. 파일 목록이 올바르지 않으면, 클릭 **다시** 목록을 수정할 수 있습니다. 그렇지 않은 경우 클릭 **완료** 파일을 추가 합니다.  
+데이터베이스 찾기 마법사의 선택 항목 확인 페이지에 SSMA에 추가할 파일이 나열 됩니다. 파일 목록이 올바르지 않으면 **뒤로** 를 클릭 하 여 목록을 수정 합니다. 그렇지 않은 경우 **마침** 을 클릭 하 여 파일을 추가 합니다.  
   
-데이터베이스 찾기 마법사에서 열려는 합니다 **파일** 메뉴에서 클릭 **데이터베이스를 찾을**합니다.  
+데이터베이스 찾기 마법사를 열려면 **파일** 메뉴에서 **데이터베이스 찾기**를 클릭 합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
 **파일 이름**  
-SSMA 추가할 Access 데이터베이스 파일의 이름을 표시 합니다.  
+SSMA에 추가할 Access 데이터베이스 파일의 이름을 표시 합니다.  
   
 **파일 경로**  
-Access 데이터베이스 파일의 경로 보여 줍니다.  
+Access 데이터베이스 파일의 경로를 표시 합니다.  
   
 **소유자**  
-파일의 소유자를 보여 줍니다.  
+파일의 소유자를 표시 합니다.  
   
-## <a name="see-also"></a>관련 항목  
-[사용자 인터페이스 Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+## <a name="see-also"></a>참고 항목  
+[사용자 인터페이스 참조 (액세스)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

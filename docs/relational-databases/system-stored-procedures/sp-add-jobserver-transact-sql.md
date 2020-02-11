@@ -18,10 +18,10 @@ ms.assetid: 485252cc-0081-490a-9bd1-cbbd68eea286
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bc4d3bca563079c7e1dd7f3ee93e5947f65700b5
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72305242"
 ---
 # <a name="sp_add_jobserver-transact-sql"></a>sp_add_jobserver(Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "72305242"
 
   지정된 서버에 지정된 작업을 대상으로 정합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,28 +40,29 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>인수  
-작업의 id 번호를 `[ @job_id = ] job_id` 합니다. *job_id* 은 **uniqueidentifier**이며 기본값은 NULL입니다.  
+`[ @job_id = ] job_id`작업의 id입니다. *job_id* 은 **uniqueidentifier**이며 기본값은 NULL입니다.  
   
-작업 이름을 `[ @job_name = ] 'job_name'` 합니다. *job_name* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @job_name = ] 'job_name'`작업의 이름입니다. *job_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *Job_id* 또는 *job_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다.  
   
-작업을 대상으로 하는 서버의 이름을 `[ @server_name = ] 'server'` 합니다. *서버* 는 **nvarchar (30)** 이며 기본값은 N ' (LOCAL) '입니다. *서버* 는 로컬 서버에 대해 **(local)** 이거나 기존 대상 서버의 이름일 수 있습니다.  
+`[ @server_name = ] 'server'`작업을 대상으로 하는 서버의 이름입니다. *서버* 는 **nvarchar (30)** 이며 기본값은 N ' (LOCAL) '입니다. *서버* 는 로컬 서버에 대해 **(local)** 이거나 기존 대상 서버의 이름일 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="remarks"></a>설명  
- **\@automatic_post** **Sp_add_jobserver**에 있지만 인수 아래에는 나열 되어 있지 않습니다. **\@automatic_post** 내부용으로 예약 되어 있습니다.  
+ automatic_post는 **sp_add_jobserver**에 있지만 인수 아래에는 나열 되지 않습니다. ** \@** automatic_post는 내부용으로 예약 되어 있습니다. ** \@**  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 작업 구조를 만들고 관리할 수 있는 바람직한 방법을 제공하는데 이는 그래픽을 사용하여 쉽게 작업을 관리할 수 있는 방법입니다.  
+ 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 작업 구조를 만들고 관리할 수 있는 바람직한 방법을 제공하는데 이는 그래픽을 사용하여 쉽게 작업을 관리할 수 있는 방법입니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
+ 기본적으로 **sysadmin** 고정 서버 역할의 멤버는이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
   
 -   **SQLAgentUserRole**  
   
@@ -90,7 +91,7 @@ EXEC dbo.sp_add_jobserver
 GO  
 ```  
   
-### <a name="b-assigning-a-job-to-run-on-a-different-server"></a>2\. 다른 서버에서 실행할 작업 할당  
+### <a name="b-assigning-a-job-to-run-on-a-different-server"></a>B. 다른 서버에서 실행할 작업 할당  
  다음 예에서는 `Weekly Sales Backups` 다중 서버 작업을 `SEATTLE2` 서버에 할당합니다.  
   
 > [!NOTE]  
@@ -107,8 +108,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [ &#40;transact-sql&#41;  sp_apply_job_to_targets](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)  
- [ &#40;transact-sql&#41;  sp_delete_jobserver](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)  
+ [Transact-sql&#41;sp_apply_job_to_targets &#40;](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
+ [Transact-sql&#41;sp_delete_jobserver &#40;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

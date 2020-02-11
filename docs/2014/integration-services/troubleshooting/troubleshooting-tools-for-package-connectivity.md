@@ -1,5 +1,5 @@
 ---
-title: 패키지 연결 문제 해결 도구 | Microsoft Docs
+title: 도구 패키지 연결 문제 해결 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8bb86d738aed61743defa3261318e2eb7536aa84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62766166"
 ---
 # <a name="troubleshooting-tools-package-connectivity"></a>패키지 연결 문제 해결 도구
@@ -68,7 +68,7 @@ ms.locfileid: "62766166"
     ExternalRequest_post: 'IDbConnection.Close finished'. The external request has completed."  
     ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [패키지 배포 문제 해결 도구](troubleshooting-tools-for-package-development.md)   
  [패키지 실행 문제 해결 도구](troubleshooting-tools-for-package-execution.md)  
   

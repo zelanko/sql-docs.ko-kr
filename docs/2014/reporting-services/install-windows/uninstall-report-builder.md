@@ -1,5 +1,5 @@
 ---
-title: 제거 된 독립 실행형 버전의 보고서 작성기 (보고서 작성기) | Microsoft Docs
+title: 보고서 작성기 (보고서 작성기)의 독립 실행형 버전을 제거 합니다. Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,15 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eeb260942f378eb1e93751fc118f82e67a13d45b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108656"
 ---
 # <a name="uninstall-the-stand-alone-version-of-report-builder-report-builder"></a>독립 실행형 버전의 보고서 작성기 제거(보고서 작성기)
-  제어판 또는 명령줄에서 독립 실행형 버전의 보고서 작성기를 제거할 수 있습니다. [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 버전 보고서 작성기는 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]를 제거해야만 제거할 수 있습니다.  
+  제어판 또는 명령줄에서 독립 실행형 버전의 보고서 작성기를 제거할 수 있습니다. 
+  [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 버전 보고서 작성기는 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]를 제거해야만 제거할 수 있습니다.  
   
  명령줄에서 보고서 작성기를 제거할 때 사용하는 구문은 보고서 작성기를 설치할 때 사용하는 구문과 동일하고 /i 옵션 대신 /x 옵션을 사용한다는 점만 다릅니다. 제거할 때 사용하는 명령줄에는 /quiet 옵션과 기타 표준 옵션도 포함될 수 있습니다. 보고서 작성기 Windows Installer 패키지(ReportBuilder3_x86.msi)가 이미 제거되었으면 명령줄을 사용하여 보고서 작성기를 제거하기 어렵습니다. 해당 GUID를 사용하여 보고서 작성기를 제거하는 방법에 대한 자세한 내용은 MSDN 라이브러리에서 msiexec 프로그램에 대한 설명서를 참조하십시오.  
   
@@ -30,7 +31,8 @@ ms.locfileid: "66108656"
   
 2.  제어판에서 **프로그램 및 기능**을 클릭합니다.  
   
-3.  **이름** 목록에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 보고서 작성기를 찾아 클릭합니다.  
+3.  
+  이름[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 목록에서 **** 보고서 작성기를 찾아 클릭합니다.  
   
 4.  **제거**를 클릭합니다.  
   
@@ -40,7 +42,7 @@ ms.locfileid: "66108656"
   
 1.  **시작** 메뉴에서 **실행**을 클릭합니다.  
   
-2.  에 **열고** 텍스트 상자 `cmd.`  
+2.  **열기** 입력란에 다음을 입력 합니다.`cmd.`  
   
 3.  명령 프롬프트 창에서 ReportBuilder3_x86.msi가 있는 폴더로 이동합니다.  
   
@@ -52,10 +54,10 @@ ms.locfileid: "66108656"
   
  `msiexec /x ReportBuilder3_x86.msi /quiet /l*v c:\junk\install.log`  
   
-1.  **Enter**키를 누릅니다.  
+1.  **Enter** 키를 누릅니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [설치, 제거 및 보고서 작성기 지원](../install-uninstall-and-report-builder-support.md)   
- [보고서 작성기의 독립 실행형 버전을 설치 &#40;보고서 작성기&#41;](install-report-builder.md)  
+ [독립 실행형 버전의 보고서 작성기 &#40;보고서 작성기를 설치&#41;](install-report-builder.md)  
   
   

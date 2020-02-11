@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a34a3e69e157894b29db48da19f44d1e35dad746
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524268"
 ---
 # <a name="use-the-eventdata-function"></a>EVENTDATA 함수 사용
@@ -49,7 +49,7 @@ AS
   
  `CREATE TABLE NewTable (Column1 int);`  
   
- DDL 트리거의 `EVENTDATA()` 문은 허용되지 않는 `CREATE TABLE` 문의 텍스트를 캡처합니다. 에 대해 XQuery 문을 사용 하 여 이렇게 합니다 `xml` EVENTDATA 및 검색에서 생성 되는 데이터는 \<CommandText > 요소. 자세한 내용은 [XQuery 언어 참조&#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server)를 참조하세요.  
+ DDL 트리거의 `EVENTDATA()` 문은 허용되지 않는 `CREATE TABLE` 문의 텍스트를 캡처합니다. 이는 EVENTDATA에서 생성 된 `xml` 데이터에 대해 XQuery 문을 사용 하 고 CommandText> 요소를 \<검색 하 여 수행 됩니다. 자세한 내용은 [XQuery 언어 참조&#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server)를 참조하세요.  
   
 > [!CAUTION]  
 >  EVENTDATA는 CREATE_SCHEMA 이벤트의 데이터와 해당 CREATE SCHEMA 정의(있는 경우)의 <schema_element>를 캡처합니다. 또한 EVENTDATA는 <schema_element> 정의를 별개의 이벤트로 인식합니다. 따라서 CREATE SCHEMA 정의의 <schema_element>가 나타내는 이벤트와 CREATE_SCHEMA 이벤트 둘 다에서 생성된 DDL 트리거는 `TSQLCommand` 데이터 등의 동일한 이벤트 데이터를 두 번 반환할 수 있습니다. 예를 들어 CREATE_SCHEMA 및 CREATE_TABLE 이벤트 둘 다에서 생성된 DDL 트리거가 있으며 다음 일괄 처리가 실행된다고 가정해 보십시오.  
@@ -58,7 +58,7 @@ AS
 >   
 >  `CREATE TABLE t1 (col1 int)`  
 >   
->  애플리케이션에서 CREATE_TABLE 이벤트의 `TSQLCommand` 데이터를 검색하면 이 데이터는 CREATE_SCHEMA 이벤트가 발생할 때와 CREATE_TABLE 이벤트가 발생할 때 각각 한 번씩, 두 번 표시될 수 있습니다. CREATE_SCHEMA 이벤트 및 해당하는 CREATE SCHEMA 정의의 <schema_element> 텍스트 둘 다에서 DDL 트리거를 만드는 경우를 방지하거나 같은 이벤트가 두 번 처리되지 않도록 하는 논리를 응용 프로그램에 구축합니다.  
+>  애플리케이션에서 CREATE_TABLE 이벤트의 `TSQLCommand` 데이터를 검색하면 이 데이터는 CREATE_SCHEMA 이벤트가 발생할 때와 CREATE_TABLE 이벤트가 발생할 때 각각 한 번씩, 두 번 표시될 수 있습니다. CREATE_SCHEMA 이벤트 및 해당하는 CREATE SCHEMA 정의의 &lt;schema_element&gt; 텍스트 둘 다에서 DDL 트리거를 만드는 경우를 방지하거나 같은 이벤트가 두 번 처리되지 않도록 하는 논리를 애플리케이션에 구축합니다.  
   
 ## <a name="alter-table-and-alter-database-events"></a>ALTER TABLE 및 ALTER DATABASE 이벤트  
  ALTER_TABLE 및 ALTER_DATABASE 이벤트에 대한 이벤트 데이터에는 DDL 문의 영향을 받는 다른 개체의 이름 및 유형과 이러한 개체에서 수행되는 동작도 포함됩니다. ALTER_TABLE 이벤트 데이터에는 ALTER TABLE 문의 영향을 받는 열, 제약 조건 또는 트리거의 이름과 영향을 받는 개체에서 수행되는 동작(만들기, 변경, 삭제, 설정 또는 해제)이 포함됩니다. ALTER DATABASE 이벤트 데이터에는 ALTER DATABASE 문의 영향을 받는 파일 또는 파일 그룹의 이름과 영향을 받는 개체에서 수행되는 동작(만들기, 변경, 또는 삭제)이 포함됩니다.  
@@ -125,11 +125,12 @@ GO
 ```  
   
 > [!NOTE]  
->  이벤트 데이터를 반환하려면 `value()` 메서드보다 XQuery `query()` 메서드를 사용하는 것이 좋습니다. `query()` 메서드는 출력에서 XML 및 앰퍼샌드로 이스케이프 처리된 CRLF(캐리지 리턴 및 줄 바꿈) 인스턴스를 반환하며 `value()` 메서드는 출력에서 보이지 않는 CRLF 인스턴스를 렌더링합니다.  
+>  이벤트 데이터를 반환하려면 `value()` 메서드보다 XQuery `query()` 메서드를 사용하는 것이 좋습니다. 
+  `query()` 메서드는 출력에서 XML 및 앰퍼샌드로 이스케이프 처리된 CRLF(캐리지 리턴 및 줄 바꿈) 인스턴스를 반환하며 `value()` 메서드는 출력에서 보이지 않는 CRLF 인스턴스를 렌더링합니다.  
   
  이와 유사한 DDL 트리거 예가 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스와 함께 제공됩니다. 이 예를 사용하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 데이터베이스 트리거 폴더를 찾으십시오. 이 폴더는 **데이터베이스의** 프로그래밍 기능 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 폴더 아래에 있습니다. **ddlDatabaseTriggerLog**를 마우스 오른쪽 단추로 클릭한 다음 **데이터베이스 트리거 스크립팅**을 선택합니다. DDL 트리거 **ddlDatabaseTriggerLog**는 기본적으로 해제되어 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [DDL 이벤트](../triggers/ddl-events.md)   
  [DDL 이벤트 그룹](../triggers/ddl-event-groups.md)  
   

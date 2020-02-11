@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM &lt;모델&gt; PREDICTION JOIN (DMX) | Microsoft Docs
+title: 모델&gt; 예측 &lt;조인 (DMX)에서 선택 Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b592aef0ba3831c5513e039ee4552d826468e819
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67928338"
 ---
-# <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt;모델&gt; PREDICTION JOIN (DMX)
+# <a name="select-from-ltmodelgt-prediction-join-dmx"></a>모델&gt; 예측 &lt;조인에서 선택 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  마이닝 모델을 사용하여 외부 데이터 원본에 있는 열의 상태를 예측합니다. 합니다 **PREDICTION JOIN** 문이 모델 원본 쿼리의 각 사례와 일치 합니다.  
+  마이닝 모델을 사용하여 외부 데이터 원본에 있는 열의 상태를 예측합니다. **예측 조인** 문은 원본 쿼리의 각 사례를 모델에 대응 시킵니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,13 +35,13 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  *n*  
  (선택 사항) 반환할 행의 수를 지정하는 정수입니다.  
   
- *select 식 목록*  
+ *식 목록 선택*  
  열 식별자 및 식의 쉼표로 구분된 목록이며 마이닝 모델에서 파생됩니다.  
   
  *model*  
  모델 식별자입니다.  
   
- *sub 선택*  
+ *하위 선택*  
  포함된 select 문입니다.  
   
  *원본 데이터 쿼리*  
@@ -53,11 +53,11 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  *조건 식*  
  (선택 사항) 열 목록에서 반환되는 값을 제한하는 조건입니다.  
   
- *expression*  
+ *식*  
  (선택 사항) 스칼라 값을 반환하는 식입니다.  
   
 ## <a name="remarks"></a>설명  
- ON 절은 원본 쿼리의 열 및 마이닝 모델의 열 간의 매핑을 정의합니다. 이 매핑은 예측을 만들 때 원본 쿼리의 열을 입력으로 사용할 수 있도록 원본 쿼리의 열을 마이닝 모델의 열로 전송하는 데 사용됩니다. 열에는 \< *조인 매핑 목록*> 다음 예와에서 같이 등호 (=)를 사용 하 여 관련:  
+ ON 절은 원본 쿼리의 열 및 마이닝 모델의 열 간의 매핑을 정의합니다. 이 매핑은 예측을 만들 때 원본 쿼리의 열을 입력으로 사용할 수 있도록 원본 쿼리의 열을 마이닝 모델의 열로 전송하는 데 사용됩니다. \<다음 예제와 같이 *조인 매핑 목록의* 열> 등호 (=)를 사용 하 여 관련 됩니다.  
   
 ```  
 [MiningModel].ColumnA = [source data query].Column1 AND   
@@ -69,9 +69,9 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
  예측 조인에 대한 원본 쿼리는 테이블 또는 단일 쿼리일 수 있습니다.  
   
- 에 있는 테이블 식을 반환 하지 않는 예측 함수를 지정할 수 있습니다 합니다 \< *select 식 목록*> 및 \< *조건 식*>.  
+ \< *Select 식 목록* 에서 테이블 식을 반환 하지 않는 예측 함수> 및 \< *조건 식*>를 지정할 수 있습니다.  
   
- **NATURAL PREDICTION JOIN** 자동으로 모델의 열 이름과 일치 하는 원본 쿼리의 열 이름을 함께 매핑합니다. 사용 하는 경우 **자연 예측**, ON 절을 생략할 수 있습니다.  
+ **자연 예측 조인은** 모델의 열 이름과 일치 하는 원본 쿼리의 열 이름을 자동으로 매핑합니다. **자연 예측**을 사용 하는 경우 ON 절을 생략할 수 있습니다.  
   
  WHERE 조건은 예측 가능한 열이나 관련 열에만 적용할 수 있습니다.  
   
@@ -88,7 +88,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
 -   동거 자녀 두 명  
   
- TM Decision Tree 마이닝 모델 및 주체에 대 한 알려진된 특성을 사용 하 여, 쿼리 사용자 반환 하는 테이블 형식 값 집합과 자전거 구입 여부를 설명 하는 부울 값을 반환 합니다 [PredictHistogram &#40;DMX &#41; ](../dmx/predicthistogram-dmx.md) 함수는 예측을 만든 방법에 대해 설명 합니다.  
+ TM 의사 결정 트리 마이닝 모델 및 주제에 대 한 알려진 특성을 사용 하 여이 쿼리는 사용자가 자전거를 구입 했는지 여부를 설명 하는 부울 값을 반환 하 고, [PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md) 함수에서 반환 되는 테이블 형식 값 집합을 예측 하 여 예측을 수행 하는 방법을 설명 합니다.  
   
 ```  
 SELECT  
@@ -105,7 +105,7 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="example-2-using-openquery"></a>예제 2: OPENQUERY 사용  
- 다음 예에서는 외부 데이터 세트에 저장된 잠재 고객 목록을 사용하여 일괄 처리 예측 쿼리를 만드는 방법을 보여 줍니다. 테이블의 인스턴스에서 정의 된 데이터 원본 뷰의 일부 이므로 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 쿼리에 사용할 수 있습니다 [OPENQUERY](../dmx/source-data-query-openquery.md) 데이터를 검색 합니다. 마이닝 모델에서 테이블의 열 이름을 다르기 때문에 합니다 **ON** 모델의 열을 테이블의 열을 매핑할 절을 사용 해야 합니다.  
+ 다음 예에서는 외부 데이터 세트에 저장된 잠재 고객 목록을 사용하여 일괄 처리 예측 쿼리를 만드는 방법을 보여 줍니다. 테이블이 인스턴스에 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]정의 된 데이터 원본 뷰의 일부 이기 때문에 쿼리는 [OPENQUERY](../dmx/source-data-query-openquery.md) 를 사용 하 여 데이터를 검색할 수 있습니다. 테이블의 열 이름은 마이닝 모델의 열과 다르므로 **ON** 절을 사용 하 여 테이블의 열을 모델의 열에 매핑해야 합니다.  
   
  쿼리는 테이블에 있는 각 개인의 성과 이름 및 각 개인이 자전거를 구입할 가능성이 있는지 여부를 나타내는 부울 열을 반환합니다. 부울 열에서 0은 "자전거를 구입할 가능성이 낮음"을, 1은 "자전거를 구입할 가능성이 높음"을 나타냅니다. 마지막 열에는 예측된 결과에 대한 확률이 들어 있습니다.  
   
@@ -162,7 +162,7 @@ ORDER BY [LastName] ASC
   
 -   Mountain-200  
   
- 합니다 [Predict &#40;DMX&#41; ](../dmx/predict-dmx.md) 함수는 다형성을 갖고 및 모든 모델 유형과 함께 사용할 수 있습니다. value3을 함수에 대한 인수로 사용하여 쿼리가 반환하는 항목 수를 제한할 수 있습니다. 합니다 **선택** NATURAL PREDICTION JOIN 절 뒤에 오는 목록 예측에 대 한 입력으로 사용할 값을 제공 합니다.  
+ [Predict &#40;DMX&#41;](../dmx/predict-dmx.md) 함수는 다형성 이며 모든 모델 유형과 함께 사용할 수 있습니다. value3을 함수에 대한 인수로 사용하여 쿼리가 반환하는 항목 수를 제한할 수 있습니다. 자연 예측 조인 절 다음에 오는 **SELECT** 목록은 예측에 대 한 입력으로 사용할 값을 제공 합니다.  
   
 ```  
 SELECT FLATTENED  
@@ -175,7 +175,7 @@ NATURAL PREDICTION JOIN
   UNION SELECT 'Mountain-200' AS [Model]) AS [v Assoc Seq Line Items ]) AS t  
 ```  
   
- 예제 결과:  
+ 결과 예:  
   
 |Expression.Model|  
 |----------------------|  
@@ -183,12 +183,12 @@ NATURAL PREDICTION JOIN
 |Water Bottle|  
 |Fender Set - Mountain|  
   
- 예측 가능한 특성이 들어 있는 열인 `[v Assoc Seq Line Items]`가 테이블 열이므로 중첩 테이블이 들어 있는 단일 열이 반환됩니다. 기본적으로 중첩 테이블 열의 이름은 `Expression`입니다. 공급자에서 계층적 행 집합을 지원 하지 않습니다, 경우 사용할 수 있습니다 합니다 **FLATTENED** 키워드와 같이이 예제에서는 결과 보다 쉽게 볼 수 있도록 합니다.  
+ 예측 가능한 특성이 들어 있는 열인 `[v Assoc Seq Line Items]`가 테이블 열이므로 중첩 테이블이 들어 있는 단일 열이 반환됩니다. 기본적으로 중첩 테이블 열의 이름은 `Expression`입니다. 공급자가 계층적 행 집합을 지원 하지 않는 경우이 예제와 같이 **평면화** 된 키워드를 사용 하 여 결과를 쉽게 볼 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [선택 &#40;DMX&#41;](../dmx/select-dmx.md)   
- [Data Mining Extensions &#40;DMX&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
- [Data Mining Extensions &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
- [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>참고 항목  
+ [DMX &#40;선택&#41;](../dmx/select-dmx.md)   
+ [데이터 마이닝 확장 &#40;DMX&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
+ [데이터 마이닝 확장 &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
+ [데이터 마이닝 확장 &#40;DMX&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

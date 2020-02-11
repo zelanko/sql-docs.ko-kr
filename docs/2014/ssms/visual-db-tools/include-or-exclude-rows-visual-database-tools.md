@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3785a777571ef7659b1ae21a693e6754659a80e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63298586"
 ---
 # <a name="include-or-exclude-rows-visual-database-tools"></a>행 포함 또는 제외(Visual Database Tools)
@@ -103,9 +103,9 @@ region = 'UK' OR region = 'US'
     WHERE sales_price > (prod_cost * 2)  
     ```  
   
-## <a name="see-also"></a>관련 항목  
- [방법 도움말 항목을 쿼리 및 뷰 디자인 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
- [검색 조건 지정 &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [쿼리 및 뷰 디자인 방법 도움말 항목 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [Visual Database Tools &#40;검색 조건을 지정&#41;](specify-search-criteria-visual-database-tools.md)   
  [매개 변수를 사용하여 쿼리&#40;Visual Database Tools&#41;](query-with-parameters-visual-database-tools.md)  
   
   

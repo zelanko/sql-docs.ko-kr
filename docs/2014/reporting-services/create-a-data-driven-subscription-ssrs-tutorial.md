@@ -15,13 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b905b7127d10be80d9c30ec7c594fbaedc7d9c00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109685"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>데이터 기반 구독 만들기(SSRS 자습서)
+  
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 데이터 기반 구독을 제공하므로 동적 구독자 데이터를 기반으로 보고서 배포를 사용자 지정할 수 있습니다. 데이터 기반 구독은 다음과 같은 종류의 시나리오에 사용됩니다.  
   
 -   배포마다 멤버가 변경될 수 있는 대규모 받는 사람 풀에 보고서 배포. 예를 들면 모든 현재 고객에게 월별 보고서를 배포하는 경우입니다.  
@@ -33,29 +34,29 @@ ms.locfileid: "66109685"
   
  이 자습서는 다음 3개의 단원으로 이루어져 있습니다.  
   
- [1단원: 예제 구독자 데이터베이스 만들기](lesson-1-creating-a-sample-subscriber-database.md)  
+ [1단원: 샘플 구독자 데이터베이스 만들기](lesson-1-creating-a-sample-subscriber-database.md)  
  이 단원에서는 구독자 정보가 있는 로컬 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스를 만드는 방법을 배웁니다.  
   
- [2단원: 보고서 데이터 원본 속성 수정](lesson-2-modifying-the-report-data-source-properties.md)을 참조하세요.  
+ [Lesson 2: Modifying the Report Data Source Properties](lesson-2-modifying-the-report-data-source-properties.md)  
  이 단원에서는 보고서가 무인 모드로 실행되도록 보고서 데이터 원본 속성을 수정하는 방법을 배웁니다. 무인 처리를 위해서는 저장된 자격 증명이 필요합니다. 또한 구독자 데이터로 공급되는 매개 변수를 포함하도록 보고서 데이터 세트를 수정합니다.  
   
- [3단원: 데이터 기반 구독 정의](lesson-3-defining-a-data-driven-subscription.md)  
+ [Lesson 3: Defining a Data-Driven Subscription](lesson-3-defining-a-data-driven-subscription.md)  
  이 단원에서는 데이터 기반 구독을 정의하는 방법을 배우며 데이터 기반 구독 마법사의 각 페이지를 안내합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  데이터 기반 구독은 대개 보고서 서버 관리자가 만들고 유지 관리합니다. 데이터 기반 구독을 만들려면 쿼리 작성에 대한 전문 지식, 구독자 데이터가 포함된 데이터 원본에 대한 지식, 보고서 서버에서 승격된 권한이 필요합니다.  
   
- 이 자습서는 자습서에서 만든 보고서를 사용 하 여 [기본 테이블 보고서 만들기 &#40;SSRS 자습서&#41; ](create-a-basic-table-report-ssrs-tutorial.md) 및 데이터에서 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]  
+ 이 자습서에서는 기본 테이블 보고서 만들기 자습서에서 만든 보고서를 사용 하 여 [&#40;SSRS 자습서&#41;](create-a-basic-table-report-ssrs-tutorial.md) 및 데이터를 사용 합니다.[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]  
   
  이 자습서를 사용하려면 시스템에 다음 항목이 설치되어야 합니다.  
   
--   데이터 기반 구독을 지원하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 버전. 자세한 내용은 [버전 및 SQL Server 2014 구성 요소](../sql-server/editions-and-components-of-sql-server-2016.md)합니다.  
+-   데이터 기반 구독을 지원하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 버전. 자세한 내용은 [SQL Server 2014의 버전 및 구성 요소](../sql-server/editions-and-components-of-sql-server-2016.md)를 참조 하세요.  
   
 -   기본 모드로 보고서 서버가 실행되고 있어야 합니다. 이 자습서에 설명된 사용자 인터페이스는 기본 모드 보고서 서버를 기반으로 합니다. 구독은 SharePoint 모드 보고서 서버에서 지원되지만 사용자 인터페이스는 이 자습서에 설명된 것과 다릅니다.  
   
 -   SQL Server 에이전트 서비스가 실행되고 있어야 합니다.  
   
--   매개 변수가 들어 있는 보고서가 필요합니다. 이 자습서에서는 `Sales Orders` 기본 테이블 보고서 만들기&#40;SSRS 자습서&#41; [기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;](create-a-basic-table-report-ssrs-tutorial.md)의 데이터를 사용합니다.  
+-   매개 변수가 들어 있는 보고서가 필요합니다. 이 자습서에서는 `Sales Orders` 기본 테이블 보고서 만들기&#40;SSRS 자습서&#41; [기본 테이블 보고서 만들기&amp;#40;SSRS 자습서&amp;#41;](create-a-basic-table-report-ssrs-tutorial.md)의 데이터를 사용합니다.  
   
 -   예제 보고서에 데이터를 제공하는 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 예제 데이터베이스가 필요합니다.  
   
@@ -63,9 +64,9 @@ ms.locfileid: "66109685"
   
 -   쓰기 권한이 있는 공유 폴더가 필요합니다. 이 공유 폴더는 네트워크 연결을 통해 액세스할 수 있어야 합니다.  
   
- **자습서에 소요되는 예상 시간:** 30 분입니다. 기본 보고서 자습서를 완료하지 않은 경우 추가 30분이 소요됩니다.  
+ **자습서에 소요되는 예상 시간:** 30분 기본 보고서 자습서를 완료하지 않은 경우 추가 30분이 소요됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
  [기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
   

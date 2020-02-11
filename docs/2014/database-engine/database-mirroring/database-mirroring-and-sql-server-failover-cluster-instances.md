@@ -15,19 +15,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e7c3a3094309d2d1d32a840d4eee933555daa66a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755579"
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>데이터베이스 미러링 및 SQL Server 장애 조치(Failover) 클러스터 인스턴스
-  장애 조치 클러스터는 리소스 그룹으로 알려진 MSCS( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Cluster Service) 클러스터 그룹 내에 있는 하나 이상의 물리적 디스크 조합이며 클러스터의 참여 노드입니다. 리소스 그룹은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 호스팅하는 장애 조치 클러스터형 인스턴스로 구성됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치 클러스터형 인스턴스는 네트워크에서 한 대의 컴퓨터처럼 보이지만 어떤 노드를 사용할 수 없게 되는 경우 노드 간 장애 조치 기능을 제공합니다. 자세한 내용은 [Always On 장애 조치(failover) 클러스터 인스턴스(SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)를 참조하세요.  
+  장애 조치 클러스터는 리소스 그룹으로 알려진 MSCS( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Cluster Service) 클러스터 그룹 내에 있는 하나 이상의 물리적 디스크 조합이며 클러스터의 참여 노드입니다. 리소스 그룹은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 호스팅하는 장애 조치 클러스터형 인스턴스로 구성됩니다. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치 클러스터형 인스턴스는 네트워크에서 한 대의 컴퓨터처럼 보이지만 어떤 노드를 사용할 수 없게 되는 경우 노드 간 장애 조치 기능을 제공합니다. 자세한 내용은 [Always On 장애 조치(failover) 클러스터 인스턴스(SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)를 참조하세요.  
   
- 장애 조치(failover) 클러스터는 단일 데이터베이스에 대해 가용성 우선 지원을 제공하는 데이터베이스 미러링과 달리 전체 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 가용성 우선 지원을 제공합니다. 데이터베이스 미러링은 장애 조치 클러스터 간, 그리고 장애 조치 클러스터와 비클러스터형 호스트 간에 작동합니다.  
+ 장애 조치 (Failover) 클러스터는 단일 데이터베이스에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대 한 고가용성 지원을 제공 하는 데이터베이스 미러링과 달리 전체 인스턴스에 대해 고가용성 지원을 제공 합니다. 데이터베이스 미러링은 장애 조치 클러스터 간, 그리고 장애 조치 클러스터와 비클러스터형 호스트 간에 작동합니다.  
   
 > [!NOTE]  
->  데이터베이스 미러링에 대한 소개는 [데이터베이스 미러링&#40;SQL Server&#41;](database-mirroring-sql-server.md)인스턴스를 호스팅하는 장애 조치 클러스터형 인스턴스로 구성됩니다.  
+>  데이터베이스 미러링에 대한 소개는 [데이터베이스 미러링&#40;SQL Server&#41;](database-mirroring-sql-server.md)을 참조하세요.  
   
 ## <a name="mirroring-and-clustering"></a>미러링 및 클러스터링  
  일반적으로 미러링을 클러스터링과 함께 사용할 때 주 서버와 미러 서버는 모두 클러스터에 있으며 주 서버는 클러스터의 장애 조치 클러스터형 인스턴스에서 실행되고 미러 서버는 다른 클러스터의 장애 조치 클러스터형 인스턴스에서 실행됩니다. 그러나 한 파트너가 클러스터의 장애 조치 클러스터형 인스턴스에 있고 다른 파트너는 별도의 비클러스터형 컴퓨터에 있는 미러링 세션을 설정할 수 있습니다.  
@@ -41,11 +42,12 @@ ms.locfileid: "62755579"
   
  다음 그림에서는 미러링 모니터 서버가 포함된 보호 우선 모드(자동 장애 조치 지원)로 실행되는 미러링 세션의 클러스터 간 자동 장애 조치를 보여 줍니다.  
   
- ![클러스터에서의 장애 조치](../media/dbm-and-failover-clustering.gif "클러스터에서의 장애 조치")  
+ ![클러스터의 장애 조치(Failover)](../media/dbm-and-failover-clustering.gif "클러스터의 장애 조치(Failover)")  
   
- 세 명의 서버 인스턴스가 미러링 세션에서 3 개의 고유 클러스터인에 상주 합니다. **Cluster_A**하십시오 **Cluster_B**, 및 **Cluster_C**합니다. 각 클러스터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 기본 인스턴스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치 클러스터형 인스턴스로 실행됩니다. 미러링 세션이 시작되면 미러링 세션에서 **Cluster_A** 의 장애 조치(failover) 클러스터된 인스턴스가 주 서버로, **Cluster_B** 의 장애 조치(failover) 클러스터된 인스턴스는 미러 서버로, **Cluster_C** 의 장애 조치(failover) 클러스터된 인스턴스는 미러링 모니터 서버가 됩니다. 결국 **Cluster_A** 에 활성화되어 있는 노드에 장애가 발생하면 주 서버를 이용할 수 없게 됩니다.  
+ 미러링 세션에서 3개의 서버 인스턴스는 3개의 고유 클러스터인 **Cluster_A**, **Cluster_B**및 **Cluster_C**에 상주합니다. 각 클러스터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 기본 인스턴스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치 클러스터형 인스턴스로 실행됩니다. 미러링 세션이 시작되면 미러링 세션에서 **Cluster_A** 의 장애 조치(failover) 클러스터된 인스턴스가 주 서버로, **Cluster_B** 의 장애 조치(failover) 클러스터된 인스턴스는 미러 서버로, **Cluster_C** 의 장애 조치(failover) 클러스터된 인스턴스는 미러링 모니터 서버가 됩니다. 결국 **Cluster_A** 에 활성화되어 있는 노드에 장애가 발생하면 주 서버를 이용할 수 없게 됩니다.  
   
- 클러스터가 장애 조치할 시간을 갖기 전에 미러 서버가 미러링 모니터 서버의 도움을 받아 주 서버의 손실을 감지합니다. 미러 서버는 가능한 한 빨리 해당 데이터베이스를 롤포워드하여 새로운 주 데이터베이스로 사용할 수 있도록 온라인 상태로 만듭니다. **Cluster_A** 가 장애 조치(failover)를 마치면 이전의 주 서버는 이제 미러 서버가 되고 해당 데이터베이스를 **Cluster_B**에 있는 현재의 주 데이터베이스와 동기화합니다.  
+ 클러스터가 장애 조치할 시간을 갖기 전에 미러 서버가 미러링 모니터 서버의 도움을 받아 주 서버의 손실을 감지합니다. 미러 서버는 가능한 한 빨리 해당 데이터베이스를 롤포워드하여 새로운 주 데이터베이스로 사용할 수 있도록 온라인 상태로 만듭니다. 
+  **Cluster_A** 가 장애 조치(failover)를 마치면 이전의 주 서버는 이제 미러 서버가 되고 해당 데이터베이스를 **Cluster_B**에 있는 현재의 주 데이터베이스와 동기화합니다.  
   
 ### <a name="high-safety-mode-session-without-automatic-failover"></a>자동 장애 조치 없는 보호 우선 모드 세션  
  자동 장애 조치가 없는 보호 우선 모드에서 데이터베이스를 미러링하는 경우 현재 주 서버를 실행하는 노드가 실패하면 클러스터의 다른 노드가 주 서버 역할을 합니다. 클러스터를 이용할 수 없을 때는 데이터베이스를 사용할 수 없습니다.  
@@ -53,19 +55,19 @@ ms.locfileid: "62755579"
 ### <a name="high-performance-mode-session"></a>성능 우선 모드 세션  
  성능 우선 모드에서 데이터베이스를 미러링할 때는 클러스터의 장애 조치 클러스터형 인스턴스에 주 서버를 배치하고 미러 서버는 원격 위치의 비클러스터형 서버에 배치하십시오. 클러스터가 다른 노드로 장애 조치되면 미러링 세션에서 장애 조치 클러스터형 인스턴스가 계속 주 서버로 작동합니다. 전체 클러스터에 문제가 있는 경우 미러 서버로 서비스를 강제할 수 있습니다.  
   
- **새 SQL Server 장애 조치 클러스터를 설정하려면**  
+ **새 SQL Server 장애 조치 (failover) 클러스터를 설정 하려면**  
   
--   [새 SQL Server 장애 조치(failover) 클러스터 만들기&#40;설치 프로그램&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
+-   [설치 &#40;SQL Server 장애 조치 (Failover) 클러스터를 새로 만듭니다&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
   
- **데이터베이스 미러링을 설정하려면**  
+ **데이터베이스 미러링을 설정 하려면**  
   
 -   [데이터베이스 미러링 설정&#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)  
   
 -   [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링&#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [데이터베이스 미러링 운영 모드](database-mirroring-operating-modes.md)   
- [AlwaysOn 장애 조치 클러스터 인스턴스 (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) 
+ [AlwaysOn 장애 조치(failover) 클러스터 인스턴스(SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) 
   
   

@@ -17,27 +17,27 @@ ms.assetid: 9c656963-531e-4cd1-b698-d5f42a9b7ba3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d44ac908c04338f80c18699319f75a068370c3e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938452"
 ---
 # <a name="filteraxis-property-ado-md"></a>FilterAxis 속성(ADO MD)
-현재 필터 정보를 나타냅니다 [cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)합니다.  
+현재 [셀 집합](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)에 대 한 필터 정보를 나타냅니다.  
   
 ## <a name="return-values"></a>반환 값  
- 반환 된 [축](../../../ado/reference/ado-md-api/axis-object-ado-md.md) 개체를 읽기 전용입니다.  
+ 는 [축](../../../ado/reference/ado-md-api/axis-object-ado-md.md) 개체를 반환 하 고는 읽기 전용입니다.  
   
 ## <a name="remarks"></a>설명  
- 사용 합니다 **FilterAxis** 데이터 분할에 사용 된 차원에 대 한 정보를 반환 하는 속성입니다. 합니다 [DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md) 의 속성을 **축** slicer 차원 수를 반환 합니다. 이 축에는 일반적으로 하나의 행을 있습니다.  
+ **Filteraxis** 속성을 사용 하 여 데이터를 조각화 하는 데 사용 된 차원에 대 한 정보를 반환 합니다. 축의 [Dimensioncount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md) 속성은 슬라이서 **** 차원의 수를 반환 합니다. 이 축에는 일반적으로 하나의 행만 있습니다.  
   
- **축** 반환한 **FilterAxis** 에 포함 되어 있지는 [축](../../../ado/reference/ado-md-api/axes-collection-ado-md.md) 컬렉션에 대 한를 [셀 집합](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) 개체입니다.  
+ **Filteraxis** 에서 반환 된 **축은** [셀 집합](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) 개체의 [축](../../../ado/reference/ado-md-api/axes-collection-ado-md.md) 컬렉션에 포함 되지 않습니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [Cellset 개체(ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
-## <a name="see-also"></a>관련 항목  
- [축 개체 (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
+## <a name="see-also"></a>참고 항목  
+ [Axis 개체 (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
  [Dimension 개체 (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)   
  [DimensionCount 속성(ADO MD)](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)

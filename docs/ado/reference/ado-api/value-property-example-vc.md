@@ -1,5 +1,5 @@
 ---
-title: 값 속성 예제 (VC + +) | Microsoft Docs
+title: Value 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 2a104245-56df-44f3-b9b7-b3d18643d57b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f30b6663ff532fe12eede6042df5c9f0cc29ccb6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67944461"
 ---
 # <a name="value-property-example-vc"></a>Value 속성 예제(VC++)
-이 예제에서는 합니다 [값](../../../ado/reference/ado-api/value-property-ado.md) 속성과 [필드](../../../ado/reference/ado-api/field-object.md) 및 [속성](../../../ado/reference/ado-api/property-object-ado.md) 에 대 한 필드 및 속성 값을 표시 하 여 개체를 ***직원*** 테이블입니다.  
+이 예에서는 ***Employees*** 테이블의 필드 및 속성 값을 표시 하 여 [필드](../../../ado/reference/ado-api/field-object.md) 및 [속성](../../../ado/reference/ado-api/property-object-ado.md) 개체가 포함 된 [Value](../../../ado/reference/ado-api/value-property-ado.md) 속성을 보여 줍니다.  
   
 ```  
 // BeginValueCpp.cpp  
@@ -169,7 +169,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Field 개체](../../../ado/reference/ado-api/field-object.md)   
- [속성 개체 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
+ [Property 개체 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
  [Value 속성(ADO)](../../../ado/reference/ado-api/value-property-ado.md)
