@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b6c8233b95f3f95235bb4f618358d4680d3088f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287476"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>인라인 XSD 스키마 생성
@@ -36,7 +36,7 @@ ms.locfileid: "63287476"
   
  FOR XML 쿼리에 XMLSCHEMA를 지정하는 경우 스키마와 XML 데이터를 모두 쿼리 결과로 수신합니다. 데이터의 각 최상위 요소는 기본 네임스페이스 선언을 사용하여 이전 스키마를 참조하며, 이 선언은 인라인 스키마의 대상 네임스페이스를 참조합니다.  
   
- 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ 다음은 그 예입니다.  
   
 ```  
 <xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
@@ -221,7 +221,7 @@ FOR XML RAW, XMLSCHEMA, ELEMENTS
 ## <a name="element-name-clashes"></a>요소 이름 충돌  
  FOR XML에서는 동일한 이름을 사용하여 두 개의 하위 요소를 나타낼 수 있습니다. 예를 들어 다음 쿼리는 제품의 ListPrice 및 DealerPrice 값을 검색하지만 두 열에 대해 Price라는 동일한 별칭을 지정합니다. 따라서 결과 행 집합에는 이름이 같은 두 열이 포함됩니다.  
   
-### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>사례 1: 두 하위 요소 모두 같은 유형의 키가 아닌 열 이며 NULL 일 수 있습니다.  
+### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>사례 1: 두 하위 요소 모두 같은 유형의 키가 아닌 열이며 NULL일 수 있습니다.  
  다음 쿼리에서 두 하위 요소는 모두 같은 유형의 키가 아닌 열이며 NULL일 수 있습니다.  
   
 ```  
@@ -273,9 +273,9 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  인라인 XSD 스키마에서 다음을 유의하십시오.  
   
--   ListPrice 및 DealerPrice 모두 같은 `money` 유형이며 두 요소 모두 테이블에서 NULL일 수 있습니다. 따라서 두 요소는 결과 XML에 반환되지 않을 수도 있기 때문에 minOccurs=0 및 maxOccurs=2로 지정된 <`row`> 요소의 복합 유형 선언에는 <`Price`> 자식 요소가 하나만 있습니다.  
+-   ListPrice 및 DealerPrice 모두 같은 `money`유형이며 두 요소 모두 테이블에서 NULL일 수 있습니다. 따라서 두 요소는 결과 XML에 반환되지 않을 수도 있기 때문에 minOccurs=0 및 maxOccurs=2로 지정된 <`Price`> 요소의 복합 유형 선언에는 <`row`> 자식 요소가 하나만 있습니다.  
   
--   결과에서는 `DealerPrice` 값이 테이블에서 NULL이기 때문에 `ListPrice`만 <`Price`> 요소로 반환됩니다. `XSINIL` 매개 변수를 ELEMENTS 지시어로 추가하는 경우 DealerPrice에 해당하는 <`Price`> 요소에 대해 `xsi:nil` 값이 TRUE로 설정된 두 요소가 모두 수신됩니다. 또한 `nillable` 특성이 모두 TRUE로 설정된 인라인 XSD 스키마에서 <`row`> 복합 유형 정의에 있는 두 개의 <`Price`> 자식 요소가 수신됩니다. 다음은 결과의 일부입니다.  
+-   결과에서는 `DealerPrice` 값이 테이블에서 NULL이기 때문에 `ListPrice`만 <`Price`> 요소로 반환됩니다. `XSINIL` 매개 변수를 ELEMENTS 지시어로 추가하는 경우 DealerPrice에 해당하는 <`xsi:nil`> 요소에 대해 `Price` 값이 TRUE로 설정된 두 요소가 모두 수신됩니다. 또한 `Price` 특성이 모두 TRUE로 설정된 인라인 XSD 스키마에서 <`row`> 복합 유형 정의에 있는 두 개의 <`nillable`> 자식 요소가 수신됩니다. 다음은 결과의 일부입니다.  
   
  `...`  
   
@@ -313,7 +313,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `</row>`  
   
-### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>사례 2: 하나의 키 열과 하나의 키가 아닌 동일한 형식  
+### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>사례 2: 유형이 같은 하나의 키 열과 하나의 키가 아닌 열  
  다음 쿼리는 유형이 같은 하나의 키 열과 하나의 키가 아닌 열을 보여 줍니다.  
   
 ```  
@@ -391,7 +391,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  인라인 XSD 스키마에서 Col2에 해당하는 <`Col`> 요소는 minOccurs가 0으로 설정됩니다.  
   
-### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>사례 3: 요소 다양 한 유형 및 해당 열은 모두 NULL 일 수 있습니다.  
+### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>사례 3: 유형이 다른 요소와 해당 열은 모두 NULL일 수 있습니다.  
  다음 쿼리는 사례 2에 표시된 예제 테이블에 대해 지정됩니다.  
   
 ```  

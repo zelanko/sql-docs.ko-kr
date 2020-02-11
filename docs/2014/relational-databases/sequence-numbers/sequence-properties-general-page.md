@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 846e7960e9aca4bfb5deea8f50eae3c8a2f58c70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184448"
 ---
 # <a name="sequence-properties-general-page"></a>시퀀스 속성(일반 페이지)
@@ -28,7 +28,7 @@ ms.locfileid: "63184448"
   
  이 페이지는 개체 탐색기에서 **시퀀스** 를 마우스 오른쪽 단추로 클릭한 다음 **새 시퀀스**를 클릭하거나 기존 시퀀스를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭하는 두 가지 방법으로 액세스할 수 있습니다. 기존 시퀀스를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭한 경우에는 옵션을 편집할 수 없습니다. 시퀀스 옵션을 변경하려면 [ALTER SEQUENCE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-sequence-transact-sql) 문을 사용하거나 시퀀스 개체를 삭제한 후 다시 만듭니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **시퀀스 이름**  
  시퀀스 이름을 입력합니다.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "63184448"
  이 시퀀스를 소유할 스키마를 지정합니다.  
   
  **데이터 형식**  
- 시퀀스는 모든 정수 유형으로 정의할 수 있습니다. 다음을 포함합니다.  
+ 시퀀스는 모든 정수 유형으로 정의할 수 있습니다. 다음 내용이 포함됩니다.  
   
 |데이터 형식|범위|  
 |---------------|-----------|  
@@ -45,26 +45,30 @@ ms.locfileid: "63184448"
 |`int`|-2,147,483,648 ~ 2,147,483,647|  
 |`bigint`|-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807|  
   
--   `decimal` 또는 소수 자릿수가 0인 `numeric`  
+-   
+  `decimal` 또는 소수 자릿수가 0인 `numeric`  
   
 -   다음 형식 중 하나에 기반을 둔 사용자 정의 데이터 형식(별칭 유형)  
   
  **정밀도**  
- `decimal` 또는 `numeric` 데이터 형식의 경우 전체 자릿수를 지정합니다. 소수 자릿수는 항상 0입니다.  
+ 
+  `decimal` 또는 `numeric` 데이터 형식의 경우 전체 자릿수를 지정합니다. 소수 자릿수는 항상 0입니다.  
   
- **시작 값**  
- 시퀀스 개체가 반환할 첫 번째 값입니다. **START** 값은 시퀀스 개체의 최대값보다 작거나 같고 최소값보다 크거나 같은 값이어야 합니다. 새 시퀀스 개체의 기본 시작 값은 오름차순 시퀀스 개체에 대해서는 최소값이고, 내림차순 시퀀스 개체에 대해서는 최대값입니다.  
+ **값으로 시작**  
+ 시퀀스 개체가 반환할 첫 번째 값입니다. 
+  **START** 값은 시퀀스 개체의 최대값보다 작거나 같고 최소값보다 크거나 같은 값이어야 합니다. 새 시퀀스 개체의 기본 시작 값은 오름차순 시퀀스 개체에 대해서는 최소값이고, 내림차순 시퀀스 개체에 대해서는 최대값입니다.  
   
  **증가값**  
  각각의 **NEXT VALUE FOR** 함수 호출에 대해 시퀀스 개체의 값을 증가시키거나 감소시키는(음수인 경우) 데 사용되는 값입니다. 증가값이 음수이면 시퀀스 개체가 내림차순이고, 그렇지 않으면 오름차순입니다. 증가값은 0일 수 없습니다.  
   
- **최소값**  
- 시퀀스 개체의 경계를 지정합니다. 새 시퀀스 개체의 기본 최소값은 해당 시퀀스 개체의 데이터 형식에 대한 최소값입니다. `tinyint` 형식에 대해서는 0이고 다른 모든 데이터 형식에 대해서는 음수입니다.  
+ **최 솟 값**  
+ 시퀀스 개체의 경계를 지정합니다. 새 시퀀스 개체의 기본 최소값은 해당 시퀀스 개체의 데이터 형식에 대한 최소값입니다. 
+  `tinyint` 형식에 대해서는 0이고 다른 모든 데이터 형식에 대해서는 음수입니다.  
   
- **최대값**  
+ **최 댓 값**  
  시퀀스 개체의 경계를 지정합니다. 새 시퀀스 개체의 기본 최대값은 해당 시퀀스 개체의 데이터 형식에 대한 최대값입니다.  
   
- **제한에 도달하면 시퀀스 순환 다시 시작**  
+ **한도에 도달 하 여 순환 시퀀스가 다시 시작 됩니다.**  
  최소값 또는 최대값을 초과하는 경우 시퀀스 개체가 최소값 또는 최대값(내림차순 시퀀스 개체의 경우)에서 다시 시작할 수 있도록 하려면 선택합니다.  
   
 > [!NOTE]  
@@ -77,7 +81,8 @@ ms.locfileid: "63184448"
   
 -   캐시 없음 - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가 시퀀스 번호를 캐시하지 않습니다.  
   
--   캐시 크기 - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가 시퀀스 값을 캐시합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 현재 값 및 캐시에 남아 있는 값의 개수를 추적합니다. 따라서 캐시 저장에 필요한 메모리 양은 항상 시퀀스 개체 데이터 형식의 인스턴스 두 개입니다.  
+-   캐시 크기 - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가 시퀀스 값을 캐시합니다. 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 현재 값 및 캐시에 남아 있는 값의 개수를 추적합니다. 따라서 캐시 저장에 필요한 메모리 양은 항상 시퀀스 개체 데이터 형식의 인스턴스 두 개입니다.  
   
  CACHE 옵션을 사용하여 만들 경우 전원 오류와 같은 예기치 않은 종료로 인해 캐시의 시퀀스 번호가 손실될 수 있습니다.  
   
@@ -86,7 +91,7 @@ ms.locfileid: "63184448"
 ## <a name="permissions"></a>사용 권한  
  SCHEMA에 대한 **CREATE SEQUENCE**, **ALTER**또는 **CONTROL** 권한이 필요합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [sys.sequences&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sequences-transact-sql)  
+## <a name="see-also"></a>참고 항목  
+ [&#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-sequences-transact-sql)  
   
   

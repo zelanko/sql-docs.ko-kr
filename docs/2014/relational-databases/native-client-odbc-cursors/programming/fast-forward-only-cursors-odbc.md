@@ -1,5 +1,5 @@
 ---
-title: 빠른 정방향 전용 커서 (ODBC) | Microsoft Docs
+title: 빠른 전진 전용 커서 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,34 +16,34 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: df3cea50a8800cdca7fe0a5c846bc32556299e0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63209790"
 ---
 # <a name="fast-forward-only-cursors-odbc"></a>빠른 정방향 전용 커서(ODBC)
-  인스턴스에 연결할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 정방향 전용, 읽기 전용 커서에 대 한 성능 최적화를 지원 합니다. 빠른 정방향 전용 커서는 기본 결과 집합과 매우 유사한 방식으로 드라이버 및 서버에서 내부적으로 구현됩니다. 정방향 전용 커서는 높은 성능 외에도 다음과 같은 특성이 있습니다.  
+  의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 연결 된 경우 NATIVE Client ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 드라이버는 앞 으로만 이동 가능한 읽기 전용 커서에 대해 성능 최적화를 지원 합니다. 빠른 정방향 전용 커서는 기본 결과 집합과 매우 유사한 방식으로 드라이버 및 서버에서 내부적으로 구현됩니다. 정방향 전용 커서는 높은 성능 외에도 다음과 같은 특성이 있습니다.  
   
--   [SQLGetData](../../native-client-odbc-api/sqlgetdata.md) 지원 되지 않습니다. 결과 집합 열은 프로그램 변수에 바인딩되어야 합니다.  
+-   [SQLGetData](../../native-client-odbc-api/sqlgetdata.md) 는 지원 되지 않습니다. 결과 집합 열은 프로그램 변수에 바인딩되어야 합니다.  
   
--   서버에서 커서 끝을 감지하면 커서를 자동으로 닫습니다. 응용 프로그램 호출 해야 합니다 [SQLCloseCursor](../../native-client-odbc-api/sqlclosecursor.md) 하거나 [SQLFreeStmt](../../native-client-odbc-api/sqlfreestmt.md)(SQL_CLOSE) 하지만 드라이버가 닫기 요청을 서버로 보낼 필요가 없습니다. 따라서 서버로의 네트워크 왕복이 줄어듭니다.  
+-   서버에서 커서 끝을 감지하면 커서를 자동으로 닫습니다. 응용 프로그램에서 [SQLCloseCursor](../../native-client-odbc-api/sqlclosecursor.md) 또는 [SQLFreeStmt](../../native-client-odbc-api/sqlfreestmt.md)(SQL_CLOSE)를 호출 해야 하지만 드라이버에서 CLOSE 요청을 서버로 보낼 필요가 없습니다. 따라서 서버로의 네트워크 왕복이 줄어듭니다.  
   
- 애플리케이션에서는 각 드라이버에 맞는 문 특성 SQL_SOPT_SS_CURSOR_OPTIONS를 사용하여 빠른 정방향 전용 커서를 요청합니다. SQL_CO_FFO로 설정하면 자동 인출 없이 빠른 정방향 전용 커서를 활성화합니다. SQL_CO_FFO_AF로 설정하면 자동 인출 옵션도 활성화됩니다. 자동 인출 하는 방법에 대 한 자세한 내용은 참조 하세요. [ODBC 커서로 자동 인출 사용 하 여](using-autofetch-with-odbc-cursors.md)입니다.  
+ 애플리케이션에서는 각 드라이버에 맞는 문 특성 SQL_SOPT_SS_CURSOR_OPTIONS를 사용하여 빠른 정방향 전용 커서를 요청합니다. SQL_CO_FFO로 설정하면 자동 인출 없이 빠른 정방향 전용 커서를 활성화합니다. SQL_CO_FFO_AF로 설정하면 자동 인출 옵션도 활성화됩니다. 자동 인출에 대 한 자세한 내용은 [ODBC 커서로 자동 인출 사용](using-autofetch-with-odbc-cursors.md)을 참조 하세요.  
   
- 자동 인출 기능을 사용하는 빠른 정방향 전용 커서는 서버 왕복을 하나만 포함하는 작은 결과 집합을 검색하는 데 사용할 수 있습니다. 이 단계에서는 *n* 반환할 행 수입니다.  
+ 자동 인출 기능을 사용하는 빠른 정방향 전용 커서는 서버 왕복을 하나만 포함하는 작은 결과 집합을 검색하는 데 사용할 수 있습니다. 이러한 단계에서 *n* 은 반환 되는 행의 수입니다.  
   
 1.  SQL_SOPT_SS_CURSOR_OPTIONS를 SQL_CO_FFO_AF로 설정합니다.  
   
-2.  SQL_ATTR_ROW_ARRAY_SIZE 설정 *n* + 1입니다.  
+2.  SQL_ATTR_ROW_ARRAY_SIZE를 *n* + 1로 설정 합니다.  
   
-3.  결과 열에 배열을 바인딩할 *n* + 1 개 요소 (안전 경우 *n* 1 행이 실제로 인출 되 고 있습니다. +).  
+3.  N 개 이상의 행이 실제로 인출 *되 면 안전* 하 게 하기 위해 *n* + 1 개 요소의 배열에 결과 열을 바인딩합니다.  
   
-4.  사용 하 여 커서를 엽니다 **SQLExecDirect** 하거나 **SQLExecute**합니다.  
+4.  **Sqlexecdirect** 또는 **sqlexecute**를 사용 하 여 커서를 엽니다.  
   
-5.  반환 상태가 SQL_SUCCESS 이면 다음 호출 **SQLFreeStmt** 하거나 **SQLCloseCursor** 를 커서를 닫습니다. 행의 모든 데이터가 바인딩된 프로그램 변수에 포함됩니다.  
+5.  반환 상태가 SQL_SUCCESS 인 경우 **SQLFreeStmt** 또는 **SQLCloseCursor** 를 호출 하 여 커서를 닫습니다. 행의 모든 데이터가 바인딩된 프로그램 변수에 포함됩니다.  
   
- 이러한 단계는 **SQLExecDirect** 또는 **SQLExecute** 자동 인출 옵션을 설정한 상태로 커서 열기 요청을 보냅니다. 클라이언트의 해당 단일 요청에 대해 서버는 다음을 수행합니다.  
+ 이러한 단계에서 **Sqlexecdirect** 또는 **sqlexecute** 는 자동 인출 옵션을 사용 하 여 커서 열기 요청을 보냅니다. 클라이언트의 해당 단일 요청에 대해 서버는 다음을 수행합니다.  
   
 -   커서를 엽니다.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "63209790"
   
 -   행 집합 크기를 결과 집합의 행 수보다 1개 많은 수로 설정했으므로 서버가 커서의 끝을 발견하고 커서를 닫습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [커서 프로그래밍 정보 &#40;ODBC&#41;](cursor-programming-details-odbc.md)  
+## <a name="see-also"></a>참고 항목  
+ [ODBC&#41;&#40;커서 프로그래밍 정보](cursor-programming-details-odbc.md)  
   
   

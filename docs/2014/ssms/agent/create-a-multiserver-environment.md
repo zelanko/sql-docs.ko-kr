@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c5c59a8802597b893110a5f2c26c919c16c8e83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192967"
 ---
 # <a name="create-a-multiserver-environment"></a>다중 서버 환경 만들기
@@ -35,15 +35,15 @@ ms.locfileid: "63192967"
 ## <a name="considerations-for-multiserver-environments"></a>다중 서버 환경 고려 사항  
  지원되는 MSX/TSX 구성은 다음 표를 참조하십시오.  
   
-||**TSX = 7.0**|**TSX = 8.0 < SP3**|**TSX = 8.0 SP3 이상**|**TSX = 9.0**|**TSX= 10.0**|**TSX = 10.5**|**TSX = 11.0**|  
+||**TSX = 7.0**|**TSX = 8.0 < SP3**|**TSX = 8.0 SP3 이상**|**TSX = 9.0**|**TSX = 10.0**|**TSX = 10.5**|**TSX = 11.0**|  
 |-|--------------------|---------------------------|----------------------------------|--------------------|--------------------|---------------------|---------------------|  
-|**MSX = 7.0**|사용자 계정 컨트롤|예|아니오|아니요|아니요|아니요|아니요|  
-|**MSX = 8.0 < SP3**|사용자 계정 컨트롤|예|아니오|아니요|아니요|아니요|아니요|  
-|**MSX = 8.0 SP3 이상**|아니요|아니요|예|예|예|예|사용자 계정 컨트롤|  
-|**MSX = 9.0**|아니요|아니요|아니요|예|예|예|사용자 계정 컨트롤|  
-|**MSX = 10.0**|아니요|아니요|아니요|아니요|예|예|사용자 계정 컨트롤|  
-|**MSX = 10.5**|아니요|아니요|아니요|아니요|아니요|예|사용자 계정 컨트롤|  
-|**MSX = 11.0**|아니요|아니요|아니요|아니요|아니요|아니요|사용자 계정 컨트롤|  
+|**MSX = 7.0**|yes|yes|예|예|예|예|예|  
+|**MSX = 8.0 < SP3**|yes|yes|예|예|예|예|예|  
+|**MSX = 8.0 SP3 이상**|예|예|yes|yes|yes|yes|yes|  
+|**MSX = 9.0**|예|예|예|yes|yes|yes|yes|  
+|**MSX = 10.0**|예|예|예|예|yes|yes|yes|  
+|**MSX = 10.5**|예|예|예|예|예|yes|yes|  
+|**MSX = 11.0**|예|예|예|예|예|예|yes|  
   
  다중 서버 환경을 만들 때에는 다음 사항을 고려하십시오.  
   
@@ -60,14 +60,14 @@ ms.locfileid: "63192967"
   
 |Description|항목|  
 |-----------------|-----------|  
-|마스터 서버를 만드는 방법에 대해 설명합니다.|[마스터 서버 만들기](make-a-master-server.md)|  
+|마스터 서버를 만드는 방법에 대해 설명합니다.|[Make a Master Server](make-a-master-server.md)|  
 |대상 서버를 만드는 방법에 대해 설명합니다.|[대상 서버 만들기](make-a-target-server.md)|  
 |마스터 서버에 대상 서버를 등록하는 방법에 대해 설명합니다.|[마스터 서버에 대상 서버 등록](enlist-a-target-server-to-a-master-server.md)|  
 |마스터 서버에서 대상 서버를 제거하는 방법에 대해 설명합니다.|[마스터 서버에서 대상 서버 제거](defect-a-target-server-from-a-master-server.md)|  
-|마스터 서버에서 여러 대상 서버를 제거하는 방법에 대해 설명합니다.|[마스터 서버에서 여러 대상 서버 제거](defect-multiple-target-servers-from-a-master-server.md)|  
-|대상 서버의 상태를 확인하는 방법에 대해 설명합니다.|[sp_help_targetserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql)<br /><br /> [sp_help_targetservergroup &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)|  
+|마스터 서버에서 여러 대상 서버를 제거하는 방법에 대해 설명합니다.|[Defect Multiple Target Servers from a Master Server](defect-multiple-target-servers-from-a-master-server.md)|  
+|대상 서버의 상태를 확인하는 방법에 대해 설명합니다.|[Transact-sql&#41;sp_help_targetserver &#40;](/sql/relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql)<br /><br /> [Transact-sql&#41;sp_help_targetservergroup &#40;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [프록시를 사용하는 다중 서버 작업 문제 해결](troubleshoot-multiserver-jobs-that-use-proxies.md)  
   
   

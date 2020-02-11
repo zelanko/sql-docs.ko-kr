@@ -1,5 +1,5 @@
 ---
-title: 원시 오류 번호 | Microsoft 문서
+title: 원시 오류 번호 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e7cd24a3eb1ccdeea1b6e6cbb97e2d0f222193f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63223496"
 ---
 # <a name="native-error-numbers"></a>원시 오류 번호
-  데이터 원본에서 발생 하는 오류에 대 한 (반환한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에서 반환 된 원시 오류 번호를 반환 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 드라이버에 의해 발견 된 오류에 대 한는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 원시 오류 번호 0 반환 합니다. 원시 오류 번호 목록에 대 한 자세한 내용은 오류 열을 참조 합니다 **sysmessages** 시스템 테이블에는 **마스터** 데이터베이스에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]입니다.  
+  에서 반환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]하는 데이터 원본에서 발생 하는 오류의 경우 NATIVE Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버는에 의해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]반환 된 원시 오류 번호를 반환 합니다. 드라이버에서 검색 된 오류의 경우 native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버는 원시 오류 번호 0을 반환 합니다. 네이티브 오류 번호 목록에 대 한 자세한 내용은의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **master** 데이터베이스에서 **sysmessages** 시스템 테이블의 error 열을 참조 하십시오.  
   
- 상태 오류 코드에 대 한 자세한 내용은 [SQLSTATE &#40;ODBC 오류 코드&#41;](sqlstate-odbc-error-codes.md)합니다. Net-Library에서 반환된 오류의 경우 원시 오류 번호는 기본 네트워크 소프트웨어에서 가져온 것입니다.  
+ 상태 오류 코드에 대 한 자세한 내용은 [SQLSTATE &#40;ODBC 오류 코드&#41;](sqlstate-odbc-error-codes.md)를 참조 하세요. Net-Library에서 반환된 오류의 경우 원시 오류 번호는 기본 네트워크 소프트웨어에서 가져온 것입니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [오류 및 메시지 처리](handling-errors-and-messages.md)  
   
   

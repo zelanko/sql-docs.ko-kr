@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8f80afa10c1dbd067648db26c2bed0f423f371b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250545"
 ---
 # <a name="optimize-parameterized-filter-performance-with-precomputed-partitions"></a>사전 계산 파티션으로 매개 변수가 있는 필터 성능 최적화
@@ -26,11 +26,11 @@ ms.locfileid: "63250545"
   
  구독자가 게시자와 동기화되면 게시자는 구독자의 필터를 평가하여 그 구독자의 파티션이나 데이터 집합에 속하는 행을 확인해야 합니다. 게시자에서 필터링된 데이터 세트를 수신하는 각 구독자에 대한 변경 내용의 파티션 멤버 자격을 결정하는 이 과정을 *파티션 평가*라고 합니다. 사전 계산 파티션을 사용하지 않을 경우 특정 구독자에 대해 병합 에이전트를 마지막으로 실행한 이후에 게시자에서 필터링된 열의 각 변경 내용에 대해 파티션 평가를 수행해야 합니다. 게시자와 동기화하는 모든 구독자에 대해 이 프로세스를 반복합니다.  
   
- 그러나 게시자와 구독자가 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이상 버전에서 실행 중이고 사전 계산 파티션을 사용할 경우에는 변경이 발생할 때 게시자의 모든 변경 내용에 대한 파티션 멤버 자격이 사전 계산되고 지속됩니다. 결과적으로 구독자가 게시자와 동기화할 때 파티션 평가 과정을 거치지 않고도 파티션과 관련된 변경 내용을 즉시 다운로드할 수 있습니다. 이 기능을 통해 게시에 변경 내용, 구독자 또는 아티클이 많을 경우 성능이 크게 향상될 수 있습니다.  
+ 그러나 게시자와 구독자가 이상 버전에서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 실행 중이 고 사전 계산 파티션을 사용 하는 경우 게시자의 모든 변경 내용에 대 한 파티션 멤버 자격은 사전 계산 되 고 변경 내용이 적용 될 때 유지 됩니다. 결과적으로 구독자가 게시자와 동기화할 때 파티션 평가 과정을 거치지 않고도 파티션과 관련된 변경 내용을 즉시 다운로드할 수 있습니다. 이 기능을 통해 게시에 변경 내용, 구독자 또는 아티클이 많을 경우 성능이 크게 향상될 수 있습니다.  
   
  사전 계산 파티션을 사용하는 것 외에도 스냅샷을 미리 생성하거나 구독자가 처음 동기화될 때 스냅샷의 생성과 적용을 요청하도록 합니다. 이러한 옵션 중 하나 또는 둘 모두를 사용하여 매개 변수가 있는 필터를 사용하는 게시에 대한 스냅샷을 제공할 수 있습니다. 이러한 옵션을 하나도 지정하지 않으면 **bcp** 유틸리티를 사용하지 않고 일련의 SELECT 및 INSERT 문을 사용하여 구독을 초기화하게 되는데 이 경우 프로세스의 속도가 훨씬 느립니다. 자세한 내용은 [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md)을(를) 참조하세요.  
   
- **사전 계산 파티션을 사용하려면**  
+ **사전 계산 파티션을 사용 하려면**  
   
  위에서 설명한 지침을 따르는 새 게시와 기존 게시의 경우 사전 계산 파티션이 기본적으로 설정됩니다. 설정은 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 를 통해 또는 프로그래밍 방식으로 변경할 수 있습니다. 자세한 내용은 [Optimize Parameterized Row Filters](../publish/optimize-parameterized-row-filters.md)을 참조하세요.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "63250545"
 ## <a name="performance-of-precomputed-partitions"></a>사전 계산 파티션의 성능  
  구독자에서 게시자로 변경 내용이 업로드될 경우 사전 계산 파티션에서 성능 손실이 적게 발생하지만 병합 처리 시간의 대부분이 파티션을 평가하고 게시자에서 구독자로 변경 내용을 다운로드하는 데 소비되므로 성능을 향상시키는 것이 중요합니다. 동시에 동기화하는 구독자의 수와 한 파티션에서 다른 파티션으로 행을 이동하는 동기화당 업데이트 수에 따라 성능상의 이점이 달라집니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [매개 변수가 있는 행 필터](parameterized-filters-parameterized-row-filters.md)  
   
   

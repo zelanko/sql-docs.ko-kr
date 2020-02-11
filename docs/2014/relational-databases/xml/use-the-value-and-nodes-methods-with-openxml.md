@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 377f9ecfd0f3d94388929d78a048bc65e5020a3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63193240"
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>OPENXML에서 value() 및 nodes() 사용
-  여러 개 사용할 수 있습니다 **value ()** 메서드 `xml` 데이터 형식에 **선택** 추출 된 값의 행 집합을 생성 하는 절. **nodes()** 메서드는 추가 쿼리에 사용할 수 있는 선택된 각 노드에 대해 내부 참조를 생성합니다. **nodes()** 메서드와 **value()** 메서드를 조합하면 일부 행이 있고 해당 생성 시 사용된 경로 식이 복잡한 경우 행 집합을 더욱 효율적으로 생성할 수 있습니다.  
+  **SELECT** 절에서 데이터 형식에 `xml` 여러 **value ()** 메서드를 사용 하 여 추출 된 값의 행 집합을 생성할 수 있습니다. **nodes()** 메서드는 추가 쿼리에 사용할 수 있는 선택된 각 노드에 대해 내부 참조를 생성합니다. **nodes()** 메서드와 **value()** 메서드를 조합하면 일부 행이 있고 해당 생성 시 사용된 경로 식이 복잡한 경우 행 집합을 더욱 효율적으로 생성할 수 있습니다.  
   
- 합니다 **nodes ()** 메서드는 특수 한 인스턴스를 생성 `xml` 데이터 형식으로 하며 각 인스턴스에 서로 다른 선택된 노드에 대 한 컨텍스트 집합이 있습니다. 이러한 종류의 XML 인스턴스는 **query()** , **value()** , **nodes()** 및 **exist()** 메서드를 지원하며 **count(\*)** 집계에 사용될 수 있습니다. 다른 용도로 사용하면 오류가 발생합니다.  
+ **Nodes ()** 메서드는 특정 `xml` 데이터 형식의 인스턴스를 생성 하며 각 인스턴스는 서로 다른 선택 된 노드로 컨텍스트를 설정 합니다. 이러한 종류의 XML 인스턴스는 **query()** , **value()** , **nodes()** 및 **exist()** 메서드를 지원하며 **count(\*)** 집계에 사용될 수 있습니다. 다른 용도로 사용하면 오류가 발생합니다.  
   
-## <a name="example-using-nodes"></a>예: Nodes () 사용  
+## <a name="example-using-nodes"></a>예: nodes() 사용  
  저자의 성과 이름을 추출한다고 가정해 보십시오. 이때 이름은 "David"가 아닙니다. 또한 이 정보를 FirstName 및 LastName의 두 열이 포함된 행 집합으로 추출합니다. **nodes()** 및 **value()** 메서드를 사용하면 다음과 같이 이 작업을 수행할 수 있습니다.  
   
 ```  
@@ -40,7 +40,7 @@ WHERE  nref.exist('first-name[. != "David"]') = 1
   
  SQL Server 2000은 **OpenXml()** 을 사용하여 XML 인스턴스로부터 행 집합을 생성하는 기능을 제공합니다. 행 집합에 대한 관계형 스키마를 지정하고 XML 인스턴스 내의 값이 행 집합의 열로 매핑되는 방식을 지정할 수 있습니다.  
   
-## <a name="example-using-openxml-on-the-xml-data-type"></a>예: Xml 데이터 형식에서 openxml ()를 사용 하 여  
+## <a name="example-using-openxml-on-the-xml-data-type"></a>예: xml 데이터 형식에서 OpenXml() 사용  
  다음에 표시된 것과 같이 **OpenXml()** 을 사용하여 이전 예의 쿼리를 다시 작성할 수 있습니다. 이러한 작업은 각 XML 인스턴스를 XML 변수로 읽고 OpenXML을 여기에 적용하는 커서를 만들어서 수행합니다.  
   
 ```  
@@ -73,7 +73,7 @@ DEALLOCATE name_cursor
   
  **nodes()** 및 **value()** 함수 조합은 XML 인덱스를 효율적으로 사용합니다. 그 결과 이러한 조합은 **OpenXml**보다 많은 확장성을 제공합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [OPENXML&#40;SQL Server&#41;](openxml-sql-server.md)  
   
   

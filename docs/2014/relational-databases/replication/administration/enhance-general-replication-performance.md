@@ -22,10 +22,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ebe4126d0fb64cceea5bc0c9dbfd5be83f9fc165
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63187085"
 ---
 # <a name="enhance-general-replication-performance"></a>일반적인 복제 성능 향상
@@ -33,7 +33,7 @@ ms.locfileid: "63187085"
   
 ## <a name="server-and-network"></a>서버 및 네트워크  
   
--   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]에 할당될 최소 및 최대 메모리 양을 설정합니다.  
+-   에 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]할당 된 최소 및 최대 메모리 양을 설정 합니다.  
   
      기본적으로 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 은 사용할 수 있는 시스템 리소스에 따라 메모리 요구 사항을 동적으로 변경합니다. 복제 작업 중 사용 가능한 메모리의 부족을 방지하기 위해 **min server memory** 옵션을 사용해서 사용 가능한 최소 메모리를 설정합니다. 메모리를 확보하기 위해 운영 체제가 디스크로 페이징하지 않도록 하기 위해 **max server memory** 옵션을 사용하여 최대 메모리를 설정할 수도 있습니다. 자세한 내용은 [서버 메모리 서버 구성 옵션](../../../database-engine/configure-windows/server-memory-server-configuration-options.md)을 참조하세요.  
   
@@ -80,9 +80,10 @@ ms.locfileid: "63187085"
   
 -   LOB(Large Object) 데이터 형식의 사용을 제한합니다.  
   
-     LOB은 다른 열 데이터 형식보다 많은 스토리지 공간과 처리 작업을 필요로 합니다. 애플리케이션에 필요한 경우가 아니면 이러한 열을 아티클에 포함하지 마십시오. `text`, `ntext` 및 `image` 데이터 형식은 사용되지 않습니다. LOB를 포함시킬 경우 데이터 형식 `varchar(max)`, `nvarchar(max)`, `varbinary(max)`를 각각 사용하는 것이 좋습니다.  
+     LOB은 다른 열 데이터 형식보다 많은 스토리지 공간과 처리 작업을 필요로 합니다. 애플리케이션에 필요한 경우가 아니면 이러한 열을 아티클에 포함하지 마십시오. 
+  `text`, `ntext` 및 `image` 데이터 형식은 사용되지 않습니다. LOB를 포함시킬 경우 데이터 형식 `varchar(max)`, `nvarchar(max)`, `varbinary(max)`를 각각 사용하는 것이 좋습니다.  
   
-     트랜잭션 복제의 경우 **OLEDB 스트리밍에 대한 배포 프로필**이라고 하는 배포 에이전트 프로필을 사용해 보십시오. 자세한 내용은 [Replication Agent Profiles](../agents/replication-agent-profiles.md)을(를) 참조하세요.  
+     트랜잭션 복제의 경우 **OLEDB 스트리밍에 대한 배포 프로필**이라고 하는 배포 에이전트 프로필을 사용해 보십시오. 자세한 내용은 [Replication Agent Profiles](../agents/replication-agent-profiles.md)을 참조하세요.  
   
 ## <a name="publication-design"></a>게시 디자인  
   
@@ -116,7 +117,7 @@ ms.locfileid: "63187085"
   
      많은 양의 변경 내용을 구독자로 보내야 할 경우 이를 새 스냅샷과 함께 다시 초기화하면 복제를 사용하여 개별 변경 내용을 이동하는 것보다 빠르게 보낼 수 있습니다. 자세한 내용은 [구독 다시 초기화](../reinitialize-subscriptions.md)를 참조하세요.  
   
-     트랜잭션 복제의 경우 복제 모니터는 **배포되지 않은 명령** 탭에 구독자로 아직 배포되지 않은 배포 데이터베이스의 트랜잭션 수와 이러한 트랜잭션에 대한 예상 배포 시간 등을 표시합니다. 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
+     트랜잭션 복제의 경우 복제 모니터는 **배포되지 않은 명령** 탭에 구독자로 아직 배포되지 않은 배포 데이터베이스의 트랜잭션 수와 이러한 트랜잭션에 대한 예상 배포 시간 등을 표시합니다. 자세한 내용은 [복제 모니터를 사용 하 여 정보 보기 및 태스크 수행](../monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조 하세요.  
   
 ## <a name="snapshot-considerations"></a>스냅샷 고려 사항  
   
@@ -158,12 +159,12 @@ ms.locfileid: "63187085"
   
 -   배포 에이전트와 병합 에이전트의 **–UseInprocLoader** 매개 변수를 사용합니다(게시된 테이블에 XML 열이 포함된 경우 이 매개 변수를 사용할 수 없습니다). 이 매개 변수를 사용할 경우 스냅샷이 적용되면 에이전트가 BULK INSERT 명령을 사용할 수 있습니다.  
   
- 에이전트 프로필 및 명령줄에서 에이전트 매개 변수를 지정할 수 있습니다. 참조 항목:  
+ 에이전트 프로필 및 명령줄에서 에이전트 매개 변수를 지정할 수 있습니다. 자세한 내용은 다음을 참조하세요.  
   
 -   [복제 에이전트 프로필 작업](../agents/work-with-replication-agent-profiles.md)  
   
--   [복제 에이전트의 명령 프롬프트 매개 변수 보기 및 수정&#40;SQL Server Management Studio&#41;](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+-   [복제 에이전트의 명령 프롬프트 매개 변수를 보고 수정 &#40;SQL Server Management Studio&#41;](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
--   [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)에 할당될 최소 및 최대 메모리 양을 설정합니다.  
+-   [복제 에이전트 실행 파일 개념](../concepts/replication-agent-executables-concepts.md).  
   
   

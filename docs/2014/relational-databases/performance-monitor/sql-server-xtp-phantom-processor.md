@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 14c34bb0d7520b914d8dbfc1cfc8174341722ece
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150981"
 ---
 # <a name="xtp-phantom-processor"></a>XTP 가상 프로세서
@@ -31,7 +31,7 @@ ms.locfileid: "63150981"
 |**Phantom rows touched/sec**|가상 검사에 의해 처리된 초당 행 수입니다(평균).|  
 |**Phantom scans started/sec**|초당 시작된 가상 검사 수입니다(평균).|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [XTP &#40;메모리 내 OLTP&#41; 성능 카운터](../../integration-services/performance/performance-counters.md)  
   
   

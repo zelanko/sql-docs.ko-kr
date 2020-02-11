@@ -14,16 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d2fe137a21f2bd48113e65524b4315494f40a49
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63157995"
 ---
 # <a name="memory-optimization-advisor"></a>메모리 최적화 관리자
-  트랜잭션 성능 보고서 도구( [메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)참조)는 메모리 내 OLTP를 사용하도록 변환할 경우 효과를 얻을 수 있는 데이터베이스 테이블을 알려 줍니다. 메모리 내 OLTP를 사용하도록 포팅할 테이블을 식별한 후 메모리 최적화 관리자를 사용하여 디스크 기반 데이터베이스 테이블을 메모리 내 OLTP로 마이그레이션할 수 있습니다.  
+  트랜잭션 성능 보고서 도구( [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)참조)는 메모리 내 OLTP를 사용하도록 변환할 경우 효과를 얻을 수 있는 데이터베이스 테이블을 알려 줍니다. 메모리 내 OLTP를 사용하도록 포팅할 테이블을 식별한 후 메모리 최적화 관리자를 사용하여 디스크 기반 데이터베이스 테이블을 메모리 내 OLTP로 마이그레이션할 수 있습니다.  
   
- 먼저 디스크 기반 데이터베이스 테이블이 포함된 인스턴스에 연결합니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 인스턴스에 연결할 수 있습니다. 하지만 메모리 최적화 관리자를 사용하여 마이그레이션 작업을 수행하려는 경우에는 메모리 내 OLTP 기능을 사용할 수 있는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 인스턴스에 연결해야 합니다. 메모리 내 OLTP 요구 사항에 대한 자세한 내용은 [Requirements for Using Memory-Optimized Tables](memory-optimized-tables.md)을 참조하십시오.  
+ 먼저 디스크 기반 데이터베이스 테이블이 포함된 인스턴스에 연결합니다. 
+  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 인스턴스에 연결할 수 있습니다. 하지만 메모리 최적화 관리자를 사용하여 마이그레이션 작업을 수행하려는 경우에는 메모리 내 OLTP 기능을 사용할 수 있는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 인스턴스에 연결해야 합니다. 메모리 내 OLTP 요구 사항에 대한 자세한 내용은 [Requirements for Using Memory-Optimized Tables](memory-optimized-tables.md)을 참조하십시오.  
   
  마이그레이션 방법에 대한 자세한 내용은 [메모리 내 OLTP – 일반적인 작업 패턴 및 마이그레이션 고려 사항](https://msdn.microsoft.com/library/dn673538.aspx)을 참조하세요.  
   
@@ -46,7 +47,7 @@ ms.locfileid: "63157995"
   
  조치 가능한 경고는 왼쪽 열에 노란색 삼각형이 표시됩니다. 조치 가능한 경고가 있는 경우 마이그레이션을 종료하고 경고를 해결한 후 프로세스를 다시 시작해야 합니다. 경고를 해결하지 않을 경우 마이그레이션한 테이블에서 오류가 발생할 수 있습니다.  
   
- **보고서 생성** 을 클릭하여 HTML 경고 보고서를 생성합니다. 계속 진행하려면 **다음** 을 클릭합니다.  
+ **보고서 생성** 을 클릭하여 HTML 경고 보고서를 생성합니다. **다음** 을 클릭하여 진행합니다.  
   
 ### <a name="review-optimization-options"></a>최적화 옵션 검토  
  다음 화면에서는 메모리 내 OLTP로의 마이그레이션에 대한 옵션을 수정할 수 있습니다.  
@@ -84,7 +85,7 @@ ms.locfileid: "63157995"
 > [!WARNING]  
 >  비영구 테이블과 관련된 데이터 손실 위험에 대해 잘 알고 있는 경우에만 이 옵션을 선택하십시오.  
   
- 계속하려면 **다음** 을 클릭합니다.  
+ **다음**을 클릭하여 계속합니다.  
   
 ### <a name="review-primary-key-conversion"></a>기본 키 변환 검토  
  다음 화면은 **기본 키 변환 검토**화면입니다. 메모리 최적화 관리자는 테이블에 하나 이상의 기본 키가 있는지 확인하고 기본 키 메타데이터를 기준으로 열 목록을 채웁니다. 기본 키가 없는 경우 메모리 최적화 영구 테이블로 마이그레이션하려면 기본 키를 만들어야 합니다.  
@@ -121,7 +122,7 @@ ms.locfileid: "63157995"
   
  프로세스가 완료되면 **개체 탐색기** 를 새로 고쳐 새 메모리 최적화 테이블 및 이전의 디스크 기반 테이블이 표시되는지 확인합니다. 편의대로 테이블을 유지하거나 삭제할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP로 마이그레이션](migrating-to-in-memory-oltp.md)  
   
   

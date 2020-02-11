@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e56a15d10bc267e6613d24ff934daf4561831c1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63254455"
 ---
 # <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>데이터베이스 다이어그램 디자이너에서 탐색(Visual Database Tools)
@@ -30,14 +30,14 @@ ms.locfileid: "63254455"
 |가능한 경우 테이블과 관계 사이를 이동|Tab 키 또는 Shift+Tab|  
 |테이블의 열 사이를 이동|화살표 키|  
 |다이어그램에서 선택한 테이블 제거|Delete|  
-|데이터베이스에서 테이블 또는 관계 삭제|SHIFT + DELETE|  
+|데이터베이스에서 테이블 또는 관계 삭제|Shift+Delete|  
 |다이어그램 화면에서 테이블 이동|Ctrl+위쪽 화살표 또는 Ctrl+아래쪽 화살표|  
 |왼쪽/오른쪽 및 위쪽/아래쪽으로 스크롤|Page Up/Down(세로), Ctrl+Page Up/Down(가로)|  
 |테이블 및 주석 크기 조정|Shift+화살표 키|  
-|테이블에 표시되는 정보량 변경|Ctrl+T|  
-|확대/축소|Ctrl+더하기 키(+) 또는 빼기 키(-)|  
+|테이블에 표시되는 정보량 변경|CTRL+T|  
+|Zoom|Ctrl+더하기 키(+) 또는 빼기 키(-)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 다이어그램 디자인&#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

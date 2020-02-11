@@ -13,13 +13,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b021cb21df1b3c27e7f43c3ef92650eda4c2cf86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151207"
 ---
-# <a name="database-engine-tuning-advisor"></a>데이터베이스 엔진 튜닝 관리자
+# <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] DTA(데이터베이스 엔진 튜닝 관리자)는 데이터베이스를 분석하고 쿼리 성능을 최적화하는 데 필요한 사항을 권장합니다. 데이터베이스 엔진 튜닝 관리자를 사용하면 데이터베이스 구조나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 내부 구조를 전문적으로 파악하지 못해도 인덱스, 인덱싱된 뷰 또는 테이블 파티션의 최적 집합을 선택 및 작성할 수 있습니다. DTA를 사용하여 다음과 같은 태스크를 수행할 수 있습니다.  
   
 -   특정 문제 쿼리의 성능 문제 해결  
@@ -66,7 +66,7 @@ ms.locfileid: "63151207"
  **dta** 유틸리티  
  데이터베이스 엔진 튜닝 관리자의 명령 프롬프트 버전입니다. **dta** 유틸리티를 통해 애플리케이션과 스크립트에서 데이터베이스 엔진 튜닝 관리자의 기능을 사용할 수 있습니다.  
   
- 작업  
+ workload  
  튜닝할 데이터베이스의 대표적인 작업이 포함된 Transact-SQL 스크립트 파일, 추적 파일 또는 추적 테이블입니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]이상에서는 계획 캐시를 작업으로 지정할 수 있습니다.  
   
  XML 입력 파일  
@@ -95,7 +95,8 @@ ms.locfileid: "63151207"
   
     3.  데이터베이스 엔진 튜닝 관리자를 실행하는 사용자가 `db_owner` 데이터베이스 역할 또는 `sysadmin` 고정 서버 역할의 멤버가 아닙니다. 작업의 쿼리는 데이터베이스 엔진 튜닝 관리자를 실행하는 사용자의 보안 컨텍스트에서 분석됩니다. 사용자는 `db_owner` 데이터베이스 역할의 멤버여야 합니다.  
   
--   데이터베이스 엔진 튜닝 관리자는 튜닝 세션 데이터 및 기타 정보를 `msdb` 데이터베이스에 저장합니다. `msdb` 데이터베이스를 변경하면 튜닝 세션 데이터가 손실될 수 있습니다. 이 위험을 제거하려면 `msdb` 데이터베이스에 적합한 백업 전략을 구현합니다.  
+-   데이터베이스 엔진 튜닝 관리자는 튜닝 세션 데이터 및 기타 정보를 `msdb` 데이터베이스에 저장합니다. 
+  `msdb` 데이터베이스를 변경하면 튜닝 세션 데이터가 손실될 수 있습니다. 이 위험을 제거하려면 `msdb` 데이터베이스에 적합한 백업 전략을 구현합니다.  
   
 ## <a name="performance-considerations"></a>성능 고려 사항  
  데이터베이스 엔진 튜닝 관리자는 분석할 때 상당한 양의 프로세서와 메모리 리소스를 사용합니다. 프로덕션 서버의 속도가 느려지는 것을 피하려면 다음 전략 중 하나를 따르십시오.  
@@ -106,7 +107,7 @@ ms.locfileid: "63151207"
   
 -   데이터베이스 엔진 튜닝 관리자가 분석할 물리적 데이터베이스 설계 구조만 지정합니다. 데이터베이스 엔진 튜닝 관리자는 여러 옵션을 제공하지만 필요한 옵션만 지정합니다.  
   
-## <a name="dependency-on-xpmsver-extended-stored-procedure"></a>xp_msver 확장 저장 프로시저에 대한 종속성  
+## <a name="dependency-on-xp_msver-extended-stored-procedure"></a>xp_msver 확장 저장 프로시저에 대한 종속성  
  데이터베이스 엔진 튜닝 관리자는 전체 기능을 제공하기 위해 **xp_msver** 확장 저장 프로시저에 의존합니다. 이 확장 저장 프로시저는 기본적으로 튜닝됩니다. 데이터베이스 엔진 튜닝 관리자는 이 확장 저장 프로시저를 사용하여 튜닝 중인 데이터베이스가 있는 컴퓨터에서 프로세서 개수 및 사용 가능한 메모리를 인출합니다. **xp_msver** 을 사용할 수 없는 경우 데이터베이스 엔진 튜닝 관리자는 데이터베이스 엔진 튜닝 관리자에서 실행 중인 컴퓨터의 하드웨어 특징을 가정합니다. 데이터베이스 엔진 튜닝 관리자에서 실행 중인 컴퓨터의 하드웨어 특징을 알 수 없는 경우 프로세서는 하나이고 메모리는 1024MB라고 가정합니다.  
   
  권장되는 파티션 수는 두 가지 값, 즉, 프로세서 수 및 사용 가능한 메모리에 따라 달라지므로 이 종속성은 분할 권장 구성에 영향을 줍니다. 또한 이 종속성은 테스트 서버를 사용하여 프로덕션 서버를 튜닝할 때 튜닝 결과에 영향을 줍니다. 이 시나리오에서 데이터베이스 엔진 튜닝 관리자는 **xp_msver** 을 사용하여 프로덕션 서버에서 하드웨어 속성을 인출합니다. 테스트 서버에 대한 작업을 튜닝한 후에 데이터베이스 엔진 튜닝 관리자는 이러한 하드웨어 속성을 사용하여 권장 구성을 만듭니다. 자세한 내용은 [xp_msver&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/xp-msver-transact-sql)을 참조하세요.  

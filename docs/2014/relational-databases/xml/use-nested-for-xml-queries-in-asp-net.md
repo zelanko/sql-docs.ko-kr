@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c726ca33df6b0cd9f79e336c7b056062a578236d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63233666"
 ---
 # <a name="use-nested-for-xml-queries-in-aspnet"></a>ASP.NET에서 중첩 FOR XML 쿼리 사용
@@ -90,9 +90,9 @@ using(System.Data.SqlClient.SqlCommand cmd = c.CreateCommand())
   
 2.  .aspx 애플리케이션을 c:\inetpub\wwwroot 디렉터리에 GetSalesOrderInfo.aspx로 저장합니다.  
   
-3.  응용 프로그램을 실행 (http://server/GetSalesOrderInfo.aspx) 합니다.  
+3.  응용 프로그램을 실행http://server/GetSalesOrderInfo.aspx)합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [중첩 FOR XML 쿼리 사용](use-nested-for-xml-queries.md)  
   
   

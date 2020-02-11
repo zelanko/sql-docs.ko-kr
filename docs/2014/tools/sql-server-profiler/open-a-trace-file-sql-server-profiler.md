@@ -1,5 +1,5 @@
 ---
-title: 추적 파일 (SQL Server Profiler) | Microsoft Docs
+title: 추적 파일 (SQL Server Profiler)을 엽니다. Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9c49ff9295904d8149f6050c0cb25de4d68cfe24
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63240551"
 ---
 # <a name="open-a-trace-file-sql-server-profiler"></a>추적 파일 열기(SQL Server Profiler)
@@ -28,7 +28,7 @@ ms.locfileid: "63240551"
   
 2.  **파일 열기** 대화 상자에서 열려는 추적 데이터 파일을 선택합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [SQL Server 프로파일러](sql-server-profiler.md)  
+## <a name="see-also"></a>참고 항목  
+ [SQL Server Profiler](sql-server-profiler.md)  
   
   

@@ -13,26 +13,26 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 623507b4d9e52da376d4c83e4ee5c4d51b15dc39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63186264"
 ---
 # <a name="maintenance-plan-reporting-and-logging-page"></a>유지 관리 계획(보고 및 로깅 페이지)
-  **보고 및 로깅** 대화 상자를 사용하여 유지 관리 계획이 실행될 때 생성되는 보고서와 로그를 구성할 수 있습니다.  
+  **보고 및 로깅** 대화 상자를 사용 하 여 유지 관리 계획이 실행 될 때 생성 되는 보고서와 로그를 구성할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **텍스트 파일 보고서 생성**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 텍스트 파일 보고서를 기록하도록 할지 여부를 지정합니다.  
+ 텍스트 파일 보고서를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쓸지 여부를 지정 합니다.  
   
  **새 파일 만들기**  
- 유지 관리 계획이 실행될 때마다 새 보고서 파일을 만듭니다. 기본적으로 보고서 파일은 해당 유지 관리 계획이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 호스팅하는 컴퓨터의 기본 로그 폴더에 기록됩니다. 기본 로그 폴더는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중 설정합니다. 다른 폴더를 지정하려면 **폴더** 입력란에 전체 폴더 경로를 입력하거나 찾아보기 단추( **...** )를 클릭하고 원하는 폴더를 탐색합니다.  
+ 유지 관리 계획이 실행될 때마다 새 보고서 파일을 만듭니다. 기본적으로 보고서 파일은 해당 유지 관리 계획이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 호스팅하는 컴퓨터의 기본 로그 폴더에 기록됩니다. 기본 로그 폴더는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중 설정합니다. 다른 폴더를 지정하려면 **폴더** 입력란에 전체 폴더 경로를 입력하거나 찾아보기 단추(**...**)를 클릭하고 원하는 폴더를 탐색합니다.  
   
  **파일에 추가**  
  각각의 계획을 실행하여 생성된 보고서를 **파일 이름** 입력란에 지정된 파일에 추가합니다. 찾아보기 단추를 클릭하고 대화 상자에서 파일을 선택하여 파일을 지정할 수도 있습니다.  
   
- **전자 메일 받는 사람에게 보고서 보내기**  
+ **전자 메일 받는 사람에 게 보고서 보내기**  
  유지 관리 계획의 실행 결과를 전자 메일로 보냅니다. 이 옵션은 데이터베이스 메일을 활성화하고 적절히 구성한 경우에만 사용할 수 있습니다.  
   
  **에이전트 운영자**  
@@ -48,9 +48,10 @@ ms.locfileid: "63186264"
  원격 서버에 기록할 때 사용할 연결 정보를 지정합니다.  
   
  **새로 만들기**  
- **연결 속성** 대화 상자를 표시합니다. 원격 서버에 기록할 때 사용할 새 연결 정보를 구성하는 데 사용됩니다.  
+ 
+  **연결 속성** 대화 상자를 표시합니다. 원격 서버에 기록할 때 사용할 새 연결 정보를 구성하는 데 사용됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [유지 관리 계획](maintenance-plans.md)   
  [데이터베이스 메일](../database-mail/database-mail.md)  
   

@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cf05de13f0aada12da055f2e9c1e5a3a0db1d1df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63195022"
 ---
 # <a name="page-setup-dialog-box"></a>페이지 설정 대화 상자
   **페이지 설정** 대화 상자에서 옵션을 선택하여 페이지 디자인을 사용자 지정할 수 있습니다. 일부 옵션의 사용 가능성은 편집하기 위해 설치 및 설정된 언어에 따라 달라집니다.  
   
-## <a name="paper"></a>용지  
+## <a name="paper"></a>문서  
  **크기**  
  목록에서 크기를 선택합니다.  
   
@@ -37,13 +37,13 @@ ms.locfileid: "63195022"
  페이지 위쪽에서 용지의 가장자리를 길게 하여 문서를 인쇄합니다.  
   
 ## <a name="margins-inches"></a>여백(인치)  
- 왼쪽  
+ Left  
  페이지의 왼쪽 가장자리와 왼쪽 정렬된 들여쓰지 않은 줄의 왼쪽 가장자리 간 거리를 설정합니다.  
   
- 오른쪽  
+ Right  
  페이지의 오른쪽 가장자리와 오른쪽 정렬된 들여쓰지 않은 줄의 오른쪽 가장자리 간 거리를 설정합니다.  
   
- TOP  
+ 상위  
  페이지의 위쪽과 페이지 첫 줄의 위쪽 간 거리를 설정합니다.  
   
  아래쪽  

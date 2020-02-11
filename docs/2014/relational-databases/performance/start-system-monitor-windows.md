@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: aeb073b7e44060c0382d3d641aa196b93fbb402d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150581"
 ---
 # <a name="start-system-monitor-windows"></a>시스템 모니터 시작(Windows)
@@ -26,9 +26,10 @@ ms.locfileid: "63150581"
   
 ### <a name="to-start-system-monitor-in-windows"></a>Windows에서 시스템 모니터를 시작하려면  
   
-1.  **시작** 메뉴에서 **실행**을 가리킨 다음 실행 대화 상자에 **perfmon** 를 입력하고 **확인**을 클릭합니다.  
+1.  
+  **시작** 메뉴에서 **실행**을 가리킨 다음 실행 대화 상자에 **perfmon** 를 입력하고 **확인**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [시스템 모니터 실행](../performance-monitor/run-system-monitor.md)  
   
   

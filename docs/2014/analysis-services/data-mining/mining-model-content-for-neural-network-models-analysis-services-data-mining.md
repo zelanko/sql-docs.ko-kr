@@ -1,5 +1,5 @@
 ---
-title: 마이닝 신경망 모델에 대 한 모델 콘텐츠 (Analysis Services-데이터 마이닝) | Microsoft Docs
+title: 신경망 모델에 대 한 마이닝 모델 콘텐츠 (Analysis Services 데이터 마이닝) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7e19dfcdc284f048cffbb3a95e076b6e3a57294d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083591"
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>신경망 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
@@ -39,7 +39,7 @@ ms.locfileid: "66083591"
   
 -   연속된 각 노드에는 각기 다른 *서브네트워크* (NODE_TYPE = 17)가 있습니다. 각 하위 네트워크에는 해당 하위 네트워크에 대한 숨겨진 계층(NODE_TYPE = 19)과 출력 계층(NODE_TYPE = 20)이 항상 포함되어 있습니다.  
   
- ![신경망 모델 콘텐츠의 구조](../media/modelcontentstructure-nn.gif "한 신경망에 대 한 모델 콘텐츠 구조")  
+ ![신경망에 대한 모델 콘텐츠 구조](../media/modelcontentstructure-nn.gif "신경망에 대한 모델 콘텐츠 구조")  
   
  입력 계층의 정보는 간단합니다. 각 입력 계층의 최상위 노드(NODE_TYPE = 18)는 입력 노드(NODE_TYPE = 21) 컬렉션의 구성 도우미 역할을 합니다. 입력 노드의 내용은 다음 표에서 설명합니다.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "66083591"
 |출력 노드|출력 특성 이름|  
   
  NODE_NAME  
- 노드 이름입니다. 이 열에는 NODE_UNIQUE_NAME과 동일한 값이 포함됩니다.  
+ 노드의 이름입니다. 이 열에는 NODE_UNIQUE_NAME과 동일한 값이 포함됩니다.  
   
  NODE_UNIQUE_NAME  
  노드의 고유한 이름입니다.  
@@ -188,10 +188,10 @@ ms.locfileid: "66083591"
  MSOLAP_NODE_SHORT_CAPTION  
  신경망 모델의 경우 항상 비어 있습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  신경망 모델의 학습 목적은 입력에서 중간점 및 중간점에서 엔드포인트로의 각 전환과 연결된 가중치를 확인하는 것입니다. 따라서 모델의 입력 계층은 주로 모델을 작성하는 데 사용된 실제 값을 저장하기 위해 존재합니다. 숨겨진 계층은 계산된 가중치를 저장하며 입력 특성에 대한 포인터를 제공합니다. 출력 계층은 예측 가능한 값을 저장하며 숨겨진 계층의 중간점에 대한 포인터를 제공합니다.  
   
-##  <a name="bkmk_NodeIDs"></a> 노드 이름 및 ID 사용  
+##  <a name="bkmk_NodeIDs"></a>노드 이름 및 Id 사용  
  신경망 모델의 노드 이름은 노드 유형에 대한 추가 정보를 제공하므로 이를 통해 숨겨진 계층과 입력 계층의 관계 및 출력 계층과 숨겨진 계층의 관계를 쉽게 이해할 수 있습니다. 다음 표에서는 각 계층의 노드에 할당되는 ID의 규칙을 보여 줍니다.  
   
 |노드 유형|노드 ID의 규칙|  
@@ -210,17 +210,17 @@ ms.locfileid: "66083591"
   
  마찬가지로, 출력 노드(NODE_TYPE = 23)의 NODE_DISTRIBUTION 테이블을 보면 출력 특성과 관련된 숨겨진 계층을 확인할 수 있습니다. NODE_DISTRIBUTION 테이블의 각 행에는 숨겨진 계층 노드의 ID와 관련 계수가 들어 있습니다.  
   
-##  <a name="bkmk_NodeDistTable"></a> NODE_DISTRIBUTION 테이블의 정보 해석  
+##  <a name="bkmk_NodeDistTable"></a>NODE_DISTRIBUTION 테이블의 정보 해석  
  일부 노드에서는 NODE_DISTRIBUTION 테이블이 비어 있을 수 있습니다. 그러나 입력 노드, 숨겨진 계층 노드 및 출력 노드의 경우 NODE_DISTRIBUTION 테이블에는 모델에 대한 중요하고 주목할 만한 정보가 저장됩니다. 이 정보를 쉽게 해석할 수 있도록 NODE_DISTRIBUTION 테이블에는 각 행에 대해 VALUETYPE 열이 들어 있으므로 이 열을 통해 ATTRIBUTE_VALUE 열의 값이 불연속적(4)인지, 불연속화(5)되었는지, 연속적(3)인지를 알 수 있습니다.  
   
 ### <a name="input-nodes"></a>입력 노드  
  입력 계층에는 모델에 사용된 각 특성 값에 대한 노드가 포함됩니다.  
   
- **불연속 특성:** 입력된 노드에 ATTRIBUTE_NAME 및 ATTRIBUTE_VALUE 열의 특성 및 해당 값의 이름만 저장합니다. 예를 들어 [Work Shift]가 열인 경우 이 열의 값 중 모델에 사용된 각 값(예: AM 및 PM)에 대해 별도의 노드가 만들어집니다. 각 노드의 NODE_DISTRIBUTION 테이블에는 특성의 현재 값만 나열됩니다.  
+ **불연속 특성:** 입력 노드에는 특성 이름 및 해당 값 ATTRIBUTE_NAME 및 ATTRIBUTE_VALUE 열에만 저장 됩니다. 예를 들어 [Work Shift]가 열인 경우 이 열의 값 중 모델에 사용된 각 값(예: AM 및 PM)에 대해 별도의 노드가 만들어집니다. 각 노드의 NODE_DISTRIBUTION 테이블에는 특성의 현재 값만 나열됩니다.  
   
- **불연속화 된 숫자 특성:** 입력된 노드에 특성 및이 값은 범위 또는 특정 값의 이름을 저장 합니다. 모든 값은 식으로 표현됩니다. 예를 들어 [Time Per Issue]의 값은 '77.4 - 87.4' 또는 ' < 64.0' 등으로 표현됩니다. 각 노드의 NODE_DISTRIBUTION 테이블에는 특성의 현재 값만 나열됩니다.  
+ **불연속화 된 숫자 특성:** 입력 노드에는 특성 이름 및 값이 저장 됩니다. 값은 범위 또는 특정 값일 수 있습니다. 모든 값은 식으로 표현됩니다. 예를 들어 [Time Per Issue]의 값은 '77.4 - 87.4' 또는 ' < 64.0' 등으로 표현됩니다. 각 노드의 NODE_DISTRIBUTION 테이블에는 특성의 현재 값만 나열됩니다.  
   
- **연속 특성:** 입력된 노드에 특성의 평균 값을 저장합니다. 각 노드의 NODE_DISTRIBUTION 테이블에는 특성의 현재 값만 나열됩니다.  
+ **연속 특성:** 입력 노드에는 특성의 평균 값이 저장 됩니다. 각 노드의 NODE_DISTRIBUTION 테이블에는 특성의 현재 값만 나열됩니다.  
   
 ### <a name="hidden-layer-nodes"></a>숨겨진 계층 노드  
  숨겨진 계층에는 여러 개의 노드가 포함됩니다. 각 노드의 NODE_DISTRIBUTION 테이블에는 숨겨진 계층에서 입력 계층 노드로의 매핑이 들어 있습니다. ATTRIBUTE_NAME 열에는 입력 계층의 노드에 해당하는 노드 ID가 들어 있습니다. ATTRIBUTE_VALUE 열에는 입력 노드 및 숨겨진 계층 노드의 조합과 연결된 가중치가 들어 있습니다. 테이블의 마지막 행에는 숨겨진 계층에 있는 숨겨진 해당 노드의 가중치를 나타내는 계수가 들어 있습니다.  
@@ -230,14 +230,14 @@ ms.locfileid: "66083591"
   
  NODE_DISTRIBUTION 테이블에는 특성 유형에 따라 다음과 같은 추가 정보가 포함됩니다.  
   
- **불연속 특성:** NODE_DISTRIBUTION 테이블의 마지막 두 행에는 전체 및 특성의 현재 값에 따라 노드 계수를 포함합니다.  
+ **불연속 특성:** NODE_DISTRIBUTION 테이블의 마지막 두 행에는 전체 노드에 대 한 계수와 특성의 현재 값이 포함 됩니다.  
   
- **불연속화 된 숫자 특성:** 특성의 값이 범위의 값을 제외 하 고 불연속 특성과 동일 합니다.  
+ **불연속화 된 숫자 특성:** 특성 값이 값 범위 라는 점만 제외 하 고 불연속 특성과 동일 합니다.  
   
- **연속 특성:** NODE_DISTRIBUTION 테이블의 마지막 두 행 노드 전체에 대 한 계수 특성의 평균 및 계수의 분산을 포함 합니다.  
+ **연속 특성:** NODE_DISTRIBUTION 테이블의 마지막 두 행에는 특성의 평균, 전체 노드에 대 한 계수 및 계수의 분산이 들어 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)   
+## <a name="see-also"></a>참고 항목  
+ [Microsoft 신경망 알고리즘](microsoft-neural-network-algorithm.md)   
  [Microsoft 신경망 알고리즘 기술 참조](microsoft-neural-network-algorithm-technical-reference.md)   
  [신경망 모델 쿼리 예제](neural-network-model-query-examples.md)  
   

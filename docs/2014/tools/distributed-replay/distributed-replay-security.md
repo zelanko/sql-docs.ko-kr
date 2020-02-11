@@ -1,5 +1,5 @@
 ---
-title: Distributed Replay Security | Microsoft Docs
+title: Distributed Replay 보안 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,25 +11,27 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c040bde90a54b9327023d1e1889efdd2930d81b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150346"
 ---
 # <a name="distributed-replay-security"></a>Distributed Replay 보안
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 기능을 설치 및 사용하기 전에 이 항목에 나오는 중요 보안 정보를 검토해야 합니다. 이 항목에서는 Distributed Replay를 사용하기 전에 수행해야 하는 설치 후 보안 구성 단계에 대해 설명합니다. 또한 데이터 보호 및 중요한 제거 단계와 관련하여 고려해야 할 주요 사항도 설명합니다.  
+  Distributed Replay 기능을 설치 하 고 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 사용 하기 전에이 항목의 중요 보안 정보를 검토 해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 항목에서는 Distributed Replay를 사용하기 전에 수행해야 하는 설치 후 보안 구성 단계에 대해 설명합니다. 또한 데이터 보호 및 중요한 제거 단계와 관련하여 고려해야 할 주요 사항도 설명합니다.  
   
 ## <a name="user-and-service-accounts"></a>사용자 및 서비스 계정  
  다음 표에서는 Distributed Replay에 사용되는 계정에 대해 설명합니다. Distributed Replay를 설치한 후 컨트롤러 및 클라이언트 서비스 계정이 실행될 보안 주체를 할당해야 합니다. 따라서 Distributed Replay 기능을 설치하기 전에 해당 도메인 사용자 계정을 구성하는 것이 좋습니다.  
   
 |사용자 계정|요구 사항|  
 |------------------|------------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller 서비스 계정|도메인 사용자 계정 또는 로컬 사용자 계정일 수 있습니다. 로컬 사용자 계정을 사용하려면 관리 도구, 컨트롤러 및 클라이언트가 모두 동일한 컴퓨터에서 실행되고 있어야 합니다.<br /><br /> **\*\* 보안 정보 \*\*** Windows의 로컬 관리자 그룹 멤버가 아닌 계정을 사용하는 것이 좋습니다.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client 서비스 계정|도메인 사용자 계정 또는 로컬 사용자 계정일 수 있습니다. 로컬 사용자 계정을 사용하려면 컨트롤러, 클라이언트 및 대상 SQL Server가 모두 동일한 컴퓨터에서 실행되고 있어야 합니다.<br /><br /> **\*\* 보안 정보 \*\*** Windows의 로컬 관리자 그룹 멤버가 아닌 계정을 사용하는 것이 좋습니다.|  
+|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller 서비스 계정|도메인 사용자 계정 또는 로컬 사용자 계정일 수 있습니다. 로컬 사용자 계정을 사용하려면 관리 도구, 컨트롤러 및 클라이언트가 모두 동일한 컴퓨터에서 실행되고 있어야 합니다.<br /><br /> ** \* \* 보안 \* 정보** 계정이 Windows의 로컬 관리자 그룹의 멤버가 아닌 것이 좋습니다.|  
+|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client 서비스 계정|도메인 사용자 계정 또는 로컬 사용자 계정일 수 있습니다. 로컬 사용자 계정을 사용하려면 컨트롤러, 클라이언트 및 대상 SQL Server가 모두 동일한 컴퓨터에서 실행되고 있어야 합니다.<br /><br /> ** \* \* 보안 \* 정보** 계정이 Windows의 로컬 관리자 그룹의 멤버가 아닌 것이 좋습니다.|  
 |Distributed Replay Administration Tool을 실행하는 데 사용되는 대화형 사용자 계정|로컬 사용자 계정 또는 도메인 사용자 계정일 수 있습니다. 로컬 사용자 계정을 사용하려면 관리 도구와 컨트롤러가 동일한 컴퓨터에서 실행되고 있어야 합니다.|  
   
- **중요 한**: Distributed Replay controller를 구성할 때 Distributed Replay client 서비스를 실행 하는 데 사용할 사용자 계정을 하나 이상 지정할 수 있습니다. 다음은 지원되는 계정 목록입니다.  
+ **중요**: Distributed Replay controller를 구성할 때 Distributed Replay 클라이언트 서비스를 실행 하는 데 사용할 사용자 계정을 하나 이상 지정할 수 있습니다. 다음은 지원되는 계정 목록입니다.  
   
 -   도메인 사용자 계정  
   
@@ -47,53 +49,63 @@ ms.locfileid: "63150346"
   
 1.  운영 체제에 따라 다음 중 하나를 수행합니다.  
   
-    -   클릭 **시작**, 형식 `services.msc` 에 **검색** 상자의 및 다음 ENTER를 누릅니다.  
+    -   
+  **시작**을 클릭하고 **검색** 상자에 `services.msc`를 입력한 다음 Enter 키를 누릅니다.  
   
-    -   클릭 **시작**, 클릭 **실행**, 형식 `services.msc`, 한 다음 ENTER를 누릅니다.  
+    -   **시작**, **실행**을 차례로 클릭 하 `services.msc`고를 입력 한 다음 enter 키를 누릅니다.  
   
-2.  **서비스** 대화 상자에서 구성할 서비스를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+2.  
+  **서비스** 대화 상자에서 구성할 서비스를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-3.  **로그온** 탭에서 **계정 지정**을 클릭합니다.  
+3.  
+  **로그온** 탭에서 **계정 지정**을 클릭합니다.  
   
 4.  사용할 사용자 계정을 구성합니다.  
   
 ## <a name="file-and-folder-permissions"></a>파일 및 폴더 권한  
  서비스 계정을 지정한 후에는 해당 서비스 계정에 필요한 파일 및 폴더 사용 권한을 부여해야 합니다. 다음 표에 따라 파일 및 폴더 사용 권한을 구성합니다.  
   
-|계정|폴더 권한|  
+|계좌|폴더 권한|  
 |-------------|------------------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller 서비스 계정|`<Controller_Installation_Path>\DReplayController` (읽기, 쓰기, 삭제)<br /><br /> `DReplayServer.xml` 파일(읽기, 쓰기)|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client 서비스 계정|`<Client_Installation_Path>\DReplayClient` (읽기, 쓰기, 삭제)<br /><br /> `DReplayClient.xml` 파일(읽기, 쓰기)<br /><br /> 클라이언트 구성 파일의 `WorkingDirectory` 및 `ResultDirectory` 요소에 각각 지정된 작업 디렉터리 및 결과 디렉터리(읽기, 쓰기)|  
+|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller 서비스 계정|`<Controller_Installation_Path>\DReplayController`(읽기, 쓰기, 삭제)<br /><br /> 
+  `DReplayServer.xml` 파일(읽기, 쓰기)|  
+|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client 서비스 계정|`<Client_Installation_Path>\DReplayClient`(읽기, 쓰기, 삭제)<br /><br /> 
+  `DReplayClient.xml` 파일(읽기, 쓰기)<br /><br /> 클라이언트 구성 파일의 `WorkingDirectory` 및 `ResultDirectory` 요소에 각각 지정된 작업 디렉터리 및 결과 디렉터리(읽기, 쓰기)|  
   
 ## <a name="dcom-permissions"></a>DCOM 권한  
  DCOM은 컨트롤러와 관리 도구 간 및 컨트롤러와 모든 클라이언트 간 RPC(원격 프로시저 호출) 통신에 사용됩니다. Distributed Replay 기능을 설치한 후 컴퓨터 차원에서 그리고 애플리케이션별로 컨트롤러에 대한 DCOM 권한을 구성해야 합니다.  
   
  컨트롤러 DCOM 권한을 구성하려면 다음 단계에 따르십시오.  
   
-1.  **열기, 구성 요소 서비스 스냅인 dcomcnfg.exe**: DCOM 권한 구성에 사용 되는 도구입니다.  
+1.  **구성 요소 서비스 스냅인을 엽니다**.이 도구는 DCOM 권한을 구성 하는 데 사용 됩니다.  
   
     1.  컨트롤러 컴퓨터에서 **시작**을 클릭합니다.  
   
-    2.  형식 `dcomcnfg.exe` 에 **검색** 상자입니다.  
+    2.  
+  **검색** 상자에 `dcomcnfg.exe`를 입력합니다.  
   
     3.  Enter 키를 누릅니다.  
   
-2.  **컴퓨터 전체 DCOM 권한 구성**: 다음 표에 나열 된 각 계정에 대 한 해당 컴퓨터 차원 DCOM 권한을 부여 합니다. 컴퓨터 전체 권한을 설정 하는 방법에 대 한 자세한 내용은 참조 하세요. [검사 목록: DCOM 응용 프로그램 관리](https://go.microsoft.com/fwlink/?LinkId=185842)합니다.  
+2.  **컴퓨터 전체 dcom 권한 구성**: 다음 표에 나열 된 각 계정에 대 한 해당 컴퓨터 전체 dcom 권한을 부여 합니다. 컴퓨터 전체 권한을 설정하는 방법은 [검사 목록: DCOM 애플리케이션 관리](https://go.microsoft.com/fwlink/?LinkId=185842)를 참조하세요.  
   
-3.  **응용 프로그램별 DCOM 권한 구성**: 다음 표에 나열 된 각 계정에 대 한 해당 응용 프로그램별 DCOM 권한을 부여 합니다. 컨트롤러 서비스에 대한 DCOM 애플리케이션 이름은 **DReplayController**입니다. 응용 프로그램별 권한을 설정 하는 방법에 대 한 자세한 내용은 참조 하세요. [검사 목록: DCOM 응용 프로그램 관리](https://go.microsoft.com/fwlink/?LinkId=185842)합니다.  
+3.  **응용 프로그램별 dcom 권한 구성**: 다음 표에 나열 된 각 계정에 대해 해당 하는 응용 프로그램별 dcom 권한을 부여 합니다. 컨트롤러 서비스에 대한 DCOM 애플리케이션 이름은 **DReplayController**입니다. 애플리케이션별 권한을 설정하는 방법은 [검사 목록: DCOM 애플리케이션 관리](https://go.microsoft.com/fwlink/?LinkId=185842)를 참조하세요.  
   
  다음 표에서는 관리 도구를 실행하는 데 사용되는 대화형 사용자 계정과 클라이언트 서비스 계정에 필요한 DCOM 권한에 대해 설명합니다.  
   
-|기능|계정|컨트롤러에 필요한 DCOM 권한|  
+|기능|계좌|컨트롤러에 필요한 DCOM 권한|  
 |-------------|-------------|---------------------------------------------|  
 |Distributed Replay Administration Tool|대화형 사용자 계정|로컬 액세스<br /><br /> 원격 액세스<br /><br /> 로컬 시작<br /><br /> 원격 시작<br /><br /> 로컬 활성화<br /><br /> 원격 활성화|  
-|Distributed Replay Client|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client 서비스 계정|로컬 액세스<br /><br /> 원격 액세스<br /><br /> 로컬 시작<br /><br /> 원격 시작<br /><br /> 로컬 활성화<br /><br /> 원격 활성화|  
+|Distributed Replay Client|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client 서비스 계정|로컬 액세스<br /><br /> 원격 액세스<br /><br /> 로컬 시작<br /><br /> 원격 시작<br /><br /> 로컬 활성화<br /><br /> 원격 활성화|  
   
 > [!IMPORTANT]  
 >  악의적인 쿼리나 서비스 거부 공격으로부터 보호하려면 신뢰할 수 있는 사용자 계정만 클라이언트 서비스 계정으로 사용해야 합니다. 이 계정은 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결하여 작업을 재생할 수 있습니다.  
   
 ## <a name="sql-server-permissions"></a>SQL Server 사용 권한  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client 서비스 계정은 작업의 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결하는 데 사용됩니다. 이러한 연결에는 Windows 인증 모드만 지원됩니다.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client 서비스 계정은 작업의 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결하는 데 사용됩니다. 이러한 연결에는 Windows 인증 모드만 지원됩니다.  
   
  일련의 컴퓨터에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client 서비스를 설치한 후 추적 작업을 재생할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 sysadmin 서버 역할을 해당 서비스 계정에 사용되는 보안 주체에 부여해야 합니다. 이 단계는 Distributed Replay 설치 중 자동으로 수행되지 않습니다.  
   
@@ -128,7 +140,7 @@ ms.locfileid: "63150346"
   
 -   테스트에 사용된 추적 파일, 중간 파일, 디스패치 파일 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 파일을 모두 삭제합니다. 중간 파일 및 디스패치 파일은 각각 컨트롤러와 클라이언트의 작업 디렉터리에 저장됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
  [Distributed Replay 설치](install-distributed-replay-overview.md)  
   

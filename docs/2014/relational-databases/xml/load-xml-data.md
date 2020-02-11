@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb3365195e3a64353fb0cbd45e832cd0206f678e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63241309"
 ---
 # <a name="load-xml-data"></a>XML 데이터 로드
-  XML 데이터를 여러 가지 방법으로 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 으로 전송할 수 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+  XML 데이터를 여러 가지 방법으로 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 으로 전송할 수 있습니다. 다음은 그 예입니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 [n]text 또는 image 열에 데이터가 있으면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 사용하여 테이블을 가져올 수 있습니다. ALTER TABLE 문을 사용하여 열 유형을 XML로 바꿉니다.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "63241309"
 ## <a name="bulk-loading-xml-data"></a>XML 데이터 대량 로드  
  bcp와 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 대량 로드 기능을 사용하여 XML 데이터를 서버에 대량 로드할 수 있습니다. OPENROWSET을 사용하면 데이터를 파일에서 XML 열로 로드할 수 있습니다. 다음 예에서는 이러한 점을 보여 줍니다.  
   
-##### <a name="example-loading-xml-from-files"></a>예: 파일에서 XML 로드  
+##### <a name="example-loading-xml-from-files"></a>예: 파일로부터 XML 로드  
  이 예에서는 테이블 T에 행을 삽입하는 방법을 보여 줍니다. XML 열의 값은 C:\MyFile\xmlfile.xml 파일로부터 CLOB으로 로드되고 정수 열에는 값 10이 제공됩니다.  
   
 ```  
@@ -44,7 +44,7 @@ FROM    (SELECT *
 ```  
   
 ## <a name="text-encoding"></a>텍스트 인코딩  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 XML 데이터를 유니코드(UTF-16)로 저장합니다. 서버에서 검색된 XML 데이터는 UTF-16 인코딩으로 출력됩니다. 다른 인코딩이 필요한 경우 검색된 데이터에서 필요한 변환을 수행해야 합니다. 일부 경우 XML 데이터는 다른 인코딩으로 표시될 수 있습니다. 이 경우 데이터를 로드하는 동안 주의해야 합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 XML 데이터를 유니코드(UTF-16)로 저장합니다. 서버에서 검색된 XML 데이터는 UTF-16 인코딩으로 출력됩니다. 다른 인코딩이 필요한 경우 검색된 데이터에서 필요한 변환을 수행해야 합니다. 일부 경우 XML 데이터는 다른 인코딩으로 표시될 수 있습니다. 이 경우 데이터를 로드하는 동안 주의해야 합니다. 다음은 그 예입니다.  
   
 -   XML 텍스트가 유니코드(UCS-2, UTF-16)인 경우 문제 없이 이를 XML 열, 변수 또는 매개 변수에 할당할 수 있습니다.  
   
@@ -62,14 +62,14 @@ CAST (('<?xml version="1.0" encoding="iso8859-1"?>'+ vcdoc) AS VARBINARY (MAX))
 ```  
   
 ### <a name="string-encoding-incompatibilities"></a>문자열 인코딩 비호환성  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 쿼리 편집기 창에서 XML을 문자열 리터럴로 복사 및 붙여 넣는 경우 [N]VARCHAR 문자열 인코딩이 호환되지 않는 경우가 발생할 수 있습니다. 이것은 해당 XML 인스턴스의 인코딩에 따라 달라집니다. 대부분의 경우 XML 선언을 제거해야 할 수 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 쿼리 편집기 창에서 XML을 문자열 리터럴로 복사 및 붙여 넣는 경우 [N]VARCHAR 문자열 인코딩이 호환되지 않는 경우가 발생할 수 있습니다. 이것은 해당 XML 인스턴스의 인코딩에 따라 달라집니다. 대부분의 경우 XML 선언을 제거해야 할 수 있습니다. 다음은 그 예입니다.  
   
 ```  
 <?xml version="1.0" encoding="UTF-8"?>  
   <xsd:schema ...  
 ```  
   
- 그런 다음 해당 XML 인스턴스를 유니코드 인스턴스로 만들기 위해 N을 포함시켜야 합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ 그런 다음 해당 XML 인스턴스를 유니코드 인스턴스로 만들기 위해 N을 포함시켜야 합니다. 다음은 그 예입니다.  
   
 ```  
 -- Assign XML instance to a variable.  
@@ -81,7 +81,7 @@ INSERT INTO T VALUES (N'...')
 CREATE XML SCHEMA COLLECTION XMLCOLL1 AS N'<xsd:schema ... '  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 데이터&#40;SQL Server&#41;](xml-data-sql-server.md)  
   
   

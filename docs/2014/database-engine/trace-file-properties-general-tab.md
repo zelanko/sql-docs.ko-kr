@@ -15,18 +15,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf665b0ea1cae89257d6368af9b307845a2cb3c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089605"
 ---
 # <a name="trace-file-properties-general-tab"></a>추적 파일 속성(일반 탭)
+  
   **추적 파일 속성** 대화 상자의 **일반** 탭을 사용하여 추적 파일의 속성을 볼 수 있습니다.  
   
  이 창을 보려면 추적 파일을 엽니다. 그런 다음 **파일** 메뉴에서 **속성**을 클릭합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **파일 이름**  
  표시할 추적 파일의 경로 및 이름입니다.  
   
@@ -36,19 +37,19 @@ ms.locfileid: "66089605"
  **추적 공급자 유형**  
  추적을 제공한 서버 유형을 표시합니다.  
   
- **version**  
+ **버전**  
  추적을 제공한 서버 버전을 표시합니다.  
   
- **파일 크기(KB)**  
+ **파일 크기 (KB)**  
  추적 파일 크기(KB)입니다.  
   
  **만든 날짜**  
  추적 파일을 만든 날짜와 시간입니다.  
   
- **수정한 날짜**  
+ **수정자**  
  추적 파일을 수정한 날짜와 시간입니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [추적 파일 열기&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
  [SQL Server 프로파일러](../tools/sql-server-profiler/sql-server-profiler.md)   
  [SQL Server Profiler 템플릿 및 권한](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  

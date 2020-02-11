@@ -19,20 +19,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e700f5178a3520fe83f4d896662a8741aa166b9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150916"
 ---
 # <a name="isolate-performance-problems"></a>성능 문제 격리
-  도구를 하나씩 사용하는 것보다는 여러 개의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 나 Microsoft Windows 도구를 함께 사용하여 데이터베이스 성능 문제를 격리하는 것이 효과적입니다. 예를 들어 실행 계획이라고도 하는 그래픽 실행 계획 기능을 사용하여 쿼리 하나에 발생한 교착 상태를 즉시 인식할 수 있습니다 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 Windows의 모니터링 기능을 함께 사용하면 다른 성능 문제도 쉽게 인식할 수 있습니다.  
+  여러 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Microsoft Windows 도구를 함께 사용 하 여 한 번에 하나의 도구를 사용 하는 것 보다 데이터베이스 성능 문제를 격리 하는 것이 더 효과적입니다. 예를 들어 실행 계획이라고도 하는 그래픽 실행 계획 기능을 사용하여 쿼리 하나에 발생한 교착 상태를 즉시 인식할 수 있습니다 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 Windows의 모니터링 기능을 함께 사용하면 다른 성능 문제도 쉽게 인식할 수 있습니다.  
   
- [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하면 Transact-SQL 및 응용 프로그램 관련 문제를 모니터링하고 해결할 수 있습니다. 시스템 모니터를 사용하면 하드웨어와 그 밖의 시스템 관련 문제를 모니터링할 수 있습니다.  
+ [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Transact-sql 및 응용 프로그램 관련 문제를 모니터링 하 고 해결 하는 데 사용할 수 있습니다. 시스템 모니터를 사용하면 하드웨어와 그 밖의 시스템 관련 문제를 모니터링할 수 있습니다.  
   
  문제를 해결하려면 다음 영역을 모니터링하십시오.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저 또는 사용자 응용 프로그램이 제출한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 일괄 처리  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]사용자 응용 프로그램에서 제출한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 저장 프로시저 또는 일괄 처리  
   
 -   차단 잠금이나 교착 상태와 같은 사용자 동작  
   

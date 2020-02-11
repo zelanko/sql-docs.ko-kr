@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 927a89c36019ebc7232a110f5a10fcbf2cfa74af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63157980"
 ---
 # <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>메모리 액세스에 최적화된 테이블 및 고유하게 컴파일된 저장 프로시저 만들기
@@ -26,7 +26,7 @@ ms.locfileid: "63157980"
   
 -   메모리 최적화 테이블과 인덱스를 만듭니다. 자세한 내용은 [CREATE TABLE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)을 참조하세요.  
   
--   고유하게 컴파일된 저장 프로시저를 만들기 전에 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 데이터를 메모리 최적화 테이블에 로드하고 통계를 업데이트합니다. 자세한 내용은 [Statistics for Memory-Optimized Tables](memory-optimized-tables.md)을 참조하세요.  
+-   고유하게 컴파일된 저장 프로시저를 만들기 전에 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 데이터를 메모리 최적화 테이블에 로드하고 통계를 업데이트합니다. 자세한 내용은 [메모리 액세스에 최적화된 테이블에 대한 통계](memory-optimized-tables.md)를 참조하세요.  
   
 -   메모리 최적화 테이블의 데이터에 액세스하는 고유하게 컴파일된 저장 프로시저를 만듭니다. 자세한 내용은 [CREATE PROCEDURE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)를 참조하세요.  
   
@@ -232,7 +232,7 @@ ORDER BY so.so_id, sod.lineitem_id
   
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP 코드 샘플](in-memory-oltp-code-samples.md)   
  [계산 열 마이그레이션](migrating-computed-columns.md)   
  [메모리 액세스에 최적화된 테이블에서 IDENTITY 구현](implementing-identity-in-a-memory-optimized-table.md)  

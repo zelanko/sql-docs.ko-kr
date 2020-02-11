@@ -15,13 +15,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: db039658fa292976062426268234d3978c1b32ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482998"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>명시적 계층(Master Data Services)
+  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 명시적 계층은 지정한 방법으로 단일 엔터티의 멤버를 구성합니다. 구조는 비정형일 수 있으며 파생 계층과 달리 명시적 계층은 도메인 기반 특성 관계를 기반으로 하지 않습니다.  
   
 ## <a name="consolidated-members-group-other-members"></a>통합 멤버가 다른 멤버를 그룹화함  
@@ -30,7 +31,7 @@ ms.locfileid: "65482998"
  명시적 계층은 비정형일 수 있습니다. 즉, 계층이 동시에 다른 수준에서 끝날 수 있습니다. 각 통합 멤버는 통합 및 리프 멤버를 무제한 포함할 수도 있고 하나도 포함하지 않을 수도 있습니다. 또한 리프 멤버는 단일 통합 멤버에 속할 수도 있고 여러 수준의 통합 멤버에 속할 수도 있습니다.  
   
 > [!NOTE]  
->  명시적 계층을 만들려면 먼저 엔터티가 명시적 계층을 사용하도록 설정되어 있어야 합니다. 자세한 내용은 [명시적 계층 및 컬렉션에 엔터티 사용 &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)합니다.  
+>  명시적 계층을 만들려면 먼저 엔터티가 명시적 계층을 사용하도록 설정되어 있어야 합니다. 자세한 내용은 [&#41;MDS(Master Data Services) &#40;명시적 계층 및 컬렉션에 엔터티 사용 ](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)을 참조 하세요.  
   
 ## <a name="types-of-explicit-hierarchies"></a>명시적 계층 유형  
  명시적 계층에는 필수 계층과 필수가 아닌 계층의 두 가지 유형이 있습니다.  
@@ -69,7 +70,7 @@ ms.locfileid: "65482998"
 |비정형 가능|항상 일관된 수의 수준 포함|  
   
 ## <a name="explicit-hierarchy-example"></a>명시적 계층 예  
- 다음 예제에서는 Product 엔터티에 이러한 리프 멤버를 포함 합니다. BK-M101 {Mountain-100}, BK-M201 {Mountain-200}, BK-M301 {Mountain-300}, BK-R150 {Road-150}, BK-R450 {Road-450} 및 BK-R650 {Road-650}.  
+ 다음 예의 Product 엔터티에는 BK-M101 {Mountain-100}, BK-M201 {Mountain-200}, BK-M301 {Mountain-300}, BK-R150 {Road-150}, BK-R450 {Road-450} 및 BK-R650 {Road-650} 리프 멤버가 포함되어 있습니다.  
   
  이러한 리프 멤버를 특정 통합 지점에서 요약하려면 Product 엔터티 내에 통합 멤버를 만들면 됩니다. 계층 트리에서 리프 멤버를 요약할 수준에 통합 멤버를 삽입합니다. 통합 멤버를 삽입할 수 있는 위치에 대한 제한은 없지만 각 멤버(리프 또는 통합)를 한 번만 사용할 수 있습니다.  
   
@@ -81,16 +82,16 @@ ms.locfileid: "65482998"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|명시적 계층 및 컬렉션에 엔터티를 사용합니다.|[명시적 계층 및 컬렉션에 대 한 엔터티를 사용 하도록 설정 &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
-|새 명시적 계층을 만듭니다.|[명시적 계층 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
-|기존 명시적 계층의 이름을 변경합니다.|[명시적 계층 이름 변경&#40;Master Data Services&#41;](../../2014/master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|  
-|기존 명시적 계층을 삭제합니다.|[명시적 계층 삭제&#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-explicit-hierarchy-master-data-services.md)|  
+|명시적 계층 및 컬렉션에 엔터티를 사용합니다.|[명시적 계층 및 컬렉션에 대해 엔터티를 사용 하도록 설정 &#40;MDS(Master Data Services)&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
+|새 명시적 계층을 만듭니다.|[명시적 계층 &#40;MDS(Master Data Services)를 만듭니다&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
+|기존 명시적 계층의 이름을 변경합니다.|[명시적 계층 이름 &#40;MDS(Master Data Services)&#41;변경](../../2014/master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|  
+|기존 명시적 계층을 삭제합니다.|[&#40;MDS(Master Data Services) 명시적 계층을 삭제&#41;](../../2014/master-data-services/delete-an-explicit-hierarchy-master-data-services.md)|  
 |||  
   
 ## <a name="related-content"></a>관련 내용  
   
--   [파생 계층&#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)  
+-   [파생 계층 &#40;MDS(Master Data Services)&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)  
   
--   [컬렉션&#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
+-   [컬렉션 &#40;MDS(Master Data Services)&#41;](../../2014/master-data-services/collections-master-data-services.md)  
   
   

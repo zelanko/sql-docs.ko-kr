@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: be8b05a3dc706d23f0e1328f4e8bdd38ed368ede
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150905"
 ---
 # <a name="identify-bottlenecks"></a>병목 상태 식별
@@ -44,7 +44,7 @@ ms.locfileid: "63150905"
 ## <a name="analyzing-bottlenecks"></a>병목 상태 분석  
  다양한 이벤트에서 과도하게 시간이 소요되면 튜닝할 수 있는 병목 상태가 있음을 의미합니다.  
   
- 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ 다음은 그 예입니다.  
   
 -   다른 구성 요소로 인해 이 구성 요소에 로드가 도달하지 못해 로드를 완료하기까지의 시간이 길어지는 경우  
   
@@ -54,13 +54,13 @@ ms.locfileid: "63150905"
   
 |병목 상태가 발생할 수 있는 영역|서버에 미치는 영향|  
 |------------------------------|---------------------------|  
-|메모리 사용|Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 할당된 메모리나 사용할 수 있는 메모리가 부족하면 성능이 저하됩니다. 이 경우 데이터를 데이터 캐시에서 직접 읽지 못하고 디스크에서 읽어야 합니다. 또한 Microsoft Windows 운영 체제에서 페이지가 필요할 때마다 디스크와 데이터를 스왑하면서 페이징을 과도하게 수행할 수 있습니다.|  
-|CPU 사용량|CPU 사용량이 장기간 높은 상태로 유지되면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 튜닝이나 CPU 업그레이드가 필요할 수 있습니다.|  
+|메모리 사용량|Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 할당된 메모리나 사용할 수 있는 메모리가 부족하면 성능이 저하됩니다. 이 경우 데이터를 데이터 캐시에서 직접 읽지 못하고 디스크에서 읽어야 합니다. 또한 Microsoft Windows 운영 체제에서 페이지가 필요할 때마다 디스크와 데이터를 스왑하면서 페이징을 과도하게 수행할 수 있습니다.|  
+|CPU 사용률|CPU 사용량이 장기간 높은 상태로 유지되면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 튜닝이나 CPU 업그레이드가 필요할 수 있습니다.|  
 |디스크 I/O(입/출력)|[!INCLUDE[tsql](../../includes/tsql-md.md)] 인덱스를 사용하는 등의 방법으로 쿼리를 튜닝하여 불필요한 I/O를 줄일 수 있습니다.|  
 |사용자 연결|너무 많은 사용자가 동시에 서버에 액세스하는 경우 성능이 저하될 수 있습니다.|  
 |차단 잠금|잘못 설계된 애플리케이션은 잠금을 일으키고 동시성을 제한하여 결과적으로 응답 시간을 길어지고 트랜잭션 처리율이 낮아질 수 있습니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [CPU 사용량 모니터링](../performance-monitor/monitor-cpu-usage.md)   
  [디스크 사용량 모니터링](../performance-monitor/monitor-disk-usage.md)   
  [메모리 사용량 모니터링](../performance-monitor/monitor-memory-usage.md)   

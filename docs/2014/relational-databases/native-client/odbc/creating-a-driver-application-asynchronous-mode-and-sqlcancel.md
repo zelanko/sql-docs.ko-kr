@@ -1,5 +1,5 @@
 ---
-title: 비동기 모드와 SQLCancel | Microsoft 문서
+title: 비동기 모드 및 SQLCancel | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3a4ec4e5d7575fdf5d915c8209999e1285fa79aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144324"
 ---
 # <a name="asynchronous-mode-and-sqlcancel"></a>비동기 모드와 SQLCancel
@@ -45,9 +45,9 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ASYNC_ENABLE,
   
  명령 실행이 완료되었는지 테스트할 때 애플리케이션은 드라이버에 대해 동일한 매개 변수를 사용하여 동일한 함수를 호출합니다. 드라이버는 서버로부터 아직 응답을 받지 않은 경우 다시 SQL_STILL_EXECUTING을 반환합니다. 애플리케이션은 SQL_STILL_EXECUTING 이외의 코드가 반환될 때까지 명령을 주기적으로 테스트해야 합니다. 애플리케이션은 다른 반환 코드(SQL_ERROR 포함)가 수신되면 명령이 완료된 것으로 판단할 수 있습니다.  
   
- 명령이 오랫동안 보류되는 경우도 있습니다. 응용 프로그램이 응답을 기다리지 않고 명령을 취소 하는 경우 가능한 것 호출 하 여 **SQLCancel** 같은 문을 사용 하 여 해결 되지 않은 명령으로 처리 합니다. 이것은 유일한 **SQLCancel** 를 사용 해야 합니다. 일부 프로그래머가 사용 **SQLCancel** 설정 하 고 결과 집합의 나머지 부분을 취소 하려면 결과 통해 일부 처리 한 경우. [SQLMoreResults](../../native-client-odbc-api/sqlmoreresults.md) 또는 [SQLCloseCursor](../../native-client-odbc-api/sqlclosecursor.md) 하지는 뛰어난 결과 집합의 나머지를 취소 하는 것 **SQLCancel**.  
+ 명령이 오랫동안 보류되는 경우도 있습니다. 응용 프로그램이 응답을 기다리지 않고 명령을 취소 해야 하는 경우에는 처리 되지 않은 명령과 동일한 문 핸들을 사용 하 여 **Sqlcancel** 을 호출 하면 됩니다. 이 경우에만 **Sqlcancel** 을 사용 해야 합니다. 일부 프로그래머는 결과 집합을 통해 파트 방법을 처리 하 고 나머지 결과 집합을 취소 하려는 경우 **Sqlcancel** 을 사용 합니다. [SQLMoreResults](../../native-client-odbc-api/sqlmoreresults.md) 또는 [SQLCloseCursor](../../native-client-odbc-api/sqlclosecursor.md) 는 **sqlcancel**이 아닌 미해결 결과 집합의 나머지를 취소 하는 데 사용 해야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [SQL Server Native Client ODBC 드라이버 응용 프로그램 만들기](creating-a-driver-application.md)  
+## <a name="see-also"></a>참고 항목  
+ [SQL Server Native Client ODBC 드라이버 애플리케이션 만들기](creating-a-driver-application.md)  
   
   

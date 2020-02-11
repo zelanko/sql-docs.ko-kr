@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2401fab80c6210e3061e9cb949f1c92bab456525
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63187933"
 ---
 # <a name="metadata-visibility-configuration"></a>메타데이터 표시 유형 구성
@@ -43,7 +43,7 @@ GO
   
 |||  
 |-|-|  
-|카탈로그 뷰|[!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** 저장 프로시저|  
+|카탈로그 뷰|[!INCLUDE[ssDE](../../includes/ssde-md.md)]**sp_help** 저장 프로시저|  
 |메타데이터를 제공하는 기본 제공 함수|정보 스키마 뷰|  
 |호환성 뷰|확장 속성|  
   
@@ -51,19 +51,23 @@ GO
   
 |||  
 |-|-|  
-|로그 전달 시스템 테이블|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 시스템 테이블|  
+|로그 전달 시스템 테이블|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 시스템 테이블|  
 |데이터베이스 유지 관리 계획 시스템 테이블|백업 시스템 테이블|  
 |복제 시스템 테이블|복제 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 **sp_help** 저장 프로시저|  
   
  제한된 메타데이터 액세스란 다음을 의미합니다.  
   
--   **public** 메타데이터 액세스가 사용되는 애플리케이션이 차단됩니다.  
+-   
+  **public** 메타데이터 액세스가 사용되는 애플리케이션이 차단됩니다.  
   
 -   시스템 뷰에 대한 쿼리는 행의 하위 집합이나 일부 경우에는 빈 결과 집합을 반환합니다.  
   
 -   OBJECTPROPERTYEX와 같은 메타데이터 내보내기 기본 제공 함수가 NULL을 반환합니다.  
   
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** 저장 프로시저가 행의 하위 집합이나 NULL을 반환합니다.  
+-   
+  
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** 저장 프로시저가 행의 하위 집합이나 NULL을 반환합니다.  
   
  저장 프로시저 및 트리거와 같은 SQL 모듈은 호출자의 보안 컨텍스트에서 실행되므로 메타데이터 액세스가 제한됩니다. 예를 들어 다음 코드에서 저장 프로시저가 호출자에게 권한이 없는 `myTable` 테이블에 액세스하려고 시도하면 빈 결과 집합이 반환됩니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 행이 반환됩니다.  
   
@@ -106,7 +110,8 @@ GO
   
  다음과 같은 메타데이터는 공개되지 않습니다.  
   
--   **sys.servers** 의 **provider_string**열에 저장된 값. ALTER ANY LINKED SERVER 권한이 없는 사용자에게는 이 열에 NULL 값이 표시됩니다.  
+-   
+  **sys.servers** 의 **provider_string**열에 저장된 값. ALTER ANY LINKED SERVER 권한이 없는 사용자에게는 이 열에 NULL 값이 표시됩니다.  
   
 -   저장 프로시저 또는 트리거와 같은 사용자 정의 개체에 대한 원본 정의. 원본 코드는 다음 조건 중 하나에 부합하는 경우에만 표시됩니다.  
   
@@ -123,9 +128,11 @@ GO
     |**sys.default_constraints**|**sys.computed_columns**|  
     |**sys.numbered_procedures**||  
   
--   **syscomments** 호환성 뷰에 있는 **ctext** 열  
+-   
+  **syscomments** 호환성 뷰에 있는 **ctext** 열  
   
--   **sp_helptext** 프로시저의 출력  
+-   
+  **sp_helptext** 프로시저의 출력  
   
 -   정보 스키마 뷰에 있는 다음 열  
   
@@ -137,7 +144,8 @@ GO
   
 -   OBJECT_DEFINITION() 함수  
   
--   **sys.sql_logins**의 password_hash 열에 저장된 값.  CONTROL SERVER 권한이 없는 사용자에게는 이 열에 NULL 값이 표시됩니다.  
+-   
+  **sys.sql_logins**의 password_hash 열에 저장된 값.  CONTROL SERVER 권한이 없는 사용자에게는 이 열에 NULL 값이 표시됩니다.  
   
 > [!NOTE]  
 >  기본 제공 시스템 프로시저 및 함수에 대한 SQL 정의는 **sys.system_sql_modules** 카탈로그 뷰, **sp_helptext** 저장 프로시저 및 OBJECT_DEFINITION() 함수를 통해 공개적으로 표시됩니다.  
@@ -182,17 +190,17 @@ GO
 |**sys.partition_schemes**|**sys.data_spaces**|  
 |**sys.filegroups**|**sys.destination_data_spaces**|  
 |**sys.database_files**|**sys.allocation_units**|  
-|**sys.partitions**|**sys.messages**|  
-|**sys.schemas**|**sys.configurations**|  
+|**sys.partitions**|**sys. 메시지**|  
+|**sys. 스키마**|**sys.configurations**|  
 |**sys.sql_dependencies**|**sys.type_assembly_usages**|  
 |**sys.parameter_type_usages**|**sys.column_type_usages**|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [GRANT&#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)   
- [DENY&#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-transact-sql)   
+ [DENY &#40;Transact-sql&#41;](/sql/t-sql/statements/deny-transact-sql)   
  [REVOKE&#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)   
- [EXECUTE AS 절&#40;Transact-SQL&#41;](/sql/t-sql/statements/execute-as-clause-transact-sql)   
+ [Transact-sql&#41;&#40;EXECUTE AS 절](/sql/t-sql/statements/execute-as-clause-transact-sql)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql)   
- [호환성 뷰&#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql)  
+ [Transact-sql&#41;&#40;호환성 뷰](/sql/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql)  
   
   

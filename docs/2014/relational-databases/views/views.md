@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 21be7e81440fe6eb9573ecd100a459d70319ccea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63191270"
 ---
 # <a name="views"></a>뷰
@@ -51,7 +51,7 @@ ms.locfileid: "63191270"
 |뷰 정의 같은 뷰에 대한 정보를 반환하는 방법에 대해 설명합니다.|[뷰 정보 보기](../views/get-information-about-a-view.md)|  
 |뷰의 이름을 바꾸는 방법에 대해 설명합니다.|[뷰 이름 바꾸기](../views/rename-views.md)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 열에서 뷰 만들기](../xml/create-views-over-xml-columns.md)   
  [CREATE VIEW&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql)  
   

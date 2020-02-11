@@ -11,20 +11,22 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f2509ff345909450307c0a095fc1c7365dca4617
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106782"
 ---
 # <a name="add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs"></a>그룹 또는 테이블릭스 데이터 영역에 합계 추가(보고서 작성기 및 SSRS)
-  그룹 또는 전체 데이터 영역에 대한 테이블릭스 데이터 영역에 합계를 추가할 수 있습니다. 기본적으로 합계는 필터가 적용된 후 그룹 또는 데이터 영역의 Null이 아닌 숫자 데이터의 합계입니다. 그룹에 대한 합계를 추가하려면 그룹화 창의 그룹에 대한 바로 가기 메뉴에서 **합계 추가** 를 클릭합니다. 테이블릭스 본문 영역에서 개별 셀에 대한 합계를 추가하려면 셀에 대한 바로 가기 메뉴에서 **합계 추가** 를 클릭합니다. **합계 추가** 명령은 상황에 맞게 작동하며 숫자 필드에 대해서만 사용할 수 있습니다. 선택한 테이블릭스 셀에 따라 테이블릭스 본문 영역에서 셀을 선택하여 단일 셀에 대한 합계를 추가하거나 테이블릭스 행 그룹 영역 또는 열 그룹 영역에서 셀을 선택하여 전체 그룹에 대한 합계를 추가할 수 있습니다. 테이블릭스 영역에 대한 자세한 내용은 [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)을 참조하세요.  
+  그룹 또는 전체 데이터 영역에 대한 테이블릭스 데이터 영역에 합계를 추가할 수 있습니다. 기본적으로 합계는 필터가 적용된 후 그룹 또는 데이터 영역의 Null이 아닌 숫자 데이터의 합계입니다. 그룹에 대한 합계를 추가하려면 그룹화 창의 그룹에 대한 바로 가기 메뉴에서 **합계 추가** 를 클릭합니다. 테이블릭스 본문 영역에서 개별 셀에 대한 합계를 추가하려면 셀에 대한 바로 가기 메뉴에서 **합계 추가** 를 클릭합니다. 
+  **합계 추가** 명령은 상황에 맞게 작동하며 숫자 필드에 대해서만 사용할 수 있습니다. 선택한 테이블릭스 셀에 따라 테이블릭스 본문 영역에서 셀을 선택하여 단일 셀에 대한 합계를 추가하거나 테이블릭스 행 그룹 영역 또는 열 그룹 영역에서 셀을 선택하여 전체 그룹에 대한 합계를 추가할 수 있습니다. 테이블릭스 영역에 대한 자세한 내용은 [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)을 참조하세요.  
   
- 합계를 추가한 후에는 기본 함수 Sum을 기본 제공 보고서 함수 목록의 다른 집계 함수로 변경할 수 있습니다. 자세한 내용은 [집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)를 참조하세요.[!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+ 합계를 추가한 후에는 기본 함수 Sum을 기본 제공 보고서 함수 목록의 다른 집계 함수로 변경할 수 있습니다. 자세한 내용은 [집계 함수 참조 &#40;보고서 작성기 및 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)를 참조 하세요.[!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ### <a name="to-add-a-total-for-an-individual-value-in-the-tablix-body-area"></a>테이블릭스 본문 영역의 개별 값에 대한 합계를 추가하려면  
   
--   테이블릭스 데이터 영역 본문 영역에서 합계를 추가할 셀을 마우스 오른쪽 단추로 클릭합니다. 셀은 숫자 필드를 포함해야 합니다. **합계 추가**를 가리킨 다음 **행** 또는 **열**을 클릭합니다.  
+-   테이블릭스 데이터 영역 본문 영역에서 합계를 추가할 셀을 마우스 오른쪽 단추로 클릭합니다. 셀은 숫자 필드를 포함해야 합니다. 
+  **합계 추가**를 가리킨 다음 **행** 또는 **열**을 클릭합니다.  
   
      새 행 또는 열이 클릭한 셀의 필드에 대한 기본 합계와 함께 현재 그룹 외부 데이터 영역에 추가됩니다.  
   
@@ -42,8 +44,8 @@ ms.locfileid: "66106782"
   
      새 열이 현재 그룹 외부 데이터 영역에 추가되고 해당 열의 각 숫자 필드에 대한 기본 합계가 추가됩니다.  
   
-## <a name="see-also"></a>관련 항목  
- [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)   
+## <a name="see-also"></a>참고 항목  
+ [합계, 집계 및 기본 제공 컬렉션에 대 한 식 범위 보고서 작성기 및 SSRS &#40;&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)   
  [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [테이블&#40;보고서 작성기 및 SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [행렬&#40;보고서 작성기 및 SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   

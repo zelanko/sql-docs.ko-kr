@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 484919274e7b7df3c49ce03668950807c3627d30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63268368"
 ---
 # <a name="tutorial-database-engine-tuning-advisor"></a>자습서: 데이터베이스 엔진 튜닝 관리자
@@ -34,7 +34,7 @@ ms.locfileid: "63268368"
  [2단원: 데이터베이스 엔진 튜닝 관리자 사용](lesson-2-using-database-engine-tuning-advisor.md)  
  이 단원에서는 데이터베이스 엔진 튜닝 관리자 GUI로 기본 튜닝 태스크를 수행하는 방법을 배웁니다.  
   
- [3단원: Dta 명령 프롬프트 유틸리티를 사용 하 여](lesson-3-using-the-dta-command-prompt-utility.md)  
+ [3단원: dta 명령 프롬프트 유틸리티 사용](lesson-3-using-the-dta-command-prompt-utility.md)  
  이 단원에서는 **dta** 명령 프롬프트 유틸리티를 시작하는 방법과 일부 단순 튜닝 명령을 실행하는 방법을 알아봅니다.  
   
 ## <a name="requirements"></a>요구 사항  

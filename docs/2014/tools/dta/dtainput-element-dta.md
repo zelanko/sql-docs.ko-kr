@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e1861b6ef4ab3617b5f12e7711fa2b895edaa55a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188120"
 ---
 # <a name="dtainput-element-dta"></a>DTAInput 요소(DTA)
@@ -49,13 +49,13 @@ ms.locfileid: "63188120"
 |**부모 요소**|[DTAXML 요소&#40;DTA&#41;](dtaxml-element-dta.md)|  
 |**자식 요소**|[Server 요소&#40;DTA&#41;](server-element-dta.md)<br /><br /> [Workload 요소&#40;DTA&#41;](workload-element-dta.md)<br /><br /> [TuningOptions 요소&#40;DTA&#41;](tuningoptions-element-dta.md)<br /><br /> [Configuration 요소&#40;DTA&#41;](configuration-element-dta.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 요소는 데이터베이스 엔진 튜닝 관리자 입력 스키마 계층의 루트입니다. 데이터베이스 엔진 튜닝 관리자에 대한 입력은 튜닝할 데이터베이스가 있는 서버, 작업, 튜닝 옵션 또는 사용자 지정 구성을 지정하는 인수가 될 수 있습니다.  
   
 ## <a name="example"></a>예제  
  **DTAInput** 요소의 사용 예를 보려면 [단순 XML 입력 파일 샘플&#40;DTA&#41;](simple-xml-input-file-sample-dta.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 입력 파일 참조&#40;데이터베이스 엔진 튜닝 관리자&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

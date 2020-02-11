@@ -17,14 +17,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 48261d5ff0290dd5042b6604d9e492871bf6da38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089331"
 ---
 # <a name="options-query-results-sql-server-general-page"></a>옵션 (쿼리 결과-SQL Server-일반 페이지)
-  이 페이지를 사용하여 쿼리 결과 창의 기본 동작을 결정할 수 있습니다. 이 설정을 표시하려면 **도구** 메뉴에서 **옵션**을 클릭하고 **쿼리 결과** 폴더를 확장한 다음 **SQL Server**를 선택하고 **일반**을 클릭합니다. 이러한 옵션의 변경 사항은 새로운 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리에만 적용됩니다. 현재 쿼리에 대한 옵션을 변경하려면 **쿼리** 메뉴에서 **쿼리 옵션**을 클릭하거나 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 창에서 마우스 오른쪽 단추를 클릭한 다음 **쿼리 옵션**을 선택합니다.  
+  이 페이지를 사용하여 쿼리 결과 창의 기본 동작을 결정할 수 있습니다. 이 설정을 표시하려면 **도구** 메뉴에서 **옵션**을 클릭하고 **쿼리 결과** 폴더를 확장한 다음 **SQL Server**를 선택하고 **일반**을 클릭합니다. 이러한 옵션의 변경 내용은 새로운 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리에만 적용됩니다. 현재 쿼리에 대한 옵션을 변경하려면 **쿼리** 메뉴에서 **쿼리 옵션**을 클릭하거나 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 창에서 마우스 오른쪽 단추를 클릭한 다음 **쿼리 옵션**을 선택합니다.  
   
 ## <a name="uielement-list"></a>UIElement 목록  
  **결과의 기본 대상**  
@@ -33,7 +33,7 @@ ms.locfileid: "66089331"
  **쿼리 결과 저장 기본 위치**  
  결과 페이지를 저장할 기본 위치를 설정합니다. 변경하지 않으면 사용자의 내 문서 폴더가 기본 위치가 됩니다.  
   
- **쿼리 일괄 처리 완료 시 Windows 기본 경고음**  
+ **쿼리 일괄 처리 완료 시 Windows 기본 경고음 울림**  
  쿼리 일괄 처리가 완료되면 신호를 제공하도록 지정합니다.  
   
  **기본값으로 다시 설정**  

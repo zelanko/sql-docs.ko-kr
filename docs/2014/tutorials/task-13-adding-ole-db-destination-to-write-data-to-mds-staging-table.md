@@ -1,5 +1,5 @@
 ---
-title: '태스크 13: MDS 준비 테이블에 데이터를 쓸 OLE DB 대상 추가 | Microsoft Docs'
+title: '작업 13: MDS 준비 테이블에 데이터를 쓸 OLE DB 대상 추가 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,44 +11,44 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7c5fc9d863c23c1cae08c04fef7810aeda446762
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65476990"
 ---
 # <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>태스크 13: OLE DB 대상을 추가하여 MDS 준비 테이블에 데이터 쓰기
-  추가한 했으므로 **ImportType** 하 고 **BatchTag** 로 전송할 수 MDS 준비에 대 한 준비가 됩니다 모든 레코드 값입니다. 이 작업을 사용 하 여 OLE DB 대상 데이터를 쓸 **stg.supplier_Leaf** 준비 테이블입니다.  
+  이제 모든 레코드에 **Importtype** 및 **batchtag** 값을 추가 했으므로 준비를 위해 MDS로 전송할 준비가 되었습니다. 이 태스크에서는 OLE DB 대상을 사용 하 여 데이터를 **stg. supplier_Leaf** 준비 테이블에 기록 합니다.  
   
-1.  끌어서 **OLE DB Destination** 에서 **기타 대상** 섹션의 **SSIS 도구 상자** 에 **데이터 흐름** 탭 놓습니다  **Required by MDS 열 추가**합니다.  
+1.  **SSIS 도구 상자** 의 **다른 대상** 섹션에서 **데이터 흐름** 탭으로 **OLE DB Destination** 을 끌어서 **MDS에 필요한 열 추가**아래에 놓습니다.  
   
-2.  마우스 오른쪽 단추로 클릭 **OLE DB Destination** 에 **데이터 흐름** 탭을 클릭 **이름 바꾸기**합니다. 형식 **MDS 준비 테이블에 공급자 데이터 쓰기** 누릅니다 **ENTER**합니다.  
+2.  **데이터 흐름** 탭에서 **대상 OLE DB** 를 마우스 오른쪽 단추로 클릭 하 고 **이름 바꾸기**를 클릭 합니다. **MDS 준비 테이블에 공급자 데이터 쓰기를** 입력 하 고 **enter**키를 누릅니다.  
   
-3.  연결 된 **Add Columns Required by MDS** 하 **MDS 준비 테이블에 공급자 데이터 쓰기** 파란색 커넥터를 사용 하 여 합니다.  
+3.  파란색 커넥터를 사용 하 여 mds **준비 테이블에 공급자 데이터를 기록** 하는 **데 필요한 추가 열을 mds** 에 연결 합니다.  
   
-4.  두 번 클릭 **MDS 준비 테이블에 공급자 데이터 쓰기** 에 **데이터 흐름** 탭 합니다.  
+4.  **데이터 흐름** 탭에서 **MDS 준비 테이블에 공급자 데이터 쓰기를** 두 번 클릭 합니다.  
   
-5.  에 **OLE DB 대상 편집기** 대화 상자에서 확인 **(local). MDS** (또는 **localhost입니다. MDS**)가 선택 된 **OLE DB 연결 관리자** 필드입니다.  
+5.  **OLE DB 대상 편집기** 대화 상자에서 **(로컬)이 있는지 확인 합니다. MDS** (또는 **localhost) MDS**) **OLE DB 연결 관리자** 필드에 대해 선택 됩니다.  
   
-6.  선택 **의 Supplier_Leaf** 목록에서 테이블 **테이블 또는 뷰 이름**합니다.  
+6.  **Stg를 선택 합니다. ** **테이블 또는 뷰의 이름**목록에서 테이블을 Supplier_Leaf 합니다.  
   
      ![OLEDB 대상 편집기](../../2014/tutorials/media/et-addingoledbdestinationtowdtomdsst-01.jpg "OLEDB 대상 편집기")  
   
-7.  전환할 합니다 **매핑을** 를 클릭 하 여 페이지 **매핑** 왼쪽 메뉴에서.  
+7.  왼쪽의 메뉴에서 **매핑** 을 클릭 하 여 **매핑** 페이지로 전환 합니다.  
   
-8.  지도 **입력** 하 고 **대상** 다음 표에 나와 있는 것 처럼 열입니다.  
+8.  다음 표와 같이 **입력** 및 **대상** 열을 매핑합니다.  
   
-     ![OLEDB 대상 편집기-매핑](../../2014/tutorials/media/et-addingoledbdestinationtowdtomdsst-02.jpg "OLEDB 대상 편집기-매핑")  
+     ![OLEDB 대상 편집기 - 매핑](../../2014/tutorials/media/et-addingoledbdestinationtowdtomdsst-02.jpg "OLEDB 대상 편집기 - 매핑")  
   
-9. 사용 하 고 있는지 확인 **(_o)** 입력 열에 대 한 열 하지는 **_source** 하거나 **_output** 열. **(_O)** 열 DQS 정리의 출력 값을 포함 합니다.  
+9. **_Status** 또는 **_Source** 열이 아닌 입력 열에 **_Output** 열을 사용 하 고 있는지 확인 합니다. **_Output** 열에는 dqs 정리의 출력 값이 포함 됩니다.  
   
-10. 클릭 **확인** 닫으려면 합니다 **OLE DB 대상 편집기** 대화 상자.  
+10. **확인** 을 클릭 하 여 **대상 편집기 OLE DB** 대화 상자를 닫습니다.  
   
 11. 데이터 흐름은 다음 이미지와 같습니다.  
   
-     ![데이터 흐름을 완료](../../2014/tutorials/media/et-addingoledbdestinationtowdtomdsst-03.jpg "데이터 흐름 완료")  
+     ![완료된 데이터 흐름](../../2014/tutorials/media/et-addingoledbdestinationtowdtomdsst-03.jpg "완료된 데이터 흐름")  
   
 ## <a name="next-step"></a>다음 단계  
- [태스크 14: 추가 SQL 실행 태스크를 MDS에 대 한 저장된 프로시저를 실행 하려면 제어 흐름](../../2014/tutorials/task-14-add-execute-to-control-flow-run-mds-stored-procedure.md)  
+ [태스크 14: 제어 흐름에 SQL 실행 태스크를 추가하여 MDS에 대한 저장 프로시저 실행](../../2014/tutorials/task-14-add-execute-to-control-flow-run-mds-stored-procedure.md)  
   
   

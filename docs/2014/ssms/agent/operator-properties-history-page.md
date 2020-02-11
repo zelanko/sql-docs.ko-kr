@@ -13,26 +13,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 01ef137ef7297be5171bcfdcacd13c80e4da4624
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63301727"
 ---
 # <a name="operator-properties-history-page"></a>운영자 속성(기록 페이지)
   이 페이지를 사용하여 가장 최근에 운영자에게 보낸 알림의 날짜, 시간 및 유형을 확인할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **전자 메일로**  
  전자 메일을 통한 가장 최근의 알림을 표시하거나 이 운영자에게 전자 메일로 알린 적이 없으면 **(전자 메일 보낸 적 없음)** 을 표시합니다.  
   
  **호출기로**  
  호출기를 통한 가장 최근의 알림을 표시하거나 이 운영자에게 호출기로 알린 적이 없으면 **(호출한 적 없음)** 을 표시합니다.  
   
- **Net Send로**  
+ **Net send로**  
  Net Send를 통한 가장 최근의 알림을 표시하거나 이 운영자에게 Net Send로 알린 적이 없으면 **(Net Send로 알린 적 없음)** 을 표시합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [연산자](operators.md)  
   
   

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a3f750c2383253636db255cbe9f1ce0ee676a9d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63163967"
 ---
 # <a name="using-the-report-class-for-a-delivery-extension"></a>배달 확장 프로그램에 대해 Report 클래스 사용
@@ -29,7 +29,7 @@ ms.locfileid: "63163967"
   
  <xref:Microsoft.ReportingServices.Interfaces.Report> 클래스 사용 방법에 대한 예는 [SQL Server Reporting Services 제품 예제](https://go.microsoft.com/fwlink/?LinkId=177889)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [배달 확장 프로그램 구현](implementing-a-delivery-extension.md)   
  [Reporting Services 확장 라이브러리](../reporting-services-extension-library.md)   
  [배달 확장 프로그램에 대해 RenderedOutputFile 클래스 사용](using-the-renderedoutputfile-class-for-a-delivery-extension.md)  

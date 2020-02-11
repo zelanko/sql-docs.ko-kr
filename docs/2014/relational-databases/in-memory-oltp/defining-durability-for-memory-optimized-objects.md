@@ -11,16 +11,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ecf171c8c50e1f7ce1e7cdc9e86cd27ac6fe558b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63161996"
 ---
 # <a name="defining-durability-for-memory-optimized-objects"></a>메모리 액세스에 최적화된 개체에 대한 내구성 정의
-  메모리 내 OLTP는 완전한 ACID(원자성, 일관성, 격리 및 내구성) 속성을 보장합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 메모리 최적화 테이블의 컨텍스트에서 내구성은 다음과 같은 보증을 제공합니다.  
+  메모리 내 OLTP는 완전한 ACID(원자성, 일관성, 격리 및 내구성) 속성을 보장합니다. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 메모리 최적화 테이블의 컨텍스트에서 내구성은 다음과 같은 보증을 제공합니다.  
   
- 트랜잭션 유지 기능  
+ 트랜잭션 내구성  
  메모리 최적화 테이블에 DDL 또는 DML 변경을 적용한 완전한 내구성이 있는 트랜잭션을 커밋하면 메모리 최적화 내구성이 있는 테이블에 적용한 이 변경은 영구적이 됩니다.  
   
  지연된 내구성이 있는 트랜잭션을 메모리 최적화 테이블로 커밋하면 메모리 내 트랜잭션 로그가 디스크에 저장된 이후에만 트랜잭션이 내구성을 갖습니다.  
@@ -34,7 +35,8 @@ ms.locfileid: "63161996"
  메모리 최적화 테이블에는 두 가지 내구성 옵션이 있습니다.  
   
  SCHEMA_ONLY(내구성이 없는 테이블)  
- 이 옵션은 인덱스를 포함한 테이블 스키마의 내구성을 보장합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 다시 시작하면 내구성이 없는 테이블이 다시 만들어지지만 데이터가 없이 시작됩니다. (이것은 다시 시작하면 테이블과 데이터가 손실되는 tempdb의 테이블과는 다릅니다.) 내구성이 없는 테이블을 만드는 일반적인 시나리오는 ETL 프로세스를 위한 준비 테이블 같은 임시 테이블을 저장하는 것입니다. SCHEMA_ONLY 내구성은 트랜잭션 로깅과 검사점을 방지하여 I/O 작업을 크게 줄일 수 있습니다.  
+ 이 옵션은 인덱스를 포함한 테이블 스키마의 내구성을 보장합니다. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 다시 시작하면 내구성이 없는 테이블이 다시 만들어지지만 데이터가 없이 시작됩니다. (이것은 다시 시작하면 테이블과 데이터가 손실되는 tempdb의 테이블과는 다릅니다.) 내구성이 없는 테이블을 만드는 일반적인 시나리오는 ETL 프로세스를 위한 준비 테이블 같은 임시 테이블을 저장하는 것입니다. SCHEMA_ONLY 내구성은 트랜잭션 로깅과 검사점을 방지하여 I/O 작업을 크게 줄일 수 있습니다.  
   
  SCHEMA_AND_DATA(내구성이 있는 테이블)  
  이 옵션은 스키마와 데이터 모두에 대한 내구성을 제공합니다. 데이터 내구성 수준은 트랜잭션을 완전 내구성으로 커밋할지 아니면 지연된 내구성으로 커밋할지에 따라 달라집니다. 완전한 내구성이 있는 트랜잭션은 디스크 기반 테이블과 유사하게 스키마 및 데이터에 대한 동일한 내구성 보증을 제공합니다. 지연된 내구성은 성능을 향상시키지만 서버 충돌이나 장애 조치(Failover)의 경우 데이터 손실을 발생시킬 수도 있습니다. 지연된 내구성에 자세한 내용은 [트랜잭션 내구성 제어](../logs/control-transaction-durability.md)를 참조하세요.  
@@ -57,7 +59,7 @@ ms.locfileid: "63161996"
   
 -   다시 실행해야 할 로그의 활성 부분에 있는 로그 레코드의 양입니다.  
   
-## <a name="see-also"></a>관련 항목  
- [메모리 액세스에 최적화된 개체의 저장소 만들기 및 관리](creating-and-managing-storage-for-memory-optimized-objects.md)  
+## <a name="see-also"></a>참고 항목  
+ [메모리 최적화 개체에 대한 스토리지 만들기 및 관리](creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

@@ -11,16 +11,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ec4d66af36ff74b5b0a9160529990c9fc52fc961
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200271"
 ---
 # <a name="use-table-valued-parameters-odbc"></a>테이블 반환 매개 변수 사용(ODBC)
   이 예제에서는 테이블 반환 매개 변수를 사용하여 여러 열과 함께 서버에 대한 한 번의 호출로 여러 행을 삽입하는 방법을 보여 줍니다.  
   
- 테이블 반환 매개 변수에 대 한 자세한 내용은 참조 하세요. [테이블 반환 매개 변수 &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)합니다. 테이블 반환 매개 변수를 사용하는 예제에 대한 자세한 내용은 [ODBC Table-Valued Parameter Programming Examples](../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md)를 참조하십시오.  
+ 테이블 반환 매개 변수에 대 한 자세한 내용은 [ODBC&#41;&#40;테이블 반환 매개 변수 ](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)를 참조 하세요. 테이블 반환 매개 변수를 사용하는 예제에 대한 자세한 내용은 [ODBC Table-Valued Parameter Programming Examples](../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md)를 참조하십시오.  
   
 ## <a name="example"></a>예제  
  TVPDemo라는 ODBC 데이터 원본이 필요합니다. 컴퓨터의 모든 테스트 데이터베이스가 TVPDemo의 기본 데이터베이스가 될 수 있습니다. 이 데이터 원본은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에 대한 ODBC 드라이버를 기반으로 해야 합니다.  

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_os_performance_counters (TRANSACT-SQL) | Microsoft Docs
+title: sys. dm_pdw_os_performance_counters (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,27 +13,27 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 8f275d48131ef7011307f39f38d37a8bfff4ea18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67899321"
 ---
-# <a name="sysdmpdwosperformancecounters-transact-sql"></a>sys.dm_pdw_os_performance_counters (Transact SQL)
+# <a name="sysdm_pdw_os_performance_counters-transact-sql"></a>sys. dm_pdw_os_performance_counters (Transact-sql)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  노드에 대 한 Windows 성능 카운터에 대 한 정보가 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]합니다.  
+  의 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]노드에 대 한 Windows 성능 카운터에 대 한 정보를 포함 합니다.  
   
-|열 이름|데이터 형식|설명|범위|  
+|열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
-|pdw_node_id|**int**|카운터를 포함 하는 노드의 ID입니다.<br /><br /> pdw_node_id 및 counter_name이이 보기에 대 한 키를 구성합니다.|에 대 한 node_id를 참조 하세요 [sys.dm_pdw_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)합니다.|  
+|pdw_node_id|**int**|카운터를 포함 하는 노드의 ID입니다.<br /><br /> pdw_node_id 및 counter_name이 보기의 키를 구성 합니다.|[Dm_pdw_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)에서 node_id를 참조 하세요.|  
 |counter_name|**nvarchar(255)**|Windows 성능 카운터의 이름입니다.||  
 |counter_category|**nvarchar(255)**|Windows 성능 카운터 범주의 이름입니다.||  
 |instance_name|**nvarchar(255)**|카운터의 특정 항목 이름입니다.||  
-|counter_value|**Decimal(38,10)**|카운터의 현재 값입니다.||  
-|last_update_time|**Datetime2(3)**|타임 스탬프 값을 업데이트 된 마지막 시간입니다.||  
+|counter_value|**Decimal (38, 10)**|카운터의 현재 값입니다.||  
+|last_update_time|**Datetime2 (3)**|값이 마지막으로 업데이트 된 시간의 타임 스탬프입니다.||  
   
-## <a name="see-also"></a>관련 항목  
- [SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

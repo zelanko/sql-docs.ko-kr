@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 59c179c81c1b6b60787603f5953b85e583668c80
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63161728"
 ---
 # <a name="quiesce-a-replication-topology-replication-transact-sql-programming"></a>복제 토폴로지 정지(복제 Transact-SQL 프로그래밍)
@@ -79,7 +79,7 @@ ms.locfileid: "63161728"
     > [!NOTE]  
     >  동기화 중 충돌이 발생하면 병합 에이전트를 두 번 실행한 후 충돌 해결에 필요한 변경 내용이 모든 노드에 전파되지 않을 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [피어 투 피어 토폴로지 관리&#40;복제 Transact-SQL 프로그래밍&#41;](administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [트랜잭션 복제에 대한 대기 시간 측정 및 연결 유효성 검사](../monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   

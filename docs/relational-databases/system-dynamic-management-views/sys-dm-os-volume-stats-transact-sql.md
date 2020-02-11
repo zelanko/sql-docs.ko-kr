@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_volume_stats (TRANSACT-SQL) | Microsoft Docs
+title: sys. dm_os_volume_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/06/2019
 ms.prod: sql
@@ -19,18 +19,19 @@ ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e7ec8171b569adbf887c1e153fb2b41619778f48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67899716"
 ---
-# <a name="sysdmosvolumestats-transact-sql"></a>sys.dm_os_volume_stats(Transact-SQL)
+# <a name="sysdm_os_volume_stats-transact-sql"></a>sys.dm_os_volume_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-2008R2sp1-xxxx-xxxx-xxx-md.md)]
 
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지정된 데이터베이스와 파일이 저장된 운영 체제 볼륨(디렉터리)에 대한 정보를 반환합니다. 이 동적 관리 함수를 사용하여 물리적 디스크 드라이브의 특성을 확인하거나 디렉터리에 대한 사용 가능한 공간 정보를 반환할 수 있습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,16 +41,16 @@ sys.dm_os_volume_stats (database_id, file_id)
   
 ##  <a name="Arguments"></a> 인수  
  *database_id*  
- 데이터베이스의 ID입니다. *database_id*는 **int**이며 기본값은 없습니다. NULL일 수 없습니다.  
+ 데이터베이스의 ID입니다. *database_id* 는 **int**이며 기본값은 없습니다. NULL이 될 수 없습니다.  
   
  *file_id*  
- 파일의 ID입니다. *file_id* 됩니다 **int**, 기본값은 없습니다. NULL일 수 없습니다.  
+ 파일의 ID입니다. *file_id* 는 **int**이며 기본값은 없습니다. NULL이 될 수 없습니다.  
   
 ## <a name="table-returned"></a>반환된 테이블  
   
 ||||  
 |-|-|-|  
-|**열**|**Data type**|**설명**|  
+|**열**|**데이터 형식**|**설명**|  
 |**database_id**|**int**|데이터베이스의 ID입니다. null일 수 없습니다.|  
 |**file_id**|**int**|파일의 ID입니다. null일 수 없습니다.|  
 |**volume_mount_point**|**nvarchar(512)**|해당 볼륨이 루트 경로로 지정된 탑재 지점입니다. 빈 문자열을 반환할 수 있습니다.|  
@@ -67,7 +68,7 @@ sys.dm_os_volume_stats (database_id, file_id)
 ## <a name="security"></a>보안  
   
 ### <a name="permissions"></a>사용 권한  
- 필요한 `VIEW SERVER STATE` 권한.  
+ `VIEW SERVER STATE` 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
   
@@ -80,7 +81,7 @@ FROM sys.master_files AS f
 CROSS APPLY sys.dm_os_volume_stats(f.database_id, f.file_id);  
 ```  
   
-### <a name="b-return-total-space-and-available-space-for-the-current-database"></a>2\. 현재 데이터베이스에 대해 전체 공간과 사용 가능한 공간 반환  
+### <a name="b-return-total-space-and-available-space-for-the-current-database"></a>B. 현재 데이터베이스에 대해 전체 공간과 사용 가능한 공간 반환  
  다음 예에서는 현재 데이터베이스의 데이터베이스 파일에 대해 전체 공간과 사용 가능한 공간(바이트)을 반환합니다.  
   
 ```sql  
@@ -89,8 +90,8 @@ FROM sys.database_files AS f
 CROSS APPLY sys.dm_os_volume_stats(DB_ID(f.name), f.file_id);  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [master_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [sys.database_files&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  
   
   

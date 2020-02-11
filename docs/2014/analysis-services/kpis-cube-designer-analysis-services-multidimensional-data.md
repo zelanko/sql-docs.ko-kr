@@ -1,5 +1,5 @@
 ---
-title: Kpi (Cube Designer) (Analysis Services-다차원 데이터) | Microsoft Docs
+title: Kpi (큐브 디자이너) (Analysis Services 다차원 데이터) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 88e48fb2bfae9711b6d8f303287f2e26dff18d9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079433"
 ---
 # <a name="kpis-cube-designer-analysis-services---multidimensional-data"></a>KPI(큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **KPI** 탭을 사용하여 선택한 큐브에 대한 KPI(핵심 성과 지표)를 보고 편집할 수 있습니다.  
   
 ## <a name="form-view-and-browser-view"></a>폼 보기 및 브라우저 보기  
- **KPI** 탭에서는 KPI를 보거나 편집할 때 다음 두 가지 보기를 사용할 수 있습니다.  
+ 
+  **KPI** 탭에서는 KPI를 보거나 편집할 때 다음 두 가지 보기를 사용할 수 있습니다.  
   
 -   폼 보기  
   
@@ -37,15 +38,15 @@ ms.locfileid: "66079433"
   
 |창|정의|  
 |----------|----------------|  
-|**도구 모음**|폼 보기와 브라우저 보기 모두의 도구 모음을 사용하여 이 탭에서 일반적인 작업을 수행할 수 있습니다. 이 창에 대한 자세한 내용은 [도구 모음&#40;KPI 탭, 큐브 디자이너&#41;&#40;Analysis Services - 다차원 데이터&#41;](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)을 참조하세요.|  
+|**도구 모음**|폼 보기와 브라우저 보기 모두의 도구 모음을 사용 하 여이 탭에서 일반적인 작업을 수행할 수 있습니다. 이 창에 대 한 자세한 내용은 [도구 모음 &#40;Kpi 탭, 큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;를 ](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)참조 하세요.|  
 |**KPI 구성 도우미**|폼 보기의 **KPI 구성 도우미** 창을 사용하여 큐브에 포함된 KPI를 정렬된 형식으로 표시할 수 있습니다. 이 창에 대한 자세한 내용은 [KPI 구성 도우미&#40;KPI 탭, 큐브 디자이너&#41;&#40;Analysis Services - 다차원 데이터&#41;](kpi-organizer-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)를 참조하세요.|  
 |**계산 도구**|폼 보기의 **계산 도구** 창을 사용하여 큐브에 사용 가능한 메타데이터, 함수 및 도구를 표시할 수 있습니다. 이 창에 대한 자세한 내용은 [계산 도구&#40;KPI 탭, 큐브 디자이너&#41;&#40;Analysis Services - 다차원 데이터&#41;](calculation-tools-kpis-cube-designer-analysis-services-multidimensional-data.md)를 참조하세요.|  
-|**KPI Form Editor**|폼 보기의 KPI 폼 편집기 창을 사용하여 큐브에 포함된 KPI를 편집할 수 있습니다. 이 창에 대한 자세한 내용은 [KPI 폼 편집기&#40;KPI 탭, 큐브 디자이너&#41;&#40;Analysis Services - 다차원 데이터&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)를 참조하세요.|  
+|**KPI 폼 편집기**|폼 보기의 KPI 폼 편집기 창을 사용하여 큐브에 포함된 KPI를 편집할 수 있습니다. 이 창에 대한 자세한 내용은 [KPI 폼 편집기&#40;KPI 탭, 큐브 디자이너&#41;&#40;Analysis Services - 다차원 데이터&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)를 참조하세요.|  
 |**KPI 브라우저**|브라우저 보기의 KPI 브라우저 창을 사용하여 큐브에 포함된 KPI의 결과를 볼 수 있습니다. 이 창에 대한 자세한 내용은 [KPI 브라우저&#40;KPI 탭, 큐브 디자이너&#41;&#40;Analysis Services - 다차원 데이터&#41;](kpi-browser-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)를 참조하세요.|  
   
-## <a name="see-also"></a>관련 항목  
- [핵심 성과 지표 &#40;Kpi&#41; 다차원 모델의](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)   
- [MDX 스크립팅 기본 사항 & #40; Analysis Services & #41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
- [큐브 디자이너 &#40;Analysis Services-다차원 데이터&#41;](cube-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>참고 항목  
+ [다차원 모델의 Kpi&#41; &#40;핵심 성과 지표](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)   
+ [MDX 스크립팅 기본 사항 &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [큐브 디자이너 &#40;Analysis Services 다차원 데이터&#41;](cube-designer-analysis-services-multidimensional-data.md)  
   
   

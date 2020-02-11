@@ -11,17 +11,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9b8d6f35f8dedeb4539dc8299ca32f6566beb03f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63161957"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저의 성능 모니터링
   이 항목에서는 고유하게 컴파일된 저장 프로시저의 성능을 모니터링하는 방법에 대해 설명합니다.  
   
 ## <a name="using-extended-events"></a>확장 이벤트 사용  
- `sp_statement_completed` 확장 이벤트를 사용하여 쿼리 실행을 추적할 수 있습니다. 이 이벤트로 확장 이벤트 세션을 만들면(필요에 따라 고유하게 컴파일된 특정 저장 프로시저의 object_id에 대해 필터 사용) 각 쿼리 실행 후에 확장 이벤트가 발생합니다. 확장 이벤트에 의해 보고되는 CPU 시간 및 기간은 쿼리에 사용된 CPU 양과 실행 시간을 나타냅니다. 많은 CPU 시간을 사용하는 고유하게 컴파일된 저장 프로시저에는 성능 문제가 있을 수 있습니다.  
+ 
+  `sp_statement_completed` 확장 이벤트를 사용하여 쿼리 실행을 추적할 수 있습니다. 이 이벤트로 확장 이벤트 세션을 만들면(필요에 따라 고유하게 컴파일된 특정 저장 프로시저의 object_id에 대해 필터 사용) 각 쿼리 실행 후에 확장 이벤트가 발생합니다. 확장 이벤트에 의해 보고되는 CPU 시간 및 기간은 쿼리에 사용된 CPU 양과 실행 시간을 나타냅니다. 많은 CPU 시간을 사용하는 고유하게 컴파일된 저장 프로시저에는 성능 문제가 있을 수 있습니다.  
   
  확장 이벤트의 `line_number`와 함께 `object_id`를 사용하여 쿼리를 조사할 수 있습니다. 다음 쿼리를 사용하여 프로시저 정의를 검색할 수 있습니다. 줄 번호를 사용하여 정의 내에서 쿼리를 식별할 수 있습니다.  
   
@@ -29,12 +30,14 @@ ms.locfileid: "63161957"
 select [definition] from sys.sql_modules where object_id=object_id  
 ```  
   
- 에 대 한 자세한 내용은 합니다 `sp_statement_completed` 확장 이벤트를 참조 하세요 [이벤트를 발생 시킨 문을 검색 하는 방법을](https://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx)합니다.  
+ `sp_statement_completed` 확장 이벤트에 대 한 자세한 내용은 이벤트를 [발생 시킨 문을 검색](https://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx)하는 방법을 참조 하세요.  
   
 ## <a name="using-data-management-views"></a>데이터 관리 뷰 사용  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 프로시저 수준 및 쿼리 수준 모두에서 고유하게 컴파일된 저장 프로시저에 대한 실행 통계 수집을 지원합니다. 실행 통계 수집은 성능에 미치는 영향 때문에 기본적으로 설정되지 않습니다.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 프로시저 수준 및 쿼리 수준 모두에서 고유하게 컴파일된 저장 프로시저에 대한 실행 통계 수집을 지원합니다. 실행 통계 수집은 성능에 미치는 영향 때문에 기본적으로 설정되지 않습니다.  
   
- [sys.sp_xtp_control_proc_exec_stats&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql)를 사용하여 고유하게 컴파일된 저장 프로시저에 대한 통계 수집을 설정하고 해제할 수 있습니다.  
+ 
+  [sys.sp_xtp_control_proc_exec_stats&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql)를 사용하여 고유하게 컴파일된 저장 프로시저에 대한 통계 수집을 설정하고 해제할 수 있습니다.  
   
  통계 수집이 [sys.sp_xtp_control_proc_exec_stats&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql)를 사용하여 설정된 경우 [sys.dm_exec_procedure_stats&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql)를 사용하여 고유하게 컴파일된 저장 프로시저의 성능을 모니터링할 수 있습니다.  
   
@@ -113,7 +116,7 @@ GO
   
  고유하게 컴파일된 저장 프로시저의 예상 실행 계획은 프로시저의 쿼리에 대한 쿼리 연산자 및 식을 보여 줍니다. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 에서는 고유하게 컴파일된 저장 프로시저에 대한 일부 SHOWPLAN_XML 특성을 지원하지 않습니다. 예를 들어 쿼리 최적화 프로그램 비용 계산과 관련된 특성은 프로시저에 대한 SHOWPLAN_XML의 일부가 아닙니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [고유하게 컴파일된 저장 프로시저](natively-compiled-stored-procedures.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Distributed Replay의 기존 인스턴스 제거 | Microsoft Docs
+title: Distributed Replay의 기존 인스턴스를 제거 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 45fddb470ce7bee4dd84cbcc3c656e33d30e3166
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091773"
 ---
 # <a name="uninstall-an-existing-instance-of-distributed-replay"></a>Distributed Replay의 기존 인스턴스 제거
@@ -28,12 +28,13 @@ ms.locfileid: "66091773"
   
 ### <a name="to-uninstall-an-instance-of-distributed-replay"></a>Distributed Replay 인스턴스를 제거하려면  
   
-1.  **시작** 메뉴에서 클릭 **제어판**를 차례로 클릭 한 다음 **프로그램 추가 / 제거**합니다.  
+1.  **시작** 메뉴에서 **제어판**을 클릭 한 다음 **프로그램 추가/제거**를 두 번 클릭 합니다.  
   
-     선택 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에 **제거 또는 변경 프로그램** 창에서를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 대화 상자에서 클릭 **제거**.  
+     **프로그램 제거 또는 변경** 창에서를 선택한 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 다음 대화 상자에서 **제거**를 클릭 합니다.  
   
-2.  단계를 수행 합니다 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 마법사 및를 **기능 선택** 페이지에서 Distributed Replay 구성 요소를 제거 하 고 클릭 하려는 **다음.** 합니다.  
+2.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 마법사의 단계를 따르고 **기능 선택** 페이지에서 제거할 Distributed Replay 구성 요소를 선택 하 고 다음을 클릭 **합니다**.  
   
-3.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 마법사를 완료하여 선택한 Distributed Replay 기능을 제거합니다.  
+3.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 마법사를 완료하여 선택한 Distributed Replay 기능을 제거합니다.  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 중복 보안 역할 대화 상자 (Analysis Services-다차원 데이터) | Microsoft Docs
+title: Analysis Services 중복 보안 역할 대화 상자 (Analysis Services 다차원 데이터) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,23 +13,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 596011e40eb6ed7ca2276da58dbbc1379e5b032c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081494"
 ---
 # <a name="analysis-services-duplicate-security-role-dialog-box-analysis-services---multidimensional-data"></a>Analysis Services 중복 보안 역할 대화 상자(Analysis Services - 다차원 데이터)
-  사용 된 **Analysis Services 중복 보안 역할- \<데이터베이스 이름 >- \<y from role name >** 대화 상자 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에서 기존 역할을 복제할는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스. 개체 탐색기에서 역할을 마우스 오른쪽 단추로 클릭하고 **복제**를 선택하면 **역할 복제** 대화 상자를 표시할 수 있습니다.  
+  **Analysis Services 중복 된 보안 역할 \<-데이터베이스 이름>- \<역할 이름에서 복사>** 대화 상자를 사용 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 하 여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스의 기존 역할을 복제할 수 있습니다. 개체 탐색기에서 역할을 마우스 오른쪽 단추로 클릭하고 **복제**를 선택하면 **역할 복제** 대화 상자를 표시할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
   
 |용어|정의|  
 |----------|----------------|  
 |**새 역할 이름**|개체 탐색기에서 선택한 역할과 같은 멤버 및 사용 권한으로 만들 새 역할의 이름을 입력합니다.|  
   
-## <a name="see-also"></a>관련 항목  
- [Analysis Services Designers and Dialog Boxes &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [보안 역할&#40;Analysis Services - 다차원 데이터&#41;](multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>참고 항목  
+ [Analysis Services 디자이너 및 대화 상자 &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [보안 역할 &#40;Analysis Services 다차원 데이터&#41;](multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   
   

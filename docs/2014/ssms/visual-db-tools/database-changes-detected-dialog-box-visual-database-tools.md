@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0d5850ce71e483ea33bb99972c243140a63da5f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63270543"
 ---
 # <a name="database-changes-detected-dialog-box-visual-database-tools"></a>데이터베이스 변경 감지 대화 상자(Visual Database Tools)
@@ -27,7 +27,7 @@ ms.locfileid: "63270543"
 > [!NOTE]  
 >  테이블이나 데이터베이스 다이어그램에 적용된 변경 내용을 실행 취소할 수는 없지만 테이블이나 다이어그램을 저장하기 전까지는 변경 내용이 데이터베이스에 저장되지 않습니다. **아니요** 를 선택하고 모든 열려 있는 다이어그램을 저장하지 않은 채 닫으면 저장되지 않은 변경 내용을 모두 취소할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **차이점 발견 경고**  
  이후에 데이터베이스 다이어그램이나 선택된 테이블을 저장하려 할 때 이 대화 상자를 표시할지 여부를 지정합니다. 이 옵션을 선택하면 오래된 다이어그램이나 테이블을 데이터베이스와 함께 저장하려 할 때마다 이 대화 상자가 계속하여 나타납니다. 이 옵션을 해제하면 대화 상자가 나타나지 않습니다. 이 확인란은 기본적으로 선택되어 있습니다. 이 옵션이 해제되어 있는 경우 **옵션** 대화 상자에서 다시 선택할 수 있습니다.  
   
@@ -43,8 +43,8 @@ ms.locfileid: "63270543"
  **텍스트 파일 저장**  
  **다른 이름으로 저장** 대화 상자가 나타납니다. 이 대화 상자를 사용하면 데이터베이스 변경 내용 목록이 포함된 텍스트 파일의 위치를 지정할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [수정 된 데이터베이스와 데이터베이스 다이어그램 일치 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools를 사용 하 &#40;수정 된 데이터베이스를 사용 하 여 데이터베이스 다이어그램 조정&#41;](visual-database-tools.md)   
  [다중 사용자 환경&#40;Visual Database Tools&#41;](multiuser-environments-visual-database-tools.md)  
   
   

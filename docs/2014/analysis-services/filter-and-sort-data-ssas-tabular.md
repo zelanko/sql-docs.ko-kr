@@ -1,5 +1,5 @@
 ---
-title: 필터 데이터 및 정렬 (SSAS 테이블 형식) | Microsoft Docs
+title: 데이터 필터링 및 정렬 (SSAS 테이블 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: faa6198bc9fa42b55be63ec57ff49ed6703ef260
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081257"
 ---
 # <a name="filter-and-sort-data-ssas-tabular"></a>데이터 필터링 및 정렬(SSAS 테이블 형식)
@@ -26,7 +26,7 @@ ms.locfileid: "66081257"
   
 |항목|Description|  
 |-----------|-----------------|  
-|[테이블의 데이터 정렬 &#40;SSAS 테이블 형식&#41;](tabular-models/sort-data-in-a-table-ssas-tabular.md)테이블의 데이터 정렬|이 항목에서는 문자 또는 숫자를 사용하여 데이터를 정렬하는 방법을 설명합니다.|  
-|[테이블의 데이터 필터링 &#40;SSAS 테이블 형식&#41;](tabular-models/filter-data-in-a-table-ssas-tabular.md)|이 항목의 태스크에서는 사용자 지정 필터를 적용하여 행이 표시되는 방식을 제어하는 방법에 대해 설명합니다.|  
+|[SSAS 테이블 형식&#41;&#40;테이블의 데이터 정렬](tabular-models/sort-data-in-a-table-ssas-tabular.md) 테이블의 데이터 정렬|이 항목에서는 문자 또는 숫자를 사용하여 데이터를 정렬하는 방법을 설명합니다.|  
+|[SSAS 테이블 형식&#41;&#40;테이블의 데이터 필터링](tabular-models/filter-data-in-a-table-ssas-tabular.md)|이 항목의 태스크에서는 사용자 지정 필터를 적용하여 행이 표시되는 방식을 제어하는 방법에 대해 설명합니다.|  
   
   

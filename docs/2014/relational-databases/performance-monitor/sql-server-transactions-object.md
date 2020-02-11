@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c7dffaac161a61496c296ec99ec1f9ad2e1951a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63182997"
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server, Transactions 개체
@@ -38,14 +38,14 @@ ms.locfileid: "63182997"
 |**트랜잭션**|모든 형식의 현재 활성 트랜잭션 수입니다.|  
 |**Update conflict ratio**|마지막 1초 동안 업데이트 충돌이 발생하였고 스냅샷 격리 수준을 사용하는 트랜잭션의 비율입니다. 스냅샷 격리 수준 트랜잭션이 시작될 때 커밋되지 않은 다른 트랜잭션이 마지막으로 수정한 행을 스냅샷 격리 수준 트랜잭션에서 수정하려고 하면 업데이트 충돌이 발생합니다.|  
 |**Update Snapshot Transactions**|스냅샷 격리 수준을 사용하고 수정된 데이터가 있는 현재 활성 트랜잭션의 수입니다.|  
-|**Version Cleanup rate (KB/s)**|**tempdb**의 스냅숏 격리 버전 저장소에서 행 버전이 제거되는 비율(KB/초)입니다.|  
-|**Version Generation rate (KB/s)**|**tempdb**의 스냅숏 격리 버전 저장소에 새로운 행 버전이 추가되는 비율(KB/초)입니다.|  
+|**Version Cleanup rate (KB/s)**|**tempdb**의 스냅샷 격리 버전 저장소에서 행 버전이 제거되는 비율(KB/초)입니다.|  
+|**Version Generation rate (KB/s)**|**tempdb**의 스냅샷 격리 버전 저장소에 새로운 행 버전이 추가되는 비율(KB/초)입니다.|  
 |**Version Store Size (KB)**|스냅샷 격리 수준 행 버전을 저장하는 데 사용되는 **tempdb**의 공간(KB)입니다.|  
-|**Version Store unit count**|**tempdb**의 스냅숏 격리 버전 저장소에 있는 활성 할당 단위 수입니다.|  
-|**Version Store unit creation**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스 시작 이후 스냅숏 격리 저장소에 만들어진 할당 단위 수입니다.|  
-|**Version Store unit truncation**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스 시작 이후 스냅숏 격리 저장소에서 제거된 할당 단위 수입니다.|  
+|**Version Store unit count**|**tempdb**의 스냅샷 격리 버전 저장소에 있는 활성 할당 단위 수입니다.|  
+|**Version Store unit creation**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스 시작 이후 스냅샷 격리 저장소에 만들어진 할당 단위 수입니다.|  
+|**Version Store unit truncation**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스 시작 이후 스냅샷 격리 저장소에서 제거된 할당 단위 수입니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [리소스 사용 모니터링&#40;시스템 모니터&#41;](monitor-resource-usage-system-monitor.md)  
   
   

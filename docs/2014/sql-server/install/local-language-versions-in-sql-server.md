@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2565e4cc8aa9bddb83af5e8e9077987ebd27663f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63195069"
 ---
 # <a name="local-language-versions-in-sql-server"></a>SQL Server의 로컬 언어 버전
@@ -82,8 +82,8 @@ ms.locfileid: "63195069"
   
 4.  **적용** 을 클릭하여 변경 내용을 확인하거나 **확인** 을 클릭하여 창을 닫습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)   
+## <a name="see-also"></a>참고 항목  
+ [SQL Server 2014를 설치 하기 위한 하드웨어 및 소프트웨어 요구 사항](hardware-and-software-requirements-for-installing-sql-server.md)   
  [SQL Server 2014 설치](../../database-engine/install-windows/install-sql-server.md)  
   
   

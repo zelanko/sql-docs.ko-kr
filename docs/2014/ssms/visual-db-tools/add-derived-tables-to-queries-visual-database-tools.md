@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6f1898dce975655758c52068590dd4c0720c9f67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63311934"
 ---
 # <a name="add-derived-tables-to-queries-visual-database-tools"></a>쿼리에 파생 테이블 추가(Visual Database Tools)
@@ -33,10 +33,10 @@ ms.locfileid: "63311934"
   
      derivedtbl_*N* 이라는 새 테이블이 추가되고 파생 테이블의 SELECT 문이 쿼리의 FROM 절에 추가됩니다.  
   
-## <a name="see-also"></a>관련 항목  
- [쿼리 관련 기본 작업 수행 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [쿼리를 만들 &#40;Visual Database Tools&#41;](create-queries-visual-database-tools.md)   
- [쿼리 열기 &#40;Visual Database Tools&#41;](open-queries-visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools를 &#40;쿼리를 사용 하 여 기본 작업을 수행&#41;](visual-database-tools.md)   
+ [Visual Database Tools를 &#40;쿼리 만들기&#41;](create-queries-visual-database-tools.md)   
+ [Visual Database Tools를 &#40;쿼리를 엽니다&#41;](open-queries-visual-database-tools.md)   
  [SELECT&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)  
   
   

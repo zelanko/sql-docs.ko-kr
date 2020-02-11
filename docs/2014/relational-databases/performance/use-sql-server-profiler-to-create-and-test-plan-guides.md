@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fcdbfe9f9289ab9cc529d4d37eb27d877dfff3ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150484"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>SQL Server Profiler를 사용하여 계획 지침 작성 및 테스트
@@ -66,7 +66,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 7.  일괄 처리 텍스트 파일을 메모장에서 열고 텍스트를 복사 및 붙여 넣기 버퍼로 복사합니다.  
   
-8.  계획 지침을 만들고 복사한 텍스트를 **@stmt**인수에 대해 지정된 따옴표( **@stmt** ) 안에 붙여넣습니다. **@stmt** 인수에 있는 작은따옴표 앞에 다른 작은따옴표를 붙여 이스케이프 처리해야 합니다. 작은따옴표를 삽입할 때는 다른 문자를 추가 또는 제거하지 않도록 주의해야 합니다. 예를 들어 날짜 리터럴 **'** 20000101 **'** 은 **''** 20000101 **''** 로 구분해야 합니다.  
+8.  계획 지침을 만들고 복사한 텍스트를 **@stmt**인수에 대해 지정된 따옴표( **@stmt** ) 안에 붙여넣습니다. **@stmt** 인수의 앞에 다른 작은따옴표를 사용 하 여 임의의 작은따옴표를 이스케이프 해야 합니다. 작은따옴표를 삽입할 때는 다른 문자를 추가 또는 제거하지 않도록 주의해야 합니다. 예를 들어 날짜 리터럴 **'** 20000101 **'** 은 **''** 20000101 **''** 로 구분해야 합니다.  
   
  계획 지침은 다음과 같습니다.  
   
@@ -96,7 +96,7 @@ EXEC sp_create_plan_guide
   
 5.  계획 지침이 OBJECT 또는 SQL 유형인 경우 쿼리와 일치할 것으로 예상되는 계획 지침의 **PlanGuideDB** 및 **PlanGuideName** 특성이 **Showplan XML** 이벤트에 포함되어 있는지 확인합니다. 또는 TEMPLATE 계획 지침의 경우 예상되는 계획 지침의 **TemplatePlanGuideDB** 및 **TemplatePlanGuideName** 특성이 **Showplan XML** 이벤트에 포함되어 있는지 확인합니다. 그러면 계획 지침이 작동하는지 확인할 수 있습니다. 이러한 특성은 계획의 **\<StmtSimple>** 요소에 포함됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [sp_create_plan_guide&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)  
   
   

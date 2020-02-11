@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: a28f2401f11f20f8891dbe71537ce2240a570ed8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63158252"
 ---
 # <a name="in-memory-oltp-garbage-collection"></a>메모리 내 OLTP 가비지 수집
@@ -42,7 +42,7 @@ ms.locfileid: "63158252"
   
  사용자 트랜잭션은 커밋 후 실행에 사용된 스케줄러와 연결된 큐에서 모든 큐 항목을 식별한 다음 메모리를 해제합니다. 스케줄러에서 가비지 수집 큐가 비어 있으면 현재 NUMA 노드에서 비어 있지 않은 큐를 검색합니다. 트랜잭션 활동이 적고 메모리 가중이 있는 경우 기본 가비지 수집기 스레드가 개입하여 어떤 큐에서든 행의 가비지 수집에 액세스할 수 있습니다. 예를 들어 많은 수의 행을 삭제한 후 트랜잭션 활동이 없고 메모리 가중이 없는 경우 트랜잭션 활동이 다시 시작되거나 메모리 가중이 있을 때까지 삭제된 행에서 가비지를 수집하지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP의 메모리 관리](../../database-engine/managing-memory-for-in-memory-oltp.md)  
   
   

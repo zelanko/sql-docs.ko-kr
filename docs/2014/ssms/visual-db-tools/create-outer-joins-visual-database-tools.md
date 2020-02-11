@@ -14,22 +14,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cd5c9a9cb2e40c7b0a235ff848c1f9a0025773a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184315"
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>외부 조인 만들기(Visual Database Tools)
   [쿼리 및 뷰 디자이너](visual-database-tools.md) 는 기본적으로 테이블 간에 내부 조인을 만듭니다. 다른 테이블의 행과 일치하지 않는 행은 없앱니다. 그러나 외부 조인은 FROM 절에 지정된 하나 이상의 테이블이나 뷰에서 WHERE 또는 HAVING 검색 조건을 만족하는 모든 행을 반환합니다. 조인된 테이블에 일치 값이 없는 데이터 행을 결과 집합에 포함하려면 외부 조인을 만들면 됩니다.  
   
- 외부 조인을 만들 때는 SQL 창의 SQL 문에 테이블이 표시되는 순서가 중요합니다. 첫 번째로 추가하는 테이블이 "왼쪽" 테이블이 되고 두 번째로 추가하는 테이블이 "오른쪽" 테이블이 됩니다. [다이어그램 창](diagram-pane-visual-database-tools.md)에 테이블이 실제로 표시되는 순서는 중요하지 않습니다. 왼쪽 또는 오른쪽 우선 외부 조인을 지정할 경우 쿼리에 테이블이 추가된 순서와 [SQL 창](sql-pane-visual-database-tools.md)의 SQL 문에 테이블이 표시되는 순서를 참조합니다.  
+ 외부 조인을 만들 때는 SQL 창의 SQL 문에 테이블이 표시되는 순서가 중요합니다. 첫 번째로 추가하는 테이블이 "왼쪽" 테이블이 되고 두 번째로 추가하는 테이블이 "오른쪽" 테이블이 됩니다. [다이어그램 창](diagram-pane-visual-database-tools.md) 에 테이블이 실제로 표시되는 순서는 중요하지 않습니다. 왼쪽 또는 오른쪽 우선 외부 조인을 지정할 경우 쿼리에 테이블이 추가된 순서와 [SQL 창](sql-pane-visual-database-tools.md)의 SQL 문에 테이블이 표시되는 순서를 참조합니다.  
   
 ### <a name="to-create-an-outer-join"></a>외부 조인을 만들려면  
   
 1.  자동 또는 수동으로 조인을 만듭니다. 자세한 내용은 [테이블 자동 조인&#40;Visual Database Tools&#41;](join-tables-automatically-visual-database-tools.md) 또는 [테이블 수동 조인&#40;Visual Database Tools&#41;](join-tables-manually-visual-database-tools.md)을 참조하세요.  
   
-2.  다이어그램 창에서 조인 선을 선택 합니다 **쿼리 디자이너** 메뉴 선택 **의 모든 행 선택 \<tablename >** , 해당 추가 테이블을 포함 하는 명령을 선택 행을 포함 합니다.  
+2.  다이어그램 창에서 조인 선을 선택한 다음 **쿼리 디자이너** 메뉴에서 **Tablename>의 \<모든 행 선택 **을 선택 하 여 포함 하려는 여분의 행이 있는 테이블을 포함 하는 명령을 선택 합니다.  
   
     -   첫 번째 테이블을 선택하여 왼쪽 우선 외부 조인을 만듭니다.  
   
@@ -57,8 +57,8 @@ FROM employee LEFT OUTER JOIN jobs
 WHERE (jobs.job_id IS NULL)  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [조인을 사용한 쿼리 &#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools를 &#40;조인을 사용 하 여 쿼리&#41;](query-with-joins-visual-database-tools.md)   
  [조인 대화 상자&#40;Visual Database Tools&#41;](join-dialog-box-visual-database-tools.md)  
   
   

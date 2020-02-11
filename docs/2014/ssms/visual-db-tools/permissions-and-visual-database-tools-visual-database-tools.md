@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 35bed6e63aa352986e1072bfad1b5ddf836845e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63268498"
 ---
 # <a name="permissions-and-visual-database-tools-visual-database-tools"></a>사용 권한 및 Visual Database Tools(Visual Database Tools)
@@ -24,7 +24,7 @@ ms.locfileid: "63268498"
   
  데이터베이스 권한으로 데이터베이스 구조를 볼 수는 있지만 수정할 수 없는 경우 변경 스크립트를 사용하여 수정 내용을 데이터베이스에 전송하지 않고 디자인할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [다중 사용자 환경&#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

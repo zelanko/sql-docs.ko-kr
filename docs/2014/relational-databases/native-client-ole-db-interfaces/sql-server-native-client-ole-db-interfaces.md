@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 29bd6c25ec826f1c2ce7af1aae6e29462de0b6c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192426"
 ---
 # <a name="sql-server-native-client-ole-db-reference"></a>SQL Server Native Client(OLE DB) 참조
-  합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 실행 하는 하나 이상의 컴퓨터에서 데이터에 액세스 하려는 소비자에 게 인터페이스를 노출 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 OLE DB 버전 2.0 호환 공급자입니다.  
+  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는를 실행 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]하는 하나 이상의 컴퓨터에서 데이터에 액세스 하려는 소비자에 게 인터페이스를 노출 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 OLE DB 버전 2.0 호환 공급자입니다.  
   
- 이렇게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 프로그래밍 참조 설명 하지 않습니다 모든 OLE DB 인터페이스 및 메서드를 사용할 때 공급자별 동작을 노출 하는 인터페이스 및 메서드만는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자입니다.  
+ 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client OLE DB 공급자 프로그래밍 참조는 일부 OLE DB 인터페이스와 메서드를 문서화 하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client OLE DB 공급자를 사용할 때 공급자별 동작을 나타내는 인터페이스와 메서드만 제공 합니다.  
   
  핵심 OLE DB 인터페이스 및 메서드에 대한 자세한 내용은 [OLE DB 프로그래머 참조(OLE DB Programmer's Reference)](https://go.microsoft.com/fwlink/?LinkId=45232)를 참조하십시오.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "63192426"
   
 -   [인터페이스 &#40;OLE DB&#41;](../../database-engine/dev-guide/interfaces-ole-db.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Native Client&#40;OLE DB&#41;](../native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

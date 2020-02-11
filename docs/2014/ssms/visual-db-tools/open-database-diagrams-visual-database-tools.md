@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: da26fc9274e68cd5233766af7e7c15550412db38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63254469"
 ---
 # <a name="open-database-diagrams-visual-database-tools"></a>데이터베이스 다이어그램 열기(Visual Database Tools)
@@ -30,7 +30,7 @@ ms.locfileid: "63254469"
   
 2.  열려는 데이터베이스 다이어그램의 이름을 두 번 클릭합니다.  
   
-     -또는-  
+     또는  
   
      열려는 데이터베이스 다이어그램의 이름을 마우스 오른쪽 단추로 클릭한 다음 **데이터베이스 다이어그램 디자인**을 선택합니다.  
   
@@ -39,8 +39,8 @@ ms.locfileid: "63254469"
 > [!NOTE]  
 >  다이어그램의 소유자나 데이터베이스에 대한 db_owner 역할이 부여된 멤버만 다이어그램을 열 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [데이터베이스 다이어그램 작업 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools를 &#40;데이터베이스 다이어그램 작업&#41;](visual-database-tools.md)   
  [데이터베이스 다이어그램 소유권 이해&#40;Visual Database Tools&#41;](understand-database-diagram-ownership-visual-database-tools.md)  
   
   

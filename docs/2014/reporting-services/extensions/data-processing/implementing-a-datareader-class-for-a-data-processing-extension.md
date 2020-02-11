@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7c9e55741c72d624b7149435ced90550135d8b4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63163991"
 ---
 # <a name="implementing-a-datareader-class-for-a-data-processing-extension"></a>데이터 처리 확장 프로그램에 대한 DataReader 클래스 구현
@@ -27,11 +27,11 @@ ms.locfileid: "63163991"
   
  **Command** 클래스 인스턴스를 만든 후 **Command.ExecuteReader** 호출을 통해 데이터 원본에서 행을 검색하여 **DataReader** 개체를 만듭니다. **DataReader** 구현은 두 가지 기본적인 기능을 제공해야 하며, 이 두 가지 기능은 명령 실행에서 얻은 결과 집합에 대한 정방향 전용 액세스 기능과 각 행 내의 열 유형, 이름, 값에 대한 액세스 기능입니다. 클라이언트는 **DataReader** 개체의 **Read** 메서드를 사용하여 쿼리 결과에서 행을 얻습니다.  
   
- 보고서 디자이너에서 **DataReader** 개체는 결과 집합에 대한 스키마 정보 및 필드 목록을 검색하는 데 사용됩니다. <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> 인터페이스의 **GetName**, **GetValue**, **GetFieldType,** 및 **GetOrdinal** 메서드를 구현하여 이 작업을 수행할 수 있습니다.  
+ 보고서 디자이너에서 **DataReader** 개체는 결과 집합에 대한 스키마 정보 및 필드 목록을 검색하는 데 사용됩니다. **인터페이스의**GetName **,** GetValue **,** GetFieldType,**및**GetOrdinal<xref:Microsoft.ReportingServices.DataProcessing.IDataReader> 메서드를 구현하여 이 작업을 수행할 수 있습니다.  
   
  <xref:Microsoft.ReportingServices.DataProcessing.IDataReaderExtension> 인터페이스를 통해 결과 집합에 대한 특정 집계 정보를 제공할 수 있습니다. 예제 **DataReader** 클래스 구현은 [SQL Server Reporting Services 제품 예제](https://go.microsoft.com/fwlink/?LinkId=177889)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services 확장 프로그램](../reporting-services-extensions.md)   
  [데이터 처리 확장 프로그램 구현](implementing-a-data-processing-extension.md)   
  [Reporting Services 확장 라이브러리](../reporting-services-extension-library.md)  

@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler 사용 하 여 교착 상태 분석 | Microsoft Docs
+title: SQL Server Profiler를 사용 하 여 교착 상태 분석 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,25 +20,30 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca1882faa9c61536d1ef025058322f141beedafd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63316324"
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>SQL Server Profiler를 사용하여 교착 상태 분석
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 교착 상태의 원인을 확인할 수 있습니다. 둘 이상의 스레드 또는 프로세스 간에 SQL Server 내의 일부 리소스에 대한 순환 종속성이 있는 경우 교착 상태가 발생합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 교착 상태 이벤트를 기록하고 재생하고 표시하는 추적을 만들어 분석할 수 있습니다.  
   
- 교착 상태 이벤트를 추적하려면 **Deadlock graph** 이벤트 클래스를 추적에 추가합니다. 이 이벤트 클래스는 교착 상태와 관련된 프로세스 및 개체에 대한 XML 데이터로 추적 시 **TextData** 데이터 열을 채웁니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 XML 문서를 교착 상태 XML(.xdl) 파일로 추출할 수 있습니다. 이 XML 파일은 나중에 SQL Server Management Studio에서 볼 수 있습니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 구성하여 모든 **Deadlock graph** 이벤트가 포함되어 있는 단일 파일로 **Deadlock graph** 이벤트를 추출하거나 개별 파일로 추출할 수도 있습니다. 다음과 같은 방법으로 추출할 수 있습니다.  
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 교착 상태의 원인을 확인할 수 있습니다. 둘 이상의 스레드 또는 프로세스 간에 SQL Server 내의 일부 리소스에 대한 순환 종속성이 있는 경우 교착 상태가 발생합니다. 
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 교착 상태 이벤트를 기록하고 재생하고 표시하는 추적을 만들어 분석할 수 있습니다.  
   
--   추적 구성 시 **이벤트 추출 설정** 탭을 사용합니다. **이벤트 선택** 탭에서 **Deadlock graph** 이벤트를 선택해야만 이 탭이 표시됩니다.  
+ 교착 상태 이벤트를 추적하려면 **Deadlock graph** 이벤트 클래스를 추적에 추가합니다. 이 이벤트 클래스는 교착 상태와 관련된 프로세스 및 개체에 대한 XML 데이터로 추적 시 **TextData** 데이터 열을 채웁니다. 
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 XML 문서를 교착 상태 XML(.xdl) 파일로 추출할 수 있습니다. 이 XML 파일은 나중에 SQL Server Management Studio에서 볼 수 있습니다. 
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 구성하여 모든 **Deadlock graph** 이벤트가 포함되어 있는 단일 파일로 **Deadlock graph** 이벤트를 추출하거나 개별 파일로 추출할 수도 있습니다. 다음과 같은 방법으로 추출할 수 있습니다.  
   
--   **파일** 메뉴에서 **SQL Server 이벤트 추출** 옵션을 사용합니다.  
+-   추적 구성 시 **이벤트 추출 설정** 탭을 사용 합니다 .이 탭은 **이벤트 선택** 탭에서 **교착 상태 그래프** 이벤트를 선택할 때까지 나타나지 않습니다.  
+  
+-   
+  **파일** 메뉴에서 **SQL Server 이벤트 추출** 옵션을 사용합니다.  
   
 -   개별 이벤트는 특정 이벤트를 마우스 오른쪽 단추로 클릭하고 **이벤트 데이터 추출**을 선택하여 추출 및 저장할 수도 있습니다.  
   
 ## <a name="deadlock-graphs"></a>교착 상태 그래프  
- [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 와 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 교착 상태 WAITFOR 그래프를 사용하여 교착 상태를 설명합니다. 교착 상태 WAITFOR 그래프에는 프로세스 노드, 리소스 노드 및 프로세스와 리소스 간의 관계를 나타내는 가장자리가 포함됩니다. WAITFOR 그래프의 구성 요소는 다음 표에 정의되어 있습니다.  
+ [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]그리고 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 교착 상태를 설명 하기 위해 교착 상태 대기 그래프를 사용 합니다. 교착 상태 WAITFOR 그래프에는 프로세스 노드, 리소스 노드 및 프로세스와 리소스 간의 관계를 나타내는 가장자리가 포함됩니다. WAITFOR 그래프의 구성 요소는 다음 표에 정의되어 있습니다.  
   
  프로세스 노드  
  태스크를 수행하는 스레드입니다. 예를 들어 INSERT, UPDATE 또는 DELETE입니다.  
@@ -46,8 +51,10 @@ ms.locfileid: "63316324"
  리소스 노드  
  데이터베이스 개체입니다. 예를 들어 테이블, 인덱스 또는 행입니다.  
   
- 가장자리  
- 프로세스와 리소스 간의 관계입니다. `request` 가장자리는 프로세스가 리소스를 대기할 때 발생합니다. `owner` 가장자리는 리소스가 프로세스를 대기할 때 발생합니다. 잠금 모드는 가장자리 설명에 포함되어 있습니다. 예를 들어 **모드: X**합니다.  
+ Microsoft Edge  
+ 프로세스와 리소스 간의 관계입니다. 
+  `request` 가장자리는 프로세스가 리소스를 대기할 때 발생합니다. 
+  `owner` 가장자리는 리소스가 프로세스를 대기할 때 발생합니다. 잠금 모드는 가장자리 설명에 포함되어 있습니다. 예를 들어 **Mode: X**입니다.  
   
 ## <a name="deadlock-process-node"></a>교착 상태 프로세스 모드  
  WAITFOR 그래프에서 프로세스 노드는 프로세스에 대해 설명합니다. 다음 표에서는 프로세스의 구성 요소에 대해 설명합니다.  
@@ -61,8 +68,8 @@ ms.locfileid: "63316324"
 |사용된 로그|프로세스가 사용한 로그 공간입니다.|  
 |소유자 ID|트랜잭션을 사용 중이고 잠금에 대해 현재 대기 중인 프로세스의 트랜잭션 ID입니다.|  
 |트랜잭션 설명자|트랜잭션 상태를 설명하는 트랜잭션 설명자에 대한 포인터입니다.|  
-|입력 버퍼|현재 프로세스의 입력 버퍼. 이벤트의 유형과 실행 중인 문을 정의합니다. 가능한 값은 다음과 같습니다.<br /><br /> **언어**<br /><br /> **RPC**<br /><br /> **없음**|  
-|인수를 제거합니다.|문 유형. 가능한 값은<br /><br /> **NOP**<br /><br /> **SELECT**<br /><br /> **UPDATE**<br /><br /> **INSERT**<br /><br /> **DELETE**<br /><br /> **Unknown**|  
+|입력 버퍼|현재 프로세스의 입력 버퍼. 이벤트의 유형과 실행 중인 문을 정의합니다. 가능한 값은 다음과 같습니다.<br /><br /> **언어**<br /><br /> **RPC**<br /><br /> **없음을**|  
+|인수를 제거합니다.|문 유형. 가능한 값은 다음과 같습니다.<br /><br /> **NOP**<br /><br /> **SELECT**<br /><br /> **UPDATE**<br /><br /> **INSERT**<br /><br /> **DELETE**<br /><br /> **없습니다**|  
   
 ## <a name="deadlock-resource-node"></a>교착 상태 리소스 노드  
  두 프로세스가 각각 다른 프로세스에서 소유하고 있는 리소스를 대기하고 있는 상태가 교착 상태입니다. 교착 상태 그래프에서 리소스는 리소스 노드로 표시됩니다.  

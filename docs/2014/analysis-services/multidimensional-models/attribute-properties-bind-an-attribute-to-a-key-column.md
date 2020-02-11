@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6fb2888ba5cba2d3ab2701d934f83dc55cf362ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077434"
 ---
 # <a name="bind-an-attribute-to-a-key-column"></a>키 열에 특성 바인딩
@@ -35,6 +35,6 @@ ms.locfileid: "66077434"
 4.  새 이름을 입력합니다.  
   
     > [!NOTE]  
-    >  설정할 수도 있습니다는 `Name` 에서 선택한 특성의 속성을 **속성** 기간 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]합니다.  
+    >  의 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] **속성** 창에서 선택한 `Name` 특성의 속성을 설정할 수도 있습니다.  
   
   

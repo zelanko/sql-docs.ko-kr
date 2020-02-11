@@ -14,29 +14,29 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e0cce16636e8f3be542b926170c905353602d95e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250339"
 ---
 # <a name="microsoft-replication-conflict-viewer-and-interactive-resolver"></a>Microsoft 복제 충돌 뷰어 및 대화형 해결 프로그램
   이 섹션에는 병합 복제 및 트랜잭션 복제에 대한 복제 충돌 뷰어의 정보와 병합 복제에 대한 대화형 해결 프로그램의 정보가 포함되어 있습니다.  
   
--   [Microsoft 복제 충돌 뷰어&#40;병합 복제&#41;](microsoft-replication-conflict-viewer-merge-replication.md)  
+-   [Microsoft 복제 충돌 뷰어 &#40;병합 복제&#41;](microsoft-replication-conflict-viewer-merge-replication.md)  
   
--   [Microsoft 복제 충돌 뷰어&#40;트랜잭션 복제&#41;](microsoft-replication-conflict-viewer-transactional-replication.md)  
+-   [Microsoft 복제 충돌 뷰어 &#40;트랜잭션 복제&#41;](microsoft-replication-conflict-viewer-transactional-replication.md)  
   
 -   [Microsoft 복제 상호 충돌 해결 프로그램](microsoft-replication-interactive-conflict-resolver.md)  
   
 -   [필터 정의](define-filters.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [병합 게시에 대한 데이터 충돌 보기 및 해결&#40;SQL Server Management Studio&#41;](view-and-resolve-data-conflicts-for-merge-publications.md)   
- [트랜잭션 게시의 데이터 충돌 확인&#40;SQL Server Management Studio&#41;](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)   
- [고급 병합 복제 충돌 감지 및 해결](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [트랜잭션 게시에 대 한 데이터 충돌 보기 &#40;SQL Server Management Studio&#41;](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)   
+ [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [피어 투 피어 복제에서 충돌 검색](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
- [Queued Updating Conflict Detection and Resolution](transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   
+ [지연 업데이트 충돌 감지 및 해결](transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   
 
   
   

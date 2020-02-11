@@ -1,5 +1,5 @@
 ---
-title: 데이터 원본 뷰 (Cube Structure Tab, Cube Designer) (Analysis Services-다차원 데이터) | Microsoft Docs
+title: 데이터 원본 뷰 (큐브 구조 탭, 큐브 디자이너) (Analysis Services 다차원 데이터) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b5c5f1389e0761ba0665e37e842b23b58c70cfe2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082524"
 ---
 # <a name="data-source-view-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>데이터 원본 뷰(큐브 구조 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
+  
   **데이터 원본 뷰** 창을 사용하여 선택한 큐브와 연결된 데이터 원본 뷰의 테이블 및 열을 볼 수 있습니다. 이 창은 **데이터 원본 뷰** 창에서 **측정값** 창으로 열을 끌어 측정값 그룹 및 측정값을 만드는 데 사용합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **데이터 원본 뷰**  
  선택한 큐브와 연결된 데이터 원본 뷰를 표시합니다.  
   
@@ -32,13 +33,15 @@ ms.locfileid: "66082524"
 ## <a name="diagram-context-menu"></a>다이어그램 상황에 맞는 메뉴  
  다음 옵션은 **데이터 원본 뷰** 창의 다이어그램 배경을 마우스 오른쪽 단추로 클릭하면 표시되는 상황에 맞는 메뉴에서 사용할 수 있습니다.  
   
- **테이블 표시**  
- **테이블 표시** 대화 상자를 표시합니다. **테이블 표시** 대화 상자에 대한 자세한 내용은 [테이블 표시 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](show-table-dialog-box-analysis-services-multidimensional-data.md)를 참조하세요.  
+ **Show Tables**  
+ 
+  **테이블 표시** 대화 상자를 표시합니다. 
+  **테이블 표시** 대화 상자에 대한 자세한 내용은 [테이블 표시 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](show-table-dialog-box-analysis-services-multidimensional-data.md)를 참조하세요.  
   
  **모든 테이블 표시**  
  해당 큐브와 연결된 데이터 원본 뷰의 모든 테이블을 창에 표시합니다.  
   
- **사용 된 테이블만 표시**  
+ **사용된 테이블만 표시**  
  연결된 데이터 원본 뷰의 큐브에서 사용한 테이블만 창에 표시합니다.  
   
  **이름 표시**  
@@ -48,10 +51,13 @@ ms.locfileid: "66082524"
  창에 있는 모든 개체를 선택합니다.  
   
  **테이블 찾기**  
- **테이블 찾기** 대화 상자를 표시합니다. **테이블 찾기** 대화 상자에 대한 자세한 내용은 [테이블 찾기 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](find-table-dialog-box-analysis-services-multidimensional-data.md)를 참조하세요.  
+ 
+  **테이블 찾기** 대화 상자를 표시합니다. 
+  **테이블 찾기** 대화 상자에 대한 자세한 내용은 [테이블 찾기 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](find-table-dialog-box-analysis-services-multidimensional-data.md)를 참조하세요.  
   
  **테이블 정렬**  
- **대각선 레이아웃으로 전환** 또는 **사각형 레이아웃으로 전환**을 선택하여 지정한 레이아웃에 따라 창에 있는 개체를 정렬합니다.  
+ 
+  **대각선 레이아웃으로 전환** 또는 **사각형 레이아웃으로 전환**을 선택하여 지정한 레이아웃에 따라 창에 있는 개체를 정렬합니다.  
   
  **대각선 레이아웃으로 전환**  
  대각선 패턴으로 개체를 정렬하려면 선택합니다.  
@@ -66,32 +72,34 @@ ms.locfileid: "66082524"
 >  이 옵션은 **대각선 레이아웃으로 전환** 을 선택한 경우에만 표시됩니다.  
   
  **데이터 원본 뷰 편집**  
- 해당 개체와 연결된 데이터 원본 뷰에 대한 데이터 원본 뷰 디자이너를 표시합니다. 데이터 원본 뷰 디자이너에 대한 자세한 내용은 [데이터 원본 뷰 디자이너&#40;Analysis Services - 다차원 데이터&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)를 참조하세요.  
+ 해당 개체와 연결된 데이터 원본 뷰에 대한 데이터 원본 뷰 디자이너를 표시합니다. 
+  데이터 원본 뷰 디자이너에 대한 자세한 내용은 [데이터 원본 뷰 디자이너&#40;Analysis Services - 다차원 데이터&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)를 참조하세요.  
   
- **데이터 원본 뷰를 표시 합니다.**  
+ **데이터 원본 뷰 표시 위치**  
  다음 옵션 중 하나를 선택하여 **데이터 원본 뷰** 창의 뷰 모드를 전환할 수 있습니다.  
   
 -   다이어그램  
   
      현재 큐브와 연결된 테이블 및 열의 다이어그램을 표시합니다.  
   
--   trEE  
+-   트리  
   
      현재 큐브와 연결된 테이블 및 열이 포함된 트리 뷰를 표시합니다.  
   
  **복사할 다이어그램 위치**  
  해당 큐브와 연결된 데이터 원본 뷰의 다이어그램 중 하나를 선택하여 **데이터 원본 뷰** 창에 표시합니다.  
   
- **확대/축소**  
+ **Zoom**  
  사용 가능한 확대/축소 옵션을 선택합니다.  
   
- **Properties**  
- **에서 큐브와 연결된 데이터 원본 뷰에 대한** 속성 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 창을 표시합니다.  
+ **속성**  
+ 
+  **에서 큐브와 연결된 데이터 원본 뷰에 대한** 속성 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 창을 표시합니다.  
   
 ## <a name="table-context-menu"></a>테이블 상황에 맞는 메뉴  
  다음 옵션은 **데이터 원본 뷰** 창에서 테이블 또는 뷰 이름을 마우스 오른쪽 단추로 클릭하면 표시되는 상황에 맞는 메뉴에서 사용할 수 있습니다.  
   
- **관련된 테이블 표시**  
+ **관련 테이블 표시**  
  데이터 원본 뷰에서 선택한 테이블과 관련된 테이블을 창에 표시합니다.  
   
  **테이블 숨기기**  
@@ -101,16 +109,18 @@ ms.locfileid: "66082524"
  선택한 테이블에 대한 **데이터 탐색** 대화 상자를 표시합니다.  
   
  **데이터 원본 뷰 편집**  
- 선택한 테이블을 포함하는 데이터 원본 뷰에 대한 데이터 원본 뷰 디자이너를 표시합니다. 데이터 원본 뷰 디자이너에 대한 자세한 내용은 [데이터 원본 뷰 디자이너&#40;Analysis Services - 다차원 데이터&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)를 참조하세요.  
+ 선택한 테이블을 포함하는 데이터 원본 뷰에 대한 데이터 원본 뷰 디자이너를 표시합니다. 
+  데이터 원본 뷰 디자이너에 대한 자세한 내용은 [데이터 원본 뷰 디자이너&#40;Analysis Services - 다차원 데이터&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)를 참조하세요.  
   
- **테이블에서 새 측정값 그룹**  
+ **테이블의 새 측정값 그룹**  
  선택한 테이블을 기반으로 **측정값** 창에서 새 측정값 그룹을 정의합니다.  
   
 > [!NOTE]  
 >  이 옵션은 **측정값** 창의 측정값 그룹이 해당 테이블을 참조하지 않는 경우에만 사용할 수 있습니다.  
   
- **Properties**  
- **에서 선택한 테이블에 대한** 속성 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 창을 표시합니다.  
+ **속성**  
+ 
+  **에서 선택한 테이블에 대한** 속성 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 창을 표시합니다.  
   
 ## <a name="column-context-menu"></a>열 상황에 맞는 메뉴  
  다음 옵션은 **데이터 원본 뷰** 창에서 테이블 또는 뷰의 열 이름을 마우스 오른쪽 단추로 클릭하면 표시되는 상황에 맞는 메뉴에서 사용할 수 있습니다.  
@@ -122,24 +132,28 @@ ms.locfileid: "66082524"
  선택한 열을 포함하는 테이블에 대한 **데이터 탐색** 대화 상자를 표시합니다.  
   
  **데이터 원본 뷰 편집**  
- 선택한 열을 포함하는 데이터 원본 뷰에 대한 데이터 원본 뷰 디자이너를 표시합니다. 데이터 원본 뷰 디자이너에 대한 자세한 내용은 [데이터 원본 뷰 디자이너&#40;Analysis Services - 다차원 데이터&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)를 참조하세요.  
+ 선택한 열을 포함하는 데이터 원본 뷰에 대한 데이터 원본 뷰 디자이너를 표시합니다. 
+  데이터 원본 뷰 디자이너에 대한 자세한 내용은 [데이터 원본 뷰 디자이너&#40;Analysis Services - 다차원 데이터&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)를 참조하세요.  
   
- **Properties**  
- **에서 선택한 열에 대한** 속성 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 창을 표시합니다.  
+ **속성**  
+ 
+  **에서 선택한 열에 대한** 속성 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 창을 표시합니다.  
   
 ## <a name="relationship-context-menu"></a>관계 상황에 맞는 메뉴  
  다음 옵션은 **데이터 원본 뷰** 창에서 관계를 마우스 오른쪽 단추로 클릭하면 표시되는 상황에 맞는 메뉴에서 사용할 수 있습니다.  
   
  **데이터 원본 뷰 편집**  
- 선택한 관계를 포함하는 데이터 원본 뷰에 대한 데이터 원본 뷰 디자이너를 표시합니다. 데이터 원본 뷰 디자이너에 대한 자세한 내용은 [데이터 원본 뷰 디자이너&#40;Analysis Services - 다차원 데이터&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)를 참조하세요.  
+ 선택한 관계를 포함하는 데이터 원본 뷰에 대한 데이터 원본 뷰 디자이너를 표시합니다. 
+  데이터 원본 뷰 디자이너에 대한 자세한 내용은 [데이터 원본 뷰 디자이너&#40;Analysis Services - 다차원 데이터&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)를 참조하세요.  
   
- **Properties**  
- **에서 선택한 관계에 대한** 속성 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 창을 표시합니다.  
+ **속성**  
+ 
+  **에서 선택한 관계에 대한** 속성 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 창을 표시합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [도구 모음 &#40;큐브 구조 탭, 큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [측정값 &#40;큐브 구조 탭, 큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [차원 &#40;큐브 구조 탭, 큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](dimensions-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [큐브 구조 &#40;큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>참고 항목  
+ [큐브 디자이너 &#40;큐브 구조 탭, 큐브 디자이너&#41; &#40;Analysis Services 다차원 데이터&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
+ [측정값 &#40;큐브 구조 탭, 큐브 디자이너&#41; &#40;Analysis Services 다차원 데이터&#41;](measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
+ [차원 &#40;큐브 구조 탭, 큐브 디자이너&#41; &#40;Analysis Services 다차원 데이터&#41;](dimensions-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
+ [큐브 구조 &#40;큐브 디자이너&#41; &#40;Analysis Services 다차원 데이터&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)  
   
   

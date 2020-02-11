@@ -13,18 +13,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 375d8eda6f0863dbe3852f1a88ea2e58ecc85b80
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109428"
 ---
 # <a name="dataset-properties-dialog-box-fields-report-builder"></a>데이터 세트 속성 대화 상자, 필드(보고서 작성기)
-  **데이터 집합 속성** 대화 상자에서 **필드** 를 선택하여 보고서 데이터 집합의 필드 컬렉션을 변경할 수 있습니다. 필드 목록은 자동으로 채워지지만 **필드** 를 사용하여 쿼리와 계산 필드를 추가, 편집 및 삭제할 수도 있습니다.  
   
- 계산 필드는 포함된 데이터 세트에서만 지원됩니다. 자세한 내용은 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)이라는 데이터 집합이 들어 있습니다.  
+  **데이터 세트 속성** 대화 상자에서 **필드**를 선택하여 보고서 데이터 세트의 필드 컬렉션을 변경할 수 있습니다. 필드 목록은 자동으로 채워지지만 **필드** 를 사용하여 쿼리와 계산 필드를 추가, 편집 및 삭제할 수도 있습니다.  
   
-## <a name="options"></a>변수  
+ 계산 필드는 포함된 데이터 세트에서만 지원됩니다. 자세한 내용은 [보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.  
+  
+## <a name="options"></a>옵션  
  **추가**  
  데이터 세트에 새 쿼리나 계산 필드를 추가합니다.  
   
@@ -41,13 +42,13 @@ ms.locfileid: "66109428"
   
  쿼리 필드의 경우 필드 원본은 데이터 세트 쿼리로 검색된 기존 필드의 이름이어야 합니다.  
   
- **식 (fx)**  
+ **식(fx)**  
  새 계산 필드의 식을 추가하거나 변경합니다. 이 단추는 **추가** 를 클릭하고 **계산 필드**를 선택했을 때만 나타납니다.  
   
-## <a name="see-also"></a>관련 항목  
- [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [공유 데이터 집합 또는 포함된 데이터 집합 만들기&#40;보고서 작성기 및 SSRS&#41;](report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [대화 상자, 창 및 마법사에 대한 보고서 작성기 도움말](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+## <a name="see-also"></a>참고 항목  
+ [데이터 세트 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
+ [공유 데이터 집합 또는 포함 된 데이터 집합 &#40;보고서 작성기 및 SSRS를 만듭니다&#41;](report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [대화 상자, 창 및 마법사에 대 한 보고서 작성기 도움말](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [데이터 집합 속성 대화 상자, 옵션 &#40;보고서 작성기&#41;](report-data/dataset-properties-dialog-box-options-report-builder.md)   
  [데이터 집합 속성 대화 상자, 필터 &#40;보고서 작성기&#41;](../../2014/reporting-services/dataset-properties-dialog-box-filters-report-builder.md)   
  [데이터 집합 속성 대화 상자, 매개 변수 &#40;보고서 작성기&#41;](../../2014/reporting-services/dataset-properties-dialog-box-parameters-report-builder.md)   

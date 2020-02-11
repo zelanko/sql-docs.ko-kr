@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 09cccd43b4d20b5be2306c0922ff3bf40ff1b033
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151509"
 ---
 # <a name="lesson-1-basic-navigation-in-sql-server-management-studio"></a>1단원: SQL Server Management Studio의 기본 탐색
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 강력하고 유연한 도구입니다. 그러나 Microsoft Visual Studio를 처음 사용할 경우 올바른 기능에 액세스하는 가장 빠른 방법을 찾는 데 어려움을 겪기도 합니다. 이 단원에서는 창이 연동하여 작업을 보다 쉽게 만드는 디자인 화면을 제공하는 방법을 보여 줍니다. 이 단원의 학습을 마친 후에는 필요 없는 창을 제거하는 방법, 필요한 정보가 있는 창을 빠르게 불러오는 방법, 자주 수행하는 작업을 지원하는 기본 화면을 구성하는 방법을 알 수 있습니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 강력 하 고 유연한 도구입니다. 그러나 Microsoft Visual Studio를 처음 사용할 경우 올바른 기능에 액세스하는 가장 빠른 방법을 찾는 데 어려움을 겪기도 합니다. 이 단원에서는 창이 연동하여 작업을 보다 쉽게 만드는 디자인 화면을 제공하는 방법을 보여 줍니다. 이 단원의 학습을 마친 후에는 필요 없는 창을 제거하는 방법, 필요한 정보가 있는 창을 빠르게 불러오는 방법, 자주 수행하는 작업을 지원하는 기본 화면을 구성하는 방법을 알 수 있습니다.  
   
  이 단원에서는 다음 항목을 다룹니다.  
   

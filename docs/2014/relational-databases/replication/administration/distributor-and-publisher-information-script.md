@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 35b7c489b49a4463dc0b12f1469d1310f5d26fef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63186993"
 ---
 # <a name="distributor-and-publisher-information-script"></a>배포자 및 게시자 정보 스크립트
@@ -25,7 +25,7 @@ ms.locfileid: "63186993"
   
 -   사용자의 게시 데이터베이스 이름을 사용할 수 있도록 `use AdventureWorks2012` 줄을 변경합니다.  
   
--   `exec sp_helparticle @publication='<PublicationName>'` 줄에서 주석(`--`)을 제거하고 \<PublicationName>을 게시 이름으로 바꿉니다.  
+-   `--` 줄에서 주석(`exec sp_helparticle @publication='<PublicationName>'`)을 제거하고 \<PublicationName>을 게시 이름으로 바꿉니다.  
   
 ```  
 --********** Execute at the Distributor in the master database **********--  
@@ -95,7 +95,7 @@ SELECT object_name(object_id) AS tran_published_table, name AS published_column 
 SELECT object_name(object_id) AS merge_published_table, name AS published_column FROM sys.columns WHERE is_merge_published = 1;  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [복제 관리자를 위한 질문과 대답](frequently-asked-questions-for-replication-administrators.md)   
  [sp_get_distributor&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-get-distributor-transact-sql)   
  [sp_helparticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helparticle-transact-sql)   

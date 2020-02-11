@@ -11,14 +11,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9c0534bf3a12aa81a9fc84d0e2c4f82a189748a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150748"
 ---
 # <a name="monitor-sql-server-components"></a>SQL Server 구성 요소 모니터링
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 동적 환경에서 서비스를 제공하기 때문에 모니터링이 매우 중요합니다. 애플리케이션에 있는 데이터가 바뀌고, 사용자가 필요로 하는 액세스 유형이 바뀌고, 사용자가 연결하는 방법이 바뀔 뿐 아니라, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 액세스하는 응용 프로그램의 유형도 바뀔 수 있으나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 메모리나 디스크 공간 같은 시스템 수준의 리소스를 자동으로 관리하므로 시스템 수준의 상세한 수동 튜닝의 필요성은 최소한으로 줄일 수 있습니다. 모니터링을 통해 관리자는 성능 추세를 확인하여 변경이 필요한지 파악할 수 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 동적 환경에서 서비스를 제공하기 때문에 모니터링이 매우 중요합니다. 애플리케이션에 있는 데이터가 바뀌고, 사용자가 필요로 하는 액세스 유형이 바뀌고, 사용자가 연결하는 방법이 바뀔 뿐 아니라, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 액세스하는 애플리케이션의 유형도 바뀔 수 있으나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 메모리나 디스크 공간 같은 시스템 수준의 리소스를 자동으로 관리하므로 시스템 수준의 상세한 수동 튜닝의 필요성은 최소한으로 줄일 수 있습니다. 모니터링을 통해 관리자는 성능 추세를 확인하여 변경이 필요한지 파악할 수 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 구성 요소를 효과적으로 모니터링하려면  
   
@@ -82,9 +82,10 @@ ms.locfileid: "63150748"
   
 -   Distributed Replay Utility  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 작업 모니터  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]작업 모니터  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 그래픽 실행 계획  
+-   
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 그래픽 실행 계획  
   
 -   저장 프로시저  
   
@@ -94,10 +95,12 @@ ms.locfileid: "63150748"
   
 -   추적 플래그  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 모니터링 도구에 대한 자세한 내용은 [성능 모니터링 및 튜닝 도구](performance-monitoring-and-tuning-tools.md)를 참조하세요.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 모니터링 도구에 대한 자세한 내용은 [성능 모니터링 및 튜닝 도구](performance-monitoring-and-tuning-tools.md)를 참조하세요.  
   
 ## <a name="identify-the-components-to-monitor"></a>모니터링할 구성 요소 식별  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 모니터링하기 위한 세 번째 단계는 모니터링할 구성 요소를 식별하는 것입니다. 예를 들어 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 서버를 추적할 경우 추적을 정의하여 특정 이벤트에 대한 데이터를 수집할 수 있습니다. 해당 상황에 적용되지 않는 이벤트는 제외할 수도 있습니다.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 모니터링하기 위한 세 번째 단계는 모니터링할 구성 요소를 식별하는 것입니다. 예를 들어 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 서버를 추적할 경우 추적을 정의하여 특정 이벤트에 대한 데이터를 수집할 수 있습니다. 해당 상황에 적용되지 않는 이벤트는 제외할 수도 있습니다.  
   
 ## <a name="select-metrics-for-monitored-components"></a>모니터링되는 구성 요소의 메트릭 선택  
  모니터링할 구성 요소를 식별했으면 모니터링할 구성 요소의 메트릭을 결정합니다. 예를 들어 추적에 포함할 이벤트를 선택한 후 이벤트에 대한 특정 데이터만 포함하도록 선택할 수 있습니다. 추적에 관련된 데이터로 추적을 제한하면 추적하는 데 필요한 시스템 리소스를 최소한으로 줄일 수 있습니다.  
@@ -120,11 +123,13 @@ ms.locfileid: "63150748"
   
 3.  캡처한 이벤트 데이터를 저장합니다.  
   
-     캡처한 이벤트 데이터를 저장하면 나중에 분석하거나 Distributed Replay Utility 또는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 재생할 수도 있습니다. 캡처한 이벤트 데이터는 원래 분석용으로 만든 도구로 다시 로드할 수 있는 파일에 저장됩니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 이벤트 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 저장할 수 있습니다. 캡처한 이벤트 데이터를 저장하는 것은 성능 기준선을 만들 때 중요합니다. 성능 기준선 데이터를 저장하면 최근 캡처한 이벤트 데이터와 비교하여 성능이 최적인지 확인할 수 있습니다. 자세한 내용은 [SQL Server Profiler 템플릿 및 권한](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)을 참조하세요.  
+     캡처한 이벤트 데이터를 저장하면 나중에 분석하거나 Distributed Replay Utility 또는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 재생할 수도 있습니다. 캡처한 이벤트 데이터는 원래 분석용으로 만든 도구로 다시 로드할 수 있는 파일에 저장됩니다. 
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 이벤트 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 저장할 수 있습니다. 캡처한 이벤트 데이터를 저장하는 것은 성능 기준선을 만들 때 중요합니다. 성능 기준선 데이터를 저장하면 최근 캡처한 이벤트 데이터와 비교하여 성능이 최적인지 확인할 수 있습니다. 자세한 내용은 [SQL Server Profiler 템플릿 및 권한](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)을 참조하세요.  
   
 4.  이벤트를 캡처하도록 설정이 지정된 추적 템플릿을 만듭니다.  
   
-     추적 템플릿에는 이벤트 자체, 이벤트 데이터 및 데이터를 캡처하는 데 사용하는 필터에 대한 정보가 포함됩니다. 이 템플릿을 사용하면 나중에 특정 이벤트 집합을 모니터링할 때 이벤트, 이벤트 데이터 및 필터를 다시 정의할 필요가 없습니다. 예를 들어 교착 상태 수와 교착 상태에 있는 사용자 수를 모니터링할 경우 해당 이벤트, 이벤트 데이터 및 이벤트 필터를 정의하는 템플릿을 만들어 저장해 두면 다음에 교착 상태를 모니터링할 때 해당 필터를 다시 적용할 수 있습니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 추적 템플릿을 이 용도로 사용합니다. 자세한 내용은 [추적 정의 기본값 설정&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md) 및 [추적 템플릿 만들기&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)를 참조하세요.  
+     추적 템플릿에는 이벤트 자체, 이벤트 데이터 및 데이터를 캡처하는 데 사용하는 필터에 대한 정보가 포함됩니다. 이 템플릿을 사용하면 나중에 특정 이벤트 집합을 모니터링할 때 이벤트, 이벤트 데이터 및 필터를 다시 정의할 필요가 없습니다. 예를 들어 교착 상태 수와 교착 상태에 있는 사용자 수를 모니터링할 경우 해당 이벤트, 이벤트 데이터 및 이벤트 필터를 정의하는 템플릿을 만들어 저장해 두면 다음에 교착 상태를 모니터링할 때 해당 필터를 다시 적용할 수 있습니다. 
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 추적 템플릿을 이 용도로 사용합니다. 자세한 내용은 [추적 정의 기본값 설정&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md) 및 [추적 템플릿 만들기&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)를 참조하세요.  
   
 5.  캡처한 이벤트 데이터를 분석합니다.  
   

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6e2e9582e8a279be37e05e9ee13a858abb431987
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63205839"
 ---
 # <a name="delete-a-resource-pool"></a>리소스 풀 삭제
@@ -33,7 +33,7 @@ ms.locfileid: "63205839"
 ###  <a name="LimitationsRestrictions"></a> 제한 사항  
  리소스 관리자 기본 풀 또는 내부 리소스 풀을 삭제할 수 없습니다. 작업 그룹이 들어 있는 리소스 풀은 삭제할 수 없습니다. 자세한 내용은 [Delete a Workload Group](delete-a-workload-group.md)을 참조하세요.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 권한  
  리소스 풀을 삭제하려면 CONTROL SERVER 권한이 필요합니다.  
   
 ##  <a name="DelRPSSMS"></a> 개체 탐색기를 사용하여 리소스 풀 삭제  
@@ -65,9 +65,9 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [리소스 관리자](resource-governor.md)   
- [Resource Governor Resource Pool](resource-governor-resource-pool.md)   
+ [리소스 관리자 리소스 풀](resource-governor-resource-pool.md)   
  [리소스 풀 만들기](create-a-resource-pool.md)   
  [리소스 풀 설정 변경](change-resource-pool-settings.md)   
  [리소스 관리자 작업 그룹](resource-governor-workload-group.md)   

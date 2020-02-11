@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5fdf00d1291180197f66cd6cb23cf27f10659c68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63183023"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQLServer, Resource Pool Stats 개체
@@ -43,14 +43,14 @@ ms.locfileid: "63183023"
 |Target memory (KB)|리소스 풀이 리소스 풀 설정과 서버 상태를 기반으로 확보하려고 시도하는 대상 메모리 양(KB)입니다.|  
 |Disk Read IO/sec|마지막 1초 동안 수행된 디스크에서 읽기 작업의 수입니다.|  
 |Disk Read IO Throttled/sec|마지막 1초 동안 제한된 읽기 작업의 수입니다.|  
-|Disk Read Bytes/sec|마지막 1초 동안 디스크에서 읽은 바이트 수입니다.|  
+|디스크 읽기 바이트/초|마지막 1초 동안 디스크에서 읽은 바이트 수입니다.|  
 |Avg Disk Read IO (ms)|디스크에서 읽기 작업의 평균 시간(밀리초)입니다.|  
 |Disk Write IO/sec|마지막 1초 동안 수행된 디스크에 쓰기 작업의 수입니다.|  
 |Disk Write IO Throttled/sec|마지막 1초 동안 제한된 쓰기 작업의 수입니다.|  
-|Disk Write Bytes/sec|마지막 1초 동안 디스크에 쓴 바이트 수입니다.|  
+| 디스크 쓰기 바이트/초|마지막 1초 동안 디스크에 쓴 바이트 수입니다.|  
 |Avg Disk Write IO (ms)|디스크에 쓰기 작업의 평균 시간(밀리초)입니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [리소스 사용 모니터링&#40;시스템 모니터&#41;](monitor-resource-usage-system-monitor.md)   
  [SQL Server, Workload Group Stats 개체](sql-server-workload-group-stats-object.md)   
  [리소스 관리자](../resource-governor/resource-governor.md)  

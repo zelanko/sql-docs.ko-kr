@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2cf214691c2bcffeb617d3f7534fac94f8941db5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144502"
 ---
 # <a name="open-log-file-viewer"></a>로그 파일 뷰어 열기
@@ -24,7 +24,7 @@ ms.locfileid: "63144502"
   
 -   감사 컬렉션  
   
--   데이터 컬렉션  
+-   데이터 수집  
   
 -   데이터베이스 메일  
   
@@ -40,7 +40,7 @@ ms.locfileid: "63144502"
   
  로그 파일 뷰어는 보려는 정보에 따라 여러 방법으로 열 수 있습니다.  
   
-##  <a name="BeforeYouBegin"></a> Permissions  
+##  <a name="BeforeYouBegin"></a> 권한  
  온라인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 로그 파일에 액세스하려면 securityadmin 고정 서버 역할의 멤버 자격이 필요합니다.  
   
  오프라인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 로그 파일에 액세스하려면 **Root\Microsoft\SqlServer\ComputerManagement10** WMI 네임스페이스 및 로그 파일이 저장된 폴더 모두에 대한 읽기 권한이 있어야 합니다. 자세한 내용은 [오프라인 로그 파일 보기](view-offline-log-files.md)항목의 보안 섹션을 참조하세요.  
@@ -98,7 +98,7 @@ ms.locfileid: "63144502"
   
      로그에는 **감사 컬렉션** 및 **Windows NT**가 포함됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [로그 파일 뷰어](log-file-viewer.md)   
  [SQL Server Audit&#40;데이터베이스 엔진&#41;](../security/auditing/sql-server-audit-database-engine.md)   
  [오프라인 로그 파일 보기](view-offline-log-files.md)  

@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 920cc72a9d99da61575249559661c01826b0e89b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088955"
 ---
 # <a name="ring-buffer-target"></a>링 버퍼 대상
@@ -25,15 +25,15 @@ ms.locfileid: "66088955"
   
 -   첫째 모드는 엄격한 FIFO(선입선출) 모드로서 대상에 할당된 모든 메모리가 사용되면 가장 오래된 이벤트가 삭제됩니다. 기본 모드인 이 모드에서는 occurrence_number 옵션이 0으로 설정됩니다.  
   
--   둘째 모드는 이벤트별 FIFO 모드로서 각 유형별로 지정된 이벤트 수가 유지됩니다. 이 모드에서는 대상에 할당 된 모든 메모리가 사용 되 면 각 유형별로 가장 오래 된 이벤트가 삭제 됩니다. occurrence_number 옵션을 구성하여 각 유형별로 보존할 이벤트 수를 지정할 수 있습니다.  
+-   둘째 모드는 이벤트별 FIFO 모드로서 각 유형별로 지정된 이벤트 수가 유지됩니다. 이 모드에서는 대상에 할당 된 모든 메모리를 사용 하는 경우 각 유형의 가장 오래 된 이벤트가 삭제 됩니다. occurrence_number 옵션을 구성하여 각 유형별로 보존할 이벤트 수를 지정할 수 있습니다.  
   
  다음 표에서는 링 버퍼 대상을 구성하는 데 사용할 수 있는 옵션에 대해 설명합니다.  
   
-|옵션|허용된 값|Description|  
+|옵션|허용되는 값|Description|  
 |------------|--------------------|-----------------|  
-|max_memory|모든 32 비트 정수입니다. 이 값은 선택 사항입니다.|사용 가능한 최대 메모리 크기(KB)입니다. 기존 이벤트는 처음 도달한 제한인 max_event_limit 또는 max_memory에 따라 삭제됩니다. 최대값은 4194303 (kb)입니다. SQL Server의 다른 메모리 소비자에 게 영향을 줄 수 있으므로 제한 GB 범위의 링 버퍼 크기를 설정 하기 전에 신중 하 게 고려 이루어져야|  
+|max_memory|모든 32 비트 정수입니다. 이 값은 선택 사항입니다.|사용 가능한 최대 메모리 크기(KB)입니다. 기존 이벤트는 처음 도달한 제한인 max_event_limit 또는 max_memory에 따라 삭제됩니다. 최대값은 4194303 KB입니다. 에서 다른 메모리 소비자에 게 영향을 줄 수 있으므로 링 버퍼 크기를 GB 범위에 대 한 제한으로 설정 하기 전에 신중 하 게 고려해 야 합니다 SQL Server|  
 |max_event_limit|모든 32 비트 정수입니다. 이 값은 선택 사항입니다.|ring_buffer에 보관되는 최대 이벤트 수입니다. 기존 이벤트는 처음 도달한 제한인 max_event_limit 또는 max_memory에 따라 삭제됩니다. 기본값 = 1000입니다.|  
-|occurrence_number|다음 값 중 하나입니다.<br /><br /> 0(기본값) = 대상에 할당된 모든 메모리가 사용되면 가장 오래된 이벤트가 삭제됩니다.<br /><br /> 32 비트 정수 = 이벤트별 fifo 방식으로 삭제 하기 전까지 유지할 각 유형의 이벤트 개수입니다.<br /><br /> <br /><br /> 이 값은 선택 사항입니다.|사용할 FIFO 모드 및 각 유형별로 버퍼에 기본적으로 보존할 이벤트의 수(0보다 큰 값을 설정한 경우)입니다.|
+|occurrence_number|해당 값은<br /><br /> 0(기본값) = 대상에 할당된 모든 메모리가 사용되면 가장 오래된 이벤트가 삭제됩니다.<br /><br /> 모든 32 비트 정수 = 이벤트 FIFO 기준에 따라 삭제 되기 전에 유지할 각 유형의 이벤트 수입니다.<br /><br /> <br /><br /> 이 값은 선택 사항입니다.|사용할 FIFO 모드 및 각 유형별로 버퍼에 기본적으로 보존할 이벤트의 수(0보다 큰 값을 설정한 경우)입니다.|
 | &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="adding-the-target-to-a-session"></a>세션에 대상 추가  
@@ -74,9 +74,9 @@ WHERE xe.name = 'session_name'
 ```
 
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 
-- [SQL Server Extended Events Targets](../../2014/database-engine/sql-server-extended-events-targets.md)
+- [SQL Server 확장 이벤트 대상](../../2014/database-engine/sql-server-extended-events-targets.md)
 - [sys.dm_xe_session_targets&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql?view=sql-server-2016)
 - [CREATE EVENT SESSION&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql?view=sql-server-2016)
 - [ALTER EVENT SESSION&#40;Transact-SQL&#41;](https://docs.microsoft.com/sql/t-sql/statements/alter-event-session-transact-sql?view=sql-server-2016)

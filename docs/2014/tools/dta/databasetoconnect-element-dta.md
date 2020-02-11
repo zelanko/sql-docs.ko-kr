@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4fef2df598d96b33def41f27345f88226fd4c6b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63185417"
 ---
 # <a name="databasetoconnect-element-dta"></a>DatabaseToConnect 요소(DTA)
@@ -35,9 +35,10 @@ ms.locfileid: "63185417"
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특징|Description|  
+|특성|Description|  
 |--------------------|-----------------|  
-|**데이터 형식 및 길이**|`string`, 길이 제한 없음|  
+|**데이터 형식 및 길이**|
+  `string`, 길이 제한 없음|  
 |**기본값**|없음|  
 |**발생 빈도**|(선택 사항) 각 `TuningOptions` 요소에 한 번만 사용할 수 있습니다.|  
   
@@ -46,15 +47,16 @@ ms.locfileid: "63185417"
 |관계|요소|  
 |------------------|--------------|  
 |**부모 요소**|[TuningOptions 요소&#40;DTA&#41;](tuningoptions-element-dta.md)|  
-|**자식 요소**|없음|  
+|**자식 요소**|None|  
   
-## <a name="remarks"></a>Remarks  
- `DatabaseToConnect`를 사용하여 데이터베이스 엔진 튜닝 관리자가 튜닝 세션을 시작할 때 연결되는 첫 번째 데이터베이스의 이름을 지정할 수 있습니다. 이 요소에서는 데이터베이스를 하나만 지정할 수 있습니다. 여러 데이터베이스 이름을 지정할 경우 데이터베이스 엔진 튜닝 관리자는 오류를 반환합니다.  
+## <a name="remarks"></a>설명  
+ 
+  `DatabaseToConnect`를 사용하여 데이터베이스 엔진 튜닝 관리자가 튜닝 세션을 시작할 때 연결되는 첫 번째 데이터베이스의 이름을 지정할 수 있습니다. 이 요소에서는 데이터베이스를 하나만 지정할 수 있습니다. 여러 데이터베이스 이름을 지정할 경우 데이터베이스 엔진 튜닝 관리자는 오류를 반환합니다.  
   
 ## <a name="example"></a>예제  
  사용 예제를 보려면 [인라인 워크로드가 포함된 XML 입력 파일 예제&#40;DTA&#41;](xml-input-file-sample-with-inline-workload-dta.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 입력 파일 참조&#40;데이터베이스 엔진 튜닝 관리자&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

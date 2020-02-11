@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d202c04a41553b934c175edb7c0afcd907e846e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482543"
 ---
 # <a name="models-master-data-services"></a>모델(Master Data Services)
@@ -31,7 +31,8 @@ ms.locfileid: "65482543"
   
 -   컬렉션  
   
- 모델은 마스터 데이터의 구조를 구성합니다. [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 를 구현하면 그룹이 각각 비슷한 종류의 데이터를 가진 하나 이상의 모델이 있을 수 있습니다. 일반적으로 마스터 데이터는 사용자, 장소, 사물 및 개념의 네 가지 범주 중 하나에 속합니다. 예를 들어 Product 모델을 만들어 제품 관련 데이터를 포함하거나 Customer 모델을 만들어 고객 관련 데이터를 포함할 수 있습니다.  
+ 모델은 마스터 데이터의 구조를 구성합니다. 
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 를 구현하면 그룹이 각각 비슷한 종류의 데이터를 가진 하나 이상의 모델이 있을 수 있습니다. 일반적으로 마스터 데이터는 사용자, 장소, 사물 및 개념의 네 가지 범주 중 하나에 속합니다. 예를 들어 Product 모델을 만들어 제품 관련 데이터를 포함하거나 Customer 모델을 만들어 고객 관련 데이터를 포함할 수 있습니다.  
   
  사용자 및 그룹에 모델 내의 개체를 보고 업데이트할 수 있는 권한을 할당할 수 있습니다. 모델에 사용 권한을 부여하지 않으면 해당 모델이 표시되지 않습니다.  
   
@@ -49,7 +50,8 @@ ms.locfileid: "65482543"
 > [!NOTE]  
 >  파생 계층도 모델 개체지만 이미지에 표시되지 않습니다. 파생 계층은 엔터티 간에 존재하는 도메인 기반 특성 관계에서 파생됩니다. 자세한 내용은 [파생 계층&#40;Master Data Services&#41;](derived-hierarchies-master-data-services.md)을 참조하세요.  
   
- 마스터 데이터는 모델 개체에 포함되는 데이터입니다. [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 마스터 데이터가 엔터티의 멤버로 저장됩니다.  
+ 마스터 데이터는 모델 개체에 포함되는 데이터입니다. 
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 마스터 데이터가 엔터티의 멤버로 저장됩니다.  
   
  모델 개체는 **사용자 인터페이스의** 시스템 관리 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 기능 영역에서 유지 관리됩니다.  
   
@@ -70,20 +72,20 @@ ms.locfileid: "65482543"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|모델을 만들어 마스터 데이터를 구성합니다.|[모델 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)|  
-|기존 모델의 이름을 변경합니다.|[모델 이름 변경 &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-model-name-master-data-services.md)|  
-|기존 모델을 삭제합니다.|[모델 삭제&#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-model-master-data-services.md)|  
+|모델을 만들어 마스터 데이터를 구성합니다.|[모델 &#40;MDS(Master Data Services)를 만듭니다&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)|  
+|기존 모델의 이름을 변경합니다.|[모델 이름 &#40;MDS(Master Data Services)&#41;변경](../../2014/master-data-services/change-a-model-name-master-data-services.md)|  
+|기존 모델을 삭제합니다.|[모델 &#40;MDS(Master Data Services) 삭제&#41;](../../2014/master-data-services/delete-a-model-master-data-services.md)|  
   
 ## <a name="related-content"></a>관련 내용  
   
 -   [Master Data Services 개요](master-data-services-overview-mds.md)  
   
--   [엔터티&#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)  
+-   [엔터티 &#40;MDS(Master Data Services)&#41;](../../2014/master-data-services/entities-master-data-services.md)  
   
--   [특성&#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
+-   [특성 &#40;MDS(Master Data Services)&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   
--   [모델 배포&#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
+-   [모델 &#40;MDS(Master Data Services)&#41;배포](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
--   [모델 개체 권한&#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)  
+-   [모델 개체 사용 권한 &#40;MDS(Master Data Services)&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)  
   
   

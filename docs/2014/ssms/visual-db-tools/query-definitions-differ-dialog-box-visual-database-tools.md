@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 781963ddd2011c9e16cf67fdcd878039527546cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63294455"
 ---
 # <a name="query-definitions-differ-dialog-box-visual-database-tools"></a>쿼리 정의 다름 대화 상자(Visual Database Tools)
@@ -40,7 +40,7 @@ ms.locfileid: "63294455"
 > [!NOTE]  
 >  다이어그램 창과 조건 창을 숨기면 **쿼리 정의 다름** 대화 상자가 나타나지 않습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **무시 단추**  
  이 단추를 선택하면 SQL 문을 받아들여 계속 편집하거나 실행하도록 지정할 수 있습니다. 문을 받아들이면 다이어그램 창과 조건 창이 흐리게 표시됩니다. 이는 SQL 창의 문을 해당 창에서 표현하지 않는다는 사실을 나타냅니다.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "63294455"
 > [!NOTE]  
 >  문이 올바르지만 쿼리 및 뷰 디자이너에서 그래픽 방식으로 나타낼 수 없는 경우 다이어그램 창과 조건 창에 이 문이 표현되지 않더라도 문을 실행할 수 있습니다. 예를 들어, 통합 쿼리를 입력한 경우 문을 실행할 수 있지만 다른 창에는 표현되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [쿼리 및 뷰 디자이너 도구&#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

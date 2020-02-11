@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a0f9ab0767a09016d4f4bc1158988965bfc13b27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63181427"
 ---
 # <a name="implementing-the-ideliveryextension-interface-for-a-delivery-extension"></a>배달 확장 프로그램에 대한 IDeliveryExtension 인터페이스 구현
@@ -27,7 +27,11 @@ ms.locfileid: "63181427"
  ![IDeliveryExtension 인터페이스 프로세스](../../media/bk-ext-02.gif "IDeliveryExtension 인터페이스 프로세스")  
 IDeliveryExtension 인터페이스를 통해 사용자 데이터의 검사가 가능하며 클라이언트에서는 필수 배달 설정에 대한 정보를 얻을 수 있습니다.  
   
- 배달 확장 프로그램 클래스를 만들려면 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> 및 <xref:Microsoft.ReportingServices.Interfaces.IExtension>을 구현합니다. **IDeliveryExtension** 인터페이스를 통해 배달 확장 프로그램에서 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.Deliver%2A> 메서드를 사용하여 보고서 알림을 배달하고 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.ValidateUserData%2A> 메서드를 사용하여 수신되는 확장 프로그램 설정을 검사할 수 있습니다. **IExtension** 인터페이스를 통해서는 배달 확장 프로그램에서 지역화된 확장 프로그램 이름을 구현하고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 파일에 저장된 확장 프로그램별 구성 정보를 처리할 수 있습니다. **IExtension**을 구현하면 배달 확장 프로그램에 <xref:Microsoft.ReportingServices.Interfaces.Extension.LocalizedName%2A> 속성이 포함됩니다. [!INCLUDE[ssRS](../../../includes/ssrs.md)] 배달 확장 프로그램이 **LocalizedName** 속성을 지원하는 것이 좋으며, 그럴 경우 사용자 인터페이스에서 확장 프로그램에 대해 보고서 관리자와 같은 친숙한 이름이 사용자에게 표시됩니다.  
+ 배달 확장 프로그램 클래스를 만들려면 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> 및 <xref:Microsoft.ReportingServices.Interfaces.IExtension>을 구현합니다. 
+  **IDeliveryExtension** 인터페이스를 통해 배달 확장 프로그램에서 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.Deliver%2A> 메서드를 사용하여 보고서 알림을 배달하고 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.ValidateUserData%2A> 메서드를 사용하여 수신되는 확장 프로그램 설정을 검사할 수 있습니다. 
+  **IExtension** 인터페이스를 통해서는 배달 확장 프로그램에서 지역화된 확장 프로그램 이름을 구현하고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 파일에 저장된 확장 프로그램별 구성 정보를 처리할 수 있습니다. 
+  **IExtension**을 구현하면 배달 확장 프로그램에 <xref:Microsoft.ReportingServices.Interfaces.Extension.LocalizedName%2A> 속성이 포함됩니다. 
+  [!INCLUDE[ssRS](../../../includes/ssrs.md)] 배달 확장 프로그램이 **LocalizedName** 속성을 지원하는 것이 좋으며, 그럴 경우 사용자 인터페이스에서 확장 프로그램에 대해 보고서 관리자와 같은 친숙한 이름이 사용자에게 표시됩니다.  
   
  배달 확장 프로그램에서는 **IDeliveryExtension** 인터페이스의 **ExtensionSettings** 속성도 구현해야 합니다. 보고서 서버에서는 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.ExtensionSettings%2A> 속성에 의해 반환된 값을 사용하여 배달 확장 프로그램에 필요한 설정을 평가합니다. 배달 확장 프로그램과 상호 작용하는 클라이언트에서는 보고서 서버 웹 서비스의 <xref:ReportService2010.ReportingService2010.GetExtensionSettings%2A> 메서드를 사용하여 배달 확장 프로그램에 대한 설정 목록을 반환합니다.  
   
@@ -35,7 +39,7 @@ IDeliveryExtension 인터페이스를 통해 사용자 데이터의 검사가 �
   
  예제 **IDeliveryExtension** 클래스 구현은 [SQL Server Reporting Services 제품 예제](https://go.microsoft.com/fwlink/?LinkId=177889)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [배달 확장 프로그램 구현](../delivery-extension/implementing-a-delivery-extension.md)   
  [Reporting Services 확장 라이브러리](../reporting-services-extension-library.md)  
   

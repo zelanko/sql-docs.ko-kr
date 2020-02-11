@@ -15,10 +15,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 24624a5071bad5403afc15259d97754a7feffdcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63288488"
 ---
 # <a name="wmi-provider-for-server-events-classes-and-properties"></a>서버 이벤트용 WMI 공급자 클래스 및 속성
@@ -26,23 +26,23 @@ ms.locfileid: "63288488"
   
  이벤트나 이벤트 그룹에서 쿼리할 수 있는 속성에 대해서는 이벤트 스키마를 참조하십시오. 기본적으로 이벤트 스키마는 다음 디렉터리에 설치 됩니다. [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd.  
   
- 또는 게시 된 이벤트 스키마를 참조할 수 있습니다 [ https://schemas.microsoft.com/sqlserver ](https://go.microsoft.com/fwlink/?linkid=43100)합니다.  
+ 또는에 [https://schemas.microsoft.com/sqlserver](https://go.microsoft.com/fwlink/?linkid=43100)게시 된 이벤트 스키마를 참조할 수 있습니다.  
   
  예를 들어 ALTER_DATABASE 이벤트를 참조하면 부모 이벤트가 DDL_SERVER_LEVEL_EVENTS이고 속성은 `TSQLCommand`와 `DatabaseName`이라는 것을 알 수 있습니다. 또한 이 이벤트는 `SQLInstance`, `PostTime`, `ComputerName`, `SPID` 및 `LoginName` 속성을 상속하며 자식 이벤트가 없습니다.  
   
 > [!NOTE]  
->  DDL과 같은 작업을 수행하는 시스템 저장 프로시저에서 이벤트 알림을 발생시킬 수도 있습니다. 이벤트 알림을 테스트하여 실행된 시스템 저장 프로시저에 대한 응답을 확인합니다. 예를 들어 CREATE TYPE 문 및 **sp_addtype** 저장된 프로시저 모두 CREATE_TYPE 이벤트에서 생성 되는 이벤트 알림을 발생 합니다. 자세한 내용은[DDL 이벤트](../../relational-databases/triggers/ddl-events.md)합니다.  
+>  DDL과 같은 작업을 수행하는 시스템 저장 프로시저에서 이벤트 알림을 발생시킬 수도 있습니다. 이벤트 알림을 테스트하여 실행된 시스템 저장 프로시저에 대한 응답을 확인합니다. 예를 들어 CREATE TYPE 문과 **sp_addtype** 저장 프로시저는 모두 CREATE_TYPE 이벤트에 대해 생성 되는 이벤트 알림을 발생 시킵니다. 자세한 내용은[DDL Events](../../relational-databases/triggers/ddl-events.md)를 참조 하십시오.  
   
  **데이터 정의 언어 이벤트 및 이벤트 그룹**  
   
- ![WMI 공급자 서버 이벤트의 이벤트 트리](../../../2014/database-engine/dev-guide/media/sql-wmi-ddl-events-ktm.gif "WMI 공급자 서버 이벤트의 이벤트 트리")  
+ ![서버 이벤트용 WMI 공급자의 이벤트 트리](../../../2014/database-engine/dev-guide/media/sql-wmi-ddl-events-ktm.gif "서버 이벤트용 WMI 공급자의 이벤트 트리")  
   
  **추적 이벤트 및 이벤트 그룹**  
   
- ![추적 이벤트 및 이벤트 그룹에 속한](../../../2014/database-engine/dev-guide/media/sql-wmi-trc-all-events.gif "추적 이벤트 및 이벤트 그룹")  
+ ![추적 이벤트 및 이벤트 그룹](../../../2014/database-engine/dev-guide/media/sql-wmi-trc-all-events.gif "추적 이벤트 및 이벤트 그룹")  
   
-## <a name="see-also"></a>관련 항목  
- [용 WMI 공급자 서버 이벤트 개념](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)   
+## <a name="see-also"></a>참고 항목  
+ [서버 이벤트 용 WMI 공급자 개념](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)   
  [서버 이벤트용 WMI 공급자에 WQL 사용](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)  
   
   

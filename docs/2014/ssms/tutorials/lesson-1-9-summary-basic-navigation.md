@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f25cc02e61fceb42a8c02919d4deaab42c0ab586
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151507"
 ---
 # <a name="summary-basic-navigation"></a>요약: 기본 탐색
@@ -31,6 +31,6 @@ ms.locfileid: "63151507"
 -   기본 레이아웃을 사용자 지정하려면 **시작 시** 옵션을 설정합니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
- [2단원: TRANSACT-SQL 작성](lesson-2-writing-transact-sql.md)  
+ [2단원: Transact-SQL 작성](lesson-2-writing-transact-sql.md)  
   
   

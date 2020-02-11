@@ -14,13 +14,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7be4c1cc392516ffaf6d1e36fc10b93b517d772
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088866"
 ---
-# <a name="sql-server-extended-events-targets"></a>SQL Server Extended Events Targets
+# <a name="sql-server-extended-events-targets"></a>SQL Server 확장 이벤트 대상
+  
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 확장 이벤트 대상은 이벤트 소비자입니다. 대상은 파일에 기록하거나 이벤트 데이터를 메모리 버퍼에 저장하거나 이벤트 데이터를 집계할 수 있습니다. 대상은 동기적 또는 비동기적으로 데이터를 처리할 수 있습니다.  
   
  확장 이벤트는 대상이 세션당 단 한 번만 이벤트를 수신하도록 설계되어 있습니다.  
@@ -39,11 +40,12 @@ ms.locfileid: "66088866"
   
      잠금 획득 및 잠금 해제와 같이 많은 종류의 이벤트는 쌍으로 발생합니다. 쌍을 이루는 집합에서 지정된 쌍 이벤트가 발생하지 않는 경우를 확인하는 데 사용합니다. 이 대상은 비동기 대상입니다.  
   
--   [Windows (ETW) 용 이벤트 추적](../relational-databases/extended-events/event-tracing-for-windows-target.md)  
+-   [ETW(Windows용 이벤트 추적)](../relational-databases/extended-events/event-tracing-for-windows-target.md)  
   
-     [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 이벤트와 Windows 운영 체제 또는 애플리케이션 이벤트 데이터의 상관 관계를 파악하는 데 사용합니다. 이 대상은 동기 대상입니다.  
+     
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 이벤트와 Windows 운영 체제 또는 애플리케이션 이벤트 데이터의 상관 관계를 파악하는 데 사용합니다. 이 대상은 동기 대상입니다.  
   
--   [Histogram](../../2014/database-engine/histogram-target.md)  
+-   [막대](../../2014/database-engine/histogram-target.md)  
   
      지정된 이벤트 열 또는 동작을 기반으로 지정된 이벤트가 발생한 횟수를 계산하는 데 사용합니다. 이 대상은 비동기 대상입니다.  
   
@@ -51,10 +53,10 @@ ms.locfileid: "66088866"
   
      FIFO(선입선출) 또는 이벤트별 FIFO 방식으로 메모리에 이벤트 데이터를 저장하는 데 사용합니다. 이 대상은 비동기 대상입니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [확장 이벤트](../relational-databases/extended-events/extended-events.md)   
- [SQL Server 확장 이벤트 패키지](../relational-databases/extended-events/sql-server-extended-events-packages.md)   
- [SQL Server Extended Events Sessions](../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
+ [확장 이벤트 패키지 SQL Server](../relational-databases/extended-events/sql-server-extended-events-packages.md)   
+ [확장 이벤트 세션 SQL Server](../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  [SQL Server 확장 이벤트 엔진](../relational-databases/extended-events/sql-server-extended-events-engine.md)  
   
   

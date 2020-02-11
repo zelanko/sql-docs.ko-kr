@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 데이터베이스 마법사 F1 도움말을 가져올 | Microsoft Docs
+title: Analysis Services 데이터베이스 가져오기 마법사 F1 도움말 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,17 +15,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c38d70d73cfd80e15d8418f763f702e6a6eacf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080577"
 ---
 # <a name="import-analysis-services-database-wizard-f1-help"></a>Analysis Services 데이터베이스 가져오기 마법사 F1 도움말
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 9.0 데이터베이스 가져오기 마법사를 사용하여 기존 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트를 생성할 수 있습니다.  
+  의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 9.0 데이터베이스 가져오기 마법사를 사용 하 여 기존 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스에서 프로젝트를 생성할 수 있습니다.  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 9.0 데이터베이스 가져오기 마법사는 다음 단계로 이루어져 있습니다.  
+ 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 9.0 데이터베이스 가져오기 마법사는 다음 단계로 이루어져 있습니다.  
   
--   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트를 생성할 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스 및 데이터베이스 선택  
+-   
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트를 생성할 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스 및 데이터베이스 선택  
   
   
