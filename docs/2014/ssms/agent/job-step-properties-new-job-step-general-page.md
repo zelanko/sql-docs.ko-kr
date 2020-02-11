@@ -13,41 +13,41 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8a957e2032f3be0e48d5bcfa4ed4508775e04477
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62510957"
 ---
 # <a name="job-step-properties-new-job-step-general-page"></a>작업 단계 속성: 새 작업 단계(일반 페이지)
-  이 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계의 속성을 확인하고 변경하거나 새 작업 단계를 정의할 수 있습니다.  
+  이 페이지를 사용 하 여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계의 속성을 확인 하 고 변경 하거나 새 작업 단계를 정의할 수 있습니다.  
   
  이 페이지로 이동하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 개체 탐색기에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 확장한 다음 **작업**을 마우스 오른쪽 단추로 클릭하고 **새 작업**을 클릭한 다음 **단계** 페이지를 선택하고 **새로 만들기**를 클릭합니다. 개체 탐색기에서 작업을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭한 다음 **단계** 를 선택하고 **새로 만들기**, **삽입**또는 **편집**을 클릭하여 이 페이지로 이동할 수도 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **단계 이름**  
  작업 단계의 이름을 설정합니다.  
   
  **형식**  
  작업 단계에서 사용하는 하위 시스템을 설정합니다. 선택한 하위 시스템에 따라 작업 단계 정의에 표시되는 옵션이 달라집니다.  
   
- **다음 계정으로 실행**  
+ **다음으로 실행**  
  작업 단계에 사용할 프록시 계정을 설정합니다. sysadmin 고정 서버 역할의 멤버는 **SQL 에이전트 서비스 계정**도 지정할 수 있습니다.  
   
- **데이터베이스 백업**  
+ **Database**  
  작업 단계가 실행되는 데이터베이스를 설정합니다. 일부 작업 단계 유형에 대해서는 이 옵션을 사용할 수 없습니다.  
   
- **Command**  
+ **명령**  
  작업 단계에서 실행하는 명령을 설정합니다.  
   
 ## <a name="options-for-transact-sql-job-steps"></a>Transact-SQL 작업 단계 옵션  
- **파일**  
+ **열기**  
  파일에서 명령을 로드합니다.  
   
  **모두 선택**  
  명령의 텍스트를 선택합니다.  
   
- **복사**  
+ **Copy**  
  선택한 텍스트를 클립보드에 복사합니다.  
   
  **붙여넣기**  
@@ -59,9 +59,10 @@ ms.locfileid: "62510957"
 ## <a name="options-for-activex-script-job-steps"></a>ActiveX 스크립트 작업 단계 옵션  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 이후 버전에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에이전트에서 ActiveX 스크립팅 하위 시스템이 제거됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.  
+>  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 이후 버전에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에이전트에서 ActiveX 스크립팅 하위 시스템이 제거됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.  
   
- **VBScript**  
+ **Vba**  
  작업 단계에 사용할 언어로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic Scripting Edition을 지정합니다.  
   
  **JScript**  
@@ -70,13 +71,13 @@ ms.locfileid: "62510957"
  **기타**  
  다른 스크립트 언어로 작성된 작업 단계에 사용할 언어 이름을 입력합니다.  
   
- **파일**  
+ **열기**  
  파일에서 명령을 로드합니다.  
   
  **모두 선택**  
  명령의 텍스트를 선택합니다.  
   
- **복사**  
+ **Copy**  
  선택한 텍스트를 복사합니다.  
   
  **붙여넣기**  
@@ -86,26 +87,26 @@ ms.locfileid: "62510957"
  **성공한 명령의 프로세스 종료 코드**  
  성공을 나타내기 위해 명령에서 반환하는 종료 코드를 입력합니다.  
   
- **파일**  
+ **열기**  
  파일에서 명령을 로드합니다.  
   
  **모두 선택**  
  명령의 텍스트를 선택합니다.  
   
- **복사**  
+ **Copy**  
  선택한 텍스트를 복사합니다.  
   
  **붙여넣기**  
  클립보드의 내용을 붙여 넣습니다.  
   
 ## <a name="options-for-powershell-job-steps"></a>PowerShell 작업 단계 옵션  
- **파일**  
+ **열기**  
  파일로부터 스크립트를 로드합니다.  
   
  **모두 선택**  
  스크립트의 텍스트를 선택합니다.  
   
- **복사**  
+ **Copy**  
  선택한 텍스트를 복사합니다.  
   
  **붙여넣기**  
@@ -115,7 +116,7 @@ ms.locfileid: "62510957"
  **모두 선택**  
  명령의 텍스트를 선택합니다.  
   
- **복사**  
+ **Copy**  
  선택한 텍스트를 복사합니다.  
   
  **붙여넣기**  
@@ -125,20 +126,20 @@ ms.locfileid: "62510957"
  **모두 선택**  
  명령의 텍스트를 선택합니다.  
   
- **복사**  
+ **Copy**  
  선택한 텍스트를 복사합니다.  
   
  **붙여넣기**  
  클립보드의 내용을 붙여 넣습니다.  
   
 ## <a name="options-for-replication-queue-reader-job-steps"></a>복제 큐 판독기 작업 단계 옵션  
- **데이터베이스 백업**  
+ **Database**  
  작업 단계에 사용할 데이터베이스입니다.  
   
  **모두 선택**  
  명령의 텍스트를 선택합니다.  
   
- **복사**  
+ **Copy**  
  선택한 텍스트를 복사합니다.  
   
  **붙여넣기**  
@@ -148,7 +149,7 @@ ms.locfileid: "62510957"
  **모두 선택**  
  명령의 텍스트를 선택합니다.  
   
- **복사**  
+ **Copy**  
  선택한 텍스트를 복사합니다.  
   
  **붙여넣기**  
@@ -158,7 +159,7 @@ ms.locfileid: "62510957"
  **모두 선택**  
  명령의 텍스트를 선택합니다.  
   
- **복사**  
+ **Copy**  
  선택한 텍스트를 복사합니다.  
   
  **붙여넣기**  
@@ -174,7 +175,7 @@ ms.locfileid: "62510957"
  **모두 선택**  
  명령의 텍스트를 선택합니다.  
   
- **복사**  
+ **Copy**  
  선택한 텍스트를 복사합니다.  
   
  **붙여넣기**  
@@ -184,16 +185,16 @@ ms.locfileid: "62510957"
  **Server**  
  작업 단계를 실행할 서버를 선택합니다.  
   
- **데이터베이스**  
+ **Database**  
  작업 단계에 사용할 데이터베이스입니다.  
   
- **파일**  
+ **열기**  
  파일에서 명령을 로드합니다.  
   
  **모두 선택**  
  명령의 텍스트를 선택합니다.  
   
- **복사**  
+ **Copy**  
  선택한 텍스트를 복사합니다.  
   
  **붙여넣기**  
@@ -202,10 +203,12 @@ ms.locfileid: "62510957"
 ## <a name="options-for-integration-services-package-execution-job-steps"></a>Integration Services 패키지 실행 작업 단계 옵션  
   
 ### <a name="general-tab"></a>일반 탭  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) 패키지가 있는 위치와 사용할 인증 모드를 지정합니다. 이 탭을 선택하면 다음 옵션을 사용할 수 있습니다.  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) 패키지가 있는 위치와 사용할 인증 모드를 지정합니다. 이 탭을 선택하면 다음 옵션을 사용할 수 있습니다.  
   
  **패키지 원본**  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지가 저장된 위치를 지정합니다. 다음 중 하나를 선택합니다.  
+ 
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지가 저장된 위치를 지정합니다. 다음 중 하나를 선택합니다.  
   
 -   **SQL Server**  
   
@@ -214,16 +217,20 @@ ms.locfileid: "62510957"
 -   **SSIS 패키지 저장소**  
   
  **Server**  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지가 저장된 서버 이름을 입력합니다. 이 옵션은 **패키지 원본** 에 대해 **SQL Server** 또는 **SSIS 패키지 저장소**를 지정한 경우에만 사용할 수 있습니다.  
+ 
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지가 저장된 서버 이름을 입력합니다. 이 옵션은 **패키지 원본** 에 대해 **SQL Server** 또는 **SSIS 패키지 저장소**를 지정한 경우에만 사용할 수 있습니다.  
   
  **Windows 인증 사용**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 시 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 인증이 사용됩니다.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 시 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 인증이 사용됩니다.  
   
  **SQL Server 인증 사용**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증이 사용됩니다. 이 인증 방법을 선택하는 경우 해당 **사용자 이름** 과 **암호**를 입력합니다.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증이 사용됩니다. 이 인증 방법을 선택하는 경우 해당 **사용자 이름** 과 **암호**를 입력합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증은 이전 버전과의 호환성을 위해 제공됩니다. 보안 향상을 위해 가능하면 Windows 인증을 사용합니다.  
+>  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증은 이전 버전과의 호환성을 위해 제공됩니다. 보안 향상을 위해 가능하면 Windows 인증을 사용합니다.  
   
  **패키지**  
  패키지 위치를 입력합니다.  
@@ -232,7 +239,8 @@ ms.locfileid: "62510957"
 >  암호로 보호된 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지의 경우 **구성** 탭을 클릭하여 **패키지 암호** 대화 상자에 암호를 입력합니다. 그렇지 않으면 암호로 보호된 패키지를 실행하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업이 실패합니다.  
   
 ### <a name="configurations-tab"></a>구성 탭  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지의 구성 옵션을 지정합니다. 이 탭을 선택하면 다음 옵션을 사용할 수 있습니다.  
+ 
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지의 구성 옵션을 지정합니다. 이 탭을 선택하면 다음 옵션을 사용할 수 있습니다.  
   
  **구성 파일**  
  패키지의 구성 파일을 나열합니다.  
@@ -285,10 +293,10 @@ ms.locfileid: "62510957"
  **유효성 검사 경고 발생 시 패키지 실패**  
  유효성 검사 경고가 발생하는 경우 패키지 실행이 실패하도록 하려면 이 옵션을 선택합니다.  
   
- **패키지를 실행하지 않고 유효성 검사**  
+ **실행 하지 않고 패키지 유효성 검사**  
  작업 단계에서 패키지를 실행하지 않고 유효성을 검사하도록 하려면 이 옵션을 선택합니다.  
   
- **최대 동시 실행 파일 수**  
+ **최대 동시 실행 파일**  
  한 번에 실행할 수 있는 최대 실행 파일 수입니다.  
   
  **패키지 검사점 사용**  
@@ -300,10 +308,10 @@ ms.locfileid: "62510957"
  **...**  
  패키지 검사점 파일을 찾아봅니다.  
   
- **다시 시작 옵션 무시**  
+ **다시 시작 옵션 재정의**  
  이 작업 단계에 대해 패키지에 지정된 것과 다른 다시 시작 옵션을 지정하려면 이 옵션을 선택합니다.  
   
- **다시 시작 옵션**  
+ **Restart 옵션**  
  패키지가 다시 시작될 때 수행할 동작을 선택합니다.  
   
 ### <a name="logging-tab"></a>로깅 탭  
@@ -324,7 +332,7 @@ ms.locfileid: "62510957"
  **속성 경로**  
  속성 경로를 표시하거나 변경합니다.  
   
- **Value**  
+ **값**  
  속성 값을 표시하거나 변경합니다.  
   
  **제거**  
@@ -333,7 +341,7 @@ ms.locfileid: "62510957"
 ### <a name="verification-tab"></a>확인 탭  
  이 탭에서 작업 단계의 확인 옵션을 선택합니다.  
   
- **서명된 패키지만 실행**  
+ **서명 된 패키지만 실행**  
  서명된 패키지만 실행합니다. 이 옵션을 선택하면 패키지가 서명되지 않은 경우 작업 단계가 실패합니다.  
   
  **패키지 빌드 확인**  
@@ -366,7 +374,7 @@ ms.locfileid: "62510957"
  **명령줄**  
  이 패키지에 사용할 명령줄 옵션을 입력합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [작업 단계 관리](manage-job-steps.md)   
  [패키지에 대 한 SQL Server 에이전트 작업](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)   
  [복제 에이전트 관리](../../relational-databases/replication/agents/replication-agent-administration.md)  

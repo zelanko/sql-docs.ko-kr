@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e855b9de09727a4437cad99a2534aee9d960298b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62519307"
 ---
 # <a name="event-tracing-for-windows-target"></a>Windows용 이벤트 추적 대상
@@ -48,7 +48,7 @@ ms.locfileid: "62519307"
   
  다음 표에서는 ETW 대상을 구성하는 데 사용할 수 있는 옵션에 대해 설명합니다.  
   
-|옵션|허용된 값|Description|  
+|옵션|허용되는 값|Description|  
 |------------|--------------------|-----------------|  
 |default_xe_session_name|최대 256자까지의 모든 문자열. 이 값은 선택 사항입니다.|확장 이벤트 세션 이름입니다. 기본적으로 이 이름은 XE_DEFAULT_ETW_SESSION입니다.|  
 |default_etw_session_logfile_path|최대 256자까지의 모든 문자열. 이 값은 선택 사항입니다.|확장 이벤트 세션의 로그 파일에 대한 경로입니다. 기본적으로 이 경로는 %TEMP%\ XEEtw.etl입니다.|  
@@ -86,7 +86,7 @@ ADD TARGET package0.etw_classic_sync_target
   
  데이터를 보는 방법을 비롯한 ETW 대상을 사용하는 방법을 보여 주는 전체 예에 대한 자세한 내용은 [확장 이벤트를 사용하여 시스템 작업 모니터링](monitor-system-activity-using-extended-events.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 확장 이벤트 대상](../../database-engine/sql-server-extended-events-targets.md)   
  [sys.dm_xe_session_targets&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
  [CREATE EVENT SESSION&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   

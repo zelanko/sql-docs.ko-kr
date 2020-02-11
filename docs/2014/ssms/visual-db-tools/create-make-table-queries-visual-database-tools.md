@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f53a0cdb7ccc30afb425197d12dad2b9ca5fa345
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676312"
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>테이블 만들기 쿼리 만들기(Visual Database Tools)
@@ -59,13 +59,15 @@ WHERE country = 'UK'
   
 1.  하나 이상의 원본 테이블을 다이어그램 창에 추가합니다.  
   
-2.  **쿼리 디자이너** 메뉴에서 **형식 변경**을 가리킨 다음 **테이블 만들기**를 클릭합니다.  
+2.  
+  **쿼리 디자이너** 메뉴에서 **형식 변경**을 가리킨 다음 **테이블 만들기**를 클릭합니다.  
   
-3.  **테이블 만들기** 대화 상자에서 대상 테이블의 이름을 입력합니다. 쿼리 및 뷰 디자이너는 이 이름이 이미 사용되고 있는지와 사용자에게 테이블을 만들 수 있는 권한이 있는지를 확인하지 않습니다.  
+3.  
+  **테이블 만들기** 대화 상자에서 대상 테이블의 이름을 입력합니다. 쿼리 및 뷰 디자이너는 이 이름이 이미 사용되고 있는지와 사용자에게 테이블을 만들 수 있는 권한이 있는지를 확인하지 않습니다.  
   
      다른 데이터베이스에 대상 테이블을 만들려면 대상 데이터베이스의 이름, 소유자(필요한 경우) 및 테이블의 이름을 포함하는 정규화된 테이블 이름을 지정합니다.  
   
-4.  쿼리에 열을 추가하여 복사할 열을 지정합니다. 자세한 내용은 [쿼리에 열 추가&#40;Visual Database Tools&#41;](visual-database-tools.md)를 참조하세요. 열을 쿼리에 추가한 경우에만 열이 복사됩니다. 행 전체를 복사 하려면 선택  **\* (모든 열)** 합니다.  
+4.  쿼리에 열을 추가하여 복사할 열을 지정합니다. 자세한 내용은 [쿼리에 열 추가&#40;Visual Database Tools&#41;](visual-database-tools.md)를 참조하세요. 열을 쿼리에 추가한 경우에만 열이 복사됩니다. 전체 행을 복사 하려면 ** \* (모든 열)** 을 선택 합니다.  
   
      사용자가 선택한 열이 쿼리 및 뷰 디자이너에서 조건 창의 **열** 열에 추가됩니다.  
   
@@ -82,8 +84,8 @@ WHERE country = 'UK'
   
  테이블 만들기 쿼리를 실행해도 [결과 창](results-pane-visual-database-tools.md)에는 결과가 보고되지 않습니다. 대신, 복사한 행의 수를 나타내는 메시지가 표시됩니다.  
   
-## <a name="see-also"></a>관련 항목  
- [방법 도움말 항목을 쿼리 및 뷰 디자인 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [쿼리 및 뷰 디자인 방법 도움말 항목 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [쿼리 형식&#40;Visual Database Tools&#41;](types-of-queries-visual-database-tools.md)  
   
   

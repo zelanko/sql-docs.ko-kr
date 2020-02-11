@@ -19,14 +19,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9f6da8b7376e03ff5c0ab516aeaef0e6ac538b48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62523630"
 ---
 # <a name="delete-an-alert"></a>Delete an Alert
-  이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고를 삭제하는 방법에 대해 설명합니다.  
+  이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 항목에서는 또는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용 하 여에서 에이전트 경고를 삭제 하는 방법에 대해 설명 합니다.  
   
  **항목 내용**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62523630"
   
      [보안](#Security)  
   
--   **다음을 사용하여 경고를 삭제합니다.**  
+-   **다음을 사용 하 여 경고를 삭제 합니다.**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -49,14 +49,15 @@ ms.locfileid: "62523630"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버만 경고를 삭제할 수 있습니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-delete-an-alert"></a>경고를 삭제하려면  
   
-1.  **개체 탐색기** 에서 더하기 기호를 클릭하여 삭제하려는 SQL Server 에이전트 경고가 포함된 서버를 확장합니다.  
+1.  
+  **개체 탐색기** 에서 더하기 기호를 클릭하여 삭제하려는 SQL Server 에이전트 경고가 포함된 서버를 확장합니다.  
   
 2.  더하기 기호를 클릭하여 **SQL Server 에이전트**를 확장합니다.  
   
@@ -64,7 +65,8 @@ ms.locfileid: "62523630"
   
 4.  삭제할 경고를 마우스 오른쪽 단추로 클릭하고 **삭제**를 선택합니다.  
   
-5.  **개체 삭제** 대화 상자에서 올바른 경고를 선택했는지 확인한 다음 **확인**을 클릭합니다.  
+5.  
+  **개체 삭제** 대화 상자에서 올바른 경고를 선택했는지 확인한 다음 **확인**을 클릭합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
@@ -86,6 +88,6 @@ ms.locfileid: "62523630"
     GO  
     ```  
   
- 자세한 내용은 참조 s[sp_delete_alert &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-alert-transact-sql)합니다.  
+ 자세한 내용은[sp_delete_alert &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-alert-transact-sql)을 참조 하십시오.  
   
   

@@ -11,16 +11,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9560249e07cbd360914b5dab21eb68dc8e7f013f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467247"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 복원 및 복구
   메모리 최적화 테이블이 있는 데이터베이스를 복구하거나 복원하기 위한 기본 메커니즘은 디스크 기반 테이블만 있는 데이터베이스와 비슷합니다. 하지만 디스크 기반 테이블과 달리, 메모리 최적화 테이블은 먼저 메모리에 로드해야만 사용자가 데이터베이스에 액세스할 수 있습니다. 따라서 데이터베이스 복구에 새로운 단계가 추가됩니다. 수정된 데이터 복구 단계는 다음과 같이 변경됩니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 다시 시작되면 각 데이터베이스가 다음 세 단계로 구성된 복구 단계를 거칩니다.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 다시 시작되면 각 데이터베이스가 다음 세 단계로 구성된 복구 단계를 거칩니다.  
   
 1.  분석 단계. 이 단계 중에는 커밋된 트랜잭션과 커밋되지 않은 트랜잭션을 감지하기 위한 패스가 활성 트랜잭션 로그에 작성됩니다. 메모리 내 OLTP 엔진은 로드할 검사점을 식별하고 시스템 테이블 로그 항목을 미리 로드합니다. 또한 일부 파일 할당 로그 레코드도 처리합니다.  
   
@@ -40,7 +41,7 @@ ms.locfileid: "62467247"
   
 -   데이터 파일 스트리밍.  델타 맵 필터가 생성되면 논리적 CPU와 같은 수의 스레드를 사용하여 데이터 파일을 읽습니다. 데이터 파일을 읽는 각 스레드는 데이터 행을 읽고 연결된 델타 맵을 확인한 다음 이 행이 삭제됨으로 표시되지 않은 경우에만 테이블에 행을 삽입합니다. 복구의 이 부분은 아래 설명과 같이 일부 경우에 CPU 바인딩될 수 있습니다.  
   
- ![메모리 액세스에 최적화된 테이블](../../database-engine/media/memory-optimized-tables.gif "Memory-optimized tables.")  
+ ![메모리 액세스에 최적화 된 테이블.](../../database-engine/media/memory-optimized-tables.gif "메모리 최적화 테이블.")  
   
  메모리 액세스에 최적화된 테이블은 일반적으로 I/O 속도로 메모리에 로드할 수 있지만 데이터 행을 메모리에 로드하는 것이 더 느린 경우가 있습니다. 구체적인 경우는 다음과 같습니다.  
   
@@ -53,7 +54,7 @@ ms.locfileid: "62467247"
   
  이 시점에서 데이터베이스 바인딩에 대한 리소스 풀을 만들고 RESTORE WITH RECOVERY를 사용하여 복원된 데이터베이스를 온라인으로 불러옵니다.  데이터베이스를 온라인으로 불러오기 전에 바인딩이 존재하므로 메모리 내 OLTP 메모리 사용이 적절하게 설명됩니다. 이렇게 하려면 데이터베이스를 한 번만 복원해야 합니다. 첫번째 RESTORE 명령은 백업 헤더를 읽기만 하는 정보 제공 명령이며 마지막 명령은 실제 비트 복원 없이 단순히 복구를 트리거합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [메모리 액세스에 최적화된 테이블의 백업, 복원 및 복구](memory-optimized-tables.md)  
   
   

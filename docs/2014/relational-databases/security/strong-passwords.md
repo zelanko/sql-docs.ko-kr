@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 97b13e8ccf7ef331320d15254dde3480331c4bb0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62470360"
 ---
 # <a name="strong-passwords"></a>강력한 암호
@@ -52,7 +52,7 @@ ms.locfileid: "62470360"
   
 -   $ 또는 \@ 문자로 시작하는 경우  
   
- OLE DB 또는 ODBC 연결 문자열에서 사용할 경우 로그인 및 암호는 다음과 같은 문자 [] {}() , ; ?를 포함하지 말아야 함 * ! \@에서 분할된 테이블 또는 인덱스를 만들 수 있습니다. 문자를 포함할 수 없습니다. 이 문자는 연결을 시작하거나 연결 값을 구분하는 데 사용됩니다.  
+ OLE DB 또는 ODBC 연결 문자열에서 사용할 경우 로그인 및 암호는 다음과 같은 문자 [] {}() , ; ?를 포함하지 말아야 함 * ! \@. 문자를 포함할 수 없습니다. 이 문자는 연결을 시작하거나 연결 값을 구분하는 데 사용됩니다.  
   
 ## <a name="related-content"></a>관련 내용  
  [암호 정책](password-policy.md)  

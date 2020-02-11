@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b4518884b3fe17ea3a638ed21210775af7c4921c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62640331"
 ---
 # <a name="move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility"></a>UCP를 한 SQL Server 인스턴스에서 다른 인스턴스로 이동(SQL Server 유틸리티)
@@ -34,7 +34,7 @@ ms.locfileid: "62640331"
   
 5.  UMDW 백업을 새 UCP로 복원합니다. 자세한 내용은 [백업 및 복원으로 데이터베이스 복사](../databases/copy-databases-with-backup-and-restore.md)를 참조하세요.  
   
-6.  인스턴스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 관리할 수 있도록 새 UCP에 등록합니다. 자세한 내용은 [SQL Server 인스턴스 등록&#40;SQL Server 유틸리티&#41;](enroll-an-instance-of-sql-server-sql-server-utility.md)인스턴스에서 다른 인스턴스로 이동하는 방법에 대해 설명합니다.  
+6.  인스턴스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 관리할 수 있도록 새 UCP에 등록합니다. 자세한 내용은 [SQL Server 인스턴스 등록&#40;SQL Server 유틸리티&#41;](enroll-an-instance-of-sql-server-sql-server-utility.md)를 참조하세요.  
   
 7.  필요한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관리되는 인스턴스에 대한 사용자 지정 정책 정의를 구현합니다.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62640331"
   
 9. 데이터를 새로 고치려면 **유틸리티 탐색기**에서 **관리되는 인스턴스** 노드를 마우스 오른쪽 단추로 클릭하고 **새로 고침**을 선택합니다. 목록 뷰 데이터가 **유틸리티 탐색기** 내용 창에 표시됩니다. 자세한 내용은 [리소스 상태 정책 결과 보기&#40;SQL Server 유틸리티&#41;](view-resource-health-policy-results-sql-server-utility.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 유틸리티 기능 및 태스크](sql-server-utility-features-and-tasks.md)   
  [SQL Server 인스턴스 등록&#40;SQL Server 유틸리티&#41;](enroll-an-instance-of-sql-server-sql-server-utility.md)  
   

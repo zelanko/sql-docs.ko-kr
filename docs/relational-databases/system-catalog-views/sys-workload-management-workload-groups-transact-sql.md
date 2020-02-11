@@ -14,10 +14,10 @@ ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
 ms.openlocfilehash: 76b5b09a07189db127c970e75dac2894fdbea1ae
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73633447"
 ---
 # <a name="sysworkload_management_workload_groups-transact-sql"></a>sys. workload_management_workload_groups (Transact-sql)
@@ -26,7 +26,7 @@ ms.locfileid: "73633447"
 
  작업 그룹에 대 한 세부 정보를 반환 합니다.  
   
-|열 이름|데이터 형식|설명|범위|  
+|열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|
 |group_id|**int**|작업 그룹의 고유한 ID입니다. Null을 허용하지 않습니다.||
 |name|**sysname**|작업 그룹의 이름입니다. 는 인스턴스에 대해 고유 해야 합니다.  Null을 허용하지 않습니다.||
@@ -36,7 +36,7 @@ ms.locfileid: "73633447"
 |request_min_resource_grant_percent|**decimal (5, 2)**|요청에 할당 된 리소스의 최소 크기를 지정 합니다. 허용 되는 값 범위는 0.75에서 100 까지입니다.||
 |request_max_resource_grant_percent |**decimal (5, 2)**|요청에 할당 된 리소스의 최대 크기를 지정 합니다.||
 |query_execution_timeout_sec|**int**|쿼리를 취소 하기 전에 허용 되는 실행 시간 (초)입니다.  실행의 반환 단계에 도달 하면 쿼리를 취소할 수 없습니다.  query_execution_timeout_sec에는 대기 하는 데 소요 된 시간이 포함 되지 않습니다.|
-|query_wait_timeout_sec|**int**|사내||
+|query_wait_timeout_sec|**int**|INTERNAL||
 |create_time|**datetime**|작업 그룹이 만들어진 시간입니다. Null을 허용하지 않습니다.||
 modify_time|**datetime**|작업 그룹이 마지막으로 수정 된 시간입니다. Null을 허용하지 않습니다.||
 |&nbsp;||||

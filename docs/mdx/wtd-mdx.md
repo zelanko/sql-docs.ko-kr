@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: eee40829c72394bf95a1bc06540a434a1c74e166
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125809"
 ---
 # <a name="wtd-mdx"></a>Wtd(MDX)
@@ -32,14 +32,14 @@ Wtd( [ Member_Expression ] )
  멤버를 반환하는 유효한 MDX 식입니다.  
   
 ## <a name="remarks"></a>설명  
- 멤버 식을 지정 하지 않으면 기본값이 있으며 수준 유형이 인 첫 번째 계층의 현재 멤버 Time 유형의 첫 번째 차원의 주 (**Time.CurrentMember**) 측정값 그룹에 있습니다.  
+ 멤버 식이 지정 되지 않은 경우 기본값은 측정값 그룹에서 Time (**CurrentMember**) 유형의 첫 번째 차원에 있는 첫 번째 계층의 현재 멤버입니다.  
   
- 합니다 **Wtd** 함수는에 대 한 바로 가기 함수는 [PeriodsToDate](../mdx/periodstodate-mdx.md) 수준에 설정 되어 있는 함수 *주*합니다. 즉, `Wtd(Member_Expression)`은 `PeriodsToDate(Week_Level_Expression,Member_Expression)`과 동일합니다.  
+ **Wtd** 함수는 Level이 *주*로 설정 된 [PeriodsToDate](../mdx/periodstodate-mdx.md) 함수에 대 한 바로 가기 함수입니다. 즉, `Wtd(Member_Expression)`은 `PeriodsToDate(Week_Level_Expression,Member_Expression)`과 동일합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Qtd &#40;MDX&#41;](../mdx/qtd-mdx.md)   
  [Mtd &#40;MDX&#41;](../mdx/mtd-mdx.md)   
  [Ytd &#40;MDX&#41;](../mdx/ytd-mdx.md)   
- [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

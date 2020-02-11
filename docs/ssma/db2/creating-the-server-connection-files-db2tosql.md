@@ -1,5 +1,5 @@
 ---
-title: 서버 연결 파일 (DB2ToSQL) 만들기 | Microsoft Docs
+title: 서버 연결 파일 만들기 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,16 +10,16 @@ ms.assetid: 685419f6-8606-462c-be12-8bace45bede6
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 484b9e12d53d22160358d873ddb2a3dc60d0977e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67989808"
 ---
-# <a name="creating-the-server-connection-files-db2tosql"></a>서버 연결 파일 (DB2ToSQL) 만들기
-스크립트 파일의 서버 섹션에서 또는 별도 서버 연결 파일에 서버 정보를 지정할 수 있습니다. 서버 연결 파일에 대 한 명령줄 매개 변수는 `-c <serverconnectionfile>`합니다. 동일한 서버 id가 스크립트 파일과 서버 연결 파일에 있는 스크립트 파일의 서버 정의 간주 됩니다.  
+# <a name="creating-the-server-connection-files-db2tosql"></a>서버 연결 파일 만들기 (DB2ToSQL)
+서버 정보는 스크립트 파일의 servers 섹션 또는 별도의 서버 연결 파일에서 지정할 수 있습니다. 서버 연결 파일에 대 한 명령줄 매개 변수는, `-c <serverconnectionfile>`입니다. 스크립트 파일 및 서버 연결 파일에 동일한 서버 id가 있는 경우 스크립트 파일의 서버 정의가 고려 됩니다.  
   
-**예제: 1**  
+**예: 1**  
   
 ```  
 <!--Sample of server connection file commands -->  
@@ -74,8 +74,8 @@ ms.locfileid: "67989808"
 ```  
   
 ## <a name="next-step"></a>다음 단계  
-운영 콘솔에서 다음 단계 [SSMA 콘솔 실행 &#40;DB2ToSQL&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)  
+콘솔 운영의 다음 단계에서는 [SSMA 콘솔 &#40;DB2ToSQL를 실행 합니다&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
 [SSMA 콘솔 실행](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
   

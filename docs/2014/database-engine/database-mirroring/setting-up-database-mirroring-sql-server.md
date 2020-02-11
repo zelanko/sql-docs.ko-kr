@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c6b7fcdc3f50b941feac4958daa6dad49fde9eac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754449"
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>데이터베이스 미러링 설정(SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "62754449"
   
 1.  주 서버, 미러 서버 및 미러링 모니터 서버(있는 경우)는 별도의 호스트 시스템에 있는 개별 서버 인스턴스로 호스팅되어야 합니다. 각 서버 인스턴스에는 데이터베이스 미러링 엔드포인트가 필요합니다. 데이터베이스 미러링 엔드포인트를 만들어야 할 경우 다른 서버 인스턴스에 액세스할 수 있는지 확인합니다.  
   
-     서버 인스턴스에서 데이터베이스 미러링에 사용하는 인증 형식은 데이터베이스 미러링 엔드포인트의 속성입니다. 데이터베이스 미러링에서 사용할 수 있는 두 가지 전송 보안 같습니다. Windows 인증 또는 인증서 기반 인증 합니다. 자세한 내용은 [데이터베이스 미러링 및 AlwaysOn 가용성 그룹에 대 한 전송 보안 &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)합니다.  
+     서버 인스턴스에서 데이터베이스 미러링에 사용하는 인증 형식은 데이터베이스 미러링 엔드포인트의 속성입니다. 데이터베이스 미러링에서 사용할 수 있는 두 가지 전송 보안 유형으로 Windows 인증과 인증서 기반 인증이 있습니다. 자세한 내용은 [데이터베이스 미러링에 대 한 전송 보안 및 AlwaysOn 가용성 그룹 &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)를 참조 하세요.  
   
      네트워크 액세스에 대한 요구 사항은 다음과 같은 인증 형태에 따라 달라집니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62754449"
   
          지정된 서버 인스턴스에서 데이터베이스 미러링에 인증서 인증을 사용하려면 시스템 관리자가 아웃바운드 및 인바운드 연결 모두에 인증서를 사용하도록 각 서버 인스턴스를 구성해야 합니다. 이 경우 아웃바운드 연결을 먼저 구성해야 합니다. 자세한 내용은 [데이터베이스 미러링 엔드포인트에 대한 인증서 사용&#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)을 참조하세요.  
   
-2.  미러 서버에 모든 데이터베이스 사용자에 대한 로그인이 있는지 확인하십시오. 자세한 내용은 [로그인 계정 설정 데이터베이스 미러링 또는 AlwaysOn 가용성 그룹에 대 한 &#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)합니다.  
+2.  미러 서버에 모든 데이터베이스 사용자에 대한 로그인이 있는지 확인하십시오. 자세한 내용은 [데이터베이스 미러링에 대 한 로그인 계정 설정 또는&#41;SQL Server &#40;AlwaysOn 가용성 그룹 ](set-up-login-accounts-database-mirroring-always-on-availability.md)을 참조 하세요.  
   
 3.  미러 데이터베이스를 호스팅하는 서버 인스턴스에서 미러링된 데이터베이스에 필요한 환경의 남은 부분을 설정합니다. 자세한 내용은 [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리&#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)을 참조하세요.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62754449"
   
     3.  전체 또는 차등 데이터베이스 백업 이후 수행된 모든 로그 백업을 복원합니다.  
   
-     자세한 내용은 [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)을 참조하세요.  
+     자세한 내용은 [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)을 사용합니다.  
   
     > [!IMPORTANT]  
     >  주 데이터베이스의 백업을 수행한 다음 가능한 빨리 남은 설정 단계를 완료하십시오. 파트너에서 미러링을 시작할 수 있으려면 먼저 원래 데이터베이스에서 현재 로그 백업을 만든 다음 후속 미러 데이터베이스로 복원해야 합니다.  
@@ -93,9 +93,9 @@ ms.locfileid: "62754449"
         >  성능 우선 모드에서는 WITNESS를 OFF로 설정해야 합니다. 자세한 내용은 [쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향&#40;데이터베이스 미러링&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)을 참조하세요.  
   
 > [!NOTE]  
->  사용 하는 예제에 대 한 [!INCLUDE[tsql](../../includes/tsql-md.md)] Microsoft Windows 인증을 사용 하 여 데이터베이스 미러링을 설정 참조 [예제: Windows 인증을 사용하여 데이터베이스 미러링 설정&#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)을 참조하세요.  
+>  Microsoft Windows 인증을 사용하여 데이터베이스 미러링을 설정하기 위해 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용하는 예제는 [예제: Windows 인증을 사용하여 데이터베이스 미러링 설정&#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)을 참조하세요.  
 >   
->  사용 하는 예제에 대 한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 인증서 기반 보안을 사용 하 여 데이터베이스 미러링을 설정 참조 [예제: 인증서를 사용 하 여 데이터베이스 미러링 설정 &#40;TRANSACT-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)합니다.  
+>  Microsoft Windows 인증을 사용하여 데이터베이스 미러링을 설정하기 위해 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용하는 예제는 [예: 인증서를 사용하여 데이터베이스 미러링 설정&#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)을 참조하세요.  
   
  
   
@@ -112,16 +112,16 @@ ms.locfileid: "62754449"
  [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;Transact-SQL&#41;](database-mirroring-establish-session-windows-authentication.md)  
  데이터베이스 미러링을 설정하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 단계에 대해 설명합니다.  
   
- [예: Windows 인증을 사용 하 여 데이터베이스 미러링 설정 &#40;TRANSACT-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)  
+ [예제: Windows 인증을 사용하여 데이터베이스 미러링 설정&#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)  
  Windows 인증을 사용하여 미러링 모니터 서버가 있는 데이터베이스 미러링 세션을 만드는 데 필요한 모든 단계의 예를 포함합니다.  
   
- [예: 인증서를 사용 하 여 데이터베이스 미러링 설정 &#40;TRANSACT-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
+ [예제: 인증서를 사용하여 데이터베이스 미러링 설정&#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
  인증서 기반 인증을 사용하여 미러링 모니터 서버가 있는 데이터베이스 미러링 세션을 만드는 데 필요한 모든 단계의 예를 포함합니다.  
   
- [AlwaysOn 가용성 그룹 또는 데이터베이스 미러링에 대 한 로그인 계정 설정 &#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)  
+ [데이터베이스 미러링을 위한 로그인 계정을 설정 하거나 &#40;SQL Server를 AlwaysOn 가용성 그룹&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)  
  로컬 서버 인스턴스가 아닌 다른 계정을 사용하는 원격 서버 인스턴스의 로그인을 만드는 방법에 대해 설명합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
  **SQL Server Management Studio**  
   
 -   [데이터베이스 미러링 보안 구성 마법사 시작&#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
@@ -154,10 +154,10 @@ ms.locfileid: "62754449"
   
  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링&#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [데이터베이스 미러링: 상호 운용성 및 공존성&#40;SQL Server&#41;](database-mirroring-interoperability-and-coexistence-sql-server.md)   
- [데이터베이스 미러링 및 AlwaysOn 가용성 그룹에 대 한 전송 보안 &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
+ [데이터베이스 미러링 및 AlwaysOn 가용성 그룹 &#40;SQL Server에 대 한 전송 보안&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [서버 네트워크 주소 지정&#40;데이터베이스 미러링&#41;](specify-a-server-network-address-database-mirroring.md)  
   
   

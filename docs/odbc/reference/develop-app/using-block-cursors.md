@@ -1,5 +1,5 @@
 ---
-title: 블록 커서를 사용 하 여 | Microsoft Docs
+title: 블록 커서 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ ms.assetid: 2aad7d6b-216e-47e7-b3cb-f95ad096f21a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 529b71540b4abde5fce868975fcbf2749e31dc8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135536"
 ---
 # <a name="using-block-cursors"></a>블록 커서 사용
-ODBC 3 블록 커서에 대 한 지원 기능이 있습니다. *x*합니다. **SQLFetch** 다중 행 인출 ODBC 3에서 호출 된 경우에 사용할 수 있습니다. *x*경우는 ODBC 2. *x* 응용 프로그램 호출 **SQLFetch**만 단일 행, 정방향 전용 커서가 열립니다. 때 ODBC 3. *x* 응용 프로그램 호출 **SQLFetch** 는 ODBC 2. *x* 드라이버를이 단일 행을 반환 드라이버를 지원 하지 않으면 **SQLExtendedFetch**합니다. 자세한 내용은 [블록 커서, 스크롤 가능 커서 및 이전 버전과 호환성](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) 부록 g:에서 이전 버전과 호환성에 대 한 드라이버 지침입니다.  
+블록 커서에 대 한 지원은 ODBC 3에 기본 제공 됩니다. *x*. **Sqlfetch** 는 ODBC 3에서 호출 될 때 다중 행 페치에 대해서만 사용할 수 있습니다. *x*; ODBC 2 인 경우 *x* 응용 프로그램에서 **sqlfetch**를 호출 하면 단일 행, 앞 으로만 이동 가능한 커서만 열립니다. ODBC 3 인 경우 *x* 응용 프로그램은 ODBC 2에서 **sqlfetch** 를 호출 합니다. *x* 드라이버는 **sqlextendedfetch**를 지원 하지 않는 한 단일 행을 반환 합니다. 자세한 내용은 [블록 커서, 스크롤 가능 커서 및](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) 이전 버전과의 호환성에 대 한 드라이버 지침의 이전 버전과의 호환성을 참조 하세요.  
   
- 블록 커서를 사용 하려면 응용 프로그램은 행 집합 크기 설정, 행 집합 버퍼 (이전 섹션에서 설명), 필요에 따라 SQL_ATTR_ROW_STATUS_PTR 및 SQL_ATTR_ROWS_FETCHED_PTR 문 특성 집합과 호출 바인딩합니다 **SQLFetch**  나 **SQLFetchScroll** 행 블록을 가져올 수 있습니다. 응용 프로그램 행 집합 크기를 변경할 수 있으며 새 행 집합 버퍼 바인딩 (호출 하 여 **SQLBindCol** 바인딩 오프셋을 지정 하거나) 행 인출 된 후에 합니다.  
+ 블록 커서를 사용 하기 위해 응용 프로그램은 행 집합 크기를 설정 하 고, 행 집합 버퍼를 바인딩하고 (이전 섹션에서 설명한 대로), 선택적으로 SQL_ATTR_ROWS_FETCHED_PTR 및 SQL_ATTR_ROW_STATUS_PTR 문 특성을 설정 하 고, **Sqlfetch** 또는 **sqlfetchscroll** 을 호출 하 여 행 블록을 인출 합니다. 행이 인출 된 후에도 응용 프로그램에서 행 집합 크기를 변경 하 고 새 행 집합 버퍼를 바인딩할 수 있습니다 ( **SQLBindCol** 를 호출 하거나 바인드 오프셋을 지정).  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   
@@ -32,4 +32,4 @@ ODBC 3 블록 커서에 대 한 지원 기능이 있습니다. *x*합니다. **S
   
 -   [페치된 행 수 및 상태](../../../odbc/reference/develop-app/number-of-rows-fetched-and-status.md)  
   
--   [SQLGetData 및 블록 커서; curso 차단](../../../odbc/reference/develop-app/sqlgetdata-and-block-cursors.md)
+-   [SQLGetData 및 블록 커서 curso](../../../odbc/reference/develop-app/sqlgetdata-and-block-cursors.md)

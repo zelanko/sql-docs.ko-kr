@@ -17,14 +17,14 @@ ms.assetid: 6070fd58-3237-4c77-a966-5b39ce5d57e4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 637932fed7effb87705b3aa195578cfd506e1454
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67967157"
 ---
 # <a name="append-method-adox-views"></a>Append 메서드(ADOX 보기)
-새로 만듭니다 [뷰](../../../ado/reference/adox-api/view-object-adox.md) 개체를 추가 하는 [뷰](../../../ado/reference/adox-api/views-collection-adox.md) 컬렉션입니다.  
+새 [뷰](../../../ado/reference/adox-api/view-object-adox.md) 개체를 만들어 [Views](../../../ado/reference/adox-api/views-collection-adox.md) 컬렉션에 추가 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,28 +35,28 @@ Views.Append Name, Command
   
 #### <a name="parameters"></a>매개 변수  
  *이름*  
- A **문자열** 만들 뷰 이름을 지정 하는 값입니다.  
+ 만들 뷰의 이름을 지정 하는 **문자열** 값입니다.  
   
- *Command*  
- ADO [명령](../../../ado/reference/ado-api/command-object-ado.md) 만들 뷰를 나타내는 개체입니다.  
+ *명령*  
+ 만들 뷰를 나타내는 ADO [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체입니다.  
   
 ## <a name="remarks"></a>설명  
- 이름 및 특성에 지정 된 데이터 원본에 새 뷰를 만듭니다는 **명령** 개체입니다.  
+ **명령** 개체에 지정 된 이름과 특성을 사용 하 여 데이터 소스에 새 뷰를 만듭니다.  
   
- 사용자 지정 하는 명령 텍스트를 뷰가 아닌 프로시저를 나타내는 경우 동작은 공급자에 따라 달라 집니다. **추가** 공급자 명령 유지를 지원 하지 않는 경우 실패 합니다.  
+ 사용자가 지정 하는 명령 텍스트가 뷰가 아닌 프로시저를 나타내는 경우 동작은 공급자에 따라 달라 집니다. 공급자가 명령 유지를 지원 하지 않으면 **추가** 작업이 실패 합니다.  
   
 > [!NOTE]
->  Microsoft Jet 용 OLE DB Provider를 사용 하는 경우는 **뷰** 컬렉션 **추가** 메서드를 사용 하면 지정 하는 **프로시저** 아닌 **보기**  에 *명령* 매개 변수입니다. **프로시저** 데이터 원본에 추가 되 고 추가할 합니다 **뷰** 컬렉션입니다. 후는 **추가**경우는 **프로시저** 및 **뷰** 컬렉션을 새로 고칠 합니다 **프로시저** 합니다 에서더이상**뷰** 컬렉션에 표시 됩니다는 **프로시저** 컬렉션입니다.  
+>  Microsoft Jet 용 OLE DB 공급자를 사용 하는 경우 **Views** collection **Append** 메서드를 사용 하 여 *명령* 매개 변수의 **뷰가** 아닌 **프로시저** 를 지정할 수 있습니다. **프로시저가** 데이터 원본에 추가 되 고 **Views** 컬렉션에 추가 됩니다. **추가**후 **프로시저 및** **뷰** 컬렉션이 새로 고쳐질 경우 **프로시저** 는 더 이상 **Views** 컬렉션에 없으며 **프로시저** 컬렉션에 표시 됩니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [Views 컬렉션(ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Views Append 메서드 예제 (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
- [Append 메서드 (ADOX 열)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append 메서드 (ADOX 그룹)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
+ [Append 메서드 (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
+ [Append 메서드 (ADOX Groups)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
  [Append 메서드 (ADOX 인덱스)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
  [Append 메서드 (ADOX 키)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
  [Append 메서드 (ADOX 프로시저)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Append 메서드 (ADOX 테이블)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
+ [Append 메서드 (ADOX Tables)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Append 메서드(ADOX 사용자)](../../../ado/reference/adox-api/append-method-adox-users.md)

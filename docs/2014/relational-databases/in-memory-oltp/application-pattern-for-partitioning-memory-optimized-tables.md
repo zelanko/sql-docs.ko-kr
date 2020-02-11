@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f3296d0162136a441d141d32089a674a67e7b5b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62466099"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 분할을 위한 애플리케이션 패턴
@@ -34,7 +34,7 @@ ms.locfileid: "62466099"
   
 -   활성 파티션을 추가합니다.  
   
- ![파티션 전환.](../../database-engine/media/hekaton-partitioned-tables.gif "파티션 전환.")  
+ ![파티션 전환](../../database-engine/media/hekaton-partitioned-tables.gif "파티션 전환.")  
 활성 데이터 유지 관리  
   
  데이터 삭제와 준비 테이블 전환 사이의 시간 중에 누락된 데이터 쿼리가 수행되지 않도록 하려면 활성 주문 삭제로 시작되는 작업을 유지 관리 시간 중에 수행해야 합니다.  
@@ -209,7 +209,7 @@ SELECT OBJECT_NAME( object_id) , partition_number , row_count  FROM sys.dm_db_pa
   WHERE object_id = OBJECT_ID( 'dbo.SalesOrders_cold') AND index_id = 1;  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [메모리 액세스에 최적화된 테이블](memory-optimized-tables.md)  
+## <a name="see-also"></a>참고 항목  
+ [메모리 최적화 테이블](memory-optimized-tables.md)  
   
   

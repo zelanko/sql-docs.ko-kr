@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 164ae15bdd93034ebcca109a01142b3106a78592
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637914"
 ---
 # <a name="install-and-configure-semantic-search"></a>의미 체계 검색 설치 및 구성
@@ -26,7 +26,7 @@ ms.locfileid: "73637914"
 ## <a name="installing-semantic-search"></a>의미 체계 검색 설치  
   
 ###  <a name="HowToCheckInstalled"></a>방법: 의미 체계 검색이 설치 되어 있는지 확인  
- **SERVERPROPERTY&#40;Transact-SQL&#41;** 메타데이터 함수의 [IsFullTextInstalled](/sql/t-sql/functions/serverproperty-transact-sql) 속성을 쿼리합니다.  
+ [SERVERPROPERTY&#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql) 메타데이터 함수의 **IsFullTextInstalled** 속성을 쿼리합니다.  
   
  반환 값이 1이면 전체 텍스트 검색과 의미 체계 검색이 설치되어 있음을 나타내고, 반환 값이 0이면 그렇지 않음을 나타냅니다.  
   
@@ -38,7 +38,7 @@ GO
 ###  <a name="BasicsSemanticSearch"></a>방법: 의미 체계 검색 설치  
  의미 체계 검색을 설치하려면 설치 중에 **설치할 기능** 페이지에서 **검색을 위한 전체 텍스트 및 의미 체계 추출**을 선택합니다.  
   
- 통계 의미 체계 검색은 전체 텍스트 검색을 기반으로 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 이 두 가지 선택적 기능이 함께 설치됩니다.  
+ 통계 의미 체계 검색은 전체 텍스트 검색을 기반으로 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 이 두 가지 선택적 기능이 함께 설치됩니다.  
   
 ## <a name="installing-or-removing-the-semantic-language-statistics-database"></a>의미 체계 언어 통계 데이터베이스 설치 또는 제거  
  의미 체계 검색에는 의미 체계 언어 통계 데이터베이스라고 하는 추가적인 외부 종속성이 있습니다. 이 데이터베이스는 의미 체계 검색에 필요한 통계적 언어 모델을 포함합니다. 단일 의미 체계 언어 통계 데이터베이스에는 의미 체계 인덱싱에 지원되는 모든 언어에 대한 언어 모델이 포함되어 있습니다.  
@@ -63,7 +63,7 @@ GO
   
     -   Microsoft?에서 설치 관리자 패키지를 다운로드 합니다. [ SQL Server?? 2014](https://go.microsoft.com/fwlink/?LinkID=296743) [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 다운로드 센터의 의미 체계 언어 통계 페이지  
   
-2.  **SemanticLanguageDatabase.msi** Windows Installer 패키지를 실행하여 데이터베이스 및 로그 파일을 추출합니다.  
+2.  **Semanticlanguagedatabase.msi** Windows installer 패키지를 실행 하 여 데이터베이스 및 로그 파일을 추출 합니다.  
   
      필요에 따라 대상 디렉터리를 변경할 수 있습니다. 기본적으로 설치 관리자는 32 비트 또는 64 비트 Program Files 폴더에 있는 **Microsoft 의미 체계 언어 데이터베이스** 라는 폴더에 파일을 추출 합니다. MSI 파일에는 압축된 데이터베이스 파일 및 로그 파일이 포함되어 있습니다.  
   
@@ -75,7 +75,8 @@ GO
 >  의미 체계 언어 통계 데이터베이스를 추출할 때 파일 시스템의 기본 위치에 있는 데이터베이스 파일 및 로그 파일에 제한된 사용 권한이 할당됩니다. 따라서 이 파일을 기본 위치에 그대로 둘 경우 데이터베이스에 연결할 수 있는 권한이 없을 수 있습니다. 데이터베이스를 연결하려고 할 때 오류가 발생하는 경우 파일을 이동하거나 파일 시스템 사용 권한이 적절한지 확인하여 수정하세요.  
   
  **2. 의미 체계 언어 통계 데이터베이스를 연결합니다.**  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 사용하거나 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]FOR ATTACH[ 구문으로 ](/sql/t-sql/statements/create-database-sql-server-transact-sql)CREATE DATABASE&#40;SQL Server Transact-SQL&#41;**를 호출하여**  인스턴스에 데이터베이스를 연결합니다. 자세한 내용은 [데이터베이스 분리 및 연결&#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md)을 참조하세요.  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 사용하거나 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]FOR ATTACH[ 구문으로 ](/sql/t-sql/statements/create-database-sql-server-transact-sql)CREATE DATABASE&#40;SQL Server Transact-SQL&#41;**를 호출하여 ** 인스턴스에 데이터베이스를 연결합니다. 자세한 내용은 [데이터베이스 분리 및 연결&#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md)을 참조하세요.  
   
  기본적으로 데이터베이스의 이름은 **semanticsdb**입니다. 필요에 따라 데이터베이스를 연결할 때 데이터베이스에 다른 이름을 지정할 수 있습니다. 이후 단계에서 데이터베이스를 등록할 때 이 이름을 제공해야 합니다.  
   
@@ -122,7 +123,8 @@ GO
   
 ###  <a name="reqinstall"></a>의미 체계 언어 통계 데이터베이스 설치 및 제거에 대 한 요구 사항 및 제한 사항  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스별로 하나의 의미 체계 언어 통계 데이터베이스만 연결하고 등록할 수 있습니다.  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스별로 하나의 의미 체계 언어 통계 데이터베이스만 연결하고 등록할 수 있습니다.  
   
      단일 컴퓨터의 각 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스마다 의미 체계 언어 통계 데이터베이스의 물리적 복사본이 하나씩 필요합니다. 인스턴스마다 하나의 복사본을 연결합니다.  
   

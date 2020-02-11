@@ -1,5 +1,5 @@
 ---
-title: sys.sysreferences (TRANSACT-SQL) | Microsoft Docs
+title: sys. sysreferences (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3edce02f20a16ebd9814f995f00023f8f3b153de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67986487"
 ---
 # <a name="syssysreferences-transact-sql"></a>sys.sysreferences(Transact-SQL)
@@ -36,15 +36,15 @@ ms.locfileid: "67986487"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**constid**|**int**|FOREIGN KEY 제약 조건의 ID입니다.|  
 |**fkeyid**|**int**|참조하는 테이블의 ID입니다.|  
 |**rkeyid**|**int**|참조되는 테이블의 ID입니다.|  
 |**rkeyindid**|**smallint**|참조되는 키 열을 포함하는 참조되는 테이블에 있는 고유 인덱스의 인덱스 ID입니다.|  
 |**keycnt**|**smallint**|키에 있는 열의 수입니다.|  
-|**forkeys**|**varbinary(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**refkeys**|**varbinary(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**forkeys**|**varbinary (32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**refkeys**|**varbinary (32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**fkeydbid**|**smallint**|예약되어 있습니다.|  
 |**rkeydbid**|**smallint**|예약되어 있습니다.|  
 |**fkey1**|**smallint**|참조하는 열의 열 ID입니다.|  
@@ -80,8 +80,8 @@ ms.locfileid: "67986487"
 |**rkey15**|**smallint**|참조되는 열의 열 ID입니다.|  
 |**rkey16**|**smallint**|참조되는 열의 열 ID입니다.|  
   
-## <a name="see-also"></a>관련 항목  
- [시스템 테이블을 시스템 뷰로 매핑 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [호환성 뷰&#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [시스템 테이블을 시스템 뷰로 매핑 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;호환성 뷰](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

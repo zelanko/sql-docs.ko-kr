@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0dd90613851184ad7fcff16ecf0a89875433dbfd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62512385"
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>SQL 추적 이벤트 클래스에 해당하는 확장 이벤트 항목 확인
@@ -77,7 +77,7 @@ ms.locfileid: "62512385"
   
 -   사용자가 구성할 수 있는 SQL 추적 이벤트 클래스(UserConfigurable:1 ~ UserConfigurable:9)의 경우 확장 이벤트에서는 단일 이벤트를 사용하여 이러한 이벤트 클래스를 대체합니다. 이 이벤트의 이름은 user_event입니다. 이 이벤트는 SQL 추적에서 사용되는 것과 동일한 sp_trace_generateevent 저장 프로시저를 사용하여 발생합니다. user_event 이벤트는 저장 프로시저에 전달된 이벤트 ID에 관계없이 반환됩니다. 그러나 event_id 필드는 이벤트 데이터의 일부로 반환됩니다. 이 필드를 사용하여 이벤트 ID를 기반으로 하는 조건자를 만들 수 있습니다. 예를 들어 코드에 UserConfigurable:0(event ID = 82)을 사용하는 경우 세션에 user_event 이벤트를 추가하고 'event_id = 82'라는 조건자를 지정할 수 있습니다. 그에 따라 sp_trace_generateevent 저장 프로시저에서 확장 이벤트의 user_event 이벤트와 해당하는 SQL 추적 이벤트 클래스를 생성하므로 코드를 변경할 필요가 없습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [sp_trace_generateevent&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql)  
   
   

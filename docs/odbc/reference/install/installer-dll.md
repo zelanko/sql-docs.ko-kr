@@ -14,18 +14,18 @@ ms.assetid: e2b92afb-64ce-4ce0-84ad-6a4276646e68
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c1c50c70920b6ca37a51a0ab048fa81344802f20
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68094125"
 ---
 # <a name="installer-dll"></a>설치 관리자 DLL
 > [!NOTE]  
->  Windows XP 및 Windows Server 2003부터 ODBC Windows 운영 체제에 포함 됩니다. 이전 버전의 Windows에서 ODBC를 명시적으로 설치 해야 합니다.  
+>  Windows XP 및 Windows Server 2003부터 ODBC는 Windows 운영 체제에 포함 되어 있습니다. ODBC는 이전 버전의 Windows에만 명시적으로 설치 해야 합니다.  
   
- 설치 관리자 DLL 함수를 설치 및 ODBC 구성 요소를 제거 하 고, 해당 구성 요소에 대 한 레지스트리 정보를 유지 하 고 데이터 원본에 대 한 레지스트리 정보를 유지 관리를 포함 합니다. Microsoft에 의해 작성 되 고 재배포할 수 있습니다. 전체 설명은 설치 관리자 DLL에서에서 함수를 참조 하세요 [Installer DLL API 참조](../../../odbc/reference/syntax/installer-dll-api-reference-function.md)합니다.  
+ 설치 관리자 DLL에는 ODBC 구성 요소를 설치 및 제거 하 고, 이러한 구성 요소에 대 한 레지스트리 정보를 유지 관리 하 고, 데이터 원본에 대 한 레지스트리 정보를 유지 관리 Microsoft에서 작성 되었으며 재배포할 수 있습니다. 설치 관리자 DLL의 함수에 대 한 전체 설명은 [설치 관리자 DLL API 참조](../../../odbc/reference/syntax/installer-dll-api-reference-function.md)를 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ODBC 구성 요소에 대 한 레지스트리 항목](../../../odbc/reference/install/registry-entries-for-odbc-components.md)   
  [데이터 원본에 대한 레지스트리 항목](../../../odbc/reference/install/registry-entries-for-data-sources.md)

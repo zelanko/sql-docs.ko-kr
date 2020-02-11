@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196431"
 ---
 # <a name="create-indexed-views"></a>인덱싱된 뷰 만들기
@@ -42,10 +42,10 @@ ms.locfileid: "68196431"
   
 5.  뷰에 고유 클러스터형 인덱스를 만듭니다.  
   
-###  <a name="Restrictions"></a> 인덱싱된 뷰에 필요한 SET 옵션  
+###  <a name="Restrictions"></a>인덱싱된 뷰에 필요한 SET 옵션  
  쿼리가 실행될 때 다른 SET 옵션이 활성화되어 있으면 같은 식을 계산해도 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 다른 결과가 나올 수 있습니다. 예를 들어 SET 옵션 CONCAT_NULL_YIELDS_NULL이 ON으로 설정된 후 식 **'** abc **'** + NULL의 결과로 NULL 값이 반환됩니다. 그러나 CONCAT_NULL_YIEDS_NULL을 OFF로 설정한 후 같은 식의 결과는 **'** abc **'** 가 됩니다.  
   
- 뷰를 올바르게 유지하고 일관된 결과를 반환하게 하려면 인덱싱된 뷰는 몇 가지 SET 옵션에 대해 고정 값이 필요합니다. 다음 표의 SET 옵션에 나와 있는 값으로 설정 해야 합니다 **RequiredValue** 다음 조건이 발생할 때마다 열:  
+ 뷰를 올바르게 유지하고 일관된 결과를 반환하게 하려면 인덱싱된 뷰는 몇 가지 SET 옵션에 대해 고정 값이 필요합니다. 다음 테이블의 SET 옵션은 다음 조건이 발생할 때마다 **Requiredvalue** 열에 표시 된 값으로 설정 되어야 합니다.  
   
 -   뷰와 뷰의 후속 인덱스가 생성됩니다.  
   
@@ -55,15 +55,15 @@ ms.locfileid: "68196431"
   
 -   쿼리 최적화 프로그램에서 인덱싱된 뷰를 사용하여 쿼리 계획을 만듭니다.  
   
-    |Set 옵션|필요한 값|기본 서버 값|Default<br /><br /> OLE DB 및 ODBC 값|Default<br /><br /> DB-Library 값|  
+    |Set 옵션|필수 값|기본 서버 값|기본값<br /><br /> OLE DB 및 ODBC 값|기본값<br /><br /> DB-Library 값|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
-    |ANSI_NULLS|ON|ON|ON|OFF|  
-    |ANSI_PADDING|ON|ON|ON|OFF|  
-    |ANSI_WARNINGS*|ON|ON|ON|OFF|  
-    |ARITHABORT|ON|ON|OFF|OFF|  
-    |CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|  
+    |ANSI_NULLS|켜기|켜기|켜기|OFF|  
+    |ANSI_PADDING|켜기|켜기|켜기|OFF|  
+    |ANSI_WARNINGS*|켜기|켜기|켜기|OFF|  
+    |ARITHABORT|켜기|켜기|OFF|OFF|  
+    |CONCAT_NULL_YIELDS_NULL|켜기|켜기|켜기|OFF|  
     |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|  
-    |QUOTED_IDENTIFIER|ON|ON|ON|OFF|  
+    |QUOTED_IDENTIFIER|켜기|켜기|켜기|OFF|  
   
      *ANSI_WARNINGS를 ON으로 설정하면 암시적으로 ARITHABORT가 ON으로 설정됩니다.  
   
@@ -86,11 +86,11 @@ ms.locfileid: "68196431"
   
 -   인덱스를 만들 때 IGNORE_DUP_KEY 옵션은 OFF(기본 설정)로 설정되어야 합니다.  
   
--   테이블은 뷰 정의에서 _schema_ **.** _tablename_ 처럼 두 부분으로 구성된 이름으로 참조되어야 합니다.  
+-   테이블은 _스키마_에서 두 부분으로 구성 된 이름으로 참조 되어야 합니다 **.** 뷰 정의의 _tablename_  
   
 -   뷰에서 참조하는 사용자 정의 함수는 WITH SCHEMABINDING 옵션을 사용하여 만들어야 합니다.  
   
--   뷰에서 참조하는 사용자 정의 함수는 두 부분으로 구성된 이름 _schema_ **.** _function_으로 참조되어야 합니다.  
+-   뷰에서 참조 되는 모든 사용자 정의 함수는 두 부분으로 구성 된 이름인 _schema_로 참조 되어야 합니다 **.** _함수_.  
   
 -   사용자 정의 함수의 데이터 액세스 속성은 NO SQL이어야 하고 외부 액세스 속성은 NO여야 합니다.  
   
@@ -113,10 +113,10 @@ ms.locfileid: "68196431"
   
     ||||  
     |-|-|-|  
-    |COUNT|ROWSET 함수(OPENDATASOURCE, OPENQUERY, OPENROWSET 및 OPENXML)|OUTER 조인(LEFT, RIGHT 또는 FULL)|  
+    |개수|ROWSET 함수(OPENDATASOURCE, OPENQUERY, OPENROWSET 및 OPENXML)|OUTER 조인(LEFT, RIGHT 또는 FULL)|  
     |파생 테이블(FROM 절에서 SELECT 문을 지정하여 정의)|자체 조인|SELECT \* 또는 SELECT *table_name*을 사용하여 열 지정*|  
     |DISTINCT|STDEV, STDEVP, VAR, VARP 또는 AVG|CTE(공통 테이블 식)|  
-    |`float`\*를 `text`, `ntext`를 `image`합니다 `XML`, 또는 `filestream` 열|하위 쿼리|순위 함수 또는 집계 창 함수를 포함하는 OVER 절|  
+    |`float`\*`XML` `filestream` ,,,, 또는 열 `text` `ntext` `image`|하위 쿼리|순위 함수 또는 집계 창 함수를 포함하는 OVER 절|  
     |전체 텍스트 조건자(CONTAIN, FREETEXT)|Null 허용 식을 참조하는 SUM 함수|ORDER BY|  
     |CLR 사용자 정의 집계 함수|맨 위로 이동|CUBE, ROLLUP 또는 GROUPING SETS 연산자|  
     |MIN, MAX|UNION, EXCEPT 또는 INTERSECT 연산자|TABLESAMPLE|  
@@ -124,7 +124,7 @@ ms.locfileid: "68196431"
     |스파스 열 집합|인라인 또는 다중 문 테이블 반환 함수|OFFSET|  
     |CHECKSUM_AGG|||  
   
-     \*인덱싱된 뷰 포함 될 수 있습니다 `float` 열 있지만 이러한 열은 클러스터형된 인덱스 키에 포함 될 수 없습니다.  
+     \*인덱싱된 뷰에는 열이 `float` 포함 될 수 있습니다. 그러나 이러한 열은 클러스터형 인덱스 키에 포함 될 수 없습니다.  
   
 -   GROUP BY가 있는 경우 VIEW 정의는 COUNT_BIG(*)을 포함해야 하며 HAVING은 포함할 수 없습니다. 이러한 GROUP BY 제약 조건은 인덱싱된 뷰 정의에만 적용됩니다. 쿼리는 이러한 GROUP BY 제약 조건을 충족하지 않는 경우에도 실행 계획에 인덱싱된 뷰를 사용할 수 있습니다.  
   
@@ -135,12 +135,13 @@ ms.locfileid: "68196431"
   
  데이터 정렬 간의 비유니코드 문자 데이터를 암시적으로 변환하는 작업도 비결정적인 것으로 간주됩니다.  
   
-###  <a name="Considerations"></a> 고려 사항  
+###  <a name="Considerations"></a>고려 사항  
  인덱싱된 뷰의 열에 대한 **large_value_types_out_of_row** 옵션의 설정은 기본 테이블의 해당 열에 대한 설정에서 상속됩니다. 이 값은 [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql)을 통해 설정됩니다. 식으로부터 구성된 열의 기본 설정은 0으로서 큰 값 유형이 행 내부에 저장됨을 의미합니다.  
   
  인덱싱된 뷰는 분할된 테이블에서 만들 수 있으며 자신이 분할될 수 있습니다.  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 인덱싱된 뷰를 사용하지 않게 하려면 쿼리에 OPTION (EXPAND VIEW) 힌트를 포함합니다. 또한 위에 표시된 옵션을 하나라도 잘못 설정하면 최적화 프로그램에서 뷰의 인덱스를 사용할 수 없게 됩니다. OPTION (EXPAND VIEW) 힌트에 대한 자세한 내용은 [SELECT&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)를 참조하세요.  
+ 
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 인덱싱된 뷰를 사용하지 않게 하려면 쿼리에 OPTION (EXPAND VIEW) 힌트를 포함합니다. 또한 위에 표시된 옵션을 하나라도 잘못 설정하면 최적화 프로그램에서 뷰의 인덱스를 사용할 수 없게 됩니다. OPTION (EXPAND VIEW) 힌트에 대한 자세한 내용은 [SELECT&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)를 참조하세요.  
   
  뷰가 삭제되면 뷰에 있는 모든 인덱스도 삭제됩니다. 클러스터형 인덱스가 삭제되면 뷰의 모든 비클러스터형 인덱스 및 자동 생성된 통계가 삭제됩니다. 사용자가 만든 뷰의 통계는 유지됩니다. 비클러스터형 인덱스는 개별적으로 삭제될 수 있습니다. 뷰에서 클러스터형 인덱스를 삭제하면 저장된 결과 집합도 삭제되고 최적화 프로그램이 표준 뷰와 같은 뷰의 처리 단계로 되돌아갑니다.  
   
@@ -148,7 +149,7 @@ ms.locfileid: "68196431"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  데이터베이스에는 CREATE VIEW 권한이 필요하고 뷰를 만들 구성표에는 ALTER 권한이 필요합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
@@ -210,14 +211,14 @@ ms.locfileid: "68196431"
   
  자세한 내용은 [CREATE VIEW&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [CREATE INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
  [SET ANSI_NULLS&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
  [SET ANSI_PADDING&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
  [SET ANSI_WARNINGS&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)   
- [SET ARITHABORT&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-arithabort-transact-sql)   
- [SET CONCAT_NULL_YIELDS_NULL&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql)   
- [SET NUMERIC_ROUNDABORT&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-numeric-roundabort-transact-sql)   
+ [ARITHABORT &#40;Transact-sql&#41;설정](/sql/t-sql/statements/set-arithabort-transact-sql)   
+ [Transact-sql&#41;&#40;CONCAT_NULL_YIELDS_NULL 설정](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql)   
+ [Transact-sql&#41;&#40;NUMERIC_ROUNDABORT 설정](/sql/t-sql/statements/set-numeric-roundabort-transact-sql)   
  [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)  
   
   

@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: df06fb9ccbf4f3683877605e321207f0ca6d997e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196510"
 ---
 # <a name="dml-triggers"></a>DML 트리거
@@ -54,22 +54,22 @@ ms.locfileid: "68196510"
   
  이 표에서는 AFTER 트리거와 INSTEAD OF 트리거의 기능을 비교합니다.  
   
-|기능|AFTER 트리거|INSTEAD OF 트리거|  
+|함수|AFTER 트리거|INSTEAD OF 트리거|  
 |--------------|-------------------|------------------------|  
 |적용 대상|테이블|테이블 및 뷰|  
 |각 테이블이나 뷰에서 가능한 트리거 수|각 트리거 동작(UPDATE, DELETE 및 INSERT)에 대해 여러 개 사용 가능|각 트리거 동작(UPDATE, DELETE 및 INSERT)에 대해 한 개만 사용 가능|  
 |연계 참조|적용되는 제한 없음|연계 참조 무결성 제약 조건이 적용되는 테이블에는 INSTEAD OF UPDATE 트리거와 DELETE 트리거가 허용되지 않습니다.|  
-|실행|이후:<br /><br /> 제약 조건 처리<br />선언적 참조 동작<br />**inserted** 및 **deleted** 테이블 만들기<br />트리거 동작|이전: 제약 조건 처리<br /><br /> 대신에:  트리거 동작<br /><br /> 이후:  **inserted** 및 **deleted** 테이블 만들기|  
-|실행 순서|첫 실행과 마지막 실행을 지정할 수 있음|해당 사항 없음|  
-|`varchar(max)`를 `nvarchar(max)`, 및 `varbinary(max)` 열 참조 **삽입** 하 고 **삭제** 테이블|허용함|허용함|  
-|`text`를 `ntext`, 및 `image` 열 참조 **삽입** 하 고 **삭제** 테이블|허용 안 됨|허용함|  
+|실행|이후:<br /><br /> 제약 조건 처리<br />선언적 참조 동작<br />**inserted** 및 **deleted** 테이블 만들기<br />트리거 동작|이전: 제약 조건 처리<br /><br /> 대신: 트리거 동작<br /><br /> 이후:  **inserted** 및 **deleted** 테이블 만들기|  
+|실행 순서|첫 실행과 마지막 실행을 지정할 수 있음|해당 없음|  
+|`varchar(max)``nvarchar(max)` **inserted** 및 **deleted** 테이블의, 및 `varbinary(max)` 열 참조|허용됨|허용됨|  
+|`text``ntext` **inserted** 및 **deleted** 테이블의, 및 `image` 열 참조|허용되지 않음|허용됨|  
   
  CLR 트리거  
  CLR 트리거는 AFTER 또는 INSTEAD OF 트리거일 수 있습니다. 또한 CLR 트리거는 DDL 트리거일 수 있습니다. CLR 트리거는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저를 실행하는 대신 .NET Framework에서 생성되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 업로드되는 어셈블리 멤버인 관리 코드로 작성된 하나 이상의 메서드를 실행합니다.  
   
 ## <a name="related-tasks"></a>관련 작업  
   
-|태스크|항목|  
+|Task|항목|  
 |----------|-----------|  
 |DML 트리거를 만드는 방법에 대해 설명합니다.|[DML 트리거 만들기](create-dml-triggers.md)|  
 |CLR 트리거를 만드는 방법에 대해 설명합니다.|[CLR 트리거 만들기](create-clr-triggers.md)|  
@@ -82,7 +82,7 @@ ms.locfileid: "68196510"
 |DML 트리거 삭제하거나 사용하지 않도록 설정하는 방법에 대해 설명합니다.|[DML 트리거 삭제 또는 해제](delete-or-disable-dml-triggers.md)|  
 |트리거 보안을 관리하는 방법에 대해 설명합니다.|[트리거 보안 관리](manage-trigger-security.md)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [CREATE TRIGGER&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)   
  [ALTER TRIGGER&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-trigger-transact-sql)   
  [DROP TRIGGER&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-trigger-transact-sql)   

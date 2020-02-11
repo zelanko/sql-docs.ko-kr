@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 3e4f3a84e5001d7485ab590a66ee497522042824
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73658844"
 ---
 # <a name="install-sql-server-language-extensions-on-windows"></a>Windows에 SQL Server 언어 확장 설치
@@ -185,7 +185,7 @@ SQL Server에 포함된 기본 Zulu Open JRE를 설치하지 않고 Program File
 
 서비스를 다시 시작하면 관련 SQL Server 실행 패드 서비스가 자동으로 다시 시작됩니다.
 
-SSMS의 인스턴스에 대해 **다시 시작** 명령을 마우스 오른쪽 단추로 클릭하거나 제어판의 **서비스** 패널을 사용하거나 [SQL Server 구성 관리자](../../relational-databases/sql-server-configuration-manager.md)를 사용하여 서비스를 다시 시작할 수 있습니다.
+SSMS의 인스턴스에 대해 **Restart** 명령을 마우스 오른쪽 단추로 클릭하거나 제어판의 **서비스** 패널을 사용하거나 [SQL Server 구성 관리자](../../relational-databases/sql-server-configuration-manager.md)를 사용하여 서비스를 다시 시작할 수 있습니다.
 
 <a name="register_external_language"></a>
 
@@ -219,7 +219,7 @@ GO
     
 2. **서비스** 패널 또는 SQL Server 구성 관리자를 열고 **SQL Server 실행 패드 서비스**가 실행 중인지 확인합니다. 언어 확장이 설치된 모든 데이터베이스 엔진 인스턴스에 대해 하나의 서비스가 있어야 합니다. 서비스에 대한 자세한 내용은 [확장성 프레임워크](../concepts/extensibility-framework.md)를 참조하세요. 
    
-## <a name="additional-configuration"></a>기타 고려 사항
+## <a name="additional-configuration"></a>추가 구성
 
 확인 단계가 성공하면 SQL Server Management Studio, Azure Data Studio 또는 Visual Studio Code에서 또는 T-SQL 문을 서버로 보낼 수 있는 기타 클라이언트에서 Java 코드를 실행할 수 있습니다.
 

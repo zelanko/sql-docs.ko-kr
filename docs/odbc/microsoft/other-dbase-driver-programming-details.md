@@ -15,15 +15,15 @@ ms.assetid: 1bb9b727-66e8-49e8-9a6b-587ad6217031
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0f0fb1fb9a4c0130ac62f9b4cf0b621f1673b7e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135745"
 ---
 # <a name="other-dbase-driver-programming-details"></a>기타 dBASE 드라이버 프로그래밍 세부 정보
 > [!NOTE]  
->  이 섹션에서는 ODBC 함수 및 기타 프로그래밍 세부 정보에 대 한 dBASE 드라이버 관련 정보를 제공 합니다. 함수에 대 한 일반 정보에서 해당 항목을 참조 하세요 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)합니다.  
+>  이 섹션에서는 ODBC 함수 및 기타 프로그래밍 정보에 대 한 dBASE 드라이버 관련 정보를 제공 합니다. 함수에 대 한 일반 정보는 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)에서 적절 한 항목을 참조 하세요.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

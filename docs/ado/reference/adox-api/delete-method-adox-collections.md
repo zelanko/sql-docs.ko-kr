@@ -1,5 +1,5 @@
 ---
-title: Delete 메서드 (ADOX 컬렉션) | Microsoft Docs
+title: Delete 메서드 (ADOX Collections) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -31,14 +31,14 @@ ms.assetid: e6b6e3a4-8952-4d79-81f4-51019c338374
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: be2aa91cf27d7dc12d3cd0c1e0bf719bd43797ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966436"
 ---
 # <a name="delete-method-adox-collections"></a>Delete 메서드(ADOX 컬렉션)
-컬렉션에서 개체를 제거합니다.  
+컬렉션에서 개체를 제거 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -49,12 +49,12 @@ Collection.Delete Name
   
 #### <a name="parameters"></a>매개 변수  
  *이름*  
- A **Variant** 이름 또는 삭제할 개체의 서 수 위치 (인덱스)를 지정 하는 합니다.  
+ 삭제할 개체의 이름 또는 서 수 위치 (인덱스)를 지정 하는 **Variant** 입니다.  
   
 ## <a name="remarks"></a>설명  
- 오류가 발생 하는 경우는 *이름을* 컬렉션에 존재 하지 않습니다.  
+ 컬렉션에 *이름이* 없는 경우 오류가 발생 합니다.  
   
- 에 대 한 [테이블](../../../ado/reference/adox-api/tables-collection-adox.md) 하 고 [사용자](../../../ado/reference/adox-api/users-collection-adox.md) 컬렉션 공급자를 지원 하지 않는 경우 테이블 또는 사용자를 삭제 각각 오류가 발생 합니다. 에 대 한 [프로시저](../../../ado/reference/adox-api/procedures-collection-adox.md) 하 고 [뷰](../../../ado/reference/adox-api/views-collection-adox.md) 컬렉션 **삭제** 공급자 명령 유지를 지원 하지 않는 경우 실패 합니다.  
+ [테이블](../../../ado/reference/adox-api/tables-collection-adox.md) 및 [사용자](../../../ado/reference/adox-api/users-collection-adox.md) 컬렉션의 경우 공급자가 테이블 또는 사용자 삭제를 각각 지원 하지 않는 경우 오류가 발생 합니다. [프로시저](../../../ado/reference/adox-api/procedures-collection-adox.md) 및 [뷰](../../../ado/reference/adox-api/views-collection-adox.md) 컬렉션의 경우 공급자가 명령 유지를 지원 하지 않으면 **삭제가** 실패 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
   
@@ -64,6 +64,6 @@ Collection.Delete Name
 |[Keys 컬렉션(ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)|[Procedures 컬렉션(ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)|[Tables 컬렉션(ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|  
 |[Users 컬렉션(ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|[Views 컬렉션(ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)||  
   
-## <a name="see-also"></a>관련 항목  
- [Procedures Delete 메서드 예제 (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
+## <a name="see-also"></a>참고 항목  
+ [프로시저 Delete 메서드 예제 (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
  [Views Delete 메서드 예제(VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)

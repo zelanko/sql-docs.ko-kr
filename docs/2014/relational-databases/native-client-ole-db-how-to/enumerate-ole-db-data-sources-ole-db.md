@@ -1,5 +1,5 @@
 ---
-title: OLE DB 데이터 원본 (OLE DB) 열거 | Microsoft Docs
+title: OLE DB 데이터 원본 열거 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d89447c98f8f74e68cd8ef563cbf049b4dcea7d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62468210"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>OLE DB 데이터 원본 열거(OLE DB)
@@ -35,17 +35,22 @@ ms.locfileid: "62468210"
   
 ### <a name="to-enumerate-ole-db-data-sources"></a>OLE DB 데이터 원본을 열거하려면  
   
-1.  `ISourceRowset::GetSourcesRowset`을 호출하여 원본 행 집합을 검색합니다.  
+1.  
+  `ISourceRowset::GetSourcesRowset`을 호출하여 원본 행 집합을 검색합니다.  
   
-2.  `GetColumnInfo::IColumnInfo`를 호출하여 열거자 행 집합에 대한 설명을 찾습니다.  
+2.  
+  `GetColumnInfo::IColumnInfo`를 호출하여 열거자 행 집합에 대한 설명을 찾습니다.  
   
 3.  열 정보를 사용하여 바인딩 구조를 만듭니다.  
   
-4.  `IAccessor::CreateAccessor`를 호출하여 행 집합 접근자를 만듭니다.  
+4.  
+  `IAccessor::CreateAccessor`를 호출하여 행 집합 접근자를 만듭니다.  
   
-5.  `IRowset::GetNextRows`를 호출하여 행을 인출합니다.  
+5.  
+  `IRowset::GetNextRows`를 호출하여 행을 인출합니다.  
   
-6.  `IRowset::GetData`를 호출하여 행 집합의 행 복사본에서 데이터를 검색합니다.  
+6.  
+  `IRowset::GetData`를 호출하여 행 집합의 행 복사본에서 데이터를 검색합니다.  
   
 ## <a name="example"></a>예제  
  ole32.lib를 사용하여 컴파일하고 다음 C++ 코드 목록을 실행합니다. 이 애플리케이션은 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 일부 Windows 운영 체제에서는 (localhost) 또는 (local)을 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름으로 변경해야 합니다. 명명된 인스턴스에 연결하려면 연결 문자열을 L"(local)"에서 L"(local)\\\name"으로 변경합니다. 여기서 name은 명명된 인스턴스입니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 명명된 인스턴스에 설치됩니다. INCLUDE 환경 변수에 sqlncli.h가 들어 있는 디렉터리를 포함해야 합니다.  
