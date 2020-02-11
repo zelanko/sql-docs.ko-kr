@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 10399a26335912a9370aa21a386f58d04d04321e
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72796392"
 ---
 # <a name="create-dml-triggers"></a>DML 트리거 만들기
@@ -34,7 +34,7 @@ ms.locfileid: "72796392"
 ### <a name="limitations-and-restrictions"></a>제한 사항  
  DML 트리거 생성과 관련한 제한 사항 목록은 [CREATE TRIGGER&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)를 참조하세요.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 권한  
  트리거를 생성할 테이블 또는 뷰에 대한 ALTER 권한이 필요합니다.  
   
 ##  <a name="Procedures"></a> DML 트리거를 만드는 방법  
@@ -56,12 +56,12 @@ ms.locfileid: "72796392"
   
 5.  **템플릿 매개 변수 값 지정** 대화 상자에 표시된 매개 변수에 대해 다음 값을 입력합니다.  
   
-    |Execute|ReplTest1|  
+    |매개 변수|값|  
     |---------------|-----------|  
     |작성자|*Your name*|  
     |만든 날짜|*Today's date*|  
     |Description|공급업체의 새 PO를 삽입하기 전에 공급업체의 신용 등급을 확인합니다.|  
-    |Schema_Name|Purchasing|  
+    |Schema_Name|구매|  
     |Trigger_Name|NewPODetail2|  
     |Table_Name|PurchaseOrderDetail|  
     |Data_Modification_Statement|목록에서 UPDATE 및 DELETE를 제거합니다.|  

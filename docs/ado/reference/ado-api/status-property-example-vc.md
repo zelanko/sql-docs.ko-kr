@@ -15,14 +15,14 @@ ms.assetid: 194ce221-49bd-4474-ba34-91453d329381
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 708120992341b0e184cc42d13ebe1f461ecf861a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67916779"
 ---
 # <a name="status-property-example-vc"></a>Status 속성 예제(VC++)
-이 예제에서는 합니다 [상태](../../../ado/reference/ado-api/status-property-ado-recordset.md) 일괄 업데이트가 발생 하기 전에 일괄 처리 작업에서 수정 된 레코드를 표시 하는 속성입니다.  
+이 예에서는 [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) 속성을 사용 하 여 일괄 처리 업데이트를 발생 하기 전에 일괄 처리 작업에서 수정 된 레코드를 표시 합니다.  
   
 ```  
 // BeginStatusCpp.cpp  
@@ -186,5 +186,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Status 속성(ADO 레코드 집합)](../../../ado/reference/ado-api/status-property-ado-recordset.md)

@@ -16,14 +16,14 @@ ms.assetid: c3937d1e-9872-47e5-a22e-b147637f2388
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1c449e2a7c52b069478a07e4e2fa902c3b0527e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919106"
 ---
 # <a name="deleterecord-and-moverecord-methods-example-vb"></a>DeleteRecord 및 MoveRecord 메서드 예제 (VB)
-이 예제에는 복사, 이동, 편집 및 웹 폴더에 게시 된 텍스트 파일의 내용을 삭제 하는 방법을 보여 줍니다. 다른 속성 및 사용 되는 메서드를 포함 [GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md), [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md)합니다 [원본](../../../ado/reference/ado-api/source-property-ado-record.md), 및 [플러시](../../../ado/reference/ado-api/flush-method-ado.md)합니다.  
+이 예제에서는 웹 폴더에 게시 된 텍스트 파일의 내용을 복사, 이동, 편집 및 삭제 하는 방법을 보여 줍니다. 사용 되는 기타 속성 및 메서드에는 [Getchildren](../../../ado/reference/ado-api/getchildren-method-ado.md), [parenturl](../../../ado/reference/ado-api/parenturl-property-ado.md), [Source](../../../ado/reference/ado-api/source-property-ado-record.md)및 [Flush](../../../ado/reference/ado-api/flush-method-ado.md)가 포함 됩니다.  
   
 ```  
 'BeginDeleteRecordVB  
@@ -148,9 +148,9 @@ End Sub
 'EndDeleteRecordVB  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [DeleteRecord 메서드 (ADO)](../../../ado/reference/ado-api/deleterecord-method-ado.md)   
- [플러시 메서드 (ADO)](../../../ado/reference/ado-api/flush-method-ado.md)   
+ [Flush 메서드 (ADO)](../../../ado/reference/ado-api/flush-method-ado.md)   
  [GetChildren 메서드 (ADO)](../../../ado/reference/ado-api/getchildren-method-ado.md)   
  [MoveRecord 메서드 (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)   
  [ParentURL 속성 (ADO)](../../../ado/reference/ado-api/parenturl-property-ado.md)   

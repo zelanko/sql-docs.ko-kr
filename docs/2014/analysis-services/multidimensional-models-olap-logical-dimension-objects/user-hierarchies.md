@@ -26,33 +26,33 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e65da7af45aa2c5dbb18a560b05a5d943a9e64c1
-ms.sourcegitcommit: 6012f4ca7b287d0098a867233d6b511ac5278457
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72811596"
 ---
 # <a name="user-hierarchies"></a>사용자 계층
-  사용자 정의 계층은 차원의 멤버를 계층 구조로 구성 하 고 큐브에서 탐색 경로를 제공 하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 사용 되는 특성의 사용자 정의 계층입니다. 예를 들어 다음 표에서는 시간 차원에 대한 차원 테이블을 정의합니다. 차원 테이블은 Year, Quarter 및 Month라는 3가지 특성을 지원합니다.  
+  사용자 정의 계층은에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 차원의 멤버를 계층 구조로 구성 하 고 큐브에서 탐색 경로를 제공 하는 데 사용 되는 특성의 사용자 정의 계층입니다. 예를 들어 다음 표에서는 시간 차원에 대한 차원 테이블을 정의합니다. 차원 테이블은 Year, Quarter 및 Month라는 3가지 특성을 지원합니다.  
   
 |Year|Quarter|Month|  
 |----------|-------------|-----------|  
-|1999|1/4 1|1월|  
-|1999|1/4 1|2월|  
-|1999|1/4 1|3월|  
-|1999|2 사분기|4월|  
-|1999|2 사분기|5월|  
-|1999|2 사분기|6월|  
-|1999|3 사분기|7월|  
-|1999|3 사분기|8월|  
+|1999|1/4 1|Jan|  
+|1999|1/4 1|Feb|  
+|1999|1/4 1|Mar|  
+|1999|2 사분기|Apr|  
+|1999|2 사분기|May|  
+|1999|2 사분기|Jun|  
+|1999|3 사분기|Jul|  
+|1999|3 사분기|Aug|  
 |1999|3 사분기|9월|  
 |1999|4사분기|Oct|  
-|1999|4사분기|11월|  
+|1999|4사분기|Nov|  
 |1999|4사분기|Dec|  
   
  Year, Quarter 및 Month 특성은 시간 차원에서 Calendar라는 사용자 정의 계층을 구성하는 데 사용됩니다. Calendar 차원(일반 차원)의 수준과 멤버 간의 관계는 아래 다이어그램에 표시되어 있습니다.  
   
- ![시간 차원에 대 한 수준 및 멤버 계층 구조](../dev-guide/media/as-levelconcepts.gif "시간 차원에 대 한 수준 및 멤버 계층 구조")  
+ ![시간 차원에 대한 수준 및 구성원 계층](../dev-guide/media/as-levelconcepts.gif "시간 차원에 대한 수준 및 구성원 계층")  
   
 > [!NOTE]  
 >  기본 두 수준 특성 계층 이외의 모든 계층을 사용자 정의 계층이라고 합니다. 특성 계층에 대 한 자세한 내용은 특성 [및 특성 계층](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)을 참조 하세요.  
@@ -61,7 +61,8 @@ ms.locfileid: "72811596"
  부모-자식 계층은 제외하고 계층 구조 내에서 멤버 위치는 계층 정의의 특성 순서로 제어됩니다. 계층 정의에 포함된 각 특성이 계층의 수준이 됩니다. 수준 내에서 멤버의 위치는 수준을 만드는 데 사용된 특성의 순서에 따라 결정됩니다. 사용자 정의 계층의 멤버 구조는 멤버 간의 상호 관련 방식에 따라 다음과 같은 4가지 기본 형태 중 하나를 따릅니다.  
   
 ### <a name="balanced-hierarchies"></a>균형 계층 구조  
- 균형 계층 구조에서는 계층 구조의 모든 분기가 동일한 수준으로 이어지며 각 멤버의 바로 위에 있는 수준이 해당 멤버의 논리적 부모가 됩니다. [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] 예제 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 있는 Product 차원의 Product Categories 계층이 균형 계층 구조의 좋은 예입니다. Product Name 수준의 각 멤버에게는 Subcategory 수준의 부모 멤버가 있으며 이 부모 멤버에게는 Category 수준의 부모 멤버가 있습니다. 또한 이 계층 구조의 모든 분기에는 Product Name 수준의 리프 멤버가 있습니다.  
+ 균형 계층 구조에서는 계층 구조의 모든 분기가 동일한 수준으로 이어지며 각 멤버의 바로 위에 있는 수준이 해당 멤버의 논리적 부모가 됩니다. 
+  [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] 예제 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 있는 Product 차원의 Product Categories 계층이 균형 계층 구조의 좋은 예입니다. Product Name 수준의 각 멤버에게는 Subcategory 수준의 부모 멤버가 있으며 이 부모 멤버에게는 Category 수준의 부모 멤버가 있습니다. 또한 이 계층 구조의 모든 분기에는 Product Name 수준의 리프 멤버가 있습니다.  
   
 ### <a name="unbalanced-hierarchies"></a>불균형 계층 구조  
  불균형 계층 구조에서는 계층 구조의 분기들이 서로 다른 수준으로 이어집니다. 부모-자식 계층 구조는 불균형 계층 구조입니다. 예를 들어 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] 예제 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스의 Organization 차원은 각 직원에 대한 멤버를 포함합니다. CEO가 계층 구조의 최상위 멤버이며 각 부서장과 비서 실장이 CEO 바로 아래 위치합니다. 부서장에게는 부하 멤버들이 있지만 비서 실장에게는 없습니다.  
@@ -80,9 +81,9 @@ ms.locfileid: "72811596"
  Province 수준은 CountryRegion 수준의 다른 멤버와 연결된 멤버로 채워지고 City 수준의 멤버는 Province 수준의 해당 멤버와 연결됩니다. 그러나 CountryRegion 수준의 Vatican City 멤버에게는 Province 수준의 연결된 멤버가 없기 때문에 City 수준의 멤버가 CountryRegion 수준의 Vatican City 멤버에 직접 연결되어야 합니다. 이러한 변경으로 인해 이 차원은 비정형 계층 구조가 됩니다. CountryRegion의 Vatican City가 City의 Vatican City 부모가 되는데 이것은 City 수준에서 Vatican City 멤버 바로 위에 있는 수준에 있지 않습니다. 자세한 내용은 [비정형 계층 구조](../multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md)를 참조하세요.  
   
 ### <a name="parent-child-hierarchies"></a>부모-자식 계층 구조  
- 차원의 부모-자식 계층 구조는 멤버 상호 간의 관련 방식을 결정하는 부모 특성이라고 하는 특수한 특성을 사용하여 정의합니다. 부모 특성은 차원 주 테이블 내의 *자체 참조 관계*또는 *셀프 조인*을 설명합니다. 부모-자식 계층은 단일 부모 특성에서 생성됩니다. 계층에 존재하는 수준은 부모 특성과 관련된 멤버 간 부모-자식 관계에서 가져오므로 부모-자식 계층에는 하나의 수준만 할당됩니다. 부모-자식 계층의 차원 스키마는 차원 주 테이블에 있는 자체 참조 관계에 따라 다릅니다. 예를 들어 다음 다이어그램은 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 샘플 데이터베이스의 나 **이 차원 주 테이블을 보여** 줍니다.  
+ 차원의 부모-자식 계층 구조는 멤버 상호 간의 관련 방식을 결정하는 부모 특성이라고 하는 특수한 특성을 사용하여 정의합니다. 부모 특성은 차원 주 테이블 내의 *자체 참조 관계*또는 *셀프 조인*을 설명합니다. 부모-자식 계층은 단일 부모 특성에서 생성됩니다. 계층에 존재하는 수준은 부모 특성과 관련된 멤버 간 부모-자식 관계에서 가져오므로 부모-자식 계층에는 하나의 수준만 할당됩니다. 부모-자식 계층의 차원 스키마는 차원 주 테이블에 있는 자체 참조 관계에 따라 다릅니다. 예를 들어 다음 다이어그램에서는 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 예제 데이터베이스의 나이 **조 직** 차원 주 테이블을 보여 줍니다.  
   
- ![나이 조 직 테이블의 자기 참조 조인](../dev-guide/media/dimorganization.gif "나이 조 직 테이블의 자기 참조 조인")  
+ ![DimOrganization 테이블의 자체 참조 조인](../dev-guide/media/dimorganization.gif "DimOrganization 테이블의 자체 참조 조인")  
   
  이 차원 테이블에서 **ParentOrganizationKey** 열은 **OrganizationKey** 기본 키 열과 외래 키 관계에 있습니다. 즉, 이 테이블의 각 레코드는 부모-자식 관계를 통해 테이블의 다른 레코드와 관련될 수 있습니다. 이러한 종류의 자체 조인은 일반적으로 부서 내 직원 관리 구조와 같은 조직 엔터티 데이터를 나타내는 데 사용됩니다.  
   

@@ -1,5 +1,5 @@
 ---
-title: ADO 이벤트 모델 예제 (VC + +) | Microsoft Docs
+title: ADO Events 모델 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,38 +15,38 @@ ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1af45d9ac4674af98097083e2da89a217f17a58f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921012"
 ---
 # <a name="ado-events-model-example-vc"></a>ADO 이벤트 모델 예제(VC++)
-시각적 개체 C++ 의 섹션 [언어별 ADO 이벤트 인스턴스](../../../ado/guide/data/ado-event-instantiation-by-language.md) ADO 이벤트 모델을 인스턴스화하는 방법에 대 한 일반적인 설명을 제공 합니다. 다음은 만든 환경 내에서 이벤트 모델 인스턴스화의 특정 예제는 **#import** 지시문입니다.  
+[언어별 Ado 이벤트 인스턴스화](../../../ado/guide/data/ado-event-instantiation-by-language.md) 의 Visual C++ 섹션에서는 ado 이벤트 모델을 인스턴스화하는 방법에 대 한 일반적인 설명을 제공 합니다. 다음은 **#import** 지시문에 의해 만들어진 환경 내에서 이벤트 모델을 인스턴스화하는 특정 예제입니다.  
   
- 일반적인 설명에 사용 하 여 **adoint.h** 메서드 서명에 대 한 참조로 합니다. 그러나 일반적인 설명에 몇 가지 정보가 약간 변경 사용 결과 **#import** 지시문:  
+ 일반 설명은 메서드 시그니처의 참조로 **adoint** 를 사용 합니다. 그러나 일반 설명에 있는 몇 가지 세부 정보는 **#import** 지시어를 사용 하 여 약간 변경 됩니다.  
   
--   합니다 **#import** 지시문을 해결 **typedef**의 메서드 서명 데이터 형식 및 한정자가 기본 양식에 합니다.  
+-   **#Import** 지시문은 **typedef**의, 메서드 시그니처 데이터 형식 및 한정자를 기본 형식으로 확인 합니다.  
   
--   덮어써야 하는 순수 가상 메서드는 모두에서 앞에 "**raw_** "입니다.  
+-   덮어써야 하는 순수 가상 메서드는 모두 "**raw_**" 앞에와 야 합니다.  
   
- 일부 코드를 단순히 코딩 스타일을 반영 합니다.  
+ 일부 코드는 단순히 코딩 스타일을 반영 합니다.  
   
--   에 대 한 포인터 **IUnknown** 에서 사용 합니다 **Advise** 메서드를 호출 하 여 명시적으로 가져온 **QueryInterface**합니다.  
+-   **Advise** 메서드에서 사용 하는 **IUnknown** 에 대 한 포인터는 **QueryInterface**를 호출 하 여 명시적으로 가져옵니다.  
   
 -   클래스 정의에서 소멸자를 명시적으로 코딩할 필요가 없습니다.  
   
--   QueryInterface, AddRef 및 Release 더 강력한 구현 코드 수도 있습니다.  
+-   QueryInterface, AddRef 및 릴리스를 보다 강력 하 게 구현 하는 코드를 사용할 수 있습니다.  
   
--   합니다 **__uuidof ()** 인터페이스 Id를 가져오기 위해 지시문을 광범위 하 게 사용 합니다.  
+-   **__Uuidof ()** 지시문은 인터페이스 id를 가져오는 데 광범위 하 게 사용 됩니다.  
   
- 마지막으로,이 예제에서는 일부 작업 코드를 포함합니다.  
+ 마지막으로이 예제에는 일부 작업 코드가 포함 되어 있습니다.  
   
--   이 예제에서는 콘솔 응용 프로그램으로 기록 됩니다.  
+-   이 예제는 콘솔 응용 프로그램으로 작성 됩니다.  
   
--   주석에서 사용자 고유의 코드를 삽입 해야 합니다 "`// Do some work`"입니다.  
+-   "`// Do some work`" 주석 아래에 사용자 고유의 코드를 삽입 해야 합니다.  
   
--   모든 이벤트 처리기의 기본값에 아무 것도 수행 하 고 알림 메시지를 취소 합니다. 응용 프로그램에 대 한 적절 한 코드를 삽입 하 고 필요한 경우 알림을 사용할 수 있도록 해야 합니다.  
+-   모든 이벤트 처리기는 기본적으로 아무 작업도 수행 하지 않고 추가 알림을 취소 합니다. 응용 프로그램에 적합 한 코드를 삽입 하 고 필요한 경우 알림을 허용 해야 합니다.  
   
 ```  
 // ADO_Events_Model_Example.cpp  

@@ -18,14 +18,14 @@ ms.assetid: 5ea8029b-eda4-490b-ae84-2ad036fb582f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a81eb6ee58d942547a159728b9c3edf9a30f1ece
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917669"
 ---
 # <a name="parentrow-property-ado"></a>ParentRow 속성(ADO)
-OLE DB의 컨테이너를 설정 **행** 에서 개체를 **ADORecordConstruction** 개체를 부모 행의 ADO에 켜져 있도록 **레코드** 개체입니다.  
+**ADORecordConstruction** 개체에 대 한 OLE DB **row** 개체의 컨테이너를 설정 하 여 행의 부모를 ADO **Record** 개체로 설정 합니다.  
   
  쓰기 전용입니다.  
   
@@ -40,7 +40,7 @@ HRESULT put_ParentRow([in] IUnknown* pParent);
  행의 컨테이너입니다.  
   
 ## <a name="return-values"></a>반환 값  
- 이 속성 메서드는 S_OK와 E_FAIL을 비롯 한 표준 HRESULT 값을 반환 합니다.  
+ 이 속성 메서드는 S_OK 및 E_FAIL를 포함 하 여 표준 HRESULT 값을 반환 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [ADORecordConstruction 인터페이스](../../../ado/reference/ado-api/adorecordconstruction-interface.md)

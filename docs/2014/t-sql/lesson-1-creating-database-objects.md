@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 90780c16c2ba4b94b4e4a88c6f2c249176ef072b
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73632710"
 ---
 # <a name="lesson-1-creating-database-objects"></a>1단원: 데이터베이스 개체 만들기
@@ -34,17 +34,17 @@ ms.locfileid: "73632710"
   
  이 단원에서는 다음 항목을 다룹니다.  
   
--   [데이터베이스 만들기&#40;자습서&#41;](lesson-1-1-creating-a-database.md)  
+-   [데이터베이스 &#40;자습서&#41;만들기](lesson-1-1-creating-a-database.md)  
   
--   [테이블 만들기&#40;자습서&#41;](lesson-1-2-creating-a-table.md)  
+-   [표 만들기 &#40;자습서&#41;](lesson-1-2-creating-a-table.md)  
   
--   [테이블에서 데이터 삽입 및 업데이트&#40;자습서&#41;](lesson-1-3-inserting-and-updating-data-in-a-table.md)  
+-   [테이블에서 데이터 삽입 및 업데이트 &#40;자습서&#41;](lesson-1-3-inserting-and-updating-data-in-a-table.md)  
   
--   [테이블의 데이터 읽기&#40;자습서&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
+-   [테이블의 데이터 읽기 &#40;자습서&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
   
 -   [요약: 데이터베이스 개체 만들기](lesson-1-5-summary-creating-database-objects.md)  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
- [데이터베이스 만들기&#40;자습서&#41;](lesson-1-1-creating-a-database.md)  
+ [데이터베이스 &#40;자습서&#41;만들기](lesson-1-1-creating-a-database.md)  
   
   

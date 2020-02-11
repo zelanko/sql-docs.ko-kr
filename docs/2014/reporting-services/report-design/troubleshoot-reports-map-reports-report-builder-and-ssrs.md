@@ -1,5 +1,5 @@
 ---
-title: '보고서 문제 해결: 맵 보고서(보고서 작성기 및 SSRS) | Microsoft Docs'
+title: '보고서 문제 해결: 지도 보고서(보고서 작성기 및 SSRS) | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1d5a5bee68f328a5ba15ffb1480437fad92adff8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104642"
 ---
-# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>보고서 문제 해결: 지도 보고서 (보고서 작성기 및 SSRS)
+# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>보고서 문제 해결: 지도 보고서(보고서 작성기 및 SSRS)
   보고서의 지도 문제는 지도나 지도 계층을 보고서에 추가하거나, 보고서에서 기존 지도 또는 지도 계층을 사용자 지정하거나, 보고서에서 지도를 미리 보거나, 지도가 포함된 보고서를 게시하는 경우 발생할 수 있습니다. 이 항목에서는 이러한 문제를 해결하는 데 유용한 정보를 제공합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Embedded"></a> 보고서 정의 크기 문제  
+##  <a name="Embedded"></a>보고서 정의 크기 문제  
  이 섹션에서는 보고서 정의 크기와 관련된 문제를 해결하는 데 유용한 정보를 제공합니다.  
   
 ### <a name="how-do-i-reduce-the-report-definition-size"></a>보고서 정의 크기를 줄이는 방법  
@@ -41,7 +41,8 @@ ms.locfileid: "66104642"
   
 1.  ESRI .shp 및 .dbf 파일을 보고서 서버에 업로드하거나 게시합니다.  
   
-2.  디자인 뷰의 지도 창에 있는 보고서에서 데이터를 포함한 계층을 선택하고 **계층 데이터** 속성을 엽니다. **다음의 공간 데이터 사용**에서 **ESRI 셰이프 파일에 연결**을 선택한 다음 ESRI 셰이프 파일이 포함된 보고서 서버의 폴더로 이동하여 선택하고 확인을 클릭합니다.  
+2.  디자인 뷰의 지도 창에 있는 보고서에서 데이터를 포함한 계층을 선택하고 **계층 데이터** 속성을 엽니다. 
+  **다음의 공간 데이터 사용**에서 **ESRI 셰이프 파일에 연결**을 선택한 다음 ESRI 셰이프 파일이 포함된 보고서 서버의 폴더로 이동하여 선택하고 확인을 클릭합니다.  
   
 3.  보고서를 저장합니다. 변경한 계층의 포함된 데이터가 보고서 정의에서 제거되었습니다.  
   
@@ -49,7 +50,7 @@ ms.locfileid: "66104642"
   
   
   
-##  <a name="Spatial"></a> 공간 데이터 문제  
+##  <a name="Spatial"></a>공간 데이터 문제  
  이 섹션에서는 공간 데이터와 관련된 문제를 해결하는 데 유용한 정보를 제공합니다.  
   
 ### <a name="on-the-design-surface-i-see-sample-spatial-data"></a>디자인 화면에서 예제 공간 데이터가 표시됨  
@@ -102,7 +103,7 @@ ms.locfileid: "66104642"
   
   
   
-##  <a name="Viewport"></a> 뷰포트 중심 및 보기 문제  
+##  <a name="Viewport"></a>뷰포트 중심 및 보기 문제  
  이 섹션에서는 뷰포트 옵션과 관련된 문제를 해결하는 데 유용한 정보를 제공합니다.  
   
 ### <a name="i-cannot-set-the-center-and-view-on-an-embedded-map-element"></a>포함된 지도 요소에 대한 중심 및 보기를 설정할 수 없음  
@@ -126,13 +127,13 @@ ms.locfileid: "66104642"
   
   
   
-##  <a name="Layers"></a> 계층 문제  
+##  <a name="Layers"></a>계층 문제  
  이 섹션에서는 계층 옵션과 관련된 문제를 해결하는 데 유용한 정보를 제공합니다.  
   
 ### <a name="i-do-not-see-one-or-more-layers-in-my-map"></a>지도에 하나 이상의 계층이 표시되지 않음  
  보고서에 지도 계층이 표시되는지 여부는 공간 데이터의 사용 가능성, 공간 데이터와 분석 데이터 간의 관계, 공간 데이터 형식 및 해당 계층 유형, 계층의 표시 유형 및 투명도 옵션, 계층 그리기 순서에 따라 달라집니다. 계층에서 데이터가 표시되지 않으면 다음 옵션을 확인합니다.  
   
--   **계층 유형 및 공간 데이터 형식.** 계층 유형은 계층 유형과 일치하는 공간 데이터만 표시합니다. 예를 들어 계층 유형이 점이지만 공간 데이터가 선인 경우 데이터가 표시되지 않습니다.  
+-   **계층 유형 및 공간 데이터 형식입니다.** 계층 유형은 계층 유형과 일치하는 공간 데이터만 표시합니다. 예를 들어 계층 유형이 점이지만 공간 데이터가 선인 경우 데이터가 표시되지 않습니다.  
   
 -   **일치 필드 값.** 분석 데이터와 공간 데이터를 관련시키기 위해 지정하는 필드의 값은 각 지도 요소를 고유하게 식별해야 합니다. 이러한 필드의 데이터 형식은 같아야 하고, 이러한 필드의 값은 동일해야 합니다. 자세한 내용은 [범례, 색 눈금 및 거리 눈금 문제](#Legend)를 참조하십시오.  
   
@@ -140,7 +141,7 @@ ms.locfileid: "66104642"
   
 -   **투명도.** 각 지도 계층의 투명도를 독립적으로 지정할 수 있습니다. 투명도의 기본값은 계층을 추가하는 방법에 따라 다릅니다. 투명도 0%는 계층이 불투명하고 다른 계층 데이터가 이 계층을 통해 표시되지 않음을 의미합니다. 다른 데이터가 기존 계층을 통해 표시될 수 있게 하려면 원하는 효과를 제공하는 더 큰 백분율 값으로 조정합니다.  
   
--   **표시 유형.** 계층의 표시 유형은 지도 뷰포트의 확대/축소 수준에 따라 **표시**, **숨김**또는 **확대/축소 기반**입니다. 확대/축소 수준의 최대 및 최소 범위도 지정할 수 있습니다. 표시 유형은 이러한 값 중 하나로 계산되는 식에 따라 결정될 수 있습니다.  
+-   **잘.** 계층의 표시 유형은 지도 뷰포트의 확대/축소 수준에 따라 **표시**, **숨김**또는 **확대/축소 기반**입니다. 확대/축소 수준의 최대 및 최소 범위도 지정할 수 있습니다. 표시 유형은 이러한 값 중 하나로 계산되는 식에 따라 결정될 수 있습니다.  
   
     > [!TIP]  
     >  지도 창의 각 계층에 대한 표시 유형을 설정/해제할 수 있습니다. 각 계층을 디자인할 때 개별 계층에 대한 문제인지 아니면 계층 간 투명도 문제인지를 확인하려면 다른 모든 계층을 해제합니다.  
@@ -148,7 +149,7 @@ ms.locfileid: "66104642"
 ### <a name="i-set-a-filter-on-the-map-layer-and-it-has-no-effect"></a>지도 계층에 필터를 설정했지만 효과가 없음  
  계층의 데이터를 필터링하려면 필터 식에서 데이터 형식을 지정해야 합니다. 필터 식이 지정된 조건을 제대로 평가하도록 올바른 기본 데이터 형식을 지정했는지 확인합니다. 자세한 내용은 [필터 수식 예&#40;보고서 작성기 및 SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)를 참조하세요.  
   
-##  <a name="Legend"></a> 범례, 색 눈금 및 규칙 문제  
+##  <a name="Legend"></a>범례, 색 눈금 및 규칙 문제  
  이 섹션에서는 규칙, 범례 및 색 눈금 옵션과 관련된 문제를 해결하는 데 유용한 정보를 제공합니다.  
   
 ### <a name="how-do-i-control-the-values-in-the-map-legend"></a>지도 범례의 값을 제어하는 방법  
@@ -172,7 +173,8 @@ ms.locfileid: "66104642"
 -   자세한 내용은 [규칙 및 분석 데이터를 사용하여 다각형, 선 및 점 표시 변경&#40;보고서 작성기 및 SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)를 참조하세요.  
   
 ### <a name="what-is-the-value-nan-on-the-color-scale"></a>색 범위에 있는 NaN 값의 의미  
- `NaN`은 Not a Number(숫자가 아님)의 약어입니다. 색 눈금 값은 숫자로 예상됩니다. 색 눈금과 연결된 규칙의 범례 텍스트 값과 분포 설정을 확인합니다. 사용자 지정 분포 범위를 만든 경우 첫 번째 범위에서 하한을 지정하고 마지막 범위에서 상한을 지정했는지 확인합니다.  
+ 
+  `NaN`은 Not a Number(숫자가 아님)의 약어입니다. 색 눈금 값은 숫자로 예상됩니다. 색 눈금과 연결된 규칙의 범례 텍스트 값과 분포 설정을 확인합니다. 사용자 지정 분포 범위를 만든 경우 첫 번째 범위에서 하한을 지정하고 마지막 범위에서 상한을 지정했는지 확인합니다.  
   
 ### <a name="my-color-scale-does-not-appear-when-i-run-the-report"></a>보고서를 실행할 때 색 눈금이 표시되지 않음  
  지도 계층이 전체 계층이나 포함된 지도 요소에 대한 다각형, 선 또는 점의 색 규칙을 지정하는 경우 색 눈금은 사용자에게 정보를 표시합니다. 지도 요소가 색 규칙을 지정하지 않거나 색 규칙이 색 지도 대신 범례를 사용하여 지정되는 경우 색 지도가 렌더링된 보고서에 표시되지 않습니다.  
@@ -181,7 +183,7 @@ ms.locfileid: "66104642"
   
   
   
-##  <a name="Tile"></a> 타일 문제  
+##  <a name="Tile"></a>타일 문제  
  이 섹션에서는 타일 배경 옵션과 관련된 문제를 해결하는 데 유용한 정보를 제공합니다.  
   
 ### <a name="i-cannot-see-the-bing-maps-tile-background"></a>Bing Maps 타일 배경이 표시되지 않음  
@@ -198,13 +200,14 @@ ms.locfileid: "66104642"
  타일 계층에 대한 자세한 내용은 [지도 또는 지도 계층 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)를 참조하세요.  
   
 ### <a name="how-do-i-control-the-text-on-a-tile-layer"></a>타일 계층에서 텍스트를 제어하는 방법  
- **도로** 보기와 **혼합** 보기에는 텍스트가 포함됩니다. 텍스트는 Bing Maps 웹 서비스에서 제공되는 타일의 일부입니다.  
+ 
+  **도로** 보기와 **혼합** 보기에는 텍스트가 포함됩니다. 텍스트는 Bing Maps 웹 서비스에서 제공되는 타일의 일부입니다.  
   
  텍스트 없이 타일 계층을 포함하려면 **항공** 보기를 선택합니다.  
   
   
   
-##  <a name="Tooltip"></a> 도구 설명 및 레이블 문제  
+##  <a name="Tooltip"></a>도구 설명 및 레이블 문제  
  이 섹션에서는 레이블 또는 도구 설명 옵션과 관련된 문제를 해결하는 데 유용한 정보를 제공합니다.  
   
 ### <a name="i-get-an-expression-error-about-dataset-scope-when-i-set-a-label-or-tooltip-to-an-expression"></a>레이블 또는 도구 설명을 식으로 설정하는 경우 데이터 세트 범위에 대한 식 오류가 발생합니다.  
@@ -214,7 +217,7 @@ ms.locfileid: "66104642"
   
   
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [지도&#40;보고서 작성기 및 SSRS&#41;](maps-report-builder-and-ssrs.md)   
  [보고서 작성기 문제 해결](../troubleshoot-report-builder.md)  
   

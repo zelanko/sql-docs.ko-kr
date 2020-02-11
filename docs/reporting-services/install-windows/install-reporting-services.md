@@ -8,10 +8,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 749dfd8f7cce37aeeb9721af9f951caa6ab15dfd
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71952740"
 ---
 # <a name="install-sql-server-reporting-services"></a>SQL Server Reporting Services 설치
@@ -33,7 +33,7 @@ Microsoft 다운로드 센터에서 [SQL Server 2017 Reporting Services](https:/
 > [!NOTE]
 > Power BI Report Server를 찾고 있나요? [Power BI Report Server 설치](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/)를 참조하세요.
 
-## <a name="before-you-begin"></a>시작하기 전 주의 사항
+## <a name="before-you-begin"></a>시작하기 전에
 
 Reporting Services를 설치하기 전에 [SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)을 검토합니다.
 
@@ -93,7 +93,7 @@ Windows 서비스는 설치의 일부로 만들어집니다. **SQL Server Report
 
 URL 예약은 접두사, 호스트 이름, 포트 및 가상 디렉터리로 구성됩니다.
 
-|부분|설명|
+|부분|Description|
 |----------|-----------------|
 |접두사|기본 접두사는 HTTP입니다. 이전에 SSL(Secure Sockets Layer) 인증서를 설치한 경우 설치 프로그램에서 HTTPS 접두사를 사용하는 URL 예약을 만들려고 시도합니다.|
 |호스트 이름|기본 호스트 이름은 강력한 와일드카드(+)로서 보고서 서버가 `https://<computername>/reportserver`, `https://localhost/reportserver` 또는`https://<IPAddress>/reportserver.`를 포함하여 컴퓨터로 확인되는 모든 호스트 이름에 대해 지정된 포트에서 HTTP 요청을 수락하도록 지정합니다.|
@@ -112,7 +112,7 @@ URL 예약은 접두사, 호스트 이름, 포트 및 가상 디렉터리로 구
 
 웹 서비스 URL과 웹 포털 URL에 대해 구성된 TCP 포트를 열어야 합니다. 기본적으로 이는 TCP 포트 80에서 구성됩니다.
 
-## <a name="additional-configuration"></a>기타 고려 사항
+## <a name="additional-configuration"></a>추가 구성
 
 - 보고서 항목을 Power BI 대시보드에 고정할 수 있도록 Power BI 서비스와 통합을 구성하려면 [Power BI 서비스와 통합](power-bi-report-server-integration-configuration-manager.md)을 참조하세요.
 

@@ -19,14 +19,14 @@ ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7e2f83a3637af8f0e89c4125d3207c8c54b86763
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917166"
 ---
 # <a name="resync-method"></a>Resync 메서드
-현재 데이터를 새로 고칩니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 또는 [필드](../../../ado/reference/ado-api/fields-collection-ado.md) 의 컬렉션을 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 기본 데이터베이스 개체입니다.  
+현재 레코드 [집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 또는 [Record](../../../ado/reference/ado-api/record-object-ado.md) 개체의 [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) 컬렉션에 있는 데이터를 기본 데이터베이스에서 새로 고칩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,32 +37,32 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
   
 #### <a name="parameters"></a>매개 변수  
  *AffectRecords*  
- (선택 사항) [AffectEnum](../../../ado/reference/ado-api/affectenum.md) 레코드 수를 결정 하는 값을 **다시 동기화** 메서드 적용 됩니다. 기본값은 **adAffectAll**합니다. 이 값을 사용 하 여 사용할 수 없습니다는 **다시 동기화** 메서드는 **필드** 의 컬렉션을 **레코드** 개체입니다.  
+ (선택 사항) 다시 **동기화** 방법이 영향을 줄 수 있는 레코드 수를 결정 하는 [AffectEnum](../../../ado/reference/ado-api/affectenum.md) 값입니다. 기본값은 **adAffectAll**입니다. **Record** 개체의 **Fields** 컬렉션에 대 한 **Resync** 메서드에서는이 값을 사용할 수 없습니다.  
   
  *ResyncValues*  
- (선택 사항) A [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md) 원본 값을 덮어쓸지 여부를 지정 하는 값입니다. 기본값은 **adResyncAllValues**합니다.  
+ (선택 사항) 내부 값을 덮어쓸지 여부를 지정 하는 [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md) 값입니다. 기본값은 **adResyncAllValues**입니다.  
   
 ## <a name="remarks"></a>설명  
   
 ## <a name="recordset"></a>레코드 집합  
- 사용 합니다 **Resync** 현재에서 레코드를 다시 동기화 하는 방법 **레코드 집합** 기본 데이터베이스를 사용 하 여 합니다. 정적 또는 정방향 전용 커서를 사용 하지만 기본 데이터베이스의 변경 내용을 확인 하려는 경우에 유용 합니다.  
+ **Resync** 메서드를 사용 하 여 현재 **레코드 집합** 의 레코드를 기본 데이터베이스와 다시 동기화 합니다. 이는 정적 또는 전진 전용 커서를 사용 하지만 기본 데이터베이스에서 변경 내용을 확인 하려는 경우에 유용 합니다.  
   
- 설정 하는 경우는 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성을 **adUseClient**를 **Resync** 에 제공 됩니다 읽기 전용이 아닌 **레코드 집합** 개체입니다.  
+ [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성을 **adUseClient**로 설정 하는 경우 읽기 전용이 아닌 **레코드 집합** 개체에 대해서만 다시 **동기화** 를 사용할 수 있습니다.  
   
- 달리 합니다 [Requery](../../../ado/reference/ado-api/requery-method.md) 메서드를를 **다시 동기화** 메서드 다시 실행 되지 않습니다는 **레코드 집합** 개체의 기본 명령입니다. 기본 데이터베이스에서 새 레코드를 볼 수 있습니다.  
+ [Requery](../../../ado/reference/ado-api/requery-method.md) 메서드와 달리 **Resync** 메서드는 **레코드 집합** 개체의 기본 명령을 다시 실행 하지 않습니다. 기본 데이터베이스의 새 레코드는 표시 되지 않습니다.  
   
- 다시 동기화 할 원본 데이터와 충돌로 인해 실패 하는 경우 (예를 들어, 레코드에 된 다른 사용자가 삭제), 공급자에 대 한 경고를 반환 합니다 [오류](../../../ado/reference/ado-api/errors-collection-ado.md) 컬렉션 및 런타임 오류를 발생 합니다. 사용 합니다 [필터](../../../ado/reference/ado-api/filter-property.md) 속성 (**adFilterConflictingRecords**) 및 [상태](../../../ado/reference/ado-api/status-property-ado-recordset.md) 속성을 사용 하 여 충돌 레코드를 찾습니다.  
+ 원본 데이터와의 충돌 때문에 다시 동기화 하려는 시도가 실패 하는 경우 (예: 다른 사용자가 레코드를 삭제 한 경우) 공급자는 [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) 컬렉션에 경고를 반환 하 고 런타임 오류가 발생 합니다. [Filter](../../../ado/reference/ado-api/filter-property.md) 속성 (**AdFilterConflictingRecords**) 및 [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) 속성을 사용 하 여 충돌이 발생 한 레코드를 찾을 수 있습니다.  
   
- 경우는 [고유 테이블](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) 및 [Resync Command](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md) 동적 속성을 설정 하며 **레코드 집합** 여러 테이블을 다음 합니다 에서조인작업을실행한결과 **다시 동기화** 메서드는에 지정 된 명령을 실행 합니다는 **Resync Command** 테이블에서 명명 된 속성을 **고유 테이블** 속성.  
+ [고유 테이블](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) 및 다시 [동기화 명령](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md) 동적 속성을 설정 하 고 **레코드 집합** 을 여러 테이블에 대해 조인 작업을 실행 한 결과, 다시 **동기화** 메서드는 **unique Table** 속성에 명명 된 테이블에 대해서만 **resync 명령** 속성에 지정 된 명령을 실행 합니다.  
   
 ## <a name="fields"></a>필드  
- 사용 하 여는 **다시 동기화** 의 값을 다시 동기화 하는 방법 합니다 **필드** 의 컬렉션을 **레코드** 내부 데이터 소스를 사용 하 여 개체. 합니다 [개수](../../../ado/reference/ado-api/count-property-ado.md) 속성이이 메서드에 의해 영향을 받지 않습니다.  
+ **Resync** 메서드를 사용 하 여 **Record** 개체의 **Fields** 컬렉션 값을 기본 데이터 원본과 다시 동기화 합니다. [Count](../../../ado/reference/ado-api/count-property-ado.md) 속성은이 메서드의 영향을 받지 않습니다.  
   
- 하는 경우 *ResyncValues* 로 설정 된 **adResyncAllValues** (기본값)를 [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)를 [값](../../../ado/reference/ado-api/value-property-ado.md), 및 [ OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) 속성을 [필드](../../../ado/reference/ado-api/field-object.md) 컬렉션의 개체 동기화 됩니다. 하는 경우 *ResyncValues* 로 설정 되어 **adResyncUnderlyingValues**만 합니다 **UnderlyingValue** 속성 동기화 됩니다.  
+ *ResyncValues* 가 **adResyncAllValues** (기본값)로 설정 된 경우 컬렉션에 있는 [Field](../../../ado/reference/ado-api/field-object.md) 개체의 [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md), [value](../../../ado/reference/ado-api/value-property-ado.md)및 [originalvalue](../../../ado/reference/ado-api/originalvalue-property-ado.md) 속성이 동기화 됩니다. *ResyncValues* 을 **adResyncUnderlyingValues**로 설정 하면 **UnderlyingValue** 속성만 동기화 됩니다.  
   
- 값을 **상태** 각각에 대 한 속성 **필드** 호출 시 개체의 동작에도 영향을 줍니다 **다시 동기화**합니다. 에 대 한 **필드** 이 있는 개체 **상태** 의 값 **adFieldPendingUnknown** 하거나 **adFieldPendingInsert**, **다시 동기화**  영향을 주지 않습니다. 에 대 한 **상태** 의 값 **adFieldPendingChange** 또는 **adFieldPendingDelete**, **Resync** 필드에 대 한 데이터 값을 동기화 하는 데이터 원본에 여전히 존재 합니다.  
+ 호출 시 각 **Field** 개체의 **Status** 속성 값도 다시 **동기화**동작에 영향을 줍니다. **Adfieldpendingunknown** 또는 **Adfieldpendingunknown**의 **상태** 값이 있는 **Field** 개체의 경우 **Resync** 는 영향을 주지 않습니다. **Adfieldpendingchange** 또는 **Adfieldpendingdelete**의 **상태** 값에 대해 다시 **동기화** 는 데이터 원본에 여전히 존재 하는 필드에 대 한 데이터 값을 동기화 합니다.  
   
- **다시 동기화** 수정 하지 것입니다 **상태** 의 값 **필드** 오류가 발생 하지 않는 한 개체 때 **재 동기화** 라고 합니다. 예를 들어, 필드를 더 이상 존재 하는 경우는 공급자가 반환 하는 적절 한 **상태** 에 대 한 값을 **필드** 개체로 **adFieldDoesNotExist**합니다. 반환 **상태** 의 값 내의 값을 논리적으로 결합할 수 있습니다 합니다 **상태** 속성입니다.  
+ 다시 **동기화는** 다시 **동기화** 가 호출 될 때 오류가 발생 하지 않는 한 **필드** 개체의 **상태** 값을 수정 하지 않습니다. 예를 들어 필드가 더 이상 존재 하지 않는 경우 공급자는 **adFieldDoesNotExist**와 같은 **field** 개체에 대 한 적절 한 **상태** 값을 반환 합니다. 반환 된 **상태** 값은 **상태** 속성의 값 내에서 논리적으로 조합할 수 있습니다.  
   
 ## <a name="applies-to"></a>적용 대상  
   
@@ -70,7 +70,7 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
 |-|-|  
 |[Fields 컬렉션(ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Resync 메서드 예제 (VB)](../../../ado/reference/ado-api/resync-method-example-vb.md)   
  [Resync 메서드 예제 (VC + +)](../../../ado/reference/ado-api/resync-method-example-vc.md)   
  [Clear 메서드 (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   

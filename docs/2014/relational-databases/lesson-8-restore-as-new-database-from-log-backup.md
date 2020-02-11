@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 464961600f69f14a2b66515a75906c0fd4af3f82
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175360"
 ---
 # <a name="lesson-9-restore-a-database-from-azure-storage"></a>9단원: Azure Storage에서 데이터베이스 복원
@@ -24,7 +24,7 @@ ms.locfileid: "70175360"
   
 -   원본 컴퓨터에서 데이터베이스를 만들었습니다.  
   
--   [Azure Blob Storage 서비스를 사용 하 여 백업 및 복원 기능 SQL Server](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) 사용 하 여 Azure Storage에서 데이터베이스 (.bak)의 백업을 만들었습니다. 이 단계에서는 또 다른 SQL Server 자격 증명을 만들어야 합니다. 이 자격 증명은 저장소 계정 키를 사용합니다.  
+-   [Azure Blob Storage 서비스를 사용 하 여 백업 및 복원 기능 SQL Server](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) 사용 하 여 Azure Storage에서 데이터베이스 (.bak)의 백업을 만들었습니다. 이 단계에서는 또 다른 SQL Server 자격 증명을 만들어야 합니다. 이 자격 증명은 스토리지 계정 키를 사용합니다.  
   
 -   Azure Storage 계정이 있습니다.  
   
@@ -95,6 +95,6 @@ ms.locfileid: "70175360"
   
     ```  
   
- **자습서의 끝: Azure Storage 서비스에서 데이터 파일 SQL Server**  
+ **자습서 종료: Azure Storage 서비스에서 데이터 파일 SQL Server**  
   
   

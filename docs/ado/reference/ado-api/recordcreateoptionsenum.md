@@ -16,26 +16,26 @@ ms.assetid: 6d746670-0850-4065-9cd4-168dea1d3ea9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 65fe33b73cf77a27fcd69743ffb09cb05e197797
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917339"
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
-지정 기존 여부를 **레코드** 열거나 새 해야 **레코드** 에 대해 생성 합니다 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체 [열기](../../../ado/reference/ado-api/open-method-ado-record.md) 메서드. AND 연산자를 사용 하 여 값을 결합할 수 있습니다.  
+[Record](../../../ado/reference/ado-api/record-object-ado.md) object [Open](../../../ado/reference/ado-api/open-method-ado-record.md) 메서드에 대해 기존 **레코드** 를 열지 아니면 새 **레코드** 를 만들지를 지정 합니다. 값은 AND 연산자와 함께 사용할 수 있습니다.  
   
-|상수|값|설명|  
+|지속적임|값|Description|  
 |--------------|-----------|-----------------|  
-|**adCreateCollection**|0x2000|만듭니다 **레코드** 로 지정 된 노드에서 *원본* 매개 변수를 기존를 여는 대신 **레코드**합니다. 소스를 가리키는 경우 기존 노드를 다음 런타임 오류가 발생 하는 경우가 아니면 **adCreateCollection** 와 결합 됩니다 **adOpenIfExists** 하거나 **adCreateOverwrite**합니다.|  
-|**adCreateNonCollection**|0|새로 만듭니다 **레코드** 형식의 [adSimpleRecord](../../../ado/reference/ado-api/recordtypeenum.md)합니다.|  
-|**adCreateOverwrite**|0x4000000|생성 플래그를 수정 **adCreateCollection**하십시오 **adCreateNonCollection**, 및 **adCreateStructDoc**합니다. 때 소스 URL을 기존 노드를 가리키는 경우이 값과 생성 플래그 값 중 하나는 또는 또는 **레코드**, 다음 기존 **레코드** 덮어쓸 나타내며 새 해당 위치에 만들어집니다. 이 값과 함께 사용할 수 없습니다 **adOpenIfExists**합니다.|  
-|**adCreateStructDoc**|0x80000000|새로 만듭니다 **레코드** 형식의 [adStructDoc](../../../ado/reference/ado-api/recordtypeenum.md), 기존를 여는 대신 **레코드**합니다.|  
-|**adFailIfNotExists**|-1|기본. 런타임 오류가 발생 하는 경우 *원본* 존재 하지 않는 노드를 가리킵니다.|  
-|**adOpenIfExists**|0x2000000|생성 플래그를 수정 **adCreateCollection**하십시오 **adCreateNonCollection**, 및 **adCreateStructDoc**합니다. 경우는 소스 URL을 기존 노드를 가리키는 경우이 값 및 생성 플래그 값 중 하나에 사용 하거나 또는 **레코드** 개체를 기존 공급자 열어야 **레코드** 새로 만드는 대신 하나입니다. 이 값과 함께 사용할 수 없습니다 **adCreateOverwrite**합니다.|  
+|**adCreateCollection**|0x2000|기존 **레코드**를 열지 않고 *원본* 매개 변수로 지정 된 노드에 새 **레코드** 를 만듭니다. 소스가 기존 노드를 가리키는 경우에는 **Adcreatecollection** 이 **AdOpenIfExists** 또는 **adcreatecollection**와 결합 되지 않는 한 런타임 오류가 발생 합니다.|  
+|**adCreateNonCollection**|0|[AdSimpleRecord](../../../ado/reference/ado-api/recordtypeenum.md)형식의 새 **레코드** 를 만듭니다.|  
+|**adCreateOverwrite**|0x4000000|생성 플래그 **Adcreatecollection**, **adCreateNonCollection**및 **adCreateStructDoc**를 수정 합니다. 또는를이 값과 함께 사용 하 고 생성 플래그 값 중 하나를 사용 하는 경우 원본 URL이 기존 노드나 **레코드**를 가리키면 기존 레코드를 덮어쓰고 해당 위치에 새 **레코드** 를 만듭니다. 이 값은 **adOpenIfExists**와 함께 사용할 수 없습니다.|  
+|**adCreateStructDoc**|0x80000000|기존 **레코드**를 여는 대신 [AdStructDoc](../../../ado/reference/ado-api/recordtypeenum.md)형식의 새 **레코드** 를 만듭니다.|  
+|**adFailIfNotExists**|-1|Default. *소스가* 존재 하지 않는 노드를 가리키는 경우 런타임 오류가 발생 합니다.|  
+|**adOpenIfExists**|0x2000000|생성 플래그 **Adcreatecollection**, **adCreateNonCollection**및 **adCreateStructDoc**를 수정 합니다. 이 값과 생성 플래그 값 중 하나에서 또는을 사용 하는 경우 원본 URL이 기존 노드나 **record** 개체를 가리키는 경우 공급자는 새 레코드를 만드는 대신 기존 **레코드** 를 열어야 합니다. 이 값은 **Adcreateoverwrite**와 함께 사용할 수 없습니다.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC 해당  
- 이러한 상수는 ADO/wfc 필요가 없습니다.  
+## <a name="adowfc-equivalent"></a>ADO/WFC 동급  
+ 이러한 상수에는 ADO/WFC 해당 항목이 없습니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [Open 메서드(ADO 레코드)](../../../ado/reference/ado-api/open-method-ado-record.md)

@@ -17,21 +17,23 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 26aa24e28714f8fc89c7e384a122638d9773a262
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70911111"
 ---
 # <a name="using-table-and-index-partitioning"></a>테이블 및 인덱스 분할 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
+  
   [Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md)에서 제공한 스토리지 알고리즘을 사용하여 데이터를 저장할 수 있습니다. 큰 테이블과 인덱스를 분할하면 더 효율적으로 관리 및 확장할 수 있습니다.  
   
 ## <a name="index-and-table-partitioning"></a>인덱스 및 테이블 분할  
  이 기능을 사용하여 인덱스 및 테이블 데이터를 파티션의 여러 파일 그룹에 분산할 수 있습니다. 파티션 함수는 분할 열이라고 하는 특정 열의 값을 기반으로 파티션 집합에 테이블이나 인덱스의 행을 매핑하는 방식을 정의합니다. 파티션 구성표는 파티션 함수로 지정된 각 파티션을 파일 그룹에 매핑합니다. 이렇게 하면 테이블을 파일 그룹과 물리적 디바이스로 확장하는 보관 전략을 개발할 수 있습니다.  
   
- <xref:Microsoft.SqlServer.Management.Smo.Database> 개체에는 구현된 파티션 함수를 나타내는 <xref:Microsoft.SqlServer.Management.Smo.PartitionFunction> 개체 모음과 데이터가 파일 그룹에 매핑되는 방법을 설명하는 <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> 개체 모음이 들어 있습니다.  
+ 
+  <xref:Microsoft.SqlServer.Management.Smo.Database> 개체에는 구현된 파티션 함수를 나타내는 <xref:Microsoft.SqlServer.Management.Smo.PartitionFunction> 개체 모음과 데이터가 파일 그룹에 매핑되는 방법을 설명하는 <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> 개체 모음이 들어 있습니다.  
   
  각 <xref:Microsoft.SqlServer.Management.Smo.Table> 및 <xref:Microsoft.SqlServer.Management.Smo.Index> 개체는 <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> 속성에 사용할 파티션 구성표를 지정하고 <xref:Microsoft.SqlServer.Management.Smo.PartitionSchemeParameterCollection>에 열을 지정합니다.  
   
@@ -132,7 +134,7 @@ $ps.FileGroups.Add("Fourth")
 $ps.Create()  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   
