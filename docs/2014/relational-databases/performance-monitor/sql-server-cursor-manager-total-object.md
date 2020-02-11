@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f80eb2cc31d58c231645c8fcbe9a745feb2d2382
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250681"
 ---
 # <a name="sql-server-cursor-manager-total-object"></a>SQL Server, Cursor Manager Total 개체
@@ -31,7 +31,7 @@ ms.locfileid: "63250681"
 |**Cursor conversion rate**|초당 커서 변환 횟수입니다.|  
 |**Cursor flushes**|커서가 런타임 문을 다시 만든 총 횟수입니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [리소스 사용 모니터링&#40;시스템 모니터&#41;](monitor-resource-usage-system-monitor.md)  
   
   

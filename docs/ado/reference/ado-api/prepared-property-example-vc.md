@@ -1,5 +1,5 @@
 ---
-title: 준비 속성 예제 (VC + +) | Microsoft Docs
+title: 준비 된 속성 예제 (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58da870e9c65be459e6bd4a8c35bb84aef325c61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917578"
 ---
 # <a name="prepared-property-example-vc"></a>Prepared 속성 예제(VC++)
-이 예제에서는 합니다 [Prepared](../../../ado/reference/ado-api/prepared-property-ado.md) 열어 두는 속성 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체-준비 및 준비 되지 않았습니다.  
+이 예제에서는 준비 [된 속성](../../../ado/reference/ado-api/prepared-property-ado.md) 중 하나를 [](../../../ado/reference/ado-api/command-object-ado.md) 열어 준비 된 속성을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
   
@@ -141,8 +141,8 @@ void PrintComError(_com_error &e) {
 ```  
   
  **성능 결과:**  
-**준비 되지 않았습니다.  0.016 시간 (초)**  
-**준비:      0.016 시간 (초)**   
-## <a name="see-also"></a>관련 항목  
- [명령 개체 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+**준비 되지 않음: 0.016 초**  
+**준비: 0.016 초**   
+## <a name="see-also"></a>참고 항목  
+ [Command 개체 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [준비된 속성(ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)
