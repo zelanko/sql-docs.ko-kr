@@ -1,5 +1,5 @@
 ---
-title: sp_changedbowner (TRANSACT-SQL) | Microsoft Docs
+title: sp_changedbowner (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,21 +18,21 @@ ms.assetid: 516ef311-e83b-45c9-b9cd-0e0641774c04
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 4bca86b00ca5b2d84cc1c737ecf9d253a0451ea9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68126458"
 ---
-# <a name="spchangedbowner-transact-sql"></a>sp_changedbowner(Transact-SQL)
+# <a name="sp_changedbowner-transact-sql"></a>sp_changedbowner(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   현재 데이터베이스의 소유자를 변경합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 사용 하 여 [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) 대신 합니다.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]대신 [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) 을 사용 해야 합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,11 +43,11 @@ sp_changedbowner [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @loginame= ] '*login*'  
- 현재 데이터베이스의 새 소유자의 로그인 ID입니다. *로그인* 됩니다 **sysname**, 기본값은 없습니다. *로그인* 이미 존재 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 또는 Windows 사용자입니다. *로그인* 이미 데이터베이스 내의 기존 사용자 보안 계정을 통해 데이터베이스에 액세스할 수 있는 경우 현재 데이터베이스의 소유자가 될 수 없습니다. 이 문제를 방지하려면 먼저 현재 데이터베이스에서 사용자를 삭제해야 합니다.  
+ [ @loginame= ] '*로그인*'  
+ 현재 데이터베이스의 새 소유자의 로그인 ID입니다. *login* 은 **sysname**이며 기본값은 없습니다. *로그인* 은 이미 존재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하는 로그인 또는 Windows 사용자 여야 합니다. *로그인* 은 데이터베이스 내의 기존 사용자 보안 계정을 통해 데이터베이스에 이미 액세스할 수 있는 경우 현재 데이터베이스의 소유자가 될 수 없습니다. 이 문제를 방지하려면 먼저 현재 데이터베이스에서 사용자를 삭제해야 합니다.  
   
  [ @map= ] *remap_alias_flag*  
- 합니다 *remap_alias_flag* 에서 로그인 별칭이 제거 되었으므로 매개 변수는 사용 되지 않습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 사용 하 여 *remap_alias_flag* 매개 변수는 오류가 발생 하지 않습니다 하지만 아무 효과가 없습니다.  
+ 로그인 ** 별칭이에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]제거 되었으므로 remap_alias_flag 매개 변수는 더 이상 사용 되지 않습니다. *Remap_alias_flag* 매개 변수를 사용 해도 오류가 발생 하지는 않지만 아무런 영향을 주지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -57,9 +57,9 @@ sp_changedbowner [ @loginame = ] 'login'
   
  master, model 또는 tempdb 시스템 데이터베이스의 소유자는 변경할 수 없습니다.  
   
- 유효한 목록에 표시할 *로그인* sp_helplogins 저장 프로시저를 실행 하는 값입니다.  
+ 유효한 *로그인* 값 목록을 표시 하려면 sp_helplogins 저장 프로시저를 실행 합니다.  
   
- 만 사용 하 여 sp_changedbowner를 실행 합니다 *로그인* 매개 변수 데이터베이스 소유권이 *로그인*합니다.  
+ *로그인* 매개 변수만 사용 하 여 sp_changedbowner를 실행 하면 데이터베이스 소유권이 *로그인*으로 변경 됩니다.  
   
  ALTER AUTHORIZATION 문을 사용하여 보안 개체의 소유자를 변경할 수 있습니다. 자세한 내용은 [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)을 참조하세요.  
   
@@ -73,13 +73,13 @@ sp_changedbowner [ @loginame = ] 'login'
 EXEC sp_changedbowner 'Albert';  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;&#40;보안 저장 프로시저](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
- [sp_dropalias &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropalias-transact-sql.md)   
- [sp_dropuser&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
- [sp_helpdb &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
- [sp_helplogins &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
+ [Transact-sql&#41;sp_dropalias &#40;](../../relational-databases/system-stored-procedures/sp-dropalias-transact-sql.md)   
+ [Transact-sql&#41;sp_dropuser &#40;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
+ [Transact-sql&#41;sp_helpdb &#40;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
+ [Transact-sql&#41;sp_helplogins &#40;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

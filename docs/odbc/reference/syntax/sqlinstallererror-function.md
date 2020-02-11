@@ -20,18 +20,18 @@ ms.assetid: e6474b79-4d55-458f-81ce-abfafe357f83
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ab9461d87a3df2efc98c38e4c72cee4c247fee7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138033"
 ---
 # <a name="sqlinstallererror-function"></a>SQLInstallerError 함수
 **규칙**  
- 도입 된 버전: ODBC 3.0  
+ 소개 된 버전: ODBC 3.0  
   
  **요약**  
- **SQLInstallerError** ODBC 설치 관리자 기능에 대 한 오류 또는 상태 정보를 반환 합니다.  
+ **SQLInstallerError** 는 ODBC 설치 관리자 기능에 대 한 오류 또는 상태 정보를 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,36 +47,36 @@ RETCODE SQLInstallerError(
   
 ## <a name="arguments"></a>인수  
  *iError*  
- [입력] 오류 레코드 수입니다. 1에서 8 사이의 유효한 숫자는입니다.  
+ 입력 오류 레코드 번호입니다. 유효한 숫자는 1에서 8 까지입니다.  
   
  *pfErrorCode*  
- [출력] 설치 관리자 오류 코드입니다. (자세한 내용은 "설명입니다." 참조)  
+ 출력 설치 관리자 오류 코드입니다. 자세한 내용은 "설명"을 참조 하십시오.  
   
  *lpszErrorMsg*  
- [출력] 오류 메시지 텍스트에 대 한 저장소에 대 한 포인터입니다.  
+ 출력 오류 메시지 텍스트의 저장소에 대 한 포인터입니다.  
   
  *cbErrorMsgMax*  
- [입력] 최대 길이 *szErrorMsg* 버퍼입니다. 이 작아야 보다 크거나 SQL_MAX_MESSAGE_LENGTH null 종결 문자가 뺀 값입니다.  
+ 입력 *Szerrormsg* 버퍼의 최대 길이입니다. 이 값은 null 종료 문자를 뺀 SQL_MAX_MESSAGE_LENGTH 보다 작거나 같아야 합니다.  
   
  *cbErrorMsgMax*  
- [입력] 최대 길이 *szErrorMsg* 버퍼입니다. 이 작아야 보다 크거나 SQL_MAX_MESSAGE_LENGTH null 종결 문자가 뺀 값입니다.  
+ 입력 *Szerrormsg* 버퍼의 최대 길이입니다. 이 값은 null 종료 문자를 뺀 SQL_MAX_MESSAGE_LENGTH 보다 작거나 같아야 합니다.  
   
  *pcbErrorMsg*  
- [출력] 총 바이트 (null 종결 문자가 제외)에 대 한 포인터를 반환 하려면 사용 가능한 *lpszErrorMsg*합니다. 반환할 사용 가능한 바이트 수가 보다 크거나 같은 경우 *cbErrorMsgMax*에서 오류 메시지 텍스트 *lpszErrorMsg* 잘립니다 *cbErrorMsgMax* 빼기는 null 종결 문자 바이트 수입니다. 합니다 *pcbErrorMsg* 인수로 null 포인터를 사용할 수 있습니다.  
+ 출력 *LpszErrorMsg*에서 반환 하는 데 사용할 수 있는 총 바이트 수 (null 종결 문자 제외)에 대 한 포인터입니다. 반환할 수 있는 바이트 수가 *Cberrormsgmax*보다 크거나 같으면 *lpszErrorMsg* 의 오류 메시지 텍스트가 *cberrormsgmax* 에서 null 종료 문자 바이트를 뺀 값으로 잘립니다. *Pcberrormsg* 인수는 null 포인터 일 수 있습니다.  
   
-## <a name="returns"></a>반환 값  
- 관계 없이 SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, 또는 SQL_ERROR  
+## <a name="returns"></a>반환  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA 또는 SQL_ERROR입니다.  
   
 ## <a name="diagnostics"></a>진단  
- **SQLInstallerError** 자체에 대 한 오류 값을 게시 하지 않습니다. **SQLInstallerError** 오류 정보를 검색할 수 없는 경우에 SQL_NO_DATA를 반환 합니다 (이 예제의 *pfErrorCode* 정의 되지 않습니다). 하는 경우 **SQLInstallerError** 일반적으로 SQL_ERROR를 반환 하는 어떤 이유로 오류 값에 액세스할 수 없습니다 **SQLInstallerError** SQL_ERROR를 반환 하지만 오류 값을 게시 하지 않습니다. 경고 문자열의 길이 알지 못하는 경우 (*lpszErrorMsg*)를 설정할 수 있습니다 *lpszErrorMsg* NULL 및 호출 **SQLInstallerError**합니다. **SQLInstallerError** 에 경고 문자열의 길이 반환 합니다 *cbErrorMsgMax*합니다. 오류 메시지에 대 한 버퍼 너무 짧으면 **SQLInstallerError** SQL_SUCCESS_WITH_INFO를 반환 하 고 올바른 반환 *pfErrorCode* 값 **SQLInstallerError**.  
+ **SQLInstallerError** 는 자체에 대 한 오류 값을 게시 하지 않습니다. **SQLInstallerError** 는 오류 정보를 검색할 수 없는 경우에 SQL_NO_DATA를 반환 합니다 .이 경우 *pfErrorCode* 가 정의 되지 않습니다. **SQLInstallerError** 가 일반적으로 SQL_ERROR 반환 하는 어떤 이유로 든 오류 값에 액세스할 수 없는 경우 **SQLInstallerError** 는 SQL_ERROR를 반환 하지만 오류 값은 게시 하지 않습니다. 경고 문자열 (*lpszErrorMsg*)의 길이를 모르는 경우 *lpszErrorMsg* 를 NULL로 설정 하 고 **SQLInstallerError**를 호출할 수 있습니다. 그런 다음 **SQLInstallerError** 는 *Cberrormsgmax*에서 경고 문자열의 길이를 반환 합니다. 오류 메시지에 대 한 버퍼가 너무 짧으면 **SQLInstallerError** 는 SQL_SUCCESS_WITH_INFO을 반환 하 고 **SQLInstallerError**에 대 한 올바른 *pfErrorCode* 값을 반환 합니다.  
   
- 오류 메시지에서 잘림이 발생 했는지를 확인 하려면 응용 프로그램에서 값을 비교 합니다 *cbErrorMsgMax* 에 기록 된 메시지 텍스트의 실제 길이 인수를 *pcbErrorMsg* 인수입니다. 잘림이 발생할 경우 올바른 버퍼 길이 할당 해야 *lpszErrorMsg* 하 고 **SQLInstallerError** 사용 하 여 해당 다시 호출 해야 *iError*레코드입니다.  
+ 오류 메시지에서 잘림이 발생 했는지 여부를 확인 하기 위해 응용 프로그램에서는 *Cberrormsgmax* 인수의 값을 *Pcberrormsg* 인수에 쓰여진 메시지 텍스트의 실제 길이와 비교할 수 있습니다. 잘림이 발생 하는 경우 *lpszErrorMsg* 에 올바른 버퍼 길이를 할당 하 고 해당 *ierror* 레코드를 사용 하 여 **SQLInstallerError** 를 다시 호출 해야 합니다.  
   
 ## <a name="comments"></a>주석  
- 응용 프로그램 호출 **SQLInstallerError** ODBC 설치 관리자 함수에 대 한 이전 호출에서 FALSE를 반환 하는 경우. ODBC 및 드라이버 관리자나 translator 설치 함수는 함수가 실패 하는 경우에 0 개 이상의 오류를 게시할 (FALSE를 반환 합니다). 따라서 응용 프로그램 호출 **SQLInstallerError** ODBC 설치 관리자 함수 실패 후에 합니다.  
+ ODBC 설치 관리자 함수에 대 한 이전 호출에서 FALSE를 반환 하는 경우 응용 프로그램은 **SQLInstallerError** 를 호출 합니다. ODBC 설치 관리자 및 드라이버 또는 변환기 설치 함수는 함수가 실패 한 경우에만 0 개 이상의 오류 (FALSE를 반환 함)를 게시 합니다. 따라서 응용 프로그램은 ODBC 설치 관리자 기능이 실패 한 후에만 **SQLInstallerError** 를 호출 합니다.  
   
- ODBC 설치 관리자 오류 큐는 새 설치 관리자 함수를 호출할 때마다가 플러시됩니다. 따라서 응용 프로그램은 마지막 installer 함수 호출에서 다른 함수에 대 한 오류를 검색할 기대할 수 없습니다.  
+ ODBC 설치 관리자 오류 큐는 새 설치 관리자 함수를 호출할 때마다 플러시됩니다. 따라서 응용 프로그램은 마지막 설치 관리자 함수 호출 이외의 함수에 대 한 오류를 검색할 수 없습니다.  
   
- 함수 호출에 대 한 여러 오류를 검색 하려면 응용 프로그램 호출 **SQLInstallerError** 여러 번입니다.  
+ 함수 호출에 대 한 여러 오류를 검색 하기 위해 응용 프로그램은 **SQLInstallerError** 를 여러 번 호출 합니다.  
   
- 추가 정보가 없는 경우 **SQLInstallerError** 에서 SQL_NO_DATA를 반환 합니다 *pfErrorCode* 인수 정의 되어 있지는 *pcbErrorMsg* 인수가 0과 같으면 및 합니다 *lpszErrorMsg* 단일 null 종료 문자를 포함 하는 인수 (하지 않는 한 합니다 *cbErrorMsgMax* 인수가 0).
+ 추가 정보가 없는 경우 **SQLInstallerError** 는 SQL_NO_DATA을 반환 하 고 *pfErrorCode* 인수는 Undefined 이며 *pcberrormsg* 인수는 0이 고 *lpszErrorMsg* 인수는 단일 Null 종료 문자를 포함 합니다 ( *cberrormsgmax* 인수가 0과 같지 않은 경우).

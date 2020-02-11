@@ -1,5 +1,5 @@
 ---
-title: 논리 함수를 사용 하 여 | Microsoft Docs
+title: 논리 함수 사용 | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 723d481bc858d7d1db4a63cbb32ab5614eddbb55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097161"
 ---
 # <a name="using-logical-functions"></a>논리 함수 사용
@@ -20,9 +20,9 @@ ms.locfileid: "68097161"
 
   논리 함수는 개체와 식에 대해 논리 연산이나 비교를 수행하고 부울 값을 반환합니다. MDX(Multidimensional Expressions)에서 멤버의 위치를 결정하는 데는 논리 함수가 필수적입니다.  
   
- 자주 사용 하는 논리 함수는 **IsEmpty** 함수입니다. 사용 하는 방법에 대 한 자세한 내용은 합니다 **IsEmpty** 함수를 참조 하십시오 [빈 값 작업](../mdx/working-with-empty-values.md)합니다.  
+ 가장 일반적으로 사용 되는 논리 함수는 **IsEmpty** 함수입니다. **IsEmpty** 함수를 사용 하는 방법에 대 한 자세한 내용은 [빈 값 작업](../mdx/working-with-empty-values.md)을 참조 하세요.  
   
- 다음 쿼리를 사용 하는 방법을 보여 줍니다 합니다 **IsLeaf** 하 고 **IsAncestor** 함수:  
+ 다음 쿼리에서는 **Isleaf** 및 **isleaf** 함수를 사용 하는 방법을 보여 줍니다.  
   
  `WITH`  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68097161"
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [함수 &#40;MDX 구문&#41;](../mdx/functions-mdx-syntax.md)  
   
   

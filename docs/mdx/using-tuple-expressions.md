@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 55b55f2104e900104c051021fc02761d32c63e5e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135125"
 ---
 # <a name="using-tuple-expressions"></a>튜플 식 사용
@@ -25,7 +25,7 @@ ms.locfileid: "68135125"
   
  튜플 식별자를 완전히 표현한 식은 다음과 같이 괄호로 둘러싸인 하나 이상의 명시적으로 지정된 멤버로 구성됩니다.  
   
- (*Member_expression* [합니다*Member_expression* ...])  
+ (*Member_expression* [,*Member_expression* ...])  
   
  튜플은 완전히 정규화하거나 암시적인 멤버를 포함하거나 단일 멤버를 포함할 수 있습니다.  
   
@@ -36,15 +36,15 @@ ms.locfileid: "68135125"
   
 -   암시적으로 참조하는 계층에 기본 멤버가 있는 경우 해당 기본 멤버를 튜플에 추가합니다.  
   
--   암시적으로 참조 하는 계층에 기본 멤버가 없는 경우는 **(All)** 기본 계층의 멤버를 사용 합니다.  
+-   암시적으로 참조 하는 계층에 기본 멤버가 없는 경우 기본 계층의 **(All)** 멤버가 사용 됩니다.  
   
 -   암시적으로 참조하는 계층에 기본 멤버가 없는 경우 계층의 최상위 수준에 있는 첫 번째 멤버를 사용합니다.  
   
 ## <a name="one-member-tuples"></a>단일 멤버 튜플  
  튜플 식에 단 하나의 멤버가 있는 경우 MDX는 식을 평가할 목적으로 이 멤버를 단일 멤버 튜플로 변환합니다. 즉, 튜플 식 대신 `[Measures].[TestMeasure]`라는 멤버 식을 쓰면 `( [Measures].[TestMeasure] ).`라는 튜플 식을 쓰는 것과 기능적으로 동일합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [식 &#40;MDX&#41;](../mdx/expressions-mdx.md)   
- [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [MDX &#40;식&#41;](../mdx/expressions-mdx.md)   
+ [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
