@@ -16,31 +16,31 @@ ms.assetid: 41e8a8dd-e69c-4a09-8736-93502e01961c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c78dfdc476dc9dcf599fcfe7cb87bd5e1a39d281
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919161"
 ---
 # <a name="defaultdatabase-property"></a>DefaultDatabase 속성
-에 대 한 기본 데이터베이스 지정을 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다.  
+[연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체에 대 한 기본 데이터베이스를 나타냅니다.  
   
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
- 설정 하거나 반환 된 **문자열** 공급자에서 사용할 수 있는 데이터베이스의 이름으로 계산 되는 값입니다.  
+ 공급자에서 사용할 수 있는 데이터베이스의 이름으로 계산 되는 **문자열** 값을 설정 하거나 반환 합니다.  
   
 ## <a name="remarks"></a>설명  
- 사용 된 **DefaultDatabase** 속성을 설정 하거나 특정 기본 데이터베이스의 이름을 반환할 **연결** 개체입니다.  
+ **Defaultdatabase** 속성을 사용 하 여 특정 **연결** 개체에 대 한 기본 데이터베이스의 이름을 설정 하거나 반환할 수 있습니다.  
   
- 기본 데이터베이스의 경우 SQL 문자열 개체는 데이터베이스에 액세스 하는 비 정규화 된 구문을 사용할 수 있습니다. 개체에 지정 된 것과 다른 데이터베이스에 액세스 하는 **DefaultDatabase** 속성을 원하는 데이터베이스 이름으로 개체 이름을 정규화 해야 합니다. 공급자 연결 시 기본 데이터베이스 정보를 작성 합니다 **DefaultDatabase** 속성입니다. 일부 공급자는 연결당 하나의 데이터베이스만 허용, 변경할 수 없습니다 경우에 **DefaultDatabase** 속성입니다.  
+ 기본 데이터베이스가 있는 경우 SQL 문자열은 정규화 되지 않은 구문을 사용 하 여 해당 데이터베이스의 개체에 액세스할 수 있습니다. **Defaultdatabase** 속성에 지정 된 개체 이외의 데이터베이스에 있는 개체에 액세스 하려면 원하는 데이터베이스 이름으로 개체 이름을 한정 해야 합니다. 연결 되 면 공급자는 기본 데이터베이스 정보를 **defaultdatabase** 속성에 기록 합니다. 일부 공급자는 연결당 하나의 데이터베이스만 허용 하며,이 경우 **defaultdatabase** 속성을 변경할 수 없습니다.  
   
- 일부 데이터 원본 및 공급자에는이 기능을 지원 하지 않을 수 및 오류 또는 빈 문자열을 반환할 수 있습니다.  
+ 일부 데이터 원본 및 공급자는이 기능을 지원 하지 않을 수 있으며 오류 또는 빈 문자열을 반환할 수 있습니다.  
   
 > [!NOTE]
->  **원격 데이터 서비스 사용** 이 속성은 클라이언트 쪽에서 사용할 수 없습니다 **연결** 개체입니다.  
+>  **원격 데이터 서비스 사용** 클라이언트 쪽 **연결** 개체에서는이 속성을 사용할 수 없습니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Provider 및 DefaultDatabase 속성 예제 (VB)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
  [Provider 및 DefaultDatabase 속성 예제(VC++)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vc.md)   

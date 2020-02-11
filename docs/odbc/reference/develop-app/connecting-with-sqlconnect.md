@@ -1,5 +1,5 @@
 ---
-title: SQLConnect로 연결 | Microsoft Docs
+title: SQLConnect를 사용 하 여 연결 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ ms.assetid: b16319d2-2c2c-4341-abb5-caa9e17362b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e37cef235949473beb52e0836553ca16316bc744
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083119"
 ---
 # <a name="connecting-with-sqlconnect"></a>SQLConnect로 연결
-**SQLConnect** 는 가장 단순한 연결 함수입니다. 데이터 원본 이름이 필요 하 고 선택적 사용자 ID 및 암호를 허용 합니다. 하드 코드는 데이터 원본 이름 및 사용자 ID 또는 암호가 필요 하지 않은 응용 프로그램에 대 한 잘 작동 합니다. 또한 하려는 응용 프로그램 제어 "모양 및 느낌" 자체 또는 사용자 인터페이스에 대해 잘 작동 합니다. 이러한 응용 프로그램에 사용 하 여 데이터 원본 목록을 빌드할 수 있습니다 **SQLDataSources**고, 데이터 원본, 사용자 ID와 암호를 묻는 메시지를 호출 하 **SQLConnect**합니다.  
+**SQLConnect** 는 가장 간단한 연결 함수입니다. 데이터 원본 이름이 필요 하며 선택적 사용자 ID와 암호를 허용 합니다. 데이터 원본 이름을 하드 코딩 하 고 사용자 ID 또는 암호가 필요 하지 않은 응용 프로그램에 적합 합니다. 또한 자체의 "모양과 느낌"을 제어 하거나 사용자 인터페이스가 없는 응용 프로그램에도 적합 합니다. 이러한 응용 프로그램은 **sqldatasources**원본을 사용 하 여 데이터 원본 목록을 작성 하 고 사용자에 게 데이터 원본, 사용자 ID 및 암호를 입력 하 라는 메시지를 표시 한 다음 **SQLConnect**를 호출할 수 있습니다.  
   
- 다음 예제에서는 northwind DSN을 사용 하 여 Northwind 데이터베이스에 연결 하 고 모든 직원 테이블의 레코드에서 모든 이름 및 성 필드를 검색 합니다.  
+ 다음 예에서는 Northwind 라는 DSN을 사용 하 여 Northwind 데이터베이스에 연결 하 고 Employees 테이블의 모든 레코드에서 성과 이름 필드를 모두 검색 합니다.  
   
 ```  
 // Connecting_with_SQLConnect.cpp  

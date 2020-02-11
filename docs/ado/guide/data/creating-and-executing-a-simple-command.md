@@ -1,5 +1,5 @@
 ---
-title: 만들기 및 간단한 명령을 실행 합니다. | Microsoft Docs
+title: 간단한 명령 만들기 및 실행 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,25 +14,25 @@ ms.assetid: 0b81af6f-b9ae-4f7c-b59b-b5bdd775036f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7ae9cc9066f66d10d94370336e8a46155f1a03c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925734"
 ---
 # <a name="creating-and-executing-a-simple-command"></a>간단한 명령 만들기 및 실행
-간단한 명령은 없는 지 속성을 하며 매개 변수가 없는 것입니다. 만들고 간단한 명령을 실행 하는 방법은 세 가지가 있습니다.  
+간단한 명령은 매개 변수화 되지 않고 지 속성을 필요로 하지 않는 명령입니다. 간단한 명령을 만들고 실행 하는 방법에는 세 가지가 있습니다.  
   
--   사용 하는 **명령** 개체  
+-   **Command** 개체 사용  
   
--   사용 하는 **연결** 개체  
+-   **Connection** 개체 사용  
   
--   사용 하는 **레코드 집합** 개체  
+-   **레코드 집합** 개체 사용  
   
-## <a name="using-a-command-object"></a>명령 개체를 사용 하 여  
- 사용 하 여 간단한 명령을 만드는 **명령** 개체를 명령에 할당 해야 합니다는 **CommandText** 속성을 **명령** 개체 및 적절 한 값을 설정 합니다 **CommandType** 속성입니다. 명령 실행에 대해 열린 연결에 할당 되어 있는지 필요를 **ActiveConnection** 의 속성을 **명령** 개체를 호출 하 여를 **Execute** 메서드 에 **명령** 개체입니다.  
+## <a name="using-a-command-object"></a>Command 개체 사용  
+ **명령** 개체를 사용 하 여 간단한 명령을 만들려면 **명령을 명령** 개체의 **CommandText** 속성에 할당 하 고 **CommandType** 속성에 대해 적절 한 값을 설정 해야 합니다. 명령을 실행 하려면 **명령 개체의** **ActiveConnection** 속성에 open connection을 할당 한 다음 **명령** 개체에 대 한 **Execute** 메서드를 호출 해야 합니다.  
   
- 다음 코드 조각을 사용 하 여 기본 메서드를 보여 줍니다.는 **명령** 데이터 원본에 대해 명령을 실행 하는 개체입니다. 행을 반환 하는 명령을 사용 하 고으로 명령 실행의 결과 반환 하는이 예제는 **레코드 집합** 개체입니다.  
+ 다음 코드 조각에서는 **명령** 개체를 사용 하 여 데이터 소스에 대해 명령을 실행 하는 기본적인 방법을 보여 줍니다. 이 예에서는 행을 반환 하는 명령을 사용 하 고 명령 실행 결과를 **레코드 집합** 개체로 반환 합니다.  
   
 ```  
     'BeginBasicCmd  
@@ -107,8 +107,8 @@ End Function
 'EndNewConnection  
 ```  
   
-## <a name="using-a-recordset-object"></a>레코드 집합 개체를 사용 하 여  
- 명령을 pa 및 텍스트 문자열을 만들 수도 있습니다 하는 **열기** 메서드를 **레코드 집합** 개체 명령 유형 (adCmdText)와 함께 실행에 대 한. 다음 코드 조각은이 보여 줍니다.  
+## <a name="using-a-recordset-object"></a>레코드 집합 개체 사용  
+ 명령을 텍스트 문자열로 만들고 명령 유형 (adCmdText)과 함께 **레코드 집합** 개체의 **Open** 메서드로 pas를 실행 하 여 실행할 수도 있습니다. 다음 코드 조각에서는이를 보여 줍니다.  
   
 ```  
   
@@ -146,8 +146,8 @@ objRs.Close
 Set objRs = Nothing  
 ```  
   
-## <a name="using-a-connection-object"></a>연결 개체를 사용 하 여  
- 또한 열려 있는 연결 개체에서 명령을 실행할 수 있습니다. 이전 코드 예제는이:  
+## <a name="using-a-connection-object"></a>Connection 개체 사용  
+ 열려 있는 연결 개체에 대해 명령을 실행할 수도 있습니다. 이제 앞의 코드 예제가 다음과 같이 됩니다.  
   
 ```  
 Const DS = "MySqlServer"  

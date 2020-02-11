@@ -1,5 +1,5 @@
 ---
-title: 연결 개체의 메서드로 저장 프로시저 호출 | Microsoft Docs
+title: 연결 개체에서 저장 프로시저를 메서드로 호출 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,16 +15,16 @@ ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2189bf9b2a82cdf21fdd13ed77a977f6b333ac87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925892"
 ---
 # <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>연결 개체의 메서드로 저장 프로시저 호출
-연결 열기 네이티브 메서드인 것 처럼 저장된 프로시저를 호출할 수 있습니다 **연결** 개체입니다. 명명 된 명령을 호출 비슷합니다는 **연결** 개체입니다.  
+저장 프로시저는 연결 된 열린 **연결** 개체의 네이티브 메서드인 것 처럼 호출할 수 있습니다. 이는 **Connection** 개체에서 명명 된 명령을 호출 하는 것과 유사 합니다.  
   
- 다음 Visual Basic 코드 예제에서는 CustOrdersOrders 나열 된 다음 다시 사용자 편의 위해 호출 하는 Northwind 샘플 데이터베이스에서 저장된 프로시저를 호출 합니다.  
+ 다음 Visual Basic 코드 예에서는 편의를 위해 여기에 다시 나열 된 CustOrdersOrders 이라는 Northwind 샘플 데이터베이스의 저장 프로시저를 호출 합니다.  
   
 ```  
 CREATE PROCEDURE CustOrdersOrders @CustomerID nchar(5) AS  
@@ -34,7 +34,7 @@ WHERE CustomerID = @CustomerID
 ORDER BY OrderID  
 ```  
   
- 다음 코드 예제에서는 연결된을 열 때 네이티브 메서드인 것 처럼 저장된 프로시저를 호출 하는 방법을 보여 줍니다 **연결** 개체입니다.  
+ 다음 코드 예제에서는 저장 프로시저를 연결 된 열린 **연결** 개체의 네이티브 메서드인 것 처럼 호출 하는 방법을 보여 줍니다.  
   
 ```  
 Const DS = "MySQLServer"  
@@ -78,5 +78,5 @@ Set objConn = Nothing
 Set objComm = Nothing  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

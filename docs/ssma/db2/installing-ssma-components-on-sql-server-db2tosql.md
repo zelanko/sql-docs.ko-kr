@@ -1,5 +1,5 @@
 ---
-title: (DB2ToSQL) SQL Server에 SSMA 구성 요소 설치 | Microsoft Docs
+title: SQL Server에 SSMA 구성 요소 설치 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,19 +10,19 @@ ms.assetid: cf2b724b-4ca7-470a-8dd7-fa95b1e060a4
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3801526bfec64fa8efeb992ec7552a232d2e13c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67989514"
 ---
-# <a name="installing-ssma-components-on-sql-server-db2tosql"></a>(DB2ToSQL) SQL Server에 SSMA 구성 요소 설치
-이 버전의 SSMA 별도 설치 하지 않아도에 있는지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 마이그레이션 및 DB2 공급자 서버-투-서버 연결을 사용 하도록 지 원하는 고 SSMA 확장 팩입니다.  
+# <a name="installing-ssma-components-on-sql-server-db2tosql"></a>SQL Server에 SSMA 구성 요소 설치 (DB2ToSQL)
+이 버전의 SSMA에서는 데이터 마이그레이션을 지 원하는 SSMA 확장 팩과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버 간 연결을 설정 하는 DB2 공급자를 별도로 설치할 필요가 없습니다.  
   
-## <a name="ssma-for-db2-extension-pack"></a>확장 팩 DB2 용 SSMA  
-SSMA 확장 팩 추가 스키마 데이터베이스의 지정 된 인스턴스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 합니다 **sysdb** 테이블 및 데이터를 마이그레이션하는 데 필요한 저장된 프로시저 및 DB2 시스템 함수를 에뮬레이트하는 사용자 정의 함수를 스키마에 포함 되어 있습니다.  
+## <a name="ssma-for-db2-extension-pack"></a>D b 2 용 SSMA 확장 팩  
+SSMA 확장 팩은 데이터베이스의 지정 된 인스턴스에 스키마를 추가 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **Sysdb** 스키마에는 데이터를 마이그레이션하는 데 필요한 테이블 및 저장 프로시저와 DB2 시스템 함수를 에뮬레이트하는 사용자 정의 함수가 포함 되어 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
-[클라이언트가 DB2 용 SSMA 설치 &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)  
-[SQL Server로 데이터베이스 마이그레이션 DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+## <a name="see-also"></a>참고 항목  
+[DB2ToSQL&#41;&#40;DB2 용 SSMA 클라이언트 설치](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)  
+[DB2 데이터베이스를 SQL Server &#40;DB2ToSQL&#41;로 마이그레이션](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

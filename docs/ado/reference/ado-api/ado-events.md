@@ -14,38 +14,38 @@ ms.assetid: 0ded5ad9-8f83-4224-95af-38512783b972
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 35169313ae487514403f62c8e6d1ba2c262cb8a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921003"
 ---
 # <a name="ado-events"></a>ADO 이벤트
 
 |||  
 |-|-|  
-|[BeginTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|다음에 호출 된 **BeginTrans** 작업 합니다.|  
-|[CommitTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|다음에 호출 된 **CommitTrans** 작업 합니다.|  
-|[ConnectComplete](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|연결이 시작 된 후 호출 됩니다.|  
-|[연결 끊기](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|연결이 종료 된 후 호출 됩니다.|  
-|[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|행의 끝을 넘어 이동 하려고 하면 호출 된 **레코드 집합**합니다.|  
-|[ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)|명령 실행이 완료 된 후 호출 됩니다.|  
-|[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|시간이 오래 걸리는 비동기 작업에서 모든 레코드를 가져온 후에 호출 된 **레코드 집합**합니다.|  
-|[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|에 현재 검색 된 행의 수를 보고 하려면 시간이 오래 걸리는 비동기 작업을 하는 동안에 주기적으로 호출 합니다 **레코드 집합**합니다.|  
-|[FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|하나 이상의 값 다음에 호출 **필드** 개체 변경 되었습니다.|  
-|[InfoMessage](../../../ado/reference/ado-api/infomessage-event-ado.md)|중에 경고가 발생 될 때마다 호출을 **ConnectionEvent** 작업 합니다.|  
-|[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|현재 위치 다음에 호출 된 **레코드 집합** 변경 합니다.|  
-|[RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|하나 이상의 레코드 변경 후 호출 됩니다.|  
-|[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|다음에 호출 된 **레코드 집합** 변경 되었습니다.|  
-|[RollbackTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|다음에 호출 된 **RollbackTrans** 작업 합니다.|  
-|[WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|보류 중인 작업을 하나 이상의 값을 변경 하기 전에 호출 **필드** 개체를 **Recordset**합니다.|  
-|[WillChangeRecord](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|하나 이상의 레코드 (행) 전에 호출 된 **레코드 집합** 변경 합니다.|  
-|[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|보류 중인 작업을 변경 하기 전에 호출 된 **레코드 집합**합니다.|  
-|[WillConnect](../../../ado/reference/ado-api/willconnect-event-ado.md)|연결을 시작 하기 전에 호출 됩니다.|  
-|[WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md)|보류 중인 명령이이 연결에서 실행 하 고 사용자를 점검 하 여 보류 중인 실행 매개 변수를 수정할 수 있는 기회를 제공 하기 직전에 호출 됩니다.|  
-|[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|합니다 **WillMove** 이벤트 라고 *하기 전에* 보류 중인 작업을 현재 위치를 변경 합니다 **레코드 집합**합니다.|  
+|[BeginTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|**BeginTrans** 작업 후에 호출 됩니다.|  
+|[CommitTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|**CommitTrans** 작업 후에 호출 됩니다.|  
+|[ConnectComplete](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|연결이 시작 된 후에 호출 됩니다.|  
+|[케이블](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|연결이 종료 된 후에 호출 됩니다.|  
+|[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|**레코드 집합**의 끝을 지나서 행으로 이동 하려고 할 때 호출 됩니다.|  
+|[ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)|명령 실행이 완료 된 후에 호출 됩니다.|  
+|[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|긴 비동기 작업의 모든 레코드를 **레코드 집합**으로 검색 한 후에 호출 됩니다.|  
+|[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|**레코드 집합**으로 현재 검색 된 행 수를 보고 하기 위해 시간이 오래 걸리는 비동기 작업 중에 주기적으로 호출 됩니다.|  
+|[FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|하나 이상의 **Field** 개체의 값이 변경 된 후에 호출 됩니다.|  
+|[InfoMessage](../../../ado/reference/ado-api/infomessage-event-ado.md)|**Connectionevent** 작업 중에 경고가 발생할 때마다 호출 됩니다.|  
+|[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|**레코드 집합** 의 현재 위치가 변경 된 후에 호출 됩니다.|  
+|[RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|하나 이상의 레코드가 변경 된 후에 호출 됩니다.|  
+|[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|**레코드 집합이** 변경 된 후에 호출 됩니다.|  
+|[RollbackTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|**RollbackTrans** 작업 후에 호출 됩니다.|  
+|[WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|보류 중인 작업에서 **레코드 집합**에 있는 하나 이상의 **필드** 개체 값이 변경 되기 전에 호출 됩니다.|  
+|[WillChangeRecord](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|**레코드 집합** 에 있는 하나 이상의 레코드 (행)가 변경 되기 전에 호출 됩니다.|  
+|[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|보류 중인 작업에서 **레코드 집합**을 변경 하기 전에 호출 됩니다.|  
+|[WillConnect](../../../ado/reference/ado-api/willconnect-event-ado.md)|연결이 시작 되기 전에 호출 됩니다.|  
+|[WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md)|이 연결에서 보류 중인 명령이 실행 되 고 사용자가 보류 중인 실행 매개 변수를 검사 하 고 수정할 수 있는 기회를 발생 하기 직전에 호출 됩니다.|  
+|[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|**WillMove** 이벤트는 보류 중인 작업이 **레코드 집합**의 현재 위치를 변경 *하기 전에* 호출 됩니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ADO API 참조](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO 컬렉션](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO 동적 속성](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

@@ -1,5 +1,5 @@
 ---
-title: 업그레이드 관리자 (사용자 인터페이스)를 실행 합니다. | Microsoft Docs
+title: 업그레이드 관리자 실행 (사용자 인터페이스) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,19 +18,20 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5aecaea9bef359ad24aebbd20dd5e9547497043b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092453"
 ---
 # <a name="running-upgrade-advisor-user-interface"></a>업그레이드 관리자 실행(사용자 인터페이스)
   업그레이드를 계획하는 동안 업그레이드 관리자를 실행하여 로컬 또는 원격 구성 요소를 분석할 수 있습니다. 업그레이드 관리자는 분석되는 각 구성 요소와 인스턴스에 대한 보고서를 생성합니다.  
   
 > [!IMPORTANT]  
->  업그레이드 관리자는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 원격 인스턴스를 분석하지 않습니다. [!INCLUDE[ssRS](../../includes/ssrs.md)] 인스턴스를 분석하려면 [!INCLUDE[ssRS](../../includes/ssrs.md)]가 설치된 컴퓨터에 업그레이드 관리자를 설치해야 합니다.  
+>  업그레이드 관리자는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 원격 인스턴스를 분석하지 않습니다. 
+  [!INCLUDE[ssRS](../../includes/ssrs.md)] 인스턴스를 분석하려면 [!INCLUDE[ssRS](../../includes/ssrs.md)]가 설치된 컴퓨터에 업그레이드 관리자를 설치해야 합니다.  
 >   
->  분석할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 해야 Integration Services를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 설치 및 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 동일한 컴퓨터에 설치 합니다.  
+>  Integration Services를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 분석 하려면 동일한 컴퓨터에를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 설치 하 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 고 설치 해야 합니다.  
   
 ## <a name="running-the-upgrade-advisor-analysis-wizard"></a>업그레이드 관리자 분석 마법사 실행  
  업그레이드 관리자 분석 마법사는 다음과 같은 여섯 단계로 실행됩니다.  
@@ -47,9 +48,9 @@ ms.locfileid: "66092453"
   
 6.  업그레이드 문제에 대한 보고서를 생성합니다.  
   
- 업그레이드 관리자 분석 마법사에 대 한 자세한 내용은 참조 하세요. [방법: 업그레이드 관리자 분석 마법사 실행](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)합니다.  
+ 업그레이드 관리자 분석 마법사에 대 한 자세한 내용은 [방법: 업그레이드 관리자 분석 마법사 실행](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)을 참조 하세요.  
   
- 각 단계에 필요한 특정 정보를 참조 하세요 [업그레이드 관리자 사용자 인터페이스 참조](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)합니다.  
+ 각 단계에 필요한 특정 정보는 [업그레이드 관리자 사용자 인터페이스 참조](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)를 참조 하세요.  
   
 ## <a name="running-the-upgrade-advisor-report-viewer"></a>업그레이드 관리자 보고서 뷰어 실행  
  업그레이드 관리자 분석 마법사에서 생성된 보고서를 보려면 업그레이드 관리자 보고서 뷰어를 사용합니다. 보고서가 로드되면 다음 요인을 기준으로 보고서의 구성 요소를 필터링할 수 있습니다.  
@@ -68,13 +69,13 @@ ms.locfileid: "66092453"
   
  보고서 뷰어를 사용하는 방법에 대한 단계별 지침은 다음 항목을 참조하십시오.  
   
--   [방법: 업그레이드 관리자 보고서를 보려면](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)  
+-   [방법: 업그레이드 관리자 보고서 보기](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)  
   
 -   [방법: 보고서 필터링](../../../2014/sql-server/install/how-to-filter-reports.md)  
   
 -   [방법: 보고서 내보내기](../../../2014/sql-server/install/how-to-export-reports.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [방법: 업그레이드 관리자 분석 마법사 실행](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [업그레이드 관리자 사용자 인터페이스 참조](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)   
  [업그레이드 문제 해결](../../../2014/sql-server/install/resolving-upgrade-issues.md)   

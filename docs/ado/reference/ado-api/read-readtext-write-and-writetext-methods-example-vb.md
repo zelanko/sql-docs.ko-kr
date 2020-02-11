@@ -1,5 +1,5 @@
 ---
-title: 읽기, ReadText, Write 및 WriteText 메서드 예제 (VB) | Microsoft Docs
+title: Read, ReadText, Write 및 WriteText 메서드 예제 (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,14 +18,14 @@ ms.assetid: 699b73f7-04f9-4d46-94b2-6cb12be6de56
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f77b2d395b76b537107ad87cf1487bb4d25a430c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931448"
 ---
-# <a name="read-readtext-write-and-writetext-methods-example-vb"></a>읽기, ReadText, Write 및 WriteText 메서드 예제 (VB)
-이 예제에는 두 텍스트 입력란의 내용을 읽는 방법을 보여 줍니다 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 및 이진 **Stream**합니다. 다른 속성 및 표시 된 메서드를 포함 [위치](../../../ado/reference/ado-api/position-property-ado.md)를 [크기](../../../ado/reference/ado-api/size-property-ado-parameter.md)에 [Charset](../../../ado/reference/ado-api/charset-property-ado.md), 및 [SetEOS](../../../ado/reference/ado-api/seteos-method.md)합니다.  
+# <a name="read-readtext-write-and-writetext-methods-example-vb"></a>Read, ReadText, Write 및 WriteText 메서드 예제 (VB)
+이 예제에서는 텍스트 상자의 내용을 텍스트 [스트림과](../../../ado/reference/ado-api/stream-object-ado.md) 이진 **스트림으로**읽는 방법을 보여 줍니다. 표시 되는 다른 속성 및 메서드에는 [위치](../../../ado/reference/ado-api/position-property-ado.md), [크기](../../../ado/reference/ado-api/size-property-ado-parameter.md), [문자 집합](../../../ado/reference/ado-api/charset-property-ado.md)및 [SetEOS](../../../ado/reference/ado-api/seteos-method.md)있습니다.  
   
 ```  
 'BeginReadVB  
@@ -110,13 +110,13 @@ End Sub
 'EndReadVB  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Charset 속성 (ADO)](../../../ado/reference/ado-api/charset-property-ado.md)   
  [Position 속성 (ADO)](../../../ado/reference/ado-api/position-property-ado.md)   
  [Read 메서드](../../../ado/reference/ado-api/read-method.md)   
  [ReadText 메서드](../../../ado/reference/ado-api/readtext-method.md)   
  [SetEOS 메서드](../../../ado/reference/ado-api/seteos-method.md)   
- [Size 속성 (ADO Stream)](../../../ado/reference/ado-api/size-property-ado-stream.md)   
+ [Size 속성 (ADO 스트림)](../../../ado/reference/ado-api/size-property-ado-stream.md)   
  [Stream 개체 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
  [Write 메서드](../../../ado/reference/ado-api/write-method.md)   
  [WriteText 메서드](../../../ado/reference/ado-api/writetext-method.md)

@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e83f539e1ffad77a337fc3e0142379da2ff0f703
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104098"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>원격 관리를 위한 보고서 서버 구성
@@ -43,7 +43,7 @@ ms.locfileid: "66104098"
   
  자세한 내용은 MSDN에 있는 Platform SDK 설명서에서 [Windows 방화벽을 통한 연결](https://go.microsoft.com/fwlink/?LinkId=63615) 을 참조하십시오.  
   
-## <a name="tasks"></a>태스크  
+## <a name="tasks"></a>작업  
  원격 보고서 서버 구성을 활성화하는 태스크는 다음과 같습니다.  
   
 -   Windows 방화벽에서 포트를 설정하여 보고서 서버와 SQL Server 데이터베이스 엔진 인스턴스에서 사용하는 포트에 대한 요청을 허용합니다.  
@@ -60,15 +60,15 @@ ms.locfileid: "66104098"
   
 ### <a name="to-open-ports-in-windows-firewall"></a>Windows 방화벽에서 포트를 열려면  
   
-1.  [데이터베이스 엔진 액세스에 대 한 Windows 방화벽 구성](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)합니다.  
+1.  [데이터베이스 엔진 액세스에 대 한 Windows 방화벽을 구성](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)합니다.  
   
-2.  [Configure a Firewall for Report Server Access](configure-a-firewall-for-report-server-access.md)합니다.  
+2.  [보고서 서버 액세스를 위한 방화벽을 구성](configure-a-firewall-for-report-server-access.md)합니다.  
   
 ### <a name="to-configure-remote-connections-to-the-report-server-database"></a>보고서 서버 데이터베이스에 대한 원격 연결을 구성하려면  
   
 1.  **시작**을 클릭하고 **프로그램**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **구성 도구**를 차례로 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
   
-2.  왼쪽 창에서 **SQL Server 네트워크 구성**을 확장한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 **프로토콜**을 클릭합니다.  
+2.  왼쪽 창에서 **SQL Server 네트워크 구성**을 확장한 다음 **인스턴스에 대한**프로토콜[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 클릭합니다.  
   
 3.  세부 정보 창에서 TCP/IP 및 명명된 파이프 프로토콜을 설정한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 다시 시작합니다.  
   
@@ -76,9 +76,9 @@ ms.locfileid: "66104098"
   
 1.  원격 관리를 활성화할 컴퓨터에 로컬 관리자로 로그온합니다.  
   
-2.  보고서 서버는 Windows Vista에서 실행 중인를 마우스 오른쪽 단추로 클릭 **명령 프롬프트** 선택한 **관리자 권한으로 실행**합니다. 다른 운영 체제의 경우 명령 프롬프트 창을 엽니다.  
+2.  보고서 서버가 Windows Vista에서 실행 되는 경우 **명령 프롬프트** 를 마우스 오른쪽 단추로 클릭 하 고 **관리자 권한으로 실행**을 선택 합니다. 다른 운영 체제의 경우 명령 프롬프트 창을 엽니다.  
   
-3.  다음 명령을 실행합니다.  
+3.  다음 명령 실행:  
   
     ```  
     netsh.exe firewall set service type=REMOTEADMIN mode=ENABLE scope=ALL  
@@ -98,7 +98,7 @@ ms.locfileid: "66104098"
   
 1.  시작 메뉴에서 **관리 도구**를 가리키고 **구성 요소 서비스**를 클릭합니다.  
   
-     Windows vista 시작 메뉴를 클릭 **모든 프로그램**, 클릭 **실행**를 입력 한 다음 `mmc comexp.msc`합니다.  
+     Windows Vista의 경우 시작 메뉴에서 **모든 프로그램**, **실행**을 차례로 클릭 한 다음를 입력 `mmc comexp.msc`합니다.  
   
 2.  구성 요소 서비스 폴더를 엽니다.  
   
@@ -146,7 +146,7 @@ ms.locfileid: "66104098"
   
 13. **허용** 열에서 **계정 사용**, **원격으로부터 사용 가능**및 **보안 읽기**를 선택한 다음 **확인**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 행 집합 속성 (ADO) | Microsoft Docs
+title: Rowset 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,14 +20,14 @@ ms.assetid: 7d359294-4ff2-47e0-8111-0c221b24d80e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 922f6690679d86bdb6cdafb721e3a5ed6bb674ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917118"
 ---
 # <a name="rowset-property-ado"></a>Rowset 속성(ADO)
-OLE DB를 가져오거나 설정 합니다. **행 집합** 간에에서 개체를 **ADORecordsetConstruction** 개체입니다. 행 집합 put_Rowset를 사용 하는 경우 ADO에 활성화 됩니다 **레코드 집합** 개체입니다.  
+**ADORecordsetConstruction** 개체에서/에 대 한 OLE DB **행 집합** 개체를 가져오거나 설정 합니다. Put_Rowset 사용 하는 경우 행 집합은 ADO **레코드 집합** 개체로 전환 됩니다.  
   
  읽기/쓰기입니다.  
   
@@ -40,13 +40,13 @@ HRESULT put_Rowset([in] IUnknown* pRowset);
   
 ## <a name="parameters"></a>매개 변수  
  *ppRowset*  
- OLE DB에 대 한 포인터 **행 집합** 개체입니다.  
+ OLE DB **행 집합** 개체에 대 한 포인터입니다.  
   
  *PRowset*  
  OLE DB **행 집합** 개체입니다.  
   
 ## <a name="return-values"></a>반환 값  
- 이 속성 메서드는 S_OK와 E_FAIL을 비롯 한 표준 HRESULT 값을 반환 합니다.  
+ 이 속성 메서드는 S_OK 및 E_FAIL를 포함 하 여 표준 HRESULT 값을 반환 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [ADORecordsetConstruction 인터페이스](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)

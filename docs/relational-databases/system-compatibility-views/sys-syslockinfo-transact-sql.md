@@ -1,5 +1,5 @@
 ---
-title: sys.syslockinfo (TRANSACT-SQL) | Microsoft Docs
+title: syslockinfo (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,10 +21,10 @@ ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0c56aa86c20867cfe2cf1da520922d1c74f9c01c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053342"
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo(Transact-SQL)
@@ -36,13 +36,13 @@ ms.locfileid: "68053342"
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
 > [!IMPORTANT]  
->  이 기능은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 변경되었습니다. 자세한 내용은 [SQL Server 2016 데이터베이스 엔진 기능의 주요 변경 내용](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)합니다.  
+>  이 기능은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 변경되었습니다. 자세한 내용은 [2016 SQL Server 데이터베이스 엔진 기능에 대 한 주요 변경 내용](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)을 참조 하세요.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**rsc_text**|**nchar(32)**|잠금 리소스에 관한 문자 설명입니다. 리소스 이름의 일부를 포함합니다.|  
-|**rsc_bin**|**binary(16)**|이진 잠금 리소스입니다. 잠금 관리자에 있는 실제 잠금 리소스를 포함합니다. 알고 있는 도구를 생성 하기 위한 잠금 리소스 형식을 자체 형식의 잠금 리소스에 대 한이 열은 포함 되어 있으며 자체에서 조인을 수행 하는 데 **syslockinfo**합니다.|  
-|**rsc_valblk**|**binary(16)**|잠금 값 블록입니다. 일부 리소스 유형은 잠금 관리자가 해시하지 않은 잠금 리소스에 추가 데이터를 포함하여 특정 잠금 리소스의 소유권을 결정할 수 있습니다. 예를 들어 특정 개체 ID가 잠금 에스컬레이션 및 기타 목적을 위해 페이지 잠금을 소유할 수 없습니다. 그러나 페이지 잠금의 개체 ID를 잠금 값 블록에 포함할 수는 있습니다.|  
+|**rsc_text**|**nchar (32)**|잠금 리소스에 관한 문자 설명입니다. 리소스 이름의 일부를 포함합니다.|  
+|**rsc_bin**|**binary (16)**|이진 잠금 리소스입니다. 잠금 관리자에 있는 실제 잠금 리소스를 포함합니다. 이 열은 고유한 형식의 잠금 리소스를 생성 하 고 **syslockinfo**에서 자체 조인을 수행 하는 데 필요한 잠금 리소스 형식에 대해 알고 있는 도구에 포함 됩니다.|  
+|**rsc_valblk**|**binary (16)**|잠금 값 블록입니다. 일부 리소스 유형은 잠금 관리자가 해시하지 않은 잠금 리소스에 추가 데이터를 포함하여 특정 잠금 리소스의 소유권을 결정할 수 있습니다. 예를 들어 특정 개체 ID가 잠금 에스컬레이션 및 기타 목적을 위해 페이지 잠금을 소유할 수 없습니다. 그러나 페이지 잠금의 개체 ID를 잠금 값 블록에 포함할 수는 있습니다.|  
 |**rsc_dbid**|**smallint**|리소스와 연관된 데이터베이스 ID입니다.|  
 |**rsc_indid**|**smallint**|필요한 경우 사용할 수 있는 리소스와 연관된 인덱스 ID입니다.|  
 |**rsc_objid**|**int**|리소스와 연관된 개체 ID입니다. 해당되는 경우에 한합니다.|  
@@ -53,17 +53,17 @@ ms.locfileid: "68053342"
 |**req_refcnt**|**smallint**|잠금 참조 수입니다. 트랜잭션이 특정 리소스에 대한 잠금을 확인할 때마다 참조 수가 증가합니다. 참조 수가 0이 될 때까지 잠금을 해제할 수 없습니다.|  
 |**req_cryrefcnt**|**smallint**|나중에 사용하기 위해 예약되어 있습니다. 항상 0으로 설정합니다.|  
 |**req_lifetime**|**int**|잠금 사용 기간 비트맵입니다. 특정 쿼리 처리 전략을 수행하는 동안 쿼리 프로세서가 쿼리의 특정 단계를 완료할 때까지 리소스에 대한 잠금을 유지 관리해야 합니다. 잠금 사용 기간 비트맵은 쿼리 프로세서 및 트랜잭션 관리자가 쿼리의 특정 단계가 완료되었을 때 해제할 수 있는 잠금 그룹을 표시하는 데 사용됩니다. 비트맵의 특정 비트는 참조 수가 0인 경우에도 트랜잭션이 끝날 때까지 보유되는 잠금을 표시하는 데 사용됩니다.|  
-|**req_spid**|**int**|내부 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 잠금을 요청 하는 세션의 프로세스 ID입니다.|  
+|**req_spid**|**int**|잠금을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 요청 하는 세션의 내부 프로세스 ID입니다.|  
 |**req_ecid**|**int**|실행 컨텍스트 ID(ECID)입니다. 병렬 작업에서 특정 잠금을 소유하고 있는 스레드를 표시하는 데 사용합니다.|  
 |**req_ownertype**|**smallint**|다음은 잠금과 연관된 개체의 유형입니다.<br /><br /> 1 = 트랜잭션<br /><br /> 2 = 커서<br /><br /> 3 = 세션<br /><br /> 4 = ExSession<br /><br /> 3과 4는 각각 세션 잠금의 특별한 버전인 데이터베이스 추적 및 파일 그룹 잠금을 나타냅니다.|  
-|**req_transactionID**|**bigint**|고유 트랜잭션 ID 레지스트리에 **syslockinfo** 및 프로파일러 이벤트|  
+|**req_transactionID**|**bigint**|**Syslockinfo** 및 profiler 이벤트에서 사용 되는 고유한 트랜잭션 ID|  
 |**req_transactionUOW**|**uniqueidentifier**|DTC 트랜잭션의 UOW(작업 단위) ID를 식별합니다. MS DTC 트랜잭션이 아닌 경우에는 UOW가 0으로 설정됩니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [시스템 테이블을 시스템 뷰로 매핑 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [호환성 뷰&#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [시스템 테이블을 시스템 뷰로 매핑 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;호환성 뷰](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

@@ -22,33 +22,33 @@ ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 51c1898ddaee1ecf878944a3b43c3d8adbb38590
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946175"
 ---
 # <a name="xml-construction-xquery"></a>XML 생성(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Xquery에서는 사용할 수 있습니다 합니다 **직접** 하 고 **계산** 쿼리 안에 XML 구조를 생성 하는 생성자입니다.  
+  XQuery에서는 **직접** 및 **계산** 된 생성자를 사용 하 여 쿼리 내에서 XML 구조를 생성할 수 있습니다.  
   
 > [!NOTE]  
->  간에 차이가 없습니다 합니다 **직접** 하 고 **계산** 생성자입니다.  
+>  **직접** 생성자와 **계산** 된 생성자 간에는 차이가 없습니다.  
   
 ## <a name="using-direct-constructors"></a>직접 생성자 사용  
  직접 생성자를 사용할 경우 XML을 생성할 때 XML 유형 구문을 지정합니다. 다음 예에서는 직접 생성자를 사용하여 XML을 생성하는 방법을 보여 줍니다.  
   
 ### <a name="constructing-elements"></a>요소 생성  
- XML 표기를 사용할 때 요소를 생성할 수 있습니다. 다음 예제에서는 직접 요소 생성자 식을 사용 하 여 만들고를 \<ProductModel > 요소입니다. 생성된 요소에는 3개의 자식 요소가 있습니다.  
+ XML 표기를 사용할 때 요소를 생성할 수 있습니다. 다음 예에서는 직접 요소 생성자 식을 사용 하 고> 요소 \<를 사용 하 여 제품 모델을 만듭니다. 생성된 요소에는 3개의 자식 요소가 있습니다.  
   
 -   텍스트 노드  
   
--   두 개의 요소 노드 \<요약 > 및 \<기능 >.  
+-   두 개의 요소 노드 \<, 요약> \<및 기능이>.  
   
-    -   \<요약 > 요소에 값이 "Some description" 하나의 텍스트 노드 자식입니다.  
+    -   \<Summary> 요소에는 값이 "Some description" 인 텍스트 노드 자식이 하나 있습니다.  
   
-    -   합니다 \<기능 > 요소에 세 명의 요소 노드 자식을 \<색 >, \<가중치 >, 및 \<보증 >. 이러한 노드마다 텍스트 노드 자식이 한 개씩 있으며 값은 각각 Red, 25, 2 years parts and labor입니다.  
+    -   Features \<> 요소는 3 개의 요소 노드 자식, \<색>, \<무게> 및 \<보증>를 포함 합니다. 이러한 노드마다 텍스트 노드 자식이 한 개씩 있으며 값은 각각 Red, 25, 2 years parts and labor입니다.  
   
 ```sql
 declare @x xml;  
@@ -78,7 +78,7 @@ This is product model catalog description.
 </ProductModel>  
 ```  
   
- 이 예와 같이 상수 식에서 요소를 생성하는 것도 유용하지만 XQuery 언어 기능의 진정한 강점은 데이터베이스에서 동적으로 데이터를 추출하는 XML을 생성하는 기능입니다. 중괄호를 사용하여 쿼리 식을 지정할 수 있습니다. 결과 XML에서 식이 해당 값으로 바뀝니다. 예를 들어 다음 쿼리에서는 자식 요소(<`e`>)가 하나 있는 <`NewRoot`> 요소를 생성합니다. 요소의 값이 <`e`> 중괄호 ("{...}") 안에 경로 식을 지정 하 여 계산 됩니다.  
+ 이 예와 같이 상수 식에서 요소를 생성하는 것도 유용하지만 XQuery 언어 기능의 진정한 강점은 데이터베이스에서 동적으로 데이터를 추출하는 XML을 생성하는 기능입니다. 중괄호를 사용하여 쿼리 식을 지정할 수 있습니다. 결과 XML에서 식이 해당 값으로 바뀝니다. 예를 들어 다음 쿼리는 하나의 자식 요소 `NewRoot` (<`e`>)를 사용 하 여 <> 요소를 생성 합니다. 요소 <`e`>의 값은 중괄호 ("{...}") 안에 경로 식을 지정 하 여 계산 됩니다.  
   
 ```sql
 DECLARE @x xml;  
@@ -98,7 +98,7 @@ SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');
 </NewRoot>  
 ```  
   
- 다음 쿼리는 이전 쿼리와 비슷합니다. 그러나 중괄호 안의 식을 지정 합니다 **data ()** 의 원자성 값을 검색 하는 함수는 <`root`> 요소 생성 된 요소에 할당 <`e`>.  
+ 다음 쿼리는 이전 쿼리와 비슷합니다. 그러나 중괄호 안에 있는 식에서는 **data ()** 함수를 지정 하 여 <`root`> 요소의 원자성 값을 검색 하 고 생성 된 요소인 <`e`>에 할당 합니다.  
   
 ```sql
 DECLARE @x xml;  
@@ -136,7 +136,7 @@ SELECT @y;
 <NewRoot> Hello, I can use { and  } as part of my text</NewRoot>  
 ```  
   
- 다음 쿼리는 직접 요소 생성자를 사용하여 요소를 생성하는 또 다른 예입니다. 또한 중괄호 안의 식을 실행하여 <`FirstLocation`> 요소의 값을 구합니다. 쿼리 식은 Production.ProductModel 테이블의 Instructions 열에서 첫 번째 업무 센터 위치의 제조 단계를 반환합니다.  
+ 다음 쿼리는 직접 요소 생성자를 사용하여 요소를 생성하는 또 다른 예입니다. 또한 <`FirstLocation`> 요소의 값은 중괄호에서 식을 실행 하 여 가져옵니다. 쿼리 식은 Production.ProductModel 테이블의 Instructions 열에서 첫 번째 업무 센터 위치의 제조 단계를 반환합니다.  
   
 ```sql
 SELECT Instructions.query('  
@@ -234,15 +234,15 @@ This is product model catalog description.
 </ProductModel>  
 ```  
   
- 생성된 요소 <`ProductModel`>에는 ProductModelID 특성과 다음 자식 노드가 있습니다.  
+ 생성 된 요소 <`ProductModel`>에는 제품 modelid 특성과 이러한 자식 노드가 있습니다.  
   
 -   텍스트 노드 `This is product model catalog description.`  
   
--   요소 노드 <`Summary`> 이 노드에는 하나의 텍스트 노드 자식 `Some description`이 있습니다.  
+-   요소 노드 <`Summary`>입니다. 이 노드에는 하나의 텍스트 노드 자식 `Some description`이 있습니다.  
   
  특성을 생성할 때 중괄호 안에 식을 사용하여 값을 지정할 수 있습니다. 이 경우 식의 결과가 특성 값으로 반환됩니다.  
   
- 다음 예제에서는 **data ()** 함수가 엄격 하 게 필요 하지 않습니다. 특성에 식 값을 할당 하는 때문 **data ()** 지정한 식의 형식화 된 값을 검색 하는 암시적으로 적용 됩니다.  
+ 다음 예에서는 **data ()** 함수를 반드시 입력 해야 하는 것은 아닙니다. 식 값을 특성에 할당 하므로 **데이터 ()** 가 암시적으로 적용 되어 지정 된 식의 형식화 된 값을 검색 합니다.  
   
 ```sql
 DECLARE @x xml;  
@@ -314,7 +314,7 @@ where ProductModelID=7;
         <a attr="Item 5" />  
         ```  
   
-    -   사용 된 [concat 함수](../xquery/functions-on-string-values-concat.md) 두 문자열 인수를 결과 특성 값을 연결 하려면:  
+    -   [Concat 함수](../xquery/functions-on-string-values-concat.md) 를 사용 하 여 두 문자열 인수를 결과 특성 값에 연결 합니다.  
   
         ```sql
         SELECT @x.query( '<a attr="{concat(''Item'', /x[1])}"/>' )   
@@ -336,7 +336,7 @@ where ProductModelID=7;
     SELECT @x.query( '<a attr="{/x}{/x}"/>' )  
     ```  
   
--   다른 유형의 시퀀스는 지원되지 않습니다. 다음 예와 같이 다른 유형의 시퀀스를 특성 값으로 할당하면 오류가 반환됩니다. 이 예제에서는, 유형이 다른 시퀀스, 문자열 "Item" 요소에 <`x`>에서 특성 값으로 지정 됩니다.  
+-   다른 유형의 시퀀스는 지원되지 않습니다. 다음 예와 같이 다른 유형의 시퀀스를 특성 값으로 할당하면 오류가 반환됩니다. 이 예제에서는 유형이 다른 시퀀스, 문자열 "Item" 및> <`x` 요소를 특성 값으로 지정 합니다.  
   
     ```sql
     DECLARE @x xml  
@@ -344,7 +344,7 @@ where ProductModelID=7;
     select @x.query( '<a attr="{''Item'', /x }" />')  
     ```  
   
-     적용 하는 경우는 **data ()** 함수를 식의 원자성 값을 검색 하므로 쿼리가 작동 한다 `/x`, 문자열 연결 되 합니다. 다음은 원자성 값의 시퀀스입니다.  
+     **Data ()** 함수를 적용 하는 경우 쿼리는 문자열과 연결 된 식 `/x`의 원자성 값을 검색 하기 때문에 작동 합니다. 다음은 원자성 값의 시퀀스입니다.  
   
     ```sql
     SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   
@@ -381,7 +381,7 @@ where ProductModelID=7;
 -   XQuery 프롤로그에서 바인딩  
   
 #### <a name="using-a-namespace-declaration-attribute-to-add-namespaces"></a>네임스페이스 선언 특성을 사용하여 네임스페이스 추가  
- 다음 예에서는 <`a`> 요소의 생성에 네임스페이스 선언 특성을 사용하여 기본 네임스페이스를 선언합니다. 자식 요소 <`b`>의 생성은 부모 요소에 선언된 기본 네임스페이스 선언을 취소합니다.  
+ 다음 예제에서는 <`a`> 요소를 생성 하는 데 네임 스페이스 선언 특성을 사용 하 여 기본 네임 스페이스를 선언 합니다. 자식 요소의 생성은 부모 요소에 `b` 선언 된 기본 네임 스페이스의 선언을 실행 취소 <> 합니다.  
   
 ```sql
 declare @x xml  
@@ -400,7 +400,7 @@ select @x.query( '
 </a>  
 ```  
   
- 네임스페이스에 접두사를 할당할 수 있습니다. 접두사는 <`a`> 요소 생성에 지정됩니다.  
+ 네임스페이스에 접두사를 할당할 수 있습니다. 접두사는 요소 <`a`> 생성 시 지정 됩니다.  
   
 ```sql
 declare @x xml  
@@ -419,7 +419,7 @@ select @x.query( '
 </x:a>  
 ```  
   
- XML 생성에서 기본 네임스페이스를 선언하지 않아도 되지만 네임스페이스 접두사는 선언해야 합니다. <`b`> 요소 생성에 지정한 대로 접두사를 선언해야 하므로 다음 쿼리에서는 오류를 반환합니다.  
+ XML 생성에서 기본 네임스페이스를 선언하지 않아도 되지만 네임스페이스 접두사는 선언해야 합니다. 다음 쿼리는 <`b`> 요소 생성에 지정 된 대로 접두사를 선언 취소할 수 없기 때문에 오류를 반환 합니다.  
   
 ```sql
 declare @x xml  
@@ -430,7 +430,7 @@ select @x.query( '
   </x:a>' )  
 ```  
   
- 새로 생성된 네임스페이스는 쿼리 안에서 사용할 수 있습니다. 예를 들어 다음 쿼리에서는 <`FirstLocation`> 요소를 생성할 때 네임스페이스를 선언하고 LocationID 및 SetupHrs 특성 값에 대한 식에 접두사를 지정합니다.  
+ 새로 생성된 네임스페이스는 쿼리 안에서 사용할 수 있습니다. 예를 들어 다음 쿼리는 요소를 생성 하 고> <`FirstLocation` 하 여 네임 스페이스를 선언 하 고 locationid 및 setuphrs 특성 값에 대 한 식에 접두사를 지정 합니다.  
   
 ```sql
 SELECT Instructions.query('  
@@ -444,7 +444,7 @@ FROM  Production.ProductModel
 where ProductModelID=7  
 ```  
   
- 이 방법으로 네임스페이스 접두사를 새로 만들면 이 접두사에 대한 기존의 네임스페이스 선언이 무시됩니다. 예를 들어 <`FirstLocation`> 요소의 네임스페이스 선언은 쿼리 프롤로그에 있는 네임스페이스 선언 `AWMI="https://someURI"`를 무시합니다.  
+ 이 방법으로 네임스페이스 접두사를 새로 만들면 이 접두사에 대한 기존의 네임스페이스 선언이 무시됩니다. 예를 들어 쿼리 프롤로그에 있는 `AWMI="https://someURI"`네임 스페이스 선언은 <`FirstLocation`> 요소의 네임 스페이스 선언에 의해 재정의 됩니다.  
   
 ```sql
 SELECT Instructions.query('  
@@ -470,7 +470,7 @@ select @x.query( '
             <a><b xmlns=""/></a>' )  
 ```  
   
- <`b`> 요소를 생성할 때 빈 문자열이 값으로 사용되어 네임스페이스 선언 특성이 지정됩니다. 그러면 부모에 선언된 기본 네임스페이스를 선언하지 않습니다.  
+ 요소 <`b`>를 생성할 때 네임 스페이스 선언 특성은 빈 문자열을 값으로 사용 하 여 지정 됩니다. 그러면 부모에 선언된 기본 네임스페이스를 선언하지 않습니다.  
   
 
 다음은 결과입니다.  
@@ -484,7 +484,7 @@ select @x.query( '
 ### <a name="xml-construction-and-white-space-handling"></a>XML 생성 및 공백 처리  
  XML 생성의 요소 내용은 공백 문자를 포함할 수 있습니다. 이러한 문자는 다음 방법으로 처리됩니다.  
   
--   네임 스페이스 Uri의에서 공백 문자는 XSD 형식으로 처리 됩니다 **anyURI**합니다. 특히 처리 방법은 다음과 같습니다.  
+-   네임 스페이스 Uri의 공백 문자는 XSD 형식 **anyURI**으로 처리 됩니다. 특히 처리 방법은 다음과 같습니다.  
   
     -   처음과 끝에 있는 공백 문자는 잘립니다.  
   
@@ -546,9 +546,9 @@ test
 ### <a name="other-direct-xml-constructors"></a>그 밖의 직접 XML 생성자  
  처리 명령과 XML 주석에 대한 생성자는 해당 XML 구문에서와 같은 구문을 사용합니다. 텍스트 노드의 계산된 생성자도 지원되지만 이는 기본적으로 XML DML에 사용되어 텍스트 노드를 생성합니다.  
   
- **참고** 명시적 텍스트 노드 생성자 사용의 예로,의 특정 예제를 참조 하세요 [삽입 &#40;XML DML&#41;](../t-sql/xml/insert-xml-dml.md)합니다.  
+ **참고** 명시적 텍스트 노드 생성자를 사용 하는 예제는 [insert &#40;XML DML&#41;](../t-sql/xml/insert-xml-dml.md)의 특정 예제를 참조 하십시오.  
   
- 다음 쿼리에서 생성된 XML에는 요소, 특성 두 개, 주석 및 처리 명령이 포함됩니다. 시퀀스를 생성 중이므로 <`FirstLocation`> 앞에 쉼표를 사용합니다.  
+ 다음 쿼리에서 생성된 XML에는 요소, 특성 두 개, 주석 및 처리 명령이 포함됩니다. 시퀀스를 생성 하기 때문에 <`FirstLocation`> 하기 전에 쉼표가 사용 됩니다.  
   
 ```sql
 SELECT Instructions.query('  
@@ -583,7 +583,7 @@ where ProductModelID=7;
 ```  
   
 ## <a name="using-computed-constructors"></a>계산된 생성자 사용  
- 의 동일한 원격 인스턴스에 있는 경우 master 데이터베이스는 여러 보조 데이터베이스를 사용할 수 있습니다. 이 경우 생성할 노드 유형을 나타내는 키워드를 지정합니다. 다음 키워드만 지원됩니다.  
+ . 이 경우 생성할 노드 유형을 나타내는 키워드를 지정합니다. 다음 키워드만 지원됩니다.  
   
 -   element  
   
@@ -632,9 +632,10 @@ text{"Some text "},
                } ')  
 ```  
   
- XQuery 사양에 정의된 대로 컴퓨팅된 요소 및 특성 생성자를 사용하면 노드 이름을 컴퓨팅할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 직접 생성자를 사용할 경우 요소 및 특성과 같은 노드 이름을 상수 리터럴로 지정해야 합니다. 따라서 요소와 특성에서는 직접 생성자와 계산된 생성자 간에 차이가 없습니다.  
+ XQuery 사양에 정의된 대로 계산된 요소 및 특성 생성자를 사용하면 노드 이름을 계산할 수 있습니다. 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 직접 생성자를 사용할 경우 요소 및 특성과 같은 노드 이름을 상수 리터럴로 지정해야 합니다. 따라서 요소와 특성에서는 직접 생성자와 계산된 생성자 간에 차이가 없습니다.  
   
- 다음 예제에서는 Instructions 열에 저장 된 XML 제조 지침에서 생성 된 노드 내용을 가져옵니다 합니다 **xml** ProductModel 테이블의 데이터 형식입니다.  
+ 다음 예에서는 생성 된 노드의 내용을 제품 모델 테이블에 있는 **xml** 데이터 형식의 명령 열에 저장 된 xml 제조 지침에서 가져옵니다.  
   
 ```sql
 SELECT Instructions.query('  
@@ -670,7 +671,7 @@ where ProductModelID=7
   
 -   계산된 주석 생성자  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [XQuery 식](../xquery/xquery-expressions.md)  
   
   

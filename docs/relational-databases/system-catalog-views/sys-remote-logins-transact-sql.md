@@ -1,5 +1,5 @@
 ---
-title: sys.remote_logins (TRANSACT-SQL) | Microsoft Docs
+title: sys. remote_logins (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,20 +20,20 @@ ms.assetid: 38477e91-d084-4df7-b1de-b930c5580189
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 371f8e2bf9a5d67d68e9c1d48502bf3fa2f81db6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67904573"
 ---
-# <a name="sysremotelogins-transact-sql"></a>sys.remote_logins(Transact-SQL)
+# <a name="sysremote_logins-transact-sql"></a>sys.remote_logins(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   원격 로그인 매핑당 한 개의 행을 반환합니다. 이 카탈로그 뷰는 해당 서버에서 들어오는 로컬 로그인을 실제 로컬 로그인으로 매핑하는 데 사용됩니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**server_id**|**int**|서버의 ID **sys.servers**합니다. 이 이름은 "원격" 서버의 연결에 의해 제공됩니다.|  
+|**server_id**|**int**|**Sys. servers**의 서버 ID입니다. 이 이름은 "원격" 서버의 연결에 의해 제공됩니다.|  
 |**remote_name**|**sysname**|연결이 제공하는 매핑할 로그인 이름입니다. NULL인 경우에는 연결에서 지정된 로그인 이름이 사용됩니다.|  
 |**local_principal_id**|**int**|로그인이 매핑될 서버 보안 주체의 ID입니다. 0인 경우에는 원격 로그인이 같은 이름을 가진 로그인에 매핑됩니다.|  
 |**modify_date**|**datetime**|연결된 로그인을 마지막으로 변경한 날짜입니다.|  
@@ -41,8 +41,8 @@ ms.locfileid: "67904573"
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [연결 된 서버 카탈로그 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [연결 된 서버 카탈로그 뷰 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

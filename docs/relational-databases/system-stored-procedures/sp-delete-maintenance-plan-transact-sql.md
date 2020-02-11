@@ -1,5 +1,5 @@
 ---
-title: sp_delete_maintenance_plan (TRANSACT-SQL) | Microsoft Docs
+title: sp_delete_maintenance_plan (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 6f36b63f-3d18-4d42-9469-2febb6926530
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 457a988f95073c738ab8ef21aa31c125885d35a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946711"
 ---
-# <a name="spdeletemaintenanceplan-transact-sql"></a>sp_delete_maintenance_plan(Transact-SQL)
+# <a name="sp_delete_maintenance_plan-transact-sql"></a>sp_delete_maintenance_plan(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   지정된 유지 관리 계획을 삭제합니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "67946711"
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,26 +44,26 @@ sp_delete_maintenance_plan [ @plan_id = ] 'plan_id'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @plan_id = ] 'plan\_id'` 삭제할 유지 관리 계획의 ID를 지정 합니다. *plan_id* 됩니다 **uniqueidentifier**, 이며 유효한 ID 여야 합니다  
+`[ @plan_id = ] 'plan\_id'`삭제할 유지 관리 계획의 ID를 지정 합니다. *plan_id* 은 **UNIQUEIDENTIFIER**이며 유효한 id 여야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
 ## <a name="remarks"></a>설명  
- **sp_delete_maintenance_plan** 에서 실행 해야 합니다 **msdb** 데이터베이스입니다.  
+ **sp_delete_maintenance_plan** 는 **msdb** 데이터베이스에서 실행 해야 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 멤버는 **sysadmin** 고정된 서버 역할을 실행할 수 있습니다 **sp_delete_maintenance_plan**합니다.  
+ **Sysadmin** 고정 서버 역할의 멤버만 **sp_delete_maintenance_plan**를 실행할 수 있습니다.  
   
 ## <a name="examples"></a>예  
- 사용 하 여 만든 유지 관리 계획을 삭제 **sp_add_maintenance_plan**합니다.  
+ **Sp_add_maintenance_plan**를 사용 하 여 만든 유지 관리 계획을 삭제 합니다.  
   
 ```  
 EXECUTE sp_delete_maintenance_plan 'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC';  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [유지 관리 계획](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [데이터베이스 유지 관리 계획 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;의 데이터베이스 유지 관리 계획 저장 프로시저 &#40;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   
   

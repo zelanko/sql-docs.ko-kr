@@ -1,5 +1,5 @@
 ---
-title: 특성 관계 만들기 및 편집 특성 관계 대화 상자 (특성 관계 디자이너 탭, 차원 디자이너) (Analysis Services-다차원 데이터) | Microsoft Docs
+title: 특성 관계 만들기 및 특성 관계 편집 대화 상자 (특성 관계 디자이너 탭, 차원 디자이너) (Analysis Services 다차원 데이터) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,36 +13,41 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 544fc09037c0670c7ba44adf7b270e46899621a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086936"
 ---
 # <a name="create-attribute-relationship-and-edit-attribute-relationship-dialog-boxes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>특성 관계 만들기 및 특성 관계 편집 대화 상자(특성 관계 디자이너 탭, 차원 디자이너)(Analysis Services - 다차원 데이터)
+  
   **특성 관계 만들기** 대화 상자를 사용하여 새 특성 관계를 정의하고, **특성 관계 편집** 대화 상자를 사용하여 특성 관계를 변경할 수 있습니다. 자세한 내용은 [특성 관계 정의](multidimensional-models/attribute-relationships-define.md)를 참조하세요.  
   
  **특성 관계 만들기 대화 상자를 보려면**  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 솔루션 탐색기에서 차원을 두 번 클릭하여 차원 디자이너를 연 다음 **특성 관계** 탭을 클릭합니다.  
+1.  
+  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 솔루션 탐색기에서 차원을 두 번 클릭하여 차원 디자이너를 연 다음 **특성 관계** 탭을 클릭합니다.  
   
 2.  도구 모음에서 새 특성 관계 아이콘을 클릭합니다.  
   
-     -또는-  
+     또는  
   
      특성 관계 다이어그램 또는 **특성** 목록에서 특성을 마우스 오른쪽 단추로 클릭한 다음 **새 특성 관계**를 클릭합니다.  
   
  **특성 관계 편집 대화 상자를 보려면**  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 솔루션 탐색기에서 차원을 두 번 클릭하여 차원 디자이너를 연 다음 **특성 관계** 탭을 클릭합니다.  
+1.  
+  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 솔루션 탐색기에서 차원을 두 번 클릭하여 차원 디자이너를 연 다음 **특성 관계** 탭을 클릭합니다.  
   
 2.  특성 관계 다이어그램 또는 **특성 관계** 목록에서 특성 관계를 마우스 오른쪽 단추로 클릭한 다음 **특성 관계 편집**을 클릭합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **이름**  
- **원본 특성** 그룹에서 관계가 시작되는 특성의 이름을 지정합니다.  
+ 
+  **원본 특성** 그룹에서 관계가 시작되는 특성의 이름을 지정합니다.  
   
- **관련된 특성** 그룹에서 관계가 전달되는 특성의 이름을 지정합니다.  
+ 
+  **관련된 특성** 그룹에서 관계가 전달되는 특성의 이름을 지정합니다.  
   
  **멤버 수**  
  지정된 특성의 예상 멤버 수를 지정합니다.  
@@ -53,7 +58,7 @@ ms.locfileid: "66086936"
  **관계 유형**  
  만들 관계 유형을 **유동(시간에 따라 변경될 수 있음)** 또는 **고정(시간에 따라 변경되지 않음)** 으로 지정합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [특성 관계 &#40;차원 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>참고 항목  
+ [차원 디자이너&#41; &#40;Analysis Services 다차원 데이터를 &#40;특성 관계&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

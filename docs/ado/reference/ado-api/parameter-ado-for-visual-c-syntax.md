@@ -1,5 +1,5 @@
 ---
-title: 매개 변수 (시각적 개체에 대 한 ADO C++ 구문) | Microsoft Docs
+title: Parameter (Visual C++ 구문에 대 한 ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,10 +16,10 @@ ms.assetid: 74801dc1-cf0f-4a6e-960b-5990fe55e30d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b97aebefa2176d3569b818751cd3b8ff039bfc4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931774"
 ---
 # <a name="parameter-ado-for-visual-c-syntax"></a>매개 변수(Visual C++ 구문에 대한 ADO)
@@ -50,5 +50,5 @@ get_Value(VARIANT *pvar)
 put_Value(VARIANT val)  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Parameter 개체](../../../ado/reference/ado-api/parameter-object.md)

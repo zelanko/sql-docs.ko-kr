@@ -14,24 +14,24 @@ ms.assetid: 25f1d2a1-6d5e-4457-aa07-5db5c75dee18
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e73b2ca96cc5e7eb7683b72aa19fd59a318b8596
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926351"
 ---
-# <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>계층적 레코드 집합 (예:)의 행에 액세스
-다음 예제에서는 단계 액세스 행 하는 데 필요한을 계층적 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md):
+# <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>계층적 레코드 집합의 행 액세스 (예제)
+다음 예에서는 계층적 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)의 행에 액세스 하는 데 필요한 단계를 보여 줍니다.
 
-1.  **레코드 집합** 에서 개체를 **작성자** 하 고 **titleauthor** 작성자 id와 관련 된 테이블
+1.  **작성자 및** **은** 테이블의 **레코드 집합** 개체는 author ID로 연결 됩니다.
 
-2.  외부 루프는 각 저자의 성 및 이름, 상태 및 식별을 표시합니다.
+2.  외부 루프에는 각 저자의 성과 이름, 상태 및 식별이 표시 됩니다.
 
-3.  추가 된 **레코드 집합** 에서 각 행이 검색에 대 한 합니다 [필드](../../../ado/reference/ado-api/fields-collection-ado.md) 컬렉션에 할당 *rstTitleAuthor*합니다.
+3.  각 행에 대해 추가 된 **레코드 집합** 은 [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) 컬렉션에서 검색 되 고 *rstTitleAuthor*에 할당 됩니다.
 
-4.  에 추가 된 각 행에서 4 개의 필드를 표시 하는 내부 루프 **레코드 집합**합니다.
+4.  내부 루프는 추가 된 **레코드 집합**의 각 행에서 4 개의 필드를 표시 합니다.
 
- 합니다 [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) 속성이로 설정 된 **false** 설명을 위해 볼 수 있도록 장의 변경 내용을 명시적으로 바깥쪽 루프의 각 반복 합니다. 코드 예제에서는 보다 효율적인 할당 한 번만 수행 됩니다 있도록 2 단계에서 첫 번째 줄 전에 3 단계에서 할당을 이동할 수 있습니다. 설정한 합니다 [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) 속성을 **true**되도록 *rstTitleAuthor* 자동으로 암시적으로 바뀌어 해당 장 때마다 *rst* 새 행으로 이동 합니다.
+ [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) 속성은 설명을 위해 **false** 로 설정 되므로 외부 루프의 각 반복에서 챕터 변경을 명시적으로 확인할 수 있습니다. 코드 예제를 보다 효율적으로 만들기 위해 2 단계에서 첫 번째 줄 앞의 3 단계에서 할당을 이동 하 여 할당이 한 번만 수행 되도록 할 수 있습니다. 그런 다음 [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) 속성을 **true**로 설정 하 여 *rst* 가 새 행으로 이동할 때마다 *rstTitleAuthor* 가 암시적으로 해당 챕터로 자동 변경 되도록 합니다.
 
 ## <a name="example"></a>예제
 
@@ -67,5 +67,5 @@ Sub datashape()
 End Sub
 ```
 
-## <a name="see-also"></a>관련 항목
- [데이터 셰이핑 개요](../../../ado/guide/data/data-shaping-overview.md) [개체를 필드](../../../ado/reference/ado-api/field-object.md) [컬렉션 (ADO)를 필드](../../../ado/reference/ado-api/fields-collection-ado.md) [공식적인 셰이프 문법](../../../ado/guide/data/formal-shape-grammar.md) [Microsoft 데이터 셰이핑 OLE DB에 대 한 서비스 (ADO 서비스 공급자) ](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [데이터 셰이프에 필요한 공급자](../../../ado/guide/data/required-providers-for-data-shaping.md) [셰이프 APPEND 절](../../../ado/guide/data/shape-append-clause.md) [명령에서 셰이프 일반적인](../../../ado/guide/data/shape-commands-in-general.md) [셰이프 COMPUTE 절](../../../ado/guide/data/shape-compute-clause.md) [Visual Basic for Applications 기능](../../../ado/guide/data/visual-basic-for-applications-functions.md)
+## <a name="see-also"></a>참고 항목
+ [데이터 셰이핑 개요](../../../ado/guide/data/data-shaping-overview.md) [필드 개체](../../../ado/reference/ado-api/field-object.md) [필드 컬렉션 (ado)](../../../ado/reference/ado-api/fields-collection-ado.md) [공식 셰이프 문법](../../../ado/guide/data/formal-shape-grammar.md) [OLE DB 용 Microsoft 데이터 셰이핑 서비스 (ado 서비스 공급자)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [레코드 집합 개체 (ado)](../../../ado/reference/ado-api/recordset-object-ado.md) [필요한 공급자 데이터 셰이핑](../../../ado/guide/data/required-providers-for-data-shaping.md) [셰이프 추가 절](../../../ado/guide/data/shape-append-clause.md) [셰이프 명령](../../../ado/guide/data/shape-commands-in-general.md) [](../../../ado/guide/data/shape-compute-clause.md) [Visual Basic for Applications 함수](../../../ado/guide/data/visual-basic-for-applications-functions.md)

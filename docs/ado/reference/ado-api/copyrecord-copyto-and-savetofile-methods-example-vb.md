@@ -17,14 +17,14 @@ ms.assetid: 61a51b74-93cd-439c-877f-f3055499d39f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b128c935ec0119344a213dbe5289cc8a3cd190fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919362"
 ---
 # <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>CopyRecord, CopyTo 및 SaveToFile 메서드 예제 (VB)
-이 예제를 사용 하 여 파일의 복사본을 만드는 방법을 보여 줍니다 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 하거나 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체입니다. 인터넷 게시용 웹 폴더에 하나의 복사본이 만들어집니다. 다른 속성 및 표시 된 메서드를 포함 [Stream 형식](../../../ado/reference/ado-api/type-property-ado-stream.md)를 **열려**를 [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md), 및 [레코드 열기](../../../ado/reference/ado-api/open-method-ado-record.md)합니다.  
+이 예제에서는 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 또는 [Record](../../../ado/reference/ado-api/record-object-ado.md) 개체를 사용 하 여 파일의 복사본을 만드는 방법을 보여 줍니다. 웹 폴더에 대 한 복사본 하나가 인터넷 게시용으로 수행 됩니다. 표시 되는 다른 속성 및 메서드는 [Stream Type](../../../ado/reference/ado-api/type-property-ado-stream.md), **open**, [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md)및 [Record open](../../../ado/reference/ado-api/open-method-ado-record.md)을 포함 합니다.  
   
 ```  
 'BeginCopyRecordVB  
@@ -124,13 +124,13 @@ End Sub
 'EndCopyRecordVB  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [CopyRecord 메서드 (ADO)](../../../ado/reference/ado-api/copyrecord-method-ado.md)   
  [CopyTo 메서드 (ADO)](../../../ado/reference/ado-api/copyto-method-ado.md)   
  [LoadFromFile 메서드 (ADO)](../../../ado/reference/ado-api/loadfromfile-method-ado.md)   
  [Open 메서드 (ADO 레코드)](../../../ado/reference/ado-api/open-method-ado-record.md)   
- [Open 메서드 (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [레코드 개체 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+ [Open 메서드 (ADO 스트림)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
+ [Record 개체 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [SaveToFile 메서드](../../../ado/reference/ado-api/savetofile-method.md)   
  [Stream 개체 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
  [Type 속성(ADO 스트림)](../../../ado/reference/ado-api/type-property-ado-stream.md)

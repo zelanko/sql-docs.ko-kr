@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 4db81766060f8f1afde2241d0c89407ad3cbb864
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68001408"
 ---
 # <a name="membervalue-mdx"></a>MemberValue(MDX)
@@ -31,7 +31,7 @@ Member_Expression.MemberValue
  *Member_Expression*  
  멤버로 평가되는 유효한 MDX 식입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  반환되는 멤버 값에는 다음 정보가 포함되며 반환 값에 표시되는 순서대로 나열됩니다.  
   
 -   정의된 경우 값 바인딩  
@@ -52,7 +52,7 @@ SELECT {Measures.ValueColumn, Measures.KeyColumn, Measures.NameColumn}  ON 0
 from [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

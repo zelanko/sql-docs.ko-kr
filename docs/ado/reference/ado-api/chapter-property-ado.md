@@ -1,5 +1,5 @@
 ---
-title: Chapter 속성 (ADO) | Microsoft Docs
+title: 장 속성 (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,14 +18,14 @@ ms.assetid: 8aa90cb0-f588-4141-9dc9-3b22918394ee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2791bc1a89f8cec1362ab1f00c3be739f7d56b96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920102"
 ---
 # <a name="chapter-property-ado"></a>Chapter 속성(ADO)
-OLE DB를 가져오거나 설정 합니다. **장** 간에에서 개체를 [ADORecordsetConstruction 인터페이스](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md) 개체입니다. 사용 하는 경우 **put_Chapter** 설정 하는 **장** 개체를 행의 하위 집합 ADO로 바뀝니다 [레코드 집합 개체](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다. 이 설정의 현재 장 합니다 **행 집합**개체입니다. 이 속성은 읽기/쓰기가 가능합니다.  
+[ADORecordsetConstruction Interface](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md) 개체의/에서 OLE DB **챕터** 개체를 가져오거나 설정 합니다. **Put_Chapter** 를 사용 하 여 **챕터** 개체를 설정 하는 경우 행의 하위 집합이 ADO [레코드 집합 개체](../../../ado/reference/ado-api/recordset-object-ado.md) 개체로 설정 됩니다. 이는 **행 집합**개체의 현재 챕터를 설정 합니다. 이 속성은 읽기/쓰기가 가능합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,13 +36,13 @@ HRESULT put_Chapter([in] long lChapter);
   
 ## <a name="parameters"></a>매개 변수  
  *plChapter*  
- 장 핸들에 대 한 포인터입니다.  
+ 챕터의 핸들에 대 한 포인터입니다.  
   
  *LChapter*  
- 장 핸들입니다.  
+ 챕터의 핸들입니다.  
   
 ## <a name="return-values"></a>반환 값  
- 이 속성 메서드는 S_OK와 E_FAIL을 비롯 한 표준 HRESULT 값을 반환 합니다.  
+ 이 속성 메서드는 S_OK 및 E_FAIL를 포함 하 여 표준 HRESULT 값을 반환 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [ADORecordsetConstruction 인터페이스](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)

@@ -15,14 +15,14 @@ ms.assetid: eabdd278-6576-4be7-9315-fb79cb8ef678
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 91ed77c7ca8e04e346c87a32d38499a272ff5fb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921298"
 ---
 # <a name="addnew-method-example-jscript"></a>AddNew 메서드 예제(JScript)
-이 예제에서는 합니다 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) 메서드를 지정된 된 이름을 가진 새 레코드를 만듭니다. 잘라내기 및 메모장 이나 다른 텍스트 편집기에 다음 코드를 붙여넣고,으로 저장 **붙여 넣고 AddNewJS.asp**합니다.  
+이 예제에서는 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) 메서드를 사용 하 여 지정 된 이름의 새 레코드를 만듭니다. 다음 코드를 잘라내어 메모장 또는 다른 텍스트 편집기에 붙여 넣고 **AddNewJS**로 저장 합니다.  
   
 ```  
 <!-- BeginAddNewJS -->  
@@ -134,6 +134,6 @@ body {
 <!-- EndAddNewJS -->  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [AddNew 메서드 (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
