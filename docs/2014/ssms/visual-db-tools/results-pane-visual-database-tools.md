@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 87bfaef1ad5dc4c9b1f907c27955ca3f156038a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067809"
 ---
 # <a name="results-pane-visual-database-tools"></a>결과 창(Visual Database Tools)
@@ -62,10 +62,10 @@ ms.locfileid: "63067809"
   
  쿼리를 변경하면 결과 창의 오른쪽 아래에 경고 아이콘과 "쿼리가 변경되었습니다."라는 텍스트가 표시됩니다. 이 창의 왼쪽 위에도 아이콘이 표시됩니다.  
   
-## <a name="see-also"></a>관련 항목  
- [쿼리를 만들 &#40;Visual Database Tools&#41;](create-queries-visual-database-tools.md)   
- [쿼리 실행 &#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)   
- [방법 도움말 항목을 쿼리 및 뷰 디자인 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools를 &#40;쿼리 만들기&#41;](create-queries-visual-database-tools.md)   
+ [Visual Database Tools를 &#40;쿼리 실행&#41;](run-queries-visual-database-tools.md)   
+ [쿼리 및 뷰 디자인 방법 도움말 항목 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [다이어그램 창 &#40;Visual Database Tools&#41;](diagram-pane-visual-database-tools.md)   
  [조건 창 &#40;Visual Database Tools&#41;](criteria-pane-visual-database-tools.md)   
  [결과 창에서 데이터 작업&#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)  

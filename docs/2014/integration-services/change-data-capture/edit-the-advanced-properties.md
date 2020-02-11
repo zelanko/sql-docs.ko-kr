@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 320530eeb7bad37f7fd40bab5df9a9af8e9b1d82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835692"
 ---
 # <a name="edit-the-advanced-properties"></a>고급 속성 편집
@@ -33,6 +33,6 @@ ms.locfileid: "62835692"
   
  입력할 수 있는 속성에 대한 자세한 내용은 [cdc.xdbcdc_config](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_config)에서 사용 가능한 옵션 테이블을 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [How to Manage a CDC Instance](manage-a-cdc-instance.md)   
  [CDC 인스턴스 속성을 편집하는 방법](how-to-edit-the-cdc-instance-properties.md)  

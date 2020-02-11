@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 963fe86b0d5939c82bffb9c07d5adacbadadba89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68199426"
 ---
 # <a name="enable-updating-subscriptions-for-transactional-publications"></a>트랜잭션 게시에 대해 업데이트할 수 있는 구독 설정
@@ -43,7 +43,8 @@ ms.locfileid: "68199426"
   
 1.  새 게시 마법사의 **게시 유형** 페이지에서 **업데이트할 수 있는 구독이 있는 트랜잭션 게시**를 선택합니다.  
   
-2.  **에이전트 보안** 페이지에서 스냅숏 에이전트, 로그 판독기 에이전트 및 큐 판독기 에이전트에 대한 보안 설정을 지정합니다. 큐 판독기 에이전트가 실행되는 계정에 필요한 사용 권한에 대한 자세한 내용은 [Replication Agent Security Model](../security/replication-agent-security-model.md)을 참조하세요.  
+2.  
+  **에이전트 보안** 페이지에서 스냅샷 에이전트, 로그 판독기 에이전트 및 큐 판독기 에이전트에 대한 보안 설정을 지정합니다. 큐 판독기 에이전트가 실행되는 계정에 필요한 사용 권한에 대한 자세한 내용은 [Replication Agent Security Model](../security/replication-agent-security-model.md)을 참조하세요.  
   
     > [!NOTE]  
     >  즉시 업데이트 구독만 사용하는 경우에도 큐 판독기 에이전트가 구성됩니다.  
@@ -59,11 +60,14 @@ ms.locfileid: "68199426"
   
     -   게시된 데이터베이스에 대해 로그 판독기 에이전트 작업이 존재하는지 확실하지 않으면 게시 데이터베이스의 게시자에서 [sp_helplogreader_agent&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql)를 실행합니다. 결과 집합이 비어 있으면 로그 판독기 에이전트 작업을 만들어야 합니다.  
   
-    -   게시자에서 [sp_addlogreader_agent&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)를 실행합니다. **@job_name** 및 **@password** 에 에이전트가 실행되는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 자격 증명을 지정합니다. 게시자에 연결할 때 에이전트가 SQL Server 인증을 사용하면 **@publisher_security_mode** 에 값 **@publisher_security_mode** 을 지정하고 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 **@publisher_login** @password **@publisher_password** 에서 트랜잭션 게시에 대해 구독 업데이트를 설정하는 방법에 대해 설명합니다.  
+    -   게시자에서 [transact-sql&#41;&#40;sp_addlogreader_agent ](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)를 실행 합니다. 및 **@password**에 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] **@job_name** 에이전트가 실행 되는 Windows 자격 증명을 지정 합니다. 게시자에 연결할 때 에이전트가 SQL Server 인증을 사용하면 **@publisher_security_mode** 에 값 **@publisher_security_mode** 을 지정하고 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 **@publisher_login** @password **@publisher_password**에서 트랜잭션 게시에 대해 구독 업데이트를 설정하는 방법에 대해 설명합니다.  
   
-2.  **@allow_sync_tran** 매개 변수에 **true** 값을 지정하여 [sp_addpublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)을 실행합니다.  
+2.  
+  [
+  ](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)
+  ** 매개 변수에 **true** 값을 지정하여 @allow_sync_transp_addpublication&#40;Transact-SQL&#41;** 을 실행합니다.  
   
-3.  게시자에서 [sp_addpublication_snapshot&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)을 실행합니다. **@publication** 에 2단계에서 사용된 게시 이름을, **@job_name** 및 **@password** 에 스냅숏 에이전트를 실행하는 데 사용되는 Windows 자격 증명을 지정합니다. 게시자에 연결할 때 에이전트가 SQL Server 인증을 사용하면 **@publisher_security_mode** 에 값 **@publisher_security_mode** 을 지정하고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 **@publisher_login** @password **@publisher_password** 에서 트랜잭션 게시에 대해 구독 업데이트를 설정하는 방법에 대해 설명합니다. 이렇게 하면 게시에 대해 스냅샷 에이전트 작업이 만들어집니다.  
+3.  게시자에서 [sp_addpublication_snapshot&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)을 실행합니다. 에 **@publication** 2 단계에서 사용 되는 게시 이름을 지정 하 고 및 **@job_name** **@password**에 대 한 스냅숏 에이전트 실행 되는 Windows 자격 증명을 지정 합니다. 게시자에 연결할 때 에이전트가 SQL Server 인증을 사용하면 **@publisher_security_mode** 에 값 **@publisher_security_mode** 을 지정하고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 **@publisher_login** @password **@publisher_password**에서 트랜잭션 게시에 대해 구독 업데이트를 설정하는 방법에 대해 설명합니다. 이렇게 하면 게시에 대해 스냅샷 에이전트 작업이 만들어집니다.  
   
 4.  아티클을 게시에 추가합니다. 자세한 내용은 [아티클을 정의](define-an-article.md)을 참조하세요.  
   
@@ -77,7 +81,7 @@ ms.locfileid: "68199426"
   
     -   게시된 데이터베이스에 대해 로그 판독기 에이전트 작업이 존재하는지 확실하지 않으면 게시 데이터베이스의 게시자에서 [sp_helplogreader_agent&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql)를 실행합니다. 결과 집합이 비어 있으면 로그 판독기 에이전트 작업을 만들어야 합니다.  
   
-    -   게시자에서 [sp_addlogreader_agent&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)를 실행합니다. 이때 **@job_name** 및 **@password** 의 Oracle 데이터베이스에서 구독을 만드는 방법에 대해 설명합니다. 게시자에 연결할 때 에이전트가 SQL Server 인증을 사용하면 **@publisher_security_mode** 에 값 **@publisher_security_mode** 을 지정하고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 **@publisher_login** @password **@publisher_password** 에서 트랜잭션 게시에 대해 구독 업데이트를 설정하는 방법에 대해 설명합니다.  
+    -   게시자에서 [transact-sql&#41;&#40;sp_addlogreader_agent ](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)를 실행 합니다. 및 **@job_name** **@password**에 에이전트가 실행 되는 Windows 자격 증명을 지정 합니다. 게시자에 연결할 때 에이전트가 SQL Server 인증을 사용하면 **@publisher_security_mode** 에 값 **@publisher_security_mode** 을 지정하고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 **@publisher_login** @password **@publisher_password**에서 트랜잭션 게시에 대해 구독 업데이트를 설정하는 방법에 대해 설명합니다.  
   
 2.  필요한 경우 배포자에 대한 큐 판독기 에이전트 작업을 만듭니다.  
   
@@ -85,11 +89,14 @@ ms.locfileid: "68199426"
   
     -   배포 데이터베이스에 대해 큐 판독기 에이전트 작업이 존재하는지 확실하지 않으면 배포 데이터베이스의 배포자에서 [sp_helpqreader_agent&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpqreader-agent-transact-sql)를 실행합니다. 결과 집합이 비어 있으면 큐 판독기 에이전트 작업을 만들어야 합니다.  
   
-    -   배포자에서 [sp_addqreader_agent&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql)를 실행합니다. **@job_name** 및 **@password** 에 에이전트가 실행되는 Windows 자격 증명을 지정합니다. 이러한 자격 증명은 큐 판독기 에이전트가 게시자 및 구독자에 연결할 때 사용됩니다. 자세한 내용은 [복제 에이전트 보안 모델](../security/replication-agent-security-model.md)을 참조하세요.  
+    -   배포자에서 [sp_addqreader_agent&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql)를 실행합니다. 및 **@job_name** **@password**에 에이전트가 실행 되는 Windows 자격 증명을 지정 합니다. 이러한 자격 증명은 큐 판독기 에이전트가 게시자 및 구독자에 연결할 때 사용됩니다. 자세한 내용은 [Replication Agent Security Model](../security/replication-agent-security-model.md)을 참조 하세요.  
   
-3.  **@allow_queued_tran** 매개 변수에 **true** 값, **@conflict_policy** 에 **pub wins**, **sub reinit** 또는 **sub wins** 값을 지정하여 [sp_addpublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)을 실행합니다.  
+3.  
+  [
+  ](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)
+  ** 매개 변수에 **true** 값, @allow_queued_tran****에 **pub wins **, **sub reinit** 또는 **sub wins** 값을 지정하여 @conflict_policysp_addpublication&#40;Transact-SQL&#41;** 을 실행합니다.  
   
-4.  게시자에서 [sp_addpublication_snapshot&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)을 실행합니다. **@publication** 에 3단계에서 사용된 게시 이름을, **@snapshot_job_name** 및 **@password** 에 스냅숏 에이전트를 실행하는 데 사용되는 Windows 자격 증명을 지정합니다. 게시자에 연결할 때 에이전트가 SQL Server 인증을 사용하면 **@publisher_security_mode** 에 값 **@publisher_security_mode** 을 지정하고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 **@publisher_login** @password **@publisher_password** 에서 트랜잭션 게시에 대해 구독 업데이트를 설정하는 방법에 대해 설명합니다. 이렇게 하면 게시에 대해 스냅샷 에이전트 작업이 만들어집니다.  
+4.  게시자에서 [sp_addpublication_snapshot&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)을 실행합니다. 에 **@publication** 3 단계에서 사용 된 게시 이름을 지정 하 고 및 **@snapshot_job_name** **@password**에 대 한 스냅숏 에이전트 실행 되는 Windows 자격 증명을 지정 합니다. 게시자에 연결할 때 에이전트가 SQL Server 인증을 사용하면 **@publisher_security_mode** 에 값 **@publisher_security_mode** 을 지정하고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 **@publisher_login** @password **@publisher_password**에서 트랜잭션 게시에 대해 구독 업데이트를 설정하는 방법에 대해 설명합니다. 이렇게 하면 게시에 대해 스냅샷 에이전트 작업이 만들어집니다.  
   
 5.  아티클을 게시에 추가합니다. 자세한 내용은 [아티클을 정의](define-an-article.md)을 참조하세요.  
   
@@ -97,20 +104,23 @@ ms.locfileid: "68199426"
   
 #### <a name="to-change-the-conflict-policy-for-a-publication-that-allows-queued-updating-subscriptions"></a>지연 업데이트 구독을 허용하는 게시에 대한 충돌 정책을 변경하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_changepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)을 실행합니다. **@property** 에 **conflict_policy** 값을 지정하고 **@value** 에 원하는 충돌 정책 모드(**pub wins**, **sub reinit** 또는 **sub wins**)를 지정합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_changepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)을 실행합니다. 
+  **
+  **
+  **에 @propertyconflict_policy** 값을 지정하고 ******에 원하는 충돌 정책 모드(** pub wins **, **sub reinit** 또는 @valuesub wins**)를 지정합니다.  
   
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
  이 예에서는 즉시 업데이트 끌어오기 구독과 지연 업데이트 끌어오기 구독을 모두 지원하는 게시를 만듭니다.  
   
  [!code-sql[HowTo#sp_createtranupdatingpub](../../../snippets/tsql/SQL15/replication/howto/tsql/createtranpubupdate.sql#sp_createtranupdatingpub)]  
   
-## <a name="see-also"></a>관련 항목  
- [지연 업데이트 충돌 해결 옵션 설정&#40;SQL Server Management Studio&#41;](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
- [트랜잭션 복제에 대한 게시 유형](../transactional/transactional-replication.md)   
+## <a name="see-also"></a>참고 항목  
+ [지연 업데이트 충돌 해결 옵션을 SQL Server Management Studio &#40;설정&#41;](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
+ [트랜잭션 복제에 대 한 게시 유형](../transactional/transactional-replication.md)   
  [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Create a Publication](create-a-publication.md)   
- [Create an Updatable Subscription to a Transactional Publication](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
- [Updatable Subscriptions for Transactional Replication](../transactional/updatable-subscriptions-for-transactional-replication.md)   
+ [트랜잭션 게시에 대해 업데이트할 수 있는 구독 만들기](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
+ [트랜잭션 복제에 대 한 업데이트할 수 있는 구독](../transactional/updatable-subscriptions-for-transactional-replication.md)   
  [스크립팅 변수와 함께 sqlcmd 사용](../../scripting/sqlcmd-use-with-scripting-variables.md)  
   
   

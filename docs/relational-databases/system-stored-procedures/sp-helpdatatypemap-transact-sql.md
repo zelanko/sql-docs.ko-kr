@@ -16,18 +16,18 @@ ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0b9666c13a2e4d8183d19fade64bf49b13377b9a
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771057"
 ---
-# <a name="sphelpdatatypemap-transact-sql"></a>sp_helpdatatypemap(Transact-SQL)
+# <a name="sp_helpdatatypemap-transact-sql"></a>sp_helpdatatypemap(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  와 DBMS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 관리 시스템) 간의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 정의 된 데이터 형식 매핑에 대 한 정보를 반환 합니다. 이 저장 프로시저는 모든 데이터베이스의 배포자에서 실행됩니다.  
+  와 DBMS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 관리 시스템) 간의 정의 된 데이터 형식 매핑에 대 한 정보를 반환 합니다. 이 저장 프로시저는 모든 데이터베이스의 배포자에서 실행됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -45,33 +45,33 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 ## <a name="arguments"></a>인수  
 `[ @source_dbms = ] 'source_dbms'`데이터 형식이 매핑되는 DBMS의 이름입니다. *source_dbms* 는 **sysname**이며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|원본은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.|  
 |**ORACLE**|원본은 Oracle 데이터베이스입니다.|  
   
-`[ @source_version = ] 'source_version'`원본 DBMS의 제품 버전입니다. *source_version*은 **varchar (10)** 이며 지정 하지 않은 경우 원본 DBMS의 모든 버전에 대 한 데이터 형식 매핑이 반환 됩니다. 결과 집합을 DBMS 원본 버전으로 필터링하도록 설정합니다.  
+`[ @source_version = ] 'source_version'`원본 DBMS의 제품 버전입니다. *source_version*는 **varchar (10)** 이며 지정 하지 않은 경우 원본 DBMS의 모든 버전에 대 한 데이터 형식 매핑이 반환 됩니다. 결과 집합을 DBMS 원본 버전으로 필터링하도록 설정합니다.  
   
 `[ @source_type = ] 'source_type'`원본 DBMS에 나열 된 데이터 형식입니다. *source_type* 는 **sysname**이며 지정 하지 않은 경우 원본 DBMS의 모든 데이터 형식에 대 한 매핑이 반환 됩니다. 결과 집합을 원본 DBMS의 데이터 형식으로 필터링하도록 설정합니다.  
   
 `[ @destination_dbms = ] 'destination_dbms'`대상 DBMS의 이름입니다. *destination_dbms* 는 **sysname**이며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|대상은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.|  
 |**ORACLE**|대상은 Oracle 데이터베이스입니다.|  
 |**DB2**|대상은 IBM DB2 데이터베이스입니다.|  
 |**SYBASE**|대상은 Sybase 데이터베이스입니다.|  
   
-`[ @destination_version = ] 'destination_version'`대상 DBMS의 제품 버전입니다. *destination_version*은 **varchar (10)** 이며 지정 하지 않은 경우 대상 DBMS의 모든 버전에 대 한 매핑이 반환 됩니다. 결과 집합을 DBMS 대상 버전으로 필터링하도록 설정합니다.  
+`[ @destination_version = ] 'destination_version'`대상 DBMS의 제품 버전입니다. *destination_version*는 **varchar (10)** 이며 지정 하지 않은 경우 대상 DBMS의 모든 버전에 대 한 매핑이 반환 됩니다. 결과 집합을 DBMS 대상 버전으로 필터링하도록 설정합니다.  
   
 `[ @destination_type = ] 'destination_type'`대상 DBMS에 나열 된 데이터 형식입니다. *destination_type*는 **sysname**이며 지정 하지 않은 경우 대상 DBMS의 모든 데이터 형식에 대 한 매핑이 반환 됩니다. 결과 집합을 대상 DBMS의 데이터 형식으로 필터링하도록 설정합니다.  
   
-`[ @defaults_only = ] defaults_only`기본 데이터 형식 매핑만 반환 되는지 여부입니다. *defaults_only* 는 **bit**이며 기본값은 **0**입니다. **1** 은 기본 데이터 형식 매핑만 반환 됨을 의미 합니다. **0** 은 기본 및 사용자 정의 데이터 형식 매핑이 반환 됨을 의미 합니다.  
+`[ @defaults_only = ] defaults_only`기본 데이터 형식 매핑만 반환 되는지 여부입니다. *defaults_only* 은 **bit**이며 기본값은 **0**입니다. **1** 은 기본 데이터 형식 매핑만 반환 됨을 의미 합니다. **0** 은 기본 및 사용자 정의 데이터 형식 매핑이 반환 됨을 의미 합니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|설명|  
+|열 이름|Description|  
 |-----------------|-----------------|  
 |**mapping_id**|데이터 형식 매핑을 식별합니다.|  
 |**source_dbms**|원본 DBMS의 이름 및 버전 번호입니다.|  
@@ -84,15 +84,15 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>설명  
- **sp_helpdatatypemap** 는 SQL Server 이외 게시자와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자에서 이외 구독자로의 데이터 형식 매핑을 정의 합니다.  
+ **sp_helpdatatypemap** 는 SQL Server 이외 게시자와 게시자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자로의 데이터 형식 매핑을 정의 합니다.  
   
  원본 및 대상 DBMS의 지정 된 조합이 지원 되지 않는 경우 **sp_helpdatatypemap** 는 빈 결과 집합을 반환 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
  배포자에서 **sysadmin** 고정 서버 역할의 멤버 또는 배포 데이터베이스에 대 한 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_helpdatatypemap**을 실행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [sp_getdefaultdatatypemapping &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
- [sp_setdefaultdatatypemapping &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)  
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;sp_getdefaultdatatypemapping &#40;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
+ [Transact-sql&#41;sp_setdefaultdatatypemapping &#40;](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)  
   
   

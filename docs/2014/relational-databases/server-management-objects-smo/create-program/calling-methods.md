@@ -1,5 +1,5 @@
 ---
-title: 메서드를 호출 합니다. | Microsoft 문서
+title: 호출 메서드 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5c3a004d30a5edb20da77e6f93bf51a94472419b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192163"
 ---
 # <a name="calling-methods"></a>메서드 호출
-  개체와 관련 된를 실행 하는 등 특정 작업을 수행 하는 메서드를 `Checkpoint` 데이터베이스 또는 인스턴스에 대해 로그온 열거 목록을 요청 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
+  메서드는 데이터베이스에서을 `Checkpoint` 실행 하거나 인스턴스에 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]대해 열거 된 로그온 목록을 요청 하는 등 개체와 관련 된 특정 태스크를 수행 합니다.  
   
  메서드는 개체에 대해 작업을 수행하며 매개 변수를 사용할 수 있고 반환 값을 갖는 경우도 있습니다. 반환 값은 단순한 데이터 형식, 복잡한 개체 또는 여러 멤버가 포함된 구조일 수 있습니다.  
   
@@ -55,7 +55,8 @@ db.Create();
  }  
   
 ## <a name="using-an-smo-method-with-a-parameter-in-visual-basic"></a>Visual Basic에서 매개 변수가 있는 SMO 메서드 사용  
- <xref:Microsoft.SqlServer.Management.Smo.Table> 개체에는 <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A>라는 메서드가 있습니다. 이 메서드에는 `FillFactor`를 지정하는 숫자 매개 변수가 필요합니다.  
+ 
+  <xref:Microsoft.SqlServer.Management.Smo.Table> 개체에는 <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A>라는 메서드가 있습니다. 이 메서드에는 `FillFactor`를 지정하는 숫자 매개 변수가 필요합니다.  
   
 ```  
 Dim srv As Server  
@@ -66,7 +67,8 @@ tb.RebuildIndexes(70)
 ```  
   
 ## <a name="using-an-smo-method-with-a-parameter-in-visual-c"></a>Visual C#에서 매개 변수가 있는 SMO 메서드 사용  
- <xref:Microsoft.SqlServer.Management.Smo.Table> 개체에는 <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A>라는 메서드가 있습니다. 이 메서드에는 `FillFactor`를 지정하는 숫자 매개 변수가 필요합니다.  
+ 
+  <xref:Microsoft.SqlServer.Management.Smo.Table> 개체에는 <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A>라는 메서드가 있습니다. 이 메서드에는 `FillFactor`를 지정하는 숫자 매개 변수가 필요합니다.  
   
 ```  
 {   
@@ -81,7 +83,8 @@ tb.RebuildIndexes(70);
 ## <a name="using-an-enumeration-method-that-returns-a-datatable-object-in-visual-basic"></a>Visual Basic에서 DataTable 개체를 반환하는 열거형 메서드 사용  
  이 섹션에서는 열거형 메서드를 호출하는 방법 및 반환된 <xref:System.Data.DataTable> 개체의 데이터를 처리하는 방법에 대해 설명합니다.  
   
- <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> 메서드는 <xref:System.Data.DataTable> 개체를 반환하며, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 모든 데이터 정렬 정보에 액세스하려면 이 개체를 추가적으로 탐색해야 합니다.  
+ 
+  <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> 메서드는 <xref:System.Data.DataTable> 개체를 반환하며, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 모든 데이터 정렬 정보에 액세스하려면 이 개체를 추가적으로 탐색해야 합니다.  
   
 ```  
 'Connect to the local, default instance of SQL Server.  
@@ -105,7 +108,9 @@ Next
 ## <a name="using-an-enumeration-method-that-returns-a-datatable-object-in-visual-c"></a>Visual C#에서 DataTable 개체를 반환하는 열거형 메서드 사용  
  이 섹션에서는 열거형 메서드를 호출하는 방법 및 반환된 <xref:System.Data.DataTable> 개체의 데이터를 처리하는 방법에 대해 설명합니다.  
   
- <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> 메서드는 시스템 <xref:System.Data.DataTable> 개체를 반환합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 모든 데이터 정렬 정보에 액세스하려면 <xref:System.Data.DataTable> 개체를 추가적으로 탐색해야 합니다.  
+ 
+  <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> 메서드는 시스템 <xref:System.Data.DataTable> 개체를 반환합니다. 
+  <xref:System.Data.DataTable> 인스턴스에 대한 모든 데이터 정렬 정보에 액세스하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 개체를 추가적으로 탐색해야 합니다.  
   
 ```  
 //Connect to the local, default instance of SQL Server.   
@@ -129,12 +134,16 @@ foreach ( r in d.Rows) {
 ```  
   
 ## <a name="constructing-an-object-in-visual-basic"></a>Visual Basic에서 개체 생성  
- `New` 연산자를 사용하여 모든 개체의 생성자를 호출할 수 있습니다. <xref:Microsoft.SqlServer.Management.Smo.Database> 개체 생성자는 오버로드되며 예제에 사용된 <xref:Microsoft.SqlServer.Management.Smo.Database> 개체 생성자의 버전은 매개 변수 두 개, 즉 데이터베이스가 속해 있는 부모 <xref:Microsoft.SqlServer.Management.Smo.Server> 개체와 새 데이터베이스의 이름을 나타내는 문자열을 사용합니다.  
+ 
+  `New` 연산자를 사용하여 모든 개체의 생성자를 호출할 수 있습니다. 
+  <xref:Microsoft.SqlServer.Management.Smo.Database> 개체 생성자는 오버로드되며 예제에 사용된 <xref:Microsoft.SqlServer.Management.Smo.Database> 개체 생성자의 버전은 매개 변수 두 개, 즉 데이터베이스가 속해 있는 부모 <xref:Microsoft.SqlServer.Management.Smo.Server> 개체와 새 데이터베이스의 이름을 나타내는 문자열을 사용합니다.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBMethods4](SMO How to#SMO_VBMethods4)]  -->  
   
 ## <a name="constructing-an-object-in-visual-c"></a>Visual C#에서 개체 생성  
- `New` 연산자를 사용하여 모든 개체의 생성자를 호출할 수 있습니다. <xref:Microsoft.SqlServer.Management.Smo.Database> 개체 생성자는 오버로드되며 예제에 사용된 <xref:Microsoft.SqlServer.Management.Smo.Database> 개체 생성자의 버전은 매개 변수 두 개, 즉 데이터베이스가 속해 있는 부모 <xref:Microsoft.SqlServer.Management.Smo.Server> 개체와 새 데이터베이스의 이름을 나타내는 문자열을 사용합니다.  
+ 
+  `New` 연산자를 사용하여 모든 개체의 생성자를 호출할 수 있습니다. 
+  <xref:Microsoft.SqlServer.Management.Smo.Database> 개체 생성자는 오버로드되며 예제에 사용된 <xref:Microsoft.SqlServer.Management.Smo.Database> 개체 생성자의 버전은 매개 변수 두 개, 즉 데이터베이스가 속해 있는 부모 <xref:Microsoft.SqlServer.Management.Smo.Server> 개체와 새 데이터베이스의 이름을 나타내는 문자열을 사용합니다.  
   
 ```  
 {   
@@ -156,12 +165,14 @@ Console.WriteLine(d.Name);
 ```  
   
 ## <a name="copying-an-smo-object-in-visual-basic"></a>Visual Basic에서 SMO 개체 복사  
- 이 코드 예에서는 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> 메서드를 사용하여 <xref:Microsoft.SqlServer.Management.Smo.Server> 개체의 복사본을 만듭니다. <xref:Microsoft.SqlServer.Management.Smo.Server> 개체는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결을 나타냅니다.  
+ 이 코드 예에서는 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> 메서드를 사용하여 <xref:Microsoft.SqlServer.Management.Smo.Server> 개체의 복사본을 만듭니다. 
+  <xref:Microsoft.SqlServer.Management.Smo.Server> 개체는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결을 나타냅니다.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VCMethods6](SMO How to#SMO_VCMethods6)]  -->  
   
 ## <a name="copying-an-smo-object-in-visual-c"></a>Visual C#에서 SMO 개체 복사  
- 이 코드 예에서는 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> 메서드를 사용하여 <xref:Microsoft.SqlServer.Management.Smo.Server> 개체의 복사본을 만듭니다. <xref:Microsoft.SqlServer.Management.Smo.Server> 개체는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결을 나타냅니다.  
+ 이 코드 예에서는 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> 메서드를 사용하여 <xref:Microsoft.SqlServer.Management.Smo.Server> 개체의 복사본을 만듭니다. 
+  <xref:Microsoft.SqlServer.Management.Smo.Server> 개체는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결을 나타냅니다.  
   
 ```  
 {   
@@ -207,7 +218,7 @@ foreach ( r in d.Rows) {
 }   
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  <xref:Microsoft.SqlServer.Management.Smo.Server>   
  <xref:Microsoft.SqlServer.Management.Common.ServerConnection>  
   

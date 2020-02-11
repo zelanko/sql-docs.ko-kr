@@ -1,5 +1,5 @@
 ---
-title: '2단원: 계층적 테이블의 데이터 만들기 및 관리 | Microsoft Docs'
+title: '2단원: 계층적 테이블의 데이터 만들기 및 관리 | Microsoft 문서'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4553d98faf18c00fff6ad90a09d0ee9071a71d32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62659935"
 ---
 # <a name="lesson-2-creating-and-managing-data-in-a-hierarchical-table"></a>2단원: 계층적 테이블의 데이터 만들기 및 관리
@@ -37,7 +37,7 @@ ms.locfileid: "62659935"
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [hierarchyid 데이터 형식을 사용하여 테이블 만들기](lesson-2-1-creating-a-table-using-the-hierarchyid-data-type.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [1단원: 테이블을 계층 구조로 변환](lesson-1-converting-a-table-to-a-hierarchical-structure.md)  
   
   

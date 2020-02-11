@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8afa4b2dfb2b140d67644289e93aa2d96eb1697c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63460014"
 ---
 # <a name="delete-rows-in-the-results-pane-visual-database-tools"></a>결과 창에서 행 삭제(Visual Database Tools)
@@ -42,8 +42,8 @@ ms.locfileid: "63460014"
 > [!NOTE]  
 >  데이터베이스에서 선택한 행 중 삭제할 수 없는 행이 하나라도 있으면 나머지 행도 삭제되지 않습니다. 이 경우 삭제할 수 없는 행에 대한 정보가 메시지로 표시됩니다.  
   
-## <a name="see-also"></a>관련 항목  
- [삭제 쿼리 만들기 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools&#41;&#40;삭제 쿼리를 만듭니다.](visual-database-tools.md)   
  [검색 조건 지정&#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)  
   
   

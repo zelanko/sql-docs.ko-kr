@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: dbb275d8ced2855b1842bba9a1c11e5543d6a838
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62786662"
 ---
 # <a name="check-the-odbc-sql-server-driver-version-windows"></a>ODBC SQL Server 드라이버 버전 검사(Windows)
@@ -31,7 +31,7 @@ ms.locfileid: "62786662"
   
      Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 항목의 정보가 **버전** 열에 표시됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ODBC 데이터 원본 관리자 열기](open-the-odbc-data-source-administrator.md)  
   
   

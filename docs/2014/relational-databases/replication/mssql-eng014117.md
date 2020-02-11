@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3a249f5536846507996da4a7478a32dbe68e4dcd
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811247"
 ---
 # <a name="mssql_eng014117"></a>MSSQL_ENG014117
@@ -52,7 +52,7 @@ ms.locfileid: "68811247"
   
      10.193.17.129 inst1  
   
--   배포를 해제하고 인스턴스를 등록한 후 배포를 다시 설정합니다. 비클러스터형 인스턴스에 대해 @@SERVERNAME 값이 올바르지 않으면 다음 단계를 수행 합니다.  
+-   배포를 해제하고 인스턴스를 등록한 후 배포를 다시 설정합니다. 비클러스터형 인스턴스에 대해 @@SERVERNAME 값이 올바르지 않으면 다음 단계를 수행하세요.  
   
     ```  
     sp_dropserver '<old_name>', 'droplogins'  
@@ -61,17 +61,17 @@ ms.locfileid: "68811247"
     go  
     ```  
   
-     [sp_addserver&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql) 저장 프로시저를 실행한 후에 @@SERVERNAME 변경 내용을 적용하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 다시 시작해야 합니다.  
+     [sp_addserver&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql) 저장 프로시저를 실행한 후에 @[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변경 내용을 적용하려면 @SERVERNAME 서비스를 다시 시작해야 합니다.  
   
      클러스터형 인스턴스에 대해 @@SERVERNAME 값이 올바르지 않으면 클러스터 관리자를 사용하여 해당 이름을 변경해야 합니다. 자세한 내용은 [Always On 장애 조치(failover) 클러스터 인스턴스(SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)를 참조하세요.  
   
  배포자 인스턴스가 제대로 등록되었는지 확인한 후 배포 데이터베이스가 **msdb..MSdistributiondbs**에 나열되어 있는지 확인합니다. 배포 데이터베이스가 목록에 없는 경우 다음을 수행하십시오.  
   
-1.  배포 구성을 스크립팅합니다. 자세한 내용은 [Scripting Replication](scripting-replication.md)를 참조하세요.  
+1.  배포 구성을 스크립팅합니다. 자세한 내용은 [Scripting Replication](scripting-replication.md)을 참조하세요.  
   
 2.  배포를 해제한 다음 다시 설정합니다. 자세한 내용은 [Configure Distribution](configure-distribution.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [오류 및 이벤트 참조&#40;복제&#41;](errors-and-events-reference-replication.md)  
   
   

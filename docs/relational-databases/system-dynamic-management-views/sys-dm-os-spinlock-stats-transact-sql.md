@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_spinlock_stats (TRANSACT-SQL) | Microsoft Docs
+title: sys. dm_os_spinlock_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
 ms.prod: sql-non-specified
@@ -23,38 +23,38 @@ ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
 ms.openlocfilehash: eae0057441fe6bc356c7cea6c1e6ded829bbb9e6
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68265695"
 ---
-# <a name="sysdmosspinlockstats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact SQL)
+# <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys. dm_os_spinlock_stats (Transact-sql)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-형식별으로 구성 하는 모든 스핀 잠금 대기에 대 한 정보를 반환 합니다.  
+유형별로 구성 된 모든 spinlock 대기에 대 한 정보를 반환 합니다.  
   
 
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(256)**|Spinlock 형식의 이름입니다.|  
-|충돌|**bigint**|Spinlock을 획득 하 려 스레드와 다른 스레드가 현재 차단 된 횟수 만큼 spinlock을 보유 합니다.|  
-|회전|**bigint**|Spinlock을 획득 하는 동안 루프를 실행 하는 스레드를 다시 시도 횟수입니다.|  
-|spins_per_collision|**real**|사용자가 충돌 당 작동의 비율입니다.|  
-|sleep_time|**bigint**|스레드는 백오프를 발생 시 중지 데 걸린 시간 (밀리초) 시간의 양입니다.|  
-|백오프|**int**|이 "회전" 하는 스레드 spinlock을 획득 하지 못했습니다 및 스케줄러를 생성 횟수입니다.|  
+|발생|**bigint**|다른 스레드가 현재 spinlock을 보유 하 고 있으므로 스레드가 spinlock을 얻으려고 시도 하 고 차단 되는 횟수입니다.|  
+|밖|**bigint**|스레드가 spinlock을 획득 하려고 시도 하는 동안 루프를 실행 하는 횟수입니다.|  
+|spins_per_collision|**실제로**|충돌 당 회전 비율입니다.|  
+|sleep_time|**bigint**|백오프 이벤트에서 스레드가 절전 모드에 소요 된 시간 (밀리초)입니다.|  
+|배경|**int**|"회전" 하는 스레드가 spinlock을 획득 하 고 스케줄러를 생성 하는 데 실패 한 횟수입니다.|  
 
 
 ## <a name="permissions"></a>사용 권한  
-온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
-온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 프리미엄 계층 필요는 `VIEW DATABASE STATE` 데이터베이스의 권한. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에 필요 합니다 **서버 관리자** 요소나 **Azure Active Directory 관리자** 계정.    
+에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]는 권한이 `VIEW SERVER STATE` 필요 합니다.   
+Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 계층에서는 데이터베이스에 대 `VIEW DATABASE STATE` 한 권한이 필요 합니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.    
   
 ## <a name="remarks"></a>설명  
  
- sys.dm_os_spinlock_stats는 spinlock 경합 원본을 확인에 사용할 수 있습니다. 일부 상황에서을 해결 하거나 spinlock 경합을 줄일 수 있습니다. 그러나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 고객 지원 서비스에 연락해야 할 경우도 있습니다.  
+ sys. dm_os_spinlock_stats를 사용 하 여 spinlock 경합의 원본을 식별할 수 있습니다. 경우에 따라 spinlock 경합을 해결 하거나 줄일 수 있습니다. 그러나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 고객 지원 서비스에 연락해야 할 경우도 있습니다.  
   
- Sys.dm_os_spinlock_stats의 내용을 사용 하 여 다시 설정할 수 있습니다 `DBCC SQLPERF` 다음과 같습니다.  
+ 다음과 같이를 사용 `DBCC SQLPERF` 하 여 dm_os_spinlock_stats의 내용을 다시 설정할 수 있습니다.  
   
 ```  
 DBCC SQLPERF ('sys.dm_os_spinlock_stats', CLEAR);  
@@ -67,11 +67,11 @@ GO
 >  이러한 통계는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작할 경우 지속되지 않습니다. 모든 데이터는 통계가 마지막으로 다시 설정된 이후나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 시작된 이후로 누적됩니다.  
   
 ## <a name="spinlocks"></a>Spinlock  
- Spinlock은 일반적으로 짧은 기간에 대 한 보유 하는 데이터 구조에 대 한 액세스를 serialize 하는 데 사용 하는 경량 동기화 개체입니다. 스레드를 다른 스레드에 의해 열리는지는 spinlock에 의해 보호 된 리소스에 액세스 하려고 하는 경우 스레드는 루프를 실행 또는 "실행" 시도 즉시 래치 또는 다른 리소스와 마찬가지로 스케줄러를 생성 하는 대신 다시 리소스에 액세스 대기 합니다. 스레드는 회전 리소스를 사용할 수 없거나 루프가 완료 될 때까지 시점에서 스레드 스케줄러 생성 되며 실행 가능 큐로 다시 돌아가서 계속 합니다. 이 방법은 과도 한 스레드 컨텍스트 전환이 줄일 수 있습니다. 하지만 spinlock에 대 한 경합이 높은 경우 중요 한 CPU 사용률을 관찰 될 수 있습니다.
+ Spinlock은 일반적으로 짧은 시간 동안 유지 되는 데이터 구조에 대 한 액세스를 serialize 하는 데 사용 되는 간단한 동기화 개체입니다. 스레드가 다른 스레드에서 보유 하 고 있는 spinlock에 의해 보호 되는 리소스에 액세스 하려고 할 때 스레드는 래치 또는 다른 리소스를 사용 하 여 스케줄러를 즉시 생성 하는 대신 루프 또는 "spin"를 실행 하 고 리소스에 대 한 액세스를 다시 시도 합니다. 대기한. 스레드는 리소스를 사용할 수 있을 때까지 계속 회전 하거나 루프가 완료 되 면 스레드가 스케줄러를 생성 하 고 실행 가능한 큐로 돌아갑니다. 이 방법은 과도 한 스레드 컨텍스트 전환을 줄이는 데 도움이 되지만 spinlock의 경합이 높으면 상당한 CPU 사용률이 관찰 될 수 있습니다.
    
- 다음 표에서 가장 일반적인 spinlock 형식의 일부에 대해 간략하게 설명 합니다.  
+ 다음 표에는 가장 일반적인 spinlock 형식 중 일부에 대 한 간략 한 설명이 나와 있습니다.  
   
-|스핀 잠금 유형|설명|  
+|Spinlock 유형|Description|  
 |-----------------|-----------------|  
 |ABR|내부적으로만 사용됩니다.|
 |ADB_CACHE|내부적으로만 사용됩니다.|
@@ -105,12 +105,12 @@ GO
 |COLUMNSTORE_HASHTABLE|내부적으로만 사용됩니다.|
 |COLUMNSTOREBUILDSTATE_LIST|내부적으로만 사용됩니다.|
 |COM_INIT|내부적으로만 사용됩니다.|
-|커밋할 수|내부적으로만 사용됩니다.|
+|커밋|내부적으로만 사용됩니다.|
 |COMPPLAN_SKELETON|내부적으로만 사용됩니다.|
 |CONNECTION_MANAGER|내부적으로만 사용됩니다.|
 |연결|내부적으로만 사용됩니다.|
 |CSIBUILDMEM|내부적으로만 사용됩니다.|
-|커서|내부적으로만 사용됩니다.|
+|CURSOR|내부적으로만 사용됩니다.|
 |CURSQL|내부적으로만 사용됩니다.|
 |DATAPORTCONSUMER|내부적으로만 사용됩니다.|
 |DATAPORTSOURCEINFOCREDIT|내부적으로만 사용됩니다.|
@@ -120,7 +120,7 @@ GO
 |DBSEEDING_OPERATION|내부적으로만 사용됩니다.|
 |DBT_HASH|내부적으로만 사용됩니다.|
 |DBT_IO_LIST|내부적으로만 사용됩니다.|
-|DBTABLE|메모리 내 데이터 구조에 해당 데이터베이스의 속성을 포함 하는 SQL Server의 모든 데이터베이스에 대 한 액세스를 제어 합니다. 참조 [이 문서에서는](https://techcommunity.microsoft.com/t5/SQL-Server/Improving-Concurrency-Scalability-of-SQL-Server-workload-by/ba-p/384789) 자세한 내용은 합니다. |
+|DBTABLE|해당 데이터베이스의 속성을 포함 하는 SQL Server의 모든 데이터베이스에 대 한 메모리 내 데이터 구조에 대 한 액세스를 제어 합니다. 자세한 내용은 [이 문서](https://techcommunity.microsoft.com/t5/SQL-Server/Improving-Concurrency-Scalability-of-SQL-Server-workload-by/ba-p/384789)를 참조하세요. |
 |DEFERRED_WF_EXT_DROP|내부적으로만 사용됩니다.|
 |DEK_INSTANCE|내부적으로만 사용됩니다.|
 |DELAYED_PARTITIONED_STACK|내부적으로만 사용됩니다.|
@@ -130,7 +130,7 @@ GO
 |DIGEST_CACHE|내부적으로만 사용됩니다.|
 |DINPBUF|내부적으로만 사용됩니다.|
 |DIRECTLOGCONSUMER|내부적으로만 사용됩니다.|
-|DP_LIST|남은 더티 페이지의 목록에 설정 하는 간접 검사점이 있는 데이터베이스에 대 한 액세스를 제어 합니다. 참조 [이 문서에서는](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510) 자세한 내용은 합니다.|
+|DP_LIST|간접 검사점이 설정 된 데이터베이스의 더티 페이지 목록에 대 한 액세스를 제어 합니다. 자세한 내용은 [이 문서](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510)를 참조하세요.|
 |DROP|내부적으로만 사용됩니다.|
 |DROP_TEMPO|내부적으로만 사용됩니다.|
 |DROPPED_ALLOC_UNIT|내부적으로만 사용됩니다.|
@@ -177,7 +177,7 @@ GO
 |HTTP|내부적으로만 사용됩니다.|
 |HTTP_CONNCACHE|내부적으로만 사용됩니다.|
 |HTTP_ENDPOINT|내부적으로만 사용됩니다.|
-|IDENTITY|내부적으로만 사용됩니다.|
+|ID|내부적으로만 사용됩니다.|
 |INDEX_CREATE|내부적으로만 사용됩니다.|
 |IO_DISPENSER_PAUSE|내부적으로만 사용됩니다.|
 |IO_RG_VOLUME_HASHTABLE|내부적으로만 사용됩니다.|
@@ -187,7 +187,7 @@ GO
 |LANG_RES_LOAD|내부적으로만 사용됩니다.|
 |LIVE_TARGET_TVF|내부적으로만 사용됩니다.|
 |LOCK_FREE_LIST|내부적으로만 사용됩니다.|
-|LOCK_HASH|데이터베이스에서 대기 중인 잠금에 대 한 정보를 저장 하는 잠금 관리자 해시 테이블에 대 한 액세스를 보호 합니다. 참조 [이 문서에서는](https://support.microsoft.com/kb/2926217) 자세한 내용은 합니다.|
+|LOCK_HASH|데이터베이스에서 보유 중인 잠금에 대 한 정보를 저장 하는 잠금 관리자 해시 테이블에 대 한 액세스를 보호 합니다. 자세한 내용은 [이 문서](https://support.microsoft.com/kb/2926217)를 참조하세요.|
 |LOCK_NOTIFICATION|내부적으로만 사용됩니다.|
 |LOCK_RESOURCE_ID|내부적으로만 사용됩니다.|
 |LOCK_RW_ABTX_HASH_SET|내부적으로만 사용됩니다.|
@@ -220,7 +220,7 @@ GO
 |LPE_SESSION|내부적으로만 사용됩니다.|
 |LPE_SXTP|내부적으로만 사용됩니다.|
 |LSID|내부적으로만 사용됩니다.|
-|LSLIST|내부적으로만 사용됩니다.|
+|LSN 목록|내부적으로만 사용됩니다.|
 |LSNREFLIST|내부적으로만 사용됩니다.|
 |LSS_SYNC_DTC|내부적으로만 사용됩니다.|
 |MD_CHANGE_NOTIFICATION|내부적으로만 사용됩니다.|
@@ -271,7 +271,7 @@ GO
 |REPL_LOGREADER_HISTORY_CACHE|내부적으로만 사용됩니다.|
 |REPL_LOGREADER_PERDB_HISTORY_CACHE|내부적으로만 사용됩니다.|
 |RESMANAGER|내부적으로만 사용됩니다.|
-|리소스|내부적으로만 사용됩니다.|
+|RESOURCE|내부적으로만 사용됩니다.|
 |RESQUEUE|내부적으로만 사용됩니다.|
 |RFS_THREAD_QUEUE|내부적으로만 사용됩니다.|
 |RG_TIMER|내부적으로만 사용됩니다.|
@@ -307,7 +307,7 @@ GO
 |SOS_ACTIVEDESCRIPTOR|내부적으로만 사용됩니다.|
 |SOS_BLOCKALLOCPARTIALLIST|내부적으로만 사용됩니다.|
 |SOS_BLOCKDESCRIPTORBUCKET|내부적으로만 사용됩니다.|
-|SOS_CACHESTORE|SQL Server 계획 캐시, 임시 테이블 캐시 등 다양 한 메모리 내 캐시에 대 한 액세스를 동기화합니다. 이 스핀 잠금 유형에 대 한 심각한 경합이 경합에서 특정 캐시에 따라 여러 가지를 의미할 수 있습니다. 연락처 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 이 스핀 잠금 유형 문제 해결 도움말에 대 한 고객 지원 서비스. |
+|SOS_CACHESTORE|계획 캐시 또는 임시 테이블 캐시와 같은 SQL Server의 다양 한 메모리 내 캐시에 대 한 액세스를 동기화 합니다. 이 spinlock 유형에 대 한 경합은 경합에 있는 특정 캐시에 따라 다를 수 있습니다. 이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] spinlock 유형 문제 해결에 도움이 필요 하면 고객 지원 서비스에 문의 하십시오. |
 |SOS_CACHESTORE_CLOCK|내부적으로만 사용됩니다.|
 |SOS_CLOCKALG_INTERNODE_SYNC|내부적으로만 사용됩니다.|
 |SOS_DEBUG_HOOK|내부적으로만 사용됩니다.|
@@ -366,7 +366,7 @@ GO
 |TaskElapsedExecutionMonitor|내부적으로만 사용됩니다.|
 |TDS_TVP|내부적으로만 사용됩니다.|
 |TESTTEAM|내부적으로만 사용됩니다.|
-|TESTTEAMEXPONENTIAL|내부적으로만 사용됩니다.|
+|TESTTEAMEXPONENTIAL 수|내부적으로만 사용됩니다.|
 |TESTTEAMEXPONENTIALTASTAS|내부적으로만 사용됩니다.|
 |TESTTEAMTASTAS|내부적으로만 사용됩니다.|
 |TMP_SESS_KEY|내부적으로만 사용됩니다.|
@@ -404,15 +404,15 @@ GO
  
 
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  
- [DBCC SQLPERF&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
+ [DBCC SQLPERF &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
  
- [SQL Server 운영 체제 관련 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [Transact-sql&#41;&#40;운영 체제 관련 동적 관리 뷰 SQL Server](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
 
- [SQL Server에서 중요 한 드라이버의 CPU 사용률이 Spinlock 있습니까?](https://techcommunity.microsoft.com/t5/SQL-Server-Support/When-is-Spinlock-a-Significant-Driver-of-CPU-utilization-in-SQL/ba-p/530142)
+ [가 SQL Server의 CPU 사용률에 대 한 상당한 영향을 주는 경우](https://techcommunity.microsoft.com/t5/SQL-Server-Support/When-is-Spinlock-a-Significant-Driver-of-CPU-utilization-in-SQL/ba-p/530142)
 
- [진단 및 해결 SQL Server에 대 한 Spinlock 경합](https://www.microsoft.com/download/details.aspx?id=26666)
+ [SQL Server에서 Spinlock 경합 진단 및 해결](https://www.microsoft.com/download/details.aspx?id=26666)
   
   
 

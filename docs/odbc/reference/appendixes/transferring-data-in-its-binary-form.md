@@ -15,18 +15,18 @@ ms.assetid: 4b12a9de-51d0-416a-87f4-9bf84959cad9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a2897f882dc9dcd78ee8b919de01126d6be510c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68070020"
 ---
 # <a name="transferring-data-in-its-binary-form"></a>이진 형식으로 데이터 전송
-안전 하 게 응용 프로그램 같은 DBMS 및 하드웨어 플랫폼을 사용 하는 두 개의 데이터 원본 간에 데이터 (지정 된 DBMS에서 사용 하는 내부 형식)를 전송할 수 있습니다. 특정 데이터에 대 한 원본 및 대상 데이터 원본에 동일한 SQL 데이터 형식 이어야 합니다. C 데이터 형식은 SQL_C_BINARY입니다.  
+응용 프로그램은 동일한 DBMS 및 하드웨어 플랫폼을 사용 하는 두 데이터 원본 간에 데이터 (지정 된 DBMS에서 사용 하는 내부 양식)를 안전 하 게 전송할 수 있습니다. 지정 된 데이터 조각에 대해 SQL 데이터 형식은 원본 및 대상 데이터 원본에서 동일 해야 합니다. C 데이터 형식은 SQL_C_BINARY입니다.  
   
- 응용 프로그램을 호출할 때 **SQLFetch**를 **SQLFetchScroll**, 또는 **SQLGetData** 드라이버 데이터에서 데이터를 검색 데이터 소스에서 데이터를 검색 하려면 원본 및 SQL_C_BINARY 형식의 저장소 위치로 변환 하지 않고 전송 합니다. 응용 프로그램을 호출할 때 **SQLBulkOperations**, **SQLExecute**를 **SQLExecDirect**를 **SQLPutData, 또는 SQLSetPos** 데이터를 전송할 수 대상 데이터 원본 드라이버 저장소 위치에서 데이터를 검색 하 고, 변환, 대상 데이터 원본 없이 전송 합니다.  
+ 응용 프로그램이 **Sqlfetch**, **Sqlfetchscroll**또는 **SQLGetData** 를 호출 하 여 원본 데이터 원본에서 데이터를 검색 하는 경우 드라이버는 데이터 원본에서 데이터를 검색 하 고 변환 하지 않고 SQL_C_BINARY 형식의 저장소 위치로 전송 합니다. 응용 프로그램에서 **SQLBulkOperations**, **sqlexecute**, **sqlexecdirect**, **sqlputdata 또는 SQLSetPos** 를 호출 하 여 데이터를 대상 데이터 원본으로 보내는 경우 드라이버는 저장소 위치에서 데이터를 검색 하 고 변환 하지 않고 대상 데이터 원본으로 전송 합니다.  
   
 > [!NOTE]  
->  이 방식으로 (이진 데이터)를 제외한 모든 데이터를 전송 하는 응용 프로그램 Dbms 간에 상호 운용 되지는 않습니다.  
+>  이러한 방식으로 데이터를 전송 하는 응용 프로그램 (이진 데이터 제외)은 Dbms 간에 상호 운용할 수 없습니다.  
   
- **SQLCopyDesc** 복사할 행 바인딩 원본 DBMS에서에서 대상 DBMS에서에서 매개 변수 바인딩을 사용할 수 있습니다.
+ **Sqlcopydesc** 는 원본 dbms에서 대상 dbms의 매개 변수 바인딩으로 행 바인딩을 복사 하는 데 사용할 수 있습니다.

@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d9f97b1682fa8a2e04b5f1afcc2a552a326a9e43
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242100"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>스크립트 생성(SQL Server Management Studio)
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서는 스크립트를 생성 하 [!INCLUDE[tsql](../../includes/tsql-md.md)] 는 두 가지 메커니즘을 제공 합니다. **스크립트 생성 및 게시 마법사**를 사용 하 여 여러 개체에 대 한 스크립트를 만들 수 있습니다. 또한 **개체 탐색기** 에서 **스크립팅**메뉴를 사용하여 개별 개체 또는 여러 개체에 대한 스크립트를 생성할 수도 있습니다.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 생성하는 두 가지 메커니즘을 제공합니다. **스크립트 생성 및 게시 마법사**를 사용 하 여 여러 개체에 대 한 스크립트를 만들 수 있습니다. 또한 **개체 탐색기** 에서 **스크립팅**메뉴를 사용하여 개별 개체 또는 여러 개체에 대한 스크립트를 생성할 수도 있습니다.  
   
 1.  **방법 선택:** 스크립트[생성 및 게시 마법사](#GenPubScriptWiz), [개체 탐색기 스크립트 메뉴](#OEScriptAsMenu)    
   
@@ -27,21 +27,19 @@ ms.locfileid: "75242100"
 ## <a name="before-you-begin"></a>시작하기 전에  
  요구 사항에 가장 적합한 메커니즘을 선택합니다.  
   
-###  <a name="GenPubScriptWiz"></a>스크립트 생성 및 게시 마법사  
- 
-  **스크립트 생성 및 게시 마법사** 를 사용하여 다양한 개체에 대한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 만들 수 있습니다. 이 마법사는 데이터베이스의 모든 개체 또는 사용자가 선택한 개체의 하위 집합에 대한 스크립트를 생성합니다. 이 마법사에는 사용 권한, 데이터 정렬, 제약 조건 등을 포함할지 여부와 같은 여러 스크립트 옵션이 있습니다. 마법사를 사용하는 방법은 [Generate and Publish Scripts Wizard](generate-and-publish-scripts-wizard.md)를 참조하십시오.  
+###  <a name="GenPubScriptWiz"></a> 스크립트 생성 및 게시 마법사  
+ **스크립트 생성 및 게시 마법사** 를 사용하여 다양한 개체에 대한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 만들 수 있습니다. 이 마법사는 데이터베이스의 모든 개체 또는 사용자가 선택한 개체의 하위 집합에 대한 스크립트를 생성합니다. 이 마법사에는 사용 권한, 데이터 정렬, 제약 조건 등을 포함할지 여부와 같은 여러 스크립트 옵션이 있습니다. 마법사를 사용하는 방법은 [Generate and Publish Scripts Wizard](generate-and-publish-scripts-wizard.md)를 참조하십시오.  
   
-###  <a name="OEScriptAsMenu"></a>스크립트를 메뉴 개체 탐색기  
+###  <a name="OEScriptAsMenu"></a> 개체 탐색기 스크립팅 메뉴  
  
   **개체 탐색기 스크립팅** 메뉴를 사용하여 단일 개체, 여러 개체 또는 단일 개체에 대한 여러 문을 스크립팅할 수 있습니다. 여러 스크립트 유형 중 하나를 선택할 수 있습니다. 예를 들어 개체를 만들거나 변경하거나 삭제할 수 있습니다. 쿼리 편집기 창의 스크립트를 파일이나 클립보드에 저장할 수 있습니다. 스크립트는 유니코드 형식으로 만들어집니다.  
   
-##  <a name="ScriptSingleObject"></a>단일 개체의 스크립트를 생성 하려면  
+##  <a name="ScriptSingleObject"></a> 단일 개체의 스크립트를 생성하려면  
  **단일 개체를 스크립팅하려면**  
   
 1.  개체 탐색기에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  
-  **데이터베이스**를 확장한 다음 스크립팅할 개체가 포함된 데이터베이스를 확장합니다.  
+2.  **데이터베이스**를 확장한 다음 스크립팅할 개체가 포함된 데이터베이스를 확장합니다.  
   
 3.  개체의 범주를 확장합니다. 예를 들어 **테이블** 또는 **뷰** 노드를 확장합니다.  
   
@@ -58,8 +56,7 @@ ms.locfileid: "75242100"
   
 1.  개체 탐색기에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  
-  **데이터베이스**를 확장한 다음 스크립팅할 개체가 포함된 데이터베이스를 확장합니다.  
+2.  **데이터베이스**를 확장한 다음 스크립팅할 개체가 포함된 데이터베이스를 확장합니다.  
   
 3.  스크립팅할 첫 번째 개체를 마우스 오른쪽 단추로 클릭하고 **\<개체 유형> 스크립팅**을 가리키고 **다른 이름으로 저장** 선택 항목에서 **새 쿼리 편집기 창**을 출력 대상으로 선택합니다.  
   
@@ -77,13 +74,11 @@ ms.locfileid: "75242100"
   
 1.  개체 탐색기에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  
-  **데이터베이스**를 확장한 다음 스크립팅할 개체가 포함된 데이터베이스를 확장합니다.  
+2.  **데이터베이스**를 확장한 다음 스크립팅할 개체가 포함된 데이터베이스를 확장합니다.  
   
 3.  스크립팅할 개체 유형의 범주 노드(예: **테이블** 노드)로 이동합니다.  
   
-4.  
-  **F7** 을 선택하거나 **보기**메뉴를 열고 **개체 탐색기 정보** 를 선택하여 **개체 탐색기 정보**창을 엽니다.  
+4.  **F7** 을 선택하거나 **보기**메뉴를 열고 **개체 탐색기 정보** 를 선택하여 **개체 탐색기 정보**창을 엽니다.  
   
 5.  스크립팅할 개체 중 하나를 마우스 왼쪽 단추로 클릭합니다.  
   

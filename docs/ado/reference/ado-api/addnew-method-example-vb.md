@@ -15,14 +15,14 @@ ms.assetid: d439e097-65f3-471d-8799-5a1263beb3c1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 043855dc4f2af915b7e1f61bffe99ae89956c3be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921300"
 ---
 # <a name="addnew-method-example-vb"></a>AddNew 메서드 예제(VB)
-이 예제에서는 합니다 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) 메서드를 지정된 된 이름을 가진 새 레코드를 만듭니다.  
+이 예제에서는 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) 메서드를 사용 하 여 지정 된 이름의 새 레코드를 만듭니다.  
   
 ```  
 'BeginAddNewVB  
@@ -107,6 +107,6 @@ End Sub
 'EndAddNewVB  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [AddNew 메서드 (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

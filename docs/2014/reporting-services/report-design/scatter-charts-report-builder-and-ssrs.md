@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dde53428c738fc30595d17b62175b50835fe7ec2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105036"
 ---
 # <a name="scatter-charts-report-builder-and-ssrs"></a>분산형 차트(보고서 작성기 및 SSRS)
@@ -29,9 +29,9 @@ ms.locfileid: "66105036"
   
 ## <a name="variations"></a>변형  
   
--   **거품형.** 거품형 차트는 두 데이터 요소 값의 차이를 거품의 크기로 표시합니다. 거품이 클수록 두 값의 차이가 큰 것입니다.  
+-   **표시가.** 거품형 차트는 두 데이터 요소 값의 차이를 거품의 크기로 표시합니다. 거품이 클수록 두 값의 차이가 큰 것입니다.  
   
--   **3차원 거품형**. 3차원으로 표시되는 거품형 차트입니다.  
+-   **3 차원 거품형**입니다. 3차원으로 표시되는 거품형 차트입니다.  
   
 ## <a name="data-considerations-for-a-scatter-chart"></a>분산형 차트의 데이터 고려 사항  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66105036"
   
 -   기본적으로 분산형 차트에서는 데이터 요소가 원으로 표시됩니다. 분산형 차트에 여러 계열이 있는 경우에는 각 요소의 표식 모양을 사각형, 삼각형, 다이아몬드 등으로 바꾸어 보십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [차트 종류&#40;보고서 작성기 및 SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   

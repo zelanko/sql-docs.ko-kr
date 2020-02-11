@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0e6098a51afde04164e3ef0dfa5e5297457b4440
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101801"
 ---
 # <a name="roles-and-permissions-reporting-services"></a>역할 및 권한(Reporting Services)
@@ -43,7 +43,7 @@ ms.locfileid: "66101801"
  [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 부여](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
  SharePoint 그룹, 사용 권한 수준 및 사용 권한을 사용하여 보고서 서버에 대한 액세스를 제어하는 방법에 대해 설명합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서 서버 인증](authentication-with-the-report-server.md)   
  [기본 모드 보고서 서버에 대한 사용 권한 부여](granting-permissions-on-a-native-mode-report-server.md)  
   

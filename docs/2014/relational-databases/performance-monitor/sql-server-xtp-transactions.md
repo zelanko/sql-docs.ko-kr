@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96d60ae8fc176fc1fc108d907f33f01877795955
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151121"
 ---
 # <a name="xtp-transactions"></a>XTP 트랜잭션
@@ -35,7 +35,7 @@ ms.locfileid: "63151121"
 |**Transactions aborted/sec**|사용자 및 시스템에 의해 중단된 초당 트랜잭션 수입니다(평균).|  
 |**Transactions created/sec**|시스템에서 생성된 초당 트랜잭션 수입니다(평균).<br /><br /> XTP 트랜잭션은 디스크 기반 트랜잭션과 다르게 계산됩니다(Databases:Transactions/sec에 반영됨). 예를 들어, created/sec 트랜잭션은 read/only 트랜잭션을 계산하지만 Databases:Transactions/sec는 그렇지 않습니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [XTP &#40;메모리 내 OLTP&#41; 성능 카운터](../../integration-services/performance/performance-counters.md)  
   
   

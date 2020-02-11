@@ -1,5 +1,5 @@
 ---
-title: 대상 지정 (스키마 생성 마법사) (Analysis Services-다차원 데이터) | Microsoft Docs
+title: 대상 지정 (스키마 생성 마법사) (Analysis Services 다차원 데이터) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e780758513aebc90dd35399894e78d0096cb0400
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068248"
 ---
 # <a name="specify-target-schema-generation-wizard-analysis-services---multidimensional-data"></a>대상 지정(스키마 생성 마법사)(Analysis Services - 다차원 데이터)
+  
   **대상 지정** 페이지를 사용하여 관계형 스키마가 생성될 데이터 원본 뷰를 식별할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **새 데이터 원본 뷰 만들기**  
  마법사에서 생성된 관계형 스키마를 포함할 새 데이터 원본 뷰를 만들려면 선택합니다.  
   
@@ -46,8 +47,8 @@ ms.locfileid: "66068248"
  **기존 데이터 원본 뷰 사용**  
  마법사에서 생성된 관계형 스키마를 포함할 기존 데이터 원본 뷰를 선택하려면 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [스키마 생성 마법사 F1 도움말 &#40;Analysis Services-다차원 데이터&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)   
- [Analysis Services 마법사 &#40;다차원 데이터&#41;](analysis-services-wizards-multidimensional-data.md)  
+## <a name="see-also"></a>참고 항목  
+ [스키마 생성 마법사 F1 도움말 &#40;Analysis Services 다차원 데이터&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)   
+ [다차원 데이터를 &#40;마법사 Analysis Services&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

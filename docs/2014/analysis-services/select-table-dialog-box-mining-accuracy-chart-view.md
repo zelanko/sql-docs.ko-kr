@@ -15,25 +15,26 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 242c6451cc6dc018e4972be7a16305b676845687
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069273"
 ---
 # <a name="select-table-dialog-box-mining-accuracy-chart-view"></a>테이블 선택 대화 상자(마이닝 정확도 차트 뷰)
+  
   **테이블 선택** 대화 상자를 사용하여 선택한 마이닝 구조에 포함된 마이닝 모델의 정확도를 테스트하는 데 사용할 테이블을 선택할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **데이터 원본**  
  마이닝 모델을 테스트하는 데 사용할 테이블을 포함하는 데이터 원본입니다. 목록에는 현재 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트에 정의된 각 데이터 원본이 포함되어 있습니다.  
   
  **테이블/뷰 이름**  
  현재 선택한 데이터 원본에서 사용할 수 있는 테이블 또는 뷰를 선택합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [마이닝 정확도 차트 디자이너 &#40;데이터 마이닝&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [테스트 및 유효성 검사 태스크 및 방법 &#40;데이터 마이닝&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [데이터 마이닝&#41;&#40;테스트 및 유효성 검사](data-mining/testing-and-validation-data-mining.md)  
   
   

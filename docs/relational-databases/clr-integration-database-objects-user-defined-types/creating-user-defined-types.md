@@ -14,18 +14,20 @@ helpviewer_keywords:
 ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f08067c55110b801cd989e0be1c9fbc6955cb61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 54aa7db3d2c2ea0d268874f0d59c3096b8e1a0ae
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68028274"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76911087"
 ---
 # <a name="creating-user-defined-types"></a>사용자 정의 형식 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 설치할 수 있는 UDT(사용자 정의 형식)를 만들려면 먼저 Visual C# 또는 Visual Basic과 같은 지원되는 .NET Framework 프로그래밍 언어 중 하나에서 UDT를 만들기 위한 사양에 맞는 클래스를 만들어야 합니다. 그런 다음 클래스를 DLL(동적 연결 라이브러리)로 컴파일하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로드할 수 있습니다. 또한 Visual Studio를 사용하여 UDT를 만들고 배포할 수도 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 CLR(공용 언어 런타임) 코드를 실행하는 기능이 기본적으로 OFF로 설정되어 있습니다. CLR을 사용 하 여 사용할 수는 **sp_configure** 시스템 저장 프로시저를 다음에 표시 된 대로 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문:  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 CLR(공용 언어 런타임) 코드를 실행하는 기능이 기본적으로 OFF로 설정되어 있습니다. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문과 같이 **sp_configure** 시스템 저장 프로시저를 사용 하 여 CLR을 사용 하도록 설정할 수 있습니다.  
   
 ```  
 sp_configure 'clr enabled', 1  
@@ -40,9 +42,9 @@ Reconfigure
  사용자 정의 형식을 만드는 것과 관련된 코딩 방법을 설명합니다.  
   
 ## <a name="example"></a>예제  
- 다음 코드 샘플에서 자세히 설명 된 Point UDT를 정의 [코딩 형식](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)합니다.  
+ 다음 코드 목록에서는 [사용자 정의 형식 코딩](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)에 자세히 설명 되어 있는 Point UDT를 정의 합니다.  
   
- 이 섹션에서 설명한 다른 예제의 전체 코드 목록은 CLR 예제를 설치하면 확인할 수 있습니다. 에 대 한 지침은이 예제를 설치 합니다 [SQL Server 데이터베이스 엔진 예제](https://msftengprodsamples.codeplex.com/)합니다.  
+ 이 섹션에서 설명한 다른 예제의 전체 코드 목록은 CLR 예제를 설치하면 확인할 수 있습니다. 이러한 예제를 설치 하는 방법에 대 한 지침은 [데이터베이스 엔진 샘플 SQL Server](https://msftengprodsamples.codeplex.com/)를 참조 하세요.  
   
  C#  
   
@@ -84,7 +86,7 @@ public struct Point : INullable
     public override string ToString()  
     {  
         // Since InvokeIfReceiverIsNull defaults to 'true'  
-        // this test is unneccesary if Point is only being called  
+        // this test is unnecessary if Point is only being called  
         // from SQL.  
         if (this.IsNull)  
             return "NULL";  
@@ -233,7 +235,7 @@ Imports System.Text
     ' Use StringBuilder to provide string representation of UDT.  
     Public Overrides Function ToString() As String  
         ' Since InvokeIfReceiverIsNull defaults to 'true'  
-        ' this test is unneccesary if Point is only being called  
+        ' this test is unnecessary if Point is only being called  
         ' from SQL.  
         If Me.IsNull Then  
             Return "NULL"  
@@ -330,7 +332,7 @@ Imports System.Text
 End Structure  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [CLR 사용자 정의 형식](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

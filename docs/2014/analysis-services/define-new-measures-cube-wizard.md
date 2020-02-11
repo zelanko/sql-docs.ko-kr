@@ -1,5 +1,5 @@
 ---
-title: 새 측정값 (큐브 마법사)를 정의 합니다. | Microsoft Docs
+title: 새 측정값 정의 (큐브 마법사) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8f526c1327f67bdcf84dce44e670eb195de9a96a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082109"
 ---
 # <a name="define-new-measures-cube-wizard"></a>새 측정값 정의(큐브 마법사)
+  
   **새 측정값 정의** 페이지를 사용하여 데이터 원본을 사용하지 않고 만드는 큐브에 대한 새 측정값을 만들 수 있습니다.  
   
 > [!NOTE]  
@@ -55,7 +56,7 @@ ms.locfileid: "66082109"
   
  데이터 형식을 변경하려면 해당 데이터 형식을 클릭한 다음 목록에서 데이터 형식을 선택합니다.  
   
- **집계**  
+ **요약**  
  측정값에 대한 집계를 나열합니다.  
   
  집계를 변경하려면 해당 집계를 클릭한 다음 목록에서 집계를 선택합니다.  
@@ -83,19 +84,19 @@ ms.locfileid: "66082109"
   
  데이터 형식을 변경하려면 해당 데이터 형식을 클릭한 다음 목록에서 데이터 형식을 선택합니다.  
   
- **집계**  
+ **요약**  
  측정값에 대한 집계를 나열합니다.  
   
  집계를 변경하려면 해당 집계를 클릭한 다음 목록에서 집계를 선택합니다.  
   
- **X**  
+ **.X**  
  큐브에서 새 측정값을 삭제합니다.  
   
  큐브에서 새 측정값을 제거하려면 해당 측정값의 **X** 단추를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [큐브 마법사 F1 도움말](cube-wizard-f1-help.md)   
- [큐브 개체 &#40;Analysis Services-다차원 데이터&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
+ [큐브 개체는 Analysis Services 다차원 데이터를 &#40;&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [다차원 모델의 큐브](multidimensional-models/cubes-in-multidimensional-models.md)   
  [다차원 모델의 차원](multidimensional-models/dimensions-in-multidimensional-models.md)  
   

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7d7e92758707217a42afbd41649720907adfeaa3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211050"
 ---
 # <a name="sql-server-profiler-templates-and-permissions"></a>SQL Server Profiler 템플릿 및 권한
@@ -42,7 +42,7 @@ ms.locfileid: "68211050"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[SQL Server Profiler 템플릿](sql-server-profiler-templates.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]와 함께 제공되는 미리 정의된 추적 템플릿에 대해 설명합니다.|  
 |[SQL Server 프로파일러 실행에 필요한 권한](permissions-required-to-run-sql-server-profiler.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]실행에 필요한 사용 권한에 대해 설명합니다.|  
@@ -56,8 +56,8 @@ ms.locfileid: "68211050"
 |[SQL Server Profiler로 추적 필터링](filter-traces-with-sql-server-profiler.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 추적 출력을 필터링하도록 데이터 열에 필터를 설정하는 방법에 대한 정보가 포함됩니다.|  
 |[추적 재생](replay-traces.md)|추적 재생의 의미와 추적 재생에 필요한 사항을 설명하는 정보가 포함됩니다.|  
   
-## <a name="see-also"></a>관련 항목  
- [SQL Server Profiler](sql-server-profiler.md)   
+## <a name="see-also"></a>참고 항목  
+ [SQL Server 프로파일러](sql-server-profiler.md)   
  [SQL Server Profiler 시작](start-sql-server-profiler.md)  
   
   

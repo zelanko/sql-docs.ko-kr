@@ -11,16 +11,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cb70ab2f2098b0857ba632a3b9501d596c0af864
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798045"
 ---
 # <a name="load-the-smo-assemblies-in-windows-powershell"></a>Windows PowerShell에서 SMO 어셈블리 로드
   이 항목에서는 SQL Server PowerShell 공급자를 사용하지 않는 Windows PowerShell 스크립트에서 SMO(SQL Server Management Object) 어셈블리를 로드하는 방법을 설명합니다.  
   
-## <a name="before-you-begin"></a>시작하기 전 주의 사항  
+## <a name="before-you-begin"></a>시작하기 전에  
  SMO 어셈블리를 로드하는 기본 메커니즘은 `sqlps` 모듈을 로드하는 것입니다. 모듈에 포함된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공급자는 SMO 어셈블리를 자동으로 로드하며 PowerShell 스크립트에서 SMO 개체의 유용성을 확장하는 기능도 구현합니다.  
   
  SMO 어셈블리를 직접 로드해야 할 수 있는 두 가지 경우가 있습니다.  
@@ -83,5 +83,5 @@ Update-FormatData -PrependPath SQLProvider.Format.ps1xml
 Pop-Location  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server PowerShell](sql-server-powershell.md)  

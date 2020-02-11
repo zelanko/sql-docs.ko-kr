@@ -1,5 +1,5 @@
 ---
-title: sys.xml_schema_collections (TRANSACT-SQL) | Microsoft Docs
+title: sys. xml_schema_collections (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,18 +21,18 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6ef3a2d6bca9591637223aa4f5659e42ac27c5d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68115046"
 ---
-# <a name="sysxmlschemacollections-transact-sql"></a>sys.xml_schema_collections(Transact-SQL)
+# <a name="sysxml_schema_collections-transact-sql"></a>sys.xml_schema_collections(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  각 XML 스키마 컬렉션에 대한 행을 반환합니다. XML 스키마 컬렉션은 XSD 정의의 명명된 집합입니다. XML 스키마 컬렉션 자체는 관계형 스키마에 포함되고 스키마 범위 [!INCLUDE[tsql](../../includes/tsql-md.md)] 이름으로 식별됩니다. 다음 튜플은 고유: xml_collection_id, schema_id 및 이름입니다.  
+  각 XML 스키마 컬렉션에 대한 행을 반환합니다. XML 스키마 컬렉션은 XSD 정의의 명명된 집합입니다. XML 스키마 컬렉션 자체는 관계형 스키마에 포함되고 스키마 범위 [!INCLUDE[tsql](../../includes/tsql-md.md)] 이름으로 식별됩니다. 다음 튜플은 고유 합니다. xml_collection_id, schema_id 및 이름입니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |xml_collection_id|**int**|XML 스키마 컬렉션의 ID입니다. 데이터베이스 내에서 고유합니다.|  
 |schema_id|**int**|이 XML 스키마 컬렉션을 포함하는 관계형 스키마의 ID입니다.|  
@@ -44,9 +44,9 @@ ms.locfileid: "68115046"
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [XML 스키마 &#40;XML 형식 시스템&#41; 카탈로그 뷰 &#40;SQL 트랜잭션&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)   
- [SQL Server 시스템 카탈로그 쿼리 FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
+ [Xml 스키마 &#40;XML 형식 시스템&#41; 카탈로그 뷰 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)   
+ [SQL Server 시스템 카탈로그 쿼리에 대한 질문과 대답](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

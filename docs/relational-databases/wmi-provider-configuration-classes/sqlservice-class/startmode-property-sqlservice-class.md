@@ -18,10 +18,10 @@ ms.assetid: c0c2c7f8-d4ae-44f2-ad8e-aecfcb7c2878
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 31d2a413aa606bc6b7065126668fdeabdfacd7b1
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660867"
 ---
 # <a name="startmode-property-sqlservice-class"></a>StartMode 속성(SqlService 클래스)
@@ -36,7 +36,7 @@ object.StartMode [= value]
 ```  
   
 ## <a name="parts"></a>부분  
- *object*  
+ *개체가*  
  서비스를 나타내는 [SqlService 클래스](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
@@ -53,15 +53,15 @@ object.StartMode [= value]
  자동  
  값 = 2입니다. 시스템 시작 중 서비스 제어 관리자에 의해 자동으로 서비스가 시작됩니다.  
   
- 수동  
+ 설명서  
  값 = 3입니다. 프로세스에서 **StartService** 메서드를 호출할 때 컴퓨터 관리자에 의해 서비스가 시작 됩니다.  
   
  사용 안 함  
  값 = 4입니다. 서비스를 시작할 수 없습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [서비스 시작 및 중지](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

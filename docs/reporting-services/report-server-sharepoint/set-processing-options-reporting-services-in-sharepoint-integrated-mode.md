@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 986ae6e89727b0cef59e4d6b3bf7e5d92bd5342b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580543"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>처리 옵션 설정(SharePoint 통합 모드의 Reporting Services)
@@ -42,9 +42,9 @@ ms.locfileid: "65580543"
   
 2.  아래쪽 화살표를 클릭하고 **처리 옵션 관리**를 선택합니다.  
   
-3.  **데이터 새로 고침 옵션**에서 **스냅숏 데이터 사용**을 클릭합니다. "데이터 원본 자격 증명 중 하나 이상이 저장되어 있지 않으므로 스냅샷에서 이 보고서를 실행할 수 없습니다"가 표시되는 경우 보고서가 무인 모드로 실행되도록 구성되어 있지 않으며 이 옵션을 설정하기 전에 저장된 자격 증명을 사용하도록 데이터 원본을 수정해야 합니다.  
+3.  **데이터 새로 고침 옵션**에서 **스냅샷 데이터 사용**을 클릭합니다. "데이터 원본 자격 증명 중 하나 이상이 저장되어 있지 않으므로 스냅샷에서 이 보고서를 실행할 수 없습니다"가 표시되는 경우 보고서가 무인 모드로 실행되도록 구성되어 있지 않으며 이 옵션을 설정하기 전에 저장된 자격 증명을 사용하도록 데이터 원본을 수정해야 합니다.  
   
-4.  **데이터 스냅숏 옵션**에서 **데이터 처리 예약**을 선택합니다.  
+4.  **데이터 스냅샷 옵션**에서 **데이터 처리 예약**을 선택합니다.  
   
 5.  사용할 기존 공유 일정이 있는 경우 **공유 일정** 을 선택하고, 없으면 **사용자 지정 일정**을 클릭한 다음 **구성**을 클릭합니다.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "65580543"
   
 2.  아래쪽 화살표를 클릭하고 **처리 옵션 관리**를 선택합니다.  
   
-3.  **기록 스냅숏 옵션**에서 데이터 처리 및 저장 방법과 시기를 지정합니다.  
+3.  **기록 스냅샷 옵션**에서 데이터 처리 및 저장 방법과 시기를 지정합니다.  
   
 4.  보고서 서버 수준에서 지정된 값을 사용하려면 **기록 스냅샷 제한**에서 **사이트 기본 설정 사용** 을 선택합니다. 지정된 값을 사용하지 않으려면 **스냅샷 수를 제한하지 않음** 또는 **스냅샷 수 제한** 을 선택합니다.  
   

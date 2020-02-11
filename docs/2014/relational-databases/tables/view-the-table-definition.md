@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 308281ed30b7f0a56acbe397c0294932afeae121
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211757"
 ---
 # <a name="view-the-table-definition"></a>테이블 정의 보기
@@ -41,7 +41,7 @@ ms.locfileid: "68211757"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  테이블을 소유하고 있거나 해당 테이블에 대한 권한을 부여 받은 경우에만 테이블의 속성을 볼 수 있습니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -50,7 +50,7 @@ ms.locfileid: "68211757"
   
 1.  개체 탐색기에서 속성을 표시하려는 테이블을 선택합니다.  
   
-2.  테이블을 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 **속성**을 선택합니다. 자세한 내용은 [Table Properties](table-properties-ssms.md)을 참조하세요.  
+2.  테이블을 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 **속성** 을 선택합니다. 자세한 내용은 [Table Properties](table-properties-ssms.md)을 참조하세요.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   

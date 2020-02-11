@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c14608a34c2df5a0e93fea985d8135a37d5ffa53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63273282"
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>집계 쿼리에서 열 작업(Visual Database Tools)
@@ -66,8 +66,8 @@ ms.locfileid: "63273282"
   
 -   검색 조건으로 집계 함수를 사용하는 경우 조건에는 요약이 포함되며 따라서 HAVING 절의 일부가 되어야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [쿼리 결과 요약 &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools를 &#40;쿼리 결과 요약&#41;](summarize-query-results-visual-database-tools.md)   
  [쿼리 결과 정렬 및 그룹화&#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)  
   
   

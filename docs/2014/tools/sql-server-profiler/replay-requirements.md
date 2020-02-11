@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9b9da4b68bba6358ff473846fb710f8fa6454e5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62688608"
 ---
 # <a name="replay-requirements"></a>Replay Requirements
@@ -70,7 +70,7 @@ ms.locfileid: "62688608"
   
 -   **TextData**  
   
--   **Application Name**  
+-   **애플리케이션 이름**  
   
 -   **LoginName**  
   
@@ -82,7 +82,7 @@ ms.locfileid: "62688608"
   
 -   **HostName**  
   
--   **ServerName**  
+-   **데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면**  
   
 -   **Binary Data**  
   
@@ -122,7 +122,7 @@ ms.locfileid: "62688608"
   
  추적 재생에 필요한 권한에 대한 자세한 내용은 [Permissions Required to Run SQL Server Profiler](sql-server-profiler.md)을 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [추적 테이블 재생&#40;SQL Server Profiler&#41;](replay-a-trace-table-sql-server-profiler.md)   
  [추적 파일 재생&#40;SQL Server Profiler&#41;](replay-a-trace-file-sql-server-profiler.md)   
  [SQL Server 이벤트 클래스 참조](../../relational-databases/event-classes/sql-server-event-class-reference.md)   

@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0db2a84b4be80fffec0f05aed11f39a3bcea7db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287356"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>중첩 AUTO 모드 쿼리를 사용하여 형제 생성
@@ -66,7 +66,7 @@ FOR XML AUTO, TYPE
   
 -   `SalesOrder` 절에 지정된 행 집합인 `FROM`를 쿼리합니다. 결과는 하나 이상의 <`SalesOrder`> 요소가 있는 XML입니다.  
   
--   `AUTO` 모드 및 `TYPE` 지시어를 지정합니다. `AUTO` 모드는 쿼리 결과를 XML로 변환 하며 `TYPE` 지시어는 결과 반환 합니다. `xml` 형식입니다.  
+-   `AUTO` 모드 및 `TYPE` 지시어를 지정합니다. `AUTO`모드는 쿼리 결과를 XML로 변환 하 고 `TYPE` 지시어는 결과를 형식 `xml` 으로 반환 합니다.  
   
 -   쉼표로 구분된 두 개의 중첩된 `SELECT` 문을 포함합니다. 첫 번째 중첩된 `SELECT` 는 판매 주문 정보, 헤더 및 세부 정보를 검색하고 두 번째 중첩된 `SELECT` 문은 판매 직원 정보를 검색합니다.  
   
@@ -140,11 +140,13 @@ FOR XML AUTO, TYPE
 </Sales.SalesOrderHeader>  
 ```  
   
- `TYPE` 지시어는 쿼리 결과를 `xml` 유형으로 반환하기 때문에 여러 `xml` 데이터 형식 메서드를 사용하여 결과 XML을 쿼리할 수 있습니다. 자세한 내용은 [xml 데이터 형식 메서드](/sql/t-sql/xml/xml-data-type-methods)를 참조하십시오. 다음 쿼리에서는 아래 사항을 유의하십시오.  
+ 
+  `TYPE` 지시어는 쿼리 결과를 `xml` 유형으로 반환하기 때문에 여러 `xml` 데이터 형식 메서드를 사용하여 결과 XML을 쿼리할 수 있습니다. 자세한 내용은 [xml 데이터 형식 메서드](/sql/t-sql/xml/xml-data-type-methods)를 참조하십시오. 다음 쿼리에서는 아래 사항을 유의하십시오.  
   
 -   이전 쿼리가 `FROM` 절에 추가되었습니다. 쿼리 결과는 테이블로 반환됩니다. 추가된 `XmlCol` 별칭에 유의하십시오.  
   
--   `SELECT` 절은 `XmlCol` 절에 반환된 `FROM` 에 대해 XQuery를 지정합니다. `query()` 데이터 형식의 `xml` 메서드는 XQuery를 지정하는 데 사용됩니다. 자세한 내용은 [query&#40;&#41; 메서드&#40;xml 데이터 형식&#41;](/sql/t-sql/xml/query-method-xml-data-type)를 참조하세요.  
+-   `SELECT` 절은 `XmlCol` 절에 반환된 `FROM` 에 대해 XQuery를 지정합니다. 
+  `query()` 데이터 형식의 `xml` 메서드는 XQuery를 지정하는 데 사용됩니다. 자세한 내용은 [query&#40;&#41; 메서드&#40;xml 데이터 형식&#41;](/sql/t-sql/xml/query-method-xml-data-type)를 참조하세요.  
   
     ```  
     SELECT XmlCol.query('<Root> { /* } </Root>')  
@@ -165,7 +167,7 @@ FOR XML AUTO, TYPE
     FOR XML AUTO, TYPE ) as T(XmlCol)  
     ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [중첩 FOR XML 쿼리 사용](use-nested-for-xml-queries.md)  
   
   

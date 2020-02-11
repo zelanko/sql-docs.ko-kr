@@ -1,5 +1,5 @@
 ---
-title: 보고서 관리자 F1 도움말 | Microsoft Docs
+title: F1 도움말 보고서 관리자 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f77fb2a9a23c5cc44cadfcc2b4e43039f69def07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104472"
 ---
 # <a name="report-manager-f1-help"></a>보고서 관리자 F1 도움말
-  다음 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 관리자에 대한 페이지 수준 도움말을 제공합니다. 애플리케이션의 각 페이지에 대해 항목이 하나씩 있습니다. 일부 페이지에 대한 설명은 제공되지 않을 수 있습니다. 보안 설정에 따라 액세스할 수 있는 페이지가 다릅니다. 보고서 관리자에서 이 항목에 액세스하려면 기본 도구 모음에서 **도움말** 을 클릭합니다.  
+  다음 항목에서는 보고서 관리자에 대 한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 페이지 수준 도움말을 제공 합니다. 애플리케이션의 각 페이지에 대해 항목이 하나씩 있습니다. 일부 페이지에 대한 설명은 제공되지 않을 수 있습니다. 보안 설정에 따라 액세스할 수 있는 페이지가 다릅니다. 보고서 관리자에서 이 항목에 액세스하려면 기본 도구 모음에서 **도움말** 을 클릭합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -28,9 +28,9 @@ ms.locfileid: "66104472"
   
 -   [항목 위치 선택 페이지](../../2014/reporting-services/choose-item-location-page-report-manager.md)  
   
--   [클릭 방문 보고서 페이지](../../2014/reporting-services/clickthrough-reports-page-report-manager.md)  
+-   [클릭 광고 보고서 페이지](../../2014/reporting-services/clickthrough-reports-page-report-manager.md)  
   
--   [콘텐츠 페이지](../../2014/reporting-services/contents-page-report-manager.md)  
+-   [내용 페이지](../../2014/reporting-services/contents-page-report-manager.md)  
   
 -   [데이터 기반 구독 만들기 페이지](../../2014/reporting-services/create-data-driven-subscription-page-report-manager.md)  
   
@@ -66,13 +66,13 @@ ms.locfileid: "66104472"
   
 -   [새 모델 페이지](../../2014/reporting-services/new-model-page-report-manager.md)  
   
--   [새 역할 할당 / 역할 할당 편집 페이지](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md)  
+-   [새 역할 할당/역할 할당 편집 페이지](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md)  
   
--   [새 일정 / 일정 편집 페이지](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md)  
+-   [새 일정/일정 편집 페이지](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md)  
   
--   [새 구독 / 구독 편집 페이지](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md)  
+-   [새 구독/구독 편집 페이지](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md)  
   
--   [새 시스템 역할 할당 / 시스템 역할 할당 편집 페이지](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
+-   [새 시스템 역할 할당/시스템 역할 할당 편집 페이지](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
   
 -   [매개 변수 속성 페이지](../../2014/reporting-services/parameters-properties-page-report-manager.md)  
   
@@ -90,7 +90,7 @@ ms.locfileid: "66104472"
   
 -   [사이트 설정 페이지](../../2014/reporting-services/site-settings-page-report-manager.md)  
   
--   [스냅숏 옵션 속성 페이지](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)  
+-   [스냅샷 옵션 속성 페이지](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)  
   
 -   [구독 페이지](../../2014/reporting-services/subscriptions-page-report-manager.md)  
   
@@ -102,7 +102,7 @@ ms.locfileid: "66104472"
   
  보고서 관리자 및 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에 대한 자세한 내용은 MSDN의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서 서버 콘텐츠 관리&#40;SSRS 기본 모드&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
  [기능 참조 (Reporting Services)](feature-reference-reporting-services.md)   
  [보고서 서버 콘텐츠 관리&#40;SSRS 기본 모드&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 773ceb4aedddd6a39df6487bd36b47b83f7fa9a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63227037"
 ---
 # <a name="visual-database-tool-designers"></a>Visual Database Tools 디자이너
@@ -86,9 +86,9 @@ ms.locfileid: "63227037"
 >   
 >  이 버전의 Visual Database Tools는 Microsoft SQL Server 버전 7 및 이전 버전을 지원하지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [데이터베이스 다이어그램 디자인 &#40;Visual Database Tools&#41;](design-database-diagrams-visual-database-tools.md)   
- [테이블 디자인 &#40;Visual Database Tools&#41;](design-tables-visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools를 &#40;데이터베이스 다이어그램 디자인&#41;](design-database-diagrams-visual-database-tools.md)   
+ [Visual Database Tools를 &#40;테이블 디자인&#41;](design-tables-visual-database-tools.md)   
  [쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

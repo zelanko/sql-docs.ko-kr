@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8b97b0129a7cc4ffa21b4a82ad0208a2c1890b27
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72313649"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>태스크 4: 결과 관리 및 보기
@@ -22,17 +22,17 @@ ms.locfileid: "72313649"
   
 1.  도메인 목록에서 **연락처 전자 메일** 도메인을 선택 합니다.  
   
-2.  오른쪽 창에서 **잘못 됨** 탭으로 전환 합니다. 끝에 문자 '가 없는 두 개의 전자 메일 주소를 확인 합니다. 이 두 이메일은 모든 전자 메일 주소가 **\@adventure-works.com** (' ')로 끝나야 하는 도메인 규칙에 의해 잘못 된 것으로 검색 되었습니다. DQS는 정리 중 도메인 규칙을 사용해서 전자 메일이 올바른지 여부를 확인합니다. 이 탭에는 기술 자료에서 잘못된 것으로 표시되었거나 도메인 규칙에 위배되는 도메인 값이 표시됩니다. 여기에서 이 값들은 도메인 규칙(전자 메일 유효성 검사)에 위배됩니다.  
+2.  오른쪽 창에서 **잘못 됨** 탭으로 전환 합니다. 끝에 문자 '가 없는 두 개의 전자 메일 주소를 확인 합니다. 모든 전자 메일 주소가 ** \@adventure-works.com** (' ')로 끝나야 하는 도메인 규칙에 의해 잘못 된 두 개의 전자 메일입니다. DQS는 정리 중 도메인 규칙을 사용해서 전자 메일이 올바른지 여부를 확인합니다. 이 탭에는 기술 자료에서 잘못된 것으로 표시되었거나 도메인 규칙에 위배되는 도메인 값이 표시됩니다. 여기에서 이 값들은 도메인 규칙(전자 메일 유효성 검사)에 위배됩니다.  
   
-3.  다음 **으로 수정** 열에 **\@adventure-works.com** (' ')로 끝나는 올바른 전자 메일 주소를 입력 합니다.  
+3.  다음 **으로 수정** 열에 ** \@adventure-works.com** (' ')로 끝나는 올바른 전자 메일 주소를 입력 합니다.  
   
-     전자 메일(../../2014/tutorials/media/et-managingandviewingresults-01.jpg "유효성 검사 규칙에서") ![전자 메일 유효성]검사 규칙 수정에서 수정  
+     ![전자 메일 수정 내용 유효성 검사 규칙](../../2014/tutorials/media/et-managingandviewingresults-01.jpg "전자 메일 수정 내용 유효성 검사 규칙")  
   
 4.  두 레코드 모두에 대해 **승인** 을 클릭 하 여 변경 내용을 모두 승인 합니다. 승인 하면 레코드가 **수정** 됨 탭으로 이동 합니다. 각 항목을 별도로 승인 하는 대신 **모든 용어 승인** 도구 모음 단추를 사용 하 여 모든 변경 내용을 한 번에 승인할 수 있습니다.  
   
 5.  오른쪽 창에서 **새** 탭으로 전환 합니다. 이 탭의 값은 DQS가 기술 자료에서 값이 올바른지 여부를 확인하기에 아직 정보가 충분하지 않은 값입니다. 따라서 도메인 값을 변경하거나 변경을 제안할 수 없습니다.  
   
-6.  값을 검토 하 여 모든 전자 메일이 **\@adventure-works.com** 으로 끝나는 지 확인 하 고 도구 모음에서 **모든 용어 승인** 을 클릭 합니다. 이 탭에서 승인 된 값은 **올바른** 탭으로 이동 합니다.  
+6.  값을 검토 하 여 모든 전자 메일이 ** \@adventure-works.com** 로 종료 되는지 확인 하 고 도구 모음에서 **모든 용어 승인** 을 클릭 합니다. 이 탭에서 승인 된 값은 **올바른** 탭으로 이동 합니다.  
   
 7.  도메인 목록에서 **Country** 도메인을 선택 합니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "72313649"
   
 9. **USA** 는 동의어이 고 **미국** 는 선행 (기본 설정) 값 이므로 **미국으로 수정** 되었습니다.  
   
-     동의어(../../2014/tutorials/media/et-managingandviewingresults-02.jpg "를 기반으로") 하는 ![동의어 수정에 따른 수정]  
+     ![동의어 기반 수정](../../2014/tutorials/media/et-managingandviewingresults-02.jpg "동의어 기반 수정")  
   
 10. 이러한 수정 된 값에 대해 **승인** 단추가 이미 선택 되어 있습니다. 이 동작은 수정된 값의 기본 동작입니다. 변경 내용을 거부할 수 있으며, 변경 하면 값이 **잘못 됨** 탭으로 이동 합니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "72313649"
   
 12. 오른쪽 창에서 **수정** 됨 탭으로 전환 합니다.  
   
-     수정 된 ![공급자 이름이](../../2014/tutorials/media/et-managingandviewingresults-03.jpg "수정 된 공급 업체 이름")  
+     ![수정된 공급자 이름](../../2014/tutorials/media/et-managingandviewingresults-03.jpg "수정된 공급자 이름")  
   
     1.  **A. Datum Corp** 는 **a. datum Corporation** 으로 수정 되 고 **이유** 는 **용어 기반 관계로 설정 됩니다. A. Datum Corporation** 은 기술 자료 검색 프로세스 중에 검색 되었으므로 DQS에 알려진 도메인 값입니다. 따라서 DQS는이 수정에 대해 **100% 확신** 합니다.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "72313649"
   
 21. **도시** 를 **로스앤젤레스** 로 포함 하는 레코드의 **상태** 는 이제 **CA** 로 설정 됩니다. **이유** 필드는 **규칙 ' City-State rule '에 의해 수정**된 것입니다.  
   
-     ![도시-시/도 규칙 수정](../../2014/tutorials/media/et-managingandviewingresults-04.jpg "도시-") 시/도 규칙 수정  
+     ![City-State 규칙 수정](../../2014/tutorials/media/et-managingandviewingresults-04.jpg "City-State 규칙 수정")  
   
 22. 목록에서이 항목에 대해 **승인** 라디오 단추가 이미 선택 되어 있는지 확인 합니다. 이는 **수정** 됨 탭의 항목에 대 한 기본 동작입니다.  
   
@@ -84,7 +84,8 @@ ms.locfileid: "72313649"
   
      ![모든 용어 승인 도구 모음 단추](../../2014/tutorials/media/et-managingandviewingresults-05.jpg "모든 용어 승인 도구 모음 단추")  
   
-25. **다음** 을 클릭하여 **내보내기** 페이지로 전환합니다.  
+25. 
+  **다음** 을 클릭하여 **내보내기** 페이지로 전환합니다.  
   
 ## <a name="next-step"></a>다음 단계  
  [태스크 5: 정리 결과를 Excel 파일로 내보내기](../../2014/tutorials/task-5-exporting-cleansing-results-to-an-excel-file.md)  

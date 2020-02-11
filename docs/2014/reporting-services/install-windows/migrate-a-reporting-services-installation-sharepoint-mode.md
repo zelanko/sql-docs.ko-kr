@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c1f23dad22e1d748f39b1dd390b5874806193276
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75253186"
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>Reporting Services 설치 마이그레이션(SharePoint 모드)
@@ -72,29 +72,29 @@ ms.locfileid: "75253186"
   
  ![SSRS SharePoint 마이그레이션의 기본 다이어그램](../../../2014/sql-server/install/media/rs-sharepoint-migration.gif "SSRS SharePoint 마이그레이션의 기본 다이어그램")  
   
-||개체|방법|참고|  
+||개체|방법|메모|  
 |-|-------------|------------|-----------|  
-|**1(sp1)**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]암호화 키.|**Rskeymgmt** 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager입니다. 
+|**1**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]암호화 키.|**Rskeymgmt** 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager입니다. 
   [Reporting Services 암호화 키 백업 및 복원](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)을 참조하세요.|표에 나와 있는 도구는 백업 작업에는 사용할 수 있지만 복원 작업 작업에는 사용할 수 없습니다. 복원 작업에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 관리 페이지 또는 PowerShell을 사용합니다.|  
-|**sr-2**|SharePoint 콘텐츠 데이터베이스||데이터베이스를 백업하고 분리합니다.<br /><br /> 
+|**2**|SharePoint 콘텐츠 데이터베이스||데이터베이스를 백업하고 분리합니다.<br /><br /> 
   [업그레이드 방법 결정(SharePoint Server 2010)(https://technet.microsoft.com/library/cc263447.aspx)](https://technet.microsoft.com/library/cc263447.aspx)의 "데이터베이스 연결 업그레이드" 섹션을 참조하세요.|  
 |**3**|
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]카탈로그 데이터베이스인 SQL Server 데이터베이스|SQL Server 데이터베이스 백업 및 복원<br /><br /> 또는<br /><br /> SQL Server 데이터베이스 분리 및 연결||  
-|**3-4**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]구성 파일.|단순한 파일 복사|파일을 사용자 지정한 경우에만 rsreportserver.config를 복사해야 합니다. 파일의 기본 위치에 대한 예: C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting<br /><br /> RSReportServer.config<br /><br /> Rssvrpolicy.config<br /><br /> 보고서 서버 ASP.NET 애플리케이션용 Web.config<br /><br /> ASP.NET용 Machine.config|  
+|**4**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]구성 파일.|단순한 파일 복사|파일을 사용자 지정한 경우에만 rsreportserver.config를 복사해야 합니다. 파일의 기본 위치에 대한 예: C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting<br /><br /> RSReportServer.config<br /><br /> Rssvrpolicy.config<br /><br /> 보고서 서버 ASP.NET 애플리케이션용 Web.config<br /><br /> ASP.NET용 Machine.config|  
   
 ####  <a name="bkmk_restore_operations"></a>복원 작업  
  이 섹션에서는 마이그레이션해야 하는 정보 유형과 복원을 완료하는 데 사용하는 도구나 프로세스에 대해 설명합니다. 복원하는 데 사용하는 도구는 백업하는 데 사용한 도구와 다를 수 있습니다.  
   
  복원 단계를 완료하기 전에 SharePoint 팜 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드를 설치하고 구성해야 합니다. Sharepoint 모드의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 설치에 대 한 자세한 내용은 Sharepoint [모드 설치 &#40;SharePoint 2010 및 sharepoint 2013&#41;Reporting Services ](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)를 참조 하세요.  
   
-||개체|방법|참고|  
+||개체|방법|메모|  
 |-|-------------|------------|-----------|  
-|**1(sp1)**|SharePoint 콘텐츠 데이터베이스를 새 팜에 복원|SharePoint "데이터베이스 연결 업그레이드" 방법|기본 단계:<br /><br /> 1) 새 서버에서 데이터베이스를 복원합니다.<br /><br /> 2) URL을 지정하여 콘텐츠 데이터베이스를 웹 애플리케이션에 연결합니다.<br /><br /> 3) Get-SPWebapplication이 모든 웹 애플리케이션과 URL을 나열합니다.<br /><br /> 
+|**1**|SharePoint 콘텐츠 데이터베이스를 새 팜에 복원|SharePoint "데이터베이스 연결 업그레이드" 방법|기본 단계:<br /><br /> 1) 새 서버에서 데이터베이스를 복원합니다.<br /><br /> 2) URL을 지정하여 콘텐츠 데이터베이스를 웹 애플리케이션에 연결합니다.<br /><br /> 3) Get-SPWebapplication이 모든 웹 애플리케이션과 URL을 나열합니다.<br /><br /> 
   [업그레이드 방법 결정(SharePoint Server 2010)(https://technet.microsoft.com/library/cc263447.aspx)](https://technet.microsoft.com/library/cc263447.aspx) 및 [데이터베이스 연결 및 SharePoint Server 2010으로 업그레이드(https://technet.microsoft.com/library/cc263299.aspx)](https://technet.microsoft.com/library/cc263299.aspx)의 "데이터베이스 연결 업그레이드" 섹션을 참조하세요.|  
-|**sr-2**|
+|**2**|
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 카탈로그 데이터베이스인 SQL 데이터베이스(ReportServer) 복원|SQL Database 백업 및 복원<br /><br /> **디스크나**<br /><br /> SQL Server 데이터베이스 연결 및 분리|데이터베이스를 처음 사용하는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 환경에서 사용할 수 있도록 필요에 따라 데이터베이스 스키마를 업데이트합니다.|  
 |**3**|새 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션 만들기|SharePoint 중앙 관리|새 서비스 애플리케이션을 만들 때 복사한 보고서 서버 데이터베이스를 사용하도록 구성합니다.<br /><br /> SharePoint 중앙 관리를 사용 하는 방법에 대 한 자세한 내용은 sharepoint [2013에 대 한 Reporting Services Sharepoint 모드 설치](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)에서 "3 단계: Reporting Services 서비스 응용 프로그램 만들기" 섹션을 참조 하세요.<br /><br /> PowerShell 사용 예제는 [Reporting Services SharePoint 서비스 및 서비스 응용 프로그램](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)에서 "powershell을 사용 하 여 Reporting Services 서비스 응용 프로그램을 만들려면" 섹션을 참조 하세요.|  
-|**3-4**|
+|**4**|
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 파일 복원|단순한 파일 복사|파일 기본 위치의 예: C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting|  
 |**5**|
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 암호화 키를 복원합니다.|

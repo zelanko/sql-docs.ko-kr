@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b0209f3d8e77cfe893a0e462fc9ccf3761da8dfa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62911395"
 ---
 # <a name="setstringvalue-method-sqlserviceadvancedproperty-class-"></a>SetStringValue 메서드(SqlServiceAdvancedProperty 클래스)
@@ -40,7 +40,7 @@ StrValue
 ```  
   
 ## <a name="parts"></a>부분  
- *object*  
+ *개체가*  
  고급 속성을 나타내는 [SqlServiceAdvancedProperty 클래스](sqlserviceadvancedproperty-class.md) 개체입니다.  
   
 #### <a name="parameters"></a>매개 변수  
@@ -50,12 +50,13 @@ StrValue
 |*StrValue*|고급 속성의 값을 지정하는 문자열 값입니다.|  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
- `uint32` 값으로, 0은 서비스가 수정되었음을 나타내고 1은 요청이 지원되지 않음을 나타내며 다른 모든 숫자는 오류를 나타냅니다.  
+ 
+  `uint32` 값으로, 0은 서비스가 수정되었음을 나타내고 1은 요청이 지원되지 않음을 나타내며 다른 모든 숫자는 오류를 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  속성을 문자열 값으로 설정하려면 속성 값 형식이 `string`이어야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [서비스 시작 및 중지](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

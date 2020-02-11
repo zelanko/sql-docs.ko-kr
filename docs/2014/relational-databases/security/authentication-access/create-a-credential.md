@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ab0560e0df37c80a82017e5f076af969931a79e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63012001"
 ---
 # <a name="create-a-credential"></a>Create a Credential
@@ -52,7 +52,7 @@ ms.locfileid: "63012001"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  자격 증명을 만들거나 수정하려면 ALTER ANY CREDENTIAL 권한이 필요하고 로그인을 자격 증명에 매핑하려면 ALTER ANY LOGIN 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -77,7 +77,7 @@ ms.locfileid: "63012001"
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-###  <a name="Credential"></a> 자격 증명을 만들려면  
+###  <a name="Credential"></a>자격 증명을 만들려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   

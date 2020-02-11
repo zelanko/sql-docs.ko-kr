@@ -1,5 +1,5 @@
 ---
-title: 도구 모음 (특성 관계 디자이너 탭, 차원 디자이너) (Analysis Services-다차원 데이터) | Microsoft Docs
+title: 도구 모음 (특성 관계 디자이너 탭, 차원 디자이너) (Analysis Services 다차원 데이터) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 580641db4007f5a7e414f641a8a0495030405b38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066232"
 ---
 # <a name="toolbar-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>도구 모음(특성 관계 디자이너 탭, 차원 디자이너)(Analysis Services - 다차원 데이터)
@@ -32,19 +32,21 @@ ms.locfileid: "66066232"
   
  **특성 관계 탭에서 도구 모음을 보려면**  
   
--   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 솔루션 탐색기에서 차원을 두 번 클릭하여 차원 디자이너를 연 다음 **특성 관계** 탭을 클릭합니다.  
+-   
+  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 솔루션 탐색기에서 차원을 두 번 클릭하여 차원 디자이너를 연 다음 **특성 관계** 탭을 클릭합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **비즈니스 인텔리전스 추가**  
- **비즈니스 인텔리전스 마법사** 를 열고 비즈니스 인텔리전스 기능을 추가합니다. 자세한 내용은 [비즈니스 인텔리전스 마법사를 사용하여 차원 향상](use-the-business-intelligence-wizard-to-enhance-dimensions.md)을 참조하세요.  
+ 
+  **비즈니스 인텔리전스 마법사** 를 열고 비즈니스 인텔리전스 기능을 추가합니다. 자세한 내용은 [비즈니스 인텔리전스 마법사를 사용하여 차원 향상](use-the-business-intelligence-wizard-to-enhance-dimensions.md)을 참조하세요.  
   
- **처리**  
+ **프로세스**  
  개체를 처리합니다.  
   
  **새 특성 관계**  
  새 특성 관계를 정의할 수 있는 **특성 관계 만들기** 대화 상자를 엽니다.  
   
- **확대/축소**  
+ **Zoom**  
  확대/축소 배율을 순환하거나 사용 가능한 확대/축소 옵션 목록을 표시합니다.  
   
  **모든 셰이프 확장**  
@@ -63,9 +65,11 @@ ms.locfileid: "66066232"
  차원 디자이너에서 사용하는 레이아웃 알고리즘에 따라 셰이프를 정렬합니다.  
   
  **셰이프 자동 정렬**  
- 차원 디자이너에서 사용하는 레이아웃 알고리즘에 따라 다이어그램의 셰이프를 자동으로 정렬합니다. **셰이프 자동 정렬** 은 기본적으로 사용됩니다.  
+ 차원 디자이너에서 사용하는 레이아웃 알고리즘에 따라 다이어그램의 셰이프를 자동으로 정렬합니다. 
+  **셰이프 자동 정렬** 은 기본적으로 사용됩니다.  
   
  **목록 뷰 표시**  
- **특성** 및 **특성 관계** 목록을 표시하거나 숨깁니다. 이 목록은 특성 관계 다이어그램이 포함된 창 바로 아래의 자체 창에 표시됩니다.  
+ 
+  **특성** 및 **특성 관계** 목록을 표시하거나 숨깁니다. 이 목록은 특성 관계 다이어그램이 포함된 창 바로 아래의 자체 창에 표시됩니다.  
   
   

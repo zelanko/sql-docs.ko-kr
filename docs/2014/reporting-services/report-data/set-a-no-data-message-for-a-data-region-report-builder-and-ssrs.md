@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f2660582b03a121a81976d6bbc12afc1213877c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107091"
 ---
 # <a name="set-a-no-data-message-for-a-data-region-report-builder-and-ssrs"></a>데이터 영역에 대한 데이터 없음 메시지 설정(보고서 작성기 및 SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66107091"
   
 1.  디자인 뷰에서 디자인 화면의 테이블, 행렬 또는 목록 데이터 영역이나 하위 보고서를 클릭하여 선택합니다. 선택한 항목의 속성이 속성 창에 표시됩니다.  
   
-2.  속성 창에 메시지로 표시할 텍스트를 입력 `NoRowsMessage` 속성 필드입니다.  
+2.  속성 창의 속성 필드에 `NoRowsMessage` 메시지로 표시할 텍스트를 입력 합니다.  
   
      또는 드롭다운 목록에서 **식** 을 클릭하여 **식** 대화 상자를 열고 식을 작성합니다.  
   
@@ -35,9 +35,9 @@ ms.locfileid: "66107091"
   
 1.  디자인 뷰에서 디자인 화면에 있는 차트를 클릭하여 선택합니다. 선택한 항목의 속성이 속성 창에 표시됩니다.  
   
-2.  속성 창에서 노드를 확장 하 고 `NoDataMessage`입니다.  
+2.  속성 창에서 노드를 확장 `NoDataMessage`합니다.  
   
-3.  **캡션**에 메시지로 표시할 텍스트를 입력 `NoDataMessage` 속성 필드입니다.  
+3.  속성 **** 필드에 `NoDataMessage` 메시지로 표시할 텍스트를 캡션에 입력 합니다.  
   
      또는 드롭다운 목록에서 **식** 을 클릭하여 **식** 대화 상자를 열고 식을 작성합니다.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66107091"
   
 1.  디자인 뷰에서 디자인 화면에 있는 하위 보고서를 클릭하여 선택합니다. 선택한 항목의 속성이 속성 창에 표시됩니다.  
   
-2.  속성 창에 메시지로 표시할 텍스트를 입력 `NoRowsMessage` 속성 필드입니다.  
+2.  속성 창의 속성 필드에 `NoRowsMessage` 메시지로 표시할 텍스트를 입력 합니다.  
   
      또는 드롭다운 목록에서 **식** 을 클릭하여 **식** 대화 상자를 열고 식을 작성합니다.  
   
@@ -53,11 +53,11 @@ ms.locfileid: "66107091"
   
 1.  디자인 뷰에서 지도에 있는 색 눈금을 클릭하여 선택합니다. 선택한 항목의 속성이 속성 창에 표시됩니다.  
   
-2.  속성 창에서에서 `NoDataText`, 데이터 값이 없는 색의 레이블로 표시할 텍스트를 입력 합니다.  
+2.  속성 창의에서 `NoDataText`데이터 값이 없는 색의 레이블로 표시할 텍스트를 입력 합니다.  
   
      또는 드롭다운 목록에서 **식** 을 클릭하여 **식** 대화 상자를 열고 식을 작성합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [하위 보고서&#40;보고서 작성기 및 SSRS&#41;](../report-design/subreports-report-builder-and-ssrs.md)   
  [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [차트&#40;보고서 작성기 및 SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)   

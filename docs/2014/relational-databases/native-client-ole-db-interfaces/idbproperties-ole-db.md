@@ -1,5 +1,5 @@
 ---
-title: IDBProperties (OLE DB) | Microsoft 문서
+title: IDBProperties (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3b6dada26e15fc83d890b270ad553eb051bb08fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62692184"
 ---
 # <a name="idbproperties-ole-db"></a>IDBProperties(OLE DB)
-  OLE DB 표준 사양을 통해 공급자가 `DBPROPINFO::vValues`에 대해 VT_EMPTY를 지정할 수 있습니다. 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB는 항상 VT_EMPTY를 반환를 호출할 때 `IDBProperties::GetPropertyInfo` 사용 하 여 `DBPROPSET_ROWSETALL` 행 집합 속성을 검색 합니다.  
+  OLE DB 표준 사양을 통해 공급자가 `DBPROPINFO::vValues`에 대해 VT_EMPTY를 지정할 수 있습니다. 그러나를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 호출 `IDBProperties::GetPropertyInfo` 하 여 행 집합 속성을 검색 `DBPROPSET_ROWSETALL` 하는 경우 Native Client OLE DB는 항상 VT_EMPTY를 반환 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [인터페이스 &#40;OLE DB&#41;](../../database-engine/dev-guide/interfaces-ole-db.md)  
   
   

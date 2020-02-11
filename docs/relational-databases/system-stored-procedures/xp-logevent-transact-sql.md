@@ -1,5 +1,5 @@
 ---
-title: xp_logevent (TRANSACT-SQL) | Microsoft Docs
+title: xp_logevent (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 7b379ad0-5b12-4d2e-9c52-62465df1fdbd
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 77275ee539a6367d7e2e04d03354155a5eff721d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68116638"
 ---
-# <a name="xplogevent-transact-sql"></a>xp_logevent(Transact-SQL)
+# <a name="xp_logevent-transact-sql"></a>xp_logevent(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  사용자 정의 메시지를 기록 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 파일에 Windows 이벤트 뷰어. xp_logevent은 클라이언트에 메시지를 보내지 않고 경고를 보내는 데 사용할 수 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 파일 및 Windows 이벤트 뷰어에 사용자 정의 메시지를 기록 합니다. xp_logevent를 사용 하 여 클라이언트에 게 메시지를 보내지 않고 경고를 보낼 수 있습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,11 +42,11 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
  *error_number*  
  50,000을 초과하는 사용자 정의 오류 번호입니다. 최대값은 2147483647(2^31 - 1)입니다.  
   
- **'** *메시지* **'**  
+ **'** *message* **'**  
  최대 2048자의 문자열입니다.  
   
  **'** *심각도* **'**  
- 세 문자열 중 하나입니다. 정보, 경고 또는 오류입니다. *심각도* 는 선택적 이며 기본값은 INFORMATIONAL입니다.  
+ 는 세 문자열 (정보, 경고 또는 오류) 중 하나입니다. *심각도* 는 선택 사항이 며 기본값은 정보입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -57,7 +57,7 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
  `The command(s) completed successfully.`  
   
 ## <a name="remarks"></a>설명  
- 메시지를 보낼 때 [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로시저, 트리거, 일괄 처리 및 등과 xp_logevent 대신 RAISERROR 문을 사용 합니다. xp_logevent는 클라이언트의 메시지 처리기를 호출 하거나 설정 하지 않습니다@ERROR합니다. Windows 이벤트 뷰어와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그 파일에 메시지를 기록하려면 RAISERROR 문을 실행하십시오.  
+ 프로시저, 트리거, 일괄 [!INCLUDE[tsql](../../includes/tsql-md.md)] 처리 등에서 메시지를 보낼 때 XP_LOGEVENT 대신 RAISERROR 문을 사용 합니다. xp_logevent은 클라이언트의 메시지 처리기를 호출 하거나 @@ERROR를 설정 하지 않습니다. Windows 이벤트 뷰어와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그 파일에 메시지를 기록하려면 RAISERROR 문을 실행하십시오.  
   
 ## <a name="permissions"></a>사용 권한  
  master 데이터베이스에서 db_owner 고정 데이터베이스 역할의 멤버이거나 sysadmin 고정 서버 역할의 멤버 자격이 필요합니다.  
@@ -76,10 +76,10 @@ USE master;
 EXEC xp_logevent 60000, @@MESSAGE, informational;  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [PRINT&#40;Transact-SQL&#41;](../../t-sql/language-elements/print-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;&#40;인쇄](../../t-sql/language-elements/print-transact-sql.md)   
  [RAISERROR&#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [일반 확장 저장된 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;일반 확장 저장 프로시저 &#40;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
   
   

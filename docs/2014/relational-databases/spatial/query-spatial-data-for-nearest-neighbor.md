@@ -10,10 +10,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 099771b9900d4c39de40b176cde5c92fa0c95462
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014105"
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>가장 인접한 항목의 공간 데이터 쿼리
@@ -50,26 +50,37 @@ SELECT TOP ( number )
 ```  
   
 ## <a name="nearest-neighbor-query-and-spatial-indexes"></a>가장 인접한 항목 쿼리 및 공간 인덱스  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 `TOP` 및 `ORDER BY` 절은 공간 데이터 열에서 가장 인접한 항목 쿼리를 수행하는 데 사용됩니다. `ORDER BY` 절은 공간 열 데이터 형식의 `STDistance()` 메서드에 대한 호출을 포함합니다. `TOP` 절은 쿼리에 대해 반환하는 개체 수를 나타냅니다.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 `TOP` 및 `ORDER BY` 절은 공간 데이터 열에서 가장 인접한 항목 쿼리를 수행하는 데 사용됩니다. 
+  `ORDER BY` 절은 공간 열 데이터 형식의 `STDistance()` 메서드에 대한 호출을 포함합니다. 
+  `TOP` 절은 쿼리에 대해 반환하는 개체 수를 나타냅니다.  
   
  가장 인접한 항목 쿼리에서 공간 인덱스를 사용하려면 다음 요구 사항을 충족해야 합니다.  
   
 1.  공간 인덱스가 공간 열 중 하나에 있어야 하며 `STDistance()` 메서드가 해당 열을 `WHERE` 및 `ORDER BY` 절에 사용해야 합니다.  
   
-2.  `TOP` 절은 `PERCENT` 문을 포함할 수 없습니다.  
+2.  
+  `TOP` 절은 `PERCENT` 문을 포함할 수 없습니다.  
   
-3.  `WHERE` 절은 `STDistance()` 메서드를 포함해야 합니다.  
+3.  
+  `WHERE` 절은 `STDistance()` 메서드를 포함해야 합니다.  
   
-4.  `WHERE` 절에 조건자가 여러 개 있는 경우 `STDistance()` 메서드를 포함하는 조건자는 다른 조건자와 `AND` 결합으로 연결되어야 합니다. `STDistance()` 메서드는 `WHERE` 절의 선택적 부분에 있을 수 없습니다.  
+4.  
+  `WHERE` 절에 조건자가 여러 개 있는 경우 `STDistance()` 메서드를 포함하는 조건자는 다른 조건자와 `AND` 결합으로 연결되어야 합니다. 
+  `STDistance()` 메서드는 `WHERE` 절의 선택적 부분에 있을 수 없습니다.  
   
-5.  `ORDER BY` 절의 첫 번째 식은 `STDistance()` 메서드를 사용해야 합니다.  
+5.  
+  `ORDER BY` 절의 첫 번째 식은 `STDistance()` 메서드를 사용해야 합니다.  
   
-6.  `ORDER BY` 절의 첫 번째 `STDistance()` 식에 대한 정렬 순서는 `ASC`여야 합니다.  
+6.  
+  `STDistance()` 절의 첫 번째 `ORDER BY` 식에 대한 정렬 순서는 `ASC`여야 합니다.  
   
-7.  `STDistance`에서 `NULL`을 반환하는 모든 행은 필터링되어야 합니다.  
+7.  
+  `STDistance`에서 `NULL`을 반환하는 모든 행은 필터링되어야 합니다.  
   
 > [!WARNING]  
->  `geography` 또는 `geometry` 데이터 형식을 인수로 사용하는 메서드는 이 두 데이터 형식의 SRID가 서로 동일하지 않는 경우 `NULL`을 반환합니다.  
+>  
+  `geography` 또는 `geometry` 데이터 형식을 인수로 사용하는 메서드는 이 두 데이터 형식의 SRID가 서로 동일하지 않는 경우 `NULL`을 반환합니다.  
   
  가장 인접한 항목 쿼리에 사용되는 인덱스에는 새 공간 인덱스 공간 분할(tessellation)을 사용하는 것이 좋습니다. 공간 인덱스 공간 분할(tessellation)에 대한 자세한 내용은 [공간 데이터&#40;SQL Server&#41;](spatial-data-sql-server.md)여야 합니다.  
   
@@ -100,9 +111,9 @@ ORDER BY SpatialLocation.STDistance(@g);
   
 ```  
   
- 이 쿼리에는 구문 섹션에서 지정한 형식의 `STDistance()`를 사용하는 `WHERE` 절이 부족하므로 쿼리에서 공간 인덱스를 사용할 수 없습니다.  
+ 이 쿼리에는 구문 섹션에서 지정한 형식의 `WHERE`를 사용하는 `STDistance()` 절이 부족하므로 쿼리에서 공간 인덱스를 사용할 수 없습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [공간 데이터&#40;SQL Server&#41;](spatial-data-sql-server.md)  
   
   

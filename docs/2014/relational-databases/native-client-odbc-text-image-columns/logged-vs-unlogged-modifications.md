@@ -1,5 +1,5 @@
 ---
-title: 기록되는 수정 및 수정 기록 되지 않는 | Microsoft Docs
+title: 기록 및 기록 되지 않는 수정 Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -23,18 +23,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c722d5360ad01e7e95508c2219ceb674de381286
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63195139"
 ---
 # <a name="logged-vs-unlogged-modifications"></a>기록되는 수정 및 기록되지 않는 수정
-  응용 프로그램에서 요청 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 로그 아님 **텍스트**를 **ntext**, 및 **이미지** 수정 합니다. 하지만 이 옵션을 사용할 때는 주의해야 합니다. 경우에만 사용 해야 여기서 합니다 **텍스트**를 **ntext**, 또는 **이미지** 데이터가 중요 하지 않으며 데이터 소유자가 데이터를 복구 하는 기능 기꺼이 성능 향상  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 응용 프로그램에서는 NATIVE Client ODBC 드라이버가 **text**, **ntext**및 **image** 를 기록 하지 않도록 요청할 수 있습니다. 하지만 이 옵션을 사용할 때는 주의해야 합니다. **Text**, **ntext**또는 **image** 데이터가 중요 하지 않으며 데이터 소유자가 더 높은 성능을 위해 데이터를 복구 하는 기능을 절충 하는 경우에만 사용 해야 합니다.  
   
- 로깅을 **텍스트**, **ntext**, 및 **이미지** 호출 하 여 수정 제어 [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) 사용 하 여는  *특성* 매개 변수 SQL_SOPT_SS_ TEXTPTR_LOGGING로 설정 하 고 *ValuePtr* 변수와 SQL_TL_ON 또는 SQL_TL_OFF로 설정 합니다.  
+ **Text**, **ntext**및 **image** 수정의 로깅은 *특성* 매개 변수를 SQL_SOPT_SS_ TEXTPTR_LOGGING *로 설정 하 고 SQL_TL_OFF* SQL_TL_ON, [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) 를 호출 하 여 제어 됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [text 및 image 열 관리](managing-text-and-image-columns.md)  
   
   

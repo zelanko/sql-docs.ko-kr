@@ -1,5 +1,5 @@
 ---
-title: 메모리 최적화 테이블의 트랜잭션에 대 한 재시도 논리 지침 | Microsoft Docs
+title: 메모리 액세스에 최적화 된 테이블의 트랜잭션에 대 한 재시도 논리 지침 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 01f719470419940b130967b7c1360c4ae0c281eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779217"
 ---
 # <a name="guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 트랜잭션에 대한 재시도 논리 지침
@@ -30,7 +30,7 @@ ms.locfileid: "62779217"
   
  이러한 오류의 일반적인 원인은 동시에 실행되는 트랜잭션 간의 간섭 때문입니다. 일반적인 수정 동작은 트랜잭션을 다시 시도하는 것입니다.  
   
- 충돌 검색, 유효성 검사 및 커밋 종속성 확인에 이러한 오류 조건에 대 한 자세한 내용은 섹션을 참조 [Transactions in Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)합니다.  
+ 이러한 오류 조건에 대 한 자세한 내용은 메모리 액세스에 [최적화 된 테이블의 트랜잭션에서](../relational-databases/in-memory-oltp/memory-optimized-tables.md)충돌 검색, 유효성 검사 및 커밋 종속성 확인에 대 한 섹션을 참조 하세요.  
   
  교착 상태(오류 코드 1205)는 메모리 최적화 테이블에 대해 발생할 수 없습니다. 잠금은 메모리 최적화 테이블에 대해 사용되지 않습니다. 그러나 애플리케이션에 교착 상태에 대한 재시도 논리가 이미 포함되어 있는 경우에는 기존 논리를 확장하여 새 오류 코드를 포함할 수 있습니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62779217"
 ### <a name="considerations-for-read-only-transactions-and-cross-container-transactions"></a>읽기 전용 트랜잭션 및 크로스 컨테이너 트랜잭션에 대한 고려 사항  
  메모리 최적화 테이블이 모두 SNAPSHOT 격리에서 액세스되는 경우, 고유하게 컴파일된 저장 프로시저의 컨텍스트 밖에서 시작되는 컨텍스트인 읽기 전용 크로스 컨테이너 트랜잭션은 유효성 검사를 수행하지 않습니다. 그러나 메모리 최적화 테이블이 REPEATABLE READ 또는 SERIALIZABLE 격리에서 액세스되는 경우에는 커밋할 때 유효성 검사가 수행됩니다. 이 경우 재시도 논리가 필요할 수 있습니다.  
   
- 크로스 컨테이너 트랜잭션에 대 한 자세한 내용은 섹션을 참조 [트랜잭션 격리 수준](../../2014/database-engine/transaction-isolation-levels.md)합니다.  
+ 자세한 내용은 [트랜잭션 격리 수준](../../2014/database-engine/transaction-isolation-levels.md)에서 크로스 컨테이너 트랜잭션에 대 한 섹션을 참조 하세요.  
   
 ## <a name="implementing-retry-logic"></a>재시도 논리 구현  
  메모리 최적화 테이블에 액세스하는 모든 트랜잭션과 마찬가지로 쓰기 충돌(오류 코드 41302) 또는 종속성 오류(오류 코드 41301)와 같은 잠재적인 오류를 처리하는 재시도 논리를 고려해야 합니다. 대부분의 애플리케이션에서 실패율은 낮지만 여전히 트랜잭션을 다시 시도하여 오류를 처리해야 합니다. 다음 두 가지의 재시도 논리 구현 방법이 있습니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "62779217"
   
 -   클라이언트 애플리케이션에 사용자가 확장할 수 있는 1205와 같은 다른 오류 코드에 대한 재시도 논리가 포함되어 있습니다.  
   
--   충돌은 드물게 발생하므로 준비된 실행을 사용하여 엔드투엔드 대기 시간을 줄이는 것이 중요합니다. 컴파일된 저장된 프로시저를 직접 고유 하 게 실행 하는 방법에 대 한 자세한 내용은 참조 하세요 [Natively Compiled Stored Procedures](../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)합니다.  
+-   충돌은 드물게 발생하므로 준비된 실행을 사용하여 엔드투엔드 대기 시간을 줄이는 것이 중요합니다. 고유 하 게 컴파일된 저장 프로시저를 직접 실행 하는 방법에 대 한 자세한 내용은 고유 하 게 [컴파일된 저장 프로시저](../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)를 참조 하세요.  
   
  다음 예에서는 고유하게 컴파일된 저장 프로시저 또는 크로스 컨테이너 트랜잭션에 대한 호출이 포함된 해석된 [!INCLUDE[tsql](../includes/tsql-md.md)] 저장 프로시저에 있는 재시도 논리를 보여 줍니다.  
   
@@ -125,9 +125,9 @@ BEGIN
 END  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [메모리 최적화 테이블의 트랜잭션 이해](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
- [메모리 최적화 테이블의 트랜잭션](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
+## <a name="see-also"></a>참고 항목  
+ [메모리 액세스에 최적화 된 테이블의 트랜잭션 이해](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
+ [메모리 액세스에 최적화 된 테이블의 트랜잭션](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
  [메모리 액세스에 최적화된 테이블의 트랜잭션 격리 수준에 대한 지침](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)  
   
   

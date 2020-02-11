@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3772e2b4cabac84c00854eba85f7a0c2a33d48bc
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400147"
 ---
 # <a name="tempdb-database-in-parallel-data-warehouse"></a>병렬 데이터 웨어하우스의 tempdb 데이터베이스
@@ -79,12 +79,12 @@ SQL Server PDW**tempdb** 데이터베이스에 대 한 제한 사항입니다. �
 > [!NOTE]  
 > 임시 테이블에 대 한 통계를 만들고 업데이트할 *수* 있습니다. **ALTER INDEX** 는 클러스터형 인덱스를 다시 작성 하는 데 사용할 수 있습니다.  
   
-## <a name="permissions"></a>권한  
+## <a name="permissions"></a>사용 권한  
 모든 사용자가 tempdb에 임시 개체를 만들 수 있습니다. 사용자가 추가 사용 권한을 받는 경우를 제외하고 자신의 고유 개체에만 액세스할 수 있습니다. tempdb 연결 권한을 취소하여 사용자가 tempdb를 사용하지 못하도록 할 수 있지만 일부 일상적인 작업에서 tempdb를 사용해야 하므로 권장하지 않습니다.  
   
-## <a name="RelatedTasks"></a>관련 태스크  
+## <a name="RelatedTasks"></a>관련 작업  
   
-|작업|설명|  
+|작업|Description|  
 |---------|---------------|  
 |**Tempdb**에 테이블을 만듭니다.|CREATE TABLE 및 CREATE TABLE SELECT 문으로 사용자 임시 테이블을 만들 수 있습니다. 자세한 내용은 [CREATE TABLE](../t-sql/statements/create-table-azure-sql-data-warehouse.md) 및 [CREATE TABLE AS SELECT](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)를 참조 하세요.|  
 |**Tempdb**의 기존 테이블 목록을 표시 합니다.|`SELECT * FROM tempdb.sys.tables;`|  

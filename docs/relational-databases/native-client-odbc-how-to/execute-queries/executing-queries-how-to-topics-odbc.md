@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 15ef01785355baa21dc2516168d13fbd886abe27
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73781358"
 ---
 # <a name="executing-queries-how-to-topics-odbc"></a>쿼리 실행 방법 도움말 항목(ODBC)
@@ -27,15 +27,15 @@ ms.locfileid: "73781358"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [ODBC 문 &#40;사용&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/use-a-statement-odbc.md)  
+-   [문을 사용 하 여 ODBC&#41;&#40;](../../../relational-databases/native-client-odbc-how-to/execute-queries/use-a-statement-odbc.md)  
   
--   [ODBC 커서 옵션 &#40;설정&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/set-cursor-options-odbc.md)  
+-   [ODBC&#41;&#40;커서 옵션 설정](../../../relational-databases/native-client-odbc-how-to/execute-queries/set-cursor-options-odbc.md)  
   
--   [직접 &#40;ODBC 문 실행&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/execute-a-statement-directly-odbc.md)  
+-   [ODBC&#41;&#40;직접 문 실행](../../../relational-databases/native-client-odbc-how-to/execute-queries/execute-a-statement-directly-odbc.md)  
   
--   [ODBC 문 &#40;준비 및 실행&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/prepare-and-execute-a-statement-odbc.md)  
+-   [ODBC&#41;&#40;문을 준비 하 고 실행 합니다.](../../../relational-databases/native-client-odbc-how-to/execute-queries/prepare-and-execute-a-statement-odbc.md)  
   
-## <a name="see-also"></a>관련 항목:  
- [ODBC 방법 도움말 항목](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
+## <a name="see-also"></a>참고 항목  
+ [ODBC How-to Topics](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

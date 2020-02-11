@@ -17,20 +17,20 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ab694a8ba3a1976207ad1d0c6505cc953f39ff94
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73785149"
 ---
 # <a name="bulk-copying-text-and-image-data"></a>텍스트 및 이미지 데이터 대량 복사
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  대용량 **text**, **ntext**및 **image** 값은 [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) 함수를 사용 하 여 대량 복사 됩니다. *.Pdata* 포인터가 NULL로 설정 **된 text**, **ntext**또는 **image** 열에 대 한 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) 코드를 사용 하 여 데이터가 **bcp_moretext**에 제공 됨을 나타냅니다. 대량 복사 된 각 행에서 각 **text**, **ntext**또는 **image** 열에 대해 제공 되는 정확한 데이터 길이를 지정 하는 것이 중요 합니다. 열에 대 한 데이터 길이가 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)에 지정 된 열 길이와 다른 경우 [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) 를 사용 하 여 길이를 적절 한 값으로 설정 합니다. [Bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) 은 텍스트가 아닌 모든**텍스트**,**ntext**및**이미지가** 아닌 데이터를 모두 보냅니다. 그런 다음 **bcp_moretext** 를 호출 하 여 **text**, **ntext**또는 **image** 데이터를 별도의 단위로 보냅니다. 대량 복사 함수는 **bcp_moretext** 를 통해 전송 된 데이터의 길이가 최신 bcp_collen에 지정 된 길이와 일치 하는 경우 현재 **text**, **ntext**또는 **image** 열에 대해 모든 데이터가 전송 되었음을 결정 합니다.또는 **bcp_bind**합니다.  
+  대용량 **text**, **ntext**및 **image** 값은 [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) 함수를 사용 하 여 대량 복사 됩니다. *.Pdata* 포인터가 NULL로 설정 **된 text**, **ntext**또는 **image** 열에 대 한 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) 코드를 사용 하 여 데이터가 **bcp_moretext**에 제공 됨을 나타냅니다. 대량 복사 된 각 행에서 각 **text**, **ntext**또는 **image** 열에 대해 제공 되는 정확한 데이터 길이를 지정 하는 것이 중요 합니다. 열에 대 한 데이터 길이가 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)에 지정 된 열 길이와 다른 경우 [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) 를 사용 하 여 길이를 적절 한 값으로 설정 합니다. [Bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) 은 텍스트가 아닌 모든**텍스트**,**ntext**및**이미지가** 아닌 데이터를 모두 보냅니다. 그런 다음 **bcp_moretext** 를 호출 하 여 **text**, **ntext**또는 **image** 데이터를 별도의 단위로 보냅니다. 대량 복사 함수는 **bcp_moretext** 를 통해 전송 된 데이터의 길이가 최신 **bcp_collen** 나 **bcp_bind**에 지정 된 길이와 일치 하는 경우 현재 **text**, **ntext**또는 **image** 열에 대해 모든 데이터가 전송 되었음을 결정 합니다.  
   
- **bcp_moretext** 에는 열을 식별 하는 매개 변수가 없습니다. 한 행에 **text**, **ntext**또는 **image** 열이 여러 개 있는 경우 **bcp_moretext** 는 가장 낮은 서 수 번호가 있는 열부터 시작 하 여 **text**, **ntext**또는 **image** 열에 대해 작동 합니다. 서 수 번호가 가장 높은 열로 계속 진행 합니다. 전송 된 데이터의 길이가 최신 **bcp_collen** **bcp_bind** 또는 현재 열에 대해 지정 된 길이와 같으면 한 열에서 다음 열로 이동 **bcp_moretext** .  
+ **bcp_moretext** 에는 열을 식별 하는 매개 변수가 없습니다. 한 행에 **text**, **ntext**또는 **image** 열이 여러 개 있는 경우 **bcp_moretext** 는 가장 낮은 서 수 번호가 있는 열로 시작 하는 **text**, **ntext**또는 **image** 열에 대해 작동 하며 서 수 번호가 가장 높은 열로 진행 됩니다. 전송 된 데이터의 길이가 최신 **bcp_collen** **bcp_bind** 또는 현재 열에 대해 지정 된 길이와 같으면 한 열에서 다음 열로 이동 **bcp_moretext** .  
   
-## <a name="see-also"></a>관련 항목:  
- [ODBC 대량 복사 작업 &#40;수행&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
+## <a name="see-also"></a>참고 항목  
+ [ODBC&#41;&#40;대량 복사 작업 수행](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
   

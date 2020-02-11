@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eba2d2d28c06a60cc8269a349996646726f59142
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827953"
 ---
 # <a name="create-infosource"></a>InfoSource 만들기
@@ -35,7 +35,7 @@ ms.locfileid: "62827953"
   
 4.  **연결 관리자** 페이지의 **SAP BW 개체 만들기** 그룹 상자에서 **InfoSource**를 선택한 다음 **만들기**를 클릭합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **트랜잭션 데이터**  
  트랜잭션 데이터용 새 InfoSource를 만듭니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62827953"
   
  이 옵션을 선택하는 경우 **마스터 데이터용 InfoSource 만들기** 대화 상자가 열립니다. **마스터 데이터용 InfoSource 만들기** 대화 상자를 사용하여 새 InfoSource를 만들 수 있습니다. 이 대화 상자에 대한 자세한 내용은 [Create InfoSource for Master Data](create-infosource-for-master-data.md)을 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Microsoft Connector 1.1 for SAP BW F1 도움말](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

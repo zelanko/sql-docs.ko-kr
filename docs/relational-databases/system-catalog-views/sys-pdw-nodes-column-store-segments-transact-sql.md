@@ -14,10 +14,10 @@ ms.author: jrasnick
 manager: jrj
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: bea8e0d51b2918d7280f4afdb8b9d02f6b757827
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401677"
 ---
 # <a name="syspdw_nodes_column_store_segments-transact-sql"></a>sys. pdw_nodes_column_store_segments (Transact-sql)
@@ -26,7 +26,7 @@ ms.locfileid: "74401677"
 
 Columnstore 인덱스의 각 열에 대해 행을 하나씩 포함합니다.
 
-| 열 이름                 | 데이터 형식  | 설명                                                  |
+| 열 이름                 | 데이터 형식  | Description                                                  |
 | :-------------------------- | :--------- | :----------------------------------------------------------- |
 | **partition_id**            | **bigint** | 파티션 ID를 나타냅니다. 데이터베이스 내에서 고유합니다.     |
 | **hobt_id**                 | **bigint** | 이 Columnstore 인덱스를 가진 테이블의 B-트리 인덱스(hobt) 또는 힙의 ID입니다. |
@@ -80,7 +80,7 @@ ORDER BY    table_nm
 ,           sm.name ;
 ```
 
-## <a name="permissions"></a>권한
+## <a name="permissions"></a>사용 권한
 
 **VIEW SERVER STATE** 권한이 필요 합니다.
 

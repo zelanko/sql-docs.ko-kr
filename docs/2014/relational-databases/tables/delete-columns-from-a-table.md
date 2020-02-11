@@ -16,17 +16,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 718aeca12c90435b68fd6cedde150dfbdeb3c063
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761651"
 ---
 # <a name="delete-columns-from-a-table"></a>테이블에서 열 삭제
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 테이블 열을 삭제하는 방법에 대해 설명합니다.  
   
 > [!CAUTION]  
->  테이블에서 열을 삭제하면 여기에 포함된 모든 데이터가 데이터베이스에서 삭제됩니다. 이 작업은 실행 취소할 수 없습니다.  
+>  테이블에서 열을 삭제하면 여기에 포함된 모든 데이터가 데이터베이스에서 삭제됩니다. 이 작업은 취소할 수 없습니다.  
   
  **항목 내용**  
   
@@ -51,7 +51,7 @@ ms.locfileid: "62761651"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  테이블에 대한 ALTER 사용 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -60,7 +60,8 @@ ms.locfileid: "62761651"
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  **개체 탐색기**에서 열을 삭제하려는 테이블을 마우스 오른쪽 단추로 클릭하고 **삭제**를 선택합니다.  
+2.  
+  **개체 탐색기**에서 열을 삭제하려는 테이블을 마우스 오른쪽 단추로 클릭하고 **삭제**를 선택합니다.  
   
 3.  **개체 삭제** 대화 상자에서 **확인**을 클릭합니다.  
   

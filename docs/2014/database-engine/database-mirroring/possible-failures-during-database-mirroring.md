@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a380b3c4f27df6ad9d60fc27f14a4f5072c676a0
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874506"
 ---
 # <a name="possible-failures-during-database-mirroring"></a>Possible Failures During Database Mirroring
@@ -90,7 +90,7 @@ ms.locfileid: "70874506"
   
  연결이 열려 있으려면 서버 인스턴스가 ping을 하나 더 보내는 데 필요한 시간을 더하여 정의되는 제한 시간에서 해당 연결에 대한 ping을 받아야 합니다. 제한 시간 내에 ping을 받은 경우 연결이 열려 있으며 서버 인스턴스가 해당 연결을 통해 통신하고 있음을 나타냅니다. ping을 받으면 서버 인스턴스는 해당 연결의 제한 시간 카운터를 다시 설정합니다.  
   
- 시간 제한 기간 동안 연결에서 ping을 받지 못한 경우 서버 인스턴스는 연결 시간이 초과 된 것으로 간주 합니다. 서버 인스턴스는 시간 제한 연결을 닫고 세션의 상태와 운영 모드에 따라 제한 시간 이벤트를 처리 합니다.  
+ 제한 시간 내에 ping을 받지 못한 경우 서버 인스턴스는 해당 연결이 제한 시간을 초과했다고 간주하고 연결을 닫은 후 세션의 상태와 운영 모드에 따라 제한 시간 이벤트를 처리합니다.  
   
  실제로 다른 서버가 올바로 실행되고 있는 경우에도 제한 시간 초과는 오류로 간주됩니다. 각 파트너의 일반 응답에 비해 세션의 제한 시간 값이 지나치게 짧은 경우 거짓 오류가 발생할 수 있습니다. 거짓 오류는 한 서버 인스턴스가 다른 서버 인스턴스에 성공적으로 연결하지만 해당 서버 인스턴스의 응답 시간이 너무 느려 제한 시간이 만료되기 전에 ping을 받을 수 없는 경우에 발생합니다.  
   

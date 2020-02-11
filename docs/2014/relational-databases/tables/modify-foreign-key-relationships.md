@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 116a41ac2eca1f69a98391c9018b8623a10f6047
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196838"
 ---
 # <a name="modify-foreign-key-relationships"></a>외래 키 관계 수정
@@ -45,15 +45,17 @@ ms.locfileid: "68196838"
 ###  <a name="Restrictions"></a> 제한 사항  
  다음 경우를 제외하고 새 외래 키 열의 데이터 형식 및 크기는 관련된 기본 키 열의 데이터 형식 및 크기와 일치해야 합니다.  
   
--   `char` 열 또는 `sysname` 열은 `varchar` 열에 연결될 수 있습니다.  
+-   
+  `char` 열 또는 `sysname` 열은 `varchar` 열에 연결될 수 있습니다.  
   
--   `binary` 열은 `varbinary` 열에 연결될 수 있습니다.  
+-   
+  `binary` 열은 `varbinary` 열에 연결될 수 있습니다.  
   
 -   별칭 데이터 형식은 해당 기본 형식에 연결될 수 있습니다.  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  테이블에 대한 ALTER 사용 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -108,7 +110,7 @@ ms.locfileid: "68196838"
      **테이블 디자이너 범주**  
      확장하여 **만들거나 다시 활성화할 때 기존 데이터 검사** 와 **복제에 적용**에 대한 정보를 표시합니다.  
   
-     **Enforce For Replication**  
+     **복제에 적용**  
      복제 에이전트가 이 테이블에서 삽입, 업데이트 또는 삭제를 수행할 때 제약 조건을 적용할지 여부를 나타냅니다.  
   
      **외래 키 제약 조건 적용**  
@@ -139,7 +141,7 @@ ms.locfileid: "68196838"
   
     -   **기본값 설정** 테이블의 모든 외래 키 열에 기본값이 정의되어 있으면 열에 정의된 기본값으로 값을 설정합니다.  
   
-4.  **파일** 메뉴에서 **저장**_table name_을 클릭합니다.  
+4.  **파일** 메뉴에서 **테이블 이름**_저장_을 클릭합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
  **외래 키를 수정하려면**  

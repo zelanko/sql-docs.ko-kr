@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3f2a0aa29f032dfed7202430aeb44b20e05c78c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676821"
 ---
-# <a name="mssqleng014161"></a>MSSQL_ENG014161
+# <a name="mssql_eng014161"></a>MSSQL_ENG014161
     
 ## <a name="message-details"></a>메시지 정보  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62676821"
   
 -   [복제 모니터로 성능 모니터링](monitor/monitor-performance-with-replication-monitor.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [오류 및 이벤트 참조&#40;복제&#41;](errors-and-events-reference-replication.md)  
   
   

@@ -16,19 +16,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 00d28ef5dbe2c0a19e5a464981934f2a84df7a7c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833735"
 ---
 # <a name="ole-db-connection-manager"></a>OLE DB 연결 관리자
   OLE DB 연결 관리자를 사용하면 패키지에서 OLE DB Provider를 사용하여 데이터 원본에 연결할 수 있습니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결되는 OLE DB 연결 관리자에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용할 수 있습니다.  
   
 > [!NOTE]
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11.0 OLEDB 공급자는 다중 서브넷 장애 조치(Failover) 클러스터링에 대한 새 연결 문자열 키워드(MultiSubnetFailover=True)를 지원하지 않습니다. 자세한 내용은 참조는 [SQL Server 릴리스 정보](https://go.microsoft.com/fwlink/?LinkId=247824) 및 블로그 게시물 [AlwaysOn 다중 서브넷 장애 조치 및 SSIS](https://www.mattmasson.com/2012/03/alwayson-multi-subnet-failover-and-ssis/), www.mattmasson.com 의 합니다.  
+>  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11.0 OLEDB 공급자는 다중 서브넷 장애 조치(Failover) 클러스터링에 대한 새 연결 문자열 키워드(MultiSubnetFailover=True)를 지원하지 않습니다. 자세한 내용은 www.mattmasson.com의 릴리스 정보 및 블로그 게시물 인 [AlwaysOn 다중 서브넷 장애 조치 (Failover) 및 SSIS](https://www.mattmasson.com/2012/03/alwayson-multi-subnet-failover-and-ssis/)(영문)를 [SQL Server](https://go.microsoft.com/fwlink/?LinkId=247824) 참조 하세요.  
   
- 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 태스크와 데이터 흐름 구성 요소에서는 OLE DB 연결 관리자가 사용됩니다. 예를 들어 OLE DB 원본과 OLE DB 대상에서는 이 연결 관리자를 사용하여 데이터를 추출 및 로드하고, SQL 실행 태스크에서는 이 연결 관리자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하고 쿼리를 실행합니다.  
+ 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 작업 및 데이터 흐름 구성 요소에서 OLE DB 연결 관리자가 사용됩니다. 예를 들어 OLE DB 원본과 OLE DB 대상에서는 이 연결 관리자를 사용하여 데이터를 추출 및 로드하고, SQL 실행 태스크에서는 이 연결 관리자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하고 쿼리를 실행합니다.  
   
  OLE DB 연결 관리자는 또한 C++와 같은 언어를 사용하는 비관리 코드로 작성된 사용자 지정 태스크의 OLE DB 데이터 원본에 액세스하는 데에도 사용됩니다.  
   
@@ -47,18 +48,18 @@ ms.locfileid: "62833735"
 -   연결 관리자에서 만든 연결이 런타임에 유지될지 여부를 나타냅니다.  
   
 ## <a name="logging"></a>로깅  
- OLE DB 연결 관리자가 외부 데이터 공급자에 대해 수행하는 호출을 로깅할 수 있습니다. 이 로깅 기능을 사용하여 OLE DB 연결 관리자가 수행하는 외부 데이터 원본에 대한 연결 문제를 해결할 수 있습니다. OLE DB 연결 관리자가 외부 데이터 공급자에 대해 수행하는 호출을 로깅하려면 패키지 로깅을 설정하고 패키지 수준에서 **Diagnostic** 이벤트를 선택합니다. 자세한 내용은 [패키지 실행 문제 해결 도구](../troubleshooting/troubleshooting-tools-for-package-execution.md)를 참조하세요.  
+ OLE DB 연결 관리자가 외부 데이터 공급자에 대해 수행하는 호출을 로깅할 수 있습니다. 이 로깅 기능을 사용하여 OLE DB 연결 관리자가 수행하는 외부 데이터 원본에 대한 연결 문제를 해결할 수 있습니다. OLE DB 연결 관리자가 외부 데이터 공급자에 대해 수행 하는 호출을 로깅하려면 패키지 로깅을 사용 하도록 설정 하 고 패키지 수준에서 **진단** 이벤트를 선택 합니다. 자세한 내용은 [패키지 실행 문제 해결 도구](../troubleshooting/troubleshooting-tools-for-package-execution.md)를 참조하세요.  
   
 ## <a name="configuration-of-the-oledb-connection-manager"></a>OLEDB 연결 관리자 구성  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다. [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용은 [OLE DB 연결 관리자 구성](../configure-ole-db-connection-manager.md)을 참조하세요. 프로그래밍 방식으로 연결 관리자를 구성하는 방법은 개발자 가이드에서 **T:Microsoft.SqlServer.Dts.Runtime.ConnectionManager** 클래스에 대한 설명서를 참조하십시오.  
   
 ## <a name="related-content"></a>관련 내용  
   
--   social.technet.microsoft.com의 Wiki 문서 - [Oracle 커넥터가 있는 SSIS](https://go.microsoft.com/fwlink/?LinkId=220670)  
+-   Wiki 문서, social.technet.microsoft.com의 [Oracle 커넥터를 사용 하는 SSIS](https://go.microsoft.com/fwlink/?LinkId=220670) .  
   
 -   carlprothman.net의 기술 문서 [OLE DB 공급자에 대한 연결 문자열](https://go.microsoft.com/fwlink/?LinkId=220744)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [OLE DB 원본](../data-flow/ole-db-source.md)   
  [OLE DB 대상](../data-flow/ole-db-destination.md)   
  [SQL 실행 태스크](../control-flow/execute-sql-task.md)   

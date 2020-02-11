@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3e8fc0f770d8763ccb330b3c7588a97604d876e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762845"
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell Provider
@@ -33,9 +33,10 @@ ms.locfileid: "62762845"
 ## <a name="the-sql-server-powershell-hierarchy"></a>SQL Server PowerShell 계층 구조  
  데이터나 개체 모델을 계층 구조로 표현할 수 있는 제품은 Windows PowerShell 공급자를 사용하여 계층 구조를 표시합니다. Windows 파일 시스템에 사용되는 것과 유사한 드라이브 및 경로 구조를 사용하여 계층 구조를 표시합니다.  
   
- 각 Windows PowerShell 공급자는 하나 이상의 드라이브를 구현합니다. 각 드라이브는 관련 개체 계층 구조의 루트 노드를 나타냅니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공급자는 SQLSERVER: 드라이브를 구현합니다. 또한 공급자는 SQLSERVER: 드라이브에 대한 기본 폴더 집합을 정의합니다. 각 폴더 및 해당 하위 폴더는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 관리 개체 모델을 사용하여 액세스할 수 있는 개체 집합을 나타냅니다. 이러한 주 폴더 중 하나로 시작하는 경로의 하위 폴더에 포커스를 설정하면 관련 개체 모델의 메서드를 사용하여 이러한 노드가 나타내는 개체에 대해 동작을 수행할 수 있습니다. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 공급자가 구현하는 Windows PowerShell 폴더는 다음 테이블에 나열되어 있습니다.  
+ 각 Windows PowerShell 공급자는 하나 이상의 드라이브를 구현합니다. 각 드라이브는 관련 개체 계층 구조의 루트 노드를 나타냅니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공급자는 SQLSERVER: 드라이브를 구현합니다. 또한 공급자는 SQLSERVER: 드라이브에 대한 기본 폴더 집합을 정의합니다. 각 폴더 및 해당 하위 폴더는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 관리 개체 모델을 사용하여 액세스할 수 있는 개체 집합을 나타냅니다. 이러한 주 폴더 중 하나로 시작하는 경로의 하위 폴더에 포커스를 설정하면 관련 개체 모델의 메서드를 사용하여 이러한 노드가 나타내는 개체에 대해 동작을 수행할 수 있습니다. 
+  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 공급자가 구현하는 Windows PowerShell 폴더는 다음 테이블에 나열되어 있습니다.  
   
-|Folder|SQL Server 개체 모델 네임스페이스|개체|  
+|폴더|SQL Server 개체 모델 네임스페이스|개체|  
 |------------|---------------------------------------|-------------|  
 |SQLSERVER:\SQL|<xref:Microsoft.SqlServer.Management.Smo><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Agent><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Broker><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Mail>|테이블, 뷰 및 저장 프로시저와 같은 데이터베이스 개체입니다.|  
 |SQLSERVER:\SQLPolicy|<xref:Microsoft.SqlServer.Management.Dmf><br /><br /> <xref:Microsoft.SqlServer.Management.Facets>|정책 및 패싯과 같은 정책 기반 관리 개체입니다.|  
@@ -72,7 +73,7 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
 |SMO URN(Uniform Resource Name)을 SQL Server 공급자 경로로 변환하는 방법에 대해 설명합니다.|[URN을 SQL Server 공급자 경로로 변환](../database-engine/convert-urns-to-sql-server-provider-paths.md)|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공급자를 사용하여 SQL Server 인증 연결을 여는 방법에 대해 설명합니다. 기본적으로 공급자는 Windows PowerShell 세션을 실행하는 Windows 계정의 자격 증명을 사용하여 만든 Windows 인증 연결을 사용합니다.|[데이터베이스 엔진 PowerShell에서 인증 관리](manage-authentication-in-database-engine-powershell.md)|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server PowerShell](sql-server-powershell.md)  
   
   

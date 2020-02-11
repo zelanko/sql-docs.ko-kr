@@ -16,16 +16,17 @@ ms.assetid: 318e370d-0444-4812-afe4-307df7ef9f3b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 56f2dde1899340f036024253405379e094de59a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039038"
 ---
 # <a name="boolean-constructor-functions---true-xquery"></a>부울 생성자 함수 - true(XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  xs:boolean 값 True를 반환합니다. `xs:boolean("1")`와 같습니다.  
+  xs:boolean 값 True를 반환합니다. 
+  `xs:boolean("1")`와 같습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,10 +35,10 @@ fn:true() as xs:boolean
 ```  
   
 ## <a name="examples"></a>예  
- 이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예를 제공 **xml** AdventureWorks 데이터베이스의 열을 입력 합니다.  
+ 이 항목에서는 AdventureWorks 데이터베이스의 다양 한 **xml** 유형 열에 저장 된 xml 인스턴스에 대 한 XQuery 예를 제공 합니다.  
   
 ### <a name="a-using-the-true-xquery-boolean-function"></a>A. true() XQuery 부울 함수 사용  
- 다음 예제 쿼리는 형식화 되지 않은 **xml** 변수입니다. 식의 **value ()** 메서드는 부울 값을 반환 **true ()** "aaa"가 특성 값인 경우. 합니다 **value ()** 메서드는 **xml** 데이터 형식이 부울 값을 비트로 변환 하 고 반환 합니다.  
+ 다음 예에서는 형식화 되지 않은 **xml** 변수를 쿼리 합니다. **Value ()** 메서드의 식은 "aaa"가 특성 값인 경우 부울 **true ()** 를 반환 합니다. **Xml** 데이터 형식의 **value ()** 메서드는 부울 값을 비트로 변환 하 고 반환 합니다.  
   
 ```  
 DECLARE @x XML  
@@ -47,11 +48,11 @@ go
 -- result = 1  
 ```  
   
- 다음 예제에서는 쿼리가 지정은 형식화 된에 대 한 **xml** 열입니다. 합니다 `if` 식의 형식화 된 부울 값을 확인 합니다 <`ROOT`> 요소 하 고 그에 따라 생성된 된 XML을 반환 합니다. 이 예에서는 다음을 수행합니다.  
+ 다음 예에서는 형식화 된 **xml** 열에 대해 쿼리를 지정 합니다. 이 `if` 식은 <`ROOT`> 요소의 형식화 된 부울 값을 확인 하 고 생성 된 XML을 적절 하 게 반환 합니다. 이 예에서는 다음을 수행합니다.  
   
--   정의 하는 XML 스키마 컬렉션을 만듭니다는 <`ROOT`> xs: boolean 형식의 요소입니다.  
+-   Xs: boolean 형식의 <`ROOT`> 요소를 정의 하는 XML 스키마 컬렉션을 만듭니다.  
   
--   형식화 된 테이블을 만듭니다 **xml** XML 스키마 컬렉션을 사용 하는 열입니다.  
+-   XML 스키마 컬렉션을 사용 하 여 형식화 된 **xml** 열이 있는 테이블을 만듭니다.  
   
 -   XML 인스턴스를 열에 저장하고 쿼리합니다.  
   
@@ -88,7 +89,7 @@ DROP XML SCHEMA COLLECTION SC
 go  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [부울 생성자 함수 &#40;XQuery&#41;](https://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)  
+## <a name="see-also"></a>참고 항목  
+ [부울 생성자 함수는 XQuery를 &#40;&#41;](https://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)  
   
   

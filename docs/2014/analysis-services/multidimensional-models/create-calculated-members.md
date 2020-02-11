@@ -1,5 +1,5 @@
 ---
-title: 계산된 멤버 만들기 | Microsoft Docs
+title: 계산 멤버 만들기 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f6b7ca79cefee4d19593d20320da13b4253a89ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076282"
 ---
 # <a name="create-calculated-members"></a>계산 멤버 만들기
@@ -51,9 +51,10 @@ ms.locfileid: "66076282"
   
 -   숫자  
   
--   함수  
+-   Functions  
   
- **계산 도구** 창의 **메타데이터** 탭에서 큐브 구성 요소를 끌어오거나 복사하여 식에 간편하게 추가할 수 있습니다.  
+ 
+  **계산 도구** 창의 **메타데이터** 탭에서 큐브 구성 요소를 끌어오거나 복사하여 식에 간편하게 추가할 수 있습니다.  
   
 > [!IMPORTANT]  
 >  다른 계산 멤버의 값 식에서 사용될 모든 계산 멤버는 이를 사용할 계산 멤버보다 먼저 만들어야 합니다.  
@@ -61,7 +62,7 @@ ms.locfileid: "66076282"
  Format String  
  계산 멤버를 기반으로 셀 값의 형식을 지정합니다. 이 속성은 측정값의 `Display Format` 속성과 같은 값을 받아들입니다. 표시 형식에 대한 자세한 내용은 [측정값 속성 구성](configure-measure-properties.md)을 참조하세요.  
   
- 표시  
+ Visible  
  큐브 메타데이터를 검색할 때 계산 멤버를 표시할 것인지 숨길 것인지 결정합니다. 계산 멤버를 숨길 경우 MDX 식, 문 및 스크립트에서 계산 멤버를 사용할 수는 있지만 클라이언트 사용자 인터페이스에서 선택 가능한 개체로 표시되지 않습니다.  
   
  Non-empty Behavior  
@@ -73,14 +74,17 @@ ms.locfileid: "66076282"
  글꼴 식  
  계산 멤버의 값을 기반으로 셀의 글꼴, 글꼴 크기 및 글꼴 특성을 동적으로 설정하는 MDX 식을 지정합니다. 이 속성은 클라이언트 애플리케이션에서 지원하지 않으면 무시됩니다.  
   
- **계산 도구** 창의 **메타데이터** 탭에서 계산 식 창의 **식** 상자로 큐브 구성 요소를 복사하거나 끌어올 수 있습니다. **계산 도구** 창의 **함수** 탭에서 계산 식 창의 **식** 상자로 함수를 복사하거나 끌어올 수 있습니다.  
+ 
+  **계산 도구** 창의 **메타데이터** 탭에서 계산 식 창의 **식** 상자로 큐브 구성 요소를 복사하거나 끌어올 수 있습니다. 
+  **계산 도구** 창의 **함수** 탭에서 계산 식 창의 **식** 상자로 함수를 복사하거나 끌어올 수 있습니다.  
   
 ## <a name="addressing-calculated-members"></a>계산 멤버 접근성  
- **큐브 디자이너** 의 **계산**탭에서 계산 멤버를 만들 때 계산 멤버가 저장된 부모 계층을 지정합니다. 다음 규칙에 따라 부모 계층은 계산 멤버에 접근하는 방법을 결정합니다.  
+ 
+  **큐브 디자이너** 의 **계산**탭에서 계산 멤버를 만들 때 계산 멤버가 저장된 부모 계층을 지정합니다. 다음 규칙에 따라 부모 계층은 계산 멤버에 접근하는 방법을 결정합니다.  
   
 -   계산 멤버가 측정값 차원에서 생성되는 경우 해당 차원에서 계산 멤버에 접근할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [다차원 모델의 계산](calculations-in-multidimensional-models.md)  
   
   

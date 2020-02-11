@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6750456d708d68e57aadd4b1139f6e108a93b9ba
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783015"
 ---
 # <a name="change-the-failover-mode-of-an-availability-replica-sql-server"></a>가용성 복제본의 장애 조치(failover) 모드 변경(SQL Server)
@@ -37,7 +37,7 @@ ms.locfileid: "72783015"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  가용성 그룹에 대한 ALTER AVAILABILITY GROUP 권한, CONTROL AVAILABILITY GROUP 권한, ALTER ANY AVAILABILITY GROUP 권한 또는 CONTROL SERVER 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -45,7 +45,8 @@ ms.locfileid: "72783015"
   
 1.  개체 탐색기에서 주 복제본을 호스팅하는 서버 인스턴스에 연결하고 서버 트리를 확장합니다.  
   
-2.  **AlwaysOn 고가용성** 및 **가용성 그룹** 노드를 확장합니다.  
+2.  
+  **AlwaysOn 고가용성** 및 **가용성 그룹** 노드를 확장합니다.  
   
 3.  복제본을 변경할 가용성 그룹을 클릭합니다.  
   
@@ -70,11 +71,11 @@ ms.locfileid: "72783015"
   
      }  )  
   
-     여기서  
+     라는 설치 관리자 실행 파일에 포함됩니다. 여기서  
   
     -   *group_name* 은 가용성 그룹의 이름입니다.  
   
-    -   { '*system_name*[\\*instance_name*]' | '*FCI_network_name*[\\*instance_name*]' }  
+    -   {'*system_name*[\\*instance_name*] ' | '*FCI_network_name*[\\*instance_name*] '}  
   
          변경할 가용성 그룹을 호스팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 인스턴스 주소를 지정합니다. 이 주소의 구성 요소는 다음과 같습니다.  
   
@@ -85,7 +86,7 @@ ms.locfileid: "72783015"
          대상 서버 인스턴스가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 파트너(FCI)인 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에 액세스하는 데 사용되는 네트워크 이름입니다.  
   
          *instance_name*  
-         대상 가용성 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 인스턴스 이름입니다. 기본 서버 인스턴스의 경우 *instance_name*은 선택 사항입니다.  
+         대상 가용성 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 인스턴스 이름입니다. 기본 서버 인스턴스의 경우 *instance_name* 은 선택 사항입니다.  
   
      이러한 매개 변수에 대한 자세한 내용은 [ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)을 참조하세요.  
   
@@ -102,7 +103,8 @@ ms.locfileid: "72783015"
   
 1.  주 복제본을 호스팅하는 서버 인스턴스로 디렉터리를 변경(`cd`)합니다.  
   
-2.  `Set-SqlAvailabilityReplica` cmdlet을 `FailoverMode` 매개 변수와 함께 사용합니다. 복제본을 자동 장애 조치(failover)로 설정할 때는 `AvailabilityMode` 매개 변수를 사용하여 복제본을 동기-커밋 가용성 모드로 변경해야 할 수 있습니다.  
+2.  
+  `Set-SqlAvailabilityReplica` cmdlet을 `FailoverMode` 매개 변수와 함께 사용합니다. 복제본을 자동 장애 조치(failover)로 설정할 때는 `AvailabilityMode` 매개 변수를 사용하여 복제본을 동기-커밋 가용성 모드로 변경해야 할 수 있습니다.  
   
      예를 들어 다음 명령은 `MyReplica` 가용성 그룹의 `MyAg` 복제본이 동기-커밋 가용성 모드를 사용하고 자동 장애 조치(failover)를 지원하도록 수정합니다.  
   
@@ -118,5 +120,5 @@ SQL Server PowerShell 공급자를 설정 하 고 사용 하려면 [SQL Server P
   
 ## <a name="see-also"></a>참고 항목  
  [AlwaysOn 가용성 그룹 &#40;SQL Server 개요&#41;](overview-of-always-on-availability-groups-sql-server.md)  
- [가용성 모드 &#40;AlwaysOn 가용성 그룹&#41; ](availability-modes-always-on-availability-groups.md)   
- [장애 조치 (failover &#40;) 및 장애 조치 모드 AlwaysOn 가용성 그룹&#41;](failover-and-failover-modes-always-on-availability-groups.md) 
+ [가용성 모드 &#40;AlwaysOn 가용성 그룹&#41;](availability-modes-always-on-availability-groups.md)   
+ [장애 조치 (failover) 및 장애 조치 (failover) 모드 &#40;AlwaysOn 가용성 그룹&#41;](failover-and-failover-modes-always-on-availability-groups.md) 

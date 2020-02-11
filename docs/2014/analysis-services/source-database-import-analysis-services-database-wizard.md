@@ -13,24 +13,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7af29b6a9ea8decb6739052ed1cb06f62547b46f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068569"
 ---
 # <a name="source-database-import-analysis-services-database-wizard"></a>원본 데이터베이스(Analysis Services 데이터베이스 가져오기 마법사)
+  
   **원본 데이터베이스** 페이지를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트를 만들 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스 및 데이터베이스를 선택할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **Server**  
  프로젝트를 만들 데이터베이스를 포함하는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스를 입력합니다.  
   
- **데이터베이스 백업**  
+ **Database**  
  프로젝트를 만들 데이터베이스를 입력하거나 선택합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [가져오기 Analysis Services 데이터베이스 마법사 F1 도움말](import-analysis-services-database-wizard-f1-help.md)   
- [Analysis Services 마법사 &#40;다차원 데이터&#41;](analysis-services-wizards-multidimensional-data.md)  
+## <a name="see-also"></a>참고 항목  
+ [Analysis Services 데이터베이스 가져오기 마법사 F1 도움말](import-analysis-services-database-wizard-f1-help.md)   
+ [다차원 데이터를 &#40;마법사 Analysis Services&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

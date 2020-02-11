@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e91dd470b4810fc13c95cbb335b1cf8d2b10430e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107377"
 ---
 # <a name="data-processing-extensions-and-net-framework-data-providers-ssrs"></a>데이터 처리 확장 프로그램과 .NET Framework 데이터 공급자(SSRS)
@@ -46,8 +46,8 @@ ms.locfileid: "66107377"
 > [!NOTE]  
 >  먼저 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자나 사용자 지정 데이터 처리 확장 프로그램을 설치하고 등록해야만 데이터 원본의 데이터에 액세스하는 데 사용할 수 있습니다. 데이터 처리 확장 프로그램은 보고서를 작성하기 위한 보고 클라이언트와 게시된 보고서를 보기 위한 보고서 서버에 모두 설치 및 등록해야 합니다. 모든 데이터 공급자가 서버 환경에서 작동하는 것은 아닙니다. 자세한 내용은 [표준 .NET Framework 데이터 공급자 등록&#40;SSRS&#41;](register-a-standard-net-framework-data-provider-ssrs.md) 및 [데이터 처리 확장 프로그램 배포](../extensions/data-processing/deploying-a-data-processing-extension.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 처리 확장 프로그램 개요](../extensions/data-processing/data-processing-extensions-overview.md)   
- [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

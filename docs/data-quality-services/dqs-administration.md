@@ -14,10 +14,10 @@ ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 065a8869eff0e88cee5bf0bb110a948f709743d7
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251665"
 ---
 # <a name="dqs-administration"></a>dqs 관리
@@ -80,17 +80,17 @@ ms.locfileid: "75251665"
 |태스크 설명|항목|  
 |----------------------|-----------|  
 |DQS에서 활동을 모니터링하는 방법을 설명합니다.|[DQS 작업 모니터링](../data-quality-services/monitor-dqs-activities.md)|  
-|DQS에서 참조 데이터 설정을 구성하는 방법을 설명합니다.|[참조 데이터를 사용 하도록 DQS 구성](../data-quality-services/configure-dqs-to-use-reference-data.md)|  
-|정리 및 일치 활동을 위한 임계값 구성 방법을 설명합니다.|[정리 및 일치에 대 한 임계값 구성](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
-|DQS에서 알림을 설정 또는 해제하는 방법에 대해 설명합니다.|[DQS에서 프로 파일링 알림 사용 또는 사용 안 함](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)|  
-|이벤트의 심각도 수준에 따라 DQS 로깅을 구성하는 방법을 설명합니다.|[DQS 로그 파일에 대 한 심각도 수준 구성](../data-quality-services/configure-severity-levels-for-dqs-log-files.md)|  
-|DQS 로깅에 대한 고급 설정을 구성하는 방법을 설명합니다.|[DQS 로그 파일에 대 한 고급 설정 구성](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)|  
+|DQS에서 참조 데이터 설정을 구성하는 방법을 설명합니다.|[참조 데이터를 사용하도록 DQS 구성](../data-quality-services/configure-dqs-to-use-reference-data.md)|  
+|정리 및 일치 활동을 위한 임계값 구성 방법을 설명합니다.|[정리 및 일치에 대한 임계값 구성](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
+|DQS에서 알림을 설정 또는 해제하는 방법에 대해 설명합니다.|[DQS에서 프로파일링 알림 설정 또는 해제](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)|  
+|이벤트의 심각도 수준에 따라 DQS 로깅을 구성하는 방법을 설명합니다.|[DQS 로그 파일에 대한 심각도 수준 구성](../data-quality-services/configure-severity-levels-for-dqs-log-files.md)|  
+|DQS 로깅에 대한 고급 설정을 구성하는 방법을 설명합니다.|[Configure Advanced Settings for DQS Log Files](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)|  
 |DQS 데이터베이스를 백업 및 복원하는 방법을 설명합니다.|[DQS 데이터베이스 백업 및 복원](../data-quality-services/backing-up-and-restoring-dqs-databases.md)|  
 |DQS 데이터베이스를 분리하고 연결하는 방법을 설명합니다.|[DQS 데이터베이스 분리 및 연결](../data-quality-services/detaching-and-attaching-dqs-databases.md)|  
   
 ## <a name="see-also"></a>참고 항목  
  [DQS의 참조 Data Services](../data-quality-services/reference-data-services-in-dqs.md)   
  [DQS 로그 파일 관리](../data-quality-services/manage-dqs-log-files.md)   
- [DQS 데이터베이스 관리](../data-quality-services/manage-dqs-databases.md)  
+ [Manage DQS Databases](../data-quality-services/manage-dqs-databases.md)  
   
   

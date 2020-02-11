@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d0139376adc28b07877389a023b19310b06417ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68212139"
 ---
 # <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>정책 범주에 데이터베이스 구독 또는 구독 취소
@@ -38,7 +38,7 @@ ms.locfileid: "68212139"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 권한  
  db_owner 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -71,7 +71,7 @@ ms.locfileid: "68212139"
      **실행 모드**  
      정책의 실행 모드를 표시합니다.  
   
-     **기록**  
+     **History**  
      로그 파일 뷰어를 열어 정책 기록을 보려면 기록 보기 하이퍼링크를 클릭합니다.  
   
 4.  정책 기반 관리 범주를 구독하려면 **가입** 열 아래의 범주 확인란을 선택합니다. 범주에서 구독을 취소하려면 해당 확인란의 선택을 취소합니다.  

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 595da161660b60845c02d71e22411a2a4eba009c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192110"
 ---
 # <a name="handling-smo-exceptions"></a>SMO 예외 처리
@@ -33,14 +33,14 @@ ms.locfileid: "63192110"
  예외는 일반 예외나 특정 예외일 수 있습니다. 일반 예외에는 특정 예외 집합이 포함됩니다. 여러 개의 `Catch` 문을 사용하여 예상 오류를 처리하고 나머지 오류가 일반 예외 처리 코드로 이동되게 할 수 있습니다. 예외는 연계 시퀀스로 발생하는 경우가 많습니다. 대체로 SQL 예외로 인해 SMO 예외가 발생했을 수 있습니다. 이를 검색하려면 연속해서 `InnerException` 속성을 사용하여 최종 최상위 예외를 발생시킨 원래 예외를 확인합니다.  
   
 > [!NOTE]  
->  합니다 `SQLException` 예외에 선언 된 합니다 **System.Data.SqlClient** 네임 스페이스입니다.  
+>  예외 `SQLException` 는 **system.object** 네임 스페이스에서 선언 됩니다.  
   
- ![올 수준을 보여 주는 다이어그램 예외 수준을](../../../database-engine/dev-guide/media/exception-flow.gif "올 수준을 보여 주는 다이어그램 예외 수준을")  
+ ![예외 수준을 보여 주는 다이어그램](../../../database-engine/dev-guide/media/exception-flow.gif "예외 수준을 보여 주는 다이어그램")  
   
  다음 다이어그램은 애플리케이션 계층을 통한 예외 흐름을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
- 제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md) 또는 [Visual Studio.NET에서 Visual Basic SMO 프로젝트 만들기](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)합니다.  
+ 제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 visual studio [.net에서 Visual C&#35; Smo 프로젝트 만들기](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md) 또는 [visual studio .NET에서 Visual Basic smo 프로젝트 만들기](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)를 참조 하세요.  
   
 ## <a name="catching-an-exception-in-visual-basic"></a>Visual Basic에서 예외 catch  
  이 코드 예제에서는 `Try...Catch...Finally`[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 문을 사용하여 SMO 예외를 catch하는 방법을 보여 줍니다. 모든 SMO 예외는 SmoException 유형이며 SMO 참조에 표시됩니다. 내부 예외의 시퀀스가 표시되어 오류의 근원을 보여 줍니다. 자세한 내용은 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET 설명서를 참조하십시오.  

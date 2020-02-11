@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ad1a6af717dcfa8ea42d9171e5ab23d9c24c6225
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63240792"
 ---
 # <a name="namespace-support-in-path-mode"></a>PATH 모드에서의 네임스페이스 지원
@@ -32,7 +32,7 @@ FOR XML PATH
 ## <a name="examples"></a>예  
  다음 예제에서는 SELECT 쿼리에서 XML을 생성할 때 PATH 모드를 사용하는 방법을 보여 줍니다. 이러한 쿼리는 대부분 ProductModel 테이블의 Instructions 열에 저장된 자전거 제조 지침 XML 문서에 대해 지정됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [FOR XML에서 PATH 모드 사용](use-path-mode-with-for-xml.md)  
   
   

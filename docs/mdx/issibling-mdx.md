@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 15c80cec67b0a40c8ac4c436a45a4551132858f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68105356"
 ---
 # <a name="issibling-mdx"></a>IsSibling(MDX)
@@ -35,7 +35,7 @@ IsSibling(Member_Expression1, Member_Expression2)
  멤버를 반환하는 유효한 MDX 식입니다.  
   
 ## <a name="remarks"></a>설명  
- 합니다 **IsSibling** 함수에서 반환 **true** 첫 번째 멤버는 지정된 된 두 번째 멤버의 형제를 지정 합니다. 반환이 고, 그렇지 **false**합니다.  
+ **Issibling** 함수는 지정 된 첫 번째 멤버가 지정 된 두 번째 멤버의 형제 인 경우 **true** 를 반환 합니다. 그렇지 않으면 함수는 **false**를 반환 합니다.  
   
 ## <a name="example"></a>예제  
  다음 예에서는 Date 차원의 Fiscal 계층에 있는 현재 멤버가 2002년 7월의 형제인 경우 TRUE를 반환합니다.  
@@ -50,7 +50,7 @@ IsSibling(Member_Expression1, Member_Expression2)
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

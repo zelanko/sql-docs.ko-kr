@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 36b0d8b5d91b18ad4b97ac873ad3073ca97b133e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871989"
 ---
 # <a name="database-properties-files-page"></a>데이터베이스 속성(파일 페이지)
@@ -64,7 +64,7 @@ ms.locfileid: "62871989"
   
  메모리 최적화 파일 그룹의 파일에 대해서는 이 필드가 **제한 없음**이어야 합니다.  
   
- **경로**  
+ **Path**  
  선택한 파일의 경로를 표시합니다. 새 파일의 경로를 지정하려면 파일 경로 옆에 있는 편집 단추를 클릭하고 대상 폴더로 이동합니다. 기존 파일의 경로는 수정할 수 없습니다.  
   
  FILESTREAM 파일의 경우 경로는 폴더입니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 은 이 폴더에 기본 파일을 만듭니다.  
@@ -82,8 +82,8 @@ ms.locfileid: "62871989"
   
  파일에 대한 자세한 내용은 [Database Files and Filegroups](database-files-and-filegroups.md)을 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목  
- [ALTER DATABASE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+## <a name="see-also"></a>참고 항목  
+ [ALTER DATABASE &#40;Transact-SQL &#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [sys.databases&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   
   

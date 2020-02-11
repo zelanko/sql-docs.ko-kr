@@ -11,21 +11,24 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d2baa2a28fb0805f92c27b7f8a237996ce4583db
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74054836"
 ---
 # <a name="user-defined-type"></a>사용자 정의 형식
   사용자 정의 데이터 형식 예제는 `System.Data.SqlClient`를 사용하는 클라이언트 애플리케이션 및 Transact-SQL에서 간단한 사용자 정의 데이터 형식을 만들고 사용하는 방법을 보여 줍니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 프로젝트를 만들고 실행하려면 다음 소프트웨어가 설치되어 있어야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](https://www.microsoft.com/download/details.aspx?id=42299)에서 무료로 구할 수 있습니다.  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](https://www.microsoft.com/download/details.aspx?id=42299)에서 무료로 구할 수 있습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개발자 [웹 사이트](https://archive.codeplex.com/?p=SqlServerSamples)에서 제공되는 AdventureWorks 데이터베이스  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개발자 [웹 사이트](https://archive.codeplex.com/?p=SqlServerSamples)에서 제공되는 AdventureWorks 데이터베이스  
   
 -   .NET Framework SDK 2.0 이상 또는 Microsoft Visual Studio 2005 이상. .NET Framework SDK는 무료로 구할 수 있습니다.  
   
@@ -62,7 +65,7 @@ ms.locfileid: "74054836"
   
 2.  필요한 경우 예제에 대한 디렉터리를 만듭니다. 이 예에서는 C:\MySample을 사용합니다.  
   
-3.  c:\MySample에서 `ComplexNumber.vb` (Visual Basic 예제용) 또는 `ComplexNumber.cs` (C# 예제용)를 만들고 적합한 Visual Basic 또는 C# 예제 코드(아래)를 파일에 복사합니다.  
+3.  c:\MySample에서 `ComplexNumber.vb`(Visual Basic 예제용) 또는 `ComplexNumber.cs`(C# 예제용)를 만들고 적합한 Visual Basic 또는 C# 예제 코드(아래)를 파일에 복사합니다.  
   
 4.  선택하는 언어에 따라 다음 중 하나를 실행하여 명령줄 프롬프트에서 예제 코드를 컴파일합니다.  
   
@@ -70,7 +73,8 @@ ms.locfileid: "74054836"
   
 5.  `Csc /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.XML.dll /target:library ComplexNumber.cs`  
   
-6.  [!INCLUDE[tsql](../../includes/tsql-md.md)] 설치 코드를 파일에 복사하고 해당 파일을 예제 디렉터리에 `Install.sql` 로 저장합니다.  
+6.  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 설치 코드를 파일에 복사하고 해당 파일을 예제 디렉터리에 `Install.sql` 로 저장합니다.  
   
 7.  예제가 `C:\MySample\`이외의 디렉터리에 설치된 경우 해당 위치를 가리키도록 표시된 대로 `Install.sql` 파일을 편집합니다.  
   
@@ -78,7 +82,8 @@ ms.locfileid: "74054836"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-9. [!INCLUDE[tsql](../../includes/tsql-md.md)] 테스트 명령 스크립트를 파일에 복사하고 해당 파일을 예제 디렉터리에 `test.sql` 로 저장합니다.  
+9. 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 테스트 명령 스크립트를 파일에 복사하고 해당 파일을 예제 디렉터리에 `test.sql` 로 저장합니다.  
   
 10. 다음 명령으로 테스트 스크립트를 실행합니다.  
   
@@ -88,11 +93,12 @@ ms.locfileid: "74054836"
   
     -   c:\MySample에서 `Program.cs`를 만들고 원본 코드를 파일에 복사합니다.  
   
-    -   `: Csc /reference:ComplexNumber.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.XML.dll /out:Client.exe /target:exe Program.cs` 실행  
+    -   실행할`: Csc /reference:ComplexNumber.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.XML.dll /out:Client.exe /target:exe Program.cs`  
   
-    -   다음을 실행 하 여 테스트: `Client AdventureWorks`  
+    -   다음을 실행 하 여 테스트:`Client AdventureWorks`  
   
-12. [!INCLUDE[tsql](../../includes/tsql-md.md)] 정리 스크립트를 파일에 복사하고 해당 파일을 예제 디렉터리에 `cleanup.sql` 로 저장합니다.  
+12. 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 정리 스크립트를 파일에 복사하고 해당 파일을 예제 디렉터리에 `cleanup.sql` 로 저장합니다.  
   
 13. 다음 명령으로 스크립트를 실행합니다.  
   
@@ -987,7 +993,7 @@ DROP ASSEMBLY ComplexNumber;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목  
- [공용 언어 런타임 &#40;CLR&#41; 통합에 대한 사용 시나리오 및 예제](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+## <a name="see-also"></a>참고 항목  
+ [공용 언어 런타임 &#40;CLR&#41; 통합에 대 한 사용 시나리오 및 예제](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 메모리 (ODBC)의 모든 값을 사용 하 여 테이블 반환 매개 변수로 데이터 전송 | Microsoft 문서
+title: 모든 값을 메모리에 포함 하 여 테이블 반환 매개 변수로 데이터 전송 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 03eeb209dfef3c2bfa9c2ffaea70cb24286c23f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68205456"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>모든 값을 메모리에 로드하여 테이블 반환 매개 변수로 데이터 전송(ODBC)
-  이 항목에서는 모든 값이 메모리에 있을 때 데이터를 테이블 반환 매개 변수로 저장 프로시저에 보내는 방법에 대해 설명합니다. 테이블 반환 매개 변수를 보여 주는 다른 샘플을 보려면 [테이블 반환 매개 변수 &#40;ODBC&#41;](table-valued-parameters-odbc.md)합니다.  
+  이 항목에서는 모든 값이 메모리에 있을 때 데이터를 테이블 반환 매개 변수로 저장 프로시저에 보내는 방법에 대해 설명합니다. 테이블 반환 매개 변수를 보여 주는 다른 예제는 [ODBC&#41;&#40;테이블 반환 매개 변수 사용 ](table-valued-parameters-odbc.md)을 참조 하세요.  
   
-## <a name="prerequisite"></a>사전 요구 사항  
+## <a name="prerequisite"></a>필수 요소  
  이 절차에서는 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)]이 서버에서 실행되었다고 가정합니다.  
   
 ```  
@@ -86,7 +86,7 @@ from @Items
        sizeof(OrdDate), &cbOrdDate);  
     ```  
   
-3.  매개 변수를 바인딩하는 두 번째 단계에서는 테이블 반환 매개 변수의 열이 바인딩됩니다. 먼저 매개 변수 포커스가 테이블 반환 매개 변수의 서수로 설정됩니다. 그런 다음 있었던 상태로 대 한 열 서 수 하지만 저장된 프로시저의 매개 변수 처럼 동일한 방식으로 SQLBindParameter를 사용 하 여 열 값의 바인딩됩니다. 테이블 값 매개 변수가 더 있으면 포커스를 각 매개 변수에 차례로 설정하고 해당 열을 바인딩합니다. 마지막으로 매개 변수 포커스가 0으로 다시 설정됩니다.  
+3.  매개 변수를 바인딩하는 두 번째 단계에서는 테이블 반환 매개 변수의 열이 바인딩됩니다. 먼저 매개 변수 포커스가 테이블 반환 매개 변수의 서수로 설정됩니다. 그런 다음 테이블 값의 열은 저장 프로시저의 매개 변수 이지만 ParameterNumber의 열 서 수를 사용 하는 경우와 동일한 방식으로 SQLBindParameter를 사용 하 여 바인딩됩니다. 테이블 값 매개 변수가 더 있으면 포커스를 각 매개 변수에 차례로 설정하고 해당 열을 바인딩합니다. 마지막으로 매개 변수 포커스가 0으로 다시 설정됩니다.  
   
     ```  
     // Bind columns for the table-valued parameter (param 2).  
@@ -102,7 +102,8 @@ from @Items
     r = SQLSetStmtAttr(hstmt, SQL_SOPT_SS_PARAM_FOCUS, (SQLPOINTER) 0, SQL_IS_INTEGER);  
     ```  
   
-4.  매개 변수 버퍼를 채웁니다. `cbTVP`는 서버에 전송할 행 수로 설정됩니다.  
+4.  매개 변수 버퍼를 채웁니다. 
+  `cbTVP`는 서버에 전송할 행 수로 설정됩니다.  
   
     ```  
     // Populate parameters.  
@@ -125,7 +126,7 @@ from @Items
     r = SQLExecDirect(hstmt, (SQLCHAR *) "{call TVPOrderEntry(?, ?, ?, ?)}",SQL_NTS);  
     ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [ODBC 테이블 반환 매개 변수 프로그래밍 예제](../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md)  
   
   

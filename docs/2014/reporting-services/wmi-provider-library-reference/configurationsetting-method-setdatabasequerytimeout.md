@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff1b75e942de46309df68707cc3acec976adb991
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098067"
 ---
-# <a name="setdatabasequerytimeout-method-wmi-msreportserverconfigurationsetting"></a>SetDatabaseQueryTimeout 메서드(WMI MSReportServer_ConfigurationSetting)
+# <a name="setdatabasequerytimeout-method-wmi-msreportserver_configurationsetting"></a>SetDatabaseQueryTimeout 메서드(WMI MSReportServer_ConfigurationSetting)
   보고서 서버 데이터베이스 쿼리에 대한 기본 제한 시간 값을 지정합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -47,13 +47,13 @@ public void SetDatabaseQueryTimeout (Int32 LogonTimeout,
  *HRESULT*  
  [out] 호출의 성공 여부를 나타내는 값입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드 호출의 성공 또는 실패를 나타내는 *HRESULT* 를 반환합니다. 0 값은 메서드 호출이 성공했음을 나타냅니다. 0 이외의 값은 오류가 발생했음을 나타냅니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **네임 스페이스:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [MSReportServer_ConfigurationSetting 멤버](msreportserver-configurationsetting-members.md)  
   
   

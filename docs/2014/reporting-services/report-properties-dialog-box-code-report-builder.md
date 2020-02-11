@@ -13,21 +13,22 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d2a4ef9c25607226c3898c10c0ec9ff245de8a18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104453"
 ---
 # <a name="report-properties-dialog-box-code-report-builder"></a>보고서 속성 대화 상자, 코드(보고서 작성기)
+  
   **보고서 속성** 대화 상자에서 **코드** 를 선택하여 보고서 내에서 식에 사용할 사용자 지정 코드를 정의할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **사용자 지정 코드**  
- 보고서 내에서 사용할 메서드를 입력합니다. 코드는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]언어로 작성해야 합니다.  
+ 보고서 내에서 사용할 메서드를 입력합니다. 에서 코드를 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]작성 해야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조&#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
+## <a name="see-also"></a>참고 항목  
+ [보고서 디자이너 &#40;SSRS&#41;의 식에 있는 사용자 지정 코드 및 어셈블리 참조](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
  [보고서 및 그룹 변수 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](report-design/built-in-collections-report-and-group-variables-references-report-builder.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)  
   

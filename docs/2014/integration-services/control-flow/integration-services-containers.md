@@ -17,14 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 172aa2a77293dd7e9a9ee50bfe0002a71c59cbb9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831391"
 ---
 # <a name="integration-services-containers"></a>Integration Services 컨테이너
-  컨테이너는 패키지에 구조를 제공하고 태스크에 서비스를 제공하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 개체입니다. 패키지의 반복 제어 흐름을 지원하고 태스크와 컨테이너를 의미 있는 작업 단위로 그룹화합니다. 컨테이너는 태스크 외에도 다른 컨테이너를 포함할 수 있습니다.  
+  컨테이너는 태스크에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 대 한 패키지 및 서비스의 구조를 제공 하는의 개체입니다. 패키지의 반복 제어 흐름을 지원하고 태스크와 컨테이너를 의미 있는 작업 단위로 그룹화합니다. 컨테이너는 태스크 외에도 다른 컨테이너를 포함할 수 있습니다.  
   
  패키지는 컨테이너를 다음 용도로 사용합니다.  
   
@@ -35,7 +35,8 @@ ms.locfileid: "62831391"
 -   하나의 단위로 성공하거나 실패해야 하는 태스크와 컨테이너를 그룹화합니다. 예를 들어 패키지는 데이터베이스 테이블에서 행을 삭제하고 추가하는 태스크를 그룹화한 다음 특정 태스크가 실패하면 모든 태스크를 커밋하거나 롤백할 수 있습니다.  
   
 ## <a name="container-types"></a>컨테이너 유형  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 패키지 빌드를 위해 4가지 컨테이너 유형을 제공합니다. 다음 표에서는 각 컨테이너 유형을 나열합니다.  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 패키지 빌드를 위해 4가지 컨테이너 유형을 제공합니다. 다음 표에서는 각 컨테이너 유형을 나열합니다.  
   
 |컨테이너|Description|  
 |---------------|-----------------|  
@@ -47,7 +48,8 @@ ms.locfileid: "62831391"
  패키지와 이벤트 처리기도 컨테이너 유형입니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 패키지](../integration-services-ssis-packages.md) 및 [Integration Services&#40;SSIS&#41; 이벤트 처리기](../integration-services-ssis-event-handlers.md)를 참조하세요.  
   
 ### <a name="summary-of-container-properties"></a>컨테이너 속성 요약  
- 모든 컨테이너 유형에는 공통된 속성 집합이 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 제공되는 그래픽 도구를 사용하여 패키지를 만들 경우 속성 창에는 Foreach 루프, For 루프 및 시퀀스 컨테이너에 대한 다음 속성이 나열됩니다. 태스크 호스트 컨테이너 속성은 태스크 호스트가 캡슐화하는 태스크를 구성하는 과정의 일부로 구성됩니다. 이 태스크를 구성할 때 태스크 호스트 속성을 설정합니다.  
+ 모든 컨테이너 유형에는 공통된 속성 집합이 있습니다. 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 제공되는 그래픽 도구를 사용하여 패키지를 만들 경우 속성 창에는 Foreach 루프, For 루프 및 시퀀스 컨테이너에 대한 다음 속성이 나열됩니다. 태스크 호스트 컨테이너 속성은 태스크 호스트가 캡슐화하는 태스크를 구성하는 과정의 일부로 구성됩니다. 이 태스크를 구성할 때 태스크 호스트 속성을 설정합니다.  
   
 |속성|Description|  
 |--------------|-----------------|  
@@ -57,11 +59,13 @@ ms.locfileid: "62831391"
 |`DisableEventHandlers`|컨테이너와 연결된 이벤트 처리기가 실행되는지 여부를 나타내는 부울 값입니다. 이 속성의 기본값은 `False`입니다.|  
 |`FailPackageOnFailure`|컨테이너에서 오류가 발생하는 경우 패키지가 실패하는지 여부를 지정하는 부울 값입니다. 이 속성의 기본값은 `False`입니다.<br /><br /> 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailPackageOnFailure%2A>을 참조하세요.|  
 |`FailParentOnFailure`|컨테이너에서 오류가 발생하는 경우 부모 컨테이너가 실패하는지 여부를 지정하는 부울 값입니다. 이 속성의 기본값은 `False`입니다.<br /><br /> 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailParentOnFailure%2A>을 참조하세요.|  
-|`ForcedExecutionValue`|`ForceExecutionValue`가 `True`로 설정된 경우 컨테이너의 선택적 실행 값을 포함하는 개체입니다. 이 속성의 기본값은 **0**입니다.<br /><br /> 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForcedExecutionValue%2A>을 참조하세요.|  
-|`ForcedExecutionValueType`|`ForcedExecutionValue`의 데이터 형식입니다. 이 속성의 기본값은 `Int32`입니다.|  
-|`ForceExecutionResult`|패키지 또는 컨테이너 강제 실행 결과를 지정하는 값입니다. 값은 `None`, `Success`, `Failure` 및 `Completion`입니다. 이 속성의 기본값은 `None`입니다.<br /><br /> 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionResult%2A>을 참조하세요.|  
+|`ForcedExecutionValue`|
+  `ForceExecutionValue`가 `True`로 설정된 경우 컨테이너의 선택적 실행 값을 포함하는 개체입니다. 이 속성의 기본값은 **0**입니다.<br /><br /> 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForcedExecutionValue%2A>을 참조하세요.|  
+|`ForcedExecutionValueType`|
+  `ForcedExecutionValue`의 데이터 형식입니다. 이 속성의 기본값은 `Int32`입니다.|  
+|`ForceExecutionResult`|패키지 또는 컨테이너 강제 실행 결과를 지정하는 값입니다. 가능한 값은 `None`, `Success`, `Failure` 및 `Completion`입니다. 이 속성의 기본값은 `None`입니다.<br /><br /> 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionResult%2A>을 참조하세요.|  
 |`ForceExecutionValue`|컨테이너의 선택적 실행 값에 특정 값이 포함되도록 강제해야 하는지 여부를 나타내는 부울 값입니다. 이 속성의 기본값은 `False`입니다.<br /><br /> 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionValue%2A>을 참조하세요.|  
-|`ID`|패키지를 만들 때 할당된 컨테이너 GUID입니다. 이 속성은 읽기 전용입니다.<br /><br /> <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ID%2A>에서 분할된 테이블 또는 인덱스를 만들 수 있습니다.|  
+|`ID`|패키지를 만들 때 할당된 컨테이너 GUID입니다. 이 속성은 읽기 전용입니다.<br /><br /> <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ID%2A>.|  
 |`IsolationLevel`|컨테이너 트랜잭션의 격리 수준입니다. 가능한 값은 `Unspecified`, `Chaos`, `ReadUncommitted`, `ReadCommitted`, `RepeatableRead`, `Serializable` 및 `Snapshot`입니다. 이 속성의 기본값은 `Serializable`입니다. 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>을 참조하세요.|  
 |`LocaleID`|Microsoft Win32 로캘입니다. 이 속성의 기본값은 로컬 컴퓨터 운영 체제의 로캘입니다.<br /><br /> 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LocaleID%2A>을 참조하세요.|  
 |`LoggingMode`|컨테이너의 로깅 동작을 지정하는 값입니다. 가능한 값은 `Disabled`, `Enabled` 및 `UseParentSetting`입니다. 이 속성의 기본값은 `UseParentSetting`입니다. 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>을 참조하세요.|  
@@ -83,7 +87,7 @@ ms.locfileid: "62831391"
  컨테이너는 실행 파일과 선행 제약 조건으로 구성된 제어 흐름을 포함하며 이벤트 처리기와 변수를 사용할 수도 있습니다. 단, 태스크 호스트 컨테이너는 예외입니다. 태스크 호스트 컨테이너는 단일 태스크를 캡슐화하기 때문에 선행 제약 조건을 사용하지 않습니다.  
   
 ### <a name="executables"></a>실행 파일  
- 실행 파일은 컨테이너 수준 태스크와 해당 컨테이너에 있는 모든 컨테이너를 참조합니다. 실행 파일은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 제공하는 태스크 및 컨테이너 중 하나이거나 사용자 지정 태스크일 수 있습니다. 자세한 내용은 [Integration Services Tasks](integration-services-tasks.md) 하 고 [Integration Services 컨테이너](integration-services-containers.md)합니다.  
+ 실행 파일은 컨테이너 수준 태스크와 해당 컨테이너에 있는 모든 컨테이너를 참조합니다. 실행 파일은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 제공하는 태스크 및 컨테이너 중 하나이거나 사용자 지정 태스크일 수 있습니다. 자세한 내용은 [Integration Services 작업](integration-services-tasks.md) 및 [Integration Services 컨테이너](integration-services-containers.md)를 참조 하세요.  
   
 ### <a name="precedence-constraints"></a>선행 제약 조건  
  선행 제약 조건은 부모 컨테이너가 같은 컨테이너와 태스크를 정렬된 제어 흐름으로 연결합니다. 자세한 내용은 [Precedence Constraints](precedence-constraints.md)을(를) 참조하세요.  
@@ -91,13 +95,13 @@ ms.locfileid: "62831391"
 ### <a name="event-handlers"></a>이벤트 처리기  
  컨테이너 수준의 이벤트 처리기는 컨테이너 또는 컨테이너에 포함된 개체에 의해 발생한 이벤트에 응답합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 이벤트 처리기](../integration-services-ssis-event-handlers.md)를 참조하세요.  
   
-### <a name="variables"></a>변수  
- 컨테이너에서 사용되는 변수는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 제공하는 컨테이너 수준의 시스템 변수와 해당 컨테이너가 사용하는 사용자 정의 변수를 포함합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../integration-services-ssis-variables.md)을 참조하세요.  
+### <a name="variables"></a>variables  
+ 컨테이너에서 사용되는 변수는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 제공하는 컨테이너 수준의 시스템 변수와 해당 컨테이너가 사용하는 사용자 정의 변수를 포함합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../integration-services-ssis-variables.md)을 참조하세요.  
   
 ## <a name="break-points"></a>중단점  
  컨테이너의 중단점을 설정할 때 중단 조건이 **컨테이너가 OnVariableValueChanged 이벤트를 받는 경우 중단**인 경우 컨테이너 범위의 변수를 정의합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [제어 흐름](control-flow.md)  
   
   

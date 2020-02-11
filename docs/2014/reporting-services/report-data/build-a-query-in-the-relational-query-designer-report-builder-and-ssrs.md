@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 901abf5be70f0b3c70b89b0415c59f19a9327b29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107442"
 ---
 # <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>관계형 쿼리 디자이너에서 쿼리 작성(보고서 작성기 및 SSRS)
@@ -23,7 +23,7 @@ ms.locfileid: "66107442"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- 데이터 세트는 데이터 원본을 기반으로 합니다. 데이터 원본의 유형 및 제작 환경에 따라 데이터 세트 쿼리를 정의할 때 열리는 쿼리 디자이너가 결정됩니다. 쿼리 디자이너 기능은 기본 데이터 원본에 따라 다릅니다. 데이터 계층에 대 한 자세한 내용은 참조 하세요. [데이터 연결, 데이터 원본 및 보고서 작성기에서 연결 문자열](../data-connections-data-sources-and-connection-strings-in-report-builder.md) 하거나 [데이터 연결, 데이터 원본 및 Reporting Services의 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) .  
+ 데이터 세트는 데이터 원본을 기반으로 합니다. 데이터 원본의 유형 및 제작 환경에 따라 데이터 세트 쿼리를 정의할 때 열리는 쿼리 디자이너가 결정됩니다. 쿼리 디자이너 기능은 기본 데이터 원본에 따라 다릅니다. 데이터 계층에 대 한 자세한 내용은 Reporting Services의 데이터 연결 [, 데이터 원본 및 연결 문자열 보고서 작성기](../data-connections-data-sources-and-connection-strings-in-report-builder.md) 또는 [데이터 연결, 데이터 원본 및 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)을 참조 하세요.  
   
  다음과 같은 태스크에 쿼리 디자이너를 사용할 수 있습니다.  
   
@@ -67,11 +67,14 @@ ms.locfileid: "66107442"
   
 2.  적용된 필터 창 도구 모음에서 **필터 추가**를 클릭합니다. 새 필터 행이 나타납니다.  
   
-3.  **필드 이름**에서 클릭하여 필드의 드롭다운 목록을 표시한 다음 필터링 기준으로 사용할 필드 이름을 클릭합니다. 예를 들어 수량으로 필터링하려면 항목 수를 포함하는 필드를 클릭합니다.  
+3.  
+  **필드 이름**에서 클릭하여 필드의 드롭다운 목록을 표시한 다음 필터링 기준으로 사용할 필드 이름을 클릭합니다. 예를 들어 수량으로 필터링하려면 항목 수를 포함하는 필드를 클릭합니다.  
   
-4.  **연산자**에서 클릭하여 연산자의 드롭다운 목록을 표시한 다음 필터에서 사용할 비교 연산자를 선택합니다.  
+4.  
+  **연산자**에서 클릭하여 연산자의 드롭다운 목록을 표시한 다음 필터에서 사용할 비교 연산자를 선택합니다.  
   
-5.  **값**에서 필터링 기준으로 사용할 값을 입력합니다. 예를 들어 100보다 큰 수량을 필터링하려면 100을 입력합니다.  
+5.  
+  **값**에서 필터링 기준으로 사용할 값을 입력합니다. 예를 들어 100보다 큰 수량을 필터링하려면 100을 입력합니다.  
   
 6.  이 행에서 매개 변수 옵션을 선택하여 사용자가 필터 값을 지정할 수 있게 하는 데이터 세트 매개 변수를 만듭니다. 데이터 세트 매개 변수와 일치하는 보고서 매개 변수가 자동으로 만들어집니다.  
   
@@ -90,13 +93,13 @@ ms.locfileid: "66107442"
   
  쿼리는 데이터 원본에서 실행되고 쿼리 결과 창에 예제 데이터를 반환합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](report-datasets-ssrs.md)   
- [외부 데이터 원본의 데이터 추가&#40;SSRS&#41;](add-data-from-external-data-sources-ssrs.md)   
- [쿼리 디자이너&#40;보고서 작성기&#41;](../query-designers-report-builder.md)   
- [공유 데이터 집합 또는 포함된 데이터 집합 만들기&#40;보고서 작성기 및 SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>참고 항목  
+ [보고서 &#40;보고서 작성기 및 SSRS&#41;에 데이터를 추가 합니다.](report-datasets-ssrs.md)   
+ [SSRS&#41;&#40;외부 데이터 원본의 데이터 추가](add-data-from-external-data-sources-ssrs.md)   
+ [쿼리 디자이너 &#40;보고서 작성기&#41;](../query-designers-report-builder.md)   
+ [공유 데이터 집합 또는 포함 된 데이터 집합 &#40;보고서 작성기 및 SSRS를 만듭니다&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [보고서 디자인 뷰&#40;보고서 작성기&#41;](../report-builder/report-design-view-report-builder.md)   
- [공유 데이터 집합 디자인 뷰&#40;보고서 작성기&#41;](../report-builder/shared-dataset-design-view-report-builder.md)   
+ [공유 데이터 집합 디자인 뷰 &#40;보고서 작성기&#41;](../report-builder/shared-dataset-design-view-report-builder.md)   
  [Reporting Services 쿼리 디자이너](../reporting-services-query-designers.md)  
   
   

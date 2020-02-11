@@ -1,5 +1,5 @@
 ---
-title: RDS 반환 &quot;읽지 않았습니다 Stream&quot; 오류 | Microsoft Docs
+title: RDS에서 &quot;읽기&quot; 불가능 한 스트림 반환 오류 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,21 +13,21 @@ ms.assetid: cb5a68f8-dba4-41da-bafd-04efe53706b7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c89756e86a702217d5d9d8495bf62b0d27f52321
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922460"
 ---
-# <a name="rds-returns-quotstream-not-readquot-error"></a>RDS 반환 &quot;읽지 않았습니다 Stream&quot; 오류
-"Stream 개체 읽을 수 없습니다, 비어 있거나 현재 위치는 Stream의 끝 때문에 있습니다. 비어 있지 않은 스트림용 Position 속성을 사용 하 여 현재 위치를 설정 합니다. Stream 비어 있는지를 확인 하려면 크기 속성을 확인 합니다. "  
+# <a name="rds-returns-quotstream-not-readquot-error"></a>RDS 반환 &quot;스트림 읽기&quot; 오류
+"스트림 개체는 비어 있거나 현재 위치가 스트림의 끝에 있기 때문에 읽을 수 없습니다. 비어 있지 않은 스트림의 경우 Position 속성을 사용 하 여 현재 위치를 설정 합니다. 스트림이 비어 있는지 확인 하려면 Size 속성을 확인 하십시오.  
   
- 이 오류 메시지를 표시 하는 경우 http를 통해 매개 변수화 된 계층적 쿼리를 사용 하려고 했습니다 수 있습니다. RDS는 원격 매개 변수가 있는 계층을 사용 하는 것을 허용 하지 않습니다.  
+ 이 오류 메시지가 표시 되 면 http를 통해 매개 변수가 있는 계층적 쿼리를 사용 하려고 했을 수 있습니다. RDS에서는 매개 변수가 있는 원격 계층을 사용할 수 없습니다.  
   
 > [!IMPORTANT]
->  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
+>  Windows 8 및 Windows Server 2012부터 RDS 서버 구성 요소는 더 이상 Windows 운영 체제에 포함 되지 않습니다 (자세한 내용은 Windows 8 및 [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) 참조). 이후 버전의 Windows에서는 RDS 클라이언트 구성 요소가 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램은 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)로 마이그레이션해야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [RDS 기본 사항](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: SQL Server Native Client OLE DB 공급자 응용 프로그램 만들기 | Microsoft 문서
+title: SQL Server Native Client OLE DB 공급자 응용 프로그램 만들기 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0e422ac6535900a287ae610a85241dc67172c4f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63209756"
 ---
 # <a name="creating-a-sql-server-native-client-ole-db-provider-application"></a>SQL Server Native Client OLE DB 공급자 애플리케이션 만들기
-  만들기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 응용 프로그램에 이러한 단계가 포함 됩니다.  
+  Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB 공급자 응용 프로그램을 만들려면 다음 단계를 수행 해야 합니다.  
   
 1.  데이터 원본에 대한 연결 설정  
   
@@ -45,7 +45,7 @@ ms.locfileid: "63209756"
   
 -   [SQL Server Native Client의 OLE DB에서 OUTPUT 절 사용](using-the-output-clause-with-ole-db-in-sql-server-native-client.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Native Client&#40;OLE DB&#41;](../native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

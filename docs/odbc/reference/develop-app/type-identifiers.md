@@ -1,5 +1,5 @@
 ---
-title: 형식 식별자 | Microsoft Docs
+title: 유형 식별자 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 1d9fdfa2-e378-44fe-ac66-9743d9bbdd5a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 79aa4de5d722208195477f7ffef53cac6c61a2de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68093019"
 ---
 # <a name="type-identifiers"></a>형식 식별자
-ODBC SQL 및 C에 해당 하는 데이터의 종류를 설명 하기 위해 두 가지를 정의 *식별자*합니다. 형식 식별자는 SQL 열 또는 C 버퍼 유형을 설명합니다. 것을 **#define** 값 및 일반적으로 함수 인수로 전달 되었거나 메타 데이터에 반환 합니다.  
+ODBC는 SQL 및 C 데이터 형식을 설명 하기 위해 두 개의 *형식 식별자*집합을 정의 합니다. 유형 식별자는 SQL 열 또는 C 버퍼의 유형을 설명 합니다. **#Define** 값 이며 일반적으로 함수 인수로 전달 되거나 메타 데이터에서 반환 됩니다.  
   
- 다음을 호출 하는 예를 들어 **SQLBindParameter** SQL_DATE_STRUCT 형식의 변수 SQL 문에서 날짜 매개 변수를 바인딩합니다. C 형식 식별자 SQL_C_TYPE_DATE의 유형을 지정 합니다 *날짜* 변수와 SQL 유형 식별자 SQL_TYPE_DATE 동적 매개 변수의 형식을 지정 합니다.  
+ 예를 들어 **SQLBindParameter** 에 대 한 다음 호출은 SQL_DATE_STRUCT 형식의 변수를 SQL 문의 DATE 매개 변수에 바인딩합니다. C 형식 식별자 SQL_C_TYPE_DATE *날짜* 변수의 형식을 지정 하 고, SQL 형식 식별자는 동적 매개 변수의 형식을 지정 SQL_TYPE_DATE 합니다.  
   
 ```  
 SQL_DATE_STRUCT Date;  

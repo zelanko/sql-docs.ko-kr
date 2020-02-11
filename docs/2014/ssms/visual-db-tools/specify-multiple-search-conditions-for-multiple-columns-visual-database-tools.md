@@ -1,5 +1,5 @@
 ---
-title: 여러 열 (Visual Database Tools)에 여러 검색 조건 지정 | Microsoft Docs
+title: 여러 열에 여러 검색 조건 지정 (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3580f6365866ce752191e285b14f7d793be0cad0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204950"
 ---
 # <a name="specify-multiple-search-conditions-for-multiple-columns-visual-database-tools"></a>여러 열에 여러 검색 조건 지정(Visual Database Tools)
@@ -37,11 +37,13 @@ ms.locfileid: "63204950"
   
 #### <a name="to-specify-an-or-condition-for-two-different-columns"></a>두 개의 서로 다른 열에 OR 조건을 지정하려면  
   
-1.  [조건 창](visual-database-tools.md)에서 검색할 열을 추가합니다.  
+1.  
+  [조건 창](visual-database-tools.md)에서 검색할 열을 추가합니다.  
   
 2.  검색할 첫 번째 열의 **필터** 열에서 첫째 조건을 지정합니다.  
   
-3.  **필터** 열은 비워 두고 검색할 두 번째 데이터 열의 **또는...** 열에서 둘째 조건을 지정합니다.  
+3.  
+  **필터** 열은 비워 두고 검색할 두 번째 데이터 열의 **또는...** 열에서 둘째 조건을 지정합니다.  
   
      쿼리 및 뷰 디자이너는 다음과 같이 OR 조건을 포함하는 WHERE 절을 만듭니다.  
   
@@ -59,7 +61,8 @@ ms.locfileid: "63204950"
   
 #### <a name="to-specify-an-and-condition-for-two-different-columns"></a>두 개의 서로 다른 열에 AND 조건을 지정하려면  
   
-1.  [조건 창](visual-database-tools.md)에서 검색할 열을 추가합니다.  
+1.  
+  [조건 창](visual-database-tools.md)에서 검색할 열을 추가합니다.  
   
 2.  검색할 첫 번째 데이터 열의 **필터** 열에서 첫째 조건을 지정합니다.  
   
@@ -75,10 +78,10 @@ ms.locfileid: "63204950"
   
 4.  추가할 각 조건에 대하여 2단계와 3단계를 반복합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [AND에 우선 순위가 있는 조건 조합 &#40;Visual Database Tools&#41;](combine-conditions-when-and-has-precedence-visual-database-tools.md)   
- [OR에 우선 순위가 있는 조건 조합 &#40;Visual Database Tools&#41;](combine-conditions-when-or-has-precedence-visual-database-tools.md)   
- [조건 창의 검색 조건 결합 규칙 &#40;Visual Database Tools&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools &#40;및에 우선 순위가 있는 조건 조합&#41;](combine-conditions-when-and-has-precedence-visual-database-tools.md)   
+ [OR에 우선 순위가 있는 조건을 조합 하 여 Visual Database Tools &#40;&#41;](combine-conditions-when-or-has-precedence-visual-database-tools.md)   
+ [조건 창에서 검색 조건을 결합 하는 규칙 &#40;Visual Database Tools&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
  [검색 조건 지정&#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)  
   
   

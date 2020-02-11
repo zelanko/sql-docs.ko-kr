@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1853281863fe3d1e6f4fcc6b36f228f7df523bda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68189276"
 ---
 # <a name="job-properties-new-job-alerts-page"></a>작업 속성: 새 작업(경고 페이지)
-  이 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업에 대한 경고를 확인하고 구성할 수 있습니다.  
+  이 페이지를 사용 하 여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업에 대 한 경고를 확인 하 고 구성할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **경고 목록**  
  이 작업에 대한 경고를 나열합니다.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "68189276"
  **제거**  
  작업에서 선택한 경고를 제거하고 경고를 삭제합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Alerts](alerts.md)   
  [작업 구현](implement-jobs.md)  
   

@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5c176536675af707ec2e16fde80028beba8a019a
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73779986"
 ---
 # <a name="allocating-a-statement-handle"></a>문 핸들 할당
@@ -39,11 +39,11 @@ ms.locfileid: "73779986"
   
  *Foption* 을 SQL_ATTR_QUERY_TIMEOUT로 설정 하 여 **SQLSetStmtAttr** 를 호출 하면 서버 및 사용자가 장기 실행 쿼리를 보호 하는 데 도움이 되는 쿼리 시간 제한 간격이 설정 됩니다.  
   
- *Foption* 을 SQL_ATTR_MAX_LENGTH로 설정 하 여 **SQLSetStmtAttr** 를 호출 하면 개별 문이 검색할 수 있는 **텍스트** 및 **이미지** 데이터의 양이 제한 됩니다. *Foption* 을 SQL_ATTR_MAX_ROWS로 설정 하 여 **SQLSetStmtAttr** 를 호출 하면 모든 응용 프로그램에 필요한 경우 행 집합을 처음 *n 개* 행으로 제한 합니다. SQL_ATTR_MAX_ROWS를 설정하면 드라이버가 서버에 대해 SET ROWCOUNT 문을 실행합니다. 이는 트리거와 업데이트를 포함 하 여 모든 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문에 영향을 줍니다.  
+ *Foption* 을 SQL_ATTR_MAX_LENGTH로 설정 하 여 **SQLSetStmtAttr** 를 호출 하면 개별 문이 검색할 수 있는 **텍스트** 및 **이미지** 데이터의 양이 제한 됩니다. *Foption* 을 SQL_ATTR_MAX_ROWS로 설정 하 여 **SQLSetStmtAttr** 를 호출 하면 모든 응용 프로그램에 필요한 경우 행 집합을 처음 *n 개* 행으로 제한 합니다. SQL_ATTR_MAX_ROWS를 설정하면 드라이버가 서버에 대해 SET ROWCOUNT 문을 실행합니다. 이는 트리거와 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업데이트를 포함 하 여 모든 문에 영향을 줍니다.  
   
  따라서 이러한 옵션을 설정할 때는 주의를 기울여야 합니다. 연결 핸들의 모든 문 핸들에 대한 SQL_ATTR_MAX_LENGTH 및 SQL_ATTR_MAX_ROWS 설정을 동일하게 지정하는 것이 좋습니다. 드라이버가 특정 문 핸들에서 이들 옵션 값이 다르게 설정된 다른 핸들로 전환하는 경우 설정을 변경하려면 드라이버가 적절한 SET TEXTSIZE 및 SET ROWCOUNT 문을 생성해야 합니다. 사용자 SQL 문은 일괄 처리의 첫 번째 문을 포함할 수 있으므로 드라이버는 이러한 문을 사용자 SQL 문과 동일한 일괄 처리에 배치할 수 없습니다. 드라이버는 SET TEXTSIZE 문과 SET ROWCOUNT 문을 별개의 일괄 처리로 보내야 하며 이 경우 추가 서버 왕복이 발생합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [ODBC 쿼리 &#40;실행&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
+## <a name="see-also"></a>참고 항목  
+ [ODBC&#41;&#40;쿼리 실행](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

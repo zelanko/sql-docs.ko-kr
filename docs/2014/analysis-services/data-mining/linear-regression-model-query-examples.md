@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 917e41f6053aa499c7d3d7ca51a32b033591bdc1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084295"
 ---
 # <a name="linear-regression-model-query-examples"></a>선형 회귀 모델 쿼리 예제
@@ -31,24 +31,24 @@ ms.locfileid: "66084295"
   
  **내용 쿼리**  
   
- [데이터 마이닝 스키마 행 집합을 사용하여 모델에 사용되는 매개 변수 확인](#bkmk_Query1)  
+ [데이터 마이닝 스키마 행 집합을 사용 하 여 모델에 사용 되는 매개 변수 확인](#bkmk_Query1)  
   
- [DMX를 사용하여 모델의 회귀 수식 반환](#bkmk_Query2)  
+ [DMX를 사용 하 여 모델의 회귀 수식 반환](#bkmk_Query2)  
   
- [모델의 계수만 반환](#bkmk_Query3)  
+ [모델에 대 한 계수 반환](#bkmk_Query3)  
   
  **예측 쿼리**  
   
- [단일 쿼리를 사용하여 수입 예측](#bkmk_Query4)  
+ [단일 쿼리를 사용 하 여 수입 예측](#bkmk_Query4)  
   
  [회귀 모델에 예측 함수 사용](#bkmk_Query5)  
   
-##  <a name="bkmk_top"></a> 선형 회귀 모델에 대한 정보 찾기  
+##  <a name="bkmk_top"></a>선형 회귀 모델에 대 한 정보 찾기  
  선형 회귀 모델의 구조는 매우 단순하여 마이닝 모델은 데이터를 단일 노드로 나타내고 이 노드는 회귀 수식을 정의합니다. 자세한 내용은 [로지스틱 회귀 분석 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-logistic-regression-models.md)를 참조하세요.  
   
- [맨 위로 이동](#bkmk_top)  
+ [맨 위로 돌아가기](#bkmk_top)  
   
-###  <a name="bkmk_Query1"></a> 예제 쿼리 1: 데이터 마이닝 스키마 행 집합을 사용 하 여 모델에 사용할 매개 변수를 확인 합니다.  
+###  <a name="bkmk_Query1"></a>예제 쿼리 1: 데이터 마이닝 스키마 행 집합을 사용 하 여 모델에 사용 되는 매개 변수 확인  
  데이터 마이닝 스키마 행 집합을 쿼리하면 모델에 대한 메타데이터를 찾을 수 있습니다. 이러한 메타데이터로는 모델이 만들어진 시기, 모델이 마지막으로 처리된 시기, 모델의 기반이 되는 마이닝 구조의 이름, 예측 가능한 특성으로 지정된 열 이름 등이 포함됩니다. 모델을 처음으로 만들 때 사용한 매개 변수를 반환할 수도 있습니다.  
   
 ```  
@@ -66,9 +66,9 @@ WHERE MODEL_NAME = 'TM_PredictIncome'
 > [!NOTE]  
 >  매개 변수 설정 "`FORCE_REGRESSOR =` "는 FORCE_REGRESSOR 매개 변수의 현재 값이 Null임을 나타냅니다.  
   
- [맨 위로 이동](#bkmk_top)  
+ [맨 위로 돌아가기](#bkmk_top)  
   
-###  <a name="bkmk_Query2"></a> 예제 쿼리 2: 모델의 회귀 수식 검색  
+###  <a name="bkmk_Query2"></a>예제 쿼리 2: 모델의 회귀 수식 검색  
  다음 쿼리는 [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md)에서 사용한 타겟 메일링 데이터 원본을 사용하여 작성한 선형 회귀 모델의 마이닝 모델 콘텐츠를 반환합니다. 이 모델은 나이에 따른 고객 수입을 예측합니다.  
   
  이 쿼리는 회귀 수식이 들어 있는 노드의 콘텐츠를 반환합니다. 각 변수 및 계수는 NODE_DISTRIBUTION 중첩 테이블의 개별 행에 저장되어 있습니다. 전체 회귀 수식을 보려면 [Microsoft 트리 뷰어](browse-a-model-using-the-microsoft-tree-viewer.md)에서 **(All)** 노드를 클릭하고 **마이닝 범례**를 엽니다.  
@@ -79,7 +79,8 @@ FROM LR_PredictIncome.CONTENT
 ```  
   
 > [!NOTE]  
->  `SELECT <column name> from NODE_DISTRIBUTION`과 같은 쿼리를 사용하여 중첩 테이블의 개별 열을 참조하는 경우 **SUPPORT** 또는 **PROBABILITY**등의 일부 열은 대괄호로 묶어 동일한 이름의 예약 키워드와 구별해야 합니다.  
+>  
+  `SELECT <column name> from NODE_DISTRIBUTION`과 같은 쿼리를 사용하여 중첩 테이블의 개별 열을 참조하는 경우 **SUPPORT** 또는 **PROBABILITY**등의 일부 열은 대괄호로 묶어 동일한 이름의 예약 키워드와 구별해야 합니다.  
   
  예상 결과:  
   
@@ -87,16 +88,17 @@ FROM LR_PredictIncome.CONTENT
 |-----------------------|------------------------|---------------|-------------------|----------------|-----------------|  
 |Yearly Income|Missing|0|0.000457142857142857|0|1|  
 |Yearly Income|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  
-|나이|471.687717702463|0|0|126.969442359327|7|  
-|나이|234.680904692439|0|0|0|8|  
-|나이|45.4269617936399|0|0|126.969442359327|9|  
+|Age|471.687717702463|0|0|126.969442359327|7|  
+|Age|234.680904692439|0|0|0|8|  
+|Age|45.4269617936399|0|0|126.969442359327|9|  
 ||35793.5477381267|0|0|1012968919.28372|11|  
   
  반면 **마이닝 범례**에서 회귀 수식은 다음과 같이 나타납니다.  
   
  Yearly Income = 57,220.919 + 471.688 * (Age - 45.427)  
   
- **마이닝 범례**에서는 일부 숫자가 반올림되는 것을 알 수 있지만 NODE_DISTRIBUTION 테이블과 **마이닝 범례** 에 들어 있는 값은 기본적으로 동일합니다.  
+ 
+  **마이닝 범례**에서는 일부 숫자가 반올림되는 것을 알 수 있지만 NODE_DISTRIBUTION 테이블과 **마이닝 범례** 에 들어 있는 값은 기본적으로 동일합니다.  
   
  VALUETYPE 열의 값은 각 행에 들어 있는 정보의 종류를 나타내며 이는 결과를 프로그래밍 방식으로 처리할 경우에 유용합니다. 다음 표에서는 선형 회귀 수식에 대해 출력되는 값 유형을 보여 줍니다.  
   
@@ -114,9 +116,9 @@ FROM LR_PredictIncome.CONTENT
   
  회귀 모델에 대한 각각의 값 형식의 의미는 [선형 회귀 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)를 참조하세요.  
   
- [맨 위로 이동](#bkmk_top)  
+ [맨 위로 돌아가기](#bkmk_top)  
   
-###  <a name="bkmk_Query3"></a> 예제 쿼리 3: 모델의 계수만 반환  
+###  <a name="bkmk_Query3"></a>예제 쿼리 3: 모델에 대 한 계수 반환  
  다음 쿼리와 같이 VALUETYPE 열거형을 사용하면 회귀 수식의 계수만 반환할 수 있습니다.  
   
 ```  
@@ -135,7 +137,7 @@ FROM LR_PredictIncome.CONTENT
 |LR_PredictIncome|||  
 |LR_PredictIncome|35793.5477381267|11|  
   
- [맨 위로 이동](#bkmk_top)  
+ [맨 위로 돌아가기](#bkmk_top)  
   
 ## <a name="making-predictions-from-a-linear-regression-model"></a>선형 회귀 모델을 사용하여 예측 만들기  
  데이터 마이닝 디자이너의 마이닝 모델 예측 탭에서 선형 회귀 모델에 대한 예측 쿼리를 작성할 수 있습니다. 예측 쿼리 작성기는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 와 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 사용할 수 있습니다.  
@@ -143,10 +145,10 @@ FROM LR_PredictIncome.CONTENT
 > [!NOTE]  
 >  Excel용 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 데이터 마이닝 추가 기능이나 Excel용 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 데이터 마이닝 추가 기능을 사용하여 회귀 모델에 대한 쿼리를 만들 수도 있습니다. Excel용 데이터 마이닝 추가 기능은 회귀 모델을 만들지 않지만 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 인스턴스에 저장된 마이닝 모델을 찾아보고 쿼리할 수 있습니다.  
   
- [맨 위로 이동](#bkmk_top)  
+ [맨 위로 돌아가기](#bkmk_top)  
   
-###  <a name="bkmk_Query4"></a> 예제 쿼리 4: 단일 쿼리를 사용 하 여 수입 예측  
- 회귀 모델에서 단일 쿼리를 만드는 가장 쉬운 방법은 **단일 쿼리 입력** 대화 상자를 사용하는 것입니다. 예를 들어 적절 한 회귀 모델을 선택 하 여 다음과 같은 DMX 쿼리를 빌드할 수 있습니다 선택 **단일 쿼리**를 입력 한 다음 `20` 값으로 **Age**.  
+###  <a name="bkmk_Query4"></a>예제 쿼리 4: 단일 쿼리를 사용 하 여 수입 예측  
+ 회귀 모델에서 단일 쿼리를 만드는 가장 쉬운 방법은 **단일 쿼리 입력** 대화 상자를 사용하는 것입니다. 예를 들어 적절 한 회귀 모델을 선택 하 고 **단일 쿼리**를 선택한 다음 `20` **Age**값으로를 입력 하 여 다음과 같은 DMX 쿼리를 작성할 수 있습니다.  
   
 ```  
 SELECT [LR_PredictIncome].[Yearly Income]  
@@ -161,9 +163,9 @@ NATURAL PREDICTION JOIN
 |-------------------|  
 |45227.302092176|  
   
- [맨 위로 이동](#bkmk_top)  
+ [맨 위로 돌아가기](#bkmk_top)  
   
-###  <a name="bkmk_Query5"></a> 예제 쿼리 5: 예측 함수를 사용 하 여 회귀 모델  
+###  <a name="bkmk_Query5"></a>예제 쿼리 5: 회귀 모델에 예측 함수 사용  
  선형 회귀 모델에 여러 표준 예측 함수를 사용할 수 있습니다. 다음 예에서는 예측 쿼리 결과에 기술 통계를 추가하는 방법을 보여 줍니다. 이러한 결과에서 이 모델의 평균과 상당한 편차가 있다는 것을 알 수 있습니다.  
   
 ```  
@@ -182,7 +184,7 @@ NATURAL PREDICTION JOIN
 |-------------------|------------|  
 |45227.302092176|31827.1726561396|  
   
- [맨 위로 이동](#bkmk_top)  
+ [맨 위로 돌아가기](#bkmk_top)  
   
 ## <a name="list-of-prediction-functions"></a>예측 함수 목록  
  모든 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘은 공통 함수 집합을 지원합니다. 그러나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘은 다음 표에 나열된 추가 함수도 지원합니다.  
@@ -190,20 +192,20 @@ NATURAL PREDICTION JOIN
 |||  
 |-|-|  
 |예측 함수|사용|  
-|[IsDescendant & #40; DMX & #41;](/sql/dmx/isdescendant-dmx)|한 노드가 모델에서 다른 노드의 자식인지 여부를 확인합니다.|  
-|[IsInNode & #40; DMX & #41;](/sql/dmx/isinnode-dmx)|지정한 노드에 현재 사례가 포함되었는지 여부를 나타냅니다.|  
-|[PredictHistogram & #40; DMX & #41;](/sql/dmx/predicthistogram-dmx)|지정한 열에 대한 예측 값을 반환합니다.|  
-|[PredictNodeId & #40; DMX & #41;](/sql/dmx/predictnodeid-dmx)|각 사례에 대한 Node_ID를 반환합니다.|  
-|[PredictStdev & #40; DMX & #41;](/sql/dmx/predictstdev-dmx)|예측 값의 표준 편차를 반환합니다.|  
-|[PredictSupport&#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|지정한 상태에 대한 지원 값을 반환합니다.|  
-|[PredictVariance & #40; DMX & #41;](/sql/dmx/predictvariance-dmx)|지정한 열의 분산을 반환합니다.|  
+|[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|한 노드가 모델에서 다른 노드의 자식인지 여부를 확인합니다.|  
+|[IsInNode &#40;DMX&#41;](/sql/dmx/isinnode-dmx)|지정한 노드에 현재 사례가 포함되었는지 여부를 나타냅니다.|  
+|[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|지정한 열에 대한 예측 값을 반환합니다.|  
+|[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|각 사례에 대한 Node_ID를 반환합니다.|  
+|[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|예측 값의 표준 편차를 반환합니다.|  
+|[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|지정한 상태에 대한 지원 값을 반환합니다.|  
+|[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|지정한 열의 분산을 반환합니다.|  
   
  모든 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘에 공통적인 함수 목록에 대해서는 [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)을 참조하세요. 이러한 함수를 사용하는 방법은 [DMX&#40;Data Mining Extensions&#41; 함수 참조](/sql/dmx/data-mining-extensions-dmx-function-reference)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Microsoft 선형 회귀 알고리즘](microsoft-linear-regression-algorithm.md)   
  [데이터 마이닝 쿼리](data-mining-queries.md)   
  [Microsoft 선형 회귀 알고리즘 기술 참조](microsoft-linear-regression-algorithm-technical-reference.md)   
- [선형 회귀 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [선형 회귀 모델에 대 한 마이닝 모델 콘텐츠 &#40;Analysis Services 데이터 마이닝&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

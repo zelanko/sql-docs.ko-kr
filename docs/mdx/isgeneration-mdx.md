@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 401a11a10f190cda8efeaffa04e1025ef7f4e681
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68105232"
 ---
 # <a name="isgeneration-mdx"></a>IsGeneration(MDX)
@@ -35,7 +35,7 @@ IsGeneration(Member_Expression, Generation_Number)
  지정된 멤버가 평가되는 기준 세대를 지정하는 유효한 숫자 식입니다.  
   
 ## <a name="remarks"></a>설명  
- 합니다 **IsGeneration** 함수에서 반환 **true** 지정된 된 멤버는 지정 된 세대 번호를 하는 경우. 반환이 고, 그렇지 **false**합니다. 또한 지정 된 멤버가 빈 멤버를 평가 하는 경우는 **IsGeneration** 함수에서 반환 **false**합니다.  
+ **Isgeneration** 함수는 지정 된 멤버가 지정 된 세대 번호에 있으면 **true** 를 반환 합니다. 그렇지 않으면 함수는 **false**를 반환 합니다. 또한 지정 된 멤버가 빈 멤버로 평가 되는 경우 **Isgeneration** 함수는 **false**를 반환 합니다.  
   
  세대 인덱싱을 위해 리프 멤버는 세대 인덱스 0입니다. 리프가 아닌 멤버의 세대 인덱스는 지정된 멤버에 대한 모든 자식 멤버의 합집합에서 가장 높은 세대 인덱스를 가져와서 1을 더하는 방식으로 결정됩니다. 리프가 아닌 멤버의 세대 인덱스의 결정 방법으로 인해 리프가 아닌 특정 멤버는 둘 이상의 세대에 속할 수 있습니다.  
   
@@ -52,7 +52,7 @@ IsGeneration(Member_Expression, Generation_Number)
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>참고 항목  
+ [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

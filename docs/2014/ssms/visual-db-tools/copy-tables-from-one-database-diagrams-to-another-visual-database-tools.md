@@ -1,5 +1,5 @@
 ---
-title: 데이터베이스 다이어그램에서 다른 (Visual Database Tools)으로 테이블 복사 | Microsoft Docs
+title: 한 데이터베이스 다이어그램에서 다른 다이어그램으로 테이블 복사 (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d1b0d70a5d8121963d424f25eef517af7cde4ba7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62720067"
 ---
 # <a name="copy-tables-from-one-database-diagrams-to-another-visual-database-tools"></a>한 데이터베이스 다이어그램에서 다른 다이어그램으로 테이블 복사(Visual Database Tools)
@@ -39,8 +39,8 @@ ms.locfileid: "62720067"
   
  어느 한 쪽 다이어그램에서 테이블을 편집하면 변경 내용은 두 다이어그램에 모두 반영됩니다. 마찬가지로 어느 한 쪽 다이어그램에서 테이블을 저장하면 해당 테이블은 더 이상 두 다이어그램 모두에서 "수정"된 것으로 간주되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [데이터베이스 다이어그램 작업 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools를 &#40;데이터베이스 다이어그램 작업&#41;](visual-database-tools.md)   
  [다이어그램에 테이블 추가&#40;Visual Database Tools&#41;](add-tables-to-diagrams-visual-database-tools.md)  
   
   

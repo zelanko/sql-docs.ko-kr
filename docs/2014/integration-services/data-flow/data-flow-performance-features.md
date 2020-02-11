@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e48e9fb50ae749bd75162bb458268ecbe9b79d64
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637828"
 ---
 # <a name="data-flow-performance-features"></a>데이터 흐름 성능 기능
@@ -75,12 +75,17 @@ ms.locfileid: "73637828"
  병렬 실행은 실제 프로세서나 논리적 프로세서가 여러 개 있는 컴퓨터에서 성능을 향상시킵니다. 패키지에 있는 다른 태스크의 병렬 실행을 지원하기 위해 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 `MaxConcurrentExecutables`와 `EngineThreads`라는 두 속성을 사용합니다.  
   
 #### <a name="the-maxconcurrentexcecutables-property"></a>MaxConcurrentExcecutables 속성  
- `MaxConcurrentExecutables` 속성은 패키지 자체의 속성입니다. 이 속성은 동시에 실행할 수 있는 태스크 수를 정의합니다. 기본값인 -1은 논리적 프로세서나 실제 프로세서 수에서 2를 더한 수를 의미합니다.  
+ 
+  `MaxConcurrentExecutables` 속성은 패키지 자체의 속성입니다. 이 속성은 동시에 실행할 수 있는 태스크 수를 정의합니다. 기본값인 -1은 논리적 프로세서나 실제 프로세서 수에서 2를 더한 수를 의미합니다.  
   
- 이 속성이 작동하는 방식을 이해하기 위해 세 개의 데이터 흐름 태스크가 있는 샘플 패키지를 살펴 봅니다. `MaxConcurrentExecutables`를 3으로 설정하면 세 개의 데이터 흐름 태스크가 모두 동시에 실행될 수 있습니다. 그러나 각 데이터 흐름 태스크에 원본에서 대상으로의 실행 트리가 10개 있다고 가정할 때 `MaxConcurrentExecutables`를 3으로 설정하면 각 데이터 흐름 태스크 내에서 실행 트리가 병렬로 실행되지 않을 수 있습니다.  
+ 이 속성이 작동하는 방식을 이해하기 위해 세 개의 데이터 흐름 태스크가 있는 샘플 패키지를 살펴 봅니다. 
+  `MaxConcurrentExecutables`를 3으로 설정하면 세 개의 데이터 흐름 태스크가 모두 동시에 실행될 수 있습니다. 그러나 각 데이터 흐름 태스크에 원본에서 대상으로의 실행 트리가 10개 있다고 가정할 때 
+  `MaxConcurrentExecutables`를 3으로 설정하면 각 데이터 흐름 태스크 내에서 실행 트리가 병렬로 실행되지 않을 수 있습니다.  
   
 #### <a name="the-enginethreads-property"></a>EngineThreads 속성  
- `EngineThreads` 속성은 각 데이터 흐름 태스크의 속성입니다. 이 속성은 데이터 흐름 엔진에서 만들어 병렬로 실행할 수 있는 스레드 수를 정의합니다. `EngineThreads` 속성은 데이터 흐름 엔진에서 원본에 대해 만드는 원본 스레드와 해당 엔진에서 변환 및 대상에 대해 만드는 작업자 스레드 모두에 동일하게 적용됩니다. 따라서 `EngineThreads`를 10으로 설정하면 엔진에서 원본 스레드와 작업자 스레드를 각각 10개까지 만들 수 있습니다.  
+ 
+  `EngineThreads` 속성은 각 데이터 흐름 태스크의 속성입니다. 이 속성은 데이터 흐름 엔진에서 만들어 병렬로 실행할 수 있는 스레드 수를 정의합니다. 
+  `EngineThreads` 속성은 데이터 흐름 엔진에서 원본에 대해 만드는 원본 스레드와 해당 엔진에서 변환 및 대상에 대해 만드는 작업자 스레드 모두에 동일하게 적용됩니다. 따라서 `EngineThreads`를 10으로 설정하면 엔진에서 원본 스레드와 작업자 스레드를 각각 10개까지 만들 수 있습니다.  
   
  이 속성이 작동하는 방식을 이해하기 위해 세 개의 데이터 흐름 태스크가 있는 샘플 패키지를 살펴 봅니다. 각 데이터 흐름 태스크에 10개의 원본에서 대상으로의 실행 트리가 포함되어 있을 때 각 데이터 흐름 태스크에서 EngineThreads를 10으로 설정하면 30개의 실행 트리가 모두 동시에 실행될 수 있습니다.  
   
@@ -90,7 +95,7 @@ ms.locfileid: "73637828"
 ## <a name="configuring-individual-data-flow-components"></a>개별 데이터 흐름 구성 요소 구성  
  성능 향상을 위해 개별 데이터 흐름 구성 요소를 구성하려면 몇 가지 일반적인 지침을 따라야 합니다. 데이터 흐름 구성 요소의 각 유형(원본, 변환 및 대상)과 관련된 지침도 있습니다.  
   
-### <a name="general-guidelines"></a>일반적인 지침  
+### <a name="general-guidelines"></a>일반 지침  
  데이터 흐름 구성 요소와 상관없이 성능 향상을 위해서는 쿼리를 최적화하고 불필요한 정렬을 사용하지 않는다는 두 가지 일반적인 지침을 따라야 합니다.  
   
 #### <a name="optimize-queries"></a>쿼리 최적화  
@@ -99,7 +104,8 @@ ms.locfileid: "73637828"
  쿼리를 생성하려면 쿼리를 직접 입력하거나 쿼리 작성기를 사용합니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 패키지를 실행하면 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너의 진행률 탭에 경고가 나열됩니다. 이러한 경고에는 원본에서 데이터 흐름에 제공되지만 나중에 다운스트림 데이터 흐름 구성 요소에 사용되지 않는 데이터 열이 식별되어 포함됩니다. `RunInOptimizedMode` 속성을 사용하여 이러한 열을 자동으로 제거할 수 있습니다.  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 패키지를 실행하면 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너의 진행률 탭에 경고가 나열됩니다. 이러한 경고에는 원본에서 데이터 흐름에 제공되지만 나중에 다운스트림 데이터 흐름 구성 요소에 사용되지 않는 데이터 열이 식별되어 포함됩니다. 
+  `RunInOptimizedMode` 속성을 사용하여 이러한 열을 자동으로 제거할 수 있습니다.  
   
 #### <a name="avoid-unnecessary-sorting"></a>불필요한 정렬 방지  
  정렬은 근본적으로 느린 작업이므로 불필요한 정렬을 방지하면 패키지 데이터 흐름의 성능을 향상시킬 수 있습니다.  
@@ -125,7 +131,7 @@ ms.locfileid: "73637828"
  집계, 유사 항목 조회, 유사 항목 그룹화, 조회, 병합 조인 및 느린 변경 차원 변환의 성능을 향상시키려면 이 섹션의 제안 사항을 사용합니다.  
   
 #### <a name="aggregate-transformation"></a>집계 변환  
- 집계 변환에는 `Keys`, `KeysScale`, `CountDistinctKeys` 및 `CountDistinctScale` 속성이 포함됩니다. 이 속성은 변환이 캐시하는 데이터에 필요한 메모리 양을 미리 할당할 수 있도록 하여 성능을 향상시킵니다. **Group by** 연산의 결과로 반환 될 그룹의 정확한 수 또는 대략적인 수를 알고 있는 경우에는 각각 `Keys` 및 `KeysScale` 속성을 설정 합니다. **고유 카운트** 연산의 결과로 반환 될 고유 값의 정확한 수 또는 대략적인 수를 알고 있는 경우에는 각각 `CountDistinctKeys` 및 `CountDistinctScale` 속성을 설정 합니다.  
+ 집계 변환에는 `Keys`, `KeysScale`, `CountDistinctKeys` 및 `CountDistinctScale` 속성이 포함됩니다. 이 속성은 변환이 캐시하는 데이터에 필요한 메모리 양을 미리 할당할 수 있도록 하여 성능을 향상시킵니다. **Group by** 연산의 결과로 반환 될 그룹의 정확한 수 또는 대략적인 수를 아는 경우 각각 `Keys` 및 `KeysScale` 속성을 설정 합니다. **고유 카운트** 연산의 결과로 반환 될 고유 값의 정확한 수 또는 대략적인 수를 아는 경우 각각 `CountDistinctKeys` 및 `CountDistinctScale` 속성을 설정 합니다.  
   
  한 데이터 흐름에 여러 집계를 만들어야 하는 경우 여러 변환을 만드는 대신 하나의 집계 변환을 사용하는 여러 집계를 만드십시오. 이 방법을 사용하면 한 집계가 다른 집계의 하위 집합인 경우 성능이 향상됩니다. 이는 변환이 한 번만 들어오는 데이터를 검색하고 내부 스토리지를 최적화할 수 있기 때문입니다. 예를 들어 집계에서 GROUP BY 절 및 AVG 집계를 사용하는 경우 이를 하나의 변환으로 조합하면 성능을 향상시킬 수 있습니다. 그러나 하나의 집계 변환 내에서 여러 집계를 수행하면 집계 작업이 직렬화되므로 여러 집계가 독립적으로 계산되어야 하는 경우 성능이 향상되지 않을 수 있습니다.  
   
@@ -145,7 +151,7 @@ ms.locfileid: "73637828"
   
  고급 사용자는 느린 변경 차원 처리를 위해 대규모 차원에 대해 최적화된 사용자 지정 데이터 흐름을 디자인할 수 있습니다. 이 방법에 대한 설명 및 예는 백서 [Project REAL: 비즈니스 인텔리전스 ETL 디자인 방법](https://www.microsoft.com/download/details.aspx?id=14582)의 "고유 차원 시나리오" 섹션을 참조하십시오.  
   
-### <a name="destinations"></a>대상  
+### <a name="destinations"></a>Destinations  
  대상에서 성능을 향상시키려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상을 사용하고 대상의 성능을 테스트하십시오.  
   
 #### <a name="sql-server-destination"></a>SQL Server 대상  

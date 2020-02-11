@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6deb484f6e213e7089c3aef272ebaebeba13a913
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832067"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>데이터 프로파일링 태스크 편집기(프로필 요청 페이지)
-  **데이터 프로파일링 태스크 편집기** 의 **프로필 요청 페이지** 를 사용하여 계산할 프로필을 선택하고 구성할 수 있습니다. 단일 데이터 프로파일링 태스크에서 여러 테이블 또는 뷰에 있는 여러 열이나 열 조합에 대해 여러 프로필을 컴퓨팅할 수 있습니다.  
+  **데이터 프로파일링 태스크 편집기** 의 **프로필 요청 페이지** 를 사용하여 컴퓨팅할 프로필을 선택하고 구성할 수 있습니다. 단일 데이터 프로파일링 태스크에서 여러 테이블 또는 뷰에 있는 여러 열이나 열 조합에 대해 여러 프로필을 컴퓨팅할 수 있습니다.  
   
  데이터 프로파일링 태스크를 사용하는 방법에 대한 자세한 내용은 [데이터 프로파일링 태스크 설정](data-profiling-task.md)을 참조하세요. 데이터 프로필 뷰어를 사용하여 데이터 프로파일링 태스크의 출력을 분석하는 방법에 대한 자세한 내용은 [데이터 프로필 뷰어](data-profile-viewer.md)를 참조하세요.  
   
@@ -146,7 +146,7 @@ ms.locfileid: "62832067"
   
 -   [값 포함 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 프로파일링 태스크 편집기&#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)   
  [단일 테이블 빠른 프로필 형식&#40;데이터 프로파일링 태스크&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   

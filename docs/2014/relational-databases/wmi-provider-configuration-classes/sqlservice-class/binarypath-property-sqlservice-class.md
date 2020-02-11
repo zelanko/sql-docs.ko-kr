@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0444399eb056b733bf0c9f9e7506b434e06b84db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63223284"
 ---
 # <a name="binarypath-property-sqlservice-class-"></a>BinaryPath 속성(SqlService 클래스)
@@ -37,15 +37,15 @@ object
 ```  
   
 ## <a name="parts"></a>부분  
- *object*  
+ *개체가*  
  서비스를 나타내는 [SqlService 클래스](sqlservice-class.md) 개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  서비스의 이진 경로를 지정하는 문자열 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [서비스 시작 및 중지](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

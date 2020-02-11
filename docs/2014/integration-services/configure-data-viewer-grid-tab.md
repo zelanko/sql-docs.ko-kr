@@ -15,27 +15,28 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 774cba19a7762a41d60fe7cf90d63de275e59b71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060663"
 ---
 # <a name="configure-data-viewer-grid-tab"></a>데이터 뷰어 구성(표 탭)
+  
   **데이터 뷰어 구성** 대화 상자의 **표** 탭을 사용하여 표시할 열을 지정할 수 있습니다. 표 형태 차트에서는 데이터 레코드를 표의 행으로 표시합니다. 차트는 한 버퍼의 내용만 반영합니다.  
   
-## <a name="options"></a>변수  
- **사용 하지 않은 열**  
+## <a name="options"></a>옵션  
+ **사용하지 않은 열**  
  열을 선택한 다음 단일 화살표를 클릭하여 열을 **표시된 열** 목록으로 이동합니다. 모든 열을 **표시된 열** 목록으로 이동하려면 이중 화살표를 클릭합니다.  
   
- **표시 된 열**  
+ **표시된 열**  
  열 이름을 선택한 다음 단일 화살표를 클릭하여 열을 **사용하지 않은 열** 목록으로 이동합니다. 모든 열 이름을 **사용하지 않은 열** 목록으로 이동하려면 이중 화살표를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [데이터 뷰어 구성 &#40;일반 탭&#41;](../../2014/integration-services/configure-data-viewer-general-tab.md)   
- [데이터 뷰어 구성 &#40;세로 막대형 차트 탭&#41;](../../2014/integration-services/configure-data-viewer-column-chart-tab.md)   
- [데이터 뷰어 구성 &#40;히스토그램 탭&#41;](../../2014/integration-services/configure-data-viewer-histogram-tab.md)   
- [데이터 뷰어 구성 &#40;산 점도 탭&#41;](../../2014/integration-services/configure-data-viewer-scatter-plot-tab.md)   
+## <a name="see-also"></a>참고 항목  
+ [데이터 뷰어 &#40;일반 탭&#41;구성](../../2014/integration-services/configure-data-viewer-general-tab.md)   
+ [데이터 뷰어 &#40;세로 막대형 차트 탭 구성&#41;](../../2014/integration-services/configure-data-viewer-column-chart-tab.md)   
+ [데이터 뷰어 &#40;히스토그램 탭을 구성&#41;](../../2014/integration-services/configure-data-viewer-histogram-tab.md)   
+ [데이터 뷰어 &#40;산 점도 탭&#41;구성](../../2014/integration-services/configure-data-viewer-scatter-plot-tab.md)   
  [데이터 흐름](data-flow/data-flow.md)   
  [데이터 흐름 디버깅](troubleshooting/debugging-data-flow.md)  
   

@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 20f25474b15ecf58c45383a8290bb13f956a5db8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073459"
 ---
 # <a name="custom-rollup-operators-in-parent-child-dimensions"></a>부모-자식 차원의 사용자 지정 롤업 연산자
@@ -33,7 +33,7 @@ ms.locfileid: "66073459"
 ## <a name="custom-rollup-precedence"></a>사용자 지정 롤업 선행 규칙  
  선행 규칙에 따라, 계층 구조에서 현재 수준의 원본 특성에 대한 사용자 지정 롤업 연산자는 상위 수준의 사용자 지정 멤버 수식을 재정의합니다. 그러나 현재 수준의 사용자 지정 롤업 연산자는 상위 수준의 사용자 지정 멤버 수식에 의해 재정의됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [사용자 지정 멤버 수식 정의](attribute-properties-define-custom-member-formulas.md)   
  [부모-자식 차원의 단항 연산자](parent-child-dimension-attributes-unary-operators.md)  
   
