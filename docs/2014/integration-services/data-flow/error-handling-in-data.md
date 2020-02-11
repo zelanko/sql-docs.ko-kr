@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8b5a98877e04a077bf1bb1c0c527500f3102b862
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827151"
 ---
 # <a name="error-handling-in-data"></a>데이터 오류 처리
@@ -46,7 +46,9 @@ ms.locfileid: "62827151"
   
  ![오류 출력이 있는 데이터 흐름](../media/mw-dts-11.gif "오류 출력이 있는 데이터 흐름")  
   
- 데이터 열 외에도 오류 출력에는 **ErrorCode** 및 **ErrorColumn** 열이 포함됩니다. **ErrorCode** 열은 오류를 식별하며 **ErrorColumn** 에는 오류 열의 계보 식별자가 포함됩니다. 이러한 열의 메타데이터를 보려면 오류 출력을 데이터 흐름의 다음 구성 요소로 연결하는 경로를 클릭합니다. **ErrorColumn** 열의 값이 0으로 설정되는 경우도 있습니다. 이는 오류 조건이 단일 열 대신 전체 행에 영향을 주는 경우 발생합니다. 조회 변환에서 조회가 실패하는 경우를 예로 들 수 있습니다.  
+ 데이터 열 외에도 오류 출력에는 **ErrorCode** 및 **ErrorColumn** 열이 포함됩니다. 
+  **ErrorCode** 열은 오류를 식별하며 **ErrorColumn** 에는 오류 열의 계보 식별자가 포함됩니다. 이러한 열의 메타데이터를 보려면 오류 출력을 데이터 흐름의 다음 구성 요소로 연결하는 경로를 클릭합니다. 
+  **ErrorColumn** 열의 값이 0으로 설정되는 경우도 있습니다. 이는 오류 조건이 단일 열 대신 전체 행에 영향을 주는 경우 발생합니다. 조회 변환에서 조회가 실패하는 경우를 예로 들 수 있습니다.  
   
  자세한 내용은 [데이터 흐름](data-flow.md) 및 [Integration Services 경로](integration-services-paths.md)를 참조하세요.  
   
@@ -68,16 +70,16 @@ ms.locfileid: "62827151"
 ## <a name="adding-the-error-description"></a>오류 설명 추가  
  기본적으로 오류 출력에는 숫자 오류 코드가 제공되며 일반적으로 오류가 발생한 열의 ID가 포함됩니다. 스크립트 구성 요소를 사용하면 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> 인터페이스의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 메서드를 호출하는 단일 스크립트 줄을 통해 추가 열에 오류 설명을 포함할 수 있습니다.  
   
- 스크립트 구성 요소는 캡처할 오류를 포함하는 데이터 흐름 구성 요소의 임의 다운스트림에서 데이터 흐름의 오류 세그먼트에 추가할 수 있지만 대상에 작성되는 오류 행 바로 앞에 배치하는 것이 일반적입니다. 이렇게 하면 스크립트가 작성된 오류 행에 대한 설명만 조회합니다. 예를 들어 데이터 흐름의 오류 세그먼트가 일부 오류를 수정한 다음 오류 대상에 이러한 행을 쓰지 않을 수 있습니다. 자세한 내용은 [스크립트 구성 요소를 사용 하 여 오류 출력 향상](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)합니다.  
+ 스크립트 구성 요소는 캡처할 오류를 포함하는 데이터 흐름 구성 요소의 임의 다운스트림에서 데이터 흐름의 오류 세그먼트에 추가할 수 있지만 대상에 작성되는 오류 행 바로 앞에 배치하는 것이 일반적입니다. 이렇게 하면 스크립트가 작성된 오류 행에 대한 설명만 조회합니다. 예를 들어 데이터 흐름의 오류 세그먼트가 일부 오류를 수정한 다음 오류 대상에 이러한 행을 쓰지 않을 수 있습니다. 자세한 내용은 [스크립트 구성 요소를 사용 하 여 오류 출력 향상](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)을 참조 하세요.  
   
 ### <a name="to-configure-an-error-output"></a>오류 출력을 구성하려면  
   
 -   [데이터 흐름 구성 요소에서 오류 출력 구성](../configure-an-error-output-in-a-data-flow-component.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 흐름](data-flow.md)   
- [변환을 사용하여 데이터 변환](transformations/transform-data-with-transformations.md)   
- [경로에 구성 요소 연결](../connect-components-with-paths.md)   
+ [변환을 사용 하 여 데이터 변환](transformations/transform-data-with-transformations.md)   
+ [경로를 사용 하 여 구성 요소 연결](../connect-components-with-paths.md)   
  [데이터 흐름 태스크](../control-flow/data-flow-task.md)   
  [데이터 흐름](data-flow.md)  
   
