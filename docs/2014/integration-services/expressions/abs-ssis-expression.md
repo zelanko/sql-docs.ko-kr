@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7fafc0ba09a8345e0639016aadfdef185900589d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769619"
 ---
 # <a name="abs-ssis-expression"></a>ABS(SSIS 식)
@@ -37,7 +37,7 @@ ABS(numeric_expression)
 ## <a name="result-types"></a>결과 형식  
  함수에 전달된 숫자 식의 데이터 형식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  인수가 Null이면 ABS 결과도 Null입니다.  
   
 ## <a name="expression-examples"></a>식 예  
@@ -54,7 +54,7 @@ ABS(1.23)
 ABS(@HighTemperature - @LowTemperature)  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [함수&#40;SSIS 식&#41;](functions-ssis-expression.md)  
   
   

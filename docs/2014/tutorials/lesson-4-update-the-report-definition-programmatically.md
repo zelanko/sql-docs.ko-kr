@@ -1,5 +1,5 @@
 ---
-title: '4단원: 보고서 정의 프로그래밍 방식으로 업데이트할 | Microsoft Docs'
+title: '4 단원: 프로그래밍 방식으로 보고서 정의 업데이트 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 703643f2c51ec86090cb03ba7089080dfe416620
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63137461"
 ---
 # <a name="lesson-4-update-the-report-definition-programmatically"></a>4단원: 프로그래밍 방식으로 보고서 정의 업데이트
@@ -22,7 +22,7 @@ ms.locfileid: "63137461"
   
 ### <a name="to-update-the-report-definition"></a>보고서 정의를 업데이트하려면  
   
-1.  Program.cs 파일에서 UpdateReportDefinition() 메서드의 코드를 바꿉니다 (의 경우 module1.vb) 라는 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) 다음 코드를 사용 하 여:  
+1.  Program.cs 파일 (의 경우 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]module1.vb)에서 UpdateReportDefinition () 메서드에 대 한 코드를 다음 코드로 바꿉니다.  
   
     ```csharp  
     private void UpdateReportDefinition()  
@@ -88,9 +88,9 @@ ms.locfileid: "63137461"
     ```  
   
 ## <a name="next-lesson"></a>다음 단원  
- 다음 단원에서는 업데이트된 보고서 정의를 다시 보고서 서버에 저장합니다. [5단원: 보고서 서버에 보고서 정의 게시](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md)합니다.  
+ 다음 단원에서는 업데이트된 보고서 정의를 다시 보고서 서버에 저장합니다. [5 단원: 보고서 정의를 보고서 서버에 게시를](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md)참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [RDL 스키마에서 생성 된 클래스를 사용 하 여 보고서를 업데이트 하는 중 &#40;SSRS 자습서&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  
+## <a name="see-also"></a>참고 항목  
+ [RDL 스키마 &#40;생성 된 클래스를 사용 하 여 보고서 업데이트 (SSRS 자습서&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  
   
   

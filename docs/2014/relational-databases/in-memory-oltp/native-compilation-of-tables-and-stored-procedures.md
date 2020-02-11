@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e70ab55fedcc5053cf82a78c040c850a23824eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63075200"
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>테이블과 저장 프로시저의 네이티브 컴파일
@@ -46,7 +46,7 @@ where description = 'XTP Native DLL'
 >  데이터베이스를 시작하는 중에 SQL Server가 데이터베이스 복구에 필요한 모든 테이블에 대한 DLL을 컴파일합니다. 데이터베이스를 다시 시작하기 직전에 테이블이 삭제된 경우, 파일의 체크포인트나 트랜잭션 로그에 테이블의 잔해가 남아있을 수 있으므로 데이터베이스를 시작하는 중에 테이블에 대한 DLL이 다시 컴파일될 가능성이 있습니다. 다시 시작한 후에 일반 정리 프로세스에 의해 DLL이 언로드되고 파일이 삭제됩니다.  
   
 ## <a name="native-compilation-of-tables"></a>테이블의 네이티브 컴파일  
- `CREATE TABLE` 문을 사용하여 메모리 최적화 테이블을 만들면 데이터베이스 메타데이터에 테이블 정보가 기록되고 메모리에 테이블 및 인덱스 구조가 작성됩니다. 또한 테이블이 DLL로 컴파일됩니다.  
+ ph x="1" /&gt; 문을 사용하여 메모리 최적화 테이블을 만들면 데이터베이스 메타데이터에 테이블 정보가 기록되고 메모리에 테이블 및 인덱스 구조가 작성됩니다. 또한 테이블이 DLL로 컴파일됩니다.  
   
  다음 예제 스크립트에서는 데이터베이스와 메모리 최적화 테이블을 만듭니다.  
   
@@ -115,12 +115,12 @@ go
  테이블 및 저장 프로시저의 네이티브 컴파일에서는 메모리 내 OLTP 컴파일러를 사용합니다. 이 컴파일러는 디스크에 기록되고 메모리에 로드되는 파일을 생성합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 다음과 같은 메커니즘을 사용하여 이러한 파일에 대한 액세스를 제한합니다.  
   
 ### <a name="native-compiler"></a>기본 컴파일러  
- 컴파일러 실행 파일과 네이티브 컴파일에 필요한 이진 파일 및 헤더 파일은 MSSQL\Binn\Xtp 폴더 아래에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 일부로 설치됩니다. 따라서 기본 인스턴스가 C:\Program Files 아래에 설치 하는 경우 컴파일러 파일 설치할지에서 C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12 합니다. MSSQLSERVER\MSSQL\Binn\Xtp 합니다.  
+ 컴파일러 실행 파일과 네이티브 컴파일에 필요한 이진 파일 및 헤더 파일은 MSSQL\Binn\Xtp 폴더 아래에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 일부로 설치됩니다. 따라서 기본 인스턴스가 c:\program files 아래에 설치 되는 경우 컴파일러 파일은 c:\program files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.에 설치 됩니다. MSSQLSERVER\MSSQL\Binn\Xtp.  
   
  컴파일러에 대한 액세스를 제한하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 ACL(액세스 제어 목록)을 사용하여 이진 파일에 대한 액세스를 제한합니다. 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이진 파일은 ACL을 통해 수정이나 변조로부터 보호됩니다. 기본 컴파일러의 ACL은 컴파일러의 사용도 제한합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정 및 시스템 관리자에게만 기본 컴파일러 파일에 대한 읽기 및 실행 권한이 있습니다.  
   
 ### <a name="files-generated-by-a-native-compilation"></a>네이티브 컴파일에서 생성된 파일  
- 테이블이나 저장 프로시저가 컴파일될 때 생성되는 파일에는 DDL과 .c, .obj, .xml 및 .pdb 확장명을 사용하는 파일을 비롯한 중간 파일이 있습니다. 생성된 파일은 기본 데이터 폴더의 하위 폴더에 저장됩니다. 하위 폴더를 Xtp라고 합니다. 기본 데이터 폴더를 사용 하 여 기본 인스턴스를 설치할 때 생성된 된 파일은 C:\Program 파일에 배치\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12 합니다. MSSQLSERVER\MSSQL\DATA\Xtp 합니다.  
+ 테이블이나 저장 프로시저가 컴파일될 때 생성되는 파일에는 DDL과 .c, .obj, .xml 및 .pdb 확장명을 사용하는 파일을 비롯한 중간 파일이 있습니다. 생성된 파일은 기본 데이터 폴더의 하위 폴더에 저장됩니다. 하위 폴더를 Xtp라고 합니다. 기본 데이터 폴더를 사용 하 여 기본 인스턴스를 설치 하는 경우 생성 된 파일은 C:\Program\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]files \MSSQL12.에 배치 됩니다. MSSQLSERVER\MSSQL\DATA\Xtp.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 생성된 DDL의 변조를 다음 세 가지 방법으로 방지합니다.  
   
@@ -132,8 +132,8 @@ go
   
  생성된 파일을 관리하는 데는 사용자 개입이 필요하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 필요에 따라 이러한 파일을 만들고 제거합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [메모리 액세스에 최적화된 테이블](memory-optimized-tables.md)   
+## <a name="see-also"></a>참고 항목  
+ [메모리 액세스에 최적화 된 테이블](memory-optimized-tables.md)   
  [고유하게 컴파일된 저장 프로시저](natively-compiled-stored-procedures.md)  
   
   

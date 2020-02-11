@@ -1,5 +1,5 @@
 ---
-title: SAP BW 연결 관리자 편집기 | Microsoft Docs
+title: 연결 관리자 편집기 SAP BW | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0da11d8f49c1de88297a9bf8876588c8b5aeb81b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056278"
 ---
 # <a name="sap-bw-connection-manager-editor"></a>SAP BW 연결 관리자 편집기
@@ -33,11 +33,11 @@ ms.locfileid: "66056278"
   
     -   SAP BW 연결 관리자를 두 번 클릭합니다.  
   
-         -또는-  
+         또는  
   
     -   SAP BW 연결 관리자를 마우스 오른쪽 단추로 클릭한 다음 **편집**을 선택합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
   
 > [!NOTE]  
 >  연결 관리자를 구성하는 데 필요한 값 중 모르는 것이 있으면 SAP 관리자에게 문의하십시오.  
@@ -54,7 +54,7 @@ ms.locfileid: "66056278"
  **암호**  
  사용자 이름에 사용할 암호를 지정합니다.  
   
- **단일 응용 프로그램 서버 사용**  
+ **단일 애플리케이션 서버 사용**  
  단일 애플리케이션 서버에 연결합니다.  
   
  부하 분산 서버 그룹에 연결하려면 **부하 분산 사용** 옵션을 사용합니다.  
@@ -112,7 +112,7 @@ ms.locfileid: "66056278"
  **연결 테스트**  
  사용자가 제공한 값을 사용하여 연결을 테스트합니다. **연결 테스트**를 클릭하면 메시지 상자가 표시되고 연결이 성공했는지 여부가 표시됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Microsoft Connector 1.1 for SAP BW F1 도움말](microsoft-connector-for-sap-bw-f1-help.md)  
   
   

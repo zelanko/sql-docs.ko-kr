@@ -1,5 +1,5 @@
 ---
-title: SQL Server (SQL Server 유틸리티)의 관리 되는 인스턴스에서 유틸리티 컬렉션에 대 한 프록시 계정 설정 변경 | Microsoft Docs
+title: SQL Server (SQL Server 유틸리티) Managed Instance에서 유틸리티 컬렉션 집합에 대 한 프록시 계정을 변경 합니다. Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: efa4af0c12379abaab2d810fd39ce6d7a3b0afef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62806327"
 ---
 # <a name="change-the-proxy-account-for-the-utility-collection-set-on-a-managed-instance-of-sql-server-sql-server-utility"></a>SQL Server 관리되는 인스턴스의 유틸리티 컬렉션 집합을 위한 프록시 계정 변경(SQL Server 유틸리티)
@@ -36,7 +36,7 @@ ms.locfileid: "62806327"
   
     -   표시되는 메시지에 따라 마법사를 완료하여 새 프록시 계정을 지정합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 유틸리티 기능 및 태스크](sql-server-utility-features-and-tasks.md)   
  [SQL Server 유틸리티 문제 해결](../../database-engine/troubleshoot-the-sql-server-utility.md)  
   

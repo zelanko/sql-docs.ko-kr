@@ -1,5 +1,5 @@
 ---
-title: sys.foreign_key_columns (TRANSACT-SQL) | Microsoft Docs
+title: sys. foreign_key_columns (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,21 +21,21 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ad5bd8f5391e5903a6f9fd10e0cfb340cf4952b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68133976"
 ---
-# <a name="sysforeignkeycolumns-transact-sql"></a>sys.foreign_key_columns(Transact-SQL)
+# <a name="sysforeign_key_columns-transact-sql"></a>sys.foreign_key_columns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   외래 키를 구성하는 각 열 또는 열 집합당 한 개의 행을 포함합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**constraint_object_id**|**int**|FOREIGN KEY 제약 조건의 ID입니다.|  
-|**constraint_column_id**|**int**|열 또는 외래 키를 구성 하는 열 집합의 ID (*1..n* 여기서 n = 열 수)입니다.|  
+|**constraint_column_id**|**int**|외래 키를 구성 하는 열 또는 열 집합의 ID입니다 (*1.. n* 은 열 개수).|  
 |**parent_object_id**|**int**|제약 조건의 부모 개체 ID입니다. 이는 참조하는 개체에 해당합니다.|  
 |**parent_column_id**|**int**|참조하는 열인 부모 열의 ID입니다.|  
 |**referenced_object_id**|**int**|후보 키가 있는 참조되는 개체의 ID입니다.|  
@@ -44,9 +44,9 @@ ms.locfileid: "68133976"
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [개체 카탈로그 뷰 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;&#40;개체 카탈로그 뷰](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [SQL Server 시스템 카탈로그 쿼리 FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
+ [SQL Server 시스템 카탈로그 쿼리에 대한 질문과 대답](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

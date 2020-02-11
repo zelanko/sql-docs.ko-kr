@@ -16,10 +16,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 8b3f046017aa54f5db96878f8bfb6c435409d839
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957237"
 ---
 # <a name="enable-tde-using-ekm"></a>EKM을 사용하여 TDE 설정
@@ -29,7 +29,7 @@ ms.locfileid: "74957237"
   
  **항목 내용**  
   
--   **시작 하기 전에:**  
+-   **시작하기 전 주의 사항:**  
   
      [제한 사항](#Restrictions)  
   
@@ -37,9 +37,9 @@ ms.locfileid: "74957237"
   
 -   [Transact-SQL에서 EKM을 사용하여 TDE를 사용하도록 설정하려면](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a>시작 하기 전에  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a>제한 사항  
+###  <a name="Restrictions"></a> 제한 사항  
   
 -   데이터베이스 암호화 키를 만들고 데이터베이스를 암호화하려면 시스템 관리자와 같은 높은 권한이 필요합니다. 해당 사용자는 EKM 모듈로 인증될 수 있어야 합니다.  
   
@@ -50,13 +50,12 @@ ms.locfileid: "74957237"
   
 -   EKM 공급자에 필요한 옵션 및 매개 변수는 아래 코드 예에 제공된 것과 다를 수 있습니다. 자세한 내용은 해당 EKM 공급자를 참조하십시오.  
   
-###  <a name="Security"></a>보안  
+###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a>권한에  
+####  <a name="Permissions"></a> 권한  
  이 항목에서는 다음 권한이 사용됩니다.  
   
--   구성 옵션을 변경하고 RECONFIGURE 문을 실행하려면 ALTER SETTINGS 서버 수준 권한이 있어야 합니다. 
-  **sysadmin** 및 **serveradmin** 고정 서버 역할은 ALTER SETTINGS 권한을 암시적으로 보유하고 있습니다.  
+-   구성 옵션을 변경하고 RECONFIGURE 문을 실행하려면 ALTER SETTINGS 서버 수준 권한이 있어야 합니다. **sysadmin** 및 **serveradmin** 고정 서버 역할은 ALTER SETTINGS 권한을 암시적으로 보유하고 있습니다.  
   
 -   ALTER ANY CREDENTIAL 권한이 필요합니다.  
   
@@ -66,7 +65,7 @@ ms.locfileid: "74957237"
   
 -   데이터베이스를 암호화하려면 데이터베이스에 대한 CONTROL 권한이 필요합니다.  
   
-##  <a name="TsqlProcedure"></a>Transact-sql 사용  
+##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-enable-tde-using-ekm"></a>EKM을 사용하여 TDE를 사용하도록 설정하려면  
   
@@ -75,14 +74,11 @@ ms.locfileid: "74957237"
 2.  EKM 공급자의 요구 사항에 따라 컴퓨터에 인증서를 설치합니다.  
   
     > [!NOTE]  
-    >  
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 EKM 공급자를 제공하지 않습니다. 각 EKM 공급자에 따라 사용자 설치, 구성 및 권한 부여에 대한 절차가 다릅니다.  이 단계를 수행하려면 해당 EKM 공급자 설명서를 참조하십시오.  
+    >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 EKM 공급자를 제공하지 않습니다. 각 EKM 공급자에 따라 사용자 설치, 구성 및 권한 부여에 대한 절차가 다릅니다.  이 단계를 수행하려면 해당 EKM 공급자 설명서를 참조하십시오.  
   
-3.  
-  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
+3.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-4.  
-  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
+4.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
 5.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
   
@@ -154,24 +150,24 @@ ms.locfileid: "74957237"
   
  자세한 내용은  
   
--   [Transact-sql&#41;sp_configure &#40;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
+-   [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   
--   [Transact-sql&#41;&#40;암호화 공급자 만들기](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)  
+-   [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)  
   
--   [Transact-sql&#41;자격 증명 &#40;만들기](/sql/t-sql/statements/create-credential-transact-sql)  
+-   [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
   
--   [Transact-sql&#41;&#40;비대칭 키 만들기](/sql/t-sql/statements/create-asymmetric-key-transact-sql)  
+-   [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)  
   
--   [Transact-sql&#41;로그인 &#40;만들기](/sql/t-sql/statements/create-login-transact-sql)  
+-   [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)  
   
--   [Transact-sql&#41;&#40;데이터베이스 암호화 키 만들기](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
+-   [CREATE DATABASE ENCRYPTION KEY&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
   
--   [ALTER LOGIN &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-login-transact-sql)  
+-   [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)  
   
--   [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
+-   [ALTER DATABASE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   
--   [Azure Key Vault &#40;SQL Server를 사용 하는 확장 가능 키 관리&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
+-   [Azure Key Vault를 사용한 확장 가능 키 관리&#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
   
--   [Azure SQL Database 투명한 데이터 암호화](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)  
+-   [Azure SQL Database를 사용한 투명한 데이터 암호화](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)  
   
   

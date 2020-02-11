@@ -16,30 +16,30 @@ ms.assetid: 33fd7b65-2ec8-4f62-91a7-630b5dab1aa2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 12d960e8fcd5e1f27ea8198ce52e080f6fddf7c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921413"
 ---
-# <a name="adcpropupdatecriteriaenum"></a>ADCPROP_UPDATECRITERIA_ENUM
-사용 하 여 데이터 소스 행의 낙관적 업데이트 하는 동안 충돌을 검색 하는 필드를 사용할 수 있습니다 지정 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체.  
+# <a name="adcprop_updatecriteria_enum"></a>ADCPROP_UPDATECRITERIA_ENUM
+[레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체를 사용 하 여 데이터 원본 행의 낙관적 업데이트를 수행 하는 동안 충돌을 검색 하는 데 사용할 수 있는 필드를 지정 합니다.  
   
- 사용 하 여 이러한 상수를 사용 하 여는 **레코드 집합** "**업데이트 기준을**"에서 참조 하는 동적 속성을 [ADO 동적 속성 인덱스](../../../ado/reference/ado-api/ado-dynamic-property-index.md) 는에설명되어있습니다[ OLE DB에 대 한 Microsoft 커서 서비스](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) 설명서.  
+ 이러한 상수는 [ADO 동적 속성 인덱스](../../../ado/reference/ado-api/ado-dynamic-property-index.md) 에서 참조 되 고 [OLE DB 문서에 대 한 Microsoft Cursor Service](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) 에 설명 된 **레코드 집합** "**업데이트 조건**" 동적 속성에 사용 합니다.  
   
-|상수|값|설명|  
+|지속적임|값|Description|  
 |--------------|-----------|-----------------|  
-|**adCriteriaAllCols**|1|데이터 원본 행의 모든 열이 변경 된 경우 충돌을 검색 합니다.|  
-|**adCriteriaKey**|0|키 열 데이터의 원본 행이 변경 된 경우 충돌, 행이 삭제 된 것을 의미 하는 것을 검색 합니다.|  
-|**adCriteriaTimeStamp**|3|충돌 데이터의 타임 스탬프 원본 행 하는 경우 변경 된 후 행에 액세스 하는 의미를 감지 합니다 **레코드 집합** 가져온 합니다.|  
-|**adCriteriaUpdCols**|2|업데이트 된 필드에 해당 하는 데이터 원본 열의 모든 행 하는 경우 충돌을 감지 합니다 **레코드 집합** 변경 되었습니다.|  
+|**Adcriteria Aallcols**|1|데이터 원본 행의 열이 변경 된 경우 충돌을 검색 합니다.|  
+|**Adcriteria Akey**|0|는 데이터 원본 행의 키 열이 변경 된 경우 충돌을 검색 합니다. 즉, 행이 삭제 된 것입니다.|  
+|**Adcriteria Atimestamp**|3|는 데이터 원본 행의 타임 스탬프가 변경 된 경우 충돌을 검색 합니다. 즉, **레코드 집합** 을 가져온 후 행에 액세스 한 것입니다.|  
+|**adCriteriaUpdCols**|2|는 **레코드 집합** 의 업데이트 된 필드에 해당 하는 데이터 원본 행의 열이 변경 된 경우 충돌을 검색 합니다.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC 해당  
+## <a name="adowfc-equivalent"></a>ADO/WFC 동급  
  Package: **com.ms.wfc.data**  
   
-|상수|  
+|지속적임|  
 |--------------|  
-|AdoEnums.AdcPropUpdateCriteria.ALLCOLS|  
-|AdoEnums.AdcPropUpdateCriteria.KEY|  
-|AdoEnums.AdcPropUpdateCriteria.TIMESTAMP|  
+|AdoEnums. AdcPropUpdateCriteria|  
+|AdoEnums. AdcPropUpdateCriteria|  
+|AdoEnums. AdcPropUpdateCriteria|  
 |AdoEnums.AdcPropUpdateCriteria.UPDCOLS|

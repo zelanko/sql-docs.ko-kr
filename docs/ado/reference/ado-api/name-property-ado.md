@@ -17,28 +17,28 @@ ms.assetid: cfd0e29c-8310-44ab-85c3-5761184b865d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a919bb377eee2da1c3c1a65e85ddfb9807ed8d50
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918030"
 ---
 # <a name="name-property-ado"></a>Name 속성(ADO)
 개체의 이름을 나타냅니다.  
   
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
- 설정 하거나 반환 된 **문자열** 개체의 이름을 나타내는 값입니다.  
+ 개체의 이름을 나타내는 **문자열** 값을 설정 하거나 반환 합니다.  
   
 ## <a name="remarks"></a>설명  
- 사용 하 여는 **이름을** 속성에 이름을 할당의 이름을 검색 하는 **명령**, **속성**, **필드**, 또는 **매개 변수**  개체입니다.  
+ **이름 속성을** 사용 하 여 이름을 할당 하거나 **명령**, **속성**, **필드**또는 **매개 변수** 개체의 이름을 검색 합니다.  
   
- 값은 읽기/쓰기를 **명령** 개체에서 읽기 전용으로 설정 하 고는 **속성** 개체입니다.  
+ 이 값은 **명령** 개체에 대 한 읽기/쓰기 및 **속성** 개체에 대 한 읽기 전용입니다.  
   
- 에 대 한는 **필드** 개체를 **이름** 일반적으로 읽기 전용입니다. 그러나에 대 한 새 **필드** 에 추가 된 개체를 [필드](../../../ado/reference/ado-api/fields-collection-ado.md) 의 컬렉션을 [레코드](../../../ado/reference/ado-api/record-object-ado.md)를 **이름** 는 읽기/쓰기 후에 [값](../../../ado/reference/ado-api/value-property-ado.md) 속성을 **필드** 지정 된 데이터 공급자에 성공적으로 추가 하 고 **필드** 호출 하 여를 [ 업데이트](../../../ado/reference/ado-api/update-method.md) 메서드를 **필드** 컬렉션입니다.  
+ **필드** 개체의 경우 **이름은** 일반적으로 읽기 전용입니다. 그러나 [레코드](../../../ado/reference/ado-api/record-object-ado.md)의 [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) 컬렉션에 추가 된 새 **field** 개체의 경우 **필드** 의 [Value](../../../ado/reference/ado-api/value-property-ado.md) 속성을 지정 하 고 데이터 공급자가 **Fields** 컬렉션의 [Update](../../../ado/reference/ado-api/update-method.md) 메서드를 호출 하 여 새 **필드** 를 성공적으로 추가한 후에만 **이름이** 읽기/쓰기입니다.  
   
- 에 대 한 **매개 변수** 개체에 아직 추가 되지 합니다 [매개 변수](../../../ado/reference/ado-api/parameters-collection-ado.md) 컬렉션을 **이름** 속성은 읽기/쓰기입니다. 추가 대 한 **매개 변수** 개체 및 다른 모든 개체를 **이름** 속성은 읽기 전용입니다. 이름은은 컬렉션 내에서 고유할 필요가 없습니다.  
+ [매개 변수 컬렉션에](../../../ado/reference/ado-api/parameters-collection-ado.md) 아직 추가 되지 않은 **매개 변수** 개체의 경우 **Name** 속성은 읽기/쓰기가 됩니다. 추가 된 **매개 변수** 개체 및 기타 모든 개체의 경우 **Name** 속성은 읽기 전용입니다. 이름은 컬렉션 내에서 고유 하지 않아도 됩니다.  
   
- 검색할 수 있습니다 합니다 **이름을** 지나면 참조할 수 있습니다 개체 이름으로 직접 서 수 참조를 사용 하 여 개체의 속성입니다. 예를 들어 경우 `rstMain.Properties(20).Name` 생성 `Updatability`, 이후에이 속성을 참조할 수 있습니다 `rstMain.Properties("Updatability")`합니다.  
+ 서 수 참조로 개체의 **이름** 속성을 검색할 수 있으며, 그 후에는 개체를 이름으로 직접 참조할 수 있습니다. 예를 들어가 `rstMain.Properties(20).Name` 생성 `Updatability`되 면 이후에이 속성을 참조할 수 있습니다 `rstMain.Properties("Updatability")`.  
   
 ## <a name="applies-to"></a>적용 대상  
   
@@ -47,6 +47,6 @@ ms.locfileid: "67918030"
 |[명령 개체(ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Field 개체](../../../ado/reference/ado-api/field-object.md)|  
 |[Parameter 개체](../../../ado/reference/ado-api/parameter-object.md)|[속성 개체(ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
   
-## <a name="see-also"></a>관련 항목  
- [Attributes 및 Name 속성 예제 (VB)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
- [Attributes 및 Name 속성 예제 (VC + +)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   
+## <a name="see-also"></a>참고 항목  
+ [특성 및 이름 속성 예제 (VB)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
+ [특성 및 이름 속성 예제 (VC + +)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   

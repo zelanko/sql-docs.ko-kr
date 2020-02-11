@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: da27e10af2a5483583976a13e54bf9087c20e9b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831711"
 ---
 # <a name="precedence-constraints"></a>선행 제약 조건
@@ -33,9 +33,10 @@ ms.locfileid: "62831711"
   
  분기가 없는 선형 제어 흐름에서 선행 제약 조건은 태스크가 실행되는 시퀀스를 단독으로 제어합니다. 제어 흐름이 분기되는 경우 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 런타임 엔진은 해당 분기의 바로 다음에 오는 태스크 및 컨테이너에서의 실행 순서를 결정합니다. 런타임 엔진은 또한 제어 흐름에서 연결되지 않은 워크플로 사이의 실행 순서를 결정합니다.  
   
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]의 중첩된 컨테이너 아키텍처에서는 단일 태스크만 캡슐화하는 태스크 호스트를 제외한 모든 컨테이너에 다른 컨테이너가 포함될 수 있으며, 각 컨테이너에는 고유 제어 흐름이 포함됩니다. For 루프, Foreach 루프 및 시퀀스 컨테이너에는 여러 태스크와 다른 컨테이너가 포함될 수 있으며, 그 아래에도 다시 여러 태스크와 컨테이너가 포함될 수 있습니다. 예를 들어 스크립트 태스크와 시퀀스 컨테이너가 포함된 패키지에 해당 스크립트 태스크 및 시퀀스 컨테이너로 연결되는 선행 제약 조건이 있는 경우를 가정해 보십시오. 시퀀스 컨테이너에는 3개의 스크립트 태스크가 들어 있으며, 해당 선행 제약 조건은 이 3개의 스크립트 태스크를 하나의 제어 흐름으로 연결합니다. 다음 다이어그램에서는 두 개의 중첩 수준이 포함된 패키지의 선행 제약 조건을 보여 줍니다.  
+ 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 의 중첩된 컨테이너 아키텍처에서는 단일 태스크만 캡슐화하는 태스크 호스트를 제외한 모든 컨테이너에 다른 컨테이너가 포함될 수 있으며, 각 컨테이너에는 고유 제어 흐름이 포함됩니다. For 루프, Foreach 루프 및 시퀀스 컨테이너에는 여러 태스크와 다른 컨테이너가 포함될 수 있으며, 그 아래에도 다시 여러 태스크와 컨테이너가 포함될 수 있습니다. 예를 들어 스크립트 태스크와 시퀀스 컨테이너가 포함된 패키지에 해당 스크립트 태스크 및 시퀀스 컨테이너로 연결되는 선행 제약 조건이 있는 경우를 가정해 보십시오. 시퀀스 컨테이너에는 3개의 스크립트 태스크가 들어 있으며, 해당 선행 제약 조건은 이 3개의 스크립트 태스크를 하나의 제어 흐름으로 연결합니다. 다음 다이어그램에서는 두 개의 중첩 수준이 포함된 패키지의 선행 제약 조건을 보여 줍니다.  
   
- ![패키지의 선행 제약 조건](../media/mw-dts-12.gif "패키지의 선행 제약 조건")  
+ ![패키지의 우선 순위 제약 조건](../media/mw-dts-12.gif "패키지의 우선 순위 제약 조건")  
   
  패키지는 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 컨테이너 계층에서 최상위에 있으므로 선행 제약 조건으로 여러 패키지를 연결할 수 없습니다. 하지만 패키지에 패키지 실행 태스크를 추가하고 다른 패키지를 제어 흐름에 간접적으로 연결할 수 있습니다.  
   
@@ -50,7 +51,7 @@ ms.locfileid: "62831711"
 -   선행 제약 조건이 단독으로 계산되는지 아니면 제약 조건이 지정된 실행 개체에 적용되는 다른 제약 조건과 함께 계산되는지 여부를 지정합니다.  
   
 ## <a name="evaluation-operations"></a>계산 작업  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 는 다음과 같은 계산 작업을 제공합니다.  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]는 다음과 같은 계산 작업을 제공 합니다.  
   
 -   제약 조건이 지정된 실행 개체가 실행되는지 여부를 확인하기 위해 선행 실행 개체의 실행 결과만 사용하는 제약 조건. 선행 실행 개체의 실행 결과는 완료, 성공 또는 실패일 수 있습니다. 이 작업이 기본 작업입니다.  
   
@@ -60,7 +61,8 @@ ms.locfileid: "62831711"
   
 -   선행 실행 개체의 실행 결과 또는 식을 계산한 반환 결과를 사용하는 제약 조건과 식  
   
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서는 색을 사용하여 선행 제약 조건의 유형을 확인합니다. Success 제약 조건은 녹색, Failure 제약 조건은 빨간색, Completion 제약 조건은 파란색입니다. [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에 제약 조건 유형을 나타내는 텍스트 레이블을 표시하려면 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너의 내게 필요한 옵션 기능을 구성해야 합니다.  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)]디자이너에서는 색을 사용 하 여 선행 제약 조건의 유형을 식별 합니다. Success 제약 조건은 녹색, Failure 제약 조건은 빨간색, Completion 제약 조건은 파란색입니다. 
+  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에 제약 조건 유형을 나타내는 텍스트 레이블을 표시하려면 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너의 내게 필요한 옵션 기능을 구성해야 합니다.  
   
  식은 유효한 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 식이어야 하며, 식에는 함수, 연산자, 시스템 변수 및 사용자 지정 변수가 포함될 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 식](../expressions/integration-services-ssis-expressions.md) 및 [Integration Services&#40;SSIS&#41; 변수](../integration-services-ssis-variables.md)를 참조하세요.  
   
@@ -79,12 +81,14 @@ ms.locfileid: "62831711"
 ## <a name="configuration-of-the-precedence-constraint"></a>선행 제약 조건 구성  
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용은 [선행 제약 조건 편집기](../precedence-constraint-editor.md)를 참조하세요.  
+ 
+  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용은 [선행 제약 조건 편집기](../precedence-constraint-editor.md)를 참조하세요.  
   
- 이러한 속성을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>를 참조하세요.  
+ 이러한 속성을 프로그래밍 방식으로 설정하는 방법은 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>을 참조하세요.  
   
 ## <a name="related-tasks"></a>관련 작업  
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법을 보려면 다음 항목 중 하나를 클릭하십시오.  
+ 
+  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
 -   [선행 제약 조건의 속성 설정](../set-the-properties-of-a-precedence-constraint.md)  
   
@@ -97,7 +101,7 @@ ms.locfileid: "62831711"
 ## <a name="related-content"></a>관련 내용  
  social.technet.microsoft.com의 기술 문서 - [SSIS 식 예](https://go.microsoft.com/fwlink/?LinkId=220761)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [선행 제약 조건에 식 추가](../add-expressions-to-precedence-constraints.md)   
  [여러 선행 제약 조건](../multiple-precedence-constraints.md)  
   

@@ -20,10 +20,10 @@ ms.assetid: 91b69853-1381-4306-8343-afdb73105738
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: dd8ad58e96956e1ab0f7b542bab4168272b3f968
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68141288"
 ---
 # <a name="readtext-transact-sql"></a>READTEXT(Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68141288"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 [SUBSTRING](../../t-sql/functions/substring-transact-sql.md) 함수를 사용합니다.  
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,7 +44,7 @@ READTEXT { table.column text_ptr offset size } [ HOLDLOCK ]
 ```  
   
 ## <a name="arguments"></a>인수  
-_테이블_ **.** _column_  
+_table_ **.** _column_  
 읽을 테이블과 열의 이름입니다. 테이블 및 열 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 합니다. 테이블 및 열 이름은 반드시 지정해야 하지만 데이터베이스 이름과 소유자 이름을 지정하는 것은 선택적입니다.  
   
 _text\_ptr_  
@@ -53,12 +53,12 @@ _text\_ptr_
 _offset_  
 **text** 또는 **image** 데이터 형식을 사용하는 경우 바이트 수입니다. **text**, **image** 또는 **ntext** 데이터를 읽기 전에 건너뛰기 위해 **ntext** 데이터 형식을 사용하는 경우 문자의 바이트 수일 수도 있습니다.  
   
-_size_ **text** 또는 **image** 데이터 형식을 사용하는 경우 바이트 수입니다. 데이터를 읽기 위해 **ntext** 데이터 형식을 사용하는 경우 문자의 바이트 수일 수도 있습니다. _size_가 0이면 4KB의 데이터를 읽습니다.  
+_size_**text** 또는 **image** 데이터 형식을 사용하는 경우 바이트 수입니다. 데이터를 읽기 위해 **ntext** 데이터 형식을 사용하는 경우 문자의 바이트 수일 수도 있습니다. _size_가 0이면 4KB의 데이터를 읽습니다.  
   
 HOLDLOCK  
 트랜잭션이 끝날 때까지 텍스트 값을 읽을 수 없게 잠급니다. 다른 사용자는 값을 읽을 수 있지만 수정할 수는 없습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 유효한 _text\_ptr_ 값을 얻으려면 [TEXTPTR](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md) 함수를 사용합니다. TEXTPTR은 지정된 행에 **text**, **ntext** 또는 **image** 열에 대한 포인터를 반환합니다. TEXTPTR은 쿼리에서 둘 이상의 행을 반환하는 경우 반환되는 마지막 행에 **text**, **ntext** 또는 **image** 열에 대한 포인터를 반환할 수도 있습니다. TEXTPTR은 16바이트 이진 문자열을 반환하므로 지역 변수를 선언하여 텍스트 포인터를 보유한 다음 READTEXT로 해당 변수를 사용하는 것이 좋습니다. 지역 변수 선언 방법에 대한 자세한 내용은 [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)을 참조하십시오.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 행 내부 텍스트 포인터가 있을 수 있지만 유효하지 않습니다. **text in row** 옵션에 대한 자세한 내용은 [sp_tableoption&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)을 참조하십시오. 텍스트 포인터를 무효화하는 방법은 [sp_invalidate_textptr&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md)를 참조하십시오.  

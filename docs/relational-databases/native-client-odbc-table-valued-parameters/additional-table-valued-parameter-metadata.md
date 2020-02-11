@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7a83df9dde4ada571b0fc39f6ac8e45c49d9ac17
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73777903"
 ---
 # <a name="additional-table-valued-parameter-metadata"></a>추가 테이블 반환 매개 변수 메타데이터
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  응용 프로그램은 테이블 반환 매개 변수에 대 한 메타 데이터를 검색 하기 위해 SQLProcedureColumns를 호출 합니다. 테이블 반환 매개 변수의 경우 SQLProcedureColumns는 단일 행을 반환 합니다. 테이블 반환 매개 변수와 연결 된 테이블 형식에 대 한 스키마 및 카탈로그 정보를 제공 하기 위해 두 개의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]관련 열 SS_TYPE_CATALOG_NAME 및 SS_TYPE_SCHEMA_NAME 추가 되었습니다. ODBC 사양에 따라 SS_TYPE_CATALOG_NAME 및 SS_TYPE_SCHEMA_NAME은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 추가된 모든 드라이버별 열 앞에, 그리고 ODBC 자체에서 지정한 모든 열 뒤에 표시됩니다.  
+  응용 프로그램은 테이블 반환 매개 변수에 대 한 메타 데이터를 검색 하기 위해 SQLProcedureColumns를 호출 합니다. 테이블 반환 매개 변수의 경우 SQLProcedureColumns는 단일 행을 반환 합니다. 테이블 반환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]매개 변수와 연결 된 테이블 형식에 대 한 스키마 및 카탈로그 정보를 제공 하기 위해 두 개의 추가 열 SS_TYPE_CATALOG_NAME 및 SS_TYPE_SCHEMA_NAME가 추가 되었습니다. ODBC 사양에 따라 SS_TYPE_CATALOG_NAME 및 SS_TYPE_SCHEMA_NAME은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 추가된 모든 드라이버별 열 앞에, 그리고 ODBC 자체에서 지정한 모든 열 뒤에 표시됩니다.  
   
  다음 표에서는 테이블 반환 매개 변수에서 중요한 열을 나열합니다.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "73777903"
   
  SQL_SOPT_SS_NAME_SCOPE가 SQL_SS_NAME_SCOPE_TABLE로 설정되면 연결된 서버에 대한 쿼리가 실패합니다. 서버 구성 요소를 포함 하는 카탈로그를 사용 하 여 SQLColumns 또는 Sqlprimarykey를 호출 하면 실패 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [ODBC 테이블 반환 매개 &#40;변수&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+## <a name="see-also"></a>참고 항목  
+ [ODBC&#41;&#40;테이블 반환 매개 변수](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f53e1780beaea56ba659c11771d469163a964971
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73790472"
 ---
 # <a name="table-valued-parameters-odbc"></a>테이블 반환 매개 변수(ODBC)
@@ -26,7 +26,7 @@ ms.locfileid: "73790472"
 
   ODBC의 테이블 반환 매개 변수 지원을 통해 한 번의 호출로 여러 행을 서버로 보냄으로써 클라이언트 애플리케이션에서 서버로 매개 변수가 있는 데이터를 보다 효율적으로 전송할 수 있습니다.  
   
- 서버의 테이블 반환 매개 변수에 대 한 자세한 내용은 [테이블 반환 매개 변수 &#40;&#41;데이터베이스 엔진 사용](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)을 참조 하세요.  
+ 서버에 있는 테이블 반환 매개 변수에 대 한 자세한 내용은 [테이블 반환 매개 변수 &#40;사용 하 여 데이터베이스 엔진&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)를 참조 하세요.  
   
  ODBC에서 다음 두 가지 방법으로 테이블 반환 매개 변수를 서버로 보낼 수 있습니다.  
   
@@ -72,7 +72,8 @@ ms.locfileid: "73790472"
  테이블 반환 매개 변수 열 값에서 발생한 오류를 처리하는 방법을 설명합니다.  
   
  [버전 간 호환성](../../relational-databases/native-client-odbc-table-valued-parameters/cross-version-compatibility.md)  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]보다 이전 버전의 클라이언트나 서버에서 테이블 반환 매개 변수를 사용할 때 발생할 수 있는 충돌에 대해 설명합니다.  
+ 
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]보다 이전 버전의 클라이언트나 서버에서 테이블 반환 매개 변수를 사용할 때 발생할 수 있는 충돌에 대해 설명합니다.  
   
  [ODBC 테이블 반환 매개 변수 API 요약](../../relational-databases/native-client-odbc-table-valued-parameters/odbc-table-valued-parameter-api-summary.md)  
  테이블 반환 매개 변수를 지원하는 ODBC 함수 목록을 보여 줍니다.  
@@ -81,7 +82,7 @@ ms.locfileid: "73790472"
  일반적인 태스크를 수행하는 방법을 설명합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ &#40;ODBC&#41;  SQL Server Native Client](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
- [테이블 반환 매개 변수 &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
+ [ODBC&#41;SQL Server Native Client &#40;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [테이블 반환 매개 변수 SQL Server Native Client &#40;&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
   
   
