@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5c1cf33c00dc9bf0b2fbf588fea9793e0deabfc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106877"
 ---
 # <a name="add-a-border-to-a-report-report-builder-and-ssrs"></a>보고서에 테두리 추가(보고서 작성기 및 SSRS)
@@ -32,11 +32,11 @@ ms.locfileid: "66106877"
     > [!NOTE]  
     >  보고서에 머리글을 사용하지 않는 경우 보고서 본문 주위에만 테두리를 추가하거나 **삽입** 탭에서 머리글을 추가할 수 있습니다.  
   
-2.  본문에서 디자인 화면에 있는 임의의 항목 바깥쪽을 마우스 오른쪽 단추로 클릭하고 **본문 속성**을 클릭합니다. **테두리** 탭에서 원하는 스타일의 왼쪽 및 오른쪽 테두리를 추가합니다.  
+2.  디자인 화면에서 임의의 항목 바깥쪽 본문을 마우스 오른쪽 단추로 클릭하고 **본문 속성**을 클릭합니다. **테두리** 탭에서 원하는 스타일의 왼쪽 및 오른쪽 테두리를 추가합니다.  
   
 3.  바닥글에서 임의의 항목 바깥쪽 바닥글을 마우스 오른쪽 단추로 클릭하고 **바닥글 속성**을 클릭합니다. **테두리** 탭에서 원하는 스타일의 왼쪽, 아래쪽 및 오른쪽 테두리를 추가합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [사각형 및 선&#40;보고서 작성기 및 SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 236600f0a4ff2b77daaab2266b7e927e6858447b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106732"
 ---
 # <a name="add-an-external-image-report-builder-and-ssrs"></a>외부 이미지 추가(보고서 작성기 및 SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "66106732"
   
      기본 모드의 보고서 서버에 있는 이미지를 지정하려면 **이 이미지 사용** 상자에 이미지의 상대 경로(예: ../images/image1.jpg)를 입력합니다.  
   
-     다른 웹 사이트 또는 SharePoint 통합된 모드 보고서 서버의 이미지에 대 한 이미지의 전체 URL을 입력 합니다 **이 이미지를 사용 하 여** 상자-예를 들어, http://\<SharePointservername > /\<사이트 > / Documents/images/image1.jpg입니다.  
+     SharePoint 통합 모드의 보고서 서버 또는 다른 웹 사이트의 이미지에 대해 **이 이미지 사용** 상자에 이미지의 전체 URL을 입력 합니다 (예: http://\<a m e>/\<site>/documents/images/image1.jpg)  
   
      자세한 내용은 [외부 항목에 대한 경로 지정&#40;보고서 작성기 및 SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md)을 참조하세요.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66106732"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서에 이미지 포함&#40;보고서 작성기 및 SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
  [배경 이미지 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md)   
  [이미지 속성 대화 상자, 일반&#40;보고서 작성기 및 SSRS&#41;](../image-properties-dialog-box-general-report-builder-and-ssrs.md)  

@@ -13,18 +13,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 007740fbbf7a01139a7b3c1a679e1737d2f29a7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109580"
 ---
 # <a name="cube-selection-dialog-box-report-builder"></a>큐브 선택 대화 상자(보고서 작성기)
+  
   **큐브 선택** 대화 상자를 사용하여 보고서의 데이터 원본으로 다른 큐브를 선택할 수 있습니다. 다른 큐브를 선택하면 사용자 쿼리는 더 이상 유효하지 않을 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [대화 상자, 창 및 마법사에 대한 보고서 작성기 도움말](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [쿼리 디자이너&#40;보고서 작성기&#41;](../../2014/reporting-services/query-designers-report-builder.md)  
+## <a name="see-also"></a>참고 항목  
+ [대화 상자, 창 및 마법사에 대 한 보고서 작성기 도움말](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+ [보고서 &#40;보고서 작성기 및 SSRS&#41;에 데이터를 추가 합니다.](report-data/report-datasets-ssrs.md)   
+ [쿼리 디자이너 &#40;보고서 작성기&#41;](../../2014/reporting-services/query-designers-report-builder.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 23c920f436ae48c8eb4abd8ccd69097a06557907
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109123"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>일반 속성 페이지, 리소스(보고서 관리자)
@@ -33,9 +33,9 @@ ms.locfileid: "66109123"
   
 3.  드롭다운 메뉴에서 **관리**를 클릭합니다. 리소스의 일반 속성 페이지가 열립니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **이름**  
- 리소스의 이름을 지정합니다. 이름은 하나 이상의 영숫자 문자를 포함해야 합니다. 공백과 특정 기호도 포함할 수 있습니다. 이름을 지정할 때 ; ? : \@ & = +, $ / * \< > | "또는 / 이름을 지정 합니다.  
+ 리소스의 이름을 지정합니다. 이름은 하나 이상의 영숫자 문자를 포함해야 합니다. 공백과 특정 기호도 포함할 수 있습니다. 이름을 지정할 때 ; ? : \@ & = +, $/* \< > | "로 지정 합니다.  
   
  **설명**  
  리소스에 대한 설명을 입력합니다. 이 설명은 리소스에 대한 액세스 권한이 있는 사용자의 내용 페이지에 표시됩니다.  
@@ -55,13 +55,13 @@ ms.locfileid: "66109123"
  **이동**  
  보고서 서버 폴더 계층 구조 내에서 리소스의 위치를 다시 지정하려면 클릭합니다. 이 단추를 클릭하면 폴더를 검색하여 새 폴더 위치를 찾을 수 있는 항목 이동 페이지가 열립니다.  
   
- **바꾸기**  
+ **바꾸십시오**  
  파일 공유에서 리소스 파일을 선택할 때 사용되는 리소스 가져오기 페이지를 열려면 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서 관리자&#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [보기 페이지, 리소스 &#40;보고서 관리자&#41;](../../2014/reporting-services/view-page-resources-report-manager.md)   
- [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)   
- [보안 속성 페이지, 항목&#40;보고서 관리자&#41;](../../2014/reporting-services/security-properties-page-items-report-manager.md)  
+ [F1 도움말 보고서 관리자](../../2014/reporting-services/report-manager-f1-help.md)   
+ [보안 속성 페이지, 항목 &#40;보고서 관리자&#41;](../../2014/reporting-services/security-properties-page-items-report-manager.md)  
   
   

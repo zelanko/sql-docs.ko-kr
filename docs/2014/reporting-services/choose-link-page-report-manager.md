@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 910b06a5cd7af69cc668fb3054dfdfd98c3ae036
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109879"
 ---
 # <a name="choose-link-page-report-manager"></a>링크 선택 페이지(보고서 관리자)
@@ -35,16 +35,16 @@ ms.locfileid: "66109879"
   
 4.  속성 페이지의 **일반** 탭에서 **링크 변경**을 클릭합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **위치**  
  폴더 경로와 보고서 이름을 포함한 게시된 보고서의 전체 이름을 지정합니다. 보고서의 전체 이름을 입력하거나 트리 뷰를 사용하여 원하는 보고서로 이동할 수 있습니다.  
   
- **트리 뷰**  
+ **트리 보기**  
  보고서 서버 폴더 계층 구조의 모든 폴더를 표시합니다. 트리 뷰를 사용하여 **위치** 필드를 입력하려면 보고서 이름을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [일반 속성 페이지, 보고서&#40;보고서 관리자&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
- [새 링크된 보고서 페이지&#40;보고서 관리자&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
+## <a name="see-also"></a>참고 항목  
+ [일반 속성 페이지, 보고서 &#40;보고서 관리자&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
+ [새 링크 된 보고서 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
  [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

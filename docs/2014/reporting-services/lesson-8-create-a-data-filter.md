@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5204cab43e3c801acf80113ec92c51e00c0f9d13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108387"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>8단원: 데이터 필터 만들기
@@ -27,7 +27,8 @@ ms.locfileid: "66108387"
   
 -   자식 보고서의 테이블릭스에 필터 식을 추가합니다.  
   
--   `PurchaseOrderDetail` 테이블에서 필터링되지 않은 데이터를 선택하는 함수를 만듭니다.  
+-   
+  `PurchaseOrderDetail` 테이블에서 필터링되지 않은 데이터를 선택하는 함수를 만듭니다.  
   
 -   자식 보고서에 `PurchaseOrderDetail` DataTable을 바인딩하는 이벤트 처리기를 추가합니다.  
   
@@ -35,17 +36,17 @@ ms.locfileid: "66108387"
   
 1.  자식 보고서를 엽니다.  
   
-2.  테이블 릭 스에서 열 머리글을 선택, 열 머리글 위에 표시 된 회색 셀을 마우스 오른쪽 단추로 클릭 하 고, 클릭 **테이블 릭 스 속성**합니다.  
+2.  테이블 릭 스에서 열 머리글을 선택 하 고 열 머리글 위에 나타나는 회색 셀을 마우스 오른쪽 단추로 클릭 한 다음 **테이블 릭 스 속성**을 클릭 합니다.  
   
-3.  클릭 합니다 **필터** 페이지를 선택한 다음 클릭 **추가**합니다.  
+3.  **필터** 페이지를 클릭 한 다음 **추가**를 클릭 합니다.  
   
-4.  에 **식을** 제출 클릭 `ProductID` 드롭 다운 목록에서. 이는 필터를 적용할 열입니다.  
+4.  **식** 필드의 드롭다운 목록에서 `ProductID` 를 클릭 합니다. 이는 필터를 적용할 열입니다.  
   
-5.  등호를 클릭 합니다. ( **=** ) 연산자를 **연산자** 드롭 다운 목록.  
+5.  연산자 드롭다운 목록에서**=** 같음 () 연산자 **** 를 클릭 합니다.  
   
-6.  옆의 식 단추를 클릭 합니다 **값** 필드를 클릭 **매개 변수** 에 **범주** 영역에서 마우스 두 번 클릭 `productid` 에  **값** 영역입니다. **대 한 식 설정: 값** 필드에 비슷한 식이 포함 **매개 변수 =! productid 합니다. 값**합니다.  
+6.  **값** 필드 옆의 식 단추를 클릭 하 고 **범주** 영역에서 **매개 변수** 를 클릭 한 다음 **값** 영역을 `productid` 두 번 클릭 합니다. 이제 **다음에 대한 식 설정: 값** 필드에 **=Parameters!productid.Value**와 비슷한 식이 포함됩니다.  
   
-7.  클릭 **확인** 하 고 **확인** 다시 합니다 **테이블 릭 스 속성** 대화 상자.  
+7.  **확인을** 클릭 하 고 **테이블 릭 스 속성** 대화 상자에서 **확인** 을 다시 클릭 합니다.  
   
 8.  .rdlc 파일을 저장합니다.  
   
@@ -55,15 +56,16 @@ ms.locfileid: "66108387"
   
 2.  정수 형식의 `productid` 매개 변수를 허용하고 `datatable` 개체를 반환하고 다음을 수행하는 새 함수를 만듭니다.  
   
-    1.  데이터 집합의 인스턴스를 만듭니다 `DataSet2`의 2 단계에서에서 만든 [4 단원: 자식 보고서에 대 한 데이터 연결 및 데이터 테이블 정의](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)합니다.  
+    1.  `DataSet2` [4 단원: 자식 보고서에 대 한 데이터 연결 및 데이터 테이블 정의](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)의 2 단계에서 만든 데이터 집합의 인스턴스를 만듭니다.  
   
-    2.  에 정의 된 쿼리를 실행 하는 sql Server 데이터베이스에 연결할 **4 단원: 데이터를 정의 합니다. 연결 및 DataTable 자식 보고서에 대 한**합니다.  
+    2.  SqlServer 데이터베이스에 대한 연결을 만들어 **4단원: 자식 보고서에 대한 데이터 연결 및 데이터 테이블 정의**에서 정의된 쿼리를 실행합니다.  
   
     3.  쿼리는 필터링되지 않은 데이터를 반환합니다.  
   
     4.  쿼리를 실행하여 필터링되지 않은 데이터로 DataSet 인스턴스를 채웁니다.  
   
-    5.  `PurchaseOrderDetail` DataTable을 반환합니다.  
+    5.  
+  `PurchaseOrderDetail` DataTable을 반환합니다.  
   
          함수는 아래와 비슷하며 이는 단순히 참조용입니다. 원하는 패턴을 따라 자식 보고서에 필요한 데이터를 인출할 수 있습니다.  
   
@@ -105,11 +107,11 @@ ms.locfileid: "66108387"
   
 1.  Default.aspx를 엽니다.  
   
-2.  ReportViewer 컨트롤을 마우스 오른쪽 단추로 클릭 하 고 클릭 **속성입니다.**  
+2.  ReportViewer 컨트롤을 마우스 오른쪽 단추로 클릭 한 다음 **속성을 클릭 합니다.**  
   
-3.  에 **속성** 페이지를 클릭 합니다 **이벤트** 아이콘입니다.  
+3.  **속성** 페이지에서 **이벤트** 아이콘을 클릭 합니다.  
   
-4.  두 번 클릭 합니다 **드릴스루** 이벤트입니다.  
+4.  **드릴스루** 이벤트를 두 번 클릭 합니다.  
   
      그러면 코드에 아래 블록과 비슷한 이벤트 처리기 섹션이 추가됩니다.  
   
@@ -123,9 +125,10 @@ ms.locfileid: "66108387"
   
     1.  *DrillthroughEventArgs* 매개 변수에서 자식 보고서 개체 참조를 인출합니다.  
   
-    2.  함수를 호출 합니다. `GetPurchaseOrderDetail`  
+    2.  함수를 호출 합니다.`GetPurchaseOrderDetail`  
   
-    3.  `PurchaseOrderDetail` DataTable을 보고서의 해당 데이터 원본과 바인딩합니다.  
+    3.  
+  `PurchaseOrderDetail` DataTable을 보고서의 해당 데이터 원본과 바인딩합니다.  
   
          완성된 이벤트 처리기 코드는 다음과 비슷합니다.  
   
@@ -155,7 +158,8 @@ ms.locfileid: "66108387"
 ## <a name="query-filter"></a>쿼리 필터  
  쿼리 필터를 구현하려면 다음 태스크를 완료해야 합니다.  
   
--   `PurchaseOrderDetail` 테이블에서 필터링된 데이터를 선택하는 함수를 만듭니다.  
+-   
+  `PurchaseOrderDetail` 테이블에서 필터링된 데이터를 선택하는 함수를 만듭니다.  
   
 -   매개 변수 값을 검색하고 자식 보고서에 `PurchaseOrdeDetail` DataTable을 바인딩하는 이벤트 처리기를 추가합니다.  
   
@@ -165,15 +169,16 @@ ms.locfileid: "66108387"
   
 2.  정수 형식의 `productid` 매개 변수를 허용하고 `datatable` 개체를 반환하고 다음을 수행하는 새 함수를 만듭니다.  
   
-    1.  데이터 집합의 인스턴스를 만듭니다 `DataSet2`의 2 단계에서에서 만든 [4 단원: 자식 보고서에 대 한 데이터 연결 및 데이터 테이블 정의](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)합니다.  
+    1.  `DataSet2` [4 단원: 자식 보고서에 대 한 데이터 연결 및 데이터 테이블 정의](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)의 2 단계에서 만든 데이터 집합의 인스턴스를 만듭니다.  
   
-    2.  SqlServer 데이터베이스에 정의 된 쿼리 실행에 대 한 연결 만들기 **4 단원: 데이터를 정의 합니다. 연결 및 DataTable 자식 보고서에 대 한**합니다.  
+    2.  SqlServer 데이터베이스에 대한 연결을 만들어 **4단원: 자식 보고서에 대한 데이터 연결 및 데이터 테이블 정의**에서 정의된 쿼리를 실행합니다.  
   
     3.  쿼리에는 반환된 데이터가 부모 보고서에서 선택한 `productid`를 기반으로 필터링되어 있는지 확인하는 `ProductID` 매개 변수가 포함됩니다.  
   
     4.  쿼리를 실행하여 필터링된 데이터로 DataSet 인스턴스를 채웁니다.  
   
-    5.  `PurchaseOrderDetail` DataTable을 반환합니다.  
+    5.  
+  `PurchaseOrderDetail` DataTable을 반환합니다.  
   
          함수는 아래와 비슷하며 이는 단순히 참조용입니다. 원하는 패턴을 따라 자식 보고서에 필요한 데이터를 인출할 수 있습니다.  
   
@@ -216,11 +221,11 @@ ms.locfileid: "66108387"
   
 1.  Default.aspx를 엽니다.  
   
-2.  ReportViewer 컨트롤을 마우스 오른쪽 단추로 누른 **속성**합니다.  
+2.  ReportViewer 컨트롤을 마우스 오른쪽 단추로 클릭 한 다음 **속성**을 클릭 합니다.  
   
-3.  에 **속성** 창 클릭 합니다 **이벤트** 아이콘입니다.  
+3.  **속성** 창에서 **이벤트** 아이콘을 클릭 합니다.  
   
-4.  두 번 클릭 합니다 **드릴스루** 이벤트입니다.  
+4.  **드릴스루** 이벤트를 두 번 클릭 합니다.  
   
      그러면 코드에 다음과 비슷한 이벤트 처리기 섹션이 추가됩니다.  
   
@@ -238,9 +243,11 @@ ms.locfileid: "66108387"
   
     3.  매개 변수 컬렉션을 반복 처리하고 부모 보고서에서 전달되는 `ProductID` 매개 변수 값을 검색합니다.  
   
-    4.  `GetPurchaseOrderDetail` 함수를 호출하고 `ProductID` 매개 변수 값을 전달합니다.  
+    4.  
+  `GetPurchaseOrderDetail` 함수를 호출하고 `ProductID` 매개 변수 값을 전달합니다.  
   
-    5.  `PurchaseOrderDetail` DataTable을 보고서의 해당 데이터 원본과 바인딩합니다.  
+    5.  
+  `PurchaseOrderDetail` DataTable을 보고서의 해당 데이터 원본과 바인딩합니다.  
   
          완성된 이벤트 처리기 코드는 다음과 비슷합니다.  
   

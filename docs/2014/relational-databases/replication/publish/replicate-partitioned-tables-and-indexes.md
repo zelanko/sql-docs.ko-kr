@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f2201be33df4346ab2afa812828ab9655b0ed2be
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67793289"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>분할 테이블 및 인덱스 복제
@@ -37,19 +37,19 @@ ms.locfileid: "67793289"
   
  분할과 관련된 첫 번째 속성 집합은 파티션 개체를 구독자에 복사해야 하는지 여부를 결정하는 아티클 스키마 옵션입니다. 이러한 스키마 옵션은 다음과 같은 방법으로 설정할 수 있습니다.  
   
--   새 게시 마법사의 **아티클 속성** 페이지 또는 게시 속성 대화 상자를 사용합니다. 위의 표에 나열 된 개체를 복사 하려면 값을 지정 `true` 속성에 대 한 **테이블 파티션 구성표 복사** 하 고 **인덱스 파티션 구성표 복사**합니다. **아티클 속성** 페이지에 액세스하는 방법은 [게시 속성 보기 및 수정](view-and-modify-publication-properties.md)을 참조하세요.  
+-   새 게시 마법사의 **아티클 속성** 페이지 또는 게시 속성 대화 상자를 사용합니다. 위의 표에 나열 된 개체를 복사 하려면 `true` **테이블 파티션 구성표 복사** 및 **인덱스 파티션 구성표**복사 속성에 값을 지정 합니다. **아티클 속성** 페이지에 액세스하는 방법은 [게시 속성 보기 및 수정](view-and-modify-publication-properties.md)을 참조하세요.  
   
 -   다음 저장 프로시저 중 하나의 *schema_option* 매개 변수를 사용합니다.  
   
     -   트랜잭션 복제의 경우[sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 또는 [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) f또는 transactional replication  
   
-    -   병합 복제의 경우[sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 또는 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) f또는 merge replication  
+    -   병합 복제의 경우[sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)또는 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) f또는 merge replication  
   
      위의 표에 나온 개체를 복사하려면 적절한 스키마 옵션 값을 지정합니다. 스키마 옵션을 지정하는 방법은 [Specify Schema Options](specify-schema-options.md)을 참조하십시오.  
   
  복제는 초기 동기화 중에 개체를 구독자에 복사합니다. 파티션 구성표에서 PRIMARY 파일 그룹 이외의 파일 그룹을 사용하는 경우 초기 동기화 전에 이러한 파일 그룹이 구독자에 있어야 합니다.  
   
- 구독자를 초기화하면 데이터 변경 사항이 구독자로 전파되고 해당 파티션에 적용됩니다. 그러나 파티션 구성표에 대한 변경은 지원되지 않습니다. 트랜잭션 및 병합 복제는 다음 명령의 복제를 지원 하지 않습니다. ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME 또는 ALTER INDEX REBUILD WITH PARTITION 설명 합니다.  연결된 변경 내용은 구독자에게 자동으로 복제되지 않습니다. 구독자에서 수동으로 비슷한 변경을 하려면 사용자에게 책임이 있습니다.  
+ 구독자를 초기화하면 데이터 변경 사항이 구독자로 전파되고 해당 파티션에 적용됩니다. 그러나 파티션 구성표에 대한 변경은 지원되지 않습니다. 트랜잭션 및 병합 복제는 다음 명령의 복제를 지원하지 않습니다. ALTER INDEX의 ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME 또는 REBUILD WITH PARTITION 문을 지원하지 않습니다.  연결된 변경 내용은 구독자에게 자동으로 복제되지 않습니다. 구독자에서 수동으로 비슷한 변경을 하려면 사용자에게 책임이 있습니다.  
   
 ## <a name="replication-support-for-partition-switching"></a>파티션 전환을 위한 복제 지원  
  테이블 분할의 주요 이점 중 하나는 파티션 간에 데이터의 하위 집합을 빠르고 효율적으로 이동할 수 있다는 것입니다. 데이터는 SWITCH PARTITION 문을 사용하여 이동합니다. 기본적으로 복제를 사용할 수 있도록 테이블을 설정하면 다음과 같은 이유로 SWITCH PARTITION 작업이 차단됩니다.  
@@ -70,13 +70,13 @@ ms.locfileid: "67793289"
 ### <a name="enabling-partition-switching"></a>파티션 전환 설정  
  다음과 같은 트랜잭션 게시 속성을 사용하면 사용자가 복제된 환경에서 파티션 전환의 동작을 제어할 수 있습니다.  
   
--   **\@allow_partition_switch**로 설정 하면 `true`, 게시 데이터베이스에 대해 SWITCH PARTITION을 실행할 수 있습니다.  
+-   allow_partition_switch로 `true`설정 하면 게시 데이터베이스에 대해 switch partition을 실행할 수 있습니다. ** \@**  
   
--   **\@replicate_partition_switch** SWITCH PARTITION DDL 문을 구독자에 복제 해야 하는지 여부를 결정 합니다. 이 옵션은 경우에만 유효  **\@allow_partition_switch** 로 설정 된 `true`합니다.  
+-   replicate_partition_switch는 스위치 파티션 DDL 문을 구독자에 복제 해야 하는지 여부를 결정 합니다. ** \@** 이 옵션은 ** \@allow_partition_switch** 가로 설정 된 경우에 `true`만 유효 합니다.  
   
  이러한 속성은 게시를 만들 때 [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) 을 사용하거나 게시를 만든 후 [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) 을 사용하여 설정할 수 있습니다. 위에서 설명한 것처럼 병합 복제는 파티션 전환을 지원하지 않습니다. 병합 복제를 사용할 수 있도록 설정된 테이블에서 SWITCH PARTITION을 실행하려면 게시에서 해당 테이블을 제거합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 및 데이터베이스 개체 게시](publish-data-and-database-objects.md)  
   
   

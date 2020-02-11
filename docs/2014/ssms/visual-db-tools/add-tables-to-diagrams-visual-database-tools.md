@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 26c13eb6c9cb142cac3ba0981177fb2c605ab5fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63297903"
 ---
 # <a name="add-tables-to-diagrams-visual-database-tools"></a>다이어그램에 테이블 추가(Visual Database Tools)
@@ -29,17 +29,19 @@ ms.locfileid: "63297903"
   
      현재 다이어그램에 테이블을 만들려면 도구 모음에서 **새 테이블** 단추를 클릭합니다.  
   
-     -또는-  
+     또는  
   
      다이어그램 내부를 마우스 오른쪽 단추로 클릭하고 **새 테이블**을 선택합니다.  
   
-2.  **이름 선택** 대화 상자에서 시스템 할당 테이블 이름을 그대로 사용하거나 수정한 다음 **확인**을 선택합니다.  
+2.  
+  **이름 선택** 대화 상자에서 시스템 할당 테이블 이름을 그대로 사용하거나 수정한 다음 **확인**을 선택합니다.  
   
      다이어그램에 새 테이블이 표준 뷰로 나타납니다.  
   
 3.  새 테이블의 첫째 셀에 열 이름을 입력합니다. 그런 다음 Tab 키를 눌러 다음 셀로 이동합니다.  
   
-4.  **데이터 형식**에서 해당 열의 데이터 형식을 선택합니다. 각 열에는 이름과 데이터 형식이 있어야 합니다.  
+4.  
+  **데이터 형식**에서 해당 열의 데이터 형식을 선택합니다. 각 열에는 이름과 데이터 형식이 있어야 합니다.  
   
      테이블 디자이너에서 열의 다른 속성을 설정할 수 있습니다.  
   
@@ -52,7 +54,8 @@ ms.locfileid: "63297903"
   
 1.  편집할 테이블이 있는 데이터베이스에 연결되어 있는지 확인합니다.  
   
-2.  **테이블** 폴더에서 테이블을 선택합니다.  
+2.  
+  **테이블** 폴더에서 테이블을 선택합니다.  
   
 3.  데이터베이스 다이어그램으로 테이블을 끕니다.  
   
@@ -70,8 +73,8 @@ ms.locfileid: "63297903"
 > [!NOTE]  
 >  선택한 테이블에서 외래 키 제약 조건에 의해 참조되는 테이블과 외래 키 제약 조건이 있는 선택된 테이블을 참조하는 테이블 모두가 다이어그램에 추가됩니다.  
   
-## <a name="see-also"></a>관련 항목  
- [데이터베이스 다이어그램 작업 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools를 &#40;데이터베이스 다이어그램 작업&#41;](visual-database-tools.md)   
  [데이터베이스 다이어그램에서 테이블 작업&#40;Visual Database Tools&#41;](work-with-tables-in-database-diagram-visual-database-tools.md)  
   
   

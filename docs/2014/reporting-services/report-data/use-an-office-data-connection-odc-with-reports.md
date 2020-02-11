@@ -1,5 +1,5 @@
 ---
-title: (SharePoint 통합된 모드의 Reporting Services) 보고서에 Office 데이터 연결 (.odc) 사용 | Microsoft Docs
+title: 보고서에 Office 데이터 연결 (.odc) 사용 (SharePoint 통합 모드의 Reporting Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 983f60396f48e488b20e25f18751f615ded799ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106955"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports-reporting-services-in-sharepoint-integrated-mode"></a>보고서에 Office 데이터 연결(.odc) 사용(SharePoint 통합 모드의 Reporting Services)
@@ -100,7 +100,7 @@ ms.locfileid: "66106955"
   
      [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스와 예제 보고서를 사용하여 이러한 단계를 수행하는 경우 Company Sales 보고서만 .odc 파일에서 추가 작업 없이 작동한다는 사실에 유의하십시오. 다른 예제 보고서에는 OLE DB 공급자에서 작동하지 않는 쿼리 매개 변수와 기능이 들어 있습니다. 하지만 먼저 보고서 디자이너에서 이러한 보고서를 수정하면 OLE DB 공급자에서 작동하도록 만들 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [공유 데이터 원본 만들기, 수정 및 삭제&#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)  
   
   

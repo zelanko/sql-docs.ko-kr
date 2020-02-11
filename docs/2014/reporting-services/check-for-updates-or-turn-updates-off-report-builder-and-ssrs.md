@@ -1,5 +1,5 @@
 ---
-title: 확인 한 업데이트 또는 업데이트 해제 (보고서 작성기 및 SSRS) | Microsoft Docs
+title: 업데이트 확인 또는 업데이트 해제 (보고서 작성기 및 SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 27942be9c32d4537f729adbd69df1c64a9c9ff6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109867"
 ---
 # <a name="check-for-updates-or-turn-updates-off-report-builder-and-ssrs"></a>업데이트 확인 또는 업데이트 해제(보고서 작성기 및 SSRS)
@@ -24,22 +24,22 @@ ms.locfileid: "66109867"
   
 ### <a name="to-turn-on-and-off-report-part-updates"></a>보고서 파트 업데이트를 설정 및 해제하려면  
   
-1.  보고서 작성기 단추를 클릭 한 다음 클릭 **옵션**합니다.  
+1.  보고서 작성기 단추를 클릭 한 다음 **옵션**을 클릭 합니다.  
   
-2.  에 **옵션** 대화 상자의 **리소스** 탭을 선택 하거나 선택을 취소 합니다 **내 보고서에 보고서 파트에 대 한 업데이트를 표시** 확인란 합니다.  
+2.  **옵션** 대화 상자의 **리소스** 탭에서 **내 보고서의 보고서 파트에 대 한 업데이트 표시** 확인란을 선택 하거나 선택 취소 합니다.  
   
 > [!NOTE]  
 >  이것은 사용자 설정이므로 사용자가 여는 모든 보고서에 대해 사용하지 않도록 설정됩니다.  
   
 ### <a name="to-check-for-updates"></a>업데이트를 확인하려면  
   
--   보고서 본문 또는 보고서 외부의 디자인 화면을 마우스 오른쪽 단추로 클릭 하 고 클릭 **업데이트 확인**합니다.  
+-   보고서 외부의 디자인 화면 또는 보고서 본문을 마우스 오른쪽 단추로 클릭 하 고 **업데이트 확인**을 클릭 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서 파트&#40;보고서 작성기 및 SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
- [게시 및 보고서 파트 다시 게시 &#40;보고서 작성기 및 SSRS&#41;](report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)   
- [보고서 파트 찾아보기 및 기본 폴더 설정 &#40;보고서 작성기 및 SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)   
- [보고서 파트 문제 해결 &#40;보고서 작성기 및 SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
- [보고서 작성기의 보고서 파트 및 데이터 집합](report-data/report-parts-and-datasets-in-report-builder.md)  
+ [보고서 파트 게시 및 다시 게시 &#40;보고서 작성기 및 SSRS&#41;](report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)   
+ [보고서 파트를 검색 하 고 기본 폴더 &#40;보고서 작성기 및 SSRS를 설정&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)   
+ [보고서 파트 &#40;보고서 작성기 및 SSRS에 대 한 문제 해결&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
+ [보고서 작성기의 보고서 파트 및 데이터 세트](report-data/report-parts-and-datasets-in-report-builder.md)  
   
   

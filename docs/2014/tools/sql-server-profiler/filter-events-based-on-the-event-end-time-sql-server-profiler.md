@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 48f0ada8740735e64fe57c35bc17553f59aa444c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184281"
 ---
 # <a name="filter-events-based-on-the-event-end-time-sql-server-profiler"></a>이벤트 종료 시간 기반의 이벤트 필터링(SQL Server Profiler)
@@ -42,10 +42,10 @@ ms.locfileid: "63184281"
   
 5.  **이벤트 선택**탭에서 **EndTime** 데이터 열을 클릭하여 **필터 편집** 대화 상자를 시작합니다. 열 제목을 마우스 오른쪽 단추로 클릭한 다음 **열 필터 편집**을 선택할 수도 있습니다.  
   
-6.  확장 **보다 큰** 또는 **미만**를 입력 하 고는 `datetime`비교 연산자 아래 나타나는 필드의 값.  
+6.  보다 **큼** 또는 **보다 작음**을 확장 하 고 비교 `datetime`연산자 아래에 나타나는 필드에 값을 입력 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 프로파일러](sql-server-profiler.md)   
- [SQL Server 프로파일러](sql-server-profiler.md)  
+ [SQL Server Profiler](sql-server-profiler.md)  
   
   

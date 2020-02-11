@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cfedde2b9bdeff831029f2f3916f28bec480d659
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106403"
 ---
 # <a name="report-and-group-variables-collections-references-report-builder-and-ssrs"></a>보고서 및 그룹 변수 컬렉션 참조(보고서 작성기 및 SSRS)
@@ -47,7 +47,7 @@ ms.locfileid: "66106403"
   
 -   **읽기/쓰기로 사용** 값을 한 번 설정하고 보고서 세션 내에서 값을 직렬화합니다. 변수에 대해 읽기/쓰기 옵션을 사용하는 것이 보고서 정의의 코드 블록에서 정적 변수를 사용하는 것보다 효율적입니다.  
   
-     선택을 취소 하면 합니다 **읽기 전용** 변수를로 변수의 Writable 속성이 옵션 `true`합니다. 식에서 값을 업데이트하려면 SetValue 메서드(예: `=Variables!MyVariable.SetValue("123")`)를 사용합니다.  
+     변수에 대 한 **읽기 전용** 옵션을 선택 취소 하면 변수에 대 한 쓰기 가능 속성이로 `true`설정 됩니다. 식에서 값을 업데이트하려면 SetValue 메서드(예: `=Variables!MyVariable.SetValue("123")`)를 사용합니다.  
   
     > [!NOTE]  
     >  보고서 프로세서가 변수를 초기화하는 시기 또는 변수를 업데이트하는 식을 계산하는 시기는 제어할 수 없습니다. 변수 초기화 실행 순서는 정의되어 있지 않습니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "66106403"
 ## <a name="group-variables"></a>그룹 변수  
  그룹 변수를 사용하여 복잡한 식을 그룹 범위에서 한 번에 계산할 수 있습니다. 그룹 변수는 그룹 및 해당 자식 그룹의 범위 내에서만 유효합니다.  
   
- 예를 들어 서로 다른 세금 범주에 속한 항목에 대한 재고 데이터를 표시하는 데이터 영역이 있고 각 범주에 대해 서로 다른 세율을 적용하려는 경우를 가정해 보겠습니다. Category에서 데이터를 그룹화하고 부모 그룹에서 *Tax* 변수를 정의합니다. 그런 다음 *ItemTax* 에 대한 그룹 변수를 각 세금 범주에 정의하고 서로 다른 각 Category 하위 그룹을 적절한 그룹 변수에 할당합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ 예를 들어 서로 다른 세금 범주에 속한 항목에 대한 재고 데이터를 표시하는 데이터 영역이 있고 각 범주에 대해 서로 다른 세율을 적용하려는 경우를 가정해 보겠습니다. Category에서 데이터를 그룹화하고 부모 그룹에서 *Tax* 변수를 정의합니다. 그런 다음 *ItemTax* 에 대한 그룹 변수를 각 세금 범주에 정의하고 서로 다른 각 Category 하위 그룹을 적절한 그룹 변수에 할당합니다. 다음은 그 예입니다.  
   
 -   `[Category]`기반의 부모 그룹에 대해 *Tax* 변수를 `[Tax]`값으로 정의합니다. 범주 값은 Food와 Clothing이라고 가정하겠습니다.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "66106403"
   
  식에서 변수를 참조하려면 전역 컬렉션 구문을 사용합니다(예: `=Variables!GroupDescription.Value`). 디자인 화면에서 값은 입력란에 `<<Expr>>`로 표시됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [식의 기본 제공 컬렉션&#40;보고서 작성기 및 SSRS&#41;](built-in-collections-in-expressions-report-builder.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  

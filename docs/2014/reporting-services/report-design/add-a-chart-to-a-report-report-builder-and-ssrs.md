@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 257df5742c2f8dec7d48c6d3afb4d6c6373d058c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106887"
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>보고서에 차트 추가(보고서 작성기 및 SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "66106887"
   
  보고서에 차트 데이터 영역을 추가하는 가장 간단한 방법은 새 차트 마법사를 실행하는 것입니다. 이 마법사는 세로 막대형 차트, 선형 차트, 원형 차트, 가로 막대형 차트 및 영역형 차트를 제공합니다. 또한 차트를 직접 추가할 수도 있습니다.  
   
- 디자인 화면에 차트 데이터 영역을 추가한 후에는 숫자 데이터 및 숫자가 아닌 데이터에 대한 보고서 데이터 세트 필드를 차트의 차트 데이터 창으로 끌 수 있습니다. 차트의 세 영역이 포함 된 차트 데이터 창을 표시 하려면 클릭 합니다. 계열 그룹, 범주 그룹 및 값입니다.  
+ 디자인 화면에 차트 데이터 영역을 추가한 후에는 숫자 데이터 및 숫자가 아닌 데이터에 대한 보고서 데이터 세트 필드를 차트의 차트 데이터 창으로 끌 수 있습니다. 차트를 클릭하여 차트 데이터 창을 표시합니다. 이 창에는 계열 그룹, 범주 그룹 및 값의 세 영역이 있습니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -42,7 +42,7 @@ ms.locfileid: "66106887"
   
 ### <a name="to-add-a-chart-to-a-report"></a>보고서에 차트를 추가하려면  
   
-1.  보고서를 만들고 데이터 세트를 정의합니다. 자세한 내용은 [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](../report-data/report-datasets-ssrs.md)합니다.  
+1.  보고서를 만들고 데이터 세트를 정의합니다. 자세한 내용은 [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](../report-data/report-datasets-ssrs.md)를 참조 하세요.  
   
 2.  **삽입** 탭에서 **차트**를 클릭한 다음 **차트 삽입**을 클릭합니다.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66106887"
   
  가로 막대형 차트 및 세로 막대형 차트와 같이 축이 있는 차트에서 범주 축에는 일부 범주 레이블이 표시되지 않을 수 있습니다. 축 레이블을 변경하는 방법에 대한 자세한 내용은 [축 간격 지정&#40;보고서 작성기 및 SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [차트 종류&#40;보고서 작성기 및 SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [차트의 빈 데이터 요소 및 Null 데이터 요소&#40;보고서 작성기 및 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   

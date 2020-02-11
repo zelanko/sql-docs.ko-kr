@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 901ed097b1a1f689a854d60e0df9b541403fdc76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109127"
 ---
 # <a name="general-properties-page-folders-report-manager"></a>일반 속성 페이지, 폴더(보고서 관리자)
   폴더의 일반 속성 페이지를 사용하여 만든 폴더의 속성을 보거나 설정할 수 있습니다. 폴더를 만들거나 수정한 사람 및 폴더를 수정한 시간에 대한 정보가 일반 속성 페이지 맨 위에 표시됩니다.  
   
- 폴더 속성에는 보안 설정도 포함됩니다. 폴더 보안에 대 한 자세한 내용은 참조 하세요. [폴더 보안](security/secure-folders.md)합니다.  
+ 폴더 속성에는 보안 설정도 포함됩니다. 폴더 보안에 대 한 자세한 내용은 [폴더](security/secure-folders.md)보안을 참조 하세요.  
   
  특수한 용도의 폴더(예: 홈, 내 보고서 및 사용자 폴더)는 보고서 서버 네임스페이스 내에서 이름을 바꾸거나 이동할 수 없습니다. 이 폴더에 대해서는 일반 속성 페이지를 사용할 수 없습니다.  
   
@@ -33,9 +33,9 @@ ms.locfileid: "66109127"
   
 2.  폴더 배너 아래의 도구 모음에서 **폴더 설정**을 클릭합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **이름**  
- 폴더의 이름을 지정합니다. 이름은 하나 이상의 영숫자 문자를 포함해야 합니다. 공백과 특정 기호도 포함할 수 있습니다. 이름을 지정할 때 ; ? : \@ & = +, $ * \< > | "또는 / 이름을 지정 합니다.  
+ 폴더의 이름을 지정합니다. 이름은 하나 이상의 영숫자 문자를 포함해야 합니다. 공백과 특정 기호도 포함할 수 있습니다. 이름을 지정할 때 ; ? : \@ & = +, $ * \< > | "로 지정 합니다.  
   
  **설명**  
  폴더 내용에 대한 설명을 입력합니다. 이 설명은 해당 폴더 액세스 권한이 있는 사용자의 내용 페이지에 표시됩니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "66109127"
  **이동**  
  보고서 서버 네임스페이스 내에서 보고서나 폴더의 위치를 다시 지정하려면 클릭합니다. 이 단추를 클릭하면 폴더를 검색하여 새 폴더 위치를 찾을 수 있는 항목 이동 페이지가 열립니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서 관리자&#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)  
   

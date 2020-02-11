@@ -17,16 +17,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: daf96fad259166d64d9716064eaae4cc922d9d4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255237"
 ---
 # <a name="authorization-methods"></a>권한 부여 메서드
   다음 메서드를 사용하여 보고서 서버에서 태스크, 역할 및 정책을 관리할 수 있습니다.  
   
-|메서드|작업|  
+|방법|작업|  
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.CreateRole%2A>|보고서 서버 데이터베이스에 새 역할을 추가합니다. 이 메서드는 기본 모드에만 적용됩니다.|  
 |<xref:ReportService2010.ReportingService2010.DeleteRole%2A>|보고서 서버 데이터베이스에서 역할을 삭제합니다. 이 메서드는 기본 모드에만 적용됩니다.|  
@@ -44,8 +44,8 @@ ms.locfileid: "63255237"
 |<xref:ReportService2010.ReportingService2010.SetRoleProperties%2A>|역할 메타데이터 속성을 설정하고 태스크 집합과 역할을 연결합니다. 이 메서드는 기본 모드에만 적용됩니다.|  
 |<xref:ReportService2010.ReportingService2010.SetSystemPolicies%2A>|그룹 및 그룹과 연관된 역할을 정의하는 시스템 정책을 설정합니다. 이 메서드는 기본 모드에만 적용됩니다.|  
   
-## <a name="see-also"></a>관련 항목  
- [웹 서비스와 .NET Framework를 사용하여 응용 프로그램 빌드](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
+## <a name="see-also"></a>참고 항목  
+ [웹 서비스와 .NET Framework를 사용하여 애플리케이션 빌드](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [보고서 서버 웹 서비스](../report-server-web-service.md)   
  [보고서 서버 웹 서비스 메서드](report-server-web-service-methods.md)   
  [기술 참조&#40;SSRS&#41;](../../technical-reference-ssrs.md)  

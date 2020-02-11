@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a943d0ed7cfb0932f7eec757b40fef4d8de6504c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63306009"
 ---
 # <a name="map-many-to-many-relationships-visual-database-tools"></a>다 대 다 관계 매핑(Visual Database Tools)
@@ -34,18 +34,19 @@ ms.locfileid: "63306009"
   
 2.  다이어그램을 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 **새 테이블** 을 선택하여 세 번째 테이블을 만듭니다. 이 테이블이 병합 테이블로 사용됩니다.  
   
-3.  **이름 선택** 대화 상자에서 시스템 할당 테이블 이름을 변경합니다. 예를 들어, `titles` 테이블과 `authors` 테이블 사이의 병합 테이블 이름으로 `titleauthors`를 지정할 수 있습니다.  
+3.  
+  **이름 선택** 대화 상자에서 시스템 할당 테이블 이름을 변경합니다. 예를 들어, `titles` 테이블과 `authors` 테이블 사이의 병합 테이블 이름으로 `titleauthors`를 지정할 수 있습니다.  
   
 4.  다른 두 테이블 각각의 기본 키 열을 병합 테이블에 복사합니다. 일반적인 테이블 작업의 경우와 마찬가지로 다른 열을 이 테이블에 추가할 수 있습니다.  
   
-5.  병합 테이블에서 다른 두 테이블의 기본 키 열이 모두 포함되도록 기본 키를 설정합니다. 자세한 내용은 참조 하세요 [Create Primary Keys](../../relational-databases/tables/create-primary-keys.md)합니다.  
+5.  병합 테이블에서 다른 두 테이블의 기본 키 열이 모두 포함되도록 기본 키를 설정합니다. 자세한 내용은 [기본 키 만들기](../../relational-databases/tables/create-primary-keys.md)를 참조 하세요.  
   
-6.  두 개의 각 기본 테이블과 병합 테이블 사이에 일 대 다 관계를 정의합니다. 병합 테이블은 작성된 두 관계 모두에서 "다" 쪽에 있어야 합니다. 자세한 내용은 참조 하세요 [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md)합니다.  
+6.  두 개의 각 기본 테이블과 병합 테이블 사이에 일 대 다 관계를 정의합니다. 병합 테이블은 작성된 두 관계 모두에서 "다" 쪽에 있어야 합니다. 자세한 내용은 [외래 키 관계 만들기](../../relational-databases/tables/create-foreign-key-relationships.md)를 참조 하세요.  
   
     > [!NOTE]  
     >  데이터베이스 다이어그램에서 병합 테이블을 만들어도 관련 테이블의 데이터가 병합 테이블에 삽입되지는 않습니다. 테이블에 데이터를 삽입하는 방법에 대한 자세한 내용은 [결과 삽입 쿼리 만들기&#40;Visual Database Tools&#41;](visual-database-tools.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 다이어그램 작업&#40;Visual Database Tools&#41;](work-with-database-diagrams-visual-database-tools.md)  
   
   

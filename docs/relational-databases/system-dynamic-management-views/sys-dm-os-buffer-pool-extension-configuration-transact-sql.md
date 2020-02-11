@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_buffer_pool_extension_configuration (TRANSACT-SQL) | Microsoft Docs
+title: sys. dm_os_buffer_pool_extension_configuration (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/09/2017
 ms.prod: sql
@@ -19,26 +19,27 @@ ms.assetid: d52cc481-4d29-4f33-b63d-231ec35d092f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 38e4e1ad85a5e968d4b0bb33a3a72a829942585b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67900220"
 ---
-# <a name="sysdmosbufferpoolextensionconfiguration-transact-sql"></a>sys.dm_os_buffer_pool_extension_configuration(Transact-SQL)
+# <a name="sysdm_os_buffer_pool_extension_configuration-transact-sql"></a>sys.dm_os_buffer_pool_extension_configuration(Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 버퍼 풀 확장에 대한 구성 정보를 반환합니다. 각 버퍼 풀 확장 파일에 대해 하나의 행을 반환합니다.  
   
 
   
-| 열 이름 | 데이터 형식 | 설명 |
+| 열 이름 | 데이터 형식 | Description |
 | :---------- | :-------- | :---------- |
-|path|**nvarchar**(256)|버퍼 풀 확장 캐시의 경로 및 파일 이름입니다. Null을 허용합니다.|  
+|경로|**nvarchar**(256)|버퍼 풀 확장 캐시의 경로 및 파일 이름입니다. Null을 허용합니다.|  
 |file_id|**int**|버퍼 풀 확장 파일의 ID입니다. Null을 허용하지 않습니다.|  
-|state|**int**|버퍼 풀 확장 기능의 상태입니다. Null을 허용하지 않습니다.<br /><br /> 0 - 버퍼 풀 확장을 사용하지 않도록 설정됨<br /><br /> 1 - 버퍼 풀 확장을 사용하지 않도록 설정하는 중<br /><br /> 2-사용 하도록 예약<br /><br /> 3 - 버퍼 풀 확장을 사용하도록 설정하는 중<br /><br /> 4 - 나중에 사용하도록 예약되었습니다.<br /><br /> 5 - 버퍼 풀 확장을 사용하도록 설정됨|  
-|state_description|**nvarchar**(60)|버퍼 풀 확장 기능의 상태를 설명합니다. Null을 허용합니다.<br /><br /> 0 = BUFFER POOL EXTENSION DISABLED<br /><br /> 5 = 버퍼 풀 확장을 사용 하도록 설정|
+|state|**int**|버퍼 풀 확장 기능의 상태입니다. Null을 허용하지 않습니다.<br /><br /> 0 - 버퍼 풀 확장을 사용하지 않도록 설정됨<br /><br /> 1 - 버퍼 풀 확장을 사용하지 않도록 설정하는 중<br /><br /> 2-나중에 사용 하도록 예약 됨<br /><br /> 3 - 버퍼 풀 확장을 사용하도록 설정하는 중<br /><br /> 4 - 나중에 사용하도록 예약되었습니다.<br /><br /> 5 - 버퍼 풀 확장을 사용하도록 설정됨|  
+|state_description|**nvarchar**(60)|버퍼 풀 확장 기능의 상태를 설명합니다. Null을 허용합니다.<br /><br /> 0 = BUFFER POOL EXTENSION DISABLED<br /><br /> 5 = 버퍼 풀 확장 사용|
 |current_size_in_kb|**bigint**|버퍼 풀 확장 파일의 현재 크기입니다. Null을 허용하지 않습니다.|
 | &nbsp; | &nbsp; | &nbsp; |
 
@@ -55,7 +56,7 @@ SELECT path, file_id, state, state_description, current_size_in_kb
 FROM sys.dm_os_buffer_pool_extension_configuration;  
 ```  
   
-### <a name="b-returning-the-number-of-cached-pages-in-the-buffer-pool-extension-file"></a>2\. 버퍼 풀 확장 파일에서 캐시된 페이지 수 반환  
+### <a name="b-returning-the-number-of-cached-pages-in-the-buffer-pool-extension-file"></a>B. 버퍼 풀 확장 파일에서 캐시된 페이지 수 반환  
  다음 예에서는 각 버퍼 풀 확장 파일에 있는 캐시된 페이지 수를 반환합니다.  
   
 ```sql  
@@ -65,8 +66,8 @@ WHERE is_in_bpool_extension <> 0
 ;  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [버퍼 풀 확장](../../database-engine/configure-windows/buffer-pool-extension.md)   
- [sys.dm_os_buffer_descriptors&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)  
+ [dm_os_buffer_descriptors &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)  
   
   

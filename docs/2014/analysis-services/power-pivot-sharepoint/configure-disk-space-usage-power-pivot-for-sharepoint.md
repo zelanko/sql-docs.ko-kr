@@ -1,5 +1,5 @@
 ---
-title: 디스크 공간 사용 (SharePoint 용 PowerPivot) 구성 | Microsoft Docs
+title: 디스크 공간 사용 구성 (SharePoint용 PowerPivot) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc45827a349dc38054db98e3a435f18a42bdaa0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071804"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>디스크 공간 사용 구성(SharePoint용 PowerPivot)
@@ -42,7 +42,7 @@ ms.locfileid: "66071804"
   
  백업 폴더는 로컬 컴퓨터의 메모리에 로드되는 PowerPivot 데이터베이스에 대한 공통 캐시 스토리지를 제공합니다. 팜에 여러 개의 PowerPivot 서비스 애플리케이션이 정의되어 있는 경우 그 중 한 애플리케이션이 로컬 서버를 사용하여 PowerPivot 데이터를 로드하고 이후에 해당 데이터를 캐시할 수 있습니다. 데이터 로드 및 캐시 모두 Analysis Services 서버 작업입니다. 따라서 총 디스크 공간 사용량은 Analysis Services 인스턴스 수준에서 백업 폴더에 대해 관리됩니다. 따라서 디스크 공간 사용량을 제한하는 구성 설정은 SharePoint 애플리케이션 서버에서 실행되는 SQL Server Analysis Services 인스턴스에 대해 설정됩니다.  
   
- 캐시에는 PowerPivot 데이터베이스만 포함됩니다. PowerPivot 데이터베이스는 단일 부모 폴더(백업 폴더) 아래의 여러 파일에 저장됩니다. PowerPivot 데이터베이스가 Excel 통합 문서의 내부 데이터로 사용되기 때문에 데이터베이스 이름은 설명이 포함되지 않은 GUID 기반 이름입니다. 아래의 GUID 폴더  **\<a m e >** PowerPivot 데이터베이스의 부모 폴더입니다. PowerPivot 데이터베이스가 서버에 로드되면 각 데이터베이스에 대한 추가 폴더가 만들어집니다.  
+ 캐시에는 PowerPivot 데이터베이스만 포함됩니다. PowerPivot 데이터베이스는 단일 부모 폴더(백업 폴더) 아래의 여러 파일에 저장됩니다. PowerPivot 데이터베이스가 Excel 통합 문서의 내부 데이터로 사용되기 때문에 데이터베이스 이름은 설명이 포함되지 않은 GUID 기반 이름입니다. ** \<Serviceapplicationname>** 아래의 GUID 폴더는 PowerPivot 데이터베이스의 부모 폴더입니다. PowerPivot 데이터베이스가 서버에 로드되면 각 데이터베이스에 대한 추가 폴더가 만들어집니다.  
   
  PowerPivot 데이터가 팜의 모든 Analysis Services 인스턴스에 로드될 수 있기 때문에 동일한 데이터가 팜의 여러 컴퓨터에서 캐시될 수도 있습니다. 이는 디스크 공간 사용보다 성능에 도움이 되지만 데이터가 디스크에 이미 있는 경우 데이터에 더 빠르게 액세스할 수 있다는 이점이 있습니다.  
   
@@ -50,23 +50,24 @@ ms.locfileid: "66071804"
   
  시스템 수준에서 디스크 공간이 부족할 때 알리는 전자 메일 경고를 만들 수 있습니다. Microsoft System Center에는 전자 메일 경고 기능이 포함되어 있습니다. 파일 서버 리소스 관리자, 작업 스케줄러 또는 PowerShell 스크립트를 사용하여 경고를 설정할 수도 있습니다. 부족한 디스크 공간에 대한 알림을 설정하는 데 대한 유용한 정보를 얻으려면  
   
--   [파일 서버 리소스 관리자의 새로운 소식](https://technet.microsoft.com/library/hh831746.aspx) (https://technet.microsoft.com/library/hh831746.aspx) 합니다.  
+-   [파일 서버 리소스 관리자의 새로운 기능](https://technet.microsoft.com/library/hh831746.aspx) (https://technet.microsoft.com/library/hh831746.aspx).  
   
--   [Windows Server 2008 r2 파일 서버 리소스 관리자 단계별 가이드](https://go.microsoft.com/fwlink/?LinkID=204875) (https://go.microsoft.com/fwlink/?LinkID=204875) 합니다.  
+-   [파일 서버 리소스 관리자 Windows server 2008 r 2에 대 한 단계별 가이드](https://go.microsoft.com/fwlink/?LinkID=204875) ()https://go.microsoft.com/fwlink/?LinkID=204875)  
   
--   [Windows Server 2008에서 부족 한 디스크 공간 경고 설정](https://go.microsoft.com/fwlink/?LinkID=204870) ( https://go.microsoft.com/fwlink/?LinkID=204870) 합니다.  
+-   https://go.microsoft.com/fwlink/?LinkID=204870) [Windows Server 2008 ()에서 디스크 공간 부족 경고 설정](https://go.microsoft.com/fwlink/?LinkID=204870)  
   
 ## <a name="how-to-limit-the-amount-of-disk-space-used-for-storing-cached-files"></a>캐시된 파일의 저장에 사용되는 디스크 공간 크기를 제한하는 방법  
   
 1.  중앙 관리의 애플리케이션 관리에서 **서버의 서비스 관리**를 클릭합니다.  
   
-2.  **SQL Server Analysis Services**를 클릭합니다.  
+2.  
+  **SQL Server Analysis Services**를 클릭합니다.  
   
      제한은 서비스 애플리케이션 수준에서 설정되는 것이 아니라 물리적 서버에서 실행되는 Analysis Services 인스턴스에 대해 설정됩니다. 로컬 Analysis Services 인스턴스를 사용하는 모든 서비스 애플리케이션은 해당 인스턴스에 대해 설정된 단일 최대 디스크 공간 제한을 따릅니다.  
   
 3.  디스크 사용에서 **총 디스크 공간** 의 값(GB)을 설정하여 캐싱 목적으로 사용되는 공간 크기의 상한값을 설정합니다. 기본값은 0이며 이 값을 사용하면 Analysis Services에서 사용 가능한 모든 디스크 공간을 사용할 수 있습니다.  
   
-4.  디스크 사용량에서에 **캐시 된 최근 ' n '에서 데이터베이스를 삭제 시간** 일 때 디스크 공간이 최대 한도에 캐시를 비우기 위해 최근에 사용 된 기준을 지정을 설정 합니다.  
+4.  디스크 사용의 **마지막 ' n ' 시간 내에 캐시 된 데이터베이스 삭제** 설정에서 디스크 공간이 최대 한도에 도달 했을 때 캐시를 비우기 위해 마지막으로 사용 된 기준을 지정 합니다.  
   
      기본값은 4시간이며, 이는 4시간 이상 비활성 상태인 모든 데이터베이스가 파일 시스템에서 삭제된다는 의미입니다. 비활성 상태이지만 아직 메모리에 있는 데이터베이스는 언로드된 다음 파일 시스템에서 삭제됩니다.  
   
@@ -74,26 +75,28 @@ ms.locfileid: "66071804"
   
 1.  중앙 관리의 애플리케이션 관리에서 **서비스 애플리케이션 관리**를 클릭합니다.  
   
-2.  **기본 PowerPivot 서비스 응용 프로그램** 을 클릭하여 관리 대시보드를 엽니다.  
+2.  
+  **기본 PowerPivot 서비스 애플리케이션** 을 클릭하여 관리 대시보드를 엽니다.  
   
 3.  동작에서 **서비스 애플리케이션 설정 구성**을 클릭합니다.  
   
 4.  디스크 캐시 섹션에서 비활성 데이터베이스가 새 요청을 처리하기 위해 메모리에 유지되는 기간(기본적으로 48시간)과 캐시에 유지되는 기간(기본적으로 120시간)을 지정할 수 있습니다.  
   
-     **메모리에 비활성 데이터베이스 유지** 는 비활성 데이터베이스가 새 요청을 처리하기 위해 메모리에 유지되는 기간을 지정합니다. 활성 데이터베이스는 쿼리하고 있는 동안에는 항상 메모리에 유지되지만 더 이상 활성 상태가 아니면 해당 데이터에 대한 추가 요청이 있을 경우를 대비해 추가 기간 동안 메모리에 유지됩니다.  
+     **메모리에 비활성 데이터베이스 유지** 는 비활성 데이터베이스가 메모리에 유지 되는 기간을 지정 하 여 해당 데이터에 대 한 새 요청을 처리 합니다. 활성 데이터베이스는 쿼리하고 있는 동안에는 항상 메모리에 유지되지만 더 이상 활성 상태가 아니면 해당 데이터에 대한 추가 요청이 있을 경우를 대비해 추가 기간 동안 메모리에 유지됩니다.  
   
      PowerPivot 데이터베이스가 먼저 캐시된 다음 메모리에 로드되기 때문에 데이터베이스 파일은 디스크 공간을 즉시 사용합니다. 그러나 데이터베이스가 활성화되어 있는 동안(및 그 후 48시간 동안) 모든 요청은 캐시된 데이터베이스를 무시하고 먼저 메모리 내 데이터베이스로 전달됩니다. 비활성화되고 48시간 후에 파일이 메모리에서 언로드되지만 캐시에 유지되므로 로컬 PowerPivot 서버 인스턴스가 해당 데이터에 대한 새 연결 요청을 가로채는 경우 파일이 신속하게 다시 로드될 수 있습니다. 비활성 데이터베이스에 대한 연결 요청은 콘텐츠 라이브러리보다는 캐시에서 처리되므로 콘텐츠 데이터베이스에 대한 영향이 최소화됩니다.  
   
      콘텐츠 라이브러리가 PowerPivot 데이터베이스의 유일한 영구 위치임을 명심해야 합니다. 캐시된 복사본은 라이브러리의 데이터베이스가 디스크의 복사본과 동일한 경우에만 사용됩니다.  
   
-     **캐시에 비활성 데이터베이스 유지** 는 비활성 데이터베이스가 메모리에서 언로드된 후 파일 시스템에 유지되는 기간을 지정합니다. 정리 작업에서는 이 설정을 사용하여 삭제할 파일을 결정합니다. 168시간(메모리에서 48시간 및 캐시에서 120시간) 동안 비활성 상태인 모든 PowerPivot 데이터베이스는 정리 작업에 의해 디스크에서 삭제됩니다.  
+     **캐시에 비활성 데이터베이스 유지** 는 비활성 데이터베이스가 메모리에서 언로드된 후 파일 시스템에 유지 되는 기간을 지정 합니다. 정리 작업에서는 이 설정을 사용하여 삭제할 파일을 결정합니다. 168시간(메모리에서 48시간 및 캐시에서 120시간) 동안 비활성 상태인 모든 PowerPivot 데이터베이스는 정리 작업에 의해 디스크에서 삭제됩니다.  
   
-5.  **확인** 을 클릭하여 변경 내용을 저장합니다.  
+5.  
+  **확인**을 클릭하여 변경 내용을 저장합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- SharePoint용 PowerPivot 설치에서는 서버 상태, 구성 또는 가용성에서 문제가 발견되면 수정 동작을 수행할 수 있도록 상태 규칙을 제공합니다. 이러한 규칙 중 일부는 구성 설정을 사용하여 상태 규칙이 트리거되는 조건을 확인합니다. 서버 성능을 적극적으로 조정하는 경우 이러한 설정을 검토하여 시스템에 가장 적절한 기본값이 선택되었는지 확인할 수도 있습니다. 자세한 내용은 [PowerPivot 상태 규칙-구성](configure-power-pivot-health-rules.md)합니다.  
+ SharePoint용 PowerPivot 설치에서는 서버 상태, 구성 또는 가용성에서 문제가 발견되면 수정 동작을 수행할 수 있도록 상태 규칙을 제공합니다. 이러한 규칙 중 일부는 구성 설정을 사용하여 상태 규칙이 트리거되는 조건을 확인합니다. 서버 성능을 적극적으로 조정하는 경우 이러한 설정을 검토하여 시스템에 가장 적절한 기본값이 선택되었는지 확인할 수도 있습니다. 자세한 내용은 [PowerPivot 상태 규칙-구성](configure-power-pivot-health-rules.md)을 참조 하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [중앙 관리에서 PowerPivot 서버 관리 및 구성](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   

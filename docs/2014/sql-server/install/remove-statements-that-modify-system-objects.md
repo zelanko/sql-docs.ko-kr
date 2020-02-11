@@ -1,5 +1,5 @@
 ---
-title: 시스템 개체를 수정 하는 문을 제거 | Microsoft Docs
+title: 시스템 개체를 수정 하는 문을 제거 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0f65d379076eb213971bba97b970b8aa866ca3a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66428878"
 ---
 # <a name="remove-statements-that-modify-system-objects"></a>시스템 개체를 수정하는 문을 제거합니다.
@@ -36,8 +36,8 @@ ms.locfileid: "66428878"
 ## <a name="corrective-action"></a>수정 동작  
  SQL 스크립트에서 문서화된 공식 API를 사용하도록 수정합니다. 예를 들어 *sysdatabases* 시스템 테이블에 대해 UPDATE 문을 실행하는 대신 ALTER DATABASE **database_name** SET EMERGENCY를 사용합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [데이터베이스 엔진 업그레이드 문제](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](https://docs.microsoft.com/sql/sql-server/install/sql-server-2014-upgrade-advisor)  
+## <a name="see-also"></a>참고 항목  
+ [업그레이드 문제 데이터베이스 엔진](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 업그레이드 관리자 &#91;새&#93;](https://docs.microsoft.com/sql/sql-server/install/sql-server-2014-upgrade-advisor)  
   
   

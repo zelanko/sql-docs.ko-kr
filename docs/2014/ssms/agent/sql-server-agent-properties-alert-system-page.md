@@ -13,21 +13,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 00e3643a1beb3f69f8b370715001317e536c42e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245748"
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>SQL Server 에이전트 속성(경고 시스템 페이지)
-  이 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고가 보낸 메시지의 설정을 확인하거나 수정할 수 있습니다.  
+  이 페이지를 사용 하 여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고가 보낸 메시지의 설정을 확인 하 고 수정할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **메일 세션**  
  이 섹션의 옵션을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 메일을 구성합니다.  
   
- **메일 프로필 설정**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 메일을 설정합니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 메일은 설정되지 않습니다.  
+ **메일 프로필 사용**  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 메일을 설정합니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 메일은 설정되지 않습니다.  
   
  **메일 시스템**  
  사용할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 메일 시스템을 설정합니다. 데이터베이스 메일  
@@ -36,7 +37,7 @@ ms.locfileid: "63245748"
 >  전자 메일 시스템을 변경한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스를 다시 시작해야만 변경 내용이 적용됩니다.  
   
  **메일 프로필**  
- 사용할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프로필을 설정합니다. **\<새 데이터베이스 메일 프로필...>** 을 선택하여 새 프로필을 만들 수도 있습니다.  
+ 사용할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프로필을 설정합니다. ** \<새 데이터베이스 메일 프로필 ... >** 를 선택 하 여 새 프로필을 만들 수도 있습니다.  
   
  **호출기 전자 메일**  
  이 섹션의 옵션을 사용하여 호출 시스템에서 사용하는 호출기 주소로 보낼 전자 메일 메시지를 구성할 수 있습니다.  
@@ -44,10 +45,10 @@ ms.locfileid: "63245748"
  **호출기 전자 메일 주소 형식**  
  이 섹션에서는 호출기 전자 메일의 주소 형식과 전자 메일에 포함되는 제목 줄을 지정할 수 있습니다.  
   
- **받는 사람 줄**  
+ **대상 줄**  
  메시지의 **받는 사람** 줄에 대한 옵션을 지정합니다.  
   
- **Prefix**  
+ **접두사**  
  호출기로 전송되는 메시지의 **받는 사람** 줄 시작 부분에 표시되어야 할 고정 텍스트를 입력합니다.  
   
  **호출기**  
@@ -59,7 +60,7 @@ ms.locfileid: "63245748"
  **참조 줄**  
  메시지의 **참조** 줄에 대한 옵션을 지정합니다.  
   
- **Prefix**  
+ **접두사**  
  호출기로 전송되는 메시지의 **참조** 줄 시작 부분에 표시되어야 할 고정 텍스트를 입력합니다.  
   
  **호출기**  
@@ -68,10 +69,10 @@ ms.locfileid: "63245748"
  **접미사**  
  호출기로 전송되는 메시지의 **참조** 줄 끝 부분에 표시되어야 할 고정 텍스트를 입력합니다.  
   
- **Subject**  
+ **제목**  
  메시지의 제목에 대한 옵션을 지정합니다.  
   
- **Prefix**  
+ **접두사**  
  호출기로 전송되는 메시지의 **제목** 줄 시작 부분에 표시되어야 할 고정 텍스트를 입력합니다.  
   
  **접미사**  
@@ -83,29 +84,30 @@ ms.locfileid: "63245748"
  **유사 시 대기 운영자**  
  이 섹션에서는 유사 시 대기 운영자에 대한 옵션을 지정할 수 있습니다.  
   
- **유사 시 대기 운영자 설정**  
+ **유사 시 대기 운영자 사용**  
  유사 시 대기 운영자를 지정합니다.  
   
  **연산자**  
  유사 시 대기 알림을 받을 운영자의 이름을 설정합니다.  
   
- **알림 방법**  
+ **알림 사용**  
  유사 시 대기 운영자에게 알릴 때 사용할 방법을 설정합니다.  
   
  **토큰 바꾸기**  
  이 섹션을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고로 실행되는 작업에 사용할 수 있는 작업 단계 토큰을 설정할 수 있습니다. 작업 단계 토큰에 대한 자세한 내용은 [작업 단계에서 토큰 사용](use-tokens-in-job-steps.md)을 참조하세요.  
   
 > [!IMPORTANT]  
->  Windows 이벤트 로그에 대한 쓰기 권한이 있는 모든 Windows 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고로 활성화되는 작업 단계에 액세스할 수 있습니다. 이러한 보안상 위험을 방지하기 위해 경고로 활성화되는 작업에 사용할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 토큰은 기본적으로 해제됩니다. 이러한 토큰은 **$(A-DBN)** , **$(A-SVR)** , **$(A-ERR)** , **$(A-SEV)** 및 **$(A-MSG)** 입니다.  
+>  Windows 이벤트 로그에 대한 쓰기 권한이 있는 모든 Windows 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고로 활성화되는 작업 단계에 액세스할 수 있습니다. 이러한 보안상 위험을 방지하기 위해 경고로 활성화되는 작업에 사용할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 토큰은 기본적으로 해제됩니다. 이러한 토큰은 **$(A-DBN)**, **$(A-SVR)**, **$(A-ERR)**, **$(A-SEV)** 및 **$(A-MSG)** 입니다.  
 >   
 >  이러한 토큰을 사용해야 하는 경우 토큰을 설정하기 전에 Administrators 그룹과 같은 트러스트된 Windows 보안 그룹의 멤버만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치된 컴퓨터의 이벤트 로그에 대한 쓰기 권한을 가지도록 합니다.  
   
- **경고에 대한 모든 응답 작업에 대해 토큰 바꾸기**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 경고로 활성화되는 작업에 대해 토큰 바꾸기를 설정하려면 이 확인란을 선택합니다.  
+ **경고에 대 한 모든 응답 작업에 대 한 토큰 바꾸기**  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 경고로 활성화되는 작업에 대해 토큰 바꾸기를 설정하려면 이 확인란을 선택합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [연산자](operators.md)   
- [데이터베이스 메일을 사용 하도록 SQL Server 에이전트 메일 구성](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)   
+## <a name="see-also"></a>참고 항목  
+ [작업자](operators.md)   
+ [데이터베이스 메일 사용 하도록 SQL Server 에이전트 메일 구성](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)   
  [데이터베이스 메일](../../relational-databases/database-mail/database-mail.md)  
   
   

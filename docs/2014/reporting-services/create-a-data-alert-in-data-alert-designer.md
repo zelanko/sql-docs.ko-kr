@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e2b54bbbd6b989890c1d31a545c95117c4b6cbe2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109711"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>데이터 경고 디자이너에서 데이터 경고 만들기
@@ -31,7 +31,8 @@ ms.locfileid: "66109711"
     > [!NOTE]  
     >  보고서를 실행하기 위해 선택한 매개 변수 값은 경고 정의에 저장되며 경고 정의 처리 단계의 일환으로 보고서를 다시 실행할 때 사용됩니다. 다른 매개 변수 값을 사용하려면 새 경고 정의를 만들어야 합니다.  
   
-3.  **동작** 메뉴에서 **새 데이터 경고**를 클릭합니다.  
+3.  
+  **동작** 메뉴에서 **새 데이터 경고**를 클릭합니다.  
   
      다음 그림에서는 **동작** 메뉴를 보여 줍니다.  
   
@@ -40,9 +41,12 @@ ms.locfileid: "66109711"
      데이터 경고 디자이너가 열리고 보고서가 생성하는 첫 번째 데이터 피드의 처음 100개 행이 테이블에 표시됩니다.  
   
     > [!NOTE]  
-    >  **새 데이터 경고** 옵션이 표시되지 않을 경우 경고 서비스가 SharePoint 사이트에 구성되어 있지 않거나 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전에 데이터 경고가 없는 것입니다. 자세한 내용은 [Reporting Services SharePoint Service 및 서비스 애플리케이션](../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)을 참조하세요.  
+    >  
+  **새 데이터 경고** 옵션이 표시되지 않을 경우 경고 서비스가 SharePoint 사이트에 구성되어 있지 않거나 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전에 데이터 경고가 없는 것입니다. 자세한 내용은 [Reporting Services SharePoint Service 및 서비스 애플리케이션](../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)을 참조하세요.  
     >   
-    >  **새 데이터 경고** 옵션이 회색으로 표시될 경우에는 보고서 데이터 원본이 통합 보안 자격 증명을 사용하거나 자격 증명을 요청하도록 구성되어 있는 것입니다. **새 데이터 경고** 옵션을 사용하려면 저장된 자격 증명을 사용하거나 자격 증명을 아예 사용하지 않도록 데이터 원본을 업데이트해야 합니다.  
+    >  
+  **새 데이터 경고** 옵션이 회색으로 표시될 경우에는 보고서 데이터 원본이 통합 보안 자격 증명을 사용하거나 자격 증명을 요청하도록 구성되어 있는 것입니다. 
+  **새 데이터 경고** 옵션을 사용하려면 저장된 자격 증명을 사용하거나 자격 증명을 아예 사용하지 않도록 데이터 원본을 업데이트해야 합니다.  
   
      데이터 피드의 이름이 **보고서 데이터 이름** 드롭다운 목록에 나타납니다.  
   
@@ -56,7 +60,7 @@ ms.locfileid: "66109711"
   
 6.  필요에 따라 기본 데이터 옵션을 **데이터 피드의 데이터가 다음을 포함함**에서 **데이터 피드의 데이터가 다음을 포함하지 않음**으로 변경합니다.  
   
-7.  **규칙 추가**를 클릭합니다.  
+7.  **규칙 추가**를 클릭 합니다.  
   
      데이터 피드의 열 목록이 나타납니다.  
   
@@ -64,7 +68,8 @@ ms.locfileid: "66109711"
   
      선택한 열의 데이터 형식에 따라 다른 비교 연산자가 나열됩니다. 열에 날짜 데이터 형식이 포함된 경우 해당 규칙의 임계값 옆에 달력 아이콘이 표시됩니다. 달력에서 날짜를 클릭하거나 날짜를 입력하여 데이터를 입력할 수 있습니다.  
   
-     데이터 경고 디자이너는 두 가지 비교 모드를 제공합니다. **값 입력 모드** 및 **필드 선택 모드**의 두 가지 비교 모드를 제공합니다. 기본 모드는 **값 입력 모드**입니다. **값 입력 모드** 에 있고 **다음인 경우** 비교를 사용하는 경우에만 OR 절을 추가할 수 있습니다.  
+     데이터 경고 디자이너는 **값 입력 모드** 및 **필드 선택 모드**의 두 가지 비교 모드를 제공합니다. 기본 모드는 **값 입력 모드**입니다. 
+  **값 입력 모드** 에 있고 **다음인 경우** 비교를 사용하는 경우에만 OR 절을 추가할 수 있습니다.  
   
 9. OR 절을 추가하려면 아래쪽 화살표를 클릭한 다음 **값 입력 모드**를 클릭합니다.  
   
@@ -115,9 +120,9 @@ ms.locfileid: "66109711"
   
 22. **저장**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 경고 디자이너](../../2014/reporting-services/data-alert-designer.md)   
- [경고 담당자를 위한 데이터 경고 관리자입니다.](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
+ [경고 관리자를 위한 데이터 경고 관리자](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
  [Reporting Services 데이터 경고](../ssms/agent/alerts.md)  
   
   

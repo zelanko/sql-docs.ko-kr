@@ -1,5 +1,5 @@
 ---
-title: 쿼리 편집기를 사용 하 여 확장된 이벤트 세션 만들기 | Microsoft Docs
+title: 쿼리 편집기를 사용 하 여 확장 이벤트 세션 만들기 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4a541c86029be9a438492a851c0eb16d18120f75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065026"
 ---
 # <a name="create-an-extended-events-session-using-query-editor"></a>쿼리 편집기를 사용하여 확장 이벤트 세션 만들기
-  쿼리 편집기를 사용하거나 개체 탐색기에서 확장 이벤트 세션을 만들 수 있습니다. 개체 탐색기에서 확장 이벤트 만들기, 수정 및 이벤트 세션 데이터-이벤트 세션 생성 프로세스를 안내 하는 마법사 및 고급 구성 옵션을 제공 하는 새 세션 UI를 확인 하 여 두 개의 사용자 인터페이스를 제공 합니다. 확장 이벤트 세션을 만들어 SQL Server 추적을 진단하면 다음과 같은 문제를 해결할 수 있습니다.  
+  쿼리 편집기를 사용하거나 개체 탐색기에서 확장 이벤트 세션을 만들 수 있습니다. 개체 탐색기 확장 이벤트는 이벤트 세션 데이터를 생성, 수정 및 보는 데 사용할 수 있는 두 가지 사용자 인터페이스를 제공 합니다. 마법사는 이벤트 세션 만들기 프로세스를 안내 하는 마법사와 고급 구성 옵션을 제공 하는 새 세션 UI를 제공 합니다. 확장 이벤트 세션을 만들어 SQL Server 추적을 진단하면 다음과 같은 문제를 해결할 수 있습니다.  
   
 -   가장 비용이 많이 드는 쿼리 찾기  
   
@@ -35,7 +35,7 @@ ms.locfileid: "66065026"
   
  새 세션 마법사를 사용하여 확장 이벤트 세션을 만드는 방법은 [마법사를 사용하여 확장 이벤트 세션 만들기&#40;개체 탐색기&#41;](../ssms/object/object-explorer.md)를 참조하세요. 새 세션 UI를 사용하여 확장 이벤트 세션을 만드는 방법은 [새 세션 대화 상자를 사용하여 확장 이벤트 세션 만들기](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md)를 참조하세요.  
   
-##  <a name="BeforeYouBegin"></a> Permissions  
+##  <a name="BeforeYouBegin"></a> 권한  
  확장 이벤트 세션을 만들려면 ALTER ANY EVENT SESSION 권한이 있어야 합니다.  
   
 ## <a name="creating-an-extended-events-session-using-query-editor"></a>쿼리 편집기를 사용하여 확장 이벤트 세션 만들기  
@@ -92,7 +92,7 @@ ms.locfileid: "66065026"
     ADD EVENT package_name.event_name  
     ```  
   
-     이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+     다음은 그 예입니다.  
   
     ```  
     ADD EVENT sqlserver.file_read_completed,  
@@ -129,7 +129,7 @@ ms.locfileid: "66065026"
         AND column_type = 'data'  
         ```  
   
-         이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+         다음은 그 예입니다.  
   
         ```  
         SELECT *   
@@ -156,7 +156,7 @@ ms.locfileid: "66065026"
         WHERE package0.counter <= 5  
         ```  
   
-5.  이벤트 데이터가 처리되고 사용될 원하는 대상을 추가합니다. 다음 형식을 사용합니다.  
+5.  이벤트 데이터가 처리되고 사용될 원하는 대상을 추가합니다. 이때 다음 형식을 사용합니다.  
   
     ```  
     ADD TARGET package_name.target_name  
@@ -218,7 +218,7 @@ ADD TARGET package0.asynchronous_file_target
    (SET filename = 'c:\temp\xelog.xel', metadatafile = 'c:\temp\xelog.xem')  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [CREATE EVENT SESSION&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
  [SQL Server 확장 이벤트 대상](../../2014/database-engine/sql-server-extended-events-targets.md)   
  [SQL Server 확장 이벤트 패키지](../relational-databases/extended-events/sql-server-extended-events-packages.md)  

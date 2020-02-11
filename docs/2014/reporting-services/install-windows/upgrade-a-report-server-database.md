@@ -15,29 +15,31 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e3ba4d9ee2e0b92617c2d2bcadae3bf87c8b5414
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108636"
 ---
 # <a name="upgrade-a-report-server-database"></a>보고서 서버 데이터베이스 업그레이드
   보고서 서버 데이터베이스는 하나 이상의 보고서 서버 인스턴스를 위한 스토리지를 제공합니다. 보고서 서버 데이터베이스 스키마는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 새 릴리스마다 변경될 수 있으므로 데이터베이스 버전과 사용하는 보고서 서버 인스턴스 버전이 일치해야 합니다. 대부분의 경우 보고서 서버 데이터베이스는 사용자가 특별한 동작을 수행하지 않고도 자동으로 업그레이드할 수 있습니다.  
   
- **기본 모드:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드에서는 보고서 서버 데이터베이스가 실제로 기본 이름이 "ReportServer 및 reportservertempdb"인 두 데이터베이스의 구성 됩니다.  
+ **기본 모드:** 기본 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 모드에서는 보고서 서버 데이터베이스가 실제로 기본 이름이 "ReportServer 및 ReportServerTempDB" 인 두 개의 데이터베이스로 구성 됩니다.  
   
- **SharePoint 모드:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드 보고서 서버 데이터베이스는 데이터베이스의 각 인스턴스에 대해 만들어진 컬렉션 실제로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램입니다.  
+ **SharePoint 모드:** SharePoint [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 모드에서는 보고서 서버 데이터베이스가 실제로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램의 각 인스턴스에 대해 만들어진 데이터베이스 컬렉션입니다.  
   
 ## <a name="ways-to-upgrade-a-native-mode-report-server-database"></a>기본 모드 보고서 서버 데이터베이스를 업그레이드하는 방법  
  다음 목록에서는 보고서 서버 데이터베이스가 업그레이드되는 조건을 보여 줍니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 보고서 서버의 단일 인스턴스를 업그레이드합니다. 서비스가 시작되고, 보고서 서버에서 데이터 스키마 버전이 서버 버전과 맞지 않는다고 판단되면 보고서 서버 데이터베이스 스키마가 자동으로 업그레이드됩니다.  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 보고서 서버의 단일 인스턴스를 업그레이드합니다. 서비스가 시작되고, 보고서 서버에서 데이터 스키마 버전이 서버 버전과 맞지 않는다고 판단되면 보고서 서버 데이터베이스 스키마가 자동으로 업그레이드됩니다.  
   
      서비스를 시작하면 보고서 서버는 데이터베이스 스키마 버전이 서버 버전과 일치하는지 검사합니다. 데이터베이스 스키마가 이전 버전이면 보고서 서버에서 필요한 스키마 버전으로 자동으로 업그레이드됩니다. 자동 업그레이드는 이전 보고서 서버 데이터베이스를 복원 또는 연결한 경우 특히 유용합니다. 이러한 경우 보고서 서버 추적 로그 파일에 데이터베이스 스키마 버전이 업그레이드되었다는 메시지가 기록됩니다.  
   
 -   새로운 보고서 서버 인스턴스에서 사용할 이전 버전을 선택하면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 로컬 또는 원격 보고서 서버 데이터베이스를 업그레이드합니다. 이 경우 먼저 업그레이드 동작을 확인해야 합니다.  
   
-     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 더 이상 별도의 업그레이드 단추나 업그레이드 스크립트를 제공하지 않습니다. 보고서 서버 서비스의 자동 업그레이드 기능 덕분에 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터는 이러한 기능이 더 이상 사용되지 않습니다.  
+     
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 더 이상 별도의 업그레이드 단추나 업그레이드 스크립트를 제공하지 않습니다. 보고서 서버 서비스의 자동 업그레이드 기능 덕분에 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터는 이러한 기능이 더 이상 사용되지 않습니다.  
   
  스키마를 업데이트한 후에는 이전 버전으로 업그레이드를 롤백할 수 없습니다. 따라서 이전 설치를 다시 만들어야 하는 경우에 대비하여 항상 보고서 서버 데이터베이스를 백업해야 합니다.  
   
@@ -64,11 +66,11 @@ ms.locfileid: "66108636"
 #### <a name="to-upgrade-a-native-mode-database-with-scripts"></a>스크립트를 사용하여 기본 모드 데이터베이스를 업그레이드하려면  
  WMI 스크립트를 사용하여 보고서 서버 데이터베이스를 업그레이드할 수 있습니다. 자세한 내용은 [GenerateDatabaseUpgradeScript 메서드&#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [보고서 서버 데이터베이스 만들기&#40;SSRS 구성 관리자&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
- [데이터베이스 변경 마법사 &#40;SSRS 기본 모드&#41;](../../sql-server/install/change-database-wizard-ssrs-native-mode.md)   
- [Reporting Services 업그레이드 및 마이그레이션](upgrade-and-migrate-reporting-services.md)   
- [Reporting Services 설치 마이그레이션&#40;기본 모드&#41;](migrate-a-reporting-services-installation-native-mode.md)  
+ [SSRS 기본 모드 &#40;데이터베이스 변경 마법사&#41;](../../sql-server/install/change-database-wizard-ssrs-native-mode.md)   
+ [업그레이드 및 마이그레이션 Reporting Services](upgrade-and-migrate-reporting-services.md)   
+ [기본 모드로 Reporting Services 설치 &#40;마이그레이션&#41;](migrate-a-reporting-services-installation-native-mode.md)  
   
   

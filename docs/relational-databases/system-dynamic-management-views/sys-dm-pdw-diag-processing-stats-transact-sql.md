@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_diag_processing_stats (TRANSACT-SQL) | Microsoft Docs
+title: sys. dm_pdw_diag_processing_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,26 +13,26 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 8b880820ac633402d1d3cdd679b16a54d1be358e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67899535"
 ---
-# <a name="sysdmpdwdiagprocessingstats-transact-sql"></a>sys.dm_pdw_diag_processing_stats (Transact SQL)
+# <a name="sysdm_pdw_diag_processing_stats-transact-sql"></a>sys. dm_pdw_diag_processing_stats (Transact-sql)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  관리자가 정의 하는 진단 세션에 통합 될 수 있는 모든 내부 진단 이벤트와 관련 된 정보를 표시 합니다. 진단 및 이벤트 하위 시스템 통계 다른 Dmv의 채우기 해당 드라이브를 이해 하려면이 뷰를 쿼리 합니다. 그룹에 각 노드에 있는 각 프로세스에 대 한 큐에 있습니다.  
+  관리자가 정의한 진단 세션에 통합 될 수 있는 모든 내부 진단 이벤트와 관련 된 정보를 표시 합니다. 다른 모든 Dmv의 채우기를 구동 하는 진단 및 이벤트 하위 시스템의 통계를 이해 하려면이 뷰를 쿼리 합니다. 각 노드의 각 프로세스에 대 한 큐 그룹이 있습니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**pdw_node_id**|**int**|이 로그는 어플라이언스 노드입니다.|  
-|**process_id**|**int**|이 통계를 제출 하는 실행 중인 프로세스의 식별자입니다.|  
+|**pdw_node_id**|**int**|이 로그를 가져온 어플라이언스 노드입니다.|  
+|**process_id**|**int**|이 통계 제출을 실행 하는 프로세스의 식별자입니다.|  
 |**target_name**|**nvarchar(255)**|큐의 이름입니다.|  
-|**queue_size**|**int**|프로세스 큐에 있는 항목의 수입니다. 큐 크기는 일반적으로 0입니다. 양수 값을 나타내고 시스템은 부하가 이벤트의 백로그를 구성 하는 합니다. 다른 열에 양수는 해당 특정 큐에 대 한 손상 된 시스템 및 Dmv 관련 의미 합니다.|  
-|**lost_events_count**|**bigint**|손실 되는 이벤트의 수입니다.|  
+|**queue_size**|**int**|프로세스 큐에 있는 항목의 수입니다. 큐 크기는 일반적으로 0입니다. 양수는 시스템이 스트레스 상태이 고 이벤트의 백로그를 작성 하 고 있음을 나타냅니다. 다른 열의 긍정 개수는 특정 큐 및 관련 Dmv에 대해 시스템이 손상 된 것을 의미 합니다.|  
+|**lost_events_count**|**bigint**|손실 된 이벤트 수입니다.|  
   
-## <a name="see-also"></a>관련 항목  
- [SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

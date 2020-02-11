@@ -1,5 +1,5 @@
 ---
-title: '자습서: 정책 기반 관리를 사용 하 여 최선의 구현 방법 평가 | Microsoft Docs'
+title: '자습서: 정책 기반 관리를 사용 하 여 모범 사례 평가 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: c41edcfc545e69e6e8174003ca765a4c2f1d551b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064426"
 ---
 # <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>자습서: 정책 기반 관리를 사용하여 최선의 구현 방법 평가
@@ -33,7 +33,7 @@ ms.locfileid: "66064426"
   
  이 자습서는 다음 두 단원으로 이루어져 있습니다.  
   
- [1단원: 주문형으로 최선의 구현 방법 평가](../../2014/tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md)  
+ [1단원: 요청 시 최선의 구현 방법 평가](../../2014/tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md)  
  이 단원에서는 하나 이상의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 대해 정책의 요청 시 평가를 수행합니다.  
   
  [2단원: 일정에 따라 최선의 구현 방법 정책 평가](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
@@ -45,9 +45,9 @@ ms.locfileid: "66064426"
  이 자습서를 사용하려면 서버에 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]가 설치되어 있어야 합니다.  
   
 ## <a name="start-the-tutorial"></a>자습서 시작  
- [1단원: 주문형으로 최선의 구현 방법 평가](../../2014/tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md)  
+ [1단원: 요청 시 최선의 구현 방법 평가](../../2014/tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md)  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [정책 기반 관리를 사용하여 서버 관리](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

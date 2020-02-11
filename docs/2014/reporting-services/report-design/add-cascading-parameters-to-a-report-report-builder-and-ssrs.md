@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cc7ac8634ab77d7648326e5a7e2762d758fb78c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106696"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>보고서에 연계 매개 변수 추가(보고서 작성기 및 SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "66106696"
   
 1.  보고서 데이터 창에서 데이터 원본을 마우스 오른쪽 단추로 클릭한 다음, **데이터 세트 추가**를 클릭합니다.  
   
-2.  **이름**에 데이터 집합의 이름을 입력합니다.  
+2.  **이름**에 데이터 세트의 이름을 입력합니다.  
   
 3.  **데이터 원본**에서 데이터 원본의 이름을 선택하거나 **새로 만들기** 를 클릭하여 데이터 원본을 새로 만듭니다.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66106696"
   
 1.  보고서 데이터 창에서 데이터 원본을 마우스 오른쪽 단추로 클릭한 다음, **데이터 세트 추가**를 클릭합니다.  
   
-2.  **이름**에 데이터 집합의 이름을 입력합니다.  
+2.  **이름**에 데이터 세트의 이름을 입력합니다.  
   
 3.  **데이터 원본**에서 이름이 1단계에서 선택한 데이터 원본의 이름인지 확인합니다.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66106696"
   
 4.  **쿼리에서 값 가져오기**를 클릭합니다. 세 개의 필드가 나타납니다.  
   
-5.  **데이터 집합**의 드롭다운 목록에서, 이전 절차에서 만든 데이터 집합의 이름을 클릭합니다.  
+5.  **데이터 세트**의 드롭다운 목록에서, 이전 절차에서 만든 데이터 세트의 이름을 클릭합니다.  
   
 6.  **값** 필드에서 매개 변수 값을 제공하는 필드의 이름을 클릭합니다.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "66106696"
   
 1.  보고서 데이터 창에서 데이터 원본을 마우스 오른쪽 단추로 클릭한 다음, **데이터 세트 추가**를 클릭합니다.  
   
-2.  **이름**에 데이터 집합의 이름을 입력합니다.  
+2.  **이름**에 데이터 세트의 이름을 입력합니다.  
   
 3.  **데이터 원본**에서 이름이 1단계에서 선택한 데이터 원본의 이름인지 확인합니다.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "66106696"
   
 4.  **쿼리에서 값 가져오기**를 클릭합니다.  
   
-5.  **데이터 집합**의 드롭다운 목록에서, 이전 절차에서 만든 데이터 집합의 이름을 클릭합니다.  
+5.  **데이터 세트**의 드롭다운 목록에서, 이전 절차에서 만든 데이터 세트의 이름을 클릭합니다.  
   
 6.  **값** 필드에서 매개 변수 값을 제공하는 필드의 이름을 클릭합니다.  
   
@@ -153,12 +153,12 @@ ms.locfileid: "66106696"
   
 4.  **보고서 보기**를 클릭합니다. 선택한 매개 변수에 따라 보고서가 업데이트됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서 매개 변수 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
  [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](report-parameters-report-builder-and-report-designer.md)   
  [자습서: 보고서에 매개 변수 추가&#40;보고서 작성기&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [자습서 &#40;보고서 작성기&#41;](../report-builder-tutorials.md)   
- [데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
- [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [데이터 세트 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

@@ -16,16 +16,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d0bc793e9a18e993989563fd3526ff12272f775c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63260792"
 ---
 # <a name="rendering-and-execution-methods"></a>렌더링 및 실행 메서드
   다음 메서드를 사용하여 항목 실행 및 캐싱과 보고서 렌더링을 관리할 수 있습니다.  
   
-|메서드|작업|  
+|방법|작업|  
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.FlushCache%2A>|항목 캐시를 무효화합니다.|  
 |<xref:ReportService2010.ReportingService2010.GetCacheOptions%2A>|항목에 대한 캐시 구성 및 캐시된 항목 복사본의 만료 시점을 설명하는 설정을 반환합니다.|  
@@ -36,8 +36,8 @@ ms.locfileid: "63260792"
 |<xref:ReportService2010.ReportingService2010.SetExecutionOptions%2A>|지정된 항목에 대한 실행 옵션 및 연관된 실행 속성을 설정합니다.|  
 |<xref:ReportService2010.ReportingService2010.UpdateItemExecutionSnapshot%2A>|지정된 항목에 대한 항목 실행 스냅샷을 생성합니다.|  
   
-## <a name="see-also"></a>관련 항목  
- [웹 서비스와 .NET Framework를 사용하여 응용 프로그램 빌드](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
+## <a name="see-also"></a>참고 항목  
+ [웹 서비스와 .NET Framework를 사용하여 애플리케이션 빌드](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [보고서 서버 웹 서비스](../report-server-web-service.md)   
  [보고서 서버 웹 서비스 메서드](report-server-web-service-methods.md)   
  [기술 참조&#40;SSRS&#41;](../../technical-reference-ssrs.md)  

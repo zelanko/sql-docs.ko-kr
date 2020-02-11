@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c7020cacbb8466b1113e514162337befae358549
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67792607"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Windows 인증을 사용하여 데이터베이스 미러링 모니터 추가(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67792607"
   
 ### <a name="to-establish-a-witness"></a>미러링 모니터를 설정하려면  
   
-1.  미러링 모니터 서버 인스턴스에 데이터베이스 미러링을 위한 하나의 엔드포인트가 있는지 확인합니다. 지원할 미러링 세션 수에 관계없이 서버 인스턴스는 데이터베이스 미러링 엔드포인트가 하나만 있어야 합니다. 이 서버 인스턴스의 데이터베이스 미러링 세션에서에서 미러링 모니터로 사용 하려는 경우 끝점에 대 한 미러링 모니터의 역할 할당 (역할 **=** 미러링 모니터 서버). 이 서버 인스턴스를 하나 이상의 다른 데이터베이스 미러링 세션에서 파트너로 사용하려면 엔드포인트의 역할을 ALL로 할당합니다.  
+1.  미러링 모니터 서버 인스턴스에 데이터베이스 미러링을 위한 하나의 엔드포인트가 있는지 확인합니다. 지원할 미러링 세션 수에 관계없이 서버 인스턴스는 데이터베이스 미러링 엔드포인트가 하나만 있어야 합니다. 이 서버 인스턴스를 데이터베이스 미러링 세션에서 미러링 모니터로만 사용 하려면 미러링 모니터 역할을 끝점 (역할 **=** 미러링 모니터 서버)에 할당 합니다. 이 서버 인스턴스를 하나 이상의 다른 데이터베이스 미러링 세션에서 파트너로 사용하려면 엔드포인트의 역할을 ALL로 할당합니다.  
   
      SET WITNESS 문을 실행하려면 파트너 간에 데이터베이스 미러링 세션이 시작되어 있고 미러링 모니터 엔드포인트의 STATE가 STARTED로 설정되어 있어야 합니다.  
   
@@ -48,17 +48,17 @@ ms.locfileid: "67792607"
   
      미러링 모니터 서버에 엔드포인트가 없는 경우 [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)을 참조하세요.  
   
-2.  파트너 인스턴스가 여러 도메인 사용자 계정으로 실행되는 경우 각 인스턴스의 master 데이터베이스에서 여러 계정에 대한 로그인을 만듭니다. 자세한 내용은 [Windows 인증을 사용하여 데이터베이스 미러링 엔드포인트에 대한 네트워크 액세스 허용 &40;SQL Server &#41;](../database-mirroring-allow-network-access-windows-authentication.md)을 참조하세요.  
+2.  파트너 인스턴스가 여러 도메인 사용자 계정으로 실행되는 경우 각 인스턴스의 master 데이터베이스에서 여러 계정에 대한 로그인을 만듭니다. 자세한 내용은 [Windows 인증을 사용하여 데이터베이스 미러링 엔드포인트에 대한 네트워크 액세스 허용&#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md)을 참조하세요.  
   
 3.  주 서버에 연결하여 다음 문을 실행합니다.  
   
-     ALTER DATABASE *<database_name>* SET WITNESS **=** _<server_network_address>_  
+     ALTER database *<database_name>* 미러링 모니터 **=** 서버 _<server_network_address>_  
   
      여기서 *<database_name>* 은 미러링할 데이터베이스의 이름(두 파트너에서 이 이름은 동일함)이고 *<server_network_address>* 는 미러링 모니터 서버 인스턴스의 서버 네트워크 주소입니다.  
   
      서버 네트워크 주소 구문은 다음과 같습니다.  
   
-     TCP **://** \<_system-address>_ **:** \<*port>*  
+     TCP:**//**\<_시스템 주소>_ **:**\<*포트>*  
   
      여기서 \<*system-address&gt;* 는 대상 컴퓨터 시스템을 명확하게 식별하는 문자열이고, \<*포트&gt;* 는 파트너 서버 인스턴스의 미러링 엔드포인트에서 사용되는 포트 번호입니다. 자세햔 내용은 [서버 네트워크 주소 지정&#40;데이터베이스 미러링&#41;](specify-a-server-network-address-database-mirroring.md)을 사용합니다.  
   
@@ -126,12 +126,12 @@ ms.locfileid: "67792607"
   
  보안 설정 표시, 미러 데이터베이스 준비, 파트너 설정 및 미러링 모니터 서버 추가 등의 작업을 수행하는 전체 예제는 [데이터베이스 미러링 설정&#40;SQL Server&#41;](database-mirroring-sql-server.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
- [ALTER DATABASE &#40;Transact-SQL &#41;](/sql/t-sql/statements/alter-database-transact-sql)   
- [Windows 인증을 사용하여 데이터베이스 미러링 엔드포인트에 대한 네트워크 액세스 허용  &#40;SQL Server &#41;](../database-mirroring-allow-network-access-windows-authentication.md)   
- [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기 &#40;Transact-SQL &#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
- [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;Transact-SQL&#41;](database-mirroring-establish-session-windows-authentication.md)   
- [데이터베이스 미러링 세션에서 미러링 모니터 서버 제거&#40;SQL Server&#41;](remove-the-witness-from-a-database-mirroring-session-sql-server.md)   
+## <a name="see-also"></a>참고 항목  
+ [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [Windows 인증 &#40;SQL Server를 사용 하 여 데이터베이스 미러링 끝점에 대 한 네트워크 액세스 허용&#41;](../database-mirroring-allow-network-access-windows-authentication.md)   
+ [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
+ [Transact-sql&#41;&#40;Windows 인증을 사용 하 여 데이터베이스 미러링 세션 설정](database-mirroring-establish-session-windows-authentication.md)   
+ [데이터베이스 미러링 세션에서 미러링 모니터 서버를 제거 &#40;SQL Server&#41;](remove-the-witness-from-a-database-mirroring-session-sql-server.md)   
  [데이터베이스 미러링 모니터 서버](database-mirroring-witness.md)  
   
   

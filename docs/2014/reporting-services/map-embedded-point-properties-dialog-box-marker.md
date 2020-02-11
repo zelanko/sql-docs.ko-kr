@@ -1,5 +1,5 @@
 ---
-title: 지도 포함된 점 속성 대화 상자, 표식 | Microsoft Docs
+title: 지도 포함 점 속성 대화 상자, 표식 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e58ab5cbee4b039206eec713fe964169c4aecee1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108329"
 ---
 # <a name="map-embedded-point-properties-dialog-box-marker"></a>지도 포함 점 속성 대화 상자, 표식
+  
   **포함 점 속성** 대화 상자에서 **표식** 을 선택하여 다음 지도 요소의 표식 유형 및 표식 크기 옵션을 변경할 수 있습니다.  
   
 -   현재 선택한 포함 점. 이 페이지는 지도 포함 점 속성 대화 상자, 일반 페이지에서 무시 옵션을 선택하는 경우에만 나타납니다. 이러한 옵션은 선택한 점에만 적용되며 지도 점 속성 대화 상자의 일반 페이지 또는 지도 표식 유형 규칙 대화 상자의 일반 페이지에 설정된 옵션을 무시합니다.  
@@ -29,14 +30,14 @@ ms.locfileid: "66108329"
   
  자세한 내용은 [지도 범례, 색 눈금 및 관련 규칙 변경&#40;보고서 작성기 및 SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)를 참조하세요.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **표식 유형**  
  표식 유형을 지정합니다. 기본값은 `Circle`입니다.  
   
  **표식 크기**  
  표식 크기를 지정합니다. 기본값은 10pt입니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [지도&#40;보고서 작성기 및 SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)  
   
   

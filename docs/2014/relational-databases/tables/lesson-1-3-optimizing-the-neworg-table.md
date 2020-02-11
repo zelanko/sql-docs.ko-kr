@@ -13,17 +13,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 952043d5d001fe4fe65e6dd1aa7bb2001290429e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110067"
 ---
 # <a name="optimizing-the-neworg-table"></a>NewOrg 테이블 최적화
-  합니다 **NewOrd** 에서 만든 테이블의 [기존 계층적 데이터로 테이블 채우기](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) 작업 모든 직원 정보를 포함 하 고 를사용하여계층구조를나타냅니다`hierarchyid`데이터 형식입니다. 이 태스크에서는 새 인덱스를 추가하여 `hierarchyid` 열에서의 검색을 지원합니다.  
+  [기존 계층적 데이터로 테이블 채우기](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) 태스크에서 만든 `hierarchyid` **neword** 테이블은 모든 직원 정보를 포함 하며 데이터 형식을 사용 하 여 계층 구조를 나타냅니다. 이 태스크에서는 새 인덱스를 추가하여 `hierarchyid` 열에서의 검색을 지원합니다.  
   
 ## <a name="clustered-index"></a>클러스터형 인덱스  
- 합니다 `hierarchyid` 열 (**OrgNode**)에 대 한 기본 키를 **NewOrg** 테이블입니다. 테이블을 만들 때 **OrgNode** 열의 고유성을 적용하기 위해 이 열에 **PK_NewOrg_OrgNode** 라는 클러스터형 인덱스가 포함되었습니다. 이 클러스터형 인덱스는 테이블의 깊이 우선 검색도 지원합니다.  
+ `hierarchyid` 열 (**OrgNode**)은 **neworg** 테이블의 기본 키입니다. 테이블을 만들 때 **OrgNode** 열의 고유성을 적용하기 위해 이 열에 **PK_NewOrg_OrgNode** 라는 클러스터형 인덱스가 포함되었습니다. 이 클러스터형 인덱스는 테이블의 깊이 우선 검색도 지원합니다.  
   
 ## <a name="nonclustered-index"></a>비클러스터형 인덱스  
  이 단계에서는 일반적인 검색을 지원하는 두 개의 비클러스터형 인덱스를 만듭니다.  
@@ -40,7 +40,8 @@ ms.locfileid: "66110067"
     GO  
     ```  
   
-2.  **EmployeeID** 열에 대한 고유 인덱스를 만듭니다. 이는 **EmployeeID** 번호를 기준으로 단일 직원을 단일 조회하는 일반적인 방법입니다. 다음 코드를 실행하여 **EmployeeID**에 대한 인덱스를 만듭니다.  
+2.  
+  **EmployeeID** 열에 대한 고유 인덱스를 만듭니다. 이는 **EmployeeID** 번호를 기준으로 단일 직원을 단일 조회하는 일반적인 방법입니다. 다음 코드를 실행하여 **EmployeeID**에 대한 인덱스를 만듭니다.  
   
     ```  
     CREATE UNIQUE INDEX EmpIDs_unq ON NewOrg(EmployeeID) ;  
@@ -71,7 +72,7 @@ ms.locfileid: "66110067"
   
      [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-     깊이 우선 인덱스: 직원 레코드가 해당 관리자에 인접 하 저장 됩니다.  
+     깊이 우선 인덱스: 직원 레코드가 해당 관리자에 인접하게 저장됩니다.  
   
      `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
   
@@ -95,7 +96,7 @@ ms.locfileid: "66110067"
   
      `/2/2/       0x6B40       2         8      norint`  
   
-     **EmployeeID**-우선 인덱스: 행에 저장 됩니다 **EmployeeID** 시퀀스입니다.  
+     **Employeeid**-첫 번째 인덱스: 행이 **EmployeeID** 시퀀스에 저장 됩니다.  
   
      `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
   
@@ -124,14 +125,17 @@ ms.locfileid: "66110067"
   
 #### <a name="to-drop-the-unnecessary-columns"></a>불필요한 열을 삭제하려면  
   
-1.  **ManagerID** 열은 직원/관리자 관계를 나타냅니다(이제 **OrgNode** 열이 나타냄). 다른 애플리케이션에 **ManagerID** 열이 필요하지 않은 경우 다음 문을 사용하여 해당 열을 삭제하는 것이 좋습니다.  
+1.  
+  **ManagerID** 열은 직원/관리자 관계를 나타냅니다(이제 **OrgNode** 열이 나타냄). 다른 애플리케이션에 **ManagerID** 열이 필요하지 않은 경우 다음 문을 사용하여 해당 열을 삭제하는 것이 좋습니다.  
   
     ```  
     ALTER TABLE NewOrg DROP COLUMN ManagerID ;  
     GO  
     ```  
   
-2.  **EmployeeID** 열도 중복됩니다. **OrgNode** 열은 각 직원을 고유하게 식별합니다. 다른 애플리케이션에 **EmployeeID** 열이 필요하지 않은 경우 다음 코드를 사용하여 인덱스와 열을 차례로 삭제하는 것이 좋습니다.  
+2.  
+  **EmployeeID** 열도 중복됩니다. 
+  **OrgNode** 열은 각 직원을 고유하게 식별합니다. 다른 애플리케이션에 **EmployeeID** 열이 필요하지 않은 경우 다음 코드를 사용하여 인덱스와 열을 차례로 삭제하는 것이 좋습니다.  
   
     ```  
     DROP INDEX EmpIDs_unq ON NewOrg ;  

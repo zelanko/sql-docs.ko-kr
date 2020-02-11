@@ -13,13 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bae94dfd09495d271b668390b17059e067f092c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107623"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>보고서 작성기 옵션 대화 상자, 설정(보고서 작성기)
+  
   **보고서 작성기** 단추를 클릭한 다음 **옵션** 을 클릭하여 최근 파일 및 연결 표시에 대한 옵션을 설정합니다. 기본 보고서 서버를 변경하고 기본값이 없는 경우 새로 추가할 수도 있습니다.  
   
 ## <a name="uielement-list"></a>UIElement 목록  
@@ -36,8 +37,8 @@ ms.locfileid: "66107623"
  **이 수만큼 최근 사이트 및 서버 표시**  
  **보고서 열기** 및 **보고서로 저장** 대화 상자에 표시할 최근 사이트 및 연결의 개수를 지정합니다.  
   
- **이 수만큼 최근 공유 데이터 집합 및 데이터 원본 연결 표시**  
- **데이터 집합 속성** 대화 상자 및 데이터 영역 마법사의 **데이터 원본에 대한 연결 선택** 페이지에 표시할 최근 공유 데이터 집합 및 데이터 원본 연결의 개수를 지정합니다.  
+ **이 수만큼 최근 공유 데이터 세트 및 데이터 원본 연결 표시**  
+ **데이터 세트 속성** 대화 상자 및 데이터 영역 마법사의 **데이터 원본에 대한 연결 선택** 페이지에 표시할 최근 공유 데이터 세트 및 데이터 원본 연결의 개수를 지정합니다.  
   
  **이 수만큼 최근 문서 표시**  
  보고서 작성기 단추를 클릭할 때 표시되는 최근 문서의 개수를 지정합니다.  
@@ -45,7 +46,7 @@ ms.locfileid: "66107623"
  **최근에 사용한 모든 항목 목록 지우기**  
  최근 사이트 및 서버, 공유 데이터 세트, 공유 데이터 원본 연결 및 문서의 현재 목록을 지웁니다.  
   
-## <a name="see-also"></a>관련 항목  
- [대화 상자, 창 및 마법사에 대한 보고서 작성기 도움말](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+## <a name="see-also"></a>참고 항목  
+ [대화 상자, 창 및 마법사에 대 한 보고서 작성기 도움말](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

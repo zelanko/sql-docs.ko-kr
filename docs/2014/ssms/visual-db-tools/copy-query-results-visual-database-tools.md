@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c078597954ac6754966a1a485ac03fc19f817618
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63269902"
 ---
 # <a name="copy-query-results-visual-database-tools"></a>쿼리 결과 복사(Visual Database Tools)
@@ -50,7 +50,7 @@ ms.locfileid: "63269902"
   
 5.  마우스 오른쪽 단추를 클릭한 다음 **복사**를 선택합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [결과 창에서 데이터 작업&#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

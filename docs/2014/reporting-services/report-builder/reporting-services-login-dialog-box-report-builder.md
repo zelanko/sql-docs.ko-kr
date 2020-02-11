@@ -13,18 +13,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 16da6af99af021185c8965dccd087e1c8420e50a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107655"
 ---
 # <a name="reporting-services-login-dialog-box-report-builder"></a>Reporting Services 로그인 대화 상자(보고서 작성기)
+  
   **Reporting Services 로그인** 대화 상자를 사용하여 보고서 서버에 보고서를 게시하는 데 사용할 자격 증명을 제공할 수 있습니다. 이러한 자격 증명과 관련하여 도움을 얻으려면 보고서 서버 관리자에게 문의하십시오.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **Server**  
- 보고서 서버의 이름을 표시합니다. `http://localhost/reportserver`)을 입력합니다. 기본 포트 80 이외의 다른 포트를 사용하는 보고서 서버의 경우 포트 번호를 포함해야 합니다. `http://localhost:8080/reportserver` )을 입력합니다.  
+ 보고서 서버의 이름을 표시합니다. `http://localhost/reportserver`)을 입력합니다. 기본 포트 80 이외의 다른 포트를 사용하는 보고서 서버의 경우 포트 번호를 포함해야 합니다. `http://localhost:8080/reportserver`)을 입력합니다.  
   
  **사용자 이름**  
  웹 서비스에 로그인할 사용자 이름을 입력합니다.  
@@ -32,7 +33,7 @@ ms.locfileid: "66107655"
  **암호**  
  웹 서비스에 로그인할 암호를 입력합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [대화 상자, 창 및 마법사에 대한 보고서 작성기 도움말](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+## <a name="see-also"></a>참고 항목  
+ [대화 상자, 창 및 마법사에 대 한 보고서 작성기 도움말](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1e0f635cc6eb6d985bb75f87583397d6f4c2baa4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245788"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>메뉴 및 바로 가기 키 사용자 지정
@@ -127,7 +127,7 @@ ms.locfileid: "63245788"
   
 5.  바로 가기 메뉴의 **이름** 상자로 이동한 다음 도구 모음 단추의 이름과 함께 키보드 액셀러레이터로 사용할 문자의 앞에 앰퍼샌드(&)를 입력합니다.  
   
-6.  **Enter** 키를 누릅니다.  
+6.  **Enter**키를 누릅니다.  
   
 7.  **사용자 지정** 대화 상자에서 **닫기**를 클릭합니다.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "63245788"
 > [!NOTE]  
 >  일부 명령은 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에 관련 내용이 표시되는 경우에만 사용할 수 있습니다. 메뉴에 사용할 수 있는 명령이 없으면 메뉴 항목을 사용할 수 없습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Management Studio 바로 가기 키](sql-server-management-studio-keyboard-shortcuts.md)  
   
   

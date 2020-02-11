@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8d289466fcff56a78172c54f24a093e0af169484
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108002"
 ---
 # <a name="query-builder-report-wizard"></a>쿼리 작성기(보고서 마법사)
@@ -27,7 +27,8 @@ ms.locfileid: "66108002"
   
 -   쿼리를 지정하고 결과를 보기 위한 매우 단순한 작업 영역을 제공하는 텍스트 기반 쿼리 작성기(기본값). 여러 개의 [!INCLUDE[tsql](../includes/tsql-md.md)] 문, 사용자 지정 데이터 처리 확장 프로그램에 대한 쿼리 또는 명령 구문, 식으로 지정된 쿼리를 지정할 수 있습니다. 일반 쿼리 작성기는 쿼리를 전처리하지 않고 모든 종류의 쿼리 구문을 포함할 수 있으므로 보고서 디자이너의 기본 쿼리 작성기 도구입니다.  
   
--   보다 뛰어난 화면을 제공하는 그래픽 쿼리 작성기. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 여러 부분에 사용됩니다. 식 또는 여러 부분으로 구성된 SQL 문을 작성하지 않는 경우 그래픽 쿼리 작성기를 사용할 수 있습니다.  
+-   보다 뛰어난 화면을 제공하는 그래픽 쿼리 작성기. 
+  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 여러 부분에 사용됩니다. 식 또는 여러 부분으로 구성된 SQL 문을 작성하지 않는 경우 그래픽 쿼리 작성기를 사용할 수 있습니다.  
   
      그래픽 쿼리 작성기로 전환하려면 창의 왼쪽 위 모퉁이에 있는 **텍스트로 편집** 단추를 토글합니다.  
   
@@ -38,9 +39,10 @@ ms.locfileid: "66108002"
  텍스트 기반 쿼리 디자이너와 그래픽 쿼리 디자이너가 모두 쿼리에 대해 작동하는 경우 이 두 디자이너 사이를 전환합니다.  
   
  **가져오기**  
- **쿼리 가져오기** 대화 상자를 열고 사용 가능한 모든 보고서에 대한 .rdl 및 .sql 파일을 표시합니다. 가져온 쿼리를 그대로 사용하거나 쿼리 작성기에서 수정할 수 있습니다.  
+ 
+  **쿼리 가져오기** 대화 상자를 열고 사용 가능한 모든 보고서에 대한 .rdl 및 .sql 파일을 표시합니다. 가져온 쿼리를 그대로 사용하거나 쿼리 작성기에서 수정할 수 있습니다.  
   
- **\! (실행)**  
+ **!(실행)**  
  쿼리를 실행하고 쿼리가 유효한 경우 결과 집합을 반환합니다. 쿼리가 식인 경우에는 실행할 수 없습니다. 식 기반 쿼리인지 확인하려면 보고서 미리 보기를 수행해야 합니다.  
   
  **명령 유형**  
@@ -52,8 +54,8 @@ ms.locfileid: "66108002"
  **결과 창**  
  쿼리에서 반환된 결과 집합을 표시합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>참고 항목  
+ [보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [보고서 마법사 도움말](../../2014/reporting-services/report-wizard-help.md)  
   
   

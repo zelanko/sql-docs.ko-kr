@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_dms_external_work (TRANSACT-SQL) | Microsoft Docs
+title: sys. dm_pdw_dms_external_work (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,37 +13,37 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: a1778cbb88fcd6a4142e800cd45109602509125d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67899496"
 ---
-# <a name="sysdmpdwdmsexternalwork-transact-sql"></a>sys.dm_pdw_dms_external_work (Transact-SQL)
+# <a name="sysdm_pdw_dms_external_work-transact-sql"></a>sys. dm_pdw_dms_external_work (Transact-sql)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 외부 작업에 대 한 모든 데이터 이동 서비스 (DMS) 단계에 대 한 정보를 포함 하는 시스템 뷰.  
+  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]외부 작업의 모든 DMS (데이터 이동 서비스) 단계에 대 한 정보를 포함 하는 시스템 뷰입니다.  
   
-|열 이름|데이터 형식|설명|범위|  
+|열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
-|request_id|**nvarchar(32)**|이 DMS 작업자를 사용 하는 쿼리입니다.<br /><br /> request_id, step_index, 및 dms_step_index이이 보기에 대 한 키를 구성합니다.|request_id 동일 [sys.dm_pdw_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)합니다.|  
-|step_index|**int**|이 DMS 작업자를 호출 하는 쿼리 단계입니다.<br /><br /> request_id, step_index, 및 dms_step_index이이 보기에 대 한 키를 구성합니다.|step_index 동일 [sys.dm_pdw_request_steps &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)합니다.|  
-|dms_step_index|**int**|DMS 계획의 현재 단계입니다.<br /><br /> request_id, step_index, 및 dms_step_index이이 보기에 대 한 키를 구성합니다.|dms___step_index 동일 [sys.dm_pdw_dms_workers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md)합니다.|  
-|pdw_node_id|**int**|DMS 작업자를 실행 하는 노드입니다.|에 대 한 node_id 동일 [sys.dm_pdw_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)합니다.|  
-|type|**nvarchar(60)**|이 노드가 실행 되는 외부 작업의 형식입니다.<br /><br /> 파일 분할은 여러 작은 됩니다도 나눠진 외부 Hadoop 파일 작업 합니다.|' 파일 분할 '|  
-|work_id|**int**|파일 분할 id입니다.|보다 크거나 0입니다.<br /><br /> 계산 노드 당 고유 합니다.|  
-|input_name|**nvarchar(60)**|읽는 중인 입력에 대 한 이름을 문자열입니다.|Hadoop 파일에 대 한 Hadoop 파일 이름입니다.|  
-|read_location|**bigint**|읽기 위치 오프셋입니다.||  
-|estimated_bytes_processed|**bigint**|이 작업자에 의해 처리 된 바이트 수입니다.|보다 크거나 0입니다.|  
-|length|**bigint**|파일 분할 된 바이트 수입니다.<br /><br /> Hadoop에 대 한 HDFS 블록의 크기입니다.|사용자 정의입니다. 기본값은 64MB입니다.|  
-|상태|**nvarchar(32)**|작업자의 상태입니다.|보류 중으로 처리 하 고, 완료, 실패, 중단|  
-|start_time|**datetime**|이 작업 자가 실행 시작 된 시간입니다.|쿼리 단계가의 시작 시간 보다 크거나이 작업자에 속합니다. 참조 [sys.dm_pdw_request_steps &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)합니다.|  
-|end_time|**datetime**|실행 종료, 실패 또는 취소 된 시간입니다.|진행 중이거나 큐에 대기 중인 작업자에 대 한 NULL입니다. 이 고, 그렇지 start_time 보다 큽니다.|  
-|total_elapsed_time|**int**|밀리초 단위로 실행에 소요 된 총 시간입니다.|보다 크거나 0입니다.<br /><br /> Total_elapsed_time 정수에 대 한 최대값을 초과 하면 total_elapsed_time 최대 값으로 계속 됩니다. 이 조건이 "최대 값을 초과 했습니다." 경고 생성<br /><br /> 시간 (밀리초)의 최 댓 값 24.8 일 하는 것과 같습니다.|  
+|request_id|**nvarchar (32)**|이 DMS 작업자를 사용 하는 쿼리입니다.<br /><br /> 이 보기의 키를 request_id, step_index 및 dms_step_index 구성 합니다.|[Dm_pdw_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)request_id와 동일 합니다.|  
+|step_index|**int**|이 DMS 작업자를 호출 하는 쿼리 단계입니다.<br /><br /> 이 보기의 키를 request_id, step_index 및 dms_step_index 구성 합니다.|[Dm_pdw_request_steps &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)step_index와 동일 합니다.|  
+|dms_step_index|**int**|DMS 계획의 현재 단계입니다.<br /><br /> 이 보기의 키를 request_id, step_index 및 dms_step_index 구성 합니다.|[Dm_pdw_dms_workers &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md)dms___step_index와 동일 합니다.|  
+|pdw_node_id|**int**|DMS 작업자를 실행 하는 노드입니다.|[Dm_pdw_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)node_id와 동일 합니다.|  
+|type|**nvarchar (60)**|이 노드가 실행 중인 외부 작업의 유형입니다.<br /><br /> 파일 분할은 여러 개의 작은 부분으로 분할 된 외부 Hadoop 파일의 작업입니다.|' 파일 분할 '|  
+|work_id|**int**|파일 분할 ID입니다.|0 보다 크거나 같습니다.<br /><br /> Compute 노드당 고유 합니다.|  
+|input_name|**nvarchar (60)**|읽고 있는 입력의 문자열 이름입니다.|Hadoop 파일의 경우 Hadoop 파일 이름입니다.|  
+|read_location|**bigint**|읽기 위치의 오프셋입니다.||  
+|estimated_bytes_processed|**bigint**|이 작업자에서 처리 한 바이트 수입니다.|0 보다 크거나 같습니다.|  
+|length|**bigint**|분할 된 파일의 바이트 수입니다.<br /><br /> Hadoop의 경우 HDFS 블록의 크기입니다.|사용자 정의. 기본값은 64입니다.|  
+|상태|**nvarchar (32)**|작업자의 상태입니다.|보류 중, 처리 중, 완료 됨, 실패, 중단 됨|  
+|start_time|**datetime**|이 작업자의 실행이 시작 된 시간입니다.|이 작업자가 속한 쿼리 단계의 시작 시간 보다 크거나 같습니다. [Dm_pdw_request_steps &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)을 참조 하십시오.|  
+|end_time|**datetime**|실행이 종료, 실패 또는 취소 된 시간입니다.|진행 중이거나 지연 된 작업자의 경우 NULL입니다. 그렇지 않으면 start_time 보다 큽니다.|  
+|total_elapsed_time|**int**|실행에 소요 된 총 시간 (밀리초)입니다.|0 보다 크거나 같습니다.<br /><br /> Total_elapsed_time 정수에 대 한 최대값을 초과 하는 경우 total_elapsed_time는 최대 값으로 계속 됩니다. 이 경우 "최 댓 값이 초과 되었습니다." 라는 경고가 생성 됩니다.<br /><br /> 최대 값 (밀리초)은 24.8 일에 해당 합니다.|  
   
- 이 보기에 의해 보존 된 최대 행에 대 한 내용은에서 메타 데이터 섹션을 참조 합니다 [용량 제한](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) 항목입니다.
+ 이 보기에 의해 유지 되는 최대 행에 대 한 자세한 내용은 [용량 제한](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) 항목에서 메타 데이터 섹션을 참조 하세요.
   
-## <a name="see-also"></a>관련 항목  
- [시스템 뷰 &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;&#40;시스템 뷰](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

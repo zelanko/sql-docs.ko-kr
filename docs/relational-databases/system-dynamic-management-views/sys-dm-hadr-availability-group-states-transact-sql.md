@@ -1,5 +1,5 @@
 ---
-title: sys.dm_hadr_availability_group_states (TRANSACT-SQL) | Microsoft Docs
+title: sys. dm_hadr_availability_group_states (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,39 +20,39 @@ ms.assetid: d18019dd-f8dc-4492-b035-b1a639369b65
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 91efefbdc28480cf2a3b3fb579dba0946dba8a2e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67900773"
 ---
-# <a name="sysdmhadravailabilitygroupstates-transact-sql"></a>sys.dm_hadr_availability_group_states(Transact-SQL)
+# <a name="sysdm_hadr_availability_group_states-transact-sql"></a>sys.dm_hadr_availability_group_states(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  로컬 인스턴스에서 가용성 복제본이 있는 각 Always On 가용성 그룹에 대 한 행을 반환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 각 행에는 지정된 가용성 그룹의 상태를 정의하는 상태가 표시됩니다.  
+  의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로컬 인스턴스에서 가용성 복제본을 소유 하는 각 Always On 가용성 그룹에 대해 하나의 행을 반환 합니다. 각 행에는 지정된 가용성 그룹의 상태를 정의하는 상태가 표시됩니다.  
   
 > [!NOTE]  
->  전체 목록은 쿼리 합니다 [sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) 카탈로그 뷰.  
+>  의 전체 목록을 얻으려면 [sys. availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) 카탈로그 뷰를 쿼리 합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**group_id**|**uniqueidentifier**|가용성 그룹의 고유한 식별자입니다.|  
-|**primary_replica**|**varchar(128)**|현재 주 복제본을 호스팅하는 서버 인스턴스의 이름입니다.<br /><br /> NULL = 주 복제본이 아니거나 WSFC 장애 조치(Failover) 클러스터와 통신할 수 없습니다.|  
-|**primary_recovery_health**|**tinyint**|주 복제본의 복구 상태를 나타내며 다음 중 하나입니다.<br /><br /> 0 = 진행 중<br /><br /> 1 = 온라인<br /><br /> NULL<br /><br /> 보조 복제본에는 **primary_recovery_health** 열은 NULL입니다.|  
-|**primary_recovery_health_desc**|**nvarchar(60)**|에 대 한 설명을 **primary_replica_health**하나씩입니다.<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
-|**secondary_recovery_health**|**tinyint**|복구 상태를 보조 복제본 중 하나를 나타냅니다.<br /><br /> 0 = 진행 중<br /><br /> 1 = 온라인<br /><br /> NULL<br /><br /> 주 복제본에는 **secondary_recovery_health** 열은 NULL입니다.|  
-|**secondary_recovery_health_desc**|**nvarchar(60)**|에 대 한 설명을 **secondary_recovery_health**하나씩입니다.<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
-|**synchronization_health**|**tinyint**|에 대 한 롤업을 반영 합니다 **synchronization_health** 가용성 그룹의 모든 가용성 복제본의 합니다. 가능한 값 및 해당 설명이 같습니다.<br /><br /> 0: 정상이 아님. 가용성 복제본이 하나도 정상 상태인 **synchronization_health** (2 = 정상).<br /><br /> 1: 부분적으로 정상. 가용성 복제본의 전체가 아닌 일부의 동기화 상태가 정상입니다.<br /><br /> 2: 정상입니다. 모든 가용성 복제본의 동기화 상태가 정상입니다.<br /><br /> 복제본 동기화 상태에 대 한 자세한 참조를 **synchronization_health** 열에 [sys.dm_hadr_availability_replica_states &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md).|  
-|**synchronization_health_desc**|**nvarchar(60)**|에 대 한 설명을 **synchronization_health**하나씩입니다.<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> HEALTHY|  
+|**primary_replica**|**varchar (128)**|현재 주 복제본을 호스팅하는 서버 인스턴스의 이름입니다.<br /><br /> NULL = 주 복제본이 아니거나 WSFC 장애 조치(Failover) 클러스터와 통신할 수 없습니다.|  
+|**primary_recovery_health**|**tinyint**|주 복제본의 복구 상태를 나타내며 다음 중 하나입니다.<br /><br /> 0 = 진행 중<br /><br /> 1 = 온라인<br /><br /> NULL<br /><br /> 보조 복제본에서 **primary_recovery_health** 열은 NULL입니다.|  
+|**primary_recovery_health_desc**|**nvarchar (60)**|**Primary_replica_health**에 대 한 설명 이며 다음 중 하나입니다.<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
+|**secondary_recovery_health**|**tinyint**|보조 복제본 복제본의 복구 상태를 나타내며 다음 중 하나입니다.<br /><br /> 0 = 진행 중<br /><br /> 1 = 온라인<br /><br /> NULL<br /><br /> 주 복제본에서 **secondary_recovery_health** 열은 NULL입니다.|  
+|**secondary_recovery_health_desc**|**nvarchar (60)**|**Secondary_recovery_health**에 대 한 설명 이며 다음 중 하나입니다.<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
+|**synchronization_health**|**tinyint**|가용성 그룹에 있는 모든 가용성 복제본의 **synchronization_health** 에 대 한 롤업을 반영 합니다. 다음은 가능한 값과 그에 대 한 설명입니다.<br /><br /> 0: 정상이 아닙니다. 정상 상태의 **synchronization_health** 있는 가용성 복제본이 없습니다 (2 = 정상).<br /><br /> 1: 부분 정상 가용성 복제본의 전체가 아닌 일부의 동기화 상태가 정상입니다.<br /><br /> 2: 정상. 모든 가용성 복제본의 동기화 상태가 정상입니다.<br /><br /> 복제본 동기화 상태에 대 한 자세한 내용은 [dm_hadr_availability_replica_states &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md)에서 **synchronization_health** 열을 참조 하세요.|  
+|**synchronization_health_desc**|**nvarchar (60)**|**Synchronization_health**에 대 한 설명 이며 다음 중 하나입니다.<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> HEALTHY|  
   
 ## <a name="security"></a>보안  
   
 ### <a name="permissions"></a>사용 권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [가용성 그룹 모니터링&#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
- [Always On 가용성 그룹&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [Always On 가용성 그룹 동적 관리 뷰 및 함수 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)  
+ [Always On 가용성 그룹 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [Always On 가용성 그룹 동적 관리 뷰 및 함수 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)  
   
   

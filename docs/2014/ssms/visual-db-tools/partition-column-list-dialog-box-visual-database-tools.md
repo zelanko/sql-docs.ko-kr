@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ea7bd1ada1c5efcc4ce64d0703192df8ddd6d9ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63280382"
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>분할 열 목록 대화 상자(Visual Database Tools)
@@ -28,10 +28,10 @@ ms.locfileid: "63280382"
  데이터 형식  
  분할 구성표에 정의된 열의 데이터 형식을 표시합니다.  
   
- Column  
+ 열  
  분할 함수를 적용할 열을 선택하는 데 사용할 수 있는 드롭다운 목록을 제공합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [테이블 속성&#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

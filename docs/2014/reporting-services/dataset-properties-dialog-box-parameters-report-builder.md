@@ -13,22 +13,22 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 295a40bc7964e50e5fc0c4a9ea0294b593fdde18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109387"
 ---
 # <a name="dataset-properties-dialog-box-parameters-report-builder"></a>데이터 세트 속성 대화 상자, 매개 변수(보고서 작성기)
-  선택 **매개 변수** 에 **데이터 집합 속성** 대화 상자를 추가, 변경 및 쿼리 매개 변수를 삭제 합니다.  
+  **데이터 집합 속성** 대화 상자에서 **매개 변수** 를 선택 하 여 쿼리 매개 변수를 추가, 변경 및 삭제할 수 있습니다.  
   
  포함된 데이터 세트의 경우 옵션은 보고서 정의의 데이터 세트에 적용됩니다.  
   
  공유 데이터 세트의 경우 옵션은 보고서 서버에 있는 공유 데이터 세트 정의에 적용됩니다.  
   
- 자세한 내용은 [포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.  
+ 자세한 내용은 [포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **추가**  
  목록에 새 매개 변수를 추가합니다.  
   
@@ -42,7 +42,8 @@ ms.locfileid: "66109387"
  선택한 매개 변수를 목록에서 아래쪽으로 이동합니다.  
   
  **매개 변수 이름**  
- **데이터 집합 속성** 대화 상자의 **쿼리** 탭에서 데이터 집합에 추가한 쿼리 매개 변수의 이름을 입력합니다.  
+ 
+  **데이터 세트 속성** 대화 상자의 **쿼리** 탭에서 데이터 세트에 추가한 쿼리 매개 변수의 이름을 입력합니다.  
   
  **매개 변수 값**  
  포함된 데이터 세트에만 해당됩니다.  
@@ -75,15 +76,15 @@ ms.locfileid: "66109387"
   
  보고서 매개 변수에 대한 참조가 쿼리에 있지 않고 공유 데이터 세트 필터의 식에 있는 경우 이 옵션을 선택합니다. 이 옵션을 선택하는 경우 쿼리 실행 시 이 매개 변수에 대한 기본값을 지정할 필요가 없습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [대화 상자, 창 및 마법사에 대한 보고서 작성기 도움말](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+## <a name="see-also"></a>참고 항목  
+ [대화 상자, 창 및 마법사에 대 한 보고서 작성기 도움말](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [데이터 집합 속성 대화 상자, 쿼리 &#40;보고서 작성기&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
  [식&#40;보고서 작성기 및 SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [자습서: 보고서에 매개 변수 추가&#40;보고서 작성기&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
- [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [쿼리 디자이너&#40;보고서 작성기&#41;](../../2014/reporting-services/query-designers-report-builder.md)   
- [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [공유 데이터 집합 또는 포함된 데이터 집합 만들기&#40;보고서 작성기 및 SSRS&#41;](report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
+ [보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [쿼리 디자이너 &#40;보고서 작성기&#41;](../../2014/reporting-services/query-designers-report-builder.md)   
+ [보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [공유 데이터 집합 또는 포함 된 데이터 집합 &#40;보고서 작성기 및 SSRS를 만듭니다&#41;](report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
   

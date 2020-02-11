@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 31dd441af6e46784b928006fe45b726f4c59f0c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63267377"
 ---
 # <a name="set-trace-display-defaults-sql-server-profiler"></a>추적 표시 기본값 설정(SQL Server Profiler)
@@ -36,7 +36,7 @@ ms.locfileid: "63267377"
   
 6.  **확인** 을 클릭하여 **일반 옵션** 대화 상자를 닫습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [SQL Server 프로파일러](sql-server-profiler.md)  
+## <a name="see-also"></a>참고 항목  
+ [SQL Server Profiler](sql-server-profiler.md)  
   
   

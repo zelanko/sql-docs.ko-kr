@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 65426162fc7cd7ada9e66c591420ac64040a4391
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108547"
 ---
 # <a name="lesson-1-create-a-new-web-site"></a>1단원: 새 웹 사이트 만들기
@@ -26,13 +26,15 @@ ms.locfileid: "66108547"
   
 2.  **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **웹 사이트**를 선택합니다.  
   
-3.  **새 웹 사이트** 대화 상자의 **설치된 템플릿** 창에서 **Visual C#** 을 선택한 다음 **ASP.NET 웹 사이트**를 선택합니다.  
+3.  
+  **새 웹 사이트** 대화 상자의 **설치된 템플릿** 창에서 **Visual C#** 을 선택한 다음 **ASP.NET 웹 사이트**를 선택합니다.  
   
-4.  **위치** 상자에서 프로젝트 디렉터리를 지정하고 **확인**을 클릭합니다.  
+4.  
+  **위치** 상자에서 프로젝트 디렉터리를 지정하고 **확인**을 클릭합니다.  
   
  웹 사이트 프로젝트가 열립니다.  
   
 ## <a name="next-task"></a>다음 태스크  
- 새 웹 사이트 프로젝트를 성공적으로 만들었습니다. 이제 부모 보고서에 대한 데이터 테이블 및 데이터 연결을 만듭니다. [2단원: 부모 보고서에 대 한 데이터 연결 및 데이터 테이블 정의](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)합니다.  
+ 새 웹 사이트 프로젝트를 성공적으로 만들었습니다. 이제 부모 보고서에 대한 데이터 테이블 및 데이터 연결을 만듭니다. [2단원: 부모 보고서에 대한 데이터 연결 및 데이터 테이블 정의](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)를 참조하세요.  
   
   

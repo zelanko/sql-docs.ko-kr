@@ -1,5 +1,5 @@
 ---
-title: 계열 속성 대화 상자, 일반 (보고서 작성기 및 SSRS)를 계산 합니다. | Microsoft Docs
+title: 계산 된 계열 속성 대화 상자, 일반 (보고서 작성기 및 SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,20 +14,21 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d3f03857ebbd1d633d78a25437b1f7c03558c7e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109868"
 ---
 # <a name="calculated-series-properties-dialog-box-general-report-builder-and-ssrs"></a>계산된 계열 속성 대화 상자, 일반(보고서 작성기 및 SSRS)
-  **계산된 계열 속성** 대화 상자에서 **수식**을 선택하여 기존 계열 데이터를 입력으로 사용하는 기본 제공 수식을 기반으로 계산할 계열을 추가하거나 수정할 수 있습니다.  
   
-## <a name="options"></a>변수  
+  **계산된 계열 속성** 대화 상자에서 **수식** 을 선택하여 기존 계열 데이터를 입력으로 사용하는 기본 제공 수식을 기반으로 계산할 계열을 추가하거나 수정할 수 있습니다.  
+  
+## <a name="options"></a>옵션  
  **수식**  
- 차트에 적용할 수식을 선택합니다. 다음 옵션을 사용할 수 있습니다.  
+ 차트에 적용할 수식을 선택합니다. 옵션은 다음과 같습니다.  
   
--   평균값  
+-   평균  
   
 -   중앙값  
   
@@ -45,7 +46,7 @@ ms.locfileid: "66109868"
   
 -   DPO(Detrended Price Oscillator)  
   
--   포락선  
+-   봉투  
   
 -   성능  
   
@@ -58,7 +59,7 @@ ms.locfileid: "66109868"
  **수식 매개 변수 설정**  
  선택한 수식의 매개 변수를 지정합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [차트&#40;보고서 작성기 및 SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)  
   
   

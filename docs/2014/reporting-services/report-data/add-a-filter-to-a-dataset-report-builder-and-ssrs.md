@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3ce57aa0ac17a29b9e8f3b0ea7eef3ad1501a60e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107534"
 ---
 # <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>데이터 세트에 필터 추가(보고서 작성기 및 SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "66107534"
   
 1.  공유 데이터 세트 모드에서 공유 데이터 세트를 엽니다.  
   
-2.  **홈** 탭의 **공유 데이터 집합** 그룹에서 데이터 집합을 클릭합니다. **데이터 집합 속성** 대화 상자가 열립니다.  
+2.  **홈** 탭의 **공유 데이터 세트** 그룹에서 데이터 세트를 클릭합니다. **데이터 세트 속성** 대화 상자가 열립니다.  
   
 3.  **필터**를 클릭합니다. 그러면 현재 필터 수식 목록이 표시됩니다. 기본적으로 이 목록은 비어 있습니다.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66107534"
   
 1.  보고서 디자인 모드에서 보고서를 엽니다.  
   
-2.  **보고서 데이터** 창에서 데이터 집합을 마우스 오른쪽 단추로 클릭한 다음 **데이터 집합 속성**을 클릭합니다. **데이터 집합 속성** 대화 상자가 열립니다.  
+2.  **보고서 데이터** 창에서 데이터 세트를 마우스 오른쪽 단추로 클릭한 다음, **데이터 세트 속성**을 클릭합니다. **데이터 세트 속성** 대화 상자가 열립니다.  
   
 3.  **필터**를 클릭합니다. 그러면 현재 필터 수식 목록이 표시됩니다. 기본적으로 이 목록은 비어 있습니다.  
   
@@ -71,8 +71,8 @@ ms.locfileid: "66107534"
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>관련 항목  
- [데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
+## <a name="see-also"></a>참고 항목  
+ [데이터 세트 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](../report-design/expression-examples-report-builder-and-ssrs.md)   
  [필터 추가&#40;보고서 작성기 및 SSRS&#41;](../report-design/add-a-filter-report-builder-and-ssrs.md)  
   

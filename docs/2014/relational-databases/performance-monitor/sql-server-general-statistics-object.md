@@ -14,42 +14,42 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a8b2131e4c3c2070bb03018c48294543b9baef02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250635"
 ---
 # <a name="sql-server-general-statistics-object"></a>SQL Server, General Statistics 개체
-  **의** SQLServer:General Statistics [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체는 현재 연결 수 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결하고 연결을 끊은 초당 사용자 수와 같은 서버 차원의 일반적 동작을 모니터링하는 카운터를 제공합니다. 이 개체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 많은 수의 클라이언트가 연결하고 해제하는 대규모의 OLTP(온라인 트랜잭션 처리) 유형의 시스템에서 작업할 때 유용합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 **SQLServer: general Statistics** 개체는 현재 연결 수 및 인스턴스를 실행 하는 컴퓨터에서 초당 연결 및 연결 해제 하는 사용자 수와 같은 일반적인 서버 차원의 작업을 모니터링 하는 카운터를 제공 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 이 개체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 많은 수의 클라이언트가 연결하고 해제하는 대규모의 OLTP(온라인 트랜잭션 처리) 유형의 시스템에서 작업할 때 유용합니다.  
   
  이 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **General Statistics** 카운터를 설명합니다.  
   
 |SQL Server General Statistics 카운터|Description|  
 |--------------------------------------------|-----------------|  
-|**Active Temp Tables**|사용 중인 임시 테이블/테이블 변수의 수입니다.|  
-|**Connection resets/sec**|연결 풀에서 시작된 로그인의 총 수입니다.|  
-|**Event Notifications Delayed Drop**|시스템 스레드에서 삭제 대기 중인 이벤트 알림 수입니다.|  
-|**HTTP Authenticated Requests**|초당 시작된 인증된 HTTP 요청 수입니다.|  
-|**Logical Connections**|시스템에 대한 논리적 연결 수입니다.<br /><br /> 논리적 연결의 주 목적은 MARS(Multiple Active Result Sets) 요청을 처리하는 것입니다. MARS 요청의 경우 애플리케이션이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결될 때마다 하나의 실제 연결에 해당하는 논리적 연결이 두 개 이상 있을 수 있습니다.<br /><br /> MARS가 사용되지 않는 경우 실제 연결과 논리적 연결의 비율은 1:1입니다. 따라서 애플리케이션이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결될 때마다 논리적 연결은 1씩 증가합니다.|  
-|**Logins/sec**|초당 시작된 총 로그인 수입니다. 풀링된 연결은 포함되지 않습니다.|  
-|**Logouts/sec**|초당 시작된 총 로그아웃 작업 수입니다.|  
-|**Mars Deadlocks**|발견된 MARS 교착 상태 수입니다.|  
-|**Non-atomic yield rate**|초당 생성되는 비원자성 트랜잭션 수입니다.|  
-|**Processes blocked**|현재 차단된 프로세스 수입니다.|  
-|**SOAP Empty Requests**|초당 시작된 빈 SOAP 요청 수입니다.|  
-|**SOAP Method Invocations**|초당 시작된 SOAP 메서드 호출 수입니다.|  
-|**SOAP Session Initiate Requests**|초당 시작된 SOAP 세션 시작 요청 수입니다.|  
-|**SOAP Session Terminate Requests**|초당 시작된 SOAP 세션 종료 요청 수입니다.|  
-|**SOAP SQL Requests**|초당 시작된 SOAP SQL 요청 수입니다.|  
-|**SOAP WSDL Requests**|초당 시작된 SOAP 웹 서비스 기술 요청 수입니다.|  
-|**Temp Tables Creation Rate**|초당 생성된 임시 테이블/테이블 변수의 수입니다.|  
-|**Temp Tables For Destruction**|정리 시스템 스레드에 의해 소멸 대기 중인 임시 테이블/테이블 변수의 수입니다.|  
-|**Trace Event Notifications Queue**|내부 큐에서 Service Broker를 통해 전송 대기 중인 추적 이벤트 알림 인스턴스의 수입니다.|  
+|**활성 임시 테이블**|사용 중인 임시 테이블/테이블 변수의 수입니다.|  
+|**연결 다시 설정/초**|연결 풀에서 시작된 로그인의 총 수입니다.|  
+|**이벤트 알림이 지연 된 삭제**|시스템 스레드에서 삭제 대기 중인 이벤트 알림 수입니다.|  
+|**HTTP 인증 된 요청**|초당 시작된 인증된 HTTP 요청 수입니다.|  
+|**논리적 연결**|시스템에 대한 논리적 연결 수입니다.<br /><br /> 논리적 연결의 주 목적은 MARS(Multiple Active Result Sets) 요청을 처리하는 것입니다. MARS 요청의 경우 애플리케이션이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결될 때마다 하나의 실제 연결에 해당하는 논리적 연결이 두 개 이상 있을 수 있습니다.<br /><br /> MARS가 사용되지 않는 경우 실제 연결과 논리적 연결의 비율은 1:1입니다. 따라서 애플리케이션이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결될 때마다 논리적 연결은 1씩 증가합니다.|  
+|**로그인/초**|초당 시작된 총 로그인 수입니다. 풀링된 연결은 포함되지 않습니다.|  
+|**로그 아웃/초**|초당 시작된 총 로그아웃 작업 수입니다.|  
+|**Mars 교착 상태**|발견된 MARS 교착 상태 수입니다.|  
+|**원자성이 아닌 수익률**|초당 생성되는 비원자성 트랜잭션 수입니다.|  
+|**차단 된 프로세스**|현재 차단된 프로세스 수입니다.|  
+|**SOAP 빈 요청**|초당 시작된 빈 SOAP 요청 수입니다.|  
+|**SOAP 메서드 호출**|초당 시작된 SOAP 메서드 호출 수입니다.|  
+|**SOAP 세션 시작 요청**|초당 시작된 SOAP 세션 시작 요청 수입니다.|  
+|**SOAP 세션 종료 요청**|초당 시작된 SOAP 세션 종료 요청 수입니다.|  
+|**SOAP SQL 요청**|초당 시작된 SOAP SQL 요청 수입니다.|  
+|**SOAP WSDL 요청**|초당 시작된 SOAP 웹 서비스 기술 요청 수입니다.|  
+|**임시 테이블 생성 빈도**|초당 생성된 임시 테이블/테이블 변수의 수입니다.|  
+|**소멸을 위한 임시 테이블**|정리 시스템 스레드에 의해 소멸 대기 중인 임시 테이블/테이블 변수의 수입니다.|  
+|**추적 이벤트 알림 큐**|내부 큐에서 Service Broker를 통해 전송 대기 중인 추적 이벤트 알림 인스턴스의 수입니다.|  
 |**트랜잭션**|로컬, DTC 및 바인딩과 같은 트랜잭션 참여 수입니다.|  
-|**User Connections**|현재 SQL Server에 연결한 사용자 수입니다.|  
+|**사용자 연결**|현재 SQL Server에 연결한 사용자 수입니다.|  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [리소스 사용 모니터링&#40;시스템 모니터&#41;](monitor-resource-usage-system-monitor.md)  
   
   

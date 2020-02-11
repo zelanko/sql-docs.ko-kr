@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3e98a5c49877f6bc94e9e3ac1e880c90229cd3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106596"
 ---
 # <a name="add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs"></a>테이블, 행렬 또는 목록 추가, 이동 또는 삭제(보고서 작성기 및 SSRS)
@@ -32,7 +32,7 @@ ms.locfileid: "66106596"
   
 1.  **삽입** 탭에서 **테이블** 또는 **행렬**을 클릭한 다음 **테이블 마법사** 또는 **행렬 마법사**를 클릭합니다.  
   
-2.  단계를 수행 합니다 **NewTable** 하거나 **새 행렬** 마법사.  
+2.  **NewTable** 또는 **새 행렬** 마법사의 단계를 따릅니다.  
   
 3.  **홈** 탭에서 **실행** 을 클릭하여 렌더링된 보고서를 표시합니다.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66106596"
   
 -   데이터 영역을 선택하고 데이터 영역을 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [테이블&#40;보고서 작성기 및 SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [행렬&#40;보고서 작성기 및 SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   

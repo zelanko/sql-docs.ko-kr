@@ -13,20 +13,20 @@ ms.assetid: 2ac5a8b5-f084-405b-b0d7-546284dfa111
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ab3e9a0ee13cca4950ec7797b2cebed3a0437f55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905472"
 ---
 # <a name="sqlsetcursorname-visual-foxpro-odbc-driver"></a>SQLSetCursorName(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
->  이 항목에서는 Visual FoxPro ODBC 드라이버 관련 정보를 포함합니다. 이 함수에 대 한 일반 정보에서 해당 항목을 참조 하세요 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)합니다.  
+>  이 항목에는 Visual FoxPro ODBC 드라이버 관련 정보가 포함 되어 있습니다. 이 함수에 대 한 일반 정보는 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)에서 적절 한 항목을 참조 하세요.  
   
  지원: 전체  
   
  ODBC API 규칙: 코어 수준  
   
- 활성 문 핸들을 사용 하 여 커서 이름을 형식 정의와 연결 *hstmt*합니다. **SQLSetCursorName** 때문에 Visual FoxPro ODBC 드라이버 API에 포함 되어 핵심 수준 ODBC API 기능의 일부인; 드라이버 위치 지정된 업데이트를 지원 하지 않으므로 다른 API 함수를 사용 하 여 사용할 수 없습니다.  
+ 커서 이름을 활성 문 핸들 *hstmt*와 연결 합니다. **SQLSetCursorName** 는 코어 수준 odbc api 기능의 일부 이므로 VISUAL FoxPro ODBC 드라이버 API에 포함 되어 있습니다. 이 드라이버는 위치가 지정 된 업데이트를 지원 하지 않기 때문에 다른 API 함수와 함께 사용할 수 없습니다.  
   
- 자세한 내용은 [SQLSetCursorName](../../odbc/reference/syntax/sqlsetcursorname-function.md) 에 *ODBC 프로그래머 참조*합니다.
+ 자세한 내용은 *ODBC 프로그래머 참조*에서 [SQLSetCursorName](../../odbc/reference/syntax/sqlsetcursorname-function.md) 를 참조 하세요.

@@ -11,13 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ed18d5f14a2245290e14804d4a64f58beba885d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107908"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Microsoft Excel로 내보내기(보고서 작성기 및 SSRS)
+  
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Excel 렌더링 확장 프로그램은 보고서를 [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2007-2010의 네이티브 형식으로 렌더링합니다. Excel 렌더링 확장 프로그램에서는 Excel의 열 너비는 보고서의 열 너비를 보다 정확하게 반영합니다.  
   
  형식은 Office Open XML입니다. 이 렌더러에서 생성하는 파일의 내용 유형은 **application/vnd.openxmlformats-officedocument.spreadsheetml.sheet** 이며 파일 확장명은 .xlsx입니다.  
@@ -27,20 +28,22 @@ ms.locfileid: "66107908"
 > [!IMPORTANT]  
 >  10MB보다 큰 보고서를 Excel로 내보낼 때 오류 메시지가 표시되지 않도록 하려면 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]의 최신 서비스 팩을 설치하세요. 문제가 수정된 버전은 SP2입니다.  
 >   
->  문제에 대 한 자세한 내용은 참조 하세요. [수정: SSRS 2012를 Excel 형식으로 10 MB 보다 큰 보고서를 내보낼 수 없습니다.](https://go.microsoft.com/fwlink/p/?LinkId=402513)  
+>  문제에 대한 자세한 내용은 [픽스: SSRS 2012에서는 10 MB보다 큰 보고서를 Excel 형식으로 내보낼 수 없다](https://go.microsoft.com/fwlink/p/?LinkId=402513)를 참조하세요.  
 >   
->  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]의 최신 서비스 팩을 가져오려면 [SQL Server 2012의 최신 서비스 팩을 가져오는 방법](https://go.microsoft.com/fwlink/p/?LinkId=402512)을 참조하세요.  
+>  
+  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]의 최신 서비스 팩을 가져오려면 [SQL Server 2012의 최신 서비스 팩을 가져오는 방법](https://go.microsoft.com/fwlink/p/?LinkId=402512)을 참조하세요.  
   
 > [!IMPORTANT]  
->  `String` 유형의 매개 변수를 정의할 경우 모든 값을 사용할 수 있는 입력란이 사용자에게 제공됩니다. 보고서 매개 변수가 쿼리 매개 변수에 연결되지 않고 매개 변수 값이 보고서에 포함된 경우 보고서 사용자는 식 구문, 스크립트 또는 URL을 매개 변수 값에 입력하고 보고서를 Excel로 렌더링할 수 있습니다. 이후 다른 사용자가 보고서를 보면서 렌더링된 매개 변수 내용을 클릭할 경우 악의적인 스크립트나 링크가 실수로 실행될 수 있습니다.  
+>  
+  `String` 유형의 매개 변수를 정의할 경우 모든 값을 사용할 수 있는 입력란이 사용자에게 제공됩니다. 보고서 매개 변수가 쿼리 매개 변수에 연결되지 않고 매개 변수 값이 보고서에 포함된 경우 보고서 사용자는 식 구문, 스크립트 또는 URL을 매개 변수 값에 입력하고 보고서를 Excel로 렌더링할 수 있습니다. 이후 다른 사용자가 보고서를 보면서 렌더링된 매개 변수 내용을 클릭할 경우 악의적인 스크립트나 링크가 실수로 실행될 수 있습니다.  
 >   
 >  악의적인 스크립트를 실수로 실행하는 위험을 줄이기 위해 신뢰할 수 있는 원본의 렌더링된 보고서만 여세요. 보고서를 안전하게 보호하는 방법에 대한 자세한 내용은 [보고서 및 리소스 보안](../security/secure-reports-and-resources.md)을 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ExcelLimitations"></a> Excel 제한 사항  
- [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)]은 Excel의 기능 및 해당 파일 형식으로 인해 내보낸 보고서에 대해 제한을 둡니다. 가장 중요한 제한 사항은 다음과 같습니다.  
+##  <a name="ExcelLimitations"></a>Excel 제한 사항  
+ [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)]는 Excel의 기능 및 해당 파일 형식으로 인해 내보낸 보고서에 제한을 둡니다. 가장 중요한 제한 사항은 다음과 같습니다.  
   
 -   최대 열 너비는 255자 또는 1726.5포인트로 제한됩니다. 렌더러에서는 열 너비가 이 제한값을 초과하지 않는지 여부를 확인하지 않습니다.  
   
@@ -93,7 +96,7 @@ ms.locfileid: "66107908"
   
 -   Excel 머리글과 바닥글에는 태그를 포함하여 문자를 최대 256자까지 사용할 수 있습니다. 256자 이후의 문자열은 렌더링 확장 프로그램을 통해 잘립니다.  
   
--   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 에서는 보고서 머리글 및 바닥글의 여백을 지원하지 않습니다. Excel로 내보낼 경우 이러한 여백 값은 0으로 설정되며, 여러 데이터 행이 포함된 머리글이나 바닥글의 경우 프린터 설정에 따라 여러 행이 인쇄되지 않을 수 있습니다.  
+-   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서는 보고서 머리글 및 바닥글의 여백을 지원 하지 않습니다. Excel로 내보낼 경우 이러한 여백 값은 0으로 설정되며, 여러 데이터 행이 포함된 머리글이나 바닥글의 경우 프린터 설정에 따라 여러 행이 인쇄되지 않을 수 있습니다.  
   
 -   Excel로 내보낼 때 머리글 또는 바닥글의 입력란 서식은 유지되지만 맞춤 설정은 유지되지 않습니다. 이는 보고서를 Excel로 렌더링할 때 선행 및 후행 공백이 잘리기 때문입니다.  
   
@@ -128,18 +131,21 @@ ms.locfileid: "66107908"
 ## <a name="excel-renderer"></a>Excel 렌더러  
   
 ### <a name="excel-2007-2010-renderer"></a>Excel 2007-2010 렌더러  
- [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 기본 Excel 렌더러는 [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2007-2010과 호환되는 버전입니다. 이 옵션은 보고서 관리자 및 **내보내기** 메뉴가 나열되는 **Excel** 옵션입니다.  
+ 
+  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 기본 Excel 렌더러는 [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2007-2010과 호환되는 버전입니다. 이 옵션은 보고서 관리자 및 **내보내기** 메뉴가 나열되는 **Excel** 옵션입니다.  
   
  이전 Excel 2003 렌더러가 아닌 기본 Excel 렌더러를 사용하는 경우 Word, Excel 및 PowerPoint용 Microsoft Office 호환 기능 팩을 설치하면 이전 버전의 Excel에서 내보낸 파일을 열 수 있습니다.  
   
 ### <a name="excel-2003-renderer"></a>Excel 2003 렌더러  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2003 렌더링 확장 프로그램은 더 이상 사용되지 않습니다. 자세한 내용은 [SQL Server 2014에서 SQL Server Reporting Services에서 사용 되지 않는 기능](../deprecated-features-in-sql-server-reporting-services-ssrs.md)합니다.  
+>  
+  [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2003 렌더링 확장 프로그램은 더 이상 사용되지 않습니다. 자세한 내용은 [SQL Server 2014의 SQL Server Reporting Services에서 사용 되지 않는 기능](../deprecated-features-in-sql-server-reporting-services-ssrs.md)을 참조 하세요.  
   
  Excel 2003과 호환되는 이전 버전의 Excel 렌더러는 이제 이름이 Excel 2003으로 지정되어 해당 이름을 사용하여 메뉴에 나열됩니다. 이 렌더러을 통해 생성되는 파일의 콘텐츠 형식은 **application/vnd.ms-excel** 이고 파일 이름 확장명은 .xls입니다.  
   
- 기본적으로 **Excel 2003** 메뉴 옵션은 표시되지 않습니다. 관리자가 RSReportServer 구성 파일을 업데이트하여 특정 상황에서 표시되도록 설정할 수 있습니다. Excel 2003 렌더러를 사용하여 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에서 보고서를 내보내려면 RSReportDesigner 구성 파일을 업데이트합니다.  
+ 기본적으로 **Excel 2003** 메뉴 옵션은 표시되지 않습니다. 관리자가 RSReportServer 구성 파일을 업데이트하여 특정 상황에서 표시되도록 설정할 수 있습니다. Excel 2003 렌더러를 사용하여 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 에서 보고서를 내보내려면 RSReportDesigner 구성 파일을 업데이트합니다.  
   
  다음과 같은 시나리오에서는 **Excel 2003의** 메뉴 옵션 확장이 표시되지 않습니다.  
   
@@ -147,15 +153,17 @@ ms.locfileid: "66107908"
   
      이 경우는 보고서 작성기의 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 및 독립 실행형 버전에 모두 해당됩니다.  
   
--   보고서 뷰어 웹 파트가 로컬 모드이고 SharePoint 팜이 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보고서 서버와 통합되지 않은 경우. 자세한 내용은 [보고서 뷰어의 로컬 모드와 보고서 뷰어의 연결 모드 보고서&#40;SharePoint 모드의 Reporting Services&#41;](../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
+-   보고서 뷰어 웹 파트가 로컬 모드이고 SharePoint 팜이 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보고서 서버와 통합되지 않은 경우. 자세한 내용은 [보고서 뷰어의 로컬 모드 및 연결 된 모드 보고서 &#40;SharePoint 모드의 Reporting Services](../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md) 를 참조 하세요&#41;  
   
- **Excel 2003** 메뉴 옵션 렌더러가 표시되도록 구성된 경우 다음과 같은 시나리오에서 Excel 및 Excel 2003 옵션을 사용할 수 있습니다.  
+ 
+  **Excel 2003** 메뉴 옵션 렌더러가 표시되도록 구성된 경우 다음과 같은 시나리오에서 Excel 및 Excel 2003 옵션을 사용할 수 있습니다.  
   
 -   Reporting Services가 기본 모드로 설치된 경우의 보고서 관리자  
   
 -   Reporting Services가 SharePoint 통합 모드로 설치된 경우의 SharePoint 사이트  
   
--   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 및 보고서 미리 보기  
+-   
+  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 및 보고서 미리 보기  
   
 -   보고서 작성기가 보고서 서버에 연결된 경우. 보고서 작성기의 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 또는 독립 실행형 버전 모두 가능합니다.  
   
@@ -167,24 +175,24 @@ ms.locfileid: "66107908"
   
  `<Extension Name="EXCEL" Type="Microsoft.ReportingServices.Rendering.ExcelRenderer.ExcelRenderer,Microsoft.ReportingServices.ExcelRendering" Visible="false"/>`  
   
- EXCELOPENXML 확장은 Excel 2007-2010에 대한 Excel 렌더러를 정의합니다. EXCEL 확장은 Excel 2003 버전을 정의합니다. `Visible = "false"` 는 Excel 2003 렌더러가 숨겨져 있음을 나타냅니다. 자세한 내용은 [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md) 및 [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md)를 참조하세요.  
+ EXCELOPENXML 확장은 Excel 2007-2010에 대한 Excel 렌더러를 정의합니다. EXCEL 확장은 Excel 2003 버전을 정의합니다. `Visible = "false"`Excel 2003 렌더러가 숨겨져 있음을 나타냅니다. 자세한 내용은 [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md) 및 [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md)를 참조하세요.  
   
 ### <a name="differences-between-the-excel-2007-2010-and-excel-2003-renderers"></a>Excel 2007-2010과 Excel 2003 렌더러의 차이점  
  Excel 또는 Excel 2003 렌더러를 사용하여 렌더링된 보고서는 일반적으로 동일하며 드문 경우에만 두 형식 간의 차이점을 알 수 있습니다. 다음 표에서는 Excel과 Excel 2003 렌더러를 비교합니다.  
   
-|속성|Excel 2003|내보내기|  
+|속성|Excel 2003|Excel|  
 |--------------|----------------|-----------|  
 |워크시트당 최대 열 수|256|16,384|  
 |워크시트당 최대 행 수|65,536|1,048,576|  
 |워크시트에 허용된 색상 수|56(색상표)<br /><br /> 보고서에 56개보다 많은 수의 색을 사용한 경우 렌더링 확장 프로그램에서는 필요한 색을 사용자 지정 색상표에 이미 들어 있는 56색 중 하나로 대체합니다.|약 1600만(24비트 색상)|  
-|ZIP 압축 파일|없음|ZIP 압축|  
+|ZIP 압축 파일|None|ZIP 압축|  
 |기본 글꼴 패밀리|Arial|Calibri|  
 |기본 글꼴 크기|10pt|11pt|  
 |기본 행 높이|12.75pt|15pt|  
   
  보고서는 행 높이를 명시적으로 설정하기 때문에 기본 행 높이는 Excel로 내보낼 때 자동으로 크기가 조정되는 행에만 영향을 줍니다.  
   
-##  <a name="ReportItemsExcel"></a> Excel에서의 보고서 항목  
+##  <a name="ReportItemsExcel"></a>Excel의 보고서 항목  
  사각형, 하위 보고서, 보고서 본문 및 데이터 영역은 Excel 셀의 범위로 렌더링됩니다. 입력란, 이미지, 차트, 데이터 막대, 스파크라인, 지도, 계기 및 표시기는 Excel 셀 하나 안에 렌더링해야 합니다. 보고서의 나머지 부분의 레이아웃에 따라 해당 항목이 병합될 수도 있습니다.  
   
  이미지, 차트, 스파크라인, 데이터 막대, 지도, 계기, 표시기 및 선은 한 개의 Excel 셀 안에 배치되지만 실제로 놓이는 위치는 셀의 모눈 위입니다. 선은 셀 테두리로 렌더링됩니다.  
@@ -198,8 +206,8 @@ ms.locfileid: "66107908"
   
  일치하는 크기를 찾지 못하면 Excel에서는 프린터의 기본 페이지 크기를 사용합니다. 페이지 너비가 페이지 높이보다 작으면 방향이 세로로 설정되고, 그렇지 않으면 방향이 가로로 설정됩니다.  
   
-##  <a name="WorksheetTabNames"></a> 워크시트 탭 이름  
- 보고서를 Excel로 내보낼 때 페이지 나누기로 만들어진 보고서 페이지는 서로 다른 워크시트로 내보내집니다. 보고서에 초기 페이지 이름을 제공한 경우 Excel 통합 문서의 각 워크시트에는 기본적으로 이 이름이 지정됩니다. 이 이름은 워크시트 탭에 나타납니다. 그러나 통합 문서의 각 워크시트에는 고유한 이름이 있어야 하므로 1에서 시작하고 1씩 증가하는 정수는 각 추가 워크시트의 초기 페이지 이름에 추가됩니다. 예를 들어 초기 페이지 이름이 **Sales Report by Fiscal Year**인 경우 두 번째 워크시트의 이름은 **Sales Report by Fiscal Year1**로 지정되고 세 번째 워크시트의 이름은 **Sales Report by Fiscal Year2**로 지정되는 식으로 이름이 지정됩니다.  
+##  <a name="WorksheetTabNames"></a>워크시트 탭 이름  
+ 보고서를 Excel로 내보낼 때 페이지 나누기로 만들어진 보고서 페이지는 서로 다른 워크시트로 내보내집니다. 보고서에 초기 페이지 이름을 제공한 경우 Excel 통합 문서의 각 워크시트에는 기본적으로 이 이름이 지정됩니다. 이 이름은 워크시트 탭에 나타납니다. 그러나 통합 문서의 각 워크시트에는 고유한 이름이 있어야 하므로 1에서 시작 하 여 1 씩 증가 하는 정수는 각 추가 워크시트의 초기 페이지 이름에 추가 됩니다. 예를 들어 초기 페이지 이름이 **Sales Report by Fiscal Year**인 경우 두 번째 워크시트의 이름은 **Sales Report by Fiscal Year1**로 지정되고 세 번째 워크시트의 이름은 **Sales Report by Fiscal Year2**로 지정되는 식으로 이름이 지정됩니다.  
   
  페이지 나누기로 만들어진 모든 보고서 페이지에서 새로운 페이지 이름을 제공하는 경우 각 워크시트에는 연결된 페이지 이름이 지정됩니다. 그러나 이러한 페이지 이름은 고유하지 않을 수 있습니다. 페이지 이름이 고유하지 않은 경우 초기 페이지 이름과 동일한 방식으로 워크시트에 이름이 지정됩니다. 예를 들어 두 그룹의 페이지 이름이 **Sales for NW**인 경우 한 워크시트 탭에는 **Sales for NW**라는 이름이 지정되고 다른 워크시트 탭에는 **Sales for NW1**이라는 이름이 지정됩니다.  
   
@@ -207,17 +215,17 @@ ms.locfileid: "66107908"
   
  Reporting Services에서는 원하는 방식으로 Excel로 내보낼 수 있는 보고서를 만드는 데 도움이 되도록 보고서, 데이터 영역, 그룹 및 사각형에 대해 설정할 속성을 제공합니다. 자세한 내용은 [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)을 참조하세요.  
   
-##  <a name="DocumentProperties"></a> 문서 속성  
+##  <a name="DocumentProperties"></a>문서 속성  
  Excel 렌더러는 Excel 파일에 다음과 같은 메타데이터를 기록합니다.  
   
 |보고서 요소 속성|Description|  
 |-------------------------------|-----------------|  
-|만든 날짜|보고서 실행 날짜와 시간을 나타내는 ISO 날짜/시간 값입니다.|  
+|생성일|보고서 실행 날짜와 시간을 나타내는 ISO 날짜/시간 값입니다.|  
 |작성자|Report.Author|  
 |Description|Report.Description|  
 |LastSaved|보고서 실행 날짜와 시간을 나타내는 ISO 날짜/시간 값입니다.|  
   
-##  <a name="PageHeadersFooters"></a> 페이지 머리글 및 바닥글  
+##  <a name="PageHeadersFooters"></a>페이지 머리글 및 바닥글  
  페이지 머리글은 디바이스 정보 SimplePageHeaders 설정에 따라 각 워크시트 셀 눈금선 위에서 렌더링할 수도 있고, 실제 Excel 워크시트 머리글 섹션에서 렌더링할 수도 있습니다. 기본적으로 머리글은 Excel 워크시트에서 셀 눈금선으로 렌더링됩니다.  
   
  페이지 바닥글은 SimplePageHeaders 설정 값과 상관없이 항상 실제 Excel 워크시트 바닥글 섹션으로 렌더링됩니다.  
@@ -242,7 +250,7 @@ ms.locfileid: "66107908"
  Excel에서는 일부 대화형 요소가 지원됩니다. 다음은 특정 동작에 대한 설명입니다.  
   
 ### <a name="show-and-hide"></a>표시 및 숨기기  
- [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 에서 관리하는 방식에는 제약이 따릅니다. 설정/해제할 수 있는 보고서 항목이 들어 있는 그룹, 행 및 열은 Excel 윤곽선으로 렌더링됩니다. Excel에서는 전체 행 또는 열에 걸쳐 행과 열을 확장하거나 축소하는 윤곽선을 만듭니다. 따라서 축소하려고 의도하지 않았던 보고서 항목이 축소될 수도 있습니다. 또한 Excel의 윤곽선 지정 기호가 윤곽선과 겹쳐 화면이 복잡해질 수 있습니다. 이러한 문제를 해결하기 위해 Excel 렌더링 확장 프로그램을 사용할 때는 다음과 같은 윤곽선 지정 규칙이 적용됩니다.  
+ [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)]에는 숨겨진 보고서 항목을 내보낼 때이를 관리 하는 방법에 대 한 제한이 있습니다. 설정/해제할 수 있는 보고서 항목이 들어 있는 그룹, 행 및 열은 Excel 윤곽선으로 렌더링됩니다. Excel에서는 전체 행 또는 열에 걸쳐 행과 열을 확장하거나 축소하는 윤곽선을 만듭니다. 따라서 축소하려고 의도하지 않았던 보고서 항목이 축소될 수도 있습니다. 또한 Excel의 윤곽선 지정 기호가 윤곽선과 겹쳐 화면이 복잡해질 수 있습니다. 이러한 문제를 해결하기 위해 Excel 렌더링 확장 프로그램을 사용할 때는 다음과 같은 윤곽선 지정 규칙이 적용됩니다.  
   
 -   설정/해제할 수 있는 보고서 항목이 왼쪽 위 모퉁이에 있으면 Excel에서도 해당 항목을 계속하여 설정/해제할 수 있습니다. 설정/해제할 수 있는 보고서 항목이 왼쪽 위 모퉁이에 있는 설정/해제 가능한 보고서 항목과 가로 또는 세로 공간을 공유하고 있으면 Excel에서 해당 항목을 설정/해제할 수 없습니다.  
   
@@ -273,10 +281,10 @@ ms.locfileid: "66107908"
 ### <a name="bookmarks"></a>책갈피  
  입력란의 책갈피 링크는 텍스트를 렌더링하는 셀에서 Excel 하이퍼링크로 렌더링됩니다. 이미지와 차트의 책갈피 링크는 보고서를 렌더링할 때 이미지에 대한 Excel 하이퍼링크로 렌더링됩니다. 책갈피를 클릭하면 책갈피가 설정된 보고서 항목을 렌더링한 위치의 Excel 셀로 이동합니다.  
   
-##  <a name="ConditionalFormat"></a> 런타임에 보고서 변경  
+##  <a name="ConditionalFormat"></a>런타임에 보고서 변경  
  보고서를 여러 형식으로 렌더링해야 하는데 원하는 방식과 필요한 모든 형식으로 렌더링하는 보고서 레이아웃을 만들 수 없는 경우에는 기본 제공 전역 변수인 RenderFormat의 값을 사용하여 런타임에 보고서 모양을 조건부로 변경하는 것이 좋습니다. 이렇게 하면 사용되는 렌더러에 따라 보고서 항목을 숨기거나 표시할 수 있어 각 형식에서 최상의 결과를 얻을 수 있습니다. 자세한 내용은 [기본 제공 Globals 및 Users 참조&#40;보고서 작성기 및 SSRS&#41;](../report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [여러 보고서 렌더링 확장 프로그램의 대화형 기능&#40;보고서 작성기 및 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   

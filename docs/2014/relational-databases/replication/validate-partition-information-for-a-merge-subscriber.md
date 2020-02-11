@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3bada5fc49dc344510164260330699b60a3288cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255306"
 ---
 # <a name="validate-partition-information-for-a-merge-subscriber"></a>병합 구독자의 파티션 정보 유효성 검사
@@ -33,9 +33,9 @@ ms.locfileid: "63255306"
   
  병합 에이전트가 파티션의 유효성을 검사할 때 필터링 식에 사용된 함수에서 반환한 값에 대해 파티션의 유효성을 검사하는 것 외에도 에이전트는 메타데이터 정리 작업 또는 스키마 변경과 같이 스냅샷을 무효화한 변경 작업 이전에 스냅샷이 생성되었는지 여부도 확인합니다. 분할된 스냅샷이 너무 오래된 경우 병합 에이전트는 오류를 표시하고 이로 인해 현재 일반 스냅샷에 기반하여 해당 구독자에 대해 분할된 스냅샷을 다시 생성해야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [복제 관리 FAQ](administration/frequently-asked-questions-for-replication-administrators.md)   
- [복제 관리에 대한 모범 사례](administration/best-practices-for-replication-administration.md)   
+ [복제 관리에 대 한 모범 사례](administration/best-practices-for-replication-administration.md)   
  [구독 다시 초기화](reinitialize-subscriptions.md)   
  [복제된 데이터의 유효성 검사](validate-data-at-the-subscriber.md)  
   

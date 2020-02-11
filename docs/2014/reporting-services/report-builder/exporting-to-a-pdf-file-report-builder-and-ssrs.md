@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3eb41d807a1b4678882c791a7bdeb7693de7b08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107918"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>PDF 파일로 내보내기(보고서 작성기 및 SSRS)
   PDF 렌더링 확장 프로그램은 Adobe Acrobat 및 PDF 1.3을 지원하는 타사 PDF 뷰어에서 열 수 있는 파일로 보고서를 렌더링합니다. PDF 1.3은 Adobe Acrobat 4.0 이상 버전과 호환되지만 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 Adobe Acrobat 6 이상 버전을 지원합니다. 이 렌더링 확장 프로그램으로 보고서를 렌더링하기 위해 Adobe 소프트웨어가 필요한 것은 아닙니다. 그러나 PDF 형식으로 보고서를 보거나 인쇄하기 위해서는 Adobe Acrobat과 같은 PDF 뷰어가 필요합니다.  
   
- PDF 렌더링 확장 프로그램에서는 ANSI 문자를 지원하며 한국어, 일본어, 중국어 번체, 중국어 간체, 키릴 자모, 히브리어 및 아랍어를 특정 제한과 함께 유니코드 문자로 변환할 수 있습니다. 제한 사항에 대 한 자세한 내용은 참조 하세요. [보고서 내보내기 &#40;보고서 작성기 및 SSRS&#41;](export-reports-report-builder-and-ssrs.md)합니다.  
+ PDF 렌더링 확장 프로그램에서는 ANSI 문자를 지원하며 한국어, 일본어, 중국어 번체, 중국어 간체, 키릴 자모, 히브리어 및 아랍어를 특정 제한과 함께 유니코드 문자로 변환할 수 있습니다. 제한 사항에 대 한 자세한 내용은 [보고서 &#40;보고서 작성기 및 SSRS&#41;내보내기 ](export-reports-report-builder-and-ssrs.md)를 참조 하세요.  
   
  PDF 렌더러는 물리적 페이지 렌더러이므로 페이지 매김 동작이 HTML 및 Excel 같은 다른 렌더러와는 차이가 있습니다. 이 항목에서는 PDF 렌더러 관련 정보를 제공하고 규칙의 예외를 설명합니다.  
   
@@ -62,10 +62,14 @@ ms.locfileid: "66107918"
   
 |PDF 속성|정보 출처|  
 |------------------|------------------|  
-|`Title`|`Name` RDL 요소의 `Report` 특성|  
-|`Author`|`Author` RDL 요소|  
-|`Subject`|`Description` RDL 요소|  
-|`Creator`|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 제품 이름 및 버전|  
+|`Title`|
+  `Name` RDL 요소의 `Report` 특성|  
+|`Author`|
+  `Author` RDL 요소|  
+|`Subject`|
+  `Description` RDL 요소|  
+|`Creator`|
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 제품 이름 및 버전|  
 |`Producer`|렌더링 확장 프로그램 이름 및 버전|  
 |`CreationDate`|PDF `datetime` 형식의 보고서 실행 시간|  
   
@@ -80,7 +84,7 @@ ms.locfileid: "66107918"
 ### <a name="document-map"></a>문서 구조  
  보고서에 문서 구조 레이블이 있으면 PDF 파일에 문서 개요가 추가됩니다. 각 문서 구조 레이블은 보고서에 표시된 것과 같은 순서에 따라 문서 개요의 항목으로 표시됩니다. Acrobat에서는 문서 개요가 있는 페이지를 렌더링하는 경우에만 문서 개요에 대상 책갈피를 추가합니다.  
   
- 한 페이지만 렌더링하는 경우에는 문서 개요가 추가되지 않습니다. 문서 구조는 보고서의 중첩 수준을 반영하는 계층 구조에 따라 배열됩니다. 문서 개요에 액세스하려면 Acrobat에서 책갈피 탭을 사용합니다. 문서 개요 내의 항목을 클릭하면 문서에서 책갈피 설정된 위치로 이동할 수 있습니다.  
+ 한 페이지만 렌더링하는 경우에는 문서 개요가 추가되지 않습니다. 문서 구조는 보고서의 중첩 수준을 반영하는 계층 구조에 따라 배열됩니다. 문서 개요는 Acrobat의 책갈피 탭 아래에서 액세스할 수 있습니다. 문서 개요 내의 항목을 클릭 하면 문서가 책갈피가 설정 된 위치로 이동 합니다.  
   
 ### <a name="bookmarks"></a>책갈피  
  책갈피는 PDF 렌더링에 지원되지 않습니다.  
@@ -93,7 +97,7 @@ ms.locfileid: "66107918"
   
   
   
-##  <a name="Compression"></a> 압축  
+##  <a name="Compression"></a>수신  
  이미지 압축은 이미지의 원래 파일 형식을 기준으로 합니다. PDF 렌더링 확장 프로그램에서는 기본적으로 PDF 파일을 압축합니다.  
   
  PDF 파일에 포함된 이미지의 모든 압축을 가능한 한 계속 유지하기 위해 JPEG 이미지는 JPEG로 저장되고 다른 모든 이미지 형식은 BMP로 저장됩니다.  
@@ -103,12 +107,12 @@ ms.locfileid: "66107918"
   
   
   
-##  <a name="DeviceInfo"></a> 장치 정보 설정  
+##  <a name="DeviceInfo"></a> 디바이스 정보 설정  
  디바이스 정보 설정을 변경하여 이 렌더러의 기본 설정을 일부 변경할 수 있습니다. 자세한 내용은 [PDF Device Information Settings](../pdf-device-information-settings.md)을 참조하세요.  
   
   
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [여러 보고서 렌더링 확장 프로그램의 대화형 기능&#40;보고서 작성기 및 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   

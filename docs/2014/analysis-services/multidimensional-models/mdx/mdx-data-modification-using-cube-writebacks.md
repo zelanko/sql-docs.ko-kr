@@ -1,5 +1,5 @@
 ---
-title: 큐브 쓰기 저장 (MDX)를 사용 하 여 | Microsoft Docs
+title: 큐브 쓰기 저장 (MDX) 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a79e98375c27c6a3570b2fafcf424965d7a97c8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074223"
 ---
 # <a name="using-cube-writebacks-mdx"></a>큐브 쓰기 저장(Writeback) 사용(MDX)
@@ -116,7 +116,7 @@ USE_EQUAL_ALLOCATION
   
 -   쓰기 저장(writeback)에 포함된 차원의 차원 세분성 변경  
   
-## <a name="see-also"></a>관련 항목  
- [데이터 수정&#40;MDX&#41;](mdx-data-modification-modifying-data.md)  
+## <a name="see-also"></a>참고 항목  
+ [MDX&#41;데이터 &#40;수정](mdx-data-modification-modifying-data.md)  
   
   

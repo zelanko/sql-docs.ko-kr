@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 719e7a24efa2b0c68d4984d8b16f957a268fdafb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63265856"
 ---
 # <a name="creating-a-custom-report-item-run-time-component"></a>사용자 지정 보고서 항목 런타임 구성 요소 만들기
-  사용자 지정 보고서 항목 런타임 구성 요소는 CLS 호환 언어를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 구성 요소로 구현되며 런타임에 보고서 처리기에 의해 호출됩니다. 사용자 지정 보고서 항목의 해당 디자인 타임 구성 요소를 수정하여 디자인 환경에서 런타임 구성 요소에 대한 속성을 정의합니다.  
+  사용자 지정 보고서 항목 런타임 구성 요소는 CLS 규격 언어를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 사용 하 여 구성 요소로 구현 되며 런타임에 보고서 처리기에 의해 호출 됩니다. 사용자 지정 보고서 항목의 해당 디자인 타임 구성 요소를 수정하여 디자인 환경에서 런타임 구성 요소에 대한 속성을 정의합니다.  
 
 <!--
 Replacing the following multiValue.....
@@ -43,7 +43,8 @@ ms.technology: reporting-services
  사용자 지정 보고서 항목을 구현하기 전에 *정의 개체*와 *인스턴스 개체*의 차이점을 알아야 합니다. 정의 개체는 사용자 지정 보고서 항목의 RDL 표현을 제공하고, 인스턴스 개체는 정의 개체의 평가된 버전입니다. 보고서의 각 항목에 정의 개체는 하나만 있습니다. 식이 포함된 정의 개체의 속성에 액세스할 때 사용자는 평가되지 않은 식 문자열을 받습니다. 인스턴스 개체는 정의 개체의 평가된 버전을 포함하고 항목의 정의 개체와 일 대 다 관계를 맺을 수 있습니다. 예를 들어, 보고서의 정보 행에 <xref:Microsoft.ReportingServices.OnDemandReportRendering.Tablix>이 포함된 <xref:Microsoft.ReportingServices.OnDemandReportRendering.CustomReportItem> 데이터 영역이 있는 경우 정의 개체는 하나뿐이지만 인스턴스 개체는 데이터 영역의 각 행마다 있습니다.  
   
 ## <a name="implementing-the-icustomreportitem-interface"></a>ICustomReportItem 인터페이스 구현  
- `CustomReportItem` 런타임 구성 요소를 만들려면 Microsoft.ReportingServices.ProcessingCore.dll에 정의된 <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem> 인터페이스를 구현해야 합니다.  
+ 
+  `CustomReportItem` 런타임 구성 요소를 만들려면 Microsoft.ReportingServices.ProcessingCore.dll에 정의된 <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem> 인터페이스를 구현해야 합니다.  
   
 ```csharp  
 namespace Microsoft.ReportingServices.OnDemandReportRendering  
@@ -56,7 +57,9 @@ void EvaluateReportItemInstance(CustomReportItem customReportItem);
 }  
 ```  
   
- <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem> 인터페이스를 구현한 후에는 <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem.GenerateReportItemDefinition%2A> 및 <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem.EvaluateReportItemInstance%2A> 메서드 스텁이 생성됩니다. <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem.GenerateReportItemDefinition%2A> 메서드가 먼저 호출되어, 정의 속성을 설정하고 이 정의 속성과 항목 렌더링에 사용되는 인스턴스 속성을 포함할 <xref:Microsoft.ReportingServices.OnDemandReportRendering.Image> 개체를 만듭니다. 정의 개체가 평가된 후 <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem.EvaluateReportItemInstance%2A> 메서드가 호출되고, 항목 렌더링에 사용되는 인스턴스 개체를 제공합니다.  
+ 
+  <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem> 인터페이스를 구현한 후에는 <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem.GenerateReportItemDefinition%2A> 및 <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem.EvaluateReportItemInstance%2A> 메서드 스텁이 생성됩니다. 
+  <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem.GenerateReportItemDefinition%2A> 메서드가 먼저 호출되어, 정의 속성을 설정하고 이 정의 속성과 항목 렌더링에 사용되는 인스턴스 속성을 포함할 <xref:Microsoft.ReportingServices.OnDemandReportRendering.Image> 개체를 만듭니다. 정의 개체가 평가된 후 <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem.EvaluateReportItemInstance%2A> 메서드가 호출되고, 항목 렌더링에 사용되는 인스턴스 개체를 제공합니다.  
   
  다음은 컨트롤 이름을 이미지로 렌더링하는 사용자 지정 보고서 항목의 예제 구현입니다.  
   
@@ -146,7 +149,7 @@ namespace Microsoft.Samples.ReportingServices
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [사용자 지정 보고서 항목 아키텍처](custom-report-item-architecture.md)   
  [사용자 지정 보고서 항목 디자인 타임 구성 요소 만들기](creating-a-custom-report-item-design-time-component.md)   
  [사용자 지정 보고서 항목 클래스 라이브러리](custom-report-item-class-libraries.md)   

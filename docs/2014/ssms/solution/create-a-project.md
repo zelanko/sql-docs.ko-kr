@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3c36d070701712158587f283df0f55cffadac2ca
-ms.sourcegitcommit: d0d2505d3d517e7b3ea9c4aef4d6fd08aeb28d54
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67197588"
 ---
 # <a name="create-a-project"></a>프로젝트 만들기
@@ -91,15 +91,15 @@ ms.locfileid: "67197588"
   
 4.  **확인**을 클릭합니다.  
   
- 스크립트 프로젝트의 이름을 설정할 수 있지만 폴더 이름은 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에 의해 설정되며 변경할 수 없습니다. **새 프로젝트 추가** 대화 상자를 사용하여 공통 폴더 집합에 대한 드라이브 및 경로 지정을 구성할 수 있습니다. **솔루션 탐색기**에서 솔루션 아이콘을 마우스 오른쪽 단추로 클릭한 다음 **추가**를 클릭합니다. 스크립트 프로젝트 폴더의 기본 위치는 다음과 같습니다. C:\Documents 및 Settings\\*username*\My Documents\SQL Server Management Studio\Projects\\입니다.  
+ 스크립트 프로젝트의 이름을 설정할 수 있지만 폴더 이름은 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에 의해 설정되며 변경할 수 없습니다. **새 프로젝트 추가** 대화 상자를 사용하여 공통 폴더 집합에 대한 드라이브 및 경로 지정을 구성할 수 있습니다. **솔루션 탐색기**에서 솔루션 아이콘을 마우스 오른쪽 단추로 클릭한 다음 **추가**를 클릭합니다. 스크립트 프로젝트 폴더에 대한 기본 위치는 C:\Documents and Settings\\*username*\My Documents\SQL Server Management Studio\Projects\\입니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [솔루션 탐색기](solution-explorer.md)   
  [솔루션에 기존 프로젝트 추가](add-an-existing-project-to-a-solution.md)   
  [프로젝트에 새 항목 추가](add-new-items-to-a-project.md)   
  [프로젝트에 기존 항목 추가](add-existing-items-to-a-project.md)   
- [프로젝트에 대 한 기본 위치 변경](change-the-default-location-for-projects.md)   
- [항목이 나 프로젝트 제거 또는 삭제](remove-or-delete-an-item-or-project.md)   
+ [프로젝트의 기본 위치 변경](change-the-default-location-for-projects.md)   
+ [항목 또는 프로젝트 제거 또는 삭제](remove-or-delete-an-item-or-project.md)   
  [솔루션 삭제](delete-a-solution.md)  
   
   

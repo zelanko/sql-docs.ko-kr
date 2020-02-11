@@ -1,5 +1,5 @@
 ---
-title: 설정 또는 DirectQuery에 대 한 기본 연결 방법 변경 | Microsoft Docs
+title: DirectQuery에 대 한 기본 연결 방법 설정 또는 변경 Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9737b829a5ccab1ddc0362f2d8ac81285f0f6e1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068696"
 ---
 # <a name="set-or-change-the-preferred-connection-method-for-directquery"></a>DirectQuery의 기본 연결 방법 설정 또는 변경
-  DirectQuery 모드에서 사용할 모델을 만들 때는 먼저 디자인 환경에서 DirectQuery 사용을 지원하도록 구성해야 합니다. 이렇게 하려면 참조 [DirectQuery 디자인 모드를 사용 하도록 설정 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-models/enable-directquery-mode-in-ssdt.md)합니다.  
+  DirectQuery 모드에서 사용할 모델을 만들 때는 먼저 디자인 환경에서 DirectQuery 사용을 지원하도록 구성해야 합니다. 이렇게 하려면 [SSAS 테이블 형식&#41;&#40;DirectQuery 디자인 모드 사용 ](tabular-models/enable-directquery-mode-in-ssdt.md)을 참조 하세요.  
   
  모델을 배포할 준비가 되면 사용자가 DirectQuery 모드 중 하나를 사용하여 모델에 액세스할 수 있도록 다음과 같이 몇 가지 추가 속성을 설정해야 합니다.  
   
@@ -32,38 +32,42 @@ ms.locfileid: "66068696"
   
 ### <a name="to-set-the-preferred-connection-method-for-a-directquery-model"></a>DirectQuery 모델의 기본 연결 방법을 설정하려면  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 DirectQuery 모델의 솔루션 파일을 엽니다.  
+1.  
+  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 DirectQuery 모델의 솔루션 파일을 엽니다.  
   
 2.  Visual Studio의 **프로젝트** 메뉴에서 **속성**을 선택합니다.  
   
-3.  **속성** 창에서 **DirectQueryMode**속성을 다음과 같이 DirectQuery 사용을 지원하는 값 중 하나로 변경합니다.  
+3.  
+  **속성** 창에서 **DirectQueryMode**속성을 다음과 같이 DirectQuery 사용을 지원하는 값 중 하나로 변경합니다.  
   
-    -   **InMemory with DirectQuery**: 이 옵션을 사용 하는 경우에 모델이 배포 되지만 모델에 대해 쿼리를 실행 하기 전에 캐시를 처리 해야 합니다.  
+    -   **InMemory를 사용**하는 InMemory:이 옵션을 사용 하면 모델이 배포 되지만 모델에 대해 쿼리를 실행 하기 전에 캐시를 처리 해야 합니다.  
   
-    -   **DirectQuery with InMemory**: 이 옵션을 사용 하면 이미 처리 된 경우 캐시 클라이언트에서 사용할 수 있는 됩니다. 이 설정으로 모델을 배포하고 캐시를 처리하지 않으면 일부 클라이언트에서 모델에 연결하려고 할 때 오류가 발생합니다.  
+    -   **DirectQuery With InMemory**:이 옵션을 사용 하면 캐시가 이미 처리 된 경우 클라이언트에서 캐시를 사용할 수 있습니다. 이 설정으로 모델을 배포하고 캐시를 처리하지 않으면 일부 클라이언트에서 모델에 연결하려고 할 때 오류가 발생합니다.  
   
-    -   **DirectQuery 전용**: 이 옵션을 사용 하는 경우 메타 데이터가 배포 되지만 모델에 데이터가 없습니다. 클라이언트에서 InMemory 모드를 사용하여 연결하려고 하면 모델이 없거나 처리되지 않았다는 오류가 발생합니다.  
+    -   **DirectQuery only**:이 옵션을 사용 하면 메타 데이터가 배포 되지만 모델에는 데이터가 포함 되지 않습니다. 클라이언트에서 InMemory 모드를 사용하여 연결하려고 하면 모델이 없거나 처리되지 않았다는 오류가 발생합니다.  
   
 4.  오류가 발생하면 Visual Studio에서 **오류 목록** 을 열고 DirectQuery 모드에서 모델을 배포할 수 없도록 하는 문제를 해결합니다.  
   
 ### <a name="to-verify-or-change-the-preferred-connection-method-for-a-directquery-model"></a>DirectQuery 모델의 기본 연결 방법을 확인하거나 변경하려면  
   
-1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 DirectQuery 모델을 배포한 인스턴스에 연결합니다.  
+1.  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 DirectQuery 모델을 배포한 인스턴스에 연결합니다.  
   
 2.  model 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-3.  **속성** 창에서 **DirectQueryMode**속성을 다음 값 중 하나로 변경합니다.  
+3.  
+  **속성** 창에서 **DirectQueryMode**속성을 다음 값 중 하나로 변경합니다.  
   
     -   **DirectQuery 전용**  
   
-    -   **InMemory with DirectQuery**  
+    -   **DirectQuery를 사용 하는 InMemory**  
   
     -   **DirectQuery with InMemory**  
   
  이러한 속성은 Visual Studio에서 배포 전에 프로젝트에 대해 설정한 속성과 동일합니다. DirectQuery 사용을 지원하도록 모델을 구성한 경우 언제든지 DirectQuery 모드의 기본 연결 모드를 변경할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
- [DirectQuery 모드&#40;SSAS 테이블 형식&#41;](tabular-models/directquery-mode-ssas-tabular.md)   
- [DirectQuery 디자인 모드를 사용 하도록 설정 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-models/enable-directquery-mode-in-ssdt.md)  
+## <a name="see-also"></a>참고 항목  
+ [DirectQuery 모드 &#40;SSAS 테이블 형식&#41;](tabular-models/directquery-mode-ssas-tabular.md)   
+ [SSAS 테이블 형식&#41;&#40;DirectQuery 디자인 모드를 사용 하도록 설정](tabular-models/enable-directquery-mode-in-ssdt.md)  
   
   

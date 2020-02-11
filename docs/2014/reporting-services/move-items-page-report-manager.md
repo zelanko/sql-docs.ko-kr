@@ -1,5 +1,5 @@
 ---
-title: 이동 항목 페이지 (보고서 관리자) | Microsoft Docs
+title: 항목 이동 페이지 (보고서 관리자) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f64a9e9efe180c2db776c38553403e5f7cdfac9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108218"
 ---
 # <a name="move-items-page-report-manager"></a>항목 이동 페이지(보고서 관리자)
@@ -22,7 +22,8 @@ ms.locfileid: "66108218"
   
  다른 항목에서 참조하는 항목(예: 많은 보고서가 참조하는 공유 데이터 원본 또는 모델)을 이동할 때는 해당 항목에 대한 경로 정보가 자동으로 업데이트됩니다. 공유 데이터 원본을 이동해도 이를 사용하는 보고서 및 모델에 대한 데이터 원본 연결은 끊어지지 않습니다. 사용자에게 사용 권한이 없는 폴더로 공유 데이터 원본 또는 모델을 이동하는 경우 사용자는 이를 참조하는 보고서를 계속 실행할 수 있지만 폴더 계층 구조에서 이러한 항목을 볼 수는 없습니다.  
   
- **위치**에 루트 폴더 이름으로 시작하는 전체 폴더 경로를 지정합니다. 경로 이름을 입력하거나 트리 뷰를 사용하여 원하는 폴더로 이동할 수 있습니다.  
+ 
+  **위치**에 루트 폴더 이름으로 시작하는 전체 폴더 경로를 지정합니다. 경로 이름을 입력하거나 트리 뷰를 사용하여 원하는 폴더로 이동할 수 있습니다.  
   
 > [!NOTE]  
 >  모든 항목을 이동할 수 있는 것은 아닙니다. 홈, 내 보고서, 사용자 폴더와 같이 예약된 폴더는 이동할 수 없습니다. 보고서 기록이나 스냅샷은 다른 위치로 이동할 수 없습니다. 기록 및 스냅샷은 항상 기반이 되는 보고서와 함께 저장되며 이 보고서를 통해 액세스됩니다.  
@@ -37,7 +38,8 @@ ms.locfileid: "66108218"
 2.  도구 모음에서 **자세히 보기**를 클릭합니다.  
   
     > [!NOTE]  
-    >  **바둑판식 배열 보기**만 표시된다면 이미 **자세히 보기**상태인 것입니다.  
+    >  
+  **바둑판식 배열 보기**만 표시된다면 이미 **자세히 보기**상태인 것입니다.  
   
 3.  항목 옆의 확인란을 선택한 다음 도구 모음에서 **이동** 을 클릭합니다. 항목 여러 개를 동일한 새 위치로 이동하려는 경우 확인란 여러 개를 선택할 수 있습니다.  
   
@@ -48,7 +50,8 @@ ms.locfileid: "66108218"
 2.  도구 모음에서 **바둑판식 배열 보기**를 클릭합니다.  
   
     > [!NOTE]  
-    >  **자세히 보기**만 표시된다면 이미 **바둑판식 배열 보기**상태인 것입니다.  
+    >  
+  **자세히 보기**만 표시된다면 이미 **바둑판식 배열 보기**상태인 것입니다.  
   
 3.  항목 위로 마우스를 이동하여 드롭다운 화살표를 클릭합니다.  
   
@@ -64,10 +67,10 @@ ms.locfileid: "66108218"
   
 4.  항목 도구 모음에서 **이동**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서 관리자&#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [일반 속성 페이지, 폴더 &#40;보고서 관리자&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
- [일반 속성 페이지, 보고서&#40;보고서 관리자&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
+ [일반 속성 페이지, 보고서 &#40;보고서 관리자&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [일반 속성 페이지, 리소스 &#40;보고서 관리자&#41;](../../2014/reporting-services/general-properties-page-resources-report-manager.md)   
  [일반 속성 페이지, 공유 데이터 원본 &#40;보고서 관리자&#41;](../../2014/reporting-services/general-properties-page-shared-data-sources-report-manager.md)   
  [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)  

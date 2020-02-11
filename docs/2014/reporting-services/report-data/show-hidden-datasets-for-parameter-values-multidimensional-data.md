@@ -1,5 +1,5 @@
 ---
-title: (보고서 작성기 및 SSRS) 다차원 데이터에 대 한 매개 변수 값에 대해 숨겨진된 데이터 집합 표시 | Microsoft Docs
+title: 다차원 데이터의 매개 변수 값에 대해 숨겨진 데이터 집합 표시 (보고서 작성기 및 SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 92db49f8f6a112f8466fc81527b214bad7252f82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107063"
 ---
 # <a name="show-hidden-datasets-for-parameter-values-for-multidimensional-data-report-builder-and-ssrs"></a>다차원 데이터의 매개 변수 값에 대해 숨겨진 데이터 세트 표시(보고서 작성기 및 SSRS)
@@ -35,10 +35,10 @@ ms.locfileid: "66107063"
   
 -   보고서 데이터 창에서 데이터 세트 폴더를 마우스 오른쪽 단추로 클릭한 다음, **숨겨진 데이터 세트 표시**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [쿼리 디자이너&#40;보고서 작성기&#41;](../query-designers-report-builder.md)   
+## <a name="see-also"></a>참고 항목  
+ [쿼리 디자이너 &#40;보고서 작성기&#41;](../query-designers-report-builder.md)   
  [Reporting Services 쿼리 디자이너](../reporting-services-query-designers.md)   
- [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](report-datasets-ssrs.md)  
+ [보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [보고서 &#40;보고서 작성기 및 SSRS&#41;에 데이터를 추가 합니다.](report-datasets-ssrs.md)  
   
   

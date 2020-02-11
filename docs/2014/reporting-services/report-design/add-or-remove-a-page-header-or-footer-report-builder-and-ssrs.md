@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 88a4cb2598b8c57813f3d2034434eeef31f49a76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106545"
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>페이지 머리글/바닥글 추가 또는 제거(보고서 작성기 및 SSRS)
@@ -49,9 +49,9 @@ ms.locfileid: "66106545"
   
     -   **이미지**  
   
-3.  페이지 머리글을 마우스 오른쪽 단추로 클릭하고 **머리글 속성** 을 클릭하여 테두리, 배경 이미지 또는 색을 추가하거나 머리글의 너비를 조정합니다. 마치면 **확인**을 클릭합니다.  
+3.  페이지 머리글을 마우스 오른쪽 단추로 클릭하고 **머리글 속성** 을 클릭하여 테두리, 배경 이미지 또는 색을 추가하거나 머리글의 너비를 조정합니다. 그런 후 **OK**를 클릭합니다.  
   
-4.  페이지 바닥글을 마우스 오른쪽 단추로 클릭하고 **바닥글 속성** 을 클릭하여 테두리, 배경 이미지 또는 색을 추가하거나 바닥글의 너비를 조정합니다. 마치면 **확인**을 클릭합니다.  
+4.  페이지 바닥글을 마우스 오른쪽 단추로 클릭하고 **바닥글 속성** 을 클릭하여 테두리, 배경 이미지 또는 색을 추가하거나 바닥글의 너비를 조정합니다. 그런 후 **OK**를 클릭합니다.  
   
 ### <a name="to-remove-a-page-header-or-footer"></a>페이지 머리글/바닥글을 제거하려면  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66106545"
 > [!NOTE]  
 >  페이지 머리글 또는 바닥글을 제거하면 보고서에서 삭제됩니다. 이전에 페이지 머리글 또는 바닥글에 추가한 항목은 이후에 페이지 머리글 또는 바닥글을 다시 추가해도 더 이상 표시되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [페이지 머리글 및 바닥글&#40;보고서 작성기 및 SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
   
   

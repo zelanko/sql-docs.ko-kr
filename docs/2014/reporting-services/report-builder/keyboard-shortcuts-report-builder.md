@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 040d49e66e9feed4f8bc213c8189c8d41486b77d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107777"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>바로 가기 키(보고서 작성기)
@@ -34,13 +34,13 @@ ms.locfileid: "66107777"
   
 |Description|키 조합|  
 |-----------------|---------------------|  
-|보고서 작성기 메뉴를 엽니다.|Alt+F|  
-|보고서를 만듭니다.|Ctrl+N|  
-|보고서를 엽니다.|Ctrl+O|  
+|보고서 작성기 메뉴를 엽니다.|ALT + F|  
+|보고서를 만듭니다.|CTRL+N|  
+|보고서를 엽니다.|CTRL+O|  
 |보고서를 저장합니다.|Ctrl+S, Alt+S|  
 |리본, 디자인 화면, 그룹화 창, 속성 창, 데이터 창과 같은 보고서 작성기의 영역 간에 이동합니다.|F6 , Shift+F6|  
 |리본으로 이동합니다.|Alt|  
-|리본의 홈 탭으로 이동합니다.|Alt+H|  
+|리본의 홈 탭으로 이동합니다.|ALT + H|  
 |리본의 삽입 탭으로 이동합니다.|Alt+I|  
 |리본의 보기 탭으로 이동합니다.|Alt+V|  
 |그룹화 창과 디자인 화면 간의 선과 같이 영역 간의 분할선을 활성화합니다.|Tab|  
@@ -59,7 +59,7 @@ ms.locfileid: "66107777"
 |복사|Ctrl+C, Alt+H+C|  
 |잘라내기|Ctrl+X, Alt+H+X|  
 |붙여넣기|Ctrl+V, Alt+H+V|  
-|모두 선택|Ctrl+A|  
+|모두 선택|CTRL+A|  
 |실행 취소|Ctrl+Z, Alt+Z|  
 |다시 실행|Ctrl+Y, Alt+Y|  
 |확대|Ctrl+더하기 기호(+)|  
@@ -91,9 +91,9 @@ ms.locfileid: "66107777"
 |지도 뷰포트가 선택된 경우 지도 보기 영역을 축소합니다.|Ctrl+빼기 기호(-)|  
 |지도 뷰포트가 선택된 경우 지도 보기 영역을 이동 및 확대하기 위한 액셀러레이터 모드입니다.|Ctrl+마우스 왼쪽 단추 클릭|  
   
-## <a name="see-also"></a>관련 항목  
- [SQL Server 2014의에서 보고서 작성기](report-builder-in-sql-server-2016.md)   
+## <a name="see-also"></a>참고 항목  
+ [2014 SQL Server의 보고서 작성기](report-builder-in-sql-server-2016.md)   
  [보고서 디자인 뷰&#40;보고서 작성기&#41;](report-design-view-report-builder.md)   
- [용어 설명&#40;보고서 작성기&#41;](glossary-report-builder.md)  
+ [용어집 &#40;보고서 작성기&#41;](glossary-report-builder.md)  
   
   

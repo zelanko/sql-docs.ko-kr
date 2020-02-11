@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 659a6d76fabd2b01d91ae993fc818d81874350c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63276308"
 ---
 # <a name="derive-a-template-from-a-running-trace-sql-server-profiler"></a>실행 중인 추적으로부터 템플릿 파생(SQL Server Profiler)
@@ -34,10 +34,10 @@ ms.locfileid: "63276308"
 > [!NOTE]  
 >  기존 템플릿 파일을 선택하면 파일을 덮어쓸 것인지를 묻는 메시지가 표시됩니다. 사용자가 정의한 템플릿만 선택할 수 있습니다. 미리 정의된 시스템 추적 템플릿은 덮어쓸 수 없습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Profiler 템플릿 및 권한](sql-server-profiler-templates-and-permissions.md)   
  [추적 템플릿 만들기&#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   
  [추적 템플릿 수정&#40;SQL Server Profiler&#41;](../../database-engine/modify-a-trace-template-sql-server-profiler.md)   
- [SQL Server 프로파일러](sql-server-profiler.md)  
+ [SQL Server Profiler](sql-server-profiler.md)  
   
   

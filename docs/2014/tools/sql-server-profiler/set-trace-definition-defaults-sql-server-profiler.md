@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d117f4c974f14671d68a9e99385a04fa9ddb314e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63267437"
 ---
 # <a name="set-trace-definition-defaults-sql-server-profiler"></a>추적 정의 기본값 설정(SQL Server Profiler)
@@ -36,8 +36,8 @@ ms.locfileid: "63267437"
   
 6.  **저장**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Profiler 템플릿](sql-server-profiler-templates.md)   
- [SQL Server 프로파일러](sql-server-profiler.md)  
+ [SQL Server Profiler](sql-server-profiler.md)  
   
   

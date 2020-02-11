@@ -15,16 +15,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1f1100f1c19a658fa6fe4b90816dca948e640a76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63262313"
 ---
 # <a name="sql-server-replication-publisher-settings-dialog-box"></a>SQL Server 복제 '게시자 설정' 대화 상자
   **게시자 설정** 대화 상자에서 복제 모니터의 왼쪽 창에 추가된 게시자에 대한 설정을 변경할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **게시자 연결**  
  복제 모니터에서 게시자에 연결하기 위해 사용하는 연결 속성 및 자격 증명을 보고 변경할 수 있는 **서버에 연결** 대화 상자를 시작하려면 클릭합니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "63262313"
  **새 그룹**  
  새 게시자 그룹을 만들려면 클릭합니다. 게시자 그룹을 사용하면 복제 모니터 내에서 게시자를 편리하게 구성할 수 있습니다. 그룹은 데이터 복제 또는 복제 토폴로지의 서버 간 관계에 영향을 주지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [복제 모니터 시작](monitor/start-the-replication-monitor.md)   
  [복제 모니터링](monitoring-replication.md)  
   

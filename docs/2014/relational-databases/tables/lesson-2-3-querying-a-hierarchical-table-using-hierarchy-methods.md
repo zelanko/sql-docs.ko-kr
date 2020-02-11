@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: be1d0dcd37dba9b1025ba3e4a93aa60d2198b237
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110051"
 ---
 # <a name="querying-a-hierarchical-table-using-hierarchy-methods"></a>계층 메서드를 사용하여 계층적 테이블 쿼리
@@ -40,7 +40,9 @@ ms.locfileid: "66110051"
   
      결과에 Sariya와 Wanida가 모두 나열됩니다. Sariya는 0 수준에서 하위 항목이므로 나열됩니다. Wanida는 1 수준에서 하위 항목입니다.  
   
-2.  [GetAncestor](/sql/t-sql/data-types/getancestor-database-engine) 메서드를 사용하여 이 정보에 대해 쿼리할 수도 있습니다. `GetAncestor` 는 반환하려는 수준에 대한 인수를 사용합니다. Wanida는 Sariya보다 한 수준 아래이므로 다음 코드와 같이 `GetAncestor(1)` 를 사용합니다.  
+2.  
+  [GetAncestor](/sql/t-sql/data-types/getancestor-database-engine) 메서드를 사용하여 이 정보에 대해 쿼리할 수도 있습니다. 
+  `GetAncestor` 는 반환하려는 수준에 대한 인수를 사용합니다. Wanida는 Sariya보다 한 수준 아래이므로 다음 코드와 같이 `GetAncestor(1)` 를 사용합니다.  
   
     ```  
     DECLARE @CurrentEmployee hierarchyid  
@@ -74,7 +76,8 @@ ms.locfileid: "66110051"
   
 ### <a name="to-use-getroot-and-getlevel"></a>GetRoot 및 GetLevel을 사용하려면  
   
-1.  계층이 커질수록 계층에서의 멤버 위치를 확인하기가 더 어려워집니다. [GetLevel](/sql/t-sql/data-types/getlevel-database-engine) 메서드를 사용하여 계층에서의 각 행 수준을 알 수 있습니다. 다음 코드를 실행하여 모든 행의 수준을 확인합니다.  
+1.  계층이 커질수록 계층에서의 멤버 위치를 확인하기가 더 어려워집니다. 
+  [GetLevel](/sql/t-sql/data-types/getlevel-database-engine) 메서드를 사용하여 계층에서의 각 행 수준을 알 수 있습니다. 다음 코드를 실행하여 모든 행의 수준을 확인합니다.  
   
     ```  
     SELECT OrgNode.ToString() AS Text_OrgNode,   
@@ -84,7 +87,8 @@ ms.locfileid: "66110051"
   
     ```  
   
-2.  [GetRoot](/sql/t-sql/data-types/getroot-database-engine) 메서드를 사용하여 계층의 루트 노드를 확인할 수 있습니다. 다음 코드에서는 루트인 단일 행을 반환합니다.  
+2.  
+  [GetRoot](/sql/t-sql/data-types/getroot-database-engine) 메서드를 사용하여 계층의 루트 노드를 확인할 수 있습니다. 다음 코드에서는 루트인 단일 행을 반환합니다.  
   
     ```  
     SELECT OrgNode.ToString() AS Text_OrgNode, *  

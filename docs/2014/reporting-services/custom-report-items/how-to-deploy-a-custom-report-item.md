@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2b41519ee6a6d31be33d92c8fbdf2ab503c93ec1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63265073"
 ---
 # <a name="how-to-deploy-a-custom-report-item"></a>방법: 사용자 지정 보고서 항목 배포
@@ -24,7 +24,8 @@ ms.locfileid: "63265073"
   
 ### <a name="to-deploy-a-custom-report-item"></a>사용자 지정 보고서 항목을 배포하려면  
   
-1.  Rsreportdesigner.config 파일을 편집하여 디자이너에서 사용하도록 사용자 지정 보고서 항목 런타임 및 디자인 타임 구성 요소를 구성합니다. `ReportItemName` 항목이 `CustomReportItemAttribute` 클래스에 사용되는 `CustomReportItemDesigner` 특성과 일치해야 합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+1.  Rsreportdesigner.config 파일을 편집하여 디자이너에서 사용하도록 사용자 지정 보고서 항목 런타임 및 디자인 타임 구성 요소를 구성합니다. 
+  `ReportItemName` 항목이 `CustomReportItemAttribute` 클래스에 사용되는 `CustomReportItemDesigner` 특성과 일치해야 합니다. 다음은 그 예입니다.  
   
     ```  
     <ReportItems>  
@@ -38,7 +39,7 @@ ms.locfileid: "63265073"
     </ReportItemConverter>  
     ```  
   
-2.  Rsreportserver.config 파일을 편집하여 사용자 지정 보고서 항목 런타임 구성 요소를 등록합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+2.  Rsreportserver.config 파일을 편집하여 사용자 지정 보고서 항목 런타임 구성 요소를 등록합니다. 다음은 그 예입니다.  
   
     ```  
     <ReportItems>  
@@ -46,7 +47,7 @@ ms.locfileid: "63265073"
     </ReportItems>  
     ```  
   
-3.  Rsssrvpolicy.config 파일을 편집하여 사용자 지정 보고서 항목에 적절한 권한을 부여하는 `CodeGroup`을 추가합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+3.  Rsssrvpolicy.config 파일을 편집하여 사용자 지정 보고서 항목에 적절한 권한을 부여하는 `CodeGroup`을 추가합니다. 다음은 그 예입니다.  
   
     ```  
     <CodeGroup   
@@ -65,7 +66,7 @@ ms.locfileid: "63265073"
   
 5.  사용자 지정 보고서 항목 디자인 타임 구성 요소 DLL을 %ProgramFiles%\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies 디렉터리로 복사합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services 구성 파일](../report-server/reporting-services-configuration-files.md)   
  [사용자 지정 보고서 항목 클래스 라이브러리](custom-report-item-class-libraries.md)  
   

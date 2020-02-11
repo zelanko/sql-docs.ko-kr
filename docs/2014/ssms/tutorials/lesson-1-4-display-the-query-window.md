@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0e357d8767178e2fb95c484d78248a08b51c2ebf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63281989"
 ---
 # <a name="display-the-query-window"></a>쿼리 창 표시
@@ -24,9 +24,10 @@ ms.locfileid: "63281989"
   
 #### <a name="to-view-multiple-query-windows"></a>여러 쿼리 창을 보려면  
   
-1.  기본 도구 모음에서 **데이터베이스 엔진 쿼리**를 클릭합니다. **데이터베이스 엔진에 연결** 대화 상자에서 **연결**을 클릭합니다.  
+1.  기본 도구 모음에서 **데이터베이스 엔진 쿼리**를 클릭합니다. 
+  **데이터베이스 엔진에 연결** 대화 상자에서 **연결**을 클릭합니다.  
   
-2.  개체 탐색기에서 서버를 마우스 오른쪽 단추로 클릭한 다음 **새 쿼리**를 클릭합니다. 이 경우 쿼리 편집기에서는 등록된 서버의 연결 정보를 사용합니다.  
+2.  개체 탐색기에서 서버를 마우스 오른쪽 단추로 클릭 한 다음 **새 쿼리**를 클릭 합니다. 이 경우 쿼리 편집기에서는 등록된 서버의 연결 정보를 사용합니다.  
   
      창이 개체 탐색기의 오른쪽에 탭 창으로 어떻게 나타나는지 확인합니다.  
   

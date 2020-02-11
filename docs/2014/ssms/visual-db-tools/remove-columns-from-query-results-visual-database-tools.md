@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 77be473f189d8574ebde74215569e700e80725b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63253508"
 ---
 # <a name="remove-columns-from-query-results-visual-database-tools"></a>쿼리 결과에서 열 제거(Visual Database Tools)
@@ -34,15 +34,15 @@ ms.locfileid: "63253508"
   
 -   **조건 창**에서 제거하려는 데이터 열의 **출력** 열에 있는 확인란을 선택 취소합니다. **출력** 열을 다시 선택하면 쿼리 결과에 열을 다시 추가할 수 있습니다.  
   
-     -또는-  
+     또는  
   
 -   [SQL 창](sql-pane-visual-database-tools.md)의 출력 목록에서 열을 제거합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [쿼리에 열 추가 &#40;Visual Database Tools&#41;](add-columns-to-queries-visual-database-tools.md)   
- [쿼리에서 열 제거 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [쿼리 결과 정렬 및 그룹화 &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
- [쿼리 결과 요약 &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
+## <a name="see-also"></a>참고 항목  
+ [Visual Database Tools&#41;&#40;쿼리에 열 추가](add-columns-to-queries-visual-database-tools.md)   
+ [Visual Database Tools&#41;&#40;쿼리에서 열을 제거 합니다.](visual-database-tools.md)   
+ [Visual Database Tools&#41;&#40;쿼리 결과 정렬 및 그룹화](sort-and-group-query-results-visual-database-tools.md)   
+ [Visual Database Tools를 &#40;쿼리 결과 요약&#41;](summarize-query-results-visual-database-tools.md)   
  [쿼리 관련 기본 작업 수행&#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

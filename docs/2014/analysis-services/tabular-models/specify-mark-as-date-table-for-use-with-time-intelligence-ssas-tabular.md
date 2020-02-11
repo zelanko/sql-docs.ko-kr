@@ -1,5 +1,5 @@
 ---
-title: 시간 인텔리전스 (SSAS 테이블 형식)에 사용할 날짜 테이블로 표시 지정 | Microsoft Docs
+title: 시간 인텔리전스에 사용할 날짜 테이블로 표시 지정 (SSAS 테이블 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 27a03aaf94d518caa6b649b7ccd826e08798dacb
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67284878"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular"></a>시간 인텔리전스에 사용할 날짜 테이블로 표시 지정(SSAS 테이블 형식)
@@ -28,7 +28,8 @@ ms.locfileid: "67284878"
   
 -   날짜 테이블의 datetime 열은 세분성이 하루여야 하며 더 세부적으로 나뉘지 않아야 합니다.  
   
--   **날짜 테이블로 표시** 대화 상자를 사용하여 날짜 테이블 및 고유 식별자 열을 지정해야 합니다.  
+-   
+  **날짜 테이블로 표시** 대화 상자를 사용하여 날짜 테이블 및 고유 식별자 열을 지정해야 합니다.  
   
 -   팩트 테이블 및 날짜 테이블에 있는 날짜 데이터 형식의 열 간에 관계를 만드십시오.  
   
@@ -36,9 +37,10 @@ ms.locfileid: "67284878"
   
 1.  모델 디자이너에서 날짜 테이블을 클릭합니다.  
   
-2.  **테이블** 메뉴를 클릭한 다음 **날짜**, **Mark as 날짜 테이블**를 차례로 클릭합니다.  
+2.  **테이블** 메뉴를 클릭 하 고 **날짜**를 클릭 한 다음 **날짜 테이블로 표시** 를 클릭 합니다.  
   
-3.  **날짜 테이블로 표시** 대화 상자의 **날짜** 목록 상자에서 고유 식별자로 사용할 열을 선택합니다. 이 열은 고유 값을 포함해야 하며 날짜 데이터 형식이어야 합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+3.  
+  **날짜 테이블로 표시** 대화 상자의 **날짜** 목록 상자에서 고유 식별자로 사용할 열을 선택합니다. 이 열은 고유 값을 포함해야 하며 날짜 데이터 형식이어야 합니다. 다음은 그 예입니다.  
   
     |Date|  
     |----------|  
@@ -50,8 +52,8 @@ ms.locfileid: "67284878"
   
 4.  필요한 경우 팩트 테이블과 날짜 테이블 간에 관계를 만듭니다.  
   
-## <a name="see-also"></a>관련 항목  
- [계산&#40;SSAS 테이블 형식&#41;](calculations-ssas-tabular.md)   
+## <a name="see-also"></a>참고 항목  
+ [SSAS 테이블 형식&#41;계산 &#40;](calculations-ssas-tabular.md)   
  [시간 인텔리전스 함수 &#40;DAX&#41;](/dax/time-intelligence-functions-dax)  
   
   

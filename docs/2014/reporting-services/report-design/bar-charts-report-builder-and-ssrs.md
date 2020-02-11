@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5a839fb7253c2e66e024872b74fadc114cd58ecf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106486"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>가로 막대형 차트(보고서 작성기 및 SSRS)
@@ -57,7 +57,7 @@ ms.locfileid: "66106486"
   
 -   차트의 크기에 비해 데이터 세트에 데이터 요소가 많은 경우 열 또는 막대의 크기와 항목 사이의 공백이 감소됩니다. 차트에서 열 너비를 수동으로 설정하려면 **PointWidth** 속성을 수정하여 너비(픽셀)를 수정합니다. 기본적으로 이 속성 값은 0.8입니다. 차트에서 열 또는 막대의 너비를 늘리면 각 열 또는 막대 사이의 공백이 줄어듭니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [차트 종류&#40;보고서 작성기 및 SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [차트의 빈 데이터 요소 및 Null 데이터 요소&#40;보고서 작성기 및 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
@@ -67,7 +67,7 @@ ms.locfileid: "66106486"
  [차트의 축 레이블 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [차트의 범례 서식 지정&#40;보고서 작성기 및 SSRS&#41;](chart-legend-formatting-report-builder.md)   
  [차트에 3D 가장자리, 볼록 및 질감 스타일 추가&#40;보고서 작성기 및 SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
- [자습서: 보고서에 가로 막대형 차트 추가(보고서 작성기)](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [자습서: 보고서에 가로 막대형 차트 추가 (보고서 작성기)](https://go.microsoft.com/fwlink/?LinkId=198052)   
  [자습서: 보고서에 가로 막대형 차트 추가](https://go.microsoft.com/fwlink/?LinkId=198042)  
   
   

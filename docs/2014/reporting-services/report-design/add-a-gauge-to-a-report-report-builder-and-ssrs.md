@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 92b068b4bfa7f8b61b5be0904bc47cf080afc861
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106837"
 ---
 # <a name="add-a-gauge-to-a-report-report-builder-and-ssrs"></a>보고서에 계기 추가(보고서 작성기 및 SSRS)
@@ -34,9 +34,9 @@ ms.locfileid: "66106837"
     > [!NOTE]  
     >  차트와 달리 계기에는 선형과 방사형이라는 두 가지 유형만 있습니다. **계기 유형 선택** 대화 상자의 사용 가능한 계기는 이 두 유형의 계기에 대한 템플릿입니다. 따라서 보고서에 계기를 추가한 후에는 계기 유형을 변경할 수 없습니다. 계기 유형을 변경하려면 계기를 삭제한 다음 다시 추가해야 합니다.  
   
-     보고서에 데이터 원본 및 데이터 세트가 없으면 **데이터 원본 속성** 대화 상자가 열려 데이터 원본과 데이터 세트를 만드는 단계를 안내합니다. 자세한 내용은 참조 하십시오 [데이터 연결이 나 데이터 원본 추가 및 확인 &#40;보고서 작성기 및 SSRS&#41;](../report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)합니다.  
+     보고서에 데이터 원본 및 데이터 세트가 없으면 **데이터 원본 속성** 대화 상자가 열려 데이터 원본과 데이터 세트를 만드는 단계를 안내합니다. 자세한 내용은 [데이터 연결이 나 데이터 원본 &#40;보고서 작성기 및 SSRS&#41;추가 및 확인 ](../report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)을 참조 하세요.  
   
-     보고서에 데이터 원본은 있지만 데이터 세트가 없는 경우에는 **데이터 세트 속성** 대화 상자가 열려 데이터 세트를 만드는 단계를 안내합니다. 자세한 내용은 [공유 데이터 집합 또는 포함된 데이터 집합 만들기&#40;보고서 작성기 및 SSRS&#41;](../report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)을 참조하세요.  
+     보고서에 데이터 원본은 있지만 데이터 세트가 없는 경우에는 **데이터 세트 속성** 대화 상자가 열려 데이터 세트를 만드는 단계를 안내합니다. 자세한 내용은 [공유 데이터 세트 또는 포함된 데이터 세트 만들기&#40;보고서 작성기 및 SSRS&#41;](../report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)을 참조하세요.  
   
 4.  계기를 클릭하여 데이터 창을 표시합니다. 기본적으로 계기에는 하나의 값에 해당하는 하나의 포인터가 있습니다. 하지만 포인터를 추가할 수도 있습니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66106837"
   
      계기 눈금을 마우스 오른쪽 단추로 클릭하고 **눈금 속성**을 선택합니다. 눈금의 **최소값** 및 **최대값** 에 값을 입력합니다. 자세한 내용은 [계기의 최소값 또는 최대값 설정&#40;보고서 작성기 및 SSRS&#41;](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [중첩된 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
  [계기&#40;보고서 작성기 및 SSRS&#41;](gauges-report-builder-and-ssrs.md)  
   

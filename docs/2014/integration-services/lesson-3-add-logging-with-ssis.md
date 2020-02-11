@@ -1,5 +1,5 @@
 ---
-title: '3단원: 로깅 추가 | Microsoft Docs'
+title: '3 단원: 로깅 추가 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e716b808d5d9ada8aeaf50d92006cc6453c6e47d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67046767"
 ---
 # <a name="lesson-3-adding-logging"></a>3단원: 로깅 추가
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에는 태스크 및 컨테이너 이벤트 추적을 제공하여 패키지 실행을 모니터링하고 문제를 해결할 수 있는 로깅 기능이 포함되어 있습니다. 로깅 기능은 융통성이 있으므로 패키지 수준 또는 패키지 내의 개별 태스크와 컨테이너에서 사용할 수 있습니다. 로깅하려는 이벤트를 선택하고 단일 패키지에 대해 여러 개의 로그를 만들 수 있습니다.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에는 태스크 및 컨테이너 이벤트 추적을 제공 하 여 패키지 실행 문제를 해결 하 고 모니터링할 수 있는 로깅 기능이 포함 되어 있습니다. 로깅 기능은 융통성이 있으므로 패키지 수준 또는 패키지 내의 개별 태스크와 컨테이너에서 사용할 수 있습니다. 로깅하려는 이벤트를 선택하고 단일 패키지에 대해 여러 개의 로그를 만들 수 있습니다.  
   
- 로깅은 로그 공급자가 제공합니다. 각 로그 공급자는 다양한 형식과 대상 유형으로 로깅 정보를 작성할 수 있습니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 다음 로그 공급자를 제공합니다.  
+ 로깅은 로그 공급자가 제공합니다. 각 로그 공급자는 다양한 형식과 대상 유형으로 로깅 정보를 작성할 수 있습니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서는 다음 로그 공급자를 제공 합니다.  
   
 -   텍스트 파일  
   
@@ -32,21 +32,21 @@ ms.locfileid: "67046767"
   
 -   XML 파일  
   
- 이 단원에서 만든 패키지의 복사본을 만듭니다 [단원 2: 루핑 추가](lesson-2-adding-looping-with-ssis.md)합니다. 이 새 패키지 작업에서 패키지 실행 중에 특정 이벤트를 모니터링하도록 로깅을 추가하고 구성하는 방법에 대해 설명합니다. 이전 단원 중 완료한 단원이 없는 경우 완성된 상태로 포함된 2단원 패키지를 복사할 수도 있습니다.  
+ 이 단원에서는 [Lesson 2: Adding Looping](lesson-2-adding-looping-with-ssis.md)에서 만든 패키지의 복사본을 만든 다음 이 새 패키지 작업에서 패키지 실행 중에 특정 이벤트를 모니터링하도록 로깅을 추가하고 구성하는 방법에 대해 설명합니다. 이전 단원 중 완료한 단원이 없는 경우 완성된 상태로 포함된 2단원 패키지를 복사할 수도 있습니다.  
   
 > [!IMPORTANT]  
->  이 자습서를 실행하려면 **AdventureWorksDW2012** 예제 데이터베이스가 필요합니다. 설치 및 배포 하는 방법에 대 한 자세한 **AdventureWorksDW2012**하십시오 [Reporting Services 제품 샘플 github](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)합니다.  
+>  이 자습서를 실행하려면 **AdventureWorksDW2012** 예제 데이터베이스가 필요합니다. **AdventureWorksDW2012**를 설치 및 배포 하는 방법에 대 한 자세한 내용은 [GitHub의 제품 샘플을 Reporting Services](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)하세요.  
   
 ## <a name="lesson-tasks"></a>단원 태스크  
  이 단원에서는 다음 태스크를 다룹니다.  
   
--   [1단계: 2 단원 패키지 복사](lesson-3-1-copying-the-lesson-2-package.md)  
+-   [1단계: 2단원 패키지 복사](lesson-3-1-copying-the-lesson-2-package.md)  
   
 -   [2단계: 로깅 추가 및 구성](lesson-3-2-adding-and-configuring-logging.md)  
   
--   [3단계: 3 단원 자습서 패키지 테스트](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
+-   [3단계: 3단원 자습서 패키지 테스트](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>단원 시작  
- [1단계: 2 단원 패키지 복사](lesson-3-1-copying-the-lesson-2-package.md)  
+ [1단계: 2단원 패키지 복사](lesson-3-1-copying-the-lesson-2-package.md)  
   
   

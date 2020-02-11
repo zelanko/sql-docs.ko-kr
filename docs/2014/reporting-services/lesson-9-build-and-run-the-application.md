@@ -1,5 +1,5 @@
 ---
-title: '9단원: 빌드 및 응용 프로그램 실행 | Microsoft Docs'
+title: '9단원: 애플리케이션 빌드 및 실행 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 321075631a48570a80e8294f992e8ddb17d50bd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108377"
 ---
-# <a name="lesson-9-build-and-run-the-application"></a>9단원: 애플리케이션 빌드 및 실행
+# <a name="lesson-9-build-and-run-the-application"></a>Lesson 9: Build and Run the Application
   데이터 테이블에 대한 데이터 필터를 만든 후에는 웹 사이트 애플리케이션을 빌드하고 실행합니다.  
   
 ### <a name="to-build-and-run-the-application"></a>애플리케이션을 빌드하고 실행하려면  
@@ -30,11 +30,13 @@ ms.locfileid: "66108377"
   
 2.  마우스를 **이름** 열 아래의 행 위로 가져갑니다. 마우스 커서에 손 모양 기호가 표시됩니다.  
   
-3.  **이름** 열에서 값을 클릭합니다. 자식 보고서가 필터링된 해당 데이터와 함께 표시됩니다.  
+3.  
+  **이름** 열에서 값을 클릭합니다. 자식 보고서가 필터링된 해당 데이터와 함께 표시됩니다.  
   
-4.  **ReportViewer**도구 모음에서 **부모 보고서로 돌아가기** 아이콘을 클릭하여 다시 **부모** 보고서로 이동합니다.  
+4.  
+  **ReportViewer**도구 모음에서 **부모 보고서로 돌아가기** 아이콘을 클릭하여 다시 **부모** 보고서로 이동합니다.  
   
-     ![ssrs에서 ReportViewer를 사용 하 여 드릴스루](../../2014/tutorials/media/ssrs-drillthrough-report.png "ssrs ReportViewer를 사용 하 여 드릴스루 합니다.")  
+     ![ReportViewer를 사용 하 여 ssrs 드릴스루](../../2014/tutorials/media/ssrs-drillthrough-report.png "ReportViewer를 사용 하 여 ssrs 드릴스루")  
   
 5.  브라우저를 닫아 종료합니다.  
   

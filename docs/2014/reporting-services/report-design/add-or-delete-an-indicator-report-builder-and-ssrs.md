@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 763d39ef4804a986fb190c3b5e9d8039a827bd63
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106566"
 ---
 # <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>표시기 추가 또는 삭제(보고서 작성기 및 SSRS)
@@ -24,13 +24,13 @@ ms.locfileid: "66106566"
   
  표시기를 처음 추가하면 기본적으로 백분율을 단위로 사용하도록 표시기가 구성됩니다. 백분율 범위는 표시기 집합의 멤버 간에 균등하게 분포되며 표시기가 나타내는 값의 범위는 테이블이나 행렬과 같은 표시기의 부모입니다.  
   
- 표시기의 값과 상태를 업데이트할 수 있습니다. 자세한 내용은 다음 항목을 참조하십시오.  
+ 표시기의 값과 상태를 업데이트할 수 있습니다. 자세한 내용은 아래 항목을 참조하세요.  
   
--   [표시기 아이콘 및 표시기 집합 변경&#40;보고서 작성기 및 SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
+-   [보고서 작성기 및 SSRS &#40;표시기 아이콘 및 표시기 집합을 변경&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
--   [단위 설정 및 구성&#40;보고서 작성기 및 SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
+-   [측정 단위를 설정 하 고 구성 하 &#40;보고서 작성기 및 SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
--   [동기화 범위 설정&#40;보고서 작성기 및 SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
+-   [동기화 범위 &#40;보고서 작성기 및 SSRS를 설정&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
   
  표시기가 계기 패널 내부에 배치되기 때문에 **표시기 속성** 대화 상자나 **속성** 창을 사용하여 표시기를 구성할 때 패널 대신 표시기를 선택해야 합니다. 다음 그림에서는 계기 패널에서 선택된 표시기를 보여 줍니다.  
   
@@ -50,7 +50,8 @@ ms.locfileid: "66106566"
   
 3.  필요한 경우 **삽입** 탭에서 **사각형**을 클릭한 다음 새 열의 셀을 클릭합니다.  
   
-4.  **삽입** 탭에서 **표시기**를 클릭한 다음 새 열의 셀을 클릭합니다.  
+4.  
+  **삽입** 탭에서 **표시기**를 클릭한 다음 새 열의 셀을 클릭합니다.  
   
      셀에 사각형을 추가한 경우 해당 셀을 클릭합니다.  
   
@@ -60,7 +61,8 @@ ms.locfileid: "66106566"
   
 7.  표시기를 클릭합니다. **계기 데이터** 창이 열립니다.  
   
-8.  **값** 영역의 **(지정되지 않음)** 드롭다운 목록에서 값을 표시기로 표시할 필드를 클릭합니다.  
+8.  
+  **값** 영역의 **(지정되지 않음)** 드롭다운 목록에서 값을 표시기로 표시할 필드를 클릭합니다.  
   
      표시기는 기본값을 사용하도록 구성됩니다. 기본적으로 표시기는 백분율을 단위로 사용하도록 구성되며 백분율 범위는 표시기의 멤버 간에 균등하게 분포되고 표시기가 제공하는 값은 가장 가까운 그룹의 범위를 사용합니다.  
   
@@ -73,7 +75,7 @@ ms.locfileid: "66106566"
   
 2.  **삭제**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [표시기&#40;보고서 작성기 및 SSRS&#41;](indicators-report-builder-and-ssrs.md)  
   
   

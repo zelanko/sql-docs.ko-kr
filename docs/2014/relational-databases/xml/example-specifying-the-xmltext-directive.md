@@ -1,5 +1,5 @@
 ---
-title: '예: XMLTEXT 지시어 지정 | Microsoft Docs'
+title: '예: XMLTEXT 지시어 지정 | Microsoft 문서'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 56ccb1e8a25b7d9f138c2900422d301919fef039
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67597550"
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>예: XMLTEXT 지시어 지정
-  이 예에서는 EXPLICIT 모드를 사용하는 `SELECT` 문에서 `XMLTEXT` 지시어를 사용하여 오버플로 열의 데이터 주소를 지정하는 방법을 보여 줍니다.  
+  이 예에서는 EXPLICIT 모드를 사용하는 `XMLTEXT` 문에서 `SELECT` 지시어를 사용하여 오버플로 열의 데이터 주소를 지정하는 방법을 보여 줍니다.  
   
  `Person` 테이블을 검토해 보면 이 테이블에는 XML 문서 중 사용되지 않은 부분을 저장하는 `Overflow` 열이 있는 것을 볼 수 있습니다.  
   
@@ -48,9 +48,9 @@ FOR XML EXPLICIT;
   
  결과 XML 문서에서 다음에 유의하십시오.  
   
--   *AttributeName*이 `Overflow` 열에 대해 지정되어 있지 않고 `xmltext` 지시어가 지정되어 있기 때문에 <`Parent`> 요소의 특성이 묶는 <`overflow`> 요소의 특성 목록에 첨부됩니다.  
+-   *AttributeName*이 `Overflow` 열에 대해 지정되어 있지 않고 `xmltext` 지시어가 지정되어 있기 때문에 <`overflow`> 요소의 특성이 묶는 <`Parent`> 요소의 특성 목록에 첨부됩니다.  
   
--   <`xmltext`> 요소의 `PersonID` 특성은 동일 요소 수준에서 검색된 `PersonID` 특성과 충돌하기 때문에 <`xmltext`> 요소의 특성은 `PersonID`가 NULL인 경우에도 무시됩니다. 특성은 일반적으로 오버플로의 동일한 이름의 특성에 우선합니다.  
+-   <`PersonID`> 요소의 `xmltext` 특성은 동일 요소 수준에서 검색된 `PersonID` 특성과 충돌하기 때문에 <`xmltext`> 요소의 특성은 `PersonID`가 NULL인 경우에도 무시됩니다. 특성은 일반적으로 오버플로의 동일한 이름의 특성에 우선합니다.  
   
  다음은 결과입니다.  
   
@@ -98,9 +98,9 @@ FOR XML EXPLICIT;
   
  `</Parent>`  
   
- *AttributeName*이 `xmltext` 지시어와 함께 지정된 경우 <`overflow`> 요소의 특성이 묶는 <`Parent`> 요소의 하위 요소에 대한 특성으로 추가됩니다. 에 지정한 이름이 *AttributeName* 하위 요소의 이름이 됩니다.  
+ *AttributeName*이 `xmltext` 지시어와 함께 지정된 경우 <`overflow`> 요소의 특성이 묶는 <`Parent`> 요소의 하위 요소에 대한 특성으로 추가됩니다. *AttributeName* 에 대해 지정 된 이름은 하위 요소의 이름이 됩니다.  
   
- 이 쿼리에서 *AttributeName*, <`overflow`>을 함께 지정 된는 `xmltext` 지시문:  
+ 이 쿼리에서 *AttributeName*<`overflow`>는 `xmltext` 지시문과 함께 지정 됩니다.  
   
 ```  
 SELECT 1 as Tag, NULL as parent,  
@@ -167,7 +167,7 @@ FOR XML EXPLICIT;
   
  `</Parent>`  
   
- `XMLTEXT` 열 데이터의 경우 루트 요소에 특성이 있으면 이 특성은 XML 데이터 스키마에 표시되지 않고 MSXML 파서는 결과 XML 문서 조각의 유효성을 검사하지 않습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ `XMLTEXT` 열 데이터의 경우 루트 요소에 특성이 있으면 이 특성은 XML 데이터 스키마에 표시되지 않고 MSXML 파서는 결과 XML 문서 조각의 유효성을 검사하지 않습니다. 다음은 그 예입니다.  
   
 ```  
 SELECT 1 AS Tag,  
@@ -194,7 +194,7 @@ FOR XML EXPLICIT, xmldata;
   
  `</overflow>`  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [FOR XML에서 EXPLICIT 모드 사용](use-explicit-mode-with-for-xml.md)  
   
   

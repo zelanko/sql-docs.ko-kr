@@ -13,20 +13,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d44afc5bb4c352a2cb5dfd39030a52db990e3a0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069603"
 ---
 # <a name="select-creation-method-dimension-wizard"></a>생성 방법 선택(차원 마법사)
+  
   **생성 방법 선택** 페이지를 사용하여 차원 생성 방법을 선택할 수 있습니다.  
   
  **차원 마법사를 열려면**  
   
--   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 **솔루션 탐색기**에서 **프로젝트의** 차원 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 폴더를 마우스 오른쪽 단추로 클릭한 다음 **새 차원**을 클릭합니다.  
+-   
+  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 **솔루션 탐색기**에서 **프로젝트의** 차원 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 폴더를 마우스 오른쪽 단추로 클릭한 다음 **새 차원**을 클릭합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **기존 테이블 사용**  
  데이터 원본에 여러 테이블의 차원을 생성합니다. 차원에 사용할 수 있는 특성은 테이블의 데이터 구조에 따라 달라집니다.  
   
@@ -40,7 +42,7 @@ ms.locfileid: "66069603"
   
  자세한 내용은 [시간 테이블을 생성하여 시간 차원 만들기](multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)를 참조하세요.  
   
- **서버의 시간 테이블 생성**  
+ **서버에 시간 테이블 생성**  
  서버에 직접 시간 테이블을 만든 다음 이 테이블을 사용하여 시간 차원을 만듭니다. 이 옵션은 기본 데이터 원본에 개체를 만들 수 있는 권한이 없는 경우에 사용합니다. 새 시간 차원은 마법사에서 지정한 데이터 범위, 특성 및 달력에 대한 데이터를 포함합니다.  
   
  자세한 내용은 [시간 테이블을 생성하여 시간 차원 만들기](multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)를 참조하세요.  
@@ -61,9 +63,9 @@ ms.locfileid: "66069603"
 > [!NOTE]  
 >  이 옵션은 **데이터 원본에 시간이 아닌 테이블 생성** 옵션을 선택한 경우에만 사용할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [차원 마법사 F1 도움말](dimension-wizard-f1-help.md)   
- [차원 &#40;Analysis Services-다차원 데이터&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [차원 &#40;Analysis Services 다차원 데이터&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [다차원 모델의 차원](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

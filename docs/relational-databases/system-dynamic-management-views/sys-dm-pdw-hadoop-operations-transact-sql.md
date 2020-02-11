@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_hadoop_operations (TRANSACT-SQL) | Microsoft Docs
+title: sys. dm_pdw_hadoop_operations (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,27 +13,27 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: b4429585d735ee4eb51d2b0b421b53fdf06bf8ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67899386"
 ---
-# <a name="sysdmpdwhadoopoperations-transact-sql"></a>sys.dm_pdw_hadoop_operations (Transact SQL)
+# <a name="sysdm_pdw_hadoop_operations-transact-sql"></a>sys. dm_pdw_hadoop_operations (Transact-sql)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  각 맵 감소 작업 실행의 일부로 Hadoop에 푸시되는 대 한 행을 포함 한 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 외부 Hadoop 테이블에 대 한 쿼리 합니다. 각 맵 감소 작업을 쿼리에서 조건부 중 하나를 나타냅니다. 이 Hadoop 외부 테이블에 대 한 쿼리 조건자 푸시 다운이 활성화 될 때만 사용 됩니다.  
+  외부 Hadoop 테이블에서 쿼리를 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 실행 하는 과정의 일부로 Hadoop에 푸시되는 각 지도 감소 작업에 대 한 행을 포함 합니다. 각 맵 감소 작업은 쿼리의 조건자 중 하나를 나타냅니다. 이는 Hadoop 외부 테이블에 대 한 쿼리에 조건자 푸시 다운을 사용 하는 경우에만 사용 됩니다.  
   
-|열 이름|데이터 형식|설명|범위|  
+|열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
-|request_id|**nvarchar(32)**|이 외부 Hadoop 작업의 ID입니다.|ID로 동일한 [sys.dm_pdw_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)합니다.|  
-|step_index|**int**|이 Hadoop 작업을 나타내는 쿼리 단계의 인덱스입니다.|step_index 동일 [sys.dm_pdw_request_steps &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)합니다.|  
-|operation_type|**nvarchar(255)**|외부 작업의 유형을 설명합니다.|' 외부 Hadoop 작업 '|  
-|operation_name|**nvarchar(4000)**|맵 감소 작업에 대 한 작업 ID입니다. 후 Hadoop이 반환한 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 작업을 제출 합니다.||  
-|map_progress|**float**|맵 작업에 의해 지금까지 사용 된 입력된 데이터의 비율입니다.|부동 소수점 수 between 및 0과 100 포함 합니다.|  
-|reduce_progress|**int**|완료 된 감소 작업의 백분율...|부동 소수점 수 between 및 0과 100 포함 합니다.|  
+|request_id|**nvarchar (32)**|이 외부 Hadoop 작업의 ID입니다.|[Dm_pdw_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)의 ID와 동일 합니다.|  
+|step_index|**int**|이 Hadoop 작업을 참조 하는 쿼리 단계의 인덱스입니다.|[Dm_pdw_request_steps &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)step_index와 동일 합니다.|  
+|operation_type|**nvarchar(255)**|외부 작업의 유형을 설명 합니다.|' 외부 Hadoop 작업 '|  
+|operation_name|**nvarchar(4000)**|지도 감소 작업의 작업 ID입니다. 이는 작업을 제출한 후 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Hadoop에서 반환 됩니다.||  
+|map_progress|**float**|현재까지 맵 작업에서 사용한 입력 데이터의 백분율입니다.|0과 100를 포함 하는의 부동 소수점 숫자입니다.|  
+|reduce_progress|**int**|완료 된 작업 감소의 백분율입니다.|0과 100를 포함 하는의 부동 소수점 숫자입니다.|  
   
-## <a name="see-also"></a>관련 항목  
- [시스템 뷰 &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+## <a name="see-also"></a>참고 항목  
+ [Transact-sql&#41;&#40;시스템 뷰](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

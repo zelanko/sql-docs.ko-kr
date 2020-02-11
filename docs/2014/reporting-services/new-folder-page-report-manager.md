@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 21d79e84ca30283eab6fe788be940f712b2cd41f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108199"
 ---
 # <a name="new-folder-page-report-manager"></a>새 폴더 페이지(보고서 관리자)
@@ -33,19 +33,19 @@ ms.locfileid: "66108199"
   
 2.  도구 모음에서 **새 폴더**를 클릭합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **이름**  
- 폴더 이름을 지정합니다. 이름은 하나 이상의 영숫자 문자를 포함해야 합니다. 공백과 특정 기호도 포함할 수 있습니다. 이름을 지정할 때 ; ? : \@ & = +, $ / * \< > | "또는 / 이름을 지정 합니다.  
+ 폴더 이름을 지정합니다. 이름은 하나 이상의 영숫자 문자를 포함해야 합니다. 공백과 특정 기호도 포함할 수 있습니다. 이름을 지정할 때 ; ? : \@ & = +, $/* \< > | "로 지정 합니다.  
   
  **설명**  
  폴더 내용에 대한 설명을 입력합니다. 이 설명은 해당 폴더 액세스 권한이 있는 사용자의 내용 페이지에 표시됩니다.  
   
-## <a name="see-also"></a>관련 항목  
- [만들기, 삭제 또는 수정 폴더 &#40;보고서 관리자&#41;](report-server/create-delete-or-modify-a-folder-report-manager.md)   
+## <a name="see-also"></a>참고 항목  
+ [폴더 &#40;보고서 관리자 만들기, 삭제 또는 수정&#41;](report-server/create-delete-or-modify-a-folder-report-manager.md)   
  [일반 속성 페이지, 폴더 &#40;보고서 관리자&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
  [보고서 관리자&#40;SSRS 기본 모드&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [내용 페이지&#40;보고서 관리자&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)   
+ [내용 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [F1 도움말 보고서 관리자](../../2014/reporting-services/report-manager-f1-help.md)   
  [일반 속성 페이지, 폴더 &#40;보고서 관리자&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)  
   
   

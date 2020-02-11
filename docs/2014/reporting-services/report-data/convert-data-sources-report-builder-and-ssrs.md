@@ -1,5 +1,5 @@
 ---
-title: 변환에서 데이터 원본을 포함 된 공유 (보고서 작성기 및 SSRS) | Microsoft Docs
+title: 포함 된 데이터 원본에서 공유 데이터 원본으로 변환 (보고서 작성기 및 SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 64879a7ab82f509f129cf43ab50c1cdbb3b7f913
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107406"
 ---
 # <a name="convert-a-data-source-from-embedded-to-shared-report-builder-and-ssrs"></a>포함된 데이터 원본에서 공유 데이터 원본으로 변환(보고서 작성기 및 SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "66107406"
   
 ### <a name="to-convert-a-data-source-from-shared-to-embedded"></a>공유 데이터 원본에서 포함된 데이터 원본으로 변환  
   
--   보고서 데이터 창에서 데이터 원본을 마우스 오른쪽 단추로 클릭하여 **데이터 원본 속성** 대화 상자를 열고 **포함된 연결**을 클릭합니다. 필수 정보를 입력합니다.  
+-   보고서 데이터 창에서 데이터 원본을 마우스 오른쪽 단추로 클릭하여 **데이터 원본 속성** 대화 상자를 열고 **포함된 연결**을 클릭합니다. 필요한 정보를 입력합니다.  
   
      보고서 데이터 창에서 데이터 원본 아이콘이 공유 데이터 원본 아이콘으로 변경됩니다.  
   
@@ -51,18 +51,18 @@ ms.locfileid: "66107406"
   
 #### <a name="to-convert-a-data-source-from-embedded-to-shared"></a>포함된 데이터 원본에서 공유 데이터 원본으로 변환  
   
--   보고서 데이터 창에서 데이터 원본을 마우스 오른쪽 단추로 클릭하여 **데이터 원본 속성** 대화 상자를 열고 **포함된 연결**을 클릭합니다. 필수 정보를 입력합니다.  
+-   보고서 데이터 창에서 데이터 원본을 마우스 오른쪽 단추로 클릭하여 **데이터 원본 속성** 대화 상자를 열고 **포함된 연결**을 클릭합니다. 필요한 정보를 입력합니다.  
   
      보고서 데이터 창에서 데이터 원본 아이콘이 공유 데이터 원본 아이콘으로 변경됩니다.  
   
 #### <a name="to-convert-a-data-source-from-shared-to-embedded"></a>공유 데이터 원본에서 포함된 데이터 원본으로 변환  
   
--   보고서 데이터 창에서 데이터 원본을 마우스 오른쪽 단추로 클릭하여 **데이터 원본 속성** 대화 상자를 열고 **포함된 연결**을 클릭합니다. 필수 정보를 입력합니다.  
+-   보고서 데이터 창에서 데이터 원본을 마우스 오른쪽 단추로 클릭하여 **데이터 원본 속성** 대화 상자를 열고 **포함된 연결**을 클릭합니다. 필요한 정보를 입력합니다.  
   
      보고서 데이터 창에서 데이터 원본 아이콘이 공유 데이터 원본 아이콘으로 변경됩니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서 데이터 원본 관리](manage-report-data-sources.md)   
- [보고서 서비스의 데이터 연결, 데이터 원본 및 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
+ [Data Connections, Data Sources, and Connection Strings in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

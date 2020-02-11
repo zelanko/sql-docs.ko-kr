@@ -18,22 +18,22 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 268ca47f33e8e2514b297c2bb2a30eb77b7a8f08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109136"
 ---
 # <a name="filters-page-chart-dialog-boxes-report-builder-and-ssrs"></a>필터 페이지, 차트 대화 상자(보고서 작성기 및 SSRS)
   다음 위치에서 **필터** 를 클릭합니다.  
   
--   범주별로 그룹화된 계열의 데이터 요소를 필터링하려면**범주 그룹 속성** 대화 상자  
+-   범주별로 그룹화 된 계열의 데이터 요소를 필터링 하는 **범주 그룹 속성** 대화 상자  
   
--   차트의 필터링 옵션을 정의하려면**차트 속성** 대화 상자  
+-   차트의 필터링 옵션을 정의할 수 있는 **차트 속성** 대화 상자  
   
--   선택한 그룹의 계열 수를 제한하려면**계열 그룹 속성** 대화 상자  
+-   **계열 그룹 속성** 대화 상자를 선택 하 여 선택한 그룹의 계열 수를 제한할 수 있습니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **추가**  
  목록에 새 필터 절을 추가하려면 클릭합니다.  
   
@@ -47,23 +47,26 @@ ms.locfileid: "66109136"
  목록에서 선택한 필터를 아래로 이동하려면 클릭합니다.  
   
  **식**  
- 필터를 적용할 식을 입력하거나 선택합니다. 식을 편집하려면 식(**fx**) 단추를 클릭합니다.  
+ 필터를 적용할 식을 입력하거나 선택합니다. 식을 편집 하려면 식 단추 (**fx**)를 클릭 합니다.  
   
- **Data type**  
- **값**에 대한 데이터 형식을 선택합니다. 가능하면 **식**에 대한 데이터 형식과 일치하는 데이터 형식을 선택합니다.  
+ **데이터 형식**  
+ 
+  **값**에 대한 데이터 형식을 선택합니다. 가능하면 **식**에 대한 데이터 형식과 일치하는 데이터 형식을 선택합니다.  
   
- **식** 및 **값** 의 값은 동일한 데이터 형식으로 계산되어야 합니다. 예를 들어 **식** 을 데이터 형식이 System.Int32인 필드로 설정하고 **값** 을 7로 설정한 경우 드롭다운 목록에서 **정수**를 선택합니다.  
+ 
+  **식** 및 **값** 의 값은 동일한 데이터 형식으로 계산되어야 합니다. 예를 들어 **식** 을 데이터 형식이 System.Int32인 필드로 설정하고 **값** 을 7로 설정한 경우 드롭다운 목록에서 **정수**를 선택합니다.  
   
  필요한 데이터 형식 옵션이 드롭다운 목록에 없으면 값을 올바른 데이터 형식으로 변환하는 식을 작성합니다. 자세한 내용은 [필터 수식 예&#40;보고서 작성기 및 SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)를 참조하세요.  
   
  **연산자**  
  식과 값을 비교하는 데 사용할 연산자를 선택합니다.  
   
- **Value**  
- **식**에 입력한 식을 계산하는 데 사용할 식이나 값을 입력합니다.  
+ **값**  
+ 
+  **식**에 입력한 식을 계산하는 데 사용할 식이나 값을 입력합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
+## <a name="see-also"></a>참고 항목  
+ [데이터 세트 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [식&#40;보고서 작성기 및 SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  

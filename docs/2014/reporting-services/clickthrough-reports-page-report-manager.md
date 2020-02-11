@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d996463baaed3095b6866fa2da88ed811745878d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109801"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>클릭 광고 보고서 페이지(보고서 관리자)
@@ -31,7 +31,7 @@ ms.locfileid: "66109801"
  액세스 권한이 있는 모든 보고서를 선택할 수 있지만 구성하는 모델용으로 만든 보고서만 선택하는 것이 좋습니다.  
   
 > [!NOTE]  
->  클릭 방문 보고서는 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 일부 버전에서만 사용할 수 있습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다. 조직에서 실행 중인 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전을 잘 모를 경우 데이터베이스 관리자에게 문의하십시오.  
+>  클릭 방문 보고서는 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 일부 버전에서만 사용할 수 있습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [SQL Server 2014 버전에서 지 원하는 기능](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조 하세요. 조직에서 실행 중인 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전을 잘 모를 경우 데이터베이스 관리자에게 문의하십시오.  
   
 ## <a name="navigation"></a>탐색  
  사용자 인터페이스(UI)에서 이 위치를 탐색하려면 다음 절차를 사용하십시오.  
@@ -44,9 +44,10 @@ ms.locfileid: "66109801"
   
 3.  드롭다운 메뉴에서 **관리**를 클릭합니다. 모델의 **일반** 속성 페이지가 열립니다.  
   
-4.  **클릭 광고** 탭을 선택합니다.  
+4.  
+  **클릭 광고** 탭을 선택합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **모델 항목 계층**  
  사용자 지정 보고서를 제공할 수 있는 모델 네임스페이스의 엔터티, 폴더 및 항목을 표시합니다.  
   
@@ -56,7 +57,7 @@ ms.locfileid: "66109801"
  **여러 인스턴스 보고서**  
  사용자 탐색에 여러 인스턴스 데이터 뷰가 필요한 경우 사용할 사용자 지정 보고서를 지정합니다. 찾아보기 단추를 클릭하여 사용할 보고서를 선택할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서 게시](../../2014/reporting-services/publish-reports.md)  
   
   

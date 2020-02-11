@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 921ce03fd08e7820266b828d5848f64db1e257ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108827"
 ---
 # <a name="host-a-report-server-database-in-a-sql-server-failover-cluster"></a>SQL Server 장애 조치(failover) 클러스터에서 보고서 서버 데이터베이스 호스팅
@@ -24,7 +24,7 @@ ms.locfileid: "66108827"
   
  보고서 서버 서비스가 장애 조치 클러스터에 참여할 수는 없지만 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 장애 조치 클러스터가 설치된 컴퓨터에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치할 수는 있습니다. 보고서 서버는 장애 조치 클러스터와 독립적으로 실행됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치 인스턴스의 일부인 컴퓨터에 보고서 서버를 설치하는 경우에는 보고서 서버 데이터에 장애 조치 클러스터를 사용하지 않아도 되므로 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 사용하여 데이터베이스를 호스팅할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서 서버 데이터베이스&#40;SSRS 기본 모드&#41;](../report-server/report-server-database-ssrs-native-mode.md)   
  [보고서 서버 데이터베이스 만들기&#40;SSRS 구성 관리자&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
   

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 906f4527bdca38f4571a2e1686f885a2857e47c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106793"
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>하위 보고서 및 매개 변수 추가(보고서 작성기 및 SSRS)
@@ -71,7 +71,7 @@ ms.locfileid: "66106793"
   
      하위 보고서 매개 변수의 순서 변경은 하위 보고서의 처리에 아무런 영향도 주지 않습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [하위 보고서&#40;보고서 작성기 및 SSRS&#41;](subreports-report-builder-and-ssrs.md)   
  [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)  
   

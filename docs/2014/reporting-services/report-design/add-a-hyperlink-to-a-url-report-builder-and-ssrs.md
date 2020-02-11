@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fa7b0d32a62e5e2d729e05c88b892ccaffc0fc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106822"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>URL에 하이퍼링크 추가(보고서 작성기 및 SSRS)
@@ -23,14 +23,14 @@ ms.locfileid: "66106822"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- 보고서 서버에 대한 URL 요청을 사용하여 본인과 사용자에게 볼 수 있는 권한이 있는 보고서 서버의 보고서에 대해 URL을 지정할 수도 있습니다. 예를 들어 보고서를 지정한 다음 사용자가 처음으로 해당 보고서를 볼 때 문서 구조를 숨길 수 있습니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 [Reporting Services 설명서](https://go.microsoft.com/fwlink/?linkid=121312)에서 [URL 액세스&#40;SSRS&#41;](../url-access-ssrs.md)를 참조하세요.  
+ 보고서 서버에 대한 URL 요청을 사용하여 본인과 사용자에게 볼 수 있는 권한이 있는 보고서 서버의 보고서에 대해 URL을 지정할 수도 있습니다. 예를 들어 보고서를 지정한 다음 사용자가 처음으로 해당 보고서를 볼 때 문서 구조를 숨길 수 있습니다. 자세한 내용은 [ 온라인 설명서의 ](../url-access-ssrs.md)Reporting Services 설명서[에서 ](https://go.microsoft.com/fwlink/?linkid=121312)URL 액세스&#40;SSRS&#41;[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조하세요.  
   
  입력란, 이미지 또는 차트의 계산된 계열과 같이 **동작** 속성이 있는 모든 항목의 URL에 하이퍼링크를 추가할 수 있습니다. 정의한 동작은 사용자가 해당 보고서 항목을 클릭할 때 발생합니다. 자세한 내용은 [동작 속성 대화 상자&#40;보고서 작성기 및 SSRS&#41;](../action-properties-dialog-box-report-builder-and-ssrs.md) 및 [외부 항목에 대한 경로 지정&#40;보고서 작성기 및 SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md)을 참조하세요.  
   
- 빠르게 시작하려면 [자습서: 텍스트 서식 지정&#40;보고서 작성기&#41;](../tutorial-format-text-report-builder.md)를 참조하세요.  
+ 빠르게 시작하려면 [자습서: 텍스트 서식 지정&#40;보고서 작성기&#41;](../tutorial-format-text-report-builder.md)을 참조하세요.  
   
 > [!NOTE]  
->  데이터 세트 필드에 바인딩된 링크는 악의적 의도를 가진 사용자가 임의로 변경할 수도 있습니다. 자세한 내용은 msdn.microsoft.com의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][온라인 설명서](https://go.microsoft.com/fwlink/?LinkId=154888)에서 [보고서 및 리소스 보안](../security/secure-reports-and-resources.md)을 참조하세요.  
+>  데이터 세트 필드에 바인딩된 링크는 악의적 의도를 가진 사용자가 임의로 변경할 수도 있습니다. 자세한 내용은 msdn.microsoft.com의 [](../security/secure-reports-and-resources.md)온라인 설명서[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 [보고서 및 리소스 보안](https://go.microsoft.com/fwlink/?LinkId=154888)을 참조하세요.  
   
 ### <a name="to-add-a-hyperlink"></a>하이퍼링크를 추가하려면  
   
@@ -38,9 +38,11 @@ ms.locfileid: "66106822"
   
 2.  속성 대화 상자에서 **동작**을 클릭합니다.  
   
-3.  **URL로 이동**을 선택합니다. 이 옵션에 대한 추가 섹션이 대화 상자에 나타납니다.  
+3.  
+  **URL로 이동**을 선택합니다. 이 옵션에 대한 추가 섹션이 대화 상자에 나타납니다.  
   
-4.  **URL 선택**에서 URL이나 URL로 계산되는 식을 입력 또는 선택하거나, 드롭다운 화살표를 클릭하고 URL이 들어 있는 필드 이름을 클릭합니다.  
+4.  
+  **URL 선택**에서 URL이나 URL로 계산되는 식을 입력 또는 선택하거나, 드롭다운 화살표를 클릭하고 URL이 들어 있는 필드 이름을 클릭합니다.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -48,7 +50,7 @@ ms.locfileid: "66106822"
   
 7.  링크를 테스트하려면 **실행** 을 클릭하여 보고서를 미리 본 다음, 이 링크를 설정한 보고서 항목을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [대화형 정렬, 문서 구조 및 링크&#40;보고서 작성기 및 SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [문서 구조 만들기&#40;보고서 작성기 및 SSRS&#41;](create-a-document-map-report-builder-and-ssrs.md)  
   

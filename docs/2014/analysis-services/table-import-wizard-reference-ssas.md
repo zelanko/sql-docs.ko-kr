@@ -13,78 +13,78 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef0cb7dfe9b3fbbca1cda3833506e56cc6bb9681
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067905"
 ---
 # <a name="table-import-wizard-reference-ssas"></a>테이블 가져오기 마법사 참조(SSAS)
   이 섹션에서는 **테이블 가져오기 마법사**에 대한 도움말을 제공합니다. 이 마법사를 사용하여 다양한 데이터 원본에서 데이터를 가져올 수 있습니다. 모델 디자이너에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  
   
-## <a name="pages"></a>인쇄할 페이지  
+## <a name="pages"></a>페이지  
   
--   [고급 설정 &#40;SSAS&#41;](advanced-settings-ssas.md)  
+-   [SSAS&#41;&#40;고급 설정](advanced-settings-ssas.md)  
   
 -   [Analysis Services MDX 쿼리 디자이너 &#40;SSAS&#41;](analysis-services-mdx-query-designer-ssas.md)  
   
--   [데이터를 가져오는 방법 선택 &#40;SSAS&#41;](choose-how-to-import-the-data-ssas.md)  
+-   [SSAS를 &#40;데이터를 가져오는 방법 선택&#41;](choose-how-to-import-the-data-ssas.md)  
   
--   [보고서 또는 데이터 피드에 연결 &#40;SSAS&#41;](connect-to-a-report-or-data-feed-ssas.md)  
+-   [SSAS&#41;&#40;보고서 또는 데이터 피드에 연결](connect-to-a-report-or-data-feed-ssas.md)  
   
--   [데이터 원본에 연결 &#40;SSAS&#41;](connect-to-a-data-source-ssas.md)  
+-   [SSAS&#41;&#40;데이터 원본에 연결](connect-to-a-data-source-ssas.md)  
   
--   [DB2 데이터베이스에 연결 &#40;SSAS&#41;](connect-to-a-db2-database-ssas.md)  
+-   [SSAS&#41;&#40;DB2 데이터베이스에 연결](connect-to-a-db2-database-ssas.md)  
   
--   [플랫 파일에 연결 &#40;SSAS&#41;](connect-to-a-flat-file-ssas.md)  
+-   [SSAS&#41;&#40;플랫 파일에 연결](connect-to-a-flat-file-ssas.md)  
   
--   [Microsoft Access 데이터베이스에 연결 &#40;SSAS&#41;](connect-to-a-microsoft-access-database-ssas.md)  
+-   [SSAS&#41;&#40;Microsoft Access 데이터베이스에 연결](connect-to-a-microsoft-access-database-ssas.md)  
   
--   [Microsoft Excel 파일에 연결 &#40;SSAS&#41;](connect-to-a-microsoft-excel-file-ssas.md)  
+-   [SSAS&#41;&#40;Microsoft Excel 파일에 연결](connect-to-a-microsoft-excel-file-ssas.md)  
   
--   [Azure SQL Database에 연결 &#40;SSAS&#41;](connect-to-an-azure-sql-database-ssas.md)  
+-   [SSAS&#41;&#40;Azure SQL Database에 연결](connect-to-an-azure-sql-database-ssas.md)  
   
--   [Microsoft SQL Server 데이터베이스에 연결 &#40;SSAS&#41;](connect-to-a-microsoft-sql-server-database-ssas.md)  
+-   [SSAS&#41;&#40;Microsoft SQL Server 데이터베이스에 연결](connect-to-a-microsoft-sql-server-database-ssas.md)  
   
--   [Microsoft SQL Server 병렬 데이터 웨어하우스를 연결할 &#40;SSAS&#41;](connect-to-a-microsoft-sql-server-parallel-data-warehouse-ssas.md)  
+-   [SSAS&#41;&#40;Microsoft SQL Server 병렬 데이터 웨어하우스에 연결](connect-to-a-microsoft-sql-server-parallel-data-warehouse-ssas.md)  
   
--   [Microsoft SQL Server Analysis Services에 연결 &#40;SSAS&#41;](connect-to-microsoft-sql-server-analysis-services-ssas.md)  
+-   [SSAS&#41;&#40;Microsoft SQL Server Analysis Services에 연결](connect-to-microsoft-sql-server-analysis-services-ssas.md)  
   
--   [Informix 데이터베이스에 연결 &#40;SSAS&#41;](connect-to-an-informix-database-ssas.md)  
+-   [SSAS&#41;&#40;Informix 데이터베이스에 연결](connect-to-an-informix-database-ssas.md)  
   
--   [Oracle 데이터베이스에 연결 &#40;SSAS&#41;](connect-to-an-oracle-database-ssas.md)  
+-   [SSAS&#41;&#40;Oracle Database에 연결](connect-to-an-oracle-database-ssas.md)  
   
--   [Sybase 데이터베이스에 연결 &#40;SSAS&#41;](connect-to-a-sybase-database-ssas.md)  
+-   [SSAS&#41;&#40;Sybase 데이터베이스에 연결](connect-to-a-sybase-database-ssas.md)  
   
--   [Teradata 데이터베이스에 연결 &#40;SSAS&#41;](connect-to-a-teradata-database-ssas.md)  
+-   [SSAS&#41;&#40;Teradata 데이터베이스에 연결](connect-to-a-teradata-database-ssas.md)  
   
--   [데이터 원본 자격 증명 &#40;SSAS&#41;](data-source-credentials-ssas.md)  
+-   [SSAS&#41;&#40;데이터 원본 자격 증명](data-source-credentials-ssas.md)  
   
--   [자세한 내용은 &#40;SSAS&#41;](details-ssas.md)  
+-   [SSAS&#41;&#40;세부 정보](details-ssas.md)  
   
--   [필터 세부 정보 &#40;SSAS&#41;](filter-details-ssas.md)  
+-   [SSAS&#41;&#40;필터 세부 정보](filter-details-ssas.md)  
   
 -   [가장 정보 대화 상자 &#40;테이블 가져오기 마법사&#41;](impersonation-information-dialog-box-table-import-wizard.md)  
   
--   [가져오기 &#40;SSAS&#41;](importing-ssas.md)  
+-   [SSAS&#41;&#40;가져오기](importing-ssas.md)  
   
--   [요약을 가져오려면 &#40;SSAS&#41;](import-summary-ssas.md)  
+-   [SSAS&#41;&#40;가져오기 요약](import-summary-ssas.md)  
   
--   [선택한 테이블 미리 보기 &#40;SSAS&#41;](preview-selected-table-ssas.md)  
+-   [SSAS&#41;&#40;선택한 테이블 미리 보기](preview-selected-table-ssas.md)  
   
 -   [관계형 쿼리 디자이너 &#40;SSAS&#41;](relational-query-designer-ssas.md)  
   
--   [테이블 및 뷰 선택 &#40;SSAS&#41;](select-tables-and-views-ssas.md)  
+-   [SSAS&#41;&#40;테이블 및 뷰를 선택 합니다.](select-tables-and-views-ssas.md)  
   
--   [테이블 및 뷰 선택 &#40;데이터 피드&#41; &#40;SSAS&#41;](select-tables-and-views-data-feeds-ssas.md)  
+-   [SSAS&#41; &#40;데이터 피드 &#40;테이블 및 뷰를 선택&#41;](select-tables-and-views-data-feeds-ssas.md)  
   
--   [고급 속성 설정 &#40;SSAS&#41;](set-advanced-properties-ssas.md)  
+-   [SSAS&#41;&#40;고급 속성을 설정 합니다.](set-advanced-properties-ssas.md)  
   
--   [연결 문자열을 지정 &#40;SSAS&#41;](specify-a-connection-string-ssas.md)  
+-   [SSAS&#41;&#40;연결 문자열을 지정 하십시오.](specify-a-connection-string-ssas.md)  
   
--   [SQL 또는 MDX 쿼리 지정 &#40;SSAS&#41;](specify-a-sql-or-mdx-query-ssas.md)  
+-   [SSAS&#41;&#40;SQL 또는 MDX 쿼리를 지정 하십시오.](specify-a-sql-or-mdx-query-ssas.md)  
   
-## <a name="see-also"></a>관련 항목  
- [데이터 가져오기&#40;SSAS 테이블 형식&#41;](import-data-ssas-tabular.md)  
+## <a name="see-also"></a>참고 항목  
+ [SSAS 테이블 형식&#41;&#40;데이터 가져오기](import-data-ssas-tabular.md)  
   
   
