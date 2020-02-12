@@ -1,7 +1,7 @@
 ---
 title: sys. 데이터베이스 (Transact-sql) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/18/2019
+ms.date: 02/11/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a307cf2fb9747e822cc48ca4b0723aed437d4af7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5b9b5147621fb459e419a29e0a31f9ad9381eb77
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74165951"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77147398"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases(Transact-SQL)
 
@@ -120,7 +120,8 @@ ms.locfileid: "74165951"
 |**is_temporal_retention_enabled**|**bit**|임시 보존 정책 정리 태스크를 사용할 수 있는지 여부를 나타냅니다.<br /> **적용**대상:[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type**|**int**|카탈로그 데이터 정렬 설정:<br />0 = DATABASE_DEFAULT<br />2 = SQL_Latin_1_General_CP1_CI_AS<br /> **적용**대상:[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type_desc**|**nvarchar (60)**|카탈로그 데이터 정렬 설정:<br />COLLATE<br />SQL_Latin_1_General_CP1_CI_AS<br /> **적용**대상:[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
-|**is_result_set_caching_on**|**int**|1 = is_result_set_caching_on on입니다.</br>0 = is_result_set_caching_on 꺼짐</br>**적용**대상: Azure SQL Data Warehouse Gen2. 이 기능을 모든 지역에 롤아웃하는 동안 인스턴스에 배포 된 버전 및 기능 가용성에 대 한 최신 [AZURE SQL DW 릴리스 정보](/azure/sql-data-warehouse/release-notes-10-0-10106-0) 를 확인 하세요.|
+|**is_result_set_caching_on**|**bit**|1 = is_result_set_caching_on on입니다.</br>0 = is_result_set_caching_on 꺼짐</br>**적용**대상: Azure SQL Data Warehouse Gen2. 이 기능을 모든 지역에 롤아웃하는 동안 인스턴스에 배포 된 버전 및 기능 가용성에 대 한 최신 [AZURE SQL DW 릴리스 정보](/azure/sql-data-warehouse/release-notes-10-0-10106-0) 를 확인 하세요.|
+|**is_memory_optimized_enabled**|**bit**|[하이브리드 버퍼 풀](../../database-engine/configure-windows/hybrid-buffer-pool.md)과 같은 특정 메모리 내 기능을 데이터베이스에 사용할 수 있는지 여부를 나타냅니다. 는 [메모리 내 OLTP](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)의 가용성 또는 구성 상태를 반영 하지 않습니다. <br />**적용 대상**: SQL Server 2019 (15. x)|
   
 ## <a name="permissions"></a>사용 권한
 
