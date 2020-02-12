@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 29d748f6ff75fc46bef3f667e50aa9cbd92bff5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62936698"
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>색 대화 상자(Visual Database Tools)
   **색 대화 상자** 에서는 사용자가 선택한 색의 RGB 값을 반환합니다. 사용자는 디스플레이 드라이버에 의해 결정된 기본 색 집합이나 사용자 지정 색 집합에서 선택할 수 있습니다. 기본 색에서 선택하거나 사용자 지정 색을 만듭니다. 색 매트릭스에서 클릭하거나 **색상**, **채도**, **명도**, **빨강**, **녹색**및 **파랑** 상자에 입력하여 색을 정의합니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **기본 색**  
  디스플레이 드라이버에 의해 미리 결정된 색입니다.  
   
@@ -38,10 +38,10 @@ ms.locfileid: "62936698"
  명도 막대  
  슬라이드를 끌어 색의 명도 또는 상대적 밝은/어두운 정도를 변경합니다. 해당 숫자 값이 **명도**에 나타납니다.  
   
- **색**  
+ **Color**  
  현재 선택한 색을 표시합니다.  
   
- **색상**  
+ **Hue**  
  선택한 색의 색상 값입니다.  
   
  **채도**  
