@@ -1,5 +1,5 @@
 ---
-title: Analysis Services (SSAS-다차원)의 파티션을 병합할 | Microsoft Docs
+title: Analysis Services에서 파티션 병합 (SSAS-다차원) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 365f89286a59057efa39b503eedaedebb875c039
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073646"
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Analysis Services의 파티션 병합(SSAS - 다차원 데이터)
@@ -27,22 +27,22 @@ ms.locfileid: "66073646"
   
  [요구 사항](#bkmk_prereq)  
   
- [파티션을 병합한 후 파티션 원본 업데이트](#bkmk_Where)  
+ [파티션을 병합 한 후 파티션 원본 업데이트](#bkmk_Where)  
   
- [팩트 테이블 또는 명명된 쿼리를 통해 분할되는 파티션에 대한 특별 고려 사항](#bkmk_fact)  
+ [팩트 테이블 또는 명명 된 쿼리로 분할 된 파티션에 대 한 특별 고려 사항](#bkmk_fact)  
   
- [SSMS를 사용하여 파티션을 병합하는 방법](#bkmk_partitionSSMS)  
+ [SSMS를 사용 하 여 파티션을 병합 하는 방법](#bkmk_partitionSSMS)  
   
- [XMLA를 사용하여 파티션을 병합하는 방법](#bkmk_partitionsXMLA)  
+ [XMLA를 사용 하 여 파티션을 병합 하는 방법](#bkmk_partitionsXMLA)  
   
-##  <a name="bkmk_Scenario"></a> 일반적인 시나리오  
+##  <a name="bkmk_Scenario"></a>일반적인 시나리오  
  파티션 사용에 대한 가장 공통적인 단일 구성에는 시간 차원 간의 데이터 분리가 포함됩니다. 각 파티션과 연결된 시간의 세분성은 프로젝트와 관련된 비즈니스 요구 사항에 따라 달라집니다. 예를 들어 최근 몇 년을 월별로 분할하고 이에 더해 현재 월에 대한 별개의 파티션을 사용하여 연도별로 구분할 수 있습니다. 현재 월 파티션은 정기적으로 새로운 데이터를 사용합니다.  
   
  현재 월이 완료되면 이 파티션이 연도-일자 파티션의 월에 다시 병합되고 프로세스가 계속됩니다. 해당 연도 마지막에는 새로운 전체 연도 파티션이 형성됩니다.  
   
  이 시나리오에서 보여 주듯이, 파티션 병합은 기록 데이터를 통합 및 구성하기 위한 점진적 방법을 제공하는 정기적으로 수행되는 루틴 태스크가 될 수 있습니다.  
   
-##  <a name="bkmk_prereq"></a> 요구 사항  
+##  <a name="bkmk_prereq"></a>사항이  
  다음과 같은 경우에만 파티션을 병합할 수 있습니다.  
   
 -   파티션의 측정값 그룹이 도두 같아야 합니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "66073646"
   
  파티션 마법사에서 파티션을 만들 때 앞으로의 병합을 위한 후보 파티션을 만들려면 큐브의 또 다른 파티션으로부터 집계 디자인을 복사하는 것을 선택할 수 있습니다. 그러면 이러한 파티션들이 동일한 집계 디자인을 갖게 됩니다. 파티션이 병합될 때 원본 파티션의 집계는 대상 파티션의 집계와 결합됩니다.  
   
-##  <a name="bkmk_Where"></a> 파티션을 병합한 후 파티션 원본 업데이트  
+##  <a name="bkmk_Where"></a>파티션을 병합 한 후 파티션 원본 업데이트  
  파티션은 데이터를 처리하는 데 사용되는 SQL 쿼리의 WHERE 절과 같은 쿼리 또는 파티션에 데이터를 제공하는 명명된 쿼리나 테이블을 기준으로 분할됩니다. 파티션의 `Source` 속성은 파티션이 쿼리에 바인딩되는지 테이블에 바인딩되는지 나타냅니다.  
   
  파티션을 병합하면 파티션 내용은 통합되지만 `Source` 속성은 파티션의 추가 범위를 반영하도록 업데이트되지 않습니다. 즉, 이후에 원래 `Source`를 유지하는 파티션을 다시 처리하는 경우 해당 파티션에서 잘못된 데이터를 얻게 됩니다. 파티션은 부모 수준에서 데이터를 잘못 집계합니다. 다음 예에서는 이러한 동작을 보여 줍니다.  
@@ -85,7 +85,7 @@ ms.locfileid: "66073646"
   
  파티션을 병합한 후에는 항상 `Source`를 검사하여 병합된 데이터에 대해 올바른 필터인지 확인해야 합니다. Q1, Q2 및 Q3에 대한 기록 데이터가 포함된 파티션으로 시작했고 이제 Q4를 병합하는 경우 Q4를 포함하도록 필터를 조정해야 합니다. 그렇지 않으면 파티션의 후속 처리 시 잘못된 결과가 발생합니다. Q4에 대해 올바르지 않습니다.  
   
-##  <a name="bkmk_fact"></a> 팩트 테이블 또는 명명된 쿼리를 통해 분할되는 파티션에 대한 특별 고려 사항  
+##  <a name="bkmk_fact"></a>팩트 테이블 또는 명명 된 쿼리로 분할 된 파티션에 대 한 특별 고려 사항  
  쿼리 외에 파티션도 테이블 또는 명명된 쿼리를 기준으로 분할할 수 있습니다. 원본 파티션과 대상 파티션이 데이터 원본 또는 데이터 원본 뷰의 동일한 팩트 테이블을 사용하는 경우 파티션 병합 후 `Source` 속성이 유효합니다. 결과 파티션에 적합한 팩트 테이블 데이터가 지정됩니다. 결과 파티션에 필요한 팩트가 팩트 테이블에 있으므로 `Source` 속성에 대한 수정이 필요 없습니다.  
   
  여러 팩트 테이블 또는 명명된 쿼리의 데이터를 사용하는 파티션에는 추가 작업이 필요합니다. 원본 파티션의 팩트 테이블에 있는 팩트를 대상 파티션의 팩트 테이블에 수동으로 병합해야 합니다.  
@@ -94,13 +94,13 @@ ms.locfileid: "66073646"
   
  같은 이유로 명명된 쿼리에서 분할된 데이터를 가져오는 파티션도 업데이트해야 합니다. 이제 결합된 파티션에는 이전에 별도의 명명된 쿼리에서 가져온 결합된 결과 집합을 반환하는 명명된 쿼리가 있어야 합니다.  
   
-## <a name="partition-storage-considerations-molap"></a>파티션 저장소 고려 사항: MOLAP  
+## <a name="partition-storage-considerations-molap"></a>파티션 스토리지 고려 사항: MOLAP  
  MOLAP 파티션이 병합될 때는 파티션의 다차원 구조에 저장된 팩트도 병합됩니다. 이로 인해 내부적으로 완벽하고도 일관성 있는 파티션이 만들어집니다. 그러나 MOLAP 파티션에 저장된 팩트는 팩트 테이블에 있는 팩트의 복사본입니다. 다음에 파티션을 처리할 때는 다차원 구조의 팩트가 삭제되고(전체 처리 및 새로 고침 처리 시에만) 파티션의 데이터 원본 및 필터에 의해 지정된 대로 팩트 테이블에서 데이터가 복사됩니다. 원본 파티션이 대상 파티션의 여러 가지 팩트 테이블을 사용하는 경우에는 원본 파티션의 팩트 테이블을 대상 파티션의 팩트 테이블과 수동으로 병합하여 결과 파티션이 처리될 때 완벽한 데이터 집합을 사용할 수 있도록 해야 합니다. 이 작업은 두 개의 파티션이 서로 다른 명명된 쿼리를 기반으로 하는 경우에도 적용됩니다.  
   
 > [!IMPORTANT]  
 >  불완전한 팩트 테이블과 병합된 MOLAP 파티션에는 팩트 테이블 데이터가 내부적으로 병합된 복사본이 포함되며 파티션이 처리될 때까지는 제대로 작동합니다.  
   
-## <a name="partition-storage-considerations-holap-and-rolap-partitions"></a>파티션 저장소 고려 사항: HOLAP 및 ROLAP 파티션  
+## <a name="partition-storage-considerations-holap-and-rolap-partitions"></a>파티션 스토리지 고려 사항: HOLAP 및 ROLAP 파티션  
  여러 가지 팩트 테이블을 가지고 있는 HOLAP 또는 ROLAP 파티션이 병합될 때 팩트 테이블은 자동으로 병합되지 않습니다. 팩트 테이블을 수동으로 병합하지 않으면 대상 파티션에 관련된 팩트 테이블만 결과 파티션에 대해 사용할 수 있습니다. 원본 파티션에 관련된 팩트는 결과 파티션에서 드릴다운에 사용할 수 없으며 집계는 파티션이 처리될 때 사용할 수 없는 테이블의 데이터를 요약하지 않습니다.  
   
 > [!IMPORTANT]  
@@ -110,34 +110,35 @@ ms.locfileid: "66073646"
   
  팩트 테이블은 파티션 병합 전이나 후에 병합할 수 있습니다. 그러나 두 작업이 모두 완료될 때까지는 원본으로 사용하는 팩트가 집계에 정확하게 표시되지 않습니다. 여러 팩트 테이블에 액세스하는 HOLAP 또는 ROLAP 파티션이 포함된 큐브에 사용자가 연결되지 않은 경우 이러한 파티션을 병합하는 것이 좋습니다.  
   
-##  <a name="bkmk_partitionSSMS"></a> SSMS를 사용하여 파티션을 병합하는 방법  
+##  <a name="bkmk_partitionSSMS"></a>SSMS를 사용 하 여 파티션을 병합 하는 방법  
   
 > [!IMPORTANT]  
 >  파티션을 병합하기 전에 먼저 데이터 필터 정보를 복사합니다. 주로 SQL 쿼리를 기반으로 하는 필터에 WHERE 절을 사용합니다. 나중에 병합이 완료된 후에는 누적된 팩트 데이터를 포함하는 파티션의 파티션 원본 속성을 업데이트해야 합니다.  
   
 1.  개체 탐색기에서 병합할 파티션이 포함된 큐브의 **측정값 그룹** 노드를 확장하고 **파티션**을 확장한 다음 병합 작업의 대상 파티션을 마우스 오른쪽 단추로 클릭합니다. 예를 들어 연간 팩트 데이터를 저장하는 파티션에 분기별 팩트 데이터를 이동하는 경우 연간 팩트 데이터가 들어 있는 파티션을 선택합니다.  
   
-2.  클릭 **파티션 병합** 열려는 합니다 **파티션 병합 \<파티션 이름 >** 대화 상자.  
+2.  파티션 **병합** 을 클릭 하 여 파티션 ** \<파티션 이름 병합>** 대화 상자를 엽니다.  
   
-3.  **원본 파티션**에서 대상 파티션과 병합할 각 원본 파티션 옆의 확인란을 선택하고 **확인**을 클릭합니다.  
+3.  
+  **원본 파티션**에서 대상 파티션과 병합할 각 원본 파티션 옆의 확인란을 선택하고 **확인**을 클릭합니다.  
   
     > [!NOTE]  
     >  원본이 대상 파티션에 병합된 후에 즉시 원본 파티션이 삭제됩니다. 병합이 완료된 후 파티션 폴더를 새로 고쳐 내용을 업데이트합니다.  
   
 4.  누적된 데이터를 포함하는 파티션을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-5.  열기는 `Source` 속성 및 방금 병합 한 파티션 데이터를 포함 하도록 WHERE 절을 수정 합니다. 이전에 설명한 대로 `Source` 속성이 자동으로 업데이트 되지 않습니다. 첫 번째 업데이트 하지 않고 다시 처리 하는 경우는 `Source`, 모든 필요한 데이터에 얻지 못할 수도 있습니다.  
+5.  속성을 `Source` 열고 방금 병합 한 파티션 데이터를 포함 하도록 WHERE 절을 수정 합니다. `Source` 속성은 자동으로 업데이트 되지 않습니다. 를 `Source`먼저 업데이트 하지 않고 다시 처리 하면 필요한 데이터를 모두 가져올 수 없습니다.  
   
-##  <a name="bkmk_partitionsXMLA"></a> XMLA를 사용하여 파티션을 병합하는 방법  
+##  <a name="bkmk_partitionsXMLA"></a>XMLA를 사용 하 여 파티션을 병합 하는 방법  
  자세한 내용은 [파티션 병합&#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md) 항목을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Analysis Services 개체 처리](processing-analysis-services-objects.md)   
- [파티션 & #40; Analysis Services-다차원 데이터 & #41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [만들기 및 관리 로컬 파티션에 & #40; Analysis Services & #41;](create-and-manage-a-local-partition-analysis-services.md)   
- [만들기 및 원격 파티션을 & #40; 관리 Analysis Services & #41;](create-and-manage-a-remote-partition-analysis-services.md)   
- [파티션 쓰기 설정](set-partition-writeback.md)   
+ [파티션 &#40;Analysis Services 다차원 데이터&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Analysis Services&#41;&#40;로컬 파티션 만들기 및 관리](create-and-manage-a-local-partition-analysis-services.md)   
+ [Analysis Services&#41;&#40;원격 파티션 만들기 및 관리](create-and-manage-a-remote-partition-analysis-services.md)   
+ [파티션 쓰기 저장 설정](set-partition-writeback.md)   
  [쓰기 가능 파티션](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [차원 및 파티션에 대한 문자열 저장소 구성](configure-string-storage-for-dimensions-and-partitions.md)  
+ [차원 및 파티션에 대한 문자열 스토리지 구성](configure-string-storage-for-dimensions-and-partitions.md)  
   
   
