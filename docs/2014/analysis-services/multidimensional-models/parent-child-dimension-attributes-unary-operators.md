@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 25c1acf7a1fadbc79b7781488143ce57881c81fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073453"
 ---
 # <a name="unary-operators-in-parent-child-dimensions"></a>부모-자식 차원의 단항 연산자
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 부모-자식 관계가 포함된 차원에서 부모 특성의 모든 계산되지 않은 멤버에 대한 사용자 지정 롤업을 결정하는 단항(또는 사용자 지정 롤업) 연산자 열을 지정하세요. 그러면 부모 멤버의 값이 계산될 때마다 멤버에 단항 연산자가 적용됩니다. 부모 특성( **Usage** =Parent)에서**UnaryOperatorColumn**은 데이터 원본 뷰에서 단항 연산자가 있는 테이블 열을 지정합니다. 이 열에 저장되어 있는 사용자 지정 롤업 연산자 값이 특성의 각 멤버에 적용됩니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]부모-자식 관계를 포함 하는 차원에서 부모 특성의 모든 계산 되지 않은 멤버에 대 한 사용자 지정 롤업을 결정 하는 단항 (또는 사용자 지정 롤업) 연산자 열을 지정 합니다. 그러면 부모 멤버의 값이 계산될 때마다 멤버에 단항 연산자가 적용됩니다. 부모 특성( **Usage** =Parent)에서**UnaryOperatorColumn**은 데이터 원본 뷰에서 단항 연산자가 있는 테이블 열을 지정합니다. 이 열에 저장되어 있는 사용자 지정 롤업 연산자 값이 특성의 각 멤버에 적용됩니다.  
   
  데이터 원본 뷰의 차원 테이블에서 명명된 계산을 만들고 단항 연산자 열로 지정할 수 있습니다. '+'와 같은 단순한 식은 모든 멤버에 동일한 연산자를 반환합니다. 그러나 모든 멤버에 연산자를 반환하기만 하면 어떤 식도 사용할 수 있습니다.  
   
@@ -40,11 +40,12 @@ ms.locfileid: "66073453"
   
  빈 값과 표에 없는 값은 더하기 기호(+) 단항 연산자와 같은 것으로 처리됩니다. 연산자 선행 규칙이 없으므로 단항 연산자 열에 저장된 멤버 순서에 따라 계산 순서가 결정됩니다. 계산 순서를 변경하려면 새 특성을 만들고 해당 **Type** 속성을 **Sequence**로 설정한 다음 **Source Column** 속성의 계산 순서에 해당하는 시퀀스 번호를 할당합니다. 또한 해당 특성을 기준으로 특성의 멤버 순서를 지정해야 합니다. 비즈니스 인텔리전스 마법사를 사용하여 특성의 멤버 순서를 지정하는 방법은 [차원 순서 정의](bi-wizard-define-the-ordering-for-a-dimension.md)를 참조하세요.  
   
- **UnaryOperatorColumn** 속성을 사용하여 특성의 모든 멤버에 대해 리터럴 문자로 단항 연산자를 반환하도록 명명된 계산을 지정할 수 있습니다. 명명된 계산에 `'*'` 와 같은 리터럴 문자를 입력하기만 하면 됩니다. 이 경우 특성의 모든 멤버에 대해 기본 연산자인 더하기 기호(+)가 곱하기 연산자인 별표(*)로 변경됩니다. 자세한 내용은 [데이터 원본 뷰에서 명명된 계산 정의&#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)를 참조하세요.  
+ 
+  **UnaryOperatorColumn** 속성을 사용하여 특성의 모든 멤버에 대해 리터럴 문자로 단항 연산자를 반환하도록 명명된 계산을 지정할 수 있습니다. 명명된 계산에 `'*'` 와 같은 리터럴 문자를 입력하기만 하면 됩니다. 이 경우 특성의 모든 멤버에 대해 기본 연산자인 더하기 기호(+)가 곱하기 연산자인 별표(*)로 변경됩니다. 자세한 내용은 [데이터 원본 뷰에서 명명 된 계산 정의 &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)를 참조 하세요.  
   
  차원 디자이너의 **찾아보기** 탭에서 계층의 각 멤버 옆에 있는 단항 연산자를 볼 수 있습니다. 쓰기 가능 차원으로 작업할 때 단항 연산자를 변경할 수도 있습니다. 쓰기 가능한 차원이 아니면 도구를 사용하여 데이터 원본을 직접 수정해야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [차원 특성 속성 참조](dimension-attribute-properties-reference.md)   
  [부모-자식 차원의 사용자 지정 롤업 연산자](parent-child-dimension-attributes-custom-rollup-operators.md)   
  [차원 디자이너에서 비즈니스 인텔리전스 마법사 시작](database-dimensions-bi-wizard-in-dimension-designer.md)  
