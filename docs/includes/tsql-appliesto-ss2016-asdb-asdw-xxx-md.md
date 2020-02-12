@@ -1,10 +1,15 @@
 ---
-ms.openlocfilehash: 8b74690303d6887dacbf7a2fc466298aa84322fe
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+author: MikeRayMSFT
+ms.service: sql
+ms.topic: include
+ms.date: 01/13/2020
+ms.author: mikeray
+ms.openlocfilehash: 9f6a2557080f8b4152c7cafda828a30d47f245dc
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73591075"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76037652"
 ---
-<Token>**적용 대상:** ![예](media/yes.png)SQL Server ![예](media/yes.png)Azure SQL Database ![예](media/yes.png)Azure Synapse Analytics(SQL DW) ![아니요](media/no.png)병렬 데이터 웨어하우스 </Token>
+<Token>**적용 대상:** ![예](media/yes.png)SQL Server 2016 이상 ![예](media/yes.png)Azure SQL Database ![예](media/yes.png)Azure Synapse Analytics(SQL DW) ![아니요](media/no.png)병렬 데이터 웨어하우스 </Token>
 
