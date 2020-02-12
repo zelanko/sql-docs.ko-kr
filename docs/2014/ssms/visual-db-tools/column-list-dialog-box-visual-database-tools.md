@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7a6853d721a1504c3b44e733a2f2fbc6f37608be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62936448"
 ---
 # <a name="column-list-dialog-box-visual-database-tools"></a>열 목록 대화 상자(Visual Database Tools)
@@ -26,7 +26,7 @@ ms.locfileid: "62936448"
   
  이 대화 상자에는 데이터 형식과 열의 null 값 허용 여부와 같은 기본 속성을 비롯하여 선택한 테이블 반환 개체의 열 목록이 표시됩니다.  
   
-## <a name="options"></a>변수  
+## <a name="options"></a>옵션  
  **이름**  
  선택한 테이블 반환 개체의 열 이름을 표시합니다.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62936448"
  **데이터 형식 속성**  
  선택한 테이블 반환 개체의 각 열에 대한 데이터 형식 속성을 표시합니다. 이 속성은 NULLABLE, IDENTITY 또는 ROWGUID이거나 비어 있을 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   
