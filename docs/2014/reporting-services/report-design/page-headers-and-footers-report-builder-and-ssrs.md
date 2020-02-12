@@ -24,10 +24,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7b746f27653f5e8d1c24a584ac19c8fbac05a57c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105527"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>페이지 머리글 및 바닥글(보고서 작성기 및 SSRS)
@@ -57,12 +57,12 @@ ms.locfileid: "66105527"
   
 |식에서의 지원 여부|ReportItems 집계|데이터 세트 집계(범위는 데이터 세트의 이름이어야 함)|  
 |-----------------------------|----------------------------|----------------------------------------------------------|  
-|보고서 본문에 있는 입력란|사용자 계정 컨트롤|아니요|  
-|&PageNumber|사용자 계정 컨트롤|아니요|  
-|&TotalPages|사용자 계정 컨트롤|아니요|  
-|집계 함수|예 예:<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|예 예:<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
-|페이지에 있는 항목의 필드 컬렉션|간접적임. 예:<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|예 예:<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
-|데이터 바인딩된 이미지|간접적임. 예: `=ReportItems!TXT_Photo.Value`|예 예:<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  
+|보고서 본문에 있는 입력란|yes|예|  
+|&PageNumber|yes|예|  
+|&TotalPages|yes|예|  
+|집계 함수|예. 예를 들면 다음과 같습니다.<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|예. 예를 들면 다음과 같습니다.<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
+|페이지에 있는 항목의 필드 컬렉션|간접적임. 예를 들면 다음과 같습니다.<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|예. 예를 들면 다음과 같습니다.<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
+|데이터 바인딩된 이미지|간접적임. 예를 들어 `=ReportItems!TXT_Photo.Value`|예. 예를 들면 다음과 같습니다.<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  
   
  이 항목의 다음 섹션에서는 머리글 및 바닥글에 일반적으로 사용하는 변수 데이터를 가져오는 미리 만들어 놓은 식을 보여 줍니다. Excel 렌더링 확장 프로그램에서 머리글 및 바닥글을 처리하는 방법에 대한 섹션도 있습니다. 식에 대한 자세한 내용은 [식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)을 참조하세요.  
   
@@ -124,9 +124,9 @@ ms.locfileid: "66105527"
   
  보다 정확한 페이지 수는 인쇄된 페이지의 차원과 상호 관련된 논리 페이지를 기반으로 합니다. Excel에서는 페이지 바닥글에 자동으로 논리 페이지 번호가 사용됩니다. 페이지 머리글에 논리 페이지 수를 삽입하려면 간단한 머리글을 사용하도록 디바이스 정보 설정을 구성해야 합니다. 간단한 머리글을 사용하면 머리글 영역에서 복잡한 보고서 레이아웃을 처리하는 기능이 제거됩니다.  
   
- 자세한 내용은 [Microsoft Excel로 내보내기&#40;보고서 작성기 및 SSRS&#41;](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)를 참조하세요.  
+ 자세한 내용은 [Microsoft Excel로 내보내기&#40;보고서 작성기 및 SSRS&#41;](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)에서 이 데이터로 작업할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [보고서에 이미지 포함&#40;보고서 작성기 및 SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
  [사각형 및 선&#40;보고서 작성기 및 SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
   
