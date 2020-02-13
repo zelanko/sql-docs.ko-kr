@@ -121,7 +121,7 @@ ms.locfileid: "76287557"
   
     -   **\@ins_cmd** - *CALL sp_MSins_* article_name* ** 값을 지정합니다. 여기서 ***article_name***은 **\@article**에 지정된 값입니다.  
   
-    -   **\@del_cmd** - **CALL sp_MSdel_*article_name***  또는 *XCALL sp_MSdel_* article_name* ** 값을 지정합니다. 여기서 ***article_name***은 **\@article**에 지정된 값입니다.  
+    -   **\@del_cmd** - **CALL sp_MSdel_*article_name* ** 또는 *XCALL sp_MSdel_* article_name* ** 값을 지정합니다. 여기서 ***article_name***은 **\@article**에 지정된 값입니다.  
   
     -   **\@upd_cmd** - **SCALL sp_MSupd_* article_name* **, **CALL sp_MSupd_* article_name* **, **XCALL sp_MSupd_* article_name* ** 또는 **MCALL sp_MSupd_* article_name* ** 값을 지정합니다. 여기서 ***article_name***은 **\@article**에 지정된 값입니다.  
   
@@ -141,7 +141,7 @@ ms.locfileid: "76287557"
   
     -   **\@ins_cmd** - *CALL sp_MSins_* article_name* ** 값을 지정합니다. 여기서 ***article_name***은 **\@article**에 지정된 값입니다.  
   
-    -   **\@del_cmd** - **CALL sp_MSdel_*article_name***  또는 *XCALL sp_MSdel_* article_name* ** 값을 지정합니다. 여기서 ***article_name***은 **\@article**에 지정된 값입니다.  
+    -   **\@del_cmd** - **CALL sp_MSdel_*article_name* ** 또는 *XCALL sp_MSdel_* article_name* ** 값을 지정합니다. 여기서 ***article_name***은 **\@article**에 지정된 값입니다.  
   
     -   **\@upd_cmd** - **SCALL sp_MSupd_* article_name* **, **CALL sp_MSupd_* article_name* **, **XCALL sp_MSupd_* article_name* **, **MCALL sp_MSupd_* article_name* ** 값을 지정합니다. 여기서 ***article_name***은 **\@article**에 지정된 값입니다.  
   
