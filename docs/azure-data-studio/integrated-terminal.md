@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 13a0e3c17f45e0ba136d83f832d3531bc8059884
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67959534"
 ---
 # <a name="integrated-terminal"></a>통합 터미널
@@ -43,7 +43,7 @@ ms.locfileid: "67959534"
 > [!TIP]
 > 여러 터미널을 광범위하게 사용하는 경우 [키 바인딩 섹션](#key-bindings)에 설명된 `focusNext`, `focusPrevious` 및 `kill` 명령의 키 바인딩을 추가하면 키보드만 사용하여 터미널 간에 탐색할 수 있습니다.
 
-## <a name="configuration"></a>Configuration
+## <a name="configuration"></a>구성
 
 기본적으로 사용되는 셸은 Linux 및 macOS의 경우 `$SHELL`, Windows 10의 경우 PowerShell, 이전 Windows 버전의 경우 cmd.exe입니다. [설정](settings.md)에서 `terminal.integrated.shell.*`을 설정하면 이 기본값을 수동으로 재정의할 수 있습니다. `terminal.integrated.shellArgs.*` 설정을 사용하여 Linux 및 macOS의 터미널 셸에 인수를 전달할 수 있습니다.
 
@@ -93,7 +93,7 @@ Windows에서 셸을 올바르게 구성하려면 올바른 실행 파일을 찾
 
 다음은 통합 터미널 내에서 빠르게 탐색하기 위한 바로 가기 키입니다.
 
-|Key|Command|  
+|키|명령|  
 |---|---|  
 |**Ctrl+\`**|통합 터미널 표시|  
 |**Ctrl+Shift+\`**|새 터미널 만들기|  
@@ -107,7 +107,7 @@ Windows에서 셸을 올바르게 구성하려면 올바른 실행 파일을 찾
 
 다른 터미널 명령도 사용할 수 있으며, 원하는 바로 가기 키에 바인딩할 수 있습니다.
 
-반환할 수 있습니다.
+아래에 이 계정과 키의 예제가 나와 있습니다.
 
 * `workbench.action.terminal.focus`: 터미널에 포커스를 설정합니다. 토글과 유사하지만, 터미널이 표시되는 경우 숨기는 대신 터미널에 포커스를 설정합니다.
 * `workbench.action.terminal.focusNext`: 다음 터미널 인스턴스에 포커스를 설정합니다.
@@ -118,7 +118,7 @@ Windows에서 셸을 올바르게 구성하려면 올바른 실행 파일을 찾
 
 ### <a name="run-selected-text"></a>선택한 텍스트 실행
 
-`runSelectedText` 명령을 사용하려면 편집기에서 텍스트를 선택한 다음, **명령 팔레트**(**Ctrl+Shift+P**)를 통해 **터미널:활성 터미널에서 선택한 텍스트 실행** 명령을 실행합니다. 터미널에서 선택한 텍스트를 실행하려고 합니다.
+`runSelectedText` 명령을 사용하려면 편집기에서 텍스트를 선택한 다음, **** **명령 팔레트**(**Ctrl+Shift+P**)를 통해 터미널:활성 터미널에서 선택한 텍스트 실행 명령을 실행합니다. 터미널에서 선택한 텍스트를 실행하려고 합니다.
 
 ![선택한 텍스트 실행](media/integrated-terminal/terminal_run_selected.png)
 

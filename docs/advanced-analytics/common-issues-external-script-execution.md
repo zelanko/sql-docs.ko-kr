@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 68c731767a83acbd4b7df84843f2c140c5a63d3e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727704"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>SQL Server에서 실행 패드 서비스 및 외부 스크립트 실행에 대한 일반적인 문제
@@ -131,17 +131,17 @@ R 사용자의 Windows 그룹(Python에도 사용됨)이 R Services를 실행하
 
 4. 서비스를 다시 시작하면 일반적으로 문제가 해결되므로 기계 학습 스크립트를 실행할 수 있습니다. 다시 시작해도 문제가 해결되지 않으면 **이진 경로** 속성의 경로 및 인수를 기록해 두고 다음을 수행합니다.
 
-    1\. 시작 관리자의 .config 파일을 검토하고 작업 디렉터리가 유효한지 확인합니다.
+    a. 시작 관리자의 .config 파일을 검토하고 작업 디렉터리가 유효한지 확인합니다.
 
-    2\. 실행 패드에서 사용되는 Windows 그룹이 SQL Server 인스턴스에 연결할 수 있는지 확인합니다.
+    b. 실행 패드에서 사용되는 Windows 그룹이 SQL Server 인스턴스에 연결할 수 있는지 확인합니다.
 
-    c. 서비스 속성을 변경하는 경우 실행 패드 서비스를 다시 시작합니다.
+    다. 서비스 속성을 변경하는 경우 실행 패드 서비스를 다시 시작합니다.
 
 ## <a name="fatal-error-creation-of-tmpfile-failed"></a>“tmpFile의 오류를 만들지 못함”
 
 이 시나리오에서는 기계 학습 기능을 설치했고 실행 패드를 실행되고 있습니다. 몇 가지 간단한 R 또는 Python 코드를 실행하려고 하지만 실행 패드는 다음과 같은 오류와 함께 실패합니다. 
 
->‘R 스크립트의 런타임과 통신할 수 없습니다. R 런타임의 요구 사항을 확인하세요.’ 
+>‘R 스크립트의 런타임과 통신할 수 없습니다.  R 런타임의 요구 사항을 확인하세요.’
 
 동시에 외부 스크립트 런타임은 STDERR 메시지의 일부로 다음 메시지를 기록합니다. 
 

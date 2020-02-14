@@ -1,5 +1,5 @@
 ---
-title: 모니터 및 문제 해결하기
+title: 모니터링 및 문제 해결
 titleSuffix: SQL Server big data clusters
 description: 이 문서에서는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]를 모니터링하고 문제를 해결하는 데 유용한 명령을 제공합니다.
 author: mihaelablendea
@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e70689d1e4891fefde8fd1feb76b081bc14bfe81
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70153629"
 ---
 # <a name="monitoring-and-troubleshoot-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 모니터링 및 문제 해결
@@ -114,7 +114,7 @@ kubectl get svc -n mssql-cluster
 
 다음 서비스는 빅 데이터 클러스터에 대한 외부 연결을 지원합니다.
 
-| 서비스 | 설명 |
+| 서비스 | Description |
 |---|---|
 | **master-svc-external** | 마스터 인스턴스에 대한 액세스를 제공합니다.<br/>(**EXTERNAL-IP,31433** 및 **SA** 사용자) |
 | **controller-svc-external** | 클러스터를 관리하는 도구 및 클라이언트를 지원합니다. |
@@ -209,7 +209,7 @@ az aks browse --resource-group <azure_resource_group> --name <aks_cluster_name>
 ```
 
 > [!Note]
-> 다음 오류가 표시되는 경우 ‘포트 8001에서 수신 대기할 수 없습니다. 다음 오류가 발생하여 모든 수신기를 만들지 못했습니다. 수신기를 만들 수 없습니다. 오류 listen tcp4 127.0.0.1:8001: >bind: 각 소켓 주소(프로토콜/네트워크 주소/포트)는 한 가지 사용만 허용됩니다. 수신기를 만들 수 없습니다. 오류 listen tcp6: address [[::1]]:8001: missing port in >address error: 요청된 포트에서 수신 대기할 수 없습니다. [{8001 9090}]* , 다른 창에서 해당 대시보드를 이미 시작하지 않았는지 확인합니다.
+> 다음 오류가 표시되는 경우 ‘포트 8001에서 수신 대기할 수 없습니다. 다음 오류가 발생하여 모든 수신기를 만들지 못했습니다. 수신기를 만들 수 없습니다. 오류 listen tcp4 127.0.0.1:8001: >bind: 각 소켓 주소(프로토콜/네트워크 주소/포트)는 한 가지 사용만 허용됩니다. 수신기를 만들 수 없습니다. 오류 listen tcp6: address [[::1]]:8001: missing port in >address error: 요청된 포트에서 수신 대기할 수 없습니다. [{8001 9090}], 다른 창에서 해당 대시보드를 이미 시작하지 않았는지 확인합니다.
 
 브라우저에서 대시보드를 시작하면 AKS 클러스터에서 RBAC가 기본적으로 사용하도록 설정되고 대시보드에서 사용되는 서비스 계정에 모든 리소스에 액세스할 수 있는 권한이 없기 때문에 사용 권한 경고가 표시될 수 있습니다. 예를 들어 *Pod를 사용할 수 없습니다. 사용자 “system:serviceaccount:kube-system:kubernetes-dashboard”는 “default” 네임스페이스의 Pod를 나열할 수 없습니다.* 가 표시됩니다. 다음 명령을 실행하여 `kubernetes-dashboard`에 필요한 사용 권한을 부여하고 대시보드를 다시 시작합니다.
 
