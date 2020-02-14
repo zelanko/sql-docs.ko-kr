@@ -18,10 +18,10 @@ ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5651f61f33d598930aff2fb482b415e9749f6d44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042535"
 ---
 # <a name="stbuffer-geography-data-type"></a>STBuffer(geography 데이터 형식)
@@ -49,7 +49,7 @@ ms.locfileid: "68042535"
   
  CLR 반환 형식: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  STBuffer()는 *tolerance* = abs(distance) \* .001 및 *relative* = **false** 지정을 통해 [BufferWithTolerance](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md)와 동일한 방식으로 버퍼를 계산합니다.  
   
  버퍼가 음수이면 **geography** 인스턴스 경계에서 지정된 거리 내에 있는 모든 요소가 제거됩니다.  

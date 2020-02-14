@@ -21,10 +21,10 @@ ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ef381f9ff470422ed85b81832b1078d6c8767dcf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292881"
 ---
 # <a name="dimension-processing-destination"></a>차원 처리 대상
@@ -58,7 +58,7 @@ ms.locfileid: "71292881"
  속성을 설정하는 방법에 대한 자세한 내용은 [데이터 흐름 구성 요소의 속성 설정](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)을 참조하세요.  
   
 ## <a name="dimension-processing-destination-editor-connection-manager-page"></a>차원 처리 대상 편집기(연결 관리자 페이지)
-  **차원 처리 대상 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트나 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 대한 연결을 지정할 수 있습니다.  
+  **차원 처리 대상 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트나 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 대한 연결을 지정할 수 있습니다.  
   
 ### <a name="options"></a>옵션  
  **Connection manager**  
@@ -73,7 +73,7 @@ ms.locfileid: "71292881"
  **처리 방법**  
  목록에서 선택한 차원에 적용할 처리 방법을 선택합니다. 이 옵션의 기본값은 **전체**입니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**추가(증분)**|차원의 증분 처리를 수행합니다.|  
 |**전체**|차원의 전체 처리를 수행합니다.|  
@@ -105,7 +105,7 @@ ms.locfileid: "71292881"
  **키 오류 동작**  
  사용할 수 없는 키 값이 있는 레코드의 처리 방법을 지정합니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|사용할 수 없는 키 값을 **UnknownMember** 값으로 변환합니다.|  
 |**DiscardRecord**|레코드를 삭제합니다.|  
@@ -122,7 +122,7 @@ ms.locfileid: "71292881"
  **오류 시 수행할 동작**  
  **오류 발생 시 중지**를 선택한 경우 오류 임계값에 도달했을 때 수행할 동작을 지정합니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**StopProcessing**|처리를 중지합니다.|  
 |**StopLogging**|오류 기록을 중지합니다.|  
@@ -130,7 +130,7 @@ ms.locfileid: "71292881"
  **키를 찾을 수 없는 경우**  
  키를 찾을 수 없을 때 수행할 동작을 지정합니다. 기본적으로 이 값은 **ReportAndContinue**입니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|오류를 무시하고 처리를 계속합니다.|  
 |**ReportAndContinue**|오류를 보고하고 처리를 계속합니다.|  
@@ -139,7 +139,7 @@ ms.locfileid: "71292881"
  **중복 키**  
  중복 키 오류가 발생할 때 수행할 동작을 지정합니다. 기본적으로 이 값은 **IgnoreError**입니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|오류를 무시하고 처리를 계속합니다.|  
 |**ReportAndContinue**|오류를 보고하고 처리를 계속합니다.|  
@@ -148,7 +148,7 @@ ms.locfileid: "71292881"
  **Null 키가 알 수 없는 상태로 변환된 경우**  
  Null 키가 **UnknownMember** 값으로 변환된 경우 수행할 동작을 지정합니다. 기본적으로 이 값은 **IgnoreError**입니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|오류를 무시하고 처리를 계속합니다.|  
 |**ReportAndContinue**|오류를 보고하고 처리를 계속합니다.|  
@@ -157,7 +157,7 @@ ms.locfileid: "71292881"
  **Null 키가 허용되지 않는 경우**  
  Null 키가 허용되지 않는데 Null 키가 있는 경우에 수행할 동작을 지정합니다. 기본적으로 이 값은 **ReportAndContinue**입니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|오류를 무시하고 처리를 계속합니다.|  
 |**ReportAndContinue**|오류를 보고하고 처리를 계속합니다.|  

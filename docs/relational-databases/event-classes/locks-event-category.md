@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e30266ca21bf23f22131704f3a364e7a9880f3be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68118184"
 ---
 # <a name="locks-event-category"></a>잠금 이벤트 범주
@@ -30,7 +30,7 @@ ms.locfileid: "68118184"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[Deadlock Graph 이벤트 클래스](../../relational-databases/event-classes/deadlock-graph-event-class.md)|교착 상태에 대한 XML 설명을 제공합니다.|  
 |[Lock:Acquired 이벤트 클래스](../../relational-databases/event-classes/lock-acquired-event-class.md)|테이블의 행과 같은 리소스에 대해 잠금을 획득했음을 나타냅니다.|  

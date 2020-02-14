@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 239e2d3f2475738044e4c3644f734fdbb6a0eafb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68116790"
 ---
 # <a name="server-level-roles"></a>서버 수준 역할
@@ -46,7 +46,7 @@ ms.locfileid: "68116790"
 ## <a name="fixed-server-level-roles"></a>고정 서버 수준 역할  
  다음 표에서는 고정 서버 수준 역할과 해당 기능을 보여 줍니다.  
   
-|고정 서버 수준 역할|설명|  
+|고정 서버 수준 역할|Description|  
 |------------------------------|-----------------|  
 |**sysadmin**|**sysadmin** 고정 서버 역할의 멤버는 서버에서 모든 작업을 수행할 수 있습니다.|  
 |**serveradmin**|**serveradmin** 고정 서버 역할의 멤버는 서버 차원의 구성 옵션을 변경하고 서버를 종료할 수 있습니다.|  
@@ -63,7 +63,7 @@ ms.locfileid: "68116790"
 ![fixed_server_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-server-roles.png)   
   
 > [!IMPORTANT]  
->  **CONTROL SERVER** 권한은 **sysadmin** 고정 서버 역할과 유사하지만 동일하지는 않습니다. 권한이 역할 멤버 자격을 의미하지 않으며 역할 멤버 자격이 있다고 해서 사용 권한이 부여되는 것도 아닙니다. 예를 들어 **CONTROL SERVER**가 **sysadmin** 고정 서버 역할의 멤버 자격을 의미하지는 않습니다. 그러나 때로 역할과 해당 권한 간에 가장하는 것이 가능할 수 있습니다. 대부분의 **DBCC** 명령 및 많은 시스템 절차를 수행하려면 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다. **sysadmin** 멤버 자격이 필요한 171개의 시스템 저장 프로시저 목록의 경우 Andreas Wolter가 작성한 [CONTROL SERVER vs. sysadmin/sa: permissions, system procedures, DBCC, automatic schema creation and privilege escalation - caveats](http://andreas-wolter.com/en/control-server-vs-sysadmin-sa/)(제어 서버 및 sysadmin/sa: 사용 권한, 시스템 프로시저, DBCC, 자동 스키마 생성 및 권한 에스컬레이션 - 주의할 사항) 블로그 게시물을 참조하세요.  
+>  **CONTROL SERVER** 권한은 **sysadmin** 고정 서버 역할과 유사하지만 동일하지는 않습니다. 권한이 역할 멤버 자격을 의미하지 않으며 역할 멤버 자격이 있다고 해서 사용 권한이 부여되는 것도 아닙니다. (예: **CONTROL SERVER**가 **sysadmin** 고정 서버 역할의 멤버 자격을 의미하지는 않습니다. 그러나 때로 역할과 해당 권한 간에 가장하는 것이 가능할 수 있습니다. 대부분의 **DBCC** 명령 및 많은 시스템 절차를 수행하려면 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다. **sysadmin** 멤버 자격이 필요한 171개의 시스템 저장 프로시저 목록의 경우 Andreas Wolter가 작성한 [CONTROL SERVER vs. sysadmin/sa: permissions, system procedures, DBCC, automatic schema creation and privilege escalation - caveats](http://andreas-wolter.com/en/control-server-vs-sysadmin-sa/)(제어 서버 및 sysadmin/sa: 사용 권한, 시스템 프로시저, DBCC, 자동 스키마 생성 및 권한 에스컬레이션 - 주의할 사항) 블로그 게시물을 참조하세요.  
   
 ## <a name="server-level-permissions"></a>서버 수준 사용 권한  
  사용자 정의 서버 역할에는 서버 수준 사용 권한만 추가할 수 있습니다. 서버 수준 사용 권한을 나열하려면 다음 문을 실행하세요. 서버 수준 사용 권한은 다음과 같습니다.  
@@ -77,18 +77,18 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
 ## <a name="working-with-server-level-roles"></a>서버 수준 역할 작업  
  다음 표에서는 서버 수준 역할을 통해 사용할 수 있는 명령, 뷰 및 함수를 보여 줍니다.  
   
-|기능|형식|설명|  
+|기능|Type|Description|  
 |-------------|----------|-----------------|  
 |[sp_helpsrvrole&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql.md)|메타데이터|서버 수준 역할의 목록을 반환합니다.|  
 |[sp_helpsrvrolemember&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)|메타데이터|서버 수준 역할의 멤버에 대한 정보를 반환합니다.|  
 |[sp_srvrolepermission&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql.md)|메타데이터|서버 수준 역할의 사용 권한을 표시합니다.|  
 |[IS_SRVROLEMEMBER&#40;Transact-SQL&#41;](../../../t-sql/functions/is-srvrolemember-transact-sql.md)|메타데이터|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인이 지정된 서버 수준 역할의 멤버인지 여부를 나타냅니다.|  
 |[sys.server_role_members&#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)|메타데이터|각 서버 수준 역할의 각 멤버에 대해 행을 반환합니다.|  
-|[sp_addsrvrolemember&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)|Command|서버 수준 역할의 멤버로서 로그인을 추가합니다. 사용되지 않습니다. 대신 [ALTER SERVER ROLE](../../../t-sql/statements/alter-server-role-transact-sql.md) 을 사용하세요.|  
-|[sp_dropsrvrolemember&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)|Command|서버 수준 역할에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인이나 Windows 사용자 또는 그룹을 제거합니다. 사용되지 않습니다. 대신 [ALTER SERVER ROLE](../../../t-sql/statements/alter-server-role-transact-sql.md) 을 사용하세요.|  
-|[CREATE SERVER ROLE&#40;Transact-SQL&#41;](../../../t-sql/statements/create-server-role-transact-sql.md)|Command|사용자 정의 서버 역할을 만듭니다.|  
-|[ALTER SERVER ROLE&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-role-transact-sql.md)|Command|서버 역할의 멤버 자격을 변경하거나 사용자 정의 서버 역할의 이름을 변경합니다.|  
-|[DROP SERVER ROLE&#40;Transact-SQL&#41;](../../../t-sql/statements/drop-server-role-transact-sql.md)|Command|사용자 정의 서버 역할을 제거합니다.|  
+|[sp_addsrvrolemember&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)|명령|서버 수준 역할의 멤버로서 로그인을 추가합니다. 사용되지 않습니다. 대신 [ALTER SERVER ROLE](../../../t-sql/statements/alter-server-role-transact-sql.md) 을 사용하세요.|  
+|[sp_dropsrvrolemember&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)|명령|서버 수준 역할에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인이나 Windows 사용자 또는 그룹을 제거합니다. 사용되지 않습니다. 대신 [ALTER SERVER ROLE](../../../t-sql/statements/alter-server-role-transact-sql.md) 을 사용하세요.|  
+|[CREATE SERVER ROLE&#40;Transact-SQL&#41;](../../../t-sql/statements/create-server-role-transact-sql.md)|명령|사용자 정의 서버 역할을 만듭니다.|  
+|[ALTER SERVER ROLE&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-role-transact-sql.md)|명령|서버 역할의 멤버 자격을 변경하거나 사용자 정의 서버 역할의 이름을 변경합니다.|  
+|[DROP SERVER ROLE&#40;Transact-SQL&#41;](../../../t-sql/statements/drop-server-role-transact-sql.md)|명령|사용자 정의 서버 역할을 제거합니다.|  
 |[IS_SRVROLEMEMBER&#40;Transact-SQL&#41;](../../../t-sql/functions/is-srvrolemember-transact-sql.md)|함수|서버 역할의 멤버 자격을 결정합니다.|  
   
 ## <a name="see-also"></a>참고 항목  

@@ -16,10 +16,10 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 5c94d2d60bf851742aca68d5b7bc25ea4d8afd9c
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72289326"
 ---
 # <a name="analyze-an-actual-execution-plan"></a>실제 실행 계획 분석
@@ -44,7 +44,7 @@ ms.locfileid: "72289326"
 
 2.  실행 계획의 빈 영역을 마우스 오른쪽 단추로 클릭하고 **실제 실행 계획 분석**을 클릭합니다. 
 
-    ![실제 실행 계획을 마우스 오른쪽 단추로 클릭](../../relational-databases/performance/media/plananalysismenuoption.png "실제 실행 계획을 마우스 오른쪽 단추로 클릭")   
+    ![실제 실행 계획 분석을 마우스 오른쪽 단추로 클릭](../../relational-databases/performance/media/plananalysismenuoption.png "실제 실행 계획 분석을 마우스 오른쪽 단추로 클릭")   
 
 3.  **실행 계획 분석** 창이 아래쪽에 열립니다. 분석할 올바른 명령문 쌍을 허용하여 다중 명령문으로 계획을 분석할 때 **다중 명령문** 탭은 유용합니다.
 

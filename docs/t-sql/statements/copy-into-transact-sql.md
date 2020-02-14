@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 4cdfba4070e8788687c453435b4a6d525aeb44fe
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.openlocfilehash: 4e42c60e945512c09b88b19b18b6f24ce45b46dc
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75321838"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76536649"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY(Transact-SQL)(미리 보기)
 
@@ -163,7 +163,7 @@ ERRORFILE에 정의된 스토리지 계정의 전체 경로가 있는 경우 ERR
 - Azure Data Lake Gen2 -   SAS/MSI/SERVICE PRINCIPAL/KEY/AAD
   
 - SAS(공유 액세스 서명)를 사용하여 인증
-  - *IDENTITY:* ‘공유 액세스 서명’의 값이 있는 상수
+  - *IDENTITY: ‘공유 액세스 서명’의 값이 있는 상수*
   - *SECRET:* [‘공유 액세스 서명’](/azure/storage/common/storage-sas-overview)은 ‘스토리지 계정의 리소스에 대한 위임된 액세스 권한을 제공합니다.’  
   - 필요한 최소 권한: 읽기, 나열, 쓰기, 만들기, 삭제
   
@@ -390,7 +390,7 @@ WITH (
 Parquet 및 ORC 파일은 COPY 명령이 자동으로 분할하기 때문에 파일을 분할할 필요가 없습니다. 최상의 성능을 얻으려면 Azure Storage 계정의 Parquet 및 ORC 파일이 256MB 이상이어야 합니다. 
 
 ### <a name="when-will-the-copy-command-be-generally-available"></a>COPY 명령은 언제 출시되나요?
-COPY 명령은 내년(2020년) 초에 출시될 예정입니다. 
+COPY 명령은 올해(2020년) 말에 출시될 예정입니다. 
 
 ### <a name="are-there-any-known-issues-with-the-copy-command"></a>COPY 명령에 알려진 문제가 있나요?
 

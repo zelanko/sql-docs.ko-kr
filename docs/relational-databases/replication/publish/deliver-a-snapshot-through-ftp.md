@@ -15,10 +15,10 @@ ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c6ec9ac5c4e868a9022a11cc153c9638cab737dc
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710998"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>FTP를 통해 스냅샷 배달
@@ -53,7 +53,7 @@ ms.locfileid: "71710998"
   
 1.  **게시 속성 - \<게시&gt;** 대화 상자의 다음 두 페이지 중 하나에서 **구독자가 FTP(파일 전송 프로토콜)를 사용하여 스냅샷 파일을 다운로드하도록 허용**을 선택합니다.  
   
-    -   **FTP 스냅샷** 페이지 - [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]이전 버전을 실행하는 구독자에 대한 병합 게시와 스냅샷 및 트랜잭션 게시의 경우  
+    -   **FTP 스냅샷** 페이지 - [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이전 버전을 실행하는 구독자에 대한 병합 게시와 스냅샷 및 트랜잭션 게시의 경우  
   
     -   **FTP 스냅샷 및 인터넷** 페이지 - [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이후 버전을 실행하는 게시자의 병합 게시의 경우  
   
@@ -88,7 +88,7 @@ ms.locfileid: "71710998"
   
     -   (옵션) `@ftp_password` - FTP 로그인의 암호입니다.  
   
-     이렇게 하면 FTP를 사용하는 게시가 만들어집니다. 자세한 내용은 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
+     이렇게 하면 FTP를 사용하는 게시가 만들어집니다. 자세한 내용은 [게시 만들기](../../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-merge-publication"></a>병합 게시에 대한 FTP 스냅샷 배달을 설정하려면  
   
@@ -104,11 +104,11 @@ ms.locfileid: "71710998"
   
     -   (옵션) `@ftp_password` - FTP 로그인의 암호입니다.  
   
-     이렇게 하면 FTP를 사용하는 게시가 만들어집니다. 자세한 내용은 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
+     이렇게 하면 FTP를 사용하는 게시가 만들어집니다. 자세한 내용은 [게시 만들기](../../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
   
 #### <a name="to-create-a-pull-subscription-to-a-snapshot-or-transactional-publication-that-uses-ftp-snapshot-delivery"></a>FTP 스냅샷 배달을 사용하는 스냅샷 또는 트랜잭션 게시에 대한 끌어오기 구독을 만들려면  
   
-1.  구독 데이터베이스의 구독자에서 [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)을 실행합니다. `@publisher` 및 `@publication`을 지정합니다.  
+1.  구독 데이터베이스의 구독자에서 [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)을 실행합니다. `@publisher` 및 `@publication`를 지정합니다.  
   
     -   구독 데이터베이스의 구독자에서 [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)를 실행합니다. 이때 `@publisher`, `@publisher_db`, `@publication`을 지정하고 `@job_login` 및 `@job_password`에 구독자에서 배포 에이전트를 실행하는 데 사용되는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 자격 증명을, `@use_ftp`에 **true** 값을 지정합니다.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "71710998"
   
 #### <a name="to-create-a-pull-subscription-to-a-merge-publication-that-uses-ftp-snapshot-delivery"></a>FTP 스냅샷 배달을 사용하는 병합 게시에 대한 끌어오기 구독을 만들려면  
   
-1.  구독 데이터베이스의 구독자에서 [sp_addmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)을 실행합니다. `@publisher` 및 `@publication`을 지정합니다.  
+1.  구독 데이터베이스의 구독자에서 [sp_addmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)을 실행합니다. `@publisher` 및 `@publication`를 지정합니다.  
   
 2.  구독 데이터베이스의 구독자에서 [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)를 실행합니다. 이때 `@publisher`, `@publisher_db`, `@publication`을 지정하고 `@job_login` 및 `@job_password`에 구독자에서 배포 에이전트를 실행하는 데 사용되는 Windows 자격 증명을, `@use_ftp`에 `true` 값을 지정합니다.  
   

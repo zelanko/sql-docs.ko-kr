@@ -13,10 +13,10 @@ ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 263f398e0c14c1b056185722a0662e031c9d7472
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297735"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>연습: SSIS 패키지를 SQL 뷰로 게시
@@ -29,7 +29,7 @@ ms.locfileid: "71297735"
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 연습을 수행하려면 컴퓨터에 다음 소프트웨어를 설치해야 합니다.  
   
-1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 이상( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]포함)  
+1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 이상([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 포함)  
   
 2.  [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "71297735"
   
     3.  다음 데이터를 사용하여 두 개의 레코드를 삽입합니다.  
   
-        |ID|FirstName|LastName|  
+        |ID|FIRSTNAME|LASTNAME|  
         |--------|---------------|--------------|  
         |1|John|Doe|  
         |2|Jane|Doe|  
@@ -162,7 +162,7 @@ ms.locfileid: "71297735"
 ## <a name="step-3-test-the-sql-view"></a>3단계: SQL 뷰 테스트  
  이 단계에서는 SSIS 데이터 피드 게시 마법사에서 만든 SQL 뷰를 실행합니다.  
   
-1.  SQL Server Management Studio를 실행합니다.  
+1.  SQL Server Management Studio를 시작합니다.  
   
 2.  \<**컴퓨터 이름**>, **데이터베이스**, \<**마법사에서 선택한 데이터베이스**> 및 **뷰**를 확장합니다.  
   
@@ -261,7 +261,7 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Cat
   
 -   작은따옴표(') – 표준 OPENQUERY에서 지원됩니다. 쿼리 절에 작은따옴표를 사용하려는 경우 큰따옴표(")를 사용합니다.  
   
--   큰따옴표(") - 쿼리의 매개 변수 부분을 큰따옴표로 묶어야 합니다. 매개 변수 값 자체에 큰따옴표가 포함된 경우에는 이스케이프 문자를 사용합니다. 예를 들어 \"을 참조하십시오.  
+-   큰따옴표(") - 쿼리의 매개 변수 부분을 큰따옴표로 묶어야 합니다. 매개 변수 값 자체에 큰따옴표가 포함된 경우에는 이스케이프 문자를 사용합니다. 예: \"  
   
 -   왼쪽 및 오른쪽 대괄호([ 및 ]) – 이러한 문자는 선행/후행 공백을 나타내는 데 사용됩니다. 예를 들어 "[ 일부 공간 ]"은 선행 공백과 후행 공백이 하나씩 있는 "일부 공간" 문자열을 나타냅니다. 이러한 문자 자체가 쿼리 절에 사용되는 경우에는 이스케이프되어야 합니다. 예를 들어 \\[ 및 \\]입니다.  
   

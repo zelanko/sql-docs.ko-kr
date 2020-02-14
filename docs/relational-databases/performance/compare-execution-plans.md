@@ -17,12 +17,12 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: b0590a46fe9e5037f5bec1895aa6602bcd8c568a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: cc42584c6b3f07961e83e53b8b5165243060256f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907659"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910246"
 ---
 # <a name="compare-execution-plans"></a>실행 계획 비교
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "72907659"
      > [!TIP]
      > 실행 계획에 사용 가능한 모든 확대/축소 및 탐색 옵션은 계획 비교 모드에서 작동합니다. 자세한 내용은 [실제 실행 계획 표시](../../relational-databases/performance/display-an-actual-execution-plan.md)를 참조하세요.
 
-5.  기본 선택 사항의 범위에서 오른쪽에 이중 속성 창도 열립니다. 비교된 연산자 모두에 존재하지만 차이점이 있는 속성이 쉽게 식별할 수 있도록 *같지 않음* 기호(&ne;) 앞에 옵니다.
+5.  기본 선택 사항의 범위에서 오른쪽에 이중 속성 창도 열립니다. 비교된 연산자에 모두 있지만 차이점이 있는 속성의 경우 확인하기 쉽도록 ‘같지 않음’ 기호(&ne;)가 앞에 옵니다. 
 
     ![이중 속성 창](../../relational-databases/performance/media/plancomparison-properties.png "이중 속성 창")  
 

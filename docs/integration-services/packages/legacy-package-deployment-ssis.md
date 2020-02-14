@@ -32,10 +32,10 @@ ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6fc3a1e41edd95a8e1cf9b4489732cff7ac2852d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295812"
 ---
 # <a name="legacy-package-deployment-ssis"></a>레거시 패키지 배포(SSIS)
@@ -43,7 +43,7 @@ ms.locfileid: "71295812"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 패키지를 배포 컴퓨터에서 프로덕션 서버나 다른 컴퓨터로 손쉽게 배포할 수 있는 도구와 마법사가 포함되어 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에는 패키지를 배포 컴퓨터에서 프로덕션 서버나 다른 컴퓨터로 손쉽게 배포할 수 있는 도구와 마법사가 포함되어 있습니다.  
   
  패키지 배포 과정은 다음 네 단계로 구성됩니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "71295812"
 4.  네 번째 단계는 대상 컴퓨터에서 패키지 설치 마법사를 실행하여 파일 시스템이나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 패키지를 설치하는 것입니다.  
 
 ## <a name="package-configurations"></a>패키지 구성
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 런타임에 속성 값을 업데이트하는 데 사용할 수 있는 패키지 구성을 제공합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 런타임에 속성 값을 업데이트하는 데 사용할 수 있는 패키지 구성을 제공합니다.  
   
 > **참고:** 구성은 패키지 배포 모델에 사용할 수 있습니다. 매개 변수는 프로젝트 배포 모델에 대한 구성 대신 사용됩니다. 프로젝트 배포 모델을 사용하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다. 배포 모델에 대한 자세한 내용은 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)를 참조하십시오.   
   
@@ -110,7 +110,7 @@ ms.locfileid: "71295812"
 ### <a name="package-configuration-types"></a>패키지 구성 유형  
  다음 표에서는 패키지 구성 유형에 대해 설명합니다.  
   
-|형식|설명|  
+|Type|Description|  
 |----------|-----------------|  
 |XML 구성 파일|구성을 포함하는 XML 파일입니다. XML 파일은 여러 구성을 포함할 수 있습니다.|  
 |환경 변수|환경 변수는 구성을 포함합니다.|  
@@ -219,7 +219,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  다음 표에서는 **패키지 구성 도우미** 대화 상자 구성 목록의 열에 대해 설명합니다.  
   
-|Column|설명|  
+|열|Description|  
 |------------|-----------------|  
 |**구성 이름**|구성의 이름입니다.|  
 |**구성 유형**|구성의 유형입니다.|  
@@ -321,7 +321,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **구성 유형**  
  다음 옵션을 사용하여 구성을 저장할 원본 유형을 선택합니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**XML 구성 파일**|구성을 XML 파일로 저장합니다. 이 값을 선택하면 **구성 유형**섹션에 설명된 동적 옵션이 표시됩니다.|  
 |**환경 변수**|환경 변수 중 하나에 구성을 저장합니다. 이 값을 선택하면 **구성 유형**섹션에 설명된 동적 옵션이 표시됩니다.|  
@@ -338,7 +338,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **구성 설정을 직접 지정**  
  설정을 직접 지정하는 데 사용됩니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**구성 파일 이름**|마법사에서 생성하는 구성 파일의 경로를 입력합니다.|  
 |**찾아보기**|**구성 파일 위치 선택** 대화 상자를 사용하여 마법사에서 생성하는 구성 파일의 경로를 지정할 수 있습니다. 파일이 없으면 마법사에서 새 파일을 생성합니다.|  
@@ -346,7 +346,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **구성 위치가 환경 변수에 저장됨**  
  구성이 저장되는 환경 변수를 지정하는 데 사용됩니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**환경 변수**|목록에서 환경 변수를 선택합니다.|  
   
@@ -358,14 +358,14 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **구성 설정을 직접 지정**  
  설정을 직접 지정하는 데 사용됩니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**레지스트리 항목**|구성 정보를 포함하는 레지스트리 키를 입력합니다. 형식은 \<레지스트리 키>입니다.<br /><br /> 레지스트리 키가 HKEY_CURRENT_USER에 이미 있어야 하고 Value라고 지정된 값을 가져야 합니다. 값은 DWORD 또는 문자열이 될 수 있습니다.<br /><br /> HKEY_CURRENT_USER의 루트에 없는 레지스트리 키를 사용하려면 \<레지스트리 키\레지스트리 키\\...> 형식을 사용하여 키를 식별합니다.|  
   
  **구성 위치가 환경 변수에 저장됨**  
  구성이 저장되는 환경 변수를 지정하는 데 사용됩니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**환경 변수**|목록에서 환경 변수를 선택합니다.|  
   
@@ -373,14 +373,14 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **구성 설정을 직접 지정**  
  설정을 직접 지정하는 데 사용됩니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**부모 변수**|구성 정보를 포함하는 부모 패키지의 변수를 지정합니다.|  
   
  **구성 위치가 환경 변수에 저장됨**  
  구성이 저장되는 환경 변수를 지정하는 데 사용됩니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**환경 변수**|목록에서 환경 변수를 선택합니다.|  
   
@@ -388,16 +388,16 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **구성 설정을 직접 지정**  
  설정을 직접 지정하는 데 사용됩니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
-|**대량 삽입 태스크 편집기**|목록에서 연결을 선택하거나 **새로 만들기** 를 클릭하여 새 연결을 만듭니다.|  
+|**연결**|목록에서 연결을 선택하거나 **새로 만들기** 를 클릭하여 새 연결을 만듭니다.|  
 |**구성 테이블**|기존 테이블을 선택하거나 **새로 만들기** 를 클릭하여 새 테이블을 만드는 SQL 문을 작성합니다.|  
 |**구성 필터**|기존 구성 이름을 선택하거나 새 이름을 입력합니다.<br /><br /> 같은 테이블에 여러 SQL Server 구성을 저장할 수 있으며 각 구성은 여러 구성 항목을 포함할 수 있습니다.<br /><br /> 이 사용자 정의 값은 특정 구성에 속하는 구성 항목을 식별하기 위해 테이블에 저장됩니다.|  
   
  **구성 위치가 환경 변수에 저장됨**  
  구성이 저장되는 환경 변수를 지정하는 데 사용합니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**환경 변수**|목록에서 환경 변수를 선택합니다.|  
   
@@ -431,7 +431,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   이 절차에서는 부모 변수 구성 유형을 사용하는 패키지 구성을 만드는 방법에 대해 설명합니다. 이 구성 유형을 사용하여 부모 패키지에서 실행되는 자식 패키지가 부모 변수에 액세스하도록 설정할 수 있습니다.  
   
 > [!NOTE]  
->  또한 부모 패키지 변수나 매개 변수 또는 프로젝트 매개 변수를 자식 패키지 매개 변수에 매핑하도록 패키지 실행 태스크를 구성하여 값을 자식 패키지에 전달할 수 있습니다. 자세한 내용은 [Execute Package Task](../../integration-services/control-flow/execute-package-task.md)을 참조하세요.  
+>  또한 부모 패키지 변수나 매개 변수 또는 프로젝트 매개 변수를 자식 패키지 매개 변수에 매핑하도록 패키지 실행 태스크를 구성하여 값을 자식 패키지에 전달할 수 있습니다. 자세한 내용은 [Execute Package Task](../../integration-services/control-flow/execute-package-task.md)을(를) 참조하세요.  
   
  자식 패키지에 패키지 구성을 만들기 전에 부모 패키지에 변수를 만들 필요는 없습니다. 부모 패키지에는 언제든지 변수를 추가할 수 있습니다. 단, 패키지 구성에 정확한 부모 변수의 이름을 사용해야 합니다. 그러나 부모 변수 구성을 만들려면 이 부모 변수 구성을 통해 업데이트할 수 있는 자식 패키지에 기존 변수가 있어야 합니다. 변수 추가 및 구성에 대한 자세한 내용은 [패키지에서 사용자 정의 변수의 범위 추가, 삭제, 변경](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e)을 참조하세요.  
   
@@ -482,7 +482,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  다음 표에서는 배포 유틸리티 속성을 나열합니다.  
   
-|속성|설명|  
+|속성|Description|  
 |--------------|-----------------|  
 |AllowConfigurationChange|배포 도중 구성의 업데이트를 허용할지 여부를 지정하는 값입니다.|  
 |CreateDeploymentUtility|프로젝트를 빌드할 때 패키지 배포 유틸리티를 만들지 여부를 지정하는 값입니다. 배포 유틸리티를 만들려면 이 속성을 **True** 로 설정합니다.|  
@@ -592,13 +592,13 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  **관련 항목:** [패키지 구성 만들기](../../integration-services/packages/create-package-configurations.md)  
   
- **경로**  
+ **Path**  
  구성할 속성의 경로를 봅니다.  
   
  **형식**  
  속성의 데이터 형식을 봅니다.  
   
- **Value**  
+ **값**  
  구성의 값을 지정합니다.  
   
  **다음**  
@@ -648,7 +648,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **설치 폴더 선택** 페이지를 사용하여 패키지 및 패키지의 종속성을 설치할 파일 시스템 폴더를 지정할 수 있습니다.  
   
 #### <a name="options"></a>옵션  
- **Folder**  
+ **폴더**  
  패키지 및 해당 패키지의 종속성을 복사할 경로 및 폴더를 지정합니다.  
   
  **찾아보기**  
@@ -673,7 +673,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **SQL Server 인증 사용**  
  패키지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 서버에 로그온하도록 할지 여부를 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 경우 사용자 이름과 암호를 입력해야 합니다.  
   
- **User name**  
+ **사용자 이름**  
  사용자 이름을 지정합니다.  
   
  **암호**  

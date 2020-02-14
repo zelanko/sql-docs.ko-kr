@@ -15,10 +15,10 @@ ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 91f0ca0980eceb5ccdd2b1c0814661695f573d50
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291654"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>느린 변경 차원 마법사를 사용하여 출력 구성
@@ -84,6 +84,6 @@ ms.locfileid: "71291654"
  느린 변경 차원 변환 출력의 구성을 업데이트하는 가장 쉬운 방법은 느린 변경 차원 마법사를 다시 실행하고 마법사 페이지에서 속성을 수정하는 것입니다. 또한 **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 느린 변경 차원 변환을 업데이트할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
+ [느린 변경 차원 변환](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
   
   

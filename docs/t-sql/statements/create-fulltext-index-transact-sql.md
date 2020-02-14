@@ -22,10 +22,10 @@ ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 5d51385ff820155d805803773265f39cd8598df6
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981890"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "73981890"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스의 테이블 또는 인덱싱된 뷰에서 전체 텍스트 인덱스를 만듭니다. 테이블 또는 인덱싱된 뷰당 하나의 전체 텍스트 인덱스만 허용되고 각 전체 텍스트 인덱스는 하나의 테이블 또는 인덱싱된 뷰에 적용됩니다. 전체 텍스트 인덱스는 최대 1024개의 열을 포함할 수 있습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -103,7 +103,7 @@ BLOB이 아닌 열과 XML이 아닌 열에 여러 언어로 된 텍스트 데이
 XML 유형 또는 BLOB 유형의 열로 저장된 문서의 경우 인덱싱 시에 문서 내의 언어 인코딩이 사용됩니다. 예를 들어 XML 열에서는 XML 문서의 **xml:lang** 특성으로 언어를 식별합니다. 쿼리할 때 *language_term*이 전체 텍스트 쿼리의 일부로 지정되지 않은 경우에는 *language_term*에 지정된 이전 값이 전체 텍스트 쿼리의 기본 언어로 사용됩니다.  
   
 STATISTICAL_SEMANTICS       
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상) 
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상). 
   
 통계 의미 체계 인덱싱의 일부인 추가 키 구 및 문서 유사성 인덱스를 만듭니다. 자세한 내용은 [의미 체계 검색&#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md)을 참조하세요.  
   
@@ -143,7 +143,7 @@ OFF
 전체 텍스트 인덱스와 연결할 중지 목록의 이름을 지정합니다.  
   
 SEARCH PROPERTY LIST [ = ] *property_list_name*       
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상)  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상).  
   
 검색 속성 목록을 인덱스와 연결합니다.  
  
@@ -153,7 +153,7 @@ OFF
 *property_list_name*       
 전체 텍스트 인덱스와 연결할 검색 속성 목록의 이름을 지정합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 전체 텍스트 인덱스에 대한 자세한 내용은 [전체 텍스트 인덱스 만들기 및 관리](../../relational-databases/search/create-and-manage-full-text-indexes.md)를 참조하세요.  
   
 **xml** 열에서는 XML 요소의 내용을 인덱싱하지만 XML 태그를 무시하는 전체 텍스트 인덱스를 만들 수 있습니다. 특성 값은 숫자 값이 아니면 전체 텍스트 인덱싱됩니다. 요소 태그는 토큰 경계로 사용됩니다. 여러 언어를 포함하는 올바른 형식의 XML 또는 HTML 문서와 조각이 지원됩니다. 자세한 내용은 [XML 열에 전체 텍스트 검색 사용](../../relational-databases/xml/use-full-text-search-with-xml-columns.md)을 참조하세요.  
@@ -165,10 +165,10 @@ OFF
   
 |변경 내용 추적|WITH NO POPULATION|결과|  
 |---------------------|------------------------|------------|  
-|설정 안 됨|지정 안 됨|인덱스에 대해 전체 채우기가 수행됩니다.|  
-|설정 안 됨|Specified|ALTER FULLTEXT INDEX...START POPULATION 문이 실행될 때까지 인덱스 채우기가 발생하지 않습니다.|  
-|설정|지정됨|오류가 발생하고 인덱스가 변경되지 않습니다.|  
-|설정|지정 안 됨|인덱스에 대해 전체 채우기가 수행됩니다.|  
+|설정 안 됨|지정되지 않음|인덱스에 대해 전체 채우기가 수행됩니다.|  
+|설정 안 됨|지정됨|ALTER FULLTEXT INDEX...START POPULATION 문이 실행될 때까지 인덱스 채우기가 발생하지 않습니다.|  
+|사용|지정됨|오류가 발생하고 인덱스가 변경되지 않습니다.|  
+|사용|지정되지 않음|인덱스에 대해 전체 채우기가 수행됩니다.|  
   
  전체 텍스트 인덱스에 대한 자세한 내용은 [전체 텍스트 인덱스 채우기](../../relational-databases/search/populate-full-text-indexes.md)를 참조하세요.  
   
@@ -182,7 +182,7 @@ OFF
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-unique-index-a-full-text-catalog-and-a-full-text-index"></a>1\. 고유 인덱스, 전체 텍스트 카탈로그 및 전체 텍스트 인덱스 만들기  
+### <a name="a-creating-a-unique-index-a-full-text-catalog-and-a-full-text-index"></a>A. 고유 인덱스, 전체 텍스트 카탈로그 및 전체 텍스트 인덱스 만들기  
  다음 예에서는 `JobCandidateID` 예제 데이터베이스의 `HumanResources.JobCandidate` 테이블에 있는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 열에 대해 고유 인덱스를 만듭니다. 그런 다음 기본 전체 텍스트 카탈로그 `ft`를 만듭니다. 마지막으로 `Resume` 카탈로그 및 시스템 중지 목록을 사용하여 `ft` 열에 대한 전체 텍스트 인덱스를 만듭니다.  
   
 ```sql  
@@ -194,7 +194,7 @@ CREATE FULLTEXT INDEX ON HumanResources.JobCandidate(Resume)
 GO  
 ```  
   
-### <a name="b-creating-a-full-text-index-on-several-table-columns"></a>2\. 여러 테이블 열에 대한 전체 텍스트 인덱스 만들기  
+### <a name="b-creating-a-full-text-index-on-several-table-columns"></a>B. 여러 테이블 열에 대한 전체 텍스트 인덱스 만들기  
  다음 예에서는 `production_catalog` 예제 데이터베이스에 전체 텍스트 카탈로그 `AdventureWorks`를 만듭니다. 그런 다음 이 새 카탈로그를 사용하는 전체 텍스트 인덱스를 만듭니다. 전체 텍스트 인덱스는 `ReviewerName`의 `EmailAddress`, `Comments` 및 `Production.ProductReview` 열에 있습니다. 이 예에서는 각 열에 대해 해당 열의 데이터 언어인 영어 LCID `1033`을 지정합니다. 이 전체 텍스트 인덱스는 기존의 고유 키 인덱스인 `PK_ProductReview_ProductReviewID`를 사용합니다. 권장한 대로 이 인덱스 키는 정수 열 `ProductReviewID`에 있습니다.  
   
 ```sql  

@@ -22,10 +22,10 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: pmasl
 ms.author: mikeray
 ms.openlocfilehash: a9e617488ac0543dd7794cce37137518c1422c80
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69028745"
 ---
 # <a name="server-memory-configuration-options"></a>서버 메모리 구성 옵션
@@ -48,14 +48,14 @@ ms.locfileid: "69028745"
 > [!NOTE]
 > **min server memory** 및 **max server memory** 는 고급 옵션입니다. **sp_configure** 시스템 저장 프로시저를 사용하여 이러한 설정을 변경할 경우 **고급 옵션 표시** 를 1로 설정해야만 변경할 수 있습니다. 이러한 설정은 서버를 다시 시작하지 않아도 즉시 적용됩니다.  
   
-<a name="min_server_memory"></a> **min_server_memory** 옵션을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Memory Manager가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 사용할 수 있는 최소 메모리 양을 보장할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 시작할 때 **min server memory** 에 지정된 메모리의 양을 즉시 할당하지 않습니다. 그러나 클라이언트 로드 때문에 메모리 사용량이 이 값에 도달하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] min server memory **값을 줄이기 전에는** 가 메모리를 비울 수 없습니다. 예를 들어 동일한 호스트에 여러 인스턴스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이 동시에 존재할 수 있는 경우 인스턴스의 메모리를 예약하기 위해 max_server_memory 대신 min_server_memory 매개 변수를 설정합니다. 또한 가상 환경에서 min_server_memory 값을 설정하여 기본 호스트의 메모리 압력을 가하는 것은 게스트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가상 머신(VM)의 버퍼 풀에서 수용 가능한 성능에 필요한 것 이상으로 메모리를 할당 해제하지 않도록 하는 데 필수적입니다.
+<a name="min_server_memory"></a>**min_server_memory** 옵션을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Memory Manager가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 사용할 수 있는 최소 메모리 양을 보장할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 시작할 때 **min server memory** 에 지정된 메모리의 양을 즉시 할당하지 않습니다. 그러나 클라이언트 로드 때문에 메모리 사용량이 이 값에 도달하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] min server memory **값을 줄이기 전에는** 가 메모리를 비울 수 없습니다. 예를 들어 동일한 호스트에 여러 인스턴스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이 동시에 존재할 수 있는 경우 인스턴스의 메모리를 예약하기 위해 max_server_memory 대신 min_server_memory 매개 변수를 설정합니다. 또한 가상 환경에서 min_server_memory 값을 설정하여 기본 호스트의 메모리 압력을 가하는 것은 게스트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가상 머신(VM)의 버퍼 풀에서 수용 가능한 성능에 필요한 것 이상으로 메모리를 할당 해제하지 않도록 하는 데 필수적입니다.
 
 >[!NOTE]
 >[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **min server memory**에 지정된 메모리 양을 할당하는 것이 보장되지 않습니다. 서버의 로드 때문에 **min server memory**에 지정된 메모리 양을 할당할 필요가 없는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 보다 적은 메모리로 실행됩니다.
 
 <a name="max_server_memory"></a> OS가 유해 메모리 압력을 겪지 않도록 **max_server_memory**를 사용합니다. 최대 서버 메모리 구성을 설정하려면 메모리 요구 사항을 결정하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스의 전체 소비량을 모니터링합니다. 단일 인스턴스에 대해 이러한 계산을 통해보다 정확한 결과를 얻으려면
 - 전체 OS 메모리에서 1GB-4GB를 OS에 예약합니다.
-- 그런 다음, **스택 크기<sup>1</sup> \* 계산된 최대 작업자 스레드 수<sup>2</sup>** 로 구성된 **최대 서버 메모리** 컨트롤 외부의 잠재적 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 할당량을 뺍니다. 남은 일은 단일 인스턴스 설정을 위한 max_server_memory를 설정하는 것입니다.
+- 그런 다음, **스택 크기 <sup>1</sup> \* 계산된 최대 작업자 스레드 수 <sup>2</sup>** 로 구성된 **최대 서버 메모리** 제어 외부의 잠재적 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 할당량을 뺍니다. 남은 일은 단일 인스턴스 설정을 위한 max_server_memory를 설정하는 것입니다.
 
 <sup>1</sup> 아키텍처당 스레드 스택 크기에 대한 내용은 [ 메모리 관리 아키텍처 가이드 ](../../relational-databases/memory-management-architecture-guide.md#stacksizes)를 참조하세요.
 

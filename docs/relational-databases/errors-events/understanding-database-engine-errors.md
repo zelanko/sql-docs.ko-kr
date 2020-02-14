@@ -17,22 +17,22 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 91ef40f0c1b5250cde244130b146479cf14fa9fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67903748"
 ---
 # <a name="understanding-database-engine-errors"></a>데이터베이스 엔진 오류 이해
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서 발생한 오류에는 다음 표에 설명된 것과 같은 특성이 있습니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 발생한 오류에는 다음 테이블에 설명된 것과 같은 특성이 있습니다.  
   
-|attribute|설명|  
+|attribute|Description|  
 |---------------|-----------------|  
 |오류 번호|모든 오류 메시지에는 고유한 오류 번호가 있습니다.|  
 |오류 메시지 문자열|오류 메시지에는 오류 발생 원인에 대한 진단 정보가 포함됩니다. 많은 오류 메시지에는 오류를 발생시킨 개체 이름과 같은 정보가 포함된 대체 변수가 있습니다.|  
-|Severity|오류의 심각도를 나타냅니다. 심각도가 낮은 오류(심각도가 1 또는 2인 경우)는 정보 메시지이거나 하위 수준 경고이며 심각도가 높은 오류는 가능한 빨리 해결해야 할 문제를 가리킵니다. 심각도에 대한 자세한 내용은 [데이터베이스 엔진 오류 심각도](../../relational-databases/errors-events/database-engine-error-severities.md)를 참조하세요.|  
-|State|일부 오류 메시지는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]코드의 여러 곳에서 발생할 수 있습니다. 예를 들어 1105 오류는 여러 가지 다른 조건에서 발생합니다. 오류를 발생시키는 각각의 특정 조건마다 고유한 상태 코드를 할당합니다.<br /><br /> [!INCLUDE[msCoName](../../includes/msconame-md.md)] 기술 자료와 같이 알려진 문제에 대한 정보를 포함하는 데이터베이스를 확인하는 경우 상태 번호를 사용하여 기록된 문제가 실제로 발생한 오류와 동일한지 여부를 확인할 수 있습니다. 예를 들어 기술 자료 문서에서 상태가 2인 1105 오류에 대해 설명하는데 실제로 발생한 1105 오류 메시지의 상태가 3인 경우 이 오류가 기술 자료 문서에 보고된 것과 다른 원인에서 비롯되었을 가능성이 높습니다.<br /><br /> [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 엔지니어도 오류의 상태 코드를 사용하여 원본 코드에서 해당 오류 코드가 발생한 위치를 찾을 수 있습니다. 이 정보는 문제 진단에 도움이 될 수 있습니다.|  
+|심각도|오류의 심각도를 나타냅니다. 심각도가 낮은 오류(심각도가 1 또는 2인 경우)는 정보 메시지이거나 하위 수준 경고이며 심각도가 높은 오류는 가능한 빨리 해결해야 할 문제를 가리킵니다. 심각도에 대한 자세한 내용은 [데이터베이스 엔진 오류 심각도](../../relational-databases/errors-events/database-engine-error-severities.md)를 참조하세요.|  
+|시스템 상태|일부 오류 메시지는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]코드의 여러 곳에서 발생할 수 있습니다. 예를 들어 1105 오류는 여러 가지 다른 조건에서 발생합니다. 오류를 발생시키는 각각의 특정 조건마다 고유한 상태 코드를 할당합니다.<br /><br /> [!INCLUDE[msCoName](../../includes/msconame-md.md)] 기술 자료와 같이 알려진 문제에 대한 정보를 포함하는 데이터베이스를 확인하는 경우 상태 번호를 사용하여 기록된 문제가 실제로 발생한 오류와 동일한지 여부를 확인할 수 있습니다. 예를 들어 기술 자료 문서에서 상태가 2인 1105 오류에 대해 설명하는데 실제로 발생한 1105 오류 메시지의 상태가 3인 경우 이 오류가 기술 자료 문서에 보고된 것과 다른 원인에서 비롯되었을 가능성이 높습니다.<br /><br /> [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 엔지니어도 오류의 상태 코드를 사용하여 원본 코드에서 해당 오류 코드가 발생한 위치를 찾을 수 있습니다. 이 정보는 문제 진단에 도움이 될 수 있습니다.|  
 |프로시저 이름|오류가 발생한 저장 프로시저 또는 트리거의 이름입니다.|  
 |줄 번호|일괄 처리, 저장 프로시저, 트리거 또는 함수에서 오류를 발생시킨 문을 가리킵니다.|  
   

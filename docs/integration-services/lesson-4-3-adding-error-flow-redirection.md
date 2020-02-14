@@ -11,10 +11,10 @@ ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4a3626878ba4be6d56bb56b545f3d0cdc24a407a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283199"
 ---
 # <a name="lesson-4-3-add-error-flow-redirection"></a>4-3단원: 오류 흐름 리디렉션 추가
@@ -55,7 +55,7 @@ ms.locfileid: "71283199"
   
 10. **스크립트** 페이지에서 **LocaleID** 속성이 **영어(미국)** 로 설정되었는지 확인합니다.
   
-11. **스크립트 편집**을 선택하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications(VSTA)를 엽니다. **Input0_ProcessInputRow** 메서드에 다음 코드를 입력하거나 붙여넣습니다.  
+11. **스크립트 편집**을 선택하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] VSTA(Tools for Applications)를 엽니다. **Input0_ProcessInputRow** 메서드에 다음 코드를 입력하거나 붙여넣습니다.  
   
     [Visual Basic]  
   

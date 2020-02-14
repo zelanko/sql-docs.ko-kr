@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c5c52b80601f7b1e8e73cffe0a6cad255d91ff82
-ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72172975"
 ---
 # <a name="percentile_cont-transact-sql"></a>PERCENTILE_CONT(Transact-SQL)
@@ -64,7 +64,7 @@ PERCENTILE_CONT ( numeric_literal )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-basic-syntax-example"></a>1\. 기본 구문 예제  
+### <a name="a-basic-syntax-example"></a>A. 기본 구문 예제  
  다음 예에서는 PERCENTILE_CONT 및 PERCENTILE_DISC를 사용하여 각 부서에서 직원 급여의 중앙값을 찾습니다. 이러한 함수는 같은 값을 반환하지 않을 수 있습니다. PERCENTILE_CONT는 데이터 세트에 있거나 없을 수 있는 적절한 값을 보간하는 반면, PERCENTILE_DISC는 항상 해당 세트에서 실제 값을 반환합니다.  
   
 ```  
@@ -94,7 +94,7 @@ Executive              54.32695     48.5577
 Human Resources        17.427850    16.5865
 ```  
 
-### <a name="b-basic-syntax-example"></a>2\. 기본 구문 예제  
+### <a name="b-basic-syntax-example"></a>B. 기본 구문 예제  
  다음 예에서는 PERCENTILE_CONT 및 PERCENTILE_DISC를 사용하여 각 부서에서 직원 급여의 중앙값을 찾습니다. 이러한 함수는 같은 값을 반환하지 않을 수 있습니다. PERCENTILE_CONT는 데이터 세트에 있거나 없을 수 있는 적절한 값을 보간하는 반면, PERCENTILE_DISC는 항상 해당 세트에서 실제 값을 반환합니다.  
   
 ```  

@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c183b1830bc5625171cfbb3372b0dbbb6c99e236
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 9dc0d760bd7fd6a89d9829fa5e883ef1ad9b59b7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75259019"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76934196"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>설치 마법사에서 SQL Server 설치(설치 프로그램)
 
@@ -67,9 +67,9 @@ Microsoft는 SQL Server 2016 및 2017에서 필수 구성 요소로 설치되는
    계속하려면 **다음**을 선택합니다.
 
 1. **사용 조건** 페이지에서 사용권 계약을 검토합니다. 동의하는 경우 **동의함** 확인란을 선택하고 **다음**을 선택합니다.  
-
-   >[!NOTE]
-   > SQL Server에서는 설치 환경 정보뿐만 아니라 기타 사용 현황 및 성능 데이터를 Microsoft의 제품 개선에 도움을 주기 위해 전송합니다. SQL Server 데이터 처리 및 개인 정보 제어에 대해 자세히 알아보려면 [개인정보처리방침](https://privacy.microsoft.com/privacystatement) 및 [SQL Server를 구성하여 Microsoft에 피드백 보내기](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016)를 참조하세요.
+    
+   > [!NOTE]
+   > SQL Server에서는 설치 환경 정보뿐만 아니라 기타 사용 현황 및 성능 데이터를 Microsoft의 제품 개선에 도움을 주기 위해 전송합니다. SQL Server 데이터 처리 및 개인 정보 제어에 대해 자세히 알아보려면 [개인정보처리방침](https://privacy.microsoft.com/privacystatement) 및 [SQL Server를 구성하여 Microsoft에 피드백 보내기](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback)를 참조하세요.
 
 1. **전역 규칙** 페이지에서 규칙 오류가 없는 경우 설치 프로그램이 **제품 업데이트** 페이지로 자동으로 진행됩니다.  
   
@@ -227,15 +227,17 @@ Microsoft는 SQL Server 2016 및 2017에서 필수 구성 요소로 설치되는
   
 1. 설치 마법사가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 센터를 실행합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 새 설치를 만들려면 왼쪽 탐색 영역에서 **설치**를 선택한 다음, **새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 독립 실행형 설치 또는 기존 설치에 기능 추가**를 선택합니다.  
 
-1. **제품 키** 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 평가판 버전을 설치할지 아니면 PID 키가 있는 프로덕션 버전을 설치할지를 나타내는 옵션을 선택합니다. 자세한 내용은 [SQL Server 2017의 버전과 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-2017.md)을 참조하세요.  
+1. **제품 키** 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 평가판 버전을 설치할지 아니면 PID 키가 있는 프로덕션 버전을 설치할지를 나타내는 옵션을 선택합니다. 자세한 내용은 [SQL Server 2017의 버전과 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-version-15.md)을 참조하세요.  
   
    계속하려면 **다음**을 선택합니다.
-
   
 1. **사용 조건** 페이지에서 사용권 계약을 검토합니다. 동의하는 경우 **사용 조건 및 [개인정보처리방침](https://privacy.microsoft.com/privacystatement)에 동의함** 확인란을 선택하고 **다음**을 선택합니다.  
 
-   >[!NOTE]
-   > SQL Server에서는 설치 환경 정보뿐만 아니라 기타 사용 현황 및 성능 데이터를 Microsoft의 제품 개선에 도움을 주기 위해 전송합니다. SQL Server 데이터 처리 및 개인 정보 제어에 대해 자세히 알아보려면 [개인정보처리방침](https://privacy.microsoft.com/privacystatement) 및 [SQL Server를 구성하여 Microsoft에 피드백 보내기](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016)를 참조하세요.
+   > [!NOTE]
+   > 엔터프라이즈 서버/CAL 라이선스 제품 키를 입력했으며, 머신에 20개가 넘는 물리적 코어가 있거나 하이퍼스레딩을 사용하는 경우 40개가 넘는 논리적 코어가 있는 경우 설치 중에 경고가 표시됩니다. **이 상자를 선택하여 이 제한을 승인하거나, [뒤로/취소]를 클릭하여 운영 체제 최대값까지 지원하는 Enterprise Core 제품 라이선스를 입력합니다.** 확인란을 선택하여 설치를 계속하거나 **뒤로**를 클릭하고 운영 체제의 최대 프로세서 수를 지원하는 라이선스 키를 입력할 수 있습니다.
+
+   > [!NOTE]
+   > SQL Server에서는 설치 환경 정보뿐만 아니라 기타 사용 현황 및 성능 데이터를 Microsoft의 제품 개선에 도움을 주기 위해 전송합니다. SQL Server 데이터 처리 및 개인 정보 제어에 대해 자세히 알아보려면 [개인정보처리방침](https://privacy.microsoft.com/privacystatement) 및 [SQL Server를 구성하여 Microsoft에 피드백 보내기](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback)를 참조하세요.
 
 1. **전역 규칙** 페이지에서 규칙 오류가 없는 경우 설치 프로그램이 **제품 업데이트** 페이지로 자동으로 진행됩니다.  
   

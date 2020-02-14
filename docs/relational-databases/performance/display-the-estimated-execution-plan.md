@@ -21,10 +21,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4d0d5930734bb48c0914300a735f81e3ca2ced38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67946864"
 ---
 # <a name="display-the-estimated-execution-plan"></a>예상 실행 계획 표시
@@ -41,7 +41,7 @@ ms.locfileid: "67946864"
   
 3.  **쿼리** 메뉴에서 **예상 실행 계획 표시** 를 클릭하거나 **예상 실행 계획 표시** 도구 모음 단추를 클릭합니다. 예상 실행 계획은 결과 창의 **실행 계획** 탭에 표시됩니다. 
 
-    ![도구 모음에서 예상 실행 계획 단추](../../relational-databases/performance/media/estimatedexecplantoolbar.png "도구 모음에서 예상 실행 계획 단추")    
+    ![도구 모음의 예상 실행 계획 단추](../../relational-databases/performance/media/estimatedexecplantoolbar.png "도구 모음의 예상 실행 계획 단추")    
 
     추가 정보를 보려면 논리 및 물리 연산자 아이콘 위에 마우스를 올리고 잠시 대기하여 도구 설명을 표시하고 연산자에 대한 설명 및 속성을 확인합니다. 또는 속성 창에서 연산자 속성을 확인할 수 있습니다. 속성이 보이지 않으면 연산자를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 속성을 확인할 연산자를 선택합니다.  
 

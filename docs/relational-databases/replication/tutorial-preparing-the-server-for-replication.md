@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 09d68b763d967b6bcea4853f40bfc2ee2694421b
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.openlocfilehash: 7d7582eca4c3934a43e3faa7c94fc84f5609d86e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75320450"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910026"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>자습서: 복제를 위한 SQL Server 준비(게시자, 배포자, 구독자)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -181,8 +181,9 @@ ms.locfileid: "75320450"
    ![바로 가기 메뉴에서 "배포 구성" 명령](media/tutorial-preparing-the-server-for-replication/configuredistribution.png)
   
    > [!NOTE]  
-   > 실제 서버 이름이 아니라 **localhost**를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 **localhost**에 연결할 수 없다는 경고 메시지가 표시됩니다. 경고 대화 상자에서 **확인**을 선택합니다. **서버에 연결** 대화 상자에서 **서버 이름** 을 **localhost**에서 실제 서버 이름으로 변경합니다. 그런 다음 **연결**을 선택합니다.  
-  
+   > - 실제 서버 이름이 아니라 **localhost**를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 **localhost 또는 IP 주소**에 연결할 수 없다는 경고 메시지가 표시됩니다. 경고 대화 상자에서 **확인**을 선택합니다. **서버에 연결** 대화 상자에서 **서버 이름**을 **localhost 또는 IP 주소**에서 실제 서버 이름으로 변경합니다. 그런 다음 **연결**을 선택합니다.  
+   > - 현재 SSMS(SQL Server Management Studio) 18.0에는 IP 주소를 사용하여 배포자에 연결할 때 경고 메시지가 표시되지 ‘않는’ 알려진 문제가 있지만, 여전히 유효하지는 않습니다.  배포자에 연결할 때 실제 서버 이름을 사용해야 합니다. 
+   
    배포 구성 마법사가 시작됩니다.  
   
 3. **배포자** 페이지에서 < *'ServerName'* > **을(를) 자체 배포자로 사용합니다. SQL Server에서 배포 데이터베이스와 로그를 만듭니다**를 선택합니다. 그런 후 **다음**을 선택합니다.  

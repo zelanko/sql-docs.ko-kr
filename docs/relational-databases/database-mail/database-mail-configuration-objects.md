@@ -33,10 +33,10 @@ ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5082c3ab595cc11ff9ab3f5dbc869c11105ce70a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68134427"
 ---
 # <a name="database-mail-configuration-objects"></a>데이터베이스 메일 구성 개체
@@ -79,7 +79,7 @@ ms.locfileid: "68134427"
   
 -   전자 메일 서버의 이름  
   
--   전자 메일 서버의 유형. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 이는 항상 SMTP(Simple Mail Transfer Protocol)입니다.  
+-   전자 메일 서버의 유형. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 항상 SMTP(Simple Mail Transfer Protocol)입니다.  
   
 -   전자 메일 서버의 포트 번호  
   
@@ -128,14 +128,14 @@ ms.locfileid: "68134427"
   
 ### <a name="database-mail-settings"></a>데이터베이스 메일 설정  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[sysmail_configure_sp(Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)|데이터베이스 메일의 구성 설정을 변경합니다.|  
 |[sysmail_help_configure_sp(Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)|데이터베이스 메일의 구성 설정을 표시합니다.|  
   
 ### <a name="accounts-and-profiles"></a>계정 및 프로필  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[sysmail_add_profileaccount_sp(Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)|데이터베이스 메일 프로필에 메일 계정을 추가합니다.|  
 |[sysmail_delete_account_sp(Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-account-sp-transact-sql.md)|데이터베이스 메일 계정을 삭제합니다.|  
@@ -150,7 +150,7 @@ ms.locfileid: "68134427"
   
 ### <a name="security"></a>보안  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[sysmail_add_principalprofile_sp(Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)|데이터베이스 보안 주체에 대해 데이터베이스 메일 프로필을 사용할 수 있는 권한을 부여합니다.|  
 |[sysmail_delete_principalprofile_sp(Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-principalprofile-sp-transact-sql.md)|퍼블릭 또는 프라이빗 데이터베이스 메일 프로필을 사용할 수 있는 데이터베이스 보안 주체에 대한 사용 권한을 제거합니다.|  
@@ -159,7 +159,7 @@ ms.locfileid: "68134427"
   
 ### <a name="system-state"></a>시스템 상태  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[sysmail_start_sp&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)|데이터베이스 메일 외부 프로그램 및 관련 SQL Service Broker 큐를 시작합니다.|  
 |[sysmail_stop_sp&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)|데이터베이스 메일 외부 프로그램 및 관련 SQL Service Broker 큐를 중지합니다.|  

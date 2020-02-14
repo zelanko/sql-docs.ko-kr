@@ -19,10 +19,10 @@ ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 50938fe4f3be40f280340fff5bfbca23ac8b1b44
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71680987"
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>Integration Services(SSIS) 프로젝트 및 솔루션
@@ -68,7 +68,7 @@ ms.locfileid: "71680987"
   
  다음 표에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트에 표시되는 폴더에 대해 설명합니다.  
   
-|Folder|설명|  
+|폴더|Description|  
 |------------|-----------------|
 |연결 관리자|프로젝트 연결 관리자를 포함합니다. 자세한 내용은 [Integration Services(SSIS) 연결](../integration-services/connection-manager/integration-services-ssis-connections.md)을 참조하세요.|
 |[!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지|패키지가 포함됩니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 패키지](../integration-services/integration-services-ssis-packages.md)를 참조하세요.|  
@@ -109,7 +109,7 @@ ms.locfileid: "71680987"
   
      솔루션 이름은 프로젝트 이름과 일치하도록 자동으로 업데이트됩니다.  
   
-5.  솔루션 파일에 대한 별개의 폴더를 만들려면 **솔루션용 디렉터리 만들기**를 선택합니다. 이 옵션이 기본 옵션입니다.  
+5.  솔루션 파일에 대한 별개의 폴더를 만들려면 **솔루션용 디렉터리 만들기**를 선택합니다. 기본 옵션입니다.  
   
 6.  컴퓨터에 원본 제어 소프트웨어가 설치된 경우 **원본 제어에 추가**  를 선택하여 프로젝트와 원본 제어를 연결합니다.  
   

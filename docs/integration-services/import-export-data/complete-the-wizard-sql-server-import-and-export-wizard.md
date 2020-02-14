@@ -12,10 +12,10 @@ ms.assetid: fbf0aa37-fd9e-47e1-82b4-26c1359ec3da
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a945c51a5ba75c20a0925a4f548d98765379459b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296363"
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>마법사 완료(SQL Server 가져오기 및 내보내기 마법사)
@@ -41,6 +41,6 @@ ms.locfileid: "71296363"
 ## <a name="whats-next"></a>다음 단계  
  마법사에서 수행한 선택 항목을 검토하고 **마침**을 클릭한 후 다음 페이지는 **작업 수행**입니다. 이 페이지에는 이전 페이지에서 구성한 작업의 진행률 및 결과가 표시됩니다. 자세한 내용은 [작업 수행](../../integration-services/import-export-data/performing-operation-sql-server-import-and-export-wizard.md)을 참조하세요.
  
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [가져오기 및 내보내기 마법사의 이 간단한 예제로 시작](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 

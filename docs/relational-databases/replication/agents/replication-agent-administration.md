@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 93527accb44bd192e1468ea4176702173bf74114
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 43b3c6759f4ea213acf8bed789d67ff4952b4ae8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768220"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288162"
 ---
 # <a name="replication-agent-administration"></a>복제 에이전트 관리
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "68768220"
 |[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|snapshot.exe|  
 |[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|distrib.exe|  
 |[복제 로그 판독기 에이전트](../../../relational-databases/replication/agents/replication-log-reader-agent.md)|logread.exe|  
-|[복제 큐 판독기 에이전트](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|qrdrsvc.exe|  
+|[Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|qrdrsvc.exe|  
 |[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|replmerg.exe|  
   
  복제 에이전트뿐만 아니라 복제에서도 여러 작업을 통해 예약 유지 관리와 요청 시 유지 관리를 수행할 수 있습니다.  
@@ -87,7 +87,7 @@ ms.locfileid: "68768220"
 ## <a name="replication-maintenance-jobs"></a>복제 유지 관리 작업  
  복제는 다음 작업을 통해 예약 유지 관리와 요청 시 유지 관리를 수행합니다.  
   
-|정리 작업|설명|기본 일정|  
+|작업 정리|Description|기본 일정|  
 |------------------|-----------------|----------------------|  
 |에이전트 기록 정리: 배포|배포 데이터베이스에서 복제 에이전트 기록을 제거합니다.|10분마다 실행|  
 |배포 정리: 배포|배포 데이터베이스에서 복제된 트랜잭션을 제거합니다. |10분마다 실행|  

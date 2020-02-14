@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7ad26acc2f1e23b61e9692dcf2720d7ee6dd8639
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077815"
 ---
 # <a name="money-and-smallmoney-transact-sql"></a>money 및 smallmoney(Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68077815"
 
 통화 또는 통화 값을 나타내는 데이터 형식입니다.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 |데이터 형식|범위|스토리지|  
 |---|---|---|
@@ -49,7 +49,7 @@ ms.locfileid: "68077815"
   
 이러한 데이터 형식은 다음 통화 기호 중 하나를 사용합니다.
   
-![통화 기호, 16진수 값 표](../../t-sql/data-types/media/money01.gif "통화 기호, 16진수 값 표")
+![통화 기호, 16진수 값 테이블](../../t-sql/data-types/media/money01.gif "통화 기호, 16진수 값 테이블")
   
 통화 데이터는 작은따옴표로 묶지 않아도 됩니다. 통화 값 앞에 통화 기호를 붙일 수 있지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이 기호와 관련된 통화 정보를 저장하지 않으며 숫자 값만 저장합니다.
   
@@ -74,7 +74,7 @@ SM_MONEY VARCHAR               MONEY DECIMAL
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)
 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
 [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)

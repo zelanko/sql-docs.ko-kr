@@ -28,10 +28,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: b70035a1fc54d4b59978a3256b2ed3040ba4e8f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006512"
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE(Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68006512"
 
   현재 데이터베이스에 대한 라우팅 테이블에 새 경로를 추가합니다. 보내는 메시지에 대해 [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 로컬 데이터베이스의 라우팅 테이블을 확인하여 라우팅을 결정합니다. 전달할 메시지를 포함하여 다른 인스턴스에서 나오는 대화의 메시지의 경우 [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 **msdb**에서 경로를 확인합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -63,7 +63,7 @@ WITH
  AUTHORIZATION *owner_name*  
  지정한 데이터베이스 사용자 또는 역할로 경로의 소유자를 설정합니다. 현재 사용자가 **db_owner** 고정 데이터베이스 역할의 멤버이거나 **sysadmin** 고정 서버 역할의 멤버인 경우 *owner_name*은 유효한 사용자 또는 역할의 이름이 될 수 있습니다. 그렇지 않으면 *owner_name*은 현재 사용자 이름, 현재 사용자가 IMPERSONATE 권한을 갖는 사용자의 이름, 현재 사용자가 속해 있는 역할 이름 중 하나여야 합니다. 이 절을 생략하면 경로가 현재 사용자에 속합니다.  
   
- 의 모든 멘션을  
+ WITH  
  생성할 경로를 정의하는 절을 보여 줍니다.  
   
  SERVICE_NAME = **'** _service\_name_ **'**  
@@ -123,7 +123,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  MIRROR_ADDRESS가 지정된 경로에는 SERVICE_NAME 절 및 BROKER_INSTANCE 절을 지정해야 합니다. *next_hop_address*가 **‘LOCAL’** 또는 **‘TRANSPORT’** 로 지정된 경로에는 미러 주소가 지정되지 않을 수 있습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  경로를 저장하는 라우팅 테이블은 **sys.routes** 카탈로그 뷰를 통해 읽을 수 있는 메타데이터 테이블입니다. 이 카탈로그 뷰는 CREATE ROUTE, ALTER ROUTE 및 DROP ROUTE 문을 통해서만 업데이트할 수 있습니다.  
   
  기본적으로 각 사용자 데이터베이스의 라우팅 테이블에는 한 경로가 들어 있습니다. 이 경로의 이름은 **AutoCreatedLocal**입니다. 경로는 *next_hop_address*로 **‘LOCAL’** 을 지정하고 모든 서비스 이름 및 Broker 인스턴스 식별자와 일치합니다.  
@@ -141,7 +141,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-tcpip-route-by-using-a-dns-name"></a>1\. DNS 이름을 사용하여 TCP/IP 경로 만들기  
+### <a name="a-creating-a-tcpip-route-by-using-a-dns-name"></a>A. DNS 이름을 사용하여 TCP/IP 경로 만들기  
  다음 예에서는 `//Adventure-Works.com/Expenses` 서비스에 대한 경로를 만듭니다. 경로는 이 서비스에 대한 메시지가 TCP를 통해 DNS 이름 `1234`으로 식별되는 호스트의 포트 `www.Adventure-Works.com`로 이동되도록 지정합니다. 메시지 도착 시 대상 서버는 고유 식별자 `D8D4D268-00A3-4C62-8F91-634B89C1E315`로 식별되는 Broker 인스턴스로 메시지를 배달합니다.  
   
 ```  
@@ -152,7 +152,7 @@ CREATE ROUTE ExpenseRoute
     ADDRESS = 'TCP://www.Adventure-Works.com:1234' ;  
 ```  
   
-### <a name="b-creating-a-tcpip-route-by-using-a-netbios-name"></a>2\. NetBIOS 이름을 사용하여 TCP/IP 경로 만들기  
+### <a name="b-creating-a-tcpip-route-by-using-a-netbios-name"></a>B. NetBIOS 이름을 사용하여 TCP/IP 경로 만들기  
  다음 예에서는 `//Adventure-Works.com/Expenses` 서비스에 대한 경로를 만듭니다. 경로는 이 서비스에 대한 메시지가 TCP를 통해 NetBIOS 이름 `1234`로 식별되는 호스트의 포트 `SERVER02`로 이동되도록 지정합니다. 메시지 도착 시 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 고유 식별자 `D8D4D268-00A3-4C62-8F91-634B89C1E315`로 식별되는 데이터베이스 인스턴스로 메시지를 배달합니다.  
   
 ```  

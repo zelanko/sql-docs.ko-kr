@@ -23,10 +23,10 @@ ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 54badd0404ee5360aef4a7bc095c236e5b31f79d
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056470"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>관리 데이터 웨어하우스 구성(SQL Server Management Studio)
@@ -93,7 +93,7 @@ ms.locfileid: "74056470"
   
  로그인에 대한 **매핑** 확인란을 선택하여 로그인을 지정합니다.  
   
- **데이터베이스 역할 멤버 자격:** *\<데이터 웨어하우스 이름>*  
+ **데이터베이스 역할 멤버 자격:** ‘\<데이터 웨어하우스 이름>’   
  다음 중 하나 이상의 옵션 옆에 있는 확인란을 클릭하여 로그인이 매핑되는 관리 데이터 웨어하우스 역할을 선택합니다.  
   
 -   **mdw_admin**  
@@ -119,7 +119,7 @@ ms.locfileid: "74056470"
  **중지**  
  마법사 진행을 중지합니다.  
   
- **보고서**  
+ **Report**  
  데이터 컬렉션 구성에 대한 보고서를 표시합니다. 다음과 같은 보고서 옵션이 제공됩니다.  
   
 -   보고서 보기  

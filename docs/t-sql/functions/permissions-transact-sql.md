@@ -25,10 +25,10 @@ ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: fc38de8bffc09461dc69a24acf15ce143276422b
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843626"
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS(Transact-SQL)
@@ -36,9 +36,9 @@ ms.locfileid: "73843626"
 
   현재 사용자의 문, 개체 또는 열 사용 권한을 나타내는 비트맵이 포함된 값을 반환합니다.  
   
- **중요** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md) 및 [Has_Perms_By_Name](../../t-sql/functions/has-perms-by-name-transact-sql.md)을 사용하십시오. PERMISSIONS 함수를 계속 사용하면 성능이 저하될 수 있습니다.  
+ **중요** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신, [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md) 및 [Has_Perms_By_Name](../../t-sql/functions/has-perms-by-name-transact-sql.md)을 사용합니다. PERMISSIONS 함수를 계속 사용하면 성능이 저하될 수 있습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -57,7 +57,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
 ## <a name="return-types"></a>반환 형식  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  PERMISSIONS는 현재 사용자가 문을 실행하거나 다른 사용자에게 사용 권한을 부여할 수 있는 권한이 있는지 여부를 확인하는 데 사용할 수 있습니다.  
   
  사용 권한 정보는 32비트 비트맵으로 반환됩니다.  
@@ -80,7 +80,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
 |32|0x20|CREATE DEFAULT|  
 |64|0x40|BACKUP DATABASE|  
 |128|0x80|BACKUP LOG|  
-|256|0x100|예약됨|  
+|256|0x100|Reserved|  
   
  다음 표에서는 *objectid*만 지정한 경우 반환되는 개체 사용 권한에 사용되는 비트를 보여 줍니다.  
   
@@ -112,7 +112,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-the-permissions-function-with-statement-permissions"></a>1\. 문 사용 권한과 함께 PERMISSIONS 함수 사용  
+### <a name="a-using-the-permissions-function-with-statement-permissions"></a>A. 문 사용 권한과 함께 PERMISSIONS 함수 사용  
  다음 예는 현재 사용자가 `CREATE TABLE` 문을 실행할 수 있는지 여부를 확인합니다.  
   
 ```  
@@ -122,7 +122,7 @@ ELSE
    PRINT 'ERROR: The current user cannot create a table.';  
 ```  
   
-### <a name="b-using-the-permissions-function-with-object-permissions"></a>2\. 개체 사용 권한과 함께 PERMISSIONS 함수 사용  
+### <a name="b-using-the-permissions-function-with-object-permissions"></a>B. 개체 사용 권한과 함께 PERMISSIONS 함수 사용  
  다음 예에서는 현재 사용자가 `Address` 데이터베이스의 `AdventureWorks2012` 테이블에 데이터 행을 삽입할 수 있는지 여부를 확인합니다.  
   
 ```  

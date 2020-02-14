@@ -12,10 +12,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: e32c215050b8ee7ec74bee51f7330dbb793814cd
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73729867"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE(Azure SQL Data Warehouse)
@@ -187,7 +187,7 @@ CCI(클러스터형 columnstore 인덱스)는 Azure SQL Data Warehouse에서 테
  `datetime2` [ ( *n* ) ]  
 소수 자릿수 초 숫자를 지정할 수 있다는 점 외에는 `datetime`과 동일합니다. *n*의 기본값은 `7`입니다.  
   
-|*n* 값|전체 자릿수|소수 자릿수|  
+|*n* 값|자릿수|확장|  
 |--:|--:|-:|  
 |`0`|19|0|  
 |`1`|21|1|  
@@ -213,12 +213,12 @@ CCI(클러스터형 columnstore 인덱스)는 Azure SQL Data Warehouse에서 테
  `float` [ ( *n* ) ]  
  부동 소수점 숫자 데이터에 사용하는 근사 숫자 데이터 형식입니다. 부동 소수점 데이터는 근사값이므로 해당 데이터 형식 범위에 있는 모든 값을 정확하게 표현할 수는 없습니다. *n*은 과학적 표기법으로 `float`의 가수를 저장하는 데 사용되는 비트 수를 지정합니다. *n*은 전체 자릿수 및 스토리지 크기를 결정합니다. *n*이 지정된 경우 그 값은 `1`에서 `53` 사이여야 합니다. *n*의 기본값은 `53`입니다.  
   
-| *n* 값 | 전체 자릿수 | 스토리지 크기 |  
+| *n* 값 | 자릿수 | 스토리지 크기 |  
 | --------: | --------: | -----------: |  
 | 1-24   | 7자리  | 4바이트      |  
 | 25-53  | 15자리 | 8바이트      |  
   
- [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서는 *n*을 가능한 두 값 중 하나로 처리합니다. `1`<= *n* <= `24`이면 *n*은 `24`로 처리됩니다. `25` <= *n* <= `53`이면 *n*은 `53`으로 처리됩니다.  
+ [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서는 *n*을 가능한 두 값 중 하나로 처리합니다. `1`<= *n* <= `24`이면 *n*은 `24`으로 처리됩니다. `25` <= *n* <= `53`이면 *n*은 `53`으로 처리됩니다.  
   
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] `float` 데이터 형식은 `1`부터 `53`까지의 모든 *n* 값에 대해 ISO 표준을 준수합니다. 배정밀도의 동의어는 `float(53)`입니다.  
   
@@ -234,7 +234,7 @@ CCI(클러스터형 columnstore 인덱스)는 Azure SQL Data Warehouse에서 테
  *scale*  
  소수점 오른쪽에 저장할 수 있는 10진수의 최대 수입니다. *Scale* 값은 `0`에서 *precision* 사이여야 합니다. *precision*이 지정된 경우 *scale*만 지정할 수 있습니다 기본 비율은 `0`이므로 `0` <= *scale* <= *precision*입니다. 전체 자릿수에 따라 최대 스토리지 크기가 달라집니다.  
   
-| 전체 자릿수 | 스토리지 크기(바이트)  |  
+| 자릿수 | 스토리지 크기(바이트)  |  
 | ---------: |-------------: |  
 |  1-9       |             5 |  
 | 10-19      |             9 |  
@@ -583,7 +583,7 @@ WITH
 ```  
   
 <a name="SeeAlso"></a>
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
  
 [CREATE TABLE AS SELECT&#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
 [DROP TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   

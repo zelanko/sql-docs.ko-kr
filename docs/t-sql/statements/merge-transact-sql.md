@@ -25,10 +25,10 @@ ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0a49bef9dc75beea0e098908362f198b60a8b92c
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71680834"
 ---
 # <a name="merge-transact-sql"></a>MERGE(Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "71680834"
 
 원본 테이블과의 조인 결과를 기반으로 대상 테이블에서 삽입, 업데이트 또는 삭제 작업을 실행합니다. 예를 들어 원본 테이블과의 차이점에 따라 대상 테이블에서 행을 삽입, 업데이트 및 삭제하여 두 테이블을 동기화합니다.  
   
-**성능 팁:** MERGE 문에 대해 설명된 조건부 동작은 두 테이블에 일치하는 특성이 복합적으로 혼합되어 있는 경우 가장 효과적입니다. 예를 들어, 행이 없는 경우 행을 삽입하고 행이 일치하지 않는 경우 행을 업데이트합니다. 다른 테이블의 행을 기반으로 한 테이블을 단순히 업데이트하는 경우 기본 INSERT, UPDATE 및 DELETE 문을 사용하여 성능 및 확장성을 향상합니다. 예를 들어  
+**성능 팁:** MERGE 문에 대해 설명된 조건부 동작은 두 테이블에 일치하는 특성이 복합적으로 혼합되어 있는 경우 가장 효과적입니다. 예를 들어, 행이 없는 경우 행을 삽입하고 행이 일치하지 않는 경우 행을 업데이트합니다. 다른 테이블의 행을 기반으로 한 테이블을 단순히 업데이트하는 경우 기본 INSERT, UPDATE 및 DELETE 문을 사용하여 성능 및 확장성을 향상합니다. 다음은 그 예입니다.  
   
 ```sql
 INSERT tbl_A (col, col2)  
@@ -46,7 +46,7 @@ FROM tbl_B
 WHERE NOT EXISTS (SELECT col FROM tbl_A A2 WHERE A2.col = tbl_B.col);  
 ```  
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -285,7 +285,7 @@ DEFAULT VALUES
 \<그래프 검색 패턴>  
 그래프 일치 패턴을 지정합니다. 이 절의 인수에 대한 자세한 내용은 [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)을 참조하세요.
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 세 개의 MATCHED 절 중 최소한 하나를 지정해야 하지만 임의의 순서로 지정할 수 있습니다. 변수는 동일한 MATCHED 절에서 두 번 이상 업데이트할 수 없습니다.  
   
@@ -317,21 +317,21 @@ MERGE 문에 지정된 모든 삽입, 업데이트 또는 삭제 동작에 대�
 
 MERGE 문을 사용하면 여러 개의 개별 DML 문을 단일 문으로 대체할 수 있습니다. 이렇게 하면 작업이 하나의 문 내에서 수행되므로 원본 및 대상 테이블의 데이터가 처리되는 횟수가 최소화되어 쿼리 성능이 향상됩니다. 단, 성능 향상을 위해서는 인덱스, 조인 및 기타 고려 사항이 올바르게 설정되어야 합니다.
 
-### <a name="index-best-practices"></a>인덱스 모범 사례
+### <a name="index-best-practices"></a>인덱스를 위한 최선의 방법
 
 MERGE 문의 성능을 높이려면 다음 인덱스 지침을 따르는 것이 좋습니다.
 
 - 원본 테이블의 조인 열에 고유한 포함 인덱스를 만듭니다.
 - 대상 테이블의 조인 열에 고유한 클러스터형 인덱스를 만듭니다.
 
-이러한 인덱스를 통해 조인 키의 고유성을 확보하고 테이블의 데이터가 정렬되도록 할 수 있습니다. 쿼리 최적화 프로그램이 중복 행을 찾아 업데이트하기 위해 별도로 유효성 검사를 수행할 필요가 없고 추가 정렬 작업도 필요하지 않으므로 쿼리 성능이 개선됩니다.
+이러한 인덱스를 통해 조인 키의 고유성을 확보하고 테이블의 데이터가 정렬되도록 할 수 있습니다. 쿼리 최적화 프로그램이 중복 행을 찾아 업데이트하기 위해 별도로 유효성 검사를 수행할 필요가 없고 추가 정렬 작업도 필요 없으므로 쿼리 성능이 개선됩니다.
 
-### <a name="join-best-practices"></a>JOIN 모범 사례
+### <a name="join-best-practices"></a>JOIN을 위한 최선의 방법
 
 MERGE 문의 성능을 높이고 정확한 결과를 얻으려면 다음 조인 지침을 따르는 것이 좋습니다.
 
 - ON <merge_search_condition> 절에는 원본 및 대상 테이블의 데이터 비교를 위한 조건을 나타내는 검색 조건만 지정합니다. 즉, 대상 테이블에서 원본 테이블의 해당 열과 비교할 열만 지정해야 합니다. 
-- 다른 값(예: 상수)에 대한 비교는 포함하지 않습니다.
+- 상수와 같은 다른 값에 대한 비교는 포함하지 않습니다.
 
 원본 또는 대상 테이블에서 행을 필터링하려면 다음 방법 중 하나를 사용합니다.
 
@@ -341,9 +341,9 @@ MERGE 문의 성능을 높이고 정확한 결과를 얻으려면 다음 조인 
 
 MERGE 문의 조인 작업은 SELECT 문의 조인과 동일한 방식으로 최적화됩니다. 즉, SQL Server에서 조인을 처리할 때 쿼리 최적화 프로그램은 여러 가지 가능한 방법 중 가장 효율적인 방법을 선택합니다. 원본 및 대상의 크기가 비슷하고 ‘인덱스를 위한 최선의 방법’ 섹션에 설명된 인덱스 지침을 원본 및 대상 테이블에 적용한 경우 병합 조인 연산자가 가장 효율적인 쿼리 계획입니다. 두 테이블 모두 한 번만 검색되고 데이터를 정렬할 필요가 없기 때문입니다. 원본 테이블이 대상 테이블보다 작은 경우 중첩 루프 연산자가 좋습니다.
 
-MERGE 문에서 `OPTION (<query_hint>)` 절을 지정하여 특정 조인을 사용하도록 강제 적용할 수 있습니다. 해시 조인은 인덱스를 사용하지 않으므로 MERGE 문에 대한 쿼리 힌트로는 사용하지 않는 것이 좋습니다.
+MERGE 문에서 `OPTION (<query_hint>)` 절을 지정하여 특정 조인을 사용하도록 강제할 수 있습니다. 해시 조인은 인덱스를 사용하지 않으므로 MERGE 문에 대한 쿼리 힌트로는 사용하지 않는 것이 좋습니다.
 
-### <a name="parameterization-best-practices"></a>매개 변수화 모범 사례
+### <a name="parameterization-best-practices"></a>매개 변수화를 위한 최선의 방법
 
 SELECT, INSERT, UPDATE 또는 DELETE 문이 매개 변수 없이 실행되는 경우 SQL Server 쿼리 최적화 프로그램은 내부적으로 문을 매개 변수화하는 방법을 선택할 수 있습니다. 즉, 쿼리에 포함된 모든 리터럴 값이 매개 변수로 대체됩니다. 예를 들어 INSERT dbo.MyTable (Col1, Col2) VALUES (1, 10) 문은 내부적으로 INSERT dbo.MyTable (Col1, Col2) VALUES (@p1, @p2)로 구현될 수 있습니다. 단순 매개 변수화라고 하는 이 프로세스는 새 SQL 문을 이전에 컴파일된 기존의 실행 계획과 비교하는 관계형 엔진의 기능을 개선합니다. 쿼리 컴파일 및 다시 컴파일 빈도가 낮아지므로 쿼리 성능이 개선될 수 있습니다. 쿼리 최적화 프로그램은 MERGE 문에 단순 매개 변수화 프로세스를 적용하지 않습니다. 따라서 리터럴 값을 포함하는 MERGE 문의 경우 MERGE 문이 실행될 때마다 새 계획이 컴파일되므로 개별 INSERT, UPDATE 또는 DELETE 문보다 성능이 떨어집니다.
 
@@ -353,28 +353,28 @@ SELECT, INSERT, UPDATE 또는 DELETE 문이 매개 변수 없이 실행되는 �
 - 문을 매개 변수화할 수 없는 경우 `TEMPLATE` 형식의 계획 지침을 만들고 `PARAMETERIZATION FORCED` 쿼리 힌트를 이 계획 지침에 지정합니다.
 - MERGE 문이 데이터베이스에서 자주 실행되는 경우 데이터베이스의 PARAMETERIZATION 옵션을 FORCED로 설정하는 것이 좋습니다. 이 옵션을 설정할 때는 신중해야 합니다. `PARAMETERIZATION` 옵션은 데이터베이스 수준 설정이므로 데이터베이스에 대한 모든 쿼리의 처리 방식에 영향을 미칩니다.
 
-### <a name="top-clause-best-practices"></a>TOP 절 모범 사례
+### <a name="top-clause-best-practices"></a>TOP 절을 위한 최선의 방법
 
-MERGE 문에서 TOP 절은 원본 테이블과 대상 테이블이 조인되고 삽입, 업데이트 또는 삭제 동작에 적합하지 않은 행이 제거된 후에 영향을 받는 행의 개수나 비율을 지정합니다. TOP 절은 조인된 행 수를 지정된 값으로 더 줄이며 삽입, 업데이트 또는 삭제 동작은 나머지 조인된 행에 순서 없이 적용됩니다. 즉, 행은 WHEN 절에 정의된 동작에 순서 없이 분산됩니다. 예를 들어 TOP (10)을 지정하면 10개 행이 영향을 받습니다. 이 10개의 행 중 7개가 업데이트되고 3개가 삽입되거나, 1개가 삭제되고 5개가 업데이트되고 4개가 삽입될 수 있습니다.
+MERGE 문에서 TOP 절은 원본 테이블과 대상 테이블이 조인되고 삽입, 업데이트 또는 삭제 동작에 적합하지 않은 행이 제거된 후에 영향을 받는 행의 개수나 비율을 지정합니다. TOP 절은 조인된 행 수를 지정된 값으로 더 줄이며, 삽입, 업데이트 또는 삭제 동작은 나머지 조인된 행에 순서 없이 적용됩니다. 즉, 행은 WHEN 절에 정의된 동작에 순서 없이 분산됩니다. 예를 들어 TOP (10)을 지정하면 10개 행이 영향을 받습니다. 이 10개의 행 중 7개가 업데이트되고 3개가 삽입되거나, 1개가 삭제되고 5개가 업데이트되고 4개가 삽입될 수 있습니다.
 
 일반적으로 TOP 절을 사용하여 큰 테이블에서 일괄 처리로 DML(데이터 조작 언어) 작업을 수행합니다. MERGE 문에서 TOP 절을 이러한 용도로 사용하는 경우 다음 내용을 알고 있어야 합니다.
 
 - I/O 성능이 영향을 받을 수 있습니다.
 
-  MERGE 문은 원본 테이블과 대상 테이블 모두에서 전체 테이블 검색을 수행합니다. 작업을 여러 일괄 처리로 나누면 일괄 처리 하나당 수행되는 쓰기 작업의 수를 줄일 수 있지만 각 일괄 처리에서는 원본 테이블과 대상 테이블에서 전체 테이블 검색을 수행합니다. 그 결과 읽기 활동이 쿼리의 성능에 영향을 줄 수 있습니다.
+  MERGE 문은 원본 테이블과 대상 테이블 모두에서 전체 테이블 검색을 수행합니다. 작업을 여러 일괄 처리로 나누면 일괄 처리 하나당 수행되는 쓰기 작업의 수를 줄일 수 있지만 각 일괄 처리에서는 원본 테이블과 대상 테이블에서 전체 테이블 검색을 수행합니다. 그 결과 읽기 작업이 쿼리의 성능에 영향을 줄 수 있습니다.
 
 - 잘못된 결과가 발생할 수 있습니다.
 
   연속된 모든 일괄 처리는 새로운 행을 대상으로 해야 합니다. 그렇지 않은 경우 대상 테이블에 중복 행을 잘못 삽입하는 등의 원하지 않는 동작이 발생할 수 있습니다. 이러한 현상은 대상 일괄 처리에는 없었지만 전체 대상 테이블에는 있었던 행이 원본 테이블에 포함되는 경우 발생할 수 있습니다.
 
-- 정확한 결과를 보장하려면 다음을 수행합니다.
+- 정확한 결과를 보장하려면
 
   - ON 절을 사용하여 기존 대상 행에 영향을 미치는 원본 행과 완전히 새로운 행을 확인합니다.
   - WHEN MATCHED 절에 추가 조건을 사용하여 이전 일괄 처리에 의해 대상 행이 이미 업데이트되었는지 여부를 확인합니다.
 
 TOP 절은 이러한 절이 적용된 후에 적용되므로 문을 실행할 때마다 하나의 완전히 일치하지 않는 행이 삽입되거나 하나의 기존 행이 업데이트됩니다.
 
-### <a name="bulk-load-best-practices"></a>대량 로드 모범 사례
+### <a name="bulk-load-best-practices"></a>대량 로드를 위한 최선의 방법
 
 MERGE 문을 사용하여 `OPENROWSET(BULK…)` 절을 테이블 원본으로 지정하면 원본 데이터 파일의 데이터를 대상 테이블로 효율적으로 대량 로드할 수 있습니다. 이렇게 하면 전체 파일이 하나의 일괄 처리에서 처리됩니다.
 
@@ -397,7 +397,7 @@ MERGE 문을 사용하여 `OPENROWSET(BULK…)` 절을 테이블 원본으로 �
 
 ## <a name="examples"></a>예  
 
-### <a name="a-using-merge-to-do-insert-and-update-operations-on-a-table-in-a-single-statement"></a>1\. MERGE를 사용하여 단일 문에서 테이블에 INSERT 및 UPDATE 작업 수행
+### <a name="a-using-merge-to-do-insert-and-update-operations-on-a-table-in-a-single-statement"></a>A. MERGE를 사용하여 단일 문에서 테이블에 INSERT 및 UPDATE 작업 수행
 
 일반적인 시나리오에서는 일치하는 행이 있으면 테이블에서 하나 이상의 열을 업데이트합니다. 또는 일치하는 행이 없으면 새 행으로 데이터를 테이블에 삽입합니다. 일반적으로 해당하는 UPDATE 및 INSERT 문이 포함된 저장 프로시저에 매개 변수를 전달하여 하나의 시나리오를 수행합니다. MERGE 문으로 단일 문에서 두 태스크를 수행할 수 있습니다. 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]데이터베이스에서 INSERT 문과 UPDATE 문이 모두 포함된 저장 프로시저를 보여 줍니다. 해당 프로시저는 단일 MERGE 문을 사용하여 동일한 작업을 실행하기 위해 수정됩니다.  
   
@@ -470,7 +470,7 @@ DROP TABLE #MyTempTable;
 GO  
 ```  
   
-### <a name="b-using-merge-to-do-update-and-delete-operations-on-a-table-in-a-single-statement"></a>2\. MERGE를 사용하여 단일 문에서 테이블에 UPDATE 및 DELETE 작업 수행
+### <a name="b-using-merge-to-do-update-and-delete-operations-on-a-table-in-a-single-statement"></a>B. MERGE를 사용하여 단일 문에서 테이블에 UPDATE 및 DELETE 작업 수행
 
 다음 예에서는 MERGE를 사용하여 `ProductInventory` 테이블의 처리된 주문을 기반으로 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 예제 데이터베이스의 `SalesOrderDetail` 테이블을 매일 업데이트합니다. `Quantity` 테이블의 `ProductInventory` 열은 `SalesOrderDetail` 테이블에서 매일 제품별로 접수되는 주문의 수를 빼는 방식으로 업데이트됩니다. 제품에 대한 주문 수로 인해 제품의 재고 수준이 0 이하로 떨어지면 해당 제품에 대한 행이 `ProductInventory` 테이블에서 삭제됩니다.  
   

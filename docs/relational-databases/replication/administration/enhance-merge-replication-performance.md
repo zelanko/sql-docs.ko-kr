@@ -20,10 +20,10 @@ ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 261f22847c8b397d57ff5f732ea4d97091895daa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67939208"
 ---
 # <a name="enhance-merge-replication-performance"></a>병합 복제 성능 향상
@@ -34,7 +34,7 @@ ms.locfileid: "67939208"
   
 -   행 필터 및 조인 필터에 사용된 열을 인덱싱합니다.  
   
-     게시된 아티클에 행 필터를 사용하는 경우 필터의 WHERE 절에 사용되는 각 열에 인덱스를 만듭니다. 인덱스가 없으면 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 테이블의 각 행을 읽은 후 해당 행을 파티션에 포함할 것인지 여부를 결정합니다. 인덱스가 있다면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 어떤 행을 포함해야 하는지를 빨리 찾을 수 있습니다. 복제가 인덱스에서만 필터의 WHERE 절을 모두 확인하면 가장 빠른 처리가 이루어집니다.  
+     게시된 아티클에 행 필터를 사용하는 경우 필터의 WHERE 절에 사용되는 각 열에 인덱스를 만듭니다. 인덱스가 없으면 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 테이블의 각 행을 읽은 후 해당 행을 파티션에 포함할 것인지 아닌지를 결정합니다. 인덱스가 있다면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 어떤 행을 포함해야 하는지를 빨리 찾을 수 있습니다. 복제가 인덱스에서만 필터의 WHERE 절을 모두 확인하면 가장 빠른 처리가 이루어집니다.  
   
      조인 필터에 사용되는 모든 열에 인덱스를 만드는 것도 중요합니다. 병합 에이전트는 실행될 때마다 기본 테이블의 어떤 열과 관련 테이블의 어떤 열을 파티션에 포함할 것인지를 결정하기 위해 부모 테이블을 검색합니다. 조인된 열에 인덱스를 만들면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 병합 에이전트가 실행될 때마다 테이블의 각 행을 읽지 않아도 됩니다.  
   
@@ -64,11 +64,11 @@ ms.locfileid: "67939208"
   
 -   매개 변수가 있는 필터와 함께 사전 계산 파티션을 사용합니다. 이 기능은 기본적으로 사용됩니다. 자세한 내용은 [사전 계산 파티션으로 매개 변수가 있는 필터 성능 최적화](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)를 참조하세요.  
   
-     사전 계산 파티션은 여러 가지 필터링 동작을 제한합니다. 애플리케이션이 이러한 제한 사항을 따를 수 없는 경우 **keep_partition_changes** 옵션을 **True**로 설정하면 성능상 이점이 있습니다. 자세한 내용은 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하세요.  
+     사전 계산 파티션은 여러 가지 필터링 동작을 제한합니다. 애플리케이션이 이러한 제한 사항을 따를 수 없는 경우 **keep_partition_changes** 옵션을 **True**로 설정하면 성능상 이점이 있습니다. 자세한 내용은 [매개 변수가 있는 행 필터](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  
   
 -   데이터가 필터링되었지만 사용자 간에 공유되지 않으면 겹치지 않는 파티션을 사용합니다.  
   
-     복제에서는 파티션 또는 구독 간에 공유되지 않는 데이터의 성능을 최적화할 수 있습니다. 자세한 내용은 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하세요.  
+     복제에서는 파티션 또는 구독 간에 공유되지 않는 데이터의 성능을 최적화할 수 있습니다. 자세한 내용은 [매개 변수가 있는 행 필터](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  
   
 -   복잡한 조인 필터 계층을 만들지 않습니다.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "67939208"
   
 -   구독이 빠른 연결을 통해 동기화되고 게시자에서 구독자로 변경 내용이 전송되면 병합 에이전트에 대해 **–ParallelUploadDownload** 매개 변수를 사용합니다.  
   
-     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 에서는 새로운 병합 에이전트 매개 변수인 **–ParallelUploadDownload**가 도입되었습니다. 이 매개 변수를 설정하면 병합 에이전트가 게시자로 업로드되는 변경 내용과 구독자로 다운로드되는 변경 내용을 병렬로 처리할 수 있습니다. 이것은 네트워크 대역폭이 높은 대규모 환경에서 유용합니다. 에이전트 프로필 및 명령줄에서 에이전트 매개 변수를 지정할 수 있습니다. 참조 항목:  
+     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 에서는 새로운 병합 에이전트 매개 변수인 **–ParallelUploadDownload**가 도입되었습니다. 이 매개 변수를 설정하면 병합 에이전트가 게시자로 업로드되는 변경 내용과 구독자로 다운로드되는 변경 내용을 병렬로 처리할 수 있습니다. 이것은 네트워크 대역폭이 높은 대규모 환경에서 유용합니다. 에이전트 프로필 및 명령줄에서 에이전트 매개 변수를 지정할 수 있습니다. 자세한 내용은 다음을 참조하세요.  
   
     -   [복제 에이전트 프로필 작업](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 86bdd12d5dabd7ad74662cd47b2004594328a6c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 12af8c813fd61b4f4c9040d72e19173ef810e80f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048144"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909793"
 ---
 # <a name="with-xmlnamespaces"></a>WITH XMLNAMESPACES
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68048144"
   하나 이상의 XML 네임스페이스를 선언합니다.  
   
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -67,7 +67,7 @@ DEFAULT <xml_namespace_uri>
  *xml_namespace_prefix*  
  *xml_namespace_uri*에 지정된 네임스페이스 URI 값과 매핑하여 연결할 접두어를 지정합니다. *xml_namespace_prefix*는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자이어야 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  공통 테이블 식이 포함된 문에 WITH XMLNAMESPACES 절을 사용하는 경우 문에서 WITH XMLNAMESPACES 절이 공통 테이블 식 앞에 와야 합니다.  
   
  다음은 WITH XMLNAMESPACES 절을 사용할 때 적용되는 일반 구문 규칙입니다.  
@@ -86,7 +86,7 @@ DEFAULT <xml_namespace_uri>
   
 -   XML 네임스페이스 접두어 `xsi`는 쿼리에서 ELEMENTS XSINIL 지시어를 사용하고 있는 경우 다시 선언할 수 없습니다.  
 
--   xsi 표준 네임스페이스를 사용하기 위해 'http://www.w3.org/2001/XMLSchema-instance '를 선언할 필요는 없습니다. 지정되지 않은 경우 XML/XPATH 프로세서에 의해 암시적으로 추가되며 xpath 식은 xml 문서에서 'http://www.w3.org/2001/XMLSchema-instance ' 스키마가 올바르게 선언되어 있는 한 xsi 접두사를 사용할 수 있습니다.
+-   xsi 표준 네임스페이스를 사용하기 위해 ‘ http://www.w3.org/2001/XMLSchema-instance ’를 선언할 필요는 없습니다. 지정되지 않은 경우 XML/XPATH 프로세서에 의해 암시적으로 추가되며 xpath 식은 xml 문서에서 'http://www.w3.org/2001/XMLSchema-instance ' 스키마가 올바르게 선언되어 있는 한 xsi 접두사를 사용할 수 있습니다.
 
 -   URI 문자열 값은 현재 데이터베이스 데이터 정렬 코드 페이지에 따라 인코딩되며 내부적으로 유니코드로 변환됩니다.  
   

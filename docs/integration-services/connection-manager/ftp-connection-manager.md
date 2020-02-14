@@ -17,10 +17,10 @@ ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0f1380370862b735e00799cbcb6a9ba46d69fd3f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294421"
 ---
 # <a name="ftp-connection-manager"></a>FTP 연결 관리자
@@ -28,7 +28,7 @@ ms.locfileid: "71294421"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  FTP 연결 관리자를 사용하면 패키지에서 FTP(파일 전송 프로토콜) 서버에 연결할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에 포함된 FTP 태스크에서는 이 연결 관리자가 사용됩니다.  
+  FTP 연결 관리자를 사용하면 패키지에서 FTP(파일 전송 프로토콜) 서버에 연결할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 포함된 FTP 태스크에서는 이 연결 관리자가 사용됩니다.  
   
  패키지에 FTP 연결 관리자를 추가하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 런타임에 FTP 연결로 확인되는 연결 관리자를 만들고, 연결 관리자 속성을 설정하고, 연결 관리자를 패키지의 **Connections** 컬렉션에 추가합니다.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "71294421"
  **서버 포트**  
  연결에 사용할 FTP 서버의 포트 번호를 지정합니다. 이 속성의 기본값은 **21**입니다.  
   
- **User name**  
+ **사용자 이름**  
  FTP 서버에 액세스하기 위한 사용자 이름을 제공합니다. 이 속성의 기본값은 **anonymous**입니다.  
   
  **암호**  
@@ -90,7 +90,7 @@ ms.locfileid: "71294421"
  **Passive 모드 사용**  
  서버가 연결을 시작하는지 또는 클라이언트가 연결을 시작하는지 지정합니다. 서버는 Active 모드로 연결을 시작하고 클라이언트는 Passive 모드로 연결을 활성화합니다. 이 속성의 기본값은 **active mode**입니다.  
   
- **다시 시도**  
+ **재시도**  
  태스크가 연결하려고 하는 횟수를 지정합니다. 값 **0** 은 시도 횟수에 제한이 없다는 것을 나타냅니다.  
   
  **청크 크기(KB)**  

@@ -25,10 +25,10 @@ ms.assetid: 072bc4b8-363a-4131-87c3-240338e2fa5c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 565252bee563fc0808a5ada6b515606c35f42187
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296957"
 ---
 # <a name="extending-the-data-flow-with-the-script-component"></a>스크립트 구성 요소를 사용하여 데이터 흐름 확장
@@ -51,7 +51,7 @@ ms.locfileid: "71296957"
  **스크립트 변환 편집기**에서 구성하는 속성은 스크립트 구성 요소 코드의 기능과 성능에 영향을 줍니다.  
   
  [스크립트 구성 요소 코딩 및 디버깅](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)  
- 스크립트 구성 요소에 포함되는 스크립트를 개발하려면 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] VSTA(Tools for Applications) 개발 환경을 사용합니다.  
+ 스크립트 구성 요소에 포함되는 스크립트를 개발하려면 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] VSTA([!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications) 개발 환경을 사용합니다.  
   
  [스크립트 구성 요소 개체 모델 이해](../../../integration-services/extending-packages-scripting/data-flow-script-component/understanding-the-script-component-object-model.md)  
  새 스크립트 구성 요소 프로젝트에는 몇 개의 클래스와 자동 생성된 속성 및 메서드가 있는 세 개의 프로젝트 항목이 포함됩니다.  

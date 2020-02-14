@@ -21,10 +21,10 @@ ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f540278d8f27eb091d4818f838d069c82a61159c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296220"
 ---
 # <a name="integration-services-programming-overview"></a>Integration Services 프로그래밍 개요
@@ -56,7 +56,7 @@ ms.locfileid: "71296220"
 > [!IMPORTANT]  
 >  기본적으로 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]와 함께 설치되지만 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK는 설치되지 않습니다. 컴퓨터에 SDK가 설치되지 않아 SDK 설명서가 온라인 설명서 컬렉션에 포함되어 있지 않을 경우 이 섹션의 SDK 내용에 대한 링크가 작동하지 않습니다. [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK를 설치한 후 [SQL Server 제품 설명서 추가 또는 제거](https://msdn.microsoft.com/library/ef798cc8-87cf-4d60-a7bf-9e061bdd0052)의 지침에 따라 온라인 설명서 컬렉션과 목차에 SDK 설명서를 추가할 수 있습니다.  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 스크립트 태스크와 스크립트 구성 요소에서는 VSTA([!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications)를 포함된 스크립팅 환경으로 사용합니다. VSTA는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Basic 및 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual C#을 지원합니다.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 스크립트 태스크와 스크립트 구성 요소에서는 [!INCLUDE[msCoName](../includes/msconame-md.md)] VSTA([!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications)를 포함된 스크립팅 환경으로 사용합니다. VSTA는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Basic 및 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual C#을 지원합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 응용 프로그래밍 인터페이스는 VBScript 같은 COM 기반 스크립팅 언어와 호환되지 않습니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "71296220"
 ## <a name="commonly-used-assemblies"></a>일반적으로 사용되는 어셈블리  
  다음 표에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]를 사용하여 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]를 프로그래밍할 때 자주 사용되는 어셈블리에 대해 설명합니다.  
   
-|어셈블리|설명|  
+|어셈블리|Description|  
 |--------------|-----------------|  
 |Microsoft.SqlServer.ManagedDTS.dll|관리되는 런타임 엔진을 포함합니다.|  
 |Microsoft.SqlServer.RuntimeWrapper.dll|네이티브 런타임 엔진에 대한 PIA(주 interop 어셈블리) 또는 래퍼를 포함합니다.|  

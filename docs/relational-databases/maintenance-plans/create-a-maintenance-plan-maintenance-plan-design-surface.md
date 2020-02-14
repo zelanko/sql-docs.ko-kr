@@ -13,10 +13,10 @@ ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 892c1dd28eb482eac046016c5cb59b3d711387c8
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055175"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>유지 관리 계획 만들기(유지 관리 계획 디자인 화면)
@@ -43,7 +43,7 @@ ms.locfileid: "74055175"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  유지 관리 계획을 만들거나 관리하려면 **sysadmin** 고정 서버 역할의 멤버여야 합니다. 개체 탐색기에 **sysadmin** 고정 서버 역할의 멤버인 사용자에 대한 **유지 관리 계획** 노드만 표시됩니다.  
   
 ##  <a name="SSMSProcedure"></a> 유지 관리 계획 디자인 화면 사용  
@@ -56,7 +56,7 @@ ms.locfileid: "74055175"
   
 3.  **유지 관리 계획** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 유지 관리 계획**을 선택합니다.  
   
-4.  **새 유지 관리 계획** 대화 상자의 **이름** 상자에 계획의 이름을 입력하고 **확인**을 클릭합니다. 이렇게 하면 도구 상자가 열리고 주 표에서 만든 하위 계획 *[디자인]* **maintenance_plan_name**  **[디자인]** 화면이 열립니다.  
+4.  **새 유지 관리 계획** 대화 상자의 **이름** 상자에 계획의 이름을 입력하고 **확인**을 클릭합니다. 이렇게 하면 주 그리드에서 만든 **Subplan_1** 하위 계획이 있는 *maintenance_plan_name* **[Design]** 화면과 도구 상자가 열립니다.  
   
      다음 옵션은 디자인 화면의 헤더에서 사용할 수 있습니다.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "74055175"
          **식**  
          **식**, **식 및 제약 조건**또는 **식 또는 제약 조건**작업을 사용하는 경우 식을 입력합니다. 식은 부울로 계산되어야 합니다.  
   
-         **테스트**  
+         **Test**  
          식의 유효성을 검사합니다.  
   
          **여러 제약 조건**  
@@ -242,7 +242,7 @@ ms.locfileid: "74055175"
      **새로 고침**  
      선택한 로그의 뷰를 새로 고칩니다. **새로 고침** 단추를 누르면 필터 설정을 적용하는 동안 대상 서버에서 선택한 로그를 다시 읽습니다.  
   
-     **필터**  
+     **Filter**  
      **연결**, **날짜**또는 기타 **일반** 필터 조건과 같이 로그 파일 필터링에 사용되는 설정을 지정할 수 있는 대화 상자를 엽니다.  
   
      **검색**  

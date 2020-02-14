@@ -20,10 +20,10 @@ ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2830c7ae4166ee0b71b1ddfb9de953c57be2452d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982694"
 ---
 # <a name="create-resource-pool-transact-sql"></a>CREATE RESOURCE POOL(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "73982694"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 리소스 관리자 리소스 풀을 만듭니다. 리소스 풀은 데이터베이스 엔진 인스턴스의 물리적 리소스(메모리, CPU 및 IO)의 하위 집합을 나타냅니다. 데이터베이스 관리자는 리소스 관리자를 사용하여 서버 리소스를 최대 64개의 리소스 풀에 배치할 수 있습니다. 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서는 리소스 관리자를 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>구문  
 ```  
@@ -81,9 +81,9 @@ AFFINITY {SCHEDULER = AUTO | ( \<scheduler_range_spec> ) | NUMANODE = (\<NUMA_no
   
 리소스 풀을 특정 스케줄러에 연결합니다. 기본값은 AUTO입니다.  
   
-AFFINITY SCHEDULER = **(** \<scheduler_range_spec> **)** 은 리소스 풀을 지정된 ID로 식별된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 일정에 매핑합니다. 이러한 ID는 [sys.dm_os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)의 scheduler_id 열에 있는 값에 매핑됩니다. 
+AFFINITY SCHEDULER = **(** \<scheduler_range_spec> **)** 은 리소스 풀을 지정된 ID로 확인된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 일정에 매핑합니다. 이러한 ID는 [sys.dm_os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)의 scheduler_id 열에 있는 값에 매핑됩니다. 
   
-AFFINITY NUMANODE = AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)** 을 사용하면 리소스 풀의 선호도가 지정된 NUMA 노드 또는 노드 범위에 해당하는 물리적 CPU에 매핑되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스케줄러로 설정됩니다. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 사용하여 물리적 NUMA 구성과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스케줄러 ID 간의 매핑을 검색할 수 있습니다. 
+AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)** 을 사용하면 리소스 풀의 선호도가 지정된 NUMA 노드 또는 노드 범위에 해당하는 물리적 CPU에 매핑되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스케줄러로 설정됩니다. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 사용하여 물리적 NUMA 구성과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스케줄러 ID 간의 매핑을 검색할 수 있습니다. 
   
 ```sql  
 SELECT osn.memory_node_id AS [numa_node_id], sc.cpu_id, sc.scheduler_id  
@@ -111,7 +111,7 @@ MAX_IOPS_PER_VOLUME =*value*
   
 풀에 대한 `MAX_IOPS_PER_VOLUME`이 0으로 설정된 경우 풀이 전혀 제어되지 않으며, 다른 풀에 MIN_IOPS_PER_VOLUME 집합이 설정되었더라도 시스템에서 모든 IOPS를 사용할 수 있습니다. 이 경우에는 이 풀의 IO를 제어하려는 경우 이 풀에 대한 `MAX_IOPS_PER_VOLUME` 값을 높은 값(예를 들어, 최댓값 2^31-1)으로 설정하는 것이 좋습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 `MIN_IOPS_PER_VOLUME`과 `MAX_IOPS_PER_VOLUME`은 초당 최소 및 최대 읽기 또는 쓰기를 지정합니다. 이러한 읽기 또는 쓰기는 크기 제한이 없으며 최소 또는 최대 처리량을 나타내지 않습니다.  
   
 `MAX_CPU_PERCENT`와 `MAX_MEMORY_PERCENT`의 값은 `MIN_CPU_PERCENT` 및 `MIN_MEMORY_PERCENT`의 각 값보다 크거나 같아야 합니다.  

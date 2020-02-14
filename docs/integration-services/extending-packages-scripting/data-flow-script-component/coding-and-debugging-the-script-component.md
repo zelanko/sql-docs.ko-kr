@@ -22,10 +22,10 @@ ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c4b3337be486123545a187337949da1c160343ad
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71286543"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>스크립트 구성 요소 코딩 및 디버깅
@@ -38,7 +38,7 @@ ms.locfileid: "71286543"
 ## <a name="writing-the-script-in-code-design-mode"></a>코드 디자인 모드에서 스크립트 작성  
   
 ### <a name="script-component-development-environment"></a>스크립트 구성 요소 개발 환경  
- 스크립트를 작성하려면 **스크립트 변환 편집기**의 **스크립트** 페이지에서 **스크립트 편집**을 클릭하여 VSTA([!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications) IDE를 엽니다. VSTA IDE에는 색 구분 기능이 포함된 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 편집기, IntelliSense, 개체 브라우저 등 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] .NET 환경의 모든 표준 기능이 포함됩니다.  
+ 스크립트를 작성하려면 **스크립트 변환 편집기**의 **스크립트** 페이지에서 **스크립트 편집**을 클릭하여 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] VSTA([!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications) IDE를 엽니다. VSTA IDE에는 색 구분 기능이 포함된 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 편집기, IntelliSense, 개체 브라우저 등 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] .NET 환경의 모든 표준 기능이 포함됩니다.  
   
  스크립트 코드는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#으로 작성됩니다. **스크립트 변환 편집기**에서 **ScriptLanguage** 속성을 설정하여 스크립트 언어를 지정합니다. 다른 프로그래밍 언어를 사용하고 싶으면 원하는 언어로 사용자 지정 어셈블리를 개발하고 스크립트 구성 요소의 코드에서 해당 기능을 호출할 수 있습니다.  
   
@@ -172,7 +172,7 @@ public class ScriptMain : UserComponent
   
 |패키지 기능|액세스 방법|  
 |---------------------|-------------------|  
-|변수|**ScriptMain** 클래스의 **Variables** 속성을 통해 노출되는 **ComponentWrapper** 프로젝트 항목의 **Variables** 컬렉션 클래스에서 명명되고 형식화된 접근자 속성을 사용합니다.<br /><br /> **PreExecute** 메서드는 읽기 전용 변수만 액세스할 수 있습니다. **PostExecute** 메서드는 읽기 전용 변수 및 읽기/쓰기 변수 모두에 액세스할 수 있습니다.|  
+|variables|**ScriptMain** 클래스의 **Variables** 속성을 통해 노출되는 **ComponentWrapper** 프로젝트 항목의 **Variables** 컬렉션 클래스에서 명명되고 형식화된 접근자 속성을 사용합니다.<br /><br /> **PreExecute** 메서드는 읽기 전용 변수만 액세스할 수 있습니다. **PostExecute** 메서드는 읽기 전용 변수 및 읽기/쓰기 변수 모두에 액세스할 수 있습니다.|  
 |Connections|**ScriptMain** 클래스의 **Connections** 속성을 통해 노출되는 **ComponentWrapper** 프로젝트 항목의 **Connections** 컬렉션 클래스에서 명명되고 형식화된 접근자 속성을 사용합니다.|  
 |이벤트|**ScriptMain** 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> 속성과 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 인터페이스의 **Fire\<X>** 메서드를 사용하여 이벤트를 발생시킵니다.|  
 |로깅|**ScriptMain** 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> 메서드를 사용하여 로깅을 수행합니다.|  

@@ -19,10 +19,10 @@ ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6829260583ebc3c1b0dec3fec5d3158ddbbea297
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293523"
 ---
 # <a name="ado-net-destination"></a>ADO.NET 대상
@@ -38,7 +38,7 @@ ms.locfileid: "71293523"
  ADO.NET 대상이 외부 데이터 공급자에 대해 수행하는 호출을 로깅할 수 있습니다. 이 로깅 기능을 사용하여 ADO.NET 대상이 수행하는 외부 데이터 원본에 대한 데이터 저장 문제를 해결할 수 있습니다. ADO.NET 대상이 외부 데이터 공급자에 대해 수행하는 호출을 로깅하려면 패키지 로깅을 설정하고 패키지 수준에서 **Diagnostic** 이벤트를 선택합니다. 자세한 내용은 [패키지 실행 문제 해결 도구](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)를 참조하세요.  
   
 ## <a name="configuring-the-ado-net-destination"></a>ADO.NET 대상 구성  
- 이 대상은 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자를 사용하여 데이터 원본에 연결하며 연결 관리자에서는 사용할 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 공급자를 지정합니다. 자세한 내용은 [ADO.NET Connection Manager](../../integration-services/connection-manager/ado-net-connection-manager.md)를 참조하세요.  
+ 이 대상은 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자를 사용하여 데이터 원본에 연결하며 연결 관리자에서는 사용할 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 공급자를 지정합니다. 자세한 내용은 [ADO.NET Connection Manager](../../integration-services/connection-manager/ado-net-connection-manager.md)을(를) 참조하세요.  
   
  ADO.NET 대상에는 입력 열과 대상 데이터 원본 열 사이의 매핑이 포함되므로 입력 열을 모든 대상 열에 매핑하지 않아도 됩니다. 그러나 일부 대상 열의 속성에서 입력 열을 매핑해야 할 수도 있습니다. 그렇지 않으면 오류가 발생할 수 있습니다. 예를 들어 대상 열에 Null 값이 허용되지 않는 경우에는 입력 열을 해당 대상 열로 매핑해야 합니다. 또한 매핑된 열의 데이터 형식이 호환되어야 합니다. 예를 들어 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 공급자에서 지원하지 않을 경우 문자열 데이터 형식의 입력 열을 숫자 데이터 형식의 대상 열에 매핑할 수 없습니다.  
   

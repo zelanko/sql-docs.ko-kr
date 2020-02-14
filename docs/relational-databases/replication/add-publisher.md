@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: ac60bbbed5a14c0ec891b2794620c1492cdb0fb5
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: d84df39c307177dc2e7fcbab9c9cdf177b580a73
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768850"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286900"
 ---
 # <a name="add-publisher"></a>게시자 추가
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68768850"
   
 ## <a name="options"></a>옵션  
  **추가**  
- 추가할 게시자 유형을 선택하려면 클릭합니다. **서버에 연결** 대화 상자가 시작됩니다. 다음 옵션을 사용할 수 있습니다.  
+ 추가할 게시자 유형을 선택하려면 클릭합니다. **서버에 연결** 대화 상자가 시작됩니다. 옵션은 다음과 같습니다.  
   
 -   **SQL Server 게시자 추가...**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68768850"
   
 -   **Oracle 게시자 추가...**  
   
-     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대화 상자를 사용하여 Oracle 게시자에 연결된 **서버에 연결** 대화 상자가 시작됩니다.  
+     **서버에 연결** 대화 상자를 사용하여 Oracle 게시자에 연결된 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 배포자에 연결합니다.  
   
 -   **배포자를 지정한 후 해당 게시자 추가...**  
   

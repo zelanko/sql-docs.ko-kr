@@ -14,21 +14,21 @@ ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: ab394b7eed0a284b8ed74e5333b01f27283469ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987369"
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server, Access Methods 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **Access Methods** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체는 데이터베이스 내의 논리 페이지에 액세스하는 방법을 모니터링하는 카운터를 제공합니다. 디스크에 있는 데이터베이스 페이지에 대한 실제 액세스는 **Buffer Manager** 카운터를 사용하여 모니터링됩니다. 데이터베이스에 저장된 데이터에 액세스하는 방법을 모니터링하면 인덱스를 추가/수정하거나, 파티션을 추가/이동하거나, 파일 또는 파일 그룹을 추가하거나, 인덱스를 조각 모음하거나, 쿼리를 다시 작성하여 쿼리 성능을 향상시킬 수 있는지 확인하는 데 도움이 됩니다. 또한 **Access Methods** 카운터를 사용하면 데이터베이스에 있는 데이터, 인덱스, 여유 공간의 양을 모니터링하여 각 서버 인스턴스에 대한 데이터 볼륨 및 조각화 상태를 나타낼 수 있습니다. 과도한 인덱스 조각화는 성능을 저하시킬 수 있습니다.  
+  **Access Methods**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체는 데이터베이스 내의 논리 페이지에 액세스하는 방법을 모니터링하는 카운터를 제공합니다. 디스크에 있는 데이터베이스 페이지에 대한 실제 액세스는 **Buffer Manager** 카운터를 사용하여 모니터링됩니다. 데이터베이스에 저장된 데이터에 액세스하는 방법을 모니터링하면 인덱스를 추가/수정하거나, 파티션을 추가/이동하거나, 파일 또는 파일 그룹을 추가하거나, 인덱스를 조각 모음하거나, 쿼리를 다시 작성하여 쿼리 성능을 향상시킬 수 있는지 확인하는 데 도움이 됩니다. 또한 **Access Methods** 카운터를 사용하면 데이터베이스에 있는 데이터, 인덱스, 여유 공간의 양을 모니터링하여 각 서버 인스턴스에 대한 데이터 볼륨 및 조각화 상태를 나타낼 수 있습니다. 과도한 인덱스 조각화는 성능을 저하시킬 수 있습니다.  
   
  데이터 볼륨, 조각화 및 사용법에 대한 자세한 내용을 보려면 다음 동적 관리 뷰를 사용합니다.  
   
--   [sys.dm_db_index_operational_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)  
+-   [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)  
   
--   [sys.dm_db_index_physical_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
+-   [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
   
 -   [sys.dm_db_partition_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)  
   
@@ -42,9 +42,9 @@ ms.locfileid: "67987369"
   
 -   [sys.dm_db_session_space_usage&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  
   
- 이 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Access Methods** 카운터에 대해 설명합니다.  
+ 이 테이블에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Access Methods** 카운터에 대해 설명합니다.  
   
-|SQL Server Access Methods 카운터|설명|  
+|SQL Server Access Methods 카운터|Description|  
 |----------------------------------------|-----------------|  
 |**AU cleanup batches/sec**|지연 및 삭제된 할당 단위를 정리하는 백그라운드 태스크에 의해 완료된 초당 일괄 처리 수입니다.|  
 |**AU cleanups/sec**|지연 및 삭제된 할당 단위를 정리하는 백그라운드 태스크에 의해 삭제된 초당 할당 단위 수입니다. 할당 단위를 삭제할 때마다 다중 일괄 처리가 필요합니다.|  
@@ -88,7 +88,7 @@ ms.locfileid: "67987369"
 |**Used tree page cookie**|트리 페이지의 부모 페이지에 변경 내용이 없으므로 인덱스 검색 중 트리 페이지 쿠키가 사용된 횟수입니다. 쿠키는 인덱스 검색 속도를 높이는 데 사용됩니다.|  
 |**Workfiles Created/sec**|초당 만들어지는 작업 파일 수입니다. 예를 들어 작업 파일은 해시 조인 및 해시 집계에 대한 임시 결과를 저장하는 데 사용될 수 있습니다.|  
 |**Worktables Created/sec**|초당 만들어지는 작업 테이블 수입니다. 예를 들어 작업 테이블은 쿼리 스풀, LOB 변수, XML 변수 및 커서에 대한 임시 결과를 저장하는 데 사용될 수 있습니다.|  
-|**Worktables From Cache Base**|내부용으로만 사용할 수 있습니다.|  
+|**Worktables From Cache Base**|내부 전용입니다.|  
 |**Worktables From Cache Ratio**|작업 테이블의 첫 두 페이지가 할당되지 않았지만 작업 테이블 캐시에서 즉시 사용 가능한 곳에 생성된 작업 테이블의 비율입니다. 작업 테이블이 삭제되면 두 페이지는 할당된 상태를 유지할 수 있으며 작업 테이블 캐시로 반환됩니다. 이 경우 성능이 향상됩니다.|  
   
 ## <a name="see-also"></a>참고 항목  

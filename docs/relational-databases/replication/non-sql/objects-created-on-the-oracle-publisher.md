@@ -13,29 +13,29 @@ ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b0bc02a31bcfd4cd4baef19a89b6f658195a24f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940312"
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>Objects Created on the Oracle Publisher
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제는 변경 내용 추적 및 전달을 사용할 수 있도록 Oracle 게시자에 데이터베이스 개체를 설치합니다([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 Oracle 게시자에 이진 파일을 설치하지 않음). 다음 표에서는 Oracle 게시자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에서 게시자로 식별될 때 Oracle 게시자에서 생성된 개체를 나열합니다. 개체 설명은 정보 제공의 목적으로만 제공됩니다. 이러한 개체는 수정하면 안 됩니다.  
   
-|개체 이름|개체 유형|설명|  
+|개체 이름|개체 유형|Description|  
 |-----------------|-----------------|-----------------|  
-|HREPL_ArticleNlog_V|Table|게시된 테이블에 변경 내용이 적용될 때 정보를 저장하는 데 사용되는 변경 내용 추적 테이블입니다. 변경 내용 추적 테이블은 게시된 각 테이블에 대해 생성됩니다.|  
-|HREPL_Changes|Table|트랜잭션 집합에 할당되기 위해 대기 중인 변경 내용 수를 확인하기 위해 Xactset 작업에서 내부적으로 사용되는 테이블입니다. 이 작업에 대한 자세한 내용은 [Oracle 게시자를 위한 성능 튜닝](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md)을 참조하세요.|  
-|HREPL_Distributor|Table|Oracle 게시자와 연결된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에 대한 정보를 유지 관리하는 데 사용되는 배포자 상태 테이블입니다.|  
-|HREPL_Event|Table|스냅샷과 행 개수 요청을 동기화하는 데 사용되는 이벤트 테이블입니다.|  
-|HREPL_Mutex|Table|Oracle 패키지 프로시저인 PopulatePollTable이 로그 판독기 에이전트와 데이터베이스 작업 모두에 의해 동시에 실행되지 않도록 하는 데 사용되는 테이블입니다.|  
-|HREPL_Poll|Table|게시된 테이블에 대한 변경 내용 집합과 연결된 로그 테이블 항목을 식별하는 데 사용되는 테이블입니다.|  
-|HREPL_PublishedTables|Table|트랜잭션 게시의 각 아티클에 대한 항목을 포함하는 테이블입니다.|  
-|HREPL_Publisher|Table|게시자별 정보를 유지 관리하는 데 사용되는 게시자 상태 테이블입니다.|  
-|HREPL_SchemaFilter|Table|새 게시 마법사를 통해 게시할 때 표시되지 않는 스키마를 포함하는 테이블입니다.|  
-|HREPL_XactsetCreateTimes|Table|각 트랜잭션 집합과 연결된 작성 시간을 식별하는 테이블입니다.|  
-|HREPL_XactsetJob|Table|Xactset 작업에 대한 현재 매개 변수 설정을 포함하는 테이블입니다.|  
+|HREPL_ArticleNlog_V|테이블|게시된 테이블에 변경 내용이 적용될 때 정보를 저장하는 데 사용되는 변경 내용 추적 테이블입니다. 변경 내용 추적 테이블은 게시된 각 테이블에 대해 생성됩니다.|  
+|HREPL_Changes|테이블|트랜잭션 집합에 할당되기 위해 대기 중인 변경 내용 수를 확인하기 위해 Xactset 작업에서 내부적으로 사용되는 테이블입니다. 이 작업에 대한 자세한 내용은 [Oracle 게시자를 위한 성능 튜닝](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md)을 참조하세요.|  
+|HREPL_Distributor|테이블|Oracle 게시자와 연결된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에 대한 정보를 유지 관리하는 데 사용되는 배포자 상태 테이블입니다.|  
+|HREPL_Event|테이블|스냅샷과 행 개수 요청을 동기화하는 데 사용되는 이벤트 테이블입니다.|  
+|HREPL_Mutex|테이블|Oracle 패키지 프로시저인 PopulatePollTable이 로그 판독기 에이전트와 데이터베이스 작업 모두에 의해 동시에 실행되지 않도록 하는 데 사용되는 테이블입니다.|  
+|HREPL_Poll|테이블|게시된 테이블에 대한 변경 내용 집합과 연결된 로그 테이블 항목을 식별하는 데 사용되는 테이블입니다.|  
+|HREPL_PublishedTables|테이블|트랜잭션 게시의 각 아티클에 대한 항목을 포함하는 테이블입니다.|  
+|HREPL_Publisher|테이블|게시자별 정보를 유지 관리하는 데 사용되는 게시자 상태 테이블입니다.|  
+|HREPL_SchemaFilter|테이블|새 게시 마법사를 통해 게시할 때 표시되지 않는 스키마를 포함하는 테이블입니다.|  
+|HREPL_XactsetCreateTimes|테이블|각 트랜잭션 집합과 연결된 작성 시간을 식별하는 테이블입니다.|  
+|HREPL_XactsetJob|테이블|Xactset 작업에 대한 현재 매개 변수 설정을 포함하는 테이블입니다.|  
 |HREPL_Pollid|시퀀스|폴링 ID를 생성하는 데 사용되는 시퀀스입니다.|  
 |HREPL_Seq|시퀀스|명령 변경의 순서를 지정하는 데 사용되는 시퀀스입니다.|  
 |HREPL_Stmt|시퀀스|문 ID를 생성하는 데 사용되는 시퀀스입니다.|  

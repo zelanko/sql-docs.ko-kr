@@ -14,10 +14,10 @@ ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0aecc0f5bb867699bef16ff9f2947fe99a2cf1ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006467"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>데이터베이스 미러링 및 로그 전달(SQL Server)
@@ -76,7 +76,7 @@ ms.locfileid: "68006467"
 ## <a name="setting-up-mirroring-and-log-shipping-together"></a>미러링과 로그 전달을 함께 설정  
  데이터베이스 미러링과 로그 전달을 함께 설정하려면 다음 단계를 수행해야 합니다.  
   
-1.  나중에 주/기본 데이터베이스에 대해 미러 데이터베이스를 미러링하는 데이터베이스로 사용되도록 다른 서버 인스턴스에서 NORECOVERY를 사용하여 주/기본 데이터베이스의 백업을 복원합니다. 자세한 내용은 [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)를 참조하세요.  
+1.  나중에 주/기본 데이터베이스에 대해 미러 데이터베이스를 미러링하는 데이터베이스로 사용되도록 다른 서버 인스턴스에서 NORECOVERY를 사용하여 주/기본 데이터베이스의 백업을 복원합니다. 자세한 내용은 [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)을 사용합니다.  
   
 2.  데이터베이스 미러링을 설정합니다. 자세한 내용은 [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md) 또는 [데이터베이스 미러링 설정&#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)을 참조하세요.  
   

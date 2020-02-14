@@ -11,10 +11,10 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 767de0e7c255a96ba9aa4b2c7201c423b1269d80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68014683"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Always On 가용성 그룹에 대한 성능 모니터링
@@ -31,7 +31,7 @@ ms.locfileid: "68014683"
 |**시퀀스**|**단계 설명**|**설명**|**유용한 메트릭**|  
 |1|로그 생성|로그 데이터는 디스크에 플러시됩니다. 이 로그를 보조 복제본에 복제해야 합니다. 로그 레코드에 전송 큐를 입력합니다.|[SQL Server:데이터베이스 > 플러시된 로그 바이트\sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)|  
 |2|캡처|각 데이터베이스에 대한 로그가 캡처되어 해당 파트너 큐(데이터베이스-복제본 쌍마다 한 개)로 전송됩니다. 이 캡처 프로세스는 가용성 복제본이 연결되고 데이터 이동이 어떤 이유로든 일시 중단되지 않는 한 지속적으로 실행되며 데이터베이스-복제본 쌍이 동기화 중이거나 동기화된 것으로 표시됩니다. 캡처 프로세스가 메시지를 충분히 빠르게 스캔하여 큐에 넣을 수 없는 경우 로그 전송 큐가 축적됩니다.|[SQL Server:가용성 복제본 > 복제본에 전송된 바이트 수\sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md)는 해당 가용성 복제본의 큐에 저장된 모든 데이터베이스 메시지의 합계를 집계한 것입니다.<br /><br /> 주 복제본의 [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)(KB) 및 [log_bytes_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)(KB/sec).|  
-|3|Send|각 데이터베이스 복제본 큐의 메시지가 큐에서 제거되고 유선을 통해 해당 보조 복제본으로 전송됩니다.|[SQL Server: 가용성 복제본 > transport\sec에 보낸 바이트 수](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
+|3|보내기|각 데이터베이스 복제본 큐의 메시지가 큐에서 제거되고 유선을 통해 해당 보조 복제본으로 전송됩니다.|[SQL Server: 가용성 복제본 > transport\sec에 보낸 바이트 수](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |4|수신 및 캐시|각 보조 복제본이 메시지를 수신하고 캐시합니다.|성능 카운터 [SQL Server:가용성 복제본 > 수신된 로그 바이트 수/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |5|확정|로그가 확정을 위해 보조 복제본에 플러시됩니다. 로그가 플러시된 후 승인이 주 복제본으로 다시 보내집니다.<br /><br /> 로그가 확정된 후 데이터 손실이 방지됩니다.|성능 카운터 [SQL Server:데이터베이스 > 플러시된 로그 바이트\sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)<br /><br /> 대기 유형 [HADR_LOGCAPTURE_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
 |6|다시 실행|보조 복제본에 대해 플러시된 페이지를 다시 실행합니다. 페이지는 다시 실행을 위해 대기하는 동안 다시 실행 큐에 보관됩니다.|[SQL Server:데이터베이스 복제본 > 다시 실행한 바이트 수/sec](~/relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [redo_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)(KB) 및 [redo_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).<br /><br /> 대기 유형 [REDO_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
@@ -439,7 +439,7 @@ DMV [sys.dm_hadr_database_replica_states](../../../relational-databases/system-d
 ##  <a name="BKMK_SCENARIOS"></a> 성능 문제 해결 시나리오  
  다음 표는 일반적인 성능 관련 문제 해결 시나리오를 나열합니다.  
   
-|시나리오|설명|  
+|시나리오|Description|  
 |--------------|-----------------|  
 |[문제 해결: 가용성 그룹 초과 RTO](troubleshoot-availability-group-exceeded-rto.md)|데이터 손실 없이 자동 장애 조치(failover) 또는 계획된 수동 장애 조치 후 장애 조치 시간이 RTO를 초과합니다. 또는 동기 커밋 보조 복제본(예: 자동 장애 조치(failover) 파트너)의 장애 조치 시간을 예측할 때 RTO 초과를 발견할 수 있습니다.|  
 |[문제 해결: 가용성 그룹 초과 RPO](troubleshoot-availability-group-exceeded-rpo.md)|강제 수동 장애 조치(failover)를 수행한 후 데이터 손실이 RPO보다 많습니다. 또는 비동기 커밋 보조 복제본의 잠재적 데이터 손실을 계산할 때 RPO 초과를 발견합니다.|  
@@ -448,7 +448,7 @@ DMV [sys.dm_hadr_database_replica_states](../../../relational-databases/system-d
 ##  <a name="BKMK_XEVENTS"></a> 유용한 확장 이벤트  
  다음 확장 이벤트는 **동기화** 상태에 있는 복제본을 문제 해결할 때 유용합니다.  
   
-|이벤트 이름|범주|채널|가용성 복제본|  
+|이벤트 이름|Category|채널|가용성 복제본|  
 |----------------|--------------|-------------|--------------------------|  
 |redo_caught_up|트랜잭션|디버그|보조|  
 |redo_worker_entry|트랜잭션|디버그|보조|  

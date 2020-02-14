@@ -30,10 +30,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: efc249be2368973bcd1f3a4692ed280c1a131ec6
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68344601"
 ---
 # <a name="principals-database-engine"></a>보안 주체(데이터베이스 엔진)
@@ -67,7 +67,7 @@ ms.locfileid: "68344601"
 ## <a name="public-server-role-and-database-role"></a>public 서버 역할 및 데이터베이스 역할  
 모든 로그인은 `public` 고정 서버 역할에 속하고 모든 데이터베이스 사용자는 `public` 데이터베이스 역할에 속합니다. 로그인이나 사용자에게 보안 개체에 대한 특정 사용 권한이 부여되지 않았거나 거부된 경우 로그인이나 사용자는 해당 보안 개체에 대해 public으로 부여된 사용 권한을 상속받습니다. `public` 고정 서버 역할 및 `public` 고정 데이터베이스 역할은 삭제할 수 없습니다. 그러나 `public` 역할로부터 사용 권한을 취소할 수 있습니다. 기본적으로 `public` 역할에 할당되는 사용 권한은 많습니다. 대부분의 이러한 사용 권한은 모든 사용자가 수행할 수 있어야 하는 작업의 유형인 데이터베이스의 일상적인 작업에 필요합니다. public 로그인 또는 사용자로부터 사용 권한을 취소하면 모든 로그인/사용자에 영향을 미치므로 주의해야 합니다. deny 문은 개인에 대한 모든 grant 문을 재정의하기 때문에 일반적으로 public에 대한 사용 권한은 거부하면 안 됩니다. 
   
-## <a name="informationschema-and-sys-users-and-schemas"></a>INFORMATION_SCHEMA 및 sys 사용자와 스키마 
+## <a name="information_schema-and-sys-users-and-schemas"></a>INFORMATION_SCHEMA 및 sys 사용자와 스키마 
  모든 데이터베이스에는 카탈로그 뷰에 사용자로 표시되는 두 엔터티인 `INFORMATION_SCHEMA`와 `sys`가 포함됩니다. 이러한 엔터티는 데이터베이스 엔진 내부에서 사용하는 데 필요하며, 수정하거나 삭제할 수 없습니다.  
   
 ## <a name="certificate-based-sql-server-logins"></a>인증서 기반 SQL Server 로그인  

@@ -1,10 +1,10 @@
 ---
 title: 연결된 서버 만들기
-ms.date: 11/20/2015
+ms.date: 01/24/2020
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
-ms.reviewer: ''
+ms.reviewer: carlrab
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.linkedserver.properties.general.f1
@@ -17,12 +17,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 15d7b07b409d8a281b0ea47222ce608a712cfa3f
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: ddcead69006fdee32598590192e777984ea3fcd7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095881"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761897"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>연결된 서버 만들기(SQL Server 데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "74095881"
      **위치**  
      OLE DB 공급자가 해석할 데이터베이스 위치를 입력합니다.  
   
-     **Catalog**  
+     **카탈로그**  
      OLE DB 공급자에 연결할 때 사용할 카탈로그 이름을 입력합니다.  
   
      연결된 서버와의 연결을 테스트하려면 개체 탐색기에서 연결된 서버를 마우스 오른쪽 단추로 클릭한 다음 **연결 테스트**를 클릭합니다.  
@@ -97,7 +97,10 @@ ms.locfileid: "74095881"
   
      **원격 사용자**  
      원격 사용자를 사용하여 **로컬 로그인**에 정의되어 있지 않은 사용자를 매핑합니다. **원격 사용자** 는 원격 서버에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 로그인이어야 합니다.  
-  
+
+    > [!WARNING]
+    > Azure SQL Database 관리형 인스턴스 배포에서는 SQL Server 사용자만 “원격 사용자”로 사용할 수 있습니다.  
+
      **원격 암호**  
      원격 사용자의 암호를 지정합니다.  
   

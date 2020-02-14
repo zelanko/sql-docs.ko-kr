@@ -19,10 +19,10 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6683cec953daf6146371d62e8db2e4add2bd42df
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298343"
 ---
 # <a name="data-flow-task"></a>데이터 흐름 태스크
@@ -50,7 +50,7 @@ ms.locfileid: "71298343"
 ## <a name="log-entries"></a>로그 항목  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 모든 태스크에서 사용할 수 있는 로그 이벤트 집합을 제공합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 여러 태스크에서 사용할 수 있는 사용자 지정 로그 항목도 제공합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md)을 참조하세요. 데이터 흐름 태스크에는 다음 사용자 지정 로그 항목이 포함됩니다.  
   
-|로그 항목|설명|  
+|로그 항목|Description|  
 |---------------|-----------------|  
 |**BufferSizeTuning**|데이터 흐름 태스크로 인해 버퍼 크기가 변경되었음을 나타냅니다. 로그 항목은 크기가 변경된 이유를 설명하고 임시 새 버퍼 크기를 나열합니다.|  
 |**OnPipelinePostEndOfRowset**|구성 요소에 **ProcessInput** 메서드의 마지막 호출로 설정된 해당 행 집합 끝 신호를 제공했음을 나타냅니다. 입력을 처리하는 데이터 흐름의 각 구성 요소에 대한 항목이 기록됩니다. 이 항목은 구성 요소의 이름을 포함합니다.|  
@@ -92,12 +92,12 @@ ms.locfileid: "71298343"
   
  예를 들어 다음 표에서는 "행이 데이터 흐름 구성 요소에 입력으로 제공되었습니다. :  : 1185 : OLE DB 원본 출력 : 1180 : 정렬 : 1181 : 정렬 입력 : 76"이라는 메시지가 여러 개의 열로 구문 분석된 결과를 보여 줍니다. 이 메시지는 OLE DB 원본의 행이 정렬 변환으로 보내질 때 **OnPipelineRowsSent** 이벤트에 의해 기록된 것입니다.  
   
-|Column|설명|값|  
+|열|Description|값|  
 |------------|-----------------|-----------|  
 |**PathID**|OLE DB 원본과 정렬 변환 사이의 경로에 대한 **ID** 속성 값입니다.|1185|  
 |**PathName**|경로의 **Name** 속성 값입니다.|OLE DB 원본 출력|  
 |**ComponentID**|정렬 변환의 **ID** 속성 값입니다.|1180|  
-|**ComponentName**|정렬 변환의 **Name** 속성 값입니다.|Sort|  
+|**ComponentName**|정렬 변환의 **Name** 속성 값입니다.|정렬|  
 |**InputID**|정렬 변환에 대한 입력의 **ID** 속성 값입니다.|1181|  
 |**InputName**|정렬 변환에 대한 입력의 **Name** 속성 값입니다.|정렬 입력|  
 |**RowsSent**|정렬 변환의 입력으로 보내지는 행 수입니다.|76|  

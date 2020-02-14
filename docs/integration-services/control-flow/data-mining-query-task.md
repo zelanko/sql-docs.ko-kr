@@ -19,10 +19,10 @@ ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3cba502e5f89c39df67b74909f3185ad45c659e2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298352"
 ---
 # <a name="data-mining-query-task"></a>Data Mining Query Task
@@ -52,7 +52,7 @@ ms.locfileid: "71298352"
  중첩이 포함된 결과는 저장되기 전에 결합됩니다. 결과를 결합하면 중첩 결과 집합이 테이블로 바뀝니다. 예를 들어 **Customer** 열과 중첩된 **Product** 열이 포함된 중첩 결과를 결합하면 **Customer** 열에 행이 추가되어 각 고객의 제품 데이터가 포함된 테이블이 생성됩니다. 예를 들어 3가지 제품을 가진 고객은 행이 3개인 테이블이 되며 각 행에는 해당 고객이 반복되고 서로 다른 제품이 포함됩니다. FLATTENED 키워드를 생략하면 테이블에 **Customer** 열만 포함되고 고객당 하나의 행이 있습니다. 자세한 내용은 [SELECT&#40;DMX&#41;](../../dmx/select-dmx.md)를 참조하세요.  
   
 ## <a name="configuration-of-the-data-mining-query-task"></a>데이터 마이닝 쿼리 태스크 구성  
- 데이터 마이닝 쿼리 태스크에는 두 개의 연결이 필요합니다. 첫 번째 연결은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 연결하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 연결 관리자입니다. 두 번째 연결은 태스크에서 데이터를 쓰는 테이블이 포함된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하는 OLE DB 연결 관리자입니다. 자세한 내용은 [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md) 및 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)를 참조하세요.  
+ 데이터 마이닝 쿼리 태스크에는 두 개의 연결이 필요합니다. 첫 번째 연결은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 인스턴스 또는 마이닝 구조와 마이닝 모델이 포함된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 연결하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 연결 관리자입니다. 두 번째 연결은 태스크에서 데이터를 쓰는 테이블이 포함된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하는 OLE DB 연결 관리자입니다. 자세한 내용은 [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md) 및 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)를 참조하세요.  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "71298352"
  데이터 마이닝 쿼리 태스크에 대한 설명을 입력합니다.  
   
 ### <a name="mining-model-tab-options"></a>마이닝 모델 탭 옵션  
- **대량 삽입 태스크 편집기**  
+ **연결**  
  목록에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 연결 관리자를 선택하거나 **새로 만들기** 를 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:**  [Analysis Services 연결 관리자](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
@@ -172,7 +172,7 @@ ms.locfileid: "71298352"
  데이터 마이닝 쿼리 태스크에 대한 설명을 입력합니다.  
   
 ### <a name="output-tab-options"></a>출력 탭 옵션  
- **대량 삽입 태스크 편집기**  
+ **연결**  
  목록에서 연결 관리자를 선택하거나 **새로 만들기** 를 클릭하여 새 연결 관리자를 만듭니다.  
   
  **새로 만들기**  

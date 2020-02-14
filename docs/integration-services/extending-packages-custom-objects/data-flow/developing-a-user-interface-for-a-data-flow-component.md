@@ -23,10 +23,10 @@ ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 21bc28f99768c7b31d6ba5b18170140a23400853
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71287773"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>데이터 흐름 구성 요소의 사용자 인터페이스 개발
@@ -39,7 +39,7 @@ ms.locfileid: "71287773"
  구성 요소에 사용자 지정 사용자 인터페이스를 제공하지 않는 경우에도 최종 사용자는 고급 편집기를 사용하여 구성 요소와 해당 구성 요소의 사용자 지정 속성을 구성할 수 있습니다. 고급 편집기에서는 적절할 때 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.TypeConverter%2A>의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A> 및 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100> 속성을 사용하여 사용자 지정 속성 값을 적절하게 편집할 수 있습니다. 자세한 내용은 [데이터 흐름 구성 요소의 디자인 타임 메서드](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)의 "사용자 지정 속성 만들기"를 참조하세요.  
   
 ## <a name="setting-the-uitypename-property"></a>UITypeName 속성 설정  
- 사용자 지정 사용자 인터페이스를 개발하려면 개발자는 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A>의 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> 속성을 <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI> 인터페이스를 구현하는 클래스의 이름으로 설정해야 합니다. 구성 요소에 의해 이 속성이 설정된 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에서는 구성 요소가 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서 편집될 때 사용자 지정 사용자 인터페이스를 로드하고 호출합니다.  
+ 사용자 지정 사용자 인터페이스를 개발하려면 개발자는 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A>의 <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> 속성을 <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI> 인터페이스를 구현하는 클래스의 이름으로 설정해야 합니다. 구성 요소에서 이 속성이 설정된 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에서는 구성 요소가 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서 편집될 때 사용자 지정 사용자 인터페이스를 로드하고 호출합니다.  
   
  <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A> 속성은 해당 형식의 정규화된 이름을 식별하는 쉼표로 구분된 문자열입니다. 다음 목록에서는 형식 식별 요소를 순서대로 보여 줍니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "71287773"
   
 -   파일 버전  
   
--   Culture  
+-   문화권  
   
 -   공개 키 토큰  
   
@@ -93,7 +93,7 @@ End Class
 ### <a name="using-the-services-of-the-ssis-designer"></a>SSIS 디자이너의 서비스 사용  
  <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> 메서드의 **IServiceProvider** 매개 변수는 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너의 다음 서비스에 액세스할 수 있도록 합니다.  
   
-|서비스|설명|  
+|서비스|Description|  
 |-------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Design.IDtsClipboardService>|구성 요소가 복사/붙여넣기 또는 잘라내기/붙여넣기 작업 중 어떤 작업의 일부로 생성되었는지를 확인하는 데 사용됩니다.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionService>|기존 연결에 액세스하거나 패키지에 새 연결을 만드는 데 사용됩니다.|  
@@ -103,7 +103,7 @@ End Class
   
  개발자는 이러한 서비스를 사용하여 구성 요소가 로드된 패키지의 개체에 액세스하거나 패키지에 개체를 만들 수 있습니다.  
   
-## <a name="sample"></a>예제  
+## <a name="sample"></a>샘플  
  다음 코드 예제에서는 <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI> 인터페이스를 구현하는 사용자 지정 사용자 인터페이스 클래스와 구성 요소의 편집기로 사용되는 Windows Form의 통합을 보여 줍니다.  
   
 ### <a name="custom-user-interface-class"></a>사용자 지정 사용자 인터페이스 클래스  

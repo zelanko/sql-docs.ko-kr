@@ -30,10 +30,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d88b0c8e36b69bbc2a341917ec96e12ed8bfdc17
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981723"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - INTO 절(Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "73981723"
 
 SELECT...INTO는 기본 파일 그룹에 새 테이블을 만들고 쿼리의 결과 행을 이 테이블에 삽입합니다. 전체 SELECT 구문을 보려면 [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)를 참조하세요.  
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -82,7 +82,7 @@ SELECT...INTO는 기본 파일 그룹에 새 테이블을 만들고 쿼리의 �
   
 위의 조건 중 만족하는 것이 있으면 열은 IDENTITY 속성을 상속하지 않고 NOT NULL로 만들어집니다. 새 테이블에 ID 열이 필요한데 그러한 열을 사용할 수 없는 경우 또는 원본 ID 열과 다른 초기값이나 증가값이 필요할 경우에는 IDENTITY 함수를 사용하여 선택 목록에 열을 정의합니다. 아래에 있는 예 섹션에서 "IDENTITY 함수를 사용하여 ID 열 만들기"를 참조하세요.  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 `SELECT...INTO` 문은 두 부분으로 작동합니다. 새 테이블이 생성된 다음, 행을 삽입합니다.  이는 삽입이 실패하면 모두 롤백되지만 새(빈) 테이블은 남아 있음을 의미합니다.  전체 작업이 전반적으로 성공 또는 실패하는 데 필요한 경우 [명시적 트랜잭션](../language-elements/begin-transaction-transact-sql.md)을 사용합니다.
   
 ## <a name="limitations-and-restrictions"></a>제한 사항  
@@ -106,7 +106,7 @@ SELECT...INTO는 기본 파일 그룹에 새 테이블을 만들고 쿼리의 �
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-table-by-specifying-columns-from-multiple-sources"></a>1\. 여러 원본에서 열을 지정하여 테이블 만들기  
+### <a name="a-creating-a-table-by-specifying-columns-from-multiple-sources"></a>A. 여러 원본에서 열을 지정하여 테이블 만들기  
  다음 예에서는 다양한 직원 관련 테이블 및 주소 관련 테이블에서 7개의 열을 선택하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `dbo.EmployeeAddresses` 테이블을 만듭니다.  
   
 ```sql  
@@ -125,7 +125,7 @@ FROM Person.Person AS c
 GO  
 ```  
   
-### <a name="b-inserting-rows-using-minimal-logging"></a>2\. 최소 로깅을 사용하여 행 삽입  
+### <a name="b-inserting-rows-using-minimal-logging"></a>B. 최소 로깅을 사용하여 행 삽입  
  다음 예에서는 `dbo.NewProducts` 테이블을 만든 후 `Production.Product` 테이블의 행을 삽입합니다. 여기에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 복구 모델이 FULL로 설정되었다고 가정합니다. 최소 로깅을 사용할 수 있도록 행 삽입 전에 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 복구 모델이 BULK_LOGGED로 설정되고 SELECT...INTO 문 다음에 FULL로 재설정됩니다. 이 프로세스를 통해 SELECT...INTO 문은 트랜잭션 로그에 최소 공간을 사용하여 효율적으로 수행됩니다.  
   
 ```sql  
@@ -214,7 +214,7 @@ GO
 ### <a name="e-import-from-an-external-table-created-with-polybase"></a>E. PolyBase를 사용하여 만든 외부 테이블에서 가져오기  
  Hadoop 또는 Azure Storage의 데이터를 영구적으로 스토리지하기 위해 SQL Server로 가져옵니다. `SELECT INTO`를 사용하여 SQL Server의 영구 스토리지에 대한 외부 테이블에서 참조하는 데이터를 가져옵니다. 먼저 대략적인 관계형 테이블을 만든 다음 두 번째 단계에서 테이블 위에 columnstore 인덱스를 만듭니다.  
   
- **적용 대상:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 참조하세요.  
+ **적용 대상:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```sql
 -- Import data for car drivers into SQL Server to do more in-depth analysis.  

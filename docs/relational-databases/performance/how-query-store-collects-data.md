@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f60ded18e88d57c5a2975b567fa246923ece7ebe
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71974356"
 ---
 # <a name="how-query-store-collects-data"></a>쿼리 저장소에서 데이터를 수집하는 방법
@@ -31,7 +31,7 @@ SQL Server 쿼리 저장소는 플라이트 데이터 레코더처럼 작동하�
  ![쿼리 저장소 프로세스 뷰](../../relational-databases/performance/media/query-store-process-2views.png "query-store-process-2views")  
 **뷰 설명**  
   
-|보기|설명|  
+|보기|Description|  
 |----------|-----------------|  
 |**sys.query_store_query_text**|데이터베이스에 대해 실행되는 고유 쿼리 텍스트를 표시합니다. 쿼리 텍스트 전후의 주석 및 공백은 무시됩니다. 텍스트 내의 주석 및 공백은 무시되지 않습니다. 배치의 모든 문은 별도 쿼리 텍스트 항목을 생성합니다.|  
 |**sys.query_context_settings**|쿼리 실행에 사용되는 계획 관련 설정의 고유한 조합을 표시합니다. `context_settings_id`는 쿼리 키의 일부이므로, 다른 계획 관련 설정으로 동일한 쿼리 텍스트를 실행할 경우 쿼리 저장소에 별도의 쿼리 항목이 생성됩니다.|  
@@ -57,7 +57,7 @@ SQL Server 쿼리 저장소는 플라이트 데이터 레코더처럼 작동하�
   
  ![쿼리 저장소 프로세스](../../relational-databases/performance/media/query-store-process-2processor.png "query-store-process-2processor") 
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
  I/O 오버헤드를 최소화하기 위해 새 데이터가 메모리 내에 캡처됩니다. 쓰기 작업은 지연되고 나중에 디스크에 플러시됩니다. 다음 다이어그램에 계획 저장소로 표시된 쿼리 및 계획 정보는 최소 대기 시간으로 플러시됩니다. Runtime Stats로 표시된 런타임 통계가 `SET QUERY_STORE` 문의 `DATA_FLUSH_INTERVAL_SECONDS` 옵션을 사용하여 정의된 기간 동안 메모리에 유지됩니다. [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 쿼리 저장소 대화 상자를 사용하여 **데이터 플러시 간격(분)** 의 값을 입력할 수 있으며, 내부적으로 초 단위로 변환됩니다. 
   
  ![쿼리 저장소 프로세스 계획](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan") 
@@ -76,7 +76,7 @@ SQL Server 쿼리 저장소는 플라이트 데이터 레코더처럼 작동하�
   
  ![쿼리 저장소 프로세스 계획 정보](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
  [쿼리 저장소를 사용하여 성능 모니터링](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
  [쿼리 저장소에 대한 모범 사례](../../relational-databases/performance/best-practice-with-the-query-store.md)  
  [쿼리 저장소 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md) 

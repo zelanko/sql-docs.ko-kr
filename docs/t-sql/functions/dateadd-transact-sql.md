@@ -27,10 +27,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ed302e9361e46b8403cea168201fc6cadaa17986
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026189"
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD(Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68026189"
   
 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 날짜 및 시간 데이터 형식 및 함수에 대한 개요는 [날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)을 참조하세요.
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -50,7 +50,7 @@ DATEADD (datepart , number , date )
   
 ## <a name="arguments"></a>인수  
 *datepart*  
-`DATEADD`은 **integer** *number*를 추가하는 *date*의 일부입니다. 이 표에서는 올바른 *datepart* 인수가 모두 나열되어 있습니다. 
+`DATEADD`가 **integer** *number*를 추가하는 *date* 부분입니다. 이 표에서는 올바른 *datepart* 인수가 모두 나열되어 있습니다. 
 
 > [!NOTE]
 > `DATEADD`은 *datepart* 인수에 해당하는 사용자 정의 변수 항목을 허용하지 않습니다. 
@@ -90,7 +90,7 @@ DATEADD (datepart , number , date )
 
 이 메서드의 반환 값 데이터 형식은 동적입니다. 반환 형식은 `date`에 제공된 인수의 따라 달라집니다. `date`의 값이 문자열 리터럴 날짜인 경우 `DATEADD`가 **datetime** 값을 반환합니다. `date`에 대해 다른 유효한 입력 데이터 형식이 제공되면 `DATEADD`가 동일한 데이터 형식을 반환합니다. 문자열 리터럴 초 소수 자릿수가 세 자릿수(.nnn)를 초과하거나 문자열 리터럴이 표준 시간대 오프셋 부분을 포함하는 경우 `DATEADD`는 오류를 발생합니다.
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
 ## <a name="datepart-argument"></a>datepart 인수  
 **dayofyear**, **day**, **weekday**는 동일한 값을 반환합니다.
@@ -134,7 +134,7 @@ SELECT DATEADD(year,-2147483647, '20060731');
 -   **millisecond**의 *datepart* 및 -30001 및 +29998 사이의 *number* 값의 경우 `DATEADD`은 변경되지 않습니다.  
 -   **millisecond**의 *datepart* 및 -30001 미만 또는 +29998 초과인 *number* 값의 경우 `DATEADD`는 1분에서 시작하는 더하기를 수행합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 다음 절에서 `DATEADD`를 사용합니다.
 
 + GROUP BY
@@ -184,7 +184,7 @@ SELECT '150 nanoseconds', DATEADD(nanosecond,150,@datetime2);
   
 ## <a name="examples"></a>예  
 
-### <a name="a-incrementing-datepart-by-an-interval-of-1"></a>1\. 1씩 datepart 증가  
+### <a name="a-incrementing-datepart-by-an-interval-of-1"></a>A. 1씩 datepart 증가  
 이러한 각 명령문은 *datepart*를 1씩 증가시킵니다.
   
 ```sql
@@ -234,7 +234,7 @@ microsecond  2007-01-01 13:10:10.1111121
 nanosecond   2007-01-01 13:10:10.1111111  
 ```  
   
-### <a name="b-incrementing-more-than-one-level-of-datepart-in-one-statement"></a>2\. 하나의 문에서 datepart를 두 수준 이상 증가  
+### <a name="b-incrementing-more-than-one-level-of-datepart-in-one-statement"></a>B. 하나의 문에서 datepart를 두 수준 이상 증가  
 이러한 각 명령문은 *date*에서 다음으로 높은 *datepart*를 추가적으로 증가시킬 수 있는 크기의 *number*만큼 *datepart*를 증가시킵니다.
   
 ```sql
@@ -368,7 +368,7 @@ GO
 ```  
   
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
   

@@ -17,10 +17,10 @@ ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 38c5c4daa65542dd8da14fa5c51a1b964a271fff
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296511"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>패키지 배포 문제 해결 도구
@@ -73,14 +73,14 @@ ms.locfileid: "71296511"
   
 -   **오류 출력을 지원하는 데이터 흐름 구성 요소에 오류 출력을 구성할 수 있습니다**. 여러 데이터 흐름 원본, 변환 및 대상은 오류 출력을 지원합니다. 데이터 흐름 구성 요소의 오류 출력을 구성하면 오류가 있는 데이터를 다른 대상으로 보낼 수 있습니다. 예를 들어 오류가 있거나 잘린 데이터를 별개의 텍스트 파일로 캡처할 수 있습니다. 오류 출력에 데이터 뷰어를 연결하고 오류 데이터만 검사할 수도 있습니다. 디자인 타임에 오류 출력을 통해 문제가 있는 데이터 값을 캡처하면 실제 데이터를 효과적으로 다루는 패키지를 개발하는 데 도움이 됩니다. 그러나 다른 문제 해결 도구 및 기능이 디자인 타임에만 유용한 것과 달리 오류 출력은 프로덕션 환경에서도 유용할 수 있습니다. 자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요.  
   
--   **처리되는 행 개수를 캡처할 수 있습니다**. [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 패키지를 실행할 때 경로를 통해 전달한 행 개수는 데이터 흐름 디자이너에 표시됩니다. 데이터가 경로를 통해 이동하는 동안 이 개수는 주기적으로 업데이트됩니다. 또한 행 개수 변환을 데이터 흐름에 추가하여 변수에서 마지막 행 개수를 캡처할 수 있습니다. 자세한 내용은 [Row Count Transformation](../../integration-services/data-flow/transformations/row-count-transformation.md)을(를) 참조하세요.  
+-   **처리되는 행 개수를 캡처할 수 있습니다**. [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 패키지를 실행할 때 경로를 통해 전달한 행 개수는 데이터 흐름 디자이너에 표시됩니다. 데이터가 경로를 통해 이동하는 동안 이 개수는 주기적으로 업데이트됩니다. 또한 행 개수 변환을 데이터 흐름에 추가하여 변수에서 마지막 행 개수를 캡처할 수 있습니다. 자세한 내용은 [Row Count Transformation](../../integration-services/data-flow/transformations/row-count-transformation.md)을 참조하세요.  
   
 -   **진행률 탭에서 정보를 검토할 수 있습니다**. [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 패키지를 실행할 때 데이터 흐름에 대한 추가 정보를 제공합니다. 진행률 탭에는 데이터 흐름 구성 요소가 실행 순서대로 나열되며 패키지의 각 단계에 대한 진행률이 백분율로 표시되고 대상에 기록된 행 개수도 표시됩니다.  
   
  이러한 기능에 대한 자세한 내용은 [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md)을 참조하십시오.  
   
 ## <a name="troubleshooting-scripts"></a>스크립트 문제 해결  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] VSTA(Tools for Applications)는 스크립트 태스크 및 스크립트 구성 요소가 사용하는 스크립트를 작성하는 개발 환경입니다. VSTA는 패키지 개발 과정에서 스크립트 문제를 해결하는 데 사용할 수 있는 다음 기능 및 도구를 제공합니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] VSTA([!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications)는 스크립트 태스크 및 스크립트 구성 요소가 사용하는 스크립트를 작성하는 개발 환경입니다. VSTA는 패키지 개발 과정에서 스크립트 문제를 해결하는 데 사용할 수 있는 다음 기능 및 도구를 제공합니다.  
   
 -   **스크립트 태스크의 스크립트에 중단점을 설정할 수 있습니다.** VSTA는 스크립트 태스크의 스크립트에 대해서만 디버깅을 지원합니다. 스크립트 태스크에서 설정한 중단점은 패키지와 패키지의 태스크 및 컨테이너에서 설정한 중단점과 통합되므로 모든 패키지 요소를 완벽하게 디버깅할 수 있습니다.  
   

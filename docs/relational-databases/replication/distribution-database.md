@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 5b42a083-7a11-41d8-9e3f-320c7c907237
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 8c07f5b46b1f09f54ce152eeaccabd695b0f32ed
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 9f86ef648812c553a2445afac6a50f03824e8e72
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770677"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76284520"
 ---
 # <a name="distribution-database"></a>배포 데이터베이스
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68770677"
   
 ## <a name="options"></a>옵션  
  **배포 데이터베이스 이름**  
- 배포 데이터베이스 이름을 입력합니다. 배포 데이터베이스의 기본 이름은 'distribution'입니다. 이름을 지정할 경우 이름은 최대 128자가 될 수 있으며 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스 내에서 고유해야 하고 식별자에 대한 규칙을 따라야 합니다. 자세한 내용은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)을 참조하세요.  
+ 배포 데이터베이스 이름을 입력합니다. 배포 데이터베이스의 기본 이름은 'distribution'입니다. 이름을 지정하는 경우 이름은 최대 128자가 될 수 있으며, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내에서 고유해야 하고, 식별자 규칙을 따라야 합니다. 자세한 내용은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)을 참조하세요.  
   
  **배포 데이터베이스 파일 폴더** 및 **배포 데이터베이스 로그 파일 폴더**  
  배포 데이터베이스 및 로그 파일에 대한 경로를 입력합니다. 경로는 배포자에 로컬인 디스크여야 하므로 로컬 드라이브 문자와 콜론(예: C:)으로 시작해야 합니다. 매핑된 드라이브 문자와 네트워크 경로는 유효하지 않습니다.  

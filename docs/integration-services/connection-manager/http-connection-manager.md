@@ -20,10 +20,10 @@ ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 106b0d08ec24143ba497fb5b631fcbd5003a4872
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294406"
 ---
 # <a name="http-connection-manager"></a>HTTP 연결 관리자
@@ -31,7 +31,7 @@ ms.locfileid: "71294406"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  HTTP 연결을 사용하면 패키지에서 HTTP를 통해 웹 서버에 액세스하고 파일을 보내거나 받을 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에 포함된 웹 서비스 태스크에서는 이 연결 관리자가 사용됩니다.  
+  HTTP 연결을 사용하면 패키지에서 HTTP를 통해 웹 서버에 액세스하고 파일을 보내거나 받을 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 포함된 웹 서비스 태스크에서는 이 연결 관리자가 사용됩니다.  
   
  패키지에 HTTP 연결 관리자를 추가하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 런타임에 HTTP 연결로 확인되는 연결 관리자를 만들고, 연결 관리자 속성을 설정하고, 연결 관리자를 패키지의 **Connections** 컬렉션에 추가합니다.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "71294406"
  **자격 증명 사용**  
  HTTP 연결 관리자에서 사용자의 보안 자격 증명을 인증에 사용할지 여부를 지정합니다.  
   
- **User name**  
+ **사용자 이름**  
  HTTP 연결 관리자에서 자격 증명을 사용하는 경우에는 사용자 이름, 암호 및 도메인을 지정해야 합니다.  
   
  **암호**  
@@ -84,7 +84,7 @@ ms.locfileid: "71294406"
  **클라이언트 인증서 사용**  
  HTTP 연결 관리자에서 클라이언트 인증서를 인증에 사용할지 여부를 지정합니다.  
   
- **인증서**  
+ **MSSQLSERVER에 대한 프로토콜 속성**  
  **인증서 선택** 대화 상자를 사용하여 목록에서 인증서를 선택합니다. 입력란에 해당 인증서와 연결된 이름이 표시됩니다.  
   
  **제한 시간(초)**  
@@ -114,7 +114,7 @@ ms.locfileid: "71294406"
  **자격 증명 사용**  
  HTTP 연결 관리자에서 프록시 서버에 보안 자격 증명을 사용하도록 할지 여부를 지정합니다.  
   
- **User name**  
+ **사용자 이름**  
  HTTP 연결 관리자에서 자격 증명을 사용하는 경우에는 사용자 이름, 암호 및 도메인을 지정해야 합니다.  
   
  **암호**  

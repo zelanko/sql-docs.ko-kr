@@ -15,10 +15,10 @@ author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4c19e3ad3589cad6f7503ff9f0e92c090bef5035
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72305191"
 ---
 # <a name="thread-and-task-architecture-guide"></a>스레드 및 태스크 아키텍처 가이드
@@ -130,12 +130,12 @@ CPU가 여러 개인 컴퓨터에서 데이터베이스의 복구 모델을 임�
 
 |프로세스 이름   |실행 프로그램 |64개를 초과하는 CPU 사용 |  
 |----------|----------|----------|  
-|SQL Server 데이터베이스 엔진 |Sqlserver.exe  |예 |  
-|Reporting Services |Rs.exe |아니오 |  
-|Analysis Services  |As.exe |아니오 |  
-|Integration Services   |Is.exe |아니오 |  
-|Service Broker |Sb.exe |아니오 |  
-|전체 텍스트 검색   |Fts.exe    |아니오 |  
-|SQL Server 에이전트   |Sqlagent.exe   |아니오 |  
-|SQL Server Management Studio   |Ssms.exe   |아니오 |  
-|SQL Server 설치   |Setup.exe  |아니오 |  
+|SQL Server 데이터베이스 엔진 |Sqlserver.exe  |yes |  
+|Reporting Services |Rs.exe |예 |  
+|Analysis Services  |As.exe |예 |  
+|Integration Services   |Is.exe |예 |  
+|Service Broker |Sb.exe |예 |  
+|전체 텍스트 검색   |Fts.exe    |예 |  
+|SQL Server 에이전트   |Sqlagent.exe   |예 |  
+|SQL Server Management Studio   |Ssms.exe   |예 |  
+|SQL Server 설치   |Setup.exe  |예 |  

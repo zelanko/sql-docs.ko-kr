@@ -11,10 +11,10 @@ ms.author: pelopes
 manager: rothj
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 933a37dd4ef627796b7688510bd235c80db417be
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095998"
 ---
 # <a name="microsoft-sql-server-distributed-queries-ole-db-connectivity"></a>Microsoft SQL Server 분산 쿼리: OLE DB 연결
@@ -110,9 +110,9 @@ OLE DB 공급자가 위의 요구 사항을 충족하는 경우 SQL Server에서
 
 키 집합 커서는 *OpenQuery* 함수를 포함하는 분산 쿼리에 대해 지원되지 않습니다.
 
-#### <a name="updatable-keyset-cursor-requirements"></a>업데이트 가능 키 집합 커서 요구 사항
+#### <a name="updatable-keyset-cursor-requirements"></a>업데이트할 수 있는 키 집합 커서 요구 사항
 
-분산 쿼리에 정의된 키 집합 커서를 통해 원격 테이블을 업데이트하거나 삭제할 수 있습니다(예: `UPDATE` \| DELETE `<remote-table>` `WHERE` CURRENT OF `<cursor-name>`). 다음 조건에서는 분산 쿼리에 대한 업데이트 가능 커서가 허용됩니다.
+분산 쿼리에 정의된 키 집합 커서를 통해 원격 테이블을 업데이트하거나 삭제할 수 있습니다(예: `UPDATE` \| DELETE `<remote-table>` `WHERE` CURRENT OF `<cursor-name>`). 다음 조건에서는 분산 쿼리에 대해 업데이트할 수 있는 커서가 허용됩니다.
 
 - 공급자가 원격 테이블에 대한 업데이트 및 삭제 조건도 충족하는 경우 업데이트 가능 커서가 허용됩니다. 자세한 내용은 이 문서의 뒷부분에 있는 \"UPDATE 및 DELETE 문\"을 참조하세요.
 
@@ -190,18 +190,18 @@ sysadmin 역할의 멤버를 제외하고 기본적으로 임시 이름을 사�
 
    SQL Server는 분산 쿼리 평가에 사용할 여러 공급자 속성을 수집합니다. 이러한 속성은 `IDBProperties::GetProperties`를 호출하여 검색합니다. 이러한 속성은 모두 선택 사항입니다. 그러나 관련 속성을 모두 지원하면 SQL Server에서 공급자 기능을 완전히 활용할 수 있습니다. 예를 들어 `DBPROP_SQLSUPPORT`는 SQL Server에서 공급자에 쿼리를 보낼 수 있는지를 결정하는 데 필요합니다. 이 속성이 지원되지 않는 경우 SQL Server는 원격 공급자가 SQL 명령 공급자인 경우에도 SQL 명령 공급자로 사용하지 않습니다. 다음 표의 기본값 열에는 SQL Server에서 공급자가 속성을 지원하지 않는 경우에 사용하는 값이 표시됩니다.
 
-속성| 기본값| 이후 |
+속성| 기본값| 사용 |
 |:----|:----|:----|
-|`DBPROP_DBMSNAME`|없음|오류 메시지에 사용됩니다.|
-|`DBPROP_DBMSVER` |없음|오류 메시지에 사용됩니다.|
-|`DBPROP_PROVIDERNAME`|없음|오류 메시지에 사용됩니다.|
+|`DBPROP_DBMSNAME`|None|오류 메시지에 사용됩니다.|
+|`DBPROP_DBMSVER` |None|오류 메시지에 사용됩니다.|
+|`DBPROP_PROVIDERNAME`|None|오류 메시지에 사용됩니다.|
 |`DBPROP_PROVIDEROLEDBVER1`|1.5|2\.0 기능의 가용성을 결정하는 데 사용됩니다.
-|`DBPROP_CONCATNULLBEHAVIOR`|없음|공급자의 `NULL` 연결 동작이 SQL Server와 동일한지 여부를 결정하는 데 사용됩니다.|
-|`DBPROP_NULLCOLLATION`|없음|`NULLCOLLATION`이 SQL Server 인스턴스 null 데이터 정렬 동작과 일치하는 경우에만 정렬/인덱스 사용을 허용합니다.|
-|`DBPROP_OLEOBJECTS`|없음|공급자가 큰 데이터 개체 열에 대해 구조적 스토리지 인터페이스를 지원하는지를 결정합니다.|
-|`DBPROP_STRUCTUREDSTORAGE`|없음|큰 개체 형식(`ILockBytes`, `Istream` 및 `ISequentialStream`)에 대해 지원되는 구조적 스토리지 인터페이스를 결정합니다.|
+|`DBPROP_CONCATNULLBEHAVIOR`|None|공급자의 `NULL` 연결 동작이 SQL Server와 동일한지 여부를 결정하는 데 사용됩니다.|
+|`DBPROP_NULLCOLLATION`|None|`NULLCOLLATION`이 SQL Server 인스턴스 null 데이터 정렬 동작과 일치하는 경우에만 정렬/인덱스 사용을 허용합니다.|
+|`DBPROP_OLEOBJECTS`|None|공급자가 큰 데이터 개체 열에 대해 구조적 스토리지 인터페이스를 지원하는지를 결정합니다.|
+|`DBPROP_STRUCTUREDSTORAGE`|None|큰 개체 형식(`ILockBytes`, `Istream` 및 `ISequentialStream`)에 대해 지원되는 구조적 스토리지 인터페이스를 결정합니다.|
 |`DBPROP_MULTIPLESTORAGEOBJECTS`|False|둘 이상의 큰 개체 열을 동시에 열 수 있는지를 결정합니다.|
-|`DBPROP_SQLSUPPORT`|없음|SQL 쿼리를 공급자에 보낼 수 있는지를 결정합니다.|
+|`DBPROP_SQLSUPPORT`|None|SQL 쿼리를 공급자에 보낼 수 있는지를 결정합니다.|
 |`DBPROP_CATALOGLOCATION`|`DBPROPVAL_CL_START`|여러 부분으로 구성된 테이블 이름을 생성하는 데 사용됩니다.
 |`SQLPROP_DYNAMICSQL`|False|SQL Server 특정 속성입니다. `VARIANT_TRUE`를 반환하는 경우 `?` 매개 변수 표식이 매개 변수가 있는 쿼리 실행에 대해 지원됨을 나타냅니다.
 |`SQLPROP_NESTEDQUERIES`|False|SQL Server 특정 속성입니다. `VARIANT_TRUE`를 반환하는 경우 공급자가 `FROM` 절에서 중첩된 `SELECT` 문을 지원함을 나타냅니다.
@@ -323,25 +323,25 @@ SQL Server 및 OLE DB 데이터 형식 매핑 테이블
 |`DBTYPE_NUMERIC`| |`numeric`|
 |`DBTYPE_DECIMAL`| |`decimal`|
 |`DBTYPE_CY`| |`money`|
-|`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`<br>로 구분하거나 여러<br> 최대 길이 > 4000자|ntext|
-|`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`|NCHAR|
-|`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=false`|NVARCHAR|
+|`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`<br>또는<br> 최대 길이 > 4000자|ntext|
+|`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`|nchar|
+|`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=false`|nvarchar|
 |`DBTYPE_IDISPATCH`| |Error|
 |`DBTYPE_ERROR`| |Error|
 |`DBTYPE_BOOL`| |`bit`|
-|`DBTYPE_VARIANT`*| |NVARCHAR|
+|`DBTYPE_VARIANT`*| |nvarchar|
 |`DBTYPE_IUNKNOWN`| |Error|
 |`DBTYPE_GUID`| |`uniqueidentifier`|
-|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISLONG=true` <br>로 구분하거나 여러<br> 최대 길이 > 8000|`image`|
-|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISROWVER=true`, `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`, 열 크기 = 8 <br>로 구분하거나 여러<br> 최대 길이가 보고되지 않음 | `timestamp` |
+|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISLONG=true` <br>또는<br> 최대 길이 > 8000|`image`|
+|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISROWVER=true`, `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`, 열 크기 = 8 <br>또는<br> 최대 길이가 보고되지 않음 | `timestamp` |
 |`DBTYPE_BYTES`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `binary` |
 |`DBTYPE_BYTES`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `varbinary`|
 |`DBTYPE_STR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `char`|
 |`DBTYPE_STR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `varchar` |
-|`DBTYPE_STR`| `DBCOLUMNFLAGS_ISLONG=true` <br>로 구분하거나 여러<br> 최대 길이 > 8000자 <br>로 구분하거나 여러<br>   최대 길이가 보고되지 않음 | `text`|
+|`DBTYPE_STR`| `DBCOLUMNFLAGS_ISLONG=true` <br>또는<br> 최대 길이 > 8000자 <br>또는<br>   최대 길이가 보고되지 않음 | `text`|
 |`DBTYPE_WSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` |`nchar`|
 |`DBTYPE_WSTR` | `DBCOLUMNFLAGS_ISFIXEDLENGTH=false`|`nvarchar`|
-|`DBTYPE_WSTR`| `DBCOLUMNFLAGS_ISLONG=true` <br>로 구분하거나 여러<br> 최대 길이 > 4000자 <br>로 구분하거나 여러<br>   최대 길이가 보고되지 않음 | `ntext`|
+|`DBTYPE_WSTR`| `DBCOLUMNFLAGS_ISLONG=true` <br>또는<br> 최대 길이 > 4000자 <br>또는<br>   최대 길이가 보고되지 않음 | `ntext`|
 |`DBTYPE_UDT`| |Error|
 |`DBTYPE_DATE`* | | `datetime` |
 |`DBTYPE_DBDATE` | | `datetime`(명시적 변환 필요)|
@@ -618,37 +618,37 @@ Microsoft SQL Server는 다른 유형의 데이터 원본에 있는 데이터에
 
 |Object|인터페이스|필수|주석|시나리오|
 |:-----|:-----|:-----|:-----|:-----|
-|Data Source 개체|`IDBInitialize`|예|데이터와 보안 컨텍스트를 초기화 및 설정합니다.| |
-| |`IDBCreateSession`|예|DB 세션 개체를 만듭니다.| |
-| |`IDBProperties`|예|공급자의 기능 정보를 가져오고 초기화 속성을 설정합니다. 필수 속성: DBPROP_INIT_TIMEOUT| |
-| |`IDBInfo`|아니오|따옴표 리터럴, 카탈로그, 이름, 부분, 구분 기호, 문자 등을 가져옵니다.|원격 쿼리|
-|DB Session 개체|`IDBSchemaRowset`|아니오|테이블/열 메타데이터를 가져옵니다. 필요한 행 집합: `TABLES`, `COLUMNS`, `PROVIDER_TYPES`. 사용 가능한 경우 사용되는 기타 행 집합: `INDEXES`, `TABLE_STATISTICS`|성능, 인덱싱된 액세스|
-| |`IOpenRowset`|예|테이블, 인덱스 또는 히스토그램의 행 집합을 엽니다.| |
-| |`IGetDataSource`|예|DB 세션 개체에서 DSO로 다시 가져오는 데 사용합니다.| |
-| |`IDBCreateCommand`|아니오|쿼리를 지원하는 공급자에 대한 명령 개체(쿼리)를 만드는 데 사용합니다.|원격 쿼리, 통과 쿼리|
-| |`ITransactionLocal`|아니오|트랜잭션 업데이트에 사용합니다.|`UPDATE`, `DELETE`, `INSERT` 문|
-| |`ITransactionJoin`|아니오|분산 트랜잭션을 지원하는 데 사용합니다.|사용자 트랜잭션에 있는 경우 `UPDATE`, `DELETE`, `INSERT`|
-|Rowset 개체|IRowset|예|행을 검색합니다.| |
-| |`IAccessor`|예|행 집합의 열에 바인딩합니다.| |
-| |`IColumnsInfo`|예|행 집합의 열에 대한 정보를 가져옵니다.| |
-| |`IRowsetInfo`|예|행 집합 속성에 대한 정보를 가져옵니다.| |
-| |`IRowsetLocate`|아니오|`UPDATE`/`DELETE` 작업 및 인덱스 기반 조회를 수행하는 데 필요합니다. 책갈피를 기준으로 행을 조회하는 데 사용합니다.|인덱싱된 액세스, `UPDATE` 및 `DELETE` 문|
-| |`IRowsetChange`|아니오|행 집합의 `INSERTS`/`UPDATES`/ `DELETES`에 필요합니다. 기본 테이블의 행 집합은 `INSERT`, `UPDATE` 및 `DELETE` 문에 대해 이 인터페이스를 지원해야 합니다.|`UPDATE`, `DELETE`, `INSERT` 문|
-| |`IConvertType`|예|행 집합이 해당 열에서 특정 데이터 형식 변환을 지원하는지 확인하는 데 사용합니다.| |
-|인덱스|`IRowset`|예|행을 검색합니다.|인덱싱된 액세스, 성능|
-| |`IAccessor`|예|행 집합의 열에 바인딩합니다.|인덱싱된 액세스, 성능|
-| |`IColumnsInfo`|예|행 집합의 열에 대한 정보를 가져옵니다.|인덱싱된 액세스, 성능|
-| |`IRowsetInfo`|예|행 집합 속성에 대한 정보를 가져옵니다.|인덱싱된 액세스, 성능|
-| |`IRowsetIndex`|예|인덱스의 행 집합에만 필요합니다. 인덱싱 기능(범위 설정, 검색)에 사용합니다.|인덱싱된 액세스, 성능|
-|Command|`ICommand`|예| |원격 쿼리, 통과 쿼리|
-| |`ICommandText`|예|쿼리 텍스트 정의에 사용합니다.|원격 쿼리, 통과 쿼리|
-| |`IColumnsInfo`|예|쿼리 결과의 열 메타데이터를 가져오는 데 사용합니다.|원격 쿼리, 통과 쿼리|
-| |`ICommandProperties`|예|명령에서 반환된 행 집합의 필수 속성을 지정하는 데 사용합니다.|원격 쿼리, 통과 쿼리|
-| |`ICommandWithParameters`|아니오|매개 변수가 있는 쿼리 실행에 사용합니다.|원격 쿼리, 성능|
-| |`ICommandPrepare`|아니오|메타데이터를 가져오는 명령을 준비하는 데 사용합니다(사용 가능한 경우 통과 쿼리에 사용됨).|원격 쿼리, 성능|
-|Error 개체|`IErrorRecords`|예|단일 오류 레코드에 해당하는 `IErrorInfo` 인터페이스에 대한 포인터를 가져오는 데 사용합니다.| |
-| |`IErrorInfo`|예|단일 오류 레코드에 해당하는 `IErrorInfo` 인터페이스에 대한 포인터를 가져오는 데 사용합니다.| |
-|Any 개체|`ISupportErrorInfo`|아니오|지정된 인터페이스가 오류 개체를 지원하는지를 확인하는 데 사용합니다.| |
+|Data Source 개체|`IDBInitialize`|yes|데이터와 보안 컨텍스트를 초기화 및 설정합니다.| |
+| |`IDBCreateSession`|yes|DB 세션 개체를 만듭니다.| |
+| |`IDBProperties`|yes|공급자의 기능 정보를 가져오고 초기화 속성을 설정합니다. 필수 속성: DBPROP_INIT_TIMEOUT| |
+| |`IDBInfo`|예|따옴표 리터럴, 카탈로그, 이름, 부분, 구분 기호, 문자 등을 가져옵니다.|원격 쿼리|
+|DB Session 개체|`IDBSchemaRowset`|예|테이블/열 메타데이터를 가져옵니다. 필요한 행 집합: `TABLES`, `COLUMNS`, `PROVIDER_TYPES`. 사용 가능한 경우 사용되는 기타 행 집합: `INDEXES`, `TABLE_STATISTICS`|성능, 인덱싱된 액세스|
+| |`IOpenRowset`|yes|테이블, 인덱스 또는 히스토그램의 행 집합을 엽니다.| |
+| |`IGetDataSource`|yes|DB 세션 개체에서 DSO로 다시 가져오는 데 사용합니다.| |
+| |`IDBCreateCommand`|예|쿼리를 지원하는 공급자에 대한 명령 개체(쿼리)를 만드는 데 사용합니다.|원격 쿼리, 통과 쿼리|
+| |`ITransactionLocal`|예|트랜잭션 업데이트에 사용합니다.|`UPDATE`, `DELETE`, `INSERT` 문|
+| |`ITransactionJoin`|예|분산 트랜잭션을 지원하는 데 사용합니다.|사용자 트랜잭션에 있는 경우 `UPDATE`, `DELETE`, `INSERT`|
+|Rowset 개체|IRowset|yes|행을 검색합니다.| |
+| |`IAccessor`|yes|행 집합의 열에 바인딩합니다.| |
+| |`IColumnsInfo`|yes|행 집합의 열에 대한 정보를 가져옵니다.| |
+| |`IRowsetInfo`|yes|행 집합 속성에 대한 정보를 가져옵니다.| |
+| |`IRowsetLocate`|예|`UPDATE`/`DELETE` 작업 및 인덱스 기반 조회를 수행하는 데 필요합니다. 책갈피를 기준으로 행을 조회하는 데 사용합니다.|인덱싱된 액세스, `UPDATE` 및 `DELETE` 문|
+| |`IRowsetChange`|예|행 집합의 `INSERTS`/`UPDATES`/ `DELETES`에 필요합니다. 기본 테이블의 행 집합은 `INSERT`, `UPDATE` 및 `DELETE` 문에 대해 이 인터페이스를 지원해야 합니다.|`UPDATE`, `DELETE`, `INSERT` 문|
+| |`IConvertType`|yes|행 집합이 해당 열에서 특정 데이터 형식 변환을 지원하는지 확인하는 데 사용합니다.| |
+|인덱스|`IRowset`|yes|행을 검색합니다.|인덱싱된 액세스, 성능|
+| |`IAccessor`|yes|행 집합의 열에 바인딩합니다.|인덱싱된 액세스, 성능|
+| |`IColumnsInfo`|yes|행 집합의 열에 대한 정보를 가져옵니다.|인덱싱된 액세스, 성능|
+| |`IRowsetInfo`|yes|행 집합 속성에 대한 정보를 가져옵니다.|인덱싱된 액세스, 성능|
+| |`IRowsetIndex`|yes|인덱스의 행 집합에만 필요합니다. 인덱싱 기능(범위 설정, 검색)에 사용합니다.|인덱싱된 액세스, 성능|
+|명령|`ICommand`|yes| |원격 쿼리, 통과 쿼리|
+| |`ICommandText`|yes|쿼리 텍스트 정의에 사용합니다.|원격 쿼리, 통과 쿼리|
+| |`IColumnsInfo`|yes|쿼리 결과의 열 메타데이터를 가져오는 데 사용합니다.|원격 쿼리, 통과 쿼리|
+| |`ICommandProperties`|yes|명령에서 반환된 행 집합의 필수 속성을 지정하는 데 사용합니다.|원격 쿼리, 통과 쿼리|
+| |`ICommandWithParameters`|예|매개 변수가 있는 쿼리 실행에 사용합니다.|원격 쿼리, 성능|
+| |`ICommandPrepare`|예|메타데이터를 가져오는 명령을 준비하는 데 사용합니다(사용 가능한 경우 통과 쿼리에 사용됨).|원격 쿼리, 성능|
+|Error 개체|`IErrorRecords`|yes|단일 오류 레코드에 해당하는 `IErrorInfo` 인터페이스에 대한 포인터를 가져오는 데 사용합니다.| |
+| |`IErrorInfo`|yes|단일 오류 레코드에 해당하는 `IErrorInfo` 인터페이스에 대한 포인터를 가져오는 데 사용합니다.| |
+|Any 개체|`ISupportErrorInfo`|예|지정된 인터페이스가 오류 개체를 지원하는지를 확인하는 데 사용합니다.| |
 |  |  |  |  |  |
 
 >[!NOTE]
@@ -680,7 +680,7 @@ SQL Server는 SQL-92 항목 수준 또는 ODBC 핵심을 지원하는 SQL 명령
 
    - AS 키워드가 없는 테이블 별칭
 
-1. `WHERE` 절은 `NOT`, `EXISTS`, `ANY`, `ALL`이 포함된 하위 쿼리를 사용합니다.
+1. `WHERE` 절은 `NOT` `EXISTS`, `ANY`, `ALL`이 포함된 하위 쿼리를 사용합니다.
 
 1. 식:
 

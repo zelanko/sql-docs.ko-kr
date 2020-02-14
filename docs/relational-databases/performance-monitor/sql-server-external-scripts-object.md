@@ -16,10 +16,10 @@ ms.assetid: 8a75ccce-b174-4937-bc92-8e413b55afe1
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 36093a4cd91943b3db214dcb9cdeb55bda7399c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093515"
 ---
 # <a name="sql-server-external-scripts-object"></a>SQL Server, 외부 스크립트 개체
@@ -27,9 +27,9 @@ ms.locfileid: "68093515"
 
   **의** SQLServer:외부 스크립트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체는 외부 스크립트를 실행하는 것과 연관된 동작을 모니터링하는 카운터를 제공합니다. 외부 스크립트를 실행하는 방법은 [sp_execute_external_script&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)를 참조하세요.  
   
- 이 테이블은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **외부 스크립트** 카운터를 설명합니다.  
+ 이 테이블에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **외부 스크립트** 카운터에 대해 설명합니다.  
   
-|SQL Server 외부 스크립트 카운터|설명|  
+|SQL Server 외부 스크립트 카운터|Description|  
 |------------------------------------------|-----------------|  
 |**실행 오류**|외부 스크립트 실행 시 발생한 오류 수입니다.|  
 |**묵시적 인증. Logins**|묵시적 인증을 사용하여 인증된 위성 프로세스의 로그인 수입니다.|  

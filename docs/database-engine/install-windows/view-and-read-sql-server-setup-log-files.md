@@ -18,12 +18,12 @@ ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7bf7d199239be10760df49d586cdf5048fbc4a80
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: b3ddfa9ee8866086fa16a384efb63a5392394d3a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "67906776"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76929132"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>SQL Server 설치 로그 파일 보기 및 읽기
 
@@ -142,5 +142,5 @@ SystemConfigurationCheck_Report.htm은 %programfiles%\\[!INCLUDE[msCoName](../..
 
 [!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 2017 설치](../../database-engine/install-windows/install-sql-server.md)

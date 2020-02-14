@@ -30,10 +30,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fd6fdf81a74e015995f5bf9bd5500f196ccf5cc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68020252"
 ---
 # <a name="monitor-and-tune-for-performance"></a>성능 모니터링 및 튜닝
@@ -66,7 +66,7 @@ ms.locfileid: "68020252"
   
 ## <a name="monitoring-and-performance-tuning-tasks"></a>모니터링 및 성능 튜닝 태스크  
   
-|항목| 태스크|  
+|항목| Task|  
 |-----------|----------------------|  
 |[SQL Server 구성 요소 모니터링](../../relational-databases/performance/monitor-sql-server-components.md)|작업 모니터, 확장 이벤트 및 동적 관리 뷰 및 함수 등과 같은 모든 SQL Server 구성 요소를 모니터링하는 필수 단계입니다.|  
 |[성능 모니터링 및 튜닝 도구](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)|활성 쿼리 통계와 같은 SQL Server 및 데이터베이스 엔진 튜닝 관리자에서 사용 가능한 모니터링 및 튜닝 도구를 나열합니다.|  
@@ -80,7 +80,7 @@ ms.locfileid: "68020252"
 |[리소스 사용 모니터링](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)|시스템 모니터(perfmon이라고도 함)를 통해 성능 카운터를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 성능을 측정합니다.|  
 
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [기업 내 관리 자동화](../../ssms/agent/automated-administration-across-an-enterprise.md)    
  [실행 계획 비교 및 분석](../../relational-databases/performance/compare-and-analyze-execution-plans.md)    
  [실행 계획 표시 및 저장](../../relational-databases/performance/display-and-save-execution-plans.md)    

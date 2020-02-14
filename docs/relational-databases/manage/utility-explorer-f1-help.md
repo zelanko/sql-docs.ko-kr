@@ -20,10 +20,10 @@ ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1dd8c492c2353793ad195cea9606a89c502dc5f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024487"
 ---
 # <a name="utility-explorer-f1-help"></a>유틸리티 탐색기 F1 도움말
@@ -120,14 +120,14 @@ ms.locfileid: "68024487"
   유틸리티 탐색기의 배포된 데이터 계층 애플리케이션 뷰에 나오는 정보는 개별 데이터 계층 애플리케이션의 사용 데이터, CPU 사용 기록, 파일 수준의 스토리지 사용 세부 정보, 그리고 정책 임계 값을 확인 및 업데이트하는 기능을 제공합니다. 정책 임계값은 데이터 계층 애플리케이션 수준에서 CPU 사용에 대해, 그리고 데이터베이스 데이터 파일 및 로그 파일에 대해 제어할 수 있습니다. 개별 데이터 계층 애플리케이션의 속성 정보를 볼 수도 있습니다.  
   
 ### <a name="uielement-list"></a>UIElement 목록  
- 목록 뷰  
+ 목록 보기  
  창 맨 위에 있는 목록 뷰에서는 개별 데이터 계층 애플리케이션에 대한 데이터를 표시됩니다. 상태 아이콘은 각 데이터 계층 애플리케이션의 상태 요약을 사용 범주별로 보여 줍니다.  
   
--   녹색 확인 표시 - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - 리소스 사용 정책을 위반하지 않는 데이터 계층 애플리케이션의 수입니다. 리소스 사용이 정상적입니다.  
+-   녹색 확인 표시 - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - 리소스 사용 정책을 위반하지 않는 데이터 계층 애플리케이션 수입니다. 리소스 사용이 정상적입니다.  
   
 -   녹색 아래쪽 화살표 - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - 리소스가 사용 미달 상태입니다.  
   
--   빨강색 위쪽 화살표 - ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_down_arrow") - 리소스가 초과 사용 상태입니다.  
+-   빨강 위쪽 화살표 - ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - 리소스가 사용 과다 상태입니다.  
   
  목록 뷰의 열 순서는 마우스로 왼쪽이나 오른쪽으로 끌어서 변경할 수 있습니다. 목록 뷰에서 열 머리글을 마우스 오른쪽 단추로 클릭하고 열을 선택하거나 선택을 취소하여 열을 추가하거나 삭제할 수 있습니다. 오른쪽 클릭 메뉴에도 정렬 옵션이 있습니다. 열 이름 위쪽을 클릭하여 정렬을 활성화할 수도 있습니다.  
   
@@ -260,16 +260,16 @@ ms.locfileid: "68024487"
  유틸리티 탐색기의 관리되는 인스턴스 뷰에 나오는 정보는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 개별 인스턴스에 대한 사용 데이터, CPU 사용 기록, 파일 수준의 스토리지 사용 세부 정보, 그리고 정책 임계 값을 확인 및 업데이트하는 기능을 제공합니다. 정책 임계 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 수준, 컴퓨터, 데이터베이스 파일과 로그 파일, 그리고 스토리지 볼륨 수준에서 제어할 수 있습니다. 개별 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관리되는 인스턴스 속성 정보를 볼 수도 있습니다.  
   
 ### <a name="uielement-list"></a>UIElement 목록  
- 목록 뷰  
+ 목록 보기  
  창 맨 위에 있는 목록 뷰에는 개별 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 정보가 ComputerName\InstanceName 형식의 행으로 나열 표시됩니다.  
   
  상태 아이콘은 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 상태 요약을 사용 범주별로 보여 줍니다.  
   
--   녹색 확인 표시 - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - 리소스 사용 정책을 위반하지 않는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관리되는 인스턴스 수입니다. 리소스 사용이 정상적입니다.  
+-   녹색 확인 표시 - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - 리소스 사용 정책을 위반하지 않는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관리형 인스턴스 수입니다. 리소스 사용이 정상적입니다.  
   
 -   녹색 아래쪽 화살표 - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - 리소스가 사용 미달 상태입니다.  
   
--   빨강색 위쪽 화살표 - ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_down_arrow") - 리소스가 초과 사용 상태입니다.  
+-   빨강 위쪽 화살표 - ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - 리소스가 사용 과다 상태입니다.  
   
  목록 뷰의 열 순서는 마우스로 왼쪽이나 오른쪽으로 끌어서 변경할 수 있습니다. 목록 뷰에서 열 머리글을 마우스 오른쪽 단추로 클릭하고 열을 선택하거나 선택을 취소하여 열을 추가하거나 삭제할 수 있습니다. 오른쪽 클릭 메뉴에도 정렬 옵션이 있습니다. 열 이름 위쪽을 클릭하여 정렬을 활성화할 수도 있습니다.  
   
@@ -480,7 +480,7 @@ ms.locfileid: "68024487"
  
 **데이터 웨어하우스** 탭 - 유틸리티 관리 데이터 웨어하우스에 대한 구성 세부 정보를 표시합니다.  
   
- 데이터 보존 기간  
+ 데이터 보존  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관리되는 인스턴스에 대해 수집된 사용률 정보의 데이터 보존 기간을 지정합니다. 기본 기간은 1년입니다. 최소값은 1개월입니다. 지원되는 가장 긴 기간은 2년입니다.  
   
  유틸리티 데이터 웨어하우스 구성 정보  

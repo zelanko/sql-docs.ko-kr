@@ -18,10 +18,10 @@ ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ebab091b0e674339141c4ee2ea6d7c7993ccbabf
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68893678"
 ---
 # <a name="alter-external-resource-pool-transact-sql"></a>ALTER EXTERNAL RESOURCE POOL(Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68893678"
 [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]의 경우 외부 풀은 `rterm.exe`, `python.exe`, `BxlServer.exe` 및 이들에 의해 생성된 기타 프로세스를 제어합니다.
 ::: moniker-end
 
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ## <a name="syntax"></a>구문
 
@@ -73,7 +73,7 @@ CPU 경합이 있을 때 이 외부 리소스 풀의 모든 요청이 받을 수
 AFFINITY {CPU = AUTO | ( \<CPU_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)}  
 외부 리소스 풀을 특정 UPU에 연결합니다.
 
-AFFINITY CPU = **(** \<CPU_range_spec> **)** 외부 리소스 풀을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지정된 CPU_IDs로 식별하는 CPU에 매핑합니다. AFFINITY NUMANODE = **(** \< NUMA_node_range_spec> **)** 을 사용하는 경우 외부 리소스 풀의 선호도가 지정된 NUMA 노드 또는 노드 범위에 해당하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 물리적 CPU에 설정됩니다.
+AFFINITY CPU = **(** \<CPU_range_spec> **)** 는 외부 리소스 풀을 지정된 CPU_ID로 확인된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU에 매핑합니다. AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)** 를 사용하는 경우 외부 리소스 풀의 선호도가 지정된 NUMA 노드 또는 노드 범위에 해당하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 물리적 CPU로 설정됩니다.
 
 MAX_MEMORY_PERCENT =*value*  
 이 외부 리소스 풀의 요청에서 사용할 수 있는 총 서버 메모리를 지정합니다. *값*은 정수입니다. 허용되는 *value*의 범위는 1에서 100까지입니다.
@@ -81,7 +81,7 @@ MAX_MEMORY_PERCENT =*value*
 MAX_PROCESSES =*value*  
 이 외부 리소스 풀에 허용되는 프로세스의 최대 수를 지정합니다. 이후에 컴퓨터 리소스에 의해서만 바인딩되는 풀에 대 한 무제한 임계값을 설정하려면 0을 지정합니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 [ALTER RESOURCE GOVERNOR RECONFIGURE](../../t-sql/statements/alter-resource-governor-transact-sql.md) 문을 실행하면 리소스 풀을 구현합니다.
 
@@ -108,7 +108,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO
 ```
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 + [SQL Server에서 머신 러닝을 위한 리소스 거버넌스](../../advanced-analytics/r/resource-governance-for-r-services.md)
 + [외부 스크립트 설정 서버 구성 옵션](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)

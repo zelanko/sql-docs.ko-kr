@@ -9,12 +9,12 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 9bc52bc1708d4ca6e06e5cc78399e12615860d27
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 5999a50e793cb29ea67075d0fa36454cdb58a67d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75224509"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761877"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Linux 호스트의 SQL Server를 Active Directory 도메인에 가입
 
@@ -27,7 +27,7 @@ ms.locfileid: "75224509"
 Active Directory 인증을 구성하려면 먼저 네트워크에서 Active Directory 도메인 컨트롤러인 Windows를 설정해야 합니다. 그런 다음 SQL Server on Linux 호스트를 Active Directory 도메인에 가입시킵니다.
 
 > [!IMPORTANT]
-> 이 문서에서 설명하는 샘플 단계는 참조용입니다. 실제 단계는 전체 환경이 구성된 방식에 따라 사용자 환경에서 약간 다를 수 있습니다. 구체적인 구성, 사용자 지정 및 필요한 문제 해결 관련 정보는 환경의 시스템 및 도메인 관리자에게 문의하세요.
+> 이 아티클에서 설명하는 샘플 단계는 지침을 제공하기 위한 것이며 Ubuntu 16.04, RHEL(Red Hat Enterprise Linux) 7.x 및 SLES(SUSE Enterprise Linux) 12 운영 체제를 참조합니다. 실제 단계는 전체 환경이 구성된 방식 및 운영 체제 버전에 따라 사용자 환경에서 약간 다를 수 있습니다. 예를 들어 Ubuntu 18.04에서는 netplan을 사용하는 반면, RHEL(Red Hat Enterprise Linux) 8.x에서는 다른 도구 중 nmcli를 사용하여 네트워크를 관리하고 구성합니다. 특정 도구, 구성, 사용자 지정 및 필요한 문제 해결 관련 정보는 사용자 환경의 시스템 및 도메인 관리자에게 문의하는 것이 좋습니다.
 
 ## <a name="check-the-connection-to-a-domain-controller"></a>도메인 컨트롤러의 연결 확인
 
@@ -43,7 +43,7 @@ ping contoso.com
 
 이러한 이름 확인 중 하나라도 실패하면 도메인 검색 목록을 업데이트합니다. 다음 섹션에서는 각각 Ubuntu, RHEL(Red Hat Enterprise Linux) 및 SLES(SUSE Linux Enterprise Server)에 관한 지침을 제공합니다.
 
-### <a name="ubuntu"></a>Ubuntu
+### <a name="ubuntu-1604"></a>Ubuntu 16.04
 
 1. Active Directory 도메인이 도메인 검색 목록에 있도록 **/etc/network/interfaces** 파일을 편집합니다.
 
@@ -71,7 +71,7 @@ ping contoso.com
    nameserver **<AD domain controller IP address>**
    ```
 
-### <a name="rhel"></a>RHEL
+### <a name="rhel-7x"></a>RHEL 7.x
 
 1. Active Directory 도메인이 도메인 검색 목록에 있도록 **/etc/sysconfig/network-scripts/ifcfg-eth0** 파일을 편집합니다. 또는 다른 인터페이스 구성 파일을 적절하게 편집합니다.
 
@@ -100,7 +100,7 @@ ping contoso.com
    **<IP address>** DC1.CONTOSO.COM CONTOSO.COM CONTOSO
    ```
 
-### <a name="sles"></a>SLES
+### <a name="sles-12"></a>SLES 12
 
 1. Active Directory 도메인 컨트롤러 IP가 DNS 쿼리에 사용되고 Active Directory 도메인이 도메인 검색 목록에 있도록 **/etc/sysconfig/network/config** 파일을 편집합니다.
 
@@ -178,7 +178,7 @@ ping contoso.com
 
    SQL Server는 SSSD 및 NSS를 사용하여 사용자 계정 및 그룹을 SID(보안 식별자)에 매핑합니다. SSSD가 구성되어 실행 중이어야 SQL Server가 AD 로그인을 성공적으로 만들 수 있습니다. **realmd** 는 일반적으로 도메인 조인을 하는 중인 이 작업을 자동으로 수행하지만 경우에 따라 이 작업을 별도로 수행해야 합니다.
 
-   자세한 내용은 [SSSD를 수동으로 구성](https://access.redhat.com/articles/3023951)하는 방법과 [SSSD를 사용하도록 NSS를 구성](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)하는 방법을 참조하세요.
+   자세한 내용은 [SSSD를 수동으로 구성](https://access.redhat.com/articles/3023951)하는 방법과 [SSSD를 사용하도록 NSS를 구성](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)하는 방법을 참조하세요.
 
 1. 이제 도메인에서 사용자에 관한 정보를 수집할 수 있고 해당 사용자로 Kerberos 티켓을 가져올 수 있는지 확인합니다. 다음 예제에서는 이를 위해 **id**, [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) 및 [klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html) 명령을 사용합니다.
 

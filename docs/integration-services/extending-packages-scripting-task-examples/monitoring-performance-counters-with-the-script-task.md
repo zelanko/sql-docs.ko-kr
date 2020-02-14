@@ -20,10 +20,10 @@ ms.assetid: 86609bf1-cae6-435e-a58d-41bdfc521e94
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ed4bca496d48e5fe268c1a425223fe03c8fcc6e7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297034"
 ---
 # <a name="monitoring-performance-counters-with-the-script-task"></a>스크립트 태스크를 사용하여 성능 카운터 모니터링
@@ -40,7 +40,7 @@ ms.locfileid: "71297034"
 > [!NOTE]  
 >  여러 패키지에서 쉽게 다시 사용할 수 있는 태스크를 만들려면 이 스크립트 태스크 예제에 있는 코드를 바탕으로 사용자 지정 태스크를 만들어 보십시오. 자세한 내용은 [사용자 지정 태스크 개발](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)을 참조하세요.  
   
-## <a name="description"></a>설명  
+## <a name="description"></a>Description  
  다음 예에서는 사용자 지정 성능 카운터를 만들고 해당 카운터를 증가시킵니다. 이 예에서는 먼저 성능 카운터가 이미 있는지 여부를 확인합니다. 성능 카운터가 만들어지지 않은 경우 스크립트에서는 **PerformanceCounterCategory** 개체의 **Create** 메서드를 호출하여 성능 카운터를 만듭니다. 성능 카운터를 만든 후에는 스크립트에서 해당 카운터를 증가시킵니다. 마지막으로, 성능 카운터가 더 이상 필요하지 않은 경우 성능 카운터에서 **Close** 메서드를 호출하는 모범 사례를 따릅니다.  
   
 > [!NOTE]  

@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4cf79aade8e74277ef7b5cbaa6e1bd3ae612e94b
-ms.sourcegitcommit: 909b69dd1f918f00b9013bb43ea66e76a690400a
+ms.openlocfilehash: 88b8e54867aba5439af9ed87e4a42b2083a479b3
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75924918"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76281871"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>SSIS(SQL Server Integration Services) DevOps 도구(미리 보기)
 
@@ -132,6 +132,12 @@ SSIS 배포 작업은 현재 다음 시나리오를 지원하지 않습니다.
 - MSDB 또는 SSIS 패키지 저장소에 패키지를 배포합니다.
 
 ## <a name="release-notes"></a>릴리스 정보
+
+### <a name="version-013-preview"></a>버전 0.1.3 미리 보기
+
+릴리스 날짜: 2020년 1월 19일
+
+- 원래 파일 이름이 변경된 경우 .ispac를 배포할 수 없었던 문제가 해결되었습니다.
 
 ### <a name="version-012-preview"></a>버전 0.1.2 미리 보기
 

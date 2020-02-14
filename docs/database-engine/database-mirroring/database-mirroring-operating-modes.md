@@ -13,10 +13,10 @@ ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6d39c2d0975f7be8a7e5481b9c91266528ae9ee2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006354"
 ---
 # <a name="database-mirroring-operating-modes"></a>데이터베이스 미러링 운영 모드
@@ -54,7 +54,7 @@ ms.locfileid: "68006354"
   
  다음 그림에서는 성능 우선 모드를 사용한 세션 구성을 보여 줍니다.  
   
- ![파트너 전용 세션 구성](../../database-engine/database-mirroring/media/dbm-high-performance-mode.gif "파트너 전용 세션 구성")  
+ ![파트너만 있는 세션 구성](../../database-engine/database-mirroring/media/dbm-high-performance-mode.gif "파트너만 있는 세션 구성")  
   
  성능 우선 모드에서 주 서버가 미러 서버로 트랜잭션 로그를 보내면 미러 서버의 확인을 기다리지 않고 즉시 클라이언트로 확인 메시지를 보냅니다. 트랜잭션은 미러 서버에서 로그를 디스크에 쓸 때까지 기다리지 않고 커밋됩니다. 비동기 작업을 통해 주 서버는 최소 트랜잭션 대기 시간을 사용하여 실행됩니다.  
   
@@ -168,7 +168,7 @@ ms.locfileid: "68006354"
   
 -   위의 조건에서 주 서버를 사용할 수 없게 되면 자동 장애 조치가 수행됩니다. 미러 서버가 주 서버 인스턴스의 역할로 전환하여 해당 데이터베이스를 주 데이터베이스로 제공합니다.  
   
--   이러한 조건을 만족하지 않을 때 주 서버를 사용할 수 없게 되면 서비스가 강제되고 데이터가 손실될 수 있습니다. 자세한 내용은 [데이터베이스 미러링 세션 중 역할 전환&#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)을 참조하세요.  
+-   이러한 조건을 만족하지 않을 때 주 서버를 사용할 수 없게 되면 서비스가 강제되고 데이터가 손실될 수 있습니다. 자세한 내용은 [데이터베이스 미러링 세션 중 역할 전환&#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)에서만 사용할 수 있습니다.  
   
 -   미러 서버만 사용할 수 없는 경우 주 서버와 미러링 모니터 서버가 계속 작동됩니다.  
   
@@ -247,7 +247,7 @@ ms.locfileid: "68006354"
 ###  <a name="ViewWitness"></a> 보안 설정 및 미러링 모니터 상태 보기  
  데이터베이스의 보안 설정 및 미러링 모니터 상태를 보려면 **sys.database_mirroring** 카탈로그 뷰를 사용합니다. 관련된 열은 다음과 같습니다.  
   
-|요소|열|설명|  
+|요소|열|Description|  
 |------------|-------------|-----------------|  
 |트랜잭션 보안|**mirroring_safety_level** 또는 **mirroring_safety_level_desc**|다음 중 하나에 해당되는 미러 데이터베이스상의 업데이트를 위한 트랜잭션 보안 설정<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL<br /><br /> NULL = 데이터베이스가 온라인이 아닙니다.|  
 |미러링 모니터의 존재 여부|**mirroring_witness_name**|데이터베이스 미러링 모니터의 서버 이름 또는 미러링 모니터가 존재하지 않음을 나타내는 NULL|  
@@ -271,7 +271,7 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
 |OFF|SUSPENDED 또는 DISCONNECTED|NULL(미러링 모니터 없음)|미러 서버로 서비스가 강제됩니다(데이터가 손실될 수 있음).|  
 |FULL|SYNCHRONIZING 또는 SUSPENDED|NULL(미러링 모니터 없음)|미러 서버로 서비스가 강제됩니다(데이터가 손실될 수 있음).|  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [데이터베이스 미러링 모니터 서버 추가 또는 바꾸기&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e293625ab72ba1b94b32a1e6c1ada853b88509f4
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 591cb0ff055a4a3556ac4b6200d052ffc58a6963
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770601"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286920"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>복제 모니터 인터페이스 개요
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -221,7 +221,7 @@ ms.locfileid: "68770601"
  자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.
   
 ## <a name="viewing-information-and-performing-tasks-related-to-agent-profiles"></a>에이전트 프로필 관련 정보 보기 및 태스크 수행  
- 복제 모니터에는 에이전트 프로필을 관리하기 위한 많은 대화 상자가 포함되어 있습니다. 에이전트 프로필은 에이전트 동작을 결정하는 에이전트에 대한 매개 변수 집합입니다. 자세한 내용은 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)을(를) 참조하세요. 다음과 같은 대화 상자가 있습니다.  
+ 복제 모니터에는 에이전트 프로필을 관리하기 위한 많은 대화 상자가 포함되어 있습니다. 에이전트 프로필은 에이전트 동작을 결정하는 에이전트에 대한 매개 변수 집합입니다. 자세한 내용은 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)을 참조하세요. 다음과 같은 대화 상자가 있습니다.  
   
 -   **에이전트 프로필**  
   

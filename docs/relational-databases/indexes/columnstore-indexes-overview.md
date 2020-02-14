@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d48ff63d5ea5ab7ed805eb7db092fa35682bbc9b
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70009400"
 ---
 # <a name="columnstore-indexes-overview"></a>columnstore 인덱스: 개요
@@ -61,12 +61,12 @@ Columnstore 인덱스는 성능과 압축률을 높이기 위해 테이블을 �
 -   각 행 그룹에는 테이블의 모든 열에 대해 각각 하나의 열 세그먼트가 포함됩니다.  
 -   각 열 세그먼트는 함께 압축되며 실제 미디어에 저장됩니다.  
   
-![Column segment](../../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
+![열 세그먼트](../../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "열 세그먼트")  
   
 #### <a name="clustered-columnstore-index"></a>클러스터형 columnstore 인덱스
 클러스터형 columnstore 인덱스는 전체 테이블에 대한 실제 스토리지입니다.    
   
-![클러스터형 Columnstore 인덱스](../../relational-databases/indexes/media/sql-server-pdw-columnstore-physicalstorage.gif "클러스터형 Columnstore 인덱스")  
+![클러스터형 columnstore 인덱스](../../relational-databases/indexes/media/sql-server-pdw-columnstore-physicalstorage.gif "클러스터형 columnstore 인덱스")  
   
 Columnstore 인덱스는 열 세그먼트의 조각화를 줄이고 성능을 향상하기 위해 삭제된 행에 대한 ID의 btree 목록과 함께 *deltastore*라는 클러스터형 인덱스에 일부 데이터를 임시로 저장할 수 있습니다. deltastore 작업은 백그라운드에서 처리됩니다. 정확한 쿼리 결과를 반환하기 위해 클러스터형 columnstore 인덱스는 columnstore와 deltastore의 쿼리 결과를 모두 결합합니다.  
   
@@ -116,7 +116,7 @@ Rowstore 인덱스는 데이터를 찾는 쿼리, 특정 값을 검색할 경우
 Columnstore 인덱스는 특히 대규모 테이블에서 많은 양의 데이터를 검색하는 분석 쿼리에 대한 높은 성능 향상을 제공합니다. Columnstore 인덱스는 테이블 찾기 대신 전체 테이블 검색이 필요한 경향이 있으므로 특히 팩트 테이블에서 데이터 웨어하우징 및 분석 워크로드에 사용됩니다.  
   
 ### <a name="can-i-combine-rowstore-and-columnstore-on-the-same-table"></a>Rowstore와 Columnstore를 동일한 테이블에서 결합할 수 있습니까?  
-예 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 rowstore 테이블에서 업데이트 가능한 비클러스터형 columnstore 인덱스를 만들 수 있습니다. Columnstore 인덱스는 선택한 열의 복사본을 저장하므로 이 데이터에 대한 추가 공간이 필요하지만 선택한 데이터는 평균 10배로 압축됩니다. columnstore 인덱스에서 분석을 실행하고 이와 동시에 rowstore 인덱스에서 트랜잭션을 실행할 수 있습니다. rowstore 테이블의 데이터가 변경되면 columnstore가 업데이트되므로 두 인덱스 모두 동일한 데이터에 대해 작동합니다.  
+예. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 rowstore 테이블에서 업데이트 가능한 비클러스터형 columnstore 인덱스를 만들 수 있습니다. Columnstore 인덱스는 선택한 열의 복사본을 저장하므로 이 데이터에 대한 추가 공간이 필요하지만 선택한 데이터는 평균 10배로 압축됩니다. columnstore 인덱스에서 분석을 실행하고 이와 동시에 rowstore 인덱스에서 트랜잭션을 실행할 수 있습니다. rowstore 테이블의 데이터가 변경되면 columnstore가 업데이트되므로 두 인덱스 모두 동일한 데이터에 대해 작동합니다.  
   
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 하나의 클러스터형 columnstore 인덱스에서 하나 이상의 비클러스터형 rowstore 인덱스를 사용하고 기본 columnstore에서 효율적인 테이블 검색을 수행할 수 있습니다. 다른 옵션도 사용할 수 있습니다. 예를 들어 rowstore 테이블에서 UNIQUE 제약 조건을 사용하여 기본 키 제약 조건을 적용할 수 있습니다. 고유하지 않은 값은 rowstore 테이블에 삽입하지 못하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 columnstore에 값을 삽입할 수 없습니다.  
   
@@ -126,11 +126,11 @@ columnstore 인덱스에 있는 모든 열이 메타데이터에 포괄 열로 �
 |||
 |-|-|  
 |[sys.indexes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)|[sys.index_columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)|  
-|[sys.partitions&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)|[sys.internal_partitions&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|  
+|[sys.partitions&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)|[sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|  
 |[sys.column_store_segments&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)|[sys.column_store_dictionaries&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)|  
-|[sys.column_store_row_groups&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)|[sys.dm_db_column_store_row_group_operational_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)|  
-|[sys.dm_db_column_store_row_group_physical_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)|[sys.dm_column_store_object_pool&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-column-store-object-pool-transact-sql.md)|  
-|[sys.dm_db_column_store_row_group_operational_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)|[sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)|  
+|[sys.column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)|[sys.dm_db_column_store_row_group_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)|  
+|[sys.dm_db_column_store_row_group_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)|[sys.dm_column_store_object_pool &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-column-store-object-pool-transact-sql.md)|  
+|[sys.dm_db_column_store_row_group_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)|[sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)|  
 |[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)||  
   
 ## <a name="related-tasks"></a>관련 작업  
@@ -138,7 +138,7 @@ columnstore 인덱스에 있는 모든 열이 메타데이터에 포괄 열로 �
   
 `CREATE TABLE` 문을 사용하여 테이블을 만드는 경우 `WITH CLUSTERED COLUMNSTORE INDEX` 옵션을 지정하여 테이블을 columnstore로 만들 수 있습니다. rowstore 테이블이 이미 있는 경우 이를 columnstore로 변환하려면 `CREATE COLUMNSTORE INDEX` 문을 사용합니다.  
   
-|태스크|참조 항목|참고|  
+|Task|참조 항목|메모|  
 |----------|----------------------|-----------|  
 |테이블을 columnstore로 만듭니다.|[CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 테이블을 클러스터형 columnstore 인덱스로 만들 수 있습니다. 먼저 rowstore 테이블을 만든 다음 이를 columnstore로 변환할 필요가 없습니다.|  
 |columnstore 인덱스가 포함된 메모리 테이블을 만듭니다.|[CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 columnstore 인덱스가 포함된 메모리 최적화 테이블을 만들 수 있습니다. 테이블을 만든 후 `ALTER TABLE ADD INDEX` 구문을 사용하여 columnstore 인덱스를 추가할 수도 있습니다.|  
@@ -156,7 +156,7 @@ columnstore 인덱스에 있는 모든 열이 메타데이터에 포괄 열로 �
 |Columnstore 인덱스를 조각 모음합니다.|[ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)|`ALTER INDEX ... REORGANIZE`는 columnstore 인덱스를 온라인으로 조각 모음합니다.|  
 |테이블을 columnstore 인덱스와 병합합니다.|[MERGE&#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)||  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Columnstore 인덱스 데이터 로드](~/relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [버전이 지정된 columnstore 인덱스 기능 요약](~/relational-databases/indexes/columnstore-indexes-what-s-new.md)   
  [Columnstore 인덱스 쿼리 성능](~/relational-databases/indexes/columnstore-indexes-query-performance.md)   

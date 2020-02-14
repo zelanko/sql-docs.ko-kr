@@ -17,10 +17,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d6e96322cdd6dcd310a550fa1cd94d80dba38738
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67946882"
 ---
 # <a name="display-an-actual-execution-plan"></a>실제 실행 계획 표시
@@ -37,7 +37,7 @@ ms.locfileid: "67946882"
   
 3.  **쿼리** 메뉴에서 **실제 실행 계획 포함**을 클릭하거나 **실제 실행 계획 포함** 도구 모음 단추를 클릭합니다.
 
-    ![도구 모음에서 실제 실행 계획 단추](../../relational-databases/performance/media/actualexecplantoolbar.png "도구 모음에서 실제 실행 계획 단추")   
+    ![도구 모음의 실제 실행 계획 단추](../../relational-databases/performance/media/actualexecplantoolbar.png "도구 모음의 실제 실행 계획 단추")   
   
 4.  **실행** 도구 모음 단추를 클릭하여 쿼리를 실행합니다. 쿼리 최적화 프로그램에서 사용하는 계획이 결과 창의 **실행 계획** 탭에 표시됩니다. 
 

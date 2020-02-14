@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 4c4338893ea7cd38743967df8b3523def58df9fd
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: fe3d184b1a64dded731c0746a8264b4dc5809dd7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710963"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286650"
 ---
 # <a name="change-publication-and-article-properties"></a>게시 및 아티클 속성 변경
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "71710963"
   
 ## <a name="publication-properties-for-snapshot-and-transactional-replication"></a>스냅샷 및 트랜잭션 복제에 대한 게시 속성  
   
-|설명|저장 프로시저|속성|요구 사항|  
+|Description|저장 프로시저|속성|요구 사항|  
 |-----------------|----------------------|----------------|------------------|  
 |스냅샷 형식을 변경합니다.|**sp_changepublication**|**sync_method**|새 스냅샷|  
 |스냅샷 위치를 변경합니다.|**sp_changepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|새 스냅샷|  
@@ -44,7 +44,7 @@ ms.locfileid: "71710963"
   
 ## <a name="article-properties-for-snapshot-and-transactional-replication"></a>스냅샷 및 트랜잭션 복제에 대한 아티클 속성  
   
-|설명|저장 프로시저|속성|요구 사항|  
+|Description|저장 프로시저|속성|요구 사항|  
 |-----------------|----------------------|----------------|------------------|  
 |아티클을 삭제합니다.|**sp_droparticle**|모든 매개 변수|구독을 만들기 전에 아티클을 삭제할 수 있습니다. 저장 프로시저를 사용하면 아티클에 대한 구독을 삭제할 수 있고, [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]를 사용하면 전체 구독을 삭제하고 다시 만든 후 동기화해야 합니다. 자세한 내용은 [기존 게시에 대한 아티클 추가 및 삭제](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.|  
 |열 필터를 변경합니다.|**sp_articlecolumn**|`@column`<br /><br /> `@operation`|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
@@ -54,7 +54,7 @@ ms.locfileid: "71710963"
 |행 필터를 변경합니다.|**sp_changearticle**|**filter**|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
 |스키마 옵션을 변경합니다.|**sp_changearticle**|**schema_option**|새 스냅샷|  
 |스냅샷을 적용하기 전에 구독자에서 테이블이 처리되는 방식을 변경합니다.|**sp_changearticle**|**pre_creation_cmd**|새 스냅샷|  
-|아티클 상태를 변경합니다.|**sp_changearticle**|**상태**|새 스냅샷|  
+|아티클 상태를 변경합니다.|**sp_changearticle**|**status**|새 스냅샷|  
 |INSERT, UPDATE 또는 DELETE 명령을 변경합니다.|**sp_changearticle**|**ins_cmd**<br /><br /> **upd_cmd**<br /><br /> **del_cmd**|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
 |대상 테이블 이름을 변경합니다.|**sp_changearticle**|**dest_table**|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
 |대상 테이블 소유자(스키마)를 변경합니다.|**sp_changearticle**|**destination_owner**|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
@@ -62,7 +62,7 @@ ms.locfileid: "71710963"
   
 ## <a name="publication-properties-for-merge-replication"></a>병합 복제에 대한 게시 속성  
   
-|설명|저장 프로시저|속성|요구 사항|  
+|Description|저장 프로시저|속성|요구 사항|  
 |-----------------|----------------------|----------------|------------------|  
 |스냅샷 형식을 변경합니다.|**sp_changemergepublication**|**sync_mode**|새 스냅샷|  
 |스냅샷 위치를 변경합니다.|**sp_changemergepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|새 스냅샷|  
@@ -81,7 +81,7 @@ ms.locfileid: "71710963"
   
 ## <a name="article-properties-for-merge-replication"></a>병합 복제에 대한 아티클 속성  
   
-|설명|저장 프로시저|속성|요구 사항|  
+|Description|저장 프로시저|속성|요구 사항|  
 |-----------------|----------------------|----------------|------------------|  
 |매개 변수가 있는 필터가 게시의 마지막 필터인 아티클을 삭제합니다.|**sp_dropmergearticle**|모든 매개 변수|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
 |아티클이 조인 필터 또는 논리적 레코드에서 부모인 아티클을 삭제합니다. 조인을 삭제하면 의도하지 않는 결과가 발생할 수 있습니다.|**sp_dropmergearticle**|모든 매개 변수|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  

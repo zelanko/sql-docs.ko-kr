@@ -20,10 +20,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f05ede948892b7f9ae6a9f9ee24a3b6878586917
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113378"
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>프로덕션 서버 튜닝 로드 줄이기
@@ -59,7 +59,7 @@ ms.locfileid: "68113378"
   
  다음 그림은 테스트 서버 및 프로덕션 서버 시나리오를 보여 줍니다.  
   
- ![데이터베이스 엔진 튜닝 관리자의 테스트 서버 사용](../../relational-databases/performance/media/testsvr.gif "Database Engine Tuning Advisor test server usage")  
+ ![데이터베이스 엔진 튜닝 관리자의 테스트 서버 사용](../../relational-databases/performance/media/testsvr.gif "데이터베이스 엔진 튜닝 관리자의 테스트 서버 사용")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자 GUI(그래픽 사용자 인터페이스)에서는 테스트 서버 튜닝 기능이 지원되지 않습니다.  

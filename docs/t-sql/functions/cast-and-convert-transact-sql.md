@@ -35,12 +35,12 @@ ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5839bfa470bfc7a35c924f1710b1d78f86cb1245
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 943d0e840c0c407e66f0d47deec4c1e78fc57afa
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73843429"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761662"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST 및 CONVERT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,7 +57,7 @@ CAST ( expression AS data_type [ ( length ) ] )
 CONVERT ( data_type [ ( length ) ] , expression [ , style ] )  
 ```  
 
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## <a name="arguments"></a>인수  
 *expression*  
@@ -111,7 +111,7 @@ CONVERT 함수가 *식*을 변환하는 방법을 지정하는 정수 식입니�
   
 <sup>2</sup> 기본값(**0** 또는 **100**, **9** 또는 **109**, **13** 또는 **113**, **20** 또는 **120**, **23**, 및 **21** 또는 **25** 또는 **121**)은 항상 네 자리 연도(yyyy)를 반환합니다.
 
-<sup>3</sup> **datetime**으로 변환할 때의 입력이며 문자 데이터로 변환할 때의 출력입니다.
+<sup>3</sup>**datetime**으로 변환할 때의 입력이며 문자 데이터로 변환할 때의 출력입니다.
 
 <sup>4</sup> XML용으로 고안되었습니다. **datetime** 또는 **smalldatetime**을 문자 데이터로 변환하는 경우 출력 형식은 앞의 표를 참조하세요.
 
@@ -122,14 +122,14 @@ CONVERT 함수가 *식*을 변환하는 방법을 지정하는 정수 식입니�
 
 <sup>6</sup> 문자 데이터를 **datetime** 또는 **smalldatetime**으로 캐스팅하는 경우에만 지원됩니다. 날짜 또는 시간 구성 요소만 나타내는 문자 데이터를 **datetime** 또는 **smalldatetime** 데이터 형식으로 캐스팅하면 지정되지 않은 시간 구성 요소는 00:00:00.000으로 설정되고 지정되지 않은 날짜 구성 요소는 1900-01-01로 설정됩니다.
   
-<sup>7</sup> 선택적 표준 시간대 표시기 **Z**를 사용하면 표준 시간대 정보가 있는 XML **datetime** 값을 표준 시간대가 없는[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** 값에 쉽게 매핑할 수 있습니다. Z는 UTC-0 시간대를 나타냅니다. \+ 또는 - 방향의 HH:MM 오프셋으로 다른 시간대를 나타냅니다. 예를 들어 `2006-12-12T23:45:12-08:00`을 참조하십시오.
+<sup>7</sup> 선택적 표준 시간대 표시기 **Z**를 사용하면 표준 시간대 정보가 있는 XML **datetime** 값을 표준 시간대가 없는[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** 값에 쉽게 매핑할 수 있습니다. Z는 UTC-0 시간대를 나타냅니다. \+ 또는 - 방향의 HH:MM 오프셋으로 다른 시간대를 나타냅니다. 예: `2006-12-12T23:45:12-08:00`
   
 **smalldatetime**을 문자 데이터로 변환할 때는 초나 밀리초가 포함된 스타일이 해당 위치에 0으로 표시됩니다. **datetime** 또는 **smalldatetime** 값을 변환할 때는 적합한 **char** 또는 **varchar** 데이터 형식 길이를 사용하여 불필요한 날짜 부분을 자를 수 있습니다.
   
 시간이 포함된 스타일을 사용하여 문자 데이터에서 **datetimeoffset**으로 변환할 때는 결과에 표준 시간대 오프셋이 추가됩니다.
   
 ## <a name="float-and-real-styles"></a>float 및 real 스타일
-**float** 또는 *real* **식**인 경우 *스타일*은 다음 표에 있는 값 중 하나일 수 있습니다. 다른 값은 0으로 처리됩니다.
+**float** 또는 **real** ‘식’인 경우 ‘스타일’은 다음 테이블에 있는 값 중 하나일 수 있습니다.   다른 값은 0으로 처리됩니다.
   
 |값|출력|  
 |---|---|
@@ -140,17 +140,17 @@ CONVERT 함수가 *식*을 변환하는 방법을 지정하는 정수 식입니�
 |**126, 128, 129**|이전 버전과의 호환성을 위해 제공되며 이후 릴리스에서는 이 값을 더 이상 사용하지 않을 수 있습니다.|  
   
 ## <a name="money-and-smallmoney-styles"></a>money 및 smallmoney 스타일
-**money** 또는 *smallmoney* **식**의 경우 *스타일*은 다음 표에 있는 값 중 하나일 수 있습니다. 다른 값은 0으로 처리됩니다.
+**money** 또는 **smallmoney** ‘식’인 경우 ‘스타일’은 다음 테이블에 있는 값 중 하나일 수 있습니다.   다른 값은 0으로 처리됩니다.
   
 |값|출력|  
 |---|---|
-|**0** (기본값)|소수점 앞 세 자리마다 쉼표를 사용하지 않으며 소수점 이하 두 자리인 수입니다.<br /><br />예: 4235.98.|  
-|**1**|소수점 앞 세 자리마다 쉼표를 사용하며 소수점 이하 두 자리인 수입니다.<br /><br />예: 3,510.92.|  
-|**2**|소수점 앞 세 자리마다 쉼표를 사용하지 않으며 소수점 이하 4자리인 수입니다.<br /><br />예: 4235.9819.|  
+|**0** (기본값)|소수점 앞 세 자리마다 쉼표를 사용하지 않으며 소수점 이하 두 자리인 수입니다.<br /><br />예제: 4235.98.|  
+|**1**|소수점 앞 세 자리마다 쉼표를 사용하며 소수점 이하 두 자리인 수입니다.<br /><br />예제: 3,510.92.|  
+|**2**|소수점 앞 세 자리마다 쉼표를 사용하지 않으며 소수점 이하 4자리인 수입니다.<br /><br />예제: 4235.9819.|  
 |**126**|char(n) 또는 varchar(n)으로 변환하는 경우 스타일 2와 같습니다.|  
   
 ## <a name="xml-styles"></a>xml 스타일
-**xml** *식*인 경우 *스타일*은 다음 표에 있는 값 중 하나일 수 있습니다. 다른 값은 0으로 처리됩니다.
+**xml**’식’인 경우 ‘스타일’은 다음 테이블에 있는 값 중 하나일 수 있습니다.   다른 값은 0으로 처리됩니다.
   
 |값|출력|  
 |---|---|
@@ -160,12 +160,12 @@ CONVERT 함수가 *식*을 변환하는 방법을 지정하는 정수 식입니�
 |**3**|불필요한 공백을 유지하고 제한된 내부 DTD 하위 집합 처리를 설정합니다.|  
   
 ## <a name="binary-styles"></a>이진 스타일
-**binary(n)** , **char(n)** , **varbinary(n)** 또는 **varchar(n)** *expression* 식인 경우 *스타일*은 다음 표에 있는 값 중 하나일 수 있습니다. 여기에 없는 스타일 값은 오류를 반환합니다.
+**binary(n)** , **char(n)** , **varbinary(n)** 또는 **varchar(n)** ‘식’인 경우 ‘스타일’은 다음 테이블에 있는 값 중 하나일 수 있습니다.   여기에 없는 스타일 값은 오류를 반환합니다.
   
 |값|출력|  
 |---|---|
 |**0** (기본값)|ASCII 문자를 이진 바이트로 또는 이진 바이트를 ASCII 문자로 변환합니다. 각 문자 또는 바이트는 1:1로 변환됩니다.<br /><br /> 이진 *data_type*인 경우 결과의 왼쪽에 문자 0x가 추가됩니다.|  
-|**1**, **2**|이진 *data_type*인 경우 식이 문자 식이어야 합니다. *expression*은 **짝수** 개의 16진수(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, a, b, c, d, e, f)여야 합니다. *style*이 1로 설정된 경우 처음 두 자가 반드시 0x여야 합니다. 식에 홀수 개의 문자나 유효하지 않은 문자가 포함되어 있으면 오류가 발생합니다.<br /><br /> 변환된 식의 길이가 *data_type*의 길이보다 길면 결과의 오른쪽이 잘립니다.<br /><br /> 고정 길이 *data_types*가 변환된 결과보다 길면 결과의 오른쪽에 0이 추가됩니다.<br /><br /> 형식 문자 *data_type*에서는 이진 식을 사용해야 합니다. 각 이진 문자는 두 개의 16진수 문자로 변환됩니다. 변환된 식의 길이가 *data_type*의 길이보다 길면 오른쪽이 잘립니다.<br /><br /> 고정 크기 문자 유형 *data_type*이고 변환된 결과의 길이가 *data_type*의 길이보다 짧으면 짝수 개의 16진수가 유지되도록 변환된 식의 오른쪽에 공백이 추가됩니다.<br /><br /> *style* 1의 경우 변환된 결과의 왼쪽에 문자 0x가 추가됩니다.|  
+|**1**, **2**|이진 *data_type*인 경우 식이 문자 식이어야 합니다. *expression*은 **짝수** 개의 16진수(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, a, b, c, d, e, f)여야 합니다. ‘스타일’이 1로 설정된 경우 식의 처음 두 자가 반드시 0x여야 합니다.  식에 홀수 개의 문자나 유효하지 않은 문자가 포함되어 있으면 오류가 발생합니다.<br /><br /> 변환된 식의 길이가 *data_type*의 길이보다 길면 결과의 오른쪽이 잘립니다.<br /><br /> 고정 길이 *data_types*가 변환된 결과보다 길면 결과의 오른쪽에 0이 추가됩니다.<br /><br /> 형식 문자 *data_type*에서는 이진 식을 사용해야 합니다. 각 이진 문자는 두 개의 16진수 문자로 변환됩니다. 변환된 식의 길이가 *data_type*의 길이보다 길면 오른쪽이 잘립니다.<br /><br /> 고정 크기 문자 유형 *data_type*이고 변환된 결과의 길이가 *data_type*의 길이보다 짧으면 짝수 개의 16진수가 유지되도록 변환된 식의 오른쪽에 공백이 추가됩니다.<br /><br /> *style* 1의 경우 변환된 결과의 왼쪽에 문자 0x가 추가됩니다.|  
   
 ## <a name="implicit-conversions"></a>암시적 변환
 암시적 변환에서는 CAST 함수나 CONVERT 함수 지정이 필요하지 않습니다. 명시적 변환에서는 CAST 함수나 CONVERT 함수를 지정해야 합니다. 다음 그림에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 제공 데이터 형식에 허용된 모든 명시적 및 암시적 데이터 형식 변환을 보여 줍니다. 여기에는 **bigint**, **sql_variant** 및 **xml**이 포함됩니다. 할당 시 **sql_variant** 데이터 형식에서 암시적으로 변환되지는 않지만 **sql_variant**로는 암시적으로 변환됩니다.
@@ -208,7 +208,7 @@ CONVERT 함수가 *식*을 변환하는 방법을 지정하는 정수 식입니�
 ## <a name="output-collation"></a>출력 데이터 정렬  
 CAST 또는 CONVERT 함수가 문자열을 출력하고 문자열 입력을 받으면 출력과 입력은 동일한 데이터 정렬 및 데이터 정렬 레이블을 가집니다. 입력이 문자열이 아닌 경우에는 출력에서 데이터베이스의 기본 데이터 정렬을 사용하며 강제할 수 있는 기본값의 데이터 정렬 레이블을 사용합니다. 자세한 내용은 [데이터 정렬 선행 규칙&#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)을 참조하세요.
   
-출력에 다른 데이터 정렬을 할당하려면 CAST 또는 CONVERT 함수의 결과 식에 COLLATE 절을 적용합니다. 예를 들어
+출력에 다른 데이터 정렬을 할당하려면 CAST 또는 CONVERT 함수의 결과 식에 COLLATE 절을 적용합니다. 다음은 그 예입니다.
   
 `SELECT CAST('abc' AS varchar(5)) COLLATE French_CS_AS`
   
@@ -271,15 +271,15 @@ Gail        Erickson      Ms.    *
   
 |보낸 사람|수행할 작업|동작|  
 |---|---|---|
-|**numeric**|**numeric**|반올림|  
-|**numeric**|**int**|잘라내기|  
-|**numeric**|**money**|반올림|  
-|**money**|**int**|반올림|  
-|**money**|**numeric**|반올림|  
-|**float**|**int**|잘라내기|  
-|**float**|**numeric**|반올림<br /><br /> 과학적 표기법을 사용하는 **float** 값을 **decimal** 또는 **numerci**로 변환할 경우 전체 자릿수 값이 17자리로 제한됩니다. 17자리를 넘는 값은 0으로 반올림됩니다.|  
-|**float**|**datetime**|반올림|  
-|**datetime**|**int**|반올림|  
+|**numeric**|**numeric**|Round|  
+|**numeric**|**int**|Truncate|  
+|**numeric**|**money**|Round|  
+|**money**|**int**|Round|  
+|**money**|**numeric**|Round|  
+|**float**|**int**|Truncate|  
+|**float**|**numeric**|Round<br /><br /> 과학적 표기법을 사용하는 **float** 값을 **decimal** 또는 **numerci**로 변환할 경우 전체 자릿수 값이 17자리로 제한됩니다. 17자리를 넘는 값은 0으로 반올림됩니다.|  
+|**float**|**datetime**|Round|  
+|**datetime**|**int**|Round|  
   
 예를 들어 10.6496 및 -10.6496을 **int** 또는 **numeric** 형식으로 변환할 경우 잘리거나 반올림될 수 있습니다.
   
@@ -340,7 +340,7 @@ SC 데이터 정렬을 사용할 경우 `CONVERT`의 동작은 `CAST`의 동작�
   
 ## <a name="BKMK_examples"></a> 예  
   
-### <a name="a-using-both-cast-and-convert"></a>1\. CAST 및 CONVERT 모두 사용  
+### <a name="a-using-both-cast-and-convert"></a>A. CAST 및 CONVERT 모두 사용  
 각 예에서는 제품 가격 첫 자리에 `3`이 있는 제품의 이름을 검색하고 `ListPrice` 값을 `int`로 변환합니다.
   
 ```sql
@@ -398,7 +398,7 @@ HL Road Tire                   32.60
 (28 rows affected)
 ```
   
-### <a name="b-using-cast-with-arithmetic-operators"></a>2\. CAST에 산술 연산자 사용  
+### <a name="b-using-cast-with-arithmetic-operators"></a>B. CAST에 산술 연산자 사용  
 이 예에서는 총 연간 매출(`Computed`)을 커미션 비율(`SalesYTD`)로 나누어 한 열을 계산(`CommissionPCT`)합니다. 이 값은 가장 근사한 정수로 반올림된 다음, `int` 데이터 형식으로 CAST 연산이 수행됩니다.
   
 ```sql
@@ -760,7 +760,7 @@ SELECT @notastring + '1'
 
 이 경우 문자열 `'1'`을 정수 값 1로 변환할 수 있으므로 이 SELECT 문은 값 2를 반환합니다. 제공된 데이터 형식이 정수인 경우 + 연산자는 문자열 연결이 아닌 더하기 수치 연산자가 됩니다.
 
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="l-using-cast-and-convert"></a>12. CAST 및 CONVERT 사용  
 이 예에서는 제품 가격 첫 자리에 `3`이 있는 제품의 이름을 검색하고 이 제품의 `ListPrice`를 **int**로 변환합니다. `AdventureWorksDW2016` 데이터베이스를 사용합니다.
@@ -848,7 +848,7 @@ UnconvertedText         UsingCast               UsingConvertFrom_ISO8601
 2010-07-25T13:50:38.544 07/25/2010 1:50:38 PM   07/25/2010 1:50:38 PM  
 ```  
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [데이터 형식 우선 순위&#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)       
 [데이터 형식 변환&#40;Database Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)     
 [형식 &#40;Transact-SQL&#41;](../../t-sql/functions/format-transact-sql.md)      

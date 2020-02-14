@@ -18,10 +18,10 @@ ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a6cd2bbabd1cae5fd23dd0522c9664d39b66084f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298522"
 ---
 # <a name="msmq-connection-manager"></a>MSMQ 연결 관리자
@@ -29,7 +29,7 @@ ms.locfileid: "71298522"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  MSMQ 연결 관리자를 사용하면 패키지에서 MSMQ(메시지 큐)를 사용하는 메시지 큐에 연결할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에 포함된 메시지 큐 태스크에서는 MSMQ 연결 관리자가 사용됩니다.  
+  MSMQ 연결 관리자를 사용하면 패키지에서 MSMQ(메시지 큐)를 사용하는 메시지 큐에 연결할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 포함된 메시지 큐 태스크에서는 MSMQ 연결 관리자가 사용됩니다.  
   
  패키지에 MSMQ 연결 관리자를 추가하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 런타임에 MSMQ 연결로 확인되는 연결 관리자를 만들고, 연결 관리자 속성을 설정하며, 연결 관리자를 패키지의 **Connections** 컬렉션에 추가합니다. 연결 관리자의 **ConnectionManagerType** 속성이 **MSMQ**로 설정됩니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "71298522"
   
 |큐 유형|샘플 경로|  
 |----------------|-----------------|  
-|공개|\<컴퓨터 이름>\\<큐 이름\>|  
+|공용|\<컴퓨터 이름>\\<큐 이름\>|  
 |프라이빗|\<컴퓨터 이름>\Private$\\<큐 이름\>|  
   
  마침표(.)를 사용하여 로컬 컴퓨터를 나타낼 수 있습니다.  
@@ -70,17 +70,17 @@ ms.locfileid: "71298522"
  **설명**  
  연결 관리자에 대한 설명을 입력합니다. 설명에 해당 연결 관리자의 용도를 정의하면 패키지를 이해하기 쉬우며 유지 관리가 간편합니다.  
   
- **경로**  
+ **Path**  
  메시지 큐의 전체 경로를 입력합니다. 경로 형식은 큐 유형에 따라 달라집니다.  
   
 |큐 유형|샘플 경로|  
 |----------------|-----------------|  
-|공개|\<컴퓨터 이름>\\<큐 이름\>|  
+|공용|\<컴퓨터 이름>\\<큐 이름\>|  
 |프라이빗|\<컴퓨터 이름>\Private$\\<큐 이름\>|  
   
  "."를 사용하여 로컬 컴퓨터를 나타낼 수 있습니다.  
   
- **테스트**  
+ **Test**  
  MSMQ 연결 관리자를 구성했으면 **테스트**를 클릭하여 연결이 실행 가능한지 확인합니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -11,15 +11,15 @@ ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ba61e7cc35d9cd0a0f63e3e2f89980b12c6904d5
-ms.sourcegitcommit: 26868c8ac3217176b370d972a26d307598a10328
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74833576"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure의 SQL Server 데이터 파일
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  ![Azure의 데이터 파일](../../relational-databases/databases/media/data-files-on-azure.png "DaAzure의 ta 파일")  
+  ![Azure의 데이터 파일](../../relational-databases/databases/media/data-files-on-azure.png "Azure의 데이터 파일")  
   
 Microsoft Azure에서 SQL Server 데이터 파일을 통해 Blob으로 저장된 SQL Server 데이터베이스 파일이 기본적으로 지원됩니다. 이 기능을 사용하면 온-프레미스로 실행 중인 SQL Server에서 또는 Microsoft Azure Blob Storage에 전용 데이터 스토리지 위치가 있는 Microsoft Azure의 가상 머신에서 데이터베이스를 만들 수 있습니다. 또한 머신 간에 데이터베이스를 이동하는 프로세스를 간소화합니다. 한 머신에서 데이터베이스를 분리하여 다른 머신에 연결할 수 있습니다. 또한 Microsoft Azure 스토리지를 원본 또는 대상으로 복원하도록 허용하여 데이터베이스 백업 파일에 대한 대체 스토리지 위치를 제공합니다. 따라서 데이터 가상화, 데이터 이동, 보안 및 가용성, 고가용성 및 탄력적인 크기 조정을 위한 쉽고 저렴한 비용 및 유지 관리 등 여러 가지 이점을 제공하여 다양한 하이브리드 솔루션을 사용할 수 있도록 지원합니다.
  
@@ -113,7 +113,7 @@ ON
   
 - 이 기능의 현재 릴리스에서는 Azure Storage에 **FileStream** 데이터를 저장할 수 없습니다. Azure Storage에 저장된 데이터 파일도 포함하는 데이터베이스에 **FileStream**을 저장할 수 있지만, 모든 FileStream 데이터 파일은 로컬 스토리지에 저장해야 합니다.  FileStream 데이터는 로컬 스토리지에 있어야 하므로 Azure Storage를 통해 머신 간에 이동할 없습니다. 따라서 여러 머신 간에 FileStream와 연결된 데이터를 이동하는 데는 [기존 기술](../../relational-databases/blob/move-a-filestream-enabled-database.md)을 사용하는 것이 좋습니다.  
   
-- 현재 이 새로운 향상된 기능을 사용하여 여러 SQL Server 인스턴스에서 Azure Storage의 동일한 데이터베이스 파일에 동시에 액세스할 수 없습니다. 활성 데이터베이스 파일이 있는 서버 A가 온라인 상태인 동안 동일한 데이터 파일을 가리키는 데이터베이스를 포함하는 서버 B를 실수로 시작한 경우, 두 번째 서버에서는 데이터베이스가 시작되지 않고 다음 오류 코드가 표시됩니다. **5120 물리적 파일 “%.\*ls”을(를) 열 수 없습니다. 운영 체제 오류 %d: “%ls”** .  
+- 현재 이 새로운 향상된 기능을 사용하여 여러 SQL Server 인스턴스에서 Azure Storage의 동일한 데이터베이스 파일에 동시에 액세스할 수 없습니다. 활성 데이터베이스 파일이 있는 서버 A가 온라인 상태인 동안 동일한 데이터 파일을 가리키는 데이터베이스를 포함하는 서버 B를 실수로 시작한 경우, 두 번째 서버에서는 데이터베이스가 시작되지 않고 다음 오류 코드가 표시됩니다. **5120 물리적 파일 “%.\*ls”을(를) 열 수 없습니다. 운영 체제 오류 %d: "%ls"** .  
   
 - .mdf, .ldf 및 .ndf 파일만 Azure의 SQL Server 데이터 파일 기능을 사용하여 Azure Storage에 저장할 수 있습니다.  
   
@@ -184,7 +184,7 @@ ON
   
 3.  *오류 코드 5120 물리적 파일 "%.\*ls"을(를) 열 수 없습니다. 운영 체제 오류 %d: "%ls"*   
 
-    해결 방법: 현재 이 새로운 향상된 기능을 사용하여 여러 SQL Server 인스턴스에서 Azure Storage의 동일한 데이터베이스 파일에 동시에 액세스할 수 없습니다. 활성 데이터베이스 파일이 있는 서버 A가 온라인 상태인 동안 동일한 데이터 파일을 가리키는 데이터베이스를 포함하는 서버 B를 실수로 시작한 경우, 두 번째 서버에서는 데이터베이스가 시작되지 않고 다음 오류 코드가 표시됩니다. 5120 물리적 파일 “%.\*ls”을(를) 열 수 없습니다.  운영 체제 오류 %d: “%ls”.  
+    해결 방법: 현재 이 새로운 향상된 기능을 사용하여 여러 SQL Server 인스턴스에서 Azure Storage의 동일한 데이터베이스 파일에 동시에 액세스할 수 없습니다. 활성 데이터베이스 파일이 있는 서버 A가 온라인 상태인 동안 동일한 데이터 파일을 가리키는 데이터베이스를 포함하는 서버 B를 실수로 시작한 경우, 두 번째 서버에서는 데이터베이스가 시작되지 않고 다음 오류 코드가 표시됩니다. 5120 물리적 파일 “%.\*ls”을(를) 열 수 없습니다. *운영 체제 오류 %d: "%ls"* .  
   
      이 문제를 해결하려면 먼저 Azure Storage의 데이터베이스 파일에 액세스하려면 서버 A가 필요한지 여부를 확인해야 합니다. 서버 A가 필요하지 않은 경우 서버 A와 Azure Storage에 있는 데이터베이스 파일 사이의 연결을 제거합니다. 이렇게 하려면 다음 단계를 수행하세요.  
   

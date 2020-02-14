@@ -21,10 +21,10 @@ ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b342e77c542cd9f3357bccd4b97f3a876d1f5f1d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115694"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>SQL Server 유틸리티 제어 지점 만들기(SQL Server 유틸리티)
@@ -33,7 +33,7 @@ ms.locfileid: "68115694"
   
  UCP는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스에서 15분마다 구성 및 성능 정보를 수집합니다. 이 정보는 UCP의 UMDW(유틸리티 관리 데이터 웨어하우스)에 저장됩니다. UMDW의 파일 이름은 sysutility_mdw입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 성능 데이터를 정책과 비교하면 리소스 사용 병목 현상과 통합 기회를 식별하는 데 도움이 됩니다.  
   
-## <a name="before-you-begin"></a>시작하기 전 주의 사항  
+## <a name="before-you-begin"></a>시작하기 전에  
  UCP를 만들기 전에 다음 요구 사항 및 권장 사항을 검토하십시오.  
   
  이 릴리스에서 UCP 및 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스는 다음 요구 사항을 충족해야 합니다.  
@@ -102,7 +102,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ## <a name="wizard-steps"></a>마법사 단계  
  ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")  
   
- 다음 섹션에서는 마법사 워크플로의 각 페이지에서 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP를 만들기 위한 정보를 제공합니다. 마법사를 시작하여 새 UCP를 만들려면 SSMS의 보기 메뉴에서 유틸리티 탐색기 창을 열고 유틸리티 탐색기 창에서 ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP") **UCP 만들기** 단추를 클릭합니다.  
+ 다음 섹션에서는 마법사 워크플로의 각 페이지에서 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP를 만들기 위한 정보를 제공합니다. 마법사를 시작하여 새 UCP를 만들려면 SSMS의 보기 메뉴에서 유틸리티 탐색기 창을 열고, 유틸리티 탐색기 창의 맨 위에 있는 ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP") **UCP 만들기** 단추를 클릭합니다.  
   
  아래 목록의 링크를 클릭하여 마법사 페이지에 대한 세부 정보를 탐색할 수 있습니다.  
   
@@ -125,9 +125,9 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="Welcome"></a> UCP 만들기 마법사 소개  
  유틸리티 탐색기를 열 때 연결된 유틸리티 제어 지점이 없으면 기존 항목에 연결하거나 새 항목을 만들어야 합니다.  
   
- **기존 UCP에 연결** - 배포 환경에 기존 유틸리티 제어 지점이 있는 경우 유틸리티 탐색기 창 위쪽의 ![](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility")**유틸리티에 연결** 단추를 클릭하여 연결할 수 있습니다. 기존 UCP에 연결하려면 관리자 자격 증명이 있거나 유틸리티 읽기 역할의 멤버여야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티당 UCP는 하나만 있을 수 있으며 사용자는 SSMS 인스턴스에서 하나의 UCP에만 연결할 수 있습니다.  
+ **기존 UCP에 연결** - 배포 환경에 기존 유틸리티 제어 지점이 있는 경우 유틸리티 탐색기 창의 맨 위에 있는 ![](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility")**유틸리티에 연결** 단추를 클릭하여 연결할 수 있습니다. 기존 UCP에 연결하려면 관리자 자격 증명이 있거나 유틸리티 읽기 역할의 멤버여야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티당 UCP는 하나만 있을 수 있으며 사용자는 SSMS 인스턴스에서 하나의 UCP에만 연결할 수 있습니다.  
   
- **새 UCP 만들기** - 새 유틸리티 제어 지점을 만들려면 유틸리티 탐색기 창 위쪽의 ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")**UCP 만들기** 단추를 클릭합니다. 새 UCP를 만들려면 연결 대화 상자에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름을 지정하고 관리자 자격 증명을 제공해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 한 개마다 UCP를 한 개만 사용할 수 있습니다.  
+ **새 UCP 만들기** - 새 유틸리티 제어 지점을 만들려면 유틸리티 탐색기 창의 맨 위에 있는 ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")**UCP 만들기** 단추를 클릭합니다. 새 UCP를 만들려면 연결 대화 상자에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름을 지정하고 관리자 자격 증명을 제공해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 한 개마다 UCP를 한 개만 사용할 수 있습니다.  
   
 ##  <a name="Instance_name"></a> 인스턴스 지정  
  만들려는 UCP에 대한 다음 정보를 지정합니다.  
@@ -158,7 +158,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="Validation_rules"></a> 유효성 검사 규칙  
  이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]릴리스에서는 UCP를 만들려는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 다음 조건이 충족되어야 합니다.  
   
-|유효성 검사 규칙|수정 동작|  
+|유효성 검사 규칙|정정 작업|  
 |---------------------|-----------------------|  
 |유틸리티 제어 지점이 생성될 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 관리자 권한이 있어야 합니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대한 관리자 권한이 있는 계정으로 로그온합니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전이 10.50 이상이어야 합니다.|UCP를 호스팅할 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 지정합니다.|  

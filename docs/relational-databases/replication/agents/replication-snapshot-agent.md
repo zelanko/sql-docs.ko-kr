@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: e777b49ab8c27abff81f54fef52f2a2a7c4dec31
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710348"
 ---
 # <a name="replication-snapshot-agent"></a>Replication Snapshot Agent
@@ -83,7 +83,7 @@ snapshot [ -?]
  사용 가능한 모든 매개 변수를 출력합니다.  
   
  **-Publisher**  _server_name_[ **\\** _instance\_name_]  
- 게시자의 이름입니다. 해당 서버에 있는 기본 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대해 server_name을 지정하고, 해당 서버에 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 명명된 인스턴스에 대해 _server\_name_ **\\** _instance\_name_을 지정합니다.  
+ 게시자의 이름입니다. 해당 서버에 있는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 기본 인스턴스에 대해 server_name을 지정합니다. 해당 서버에 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 명명된 인스턴스에 대해 _server\_name_ **\\** _instance\_name_을 지정합니다.  
   
  **-Publication** _publication_  
  게시의 이름입니다. 이 매개 변수는 게시가 새 구독이나 다시 초기화된 구독에 대해 항상 스냅샷을 사용할 수 있도록 설정된 경우에만 유효합니다.  
@@ -103,7 +103,7 @@ snapshot [ -?]
  **-DistributorDeadlockPriority** [ **-1**|**0**|**1**]  
  교착 상태가 발생할 경우 배포자에 대한 스냅샷 에이전트 연결의 우선 순위입니다. 이 매개 변수는 스냅샷을 생성하는 동안 스냅샷 에이전트와 사용자 애플리케이션 사이에서 발생할 수 있는 교착 상태를 해결하기 위해 지정됩니다.  
   
-|DistributorDeadlockPriority 값|설명|  
+|DistributorDeadlockPriority 값|Description|  
 |---------------------------------------|-----------------|  
 |**-1**|배포자에서 교착 상태가 발생할 경우 스냅샷 에이전트 이외의 애플리케이션이 우선 순위를 갖습니다.|  
 |**0** (기본값)|우선 순위가 할당되지 않습니다.|  
@@ -130,7 +130,7 @@ snapshot [ -?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  연결을 만들 때 스냅샷 에이전트에서 사용하는 SSL(Secure Sockets Layer) 암호화의 수준입니다.  
   
-|EncryptionLevel 값|설명|  
+|EncryptionLevel 값|Description|  
 |---------------------------|-----------------|  
 |**0**|SSL이 사용되지 않음을 지정합니다.|  
 |**1**|SSL이 사용되지만 에이전트에서 SSL 서버 인증서가 트러스트된 발급자에 의해 서명된 것인지 확인하지 않음을 지정합니다.|  
@@ -147,7 +147,7 @@ snapshot [ -?]
  **-HistoryVerboseLevel** [ **1**| **2**| **3**]  
  스냅샷 작업을 수행하는 동안 기록에 추가되는 양을 지정합니다. **1**을 선택하여 성능에서 기록 로깅의 영향을 최소화할 수 있습니다.  
   
-|HistoryVerboseLevel 값|설명|  
+|HistoryVerboseLevel 값|Description|  
 |-------------------------------|-----------------|  
 |**0**|진행 메시지를 콘솔이나 출력 파일에 씁니다. 기록 레코드는 배포 데이터베이스에 기록되지 않습니다.|  
 |**1**|시작, 진행, 성공 등과 같이 상태가 동일한 이전 기록 메시지를 항상 업데이트합니다. 상태가 같은 이전 레코드가 없으면 새 레코드를 삽입합니다.|  
@@ -193,7 +193,7 @@ snapshot [ -?]
  **-OutputVerboseLevel** [ **0**| **1**| **2**]  
  출력이 자세해야 하는지 여부를 지정합니다.  
   
-|OutputVerboseLevel 값|설명|  
+|OutputVerboseLevel 값|Description|  
 |------------------------------|-----------------|  
 |**0**|오류 메시지만 출력됩니다.|  
 |**1** (기본값)|모든 진행률 보고 메시지가 출력됩니다(기본값).|  
@@ -208,7 +208,7 @@ snapshot [ -?]
 **-PrefetchTables** [ **0**| **1**]  
  테이블 개체가 프리페치되고 캐시되는지를 지정하는 선택적 매개 변수입니다.  기본 동작은 내부 계산을 기반으로 하는 SMO 구성 요소를 사용하여 특정 테이블 속성을 프리페치하는 것입니다.  이 매개 변수는 SMO 프리페치 작업이 실행하는 데 상당히 오래 걸리는 시나리오에 유용할 수 있습니다. 이 매개 변수를 사용하지 않으면 게시에 아티클로 추가되는 테이블의 비율을 기준으로 런타임 시 동작이 결정됩니다.  
   
-|OutputVerboseLevel 값|설명|  
+|OutputVerboseLevel 값|Description|  
 |------------------------------|-----------------|  
 |**0**|SMO 구성 요소의 프리페치 메서드 호출을 사용할 수 없습니다.|  
 |**1**|스냅샷 에이전트가 프리페치 메서드를 호출하여 SMO를 사용하는 일부 테이블 속성을 캐시합니다.|  
@@ -222,7 +222,7 @@ snapshot [ -?]
  **-PublisherDeadlockPriority** [ **-1**|**0**|**1**]  
  교착 상태가 발생할 경우 게시자에 대한 스냅샷 에이전트 연결의 우선 순위입니다. 이 매개 변수는 스냅샷을 생성하는 동안 스냅샷 에이전트와 사용자 애플리케이션 사이에서 발생할 수 있는 교착 상태를 해결하기 위해 지정됩니다.  
   
-|PublisherDeadlockPriority 값|설명|  
+|PublisherDeadlockPriority 값|Description|  
 |-------------------------------------|-----------------|  
 |**-1**|게시자에서 교착 상태가 발생할 경우 스냅샷 에이전트 이외의 애플리케이션이 우선 순위를 갖습니다.|  
 |**0** (기본값)|우선 순위가 할당되지 않습니다.|  
@@ -255,7 +255,7 @@ snapshot [ -?]
  \- **UsePerArticleContentsView** _use_per_article_contents_view_  
  이 매개 변수는 더 이상 사용되지 않으며 이전 버전과의 호환성을 위해서만 지원됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 > [!IMPORTANT]  
 >  도메인 사용자 계정(기본값)이 아닌 로컬 시스템 계정에서 실행되도록 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트를 설치한 경우 해당 서비스에서는 로컬 컴퓨터에만 액세스할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트에서 실행되는 스냅샷 에이전트가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 로그인할 때 Windows 인증 모드를 사용하도록 구성된 경우 해당 스냅샷 에이전트가 실패합니다. 기본 설정은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증입니다.  

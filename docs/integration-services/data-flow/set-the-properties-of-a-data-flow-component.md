@@ -13,10 +13,10 @@ ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 10b397e4fdabefe333854fe04ab37c4bdd92cf38
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291840"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>데이터 흐름 구성 요소의 속성 설정
@@ -117,7 +117,7 @@ ms.locfileid: "71291840"
   
 -   [Input columns](#inputcolumns)  
   
--   [출력](#outputs)  
+-   [Outputs](#outputs)  
   
 -   [출력 열](#outputcolumns)  
   
@@ -127,38 +127,38 @@ ms.locfileid: "71291840"
   
  다음 표에서는 데이터 흐름 구성 요소의 속성에 대해 설명합니다. 일부 속성에는 데이터 흐름 엔진이 런타임에 할당한 읽기 전용 값이 있습니다.  
   
-|속성|데이터 형식|설명|  
+|속성|데이터 형식|Description|  
 |--------------|---------------|-----------------|  
 |ComponentClassID|String|구성 요소의 CLSID입니다.|  
 |ContactInfo|String|구성 요소 개발자의 연락처 정보입니다.|  
-|설명|String|데이터 흐름 구성 요소에 대한 설명입니다. 이 속성의 기본값은 데이터 흐름 구성 요소의 이름입니다.|  
+|Description|String|데이터 흐름 구성 요소에 대한 설명입니다. 이 속성의 기본값은 데이터 흐름 구성 요소의 이름입니다.|  
 |ID|정수|구성 요소의 인스턴스를 고유하게 식별하는 값입니다.|  
 |IdentificationString|String|구성 요소를 식별합니다.|  
-|IsDefaultLocale|Boolean|구성 요소가 속해 있는 데이터 흐름 태스크의 로캘이 구성 요소에 사용되는지 여부를 나타냅니다.|  
+|IsDefaultLocale|부울|구성 요소가 속해 있는 데이터 흐름 태스크의 로캘이 구성 요소에 사용되는지 여부를 나타냅니다.|  
 |LocaleID|정수|패키지가 실행될 때 데이터 흐름 구성 요소에서 사용하는 로캘입니다. 데이터 흐름 구성 요소에는 모든 Windows 로캘을 사용할 수 있습니다.|  
 |속성|String|데이터 흐름 구성 요소의 이름입니다.|  
 |PipelineVersion|정수|구성 요소가 내부에서 실행되도록 디자인된 데이터 흐름 태스크의 버전입니다.|  
-|UsesDispositions|Boolean|구성 요소에 오류 출력이 있는지 여부를 나타냅니다.|  
-|ValidateExternalMetadata|Boolean|외부 열 메타데이터의 유효성이 검사되었는지 여부를 나타냅니다. 이 속성의 기본값은 **True**입니다.|  
-|버전 옵션|정수|구성 요소의 버전입니다.|  
+|UsesDispositions|부울|구성 요소에 오류 출력이 있는지 여부를 나타냅니다.|  
+|ValidateExternalMetadata|부울|외부 열 메타데이터의 유효성이 검사되었는지 여부를 나타냅니다. 이 속성의 기본값은 **True**입니다.|  
+|버전|정수|구성 요소의 버전입니다.|  
   
 ###  <a name="inputs"></a> 입력 속성  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 개체 모델에서 변환 및 대상은 입력을 포함합니다. 데이터 흐름 구성 요소의 입력은 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100> 인터페이스를 구현합니다.  
   
  다음 표에서는 데이터 흐름 구성 요소의 입력 속성에 대해 설명합니다. 일부 속성에는 데이터 흐름 엔진이 런타임에 할당한 읽기 전용 값이 있습니다.  
   
-|속성|데이터 형식|설명|  
+|속성|데이터 형식|Description|  
 |--------------|---------------|-----------------|  
-|설명|String|입력에 대한 설명입니다.|  
+|Description|String|입력에 대한 설명입니다.|  
 |ErrorOrTruncationOperation|String|행을 처리할 때 발생할 수 있는 오류 또는 잘림 유형을 지정하는 선택적 문자열입니다.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|오류 처리를 지정하는 값입니다. 가능한 값은 **Fail component**, **Ignore failure**및 **Redirect row**입니다.|  
-|HasSideEffects|Boolean|구성 요소가 다운스트림 구성 요소에 연결되어 있지 않은 경우 및 **RunInOptimizedMode** 가 **true**일 경우 데이터 흐름의 실행 계획에서 구성 요소를 제거할 수 있는지 여부를 나타냅니다.|  
+|HasSideEffects|부울|구성 요소가 다운스트림 구성 요소에 연결되어 있지 않은 경우 및 **RunInOptimizedMode** 가 **true**일 경우 데이터 흐름의 실행 계획에서 구성 요소를 제거할 수 있는지 여부를 나타냅니다.|  
 |ID|정수|입력을 고유하게 식별하는 값입니다.|  
 |IdentificationString|String|입력을 식별하는 문자열입니다.|  
-|IsSorted|Boolean|입력의 데이터가 정렬되었는지 여부를 나타냅니다.|  
+|IsSorted|부울|입력의 데이터가 정렬되었는지 여부를 나타냅니다.|  
 |속성|String|입력의 이름입니다.|  
 |SourceLocale|정수|입력 데이터의 LCID(로캘 ID)입니다.|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|행을 처리할 때 발생하는 잘림을 구성 요소가 처리하는 방법을 결정하는 값입니다. 입니다. 가능한 값은 **Fail component**, **Ignore failure**및 **Redirect row**입니다.|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|행을 처리할 때 발생하는 잘림을 구성 요소가 처리하는 방법을 결정하는 값입니다. . 가능한 값은 **Fail component**, **Ignore failure**및 **Redirect row**입니다.|  
   
  대상 및 일부 변환은 오류 출력을 지원하지 않으므로 이러한 구성 요소의 ErrorRowDisposition 및 TruncationRowDisposition 속성은 읽기 전용입니다.  
   
@@ -167,10 +167,10 @@ ms.locfileid: "71291840"
   
  다음 표에서는 데이터 흐름 구성 요소의 입력 열 속성에 대해 설명합니다. 일부 속성에는 데이터 흐름 엔진이 런타임에 할당한 읽기 전용 값이 있습니다.  
   
-|속성|데이터 형식|설명|  
+|속성|데이터 형식|Description|  
 |--------------|---------------|-----------------|  
-|ComparisonFlags|정수|문자 데이터 형식을 갖는 열의 비교를 지정하는 플래그 집합입니다. 자세한 내용은 [Comparing String Data](../../integration-services/data-flow/comparing-string-data.md)을(를) 참조하세요.|  
-|설명|String|입력 열에 대해 설명합니다.|  
+|ComparisonFlags|정수|문자 데이터 형식을 갖는 열의 비교를 지정하는 플래그 집합입니다. 자세한 내용은 [Comparing String Data](../../integration-services/data-flow/comparing-string-data.md)을 참조하세요.|  
+|Description|String|입력 열에 대해 설명합니다.|  
 |ErrorOrTruncationOperation|String|행을 처리할 때 발생할 수 있는 오류 또는 잘림 유형을 지정하는 선택적 문자열입니다.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|오류 처리를 지정하는 값입니다. 가능한 값은 **Fail component**, **Ignore failure**및 **Redirect row**입니다.|  
 |ExternalMetadataColumnID|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100>|입력 열에 할당된 외부 메타데이터 열의 ID입니다.|  
@@ -191,18 +191,18 @@ ms.locfileid: "71291840"
   
  다음 표에서는 데이터 흐름 구성 요소의 출력 속성에 대해 설명합니다. 일부 속성에는 데이터 흐름 엔진이 런타임에 할당한 읽기 전용 값이 있습니다.  
   
-|속성|데이터 형식|설명|  
+|속성|데이터 형식|Description|  
 |--------------|---------------|-----------------|  
-|DeleteOutputOnPathDetached|Boolean|경로에서 출력이 분리될 경우 데이터 흐름 엔진이 출력을 삭제할지 여부를 결정하는 값입니다.|  
-|설명|String|출력에 대해 설명합니다.|  
+|DeleteOutputOnPathDetached|부울|경로에서 출력이 분리될 경우 데이터 흐름 엔진이 출력을 삭제할지 여부를 결정하는 값입니다.|  
+|Description|String|출력에 대해 설명합니다.|  
 |ErrorOrTruncationOperation|String|행을 처리할 때 발생할 수 있는 오류 또는 잘림 유형을 지정하는 선택적 문자열입니다.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|오류 처리를 지정하는 값입니다. 가능한 값은 **Fail component**, **Ignore failure**및 **Redirect row**입니다.|  
 |ExclusionGroup|정수|함께 사용할 수 없는 출력 그룹을 식별하는 값입니다.|  
-|HasSideEffects|Boolean|구성 요소가 업스트림 구성 요소에 연결되어 있지 않은 경우 및 **RunInOptimizedMode** 가 **true**일 경우 데이터 흐름의 실행 계획에서 구성 요소를 제거할 수 있는지 여부를 나타내는 값입니다.|  
+|HasSideEffects|부울|구성 요소가 업스트림 구성 요소에 연결되어 있지 않은 경우 및 **RunInOptimizedMode** 가 **true**일 경우 데이터 흐름의 실행 계획에서 구성 요소를 제거할 수 있는지 여부를 나타내는 값입니다.|  
 |ID|정수|출력을 고유하게 식별하는 값입니다.|  
 |IdentificationString|String|출력을 식별하는 문자열입니다.|  
-|IsErrorOut|Boolean|출력이 오류 출력인지 여부를 나타냅니다.|  
-|IsSorted|Boolean|출력이 정렬되었는지 여부를 나타냅니다. 기본값은 **False**입니다.<br /><br /> **\*\* 중요 \*\*** **IsSorted** 속성의 값을 **True**로 설정해도 데이터가 졍렬되지는 않습니다. 이 속성은 데이터가 이전에 정렬되었다는 정보를 다운스트림 구성 요소에 제공하기만 합니다. 자세한 내용은 [병합 및 병합 조인 변환을 위한 데이터 정렬](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)을 참조하세요.|  
+|IsErrorOut|부울|출력이 오류 출력인지 여부를 나타냅니다.|  
+|IsSorted|부울|출력이 정렬되었는지 여부를 나타냅니다. 기본값은 **False**입니다.<br /><br /> **\*\* 중요 \*\*** **IsSorted** 속성의 값을 **True**로 설정해도 데이터가 졍렬되지는 않습니다. 이 속성은 데이터가 이전에 정렬되었다는 정보를 다운스트림 구성 요소에 제공하기만 합니다. 자세한 내용은 [병합 및 병합 조인 변환을 위한 데이터 정렬](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)을 참조하세요.|  
 |속성|String|출력의 이름입니다.|  
 |SynchronousInputID|정수|출력과 동시에 수행되는 입력의 ID입니다.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|행을 처리할 때 발생하는 잘림을 구성 요소가 처리하는 방법을 결정하는 값입니다. 가능한 값은 **Fail component**, **Ignore failure**및 **Redirect row**입니다.|  
@@ -212,10 +212,10 @@ ms.locfileid: "71291840"
   
  다음 표에서는 데이터 흐름 구성 요소의 출력 열 속성에 대해 설명합니다. 일부 속성에는 데이터 흐름 엔진이 런타임에 할당한 읽기 전용 값이 있습니다.  
   
-|속성|데이터 형식|설명|  
+|속성|데이터 형식|Description|  
 |--------------|---------------|-----------------|  
-|ComparisonFlags|정수|문자 데이터 형식을 갖는 열의 비교를 지정하는 플래그 집합입니다. 자세한 내용은 [Comparing String Data](../../integration-services/data-flow/comparing-string-data.md)을(를) 참조하세요.|  
-|설명|String|출력 열에 대해 설명합니다.|  
+|ComparisonFlags|정수|문자 데이터 형식을 갖는 열의 비교를 지정하는 플래그 집합입니다. 자세한 내용은 [Comparing String Data](../../integration-services/data-flow/comparing-string-data.md)을 참조하세요.|  
+|Description|String|출력 열에 대해 설명합니다.|  
 |ErrorOrTruncationOperation|String|행을 처리할 때 발생할 수 있는 오류 또는 잘림 유형을 지정하는 선택적 문자열입니다.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|오류 처리를 지정하는 값입니다. 가능한 값은 **Fail component**, **Ignore failure**및 **Redirect row**입니다. 기본값은 **Fail component**입니다.|  
 |ExternalMetadataColumnID|정수|입력 열에 할당된 외부 메타데이터 열의 ID입니다.|  
@@ -235,9 +235,9 @@ ms.locfileid: "71291840"
   
  다음 표에서는 데이터 흐름 구성 요소의 외부 메타데이터 열 속성에 대해 설명합니다. 일부 속성에는 데이터 흐름 엔진이 런타임에 할당한 읽기 전용 값이 있습니다.  
   
-|속성|데이터 형식|설명|  
+|속성|데이터 형식|Description|  
 |--------------|---------------|-----------------|  
-|설명|String|외부 열에 대해 설명합니다.|  
+|Description|String|외부 열에 대해 설명합니다.|  
 |ID|정수|열을 고유하게 식별하는 값입니다.|  
 |IdentificationString|String|열을 식별하는 문자열입니다.|  
 |속성|String|외부 열의 이름입니다.|  
@@ -249,13 +249,13 @@ ms.locfileid: "71291840"
   
  다음 표에서는 출력 열 및 외부 메타데이터 열의 데이터 형식 속성에 대해 설명합니다.  
   
-|속성|데이터 형식|설명|  
+|속성|데이터 형식|Description|  
 |--------------|---------------|-----------------|  
 |CodePage|정수|유니코드가 아닌 문자열 데이터에 대한 코드 페이지를 지정합니다.|  
 |DataType|Integer(열거형)|열의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식입니다. 자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.|  
 |길이|정수|열의 길이(문자 수)입니다.|  
-|전체 자릿수|정수|숫자 열의 전체 자릿수입니다.|  
-|소수 자릿수|정수|숫자 열의 소수 자릿수입니다.|  
+|자릿수|정수|숫자 열의 전체 자릿수입니다.|  
+|확장|정수|숫자 열의 소수 자릿수입니다.|  
 
 ## <a name="custom-properties-of-data-flow-components"></a>데이터 흐름 구성 요소의 사용자 지정 속성
 사용자 지정 속성에 자세한 내용은 다음 항목을 참조하세요.  

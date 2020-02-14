@@ -13,10 +13,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 81a3e6268b74c6aeb4a3fc7ea7c492133abf372d
-ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72930268"
 ---
 # <a name="full-text-search"></a>전체 텍스트 검색
@@ -57,7 +57,7 @@ ms.locfileid: "72930268"
   
  전체 텍스트 쿼리는 대/소문자를 구분하지 않습니다. 예를 들어 "Aluminum" 또는 "aluminum"을 검색하면 동일한 결과가 반환됩니다.  
   
- 전체 텍스트 쿼리는 일부 [!INCLUDE[tsql](../../includes/tsql-md.md)] 조건자(CONTAINS 및 FREETEXT) 및 함수(CONTAINSTABLE 및 FREETEXTTABLE) 집합을 사용합니다. 그러나 전체 텍스트 쿼리의 구조는 지정된 비즈니스 시나리오의 검색 목표에 따라 달라집니다. 예를 들어  
+ 전체 텍스트 쿼리는 일부 [!INCLUDE[tsql](../../includes/tsql-md.md)] 조건자(CONTAINS 및 FREETEXT) 및 함수(CONTAINSTABLE 및 FREETEXTTABLE) 집합을 사용합니다. 그러나 전체 텍스트 쿼리의 구조는 지정된 비즈니스 시나리오의 검색 목표에 따라 달라집니다. 다음은 그 예입니다.  
   
 -   e-비즈니스 - 웹 사이트에서 제품 검색  
   
@@ -156,7 +156,7 @@ ms.locfileid: "72930268"
   
  이 예에서는 **Title** 열에 대해 전체 텍스트 인덱스를 만들었다고 가정합니다.  
   
-|DocumentID|Title|  
+|DocumentID|제목|  
 |----------------|-----------|  
 |1|Crank Arm and Tire Maintenance|  
 |2|Front Reflector Bracket and Reflector Assembly 3|  
@@ -198,7 +198,7 @@ ms.locfileid: "72930268"
 ###  <a name="fragments"></a> 전체 텍스트 인덱스 조각  
  논리적 전체 텍스트 인덱스는 일반적으로 여러 개의 내부 테이블로 분할됩니다. 이러한 각 내부 테이블을 전체 텍스트 인덱스 조각이라고 부릅니다. 이러한 조각 중 일부는 비교적 최신의 데이터를 포함할 수도 있습니다. 예를 들어 사용자가 DocId가 3인 다음 행을 업데이트하고 테이블에서 자동으로 변경 내용이 추적되는 경우 새로운 조각이 만들어집니다.  
   
-|DocumentID|Title|  
+|DocumentID|제목|  
 |----------------|-----------|  
 |3|Rear Reflector|  
   

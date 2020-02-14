@@ -31,10 +31,10 @@ ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: c456b6e34dba77b7e35cc24e8af673662725a2bb
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211377"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION(Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "70211377"
 
   서비스 간 대화를 시작합니다. 대화는 두 서비스 간에 정확한 순서대로 한 번 메시징을 제공하는 대화 방법입니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -101,12 +101,12 @@ WHERE database_id = DB_ID() ;
  대화가 열려 있는 최대 시간을 지정합니다. 대화를 완료하려면 수명이 만료되기 전에 두 엔드포인트에서 대화를 명시적으로 종료해야 합니다. *dialog_lifetime* 값은 초 단위로 표시해야 합니다. 수명은 **int** 형식입니다. LIFETIME 절을 지정하지 않으면 대화 수명은 **int** 데이터 형식의 최댓값입니다.  
   
  ENCRYPTION  
- 이 대화에서 주고 받은 메시지를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 외부로 보낼 때 암호화해야 하는지 여부를 지정합니다. 암호화해야 하는 대화는 보안 대화(*secured dialog*)입니다. ENCRYPTION = ON인 경우 암호화 지원에 필요한 인증서가 구성되어 있지 않으면 [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 대화에 대한 오류 메시지를 반환합니다. ENCRYPTION = OFF인 경우 *target_service_name*에 대해 원격 서비스 바인딩이 구성되어 있으면 암호화가 사용되고, 그렇지 않으면 메시지가 암호화되지 않은 상태로 전송됩니다. 이 절이 없으면 기본값은 ON입니다.  
+ 이 대화에서 주고받은 메시지를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 외부로 보낼 때 암호화해야 하는지 아닌지를 지정합니다. 암호화해야 하는 대화는 보안 대화(*secured dialog*)입니다. ENCRYPTION = ON인 경우 암호화 지원에 필요한 인증서가 구성되어 있지 않으면 [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 대화에 대한 오류 메시지를 반환합니다. ENCRYPTION = OFF인 경우 *target_service_name*에 대해 원격 서비스 바인딩이 구성되어 있으면 암호화가 사용되고, 그렇지 않으면 메시지가 암호화되지 않은 상태로 전송됩니다. 이 절이 없으면 기본값은 ON입니다.  
   
 > [!NOTE]  
 >  같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 서비스와 주고받는 메시지는 암호화되지 않습니다. 그러나 대화에 대한 서비스가 다른 데이터베이스에 있는 경우 암호화를 사용하는 대화에는 암호화에 대한 데이터베이스 마스터 키와 인증서가 계속 필요합니다. 따라서 대화가 진행 중인 동안 데이터베이스 중 하나를 다른 인스턴스로 이동해도 대화를 계속할 수 있습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  모든 메시지는 대화의 일부입니다. 따라서 시작 서비스는 대상 서비스로 메시지를 보내기 전에 대상 서비스와 대화를 시작해야 합니다. BEGIN DIALOG CONVERSATION 문에서 지정한 정보는 편지의 주소와 유사합니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 이 정보를 사용하여 올바른 서비스로 메시지를 배달합니다. TO SERVICE 절에서 지정한 서비스는 메시지가 전달되는 주소이고, FROM SERVICE 절에서 지정한 서비스는 회신 메시지에 사용되는 반송 주소입니다.  
   
  대화의 대상이 BEGIN DIALOG CONVERSATION을 호출할 필요는 없습니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 시작자로부터 대화의 첫 번째 메시지가 도착하면 대상 데이터베이스에 대화를 만듭니다.  
@@ -126,7 +126,7 @@ WHERE database_id = DB_ID() ;
   
 ## <a name="examples"></a>예  
   
-### <a name="a-beginning-a-dialog"></a>1\. 대화 시작  
+### <a name="a-beginning-a-dialog"></a>A. 대화 시작  
  다음 예에서는 대화를 시작하고 `@dialog_handle.`에 대화 식별자를 저장합니다. `//Adventure-Works.com/ExpenseClient` 서비스는 대화의 시작자이고 `//Adventure-Works.com/Expenses` 서비스는 대화의 대상입니다. 대화는 `//Adventure-Works.com/Expenses/ExpenseSubmission` 계약을 따릅니다.  
   
 ```  
@@ -138,7 +138,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
    ON CONTRACT [//Adventure-Works.com/Expenses/ExpenseSubmission] ;  
 ```  
   
-### <a name="b-beginning-a-dialog-with-an-explicit-lifetime"></a>2\. 명시적으로 수명을 지정하고 대화 시작  
+### <a name="b-beginning-a-dialog-with-an-explicit-lifetime"></a>B. 명시적으로 수명을 지정하고 대화 시작  
  다음 예에서는 대화를 시작하고 `@dialog_handle`에 대화 식별자를 저장합니다. `//Adventure-Works.com/ExpenseClient` 서비스는 대화의 시작자이고 `//Adventure-Works.com/Expenses` 서비스는 대화의 대상입니다. 대화는 `//Adventure-Works.com/Expenses/ExpenseSubmission` 계약을 따릅니다. END CONVERSATION 명령으로 `60`초 내에 대화가 닫히지 않으면 Broker에서 오류가 발생하여 대화가 종료됩니다.  
   
 ```  

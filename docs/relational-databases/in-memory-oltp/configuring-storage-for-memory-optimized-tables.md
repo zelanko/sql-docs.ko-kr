@@ -1,7 +1,7 @@
 ---
 title: 메모리 액세스에 최적화된 테이블 스토리지 구성 | Microsoft 문서
 ms.custom: ''
-ms.date: 10/25/2017
+ms.date: 1/15/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: af9f37bb0cc3508d1a421c75de4297b3f015f6a7
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.openlocfilehash: d1d0848a1399c533162799fd9a4404955bb542dd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69634572"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76125009"
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 스토리지 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,9 +43,11 @@ ms.locfileid: "69634572"
 -   일반적으로 검사점 파일은 공간이 허용된다면 모든 컨테이너 간에 균일하게 분산됩니다. SQL Server 2014를 사용하면 균일한 분산을 달성하기 위해 홀수의 컨테이너를 프로비전해야 합니다. 2016부터는 홀수 및 짝수 컨테이너 모두 균일하게 분산됩니다.
   
 ## <a name="encryption"></a>암호화  
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 데이터베이스에 TDE를 사용하는 일부로 메모리 최적화 테이블에 대한 스토리지를 암호화합니다. 자세한 내용은 [TDE&#40;투명한 데이터 암호화&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)를 참조하세요. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 검사점 파일은 데이터베이스에서 TDE가 사용하도록 설정된 경우에도 암호화되지 않습니다.
+ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상 버전에서는 메모리 최적화 테이블의 스토리지가 데이터베이스에서 TDE(투명한 데이터 암호화)를 사용하도록 설정하는 과정에서 미사용 시 암호화됩니다. 자세한 내용은 [투명한 데이터 암호화](../../relational-databases/security/encryption/transparent-data-encryption.md)를 참조하세요. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 검사점 파일은 데이터베이스에서 TDE가 사용하도록 설정된 경우에도 암호화되지 않습니다.
+
+ [비지속형](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md)(SCHEMA_ONLY) 메모리 최적화 테이블의 데이터는 항상 디스크에 기록되지 않습니다. 따라서 해당 테이블에는 TDE가 적용되지 않습니다.
   
 ## <a name="see-also"></a>참고 항목  
- [메모리 액세스에 최적화된 개체의 스토리지 만들기 및 관리](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
+ [메모리 최적화 개체에 대한 스토리지 만들기 및 관리](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

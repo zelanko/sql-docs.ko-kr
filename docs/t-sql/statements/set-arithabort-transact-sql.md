@@ -27,19 +27,19 @@ ms.assetid: f938a666-fdd1-4233-b97f-719f27b1a0e6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da408c690622f5ba1ef45fa2466ed396d0022599
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e7ec15aed162c096bc13062ed1ec98b02c0c9ca4
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064611"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76516255"
 ---
 # <a name="set-arithabort-transact-sql"></a>SET ARITHABORT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 쿼리 실행 중 오버플로 또는 0으로 나누기 오류가 발생하면 쿼리를 종료합니다.  
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -55,7 +55,7 @@ SET ARITHABORT { ON | OFF }
 SET ARITHABORT ON
 ```
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 로그온 세션에서 ARITHABORT를 항상 ON으로 설정합니다. ARITHABORT를 OFF로 설정하면 쿼리 최적화에 부정적인 영향을 주어 성능 문제가 발생할 수 있습니다.  
   
 > [!WARNING]  
@@ -70,7 +70,7 @@ SET ARITHABORT 및 SET ANSI WARNINGS이 OFF이고 해당 오류 중 하나가 �
 > [!NOTE]  
 >  SET ARITHABORT 및 SET ARITHIGNORE이 둘 다 ON이 아니면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 NULL을 반환하고 쿼리가 실행된 후 경고 메시지가 나타납니다.  
   
-데이터베이스 호환성 수준이 90 이상으로 설정된 경우 ANSI_WARNINGS를 ON으로 설정하면 암시적으로 ARITHABORT가 ON으로 설정됩니다. 데이터베이스 호환성 수준이 80 이하로 설정된 경우에는 명시적으로 ARITHABORT 옵션을 ON으로 설정해야 합니다.  
+ANSI_WARNINGS의 값이 ON이고 데이터베이스 호환성 수준이 90 이상으로 설정된 경우, ARITHABORT는 값 설정과 관계없이 암시적으로 ON이 됩니다. 데이터베이스 호환성 수준이 80 이하로 설정된 경우에는 명시적으로 ARITHABORT 옵션을 ON으로 설정해야 합니다.  
   
 식 평가의 경우 SET ARITHABORT가 OFF이고 INSERT, UPDATE 또는 DELETE 문에서 산술, 오버플로, 0으로 나누기 또는 도메인 오류가 나타나면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 NULL 값을 삽입하거나 업데이트합니다. 대상 열이 Null 허용이 아니면 삽입이나 업데이트 동작이 실패하고 사용자에게 오류 메시지가 표시됩니다.  
   

@@ -16,10 +16,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 45c297ea29dbab974f72f4ecf69deb5c65f57bbb
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908022"
 ---
 # <a name="view-statistics-properties"></a>통계 속성 보기
@@ -42,7 +42,7 @@ ms.locfileid: "72908022"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  통계 개체를 보려면 테이블의 소유자이거나 **sysadmin** 고정 서버 역할, **db_owner** 고정 데이터베이스 역할 또는 **db_ddladmin** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -61,7 +61,7 @@ ms.locfileid: "72908022"
   
 6.  **통계 속성 -** _statistics_name_ 대화 상자의 **페이지 선택** 창에서 **자세히**를 선택합니다.  
   
-     **통계 속성 -**  **statistics_name** _statistics_name_ 페이지에 다음 속성이 표시됩니다.  
+     **통계 속성 -** _statistics_name_ 대화 상자의 **자세히** 페이지에 다음 속성이 표시됩니다.  
   
      **테이블 이름**  
      통계에서 설명하는 테이블 이름을 표시합니다.  
@@ -77,7 +77,7 @@ ms.locfileid: "72908022"
      **이름**  
      통계 개체의 이름입니다.  
   
-     **업데이트**  
+     **업데이트됨**  
      통계가 마지막으로 업데이트된 날짜와 시간입니다.  
   
      **행**  

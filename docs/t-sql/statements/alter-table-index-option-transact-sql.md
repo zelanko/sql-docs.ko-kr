@@ -15,10 +15,10 @@ ms.assetid: 8a14f12d-2fbf-4036-b8b2-8db3354e0eb7
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e70998bed1ed0f2681009622cfb086baa79dcf02
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982012"
 ---
 # <a name="alter-table-index_option-transact-sql"></a>ALTER TABLE index_option(Transact-SQL)
@@ -26,7 +26,7 @@ ms.locfileid: "73982012"
 
   [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)을 사용하여 만든 제약 조건 정의의 일부인 색인에 적용할 수 있는 옵션 집합을 지정합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -72,7 +72,7 @@ ms.locfileid: "73982012"
   
  인덱스 패딩을 지정합니다. 기본값은 OFF입니다.  
   
- ON  
+ 켜기  
  FILLFACTOR로 지정된 사용 가능한 공간의 비율이 인덱스의 중간 수준 페이지에 적용됩니다.  
   
  OFF 또는 *fillfactor*를 지정되지 않음  
@@ -89,7 +89,7 @@ ms.locfileid: "73982012"
  IGNORE_DUP_KEY **=** { ON | **OFF** }  
  삽입 작업에서 고유 인덱스에 중복된 키 값을 삽입하려고 할 때 응답 유형을 지정합니다. IGNORE_DUP_KEY 옵션은 인덱스를 만들거나 다시 작성한 후의 삽입 작업에만 적용됩니다. [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md), [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) 또는 [UPDATE](../../t-sql/queries/update-transact-sql.md)를 실행하는 경우에는 이 옵션이 아무런 영향을 미치지 않습니다. 기본값은 OFF입니다.  
   
- ON  
+ 켜기  
  중복된 키 값이 고유 인덱스에 삽입되는 경우 경고 메시지가 나타나고 고유성 제약 조건을 위반하는 행만 실패합니다.  
   
  OFF  
@@ -104,7 +104,7 @@ ms.locfileid: "73982012"
  STATISTICS_NORECOMPUTE **=** { ON | **OFF** }  
  통계를 다시 계산할지 여부를 지정합니다. 기본값은 OFF입니다.  
   
- ON  
+ 켜기  
  이전 통계가 자동으로 다시 계산되지 않습니다.  
   
  OFF  
@@ -115,7 +115,7 @@ ms.locfileid: "73982012"
   
  행 잠금의 허용 여부를 지정합니다. 기본값은 ON입니다.  
   
- ON  
+ 켜기  
  인덱스에 액세스할 때 행 잠금이 허용됩니다. 행 잠금을 사용하는 시점은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 결정합니다.  
   
  OFF  
@@ -126,7 +126,7 @@ ms.locfileid: "73982012"
   
  페이지 잠금의 허용 여부를 지정합니다. 기본값은 ON입니다.  
   
- ON  
+ 켜기  
  인덱스에 액세스할 때 페이지 잠금이 허용됩니다. 페이지 잠금을 사용하는 시점은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 결정합니다.  
   
  OFF  
@@ -143,7 +143,7 @@ ms.locfileid: "73982012"
   
  정렬 결과를 **tempdb**에 저장할지 여부를 지정합니다. 기본값은 OFF입니다.  
   
- ON  
+ 켜기  
  인덱스 작성에 사용된 중간 정렬 결과가 **tempdb**에 저장됩니다. 이 경우 사용자 데이터베이스가 아닌 다른 디스크 집합에 **tempdb**가 있으면 인덱스 생성에 필요한 시간이 단축될 수 있습니다. 그러나 인덱스 작성 중에 사용되는 디스크 공간의 크기는 커집니다.  
   
  OFF  
@@ -157,7 +157,7 @@ ms.locfileid: "73982012"
 > [!NOTE]  
 >  고유 비클러스터형 인덱스는 온라인으로 만들 수 없습니다. 여기에는 UNIQUE 또는 PRIMARY KEY 제약 조건 때문에 생성된 인덱스가 포함됩니다.  
   
- ON  
+ 켜기  
  인덱스 작업 중에 장기 테이블 잠금이 유지되지 않습니다. 인덱스 작업의 주 단계 중 내재된 공유(IS) 잠금만 원본 테이블에 유지됩니다. 따라서 기본 테이블 및 인덱스에 대한 쿼리나 업데이트를 처리할 수 있습니다. 작업이 시작되면 아주 짧은 기간 동안 S(공유) 잠금이 원본 개체에 유지됩니다. 작업이 끝나면 짧은 기간 동안 비클러스터형 인덱스가 생성되는 경우에는 원본에 대해 S(공유) 잠금이 획득되고, 온라인 상태에서 클러스터형 인덱스가 생성 또는 삭제될 때와 클러스터형 또는 비클러스터형 인덱스가 다시 작성될 때는 SCH-M(스키마 수정) 잠금이 획득됩니다. 온라인 인덱스 잠금은 짧은 메타데이터 잠금이지만 특히 Sch-M 잠금은 이 테이블에서 모든 차단 트랜잭션이 완료될 때까지 기다려야 합니다. 대기 시간 동안 Sch-M 잠금은 동일 테이블에 액세스할 때 이 잠금 뒤에서 기다리는 다른 모든 트랜잭션을 차단합니다. 로컬 임시 테이블에서 인덱스를 생성하는 경우에는 ONLINE을 ON으로 설정할 수 없습니다.  
   
 > [!NOTE]  
@@ -169,7 +169,7 @@ ms.locfileid: "73982012"
  자세한 내용은 [온라인 인덱스 작업의 작동 원리](../../relational-databases/indexes/how-online-index-operations-work.md)를 참조하세요.  
   
 > [!NOTE]
->  온라인 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
+>  온라인 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
  MAXDOP **=** _max_degree_of_parallelism_  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
@@ -190,7 +190,7 @@ ms.locfileid: "73982012"
  DATA_COMPRESSION  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
- 지정된 테이블, 파티션 번호 또는 파티션 범위에 대한 데이터 압축 옵션을 지정합니다. 다음과 같은 옵션이 있습니다.  
+ 지정된 테이블, 파티션 번호 또는 파티션 범위에 대한 데이터 압축 옵션을 지정합니다. 옵션은 다음과 같습니다.  
   
  없음  
  테이블 또는 지정된 파티션이 압축되지 않습니다. rowstore 테이블에만 적용되며 columnstore 테이블에는 적용되지 않습니다.  
@@ -257,7 +257,7 @@ DATA_COMPRESSION = COLUMNSTORE_ARCHIVE ON PARTITIONS (2, 4, 6 TO 8)
  **SWITCH** 또는 온라인 인덱스 다시 작성은 이 테이블에 대한 차단 작업이 없는 경우 즉시 완료됩니다. *WAIT_AT_LOW_PRIORITY*는 **SWITCH** 또는 온라인 인덱스 다시 작성 작업을 즉시 완료할 수 없는 경우 대기한다는 것을 나타냅니다. 이 작업은 우선 순위가 낮은 잠금을 보류하여, DDL 문과 충돌하는 잠금을 가진 다른 작업이 계속 수행될 수 있도록 허용합니다. **WAIT AT LOW PRIORITY** 옵션을 생략하는 것은 `WAIT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`와 동일합니다.  
   
 MAX_DURATION = *time* [**MINUTES** ]  
- DDL 명령을 실행할 때 **SWITCH** 또는 획득해야 하는 온라인 인덱스 다시 작성 잠금이 기다리는 대기 시간(분 단위로 지정된 정수 값)입니다. SWITCH 또는 온라인 인덱스 다시 작성 작업은 즉시 완료하려고 시도합니다. 작업이 **MAX_DURATION** 시간 동안 차단되면 **ABORT_AFTER_WAIT** 작업 중 하나가 실행됩니다. **MAX_DURATION** 시간은 항상 분 단위이며 **MINUTES** 단어는 생략할 수 있습니다.  
+ DDL 명령을 실행할 때 **SWITCH** 또는 획득해야 하는 온라인 인덱스 다시 작성 잠금이 기다리는 대기 시간(분 단위로 지정된 정수 값)입니다. SWITCH 또는 온라인 인덱스 다시 작성 작업은 즉시 완료하려고 시도합니다. 작업이 **MAX_DURATION** 시간 동안 차단되면 **ABORT_AFTER_WAIT** 작업 중 하나가 실행됩니다. **MAX_DURATION** 시간은 항상 분 단위이며 단어 **MINUTES**는 생략할 수 있습니다.  
   
 ABORT_AFTER_WAIT = [**NONE** | **SELF** | **BLOCKERS** } ]  
  없음  
@@ -270,7 +270,7 @@ BLOCKERS
  작업을 계속할 수 있도록 **SWITCH** 또는 온라인 인덱스 다시 작성 DDL 작업을 현재 차단하는 모든 사용자 트랜잭션을 종료합니다.  
  BLOCKERS에는 **ALTER ANY CONNECTION** 권한이 필요합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  인덱스 옵션에 대한 자세한 설명은 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

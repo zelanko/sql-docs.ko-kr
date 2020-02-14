@@ -20,10 +20,10 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: be976ec58ae275f37262f136a2896ffb6a9c7677
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71287879"
 ---
 # <a name="use-property-expressions-in-packages"></a>패키지에서 속성 식 사용
@@ -71,7 +71,7 @@ ms.locfileid: "71287879"
   
  다음 다이어그램에서는 속성 식을 추가, 변경 및 제거하는 데 사용하는 사용자 인터페이스를 보여 줍니다.  
   
- ![속성 식에 대한 사용자 인터페이스](../../integration-services/expressions/media/ssis-propertyexpressionui.gif "속성 식에 대한 사용자 인터페이스")  
+ ![속성 식의 사용자 인터페이스](../../integration-services/expressions/media/ssis-propertyexpressionui.gif "속성 식의 사용자 인터페이스")  
   
  **속성** 창과 **식** 페이지에서 **식** 컬렉션 수준의 찾아보기 단추 **(…)** 를 클릭하여 **속성 식 편집기** 대화 상자를 엽니다. 속성 식 편집기를 사용하여 속성을 식에 매핑하거나 속성 식을 입력할 수 있습니다. 그래픽 식 도구를 사용하여 식을 만든 다음, 식의 유효성을 검사하려면 식 수준의 찾아보기 단추 **(...)** 를 클릭하여 **식 작성기** 대화 상자를 연 다음, 식을 만들거나 수정하고 필요에 따라 식의 유효성을 검사합니다.  
   

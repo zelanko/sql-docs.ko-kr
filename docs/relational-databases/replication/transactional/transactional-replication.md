@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 986461eb17ed8c5980139fd8789f4fcbed458734
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 745001fb70cf3e210a1e5646fb198acfecdc8cee
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71251073"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286950"
 ---
 # <a name="transactional-replication"></a>트랜잭션 복제
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "71251073"
   
  다음 그림에서는 트랜잭션 복제의 주요 구성 요소를 보여 줍니다.  
   
- ![트랜잭션 복제 구성 요소 및 데이터 흐름](../../../relational-databases/replication/transactional/media/trnsact.gif "Transactional replication components and data flow")  
+ ![트랜잭션 복제 구성 요소 및 데이터 흐름](../../../relational-databases/replication/transactional/media/trnsact.gif "트랜잭션 복제 구성 요소 및 데이터 흐름")  
   
 ##  <a name="Dataset"></a> 초기 데이터 세트  
  새 트랜잭션 복제 구독자가 게시자에서 증분 변경 내용을 받으려면 구독자의 테이블에 게시자의 테이블과 같은 스키마 및 데이터가 포함되어야 합니다. 초기 데이터 세트는 일반적으로 스냅샷 에이전트에서 만들고 배포 에이전트에서 배포 및 적용한 스냅샷입니다. 초기 데이터 세트는 백업이나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Integration Services와 같은 다른 방법으로 지정할 수도 있습니다.  
@@ -78,7 +78,7 @@ ms.locfileid: "71251073"
 ## <a name="publication-types"></a>게시 유형 
 트랜잭션 복제는 다음과 같은 네 가지 게시 유형을 제공합니다.  
   
-|게시 유형|설명|  
+|게시 유형|Description|  
 |----------------------|-----------------|  
 |표준 트랜잭션 게시|구독자의 모든 데이터가 읽기 전용인 토폴로지에 적합합니다. 트랜잭션 복제는 구독자의 모든 데이터를 읽기 전용으로 변경하지 않습니다.<br /><br /> 표준 트랜잭션 게시는 Transact-SQL 또는 RMO(복제 관리 개체)를 사용하는 경우 기본적으로 생성됩니다. 새 게시 마법사를 사용하는 경우에는 **게시 유형** 페이지에서 **트랜잭션 게시** 를 선택하면 해당 게시가 생성됩니다.<br /><br /> 게시를 만드는 방법은 [데이터 및 데이터베이스 개체 게시](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)를 참조하세요.|  
 |업데이트할 수 있는 구독이 있는 트랜잭션 게시|이 게시 유형의 특성은 다음과 같습니다.<br /><br /> -각 위치에는 하나의 게시자와 하나의 구독자가 동일한 데이터를 가지고 있습니다. <br /> -구독자에서 행을 업데이트 할 수 있습니다.<br /> -이 토폴로지는 고가용성 및 읽기 확장성이 필요한 서버 환경에 가장 적합합니다.<br /><br />자세한 내용은 [업데이트할 수 있는 구독](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)을 참조하세요.|  

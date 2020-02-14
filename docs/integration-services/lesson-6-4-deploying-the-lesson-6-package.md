@@ -11,10 +11,10 @@ ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2a16cd38eef12584f8d876e610bfda5d602c3076
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283020"
 ---
 # <a name="lesson-6-4-deploy-the-lesson-6-package"></a>6-4단원: 6단원 패키지 배포
@@ -60,7 +60,7 @@ ms.locfileid: "71283020"
   
 3.  **SSIS 자습서** 폴더를 확장하고 **프로젝트**를 마우스 오른쪽 단추로 클릭하고 **패키지 가져오기**를 선택합니다.  
   
-4.  **Integration Services 프로젝트 변환 마법사** **소개** 페이지에서 **다음**을 선택합니다.  
+4.  **Integration Services 프로젝트 전환 마법사** **소개** 페이지에서 **다음**을 선택합니다.  
   
 5.  **패키지 찾기** 페이지에서 **파일 시스템**이 **원본** 목록에서 선택되어 있는지 확인한 다음, **찾아보기**를 선택합니다.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "71283020"
   
 Integration Services 프로젝트 변환 마법사를 닫으면 SSIS가 Integration Services 배포 마법사를 표시합니다. 이제 이 마법사를 사용하여 6단원 패키지를 배포하세요.  
   
-1.  **Integration Services 배포 마법사** **소개** 페이지에서 프로젝트를 배포하기 위한 단계를 검토한 다음, **다음**을 선택합니다.  
+1.  **Integration Services 배포 마법사** **소개** 페이지에서 프로젝트를 배포하기 위한 단계를 검토하고 **다음**을 선택합니다.  
   
 2.  **대상 선택** 페이지에서 서버 이름이 SSISDB 카탈로그를 포함하는 SQL Server의 인스턴스이고 경로에 **SSIS 자습서 배포**가 표시되는지 확인한 다음, **다음**을 선택합니다.  
   

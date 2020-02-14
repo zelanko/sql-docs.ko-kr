@@ -11,10 +11,10 @@ ms.assetid: 80964293-f1f5-4da7-b1fb-00ab8c30c1c5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0563ceff3185f856692292884fe63e79c16e4216
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295878"
 ---
 # <a name="lesson-6-2-convert-the-project-to-the-project-deployment-model"></a>6-2단원: 프로젝트를 프로젝트 배포 모델로 변환
@@ -27,7 +27,7 @@ ms.locfileid: "71295878"
   
 1.  **프로젝트** 메뉴에서 **프로젝트 배포 모델로 변환**을 선택합니다.  
   
-2.  **Integration Services 프로젝트 변환 마법사** **소개** 페이지에서 단계를 검토한 다음, **다음**을 선택합니다.  
+2.  **Integration Services 프로젝트 전환 마법사** **소개** 페이지에서 단계를 검토하고 **다음**을 선택합니다.  
   
 3.  **패키지 선택** 페이지의 **패키지** 목록에서 **Lesson 6.dtsx**를 제외한 모든 확인란의 선택을 취소한 다음, **다음**을 선택합니다.  
   

@@ -11,10 +11,10 @@ ms.technology: linux
 helpviewer_keywords:
 - Linux, encrypted connections
 ms.openlocfilehash: 975a312988a7df4bdb4fb2858d7b0fcbe95cea33
-ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71016858"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>SQL Server on Linux에 대한 연결 암호화
@@ -70,7 +70,7 @@ TLS는 클라이언트 애플리케이션에서 [!INCLUDE[ssNoVersion](../includ
         - **macOS**: 
            - 인증서를 ```/usr/local/etc/openssl/certs```에 복사합니다.
            - 다음 명령을 실행하여 해시 값 ```/usr/local/Cellar/openssl/1.0.2l/openssl x509 -hash -in mssql.pem -noout```를 가져옵니다.
-           - 인증서의 이름을 value로 바꿉니다. 예를 들어 ```mv mssql.pem dc2dd900.0```을 참조하십시오. dc2dd900.0이 ```/usr/local/etc/openssl/certs```에 있는지 확인합니다.
+           - 인증서의 이름을 value로 바꿉니다. 예: ```mv mssql.pem dc2dd900.0``` dc2dd900.0이 ```/usr/local/etc/openssl/certs```에 있는지 확인합니다.
     
 -   **연결 문자열 예** 
 
@@ -129,7 +129,7 @@ TLS는 클라이언트 애플리케이션에서 [!INCLUDE[ssNoVersion](../includ
 
 ## <a name="common-connection-errors"></a>일반적인 연결 오류  
 
-|오류 메시지입니다. |Fix |
+|오류 메시지 |Fix |
 |--- |--- |
 |인증서 체인이 신뢰할 수 없는 인증 기관으로부터 발급되었습니다.  |이 오류는 클라이언트가 TLS 핸드셰이크 중 SQL Server에서 제공하는 인증서의 서명을 확인할 수 없는 경우 발생합니다. 클라이언트가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증서를 직접 신뢰하거나 SQL Server 인증서에 서명한 CA를 신뢰하는지 확인합니다. |
 |대상 보안 주체 이름이 잘못되었습니다.  |SQL Server 인증서의 일반 이름 필드가 클라이언트의 연결 문자열에 지정된 서버 이름과 일치하는지 확인합니다. |  

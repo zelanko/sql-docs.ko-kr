@@ -18,10 +18,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8feec11884ae31e34cbc5497bf818991e59b39dd
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909790"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>XML 형식으로 실행 계획 저장
@@ -51,7 +51,7 @@ ms.locfileid: "72909790"
      > [!NOTE] 
      > SHOWPLAN_XML은 쿼리에 대한 컴파일 시간 쿼리 실행 계획 정보를 생성하지만 쿼리를 실행하지는 않습니다. **예상** 실행 계획이라고도 합니다. STATISTICS XML은 쿼리에 대한 런타임 쿼리 실행 계획 정보를 생성하고 쿼리를 실행합니다. **실제** 실행 계획이라고도 합니다.  
   
-3.  쿼리를 실행합니다. 예:  
+3.  쿼리를 실행합니다. 예제:  
   
     ```sql  
     USE AdventureWorks2012;  
@@ -68,7 +68,7 @@ ms.locfileid: "72909790"
   
 4.  **결과** 창에서 쿼리 계획을 포함하는 **Microsoft SQL Server XML Showplan** 을 마우스 오른쪽 단추로 클릭한 다음 **다른 이름으로 결과 저장**을 클릭합니다.  
   
-5.  **저장** \<표 또는 텍스트> **결과** 대화 상자의 **파일 형식** 상자에서 **모든 파일(\*.\*)** 을 클릭합니다.  
+5.  \<표 또는 텍스트> **결과** **저장** 대화 상자의 **파일 형식** 상자에서 **모든 파일(\*.\*)** 을 클릭합니다.  
   
 6.  **파일 이름** 상자에 \<name **>.sqlplan** 형식으로 이름을 입력한 후 **저장**을 클릭합니다.  
 

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b738bd06abe616adc846727dd5721b7204e340c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67999439"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>PRIMARY KEY 및 FOREIGN KEY 제약 조건
@@ -34,7 +34,7 @@ ms.locfileid: "67999439"
   
  [Foreign Key Constraints](../../relational-databases/tables/primary-and-foreign-key-constraints.md#FKeys)  
   
- [관련 태스크](../../relational-databases/tables/primary-and-foreign-key-constraints.md#Tasks)  
+ [관련 작업](../../relational-databases/tables/primary-and-foreign-key-constraints.md#Tasks)  
   
 ##  <a name="PKeys"></a> 기본 키 제약 조건  
  테이블에는 일반적으로 테이블의 각 행을 고유하게 식별하는 값을 가진 열 또는 열 조합이 포함되어 있습니다. 이러한 열이나 열 조합은 테이블의 PK(기본 키)라고 하며 테이블에 엔터티 무결성을 적용합니다. 기본 키 제약 조건은 데이터의 고유성을 보장하므로 자주 ID 열에 정의됩니다.  
@@ -118,10 +118,10 @@ ms.locfileid: "67999439"
   
 -   INSTEAD OF 트리거가 있는 테이블은 연계 동작을 지정하는 REFERENCES 절도 가질 수 없습니다. 그러나 연계 동작의 대상이 되는 테이블의 AFTER 트리거는 다른 테이블 또는 그 개체에 정의된 INSTEAD OF 트리거를 시작하는 뷰에서 INSERT, UPDATE 또는 DELETE 문을 실행할 수 있습니다.  
   
-##  <a name="Tasks"></a> 관련 태스크  
+##  <a name="Tasks"></a> 관련 작업  
  다음 표에서는 기본 키 및 외래 키 제약 조건과 연관된 일반 태스크를 보여 줍니다.  
   
-|태스크|항목|  
+|Task|항목|  
 |----------|-----------|  
 |기본 키를 만드는 방법에 대해 설명합니다.|[기본 키 만들기](../../relational-databases/tables/create-primary-keys.md)|  
 |기본 키를 삭제하는 방법에 대해 설명합니다.|[기본 키 삭제](../../relational-databases/tables/delete-primary-keys.md)|  
@@ -131,6 +131,6 @@ ms.locfileid: "67999439"
 |외래 키 관계를 삭제하는 방법에 대해 설명합니다.|[외래 키 관계 삭제](../../relational-databases/tables/delete-foreign-key-relationships.md)|  
 |외래 키 속성을 보는 방법에 대해 설명합니다.|[외래 키 속성 보기](../../relational-databases/tables/view-foreign-key-properties.md)|  
 |복제에 대한 외래 키 제약 조건을 사용하지 않도록 설정하는 방법에 대해 설명합니다.|[복제할 때 FOREIGN KEY 제약 조건 비활성화](../../relational-databases/tables/disable-foreign-key-constraints-for-replication.md)|  
-|INSERT 또는 UPDATE 문 중에 외래 키 제약 조건을 사용하지 않도록 설정하는 방법에 대해 설명합니다.|[NSERT 및 UPDATE 문에서 FOREIGN KEY 제약 조건 사용 안 함](../../relational-databases/tables/disable-foreign-key-constraints-with-insert-and-update-statements.md)|  
+|INSERT 또는 UPDATE 문 중에 외래 키 제약 조건을 사용하지 않도록 설정하는 방법에 대해 설명합니다.|[INSERT 및 UPDATE 문에서 FOREIGN KEY 제약 조건 사용 안 함](../../relational-databases/tables/disable-foreign-key-constraints-with-insert-and-update-statements.md)|  
   
   

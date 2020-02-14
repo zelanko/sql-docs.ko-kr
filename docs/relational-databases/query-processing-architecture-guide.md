@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb6463efe0b4b4f5d7b009eae6f9a4a612cf5e7e
-ms.sourcegitcommit: 722f2ec5a1af334f5bcab8341bc744d16a115273
+ms.openlocfilehash: e5b890ff4a9d58f531f3a72e41e8280faf2511a3
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74866081"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909753"
 ---
 # <a name="query-processing-architecture-guide"></a>쿼리 처리 아키텍처 가이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -637,16 +637,16 @@ WHERE ProductSubcategoryID = 4;
 
 * 모든 `SELECT` 문의 <select_list>. 여기에는 하위 쿼리의 `SELECT` 목록과 `INSERT` 문 내의 `SELECT` 목록도 포함됩니다.
 * `SELECT` 문에 나타나는 하위 쿼리 `IF` 문.
-* 쿼리의 `TOP`, `TABLESAMPLE`, `HAVING`, `GROUP BY`, `ORDER BY`, `OUTPUT...INTO`또는 `FOR XM`L 절.
+* 쿼리의 `TOP`, `TABLESAMPLE`, `HAVING`, `GROUP BY`, `ORDER BY`, `OUTPUT...INTO` 또는 `FOR XML` 절.
 * `OPENROWSET`, `OPENQUERY`, `OPENDATASOURCE`, `OPENXML`또는 모든 `FULLTEXT` 연산자에 대한 직접 인수 또는 하위 식으로서의 인수.
 * `LIKE` 절의 pattern 및 escape_character 인수.
 * `CONVERT` 절의 style 인수.
 * `IDENTITY` 절 내의 정수 상수
 * ODBC 확장 구문을 사용하여 지정한 상수
-* +, -, \*, / 및 % 연산자의 인수인 상수 폴딩 가능 식. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 식이 강제 매개 변수화에 적합한지 결정할 때 다음 조건 중 하나가 True이면 상수 폴딩 가능 식으로 간주합니다.  
+* `+`, `-`, `*`, `/`, `%` 연산자의 인수인 상수 폴딩 가능 식. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 식이 강제 매개 변수화에 적합한지 결정할 때 다음 조건 중 하나가 True이면 상수 폴딩 가능 식으로 간주합니다.  
   * 식에 열, 변수 또는 하위 쿼리가 나타나지 않습니다.  
   * 식에 `CASE` 절이 포함됩니다.  
-* 쿼리 힌트 절에 대한 인수. 여기에는 `number_of_rows` 쿼리 힌트의 `FAST` 인수, `number_of_processors` 쿼리 힌트의 `MAXDOP` 인수 및 `MAXRECURSION` 쿼리 힌트의 숫자 인수가 포함됩니다.
+* 쿼리 힌트 절에 대한 인수. 여기에는 `FAST` 쿼리 힌트의 *number_of_rows* 인수, `MAXDOP` 쿼리 힌트의 *number_of_processors* 인수 및 `MAXRECURSION` 쿼리 힌트의 *number* 인수가 포함됩니다.
 
 매개 변수화는 개별 [!INCLUDE[tsql](../includes/tsql-md.md)] 문 수준에서 수행됩니다. 다시 말해 일괄 처리 내의 개별 문이 매개 변수화됩니다. 컴파일 후 매개 변수가 있는 쿼리는 쿼리가 원래 전송되었던 일괄 처리의 컨텍스트에서 실행됩니다. 쿼리의 실행 계획이 캐시된 경우에는 sys.syscacheobjects 동적 관리 뷰의 sql 열을 참조하여 쿼리가 매개 변수화되었는지 여부를 확인할 수 있습니다. 쿼리가 매개 변수화된 경우 \@1 tinyint와 같이 이 열에서 매개 변수의 이름 및 데이터 형식은 전송된 일괄 처리 텍스트 앞에 옵니다.
 

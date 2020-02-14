@@ -17,10 +17,10 @@ ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 66d7ac0e15ebfee2c79a90f8c5041ba899dbff93
-ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73926034"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
@@ -48,7 +48,7 @@ LocalDB를 설치하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md
 
 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB의 인스턴스는 `SqlLocalDB.exe` 유틸리티를 사용하여 관리됩니다. 더 이상 사용되지 않는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 사용자 인터페이스 기능 대신 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB를 사용해야 합니다.
 
-## <a name="description"></a>설명
+## <a name="description"></a>Description
 
 LocalDB 설치 프로그램은 `SqlLocalDB.msi` 프로그램을 사용하여 컴퓨터에 필요한 파일을 설치합니다. 설치가 끝나면 LocalDB는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 만들고 열 수 있는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 인스턴스가 됩니다. 데이터베이스의 시스템 데이터베이스 파일은 로컬 AppData 경로에 저장되는데, 이 경로는 일반적으로 숨겨져 있습니다. `C:\Users\<user>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\`)을 입력합니다. 사용자 데이터베이스 파일은 일반적으로 `C:\Users\<user>\Documents\` 폴더와 같은 사용자가 지정하는 위치에 저장됩니다.
 
@@ -60,7 +60,7 @@ LocalDB API에 대한 자세한 내용은 [SQL Server Express LocalDB 참조](..
 
 LocalDB의 인스턴스 데이터 정렬은 `SQL_Latin1_General_CP1_CI_AS`로 설정되며 변경할 수 없습니다. 데이터베이스 수준, 열 수준 및 식 수준 데이터 정렬은 일반적으로 지원됩니다. 포함된 데이터베이스는 [Contained Database Collation](../../relational-databases/databases/contained-database-collations.md)에 정의된 메타데이터 및 `tempdb` 데이터 정렬 규칙을 따릅니다.
 
-### <a name="restrictions"></a>Restrictions
+### <a name="restrictions"></a>제한
 
 - LocalDB는 병합 복제 구독자일 수 없습니다.
 
@@ -113,11 +113,11 @@ REM Gather information about the instance of LocalDB
 |||
 |-|-|
 |속성|`LocalDBApp1`|
-|버전 옵션|\<현재 버전>|
+|버전|\<현재 버전>|
 |공유 이름|""|
 |소유자|"\<Windows 사용자>"|
-|자동 만들기|아니오|
-|State|실행|
+|자동 만들기|예|
+|시스템 상태|실행 중|
 |마지막 시작 시간|\<날짜 및 시간>|
 |인스턴스 파이프 이름|np:\\\\.\pipe\LOCALDB#F365A78E\tsql\query|
 

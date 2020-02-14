@@ -14,17 +14,17 @@ ms.assetid: 123bb7af-1367-4bde-bfcb-76d36799b905
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: be0ff34acb9d7743ae096f8ecd2b0ad3ed8a4e28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68089840"
 ---
 # <a name="differential-backups-sql-server"></a>차등 백업(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 백업 및 복원 항목은 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 관련됩니다.  
   
- 차등 백업은 가장 최근에 수행한 이전의 전체 데이터 백업을 기반으로 합니다. 차등 백업은 전체 백업 이후 변경된 데이터만 캡처합니다. 차등 백업의 기반이 되는 전체 백업을 차등의 *기반* 이라고 합니다. 복사 전용 백업을 제외한 전체 백업은 데이터베이스 백업, 부분 백업 및 파일 백업을 포함한 일련의 차등 백업에 대한 기반으로 사용할 수 있습니다. 파일 차등 백업에 대한 기반 백업은 전체 백업, 파일 백업 또는 부분 백업에 포함될 수 있습니다.  
+ 차등 백업은 가장 최근에 수행한 이전 전체 데이터 백업을 기반으로 합니다. 차등 백업은 전체 백업 이후 변경된 데이터만 캡처합니다. 차등 백업의 기반이 되는 전체 백업을 차등의 *기반* 이라고 합니다. 복사 전용 백업을 제외한 전체 백업은 데이터베이스 백업, 부분 백업 및 파일 백업을 포함한 일련의 차등 백업에 대한 기반으로 사용할 수 있습니다. 파일 차등 백업에 대한 기반 백업은 전체 백업, 파일 백업 또는 부분 백업에 포함될 수 있습니다.  
   
   
 ##  <a name="Benefits"></a> 이점  
@@ -40,7 +40,7 @@ ms.locfileid: "68089840"
   
  다음 그림에서는 차등 백업의 작동 방식을 보여 줍니다. 이 그림에서는 표시된 24개의 데이터 익스텐트 중 6개가 변경되었으며 차등 백업은 이들 6개의 데이터 익스텐트만 포함합니다. 차등 백업 작업은 각 익스텐트에 대해 하나의 비트가 포함된 비트맵 페이지를 사용합니다. 기반 이후 업데이트된 익스텐트의 경우 비트맵의 해당 비트가 1로 설정됩니다.  
   
- ![차등 비트맵에서 변경된 익스텐트 식별](../../relational-databases/backup-restore/media/bnr-how-diff-backups-work.gif "Differential bitmap identifies changed extents")  
+ ![차등 비트맵에서 변경된 익스텐트 확인](../../relational-databases/backup-restore/media/bnr-how-diff-backups-work.gif "차등 비트맵에서 변경된 익스텐트 확인")  
   
 > [!NOTE]  
 >  복사 전용 백업은 차등 비트맵을 업데이트하지 않습니다. 따라서 후속 차등 백업에 영향을 주지 않습니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "68089840"
   
  나중에 차등 백업을 사용하려는 읽기 전용 데이터베이스를 분리 및 연결하는 경우 가능한 빨리 읽기 전용 데이터베이스와 **master** 데이터베이스의 전체 데이터베이스 백업을 수행합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [차등 데이터베이스 백업 만들기&#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)  
   

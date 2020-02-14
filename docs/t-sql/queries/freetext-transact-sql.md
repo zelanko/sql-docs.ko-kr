@@ -22,10 +22,10 @@ ms.assetid: 2f199d3c-440e-4bcf-bdb5-82bb3994005d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 3c0d1ed26fa58934a51ec051eb3aa4e1d5b9a2bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902099"
 ---
 # <a name="freetext-transact-sql"></a>FREETEXT(Transact-SQL)
@@ -44,7 +44,7 @@ ms.locfileid: "67902099"
   
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -130,7 +130,7 @@ FREETEXT를 사용하는 전체 텍스트 쿼리는 CONTAINS를 사용하는 전
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-freetext-to-search-for-words-containing-specified-character-values"></a>1\. FREETEXT를 사용하여 지정된 문자 값을 포함하는 단어 검색  
+### <a name="a-using-freetext-to-search-for-words-containing-specified-character-values"></a>A. FREETEXT를 사용하여 지정된 문자 값을 포함하는 단어 검색  
  다음 예에서는 vital, safety, components와 관련된 단어를 포함하는 문서를 모두 검색합니다.  
   
 ```sql  
@@ -142,7 +142,7 @@ WHERE FREETEXT (Document, 'vital safety components' );
 GO  
 ```  
   
-### <a name="b-using-freetext-with-variables"></a>2\. FREETEXT에 변수 사용  
+### <a name="b-using-freetext-with-variables"></a>B. FREETEXT에 변수 사용  
  다음 예에서는 특정 검색 용어 대신 변수를 사용합니다.  
   
 ```sql  

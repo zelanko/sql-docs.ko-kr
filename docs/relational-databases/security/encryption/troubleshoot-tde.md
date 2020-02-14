@@ -14,12 +14,12 @@ ms.topic: conceptual
 ms.date: 11/06/2019
 ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 40584dda23d36af385b9cae5457377838694be6e
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.openlocfilehash: 8ec410ba98be0c1893f376daf596a0746983b87d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75558470"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909903"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Azure Key Vault의 고객 관리 키를 통한 투명한 데이터 암호화의 일반적인 오류
 
@@ -33,7 +33,7 @@ TDE가 Azure Key Vault에서 고객 관리 키를 사용하도록 구성된 경�
 
 액세스할 수 없는 데이터베이스가 더 이상 필요 하지 않은 경우 즉시 삭제하여 비용 발생을 중지할 수 있습니다. Azure Key Vault 키에 대한 액세스가 복원되고 데이터베이스가 다시 온라인 상태가 될 때까지 데이터베이스에 대한 기타 모든 작업은 허용되지 않습니다. 고객 관리 키로 암호화된 데이터베이스에 액세스할 수 없는 동안에는 서버에서 고객 관리 키에서 서비스 관리 키로 TDE 옵션을 변경할 수도 없습니다. 이 기능은 TDE 보호기에 대한 권한이 해지된 상태에서 무단 액세스로부터 데이터를 보호하는 데 필요합니다. 
 
-데이터베이스가 8시간 넘게 액세스할 수 없게 된 후에는 더 이상 자동으로 복구되지 않습니다. 해당 기간 후에 필요한 Azure Key Vault 키 액세스가 복원된 경우 데이터베이스를 다시 온라인 상태로 전환하려면 수동으로 액세스의 유효성을 다시 검사해야 합니다. 이 경우 데이터베이스를 다시 온라인 상태로 만들려면 데이터베이스 크기에 따라 상당한 시간이 소요될 수 있으며 현재 지원 티켓을 열어야 합니다. 데이터베이스가 다시 온라인 상태가 되면 Geo-DR(지역 재해 복구)을 구성한 경우 지역 링크와 같은 이전에 구성된 설정, PITR 기록 및 태그가 손실됩니다. 따라서 가능한 한 빨리 기본 Key Vault 문제를 인식하고 해결할 수 있는 [작업 그룹](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups)을 사용하여 알림 시스템을 구현하는 것이 좋습니다. 
+데이터베이스가 8시간 넘게 액세스할 수 없게 된 후에는 더 이상 자동으로 복구되지 않습니다. 해당 기간 후에 필요한 Azure Key Vault 키 액세스가 복원된 경우 데이터베이스를 다시 온라인 상태로 전환하려면 수동으로 키 액세스의 유효성을 다시 검사해야 합니다. 이 경우 데이터베이스를 다시 온라인 상태로 만들려면 데이터베이스 크기에 따라 상당한 시간이 소요될 수 있습니다. 데이터베이스가 다시 온라인 상태가 되면 [장애 조치(failover) 그룹](https://docs.microsoft.com/azure/sql-database/sql-database-auto-failover-group), PITR 기록, 태그 등 이전에 구성한 설정이 모두 **손실됩니다**. 따라서 가능한 한 빨리 기본 Key Vault 문제를 인식하고 해결할 수 있는 [작업 그룹](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups)을 사용하여 알림 시스템을 구현하는 것이 좋습니다. 
 
 ## <a name="common-errors-causing-databases-to-become-inaccessible"></a>데이터베이스에 액세스할 수 없는 일반적인 오류
 

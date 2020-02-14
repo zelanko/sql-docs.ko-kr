@@ -19,10 +19,10 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 973e5e1449205d5e72abfa03068db3c8c3e98f87
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296158"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services(SSIS) 변수
@@ -30,7 +30,7 @@ ms.locfileid: "71296158"
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  변수에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지와 해당 컨테이너, 태스크 및 이벤트 처리기에서 런타임에 사용할 수 있는 값이 저장됩니다. 스크립트 태스크와 스크립트 구성 요소의 스크립트에서도 변수가 사용될 수 있습니다. 태스크 및 컨테이너의 순서를 워크플로에 지정하는 선행 제약 조건에서는 해당 제약 조건 정의에 식이 포함된 경우에 변수가 사용될 수 있습니다.  
+  변수에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지와 해당 컨테이너, 태스크 및 이벤트 처리기가 런타임에 사용할 수 있는 값이 저장됩니다. 스크립트 태스크와 스크립트 구성 요소의 스크립트에서도 변수가 사용될 수 있습니다. 태스크 및 컨테이너의 순서를 워크플로에 지정하는 선행 제약 조건에서는 해당 제약 조건 정의에 식이 포함된 경우에 변수가 사용될 수 있습니다.  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지에서 변수는 다음 용도로 사용될 수 있습니다.  
   
@@ -98,8 +98,8 @@ ms.locfileid: "71296158"
  **이름**    
  변수 이름을 지정합니다.  
   
- **네임스페이스**  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 은 **User** 및 **System**의 두 가지 네임스페이스를 제공합니다. 기본적으로 사용자 지정 변수는 **사용자** 네임스페이스에 속하고 시스템 변수는 **시스템** 네임스페이스에 속합니다. 사용자 정의 변수에 대한 추가 네임스페이스를 만들고 **User** 네임스페이스의 이름을 변경할 수 있지만 **System** 네임스페이스의 이름을 변경하거나, **System** 네임스페이스에 변수를 추가하거나, 시스템 변수를 다른 네임스페이스에 할당할 수 없습니다.  
+ **Namespace**  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]은 **User** 및 **System**의 두 가지 네임스페이스를 제공합니다. 기본적으로 사용자 지정 변수는 **사용자** 네임스페이스에 속하고 시스템 변수는 **시스템** 네임스페이스에 속합니다. 사용자 정의 변수에 대한 추가 네임스페이스를 만들고 **User** 네임스페이스의 이름을 변경할 수 있지만 **System** 네임스페이스의 이름을 변경하거나, **System** 네임스페이스에 변수를 추가하거나, 시스템 변수를 다른 네임스페이스에 할당할 수 없습니다.  
   
 **RaiseChangedEvent**  
  이 속성을 **True**로 설정하면 변수에서 값을 변경할 때 **OnVariableValueChanged** 이벤트가 발생합니다.  
@@ -135,7 +135,7 @@ ms.locfileid: "71296158"
 
 | 데이터 형식 | 기본값 |
 |---|---|
-| Boolean | False |
+| 부울 | False |
 | 숫자 및 이진 데이터 형식 | 0(영) |
 | 문자 및 문자열 데이터 형식 | (빈 문자열) |
 | Object | System.Object |
@@ -162,7 +162,7 @@ ms.locfileid: "71296158"
   
  **매개 변수 및 반환 코드** 입력 매개 변수에 대한 값을 제공하거나 출력 매개 변수 및 반환 코드의 값을 저장합니다. 변수를 매개 변수 및 반환 값에 매핑하여 이 작업을 수행합니다. 예를 들어 `varProductId` 변수를 23으로 설정하고 SQL 문 `SELECT * from Production.Product WHERE ProductID = ?`를 실행할 경우 쿼리는 `ProductID` 가 23인 제품을 검색합니다. 자세한 내용은 [SQL 실행 태스크](../integration-services/control-flow/execute-sql-task.md) 및 [SQL 실행 태스크의 매개 변수 및 반환 코드](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663)를 참조하세요.  
   
- **For 루프 식** For 루프의 초기화, 계산 및 대입 식에서 사용할 값을 제공합니다. 예를 들어 `varCount` 변수가 2, `varMaxCount` 변수가 10, 초기화 식이 `@varCount`, 계산 식이  `@varCount < @varMaxCount`, 대입 식이 `@varCount =@varCount +1`인 경우 루프는 8번 반복됩니다. 자세한 내용은 [For Loop Container](../integration-services/control-flow/for-loop-container.md)을 참조하세요.  
+ **For 루프 식** For 루프의 초기화, 계산 및 대입 식에서 사용할 값을 제공합니다. 예를 들어 `varCount` 변수가 2, `varMaxCount` 변수가 10, 초기화 식이 `@varCount`, 계산 식이  `@varCount < @varMaxCount`, 대입 식이 `@varCount =@varCount +1`인 경우 루프는 8번 반복됩니다. 자세한 내용은 [For 루프 컨테이너](../integration-services/control-flow/for-loop-container.md)가 될 때까지 워크플로를 반복합니다.  
   
  **부모 패키지 변수 구성** 부모 패키지에서 자식 패키지로 값을 전달합니다. 자식 패키지는 부모 패키지 변수 구성을 사용하여 부모 패키지의 변수에 액세스할 수 있습니다. 예를 들어 자식 패키지가 부모 패키지와 동일한 데이터를 사용해야 할 경우 자식 패키지는 부모 패키지의 GETDATE 함수에서 설정한 변수를 지정하는 부모 패키지 변수 구성을 정의할 수 있습니다. 자세한 내용은 [Execute Package Task](../integration-services/control-flow/execute-package-task.md) 및 [Package Configurations](../integration-services/packages/package-configurations.md)를 참조하세요.  
   
@@ -188,7 +188,7 @@ ms.locfileid: "71296158"
   
 6.  필요에 따라 **표 옵션** 아이콘을 클릭하고 **가변 눈금 옵션** 대화 상자에 표시할 추가 열을 선택한 다음 **확인**을 클릭합니다.  
   
-7.  필요에 따라 변수 속성을 설정합니다. 자세한 내용은 [사용자 정의 변수의 속성 설정](https://msdn.microsoft.com/library/f98ddbec-f668-4dba-a768-44ac3ae0536f)을 참조하세요.  
+7.  필요에 따라 변수 속성을 설정합니다. 자세한 내용은 [사용자 정의 변수의 속성 설정](https://msdn.microsoft.com/library/f98ddbec-f668-4dba-a768-44ac3ae0536f)에 의해 정의됩니다.  
   
 8.  업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
 
@@ -208,7 +208,7 @@ ms.locfileid: "71296158"
  **값 유형**  
  데이터 형식을 선택합니다.  
   
- **Value**  
+ **값**  
  값을 입력합니다. 이 값은 **값 유형** 옵션에 지정한 데이터 형식과 호환되어야 합니다.  
   
  **읽기 전용**  

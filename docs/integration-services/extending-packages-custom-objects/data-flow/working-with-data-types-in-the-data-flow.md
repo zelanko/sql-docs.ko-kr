@@ -15,10 +15,10 @@ ms.assetid: 941260d0-4ec3-4bf0-ab48-2b26733e6b24
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2100176fa0bb6f02deff6cdf2a210ea81e04f9a6
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71287449"
 ---
 # <a name="working-with-data-types-in-the-data-flow"></a>데이터 흐름의 데이터 형식 작업
@@ -94,7 +94,7 @@ ms.locfileid: "71287449"
 |<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetUInt64%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_UI8>|  
   
 ## <a name="mapping-data-types-in-the-data-flow"></a>데이터 흐름에서 데이터 형식 매핑  
- 변환을 통해 원본에서 대상으로 데이터를 이동하는 동안 데이터 흐름 구성 요소에서 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType> 열거형에 정의된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 형식과 **System** 네임스페이스에 정의된 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]의 관리되는 데이터 형식 간에 데이터 형식을 변환해야 하는 경우가 종종 있습니다. 또한 구성 요소에서는 하나의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 데이터 형식을 다른 형식으로 변환한 후에만 관리되는 형식으로 변환할 수 있는 경우가 종종 있습니다.  
+ 변환을 통해 원본에서 대상으로 데이터를 이동하는 동안 데이터 흐름 구성 요소에서 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType> 열거형에 정의된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 형식과 **System** 네임스페이스에 정의된 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]의 관리형 데이터 형식 간에 데이터 형식을 변환해야 하는 경우가 종종 있습니다. 또한 구성 요소에서는 하나의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 데이터 형식을 다른 형식으로 변환한 후에만 관리되는 형식으로 변환할 수 있는 경우가 종종 있습니다.  
   
 > [!NOTE]  
 >  기본적으로 C:\Program Files\Microsoft SQL Server\130\DTS\MappingFiles에 설치되는 XML 형식의 매핑 파일은 이 항목에서 설명하는 데이터 형식 매핑과는 관련이 없습니다. 이러한 파일은 예를 들어 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 데이터 형식을 Oracle의 데이터 형식에 매핑하는 경우와 같이 한 데이터베이스 버전 또는 시스템의 데이터 형식을 다른 데이터 형식에 매핑하며, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사에서만 사용됩니다. 이러한 매핑 파일에 대한 자세한 내용은 [SQL Server 가져오기 및 내보내기 마법사](~/integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md)를 참조하세요.  

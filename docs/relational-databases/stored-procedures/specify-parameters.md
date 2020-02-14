@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6b2ac27ecf2ca02acde1cefba87aaf828f8a3317
-ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70110268"
 ---
 # <a name="specify-parameters"></a>매개 변수 지정
@@ -137,7 +137,7 @@ GO
   
  출력 매개 변수를 지정하려면 CREATE PROCEDURE 문의 매개 변수 정의에서 OUTPUT 키워드를 반드시 지정해야 합니다. 프로시저는 출력 매개 변수의 현재 값을 프로시저가 끝날 때 호출 프로그램에 반환합니다. 호출 프로그램에서 프로시저를 실행할 때 OUTPUT 키워드도 사용해야 호출 프로그램에서 사용할 수 있는 변수에 매개 변수 값을 저장할 수 있습니다.  
   
- 다음 예는 한 개의 입력 매개 변수 `Production.usp_GetList` 프로시저를 만듭니다. 다음 예에서는 여러 SELECT 문과 여러 OUTPUT 매개 변수의 사용을 보여 줍니다. OUTPUT 매개 변수를 사용하면 프로시저를 실행하는 동안 외부 프로시저, 일괄 처리 또는 한 개 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 값 집합에 액세스할 수 있습니다.  
+ 다음 예에서는 지정된 가격을 초과하지 않는 제품 목록을 반환하는 `Production.usp_GetList` 프로시저를 만듭니다. 다음 예에서는 여러 SELECT 문과 여러 OUTPUT 매개 변수의 사용을 보여 줍니다. OUTPUT 매개 변수를 사용하면 프로시저를 실행하는 동안 외부 프로시저, 일괄 처리 또는 한 개 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 값 집합에 액세스할 수 있습니다.  
   
 ```  
 USE AdventureWorks2012;  

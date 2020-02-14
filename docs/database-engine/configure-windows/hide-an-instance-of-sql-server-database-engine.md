@@ -14,10 +14,10 @@ ms.assetid: 392de21a-57fa-4a69-8237-ced8ca86ed1d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 28d7a01ce3c11ce332de7e7af70ff0c57746e840
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71682096"
 ---
 # <a name="hide-an-instance-of-sql-server-database-engine"></a>SQL Server 데이터베이스 엔진의 인스턴스 숨기기
@@ -28,11 +28,11 @@ ms.locfileid: "71682096"
   
 #### <a name="to-hide-an-instance-of-the-sql-server-database-engine"></a>SQL Server 데이터베이스 엔진의 인스턴스를 숨기려면  
   
-1.  **SQL Server 구성 관리자**에서 **SQL Server 네트워크 구성** 을 펼치고 *\<서버 인스턴스>* **에 대한 프로토콜**을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
+1.  **SQL Server 구성 관리자**에서 **SQL Server 네트워크 구성**을 확장하고 *\<서버 인스턴스>* **에 대한 프로토콜**을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
   
 2.  **플래그** 탭의 **인스턴스 숨기기** 상자에서 **예**를 선택한 다음 **확인** 을 클릭하여 대화 상자를 닫습니다. 변경 내용이 새 연결에 대해 즉시 적용됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  명명된 인스턴스를 숨기면 브라우저 서비스가 실행되고 있더라도 숨겨진 인스턴스에 연결할 때 연결 문자열에 포트 번호를 제공해야 합니다. 명명된 숨겨진 인스턴스에 대한 동적 포트 대신 정적 포트를 사용하는 것이 좋습니다.  
   자세한 내용은 [특정 TCP 포트로 수신하도록 서버 구성&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)을 참조하세요.  
   

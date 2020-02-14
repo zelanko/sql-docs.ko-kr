@@ -17,15 +17,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: be602e61cfd34e8daf97200628df7fa3147c809a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120463"
 ---
 # <a name="sql-server-event-class-reference"></a>SQL Server 이벤트 클래스 참조
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에서 이벤트가 발생할 경우 해당 이벤트를 기록할 수 있습니다. 기록된 이벤트는 추적 정의에 있는 이벤트 클래스의 인스턴스입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]에서는 **추적 파일 속성** 대화 상자의 **이벤트 선택** 탭에서 이벤트 클래스와 해당 이벤트 범주를 사용할 수 있습니다.  
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에서 이벤트가 발생할 경우 해당 이벤트를 기록할 수 있습니다. 기록된 이벤트는 추적 정의에 있는 이벤트 클래스의 인스턴스입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]에서는 **추적 파일 속성** 대화 상자의 **이벤트 선택** 탭에서 이벤트 클래스와 해당 이벤트 범주를 사용할 수 있습니다.  
   
  다음 표에서는 이벤트 범주를 설명하고 연관된 이벤트 클래스를 나열합니다.  
   
@@ -53,6 +53,6 @@ ms.locfileid: "68120463"
 |[User-Configurable 이벤트 범주](../../relational-databases/event-classes/user-configurable-event-category.md) 에는 정의할 수 있는 이벤트 클래스가 포함됩니다.|[User-Configurable 이벤트 클래스](../../relational-databases/event-classes/user-configurable-event-class.md)|  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)  
+ [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

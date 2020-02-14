@@ -32,12 +32,12 @@ helpviewer_keywords:
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 6ccf21bcc3e0657123aa4f0fdcfe9b2d3cb0861a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 782536e79336c0224638707538e8a12a31f5af84
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037588"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76315603"
 ---
 # <a name="database-files-and-filegroups"></a>데이터베이스 파일 및 파일 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "68037588"
 ## <a name="database-files"></a>데이터베이스 파일  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에는 다음 표에 설명된 것처럼 세 가지 유형의 파일이 있습니다.  
   
-|파일|설명|  
+|파일|Description|  
 |----------|-----------------|  
 |주|주 데이터 파일은 데이터베이스의 시작 정보를 포함하며 데이터베이스의 나머지 파일을 가리킵니다. 사용자 데이터와 개체를 이 파일에 저장하거나 보조 데이터 파일에 저장할 수 있습니다. 모든 데이터베이스에는 하나의 주 데이터 파일이 있습니다. 권장되는 주 데이터 파일 확장명은 .mdf입니다.|  
 |보조|보조 데이터 파일은 선택적으로 사용하는 사용자 정의 데이터 파일이며 사용자 데이터를 저장합니다. 보조 파일은 각 파일을 서로 다른 디스크 드라이브에 배치하여 데이터를 여러 디스크에 분산시키는 데 사용할 수 있습니다. 또한 데이터베이스가 단일 Windows 파일의 최대 크기를 초과할 경우 보조 데이터 파일을 사용하여 데이터베이스 크기를 계속해서 늘릴 수 있습니다.<br /><br /> 권장되는 보조 데이터 파일 확장명은 .ndf입니다.|  
@@ -67,7 +67,7 @@ ms.locfileid: "68037588"
 > FAT 또는 NTFS 파일 시스템에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 파일과 로그 파일을 배치할 수 있습니다. Windows 시스템에서는 보안상 NTFS 파일 시스템을 사용하는 것이 좋습니다. 
 
 > [!WARNING]
-> 읽기/쓰기 데이터 파일 그룹과 로그 파일은 NTFS 압축 파일 시스템에 배치할 수 없습니다. 읽기 전용 데이터베이스와 읽기 전용 보조 파일 그룹만 NTFS 압축 파일 시스템에 배치할 수 있습니다.
+> 읽기/쓰기 데이터 파일 그룹과 로그 파일은 NTFS 압축 파일 시스템에서 지원되지 않습니다. 읽기 전용 데이터베이스와 읽기 전용 보조 파일 그룹만 NTFS 압축 파일 시스템에 배치할 수 있습니다.
 > 공간을 절약하기 위해 파일 시스템 압축 대신 [데이터 압축](../../relational-databases/data-compression/data-compression.md)을 사용하는 것이 좋습니다.
 
 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 단일 시스템에서 실행될 때 각 인스턴스는 해당 인스턴스에서 생성된 데이터베이스에 대한 파일을 보관할 수 있는 서로 다른 기본 디렉터리를 받습니다. 자세한 내용은 [SQL Server 기본 인스턴스 및 명명된 인스턴스의 파일 위치](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)참조하세요.
@@ -101,7 +101,7 @@ ms.locfileid: "68037588"
   
  모든 데이터 파일은 다음 표에 나열된 파일 그룹에 저장됩니다.  
   
-|파일 그룹|설명|  
+|파일 그룹|Description|  
 |---------------|-----------------|  
 |주|주 파일을 포함하는 파일 그룹. 주 파일 그룹에는 모든 시스템 테이블이 할당됩니다.|  
 |메모리 최적화 데이터|메모리 최적화 파일 그룹은 파일 스트림 파일 그룹을 기반으로 합니다.|  

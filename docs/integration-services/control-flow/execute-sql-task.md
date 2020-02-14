@@ -21,10 +21,10 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1e331b974bee3017e17e75dbf8c3ecb8506349b2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298309"
 ---
 # <a name="execute-sql-task"></a>SQL 실행 태스크
@@ -49,7 +49,7 @@ ms.locfileid: "71298309"
 ## <a name="connect-to-a-data-source"></a>데이터 원본에 연결  
  SQL 실행 태스크는 여러 유형의 연결 관리자를 사용하여 SQL 문이나 저장 프로시저가 실행될 데이터 원본에 연결할 수 있습니다. 다음 표에 나열된 연결 형식을 사용할 수 있습니다.  
   
-|연결 형식|연결 관리자|  
+|연결 형식|ODBC 대상 편집기|  
 |---------------------|------------------------|  
 |EXCEL|[Excel 연결 관리자](../../integration-services/connection-manager/excel-connection-manager.md)|  
 |OLE DB|[OLE DB 연결 관리자](../../integration-services/connection-manager/ole-db-connection-manager.md)|  
@@ -147,7 +147,7 @@ Transact-SQL 쿼리 언어에 대한 자세한 내용은 [Transact-SQL 참조&#4
   
  **관련 항목:** [OLE DB 연결 관리자](../../integration-services/connection-manager/ole-db-connection-manager.md), [ODBC 연결 관리자](../../integration-services/connection-manager/odbc-connection-manager.md), [ADO 연결 관리자](../../integration-services/connection-manager/ado-connection-manager.md), [ADO.NET 연결 관리자](../../integration-services/connection-manager/ado-net-connection-manager.md), [SQL Server Compact Edition 연결 관리자](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)  
   
- **대량 삽입 태스크 편집기**  
+ **연결**  
  정의된 연결 관리자 목록에서 연결을 선택합니다. 새 연결을 설정하려면 \<**새 연결...** >을 선택합니다.  
   
  **SQLSourceType**  
@@ -157,7 +157,7 @@ Transact-SQL 쿼리 언어에 대한 자세한 내용은 [Transact-SQL 참조&#4
   
  이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**직접 입력**|원본을 Transact-SQL 문으로 설정합니다. 이 값을 선택하면 동적 옵션 **SQLStatement**가 표시됩니다.|  
 |**파일 연결**|Transact-SQL 문이 포함된 파일을 선택합니다. 이 옵션을 설정하면 동적 옵션 **FileConnection**이 표시됩니다.|  
@@ -318,7 +318,7 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
   
     -   매개 변수 유형이 **Input** 이고 데이터 형식이 **string**인 매개 변수  
   
-    -   매개 변수 유형이 **Output** 또는 **ReturnValue**이고 데이터 형식이 **datetimeoffset**, **string**또는 **datetime2**인 매개 변수. 데이터 형식이 **string** 또는 **datetime2**인 매개 변수를 선택하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 데이터를 string이나 datetime2로 변환합니다.  
+    -   매개 변수 유형이 **Output** 또는 **ReturnValue**이고 데이터 형식이 **datetimeoffset**, **string**또는 **datetime2**인 매개 변수. 데이터 형식이 **string** 또는 **datetime2**인 매개 변수를 선택하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 데이터를 string이나 datetime2로 변환합니다.  
   
 -   ADO 연결 관리자를 사용하려면 매개 변수 유형이 **time** 또는 **datetimeoffset** 이고 데이터 형식이 **Input** 인 매개 변수에 **Output**또는 **adVarWchar**데이터를 저장해야 합니다.  
   
@@ -351,7 +351,7 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
     |-------------------------------|--------------------|  
     |SQL_DATE|**date**|  
     |SQL_SS_TIME2|**time**|  
-    |SQL_TYPE_TIMESTAMP<br /><br /> -또는-<br /><br /> SQL_TIMESTAMP|**datetime**, **datetime2**|  
+    |SQL_TYPE_TIMESTAMP<br /><br /> 또는<br /><br /> SQL_TIMESTAMP|**datetime**, **datetime2**|  
     |SQL_SS_TIMESTAMPOFFSET|**datetimeoffset**|  
   
  적절한 입력 또는 출력 매개 변수에 데이터가 저장되지 않으면 패키지가 실패합니다.  
@@ -525,10 +525,10 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
   
 |결과 집합 유형|변수의 데이터 형식|개체 유형|  
 |---------------------|---------------------------|--------------------|  
-|단일 행|결과 집합의 유형 열과 호환되는 모든 형식|해당 사항 없음|  
-|전체 결과 집합|**개체**|태스크에서 ADO, OLE DB, Excel 및 ODBC 연결 관리자를 비롯한 네이티브 연결 관리자를 사용하는 경우 반환되는 개체는 ADO **Recordset**입니다.<br /><br /> 태스크에서 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자와 같이 관리되는 연결 관리자를 사용하는 경우 반환되는 개체는 **System.Data.DataSet**입니다.<br /><br /> 다음 예제에서처럼 스크립트 태스크를 사용하여 **System.Data.DataSet** 개체에 액세스할 수 있습니다.<br /><br /> `Dim dt As Data.DataTable`<br /><br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet) dt = ds.Tables(0)`|  
+|단일 행|결과 집합의 유형 열과 호환되는 모든 형식|해당 없음|  
+|전체 결과 집합|**Object**|태스크에서 ADO, OLE DB, Excel 및 ODBC 연결 관리자를 비롯한 네이티브 연결 관리자를 사용하는 경우 반환되는 개체는 ADO **Recordset**입니다.<br /><br /> 태스크에서 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자와 같이 관리되는 연결 관리자를 사용하는 경우 반환되는 개체는 **System.Data.DataSet**입니다.<br /><br /> 다음 예제에서처럼 스크립트 태스크를 사용하여 **System.Data.DataSet** 개체에 액세스할 수 있습니다.<br /><br /> `Dim dt As Data.DataTable`<br /><br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet) dt = ds.Tables(0)`|  
 |XML|**String**|**String**|  
-|XML|**개체**|태스크에서 ADO, OLE DB, Excel 및 ODBC 연결 관리자 등의 네이티브 연결 관리자를 사용하는 경우 반환되는 개체는 **MSXML6.IXMLDOMDocument**입니다.<br /><br /> 태스크에서 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자와 같이 관리되는 연결 관리자를 사용하는 경우 반환되는 개체는 **System.Xml.XmlDocument**입니다.|  
+|XML|**Object**|태스크에서 ADO, OLE DB, Excel 및 ODBC 연결 관리자 등의 네이티브 연결 관리자를 사용하는 경우 반환되는 개체는 **MSXML6.IXMLDOMDocument**입니다.<br /><br /> 태스크에서 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자와 같이 관리되는 연결 관리자를 사용하는 경우 반환되는 개체는 **System.Xml.XmlDocument**입니다.|  
   
  변수는 SQL 실행 태스크나 패키지 범위에서 정의할 수 있습니다. 변수 범위가 패키지이면 해당 패키지 내의 다른 태스크와 컨테이너는 물론 패키지 실행 또는 DTS 2000 패키지 실행 태스크가 실행한 모든 패키지에서 결과 집합을 사용할 수 있습니다.  
   
@@ -577,7 +577,7 @@ SQL 문과 저장 프로시저에서는 일반적으로 **input** 매개 변수,
 ### <a name="custom-log-entries"></a>사용자 지정 로그 항목  
  다음 표에서는 SQL 실행 태스크에 대한 사용자 지정 로그 항목을 설명합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md)을 참조하세요.  
   
-|로그 항목|설명|  
+|로그 항목|Description|  
 |---------------|-----------------|  
 |**ExecuteSQLExecutingQuery**|SQL 문의 실행 단계에 대한 정보를 제공합니다. 로그 항목은 태스크에서 데이터베이스에 대한 연결을 설정할 때, 태스크에서 SQL 문 준비를 시작할 때 또는 SQL 문 실행이 완료된 후에 기록됩니다. 준비 단계에 대한 로그 항목은 태스크에서 사용하는 SQL 문을 포함합니다.|  
 

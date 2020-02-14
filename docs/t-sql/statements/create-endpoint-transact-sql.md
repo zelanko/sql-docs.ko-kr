@@ -32,10 +32,10 @@ ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0a320b01433ad95f4bd695a3f700b7e7bb9ba653
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902829"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT(Transact-SQL)
@@ -55,7 +55,7 @@ ms.locfileid: "67902829"
   
 > **참고:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서는 네이티브 XML 웹 서비스(SOAP/HTTP 엔드포인트)가 제거되었습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -169,7 +169,7 @@ FOR DATABASE_MIRRORING (
  **\<authentication_options> ::=**  
   
  **WINDOWS** [ { NTLM | KERBEROS | **NEGOTIATE** } ]  
- 엔드포인트가 인증을 위해 Windows 인증 프로토콜을 사용하여 연결하도록 지정합니다. 기본값입니다.  
+ 엔드포인트가 인증을 위해 Windows 인증 프로토콜을 사용하여 연결하도록 지정합니다. 이것이 기본값입니다.  
   
  인증 방법(NTLM 또는 KERBEROS)을 지정한 경우 항상 해당 방법이 인증 프로토콜로 사용됩니다. 기본값인 NEGOTIATE를 적용하면 엔드포인트가 Windows 협상 프로토콜을 사용하여 NTLM이나 Kerberos를 선택합니다.  
   
@@ -227,7 +227,7 @@ FOR DATABASE_MIRRORING (
  전달 주소가 있을 경우 메시지를 전달합니다.  
   
  DISABLED  
- 다른 위치에 있는 서비스에 대한 메시지를 무시합니다. 기본값입니다.  
+ 다른 위치에 있는 서비스에 대한 메시지를 무시합니다. 이것이 기본값입니다.  
   
  MESSAGE_FORWARD_SIZE **=** _forward_size_  
  엔드포인트가 전달할 메시지를 스토리지할 때 사용할 수 있는 최대 스토리지 크기(MB)를 지정합니다.  
@@ -256,7 +256,7 @@ FOR DATABASE_MIRRORING (
 > [!NOTE]  
 >  DATABASE_MIRRORING에 대한 기본 포트는 없습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  ENDPOINT DDL 문은 사용자 트랜잭션 내에서 실행할 수 없습니다. 활성 스냅샷 격리 수준 트랜잭션이 변경되는 엔드포인트를 사용하는 경우에도 ENDPOINT DDL 문은 실패하지 않습니다.  
   
  ENDPOINT에 대한 요청을 실행할 수 있는 사람은 다음과 같습니다.  
@@ -316,7 +316,7 @@ GRANT CONNECT ON ENDPOINT::ipv6_endpoint_special
 
 ```
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [ALTER ENDPOINT&#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [암호화 알고리즘 선택](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [DROP ENDPOINT&#40;Transact-SQL&#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   

@@ -60,10 +60,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 37cbb3621a1c9567a778fe58c4771e4336308647
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74127506"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE(Transact-SQL)
@@ -81,7 +81,7 @@ ms.locfileid: "74127506"
 >
 >   - [구문](#syntax-for-disk-based-tables)
 >   - [예](#Example_Top)
-> - 메모리 액세스에 최적화된 테이블
+> - 메모리 최적화 테이블
 >
 >   - [구문](#syntax-for-memory-optimized-tables)
 >   - [예](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)
@@ -400,7 +400,7 @@ ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_t
 변경할 테이블의 이름입니다. 테이블이 현재 데이터베이스에 없거나 현재 사용자가 소유한 스키마에 포함되지 않은 경우에는 데이터베이스와 스키마를 명시적으로 지정해야 합니다.
 
 ALTER COLUMN  
-명명된 열을 변경하거나 변경하도록 지정합니다.
+명명된 열을 변경하도록 지정합니다.
 
 수정된 열은 다음과 같을 수 없습니다.
 
@@ -470,7 +470,7 @@ Always Encrypted를 보안 Enclave와 함께 사용하는 경우 열을 보호�
 2^31-1바이트의 문자, 이진 데이터 및 유니코드 데이터를 저장하기 위한 **varchar**, **nvarchar** 및 **varbinary** 데이터 형식에만 적용됩니다.
 
 *xml_schema_collection*  
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 XML 스키마를 **xml** 데이터 형식에 연결하기 위해 이 형식에만 적용됩니다. 스키마 컬렉션에 **xml** 열을 입력하기 전에 먼저 [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)을 사용하여 데이터베이스에 스키마 컬렉션을 만듭니다.
 
@@ -507,7 +507,7 @@ CREATE TABLE 또는 ALTER TABLE 문을 사용하여 테이블을 만들거나 �
 > ALTER COLUMN에 NULL 또는 NOT NULL을 지정할 때는 *new_data_type* [(*precision* [, *scale* ])]도 함께 지정해야 합니다. 데이터 형식, 전체 자릿수 및 소수 자릿수가 변경되지 않으면 현재 열 값을 지정합니다.
 
 [ {ADD | DROP} ROWGUIDCOL ]  
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 지정된 열에 대해 ROWGUIDCOL 속성을 추가하거나 삭제하도록 지정합니다. ROWGUIDCOL은 열이 행 GUID 열임을 나타냅니다. 테이블당 한 개의 **uniqueidentifier** 열만 ROWGUIDCOL 열로 설정할 수 있습니다. 또한 ROWGUIDCOL 속성만 **uniqueidentifier** 열에 할당할 수 있습니다. 사용자 정의 데이터 형식의 열에 ROWGUIDCOL을 할당할 수 없습니다.
 
@@ -519,7 +519,7 @@ ROWGUIDCOL은 열에 저장된 값이 고유하도록 설정하지 않으며 테
 분할된 테이블의 분할 열로 사용되는 계산 열은 명시적으로 PERSISTED로 표시해야 합니다.
 
 DROP NOT FOR REPLICATION  
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 복제 에이전트가 삽입 작업을 수행할 때 ID 열의 값이 증가하도록 지정합니다. *column_name*이 ID 열인 경우에만 이 열을 지정할 수 있습니다.
 
@@ -527,7 +527,7 @@ SPARSE
 열이 스파스 열임을 나타냅니다. 스파스 열의 스토리지는 Null 값에 대해 최적화됩니다. 스파스 열은 NOT NULL로 설정할 수 없습니다. 스파스 열에서 스파스가 아닌 열로 또는 스파스가 아닌 열에서 스파스 열로 열을 변환하면 명령이 실행되는 동안 테이블이 잠깁니다. 공간을 절약하기 위해 REBUILD 절을 사용해야 할 수 있습니다. 추가 제한 사항 및 스파스 열에 대한 자세한 내용은 [스파스 열 사용](../../relational-databases/tables/use-sparse-columns.md)을 참조하세요.
 
 ADD MASKED WITH ( FUNCTION = ' *mask_function* ')  
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 동적 데이터 마스크를 지정합니다. *mask_function*은 적절한 매개 변수를 포함한 마스킹 함수의 이름 입니다. 세 함수를 사용할 수 있습니다.
 
@@ -539,7 +539,7 @@ ADD MASKED WITH ( FUNCTION = ' *mask_function* ')
 마스크를 삭제하려면 `DROP MASKED`를 사용합니다. 함수 매개 변수에 대해서는 [동적 데이터 마스킹](../../relational-databases/security/dynamic-data-masking.md)을 참조하세요.
 
 WITH ( ONLINE = ON | OFF) \<열 변경에 적용>  
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 테이블을 사용 가능한 상태로 유지하면서 많은 열 변경 작업을 수행할 수 있게 해줍니다. 기본값은 OFF입니다. 데이터 형식, 열 길이 또는 전체 자릿수, Null 허용 여부, 스파스 및 데이터 정렬과 관련된 열 변경 내용에 대해 온라인 열 변경을 실행할 수 있습니다.
 
@@ -630,7 +630,7 @@ COLUMN *column_name*
 > 열을 삭제해도 해당 열의 디스크 공간은 회수되지 않습니다. 테이블의 행 크기가 제한에 근접하거나 제한을 초과한 경우에는 삭제된 열의 디스크 공간을 회수해야 할 수도 있습니다. [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)를 사용하여 기존 클러스터형 인덱스를 다시 작성하거나 테이블에 클러스터형 인덱스를 생성하면 공간을 회수할 수 있습니다. LOB 데이터 형식의 삭제 영향에 대한 자세한 내용은 [CSS 블로그 항목](https://blogs.msdn.com/b/psssql/archive/2012/12/03/how-it-works-gotcha-varchar-max-caused-my-queries-to-be-slower.aspx)을 참조하세요.
 
 PERIOD FOR SYSTEM_TIME  
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 시스템이 시스템 버전 관리에 사용할 열에 대한 사양을 삭제합니다.
 
@@ -638,7 +638,7 @@ WITH \<drop_clustered_constraint_option>
 하나 이상의 클러스터형 제약 조건 삭제 옵션이 설정되도록 지정합니다.
 
 MAXDOP = *max_degree_of_parallelism*  
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 작업 중에만 **최대 병렬 처리 수준** 구성 옵션을 재정의합니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.
 
@@ -663,7 +663,7 @@ MAXDOP 옵션을 사용하여 병렬 계획 실행에 사용되는 프로세서 
 ONLINE **=** { ON | **OFF** } \<as applies to drop_clustered_constraint_option>  
 인덱스 작업 중 쿼리 및 데이터 수정에 기본 테이블과 관련 인덱스를 사용할 수 있는지 여부를 지정합니다. 기본값은 OFF입니다. ONLINE 작업으로 REBUILD를 실행할 수 있습니다.
 
-ON  
+켜기  
 인덱스 작업 중에 장기 테이블 잠금이 유지되지 않습니다. 인덱스 작업의 주 단계 중 내재된 공유(IS) 잠금만 원본 테이블에 유지됩니다. 이 동작을 통해 기본 테이블과 인덱스를 계속 쿼리하거나 업데이트할 수 있습니다. 작업이 시작될 때 짧은 시간 동안 S(공유) 잠금이 원본 개체에 유지됩니다. 작업이 끝나면 짧은 시간 동안 비클러스터형 인덱스가 생성되는 경우에는 원본에 대해 S(공유) 잠금이 획득됩니다. 온라인 상태에서 클러스터형 인덱스가 생성 또는 삭제될 때와 클러스터형 또는 비클러스터형 인덱스가 다시 작성될 때는 SCH-M(스키마 수정) 잠금이 획득됩니다. 로컬 임시 테이블에서 인덱스를 생성하는 경우에는 ONLINE을 ON으로 설정할 수 없습니다. 단일 스레드 힙 다시 작성 작업만 허용됩니다.
 
 **SWITCH** 또는 온라인 인덱스 다시 작성을 위해 DDL을 실행하려면 특정 테이블에서 실행 중인 모든 활성 차단 트랜잭션이 완료되어야 합니다. 실행하면 **SWITCH** 또는 다시 작성 작업으로 인해 새 트랜잭션이 시작되지 않고 워크로드 처리량에 상당한 영향을 주고 일시적으로 기본 테이블에 대한 액세스가 지연될 수 있습니다.
@@ -677,7 +677,7 @@ OFF
 > 온라인 인덱스 작업은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 있습니다. 자세한 내용은 [SQL Server 2016의 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) 및 [SQL Server 2017의 버전 및 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-2017.md)을 참조하세요.
 
 MOVE TO { _partition\_scheme\_name_ **(** _column\_name_ [ 1 **,** ... *n*] **)**  | *filegroup* |  **“** default **”** }  
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 현재 클러스터형 인덱스의 리프 수준에 있는 데이터 행을 이동할 위치를 지정합니다. 테이블이 새 위치로 이동됩니다. 이 옵션은 클러스터형 인덱스를 만드는 제약 조건에만 적용됩니다.
 
@@ -700,7 +700,7 @@ ALL
 설정하거나 해제할 트리거의 이름을 지정합니다.
 
 { ENABLE | DISABLE } CHANGE_TRACKING  
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 테이블에 대해 변경 내용 추적이 설정되는지 여부를 지정합니다. 기본적으로 변경 내용 추적은 비활성화됩니다.
 
@@ -709,12 +709,12 @@ ALL
 변경 내용 추적을 설정하려면 테이블에 기본 키가 있어야 합니다.
 
 WITH **(** TRACK_COLUMNS_UPDATED **=** { ON | **OFF** } **)**  
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 업데이트된 변경 내용 추적 열을 추적하는지 여부를 지정합니다. 기본값은 OFF입니다.
 
 SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_ **.** ] *target_table* [ PARTITION *target_partition_number_expression* ]  
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 다음 방법 중 하나를 사용하여 데이터 블록을 전환합니다.
 
@@ -754,7 +754,7 @@ SET FILESTREAM_ON 절이 있는 ALTER TABLE은 테이블에 FILESTREAM 열이 �
 **"** NULL **"** 은 테이블의 FILESTREAM 파일 그룹에 대한 모든 참조를 제거하도록 지정합니다. All FILESTREAM 열을 먼저 삭제해야 합니다. SET FILESTREAM_ON **="** NULL **"** 을 사용하여 테이블과 관련된 모든 FILESTREAM 데이터를 삭제합니다.
 
 SET **(** SYSTEM_VERSIONING **=** { OFF | ON [ ( HISTORY_TABLE = schema_name . history_table_name [ , DATA_CONSISTENCY_CHECK = { **ON** | OFF } ]) ] } **)**  
- **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 테이블의 시스템 버전 관리를 사용 중지하거나 사용합니다. 시스템은 테이블의 시스템 버전 관리를 활성화하기 위해 시스템 버전 관리에 대한 데이터 형식, Null 허용 여부, 기본 키 제약 요구 사항이 충족되었는지 여부를 검증합니다. HISTORY_TABLE 인수를 사용하지 않는 경우 시스템에서 현재 테이블의 스키마와 일치하는 새 기록 테이블을 생성하고, 두 테이블 간에 링크를 만들고, 시스템이 기록 테이블의 현재 테이블에서 각 레코드의 기록을 기록할 수 있도록 합니다. 이 기록 테이블의 이름은 `MSSQL_TemporalHistoryFor<primary_table_object_id>`가 됩니다. HISTORY_TABLE 인수를 사용하여 기존 기록 테이블에 대한 링크를 만들고 해당 테이블을 사용하면 현재 테이블과 지정된 테이블 간에 링크가 생성됩니다. 기존 기록 테이블에 대한 링크를 만드는 경우 데이터 일관성 검사를 수행하도록 선택할 수 있습니다. 이 데이터 일관성 확인을 통해 기존 레코드가 겹치지 않도록 합니다. 기본값은 데이터 일관성 검사를 실행하는 것입니다. 자세한 내용은 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)을 참조하세요.
 
@@ -764,7 +764,7 @@ HISTORY_RETENTION_PERIOD = { **INFINITE** | number {DAY | DAYS | WEEK | WEEKS | 
 temporal 테이블의 기록 데이터에 대한 유한 또는 무한 보존을 지정합니다. 생략할 경우 무한 보존이 가정됩니다.
 
 SET **(** LOCK_ESCALATION = { AUTO | TABLE | DISABLE } **)**  
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 테이블에 대해 허용되는 잠금 에스컬레이션 방법을 지정합니다.
 
@@ -786,7 +786,7 @@ REBUILD WITH 구문을 사용하여 분할된 테이블의 파티션을 포함�
 REBUILD PARTITION 구문을 사용하여 분할된 테이블의 단일 파티션을 다시 작성할 수 있습니다.
 
 PARTITION = ALL  
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 파티션 압축 설정을 변경할 때 모든 파티션을 다시 작성합니다.
 
@@ -798,15 +798,15 @@ REBUILD 작업에 특정 압축 설정이 지정되어 있지 않으면 파티�
 다시 빌드 옵션에 대한 자세한 내용은 [index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md)을 참조하세요.
 
 DATA_COMPRESSION  
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-지정된 테이블, 파티션 번호 또는 파티션 범위에 대한 데이터 압축 옵션을 지정합니다. 다음과 같은 옵션이 있습니다.
+지정된 테이블, 파티션 번호 또는 파티션 범위에 대한 데이터 압축 옵션을 지정합니다. 옵션은 다음과 같습니다.
 
 NONE - 테이블 또는 지정된 파티션이 압축되지 않습니다. 이 옵션은 columnstore 테이블에 적용되지 않습니다.
 
-ROW - 테이블 또는 지정된 파티션이 행 압축을 사용하여 압축됩니다. 이 옵션은 columnstore 테이블에 적용되지 않습니다.
+ROW 테이블 또는 지정된 파티션이 행 압축을 사용하여 압축됩니다. 이 옵션은 columnstore 테이블에 적용되지 않습니다.
 
-PAGE - 테이블 또는 지정된 파티션이 페이지 압축을 사용하여 압축됩니다. 이 옵션은 columnstore 테이블에 적용되지 않습니다.
+PAGE 테이블 또는 지정된 파티션이 페이지 압축을 사용하여 압축됩니다. 이 옵션은 columnstore 테이블에 적용되지 않습니다.
 
 COLUMNSTORE  
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
@@ -823,7 +823,7 @@ COLUMNSTORE_ARCHIVE
 ONLINE **=** { ON | **OFF** } \<as applies to single_partition_rebuild_option>  
 인덱스 작업 중 쿼리 및 데이터 수정을 위해 기본 테이블의 단일 파티션 및 관련된 인덱스를 사용할 수 있는지 여부를 지정합니다. 기본값은 OFF입니다. ONLINE 작업으로 REBUILD를 실행할 수 있습니다.
 
-ON  
+켜기  
 인덱스 작업 중에 장기 테이블 잠금이 유지되지 않습니다. 인덱스 다시 작성을 시작할 때 테이블에 대한 S-잠금이 필요하고 온라인 인덱스 다시 작성을 종료할 때 테이블에 대한 Sch-M 잠금이 필요합니다. 두 잠금 모두 짧은 메타데이터 잠금이지만 Sch-M 잠금은 모든 차단 트랜잭션이 완료될 때까지 기다려야 합니다. 대기 시간 동안 Sch-M 잠금은 동일 테이블에 액세스할 때 이 잠금 뒤에서 기다리는 다른 모든 트랜잭션을 차단합니다.
 
 > [!NOTE]
@@ -833,7 +833,7 @@ OFF
 인덱스 작업 중에 테이블 잠금이 적용됩니다. 이 경우 작업 중에 모든 사용자가 기본 테이블에 액세스할 수 없게 됩니다.
 
 *column_set_name* XML COLUMN_SET FOR ALL_SPARSE_COLUMNS  
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 열 집합의 이름입니다. 열 집합은 구조화된 출력으로 테이블의 모든 스파스 열을 결합하는 형식화되지 않은 XML 표현입니다. 스파스 열을 포함하는 테이블에는 열 집합을 추가할 수 없습니다. 열 집합에 대한 자세한 내용은 [열 집합 사용](../../relational-databases/tables/use-column-sets.md)을 참조하세요.
 
@@ -873,25 +873,25 @@ Windows 호환 FileTable 디렉터리 이름을 지정합니다. 이 이름은 �
 
 테이블에 대한 Stretch를 사용 중지할 경우 이미 Azure로 마이그레이션된 원격 데이터에 두 가지 옵션을 사용할 수 있습니다. 자세한 내용은 [Stretch Database 비활성화 및 원격 데이터 다시 가져오기](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md)를 참조하세요.
 
-- 테이블에서 스트레치를 비활성화하고 Azure에서 SQL Server로 테이블에 대한 원격 데이터를 다시 복사하려면 다음 명령을 실행합니다. 이 명령은 취소할 수 없습니다.
+- 테이블에 대해 스트레치를 사용하지 않도록 설정하고 Azure에서 SQL Server로 테이블의 원격 데이터를 다시 복사하려면 다음 명령을 실행합니다. 이 명령은 취소할 수 없습니다.
 
     ```sql
     ALTER TABLE <table_name>
        SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;
     ```
 
-이 작업으로 인해 데이터 전송 비용이 발생하며 이 작업은 취소할 수 없습니다. 자세한 내용은 [데이터 전송 가격 정보](https://azure.microsoft.com/pricing/details/data-transfers/)를 참조하세요.
+이 작업은 데이터 전송 비용이 소요되며, 취소할 수 없습니다. 자세한 내용은 [데이터 전송 가격 정보](https://azure.microsoft.com/pricing/details/data-transfers/)를 참조하세요.
 
 Azure에서 SQL Server로 모든 원격 데이터를 다시 복사한 후 테이블에서 스트레치가 비활성화됩니다.
 
-- 테이블에서 스트레치를 비활성화하고 원격 데이터를 중지하려면 다음 명령을 실행합니다.
+- 테이블에 대해 스트레치를 사용하지 않도록 설정하고 원격 데이터를 중단하려면 다음 명령을 실행합니다.
 
     ```sql
     ALTER TABLE <table_name>
        SET ( REMOTE_DATA_ARCHIVE = OFF_WITHOUT_DATA_RECOVERY ( MIGRATION_STATE = PAUSED ) ) ;
     ```
 
-테이블에서 Stretch Database를 비활성화하면 데이터 마이그레이션이 중단되고 쿼리 결과에 원격 테이블의 결과가 더 이상 포함되지 않습니다.
+테이블에 대해 Stretch Database를 사용하지 않도록 설정한 후에는 데이터 마이그레이션이 중지되고 원격 테이블의 결과가 더 이상 쿼리 결과에 포함되지 않습니다.
 
 Stretch를 사용하지 않도록 설정해도 원격 테이블은 제거되지 않습니다. 원격 테이블을 삭제하려면 Azure Portal을 사용하여 삭제합니다.
 
@@ -901,7 +901,7 @@ Stretch를 사용하지 않도록 설정해도 원격 테이블은 제거되지 
 선택적으로 필터 조건자를 지정하여 기록 및 현재 데이터를 모두 포함하는 테이블에서 마이그레이션할 행을 선택합니다. 조건자는 결정적 인라인 테이블 반환 함수를 호출해야 합니다. 자세한 내용은 [테이블에서 Stretch Database 활성화](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) 및 [필터 함수를 사용하여 마이그레이션할 행 선택- Stretch Database](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)를 참조하세요.
 
 > [!IMPORTANT]
-> 제대로 수행되지 않는 필터 조건자를 제공하면 데이터 마이그레이션 성능도 저하됩니다. 스트레치 데이터베이스는 CROSS APPLY 연산자를 사용하여 테이블에 필터 조건자를 적용합니다.
+> 제대로 수행되지 않는 필터 조건자를 제공하면 데이터 마이그레이션 성능도 저하됩니다. Stretch Database는 CROSS APPLY 연산자를 사용하여 테이블에 필터 조건자를 적용합니다.
 
 필터 조건자를 지정하지 않으면 전체 테이블이 마이그레이션됩니다.
 
@@ -913,7 +913,7 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED }
 - `OUTBOUND`를 지정하여 SQL Server에서 Azure로 데이터를 마이그레이션합니다.
 - `INBOUND`를 지정하여 테이블의 원격 데이터를 Azure에서 SQL Server로 다시 복사한 후 테이블에 대해 Stretch를 비활성화합니다. 자세한 내용은 [Stretch Database 비활성화 및 원격 데이터 다시 가져오기](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md)를 참조하세요.
 
-    이 작업으로 인해 데이터 전송 비용이 발생하며 이 작업은 취소할 수 없습니다.
+    이 작업은 데이터 전송 비용이 소요되며, 취소할 수 없습니다.
 
 - `PAUSED`를 지정하여 데이터 마이그레이션을 일시 중지하거나 연기합니다. 자세한 내용은 [데이터 마이그레이션 일시 중지 및 다시 시작 - Stretch Database](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)를 참조하세요.
 
@@ -942,11 +942,11 @@ BLOCKERS
 **ALTER ANY CONNECTION** 권한이 필요합니다.
 
 IF EXISTS  
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 이미 있는 열 또는 제약 조건을 조건부로 삭제합니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 새 데이터 행을 추가하려면[INSERT](../../t-sql/statements/insert-transact-sql.md)를 사용합니다. 데이터 행을 제거하려면 [DELETE](../../t-sql/statements/delete-transact-sql.md) 또는 [TRUNCATE TABLE](../../t-sql/statements/truncate-table-transact-sql.md)을 사용합니다. 기존 행의 값을 변경하려면 [UPDATE](../../t-sql/queries/update-transact-sql.md)를 사용합니다.
 
@@ -1056,7 +1056,7 @@ ALTER TABLE 문의 열을 CLR(공용 언어 런타임) 사용자 정의 형식 �
 
 ## <a name="Example_Top"></a> 예
 
-|범주|중요한 구문 요소|
+|Category|중요한 구문 요소|
 |--------------|------------------------------|
 |[열 및 제약 조건 추가](#add)|ADD • 인덱스 옵션이 있는 PRIMARY KEY • 스파스 열 및 열 집합 •|
 |[열 및 제약 조건 삭제](#Drop)|DROP|
@@ -1069,7 +1069,7 @@ ALTER TABLE 문의 열을 CLR(공용 언어 런타임) 사용자 정의 형식 �
 
 이 섹션의 예에서는 테이블에 열 및 제약 조건을 추가하는 방법을 보여 줍니다.
 
-#### <a name="a-adding-a-new-column"></a>1\. 새 열 추가
+#### <a name="a-adding-a-new-column"></a>A. 새 열 추가
 
 다음 예에서는 Null 값을 허용하고 DEFAULT 정의를 통해 제공된 값이 없는 열을 추가합니다. 새 열의 각 행 값은 `NULL`입니다.
 
@@ -1080,7 +1080,7 @@ ALTER TABLE dbo.doc_exa ADD column_b VARCHAR(20) NULL ;
 GO
 ```
 
-#### <a name="b-adding-a-column-with-a-constraint"></a>2\. 제약 조건이 있는 열 추가
+#### <a name="b-adding-a-column-with-a-constraint"></a>B. 제약 조건이 있는 열 추가
 
 다음 예에서는 `UNIQUE` 제약 조건이 있는 새 열을 추가합니다.
 
@@ -1299,7 +1299,7 @@ ALTER TABLE Customers ADD
 
 이 섹션의 예에서는 열 및 제약 조건을 삭제하는 방법을 보여 줍니다.
 
-#### <a name="a-dropping-a-column-or-columns"></a>1\. 열 삭제
+#### <a name="a-dropping-a-column-or-columns"></a>A. 열 삭제
 
 첫 번째 예에서는 테이블을 수정하여 열을 제거합니다. 두 번째 예에서는 여러 열을 제거합니다.
 
@@ -1317,7 +1317,7 @@ GO
 ALTER TABLE dbo.doc_exb DROP COLUMN column_c, column_d;
 ```
 
-#### <a name="b-dropping-constraints-and-columns"></a>2\. 제약 조건 및 열 삭제
+#### <a name="b-dropping-constraints-and-columns"></a>B. 제약 조건 및 열 삭제
 
 첫 번째 예에서는 테이블에서 `UNIQUE` 제약 조건을 제거합니다. 두 번째 예에서는 제약 조건 두 개와 열 하나를 제거합니다.
 
@@ -1382,7 +1382,7 @@ DROP TABLE Person.ContactBackup ;
 
 ### <a name="alter_column"></a> 열 정의 변경
 
-#### <a name="a-changing-the-data-type-of-a-column"></a>1\. 열의 데이터 형식 변경
+#### <a name="a-changing-the-data-type-of-a-column"></a>A. 열의 데이터 형식 변경
 
 다음 예에서는 테이블의 열을 `INT`에서 `DECIMAL`로 변경합니다.
 
@@ -1397,7 +1397,7 @@ DROP TABLE dbo.doc_exy ;
 GO
 ```
 
-#### <a name="b-changing-the-size-of-a-column"></a>2\. 열 크기 변경
+#### <a name="b-changing-the-size-of-a-column"></a>B. 열 크기 변경
 
 다음 예에서는 **varchar** 열의 크기와 **decimal** 열의 전체 자릿수 및 소수 자릿수를 늘립니다. 열에 데이터가 포함되어 있으므로 열 크기는 늘리기만 가능합니다. 또한 `col_a`는 고유 인덱스에 정의됩니다. 데이터 형식이 **varchar**이고 인덱스가 PRIMARY KEY 제약 조건의 결과가 아니므로 `col_a`의 크기를 늘릴 수 있습니다.
 
@@ -1478,7 +1478,7 @@ GO
 
 이 섹션의 예에서는 테이블 정의를 변경하는 방법을 보여 줍니다.
 
-#### <a name="a-modifying-a-table-to-change-the-compression"></a>1\. 테이블을 수정하여 압축 변경
+#### <a name="a-modifying-a-table-to-change-the-compression"></a>A. 테이블을 수정하여 압축 변경
 
 다음 예에서는 분할되지 않은 테이블의 압축을 변경합니다. 힙 또는 클러스터형 인덱스는 다시 작성됩니다. 테이블이 힙인 경우에는 모든 비클러스터형 인덱스가 다시 작성됩니다.
 
@@ -1509,7 +1509,7 @@ WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(1) ) ;
 
 데이터 압축 예제를 더 보려면 [데이터 압축](../../relational-databases/data-compression/data-compression.md)을 참조하세요.
 
-#### <a name="b-modifying-a-columnstore-table-to-change-archival-compression"></a>2\. columnstore 테이블을 수정하여 보관 압축 변경
+#### <a name="b-modifying-a-columnstore-table-to-change-archival-compression"></a>B. columnstore 테이블을 수정하여 보관 압축 변경
 
 다음 예에서는 추가 압축 알고리즘을 적용하여 columnstore 테이블 파티션을 보다 더 압축합니다. 이 압축으로 테이블 크기는 보다 작아지지만 스토리지 및 검색에 필요한 시간은 증가합니다. 보관하거나 보다 적은 스토리지가 필요한 기타 상황에서 사용할 수 있으며 저장 및 검색에 더 많은 시간을 이용할 수 있습니다.
 
@@ -1594,7 +1594,7 @@ DISABLE CHANGE_TRACKING;
 
 ### <a name="disable_enable"></a>제약 조건 및 트리거 해제/설정
 
-#### <a name="a-disabling-and-re-enabling-a-constraint"></a>1\. 제약 조건 해제 및 다시 설정
+#### <a name="a-disabling-and-re-enabling-a-constraint"></a>A. 제약 조건 해제 및 다시 설정
 
 다음 예에서는 데이터에 허용되는 급여를 제한하는 제약 조건을 비활성화합니다. `NOCHECK CONSTRAINT`에 `ALTER TABLE`를 사용하면 제약 조건이 비활성화되어 일반적으로 해당 제약 조건을 위반하는 삽입을 허용합니다. `CHECK CONSTRAINT`는 제약 조건을 재설정합니다.
 
@@ -1622,7 +1622,7 @@ ALTER TABLE dbo.cnst_example CHECK CONSTRAINT salary_cap;
 INSERT INTO dbo.cnst_example VALUES (4,'Eric James',110000) ;
 ```
 
-#### <a name="b-disabling-and-re-enabling-a-trigger"></a>2\. 트리거 해제 및 다시 설정
+#### <a name="b-disabling-and-re-enabling-a-trigger"></a>B. 트리거 해제 및 다시 설정
 
 다음 예에서는 `DISABLE TRIGGER`의 `ALTER TABLE` 옵션을 사용하여 트리거를 해제하고 일반적으로 트리거를 위반하는 삽입을 허용합니다. 그런 다음 `ENABLE TRIGGER`를 사용하여 트리거를 재설정합니다.
 
@@ -1661,7 +1661,7 @@ GO
 
 ### <a name="online"></a>온라인 작업
 
-#### <a name="a-online-index-rebuild-using-low-priority-wait-options"></a>1\. 낮은 우선 순위 대기 옵션을 사용한 온라인 인덱스 다시 작성
+#### <a name="a-online-index-rebuild-using-low-priority-wait-options"></a>A. 낮은 우선 순위 대기 옵션을 사용한 온라인 인덱스 다시 작성
 
 다음 예에서는 낮은 우선 순위 대기 옵션을 지정하여 온라인 인덱스 다시 작성을 수행하는 방법을 보여 줍니다.
 
@@ -1678,7 +1678,7 @@ REBUILD WITH
 ;
 ```
 
-#### <a name="b-online-alter-column"></a>2\. 온라인 열 변경
+#### <a name="b-online-alter-column"></a>B. 온라인 열 변경
 
 다음 예에서는 ONLINE 옵션을 사용하여 열 변경 작업을 실행하는 방법을 보여 줍니다.
 
@@ -1703,7 +1703,7 @@ GO
 
 **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-#### <a name="a-add-system-versioning-to-existing-tables"></a>1\. 기존 테이블에 시스템 버전 관리 추가
+#### <a name="a-add-system-versioning-to-existing-tables"></a>A. 기존 테이블에 시스템 버전 관리 추가
 
 다음 예는 기존 테이블에 시스템 버전 관리를 추가하고 나중에 기록 테이블을 만드는 방법을 보여줍니다. 이 예에서는 `InsurancePolicy`라는 기본 키가 정의된 기존 테이블이 있는 경우를 가정합니다. 시작 및 끝 시간 값은 null이 될 수 없으므로 이 예는 시작 및 끝 시간의 기본값을 사용하여 시스템 버전 관리에 대해 새로 생성된 기간 열을 채웁니다. 이 예는 현재 테이블과 상호 작용하는 기존 애플리케이션에 영향을 미치지 않도록 HIDDEN 절을 사용합니다. 또한 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]에서만 사용할 수 있는 HISTORY_RETENTION_PERIOD를 사용합니다.
 
@@ -1721,7 +1721,7 @@ ALTER TABLE InsurancePolicy
 SET (SYSTEM_VERSIONING = ON (HISTORY_RETENTION_PERIOD = 1 YEAR));
 ```
 
-#### <a name="b-migrate-an-existing-solution-to-use-system-versioning"></a>2\. 시스템 버전 관리를 사용하기 위해 기존 솔루션 마이그레이션
+#### <a name="b-migrate-an-existing-solution-to-use-system-versioning"></a>B. 시스템 버전 관리를 사용하기 위해 기존 솔루션 마이그레이션
 
 다음 예는 temporal 지원을 모방하기 위해 트리거를 사용하는 솔루션에서 시스템 버전 관리로 마이그레이션하는 방법을 보여줍니다. 예제에서는 기존 솔루션에 `ProjectTask` 테이블 및 `ProjectTaskHistory` 테이블을 사용하는 기존 솔루션이 있다고 가정합니다. 즉 해당 기간 동안 `Changed Date` 및 `Revised Date` 열을 사용하고, 이러한 기간 열에서 `datetime2` 데이터 형식을 사용하지 않으며, `ProjectTask` 테이블에 기본 키가 정의되어 있다고 가정합니다.
 
@@ -1779,11 +1779,11 @@ DROP PERIOD FOR SYSTEM_TIME;
 DROP TABLE DepartmentHistory;
 ```
 
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 다음의 예 A ~ C는 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] 데이터베이스의 `FactResellerSales` 테이블을 사용합니다.
 
-### <a name="a-determining-if-a-table-is-partitioned"></a>1\. 테이블이 분할되었는지 여부 확인
+### <a name="a-determining-if-a-table-is-partitioned"></a>A. 테이블이 분할되었는지 여부 확인
 
 다음 쿼리는 `FactResellerSales` 테이블이 분할된 경우 하나 이상의 행을 반환합니다. 테이블이 분할되지 않은 경우 행이 반환되지 않습니다.
 
@@ -1795,7 +1795,7 @@ WHERE p.partition_id IS NOT NULL
     AND t.name = 'FactResellerSales';
 ```
 
-### <a name="b-determining-boundary-values-for-a-partitioned-table"></a>2\. 분할된 테이블에 대한 경계 값 확인
+### <a name="b-determining-boundary-values-for-a-partitioned-table"></a>B. 분할된 테이블에 대한 경계 값 확인
 
 다음 쿼리는 `FactResellerSales` 테이블의 각 파티션에 대해 경계 값을 반환합니다.
 
@@ -1937,13 +1937,13 @@ WITH
 
 이 예에서는 `Orders` 테이블에 다음과 같은 파티션이 있습니다. 각 파티션에는 데이터가 포함되어 있습니다.
 
-|Partition|데이터 유무|경계 범위|
+|파티션|데이터 유무|경계 범위|
 |---------------|---------------|--------------------|
-|1|예|OrderDate < '2004-01-01'|
-|2|예|'2004-01-01' <= OrderDate < '2005-01-01'|
-|3|예|'2005-01-01' <= OrderDate< '2006-01-01'|
-|4|예|'2006-01-01'<= OrderDate < '2007-01-01'|
-|5|예|'2007-01-01' <= OrderDate|
+|1|yes|OrderDate < '2004-01-01'|
+|2|yes|'2004-01-01' <= OrderDate < '2005-01-01'|
+|3|yes|'2005-01-01' <= OrderDate< '2006-01-01'|
+|4|yes|'2006-01-01'<= OrderDate < '2007-01-01'|
+|5|yes|'2007-01-01' <= OrderDate|
 | &nbsp; | &nbsp; | &nbsp; |
 
 - 파티션 1(데이터 있음): OrderDate < '2004-01-01'

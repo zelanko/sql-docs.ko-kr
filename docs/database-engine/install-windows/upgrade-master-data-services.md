@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: d1b9131442160969e7511f42b91ed09a3b4001e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934822"
 ---
 # <a name="upgrade-master-data-services"></a>MDS(Master Data Services) 업그레이드
@@ -71,7 +71,7 @@ ms.locfileid: "67934822"
   
 2.  MDS 데이터베이스 스키마를 업그레이드합니다.  
   
-    1.  현재 [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]를 엽니다.  
+    1.  최신 [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]를 엽니다.  
   
         > [!IMPORTANT]  
         >  MDS 데이터베이스 스키마를 업그레이드하려면 MDS 데이터베이스를 만들 때 지정한 관리자 계정으로 로그인해야 합니다. MDS 데이터베이스의 mdm.tblUser에서 이 사용자의 **ID** 값은 **1**입니다.  
@@ -84,7 +84,7 @@ ms.locfileid: "67934822"
   
 3.  웹 애플리케이션을 만듭니다.  
   
-    1.  현재 [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]를 엽니다.  
+    1.  최신 [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]를 엽니다.  
   
     2.  왼쪽 창에서 **웹 구성**을 클릭합니다.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "67934822"
 3.  MDS 데이터베이스 스키마를 업그레이드하고 웹 애플리케이션을 만들고 새 웹 애플리케이션을 업그레이드된 MDS 데이터베이스와 연결합니다. 지침은 [데이터베이스 엔진 업그레이드 없이 업그레이드](#noengine)의 2-4단계를 참조하세요.  
   
 ## <a name="troubleshooting"></a>문제 해결  
- **문제점:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 또는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 웹 애플리케이션을 열 때 "클라이언트 버전이 데이터베이스 버전과 호환되지 않습니다."라는 오류 메시지가 나타납니다.  
+ **문제:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 또는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 웹 애플리케이션을 열 때 "클라이언트 버전이 데이터베이스 버전과 호환되지 않습니다."라는 오류 메시지가 나타납니다.  
   
  **해결 방법:** 이 문제는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 또는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 마스터 데이터 관리자 웹 애플리케이션이 [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] Master Data Services로 업그레이드된 데이터베이스에 액세스하려고 할 때 발생합니다. [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] 웹 애플리케이션을 대신 사용해야 합니다.  
   

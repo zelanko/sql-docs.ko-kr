@@ -13,12 +13,12 @@ ms.assetid: 85c623ca-4656-4d70-a9db-ee4d897cd214
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 766ae29c9024afd31b4c2bf353653f9f6b1a079f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e1f9d94f1ddf6f6d3e9a8ce73a263790acc516de
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123719"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76259391"
 ---
 # <a name="create-primary-keys"></a>기본 키 만들기
 
@@ -36,7 +36,7 @@ ms.locfileid: "68123719"
 
 ### <a name="Security"></a> 보안
 
-#### <a name="Permissions"></a> 사용 권한
+#### <a name="Permissions"></a> 권한
 
 기본 키가 포함된 새 테이블을 만들려면 데이터베이스에서 CREATE TABLE 권한이 필요하고 테이블을 만들려는 스키마에 대한 ALTER 권한이 필요합니다.
 
@@ -83,7 +83,7 @@ CREATE TABLE Production.TransactionHistoryArchive1
 ;
 ```
 
-### <a name="to-create-a-primary-key-with-nonclustered-index-in-a-new-table"></a>비클러스터형 인덱스를 사용하여 새 테이블에 기본 키를 만들려면
+### <a name="to-create-a-primary-key-with-clustered-index-in-a-new-table"></a>클러스터형 인덱스를 사용하여 새 테이블에 기본 키를 만들려면 다음을 수행합니다.
 
 다음 예제에서는 AdventureWorks 데이터베이스에서 테이블을 만들고 `CustomerID` 열에 기본 키를, `TransactionID` 열에 클러스터형 인덱스를 정의합니다.
 

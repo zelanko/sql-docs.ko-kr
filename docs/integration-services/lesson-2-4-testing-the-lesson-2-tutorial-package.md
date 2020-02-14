@@ -11,10 +11,10 @@ ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1b17fc99cc7746739f381ba22f55a973d55497a1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283560"
 ---
 # <a name="lesson-2-4-test-the-lesson-2-tutorial-package"></a>2-4단원: 2단원 자습서 패키지 테스트
@@ -50,7 +50,7 @@ Foreach 루프 컨테이너와 플랫 파일 연결 관리자가 이제 구성�
 ## <a name="go-to-next-lesson"></a>다음 단원으로 이동  
 [3단원: SSIS를 사용하여 로깅 추가](../integration-services/lesson-3-add-logging-with-ssis.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [프로젝트 및 패키지 실행](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)  
   
   

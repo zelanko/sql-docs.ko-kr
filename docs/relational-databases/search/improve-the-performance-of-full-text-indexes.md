@@ -18,10 +18,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a755ba9aa8915734768c56c096ea917a6e0c5564
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68021224"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>전체 텍스트 인덱스 성능 향상
@@ -132,15 +132,15 @@ ms.locfileid: "68021224"
   
 |플랫폼|fdhost.exe에 필요한 예상 메모리(MB) - *F*^1|max server memory 계산 수식 - *M*^2|  
 |--------------|-----------------------------------------------------------|-----------------------------------------------------|  
-|x86|*F* = *탐색 범위 수* \* 50|*M* =minimum(*T*, 2000) - F - 500|  
-|x64|*F* = *탐색 범위 수* \* 10 \* 8|*M* = *T* - *F* - 500|  
+|x86|*F* = ‘크롤링 범위 수’ \* 50 |*M* =minimum(*T*, 2000) - F - 500|  
+|x64|*F* = ‘크롤링 범위 수’ \* 10 \* 8 |*M* = *T* - *F* - 500|  
 
 **수식 관련 참고 사항**
 1.  여러 전체 채우기가 진행 중인 경우 *F1*, *F2*와 같이 각 채우기 작업에 대한 fdhost.exe 메모리 요구 사항을 개별적으로 계산합니다. 그런 다음, *M*을 _T_ **-** sigma **(** _F_i **)** 로 계산합니다.  
 2.  500MB는 시스템의 다른 프로세스에 필요한 예상 메모리 양입니다. 시스템이 추가 작업을 수행 중인 경우 그에 따라 이 값을 늘리십시오.  
 3.  를 참조하세요.*ism_size* 는 x64 플랫폼의 경우 8MB로 가정합니다.  
   
- #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>예: fdhost.exe에 필요한 예상 메모리  
+ #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>예제: fdhost.exe에 필요한 예상 메모리  
   
  이 예제는 8GB RAM과 4개의 듀얼 코어 프로세서가 장착된 64비트 컴퓨터에 해당합니다. 첫 번째 계산에서는 fdhost.exe에 필요한 메모리인*F*를 예측합니다. 탐색 범위 수는 `8`입니다.  
   
@@ -150,9 +150,9 @@ ms.locfileid: "68021224"
   
  `M = 8192-640-500=7052`  
   
- #### <a name="example-setting-max-server-memory"></a>예: 최대 서버 메모리 설정  
+ #### <a name="example-setting-max-server-memory"></a>예제: 최대 서버 메모리 설정  
   
- 이 예에서는 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 및 [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 **max server memory** 를 위의 예에서 *M* 에 대한 계산한 값 `7052`로 설정합니다.  
+ 이 예제에서는 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 및 [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 위 예제 `7052`에서 계산된 *M* 값으로 **max server memory**를 설정합니다.  
   
 ```  
 USE master;  
@@ -178,7 +178,7 @@ GO
   
      다음 표에서는 몇 가지 흥미로운 대기 유형을 설명합니다.  
   
-    |대기 유형|설명|가능한 해결 방법|  
+    |대기 유형|Description|가능한 해결 방법|  
     |---------------|-----------------|-------------------------|  
     |PAGEIO_LATCH_SH(_EX 또는 _UP)|IO 병목 상태를 나타내며, 이 경우 일반적으로 평균 디스크 큐 길이가 깁니다.|전체 텍스트 인덱스를 다른 디스크의 다른 파일 그룹으로 이동하면 IO 병목 상태가 줄어들 수 있습니다.|  
     |PAGELATCH_EX(또는 _UP)|동일한 데이터베이스 파일에 쓰기를 시도하고 있는 스레드 간에 경합이 많이 발생하고 있음을 나타냅니다.|전체 텍스트 인덱스가 상주하는 파일 그룹에 파일을 추가하면 이러한 경합을 완화할 수 있습니다.|  

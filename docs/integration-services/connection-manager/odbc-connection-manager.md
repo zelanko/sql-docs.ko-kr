@@ -18,10 +18,10 @@ ms.assetid: e8c77aa7-6772-485e-918e-cef9eeb18c58
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b0d115753447a337cc9846942e2c39da54f3658f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298493"
 ---
 # <a name="odbc-connection-manager"></a>ODBC 연결 관리자
@@ -31,7 +31,7 @@ ms.locfileid: "71298493"
 
   ODBC 연결 관리자를 사용하면 패키지에서 ODBC(Open Database Connectivity) 사양을 사용하여 다양한 데이터베이스 관리 시스템에 연결할 수 있습니다.  
   
- 패키지에 ODBC 연결을 추가하고 연결 관리자 속성을 설정할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 연결 관리자를 만들고 연결 관리자를 패키지의 **Connections** 컬렉션에 추가합니다. 런타임 시 연결 관리자는 물리적 ODBC 연결로 확인됩니다.  
+ 패키지에 ODBC 연결을 추가하고 연결 관리자 속성을 설정할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]는 연결 관리자를 만들고 연결 관리자를 패키지의 **Connections** 컬렉션에 추가합니다. 런타임 시 연결 관리자는 물리적 ODBC 연결로 확인됩니다.  
   
  연결 관리자의 **ConnectionManagerType** 속성이 **ODBC**로 설정됩니다.  
   

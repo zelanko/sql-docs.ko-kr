@@ -19,10 +19,10 @@ ms.assetid: a82ef43c-d006-4c71-bfca-f001a3ba1ba0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b65577b7f6b69bd4fb27392a7d71a2d68f17d7c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68063161"
 ---
 # <a name="prepare-to-bulk-import-data-sql-server"></a>대량 데이터 가져오기 준비(SQL Server)
@@ -36,11 +36,11 @@ ms.locfileid: "68063161"
 > [!NOTE]  
 >  원격 테이블로 데이터를 대량으로 가져올 수 없습니다.  
   
- 데이터 파일에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스로 데이터를 대량으로 가져올 경우 다음 지침을 따르십시오.  
+ 데이터 파일에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 데이터를 대량 가져오는 경우 다음 지침을 따르세요.  
   
 -   사용자 계정에 대해 필요한 권한 가져오기  
   
-     **bcp** 유틸리티, BULK INSERT 문 또는 INSERT ... SELECT * FROM OPENROWSET(BULK...) 문을 사용하는 사용자 계정에는 테이블에 대해 필요한 권한(테이블 소유자가 할당)이 있어야 합니다. 각 방법에 필요한 사용 권한에 대한 자세한 내용은 [bcp 유틸리티](../../tools/bcp-utility.md), [OPENROWSET&#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md) 및 [BULK INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)를 참조하세요.  
+     **bcp** 유틸리티, BULK INSERT 문 또는 INSERT ... SELECT * FROM OPENROWSET(BULK...) 문을 사용하는 사용자 계정에는 테이블에 대해 필요한 권한(테이블 소유자가 할당)이 있어야 합니다. 각 방법에 필요한 사용 권한에 대한 자세한 내용은 [bcp 유틸리티](../../tools/bcp-utility.md), [OPENROWSET&#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)및 [BULK INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)를 사용합니다.  
   
 -   대량 로그 복구 모델 사용  
   

@@ -34,13 +34,13 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 327b084471155c9e7d8451fc8dceec8e4c00496f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68116479"
 ---
-# <a name="dbcc-showstatistics-transact-sql"></a>DBCC SHOW_STATISTICS(Transact-SQL)
+# <a name="dbcc-show_statistics-transact-sql"></a>DBCC SHOW_STATISTICS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 DBCC SHOW_STATISTICS는 테이블 또는 인덱싱된 뷰에 대한 현재 쿼리 최적화 통계를 표시합니다. 쿼리 최적화 프로그램은 통계를 사용하여 쿼리 결과의 카디널리티 또는 행 수를 예상함으로써 고품질의 쿼리 계획을 생성할 수 있습니다. 예를 들어 쿼리 최적화 프로그램은 카디널리티 예상치를 통해 쿼리 계획에서 index scan 연산자 대신 index seek 연산자를 선택하여 리소스가 많이 소요되는 index scan을 피함으로써 쿼리 성능을 개선할 수 있습니다.
@@ -49,9 +49,9 @@ DBCC SHOW_STATISTICS는 테이블 또는 인덱싱된 뷰에 대한 현재 쿼�
   
 DBCC SHOW_STATISTICS는 통계 개체에 저장된 데이터를 바탕으로 헤더, 히스토그램 및 밀도 벡터를 표시합니다. 이 구문을 사용하면 대상 인덱스 이름, 통계 이름 또는 열 이름과 함께 테이블 또는 인덱싱된 뷰를 지정할 수 있습니다. 이 항목에서는 통계를 표시하고 표시된 결과를 읽는 방법을 설명합니다.
   
-자세한 내용은 [Statistics](../../relational-databases/statistics/statistics.md)을(를) 참조하세요.
+자세한 내용은 [통계](../../relational-databases/statistics/statistics.md)를 참조하세요.
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -94,7 +94,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
 ## <a name="result-sets"></a>결과 집합  
 다음 표에서는 STAT_HEADER를 지정한 경우 결과 집합에 반환되는 열을 설명합니다.
   
-|열 이름|설명|  
+|열 이름|Description|  
 |-----------------|-----------------|  
 |속성|통계 개체의 이름입니다.|  
 |업데이트|통계가 마지막으로 업데이트된 날짜와 시간입니다. [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) 함수를 사용하여 이 정보를 검색할 수도 있습니다. 자세한 내용은 이 페이지의 [주의](#Remarks) 섹션을 참조하세요.|  
@@ -110,7 +110,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
   
 다음 표에서는 DENSITY_VECTOR를 지정한 경우 결과 집합에 반환되는 열을 설명합니다.
   
-|열 이름|설명|  
+|열 이름|Description|  
 |-----------------|-----------------|  
 |모든 밀도|밀도는 1/ *고유 값*입니다. 결과에는 통계 개체에 있는 각 열 접두사의 밀도가 한 행씩 표시됩니다. 고유 값은 행별 및 열 접두사별 열 값의 고유한 목록입니다. 예를 들어 통계 개체가 키 열 (A, B, C)를 포함하는 경우 결과에서 밀도는 이러한 각 열 접두사의 고유 값 목록인 (A), (A,B) 및 (A, B, C)로 보고됩니다. 접두사 (A, B, C)를 사용하면 이러한 각 목록은 다음과 같은 고유 값 목록입니다. (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). 접두사 (A, B)를 사용하면 동일한 열 값은 고유 값 목록 (3, 5), (4, 4) 및 (4, 5)를 가집니다.|  
 |평균 길이|열 접두사의 열 값 목록을 저장하기 위한 평균 길이(바이트)입니다. 예를 들어 목록 (3, 5, 6)의 각 값에 4바이트가 필요한 경우 길이는 12바이트입니다.|  
@@ -118,7 +118,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
   
 다음 표에서는 HISTOGRAM 옵션을 지정한 경우 결과 집합에 반환된 열을 설명합니다.
   
-|열 이름|설명|  
+|열 이름|Description|  
 |---|---|
 |RANGE_HI_KEY|히스토그램 단계의 상한 열 값입니다. 열 값은 키 값이라고도 합니다.|  
 |RANGE_ROWS|상한을 제외한 히스토그램 단계 내에 열 값이 있는 예상 행 수입니다.|  
@@ -155,7 +155,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
 |(CustomerId, ItemId)|CustomerId 및 ItemId의 값이 일치하는 행|  
 |(CustomerId, ItemId, Price)|CustomerId, ItemId 및 Price의 값이 일치하는 행|  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>제한  
  DBCC SHOW_STATISTICS는 공간 인덱스 또는 xVelocity 메모리 최적화 columnstore 인덱스에 대한 통계를 제공하지 않습니다.  
   
 ## <a name="permissions-for-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 대한 사용 권한  
@@ -179,8 +179,8 @@ DBCC SHOW_STATISTICS는 셸 데이터베이스의 제어 노드 수준에 저장
   
 DBCC SHOW_STATISTICS는 외부 테이블에 대해 지원되지 않습니다.
   
-## <a name="examples-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>예제: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
-### <a name="a-returning-all-statistics-information"></a>1\. 모든 통계 정보 반환  
+## <a name="examples-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>예: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+### <a name="a-returning-all-statistics-information"></a>A. 모든 통계 정보 반환  
 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 `Person.Address` 테이블의 `AK_Address_rowguid` 인덱스에 대한 모든 통계 정보를 표시합니다.
   
 ```sql
@@ -188,7 +188,7 @@ DBCC SHOW_STATISTICS ("Person.Address", AK_Address_rowguid);
 GO  
 ```  
   
-### <a name="b-specifying-the-histogram-option"></a>2\. HISTOGRAM 옵션 지정  
+### <a name="b-specifying-the-histogram-option"></a>B. HISTOGRAM 옵션 지정  
 이렇게 하면 Customer_LastName에 대해 표시된 통계 정보를 HISTOGRAM 데이터로 제한합니다.
   
 ```sql
@@ -196,7 +196,7 @@ DBCC SHOW_STATISTICS ("dbo.DimCustomer",Customer_LastName) WITH HISTOGRAM;
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="c-display-the-contents-of-one-statistics-object"></a>C. 하나의 통계 개체 내용 표시  
  다음 예제는 DimCustomer 테이블의 Customer_LastName 통계 내용을 표시합니다.  
   

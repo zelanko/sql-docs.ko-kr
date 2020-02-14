@@ -13,10 +13,10 @@ ms.assetid: 90646316-9822-48aa-9900-295a33750780
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a624228a0df45ee0ba2954d27e38be511db629fe
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294089"
 ---
 # <a name="hadoop-pig-task"></a>Hadoop Pig 작업
@@ -28,12 +28,12 @@ ms.locfileid: "71294089"
   
  Hadoop Pig 태스크를 추가하려면 태스크를 디자이너로 끌어서 놓습니다. 그런 다음 태스크를 두 번 클릭하거나 마우스 오른쪽 단추를 클릭하고 **편집**을 클릭하여 **Hadoop 피그 작업 편집기** 대화 상자를 표시합니다.  
   
- ![Hadoop 피그 작업 편집기](../../integration-services/control-flow/media/hadoop-pig-task.png "Hadoop 피그 작업 편집기")  
+ ![Hadoop Pig 태스크 편집기](../../integration-services/control-flow/media/hadoop-pig-task.png "Hadoop Pig 태스크 편집기")  
   
 ## <a name="options"></a>옵션  
  **Hadoop Pig 태스크 편집기** 대화 상자에서 다음 옵션을 구성합니다.  
   
-|필드|설명|  
+|필드|Description|  
 |-----------|-----------------|  
 |**Hadoop 연결**|기존 Hadoop 연결 관리자를 지정하거나 새 연결 관리자를 만듭니다. 이 연결 관리자는 WebHCat 서비스가 호스트되는 위치를 나타냅니다.|  
 |**SourceType**|쿼리의 원본 유형을 지정합니다. 사용 가능한 값은 **ScriptFile** 및 **DirectInput**입니다.|  

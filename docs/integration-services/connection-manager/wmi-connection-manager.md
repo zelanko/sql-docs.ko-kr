@@ -17,10 +17,10 @@ ms.assetid: fbfa4ba7-3d0d-4d6b-94ad-50741a88d03d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7b3f33d0c37ba9c856d9cc0b66674c8ca4221e0d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294362"
 ---
 # <a name="wmi-connection-manager"></a>WMI 연결 관리자
@@ -28,7 +28,7 @@ ms.locfileid: "71294362"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  WMI 연결 관리자를 사용하면 패키지에서 WMI(Windows Management Instrumentation)를 사용하여 엔터프라이즈 환경의 정보를 관리할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에 포함되는 웹 서비스 태스크에서는 WMI 연결 관리자가 사용됩니다.  
+  WMI 연결 관리자를 사용하면 패키지에서 WMI(Windows Management Instrumentation)를 사용하여 엔터프라이즈 환경의 정보를 관리할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 포함된 웹 서비스 태스크에서는 WMI 연결 관리자가 사용됩니다.  
   
  패키지에 WMI 연결 관리자를 추가하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 런타임에 WMI 연결로 확인되는 연결 관리자를 만들고, 연결 관리자 속성을 설정하고, 연결 관리자를 패키지의 **Connections** 컬렉션에 추가합니다. 연결 관리자의 **ConnectionManagerType** 속성이 **WMI**로 설정됩니다.  
   
@@ -68,13 +68,13 @@ ms.locfileid: "71294362"
  **Windows 인증 사용**  
  Windows 인증을 사용하려면 선택합니다. Windows 인증을 사용하면 연결할 때 사용자 이름 또는 암호를 제공할 필요가 없습니다.  
   
- **User name**  
+ **사용자 이름**  
  Windows 인증을 사용하지 않으면 연결할 때 사용자 이름을 제공해야 합니다.  
   
  **암호**  
  Windows 인증을 사용하지 않으면 연결할 때 암호를 제공해야 합니다.  
   
- **테스트**  
+ **Test**  
  연결 관리자 설정을 테스트합니다.  
   
 ## <a name="see-also"></a>참고 항목  

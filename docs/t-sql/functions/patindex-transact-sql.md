@@ -22,19 +22,19 @@ ms.assetid: c0dfb17f-2230-4e36-98da-a9b630bab656
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f718d61c351e11c0e5d159e683390cf311f49e48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 51b18437976a9ecb192a69602ecbdc97054b9b47
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914360"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831832"
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   유효한 모든 텍스트 및 문자 데이터 형식으로 지정한 식에서 패턴이 처음 나타나는 시작 위치를 반환하거나 패턴을 찾지 못하면 0을 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,8 +43,11 @@ PATINDEX ( '%pattern%' , expression )
 ```  
   
 ## <a name="arguments"></a>인수  
- *패턴*  
- 찾을 시퀀스가 포함된 문자 식 입니다. 와일드카드 문자를 사용할 수 있습니다. 그러나 % 문자가 앞에 오고 그 다음에 *패턴*이 와야 합니다. 단, 첫 문자 또는 마지막 문자를 검색하는 경우는 예외입니다. *패턴*은 문자열 데이터 형식 범주의 식입니다. *패턴*은 8,000자로 제한됩니다.  
+ *pattern*  
+ 찾을 시퀀스가 포함된 문자 식 입니다. 와일드카드 문자를 사용할 수 있습니다. 그러나 % 문자가 앞에 오고 그 다음에 *패턴*이 와야 합니다. 단, 첫 문자 또는 마지막 문자를 검색하는 경우는 예외입니다. *패턴*은 문자열 데이터 형식 범주의 식입니다. *패턴*은 8,000자로 제한됩니다.
+
+ > [!NOTE]
+ > 기존 정규식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 기본적으로 지원되지 않지만 다양한 와일드카드 식을 사용하여 비슷한 복합 패턴 일치를 실행할 수 있습니다. 와일드카드 구문에 대한 자세한 내용은 [문자열 연산자](../../t-sql/language-elements/string-operators-transact-sql.md) 문서를 참조하세요.
   
  *expression*  
  일반적으로 지정된 패턴이 검색되는 열을 나타내는 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *식*은 문자열 데이터 형식 범주입니다.  
@@ -52,7 +55,7 @@ PATINDEX ( '%pattern%' , expression )
 ## <a name="return-types"></a>반환 형식  
 *식*의 데이터 형식이 **varchar(max)** 또는 **nvarchar(max)** 이면 **bigint**, 그렇지 않으면 **int**입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 *패턴* 또는 *식*이 NULL인 경우 PATINDEX에서 NULL을 반환합니다.  
  
 PATINDEX의 시작 위치는 1입니다.
@@ -66,22 +69,26 @@ SC 데이터 정렬을 사용하는 경우 반환 값은 *식* 매개 변수에 
   
 ## <a name="examples"></a>예  
   
-### <a name="a-simple-patindex-example"></a>1\. 간단한 PATINDEX 예  
+### <a name="a-simple-patindex-example"></a>A. 간단한 PATINDEX 예  
  다음 예는 짧은 문자열(`interesting data`)에서 `ter` 문자의 시작 위치를 검사합니다.  
   
 ```sql  
-SELECT PATINDEX('%ter%', 'interesting data');  
+SELECT position = PATINDEX('%ter%', 'interesting data');  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+
+```
+position
+--------
+3
+```
   
-`3`  
-  
-### <a name="b-using-a-pattern-with-patindex"></a>2\. PATINDEX와 함께 패턴 사용  
+### <a name="b-using-a-pattern-with-patindex"></a>B. PATINDEX와 함께 패턴 사용  
 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `ensure` 테이블에 있는 `DocumentSummary` 열의 특정 행에서 `Document` 패턴이 시작하는 위치를 찾습니다.  
   
 ```sql  
-SELECT PATINDEX('%ensure%',DocumentSummary)  
+SELECT position = PATINDEX('%ensure%',DocumentSummary)  
 FROM Production.Document  
 WHERE DocumentNode = 0x7B40;  
 GO   
@@ -90,9 +97,9 @@ GO
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
------------  
+position
+--------  
 64  
-(1 row(s) affected)
 ```  
   
 `WHERE` 절을 사용하여 검색할 행을 제한하지 않으면 쿼리는 테이블의 모든 행을 반환하고 패턴을 찾은 행에 대해서는 0이 아닌 값을 보고하고 패턴을 찾지 못한 모든 행에 대해서는 0을 보고합니다.  
@@ -101,21 +108,36 @@ GO
  다음 예에서는 % 및 와일드카드를 사용하여 지정된 문자열에서 하나의 문자 및 `'en'`가 뒤에 오는 `'ure'` 패턴이 시작하는 위치를 찾습니다(인덱스가 1에서 시작함).  
   
 ```sql  
-SELECT PATINDEX('%en_ure%', 'please ensure the door is locked');  
+SELECT position = PATINDEX('%en_ure%', 'Please ensure the door is locked!');  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
------------  
+position
+--------  
 8  
 ```  
   
 `PATINDEX`는 `LIKE`와 동일하게 작동하므로 와일드카드 중 하나를 사용할 수 있습니다. 패턴을 백분율로 묶을 필요는 없습니다. `PATINDEX('a%', 'abc')`는 1을 반환하고, `PATINDEX('%a', 'cba')`는 3을 반환합니다.  
   
  `LIKE`와 달리 `PATINDEX`는 위치를 반환하는데, 이는 `CHARINDEX`와 유사합니다.  
-  
-### <a name="d-using-collate-with-patindex"></a>D. PATINDEX와 함께 COLLATE 사용  
+
+### <a name="d-using-complex-wildcard-expressions-with-patindex"></a>D. PATINDEX에 복합 와일드카드 식 사용 
+다음 예제에서는 `[^]` [문자열 연산자](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)를 사용하여 숫자, 문자 또는 공백이 아닌 문자의 위치를 찾습니다.
+
+```sql
+SELECT position = PATINDEX('%[^ 0-9A-z]%', 'Please ensure the door is locked!'); 
+```
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+
+```
+position
+--------
+33
+```
+
+### <a name="e-using-collate-with-patindex"></a>E. PATINDEX와 함께 COLLATE 사용  
  다음 예에서는 `COLLATE` 함수를 사용하여 검색된 식의 데이터 정렬을 명시적으로 지정합니다.  
   
 ```sql  
@@ -124,13 +146,20 @@ GO
 SELECT PATINDEX ( '%ein%', 'Das ist ein Test'  COLLATE Latin1_General_BIN) ;  
 GO  
 ```  
-  
-### <a name="e-using-a-variable-to-specify-the-pattern"></a>E. 변수를 사용하여 패턴 지정  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+
+```
+position
+--------
+9
+```
+
+### <a name="f-using-a-variable-to-specify-the-pattern"></a>F. 변수를 사용하여 패턴 지정  
 다음 예에서는 변수를 사용하여 *패턴* 매개 변수로 값을 전달합니다. 이 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스를 사용합니다.  
   
 ```sql  
 DECLARE @MyValue varchar(10) = 'safety';   
-SELECT PATINDEX('%' + @MyValue + '%', DocumentSummary)   
+SELECT position = PATINDEX('%' + @MyValue + '%', DocumentSummary)   
 FROM Production.Document  
 WHERE DocumentNode = 0x7B40;  
 ```  
@@ -138,7 +167,8 @@ WHERE DocumentNode = 0x7B40;
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
-------------  
+position
+--------  
 22
 ```  
   

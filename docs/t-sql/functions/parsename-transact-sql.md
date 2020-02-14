@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9b36e31e163999a6af70b498fef9d65c2ce0ae55
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843615"
 ---
 # <a name="parsename-transact-sql"></a>PARSENAME(Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "73843615"
 > [!NOTE]  
 >  PARSENAME 함수는 지정된 이름의 개체가 있는지 여부를 나타내지 않으며 지정된 개체 이름에서 지정된 부분만 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -63,7 +63,7 @@ PARSENAME ( 'object_name' , object_piece )
 ## <a name="return-types"></a>반환 형식  
  **sysname**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  다음 조건 중 하나가 만족되면 PARSENAME이 NULL을 반환합니다.  
   
 -   *object_name* 또는 *object_piece*가 NULL입니다.  

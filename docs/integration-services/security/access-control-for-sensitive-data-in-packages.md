@@ -24,10 +24,10 @@ ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9cbb736b77cef9bcb87dfa7cac2cd5a33943ca66
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281981"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>패키지의 중요한 데이터에 대한 액세스 제어
@@ -61,7 +61,7 @@ ms.locfileid: "71281981"
 ## <a name="protection-levels"></a>보호 수준  
  다음 표에서는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 가 제공하는 보호 수준에 대해 설명합니다. 괄호 안의 값은 <xref:Microsoft.SqlServer.Dts.Runtime.DTSProtectionLevel> 열거형의 값입니다. 이러한 값은 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 패키지를 사용할 때 패키지의 속성을 구성하는 속성 창에 표시됩니다.  
   
-|보호 수준|설명|  
+|보호 수준|Description|  
 |----------------------|-----------------|  
 |중요한 정보 저장 안 함(**DontSaveSensitive**)|패키지를 저장할 때 중요한 속성의 값을 패키지에서 제외합니다. 이 보호 수준은 암호화는 사용하지 않지만 중요한 것으로 표시된 속성이 패키지로 저장되는 것을 방지하여 다른 사용자가 중요한 데이터를 사용하지 못하도록 합니다. 다른 사용자가 패키지를 여는 경우 중요한 정보는 빈칸으로 대체되므로 해당 사용자가 중요한 정보를 지정해야 합니다.<br /><br /> **dtutil** 유틸리티(dtutil.exe)에서 사용할 경우 이 보호 수준은 값 0에 해당합니다.|  
 |암호로 모두 암호화(**EncryptAllWithPassword**)|암호를 사용하여 전체 패키지를 암호화합니다. 패키지를 만들거나 내보낼 때 사용자가 입력한 암호를 사용하여 패키지를 암호화합니다. 사용자는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 패키지를 열거나 **dtexec** 명령 프롬프트 유틸리티를 사용하여 패키지를 실행할 때 패키지 암호를 입력해야 합니다. 암호를 입력하지 않으면 패키지를 실행할 수 없습니다.<br /><br /> **dtutil** 유틸리티에서 사용할 경우 이 보호 수준은 값 3에 해당합니다.|  
@@ -142,7 +142,7 @@ ms.locfileid: "71281981"
  패키지 보안의 요구 사항 및 옵션을 이해하려면 [보안 개요&#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md)를 참조하세요.  
   
 ### <a name="options"></a>옵션  
- **Package protection level**  
+ **패키지 보호 수준**  
  목록에서 보호 수준을 선택합니다.  
   
  **암호**  

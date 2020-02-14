@@ -22,15 +22,15 @@ ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6b64ac7463e9a1e3ef62d87d5cf9d6096be275cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67998009"
 ---
 # <a name="logging-in-to-sql-server"></a>SQL Server로 로그인
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  그래픽 관리 도구를 사용하거나 명령 프롬프트에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스에 로그인할 수 있습니다.  
+  그래픽 관리 도구를 사용하거나 명령 프롬프트에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 로그인할 수 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 같은 그래픽 관리 도구를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 인스턴스에 로그인할 때 필요에 따라 서버 이름, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 및 암호를 제공하라는 메시지가 표시됩니다. Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 로그인하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다. 대신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용자의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정을 사용하여 자동으로 로그인합니다. 혼합 모드 인증([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 인증 모드)에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행 중인 상태에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 로그인하도록 선택한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인과 암호를 제공해야 합니다. 가능하면 Windows 인증을 사용하세요.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "67998009"
 |----------------------|-------------------------------|  
 |기본 프로토콜을 사용하여 기본 인스턴스에 연결합니다.|APPHOST|  
 |기본 프로토콜을 사용하여 명명된 인스턴스에 연결합니다. |APPHOST\SQLEXPRESS|  
-|인스턴스가 로컬 컴퓨터에서 실행하고 있음을 표시하기 위해 마침표를 사용하여 동일한 컴퓨터의 기본 인스턴스에 연결합니다.|의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.|  
+|인스턴스가 로컬 컴퓨터에서 실행하고 있음을 표시하기 위해 마침표를 사용하여 동일한 컴퓨터의 기본 인스턴스에 연결합니다.|.|  
 |인스턴스가 로컬 컴퓨터에서 실행하고 있음을 표시하기 위해 마침표를 사용하여 동일한 컴퓨터의 명명된 인스턴스에 연결합니다.|.\SQLEXPRESS|  
 |인스턴스가 로컬 컴퓨터에서 실행하고 있음을 표시하기 위해 localhost를 사용하여 동일한 컴퓨터의 기본 인스턴스에 연결합니다.|localhost|  
 |인스턴스가 로컬 컴퓨터에서 실행하고 있음을 표시하기 위해 localhost를 사용하여 동일한 컴퓨터의 명명된 인스턴스에 연결합니다.|localhost\SQLEXPRESS|  

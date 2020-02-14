@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: e887c718c76563a7fcd8388c46a3e9e684faf6d5
-ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70304848"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Linux의 Always On 가용성 그룹 장애 조치(failover)
@@ -117,13 +117,13 @@ AG(가용성 그룹)의 컨텍스트 내에서는 일반적으로 가용성 복�
 
 1. AG 리소스가 더 이상 클러스터에서 관리되지 않는지 확인합니다. 
 
-      - 대상 클러스터 노드에서 리소스를 비관리형 모드로 설정합니다. 이 명령은 리소스 모니터링 및 관리를 중지하도록 리소스 에이전트에 신호를 보냅니다. 예를 들어 
+      - 대상 클러스터 노드에서 리소스를 비관리형 모드로 설정합니다. 이 명령은 리소스 모니터링 및 관리를 중지하도록 리소스 에이전트에 신호를 보냅니다. 다음은 그 예입니다. 
       
       ```bash
       sudo pcs resource unmanage <resourceName>
       ```
 
-      - 리소스 모드를 비관리리형 모드로 설정하지 못하는 경우에는 리소스를 삭제합니다. 예를 들어
+      - 리소스 모드를 비관리리형 모드로 설정하지 못하는 경우에는 리소스를 삭제합니다. 다음은 그 예입니다.
 
       ```bash
       sudo pcs resource delete <resourceName>
@@ -162,7 +162,7 @@ AG(가용성 그룹)의 컨텍스트 내에서는 일반적으로 가용성 복�
 
 ## <a name="database-level-monitoring-and-failover-trigger"></a>데이터베이스 수준 모니터링 및 장애 조치(failover) 트리거
 
-`CLUSTER_TYPE=EXTERNAL`의 경우 장애 조치(failover) 트리거 의미 체계는 WSFC와 다릅니다. AG가 WSFC의 SQL Server 인스턴스에 있는 경우 데이터베이스의 `ONLINE` 상태에서 전환하면 AG 상태에서 오류가 보고됩니다. 이에 대한 응답으로 클러스터 관리자가 장애 조치(failover) 작업을 트리거합니다. Linux에서 SQL Server 인스턴스는 클러스터와 통신할 수 없습니다. 데이터베이스 상태 모니터링은 ‘외부에서’ 수행됩니다. 사용자가 AG를 만들 때 `DB_FAILOVER=ON` 옵션을 설정하여 데이터베이스 수준 장애 조치(failover) 모니터링 및 장애 조치(failover)를 설정한 경우 클러스터는 모니터링 작업을 실행할 때마다 데이터베이스 상태가 `ONLINE`인지 확인합니다. 클러스터는 `sys.databases`에서 상태를 쿼리합니다. 상태가 `ONLINE`과 다른 경우에는 자동으로 장애 조치(failover)를 트리거합니다(자동 장애 조치(failover) 조건이 충족되는 경우). 실제 장애 조치(failover) 시간은 sys.databases에서 업데이트되는 데이터베이스 상태뿐 아니라 모니터링 작업 빈도에 따라 달라집니다.
+`CLUSTER_TYPE=EXTERNAL`의 경우 장애 조치(failover) 트리거 의미 체계는 WSFC와 다릅니다. AG가 WSFC의 SQL Server 인스턴스에 있는 경우 데이터베이스의 `ONLINE` 상태에서 전환하면 AG 상태에서 오류가 보고됩니다. 이에 대한 응답으로 클러스터 관리자가 장애 조치(failover) 작업을 트리거합니다. Linux에서 SQL Server 인스턴스는 클러스터와 통신할 수 없습니다. 데이터베이스 상태 모니터링은 ‘외부에서’ 수행됩니다.  사용자가 AG를 만들 때 `DB_FAILOVER=ON` 옵션을 설정하여 데이터베이스 수준 장애 조치(failover) 모니터링 및 장애 조치(failover)를 설정한 경우 클러스터는 모니터링 작업을 실행할 때마다 데이터베이스 상태가 `ONLINE`인지 확인합니다. 클러스터는 `sys.databases`에서 상태를 쿼리합니다. 상태가 `ONLINE`과 다른 경우에는 자동으로 장애 조치(failover)를 트리거합니다(자동 장애 조치(failover) 조건이 충족되는 경우). 실제 장애 조치(failover) 시간은 sys.databases에서 업데이트되는 데이터베이스 상태뿐 아니라 모니터링 작업 빈도에 따라 달라집니다.
 
 자동 장애 조치(failover)에는 하나 이상의 동기 복제본이 필요합니다.
 

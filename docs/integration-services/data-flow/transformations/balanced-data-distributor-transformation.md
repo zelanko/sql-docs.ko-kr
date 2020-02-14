@@ -13,10 +13,10 @@ ms.assetid: ae0b33dd-f44b-42df-b6f6-69861770ce10
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 50cf62449d789684324a25c4c0bd09bbe28ce28a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291713"
 ---
 # <a name="balanced-data-distributor-transformation"></a>분산 데이터 배포자 변환
@@ -28,7 +28,7 @@ ms.locfileid: "71291713"
   
  다음 다이어그램에서는 BDD 변환을 사용하는 간단한 예를 보여 줍니다. 이 예에서 BDD 변환은 플랫 파일 원본의 입력 데이터에서 파이프라인 버퍼를 한 번에 하나씩 선택하여 라운드 로빈 방식으로 세 출력 경로 중 하나로 보냅니다. 데이터 흐름 태스크의 속성을 보여주는 SQL Server Data Tools의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.DefaultBufferSize%2A>창에서 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.DefaultBufferMaxRows%2A>(파이프라인 버퍼의 기본 크기) 및 **DefaultBufferMaxRows** (파이프라인 버퍼의 기본 최대 행 수)의 값을 확인할 수 있습니다.  
   
- ![균형 있는 데이터 배포자](../../../integration-services/data-flow/transformations/media/balanceddatadistributor.JPG "균형 있는 데이터 배포자")  
+ ![균형 있는 데이터 배포자](../../../integration-services/data-flow/transformations/media/balanceddatadistributor.JPG "분산 데이터 배포자")  
   
  분산 데이터 배포자 변환은 다음 조건을 충족하는 시나리오에서 패키지의 성능을 향상시키는 데 도움이 됩니다.  
   

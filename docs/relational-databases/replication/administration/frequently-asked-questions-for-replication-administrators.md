@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 99be52de235c676137981021b9e926aba7320f43
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: f05b8d942a87f749fc5e1c1235d8410558603507
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75322036"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910166"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>복제 관리자를 위한 질문과 대답
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -113,7 +113,10 @@ ms.locfileid: "75322036"
   
 ### <a name="does-replication-work-over-low-bandwidth-connections-does-it-use-compression"></a>느린 대역폭 연결을 통해서도 복제를 수행할 수 있습니까? 복제 작업에서 압축을 사용합니까?  
  예. 느린 대역폭 연결을 통해서도 복제를 수행할 수 있습니다. TCP/IP를 통한 연결의 경우 복제는 프로토콜에서 제공하는 압축을 사용하지만 추가 압축은 제공하지 않습니다. HTTPS를 통한 웹 동기화 연결의 경우 복제는 프로토콜에서 제공하는 압축과 변경 내용을 복제하는 데 사용되는 XML 파일의 추가 압축도 사용합니다.  
-  
+
+### <a name="can-i-configure-replication-if-i-connect-to-the-server-by-using-the-ip-address"></a>IP 주소를 사용하여 서버에 연결하는 경우 복제를 구성할 수 있나요? 
+아니요, 복제는 실제 서버 이름을 사용하는 경우에만 작동합니다. SSMS(SQL Server Management Studio) 18.0 이상 버전부터 실제 서버 이름과 포트 번호를 사용하여 복제를 구성할 수 있습니다. 
+
 ## <a name="logins-and-object-ownership"></a>로그인 및 개체 소유권  
   
 ### <a name="are-logins-and-passwords-replicated"></a>로그인과 암호도 복제됩니까?  

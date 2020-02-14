@@ -16,10 +16,10 @@ ms.assetid: 1edc91d9-1fab-4fe5-aed3-6f581fe32c18
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2fa693e4e5c8f21b9d8fc8ad02369bff7623b59e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295783"
 ---
 # <a name="reuse-control-flow-across-packages-by-using-control-flow-package-parts"></a>제어 흐름 패키지 파트를 사용하여 패키지에 대해 제어 흐름 재사용
@@ -76,7 +76,7 @@ ms.locfileid: "71295783"
 ### <a name="add-a-copy-of-an-existing-control-flow-package-part-or-a-reference-to-an-existing-part"></a>기존 제어 흐름 패키지 파트 또는 기존 파트에 대한 참조의 복사본 추가  
  파일 시스템의 기존 파트의 복사본을 패키지에 추가하려면 솔루션 탐색기에서 **패키지 파트** 폴더를 확장합니다. **제어 흐름** 을 마우스 오른쪽 단추로 클릭하고 **기존 제어 흐름 패키지 파트 추가**를 선택합니다.  
   
- ![메뉴에서 새 컨트롤 흐름 템플릿 추가](../integration-services/media/control-flow-templates-add-from-menu.png "메뉴에서 새 컨트롤 흐름 템플릿 추가")  
+ ![메뉴에서 새 제어 흐름 템플릿 추가](../integration-services/media/control-flow-templates-add-from-menu.png "메뉴에서 새 제어 흐름 템플릿 추가")  
   
  ![기존 템플릿 복사본 추가 대화 상자](../integration-services/media/control-flow-templates-add-copy-dialog.png "기존 템플릿 복사본 추가 대화 상자")  
   

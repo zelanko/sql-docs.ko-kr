@@ -23,10 +23,10 @@ ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 994018ab8b574bc313072f7a353ff999d645e0d9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292758"
 ---
 # <a name="error-handling-in-data"></a>데이터 오류 처리
@@ -98,7 +98,7 @@ ms.locfileid: "71292758"
 ## <a name="select-an-error-handling-option"></a>오류 처리 옵션 선택  
  원본, 변환 및 대상에서 오류 및 잘림이 처리되는 방법을 구성할 수 있습니다. 다음 표에서는 옵션에 대해 설명합니다.  
   
-|옵션|설명|  
+|옵션|Description|  
 |------------|-----------------|  
 |구성 요소 실패|오류 또는 잘림이 발생하면 데이터 흐름 태스크가 실패합니다. 실패는 오류 또는 잘림에 대한 기본 옵션입니다.|  
 |오류 무시|오류 또는 잘림이 무시되고 데이터 행이 변환 또는 원본의 출력으로 전달됩니다.|  
@@ -113,7 +113,7 @@ ms.locfileid: "71292758"
   
 -   오류 출력에 데이터 뷰어를 연결하면 오류 설명과 열 이름을 모두 확인할 수 있습니다. 이렇게 하려면 SSIS 디자이너에서 오류 출력 앞의 빨간색 화살표를 마우스 오른쪽 단추로 클릭하고 **데이터 뷰어 사용**을 선택합니다.  
   
--   로깅을 사용하도록 설정하고 **DiagnosticEx** 이벤트를 선택하여 열 이름을 찾을 수 있습니다. 이 이벤트는 로그에 데이터 흐름 열 맵을 작성합니다. 그런 다음 이 열 맵의 식별자를 통해 열 이름을 조회할 수 있습니다. **DiagnosticEx** 이벤트는 로그의 크기를 줄이기 위해 해당 XML 출력에서 공백을 유지하지 않습니다. 가독성을 높이기 위해 XML 서식 지정 및 구문 강조를 지원하는 XML 편집기(예: Visual Studio)로 로그를 복사합니다. 로깅에 대한 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md)을 참조하세요.  
+-   로깅을 사용하도록 설정하고 **DiagnosticEx** 이벤트를 선택하여 열 이름을 찾을 수 있습니다. 이 이벤트는 로그에 데이터 흐름 열 지도를 작성합니다. 그런 다음 이 열 맵의 식별자를 통해 열 이름을 조회할 수 있습니다. **DiagnosticEx** 이벤트는 로그의 크기를 줄이기 위해 해당 XML 출력에서 공백을 유지하지 않습니다. 가독성을 높이기 위해 XML 서식 지정 및 구문 강조를 지원하는 XML 편집기(예: Visual Studio)로 로그를 복사합니다. 로깅에 대한 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md)을 참조하세요.  
   
      데이터 흐름 열 맵의 예는 다음과 같습니다.  
   

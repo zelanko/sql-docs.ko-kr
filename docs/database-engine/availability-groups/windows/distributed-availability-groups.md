@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ee844af9f851d1dab1d77c54dfdd04fadd4d3c06
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 5499bb5106deddcd073c52453a477190e3150bb9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706224"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76941112"
 ---
 # <a name="distributed-availability-groups"></a>분산 가용성 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -148,7 +148,7 @@ SQL Server 2012 또는 2014에는 분산 가용성 그룹 기능이 없으므로
 
 앞의 두 예제 모두에서는 세 개의 가용성 그룹에 최대 27개의 복제본이 있을 수 있습니다. 이러한 복제본은 모두 읽기 전용 쿼리에 사용할 수 있습니다. 
 
-[읽기 전용 라우팅]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server)은 현재 분산 가용성 그룹에서 완벽하게 작동하지 않습니다. 더 구체적으로 설명하면,
+[읽기 전용 라우팅]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server)은 현재 분산 가용성 그룹에서 완벽하게 작동하지 않습니다. 더 구체적으로 살펴보면 다음과 같습니다.
 
 1. 읽기 전용 라우팅은 분산 가용성 그룹의 주 가용성 그룹에 구성할 수 있고 이 그룹에서 작동합니다. 
 2. 읽기 전용 라우팅은 분산 가용성 그룹의 보조 가용성 그룹에 구성할 수 있지만 이 그룹에서 작동하지 않습니다. 수신기를 사용하여 보조 가용성 그룹에 연결하는 모든 쿼리는 보조 가용성 그룹의 주 복제본으로 이동합니다. 그렇지 않으면 모든 복제본을 보조 복제본으로 연결하고 직접 액세스할 수 있도록 각 복제본을 구성해야 합니다. 그러나 읽기 전용 라우팅은 보조 가용성 그룹이 장애 조치(failover) 후 주 가용성 그룹이 된 후에 작동합니다. 이 동작은 SQL Server 2016 또는 이후 버전의 SQL Server에 대한 업데이트에서 변경될 수 있습니다.

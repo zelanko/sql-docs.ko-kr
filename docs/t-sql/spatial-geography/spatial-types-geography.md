@@ -18,10 +18,10 @@ ms.assetid: d9e4952a-1841-4465-a64b-11e9288dba1d
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5b98f2283cfb9d89277ad97ffc7a883e43a42b4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042523"
 ---
 # <a name="spatial-types---geography"></a>공간 형식 - geography
@@ -39,7 +39,7 @@ ms.locfileid: "68042523"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-showing-how-to-add-and-query-geography-data"></a>1\. geography 데이터를 추가하고 쿼리하는 방법 보기  
+### <a name="a-showing-how-to-add-and-query-geography-data"></a>A. geography 데이터를 추가하고 쿼리하는 방법 보기  
  다음 예에서는 geography 데이터를 추가하고 쿼리하는 방법을 보여 줍니다. 첫 번째 예에서는 ID 열과 `geography` 열 `GeogCol1`이 있는 테이블을 만듭니다. 세 번째 열에서는 `geography` 열을 OGC(Open Geospatial Consortium) WKT(Well-Known Text) 표현으로 렌더링하고 `STAsText()` 메서드를 사용합니다. 그러고 나면 두 개의 행이 삽입됩니다. 이 중 한 행에는 `LineString` 의 `geography`인스턴스가 들어 있고, 다른 행에는 `Polygon` 인스턴스가 들어 있습니다.  
   
 ```  
@@ -61,7 +61,7 @@ VALUES (geography::STGeomFromText('POLYGON((-122.358 47.653 , -122.348 47.649, -
 GO  
 ```  
   
-### <a name="b-returning-the-intersection-of-two-geography-instances"></a>2\. 두 geography 인스턴스의 교차점 반환  
+### <a name="b-returning-the-intersection-of-two-geography-instances"></a>B. 두 geography 인스턴스의 교차점 반환  
  다음 예에서는 `STIntersection()` 메서드를 사용하여 앞에서 삽입한 두 개의 `geography` 인스턴스가 교차하는 지점을 반환합니다.  
   
 ```  

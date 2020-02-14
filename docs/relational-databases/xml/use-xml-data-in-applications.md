@@ -26,10 +26,10 @@ ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 998504b936681c5e20d185ab17b787630a6ae2f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039154"
 ---
 # <a name="use-xml-data-in-applications"></a>애플리케이션에서 XML 데이터 사용
@@ -146,14 +146,14 @@ Row 2
 ```  
   
 ## <a name="handling-xml-from-an-xml-type-column-by-using-adonet"></a>ADO.NET을 사용하여 xml 유형의 열에서 XML 처리  
- ADO.NET 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 사용하여 **xml** 데이터 형식 열에서 XML을 처리하려면 **SqlCommand** 클래스의 표준 동작을 사용할 수 있습니다. 예를 들어 **xml** 데이터 형식 열과 해당 값은 **SqlDataReader**를 사용하여 SQL 열을 검색하는 것과 같은 방식으로 검색할 수 있습니다. 하지만 **xml** 데이터 형식 열의 콘텐츠를 XML로 사용하려는 경우 이 콘텐츠를 먼저 **XmlReader** 유형에 할당해야 합니다.  
+ ADO.NET 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 사용하여 **xml** 데이터 형식 열에서 XML을 처리하려는 경우 **SqlCommand** 클래스의 표준 동작을 사용할 수 있습니다. 예를 들어 **xml** 데이터 형식 열과 해당 값은 **SqlDataReader**를 사용하여 SQL 열을 검색하는 것과 같은 방식으로 검색할 수 있습니다. 하지만 **xml** 데이터 형식 열의 콘텐츠를 XML로 사용하려는 경우 이 콘텐츠를 먼저 **XmlReader** 유형에 할당해야 합니다.  
   
- 자세한 내용과 코드 예는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK 설명서의 "XML Column Values in a Data Reader"를 참조하십시오.  
+ 자세한 내용과 예제 코드는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK 문서에서 “XML Column Values in a Data Reader”(데이터 판독기의 XML 열 값)를 참조하세요.  
   
 ## <a name="handling-an-xml-type-column-in-parameters-by-using-adonet"></a>ADO.NET을 사용하여 매개 변수의 xml 유형 열 처리  
  ADO.NET 및 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]의 매개 변수로 전달된 xml 데이터 형식을 처리하려면 **SqlXml** 데이터 형식의 인스턴스로 값을 제공할 수 있습니다. **의** xml [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식 열은 **string** 또는 **integer**와 같이 다른 열 및 데이터 형식과 동일한 방식으로 매개 변수 값을 수락할 수 있기 때문에 특수한 조치가 필요하지 않습니다.  
   
- 자세한 내용과 코드 예는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK 설명서의 "XML Values as Command Parameters"를 참조하십시오.  
+ 자세한 내용과 예제 코드는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK 문서에서 “XML Values as Command Parameters”(명령 매개 변수인 XML 값)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [XML 데이터&#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  

@@ -17,10 +17,10 @@ ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 92e12a2991d03c125e3247d1dd681b0a5754e2f9
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981997"
 ---
 # <a name="alter-table-table_constraint-transact-sql"></a>ALTER TABLE table_constraint(Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "73981997"
 
   [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)을 사용하여 테이블에 추가한 PRIMARY KEY, UNIQUE, FOREIGN KEY, CHECK 제약 조건이나 DEFAULT 정의의 속성을 지정합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -153,7 +153,7 @@ ms.locfileid: "73981997"
   
  예를 들어 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 **ProductVendor** 테이블은 **Vendor** 테이블과 참조 관계를 갖습니다. **ProductVendor.VendorID** 외래 키는 **Vendor.VendorID** 기본 키를 참조합니다.  
   
- **Vendor** 테이블의 행에 대해 UPDATE 문을 실행하고 **ProductVendor.VendorID**에 대해 ON UPDATE CASCADE 동작을 지정하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 **ProductVendor** 테이블에 하나 이상의 종속 행이 있는지 확인합니다. **ProductVendor** 테이블에 종속 행이 있는 경우 업데이트되며 **Vendor** 테이블에 있는 참조된 행도 업데이트됩니다.  
+ **Vendor** 테이블의 행에 대해 UPDATE 문을 실행하고 **ProductVendor.VendorID**에 대해 ON UPDATE CASCADE 동작을 지정하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]는 **ProductVendor** 테이블에 하나 이상의 종속 행이 있는지 확인합니다. **ProductVendor** 테이블에 종속 행이 있는 경우 업데이트되며 **Vendor** 테이블에 있는 참조된 행도 업데이트됩니다.  
   
  반대로 NO ACTION을 지정한 경우 **ProductVendor** 테이블에 **Vendor** 행을 참조하는 행이 하나 이상 있으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 오류가 발생하고 참조된 행의 업데이트 동작이 롤백됩니다.  
   
@@ -168,7 +168,7 @@ ms.locfileid: "73981997"
  열에 대한 기본값을 지정합니다. DEFAULT 정의를 사용하여 기존 데이터 행에 새 열의 값을 제공할 수 있습니다. **timestamp** 데이터 형식, IDENTITY 속성, 기존 DEFAULT 정의 또는 바인딩된 기본값을 가진 열에는 DEFAULT 정의를 추가할 수 없습니다. 기존 기본값이 있는 열은 새 기본값을 추가하기 전에 기존 기본값을 삭제해야 합니다. 사용자 정의 형식 열에 대해 기본값을 지정할 경우 *constant_expression*에서 해당 사용자 정의 형식으로 암시적으로 변환할 수 있어야 합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 호환성을 유지하기 위해 DEFAULT에 제약 조건 이름을 할당할 수 있습니다.  
   
  *constant_expression*  
- 기본 열 값으로 사용되는 리터럴 값, NULL 또는 시스템 함수입니다. *constant_expression*을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 사용자 정의 형식으로 정의된 열과 함께 사용할 경우 *constant_expression*에서 해당 사용자 정의 형식으로의 암시적 변환이 지원되어야 합니다.  
+ 기본 열 값으로 사용되는 리터럴 값, NULL 또는 시스템 함수입니다. *constant_expression*을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 사용자 정의 형식으로 정의된 열과 함께 사용할 경우 *constant_expression*에서 해당 사용자 정의 형식으로의 암시적 전환이 지원되어야 합니다.  
   
  FOR *column*  
  테이블 수준 DEFAULT 정의와 관련된 열을 지정합니다.  
@@ -183,7 +183,7 @@ ms.locfileid: "73981997"
  *logical_expression*  
  CHECK 제약 조건에 사용되는 논리 식이며 TRUE 또는 FALSE를 반환합니다. *logical_expression*을 CHECK 제약 조건에 사용하면 다른 테이블을 참조할 수 없지만 같은 행에 대해 동일한 테이블의 다른 열은 참조할 수 있습니다. 식은 별칭 데이터 형식을 참조할 수 없습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  WITH NOCHECK 옵션을 지정하지 않으면 FOREIGN KEY 또는 CHECK 제약 조건이 추가될 경우 기존의 모든 데이터에 대해 제약 조건 위반 검사가 수행됩니다. 제약 조건 위반이 발생할 경우 ALTER TABLE이 실패하고 오류가 반환됩니다. 기존 열에 PRIMARY KEY 또는 UNIQUE 제약 조건을 새로 추가하려면 열의 데이터가 고유해야 합니다. 중복된 값이 있으면 ALTER TABLE이 실패합니다. PRIMARY KEY 또는 UNIQUE 제약 조건을 추가하면 WITH NOCHECK 옵션이 적용되지 않습니다.  
   
  각 PRIMARY KEY 및 UNIQUE 제약 조건은 인덱스를 생성합니다. UNIQUE 및 PRIMARY KEY 제약 조건의 수가 많아도 테이블의 비클러스터형 인덱스는 999개, 클러스터형 인덱스는 1개를 초과할 수 없습니다. FOREIGN KEY 제약 조건은 인덱스를 자동으로 생성하지 않습니다. 그러나 외래 키 열은 쿼리에서 한 테이블의 FOREIGN KEY 제약 조건 열을 다른 테이블의 기본 또는 고유 키 열과 연결하는 조인에서 자주 사용됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 외래 키 열의 인덱스를 만들어 외래 키 테이블에 있는 관련 데이터를 빠르게 찾을 수 있습니다.  

@@ -21,10 +21,10 @@ ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 26bda5e190f18469948f935302ee2cbf9ddd121c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940401"
 ---
 # <a name="non-sql-server-subscribers"></a>Non-SQL Server Subscribers  
@@ -71,7 +71,7 @@ Oracle 및 IBM DB2,에 구독을 만드는 방법은 [Oracle 구독자](../../..
   
 -   게시에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구독자와[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자가 있는 경우[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구독자에 대한 구독을 만들기 전에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자에서 게시를 사용할 수 있도록 설정해야 합니다.  
   
--   기본적으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자에 대해 스냅샷 에이전트에 의해 생성된 스크립트는 `CREATE TABLE` 구문에 따옴표가 붙지 않은 식별자를 사용합니다. 따라서 이름이 'test'인 게시된 테이블이 'TEST'로 복제됩니다. 게시 데이터베이스에 있는 테이블에서와 똑같이 대/소문자를 맞추려면 배포 에이전트에 대해 **-QuotedIdentifier** 매개 변수를 사용합니다. 게시된 개체 이름(테이블, 열 및 제약 조건)에 **이외 구독자의 데이터베이스 버전에서 예약된 단어나 공백이 포함되어 있으면** -QuotedIdentifier[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 매개 변수도 사용해야 합니다. 이 매개 변수에 대한 자세한 내용은 [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)를 참조하십시오.  
+-   기본적으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자에 대해 스냅샷 에이전트에 의해 생성된 스크립트는 `CREATE TABLE` 구문에 따옴표가 붙지 않은 식별자를 사용합니다. 따라서 이름이 'test'인 게시된 테이블이 'TEST'로 복제됩니다. 게시 데이터베이스에 있는 테이블에서와 똑같이 대/소문자를 맞추려면 배포 에이전트에 대해 **-QuotedIdentifier** 매개 변수를 사용합니다. 게시된 개체 이름(테이블, 열 및 제약 조건)에 **이외 구독자의 데이터베이스 버전에서 예약된 단어나 공백이 포함되어 있으면** -QuotedIdentifier[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 매개 변수도 사용해야 합니다. 이 매개 변수에 대한 자세한 내용은 [복제 배포 에이전트](../../../relational-databases/replication/agents/replication-distribution-agent.md)를 참조하십시오.  
   
 -   배포 에이전트를 실행하는 계정에는 OLE DB 공급자의 설치 디렉터리에 대해 읽기 권한이 있어야 합니다.  
   
@@ -91,7 +91,7 @@ Oracle 및 IBM DB2,에 구독을 만드는 방법은 [Oracle 구독자](../../..
   
 -   빈 값, 빈 문자열 및 NULL이 표시되는 방법에 영향을 주는 NULL 값은 다른 데이터베이스와 다르게 처리됩니다. 이로 인해 UNIQUE 제약 조건이 정의된 열에 삽입된 값의 동작도 영향을 받게 됩니다. 예를 들어 Oracle에서는 고유하다고 판단되는 열에 여러 NULL 값을 사용할 수 있지만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 고유 열에 NULL 값을 하나만 사용할 수 있습니다.  
   
-     또 다른 요인으로는 열이 NOT NULL로 정의된 경우 NULL 값, 빈 문자열 및 빈 값이 처리되는 방법이 있습니다. Oracle 구독자에 대해 이러한 문제를 해결하는 방법은 [Oracle Subscribers](../../../relational-databases/replication/non-sql/oracle-subscribers.md)를 참조하십시오.  
+     또 다른 요인으로는 열이 NOT NULL로 정의된 경우 NULL 값, 빈 문자열 및 빈 값이 처리되는 방법이 있습니다. Oracle 구독자에 대해 이러한 문제를 해결하는 방법은 [Oracle 구독자](../../../relational-databases/replication/non-sql/oracle-subscribers.md)를 참조하십시오.  
   
 -   복제 관련 메타데이터(트랜잭션 시퀀스 테이블)는 구독이 제거될 때[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자에서 삭제되지 않습니다.  
   

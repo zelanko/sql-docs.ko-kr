@@ -12,10 +12,10 @@ ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b1275f5cbb718f34ba1386d6d6313dd662901900
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284947"
 ---
 # <a name="save-and-run-package-sql-server-import-and-export-wizard"></a>패키지 저장 및 실행(SQL Server 가져오기 및 내보내기 마법사)
@@ -30,7 +30,7 @@ ms.locfileid: "71284947"
 ## <a name="screen-shot-of-the-save-and-run-package-page"></a>패키지 저장 및 실행 페이지의 스크린샷  
 다음 스크린샷은 마법사의 **패키지 저장 및 실행** 페이지입니다. 
    
-![가져오기 및 내보내기 마법사의 패키지 페이지 저장 및 실행](../../integration-services/import-export-data/media/save-and-run.png "가져오기 및 내보내기 마법사의 패키지 페이지 저장 및 실행") 
+![가져오기 및 내보내기 마법사의 패키지 저장 및 실행 페이지](../../integration-services/import-export-data/media/save-and-run.png "가져오기 및 내보내기 마법사의 패키지 저장 및 실행 페이지") 
   
 ## <a name="run-and-save-the-package"></a>패키지 실행 및 저장 
  계속하려면 다음 두 옵션 중 하나 이상을 선택해야 합니다.  

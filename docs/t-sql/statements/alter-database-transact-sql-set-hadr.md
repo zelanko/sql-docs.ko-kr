@@ -24,10 +24,10 @@ ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 43970780903aa0a4d5aef84f971ac230f2f26358
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065728"
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE(Transact-SQL) SET HADR 
@@ -35,7 +35,7 @@ ms.locfileid: "68065728"
 
   이 항목에서는 보조 데이터베이스에서 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 옵션 설정에 대해 ALTER DATABASE 구문을 제공합니다. ALTER DATABASE 문당 하나의 SET HADR 옵션만 허용됩니다. 이러한 옵션은 보조 복제본에만 사용할 수 있습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -123,7 +123,7 @@ ALTER DATABASE database_name
 ## <a name="database-states"></a>데이터베이스 상태  
  보조 데이터베이스를 가용성 그룹에 조인하면 로컬 보조 복제본은 해당 보조 데이터베이스의 상태를 RESTORING에서 ONLINE으로 변경합니다. 보조 데이터베이스를 가용성 그룹에서 제거하면 로컬 보조 복제본은 보조 데이터베이스를 다시 RESTORING 상태로 설정합니다. 따라서 주 데이터베이스의 후속 로그 백업을 해당 보조 데이터베이스에 적용할 수 있습니다.  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>제한  
  트랜잭션 및 일괄 처리 외부에서 ALTER DATABASE 문을 실행합니다.  
   
 ## <a name="security"></a>보안  
@@ -145,6 +145,6 @@ ALTER DATABASE AccountsDb1 SET HADR AVAILABILITY GROUP = AccountsAG;
  [ALTER DATABASE &#40;Transact-SQL &#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [CREATE AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) [AlwaysOn 가용성 그룹 구성 문제 해결 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md) 
+ [AlwaysOn 가용성 그룹 개요&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) [AlwaysOn 가용성 그룹 구성 문제 해결&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md) 
   
   

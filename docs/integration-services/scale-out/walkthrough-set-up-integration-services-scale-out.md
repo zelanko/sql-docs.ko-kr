@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
 ms.openlocfilehash: d3b6ea9f53a54b7f02042b85781bc8fe24028a69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896130"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>연습: Integration Services(SSIS) Scale Out 설정
@@ -39,7 +39,7 @@ ms.locfileid: "67896130"
 
 * [규모 확장 마스터를 사용하도록 설정](#EnableMaster)
 
-* [SQL Server 인증 모드를 사용하도록 설정](#EnableAuth)
+* [SQL Server 인증 모드 사용](#EnableAuth)
 
 * [규모 확장 작업자를 사용하도록 설정](#EnableWorker)
 

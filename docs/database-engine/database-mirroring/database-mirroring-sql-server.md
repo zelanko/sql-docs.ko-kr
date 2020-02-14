@@ -24,17 +24,17 @@ ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3f8ebb1119e84caa80c0faa03c5c1405992723b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006347"
 ---
 # <a name="database-mirroring-sql-server"></a>데이터베이스 미러링(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]을 대신 사용합니다.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)]을 대신 사용합니다.  
   
  *데이터베이스 미러링* 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 가용성을 높이기 위한 솔루션입니다. 미러링은 데이터베이스 단위로 구현되며 전체 복구 모델을 사용하는 데이터베이스에서만 작동합니다.  
   
@@ -157,7 +157,7 @@ ms.locfileid: "68006347"
   
  다음 그림에서는 미러링 모니터 서버가 포함된 구성을 보여 줍니다.  
   
- ![미러링 모니터 서버가 포함된 미러링 세션](../../database-engine/database-mirroring/media/dbm-3-way-session-intro-ov.gif "미러링 모니터 서버가 포함된 미러링 세션")  
+ ![미러링 모니터 서버를 포함하는 미러링 세션](../../database-engine/database-mirroring/media/dbm-3-way-session-intro-ov.gif "미러링 모니터 서버를 포함하는 미러링 세션")  
   
  자세한 내용은 이 항목의 뒷부분에 나오는 [역할 전환](#RoleSwitching)을 참조하세요.  
   
@@ -182,13 +182,13 @@ ms.locfileid: "68006347"
   
  역할 전환에는 다음과 같은 세 가지 형식이 있습니다.  
   
--   *Automatic failover*  
+-   *자동 장애 조치(Failover)*  
   
      보호 우선 모드가 필요하며 미러 서버와 미러링 모니터 서버가 있어야 합니다. 데이터베이스는 이미 동기화된 상태여야 하고 미러링 모니터 서버가 미러 서버에 연결되어 있어야 합니다.  
   
      미러링 모니터 서버의 역할은 지정된 파트너 서버가 실행되고 있는지 여부를 확인하는 것입니다. 미러 서버와 주 서버 사이의 연결은 끊어졌지만 미러링 모니터 서버가 여전히 주 서버에 연결되어 있으면 미러 서버에서 장애 조치(Failover)를 시작하지 않습니다. 자세한 내용은 [데이터베이스 미러링 모니터 서버](../../database-engine/database-mirroring/database-mirroring-witness.md)를 참조하세요.  
   
--   *Manual failover*  
+-   *수동 장애 조치*  
   
      보호 우선 모드가 필요합니다. 파트너가 서로 연결되어 있어야 하며 데이터베이스는 이미 동기화된 상태여야 합니다.  
   
@@ -213,7 +213,7 @@ ms.locfileid: "68006347"
   
  다음 그림에서는 두 미러링 세션에서 함께 파트너로 참여하는 두 서버 인스턴스를 보여 줍니다. 한 세션은 **Db_1**이라는 데이터베이스에 대한 세션이고 다른 세션은 **Db_2**라는 데이터베이스에 대한 세션입니다.  
   
- ![두 동시 세션의 두 서버 인스턴스](../../database-engine/database-mirroring/media/dbm-concurrent-sessions.gif "두 동시 세션의 두 서버 인스턴스")  
+ ![2개의 동시 세션에 있는 두 서버 인스턴스](../../database-engine/database-mirroring/media/dbm-concurrent-sessions.gif "2개의 동시 세션에 있는 두 서버 인스턴스")  
   
  각 데이터베이스는 서로 독립적입니다. 예를 들어 서버 인스턴스는 초기에 두 데이터베이스의 미러 서버일 수 있습니다. 두 데이터베이스 중 하나가 장애 조치를 수행할 경우 서버 인스턴스는 장애 조치를 수행한 데이터베이스의 주 서버가 되는 한편 다른 데이터베이스에 대해서는 계속 미러 서버 역할을 수행합니다.  
   
@@ -225,7 +225,7 @@ ms.locfileid: "68006347"
 >  미러된 데이터베이스는 서로 독립적이므로 여러 데이터베이스에 대한 장애 조치를 하나의 그룹으로 처리할 수 없습니다.  
   
 ###  <a name="ClientConnections"></a> 클라이언트 연결  
- 데이터베이스 미러링 세션에 대한 클라이언트 연결 지원은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].NET Data Provider에서 제공합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [데이터베이스 미러링 세션에 클라이언트 연결&#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)을 참조하세요.  
+ 데이터베이스 미러링 세션에 대한 클라이언트 연결 지원은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].NET Data Provider에서 제공합니다. 자세한 내용은 [데이터베이스 미러링 세션에 클라이언트 연결&#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)프로세스를 통해 주 역할과 미러 역할을 서로 바꿀 수 있습니다.  
   
   
 ###  <a name="ImpactOfPausing"></a> 세션을 일시 중지할 경우 주 서버의 트랜잭션 로그에 미치는 영향  
@@ -251,7 +251,7 @@ ms.locfileid: "68006347"
  [데이터베이스 미러링을 위한 필수 구성 요소, 제한 사항 및 권장 사항](../../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md)  
  데이터베이스 미러링을 설정하기 위한 사전 요구 사항과 권장 사항에 대해 설명합니다.  
   
- [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
+ [데이터베이스 미러링 운영 모드](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
  데이터베이스 미러링 세션의 동기 운영 모드 및 비동기 운영 모드에 대해 설명하고 데이터베이스 미러링 세션 동안 파트너 역할을 전환하는 방법에 대해 설명합니다.  
   
  [데이터베이스 미러링 모니터 서버](../../database-engine/database-mirroring/database-mirroring-witness.md)  
@@ -282,7 +282,7 @@ ms.locfileid: "68006347"
  데이터베이스 미러링 모니터 또는 **dbmmonitor** 저장 프로시저를 사용하여 데이터베이스 미러링이나 세션을 모니터링하는 방법에 대해 설명합니다.  
   
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 ### <a name="configuration-tasks"></a>구성 태스크  
  **SQL Server Management Studio 사용**  

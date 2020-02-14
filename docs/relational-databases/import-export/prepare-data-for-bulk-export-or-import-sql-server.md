@@ -18,10 +18,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: b5aecdf222ea325f67a23b728ed29ee40e768387
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056408"
 ---
 # <a name="prepare-data-for-bulk-export-or-import"></a>대량 내보내기 또는 가져오기를 위한 데이터 준비
@@ -39,7 +39,7 @@ ms.locfileid: "74056408"
   
 -   테이블 또는 뷰에서 데이터 파일로 대량 내보내기를 수행하려면 대량 복사할 테이블 또는 뷰에 대한 SELECT 권한이 있어야 합니다.  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 병렬 검색을 사용하여 데이터를 검색할 수 있습니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 대량으로 내보내는 테이블 행은 대개 데이터 파일에 특정 순서로 정렬되지 않을 수도 있습니다. 대량으로 내보낸 테이블 행이 데이터 파일에 특정 순서로 표시되도록 하려면 쿼리에서 대량으로 내보내는 **queryout** 옵션을 사용하고 ORDER BY 절을 지정합니다.  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 병렬 검색을 사용하여 데이터를 검색할 수 있습니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 대량으로 내보내는 테이블 행은 대개 데이터 파일에 특정 순서로 정렬되지 않을 수도 있습니다. 대량으로 내보낸 테이블 행이 데이터 파일에 특정 순서로 표시되도록 하려면 쿼리에서 대량으로 내보내는 **queryout** 옵션을 사용하고 ORDER BY 절을 지정합니다.  
   
 ## <a name="data-file-format-requirements-for-bulk-import"></a>대량 가져오기의 데이터 파일 형식 요구 사항  
  데이터 파일에서 데이터를 가져오려면 해당 파일은 다음과 같은 기본 요구 사항을 충족해야 합니다.  
@@ -91,7 +91,7 @@ ms.locfileid: "74056408"
 |CSV 데이터를 가져오는 데 OLE DB Provider for Jet를 사용하는 방법에 대한 정보가 추가되었습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp 유틸리티](../../tools/bcp-utility.md)   
  [BULK INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)   

@@ -22,10 +22,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f3c261b2cc8a29af74adba6e32c646a11e940070
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982074"
 ---
 # <a name="alter-table-column_definition-transact-sql"></a>ALTER TABLE column_definition(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "73982074"
 
   [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)을 사용하여 테이블에 추가된 열의 속성을 지정합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -222,7 +222,7 @@ ALGORITHM
 ADD MASKED WITH ( FUNCTION = ' *mask_function* ')  
  **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
- 동적 데이터 마스크를 지정합니다. *mask_function*은 적절한 매개 변수를 포함한 마스킹 함수의 이름입니다. 사용할 수 있는 옵션은 다음과 같습니다.  
+ 동적 데이터 마스크를 지정합니다. *mask_function*은 적절한 매개 변수를 포함한 마스킹 함수의 이름 입니다. 사용할 수 있는 옵션은 다음과 같습니다.  
   
 -   default()  
   
@@ -234,7 +234,7 @@ ADD MASKED WITH ( FUNCTION = ' *mask_function* ')
   
  함수 매개 변수에 대해서는 [동적 데이터 마스킹](../../relational-databases/security/dynamic-data-masking.md)을 참조하세요.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **uniqueidentifier** 데이터 형식의 열이 추가되면 NEWID() 함수를 기본으로 사용하도록 하여 테이블의 기존 행에 새 열이 추가될 때 고유한 ID 값을 제공하도록 할 수 있습니다.  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 열 정의에 DEFAULT, IDENTITY, ROWGUIDCOL 또는 열 제약 조건을 순서에 관계없이 지정할 수 있습니다.  

@@ -24,10 +24,10 @@ ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3ed4c8c8feacdd41d2e806a4d2d663f639633e07
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294428"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services(SSIS) 연결
@@ -62,7 +62,7 @@ ms.locfileid: "71294428"
   
  패키지에는 하나의 연결 문자열 유형에 대한 여러 항목이 사용될 수 있으며, 각 항목에 대해 속성을 설정할 수 있습니다. 런타임 시 연결 관리자 유형의 각 항목에는 다른 특성을 지닌 연결이 생성됩니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 패키지에서 여러 데이터 원본 및 서버로 연결할 수 있는 여러 유형의 연결 관리자가 제공됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에는 패키지에서 여러 데이터 원본 및 서버로 연결할 수 있는 여러 유형의 연결 관리자가 제공됩니다.  
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 설치할 때 설치 프로그램에서 기본적으로 설치하는 연결 관리자가 있습니다.  
   
@@ -81,9 +81,9 @@ ms.locfileid: "71294428"
 >  두 모델 및 프로젝트를 프로젝트 배포 모델로 변환에 대한 자세한 내용은 [Integration Services(SSIS) 프로젝트 및 패키지 배포](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)를 참조하세요.
 
 ### <a name="built-in-connection-managers"></a>기본 제공 연결 관리자  
- 다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 제공하는 연결 관리자 유형을 보여 줍니다.  
+ 다음 테이블에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 제공하는 연결 관리자 유형을 보여 줍니다.  
   
-|형식|설명|항목|  
+|Type|Description|항목|  
 |----------|-----------------|-----------|  
 |ADO|ADO(ActiveX Data Objects) 개체에 연결합니다.|[ADO 연결 관리자](../../integration-services/connection-manager/ado-connection-manager.md)|  
 |ADO.NET|.NET 공급자를 사용하여 데이터 원본에 연결합니다.|[ADO.NET 연결 관리자](../../integration-services/connection-manager/ado-net-connection-manager.md)|  
@@ -111,7 +111,7 @@ ms.locfileid: "71294428"
 > [!IMPORTANT]  
 >  다음 표에 나열된 연결 관리자는 [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] 및 [!INCLUDE[ssDeveloperEd11](../../includes/ssdevelopered11-md.md)]에서만 작동합니다.  
   
-|형식|설명|항목|  
+|Type|Description|항목|  
 |----------|-----------------|-----------|  
 |ORACLE|Oracle \<version info\> 서버에 연결합니다.|Oracle 연결 관리자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity의 연결 관리자 구성 요소입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity에는 원본 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft Connectors for Oracle by Attunity 및 Microsoft Connectors for Teradata by Attunity(Microsoft Connectors for Oracle and Teradata by Attunity)](https://go.microsoft.com/fwlink/?LinkId=251526)다운로드 페이지를 참조하십시오.|  
 |SAPBI|SAP NetWeaver BI 버전 7 시스템에 연결합니다.|SAP BI 연결 관리자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI의 연결 관리자 구성 요소입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI에는 원본 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft SQL Server 2008 기능 팩](https://go.microsoft.com/fwlink/?LinkId=262016)다운로드 페이지를 참조하십시오.|  
@@ -162,7 +162,7 @@ ms.locfileid: "71294428"
   
     -   패키지에 추가할 연결 관리자 유형을 클릭합니다.  
   
-         -또는-  
+         또는  
   
     -   추가할 유형이 목록에 없는 경우 **새 연결** 을 클릭하여 **SSIS 연결 관리자 추가** 대화 상자를 열고 연결 관리자 유형을 선택한 다음 **확인**을 클릭합니다.  
   

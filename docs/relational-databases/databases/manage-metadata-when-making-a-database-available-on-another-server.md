@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fad28919360caf2a37f410d1c3f3e122fd3dd803
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: 282e75c071ce220c5b7301b5c4b27fff2cf4b053
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119450"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76929108"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>다른 서버에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "74119450"
   
  일부 애플리케이션은 단일 사용자 데이터베이스 범위 밖에 있는 정보, 엔터티 및/또는 개체에 따라 달라집니다. 일반적으로 애플리케이션은 **master** 및 **msdb** 데이터베이스뿐만 아니라 사용자 데이터베이스에 따라 달라집니다. 사용자 데이터베이스의 올바른 작동을 위해 해당 데이터베이스 외부에 저장되어 있는 모든 요소는 대상 서버 인스턴스에서 사용할 수 있어야 합니다. 예를 들어 애플리케이션에 대한 로그인은 **master** 데이터베이스에서 메타데이터로 저장되어 있으며 대상 서버에서 다시 생성되어야 합니다. 메타데이터가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스에 저장되어 있는** 에이전트 작업에 따라 애플리케이션이나 데이터베이스 유지 관리 계획이 달라지는 경우 대상 서버 인스턴스에서 이러한 작업을 다시 만들어야 합니다. 마찬가지로 서버 수준 트리거에 대한 메타데이터는 **master**에 저장되어 있습니다.  
   
- 애플리케이션에 대한 데이터베이스를 다른 서버 인스턴스로 이동할 경우 대상 서버 인스턴스의 **master** 및 **msdb** 에서 종속 개체와 엔터티의 모든 메타데이터를 다시 만들어야 합니다. 예를 들어 데이터베이스 애플리케이션이 서비스 수준 트리거를 사용하는 경우 단순히 새 시스템에서 데이터베이스를 연결하거나 복원하는 것만으로 충분하지 않습니다. **master** 데이터베이스에서 이러한 트리거에 대한 모든 메타데이터를 수동으로 다시 만들지 않으면 데이터베이스가 예상대로 작동하지 않습니다.  
+ 애플리케이션의 데이터베이스를 다른 서버 인스턴스로 이동할 경우 대상 서버 인스턴스의 **master** 및 **msdb**에서 종속 개체와 엔터티의 모든 메타데이터를 다시 만들어야 합니다. 예를 들어 데이터베이스 애플리케이션이 서비스 수준 트리거를 사용하는 경우 단순히 새 시스템에서 데이터베이스를 연결하거나 복원하는 것만으로 충분하지 않습니다. **master** 데이터베이스에서 이러한 트리거에 대한 모든 메타데이터를 수동으로 다시 만들지 않으면 데이터베이스가 예상대로 작동하지 않습니다.  
   
 ##  <a name="information_entities_and_objects"></a> 사용자 데이터베이스의 외부에 저장된 정보, 엔터티 및 개체  
  이 아티클의 나머지에서는 다른 서버 인스턴스에서 사용되는 데이터베이스에 영향을 줄 수 있는 발생 가능한 문제에 대해 요약합니다. 다음 목록에 나열된 하나 또는 그 이상의 정보, 엔터티 또는 개체 유형을 다시 만들어야 할 수 있습니다. 요약을 보려면 항목의 링크를 클릭합니다.  
@@ -78,7 +78,7 @@ ms.locfileid: "74119450"
   
 -   [이벤트 알림 및 WMI(Windows Management Instrumentation) 이벤트(서버 수준)](#event_notif_and_wmi_events)  
   
--   [확장 저장 프로시저](#extended_stored_procedures)  
+-   [확장된 저장 프로시저](#extended_stored_procedures)  
   
 -   [SQL Server용 전체 텍스트 엔진 속성](#ifts_service_properties)  
   
@@ -86,7 +86,7 @@ ms.locfileid: "74119450"
   
 -   [로그인](#logins)  
   
--   [사용 권한](#permissions)  
+-   [권한](#permissions)  
   
 -   [복제 설정](#replication_settings)  
   
@@ -118,14 +118,14 @@ ms.locfileid: "74119450"
  자세한 내용은 [Trustworthy 속성을 사용하도록 미러 데이터베이스 설정&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)을 참조하세요.  
   
   
-##  <a name="database_ownership"></a> 데이터베이스 소유권  
+##  <a name="database_ownership"></a> Database Ownership  
  데이터베이스를 다른 컴퓨터에서 복원하는 경우 복원 작업을 시작한 Windows 사용자 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 자동으로 새 데이터베이스 소유자가 됩니다. 데이터베이스를 복원할 때 시스템 관리자나 새 데이터베이스 소유자는 데이터베이스 소유권을 변경할 수 있습니다.  
   
 ##  <a name="distributed_queries_and_linked_servers"></a> 분산 쿼리 및 연결된 서버  
- 분산 쿼리와 연결된 서버는 OLE DB 애플리케이션에 대해 지원됩니다. 분산 쿼리는 같은 컴퓨터나 다른 컴퓨터에 있는 유형이 다른 여러 데이터 원본의 데이터에 액세스합니다. 연결된 서버를 구성하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 원격 서버에 있는 OLE DB 데이터 원본에 대해 명령을 실행할 수 있습니다. 이러한 기능에 대한 자세한 내용은 [연결된 서버&#40;데이터베이스 엔진&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)를 참조하세요.  
+ 분산 쿼리와 연결된 서버는 OLE DB 애플리케이션에 대해 지원됩니다. 분산 쿼리는 같은 컴퓨터나 다른 컴퓨터에 있는 유형이 다른 여러 데이터 원본의 데이터에 액세스합니다. 연결된 서버를 구성하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 원격 서버에 있는 OLE DB 데이터 원본에 대해 명령을 실행할 수 있습니다. 이러한 기능에 대한 자세한 내용은 [연결된 서버&#40;데이터베이스 엔진&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)를 참조하세요.  
   
   
-##  <a name="encrypted_data"></a> 암호화된 데이터  
+##  <a name="encrypted_data"></a> Encrypted Data  
  다른 서버 인스턴스에서 사용할 수 있도록 할 데이터베이스에 암호화된 데이터가 있으며 데이터베이스 마스터 키가 원래 서버의 서비스 마스터 키로 보호되는 경우 서비스 마스터 키 암호화를 다시 만들어야 할 수도 있습니다. *데이터베이스 마스터 키* 는 암호화된 데이터베이스에 있는 인증서의 프라이빗 키와 비대칭 키를 보호하는 데 사용되는 대칭 키입니다. 데이터베이스 마스터 키는 생성 시에 Triple DES 알고리즘 및 사용자 제공 암호를 사용하여 암호화됩니다.  
   
  서버 인스턴스에서 데이터베이스 마스터 키의 자동 암호 해독을 설정하기 위해 서비스 마스터 키를 사용하여 이 키의 복사본을 암호화합니다. 이 암호화된 복사본은 해당 데이터베이스와 **master**에 모두 저장됩니다. 일반적으로 **master** 에 저장된 복사본은 마스터 키가 변경될 때마다 자동으로 업데이트됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 먼저 인스턴스의 서비스 마스터 키로 데이터베이스 마스터 키의 암호를 해독하려고 시도합니다. 암호 해독에 실패하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 마스터 키가 필요한 데이터베이스와 패밀리 GUID가 동일한 마스터 키 자격 증명을 자격 증명 저장소에서 검색합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 암호 해독이 성공하거나 남은 자격 증명이 없을 때까지 일치하는 각 자격 증명을 사용하여 데이터베이스 마스터 키의 암호화를 해독하려고 시도합니다. 서비스 마스터 키를 사용하여 암호화되지 않은 마스터 키는 OPEN MASTER KEY 문과 암호를 사용하여 열어야 합니다.  
@@ -189,7 +189,7 @@ ms.locfileid: "74119450"
  자세한 내용은 [GRANT 개체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md), [DENY 개체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md) 및 [REVOKE 개체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)을 참조하세요.  
   
   
-##  <a name="ifts_service_properties"></a> SQL Server용 전체 텍스트 엔진 속성  
+##  <a name="ifts_service_properties"></a> Full-Text Engine for SQL Server Properties  
  속성은 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)에 의해 전체 텍스트 엔진에 설정됩니다. 대상 서버 인스턴스에 해당 속성에 필요한 설정이 있는지 확인합니다. 이러한 속성에 대한 자세한 내용은 [FULLTEXTSERVICEPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)를 참조하세요.  
   
  또한 원래 서버 인스턴스와 대상 서버 인스턴스에 있는 [단어 분리기 및 형태소 분석기](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) 구성 요소 또는 [전체 텍스트 검색 필터](../../relational-databases/search/configure-and-manage-filters-for-search.md) 구성 요소의 버전이 서로 다르면 전체 텍스트 인덱스 및 쿼리가 다르게 동작할 수 있습니다. 또한 [동의어 사전](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md) 은 인스턴스별 파일에 저장됩니다. 이러한 파일의 복사본을 대상 서버 인스턴스의 해당 위치로 전송하거나 새 인스턴스에서 다시 만들어야 합니다.  
@@ -231,7 +231,7 @@ ms.locfileid: "74119450"
   
 -   [역할 전환 후 로그인 및 작업 관리&#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)(데이터베이스 미러링의 경우)  
   
--   [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 설치하는 경우)  
+-   [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 설치하는 경우)  
   
 -   [SQL Server 에이전트 구성](../../ssms/agent/configure-sql-server-agent.md) ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 설치하는 경우)  
   
@@ -263,7 +263,7 @@ ms.locfileid: "74119450"
 > **참고:** 미러된 데이터베이스에 대한 로그인을 설정하는 방법은 [데이터베이스 미러링 또는 Always On 가용성 그룹에 대한 로그인 계정 설정(SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) 및 [역할 전환 후 로그인 및 작업 관리&#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)를 참조하세요.  
   
   
-##  <a name="permissions"></a> 사용 권한  
+##  <a name="permissions"></a> 권한  
  데이터베이스를 다른 서버 인스턴스에서 사용할 수 있을 때 다음의 사용 권한 유형이 영향을 받을 수 있습니다.  
   
 -   시스템 개체에 대한 GRANT, REVOKE 또는 DENY 권한  
@@ -278,10 +278,10 @@ ms.locfileid: "74119450"
    > [!IMPORTANT]
    > 로그인을 스크립팅하는 경우 암호는 스크립팅되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 로그인이 있으면 대상에서 스크립트를 수정해야 합니다.  
   
- 시스템 개체는 [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) 카탈로그 뷰에 표시됩니다. 시스템 개체에 대한 사용 권한은 **master** 데이터베이스의 [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) 카탈로그 뷰에 표시됩니다. 이러한 카탈로그 뷰를 쿼리하고 시스템 개체 사용 권한을 부여하는 방법은 [GRANT 시스템 개체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md)을 참조하세요. 자세한 내용은 [REVOKE 시스템 개체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md) 및 [DENY 시스템 개체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md)을 참조하세요.  
+ 시스템 개체는 [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) 카탈로그 뷰에 표시됩니다. 시스템 개체에 대한 사용 권한은 [master](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) 데이터베이스의 **sys.database_permissions** 카탈로그 뷰에 표시됩니다. 이러한 카탈로그 뷰를 쿼리하고 시스템 개체 사용 권한을 부여하는 방법은 [GRANT 시스템 개체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md)을 참조하세요. 자세한 내용은 [REVOKE 시스템 개체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md) 및 [DENY 시스템 개체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md)을 참조하세요.  
   
 ### <a name="grant-revoke-and-deny-permissions-on-a-server-instance"></a>서버 인스턴스에 대한 GRANT, REVOKE 또는 DENY 권한  
- 서버 범위의 사용 권한은 **master** 데이터베이스에 저장되며 대상 서버 인스턴스에서 구성해야 합니다. 서버 인스턴스의 서버 사용 권한에 대한 자세한 내용을 보려면 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 카탈로그 뷰를 쿼리하세요. 서버 보안 주체에 대한 자세한 내용을 보려면 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 카탈로그 뷰를 쿼리하세요. 서버 역할의 멤버 자격에 대한 자세한 내용을 보려면 [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) 카탈로그 뷰를 쿼리하세요.  
+ 서버 범위의 사용 권한은 **master** 데이터베이스에 저장되며 대상 서버 인스턴스에서 구성해야 합니다. 서버 인스턴스의 서버 사용 권한에 대한 자세한 내용을 보려면 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 카탈로그 뷰를 쿼리하세요. 서버 보안 주체에 대한 자세한 내용을 보려면 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)카탈로그 뷰를 쿼리하세요. 서버 역할의 멤버 자격에 대한 자세한 내용을 보려면 [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) 카탈로그 뷰를 쿼리하세요.  
   
  자세한 내용은 [GRANT 서버 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md), [REVOKE 서버 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-permissions-transact-sql.md) 및 [DENY 서버 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/deny-server-permissions-transact-sql.md)을 참조하세요.  
   

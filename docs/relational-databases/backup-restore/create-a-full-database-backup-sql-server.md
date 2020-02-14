@@ -16,10 +16,10 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fe0c9a950221317cb4a9088bae7629fc0c894165
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710317"
 ---
 # <a name="create-a-full-database-backup"></a>전체 데이터베이스 백업 만들기
@@ -49,7 +49,7 @@ Azure Blob Storage 서비스로의 SQL Server 백업 방법에 대한 자세한 
 
 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터는 **PASSWORD** 및 **MEDIAPASSWORD** 옵션은 백업을 만드는 데 더 이상 사용되지 않습니다. 암호를 사용하여 만든 백업은 계속 복원할 수 있습니다.
 
-## <a name="Permissions"></a> 사용 권한
+## <a name="Permissions"></a> 권한
 
 `BACKUP DATABASE` 및 `BACKUP LOG` 권한은 기본적으로 **sysadmin** 고정 서버 역할과 **db_owner** 및 **db_backupoperator** 고정 데이터베이스 역할의 멤버로 설정됩니다.
 
@@ -132,7 +132,7 @@ SELECT * FROM SQLTest
 GO
 ```
 
-#### <a name="a-full-back-up-to-disk-to-default-location"></a>1\. 기본 위치로 디스크 전체 백업
+#### <a name="a-full-back-up-to-disk-to-default-location"></a>A. 기본 위치로 디스크 전체 백업
 
 이 예제에서는 `SQLTestDB` 데이터베이스가 기본 백업 위치에서 디스크로 백업됩니다.
 
@@ -146,7 +146,7 @@ GO
 
 ![SQL 백업 만들기](media/quickstart-backup-restore-database/backup-db-ssms.png)
 
-#### <a name="b-full-back-up-to-disk-to-non-default-location"></a>2\. 기본이 아닌 위치로 디스크 전체 백업
+#### <a name="b-full-back-up-to-disk-to-non-default-location"></a>B. 기본이 아닌 위치로 디스크 전체 백업
 
 이 예제에서는 `SQLTestDB` 데이터베이스가 선택한 위치의 디스크로 백업됩니다.
 
@@ -251,7 +251,7 @@ GO
 
  BACKUP DATABASE *database* TO *backup_device* [ **,** ...*n* ] [ WITH *with_options* [ **,** ...*o* ] ] ;
 
-|옵션|설명|
+|옵션|Description|
 |------------|-----------------|
 |*database*|백업할 데이터베이스입니다.|
 |*backup_device* [ **,** ...*n* ]|백업 작업에 사용할 1-64개의 백업 디바이스 목록을 지정합니다. 물리적 백업 디바이스를 지정하거나, 이미 정의된 경우 해당 논리적 백업 디바이스를 지정할 수 있습니다. 물리적 백업 디바이스를 지정하려면 다음 DISK 또는 TAPE 옵션을 사용합니다.<br /><br /> { DISK &#124; TAPE } **=** _physical\_backup\_device\_name_<br /><br /> 자세한 내용은 [백업 디바이스&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.|
@@ -264,7 +264,7 @@ GO
 
 - **{ COMPRESSION | NO_COMPRESSION }** : [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 이상에서만 사용 가능. 이 백업에서 [백업 압축](../../relational-databases/backup-restore/backup-compression-sql-server.md) 을 수행하고 서버 수준 기본값을 재정의할지 여부를 지정합니다.
 - **ENCRYPTION (ALGORITHM, SERVER CERTIFICATE | ASYMMETRIC KEY)** : SQL Server 2014 이상에서만 사용할 암호화 알고리즘과 암호화 보안에 사용할 인증서 또는 비대칭 키를 지정합니다.
-- **DESCRIPTION** **=** { **'** _text_ **'**  |  **@** _text\_variable_ }: 백업 세트를 설명하는 자유 형식의 텍스트를 지정합니다. 문자열을 최대 255자까지 지정할 수 있습니다.
+- **DESCRIPTION** **=** { **‘** _text_ **’**  |  **@** _text\_variable_ }: 백업 세트를 설명하는 자유 형식의 텍스트를 지정합니다. 문자열을 최대 255자까지 지정할 수 있습니다.
 - **NAME = { *backup_set_name* |  **@** _backup\_set\_name\_var_ }** : 백업 세트의 이름을 지정합니다. 이름은 최대 128자까지 지정할 수 있습니다. NAME을 지정하지 않으면 공백이 됩니다.
 
 기본적으로 `BACKUP`은 기존 백업 세트를 유지하면서 기존 미디어 세트에 백업을 추가합니다. 이것을 명시적으로 지정하려면 `NOINIT` 옵션을 사용합니다. 기존 백업 세트에 추가하는 방법은 [미디어 세트, 미디어 패밀리 및 백업 세트&#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)을 참조하세요.
@@ -312,7 +312,7 @@ SELECT * FROM SQLTest
 GO
 ```
 
-#### <a name="a-back-up-to-a-disk-device"></a>1\. 디스크 디바이스에 백업
+#### <a name="a-back-up-to-a-disk-device"></a>A. 디스크 디바이스에 백업
 
 다음 예에서는 `SQLTestDB` 을 사용하여 새 미디어 세트를 만들어 `FORMAT` 데이터베이스 전체를 디스크에 백업합니다.
 
@@ -327,7 +327,7 @@ TO DISK = 'c:\tmp\SQLTestDB.bak'
 GO
 ```
 
-#### <a name="b-back-up-to-a-tape-device"></a>2\. 테이프 디바이스에 백업
+#### <a name="b-back-up-to-a-tape-device"></a>B. 테이프 디바이스에 백업
 
  다음 예제에서는 이전 백업에 백업을 추가하여 `SQLTestDB` 데이터베이스 전체를 테이프에 백업합니다.
 
@@ -375,7 +375,7 @@ GO
 
 ### <a name="examples"></a>예
 
-#### <a name="a-full-backup-local"></a>1\. 전체 백업(로컬)
+#### <a name="a-full-backup-local"></a>A. 전체 백업(로컬)
 
 다음 예에서는 서버 인스턴스 `<myDatabase>` 의 기본 백업 위치에 `Computer\Instance`데이터베이스의 전체 데이터베이스 백업을 만듭니다. 선택 사항으로, 이 예제에서는 **-BackupAction Database**를 지정합니다.
 
@@ -387,7 +387,7 @@ $credential = Get-Credential
 Backup-SqlDatabase -ServerInstance Computer[\Instance] -Database <myDatabase> -BackupAction Database -Credential $credential
 ```
 
-#### <a name="b-full-backup-to-azure"></a>2\. Azure에 전체 백업
+#### <a name="b-full-backup-to-azure"></a>B. Azure에 전체 백업
 
 다음 예제에서는 Azure Blob Storage 서비스로 `<myServer>` 인스턴스의 `<myDatabase>` 데이터베이스 전체 백업을 만듭니다. 읽기, 쓰기 및 나열 권한이 있는 저장된 액세스 정책을 만들었습니다. 저장된 액세스 정책에 연결된 공유 액세스 서명을 사용하여 SQL Server 자격 증명인 `https://<myStorageAccount>.blob.core.windows.net/<myContainer>`를 만들었습니다. PowerShell 명령은 **BackupFile** 매개 변수를 사용하여 위치(URL)와 백업 파일 이름을 지정합니다.
 
@@ -412,7 +412,7 @@ Backup-SqlDatabase -ServerInstance $server -Database $database -BackupFile $back
 - [데이터베이스를 새 위치로 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)
 - [유지 관리 계획 마법사 사용](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 - [SQL Server 백업 및 복원 작업 문제 해결](https://support.microsoft.com/kb/224071)
 - [백업 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)

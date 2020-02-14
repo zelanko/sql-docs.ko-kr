@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 8e8b9a36fac2e90719d3f8a8dbeee5d4c4a0e662
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67990955"
 ---
 # <a name="install-sql-server-with-sysprep"></a>SysPrep을 사용하여 SQL Server 설치
@@ -23,7 +23,7 @@ ms.locfileid: "67990955"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 관련 설치 동작에 액세스할 수 있습니다. **설치 센터**의 **고급** 페이지에는 **독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이미지 준비**와 **독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스의 이미지 완료**라는 두 옵션이 있습니다. [준비](#prepare) 및 [완료](#complete) 섹션에서는 설치 프로세스에 대해 자세히 설명합니다. 자세한 내용은 [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)을 참조하세요. 
   
-명령 프롬프트 또는 구성 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 준비하고 완료할 수도 있습니다. 참조 항목:  
+명령 프롬프트 또는 구성 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 준비하고 완료할 수도 있습니다. 자세한 내용은 다음을 참조하세요.  
   
 - [명령 프롬프트에서 SQL Server 설치](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "67990955"
   
 3. Windows 장애 조치(Failover) 클러스터를 만듭니다. 
   
-4. 모든 노드에서 **/ACTION=PrepareFailoverCluster** 를 사용하여 setup.exe를 실행합니다. 예를 들어  
+4. 모든 노드에서 **/ACTION=PrepareFailoverCluster** 를 사용하여 setup.exe를 실행합니다. 다음은 그 예입니다.  
   
     ```  
     setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName=<InstanceName> /Features=SQLEngine  /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx"  /IACCEPTSQLSERVERLICENSETERMS  
@@ -111,7 +111,7 @@ ms.locfileid: "67990955"
   
 10. **이미지 준비 규칙** 페이지에서 시스템 구성 검사기가 설치를 계속하기 전에 컴퓨터의 시스템 상태를 확인합니다. **자세한 정보 표시**를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기**를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다. 
   
-11. 인스턴스 구성 페이지에서 해당 인스턴스의 인스턴스 ID를 지정합니다. 계속하려면 **다음** 을 클릭합니다. 
+11. 인스턴스 구성 페이지에서 해당 인스턴스의 인스턴스 ID를 지정합니다. **다음**을 클릭하여 계속합니다. 
   
      **인스턴스 ID** — 인스턴스 ID는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 설치 디렉터리 및 레지스트리 키를 식별하는 데 사용됩니다. 이는 기본 인스턴스와 명명된 인스턴스에 모두 해당됩니다. 준비 인스턴스가 완료 단계 중에 기본 인스턴스로 완료되면 MSSQLSERVER가 인스턴스 이름을 덮어쓰고 인스턴스 ID는 지정한 대로 유지됩니다. 
   
@@ -160,7 +160,7 @@ ms.locfileid: "67990955"
     > [!NOTE]  
     >  설치하는 제품 버전에 사용할 수 있는 기능을 추가할 수 있습니다. 자세한 내용은 [SQL Server의 버전과 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-2017.md)을 참조하세요.  
   
-9. 인스턴스 구성 페이지에서 준비 인스턴스의 인스턴스 이름을 지정합니다. 이것은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]구성을 완료한 인스턴스의 이름입니다. 계속하려면 **다음** 을 클릭합니다. 
+9. 인스턴스 구성 페이지에서 준비 인스턴스의 인스턴스 이름을 지정합니다. 이것은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]구성을 완료한 인스턴스의 이름입니다. **다음**을 클릭하여 계속합니다. 
   
      **인스턴스 ID** — 인스턴스 ID는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 설치 디렉터리 및 레지스트리 키를 식별하는 데 사용됩니다. 이는 기본 인스턴스와 명명된 인스턴스에 모두 해당됩니다. 준비 인스턴스가 완료 단계 중에 기본 인스턴스로 완료되면 MSSQLSERVER가 인스턴스 이름을 덮어쓰고 인스턴스 ID는 준비 단계에서 지정한 대로 유지됩니다. 
   
@@ -263,7 +263,7 @@ ms.locfileid: "67990955"
   
 4. **인스턴스 선택** 페이지에서 수정할 준비 인스턴스를 선택합니다. PreparedInstanceID 인스턴스를 선택하면 준비 인스턴스의 이름이 "구성되지 않은 PreparedInstanceID"로 표시됩니다. 
   
-5. **기능 선택** 페이지가 나타나면 지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 제거할 기능을 지정합니다. 계속하려면 **다음** 을 클릭합니다. 
+5. **기능 선택** 페이지가 나타나면 지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 제거할 기능을 지정합니다. **다음**을 클릭하여 계속합니다. 
   
 6. 작업을 성공적으로 완료할 수 있는지 확인하기 위해 제거 규칙이 실행됩니다. 
   
@@ -285,7 +285,7 @@ ms.locfileid: "67990955"
   
 4. **인스턴스 선택** 페이지에서 수정할 준비 인스턴스를 선택합니다. PreparedInstanceID 인스턴스를 선택하면 준비 인스턴스의 이름이 "구성되지 않은 PreparedInstanceID"로 표시됩니다. 
   
-5. **기능 선택** 페이지가 나타나면 지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 제거할 기능을 지정합니다. 계속하려면 **다음** 을 클릭합니다. 
+5. **기능 선택** 페이지가 나타나면 지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 제거할 기능을 지정합니다. **다음**을 클릭하여 계속합니다. 
   
 6. **제거 규칙** 페이지에서 작업을 성공적으로 완료할 수 있는지 확인하기 위해 설치 프로그램이 규칙을 실행합니다. 
   

@@ -16,10 +16,10 @@ ms.assetid: d198c866-78f4-4a50-ae15-333160645815
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bb28965af992a19864ccf2e6959decd778468403
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296497"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>스크립트 구성 요소를 사용하여 ODBC 대상 만들기
@@ -33,7 +33,7 @@ ms.locfileid: "71296497"
 >  여러 데이터 흐름 태스크 및 여러 패키지에서 쉽게 다시 사용할 수 있는 구성 요소를 만들려면 이 스크립트 구성 요소 예제에 있는 코드를 바탕으로 사용자 지정 데이터 흐름 구성 요소를 만들어 보십시오. 자세한 내용은 [사용자 지정 데이터 흐름 구성 요소 개발](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
- 다음 예에서는 기존 ODBC 연결 관리자를 사용하여 데이터 흐름에서 받은 데이터를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 저장하는 대상 구성 요소를 만드는 방법을 보여 줍니다.  
+ 다음 예제에서는 기존 ODBC 연결 관리자를 사용하여 데이터 흐름에서 받은 데이터를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 저장하는 대상 구성 요소를 만드는 방법을 보여 줍니다.  
   
  이 예는 [스크립트 구성 요소를 사용하여 대상 만들기](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md) 항목에서 예로 보여 준 사용자 지정 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 대상의 수정된 버전입니다. 그러나 이 예에서 사용자 지정 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 대상은 ODBC 연결 관리자를 사용하고 데이터를 ODBC 대상에 저장하도록 수정되었습니다. 이러한 수정 내용에는 다음과 같은 변경 내용도 포함됩니다.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "71296497"
   
 5.  **스크립트 변환 편집기**를 엽니다. **입력 열** 페이지에서 **AddressID** 및 **City** 열을 선택합니다.  
   
-6.  **입/출력** 페이지에서 입력의 이름을 **MyAddressInput**과 같이 보다 알기 쉬운 이름으로 바꿉니다.  
+6.  **입/출력** 페이지에서 입력의 이름을 **MyAddressInput**과 같이 더 알기 쉬운 이름으로 바꿉니다.  
   
 7.  **연결 관리자** 페이지에서 **MyODBCConnectionManager**와 같이 알기 쉬운 이름으로 ODBC 연결 관리자를 추가하거나 만듭니다.  
   

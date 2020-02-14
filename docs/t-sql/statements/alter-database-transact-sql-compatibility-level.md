@@ -24,12 +24,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0d65bcb7db0bc0628d1c7b40d21e9b2089ad285c
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.openlocfilehash: 7ed32cf93d5bbf13580fc15d649ad403b98524cf
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74127694"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909653"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE(Transact-SQL) 호환성 수준
 
@@ -71,8 +71,7 @@ COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 } 데이터베
 > [!IMPORTANT]
 > SQL Server 및 Azure SQL Database의 데이터베이스 엔진 버전 번호는 서로 비교할 수 없으며 이러한 개별 제품에 대한 내부 빌드 번호에 해당합니다. Azure SQL Database용 데이터베이스 엔진은 SQL Server 데이터베이스 엔진과 동일한 코드 베이스를 기준으로 합니다. 가장 중요한 사실은 Azure SQL Database의 데이터베이스 엔진에 항상 최신 SQL 데이터베이스 엔진 비트가 있다는 것입니다. Azure SQL Database 버전 12는 SQL Server 버전 15보다 최신 버전입니다.
 
-## <a name="remarks"></a>Remarks
-
+## <a name="remarks"></a>설명
 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치의 경우 기본 호환성 수준은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 버전과 관련됩니다. 새로운 데이터베이스는 **model** 데이터베이스의 호환성 수준이 이보다 낮지 않은 한 이 수준으로 설정됩니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 첨부되거나 복구된 데이터베이스를 업그레이드할 때 데이터베이스의 호환성 수준이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 해당 인스턴스에 대해 허용된 최소 이상이면 기존 호환성 수준이 유지됩니다. [!INCLUDE[ssde_md](../../includes/ssde_md.md)]에 의해 허용된 수준보다 낮은 호환성 수준으로 데이터베이스를 이동하면 데이터베이스를 허용된 가장 낮은 호환성 수준으로 자동 설정합니다. 이는 시스템 및 사용자 데이터베이스 모두에 적용됩니다.
 
 데이터베이스가 연결 또는 복원된 경우, 그리고 현재 위치 업그레이드 이후에 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]에서 아래 동작이 예상됩니다.
@@ -152,7 +151,9 @@ SELECT name, compatibility_level FROM sys.databases;
 ## <a name="differences-between-compatibility-levels"></a>호환성 수준 간 차이
 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치의 경우 [이 표](#supported-dbcompats)에 표시된 것처럼 기본 호환성 수준은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 버전과 관련됩니다. 새 개발 작업의 경우 항상 최신 데이터베이스 호환성 수준에서 애플리케이션을 인증하도록 계획합니다.
 
-그러나 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 연결되거나 복원된 데이터베이스는 기존 호환성 수준을 유지하므로 데이터베이스 호환성 수준은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와의 호환성도 제공합니다(허용되는 최소 호환성 수준보다 높거나 같은 경우). 이 내용은 이 문서의 [이전 버전과의 호환을 위해 호환성 수준 사용y](#backwardCompat) 섹션에 설명되어 있습니다.
+새 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문은 사용자 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드와의 충돌을 생성하여 기존 애플리케이션을 중단할 수 있는 경우를 제외하고 데이터베이스 호환성 수준으로 제어되지 않습니다. 관련 예외는 특정 호환성 수준 간의 차이점을 간략하게 설명하는 이 아티클의 다음 섹션에 나와 있습니다.
+
+이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 연결되거나 복원된 데이터베이스는 기존 호환성 수준을 유지하므로 데이터베이스 호환성 수준은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와의 호환성도 제공합니다(허용되는 최소 호환성 수준보다 높거나 같은 경우). 이 내용은 이 문서의 [이전 버전과의 호환을 위해 호환성 수준 사용y](#backwardCompat) 섹션에 설명되어 있습니다.
 
 데이터베이스 호환성 수준 130부터 쿼리 계획에 영향을 주는 새로운 수정 내용 및 기능은 기본 호환성 수준이라고도 하는 사용 가능한 최신 호환성 수준에만 추가되었습니다. 새 쿼리 최적화 동작을 통해 도입된 잠재적 쿼리 계획 변경으로 인해 업그레이드 중에 성능 저하가 발생하는 위험을 최소화하기 위한 것입니다. 
 
@@ -175,9 +176,9 @@ SELECT name, compatibility_level FROM sys.databases;
     
     |DE(데이터베이스 엔진) 버전|데이터베이스 호환성 수준|TF 4199|모든 이전 데이터베이스 호환성 수준의 QO 변경 내용|RTM 이후 DE 버전에 대한 QO 변경 내용|
     |----------|----------|---|------------|--------|
-    |13([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])|100 ~ 120<br /><br /><br />130|Off<br />위치<br /><br />Off<br />위치|**사용 안 함**<br />설정<br /><br />**Enabled**<br />설정|사용 안 함<br />설정<br /><br />사용 안 함<br />설정|
-    |14([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])|100 ~ 120<br /><br /><br />130<br /><br /><br />140|Off<br />위치<br /><br />Off<br />위치<br /><br />Off<br />위치|**사용 안 함**<br />설정<br /><br />**Enabled**<br />설정<br /><br />**Enabled**<br />설정|사용 안 함<br />설정<br /><br />사용 안 함<br />설정<br /><br />사용 안 함<br />설정|
-    |15([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) 및 12([!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])|100 ~ 120<br /><br /><br />130 ~ 140<br /><br /><br />150|Off<br />위치<br /><br />Off<br />위치<br /><br />Off<br />위치|**사용 안 함**<br />설정<br /><br />**Enabled**<br />설정<br /><br />**Enabled**<br />설정|사용 안 함<br />설정<br /><br />사용 안 함<br />설정<br /><br />사용 안 함<br />설정|
+    |13([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])|100 ~ 120<br /><br /><br />130|꺼짐<br />설정<br /><br />꺼짐<br />설정|**사용 안 함**<br />사용<br /><br />**Enabled**<br />사용|사용 안 함<br />사용<br /><br />사용 안 함<br />사용|
+    |14([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])|100 ~ 120<br /><br /><br />130<br /><br /><br />140|꺼짐<br />설정<br /><br />꺼짐<br />설정<br /><br />꺼짐<br />설정|**사용 안 함**<br />사용<br /><br />**Enabled**<br />사용<br /><br />**Enabled**<br />사용|사용 안 함<br />사용<br /><br />사용 안 함<br />사용<br /><br />사용 안 함<br />사용|
+    |15([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) 및 12([!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])|100 ~ 120<br /><br /><br />130 ~ 140<br /><br /><br />150|꺼짐<br />설정<br /><br />꺼짐<br />설정<br /><br />꺼짐<br />설정|**사용 안 함**<br />사용<br /><br />**Enabled**<br />사용<br /><br />**Enabled**<br />사용|사용 안 함<br />사용<br /><br />사용 안 함<br />사용<br /><br />사용 안 함<br />사용|
     
     > [!IMPORTANT]
     > 잘못된 결과 또는 액세스 위반 오류를 해결하는 쿼리 최적화 프로그램 수정 내용은 추적 플래그 4199로 보호되지 않습니다. 이러한 수정 사항은 선택 사항으로 간주되지 않습니다.
@@ -192,11 +193,11 @@ SELECT name, compatibility_level FROM sys.databases;
     
     |데이터베이스 엔진 버전|데이터베이스 호환성 수준|새 버전 CE 변경 내용|
     |----------|--------|-------------|
-    |13([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])|< 130<br />130|사용 안 함<br />설정|
-    |14([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])<sup>1</sup>|< 140<br />140|사용 안 함<br />설정|
-    |15 ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])<sup>1</sup>|< 150<br />150|사용 안 함<br />설정|
+    |13([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])|< 130<br />130|사용 안 함<br />사용|
+    |14([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])<sup>1</sup>|< 140<br />140|사용 안 함<br />사용|
+    |15 ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])<sup>1</sup>|< 150<br />150|사용 안 함<br />사용|
     
-    <sup>1</sup> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에도 적용됩니다.
+    <sup>1</sup>[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에도 적용됩니다.
     
 > [!IMPORTANT]
 > 특정 호환성 수준 간의 다른 차이점은 이 문서의 다음 섹션에 제공됩니다.
@@ -285,9 +286,9 @@ SQL Server 2017 이전의 SQL Server 이전 버전에서 추적 플래그 4199�
 
 |호환성 수준 설정 90|호환성 수준 설정 100|영향력|
 |----------------------------------------|-----------------------------------------|---------------------------|
-|세션 수준 설정과 상관없이 다중 문 테이블 반환 함수를 만든 경우 이 함수에 대해 QUOTED_IDENTIFER 설정은 항상 ON으로 설정됩니다.|다중 문 테이블 반환 함수를 만든 경우 QUOTED IDENTIFIER 세션 설정이 적용됩니다.|보통|
-|파티션 함수를 만들거나 바꾸면 언어 설정을 US_English로 가정하고 함수의 **datetime** 및 **smalldatetime** 리터럴을 평가합니다.|현재 언어 설정은 파티션 함수에서 **datetime** 및 **smalldatetime** 리터럴을 평가하는 데 사용됩니다.|보통|
-|`FOR BROWSE` 절이 `INSERT` 및 `SELECT INTO` 문에서 허용되고 무시됩니다.|`FOR BROWSE` 절이 `INSERT` 및 `SELECT INTO` 문에서 허용되지 않습니다.|보통|
+|세션 수준 설정과 상관없이 다중 문 테이블 반환 함수를 만든 경우 이 함수에 대해 QUOTED_IDENTIFER 설정은 항상 ON으로 설정됩니다.|다중 문 테이블 반환 함수를 만든 경우 QUOTED IDENTIFIER 세션 설정이 적용됩니다.|중간|
+|파티션 함수를 만들거나 바꾸면 언어 설정을 US_English로 가정하고 함수의 **datetime** 및 **smalldatetime** 리터럴을 평가합니다.|현재 언어 설정은 파티션 함수에서 **datetime** 및 **smalldatetime** 리터럴을 평가하는 데 사용됩니다.|중간|
+|`FOR BROWSE` 절이 `INSERT` 및 `SELECT INTO` 문에서 허용되고 무시됩니다.|`FOR BROWSE` 절이 `INSERT` 및 `SELECT INTO` 문에서 허용되지 않습니다.|중간|
 |전체 텍스트 조건자는 `OUTPUT` 절에서 허용됩니다.|전체 텍스트 조건자는 `OUTPUT` 절에서 허용되지 않습니다.|낮음|
 |`CREATE FULLTEXT STOPLIST`, `ALTER FULLTEXT STOPLIST` 및 `DROP FULLTEXT STOPLIST`는 지원되지 않습니다. 시스템 중지 목록은 자동으로 새로운 전체 텍스트 인덱스와 연결됩니다.|`CREATE FULLTEXT STOPLIST`, `ALTER FULLTEXT STOPLIST` 및 `DROP FULLTEXT STOPLIST`는 지원됩니다.|낮음|
 |`MERGE`는 예약 키워드가 아닙니다.|MERGE는 완전 예약 키워드입니다. `MERGE` 문은 호환성 수준 100 및 90 모두에서 지원됩니다.|낮음|
@@ -333,7 +334,7 @@ SQL Server 2017 이전의 SQL Server 이전 버전에서 추적 플래그 4199�
 
 ## <a name="examples"></a>예
 
-### <a name="a-changing-the-compatibility-level"></a>1\. 호환성 수준 변경
+### <a name="a-changing-the-compatibility-level"></a>A. 호환성 수준 변경
 
 다음 예제에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 호환성 수준을 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]의 기본값인 110으로 변경합니다.
 
@@ -351,7 +352,7 @@ FROM sys.databases
 WHERE name = db_name();
 ```
 
-### <a name="b-ignoring-the-set-language-statement-except-under-compatibility-level-120"></a>2\. 호환성 수준이 120 미만일 때를 제외하고 SET LANGUAGE 문을 무시합니다.
+### <a name="b-ignoring-the-set-language-statement-except-under-compatibility-level-120"></a>B. 호환성 수준이 120 미만일 때를 제외하고 SET LANGUAGE 문을 무시합니다.
 
 다음 쿼리에서는 호환성 수준이 120 미만일 때를 제외하고 `SET LANGUAGE` 문을 무시합니다.
 

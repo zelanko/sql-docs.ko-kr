@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 5d745f22-9c6b-4e11-8c62-bc50e9a8bf38
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 50a53d5c4c8a805a16b4ddc186531f1bf89509dc
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: c7199f12ac00d58f629096aa435c05eb862c4c51
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769517"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287180"
 ---
 # <a name="snapshot-replication"></a>Snapshot Replication
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "68769517"
   
  다음 그림에서는 스냅샷 복제의 주요 구성 요소를 보여 줍니다.  
   
- ![스냅샷 복제 구성 요소 및 데이터 흐름](../../relational-databases/replication/media/snapshot.gif "Snapshot replication components and data flow")  
+ ![스냅샷 복제 구성 요소 및 데이터 흐름](../../relational-databases/replication/media/snapshot.gif "스냅샷 복제 구성 요소 및 데이터 흐름")  
   
 ##  <a name="SnapshotAgent"></a> 스냅샷 에이전트  
  병합 복제의 경우 스냅샷 에이전트가 실행될 때마다 스냅샷이 생성됩니다. 트랜잭션 복제의 경우 게시 속성 **immediate_sync**의 설정에 따라 스냅샷 생성이 달라집니다. 이 속성을 TRUE(새 게시 마법사 사용 시 기본 설정)로 설정하면 스냅샷 에이전트가 실행될 때마다 스냅샷이 생성되고 언제든지 스냅샷을 구독자에 적용할 수 있습니다. 이 속성을 FALSE( **sp_addpublication**사용 시 기본 설정)로 설정하면 스냅샷 에이전트가 마지막으로 실행된 후에 새 구독이 추가된 경우에만 스냅샷이 생성됩니다. 구독자는 동기화하기 위해 스냅샷 에이전트가 완료될 때까지 기다려야 합니다.  

@@ -20,10 +20,10 @@ ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f064ad734e90d2748b959e7fdc9d5868b22c25cf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293116"
 ---
 # <a name="data-mining-model-training-destination"></a>데이터 마이닝 모델 학습 대상
@@ -41,7 +41,7 @@ ms.locfileid: "71293116"
   
  이 대상에는 하나의 입력이 포함되며 출력은 포함되지 않습니다.  
   
- 데이터 마이닝 모델 학습 대상은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 연결 관리자를 사용하여 학습 대상의 마이닝 구조와 마이닝 모델이 포함된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스나 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 연결합니다. 자세한 내용은 [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md)을 참조하세요.  
+ 데이터 마이닝 모델 학습 대상은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 연결 관리자를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 또는 대상이 학습하는 마이닝 구조와 마이닝 모델이 포함된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 연결합니다. 자세한 내용은 [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md)을 참조하세요.  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "71293116"
   **데이터 마이닝 모델 학습 편집기** 대화 상자의 **연결** 페이지를 사용하여 성향을 습득할 마이닝 모델을 선택할 수 있습니다.  
   
 ### <a name="options"></a>옵션  
- **ODBC 대상 편집기**  
+ **Connection manager**  
  기존 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 연결 목록에서 선택하거나 아래에서 설명하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 새로 만들기 **단추를 사용하여 새** 연결을 만듭니다.  
   
  **새로 만들기**  
@@ -66,7 +66,7 @@ ms.locfileid: "71293116"
  **마이닝 구조**  
  사용 가능한 마이닝 구조 목록에서 선택하거나 **새로 만들기**를 클릭하여 새 구조를 만듭니다.  
   
- **단추를 사용하여 새**  
+ **새로 만들기**  
  **데이터 마이닝 마법사**를 사용하여 새 마이닝 구조와 마이닝 모델을 만듭니다.  
   
  **마이닝 모델**  

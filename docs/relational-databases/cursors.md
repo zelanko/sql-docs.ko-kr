@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: de565a5d34ddbf8388e2c20a564bc8c872a0a1c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140807"
 ---
 # <a name="cursors"></a>커서
@@ -88,7 +88,7 @@ API 커서는 OLE DB와 ODBC의 API 커서 함수를 지원합니다. API 서버
 ### <a name="keyset"></a>Keyset  
 키 집합 커서의 멤버 자격과 행 순서는 커서가 열릴 때 고정됩니다. 키 집합 커서는 키 집합이라는 고유 식별자 집합으로 제어되며 키는 결과 집합에서 행을 고유하게 식별하는 열 집합으로 작성됩니다. 키 세트는 커서가 열려 있을 때 `SELECT` 문의 조건에 맞는 모든 행의 키 값 세트입니다. 키 집합 커서의 키 집합은 커서가 열려 있을 때 **tempdb** 에 작성됩니다.  
   
-### <a name="dynamic"></a>Dynamic  
+### <a name="dynamic"></a>동적  
 동적 커서는 정적 커서의 반대 개념입니다. 커서를 통해 스크롤할 때 동적 커서는 행의 모든 변경 내용을 결과 집합에 반영합니다. 따라서 인출할 때마다 결과 집합에서 행의 데이터 값, 순서 및 멤버 자격이 변경될 수 있습니다. 모든 사용자가 실행한 모든 `UPDATE`, `INSERT` 및 `DELETE` 문은 커서를 통해 볼 수 있습니다. **SQLSetPos** 같은 API 함수 또는 [!INCLUDE[tsql](../includes/tsql-md.md)] `WHERE CURRENT OF` 절을 사용하여 커서를 통해 업데이트한 경우 즉시 그 결과를 볼 수 있습니다. 커서 트랜잭션 격리 수준을 커밋되지 않은 읽기로 설정한 경우를 제외하고는 커서 외부에서 수행된 업데이트는 커밋될 때까지 볼 수 없습니다. 격리 수준에 대한 자세한 내용은 [트랜잭션 격리 수준 설정&#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)을 참조하세요. 
  
 > [!NOTE]

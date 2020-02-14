@@ -25,10 +25,10 @@ ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f0c5a07b7ff618b3857d9e67b11d50a5a29e8248
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67894785"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR(Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "67894785"
 
   스크롤 동작, 커서가 작동하는 결과 집합을 구축하는 데 사용되는 쿼리 등 [!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 커서의 특성을 정의합니다. `DECLARE CURSOR`는 ISO 표준 기반의 구문과 [!INCLUDE[tsql](../../includes/tsql-md.md)] 확장 세트를 사용하는 구문을 모두 허용합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -91,7 +91,7 @@ GLOBAL
 >  `GLOBAL` 또는 `LOCAL` 중 하나도 지정하지 않으면 기본값은 **default to local cursor** 데이터베이스 옵션의 설정에 따라 결정됩니다.  
   
 FORWARD_ONLY  
-커서가 앞으로만 이동하고 첫 번째 행에서 마지막 행까지 스크롤할 수 있도록 지정합니다. 유일하게 지원되는 인출 옵션은 `FETCH NEXT`입니다. 현재 사용자가 만들거나 다른 사용자가 커밋하여 결과 집합의 행에 영향을 주는 모든 삽입, 업데이트 및 삭제 문은 행을 페치할 때 볼 수 있습니다. 그러나 커서는 뒤로 스크롤할 수 없기 때문에 행이 페치된 후 데이터베이스 행의 변경 내용은 대부분 커서를 통해 볼 수 없습니다. 정방향 전용 커서는 기본적으로 동적이며, 이는 현재 행이 처리될 때 모든 변경 내용이 감지됨을 의미합니다. 이렇게 하면 커서가 더 빨리 열리고 결과 집합이 기본 테이블에 대한 업데이트를 표시하도록 설정할 수 있습니다. 정방향 전용 커서는 역방향 스크롤을 지원하지 않지만 애플리케이션은 커서를 닫았다가 다시 열면 결과 집합의 시작 부분으로 돌아갈 수 있습니다. `STATIC`, `KEYSET` 또는 `DYNAMIC` 키워드를 사용하지 않고 `FORWARD_ONLY`를 지정하면 커서는 동적 커서로 작동합니다. `FORWARD_ONLY` 또는 `SCROLL` 중 하나도 지정하지 않으면 `STATIC`, `KEYSET` 또는 `DYNAMIC` 키워드를 지정하지 않는 이상 기본값은 `FORWARD_ONLY`입니다. `STATIC`, `KEYSET` 및 `DYNAMIC` 커서는 기본적으로 `SCROLL`입니다. ODBC 및 ADO 같은 데이터베이스 API와는 달리, `FORWARD_ONLY`는 `STATIC`, `KEYSET` 및 `DYNAMIC` [!INCLUDE[tsql](../../includes/tsql-md.md)] 커서에 지원됩니다.  
+커서가 앞으로만 이동하고 첫 번째 행에서 마지막 행까지 스크롤할 수 있도록 지정합니다. 유일하게 지원되는 인출 옵션은 `FETCH NEXT`입니다. 현재 사용자가 만들거나 다른 사용자가 커밋하여 결과 집합의 행에 영향을 주는 모든 삽입, 업데이트 및 삭제 문은 행을 페치할 때 볼 수 있습니다. 그러나 커서는 뒤로 스크롤할 수 없기 때문에 행이 페치된 후 데이터베이스 행의 변경 내용은 대부분 커서를 통해 볼 수 없습니다. 정방향 전용 커서는 기본적으로 동적이며, 이는 현재 행이 처리될 때 모든 변경 내용이 감지됨을 의미합니다. 이렇게 하면 커서가 더 빨리 열리고 결과 집합이 기본 테이블에 대한 업데이트를 표시하도록 설정할 수 있습니다. 정방향 전용 커서는 역방향 스크롤을 지원하지 않지만 애플리케이션은 커서를 닫았다가 다시 열면 결과 집합의 시작 부분으로 돌아갈 수 있습니다. `STATIC`, `KEYSET` 또는 `DYNAMIC` 키워드를 사용하지 않고 `FORWARD_ONLY`를 지정하면 커서는 동적 커서로 작동합니다. `FORWARD_ONLY` 또는 `SCROLL` 중 하나도 지정하지 않으면 `STATIC`, `KEYSET` 또는 `DYNAMIC` 키워드를 지정하지 않는 이상 기본값은 `FORWARD_ONLY`입니다. `STATIC`, `KEYSET` 및 `DYNAMIC` 커서는 기본적으로 `SCROLL`입니다. ODBC, ADO 등의 데이터베이스 API와는 달리, `FORWARD_ONLY`는 `STATIC`, `KEYSET` 및 `DYNAMIC` [!INCLUDE[tsql](../../includes/tsql-md.md)] 커서에서 지원됩니다.  
    
  STATIC  
 커서가 처음 열릴 때와 같은 결과 집합을 항상 표시하고 커서가 사용할 데이터의 임시 복사본을 만들도록 지정합니다. 커서에 대한 모든 요청은 **tempdb**의 이 임시 테이블에서 응답됩니다. 따라서 기본 테이블에 대한 삽입, 업데이트 및 삭제는 이 커서로 만들어진 페치에 의해 반환되는 데이터에 반영되지 않으며, 이 커서는 커서가 열린 후에 결과 집합의 멤버 자격, 순서 또는 값에 대한 변경 내용을 검색하지 못합니다. 정적 커서는 자체 업데이트, 삭제 및 삽입을 검색할 수 있지만 필수 사항은 아닙니다. 예를 들어 정적 커서가 행을 페치하고 다른 애플리케이션이 해당 행을 업데이트한다고 가정합니다. 애플리케이션이 정적 커서에서 행을 다시 페치하면 다른 애플리케이션에서 변경한 내용에도 불구하고 표시되는 값은 변경되지 않습니다. 모든 유형의 스크롤이 지원됩니다. 
@@ -137,7 +137,7 @@ OPTIMISTIC
 FOR UPDATE [OF *column_name* [ **,** ...*n*]]  
 커서 내에서 업데이트할 수 있는 열을 정의합니다. `OF <column_name> [, <... n>]`이 제공된 경우 나열된 열만 수정이 가능합니다. `READ_ONLY` 동시성 옵션이 지정되지 않은 경우 열 목록 없이 `UPDATE`를 지정하면 모든 열을 업데이트할 수 있습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 `DECLARE CURSOR`는 스크롤 동작, 커서가 작동하는 결과 세트를 구축하는 데 사용되는 쿼리 등 [!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 커서의 특성을 정의합니다. `OPEN` 문은 결과 세트를 채우고 `FETCH`는 결과 세트에서 행을 반환합니다. `CLOSE` 문은 커서와 연결된 현재 결과 세트를 해제합니다. `DEALLOCATE` 문은 커서에서 사용된 리소스를 해제합니다.  
   
 `DECLARE CURSOR` 문의 첫 번째 형식은 커서 동작을 선언하기 위해 ISO 구문을 사용합니다. `DECLARE CURSOR` 문의 두 번째 형식은 ODBC 또는 ADO의 데이터베이스 API 커서 함수에서 사용된 것과 동일한 커서 형식을 사용하여 커서를 정의할 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 확장을 사용합니다.  
@@ -156,7 +156,7 @@ FOR UPDATE [OF *column_name* [ **,** ...*n*]]
   
 커서를 선언한 후 다음 시스템 저장 프로시저를 사용하여 커서의 특징을 확인할 수 있습니다.  
   
-|시스템 저장 프로시저|설명|  
+|시스템 저장 프로시저|Description|  
 |------------------------------|-----------------|  
 |**sp_cursor_list**|현재 연결에서 볼 수 있는 커서 목록과 그 특성을 반환합니다.|  
 |**sp_describe_cursor**|정방향 전용 커서, 스크롤 커서 등의 커서 특성을 설명합니다.|  
@@ -174,7 +174,7 @@ FOR UPDATE [OF *column_name* [ **,** ...*n*]]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-simple-cursor-and-syntax"></a>1\. 단순 커서 및 구문 사용  
+### <a name="a-using-simple-cursor-and-syntax"></a>A. 단순 커서 및 구문 사용  
 
 다음 커서를 열 때 생성된 결과 집합에는 테이블에 있는 모든 행과 모든 열이 포함됩니다. 이 커서는 업데이트가 가능하며 이 커서에 대해 수행한 인출에는 모든 업데이트와 삭제 내용이 나타납니다. `FETCH NEXT` 옵션을 지정하지 않았으므로 `SCROLL` 인출만 사용할 수 있습니다.  
  
@@ -185,7 +185,7 @@ OPEN vend_cursor
 FETCH NEXT FROM vend_cursor;  
 ```  
   
-### <a name="b-using-nested-cursors-to-produce-report-output"></a>2\. 중첩된 커서를 사용하여 보고서 출력 생성  
+### <a name="b-using-nested-cursors-to-produce-report-output"></a>B. 중첩된 커서를 사용하여 보고서 출력 생성  
  다음 예에서는 커서를 중첩시켜 복잡한 보고서를 생성하는 방법을 보여 줍니다. 각 공급업체에 대해 내부 커서가 선언됩니다.  
   
 ```sql  

@@ -5,17 +5,17 @@ ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 01/10/2020
+ms.date: 01/23/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: bf888d42215f3a4ee7c44b782b82c55f85afa041
-ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
+ms.openlocfilehash: be817f1fffd734dcf86f3b35d3215decbc9eb28d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75884032"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76706293"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>SQL Server 가용성 그룹에 대해 RHEL 클러스터 구성
 
@@ -50,7 +50,7 @@ ms.locfileid: "75884032"
    
    >Linux 클러스터는 펜싱을 사용하여 클러스터를 알려진 상태로 되돌립니다. 펜싱을 구성하는 방법은 배포 및 환경에 따라 달라집니다. 현재, 일부 클라우드 환경에서는 펜싱을 사용할 수 없습니다. 자세한 내용은 [RHEL 고가용성 클러스터의 지원 정책 - 가상화 플랫폼](https://access.redhat.com/articles/29440)을 참조하세요.
 
-5. [가용성 그룹을 클러스터의 리소스로 추가합니다](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource).  
+4. [가용성 그룹을 클러스터의 리소스로 추가합니다](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource).  
 
 ## <a name="configure-high-availability-for-rhel"></a>RHEL에 대해 고가용성 구성
 
@@ -84,8 +84,16 @@ RHEL에 대해 고가용성을 구성하려면 고가용성 구독을 사용하�
 
 1. 리포지토리를 사용하도록 설정합니다.
 
+   **RHEL 7**
+
    ```bash
    sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
+   ```
+
+   **RHEL 8**
+
+   ```bash
+   sudo subscription-manager repos --enable=rhel-8-for-x86_64-highavailability-rpms
    ```
 
 자세한 내용은 [Pacemaker - The Open Source, High Availability Cluster](https://clusterlabs.org/pacemaker/)(Pacemaker - 오픈 소스 고가용성 클러스터)를 참조하세요. 
@@ -161,12 +169,19 @@ Pacemaker 클러스터 속성에 대한 자세한 내용은 [Pacemaker Clusters 
 
 가용성 그룹 리소스를 만들려면 `pcs resource create` 명령을 사용하고 리소스 속성을 설정합니다. 다음 명령은 이름이 `ag1`인 가용성 그룹에 대해 `ocf:mssql:ag` 마스터/슬레이브 유형 리소스를 만듭니다.
 
+**RHEL 7**
+
 ```bash
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s master notify=true
 ```
 
-> [!NOTE]
-> **RHEL 8**의 가용성과 함께, 생성 구문이 변경되었습니다. **RHEL 8**을 사용하는 경우 용어 `master`가 `promotable`로 변경되었습니다. 위의 명령 대신 다음의 생성 명령을 사용합니다. `sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s promotable notify=true`
+**RHEL 8**
+
+**RHEL 8**의 가용성과 함께, 생성 구문이 변경되었습니다. **RHEL 8**을 사용하는 경우 용어 `master`가 `promotable`로 변경되었습니다. 위의 명령 대신 다음의 생성 명령을 사용합니다. 
+
+```bash
+sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s promotable notify=true
+```
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 

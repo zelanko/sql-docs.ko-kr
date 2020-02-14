@@ -26,10 +26,10 @@ ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 18e916c3f9a9d99ea177d0d266cb20bee44a3868
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064681"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY(Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "73064681"
 
   우선 순위 수준을 정의하고 우선 순위 수준을 할당할 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화를 결정하기 위한 조건 집합을 설정합니다. 우선 순위 수준은 대화 우선 순위에 지정된 계약 및 서비스 조합과 동일한 조합을 사용하는 모든 대화 엔드포인트에 할당됩니다. 우선 순위 값의 범위는 1(낮음)에서 10(높음) 사이입니다. 기본값은 5입니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -110,7 +110,7 @@ FOR CONVERSATION
  PRIORITY_LEVEL = { *PriorityValue* | **DEFAULT** }  
  대화 우선 순위에 지정된 계약 및 서비스를 사용하는 모든 대화 엔드포인트에 할당할 우선 순위를 지정합니다. *PriorityValue*는 1(가장 낮은 우선 순위)에서 10(가장 높은 우선 순위) 사이의 정수 리터럴이어야 합니다. 기본값은 5입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 대화 엔드포인트에 우선 순위 수준을 할당합니다. 우선 순위 수준은 엔드포인트와 연관된 작업의 우선 순위를 제어합니다. 각 대화에는 두 개의 대화 엔드포인트가 있습니다.  
   
 -   시작자 대화 엔드포인트는 대화의 한 쪽을 시작자 서비스 및 시작자 큐와 연결합니다. 시작자 대화 엔드포인트는 BEGIN DIALOG 문이 실행될 때 생성됩니다. 시작자 대화 엔드포인트와 연관된 작업에는 다음이 포함됩니다.  
@@ -163,7 +163,7 @@ FOR CONVERSATION
   
 ## <a name="examples"></a>예  
   
-### <a name="a-assigning-a-priority-level-to-both-directions-of-a-conversation"></a>1\. 대화의 양쪽 방향에 우선 순위 수준 할당  
+### <a name="a-assigning-a-priority-level-to-both-directions-of-a-conversation"></a>A. 대화의 양쪽 방향에 우선 순위 수준 할당  
  다음 두 대화 우선 순위는 `SimpleContract`와 `TargetService` 사이에서 `InitiatorAService`를 사용하는 모든 작업에 우선 순위 수준 3을 할당합니다.  
   
 ```  
@@ -181,7 +181,7 @@ CREATE BROKER PRIORITY TargetToInitiatorAPriority
          PRIORITY_LEVEL = 3);  
 ```  
   
-### <a name="b-setting-the-priority-level-for-all-conversations-that-use-a-contract"></a>2\. 계약을 사용하는 모든 대화의 우선 순위 수준 설정  
+### <a name="b-setting-the-priority-level-for-all-conversations-that-use-a-contract"></a>B. 계약을 사용하는 모든 대화의 우선 순위 수준 설정  
  `7`라는 계약을 사용하는 모든 작업에 우선 순위 수준 `SimpleContract`을 할당합니다. 이 경우 `SimpleContract`와 로컬 또는 원격 서비스를 모두 지정하는 다른 우선 순위가 없다고 가정합니다.  
   
 ```  
@@ -285,12 +285,12 @@ CREATE BROKER PRIORITY BronzePriority
   
 ## <a name="see-also"></a>참고 항목  
  [ALTER BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
- [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [BEGIN DIALOG CONVERSATION&#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [CREATE CONTRACT&#40;Transact-SQL&#41;](../../t-sql/statements/create-contract-transact-sql.md)   
  [CREATE QUEUE&#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md)   
  [CREATE SERVICE&#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   
  [DROP BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
- [GET CONVERSATION GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)   
+ [GET CONVERSATION GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)   
  [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)   
  [SEND &#40;Transact-SQL&#41;](../../t-sql/statements/send-transact-sql.md)   
  [sys.conversation_priorities&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  

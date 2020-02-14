@@ -19,10 +19,10 @@ ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 45ada0520d90c1c6e63adad4f9e62bf1ea31e270
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292414"
 ---
 # <a name="integration-services-data-types"></a>Integration Services 데이터 형식
@@ -32,11 +32,11 @@ ms.locfileid: "71292414"
 
   데이터가 패키지의 데이터 흐름으로 들어갈 때 데이터를 추출하는 원본은 데이터를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식으로 변환합니다. 숫자 데이터에는 숫자 데이터 형식이 지정되고, 문자열 데이터에는 문자 데이터 형식이, 그리고 날짜에는 날짜 데이터 형식이 지정됩니다. 또한 GUID 및 BLOB(Binary Large Object Block)과 같은 다른 데이터에는 해당 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식이 지정됩니다. 데이터에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식과 호환되지 않는 데이터 형식이 있는 경우에는 오류가 발생합니다.  
   
- 일부 데이터 흐름 구성 요소는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식과 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]의 관리 데이터 형식 간의 데이터 형식을 변환합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 와 관리 데이터 형식 간 매핑에 대한 자세한 내용은 [데이터 흐름의 데이터 형식 작업](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)을 참조하세요.  
+ 일부 데이터 흐름 구성 요소는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식과 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]의 관리형 데이터 형식 간에 데이터 형식을 변환합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 와 관리 데이터 형식 간 매핑에 대한 자세한 내용은 [데이터 흐름의 데이터 형식 작업](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)을 참조하세요.  
   
  다음 표에서는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식을 나열합니다. 이 표의 일부 데이터 형식에는 해당 형식에 적용되는 전체 자릿수 및 소수 자릿수 정보가 있습니다. 전체 자릿수 및 소수 자릿수에 대한 자세한 내용은 [전체 자릿수, 소수 자릿수 및 길이&#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)를 참조하세요.  
   
-|데이터 형식|설명|  
+|데이터 형식|Description|  
 |---------------|-----------------|  
 |DT_BOOL|부울 값입니다.|  
 |DT_BYTES|이진 데이터 값입니다. 길이는 가변적이고 최대 길이는 8000바이트입니다.|  
@@ -64,7 +64,7 @@ ms.locfileid: "71292414"
 |DT_UI4|4바이트의 부호 없는 정수입니다.|  
 |DT_UI8|8바이트의 부호 없는 정수입니다.|  
 |DT_WSTR|최대 길이가 4000자인 Null 종료 유니코드 문자열입니다. 열 값에 추가 Null 종결자가 들어 있으면 해당 문자열은 첫 번째 Null이 나타나는 위치에서 잘립니다.|  
-|DT_IMAGE|최대 크기가 2^31-1(2,147,483,647)바이트인 이진 값입니다. 의 관리 데이터 형식 간의 데이터 형식을 변환합니다.|  
+|DT_IMAGE|최대 크기가 2^31-1(2,147,483,647)바이트인 이진 값입니다. .|  
 |DT_NTEXT|최대 길이가 2^30-1(1,073,741,823)자인 유니코드 문자열입니다.|  
 |DT_TEXT|최대 길이가 2^31-1(2,147,483,647)자인 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/MBCS 문자열입니다.|  
   
@@ -113,7 +113,7 @@ ms.locfileid: "71292414"
   
 |DT_FILETIME 변환 대상|결과|  
 |-----------------------------|------------|  
-|DT_FILETIME|변경되지 않습니다.|  
+|DT_FILETIME|변경 없음|  
 |DT_DATE|데이터 형식을 변환합니다.|  
 |DT_DBDATE|시간 값을 제거합니다.|  
 |DT_DBTIME|날짜 값을 제거합니다.<br /><br /> 소수 자릿수가 DT_DBTIME 데이터 형식이 포함할 수 있는 소수 자릿수를 초과할 경우 소수 자릿수 초 값을 제거합니다. 소수 자릿수 초 값을 제거한 후 이 데이터 잘림에 대한 보고서를 생성합니다. 자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요.|  
@@ -127,7 +127,7 @@ ms.locfileid: "71292414"
 |DT_DATE 변환 대상|결과|  
 |-------------------------|------------|  
 |DT_FILETIME|데이터 형식을 변환합니다.|  
-|DT_DATE|변경되지 않습니다.|  
+|DT_DATE|변경 없음|  
 |DT_DBDATE|DT_DATA 데이터 형식이 나타내는 시간 값을 제거합니다.|  
 |DT_DBTIME|DT_DATE 데이터 형식이 나타내는 날짜 값을 제거합니다.|  
 |DT_DBTIME2|DT_DATE 데이터 형식이 나타내는 날짜 값을 제거합니다.|  
@@ -141,7 +141,7 @@ ms.locfileid: "71292414"
 |---------------------------|------------|  
 |DT_FILETIME|DT_FILETIME 데이터 형식의 시간 필드를 0으로 설정합니다.|  
 |DT_DATE|DT_DATE 데이터 형식의 시간 필드를 0으로 설정합니다.|  
-|DT_DBDATE|변경되지 않습니다.|  
+|DT_DBDATE|변경 없음|  
 |DT_DBTIME|DT_DBTIME 데이터 형식의 시간 필드를 0으로 설정합니다.|  
 |DT_DBTIME2|DT_DBTIME2 데이터 형식의 시간 필드를 0으로 설정합니다.|  
 |DT_DBTIMESTAMP|DT_DBTIMESTAMP 데이터 형식의 시간 필드를 0으로 설정합니다.|  
@@ -155,7 +155,7 @@ ms.locfileid: "71292414"
 |DT_FILETIME|DT_FILETIME 데이터 형식의 날짜 필드를 현재 날짜로 설정합니다.|  
 |DT_DATE|DT_DATE 데이터 형식의 날짜 필드를 현재 날짜로 설정합니다.|  
 |DT_DBDATE|DT_DBDATE 데이터 형식의 날짜 필드를 현재 날짜로 설정합니다.|  
-|DT_DBTIME|변경되지 않습니다.|  
+|DT_DBTIME|변경 없음|  
 |DT_DBTIME2|데이터 형식을 변환합니다.|  
 |DT_DBTIMESTAMP|DT_DBTIMESTAMP 데이터 형식의 날짜 필드를 현재 날짜로 설정합니다.|  
 |DT_DBTIMESTAMP2|DT_DBTIMESTAMP2 데이터 형식의 날짜 필드를 현재 날짜로 설정합니다.|  
@@ -183,7 +183,7 @@ ms.locfileid: "71292414"
 |DT_DBDATE|DT_DBTIMESTAMP 데이터 형식이 나타내는 시간 값을 제거합니다.|  
 |DT_DBTIME|DT_DBTIMESTAMP 데이터 형식이 나타내는 날짜 값을 제거합니다.<br /><br /> 소수 자릿수가 DT_DBTIME 데이터 형식이 포함할 수 있는 소수 자릿수 초의 자릿수를 초과할 경우 소수 자릿수 초 값을 제거합니다. 소수 자릿수 초 값을 제거한 후 이 데이터 잘림에 대한 보고서를 생성합니다. 자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요.|  
 |DT_DBTIME2|DT_DBTIMESTAMP 데이터 형식이 나타내는 날짜 값을 제거합니다.<br /><br /> 소수 자릿수가 DT_DBTIME2 데이터 형식이 포함할 수 있는 소수 자릿수 초의 자릿수를 초과할 경우 소수 자릿수 초 값을 제거합니다. 소수 자릿수 초 값을 제거한 후 이 데이터 잘림에 대한 보고서를 생성합니다. 자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요.|  
-|DT_DBTIMESTAMP|변경되지 않습니다.|  
+|DT_DBTIMESTAMP|변경 없음|  
 |DT_DBTIMESTAMP2|소수 자릿수가 DT_DBTIMESTAMP2 데이터 형식이 포함할 수 있는 소수 자릿수 초의 자릿수를 초과할 경우 소수 자릿수 초 값을 제거합니다. 소수 자릿수 초 값을 제거한 후 이 데이터 잘림에 대한 보고서를 생성합니다. 자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요.|  
 |DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET 데이터 형식의 표준 시간대 필드를 0으로 설정합니다.<br /><br /> 소수 자릿수가 DT_DBTIMESTAMPOFFSET 데이터 형식이 포함할 수 있는 소수 자릿수 초의 자릿수를 초과할 경우 소수 자릿수 초 값을 제거합니다. 소수 자릿수 초 값을 제거한 후 이 데이터 잘림에 대한 보고서를 생성합니다. 자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요.|  
   
@@ -226,31 +226,31 @@ ms.locfileid: "71292414"
 |---------------|--------------------------------------------|------------------------------|---------|---------------------------------|--------------------------|--------------------------|  
 |DT_BOOL|bit|bit|bit||||  
 |DT_BYTES|binary, varbinary, timestamp|binary, varbinary, timestamp|BigBinary, VarBinary|RAW|||  
-|DT_CY|smallmoney, money|smallmoney, money|Currency||||  
+|DT_CY|smallmoney, money|smallmoney, money|통화||||  
 |DT_DATE|||||||  
-|DT_DBDATE|[date&#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)|[date&#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)||날짜|날짜|날짜|  
-|DT_DBTIME||||TIMESTAMP|Time|Time|  
+|DT_DBDATE|[date&#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)|[date&#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)||date|date|date|  
+|DT_DBTIME||||timestamp|time|time|  
 |DT_DBTIME2|[time&#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md)(p)|[time&#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md)(p)|||||  
 |DT_DBTIMESTAMP|[datetime&#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md), [smalldatetime&#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)|[datetime&#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md), [smalldatetime&#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)|DateTime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
-|DT_DBTIMESTAMP2|[datetime2&#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)|[datetime2&#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)||TIMESTAMP|TIMESTAMP|TIMESTAMP|  
+|DT_DBTIMESTAMP2|[datetime2&#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)|[datetime2&#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)||timestamp|timestamp|timestamp|  
 |DT_DBTIMESTAMPOFFSET|[datetimeoffset&#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md)(p)|[datetimeoffset&#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md) (p)||timestampoffset|timestamp,<br /><br /> varchar|timestamp,<br /><br /> varchar|  
 |DT_DECIMAL|||||||  
 |DT_FILETIME|||||||  
-|DT_GUID|UNIQUEIDENTIFIER|UNIQUEIDENTIFIER|GUID||||  
+|DT_GUID|uniqueidentifier|uniqueidentifier|GUID||||  
 |DT_I1|||||||  
-|DT_I2|SMALLINT|SMALLINT|Short||smallint|SMALLINT|  
-|DT_I4|int|int|Long||INTEGER|INTEGER|  
-|DT_I8|BIGINT|BIGINT|||bigint|bigint|  
+|DT_I2|smallint|smallint|Short||SMALLINT|SMALLINT|  
+|DT_I4|int|int|long||INTEGER|INTEGER|  
+|DT_I8|bigint|bigint|||bigint|bigint|  
 |DT_NUMERIC|decimal, numeric|decimal, numeric|Decimal|NUMBER, INT|decimal, numeric|decimal, numeric|  
-|DT_R4|REAL|REAL|단일||real|real|  
-|DT_R8|FLOAT|FLOAT|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
-|DT_STR|char, varchar||varchar||char, varchar|char, varchar|  
-|DT_UI1|TINYINT|TINYINT|Byte||||  
+|DT_R4|real|real|Single||real|real|  
+|DT_R8|float|float|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
+|DT_STR|char, varchar||VarChar||char, varchar|char, varchar|  
+|DT_UI1|tinyint|tinyint|Byte||||  
 |DT_UI2|||||||  
 |DT_UI4|||||||  
 |DT_UI8|||||||  
 |DT_WSTR|nchar, nvarchar, sql_variant, xml|char, varchar, nchar, nvarchar, sql_variant, xml|LongText|CHAR, ROWID, VARCHAR2, NVARCHAR2, NCHAR|GRAPHIC, VARGRAPHIC|GRAPHIC, VARGRAPHIC|  
-|DT_IMAGE|image|image|LongBinary|LONG RAW, BLOB, LOBLOCATOR, BFILE, VARGRAPHIC, LONG VARGRAPHIC, 사용자 정의|CHAR () FOR BIT DATA, VARCHAR () FOR BIT DATA|CHAR () FOR BIT DATA, VARCHAR () FOR BIT DATA, BLOB|  
+|DT_IMAGE|이미지|이미지|LongBinary|LONG RAW, BLOB, LOBLOCATOR, BFILE, VARGRAPHIC, LONG VARGRAPHIC, 사용자 정의|CHAR () FOR BIT DATA, VARCHAR () FOR BIT DATA|CHAR () FOR BIT DATA, VARCHAR () FOR BIT DATA, BLOB|  
 |DT_NTEXT|ntext|text, ntext||LONG, CLOB, NCLOB, NVARCHAR, TEXT|LONG VARCHAR, NCHAR, NVARCHAR, TEXT|LONG VARCHAR, DBCLOB, NCHAR, NVARCHAR, TEXT|  
 |DT_TEXT|text||||LONG VARCHAR FOR BIT DATA|LONG VARCHAR FOR BIT DATA, CLOB|  
   

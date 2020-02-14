@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 115aba36783857d5a0915822cb6f8ff810562f16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68100070"
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE(Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68100070"
 
 개별 행 삭제를 로깅하지 않고 테이블 또는 테이블의 지정된 파티션에서 모든 행을 제거합니다. TRUNCATE TABLE은 기능상으로 WHERE 절이 없는 DELETE 문과 동일하지만 더 빠르고 시스템 및 트랜잭션 로그 리소스를 덜 사용합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -88,7 +88,7 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
   
  분할된 테이블을 자르려면 테이블과 인덱스를 정렬해야 합니다(동일한 파티션 함수에 분할).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  DELETE 문과 비교하여 TRUNCATE TABLE에는 다음과 같은 이점이 있습니다.  
   
 -   트랜잭션 로그 공간을 덜 사용합니다.  
@@ -107,7 +107,7 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
   
  테이블에 ID 열이 포함되어 있으면 해당 열의 카운터는 열에 대한 초기값으로 다시 설정됩니다. 초기값이 정의되어 있지 않으면 기본값인 1이 사용됩니다. ID 카운터를 보존하려면 DELETE를 대신 사용하세요.  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>제한  
  다음과 같은 테이블에서는 TRUNCATE TABLE 문을 사용할 수 없습니다.  
   
 -   FOREIGN KEY 제약 조건에 의해 참조됩니다. 자신을 참조하는 외래 키가 있는 테이블을 잘라낼 수 있습니다.  
@@ -134,7 +134,7 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
   
 ## <a name="examples"></a>예  
   
-### <a name="a-truncate-a-table"></a>1\. 테이블 자르기  
+### <a name="a-truncate-a-table"></a>A. 테이블 자르기  
  다음 예에서는 `JobCandidate` 테이블의 모든 데이터를 제거합니다. `SELECT` 문이 `TRUNCATE TABLE` 문 앞과 뒤에 포함되어 결과를 비교합니다.  
   
 ```sql  
@@ -150,7 +150,7 @@ FROM HumanResources.JobCandidate;
 GO  
 ```  
   
-### <a name="b-truncate-table-partitions"></a>2\. 테이블 파티션 자르기  
+### <a name="b-truncate-table-partitions"></a>B. 테이블 파티션 자르기  
   
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658))
   

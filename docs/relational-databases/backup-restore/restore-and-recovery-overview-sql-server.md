@@ -22,10 +22,10 @@ ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 9b034e43f918a0f6c198c29cf2f6618ba38638f8
-ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72916069"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>복원 및 복구 개요(SQL Server)
@@ -56,7 +56,7 @@ ms.locfileid: "72916069"
 |----------------------|---------------------------------|----------------------------------------------|  
 |전체 데이터베이스 복원|이 전략이 기본 복원 전략입니다. 전체 데이터베이스 복원은 단순히 전체 데이터베이스 백업을 복원 및 복구하거나 전체 데이터베이스 백업을 복원한 다음 차등 백업을 복원 및 복구합니다.<br /><br /> 자세한 내용은 [전체 데이터베이스 복원&#40;단순 복구 모델&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)을 참조하세요.|이 전략이 기본 복원 전략입니다. 전체 데이터베이스 복원은 전체 데이터베이스 백업 및 필요에 따라 차등 백업(있는 경우)을 복원한 후 모든 후속 로그 백업을 순서대로 복원합니다. 전체 데이터베이스 복원은 마지막 로그 백업을 복구 및 복원함으로써 완료됩니다(RESTORE WITH RECOVERY).<br /><br /> 자세한 내용은 [전체 데이터베이스 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)을 참조하세요.|  
 |File restore **\***|전체 데이터베이스를 복원하지 않고 하나 이상의 손상된 읽기 전용 파일을 복원합니다. 파일 복원은 데이터베이스에 적어도 하나 이상의 읽기 전용 파일 그룹이 있는 경우에만 사용할 수 있습니다.|전체 데이터베이스를 복원하지 않고 하나 이상의 파일을 복원합니다. 파일 복원은 데이터베이스가 오프라인 상태일 때 수행할 수 있으며 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전의 경우 데이터베이스가 여전히 온라인 상태일 때에도 수행할 수 있습니다. 파일을 복원하는 동안 복원되는 파일을 포함하는 파일 그룹은 항상 오프라인 상태입니다.|  
-|페이지 복원|해당 사항 없음|하나 이상의 손상된 페이지를 복원합니다. 페이지 복원은 데이터베이스가 오프라인 상태일 때 수행할 수 있으며 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전의 경우 데이터베이스가 여전히 온라인 상태일 때에도 수행할 수 있습니다. 페이지를 복원하는 동안 복원되는 페이지는 항상 오프라인 상태입니다.<br /><br /> 손상되지 않은 로그 백업 체인은 현재 로그 파일을 포함하여 모두 사용할 수 있어야 하며 페이지가 현재 로그 파일 상태로 업데이트되도록 모두 적용되어야 합니다.<br /><br /> 자세한 내용은 [페이지 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)을 참조하세요.|  
+|페이지 복원|해당 없음|하나 이상의 손상된 페이지를 복원합니다. 페이지 복원은 데이터베이스가 오프라인 상태일 때 수행할 수 있으며 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전의 경우 데이터베이스가 여전히 온라인 상태일 때에도 수행할 수 있습니다. 페이지를 복원하는 동안 복원되는 페이지는 항상 오프라인 상태입니다.<br /><br /> 손상되지 않은 로그 백업 체인은 현재 로그 파일을 포함하여 모두 사용할 수 있어야 하며 페이지가 현재 로그 파일 상태로 업데이트되도록 모두 적용되어야 합니다.<br /><br /> 자세한 내용은 [페이지 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)을 참조하세요.|  
 |증분 복원 **\***|파일 그룹 수준의 주 파일 그룹에서 시작하여 읽기/쓰기가 가능한 모든 파일 그룹, 보조 파일 그룹순으로 단계별로 데이터베이스를 복원 및 복구합니다.|파일 그룹 수준에서 주 파일 그룹에서 시작하여 단계별로 데이터베이스를 복원 및 복구합니다.<br /><br /> 자세한 내용은 [증분 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)를 참조하세요.|  
   
  **\*** 온라인 복원은 엔터프라이즈 버전에서만 지원됩니다.  
@@ -96,7 +96,7 @@ ms.locfileid: "72916069"
 
 -   **실행 취소 단계**는 해당 데이터베이스의 무결성이 유지되도록 ATT에서 발견된 불완전한 트랜잭션을 롤백합니다. 롤백 후 데이터베이스는 온라인 상태가 되고 트랜잭션 로그 백업이 더 이상 데이터베이스에 적용되지 않습니다.
 
-각 데이터베이스 복구 단계의 진행에 대한 정보는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][오류 로그](../../tools/configuration-manager/viewing-the-sql-server-error-log.md)에 기록됩니다. 확장 이벤트를 사용하여 데이터베이스 복구 진행률을 추적할 수도 있습니다. 자세한 내용은 블로그 게시물 [데이터베이스 복구 진행률에 대한 새 확장 이벤트](https://blogs.msdn.microsoft.com/sql_server_team/new-extended-events-for-database-recovery-progress/)를 참조하세요.
+각 데이터베이스 복구 단계의 진행에 대한 정보는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [오류 로그](../../tools/configuration-manager/viewing-the-sql-server-error-log.md)에 기록됩니다. 확장 이벤트를 사용하여 데이터베이스 복구 진행률을 추적할 수도 있습니다. 자세한 내용은 블로그 게시물 [데이터베이스 복구 진행률에 대한 새 확장 이벤트](https://blogs.msdn.microsoft.com/sql_server_team/new-extended-events-for-database-recovery-progress/)를 참조하세요.
 
 > [!NOTE]
 > 증분 복원 시나리오에서는 파일 백업이 생성되기 이전부터 읽기 전용 파일 그룹이 읽기 전용이었으면 로그 백업을 파일 그룹에 적용할 필요가 없으며 파일 복원 시 이 작업은 생략됩니다. 
@@ -178,7 +178,7 @@ ms.locfileid: "72916069"
 -   [복구 관리자: SSMS를 사용하여 분할 백업 만들기/복원](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
 
 ## <a name="adr"></a> 가속 데이터베이스 복구
-[가속 데이터베이스 복구](/azure/sql-database/sql-database-accelerated-database-recovery/)는 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 사용할 수 있습니다. 가속 데이터베이스 복구는 특히 장기 실행 트랜잭션이 있는 경우 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [복구 프로세스](#TlogAndRecovery)를 다시 설계하여 데이터베이스 가용성을 크게 향상시킵니다. 가속 데이터베이스 복구가 사용하도록 설정된 데이터베이스는 장애 조치(failover) 또는 다른 완전하지 않은 종료 후에 훨씬 빠르게 복구 프로세스를 완료합니다. 가속 데이터베이스 복구를 사용하도록 설정하면 취소된 장기 실행 트랜잭션의 롤백이 훨씬 빨리 완료됩니다.
+[가속 데이터베이스 복구](/azure/sql-database/sql-database-accelerated-database-recovery/)는 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 사용할 수 있습니다. 가속 데이터베이스 복구는 특히 장기 실행 트랜잭션이 있는 경우 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [복구 프로세스](#TlogAndRecovery)를 다시 설계하여 데이터베이스 가용성을 크게 향상합니다. 가속 데이터베이스 복구가 사용하도록 설정된 데이터베이스는 장애 조치(failover) 또는 다른 완전하지 않은 종료 후에 훨씬 빠르게 복구 프로세스를 완료합니다. 가속 데이터베이스 복구를 사용하도록 설정하면 취소된 장기 실행 트랜잭션의 롤백이 훨씬 빨리 완료됩니다.
 
 다음 구문을 사용하여 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서 데이터베이스별로 가속 데이터베이스 복구를 사용하도록 설정할 수 있습니다.
 

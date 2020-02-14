@@ -41,10 +41,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: cd6b2c3cea9876091532a5da3cf15bdda1da2d8d
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73530923"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 문(Transact-SQL)
@@ -440,8 +440,8 @@ DATABASE_SNAPSHOT 옵션을 사용하여 지정한 *데이터베이스 되돌리
 
 RESTORE 예에는 다음이 포함됩니다.
 
-- 1\. [전체 데이터베이스 복원](#restoring_full_db)
-- 2\. [전체 및 차등 데이터베이스 백업 복원](#restoring_full_n_differential_db_backups)
+- A. [전체 데이터베이스 복원](#restoring_full_db)
+- B. [전체 및 차등 데이터베이스 백업 복원](#restoring_full_n_differential_db_backups)
 - C. [RESTART 구문을 사용하여 데이터베이스 복원](#restoring_db_using_RESTART)
 - D. [데이터베이스 복원 및 파일 이동](#restoring_db_n_move_files)
 - E. [BACKUP 및 RESTORE를 사용하여 데이터베이스 복사](#copying_db_using_bnr)
@@ -688,7 +688,7 @@ RESTORE DATABASE Sales
   STATS = 10;
 ```
 
-**K2. Microsoft Azure Storage 서비스에서 로컬 스토리지로 전체 데이터베이스 백업 복원** `Sales`의 `mysecondcontainer`에 있는 전체 데이터베이스 백업이 로컬 스토리지로 복원됩니다. `Sales`는 현재 서버에 없습니다.
+**K2. Microsoft Azure Storage 서비스에서 로컬 스토리지로 전체 데이터베이스 백업 복원**`Sales`의 `mysecondcontainer`에 있는 전체 데이터베이스 백업이 로컬 스토리지로 복원됩니다. `Sales`는 현재 서버에 없습니다.
 
 ```sql
 RESTORE DATABASE Sales
@@ -735,7 +735,7 @@ RESTORE DATABASE Sales
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 관리되는 인스턴스
+## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
 
 이 명령을 사용하면 Azure Blob Storage 계정의 전체 데이터베이스 백업(전체 복원)에서 전체 데이터베이스를 복원할 수 있습니다.
 
@@ -980,7 +980,7 @@ DATABASE 개체에서 배타적 잠금을 사용합니다.
 
 ## <a name="examples"></a>예
 
-### <a name="a-simple-restore-examples"></a>1\. 간단한 RESTORE 예
+### <a name="a-simple-restore-examples"></a>A. 간단한 RESTORE 예
 
 다음 예에서는 전체 백업을 `SalesInvoices2013` 데이터베이스에 복원합니다. 백업 파일은 `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full` 디렉터리에 저장됩니다. SalesInvoices2013 데이터베이스는 대상 어플라이언스에 이미 존재할 수 없으며, 그렇지 않으면 이 명령은 오류가 발생하여 실패합니다.
 
@@ -989,7 +989,7 @@ RESTORE DATABASE SalesInvoices2013
 FROM DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full';
 ```
 
-### <a name="b-restore-a-full-and-differential-backup"></a>2\. 전체 및 차등 백업 복원
+### <a name="b-restore-a-full-and-differential-backup"></a>B. 전체 및 차등 백업 복원
 
 다음 예에서는 SalesInvoices2013 데이터베이스에 전체 및 차등 백업을 차례로 복원합니다.
 

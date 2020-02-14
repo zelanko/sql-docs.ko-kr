@@ -14,10 +14,10 @@ ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b595c8e2c09260e6874fc3cbaab8cc06d2a0c9df
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296167"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services(SSIS) 패키지 및 프로젝트 매개 변수
@@ -50,7 +50,7 @@ ms.locfileid: "71296167"
   
  다음 표에서는 값 유형을 나열합니다.  
   
-|값 이름|설명|값 유형|  
+|값 이름|Description|값 유형|  
 |----------------|-----------------|-------------------|  
 |실행 값|특정 패키지 실행 인스턴스에 할당되는 값입니다. 이 할당은 다른 모든 값을 재정의하지만 단일 패키지 실행 인스턴스에만 적용됩니다.|리터럴|  
 |서버 값|프로젝트를 Integration Services 서버에 배포한 후 프로젝트 범위 내에서 매개 변수에 지정된 값입니다. 이 값은 디자인 기본값을 재정의합니다.|리터럴 또는 환경 변수 참조|  
@@ -89,7 +89,7 @@ ms.locfileid: "71296167"
   
  또한 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 의 **패키지 실행** 대화 상자를 사용하여 매개 변수 값을 수정할 수 있습니다. 자세한 내용은 [Execute Package Dialog Box](../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)을 참조하세요.  
   
- dtexec **/Parameter** 옵션을 사용하여 매개 변수 값을 수정할 수도 있습니다. 자세한 내용은 [dtexec Utility](../integration-services/packages/dtexec-utility.md)을 참조하세요.  
+ dtexec **/Parameter** 옵션을 사용하여 매개 변수 값을 수정할 수도 있습니다. 자세한 내용은 [dtexec Utility](../integration-services/packages/dtexec-utility.md)를 참조하세요.  
   
 ### <a name="parameter-validation"></a>매개 변수 유효성 검사  
  매개 변수 값을 확인할 수 없는 경우 해당 패키지 실행이 실패합니다. 오류를 방지하려면 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 의 **유효성 검사** 대화 상자를 사용하여 프로젝트 및 패키지의 유효성을 검사합니다. 유효성 검사를 통해 모든 매개 변수가 필요한 값을 가지고 있는지 확인하거나 특정 환경 참조에 필요한 값을 확인할 수 있습니다. 유효성 검사는 또한 다른 일반적인 패키지 문제도 확인합니다.  
@@ -103,7 +103,7 @@ ms.locfileid: "71296167"
   
  특정 패키지 실행 인스턴스를 준비하는 경우 **pkgOptions** 매개 변수에 값 5가 할당됩니다. 이 값은 특정 실행 인스턴스에 대한 매개 변수에만 적용되므로 실행 값이라고 합니다. 실행이 시작되면 **pkgOptions** 매개 변수에 해당하는 패키지 속성에 값 5가 할당됩니다.  
   
-## <a name="create-parameters"></a>Create Parameters
+## <a name="create-parameters"></a>매개 변수 만들기
 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 를 사용하여 프로젝트 매개 변수 및 패키지 매개 변수를 만들 수 있습니다. 다음 절차에서는 패키지/프로젝트 매개 변수를 만드는 단계별 지침을 제공합니다.  
   
 > **참고:** 이전 버전의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 를 사용하여 만든 프로젝트를 프로젝트 배포 모델로 변환하는 경우 **Integration Services 프로젝트 변환 마법사** 를 사용하여 구성에 따라 매개 변수를 만들 수 있습니다. 자세한 내용은 [Integration Services(SSIS) 프로젝트 및 패키지 배포](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)를 참조하세요.  
@@ -116,18 +116,18 @@ ms.locfileid: "71296167"
   
 2.  도구 모음에서 **매개 변수 추가** 단추를 클릭합니다.  
   
-     ![도구 모음 단추 추가](../integration-services/media/denali-parameter-add.gif "도구 모음 단추 추가")  
+     ![추가 도구 모음 단추](../integration-services/media/denali-parameter-add.gif "추가 도구 모음 단추")  
   
 3.  목록 자체에서 또는 **속성**창에서 **이름**, **데이터 형식**, **값**, **구분** 및 **필수** 속성의 값을 입력합니다. 다음 표에서는 이러한 속성을 설명합니다.  
   
-    |속성|설명|  
+    |속성|Description|  
     |--------------|-----------------|  
     |속성|매개 변수의 이름입니다.|  
-    |이름|매개 변수의 데이터 형식입니다.|  
+    |데이터 형식|매개 변수의 데이터 형식입니다.|  
     |기본값|디자인 타임에 할당되는 매개 변수의 기본값입니다. 디자인 기본값이라고도 합니다.|  
-    |구분|중요한 매개 변수 값은 카탈로그에서 암호화되고 Transact-SQL 또는 SQL Server Management Studio를 사용하여 볼 경우 NULL 값으로 나타납니다.|  
+    |중요|구분 매개 변수 값은 카탈로그에서 암호화되고 Transact-SQL 또는 SQL Server Management Studio를 사용하여 볼 경우 NULL 값으로 나타납니다.|  
     |필수|패키지를 실행하기 전에 반드시 지정해야 하는 디자인 기본값 이외의 값입니다.|  
-    |설명|유지 관리의 편의를 위한 매개 변수 설명입니다. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 경우 Visual Studio 속성 창의 해당 매개 변수 창에서 매개 변수를 선택할 때 매개 변수 설명을 설정합니다.|  
+    |Description|유지 관리의 편의를 위한 매개 변수 설명입니다. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 경우 Visual Studio 속성 창의 해당 매개 변수 창에서 매개 변수를 선택할 때 매개 변수 설명을 설정합니다.|  
   
     > **참고:** 프로젝트를 카탈로그에 배포하면 몇 가지 추가 속성이 프로젝트와 연결됩니다. 카탈로그의 모든 매개 변수에 대한 모든 속성을 보려면 [catalog.object_parameters&#40;SSISDB 데이터베이스&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) 뷰를 참조하세요.  
   
@@ -147,18 +147,18 @@ ms.locfileid: "71296167"
   
 3.  도구 모음에서 **매개 변수 추가** 단추를 클릭합니다.  
   
-     ![도구 모음 단추 추가](../integration-services/media/denali-parameter-add.gif "도구 모음 단추 추가")  
+     ![추가 도구 모음 단추](../integration-services/media/denali-parameter-add.gif "추가 도구 모음 단추")  
   
 4.  **이름**, **데이터 형식**, **값**, **구분**및 **필수** 속성의 값을 입력합니다.  
   
-    |속성|설명|  
+    |속성|Description|  
     |--------------|-----------------|  
     |속성|매개 변수의 이름입니다.|  
-    |이름|매개 변수의 데이터 형식입니다.|  
+    |데이터 형식|매개 변수의 데이터 형식입니다.|  
     |기본값|디자인 타임에 할당되는 매개 변수의 기본값입니다. 디자인 기본값이라고도 합니다.|  
-    |구분|중요한 매개 변수 값은 카탈로그에서 암호화되고 Transact-SQL 또는 SQL Server Management Studio를 사용하여 볼 경우 NULL 값으로 나타납니다.|  
+    |중요|구분 매개 변수 값은 카탈로그에서 암호화되고 Transact-SQL 또는 SQL Server Management Studio를 사용하여 볼 경우 NULL 값으로 나타납니다.|  
     |필수|패키지를 실행하기 전에 반드시 지정해야 하는 디자인 기본값 이외의 값입니다.|  
-    |설명|유지 관리의 편의를 위한 매개 변수 설명입니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]의 경우 Visual Studio 속성 창의 해당 매개 변수 창에서 매개 변수를 선택할 때 매개 변수 설명을 설정합니다.|  
+    |Description|유지 관리의 편의를 위한 매개 변수 설명입니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]의 경우 Visual Studio 속성 창의 해당 매개 변수 창에서 매개 변수를 선택할 때 매개 변수 설명을 설정합니다.|  
   
 5.  프로젝트를 저장하여 매개 변수 변경 내용을 저장합니다. 매개 변수 값은 프로젝트 파일의 구성에 저장됩니다. 매개 변수 값의 모든 변경 사항을 디스크에 커밋하려면 프로젝트 파일을 저장합니다.  
   
@@ -186,7 +186,7 @@ ms.locfileid: "71296167"
  **설명**  
  매개 변수에 대한 설명을 지정합니다.  
   
- **Value**  
+ **값**  
  매개 변수의 기본값을 지정합니다. 이 값은 디자인 기본값이라고도 하며 나중에 배포할 때 재정의할 수 있습니다.  
   
  **범위**  

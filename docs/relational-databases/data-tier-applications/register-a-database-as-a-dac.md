@@ -19,10 +19,10 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 726955115dc956f2ad16e39775610deb16c445a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68134684"
 ---
 # <a name="register-a-database-as-a-dac"></a>DAC로 데이터베이스 등록
@@ -33,8 +33,8 @@ ms.locfileid: "68134684"
   
 -   **DAC를 업그레이드하려면 다음을 사용합니다.**  [데이터 계층 애플리케이션 등록 마법사](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
   
-## <a name="before-you-begin"></a>시작하기 전 주의 사항  
- 등록 프로세스에서는 데이터베이스의 개체를 정의하는 DAC 정의를 만듭니다. DAC 정의와 데이터베이스의 결합으로 DAC 인스턴스가 형성됩니다. DAC를 데이터베이스 엔진의 인스턴스에 DAC로 등록할 경우 등록된 DAC는 유틸리티 컬렉션 집합이 인스턴스에서 유틸리티 제어 지점으로 다음에 전송될 때 SQL Server 유틸리티에 통합됩니다. DAC에 있게 됩니다는 **배포 된 데이터 계층 애플리케이션** 의 노드는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**유틸리티 탐색기** 에 보고 된 **배포 된 데이터 계층 애플리케이션**세부 정보 페이지입니다.  
+## <a name="before-you-begin"></a>시작하기 전에  
+ 등록 프로세스에서는 데이터베이스의 개체를 정의하는 DAC 정의를 만듭니다. DAC 정의와 데이터베이스의 결합으로 DAC 인스턴스가 형성됩니다. DAC를 데이터베이스 엔진의 인스턴스에 DAC로 등록할 경우 등록된 DAC는 유틸리티 컬렉션 집합이 인스턴스에서 유틸리티 제어 지점으로 다음에 전송될 때 SQL Server 유틸리티에 통합됩니다. 그러면 DAC가 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **유틸리티 탐색기**의 **배포된 데이터 계층 애플리케이션 노드**에 표시되고 **배포된 데이터 계층 애플리케이션** 세부 정보 페이지에 보고됩니다.  
   
 ###  <a name="LimitationsRestrictions"></a> 제한 사항  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]또는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4(서비스 팩 4) 이상의 데이터베이스에서만 DAC 등록을 수행할 수 있습니다. DAC가 데이터베이스에 이미 등록된 경우에는 DAC 등록을 수행할 수 없습니다. 예를 들어 데이터베이스가 DAC를 배포하는 방식으로 만들어진 경우 **데이터 계층 애플리케이션 등록 마법사**를 실행할 수 없습니다.  
@@ -81,7 +81,7 @@ ms.locfileid: "68134684"
   
  **버전.** - DAC의 버전을 식별하는 숫자 값입니다. DAC 버전은 Visual Studio에서 개발자가 작업 중인 DAC의 버전을 식별하는 데 사용됩니다. DAC를 배포하는 경우 이 버전은 **msdb** 데이터베이스에 저장되고 나중에 **의** 데이터 계층 애플리케이션 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]노드에서 볼 수 있습니다.  
   
- **설명** - 선택 사항입니다. DAC의 용도를 설명하는 텍스트입니다. DAC를 배포하는 경우 이 설명은 **msdb** 데이터베이스에 저장되고 나중에 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 **데이터 계층 애플리케이션** 노드에서 볼 수 있습니다.  
+ **설명** - 선택 사항입니다. DAC의 용도를 설명하는 텍스트입니다. DAC를 배포하는 경우 이 설명은 **msdb** 데이터베이스에 저장되고 나중에 **의** 데이터 계층 애플리케이션 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]노드에서 볼 수 있습니다.  
   
  **< 이전** - **소개** 페이지로 돌아갑니다.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "68134684"
  [데이터 계층 애플리케이션 등록 마법사 사용](#UsingRegisterDACWizard)  
   
 ### <a name="validating-objects"></a>개체 유효성 확인  
- **Checking**  _SchemaName_ **.** _ObjectName_ **.** - 마법사가 검색된 개체의 종속성을 확인하고 모두 DAC에 유효한 개체인지 확인할 때 진행률 표시줄을 표시합니다. _SchemaName_ **.** _ObjectName_ 은 현재 확인 중인 개체가 무엇인지 식별합니다.  
+ **검사 중**: _SchemaName_ **.** _ObjectName_ **.** - 마법사가 검색된 개체의 종속성을 확인하고 모두 DAC에 유효한 개체인지 확인할 때 진행률 표시줄을 표시합니다. _SchemaName_ **.** _ObjectName_ 은 현재 확인 중인 개체가 무엇인지 식별합니다.  
   
  **< 이전** - 입력한 값을 변경하기 위해 **속성 설정** 페이지로 돌아갑니다.  
   

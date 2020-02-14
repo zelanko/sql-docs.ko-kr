@@ -19,10 +19,10 @@ ms.author: mikeray
 ms.prod_service: database-engine, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2dd4970cc25e382706f63ed94b7bcc3700549d9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67909750"
 ---
 # <a name="how-online-index-operations-work"></a>온라인 인덱스 작동 방식
@@ -54,7 +54,7 @@ ms.locfileid: "67909750"
   
  다음 그림에서는 온라인 상태에서 초기 클러스터형 인덱스를 만드는 과정을 보여 줍니다. 원본 개체(힙)에는 다른 인덱스가 없습니다. 그림에는 원본 및 대상 구조와 관련된 각 단계의 작업과 동시 사용자 선택, 삽입, 업데이트 및 삭제 작업이 표시되어 있습니다. 준비, 작성 및 최종 단계는 각 단계에 사용되는 잠금 모드와 함께 표시됩니다.  
   
- ![온라인 인덱스 작업 중 수행되는 활동](../../relational-databases/indexes/media/online-index.gif "Activities performed during online index operation")  
+ ![온라인 인덱스 작업 중 수행되는 활동](../../relational-databases/indexes/media/online-index.gif "온라인 인덱스 작업 중 수행되는 활동")  
   
 ## <a name="source-structure-activities"></a>원본 구조 작업  
  다음 표에서는 인덱스 작업의 각 단계에서 원본 구조와 관련된 작업과 해당 잠금 전략에 대해 설명합니다.  
@@ -78,7 +78,7 @@ ms.locfileid: "67909750"
 |-----------|---------------------|------------------|  
 |준비|새 인덱스가 작성되고 쓰기 전용으로 설정됩니다.|IS|  
 |빌드|원본의 데이터가 삽입됩니다.<br /><br /> 원본에 적용된 사용자 수정 사항(삽입, 업데이트, 삭제)이 적용됩니다.<br /><br /> 사용자는 이 작업을 인식하지 못합니다.|IS|  
-|최종|인덱스 메타데이터가 업데이트됩니다.<br /><br /> 인덱스가 읽기/쓰기 상태로 설정됩니다.|S<br /><br /> 로 구분하거나 여러<br /><br /> SCH-M|  
+|최종|인덱스 메타데이터가 업데이트됩니다.<br /><br /> 인덱스가 읽기/쓰기 상태로 설정됩니다.|S<br /><br /> 또는<br /><br /> SCH-M|  
   
  인덱스 작업이 완료될 때까지 사용자가 실행한 SELECT 문은 대상에 액세스할 수 없습니다.  
   

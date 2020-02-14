@@ -30,10 +30,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2e917d4dcd2f722bb9d683ebe0a6a8777487c61d
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73729923"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX(Transact-SQL)
@@ -55,11 +55,11 @@ rowstore 테이블을 클러스터형 columnstore 인덱스로 변환하거나 �
 -   [실시간 운영 분석을 위한 Columnstore 인덱스](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
 -   [데이터 웨어하우스용 Columnstore 인덱스](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
   
-자세히 알아보기  
+자세한 정보:  
 -   [Columnstore 인덱스 가이드](../../relational-databases/indexes/columnstore-indexes-overview.md)  
 -   [Columnstore 인덱스 기능 요약](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)  
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -120,7 +120,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
 | COMPRESSION_DELAY | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] |
 | DATA_COMPRESSION | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | 
 | ONLINE | [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)] | [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] |
-| WHERE 절 | 해당 사항 없음 | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] |
+| WHERE 절 | 해당 없음 | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] |
 
 모든 옵션을 Azure SQL Database에서 사용할 수 있습니다.
 
@@ -175,7 +175,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
    COMPRESSION_DELAY 사용 시기에 관한 권장 사항은 [실시간 운영 분석을 위한 Columnstore 시작](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)을 참조하세요.  
   
 ##### <a name="data_compression--columnstore--columnstore_archive"></a>DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
-   지정된 테이블, 파티션 번호 또는 파티션 범위에 대한 데이터 압축 옵션을 지정합니다. 다음과 같은 옵션이 있습니다.   
+   지정된 테이블, 파티션 번호 또는 파티션 범위에 대한 데이터 압축 옵션을 지정합니다. 옵션은 다음과 같습니다.   
 - `COLUMNSTORE`는 기본값이고 성능이 가장 우수한 columnstore 압축으로 압축하도록 지정합니다. 이는 일반적인 선택입니다.  
 - `COLUMNSTORE_ARCHIVE`는 테이블 또는 파티션을 보다 작은 크기로 더욱 압축합니다. 이 옵션을 스토리지 크기를 줄여야 하고 스토리지 및 검색에 더 많은 시간을 이용할 수 있는 보관 상황에 사용합니다.  
   
@@ -254,7 +254,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
    압축된 rowgroup으로 마이그레이션할 수 있기 전에 행이 델타 rowgroup에 얼마나 남아 있어야 하는지 하한을 지정합니다. 예를 들어, 고객은 한 행이 120분 동안 변경되지 않은 경우 열 형식 스토리지 형식으로 압축하기에 적합하다고 말할 수 있습니다. 디스크 기반 테이블의 columnstore 인덱스인 경우 행을 삽입하거나 업데이트할 때 시간을 추적하지 않고, 델타 rowgroup 닫힌 시간을 행에 대한 프록시로 대신 사용합니다. 기본 기간은 0분입니다. 델타 rowgroup에 백만 개의 행이 누적되면 행이 열 형식 스토리지에 마이그레이션되고 닫힌 것으로 표시됩니다.  
   
 ###### <a name="data_compression"></a>DATA_COMPRESSION  
-   지정된 테이블, 파티션 번호 또는 파티션 범위에 대한 데이터 압축 옵션을 지정합니다. 클러스터형 columnstore 인덱스 및 비클러스터형 columnstore 인덱스를 모두 포함하는 columnstore 인덱스에만 적용됩니다. 다음과 같은 옵션이 있습니다.
+   지정된 테이블, 파티션 번호 또는 파티션 범위에 대한 데이터 압축 옵션을 지정합니다. 클러스터형 columnstore 인덱스 및 비클러스터형 columnstore 인덱스를 모두 포함하는 columnstore 인덱스에만 적용됩니다. 옵션은 다음과 같습니다.
    
 - `COLUMNSTORE` - 기본값이고 성능이 가장 우수한 columnstore 압축으로 압축하도록 지정합니다. 이는 일반적인 선택입니다.  
 - `COLUMNSTORE_ARCHIVE` - COLUMNSTORE_ARCHIVE는 테이블 또는 파티션을 보다 작은 크기로 더욱 압축합니다. 보다 적은 스토리지 크기가 필요한 기타 상황에서 보관하는 데 사용할 수 있으며 저장 및 검색에 더 많은 시간을 이용할 수 있습니다.  
@@ -292,7 +292,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
   
 이 컨텍스트에서 default는 키워드가 아닙니다. 이것은 기본 파일 그룹에 대한 식별자이며 ON **"** default **"** 또는 ON **[** default **]** 와 같이 구분되어야 합니다. "default"를 지정하면 현재 세션의 QUOTED_IDENTIFIER 옵션이 ON이어야 합니다. 이 값은 기본 설정입니다. 자세한 내용은 [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)를 참조하세요.  
   
-##  <a name="Permissions"></a> 사용 권한  
+##  <a name="Permissions"></a> 권한  
  테이블에 대한 ALTER 사용 권한이 필요합니다.  
   
 ##  <a name="GenRemarks"></a> 일반적인 주의 사항  
@@ -309,15 +309,15 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 - INSERT, UPDATE, DELETE 또는 MERGE 작업으로 필터링된 인덱스의 데이터를 수정합니다.  
 - 필터링된 인덱스는 쿼리 최적화 프로그램이 쿼리 계획을 작성할 때 사용됩니다.  
   
-    |Set 옵션|필요한 값|기본 서버 값|Default<br /><br /> OLE DB 및 ODBC 값|Default<br /><br /> DB-Library 값|  
+    |Set 옵션|필수 값|기본 서버 값|기본값<br /><br /> OLE DB 및 ODBC 값|기본값<br /><br /> DB-Library 값|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
-    |ANSI_NULLS|ON|ON|ON|OFF|  
-    |ANSI_PADDING|ON|ON|ON|OFF|  
-    |ANSI_WARNINGS*|ON|ON|ON|OFF|  
-    |ARITHABORT|ON|ON|OFF|OFF|  
-    |CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|  
+    |ANSI_NULLS|켜기|켜기|켜기|OFF|  
+    |ANSI_PADDING|켜기|켜기|켜기|OFF|  
+    |ANSI_WARNINGS*|켜기|켜기|켜기|OFF|  
+    |ARITHABORT|켜기|켜기|OFF|OFF|  
+    |CONCAT_NULL_YIELDS_NULL|켜기|켜기|켜기|OFF|  
     |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|  
-    |QUOTED_IDENTIFIER|ON|ON|ON|OFF|   
+    |QUOTED_IDENTIFIER|켜기|켜기|켜기|OFF|   
   
      *데이터베이스 호환성 수준이 90 이상으로 설정된 경우 ANSI_WARNINGS를 ON으로 설정하면 암시적으로 ARITHABORT가 ON으로 설정됩니다. 데이터베이스 호환성 수준이 80 이하로 설정된 경우에는 명시적으로 ARITHABORT 옵션을 ON으로 설정해야 합니다.  
   
@@ -336,20 +336,20 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 **columnstore 인덱스의 각 열은 다음 일반적인 비즈니스 데이터 형식 중 하나여야 합니다.** 
 -   datetimeoffset [ ( *n* ) ]  
 -   datetime2 [ ( *n* ) ]  
--   DATETIME  
+-   Datetime  
 -   smalldatetime  
--   날짜  
+-   date  
 -   time [ ( *n* ) ]  
 -   float [ ( *n* ) ]  
 -   real [ ( *n* ) ]  
 -   decimal [ ( *precision* [ *, scale* ] **)** ]
 -   numeric [ ( *precision* [ *, scale* ] **)** ]    
 -   money  
--   SMALLMONEY  
--   BIGINT  
+-   smallmoney  
+-   bigint  
 -   int  
--   SMALLINT  
--   TINYINT  
+-   smallint  
+-   tinyint  
 -   bit  
 -   nvarchar [ ( *n* ) ] 
 -   nvarchar(max) ([!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 프리미엄 계층, 표준 계층(S3 이상) 및 모든 VCore 제품 계층에 적용됨, 클러스터형 columnstore 인덱스에서만)   
@@ -370,7 +370,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 -   rowversion(및 timestamp)  
 -   sql_variant  
 -   CLR 유형(hierarchyid 및 공간 형식)  
--   xml  
+-   Xml  
 -   uniqueidentifier([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에 적용)  
 
 **비클러스터형 columnstore 인덱스:**
@@ -388,7 +388,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 
 
  **columnstore 인덱스는 다음 기능과 함께 사용할 수 없습니다.**  
--   계산 열 SQL Server 2017부터는 클러스터형 columnstore 인덱스에 비지속형 계산 열을 포함할 수 있습니다. 그러나 SQL Server 2017에서는 클러스터형 columnstore 인덱스에 지속형 계산 열을 포함할 수 없으며 계산 열에 비클러스터형 인덱스를 만들 수 없습니다. 
+-   계산된 열입니다. SQL Server 2017부터는 클러스터형 columnstore 인덱스에 비지속형 계산 열을 포함할 수 있습니다. 그러나 SQL Server 2017에서는 클러스터형 columnstore 인덱스에 지속형 계산 열을 포함할 수 없으며 계산 열에 비클러스터형 인덱스를 만들 수 없습니다. 
 -   페이지 및 행 압축과 **vardecimal** 스토리지 형식(columnstore 인덱스가 이미 다른 형식으로 압축되어 있음)  
 -   복제  
 -   Filestream
@@ -418,7 +418,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 
 ##  <a name="convert"></a>Rowstore 테이블을 columnstore로 변환하는 예제  
   
-### <a name="a-convert-a-heap-to-a-clustered-columnstore-index"></a>1\. 클러스터형 columnstore 인덱스로 힙 변환  
+### <a name="a-convert-a-heap-to-a-clustered-columnstore-index"></a>A. 클러스터형 columnstore 인덱스로 힙 변환  
  이 예에서는 테이블을 힙으로 만들고 이를 cci_Simple라는 클러스터형 columnstore 인덱스로 변환합니다. 이렇게 하면 전체 테이블의 스토리지가 rowstore에서 columnstore로 변경됩니다.  
   
 ```sql  
@@ -432,7 +432,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci_Simple ON SimpleTable;
 GO  
 ```  
   
-### <a name="b-convert-a-clustered-index-to-a-clustered-columnstore-index-with-the-same-name"></a>2\. 클러스터형 인덱스를 같은 이름의 클러스터형 columnstore 인덱스로 변환합니다.  
+### <a name="b-convert-a-clustered-index-to-a-clustered-columnstore-index-with-the-same-name"></a>B. 클러스터형 인덱스를 같은 이름의 클러스터형 columnstore 인덱스로 변환합니다.  
  이 예에서는 클러스터형 인덱스가 있는 테이블을 만든 후 클러스터형 인덱스를 클러스터형 columnstore 인덱스로 변환하는 구문을 보여 줍니다. 이렇게 하면 전체 테이블의 스토리지가 rowstore에서 columnstore로 변경됩니다.  
   
 ```sql  
@@ -603,7 +603,7 @@ WITH ( DROP_EXISTING = ON );
   
 ##  <a name="nonclustered"></a> 비클러스터형 columnstore 인덱스 사용  
   
-### <a name="a-create-a-columnstore-index-as-a-secondary-index-on-a-rowstore-table"></a>1\. Rowstore 테이블에서 columnstore 인덱스를 보조 인덱스로 만들기  
+### <a name="a-create-a-columnstore-index-as-a-secondary-index-on-a-rowstore-table"></a>A. Rowstore 테이블에서 columnstore 인덱스를 보조 인덱스로 만들기  
  이 예에서는 rowstore 테이블에 비클러스터형 columnstore 인덱스를 만듭니다. 이 경우 columnstore 인덱스는 하나만 만들 수 있습니다. Columnstore 인덱스는 rowstore 테이블에 데이터 복사본을 포함하고 있으므로 추가 스토리지가 필요합니다. 이 예에서는 간단한 테이블 및 클러스터형 인덱스를 만든 다음, 비클러스터형 columnstore 인덱스를 만드는 구문을 보여 줍니다.  
   
 ```sql  
@@ -621,7 +621,7 @@ ON SimpleTable
 GO  
 ```  
   
-### <a name="b-create-a-simple-nonclustered-columnstore-index-using-all-options"></a>2\. 모든 옵션을 사용하여 단순 비클러스터형 columnstore 인덱스 만들기  
+### <a name="b-create-a-simple-nonclustered-columnstore-index-using-all-options"></a>B. 모든 옵션을 사용하여 단순 비클러스터형 columnstore 인덱스 만들기  
  다음 예에서는 모든 옵션을 사용하여 비클러스터형 columnstore 인덱스를 만드는 구문을 보여 줍니다.  
   
 ```sql  
@@ -656,7 +656,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
  테이블에 비클러스터형 columnstore 인덱스를 만든 후에는 해당 테이블에서 데이터를 직접 수정할 수 없습니다. INSERT, UPDATE, DELETE 또는 MERGE를 사용한 쿼리는 실패하며 오류 메시지를 반환합니다. 테이블에서 데이터를 추가하거나 수정하려면 다음 중 하나를 수행합니다.  
   
--   columnstore 인덱스를 사용하지 않도록 설정하거나 삭제합니다. 그런 다음 테이블에서 데이터를 업데이트할 수 있습니다. columnstore 인덱스를 사용하지 않도록 설정하는 경우 데이터 업데이트를 완료할 때 columnstore 인덱스를 다시 작성할 수 있습니다. 예:  
+-   columnstore 인덱스를 사용하지 않도록 설정하거나 삭제합니다. 그런 다음 테이블에서 데이터를 업데이트할 수 있습니다. columnstore 인덱스를 사용하지 않도록 설정하는 경우 데이터 업데이트를 완료할 때 columnstore 인덱스를 다시 작성할 수 있습니다. 예를 들면 다음과 같습니다.  
   
     ```sql  
     ALTER INDEX mycolumnstoreindex ON mytable DISABLE;  
@@ -668,9 +668,9 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
 -   columnstore 인덱스가 있는 테이블에서 빈 준비 테이블로 파티션을 전환합니다. 준비 테이블에 columnstore 인덱스가 있는 경우 columnstore 인덱스를 사용하지 않도록 설정합니다. 업데이트를 수행합니다. columnstore 인덱스를 작성 또는 다시 작성합니다. 준비 테이블을 주 테이블의 파티션(현재 비어 있음)으로 다시 전환합니다.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-change-a-clustered-index-to-a-clustered-columnstore-index"></a>1\. 클러스터형 인덱스를 클러스터형 columnstore 인덱스로 변환합니다.  
+### <a name="a-change-a-clustered-index-to-a-clustered-columnstore-index"></a>A. 클러스터형 인덱스를 클러스터형 columnstore 인덱스로 변환합니다.  
  DROP_EXISTING = ON과 함께 CREATE CLUSTERED COLUMNSTORE INDEX 문을 사용하면 다음을 수행할 수 있습니다.  
   
 -   클러스터형 인덱스를 클러스터형 columnstore 인덱스로 변환합니다.  
@@ -701,7 +701,7 @@ ON xdimProduct
 WITH ( DROP_EXISTING = ON );  
 ```  
   
-### <a name="b-rebuild-a-clustered-columnstore-index"></a>2\. 클러스터형 Columnstore 인덱스 다시 작성  
+### <a name="b-rebuild-a-clustered-columnstore-index"></a>B. 클러스터형 Columnstore 인덱스 다시 작성  
  앞의 예를 기반으로 이 예에서는 CREATE CLUSTERED COLUMNSTORE INDEX를 사용하여 cci_xDimProduct라는 기존 클러스터형 columnstore 인덱스를 다시 작성합니다.  
   
 ```sql  

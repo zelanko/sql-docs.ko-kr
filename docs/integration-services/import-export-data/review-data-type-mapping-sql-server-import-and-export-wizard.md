@@ -12,10 +12,10 @@ ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f0bd7fe34b1945c3f0f2255e256ead38a6d15e3a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296263"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>데이터 형식 매핑 검토(SQL Server 가져오기 및 내보내기 마법사)
@@ -31,7 +31,7 @@ ms.locfileid: "71296263"
 ## <a name="screen-shot-of-the-review-data-type-mapping-page"></a>데이터 형식 매핑 검토 페이지의 스크린샷
  다음 스크린샷에서는 마법사의 **데이터 형식 매핑 검토** 페이지의 예를 보여 줍니다.
  
- 이 예에서는 다음과 같습니다.
+ 이 예제에서:
  -   사용자가 **열 매핑** 대화 상자에서 성공하지 못할 수 있는 매핑을 지정했습니다.
  -   **테이블** 목록의 행에 있는 경고 아이콘은 쿼리 결과의 하나 이상 데이터 열을 대상 테이블의 호환되는 데이터 형식으로 변환하는 중 문제가 발생했음을 나타냅니다.
  -   **데이터 형식 매핑** 목록의 첫 번째 행에 있는 경고 아이콘은 원본 열의 **int** 데이터 형식을 대상 열의 **smalldatetime** 데이터 형식에 매핑하면 데이터가 손실될 수 있음을 나타냅니다.
@@ -47,7 +47,7 @@ ms.locfileid: "71296263"
   
  다음 표에서는 **테이블** 목록의 열에 대해 설명합니다.  
   
-|Column|설명|  
+|열|Description|  
 |------------|-----------------|  
 |(원본 아이콘)|데이터 형식 변환에 대한 성공 확률을 나타냅니다.<br /> - **녹색** 확인 표시 아이콘은 마법사에서 이 테이블에 대한 모든 데이터 형식 변환이 성공할 것으로 예상함을 나타냅니다.<br />- **노란색** 경고 아이콘은 마법사에서 수행할 개별 변환을 검토해야 함을 나타냅니다. 이러한 변환을 검토하려면 테이블을 선택한 다음 **데이터 형식 매핑** 목록의 개별 열에 대해 변환을 검토합니다.<br />- **빨간색** 오류 아이콘은 마법사에서 이 테이블에 대한 일부 변환을 안정적으로 수행할 수 없음을 나타냅니다.|  
 |**원본**|원본 테이블의 이름입니다.|  
@@ -63,7 +63,7 @@ ms.locfileid: "71296263"
 
 다음 표에서는 **데이터 형식 매핑** 목록의 열에 대해 설명합니다. 
 
-|Column|설명|  
+|열|Description|  
 |------------|-----------------|  
 |(변환 아이콘)|데이터 형식 변환에 대한 성공 확률을 나타냅니다.<br /> - **녹색** 확인 표시 아이콘은 마법사에서 이 열에 대한 데이터 형식 변환이 성공할 것으로 예상함을 나타냅니다.<br />- **노란색** 경고 아이콘은 마법사에서 수행할 변환을 검토해야 함을 나타냅니다. 변환을 검토하려면 열을 두 번 클릭하여 **열 변환 정보** 대화 상자를 표시합니다. 자세한 내용은 [열 변환 정보 대화 상자](../../integration-services/import-export-data/column-conversion-details-dialog-box-sql-server-import-and-export-wizard.md)를 참조하세요.<br />- **빨간색** 오류 아이콘은 마법사에서 변환을 안정적으로 수행할 수 없음을 나타냅니다.|  
 |**원본 열**|원본 열의 이름입니다.|  
@@ -97,6 +97,6 @@ ms.locfileid: "71296263"
 ## <a name="whats-next"></a>다음 단계  
  경고를 검토하고 변환 옵션과 오류 처리 방법을 지정하면 **데이터 형식 매핑 검토** 페이지에서 **열 매핑** 대화 상자로 다시 이동됩니다. 자세한 내용은 [열 매핑](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md)을 참조하세요.  
  
- ## <a name="see-also"></a>관련 항목:
+ ## <a name="see-also"></a>참고 항목
 [SQL Server 가져오기 및 내보내기 마법사에서 데이터 형식 매핑](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)
 

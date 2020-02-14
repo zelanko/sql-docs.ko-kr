@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c7aaa763c5764c87335532ced73cbc3c64f6e28a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67911179"
 ---
 # <a name="server-event-category"></a>Server 이벤트 범주
@@ -27,7 +27,7 @@ ms.locfileid: "67911179"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[Mount Tape 이벤트 클래스](../../relational-databases/event-classes/mount-tape-event-class.md)|테이프 탑재 요청을 받았음을 나타냅니다.|  
 |[Server Memory Change 이벤트 클래스](../../relational-databases/event-classes/server-memory-change-event-class.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 사용량이 변경되었음을 나타냅니다.|  

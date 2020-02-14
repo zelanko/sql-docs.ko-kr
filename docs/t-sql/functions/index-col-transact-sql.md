@@ -22,18 +22,18 @@ ms.assetid: 4db1fb3b-e46f-43fb-b269-a5b6e8b39ed0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a308225e96c740680b2df243f35cac216f53e3e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024297"
 ---
-# <a name="indexcol-transact-sql"></a>INDEX_COL(Transact-SQL)
+# <a name="index_col-transact-sql"></a>INDEX_COL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   인덱싱된 열 이름을 반환합니다. XML 인덱스에 대해서는 NULL을 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -60,7 +60,7 @@ INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]
  인덱스 키 열 위치입니다. *key_ID*는 **int**입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **nvarchar(128** **)**  
+ **nvarchar (128** **)**  
   
 ## <a name="exceptions"></a>예외  
  오류가 발생하거나 호출자가 개체를 볼 수 있는 권한을 갖고 있지 않으면 NULL을 반환합니다.  
@@ -69,7 +69,7 @@ INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-indexcol-to-return-an-index-column-name"></a>1\. INDEX_COL을 사용하여 인덱스 열 이름 반환  
+### <a name="a-using-index_col-to-return-an-index-column-name"></a>A. INDEX_COL을 사용하여 인덱스 열 이름 반환  
  다음 예에서는 `PK_SalesOrderDetail_SalesOrderID_LineNumber` 인덱스에 있는 2개의 키 열 이름을 반환합니다.  
   
 ```  

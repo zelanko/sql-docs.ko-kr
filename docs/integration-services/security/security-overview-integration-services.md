@@ -21,10 +21,10 @@ ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0bc268c2baea6e0e661fac123df9fe19ec60252c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281944"
 ---
 # <a name="security-overview-integration-services"></a>보안 개요(Integration Services)
@@ -32,7 +32,7 @@ ms.locfileid: "71281944"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 보안은 풍부하고 유연한 보안 환경을 제공하는 여러 계층으로 구성되어 있습니다. 이러한 보안 계층에서는 디지털 서명, 패키지 속성, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 역할 및 운영 체제 권한을 사용합니다. 이러한 보안 기능은 대부분 ID 및 액세스 제어라는 범주에 해당합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 보안은 풍부하고 유연한 보안 환경을 제공하는 여러 계층으로 구성되어 있습니다. 이러한 보안 계층에서는 디지털 서명, 패키지 속성, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 역할 및 운영 체제 권한을 사용합니다. 이러한 보안 기능은 대부분 ID 및 액세스 제어라는 범주에 해당합니다.  
 
 ## <a name="threat-and-vulnerability-mitigation"></a>위협 요소 및 취약성 완화
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에 다양한 보안 메커니즘이 있더라도 패키지와 패키지에서 만들고 사용하는 파일은 악의적인 목적으로 이용될 수 있습니다.  
@@ -82,7 +82,7 @@ ms.locfileid: "71281944"
 #### <a name="saving-packages-to-the-msdb-database"></a>패키지를 msdb 데이터베이스에 저장  
  패키지를 msdb 데이터베이스에 저장하면 서버, 데이터베이스 및 테이블 수준에서 보안이 제공됩니다. msdb 데이터베이스에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지는 sysssispackages 테이블에 저장됩니다. 패키지는 msdb 데이터베이스의 sysssispackages 및 sysdtspackages 테이블에 저장되므로 msdb 데이터베이스를 백업하면 패키지가 자동으로 백업됩니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb 데이터베이스에 저장된 패키지는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터베이스 수준 역할을 적용하여 보호될 수도 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 패키지에 대한 액세스를 제어하기 위한 3가지 고정 데이터베이스 수준 역할인 db_ssisadmin, db_ssisltduser 및 db_ssisoperator가 있습니다. 읽기 및 쓰기 역할을 각 패키지와 연결할 수 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에서 사용할 데이터베이스 수준 사용자 지정 역할을 정의할 수도 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 msdb 데이터베이스에 저장된 패키지에만 역할을 구현할 수 있습니다. 자세한 내용은 [Integration Services 경로&#40;SSIS Service&#41;](../../integration-services/security/integration-services-roles-ssis-service.md)를 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb 데이터베이스에 저장된 패키지는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터베이스 수준 역할을 적용하여 보호될 수도 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 패키지에 대한 액세스를 제어하기 위한 3가지 고정 데이터베이스 수준 역할인 db_ssisadmin, db_ssisltduser 및 db_ssisoperator가 있습니다. 읽기 및 쓰기 역할을 각 패키지와 연결할 수 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에서 사용할 데이터베이스 수준 사용자 지정 역할을 정의할 수도 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 msdb 데이터베이스에 저장된 패키지에만 역할을 구현할 수 있습니다. 자세한 내용은 [Integration Services 경로&#40;SSIS Service&#41;](../../integration-services/security/integration-services-roles-ssis-service.md)를 참조하세요.  
   
 #### <a name="saving-packages-to-the-file-system"></a>파일 시스템에 패키지 저장  
  패키지를 msdb 데이터베이스 대신 파일 시스템에 저장하는 경우 패키지 파일 및 패키지 파일이 들어 있는 폴더에 대한 보안을 설정해야 합니다.  

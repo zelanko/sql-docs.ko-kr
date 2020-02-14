@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: abec4388ccc56d2d643794cc354167359efa15f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e31a24a949968e3d17b50c32b42e92cdd0997483
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127301"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76516554"
 ---
 # <a name="rebuild-system-databases"></a>시스템 데이터베이스 다시 작성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "68127301"
 ###  <a name="Restrictions"></a> 제한 사항  
  master, model, msdb 및 tempdb 시스템 데이터베이스를 다시 작성하면 해당 데이터베이스가 삭제된 후 원래 위치에 다시 만들어집니다. REBUILD 문에 새로운 데이터 정렬이 지정되면 해당 데이터 정렬 설정을 사용하여 시스템 데이터베이스가 만들어집니다. 이러한 데이터베이스에 사용자들이 변경한 내용은 손실됩니다. 예를 들어, master 데이터베이스에 사용자 정의 개체가 있거나, msdb에 예약된 작업이 있거나 model 데이터베이스에서 기본 데이터베이스 설정을 변경했을 수 있습니다.  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 조건  
  시스템 데이터베이스를 다시 작성하기 전에 다음 태스크를 수행하면 시스템 데이터베이스를 현재 설정으로 복원할 수 있습니다.  
   
 1.  서버 차원의 모든 구성 값을 기록합니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "68127301"
     SELECT * FROM sys.configurations;  
     ```  
   
-2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 현재 데이터 정렬에 적용된 모든 서비스 팩과 핫픽스를 기록합니다. 시스템 데이터베이스를 다시 작성한 후 이러한 업데이트를 다시 적용해야 합니다.  
+2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 현재 데이터 정렬에 적용된 모든 핫픽스를 기록합니다. 시스템 데이터베이스를 다시 빌드한 후에는 관련 핫픽스를 다시 적용해야 합니다.  
   
     ```  
     SELECT  
@@ -100,7 +100,7 @@ ms.locfileid: "68127301"
   
      **Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName /SQLSYSADMINACCOUNTS=accounts [ /SAPWD= StrongPassword ] [ /SQLCOLLATION=CollationName]**  
   
-    |매개 변수 이름|설명|  
+    |매개 변수 이름|Description|  
     |--------------------|-----------------|  
     |/QUIET 또는 /Q|설치 프로그램이 사용자 인터페이스 없이 실행되도록 지정합니다.|  
     |/ACTION=REBUILDDATABASE|설치 시 시스템 데이터베이스를 다시 작성하도록 지정합니다.|  
@@ -140,7 +140,7 @@ ms.locfileid: "68127301"
 -   서버 차원의 구성 값이 앞에서 기록해 둔 값과 일치하는지 확인합니다.  
   
 ##  <a name="Resource"></a> 리소스 데이터베이스 다시 작성  
- 다음은 리소스 시스템 데이터베이스를 다시 작성하는 절차입니다. 리소스 데이터베이스를 다시 작성하면 모든 서비스 팩과 핫픽스 업데이트가 손실되므로 다시 적용해야 합니다.  
+ 다음은 리소스 시스템 데이터베이스를 다시 작성하는 절차입니다. 리소스 데이터베이스를 다시 빌드하면 모든 핫픽스가 손실되므로 다시 적용해야 합니다.  
   
 #### <a name="to-rebuild-the-resource-system-database"></a>리소스 시스템 데이터베이스를 다시 작성하려면  
   
@@ -166,7 +166,7 @@ ms.locfileid: "68127301"
   
 2.  다음 명령을 사용하여 명령줄에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 시작합니다. `NET START MSSQLSERVER /T3608`  
   
-     자세한 내용은 [데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)을 참조하세요.  
+     자세한 내용은 [SQL Server 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)을 참조하세요.  
   
 3.  다른 명령줄 창에서 다음 명령을 실행하여 **msdb** 데이터베이스를 분리하고 *\<servername>* 을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 바꿉니다. `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
   
@@ -180,7 +180,7 @@ ms.locfileid: "68127301"
   
 7.  Windows 메모장을 사용하여 **instmsdb.out** 파일을 열고 오류 출력을 확인합니다.  
   
-8.  인스턴스에 이미 설치된 서비스 팩 또는 핫픽스를 모두 다시 적용합니다.  
+8.  인스턴스에 설치된 핫픽스를 모두 다시 적용합니다.  
   
 9. 작업, 경고 등의 **msdb** 데이터베이스에 저장된 사용자 콘텐츠를 다시 만듭니다.  
   

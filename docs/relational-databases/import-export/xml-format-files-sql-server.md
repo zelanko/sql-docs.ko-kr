@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 724898bb35df9126ba61b5ebac147a37f272effc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68091430"
 ---
 # <a name="xml-format-files-sql-server"></a>XML 서식 파일(SQL Server)
@@ -176,7 +176,7 @@ ms.locfileid: "68091430"
  \</BCPFORMAT>  
  서식 파일을 끝내는 데 필요합니다.  
   
-####  <a name="AttrOfFieldElement"></a> \<FIELD> 요소의 특성  
+####  <a name="AttrOfFieldElement"></a>\<FIELD> 요소의 특성  
  이 섹션에서는 \<FIELD> 요소의 특성에 대해 설명합니다. 다음 스키마 구문으로 요약할 수 있습니다.  
   
  <FIELD  
@@ -199,17 +199,17 @@ ms.locfileid: "68091430"
   
  각 \<FIELD> 요소는 다른 요소와는 독립적입니다. 필드는 다음 특성에 따라 설명됩니다.  
   
-|FIELD 특성|설명|선택 /<br /><br /> 필수|  
+|FIELD 특성|Description|선택 /<br /><br /> 필수|  
 |---------------------|-----------------|------------------------------|  
 |ID **="** _fieldID_ **"**|데이터 파일에서 필드의 논리적 이름을 지정합니다. 필드의 ID는 필드를 참조하는 데 사용되는 키입니다.<br /><br /> \<FIELD ID **="** _fieldID_ **"** />는 \<COLUMN SOURCE **="** _fieldID_ **"** />에 매핑됩니다.|필수|  
 |xsi:type **="** _fieldType_ **"**|요소의 인스턴스 유형을 식별하는 XML 구문(특성처럼 사용)입니다. *fieldType* 값은 지정한 인스턴스에서 필요한 옵션 특성(아래)을 결정합니다.|필수(데이터 형식에 따라 다름)|  
 |LENGTH **="** _n_ **"**|이 특성은 고정 길이 데이터 형식의 인스턴스 길이를 정의합니다.<br /><br /> *n* 값은 양의 정수여야 합니다.|선택(xsi:type 값에서 필요로 하지 않는 경우)|  
 |PREFIX_LENGTH **="** _p_ **"**|이 특성은 이진 데이터 표현의 접두사 길이를 정의합니다. PREFIX_LENGTH 값인 *p*는 1, 2, 4 또는 8 중 하나를 사용해야 합니다.|선택(xsi:type 값에서 필요로 하지 않는 경우)|  
-|MAX_LENGTH **="** _m_ **"**|이 특성은 지정된 필드에 저장할 수 있는 최대 바이트 수입니다. 대상 테이블이 없는 경우 열의 최대 길이를 알 수 없습니다. MAX_LENGTH 특성은 출력 문자 열의 최대 길이를 제한하여 열 값에 할당된 스토리지를 제한합니다. 특히 SELECT FROM 절에서 OPENROWSET 함수의 BULK 옵션을 사용할 때 편리합니다.<br /><br /> *m* 값은 양의 정수여야 합니다. 기본적으로 최대 길이는 **char** 열의 경우 8000자, **nchar** 열의 경우 4000자입니다.|선택 사항|  
-|COLLATION **="** _collationName_ **"**|COLLATION은 문자 필드에서만 사용할 수 있습니다. SQL 데이터 정렬 이름 목록은 [SQL Server 데이터 정렬 이름&#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md)을 참조하세요.|선택 사항|  
+|MAX_LENGTH **="** _m_ **"**|이 특성은 지정된 필드에 저장할 수 있는 최대 바이트 수입니다. 대상 테이블이 없는 경우 열의 최대 길이를 알 수 없습니다. MAX_LENGTH 특성은 출력 문자 열의 최대 길이를 제한하여 열 값에 할당된 스토리지를 제한합니다. 특히 SELECT FROM 절에서 OPENROWSET 함수의 BULK 옵션을 사용할 때 편리합니다.<br /><br /> *m* 값은 양의 정수여야 합니다. 기본적으로 최대 길이는 **char** 열의 경우 8000자, **nchar** 열의 경우 4000자입니다.|옵션|  
+|COLLATION **="** _collationName_ **"**|COLLATION은 문자 필드에서만 사용할 수 있습니다. SQL 데이터 정렬 이름 목록은 [SQL Server 데이터 정렬 이름&#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md)을 참조하세요.|옵션|  
 |TERMINATOR **= "** _terminator_ **"**|이 특성은 데이터 필드의 종결자를 지정합니다. 종결자는 어떠한 문자도 가능합니다. 종결자는 데이터의 일부가 아닌 고유 문자여야 합니다.<br /><br /> 기본적으로 필드 종결자는 탭 문자(\t로 표시)입니다. 단락 기호를 표시하려면 \r\n을 사용하세요.|이 특성이 필요한 문자 데이터의 xsi:type에만 사용됩니다.|  
   
-#####  <a name="XsiTypeValuesOfFIELD"></a> \<FIELD> 요소의 xsi:type 값  
+#####  <a name="XsiTypeValuesOfFIELD"></a>\<FIELD> 요소의 xsi:type 값  
  xsi:type 값은 요소 인스턴스의 데이터 형식을 식별하는 XML 구문(특성처럼 사용)입니다. xsi:type 값의 사용 방법은 이 섹션의 뒷부분에 나오는 "데이터 집합에 xsi:type 값 넣기"를 참조하세요.  
   
  \<FIELD> 요소의 xsi:type 값은 다음 데이터 형식을 지원합니다.  
@@ -227,7 +227,7 @@ ms.locfileid: "68091430"
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 대한 자세한 내용은 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)을 참조하세요.  
   
-####  <a name="AttrOfColumnElement"></a> \<COLUMN> 요소의 특성  
+####  <a name="AttrOfColumnElement"></a>\<COLUMN> 요소의 특성  
  이 섹션에서는 \<COLUMN> 요소의 특성에 대해 설명합니다. 다음 스키마 구문으로 요약할 수 있습니다.  
   
  <COLUMN  
@@ -252,24 +252,24 @@ ms.locfileid: "68091430"
   
  필드는 다음 특성을 사용하여 대상 테이블의 열에 매핑됩니다.  
   
-|COLUMN 특성|설명|선택 /<br /><br /> 필수|  
+|COLUMN 특성|Description|선택 /<br /><br /> 필수|  
 |----------------------|-----------------|------------------------------|  
 |SOURCE **="** _fieldID_ **"**|열에 매핑되는 필드의 ID를 지정합니다.<br /><br /> \<COLUMN SOURCE **="** _fieldID_ **"** />는 \<FIELD ID **="** _fieldID_ **"** />에 매핑됩니다.|필수|  
 |NAME = "*columnName*"|서식 파일에 의해 표현된 행 집합의 열 이름을 지정합니다. 이 열 이름은 결과 집합에서 열을 식별하는 데 사용되며 대상 테이블에서 사용되는 열 이름과 일치할 필요는 없습니다.|필수|  
-|xsi **:** type **="** _ColumnType_ **"**|요소의 인스턴스 데이터 형식을 식별하는 XML 구문(특성처럼 사용)입니다. *ColumnType* 값은 지정한 인스턴스에서 필요한 옵션 특성(아래)을 결정합니다.<br /><br /> 참고: *ColumnType*의 가능한 값 및 관련 특성은 [&lt;COLUMN&gt; 요소의 Xsi:type 값](#XsiTypeValuesOfCOLUMN) 섹션의 \<COLUMN> 요소 테이블에 나와 있습니다.|선택 사항|  
+|xsi **:** type **="** _ColumnType_ **"**|요소의 인스턴스 데이터 형식을 식별하는 XML 구문(특성처럼 사용)입니다. *ColumnType* 값은 지정한 인스턴스에서 필요한 옵션 특성(아래)을 결정합니다.<br /><br /> 참고: *ColumnType*의 가능한 값 및 관련 특성은 [&lt;COLUMN&gt; 요소의 Xsi:type 값](#XsiTypeValuesOfCOLUMN) 섹션의 \<COLUMN> 요소 테이블에 나와 있습니다.|옵션|  
 |LENGTH **="** _n_ **"**|고정 길이 데이터 형식의 인스턴스 길이를 정의합니다. LENGTH는 xsi:type이 문자열 데이터 형식인 경우에만 사용됩니다.<br /><br /> *n* 값은 양의 정수여야 합니다.|선택(xsi:type이 문자열 데이터 형식인 경우에만 사용 가능)|  
 |PRECISION **="** _n_ **"**|숫자의 전체 자릿수를 나타냅니다. 예를 들어 123.45의 전체 자릿수는 5입니다.<br /><br /> 값은 양의 정수여야 합니다.|선택(xsi:type이 가변 숫자 데이터 형식인 경우에만 사용 가능)|  
 |SCALE **="** _int_ **"**|숫자에서 소수점 이하 자릿수를 나타냅니다. 예를 들어 123.45의 소수 자릿수는 2입니다.<br /><br /> 값은 정수여야 합니다.|선택(xsi:type이 가변 숫자 데이터 형식인 경우에만 사용 가능)|  
 |NULLABLE **=** { **"** YES **"**<br /><br /> **"** NO **"** }|열이 NULL 값을 허용하는지 여부를 나타냅니다. 이 특성은 FIELDS와는 독립적입니다. 그러나 열이 NULLABLE이 아닌 경우 필드에서 NULL을 지정하면(아무 값도 지정하지 않음) 런타임 오류가 발생합니다.<br /><br /> NULLABLE 특성은 일반 SELECT FROM OPENROWSET(BULK...) 문의 경우에만 사용됩니다.|선택 사항(모든 데이터 형식에 사용 가능)|  
   
-#####  <a name="XsiTypeValuesOfCOLUMN"></a> \<COLUMN> 요소의 xsi:type 값  
+#####  <a name="XsiTypeValuesOfCOLUMN"></a>\<COLUMN> 요소의 xsi:type 값  
  xsi:type 값은 요소 인스턴스의 데이터 형식을 식별하는 XML 구문(특성처럼 사용)입니다. xsi:type 값의 사용 방법은 이 섹션의 뒷부분에 나오는 "데이터 집합에 xsi:type 값 넣기"를 참조하세요.  
   
  \<COLUMN> 요소는 다음과 같이 원시 SQL 데이터 형식을 지원합니다.  
   
 |형식 범주|\<COLUMN> 데이터 형식|데이터 형식의<br /><br /> 선택적 XML 특성|데이터 형식의<br /><br /> 선택적 XML 특성|  
 |-------------------|---------------------------|---------------------------------------------------|---------------------------------------------------|  
-|고정|**SQLBIT**, **SQLTINYINT**, **SQLSMALLINT**, **SQLINT**, **SQLBIGINT**, **SQLFLT4**, **SQLFLT8**, **SQLDATETIME**, **SQLDATETIM4**, **SQLDATETIM8**, **SQLMONEY**, **SQLMONEY4**, **SQLVARIANT**및 **SQLUNIQUEID**|없음|NULLABLE|  
+|수정됨|**SQLBIT**, **SQLTINYINT**, **SQLSMALLINT**, **SQLINT**, **SQLBIGINT**, **SQLFLT4**, **SQLFLT8**, **SQLDATETIME**, **SQLDATETIM4**, **SQLDATETIM8**, **SQLMONEY**, **SQLMONEY4**, **SQLVARIANT**및 **SQLUNIQUEID**|없음|NULLABLE|  
 |가변 숫자|**SQLDECIMAL** 및 **SQLNUMERIC**|없음|NULLABLE, PRECISION, SCALE|  
 |LOB|**SQLIMAGE**, **CharLOB**, **SQLTEXT**및 **SQLUDT**|없음|NULLABLE|  
 |문자 LOB|**SQLNTEXT**|없음|NULLABLE|  
@@ -550,7 +550,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
 -   [서식 파일을 사용하여 테이블 열을 데이터 파일 필드에 매핑&#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [서식 파일 만들기&#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md)  
   

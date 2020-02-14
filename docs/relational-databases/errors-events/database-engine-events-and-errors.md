@@ -9,12 +9,12 @@ ms.topic: reference
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 29f9245fcb3f827c51060834a37fbc3c01aa5e9b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 941dbe32355ef158f0a0a07c16e5181653738cb1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75247317"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76918187"
 ---
 # <a name="database-engine-errors"></a>데이터베이스 엔진 오류
 
@@ -5871,7 +5871,7 @@ ms.locfileid: "75247317"
 |   14689   |   16  |   예  |   관리 데이터 웨어하우스가 구성되어 있지 않으면 컬렉션 집합을 시작할 수 없습니다. instmdw.sql 스크립트를 실행하여 관리 데이터 웨어하우스를 만들고 구성하십시오. |
 |   14690   |   16  |   예  |   수집기가 실행될 때는 이 절차를 수행할 수 없습니다. 수집기를 비활성화한 다음 다시 시도하십시오.  |
 |   14691   |   16  |   예  |   수집기 상태는 null일 수 없습니다. 이는 수집기 구성 데이터가 내부적으로 손상되었음을 나타내는 것일 수 있습니다.   |
-|   14692   |   16  |   예  |   컬렉션 집합: ‘%s’을(를) 시작하는 데 필요한 권한이 충분하지 않습니다. 'sysadmin' 고정 서버 역할의 멤버만 SQL Server 에이전트 프록시에 연결하지 않고 컬렉션 집합을 시작할 수 있습니다. 컬렉션 집합에 SQL Server 에이전트 프록시를 연결한 후 다시 시도하십시오.    |
+|   14692   |   16  |   예  |   컬렉션 집합 ‘%s’을(를) 시작하는 데 필요한 권한이 충분하지 않습니다. 'sysadmin' 고정 서버 역할의 멤버만 SQL Server 에이전트 프록시에 연결하지 않고 컬렉션 집합을 시작할 수 있습니다. 컬렉션 집합에 SQL Server 에이전트 프록시를 연결한 후 다시 시도하십시오.    |
 |   14693   |   16  |   예  |   컬렉션 집합은 일정 없이 시작할 수 없습니다. 컬렉션 집합에 대한 일정을 지정하십시오.    |
 |   14694   |   16  |   예  |   캐시되지 않은 모드에서는 컬렉션 집합 '%s'에 대한 데이터를 요청 시 업로드할 수 없습니다.    |
 |   14695   |   16  |   예  |   캐시된 모드에서는 컬렉션 집합 '%s'에 대한 데이터를 요청 시 수집할 수 없습니다.   |
@@ -7997,7 +7997,7 @@ ms.locfileid: "75247317"
 |   21796   |   16  |   예  |   속성 "xactsetjobinterval"에는 0보다 크거나 같은 값을 지정해야 합니다.  |
 |   21797   |   16  |   예  |   에이전트 작업을 만들 수 없습니다. '%s'은(는) '머신\\로그인' 또는 '도메인\\로그인' 형식의 올바른 Windows 로그인이어야 합니다. '%s'에 대한 설명서를 참조하십시오.    |
 |   21798   |   16  |   예  |   복제 관리 프로시저를 실행할 수 없습니다. 계속하려면 먼저 '%s'을(를) 통해 '%s' 에이전트 작업을 추가해야 합니다. '%s'에 대한 설명서를 참조하십시오.   |
-|   21799   |   16  |   예  |   게시자(%s), 데이터베이스(%s), 게시(%s)에 대해 %s 에이전트를 찾을 수 없습니다. 적절한 프로시저인 sp_addpublication_snapshot, sp_addlogreader_agent 또는 sp_addqreader_agent를 사용하여 에이전트를 만드세요.  |
+|   21799   |   16  |   예  |   게시자(%s), 데이터베이스(%s), 게시(%s)에 대해 %s 에이전트를 찾을 수 없습니다. 적절한 프로시저인 sp_addpublication_snapshot, sp_addlogreader_agent 또는 sp_addqreader_agent를 사용하여 에이전트를 만드세요.   |
 |   21800   |   16  |   예  |   공통 Generation 워터마크가 없거나 아직 전파되지 않은 변경 내용에 대한 메타데이터가 정리되었을 수 있으므로 이 복제본에서는 해당 워터마크가 적합하지 않습니다. |
 |   21801   |   16  |   예  |   저장 프로시저 sp_createagentparameter에서 시스템 테이블 msdb.dbo.MSagentparameterlist에 하나 이상의 매개 변수를 추가하지 못했습니다. sp_createagentparameter에서 반환한 오류 및 sp_createagentparameter를 실행하는 동안 SQL Server에서 반환한 오류를 확인하십시오.    |
 |   21802   |   16  |   예  |   에이전트 프로필 작성 프로세스에서 지정된 에이전트 매개 변수 값을 검사할 수 없습니다. '%s'은(는) '%s' 매개 변수에 대한 올바른 값이 아닙니다. 값은 '%d'보다 작거나 같은 정수여야 합니다. 복제가 제대로 설치되어 있는지 확인하십시오.   |

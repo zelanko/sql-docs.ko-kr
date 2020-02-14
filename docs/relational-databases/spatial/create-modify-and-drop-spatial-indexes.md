@@ -18,10 +18,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1c6be1e3a8b05daf16ec845a307679620d2b1d00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048711"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>공간 인덱스 만들기, 수정 및 삭제
@@ -56,7 +56,7 @@ ms.locfileid: "68048711"
   
 7.  인덱싱하려는 공간 열을 지정하려면 **추가**를 클릭합니다.  
   
-8.  *\<테이블 이름>* **에서 열 선택** 대화 상자에서 해당 확인란을 선택하여 **geometry** 또는 **geography** 형식의 열을 선택합니다. 그러면 다른 공간 열이 편집할 수 없게 됩니다. 다른 공간 열을 선택하려면 먼저 현재 선택된 열의 선택을 취소해야 합니다. 완료되었으면 **확인**을 클릭합니다.  
+8.  ‘\<테이블 이름>’**에서 열 선택** 대화 상자에서 해당 확인란을 선택하여 **geometry** 또는 **geography** 형식의 열을 선택합니다.  그러면 다른 공간 열이 편집할 수 없게 됩니다. 다른 공간 열을 선택하려면 먼저 현재 선택된 열의 선택을 취소해야 합니다. 완료되었으면 **확인**을 클릭합니다.  
   
 9. **인덱스 키 열** 표에서 열 선택 사항을 확인합니다.  
   

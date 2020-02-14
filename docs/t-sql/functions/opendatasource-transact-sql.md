@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 8aa3f690b79167df6de5b27f6dd78276c61e0b26
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71342063"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE(Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "71342063"
 
   연결된 서버 이름을 사용하지 않고 네 부분으로 된 개체 이름의 일부로 임시 연결 정보를 제공합니다.  
 
- ![링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -51,7 +51,7 @@ OPENDATASOURCE ( 'provider_name', 'init_string' )
  > 이전의 Microsoft OLE DB Provider for SQL Server(SQLOLEDB) 및 SQL Server Native Client OLE DB 공급자(SQLNCLI)는 계속 사용되지 않으며, 새로운 개발 작업에 사용하지 않는 것이 좋습니다. 대신 최신 서버 기능으로 업데이트되는 새로운 [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md)(MSOLEDBSQL)를 사용하세요.
  
  '*init_string*'  
- 대상 공급자의 IDataInitialize 인터페이스로 전달되는 연결 문자열입니다. 공급자 문자열 구문은 세미콜론으로 구분된 키워드-값 쌍으로 구분됩니다. 예: **'** _keyword1_=_value_ **;** _keyword2_=_value_ **'**  
+ 대상 공급자의 IDataInitialize 인터페이스로 전달되는 연결 문자열입니다. 공급자 문자열 구문은 세미콜론으로 구분된 키워드-값 쌍으로 구분됩니다(예: **‘** _keyword1_=_value_ **;** _keyword2_=_value_ **’** ).  
   
  공급자에서 지원되는 특정 키워드-값 쌍은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Data Access SDK를 참조하십시오. 이 설명서에서는 기본 구문을 정의합니다. 다음 표에서는 *init_string* 인수에 가장 자주 사용되는 키워드를 나열합니다.  
   
@@ -63,10 +63,10 @@ OPENDATASOURCE ( 'provider_name', 'init_string' )
 |Connect timeout|DBPROP_INIT_TIMEOUT|연결 시도가 실패한 후의 제한 시간 값입니다.|  
 |사용자 ID|DBPROP_AUTH_USERID|연결에 사용할 사용자 ID입니다.|  
 |암호|DBPROP_AUTH_PASSWORD|연결에 사용할 암호입니다.|  
-|Catalog|DBPROP_INIT_CATALOG|데이터 원본에 연결할 때의 초기 또는 기본 카탈로그 이름입니다.|  
+|카탈로그|DBPROP_INIT_CATALOG|데이터 원본에 연결할 때의 초기 또는 기본 카탈로그 이름입니다.|  
 |Integrated Security|DBPROP_AUTH_INTEGRATED|Windows 인증을 지정하는 SSPI입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 `OPENROWSET`는 열에 대한 데이터 정렬 세트에 관계없이 항상 인스턴스 데이터 정렬을 상속합니다.
 
 `OPENDATASOURCE`는 지정된 공급자에 대해 명시적으로 DisallowAdhocAccess 레지스트리 옵션을 0으로 설정하고 Ad Hoc Distributed Queries 고급 구성 옵션을 설정할 때만 OLE DB 데이터 원본에서 원격 데이터에 액세스하는 데 사용할 수 있습니다. 이러한 옵션을 설정하지 않은 경우 기본적으로 임시 액세스가 허용되지 않습니다.  
@@ -87,7 +87,7 @@ OPENDATASOURCE ( 'provider_name', 'init_string' )
   
 ## <a name="examples"></a>예  
 
-### <a name="a-using-opendatasource-with-select-and-the-sql-server-ole-db-driver"></a>1\. SELECT 및 SQL Server OLE DB Driver로 OPENDATASOURCE 사용하기  
+### <a name="a-using-opendatasource-with-select-and-the-sql-server-ole-db-driver"></a>A. SELECT 및 SQL Server OLE DB Driver로 OPENDATASOURCE 사용하기  
  다음 예에서는 [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md)를 사용하여 `Seattle1` 원격 서버에서 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `HumanResources.Department` 테이블에 액세스합니다. `SELECT` 문은 반환되는 행 집합을 정의하는 데 사용됩니다. 공급자 문자열에는 `Server` 및 `Trusted_Connection` 키워드가 포함됩니다. 이러한 키워드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB Driver가 인식합니다.  
   
 ```sql  
@@ -96,7 +96,7 @@ FROM OPENDATASOURCE('MSOLEDBSQL', 'Server=Seattle1;Database=AdventureWorks2016;T
 ORDER BY GroupName, Name;  
 ``` 
 
-### <a name="b-using-opendatasource-with-select-and-the-sql-server-ole-db-provider"></a>2\. SELECT 및 SQL Server OLE DB 공급자로 OPENDATASOURCE 사용하기  
+### <a name="b-using-opendatasource-with-select-and-the-sql-server-ole-db-provider"></a>B. SELECT 및 SQL Server OLE DB 공급자로 OPENDATASOURCE 사용하기  
 다음 예에서는 `Payroll` 서버에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 `London` 인스턴스에 대해 임시 연결을 만들고 `AdventureWorks2012.HumanResources.Employee` 테이블을 쿼리합니다. 
 
 > [!NOTE] 

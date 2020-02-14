@@ -16,10 +16,10 @@ ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 25a2d1fe5eba1f52fc9738b9191f9bdade40002d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295802"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>패키지에 대한 SQL Server 에이전트 작업
@@ -66,7 +66,7 @@ ms.locfileid: "71295802"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하여 패키지를 실행하는 방법을 보여 주는 비디오는 MSDN 라이브러리의 비디오 홈페이지에서 [방법: SQL Server 에이전트를 사용하여 패키지 실행 자동화(SQL Server 비디오)](https://go.microsoft.com/fwlink/?LinkId=141771)를 참조하세요.  
   
 ##  <a name="trouble"></a> 문제 해결  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 커맨드 라인에서 패키지가 성공적으로 실행되더라도 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에이전트 작업 단계를 시작하지 못할 수 있습니다. 이 문제에 대한 몇 가지 일반적인 이유와 권장 솔루션이 있습니다. 자세한 내용은 다음 리소스를 참조하십시오.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 커맨드 라인에서 패키지가 성공적으로 실행되더라도 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에이전트 작업 단계를 시작하지 못할 수 있습니다. 이 문제에 대한 몇 가지 일반적인 이유와 권장 솔루션이 있습니다. 자세한 내용은 다음 리소스를 참조하세요.  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 기술 자료 문서 - [SQL Server 에이전트 작업 단계에서 SSIS 패키지를 호출할 때 SSIS 패키지가 실행되지 않는다](https://support.microsoft.com/kb/918760)  
   
@@ -129,7 +129,7 @@ ms.locfileid: "71295802"
 
       프록시에서 사용되는 자격 증명 로그인, SQL Server 에이전트를 실행하는 계정 및 SQL Server 서비스를 실행하는 계정에는 다음 권한이 필요합니다. 로컬 보안 정책 특성: %SYSTEMROOT%\Temp에 대한 프로세스 수준 토큰 제어 바꾸기 
 
-보안 항목을 넣지 못하면 작업이 실패하고 다음과 비슷한 오류 메시지가 나타납니다. 작업에 실패했습니다.  클라이언트에 필수 권한이 없습니다.
+보안 항목을 넣지 못하면 작업이 실패하고 다음과 비슷한 오류 메시지가 나타납니다. 작업이 실패했습니다.  클라이언트에 필수 권한이 없습니다.
      
   
     > **NOTE:** If the password changes for the credential that the proxy account uses, you need to update the credential password. Otherwise, the job step will fail.  
@@ -140,7 +140,7 @@ ms.locfileid: "71295802"
   
      **다음 표에서는 패키지 원본에 대해 설명합니다.**  
   
-    |패키지 원본|설명|  
+    |패키지 원본|Description|  
     |--------------------|-----------------|  
     |**SSIS 카탈로그**|SSISDB 데이터베이스에 저장된 패키지입니다. 패키지는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포되는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트에 포함됩니다.|  
     |**SQL Server**|MSDB 데이터베이스에 저장된 패키지입니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스를 사용하여 패키지를 관리합니다.|  
@@ -182,7 +182,7 @@ ms.locfileid: "71295802"
     |**명령 파일**|**dtexec**에 실행할 추가 옵션을 별도 파일에 지정합니다.<br /><br /> 예를 들어 패키지를 실행하는 동안 하나 이상의 지정된 이벤트가 발생하는 경우 디버그 덤프 파일을 생성하려면 /Dump *errorcode* 옵션을 포함하는 파일을 포함할 수 있습니다.<br /><br /> **명령 파일** 옵션을 사용하면 여러 파일을 만들어서 적절한 파일을 지정하는 방법으로 한 패키지에 대해 다른 옵션 집합을 실행할 수 있습니다.<br /><br /> **명령 파일** 옵션은 **dtexec** 의 **/CommandFile**옵션에 해당합니다.|  
     |**데이터 원본**|패키지에 포함된 연결 관리자를 봅니다. 연결 문자열을 수정하려면 연결 관리자를 클릭하고 연결 문자열을 클릭합니다.<br /><br /> 이 옵션은 **dtexec** 의 **/Connection**옵션에 해당합니다.|  
     |**실행 옵션**|**유효성 검사 경고 발생 시 패키지 실패**<br /> 경고 메시지가 오류로 간주되는지 여부를 나타냅니다. 이 옵션을 선택하고 유효성 검사 중 경고가 발생하면 패키지는 유효성 검사 중 실패합니다. 이 옵션은 **dtexec** 의 **/WarnAsError**옵션에 해당합니다.<br /><br /> **패키지를 실행하지 않고 유효성 검사**<br /> 유효성 검사 단계 후에 실제로 패키지를 실행하지 않고 패키지 실행을 중지할지 여부를 나타냅니다. 이 옵션은 **dtexec** 의 **/Validate**옵션에 해당합니다.<br /><br /> **MacConcurrentExecutables 속성 무시**<br /> 패키지에서 동시에 실행할 수 있는 실행 파일 수를 지정합니다. -1 값은 패키지가 실행할 수 있는 최대 파일 수가 패키지를 실행하는 컴퓨터의 프로세서 총 수에 2를 더한 값과 같음을 의미합니다. 이 옵션은 **dtexec** 의 **/MaxConcurrent**옵션에 해당합니다.<br /><br /> **패키지 검사점 사용**<br /> 패키지 실행 중 검사점 사용 여부를 나타냅니다. 자세한 내용은 [검사점을 사용하여 패키지 다시 시작](../../integration-services/packages/restart-packages-by-using-checkpoints.md)을 참조하세요.<br /><br /> 이 옵션은 **dtexec** 의 **/CheckPointing**옵션에 해당합니다.<br /><br /> **다시 시작 옵션 무시**<br /> 패키지의 **CheckpointUsage** 속성에 대해 새 값이 설정되었는지를 나타냅니다. **다시 시작 옵션** 목록 상자에서 값을 선택합니다.<br /><br /> 이 옵션은 **dtexec** 의 **/Restart**옵션에 해당합니다.<br /><br /> **32비트 런타임 사용**<br /> 64비트 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 설치된 64비트 컴퓨터에서 32비트 버전의 dtexec 유틸리티를 사용하는 패키지의 실행 여부를 나타냅니다.<br /><br /> 예를 들어 64비트 버전에서 사용할 수 없는 네이티브 OLE DB 공급자를 패키지에서 사용하는 경우 32비트 버전의 dtexec를 사용하여 패키지를 실행해야 합니다. 자세한 내용은 [Integration Services에 대한 64비트 고려 사항](https://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx)을 참조하십시오.<br /><br /> 기본적으로 **SQL Server Integration Services 패키지** 작업 단계 유형을 선택하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 시스템에서 자동으로 호출된 dtexec 유틸리티 버전을 사용하여 패키지를 실행합니다. 시스템은 컴퓨터 프로세서와 컴퓨터에서 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 버전에 따라 32비트 또는 64비트 버전 유틸리티를 호출합니다.|  
-    |**로깅**|로그 공급자를 패키지 실행과 연결합니다.<br /><br /> **텍스트 파일용 SSIS 로그 공급자**<br /> ASCII 텍스트 파일에 로그 항목을 기록합니다.<br /><br /> **SQL Server용 SSIS 로그 공급자**<br /> MSDB 데이터베이스의 sysssislog 테이블에 로그 항목을 기록합니다.<br /><br /> **SQL Server Profiler용 SSIS 로그 공급자**<br /> SQL Server 프로파일러를 사용하여 볼 수 있는 추적 정보를 기록합니다.<br /><br /> **Windows 이벤트 로그용 SSIS 로그 공급자**<br /> Windows 이벤트 로그의 애플리케이션 로그에 로그 항목을 기록합니다.<br /><br /> **XML 파일용 SSIS 로그 공급자**<br /> XML 파일에 로그 파일을 기록합니다.<br /><br /> 텍스트 파일, XML 파일 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로파일러 로그 공급자의 경우 패키지에 포함된 파일 연결 관리자를 선택합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 공급자의 경우 패키지에 포함된 OLE DB 연결 관리자를 선택합니다.<br /><br /> 이 옵션은 **dtexec** 의 **/Logger**옵션에 해당합니다.|  
+    |**Logging**|로그 공급자를 패키지 실행과 연결합니다.<br /><br /> **텍스트 파일용 SSIS 로그 공급자**<br /> ASCII 텍스트 파일에 로그 항목을 기록합니다.<br /><br /> **SQL Server용 SSIS 로그 공급자**<br /> MSDB 데이터베이스의 sysssislog 테이블에 로그 항목을 기록합니다.<br /><br /> **SQL Server Profiler용 SSIS 로그 공급자**<br /> SQL Server 프로파일러를 사용하여 볼 수 있는 추적 정보를 기록합니다.<br /><br /> **Windows 이벤트 로그용 SSIS 로그 공급자**<br /> Windows 이벤트 로그의 애플리케이션 로그에 로그 항목을 기록합니다.<br /><br /> **XML 파일용 SSIS 로그 공급자**<br /> XML 파일에 로그 파일을 기록합니다.<br /><br /> 텍스트 파일, XML 파일 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로파일러 로그 공급자의 경우 패키지에 포함된 파일 연결 관리자를 선택합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 공급자의 경우 패키지에 포함된 OLE DB 연결 관리자를 선택합니다.<br /><br /> 이 옵션은 **dtexec** 의 **/Logger**옵션에 해당합니다.|  
     |**값 설정**|패키지 속성 설정을 재정의합니다. **속성** 상자에서 **속성 경로** 및 **값** 열에 값을 입력합니다. 속성 하나에 대한 값을 입력하면, **속성** 상자에 빈 행이 나타나고 다른 속성에 대한 값을 입력할 수 있게 됩니다.<br /><br /> 속성 상자에서 속성을 제거하려면 행을 클릭한 다음 **제거**를 클릭합니다.<br /><br /> 다음 중 하나를 수행하여 속성 경로를 찾을 수 있습니다.<br /><br /> -XML 구성 파일(\*.dtsconfig)에서 속성 경로를 복사합니다. 경로는 파일의 구성 섹션에 경로 속성의 값으로 나열됩니다. MaximumErrorCount 속성에 대한 경로의 예는 \Package.Properties[MaximumErrorCount]와 같습니다.<br /><br /> \- **패키지 구성 마법사** 를 실행하고 마지막 **마법사 완료** 페이지에서 속성 경로를 복사합니다. 그런 다음 마법사를 취소할 수 있습니다.|  
     |**확인**|**서명된 패키지만 실행**<br /> 패키지 서명 확인 여부를 나타냅니다. 패키지가 서명되지 않았거나 서명이 잘못된 경우 패키지가 실패합니다. 이 옵션은 **dtexec** 의 **/VerifySigned**옵션에 해당합니다.<br /><br /> **패키지 빌드 확인**<br /> 패키지의 빌드 번호가 이 옵션 옆에 있는 **빌드** 상자에 입력된 빌드 번호와 비교하여 검증되었는지를 나타냅니다. 일치하지 않을 경우 패키지가 실행되지 않습니다. 이 옵션은 **dtexec** 의 **/VerifyBuild**옵션에 해당합니다.<br /><br /> **패키지 ID 확인**<br /> 패키지의 GUID가 이 옵션 옆에 있는 **패키지 ID** 상자에 입력된 package ID와 비교하여 검증되었는지를 나타냅니다. 이 옵션은 **dtexec** 의 **/VerifyPackageID**옵션에 해당합니다.<br /><br /> **버전 ID 확인**<br /> 패키지의 버전 GUID가 이 옵션 옆에 있는 **버전 ID** 상자에 입력된 버전 ID와 비교하여 검증되었는지를 나타냅니다. 이 옵션은 **dtexec** 의 **/VerifyVersionID**옵션에 해당합니다.|  
     |**명령줄**|dtexec의 명령줄 옵션을 수정합니다. 옵션에 대한 자세한 내용은 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)를 참조하십시오.<br /><br /> **원래 옵션 복원**<br /> **작업 단계 속성**대화 상자의 **패키지**, **구성**, **명령 파일**, **데이터 원본**, **실행 옵션**, **로깅**, **값 설정** , **확인** 탭에 설정한 명령줄 옵션을 사용합니다.<br /><br /> **수동으로 명령 편집**<br /> **명령줄** 상자에 명령줄 옵션을 추가로 입력합니다.<br /><br /> 작업 단계에 변경한 내용을 저장하기 위해 **확인**을 클릭하기 전에 **원래 옵션 복원**을 클릭하면 **명령줄** 상자에 추가로 입력한 옵션을 모두 삭제할 수 있습니다.<br /><br /> **\*\* 팁 \*\*** 명령 프롬프트 창에 명령줄을 복사하고 `dtexec`를 추가하여 명령줄에서 패키지를 실행할 수 있습니다. 이렇게 하면 명령줄 텍스트를 쉽게 생성할 수 있습니다.|  

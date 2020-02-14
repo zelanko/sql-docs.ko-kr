@@ -19,10 +19,10 @@ ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 00c117a2282216f5f326cbf524f3326af5cc93e1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294325"
 ---
 # <a name="bulk-insert-task"></a>대량 삽입 태스크
@@ -71,7 +71,7 @@ ms.locfileid: "71294325"
 ## <a name="custom-log-entries-available-on-the-bulk-insert-task"></a>대량 삽입 태스크에 사용할 수 있는 사용자 지정 로그 항목  
  다음 표에서는 대량 삽입 태스크에 대한 사용자 지정 로그 항목을 나열합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md)을 참조하세요.  
   
-|로그 항목|설명|  
+|로그 항목|Description|  
 |---------------|-----------------|  
 |**BulkInsertTaskBegin**|대량 삽입이 시작되었음을 나타냅니다.|  
 |**BulkInsertTaskEnd**|대량 삽입이 완료되었음을 나타냅니다.|  
@@ -124,7 +124,7 @@ ms.locfileid: "71294325"
  대량 삽입 작업에 대해 알아보려면 [대량 삽입 태스크](../../integration-services/control-flow/bulk-insert-task.md) 및 [데이터를 가져오거나 내보내기 위한 서식 파일&#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)을 참조하세요.  
   
 ### <a name="options"></a>옵션  
- **대량 삽입 태스크 편집기**  
+ **연결**  
  목록에서 OLE DB 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 새 연결을 만듭니다.  
   
  **관련 항목:** [OLE DB 연결 관리자](../../integration-services/connection-manager/ole-db-connection-manager.md)  
@@ -135,7 +135,7 @@ ms.locfileid: "71294325"
  **형식**  
  대량 삽입을 위한 서식의 원본을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**파일 사용**|서식 지정을 포함하는 파일을 선택합니다. 이 옵션을 선택하면 동적 옵션 **FormatFile**이 표시됩니다.|  
 |**지정**|서식을 지정합니다. 이 옵션을 선택하면 동적 옵션 **RowDelimiter** 및 **ColumnDelimiter**가 표시됩니다.|  
@@ -199,7 +199,7 @@ ms.locfileid: "71294325"
  **FirstRow**  
  복사를 시작할 처음 행을 지정합니다.  
   
- **대량 삽입 태스크 편집기**  
+ **옵션**  
  |용어|정의|  
 |----------|----------------|  
 |**CHECK 제약 조건**|테이블 및 열 제약 조건을 확인하려면 선택합니다.|  

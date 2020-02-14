@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b01305a689f7dbe7937560350200d3e81a1785dd
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909816"
 ---
 # <a name="query-store-usage-scenarios"></a>쿼리 저장소 사용 시나리오
@@ -61,7 +61,7 @@ ms.locfileid: "72909816"
   
 2.  최적화 프로그램이 XML 계획에서 누락된 인덱스를 제안하는지 확인합니다. 그런 경우 누락된 인덱스를 만든 다음 쿼리 저장소를 사용하여 쿼리 성능을 평가합니다.  
   
-3.  쿼리에 사용된 기본 테이블에 대한 통계가 최신 상태인지 확인합니다.  
+3.  쿼리에서 사용하는 기본 테이블에 대한 통계가 최신 상태인지 확인하세요.  
   
 4.  쿼리에 사용된 인덱스가 조각 모음되었는지 확인합니다.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "72909816"
   
 -   서버에 새 하드웨어 추가  
   
--   부담이 큰 쿼리에서 참조하는 테이블에 누락된 인덱스 만들기  
+-   비용이 많이 드는 쿼리가 참조하는 테이블에서 누락된 인덱스 만들기.  
   
 -   행 수준 보안을 위한 보안 정책 적용. 자세한 내용은 [쿼리 저장소를 사용하여 행 수준 보안 최적화](https://blogs.msdn.com/b/sqlsecurity/archive/2015/07/21/optimizing-rls-performance-with-the-query-store.aspx)를 참조하세요.  
   
@@ -127,12 +127,12 @@ ms.locfileid: "72909816"
   
 5.  분석 및 회귀 수정에 쿼리 저장소 사용: 대부분의 경우 새 쿼리 최적화 프로그램 변경 내용은 향상된 계획을 생성합니다. 그러나 쿼리 저장소는 계획 선택 회귀를 식별하고 계획 강제 적용 메커니즘을 사용하여 수정하는 간편한 방법을 제공합니다. [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터는 [자동 계획 수정](../../relational-databases/automatic-tuning/automatic-tuning.md#automatic-plan-correction) 기능을 사용할 때 이 단계가 자동화됩니다.  
 
-    1\.  회귀가 있는 경우 쿼리 저장소에서 이미 알려진 좋은 계획을 강제로 적용합니다.  
+    a.  회귀가 있는 경우 쿼리 저장소에서 이미 알려진 좋은 계획을 강제로 적용합니다.  
   
-    2\.  강제 적용에 실패하는 쿼리 계획이 있는 경우 또는 성능이 여전히 충분하지 않은 경우 [데이터베이스 호환성 수준](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)을 이전 설정으로 되돌린 다음, Microsoft 고객 지원 서비스에 연락하는 것이 좋습니다.  
+    b.  강제 적용에 실패하는 쿼리 계획이 있는 경우 또는 성능이 여전히 충분하지 않은 경우 [데이터베이스 호환성 수준](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)을 이전 설정으로 되돌린 다음, Microsoft 고객 지원 서비스에 연락하는 것이 좋습니다.  
     
 > [!TIP]
-> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]‘데이터베이스 업그레이드’ 작업을 사용하여 [데이터베이스 호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades)을 업그레이드합니다.  자세한 내용은 [쿼리 튜닝 길잡이를 사용하여 데이터베이스 업그레이드](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)를 참조하세요.
+> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ‘데이터베이스 업그레이드’ 태스크를 사용하여 [데이터베이스 호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades)을 업그레이드합니다.  자세한 내용은 [쿼리 튜닝 길잡이를 사용하여 데이터베이스 업그레이드](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)를 참조하세요.
   
 ## <a name="identify-and-improve-ad-hoc-workloads"></a>임시 워크로드 식별 및 개선  
 일부 워크로드에는 전체 애플리케이션 성능을 개선하기 위해 조정할 수 있는 주요 쿼리가 없습니다. 이러한 워크로드는 일반적으로 각각 시스템 리소스의 일부를 사용하는 비교적 다수의 쿼리가 있는 것이 특징입니다. 이러한 쿼리는 거의 실행되지 않으므로(일반적으로 한 번만 실행되므로 임시 쿼리라고 함) 해당 런타임 소비는 중요하지 않습니다. 반면, 애플리케이션이 항상 완전히 새로운 쿼리를 생성하는 경우에는 시스템 리소스의 상당 부분이 최적화되지 않은 쿼리 컴파일에 소비됩니다. 이는 많은 수의 쿼리와 계획이 예약된 공간을 차지하는 경우 쿼리 저장소에 이상적인 상황이 아닙니다. 즉, 쿼리 저장소가 매우 빠르게 읽기 전용 모드로 전환될 수 있습니다. **크기 기반 정리 정책** (쿼리 저장소를 항상 실행되도록 유지하는 데[매우 권장됨](best-practice-with-the-query-store.md) )을 활성화한 경우 백그라운드 프로세스에서 쿼리 저장소 구조를 정리하므로 대부분의 시간 동안 상당한 시스템 리소스가 소비됩니다.  

@@ -21,18 +21,18 @@ ms.assetid: d7309542-dbbe-41dc-b42e-5d9a1c8b4838
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 3ccf2da9a32cb932dc206d702d6303ffa85e0664
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109345"
 ---
-# <a name="keyid-transact-sql"></a>KEY_ID(Transact-SQL)
+# <a name="key_id-transact-sql"></a>KEY_ID(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   현재 데이터베이스에 있는 대칭 키의 ID를 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -48,7 +48,7 @@ Key_ID ( 'Key_Name' )
 ## <a name="return-types"></a>반환 형식  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  임시 키의 이름은 숫자 기호(#)로 시작해야 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -56,14 +56,14 @@ Key_ID ( 'Key_Name' )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-the-id-of-a-symmetric-key"></a>1\. 대칭 키의 ID 반환  
+### <a name="a-returning-the-id-of-a-symmetric-key"></a>A. 대칭 키의 ID 반환  
  다음은 `ABerglundKey1`이라는 키의 ID를 반환하는 예입니다.  
   
 ```  
 SELECT KEY_ID('ABerglundKey1');  
 ```  
   
-### <a name="b-returning-the-id-of-a-temporary-symmetric-key"></a>2\. 임시 대칭 키의 ID 반환  
+### <a name="b-returning-the-id-of-a-temporary-symmetric-key"></a>B. 임시 대칭 키의 ID 반환  
  다음은 임시 대칭 키의 ID를 반환하는 예입니다. 키 이름 앞에 `#`이 있습니다.  
   
 ```  

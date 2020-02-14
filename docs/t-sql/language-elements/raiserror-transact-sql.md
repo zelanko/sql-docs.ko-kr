@@ -30,10 +30,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 845a9203bf680921b3ac85283be610a2fa678c0e
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72252043"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR(Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "72252043"
 
   오류 메시지를 생성하고 세션에 대한 오류 처리를 시작합니다. RAISERROR는 sys.messages 카탈로그 뷰에 저장된 사용자 정의 메시지를 참조하거나 동적으로 메시지를 작성할 수 있습니다. 메시지는 호출하는 애플리케이션 또는 연결된 TRY...CATCH 구문의 CATCH 블록에 서버 오류 메시지로 반환됩니다. 새 애플리케이션에서는 [THROW](../../t-sql/language-elements/throw-transact-sql.md)를 대신 사용해야 합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -82,7 +82,7 @@ RAISERROR ( { msg_str | @local_variable }
   
  대체 값의 공백 처리 및 맞춤을 결정하는 코드입니다.  
   
-|코드|접두사 또는 맞춤|설명|  
+|코드|접두사 또는 맞춤|Description|  
 |----------|-----------------------------|-----------------|  
 |-(빼기)|왼쪽 정렬|지정한 필드 너비 내에서 인수 값을 왼쪽으로 정렬합니다.|  
 |+(더하기)|부호 접두사|값이 부호가 있는 형식일 경우 더하기(+)나 빼기(-) 부호를 인수 값 앞에 붙입니다.|  
@@ -146,7 +146,7 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
  An invalid parameter or option was specified for procedure 'mysp_CreateCustomer'.
  ```  
   
- *state*  
+ *상태*  
  0에서 255 사이의 정수입니다. 음수 값은 기본적으로 1입니다. 255보다 큰 값은 사용해서는 안 됩니다. 
   
  여러 위치에서 동일한 사용자 정의 오류가 발생하는 경우 각 위치의 고유 상태 번호를 사용하면 코드의 어떤 부분에서 오류가 발생하는지 찾는 데 도움이 됩니다.  
@@ -157,13 +157,13 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
  *옵션*  
  오류에 대한 사용자 지정 옵션이며 다음 값 중 하나일 수 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
-|LOG|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스용 오류 로그 및 애플리케이션 로그에 오류를 기록합니다. 오류 로그에 기록되는 오류는 현재 최대 440바이트로 제한됩니다. sysadmin 고정 서버 역할의 멤버 또는 ALTER TRACE 권한을 가진 사용자만 WITH LOG를 지정할 수 있습니다.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
+|LOG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스용 오류 로그 및 애플리케이션 로그에 오류를 기록합니다. 오류 로그에 기록되는 오류는 현재 최대 440바이트로 제한됩니다. sysadmin 고정 서버 역할의 멤버 또는 ALTER TRACE 권한을 가진 사용자만 WITH LOG를 지정할 수 있습니다.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |NOWAIT|즉시 클라이언트에게 메시지를 전송합니다.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |SETERROR|심각도에 상관없이 @@ERROR과 ERROR_NUMBER 값을 *msg_id*나 50000으로 설정합니다.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  RAISERROR에 의해 생성된 오류는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 코드에 의해 생성된 오류와 동일하게 동작합니다. RAISERROR에 의해 지정된 값은 ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY, ERROR_STATE 및 @@ERROR 시스템 함수에 의해 보고됩니다. TRY 블록에서 심각도 11 이상으로 RAISERROR가 실행되면 제어권을 관련 CATCH 블록으로 전달합니다. RAISERROR가 다음과 같이 실행되면 호출자에게 오류가 반환됩니다.  
   
 -   TRY 블록 외부에서 실행된 경우  
@@ -213,7 +213,7 @@ GO
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-error-information-from-a-catch-block"></a>1\. CATCH 블록의 오류 정보 반환  
+### <a name="a-returning-error-information-from-a-catch-block"></a>A. CATCH 블록의 오류 정보 반환  
  다음 코드 예제에서는 `RAISERROR` 블록 내의 `TRY`를 사용하여 관련 `CATCH` 블록으로 실행을 이동하는 방법을 보여 줍니다. 또한 `RAISERROR` 블록을 호출한 오류에 관한 정보를 반환하는 방법을 `CATCH`을 사용하여 보여 줍니다.  
   
 > [!NOTE]  
@@ -248,7 +248,7 @@ BEGIN CATCH
 END CATCH;  
 ```  
   
-### <a name="b-creating-an-ad-hoc-message-in-sysmessages"></a>2\. sys.messages에 임시 메시지 만들기  
+### <a name="b-creating-an-ad-hoc-message-in-sysmessages"></a>B. sys.messages에 임시 메시지 만들기  
  다음 예에서는 sys.messages 카탈로그 뷰에 저장된 메시지를 발생시키는 방법을 보여 줍니다. `sp_addmessage` 시스템 저장 프로시저를 사용하여 sys.messages 카탈로그 뷰에 `50005`의 메시지 번호로 메시지가 추가되었습니다.  
   
 ```  

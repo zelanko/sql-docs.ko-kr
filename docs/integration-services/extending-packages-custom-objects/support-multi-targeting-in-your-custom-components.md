@@ -11,10 +11,10 @@ ms.assetid: ec611374-16bf-4a56-8fd9-45d3ddd7befc
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 91524408998df8be0df4ee5d4ede0b641dbaa2a4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71287222"
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>사용자 지정 구성 요소에서 멀티 타기팅 지원
@@ -32,12 +32,12 @@ ms.locfileid: "71287222"
  
 다섯 가지 유형의 모든 SSIS 사용자 지정 확장은 멀티 타기팅을 지원합니다.
 -   연결 관리자
--   태스크
+-   작업
 -   Enumerators
 -   로그 공급자
 -   데이터 흐름 구성 요소
 
-관리되는 확장의 경우 SSIS 디자이너는 지정된 대상 버전에 대한 확장 버전을 로드합니다. 예를 들어
+관리되는 확장의 경우 SSIS 디자이너는 지정된 대상 버전에 대한 확장 버전을 로드합니다. 다음은 그 예입니다.
 -   대상 버전이 SQL Server 2012인 경우 디자이너는 2012 버전의 확장을 로드합니다.
 -   대상 버전이 SQL Server 2016인 경우 디자이너는 2016 버전의 확장을 로드합니다.
 

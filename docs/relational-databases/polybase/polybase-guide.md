@@ -19,10 +19,10 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions||>=aps-pdw-2016||=azure-sqldw-latest'
 ms.openlocfilehash: 7e9e09cece42b84e5fa9691aa0d353d2ed22431b
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710588"
 ---
 # <a name="what-is-polybase"></a>PolyBase란?
@@ -34,7 +34,7 @@ ms.locfileid: "71710588"
 
 PolyBase를 통해 SQL Server 2016 인스턴스는 Hadoop에서 데이터를 읽는 Transact-SQL 쿼리를 처리할 수 있습니다. 동일한 쿼리는 SQL Server의 관계형 테이블에 액세스할 수도 있습니다. 또한 PolyBase는 동일한 쿼리가 Hadoop과 SQL Server의 데이터를 조인할 수 있도록 합니다. SQL Server에서 [외부 테이블](../../t-sql/statements/create-external-table-transact-sql.md) 또는 [외부 데이터 원본](../../t-sql/statements/create-external-data-source-transact-sql.md)은 Hadoop에 대한 연결을 제공합니다.
 
-![PolyBase 논리](../../relational-databases/polybase/media/polybase-logical.png "PolyBase logical")
+![PolyBase 논리](../../relational-databases/polybase/media/polybase-logical.png "PolyBase 논리")
 
 PolyBase는 Hadoop 노드로 몇몇 계산을 푸시하여 전체 쿼리를 최적화합니다. 그러나 PolyBase 외부 액세스는 Hadoop으로 제한되지 않습니다. 구분된 텍스트 파일 등 기타 비구조적 비관계형 테이블도 지원됩니다.
 
@@ -59,7 +59,7 @@ PolyBase는 Microsoft의 다음 SQL 제품에 대해 동일한 이 기능을 제
 
 - SQL Server 2016 이상 버전(Windows만 해당)
 - 분석 플랫폼 시스템(이전의 병렬 데이터 웨어하우스)
-- Azure SQL 데이터 웨어하우스
+- Azure SQL Data Warehouse
 
 ### <a name="azure-integration"></a>Azure 통합
 

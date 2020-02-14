@@ -14,10 +14,10 @@ ms.assetid: dbf49000-eeb0-4e9c-a361-5092363920dc
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: bf2451fbebb26bd8b9f47bcfe25c34e741e98eea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093405"
 ---
 # <a name="sql-server-memory-manager-object"></a>SQL Server, Memory Manager 개체
@@ -29,9 +29,9 @@ ms.locfileid: "68093405"
 -   메모리를 추가하거나 데이터 캐시 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내부 구조에 사용 가능한 메모리를 늘리면 쿼리 성능을 향상시킬 수 있는지 여부  
   
 ## <a name="memory-manager-counters"></a>Memory Manager 카운터  
- 다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Memory Manager** 카운터에 대해 설명합니다.  
+ 이 테이블에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Memory Manager** 카운터에 대해 설명합니다.  
   
-|SQL Server Memory Manager 카운터|설명|  
+|SQL Server Memory Manager 카운터|Description|  
 |----------------------------------------|-----------------|  
 |**Connection Memory (KB)**|연결 유지 관리를 위해 서버에서 사용 중인 총 동적 메모리 양을 지정합니다.|  
 |**Database Cache Memory(KB)**|서버가 현재 데이터베이스 페이지 캐시에 사용 중인 메모리 양을 지정합니다.|  
@@ -42,7 +42,7 @@ ms.locfileid: "68093405"
 |**Lock Blocks Allocated**|할당된 잠금 블록의 현재 개수를 지정합니다. 서버를 시작할 때 할당된 잠금 블록과 할당된 잠금 소유자 블록의 개수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **잠금** 구성 옵션의 설정에 따라 결정됩니다. 잠금 블록이 더 필요하면 이 값을 늘리십시오.|  
 |**Lock Memory (KB)**|서버가 잠금에 사용 중인 총 동적 메모리 양을 지정합니다.|  
 |**Lock Owner Blocks**|서버에서 현재 사용 중인 잠금 소유자 블록 수를 지정합니다. 이 값은 주기적으로 새로 고쳐집니다. 잠금 소유자 블록은 개별 스레드의 개체 잠금에 대한 소유권을 나타냅니다. 그러므로 3개의 스레드가 페이지에 각각의 공유된 잠금을 가지면 소유자 블록도 3개 존재합니다.|  
-|**Lock Owner Blocks Allocated**|할당된 잠금 소유자 블록의 현재 개수를 지정합니다. 서버를 시작할 때 할당된 잠금 블록과 할당된 잠금 소유자 블록의 개수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **잠금** 구성 옵션의 설정에 따라 결정됩니다. 잠금 소유자 블록이 더 필요하면 이 값을 늘리십시오.|  
+|**Lock Owner Blocks Allocated**|할당된 잠금 소유자 블록의 현재 개수를 지정합니다. 서버를 시작할 때 할당된 잠금 소유자 블록과 할당된 잠금 블록의 개수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **잠금** 구성 옵션의 설정에 따라 결정됩니다. 잠금 소유자 블록이 더 필요하면 이 값을 늘리십시오.|  
 |**Log Pool Memory (KB)**|서버에서 로그 풀에 대해 사용 중인 총 동적 메모리 양입니다.| 
 |**Maximum Workspace Memory (KB)**|해시, 정렬, 대량 복사, 인덱스 만들기 작업과 같은 실행 중인 프로세스에서 사용할 수 있는 최대 메모리 양을 나타냅니다.|  
 |**Memory Grants Outstanding**|부여된 작업 영역 메모리를 성공적으로 인식한 총 프로세스 수를 지정합니다.|  

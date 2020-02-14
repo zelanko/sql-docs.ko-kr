@@ -24,10 +24,10 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 651311d70b17ce4be761e7ecc246e8839ef34eb0
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295827"
 ---
 # <a name="execute-package-utility-dtexecui"></a>패키지 실행 유틸리티(dtexecui)
@@ -70,8 +70,8 @@ ms.locfileid: "71295827"
   
 |||  
 |-|-|  
-|값|설명|  
-|**SQL Server**|패키지가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 있으면 이 옵션을 선택합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 지정하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증의 사용자 이름과 암호를 입력합니다. 사용자 이름과 암호를 입력할 때마다 명령 프롬프트에 **/USER** _username_ 및 **/PASSWORD** _password_ options to the comm및 prompt.|  
+|값|Description|  
+|**SQL Server**|패키지가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 있으면 이 옵션을 선택합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 지정하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증의 사용자 이름과 암호를 입력합니다. 사용자 이름과 암호를 입력할 때마다 명령 프롬프트에 **/USER** _username_ 및 **/PASSWORD** _password_ 옵션이 추가됩니다.|  
 |**파일 시스템**|패키지가 파일 시스템에 있으면 이 옵션을 선택합니다.|  
 |**SSIS 패키지 저장소**|패키지가 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소에 있으면 이 옵션을 선택합니다.|  
   
@@ -153,7 +153,7 @@ ms.locfileid: "71295827"
  **패키지 실행 유틸리티** 대화 상자의 **명령 파일** 페이지를 사용하여 런타임에 로드할 명령 파일을 선택할 수 있습니다.  
   
 ### <a name="options"></a>옵션  
- **Command files**  
+ **명령 파일**  
  패키지에서 사용하는 명령 파일을 나열합니다. 패키지는 여러 파일을 사용하여 명령줄 옵션을 설정할 수 있습니다.  
   
  **화살표 키**  
@@ -218,7 +218,7 @@ ms.locfileid: "71295827"
  **다시 시작 옵션**  
  다시 시작 옵션을 무시하는 경우 검사점 사용 방법을 선택합니다.  
   
- **Execute**  
+ **실행**  
  패키지를 실행하려면 클릭합니다.  
   
  **닫기**  
@@ -234,7 +234,7 @@ ms.locfileid: "71295827"
  **없음**  
  보고하지 않으려면 선택합니다.  
   
- **오류**  
+ **Errors**  
  오류 메시지를 보고하려면 선택합니다.  
   
  **경고**  
@@ -249,7 +249,7 @@ ms.locfileid: "71295827"
  **정보**  
  정보 메시지를 보고하려면 선택합니다.  
   
- **Verbose**  
+ **자세한 정보**  
  자세한 정보를 보고하려면 선택합니다.  
   
  **콘솔 로깅**  
@@ -258,7 +258,7 @@ ms.locfileid: "71295827"
  **이름**  
  패키지를 만든 사용자 이름을 보고하려면 선택합니다.  
   
- **Computer**  
+ **컴퓨터**  
  패키지를 실행 중인 컴퓨터 이름을 보고하려면 선택합니다.  
   
  **연산자**  
@@ -311,7 +311,7 @@ ms.locfileid: "71295827"
  **속성 경로**  
  속성의 경로를 입력합니다. 경로 구문에서는 백슬래시(\\)를 사용하여 다음 항목이 컨테이너임을 나타내고, 마침표(.)를 사용하여 다음 항목이 속성임을 나타내고, 대괄호를 사용하여 컬렉션 멤버임을 나타냅니다. 멤버는 해당 멤버의 인덱스 또는 이름으로 식별할 수 있습니다. 예를 들어 패키지 변수의 속성 경로는 \Package.Variables[MyVariable].Value입니다.  
   
- **Value**  
+ **값**  
  속성 값을 입력합니다.  
   
  **제거**  
@@ -364,7 +364,7 @@ ms.locfileid: "71295827"
  **수동으로 명령줄 편집**  
  **명령줄** 입력란에서 명령줄을 편집하려면 클릭합니다.  
   
- **Command line**  
+ **명령줄**  
  현재 명령줄을 표시합니다. 명령줄을 수동으로 편집하는 옵션을 선택한 경우 편집할 수 있습니다.  
   
  **실행**  

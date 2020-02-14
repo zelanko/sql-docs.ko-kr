@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 40f30fd646e166cc9b8db433934d22a378c907cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67995630"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>효과적인 데이터베이스 엔진 사용 권한 결정
@@ -92,7 +92,7 @@ SELECT DP1.name AS DatabaseRoleName,
 
 서버 수준, 데이터베이스 수준, 스키마 수준 또는 개체 수준 등에서 사용 권한을 부여할 수 있습니다. 26개의 수준이 있습니다(클래스라고 함). 클래스의 전체 목록은 `APPLICATION ROLE`, `ASSEMBLY`, `ASYMMETRIC KEY`, `AVAILABILITY GROUP`, `CERTIFICATE`, `CONTRACT`, `DATABASE`, `DATABASE` `SCOPED CREDENTIAL`, `ENDPOINT`, `FULLTEXT CATALOG`, `FULLTEXT STOPLIST`, `LOGIN`, `MESSAGE TYPE`, `OBJECT`, `REMOTE SERVICE BINDING`, `ROLE`, `ROUTE`, `SCHEMA`, `SEARCH PROPERTY LIST`, `SERVER`, `SERVER ROLE`, `SERVICE`, `SYMMETRIC KEY`, `TYPE`, `USER`, `XML SCHEMA COLLECTION`입니다(알파벳순). (일부 클래스는 일부 유형의 SQL Server에서 사용할 수 없습니다.) 각 클래스에 대한 전체 정보를 제공하려면 다른 쿼리가 필요합니다.
 
-### <a name="principals"></a>보안 주체
+### <a name="principals"></a>Principals
 
 사용 권한은 보안 주체에 부여됩니다. 서버 역할, 로그인, 데이터베이스 역할 또는 사용자가 보안 주체가 될 수 있습니다. 로그인은 많은 Windows 사용자를 포함하는 Windows 그룹을 나타낼 수 있습니다. Windows 그룹은 SQL Server에서 유지 관리하지 않으므로 SQL Server에서 항상 Windows 그룹 멤버를 알 수는 없습니다. Windows 사용자가 SQL Server에 연결하는 경우 로그인 패킷에 사용자에 대한 Windows 그룹 멤버 자격 토큰이 포함됩니다.
 
@@ -145,7 +145,7 @@ SELECT pr.type_desc, pr.name, pe.state_desc,
    ON oj.schema_id = s.schema_id
  WHERE class_desc = 'OBJECT_OR_COLUMN';
 ```
-`HAS_PERMS_BY_NAME` 함수를 사용하여 특정 사용자(이 경우 `TestUser`)에게 사용 권한이 있는지 확인합니다. 예를 들어   
+`HAS_PERMS_BY_NAME` 함수를 사용하여 특정 사용자(이 경우 `TestUser`)에게 사용 권한이 있는지 확인합니다. 다음은 그 예입니다.   
 ```sql
 EXECUTE AS USER = 'TestUser';
 SELECT HAS_PERMS_BY_NAME ('dbo.T1', 'OBJECT', 'SELECT');

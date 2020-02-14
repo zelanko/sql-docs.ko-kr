@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 89f992afc1a419f5d2fa5aa172d9e5e930a8a21b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 8993d0512f4809302b2d4ac8193971decc2e0566
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769676"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287385"
 ---
 # <a name="replication-monitor"></a>복제 모니터
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  설명서의 이 섹션에는 복제 모니터에 대한 정보가 포함되어 있습니다. 모니터에 표시되는 페이지와 대화 상자는 모니터링 중인 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 버전 및 복제 유형에 따라 달라집니다.  
+  설명서의 이 섹션에는 복제 모니터에 대한 정보가 포함되어 있습니다. 모니터에 표시되는 페이지와 대화 상자는 모니터링 중인 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 버전 및 복제 유형에 따라 달라집니다.  
   
 -   [복제 모니터, 주 페이지](../../relational-databases/replication/replication-monitor-main-page.md)  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68769676"
   
 -   [게시자 정보, 구독 조사 목록&#40;병합 게시, SQL Server 2005 이상&#41;](../../relational-databases/replication/publisher-information-subscription-watch-list-merge-publication.md)  
   
--   [게시자 정보, 구독 조사 목록&amp;#40;스냅샷 게시, SQL Server 2005 이상&amp;#41;](../../relational-databases/replication/publisher-information-subscription-watch-list-snapshot.md)  
+-   [게시자 정보, 구독 조사 목록&#40;스냅샷 게시, SQL Server 2005 이상&#41;](../../relational-databases/replication/publisher-information-subscription-watch-list-snapshot.md)  
   
 -   [게시자 정보, 에이전트](../../relational-databases/replication/publisher-information-agents.md)  
   
@@ -50,18 +50,18 @@ ms.locfileid: "68769676"
   
 -   [게시 정보, 모든 구독&#40;병합 게시&#41;](../../relational-databases/replication/publication-information-all-subscriptions-merge-publication.md)  
   
--   [게시 정보, 모든 구독&amp;#40;스냅샷 게시&amp;#41;](../../relational-databases/replication/publication-information-all-subscriptions-snapshot-publication.md)  
+-   [게시 정보, 모든 구독&#40;스냅샷 게시&#41;](../../relational-databases/replication/publication-information-all-subscriptions-snapshot-publication.md)  
   
 -   [게시 정보, 경고&#40;트랜잭션 게시, SQL Server 2005 이상&#41;](../../relational-databases/replication/publication-information-warnings-transactional-publication.md)  
   
 -   [게시 정보, 경고&#40;병합 게시, SQL Server 2005 이상&#41;](../../relational-databases/replication/publication-information-warnings-merge-publication-sql-server-2005-and-later.md)  
   
--   [게시 정보, 경고&amp;#40;스냅샷 게시, SQL Server 2005 이상&amp;#41;](../../relational-databases/replication/publication-information-warnings-snapshot-publication-sql-server-2005-and-later.md)  
+-   [게시 정보, 경고&#40;스냅샷 게시, SQL Server 2005 이상&#41;](../../relational-databases/replication/publication-information-warnings-snapshot-publication-sql-server-2005-and-later.md)  
   
 -   [게시 정보, 에이전트&#40;트랜잭션 게시&#41;](../../relational-databases/replication/publication-information-agents-transactional-publication.md)  
   
 -   [게시 정보, 에이전트&#40;병합 게시&#41;](../../relational-databases/replication/publication-information-agents-merge-publication.md)    
--   [게시 정보, 에이전트&amp;#40;스냅샷 게시&amp;#41;](../../relational-databases/replication/publication-information-agents-snapshot-publication.md)  
+-   [게시 정보, 에이전트&#40;스냅샷 게시&#41;](../../relational-databases/replication/publication-information-agents-snapshot-publication.md)  
   
 -   [게시 정보, 추적 프로그램 토큰&#40;트랜잭션 게시, SQL Server 2005 이상&#41;](../../relational-databases/replication/publication-information-tracer-tokens-sql-server-2005-and-later.md)  
   
@@ -73,7 +73,7 @@ ms.locfileid: "68769676"
   
 -   [구독, 동기화 기록&#40;병합 구독, SQL Server 2005 이상&#41;](../../relational-databases/replication/subscription-synchronization-history.md)  
   
--   [구독, 배포자에서 구독자로의 연결 기록&amp;#40;스냅샷 구독&amp;#41;](../../relational-databases/replication/subscription-distributor-to-subscriber-history-snapshot-subscription.md)  
+-   [구독, 배포자에서 구독자로의 연결 기록&#40;스냅샷 구독&#41;](../../relational-databases/replication/subscription-distributor-to-subscriber-history-snapshot-subscription.md)  
   
 -   [로그 판독기 에이전트](../../relational-databases/replication/log-reader-agent.md)  
   

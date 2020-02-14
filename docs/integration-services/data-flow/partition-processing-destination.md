@@ -20,10 +20,10 @@ ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 23292c0ac898ca035bca4b499de4bfc3fe2a7ebc
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292153"
 ---
 # <a name="partition-processing-destination"></a>파티션 처리 대상
@@ -47,7 +47,7 @@ ms.locfileid: "71292153"
 >  여기에서 설명하는 태스크는 Analysis Services 테이블 형식 모델에 적용되지 않습니다.  테이블 형식 모델의 경우 입력 열을 파티션 열에 매핑할 수 없습니다. 대신 [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) 를 사용하여 파티션을 처리할 수 있습니다.  
   
 ## <a name="configuration-of-the-partition-processing-destination"></a>파티션 처리 대상 구성  
- 파티션 처리 대상은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 연결 관리자를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 연결하거나 대상에서 처리되는 큐브 및 파티션이 포함된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 연결합니다. 자세한 내용은 [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md)을(를) 참조하세요.  
+ 파티션 처리 대상은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 연결 관리자를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 연결하거나 대상에서 처리되는 큐브 및 파티션이 포함된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 연결합니다. 자세한 내용은 [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md)을 참조하세요.  
   
  이 대상은 하나의 입력을 갖습니다. 오류 출력은 지원하지 않습니다.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "71292153"
  속성을 설정하는 방법에 대한 자세한 내용은 [데이터 흐름 구성 요소의 속성 설정](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)을 참조하세요.  
   
 ## <a name="partition-processing-destination-editor-connection-manager-page"></a>파티션 처리 대상 편집기(연결 관리자 페이지)
-  **파티션 처리 대상 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트나 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 대한 연결을 지정할 수 있습니다.  
+  **파티션 처리 대상 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트나 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 대한 연결을 지정할 수 있습니다.  
   
 > [!NOTE]  
 >  여기에서 설명하는 태스크는 Analysis Services 테이블 형식 모델에 적용되지 않습니다.  테이블 형식 모델의 경우 입력 열을 파티션 열에 매핑할 수 없습니다. 대신 [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) 를 사용하여 파티션을 처리할 수 있습니다.  
@@ -80,7 +80,7 @@ ms.locfileid: "71292153"
  **처리 방법**  
  처리 방법을 선택합니다. 이 옵션의 기본값은 **전체**입니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |추가(증분)|파티션의 증분 처리를 수행합니다.|  
 |전체|파티션의 전체 처리를 수행합니다.|  
@@ -118,7 +118,7 @@ ms.locfileid: "71292153"
  **키 오류 동작**  
  사용할 수 없는 키 값이 있는 레코드의 처리 방법을 지정합니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|사용할 수 없는 키 값을 Unknown 값으로 변환합니다.|  
 |**DiscardRecord**|레코드를 삭제합니다.|  
@@ -135,7 +135,7 @@ ms.locfileid: "71292153"
  **오류 시 수행할 동작**  
  **오류 발생 시 중지**를 선택한 경우 오류 임계값에 도달했을 때 수행할 동작을 지정합니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**StopProcessing**|처리를 중지합니다.|  
 |**StopLogging**|오류 기록을 중지합니다.|  
@@ -143,7 +143,7 @@ ms.locfileid: "71292153"
  **키를 찾을 수 없는 경우**  
  키를 찾을 수 없을 때 수행할 동작을 지정합니다. 기본적으로 이 값은 **ReportAndContinue**입니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|오류를 무시하고 처리를 계속합니다.|  
 |**ReportAndContinue**|오류를 보고하고 처리를 계속합니다.|  
@@ -152,7 +152,7 @@ ms.locfileid: "71292153"
  **중복 키**  
  중복 키 오류가 발생할 때 수행할 동작을 지정합니다. 기본적으로 이 값은 **IgnoreError**입니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|오류를 무시하고 처리를 계속합니다.|  
 |**ReportAndContinue**|오류를 보고하고 처리를 계속합니다.|  
@@ -161,7 +161,7 @@ ms.locfileid: "71292153"
  **Null 키가 알 수 없는 상태로 변환된 경우**  
  Null 키가 Unknown 값으로 변환된 경우 수행할 동작을 지정합니다. 기본적으로 이 값은 **IgnoreError**입니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|오류를 무시하고 처리를 계속합니다.|  
 |**ReportAndContinue**|오류를 보고하고 처리를 계속합니다.|  
@@ -170,7 +170,7 @@ ms.locfileid: "71292153"
  **Null 키가 허용되지 않는 경우**  
  Null 키가 허용되지 않는데 Null 키가 있는 경우에 수행할 동작을 지정합니다. 기본적으로 이 값은 **ReportAndContinue**입니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|오류를 무시하고 처리를 계속합니다.|  
 |**ReportAndContinue**|오류를 보고하고 처리를 계속합니다.|  

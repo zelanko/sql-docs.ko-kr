@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 08a4a90580a00e3ab4f2c38c7dfa3cf81b331d08
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 32474836bfbf61f74370724f0750732e11542e9e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768617"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76284943"
 ---
 # <a name="distribution-agent-security"></a>배포 에이전트 보안
 ::: moniker range=">=sql-server-2014||=sqlallproducts-allversions" 
@@ -51,7 +51,7 @@ ms.locfileid: "68768617"
   
  연결을 설정할 때 프로세스 계정을 가장하면 추가 사용 권한이 필요합니다. 아래의 **배포자에 연결** 및 **구독자에 연결** 섹션을 참조하십시오.  
   
- 배포 에이전트가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 인스턴스에서 실행되지 않기 때문에 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 에 대한 끌어오기 구독에 **프로세스 계정**을 지정할 수 없습니다.  
+ 배포 에이전트가 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 인스턴스에서 실행되지 않기 때문에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]에 대한 끌어오기 구독에 **프로세스 계정**을 지정할 수 없습니다.  
   
  **암호** 및 **암호 확인**  
  Windows 계정의 암호를 입력합니다.  
@@ -161,7 +161,7 @@ Persist Security Info=False;Connection Pooling=True;
  이 문자열의 옵션 대부분은 구성 중인 DB2 서버와만 관련이 있지만 **Process Binary as Character** 옵션은 항상 **False**로 설정해야 합니다. 구독 데이터베이스를 식별하려면 **Initial Catalog** 옵션 값을 지정해야 합니다. 자세한 내용은 [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Azure SQL Database를 사용하여 트랜잭션 복제](/azure/sql-database/sql-database-managed-instance-transactional-replication) [관리되는 인스턴스의 복제 구성](/azure/sql-database/replication-with-sql-database-managed-instance)
+ [Azure SQL Database를 사용하여 트랜잭션 복제](/azure/sql-database/sql-database-managed-instance-transactional-replication) [관리형 인스턴스에 대해 복제 구성](/azure/sql-database/replication-with-sql-database-managed-instance)
 ::: moniker-end
 
 

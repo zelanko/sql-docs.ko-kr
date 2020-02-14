@@ -21,10 +21,10 @@ ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 78aa101ac0f7c86bc2563f7cf0151e7f976a5b80
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296182"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services(SSIS) 패키지
@@ -32,13 +32,13 @@ ms.locfileid: "71296182"
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  패키지는 연결, 제어 흐름 요소, 데이터 흐름 요소, 이벤트 처리기, 변수, 매개 변수 및 구성으로 이루어진 컬렉션으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 제공하는 그래픽 디자인 도구를 사용하여 조합하거나 프로그래밍 방식으로 작성합니다.  그런 다음 완성된 패키지를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소 또는 파일 시스템에 저장하거나, ssISnoversion 프로젝트를 [!INCLUDE[ssIS](../includes/ssis-md.md)] 서버에 배포할 수 있습니다. 패키지는 검색, 실행 및 저장되는 작업 단위입니다.  
+  패키지는 연결, 제어 흐름 요소, 데이터 흐름 요소, 이벤트 처리기, 변수, 매개 변수 및 구성으로 이루어진 컬렉션으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 제공하는 그래픽 디자인 도구를 사용하여 조합하거나 프로그래밍 방식으로 작성합니다.  그런 다음 완성된 패키지를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소 또는 파일 시스템에 저장하거나, ssISnoversion 프로젝트를 [!INCLUDE[ssIS](../includes/ssis-md.md)] 서버에 배포할 수 있습니다. 패키지는 검색, 실행 및 저장되는 작업 단위입니다.  
   
  처음으로 패키지를 만들면 아무 것도 포함되어 있지 않은 빈 개체입니다. 패키지에 기능을 추가하려면 하나의 제어 흐름과 선택적으로 하나 이상의 데이터 흐름을 패키지에 추가합니다.  
   
  다음 다이어그램에서는 데이터 흐름 태스크 사용한 제어 흐름이 포함된 간단한 패키지를 보여 주며 이 제어 흐름에 다시 데이터 흐름이 포함됩니다.  
   
- ![제어 흐름 및 데이터 흐름이 하나씩 있는 패키지](../integration-services/media/ssis-package.gif "제어 흐름 및 데이터 흐름이 하나씩 있는 패키지")  
+ ![제어 흐름 및 데이터 흐름을 포함하는 패키지](../integration-services/media/ssis-package.gif "제어 흐름 및 데이터 흐름을 포함하는 패키지")  
   
  기본 패키지를 만든 후 로깅 및 변수 등의 고급 기능을 추가하여 패키지 기능을 확장할 수 있습니다. 자세한 내용은 패키지 기능을 확장하는 개체에 대한 섹션을 참조하십시오.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "71296182"
 ### <a name="logging-and-log-providers"></a>로깅 및 로그 공급자  
  로그는 패키지 실행 시 수집되는 패키지에 대한 정보 컬렉션입니다. 예를 들어 로그는 패키지 실행의 시작 시간과 종료 시간을 제공할 수 있습니다. 로그 공급자는 패키지와 해당 컨테이너 및 태스크가 런타임 정보를 기록하는 데 사용할 수 있는 대상 유형과 형식을 정의합니다. 로그는 패키지와 연결되지만 패키지의 태스크와 컨테이너는 임의의 패키지 로그에 정보를 기록할 수 있습니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에는 로깅을 위한 다양한 기본 제공 로그 공급자가 포함되어 있습니다. 예를 들어 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 대한 로그 공급자와 텍스트 파일이 있습니다. 사용자 지정 로그 공급자를 만들어 로깅에 사용할 수도 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../integration-services/performance/integration-services-ssis-logging.md)을 참조하세요.  
   
-### <a name="variables"></a>변수  
+### <a name="variables"></a>variables  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 시스템 변수와 사용자 정의 변수를 지원합니다. 시스템 변수는 런타임 시 패키지 개체에 대한 유용한 정보를 제공하며 사용자 정의 변수는 패키지의 사용자 지정 시나리오를 지원합니다. 식, 스크립트 및 구성에 두 유형의 변수를 모두 사용할 수 있습니다.  
   
  패키지 수준 변수에는 패키지에 사용 가능한 미리 정의된 시스템 변수와 패키지 범위 내의 사용자 정의 변수가 포함됩니다. 자세한 내용은 [Integration Services(SSIS) 변수](../integration-services/integration-services-ssis-variables.md)를 참조하세요.  
@@ -77,7 +77,7 @@ ms.locfileid: "71296182"
  패키지 개체를 구성하여 검사점에서 패키지 다시 시작, 디지털 인증서로 패키지 서명, 패키지 보호 수준 설정, 트랜잭션을 사용하여 데이터 무결성 보장 등의 기능을 지원할 수 있습니다.  
   
 ### <a name="restarting-packages"></a>패키지 다시 시작  
- 패키지에는 해당 태스크가 하나 이상 실패할 때 패키지를 다시 시작하기 위해 사용할 수 있는 검사점 속성이 있습니다. 예를 들어 패키지에 두 개의 다른 테이블을 업데이트하는 두 개의 데이터 흐름 태스크가 있고 두 번째 태스크가 실패할 경우 첫 번째 데이터 흐름 태스크를 반복하지 않고 패키지를 다시 실행할 수 있습니다. 장기 실행 패키지의 경우 패키지 다시 시작 기능을 사용하면 시간을 절약할 수 있습니다. 다시 시작은 전체 패키지를 다시 실행할 필요 없이 실패한 태스크부터 패키지를 시작할 수 있다는 것을 의미합니다. 자세한 내용은 [Restart Packages by Using Checkpoints](../integration-services/packages/restart-packages-by-using-checkpoints.md)을 참조하세요.  
+ 패키지에는 해당 태스크가 하나 이상 실패할 때 패키지를 다시 시작하기 위해 사용할 수 있는 검사점 속성이 있습니다. 예를 들어 패키지에 두 개의 다른 테이블을 업데이트하는 두 개의 데이터 흐름 태스크가 있고 두 번째 태스크가 실패할 경우 첫 번째 데이터 흐름 태스크를 반복하지 않고 패키지를 다시 실행할 수 있습니다. 장기 실행 패키지의 경우 패키지 다시 시작 기능을 사용하면 시간을 절약할 수 있습니다. 다시 시작은 전체 패키지를 다시 실행할 필요 없이 실패한 태스크부터 패키지를 시작할 수 있다는 것을 의미합니다. 자세한 내용은 [검사점을 사용하여 패키지 다시 시작](../integration-services/packages/restart-packages-by-using-checkpoints.md)을 참조하세요.  
   
 ### <a name="securing-packages"></a>패키지 보안  
  디지털 서명으로 패키지를 서명하고 암호 또는 사용자 키를 사용하여 암호화할 수 있습니다. 디지털 서명은 패키지 원본을 인증합니다. 단, 패키지가 로드될 때 디지털 서명을 확인하도록 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 를 구성해야 합니다. 자세한 내용은 [디지털 서명을 사용하여 패키지 원본 확인](../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md) 및 [패키지의 중요한 데이터에 대한 액세스 제어](../integration-services/security/access-control-for-sensitive-data-in-packages.md)를 참조하세요.  
@@ -88,7 +88,7 @@ ms.locfileid: "71296182"
 ## <a name="custom-log-entries-available-on-the-package"></a>패키지에 사용할 수 있는 사용자 지정 로그 항목  
  다음 표에서는 패키지에 대한 사용자 지정 로그 항목을 나열합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../integration-services/performance/integration-services-ssis-logging.md)을 참조하세요.  
   
-|로그 항목|설명|  
+|로그 항목|Description|  
 |---------------|-----------------|  
 |**PackageStart**|패키지 실행이 시작되었음을 나타냅니다.<br /><br /> 참고: 이 로그 항목은 로그에 자동으로 기록되며 제외할 수 없습니다.|  
 |**PackageEnd**|패키지가 완료되었음을 나타냅니다.<br /><br /> 참고: 이 로그 항목은 로그에 자동으로 기록되며 제외할 수 없습니다.|  

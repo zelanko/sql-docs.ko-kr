@@ -21,10 +21,10 @@ ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f70ce04ebe25c752f3cc12d4888f1ff5c967b805
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292403"
 ---
 # <a name="integration-services-paths"></a>Integration Services 경로
@@ -103,7 +103,7 @@ ms.locfileid: "71292403"
  **정밀도**  
  숫자 값의 자릿수를 나열합니다.  
   
- **소수 자릿수**  
+ **규모**  
  숫자 값에서 소수점 이하 자릿수를 나열합니다.  
   
  **길이**  
@@ -156,7 +156,7 @@ ms.locfileid: "71292403"
   
  다음 표에서는 데이터 흐름 경로의 구성 가능한 속성에 대해 설명합니다. 데이터 흐름 엔진은 여기에 나열되지 않은 추가 읽기 전용 속성에도 값을 할당합니다.  
   
-|속성 이름|데이터 형식|설명|  
+|속성 이름|데이터 형식|Description|  
 |-------------------|---------------|-----------------|  
 |PathAnnotation|Integer(열거형)|디자이너 화면에 주석을 경로와 함께 표시할지 여부를 나타내는 값입니다. 가능한 값은 **AsNeeded**, **SourceName**, **PathName**및 **Never**입니다. 기본값은 **AsNeeded**입니다.|  
 |DestinationName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>|경로에 연결된 입력입니다.|  

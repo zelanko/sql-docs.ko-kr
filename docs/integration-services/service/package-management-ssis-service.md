@@ -28,10 +28,10 @@ ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 33ce0a748381e425371b6f36c1ceeaaba4b62501
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296875"
 ---
 # <a name="package-management-ssis-service"></a>패키지 관리(SSIS 서비스)
@@ -110,7 +110,7 @@ ms.locfileid: "71296875"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지는 다음과 같은 위치에서 가져오거나 내보낼 수 있습니다.  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스, 파일 시스템 또는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소에 저장된 패키지를 가져올 수 있습니다. 가져온 패키지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 나 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소의 폴더에 저장됩니다.  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스, 파일 시스템 또는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소에 저장된 패키지를 가져올 수 있습니다. 가져온 패키지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 나 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소의 폴더에 저장됩니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스, 파일 시스템 또는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소에 저장된 패키지를 다른 스토리지 형식 또는 위치로 내보낼 수 있습니다.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "71296875"
   
 ### <a name="to-import-a-package-by-using-sql-server-management-studio"></a>SQL Server Management Studio를 사용하여 패키지 가져오려면  
   
-1.  **시작**을 클릭하고 **Microsoft** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 가리킨 다음 **SQL Server Management Studio**를 클릭합니다.  
+1.  **시작**을 클릭하고 **Microsoft** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 가리킨 다음, **SQL Server Management Studio**를 클릭합니다.  
   
 2.  **서버에 연결** 대화 상자에서 다음 옵션을 설정합니다.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "71296875"
   
 ### <a name="to-export-a-package-by-using-sql-server-management-studio"></a>SQL Server Management Studio를 사용하여 패키지 내보내려면  
   
-1.  **시작**을 클릭하고 **Microsoft** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 가리킨 다음 **SQL Server Management Studio**를 클릭합니다.  
+1.  **시작**을 클릭하고 **Microsoft** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 가리킨 다음, **SQL Server Management Studio**를 클릭합니다.  
   
 2.  **서버에 연결** 대화 상자에서 다음 옵션을 설정합니다.  
   
@@ -197,7 +197,7 @@ ms.locfileid: "71296875"
   
 ### <a name="options"></a>옵션  
  **패키지 위치**  
- 가져온 패키지를 저장할 스토리지 위치 유형을 선택합니다. 사용할 수 있는 옵션은 다음과 같습니다.  
+ 가져온 패키지를 저장할 스토리지 위치 유형을 선택합니다. 다음 옵션을 사용할 수 있습니다.  
   
  **SQL Server**  
   
@@ -217,7 +217,7 @@ ms.locfileid: "71296875"
  **인증 유형**  
  인증 유형을 선택합니다.  
   
- **User name**  
+ **사용자 이름**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 경우 사용자 이름을 입력합니다.  
   
  **암호**  
@@ -237,7 +237,7 @@ ms.locfileid: "71296875"
   
 ### <a name="options"></a>옵션  
  **패키지 위치**  
- 패키지를 내보낼 스토리지 유형을 선택합니다. 사용할 수 있는 옵션은 다음과 같습니다.  
+ 패키지를 내보낼 스토리지 유형을 선택합니다. 다음 옵션을 사용할 수 있습니다.  
   
  **SQL Server**  
   
@@ -257,7 +257,7 @@ ms.locfileid: "71296875"
  **인증 유형**  
  인증 유형을 선택합니다.  
   
- **User name**  
+ **사용자 이름**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 경우 사용자 이름을 입력합니다.  
   
  **암호**  

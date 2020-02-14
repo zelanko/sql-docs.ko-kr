@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c2836dc2d57ef5844463c303c6432698bf05a4d1
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71682107"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal 및 numeric(Transact-SQL)
@@ -46,9 +46,9 @@ p(전체 자릿수)
 >  Informatica는 지정된 전체 자릿수 및 소수 자릿수와 상관없이 16 유효 자릿수만 지원합니다.  
   
 *s* (소수 자릿수)  
-소수점 오른쪽에 저장되는 10진 숫자 수입니다. *p*에서 이 숫자를 빼서 소수점 왼쪽의 최대 자릿수가 결정됩니다. 소수 자릿수 값은 0에서 *p* 사이여야 하고 전체 자릿수가 지정된 경우에만 지정합니다. 기본 소수 자릿수는 0이므로, 0 <= *s* \<= *p*입니다. 전체 자릿수에 따라 최대 스토리지 크기가 달라집니다.
+소수점 오른쪽에 저장되는 10진 숫자 수입니다. *p*에서 이 숫자를 빼서 소수점 왼쪽의 최대 자릿수가 결정됩니다. 소수 자릿수 값은 0에서 *p* 사이여야 하고 전체 자릿수가 지정된 경우에만 지정합니다. 기본 소수 자릿수는 0이므로, 0 <= *s*\<= *p*입니다. 전체 자릿수에 따라 최대 스토리지 크기가 달라집니다.
   
-|전체 자릿수|스토리지 크기(바이트)|  
+|자릿수|스토리지 크기(바이트)|  
 |---|---|
 |1 - 9|5|  
 |10-19|9|  
@@ -99,7 +99,7 @@ MyDecimalColumn                         MyNumericColumn
   
 ```  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  

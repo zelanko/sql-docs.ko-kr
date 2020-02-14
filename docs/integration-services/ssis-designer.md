@@ -25,10 +25,10 @@ ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3c458257766e52898d0924b2f8ad57ddd2423b19
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295663"
 ---
 # <a name="ssis-designer"></a>SSIS 디자이너
@@ -52,7 +52,7 @@ ms.locfileid: "71295663"
   
  다음 다이어그램은 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너와 **도구 상자** 창을 보여 줍니다.  
   
- ![SSIS 디자이너 및 도구 상자의 스크린 샷](../integration-services/media/denali-designerandtoolbox.gif "SSIS 디자이너 및 도구 상자의 스크린 샷")  
+ ![SSIS 디자이너 및 도구 상자의 스크린샷](../integration-services/media/denali-designerandtoolbox.gif "SSIS 디자이너 및 도구 상자의 스크린샷")  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에는 패키지에 대한 추가 기능을 제공하는 추가 대화 상자 및 창이 있으며, [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 에는 개발 환경 구성 및 패키지 사용을 위한 창 및 대화 상자가 제공됩니다. 자세한 내용은 [Integration Services 사용자 인터페이스](../integration-services/integration-services-user-interface.md)를 참조하세요.  
   

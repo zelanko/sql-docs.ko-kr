@@ -10,10 +10,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 624131beece632cffd13bde3d6ad378f67b3a340
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68141269"
 ---
 # <a name="rename-transact-sql"></a>RENAME(Transact-SQL)
@@ -97,7 +97,7 @@ RENAME DATABASE [::] [ *database_name* TO *new_database_name*
 
 ## <a name="examples"></a>예
 
-### <a name="a-rename-a-database"></a>1\. 데이터베이스 이름 바꾸기
+### <a name="a-rename-a-database"></a>A. 데이터베이스 이름 바꾸기
 
 **적용 대상:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]만 해당
 
@@ -111,7 +111,7 @@ RENAME DATABASE AdWorks to AdWorks2;
 
  테이블 이름을 바꿀 때 해당 테이블과 연결된 모든 개체 및 속성은 새 테이블 이름을 참조하도록 업데이트됩니다. 예를 들어, 테이블 정의, 인덱스, 제약 조건 및 권한이 업데이트됩니다. 뷰는 업데이트되지 않습니다.
 
-### <a name="b-rename-a-table"></a>2\. 테이블 이름 바꾸기
+### <a name="b-rename-a-table"></a>B. 테이블 이름 바꾸기
 
 **적용 대상:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 

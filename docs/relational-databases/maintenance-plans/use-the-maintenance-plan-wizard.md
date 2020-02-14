@@ -35,10 +35,10 @@ ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8f7a42e7885e2c985cd8d0b65e336b912014c40f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155565"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>유지 관리 계획 마법사 사용
@@ -54,11 +54,11 @@ ms.locfileid: "70155565"
 
 유지 관리 계획, 데이터 컬렉션 집합 및 기타 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 실행할 때 이러한 권한 상승이 발생하지 않도록 하려면 패키지를 실행하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업이 제한된 권한을 갖는 프록시 계정을 사용하도록 구성하거나 **db_ssisadmin** 및 **dc_admin** 역할에 **sysadmin** 멤버만 추가합니다.  
 
-##  <a name="Prerequisite"></a> 사전 요구 사항 
+##  <a name="Prerequisite"></a> 필수 조건 
 [에이전트 XPs 서버 구성 옵션](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)을 사용하도록 설정해야 합니다.
   
   
-##  <a name="Permissions"></a> 사용 권한  
+##  <a name="Permissions"></a> 권한  
  유지 관리 계획을 만들거나 관리하려면 **sysadmin** 고정 서버 역할의 멤버여야 합니다. 개체 탐색기에 **sysadmin** 고정 서버 역할의 멤버인 사용자에 대한 **유지 관리 계획** 노드만 표시됩니다.  
   
 ##  <a name="SSMSProcedure"></a> 유지 관리 계획 마법사 사용  
@@ -157,7 +157,7 @@ ms.locfileid: "70155565"
   
  -  **모든 데이터베이스**  
   
-**tempdb** 를 제외한 모든 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 유지 관리 계획 마법사를 사용하여 단일 서버 또는 다중 서버 유지 관리 계획을 만드는 방법에 대해 설명합니다.  
+**tempdb**를 제외한 모든 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대해 이 태스크를 실행하는 유지 관리 계획을 생성합니다.  
   
 **시스템 데이터베이스**  
   
@@ -201,7 +201,7 @@ ms.locfileid: "70155565"
      데이터베이스가 인접 페이지로 압축되지만 해당 페이지의 할당이 취소되지 않으므로 데이터베이스 파일이 축소되지 않습니다. 공간을 다시 할당하지 않고 데이터베이스를 다시 확장하려면 이 옵션을 사용합니다. 이 옵션을 사용하면 데이터베이스 파일이 가능한 한 축소되지 않습니다. 이 작업에서는 NOTRUNCATE 옵션을 사용합니다.  
   
      **해제된 공간을 운영 체제로 반환**  
-     데이터베이스가 인접 페이지로 압축되며 다른 프로그램에서 사용할 수 있도록 해당 페이지가 운영 체제로 반환됩니다. 이 작업에서는 TRUNCATEONLY 옵션을 사용합니다. 이 옵션이 기본 옵션입니다.  
+     데이터베이스가 인접 페이지로 압축되며 다른 프로그램에서 사용할 수 있도록 해당 페이지가 운영 체제로 반환됩니다. 이 작업에서는 TRUNCATEONLY 옵션을 사용합니다. 기본 옵션입니다.  
   
 ## <a name="define-the-index-tasks"></a>인덱스 태스크 정의  
   
@@ -238,7 +238,7 @@ ms.locfileid: "70155565"
      인덱스와 테이블에 채우기 비율을 적용하기 위한 옵션을 제공합니다.  
   
      **페이지당 기본 여유 공간**  
-     기본 여유 공간 크기로 페이지를 다시 구성합니다. 이렇게 하면 데이터베이스 테이블의 인덱스를 삭제하고 인덱스를 만들 때 지정한 채우기 비율로 인덱스를 다시 만듭니다. 이 옵션이 기본 옵션입니다.  
+     기본 여유 공간 크기로 페이지를 다시 구성합니다. 이렇게 하면 데이터베이스 테이블의 인덱스를 삭제하고 인덱스를 만들 때 지정한 채우기 비율로 인덱스를 다시 만듭니다. 기본 옵션입니다.  
   
      **페이지당 빈 공간 비율을 다음으로 변경** 상자  
      데이터베이스 테이블의 인덱스를 삭제하고 자동으로 계산된 새 채우기 비율로 인덱스를 다시 만들기 때문에 인덱스 페이지에 대해 지정된 크기의 사용 가능한 공간이 예약됩니다. 이 비율이 커질수록 인덱스 페이지에 대해 더 많은 사용 가능한 공간이 예약되고 인덱스가 더 커집니다. 유효한 값은 0에서 100까지입니다. `FILLFACTOR` 옵션을 사용합니다.  
@@ -499,7 +499,7 @@ ms.locfileid: "70155565"
      **세부 정보**  
      동작, 상태 및 마법사가 수행한 동작의 결과로 반환된 모든 메시지를 제공합니다.  
   
-     **작업**  
+     **동작**  
      각 동작의 이름과 유형을 지정합니다.  
   
      **상태**  
@@ -508,7 +508,7 @@ ms.locfileid: "70155565"
      **메시지**  
      프로세스에서 반환된 모든 오류 또는 경고 메시지를 제공합니다.  
   
-     **보고서**  
+     **Report**  
      파티션 작성 마법사의 결과가 포함된 보고서를 만듭니다. **보고서 보기**, **보고서를 파일로 저장**, **클립보드에 보고서 복사**및 **보고서를 전자 메일로 보내기**중에서 선택할 수 있습니다.  
   
      **보고서 보기**  

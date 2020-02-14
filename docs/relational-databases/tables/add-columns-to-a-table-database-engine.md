@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8081b4b4b4c8a9d19af0c558d162974d98e16878
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68094739"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>테이블에 열 추가(데이터베이스 엔진)
@@ -36,7 +36,7 @@ ms.locfileid: "68094739"
 
 ### <a name="Security"></a> 보안
 
-#### <a name="Permissions"></a> 사용 권한
+#### <a name="Permissions"></a> 권한
 
 테이블에 대한 ALTER 사용 권한이 필요합니다.
 
@@ -59,7 +59,7 @@ ms.locfileid: "68094739"
     > [!NOTE]
     > 새 열을 만들면 열 속성에 기본값이 자동으로 추가됩니다. 이러한 값은 **열 속성** 탭에서 변경할 수 있습니다.
 
-6. 열을 모두 추가했으면 **파일** 메뉴에서 **테이블 이름** _저장_을 선택합니다.
+6. 열을 모두 추가했으면 **파일** 메뉴에서 ‘테이블 이름’ **저장**을 선택합니다. 
   
 ## <a name="TsqlProcedure"></a> Transact-SQL 사용
   

@@ -24,18 +24,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 694017e60682d191bd1d02cdc231b7185c3b8c87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68094611"
 ---
-# <a name="errorstate-transact-sql"></a>ERROR_STATE(Transact-SQL)
+# <a name="error_state-transact-sql"></a>ERROR_STATE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   TRY...CATCH 구문의 CATCH 블록을 실행시킨 오류의 상태 번호를 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,13 +46,13 @@ ERROR_STATE ( )
 ## <a name="return-types"></a>반환 형식  
  **int**  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  CATCH 블록 내에서 호출된 경우 CATCH 블록을 실행하도록 만든 오류 메시지의 상태 번호를 반환합니다.  
   
  CATCH 블록 범위 밖에서 호출된 경우 NULL을 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
- 일부 오류 메시지는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]코드의 여러 곳에서 발생할 수 있습니다. 예를 들어 "1105" 오류는 여러 가지 다른 오류 상황에서 발생합니다. 오류를 발생시키는 특정 조건은 각각 고유한 상태 코드를 할당합니다.  
+## <a name="remarks"></a>설명  
+ 일부 오류 메시지는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 코드의 여러 곳에서 발생할 수 있습니다. 예를 들어 "1105" 오류는 여러 가지 다른 오류 상황에서 발생합니다. 오류를 발생시키는 특정 조건은 각각 고유한 상태 코드를 할당합니다.  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 기술 자료 등을 사용하여 데이터베이스의 알려진 문제를 확인하는 경우 상태 번호를 사용하여 기록된 문제가 실제로 발생한 오류와 동일한 것인지 판단할 수 있습니다. 예를 들어 기술 자료 문서에서 상태가 2인 1105 오류 메시지를 다루고 있고 실제로 수신한 1105 오류 메시지의 상태가 3인 경우 이 오류는 기술 자료 문서에 보고된 것과 다른 원인에서 비롯되었을 수 있습니다.  
   
@@ -66,7 +66,7 @@ ERROR_STATE ( )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-errorstate-in-a-catch-block"></a>1. CATCH 블록에서 ERROR_STATE 사용  
+### <a name="a-using-error_state-in-a-catch-block"></a>A. CATCH 블록에서 ERROR_STATE 사용  
  다음 예에서는 0으로 나누기 오류를 일으키는 `SELECT` 문을 보여 줍니다. 오류의 상태가 반환됩니다.  
   
 ```sql  
@@ -80,7 +80,7 @@ END CATCH;
 GO  
 ```  
   
-### <a name="b-using-errorstate-in-a-catch-block-with-other-error-handling-tools"></a>2. 다른 오류 처리 도구와 함께 CATCH 블록에서 ERROR_STATE 사용  
+### <a name="b-using-error_state-in-a-catch-block-with-other-error-handling-tools"></a>B. 다른 오류 처리 도구와 함께 CATCH 블록에서 ERROR_STATE 사용  
  다음 예에서는 0으로 나누기 오류를 일으키는 `SELECT` 문을 보여 줍니다. 오류 상태와 함께 오류와 관련된 정보가 반환됩니다.  
   
 ```sql  
@@ -100,9 +100,9 @@ END CATCH;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-errorstate-in-a-catch-block-with-other-error-handling-tools"></a>C. 다른 오류 처리 도구와 함께 CATCH 블록에서 ERROR_STATE 사용  
+### <a name="c-using-error_state-in-a-catch-block-with-other-error-handling-tools"></a>C. 다른 오류 처리 도구와 함께 CATCH 블록에서 ERROR_STATE 사용  
  다음 예에서는 0으로 나누기 오류를 일으키는 `SELECT` 문을 보여 줍니다. 오류 상태와 함께 오류와 관련된 정보가 반환됩니다.  
   
 ```sql  

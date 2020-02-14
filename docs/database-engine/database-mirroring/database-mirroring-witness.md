@@ -15,10 +15,10 @@ ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4dcb3d5669e62836f859252749469703bf26d29e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68043891"
 ---
 # <a name="database-mirroring-witness"></a>Database Mirroring Witness
@@ -30,7 +30,7 @@ ms.locfileid: "68043891"
   
  다음 그림에서는 미러링 모니터 서버가 포함된 보호 우선 모드 세션을 보여 줍니다.  
   
- ![미러링 모니터 서버가 포함된 미러링 세션](../../database-engine/database-mirroring/media/dbm-3-way-session-intro.gif "미러링 모니터 서버가 포함된 미러링 세션")  
+ ![미러링 모니터 서버가 있는 미러링 세션](../../database-engine/database-mirroring/media/dbm-3-way-session-intro.gif "미러링 모니터 서버가 있는 미러링 세션")  
   
  **항목 내용:**  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68043891"
 ##  <a name="InMultipleSessions"></a> 여러 세션에서 미러링 모니터 서버 사용  
  특정 서버 인스턴스는 동시 데이터베이스 미러링 세션에서 서로 다른 데이터베이스에 대해 미러링 모니터 서버로 작동할 수 있습니다. 세션마다 서로 다른 파트너를 사용할 수 있습니다. 다음 그림에서는 서로 다른 파트너를 사용하는 두 개의 데이터베이스 미러링 세션에 속하는 미러링 모니터 서버인 서버 인스턴스를 보여 줍니다.  
   
- ![두 데이터베이스에 대한 미러링 모니터 서버인 서버 인스턴스](../../database-engine/database-mirroring/media/dbm-witness-in-2-sessions.gif "두 데이터베이스에 대한 미러링 모니터 서버인 서버 인스턴스")  
+ ![두 데이터베이스에 대한 미러링 모니터 서버에 해당하는 서버 인스턴스](../../database-engine/database-mirroring/media/dbm-witness-in-2-sessions.gif "두 데이터베이스에 대한 미러링 모니터 서버에 해당하는 서버 인스턴스")  
   
  단일 서버 인스턴스는 일부 세션의 미러링 모니터 서버와 다른 세션의 파트너로 동시에 작동할 수도 있습니다. 그러나 실제로 서버 인스턴스는 대개 미러링 모니터 서버나 파트너 중 하나로 작동합니다. 이는 파트너의 경우 프로덕션 데이터베이스를 지원하기 위해 하드웨어 용량이 충분한 고성능 컴퓨터가 필요하지만 미러링 모니터 서버는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 지원하는 모든 사용 가능한 Windows 시스템에서 실행될 수 있기 때문입니다.  
   

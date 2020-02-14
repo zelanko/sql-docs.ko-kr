@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9547eaae31787dc01946b8dfd2d2d43781b5a8af
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: db98f5aa3cdec76b59e51f743200b24725231f95
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258132"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831632"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL)
 
@@ -92,6 +92,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | VERBOSE_TRUNCATION_WARNINGS = { ON | OFF }
     | LAST_QUERY_PLAN_STATS = { ON | OFF }
     | PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = <time>
+    | ISOLATE_SECURITY_POLICY_CARDINALITY  = { ON | OFF }
 }
 ```
 
@@ -366,6 +367,12 @@ PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES
 - 0으로 설정하면 일시 중지된 작업이 자동으로 중단되지 않습니다.
 
 이 옵션의 현재 값은 [database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)에 표시됩니다.
+
+ISOLATE_SECURITY_POLICY_CARDINALITY **=** { ON | **OFF**}
+
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+
+RLS([행 수준 보안](../../relational-databases/security/row-level-security.md)) 조건자가 전체 사용자 쿼리 실행 계획의 카디널리티에 영향을 주는지 아닌지를 제어할 수 있습니다. ISOLATE_SECURITY_POLICY_CARDINALITY가 ON이면 RLS 조건자는 실행 계획의 카디널리티에 영향을 주지 않습니다. 예를 들어 쿼리를 실행하는 특정 사용자에 대해 결과를 10개 행으로 제한하는 RLS 조건자와 100만 개의 행이 포함된 테이블이 있다고 가정합니다. 이 데이터베이스 범위 구성을 OFF로 설정할 경우 이 조건자의 예상 카디널리티는 10이 됩니다. 이 데이터베이스 범위 구성이 ON이면 쿼리 최적화는 100만 개의 행을 추정합니다. 대부분의 워크로드에는 기본값을 사용하는 것이 좋습니다.
 
 ## <a name="Permissions"></a> 권한
 

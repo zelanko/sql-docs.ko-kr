@@ -13,10 +13,10 @@ ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d6c0aa05f095907b39cacf39f65dfc3b09d9786e
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907183"
 ---
 # <a name="configure-an-oracle-publisher"></a>Oracle 게시자 구성
@@ -51,7 +51,7 @@ ms.locfileid: "72907183"
 >  게시자나 배포자를 설정하고 Oracle 게시를 만들거나 Oracle 게시에서 구독을 만들려면 **sysadmin** 고정 서버 역할의 멤버여야 합니다.  
   
 ## <a name="creating-the-replication-administrative-user-schema-within-the-oracle-database"></a>Oracle 데이터베이스 내에 복제 관리 사용자 스키마 만들기  
- 복제 에이전트는 Oracle 데이터베이스에 연결한 다음 만들어야 할 사용자 스키마 컨텍스트에서 작업을 수행합니다. 이 스키마에는 몇 가지 사용 권한을 부여해야 하며 이는 다음 섹션에 나열되어 있습니다. 이 스키마는 Oracle 게시자의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 프로세스에서 만든 모든 개체( **MSSQLSERVERDISTRIBUTOR**공용 동의어 제외)를 소유합니다. Oracle 데이터베이스에서 만든 개체에 대한 자세한 내용은 [Objects Created on the Oracle Publisher](../../../relational-databases/replication/non-sql/objects-created-on-the-oracle-publisher.md)를 참조하십시오.  
+ 복제 에이전트는 Oracle 데이터베이스에 연결한 다음 만들어야 할 사용자 스키마 컨텍스트에서 작업을 수행합니다. 이 스키마에는 몇 가지 사용 권한을 부여해야 하며 이는 다음 섹션에 나열되어 있습니다. 이 스키마는 Oracle 게시자의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 프로세스에서 만든 모든 개체(퍼블릭 동의어인 **MSSQLSERVERDISTRIBUTOR** 제외)를 소유합니다. Oracle 데이터베이스에서 만든 개체에 대한 자세한 내용은 [Objects Created on the Oracle Publisher](../../../relational-databases/replication/non-sql/objects-created-on-the-oracle-publisher.md)를 참조하십시오.  
   
 > [!NOTE]  
 >  **CASCADE** 옵션으로 **MSSQLSERVERDISTRIBUTOR** 공용 동의어와 구성된 Oracle 복제 사용자를 삭제하면 Oracle 게시자에서 모든 복제 개체가 제거됩니다.  
@@ -89,7 +89,7 @@ ms.locfileid: "72907183"
   
  Oracle Universal Installer에서 다음 정보를 제공해야 합니다.  
   
-|정보|설명|  
+|정보|Description|  
 |-----------------|-----------------|  
 |Oracle|Oracle 소프트웨어 설치를 위한 디렉터리 경로입니다. 기본값(C:\oracle\ora90 또는 유사한 경로)을 그대로 적용하거나 다른 경로를 입력합니다. Oracle 홈에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 "Oracle 홈에 대한 고려 사항" 섹션을 참조하십시오.|  
 |Oracle 홈 이름|Oracle 홈 경로에 대한 별칭입니다.|  
@@ -97,7 +97,7 @@ ms.locfileid: "72907183"
   
  Oracle Universal Installer가 작업을 완료하면 Net Configuration Assistant를 사용하여 네트워크 연결을 구성합니다. 네트워크 연결을 구성하려면 다음 4가지 정보를 입력해야 합니다. Oracle 데이터베이스 관리자는 데이터베이스와 수신기를 설정할 때 네트워크를 구성하며, 필요한 경우 이 정보를 사용자에게 제공할 수 있어야 합니다. 다음과 같은 작업을 수행해야 합니다.  
   
-|작업|설명|  
+|작업|Description|  
 |------------|-----------------|  
 |데이터베이스 식별|두 가지 방법으로 데이터베이스를 식별할 수 있습니다. 첫 번째 방법은 Oracle SID(시스템 식별자)를 사용하는 것으로 모든 Oracle 릴리스에서 사용할 수 있습니다. 두 번째 방법은 서비스 이름을 사용하는 것으로 Oracle 릴리스 8.0부터 사용할 수 있습니다. 두 가지 방법 모두 데이터베이스를 만들 때 구성된 값을 사용하며 클라이언트 네트워크 구성에서 데이터베이스를 위한 수신기를 구성할 때 관리자가 사용한 것과 동일한 명명 규칙을 사용하는 것이 중요합니다.|  
 |데이터베이스에 대한 네트워크 별칭 식별|Oracle 데이터베이스 액세스에 사용할 네트워크 별칭을 지정해야 합니다. 이 별칭은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에서 Oracle 데이터베이스를 게시자로 식별할 때도 제공해야 합니다. 네트워크 별칭은 데이터베이스를 만들 때 구성된 원격 SID 또는 서비스 이름을 가리킵니다. 이 별칭은 다양한 Oracle 릴리스 및 제품에서 네트 서비스 이름 및 TNS 별칭 등 여러 이름으로 불립니다. SQL*Plus의 경우 로그인 시 이 별칭을 "Host String" 매개 변수로 입력하라는 메시지가 나타납니다.|  
@@ -116,7 +116,7 @@ ms.locfileid: "72907183"
   
 2.  `cmd` 를 입력한 다음 **확인**을 클릭합니다.  
   
-3.  명령 프롬프트에서 다음을 입력합니다.  
+3.  명령 프롬프트에 다음을 입력합니다.  
   
      `sqlplus <UserSchemaLogin>/<UserSchemaPassword>@<NetServiceName>`  
   
@@ -145,7 +145,7 @@ ms.locfileid: "72907183"
   
 ## <a name="see-also"></a>참고 항목  
  [Oracle 게시자에 대한 관리 고려 사항](../../../relational-databases/replication/non-sql/administrative-considerations-for-oracle-publishers.md)   
- [Oracle 게시자에 대한 데이터 형식 매핑](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
+ [Data Type Mapping for Oracle Publishers](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
  [Oracle 게시를 위한 용어 설명](../../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)   
  [Oracle 게시 개요](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   

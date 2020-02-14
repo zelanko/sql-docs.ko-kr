@@ -20,10 +20,10 @@ ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 478641bed0931fc78db3c7df166b860374034f90
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983257"
 ---
 # <a name="is_srvrolemember-transact-sql"></a>IS_SRVROLEMEMBER(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "73983257"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 지정된 서버 역할의 멤버인지 여부를 나타냅니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -51,7 +51,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 |sysadmin|serveradmin|  
 |dbcreator|setupadmin|  
 |bulkadmin|securityadmin|  
-|diskadmin|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> public|  
+|diskadmin|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 공공|  
 |processadmin||  
   
  **'** *login* **'**  
@@ -60,13 +60,13 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 ## <a name="return-types"></a>반환 형식  
  **int**  
   
-|반환 값|설명|  
+|반환 값|Description|  
 |------------------|-----------------|  
 |0|*login*은 *role*의 구성원이 아닙니다.<br /><br /> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 이 문은 항상 0을 반환합니다.|  
 |1|*login*은 *role*의 구성원입니다.|  
 |NULL|*role* 또는 *login*이 올바르지 않거나 역할 멤버 자격을 볼 수 있는 사용 권한이 없습니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  UseIS_SRVROLEMEMBER를 사용하여 현재 사용자가 서버 역할의 사용 권한이 필요한 동작을 수행할 수 있는지 여부를 확인할 수 있습니다.  
   
  *login*에 Contoso\Mary5와 같은 Windows 로그인이 지정된 경우 해당 로그인에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 직접 액세스가 허용 또는 거부되지 않으면 **IS_SRVROLEMEMBER**가 **NULL**을 반환합니다.  

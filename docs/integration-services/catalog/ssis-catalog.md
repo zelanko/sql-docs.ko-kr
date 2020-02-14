@@ -15,10 +15,10 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1e240a53d86d66fdf81b53cae1ba55d41820befd
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294959"
 ---
 # <a name="ssis-catalog"></a>SSIS 카탈로그
@@ -53,13 +53,13 @@ ms.locfileid: "71294959"
 >   
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스가 클러스터 장애 조치(Failover)의 일부로 장애 조치(Failover)되는 경우에는 실행 중인 패키지가 다시 시작되지 않습니다. 검사점을 사용하여 패키지를 다시 시작할 수 있습니다. 자세한 내용은 [검사점을 사용하여 패키지 다시 시작](../../integration-services/packages/restart-packages-by-using-checkpoints.md)을 참조하세요.  
   
-## <a name="features-and-capabilities"></a>기능 및 특징  
+## <a name="features-and-capabilities"></a>특징과 기능  
   
 -   [카탈로그 개체 식별자](../../integration-services/catalog/ssis-catalog.md#CatalogObjectIdentifiers)  
   
 -   [카탈로그 구성](../../integration-services/catalog/ssis-catalog.md#Configuration)  
   
--   [사용 권한](../../integration-services/catalog/ssis-catalog.md#Permissions)  
+-   [권한](../../integration-services/catalog/ssis-catalog.md#Permissions)  
   
 -   [폴더](../../integration-services/catalog/ssis-catalog.md#Folders)  
   
@@ -74,11 +74,11 @@ ms.locfileid: "71294959"
 ##  <a name="CatalogObjectIdentifiers"></a> 카탈로그 개체 식별자  
  카탈로그에서 새 개체를 만든 경우 해당 개체에 이름을 할당합니다. 개체 이름은 식별자입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 식별자에 사용할 수 있는 문자에 대한 규칙을 정의합니다. 다음 개체의 이름은 식별자 규칙을 따라야 합니다.  
   
--   Folder  
+-   폴더  
   
--   프로젝트  
+-   Project  
   
--   환경  
+-   Environment  
   
 -   매개 변수  
   
@@ -118,7 +118,7 @@ ms.locfileid: "71294959"
 -   후속 글자는 Unicode Standard 2.0에 정의된 문자 또는 숫자이거나 밑줄(_)일 수 있습니다.  
   
 ##  <a name="Configuration"></a> 카탈로그 구성  
- 카탈로그 속성을 조정하여 카탈로그가 동작하는 방식을 세밀하게 조정할 수 있습니다. 카탈로그 속성은 중요한 데이터가 암호화되는 방법과 작업 및 프로젝트 버전 관리 데이터가 보존되는 방법을 정의합니다. 카탈로그 속성을 설정하려면 **카탈로그 속성** 대화 상자를 사용하거나 [catalog.configure_catalog&#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md) 저장 프로시저를 호출합니다. 속성을 보려면 대화 상자를 사용하거나 [catalog.catalog_properties&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)를 쿼리합니다. 개체 탐색기에서 **SSISDB** 를 마우스 오른쪽 단추로 클릭하여 대화 상자에 액세스할 수 있습니다.  
+ 카탈로그 속성을 조정하여 카탈로그가 동작하는 방식을 세밀하게 조정할 수 있습니다. 카탈로그 속성은 중요한 데이터가 암호화되는 방법과 작업 및 프로젝트 버전 관리 데이터가 보존되는 방법을 정의합니다. 카탈로그 속성을 설정하려면 **카탈로그 속성** 대화 상자를 사용하거나 [catalog.configure_catalog&#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md) 저장 프로시저를 호출합니다. 속성을 보려면 대화 상자를 사용하거나 [catalog.catalog_properties&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)를 쿼리합니다. 개체 탐색기에서 **SSISDB**를 마우스 오른쪽 단추로 클릭하여 대화 상자에 액세스할 수 있습니다.  
   
 ###  <a name="Cleanup"></a> 작업 및 프로젝트 버전 정리  
  카탈로그의 많은 작업에 대한 상태 데이터는 내부 데이터베이스 테이블에 저장됩니다. 예를 들어 카탈로그는 패키지 실행 및 프로젝트 배포 상태를 추적합니다. 작업 데이터의 크기를 유지 관리하기 위해 **의** SSIS 서버 유지 관리 작업 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 오래된 데이터를 제거합니다. 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 가 설치될 때 만들어집니다.  
@@ -181,7 +181,7 @@ ms.locfileid: "71294959"
 |프로젝트당 최대 버전 수|MAX_PROJECT_VERSIONS|  
 |서버 차원의 기본 로깅 수준|SERVER_LOGGING_LEVEL|  
   
-##  <a name="Permissions"></a> 사용 권한  
+##  <a name="Permissions"></a> 권한  
  프로젝트, 환경 및 패키지는 보안 개체인 폴더에 포함됩니다. MANAGE_OBJECT_PERMISSIONS 권한을 포함하여 폴더에 대한 사용 권한을 부여할 수 있습니다. MANAGE_OBJECT_PERMISSIONS는 ssis_admin 역할에 대한 사용자 멤버 자격을 부여하지 않고도 사용자에게 폴더 내용에 대한 관리를 위임할 수 있습니다. 프로젝트, 환경 및 작업에 사용 권한을 부여할 수도 있습니다. 작업에는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]초기화, 프로젝트 배포, 실행 만들기 및 시작, 프로젝트 및 패키지 유효성 검사, **SSISDB** 카탈로그 구성 등이 있습니다.  
   
  데이터베이스 역할에 대한 자세한 내용은 [데이터베이스 수준 역할](../../relational-databases/security/authentication-access/database-level-roles.md)을 참조하세요.  
@@ -374,7 +374,7 @@ ms.locfileid: "71294959"
   
 ###  <a name="open_dialog"></a> 카탈로그 속성 대화 상자 열기  
   
-1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 엽니다.  
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]열기  
   
 2.  Microsoft SQL Server 데이터베이스 엔진에 연결합니다.  
   
@@ -385,7 +385,7 @@ ms.locfileid: "71294959"
 #### <a name="options"></a>옵션  
  다음 표에서는 대화 상자의 특정 속성과 `catalog.catalog_properties` 보기의 해당 속성에 대해 설명합니다.  
   
-|속성 이름(카탈로그 속성 대화 상자)|속성 이름(catalog.catalog_properties 보기)|설명|  
+|속성 이름(카탈로그 속성 대화 상자)|속성 이름(catalog.catalog_properties 보기)|Description|  
 |-----------------------------------------------------|------------------------------------------------------|-----------------|  
 |암호화 알고리즘 이름|ENCRYPTION_ALGORITHM|카탈로그의 중요한 매개 변수 값을 암호화하는 데 사용되는 암호화 유형을 지정합니다. 가능한 값은 다음과 같습니다.<br /><br /> DES<br /><br /> TRIPLE_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESPX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256(기본값)|  
 |프로젝트당 최대 버전 수|MAX_PROJECT_VERSIONS|카탈로그에 저장되는 프로젝트 버전 수를 지정합니다. 최대값을 초과하는 오래된 버전의 프로젝트는 프로젝트 버전 정리 작업이 실행될 때 제거됩니다.|  
@@ -466,7 +466,7 @@ ms.locfileid: "71294959"
   
     ```  
   
-3.  **에서** 데이터베이스 복원 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]대화 상자를 사용하여 백업에서 SSISDB 데이터베이스를 복원합니다. 자세한 내용은 다음 항목을 참조하십시오.  
+3.  **에서** 데이터베이스 복원 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]대화 상자를 사용하여 백업에서 SSISDB 데이터베이스를 복원합니다. 자세한 내용은 아래 항목을 참조하세요.  
   
     -   [데이터베이스 복원&#40;일반 페이지&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)  
   
@@ -482,7 +482,7 @@ ms.locfileid: "71294959"
     EXEC sp_procoption N'sp_ssis_startup','startup','on'  
     ```  
   
-6.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **로그인 속성** 대화 상자를 사용하여 SSISDB 사용자 ##MS_SSISServerCleanupJobUser##(SSISDB 데이터베이스)를 ##MS_SSISServerCleanupJobLogin##에 매핑합니다.  
+6.  **에서** 로그인 속성 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]대화 상자를 사용하여 SSISDB 사용자 ##MS_SSISServerCleanupJobUser##(SSISDB 데이터베이스)를 ##MS_SSISServerCleanupJobLogin##에 매핑합니다.  
   
 7.  다음 방법 중 하나를 사용하여 마스터 키를 복원합니다. 암호화에 대한 자세한 내용은 [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)을 참조하십시오.  
   
@@ -579,7 +579,7 @@ ms.locfileid: "71294959"
   
 3.  [가용성 그룹에서 SSISDB 업그레이드](#Upgrade)  
   
-###  <a name="prereq"></a> 사전 요구 사항  
+###  <a name="prereq"></a> 필수 조건  
 SSISDB 데이터베이스에 대한 Always On 지원을 활성화하기 전에 다음 필수 구성 요소를 수행합니다.  
   
 1.  Windows 장애 조치(Failover) 클러스터를 설정합니다. 지침은 [Windows Server 2012용 장애 조치(Failover) 클러스터 기능 및 도구 설치](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) 블로그 게시물을 참조하세요. 모든 클러스터 노드에 기능 및 도구를 설치합니다.  
@@ -598,7 +598,7 @@ SSISDB 데이터베이스에 대한 Always On 지원을 활성화하기 전에 �
   
 > [!IMPORTANT]  
 > -   가용성 그룹의 **주 노드** 에서 이러한 단계를 수행해야 합니다.
-> -   Always On 가용성 그룹에 SSISDB를 추가한 *후* **Always On에 대한 SSIS 지원**을 사용하도록 설정해야 합니다.  
+> -   Always On 가용성 그룹에 SSISDB를 추가한 ‘후’ **Always On에 대한 SSIS 지원**을 사용하도록 설정해야 합니다.   
 
 > [!NOTE]
 > 이 절차에 대한 자세한 내용은 데이터 플랫폼 MVP Marcos Freccia의 추가 스크린 샷이 포함된 다음 연습을 참조하세요. [SQL Server 2016용 AG에 SSISDB 추가](https://marcosfreccia.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/).
@@ -620,7 +620,7 @@ Always On 가용성 그룹에 SSISDB 데이터베이스를 추가하는 것은 �
   
 **새 가용성 그룹** 마법사의 **데이터베이스 선택** 페이지에서 SSIS 카탈로그를 만드는 동안 지정한 암호를 제공합니다.
 
-![데이터베이스 선택](../../integration-services/service/media/ssis-newavailabilitygroup.png "데이터베이스 선택")  
+![새 가용성 그룹](../../integration-services/service/media/ssis-newavailabilitygroup.png "데이터베이스 선택")  
   
 ####  <a name="Step3"></a> 3단계: Always On에 대한 SSIS 지원 활성화  
  통합 서비스 카탈로그를 만든 후 **통합 서비스 카탈로그** 노드를 마우스 오른쪽 단추로 클릭하고 **Always On 지원 활성화**를 클릭합니다. 다음 **Always On에 대한 지원 활성화** 대화 상자를 참조해야 합니다. 이 메뉴 항목이 비활성화된 경우 모든 필수 구성 요소를 설치했는지 확인하고 **새로 고침**을 클릭합니다.  

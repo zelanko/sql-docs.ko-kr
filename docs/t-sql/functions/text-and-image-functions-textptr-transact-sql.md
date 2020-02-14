@@ -21,10 +21,10 @@ ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d0e511e34b782c444bcdf6c778bb89dfebd4fab4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099030"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>텍스트 및 이미지 함수 - TEXTPTR (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68099030"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대체 기능을 사용할 수 없습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -51,7 +51,7 @@ TEXTPTR ( column )
 ## <a name="return-types"></a>반환 형식  
  **varbinary**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  행 내부 텍스트가 있는 테이블의 경우, TEXTPTR 함수는 처리할 텍스트에 대한 핸들을 반환합니다. 텍스트 값이 null이어도 유효한 텍스트 포인터를 얻을 수 있습니다.  
   
  뷰의 열에서는 TEXTPTR 함수를 사용할 수 없습니다. 테이블의 열에만 사용할 수 있습니다. 뷰의 열에 TEXTPTR 함수를 사용하려면 [ALTER DATABASE 호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 사용하여 호환성 수준을 80으로 설정해야 합니다. 테이블에 행 내부 텍스트가 없고 UPDATETEXT 문으로 **text**, **ntext** 또는 **image** 열을 초기화하지 않은 경우 TEXTPTR는 null 포인터를 반환합니다.  
@@ -60,9 +60,9 @@ TEXTPTR ( column )
   
  이러한 함수와 문은 **text**, **ntext** 및 **image** 데이터를 사용하는 작업에도 유용합니다.  
   
-|함수 또는 문|설명|  
+|함수 또는 문|Description|  
 |---------------------------|-----------------|  
-|PATINDEX<b>('</b> _%pattern%_ **' ,** _expression_ **)**|**text** 또는 **ntext** 열에서 지정된 문자열의 문자 위치를 반환합니다.|  
+|PATINDEX<b>(‘</b> _%pattern%_ **’ ,** _expression_ **)**|**text** 또는 **ntext** 열에서 지정된 문자열의 문자 위치를 반환합니다.|  
 |DATALENGTH<b>(</b>_expression_ **)**|**text**, **ntext** 및 **image** 열의 데이터 길이를 반환합니다.|  
 |SET TEXTSIZE|SELECT 문으로 반환할 **text**, **ntext** 또는 **image** 데이터의 크기 제한(바이트)을 반환합니다.|  
 |SUBSTRING<b>(</b>_text_column_, _start_, _length_ **)**|지정한 *start* 오프셋과 *length*로 지정한 **varchar** 문자열을 반환합니다. 길이는 8KB보다 작아야 합니다.|  
@@ -72,7 +72,7 @@ TEXTPTR ( column )
 > [!NOTE]  
 >  다음 예를 실행하려면 **pubs** 데이터베이스를 설치해야 합니다.  
   
-### <a name="a-using-textptr"></a>1\. TEXTPTR 사용  
+### <a name="a-using-textptr"></a>A. TEXTPTR 사용  
  다음 예에서는 `TEXTPTR` 함수를 사용하여 `pubs` 데이터베이스의 `pub_info` 테이블에서 `New Moon Books`와 관련된 **image** 열 `logo`를 찾는 방법을 보여 줍니다. 텍스트 포인터는 지역 변수인 `@ptrval.`로 설정합니다.  
   
 ```  
@@ -86,7 +86,7 @@ WHERE p.pub_id = pr.pub_id
 GO  
 ```  
   
-### <a name="b-using-textptr-with-in-row-text"></a>2\. 행 내부 텍스트와 함께 TEXTPTR 사용  
+### <a name="b-using-textptr-with-in-row-text"></a>B. 행 내부 텍스트와 함께 TEXTPTR 사용  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 다음 예와 같이 트랜잭션 내에서 행 내부 텍스트 포인터를 사용해야 합니다.  
   
 ```  

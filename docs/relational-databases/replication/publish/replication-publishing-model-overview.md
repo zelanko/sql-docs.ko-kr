@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: b9567832-e6a8-45b2-a3ed-ea12aa002f4b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 95d2a3538cb775efb346d59e7db75c238e35c5d6
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: d0983db7dee94269981933f115594bdbb9c6a115
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769797"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287570"
 ---
 # <a name="replication-publishing-model-overview"></a>복제 게시 모델 개요
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "68769797"
   
  *복제 토폴로지* 는 서버와 데이터 복사본 간의 관계를 정의하고 서버 간 데이터 흐름 방식을 결정하는 논리를 명확히 합니다. 게시자와 구독자 간 데이터 복사 및 이동을 담당하는 여러 복제 프로세스( *에이전트*)가 있습니다. 다음 그림에서는 복제와 관련된 구성 요소 및 프로세스를 간략하게 설명합니다.  
   
- ![복제 구성 요소 및 데이터 흐름](../../../relational-databases/replication/publish/media/replintro1.gif "Replication components and data flow")  
+ ![복제 구성 요소 및 데이터 흐름](../../../relational-databases/replication/publish/media/replintro1.gif "복제 구성 요소 및 데이터 흐름")  
   
 ## <a name="publisher"></a>게시자  
  게시자는 복제를 통해 데이터를 다른 위치에서 사용할 수 있도록 만드는 데이터베이스 인스턴스입니다. 게시자는 각각 논리적으로 관련된 개체 집합 및 복제할 데이터를 정의하는 게시를 하나 이상 가질 수 있습니다.  
@@ -63,12 +63,12 @@ ms.locfileid: "68769797"
 ## <a name="publication"></a>게시  
  게시는 하나의 데이터베이스에서 하나 이상의 아티클을 모은 것입니다. 여러 아티클을 게시로 그룹화하면 논리적으로 관련된 데이터베이스 개체 집합 및 단위로 복제된 데이터를 쉽게 지정할 수 있습니다.  
   
-## <a name="subscription"></a>구독  
+## <a name="subscription"></a>Subscription  
  구독은 구독자에게 게시 복사본을 배달해 줄 것을 요청하는 것입니다. 구독은 어떤 게시를 언제 어디서 받을 것인지를 정의합니다. 밀어넣기와 끌어오기의 두 가지 구독 유형이 있습니다. 밀어넣기 및 끌어오기 구독에 대한 자세한 내용은 [게시 구독](../../../relational-databases/replication/subscribe-to-publications.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [복제 에이전트 개요](../../../relational-databases/replication/agents/replication-agents-overview.md)   
- [복제 유형](../../../relational-databases/replication/types-of-replication.md)   
+ [Types of Replication](../../../relational-databases/replication/types-of-replication.md)   
  [Always On 가용성 그룹에 대한 복제 구성(SQL Server)](../../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)   
  [Always On 게시 데이터베이스 유지 관리(SQL Server)](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
   

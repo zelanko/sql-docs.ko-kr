@@ -30,10 +30,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 046ce79c989fdfb24c6615968e6bad951aeb7280
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024905"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>분할된 테이블 및 인덱스 만들기
@@ -74,7 +74,7 @@ ms.locfileid: "68024905"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  분할된 테이블을 만들려면 데이터베이스에는 CREATE TABLE 권한이 필요하고 테이블을 만들 구성표에 대해서는 ALTER 권한이 필요합니다. 분할된 인덱스를 만들려면 인덱스를 만들 테이블이나 뷰에 대한 ALTER 권한이 필요합니다. 분할된 테이블 또는 인덱스를 만들려면 다음과 같은 추가 권한 중 하나가 필요합니다.  
   
 -   ALTER ANY DATASPACE 권한. 이 권한은 기본적으로 **sysadmin** 고정 서버 역할 및 **db_owner** 및 **db_ddladmin** 고정 데이터베이스 역할의 멤버에게 부여됩니다.  
@@ -90,7 +90,7 @@ ms.locfileid: "68024905"
   
 1.  개체 탐색기에서 분할된 테이블을 만들 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-2.  **데이터베이스 속성 –** *database_name* 대화 상자의 **페이지 선택** 아래에서 **파일 그룹**을 선택합니다.  
+2.  **데이터베이스 속성 –** *database_name* 대화 상자의 **페이지 선택**에서 **파일 그룹**을 선택합니다.  
   
 3.  **행**아래에서 **추가**를 클릭합니다. 새 행에 파일 그룹 이름을 입력합니다.  
   
@@ -232,7 +232,7 @@ ms.locfileid: "68024905"
      **세부 정보**  
      동작, 상태 및 마법사가 수행한 동작의 결과로 반환된 모든 메시지를 제공합니다.  
   
-     **작업**  
+     **동작**  
      각 동작의 이름과 유형을 지정합니다.  
   
      **상태**  
@@ -241,7 +241,7 @@ ms.locfileid: "68024905"
      **메시지**  
      프로세스에서 반환된 모든 오류 또는 경고 메시지를 제공합니다.  
   
-     **보고서**  
+     **Report**  
      파티션 작성 마법사의 결과가 포함된 보고서를 만듭니다. **보고서 보기**, **보고서를 파일로 저장**, **클립보드에 보고서 복사**및 **보고서를 전자 메일로 보내기**중에서 선택할 수 있습니다.  
   
      **보고서 보기**  
@@ -384,7 +384,7 @@ ms.locfileid: "68024905"
   
 #### <a name="to-determine-the-partition-column-for-a-partitioned-table"></a>분할된 테이블에 대한 파티션 열을 확인하려면  
   
-1.  다음 쿼리는 테이블에 대한 분할 열의 이름을 반환합니다. `PartitionTable`에서 분할된 테이블 또는 인덱스를 만들 수 있습니다.  
+1.  다음 쿼리는 테이블에 대한 분할 열의 이름을 반환합니다. `PartitionTable`입니다.  
   
     ```  
     SELECT   
@@ -409,7 +409,7 @@ ms.locfileid: "68024905"
     GO  
     ```  
   
- 참조 항목:  
+ 자세한 내용은 다음을 참조하세요.  
   
 -   [ALTER DATABASE 파일 및 파일 그룹 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
   

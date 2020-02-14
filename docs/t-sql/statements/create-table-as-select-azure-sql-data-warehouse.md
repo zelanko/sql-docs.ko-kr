@@ -12,10 +12,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 22f296db7717e81068ac52d6c3df547a0ba0d085
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73660789"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT(Azure SQL Data Warehouse)
@@ -33,7 +33,7 @@ CREATE TABLE AS SELECT(CTAS)는 사용할 수 있는 매우 중요한 T-SQL 기�
 > [!NOTE]  
 > CTAS는 테이블을 만드는 기능에 추가되므로 이 토픽에서는 CREATE TABLE 토픽을 반복하지 않으려고 합니다. 그 대신, CTAS와 CREATE TABLE 문의 차이점을 설명합니다. CREATE TABLE 세부 정보는 [CREATE TABLE(Azure SQL Data Warehouse)](https://msdn.microsoft.com/library/mt203953/) 문을 참조하세요. 
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 <a name="syntax-bk"></a>
 
@@ -166,7 +166,7 @@ CTAS를 사용하여 테이블을 만드는데 성능이 중요하지 않은 경
 
 <a name="ctas-copy-table-bk"></a>
 
-### <a name="a-use-ctas-to-copy-a-table"></a>1\. CTAS를 사용하여 테이블 복사 
+### <a name="a-use-ctas-to-copy-a-table"></a>A. CTAS를 사용하여 테이블 복사 
 적용 대상: Azure SQL Data Warehouse 및 병렬 Data Warehouse
 
 `CTAS`의 매우 일반적인 사용 중 하나는 아마도 DDL(데이터 정의 언어)을 변경할 수 있도록 테이블의 복사본을 만드는 작업일 것입니다. 예를 들어 원래 테이블을 `ROUND_ROBIN`으로 만들었는데 이제 이 테이블을 열에 배포된 테이블로 만들려고 하는 경우 `CTAS`를 사용하여 분포 열을 변경합니다. 또한 `CTAS`를 사용하여 분할, 인덱싱 또는 열 형식을 변경할 수도 있습니다.
@@ -238,7 +238,7 @@ DROP TABLE FactInternetSales_old;
 
 <a name="ctas-change-column-attributes-bk"></a>
 
-### <a name="b-use-ctas-to-change-column-attributes"></a>2\. CTAS를 사용하여 열 특성 변경 
+### <a name="b-use-ctas-to-change-column-attributes"></a>B. CTAS를 사용하여 열 특성 변경 
 적용 대상: Azure SQL Data Warehouse 및 병렬 Data Warehouse
 
 이 예제에서는 CTAS를 사용하여 DimCustomer2 테이블의 여러 열에 대해 데이터 형식, NULL 허용 여부 및 데이터 정렬을 변경합니다.  
@@ -679,7 +679,7 @@ RENAME OBJECT dbo.[DimProduct_upsert]  TO [DimProduct];
 
 <a name="ctas-data-type-and-nullability-bk"></a>
 
-### <a name="m-explicitly-state-data-type-and-nullability-of-output"></a>13. 출력의 데이터 형식 및 NULL 허용 여부를 명시적으로 서술  
+### <a name="m-explicitly-state-data-type-and-nullability-of-output"></a>13. 데이터 형식 및 출력의 null 허용 여부를 명시적으로 지정  
 적용 대상: Azure SQL Data Warehouse 및 병렬 Data Warehouse  
 
 SQL Server 코드를 SQL Data Warehouse로 마이그레이션하는 경우 이 형식의 코딩 패턴을 발견할 것입니다.
@@ -750,7 +750,7 @@ AS
 SELECT ISNULL(CAST(@d*@f AS DECIMAL(7,2)),0) as result
 ```
 
-다음에 유의하세요.
+다음 사항에 유의하세요.
 - CAST 또는 CONVERT가 사용되었을 수 있음
 - ISNULL을 사용하여 NULL 허용 여부를 COALESCE로 강제 설정
 - ISNULL은 맨 바깥쪽의 함수
@@ -846,7 +846,7 @@ OPTION (MAXDOP 1);
  [CREATE EXTERNAL FILE FORMAT&#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
  [CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
- [CREATE TABLE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-azure-sql-data-warehouse.md) [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
+ [CREATE TABLE&#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-azure-sql-data-warehouse.md) [DROP TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
  [DROP EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-table-transact-sql.md)   
  [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [ALTER EXTERNAL TABLE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ae1b23c-67f6-41d0-b614-7a8de914d145)  

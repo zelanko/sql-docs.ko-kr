@@ -19,10 +19,10 @@ ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 60dcf1692fb8b805b9eef8fad228353104131c93
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295734"
 ---
 # <a name="save-packages"></a>패키지 저장
@@ -47,7 +47,7 @@ ms.locfileid: "71295734"
     >  속성 창에서 패키지가 저장된 경로와 파일 이름을 확인할 수 있습니다.  
 
 ## <a name="save-a-copy-of-a-package"></a>패키지의 복사본 저장
-  이 섹션에서는 패키지 복사본을 파일 시스템, 패키지 저장소 또는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 **msdb** 데이터베이스에 저장하는 방법에 대해 설명합니다. 패키지 복사본의 저장 위치를 지정할 때 패키지 이름을 업데이트할 수도 있습니다.  
+  이 섹션에서는 패키지 복사본을 파일 시스템, 패키지 저장소 또는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 **msdb** 데이터베이스에 저장하는 방법을 설명합니다. 패키지 복사본의 저장 위치를 지정할 때 패키지 이름을 업데이트할 수도 있습니다.  
   
  패키지 저장소에는 **msdb** 데이터베이스와 파일 시스템의 폴더가 모두 포함될 수도 있고, **msdb**또는 파일 시스템의 폴더 중 하나만 포함될 수도 있습니다. **msdb**에서 패키지는 **sysssispackages** 테이블에 저장됩니다. 이 테이블에는 패키지가 속한 논리적 폴더를 식별하는 **folderid** 열이 있습니다. 논리적 폴더를 사용하면 파일 시스템의 폴더를 통해 파일 시스템에 저장된 패키지를 그룹화할 수 있는 것과 동일한 방식으로 **msdb** 에 저장된 패키지를 그룹화할 수 있습니다. **msdb** 의 **sysssispackagefolders** 테이블에 있는 행은 폴더를 정의합니다.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "71295734"
   
 2.  **파일** 메뉴에서 **다른 이름으로 \<패키지 파일>의 복사본 저장**을 클릭합니다.  
   
-3.  **패키지 복사본 저장** 대화 상자의 **패키지 위치** 목록에서 패키지 위치를 선택합니다. 사용할 수 있는 옵션은 다음과 같습니다.  
+3.  **패키지 복사본 저장** 대화 상자의 **패키지 위치** 목록에서 패키지 위치를 선택합니다. 다음 옵션을 사용할 수 있습니다.  
     -   SQL Server
     -   파일 시스템 
     -   SSIS 패키지 저장소 

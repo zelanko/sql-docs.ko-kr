@@ -18,10 +18,10 @@ ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 48736a721cad475c6956e1715a3912481bc83c40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012923"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>특정 TCP 포트에서 수신 대기하도록 서버 구성
@@ -55,7 +55,7 @@ ms.locfileid: "68012923"
   
      ![TCP_ports](../../database-engine/configure-windows/media/tcp-ports.png "TCP_ports")  
   
-4.  **IP**_n_ **속성** 영역의 **TCP 포트** 상자에 이 IP 주소가 수신할 포트 번호를 입력한 다음 **확인**을 클릭합니다. 여러 포트를 쉼표로 구분하여 지정할 수 있습니다.
+4.  **IP**_n_ **속성** 영역 상자의 **TCP 포트** 상자에 이 IP 주소가 수신할 포트 번호를 입력하고 **확인**을 클릭합니다. 여러 포트를 쉼표로 구분하여 지정할 수 있습니다.
 
     > [!NOTE] 
     > **프로토콜** 탭의 **모두 수신** 설정이 "예"로 설정된 경우 **IPAll** 섹션의 **TCP 포트** 및 **TCP 동적 포트** 값을 사용하고 개별 **IP**_n_ 섹션을 전체에서 무시합니다. **모두 수신** 설정을 "아니요"로 지정하면 **IPAll** 섹션 아래에 있는 **TCP 포트** 및 **TCP 동적 포트** 설정을 무시하고, 개별 **IP**_n_섹션에 있는 **TCP 포트**, **TCP 동적 포트** 및 **사용됨** 설정을 대신 사용할 수 있습니다.

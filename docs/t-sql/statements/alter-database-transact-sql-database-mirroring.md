@@ -18,10 +18,10 @@ ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 32cc95fa56d909602ab66d3ddad403bf4ceacebc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065825"
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>ALTER DATABASE(Transact-SQL) 데이터베이스 미러링
@@ -29,7 +29,7 @@ ms.locfileid: "68065825"
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 > [!NOTE]
-> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]을 대신 사용합니다.
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)]을 대신 사용합니다.
 
 데이터베이스에 대한 데이터베이스 미러링을 제어합니다. 데이터베이스 미러링 옵션에 지정한 값은 두 개의 데이터베이스 복사본 및 데이터베이스 미러링 세션에 전체적으로 적용됩니다. ALTER DATABASE 문당 하나의 \<database_mirroring_option>만 허용됩니다.
 
@@ -38,7 +38,7 @@ ms.locfileid: "68065825"
 
 ALTER DATABASE 옵션에 대해서는 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요. ALTER DATABASE SET 옵션에 대해서는 [ALTER DATABASE SET 옵션](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요.
 
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>구문
 
@@ -85,7 +85,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 > [!NOTE]
 > SET PARTNER 절당 하나의 \<partner_option>만 허용됩니다.
 
-**'** _partner_server_ **'** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 서버 네트워크 주소가 새 데이터베이스 미러링 세션에서 장애 조치(failover) 파트너로 작동하도록 지정합니다. 각 세션에는 각각 주 서버와 미러 서버로 시작할 두 개의 파트너가 필요합니다. 각 파트너는 다른 컴퓨터에 있는 것이 좋습니다.
+**‘** _partner_server_ **’** 새 데이터베이스 미러링 세션에서 장애 조치(failover) 파트너로 사용할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 서버 네트워크 주소를 지정합니다. 각 세션에는 각각 주 서버와 미러 서버로 시작할 두 개의 파트너가 필요합니다. 각 파트너는 다른 컴퓨터에 있는 것이 좋습니다.
 
 이 옵션은 각 파트너에서 세션당 한 번 지정합니다. 데이터베이스 미러링 세션을 시작하려면 두 개의 ALTER DATABASE *database* SET PARTNER **='** _partner_server_ **'** 문이 필요합니다. 순서가 중요합니다. 먼저 미러 서버에 연결하고 주 서버 인스턴스를 *partner_server*(SET PARTNER **='** _principal_server_ **'** )로 지정합니다. 두 번째로 주 서버에 연결하고 미러 서버 인스턴스를 *partner_server*(SET PARTNER **='** _mirror_server_ **'** )로 지정합니다. 이렇게 하면 두 파트너 간에 데이터베이스 미러링 세션이 시작됩니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [데이터베이스 미러링 설정](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)을 참조하세요.
 
@@ -93,7 +93,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 
 TCP **://** _\<system-address>_ **:** _\<port>_
 
-여기서
+라는 설치 관리자 실행 파일에 포함됩니다. 여기서
 
 - *\<system-address>* 는 대상 컴퓨터 시스템을 명확하게 식별하는 시스템 이름, 정규화된 도메인 이름 또는 IP 주소 등의 문자열입니다.
 - *\<port&gt;* 는 파트너 서버 인스턴스의 미러링 엔드포인트와 연결된 포트 번호입니다.
@@ -179,21 +179,21 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 > [!NOTE]
 > SET WITNESS 절당 하나의 \<witness_option>만 허용됩니다.
 
- **'** _witness_server_ **'** [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 데이터베이스 미러링 세션에 대한 미러링 모니터 서버로 작동하도록 지정합니다. SET WITNESS 문은 주 서버에서만 지정할 수 있습니다.
+ **‘** _witness_server_ **’** 데이터베이스 미러링 세션의 미러링 모니터 서버로 사용할 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 지정합니다. SET WITNESS 문은 주 서버에서만 지정할 수 있습니다.
 
 SET WITNESS **='** _witness_server_ **'** 문에서 *witness_server* 구문은 *partner_server*의 구문과 동일합니다.
 
 OFF 데이터베이스 미러링 세션에서 미러링 모니터를 제거합니다. 미러링 모니터를 OFF로 설정하면 자동 장애 조치가 해제됩니다. 데이터베이스가 FULL SAFETY로 설정되어 있고 미러링 모니터가 OFF인 경우 미러 서버에 오류가 발생하면 주 서버는 데이터베이스를 사용할 수 없도록 합니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 ## <a name="examples"></a>예
 
-### <a name="a-creating-a-database-mirroring-session-with-a-witness"></a>1\. 미러링 모니터가 있는 데이터베이스 미러링 세션 만들기
+### <a name="a-creating-a-database-mirroring-session-with-a-witness"></a>A. 미러링 모니터가 있는 데이터베이스 미러링 세션 만들기
 
 미러링 모니터가 있는 데이터베이스 미러링을 설정하려면 보안을 구성하고 미러 데이터베이스를 준비해야 하며 ALTER DATABASE를 사용하여 파트너를 설정해야 합니다. 전체 설치 프로세스의 예제를 보려면 [데이터베이스 미러링 설정](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)을 참조하세요.
 
-### <a name="b-manually-failing-over-a-database-mirroring-session"></a>2\. 데이터베이스 미러링 세션의 수동 장애 조치
+### <a name="b-manually-failing-over-a-database-mirroring-session"></a>B. 데이터베이스 미러링 세션의 수동 장애 조치
 
 수동 장애 조치는 데이터베이스 미러링 파트너 중 어느 쪽에서든 시작할 수 있습니다. 장애 조치를 수행하기 전에 현재 주 서버로 생각하고 있는 서버가 실제로 주 서버가 맞는지 확인하십시오. 예를 들어 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스인 경우 현재 주 서버라고 생각하는 서버 인스턴스에서 다음 쿼리를 실행합니다.
 

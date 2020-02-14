@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2c705c60504dd6de0b143fd129d6660db9457b48
-ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71127370"
 ---
 # <a name="tables"></a>테이블
@@ -37,7 +37,7 @@ ms.locfileid: "71127370"
 
 ### <a name="partitioned-tables"></a>분할된 테이블
 
-분할된 테이블은 데이터가 수평 분할된 단위로 되어 데이터베이스의 여러 파일 그룹에 분산될 수 있는 테이블입니다. 분할을 사용하면 데이터 하위 집합을 빠르고 효율적으로 액세스하거나 관리하면서 동시에 전체 컬렉션의 무결성을 유지할 수 있으므로 큰 테이블 또는 인덱스를 더욱 편리하게 관리할 수 있습니다. 기본적으로 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 은 최대 15,000개의 파티션을 지원합니다. 자세한 내용은 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)을 참조하세요.
+분할된 테이블은 데이터가 수평 분할된 단위로 되어 데이터베이스의 여러 파일 그룹에 분산될 수 있는 테이블입니다. 분할을 사용하면 데이터 하위 집합을 빠르고 효율적으로 액세스하고 관리하는 동시에 전체 컬렉션의 무결성을 유지할 수 있으므로 큰 테이블이나 인덱스를 보다 쉽게 관리할 수 있습니다. 기본적으로 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 은 최대 15,000개의 파티션을 지원합니다. 자세한 내용은 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)을 참조하세요.
 
 ### <a name="temporary-tables"></a>임시 테이블
 
@@ -101,6 +101,6 @@ ms.locfileid: "71127370"
 |열의 기본값을 지정하는 방법을 설명합니다. 다른 값을 제공하지 않으면 이 값이 사용됩니다.|[열의 기본값 지정](../../relational-databases/tables/specify-default-values-for-columns.md)|
 
 ## <a name="see-also"></a>참고 항목
- [기본 및 오래 키 제약 조건](../../relational-databases/tables/primary-and-foreign-key-constraints.md) [고유 제약 조건 및 제약 조건 검사](../../relational-databases/tables/unique-constraints-and-check-constraints.md)
+ [PRIMARY KEY 및 FOREIGN KEY 제약 조건](../../relational-databases/tables/primary-and-foreign-key-constraints.md) [UNIQUE 제약 조건 및 CHECK 제약 조건](../../relational-databases/tables/unique-constraints-and-check-constraints.md)
 
 

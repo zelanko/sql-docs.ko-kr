@@ -17,10 +17,10 @@ ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 890bd202912cea88491acd79906c873c44e53658
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71282618"
 ---
 # <a name="performance-counters"></a>성능 카운터
@@ -34,7 +34,7 @@ ms.locfileid: "71282618"
   
  다음 표에서는 성능 카운터에 대해 설명합니다.  
   
-|성능 카운터|설명|  
+|성능 카운터|Description|  
 |-------------------------|-----------------|  
 |BLOB bytes read|데이터 흐름 엔진이 모든 원본에서 읽어 온 BLOB(Binary Large Object) 데이터의 바이트 수입니다.|  
 |BLOB bytes written|데이터 흐름 엔진이 모든 대상에 기록한 전체 BLOB 데이터의 바이트 수입니다.|  

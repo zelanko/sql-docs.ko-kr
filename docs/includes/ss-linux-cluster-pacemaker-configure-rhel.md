@@ -1,12 +1,4 @@
----
-ms.openlocfilehash: 6cf3dd279f33ea0c157743d4b4c11248267a0a62
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68215623"
----
-3. 모든 클러스터 노드에서 Pacemaker 방화벽 포트를 엽니다. `firewalld`를 사용하여 이러한 포트를 열려면 다음 명령을 실행합니다.
+1. 모든 클러스터 노드에서 Pacemaker 방화벽 포트를 엽니다. `firewalld`를 사용하여 이러한 포트를 열려면 다음 명령을 실행합니다.
 
    ```bash
    sudo firewall-cmd --permanent --add-service=high-availability
@@ -24,13 +16,13 @@ ms.locfileid: "68215623"
    sudo yum install pacemaker pcs fence-agents-all resource-agents
    ```
 
-2. Pacemaker 및 Corosync 패키지를 설치할 때 생성된 기본 사용자의 암호를 설정합니다. 모든 노드에서 같은 암호를 사용합니다. 
+1. Pacemaker 및 Corosync 패키지를 설치할 때 생성된 기본 사용자의 암호를 설정합니다. 모든 노드에서 같은 암호를 사용합니다. 
 
    ```bash
    sudo passwd hacluster
    ```
 
-3. 다시 부팅 후 노드가 클러스터에 다시 조인할 수 있도록 `pcsd` 서비스 및 Pacemaker를 사용하도록 설정하고 시작합니다. 모든 노드에서 다음 명령을 실행합니다.
+1. 다시 부팅 후 노드가 클러스터에 다시 조인할 수 있도록 `pcsd` 서비스 및 Pacemaker를 사용하도록 설정하고 시작합니다. 모든 노드에서 다음 명령을 실행합니다.
 
    ```bash
    sudo systemctl enable pcsd
@@ -38,7 +30,9 @@ ms.locfileid: "68215623"
    sudo systemctl enable pacemaker
    ```
 
-4. 클러스터를 만듭니다. 클러스터를 만들려면 다음 명령을 실행합니다.
+1. 클러스터를 만듭니다. 클러스터를 만들려면 다음 명령을 실행합니다.
+
+   **RHEL 7** 
 
    ```bash
    sudo pcs cluster auth <node1> <node2> <node3> -u hacluster -p <password for hacluster>
@@ -46,11 +40,22 @@ ms.locfileid: "68215623"
    sudo pcs cluster start --all
    sudo pcs cluster enable --all
    ```
+
+   **RHEL8**
+
+   RHEL 8의 경우 노드를 별도로 인증해야 합니다. 메시지가 표시되면 hacluster의 사용자 이름 및 암호를 수동으로 입력합니다.
+
+   ```bash
+   sudo pcs host auth <node1> <node2> <node3>
+   sudo pcs cluster setup <clusterName> <node1> <node2> <node3>
+   sudo pcs cluster start --all
+   sudo pcs cluster enable --all
+   ```
    
    >[!NOTE]
    >이전에 같은 노드에서 클러스터를 구성한 경우 `pcs cluster setup`을 실행할 때 `--force` 옵션을 사용해야 합니다. 이 옵션은 `pcs cluster destroy`를 실행하는 것과 동일합니다. Pacemaker를 다시 사용하도록 설정하려면 `sudo systemctl enable pacemaker`를 실행합니다.
 
-5. SQL Server용 SQL Server 리소스 에이전트를 설치합니다. 모든 노드에서 다음 명령을 실행합니다. 
+1. SQL Server용 SQL Server 리소스 에이전트를 설치합니다. 모든 노드에서 다음 명령을 실행합니다. 
 
    ```bash
    sudo yum install mssql-server-ha

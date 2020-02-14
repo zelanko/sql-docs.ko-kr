@@ -26,10 +26,10 @@ ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: c2418bedb172464002fd640a50c8b57f3daca712
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071250"
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION(Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68071250"
 > [!CAUTION]  
 >  둘 이상의 테이블 또는 인덱스가 같은 파티션 함수를 사용할 수 있습니다. ALTER PARTITION FUNCTION은 단일 트랜잭션에 있는 모든 대상에 영향을 줍니다.  
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -75,7 +75,7 @@ MERGE [ RANGE ( *boundary_value*) ]
 > [!NOTE]  
 >  columnstore 인덱스 관련 제한 사항: columnstore 인덱스가 포함된 두 개의 비어 있지 않은 파티션은 병합할 수 없습니다. 이 작업을 수행하기 전에 columnstore 인덱스를 삭제하거나 사용하지 않도록 설정해야 합니다.  
   
-## <a name="best-practices"></a>최선의 구현 방법  
+## <a name="best-practices"></a>모범 사례  
 항상 파티션 범위의 양 끝에 빈 파티션을 유지합니다. 파티션을 양 끝에 유지하여 파티션 분할 및 파티션 병합으로 인해 데이터가 이동되지 않도록 합니다. 파티션 분할은 시작 부분에서 발생하고 파티션 병합은 끝 부분에서 발생합니다. 채워진 파티션은 분할되거나 병합되지 않도록 합니다. 채워진 파티션을 분할하거나 병합하는 것은 비효율적일 수 있습니다. 분할이나 병합으로 인해 로그가 네 배 더 생성될 수 있으며 잠금이 과도하게 발생할 수 있으므로 해당 작업은 비효율적일 수 있습니다.  
   
 ## <a name="limitations-and-restrictions"></a>제한 사항  
@@ -111,7 +111,7 @@ ALTER PARTITION FUNCTION을 실행하려면 다음 중 하나의 권한이 필�
   
 ## <a name="examples"></a>예  
   
-### <a name="a-splitting-a-partition-of-a-partitioned-table-or-index-into-two-partitions"></a>1\. 분할 테이블 또는 인덱스의 파티션을 두 개의 파티션으로 분할  
+### <a name="a-splitting-a-partition-of-a-partitioned-table-or-index-into-two-partitions"></a>A. 분할 테이블 또는 인덱스의 파티션을 두 개의 파티션으로 분할  
 다음 예에서는 테이블이나 인덱스를 4개의 파티션으로 분할하는 파티션 함수를 만듭니다. `ALTER PARTITION FUNCTION`은 파티션 중 하나를 둘로 분할하여 총 5개의 파티션을 만듭니다.  
   
 ```sql  
@@ -129,7 +129,7 @@ ALTER PARTITION FUNCTION myRangePF1 ()
 SPLIT RANGE (500);  
 ```  
   
-### <a name="b-merging-two-partitions-of-a-partitioned-table-into-one-partition"></a>2\. 분할된 테이블의 두 개의 파티션을 하나의 파티션으로 병합  
+### <a name="b-merging-two-partitions-of-a-partitioned-table-into-one-partition"></a>B. 분할된 테이블의 두 개의 파티션을 하나의 파티션으로 병합  
 다음 예에서는 위의 예와 같은 파티션 함수를 만든 다음 두 개의 파티션을 하나로 병합하여 총 3개의 파티션을 만드는 방법을 보여 줍니다.  
   
 ```sql  

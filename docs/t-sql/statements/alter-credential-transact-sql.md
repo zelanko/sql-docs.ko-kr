@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: f6ac23553500fbf3092d9450b6f5a222863dc1dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065919"
 ---
 # <a name="alter-credential-transact-sql"></a>ALTER CREDENTIAL(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68065919"
   자격 증명의 속성을 변경합니다.  
 
 > [!IMPORTANT]
-> 모범 사례로 "수행할 작업" 정보는 작업을 완료하기 위해 "반드시 수행"해야 합니다. ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+> 모범 사례로 “수행할 작업” 정보는 작업을 완료하기 위해 “반드시 수행”해야 합니다. ![ 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -56,7 +56,7 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
 > [!IMPORTANT]
 > Azure SQL Database는 Azure Key Vault와 공유 액세스 서명 ID만 지원합니다. Windows 사용자 ID는 지원되지 않습니다.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  자격 증명이 변경되면 *identity_name*과 *비밀*의 값이 모두 다시 설정됩니다. 옵션인 SECRET 인수를 지정하지 않으면 저장된 암호 값이 NULL로 설정됩니다.  
   
  암호는 서비스 마스터 키를 사용하여 암호화됩니다. 서비스 마스터 키가 다시 생성되면 암호가 새 서비스 마스터 키를 사용하여 다시 암호화됩니다.  
@@ -68,7 +68,7 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
   
 ## <a name="examples"></a>예  
   
-### <a name="a-changing-the-password-of-a-credential"></a>1\. 자격 증명의 암호 변경  
+### <a name="a-changing-the-password-of-a-credential"></a>A. 자격 증명의 암호 변경  
  다음 예에서는 `Saddles`라는 자격 증명에 저장된 암호를 변경합니다. 이 자격 증명에는 `RettigB` Windows 로그인과 해당 암호가 들어 있습니다. 새 암호는 SECRET 절을 사용하여 자격 증명에 추가됩니다.  
   
 ```  
@@ -77,7 +77,7 @@ ALTER CREDENTIAL Saddles WITH IDENTITY = 'RettigB',
 GO  
 ```  
   
-### <a name="b-removing-the-password-from-a-credential"></a>2\. 자격 증명에서 암호 제거  
+### <a name="b-removing-the-password-from-a-credential"></a>B. 자격 증명에서 암호 제거  
  다음 예에서는 `Frames`라는 자격 증명에서 암호를 제거합니다. 이 자격 증명에는 `Aboulrus8` Windows 로그인과 해당 암호가 들어 있습니다. SECRET 옵션이 지정되지 않았기 때문에 문이 실행된 후에는 자격 증명 암호가 NULL이 됩니다.  
   
 ```  

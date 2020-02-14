@@ -41,10 +41,10 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 281d392bcb6c9bd6e46dbb6b41a85d080bb811f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68038833"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>SQL Server 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작
@@ -116,7 +116,7 @@ ms.locfileid: "68038833"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  기본적으로 로컬 Administrators 그룹의 멤버만 서비스를 시작, 중지, 일시 중지, 재개 또는 다시 시작할 수 있습니다. 관리자가 아닌 사용자에게 서비스 관리 권한을 부여하려면 [Windows Server 2003에서 사용자에게 서비스 관리 권한을 부여하는 방법](https://support.microsoft.com/kb/325349)을 참조하세요. 이 프로세스는 다른 Windows 버전에서도 비슷합니다.  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] SHUTDOWN [!INCLUDE[tsql](../../includes/tsql-md.md)]**명령을 사용하여** 을 중지하려면 **sysadmin** 또는 **serveradmin** 고정 서버 역할의 멤버여야 하며 이 권한은 위임할 수 없습니다.  
@@ -187,7 +187,7 @@ ms.locfileid: "68038833"
 3.  작업을 수행할지 묻는 메시지가 표시되면 **예**를 클릭합니다.  
   
 ##  <a name="CommandPrompt"></a> 명령 프롬프트 창에서 net 명령 사용  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net [!INCLUDE[msCoName](../../includes/msconame-md.md)] 명령을 사용하여 **,** 서비스를 시작, 중지 또는 일시 중지할 수 있습니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows **net** 명령을 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 시작, 중지 또는 일시 중지할 수 있습니다.  
   
 ###  <a name="dbDefault"></a> 다음 기본 인스턴스 시작하기: [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
@@ -195,7 +195,7 @@ ms.locfileid: "68038833"
   
      **net start "SQL Server (MSSQLSERVER)"**  
   
-     -또는-  
+     또는  
   
      **net start MSSQLSERVER**  
   
@@ -203,9 +203,9 @@ ms.locfileid: "68038833"
   
 -   명령 프롬프트에서 다음 명령 중 하나를 입력합니다. *\<instancename>* 을 관리할 인스턴스의 이름으로 바꿉니다.  
   
-     **net start "SQL Server (** *instancename* **)"**  
+     **net start “SQL Server (** *instancename* **)”**  
   
-     -또는-  
+     또는  
   
      **net start MSSQL$** *instancename*  
   
@@ -215,7 +215,7 @@ ms.locfileid: "68038833"
   
      **net start "SQL Server (MSSQLSERVER)" /f /m**  
   
-     -또는-  
+     또는  
   
      **net start MSSQLSERVER /f /m**  
   
@@ -228,7 +228,7 @@ ms.locfileid: "68038833"
   
      **net start "SQL Server Agent (MSSQLSERVER)"**  
   
-     -또는-  
+     또는  
   
      **net start SQLSERVERAGENT**  
   
@@ -238,7 +238,7 @@ ms.locfileid: "68038833"
   
      **net start "SQL Server Agent(** *instancename* **)"**  
   
-     -또는-  
+     또는  
   
      **net start SQLAgent$** *instancename*  
   
@@ -250,7 +250,7 @@ ms.locfileid: "68038833"
   
      **net start "SQL Server Browser"**  
   
-     -또는-  
+     또는  
   
      **net start SQLBrowser**  
   
@@ -358,7 +358,7 @@ ms.locfileid: "68038833"
  [SQL Server 설치 로그 파일 보기 및 읽기](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [SQL Server 구성 관리자](../../relational-databases/sql-server-configuration-manager.md)   
  [최소 구성으로 SQL Server 시작](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)   
- [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)  
+ [SQL Server 2016 버전에서 지원되는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)  
   
   
 

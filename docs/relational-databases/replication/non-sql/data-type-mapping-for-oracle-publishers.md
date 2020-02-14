@@ -15,10 +15,10 @@ ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2b9d63f55ec7baacb4e387f6ee2f4a063ffa645b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67901127"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Oracle 게시자에 대한 데이터 형식 매핑
@@ -27,38 +27,38 @@ ms.locfileid: "67901127"
   
  다음 표에서는 Oracle 게시자에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자로 데이터 이동 시 Oracle과 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 간에 데이터 형식이 기본적으로 매핑되는 방법을 보여 줍니다. 대체 형식 열은 대체 매핑을 사용할 수 있는지 여부를 나타냅니다.  
   
-|Oracle 데이터 형식|SQL Server 데이터 형식|대체 형식|  
+|Oracle 데이터 형식|SQL Server 데이터 형식|대안|  
 |----------------------|--------------------------|------------------|  
-|BFILE|VARBINARY(MAX)|예|  
-|BLOB|VARBINARY(MAX)|예|  
-|CHAR([1-2000])|CHAR([1-2000])|예|  
-|CLOB|VARCHAR(MAX)|예|  
-|DATE|DATETIME|예|  
-|FLOAT|FLOAT|아니오|  
-|FLOAT([1-53])|FLOAT([1-53])|아니오|  
-|FLOAT([54-126])|FLOAT|아니오|  
-|INT|NUMERIC(38)|예|  
-|INTERVAL|DATETIME|예|  
-|LONG|VARCHAR(MAX)|예|  
-|LONG RAW|IMAGE|예|  
-|NCHAR([1-1000])|NCHAR([1-1000])|아니오|  
-|NCLOB|NVARCHAR(MAX)|예|  
-|NUMBER|FLOAT|예|  
-|NUMBER([1-38])|NUMERIC([1-38])|아니오|  
-|NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|예|  
-|NVARCHAR2([1-2000])|NVARCHAR([1-2000])|아니오|  
-|RAW([1-2000])|VARBINARY([1-2000])|아니오|  
-|real|FLOAT|아니오|  
-|ROWID|CHAR(18)|아니오|  
-|timestamp|DATETIME|예|  
-|TIMESTAMP(0-7)|DATETIME|예|  
-|TIMESTAMP(8-9)|DATETIME|예|  
-|TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|예|  
-|TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|아니오|  
-|TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|예|  
-|TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|아니오|  
-|UROWID|CHAR(18)|아니오|  
-|VARCHAR2([1-4000])|VARCHAR([1-4000])|예|  
+|BFILE|VARBINARY(MAX)|yes|  
+|BLOB|VARBINARY(MAX)|yes|  
+|CHAR([1-2000])|CHAR([1-2000])|yes|  
+|CLOB|VARCHAR(MAX)|yes|  
+|DATE|DATETIME|yes|  
+|FLOAT|FLOAT|예|  
+|FLOAT([1-53])|FLOAT([1-53])|예|  
+|FLOAT([54-126])|FLOAT|예|  
+|INT|NUMERIC(38)|yes|  
+|INTERVAL|DATETIME|yes|  
+|LONG|VARCHAR(MAX)|yes|  
+|LONG RAW|IMAGE|yes|  
+|NCHAR([1-1000])|NCHAR([1-1000])|예|  
+|NCLOB|NVARCHAR(MAX)|yes|  
+|NUMBER|FLOAT|yes|  
+|NUMBER([1-38])|NUMERIC([1-38])|예|  
+|NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|yes|  
+|NVARCHAR2([1-2000])|NVARCHAR([1-2000])|예|  
+|RAW([1-2000])|VARBINARY([1-2000])|예|  
+|real|FLOAT|예|  
+|ROWID|CHAR(18)|예|  
+|timestamp|DATETIME|yes|  
+|TIMESTAMP(0-7)|DATETIME|yes|  
+|TIMESTAMP(8-9)|DATETIME|yes|  
+|TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|yes|  
+|TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|예|  
+|TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|yes|  
+|TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|예|  
+|UROWID|CHAR(18)|예|  
+|VARCHAR2([1-4000])|VARCHAR([1-4000])|yes|  
   
 ## <a name="considerations-for-data-type-mapping"></a>데이터 형식 매핑에 대한 고려 사항  
  Oracle 데이터베이스에서 데이터를 복제할 때는 다음 데이터 형식 문제를 고려하십시오.  

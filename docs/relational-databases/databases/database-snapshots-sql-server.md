@@ -19,10 +19,10 @@ ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 724511cb3a60278c6642eb31cbb3481fe92f0d72
-ms.sourcegitcommit: ef7834ed0f38c1712f45737018a0bfe892e894ee
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68300433"
 ---
 # <a name="database-snapshots-sql-server"></a>데이터베이스 스냅샷(SQL Server)
@@ -67,7 +67,7 @@ ms.locfileid: "68300433"
   
 -   가용성 목적으로 유지 관리 중인 미러 데이터베이스를 활용하여 보고 작업 오프로드  
   
-     데이터베이스 스냅샷을 데이터베이스 미러링에 사용하면 보고를 위해 미러 서버의 데이터에 액세스할 수 있습니다. 또한 미러 데이터베이스에서 쿼리를 실행하면 주 데이터베이스의 리소스를 확보할 수 있습니다. 자세한 내용은 [데이터베이스 미러링 및 데이터베이스 스냅샷&amp;#40;SQL Server&amp;#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)을 사용합니다.  
+     데이터베이스 스냅샷을 데이터베이스 미러링에 사용하면 보고를 위해 미러 서버의 데이터에 액세스할 수 있습니다. 또한 미러 데이터베이스에서 쿼리를 실행하면 주 데이터베이스의 리소스를 확보할 수 있습니다. 자세한 내용은 [데이터베이스 미러링 및 데이터베이스 스냅샷&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)을 사용합니다.  
   
 -   관리 오류로부터 데이터 보호  
   
@@ -119,7 +119,7 @@ ms.locfileid: "68300433"
   
 -   [오프라인 파일 그룹의 데이터베이스 스냅샷](#OfflineFGs)  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 조건  
  복구 모델을 사용할 수 있는 원본 데이터베이스는 다음 사전 요구 사항을 충족해야 합니다.  
   
 -   서버 인스턴스는 데이터베이스 스냅샷을 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 실행해야 합니다. 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
@@ -197,7 +197,7 @@ ms.locfileid: "68300433"
     > [!NOTE]  
     >  데이터베이스 스냅샷에 대해 실행되는 SELECT 문에는 FILESTREAM 열을 지정하지 말아야 합니다. 그렇지 않으면 다음 오류 메시지가 반환됩니다. `Could not continue scan with NOLOCK due to data movement.`  
   
--   읽기 전용 스냅샷에 대한 통계가 없거나 유효하지 않을 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 tempdb에서 임시 통계를 만들어 유지 관리합니다. 자세한 내용은 [Statistics](../../relational-databases/statistics/statistics.md)을(를) 참조하세요.  
+-   읽기 전용 스냅샷에 대한 통계가 없거나 유효하지 않을 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 tempdb에서 임시 통계를 만들어 유지 관리합니다. 자세한 내용은 [통계](../../relational-databases/statistics/statistics.md)를 참조하세요.  
   
 ###  <a name="DiskSpace"></a> 디스크 공간 요구 사항  
  데이터베이스 스냅샷은 디스크 공간을 사용합니다. 데이터베이스 스냅샷이 디스크 공간을 모두 소모하면 스냅샷이 주의 대상으로 표시되어 삭제해야 합니다. 그러나 원본 데이터베이스는 영향을 받지 않으며 정상적으로 동작이 계속됩니다. 그러나 데이터베이스의 전체 복사본과 비교할 때 스냅샷은 공간을 매우 효율적으로 사용합니다. 스냅샷은 사용 기간 동안 변경되는 페이지를 스토리지할 수 있는 공간만 필요로 합니다. 일반적으로 스냅샷은 제한된 시간 동안 보관되므로 크기는 중요한 문제가 아닙니다.  
@@ -226,20 +226,20 @@ ms.locfileid: "68300433"
   
      원본 데이터베이스를 데이터베이스 스냅샷으로 되돌리려면 스냅샷을 만들 때 오프라인 상태였던 파일 그룹을 제외하고 모든 파일 그룹이 온라인 상태여야 합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
--   [데이터베이스 스냅샷 만들기&amp;#40;Transact-SQL&amp;#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
+-   [데이터베이스 스냅샷 만들기&#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
   
--   [데이터베이스 스냅샷 보기&amp;#40;SQL Server&amp;#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)  
+-   [데이터베이스 스냅샷 보기&#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)  
   
--   [데이터베이스 스냅샷 스파스 파일의 크기 보기&amp;#40;Transact-SQL&amp;#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)  
+-   [데이터베이스 스냅샷 스파스 파일의 크기 보기&#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)  
   
 -   [데이터베이스를 데이터베이스 스냅샷으로 되돌리기](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md)  
   
--   [데이터베이스 스냅샷 삭제&amp;#40;Transact-SQL&amp;#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
+-   [데이터베이스 스냅샷 삭제&#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터베이스 미러링 및 데이터베이스 스냅샷&amp;#40;SQL Server&amp;#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
+ [데이터베이스 미러링 및 데이터베이스 스냅샷&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
   
   
 

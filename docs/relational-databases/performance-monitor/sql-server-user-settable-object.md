@@ -14,10 +14,10 @@ ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: cddb71a35ac762ed602dd93e9e50f463da3e41f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947921"
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server, User Settable 개체
@@ -29,15 +29,15 @@ ms.locfileid: "67947921"
 > [!NOTE]  
 >  사용자 카운터 저장 프로시저는 시스템 모니터에서 자동으로 폴링되지 않습니다. 사용자 애플리케이션에서 업데이트할 카운터 값에 대해 명시적으로 실행해야 합니다. 트리거를 사용하여 카운터 값을 자동으로 업데이트할 수 있습니다. 예를 들어 테이블에 있는 행 수를 모니터링하는 카운터를 만들려면 테이블에 `SELECT COUNT(*) FROM table`문을 실행하는 INSERT 및 DELETE 트리거를 만드십시오. INSERT나 DELETE 작업이 테이블에서 수행되어 트리거가 시작될 때마다 시스템 모니터 카운터가 자동으로 업데이트됩니다.  
   
- 이 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **User Settable** 개체에 대해 설명합니다.  
+ 이 테이블에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **User Settable** 개체에 대해 설명합니다.  
   
-|SQL Server User Settable 카운터|설명|  
+|SQL Server User Settable 카운터|Description|  
 |---------------------------------------|-----------------|  
 |**쿼리**|**User Settable** 개체는 쿼리 카운터를 포함합니다. 사용자는 쿼리 개체에서 **사용자 카운터** 를 구성합니다.|  
   
  이 표에서는 **Query** 카운터의 **인스턴스** 에 대해 설명합니다.  
   
-|쿼리 카운터 인스턴스|설명|  
+|쿼리 카운터 인스턴스|Description|  
 |-----------------------------|-----------------|  
 |**사용자 카운터 1**|**sp_user_counter1**을 사용하여 정의합니다.|  
 |**사용자 카운터 2**|**sp_user_counter2**를 사용하여 정의합니다.|  

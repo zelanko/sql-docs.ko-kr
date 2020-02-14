@@ -12,10 +12,10 @@ ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 63cc8413175555e37a29caf288a72815824c3778
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296254"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>SSIS 패키지 저장(SQL Server 가져오기 및 내보내기 마법사)
@@ -64,7 +64,7 @@ Windows 통합 인증을 사용하여 서버에 연결합니다. 이 방법은 �
  **SQL Server 인증 사용**  
 SQL Server 인증을 사용하여 서버에 연결합니다.  
   
- **User name**  
+ **사용자 이름**  
 SQL Server 인증을 지정한 경우 사용자 이름을 입력합니다.  
   
  **암호**  

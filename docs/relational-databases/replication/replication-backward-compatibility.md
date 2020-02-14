@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 091c51dc-8b32-4b4f-847e-b317456c8394
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: d255b4f3599cc9d42f52e860a21941c6e8b95436
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 265f7fa72b6cdcd59ff7c74ec456e533471ddd0a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769738"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287408"
 ---
 # <a name="replication-backward-compatibility"></a>복제의 이전 버전과의 호환성
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "68769738"
 
 ## <a name="additional-resources"></a>추가 리소스
  [SQL Server 복제에서 사용되지 않는 기능](../../relational-databases/replication/deprecated-features-in-sql-server-replication.md)  
- 이전 버전과의 호환성을 위해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 유지되었지만 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 제거될 복제 기능입니다.  
+ 이전 버전과의 호환성을 위해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 유지되었지만 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 제거될 복제 기능입니다.  
   
  [SQL Server 복제의 주요 변경 내용](../../relational-databases/replication/breaking-changes-in-sql-server-replication.md)  
  애플리케이션을 변경해야 할 수도 있는 복제 기능 변경 내용 

@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4e33a8add08837fb71c0d0558d6bbe7f3ae9197c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115274"
 ---
 # <a name="memory-management-architecture-guide"></a>메모리 관리 아키텍처 가이드
@@ -90,11 +90,11 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 
 |메모리 할당 유형| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]및 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]로 시작|
 |-------|-------|-------|
-|단일 페이지 할당|예|예, "임의 크기" 페이지 할당에 통합됨|
-|다중 페이지 할당|아니오|예, "임의 크기" 페이지 할당에 통합됨|
-|CLR 할당|아니오|예|
-|스레드 스택 메모리|아니오|아니오|
-|Windows에서 직접 할당|아니오|아니오|
+|단일 페이지 할당|yes|예, "임의 크기" 페이지 할당에 통합됨|
+|다중 페이지 할당|예|예, "임의 크기" 페이지 할당에 통합됨|
+|CLR 할당|예|yes|
+|스레드 스택 메모리|예|예|
+|Windows에서 직접 할당|예|예|
 
 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 max server memory 설정에 지정된 값보다 많은 메모리를 할당할 수 있습니다. 이 동작은 **_Total Server Memory (KB)_** 값이 이미 max server memory에 지정된 **_Target Server Memory (KB)_** 설정에 도달했을 때 발생할 수 있습니다. 메모리 조각화로 인해 다중 페이지 메모리 요청(8KB 이상)의 요구를 충족시키기에 연속 여유 메모리가 충분하지 않은 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]은 메모리 요청을 거부하는 대신 과도한 커밋을 수행할 수 있습니다. 
 
@@ -107,7 +107,7 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 -  큰 입력 매개 변수를 저장해야 하는 추적 작업.
 
 <a name="#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>
-## <a name="changes-to-memorytoreserve-starting-with-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 "memory_to_reserve"로 변경
+## <a name="changes-to-memory_to_reserve-starting-with-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 "memory_to_reserve"로 변경
 이전 버전의 SQL Server([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)])에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 메모리 관리자는 **MPA(Multi-Page Allocator)** , **CLR 할당자**, SQL Server 프로세스에서 **스레드 스택**에 대한 메모리 할당, **DWA(Direct Windows 할당)** 로 사용하기 위해 프로세스 VAS(가상 주소 공간)의 일부로 따로 지정했습니다. 가상 주소 공간의 이 부분은 "Mem-To-Leave" 또는 "non-Buffer Pool" 영역으로도 알려져 있습니다.
 
 이러한 할당을 위해 예약된 가상 주소 공간은 _**memory\_to\_reserve**_ 구성 옵션에 의해 결정됩니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 사용하는 기본값은 256MB입니다. 기본값을 재정의하려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g* 시작 매개 변수를 사용합니다. *-g* 시작 매개 변수에 대한 자세한 내용은 [데이터베이스 엔진 서비스 시작 옵션](../database-engine/configure-windows/database-engine-service-startup-options.md)의 설명서 페이지를 참조하세요.
@@ -118,11 +118,11 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 
 |메모리 할당 유형| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]및 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]로 시작|
 |-------|-------|-------|
-|단일 페이지 할당|아니오|아니요, "임의 크기" 페이지 할당에 통합됨|
-|다중 페이지 할당|예|아니요, "임의 크기" 페이지 할당에 통합됨|
-|CLR 할당|예|예|
-|스레드 스택 메모리|예|예|
-|Windows에서 직접 할당|예|예|
+|단일 페이지 할당|예|아니요, "임의 크기" 페이지 할당에 통합됨|
+|다중 페이지 할당|yes|아니요, "임의 크기" 페이지 할당에 통합됨|
+|CLR 할당|yes|yes|
+|스레드 스택 메모리|yes|yes|
+|Windows에서 직접 할당|yes|yes|
 
 ## <a name="dynamic-memory-management"></a> 동적 메모리 관리
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]의 기본 메모리 관리 동작은 시스템에 메모리가 부족해지지 않도록 필요한 만큼 메모리를 확보하는 것입니다. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 Microsoft Windows의 메모리 알림 API를 사용하여 이 작업을 수행합니다.
@@ -131,7 +131,7 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
   
 **[max server memory](../database-engine/configure-windows/server-memory-server-configuration-options.md)** 는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 메모리 할당, 컴파일 메모리, 모든 캐시(버퍼 풀 포함), [쿼리 실행 메모리 부여](#effects-of-min-memory-per-query), [잠금 관리자 메모리](#memory-used-by-sql-server-objects-specifications) 및 CLR<sup>1</sup> 메모리를 제어합니다(기본적으로 **[sys.dm_os_memory_clerks](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)** 에 있는 모든 메모리 클럭). 
 
-<sup>1</sup> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 CLR 메모리는 max_server_memory 할당에서 관리됩니다.
+<sup>1</sup>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 CLR 메모리는 max_server_memory 할당에서 관리됩니다.
 
 다음 쿼리는 현재 할당된 메모리에 대한 정보를 반환합니다.  
   
@@ -161,7 +161,7 @@ FROM sys.dm_os_process_memory;
 |x64(64비트)|x64(64비트)|2048KB|
 |IA64(Itanium)|IA64(Itanium)|4096KB|
 
-<sup>2</sup> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 CLR 메모리는 max_server_memory 할당에서 관리됩니다.
+<sup>2</sup>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 CLR 메모리는 max_server_memory 할당에서 관리됩니다.
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 메모리 알림 API **QueryMemoryResourceNotification**을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Memory Manager가 메모리를 할당하고 해제하는 시기를 결정합니다.  
 
@@ -317,7 +317,7 @@ min server memory 및 max server memory 둘 모두에 같은 값이 지정된 �
 > TORN_PAGE_DETECTION은 리소스는 덜 사용하지만 CHECKSUM 보호를 최소한으로 제공합니다.
 
 ## <a name="understanding-non-uniform-memory-access"></a>NUMA(Non-Uniform Memory Access) 이해
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 NUMA(Non-Uniform Memory Access)를 인식하며 특수한 구성 없이 NUMA 하드웨어에서 원활하게 작동합니다. 클럭 속도와 프로세서 수가 증가할수록 이러한 추가 처리 능력을 사용하는 데 필요한 메모리 대기 시간을 줄이기가 더 어려워집니다. 이러한 문제를 피하기 위해 하드웨어 공급업체에서는 대용량의 L3 캐시를 제공하지만 이는 제한적인 해결책입니다. NUMA 아키텍처는 확장성 있는 솔루션으로 이 문제를 해결합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 애플리케이션을 변경할 필요 없이 NUMA 기반 컴퓨터를 활용하도록 설계되었습니다. 자세한 내용은 [ 방법: 소프트 NUMA를 사용하도록 SQL Server 구성](../database-engine/configure-windows/soft-numa-sql-server.md)을 참조하세요.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 NUMA(Non-Uniform Memory Access)를 인식하며 특수한 구성 없이 NUMA 하드웨어에서 원활하게 작동합니다. 클럭 속도와 프로세서 수가 증가할수록 이러한 추가 처리 능력을 사용하는 데 필요한 메모리 대기 시간을 줄이기가 더 어려워집니다. 이러한 문제를 피하기 위해 하드웨어 공급업체에서는 대용량의 L3 캐시를 제공하지만 이는 제한적인 해결책입니다. NUMA 아키텍처는 확장성 있는 솔루션으로 이 문제를 해결합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 애플리케이션을 변경할 필요 없이 NUMA 기반 컴퓨터를 활용하도록 설계되었습니다. 자세한 내용은 [방법: 소프트 NUMA를 사용하도록 SQL Server 구성](../database-engine/configure-windows/soft-numa-sql-server.md)을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 [서버 메모리 서버 구성 옵션](../database-engine/configure-windows/server-memory-server-configuration-options.md)   

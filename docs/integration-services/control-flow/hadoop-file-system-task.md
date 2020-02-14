@@ -13,10 +13,10 @@ ms.assetid: 594aaf5d-7703-4788-897d-fb95aca798c5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e97ae33bcccee338be576138ca335bd6298e0128
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294068"
 ---
 # <a name="hadoop-file-system-task"></a>Hadoop 파일 시스템 태스크
@@ -33,7 +33,7 @@ ms.locfileid: "71294068"
 ## <a name="options"></a>옵션  
  **Hadoop 파일 시스템 태스크 편집기** 대화 상자에서 다음 옵션을 구성합니다.  
   
-|필드|설명|  
+|필드|Description|  
 |-----------|-----------------|  
 |**Hadoop 연결**|기존 Hadoop 연결 관리자를 지정하거나 새 연결 관리자를 만듭니다. 이 연결 관리자는 대상 파일이 호스트되는 위치를 나타냅니다.|  
 |**Hadoop 파일 경로**|HDFS의 파일 또는 디렉터리 경로를 지정합니다.|  

@@ -19,16 +19,16 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cc0390a01bec10b58ed29d1824e8d0b482e78358
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68091769"
 ---
 # <a name="reserved-keywords-transact-sql"></a>예약어(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 데이터베이스를 정의, 조작 및 액세스할 때 예약된 키워드를 사용합니다. 예약된 키워드는 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문과 일괄 처리를 구문 분석하고 이해하는 데 사용하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 언어 문법의 일부입니다. 구문상으로는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 예약된 키워드를 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트에서 식별자와 개체 이름으로 사용할 수 있지만 구분 기호로 분리된 식별자를 사용한 경우에만 가능합니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 데이터베이스를 정의, 조작 및 액세스할 때 예약된 키워드를 사용합니다. 예약된 키워드는 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문과 일괄 처리를 구문 분석하고 이해하는 데 사용하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 언어 문법의 일부입니다. 구문상으로는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 예약된 키워드를 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트에서 식별자와 개체 이름으로 사용할 수 있지만 구분 기호로 분리된 식별자를 사용한 경우에만 가능합니다.  
   
  다음 표에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Azure SQL Data Warehouse의 예약 키워드가 나와 있습니다.  
   
@@ -78,13 +78,13 @@ ms.locfileid: "68091769"
 |DEALLOCATE|OF|TRUNCATE|  
 |DECLARE|OFF|TRY_CONVERT|  
 |DEFAULT|OFFSETS|TSEQUAL|  
-|Delete|ON|UNION|  
-|DENY|OPEN|UNIQUE|  
+|Delete|켜기|UNION|  
+|거부|OPEN|UNIQUE|  
 |DESC|OPENDATASOURCE|UNPIVOT|  
 |DISK|OPENQUERY|UPDATE|  
 |DISTINCT|OPENROWSET|UPDATETEXT|  
 |DISTRIBUTED|OPENXML|USE|  
-|DOUBLE|OPTION|User|  
+|DOUBLE|OPTION|USER|  
 |DROP|또는|VALUES|  
 |DUMP|ORDER|VARYING|  
 |ELSE|OUTER|VIEW|  
@@ -92,7 +92,7 @@ ms.locfileid: "68091769"
 |ERRLVL|PERCENT|WHEN|  
 |ESCAPE|PIVOT|WHERE|  
 |EXCEPT|PLAN|WHILE|  
-|EXEC|PRECISION|의 모든 멘션을|  
+|EXEC|PRECISION|WITH|  
 |CREATE 문을 실행하기 전에|PRIMARY|WITHIN GROUP|  
 |EXISTS|PRINT|WRITETEXT|  
 |EXIT|PROC||
@@ -118,13 +118,13 @@ ms.locfileid: "68091769"
 ||||  
 |-|-|-|  
 |**ABSOLUTE**|**EXEC**|**OVERLAPS**|  
-|**ACTION**|**EXECUTE**|**PAD**|  
+|**작업**|**EXECUTE**|**PAD**|  
 |**ADA**|**EXISTS**|**PARTIAL**|  
 |**ADD**|**외부**|**PASCAL**|  
 |**ALL**|**EXTRACT**|**POSITION**|  
 |**ALLOCATE**|**FALSE**|**PRECISION**|  
 |**ALTER**|**FETCH**|**PREPARE**|  
-|**AND**|**FIRST**|**PRESERVE**|  
+|**및**|**FIRST**|**PRESERVE**|  
 |**ANY**|**FLOAT**|**PRIMARY**|  
 |**ARE**|**FOR**|**PRIOR**|  
 |**AS**|**FOREIGN**|**PRIVILEGES**|  
@@ -181,7 +181,7 @@ ms.locfileid: "68091769"
 |**DEFERRABLE**|**NEXT**|**UPPER**|  
 |**DEFERRED**|**NO**|**USAGE**|  
 |**DELETE**|**NONE**|**USER**|  
-|**DESC**|**NOT**|**USING**|  
+|**DESC**|**다음이 아님**|**USING**|  
 |**DESCRIBE**|**NULL**|**VALUE**|  
 |**DESCRIPTOR**|**NULLIF**|**VALUES**|  
 |**DIAGNOSTICS**|**NUMERIC**|**VARCHAR**|  
@@ -260,7 +260,7 @@ ms.locfileid: "68091769"
 |DEC|ORDINALITY|UNNEST|  
 |DECIMAL|OUT|USAGE|  
 |DEFERRABLE|OVERLAY|USING|  
-|DEFERRED|OUTPUT|Value|  
+|DEFERRED|OUTPUT|값|  
 |DEPTH|PAD|VAR_POP|  
 |DEREF|매개 변수|VAR_SAMP|  
 |DESCRIBE|PARAMETERS|VARCHAR|  
@@ -290,7 +290,7 @@ ms.locfileid: "68091769"
 |GENERAL|REGR_INTERCEPT|XMLSERIALIZE|  
 |GET|REGR_R2|XMLTABLE|  
 |GLOBAL|REGR_SLOPE|XMLTEXT|  
-|GO|REGR_SXX|XMLVALIDATE|  
+|이동|REGR_SXX|XMLVALIDATE|  
 |GROUPING|REGR_SXY|YEAR|  
 |HOLD|REGR_SYY|ZONE|  
   

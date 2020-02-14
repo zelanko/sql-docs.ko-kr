@@ -24,12 +24,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 9d6abc08f6ba46792d92887ca22f1a37b48e05cc
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ee3854c45678cb29989849a6ee8b28e821b6d830
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981000"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287840"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "73981000"
   
 
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -55,7 +55,7 @@ ms.locfileid: "73981000"
 ```  
   
 ## <a name="arguments"></a>인수  
- Login  
+ LOGIN  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   
  가장할 실행 컨텍스트를 로그인으로 지정합니다. 가장의 범위는 서버 수준입니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "73981000"
 > [!NOTE]  
 >  이 옵션은 포함된 데이터베이스 또는 SQL Database 또는 SQL Data Warehouse에서 사용할 수 없습니다.  
   
- User  
+ USER  
  가장할 컨텍스트를 현재 데이터베이스의 사용자로 지정합니다. 가장의 범위는 현재 데이터베이스로 제한됩니다. 데이터베이스 사용자로 컨텍스트 전환 시 해당 사용자의 서버 수준 사용 권한은 상속되지 않습니다.  
   
 > [!IMPORTANT]  
@@ -96,7 +96,7 @@ ms.locfileid: "73981000"
  > [!NOTE]  
 >  SQL Data Warehouse에서는 이 옵션을 사용할 수 없습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  실행 컨텍스트의 변경은 다음 조건 중 하나가 발생할 때까지 유효합니다.  
   
 -   다른 EXECUTE AS 문이 실행됩니다.  
@@ -109,7 +109,7 @@ ms.locfileid: "73981000"
   
 여러 보안 주체에서 EXECUTE AS 문을 여러 번 호출하여 실행 컨텍스트 스택을 만들 수 있습니다. 호출 시 REVERT 문은 컨텍스트를 컨텍스트 스택의 다음 수준에 있는 로그인 또는 사용자로 전환합니다. 이 동작을 보려면 [예 1](#_exampleA)을 참조하세요.  
   
-##  <a name="_user"></a> 사용자 또는 로그인 이름 지정  
+##  <a name="_user"></a>사용자 또는 로그인 이름 지정  
  EXECUTE AS \<context_specification>에 지정된 사용자 또는 로그인 이름은 **sys.database_principals** 또는 **sys.server_principals**에서 각각 보안 주체여야 합니다. 그렇지 않으면 EXECUTE AS 문이 실패합니다. 또한 보안 주체에 IMPERSONATE 권한을 부여해야 합니다. 호출자가 데이터베이스 소유자 또는 **sysadmin** 고정 서버 역할의 멤버가 아닌 경우에는 사용자가 Windows 그룹 멤버 자격을 통해 데이터베이스 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 액세스할 때도 보안 주체가 있어야 합니다. 예를 들어 다음과 같은 조건을 가정해 보세요. 
   
 -   **CompanyDomain\SQLUsers** 그룹에 **Sales** 데이터베이스에 대한 액세스 권한이 있습니다.  
@@ -120,7 +120,7 @@ ms.locfileid: "73981000"
   
 사용자가 분리되었고(연결된 로그인이 더 이상 존재하지 않음) **WITHOUT LOGIN**으로 생성되지 않은 경우 해당 사용자에 대한 **EXECUTE AS**는 실패하게 됩니다.  
   
-## <a name="best-practice"></a>최선의 구현 방법  
+## <a name="best-practice"></a>모범 사례  
  세션에서 작업을 수행하는 데 필요한 최소 권한을 가진 로그인 또는 사용자를 지정합니다. 예를 들어 데이터베이스 수준 사용 권한만 필요한 경우에는 서버 수준 사용 권한을 가진 로그인 이름을 지정하지 않도록 합니다. 또한 데이터베이스 소유자 계정과 관련된 사용 권한이 필요하지 않으면 이 계정을 지정하지 않도록 합니다.  
   
 > [!CAUTION]  
@@ -129,9 +129,9 @@ ms.locfileid: "73981000"
 ## <a name="using-with-no-revert"></a>WITH NO REVERT 사용  
  EXECUTE AS 문에 선택적 WITH NO REVERT 절이 포함되어 있으면 REVERT를 사용하거나 다른 EXECUTE AS 문을 실행하여 세션의 실행 컨텍스트를 다시 설정할 수 없습니다. 해당 문으로 설정한 컨텍스트는 세션이 삭제될 때까지 유효합니다.  
   
- WITH NO REVERT COOKIE = @*varbinary_variabl* 절을 지정하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]이 쿠키 값을 @*varbinary_variabl*e에 전달합니다. 호출하는 REVERT WITH COOKIE = @*varbinary_variable* 문에 동일한 *@varbinary_variable* 값이 포함되어 있는 경우에만 해당 명령문으로 설정된 실행 컨텍스트를 이전 컨텍스트로 되돌릴 수 있습니다.  
+ WITH NO REVERT COOKIE = @*varbinary_variabl* 절을 지정하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]이 쿠키 값을 @*varbinary_variabl*e에 전달합니다. 호출하는 REVERT WITH COOKIE = @*varbinary_variable* 문에 동일한 *\@varbinary_variable* 값이 포함된 경우에만 해당 문에서 설정된 실행 컨텍스트를 이전 컨텍스트로 되돌릴 수 있습니다.  
   
- 이 옵션은 연결 풀링을 사용하는 환경에서 유용합니다. 연결 풀링은 애플리케이션 서버의 애플리케이션이 다시 사용할 수 있도록 데이터베이스 연결 그룹을 유지 관리하는 것입니다. *@varbinary_variable* 에 전달된 값은 EXECUTE AS 문의 호출자에게만 알려지므로 호출자는 자신이 설정한 실행 컨텍스트를 다른 사람이 변경할 수 없도록 할 수 있습니다.  
+ 이 옵션은 연결 풀링을 사용하는 환경에서 유용합니다. 연결 풀링은 애플리케이션 서버의 애플리케이션이 다시 사용할 수 있도록 데이터베이스 연결 그룹을 유지 관리하는 것입니다. *\@varbinary_variable*에 전달된 값은 EXECUTE AS 문의 호출자에게만 알려지므로 호출자는 자신이 설정한 실행 컨텍스트를 다른 사람이 변경할 수 없도록 할 수 있습니다.  
   
 ## <a name="determining-the-original-login"></a>원래 로그인 결정  
  [ORIGINAL_LOGIN](../../t-sql/functions/original-login-transact-sql.md) 함수를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결한 로그인의 이름을 반환할 수 있습니다. 이 함수를 사용하여 명시적 또는 암시적 컨텍스트 전환이 많이 있는 세션의 원래 로그인 ID를 반환할 수 있습니다.  
@@ -185,7 +185,7 @@ DROP USER user2;
 GO  
 ```  
   
-### <a name="b-using-the-with-cookie-clause"></a>2\. WITH COOKIE 절 사용  
+### <a name="b-using-the-with-cookie-clause"></a>B. WITH COOKIE 절 사용  
  다음 예에서는 세션 실행 컨텍스트를 지정한 사용자로 설정하고 WITH NO REVERT COOKIE = @*varbinary_variabl*e 절을 지정합니다. 컨텍스트를 호출자로 되돌리려면 `REVERT` 문에 `@cookie` 문의 `EXECUTE AS` 변수로 전달되는 값을 지정해야 합니다. 이 예를 실행하려면 예 1에서 생성된 `login1` 로그인 및 `user1` 사용자가 있어야 합니다.  
   
 ```  

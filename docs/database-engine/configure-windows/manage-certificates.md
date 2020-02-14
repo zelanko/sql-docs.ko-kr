@@ -21,10 +21,10 @@ ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b98f52d7c8e23530c13da6ad44d90090998ac09e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68212744"
 ---
 # <a name="certificate-management-sql-server-configuration-manager"></a>인증서 관리(SQL Server 구성 관리자)
@@ -45,7 +45,7 @@ SSL/TLS 인증서는 SQL Server에 대한 액세스를 보호하기 위해 널�
   
 1. SQL Server 구성 관리자의 콘솔 창에서 **SQL Server 네트워크 구성**을 확장합니다.  
   
-2. **프로토콜 대상** *&lt;인스턴스 이름&gt;* 을 마우스 오른쪽 단추로 클릭한 다음, **속성**을 선택합니다.  
+2. ‘&lt;인스턴스 이름&gt;’**에 대한 프로토콜 대상**을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.   
   
 3. **인증서** 탭을 선택한 다음, **가져오기**를 선택합니다.  
   
@@ -58,7 +58,7 @@ SSL/TLS 인증서는 SQL Server에 대한 액세스를 보호하기 위해 널�
   
 1. SQL Server 구성 관리자의 콘솔 창에서 **SQL Server 네트워크 구성**을 확장합니다.
   
-2. **프로토콜 대상** *&lt;인스턴스 이름&gt;* 을 마우스 오른쪽 단추로 클릭한 다음, **속성**을 선택합니다. 
+2. ‘&lt;인스턴스 이름&gt;’**에 대한 프로토콜 대상**을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
 
 3. **인증서** 탭을 선택한 다음, **가져오기**를 선택합니다.
 
@@ -81,7 +81,7 @@ SSL/TLS 인증서는 SQL Server에 대한 액세스를 보호하기 위해 널�
   
 1. SQL Server 구성 관리자의 콘솔 창에서 **SQL Server 네트워크 구성**을 확장합니다.
   
-2. **프로토콜 대상** *&lt;인스턴스 이름&gt;* 을 마우스 오른쪽 단추로 클릭한 다음, **속성**을 선택합니다.  
+2. ‘&lt;인스턴스 이름&gt;’**에 대한 프로토콜 대상**을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.   
   
 3. **인증서** 탭을 선택한 다음, **가져오기**를 선택합니다.  
   

@@ -16,10 +16,10 @@ ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 269ec542c7de83afa9c174ea0bc9221f125f7e64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67949101"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>장애 조치(Failover) 및 장애 조치(Failover) 모드(Always On 가용성 그룹)
@@ -81,9 +81,9 @@ ms.locfileid: "67949101"
   
 ||비동기-커밋 모드|수동 장애 조치(Failover) 모드를 사용하는 동기-커밋 모드|자동 장애 조치(Failover) 모드를 사용하는 동기-커밋 모드|  
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
-|자동 장애 조치(automatic failover)|아니오|아니오|예|  
-|계획된 수동 장애 조치(Failover)|아니오|예|예|  
-|강제 장애 조치(failover)|예|예|예 **&#42;**|  
+|자동 장애 조치(automatic failover)|예|예|yes|  
+|계획된 수동 장애 조치(Failover)|예|yes|yes|  
+|강제 장애 조치(failover)|yes|yes|예 **&#42;**|  
   
  **&#42;** 동기화된 보조 복제본에 강제 장애 조치(Failover) 명령을 실행하면 보조 복제본은 수동 장애 조치(Failover)의 경우와 동일하게 작동합니다.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "67949101"
   
 -   **[!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)](선택 사항):**  지정된 가용성 그룹 내에서 자동 장애 조치(Failover)를 사용하는 동기-커밋 모드(있는 경우)에 대해 구성된 가용성 복제본의 쌍(현재 주 복제본 포함)입니다. 자동 장애 조치(Failover) 설정은 보조 복제본이 주 복제본과 현재 SYNCHRONIZED된 경우에만 효과가 있습니다.  
   
--   **[!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] (선택 사항):**  지정된 가용성 그룹 내에서 동기-커밋 모드(있는 경우)로 구성된 2개 또는 3개의 가용성 복제본(현재 주 복제본 포함) 집합입니다. 동기 커밋 장애 조치(Failover) 설정은 보조 복제본이 수동 장애 조치(Failover) 모드에 대해 구성되고 하나 이상의 보조 복제본이 주 복제본과 현재 SYNCHRONIZED된 경우에만 효과가 있습니다.  
+-   **[!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)](선택 사항):**  지정된 가용성 그룹 내에서 동기-커밋 모드(있는 경우)로 구성된 2개 또는 3개의 가용성 복제본(현재 주 복제본 포함) 집합입니다. 동기 커밋 장애 조치(Failover) 설정은 보조 복제본이 수동 장애 조치(Failover) 모드에 대해 구성되고 하나 이상의 보조 복제본이 주 복제본과 현재 SYNCHRONIZED된 경우에만 효과가 있습니다.  
   
 -   **[!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)] :**  지정된 가용성 그룹 내에서 가용성 모드 및 장애 조치(Failover) 모드와 상관없이 작업 상태가 현재 ONLINE인 모든 가용성 복제본 집합입니다. 전체 장애 조치(Failover) 설정은 보조 복제본이 주 복제본과 현재 SYNCHRONIZED된 경우에만 관련이 있습니다.  
   
@@ -107,14 +107,14 @@ ms.locfileid: "67949101"
   
 |복제본|가용성 모드 및 장애 조치(Failover) 모드 설정|  
 |-------------|--------------------------------------------------|  
-|변수를 잠그기 위한|자동 장애 조치(Failover)를 사용하는 동기 커밋|  
-|B|자동 장애 조치(Failover)를 사용하는 동기 커밋|  
+|A|자동 장애 조치(Failover)를 사용하는 동기 커밋|  
+|b|자동 장애 조치(Failover)를 사용하는 동기 커밋|  
 |C|계획된 수동 장애 조치(failover)만 사용하는 동기-커밋|  
-|d|강제 장애 조치(Failover)만 사용하는 비동기 커밋|  
+|D|강제 장애 조치(Failover)만 사용하는 비동기 커밋|  
   
  각 보조 복제본에 대한 장애 조치(Failover) 동작은 어떤 가용성 복제본이 현재 주 복제본인지에 따라 결정됩니다. 기본적으로 지정된 보조 복제본에 대해 장애 조치(Failover) 동작은 현재 주 복제본에서 최악의 경우입니다. 다음 그림에서는 현재 주 복제본에 따라 보조 복제본의 장애 조치(Failover) 동작이 어떻게 달라지는지와 보조 복제본의 장애 조치(Failover) 동작이 강제 장애 조치(Failover)만 사용하는 비동기-커밋 모드용으로 구성되었는지 자동 장애 조치(Failover)를 사용하거나 사용하지 않는 동기-커밋 모드용으로 구성되었는지를 보여 줍니다.  
   
- ![주 복제본 구성이 장애 조치에 미치는 영향](../../../database-engine/availability-groups/windows/media/aoag-failoversetexample.gif "주 복제본 구성이 장애 조치에 미치는 영향")  
+ ![주 복제본 구성이 장애 조치(Failover)에 미치는 영향](../../../database-engine/availability-groups/windows/media/aoag-failoversetexample.gif "주 복제본 구성이 장애 조치(Failover)에 미치는 영향")  
   
 ##  <a name="AutomaticFailover"></a> Automatic Failover  
  자동 장애 조치(Failover)를 수행하면 주 복제본이 사용할 수 없게 된 후 정규화된 보조 복제본이 주 역할로 자동으로 전환됩니다. 자동 장애 조치(Failover)는 주 복제본을 호스팅하는 WSFC 노드가 보조 복제본을 호스팅하는 노드에 대해 로컬인 경우에 가장 적합합니다. 이는 데이터 동기화가 컴퓨터 간의 메시지 대기 시간이 짧은 경우 가장 잘 작동하고 클라이언트 연결이 로컬로 유지될 수 있기 때문입니다.  
@@ -164,7 +164,7 @@ ms.locfileid: "67949101"
 ###  <a name="EnableAutoFo"></a> 자동 장애 조치(Failover)를 구성하려면  
  언제든지 자동 장애 조치(Failover)를 지원하도록 가용성 복제본을 구성할 수 있습니다.  
   
- **To configure automatic failover**  
+ **자동 장애 조치를 구성하려면**  
   
 1.  보조 복제본이 동기-커밋 가용성 모드를 사용하도록 구성되어 있는지 확인합니다. 자세한 내용은 [가용성 복제본의 가용성 모드 변경&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)라는 프로세스에서 서로 바꿀 수 있습니다.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "67949101"
   
 3.  `Node02`의 장애 조치(Failover) 대상은 새로운 주 복제본이 됩니다. 계획된 장애 조치(Failover)이기 때문에 이전의 주 복제본은 장애 조치(Failover) 중에 보조 역할로 전환되고 해당 데이터베이스는 보조 데이터베이스로서 즉시 온라인 상태가 됩니다.  
   
- ![계획된 수동 장애 조치에 대한 설명](../../../database-engine/availability-groups/windows/media/aoag-plannedmanualfailover.gif "계획된 수동 장애 조치에 대한 설명")  
+ ![계획된 수동 장애 조치(Failover)에 대한 설명](../../../database-engine/availability-groups/windows/media/aoag-plannedmanualfailover.gif "계획된 수동 장애 조치(Failover)에 대한 설명")  
   
  **섹션 내용**  
   
@@ -258,9 +258,9 @@ ms.locfileid: "67949101"
   
 |보조 복제본의 가용성 모드|데이터베이스가 동기화되는지 여부|데이터가 손실될 가능성이 있는지 여부|  
 |--------------------------------------------|-------------------------------|----------------------------|  
-|Synchronous-commit|예|아니오|  
-|Synchronous-commit|아니오|예|  
-|Asynchronous-commit|아니오|예|  
+|Synchronous-commit|yes|예|  
+|Synchronous-commit|예|yes|  
+|Asynchronous-commit|예|yes|  
   
  보조 데이터베이스는 두 개의 복구 분기만 추적하므로 강제 장애 조치(Failover)를 여러 번 수행할 경우 이전 강제 장애 조치(Failover)와 데이터 동기화를 시작한 보조 데이터베이스는 재개하지 못할 수도 있습니다. 이 경우 재개할 수 없는 보조 데이터베이스를 올바른 시점으로 복원된 가용성 그룹에서 제거한 후 이 가용성 그룹에 다시 조인해야 합니다. 이 시나리오에서 상태 103인 오류 1408이 관찰될 수 있습니다(오류: 1408, 심각도: 16, 상태: 103). 여러 복구 분기 지점에 대해 복원을 수행할 수 없으므로 둘 이상의 강제 장애 조치(Failover) 수행한 후 로그 백업을 수행해야 합니다.  
   
@@ -319,7 +319,7 @@ ms.locfileid: "67949101"
 > [!WARNING]  
 >  보조 데이터베이스 중 하나라도 일시 중지되어 있는 동안에는 주 데이터베이스에서 트랜잭션 로그 잘림이 지연됩니다. 또한 일시 중지된 상태로 남아 있는 로컬 데이터베이스가 있으면 동기 커밋 보조 복제본의 동기화 상태가 정상으로 전환될 수 없습니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
  **장애 조치(Failover) 동작을 구성하려면**  
   
 -   [가용성 복제본의 가용성 모드 변경&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)  

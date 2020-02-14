@@ -14,10 +14,10 @@ ms.assetid: 44f9983c-1753-4fe0-8475-973aa2460b3a
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 753c7c08164de1583dd8de1aa1720fcad6a98dff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093636"
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>SQL Server 에이전트, JobSteps 개체
@@ -26,15 +26,15 @@ ms.locfileid: "68093636"
   
  아래 표에는 **SQLAgent:JobSteps** 카운터가 있습니다.  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |**Active steps**|이 카운터는 현재 실행 중인 작업 단계 수를 보고합니다.|  
 |**Queued steps**|이 카운터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 실행될 준비가 되어 있지만 아직 실행이 시작되지 않은 작업 단계 수를 보고합니다.|  
-|**Total step retries**|이 카운터는 마지막 서버 다시 시작 이후에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 작업 단계를 다시 시도한 총 횟수를 보고합니다.|  
+|**Total step retries**|이 카운터는 마지막 서버 다시 시작 이후에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 작업 단계를 다시 시도한 총횟수를 보고합니다.|  
   
  개체의 각 카운터는 다음 인스턴스를 포함합니다.  
   
-|인스턴스|설명|  
+|인스턴스|Description|  
 |--------------|-----------------|  
 |**_Total**|모든 작업 단계에 대한 정보입니다.|  
 |**ActiveScripting**|**ActiveScripting** 하위 시스템을 사용하는 작업 단계에 대한 정보입니다.|  

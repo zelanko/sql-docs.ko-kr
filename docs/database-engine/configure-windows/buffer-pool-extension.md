@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9ee002f5c835f8a6a69aa6afe69e1838c56c24e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8083433f2b9e5af63abac4e4fba59d06e42dd86f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013061"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76918348"
 ---
 # <a name="buffer-pool-extension"></a>Buffer Pool Extension
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ ms.locfileid: "68013061"
  SSD(반도체 드라이브)  
  반도체 드라이브는 영구적인 방식으로 메모리(RAM)에 데이터를 저장합니다. 자세한 내용은 [이 정의](https://en.wikipedia.org/wiki/Solid-state_drive)를 참조하십시오.  
   
- 버퍼  
+ Buffer  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 버퍼는 메모리 내의 8KB 페이지입니다. 이 크기는 데이터 또는 인덱스 페이지의 크기와 같습니다. 따라서 버퍼 캐시는 8KB 페이지로 나누어집니다. 페이지는 버퍼 관리자에 더 많은 데이터를 읽어 올 버퍼 영역이 필요할 때까지 버퍼 캐시에 남아 있습니다. 데이터는 수정되는 경우에만 다시 디스크에 쓰여집니다. 이러한 메모리 내의 수정된 페이지를 더티 페이지라고 합니다. 디스크에 있는 해당 데이터베이스 이미지와 동일한 페이지를 클린 페이지라고 합니다. 버퍼 캐시의 데이터는 여러 번 수정한 후 디스크에 다시 쓸 수 있습니다.  
   
  버퍼 풀  
  버퍼 캐시라고도 합니다. 버퍼 풀은 캐시된 데이터 페이지를 저장하기 위해 모든 데이터베이스에서 공유하는 전역 리소스입니다. 버퍼 풀 캐시의 최대 및 최소 크기는 시작하는 동안 결정되거나 SQL Server 인스턴스가 sp_configure를 사용하여 동적으로 다시 구성될 때 결정됩니다. 이 크기에 따라 실행 중인 인스턴스에서 언제든지 버퍼 풀에 캐시할 수 있는 최대 페이지 수가 결정됩니다.  
   
- 버퍼 풀 확장에서 커밋할 수 있는 최대 메모리는 메모리가 상당한 압박을 만드는 경우에 컴퓨터에서 실행 중인 다른 애플리케이션에 의해 제한될 수 있습니다.  
+ 버퍼 풀 확장에서 커밋할 수 있는 최대 메모리는 상당한 메모리 압력이 발생하면 컴퓨터에서 실행 중인 다른 애플리케이션에 의해 제한될 수 있습니다.  
   
  검사점  
  검사점은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 예기치 않은 종료 또는 충돌 후 복구하는 과정에서 트랜잭션 로그에 포함된 변경 내용의 적용을 시작할 수 있는 알려진 올바른 지점을 만듭니다. 검사점은 메모리 내의 더티 페이지와 트랜잭션 로그 정보를 디스크에 쓰고 트랜잭션 로그에 대한 정보도 기록합니다. 자세한 내용은 [데이터베이스 검사점&#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)을 참조하세요.  
@@ -68,7 +68,7 @@ ms.locfileid: "68013061"
   
  사용하도록 설정된 경우 버퍼 풀 확장은 SSD에 있는 버퍼 풀 캐싱 파일의 크기와 파일 경로를 지정합니다. 이 파일은 SSD에 있는 스토리지의 인접 익스텐트이며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 시작하는 동안 정적으로 구성됩니다. 파일 구성 매개 변수의 변경은 버퍼 풀 확장 기능이 사용하지 않도록 설정된 경우에만 수행할 수 있습니다. 버퍼 풀 확장이 사용하지 않도록 설정된 경우 관련된 모든 구성 설정이 레지스트리에서 제거됩니다. 버퍼 풀 확장 파일은 SQL Server 인스턴스를 종료하면 즉시 삭제됩니다.  
   
-## <a name="best-practices"></a>최선의 구현 방법  
+## <a name="best-practices"></a>모범 사례  
  다음과 같은 최선의 구현 방법을 따르십시오.  
   
 -   처음으로 버퍼 풀 확장을 사용하도록 설정한 경우 최대 성능 이점을 얻으려면 SQL Server 인스턴스를 다시 시작하는 것이 좋습니다.  
@@ -88,7 +88,7 @@ ms.locfileid: "68013061"
   
  다음과 같은 Xevent를 사용할 수 있습니다.  
   
-|XEvent|설명|매개 변수|  
+|XEvent|Description|매개 변수|  
 |------------|-----------------|----------------|  
 |sqlserver.buffer_pool_extension_pages_written|페이지 또는 페이지 그룹을 버퍼 풀에서 제거하여 버퍼 풀 확장 파일에 쓸 때 발생합니다.|*number_page*<br /><br /> *first_page_id*<br /><br /> *first_page_offset*<br /><br /> *initiator_numa_node_id*|  
 |sqlserver.buffer_pool_extension_pages_read|페이지를 버퍼 풀 확장 파일에서 가져와서 버퍼 풀에 쓸 때 발생합니다.|*number_page*<br /><br /> *first_page_id*<br /><br /> *first_page_offset*<br /><br /> *initiator_numa_node_id*|  

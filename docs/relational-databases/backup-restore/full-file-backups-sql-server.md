@@ -20,10 +20,10 @@ ms.assetid: a716bf8d-0c5a-490d-aadd-597b3b0fac0c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1d70bf0d8e99d24ee0d7ea9e046090ba4ed32453
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67939619"
 ---
 # <a name="full-file-backups-sql-server"></a>전체 파일 백업(SQL Server)
@@ -82,12 +82,12 @@ ms.locfileid: "67939619"
   
  파일 및 로그 백업만을 사용하는 데이터베이스 복원은 복잡할 수 있습니다. 따라서 가능한 경우 최상의 방법은 전체 데이터베이스 백업을 수행하고 첫 번째 파일 백업 이전에 로그 백업을 시작하는 것입니다. 다음 그림에서는 데이터베이스가 생성된 후(시간 t0) 즉시(시간 t1) 전체 데이터베이스 백업이 수행되는 전략을 보여 줍니다. 이 첫 번째 데이터베이스 백업을 사용하여 트랜잭션 로그 백업을 시작할 수 있습니다. 트랜잭션 로그 백업은 지정된 간격으로 수행되도록 예약됩니다. 파일 백업은 데이터베이스의 비즈니스 요구 사항에 가장 적합한 간격으로 수행됩니다. 이 그림에서는 한 번에 하나씩 백업되는 4개의 파일 그룹을 보여 줍니다. 백업되는 순서(A, C, B, A)는 데이터베이스의 비즈니스 요구 사항을 반영합니다.  
   
- ![데이터베이스, 파일 및 로그 백업을 결합하는 전략](../../relational-databases/backup-restore/media/bnr-rmfull-3-fulldb-filegrps-log-backups.gif "Strategy combining database, file, and log backups")  
+ ![데이터베이스, 파일 및 로그 백업을 결합하는 전략](../../relational-databases/backup-restore/media/bnr-rmfull-3-fulldb-filegrps-log-backups.gif "데이터베이스, 파일 및 로그 백업을 결합하는 전략")  
   
 > [!NOTE]  
 >  전체 복구 모델에서는 파일이 나머지 데이터베이스와 일치하도록 읽기/쓰기 파일 백업을 복원할 때 트랜잭션 로그를 롤포워드해야 합니다. 여러 트랜잭션 로그 백업을 롤포워드하지 않으려면 차등 파일 백업을 사용하세요. 자세한 내용은 [차등 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)을 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
  **파일 또는 파일 그룹 백업을 만들려면**  
   
 -   [파일 및 파일 그룹 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)  

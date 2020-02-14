@@ -18,10 +18,10 @@ ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: db49332ec2710586e9cae23c3e41ee4aff42b486
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68136974"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>병합 복제에 대한 웹 동기화
@@ -46,7 +46,7 @@ ms.locfileid: "68136974"
   
  아래 그림에서는 병합 복제에 대한 웹 동기화에 관련된 구성 요소 중 일부를 보여 줍니다.  
   
- ![웹 동기화 구성 요소 및 데이터 흐름](../../relational-databases/replication/media/web-sync01.gif "Web synchronization components and data flow")  
+ ![웹 동기화 구성 요소 및 데이터 흐름](../../relational-databases/replication/media/web-sync01.gif "웹 동기화 구성 요소 및 데이터 흐름")  
   
  웹 동기화는 끌어오기 구독 전용 옵션이므로 병합 에이전트가 항상 구독자에서 실행됩니다. 이 병합 에이전트는 표준 병합 에이전트, 병합 에이전트 ActiveX 컨트롤 또는 RMO(복제 관리 개체)를 통해 동기화를 제공하는 애플리케이션일 수 있습니다. IIS를 실행하는 컴퓨터의 위치를 지정하려면 병합 에이전트에 **–InternetUrl** 매개 변수를 사용합니다.  
   
@@ -83,6 +83,6 @@ ms.locfileid: "68136974"
   
 ## <a name="see-also"></a>참고 항목  
  [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)   
- [Topologies for Web Synchronization](../../relational-databases/replication/topologies-for-web-synchronization.md)  
+ [웹 동기화를 위한 토폴로지](../../relational-databases/replication/topologies-for-web-synchronization.md)  
   
   

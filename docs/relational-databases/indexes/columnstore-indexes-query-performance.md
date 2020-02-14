@@ -12,10 +12,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bc6409f7a8f5fc15568e583aa50552667f2dd874
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71816712"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Columnstore 인덱스 쿼리 성능
@@ -94,9 +94,9 @@ ms.locfileid: "71816712"
 |일괄 처리 모드 연산자|언제 사용하나요?|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<sup>1</sup>|주석|    
 |---------------------------|------------------------|---------------------|---------------------|---------------------------------------|--------------|    
 |DML 작업(insert, delete, update, merge)||아니요|아니요|아니요|DML 병렬이 아니므로 일괄 처리 모드 작업이 아닙니다. 직렬 모드 일괄 처리를 사용하도록 설정하더라도 DML을 일괄 처리 모드로 처리함으로써 크게 향상되는 것은 없습니다.|    
-|Columnstore 인덱스 검색|SCAN|NA|예|예|Columnstore 인덱스에서 조건자를 SCAN 노드로 푸시할 수 있습니다.|    
+|Columnstore 인덱스 검색|SCAN|해당 없음|예|예|Columnstore 인덱스에서 조건자를 SCAN 노드로 푸시할 수 있습니다.|    
 |columnstore 인덱스 Scan(비클러스터형)|SCAN|예|예|예|예|    
-|index seek||NA|NA|아니요|rowmode에서 비클러스터형 B-트리 인덱스를 통해 seek 작업을 수행합니다.|    
+|index seek||해당 없음|해당 없음|아니요|rowmode에서 비클러스터형 B-트리 인덱스를 통해 seek 작업을 수행합니다.|    
 |compute scalar|스칼라 값으로 평가되는 식입니다.|예|예|예|데이터 형식에 몇 가지 제한 사항이 있습니다. 모든 일괄 처리 모드 연산자에 적용됩니다.|    
 |연결(concatenation)|UNION 및 UNION ALL|아니요|예|예||    
 |filter|조건자 적용|예|예|예||    
@@ -108,9 +108,9 @@ ms.locfileid: "71816712"
 |직렬 쿼리 계획을 사용하는 단일 스레드 쿼리||아니요|아니요|예||    
 |sort|columnstore 인덱스를 사용하여 SCAN 시 절을 기준으로 정렬합니다.|아니요|아니요|예||    
 |위쪽 정렬||아니요|아니요|예||    
-|창 집계||NA|NA|예|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]의 새 연산자.|    
+|창 집계||해당 없음|해당 없음|예|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]의 새 연산자.|    
     
-<sup>1</sup> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 프리미엄 계층, 표준 계층 - S3 이상 및 모든 vCore 계층 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 적용    
+<sup>1</sup>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 프리미엄 계층, 표준 계층 - S3 이상 및 모든 vCore 계층 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 적용    
     
 ### <a name="aggregate-pushdown"></a>집계 푸시 다운    
  SCAN 노드에서 조건에 맞는 행을 가져와 일괄 처리 모드에서 값을 집계하는 집계 계산을 위한 일반 실행 경로입니다. 이러한 실행으로 좋은 성능이 제공되긴 하지만 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 집계 작업은 SCAN 노드로 푸시되어 다음 조건이 충족되면 일괄 처리 모드 실행 시 크기 순서대로 정렬되므로 집계 계산 성능을 향상시킬 수 있습니다. 
@@ -127,7 +127,7 @@ ms.locfileid: "71816712"
     
  집계 푸시다운은 캐시에서 사용하는 실행에서 압축되거나 인코딩된 데이터를 효율적으로 집계하고 SIMD를 활용하여 좀 더 가속화됩니다.    
     
- ![aggregate pushdown](../../relational-databases/indexes/media/aggregate-pushdown.jpg "aggregate pushdown")    
+ ![집계 푸시다운](../../relational-databases/indexes/media/aggregate-pushdown.jpg "집계 푸시 다운")    
     
 예를 들어 집계 푸시다운은 아래 쿼리 모두에서 수행됩니다.    
     

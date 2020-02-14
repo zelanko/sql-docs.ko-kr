@@ -17,10 +17,10 @@ ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 618c30a29473e7ade84812abeba52d23ff52da9e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290350"
 ---
 # <a name="cast-ssis-expression"></a>캐스트(SSIS 식)
@@ -48,7 +48,7 @@ ms.locfileid: "71290350"
 ## <a name="result-types"></a>결과 형식  
  *type_spec*데이터 형식입니다. 자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  다음 다이어그램에서는 유효한 캐스트 연산을 보여 줍니다.  
   
  ![데이터 형식 간 유효한 캐스트 및 유효하지 않은 캐스트](../../integration-services/expressions/media/data-conversion.gif "데이터 형식 간 유효한 캐스트 및 유효하지 않은 캐스트")  
@@ -60,8 +60,8 @@ ms.locfileid: "71290350"
 |DT_STR|*charcount*<br /><br /> *codepage*|(DT_STR,30,1252)는 1252 코드 페이지를 사용하여 30바이트 또는 30자의 단일 문자를 DT_STR 데이터 형식으로 캐스팅합니다.|  
 |DT_WSTR|*Charcount*|(DT_WSTR,20)은 20바이트 쌍 또는 20자의 유니코드 문자를 DT_WSTR 데이터 형식으로 캐스팅합니다.|  
 |DT_BYTES|*Bytecount*|(DT_BYTES,50)은 50바이트를 DT_BYTES 데이터 형식으로 캐스팅합니다.|  
-|DT_DECIMAL|*소수 자릿수*|(DT_DECIMAL,2)는 소수 자릿수 2를 사용하여 숫자 값을 DT_DECIMAL 데이터 형식으로 캐스팅합니다.|  
-|DT_NUMERIC|*전체 자릿수*<br /><br /> *소수 자릿수*|(DT_NUMERIC,10,3)은 전체 자릿수 10, 소수 자릿수 3을 사용하여 숫자 값을 DT_NUMERIC 데이터 형식으로 캐스팅합니다.|  
+|DT_DECIMAL|*규모*|(DT_DECIMAL,2)는 소수 자릿수 2를 사용하여 숫자 값을 DT_DECIMAL 데이터 형식으로 캐스팅합니다.|  
+|DT_NUMERIC|*정밀도*<br /><br /> *규모*|(DT_NUMERIC,10,3)은 전체 자릿수 10, 소수 자릿수 3을 사용하여 숫자 값을 DT_NUMERIC 데이터 형식으로 캐스팅합니다.|  
 |DT_TEXT|*Codepage*|(DT_TEXT,1252)는 1252 코드 페이지를 사용하여 값을 DT_TEXT 데이터 형식으로 캐스팅합니다.|  
   
  문자열을 DT_DATE로 캐스팅하거나 그 반대의 경우 변환 로캘이 사용됩니다. 단, 로캘 기본 설정이 ISO 형식을 사용하는지 여부에 관계없이 날짜는 ISO 형식 YYYY-MM-DD로 설정됩니다.  
