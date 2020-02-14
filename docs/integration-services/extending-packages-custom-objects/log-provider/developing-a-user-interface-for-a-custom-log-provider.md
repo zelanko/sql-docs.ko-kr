@@ -14,10 +14,10 @@ ms.assetid: 6fd2d269-d87a-4134-82a1-40a09b3b5453
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fccc03acb846fe1fe7db12d339c633b7d4c7e306
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297135"
 ---
 # <a name="developing-a-user-interface-for-a-custom-log-provider"></a>사용자 지정 로그 공급자의 사용자 인터페이스 개발

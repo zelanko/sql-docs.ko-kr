@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: d06ed24f-82d7-4b9e-9e40-cc9780476a71
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: aa72ae36463f191ef8f127562d231b2e58480039
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: fd19ef065c98022d0f8fecd8e4fd044007759005
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68767717"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288070"
 ---
 # <a name="monitor-replication-agents"></a>복제 에이전트 모니터링
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "68767717"
      이러한 에이전트와 연결된 정보 및 작업은 **구독 조사 목록**(각 게시자에 대해 사용 가능) 또는 **모든 구독** 탭(각 게시에 대해 사용 가능)을 통해 액세스할 수 있습니다. 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
   
 ## <a name="using-sql-server-management-studio-to-monitor-replication-agents"></a>SQL Server Management Studio를 사용하여 복제 에이전트 모니터링  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 는 복제 에이전트 모니터링을 위한 다음 대화 상자를 제공합니다.  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]는 복제 에이전트 모니터링을 위한 다음 대화 상자를 제공합니다.  
   
 -   **스냅샷 에이전트 상태 보기** (모든 게시용)  
   

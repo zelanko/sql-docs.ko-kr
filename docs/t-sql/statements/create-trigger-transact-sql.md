@@ -29,10 +29,10 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7735298fc669d8e5b385501cd3f235a0a08abb9d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982696"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER(Transact-SQL)
@@ -51,7 +51,7 @@ LOGON 트리거는 사용자 세션이 설정될 때 발생하는 LOGON 이벤�
 > [!NOTE]  
 >  이 문서에서는 .NET Framework CLR을 SQL Server에 통합하는 방법에 대해 설명합니다. Azure SQL Database에는 CLR 통합이 적용되지 않습니다.  
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -319,7 +319,7 @@ WRITETEXT 문은 기록 여부에 관계없이 트리거를 활성화하지 않�
   
 ||||  
 |-|-|-|  
-|CREATE INDEX(CREATE SPATIAL INDEX 및 CREATE XML INDEX 포함)|ALTER INDEX|DROP  INDEX|  
+|CREATE INDEX(CREATE SPATIAL INDEX 및 CREATE XML INDEX 포함)|ALTER INDEX|DROP INDEX|  
 |DBCC DBREINDEX|ALTER PARTITION FUNCTION|DROP TABLE|  
 |다음 용도로 사용하는 ALTER TABLE<br /><br /> 열 추가, 수정 또는 삭제<br /><br /> 파티션 전환<br /><br /> PRIMARY KEY 또는 UNIQUE 제약 조건 추가 또는 삭제|||  
   
@@ -413,7 +413,7 @@ DML 트리거를 만들려면 트리거를 만들 테이블이나 뷰에 대한 
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-a-dml-trigger-with-a-reminder-message"></a>1\. 미리 알림 메시지로 DML 트리거 사용  
+### <a name="a-using-a-dml-trigger-with-a-reminder-message"></a>A. 미리 알림 메시지로 DML 트리거 사용  
 다음 DML 트리거는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `Customer` 테이블에 데이터를 추가하거나 변경하려고 할 때 클라이언트에 메시지를 출력합니다.  
   
 ```sql  
@@ -424,7 +424,7 @@ AS RAISERROR ('Notify Customer Relations', 16, 10);
 GO  
 ```  
   
-### <a name="b-using-a-dml-trigger-with-a-reminder-e-mail-message"></a>2\. 미리 알림 전자 메일 메시지로 DML 트리거 사용  
+### <a name="b-using-a-dml-trigger-with-a-reminder-e-mail-message"></a>B. 미리 알림 전자 메일 메시지로 DML 트리거 사용  
 다음 예에서는 `MaryM` 테이블이 변경될 때 지정한 사람(`Customer`)에게 전자 메일 메시지를 보냅니다.  
   
 ```sql  

@@ -14,10 +14,10 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cbdea9d1ffd22fdedbfe15b66eb6d9b57f33d1f8
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68809969"
 ---
 # <a name="index-json-data"></a>JSON 데이터 인덱싱
@@ -69,7 +69,7 @@ ON Sales.SalesOrderHeader(vCustomerName)
 ### <a name="execution-plan-for-this-example"></a>이 예제에 대한 실행 계획
 다음은 이 예제의 쿼리 실행 계획입니다.  
   
-![실행 계획](../../relational-databases/json/media/jsonindexblog1.png "Execution plan")  
+![실행 계획](../../relational-databases/json/media/jsonindexblog1.png "실행 계획")  
   
 SQL Server는 전체 테이블을 검색하지 않고 비클러스터형 인덱스에서 인덱스 검색하여 지정된 조건을 충족하는 행을 찾습니다. 그런 다음 `SalesOrderHeader` 테이블에서 키 조회를 사용하여 쿼리에서 참조된 다른 열(이 예제에서는 `SalesOrderNumber` 및 `OrderDate`)을 가져옵니다.  
  
@@ -85,7 +85,7 @@ INCLUDE(SalesOrderNumber,OrderDate)
 이 경우 비클러스터형 JSON 인덱스에 필요한 모든 사항이 있기 때문에 SQL Server는 `SalesOrderHeader` 테이블에서 데이터를 추가로 읽을 필요가 없습니다. 이러한 인덱스 유형은 쿼리에서 JSON과 열 데이터를 결합하고 작업에 대한 최적의 인덱스를 생성하기 위한 좋은 방법입니다.  
   
 ## <a name="json-indexes-are-collation-aware-indexes"></a>JSON 인덱스는 데이터 정렬 인식 인덱스입니다.  
-JSON 데이터에 대한 중요한 인덱스 기능은 인덱스가 데이터 정렬 인식 인덱스라는 점입니다. 계산 열을 만들 때 사용하는 `JSON_VALUE` 함수의 결과는 입력 식에서 데이터 정렬을 상속하는 텍스트 값입니다. 따라서 인덱스의 값은 원본 열에 정의된 데이터 정렬 규칙을 사용하여 정렬됩니다.  
+JSON 데이터에 대한 중요한 인덱스 기능은 인덱스의 데이터 정렬 인식 기능입니다. 계산 열을 만들 때 사용하는 `JSON_VALUE` 함수의 결과는 입력 식에서 데이터 정렬을 상속하는 텍스트 값입니다. 따라서 인덱스의 값은 원본 열에 정의된 데이터 정렬 규칙을 사용하여 정렬됩니다.  
   
 인덱스가 데이터 정렬을 인식한다는 것을 보여주기 위해 다음 예제에서는 기본 키와 JSON 콘텐츠가 있는 단순한 컬렉션 테이블을 만듭니다.  
   
@@ -137,13 +137,13 @@ ORDER BY JSON_VALUE(json,'$.name')
   
  실제 실행 계획을 보면 비클러스터형 인덱스에서 정렬된 값을 사용함을 확인할 수 있습니다.  
   
- ![실행 계획](../../relational-databases/json/media/jsonindexblog2.png "Execution plan")  
+ ![실행 계획](../../relational-databases/json/media/jsonindexblog2.png "실행 계획")  
   
  쿼리에 `ORDER BY` 절이 있지만 실행 계획은 Sort 연산자를 사용하지 않습니다. JSON 인덱스는 이미 세르비아어 키릴 자모 규칙에 따라 정렬됩니다. 따라서 SQL Server는 결과가 이미 정렬된 비클러스터형 인덱스를 사용합니다.  
   
  그러나 `ORDER BY` 식의 데이터 정렬을 변경하면(예: `JSON_VALUE` 함수 뒤에 `COLLATE French_100_CI_AS_SC` 추가) 다른 쿼리 실행 계획이 제공됩니다.  
   
- ![실행 계획](../../relational-databases/json/media/jsonindexblog3.png "Execution plan")  
+ ![실행 계획](../../relational-databases/json/media/jsonindexblog3.png "실행 계획")  
   
  인덱스 값 순서는 프랑스어 데이터 정렬 규칙을 따르지 않으므로 SQL Server는 정렬 결과에 대한 인덱스를 사용할 수 없습니다. 따라서 프랑스어 데이터 정렬 규칙을 사용하여 결과를 정렬하는 정렬 연산자를 추가합니다.  
  

@@ -14,10 +14,10 @@ ms.assetid: 59444faf-bcb6-4421-a3df-8715753e453b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6d793f394b9ffdf329eefbd73889d3233476372b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68129807"
 ---
 # <a name="topologies-for-web-synchronization"></a>Topologies for Web Synchronization
@@ -38,27 +38,27 @@ ms.locfileid: "68129807"
 > [!NOTE]  
 >  이 구성은 인트라넷 시나리오에만 사용하는 것이 좋습니다. 다른 시나리오에서는 IIS 서버와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자/배포자를 별도의 컴퓨터에 두는 것이 좋습니다.  
   
- ![단일 서버를 사용한 웹 동기화](../../relational-databases/replication/media/web-sync02.gif "Web synchronization with a single server")  
+ ![단일 서버를 사용한 웹 동기화](../../relational-databases/replication/media/web-sync02.gif "단일 서버를 사용한 웹 동기화")  
   
 ## <a name="two-servers"></a>두 대의 서버  
  한 서버에는 IIS를 두고 다른 서버에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자와 배포자를 구성할 수 있습니다. IIS를 실행하는 서버는 방화벽에 의해 인터넷에서 격리될 수 있습니다. 구독자는 IIS에 연결하여 동기화합니다.  
   
- ![2대의 서버를 사용한 웹 동기화](../../relational-databases/replication/media/web-sync03.gif "Web synchronization with two servers")  
+ ![2대의 서버를 사용한 웹 동기화](../../relational-databases/replication/media/web-sync03.gif "2대의 서버를 사용한 웹 동기화")  
   
 ## <a name="multiple-iis-systems-and-sql-server-republishing"></a>여러 IIS 시스템 및 SQL Server 재게시  
  동시에 동기화하는 많은 수의 구독자를 지원해야 하는 경우 IIS를 실행하는 여러 개의 컴퓨터에 작업을 분할할 수 있습니다.  
   
- ![여러 대의 IIS 서버를 사용한 웹 동기화](../../relational-databases/replication/media/web-sync04.gif "Web synchronization with multiple IIS servers")  
+ ![여러 대의 IIS 서버를 사용한 웹 동기화](../../relational-databases/replication/media/web-sync04.gif "여러 대의 IIS 서버를 사용한 웹 동기화")  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 컴퓨터에서 로드 균형 조정이 필요한 경우 여러 컴퓨터에 재게시 계층을 만들 수 있습니다. 최상위 게시자에서 데이터를 구독자에 게시하면 구독자에서는 데이터를 다시 게시하고 최상위 게시자에서는 구독자의 로드 균형 조정 요청을 게시합니다.  
   
 > [!NOTE]  
 >  구독자는 특정 게시자하고만 동기화될 수 있습니다. 예를 들어 재게시자 A의 구독자는 A를 사용할 수 없는 경우 재게시자 B와도 동기화될 수 없습니다.  
   
- ![다시 게시를 사용한 웹 동기화](../../relational-databases/replication/media/web-sync05.gif "Web synchronization with republishing")  
+ ![다시 게시를 사용한 웹 동기화](../../relational-databases/replication/media/web-sync05.gif "다시 게시를 사용한 웹 동기화")  
   
 ## <a name="see-also"></a>참고 항목  
- [웹 동기화 구성](../../relational-databases/replication/configure-web-synchronization.md)   
+ [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)   
  [병합 복제에 대한 웹 동기화](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
   
   

@@ -25,10 +25,10 @@ ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a31be66b07c6d5c463f5220e6359942cd507849b
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981742"
 ---
 # <a name="suser_sid-transact-sql"></a>SUSER_SID(Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "73981742"
 
   지정된 로그인 이름에 대한 SID(보안 ID)를 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -59,7 +59,7 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
 ## <a name="return-types"></a>반환 형식  
  **varbinary(85)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  SUSER_SID는 ALTER TABLE 또는 CREATE TABLE에서 DEFAULT 제약 조건으로 사용할 수 있습니다. SUSER_SID는 선택 목록, WHERE 절 및 식이 사용되는 곳은 어디에나 사용될 수 있습니다. SUSER_SID는 매개 변수를 지정하지 않더라도 항상 뒤에 괄호를 필요로 합니다.  
   
  지정된 인수 없이 호출된 경우 SUSER_SID는 현재 보안 컨텍스트의 SID를 반환합니다. EXECUTE AS를 사용하여 컨텍스트를 전환하는 일괄 처리 내에서 지정된 인수 없이 호출된 경우 SUSER_SID는 가장된 컨텍스트의 SID를 반환합니다. 가장된 컨텍스트에서 호출된 경우 SUSER_SID(ORIGINAL_LOGIN())은 원래 컨텍스트의 SID를 반환합니다.  
@@ -70,15 +70,15 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-suser_sid"></a>1\. SUSER_SID 사용  
+### <a name="a-using-suser_sid"></a>A. SUSER_SID 사용  
  다음 예제에서는 현재 보안 컨텍스트에 대한 SID(보안 ID)를 반환합니다.  
   
 ```  
 SELECT SUSER_SID();  
 ```  
   
-### <a name="b-using-suser_sid-with-a-specific-login"></a>2\. 특정 로그인에 SUSER_SID 사용  
- 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa` 로그인에 대한 보안 ID를 반환합니다.  
+### <a name="b-using-suser_sid-with-a-specific-login"></a>B. 특정 로그인에 SUSER_SID 사용  
+ 다음 예제에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa` 로그인의 보안 ID 번호를 반환합니다.  
   
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상
   

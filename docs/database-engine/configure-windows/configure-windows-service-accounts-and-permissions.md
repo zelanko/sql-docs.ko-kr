@@ -1,7 +1,7 @@
 ---
 title: Windows 서비스 계정 및 권한 구성 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/28/2019
+ms.date: 01/28/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -50,12 +50,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ed0565a9cf5a5eecaff143f9a4583a763910d3d8
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: f8097f477368a9aa4cd8846b8da77e8bff73324e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73660284"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76929153"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Windows 서비스 계정 및 권한 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "73660284"
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
   
 
-##  <a name="Service_Details"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 의해 설치되는 서비스  
+##  <a name="Service_Details"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 의해 설치되는 서비스  
  사용자가 설치하도록 선택한 구성 요소에 따라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서는 다음 서비스를 설치합니다.  
   
 -   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 서비스** - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 대한 서비스입니다. 실행 파일 경로는 \<MSSQLPATH>\MSSQL\Binn\sqlservr.exe입니다.  
@@ -168,14 +168,14 @@ ms.locfileid: "73660284"
   
 관리 서비스 계정, 그룹 관리 서비스 계정 및 가상 계정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 같은 중요한 애플리케이션에 고유 계정에 대한 격리성을 제공하도록 설계되었습니다. 따라서 관리자는 이러한 계정에 대한 SPN(서비스 사용자 이름)과 자격 증명을 수동으로 관리할 필요가 없습니다. 결국 서비스 계정 사용자, 암호 및 SPN을 보다 쉽게 장기적으로 관리할 수 있습니다.  
   
--   <a name="MSA"></a> **Managed Service Accounts**  
+-   <a name="MSA"></a> **관리형 서비스 계정**  
   
      MSA(관리 서비스 계정)는 도메인 컨트롤러에서 만들어지고 관리되는 도메인 유형입니다. 관리 서비스 계정은 단일 멤버 컴퓨터에서 서비스를 실행하는 데 사용할 수 있도록 할당됩니다. 암호는 도메인 컨트롤러에서 자동으로 관리됩니다. 사용자는 MSA를 사용하여 컴퓨터에 로그인할 수 없지만 컴퓨터는 MSA를 사용하여 Windows 서비스를 시작할 수 있습니다. MSA에는 servicePrincipalName 읽기 및 쓰기 권한이 있을 때 Active Directory 안에서 SPN(서비스 사용자 이름)을 등록하는 기능이 있습니다. MSA는 **$** 접미사를 사용하여 이름이 지정됩니다(예: **DOMAIN\ACCOUNTNAME$** ). MSA를 지정할 때는 암호를 비워 둡니다. MSA는 단일 컴퓨터에 할당되기 때문에 Windows 클러스터의 다른 노드에서 사용할 수 없습니다.  
   
     > [!NOTE]  
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대해 MSA를 사용할 수 있으려면 먼저 도메인 관리자가 Active Directory에서 MSA를 만들어야 합니다.  
   
--  <a name="GMSA"></a> **그룹 관리 서비스 계정**  
+-  <a name="GMSA"></a> **그룹 관리형 서비스 계정**  
   
      그룹 관리 서비스 계정은 여러 서버의 MSA입니다. Windows는 서버 그룹에서 실행되는 서비스에 대한 서비스 계정을 관리합니다. Active Directory는 서비스를 다시 시작하지 않고 그룹 관리 서비스 계정 암호를 자동으로 업데이트합니다. 그룹 관리 서비스 계정 보안 주체를 사용하도록 SQL Server 서비스를 구성할 수 있습니다. SQL Server 2014부터 SQL Server은 독립 실행형 인스턴스의 경우 그룹 관리 서비스 계정을 지원하고, 장애 조치 클러스터 인스턴스 및 가용성 그룹의 경우 SQL Server 2016 이상을 지원합니다.  
   
@@ -236,7 +236,7 @@ ms.locfileid: "73660284"
   
  \*무인 설치에 대한 자세한 내용과 샘플 구문은 [명령 프롬프트에서 SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)를 참조하세요.  
   
- \*\* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 및 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] Advanced Services 인스턴스에서 사용할 수 없습니다.
+ \*\*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 및 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] Advanced Services 인스턴스에서 사용할 수 없습니다.
 
  \*\*\*스위치를 통한 실행 패드에 대한 계정 설정은 현재 지원되지 않습니다. SQL Server 구성 관리자를 사용하여 계정 및 다른 서비스 설정을 변경합니다.
 
@@ -344,12 +344,12 @@ ms.locfileid: "73660284"
 ||Instid\OLAP\Backup|읽기, 쓰기|  
 ||Instid\OLAP\Temp|읽기, 쓰기|  
 ||130\shared\Errordumps|읽기, 쓰기|  
-|SQLServerReportServerUser|Instid\Reporting Services\Log Files|읽기, 쓰기, 삭제|  
+|ReportServer|Instid\Reporting Services\Log Files|읽기, 쓰기, 삭제|  
 ||Instid\Reporting Services\ReportServer|읽기, 실행|  
-||Instid\Reportingservices\Reportserver\global.asax|모든 권한|  
-||Instid\Reportingservices\Reportserver\Reportserver.config|읽기|  
-||Instid\Reporting Services\reportManager|읽기, 실행|  
-||Instid\Reporting Services\RSTempfiles|읽기, 쓰기, 실행, 삭제|  
+||Instid\Reporting Services\ReportServer\global.asax|모든 권한|  
+||Instid\Reporting Services\ReportServer\rsreportserver.config|읽기|  
+||Instid\Reporting Services\RSTempfiles|읽기, 쓰기, 실행, 삭제| 
+||Instid\Reporting Services\RSWebApp|읽기, 실행|   
 ||130\shared|읽기, 실행|  
 ||130\shared\Errordumps|읽기, 쓰기|  
 |MSDTSServer100|130\dts\binn\MsDtsSrvr.ini.xml|읽기|  
@@ -362,10 +362,8 @@ ms.locfileid: "73660284"
 |SQLWriter|해당 없음(로컬 시스템으로 실행)||  
 |사용자|Instid\MSSQL\binn|읽기, 실행|  
 ||Instid\Reporting Services\ReportServer|읽기, 실행, 폴더 내용 보기|  
-||Instid\Reportingservices\Reportserver\global.asax|읽기|  
-||Instid\Reporting Services\reportManager|읽기, 실행|  
-||Instid\Reporting Services\ReportManager\pages|읽기|  
-||Instid\Reporting Services\ReportManager\Styles|읽기|  
+||Instid\Reporting Services\ReportServer\global.asax|읽기|  
+||Instid\Reporting Services\RSWebApp|읽기, 실행, 폴더 내용 보기|    
 ||130\dts|읽기, 실행|  
 ||130\tools|읽기, 실행|  
 ||100\tools|읽기, 실행|  
@@ -407,15 +405,12 @@ ms.locfileid: "73660284"
 ||관리자 전용|\\\\.\root\Microsoft\SqlServer\ServerEvents\\<sql_instance_name>\*|모든 권한|  
 ||관리자, 시스템|\tools\binn\schemas\sqlserver\2004\07\showplan|모든 권한|  
 ||사용자|\tools\binn\schemas\sqlserver\2004\07\showplan|읽기, 실행|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|\<보고서 서버 웹 서비스 계정>|*\<설치>* \Reporting Services\LogFiles|Delete<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
-||보고서 관리자 애플리케이션 풀 ID, [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 계정, 모든 사람|*\<설치>* \Reporting Services\ReportManager, *\<설치>* \Reporting Services\ReportManager\Pages\\\*.\*, *\<설치>* \Reporting Services\ReportManager\Styles\\\*.\*, *\<설치>* \Reporting Services\ReportManager\webctrl_client\1_0\\*.\*|읽기|  
-||보고서 관리자 애플리케이션 풀 ID|*\<설치>* \Reporting Services\ReportManager\Pages\\*.\*|읽기|  
-||\<보고서 서버 웹 서비스 계정>|*\<설치>* \Reporting Services\ReportServer|읽기|  
-||\<보고서 서버 웹 서비스 계정>|*\<설치>* \Reporting Services\ReportServer\global.asax|전체|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|보고서 서버 Windows 서비스 계정|*\<설치>* \Reporting Services\LogFiles|Delete<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+||보고서 서버 Windows 서비스 계정|*\<설치>* \Reporting Services\ReportServer|읽기|  
+||보고서 서버 Windows 서비스 계정|*\<설치>* \Reporting Services\ReportServer\global.asax|전체|  
+||보고서 서버 Windows 서비스 계정|*\<install>* \Reporting Services\RSWebApp|읽기, 실행|  
 ||모든 사람|*\<설치>* \Reporting Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|  
-||네트워크 서비스|*\<설치>* \Reporting Services\ReportServer\ReportService.asmx|전체|  
-||모든 사람|*\<설치>* \Reporting Services\ReportServer\ReportService.asmx|READ_CONTROL<br /><br /> SYNCHRONIZE FILE_GENERIC_READ<br /><br /> FILE_GENERIC_EXECUTE<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_EXECUTE<br /><br /> FILE_READ_ATTRIBUTES|  
-||ReportServer Windows 서비스 계정|*\<설치>* \Reporting Services\ReportServer\RSReportServer.config|Delete<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+||ReportServer Windows 서비스 계정|*\<install>* \Reporting Services\ReportServer\rsreportserver.config|Delete<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
 ||모든 사람|보고서 서버 키(Instid 하이브)|값 쿼리<br /><br /> 하위 키 열거<br /><br /> 알림<br /><br /> 읽기 제어|  
 ||터미널 서비스 사용자|보고서 서버 키(Instid 하이브)|값 쿼리<br /><br /> 값 설정<br /><br /> 하위 키 만들기<br /><br /> 하위 키 열거<br /><br /> 알림<br /><br /> DELETE<br /><br /> 읽기 제어|  
 ||고급 사용자|보고서 서버 키(Instid 하이브)|값 쿼리<br /><br /> 값 설정<br /><br /> 하위 키 만들기<br /><br /> 하위 키 열거<br /><br /> 알림<br /><br /> DELETE<br /><br /> 읽기 제어|  
@@ -526,7 +521,7 @@ WMI(Windows Management Instrumentation)에서 [!INCLUDE[ssDE](../../includes/ssd
 ####  <a name="Agent"></a> SQL Server 에이전트 로그인 및 사용 권한  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스의 서비스별 SID는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 로그인으로 프로비전됩니다. 서비스별 SID 로그인은 **sysadmin** 고정 서버 역할의 멤버입니다.  
   
-####  <a name="Hadron"></a> [!INCLUDE[ssHADRc](../../includes/sshadrc-md.md)] 및 SQL 장애 조치(Failover) 클러스터 인스턴스 및 사용 권한  
+####  <a name="Hadron"></a> [!INCLUDE[ssHADRc](../../includes/sshadrc-md.md)] 및 SQL 장애 조치(Failover) 클러스터 인스턴스 및 권한  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 을 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 또는 SQL 장애 조치(Failover) 클러스터 인스턴스(SQL FCI)로 설치한 경우 **LOCAL SYSTEM** 은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 프로비전됩니다. **LOCAL SYSTEM** 로그인에는 **ALTER ANY AVAILABILITY GROUP** 권한( [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]용) 및 **VIEW SERVER STATE** 권한(SQL FCI용)이 부여됩니다.  
   
 ####  <a name="Writer"></a> SQL 기록기 및 사용 권한  
@@ -593,7 +588,7 @@ WMI(Windows Management Instrumentation)에서 [!INCLUDE[ssDE](../../includes/ssd
 > [!NOTE]  
 >  도메인 계정을 사용하도록 애플리케이션을 구성한 경우 애플리케이션에 대한 사용 권한을 격리시킬 수 있지만 암호를 수동으로 관리하거나 이러한 암호 관리를 위한 사용자 지정 솔루션을 만들어야 합니다. 여러 서버 애플리케이션들에서 보안 향상을 위해 이러한 전략이 사용되고 있지만 이 전략은 추가 관리 수준과 복잡성이 필요합니다. 이러한 배포에서 서비스 관리자는 Kerberos 인증에 필요한 서비스 암호 및 SPN(서비스 사용자 이름) 관리와 같은 유지 관리 태스크에 상당 시간을 소비해야 합니다. 또한 이러한 유지 관리 태스크로 인해 서비스가 중단될 수 있습니다.  
   
- <a name="Local_User"></a> **Local User Accounts**  
+ <a name="Local_User"></a> **로컬 사용자 계정**  
   
  컴퓨터가 도메인에 속하지 않은 경우에는 Windows 관리자 권한이 없는 로컬 사용자 계정을 사용하는 것이 좋습니다.  
   
@@ -641,7 +636,7 @@ WMI(Windows Management Instrumentation)에서 [!INCLUDE[ssDE](../../includes/ssd
   
 |언어|로컬 서비스 이름|네트워크 서비스 이름|로컬 시스템 이름|관리자 그룹 이름|  
 |--------------|----------------------------|------------------------------|---------------------------|--------------------------|  
-|영어<br /><br /> 중국어(간체)<br /><br /> 중국어(번체)<br /><br /> 한국어<br /><br /> 일본어|NT AUTHORITY\LOCAL SERVICE|NT AUTHORITY\NETWORK SERVICE|NT AUTHORITY\SYSTEM|BUILTIN\Administrators|  
+|영어<br /><br /> 중국어(간체)<br /><br /> 중국어 번체<br /><br /> 한국어<br /><br /> 일본어|NT AUTHORITY\LOCAL SERVICE|NT AUTHORITY\NETWORK SERVICE|NT AUTHORITY\SYSTEM|BUILTIN\Administrators|  
 |독일어|NT-AUTORITÄT\LOKALER DIENST|NT-AUTORITÄT\NETZWERKDIENST|NT-AUTORITÄT\SYSTEM|VORDEFINIERT\Administratoren|  
 |프랑스어|AUTORITE NT\SERVICE LOCAL|AUTORITE NT\SERVICE RÉSEAU|AUTORITE NT\SYSTEM|BUILTIN\Administrators|  
 |이탈리아어|NT AUTHORITY\SERVIZIO LOCALE|NT AUTHORITY\SERVIZIO DI RETE|NT AUTHORITY\SYSTEM|BUILTIN\Administrators|  

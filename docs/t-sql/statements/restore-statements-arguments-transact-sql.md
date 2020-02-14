@@ -16,10 +16,10 @@ ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a39f9cf72f08e80face176412851778f1afec174
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982458"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE 문 - 인수(Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "73982458"
 
 이 항목에서는 RESTORE {DATABASE|LOG} 문과 관련 보조 명령문 세트의 구문 섹션에 설명된 다음 인수를 설명합니다. RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY 및 RESTORE VERIFYONLY. 대부분의 인수는 이러한 6개의 문에 사용되는 경우에만 지원됩니다. 각 인수에 대한 지원은 인수 설명에 나와 있습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
  구문에 대한 자세한 내용은 다음 항목을 참조하십시오.  
@@ -541,7 +541,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
   
 -   [RESTORE LABELONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  추가적인 주의 사항은 다음 항목을 참조하십시오.  
   
 -   [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
@@ -594,7 +594,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
 |MOVE|√|-|-|-|-|√|  
 |PASSWORD|√|√|√|-|-|√|  
 |{ REWIND &#124; NOREWIND }|√|REWIND 전용|REWIND 전용|REWIND 전용|-|√|  
-|STATS|√|-|-|-|-|√|  
+|통계|√|-|-|-|-|√|  
 |{ UNLOAD &#124; NOUNLOAD }|√|√|√|√|√|√|  
   
  <sup>1</sup> FILE **=** _backup\_set\_file\_number_. 이는 {FILE | FILEGROUP}과 다릅니다.  

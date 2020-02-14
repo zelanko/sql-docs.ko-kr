@@ -21,10 +21,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7de5bc19cd49959663bf4ead3f8ebff62b3b982b
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982857"
 ---
 # <a name="alter-function-transact-sql"></a>ALTER FUNCTION(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73982857"
 
   권한을 변경하거나 종속 함수, 저장 프로시저 또는 트리거에 영향을 주지 않고 이전에 CREATE FUNCTION 문을 실행하여 만든 기존 [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 CLR 함수를 변경합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -277,7 +277,7 @@ RETURNS return_data_type
  _\<_table\_type\_definition_\>_ **(** { \<column_definition\> \<column\_constraint\> | \<computed\_column\_definition\> } [ \<table\_constraint\> ] [ **,** ...*n* ] **)**  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수에 대한 테이블 데이터 형식을 정의합니다. 테이블 선언에는 열 정의와 열 또는 테이블 제약 조건이 포함됩니다.  
   
-\< clr_table_type_definition \> **(** { *column_name**data_type* } [ **,** ...*n* ] **)** **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([일부 지역에서는 미리 보기로 제공됨](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
+\< clr_table_type_definition \> **(** { *column_name**data_type* } [ **,** ...*n* ] **)** **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]([일부 지역에서는 미리 보기로 제공됨](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))  
   
  CLR 함수에 대한 테이블 데이터 형식을 정의합니다. 테이블 선언에는 열 이름과 데이터 형식만 포함됩니다.  
   
@@ -285,7 +285,7 @@ RETURNS return_data_type
  고유하게 컴파일된 스칼라 사용자 정의 함수에 대해서만 지원됩니다. 자세한 내용은 [메모리 내 OLTP에 대한 사용자 정의 스칼라 함수](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)를 참조하세요.  
   
  NATIVE_COMPILATION  
- 사용자 정의 함수가 고유하게 컴파일되어 있는지 여부를 나타냅니다. 이 인수가 고유하게 컴파일된 사용자 정의 스칼라 함수에 필요합니다.  
+ 사용자 정의 함수가 고유하게 컴파일되어 있는지 여부를 나타냅니다. 이 인수는 고유하게 컴파일된, 스칼라 사용자 정의 함수에 필요합니다.  
   
  함수를 ALTER할 경우 NATIVE_COMPILATION 인수가 필요하며, 함수가 NATIVE_COMPILATION 인수로 작성된 경우에만 사용할 수 있습니다.  
   
@@ -422,7 +422,7 @@ RETURNS return_data_type
  ALLOW_PAGE_LOCKS = { ON | OFF }  
  페이지 잠금의 허용 여부를 지정합니다. 기본값은 ON입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  ALTER FUNCTION을 사용하여 스칼라 반환 함수를 테이블 반환 함수로 변경하거나 그 반대로 변경할 수 없습니다. 또한 ALTER FUNCTION을 사용하여 인라인 함수를 다중 문 함수로 변경하거나 그 반대로 변경할 수 없습니다. ALTER FUNCTION을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수를 CLR 함수로 변경하거나 그 반대로 변경할 수도 없습니다.  
   
  다음 Service Broker 문은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수에 포함시킬 수 없습니다.  

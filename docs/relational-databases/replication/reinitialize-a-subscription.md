@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 733e63f6dd01c09fd007a7176721533f7a1c57d3
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70846511"
 ---
 # <a name="reinitialize-a-subscription"></a>구독 다시 초기화
@@ -142,7 +142,7 @@ ms.locfileid: "70846511"
     > [!IMPORTANT]  
     >  매개 변수가 있는 필터를 추가, 삭제 또는 변경할 경우 다시 초기화를 진행하는 동안에는 보류 중인 구독자의 변경 내용을 게시자로 업로드할 수 없습니다. 보류 중인 변경 내용을 업로드하려면 필터를 변경하기 전에 모든 구독을 동기화하세요.  
   
-     자세한 내용은 [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
+     자세한 내용은 [게시 만들기](../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
   
 #### <a name="to-change-the-reinitialization-policy-for-an-existing-merge-publication"></a>기존 병합 게시에 대한 다시 초기화 정책을 변경하려면  
   
@@ -188,7 +188,7 @@ ms.locfileid: "70846511"
   
 4.  <xref:Microsoft.SqlServer.Replication.TransSubscription.Reinitialize%2A> 메서드를 호출합니다. 이 메서드는 구독을 다시 초기화하도록 표시합니다.  
   
-5.  밀어넣기 구독을 동기화합니다. 자세한 내용은 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)을 참조하세요.  
+5.  밀어넣기 구독을 동기화합니다. 자세한 내용은 [밀어넣기 구독 동기화](../../relational-databases/replication/synchronize-a-push-subscription.md)을 참조하세요.  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-merge-publication"></a>병합 게시에 대한 끌어오기 구독을 다시 초기화하려면  
   
@@ -224,7 +224,7 @@ ms.locfileid: "70846511"
     > [!NOTE]  
     >  구독이 만료되면 변경 내용을 업로드할 수 없습니다. 자세한 내용은 [Set the Expiration Period for Subscriptions](../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md)을 참조하세요.  
   
-5.  밀어넣기 구독을 동기화합니다. 자세한 내용은 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)을 참조하세요.  
+5.  밀어넣기 구독을 동기화합니다. 자세한 내용은 [밀어넣기 구독 동기화](../../relational-databases/replication/synchronize-a-push-subscription.md)을 참조하세요.  
   
 ###  <a name="PShellExample"></a> 예(RMO)  
  다음 예에서는 트랜잭션 게시에 대한 끌어오기 구독을 다시 초기합니다.  
@@ -242,6 +242,6 @@ ms.locfileid: "70846511"
 ## <a name="see-also"></a>참고 항목  
  [구독 다시 초기화](../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
+ [복제 보안을 위한 최선의 구현 방법](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eba613c3736024de71a67e7cdb749960e91e89ff
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68661211"
 ---
 # <a name="metadata-visibility-configuration"></a>메타데이터 표시 유형 구성
@@ -65,7 +65,7 @@ GO
   
 -   OBJECTPROPERTYEX와 같은 메타데이터 내보내기 기본 제공 함수가 NULL을 반환합니다.  
   
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** 저장 프로시저가 행의 하위 집합이나 NULL을 반환합니다.  
+-   [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** 저장 프로시저는 행의 하위 집합이나 NULL만 반환할 수 있습니다.  
   
  저장 프로시저 및 트리거와 같은 SQL 모듈은 호출자의 보안 컨텍스트에서 실행되므로 메타데이터 액세스가 제한됩니다. 예를 들어 다음 코드에서 저장 프로시저가 호출자에게 권한이 없는 `myTable` 테이블에 액세스하려고 시도하면 빈 결과 집합이 반환됩니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 행이 반환됩니다.  
   

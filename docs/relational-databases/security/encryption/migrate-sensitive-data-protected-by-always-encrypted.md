@@ -14,12 +14,12 @@ ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c76c8896d19bed29bd8e71f6726b05cc0526e91
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.openlocfilehash: b96529feb6e6e4c4ac2ad7d4be62474a624392d8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75558208"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909913"
 ---
 # <a name="bulk-load-encrypted-data-to-columns-using-always-encrypted"></a>Always Encrypted를 사용하여 암호화된 데이터를 열에 대량 로드
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "75558208"
 ## <a name="data-migration-scenarios"></a>데이터 마이그레이션 시나리오  
 다음 표는 몇 가지 마이그레이션 시나리오에 적합한 권장된 설정을 보여줍니다.  
  
-![always-encrypted-migration](../../../relational-databases/security/encryption/media/always-encrypted-migration.PNG "|::ref1::|")  
+![always-encrypted-migration](../../../relational-databases/security/encryption/media/always-encrypted-migration.PNG "always-encrypted-migration")  
 
 ## <a name="bulk-loading-of-encrypted-data"></a>암호화된 데이터의 대량 로드  
 다음 프로세스를 사용하여 암호화된 데이터를 로드합니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "75558208"
     ```  
 
 ## <a name="potential-for-data-corruption"></a>데이터 손상 가능성  
-이 옵션을 부적절하게 사용할 경우 데이터가 손상될 수 있습니다. **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** 옵션을 통해 사용자는 다른 키, 잘못 암호화 또는 전혀 암호화되지 않은 데이터를 포함해 모든 데이터를 데이터베이스의 암호화된 열로 삽입할 수 있습니다. 사용자가 대상 열에 대해 설저된 암호화 구성표(열 암호화 키, 알고리즘, 암호화 유형)를 사용하여 올바르게 암호화되지 않은 데이터를 실수로 복사하는 경우 데이터를 해독할 수 없습니다(데이터가 손상됨). 데이터베이스의 데이터를 손상시킬 수 있으므로, 이 옵션은 신중하게 사용해야 합니다.  
+이 옵션을 부적절하게 사용할 경우 데이터가 손상될 수 있습니다. **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** 옵션을 통해 사용자는 다른 키, 잘못 암호화 또는 전혀 암호화되지 않은 데이터를 포함해 모든 데이터를 데이터베이스의 암호화된 열로 삽입할 수 있습니다. 사용자가 대상 열에 대해 설정된 암호화 구성표(열 암호화 키, 알고리즘, 암호화 유형)를 사용하여 올바르게 암호화되지 않은 데이터를 실수로 복사하는 경우 데이터를 해독할 수 없습니다(데이터가 손상됨). 데이터베이스의 데이터를 손상시킬 수 있으므로, 이 옵션은 신중하게 사용해야 합니다.  
 
 다음 시나리오는 데이터를 부적절하게 가져올 경우 어떻게 데이터가 손상될 수 있는지 보여줍니다.  
 

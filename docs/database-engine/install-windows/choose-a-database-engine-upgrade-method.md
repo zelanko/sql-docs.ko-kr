@@ -10,12 +10,12 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 56a055c0528bea03419c1a56dd89efb5fbfa1753
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 6dffa188f5641510f2ad47c17af3b40ad16a3ec9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056750"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76941157"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>데이터베이스 엔진 업그레이드 방법 선택
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "74056750"
   
 -   **시스템 개체:** 일부 애플리케이션은 단일 사용자 데이터베이스 범위 밖에 있는 정보, 엔터티 및/또는 개체에 따라 달라집니다. 일반적으로 애플리케이션은 master 및 msdb 데이터베이스뿐만 아니라 사용자 데이터베이스에 따라 달라집니다. 사용자 데이터베이스의 올바른 작동을 위해 해당 데이터베이스 외부에 저장되어 있는 모든 요소는 대상 서버 인스턴스에서 사용할 수 있어야 합니다. 예를 들어 애플리케이션에 대한 로그인은 master 데이터베이스에서 메타데이터로 저장되어 있으며 대상 서버에서 다시 생성되어야 합니다. 메타데이터가 msdb 데이터베이스에 저장되어 있는 SQL Server 에이전트 작업에 따라 애플리케이션이나 데이터베이스 유지 관리 계획이 달라지는 경우 대상 서버 인스턴스에서 이러한 작업을 다시 만들어야 합니다. 마찬가지로 서버 수준 트리거에 대한 메타데이터는 master에 저장되어 있습니다.  
  
-   애플리케이션에 대한 데이터베이스를 다른 서버 인스턴스로 이동할 경우 대상 서버 인스턴스의 master 및 msdb에서 종속 개체와 엔터티의 모든 메타데이터를 다시 만들어야 합니다. 예를 들어 데이터베이스 애플리케이션이 서비스 수준 트리거를 사용하는 경우 단순히 새 시스템에서 데이터베이스를 연결하거나 복원하는 것만으로 충분하지 않습니다. master 데이터베이스에서 이러한 트리거에 대한 모든 메타데이터를 수동으로 다시 만들지 않으면 데이터베이스가 예상대로 작동하지 않습니다. 자세한 내용은 [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리&#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)를 참조하세요.  
+   애플리케이션의 데이터베이스를 다른 서버 인스턴스로 이동할 경우 대상 서버 인스턴스의 master 및 msdb에서 종속 개체와 엔터티의 모든 메타데이터를 다시 만들어야 합니다. 예를 들어 데이터베이스 애플리케이션이 서비스 수준 트리거를 사용하는 경우 단순히 새 시스템에서 데이터베이스를 연결하거나 복원하는 것만으로 충분하지 않습니다. master 데이터베이스에서 이러한 트리거에 대한 모든 메타데이터를 수동으로 다시 만들지 않으면 데이터베이스가 예상대로 작동하지 않습니다. 자세한 내용은 [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리&#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)를 참조하세요.  
   
 -   **MSDB에 저장된 Integration Services 패키지:** 패키지를 MSDB에 저장하는 경우 [dtutil Utility](../../integration-services/dtutil-utility.md)를 사용하여 이러한 패키지를 제외하거나 새 서버에 재배포해야 합니다. 새 서버에서 패키지를 사용하기 전에 패키지를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]으로 업그레이드해야 합니다. 자세한 내용은 [Integration Services 패키지 업그레이드](../../integration-services/install-windows/upgrade-integration-services-packages.md) 합니다.  
   

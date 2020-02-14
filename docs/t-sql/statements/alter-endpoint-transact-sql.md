@@ -20,10 +20,10 @@ ms.assetid: 70f35566-30cf-47c6-8394-dfe5d71629d3
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0b07cc17344e27d82155ceaae8e55494deb0bd57
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065677"
 ---
 # <a name="alter-endpoint-transact-sql"></a>ALTER ENDPOINT(Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "68065677"
   
  네이티브 XML 웹 서비스(SOAP/HTTP 엔드포인트)는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터는 더 이상 사용되지 않습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -104,13 +104,13 @@ FOR DATABASE_MIRRORING (
  **AS** { **TCP** }  
  **ALTER ENDPOINT**를 사용하여 전송 프로프콜은 변경할 수 없습니다.  
   
- **AUTHORIZATION** *로그인*  
+ **AUTHORIZATION** *login*  
  **AUTHORIZATION** 옵션은 **ALTER ENDPOINT**에서 사용할 수 없습니다. 소유권은 엔드포인트가 생성된 경우에만 할당될 수 있습니다.  
   
  **FOR** { **TSQL** | **SERVICE_BROKER** | **DATABASE_MIRRORING** }  
  **ALTER ENDPOINT**를 사용하여 페이로드 유형은 변경할 수 없습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  ALTER ENDPOINT를 사용할 때는 업데이트할 매개 변수만 지정합니다. 기존 엔드포인트의 모든 속성은 명시적으로 변경하지 않는 한 동일하게 유지됩니다.  
   
  사용자 트랜잭션 내에서 ENDPOINT DDL 문을 실행할 수 없습니다.  

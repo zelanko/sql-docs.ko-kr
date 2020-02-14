@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 732c1c759eec875af0bd65b763b21d912ffe2de7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68085759"
 ---
 # <a name="column-properties-general-page"></a>열 속성(일반 페이지)
@@ -56,7 +56,7 @@ ms.locfileid: "68085759"
  ID 열의 초기 행 값을 나타냅니다.  
   
  **ID 증가값**  
- **ID 증분** 속성은 새로 삽입되는 행의 ID 값을 생성할 때 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 기존의 가장 큰 행 ID 값에 추가하는 값을 지정합니다.  
+ **ID 증분** 속성은 새로 삽입되는 행의 ID 값을 생성할 때 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 기존의 가장 큰 행 ID 값에 더하는 값을 지정합니다.  
   
  **기본 바인딩**  
  열에 바인딩된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본값입니다. 기본값이 바인딩되지 않은 경우에 이 옵션은 공백입니다.  

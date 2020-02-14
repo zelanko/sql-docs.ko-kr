@@ -14,10 +14,10 @@ ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2e2c8c8f77fd0643c503f5b817b050ff64529751
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297544"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>식에서의 Integration Services 데이터 형식
@@ -27,7 +27,7 @@ ms.locfileid: "71297544"
 
   식 계산기는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식을 사용합니다. 데이터가 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 데이터 흐름에 처음 포함될 때 데이터 흐름 엔진이 모든 열 데이터를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식으로 변환하므로 식에 사용되는 열 데이터는 이미 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식입니다. 조건부 분할 및 파생 열 변환에 사용된 식은 열 데이터가 포함된 데이터 흐름에 속해 있으므로 열을 참조할 수 있습니다.  
   
-## <a name="variables"></a>변수  
+## <a name="variables"></a>variables  
  식에 변수를 사용할 수도 있습니다. 변수는 Variant 데이터 형식으로, 식 계산기는 식을 계산하기 전에 변수의 데이터 형식을 Variant 하위 형식에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식으로 변환합니다. 변수는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식의 하위 집합만 사용할 수 있습니다. 예를 들어 변수는 BLOB(Binary Large Object Block) 데이터 형식을 사용할 수 없습니다.  
   
  Variant 데이터 형식을 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식으로 매핑하는 방법과 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식에 대한 자세한 내용은 [Integration Services 데이터 형식](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
@@ -71,7 +71,7 @@ ms.locfileid: "71297544"
   
  다음 다이어그램에서는 BINARY 연산의 암시적 변환의 결과 유형을 보여 줍니다. 이 테이블에서 열과 행의 교집합은 왼쪽(원본) 및 오른쪽(대상) 유형의 피연산자가 있는 이진 연산의 결과 유형입니다.  
   
- ![데이터 형식 간 암시적 데이터 형식 변환](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "데이터 형식 간 암시적 데이터 형식 변환")  
+ ![데이터 형식 간 암시적 데이터 형식 전환](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "데이터 형식 간 암시적 데이터 형식 전환")  
   
  부호 있는 정수와 부호 없는 정수의 교집합은 두 인수 중 하나보다 클 수도 있는 부호 있는 정수입니다.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "71297544"
 >   
 >  오류나 예기치 않은 결과를 방지하려면 **True** 및 **False**에 특정 숫자 값을 사용하는 코드를 작성하지 말아야 합니다. 가능하면 부울 변수는 부울 변수용으로 설계된 논리 값으로만 사용해야 합니다.  
   
- 자세한 내용은 다음 항목을 참조하십시오.  
+ 자세한 내용은 아래 항목을 참조하세요.  
   
 -   [== &#40;같음&#41;&#40;SSIS 식&#41;](../../integration-services/expressions/equal-ssis-expression.md)  
   

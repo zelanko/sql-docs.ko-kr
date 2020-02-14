@@ -28,10 +28,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 604a882daffeb2a9031aa9cc7e4d577e1e4e2663
-ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72916018"
 ---
 # <a name="database-checkpoints-sql-server"></a>데이터베이스 검사점(SQL Server)
@@ -43,11 +43,11 @@ ms.locfileid: "72916018"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 자동, 간접, 수동 및 내부와 같은 여러 가지 유형의 검사점이 지원됩니다. 다음 표에는 **검사점**의 유형이 요약되어 있습니다.
   
-|속성|[!INCLUDE[tsql](../../includes/tsql-md.md)] 인터페이스|설명|  
+|속성|[!INCLUDE[tsql](../../includes/tsql-md.md)] 인터페이스|Description|  
 |----------|----------------------------------|-----------------|  
 |자동|EXEC sp_configure **'** 복구 간격 **',** _초'_ **'**|**recovery interval** 서버 구성 옵션에 제안된 최대 제한 시간에 맞게 백그라운드에서 자동으로 실행됩니다. 자동 검사점은 완료될 때까지 실행됩니다.  자동 검사점은 진행 중인 쓰기 작업의 수와 쓰기 지연 시간이 50밀리초 이상으로 증가할 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 이를 감지하는지에 따라 제한됩니다.<br /><br /> 자세한 내용은 [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)을(를) 참조하세요.|  
-|간접|ALTER DATABASE ... SET TARGET_RECOVERY_TIME **=** _target\_recovery\_time_ { SECONDS &#124; MINUTES }|지정된 데이터베이스의 사용자 지정 대상 복구 시간에 맞게 백그라운드에서 실행됩니다. [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]부터 기본값은 1분입니다. 이전 버전의 기본값 0은 데이터베이스가 자동 검사점을 사용함을 나타내며, 빈도는 서버 인스턴스의 복구 간격 설정에 따라 달라집니다.<br /><br /> 자세한 내용은 [데이터베이스의 대상 복구 시간 변경&#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md)을(를) 참조하세요.|  
-|수동|CHECKPOINT[*checkpoint_duration*]|[!INCLUDE[tsql](../../includes/tsql-md.md)] CHECKPOINT 명령을 실행할 때 실행됩니다. 수동 검사점은 현재 연결된 데이터베이스에서 발생합니다. 기본적으로 수동 검사점은 완료될 때까지 실행됩니다. 또한 자동 검사점의 경우와 동일한 방식으로 조절됩니다.  필요한 경우 *checkpoint_duration* 매개 변수는 수동 검사점을 완료하는 데 필요한 시간(초)을 지정합니다.<br /><br /> 자세한 내용은 [CHECKPOINT&#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)을(를) 참조하세요.|  
+|간접|ALTER DATABASE ... SET TARGET_RECOVERY_TIME **=** _target\_recovery\_time_ { SECONDS &#124; MINUTES }|지정된 데이터베이스의 사용자 지정 대상 복구 시간에 맞게 백그라운드에서 실행됩니다. [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]부터 기본값은 1분입니다. 이전 버전의 기본값 0은 데이터베이스가 자동 검사점을 사용함을 나타내며, 빈도는 서버 인스턴스의 복구 간격 설정에 따라 달라집니다.<br /><br /> 자세한 내용은 [데이터베이스의 대상 복구 시간 변경&#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md)서버 구성 옵션을 구성하는 방법에 대해 설명합니다.|  
+|설명서|CHECKPOINT[*checkpoint_duration*]|[!INCLUDE[tsql](../../includes/tsql-md.md)] CHECKPOINT 명령을 실행할 때 실행됩니다. 수동 검사점은 현재 연결된 데이터베이스에서 발생합니다. 기본적으로 수동 검사점은 완료될 때까지 실행됩니다. 또한 자동 검사점의 경우와 동일한 방식으로 조절됩니다.  필요한 경우 *checkpoint_duration* 매개 변수는 수동 검사점을 완료하는 데 필요한 시간(초)을 지정합니다.<br /><br /> 자세한 내용은 [CHECKPOINT&#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)을(를) 참조하세요.|  
 |내부|없음|디스크 이미지가 현재 로그 상태와 일치하도록 하는 백업 및 데이터베이스 스냅샷 생성 등의 다양한 서버 작업에 의해 실행됩니다.|  
   
 > [!NOTE]
@@ -130,7 +130,7 @@ ms.locfileid: "72916018"
 ##  <a name="RelatedTasks"></a> Related tasks  
  **서버 인스턴스의 복구 간격을 변경하려면**  
   
--   [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)  
+-   [복구 간격 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)  
   
  **데이터베이스에 간접 검사점을 구성하려면**  
   
@@ -140,7 +140,7 @@ ms.locfileid: "72916018"
   
 -   [CHECKPOINT&#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)  
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)            
 [SQL Server 트랜잭션 로그 아키텍처 및 관리 가이드](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)      
  

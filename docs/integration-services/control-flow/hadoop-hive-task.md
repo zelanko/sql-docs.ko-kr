@@ -13,10 +13,10 @@ ms.assetid: 10ff37c0-9f3f-442a-889b-c351afbdc74c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f157b2b802142f6f00b7a3e9ffb2596ef80f1773
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298253"
 ---
 # <a name="hadoop-hive-task"></a>Hadoop 하이브 태스크
@@ -33,7 +33,7 @@ ms.locfileid: "71298253"
 ## <a name="options"></a>옵션  
  **Hadoop 하이브 태스크 편집기** 대화 상자에서 다음 옵션을 구성합니다.  
   
-|필드|설명|  
+|필드|Description|  
 |-----------|-----------------|  
 |**Hadoop 연결**|기존 Hadoop 연결 관리자를 지정하거나 새 연결 관리자를 만듭니다. 이 연결 관리자는 WebHCat 서비스가 호스트되는 위치를 나타냅니다.|  
 |**SourceType**|쿼리의 원본 유형을 지정합니다. 사용 가능한 값은 **ScriptFile** 및 **DirectInput**입니다.|  

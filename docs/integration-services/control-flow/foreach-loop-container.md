@@ -31,10 +31,10 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2266b837ce7822a6b03b3f6a26d4d1d818aade72
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298296"
 ---
 # <a name="foreach-loop-container"></a>Foreach 루프 컨테이너
@@ -44,7 +44,7 @@ ms.locfileid: "71298296"
 
   Foreach 루프 컨테이너는 패키지의 반복 제어 흐름을 정의합니다. 루프 구현은 프로그래밍 언어에서의 **Foreach** 루프 구조와 유사합니다. 패키지에서 Foreach 열거자를 사용하면 루프를 사용할 수 있습니다.  Foreach 루프 컨테이너는 지정한 열거자의 각 멤버에 대해 제어 흐름을 반복합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 다음 열거자 유형을 제공합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 다음 열거자 유형을 제공합니다.  
   
 -   Foreach ADO 열거자는 테이블의 행을 열거합니다. 예를 들어 ADO 레코드 집합의 행을 가져올 수 있습니다.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "71298296"
 ## <a name="add-enumeration-to-a-control-flow-with-a-foreach-loop-container"></a>Foreach 루프 컨테이너를 사용하여 제어 흐름에 열거 추가
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에는 패키지의 제어 흐름에 파일 및 개체를 열거하는 루핑 구성을 간단하게 포함시킬 수 있는 제어 흐름 요소인 Foreach 루프 컨테이너가 포함됩니다. 자세한 내용은 [Foreach 루프 컨테이너](../../integration-services/control-flow/foreach-loop-container.md)을 참조하십시오.  
   
- Foreach 루프 컨테이너는 특정 기능을 제공하는 것이 아니라 반복 가능한 제어 흐름을 작성하고, 열거자 유형을 지정하고, 열거자를 구성할 수 있는 구조만 제공합니다. 컨테이너 기능을 제공하려면 적어도 하나 이상의 태스크를 Foreach 루프 컨테이너에 포함시켜야 합니다. 자세한 내용은 [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)를 참조하세요.  
+ Foreach 루프 컨테이너는 특정 기능을 제공하는 것이 아니라 반복 가능한 제어 흐름을 작성하고, 열거자 유형을 지정하고, 열거자를 구성할 수 있는 구조만 제공합니다. 컨테이너 기능을 제공하려면 적어도 하나 이상의 태스크를 Foreach 루프 컨테이너에 포함시켜야 합니다. 자세한 내용은 [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)을(를) 참조하세요.  
   
  Foreach 루프 컨테이너에는 여러 태스크가 포함된 제어 흐름과 다른 컨테이너가 포함될 수 있습니다. Foreach 루프 컨테이너에 태스크 및 컨테이너를 추가하는 방법은 패키지에 추가하는 방법과 비슷하며, 태스크 및 컨테이너를 패키지가 아닌 Foreach 루프 컨테이너로 끌어 온다는 점만 다릅니다. Foreach 루프 컨테이너에 두 개 이상의 태스크 또는 컨테이너가 포함된 경우 패키지에서와 같은 방식으로 선행 제약 조건을 사용하여 이를 연결할 수 있습니다. 자세한 내용은 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)을(를) 참조하세요.  
   
@@ -205,7 +205,7 @@ ms.locfileid: "71298296"
  **Enumerator**  
  목록에서 열거자 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**Foreach File 열거자**|파일을 열거합니다. 이 값을 선택하면 아래의 **Foreach File 열거자**섹션에 설명된 동적 옵션이 표시됩니다.|  
 |**Foreach Item 열거자**|항목의 값을 열거합니다. 이 값을 선택하면 아래의 **Foreach Item 열거자**섹션에 설명된 동적 옵션이 표시됩니다.|  
@@ -237,7 +237,7 @@ ms.locfileid: "71298296"
   
 -   파일을 추가한 경우 Foreach 루프가 영향을 준 파일을 확인하기 어려울 수 있습니다.  
   
- **Folder**  
+ **폴더**  
  열거할 루트 폴더의 경로를 입력합니다.  
   
  **찾아보기**  
@@ -313,7 +313,7 @@ ms.locfileid: "71298296"
 #### <a name="enumerator--foreach-adonet-schema-rowset-enumerator"></a>Enumerator = Foreach ADO.NET 스키마 행 집합 열거자  
  지정한 데이터 원본에 대한 스키마를 열거하는 데 Foreach ADO.NET 스키마 행 집합 열거자를 사용할 수 있습니다. 예를 들어 Foreach 루프가 SQL 실행 태스크를 포함하는 경우 Foreach ADO.NET 스키마 행 집합 열거자를 사용하여 **AdventureWorks** 데이터베이스의 열과 같은 스키마를 열거하고 SQL 실행 태스크를 사용하여 스키마 사용 권한을 가져올 수 있습니다.  
   
- **대량 삽입 태스크 편집기**  
+ **연결**  
  목록에서 ADO.NET 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 새 ADO.NET 연결 관리자를 만듭니다.  
   
 > [!IMPORTANT]  
@@ -347,7 +347,7 @@ ms.locfileid: "71298296"
  **DocumentSourceType**  
  XML 문서의 원본 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**직접 입력**|원본을 XML 문서로 설정합니다.|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
@@ -367,7 +367,7 @@ ms.locfileid: "71298296"
  **EnumerationType**  
  목록에서 열거 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**Navigator**|XPathNavigator를 사용하여 열거합니다.|  
 |**Node**|XPath 작업에서 반환한 노드를 열거합니다.|  
@@ -377,7 +377,7 @@ ms.locfileid: "71298296"
  **OuterXPathStringSourceType**  
  XPath 문자열의 원본 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다. 
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**직접 입력**|원본을 XML 문서로 설정합니다.|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
@@ -400,7 +400,7 @@ ms.locfileid: "71298296"
  **InnerXPathStringSourceType**  
  내부 XPath 문자열의 원본 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**직접 입력**|원본을 XML 문서로 설정합니다.|  
 |**파일 연결**|XML 문서가 포함된 파일을 선택합니다.|  
@@ -420,7 +420,7 @@ ms.locfileid: "71298296"
 #### <a name="enumerator--foreach-smo-enumerator"></a>Enumerator = Foreach SMO 열거자  
  SMO(SQL Server Management Objects) 개체를 열거하는 데 Foreach SMO 열거자를 사용할 수 있습니다. 예를 들어 Foreach 루프가 SQL 실행 태스크를 포함하는 경우 Foreach SMO 열거자를 사용하여 **AdventureWorks** 데이터베이스의 테이블을 열거하고 각 테이블의 행 수를 계산하는 쿼리를 실행할 수 있습니다.  
   
- **대량 삽입 태스크 편집기**  
+ **연결**  
  기존 ADO.NET 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 새 연결 관리자를 만듭니다.  
   
  관련 항목: [ADO.NET 연결 관리자](../../integration-services/connection-manager/ado-net-connection-manager.md), [ADO.NET 연결 관리자 구성](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
@@ -471,7 +471,7 @@ ms.locfileid: "71298296"
  열거할 Blob 파일을 포함하는 Blob 컨테이너의 이름을 지정합니다.
   
  **Blob 디렉터리**  
- 열거할 Blob 파일을 포함하는 Blob 디렉터리를 지정합니다. Blob 디렉터리는 가상 계층 구조입니다.  
+ 열거할 Blob 파일을 포함하는 Blob 디렉터리를 지정합니다. blob 디렉터리는 가상 계층 구조입니다.  
   
  **재귀적 검색**  
  하위 디렉터리 안에서 재귀적으로 검색할 것인지 여부를 지정합니다.
@@ -528,7 +528,7 @@ RBAC 구성에 사용되는 애플리케이션(클라이언트) ID와는 다릅�
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 자습서인 간단한 ETL 패키지 만들기 자습서에는 Foreach 루프를 추가 및 구성하는 방법을 배울 수 있는 단원이 있습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **변수**  
  기존 변수를 선택하거나 **새 변수...** 를 클릭하여 새 변수를 만듭니다.  
   

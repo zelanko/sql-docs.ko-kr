@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d79007dccddef604315c57beca1e1274d23c6f0f
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095688"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>트랜잭션 잠금 및 행 버전 관리 지침
@@ -39,7 +39,7 @@ ms.locfileid: "74095688"
  **일관성**  
  완료된 트랜잭션의 모든 데이터는 일관되어야 합니다. 관계형 데이터베이스에서는 트랜잭션 수정에 모든 규칙을 적용하여 모든 데이터 무결성을 유지해야 합니다. 트랜잭션 마지막에는 B-tree 인덱스 또는 이중 연결 목록 등 모든 내부적 데이터 구조를 반드시 수정해야 합니다.  
   
- **격리성**  
+ **격리**  
  동시 트랜잭션에 의한 수정은 다른 동시 트랜잭션에 의한 수정과 격리되어야 합니다. 트랜잭션에서 다른 동시 트랜잭션이 수정하기 전 상태의 데이터를 보거나 두 번째 트랜잭션이 완료된 후의 데이터를 볼 수는 있지만 중간 상태는 볼 수 없습니다. 결과적으로 시작 데이터를 다시 로드하고 일련의 트랜잭션을 재생하여 원래 트랜잭션이 수행된 후의 상태로 데이터를 되돌릴 수 있는데 이를 순차성이라고 합니다.  
   
  **영속성**  
@@ -290,17 +290,17 @@ GO
 |행 버전 관리 기반 격리|정의|  
 |------------------------------------|----------------|  
 |커밋된 스냅샷 읽기|READ_COMMITTED_SNAPSHOT 데이터베이스 옵션을 ON으로 설정하면 커밋된 읽기 격리가 행 버전 관리를 통해 문 수준의 읽기 일관성을 제공합니다. 읽기 작업에 SCH-S 테이블 수준 잠금만 필요하고 페이지 또는 행 잠금은 필요하지 않습니다. 즉, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 행 버전 관리를 사용하여 문 시작 시와 트랜잭션별로 데이터의 일관성이 유지된 스냅샷을 각 문에 제공합니다. 다른 트랜잭션에 의한 데이터 업데이트 차단을 위해 잠금이 사용되지는 않습니다. 사용자 정의 함수는 UDF를 포함하는 구문 시간이 시작된 후에 커밋된 데이터를 반환할 수 있습니다.<br /><br /> `READ_COMMITTED_SNAPSHOT` 데이터베이스 옵션을 기본값인 OFF로 설정하면 커밋된 격리 읽기는 공유 잠금을 사용하여 현재 트랜잭션이 읽기 작업을 실행하는 동안 다른 트랜잭션이 행을 수정하지 못하도록 합니다. 또한 공유 잠금은 다른 트랜잭션이 완료될 때까지 해당 트랜잭션이 수정한 행을 문이 읽을 수 없도록 합니다. 두 구현 모두 커밋된 읽기 격리에 대한 ISO 정의를 충족합니다.|  
-|스냅샷|스냅샷 격리 수준은 행 버전 관리를 통해 트랜잭션 수준의 읽기 일관성을 제공합니다. 읽기 작업에 SCH-S 테이블 잠금만 필요하고 페이지 또는 행 잠금은 필요하지 않습니다. 다른 트랜잭션에서 수정한 행을 읽을 때 트랜잭션 시작 당시의 행 버전을 검색합니다. `ALLOW_SNAPSHOT_ISOLATION` 데이터베이스 옵션을 ON으로 설정하면 데이터베이스에 대해 스냅샷 격리만 사용할 수 있습니다. 기본적으로 사용자 데이터베이스에 대해서는 이 옵션이 OFF로 설정되어 있습니다.<br /><br /> **참고:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 메타데이터의 버전 관리를 지원하지 않습니다. 따라서 스냅샷 격리에서 실행하는 명시적 트랜잭션에서 수행할 수 있는 DDL 작업에 대한 제한 사항이 있습니다. ALTER TABLE, CREATE INDEX, CREATE XML INDEX, ALTER INDEX, DROP INDEX, DBCC REINDEX, ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME 또는 CLR(공용 언어 런타임) DDL 문과 같은 DDL 문은 BEGIN TRANSACTION 문 다음에 스냅샷 격리에서 허용되지 않습니다. 이러한 문은 암시적 트랜잭션 내에서 스냅샷 격리를 사용할 때 허용됩니다. 기본적으로 암시적 트랜잭션은 DDL 문에서도 스냅샷 격리의 의미 체계를 적용할 수 있게 하는 단일 문입니다. 이 원칙을 위반하면 오류 3961이 발생할 수 있습니다. `Snapshot isolation transaction failed in database '%.*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is not allowed because the metadata is not versioned. A concurrent update to metadata could lead to inconsistency if mixed with snapshot isolation.`|  
+|스냅샷|스냅샷 격리 수준은 행 버전 관리를 통해 트랜잭션 수준의 읽기 일관성을 제공합니다. 읽기 작업에 SCH-S 테이블 잠금만 필요하고 페이지 또는 행 잠금은 필요하지 않습니다. 다른 트랜잭션에서 수정한 행을 읽을 때 트랜잭션 시작 당시의 행 버전을 검색합니다. `ALLOW_SNAPSHOT_ISOLATION` 데이터베이스 옵션을 ON으로 설정하면 데이터베이스에 대해 스냅샷 격리만 사용할 수 있습니다. 기본적으로 사용자 데이터베이스에 대해서는 이 옵션이 OFF로 설정되어 있습니다.<br /><br /> **참고:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 메타데이터의 버전 관리를 지원하지 않습니다. 따라서 스냅샷 격리에서 실행하는 명시적 트랜잭션에서 수행할 수 있는 DDL 작업에 대한 제한 사항이 있습니다. ALTER TABLE, CREATE INDEX, CREATE XML INDEX, ALTER INDEX, DROP INDEX, DBCC REINDEX, ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME 또는 CLR(공용 언어 런타임) DDL 문과 같은 DDL 문은 BEGIN TRANSACTION 문 다음에 스냅샷 격리에서 허용되지 않습니다. 다음 명령문은 암시적 트랜잭션 내에서 스냅샷 격리를 사용하는 경우 허용됩니다. 기본적으로 암시적 트랜잭션은 DDL 문에서도 스냅샷 격리의 의미 체계를 적용할 수 있게 하는 단일 문입니다. 이 원칙을 위반하면 오류 3961이 발생할 수 있습니다. `Snapshot isolation transaction failed in database '%.*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is not allowed because the metadata is not versioned. A concurrent update to metadata could lead to inconsistency if mixed with snapshot isolation.`|  
   
  다음 표에서는 각 격리 수준에서 사용되는 동시성 부작용을 보여 줍니다.  
   
 |격리 수준|커밋되지 않은 읽기|반복되지 않는 읽기|가상|  
 |---------------------|----------------|------------------------|-------------|  
-|**READ UNCOMMITTED**|예|예|예|  
-|**READ COMMITTED**|아니오|예|예|  
-|**REPEATABLE READ**|아니오|아니오|예|  
-|**스냅샷**|아니오|아니오|아니오|  
-|**직렬화 가능**|아니오|아니오|아니오|  
+|**READ UNCOMMITTED**|yes|yes|yes|  
+|**READ COMMITTED**|예|yes|yes|  
+|**REPEATABLE READ**|예|예|yes|  
+|**스냅샷**|예|예|예|  
+|**직렬화 가능**|예|예|예|  
   
  각 트랜잭션 격리 수준에서 제어하는 특정 종류의 잠금 또는 행 버전 관리에 대한 자세한 내용은 [SET TRANSACTION ISOLATION LEVEL&#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)을 참조하십시오.  
   
@@ -324,7 +324,7 @@ GO
   
  스냅샷 트랜잭션의 경우 애플리케이션은 Attribute를 SQL_COPT_SS_TXN_ISOLATION으로, ValuePtr을 SQL_TXN_SS_SNAPSHOT으로 설정하고 `SQLSetConnectAttr`을 호출합니다. SQL_COPT_SS_TXN_ISOLATION이나 SQL_ATTR_TXN_ISOLATION을 사용하여 스냅샷 트랜잭션을 검색할 수 있습니다.  
   
-##  <a name="Lock_Engine"></a> [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]의 잠금  
+##  <a name="Lock_Engine"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]의 잠금  
  잠금은 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서 사용하는 메커니즘으로 동시에 여러 사용자가 동일한 데이터에 액세스하는 것을 동기화합니다.  
   
  특정 트랜잭션이 데이터 읽기나 수정 등을 통해 현재 데이터 상태에 종속되기 전에 동일한 데이터를 수정하는 다른 트랜잭션의 영향을 받지 못하도록 해당 트랜잭션을 보호해야 합니다. 트랜잭션은 데이터에 대한 잠금을 요청하여 자체 트랜잭션을 보호합니다. 잠금에는 공유나 배타 등의 다양한 모드가 있습니다. 잠금 모드는 데이터에 대한 트랜잭션의 종속성 수준을 정의합니다. 해당 데이터에 대해 이미 다른 트랜잭션에 허용된 잠금 모드와 충돌되는 잠금은 이 트랜잭션에 허용될 수 없습니다. 특정 트랜잭션에서 이미 허용된 잠금과 충돌되는 잠금 모드를 동일한 데이터에 요청하면 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 인스턴스는 첫 번째 잠금이 해제될 때까지 요청한 트랜잭션을 일시 중지합니다.  
@@ -340,7 +340,7 @@ GO
   
  다음 표에서는 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]이 잠글 수 있는 리소스를 보여 줍니다.  
   
-|리소스|설명|  
+|리소스|Description|  
 |--------------|-----------------|  
 |RID|행 식별자는 힙 내의 단일 행을 잠그는 데 사용됩니다.|  
 |KEY|인덱스 내의 행 잠금은 직렬화 가능한 트랜잭션에서 키 범위를 보호하는 데 사용됩니다.|  
@@ -362,12 +362,12 @@ GO
   
  다음 표에서는 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서 사용하는 리소스 잠금 모드를 보여 줍니다.  
   
-|잠금 모드|설명|  
+|잠금 모드|Description|  
 |---------------|-----------------|  
 |공유(S)|`SELECT` 문처럼 데이터를 변경하거나 업데이트하지 않는 읽기 작업에 사용합니다.|  
 |업데이트(U)|업데이트할 수 있는 리소스에 사용합니다. 여러 개의 세션이 리소스를 읽고, 잠그고, 나중에 업데이트할 때 발생하는 일반적인 교착 상태를 방지합니다.|  
 |배타적(X)|`INSERT`, `UPDATE` 또는 `DELETE`와 같은 데이터 수정 작업에 사용합니다. 여러 개의 업데이트 작업이 같은 리소스에 대해 동시에 이루어지지 못하게 합니다.|  
-|의도|잠금 계층 구조를 만드는 데 사용합니다. 의도 잠금의 종류에는 내재된 공유(IS), 내재된 배타(IX), 공유 내재된 배타(SIX)가 있습니다.|  
+|Intent|잠금 계층 구조를 만드는 데 사용합니다. 의도 잠금의 종류에는 내재된 공유(IS), 내재된 배타(IX), 공유 내재된 배타(SIX)가 있습니다.|  
 |스키마|테이블의 스키마에 종속되는 작업이 실행될 때 사용합니다. 스키마 잠금에는 스키마 수정(Sch-M)과 스키마 안정성(Sch-S) 잠금이 있습니다.|  
 |대량 업데이트(BU)|데이터를 테이블로 대량 복사하는 경우와 `TABLOCK` 힌트가 지정된 경우 사용합니다.|  
 |키 범위|직렬화 가능 트랜잭션 격리 수준을 사용할 때 쿼리가 읽는 행 범위를 보호합니다. 쿼리가 다시 실행될 경우 직렬화 가능 트랜잭션의 쿼리에 대해 반환되는 행을 다른 트랜잭션이 삽입할 수 없도록 합니다.|  
@@ -397,7 +397,7 @@ GO
   
 <a name="lock_intent_table"></a> 의도 잠금에는 내재된 공유(IS) 잠금, 의도 배타(IX) 잠금, 의도 배타 공유(SIX) 잠금이 있습니다.  
   
-|잠금 모드|설명|  
+|잠금 모드|Description|  
 |---------------|-----------------|  
 |내재된 공유(IS)|계층 구조의 아래쪽에 있는 일부 리소스에 대해 요청되거나 확보된 공유 잠금을 보호합니다.|  
 |의도 배타(IX)|계층 구조의 아래쪽에 있는 일부 리소스에 대해 요청되거나 확보된 배타 잠금을 보호합니다. IX는 IS의 상위 집합으로, 하위 수준 리소스에 대한 공유 잠금 요청도 보호합니다.|  
@@ -420,7 +420,7 @@ GO
 -   **TABLOCK** 힌트를 지정하거나 **sp_tableoption**을 사용하여 **table lock on bulk load** 테이블 옵션을 설정합니다.  
   
 > [!TIP]  
-> 덜 제한적인 대량 업데이트 잠금을 보유하는 BULK INSERT 문과 달리 TABLOCK 힌트를 사용하는 INSERT INTO...SELECT는 테이블에 대해 배타적(X) 잠금을 보유합니다. 즉, 병렬 삽입 작업을 사용하여 행을 삽입할 수 없습니다.  
+> 덜 제한적인 대량 업데이트 잠금을 보유하는 BULK INSERT 문과 달리 TABLOCK 힌트를 사용하는 INSERT INTO...SELECT 문은 테이블에 대해 배타적(X) 잠금을 보유합니다. 즉, 병렬 삽입 작업을 사용하여 행을 삽입할 수 없습니다.  
   
 #### <a name="key_range"></a> 키 범위 잠금  
  키 범위 잠금은 직렬화 가능 트랜잭션 격리 수준을 사용하는 동안 [!INCLUDE[tsql](../includes/tsql-md.md)] 문에서 읽는 레코드 집합에 포함된 행 범위를 암시적으로 보호합니다. 키 범위 잠금은 가상 읽기를 방지합니다. 행 간에 키 범위를 보호하면 트랜잭션이 액세스하는 레코드 집합에 대한 가상 삽입이나 가상 삭제도 방지됩니다.  
@@ -433,17 +433,17 @@ GO
 ||기존의 허가 모드||||||  
 |------|---------------------------|------|------|------|------|------|  
 |**요청 모드**|**IS**|**S**|**U**|**IX**|**SIX**|**X**|  
-|**내재된 공유(IS)(IS)**|예|예|예|예|예|아니오|  
-|**공유(S)**|예|예|예|아니오|아니오|아니오|  
-|**업데이트(U)**|예|예|아니오|아니오|아니오|아니오|  
-|**의도 배타(IX)**|예|아니오|아니오|예|아니오|아니오|  
-|**의도 배타 공유(SIX)**|예|아니오|아니오|아니오|아니오|아니오|  
-|**배타적(X)**|아니오|아니오|아니오|아니오|아니오|아니오|  
+|**내재된 공유(IS)(IS)**|yes|yes|yes|yes|yes|예|  
+|**공유(S)**|yes|yes|yes|예|예|예|  
+|**업데이트(U)**|yes|yes|예|예|예|예|  
+|**의도 배타(IX)**|yes|예|예|yes|예|예|  
+|**의도 배타 공유(SIX)**|yes|예|예|예|예|예|  
+|**배타적(X)**|예|예|예|예|예|예|  
   
 > [!NOTE]  
 > 의도 배타(IX) 잠금은 모든 행이 아닌 일부 행만 업데이트하기 위한 것이므로 IX 잠금 모드와 호환됩니다. 일부 행을 읽거나 업데이트하려고 하는 다른 트랜잭션도 허용됩니다. 단, 해당 행을 다른 트랜잭션이 업데이트하고 있지 않아야 합니다. 두 트랜잭션이 같은 행을 업데이트하려고 시도하는 경우 두 트랜잭션 모두에 테이블 및 페이지 수준의 IX 잠금이 부여됩니다. 하지만 한 트랜잭션에 행 수준의 X 잠금이 부여되므로 다른 트랜잭션은 행 수준 잠금이 제거될 때까지 대기해야 합니다.  
   
-<a name="lock_matrix"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 사용할 수 있는 모든 잠금 모드의 호환성을 확인하려면 다음 표를 사용합니다.  
+<a name="lock_matrix"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 사용할 수 있는 모든 잠금 모드의 호환성을 확인하려면 다음 표를 사용합니다.  
   
  ![lock_conflicts](../relational-databases/media/LockConflictTable.png)  
   
@@ -461,7 +461,7 @@ GO
 -   행은 인덱스 항목을 보호하는 잠금 모드를 나타냅니다.  
 -   모드는 사용된 혼합 잠금 모드를 나타냅니다. 키 범위 잠금 모드는 두 부분으로 구성됩니다. 첫 번째는 인덱스 범위(Range*T*)를 잠그는 데 사용하는 잠금 유형을 나타내고 두 번째는 특정 키(*K*)를 잠그는 데 사용하는 잠금 유형을 나타냅니다. 두 부분은 *T*-*K*와 같이 하이픈(-)으로 연결됩니다.  
   
-    |범위|행|모드|설명|  
+    |범위|행|Mode|Description|  
     |-----------|---------|----------|-----------------|  
     |RangeS|S|RangeS-S|공유 범위, 공유 리소스 잠금. 직렬화 가능한 범위 검색입니다.|  
     |RangeS|U|RangeS-U|공유 범위, 업데이트 리소스 잠금, 직렬화 가능한 업데이트 검색입니다.|  
@@ -476,13 +476,13 @@ GO
 ||기존의 허가 모드|||||||  
 |------|---------------------------|------|------|------|------|------|------|  
 |**요청 모드**|**S**|**U**|**X**|**RangeS-S**|**RangeS-U**|**RangeI-N**|**RangeX-X**|  
-|**공유(S)**|예|예|아니오|예|예|예|아니오|  
-|**업데이트(U)**|예|아니오|아니오|예|아니오|예|아니오|  
-|**배타적(X)**|아니오|아니오|아니오|아니오|아니오|예|아니오|  
-|**RangeS-S**|예|예|아니오|예|예|아니오|아니오|  
-|**RangeS-U**|예|아니오|아니오|예|아니오|아니오|아니오|  
-|**RangeI-N**|예|예|예|아니오|아니오|예|아니오|  
-|**RangeX-X**|아니오|아니오|아니오|아니오|아니오|아니오|아니오|  
+|**공유(S)**|yes|yes|예|yes|yes|yes|예|  
+|**업데이트(U)**|yes|예|예|yes|예|yes|예|  
+|**배타적(X)**|예|예|예|예|예|yes|예|  
+|**RangeS-S**|yes|yes|예|yes|yes|예|예|  
+|**RangeS-U**|yes|예|예|yes|예|예|예|  
+|**RangeI-N**|yes|yes|yes|예|예|yes|예|  
+|**RangeX-X**|예|예|예|예|예|예|예|  
   
 #### <a name="lock_conversion"></a> 변환 잠금  
  변환 잠금은 키 범위 잠금이 다른 잠금과 겹칠 때 만들어집니다.  
@@ -577,7 +577,7 @@ INSERT mytable VALUES ('Dan');
  [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 이상 버전에서 잠금 에스컬레이션의 동작은 `LOCK_ESCALATION` 옵션의 도입으로 변경되었습니다. 자세한 내용은 [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md)의 `LOCK_ESCALATION` 옵션을 참조하세요.  
   
 ### <a name="deadlocks"></a> 교착 상태  
- 한 태스크에서 잠근 리소스를 다른 태스크에서 잠그려고 하여 둘 이상의 태스크가 서로 영구적으로 차단하면 교착 상태가 발생합니다. 예를 들어  
+ 한 태스크에서 잠근 리소스를 다른 태스크에서 잠그려고 하여 둘 이상의 태스크가 서로 영구적으로 차단하면 교착 상태가 발생합니다. 다음은 그 예입니다.  
   
 -   트랜잭션 A가 1행에 대한 공유 잠금을 획득합니다.  
 -   트랜잭션 B가 2행에 대한 공유 잠금을 획득합니다.  
@@ -594,7 +594,7 @@ INSERT mytable VALUES ('Dan');
   
  교착 상태는 관계형 데이터베이스 관리 시스템뿐만 아니라 다중 스레드를 사용하는 어느 시스템에서나 발생할 수 있으며 데이터베이스 개체에 대한 잠금 이외의 리소스에 대해 발생할 수 있습니다. 예를 들어 다중 스레드 운영 체제의 스레드는 메모리 블록과 같은 하나 이상의 리소스를 획득할 수 있습니다. 획득하려는 리소스를 현재 다른 스레드가 소유하고 있으면 대상 리소스가 해제될 때까지 첫 번째 스레드가 기다려야 할 수 있습니다. 이렇게 대기 중인 스레드는 해당 리소스에 대해 리소스를 소유하는 스레드에 종속됩니다. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]의 인스턴스에서 세션은 메모리나 스레드 등의 데이터베이스가 아닌 리소스를 획득할 때 교착 상태에 빠질 수 있습니다.  
   
- ![교착 상태(deadlock)](../relational-databases/media/deadlock.png)  
+ ![교착 상태](../relational-databases/media/deadlock.png)  
   
  이 그림에서 트랜잭션 T1은 **Part** 테이블 잠금 리소스에 대해 트랜잭션 T2에 종속됩니다. 마찬가지로 스레드 T2는 **Supplier** 테이블 잠금 리소스에 대해 트랜잭션 T1에 종속됩니다. 이러한 종속 관계는 순환적이므로 스레드 T1과 T2 간에 교착 상태가 발생합니다.  
   
@@ -1055,7 +1055,7 @@ BEGIN TRANSACTION
         WITH (TABLOCKX, HOLDLOCK);  
 ```   
   
-##  <a name="Row_versioning"></a> [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서 행 버전 관리 기반 격리 수준 사용.  
+##  <a name="Row_versioning"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서 행 버전 관리 기반 격리 수준 사용.  
  [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]부터 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서는 기존 격리 수준을 구현한 커밋된 읽기를 제공하여 행 버전 관리를 사용하는 문 수준 스냅샷을 제공합니다. 또한 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서는 트랜잭션 격리 수준인 스냅샷이 도입되어 행 버전 관리를 사용하는 트랜잭션 수준 스냅샷을 제공합니다.  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 행 버전 관리는 행을 수정하거나 삭제할 때 쓰기 시 복사 메커니즘을 호출하는 일반적인 방법입니다. 이렇게 하려면 트랜잭션을 실행하는 동안 트랜잭션의 일관성 있는 이전 상태가 요구되는 트랜잭션에서 이전 기존 행 버전을 사용할 수 있어야 합니다. 행 버전 관리는 다음 용도로 사용됩니다.  
@@ -1277,7 +1277,7 @@ BEGIN TRANSACTION
 ### <a name="row-versioning-based-isolation-level-example"></a>행 버전 관리 기반 격리 수준 예  
  다음 예에서는 스냅샷 격리 트랜잭션과 행 버전 관리를 사용하는 커밋된 읽기 트랜잭션 동작의 차이를 보여 줍니다.  
   
-#### <a name="a-working-with-snapshot-isolation"></a>1\. 스냅샷 격리 작업  
+#### <a name="a-working-with-snapshot-isolation"></a>A. 스냅샷 격리 작업  
  이 예에서는 스냅샷 격리에서 실행되는 트랜잭션이 다른 트랜잭션에서 수정한 데이터를 읽습니다. 스냅샷 트랜잭션은 다른 트랜잭션에서 실행하는 업데이트 작업을 차단하지 않으며 데이터 수정을 무시하고 계속 버전이 지정된 행에서 데이터를 읽습니다. 그러나 스냅샷 트랜잭션이 다른 트랜잭션에서 이미 수정한 데이터를 수정할 경우 스냅샷 트랜잭션은 오류를 생성하고 종료됩니다.  
   
  세션 1:  
@@ -1373,7 +1373,7 @@ ROLLBACK TRANSACTION
 GO  
 ```  
   
-#### <a name="b-working-with-read-committed-using-row-versioning"></a>2\. 행 버전 관리를 사용한 커밋된 읽기 작업  
+#### <a name="b-working-with-read-committed-using-row-versioning"></a>B. 행 버전 관리를 사용한 커밋된 읽기 작업  
  이 예에서 행 버전 관리를 사용하는 커밋된 읽기 트랜잭션은 다른 트랜잭션과 동시에 실행됩니다. 커밋된 읽기 트랜잭션은 스냅샷 트랜잭션과 다르게 동작합니다. 스냅샷 트랜잭션과 마찬가지로 커밋된 읽기 트랜잭션도 다른 트랜잭션이 데이터를 수정한 이후에 버전이 지정된 행을 읽습니다. 그러나 커밋된 읽기 트랜잭션은 스냅샷 트랜잭션과 달리 다음 작업을 수행합니다.  
   
 -   다른 트랜잭션이 데이터 변경 내용을 커밋한 이후에 수정한 데이터를 읽습니다.  
@@ -1495,11 +1495,11 @@ ALTER DATABASE AdventureWorks2016
   
  다음 표에서는 ALLOW_SNAPSHOT_ISOLATION 옵션을 나열하고 각각의 상태에 대해 설명합니다. ALTER DATABASE에 ALLOW_SNAPSHOT_ISOLATION 옵션을 사용할 경우 현재 데이터베이스 데이터에 액세스하고 있는 사용자는 차단되지 않습니다.  
   
-|현재 데이터베이스에 대한 스냅샷 격리 프레임워크의 상태|설명|  
+|현재 데이터베이스에 대한 스냅샷 격리 프레임워크의 상태|Description|  
 |----------------------------------------------------------------|-----------------|  
 |OFF|스냅샷 격리 트랜잭션에 대한 지원이 활성화되지 않았습니다. 스냅샷 격리 트랜잭션이 허용되지 않습니다.|  
 |PENDING_ON|스냅샷 격리 트랜잭션에 대한 지원이 OFF에서 ON으로 전환되는 중입니다. 열린 트랜잭션을 완료해야 합니다.<br /><br /> 스냅샷 격리 트랜잭션이 허용되지 않습니다.|  
-|ON|스냅샷 격리 트랜잭션에 대한 지원이 활성화되었습니다.<br /><br /> 스냅샷 트랜잭션이 허용됩니다.|  
+|켜기|스냅샷 격리 트랜잭션에 대한 지원이 활성화되었습니다.<br /><br /> 스냅샷 트랜잭션이 허용됩니다.|  
 |PENDING_OFF|스냅샷 격리 트랜잭션에 대한 지원이 ON에서 OFF로 전환되는 중입니다.<br /><br /> 이 시점 이후에 시작된 스냅샷 트랜잭션은 이 데이터베이스에 액세스할 수 없습니다. 업데이트 트랜잭션은 이 데이터베이스에서 계속해서 버전 관리를 수행합니다. 기존 스냅샷 트랜잭션은 문제 없이 이 데이터베이스에 액세스할 수 있습니다. 데이터베이스 스냅샷 격리 상태가 ON이었을 때 활성화되어 있던 스냅샷 트랜잭션이 모두 완료되어야 PENDING_OFF 상태가 OFF로 변경됩니다.|  
   
  두 행 버전 관리 데이터베이스 옵션의 상태를 확인하려면 `sys.databases` 카탈로그 뷰를 사용합니다.  
@@ -1586,7 +1586,7 @@ ALTER DATABASE AdventureWorks2016
 ## <a name="customizing-locking-and-row-versioning"></a>잠금 및 행 버전 관리 사용자 지정  
   
 ### <a name="customizing-the-lock-time-out"></a>잠금 제한 시간 사용자 지정  
- 다른 트랜잭션에서 이미 리소스에 대해 충돌되는 잠금을 소유하고 있어 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]의 인스턴스에서 트랜잭션에 잠금을 허가할 수 없는 경우 이 트랜잭션은 기존 잠금이 해제되기를 기다리면서 차단됩니다. 기본적으로 정해진 제한 시간은 없으며 리소스를 잠그기 전에 해당 리소스가 잠겨 있는지 여부를 확인할 수 없습니다. 단, 데이터에 대한 액세스를 시도할 수는 있으나 이로 인해 무기한으로 차단될 수 있습니다.  
+ 다른 트랜잭션에서 이미 리소스에 대해 충돌되는 잠금을 소유하고 있어 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]의 인스턴스에서 트랜잭션에 잠금을 허가할 수 없는 경우 이 트랜잭션은 기존 잠금이 해제되기를 기다리면서 차단됩니다. 기본적으로 정해진 제한 시간은 없으며 리소스를 잠그기 전에 해당 리소스가 잠겨 있는지 여부를 확인할 수 없습니다. 단, 데이터에 대한 액세스를 시도할 수는 있으나 이로 인해 무기한으로 차단될 수 있습니다.  
   
 > [!NOTE]  
 > [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 **sys.dm_os_waiting_tasks** 동적 관리 뷰를 사용하여 프로세스가 차단되었는지 여부와 프로세스를 차단하고 있는 주체를 확인할 수 있습니다. 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 **sp_who** 시스템 저장 프로시저를 사용합니다.  

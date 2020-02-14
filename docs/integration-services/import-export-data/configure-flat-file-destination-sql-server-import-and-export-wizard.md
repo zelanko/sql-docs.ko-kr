@@ -12,10 +12,10 @@ ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8c596f37cb0a83682c5c8dff370a92a5d3d73eb5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285792"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>플랫 파일 대상 구성(SQL Server 가져오기 및 내보내기 마법사)
@@ -43,7 +43,7 @@ ms.locfileid: "71285792"
  **행 구분 기호**  
  출력의 행을 구분할 구분 기호를 목록에서 선택합니다. *사용자 지정* 행 구분 기호를 지정할 수 있는 옵션은 없습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|행을 캐리지 리턴-줄 바꿈 조합으로 구분합니다.|  
 |**{CR}**|행을 캐리지 리턴으로 구분합니다.|  
@@ -57,7 +57,7 @@ ms.locfileid: "71285792"
  **열 구분 기호**  
  출력의 열을 구분할 구분 기호를 목록에서 선택합니다. *사용자 지정* 열 구분 기호를 지정할 수 있는 옵션은 없습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|열을 캐리지 리턴-줄 바꿈 조합으로 구분합니다.|  
 |**{CR}**|열을 캐리지 리턴으로 구분합니다.|  

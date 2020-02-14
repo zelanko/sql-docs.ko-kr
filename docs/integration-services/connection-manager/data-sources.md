@@ -13,10 +13,10 @@ ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 29c4fe9779b30066a188b9270e920ffd6339421b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298621"
 ---
 # <a name="data-sources"></a>솔루션 탐색기
@@ -24,7 +24,7 @@ ms.locfileid: "71298621"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에 사용할 수 있는 데이터 원본인 디자인 타임 개체를 포함합니다.  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에 사용할 수 있는 데이터 원본인 디자인 타임 개체를 포함합니다.  
   
  데이터 원본 개체는 연결에 대한 참조이며 최소한 연결 문자열과 데이터 원본 식별자가 포함됩니다. 또한 여기에는 설명, 이름, 사용자 이름 및 암호와 같은 추가 메타데이터가 포함될 수 있습니다.  
   

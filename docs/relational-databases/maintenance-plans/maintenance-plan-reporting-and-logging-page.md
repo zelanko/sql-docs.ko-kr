@@ -13,10 +13,10 @@ ms.assetid: 3a30b17a-3deb-446f-900a-62f88934a90f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2905877f907e932be058a07ba3a9fbbd892e7ae6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115702"
 ---
 # <a name="maintenance-plan-reporting-and-logging-page"></a>유지 관리 계획(보고 및 로깅 페이지)
@@ -25,7 +25,7 @@ ms.locfileid: "68115702"
   
 ## <a name="options"></a>옵션  
  **텍스트 파일 보고서 생성**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 텍스트 파일 보고서를 기록하도록 할지 여부를 지정합니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 텍스트 파일 보고서를 기록하도록 할지 여부를 지정합니다.  
   
  **새 파일 만들기**  
  유지 관리 계획이 실행될 때마다 새 보고서 파일을 만듭니다. 기본적으로 보고서 파일은 해당 유지 관리 계획이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 호스팅하는 컴퓨터의 기본 로그 폴더에 기록됩니다. 기본 로그 폴더는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중 설정합니다. 다른 폴더를 지정하려면 **폴더** 입력란에 전체 폴더 경로를 입력하거나 찾아보기 단추( **...** )를 클릭하고 원하는 폴더를 탐색합니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "68115702"
  **원격 서버에 기록**  
  원격 서버에 유지 관리 계획 기록을 작성합니다.  
   
- **대량 삽입 태스크 편집기**  
+ **연결**  
  원격 서버에 기록할 때 사용할 연결 정보를 지정합니다.  
   
  **새로 만들기**  

@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 00fd02afb8cfd140124a9f476aa4ae0bfb4e1514
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095312"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>변경 데이터 캡처 관리 및 모니터링(SQL Server)
@@ -65,7 +65,7 @@ ms.locfileid: "74095312"
 연속 모드에서 캡처 작업은 `sp_cdc_scan`이 연속으로 실행되도록 요청합니다. 이렇게 하면 저장 프로시저에서 maxtrans 및 maxscans뿐만 아니라 로그 처리 간격(초)(폴링 간격)에 대한 값을 제공함으로써 고유한 대기 루프를 관리할 수 있습니다. 이 모드에서 실행될 때 캡처 작업은 활성 상태로 유지되고 로그 검색 사이에 `WAITFOR`를 실행합니다.  
   
 > [!NOTE]  
-> 폴링 간격 값이 0보다 큰 경우 연속 모드에서 실행되는 작업에도 되풀이되는 단발 작업의 처리량과 동일한 상한 값이 적용됩니다. 따라서 (`maxtrans` \* `maxscans`)를 0이 아닌 폴링 간격으로 나누면 캡처 작업에서 처리할 수 있는 트랜잭션의 평균 수에 대한 상한 값이 나옵니다.  
+> 폴링 간격 값이 0보다 큰 경우 연속 모드에서 실행되는 작업에도 되풀이되는 단발 작업의 처리량과 동일한 상한 값이 적용됩니다. 따라서 (`maxtrans` \* `maxscans`)를 0이 아닌 폴링 간격으로 나누면 캡처 작업에서 처리할 수 있는 트랜잭션의 평균 수에 대한 상한값이 나옵니다.  
   
 ### <a name="capture-job-customization"></a>캡처 작업 사용자 지정
 

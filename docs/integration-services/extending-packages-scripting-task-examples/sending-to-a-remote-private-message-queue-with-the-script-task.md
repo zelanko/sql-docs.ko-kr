@@ -17,10 +17,10 @@ ms.assetid: 636314fd-d099-45cd-8bb4-f730d0a06739
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 53fc016bc4657dd1dce7dd0eefcbea58a28ae14e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296993"
 ---
 # <a name="sending-to-a-remote-private-message-queue-with-the-script-task"></a>스크립트 태스크를 사용하여 원격 프라이빗 메시지 큐에 메시지 보내기
@@ -33,7 +33,7 @@ ms.locfileid: "71296993"
 > [!NOTE]  
 >  여러 패키지에서 쉽게 다시 사용할 수 있는 태스크를 만들려면 이 스크립트 태스크 예제에 있는 코드를 바탕으로 사용자 지정 태스크를 만들어 보십시오. 자세한 내용은 [사용자 지정 태스크 개발](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)을 참조하세요.  
   
-## <a name="description"></a>설명  
+## <a name="description"></a>Description  
  다음 예에서는 기존 MSMQ 연결 관리자와 System.Messaging 네임스페이스의 개체 및 메서드를 사용하여 패키지 변수에 들어 있는 텍스트를 원격 프라이빗 메시지 큐에 보냅니다. MSMQ 연결 관리자의 M:Microsoft.SqlServer.Dts.ManagedConnections.MSMQConn.AcquireConnection(System.Object) 메서드에 대한 호출은 **Send** 메서드가 이 작업을 수행하는 **MessageQueue** 개체를 반환합니다.  
   
 #### <a name="to-configure-this-script-task-example"></a>이 스크립트 태스크 예를 구성하려면  
@@ -48,7 +48,7 @@ ms.locfileid: "71296993"
   
 3.  디자인 화면에 스크립트 태스크를 추가하고 편집합니다. **스크립트 태스크 편집기**의 **스크립트** 탭에서 **ReadOnlyVariables** 속성에 `MessageText` 변수를 추가하여 해당 변수를 스크립트 내에서 사용할 수 있게 합니다.  
   
-4.  **스크립트 편집**을 클릭하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] VSTA(Tools for Applications) 스크립트 편집기를 엽니다.  
+4.  **스크립트 편집**을 클릭하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] VSTA([!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications) 스크립트 편집기를 엽니다.  
   
 5.  **System.Messaging** 네임스페이스에 대한 참조를 스크립트 프로젝트에 추가합니다.  
   

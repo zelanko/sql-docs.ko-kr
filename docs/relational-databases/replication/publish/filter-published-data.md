@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 55eb271c7eb5dff661b37cfb18b029e57bbeb0ba
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 38e0164de9dda9f86183a89a29b58753b2a7f118
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769884"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287644"
 ---
 # <a name="filter-published-data"></a>게시된 데이터 필터링
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -54,16 +54,16 @@ ms.locfileid: "68769884"
   
 -   매개 변수가 있는 행 필터 - 병합 복제에만 사용할 수 있음  
   
-     매개 변수가 있는 행 필터를 사용하여 게시할 행의 하위 집합을 선택할 수 있습니다. 모든 구독자에게 행의 동일한 하위 집합을 보내는 정적 필터와 달리 매개 변수가 있는 행 필터는 구독자가 제공한 데이터 값을 사용하여 구독자에게 행의 다른 하위 집합을 보냅니다. 자세한 내용은 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)을 참조하세요.  
+     매개 변수가 있는 행 필터를 사용하여 게시할 행의 하위 집합을 선택할 수 있습니다. 모든 구독자에게 행의 동일한 하위 집합을 보내는 정적 필터와 달리 매개 변수가 있는 행 필터는 구독자가 제공한 데이터 값을 사용하여 구독자에게 행의 다른 하위 집합을 보냅니다. 자세한 내용은 [매개 변수가 있는 행 필터](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  
   
 -   조인 필터 - 병합 복제에만 사용할 수 있음  
   
-     조인 필터를 사용하여 다른 게시된 테이블로 행 필터를 확장할 수 있습니다. 자세한 내용은 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)을 참조하세요.  
+     조인 필터를 사용하여 다른 게시된 테이블로 행 필터를 확장할 수 있습니다. 자세한 내용은 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)를 참조하세요.  
   
 ## <a name="static-row-filters"></a>정적 행 필터  
  다음 그림에서는 2행, 3행, 6행만 게시에 포함되도록 필터링된 게시된 테이블을 보여 줍니다.  
   
- ![행 필터링](../../../relational-databases/replication/publish/media/repl-16.gif "Row filtering")  
+ ![행 필터링](../../../relational-databases/replication/publish/media/repl-16.gif "행 필터링")  
   
  정적 행 필터는 WHERE 절을 사용하여 게시에 적합한 데이터를 선택합니다. WHERE 절의 마지막 부분은 사용자가 지정합니다. **ProductLine** 열이 포함된 Adventure Works 예제 데이터베이스의 **Product 테이블**을 참조하십시오. 산악 자전거 관련 제품에 대한 데이터가 있는 행만 게시하려면 `ProductLine = 'M'`을 지정합니다.  
   
@@ -74,18 +74,18 @@ ms.locfileid: "68769884"
     > [!NOTE]  
     >  행을 복제해야 하는지 여부를 결정하도록 게시된 테이블에 대해 기록된 각 로그 행에 대해 아티클 필터 절이 평가되기 때문에 행 필터는 트랜잭션 게시에서 중요한 오버헤드를 추가할 수 있습니다. 각 복제 노드가 전체 데이터 로드를 지원할 수 있고 데이터 집합의 크기가 전체적으로 작은 경우 트랜잭션 게시에 행 필터를 사용하지 않아야 합니다.  
   
--   병합 복제의 경우 정적 행 필터가 있는 여러 게시를 만드는 대신 매개 변수가 있는 행 필터를 사용합니다. 자세한 내용은 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)을 참조하세요.  
+-   병합 복제의 경우 정적 행 필터가 있는 여러 게시를 만드는 대신 매개 변수가 있는 행 필터를 사용합니다. 자세한 내용은 [매개 변수가 있는 행 필터](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  
   
  정적 행 필터를 정의하거나 수정하려면 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)를 참조하십시오.  
   
 ## <a name="column-filters"></a>열 필터  
  다음 그림에서는 C 열을 필터링하여 제외하는 게시를 보여 줍니다.  
   
- ![열 필터링](../../../relational-databases/replication/publish/media/repl-17.gif "Column filtering")  
+ ![열 필터링](../../../relational-databases/replication/publish/media/repl-17.gif "열 필터링")  
   
  다음 그림처럼 행 필터링과 열 필터링을 함께 사용할 수도 있습니다.  
   
- ![행 및 열 필터링](../../../relational-databases/replication/publish/media/repl-18.gif "Row and column filtering")  
+ ![행 및 열 필터링](../../../relational-databases/replication/publish/media/repl-18.gif "행 및 열 필터링")  
   
  게시가 생성된 다음에는 열 필터링을 사용하여 열을 기존 게시에서는 삭제하고 게시자에서는 테이블에 유지할 수 있고 게시에 기존 열을 포함시킬 수 있습니다. 테이블에 새 열을 추가한 다음 이 열을 게시된 아티클에 추가하는 것과 같은 다른 변경에 대해서는 스키마 변경 복제를 사용합니다. 자세한 내용은 [게시 데이터베이스의 스키마 변경](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md) 항목의 "열 추가" 및 "열 삭제" 섹션을 참조하세요.  
   

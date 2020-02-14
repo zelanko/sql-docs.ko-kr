@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c6d84af2893cc535717c2785d35875ca2b0d5550
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68476296"
 ---
 # <a name="index-properties-f1-help"></a>인덱스 속성 F1 도움말
@@ -96,7 +96,7 @@ ms.locfileid: "68476296"
  인덱스 키에 참여하는 열이 테이블 또는 뷰 열에 NULL 값을 저장하도록 허용할지 여부를 나타냅니다.  
   
  **추가**  
- 인덱스 키에 열을 추가합니다. **추가**를 클릭하면 나타나는 *\<테이블 이름>* **에서 열 선택** 대화 상자에서 테이블 열을 선택합니다. 공간 인덱스의 경우 열을 하나 선택하면 이 단추가 흐리게 표시됩니다.  
+ 인덱스 키에 열을 추가합니다. **추가**를 클릭하면 나타나는 ‘\<테이블 이름>**에서 열 선택**’ 대화 상자에서 테이블 열을 선택합니다.  공간 인덱스의 경우 열을 하나 선택하면 이 단추가 흐리게 표시됩니다.  
   
  **제거**  
  선택된 열을 인덱스 키에 참여하는 열에서 제거합니다.  
@@ -131,7 +131,7 @@ ms.locfileid: "68476296"
  **ID**  
  ID 열인 경우 **예** 를 표시하고 ID 열이 아닌 경우 **아니요** 를 표시합니다.  
   
- **Allow Nulls**  
+ **Null 허용**  
  테이블 정의에 따라 열에 Null 값이 허용되는 경우 **예** 를 표시합니다. 테이블 정의에 따라 열에 Null 값이 허용되지 않는 경우 **아니요** 를 표시합니다.  
 
 ##  <a name="Options"></a> 옵션 페이지 옵션
@@ -242,16 +242,16 @@ False 또는 fillfactor가 지정되지 않음<br>
   
  패널에는 경계 상자의 **(** _X-min_ **,** _Y-min_ **)** 및 **(** _X-max_ **,** _Y-max_ **)** 좌표가 표시됩니다. 기본 좌표 값은 없습니다. 따라서 **geometry** 유형 열에 새 공간 인덱스를 만드는 경우 좌표 값을 지정해야 합니다.  
   
- **X-min**  
+ **X 최소값**  
  경계 상자의 왼쪽 아래 모퉁이의 X 좌표입니다.  
   
- **Y-min**  
+ **Y 최소값**  
  경계 상자의 왼쪽 아래 모퉁이의 Y 좌표입니다.  
   
- **X-max**  
+ **X 최대값**  
  경계 상자의 오른쪽 위 모퉁이의 X 좌표입니다.  
   
- **Y-max**  
+ **Y 최대값**  
  경계 상자의 오른쪽 위 모퉁이의 Y 좌표입니다.  
   
 ### <a name="general"></a>일반  
@@ -296,7 +296,7 @@ False 또는 fillfactor가 지정되지 않음<br>
  이 페이지를 사용하여 필터링된 인덱스에 대한 필터 조건자를 입력할 수 있습니다. 자세한 내용은 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)을(를) 참조하세요.  
   
  **필터 식**  
- 필터링된 인덱스에 포함할 데이터 행을 정의합니다. 예를 들면 다음과 같습니다. `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
+ 필터링된 인덱스에 포함할 데이터 행을 정의합니다. 예를 들어 `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
   
 ## <a name="see-also"></a>참고 항목  
  [인덱스 옵션 설정](../../relational-databases/indexes/set-index-options.md)   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f07afead7d74b358c0220dc7ed22dbf31ebbf11a
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056053"
 ---
 # <a name="security-audit-event-category-sql-server-profiler"></a>Security Audit 이벤트 범주(SQL Server Profiler)
@@ -27,7 +27,7 @@ ms.locfileid: "74056053"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[Audit Add DB User 이벤트 클래스](../../relational-databases/event-classes/audit-add-db-user-event-class.md)|데이터베이스에서 로그인이 데이터베이스 사용자로 추가되거나 제거되었음을 나타냅니다.|  
 |[Audit Add Login to Server Role 이벤트 클래스](../../relational-databases/event-classes/audit-add-login-to-server-role-event-class.md)|고정 서버 역할에서 로그인이 추가되거나 제거되었음을 나타냅니다.|  

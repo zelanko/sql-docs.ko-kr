@@ -14,10 +14,10 @@ ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: f79d41e3fd247ca596a6257415d29f7ebcbe87b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986937"
 ---
 # <a name="sql-server-buffer-manager-object"></a>SQL Server, Buffer Manager 개체
@@ -39,13 +39,13 @@ ms.locfileid: "67986937"
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 디스크에서 데이터를 얼마나 자주 읽을 필요가 있는지 확인합니다. 실제 I/O는 메모리 액세스와 같은 다른 작업과 비교해서 시간이 더 오래 걸립니다. 실제 I/O를 최소화하면 쿼리 성능을 향상시킬 수 있습니다.  
   
 ## <a name="buffer-manager-performance-objects"></a>버퍼 관리자 성능 개체  
- 이 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Buffer Manager** 성능 개체를 설명합니다.  
+ 이 테이블에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Buffer Manager** 성능 개체에 대해 설명합니다.  
   
-|SQL Server Buffer Manager 카운터|설명|  
+|SQL Server Buffer Manager 카운터|Description|  
 |----------------------------------------|-----------------|  
 |**Background writer pages/sec**|복구 간격 설정을 적용하기 위해 플러시된 페이지 수입니다.| 
 |**버퍼 캐시 적중률**|디스크에서 읽지 않고 버퍼 캐시에서 찾은 페이지 비율을 나타냅니다. 이 비율은 마지막 몇 천 페이지 액세스에 대한 총 캐시 조회 수로 나눈 총 캐시 적중 수입니다. 시간이 많이 지나면 이 비율은 일정해집니다. 캐시에서 읽는 것이 디스크에서 읽는 것보다 비용이 적게 들기 때문에 이 비율을 높이는 것이 좋습니다. 일반적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 사용할 수 있는 메모리 양을 늘리거나 버퍼 풀 확장 기능을 사용하여 buffer cache hit ratio를 높일 수 있습니다.|  
-|**Buffer cache hit ratio base**|내부용으로만 사용할 수 있습니다.|
+|**Buffer cache hit ratio base**|내부 전용입니다.|
 |**Checkpoint pages/sec**|모든 더티 페이지를 플러시해야 할 기타 작업이나 검사점에 의해 디스크에 플러시된 초당 페이지 수를 나타냅니다.|  
 |**Database pages**|버퍼 풀에서 데이터베이스 내용이 있는 페이지 수를 나타냅니다.|  
 |**Extension allocated pages**|버퍼 풀 확장 파일에서 이미 사용된 캐시 페이지의 총 수입니다.|  

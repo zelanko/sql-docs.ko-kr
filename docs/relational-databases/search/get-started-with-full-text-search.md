@@ -16,10 +16,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 349e00b7734ed8e8176585c55018b7565649cc1f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903832"
 ---
 # <a name="get-started-with-full-text-search"></a>전체 텍스트 검색 시작
@@ -89,7 +89,7 @@ SQL Server 데이터베이스는 기본적으로 전체 텍스트를 사용하�
  
  동일한 전체 텍스트 카탈로그 내에서 변경 내용이 적거나 많은 테이블 또는 특정 시간에 자주 변경되는 테이블과 같이 업데이트 특징이 동일한 테이블을 함께 연결하는 것이 좋습니다. 전체 텍스트 카탈로그 채우기 일정을 세우면 전체 텍스트 인덱스는 데이터베이스 작업이 많을 때 데이터베이스 서버의 리소스 사용에 부정적인 영향을 주지 않고 테이블과 동기화 상태를 유지합니다.  
   
- 다음 지침을 살펴 보십시오.  
+ 다음 지침을 고려하세요.  
   
 -   수백 만 개의 행을 가진 테이블의 인덱스를 만들 때는 테이블을 자체의 전체 텍스트 카탈로그에 할당하세요.  
   
@@ -108,7 +108,7 @@ CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;
 GO  
 ```  
   
- 다음 [ALTER FULLTEXT STOPLIST](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서는 myStoplist라는 중지 목록에서 먼저 스페인어에 단어 'en'을 추가한 다음 프랑스어에 단어 'en'을 추가하여 중지 목록을 변경합니다.  
+ 다음 [ALTER FULLTEXT STOPLIST](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서는 myStoplist라는 중지 목록에서 먼저 스페인어에 단어 ‘en’을 추가한 다음, 프랑스어에 단어 ‘en’을 추가하여 중지 목록을 변경합니다.  
   
 ```sql  
 ALTER FULLTEXT STOPLIST myStoplist ADD 'en' LANGUAGE 'Spanish';  
@@ -118,7 +118,7 @@ GO
 자세한 내용은 [전체 텍스트 검색에 사용할 중지 단어와 중지 목록 구성 및 관리](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)를 참조하세요.
 
 ## <a name="update-a-full-text-index"></a>전체 텍스트 인덱스 업데이트  
- 일반 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인덱스처럼 전체 텍스트 인덱스는 연결된 테이블의 데이터가 수정될 때 자동으로 업데이트할 수 있습니다. 이것이 기본 동작입니다. 또는 전체 텍스트 인덱스를 수동으로 업데이트하거나 예약된 간격으로 업데이트할 수 있습니다. 전체 텍스트 인덱스를 채우는 작업은 시간이 오래 걸리고 리소스가 많이 사용될 수 있습니다. 따라서 인덱스 업데이트는 일반적으로 백그라운드로 실행되는 비동기 프로세스로 수행되며 기본 테이블을 수정한 다음 전체 텍스트 인덱스를 최신 상태로 유지합니다. 
+ 일반 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인덱스처럼 전체 텍스트 인덱스는 연결된 테이블의 데이터가 수정될 때 자동으로 업데이트할 수 있습니다. 기본 동작입니다. 또는 전체 텍스트 인덱스를 수동으로 업데이트하거나 예약된 간격으로 업데이트할 수 있습니다. 전체 텍스트 인덱스를 채우는 작업은 시간이 오래 걸리고 리소스가 많이 사용될 수 있습니다. 따라서 인덱스 업데이트는 일반적으로 백그라운드로 실행되는 비동기 프로세스로 수행되며 기본 테이블을 수정한 다음 전체 텍스트 인덱스를 최신 상태로 유지합니다. 
  
 기본 테이블을 변경할 때마다 전체 텍스트 인덱스를 업데이트하면 리소스 사용량도 많아집니다. 따라서 업데이트/삽입/삭제 빈도가 높을 경우 쿼리 성능이 약간 저하될 수 있습니다. 이러한 경우에는 리소스 때문에 쿼리 실행에 차질을 빚기보다는 일정한 간격을 두고 여러 변경 내용을 한꺼번에 추적하여 텍스트 인덱스를 업데이트하도록 수동으로 변경 내용 추적 업데이트 일정을 세우는 것이 좋습니다.  
   

@@ -15,10 +15,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f652fc8771162c81a7d86f0984eece90892e3cd3
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909303"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>쿼리 저장소를 사용하여 성능 모니터링
@@ -47,7 +47,7 @@ ms.locfileid: "72909303"
 
 #### <a name="use-transact-sql-statements"></a>Transact-SQL 문 사용  
   
-**ALTER DATABASE** 문을 사용하여 쿼리 저장소를 사용하도록 설정합니다. 예를 들어  
+**ALTER DATABASE** 문을 사용하여 쿼리 저장소를 사용하도록 설정합니다. 다음은 그 예입니다.  
   
 ```sql  
 ALTER DATABASE AdventureWorks2012 
@@ -111,7 +111,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 ##  <a name="Regressed"></a> 재발된 쿼리 기능 사용  
 쿼리 저장소를 사용하도록 설정한 후 개체 탐색기 창의 데이터베이스 부분을 새로 고쳐 **쿼리 저장소** 섹션을 추가합니다.  
   
-![SSMS 개체 탐색기의 SQL Server 2016 쿼리 저장소 트리](../../relational-databases/performance/media/objectexplorerquerystore.PNG "SSMS 개체 탐색기의 SQL Server 2016 쿼리 저장소 트리")   ![SSMS 개체 탐색기의 SQL Server 2017 쿼리 저장소 트리](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "SSMS 개체 탐색기의 SQL Server 2017 쿼리 저장소 트리") 
+![SSMS 개체 탐색기의 SQL Server 2016 쿼리 저장소 트리](../../relational-databases/performance/media/objectexplorerquerystore.PNG "SSMS 개체 탐색기의 SQL Server 2016 쿼리 저장소 트리") ![SSMS 개체 탐색기의 SQL Server 2017 쿼리 저장소 트리](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "SSMS 개체 탐색기의 SQL Server 2017 쿼리 저장소 트리") 
   
 **재발된 쿼리** 를 선택하여 **에서** 재발된 쿼리 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]창을 엽니다. 재발된 쿼리 창에는 쿼리 저장소의 쿼리 및 계획이 표시됩니다. 위쪽의 드롭다운 상자를 사용하여 다양한 기준에 따라 쿼리를 필터링합니다. **기간(밀리초)** (기본값), CPU 시간(밀리초), 논리적 읽기(KB), 논리적 쓰기(KB), 물리적 읽기(KB), CLR 시간(ms), DOP, 메모리 사용량(KB), 행 수, 사용된 메모리(KB), 사용된 임시 DB 메모리(KB), 대기 시간(밀리초).  
 계획을 선택하면 그래픽 쿼리 계획이 표시됩니다. 단추를 사용하여 원본 쿼리를 보고, 쿼리 계획을 강제로 적용 및 적용 해제하고, 그리드 형식과 차트 형식 간에 전환하고, 선택한 계획을 비교하고(두 개 이상 선택한 경우), 디스플레이를 새로 고칠 수 있습니다.  
@@ -142,9 +142,9 @@ INNER JOIN sys.query_store_query_text AS Txt
 |||| 
 |-|-|-|  
 |이전 경험|새로운 경험|작업|
-|데이터베이스당 높은 RESOURCE_SEMAPHORE 대기|특정 쿼리에 대한 쿼리 저장소의 높은 메모리 대기|쿼리 저장소에서 상위 메모리 소비 쿼리를 찾습니다. 이러한 쿼리는 영향을 받는 쿼리의 추가 진행을 지연합니다. 해당 쿼리 또는 영향을 받는 쿼리에 대해 MAX_GRANT_PERCENT 쿼리 힌트를 사용하는 것이 좋습니다.|
+|데이터베이스당 높은 RESOURCE_SEMAPHORE 대기|특정 쿼리에 대한 쿼리 저장소의 높은 메모리 대기|쿼리 저장소에서 메모리 사용량이 많은 상위 쿼리를 찾습니다. 이러한 쿼리는 영향을 받는 쿼리의 추가 진행을 지연시킬 수 있습니다. 해당 쿼리 또는 영향을 받는 쿼리에 대해 MAX_GRANT_PERCENT 쿼리 힌트를 사용하는 것이 좋습니다.|
 |데이터베이스당 높은 LCK_M_X 대기|특정 쿼리에 대한 쿼리 저장소의 높은 잠금 대기|영향을 받는 쿼리에 대한 쿼리 텍스트를 확인하고 대상 엔터티를 식별합니다. 자주 실행되며 기간이 높은, 동일한 엔터티를 수정하는 다른 쿼리를 쿼리 저장소에서 찾습니다. 이러한 쿼리를 식별한 후 애플리케이션 논리를 변경하여 동시성을 개선하거나 덜 제한적인 격리 수준을 사용하는 것이 좋습니다.|
-|데이터베이스당 높은 PAGEIOLATCH_SH 대기|특정 쿼리에 대한 쿼리 저장소의 높은 버퍼 IO 대기|쿼리 저장소에서 물리적 읽기 수가 높은 쿼리를 찾습니다. IO 대기가 높은 쿼리와 일치하는 경우 검색 대신 찾기를 수행하여 쿼리의 IO 오버헤드를 최소화하기 위해 기본 엔터티에 대한 인덱스를 도입하는 것이 좋습니다.|
+|데이터베이스당 높은 PAGEIOLATCH_SH 대기|특정 쿼리에 대한 쿼리 저장소의 높은 버퍼 IO 대기|쿼리 저장소에서 물리적 읽기 횟수가 많은 쿼리를 찾습니다. IO 대기가 높은 쿼리와 일치하는 경우 검색 대신 찾기를 수행하여 쿼리의 IO 오버헤드를 최소화하기 위해 기본 엔터티에 대한 인덱스를 도입하는 것이 좋습니다.|
 |데이터베이스당 높은 SOS_SCHEDULER_YIELD 대기|특정 쿼리에 대한 쿼리 저장소의 높은 CPU 대기|쿼리 저장소에서 상위 CPU 소비 쿼리를 찾습니다. 그중에서 높은 CPU 추세가 영향을 받는 쿼리에 대한 높은 CPU 대기와 상호 연결하는 쿼리를 식별합니다. 이러한 쿼리 최적화에 집중하세요. 계획 회귀 또는 누락된 인덱스가 있을 수 있습니다.|
 
 ##  <a name="Options"></a> 구성 옵션 
@@ -335,7 +335,7 @@ DEALLOCATE adhoc_queries_cursor;
   
  더 이상 중요하지 않은 데이터를 지우는 다른 논리를 사용하여 프로시저를 직접 정의할 수 있습니다.  
   
- 위의 예제에서는 필요 없는 데이터를 제거하는 **sp_query_store_remove_query** 확장 저장 프로시저를 사용합니다. 또한, 다음을 사용 가능:  
+ 위의 예제에서는 필요 없는 데이터를 제거하는 **sp_query_store_remove_query** 확장 저장 프로시저를 사용합니다. 다음을 사용할 수도 있습니다.  
   
 -   **sp_query_store_reset_exec_stats**는 지정된 계획에 대한 런타임 통계를 지웁니다.  
 -   **sp_query_store_remove_plan**은 단일 계획을 제거합니다.  
@@ -618,5 +618,5 @@ EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;
  [활성 쿼리 통계](../../relational-databases/performance/live-query-statistics.md)   
  [작업 모니터](../../relational-databases/performance-monitor/activity-monitor.md)   
  [sys.database_query_store_options&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)  
- [Azure SQL 데이터베이스에서 쿼리 저장소 작업](https://azure.microsoft.com/documentation/articles/sql-database-operate-query-store/) 
+ [Azure SQL Database에서 쿼리 저장소 운영](https://azure.microsoft.com/documentation/articles/sql-database-operate-query-store/) 
   

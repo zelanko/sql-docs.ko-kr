@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 19c261227f81debb3afec4e9d4b68f6ca7e8d607
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117673"
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING(Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68117673"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 문자, 이진, 텍스트 또는 이미지 식의 일부를 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -63,7 +63,7 @@ SUBSTRING ( expression ,start , length )
 |**nchar**/**nvarchar**/**ntext**|**nvarchar**|  
 |**binary**/**varbinary**/**image**|**varbinary**|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **ntext**, **char** 또는 **varchar** 데이터 형식의 문자 수와 **text**, **image**, **binary** 또는 **varbinary** 데이터 형식의 바이트에 대해 *start* 및 *length* 값을 지정해야 합니다.  
   
  *start* 또는 *length*에 2147483647보다 큰 값이 포함된 경우 *expression*은 **varchar(max)** 또는 **varbinary(max)** 여야 합니다.  
@@ -73,7 +73,7 @@ SUBSTRING ( expression ,start , length )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-substring-with-a-character-string"></a>1\. 문자열과 SUBSTRING 사용  
+### <a name="a-using-substring-with-a-character-string"></a>A. 문자열과 SUBSTRING 사용  
  다음 예에서는 문자열의 일부를 반환하는 방법을 보여 줍니다. 이 쿼리는 `sys.databases` 테이블에서 첫 번째 열에 시스템 데이터베이스 이름, 두 번째 열에 데이터베이스의 첫 번째 문자, 마지막 열에 세 번째 및 네 번째 문자를 반환합니다.  
   
 ```  
@@ -85,7 +85,7 @@ WHERE database_id < 5;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
-|NAME |Initial |ThirdAndFourthCharacters|
+|name |Initial |ThirdAndFourthCharacters|
 |---|--|--|
 |master  |m  |st |
 |tempdb  |t  |mp |
@@ -110,7 +110,7 @@ bcd
 (1 row(s) affected)
 ```  
   
-### <a name="b-using-substring-with-text-ntext-and-image-data"></a>2\. text, ntext, image 데이터와 SUBSTRING 사용  
+### <a name="b-using-substring-with-text-ntext-and-image-data"></a>B. text, ntext, image 데이터와 SUBSTRING 사용  
   
 > [!NOTE]  
 >  다음 예를 실행하려면 **pubs** 데이터베이스를 설치해야 합니다.  
@@ -177,7 +177,7 @@ FROM pub_info pr INNER JOIN npub_info npr
 ORDER BY pr.pub_id ASC;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-substring-with-a-character-string"></a>C. 문자열과 SUBSTRING 사용  
  다음 예에서는 문자열의 일부를 반환하는 방법을 보여 줍니다. 이 쿼리는 `dbo.DimEmployee` 테이블에서 첫 번째 열에 이름을 반환하고 두 번째 열에 머리글자를 반환합니다.  

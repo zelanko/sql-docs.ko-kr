@@ -16,10 +16,10 @@ ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 97b36ba7e90aeaa32a0d073b972f06a9fc336750
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70846742"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
@@ -112,8 +112,8 @@ replmerg [-?]
  **-?**  
  사용 가능한 모든 매개 변수를 출력합니다.  
   
- **-Publisher** _server_name_[**\\**_instance_name_]  
- 게시자의 이름입니다. 해당 서버에 있는 기본 *server_name* 인스턴스에 대해 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 _server_name_**\\**_instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대해 server_name을 지정하고,  
+ **-Publisher** _server_name_[ **\\** _instance_name_]  
+ 게시자의 이름입니다. 해당 서버에 있는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 기본 인스턴스에 대해 *server_name*을 지정합니다. 해당 서버에 있는 명명된 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대해 server_name을 지정하고,  
   
  **-PublisherDB** _publisher_database_  
  게시자 데이터베이스의 이름입니다.  
@@ -121,8 +121,8 @@ replmerg [-?]
  **-Publication** _publication_  
  게시의 이름입니다. 이 매개 변수는 게시가 새 구독이나 다시 초기화된 구독에 대해 항상 스냅샷을 사용할 수 있도록 설정된 경우에만 유효합니다.  
   
- **-Subscriber** _server_name_[**\\**_instance_name_]  
- 구독자의 이름입니다. 해당 서버에 있는 기본 *server_name* 인스턴스에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 _server_name_**\\**_instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대해 server_name을 지정하고,  
+ **-Subscriber** _server_name_[ **\\** _instance_name_]  
+ 구독자의 이름입니다. 해당 서버에 있는 기본 *server_name* 인스턴스에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대해 server_name을 지정하고,  
   
  **-SubscriberDB** _subscriber_database_  
  구독자 데이터베이스의 이름입니다.  
@@ -139,8 +139,8 @@ replmerg [-?]
  **-DefinitionFile** _def_path_and_file_name_  
  에이전트 정의 파일의 경로입니다. 에이전트 정의 파일에는 에이전트의 명령 프롬프트 인수가 들어 있습니다. 파일 내용은 실행 파일로 구문 분석됩니다. 임의 문자가 있는 인수 값을 지정하려면 큰따옴표(")를 사용합니다.  
   
- **-Distributor** _server_name_[**\\**_instance_name_]  
- 배포자 이름입니다. 해당 서버에 있는 기본 *인스턴스에 대해* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지정하고, 해당 서버에 있는 명명된 _server_name_**\\**_instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대해 server_name을 지정하고, 배포자(밀어넣기) 배포의 경우에는 로컬 컴퓨터에 있는 기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름이 기본 이름이 됩니다.  
+ **-Distributor** _server_name_[ **\\** _instance_name_]  
+ 배포자 이름입니다. 해당 서버에 있는 기본 *server_name* 인스턴스에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대해 server_name을 지정하고, 배포자(밀어넣기) 배포의 경우에는 로컬 컴퓨터에 있는 기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름이 기본 이름이 됩니다.  
   
  **-DistributorLogin** _distributor_login_  
  배포자의 로그인 이름입니다.  
@@ -166,7 +166,7 @@ replmerg [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  연결을 만들 때 병합 에이전트에서 사용하는 SSL(Secure Sockets Layer) 암호화의 수준입니다.  
   
-|EncryptionLevel 값|설명|  
+|EncryptionLevel 값|Description|  
 |---------------------------|-----------------|  
 |**0**|SSL이 사용되지 않음을 지정합니다.|  
 |**1**|SSL이 사용되지만 에이전트에서 SSL 서버 인증서가 트러스트된 발급자에 의해 서명된 것인지 확인하지 않음을 지정합니다.|  
@@ -183,7 +183,7 @@ replmerg [-?]
   
  동기화를 수행할 때의 데이터 교환 유형을 지정하며 값은 다음 중 하나일 수 있습니다.  
   
-|ExchangeType 값|설명|  
+|ExchangeType 값|Description|  
 |------------------------|-----------------|  
 |**1**|에이전트에서 구독자의 데이터 변경 내용을 게시자로 업로드합니다.|  
 |**2**|에이전트에서 게시자의 데이터 변경 내용을 구독자로 다운로드합니다.|  
@@ -202,9 +202,9 @@ replmerg [-?]
  **-ForceConvergenceLevel** [**0**|**1**|**2** ( **Publisher**| **Subscriber**| **Both**)]  
  병합 에이전트에서 사용할 일치성 수준을 지정하며 값은 다음 중 하나가 될 수 있습니다.  
   
-|ForceConvergenceLevel 값|설명|  
+|ForceConvergenceLevel 값|Description|  
 |---------------------------------|-----------------|  
-|**0** (기본값)|기본. 추가 일치 작업 없이 표준 병합을 수행합니다.|  
+|**0** (기본값)|기본값 추가 일치 작업 없이 표준 병합을 수행합니다.|  
 |**1**|모든 세대에 대해 일치 작업을 수행합니다.|  
 |**2**|모든 세대에 대해 일치 작업을 수행하고 손상된 계보를 수정합니다. 이 값을 지정할 경우 계보를 수정할 위치를 게시자, 구독자 또는 게시자와 구독자 모두로 지정합니다.|  
   
@@ -223,11 +223,11 @@ replmerg [-?]
  **-HistoryVerboseLevel** [**1**|**2**|**3**]  
  병합 작업을 수행하는 동안 기록에 추가되는 양을 지정합니다. **1**을 선택하여 성능에서 기록 로깅의 영향을 최소화할 수 있습니다.  
   
-|HistoryVerboseLevel 값|설명|  
+|HistoryVerboseLevel 값|Description|  
 |-------------------------------|-----------------|  
 |**0**|최종 에이전트 상태 메시지, 최종 세션 정보 및 기타 오류를 기록합니다.|  
 |**1**|각 세션 상태의 증분 세션 정보를 기록합니다. 여기에는 최종 에이전트 상태 메시지, 최종 세션 정보 및 오류뿐 아니라 완료율도 포함됩니다.|  
-|**2**|기본. 각 세션 상태의 증분 세션 정보와 아티클 수준 세션 정보를 기록합니다. 여기에는 최종 에이전트 상태 메시지, 최종 세션 정보 및 오류뿐 아니라 완료율도 포함됩니다. 에이전트 상태 메시지도 기록됩니다.|  
+|**2**|기본값 각 세션 상태의 증분 세션 정보와 아티클 수준 세션 정보를 기록합니다. 여기에는 최종 에이전트 상태 메시지, 최종 세션 정보 및 오류뿐 아니라 완료율도 포함됩니다. 에이전트 상태 메시지도 기록됩니다.|  
 |**3**|기록되는 에이전트 진행 메시지가 더 많다는 점만 제외하고 **-HistoryVerboseLevel** = **2**와 동일합니다.|  
   
  **-Hostname** _host_name_  
@@ -301,7 +301,7 @@ replmerg [-?]
  **-ProfileName** _profile_name_  
  에이전트 매개 변수에 사용할 에이전트 프로필을 지정합니다. **ProfileName** 이 NULL이면 에이전트 프로필이 사용되지 않습니다. **ProfileName** 이 지정되지 않으면 에이전트 유형에 대한 기본 프로필이 사용됩니다. 자세한 내용은 [복제 에이전트 프로필](../../../relational-databases/replication/agents/replication-agent-profiles.md)을 참조하세요.  
   
- **-PublisherFailoverPartner** _server_name_[**\\**_instance_name_]  
+ **-PublisherFailoverPartner** _server_name_[ **\\** _instance_name_]  
  게시 데이터베이스와 함께 데이터베이스 미러링 세션에 참여하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 장애 조치 파트너 인스턴스를 지정합니다. 자세한 내용은 [데이터베이스 미러링 및 복제&#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)을 참조하세요.  
   
  **-PublisherLogin** _publisher_login_  
@@ -328,7 +328,7 @@ replmerg [-?]
  **-SubscriberDBAddOption** [**0**| **1**| **2**| **3**]  
  기존 구독자 데이터베이스가 있는지 여부를 지정합니다.  
   
-|SubscriberDBAddOption 값|설명|  
+|SubscriberDBAddOption 값|Description|  
 |---------------------------------|-----------------|  
 |**0**|기존 데이터베이스를 사용합니다(기본값).|  
 |**1**|비어 있는 새 구독자 데이터베이스를 만듭니다.|  
@@ -374,7 +374,7 @@ replmerg [-?]
  **-Validate** [**0**|**1**|**2**|**3**]  
  병합 세션이 종료될 때 유효성 검사를 수행할지 여부와 수행할 유효성 검사 유형을 지정합니다. 값 **3** 이 권장 값입니다.  
   
-|값 유효성 검사|설명|  
+|값 유효성 검사|Description|  
 |--------------------|-----------------|  
 |**0** (기본값)|유효성 검사를 수행하지 않습니다.|  
 |**1**|행 개수의 유효성만 검사합니다.|  
@@ -387,7 +387,7 @@ replmerg [-?]
  **-ValidateInterval** _validate_interval_  
  연속 모드에서 구독 유효성 검사가 수행되는 빈도(분)입니다. 기본값은 **60** 분입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 > [!IMPORTANT]  
 >  도메인 사용자 계정(기본값)이 아닌 로컬 시스템 계정에서 실행되도록 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트를 설치한 경우 해당 서비스에서는 로컬 컴퓨터에만 액세스할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트에서 실행되는 병합 에이전트가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 로그인할 때 Windows 인증 모드를 사용하도록 구성된 경우 해당 병합 에이전트가 실패합니다. 기본 설정은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증입니다.  

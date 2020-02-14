@@ -22,10 +22,10 @@ ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0d2546e349859b8f059623f25b2e8ac971ba5643
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297331"
 ---
 # <a name="developing-a-custom-source-component"></a>사용자 지정 원본 구성 요소 개발
@@ -173,7 +173,7 @@ End Sub
   
  열의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A>은 다른 속성에 대해 설정되는 값을 결정합니다. 다음 표에서는 각 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A>의 종속 속성에 대한 요구 사항을 보여 줍니다. 이 목록에 포함되지 않은 데이터 형식의 종속 속성은 0으로 설정됩니다.  
   
-|DataType|길이|소수 자릿수|전체 자릿수|CodePage|  
+|DataType|길이|확장|자릿수|CodePage|  
 |--------------|------------|-----------|---------------|--------------|  
 |DT_DECIMAL|0|0보다 크고 28보다 작거나 같습니다.|0|0|  
 |DT_CY|0|0|0|0|  
@@ -528,7 +528,7 @@ Public Overrides Sub PrimeOutput(ByVal outputs As Integer, ByVal outputIDs As In
 End Sub  
 ```  
   
-## <a name="sample"></a>예제  
+## <a name="sample"></a>샘플  
  다음 예제에서는 파일 연결 관리자를 사용하여 파일의 이진 내용을 데이터 흐름으로 로드하는 간단한 원본 구성 요소를 보여 줍니다. 이 예제는 이 항목에 설명된 메서드 및 기능의 일부를 보여 줍니다. 또한 모든 사용자 지정 원본 구성 요소에서 재정의해야 하는 중요한 메서드를 보여 주지만 디자인 타임 유효성 검사를 위한 코드는 포함하지 않습니다.  
   
 ```csharp  

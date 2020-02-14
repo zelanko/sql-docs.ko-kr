@@ -19,10 +19,10 @@ ms.assetid: c382eacd-0a0c-40a4-958f-9b774eb2d734
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4fcbb9e6ee0f68433034cd2c3a29f565e05359e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012967"
 ---
 # <a name="client-network-configuration"></a>클라이언트 네트워크 구성
@@ -43,7 +43,7 @@ ms.locfileid: "68012967"
   
 -   DB-Library 클라이언트  
   
-     이러한 애플리케이션에는 DB-Library에 기록된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**isql** 명령 프롬프트 유틸리티 및 클라이언트가 포함됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DB-Library를 사용하는 클라이언트 애플리케이션에 대한 지원은 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 기능으로 제한됩니다.  
+     해당 애플리케이션에는 DB-Library에 기록된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **isql** 명령 프롬프트 유틸리티 및 클라이언트가 포함됩니다. DB-Library를 사용하는 클라이언트 애플리케이션에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지원은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 기능으로 제한됩니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 이 DB-Library 및 Embedded SQL API를 사용한 기존 애플리케이션과의 연결을 계속 지원하지만 이들 API를 사용하는 애플리케이션에서 프로그래밍 작업을 수행하는 데 필요한 파일 또는 문서는 포함되지 않습니다. 이후 버전의 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서는 DB-Library 또는 Embedded SQL 애플리케이션과의 연결이 더 이상 지원되지 않습니다. DB-Library 또는 Embedded SQL을 사용하여 새 애플리케이션을 개발하지 마십시오. 기존의 애플리케이션을 수정할 때 DB-Library 또는 Embedded SQL에 대한 모든 종속 관계를 제거하십시오. 이러한 API 대신 SQLClient 네임스페이스 또는 OLE DB, ODBC 등의 API를 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 이러한 애플리케이션을 실행하는 데 필요한 DB-Library DLL이 없습니다. DB-Library 또는 Embedded SQL 애플리케이션을 실행하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 6.5, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 또는 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]에서 사용 가능한 DB-Library DLL이 있어야 합니다.  

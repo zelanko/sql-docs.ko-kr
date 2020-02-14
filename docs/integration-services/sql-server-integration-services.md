@@ -21,10 +21,10 @@ helpviewer_keywords:
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2fbf040bd24ce3da81497001213e953f7436d863
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296871"
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
@@ -33,7 +33,7 @@ ms.locfileid: "71296871"
 
 
 
-[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 엔터프라이즈 수준 데이터 통합 및 데이터 변환 솔루션을 빌드하는 데 필요한 플랫폼입니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]를 사용하여 파일을 복사 또는 다운로드하고, 데이터 웨어하우스를 로드하고, 데이터를 정리 및 마이닝하고, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 개체와 데이터를 관리하여 복잡한 비즈니스 문제를 해결합니다.
+[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]는 엔터프라이즈 수준 데이터 통합 및 데이터 변환 솔루션을 빌드하는 데 필요한 플랫폼입니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]를 사용하여 파일을 복사 또는 다운로드하고, 데이터 웨어하우스를 로드하고, 데이터를 정리 및 마이닝하고, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 개체와 데이터를 관리하여 복잡한 비즈니스 문제를 해결합니다.
 
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 XML 데이터 파일, 플랫 파일, 관계형 데이터 원본과 같은 다양한 원본에서 데이터를 추출 및 변환한 다음 하나 이상의 대상으로 로드할 수 있습니다.
 

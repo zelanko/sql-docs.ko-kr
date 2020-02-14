@@ -15,10 +15,10 @@ ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f4a4a91c4703bd4634f471e3d6bc0b9b4baf2305
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908887"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>SQL Server 데이터베이스를 지정 시간으로 복원(전체 복구 모델)
@@ -51,7 +51,7 @@ ms.locfileid: "72908887"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  복원할 데이터베이스가 없으면 CREATE DATABASE 권한이 있어야 RESTORE를 실행할 수 있습니다. 데이터베이스가 있으면 RESTORE 권한은 기본적으로 **sysadmin** 및 **dbcreator** 고정 서버 역할의 멤버와 데이터베이스의 소유자(**dbo**)에 설정됩니다. FROM DATABASE_SNAPSHOT 옵션의 경우 데이터베이스가 항상 있습니다.  
   
  멤버 자격 정보를 서버에서 항상 사용할 수 있는 역할에 RESTORE 권한이 제공됩니다. 고정 데이터베이스 역할의 멤버 자격은 데이터베이스가 액세스 가능한 상태이며 손상되지 않은 경우에만 확인할 수 있는데, RESTORE 실행 시 데이터베이스가 항상 이러한 상태인 것은 아니므로 **db_owner** 고정 데이터베이스 역할의 멤버에게는 RESTORE 권한이 없습니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "72908887"
   
 4.  **일반** 페이지에서 **원본** 섹션을 사용하여 복원할 백업 집합의 원본과 위치를 지정합니다. 다음 옵션 중 하나를 선택합니다.  
   
-    -   **데이터베이스 백업**  
+    -   **Database**  
   
          복원할 데이터베이스를 드롭다운 목록에서 선택합니다. 목록에는 **msdb** 백업 기록에 따라 백업된 데이터베이스만 포함되어 있습니다.  
   
@@ -119,14 +119,14 @@ ms.locfileid: "72908887"
   
      옵션에 대한 설명은 [데이터베이스 복원&#40;옵션 페이지&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)을 참조하세요.  
   
-12. **복원 전 비상 로그 백업 수행**은 선택한 지정 시간에 필요한 경우에 선택됩니다. 이 설정을 수정할 필요는 없지만 필요하지 않은 경우에도 비상 로그를 백업할 수 있습니다.  
+12. **복원 전 비상 로그 백업 수행** 은 선택한 지정 시간에 필요한 경우에 선택됩니다. 이 설정을 수정할 필요는 없지만 필요하지 않은 경우에도 비상 로그를 백업할 수 있습니다.  
   
 13. 데이터베이스에 대한 활성 연결이 있으면 복원 작업이 실패할 수 있습니다. **기존 연결 닫기** 옵션을 선택하여 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 와 데이터베이스 간의 모든 활성 연결을 닫습니다. 이 확인란을 선택하면 복원 작업을 수행하기 전에 데이터베이스가 단일 사용자 모드로 설정되고 복원 작업이 완료될 때 데이터베이스가 다중 사용자 모드로 설정됩니다.  
   
 14. 각 복원 작업 사이에 확인 메시지를 표시하려면 **각 백업 복원 전에 확인** 을 선택합니다. 데이터베이스가 크고 복원 작업의 상태를 모니터링하려는 경우가 아니면 이 옵션은 일반적으로 필요하지 않습니다.  
 
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
- **Before you begin**  
+ **시작하기 전 주의 사항**  
   
  지정된 시간은 항상 로그 백업에서 복원됩니다. 복원 순서의 모든 RESTORE LOG 문에서 동일한 STOPAT 절에 대상 시간이나 트랜잭션을 지정해야 합니다. 지정 시간 복원을 수행하려면 먼저 종료 지점이 대상 복원 시간보다 빠른 전체 데이터베이스 백업을 복원해야 합니다. 대상 지정 시간이 포함된 로그 백업까지의 모든 후속 로그 백업을 복원하는 동안 이 전체 데이터베이스 백업은 가장 최근 전체 데이터베이스 백업보다 더 오래된 버전일 수 있습니다.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "72908887"
   
  복구 지점은 **time** 에 지정된 *datetime*값 또는 그전에 발생한 최근 트랜잭션 커밋입니다.  
   
- 특정 시점 이전에 수정한 내용만 복원하려면 복원하는 각 백업에 대해 WITH STOPAT **=** _time_ 을 지정합니다. 이렇게 하면 대상 시간을 지나치지 않게 됩니다.  
+ 특정 시점 이전에 수정한 내용만 복원하려면 복원하는 각 백업에 대해 WITH STOPAT **=** _time_을 지정합니다. 이렇게 하면 대상 시간을 지나치지 않게 됩니다.  
   
  **데이터베이스를 지정 시간으로 복원하려면**  
   
@@ -159,7 +159,7 @@ ms.locfileid: "72908887"
     > [!NOTE]  
     >  RECOVERY 및 STOPAT 옵션. 지정된 시간이 트랜잭션 로그에서 수용하는 시간을 초과하는 경우처럼 요청한 시간이 트랜잭션 로그 백업에 포함되지 않을 경우 경고가 생성되고 데이터베이스는 복구되지 않은 상태로 남습니다.  
   
-###  <a name="TsqlExample"></a> 예제(Transact-SQL)  
+###  <a name="TsqlExample"></a> 예(Transact-SQL)  
  다음 예에서는 `12:00 AM` , `April 15, 2020` 상태로 데이터베이스를 복원하고 여러 로그 백업이 연관된 복원 작업을 보여 줍니다. 백업 디바이스 `AdventureWorksBackups`에서 복원할 전체 데이터베이스 백업은 해당 디바이스의 세 번째 백업 세트(`FILE = 3`)이고, 첫 번째 로그 백업은 네 번째 백업 세트(`FILE = 4`)이고, 두 번째 로그 백업은 다섯 번째 백업 세트(`FILE = 5`)입니다.  
   
 > [!IMPORTANT]  
@@ -182,7 +182,7 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   

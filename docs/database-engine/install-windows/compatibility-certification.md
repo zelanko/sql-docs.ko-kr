@@ -19,10 +19,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 8d4d4812ccdc944411224094f3a9a29115845dc1
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73632931"
 ---
 # <a name="compatibility-certification"></a>호환성 인증
@@ -38,7 +38,7 @@ ms.locfileid: "73632931"
 
 예를 들어 데이터베이스 호환성 수준 130은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 기본값이었습니다. 호환성 수준은 특정 [!INCLUDE[tsql](../../includes/tsql-md.md)] 기능 및 쿼리 최적화 동작을 강제하기 때문에 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에 작동하도록 인증된 데이터베이스는 데이터베이스 호환성 수준 130에서 암시적으로 인증되었습니다. 데이터베이스 호환성 수준이 130으로 유지되는 한, 이 데이터베이스는 좀 더 최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](예: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]에서 그대로 작동할 수 있습니다. 
 
-이것은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 연속 통합 작업 모델의 기본 원칙입니다. [!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 Azure에서 지속적으로 개선되고 업그레이드되지만 기존 데이터베이스는 현재 호환성 수준을 유지하기 때문에 기본 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]으로 업그레이드한 후에도 설계된 대로 계속 작동합니다. 
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 연속 통합 작업 모델의 기본 원칙입니다. [!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 Azure에서 지속적으로 개선되고 업그레이드되지만 기존 데이터베이스는 현재 호환성 수준을 유지하기 때문에 기본 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]으로 업그레이드한 후에도 설계된 대로 계속 작동합니다. 
 
 ## <a name="managing-upgrade-risk-with-compatibility-certification"></a>호환성 인증으로 업그레이드 위험 관리
 호환성 인증을 사용하는 것은 데이터베이스 현대화의 중요한 접근 방식입니다. 호환성 수준을 기반으로 한 인증을 통해 개발자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]에서 지원되는 애플리케이션에 대한 기술 요구 사항을 설정하지만, 데이터베이스 플랫폼 수명 주기와 애플리케이션 수명 주기를 분리합니다. 이렇게 하면 회사는 수명 주기 정책에 따라 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 업그레이드된 상태를 유지할 뿐만 아니라 코드에 종속되지 않는 새로운 확장성 및 성능 향상 기능을 활용하고, 애플리케이션 연결은 업그레이드를 통해 **기능 상태를 유지합니다**.

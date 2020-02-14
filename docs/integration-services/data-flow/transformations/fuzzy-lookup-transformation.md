@@ -34,10 +34,10 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 723c8f8b34ceb9e96ae6da196a64f766b18857ef
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291500"
 ---
 # <a name="fuzzy-lookup-transformation"></a>유사 항목 조회 변환
@@ -96,7 +96,7 @@ ms.locfileid: "71291500"
   
  다음 표에서는 일치 인덱스 옵션에 대해 설명합니다.  
   
-|옵션|설명|  
+|옵션|Description|  
 |------------|-----------------|  
 |**GenerateAndMaintainNewIndex**|새 인덱스를 만들어 저장하고 유지 관리합니다. 변환은 참조 테이블에 트리거를 설치하여 참조 테이블 및 인덱스 테이블이 계속 동기화되도록 유지합니다.|  
 |**GenerateAndPersistNewIndex**|새 인덱스를 만들고 저장하지만 유지 관리하지 않습니다.|  
@@ -133,7 +133,7 @@ ms.locfileid: "71291500"
   
  **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [공용 속성](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [변환 사용자 지정 속성](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -219,7 +219,7 @@ ms.locfileid: "71291500"
   
 ## <a name="see-also"></a>참고 항목  
  [조회 변환](../../../integration-services/data-flow/transformations/lookup-transformation.md)   
- [유사 항목 그룹화 변환](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
+ [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [Integration Services 변환](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

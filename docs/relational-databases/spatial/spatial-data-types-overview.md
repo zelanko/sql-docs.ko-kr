@@ -16,10 +16,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2abe169f1666a1ce44b96130a52ef8edbc5a788e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048525"
 ---
 # <a name="spatial-data-types-overview"></a>공간 데이터 형식 개요
@@ -44,7 +44,7 @@ geometry 및 geography 형식의 하위 형식은 단순 형식과 컬렉션 형
 -   [LineString](../../relational-databases/spatial/linestring.md)  
 -   [CircularString](../../relational-databases/spatial/circularstring.md)  
 -   [CompoundCurve](../../relational-databases/spatial/compoundcurve.md)  
--   [다각형](../../relational-databases/spatial/polygon.md)  
+-   [Polygon](../../relational-databases/spatial/polygon.md)  
 -   [CurvePolygon](../../relational-databases/spatial/curvepolygon.md)  
 
 컬렉션 형식에는 다음이 포함됩니다.  
@@ -80,7 +80,7 @@ geometry 형식의 원호 세그먼트는 XY 데카르트 좌표 평면(Z 값은
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 **FullGlobe** 는 전체 구형을 포함하는 특수한 유형의 다각형입니다. **FullGlobe** 에는 영역이 있지만 테두리나 꼭지점은 없습니다.  
 
 ### <a name="outer-and-inner-rings-not-important-in-geography-data-type"></a>`geography` 데이터 형식에서 중요하지 않은 외부 및 내부 링  
-OGC Simple Features for SQL Specification에서는 외부 링 및 내부 링에 대해 설명하지만 이러한 구분이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** 데이터 형식에는 거의 의미가 없습니다. 다각형의 링은 외부 링으로 사용될 수 있습니다.  
+OGC Simple Features for SQL Specification에서는 외부 링 및 내부 링에 대해 설명하지만 구분이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** 데이터 형식에는 거의 의미가 없습니다. 다각형의 링은 외부 링으로 사용될 수 있습니다.  
 
 OGC 사양에 대한 자세한 내용은 다음을 참조하십시오.  
 -   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627)  
@@ -114,7 +114,7 @@ IF @g1.STIsValid() = 1 AND @g2.STIsValid() = 1
 
 삼각형을 정의하는 데 **CircularString** 인스턴스에는 7개의 점이 필요하지만 **LineString** 인스턴스에는 4개의 점만 필요합니다. 이는 **CircularString** 인스턴스가 원호 세그먼트만 저장하고 선 세그먼트는 저장하지 않기 때문입니다. 따라서 **CircularString** 인스턴스에 저장된 삼각형의 면은 ABC, CDE 및 EFA이지만 **LineString** 인스턴스에 저장된 삼각형의 면은 AC, CE 및 EA입니다.  
 
-다음 예를 살펴 보십시오.  
+다음과 같은 예제를 참조하세요.  
 
 ```sql
 SET @g1 = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 4 0)', 0);

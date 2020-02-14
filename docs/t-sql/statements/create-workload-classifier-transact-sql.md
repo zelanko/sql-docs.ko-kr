@@ -1,7 +1,7 @@
 ---
 title: CREATE WORKLOAD 분류자(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2019
+ms.date: 01/27/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse
 ms.reviewer: jrasnick
@@ -20,12 +20,12 @@ ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: adf8b1e04e7dcd75bcad0c4b184ae60f2b59d248
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 54c9145e40d9ad326faf0c897281fedb9a9fe9dc
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056489"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831617"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>워크로드 분류자 만들기(Transact-SQL)
 
@@ -36,7 +36,7 @@ ms.locfileid: "74056489"
 > [!NOTE]
 > 워크로드 분류자는 sp_addrolemember 리소스 클래스 할당 대신 사용됩니다.  워크로드 분류자를 만든 후 sp_droprolemember를 실행하여 중복된 리소스 클래스 매핑을 모두 제거합니다.
 
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>구문
 
@@ -70,7 +70,7 @@ WITH
  *WLM_LABEL*   
  요청을 분류하는 데 사용할 수 있는 레이블 값을 지정합니다.  Label은 nvarchar(255) 형식의 선택적 매개 변수입니다.  요청에 [OPTION (LABEL)](/azure/sql-data-warehouse/sql-data-warehouse-develop-label)을 사용하여 분류자 구성과 일치시킵니다.
 
-예:
+예제:
 
 ```sql
 CREATE WORKLOAD CLASSIFIER wcELTLoads WITH  
@@ -86,7 +86,7 @@ SELECT COUNT(*)
 *WLM_CONTEXT*  
 요청을 분류할 수 있는 세션 컨텍스트 값을 지정합니다.  context는 nvarchar(255) 형식의 선택적 매개 변수입니다.  세션 컨텍스트 설정 요청을 제출하기 전에 `wlm_context` 변수와 동일한 변수 이름을 가진 [sp_set_session_context](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md?view=azure-sqldw-latest)를 사용합니다.
 
-예:
+예제:
 
 ```sql
 CREATE WORKLOAD CLASSIFIER wcDataLoad WITH  
@@ -108,7 +108,7 @@ EXEC sys.sp_set_session_context @key = 'wlm_context', @value = null
 *START_TIME* 및 *END_TIME*  
 요청을 분류하는 데 사용할 수 있는 start_time 및 end_time을 지정합니다.  start_time 및 end_time은 UTC 표준 시간대로 HH:MM 형식입니다.  start_time과 end_time을 함께 지정해야 합니다.
 
-예:
+예제:
 
 ```sql
 CREATE WORKLOAD CLASSIFIER wcELTLoads WITH  
@@ -129,14 +129,17 @@ CREATE WORKLOAD CLASSIFIER wcELTLoads WITH
 
 중요도를 지정하지 않으면 워크로드 그룹의 중요도 설정이 사용됩니다.  기본 워크로드 그룹 중요도는 정상입니다.  중요도는 요청이 예약된 순서에 영향을 미치므로 리소스 및 잠금에 첫 번째 액세스 권한을 부여합니다.
 
-## <a name="classification-parameter-precedence"></a>분류 매개 변수 우선 순위
+## <a name="classification-parameter-weighting"></a>분류 매개 변수 가중치
 
-요청을 여러 분류자와 일치시킬 수 있습니다.  분류자 매개 변수에는 우선 순위가 있습니다.  우선 순위와 일치하는 분류자는 먼저 워크로드 그룹 및 중요도를 할당하는 데 사용됩니다.  우선 순위는 다음과 같습니다.
-1. User
-2. ROLE
-3. WLM_LABEL
-4. WLM_SESSION
-5. START_TIME/END_TIME
+요청을 여러 분류자와 일치시킬 수 있습니다.  분류자 매개 변수에는 가중치가 있습니다.  가중치가 높은 일치 분류자는 작업 그룹 및 중요도를 할당하는 데 사용됩니다.  가중치는 다음과 같습니다.
+
+|분류자 매개 변수 |무게   |
+|---------------------|---------|
+|USER                 |64       |
+|ROLE                 |32       |
+|WLM_LABEL            |16       |
+|WLM_CONTEXT          |8        |
+|START_TIME/END_TIME  |4        |
 
 다음 분류자 구성을 고려하세요.
 
@@ -151,13 +154,13 @@ CREATE WORKLOAD CLASSIFIER classiferB WITH
 ( WORKLOAD_GROUP = 'wgUserQueries'  
  ,MEMBERNAME     = 'userloginA'
  ,IMPORTANCE     = LOW
- ,START_TIME     = '18:00')
+ ,START_TIME     = '18:00'
  ,END_TIME       = '07:00' )
 ```
 
-사용자 `userloginA`는 두 분류자에 대해 구성됩니다.  userloginA가 UTC 오후 6시에서 오전 7시 사이에 `salesreport`와 동일한 레이블을 사용하여 쿼리를 실행하는 경우 요청은 HIGH 중요도의 wgDashboards 워크로드 그룹으로 분류됩니다.  휴가 보고에서 요청을 LOW 중요도의 wgUserQueries로 분류할 수 있지만 WLM_LABEL의 우선 순위는 START_TIME/END_TIME보다 높습니다.  이 경우 classiferA에 START_TIME/END_TIME을 추가할 수 있습니다.
+사용자 `userloginA`는 두 분류자에 대해 구성됩니다.  userloginA가 UTC 오후 6시에서 오전 7시 사이에 `salesreport`와 동일한 레이블을 사용하여 쿼리를 실행하는 경우 요청은 HIGH 중요도의 wgDashboards 워크로드 그룹으로 분류됩니다.  휴가 보고에서 요청을 LOW 중요도의 wgUserQueries로 분류할 수 있지만 WLM_LABEL의 가중치는 START_TIME/END_TIME보다 높습니다.  ClassiferA의 가중치는 80입니다(사용자 64와 WLM_LABEL 16의 합계).  ClassifierB의 가중치는 68입니다(사용자 64와 START_TIME/END_TIME 4의 합계).  이 경우 classiferB에 WLM_LABEL을 추가할 수 있습니다.
 
- 자세한 내용은 [워크로드 분류](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-precedence)를 참조하세요.
+ 자세한 내용은 [워크로드 가중치](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-weighting)를 참조하세요.
 
 ## <a name="permissions"></a>사용 권한
 

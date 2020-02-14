@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0563510242e38e817c7fb01e4185241062feedf3
-ms.sourcegitcommit: 5a61854ddcd2c61bb6da30ccad68f0ad90da0c96
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70978594"
 ---
 # <a name="expressions-transact-sql"></a>식(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "70978594"
 
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 단일 데이터 값을 얻기 위해 평가하는 기호와 연산자 조합입니다. 단순 식으로는 단일 상수, 변수, 열 또는 스칼라 함수가 있습니다. 연산자를 사용하면 두 개 이상의 단순 식을 결합하여 복합 식으로 만들 수 있습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -85,11 +85,11 @@ ms.locfileid: "70978594"
 |----------|----------------|  
 |*constant*|특정한 단일 데이터 값을 나타내는 기호입니다. 자세한 내용은 [상수&#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)을 참조하세요.|  
 |*scalar_function*|특정 서비스를 제공하고 단일 값을 반환하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문의 단위입니다. *scalar_function*은 SUM, GETDATE 또는 CAST 함수 또는 스칼라 사용자 정의 함수와 같은 기본 제공 스칼라 함수가 될 수 있습니다.|  
-|[ _table_name_**.** ]|테이블의 이름 또는 별칭입니다.|  
+|[ _table_name_ **.** ]|테이블의 이름 또는 별칭입니다.|  
 |*column*|열의 이름입니다. 식에는 열 이름만 사용할 수 있습니다.|  
 |*variable*|변수 또는 매개 변수의 이름입니다. 자세한 내용은 [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)을 참조하세요.|  
 |**(** _expression_  **)**|이 항목에서 정의된 바와 같이 유효한 식입니다. 괄호는 안에 있는 식의 모든 연산자를 평가한 후에 그 결과를 다른 식과 결합하는 그룹 연산자입니다.|  
-|**(** _scalar_subquery_ **)**|한 개의 값을 반환하는 하위 쿼리입니다. 예를 들어<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
+|**(** _scalar_subquery_ **)**|한 개의 값을 반환하는 하위 쿼리입니다. 다음은 그 예입니다.<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
 |{ *unary_operator* }|단항 연산자는 숫자 데이터 형식 범주의 데이터 형식 하나로 평가되는 식에 대해서만 적용할 수 있습니다. 단 하나의 숫자 피연산자만 있는 연산자입니다.<br /><br /> +는 양수를 나타냅니다.<br /><br /> -는 음수를 나타냅니다.<br /><br /> ~는 보수 연산자를 나타냅니다.|  
 |{ *binary_operator* }|두 식을 결합하여 단일 결과를 만드는 방식을 정의하는 연산자입니다. *binary_operator*는 산술 연산자, 대입 연산자(=), 비트 연산자, 비교 연산자, 논리 연산자, 문자열 연결 연산자(+) 또는 단항 연산자일 수 있습니다. 연산자에 대한 자세한 내용은 [연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)를 참조하세요.|  
 |*ranking_windowed_function*|[!INCLUDE[tsql](../../includes/tsql-md.md)] 순위 함수입니다. 자세한 내용은 [순위 함수&#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)를 참조하세요.|  
@@ -104,7 +104,7 @@ ms.locfileid: "70978594"
   
  복합 식은 많은 기호로 구성되며 연산자는 단일 값의 결과로 평가됩니다. 결과 식의 데이터 형식, 데이터 정렬, 전체 자릿수 및 값은 최종 결과에 도달할 때까지 한 번에 두 개씩 구성 요소 식을 결합하여 결정됩니다. 식이 결합되는 순서는 식의 연산자 우선 순위에 따라 정의됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  두 식이 모두 연산자가 지원하는 데이터 형식을 갖고 있으며 다음 조건 중 최소한 하나가 참인 경우에는 연산자로 두 식을 결합할 수 있습니다.  
   
 -   식의 데이터 형식이 동일한 경우  

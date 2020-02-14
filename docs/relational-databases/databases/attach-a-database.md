@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5d3d470a42d21e5c9946cd3b90dbd488bde515b8
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: b58af59da33a2a03627d06a2e461da76d359e28b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816766"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76911037"
 ---
 # <a name="attach-a-database"></a>데이터베이스 연결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 데이터베이스를 연결하는 방법에 대해 설명합니다. 이 기능을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 복사, 이동 또는 업그레이드할 수 있습니다.  
   
-##  <a name="Prerequisites"></a> 사전 요구 사항  
+##  <a name="Prerequisites"></a> 필수 조건  
   
 -   먼저 데이터베이스를 분리해야 합니다. 분리되지 않은 데이터베이스를 연결하려고 하면 오류가 반환됩니다. 자세한 내용은 [데이터베이스 분리](../../relational-databases/databases/detach-a-database.md)를 참조하세요.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "71816766"
   
 알 수 없거나 신뢰할 수 없는 출처의 데이터베이스는 연결 또는 복원하지 않는 것이 좋습니다. 이러한 데이터베이스에 포함된 악성 코드가 의도하지 않은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 실행하거나 스키마 또는 물리적 데이터베이스 구조를 수정하여 오류가 발생할 수 있습니다. 알 수 없거나 신뢰할 수 없는 소스의 데이터베이스를 사용하기 전에 비프로덕션 서버의 데이터베이스에서 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) 를 실행하여 데이터베이스에서 코드(예: 저장 프로시저 또는 다른 사용자 정의 코드)를 시험해 보세요. 데이터베이스 연결에 대한 자세한 내용 및 데이터베이스를 연결할 때 메타데이터에 대해 이루어지는 변경에 대한 자세한 내용은 [데이터베이스 분리 및 연결(SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)을 참조하세요.  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
 `CREATE DATABASE`, `CREATE ANY DATABASE` 또는 `ALTER ANY DATABASE` 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -72,7 +72,7 @@ ms.locfileid: "71816766"
      **MDF 파일 위치**  
      선택한 MDF 파일의 경로와 파일 이름을 표시합니다.  
   
-     **Database Name**  
+     **데이터베이스 이름**  
      데이터베이스 이름을 표시합니다.  
   
      **다른 이름으로 연결**  
@@ -84,11 +84,11 @@ ms.locfileid: "71816766"
      **상태**  
      다음 표에 설명된 내용과 같이 데이터베이스의 상태를 표시합니다.  
   
-    |아이콘|상태 텍스트|설명|  
+    |아이콘|상태 텍스트|Description|  
     |----------|-----------------|-----------------|  
     |(아이콘 없음)|(텍스트 없음)|연결 작업이 시작되지 않았거나 이 개체에 대해 보류 중입니다. 대화 상자가 열려 있는 경우에 표시되는 기본 설정입니다.|  
     |녹색, 오른쪽 방향 삼각형|진행 중|연결 작업이 시작되었지만 아직 완료되지 않았습니다.|  
-    |녹색 확인 표시|성공|개체가 성공적으로 연결되었습니다.|  
+    |녹색 확인 표시|Success|개체가 성공적으로 연결되었습니다.|  
     |흰색 십자 표시가 있는 빨강 원|Error|연결 작업을 수행하는 동안 오류가 발생하여 완료하지 못했습니다.|  
     |오른쪽과 왼쪽에 두 개의 검정 사분면이 있고 위쪽과 아래쪽에 두 개의 흰색 사분면이 있는 원|중지됨|사용자가 작업을 중지하여 연결 작업이 완료되지 않았습니다.|  
     |시계 반대 방향을 가리키는 곡선 모양의 화살표가 있는 원|롤백됨|연결 작업이 성공적으로 완료되었지만 다른 개체를 연결하는 동안 발생한 오류로 인해 롤백되었습니다.|  
@@ -102,7 +102,7 @@ ms.locfileid: "71816766"
      **제거**  
      선택한 파일을 **연결할 데이터베이스** 표에서 제거합니다.  
   
-     **"** *<database_name>* **" 데이터베이스 정보**  
+     **“** *<database_name>* **” 데이터베이스 정보**  
      연결할 파일의 이름을 표시합니다. 파일의 경로 이름을 확인하거나 변경하려면 **찾아보기** 단추( **...** )를 클릭합니다.  
   
     > [!NOTE]  

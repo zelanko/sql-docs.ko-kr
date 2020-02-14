@@ -17,10 +17,10 @@ ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4dcb5f8bd05b5cd1b5b68927abfef49576d6b072
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710727"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>피어 투 피어 - 트랜잭션 복제
@@ -51,7 +51,7 @@ ms.locfileid: "71710727"
  다음 시나리오에서는 피어 투 피어 복제의 일반적 사용을 설명합니다.  
   
 ### <a name="topology-that-has-two-participating-databases"></a>참여하는 데이터베이스가 두 개인 토폴로지  
- ![피어 투 피어 복제, 2노드](../../../relational-databases/replication/transactional/media/repl-multinode-01.gif "Peer-to-peer replication, two nodes")  
+ ![피어 투 피어 복제, 2노드](../../../relational-databases/replication/transactional/media/repl-multinode-01.gif "피어 투 피어 복제, 2노드")  
   
  위의 두 그림에서는 참여하는 두 데이터베이스를 보여 주며 여기에서는 사용자 트래픽이 애플리케이션 서버를 통해 데이터베이스로 전송됩니다. 이러한 구성은 웹 사이트에서 작업 그룹 애플리케이션에 이르기까지 다양한 애플리케이션에 사용할 수 있으며 다음과 같은 이점을 제공합니다.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "71710727"
  피어 투 피어 복제에는 두 가지 방법이 모두 지원되지만 표준 트랜잭션 복제에서는 오른쪽의 중앙 업데이트 예가 주로 사용됩니다.  
   
 ### <a name="topologies-that-have-three-or-more-participating-databases"></a>참여하는 데이터베이스가 3개 이상인 토폴로지  
- ![여러 위치로 피어 투 피어 복제](../../../relational-databases/replication/transactional/media/repl-multinode-02.gif "Peer-to-peer replication to dispersed locations")  
+ ![여러 위치로 피어 투 피어 복제](../../../relational-databases/replication/transactional/media/repl-multinode-02.gif "여러 위치로 피어 투 피어 복제")  
   
  위의 그림에서는 LA, 런던 및 타이베이에 지사가 있는 전세계적 소프트웨어 기술 지원 업체에 데이터를 제공하는 3개의 참여 데이터베이스를 보여 줍니다. 각 지사의 기술 지원 엔지니어는 고객의 전화를 받으며 각 통화에 대한 정보를 입력하고 업데이트합니다. 세 지사의 표준 시간대는 8시간씩 차이가 나므로 업무 시간이 중복되지 않습니다. 타이베이 지사가 업무를 마감하면 런던 지사가 업무를 시작합니다. 한 지사가 업무를 마감할 때 진행 중인 통화가 있으면 해당 통화는 다음으로 업무가 시작되는 지사의 담당자에게 전송됩니다.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "71710727"
   
 -   참여하는 데이터베이스 중 하나 이상에서 오류가 발생하거나 유지 관리가 필요한 경우에도 높은 가용성을 제공합니다.  
   
-     ![피어 투 피어 복제, 3-4노드](../../../relational-databases/replication/transactional/media/repl-multinode-04.gif "Peer-to-peer replication, three and four nodes")  
+     ![피어 투 피어 복제, 3-4노드](../../../relational-databases/replication/transactional/media/repl-multinode-04.gif "피어 투 피어 복제, 3-4노드")  
   
  위의 그림에서는 3노드 토폴로지에 노드를 하나 더 추가하는 것을 보여 줍니다. 이 시나리오에서는 다음과 같은 이유로 노드를 추가할 수 있습니다.  
   

@@ -15,10 +15,10 @@ ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 325d5cde9ae15bb58c6173a974f14f48847c3361
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71282473"
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>SQL Server 에이전트를 사용하여 원격 서버의 패키지 로드 균형 조정
@@ -26,7 +26,7 @@ ms.locfileid: "71282473"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  패키지를 여러 개 실행해야 하는 경우 사용 가능한 다른 서버를 사용하는 것이 편리합니다. 모든 패키지를 한 부모 패키지에서 관리하고 다른 서버를 사용하여 패키지를 실행하는 이 방법을 로드 균형 조정이라고 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 로드 균형 조정은 패키지 소유자가 직접 설계해야 하며 서버에서 자동으로 수행되지 않습니다. 또한 원격 서버에서 실행되는 패키지는 다른 패키지의 개별 태스크가 아닌 전체 패키지여야 합니다.  
+  패키지를 여러 개 실행해야 하는 경우 사용 가능한 다른 서버를 사용하는 것이 편리합니다. 모든 패키지를 한 부모 패키지에서 관리하고 다른 서버를 사용하여 패키지를 실행하는 이 방법을 로드 균형 조정이라고 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 부하 분산은 패키지 소유자가 직접 설계해야 하며 서버에서 자동으로 수행되지 않습니다. 또한 원격 서버에서 실행되는 패키지는 다른 패키지의 개별 태스크가 아닌 전체 패키지여야 합니다.  
   
  로드 균형 조정은 다음 시나리오에서 유용합니다.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "71282473"
 ### <a name="listing-child-packages"></a>하위 패키지 나열  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 상위 패키지와 하위 패키지가 들어 있는 프로젝트를 배포하는 경우, 상위 패키지에서 실행되는 하위 패키지 목록을 볼 수 있습니다. 상위 패키지를 실행할 때 상위 패키지의 **개요** 보고서가 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 자동으로 생성됩니다. 이 보고서에는 다음 이미지처럼 상위 패키지에 포함되는 패키지 실행 태스크에 의해 수행된 하위 패키지가 나열됩니다.  
   
- ![자식 패키지 목록이 있는 개요 보고서](../../integration-services/packages/media/overviewreport-childpackagelisting.png "자식 패키지 목록이 있는 개요 보고서")  
+ ![하위 패키지 목록이 있는 개요 보고서](../../integration-services/packages/media/overviewreport-childpackagelisting.png "하위 패키지 목록이 있는 개요 보고서")  
   
  **개요** 보고서에 액세스하는 방법은 [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)를 참조하세요.  
   

@@ -1,7 +1,7 @@
 ---
 title: 복사 전용 백업 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/08/2018
+ms.date: 01/30/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -15,17 +15,17 @@ ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 621d3d701e1e815bac4d5028c3d78b00240bc293
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 1d95c1982d5809288b64f34cd1f6328b4ee00e4c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908992"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76941038"
 ---
 # <a name="copy-only-backups"></a>복사 전용 백업
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-*복사 전용 백업*은 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 시퀀스와 독립적인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업입니다. 일반적으로 백업을 수행하면 데이터베이스가 변경되므로 이후 백업이 복원되는 방식에 영향을 주게 됩니다. 그러나 백업 전체에 영향을 주지 않고 특별한 용도로 백업을 수행한 다음 데이터베이스에 대한 프로시저를 복원하는 것이 유용할 수도 있습니다. 이러한 용도로 복사 전용 백업이 제공됩니다.  
+*복사 전용 백업*은 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 시퀀스와 독립적인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업입니다. 일반적으로 백업을 수행하면 데이터베이스가 변경되므로 이후 백업이 복원되는 방식에 영향을 주게 됩니다. 그러나 백업 전체에 영향을 주지 않고 특별한 용도로 백업을 수행한 다음 데이터베이스에 대한 프로시저를 복원하는 것이 유용할 수도 있습니다. 이러한 용도로 복사 전용 백업이 제공됩니다.
   
  복사 전용 백업의 종류는 다음과 같습니다.  
   
@@ -42,6 +42,9 @@ ms.locfileid: "72908992"
      복사 전용 백업 이후에는 트랜잭션 로그를 자를 수 없습니다.  
   
  복사 전용 백업은 **backupset** 테이블의 [is_copy_only](../../relational-databases/system-tables/backupset-transact-sql.md) 열에 기록됩니다.  
+ 
+ > [!IMPORTANT]  
+> [서비스 관리형 TDE(투명한 데이터 암호화)](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-azure-sql?tabs=azure-portal#service-managed-transparent-data-encryption)로 암호화된 데이터베이스의 경우 Azure SQL 관리형 인스턴스 복사 전용 백업을 만들 수 없습니다. 서비스 관리형 TDE는 데이터 암호화에 내부 키를 사용하며, 해당 키를 내보낼 수 없으므로 다른 위치에서 백업을 복원할 수 없습니다. [고객 관리형 TDE](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql)를 대신 사용하여 암호화된 데이터베이스의 복사 전용 백업을 만들 수는 있지만, 나중에 복원하는 데 사용할 수 있는 암호화 키가 있어야 합니다.
   
 ## <a name="to-create-a-copy-only-backup"></a>복사 전용 백업을 만들려면  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]또는 PowerShell을 사용하여 복사 전용 백업을 만들 수 있습니다.  
@@ -81,7 +84,7 @@ WITH COPY_ONLY;
 Backup-SqlDatabase -ServerInstance 'SalesServer' -Database 'Sales' -BackupFile 'E:\BAK\Sales_Copy.bak' -CopyOnly
 ```  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
  **전체 또는 로그 백업을 만들려면**  
   
 - [전체 데이터베이스 백업 만들기&#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
@@ -96,7 +99,7 @@ Backup-SqlDatabase -ServerInstance 'SalesServer' -Database 'Sales' -BackupFile '
   
 - [SQL Server PowerShell 공급자](../../relational-databases/scripting/sql-server-powershell-provider.md)  
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [백업 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [복구 모델&#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)   
  [백업 및 복원으로 데이터베이스 복사](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   

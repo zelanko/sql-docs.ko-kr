@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 456b17ceea4479df25324c34603d3bd7ee7c3a46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934649"
 ---
 # <a name="validate-a-sql-server-installation"></a>SQL Server 설치 유효성 검사
@@ -33,7 +33,7 @@ ms.locfileid: "67934649"
   
  명령줄을 통해 검색 보고서를 생성할 수도 있습니다. 명령 프롬프트에서 "Setup.exe /Action=RunDiscovery"를 실행합니다. 이 명령줄에 "/q"를 추가하면 UI가 표시되지 않지만 보고서는 여전히 %ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<마지막 설치 세션\>에 만들어집니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 설치 로그 파일 보기 및 읽기](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

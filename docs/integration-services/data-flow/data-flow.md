@@ -18,10 +18,10 @@ ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b252a53acd98a0c5b445166ffcf3fa4328dd646f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293150"
 ---
 # <a name="data-flow"></a>데이터 흐름
@@ -101,7 +101,7 @@ ms.locfileid: "71293150"
 ### <a name="sources-available-for-download"></a>다운로드할 수 있는 원본  
  다음 표는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 웹 사이트에서 다운로드할 수 있는 기타 원본을 보여 줍니다.  
   
-|원본|설명|  
+|원본|Description|  
 |------------|-----------------|  
 |Oracle 원본|Oracle 원본은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity의 원본 구성 요소입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity에는 연결 관리자 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft Connectors for Oracle by Attunity 및 Microsoft Connectors for Teradata by Attunity(Microsoft Connectors for Oracle and Teradata by Attunity)](https://go.microsoft.com/fwlink/?LinkId=789384)다운로드 페이지를 참조하십시오.|  
 |SAP BI 원본|SAP BI 원본은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI의 원본 구성 요소입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI에는 연결 관리자 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft SQL Server 기능 팩](https://go.microsoft.com/fwlink/?LinkID=746297)다운로드 페이지를 참조하세요.|  
@@ -140,7 +140,7 @@ ms.locfileid: "71293150"
   
  자세한 내용은 [Integration Services Transformations](../../integration-services/data-flow/transformations/integration-services-transformations.md)을 참조하세요.  
   
-## <a name="destinations"></a>대상  
+## <a name="destinations"></a>Destinations  
  대상은 데이터 흐름의 데이터를 특정 데이터 저장소로 기록하거나 메모리 내 데이터 세트를 만드는 데이터 흐름 구성 요소입니다. 데이터를 플랫 파일, 프로세스 분석 개체로 로드하고 다른 프로세스에 데이터를 제공할 수 있습니다. 또한 데이터베이스에서 테이블 및 뷰에 액세스하고 쿼리를 실행하여 데이터를 로드할 수 있습니다.  
   
  데이터 흐름에는 데이터를 여러 데이터 저장소로 로드하는 여러 대상이 포함될 수 있습니다.  
@@ -162,7 +162,7 @@ ms.locfileid: "71293150"
 ### <a name="destinations-available-for-download"></a>다운로드할 수 있는 대상  
  다음 표는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 웹 사이트에서 다운로드할 수 있는 기타 대상을 보여 줍니다.  
   
-|원본|설명|  
+|원본|Description|  
 |------------|-----------------|  
 |Oracle 대상|Oracle 대상은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity의 대상 구성 요소입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity에는 연결 관리자 및 원본도 포함되어 있습니다. 자세한 내용은 [Microsoft Connectors for Oracle by Attunity 및 Microsoft Connectors for Teradata by Attunity(Microsoft Connectors for Oracle and Teradata by Attunity)](https://go.microsoft.com/fwlink/?LinkId=789384)다운로드 페이지를 참조하십시오.|  
 |SAP BI 대상|SAP BI 대상은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI의 대상 구성 요소입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI에는 연결 관리자 및 원본도 포함되어 있습니다. 자세한 내용은 [Microsoft SQL Server 기능 팩](https://go.microsoft.com/fwlink/?LinkID=746297)다운로드 페이지를 참조하세요.|  
@@ -184,7 +184,7 @@ ms.locfileid: "71293150"
 ### <a name="inputs"></a>입력  
  대상 및 변환에는 입력이 포함됩니다. 입력에는 데이터 흐름 구성 요소가 외부 열을 사용하도록 구성된 경우 이러한 외부 열을 참조할 수 있는 하나 이상의 입력 열이 포함됩니다. 입력은 데이터 흐름을 모니터링하고 제어하도록 구성될 수 있습니다. 예를 들어 구성 요소가 오류에 대한 응답으로 실패하거나, 오류를 무시하거나, 오류 행을 오류 출력으로 리디렉션하도록 지정할 수 있습니다. 또한 입력에 대한 설명을 할당하거나 입력 이름을 업데이트할 수 있습니다. [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 입력은 **고급 편집기** 대화 상자를 사용하여 구성됩니다. **고급 편집기** 에 대한 자세한 내용은 [Integration Services User Interface](../../integration-services/integration-services-user-interface.md)를 참조하십시오.  
   
-### <a name="outputs"></a>출력  
+### <a name="outputs"></a>outputs  
  원본 및 변환에는 항상 출력이 포함됩니다. 출력에는 데이터 흐름 구성 요소가 외부 열을 사용하도록 구성된 경우 이러한 외부 열을 참조할 수 있는 하나 이상의 출력 열이 포함됩니다. 출력은 데이터의 다운스트림 처리에 유용한 정보를 제공하도록 구성될 수 있습니다. 예를 들어 출력이 정렬되는지 여부를 나타낼 수 있습니다. 또한 출력에 대한 설명을 제공하거나 출력 이름을 업데이트할 수 있습니다. [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 출력은 **고급 편집기** 대화 상자를 사용하여 구성됩니다.  
   
 ### <a name="error-outputs"></a>오류 출력  

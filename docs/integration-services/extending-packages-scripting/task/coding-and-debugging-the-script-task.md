@@ -22,10 +22,10 @@ ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1a437704946f379f38aa590ccbf53f240fad94cc
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296912"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>스크립트 태스크 코딩 및 디버깅
@@ -214,7 +214,7 @@ To open Help, press F1.
   
  다음 표에는 전역 **Dts** 개체를 통해 스크립트 태스크 코드에 노출되는 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> 클래스의 주요 공용 멤버가 나와 있습니다. 이 섹션의 항목에서는 이러한 멤버의 사용 방법을 보다 자세히 설명합니다.  
   
-|멤버|용도|  
+|멤버|목적|  
 |------------|-------------|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A>|패키지에 정의된 연결 관리자에 액세스할 수 있게 해 줍니다.|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A>|스크립트 태스크에서 오류, 경고 및 정보 메시지를 발생시킬 수 있게 해 주는 이벤트 인터페이스를 제공합니다.|  
@@ -226,7 +226,7 @@ To open Help, press F1.
   
  <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> 클래스에는 대개 사용하지 않는 공용 멤버도 일부 포함되어 있습니다.  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.VariableDispenser%2A>|<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 속성은 변수에 보다 편리하게 액세스할 수 있게 해 줍니다. <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.VariableDispenser%2A>를 사용할 수도 있지만 읽기 및 쓰기를 위해 변수를 잠그거나 잠금 해제하려면 명시적으로 메서드를 호출해야 합니다. 스크립트 태스크에서는 개발자가 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 속성을 사용할 때 잠금 의미 체계를 자동으로 처리합니다.|  
   

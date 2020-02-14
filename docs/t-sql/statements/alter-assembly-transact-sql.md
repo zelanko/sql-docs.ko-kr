@@ -24,10 +24,10 @@ ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2881c4ee5145506158585611f61219983b764936
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066110"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY(Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68066110"
 > [!WARNING]
 >  CLR은 더 이상 보안 경계로 지원되지 않는 .NET Framework의 CAS(코드 액세스 보안)를 사용합니다. `PERMISSION_SET = SAFE`로 만든 CLR 어셈블리에서 외부 시스템 리소스에 액세스하고, 비관리 코드를 호출하고, sysadmin 권한을 얻을 수 있습니다. [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]부터 CLR 어셈블리의 보안을 강화하기 위해 `clr strict security`라는 `sp_configure` 옵션이 도입되었습니다. `clr strict security`는 기본적으로 사용되며 `SAFE` 및 `EXTERNAL_ACCESS` 어셈블리가 `UNSAFE`로 표시된 것처럼 처리됩니다. `clr strict security` 옵션은 이전 버전과의 호환성을 위해 사용하지 않도록 설정할 수 있지만 권장하지는 않습니다. 모든 어셈블리는 master 데이터베이스에서 `UNSAFE ASSEMBLY` 권한이 부여된 해당 로그인이 포함된 인증서 또는 비대칭 키로 서명하는 것이 좋습니다. 자세한 내용은 [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md)를 참조하세요.  
 
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -125,7 +125,7 @@ ALTER ASSEMBLY assembly_name
 > [!NOTE]  
 >  이 옵션은 포함된 데이터베이스 또는 Azure SQL Database에서 사용할 수 없습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  ALTER ASSEMBLY는 현재 실행 중인 세션(수정 중인 어셈블리에서 실행 중인 코드)을 방해하지 않습니다. 현재 세션은 어셈블리의 변경되지 않은 비트를 사용하여 실행이 완료됩니다.  
   
  FROM 절이 지정되면 ALTER ASSEMBLY는 제공된 모듈의 최신 복사본을 기준으로 어셈블리를 업데이트합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 어셈블리에 대해 정의된 CLR 함수, 저장 프로시저, 트리거, 데이터 형식 및 사용자 정의 집계 함수가 있을 수 있으므로 ALTER ASSEMBLY 문은 이러한 항목을 어셈블리의 최신 구현에 다시 바인딩합니다. 이렇게 다시 바인딩하기 위해서는 동일한 서명의 수정된 어셈블리에도 CLR 함수, 저장 프로시저 및 트리거를 매핑하는 메서드가 있어야 합니다. CLR 사용자 정의 형식 및 사용자 정의 집계 함수를 구현하는 클래스는 여전히 사용자 정의 형식이나 집계에 대한 요구 사항을 충족해야 합니다.  
@@ -194,7 +194,7 @@ ALTER ASSEMBLY assembly_name
   
 ## <a name="examples"></a>예  
   
-### <a name="a-refreshing-an-assembly"></a>1\. 어셈블리 새로 고치기  
+### <a name="a-refreshing-an-assembly"></a>A. 어셈블리 새로 고치기  
  다음 예에서는 `ComplexNumber` 어셈블리를 어셈블리의 구현을 유지하는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 모듈의 최신 복사본으로 업데이트합니다.  
   
 > [!NOTE]  
@@ -208,7 +208,7 @@ ALTER ASSEMBLY assembly_name
 > [!IMPORTANT]
 > Azure SQL Database는 파일 참조를 지원하지 않습니다.
 
-### <a name="b-adding-a-file-to-associate-with-an-assembly"></a>2\. 어셈블리와 연결할 파일 추가  
+### <a name="b-adding-a-file-to-associate-with-an-assembly"></a>B. 어셈블리와 연결할 파일 추가  
  다음 예에서는 `Class1.cs` 어셈블리와 연결할 소스 코드 파일 `MyClass`를 업로드합니다. 이 예에서는 데이터베이스에 이미 `MyClass` 어셈블리가 있다고 가정합니다.  
   
 ```  

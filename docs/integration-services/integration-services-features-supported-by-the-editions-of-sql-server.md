@@ -11,10 +11,10 @@ ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9963f137470c7e252bc00be189c37ac98e6374e4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284355"
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>SQL Server 버전에서 지원하는 Integration Services 기능
@@ -39,11 +39,11 @@ SQL Server Evaluation 버전은 180일 동안 시험용으로 사용할 수 있�
     
 ## <a name="ISNew"></a>SQL Server 2017의 새로운 Integration Services 기능
   
-|기능|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|기능|Enterprise|Standard|웹|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Scale Out 마스터|예|||||
-|Scale Out 작업자|예|예 <sup>1</sup>|TBD|TBD|TBD|
-|OData 구성 요소에서 Microsoft Dynamics AX 및 Microsoft Dynamics CRM 지원 <sup>2</sup>|예|예||||
+|Scale Out 마스터|yes|||||
+|Scale Out 작업자|yes|예 <sup>1</sup>|TBD|TBD|TBD|
+|OData 구성 요소에서 Microsoft Dynamics AX 및 Microsoft Dynamics CRM 지원 <sup>2</sup>|yes|yes||||
 
 <sup>1</sup> Scale Out에서 엔터프라이즈 전용 기능이 필요한 패키지를 실행하는 경우 SQL Server Enterprise 인스턴스에서도 Scale Out 작업자를 실행해야 합니다.
 
@@ -51,39 +51,39 @@ SQL Server Evaluation 버전은 180일 동안 시험용으로 사용할 수 있�
 
 ## <a name="IEWiz"></a> SQL Server 가져오기 및 내보내기 마법사
 
-|기능|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|기능|Enterprise|Standard|웹|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|SQL Server 가져오기 및 내보내기 마법사|예|예|예|예|예|  
+|SQL Server 가져오기 및 내보내기 마법사|yes|yes|yes|yes|yes|  
 
 ## <a name="IS"></a> Integration Services  
   
-|기능|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|기능|Enterprise|Standard|웹|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|기본 제공 데이터 원본 커넥터|예|예|||| 
-|기본 제공 태스크 및 변환|예|예||||  
-|ODBC 원본 및 대상 |예|예|||| 
-|Azure 데이터 원본 커넥터 및 태스크|예|예||||  
-|Hadoop/HDFS 커넥터 및 태스크|예|예||||  
-|기본 데이터 프로파일링 도구|예|예|||| 
+|기본 제공 데이터 원본 커넥터|yes|yes|||| 
+|기본 제공 태스크 및 변환|yes|yes||||  
+|ODBC 원본 및 대상 |yes|yes|||| 
+|Azure 데이터 원본 커넥터 및 태스크|yes|yes||||  
+|Hadoop/HDFS 커넥터 및 태스크|yes|yes||||  
+|기본 데이터 프로파일링 도구|yes|yes|||| 
 
 ## <a name="ISAA"></a> Integration Services - 고급 원본 및 대상  
   
-|기능|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|기능|Enterprise|Standard|웹|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Attunity에 의한 고성능 Oracle 원본 및 대상|예|||||  
-|Attunity에 의한 고성능 Teradata 원본 및 대상|예|||||  
-|SAP BW 원본 및 대상|예|||||  
-|데이터 마이닝 모델 학습 대상|예|||||  
-|차원 처리 대상|예|||||  
-|파티션 처리 대상|예|||||  
+|Attunity에 의한 고성능 Oracle 원본 및 대상|yes|||||  
+|Attunity에 의한 고성능 Teradata 원본 및 대상|yes|||||  
+|SAP BW 원본 및 대상|yes|||||  
+|데이터 마이닝 모델 학습 대상|yes|||||  
+|차원 처리 대상|yes|||||  
+|파티션 처리 대상|yes|||||  
   
 ## <a name="ISAT"></a> Integration Services - 고급 작업 및 변환  
   
-|기능|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|기능|Enterprise|Standard|웹|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Attunity의 변경 데이터 캡처 구성 요소 <sup>1</sup>|예|||||  
-|데이터 마이닝 쿼리 변환|예|||||  
-|유사 항목 그룹화 및 유사 항목 조회 변환|예|||||  
-|용어 추출 및 용어 조회 변환|예|||||  
+|Attunity의 변경 데이터 캡처 구성 요소 <sup>1</sup>|yes|||||  
+|데이터 마이닝 쿼리 변환|yes|||||  
+|유사 항목 그룹화 및 유사 항목 조회 변환|yes|||||  
+|용어 추출 및 용어 조회 변환|yes|||||  
 
 <sup>1</sup> Attunity의 변경 데이터 캡처 구성 요소에는 엔터프라이즈 버전이 필요합니다. 단, 변경 데이터 캡처 서비스 및 변경 데이터 캡처 디자이너에는 엔터프라이즈 버전이 필요하지 않습니다. SSIS가 설치되지 않은 컴퓨터에서 디자이너와 서비스를 사용할 수 있습니다.

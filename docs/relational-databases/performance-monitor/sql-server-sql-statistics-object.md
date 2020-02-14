@@ -14,10 +14,10 @@ ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 7841fef89ae4eb0600dcc62c1561bff769500a47
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67995657"
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server, SQL Statistics 개체
@@ -34,7 +34,7 @@ ms.locfileid: "67995657"
   
  다음은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQL Statistics** 카운터에 대한 설명입니다.  
   
-|SQL Server SQL Statistics 카운터|설명|  
+|SQL Server SQL Statistics 카운터|Description|  
 |----------------------------------------|-----------------|  
 |**Auto-Param Attempts/sec**|초당 자동 매개 변수화 시도 수입니다. 합계는 자동 매개 변수화의 실패한 횟수, 안전한 횟수 그리고 안전하지 않은 횟수의 합과 같습니다. 자동 매개 변수화는 유사한 여러 요청을 처리할 때 캐시된 결과 실행 계획을 다시 사용하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 일부 리터럴을 매개 변수로 바꾸어 [!INCLUDE[tsql](../../includes/tsql-md.md)] 요청을 매개 변수화할 때 일어납니다. 새로운 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 자동 매개 변수화를 단순 매개 변수화라고도 합니다. 이 카운터에는 강제 매개 변수화는 포함되지 않습니다.|  
 |**Batch Requests/sec**|초당 받는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령 일괄 처리 수입니다. 이 통계는 모든 제약 조건(I/O, 사용자 수, 캐시 크기, 요청의 복잡도 등)의 영향을 받습니다. 높은 일괄 처리 수치는 높은 처리 효율을 의미합니다.|  

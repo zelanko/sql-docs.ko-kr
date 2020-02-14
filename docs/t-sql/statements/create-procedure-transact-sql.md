@@ -46,12 +46,12 @@ ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d24ab7a119162c9ad0f084efa8f47961b270a11e
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 9ae139dda1837a6d8698809f984060f0b341b758
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982764"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909823"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "73982764"
 
 구문의 세부 사항을 건너 뛰고 기본 저장 프로시저에 대한 빠른 예제를 보려면 [간단한 예](#Simple)로 이동하세요.
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -144,7 +144,7 @@ AS { [ BEGIN ] sql_statement [;][ ,...n ] [ END ] }
   
 ## <a name="arguments"></a>인수
 OR ALTER  
- **적용 대상**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터 시작).  
+ **적용 대상**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터 시작)  
   
  프로시저가 이미 존재하는 경우 변경합니다.
  
@@ -294,21 +294,21 @@ LANGUAGE = [N] '언어'
 TRANSACTION ISOLATION LEVEL  
  **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
- 고유하게 컴파일된 저장 프로시저에 필요합니다. 저장 프로시저의 트랜잭션 격리 수준을 지정합니다. 다음과 같은 옵션이 있습니다.  
+ 고유하게 컴파일된 저장 프로시저에 필요합니다. 저장 프로시저의 트랜잭션 격리 수준을 지정합니다. 옵션은 다음과 같습니다.  
   
  이러한 옵션에 대한 자세한 내용은 [SET TRANSACTION ISOLATION LEVEL&#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)을 참조하세요.  
   
 REPEATABLE READ  
  다른 트랜잭션에 의해 수정되었지만 아직 커밋되지 않은 데이터를 문이 읽을 수 없도록 지정합니다. 현재 트랜잭션에서 읽은 데이터를 다른 트랜잭션이 수정할 경우 현재 트랜잭션이 실패합니다.  
   
-SERIALIZABLE  
+직렬화 가능  
  다음을 지정합니다.  
 -   문은 다른 트랜잭션에 의해 수정되었지만 아직 커밋되지 않은 데이터를 읽을 수 없습니다.  
 -   현재 트랜잭션에서 읽은 데이터를 다른 트랜잭션이 수정할 경우 현재 트랜잭션이 실패합니다.  
 -   현재 트랜잭션의 명령문에서 읽은 키의 범위에 속하는 키 값이 포함된 새 행을 다른 트랜잭션이 삽입하면 현재 트랜잭션이 실패합니다.  
   
 SNAPSHOT  
- 트랜잭션의 명령문이 읽은 데이터가 트랜잭션별로 트랜잭션을 시작할 때 존재한 데이터 버전과 일관성이 유지되도록 지정합니다.  
+ 트랜잭션의 명령문에서 읽은 데이터가 트랜잭션 시작 부분에 존재하는 데이터의 트랜잭션이 일치되는 버전이 되도록 지정합니다.  
   
 DATEFIRST = *number*  
  **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
@@ -343,7 +343,7 @@ SELECT DB_NAME() AS ThisDB;
 ```   
 `EXEC What_DB_is_this;` 문으로 저장 프로시저 호출   
 
-좀더 복잡한 방법은 입력 매개 변수를 제공하여 프로시저의 유연성을 높이는 것입니다. 예를 들어  
+좀더 복잡한 방법은 입력 매개 변수를 제공하여 프로시저의 유연성을 높이는 것입니다. 다음은 그 예입니다.  
 ```sql   
 CREATE PROC What_DB_is_that @ID int   
 AS    
@@ -353,7 +353,7 @@ SELECT DB_NAME(@ID) AS ThatDB;
 
 더 많은 예제를 보려면 이 토픽 끝에 있는 [예제](#Examples)를 참조하세요.     
     
-## <a name="best-practices"></a>최선의 구현 방법  
+## <a name="best-practices"></a>모범 사례  
  여기에 제시된 최선의 구현 방법은 일부에 불과하지만 이를 적절히 참고하면 프로시저 성능을 개선하는 데 도움이 됩니다.  
   
 -   프로시저 본문에서 SET NOCOUNT ON 문을 첫 번째 문으로 사용합니다. 즉, 이 문을 AS 키워드 바로 다음에 배치합니다. 이렇게 하면 SELECT, INSERT, UPDATE, MERGE 및 DELETE 문이 실행된 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 클라이언트로 보내는 메시지가 해제됩니다. 그러면 투명도를 위해 생성된 출력이 최소 수준으로 유지됩니다. 그러나 현재의 하드웨어에서는 측정 가능한 성능 혜택이 없습니다. 자세한 내용은 [SET NOCOUNT&#40;Transact-SQL&#41;](../../t-sql/statements/set-nocount-transact-sql.md)를 참조하세요.  
@@ -440,7 +440,7 @@ GO
 ## <a name="metadata"></a>메타데이터  
  다음 테이블에서는 저장 프로시저에 대한 정보를 반환하는 데 사용할 수 있는 카탈로그 뷰 및 동적 관리 뷰를 나열합니다.  
   
-|보기|설명|  
+|보기|Description|  
 |----------|-----------------|  
 |[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] 프로시저의 정의를 반환합니다. ENCRYPTION 옵션으로 만든 프로시저의 텍스트는 **sys.sql_modules** 카탈로그 뷰를 사용하여 볼 수 없습니다.|  
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|CLR 프로시저 정보를 반환합니다.|  
@@ -451,7 +451,7 @@ GO
   
 |성능 모니터 개체 이름|성능 모니터 카운터 이름|  
 |-------------------------------------|--------------------------------------|  
-|SQLServer: 플랜 캐시 개체|Cache Hit Ratio|  
+|SQLServer: 플랜 캐시 개체|캐시 적중률|  
 ||Cache Pages|  
 ||Cache Object Counts*|  
   
@@ -489,7 +489,7 @@ GO
   
 ## <a name="Examples"></a> 예  
   
-|범주|중요한 구문 요소|  
+|Category|중요한 구문 요소|  
 |--------------|------------------------------|  
 |[기본 구문](#BasicSyntax)|CREATE PROCEDURE|  
 |[매개 변수 전달](#Parameters)|@parameter <br> &nbsp;&nbsp;  • = default <br> &nbsp;&nbsp; • OUTPUT <br> &nbsp;&nbsp; • 테이블 반환 매개 변수 <br> &nbsp;&nbsp; • CURSOR VARYING|  
@@ -502,7 +502,7 @@ GO
 ###  <a name="BasicSyntax"></a> 기본 구문  
  이 섹션의 예에서는 최소 필수 구문을 사용하여 CREATE PROCEDURE 문의 기본 기능을 보여 줍니다.  
   
-#### <a name="a-creating-a-simple-transact-sql-procedure"></a>1\. 단순 Transact-SQL 프로시저 만들기  
+#### <a name="a-creating-a-simple-transact-sql-procedure"></a>A. 단순 Transact-SQL 프로시저 만들기  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 뷰에서 모든 직원(성과 이름 제공), 직함 및 부서 이름을 반환하는 저장 프로시저를 만듭니다. 이 프로시저는 매개 변수를 사용하지 않습니다. 다음 예에서는 세 가지의 프로시저 실행 방법에 대해 설명합니다.  
   
 ```sql  
@@ -528,7 +528,7 @@ GO
 HumanResources.uspGetAllEmployees;  
 ```  
   
-#### <a name="b-returning-more-than-one-result-set"></a>2\. 둘 이상의 결과 집합 반환  
+#### <a name="b-returning-more-than-one-result-set"></a>B. 둘 이상의 결과 집합 반환  
  다음 프로시저는 두 개의 결과 집합을 반환합니다.  
   
 ```sql  
@@ -966,7 +966,7 @@ WITH EXECUTE AS SELF
 AS TRUNCATE TABLE MyDB..MyTable;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="o-create-a-stored-procedure-that-runs-a-select-statement"></a>15. SELECT 문을 실행하는 저장 프로시저 만들기  
  이 예제는 프로시저를 만들고 실행하기 위한 기본 구문을 보여줍니다. 일괄 처리를 실행할 때 CREATE PROCEDURE가 첫 번째 명령문이어야 합니다. 예를 들어 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)]에서 다음 저장 프로시저를 만들려면 먼저 데이터베이스 컨텍스트를 설정 한 다음, CREATE PROCEDURE 문을 실행합니다.  

@@ -12,10 +12,10 @@ ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f561fd0e5817ecc03e8d5fe4cc8c32661ebdca21
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296246"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>테이블 복사 또는 쿼리 지정(SQL Server 가져오기 및 내보내기 마법사)
@@ -33,7 +33,7 @@ ms.locfileid: "71296246"
 ## <a name="screen-shot-of-the-specify-table-copy-or-query-page"></a>테이블 복사 또는 쿼리 지정 페이지의 스크린샷    
  다음 스크린샷은 마법사의 **테이블 복사 또는 쿼리 지정** 페이지를 보여 줍니다.    
     
- ![가져오기 및 내보내기 테이블 복사 또는 쿼리 페이지](../../integration-services/import-export-data/media/table-copy-or-query.png "가져오기 및 내보내기 테이블 복사 또는 쿼리 페이지")    
+ ![가져오기 및 내보내기 마법사의 테이블 복사 또는 쿼리 페이지](../../integration-services/import-export-data/media/table-copy-or-query.png "가져오기 및 내보내기 마법사의 테이블 복사 또는 쿼리 페이지")    
     
 ## <a name="specify-whether-to-copy-an-entire-table-or-write-a-query"></a>전체 테이블을 복사할지 또는 쿼리를 작성할지 지정 
  **하나 이상의 테이블 또는 뷰에서 데이터 복사**    
@@ -81,7 +81,7 @@ ms.locfileid: "71296246"
     
 -   **전송 데이터를 지정할 쿼리 작성**을 선택한 경우 다음 페이지는 **원본 쿼리 지정**입니다. 이 페이지에서는 데이터 원본에서 대상으로 복사할 데이터를 선택하는 SQL 문을 작성하고 테스트합니다. 쿼리를 지정한 후 다음 페이지는 **원본 테이블 및 뷰 선택**입니다. 자세한 내용은 [원본 쿼리 지정](../../integration-services/import-export-data/provide-a-source-query-sql-server-import-and-export-wizard.md)을 참조하세요.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [가져오기 및 내보내기 마법사의 이 간단한 예제로 시작](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 
 

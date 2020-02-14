@@ -22,10 +22,10 @@ ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 75258eabcc1874ca8cda731cc473847b7316ff28
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296194"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Integration Services(SSIS) 이벤트 처리기
@@ -75,7 +75,7 @@ ms.locfileid: "71296194"
 ## <a name="run-time-events"></a>런타임 이벤트  
  다음 표에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 제공되는 이벤트 처리기를 나열하고 이벤트 처리기를 실행하는 런타임 이벤트에 대해 설명합니다.  
   
-|이벤트 처리기|이벤트|  
+|이벤트 처리기|행사|  
 |-------------------|-----------|  
 |**OnError**|**OnError** 이벤트에 대한 이벤트 처리기입니다. 이 이벤트는 오류가 발생할 때 실행 개체에 의해 발생합니다.|  
 |**OnExecStatusChanged**|**OnExecStatusChanged** 이벤트에 대한 이벤트 처리기입니다. 이 이벤트는 실행 상태가 변경될 때 실행 개체에 의해 발생합니다.|  
@@ -130,7 +130,7 @@ ms.locfileid: "71296194"
   
  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 이러한 속성을 설정하는 방법에 대한 자세한 내용은 [태스크 또는 컨테이너의 속성 설정](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)을 참조하세요.  
   
- 이러한 속성을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>를 참조하세요.  
+ 이러한 속성을 프로그래밍 방식으로 설정하는 방법은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>을 참조하세요.  
   
 ## <a name="related-tasks"></a>관련 작업  
  패키지에 이벤트 처리기를 추가하는 방법에 대한 자세한 내용은 [패키지에 이벤트 처리기 추가](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)를 참조하세요.  

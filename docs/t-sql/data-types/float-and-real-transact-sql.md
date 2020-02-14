@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7f31e3894448e5d6a044af75c7e86b704b993aa6
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71682012"
 ---
 # <a name="float-and-real-transact-sql"></a>float 및 real(Transact-SQL)
@@ -35,12 +35,12 @@ ms.locfileid: "71682012"
 
 부동 소수점 숫자 데이터에 사용하는 근사 숫자 데이터 형식입니다. 부동 소수점 데이터는 근사값이므로 해당 데이터 형식 범위에 있는 모든 값을 정확하게 표현할 수는 없습니다. **real**의 ISO 동의어는 **float(24)** 입니다.
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
 **float** [ **(** _n_ **)** ] 여기서 *n*은 과학적 표기법으로 **float** 숫자의 가수를 저장하는 데 사용되는 비트 수로서, 전체 자릿수 및 스토리지 크기를 결정합니다. *n*이 지정된 경우 그 값은 **1**에서 **53** 사이여야 합니다. *n*의 기본값은 **53**입니다.
   
-|*n* 값|전체 자릿수|스토리지 크기|  
+|*n* 값|자릿수|스토리지 크기|  
 |---|---|---|
 |**1-24**|7자리|4바이트|  
 |**25-53**|15자리|8바이트|  
@@ -48,9 +48,9 @@ ms.locfileid: "71682012"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 *n*을 가능한 두 값 중 하나로 처리합니다. **1**<=n<=**24**이면 *n*은 **24**로 처리됩니다. **25**<=n<=**53**이면 *n*은 **53**으로 처리됩니다.  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 **float**[ **(n)** ] 데이터 형식은 **1**부터 **53**까지 *n*의 모든 값에 대해 ISO 표준을 준수합니다. **double precision**의 동의어는 **float(53)** 입니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float**[ **(n)** ] 데이터 형식은 **1**부터 **53**까지 *n*의 모든 값에 대해 ISO 표준을 준수합니다. **double precision**의 동의어는 **float(53)** 입니다.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 |데이터 형식|범위|스토리지|  
 |---|---|---|
@@ -64,7 +64,7 @@ ms.locfileid: "71682012"
   
 [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] 이전에는 **float** 값을 **decimal** 또는 **numeric**로 변환하는 경우 정밀도 값이 17자리로 제한됩니다. 5E-18(과학적 표기법 5E-18 또는 10진 표기법 0.0000000000000000050000000000000005를 사용하여 설정된 경우) 미만의 **float** 값은 0으로 버림됩니다. [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)]부터 더 이상 제한되지 않습니다.
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  

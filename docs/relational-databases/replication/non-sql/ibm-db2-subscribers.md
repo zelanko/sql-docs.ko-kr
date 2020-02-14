@@ -17,10 +17,10 @@ ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a7d61b0e88dd2017218c74635b89f8207691c22a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68133273"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
@@ -132,7 +132,7 @@ ms.locfileid: "68133273"
 |**smalldatetime**|timestamp|  
 |**smallint**|SMALLINT|  
 |**smallmoney**|DECIMAL(10,4)|  
-|**sql_variant**|해당 사항 없음|  
+|**sql_variant**|해당 없음|  
 |**sysname**|VARCHAR(128)|  
 |**text**|VARCHAR(0)*|  
 |**time(0-7)**|VARCHAR(16)|  
@@ -150,11 +150,11 @@ ms.locfileid: "68133273"
 ### <a name="data-type-mapping-considerations"></a>데이터 형식 매핑 고려 사항  
  DB2 구독자로 복제 시 데이터 형식 매핑과 관련된 다음 사항을 고려해야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 **char**, **varchar**, **binary** 및 **varbinary**를 각각 DB2의 CHAR, VARCHAR, CHAR FOR BIT DATA 및 VARCHAR FOR BIT DATA에 매핑하면 복제에서 DB2 데이터 형식의 길이를 해당 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식의 길이와 같게 설정합니다.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **char**, **varchar**, **binary** 및 **varbinary**를 각각 DB2의 CHAR, VARCHAR, CHAR FOR BIT DATA 및 VARCHAR FOR BIT DATA에 매핑하면 복제에서 DB2 데이터 형식의 길이를 해당 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 형식의 길이와 같게 설정합니다.  
   
      이렇게 하면 DB2의 페이지 크기를 최대 행 크기를 수용할 수 있을 정도로 늘릴 수 있는 한 생성된 테이블을 구독자에서 성공적으로 만들 수 있습니다. DB2 데이터베이스에 액세스하는 데 사용되는 로그인은 테이블을 DB2로 복제할 수 있는 충분한 크기의 테이블 공간에 액세스할 수 있어야 합니다.  
   
--   DB2는 최대 32KB의 VARCHAR 열을 지원할 수 있으므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 일부 큰 개체 열을 DB2 VARCHAR 열로 적절하게 매핑할 수 있습니다. 그러나 복제에서 사용하는 DB2용 OLE DB 공급자에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 큰 개체를 DB2의 큰 개체로 매핑할 수 없습니다. 따라서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **text**, **varchar(max)** , **ntext**및 **nvarchar(max)** 열은 생성된 생성 스크립트에서 VARCHAR(0)에 매핑됩니다. 길이 값 0은 스크립트를 구독자에 적용하기 전에 적절한 값으로 바꾸어야 합니다. 데이터 형식의 길이를 변경하지 않으면 DB2 구독자에서 테이블을 만들려고 할 때 DB2에서 오류 604가 발생합니다. 오류 604는 데이터 형식의 전체 자릿수나 길이 특성이 유효하지 않음을 나타냅니다.  
+-   DB2는 최대 32KB의 VARCHAR 열을 지원할 수 있으므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 일부 큰 개체 열을 DB2 VARCHAR 열로 적절하게 매핑할 수 있습니다. 그러나 복제에서 사용하는 DB2용 OLE DB 공급자에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 큰 개체를 DB2의 큰 개체로 매핑할 수 없습니다. 따라서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **text**, **varchar(max)** , **ntext** 및 **nvarchar(max)** 열은 생성된 생성 스크립트에서 VARCHAR(0)에 매핑됩니다. 길이 값 0은 스크립트를 구독자에 적용하기 전에 적절한 값으로 바꾸어야 합니다. 데이터 형식의 길이를 변경하지 않으면 DB2 구독자에서 테이블을 만들려고 할 때 DB2에서 오류 604가 발생합니다. 오류 604는 데이터 형식의 전체 자릿수나 길이 특성이 유효하지 않음을 나타냅니다.  
   
      복제하는 원본 테이블에 대한 지식을 바탕으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 큰 개체를 가변 길이의 DB2 항목에 매핑하는 것이 적절한지 결정하고 사용자 지정 생성 스크립트에 적절한 최대 길이를 지정합니다. 사용자 지정 생성 스크립트 지정 방법은 이 항목의 "IBM DB2 구독자 구성" 섹션에서 5단계를 참조하십시오.  
   
@@ -163,9 +163,9 @@ ms.locfileid: "68133273"
   
      큰 개체 열에 대한 적절한 매핑이 없으면 열이 복제되지 않도록 아티클에 대해 열 필터링을 사용해 보십시오. 자세한 내용은 [게시된 데이터 필터링](../../../relational-databases/replication/publish/filter-published-data.md)을 참조하세요.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 **nchar** 및 **nvarchar**를 DB2의 CHAR 및 VARCHAR로 복제하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 형식과 DB2 형식에 같은 길이 지정자가 사용됩니다. 그러나 데이터 형식의 길이가 생성된 DB2 테이블에 비해 너무 작을 수도 있습니다.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **nchar** 및 **nvarchar**를 DB2의 CHAR 및 VARCHAR로 복제하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 형식과 DB2 형식에 같은 길이 지정자가 사용됩니다. 그러나 데이터 형식의 길이가 생성된 DB2 테이블에 비해 너무 작을 수도 있습니다.  
   
-     일부 DB2 환경에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **char** 데이터 항목의 문자가 싱글바이트로 제한되지는 않으므로 CHAR 또는 VARCHAR 항목의 길이를 정할 때 이를 고려해야 합니다. 또한 필요한 경우 *시프트 인* 및 *시프트 아웃* 문자를 사용해 볼 수 있습니다. **nchar** 열과 **nvarchar** 열이 있는 테이블을 복제하는 경우 사용자 지정 생성 스크립트로 해당 데이터 형식에 보다 큰 최대 길이를 지정할 수도 있습니다. 사용자 지정 생성 스크립트 지정 방법은 이 항목의 "IBM DB2 구독자 구성" 섹션에서 5단계를 참조하십시오.  
+     일부 DB2 환경에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **char** 데이터 항목의 문자가 싱글 바이트로 제한되지는 않으므로 CHAR 또는 VARCHAR 항목의 길이를 정할 때 이를 고려해야 합니다. 또한 필요한 경우 *시프트 인* 및 *시프트 아웃* 문자를 사용해 볼 수 있습니다. **nchar** 열과 **nvarchar** 열이 있는 테이블을 복제하는 경우 사용자 지정 생성 스크립트로 해당 데이터 형식에 보다 큰 최대 길이를 지정할 수도 있습니다. 사용자 지정 생성 스크립트 지정 방법은 이 항목의 "IBM DB2 구독자 구성" 섹션에서 5단계를 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)   

@@ -14,10 +14,10 @@ ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7e15a268219a6b5d50c1de7e135b4c16bf999445
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293829"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
@@ -29,14 +29,14 @@ ms.locfileid: "71293829"
   
  다음 스크린샷에는 다양한 오류 출력을 제공하는 XML 유효성 검사에 필요한 설정이 포함된 **XML 태스크 편집기** 가 나와 있습니다.  
   
- ![XML 태스크 편집기에서 XML 태스크 속성](../../integration-services/control-flow/media/xmltaskproperties.jpg "XML 태스크 편집기에서 XML 태스크 속성")  
+ ![XML 태스크 편집기의 XML 태스크 속성](../../integration-services/control-flow/media/xmltaskproperties.jpg "XML 태스크 편집기의 XML 태스크 속성")  
   
  **ValidationDetails** 속성을 사용할 수 있게 되기 전에 먼저 XML 태스크에 의해 수행된 XML 유효성 검사가 오류 또는 해당 위치에 대한 정보 없이 true 또는 false 결과만 반환했습니다. 이제는 **ValidationDetails** 를 true로 설정할 경우 출력 파일에 줄 번호 및 위치를 포함하여 모든 오류에 대한 자세한 정보가 포함됩니다. 이 정보를 사용하여 XML 문서의 오류를 이해하고, 찾고, 수정할 수 있습니다.  
   
  대형 XML 문서 및 많은 수의 오류에 사용할 수 있도록 XML 유효성 검사 기능을 쉽게 확장할 수 있습니다. 출력 파일 자체가 XML 형식이므로 출력을 쿼리하고 분석할 수 있습니다. 예를 들어 출력에 오류가 많이 포함되어 있으면 이 항목에서 설명하는 대로 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 사용하여 오류를 그룹화할 수 있습니다.  
   
 > [!NOTE]
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)])는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 서비스 팩 2에서 **ValidationDetails** 속성을 도입했습니다. 이 속성은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서도 사용할 수 있습니다.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]([!INCLUDE[ssIS](../../includes/ssis-md.md)])는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 서비스 팩 2에서 **ValidationDetails** 속성을 도입했습니다. 이 속성은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서도 사용할 수 있습니다.  
   
 ## <a name="sample-output-for-xml-thats-valid"></a>유효한 XML의 샘플 출력  
  아래에는 유효한 XML 파일의 유효성 결과가 포함된 샘플 출력 파일이 나와 있습니다.  
@@ -120,7 +120,7 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
   
  위 텍스트에 나와 있는 두 번째 샘플 쿼리를 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서 표시한 결과는 다음과 같습니다.  
   
- ![Management Studio에서 XML 오류를 그룹화하기 위해 쿼리](../../integration-services/control-flow/media/queryforxmlerrors.jpg "Management Studio에서 XML 오류를 그룹화하기 위해 쿼리")  
+ ![Management Studio에서 XML 오류를 그룹화하는 쿼리](../../integration-services/control-flow/media/queryforxmlerrors.jpg "Management Studio에서 XML 오류를 그룹화하는 쿼리")  
   
 ## <a name="see-also"></a>참고 항목  
  [XML 태스크](../../integration-services/control-flow/xml-task.md)   

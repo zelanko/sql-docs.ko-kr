@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 11dc9169ec88928c893d875b7051bfbf551c95fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68034525"
 ---
 # <a name="service-broker"></a>Service Broker
@@ -106,7 +106,7 @@ FROM ExpenseQueue;
 
 - 인스턴스 간 Service Broker는 지원되지 않습니다. 
  - `sys.routes` - 필수 조건: sys.routes에서 주소를 선택합니다. 주소는 모든 경로에서 LOCAL이어야 합니다. [sys.routes](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md)를 참조하세요.
- - `CREATE ROUTE` - `LOCAL` 외에 `ADDRESS`와 함께 `CREATE ROUTE`를 사용할 수 없습니다. [CREATE ROUTE](https://docs.microsoft.com/sql/t-sql/statements/create-route-transact-sql)를 참조하세요.
+ - `CREATE ROUTE` - `LOCAL` 이외의 `ADDRESS`가 포함된 `CREATE ROUTE`는 사용할 수 없습니다. [CREATE ROUTE](https://docs.microsoft.com/sql/t-sql/statements/create-route-transact-sql)를 참조하세요.
  - `ALTER ROUTE`는 `LOCAL` 외에 `ADDRESS`와 함께 `ALTER ROUTE`를 사용할 수 없습니다. [ALTER ROUTE](../../t-sql/statements/alter-route-transact-sql.md)를 참조하세요.  
   
 ### <a name="messages-can-be-sent-to-multiple-target-services-multicast"></a>메시지를 여러 대상 서비스에 보낼 수 있음(멀티캐스트)  

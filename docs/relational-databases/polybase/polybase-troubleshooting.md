@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 520637f8bcbe8ae1fcd4fee0ebf3fa33fe3b3650
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: edd716b36e8dc7339ab9661a2213afae5ac35379
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710497"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909633"
 ---
 # <a name="monitor-and-troubleshoot-polybase"></a>PolyBase 모니터링 및 문제 해결
 
@@ -33,7 +33,7 @@ PolyBase 작업을 관리하려면 여기에 나와 있는 카탈로그 뷰를 �
 
 |||  
 |-|-|  
-|보기|설명|  
+|보기|Description|  
 |[sys.external_tables&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)|외부 테이블을 식별합니다.|  
 |[sys.external_data_sources&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)|외부 데이터 원본을 식별합니다.|  
 |[sys.external_file_formats&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)|외부 파일 형식을 식별합니다.|  
@@ -142,7 +142,7 @@ PolyBase 쿼리는 sys.dm_exec_distributed_request_steps 내에 있는 일련의
 
 3. **원격 쿼리 연산자** 를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.
 
-4. 원격 쿼리 값을 복사한 다음 텍스트 편집기에 붙여넣어 XML 원격 쿼리 계획을 확인합니다. 아래에 예가 나와 있습니다.
+4. 원격 쿼리 값을 복사한 다음 텍스트 편집기에 붙여넣어 XML 원격 쿼리 계획을 확인합니다. 아래에 예제가 나와 있습니다.
 
    ```xml  
 
@@ -223,6 +223,6 @@ PolyBase는 오늘 Zookeeper 또는 Knox와 같은 이름 노드 HA 서비스와
 
 외부 테이블 오류를 해결하려면 Murshed Zaman의 블로그 [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "PolyBase 설정 오류 및 가능한 해결 방법")을 참조하세요.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [PolyBase Kerberos 연결 문제 해결](polybase-troubleshoot-connectivity.md)

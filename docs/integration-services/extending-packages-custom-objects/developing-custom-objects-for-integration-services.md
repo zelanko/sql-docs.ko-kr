@@ -14,10 +14,10 @@ ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7b621ebd5750d918c22f61ac005b02e1b8bea187
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297213"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>Integration Services용 사용자 지정 개체 개발
@@ -65,7 +65,7 @@ ms.locfileid: "71297213"
   
 |사용자 지정 개체|기본 클래스|attribute|주요 메서드|  
 |-------------------|----------------|---------------|-----------------------|  
-|태스크|<xref:Microsoft.SqlServer.Dts.Runtime.Task>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>|  
+|Task|<xref:Microsoft.SqlServer.Dts.Runtime.Task>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>|  
 |ODBC 대상 편집기|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ReleaseConnection%2A>|  
 |로그 공급자|<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.OpenLog%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.CloseLog%2A>|  
 |Enumerator|<xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.GetEnumerator%2A>|  
@@ -104,7 +104,7 @@ ms.locfileid: "71297213"
   
 |사용자 지정 개체|사용자 인터페이스의 기본 클래스|사용자 지정 사용자 인터페이스가 제공되지 않을 경우의 기본 편집 동작|  
 |-------------------|-----------------------------------|----------------------------------------------------------------------|  
-|태스크|<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI>|속성 창만 표시|  
+|Task|<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI>|속성 창만 표시|  
 |ODBC 대상 편집기|<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI>|속성 창만 표시|  
 |로그 공급자|<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI><br /><br /> [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 구현되지 않음|**구성** 열의 텍스트 상자|  
 |Enumerator|<xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumeratorUI>|속성 창만 표시. 편집기의 열거자 구성 영역은 비어 있음|  

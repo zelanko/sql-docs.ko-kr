@@ -16,10 +16,10 @@ ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 7ba560e46aaebc1aa5bc6901a3c0067fae91bdb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68085937"
 ---
 # <a name="replication-queue-reader-agent"></a>복제 큐 판독기 에이전트
@@ -64,7 +64,7 @@ qrdrsvc [-?]
  에이전트 정의 파일의 경로입니다. 에이전트 정의 파일에는 에이전트의 명령줄 인수가 들어 있습니다. 파일 내용은 실행 파일로 구문 분석됩니다. 임의 문자가 있는 인수 값을 지정하려면 큰따옴표(")를 사용합니다.  
   
  **-Distributor** _server_name_[ **\\** _instance_name_]  
- 배포자 이름입니다. 해당 서버에 있는 기본 *인스턴스에 대해* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지정하고, 해당 서버에 있는 기본 *server_name*\\*instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지정하고, 이 인수가 지정되지 않은 경우 로컬 컴퓨터에 있는 기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름이 기본 이름이 됩니다.  
+ 배포자 이름입니다. 해당 서버에 있는 기본 *server_name* 인스턴스에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지정합니다. 해당 서버에 있는 기본 *server_name*\\*instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지정하고, 이 인수가 지정되지 않은 경우 로컬 컴퓨터에 있는 기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름이 기본 이름이 됩니다.  
   
  **-DistributionDB** _distribution_database_  
  배포 데이터베이스입니다.  
@@ -81,7 +81,7 @@ qrdrsvc [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  연결을 만들 때 큐 판독기 에이전트에서 사용하는 SSL(Secure Sockets Layer) 암호화의 수준입니다.  
   
-|EncryptionLevel 값|설명|  
+|EncryptionLevel 값|Description|  
 |---------------------------|-----------------|  
 |**0**|SSL이 사용되지 않음을 지정합니다.|  
 |**1**|SSL이 사용되지만 에이전트에서 SSL 서버 인증서가 트러스트된 발급자에 의해 서명된 것인지 확인하지 않음을 지정합니다.|  
@@ -95,10 +95,10 @@ qrdrsvc [-?]
  **-HistoryVerboseLevel** [ **0**| **1**| **2**| **3**]  
  큐 판독기 작업을 수행하는 동안 기록에 추가되는 양을 지정합니다. **1**을 선택하여 성능에서 기록 로깅의 영향을 최소화할 수 있습니다.  
   
-|HistoryVerboseLevel 값|설명|  
+|HistoryVerboseLevel 값|Description|  
 |-------------------------------|-----------------|  
 |**0**|기록 로깅을 사용하지 않습니다(권장되지 않음).|  
-|**1**|기본. 시작, 진행, 성공 등과 같이 상태가 동일한 이전 기록 메시지를 항상 업데이트합니다. 상태가 같은 이전 레코드가 없으면 새 레코드를 삽입합니다.|  
+|**1**|기본값 시작, 진행, 성공 등과 같이 상태가 동일한 이전 기록 메시지를 항상 업데이트합니다. 상태가 같은 이전 레코드가 없으면 새 레코드를 삽입합니다.|  
 |**2**|유휴 메시지 또는 장기 실행 작업 메시지를 포함하여 새 기록 레코드를 삽입합니다.|  
 |**3**|문제 해결에 유용한 추가 정보를 포함하는 새 기록 레코드를 삽입합니다.|  
   
@@ -115,7 +115,7 @@ qrdrsvc [-?]
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기반 큐를 사용하는 구독 업데이트에만 해당됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 큐가 보류 중인 지연 트랜잭션에 대해 폴링되는 빈도(초)를 지정합니다. 이 값은 0초에서 240초 사이일 수 있습니다. 기본값은 5초입니다.  
   
  **-PublisherFailoverPartner** _server_name_[ **\\** _instance_name_]  
- 게시 데이터베이스와 함께 데이터베이스 미러링 세션에 참여하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 장애 조치 파트너 인스턴스를 지정합니다. 자세한 내용은 [데이터베이스 미러링 및 복제&#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)를 참조하세요.  
+ 게시 데이터베이스와 함께 데이터베이스 미러링 세션에 참여하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 장애 조치 파트너 인스턴스를 지정합니다. 자세한 내용은 [데이터베이스 미러링 및 복제&#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)을 참조하세요.  
   
  **-ProfileName** _agent_profile_name_  
  에이전트에 대한 기본값 집합을 제공하는 데 사용되는 에이전트 프로필의 이름입니다. 자세한 내용은 [복제 에이전트 프로필](../../../relational-databases/replication/agents/replication-agent-profiles.md)을 참조하세요.  
@@ -126,7 +126,7 @@ qrdrsvc [-?]
  **-ResolverState** [ **1**| **2**| **3**]  
  지연 업데이트 충돌의 해결 방법을 지정합니다. 값 **1** 은 충돌 시 게시자의 내용이 적용되고, 현재 충돌하는 지연 트랜잭션이 게시자 및 원래 업데이트 구독자에서 다시 롤백되며, 이후 지연 트랜잭션의 처리가 계속됨을 나타냅니다. 값 **2** 는 충돌 시 구독자의 내용이 적용되고 지연 트랜잭션이 게시자의 값을 재정의함을 나타냅니다. 값 **3** 은 충돌이 발생할 경우 구독자가 다시 초기화되고, 게시자의 내용이 적용되고, 이후 지연 트랜잭션의 처리가 종료되며, 구독이 다시 초기화됨을 나타냅니다. 기본 설정은 트랜잭션 게시의 경우 **1** 이고 스냅샷 게시의 경우 **3** 입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  큐 판독기 에이전트를 시작하려면 명령 프롬프트에서 **qrdrsvc.exe** 를 실행합니다. 자세한 내용은 [복제 에이전트 실행 파일](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)을 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  

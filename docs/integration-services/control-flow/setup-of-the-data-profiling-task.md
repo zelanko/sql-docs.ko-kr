@@ -13,10 +13,10 @@ ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0230354bfe53de8c362bcdb70caa597652706ee2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293979"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>데이터 프로파일링 태스크 설정

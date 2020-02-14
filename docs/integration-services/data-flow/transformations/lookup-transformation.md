@@ -24,10 +24,10 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d4c44f8920fc3a8060dcff6112eb41055f1584d2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291265"
 ---
 # <a name="lookup-transformation"></a>조회 변환
@@ -90,7 +90,7 @@ ms.locfileid: "71291265"
   
  캐시를 파일로 저장할 경우의 추가 이점은 다음과 같습니다.  
   
--   ***여러 패키지에서 캐시 파일을 공유합니다. 자세한 내용은*** [캐시 연결 관리자 변환을 사용하여 전체 캐시 모드에서 조회 변환 구현](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)***을 참조하세요.***  
+-   ***여러 패키지에서 캐시 파일을 공유합니다. 자세한 내용은***  [캐시 연결 관리자 변환을 사용하여 전체 캐시 모드에서 조회 변환 구현](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md) ***을 참조하세요.***  
   
 -   패키지와 함께 캐시 파일을 배포합니다. ***그러면 데이터를 여러 컴퓨터에서 사용할 수 있습니다.*** 자세한 내용은 [조회 변환에 대한 캐시 만들기 및 배포](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md)를 참조하세요.  
   
@@ -157,7 +157,7 @@ ms.locfileid: "71291265"
  **캐시 없음**  
  조회 변환이 실행되는 동안 참조 데이터 세트를 생성합니다. 캐시에 로드되는 데이터가 없습니다.  
   
- **캐시 연결 관리자**  
+ **전체 캐시**  
  조회 변환이 캐시 연결 관리자를 사용하도록 구성합니다. 이 옵션은 전체 캐시 옵션을 선택하는 경우에만 사용할 수 있습니다.  
   
  **캐시 없음**  

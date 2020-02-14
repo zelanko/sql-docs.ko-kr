@@ -35,10 +35,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bcf4dc79c1b241d4a9f48a3d211c13871e32b711
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981978"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>FROM 절과 JOIN, APPLY, PIVOT(Transact-SQL)
@@ -59,7 +59,7 @@ Transact-SQL에서 FROM 절은 다음 명령문에서 사용할 수 있습니다
 - APPLY
 - PIVOT
 
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>구문  
   
@@ -229,7 +229,7 @@ FROM { <table_source> [ ,...n ] }
  *derived_table*  
  데이터베이스의 행을 검색하는 하위 쿼리입니다. *derived_table*은 외부 쿼리에 대한 입력으로 사용됩니다.  
   
- *derived* *_table* 은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 테이블 값 생성자 기능을 사용하여 여러 행을 지정할 수 있습니다. `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`)을 입력합니다. 자세한 내용은 [테이블 값 생성자&#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)를 참조하세요.  
+ *derived* *_table*은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 테이블 값 생성자 기능을 사용하여 여러 행을 지정할 수 있습니다. `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`)을 입력합니다. 자세한 내용은 [테이블 값 생성자&#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)를 참조하세요.  
   
  *column_alias*  
  파생된 테이블의 결과 집합에서 열 이름을 대체할 선택적인 별칭입니다. SELECT 목록의 각 열당 한 개의 열 별칭을 포함하고 열 별칭의 전체 목록을 괄호로 묶습니다.  
@@ -295,7 +295,7 @@ FROM { <table_source> [ ,...n ] }
  오른쪽 테이블에서 조인 조건에 맞지 않는 모든 행을 결과 집합에 포함하고 내부 조인에서 반환된 모든 행과 다른 테이블에 해당되는 출력 열을 NULL로 설정하도록 지정합니다.  
   
 ### <a name="join-hint"></a>조인 힌트  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램에서 쿼리의 FROM 절에 지정된 조인마다 하나의 조인 힌트 또는 실행 알고리즘을 사용하도록 지정합니다. 자세한 내용은 [조인 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-join.md)를 참조하세요.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램에서 쿼리의 FROM 절에 지정된 조인마다 하나의 조인 힌트 또는 실행 알고리즘을 사용하도록 지정합니다. 자세한 내용은 [조인 힌트#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-join.md)를 참조하세요.  
   
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]의 경우 이러한 조인 힌트는 호환되지 않는 두 개의 배포 열에 대한 INNER 조인에 적용됩니다. 쿼리 처리 중에 발생하는 데이터 이동의 양을 제한하여 쿼리 성능을 향상시킬 수 있습니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 허용되는 조인 힌트는 다음과 같습니다.  
   
@@ -409,7 +409,7 @@ ON (p.ProductID = v.ProductID);
  ALL  
  현재 테이블과 기록 테이블의 모든 행에 있는 값이 포함된 테이블을 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  FROM 절은 조인된 테이블과 파생된 테이블에 대해 SQL-92-SQL 구문을 지원합니다. SQL-92 구문은 INNER, LEFT OUTER, RIGHT OUTER, FULL OUTER, CROSS 조인 연산자를 제공합니다.  
   
  FROM 절의 UNION과 JOIN은 뷰, 파생된 테이블 및 하위 쿼리에서 지원됩니다.  
@@ -458,7 +458,7 @@ APPLY 연산자는 다음과 같은 방식으로 FROM 절에 지정될 테이블
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-a-simple-from-clause"></a>1\. 간단한 FROM 절 사용  
+### <a name="a-using-a-simple-from-clause"></a>A. 간단한 FROM 절 사용  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 샘플 데이터베이스에서 `TerritoryID` 테이블의 `Name` 및 `SalesTerritory`을 검색합니다.  
   
 ```sql    
@@ -485,7 +485,7 @@ TerritoryID Name
 (10 row(s) affected)  
 ```  
   
-### <a name="b-using-the-tablock-and-holdlock-optimizer-hints"></a>2\. TABLOCK 및 HOLDLOCK 최적화 프로그램 힌트 사용  
+### <a name="b-using-the-tablock-and-holdlock-optimizer-hints"></a>B. TABLOCK 및 HOLDLOCK 최적화 프로그램 힌트 사용  
  다음의 부분 트랜잭션은 `Employee`에 명시적인 공유 테이블 잠금을 설정하고 인덱스를 읽는 방법을 보여 줍니다. 잠금은 전체 트랜잭션 동안 유지됩니다.  
   
 ```sql    
@@ -595,7 +595,7 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
 
 |개체 이름|열 이름|      
 |---|---|   
-|부서|DeptID, DivisionID, DeptName, DeptMgrID|      
+|Departments|DeptID, DivisionID, DeptName, DeptMgrID|      
 |EmpMgr|MgrID, EmpID|     
 |Employees|EmpID, EmpLastName, EmpFirstName, EmpSalary|  
 |GetReports(MgrID)|EmpID, EmpLastName, EmpSalary|     
@@ -697,7 +697,7 @@ FOR SYSTEM_TIME FROM @AsOfFrom TO @AsOfTo
 WHERE ManagerID = 5;
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="n-using-the-inner-join-syntax"></a>14. INNER JOIN 구문 사용  
  다음 예제에서는 두 테이블 모두에서 `ProductKey` 조인 키가 일치하는 `FactInternetSales` 및 `DimProduct` 테이블에서 `SalesOrderNumber`, `ProductKey` 및 `EnglishProductName` 열을 반환합니다. `SalesOrderNumber` 및 `EnglishProductName` 열은 각각 테이블 중 하나에만 존재하므로 이러한 열을 표시된 대로 사용하여 테이블 별칭을 지정할 필요가 없습니다. 이러한 별칭은 가독성을 높이기 위해 포함되었습니다. **AS**라는 단어는 별칭 이름 앞에 필요하지 않지만, 가독성을 높이고 ANSI 표준을 준수하기 위해 사용하는 것이 좋습니다.  
@@ -882,7 +882,7 @@ INNER REDISTRIBUTE JOIN FactInternetSales AS fis
     ON dp.ProductKey = fis.ProductKey;  
 ```  
 
-### <a name="v-using-tablesample-to-read-data-from-a-sample-of-rows-in-a-table"></a>22. TABLESAMPLE을 사용하여 테이블의 행 샘플 데이터 읽기  
+### <a name="v-using-tablesample-to-read-data-from-a-sample-of-rows-in-a-table"></a>V. TABLESAMPLE을 사용하여 테이블의 행 샘플 데이터 읽기  
  다음 예에서는 `TABLESAMPLE` 절에 `FROM`을 사용하여 `10` 테이블에 있는 모든 행 중 대략 `Customer` 퍼센트를 반환합니다.  
   
 ```sql    

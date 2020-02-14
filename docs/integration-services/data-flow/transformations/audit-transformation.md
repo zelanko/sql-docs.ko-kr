@@ -17,10 +17,10 @@ ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 76ce8959e9b9cedb9a1e8a096913a3d6257cfd2d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298012"
 ---
 # <a name="audit-transformation"></a>감사 변환
@@ -28,12 +28,12 @@ ms.locfileid: "71298012"
 [!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  감사 변환을 사용하면 패키지가 실행되는 환경에 대한 데이터를 패키지의 데이터 흐름에 포함할 수 있습니다. 예를 들어 패키지, 컴퓨터 및 운영자의 이름을 데이터 흐름에 추가할 수 있습니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 는 이 정보를 제공하는 시스템 변수를 포함합니다.  
+  감사 변환을 사용하면 패키지가 실행되는 환경에 대한 데이터를 패키지의 데이터 흐름에 포함할 수 있습니다. 예를 들어 패키지, 컴퓨터 및 운영자의 이름을 데이터 흐름에 추가할 수 있습니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]는 이 정보를 제공하는 시스템 변수를 포함합니다.  
   
 ## <a name="system-variables"></a>시스템 변수  
  다음 표에서는 감사 변환에 사용할 수 있는 시스템 변수를 설명합니다.  
   
-|시스템 변수|인덱스|설명|  
+|시스템 변수|인덱스|Description|  
 |---------------------|-----------|-----------------|  
 |**ExecutionInstanceGUID**|0|패키지의 실행 인스턴스를 식별하는 GUID입니다.|  
 |**PackageID**|1|패키지의 고유 식별자입니다.|  
@@ -54,7 +54,7 @@ ms.locfileid: "71298012"
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [공용 속성](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [변환 사용자 지정 속성](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -70,7 +70,7 @@ ms.locfileid: "71298012"
  **감사 유형**  
  감사 정보를 제공할 사용 가능한 시스템 변수를 선택합니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**실행 인스턴스 GUID**|패키지의 실행 인스턴스를 고유하게 식별하는 GUID를 삽입합니다.|  
 |**패키지 ID**|패키지를 고유하게 식별하는 GUID를 삽입합니다.|  
@@ -78,8 +78,8 @@ ms.locfileid: "71298012"
 |**버전 ID**|패키지 버전을 고유하게 식별하는 GUID를 삽입합니다.|  
 |**실행 시작 시간**|패키지 실행이 시작된 시간을 삽입합니다.|  
 |**컴퓨터 이름**|패키지가 시작된 컴퓨터 이름을 삽입합니다.|  
-|**User name**|패키지를 시작한 사용자의 로그인 이름을 삽입합니다.|  
-|**태스크 이름**|감사 변환이 연결된 데이터 흐름 태스크의 이름을 삽입합니다.|  
+|**사용자 이름**|패키지를 시작한 사용자의 로그인 이름을 삽입합니다.|  
+|**작업 이름**|감사 변환이 연결된 데이터 흐름 태스크의 이름을 삽입합니다.|  
 |**태스크 ID**|감사 변환이 연결된 데이터 흐름 태스크를 고유하게 식별하는 GUID를 삽입합니다.|  
   
   

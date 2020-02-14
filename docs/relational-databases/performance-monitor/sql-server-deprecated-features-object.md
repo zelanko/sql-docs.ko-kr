@@ -16,10 +16,10 @@ ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 2dd802097e083adb633549174dbc420b5967fb10
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093589"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, Deprecated Features 개체
@@ -36,16 +36,16 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 다음 표에서는 SQL Server에 설명 **Deprecated Features** 성능 개체에 대해 설명합니다.
 
-|**SQL Server, Deprecated Features 카운터**|설명|  
+|**SQL Server, Deprecated Features 카운터**|Description|  
 |-------------|-----------------|  
-|**사용법**|마지막 SQL Server 시작 이후의 기능 사용입니다.|
+|**사용 현황**|마지막 SQL Server 시작 이후의 기능 사용입니다.|
   
  다음 표에서는 SQL Server Deprecated Features 카운터 인스턴스에 대해 설명합니다.  
   
-|SQL Server Deprecated Features 카운터 인스턴스|설명|  
+|SQL Server Deprecated Features 카운터 인스턴스|Description|  
 |------------------------------------------------------|-----------------|  
 |임시 테이블 및 저장 프로시저의 이름으로 사용되는 '#' 및 '##'|# 외에 다른 문자를 포함하지 않는 식별자가 발견되었습니다. 적어도 하나 이상의 추가 문자를 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
-|'::' 함수 호출 구문|테이블 반환 함수에 대해 :: 함수 호출 구문이 발견되었습니다. `SELECT column_list FROM` *<function_name>* `()`으로 바꿉니다. 예를 들어 `SELECT * FROM ::fn_virtualfilestats(2,1)`를 `SELECT * FROM sys.fn_virtualfilestats(2,1)`로 대체합니다. 컴파일마다 한 번씩 발생합니다.|  
+|'::' 함수 호출 구문|테이블 반환 함수에 대해 :: 함수 호출 구문이 발견되었습니다. `SELECT column_list FROM` *< function_name>* `()`으로 바꿉니다. 예를 들어 `SELECT * FROM ::fn_virtualfilestats(2,1)`를 `SELECT * FROM sys.fn_virtualfilestats(2,1)`로 대체합니다. 컴파일마다 한 번씩 발생합니다.|  
 |‘\@’ 및 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식별자 ‘\@\@’으로 시작하는 이름|\@ 또는 \@\@으로 시작하는 식별자가 발견되었습니다. \@\@ 식별자로 시작하는 이름, \@ 또는 \@v@은 사용할 수 없습니다. 컴파일마다 한 번씩 발생합니다.|  
 |ADDING TAPE DEVICE|사용되지 않는 기능인 sp_addumpdevice'**tape**'가 발견되었습니다. 대신 sp_addumpdevice'**disk**'를 사용하세요. 사용할 때마다 한 번씩 발생합니다.|  
 |ALL 권한|GRANT ALL, DENY ALL 또는 REVOKE ALL 구문이 발견된 총 횟수입니다. 특정 권한을 거부하도록 구문을 수정해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
@@ -110,7 +110,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |힌디어|데이터베이스를 시작하고 데이터 정렬을 사용할 때마다 이벤트가 한 번씩 발생합니다. 이 데이터 정렬을 사용하는 애플리케이션은 수정해야 합니다. 대신 Indic_General_90을 사용해야 합니다.|  
 |괄호가 없는 HOLDLOCK 테이블 힌트||  
 |IDENTITYCOL|INDENTITYCOL 구문이 발견되었습니다. $identity 구문을 사용하도록 문을 다시 작성해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
-|COUNT_BIG(\*)이 없는 인덱스 뷰 SELECT 목록|인덱싱된 집계 뷰의 SELECT 목록은 COUNT_BIG(\*)을 포함해야 합니다.|  
+|COUNT_BIG(*)이 없는 인덱스 뷰 SELECT 목록|인덱싱된 집계 뷰의 SELECT 목록은 COUNT_BIG(\*)을 포함해야 합니다.|  
 |INDEX_OPTION|옵션 주위에 괄호가 없는 CREATE TABLE, ALTER TABLE 또는 CREATE INDEX 구문이 발견되었습니다. 현재 구문을 사용하도록 문을 다시 작성해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
 |INDEXKEY_PROPERTY|INDEXKEY_PROPERTY 구문이 발견되었습니다. sys.index_columns를 쿼리하도록 문을 다시 작성해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |간접 TVF 힌트|뷰를 통해 다중 문 TVF(테이블 반환 함수)를 호출하는 테이블 힌트의 간접 적용은 나중 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거됩니다.|  
@@ -275,11 +275,11 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |XMLDATA|FOR XML 구문이 발견되었습니다. RAW 및 AUTO 모드의 경우 XSD 생성을 사용해야 합니다. EXPLICIT 모드의 경우에는 대체할 옵션이 없습니다. 컴파일마다 한 번씩 발생합니다.|  
 |XP_API|확장 저장 프로시저 문이 발견되었습니다. 사용하지 마십시오.|  
 |xp_grantlogin|xp_grantlogin 프로시저가 발견되었습니다. 대신 CREATE LOGIN을 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
-|xp_loginconfig|xp_loginconfig 프로시저가 발견되었습니다. 대신 SERVERPROPERTY의 IsIntegratedSecurityOnly 인수를 사용해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
+|xp_loginConfig|xp_loginconfig 프로시저가 발견되었습니다. 대신 SERVERPROPERTY의 IsIntegratedSecurityOnly 인수를 사용해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
 |xp_revokelogin|xp_revokelogin 프로시저가 발견되었습니다. 대신 ALTER LOGIN DISABLE 또는 DROP LOGIN을 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server 2016에서 사용되지 않는 데이터베이스 엔진 기능](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
+ [SQL Server 2016 이후에는 지원되지 않는 데이터베이스 엔진 기능](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
  [SQL Server 2016에서 사용되지 않는 전체 텍스트 검색 기능](../../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)   
  [Deprecation Announcement 이벤트 클래스](../../relational-databases/event-classes/deprecation-announcement-event-class.md)   
  [Deprecation Final Support 이벤트 클래스](../../relational-databases/event-classes/deprecation-final-support-event-class.md)   

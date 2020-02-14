@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fb7b029527eec87c87b9b21b4da8aff5e289424e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68032021"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저 만들기
@@ -25,7 +25,7 @@ ms.locfileid: "68032021"
   
 하지만 몇 가지 [!INCLUDE[tsql](../../includes/tsql-md.md)] 기능은 고유하게 컴파일된 저장 프로시저에서만 지원됩니다.  
   
--   ATOMIC 블록 자세한 내용은 [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md)을 참조하세요.  
+-   ATOMIC 블록 자세한 내용은 [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md)을(를) 참조하십시오.  
   
 -   매개 변수 및 변수에 대한 **NOT NULL** 제약 조건입니다. **NULL** 값을 **NOT NULL**로 선언된 매개 변수 또는 변수에 할당할 수 없습니다. 자세한 내용은 [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)을 참조하세요.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "68032021"
   
     -   DECLARE @myVarchar  varchar(32)  **not null = "Hello"** ; -- *(값으로 초기화해야 함)*  
   
-    -   SET @myVarchar **= null**; -- *(컴파일되지만 런타임 중에 실패함)*  
+    -   SET @myVarchar **= null**; -- ‘(컴파일되지만 런타임 중에 실패함)’   
   
 -   고유하게 컴파일된 저장 프로시저의 스키마 바인딩  
   
@@ -62,7 +62,7 @@ GO
  
 코드 샘플에서 **NATIVE_COMPILATION** 은 이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저가 고유하게 컴파일된 저장 프로시저임을 나타냅니다. 다음 옵션이 필요합니다.  
   
-|옵션|설명|  
+|옵션|Description|  
 |------------|-----------------|  
 |**SCHEMABINDING**|고유하게 컴파일된 저장 프로시저는 참조하는 개체의 스키마에 바인딩되어야 합니다. 이는 프로시저에서 참조하는 테이블을 삭제할 수 없음을 의미합니다. 프로시저에서 참조되는 테이블에는 해당 스키마 이름을 포함해야 하며 쿼리에 와일드카드(\*)를 사용할 수 없습니다( `SELECT * from...`을 의미하지 않음). **SCHEMABINDING** 은 이 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 고유하게 컴파일된 저장 프로시저에 대해서만 지원됩니다.|  
 |**BEGIN ATOMIC**|고유하게 컴파일된 저장 프로시저의 본문은 단 하나의 ATOMIC 블록으로 구성되어야 합니다. ATOMIC 블록은 저장 프로시저의 원자성 실행을 보장합니다. 프로시저가 활성 트랜잭션의 컨텍스트 외부에서 호출되면 새 트랜잭션을 시작하며 ATOMIC 블록의 끝에서 커밋합니다. 고유하게 컴파일된 저장 프로시저의 ATOMIC 블록에는 다음과 같은 두 가지 필수 옵션이 있습니다.<br /><br /> **TRANSACTION ISOLATION LEVEL**입니다. 지원되는 격리 수준은 [메모리 액세스에 최적화된 테이블에 대한 트랜잭션 격리 수준](https://msdn.microsoft.com/library/8a6a82bf-273c-40ab-a101-46bd3615db8a) 을 참조하세요.<br /><br /> **LANGUAGE**입니다. 저장 프로시저의 언어는 사용 가능한 언어 또는 언어 별칭 중 하나로 설정되어야 합니다.|  

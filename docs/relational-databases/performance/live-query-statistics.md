@@ -18,10 +18,10 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 724eb513c3a48916e1083e3ce5bb50251896d381
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983249"
 ---
 # <a name="live-query-statistics"></a>활성 쿼리 통계
@@ -32,7 +32,7 @@ ms.locfileid: "73983249"
 > [!NOTE]
 > 내부적으로 활성 쿼리 통계는 [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV를 활용합니다.
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상).  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상).  
   
 > [!WARNING]  
 > 이 기능은 주로 문제 해결을 위해 사용됩니다. 이 기능을 사용하면 특히 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 전체 쿼리 성능이 약간 느려질 수 있습니다. 자세한 내용은 [쿼리 프로파일링 인프라](../../relational-databases/performance/query-profiling-infrastructure.md)를 참조하세요.  
@@ -58,7 +58,7 @@ ms.locfileid: "73983249"
   
  ![작업 모니터의 활성 쿼리 통계 단추](../../relational-databases/performance/media/livequerystatsactmon.png "작업 모니터의 활성 쿼리 통계 단추")  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  통계 프로필 인프라를 사용하도록 설정해야 활성 쿼리 통계에서 쿼리 진행률에 관한 정보를 수집할 수 있습니다. 버전에 따라 오버헤드가 중요할 수 있습니다. 이 오버헤드에 대한 자세한 내용은 [쿼리 프로파일링 인프라](../../relational-databases/performance/query-profiling-infrastructure.md)를 참조하세요.
   
 ## <a name="permissions"></a>사용 권한  

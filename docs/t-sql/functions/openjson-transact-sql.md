@@ -19,10 +19,10 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 48cd04467283683cf1dc54f300b2c4ff21fb8248
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68632134"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON(Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "68632134"
 >
 > 새 Azure SQL Database에서도 호환성 수준 120이 기본값일 수 있습니다.  
   
- ![토픽 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "토픽 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘")[Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -56,13 +56,13 @@ OPENJSON( jsonExpression [ , path ] )  [ <with_clause> ]
 
 ### <a name="openjson"></a>openjson
 
-![OPENJSON TVF에 대한 구문](../../relational-databases/json/media/openjson-syntax.png "OPENJSON 구문")  
+![OPENJSON TVF 구문](../../relational-databases/json/media/openjson-syntax.png "OPENJSON 구문")  
 
 기본적으로 **OPENJSON** 테이블 반환 함수는 키 이름, 값 및 *jsonExpression*에 있는 각 {키:값} 쌍의 형식을 포함하는 세 개의 열을 반환합니다. 대신, *with_clause*을 제공하여 **OPENJSON**이 반환하는 결과 집합의 스키마를 명시적으로 지정할 수 있습니다.
   
-### <a name="withclause"></a>with_clause
+### <a name="with_clause"></a>with_clause
   
-![OPENJSON TVF의 WITH 절에 대한 구문](../../relational-databases/json/media/openjson-shema-syntax.png "OPENJSON WITH 구문")
+![OPENJSON TVF의 WITH 절 구문](../../relational-databases/json/media/openjson-shema-syntax.png "OPENJSON WITH 구문")
 
 *with_clause*는 반환할 **OPENJSON**에 대한 열과 형식의 목록을 포함합니다. 기본적으로 **OPENJSON**은 *jsonExpression*의 키와 *with_clause*의 열 이름을 일치시킵니다(이 경우 matches 키는 대/소문자를 구분함을 의미). 열 이름이 키 이름과 일치하지 않으면 *jsonExpression* 내의 키를 참조하는 [JSON 경로 식](../../relational-databases/json/json-path-expressions-sql-server.md)인 선택적 *column_path*를 제공할 수 있습니다. 
 
@@ -91,7 +91,7 @@ SELECT * FROM OpenJson(@json);
 
 **Results:**
 
-| Key                                | value                 | 유형 |
+| key                                | 값                 | type |
 | :--                                | :----                 | :--- |
 | String_value                       | John                  | 1 |
 | DoublePrecisionFloatingPoint_value | 45                    | 2 |
@@ -128,7 +128,7 @@ FROM OPENJSON(@json,'$.path.to."sub-object"')
   
  **결과**  
   
-|Key|값|  
+|키|값|  
 |---------|-----------|  
 |0|en-GB|  
 |1|en-UK|  
@@ -140,7 +140,7 @@ FROM OPENJSON(@json,'$.path.to."sub-object"')
 
 경로 단계와 JSON 식의 속성을 일치시키는 데 사용되는 비교는 대/소문자를 구분하고 데이터 정렬을 인식하지 못합니다(즉, BIN2 비교). 
 
-### <a name="withclause"></a>*with_clause*
+### <a name="with_clause"></a>*with_clause*
 
 반환할 **OPENJSON** 함수의 출력 스키마를 명시적으로 정의합니다. 선택적 *with_clause*는 다음 요소를 포함할 수 있습니다.
 
@@ -214,7 +214,7 @@ WITH (
   
 **결과**
   
-|Number|date|Customer|수량|주문|  
+|Number|Date|Customer|수량|주문|  
 |------------|----------|--------------|--------------|-----------|  
 |SO43659|2011-05-31T00:00:00|AW29825|1|{"Number":"SO43659","Date":"2011-05-31T00:00:00"}|  
 |SO43661|2011-06-01T00:00:00|AW73565|3|{"Number":"SO43661","Date":"2011-06-01T00:00:00"}|  
@@ -230,11 +230,11 @@ OPENJSON 함수가 반환하는 열은 WITH 옵션에 따라 달라집니다.
         |Type 열의 값|JSON 데이터 형식|  
         |------------------------------|--------------------|  
         |0|null|  
-        |1|string|  
+        |1|문자열|  
         |2|int|  
         |3|true/false|  
         |4|array|  
-        |5|개체(object)|  
+        |5|object|  
   
      첫 번째 수준 속성만 반환됩니다. JSON 텍스트의 형식이 올바르지 않으면 문이 실패합니다.  
 
@@ -243,7 +243,7 @@ OPENJSON 함수가 반환하는 열은 WITH 옵션에 따라 달라집니다.
 > [!NOTE]  
 > **키**, **값** 및 **형식** 열은 OPENJSON을 기본 스키마와 함께 사용하는 경우에만 반환되며 명시적 스키마와 함께 사용할 수는 없습니다.
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 
 **OPENJSON**의 두 번째 인수 또는 *with_clause*에 사용된 *json_path*는 **lax** 또는 **strict** 키워드로 시작될 수 있습니다.
 
@@ -375,7 +375,7 @@ DECLARE @json NVARCHAR(max)  = N'{
         dateOfBirth datetime2, spouse nvarchar(50))
 ```  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
  [JSON 경로 식&#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
  [OPENJSON을 사용하여 JSON 데이터를 행과 열로 변환&#40;SQL Server&#41;](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)   

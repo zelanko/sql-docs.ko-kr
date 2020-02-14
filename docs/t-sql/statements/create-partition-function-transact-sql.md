@@ -28,10 +28,10 @@ ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2693b552008760025977a4c0ed0d3f3c3065713a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67912612"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION(Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "67912612"
 
   현재 데이터베이스에서 지정된 열 값에 기반하여 테이블 또는 인덱스의 행을 파티션에 매핑하는 함수를 만듭니다. 분할된 테이블 또는 인덱스를 만드는 첫 번째 단계는 CREATE PARTITION FUNCTION을 사용하는 것입니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 테이블이나 인덱스 하나에 파티션을 최대 15,000개까지 포함할 수 있습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -75,7 +75,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  **LEFT** | RIGHT  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 간격 값을 왼쪽에서 오른쪽으로 오름차순으로 정렬할 때 *boundary_value* [ **,** _...n_ ]이 각 경계 값 간격의 왼쪽과 오른쪽 중 어느 쪽에 속하는지 지정합니다. 지정하지 않은 경우 LEFT가 기본값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  파티션 함수의 범위는 함수가 생성된 데이터베이스로 제한됩니다. 해당 데이터베이스 내에서 파티션 함수는 다른 함수와 서로 다른 네임스페이스에 있습니다.  
   
  해당 분할 열에 Null 값이 있는 모든 행은 맨 왼쪽 파티션에 위치합니다. 단, NULL이 경계 값으로 지정되고 RIGHT가 지정된 경우에는 맨 왼쪽 파티션은 빈 파티션이 되고 NULL 값은 다음 파티션에 위치하게 됩니다.  
@@ -91,7 +91,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
   
 ##  <a name="BKMK_examples"></a> 예  
   
-### <a name="a-creating-a-range-left-partition-function-on-an-int-column"></a>1\. int 열에 RANGE LEFT 파티션 함수 만들기  
+### <a name="a-creating-a-range-left-partition-function-on-an-int-column"></a>A. int 열에 RANGE LEFT 파티션 함수 만들기  
  다음 파티션 함수는 테이블이나 인덱스를 4개의 파티션으로 분할합니다.  
   
 ```sql  
@@ -101,11 +101,11 @@ AS RANGE LEFT FOR VALUES (1, 100, 1000);
   
  다음 표에서는 분할 열 **col1**에 대해 이 파티션 함수를 사용하는 테이블이 분할되는 방식을 보여 줍니다.  
   
-|Partition|1|2|3|4|  
+|파티션|1|2|3|4|  
 |---------------|-------|-------|-------|-------|  
 |**값**|**col1** <= `1`|**col1** > `1` AND **col1** <= `100`|**col1** > `100` AND **col1** <=`1000`|**col1** > `1000`|  
   
-### <a name="b-creating-a-range-right-partition-function-on-an-int-column"></a>2\. int 열에 RANGE RIGHT 파티션 함수 만들기  
+### <a name="b-creating-a-range-right-partition-function-on-an-int-column"></a>B. int 열에 RANGE RIGHT 파티션 함수 만들기  
  다음 파티션 함수는 RANGE RIGHT를 지정한다는 점을 제외하고 *boundary_value* [ **,** _...n_ ]에 위 예와 동일한 값을 사용합니다.  
   
 ```sql  
@@ -115,7 +115,7 @@ AS RANGE RIGHT FOR VALUES (1, 100, 1000);
   
  다음 표에서는 분할 열 **col1**에 대해 이 파티션 함수를 사용하는 테이블이 분할되는 방식을 보여 줍니다.  
   
-|Partition|1|2|3|4|  
+|파티션|1|2|3|4|  
 |---------------|-------|-------|-------|-------|  
 |**값**|**col1** \< `1`|**col1** >= `1` AND **col1** \< `100`|**col1** >= `100` AND **col1** \< `1000`|**col1** >= `1000`| 
   
@@ -131,7 +131,7 @@ AS RANGE RIGHT FOR VALUES ('20030201', '20030301', '20030401',
   
  다음 표에서는 분할 열 **datecol**에 대해 이 파티션 함수를 사용하는 테이블 또는 인덱스가 분할되는 방식을 보여줍니다.  
   
-|Partition|1|2|...|11|12|  
+|파티션|1|2|...|11|12|  
 |---------------|-------|-------|---------|--------|--------|  
 |**값**|**datecol** \< `February 1, 2003`|**datecol** >= `February 1, 2003` AND **datecol** \< `March 1, 2003`||**datecol** >= `November 1, 2003` AND **col1** \< `December 1, 2003`|**datecol** >= `December 1, 2003`| 
   
@@ -145,7 +145,7 @@ AS RANGE RIGHT FOR VALUES ('EX', 'RXE', 'XR');
   
  다음 표에서는 분할 열 **col1**에 대해 이 파티션 함수를 사용하는 테이블이 분할되는 방식을 보여 줍니다.  
   
-|Partition|1|2|3|4|  
+|파티션|1|2|3|4|  
 |---------------|-------|-------|-------|-------|  
 |**값**|**col1** \< `EX`...|**col1** >= `EX` AND **col1** \< `RXE`...|**col1** >= `RXE` AND **col1** \< `XR`...|**col1** >= `XR`| 
   

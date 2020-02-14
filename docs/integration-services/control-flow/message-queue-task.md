@@ -22,10 +22,10 @@ ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 486339cc1c5ef550dbf4eee227bec3ad67ce0e3a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294097"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
@@ -33,7 +33,7 @@ ms.locfileid: "71294097"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  메시지 큐 태스크에서는 MSMQ(메시지 큐)를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 간에 메시지를 보내고 받거나 사용자 지정 애플리케이션에서 처리되는 애플리케이션 큐에 메시지를 보낼 수 있습니다. 이러한 메시지는 단순한 텍스트, 파일 또는 변수와 해당 값의 형태로 사용될 수 있습니다.  
+  메시지 큐 태스크에서는 MSMQ(메시지 큐)를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 간에 메시지를 보내고 받거나 사용자 지정 애플리케이션에서 처리되는 애플리케이션 큐에 메시지를 보낼 수 있습니다. 이러한 메시지는 단순한 텍스트, 파일 또는 변수와 해당 값의 형태로 사용될 수 있습니다.  
   
  메시지 큐 태스크를 사용하면 회사 전반의 작업을 조정할 수 있습니다. 대상이 없거나 사용 중인 경우에는 메시지를 큐에 저장하고 다음에 배달할 수 있습니다. 예를 들어 네트워크에 연결될 때 메시지를 받는 판매 영업 직원의 랩톱 컴퓨터가 오프라인인 경우 이 태스크는 메시지를 큐에 저장할 수 있습니다. 메시지 큐 태스크는 다음 용도로 사용할 수 있습니다.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "71294097"
 ## <a name="custom-logging-messages-available-on-the-message-queue-task"></a>메시지 큐 태스크에 사용할 수 있는 사용자 지정 로깅 메시지  
  다음 표에서는 메시지 큐 태스크에 대한 사용자 지정 로그 항목을 나열합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md)을 참조하세요.  
   
-|로그 항목|설명|  
+|로그 항목|Description|  
 |---------------|-----------------|  
 |**MSMQAfterOpen**|태스크에서 메시지 큐 열기를 완료했음을 나타냅니다.|  
 |**MSMQBeforeOpen**|태스크에서 메시지 큐 열기를 시작했음을 나타냅니다.|  
@@ -146,7 +146,7 @@ ms.locfileid: "71294097"
  **MessageType**  
  메시지 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**데이터 파일 메시지**|메시지가 파일에 저장됩니다. 이 값을 선택하면 동적 옵션 **DataFileMessage**가 표시됩니다.|  
 |**변수 메시지**|메시지가 변수에 저장됩니다. 이 값을 선택하면 동적 옵션 **VariableMessage**가 표시됩니다.|  
@@ -184,7 +184,7 @@ ms.locfileid: "71294097"
  **MessageType**  
  메시지 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**데이터 파일 메시지**|메시지가 파일에 저장됩니다. 이 값을 선택하면 동적 옵션 **DataFileMessage**가 표시됩니다.|  
 |**변수 메시지**|메시지가 변수에 저장됩니다. 이 값을 선택하면 동적 옵션 **VariableMessage**가 표시됩니다.|  
@@ -200,10 +200,10 @@ ms.locfileid: "71294097"
  **Overwrite**  
  데이터 파일 메시지의 내용을 저장할 경우 기존 파일의 데이터를 덮어쓸지 여부를 나타냅니다. 기본값은 **False**입니다.  
   
- **필터**  
+ **Filter**  
  필터를 메시지에 적용할지 여부를 지정합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**필터 없음**|태스크에서 메시지를 필터링하지 않습니다. 이 값을 선택하면 동적 옵션 **IdentifierReadOnly**가 표시됩니다.|  
 |**받을 패키지**|메시지는 지정한 패키지의 메시지만 받습니다. 이 값을 선택하면 동적 옵션 **Identifier**가 표시됩니다.|  
@@ -215,16 +215,16 @@ ms.locfileid: "71294097"
  이 옵션은 읽기 전용입니다. 이전에 Filter 속성을 설정할 때 이 옵션은 비어 있거나 패키지의 GUID를 포함할 수 있습니다.  
   
 ##### <a name="filter--from-package"></a>Filter = 받을 패키지  
- **ID**  
+ **식별자**  
  필터를 적용하도록 선택한 경우 메시지를 받을 수 있는 패키지의 고유 식별자를 입력하거나 줄임표 단추 **(...)** 를 클릭한 다음, 패키지를 지정합니다.  
   
  **관련 항목:** [패키지 선택](../../integration-services/control-flow/select-a-package.md)  
   
 #### <a name="messagetype--variable-message"></a>MessageType = 변수 메시지  
- **Assert**  
+ **Filter**  
  필터를 메시지에 적용할지 여부를 지정합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**필터 없음**|태스크에서 메시지를 필터링하지 않습니다. 이 값을 선택하면 동적 옵션 **IdentifierReadOnly**가 표시됩니다.|  
 |**받을 패키지**|메시지는 지정한 패키지의 메시지만 받습니다. 이 값을 선택하면 동적 옵션 **Identifier**가 표시됩니다.|  
@@ -241,19 +241,19 @@ ms.locfileid: "71294097"
  이 옵션은 비어 있습니다.  
   
 ##### <a name="filter--from-package"></a>Filter = 받을 패키지  
- **ID**  
+ **식별자**  
  필터를 적용하도록 선택한 경우 메시지를 받을 수 있는 패키지의 고유 식별자를 입력하거나 줄임표 단추 **(...)** 를 클릭한 다음, 패키지를 지정합니다.  
   
  **관련 항목:** [패키지 선택](../../integration-services/control-flow/select-a-package.md)  
   
 #### <a name="messagetype--string-message"></a>MessageType = 문자열 메시지  
- **Compare**  
+ **비교**  
  필터를 메시지에 적용할지 여부를 지정합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
-|**InclusionThresholdSetting**|메시지를 비교하지 않습니다.|  
-|**정확히 일치**|메시지가 **CompareString** 옵션의 문자열과 정확히 일치해야 합니다.|  
+|**없음**|메시지를 비교하지 않습니다.|  
+|**정확한 일치**|메시지가 **CompareString** 옵션의 문자열과 정확히 일치해야 합니다.|  
 |**대/소문자 무시**|메시지가 **CompareString** 옵션의 문자열과 일치해야 하지만 비교 시 대/소문자를 무시합니다.|  
 |**포함**|메시지가 **CompareString** 옵션의 문자열을 포함해야 합니다.|  
   
@@ -261,13 +261,13 @@ ms.locfileid: "71294097"
  **Compare** 옵션을 **없음**으로 설정한 경우가 아니면 메시지를 비교할 문자열을 제공합니다.  
   
 #### <a name="messagetype--string-message-to-variable"></a>MessageType = 변수에 대한 문자열 메시지  
- **Compare**  
+ **비교**  
  필터를 메시지에 적용할지 여부를 지정합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
-|**InclusionThresholdSetting**|메시지를 비교하지 않습니다.|  
-|**정확히 일치**|메시지가 **CompareString** 옵션의 문자열과 정확히 일치해야 합니다.|  
+|**없음**|메시지를 비교하지 않습니다.|  
+|**정확한 일치**|메시지가 **CompareString** 옵션의 문자열과 정확히 일치해야 합니다.|  
 |**대/소문자 무시**|메시지가 **CompareString** 옵션의 문자열과 일치해야 하지만 비교 시 대/소문자를 무시합니다.|  
 |**포함**|메시지가 **CompareString** 옵션의 문자열을 포함해야 합니다.|  
   

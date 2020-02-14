@@ -11,10 +11,10 @@ ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ec7514eeb2e614c1313fba81c4a48b8803f0c29d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296087"
 ---
 # <a name="lesson-1-9-test-the-lesson-1-package"></a>1-9단원: 1단원 패키지 테스트
@@ -56,7 +56,7 @@ ms.locfileid: "71296087"
 ## <a name="go-to-next-lesson"></a>다음 단원으로 이동
 [2단원: SSIS를 사용하여 루핑 추가](../integration-services/lesson-2-adding-looping-with-ssis.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [프로젝트 및 패키지 실행](packages/run-integration-services-ssis-packages.md) 
   
   

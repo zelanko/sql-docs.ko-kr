@@ -15,10 +15,10 @@ ms.assetid: 67fe18ef-f3aa-41d4-9b9d-5defd4618c4b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f5d95556fcb02cb559926074edb90fb2749fc958
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71286311"
 ---
 # <a name="extending-packages-with-scripting"></a>스크립팅을 사용한 패키지 확장
@@ -30,7 +30,7 @@ ms.locfileid: "71286311"
   
  이 섹션에서는 두 옵션 중 보다 단순한 옵션인 스크립팅을 사용하여 패키지를 확장하는 방법에 대해 설명합니다.  
   
- 스크립트 태스크 및 스크립트 구성 요소를 사용하면 매우 적은 코딩만으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 제어 흐름 및 데이터 흐름을 둘 다 확장할 수 있습니다. 두 개체 모두 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] VSTA(Tools for Applications) 개발 환경과 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 프로그래밍 언어를 사용하며 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 클래스 라이브러리뿐만 아니라 사용자 지정 어셈블리에서 제공하는 모든 기능을 활용할 수 있습니다. 스크립트 태스크와 스크립트 구성 요소를 사용하면 개발자가 사용자 지정 태스크 또는 사용자 지정 데이터 흐름 구성 요소를 개발할 때 일반적으로 필요한 모든 인프라 코드를 작성하지 않고도 사용자 지정 기능을 만들 수 있습니다.  
+ 스크립트 태스크 및 스크립트 구성 요소를 사용하면 매우 적은 코딩만으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 제어 흐름 및 데이터 흐름을 둘 다 확장할 수 있습니다. 두 개체 모두 [!INCLUDE[msCoName](../../includes/msconame-md.md)] VSTA([!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications) 개발 환경과 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 프로그래밍 언어를 사용하며 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 클래스 라이브러리뿐만 아니라 사용자 지정 어셈블리에서 제공하는 모든 기능을 활용할 수 있습니다. 스크립트 태스크와 스크립트 구성 요소를 사용하면 개발자가 사용자 지정 태스크 또는 사용자 지정 데이터 흐름 구성 요소를 개발할 때 일반적으로 필요한 모든 인프라 코드를 작성하지 않고도 사용자 지정 기능을 만들 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [스크립트 태스크와 스크립트 구성 요소 비교](../../integration-services/extending-packages-scripting/comparing-the-script-task-and-the-script-component.md)  

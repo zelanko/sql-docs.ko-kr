@@ -16,10 +16,10 @@ ms.assetid: f8b6ecff-ac99-4231-a0e7-7ce4ad76bad0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 318a7302d87e029f45d6e9202f587473210e0976
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296452"
 ---
 # <a name="simulating-an-error-output-for-the-script-component"></a>스크립트 구성 요소의 오류 출력 시뮬레이션
@@ -42,7 +42,7 @@ ms.locfileid: "71296452"
   
 3.  **스크립트** 페이지에서 **ScriptLanguage** 속성에 스크립트를 코딩하는 데 사용할 스크립트 언어를 설정합니다.  
   
-4.  **스크립트 편집** 을 클릭하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications)를 엽니다.  
+4.  **스크립트 편집**을 클릭하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] VSTA(Tools for Applications)를 엽니다.  
   
 5.  **Input0_ProcessInputRow** 메서드에 아래의 샘플 코드를 입력하거나 붙여넣습니다.  
   

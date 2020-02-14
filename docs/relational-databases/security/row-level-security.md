@@ -18,23 +18,23 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 886afc267d38ec92a478fc40bcbde53e428950f0
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68809953"
 ---
 # <a name="row-level-security"></a>행 수준 보안
 
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  ![행 수준 보안 그래픽](../../relational-databases/security/media/row-level-security-graphic.png "Row level security graphic")  
+  ![행 수준 보안 그래픽](../../relational-databases/security/media/row-level-security-graphic.png "행 수준 보안 그래픽")  
   
 행 수준 보안을 통해 그룹 멤버 자격 또는 실행 컨텍스트를 사용하여 데이터베이스 테이블의 행에 대한 액세스를 제어할 수 있습니다.
   
 행 수준 보안(RLS)은 애플리케이션의 보안 설계 및 코딩을 간소화합니다. RLS는 데이터 행 액세스에 대한 제한을 구현하는 데 유용합니다. 예를 들어 작업자가 자신의 부서와 관련된 데이터 행에만 액세스하도록 할 수 있습니다. 또는, 고객의 데이터 액세스를 회사와 관련된 데이터로만 제한할 수도 있습니다.  
   
-액세스 제한 논리는 다른 애플리케이션 계층의 데이터와 다소 떨어진 데이터베이스 계층에 위치합니다. 데이터베이스 시스템은 모든 계층에서 데이터 액세스를 시도할 때마다 액세스를 제한합니다. 이로 인해 보안 시스템의 노출 영역이 감소되어 보안 시스템이 더 안정적이고 강력해집니다.  
+액세스 제한 논리는 다른 애플리케이션 계층의 데이터와 다소 떨어진 데이터베이스 계층에 위치합니다. 데이터베이스 시스템은 모든 계층에서 데이터 액세스를 시도할 때마다 액세스를 제한합니다. 이렇게 하면 보안 시스템의 노출 영역을 줄임으로써 보안 시스템을 보다 안정적이고 강력하게 만들 수 있습니다.  
   
 RLS는 [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 문과 [인라인 테이블 반환 함수](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)로 만들어진 조건자를 사용하여 구현합니다.  
 
@@ -85,7 +85,7 @@ RLS는 두 가지 유형의 보안 조건자를 지원합니다.
   
 - UPDATE에 대한 차단 조건자는 BEFORE 및 AFTER에 대해 별도의 작업으로 분할됩니다. 따라서 예를 들어 사용자가 행을 현재보다 큰 값으로 업데이트하는 것을 차단할 수 없습니다. 이러한 종류의 논리가 필요한 경우 [DELETED 및 INSERTED](../triggers/use-the-inserted-and-deleted-tables.md) 중간 테이블과 함께 트리거를 사용하여 이전 값과 새 값을 함께 참조해야 합니다.  
   
-- 최적화 프로그램은 조건자 함수에서 사용하는 열이 변경되지 않은 경우 AFTER UPDATE 차단 조건자를 확인하지 않습니다. 예를 들어 Alice는 급여를 100,000보다 크게 변경할 수 없습니다. 조건자에서 참조되는 열이 변경되지 않은 경우 Alice는 급여가 이미 100,000보다 큰 직원의 주소를 변경할 수 있습니다.  
+- 최적화 프로그램은 조건자 함수에서 사용하는 열이 변경되지 않은 경우 AFTER UPDATE 차단 조건자를 확인하지 않습니다. 다음은 그 예입니다.  Alice는 급여를 100,000보다 크게 변경할 수 없습니다. 조건자에서 참조되는 열이 변경되지 않은 경우 Alice는 급여가 이미 100,000보다 큰 직원의 주소를 변경할 수 있습니다.  
   
 - BULK INSERT를 포함하여 대량 API에 적용된 변경 내용은 없습니다. 따라서 일반적인 삽입 작업과 마찬가지로 차단 조건자 AFTER INSERT가 대량 삽입 작업에 적용됩니다.  
   
@@ -101,9 +101,9 @@ RLS는 두 가지 유형의 보안 조건자를 지원합니다.
   
  RLS 필터 조건자는 **WHERE** 절을 추가한 것과 기능적으로 동일합니다. 조건자는 업무 관례 명령처럼 복잡해질 수 있으며, 또는 절은 `WHERE TenantId = 42`처럼 간단해질 수 있습니다.  
   
- 더 공식적인 용어로는, RLS는 조건자 기반 액세스 제어를 말합니다. 유연하고 중앙 집중적인 조건자 기반 평가 기능을 갖추고 있습니다. 조건자는 메타데이터 또는 관리자가 적절한 것으로 판단한 기타 조건을 기준으로 할 수 있습니다. 조건자는 사용자 특성에 따라 데이터에 대한 적절한 액세스 권한이 사용자에게 있는지 여부를 결정하는 기준으로 사용됩니다. 조건자 기반 액세스 제어를 사용하여 레이블 기반 액세스 제어를 구현할 수 있습니다.  
+ 더 공식적인 용어로는, RLS는 조건자 기반 액세스 제어를 말합니다. 유연하고 중앙 집중적인 조건자 기반 평가 기능을 갖추고 있습니다. 조건자는 메타데이터 또는 관리자가 적절한 것으로 판단한 기타 조건을 기준으로 할 수 있습니다. 조건자는 사용자 특성에 따라 데이터에 대한 적절한 액세스 권한이 사용자에게 있는지 여부를 결정하는 기준으로 사용됩니다. 레이블 기반 액세스 제어는 조건자 기준 액세스 제어를 사용하여 구현할 수 있습니다.  
   
-## <a name="Permissions"></a> 사용 권한
+## <a name="Permissions"></a> 권한
 
  보안 정책을 만들거나, 변경하거나, 삭제하는 데에는 **ALTER ANY SECURITY POLICY** 권한이 필요합니다. 보안 정책을 만들거나 삭제하려면 스키마에 대한 **ALTER** 권한이 필요합니다.  
   
@@ -149,7 +149,7 @@ RLS는 두 가지 유형의 보안 조건자를 지원합니다.
   
 ### <a name="carefully-crafted-queries"></a>정교하게 만들어진 쿼리
 
-정교하게 만들어진 쿼리의 사용으로 인해 정보가 누출될 수 있습니다. 예를 들어, 악의적인 사용자가 `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` 을(를) 통해 John Doe의 급료가 $100,000임을 알게 됩니다. 악의적인 사용자가 타인의 급여를 직접 쿼리하는 것을 방지하기 위해 보안 조건자가 있더라도, 해당 사용자는 쿼리가 0으로 나누기 예외를 반환할 때 알아낼 수 있습니다.  
+정교하게 만들어진 쿼리를 통해 정보가 누출될 수 있습니다. 예를 들어, 악의적인 사용자가 `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` 을(를) 통해 John Doe의 급료가 $100,000임을 알게 됩니다. 악의적인 사용자가 타인의 급여를 직접 쿼리하는 것을 방지하기 위해 보안 조건자가 있더라도, 해당 사용자는 쿼리가 0으로 나누기 예외를 반환할 때 알아낼 수 있습니다.  
 
 ## <a name="Limitations"></a> 기능 간 호환성
 

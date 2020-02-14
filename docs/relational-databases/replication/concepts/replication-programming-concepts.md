@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: af2e1ff51864215d3f5709463ab8d49e6737747e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 8359c9844cf9ebbc91da556f212429c96909d857
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768759"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76285754"
 ---
 # <a name="replication-programming-concepts"></a>복제 프로그래밍 개념
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "68768759"
   
 -   [복제 보안 설정 보기 및 수정](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
   
--   [SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 보안 센터](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+-   [SQL Server 데이터베이스 엔진 및 Azure SQL Database 보안 센터](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
 ## <a name="choosing-a-development-environment"></a>개발 환경 선택  
  복제 애플리케이션을 개발할 때는 세 가지 기본적인 개발 환경을 고려할 수 있습니다. 각 개발 환경에서는 동일한 복제 기능에 액세스할 수 있지만, 몇 가지 예외도 있습니다. 복제 애플리케이션은 다음과 같은 환경에서 개발할 수 있습니다.  
@@ -106,7 +106,7 @@ ms.locfileid: "68768759"
 ## <a name="choose-the-appropriate-replication-programming-interface"></a>적절한 복제 프로그래밍 인터페이스 선택  
  계획 프로세스의 마지막 단계는 선택한 개발 환경에서 원하는 복제 기능을 구현하는 적절한 복제 프로그래밍 인터페이스를 선택하는 것입니다. 다음 표에서는 사용할 수 있는 복제 프로그래밍 인터페이스를 보여 줍니다.  
   
-|인터페이스|환경|용도|  
+|인터페이스|Environment|사용|  
 |---------------|-----------------|----------|  
 |[복제 관리 개체 개념](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)|관리 코드|관리, 모니터링 및 동기화|  
 |<xref:Microsoft.SqlServer.Replication>|관리 코드|동기화|  
@@ -123,7 +123,7 @@ ms.locfileid: "68768759"
   
 2.  영업 애플리케이션에 필요한 일반적인 데이터 액세스 이외에 이 애플리케이션에서는 영업 사원이 단추를 클릭하여 필요할 때 끌어오기 구독을 동기화할 수 있어야 합니다. 이 애플리케이션은 영업 담당자가 설치하고 실행할 것이므로 클라이언트에서 구독을 구성하고 초기 스냅샷을 적용할 수 있는 기능도 필요합니다. 필요한 경우 애플리케이션에서는 연결이 발견되면 구독을 자동으로 동기화할 수 있도록 Windows에서 제공하는 무선 연결 감지 인프라를 사용할 수도 있습니다.  
   
-3.  게시자에 연결할 때 Windows 인증 및 VPN(가상 프라이빗 네트워크)을 사용하는 것을 포함하여 복제와 관련된 모든 보안 지침을 따릅니다. 웹 동기화를 구현하는 경우에는 SSL(Secure Sockets Layer) 연결을 사용합니다. 자세한 내용은 [웹 동기화 구성](../../../relational-databases/replication/configure-web-synchronization.md)을 참조하세요.  
+3.  게시자에 연결할 때 Windows 인증 및 VPN(가상 프라이빗 네트워크)을 사용하는 것을 포함하여 복제와 관련된 모든 보안 지침을 따릅니다. 웹 동기화를 구현하는 경우에는 SSL(Secure Sockets Layer) 연결을 사용합니다. 자세한 내용은 [Configure Web Synchronization](../../../relational-databases/replication/configure-web-synchronization.md)을 참조하세요.  
   
 4.  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]의 기능을 활용하려면 관리되는 코드 언어를 사용하여 애플리케이션을 개발합니다.  
   

@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d35637b9452500caac680439bd1ef09442d9ef11
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.openlocfilehash: f5861ece9a27e0d38274e9cac97ae046a9f6bdde
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73142780"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910106"
 ---
 # <a name="best-practices-with-query-store"></a>쿼리 저장소에 대한 모범 사례
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -73,7 +73,7 @@ SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);
  **데이터 플러시 간격(분)** : 수집된 런타임 통계를 디스크에 유지하는 빈도를 정의합니다. GUI(그래픽 사용자 인터페이스)에서는 분 단위로 표시되지만 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서는 초 단위로 표시됩니다. 기본값은 900초이며 그래픽 사용자 인터페이스에서는 15분입니다. 워크로드에서 서로 다른 쿼리와 계획을 대량으로 생성하지 않거나 데이터베이스가 종료되기까지 데이터를 더 오래 유지해도 되는 경우 값을 늘리는 것이 좋습니다.
  
 > [!NOTE]
-> 추적 플래그 7745를 사용하면 장애 조치(failover) 또는 종료 명령 시 쿼리 저장소 데이터를 디스크에 쓸 수 없습니다. 자세한 내용은 [중요 업무용 서버에서 추적 플래그를 사용하여 재해 복구 개선](#Recovery)을 참조하세요.
+> 추적 플래그 7745를 사용하면 장애 조치(failover) 또는 종료 명령 시 쿼리 저장소 데이터를 디스크에 쓸 수 없습니다. 자세한 내용은 [중요 업무용 서버에서 추적 플래그 사용](#Recovery) 섹션을 참조하세요.
 
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 **데이터 플러시 간격**에 다른 값을 설정할 수 있습니다.  
   
@@ -111,7 +111,10 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
 -   **Auto**: 빈번하지 않은 쿼리와 컴파일 및 실행 기간이 짧은 쿼리는 무시됩니다. 실행 횟수, 컴파일 및 런타임 기간의 임계값은 내부적으로 결정됩니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 이 옵션이 기본 옵션입니다.
 -   **없음**: 쿼리 저장소에서 새 쿼리 캡처가 중지됩니다.  
 -   **Custom**: 추가 컨트롤 및 데이터 수집 정책을 미세 조정하는 기능을 허용합니다. 새 사용자 지정 설정은 내부 캡처 정책 시간 임계값 내에서 수행되는 작업을 정의합니다. 이 시간 경계 내에서 구성 가능한 조건이 평가되고, true인 조건이 있으면 쿼리 저장소에서 쿼리를 캡처할 수 있습니다.
-  
+
+> [!IMPORTANT]
+> 쿼리 저장소 캡처 모드를 **All**, **Auto** 또는 **Custom**으로 설정하면 커서, 저장 프로시저 내부 쿼리 및 네이티브 컴파일된 쿼리가 항상 캡처됩니다. 네이티브 컴파일된 쿼리를 캡처하려면 [sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md)를 사용하여 쿼리별 통계 수집을 사용하도록 설정합니다. 
+
  다음 스크립트는 QUERY_CAPTURE_MODE를 AUTO로 설정합니다.
   
 ```sql  
@@ -336,7 +339,7 @@ FROM sys.database_query_store_options;
 관련된 데이터만 포함하도록 쿼리 저장소를 구성하면 쿼리 저장소가 지속적으로 실행되고, 기본 워크로드에 미치는 영향을 최소화하면서 뛰어난 문제 해결 경험을 제공합니다.  
 다음 표에서는 모범 사례를 제공합니다.  
   
-|최선의 구현 방법|설정|  
+|모범 사례|설정|  
 |-------------------|-------------|  
 |보관된 기록 데이터를 제한합니다.|자동 정리를 활성화하도록 시간 기반 정책을 구성합니다.|  
 |관련 없는 쿼리를 필터링하여 제외합니다.|**쿼리 저장소 캡처 모드**를 **Auto**로 구성합니다.|  
@@ -395,7 +398,7 @@ WHERE is_forced_plan = 1;
    > [!IMPORTANT]
    > [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 Just-In-Time 워크로드 인사이트를 위해 쿼리 저장소를 사용하는 경우, 최대한 빨리 [KB 4340759](https://support.microsoft.com/help/4340759)의 성능 확장성 수정을 설치하세요.
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 - [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)     
 - [쿼리 저장소 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)     
 - [쿼리 저장소 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)     

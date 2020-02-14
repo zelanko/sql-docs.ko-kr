@@ -24,10 +24,10 @@ ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6282a242807532095d13fed4b853731937bdd176
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67995360"
 ---
 # <a name="openxml-sql-server"></a>OPENXML(SQL Server)
@@ -138,7 +138,7 @@ EXEC sp_xml_removedocument @docHandle;
   
  다음 표에서는 Edge 테이블의 구조에 대해 설명합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|문서 노드의 고유 ID입니다.<br /><br /> 루트 요소의 ID 값은 0입니다. 음수 ID 값은 예약된 값입니다.|  
 |**parentid**|**bigint**|노드의 부모를 나타냅니다. 이 ID로 식별된 부모는 부모 요소가 아닐 수도 있습니다. 하지만 부모 요소인지 여부는 부모가 이 ID에 의해 식별되는 노드의 NodeType에 따라 달라집니다. 예를 들어 노드가 텍스트 노드인 경우 해당 부모는 특성 노드일 수 있습니다.<br /><br /> 노드가 XML 문서의 최상위 수준에 있으면 해당 **ParentID** 는 NULL입니다.|  

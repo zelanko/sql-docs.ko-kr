@@ -19,10 +19,10 @@ ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 898c59cab6038b7025066906ea74ffd5b9222815
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983266"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>데이터베이스 엔진 튜닝 관리자 시작 및 사용
@@ -54,7 +54,7 @@ ms.locfileid: "73983266"
   
 #### <a name="to-start-the-database-engine-tuning-advisor-from-the-sql-server-management-studio-query-editor"></a>SQL Server Management Studio 쿼리 편집기에서 데이터베이스 엔진 튜닝 관리자를 시작하려면  
   
-1.  [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 스크립트 파일을 엽니다. 자세한 내용은 [쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)를 참조하세요.  
+1.  [!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]스크립트 파일을 엽니다. 자세한 내용은 [쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)를 참조하세요.  
   
 2.  [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트에서 쿼리를 선택하거나 전체 스크립트를 선택하고 선택 영역을 마우스 오른쪽 단추를 클릭한 다음 **데이터베이스 엔진 튜닝 관리자의 쿼리 분석**을 선택합니다. 데이터베이스 엔진 튜닝 관리자 GUI가 열리고 스크립트를 XML 파일 작업으로 가져옵니다. 세션 이름과 튜닝 옵션을 지정하여 선택한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 작업으로 튜닝할 수 있습니다.  
   
@@ -185,7 +185,7 @@ ms.locfileid: "73983266"
   
 2.  작업을 만듭니다. 자세한 내용은 이 항목의 앞부분에 나오는 [작업 만들기](#Create) 를 참조하세요.  
   
-3.  데이터베이스 엔진 튜닝 관리자를 실행한 다음 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 로그인합니다. 자세한 내용은 이 항목의 앞부분에 나오는 [데이터베이스 엔진 튜닝 관리자 시작](#Start) 을 참조하세요.  
+3.  데이터베이스 엔진 튜닝 관리자를 실행한 다음 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 로그인합니다. 자세한 내용은 이 항목의 앞부분에 나오는 [데이터베이스 엔진 튜닝 관리자 시작](#Start) 을 참조하세요.  
   
 4.  **일반** 탭의 **세션 이름** 에 이름을 입력하여 새 튜닝 세션을 만듭니다.  
   
@@ -308,7 +308,7 @@ ms.locfileid: "73983266"
 ##  <a name="XMLInput"></a> XML 입력 파일 만들기  
  숙련된 XML 개발자인 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자에서 작업을 튜닝할 때 사용하는 XML 형식의 파일을 만들 수 있습니다. 이러한 XML 파일을 만들려면 선호하는 XML 도구를 사용하여 예제 파일을 편집하거나 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자 XML 스키마에서 인스턴스를 생성합니다.  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자 XML 스키마는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치의 다음 위치에 저장됩니다.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자 XML 스키마는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치의 다음 위치에 있습니다.  
   
  C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
   
@@ -503,7 +503,7 @@ database_name.owner_name.table_name
  **세부 정보**  
  상태를 나타내는 아이콘이 포함되어 있습니다.  
   
- **작업**  
+ **동작**  
  수행 중인 단계를 표시합니다.  
   
  **상태**  
@@ -517,6 +517,6 @@ database_name.owner_name.table_name
   
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 엔진 튜닝 관리자의 출력 보기 및 작업](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)   
- [dta Utility](../../tools/dta/dta-utility.md)  
+ [dta 유틸리티](../../tools/dta/dta-utility.md)  
   
   

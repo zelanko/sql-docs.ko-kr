@@ -15,10 +15,10 @@ ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 63a80b7bebafdaf05c93a95b9ce5efd0dc89c316
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68001793"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>FOR XML에서 EXPLICIT 모드 사용
@@ -42,7 +42,7 @@ ms.locfileid: "68001793"
   
  쿼리에 의해 생성된 범용 열이 XML 결과를 생성하도록 처리되는 방법을 이해하려면 이 범용 테이블을 생성하는 쿼리를 작성했다고 가정해 보십시오.  
   
- ![예제 범용 테이블](../../relational-databases/xml/media/xmlutable.gif "Sample universal table")  
+ ![샘플 범용 테이블](../../relational-databases/xml/media/xmlutable.gif "샘플 범용 테이블")  
   
  이 범용 테이블에 대해 다음 사항을 유의하십시오.  
   

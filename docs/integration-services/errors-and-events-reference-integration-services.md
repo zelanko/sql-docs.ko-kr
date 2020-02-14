@@ -16,10 +16,10 @@ ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 64e805e5dd9b334afe252e2c1d43685e9c92b95f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290619"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>오류 및 이벤트 참조(Integration Services)
@@ -36,7 +36,7 @@ ms.locfileid: "71290619"
   
 ## <a name="error-messages"></a>오류 메시지  
   
-|오류의 심볼 이름|설명|  
+|오류의 심볼 이름|Description|  
 |----------------------------|-----------------|  
 |DTS_E_CACHELOADEDFROMFILE|캐시 변환이 메모리 내 캐시에 데이터를 쓰려고 하고 있기 때문에 패키지를 실행할 수 없음을 나타냅니다. 그러나 캐시 연결 관리자가 메모리 내 캐시에 캐시 파일을 이미 로드했습니다.|  
 |DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER|지정한 연결이 실패하여 패키지를 실행할 수 없음을 나타냅니다.|  
@@ -55,7 +55,7 @@ ms.locfileid: "71290619"
 ## <a name="events-sqlispackage"></a>이벤트(SQLISPackage)  
  자세한 내용은 [Integration Services 패키지에서 기록하는 이벤트](../integration-services/performance/events-logged-by-an-integration-services-package.md)를 참조하세요.  
   
-|이벤트|설명|  
+|행사|Description|  
 |-----------|-----------------|  
 |SQLISPackage_12288|패키지가 시작되었음을 나타냅니다.|  
 |SQLISPackage_12289|패키지가 성공적으로 실행되었음을 나타냅니다.|  
@@ -69,7 +69,7 @@ ms.locfileid: "71290619"
 ## <a name="events-sqlisservice"></a>이벤트(SQLISService)  
  자세한 내용은 [Integration Services 서비스에서 기록하는 이벤트](../integration-services/service/events-logged-by-the-integration-services-service.md)를 참조하세요.  
   
-|이벤트|설명|  
+|행사|Description|  
 |-----------|-----------------|  
 |SQLISService_256|시비스가 시작되려고 함을 나타냅니다.|  
 |SQLISService_257|시비스가 시작되었음을 나타냅니다.|  

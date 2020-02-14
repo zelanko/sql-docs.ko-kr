@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: dd7cfe863fde1b4909caadca12b496705f956483
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 8ac6758c3856858f6b10b17184705022aa51a62e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768815"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288192"
 ---
 # <a name="enhance-general-replication-performance"></a>일반적인 복제 성능 향상
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68768815"
   
 ## <a name="server-and-network"></a>서버 및 네트워크  
   
--   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]에 할당될 최소 및 최대 메모리 양을 설정합니다.  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]에 할당될 최소 및 최대 메모리양을 설정합니다.  
   
      기본적으로 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 은 사용할 수 있는 시스템 리소스에 따라 메모리 요구 사항을 동적으로 변경합니다. 복제 작업 중 사용 가능한 메모리의 부족을 방지하기 위해 **min server memory** 옵션을 사용해서 사용 가능한 최소 메모리를 설정합니다. 메모리를 확보하기 위해 운영 체제가 디스크로 페이징하지 않도록 하기 위해 **max server memory** 옵션을 사용하여 최대 메모리를 설정할 수도 있습니다. 자세한 내용은 [서버 메모리 서버 구성 옵션](../../../database-engine/configure-windows/server-memory-server-configuration-options.md)을 참조하세요.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "68768815"
   
      데이터 하위 집합을 각 구독자에 게시하거나 애플리케이션이 지정된 행의 변경 내용을 지정된 노드로 직접 게시하도록 하여 변경 내용을 분할할 수 있습니다.  
   
-    -   병합 복제에서는 단일 게시에서 매개 변수가 있는 필터를 사용하여 데이터 하위 집합을 게시할 수 있습니다. 자세한 내용은 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)을 참조하세요.  
+    -   병합 복제에서는 단일 게시에서 매개 변수가 있는 필터를 사용하여 데이터 하위 집합을 게시할 수 있습니다. 자세한 내용은 [매개 변수가 있는 행 필터](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  
   
     -   트랜잭션 복제에서는 여러 게시에서 정적 필터를 사용하여 데이터 하위 집합을 게시할 수 있습니다. 자세한 내용은 [게시된 데이터 필터링](../../../relational-databases/replication/publish/filter-published-data.md)을 참조하세요.  
   
@@ -159,7 +159,7 @@ ms.locfileid: "68768815"
   
 -   배포 에이전트와 병합 에이전트의 **–UseInprocLoader** 매개 변수를 사용합니다. 게시된 테이블에 XML 열이 있는 경우 이 매개 변수를 사용할 수 없습니다. 이 매개 변수를 사용할 경우 스냅샷이 적용되면 에이전트가 BULK INSERT 명령을 사용할 수 있습니다.  
   
- 에이전트 프로필 및 명령줄에서 에이전트 매개 변수를 지정할 수 있습니다. 참조 항목:  
+ 에이전트 프로필 및 명령줄에서 에이전트 매개 변수를 지정할 수 있습니다. 자세한 내용은 다음을 참조하세요.  
   
 -   [복제 에이전트 프로필 작업](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   

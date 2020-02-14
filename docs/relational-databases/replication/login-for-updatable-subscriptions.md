@@ -13,10 +13,10 @@ ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3bdb3585647e64ad1a175900263628b607eb0041
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710364"
 ---
 # <a name="login-for-updatable-subscriptions"></a>업데이트할 수 있는 구독에 대한 로그인
@@ -42,7 +42,7 @@ ms.locfileid: "71710364"
  복제는 **로그인** 및 **암호** 필드에 지정된 자격 증명을 사용하여 연결된 서버를 만듭니다.  
   
  **로그인**  
- 이 항목에 설명된 사용 권한만 있는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 입력합니다.  
+ 이 토픽에 설명된 사용 권한만 있는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 입력합니다.  
   
  **암호**  
  **로그인**에서 지정한 로그인에 대한 강력한 암호를 입력합니다.  
@@ -50,10 +50,10 @@ ms.locfileid: "71710364"
  **이미 정의한 연결된 서버나 원격 서버 사용**  
  이 옵션을 사용하려면 이미 정의한 연결된 서버나 원격 서버가 필요합니다. 자세한 내용은 [연결된 서버&#40;데이터베이스 엔진&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md) 및 [원격 서버](../../database-engine/configure-windows/remote-servers.md)를 참조하세요. 연결된 서버나 원격 서버에 사용된 로그인에 강력한 암호가 있고 이 항목에 설명된 사용 권한만 있는지 확인합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [트랜잭션 게시에 대해 업데이트할 수 있는 구독 만들기](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
+## <a name="see-also"></a>참고 항목  
+ [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [복제 보안 설정 보기 및 수정](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
- [트랜잭션 복제를 위한 업데이트 가능 구독](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
+ [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [게시 구독](../../relational-databases/replication/subscribe-to-publications.md)  
   
   

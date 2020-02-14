@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f18f33d58de48358ffe88adee0bb2a3605c3c50b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 1052379affba718d49879c85e395b0117671075a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769991"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286577"
 ---
 # <a name="publication-properties-subscription-options"></a>게시 속성, 구독 옵션
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68769991"
   
 ### <a name="creation-and-synchronization"></a>생성 및 동기화  
  **익명 구독 허용**  
- 익명 끌어오기 구독을 허용할지 여부를 결정합니다. 익명 구독은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEWEd2005](../../includes/ssewed2005-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssMobileEd2005](../../includes/ssmobileed2005-md.md)]및 Windows CE용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 지원됩니다. 스냅샷 및 트랜잭션 게시에 대해 이 옵션을 사용하려면 **스냅샷을 항상 사용할 수 있음** 옵션을 **True**로 설정해야 합니다.  
+ 익명 끌어오기 구독을 허용할지 여부를 결정합니다. 익명 구독은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEWEd2005](../../includes/ssewed2005-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssMobileEd2005](../../includes/ssmobileed2005-md.md)] 및 Windows CE용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 지원됩니다. 스냅샷 및 트랜잭션 게시에 대해 이 옵션을 사용하려면 **스냅샷을 항상 사용할 수 있음** 옵션을 **True**로 설정해야 합니다.  
   
  **연결할 수 있는 구독 데이터베이스**  
  구독 데이터베이스의 복사본을 연결하여 구독을 만들 수 있는지 여부를 결정합니다. 스냅샷 및 트랜잭션 게시의 경우 **스냅샷을 항상 사용할 수 있음** 옵션을 **True** 로 설정해야 합니다.  
@@ -79,14 +79,14 @@ ms.locfileid: "68769991"
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에만 적용됩니다. 게시에서 피어 투 피어 복제를 지원할지 여부를 결정합니다. 이 옵션을 **True** 로 설정하면 다른 게시 속성도 피어 투 피어 복제를 지원하도록 설정됩니다. 구독이 있으면 이 옵션을 읽기 전용입니다. **즉시 업데이트 구독 허용** , **지연 업데이트 구독 허용** 또는 **SQL Server 이외 구독자 허용**이 **True** 로 설정된 경우에는 이 옵션을 **True**로 설정할 수 없습니다. 자세한 내용은 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)을 참조하세요.  
   
  **피어 투 피어 충돌 검색 허용**  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에만 적용됩니다. 이 게시에 대해 충돌 검색을 사용할지 여부를 지정합니다. 충돌 검색을 사용하려면 모든 노드에서 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전이 실행되어야 하고 모든 노드에 대해 충돌 검색을 사용하도록 설정되어 있어야 합니다. 충돌 검색을 사용하려면 **피어 송신자 ID**값도 지정해야 합니다. 자세한 내용은 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)을(를) 참조하세요.  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에만 적용됩니다. 이 게시에 대해 충돌 검색을 사용할지 여부를 지정합니다. 충돌 검색을 사용하려면 모든 노드에서 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전이 실행되어야 하고 모든 노드에 대해 충돌 검색을 사용하도록 설정되어 있어야 합니다. 충돌 검색을 사용하려면 **피어 송신자 ID**값도 지정해야 합니다. 자세한 내용은 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)을 참조하세요.  
   
  **피어 송신자 ID**  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에만 적용됩니다. 피어 투 피어 토폴로지에 있는 노드의 ID를 지정합니다. 이 ID는 **피어 투 피어 충돌 검색 허용** 이 **True**로 설정된 경우 충돌 검색에 사용됩니다. 토폴로지에 사용되지 않은 0이 아닌 양수 ID를 지정합니다. 이미 사용된 ID 목록을 보려면 [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) 시스템 테이블을 쿼리하십시오.  
   
 ### <a name="updatable-subscriptions"></a>업데이트할 수 있는 구독  
  **지연 업데이트 구독 허용**  
- 구독자 변경 내용을 즉시 게시자로 복제할 수 있는지 여부를 결정합니다. 이 옵션은 읽기 전용입니다. 게시를 만들 때만 구독 업데이트를 설정할 수 있습니다. 자세한 내용은 [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)을(를) 참조하세요.  
+ 구독자 변경 내용을 즉시 게시자로 복제할 수 있는지 여부를 결정합니다. 이 옵션은 읽기 전용입니다. 게시를 만들 때만 구독 업데이트를 설정할 수 있습니다. 자세한 내용은 [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)를 참조하세요.  
   
  **피어 투 피어 구독 허용**  
  구독자 변경 내용을 지연하고 나중에 게시자로 복제할 수 있는지 여부를 결정합니다. 이 옵션은 읽기 전용입니다. 게시를 만들 때만 구독 업데이트를 설정할 수 있습니다. 자세한 내용은 [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)를 참조하세요.  
@@ -106,9 +106,9 @@ ms.locfileid: "68769991"
  **한 곳에서만 충돌 보고**  
  충돌하는 데이터 변경 내용을 게시자에서만 보고할 것인지, 아니면 게시자와 구독자 모두에서 보고할 것인지 여부를 결정합니다. 이 옵션은 읽기 전용입니다. 새 게시 마법사를 사용하여 만든 게시에 대해 이 옵션은 기본적으로 **True** 로 설정되어 있으며 게시를 만든 후에는 이를 변경할 수 없습니다. **True** 값은 게시자에서만 충돌이 보고됨을 의미합니다. 보고된 위치에서만 충돌을 볼 수 있습니다. 자세한 내용은 [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)의 "충돌 보기" 섹션을 참조하십시오.  
   
-### <a name="filtering"></a>필터링  
+### <a name="filtering"></a>Filtering  
  **매개 변수가 있는 필터 허용**  
- 게시에서 매개 변수가 있는 필터를 사용하는지 여부에 따라 설정됩니다. 이 옵션은 항상 읽기 전용입니다. 자세한 내용은 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)을(를) 참조하세요.  
+ 게시에서 매개 변수가 있는 필터를 사용하는지 여부에 따라 설정됩니다. 이 옵션은 항상 읽기 전용입니다. 자세한 내용은 [매개 변수가 있는 행 필터](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  
   
  **구독자 유효성 검사**  
  구독자에 올바른 데이터 파티션이 있는지를 검사할 때 사용할 함수를 결정합니다. 값이 여러 개 있으면 쉼표로 구분합니다. 자세한 내용은 [병합 구독자의 파티션 정보 유효성 검사](../../relational-databases/replication/validate-partition-information-for-a-merge-subscriber.md)를 참조하세요.  
@@ -117,7 +117,7 @@ ms.locfileid: "68769991"
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에만 해당됩니다. 각 파티션에 속하는 데이터 행을 미리 계산하여 동기화를 최적화할지 여부를 결정합니다. 게시가 사전 계산 파티션 기준을 만족하면 이 설정은 기본적으로 **True** 로 지정됩니다. 자세한 내용은 [사전 계산 파티션으로 매개 변수가 있는 필터 성능 최적화](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)를 참조하세요.  
   
  **동기화 최적화**  
- 각 구독자에서 추가 메타데이터를 저장하여 병합 처리를 최적화할지 여부를 결정합니다. 이 최적화보다 사전 계산 파티션이 우선합니다. **동기화 최적화** 옵션은 **파티션 미리 계산** 이 **False**로 설정된 경우에만 적용됩니다. 자세한 내용은 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하세요.  
+ 각 구독자에서 추가 메타데이터를 저장하여 병합 처리를 최적화할지 여부를 결정합니다. 이 최적화보다 사전 계산 파티션이 우선합니다. **동기화 최적화** 옵션은 **파티션 미리 계산** 이 **False**로 설정된 경우에만 적용됩니다. 자세한 내용은 [매개 변수가 있는 행 필터](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  
   
 ### <a name="merge-processes"></a>병합 프로세스  
  **동시 프로세스 제한**  

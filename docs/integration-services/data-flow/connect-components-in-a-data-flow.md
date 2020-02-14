@@ -14,10 +14,10 @@ ms.assetid: 70616a58-8921-4218-85bf-f3e90c5a9dbf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b6033c2d21b10755601f9ef82cabd829db5ad820
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293217"
 ---
 # <a name="connect-components-in-a-data-flow"></a>데이터 흐름의 구성 요소 연결
@@ -30,7 +30,7 @@ ms.locfileid: "71293217"
   
  다음 다이어그램에서는 하나의 원본 구성 요소, 두 개의 변환, 하나의 대상 구성 요소 및 이를 연결하는 경로가 포함된 간단한 데이터 흐름을 보여 줍니다.  
   
- ![Data flow](../../integration-services/data-flow/media/mw-dts-08.gif "Data flow")  
+ ![데이터 흐름](../../integration-services/data-flow/media/mw-dts-08.gif "디자이너의")  
   
  두 구성 요소를 연결한 다음에는 **데이터 흐름 경로 편집기**에서 경로를 통해 이동하는 데이터의 메타데이터와 경로의 속성을 볼 수 있습니다. 자세한 내용은 [Integration Services Paths](../../integration-services/data-flow/integration-services-paths.md)을(를) 참조하세요.  
   

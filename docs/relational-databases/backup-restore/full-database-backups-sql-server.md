@@ -20,10 +20,10 @@ ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b447bec3817dbaa173c544dcb31200a702b8661d
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68890062"
 ---
 # <a name="full-database-backups-sql-server"></a>전체 데이터베이스 백업(SQL Server)
@@ -49,7 +49,7 @@ ms.locfileid: "68890062"
 ##  <a name="DbBuRMs"></a> 단순 복구 모델에서 데이터베이스 백업  
  단순 복구 모델에서는 각 백업 후 재해가 발생할 경우 데이터베이스가 잠재적 작업 손실 위험에 노출될 수 있습니다. 다음 백업이 시작되어 작업 손실 가능성이 다시 0이 되고 새 작업 손실 가능성 주기가 시작될 때까지 작업 손실 가능성은 업데이트를 수행할 때마다 커집니다. 시간의 경과에 따라 백업 사이의 작업 손실 가능성이 증가합니다. 다음 그림에서는 전체 데이터베이스 백업만 사용하는 백업 전략의 작업 손실 가능성을 보여 줍니다.  
   
- ![데이터베이스 백업 간의 작업 손실 가능성 표시](../../relational-databases/backup-restore/media/bnr-rmsimple-1-fulldb-backups.gif "Shows work-loss exposure between database backups")  
+ ![데이터베이스 백업 간의 작업 손실 가능성 표시](../../relational-databases/backup-restore/media/bnr-rmsimple-1-fulldb-backups.gif "데이터베이스 백업 간의 작업 손실 가능성 표시")  
   
 ### <a name="example--includetsqlincludestsql-mdmd"></a>예제([!INCLUDE[tsql](../../includes/tsql-md.md)])  
  다음 예에서는 기존 백업을 덮어쓰고 새 미디어 세트를 만들기 위해 WITH FORMAT을 사용하여 전체 데이터베이스 백업을 만드는 방법을 보여 줍니다.  
@@ -65,7 +65,7 @@ GO
 ##  <a name="DbBuRMf"></a> 전체 복구 모델에서 데이터베이스 백업  
  전체 및 대량 로그 복구를 사용하는 데이터베이스의 경우 데이터베이스 백업이 필요하지만 이것만으로 충분하지는 않습니다. 또한 트랜잭션 로그 백업이 필요합니다. 다음 그림에서는 전체 복구 모델에서 사용 가능한 가장 단순한 백업 전략을 보여 줍니다.  
   
- ![일련의 전체 데이터베이스 백업 및 로그 백업](../../relational-databases/backup-restore/media/bnr-rmfull-1-fulldb-log-backups.gif "Series of full database backups and log backups")  
+ ![일련의 전체 데이터베이스 백업 및 로그 백업](../../relational-databases/backup-restore/media/bnr-rmfull-1-fulldb-log-backups.gif "일련의 전체 데이터베이스 백업 및 로그 백업")  
   
  로그 백업을 만드는 방법은 [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)을 참조하세요.  
   
@@ -91,7 +91,7 @@ GO
   
  자세한 내용은 [전체 데이터베이스 복원&#40;단순 복구 모델&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md) 또는 [전체 데이터베이스 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)을 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
  **전체 데이터베이스 백업을 만들려면**  
   
 -   [전체 데이터베이스 백업 만들기&#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  

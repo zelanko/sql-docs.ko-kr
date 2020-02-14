@@ -17,10 +17,10 @@ ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dc35bb8b31c88cea2d903981e709f4075929ea7a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295745"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>로컬 패키지의 출력 로드
@@ -36,7 +36,7 @@ ms.locfileid: "71295745"
 > [!NOTE]  
 > 이 항목에서 설명하는 절차를 수행하려면 데이터 흐름 태스크와 부모 개체의 DelayValidation 속성이 기본값인 **False**로 설정되어 있어야 합니다.
   
-## <a name="description"></a>설명  
+## <a name="description"></a>Description  
  이 절차에서는 DataReader 대상을 사용하는 패키지의 출력을 메모리에서 직접 로드하는 클라이언트 애플리케이션을 관리 코드로 개발하는 방법을 보여 줍니다. 여기에 요약된 단계는 뒷부분의 코드 예제에서 자세히 보여 줍니다.  
   
 #### <a name="to-load-data-package-output-into-a-client-application"></a>데이터 패키지 출력을 클라이언트 애플리케이션으로 로드하려면  
@@ -52,7 +52,7 @@ ms.locfileid: "71295745"
   
 4.  이전에 만든 **DtsConnection**을 사용하는 **DtsClient.DtsCommand** 형식의 개체를 만들고 이 개체의 **CommandText** 속성을 패키지의 DataReader 대상 이름으로 설정합니다. 그런 다음 이 명령 개체의 **ExecuteReader** 메서드를 호출하여 패키지 결과를 새 DataReader로 로드합니다.  
   
-5.  필요할 경우 **DtsCommand** 개체에서 **DtsDataParameter** 개체의 컬렉션을 사용하여 패키지의 출력을 간접적으로 매개 변수화함으로써 패키지에 정의된 변수에 값을 전달할 수 있습니다. 패키지 내에서는 이러한 변수를 쿼리 매개 변수로 사용하거나 식에 사용하여 DataReader 대상에 반환되는 결과에 영향을 줄 수 있습니다. 클라이언트 애플리케이션에서 **DtsDataParameter** 개체와 함께 이러한 변수를 사용하려면 먼저 **DtsClient** 네임스페이스에서 패키지에 해당 변수를 정의해야 합니다. **변수** 창에서 **변수 열 선택** 도구 모음 단추를 클릭하여 **네임스페이스** 열을 표시해야 할 수도 있습니다. 클라이언트 코드에서 **DtsCommand**의 **Parameters** 컬렉션에 **DtsDataParameter**를 추가할 때는 변수 이름에서 DtsClient 네임스페이스 참조를 생략합니다. 예를 들어  
+5.  필요할 경우 **DtsCommand** 개체에서 **DtsDataParameter** 개체의 컬렉션을 사용하여 패키지의 출력을 간접적으로 매개 변수화함으로써 패키지에 정의된 변수에 값을 전달할 수 있습니다. 패키지 내에서는 이러한 변수를 쿼리 매개 변수로 사용하거나 식에 사용하여 DataReader 대상에 반환되는 결과에 영향을 줄 수 있습니다. 클라이언트 애플리케이션에서 **DtsDataParameter** 개체와 함께 이러한 변수를 사용하려면 먼저 **DtsClient** 네임스페이스에서 패키지에 해당 변수를 정의해야 합니다. **변수** 창에서 **변수 열 선택** 도구 모음 단추를 클릭하여 **네임스페이스** 열을 표시해야 할 수도 있습니다. 클라이언트 코드에서 **DtsCommand**의 **Parameters** 컬렉션에 **DtsDataParameter**를 추가할 때는 변수 이름에서 DtsClient 네임스페이스 참조를 생략합니다. 다음은 그 예입니다.  
   
     ```  
     command.Parameters.Add(new DtsDataParameter("MyVariable", 1));  
@@ -112,7 +112,7 @@ ms.locfileid: "71295745"
   
 7.  애플리케이션을 실행하고 단추를 클릭합니다. 그러면 패키지가 실행되는 동안 잠깐 일시 중지된 후 패키지에서 계산한 집계 값, 즉 캐나다의 고객 수가 폼의 입력란에 표시됩니다.  
   
-### <a name="sample-code"></a>예제 코드  
+### <a name="sample-code"></a>샘플 코드  
   
 ```vb  
 Imports System.Data  

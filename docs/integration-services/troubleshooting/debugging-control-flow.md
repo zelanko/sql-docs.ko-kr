@@ -20,10 +20,10 @@ ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f762b5c7c5c4ce48c0c1bee660ed726b124e9c55
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295126"
 ---
 # <a name="debugging-control-flow"></a>제어 흐름 디버깅
@@ -31,7 +31,7 @@ ms.locfileid: "71295126"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include features 및 tools that you can use to troubleshoot the control flow in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에서 제어 흐름 문제를 해결하는 데 사용할 수 있는 기능과 도구가 포함됩니다.  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에서 제어 흐름 문제를 해결하는 데 사용할 수 있는 기능과 도구가 포함되어 있습니다.  
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 컨테이너 및 태스크에서의 중단점을 지원합니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "71295126"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 모든 태스크 및 컨테이너에 설정할 수 있는 10개의 중단 조건을 제공합니다. **중단점 설정** 대화 상자에서 다음 조건에 따라 중단점을 설정할 수 있습니다.  
   
-|중단 조건|설명|  
+|중단 조건|Description|  
 |---------------------|-----------------|  
 |태스크나 컨테이너가 **OnPreExecute** 이벤트를 받을 때|태스크가 실행되려는 순간에 호출됩니다. 이 이벤트는 작업이 실행되기 바로 전에 태스크나 컨테이너에 의해 발생합니다.|  
 |태스크나 컨테이너가 **OnPostExecute** 이벤트를 받을 때|태스크의 실행 논리가 완료되자 마자 호출됩니다. 이 이벤트는 작업이 실행된 바로 후에 태스크나 컨테이너에 의해 발생합니다.|  
@@ -71,7 +71,7 @@ ms.locfileid: "71295126"
   
  다음 표에서는 적중 횟수 유형에 대해 설명합니다.  
   
-|적중 횟수 유형|설명|  
+|적중 횟수 유형|Description|  
 |--------------------|-----------------|  
 |항상|중단점에 도달하면 실행이 항상 일시 중지됩니다.|  
 |다음과 같은 적중 횟수|중단점이 발생한 횟수가 적중 횟수와 같으면 실행이 일시 중지됩니다.|  
@@ -112,11 +112,11 @@ ms.locfileid: "71295126"
   
  다음 표에서는 이러한 창에 대해 설명합니다.  
   
-|창|설명|  
+|시간 범위|Description|  
 |------------|-----------------|  
 |중단점|패키지에 있는 중단점을 나열하고 중단점을 설정 및 해제할 수 있는 옵션을 제공합니다.|  
 |출력|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 기능에 대한 상태 메시지를 표시합니다.|  
-|직접 실행|식을 디버깅 및 계산하고 변수 값을 출력하는 데 사용됩니다.|  
+|즉시|식을 디버깅 및 계산하고 변수 값을 출력하는 데 사용됩니다.|  
 
 ## <a name="debug"></a> 태스크 또는 컨테이너에 중단점을 설정하여 패키지 디버깅
   이 절차에서는 패키지, 태스크, For 루프 컨테이너, Foreach 루프 컨테이너 또는 시퀀스 컨테이너에 중단점을 설정하는 방법을 설명합니다.  
@@ -148,13 +148,13 @@ ms.locfileid: "71295126"
  **Enabled**  
  이벤트에 중단점을 설정하려면 선택합니다.  
   
- **중단 조건**  
+ **Break Condition**  
  중단점을 설정할 사용 가능한 이벤트 목록을 봅니다.  
   
- **적중 횟수 형식**  
+ **Hit Count Type**  
  중단점이 적용되는 시기를 지정합니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**항상**|중단점에 도달하면 실행이 항상 일시 중지됩니다.|  
 |**다음과 같은 적중 횟수**|중단점이 발생한 횟수가 적중 횟수와 같으면 실행이 일시 중지됩니다.|  

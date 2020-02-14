@@ -23,10 +23,10 @@ ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a40336899e804ee634cf586078ec7c219f31c486
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297872"
 ---
 # <a name="script-component"></a>스크립트 구성 요소
@@ -65,7 +65,7 @@ ms.locfileid: "71297872"
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서 스크립트 구성 요소에는 두 가지 모드인 메타데이터 디자인 모드와 코드 디자인 모드가 있습니다. 메타데이터 디자인 모드에서는 스크립트 구성 요소 입력 및 출력을 추가하고 수정할 수 있지만 코드를 작성할 수는 없습니다. 따라서 입력과 출력이 구성된 다음에는 스크립트를 작성하기 위해 코드 디자인 모드로 전환해야 합니다. 스크립트 구성 요소는 입력 및 출력의 메타데이터로부터 기본 코드를 자동으로 생성합니다. 스크립트 구성 요소가 기본 코드를 생성한 다음 메타데이터를 변경하면 업데이트된 기본 코드가 사용자의 코드와 호환되지 않기 때문에 사용자의 코드가 더 이상 컴파일되지 않을 수 있습니다.  
   
 ## <a name="writing-the-script-that-the-component-uses"></a>구성 요소에서 사용하는 스크립트 작성  
- 스크립트 구성 요소는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) as the environment in which you write the scripts. VSTA는 **스크립트 변환 편집기**를 통해 액세스할 수 있습니다. 자세한 내용은 [스크립트 변환 편집기&#40;스크립트 페이지&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)을 참조하세요.  
+ 스크립트 구성 요소는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] VSTA([!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications)를 스크립트 작성 환경으로 사용합니다. VSTA는 **스크립트 변환 편집기**를 통해 액세스할 수 있습니다. 자세한 내용은 [스크립트 변환 편집기&#40;스크립트 페이지&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)을 참조하세요.  
   
  스크립트 구성 요소는 구성 요소 메타데이터를 나타내는 ScriptMain이라는 자동 생성된 클래스가 포함된 VSTA 프로젝트를 제공합니다. 예를 들어 스크립트 구성 요소가 3개의 출력이 있는 변환으로 사용되는 경우 ScriptMain에는 각 출력에 대한 메서드가 포함됩니다. ScriptMain은 스크립트에 대한 진입점입니다.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "71297872"
   
  스크립트 구성 요소에 대한 자세한 내용은 [스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)을 참조하세요. 스크립트 구성 요소 프로그래밍 방법은 [스크립트 구성 요소를 사용하여 데이터 흐름 확장](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)을 참조하십시오.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>옵션  
  **원본**, **대상**또는 **변환** 에서 선택한 내용에 따라 스크립트 변환 편집기의 페이지와 스크립트 변환 구성이 달라집니다.  
   
 ## <a name="script-transformation-editor-connection-managers-page"></a>스크립트 변환 편집기(연결 관리자 페이지)
@@ -125,7 +125,7 @@ ms.locfileid: "71297872"
   
  스크립트 구성 요소에 대한 자세한 내용은 [스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)을 참조하세요. 스크립트 구성 요소 프로그래밍 방법은 [스크립트 구성 요소를 사용하여 데이터 흐름 확장](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)을 참조하십시오.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>옵션  
  **Connection managers**  
  스크립트에 사용할 수 있는 연결 목록을 표시합니다.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "71297872"
   
  스크립트 구성 요소에 대한 자세한 내용은 [스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)을 참조하세요. 스크립트 구성 요소 프로그래밍 방법은 [스크립트 구성 요소를 사용하여 데이터 흐름 확장](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)을 참조하십시오.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>옵션  
  **입력 이름**  
  사용 가능한 입력 목록에서 선택합니다.  
   
@@ -176,7 +176,7 @@ ms.locfileid: "71297872"
   
  스크립트 구성 요소에 대한 자세한 내용은 [스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)을 참조하세요. 스크립트 구성 요소 프로그래밍 방법은 [스크립트 구성 요소를 사용하여 데이터 흐름 확장](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)을 참조하십시오.  
   
-### <a name="options"></a>변수  
+### <a name="options"></a>옵션  
  **Inputs and outputs**  
  왼쪽에서 입력 또는 출력을 선택하여 오른쪽에 있는 테이블에서 해당 속성을 확인합니다. 편집할 수 있는 속성은 선택하는 입력 또는 출력에 따라 다릅니다. 표시된 속성 중 다수는 읽기 전용입니다. 개별 속성에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   
@@ -201,8 +201,8 @@ ms.locfileid: "71297872"
   
  스크립트 구성 요소에 대한 자세한 내용은 [스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)을 참조하세요. 스크립트 구성 요소 프로그래밍 방법은 [스크립트 구성 요소를 사용하여 데이터 흐름 확장](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)을 참조하십시오.  
   
-### <a name="options"></a>변수  
- **Properties**  
+### <a name="options"></a>옵션  
+ **속성**  
  스크립트 변환 속성을 보고 수정합니다. 표시된 속성 중 다수는 읽기 전용입니다. 다음 속성을 수정할 수 있습니다.  
   
 |값|Description|  
@@ -217,7 +217,7 @@ ms.locfileid: "71297872"
 |**UserComponentTypeName**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인프라를 지원하는 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost> 클래스 및 **Microsoft.SqlServer.TxScript** 어셈블리를 지정합니다.|  
   
  **스크립트 편집**  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications)를 사용하여 스크립트를 작성하거나 수정할 수 있습니다.  
+ VSTA([!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications)를 사용하여 스크립트를 작성하거나 수정할 수 있습니다.  
   
 ## <a name="related-content"></a>관련 내용  
  [Integration Services 변환](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

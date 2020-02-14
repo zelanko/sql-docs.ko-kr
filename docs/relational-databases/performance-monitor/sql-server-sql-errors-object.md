@@ -14,19 +14,19 @@ ms.assetid: 6e5273ca-29cb-4618-88a2-70b9b8d6cf76
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: b5f4b6a6d12f8f4eee929dfca59906fc418bfcd8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67995670"
 ---
 # <a name="sql-server-sql-errors-object"></a>SQL Server, SQL Errors 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Microsoft **의** SQLServer:SQL Errors [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체는 **SQL Errors**를 모니터링하는 카운터를 제공합니다.  
   
- 이 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQL Errors** 카운터를 설명합니다.  
+ 이 테이블에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQL 오류** 카운터에 대해 설명합니다.  
   
-|SQL Server SQL Errors 카운터|설명|  
+|SQL Server SQL Errors 카운터|Description|  
 |------------------------------------|-----------------|  
 |**Errors/sec**|초당 오류 개수입니다.|  
   

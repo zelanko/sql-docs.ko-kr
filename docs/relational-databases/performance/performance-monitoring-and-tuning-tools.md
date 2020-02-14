@@ -19,19 +19,19 @@ ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: d900593848561bba17e186f48632bf299fe9a7cd
-ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73962401"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>성능 모니터링 및 튜닝 도구
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 이벤트를 모니터링하고 물리적 데이터베이스 디자인을 튜닝하는 여러 가지 도구를 제공합니다. 도구를 선택하는 기준은 수행된 모니터링 또는 튜닝 유형과 모니터링할 이벤트에 따라 결정됩니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이벤트를 모니터링하고 물리적 데이터베이스 디자인을 튜닝하는 여러 가지 도구를 제공합니다. 도구를 선택하는 기준은 수행된 모니터링 또는 튜닝 유형과 모니터링할 이벤트에 따라 결정됩니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 모니터링 및 튜닝 도구는 다음과 같습니다.  
   
-|도구|설명|  
+|도구|Description|  
 |----------|-----------------|  
 |[기본 제공 함수s&#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)|기본 제공 함수는 서버가 시작된 이후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업에 대한 스냅샷 통계를 표시하며 이러한 통계는 미리 정의된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 카운터에 저장됩니다. 예를 들어 **\@\@CPU_BUSY**에는 CPU가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 코드를 실행한 시간이 포함되고 **\@\@CONNECTIONS**에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 수나 시도 횟수가 포함되며 **\@\@PACKET_ERRORS**에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결에서 발생한 네트워크 패킷 수가 포함됩니다.|  
 |[DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)|DBCC(데이터베이스 콘솔 명령) 문을 사용하면 성능 통계 및 데이터베이스의 논리적, 물리적 일관성을 검사할 수 있습니다.|  
@@ -47,7 +47,7 @@ ms.locfileid: "73962401"
 |[QTA(쿼리 튜닝 도우미)](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)|[쿼리 저장소 사용 시나리오](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)의 *SQL Server의 최신 버전으로 업그레이드하는 동안 성능 안정성 유지* 섹션에 설명된 대로 QTA(쿼리 튜닝 도우미) 기능은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 최신 버전으로 업그레이드하는 동안 성능 안정성을 유지하기 위해 사용자에게 권장된 워크플로를 안내합니다. |  
 |[쿼리 저장소](../..//relational-databases/performance/monitoring-performance-by-using-the-query-store.md)|쿼리 저장소 기능은 사용자에게 쿼리 계획 선택 및 성능에 대한 인사이트를 제공합니다. 쿼리 계획 변경으로 인해 발생하는 성능 차이를 신속하게 찾을 수 있도록 하여 성능 문제 해결을 간소화합니다. 쿼리 저장소는 쿼리, 계획 및 런타임 통계의 기록을 자동으로 캡처하고 사용자 검토를 위해 보관합니다. 데이터를 기간별로 구분하여 데이터베이스 사용 패턴을 파악하고 서버에서 쿼리 계획 변경이 발생한 시기를 이해할 수 있게 해줍니다.|
 |[SQL 추적](../../relational-databases/sql-trace/sql-trace.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저는 다음과 같습니다.<br /><br /> [sp_trace_create&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)<br />[sp_trace_generateevent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)<br />[sp_trace_setevent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)<br />[sp_trace_setfilter&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)<br />[sp_trace_setstatus&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)|  
-|[SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay를 사용하면 여러 컴퓨터를 사용해 추적 데이터를 재생하여 중요한 작업을 효율적으로 시뮬레이트할 수 있습니다.|  
+|[SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay는 여러 컴퓨터를 통해 추적 데이터를 재생하여 중요 업무용 워크로드를 시뮬레이트할 수 있습니다.|  
 |[sp_trace_setfilter&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 일괄 처리나 트랜잭션 시작 같은 엔진 프로세스 이벤트를 추적하므로 서버와 데이터베이스 작업(예: 교착 상태, 치명적 오류 또는 로그인 작업)을 모니터링할 수 있습니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블이나 파일에 캡처하여 나중에 분석할 수 있으며, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 캡처된 이벤트를 단계별로 재생하여 발생한 이벤트를 정확히 확인할 수도 있습니다.|  
 |[시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)|다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 저장 프로시저는 다양한 모니터링 태스크에 대한 강력한 대체 방법을 제공합니다.<br /><br /> [sp_who&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md):<br />                    현재 실행 중인 문을 포함한 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자와 프로세스에 대한 스냅샷 정보 및 문의 차단 여부를 보고합니다.<br /><br /> [sp_lock&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md):<br />                    개체 ID, 인덱스 ID, 잠금 유형, 잠금이 적용되는 유형이나 리소스에 대한 스냅샷 정보를 보고합니다.<br /><br /> [sp_spaceused&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md): <br />                    테이블이나 전체 데이터베이스가 사용 중인 현재 예상 디스크 공간의 양을 보여 줍니다.<br /><br /> [sp_monitor&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md):<br />                    **sp_monitor** 가 마지막으로 실행된 이후의 CPU 사용량, I/O 사용량 및 유휴 시간 양을 포함하는 통계를 표시합니다.|  
 |[추적 플래그&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)|추적 플래그는 서버에서 특정 작업에 대한 정보를 표시하며 문제점이나 교착 상태 체인과 같은 성능 문제를 진단하는 데 사용됩니다.|  
@@ -57,20 +57,20 @@ ms.locfileid: "73962401"
   
 |이벤트/작업|확장 이벤트|SQL Server Profiler|Distributed Replay|시스템 모니터|작업 모니터|Transact-SQL|오류 로그|성능 대시보드|  
 |-----------------------|-----------------------|-------------------------|------------------------|--------------------|----------------------|-------------------|----------------|----------------|   
-|추세 분석|예|예||예|||||  
+|추세 분석|yes|yes||yes|||||  
 |캡처한 이벤트 재생||예(단일 컴퓨터에서)|예(여러 컴퓨터에서)||||||  
-|임시 모니터링|예<sup>1</sup>|예|||예|예|예|예|  
-|경고 생성||||예|||||  
-|그래픽 인터페이스|예|예||예|예||예|예|  
-|사용자 지정 애플리케이션에서 사용|예|예<sup>2</sup>||||예|||  
+|임시 모니터링|예<sup>1</sup>|yes|||yes|yes|yes|yes|  
+|경고 생성||||yes|||||  
+|그래픽 인터페이스|yes|yes||yes|yes||yes|yes|  
+|사용자 지정 애플리케이션에서 사용|yes|예<sup>2</sup>||||yes|||  
   
- <sup>1</sup> [SQL Server Management Studio XEvent 프로파일러](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md)   사용  
- <sup>2</sup> [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 시스템 저장 프로시저 사용.  
+ <sup>1</sup>[SQL Server Management Studio XEvent 프로파일러](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md)   사용  
+ <sup>2</sup>[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 시스템 저장 프로시저 사용.  
   
 ## <a name="windows-monitoring-tools"></a>Windows 모니터링 도구  
  Windows 운영 체제와 Windows Server 2003에서도 다음과 같은 모니터링 도구를 제공합니다.  
   
-|도구|설명|  
+|도구|Description|  
 |----------|-----------------|  
 |작업 관리자|시스템에서 실행 중인 프로세스 및 애플리케이션의 개요를 보여 줍니다.|  
 |네트워크 모니터 에이전트|네트워크 트래픽을 모니터링합니다.|  

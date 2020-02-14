@@ -14,10 +14,10 @@ ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b77faf60734e6aad7248c59d37033b26bb6b92e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67903208"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>웹 동기화를 위한 IIS 7 구성
@@ -166,7 +166,7 @@ ms.locfileid: "67903208"
 4.  **localhost에 연결**메시지가 표시되면 사용자 이름 및 암호를 입력하여 계속합니다. 웹 사이트에 대한 기본 페이지가 나타납니다.  
   
 ## <a name="setting-permissions-for-the-sql-server-replication-listener"></a>SQL Server 복제 수신기에 대한 사용 권한 설정  
- 구독자 컴퓨터가 IIS를 실행하는 컴퓨터에 연결되면 IIS 구성 시 지정한 인증 유형을 사용하여 해당 구독자가 인증됩니다. IIS에서는 구독자를 인증한 다음 해당 구독자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제를 호출할 수 있는 권한을 가지고 있는지 여부를 확인합니다. replisapi.dll에 대한 권한을 설정하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제를 호출할 수 있는 사용자를 제어합니다. Properly configuring permissions is necessary to prevent unauthorized access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제에 무단으로 액세스하지 못하도록 하려면 사용 권한을 적절하게 구성해야 합니다.  
+ 구독자 컴퓨터가 IIS를 실행하는 컴퓨터에 연결되면 IIS 구성 시 지정한 인증 유형을 사용하여 해당 구독자가 인증됩니다. IIS에서는 구독자를 인증한 다음 해당 구독자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제를 호출할 수 있는 권한을 가지고 있는지 여부를 확인합니다. replisapi.dll에 대한 권한을 설정하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제를 호출할 수 있는 사용자를 제어합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제에 무단으로 액세스하지 못하도록 하려면 사용 권한을 적절하게 구성해야 합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제 수신기를 실행할 계정에 대해 최소 사용 권한을 구성하려면 다음 절차를 완료합니다. 다음 절차의 단계는 IIS 7.0을 실행하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Server 2008에 해당됩니다.  
   
@@ -282,7 +282,7 @@ ms.locfileid: "67903208"
   
     4.  프록시 서버가 사용되는 경우 **사용자 LAN에 프록시 서버 사용** 및 **로컬 주소에 프록시 서버 사용 안 함**을 클릭한 다음 **확인**을 클릭합니다.  
   
-2.  구독자에서는 Internet Explorer에서 replisapi.dll에 대한 주소에 `?diag` (예: 예를 들어 `https://server.domain.com/directory/replisapi.dll?diag`을 참조하십시오.  
+2.  구독자에서는 Internet Explorer에서 replisapi.dll에 대한 주소에 `?diag` (예: 예: `https://server.domain.com/directory/replisapi.dll?diag`  
   
     > [!NOTE]  
     >  위 예에서 **server.domain.com** 은 IIS 관리자의 **서버 인증서** 섹션 아래에 나열된 정확한 **발급 대상** 이름으로 대체되어야 합니다.  
