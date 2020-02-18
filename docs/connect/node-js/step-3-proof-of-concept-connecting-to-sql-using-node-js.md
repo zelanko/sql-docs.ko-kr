@@ -11,23 +11,23 @@ ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7dc49b466885e63ad9bd380a53a432a936310e18
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68419260"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>3단계: Node.js를 사용하여 SQL에 연결하는 개념 증명
 
-![다운로드-아래쪽 화살표-원으로 둘러싸인](../../ssdt/media/download.png)[NODE.JS SQL 드라이버 다운로드](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![다운로드-아래쪽 화살표-원](../../ssdt/media/download.png)[Node.js SQL 드라이버를 다운로드하려면](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-이 예는 개념 증명 으로만 간주 해야 합니다.  이 샘플 코드는 명확 하 게 하기 위해 단순화 되었으며 Microsoft에서 권장 하는 모범 사례를 나타내지는 않습니다. 동일한 중요 한 함수를 사용 하는 다른 예제는 Github에서 사용할 수 있습니다.
+이 예제는 개념 증명으로만 간주해야 합니다.  이 샘플 코드는 명확한 이해를 돕기 위해 단순화되었으며 Microsoft에서 권장하는 모범 사례를 반드시 대표하는 것은 아닙니다. 동일한 중요 함수를 사용하는 다른 예제는 Github에서 얻을 수 있습니다.
 
 - [https://github.com/tediousjs/tedious/blob/master/examples/](https://github.com/tediousjs/tedious/blob/master/examples/)
   
-## <a name="step-1-connect"></a>1 단계: 연결  
+## <a name="step-1-connect"></a>1단계: 연결  
   
-**새 연결** 함수를 사용 하 여 SQL Database에 연결 합니다.  
+**새 연결** 기능을 사용하여 SQL Database에 연결할 수 있습니다.  
   
 ```javascript  
     var Connection = require('tedious').Connection;  
@@ -53,10 +53,10 @@ ms.locfileid: "68419260"
     });  
 ```  
   
-## <a name="step-2--execute-a-query"></a>2단계: 쿼리 실행  
+## <a name="step-2--execute-a-query"></a>2단계:  쿼리 실행  
   
   
-모든 SQL 문은 **New Request ()** 함수를 사용 하 여 실행 됩니다. 문이 select 문과 같은 행을 반환 하는 경우 **에는 request. on ()** 함수를 사용 하 여 검색할 수 있습니다. 행이 없으면 request. on () 함수는 빈 목록을 반환 합니다.  
+모든 SQL 문은 **new Request()** 함수를 사용하여 실행됩니다. Select 문과 같이 행을 반환하는 문의 경우 **request.on()** 함수를 사용하여 행을 가져올 수 있습니다. 행이 없다면 request.on() 함수가 빈 목록을 반환합니다.  
   
   
 ```javascript  
@@ -111,9 +111,9 @@ ms.locfileid: "68419260"
     }  
 ```  
   
-## <a name="step-3-insert-a-row"></a>3 단계: 행 삽입  
+## <a name="step-3-insert-a-row"></a>3단계: 행 삽입  
   
-[이 예제에서는 SQL](../../t-sql/statements/insert-transact-sql.md) [삽입 값 으로부터 응용 프로그램을 보호 하는 매개 변수를 안전 하 게 실행 하는 방법을 확인 합니다.](../../relational-databases/tables/primary-and-foreign-key-constraints.md)    
+이 예제에서는 [INSERT](../../t-sql/statements/insert-transact-sql.md) 명령문을 안전하게 실행하고 [SQL injection](../../relational-databases/tables/primary-and-foreign-key-constraints.md) 값으로부터 애플리케이션을 보호하는 매개 변수를 전달하는 방법을 보여줍니다.    
   
   
 ```javascript  

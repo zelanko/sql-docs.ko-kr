@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 405df2c66917dc5e5b350aaaa0769bede6ccf6c9
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 52285164928e1a4811abc17e931a1af1921c6d07
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653283"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831416"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>자습서: SQL Server 빅 데이터 클러스터에 샘플 데이터 로드
 
@@ -36,7 +36,7 @@ ms.locfileid: "69653283"
  
 ## <a id="sampledata"></a> 샘플 데이터 로드
 
-다음 단계에서는 부트스트랩 스크립트를 사용하여 SQL Server 데이터베이스 백업을 다운로드하고 빅 데이터 클러스터에 데이터를 로드합니다. 이러한 단계는 간편하게 [Windows](#windows) 및 [Linux](#linux) 섹션으로 구분되어 있습니다.
+다음 단계에서는 부트스트랩 스크립트를 사용하여 SQL Server 데이터베이스 백업을 다운로드하고 빅 데이터 클러스터에 데이터를 로드합니다. 이러한 단계는 간편하게 [Windows](#windows) 및 [Linux](#linux) 섹션으로 구분되어 있습니다. 기본 사용자 이름/암호를 인증 메커니즘으로 사용하려면 스크립트를 실행하기 전에 AZDATA_USERNAME 및 AZDATA_PASSWORD 환경 변수를 설정합니다. 그러지 않으면 스크립트는 통합 인증을 사용하여 SQL Server 마스터 인스턴스 및 Knox 게이트웨이에 연결합니다. 또한 통합 인증을 사용하기 위해 엔드포인트에 DNS 이름을 지정해야 합니다.
 
 ## <a id="windows"></a> Windows
 
@@ -61,21 +61,19 @@ ms.locfileid: "69653283"
 
 1. 부트스트랩 스크립트에는 빅 데이터 클러스터에 대한 다음과 같은 위치 매개 변수가 필요합니다.
 
-   | 매개 변수 | 설명 |
+   | 매개 변수 | Description |
    |---|---|
    | <CLUSTER_NAMESPACE> | 빅 데이터 클러스터에 지정한 이름입니다. |
-   | <SQL_MASTER_IP> | 마스터 인스턴스의 IP 주소입니다. |
-   | <SQL_MASTER_SA_PASSWORD> | 마스터 인스턴스의 SA 암호입니다. |
-   | <KNOX_IP> | HDFS/Spark 게이트웨이의 IP 주소입니다. |
-   | <KNOX_PASSWORD> | HDFS/Spark 게이트웨이의 암호입니다. |
-
+   | <SQL_MASTER_ENDPOINT> | 마스터 인스턴스의 DNS 이름 또는 IP 주소입니다. |
+   | <KNOX_ENDPOINT> | HDFS/Spark 게이트웨이의 DNS 이름 또는 IP 주소입니다. |
+   
    > [!TIP]
    > [kubectl](cluster-troubleshooting-commands.md)을 사용하여 SQL Server 마스터 인스턴스 및 Knox의 IP 주소를 찾습니다. `kubectl get svc -n <your-big-data-cluster-name>`을 실행하고 마스터 인스턴스(**master-svc-external**) 및 Knox(**gateway-svc-external**)의 EXTERNAL-IP 주소를 확인합니다. 클러스터의 기본 이름은 **mssql-cluster**입니다.
 
 1. 부트스트랩 스크립트를 실행합니다.
 
    ```cmd
-   .\bootstrap-sample-db.cmd <CLUSTER_NAMESPACE> <SQL_MASTER_IP> <SQL_MASTER_SA_PASSWORD> <KNOX_IP> <KNOX_PASSWORD>
+   .\bootstrap-sample-db.cmd <CLUSTER_NAMESPACE> <SQL_MASTER_ENDPOINT> <KNOX_ENDPOINT>
    ```
 
 ## <a id="linux"></a> Linux
@@ -97,13 +95,11 @@ ms.locfileid: "69653283"
 
 1. 부트스트랩 스크립트에는 빅 데이터 클러스터에 대한 다음과 같은 위치 매개 변수가 필요합니다.
 
-   | 매개 변수 | 설명 |
+   | 매개 변수 | Description |
    |---|---|
    | <CLUSTER_NAMESPACE> | 빅 데이터 클러스터에 지정한 이름입니다. |
-   | <SQL_MASTER_IP> | 마스터 인스턴스의 IP 주소입니다. |
-   | <SQL_MASTER_SA_PASSWORD> | 마스터 인스턴스의 SA 암호입니다. |
-   | <KNOX_IP> | HDFS/Spark 게이트웨이의 IP 주소입니다. |
-   | <KNOX_PASSWORD> | HDFS/Spark 게이트웨이의 암호입니다. |
+   | <SQL_MASTER_ENDPOINT> | 마스터 인스턴스의 DNS 이름 또는 IP 주소입니다. |
+   | <KNOX_ENDPOINT> | HDFS/Spark 게이트웨이의 DNS 이름 또는 IP 주소입니다. |
 
    > [!TIP]
    > [kubectl](cluster-troubleshooting-commands.md)을 사용하여 SQL Server 마스터 인스턴스 및 Knox의 IP 주소를 찾습니다. `kubectl get svc -n <your-big-data-cluster-name>`을 실행하고 마스터 인스턴스(**master-svc-external**) 및 Knox(**gateway-svc-external**)의 EXTERNAL-IP 주소를 확인합니다. 클러스터의 기본 이름은 **mssql-cluster**입니다.
@@ -111,7 +107,7 @@ ms.locfileid: "69653283"
 1. 부트스트랩 스크립트를 실행합니다.
 
    ```bash
-   sudo env "PATH=$PATH" ./bootstrap-sample-db.sh <CLUSTER_NAMESPACE> <SQL_MASTER_IP> <SQL_MASTER_SA_PASSWORD> <KNOX_IP> <KNOX_PASSWORD>
+   ./bootstrap-sample-db.sh <CLUSTER_NAMESPACE> <SQL_MASTER_ENDPOINT> <KNOX_ENDPOINT>
    ```
 
 ## <a name="next-steps"></a>다음 단계

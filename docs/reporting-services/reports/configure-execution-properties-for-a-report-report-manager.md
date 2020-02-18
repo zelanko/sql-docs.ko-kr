@@ -13,10 +13,10 @@ ms.assetid: 73cc8dcc-ef80-40d7-9739-d33bba0eb28a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6dfb24b6314529b19fb7bb5edb81534f30dc018a
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67492745"
 ---
 # <a name="configure-execution-properties-for-a-report"></a>보고서 실행 속성 구성
@@ -38,7 +38,7 @@ ms.locfileid: "67492745"
   
 1.  드롭다운 메뉴에서 **관리** 를 클릭한 다음 **처리 옵션** 탭을 선택합니다.  
   
-2.  **보고서 실행 스냅숏에서 이 보고서 렌더링**을 클릭하고 다음 옵션 중 하나를 선택합니다.  
+2.  **보고서 실행 스냅샷에서 이 보고서 렌더링**을 클릭하고 다음 옵션 중 하나를 선택합니다.  
   
     -   스냅샷을 만들려면 **다음 일정을 사용하여 보고서 실행 스냅샷 만들기**를 선택한 다음 보고서별 일정을 정의하거나 **공유 일정** 목록에서 선택합니다.  
   
@@ -60,24 +60,24 @@ ms.locfileid: "67492745"
   
 [보고서 서버의 웹 포털(SSRS 기본 모드)](../../reporting-services/web-portal-ssrs-native-mode.md)에서 다음을 수행합니다.  
   
-1. 실행 속성을 구성 하려는 보고서로 이동 합니다.  
+1. 실행 속성을 구성하려는 보고서로 이동합니다.  
   
-2. 선택한 보고서를 마우스 오른쪽 단추로 클릭 **관리** 드롭 다운 메뉴에서.
+2. 보고서를 마우스 오른쪽 단추로 클릭하고 드롭다운 메뉴에서 **관리**를 선택합니다.
 
-3. 선택 합니다 **기록 스냅숏을** 표시 하려면 탭을 합니다 **기록 스냅숏** 페이지.  
+3. **기록 스냅샷** 탭을 선택하여 **기록 스냅샷** 페이지를 표시합니다.  
   
-4. 선택 **일정 및 설정** 단추를 선택한 확인 **일정에 따라 기록 스냅숏 만들기** 아직 선택 하지 않은 경우.
+4. **일정 및 설정** 단추를 선택하고 아직 확인 표시하지 않았다면 **일정에 따라 기록 스냅샷 만들기**를 확인 표시합니다.
   
-5. 선택 된 **공유 일정** 또는 **보고서별 일정** 필요에 따라 합니다.  
+5. 원하는 대로 **공유 일정** 또는 **보고서별 일정**을 선택합니다.  
   
-6. 에 **고급** 섹션에서 원하는 **보존** 기록 스냅숏에 대 한 정책입니다.  
+6. **고급** 섹션의 기록 스냅샷에서 원하는 **보존** 정책을 선택합니다.  
   
 7. **적용**을 선택합니다.  
   
    >[!NOTE]
-   >즉시 스냅숏 만들기 하려는 경우 선택 합니다 **새 기록 스냅숏** 대신 단추를 **일정과 설정을** 단추 및 보고서 스냅숏이 즉시 생성 됩니다.  
+   >즉시 스냅샷을 만들려면 **일정 및 설정** 단추 대신에 **새 기록 스냅샷**을 선택합니다. 그러면 보고서 스냅샷이 즉시 생성됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보고서 처리 속성 설정](../../reporting-services/report-server/set-report-processing-properties.md)   
  [보고서 서버 콘텐츠 관리(SSRS 기본 모드)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [보고서 처리 속성 설정](../../reporting-services/report-server/set-report-processing-properties.md)   

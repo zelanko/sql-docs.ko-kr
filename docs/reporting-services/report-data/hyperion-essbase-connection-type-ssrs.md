@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 904a3bbc5b7a3d4987cd6c06b257ff680e4e8343
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 61cfc9c83e5d9c2976f5fcb00eab29e91c1f726d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593831"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190834"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Hyperion Essbase 연결 형식(SSRS)
   보고서에 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 외부 데이터 원본의 데이터를 포함하려면 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 유형의 보고서 데이터 원본에 기초하는 데이터 세트가 있어야 합니다. 이 기본 제공 데이터 원본 유형은 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]외부 데이터 원본에서 다차원 데이터를 검색할 수 있게 하는 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 에 대한 데이터 확장 프로그램을 기반으로 합니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "73593831"
 Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample  
 ```  
   
- 연결 문자열 예제에 대한 자세한 내용은 [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)을 참조하세요.  
+ 연결 문자열 예제에 대한 자세한 내용은 [데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)를 참조하십시오.  
   
   
 ##  <a name="Credentials"></a> 자격 증명  
@@ -35,7 +35,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
  보고서를 게시한 후 보고서를 보고서 서버에서 실행할 때 데이터를 검색할 수 있는 권한이 유효하도록 데이터 원본에 대한 자격 증명을 변경해야 할 수도 있습니다.  
   
- 자세한 내용은 [데이터 연결, 데이터 원본 및 연결 &#40;문자열 보고서 작성기 및 SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 또는 [보고서 데이터 원본에 대 한 자격 증명 및 연결 정보 지정](specify-credential-and-connection-information-for-report-data-sources.md)을 참조 하세요.  
+ 자세한 내용은 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요.  
   
   
 ##  <a name="Query"></a> 쿼리  
@@ -60,7 +60,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
 
  쿼리 매개 변수를 포함하려면 쿼리 디자이너에서 필터 영역에 필터를 만들고 필터를 매개 변수로 표시합니다. 각 필터에 대해 데이터 세트가 자동으로 생성되어 사용 가능한 값을 제공합니다. 기본적으로 이러한 데이터 세트는 보고서 데이터 창에 나타나지 않습니다. 자세한 내용은 [다차원 데이터의 매개 변수 값에 대해 숨겨진 데이터 세트 표시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md)을 참조하세요.
 
- 기본적으로 각 보고서 매개 변수의 데이터 형식은 **Text**입니다. 보고서 매개 변수가 만들어진 후에는 기본값을 변경해야 할 수 있습니다. 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)유형의 보고서 데이터 원본에 기초하는 데이터 집합이 있어야 합니다.  
+ 기본적으로 각 보고서 매개 변수의 데이터 형식은 **Text**입니다. 보고서 매개 변수가 만들어진 후에는 기본값을 변경해야 할 수 있습니다. 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)에 대해 자세히 알아봅니다.  
   
   
 ##  <a name="Extended"></a> 확장 필드 속성  
@@ -81,11 +81,11 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
 |**속성**|**형식**|**설명 또는 필요한 값**|  
 |------------------|--------------|---------------------------------------|  
-|**Value**|**개체**|필드의 데이터 값을 지정합니다.<br /><br /> 차원 속성의 경우 MEMBER_CAPTION에 매핑됩니다. 측정값의 경우 데이터 값에 매핑됩니다.|  
+|**값**|**Object**|필드의 데이터 값을 지정합니다.<br /><br /> 차원 속성의 경우 MEMBER_CAPTION에 매핑됩니다. 측정값의 경우 데이터 값에 매핑됩니다.|  
 |**IsMissing**|**Boolean**|필드가 결과 데이터 집합에 있는지 여부를 나타냅니다.|  
 |**FormattedValue**|**String**|주요 숫자 값의 형식화된 값을 반환합니다.<br /><br /> MDX 식의 FORMATTED_VALUE에서 매핑됩니다.|  
 |**BackgroundColor**|**String**|필드에 대해 데이터베이스에 정의된 배경색을 반환합니다.<br /><br /> MDX 식의 BACK_COLOR에서 매핑됩니다.|  
-|**색**|**String**|항목에 대해 데이터베이스에 정의된 전경색을 반환합니다.<br /><br /> MDX 식의 FORE_COLOR에서 매핑됩니다.|  
+|**Color**|**String**|항목에 대해 데이터베이스에 정의된 전경색을 반환합니다.<br /><br /> MDX 식의 FORE_COLOR에서 매핑됩니다.|  
 |**UniqueName**|**String**|수준의 정규화된 이름을 반환합니다.<br /><br /> MDX 식의 MEMBER_UNIQUE_NAME에서 매핑됩니다.|  
   
  식에 필드 및 필드 속성을 사용하는 방법에 대한 자세한 내용은 [식의 기본 제공 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)을 참조하세요.  
@@ -127,7 +127,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [보고서 데이터 세트&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  보고서의 데이터 액세스에 대한 개요를 제공합니다.  
   
- [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  데이터 연결 및 데이터 원본에 대한 정보를 제공합니다.  
   
  [보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
@@ -136,7 +136,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [데이터 세트 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  데이터 세트 쿼리에 의해 생성되는 필드 컬렉션에 대한 정보를 제공합니다.  
   
- [Reporting Services &#40;SSRS&#41; 에서 지 원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) 각 데이터 확장 프로그램에 대 한 플랫폼 및 버전 지원에 대 한 자세한 정보를 제공 합니다.  
+ [Reporting Services &#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) 각 데이터 확장 프로그램에 대한 플랫폼 및 버전 지원에 관한 자세한 정보를 제공합니다.  
   
  [Hyperion Essbase와 함께 SQL Server 2005 Reporting Services 사용(Using SQL Server 2005 Reporting Services with Hyperion Essbase)](https://go.microsoft.com/fwlink/?LinkId=81970)  
  이 데이터 확장 프로그램을 사용하는 방법에 대한 자세한 정보를 제공합니다.  

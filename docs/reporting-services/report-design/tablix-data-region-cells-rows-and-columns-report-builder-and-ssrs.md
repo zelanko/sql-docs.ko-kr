@@ -1,6 +1,7 @@
 ---
-title: 테이블릭스 데이터 영역 셀, 행 및 열(보고서 작성기 및 SSRS) | Microsoft Docs
-ms.date: 03/07/2017
+title: 테이블릭스의 셀, 행 및 열 | Microsoft Docs
+description: 페이지가 매겨진 SQL Server Reporting Services 보고서에서 테이블릭스 데이터 영역의 행 및 열에 데이터가 표시되는 방식을 제어하려면 정보 데이터, 그룹 데이터, 레이블과 합계에 행 및 열을 지정하는 방법을 이해해야 합니다.
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -13,14 +14,15 @@ f1_keywords:
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 79cfa786930825e28f41ffe38802f4aa1e0ec6f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: a1630b872e3a445b082c6ceca98d45cf225cdaf7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65574721"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252394"
 ---
-# <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>테이블릭스 데이터 영역 셀, 행 및 열(보고서 작성기 및 SSRS)
+# <a name="cells-rows--columns-in-a-tablix-data-region-report-builder-and-ssrs"></a>테이블릭스 데이터 영역의 셀, 행 및 열(보고서 작성기 및 SSRS)
+
   페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서에서 테이블릭스 데이터 영역의 행 및 열 데이터가 표시되는 방식을 제어하려면 정보 데이터, 그룹 데이터 및 레이블과 합계에 대한 행 및 열을 지정하는 방법을 이해해야 합니다. 대부분의 경우 테이블, 행렬 또는 목록의 기본 구조를 사용하여 데이터를 표시할 수 있습니다. 자세한 내용은 [테이블&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md), [행렬](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md) 또는 [목록](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)을 참조하세요.  
   
  테이블릭스 데이터 영역에는 정보 행 및 정보 열 기반의 정보 데이터와 그룹 행 및 그룹 열 기반의 그룹화된 데이터가 표시됩니다. 행 그룹과 열 그룹을 테이블릭스 데이터 영역에 추가하면 데이터가 표시되는 행 및 열이 자동으로 추가됩니다. 행 및 열을 수동으로 추가 및 제거하여 테이블릭스 데이터 영역을 사용자 지정하고 보고서에 데이터가 표시되는 방법을 제어할 수 있습니다.  
@@ -36,15 +38,15 @@ ms.locfileid: "65574721"
 ### <a name="row-and-column-handles"></a>행 및 열 핸들  
  테이블릭스 데이터 영역을 선택할 때 행 및 열 핸들 그래픽은 각 행 및 열의 용도를 나타냅니다. 핸들은 행 및 열이 그룹 내부 또는 외부에 있음을 나타냅니다. 다음 표에서는 핸들의 다양한 표시 모양을 보여 줍니다.  
   
-|아이콘|설명|  
+|아이콘|Description|  
 |----------|-----------------|  
-|![세부 정보 행에 3개의 평행선이 있는 행 핸들](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "세부 정보 행에 3개의 평행선이 있는 행 핸들")|행 그룹 계층에서 유일한 세부 정보 그룹|  
-|![세부 정보 행 및 한 개의 외부 그룹이 있는 행 핸들](../../reporting-services/report-design/media/rs-icontablix-groupwithdetails.gif "세부 정보 행 및 한 개의 외부 그룹이 있는 행 핸들")|한 개의 외부 그룹 및 자식 세부 정보 그룹|  
-|![중첩된 그룹을 보여주는 2개의 평행 대괄호](../../reporting-services/report-design/media/rs-icontablix-nestedgroupnodetails.gif "중첩된 그룹을 보여주는 2개의 평행 대괄호")|한 개의 외부 그룹, 한 개의 내부 그룹, 세부 정보 그룹 없음|  
-|![중첩 및 세부 정보에 대한 2개의 대괄호 및 3개의 누적 선](../../reporting-services/report-design/media/rs-icontablix-nestedgroupwithdetails.gif "중첩 및 세부 정보에 대한 2개의 대괄호 및 3개의 누적 선")|한 개의 외부 그룹, 한 개의 내부 그룹 및 자식 세부 정보 그룹|  
+|![3개의 평행선이 있는 정보 행에 대한 행 핸들](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "3개의 평행선이 있는 정보 행에 대한 행 핸들")|행 그룹 계층에서 유일한 세부 정보 그룹|  
+|![정보 행과 1개의 외부 그룹이 있는 행 핸들](../../reporting-services/report-design/media/rs-icontablix-groupwithdetails.gif "정보 행과 1개의 외부 그룹이 있는 행 핸들")|한 개의 외부 그룹 및 자식 세부 정보 그룹|  
+|![중첩된 그룹을 보여 주는 2개의 평행 대괄호](../../reporting-services/report-design/media/rs-icontablix-nestedgroupnodetails.gif "중첩된 그룹을 보여 주는 2개의 평행 대괄호")|한 개의 외부 그룹, 한 개의 내부 그룹, 세부 정보 그룹 없음|  
+|![중첩 및 세부 정보에 대한 2개의 대괄호와 누적된 3개의 선](../../reporting-services/report-design/media/rs-icontablix-nestedgroupwithdetails.gif "중첩 및 세부 정보에 대한 2개의 대괄호와 누적된 3개의 선")|한 개의 외부 그룹, 한 개의 내부 그룹 및 자식 세부 정보 그룹|  
 |![바닥글 행이 있는 1개의 외부 그룹 및 1개의 내부 그룹](../../reporting-services/report-design/media/rs-icontablix-nestedgroupwithparentfooter.gif "바닥글 행이 있는 1개의 외부 그룹 및 1개의 내부 그룹")|바닥글 행이 있는 한 개의 외부 그룹 및 한 개의 내부 그룹|  
 |![외부 그룹 대괄호, 내부 그룹 대괄호, 세부 정보](../../reporting-services/report-design/media/rs-icontablix-nestedgroupwithdetailsandtotals.gif "외부 그룹 대괄호, 내부 그룹 대괄호, 세부 정보")|합계에 대한 바닥글 행이 있는 한 개의 외부 그룹, 합계에 대한 바닥글 행이 있는 한 개의 내부 그룹 및 한 개의 정보 행|  
-|![부모 헤더와 바닥글 및 자식 그룹](../../reporting-services/report-design/media/rs-icontablix-nestedgroupwithparentheaderandfooter.gif "부모 헤더와 바닥글 및 자식 그룹")|레이블에 대한 머리글과 합계에 대한 바닥글이 있는 한 개의 외부 그룹, 한 개의 내부 그룹, 자식 그룹 없음|  
+|![부모 머리글과 바닥글 및 자식 그룹](../../reporting-services/report-design/media/rs-icontablix-nestedgroupwithparentheaderandfooter.gif "부모 머리글과 바닥글 및 자식 그룹")|레이블에 대한 머리글과 합계에 대한 바닥글이 있는 한 개의 외부 그룹, 한 개의 내부 그룹, 자식 그룹 없음|  
   
 ### <a name="group-rows"></a>그룹 행  
  그룹 내부에 있는 행은 고유한 그룹 값마다 한 번씩 반복되며 일반적으로 합계를 집계하는 데 사용됩니다. 그룹 외부에 있는 행은 그룹에 대해 한 번씩 반복되며 레이블이나 부분합을 구하는 데 사용됩니다. 테이블릭스 셀을 선택할 때 테이블릭스 데이터 영역 안의 대괄호와 행 및 열 핸들은 셀이 속하는 그룹을 나타냅니다. 이 그림에서는 다음과 같은 시각적 표시를 보여 줍니다.  
@@ -55,12 +57,12 @@ ms.locfileid: "65574721"
   
 -   선택된 셀에서 모든 그룹의 멤버 자격을 보여 주는 그룹 표시기  
   
- ![세부 정보 및 중첩 행 그룹이 있는 테이블](../../reporting-services/report-design/media/rs-tablixrowgroupvisualcues.gif "세부 정보 및 중첩 행 그룹이 있는 테이블")  
+ ![정보 및 중첩 행 그룹이 있는 테이블](../../reporting-services/report-design/media/rs-tablixrowgroupvisualcues.gif "정보 및 중첩 행 그룹이 있는 테이블")  
   
 ### <a name="total-rows"></a>Total  Rows  
  행 및 열 그룹을 추가한 후 열에 대한 합계를 보여 주는 행과 행에 대한 합계를 보여 주는 열을 추가할 수 있습니다. 다음 그림에서는 행 및 열 그룹과 합계 행 및 열이 모두 있는 행렬을 보여 줍니다.  
   
- ![테이블릭스 데이터 영역](../../reporting-services/report-design/media/rs-tablixparts.gif "테이블릭스 데이터 영역")  
+ ![테이블릭스 데이터 영역](../../reporting-services/report-design/media/rs-tablixparts.gif "테이블릭스 데이터 영역(Tablix data region)")  
   
 ### <a name="grouping-pane"></a>그룹화 창  
  그룹화 창에는 디자인 화면에서 현재 선택한 테이블릭스 데이터 영역에 대한 행 그룹과 열 그룹이 표시됩니다. 다음 그림에서는 이러한 테이블릭스 데이터 영역에 대한 그룹화 창을 보여 줍니다.  

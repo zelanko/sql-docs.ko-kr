@@ -5,16 +5,16 @@ description: Active Directory 도메인에서 SQL Server 빅 데이터 클러스
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 11/13/2019
+ms.date: 12/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 40b1101d9ee6c57db865282d1556f96aa4311a1f
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.openlocfilehash: e47af4ef20bc3dac6c61b9c5f851822348d36650
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74127445"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253114"
 ---
 # <a name="deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-active-directory-mode"></a>Active Directory 모드에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 배포
 
@@ -49,7 +49,7 @@ AD에서 새 사용자를 만들려면 마우스 오른쪽 단추로 도메인 �
 
 ### <a name="creating-an-ou"></a>OU 만들기
 
-도메인 컨트롤러에서 **Active Directory 사용자 및 컴퓨터**를 엽니다. 왼쪽 패널에서 마우스 오른쪽 단추로 OU를 만들려는 디렉터리를 클릭하고, 새로 만들기 -\> **조직 구성 단위**를 차례로 선택한 다음, 마법사의 지시에 따라 OU를 만듭니다. 또는 PowerShell을 사용하여 OU를 만들 수 있습니다.
+도메인 컨트롤러에서 **Active Directory 사용자 및 컴퓨터**를 엽니다. 왼쪽 패널에서 마우스 오른쪽 단추로 OU를 만들려는 디렉터리를 클릭하고, 새로 만들기 -\> **조직 구성 단위**를 차례로 선택한 다음, 마법사의 안내에 따라 OU를 만듭니다. 또는 PowerShell을 사용하여 OU를 만들 수 있습니다.
 
 ```powershell
 New-ADOrganizationalUnit -Name "<name>" -Path "<Distinguished name of the directory you wish to create the OU in>"
@@ -174,13 +174,16 @@ AD 통합에 필요한 매개 변수는 다음과 같습니다. 이 문서의 �
 
 - `security.domainDnsName`: 도메인 이름입니다(예: `contoso.local`).
 
-- `security.clusterAdmins`: 이 매개 변수는 *one- AD 그룹을 사용합니다. 이 그룹의 멤버는 클러스터에서 관리자 권한을 얻게 됩니다. 즉 SQL Server에 대한 sysadmin 권한, HDFS에 대한 슈퍼 사용자 권한 및 컨트롤러에 대한 관리자 권한을 갖습니다.
+- `security.clusterAdmins`: 이 매개 변수는 **one- AD 그룹**을 사용합니다. 이 그룹의 멤버는 클러스터에서 관리자 권한을 얻게 됩니다. 즉 SQL Server에 대한 sysadmin 권한, HDFS에 대한 슈퍼 사용자 권한 및 컨트롤러에 대한 관리자 권한을 갖습니다. **배포를 시작하기 전에 이 그룹이 AD에 있어야 합니다. 또한 이 그룹은 Active Directory에서 DomainLocal로 범위가 지정될 수 없습니다. 도메인 로컬 범위 그룹으로 인해 배포가 실패합니다.**
 
-- `security.clusterUsers`: 빅 데이터 클러스터에서 일반 사용자(관리자 권한 없음)인 AD 그룹의 목록입니다.
+- `security.clusterUsers`: 빅 데이터 클러스터에서 일반 사용자(관리자 권한 없음)인 AD 그룹의 목록입니다. **배포를 시작하기 전에 이러한 그룹이 AD에 있어야 합니다. 또한 이러한 그룹은 Active Directory에서 DomainLocal로 범위가 지정될 수 없습니다. 도메인 로컬 범위 그룹으로 인해 배포가 실패합니다.**
 
-- `security.appOwners` **선택적 매개 변수**: 애플리케이션을 만들고, 삭제하고, 실행할 수 있는 권한이 있는 AD 그룹의 목록입니다.
+- `security.appOwners` **선택적 매개 변수**: 애플리케이션을 만들고, 삭제하고, 실행할 수 있는 권한이 있는 AD 그룹의 목록입니다. **배포를 시작하기 전에 이러한 그룹이 AD에 있어야 합니다. 또한 이러한 그룹은 Active Directory에서 DomainLocal로 범위가 지정될 수 없습니다. 도메인 로컬 범위 그룹으로 인해 배포가 실패합니다.**
 
-- `security.appReaders` **선택적 매개 변수**: 애플리케이션을 실행할 수 있는 권한이 있는 AD 사용자 또는 그룹의 목록입니다. 
+- `security.appReaders`**선택적 매개 변수**: 애플리케이션을 실행할 수 있는 권한이 있는 AD 그룹의 목록입니다. **배포를 시작하기 전에 이러한 그룹이 AD에 있어야 합니다. 또한 이러한 그룹은 Active Directory에서 DomainLocal로 범위가 지정될 수 없습니다. 도메인 로컬 범위 그룹으로 인해 배포가 실패합니다.**
+
+**AD 그룹 범위를 확인하는 방법:** 
+AD 그룹의 범위를 확인하여 DomainLocal인지 살펴보기 위한 지침을 보려면 [여기를 클릭](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps)하세요.
 
 배포 구성 파일을 아직 초기화하지 않은 경우 다음 명령을 실행하여 구성의 복사본을 가져올 수 있습니다.
 
@@ -199,6 +202,7 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.dom
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.domainDnsName=contoso.local"
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterAdmins=[\"bdcadminsgroup\"]"
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterUsers=[\"bdcusersgroup\"]"
+#Example for providing multiple clusterUser groups: [\"bdcusergroup1\",\"bdcusergroup2\"]
 ```
 
 위의 정보 외에도 다른 클러스터 엔드포인트에 대한 DNS 이름을 제공해야 합니다. 제공된 DNS 이름을 사용하는 DNS 항목은 배포 시 DNS 서버에 자동으로 만들어집니다. 이러한 이름은 다른 클러스터 엔드포인트에 연결할 때 사용됩니다. 예를 들어 SQL 마스터 인스턴스의 DNS 이름이 `mastersql`이면 `mastersql.contoso.local,31433`을 사용하여 도구에서 마스터 인스턴스에 연결합니다.
@@ -293,3 +297,5 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 - 보안 AD 모드는 현재 `kubeadm` 배포 환경에서만 작동하며, AKS에서는 작동하지 않습니다. `kubeadm-prod` 배포 프로필에는 기본적으로 보안 섹션이 포함됩니다.
 
 - 현재 도메인당 하나의 BDC만 허용됩니다. 도메인당 여러 BDC를 사용하도록 설정하는 것은 향후 릴리스에 예정되어 있습니다.
+
+- 보안 구성에 지정된 AD 그룹은 DomainLocal 범위를 지정할 수 없습니다. [이러한 지침](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps)에 따라 AD 그룹의 범위를 확인할 수 있습니다.

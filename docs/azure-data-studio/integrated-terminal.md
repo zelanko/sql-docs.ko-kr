@@ -89,7 +89,7 @@ Windows에서 셸을 올바르게 구성하려면 올바른 실행 파일을 찾
 
 ## <a id="key-bindings"></a>터미널 키 바인딩
 
-**보기: 통합 터미널 토글** 명령은 통합 터미널 패널을 빠르게 표시하고 숨기기 위해 **Ctrl+`** 에 바인딩되어 있습니다.
+보기: **** 통합 터미널 토글 명령은 통합 터미널 패널을 빠르게 표시하고 숨기기 위해 **Ctrl+`** 에 바인딩되어 있습니다.
 
 다음은 통합 터미널 내에서 빠르게 탐색하기 위한 바로 가기 키입니다.
 
@@ -118,7 +118,7 @@ Windows에서 셸을 올바르게 구성하려면 올바른 실행 파일을 찾
 
 ### <a name="run-selected-text"></a>선택한 텍스트 실행
 
-`runSelectedText` 명령을 사용하려면 편집기에서 텍스트를 선택한 다음, **** **명령 팔레트**(**Ctrl+Shift+P**)를 통해 터미널:활성 터미널에서 선택한 텍스트 실행 명령을 실행합니다. 터미널에서 선택한 텍스트를 실행하려고 합니다.
+`runSelectedText` 명령을 사용하려면 편집기에서 텍스트를 선택한 다음, **** 명령 팔레트 **** (**Ctrl+Shift+P**)를 통해 터미널:활성 터미널에서 선택한 텍스트 실행 명령을 실행합니다. 터미널에서 선택한 텍스트를 실행하려고 합니다.
 
 ![선택한 텍스트 실행](media/integrated-terminal/terminal_run_selected.png)
 
@@ -145,7 +145,7 @@ Linux 및 Windows에서 **Ctrl+F**를 통해 찾기 위젯을 시작하는 대�
 
 ### <a name="rename-terminal-sessions"></a>터미널 세션 이름 바꾸기
 
-이제 **터미널: 이름 바꾸기**(`workbench.action.terminal.rename`) 명령을 사용하여 통합 터미널 세션의 이름을 바꿀 수 있습니다. 새 이름이 터미널 선택 드롭다운에 표시됩니다.
+이제 터미널: **** 이름 바꾸기(`workbench.action.terminal.rename`) 명령을 사용하여 통합 터미널 세션의 이름을 바꿀 수 있습니다. 새 이름이 터미널 선택 드롭다운에 표시됩니다.
 
 ### <a name="forcing-key-bindings-to-pass-through-the-terminal"></a>터미널에서 키 바인딩 강제 적용
 

@@ -11,17 +11,17 @@ ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: abbd2aa3c277ad36f419de849b02433f17d27403
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026508"
 ---
 # <a name="using-basic-data-types"></a>기본 데이터 형식 사용
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 JDBC 기본 데이터 형식을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 Java 프로그래밍 언어가 인식할 수 있는 형식으로 변환하며 그 반대 과정도 수행합니다. JDBC 드라이버는 **SQLXML** 데이터 형식 및 **NCHAR**, **NVARCHAR**, **LONGNVARCHAR**및 **NCLOB**와 같은 국가별 (유니코드) 데이터 형식을 포함 하는 jdbc 4.0 API에 대 한 지원을 제공 합니다.  
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 JDBC 기본 데이터 형식을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 Java 프로그래밍 언어가 인식할 수 있는 형식으로 변환하며 그 반대 과정도 수행합니다. JDBC 드라이버는 JDBC 4.0 API를 지원하며, 여기에는 **SQLXML** 데이터 형식, 그리고 국가별(유니코드) 데이터 형식(예: **NCHAR**, **NVARCHAR**, **LONGNVARCHAR**, **NCLOB**)이 포함됩니다.  
   
 ## <a name="data-type-mappings"></a>데이터 형식 매핑
 
@@ -29,46 +29,46 @@ ms.locfileid: "69026508"
   
 | SQL Server 형식   | JDBC 형식(java.sql.Types)                        | Java 언어 형식          |
 | ------------------ | -------------------------------------------------- | ---------------------------- |
-| BIGINT             | bigint                                             | long                         |
-| BINARY             | BINARY                                             | byte[]                       |
+| bigint             | bigint                                             | long                         |
+| binary             | BINARY                                             | byte[]                       |
 | bit                | BIT                                                | boolean                      |
 | char               | CHAR                                               | String                       |
-| 날짜               | DATE                                               | java.sql.Date                |
-| DATETIME           | timestamp                                          | java.sql.Timestamp           |
-| Datetime2          | timestamp                                          | java.sql.Timestamp           |
+| date               | DATE                                               | java.sql.Date                |
+| Datetime           | timestamp                                          | java.sql.Timestamp           |
+| datetime2          | timestamp                                          | java.sql.Timestamp           |
 | datetimeoffset(2) | microsoft.sql.Types.DATETIMEOFFSET                 | microsoft.sql.DateTimeOffset |
-| Decimal            | DECIMAL                                            | java.math.BigDecimal         |
-| FLOAT              | DOUBLE                                             | double                       |
-| image              | LONGVARBINARY                                      | byte[]                       |
+| decimal            | DECIMAL                                            | java.math.BigDecimal         |
+| float              | DOUBLE                                             | double                       |
+| 이미지              | LONGVARBINARY                                      | byte[]                       |
 | int                | INTEGER                                            | int                          |
 | money              | DECIMAL                                            | java.math.BigDecimal         |
-| NCHAR              | CHAR<br /><br /> NCHAR(Java SE 6.0)               | String                       |
+| nchar              | CHAR<br /><br /> NCHAR(Java SE 6.0)               | String                       |
 | ntext              | LONGVARCHAR<br /><br /> LONGNVARCHAR(Java SE 6.0) | String                       |
-| NUMERIC            | NUMERIC                                            | java.math.BigDecimal         |
-| NVARCHAR           | VARCHAR<br /><br /> NVARCHAR(Java SE 6.0)         | String                       |
+| numeric            | NUMERIC                                            | java.math.BigDecimal         |
+| nvarchar           | VARCHAR<br /><br /> NVARCHAR(Java SE 6.0)         | String                       |
 | nvarchar(max)      | VARCHAR<br /><br /> NVARCHAR(Java SE 6.0)         | String                       |
-| REAL               | real                                               | FLOAT                        |
+| real               | real                                               | float                        |
 | smalldatetime      | timestamp                                          | java.sql.Timestamp           |
-| SMALLINT           | SMALLINT                                           | short                        |
-| SMALLMONEY         | DECIMAL                                            | java.math.BigDecimal         |
+| smallint           | SMALLINT                                           | short                        |
+| smallmoney         | DECIMAL                                            | java.math.BigDecimal         |
 | text               | LONGVARCHAR                                        | String                       |
-| Time               | TIME(1)                                           | java.sql.Time(1)            |
-| TIMESTAMP          | BINARY                                             | byte[]                       |
-| TINYINT            | TINYINT                                            | short                        |
+| time               | TIME(1)                                           | java.sql.Time(1)            |
+| timestamp          | BINARY                                             | byte[]                       |
+| tinyint            | TINYINT                                            | short                        |
 | udt                | VARBINARY                                          | byte[]                       |
-| UNIQUEIDENTIFIER   | CHAR                                               | String                       |
+| uniqueidentifier   | CHAR                                               | String                       |
 | varbinary          | VARBINARY                                          | byte[]                       |
 | varbinary(max)     | VARBINARY                                          | byte[]                       |
 | varchar            | VARCHAR                                            | String                       |
 | varchar(max)       | VARCHAR                                            | String                       |
-| xml                | LONGVARCHAR<br /><br /> LONGNVARCHAR(Java SE 6.0) | String<br /><br /> SQLXML    |
+| Xml                | LONGVARCHAR<br /><br /> LONGNVARCHAR(Java SE 6.0) | String<br /><br /> SQLXML    |
 | sqlvariant         | SQLVARIANT                                         | Object                       |
 | geometry           | VARBINARY                                          | byte[]                       |
 | geography          | VARBINARY                                          | byte[]                       |
   
 (1) time [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식과 함께 java.sql.Time을 사용하려면 **sendTimeAsDatetime** 연결 속성을 false로 설정해야 합니다.  
   
-(2) [Datetimeoffset 클래스](../../connect/jdbc/reference/datetimeoffset-class.md)를 사용 하 여 **datetimeoffset** 값에 프로그래밍 방식으로 액세스할 수 있습니다.  
+(2) [DateTimeOffset 클래스](../../connect/jdbc/reference/datetimeoffset-class.md)를 사용하여 **datetimeoffset** 값에 프로그래밍 방식으로 액세스할 수 있습니다.  
   
 다음 섹션에서는 JDBC 드라이버와 기본 데이터 형식을 사용하는 방법의 예를 보여 줍니다. Java 애플리케이션에서 기본 데이터 형식을 사용하는 방법에 대한 자세한 예는 [기본 데이터 형식 샘플](../../connect/jdbc/basic-data-types-sample.md)을 참조하세요.  
   
@@ -85,11 +85,11 @@ JDBC 기본 데이터 형식에 매핑되는 데이터 원본에서 데이터를
 [!code[JDBC#UsingBasicDataTypes2](../../connect/jdbc/codesnippet/Java/using-basic-data-types_2.java)]  
   
 > [!NOTE]  
-> 크기 조정 메서드를 사용 하는 getUnicodeStream 및 Get Decimal은 더 이상 사용 되지 않으며 JDBC 드라이버에서 지원 되지 않습니다.
+> getUnicodeStream과 getBigDecimal(크기 조정 메서드 포함)은 사용하지 않으므로 JDBC 드라이버에서 지원하지 않습니다.
 
 ## <a name="updating-data-by-data-type"></a>데이터 형식별 데이터 업데이트
 
-데이터 원본의 필드 값을 업데이트 해야 하는 경우 SQLServerResultSet 클래스의 업데이트\<유형 > 메서드 중 하나를 사용 합니다. 다음 예제에서는 [updateInt](../../connect/jdbc/reference/updateint-method-sqlserverresultset.md) 메서드와 [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) 메서드를 함께 사용하여 데이터 원본의 데이터를 업데이트합니다.  
+데이터 원본의 필드 값을 업데이트해야 하는 경우 SQLServerResultSet 클래스의 update\<Type> 메서드 중 하나를 사용합니다. 다음 예제에서는 [updateInt](../../connect/jdbc/reference/updateint-method-sqlserverresultset.md) 메서드와 [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) 메서드를 함께 사용하여 데이터 원본의 데이터를 업데이트합니다.  
   
 [!code[JDBC#UsingBasicDataTypes3](../../connect/jdbc/codesnippet/Java/using-basic-data-types_3.java)]  
   
@@ -102,7 +102,7 @@ JDBC 기본 데이터 형식에 매핑되는 데이터 원본에서 데이터를
   
 [!code[JDBC#UsingBasicDataTypes4](../../connect/jdbc/codesnippet/Java/using-basic-data-types_4.java)]  
   
-매개 변수가 있는 쿼리에 대 한 자세한 내용은 [매개 변수와 함께 SQL 문 사용](../../connect/jdbc/using-an-sql-statement-with-parameters.md)을 참조 하세요.  
+매개 변수가 있는 쿼리에 대한 자세한 내용은 [매개 변수가 있는 SQL 문 사용](../../connect/jdbc/using-an-sql-statement-with-parameters.md)을 참조하세요.  
 
 ## <a name="passing-parameters-to-a-stored-procedure"></a>저장 프로시저에 매개 변수 전달
 
@@ -113,7 +113,7 @@ JDBC 기본 데이터 형식에 매핑되는 데이터 원본에서 데이터를
 > [!NOTE]  
 > 이 예제에서는 저장 프로시저 실행 결과가 들어 있는 결과 집합을 반환합니다.
 
-저장 프로시저 및 입력 매개 변수와 함께 JDBC 드라이버를 사용 하는 방법에 대 한 자세한 내용은 [입력 매개 변수가 있는 저장 프로시저 사용](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md)을 참조 하세요.  
+저장 프로시저 및 입력 매개 변수와 함께 JDBC 드라이버를 사용하는 방법은 [입력 매개 변수가 있는 저장 프로시저 사용](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md)을 참조하십시오.  
 
 ## <a name="retrieving-parameters-from-a-stored-procedure"></a>저장 프로시저에서 매개 변수 검색
 
@@ -124,8 +124,8 @@ JDBC 기본 데이터 형식에 매핑되는 데이터 원본에서 데이터를
 > [!NOTE]  
 > 반환된 출력 매개 변수 외에도 저장 프로시저 실행 결과가 들어 있는 결과 집합이 반환될 수 있습니다.  
   
-저장 프로시저 및 출력 매개 변수와 함께 JDBC 드라이버를 사용 하는 방법에 대 한 자세한 내용은 [output 매개 변수가 있는 저장 프로시저 사용](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md)을 참조 하세요.  
+저장 프로시저 및 출력 매개 변수와 함께 JDBC 드라이버를 사용하는 방법은 [ 매개 변수가 있는 저장 프로시저 사용](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md)을 참조하십시오.  
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [JDBC 드라이버 데이터 형식 이해](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

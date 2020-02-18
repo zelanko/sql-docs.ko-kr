@@ -21,10 +21,10 @@ ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 29b453914dce3d371ded8f401fd4af0380a115b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140220"
 ---
 # <a name="create-modify-and-delete-schedules"></a>일정 만들기, 수정 및 삭제
@@ -34,16 +34,16 @@ ms.locfileid: "67140220"
 
 -   **웹 포털:** **사이트 설정** 페이지의 **일정** 탭에서 마지막 실행 날짜, 다음 실행 날짜 및 상태 필드의 값을 검토합니다. 일정이 만료되어 더 이상 실행되지 않으면 상태 필드에 만료 날짜가 나타납니다. 자세한 내용은 [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md)을 참조하세요.
 
--   **SQL Server Management Studio:** 보기는 **보고서** 지정한 공유 일정의 페이지입니다. 이 페이지에는 공유 일정을 사용하는 모든 보고서 및 공유 데이터 세트의 목록이 나열됩니다. 자세한 내용은 [Reporting Services in SQL Server Management Studio](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)(SQL Server Management Studio의 Reporting Services)를 참조하세요.
+-   **SQL Server Management Studio:** 지정한 공유 일정의 **보고서** 페이지를 봅니다. 이 페이지에는 공유 일정을 사용하는 모든 보고서 및 공유 데이터 세트의 목록이 나열됩니다. 자세한 내용은 [Reporting Services in SQL Server Management Studio](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)(SQL Server Management Studio의 Reporting Services)를 참조하세요.
 
--  **:** 보고서 실행 로그 파일 또는 추적 로그에서 보고서가 일정에 지정된 시간에 실행되었는지 확인합니다. 자세한 내용은 [Reporting Services 로그 파일 및 소스](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)를 참조하세요.
+-  **로그:** 보고서 실행 로그 파일 또는 추적 로그에서 보고서가 일정에 지정된 시간에 실행되었는지 여부를 확인합니다. 자세한 내용은 [Reporting Services 로그 파일 및 소스](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)를 참조하세요.
 
 ## <a name="when-you-delete-a-shared-schedule"></a>공유 일정을 삭제하는 경우
 공유 일정은 웹 포털의 일정 페이지나 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 공유 일정 폴더를 사용하여 수동으로 삭제해야 합니다. 사용 중인 공유 일정을 삭제하면 공유 일정에 대한 모든 참조가 보고서별 일정으로 바뀝니다.
 
 여러 보고서 및 구독에 사용되는 공유 일정을 삭제하면 보고서 서버는 공유 일정을 사용하던 각 보고서 및 구독에 대해 개별적인 일정을 만듭니다. 각 개별 일정에는 공유 일정에 지정되었던 날짜, 시간 및 되풀이 패턴이 포함됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 개별 일정을 중앙에서 관리하지 않습니다. 공유 일정을 삭제하면 개별 항목에 대해 일정 정보를 관리해야 합니다.
 
-**참고:**  공유 일정 사용 여부를 모를 경우에는 웹 포털 대신 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서 삭제하는 것이 좋습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서는 보고서 관리자와 동일한 공유 일정 관리 기능을 제공하지만 일정을 사용하는 각 보고서의 이름을 표시한 추가 보고서 페이지를 제공합니다.
+**참고:**  공유 일정 사용 여부를 모를 경우에는 웹 포털 대신 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 삭제하는 것이 좋습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서는 보고서 관리자와 동일한 공유 일정 관리 기능을 제공하지만 일정을 사용하는 각 보고서의 이름을 표시한 추가 보고서 페이지를 제공합니다.
 
  일정을 삭제하는 것과 만료시키는 것은 다릅니다. 만료 날짜를 사용하여 일정을 중지할 수 있지만 일정이 삭제되지는 않습니다. 일정은 여러 가지 기능을 자동화하는 데 사용되기 때문에 자동으로 삭제되지 않습니다. 만료된 일정은 보고서 서버 관리자에게 자동화된 처리가 갑자기 중지된 이유에 대한 근거를 제공합니다. 만료된 일정이 없으면 보고서 서버 관리자가 문제를 잘못 진단하거나 기능적인 과정 전체의 문제 해결을 위해 불필요한 시간을 보낼 수 있습니다.
 
@@ -64,20 +64,20 @@ ms.locfileid: "67140220"
    >[!NOTE]  
    >**설정**을 사용할 수 없으면 사이트 설정에 액세스할 권한이 없는 것입니다.  
 
-1. 선택 **사이트 설정** 드롭다운 메뉴에서.
+1. 드롭다운 메뉴에서 **사이트 설정**을 선택합니다.
 1. **일정** 탭을 선택합니다.
-1. 선택 **+ 새 일정**합니다. (기존 일정을 수정하려면 일정 이름을 선택합니다.)
+1. **+새 일정**을 선택합니다. (기존 일정을 수정하려면 일정 이름을 선택합니다.)
 1. 일정에 대한 설명이 포함된 이름을 입력합니다.
 1. **시간**, **일**, **주**또는 **월**을 선택합니다. 한 번만 실행되는 일정을 만들려면 **한 번** 을 클릭합니다. 일정의 기준을 지정하면 다른 옵션이 추가로 표시됩니다.
 1. 일정을 시작할 날짜를 선택합니다(옵션). 기본값은 현재 날짜입니다. 현재 이후의 날짜를 선택하여 일정 시작 시간을 연기할 수 있습니다.
 1. 일정을 종료할 날짜를 선택합니다(선택 사항). 이 날짜에 일정 실행이 중지되지만 일정이 삭제되지는 않습니다.
-1. 일정을 실행할 시간을 선택 합니다.
+1. 일정을 실행할 시간을 선택합니다.
 1. **확인**을 선택합니다.
 
 ### <a name="to-delete-a-shared-schedule-web-portal"></a>공유 일정을 삭제하려면(웹 포털)
 
 1. 웹 포털의 도구 모음에서 **설정** ![ssrs_portal_settings_gear](../../reporting-services/subscriptions/media/ssrs-portal-settings-gear.png)를 선택합니다.
-2. 선택 **사이트 설정** 드롭다운 메뉴에서.
+2. 드롭다운 메뉴에서 **사이트 설정**을 선택합니다.
 3. **일정** 탭을 선택합니다.
 4. 삭제할 공유 일정 옆의 확인란을 선택한 다음 **삭제**를 선택합니다.
 
@@ -142,9 +142,9 @@ ms.locfileid: "67140220"
 4.  일정을 선택하고 **삭제**를 클릭합니다.
 
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
  [일정](../../reporting-services/subscriptions/schedules.md)  
  [공유 일정 일시 중지 및 다시 시작](../../reporting-services/subscriptions/pause-and-resume-shared-schedules.md)  
  [보고서 캐시(SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)  
- [보고서 기록에서 스냅숏 만들기, 수정 및 삭제](../report-server/create-modify-and-delete-snapshots-in-report-history.md)
+ [보고서 기록에서 스냅샷 만들기, 수정 및 삭제](../report-server/create-modify-and-delete-snapshots-in-report-history.md)
 

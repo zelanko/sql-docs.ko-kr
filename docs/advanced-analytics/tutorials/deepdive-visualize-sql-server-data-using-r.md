@@ -1,6 +1,6 @@
 ---
 title: RevoScaleR을 사용하여 데이터 시각화
-description: SQL Server에서 R 언어를 사용하여 데이터를 시각화하는 방법에 대한 자습서 연습입니다.
+description: 'RevoScaleR 자습서 6: SQL Server에서 R 언어를 사용하여 데이터를 시각화하는 방법입니다.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,30 +9,30 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f64b42e69b1399e67211e82e26502c3fcec96254
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 887c5790a7de70cf111f004be65e3a41748b47bf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727114"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947368"
 ---
 #  <a name="visualize-sql-server-data-using-r-sql-server-and-revoscaler-tutorial"></a>R을 사용하여 SQL Server 데이터 시각화(SQL Server 및 RevoScaleR 자습서)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 단원은 SQL Server에서 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)의 일부입니다.
+이것은 SQL Server에서 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서 시리즈](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 중 자습서 6에 해당됩니다.
 
-이 연습에서는 R 함수를 사용하여 *creditLine* 열에서 성별에 따른 값 분포를 확인합니다.
+이 자습서에서는 R 함수를 사용하여 *creditLine* 열에서 성별에 따른 값 분포를 확인합니다.
 
 > [!div class="checklist"]
 > * 히스토그램 입력을 위한 최소-최대 변수 만들기
 > * **RevoScaleR**의 **rxHistogram**을 사용하여 히스토그램의 데이터 시각화
 > * 기본 R 분포에 포함된 **lattice**에서 **levelplot**을 사용하여 산점도로 시각화
 
-이 단원에 표시된 것처럼 동일 스크립트에서 오픈 소스 및 Microsoft 특정 함수를 조합할 수 있습니다.
+이 자습서에 나와 있는 것처럼 동일 스크립트에서 오픈 소스 및 Microsoft 전용 함수를 결합할 수 있습니다.
 
 ## <a name="add-maximum-and-minimum-values"></a>최댓값 및 최솟값 추가
 
-이전 단원에서 계산된 요약 통계를 기준으로, 추가 계산을 위해 데이터 소스에 삽입할 수 있는 데이터에 대한 유용한 정보가 발견되었습니다. 예를 들어 최솟값 및 최댓값을 사용하여 히스토그램을 계산할 수 있습니다. 이 연습에서는 상위 값 및 하위 값을 **RxSqlServerData** 데이터 소스에 추가합니다.
+이전 자습서에서 계산된 요약 통계를 기준으로, 추가 계산을 위해 데이터 소스에 삽입할 수 있는 데이터에 대한 유용한 정보가 발견되었습니다. 예를 들어 최솟값 및 최댓값을 사용하여 히스토그램을 계산할 수 있습니다. 이 연습에서는 상위 값 및 하위 값을 **RxSqlServerData** 데이터 소스에 추가합니다.
 
 1. 먼저 몇 가지 임시 변수를 설정합니다.
   
@@ -41,7 +41,7 @@ ms.locfileid: "73727114"
     var <- sumDF$Name
     ```
   
-2. 이전 단원에서 만든 *ccColInfo* 변수를 사용하여 데이터 소스의 열을 정의합니다.
+2. 이전 자습서에서 만든 *ccColInfo* 변수를 사용하여 데이터 소스의 열을 정의합니다.
   
    새로 계산된 열(*numTrans*, *numIntlTrans* 및 *creditLine*)을 원래 정의를 재정의하는 열 컬렉션에 추가합니다. 아래 스크립트는 **rxSummary**의 메모리 내 출력을 저장하는 sumOut에서 가져온 최솟값 및 최댓값을 기준으로 요소를 추가합니다. 
   
@@ -124,7 +124,7 @@ ms.locfileid: "73727114"
     cubePlot <- rxResultsDF(cube1)
     ```
   
-    **rxCube** 함수는 결과를 데이터 프레임으로 직접 변환하기 위해 사용할 수 있는 선택적 인수인 *returnDataFrame* = **TRUE**를 포함합니다. 예를 들어
+    **rxCube** 함수는 결과를 데이터 프레임으로 직접 변환하기 위해 사용할 수 있는 선택적 인수인 *returnDataFrame* = **TRUE**를 포함합니다. 다음은 그 예입니다.
     
     `print(rxCube(fraudRisk~F(numTrans):F(numIntlTrans), data = sqlFraudDS, returnDataFrame = TRUE))`
        

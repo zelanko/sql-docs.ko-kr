@@ -1,5 +1,5 @@
 ---
-title: MSSQL JDBC Driver에 대 한 일괄 삽입 작업에 대량 복사 API 사용 | Microsoft Docs
+title: MSSQL JDBC 드라이버에 대한 일괄 처리 삽입 작업에 대량 복사 API 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,66 +11,66 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3050cdf87775a67618902dfbb88b656003020769
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027102"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>일괄 처리 삽입 작업에 대량 복사 API 사용
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-SQL Server 용 Microsoft JDBC Driver 7.0은 Azure Data Warehouse에 대 한 batch 삽입 작업용 대량 복사 API 사용을 지원 합니다. 이 기능을 사용 하면 사용자가 일괄 처리 삽입 작업을 실행할 때 아래에서 대량 복사 작업을 수행할 수 있습니다. 드라이버는 일반 일괄 삽입 작업을 사용 하 여 드라이버와 동일한 데이터를 삽입 하는 동안 성능을 향상 시키는 것을 목표로 합니다. 이 드라이버는 일반적인 일괄 삽입 작업 대신 대량 복사 API를 활용 하 여 사용자의 SQL 쿼리를 구문 분석 합니다. 다음은 batch 삽입 기능에 대량 복사 API를 사용 하도록 설정 하는 다양 한 방법 및 제한 사항 목록입니다. 또한이 페이지에는 사용량 및 성능 증가를 보여 주는 작은 샘플 코드도 포함 되어 있습니다.
+SQL Server용 Microsoft JDBC Driver 7.0는 Azure Data Warehouse에 대한 일괄 처리 삽입 작업을 위해 대량 복사 API를 사용할 수 있도록 지원합니다. 사용자는 이 기능으로 일괄 처리 삽입 작업을 실행할 때 아래에서 대량 복사 작업을 수행할 수 있습니다. 드라이버의 목표는 드라이버에서 정규 일괄 처리 삽입 작업으로 할 때처럼 동일한 데이터를 삽입하면서 성능을 개선하는 데 있습니다. 드라이버는 일반적 일괄 처리 삽입 작업이 아닌 대량 복사 API를 활용하여 사용자의 SQL 쿼리를 구문 분석합니다. 아래에서는 일괄 처리 삽입 기능에 대량 복사 API를 사용 설정하는 방법과 관련 제한 사항의 목록을 소개합니다. 또한 이 페이지에는 사용량과 성능의 증가치를 보여주는 작은 샘플 코드도 포함되어 있습니다.
 
-이 기능은 java.sql.preparedstatement 및 callablestatement의 `executeBatch()`  &  `executeLargeBatch()` api에만 적용 됩니다.
+이 기능은 PreparedStatement와 CallableStatement의 `executeBatch()` & `executeLargeBatch()` API에만 사용할 수 있습니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-일괄 삽입을 위해 대량 복사 API를 사용 하려면 두 가지 필수 구성 요소가 있습니다.
+일괄 처리 삽입에 대량 복사 API를 사용하려면 두 가지 요소가 꼭 필요합니다.
 
-* 서버는 Azure 데이터 웨어하우스 여야 합니다.
-* 쿼리는 insert 쿼리 여야 합니다. 쿼리에는 주석이 포함 될 수 있지만 쿼리는이 기능을 적용 하려면 INSERT 키워드를 사용 하 여 시작 해야 합니다.
+* 먼저 서버는 Azure Data Warehouse여야 합니다.
+* 쿼리는 삽입 쿼리여야 합니다. 쿼리에는 주석이 포함될 수 있지만, 이 기능을 적용하려면 쿼리가 INSERT 키워드로 시작해야 합니다.
 
-## <a name="enabling-bulk-copy-api-for-batch-insert"></a>일괄 삽입을 위한 대량 복사 API 사용
+## <a name="enabling-bulk-copy-api-for-batch-insert"></a>일괄 처리 삽입 작업에 대량 복사 API 사용
 
-일괄 삽입을 위해 대량 복사 API를 사용 하도록 설정 하는 방법에는 세 가지가 있습니다.
+일괄 처리 삽입에 대량 복사 API를 사용하는 방법으로는 세 가지가 있습니다.
 
-### <a name="1-enabling-with-connection-property"></a>1. 연결 속성을 사용 하도록 설정
+### <a name="1-enabling-with-connection-property"></a>1. 연결 속성 사용 설정
 
-연결 문자열에 **Use대량 Copyforbatchinsert = true** 를 추가 하면이 기능을 사용할 수 있습니다.
+**useBulkCopyForBatchInsert=true;** 를 연결 문자열로 추가하면 이 기능이 사용 설정됩니다.
 
 ```java
 Connection connection = DriverManager.getConnection("jdbc:sqlserver://<server>:<port>;userName=<user>;password=<password>;database=<database>;useBulkCopyForBatchInsert=true;");
 ```
 
-### <a name="2-enabling-with-setusebulkcopyforbatchinsert-method-from-sqlserverconnection-object"></a>2. SQLServerConnection 개체에서 Setuse대량 Copyforbatchinsert () 메서드 사용
+### <a name="2-enabling-with-setusebulkcopyforbatchinsert-method-from-sqlserverconnection-object"></a>2. SQLServerConnection 개체의 setUseBulkCopyForBatchInsert() 메서드 사용 설정
 
-**SQLServerConnection** 를 호출 하면이 기능을 사용할 수 있습니다.
+**SQLServerConnection.setUseBulkCopyForBatchInsert(true)** 를 호출하면 이 기능이 사용 설정됩니다.
 
-SQLServerConnection는 **Use대량** copyforbatchinsert 연결 속성에 대 한 현재 값을 검색 **합니다.**
+**SQLServerConnection.getUseBulkCopyForBatchInsert()** 는 **useBulkCopyForBatchInsert** 연결 속성의 현재 값을 검색합니다.
 
-**Use대량 Copyforbatchinsert** 의 값은 초기화 시 각 java.sql.preparedstatement 일정 하 게 유지 됩니다. **SQLServerConnection** 에 대 한 후속 호출은 해당 값과 관련 하 여 이미 생성 된 java.sql.preparedstatement에 영향을 주지 않습니다.
+**useBulkCopyForBatchInsert**의 값은 초기화 시 각각의 PreparedStatement에 대해 상수로 유지됩니다. **SQLServerConnection.setUseBulkCopyForBatchInsert()** 에 대한 후속 호출은 이미 생성된 PreparedStatement의 값에 영향을 미치지 않습니다.
 
-### <a name="3-enabling-with-setusebulkcopyforbatchinsert-method-from-sqlserverdatasource-object"></a>3. SQLServerDataSource 개체에서 Setuse대량 Copyforbatchinsert () 메서드 사용
+### <a name="3-enabling-with-setusebulkcopyforbatchinsert-method-from-sqlserverdatasource-object"></a>3. SQLServerDataSource 개체의 setUseBulkCopyForBatchInsert() 메서드 사용 설정
 
-위와 비슷하며 SQLServerDataSource를 사용 하 여 SQLServerConnection 개체를 만듭니다. 두 방법 모두 동일한 결과를 얻을 수 있습니다.
+위와 비슷하지만 SQLServerDataSource를 사용하여 SQLServerConnection 개체를 만듭니다. 두 방법 모두 동일한 결과를 얻을 수 있습니다.
 
 ## <a name="known-limitations"></a>알려진 제한 사항
 
-현재이 기능에 적용 되는 제한 사항이 있습니다.
+현재는 다음의 제한 사항이 이 기능에 적용됩니다.
 
-* 매개 변수가 없는 값 (예: `INSERT INTO TABLE VALUES (?, 2`)을 포함 하는 Insert 쿼리는 지원 되지 않습니다. 와일드 카드 (?)는이 함수에 대해 유일 하 게 지원 되는 매개 변수입니다.
-* Insert SELECT 식이 포함 된 insert 쿼리 (예: `INSERT INTO TABLE SELECT * FROM TABLE2`)는 지원 되지 않습니다.
-* 여러 값 식이 포함 된 Insert 쿼리 (예: `INSERT INTO TABLE VALUES (1, 2) (3, 4)`)는 지원 되지 않습니다.
-* OPTION 절이 뒤에 오는 Insert 쿼리는 여러 테이블과 조인 되거나 그 다음에 다른 쿼리를 사용 하 여 지원 되지 않습니다.
-* 대량 복사 API `MONEY` `SMALLMONEY` `DATE` 의제한`GEOGRAPHY` 사항으로 인해,,,,,,, 및 데이터 형식은 현재이를 지원 하지 않습니다. `DATETIME` `DATETIMEOFFSET` `SMALLDATETIME` `TIME` `GEOMETRY` 기능과.
+* 매개 변수화되지 않은 값이 포함된 삽입 쿼리(예: `INSERT INTO TABLE VALUES (?, 2`))는 지원되지 않습니다. 와일드카드(?)만 이 기능에 대해 지원되는 매개 변수입니다.
+* INSERT-SELECT 식이 포함된 삽입 쿼리(예: `INSERT INTO TABLE SELECT * FROM TABLE2`)는 지원되지 않습니다.
+* 여러 VALUE 식이 포함된 삽입 쿼리(예: `INSERT INTO TABLE VALUES (1, 2) (3, 4)`)는 지원되지 않습니다.
+* OPTION 절이 뒤에 오는 삽입 쿼리(여러 테이블과 조인됨)나 다른 쿼리가 뒤에 오는 삽입 쿼리는 지원되지 않습니다.
+* 대량 복사 API의 제한 사항으로 인해 `MONEY`, `SMALLMONEY`, `DATE`, `DATETIME`, `DATETIMEOFFSET`, `SMALLDATETIME`, `TIME`, `GEOMETRY`, `GEOGRAPHY` 데이터 형식은 현재 이 기능에 대해 지원되지 않습니다.
 
-"SQL server" 관련 오류로 인해 쿼리가 실패 하는 경우 드라이버는 오류 메시지를 기록 하 고 batch insert의 원래 논리에 대체 합니다.
+비"SQL Server" 관련 오류로 인해 쿼리가 실패하는 경우 드라이버는 오류 메시지를 로그하고 일괄 처리 삽입 작업의 원래 논리로 대체됩니다.
 
 ## <a name="example"></a>예제
 
-다음은 (일반 vs 대량 복사 API) 시나리오 모두에서 1000 개 행의 Azure DW에 대해 일괄 삽입 작업에 대 한 사용 사례를 보여 주는 예제 코드입니다.
+아래에서는 1,000개 행의 Azure DW에 대한 일괄 처리 삽입 작업의 사용 사례를 일반 및 대량 복사 API 시나리오 모두에 대해 소개합니다.
 
 ```java
     public static void main(String[] args) throws Exception
@@ -139,6 +139,6 @@ Starting batch operation using Bulk Copy API.
 Finished. Time taken : 1058 milliseconds.
 ```
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [JDBC 드라이버로 성능 및 안정성 개선](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)

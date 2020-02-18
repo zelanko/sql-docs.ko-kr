@@ -1,7 +1,7 @@
 ---
 title: SQL Server 도움말 콘텐츠 및 도움말 뷰어 | Microsoft Docs
 ms.custom: ''
-ms.date: 10/15/2019
+ms.date: 12/10/2019
 ms.prod: sql
 ms.technology: ''
 ms.reviewer: ''
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4be5552c60a6a401d9333976402088c7fa199f52
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.openlocfilehash: ad4d98af834e482005e354b2dcd5ce2c52f2fd42
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049920"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251467"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>SQL Server 오프라인 도움말 및 도움말 뷰어
 
@@ -33,21 +33,25 @@ Microsoft 도움말 뷰어에는 두 가지 주요 버전이 있습니다.  버�
 
 |**콘텐츠 집합**|**도움말 뷰어를 설치하는 도구**|**도움말 뷰어 버전**|
 |-|-|-|
-|SQL Server 2019 미리 보기 <br> SQL Server 2017<br>SQL Server 2016|[Visual Studio 2019(1)](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019)<br>[Visual Studio 2017(1)](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2017)<br>[SQL Server Management Studio 18.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)<br>[SQL Server Management Studio 17.x](https://docs.microsoft.com/sql/ssms/release-notes-ssms?view=sql-server-2017#download-ssms-1791)<br>[Visual Studio 2015용 SQL Server Data Tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)<br>Visual Studio 2015 | v2.3<br>V2.2|
-|SQL Server 2014<br>SQL Server 2012|SQL Server 2016 설치 프로그램(2)<br>SQL Server 2014 Management Studio<br>SQL Server 2014 설치 프로그램(2)<br>SQL Server Management Studio 2012<br>SQL Server 2012 설치 프로그램(2)| v1.x|
+|SQL Server 2019 <br><br><br>SQL Server 2017 <br>SQL Server 2016 | [Visual Studio 2019(\*1)](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019) <br>[SQL Server Management Studio 18.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) <br><br>[Visual Studio 2017(\*1)](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2017) <br>[SQL Server Management Studio 17.x](https://docs.microsoft.com/sql/ssms/release-notes-ssms?view=sql-server-2017#download-ssms-1791) <br>[Visual Studio 2015용 SQL Server Data Tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) <br>Visual Studio 2015 | v2.3 <br><br><br>v2.2 |
+|SQL Server 2014<br>SQL Server 2012|SQL Server 2016 설치 프로그램(\*2)<br>SQL Server 2014 Management Studio<br>SQL Server 2014 설치 프로그램(\*2)<br>SQL Server Management Studio 2012<br>SQL Server 2012 설치 프로그램(\*2)| v1.x|
 | | | |
 
-(1) Visual Studio 2019나 2017과 함께 도움말 뷰어를 설치하려면 Visual Studio 설치 관리자의 개별 구성 요소 탭에서 코드 도구 아래에 있는 **도움말 뷰어**를 선택한 다음, **설치**를 클릭합니다.
+(\*1) Visual Studio 2019나 2017과 함께 도움말 뷰어를 설치하려면 Visual Studio 설치 관리자의 **개별 구성 요소** 탭에서 **코드 도구** \> **도움말 뷰어** \> **설치**를 선택합니다.
 
-(2) SQL Server 설치 프로그램에서 "문서 구성 요소"옵션을 나타냅니다.
+(\*2) SQL Server 설치 프로그램에서 **문서 구성 요소** 옵션을 나타냅니다.
 
 >[!NOTE]
-> - SQL Server 2016은 SQL Server 2016 도움말 콘텐츠를 지원하지 않는 도움말 뷰어 1.1을 설치합니다. 자세한 내용은 [SQL Server 2016 릴리스 정보](sql-server-2016-release-notes.md)를 참조하십시오.  SQL Server 2016 콘텐츠를 보려면 도움말 뷰어 v2.x가 필요합니다. 
+> - SQL Server 2016은 SQL Server 2016 도움말 콘텐츠를 지원하지 않는 도움말 뷰어 1.1을 설치합니다. SQL Server 2016 콘텐츠를 보려면 도움말 뷰어 v2.x가 필요합니다. 자세한 내용은 [SQL Server 2016 릴리스 정보](sql-server-2016-release-notes.md)를 참조하십시오.
+> - 도움말 뷰어 2.x는 SQL Server 버전 2014~2019 이상의 설명서 표시가 가능합니다.
+> - 도움말 뷰어 2.3 이상을 받으려면 무료로 제공되는 `SSMS.exe` 최신 버전을 먼저 다운로드하는 편이 간편합니다. 그런 다음에는 SSMS **도움말** 메뉴를 사용합니다.
 > - SQL Server 2017부터는 SQL Server 설치 프로그램에서 도움말 뷰어를 설치할 수 없습니다.
 
 ## <a name="use-help-viewer-v2x"></a>도움말 뷰어 v2.x 사용
 
-**도움말 뷰어 v2.x를 사용하여 오프라인 도움말 콘텐츠를 다운로드하고 설치하려면**
+이 방법에서는 도움말 뷰어 2.3 이상이 권장됩니다. [최신 버전 SSMS.exe](../ssms/download-sql-server-management-studio-ssms.md)의 **도움말** 메뉴에서는 2.3 이상이 제공됩니다.
+
+### <a name="to-download-and-install-offline-help-content-with-help-viewer-v2x"></a>도움말 뷰어 v2.x를 사용하여 오프라인 도움말 콘텐츠를 다운로드하고 설치하려면
 
 1. SSMS 또는 VS의 도움말 메뉴에서 **도움말 콘텐츠 추가 및 제거**를 클릭합니다. 
 
@@ -95,11 +99,12 @@ Microsoft 도움말 뷰어에는 두 가지 주요 버전이 있습니다.  버�
 |*|Azure SQL Database용 도구 및 유틸리티 | SQL Server 도구|
 |*|Transact-SQL 참조(데이터베이스 엔진) | Transact-SQL 참조|
 |*|XQuery 언어 참조(SQL Server) | XQuery 언어 참조(SQL Server)|
+| &nbsp; | &nbsp; | &nbsp; |
 
 > [!NOTE]
 > 콘텐츠를 추가하는 동안 도움말 뷰어가 멈추면(중지되면) %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings 또는 HlpViewer_VisualStudiox_en-US.settings 파일의 Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" 줄을 미래의 날짜로 변경합니다. 이 문제에 대한 자세한 내용은 [Visual Studio 도움말 뷰어가 중단됨](/visualstudio/welcome-to-visual-studio)을 참조하세요.
 
-**도움말 뷰어 v2.x를 사용하여 SSMS에서 오프라인 도움말 콘텐츠를 보려면**
+### <a name="to-view-offline-help-content-in-ssms-with-help-viewer-v2x"></a>도움말 뷰어 v2.x를 사용하여 SSMS에서 오프라인 도움말 콘텐츠를 보려면
 
 SSMS에서 설치된 도움말을 보려면 CTRL + ALT + F1을 누르거나 도움말 메뉴에서 **콘텐츠 추가 또는 제거**를 선택하여 도움말 뷰어를 시작합니다. 
 
@@ -111,7 +116,7 @@ SSMS에서 설치된 도움말을 보려면 CTRL + ALT + F1을 누르거나 도�
 
    ![도움말 뷰어 v2.x와 콘텐츠](../sql-server/media/sql-server-help-installation/helpviewer2-withcontentinstalled.png)
 
-**도움말 뷰어 v2.x를 사용하여 VS에서 오프라인 도움말 콘텐츠를 보려면**
+### <a name="to-view-offline-help-content-in-vs-with-help-viewer-v2x"></a>도움말 뷰어 v2.x를 사용하여 VS에서 오프라인 도움말 콘텐츠를 보려면
 
 Visual Studio에서 설치된 도움말을 보려면:
 1. 도움말 메뉴에서 **도움말 기본 설정 지정**을 가리키고 **도움말 뷰어에서 시작**을 선택합니다. 
@@ -126,56 +131,67 @@ Visual Studio에서 설치된 도움말을 보려면:
   
 ## <a name="use-help-viewer-v1x"></a>도움말 뷰어 v1.x 사용
 
-이전 버전의 SSMS 및 VS에서는 SQL Server 2014 및 2012 도움말 콘텐츠를 지원하는 도움말 뷰어 1.x를 사용합니다. 
+이 섹션에서는 다음의 일반 작업을 수행합니다.
 
-**도움말 뷰어 v1.x를 사용하여 오프라인 도움말 콘텐츠를 다운로드하고 설치하려면**
+- 네 개로 구성된 SQL Server 2014 오프라인 설명서를 수동으로 다운로드합니다.
+- SSMS 또는 VS의 **도움말** 메뉴를 사용하여 도움말 뷰어를 시작합니다.
+- 마지막으로는 로컬 하드 드라이브에서 SQL Server 2014 `*.msha` 파일이 어디에 있는지를 도움말 뷰어에 알립니다.
+
+이전 버전의 SSMS 및 VS에서는 1.x 버전의 도움말 뷰어를 제공했습니다. 1.x 버전은 SQL Server 버전 2012 및 2014의 오프라인 설명서를 표시할 수 있습니다. 그러나 1.x에서는 SQL Server 2016 이상의 오프라인 설명서를 표시할 수 없습니다.
+
+도움말 뷰어 2.3은 SQL Server 2014 오프라인 설명서를 로컬 하드 드라이브에 다운로드한 후에도 SQL Server 2014 오프라인 설명서의 표시가 가능합니다.
+
+### <a name="to-download-and-install-offline-help-content-with-help-viewer-v1x"></a>도움말 뷰어 v1.x를 사용하여 오프라인 도움말 콘텐츠를 다운로드하고 설치하려면
 
 이 프로세스에서는 도움말 뷰어 1.x를 사용하여 Microsoft 다운로드 센터에서 SQL Server 2014 도움말을 다운로드하고 컴퓨터에 설치합니다.
 
-1. [Microsoft SQL Server 2014 제품 설명서](https://www.microsoft.com/download/details.aspx?id=42557)로 이동하고 사이트를 다운로드한 후 **다운로드**를 클릭합니다.  
-2. 메시지 상자에서 **저장**을 클릭하여 *SQLServer2014Documentation\_\*.exe* 파일을 컴퓨터에 저장합니다.  
-   
-   >[!NOTE]
-   >방화벽 및 프록시로 제한된 환경에서는 해당 환경으로 가져올 수 있도록 다운로드한 파일을 USB 드라이브 또는 기타 휴대용 미디어에 저장합니다.   
-   
-3. .exe를 두 번 클릭하여 도움말 콘텐츠 파일의 압축을 풀고 파일을 로컬 또는 공유 폴더에 저장합니다.  
-4. SSMS를 시작하거나 도움말 메뉴에서 **도움말 설정 관리**를 클릭하여 **도움말 라이브러리 관리자**를 엽니다.  
-5. **디스크에서 콘텐츠 설치**를 클릭하고 도움말 콘텐츠 파일의 압축을 푼 폴더로 이동합니다.  
-   
+1. [Microsoft SQL Server 2014 제품 설명서](https://www.microsoft.com/download/details.aspx?id=42557)로 이동하고 사이트를 다운로드한 후 **다운로드**를 클릭합니다.
+
+2. 메시지 상자에서 **저장**을 클릭하여 *SQLServer2014Documentation\_\*.exe* 파일을 컴퓨터에 저장합니다.
+
+   > [!NOTE]
+   > 방화벽 및 프록시로 제한된 환경에서는 해당 환경으로 가져올 수 있도록 다운로드한 파일을 USB 드라이브 또는 기타 휴대용 미디어에 저장합니다.
+
+3. .exe를 두 번 클릭하여 도움말 콘텐츠 파일의 압축을 풀고 파일을 로컬 또는 공유 폴더에 저장합니다.
+
+4. SSMS를 시작하거나 도움말 메뉴에서 **도움말 설정 관리**를 클릭하여 **도움말 라이브러리 관리자**를 엽니다.
+
+5. **디스크에서 콘텐츠 설치**를 클릭하고 도움말 콘텐츠 파일의 압축을 푼 폴더로 이동합니다.
+
    ![HelpLibraryManager_MainPage_InstallFromDisk](../sql-server/media/sql-server-help-installation/helplibrarymanager-mainpage-installfromdisk.png)
-   
+
    ![HelpLibraryManager_InstallContentFromDisk_dialog1](../sql-server/media/sql-server-help-installation/helplibrarymanager-installcontentfromdisk-dialog1.png)
-   
+
    > [!IMPORTANT]
-   > 부분 목차만 포함된 로컬 도움말 콘텐츠를 설치하지 않으려면 **도움말 라이브러리 관리자**에서 **디스크에서 콘텐츠 설치** 옵션을 사용해야 합니다.  **온라인에서 콘텐츠 설치**를 사용했고 도움말 뷰어에 부분 목차가 표시되는 경우 문제 해결 단계를 보려면 이 [블로그 게시물](https://blogs.msdn.microsoft.com/womeninanalytics/2016/06/21/troubleshoot-local-help-for-sql-server-2014/)을 참조하세요. 
-   
-8. HelpContentSetup.msha 파일을 클릭하고, **열기**, **다음**을 차례로 클릭합니다.  
-9. 설치할 설명서 옆의 **추가** 를 클릭하고 **업데이트**를 클릭합니다.  
-   
-   ![HelpLibraryManager_InstallContentFromDisk_dialog2](../sql-server/media/sql-server-help-installation/helplibrarymanager-installcontentfromdisk-dialog2.png)  
-   
-10. **마침**을 클릭한 다음 **끝내기**를 클릭합니다.
+   > 부분 목차만 포함된 로컬 도움말 콘텐츠를 설치하지 않으려면 **도움말 라이브러리 관리자**에서 **디스크에서 콘텐츠 설치** 옵션을 사용해야 합니다.  **온라인에서 콘텐츠 설치**를 사용했고 도움말 뷰어에 부분 목차가 표시되는 경우 문제 해결 단계를 보려면 이 [블로그 게시물](https://blogs.msdn.microsoft.com/womeninanalytics/2016/06/21/troubleshoot-local-help-for-sql-server-2014/)을 참조하세요.
 
-**도움말 뷰어 v1.x를 사용하여 오프라인 도움말 콘텐츠를 보려면**
+6. `HelpContentSetup.msha` 파일, **열기**, **다음**을 차례로 클릭합니다.
 
-11. 설치된 도움말을 보려면 **도움말 라이브러리 관리자**를 열고 **온라인 또는 로컬 도움말 선택**을 클릭한 다음 **로컬 도움말 사용**을 클릭합니다.
-12. **도움말** 메뉴에서 **도움말 보기**를 클릭하여 도움말 뷰어를 열고 콘텐츠를 확인합니다. 왼쪽 창에 설치된 콘텐츠가 나열됩니다.  
-   
+7. 설치할 설명서 옆의 **추가** 를 클릭하고 **업데이트**를 클릭합니다.
+
+   ![HelpLibraryManager_InstallContentFromDisk_dialog2](../sql-server/media/sql-server-help-installation/helplibrarymanager-installcontentfromdisk-dialog2.png)
+
+8. **마침**을 클릭한 다음 **끝내기**를 클릭합니다.
+
+### <a name="to-view-offline-help-content-with-help-viewer-v1x"></a>도움말 뷰어 v1.x를 사용하여 오프라인 도움말 콘텐츠를 보려면
+
+1. 설치된 도움말을 보려면 **도움말 라이브러리 관리자**를 열고 **온라인 또는 로컬 도움말 선택**을 클릭한 다음 **로컬 도움말 사용**을 클릭합니다.
+
+2. **도움말** 메뉴에서 **도움말 보기**를 클릭하여 도움말 뷰어를 열고 콘텐츠를 확인합니다. 왼쪽 창에 설치된 콘텐츠가 나열됩니다.
+
    ![HelpViewer1_withContentInstalled_ZoomedIn](../sql-server/media/sql-server-help-installation/helpviewer1-withcontentinstalled-zoomedin.png)  
-   
-
 
 ## <a name="view-online-help"></a>온라인 도움말 보기
 
 온라인 도움말에는 항상 가장 최근의 콘텐츠가 표시됩니다. 
 
-**SSMS 17.x에서 SQL Server 온라인 도움말을 보려면**
+### <a name="to-view-sql-server-online-help-in-ssms-17x"></a>SSMS 17.x에서 SQL Server 온라인 도움말을 보려면
 
 - **도움말** 메뉴에서 **도움말 보기**를 클릭합니다. [https://docs.microsoft.com/sql/sql-server/](https://docs.microsoft.com/sql/sql-server/)의 최신 SQL Server 2016/2017 설명서가 브라우저에 표시됩니다.
 
    ![도움말 보기](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
-**Visual Studio에서 Visual Studio 온라인 도움말을 보려면**
+### <a name="to-view-visual-studio-online-help-in-visual-studio"></a>Visual Studio에서 Visual Studio 온라인 도움말을 보려면
 
 1. 도움말 메뉴에서 **도움말 기본 설정 지정**을 가리키고 **브라우저에서 시작** 또는 **도움말 뷰어에서 시작**을 선택합니다. 
 2. 도움말 메뉴에서 **도움말 보기**를 클릭합니다. 선택한 환경에서 최신 Visual Studio 도움말이 표시됩니다. 
@@ -197,7 +213,7 @@ Visual Studio에서 설치된 도움말을 보려면:
 
 SSMS 또는 VS의 대화 상자에서 F1 키를 누르거나 **도움말** 또는 **?** 아이콘을 클릭하면 브라우저 또는 도움말 뷰어에 상황에 맞는 온라인 도움말 항목이 나타납니다.
 
-**F1 도움말을 보려면**
+### <a name="to-view-f1-help"></a>F1 도움말을 보려면
 
 1. 도움말 메뉴에서 **도움말 기본 설정 지정**을 클릭하고 **브라우저에서 시작** 또는 **도움말 뷰어에서 시작**을 선택합니다.
 2. F1을 누르거나 **도움말** 또는 **?** 를 클릭합니다. 클릭하여 선택한 환경에서 상황에 맞는 온라인 항목을 봅니다.

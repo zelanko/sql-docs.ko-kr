@@ -1,5 +1,5 @@
 ---
-title: 데이터 원본 마법사 화면 4 (ODBC Driver for SQL Server) | Microsoft Docs
+title: 데이터 원본 마법사 화면 4(ODBC Driver for SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 177888dd1034bb1edcb870db38b00bbc418cb261
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67989458"
 ---
 # <a name="data-source-wizard-screen-4"></a>데이터 원본 마법사 화면 4
@@ -33,7 +33,7 @@ SQL Server 메시지에 사용할 언어, 문자 집합 변환 및 ODBC Driver f
 
 ### <a name="trust-server-certificate"></a>서버 인증서 신뢰
 
-이 옵션은 **데이터에 대해 강력한 암호화 사용** 이 사용 되는 경우에만 적용 됩니다. 이를 선택 하면 서버 인증서의 유효성을 검사 하 여 서버의 올바른 호스트 이름이 있고 신뢰할 수 있는 인증 기관에서 발급 되지 않습니다. 
+이 옵션은 **데이터에 대하여 강력한 암호화 사용**이 사용 설정된 경우에만 적용할 수 있습니다. 선택된 서버 인증서는 올바른 서버 호스트 이름을 가졌는지 유효성 검사를 거치지 않으며, 신뢰할 수 있는 인증 기관에서 발급됩니다. 
 
 ### <a name="perform-translation-for-character-data"></a>문자 데이터에 대한 변환 실행
 
@@ -61,19 +61,19 @@ SQL Server 메시지에 사용할 언어, 문자 집합 변환 및 ODBC Driver f
 
 ### <a name="connect-retry-count"></a>연결 다시 시도 횟수
 
-실패 한 연결 시도를 다시 시도할 횟수를 지정 합니다.
+성공하지 못한 연결을 재시도할 횟수를 지정합니다.
 
 ### <a name="connect-retry-interval-seconds"></a>연결 다시 시도 간격(초)
 
-각 연결을 다시 시도 하는 간격 (초)을 지정 합니다. 이 작업 및 **연결 다시 시도 횟수** 옵션에 대 한 자세한 내용은 [Windows ODBC 드라이버에서 연결 복원 력](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)을 참조 하세요.
+각 연결 재시도 간의 시간(초)을 지정합니다. 이 작업과 **연결 다시 시도 횟수** 옵션에 대한 자세한 내용은 [Windows ODBC 드라이버에서 연결 복원](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)을 참조하세요.
 
 ### <a name="back"></a>뒤로
 
-마법사의 이전 페이지로 돌아가려면이 단추를 클릭 합니다.
+마법사의 이전 페이지로 돌아가려면 이 단추를 클릭합니다.
 
-### <a name="finish"></a>마침
+### <a name="finish"></a>Finish
 
-이 화면에 지정 된 정보가 완료 되 면 **마침**을 클릭할 수 있습니다. 이 마법사 및 다른 화면에 지정 된 모든 특성을 사용 하 여 DSN이 만들어지고 새로 만든 DSN을 테스트할 수 있는 기회가 제공 됩니다.
+모든 정보가 이 화면에 지정되었다면 **마침**을 클릭할 수 있습니다. DSN은 이 화면과 다른 마법사 화면에 지정된 모든 특성을 사용하여 생성되며, 사용자에게는 새로 만들어진 DSN을 테스트할 기회가 주어집니다.
 
 ## <a name="next-steps"></a>다음 단계
 

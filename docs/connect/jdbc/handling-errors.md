@@ -11,10 +11,10 @@ ms.assetid: 8fd5b5ef-d939-4b78-b900-5b7b6ddb3eb9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6277b3ecf0160078fa47bc79994d31f64519d9b7
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028036"
 ---
 # <a name="handling-errors"></a>오류 처리
@@ -30,29 +30,29 @@ ms.locfileid: "69028036"
   
 -   `getNextException()`은 다음 `SQLServerException` 개체를 반환하거나 반환할 예외 개체가 없는 경우 null을 반환합니다.
 
--   `getSQLServerError()`SQL Server에서 `SQLServerError` 받은 예외에 대 한 자세한 정보를 포함 하는 개체를 반환 합니다. 서버 오류가 발생 하지 않은 경우이 메서드는 null을 반환 합니다.
+-   `getSQLServerError()`는 SQL Server에서 받은 예외에 대한 자세한 정보가 포함된 `SQLServerError` 개체를 반환합니다. 서버 오류가 발생하지 않은 경우 이 메서드는 null을 반환합니다.
 
-`SQLServerError` 클래스의 다음 메서드를 사용 하 여 서버에서 생성 된 오류에 대 한 추가 정보를 가져올 수 있습니다.
+`SQLServerError` 클래스의 다음 메서드를 사용하여 서버에서 생성된 오류에 대한 추가 정보를 가져올 수 있습니다.
 
--   `SQLServerError.getErrorMessage()`서버에서 받은 오류 메시지를 반환 합니다.
+-   `SQLServerError.getErrorMessage()`는 서버에서 받은 오류 메시지를 반환합니다.
 
--   `SQLServerError.getErrorNumber()`오류의 유형을 식별 하는 번호를 반환 합니다.
+-   `SQLServerError.getErrorNumber()`는 오류의 유형을 식별하는 번호를 반환합니다.
 
--   `SQLServerError.getErrorState()`오류, 경고 또는 "데이터를 찾을 수 없습니다." 메시지를 나타내는 SQL Server에서 숫자 오류 코드를 반환 합니다.
+-   `SQLServerError.getErrorState()`는 SQL Server에서 오류, 경고 또는 "데이터를 찾을 수 없음" 메시지를 나타내는 숫자 오류 코드를 반환합니다.
 
--   `SQLServerError.getErrorSeverity()`받은 오류의 심각도 수준을 반환 합니다.
+-   `SQLServerError.getErrorSeverity()`는 받은 오류의 심각도 수준을 반환합니다.
 
--   `SQLServerError.getServerName()`오류를 생성 한 SQL Server의 인스턴스를 실행 하는 컴퓨터의 이름을 반환 합니다.
+-   `SQLServerError.getServerName()`은 오류를 생성한 SQL Server의 인스턴스를 실행하는 컴퓨터의 이름을 반환합니다.
 
--   `SQLServerError.getProcedureName()`오류를 생성 한 저장 프로시저 또는 RPC (원격 프로시저 호출)의 이름을 반환 합니다.
+-   `SQLServerError.getProcedureName()`은 오류를 생성한 저장 프로시저 또는 RPC(원격 프로시저 호출)의 이름을 반환합니다.
 
--   `SQLServerError.getLineNumber()`오류를 생성 한 Transact-sql 명령 일괄 처리 또는 저장 프로시저 내의 줄 번호를 반환 합니다.
+-   `SQLServerError.getLineNumber()`는 오류를 생성한 Transact-SQL 명령 일괄 처리 또는 저장 프로시저 내의 줄 번호를 반환합니다.
   
  다음 예제에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 샘플 데이터베이스에 대해 열린 연결을 함수로 전달하고, FROM 절이 없는 잘못된 형식의 SQL 문을 생성합니다. 그런 다음 이 문을 실행하고 SQL 예외를 처리합니다.  
   
  [!code[JDBC#HandlingErrors1](../../connect/jdbc/codesnippet/Java/handling-errors_1.java)]  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [JDBC 드라이버 관련 문제 진단](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
   
   

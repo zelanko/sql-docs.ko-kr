@@ -19,13 +19,13 @@ ms.assetid: 37836b49-258e-45ce-9549-b8bd85d6952d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 11da2b4eca130eafe93a01315aaa1f6d9919632c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015044"
 ---
-# <a name="sqlsrvconnect"></a>sqlsrv_connect
+# <a name="sqlsrv_connect"></a>sqlsrv_connect
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 연결 리소스를 만들고 연결을 엽니다. 기본적으로 Windows 인증을 사용하여 연결을 시도합니다.  
@@ -40,17 +40,17 @@ sqlsrv_connect( string $serverName [, array $connectionInfo])
 #### <a name="parameters"></a>매개 변수  
 *$serverName*: 연결이 설정되는 서버의 이름을 지정하는 문자열입니다. 인스턴스 이름(예: "myServer\instanceName") 또는 포트 번호(예: "myServer 1521")가 이 문자열의 일부로 포함될 수 있습니다. 이 매개 변수에 사용할 수 있는 옵션에 대한 자세한 내용은 [SQL Native Client에서 연결 문자열 키워드 사용](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)의 ODBC 드라이버 연결 문자열 키워드 섹션에서 서버 키워드를 참조하세요.  
   
-[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 3.0부터는 `"(localdb)\instancename"`을 사용하여 LocalDB 인스턴스를 지정할 수도 있습니다. 자세한 내용은 [LocalDB 지원](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)을 참조 하세요.  
+[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 3.0부터는 `"(localdb)\instancename"`을 사용하여 LocalDB 인스턴스를 지정할 수도 있습니다. 자세한 내용은 [LocalDB 지원](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)을 참조하세요.  
   
-또한 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 3.0부터 AlwaysOn 가용성 그룹에 연결하기 위해 가상 네트워크 이름을 지정할 수 있습니다. 지원에 대 한 자세한 내용은 [고가용성, 재해 복구 지원을 참조 하세요.](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]  
+또한 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 3.0부터 AlwaysOn 가용성 그룹에 연결하기 위해 가상 네트워크 이름을 지정할 수 있습니다. [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]에 대한 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 지원에 대한 자세한 내용은 [고가용성, 재해 복구 지원](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)을 참조하세요.  
   
-*$connectionInfo* [선택 사항]: 연결 특성을 포함하는 결합형 **배열**(예: **배열**("Database"=> "AdventureWorks"))입니다. 배열에 대해 지원되는 키 목록은 [Connection Options](../../connect/php/connection-options.md) 을 참조하세요.  
+*$connectionInfo* [선택 사항]: 연결 특성을 포함하는 결합형 **배열**(예: **배열**("Database" => "AdventureWorks"))입니다. 배열에 대해 지원되는 키 목록은 [Connection Options](../../connect/php/connection-options.md) 을 참조하세요.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 PHP 연결 리소스입니다. 연결을 만들 수 없고 열 수 없으면 **false** 가 반환됩니다.  
   
-## <a name="remarks"></a>Remarks  
-*UID* 및 *PWD* 키에 대한 값이 선택적 *$connectionInfo* 매개 변수에 지정되지 않은 경우 Windows 인증을 사용하여 연결을 시도합니다. 서버에 연결하는 방법에 대한 자세한 내용은 [How to: Connect Using Windows Authentication](../../connect/php/how-to-connect-using-windows-authentication.md) 및 [How to: Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md)을 참조하세요.  
+## <a name="remarks"></a>설명  
+*UID* 및 *PWD* 키에 대한 값이 선택적 *$connectionInfo* 매개 변수에 지정되지 않은 경우 Windows 인증을 사용하여 연결을 시도합니다. 서버에 연결하는 방법에 대한 자세한 내용은 [방법: Windows 인증을 사용하여 연결](../../connect/php/how-to-connect-using-windows-authentication.md) 및 [방법: SQL Server 인증을 사용하여 연결](../../connect/php/how-to-connect-using-sql-server-authentication.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
 다음 예제에서는 Windows 인증을 사용하여 연결을 만들고 엽니다. 이 예제에서는 SQL Server 및 [AdventureWorks](https://www.codeplex.com/SqlServerSamples) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
@@ -90,7 +90,7 @@ sqlsrv_close( $conn);
 ## <a name="see-also"></a>참고 항목  
 [SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)
 
-[Connecting to the Server](../../connect/php/connecting-to-the-server.md)
+[서버에 연결](../../connect/php/connecting-to-the-server.md)
 
 [설명서의 코드 예제 정보](../../connect/php/about-code-examples-in-the-documentation.md)  
   

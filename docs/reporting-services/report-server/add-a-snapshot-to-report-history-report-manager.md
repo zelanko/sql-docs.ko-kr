@@ -1,5 +1,5 @@
 ---
-title: 보고서 기록에 스냅숏 추가-Reporting Services | Microsoft Docs
+title: 보고서 기록에 스냅샷 추가 - Reporting Services | Microsoft Docs
 ms.prod: reporting-services
 ms.technology: reporting-services
 ms.topic: conceptual
@@ -9,10 +9,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/26/2019
 ms.openlocfilehash: 2ada64f14c3564bd1e6c9846f890fdd8b287cb6f
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68251932"
 ---
 # <a name="add-a-snapshot-to-report-history"></a>보고서 기록에 스냅샷 추가
@@ -31,7 +31,7 @@ ms.locfileid: "68251932"
   
 3. **새 스냅샷**을 클릭합니다. **실행 날짜** 열에 새 스냅샷이 생성됩니다.  
     > [!NOTE]
-    > 스냅숏을 만들 수 있도록 설정 하려면 관리자가 **기록을 수동으로 만들 수 있도록**보고서 기록을 구성 해야 합니다. 자세한 내용은 [보고서 기록 제한&#40;보고서 관리자&#41;](../reports/limit-report-history-report-manager.md)를 클릭합니다.
+    > 스냅샷을 생성하려면 관리자가 보고서 기록을 **수동으로 기록 작성 허용**으로 구성해야 합니다. 자세한 내용은 [보고서 기록 제한&#40;보고서 관리자&#41;](../reports/limit-report-history-report-manager.md)를 클릭합니다.
 
 4. **적용**을 클릭합니다.
   
@@ -65,7 +65,7 @@ ms.locfileid: "68251932"
 
 5. **적용**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 - [보고서에 실행 속성 구성&#40;보고서 관리자&#41;](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)
 - [보고서 기록 제한&#40;보고서 관리자&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)
@@ -78,39 +78,39 @@ ms.locfileid: "68251932"
 
 ## <a name="to-manually-add-snapshots-to-report-history"></a>보고서 기록에 스냅샷을 수동으로 추가하려면
   
-1. 웹 포털에서 기록을 보려는 항목으로 이동 하 여 해당 항목을 마우스 오른쪽 단추로 클릭 합니다.  
+1. 웹 포털에서 기록을 보려는 항목으로 이동한 후 마우스 오른쪽 버튼을 클릭합니다.  
   
 2. 드롭다운 메뉴에서 **관리**를 선택합니다.  
   
-3. **기록 스냅숏** 탭을 선택 합니다.  
+3. **기록 스냅샷** 탭을 선택합니다.  
   
-4. **기록 스냅숏** 페이지에서 **새 기록 스냅숏을**선택 합니다. 새 스냅숏이 만들어지고 **만든** 열에서 현재 날짜 및 시간과 함께 아래에 표시 됩니다.  
+4. **기록 스냅샷** 페이지에서 **새 기록 스냅샷**을 선택합니다. 새 스냅샷이 만들어지고 **생성됨** 열에 현재 날짜 및 시간이 표시됩니다.  
   
     > [!NOTE]
-    > 스냅숏을 만들 수 있도록 설정 하려면 관리자가 **기록을 수동으로 만들 수 있도록**보고서 기록을 구성 해야 합니다. 자세한 내용은 [보고서 기록 제한 (웹 포털)](../../reporting-services/reports/limit-report-history-report-manager.md)을 참조 하세요.
+    > 스냅샷을 생성하려면 관리자가 보고서 기록을 **수동으로 기록 작성 허용**으로 구성해야 합니다. 자세한 내용은 [보고서 기록 제한(웹 포털)](../../reporting-services/reports/limit-report-history-report-manager.md)을 참조하세요.
 
-## <a name="to-add-snapshots-via-a-schedule-to-report-history"></a>일정을 통해 스냅숏을 보고서 기록에 추가 하려면
+## <a name="to-add-snapshots-via-a-schedule-to-report-history"></a>일정을 통해 스냅샷을 보고서 기록에 추가하려면
 
-1. 웹 포털에서 기록을 보려는 항목으로 이동 하 여 해당 항목을 마우스 오른쪽 단추로 클릭 합니다.  
+1. 웹 포털에서 기록을 보려는 항목으로 이동한 후 마우스 오른쪽 버튼을 클릭합니다.  
   
 2. 드롭다운 메뉴에서 **관리**를 선택합니다.  
   
-3. **기록 스냅숏** 탭을 선택 합니다.  
+3. **기록 스냅샷** 탭을 선택합니다.  
   
-4. **기록 스냅숏** 페이지에서 **일정 및 설정** 단추를 선택 합니다.  
+4. **기록 스냅샷** 페이지에서 **일정 및 설정** 버튼을 선택합니다.  
   
-5. 하나 이상의 선택 항목이 아직 선택 되지 않은 경우 **일정** 섹션에서 아래의 옵션 중 하나 또는 둘 다를 선택 합니다.
-    - **일정에 따라 기록 스냅숏을 만듭니다**.  
-    - **사용자가 스냅숏을 수동으로 만들 수**있습니다.  
+5. **일정** 섹션에서 하나 이상의 선택 항목이 아직 선택되지 않은 경우 아래 옵션 중 하나 또는 둘 다를 선택합니다.
+    - **일정에 따라 기록 스냅샷 만들기**.  
+    - **사람들이 스냅샷을 수동으로 만들 수 있도록 허용**.  
   
-6. **고급** 섹션에서 **모든 기록 스냅숏 유지**를 선택 합니다.  
+6. **고급** 섹션에서 **모든 기록 스냅샷 보존**을 선택합니다.  
   
-7. 필요에 따라 **보고서 기록에 캐시 스냅숏 저장**확인란을 선택 합니다.  
+7. 필요에 따라 **보고서 기록에 캐시 스냅샷도 저장** 확인란을 선택합니다.  
   
 8.  **적용**을 선택하여 설정을 저장합니다.  
 
     > [!NOTE]  
-    > 스냅숏을 만들 수 있도록 설정 하려면 관리자가 **기록을 수동으로 만들 수 있도록**보고서 기록을 구성 해야 합니다. 자세한 내용은 [보고서 기록 제한 (웹 포털)](../../reporting-services/reports/limit-report-history-report-manager.md)을 참조 하세요.
+    > 스냅샷을 생성하려면 관리자가 보고서 기록을 **수동으로 기록 작성 허용**으로 구성해야 합니다. 자세한 내용은 [보고서 기록 제한(웹 포털)](../../reporting-services/reports/limit-report-history-report-manager.md)을 참조하세요.
 
 9.  **적용**을 클릭합니다.
 
@@ -118,33 +118,33 @@ ms.locfileid: "68251932"
   
 1. 보고서 실행 스냅샷으로 실행하도록 구성된 보고서의 경우 스냅샷이 새로 고쳐질 때마다 보고서 기록에 스냅샷 복사본을 저장하도록 추가 속성을 설정할 수 있습니다.  
   
-2. 웹 포털에서 기록을 보려는 항목으로 이동 하 여 해당 항목을 마우스 오른쪽 단추로 클릭 합니다.  
+2. 웹 포털에서 기록을 보려는 항목으로 이동한 후 마우스 오른쪽 버튼을 클릭합니다.  
   
 3. 드롭다운 메뉴에서 **관리**를 선택합니다.  
   
-4. **기록 스냅숏** 탭을 선택 합니다.  
+4. **기록 스냅샷** 탭을 선택합니다.  
   
-5. **기록 스냅숏** 페이지에서 **일정 및 설정** 단추를 선택 합니다.  
+5. **기록 스냅샷** 페이지에서 **일정 및 설정** 버튼을 선택합니다.  
   
-6. 하나 이상의 선택 항목이 아직 선택 되지 않은 경우 **일정** 섹션에서 아래의 옵션 중 하나 또는 둘 다를 선택 합니다.
-    - **일정에 따라 기록 스냅숏을 만듭니다**.  
-    - **사용자가 스냅숏을 수동으로 만들 수**있습니다.  
+6. **일정** 섹션에서 하나 이상의 선택 항목이 아직 선택되지 않은 경우 아래 옵션 중 하나 또는 둘 다를 선택합니다.
+    - **일정에 따라 기록 스냅샷 만들기**.  
+    - **사람들이 스냅샷을 수동으로 만들 수 있도록 허용**.  
   
-7. **고급** 섹션에서 **모든 기록 스냅숏 유지**를 선택 합니다.  
+7. **고급** 섹션에서 **모든 기록 스냅샷 보존**을 선택합니다.  
   
-8. 필요에 따라 **보고서 기록에 캐시 스냅숏 저장**확인란을 선택 합니다.  
+8. 필요에 따라 **보고서 기록에 캐시 스냅샷도 저장** 확인란을 선택합니다.  
   
 9. **적용**을 선택하여 설정을 저장합니다.  
   
 ## <a name="to-automatically-add-snapshots-to-report-history-based-on-a-schedule"></a>일정에 따라 보고서 기록에 스냅샷을 자동으로 추가하려면  
   
-1. 웹 포털에서 기록을 보려는 항목으로 이동 하 여 해당 항목을 마우스 오른쪽 단추로 클릭 합니다.  
+1. 웹 포털에서 기록을 보려는 항목으로 이동한 후 마우스 오른쪽 버튼을 클릭합니다.  
   
 2. 드롭다운 메뉴에서 **관리**를 선택합니다.  
   
-3. **기록 스냅숏** 탭을 선택 합니다.  
+3. **기록 스냅샷** 탭을 선택합니다.  
   
-4. **기록 스냅숏** 페이지에서 **일정 및 설정** 단추를 선택 합니다.  
+4. **기록 스냅샷** 페이지에서 **일정 및 설정** 버튼을 선택합니다.  
   
 5. **다음 일정을 사용하여 스냅샷을 보고서 기록에 추가**확인란을 선택합니다. 다음 중 하나를 수행합니다.  
   
@@ -154,10 +154,10 @@ ms.locfileid: "68251932"
 
 5. **적용**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 - [보고서 실행 속성 구성(웹 포털)](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)
-- [보고서 기록 제한 (웹 포털)](../../reporting-services/reports/limit-report-history-report-manager.md)
+- [보고서 기록 제한(웹 포털)](../../reporting-services/reports/limit-report-history-report-manager.md)
 - [일정](../../reporting-services/subscriptions/schedules.md)   
 - [웹 포털 &#40;SSRS 기본 모드&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)
 

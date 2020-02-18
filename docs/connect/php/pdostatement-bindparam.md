@@ -1,5 +1,5 @@
 ---
-title: 'PDOStatement:: bindParam | Microsoft Docs'
+title: PDOStatement::bindParam | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2018
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cd3332f9dc12d1cf7df22c097ab9370606985a68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 77b0899d6bc0a73db5e0cfa7794209ab74ed25ef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67936152"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76918651"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,20 +30,20 @@ bool PDOStatement::bindParam($parameter, &$variable[, $data_type[, $length[, $dr
 ```  
   
 #### <a name="parameters"></a>매개 변수  
-$*parameter*: (혼합) 매개 변수 식별자입니다. 명명된 자리 표시자를 사용하는 명령문의 경우 매개 변수 이름(:name)을 사용합니다. 물음표 구문을 사용하는 준비된 명령문의 경우 매개 변수의 1부터 시작하는 인덱스입니다.  
+$*매개 변수*: (혼합) 매개 변수 식별자입니다. 명명된 자리 표시자를 사용하는 명령문의 경우 매개 변수 이름(:name)을 사용합니다. 물음표 구문을 사용하는 준비된 명령문의 경우 매개 변수의 1부터 시작하는 인덱스입니다.  
   
-&$variable  : SQL 문 매개 변수에 바인딩할 PHP 변수의 (혼합) 이름입니다.  
+&$*변수*: SQL 문 매개 변수에 바인딩할 PHP 변수의 (혼합) 이름입니다.  
   
 $*data_type*: 선택적 (정수) PDO::PARAM_* 상수입니다. 기본값은 PDO::PARAM_STR입니다.  
   
 $*length*: 데이터 형식의 선택적 (정수) 길이입니다. $*data_type*에서 PDO::PARAM_INT 또는 PDO::PARAM_BOOL을 사용할 때 기본 크기를 나타내기 위해 PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE를 지정할 수 있습니다.  
   
-$*driver_options*: 선택적 (혼합) 드라이버별 옵션입니다. 예를 들어 PDO::SQLSRV_ENCODING_UTF8을 지정하여 UTF-8로 인코드된 문자열로 변수에 열을 바인딩할 수 있습니다.  
+$*driver_options*: 선택적 (혼합) 드라이버 관련 옵션입니다. 예를 들어 PDO::SQLSRV_ENCODING_UTF8을 지정하여 UTF-8로 인코드된 문자열로 변수에 열을 바인딩할 수 있습니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 성공하면 TRUE이고, 그렇지 않으면 FALSE입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 varbinary, binary 또는 varbinary(max) 형식의 서버 열에 null 데이터를 바인딩할 때 $*driver_options*를 사용하여 이진 인코딩(PDO::SQLSRV_ENCODING_BINARY)을 지정해야 합니다. 인코딩 상수에 대한 자세한 내용은 [상수](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)를 참조하세요.  
   
 PDO 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 2.0에 추가되었습니다.  
@@ -99,7 +99,7 @@ echo $input1;
 ```  
   
 > [!NOTE]
-> 출력 매개 변수를 bigint 형식에 바인딩하는 경우 값이 [정수](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)범위를 벗어나면 pdo::P aram_int를 사용 하 여 pdo:: SQLSRV_PARAM_OUT_DEFAULT_SIZE를 사용 하면 "값이 범위를 벗어남" 예외가 발생할 수 있습니다. 따라서 기본 PDO::P ARAM_STR를 대신 사용 하 고 결과 문자열의 크기 (최대 21)를 제공 합니다. 음수 부호를 포함 하 여 모든 bigint 값의 최대 자릿수입니다. 
+> 출력 매개 변수를 bigint 형식에 바인딩할 때 값이 [정수](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)의 범위를 벗어나면 PDO::P ARAM_INT를 PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE와 함께 사용하는 경우 "값이 범위를 벗어남" 예외가 발생할 수 있습니다. 따라서 그 대신에 기본값인 PDO::PARAM_STR을 사용하고 결과 문자열의 크기(최대 21)를 제공합니다. 21은 음수 부호를 포함한 모든 bigint 값의 최대 자릿수입니다. 
 
 ## <a name="example"></a>예제  
 이 코드 샘플은 입출력 매개 변수를 사용하는 방법을 보여 줍니다.  
@@ -133,7 +133,7 @@ $server = "(local)";
 $conn = new PDO("sqlsrv:server=$server ; Database = $database", "", "");  
 
 // Assume TestTable exists with a decimal field 
-$input = 9223372036854.80000;
+$input = "9223372036854.80000";
 $stmt = $conn->prepare("INSERT INTO TestTable (DecimalCol) VALUES (?)");
 // by default it is PDO::PARAM_STR, rounding of a large input value may
 // occur if PDO::PARAM_INT is specified

@@ -1,6 +1,7 @@
 ---
 title: 행 및 열 머리글 제어(보고서 작성기 및 SSRS) | Microsoft Docs
-ms.date: 05/24/2018
+description: 페이지가 매겨진 보고서의 테이블, 행렬 또는 목록 데이터 영역은 가로 또는 세로로 여러 페이지에 분산되어 있을 수 있습니다. 각 페이지에 행 또는 열 머리글을 반복 표시할지 여부를 지정할 수 있습니다.
+ms.date: 12/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 4be6e836-158e-4bc9-8870-7f394d7c7e11
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5ed08231f0bfd3cf7b505e3064883393470047e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: ce25cfe5d8d84926cb9bc993d075372e3a81d336
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581581"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245358"
 ---
-# <a name="controlling-row-and-column-headings-report-builder-and-ssrs"></a>행 및 열 머리글 제어(보고서 작성기 및 SSRS)
-  테이블, 행렬 또는 목록 데이터 영역이 가로 또는 세로로 여러 페이지에 걸쳐 있는 경우 각 페이지에 행 또는 열 머리글을 반복 표시할지 여부를 지정할 수 있습니다. 웹 포털이나 보고서 미리 보기와 같은 대화형 렌더러에서 보고서를 스크롤할 때 행 또는 열 머리글이 항상 화면에 표시되도록 고정시킬 수 있습니다. 테이블이나 행렬의 첫 번째 행에는 각 열의 데이터에 대한 레이블이 있는 열 머리글이 있고, 첫 번째 열에는 각 행의 데이터에 대한 레이블이 있는 행 머리글이 있습니다. 중첩된 그룹의 경우 그룹 레이블이 있는 열 머리글과 처음 몇 개의 행을 반복 표시할 수 있습니다. 기본적으로 목록 데이터 영역에는 머리글이 포함되지 않습니다.  
+# <a name="control-row--column-headings-report-builder--ssrs"></a>행 및 열 머리글 제어(보고서 작성기 및 SSRS)
+  페이지가 매겨진 보고서의 테이블, 행렬 또는 목록 데이터 영역은 가로 또는 세로로 여러 페이지에 분산되어 있을 수 있습니다. 각 페이지에 행 또는 열 머리글을 반복 표시할지 여부를 지정할 수 있습니다. 웹 포털이나 보고서 미리 보기와 같은 대화형 렌더러에서 보고서를 스크롤할 때 행 또는 열 머리글이 항상 화면에 표시되도록 고정시킬 수 있습니다. 테이블이나 행렬의 첫 번째 행에는 각 열의 데이터에 대한 레이블이 있는 열 머리글이 있고, 첫 번째 열에는 각 행의 데이터에 대한 레이블이 있는 행 머리글이 있습니다. 중첩된 그룹의 경우 그룹 레이블이 있는 열 머리글과 처음 몇 개의 행을 반복 표시할 수 있습니다. 기본적으로 목록 데이터 영역에는 머리글이 포함되지 않습니다.  
   
  머리글을 반복 표시하거나 고정하는 방법은 다음에 따라 달라집니다.  
   
@@ -64,7 +65,7 @@ ms.locfileid: "65581581"
   
  점선은 4개의 테이블릭스 영역을 보여 줍니다. 행 그룹 영역에는 첫 번째 열의 범주 레이블을 제어하는 행 그룹 머리글이 있습니다. 마찬가지로, 열 그룹 영역에는 첫 번째 행의 지리 레이블을 제어하는 열 그룹 머리글이 있습니다. 미리 보기에서 행렬이 여러 페이지에 걸쳐 있으면 다음 그림과 같이 첫 번째 행에 열 머리글이 나타납니다.  
   
- ![확장된 그룹이 있는 렌더링 된 행렬 미리 보기](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "확장된 그룹이 있는 렌더링 된 행렬 미리 보기")  
+ ![확장 그룹이 있는 렌더링된 행렬의 미리 보기](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "확장 그룹이 있는 렌더링된 행렬의 미리 보기")  
   
  첫 번째 행의 열 머리글을 반복하거나 고정하려면 테이블릭스 데이터 영역의 열 머리글 속성을 설정합니다. 중첩된 열 그룹의 열 머리글은 자동으로 포함됩니다.  
   
@@ -104,13 +105,13 @@ ms.locfileid: "65581581"
   
  열 머리글을 반복 또는 고정하려면 이전 예와 같은 방법을 사용합니다. 다음 그림에서는 행 그룹 창의 기본 보기를 보여 줍니다.  
   
- ![행 그룹, 동적 구성원으로 구성된 기본 모드](../../reporting-services/report-design/media/rs-tableheaderdynamicgroupingpanedefault.gif "행 그룹, 동적 구성원으로 구성된 기본 모드")  
+ ![행 그룹, 동적 멤버로 구성된 기본 모드](../../reporting-services/report-design/media/rs-tableheaderdynamicgroupingpanedefault.gif "행 그룹, 동적 멤버로 구성된 기본 모드")  
   
  다음 그림과 같이 행 그룹 창의 **고급** 모드를 사용하여 테이블릭스 멤버를 표시합니다.  
   
- ![행 그룹, 정적 구성원으로 구성된 고급 모드](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelladvanced.gif "행 그룹, 정적 구성원으로 구성된 고급 모드")  
+ ![행 그룹, 정적 멤버로 구성된 고급 모드](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelladvanced.gif "행 그룹, 정적 멤버로 구성된 고급 모드")  
   
- **정적**, (**정적**), 범주 및 (**세부 정보**) 테이블릭스 멤버가 나열됩니다. 괄호()가 포함된 테이블릭스 멤버는 해당 그룹 머리글이 없음을 나타냅니다. 열 머리글을 반복 또는 고정하려면 정적 테이블릭스 멤버를 선택하고 속성 창에서 속성을 설정합니다.  
+ 테이블릭스의 경우 멤버는 다음과 같습니다. **정적**, (**정적**), 범주 및 (**세부 정보**)가 나열됩니다. 괄호()가 포함된 테이블릭스 멤버는 해당 그룹 머리글이 없음을 나타냅니다. 열 머리글을 반복 또는 고정하려면 정적 테이블릭스 멤버를 선택하고 속성 창에서 속성을 설정합니다.  
   
  [맨 위로 이동](#Top)  
   
@@ -123,19 +124,19 @@ ms.locfileid: "65581581"
   
  다음 그림에서는 디자인 화면에서 행 그룹만 있고 행 그룹 영역은 없는 테이블을 보여 줍니다.  
   
- ![디자인, 테이블에 행 그룹은 있지만 그룹 머리글이 없음](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelldesign.gif "디자인, 테이블에 행 그룹은 있지만 그룹 머리글이 없음")  
+ ![디자인, 테이블에 행 그룹은 있지만 그룹 머리글은 없음](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelldesign.gif "디자인, 테이블에 행 그룹은 있지만 그룹 머리글은 없음")  
   
  테이블에 3개의 행이 있습니다. 첫 번째 행에는 열 머리글이 있고 두 번째 행에는 그룹 값과 부분합이 있습니다. 세 번째 행에는 세부 정보 데이터가 포함되어 있습니다. 이 테이블에는 테이블릭스 본문 영역만 있기 때문에 점선이 없습니다. 다음 그림에서는 이러한 테이블의 미리 보기를 보여 줍니다.  
   
- ![미리 보기, 테이블에 행 그룹은 있지만 그룹 머리글이 없음](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercellpreview.gif "미리 보기, 테이블에 행 그룹은 있지만 그룹 머리글이 없음")  
+ ![미리 보기, 테이블에 행 그룹은 있지만 그룹 머리글은 없음](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercellpreview.gif "미리 보기, 테이블에 행 그룹은 있지만 그룹 머리글은 없음")  
   
  행을 반복할지 계속 표시할지 여부를 제어하려면 각 행의 테이블릭스 멤버에 대한 속성을 설정해야 합니다. 기본 모드에서 보면 이 예와 행 그룹과 그룹 머리글이 있는 이전 예와 차이가 없어 보입니다. 다음 그림에서는 이 테이블을 기본 모드로 표시한 그룹화 창을 보여 줍니다.  
   
- ![행 그룹, 동적 구성원으로 구성된 기본 모드](../../reporting-services/report-design/media/rs-tableheaderdynamicgroupingpanedefault.gif "행 그룹, 동적 구성원으로 구성된 기본 모드")  
+ ![행 그룹, 동적 멤버로 구성된 기본 모드](../../reporting-services/report-design/media/rs-tableheaderdynamicgroupingpanedefault.gif "행 그룹, 동적 멤버로 구성된 기본 모드")  
   
  그러나 고급 모드에서는 레이아웃 구조의 테이블릭스 멤버가 조금 다르게 표시됩니다. 다음 그림에서는 이 테이블을 고급 모드로 표시한 그룹화 창을 보여 줍니다.  
   
- ![행 그룹, 고급, 그룹 머리글 없음.](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "행 그룹, 고급, 그룹 머리글 없음.")  
+ ![행 그룹, 고급, 그룹 머리글은 없음](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "행 그룹, 고급, 그룹 머리글은 없음")  
   
  행 그룹 창에 (**정적**), (범주), (**정적**) 및 (**세부 정보**) 테이블릭스 멤버가 나열됩니다. 열 제목을 반복 또는 고정하려면 맨 위의 (**정적**) 테이블릭스 멤버를 선택하고 속성 창에서 속성을 설정합니다.  
   

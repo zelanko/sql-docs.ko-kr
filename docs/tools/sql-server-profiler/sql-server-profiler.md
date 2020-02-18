@@ -1,39 +1,27 @@
 ---
-title: SQL Server Profiler | Microsoft Docs
-ms.custom: ''
-ms.date: 11/27/2018
+title: SQL Server Profiler
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- Profiler [SQL Server Profiler], about SQL Server Profiler
-- traces [SQL Server], SQL Server Profiler
-- database monitoring [SQL Server], SQL Server Profiler
-- tuning databases [SQL Server], SQL Server Profiler
-- SQL Server Profiler
-- server performance [SQL Server], SQL Server Profiler
-- Profiler [SQL Server Profiler]
-- tracing [SQL Server]
-- monitoring performance [SQL Server], SQL Server Profiler
-- events [SQL Server], SQL Server Profiler
-- SQL Server Profiler, about SQL Server Profiler
-- tools [SQL Server], SQL Server Profiler
-- database performance [SQL Server], SQL Server Profiler
-- trace [SQL Server]
 ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 928901caae5ed500913f59f138499a03f73f5439
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 11/27/2018
+ms.openlocfilehash: 4b2130aad931b55e1644aedb36762ad3b94a1e1c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059731"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307828"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]는 추적을 작성 및 관리하고 추적 결과를 분석 및 재생하기 위한 인터페이스입니다. 이벤트는 추적 파일에 저장되며 이 파일은 나중에 분석되거나 문제를 진단할 때 특정 단계를 다시 수행하기 위해 사용할 수 있습니다.  
   
 > [!IMPORTANT]
@@ -54,7 +42,7 @@ ms.locfileid: "68059731"
 ||||  
 |-|-|-|  
 |**기능\대상 작업**|**관계형 엔진**|**Analysis Services**|  
-|**추적 캡처**|의 [확장 이벤트](../../relational-databases/extended-events/extended-events.md) 그래픽 사용자 인터페이스[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|  
+|**추적 캡처**|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 [확장 이벤트](../../relational-databases/extended-events/extended-events.md) 그래픽 사용자 인터페이스|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|  
 |**추적 재생**|[Distributed Replay](../distributed-replay/sql-server-distributed-replay.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|  
   
 ## <a name="sql-server-profiler"></a>SQL Server Profiler  
@@ -76,13 +64,13 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 [!IN
 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]도구를 사용하려면 도구가 작동하는 방식을 설명하는 용어를 알고 있어야 합니다.  
   
 > [!NOTE]
-> SQL 추적을 이해 하면를 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]사용할 때 도움이 됩니다. 자세한 내용은 [SQL Trace](../../relational-databases/sql-trace/sql-trace.md)을(를) 참조하세요.  
+> SQL 추적을 이해하면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]로 작업할 때 큰 도움이 됩니다. 자세한 내용은 [SQL Trace](../../relational-databases/sql-trace/sql-trace.md)을(를) 참조하세요.  
   
  **이벤트**  
  이벤트는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]인스턴스에서 발생하는 동작으로, 이벤트의 예는 다음과 같습니다.  
   
 -   로그인 연결, 실패 및 연결 끊김    
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] `SELECT`, `INSERT`, `UPDATE` 및 `DELETE` 문    
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)], `SELECT`, `INSERT`, `UPDATE` 및 `DELETE` 문.    
 -   RPC(원격 프로시저 호출) 일괄 처리 상태  
 -   저장 프로시저의 시작 또는 끝  
 -   저장 프로시저에 있는 문의 시작 또는 끝  
@@ -117,7 +105,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 [!IN
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은(는) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 추적하는 두 가지 방법을 제공합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]을(를) 사용하여 추적하거나 시스템 저장 프로시저를 사용하여 추적할 수 있습니다.  
   
- **Assert**  
+ **Filter**  
  추적 또는 템플릿을 만들 때 이벤트가 수집하는 데이터를 필터링할 조건을 정의할 수 있습니다. 추적이 지나치게 커지지 않도록 필터링을 통해 이벤트 데이터의 하위 집합만 수집할 수 있습니다. 예를 들어 추적에서 Microsoft Windows 사용자 이름을 특정 사용자로 제한하여 출력 데이터를 줄일 수 있습니다.  
   
  필터가 설정되어 있지 않으면 선택된 이벤트 클래스의 모든 이벤트가 추적 출력에서 반환됩니다.  
@@ -127,7 +115,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 [!IN
 |태스크 설명|항목|  
 |----------------------|-----------|  
 |SQL Server에서 특정한 유형의 이벤트를 모니터링하기 위해 제공하는 미리 정의된 템플릿과 추적을 재생하는 데 필요한 사용 권한을 보여 줍니다.|[SQL Server Profiler 템플릿 및 권한](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)|  
-|Profiler를 실행 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하는 방법을 설명 합니다.|[SQL Server 프로파일러 실행에 필요한 권한](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler를 실행하는 방법에 대해 설명합니다.|[SQL Server 프로파일러 실행에 필요한 권한](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)|  
 |추적을 만드는 방법에 대해 설명합니다.|[추적 만들기&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)|  
 |추적 파일에 대한 이벤트 및 데이터 열을 지정하는 방법에 대해 설명합니다.|[추적 파일에 대해 이벤트 및 데이터 열 지정&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)|  
 |파일에 추적 결과를 저장하는 방법에 대해 설명합니다.|[추적 결과를 파일에 저장&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/save-trace-results-to-a-file-sql-server-profiler.md)|  
@@ -156,32 +144,32 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 [!IN
 |한 번에 하나의 이벤트를 재생하는 방법에 대해 설명합니다.|[단일 이벤트를 한 번에 하나씩 재생&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-single-event-at-a-time-sql-server-profiler.md)|  
 |중단점까지 재생하는 방법에 대해 설명합니다.|[중단점까지 재생&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-to-a-breakpoint-sql-server-profiler.md)|  
 |커서까지 재생하는 방법을 설명합니다.|[커서까지 재생&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-to-a-cursor-sql-server-profiler.md)|  
-|스크립트를 [!INCLUDE[tsql](../../includes/tsql-md.md)] 재생 하는 방법을 설명 합니다.|[Transact-SQL 스크립트 재생&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-transact-sql-script-sql-server-profiler.md)|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 재생하는 방법에 대해 설명합니다.|[Transact-SQL 스크립트 재생&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-transact-sql-script-sql-server-profiler.md)|  
 |추적 템플릿을 만드는 방법에 대해 설명합니다.|[추적 템플릿 만들기&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)|  
 |추적 템플릿을 수정하는 방법에 대해 설명합니다.|[추적 템플릿 수정&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)|  
 |전역 추적 옵션을 설정하는 방법에 대해 설명합니다.|[전역 추적 옵션 설정&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-global-trace-options-sql-server-profiler.md)|  
 |추적 중에 값 또는 데이터 열을 찾는 방법에 대해 설명합니다.|[추적 중 값 또는 데이터 열 찾기&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/find-a-value-or-data-column-while-tracing-sql-server-profiler.md)|  
 |실행 중인 추적에서 템플릿을 파생하는 방법에 대해 설명합니다.|[실행 중인 추적으로부터 템플릿 파생&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)|  
 |추적 파일 또는 추적 테이블에서 템플릿을 파생하는 방법에 대해 설명합니다.|[추적 파일 또는 추적 테이블에서 템플릿 파생&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)|  
-|추적을 실행 하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 만드는 방법을 설명 합니다.|[추적 실행을 위한 Transact-SQL 스크립트 만들기&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-transact-sql-script-for-running-a-trace-sql-server-profiler.md)|  
+|추적 실행을 위한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 만드는 방법에 대해 설명합니다.|[추적 실행을 위한 Transact-SQL 스크립트 만들기&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-transact-sql-script-for-running-a-trace-sql-server-profiler.md)|  
 |추적 템플릿을 내보내는 방법에 대해 설명합니다.|[추적 템플릿 내보내기&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)|  
 |추적 템플릿을 가져오는 방법에 대해 설명합니다.|[추적 템플릿 가져오기&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)|  
 |추적에서 스크립트를 추출하는 방법에 대해 설명합니다.|[추적에서 스크립트 추출&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/extract-a-script-from-a-trace-sql-server-profiler.md)|  
 |추적과 Windows 성능 로그 데이터의 상관 관계를 지정하는 방법에 대해 설명합니다.|[추적과 Windows 성능 로그 데이터의 상관 관계 지정&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)|  
 |추적에 표시되는 열을 구성하는 방법에 대해 설명합니다.|[표시된 열 추적으로 구성&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)|  
-|를 시작 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]하는 방법을 설명 합니다.|[SQL Server Profiler 시작](../../tools/sql-server-profiler/start-sql-server-profiler.md)|  
+|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 시작하는 방법에 대해 설명합니다.|[SQL Server Profiler 시작](../../tools/sql-server-profiler/start-sql-server-profiler.md)|  
 |추적 및 추적 템플릿을 저장하는 방법에 대해 설명합니다.|[추적 및 추적 템플릿 저장](../../tools/sql-server-profiler/save-traces-and-trace-templates.md)|  
 |추적 템플릿을 수정하는 방법에 대해 설명합니다.|[추적 템플릿 수정](../../tools/sql-server-profiler/modify-trace-templates.md)|  
 |추적과 Windows 성능 로그 데이터의 상관 관계를 지정하는 방법에 대해 설명합니다.|[Windows 성능 로그 데이터와 추적의 상관 관계 지정](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data.md)|  
-|를 사용 하 여 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]추적을 보고 분석 하는 방법을 설명 합니다.|[SQL Server Profiler를 사용하여 추적 보기 및 분석](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)|  
-|를 사용 하 여 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]교착 상태를 분석 하는 방법을 설명 합니다.|[SQL Server Profiler를 사용하여 교착 상태 분석](../../tools/sql-server-profiler/analyze-deadlocks-with-sql-server-profiler.md)|  
+|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 추적을 보고 분석하는 방법에 대해 설명합니다.|[SQL Server Profiler를 사용하여 추적 보기 및 분석](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)|  
+|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 교착 상태를 분석하는 방법에 대해 설명합니다.|[SQL Server Profiler를 사용하여 교착 상태 분석](../../tools/sql-server-profiler/analyze-deadlocks-with-sql-server-profiler.md)|  
 |SQL Server Profiler에서 SHOWPLAN 결과로 쿼리를 분석하는 방법에 대해 설명합니다.|[SQL Server Profiler에서 SHOWPLAN 결과로 쿼리 분석](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)|  
-|를 사용 하 여 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]추적을 필터링 하는 방법을 설명 합니다.|[SQL Server Profiler로 추적 필터링](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)|  
+|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 추적을 필터링하는 방법에 대해 설명합니다.|[SQL Server Profiler로 추적 필터링](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)|  
 |[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]의 재생 기능을 사용하는 방법을 설명합니다.|[추적 재생](../../tools/sql-server-profiler/replay-traces.md)|  
-|에 대 한 상황에 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]맞는 도움말 항목을 나열 합니다.|[SQL Server 프로파일러 F1 도움말](../../tools/sql-server-profiler/sql-server-profiler-f1-help.md)|  
+|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]에 대한 상황에 맞는 도움말 항목이 나열되어 있습니다.|[SQL Server 프로파일러 F1 도움말](../../tools/sql-server-profiler/sql-server-profiler-f1-help.md)|  
 |[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]에서 성능 및 작업을 모니터링하는 데 사용하는 시스템 저장 프로시저를 보여 줍니다.|[SQL Server Profiler 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [잠금 이벤트 범주](../../relational-databases/event-classes/locks-event-category.md)   
  [세션 이벤트 범주](../../relational-databases/event-classes/sessions-event-category.md)   
  [저장 프로시저 이벤트 범주](../../relational-databases/event-classes/stored-procedures-event-category.md)   

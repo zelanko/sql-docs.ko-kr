@@ -1,6 +1,6 @@
 ---
 title: 콘솔 애플리케이션에서 폴링
-description: 폴링을 사용 하 여 콘솔 응용 프로그램에서 비동기 명령 실행이 완료 될 때까지 대기 하는 방법을 보여 주는 예제를 제공 합니다. 이 기술은 클래스 라이브러리나 사용자 인터페이스가 없는 다른 응용 프로그램 에서도 유효 합니다.
+description: 폴링을 사용하여 콘솔 애플리케이션에서 비동기 명령 실행이 완료될 때까지 대기하는 방법을 보여주는 예제를 제공합니다. 이 기술은 클래스 라이브러리나 사용자 인터페이스가 없는 다른 애플리케이션에서도 유효합니다.
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -9,26 +9,26 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: e8dc5597743a277b53f36d0bfb1487a12cbd80d9
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: bf89d2d111452970955953132edd76e602590668
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452105"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247682"
 ---
 # <a name="polling-in-console-applications"></a>콘솔 애플리케이션에서 폴링
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET 다운로드](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-ADO.NET의 비동기 작업을 사용 하면 다른 스레드에서 다른 작업을 수행 하는 동안 한 스레드에서 시간이 많이 걸리는 데이터베이스 작업을 시작할 수 있습니다. 그러나 대부분의 시나리오에서는 데이터베이스 작업이 완료 될 때까지 응용 프로그램을 계속 실행 하지 않아야 하는 지점에 도달 하 게 됩니다. 이러한 경우 비동기 작업을 폴링하여 작업이 완료 되었는지 여부를 확인 하는 것이 유용 합니다.  
+ADO.NET의 비동기 작업을 사용하면 다른 스레드에서 다른 작업을 수행하는 동안 하나의 스레드에서 시간이 많이 걸리는 데이터베이스 작업을 시작할 수 있습니다. 그러나 대부분의 시나리오에서는 데이터베이스 작업이 완료될 때까지 애플리케이션을 계속 실행해서는 안 되는 지점에 도달하게 됩니다. 이러한 경우 비동기 작업을 폴링하여 작업의 완료 여부를 확인하는 것이 유용합니다.  
   
-@No__t_0 속성을 사용 하 여 작업이 완료 되었는지 여부를 확인할 수 있습니다.  
+작업 완료 여부는 <xref:System.IAsyncResult.IsCompleted%2A> 속성으로 확인할 수 있습니다.  
   
 ## <a name="example"></a>예제  
-다음 콘솔 애플리케이션에서는 **AdventureWorks** 샘플 데이터베이스에서 데이터를 비동기적으로 업데이트합니다. 이 예에서는 장기 실행 프로세스를 에뮬레이트 하기 위해 명령 텍스트에 WAITFOR 문을 삽입 합니다. 일반적으로 명령이 느리게 실행 되는 것을 시도 하지는 않지만이 경우에는 비동기 동작을 보다 쉽게 보여 줄 수 있습니다.  
+다음 콘솔 애플리케이션에서는 **AdventureWorks** 샘플 데이터베이스에서 데이터를 비동기적으로 업데이트합니다. 이 예제에서는 장기 실행 프로세스를 에뮬레이트할 수 있도록 명령 텍스트에 WAITFOR 문을 삽입합니다. 일반적으로는 명령이 느리게 실행되도록 하지는 않겠지만 이 경우에는 명령이 비교적 느려야 비동기 동작을 더 쉽게 확인할 수 있습니다.  
   
 ```csharp  
 using System;  

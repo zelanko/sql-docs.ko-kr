@@ -1,5 +1,5 @@
 ---
-title: 문 및 결과 집합 작업 | Microsoft Docs
+title: 문 및 결과 집합 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: cc917534-f5f8-4844-87c8-597c48b4e06d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a57ffc5c9314f8e84c077b6c15ab88ed5411f028
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025364"
 ---
 # <a name="working-with-statements-and-result-sets"></a>문 및 결과 집합 사용
@@ -27,9 +27,9 @@ ms.locfileid: "69025364"
 
 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 또는 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 개체와 같은 JDBC 드라이버 Statement 개체 중 하나를 사용하는 경우 작업에 알맞은 개체를 사용해야 합니다.
 
-- OUT 매개 변수가 없는 경우에는 SQLServerCallableStatement 개체를 사용할 필요가 없습니다. 대신 SQLServerStatement 또는 SQLServerPreparedStatement 개체를 사용 합니다.
+- 출력 매개 변수가 없는 경우에는 SQLServerCallableStatement 개체를 사용할 필요가 없습니다. 대신에 SQLServerStatement 또는 the SQLServerPreparedStatement 개체를 사용하세요.
 
-- 문을 두 번 이상 실행 하지 않거나 IN 또는 OUT 매개 변수가 없는 경우 SQLServerCallableStatement 또는 SQLServerPreparedStatement 개체를 사용할 필요가 없습니다. 대신 SQLServerStatement 개체를 사용 합니다.
+- 두 번 이상 문을 실행할 의도가 없거나 입력 또는 출력 매개 변수가 없는 경우 SQLServerCallableStatement 또는 SQLServerPreparedStatement 개체를 사용할 필요가 없습니다. 대신에 SQLServerStatement 개체를 사용하세요.
 
 ## <a name="use-the-appropriate-concurrency-for-resultset-objects"></a>결과 집합 개체에 알맞은 동시성 사용
 
@@ -37,7 +37,7 @@ ms.locfileid: "69025364"
 
 ## <a name="limit-the-size-of-your-result-sets"></a>결과 집합 크기 제한
 
-[setMaxRows](../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) 메서드(또는 SET ROWCOUNT 또는 SELECT TOP N SQL 구문)를 사용하여 잠재적으로 큰 결과 집합에서 반환되는 행 수를 제한할 수도 있습니다. 큰 결과 집합을 처리해야 하는 경우 연결 문자열 속성 responseBuffering을 기본 모드인 adaptive로 설정하여 선택 응답 버퍼링을 사용해 보십시오. 이 방식을 사용하면 애플리케이션에서 서버측 커서를 사용하지 않고 큰 결과 집합을 처리할 수 있으며 애플리케이션 메모리 사용도 최소화할 수 있습니다. 자세한 내용은 [적응 버퍼링 사용](../../connect/jdbc/using-adaptive-buffering.md)을 참조 하세요.
+[setMaxRows](../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) 메서드(또는 SET ROWCOUNT 또는 SELECT TOP N SQL 구문)를 사용하여 잠재적으로 큰 결과 집합에서 반환되는 행 수를 제한할 수도 있습니다. 큰 결과 집합을 처리해야 하는 경우 연결 문자열 속성 responseBuffering을 기본 모드인 adaptive로 설정하여 선택 응답 버퍼링을 사용해 보십시오. 이 방식을 사용하면 애플리케이션에서 서버측 커서를 사용하지 않고 큰 결과 집합을 처리할 수 있으며 애플리케이션 메모리 사용도 최소화할 수 있습니다. 자세한 내용은 [적응 버퍼링 사용](../../connect/jdbc/using-adaptive-buffering.md)을 참조하세요.
 
 ## <a name="use-the-appropriate-fetch-size"></a>알맞은 반입 크기 사용
 
@@ -47,6 +47,6 @@ ms.locfileid: "69025364"
 
 점점 구체화되는 스트림 또는 BLOB와 CLOB를 사용하여 큰 열 값의 업데이트나 큰 입력 매개 변수 전송을 처리합니다. JDBC 드라이버에서는 여러 번의 왕복 이동으로 서버까지 이들을 "청크" 처리하므로 메모리에 알맞은 크기 이상의 값을 설정하고 업데이트할 수 있습니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [JDBC 드라이버로 성능 및 안정성 개선](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)

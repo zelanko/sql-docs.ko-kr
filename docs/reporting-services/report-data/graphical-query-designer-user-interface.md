@@ -18,10 +18,10 @@ ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ff907d83a4d793169872d5abaa059e8b6a1d91b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65572744"
 ---
 # <a name="graphical-query-designer-user-interface"></a>그래픽 쿼리 디자이너 사용자 인터페이스
@@ -30,7 +30,7 @@ ms.locfileid: "65572744"
  .  
   
 ## <a name="graphical-query-designer"></a>그래픽 쿼리 디자이너  
- 이 그래픽 쿼리 디자이너에서 지원하는 쿼리 명령에는 **Text**, **StoredProcedure**또는 **TableDirect**의 세 가지 유형이 있습니다. 데이터 세트에 대한 쿼리를 만들기 전에 [데이터 세트 속성](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f) 대화 상자의 쿼리 페이지에서 명령 유형 옵션을 선택해야 합니다.  
+ 이 그래픽 쿼리 디자이너는 3가지 유형의 쿼리 명령인 **Text**, **StoredProcedure** 또는 **TableDirect**를 지원합니다. 데이터 세트에 대한 쿼리를 만들기 전에 [데이터 세트 속성](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f) 대화 상자의 쿼리 페이지에서 명령 유형 옵션을 선택해야 합니다.  
   
  쿼리 유형에 사용할 수 있는 옵션은 다음과 같습니다.  
   
@@ -66,20 +66,20 @@ ms.locfileid: "65572744"
 #### <a name="toolbar-for-the-graphical-query-designer"></a>그래픽 쿼리 디자이너 도구 모음  
  그래픽 쿼리 디자이너 도구 모음은 그래픽 인터페이스를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 디자인하는 데 도움이 되는 단추를 제공합니다.  
   
-|단추|설명|  
+|단추|Description|  
 |------------|-----------------|  
 |**텍스트로 편집**|텍스트 기반 쿼리 디자이너와 그래픽 쿼리 디자이너 사이를 전환합니다.|  
 |**가져오기**|파일 또는 보고서에서 기존 쿼리를 가져옵니다. 파일 유형 .sql 및 .rdl만 지원됩니다. 자세한 내용은 [보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.|  
-|![다이어그램 창 표시/숨기기 토글 단추](../../reporting-services/report-data/media/rsqdicon-showhidediagram.gif "다이어그램 창 표시/숨기기 토글 단추")|다이어그램 창을 표시하거나 숨깁니다.|  
-|![표 형태 창 표시/숨기기 토글](../../reporting-services/report-data/media/rsqdicon-showhidegrid.gif "표 형태 창 표시/숨기기 토글")|표 형태 창을 표시하거나 숨깁니다.|  
-|![SQL 창 표시/숨기기 토글](../../reporting-services/report-data/media/rsqdicon-showhidesql.gif "SQL 창 표시/숨기기 토글")|SQL 창을 표시하거나 숨깁니다.|  
-|![결과 창 표시/숨기기 토글](../../reporting-services/report-data/media/rsqdicon-showhideresult.gif "결과 창 표시/숨기기 토글")|결과 창을 표시하거나 숨깁니다.|  
+|![다이어그램 창 표시/숨기기 설정/해제 단추](../../reporting-services/report-data/media/rsqdicon-showhidediagram.gif "다이어그램 창 표시/숨기기 설정/해제 단추")|다이어그램 창을 표시하거나 숨깁니다.|  
+|![표 형태 창 표시 또는 숨기기 설정/해제](../../reporting-services/report-data/media/rsqdicon-showhidegrid.gif "표 형태 창 표시 또는 숨기기 설정/해제")|표 형태 창을 표시하거나 숨깁니다.|  
+|![SQL 창 표시 또는 숨기기 설정/해제](../../reporting-services/report-data/media/rsqdicon-showhidesql.gif "SQL 창 표시 또는 숨기기 설정/해제")|SQL 창을 표시하거나 숨깁니다.|  
+|![결과 창 표시 또는 숨기기 설정/해제](../../reporting-services/report-data/media/rsqdicon-showhideresult.gif "결과 창 표시 또는 숨기기 설정/해제")|결과 창을 표시하거나 숨깁니다.|  
 |![쿼리 실행](../../reporting-services/report-data/media/rsqdicon-run.gif "쿼리 실행")|쿼리를 실행합니다.|  
 |![SQL 창의 SQL 검증 단추](../../reporting-services/report-data/media/rsqdicon-verifysql.gif "SQL 창의 SQL 검증 단추")|쿼리 텍스트의 구문이 올바른지 확인합니다.|  
-|![선택한 필드에 대해 오름차순 정렬 설정](../../reporting-services/report-data/media/rsqdicon-sortascending.gif "선택한 필드에 대해 오름차순 정렬 설정")|다이어그램 창의 선택한 열에 대해 정렬 순서를 **오름차순 정렬** 로 설정합니다.|  
-|![선택한 필드에 대해 내림차순 정렬 설정](../../reporting-services/report-data/media/rsqdicon-sortdescending.gif "선택한 필드에 대해 내림차순 정렬 설정")|다이어그램 창의 선택한 열에 대해 정렬 순서를 **내림차순 정렬** 로 설정합니다.|  
-|![선택한 필드에 대한 필터 제거](../../reporting-services/report-data/media/rsqdicon-removefilter.gif "선택한 필드에 대한 필터 제거")|필터가 있는 것으로 표시된 다이어그램 창에서 선택한 열의 필터를 제거(![선택한 필터 열 옆에 있는 필터 그래픽](../../reporting-services/report-data/media/rsqdicon-filter.gif "선택한 필터 열 옆에 있는 필터 그래픽"))합니다.|  
-|![선택한 필드에 대해 Group By 사용](../../reporting-services/report-data/media/rsqdicon-usegroupby.gif "선택한 필드에 대해 Group By 사용")|표 형태 창에서 **그룹화 방법** 열을 표시하거나 숨깁니다. **Group By** 토글 단추가 설정된 경우 표 형태 창에 **그룹화 방법** 이라는 추가 열이 나타나며 쿼리에서 선택한 열의 각 값이 기본적으로 **Group By**로 설정되기 때문에 선택한 열이 SQL 텍스트의 Group By 절에 포함됩니다. Group By 사용 단추를 사용하여 SELECT 절의 모든 열을 포함하는 GROUP BY 절을 자동으로 추가할 수 있습니다. SELECT 절에 집계 함수 호출(예: SUM(ColumnName))이 포함된 경우 비집계 열을 결과 집합에 표시하려면 각 열을 GROUP BY 절에 포함합니다.<br /><br /> 결과 창에 표시하려면 쿼리의 각 열에 결과 창에 표시할 값을 계산하는 데 사용할 집계 함수가 정의되어 있거나 SQL 쿼리의 GROUP BY 절에 쿼리의 열이 지정되어야 합니다.|  
+|![선택한 필드에 오름차순 정렬 설정](../../reporting-services/report-data/media/rsqdicon-sortascending.gif "선택한 필드에 오름차순 정렬 설정")|다이어그램 창의 선택한 열에 대해 정렬 순서를 **오름차순 정렬** 로 설정합니다.|  
+|![선택한 필드에 내림차순 정렬 설정](../../reporting-services/report-data/media/rsqdicon-sortdescending.gif "선택한 필드에 내림차순 정렬 설정")|다이어그램 창의 선택한 열에 대해 정렬 순서를 **내림차순 정렬** 로 설정합니다.|  
+|![선택한 필드에서 필터 제거](../../reporting-services/report-data/media/rsqdicon-removefilter.gif "선택한 필드에서 필터 제거")|필터가 있는 것으로 표시된(![선택한 필터 열 옆에 있는 필터 그래픽](../../reporting-services/report-data/media/rsqdicon-filter.gif "선택한 필터 열 옆에 있는 필터 그래픽")) 다이어그램 창에서 선택한 열의 필터를 제거합니다.|  
+|![선택한 필드에 그룹화 방법 사용](../../reporting-services/report-data/media/rsqdicon-usegroupby.gif "선택한 필드에 그룹화 방법 사용")|표 형태 창에서 **그룹화 방법** 열을 표시하거나 숨깁니다. **Group By** 토글 단추가 설정된 경우 표 형태 창에 **그룹화 방법** 이라는 추가 열이 나타나며 쿼리에서 선택한 열의 각 값이 기본적으로 **Group By**로 설정되기 때문에 선택한 열이 SQL 텍스트의 Group By 절에 포함됩니다. Group By 사용 단추를 사용하여 SELECT 절의 모든 열을 포함하는 GROUP BY 절을 자동으로 추가할 수 있습니다. SELECT 절에 집계 함수 호출(예: SUM(ColumnName))이 포함된 경우 비집계 열을 결과 집합에 표시하려면 각 열을 GROUP BY 절에 포함합니다.<br /><br /> 결과 창에 표시하려면 쿼리의 각 열에 결과 창에 표시할 값을 계산하는 데 사용할 집계 함수가 정의되어 있거나 SQL 쿼리의 GROUP BY 절에 쿼리의 열이 지정되어야 합니다.|  
 |![다이어그램 창에 새 테이블 추가](../../reporting-services/report-data/media/rsqdicon-addtable.gif "다이어그램 창에 새 테이블 추가")|데이터 원본의 새 테이블을 다이어그램 창에 추가합니다.<br /><br /> **참고** 새 테이블을 추가할 경우 쿼리 디자이너는 데이터 원본의 외래 키 관계와 일치시키려고 시도합니다. 테이블을 추가한 후 테이블 간의 링크로 표시되는 외래 키 관계가 올바른지 확인하십시오.|  
   
 #### <a name="example"></a>예제  
@@ -111,7 +111,7 @@ EXEC uspGetEmployeeManagers '1';
 #### <a name="toolbar-buttons-for-the-command-type-tabledirect"></a>TableDirect 명령 유형의 도구 모음 단추  
  그래픽 쿼리 디자이너 도구 모음은 데이터 원본의 테이블에 대한 드롭다운 목록을 제공합니다. 다음 표에서는 각 단추와 해당 기능을 나열합니다.  
   
-|단추|설명|  
+|단추|Description|  
 |------------|-----------------|  
 |**텍스트로 편집**|텍스트 기반 쿼리 디자이너와 그래픽 쿼리 디자이너 사이를 전환합니다.|  
 |**가져오기**|파일 또는 보고서에서 기존 쿼리를 가져옵니다. 파일 유형 .sql 및 .rdl만 지원됩니다. 자세한 내용은 [보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.|  
@@ -129,7 +129,7 @@ EXEC uspGetEmployeeManagers '1';
 #### <a name="toolbar-buttons-for-command-type-storedprocedure"></a>StoredProcedure 명령 유형의 도구 모음 단추  
  그래픽 쿼리 디자이너 도구 모음은 데이터 원본의 저장 프로시저에 대한 드롭다운 목록을 제공합니다. 다음 표에서는 각 단추와 해당 기능을 나열합니다.  
   
-|단추|설명|  
+|단추|Description|  
 |------------|-----------------|  
 |**텍스트로 편집**|텍스트 기반 쿼리 디자이너와 그래픽 쿼리 디자이너 사이를 전환합니다.|  
 |**가져오기**|파일 또는 보고서에서 기존 쿼리를 가져옵니다. 파일 유형 .sql 및 .rdl만 지원됩니다. 자세한 내용은 [보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.|  

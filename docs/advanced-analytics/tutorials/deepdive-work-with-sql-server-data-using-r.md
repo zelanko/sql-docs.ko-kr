@@ -1,6 +1,6 @@
 ---
 title: RevoScaleR용 데이터베이스 자습서
-description: R 자습서용 SQL Server 데이터베이스를 만드는 방법에 대한 자습서 연습입니다.
+description: 'RevoScaleR 자습서 1: R 자습서용 SQL Server 데이터베이스를 만드는 방법'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 537bfb64562dfad9dbefbce70423892cd6e1e431
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: ae2fd2d200b6a231dd76f04556d6d221df00809f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727128"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947216"
 ---
 # <a name="create-a-database-and-permissions-sql-server-and-revoscaler-tutorial"></a>데이터베이스 및 사용 권한 만들기(SQL Server 및 RevoScaleR 자습서)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 단원은 SQL Server에서 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)의 일부입니다.
+이것은 SQL Server에서 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서 시리즈](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 중 자습서 1에 해당됩니다.
 
-1단원은 이 자습서를 완료하는 데 필요한 SQL Server 데이터베이스 및 사용 권한 설정에 대한 것입니다. [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 또는 다른 쿼리 편집기를 사용하여 다음 작업을 완료합니다.
+이 자습서에서는 SQL Server 데이터베이스를 만들고 이 시리즈의 다른 자습서를 완료하는 데 필요한 권한을 설정하는 방법을 설명합니다. [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 또는 다른 쿼리 편집기를 사용하여 다음 작업을 완료합니다.
 
 > [!div class="checklist"]
 > * 두 개의 R 모델 학습 및 점수 매기기에 사용되는 데이터를 저장할 새 데이터베이스 만들기
@@ -29,7 +29,7 @@ ms.locfileid: "73727128"
   
 ## <a name="create-the-database"></a>데이터베이스 만들기
 
-이 자습서에는 데이터 및 코드를 저장하는 데이터베이스가 필요합니다. 관리자가 아닌 경우 DBA에 데이터베이스를 생성하고 로그인하도록 요청합니다. 데이터를 쓰고 읽거나 R 스크립트를 실행하려면 사용 권한이 필요합니다.
+이 자습서에는 데이터 및 코드를 저장하는 데이터베이스가 필요합니다. 관리자가 아니라면 DBA에 데이터베이스를 생성하고 로그인하도록 요청합니다. 데이터를 쓰거나 읽고 R 스크립트를 실행하려면 권한이 필요합니다.
 
 1. SQL Server Management Studio에서 R 사용 데이터베이스 인스턴스에 연결합니다.
 
@@ -37,7 +37,6 @@ ms.locfileid: "73727128"
   
 2. 새 데이터베이스의 이름을 입력합니다. RevoDeepDive.
   
-
 ## <a name="create-a-login"></a>로그인을 만듭니다.
   
 1. **새 쿼리**를 클릭하고 데이터베이스 컨텍스트를 master 데이터베이스로 변경합니다.
@@ -115,7 +114,7 @@ GO
   
 - **DDL 권한이 없습니다. 그래도 자습서를 실행할 수 있나요?**
   
-    예, 하지만 사용자에게 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 미리 로드하도록 요청하고 다음 단원으로 건너뜁니다. DDL 권한이 필요한 함수는 가능한 경우 자습서에서 호출됩니다.
+    예, 하지만 사용자에게 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 미리 로드하도록 요청하고 다음 자습서로 건너뛰어야 합니다. DDL 권한이 필요한 함수는 가능한 경우 자습서에서 호출됩니다.
 
     또한 관리자에게 EXECUTE ANY EXTERNAL SCRIPT 권한을 부여하도록 요청합니다. 원격이든 `sp_execute_external_script`를 사용하든 R 스크립트 실행에 필요합니다.
 

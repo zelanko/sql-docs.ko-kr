@@ -1,27 +1,27 @@
 ---
 title: 고가용성 재해 복구를 위한 SqlClient 지원
-description: 고가용성, 재해 복구 (AlwaysOn) 가용성 그룹에 대 한 SqlClient 지원에 대해 설명 합니다.
+description: 고가용성 재해 복구(AlwaysOn) 가용성 그룹을 위한 SqlClient 지원에 대해 설명합니다.
 ms.date: 08/15/2019
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: c60ade4c949574b589bf1e1e660564775b394527
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: b84790960455d60411cae14ae180be0d8891e4a2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451991"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258555"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>고가용성 재해 복구를 위한 SqlClient 지원
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET 다운로드](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-이 항목에서는 고가용성 재해 복구 (AlwaysOn 가용성 그룹)를 지원 SQL Server 하기 위해 Microsoft SqlClient Data Provider에 대해 설명 합니다.  SQL Server 2012에는 AlwaysOn 가용성 그룹 기능이 추가되었습니다. AlwaysOn 가용성 그룹에 대한 자세한 내용은 SQL Server 온라인 설명서를 참조하세요.  
+이 항목에서는 고가용성 재해 복구(AlwaysOn 가용성 그룹)에 대한 Microsoft SqlClient Data Provider for SQL Server 지원에 대해 설명합니다.  SQL Server 2012에는 AlwaysOn 가용성 그룹 기능이 추가되었습니다. AlwaysOn 가용성 그룹에 대한 자세한 내용은 SQL Server 온라인 설명서를 참조하세요.  
   
 이제 연결 속성에 고가용성 재해 복구 AG(가용성 그룹)의 가용성 그룹 수신기 또는 SQL Server 2012 장애 조치(Failover) 클러스터 인스턴스를 지정할 수 있습니다. SqlClient 애플리케이션이 장애 조치되는 AlwaysOn 데이터베이스에 연결되는 경우 장애 조치 후 작업을 계속하기 위해 원래 연결이 끊어지고 애플리케이션은 새 연결을 열어야 합니다.  
   
@@ -30,13 +30,13 @@ ms.locfileid: "72451991"
 > [!NOTE]
 >  연결 제한 시간을 늘리고 연결 재시도 논리를 구현하면 애플리케이션이 가용성 그룹에 연결될 가능성이 증가합니다. 또한 장애 조치(failover)로 인해 연결이 실패할 수 있으므로 실패한 연결을 다시 연결할 때까지 다시 시도하는 연결 재시도 논리를 구현해야 합니다.  
   
-SQL Server에 대 한 Microsoft SqlClient Data Provider에서 지원 되는 연결 속성은 다음과 같습니다.  
+Microsoft SqlClient Data Provide for SQL Server에서 지원되는 연결 속성은 다음과 같습니다.  
   
 - `ApplicationIntent`  
   
 - `MultiSubnetFailover`  
   
-다음을 사용 하 여 프로그래밍 방식으로 이러한 연결 문자열 키워드를 수정할 수 있습니다.  
+다음과 같은 방법으로 프로그래밍 방식으로 이러한 연결 문자열 키워드를 수정할 수 있습니다.  
   
 - <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent%2A>  
   
@@ -59,11 +59,11 @@ SqlClient의 연결 문자열 키워드에 대한 자세한 내용은 <xref:Micr
   
 - IP 주소가 64개 이상으로 구성된 SQL Server 인스턴스에 연결하면 연결 오류가 발생합니다.  
   
-- `MultiSubnetFailover` 연결 속성을 사용하는 애플리케이션 동작은 SQL Server 인증, Kerberos 인증, Windows 인증 등의 인증 유형에 영향을 받지 않습니다.  
+- `MultiSubnetFailover` 연결 속성을 사용하는 애플리케이션의 동작은 인증 형식, 즉 SQL Server 인증, Kerberos 인증 또는 Windows 인증에 따른 영향을 받지 않습니다.  
   
 - 장애 조치 시간을 수용하도록 `Connect Timeout` 값을 늘리고 애플리케이션 연결 재시도 횟수를 줄입니다.  
   
-- 분산 트랜잭션은 지원되지 않습니다.  
+- 분산된 트랜잭션은 지원되지 않습니다.  
   
  읽기 전용 라우팅이 적용되지 않으면 다음과 같은 경우 보조 복제본 위치에 대한 연결이 실패합니다.  
   
@@ -71,12 +71,12 @@ SqlClient의 연결 문자열 키워드에 대한 자세한 내용은 <xref:Micr
   
 - 애플리케이션에서 `ApplicationIntent=ReadWrite`(아래 설명 참조)를 사용하고 보조 복제본 위치가 읽기 전용 액세스용으로 구성되어 있는 경우  
   
-읽기 전용 보조 복제본에서는 <xref:Microsoft.Data.SqlClient.SqlDependency> 지원 되지 않습니다.  
+<xref:Microsoft.Data.SqlClient.SqlDependency>는 읽기 전용 보조 복제본에서 지원되지 않습니다.  
   
 주 복제본이 읽기 전용 작업을 거부하도록 구성되어 있고 연결 문자열에 `ApplicationIntent=ReadOnly`가 포함되어 있으면 연결이 실패합니다.  
   
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>데이터베이스 미러링에서 다중 서브넷 클러스터를 사용하도록 업그레이드  
-연결 문자열에 `MultiSubnetFailover` 및 `Failover Partner` 연결 키워드가 있는 경우 또는 `MultiSubnetFailover=True`와 TCP 이외의 프로토콜이 사용 되는 경우 연결 오류 (<xref:System.ArgumentException>)가 발생 합니다. `MultiSubnetFailover`가 사용되고 SQL Server에서 데이터베이스 미러링 쌍의 일부임을 나타내는 장애 조치(Failover) 파트너 응답을 반환하는 경우에도 오류(<xref:Microsoft.Data.SqlClient.SqlException>)가 발생합니다.  
+연결 문자열에 `MultiSubnetFailover` 및 `Failover Partner` 연결 키워드가 있거나 `MultiSubnetFailover=True`와 TCP가 아닌 프로토콜이 사용되면 연결 오류(<xref:System.ArgumentException>)가 발생합니다. `MultiSubnetFailover`가 사용되고 SQL Server에서 데이터베이스 미러링 쌍의 일부임을 나타내는 장애 조치(Failover) 파트너 응답을 반환하는 경우에도 오류(<xref:Microsoft.Data.SqlClient.SqlException>)가 발생합니다.  
   
 현재 데이터베이스 미러링을 사용 중인 SqlClient 애플리케이션을 다중 서브넷 시나리오로 업그레이드할 경우에는 `Failover Partner` 연결 속성을 제거하고 이를 `MultiSubnetFailover`로 설정된 `True`로 바꾸고, 연결 문자열에서 서버 이름을 가용성 그룹 수신기로 바꿔야 합니다. 연결 문자열에 `Failover Partner` 및 `MultiSubnetFailover=True`가 사용될 경우 드라이버에서 오류가 발생합니다. 하지만 연결 문자열에 `Failover Partner` 및 `MultiSubnetFailover=False`(또는 `ApplicationIntent=ReadWrite`)가 사용될 경우 애플리케이션에 데이터베이스 미러링이 사용됩니다.  
   
@@ -87,7 +87,7 @@ AG의 기본 데이터베이스에서 데이터베이스 미러링이 사용되�
   
 `ApplicationIntent` 키워드는 레거시 읽기 전용 데이터베이스에 적용되지 않습니다.  
   
-데이터베이스는 대상 AlwaysOn 데이터베이스에 대한 읽기 작업을 허용하거나 허용하지 않을 수 있습니다. 이 작업은 `PRIMARY_ROLE` 및 `SECONDARY_ROLE`Transact SQL 문의 `ALLOW_CONNECTIONS` 절을 사용 하 여 수행 됩니다.  
+데이터베이스는 대상 AlwaysOn 데이터베이스에 대한 읽기 작업을 허용하거나 허용하지 않을 수 있습니다. (이 설정은 `PRIMARY_ROLE` 및 `SECONDARY_ROLE`Transact-SQL 문의 `ALLOW_CONNECTIONS` 절로 수행됩니다.)  
   
 `ApplicationIntent` 키워드는 읽기 전용 라우팅을 설정하는 데 사용됩니다.  
   

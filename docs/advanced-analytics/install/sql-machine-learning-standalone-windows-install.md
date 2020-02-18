@@ -1,29 +1,29 @@
 ---
 title: Machine Learning Server 설치(독립 실행형)
-description: RevoScaleR, revoscalepy, MicrosoftML 및 기타 패키지를 사용하여 R 및 Python 개발용 인스턴스 비인식 독립 실행형 기계 학습 서버를 설치합니다.
+description: Python 및 R 용도의 독립 실행형 기계 학습 서버를 설치하세요. SQL Server 설치 프로그램을 통해 설치되는 독립 실행형 서버는 SQL 브랜드가 아닌 버전의 Microsoft Machine Learning Server와 기능적으로 동일합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/04/2019
+ms.date: 01/03/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 02df024801dad815b640f4ef4222a0c8face485b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 319ae61fbdca64bc6f27143bdd4a42aec635d129
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727633"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76891731"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>SQL Server 설치 프로그램을 사용하여 Machine Learning Server(독립 실행형) 또는 R Server 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-SQL Server 설치 프로그램에는 SQL Server 외부에서 실행되는 인스턴스 비인식 독립 실행형 기계 학습 서버를 설치하는 **공유 기능** 옵션이 포함되어 있습니다. 이 기능을 **Machine Learning Server(독립 실행형)** 라고 하며 R 및 Python을 포함하고 있습니다. 
+SQL Server 설치 프로그램에는 SQL Server 외부에서 실행되는 독립 실행형 기계 학습 서버 설치를 위한 **공유 기능** 옵션이 포함되어 있습니다. 이 기능은 **Machine Learning Server(독립 실행형)** 라고 하며 Python 및 R을 포함하고 있습니다. 
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-SQL Server 설치 프로그램에는 SQL Server 외부에서 실행되는 인스턴스 비인식 독립 실행형 기계 학습 서버를 설치하는 **공유 기능** 옵션이 포함되어 있습니다. SQL Server 2016에서는 이 기능을 **R Server(독립 실행형)** 라고 합니다.  
+SQL Server 설치 프로그램에는 SQL Server 외부에서 실행되는 독립 실행형 기계 학습 서버 설치를 위한 **공유 기능** 옵션이 포함되어 있습니다. SQL Server 2016에서는 이 기능을 **R Server(독립 실행형)** 라고 합니다.  
 ::: moniker-end
 
 SQL Server 설치 프로그램을 통해 설치되는 독립 실행형 서버는 SQL 브랜드가 아닌 버전의 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)와 기능적으로 동일하며, 다음을 포함한 동일한 사용 사례 및 시나리오를 지원합니다.
@@ -39,7 +39,7 @@ SQL Server의 부속 서버인 독립 실행형 서버는 지원되는 데이터
 
 <a name="bkmk_prereqs"> </a>
 
-## <a name="pre-install-checklist"></a>사전 설치 검사 목록
+## <a name="pre-install-checklist"></a>설치 전 검사 목록
 
 SQL Server 2016 R Server(독립 실행형) 또는 Microsoft R Server 같은 이전 버전을 설치한 경우 계속하기 전에 기존 설치를 제거해야 합니다.
 
@@ -166,7 +166,7 @@ R 및 Python 개발의 경우 동일한 컴퓨터에 여러 버전을 설치하�
 
 다음 표에는 Microsoft 설치 관리자에서 만든 R 및 Python 배포판의 경로가 나열되어 있습니다. 완전한 정보를 제공하기 위해, 이 표에는 Microsoft Machine Learning Server의 독립 실행형 설치 관리자뿐 아니라 SQL Server 설치 프로그램에서 생성한 경로도 포함되어 있습니다.
 
-|버전 옵션| 설치 방법 | 기본 폴더|
+|버전| 설치 방법 | 기본 폴더|
 |----|----|----|
 |SQL Server 2019 Machine Learning Server(독립 실행형) |  SQL Server 2019 설치 마법사 |`C:\Program Files\Microsoft SQL Server\150\R_SERVER` <br/>`C:\Program Files\Microsoft SQL Server\150\PYTHON_SERVER`|
 |SQL Server 2017 Machine Learning Server(독립 실행형) |  SQL Server 2017 설치 마법사 |`C:\Program Files\Microsoft SQL Server\140\R_SERVER` <br/>`C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`|
@@ -196,11 +196,7 @@ R 및 Python 개발의 경우 동일한 컴퓨터에 여러 버전을 설치하�
 
 3. 웹 서비스 배포를 위해 웹 노드 및 컴퓨팅 노드로 실행되도록 운영화를 설정한 경우 예방 조치로 **AppSettings.json** 파일을 백업합니다. SQL Server 2017 CU13 이상을 적용하면 이 파일이 수정되므로 백업 복사본을 만들어 원래 버전을 유지하는 것이 좋습니다.
 
-4. 인터넷에 연결된 디바이스에서 해당 SQL Server 버전의 누적 업데이트 링크를 클릭합니다.
-
-  + SQL Server 2019 업데이트 *(아직 업데이트를 사용할 수 없음)*
-  + [SQL Server 2017 업데이트](https://sqlserverupdates.com/sql-server-2017-updates/)
-  + [SQL Server 2016 업데이트](https://sqlserverupdates.com/sql-server-2016-updates/)
+4. 인터넷에 연결된 기계를 이용해 [Microsoft SQL Server 최신 업데이트](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server)에서 버전의 최신 누적 업데이트를 다운로드하세요.
 
 5. 최신 누적 업데이트를 다운로드합니다. 실행 파일입니다.
 
@@ -214,7 +210,7 @@ R 및 Python 개발의 경우 동일한 컴퓨터에 여러 버전을 설치하�
 
    + .exe 파일을 두 번 클릭하여 설치 프로그램을 실행합니다. 인터넷에 연결되지 않은 서버에 누적 업데이트를 설치하는 경우 R 및 Python에 대한 .cab 파일의 위치를 선택하라는 메시지가 표시됩니다.
 
-8. 설치 후, 웹 노드 및 컴퓨팅 노드를 사용하여 운영화를 설정한 서버에서 "MMLNativePath" 바로 아래에 "MMLResourcePath" 항목을 추가하여 **AppSettings.json**을 편집합니다. 예를 들어
+8. 설치 후 웹 노드 및 컴퓨팅 노드를 사용하여 배포를 설정한 서버에서 "MMLNativePath" 바로 아래에 "MMLResourcePath" 항목을 추가하여 **AppSettings.json**을 편집합니다. 다음은 그 예입니다.
 
     ```json
     "ScorerParameters": {

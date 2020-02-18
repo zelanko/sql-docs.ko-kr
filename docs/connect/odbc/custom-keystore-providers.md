@@ -11,10 +11,10 @@ ms.assetid: a6166d7d-ef34-4f87-bd1b-838d3ca59ae7
 ms.author: v-chojas
 author: MightyPen
 ms.openlocfilehash: 0cf2946517be732094d01ff9889faf080a36e85b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68006484"
 ---
 # <a name="custom-keystore-providers"></a>사용자 지정 키 저장소 공급자
@@ -22,9 +22,9 @@ ms.locfileid: "68006484"
 
 ## <a name="overview"></a>개요
 
-SQL Server 2016의 열 암호화 기능을 사용 하려면 암호화 된 열에 저장 된 데이터에 액세스 하기 위해 서버에 저장 된 암호화 된 열 암호화 키 (ECEKs)를 클라이언트에서 검색 한 다음 CEKs (열 암호화 키)로 해독 해야 합니다. ECEKs는 CMKs (열 마스터 키)로 암호화 되며, CMKS의 보안은 열 암호화의 보안에 중요 합니다. 따라서 CMK는 안전한 위치에 저장 해야 합니다. 열 암호화 키 저장소 공급자는 ODBC 드라이버가 안전 하 게 저장 된 CMKs에 액세스할 수 있도록 인터페이스를 제공 합니다. 사용자 지정 보안 저장소를 사용 하는 사용자의 경우 사용자 지정 키 저장소 공급자 인터페이스는 ODBC 드라이버에 대 한 CMK의 보안 저장소에 대 한 액세스를 구현 하기 위한 프레임 워크를 제공 하며,이를 사용 하 여 CEK 암호화 및 암호 해독을 수행할 수 있습니다.
+SQL Server 2016의 열 암호화 기능을 사용하려면 암호화된 열에 저장된 데이터에 액세스하기 위해 서버에 저장된 ECEK(암호화된 열 암호화 키)를 클라이언트에서 검색한 다음 CEK(열 암호화 키)로 해독해야 합니다. ECEK는 CMK(열 마스터 키)로 암호화되며 CMK의 보안은 열 암호화의 보안에 중요합니다. 따라서 CMK는 안전한 위치에 저장해야 합니다. 열 암호화 키 저장소 공급자의 목적은 ODBC 드라이버가 안전하게 저장된 CMK에 액세스할 수 있도록 인터페이스를 제공하는 것입니다. 자체 보안 저장소를 사용하는 사용자의 경우 사용자 지정 키 저장소 공급자 인터페이스는 ODBC 드라이버용 CMK의 보안 저장소에 대한 액세스를 구현하기 위한 프레임워크를 제공하며, 이를 사용하여 CEK 암호화 및 암호 해독을 수행할 수 있습니다.
 
-각 키 저장소 공급자는 하나 이상의 CMKs를 포함 하 고 관리 합니다. 하나 이상의 CMKs는 공급자에서 정의한 형식의 키 경로에 의해 식별 됩니다. 이는 암호화 알고리즘과 함께 공급자에 의해 정의 된 문자열을 사용 하 여 CEK의 암호화 및 ECEK의 암호 해독을 수행할 수 있습니다. 이 알고리즘은 ECEK와 공급자의 이름과 함께 데이터베이스의 암호화 메타 데이터에 저장 됩니다. 자세한 내용은 [열 마스터 키 만들기](../../t-sql/statements/create-column-master-key-transact-sql.md) 및 [열 암호화 키 만들기](../../t-sql/statements/create-column-encryption-key-transact-sql.md) 를 참조 하세요. 따라서 키 관리의 두 가지 기본 작업은 다음과 같습니다.
+각 키 저장소 공급자는 하나 이상의 CMK를 포함하고 관리합니다. 하나 이상의 CMK는 공급자가 정의한 문자열 형식인 키 경로로 식별됩니다. 이는 공급자가 정의한 문자열인 암호화 알고리즘과 함께 CEK의 암호화 및 ECEK의 암호 해독을 수행하는 데 사용될 수 있습니다. 이 알고리즘은 ECEK 및 공급자의 이름과 함께 데이터베이스의 암호화 메타데이터에 저장됩니다. 자세한 내용은 [열 마스터 키 만들기](../../t-sql/statements/create-column-master-key-transact-sql.md) 및 [열 암호화 키 만들기](../../t-sql/statements/create-column-encryption-key-transact-sql.md)를 참조하세요. 따라서 키 관리의 두 가지 기본 작업은 다음과 같습니다.
 
 ```
 CEK = DecryptViaCEKeystoreProvider(CEKeystoreProvider_name, Key_path, Key_algorithm, ECEK)
@@ -34,25 +34,25 @@ CEK = DecryptViaCEKeystoreProvider(CEKeystoreProvider_name, Key_path, Key_algori
 ECEK = EncryptViaCEKeystoreProvider(CEKeyStoreProvider_name, Key_path, Key_algorithm, CEK)
 ```
 
-여기서는 `CEKeystoreProvider_name` 특정 열 Encryption 키 저장소 provider (cekeyvault 공급자)를 식별 하는 데 사용 되 고, 다른 인수는 cekeyvault 공급자가 (E) CEK을 암호화/해독 하는 데 사용 됩니다. Name 및 keypath는 CMK 메타 데이터에서 제공 하는 반면, algorithm 및 ECEK 값은 CEK 메타 데이터에서 제공 됩니다. 기본 제공 공급자와 함께 여러 키 저장소 공급자가 있을 수 있습니다. CEK가 필요한 작업을 수행 하는 경우 드라이버는 CMK 메타 데이터를 사용 하 여 이름으로 적절 한 키 저장소 공급자를 찾고 다음과 같이 표시할 수 있는 해독 작업을 실행 합니다.
+여기서 `CEKeystoreProvider_name`은 특정 열 암호화 키 저장소 공급자(CEKeystoreProvider)를 식별하는 데 사용되고 다른 인수는 CEKeystoreProvider에서 (E)CEK를 암호화/암호 해독하는 데 사용됩니다. 이름과 키 경로는 CMK 메타데이터에 의해 제공되는 반면 알고리즘 및 ECEK 값은 CEK 메타데이터에 의해 제공됩니다. 기본 제공 공급자와 함께 여러 키 저장소 공급자가 있을 수 있습니다. CEK가 필요한 작업을 수행할 때 드라이버는 CMK 메타데이터를 사용하여 이름으로 적절한 키 저장소 공급자를 찾고 다음과 같이 표시할 수 있는 해독 작업을 실행합니다.
 
 ```
 CEK = CEKeyStoreProvider_specific_decrypt(Key_path, Key_algorithm, ECEK)
 ```
 
-드라이버가 CEKs를 암호화할 필요가 없지만 CMK 만들기 및 회전과 같은 작업을 구현 하기 위해 키 관리 도구에서이 작업을 수행 해야 할 수도 있습니다. 이렇게 하려면 역 작업을 수행 해야 합니다.
+드라이버가 CEK를 암호화할 필요는 없지만 CMK 생성 및 회전과 같은 작업을 구현하려면 키 관리 도구에서 이를 수행해야 합니다. 이를 위해서는 역 작업을 수행해야 합니다.
 
 ```
 ECEK = CEKeyStoreProvider_specific_encrypt(Key_path, Key_algorithm, CEK)
 ```
 
-### <a name="cekeystoreprovider-interface"></a>Cekeyvault 공급자 인터페이스
+### <a name="cekeystoreprovider-interface"></a>CEKeyStoreProvider 인터페이스
 
-이 문서에서는 Cekeyvault 공급자 인터페이스에 대해 자세히 설명 합니다. 이 인터페이스를 구현 하는 키 저장소 공급자는 Microsoft ODBC Driver for SQL Server 사용할 수 있습니다. Cekeyvault 공급자 구현자는이 가이드를 사용 하 여 드라이버에서 사용할 수 있는 사용자 지정 키 저장소 공급자를 개발할 수 있습니다.
+이 문서에서는 CEKeyStoreProvider 인터페이스에 대해 자세히 설명합니다. 이 인터페이스를 구현하는 키 저장소 공급자는 Microsoft ODBC Driver for SQL Server에서 사용할 수 있습니다. CEKeyStoreProvider 구현자는 이 안내서를 사용하여 드라이버가 사용할 수 있는 사용자 지정 키 저장소 공급자를 개발할 수 있습니다.
 
-키 저장소 공급자 라이브러리 ("공급자 라이브러리")는 ODBC 드라이버에서 로드할 수 있고 하나 이상의 키 저장소 공급자를 포함 하는 동적 연결 라이브러리입니다. 기호 `CEKeystoreProvider` 는 공급자 라이브러리에서 내보내야 하며, 라이브러리 내의 각 키 저장소 공급자에 대 한 구조체에 `CEKeystoreProvider` 대 한 포인터의 null로 끝나는 배열 주소 여야 합니다.
+키 저장소 공급자 라이브러리("공급자 라이브러리")는 ODBC 드라이버에서 로드할 수 있고 하나 이상의 키 저장소 공급자를 포함하는 동적 연결 라이브러리입니다. `CEKeystoreProvider` 기호는 공급자 라이브러리에서 내보내야 하며 라이브러리 내의 각 키 저장소 공급자자마다 하나씩 `CEKeystoreProvider` 구조에 대해 Null로 종료된 포인터 배열의 주소여야 합니다.
 
-구조 `CEKeystoreProvider` 는 단일 키 저장소 공급자의 진입점을 정의 합니다.
+`CEKeystoreProvider` 구조는 단일 키 저장소 공급자의 진입점을 정의합니다.
 
 ```
 typedef struct CEKeystoreProvider {
@@ -80,116 +80,116 @@ typedef struct CEKeystoreProvider {
 } CEKEYSTOREPROVIDER;
 ```
 
-|필드 이름|설명|
+|필드 이름|Description|
 |:--|:--|
-|`Name`|키 저장소 공급자의 이름입니다. 이전에 드라이버에서 로드 했거나이 라이브러리에 있는 다른 키 저장소 공급자와 같지 않아야 합니다. Null로 종료된 와이드 문자*열입니다.|
-|`Init`|초기화 함수 초기화 함수가 필요 하지 않은 경우이 필드는 null 일 수 있습니다.|
-|`Read`|공급자 읽기 함수입니다. 필요 하지 않은 경우 null 일 수 있습니다.|
-|`Write`|공급자 쓰기 함수입니다. Read가 null이 아닌 경우 필요 합니다. 필요 하지 않은 경우 null 일 수 있습니다.|
-|`DecryptCEK`|ECEK 암호 해독 함수 이 함수는 키 저장소 공급자가 존재 하는 이유 이며 null이 아니어야 합니다.|
-|`EncryptCEK`|CEK 암호화 함수입니다. 드라이버는이 함수를 호출 하지 않지만 키 관리 도구를 사용 하 여 ECEK 생성에 프로그래밍 방식으로 액세스할 수 있습니다. 필요 하지 않은 경우 null 일 수 있습니다.|
-|`Free`|종료 함수입니다. 필요 하지 않은 경우 null 일 수 있습니다.|
+|`Name`|키 저장소 공급자의 이름입니다. 드라이버가 이전에 로드했거나 이 라이브러리에 있는 다른 키 저장소 공급자와 동일해서는 안 됩니다. Null로 종료된 와이드 문자*열입니다.|
+|`Init`|초기화 함수입니다. 초기화 함수가 필요하지 않은 경우 이 필드는 Null일 수 있습니다.|
+|`Read`|공급자 read 함수입니다. 필요하지 않은 경우 Null일 수 있습니다.|
+|`Write`|공급자 write 함수입니다. Read가 Null이 아닌 경우 필요합니다. 필요하지 않은 경우 Null일 수 있습니다.|
+|`DecryptCEK`|ECEK 암호 해독 함수입니다. 이 함수는 키 저장소 공급자가 존재하는 이유이며 Null이 아니어야 합니다.|
+|`EncryptCEK`|CEK 암호화 함수입니다. 드라이버는 이 함수를 호출하지 않지만 키 관리 도구를 사용하여 ECEK 생성에 프로그래밍 방식으로 액세스할 수 있습니다. 필요하지 않은 경우 Null일 수 있습니다.|
+|`Free`|종료 함수입니다. 필요하지 않은 경우 Null일 수 있습니다.|
 
-Free를 제외 하 고이 인터페이스의 함수에는 모두 **ctx** 및 **onError**매개 변수 쌍이 있습니다. 이전에는 함수가 호출 되는 컨텍스트를 식별 하는 반면 후자는 오류를 보고 하는 데 사용 됩니다. 자세한 내용은 아래의 [컨텍스트](#context-association) 및 [오류 처리](#error-handling) 를 참조 하세요.
+Free를 제외하고 이 인터페이스의 함수에는 모두 **ctx** 및 **onError**의 매개 변수 쌍이 있습니다. 전자는 함수가 호출되는 컨텍스트를 식별하고 후자는 오류를 보고하는 데 사용됩니다. 자세한 내용은 아래 [컨텍스트](#context-association) 및 [오류 처리](#error-handling)를 참조하세요.
 
 ```
 int Init(CEKEYSTORECONTEXT *ctx, errFunc onError);
 ```
-공급자 정의 초기화 함수의 자리 표시자 이름입니다. 공급자가 로드 된 후, 처음으로 ECEK 암호 해독 또는 읽기 ()/쓰기 () 요청을 수행 해야 하는 경우 드라이버는이 함수를 한 번 호출 합니다. 이 함수를 사용 하 여 필요한 초기화를 수행 합니다. 
+공급자 정의 초기화 함수의 자리 표시자 이름입니다. 공급자가 로드된 후, 처음으로 ECEK 암호 해독 또는 Read()/Write() 요청을 수행해야 하는 경우 드라이버는 이 함수를 한 번 호출합니다. 이 함수를 사용하여 필요한 초기화를 수행합니다. 
 
-|인수|설명|
+|인수|Description|
 |:--|:--|
-|`ctx`|입력 작업 컨텍스트입니다.|
-|`onError`|입력 오류 보고 함수입니다.|
-|`Return Value`|성공 여부를 나타내려면 0이 아닌 값을 반환 하 고, 실패를 나타내려면 0을 반환 합니다.|
+|`ctx`|[Input] 작업 컨텍스트입니다.|
+|`onError`|[Input] 오류 보고 함수입니다.|
+|`Return Value`|성공 여부를 나타내려면 0이 아닌 값을 반환하고, 실패를 나타내려면 0을 반환합니다.|
 
 ```
 int Read(CEKEYSTORECONTEXT *ctx, errFunc onError, void *data, unsigned int *len);
 ```
 
-공급자 정의 통신 함수의 자리 표시자 이름입니다. 응용 프로그램에서 SQL_COPT_SS_CEKEYSTOREDATA 연결 특성을 사용 하 여 (이전에 작성 한) 공급자의 데이터를 읽으려고 할 때 드라이버가이 함수를 호출 하 여 응용 프로그램에서 공급자의 임의 데이터를 읽을 수 있게 합니다. 자세한 내용은 [키 저장소 공급자와 통신](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#communicating-with-keystore-providers) 을 참조 하세요.
+공급자 정의 통신 함수의 자리 표시자 이름입니다. 애플리케이션이 SQL_COPT_SS_CEKEYSTOREDATA 연결 특성을 사용하여 이전에 작성된 공급자로부터 데이터 읽기를 요청하면 드라이버가 이 함수를 호출하여 애플리케이션에서 공급자의 임의 데이터를 읽을 수 있도록 합니다. 자세한 내용은 [키 저장소 공급자와 통신](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#communicating-with-keystore-providers)을 참조하세요.
 
-|인수|설명|
+|인수|Description|
 |:--|:--|
-|`ctx`|입력 작업 컨텍스트입니다.|
-|`onError`|입력 오류 보고 함수입니다.|
-|`data`|출력 응용 프로그램에서 읽을 데이터를 공급자가 기록 하는 버퍼에 대 한 포인터입니다. 이는 CEKEYVAULT 데이터 구조의 데이터 필드에 해당 합니다.|
-|`len`|InOut 길이 값에 대 한 포인터입니다. 입력 시이는 데이터 버퍼의 최대 길이 이며 공급자는 * len 바이트를 초과 하 여 쓰지 않아야 합니다. 반환 시 공급자는 실제로 쓰여진 바이트 수로 * len을 업데이트 해야 합니다.|
-|`Return Value`|성공 여부를 나타내려면 0이 아닌 값을 반환 하 고, 실패를 나타내려면 0을 반환 합니다.|
+|`ctx`|[Input] 작업 컨텍스트입니다.|
+|`onError`|[Input] 오류 보고 함수입니다.|
+|`data`|[Output] 애플리케이션에서 읽을 데이터를 공급자가 쓰는 버퍼에 대한 포인터입니다. 이는 CEKEYSTOREDATA 구조의 데이터 필드에 해당합니다.|
+|`len`|[InOut] 길이 값의 포인터입니다. 입력 시 데이터 버퍼의 최대 길이이며 공급자는 *len 바이트를 초과하여 쓰지 않아야 합니다. 반환 시 공급자는 실제로 쓰여진 바이트 수로 *len을 업데이트해야 합니다.|
+|`Return Value`|성공 여부를 나타내려면 0이 아닌 값을 반환하고, 실패를 나타내려면 0을 반환합니다.|
 
 ```
 int Write(CEKEYSTORECONTEXT *ctx, errFunc onError, void *data, unsigned int len);
 ```
-공급자 정의 통신 함수의 자리 표시자 이름입니다. 응용 프로그램이 SQL_COPT_SS_CEKEYSTOREDATA 연결 특성을 사용 하 여 데이터를 공급자에 쓰려고 할 때 드라이버가이 함수를 호출 하 여 응용 프로그램이 임의의 데이터를 공급자에 게 쓸 수 있도록 합니다. 자세한 내용은 [키 저장소 공급자와 통신](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#communicating-with-keystore-providers) 을 참조 하세요.
+공급자 정의 통신 함수의 자리 표시자 이름입니다. 애플리케이션이 SQL_COPT_SS_CEKEYSTOREDATA 연결 특성을 사용하여 공급자에게 데이터 쓰기를 요청하면 드라이버가 이 함수를 호출하여 애플리케이션에서 공급자에게 임의 데이터를 쓸 수 있도록 합니다. 자세한 내용은 [키 저장소 공급자와 통신](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#communicating-with-keystore-providers)을 참조하세요.
 
-|인수|설명|
+|인수|Description|
 |:--|:--|
-|`ctx`|입력 작업 컨텍스트입니다.|
-|`onError`|입력 오류 보고 함수입니다.|
-|`data`|입력 읽을 공급자의 데이터를 포함 하는 버퍼에 대 한 포인터입니다. 이는 CEKEYVAULT 데이터 구조의 데이터 필드에 해당 합니다. 공급자는이 버퍼에서 len 바이트를 초과 하지 않아야 합니다.|
-|`len`|입력 데이터에서 사용할 수 있는 바이트 수입니다. 이는 CEKEYDATASIZE 데이터 구조의 dataSize 필드에 해당 합니다.|
-|`Return Value`|성공 여부를 나타내려면 0이 아닌 값을 반환 하 고, 실패를 나타내려면 0을 반환 합니다.|
+|`ctx`|[Input] 작업 컨텍스트입니다.|
+|`onError`|[Input] 오류 보고 함수입니다.|
+|`data`|[Input] 읽을 공급자의 데이터를 포함하는 버퍼에 대한 포인터입니다. 이는 CEKEYSTOREDATA 구조의 데이터 필드에 해당합니다. 공급자는 이 버퍼에서 len 바이트를 초과해서 읽지 않아야 합니다.|
+|`len`|[Input] 데이터에서 사용할 수 있는 바이트 수입니다. 이는 CEKEYSTOREDATA 구조의 dataSize 필드에 해당합니다.|
+|`Return Value`|성공 여부를 나타내려면 0이 아닌 값을 반환하고, 실패를 나타내려면 0을 반환합니다.|
 
 ```
 int (*DecryptCEK)( CEKEYSTORECONTEXT *ctx, errFunc *onError, const wchar_t *keyPath, const wchar_t *alg, unsigned char *ecek, unsigned short ecekLen, unsigned char **cekOut, unsigned short *cekLen);
 ```
-공급자가 정의한 ECEK 암호 해독 함수의 자리 표시자 이름입니다. 드라이버는이 함수를 호출 하 여이 공급자와 연결 된 CMK가 CEK로 암호화 된 ECEK의 암호를 해독 합니다.
+공급자 정의 ECEK 암호 해독 함수의 자리 표시자 이름입니다. 드라이버는 이 함수를 호출하여 이 공급자와 연결된 CMK에 의해 암호화된 ECEK를 CEK로 해독합니다.
 
-|인수|설명|
+|인수|Description|
 |:--|:--|
-|`ctx`|입력 작업 컨텍스트입니다.|
-|`onError`|입력 오류 보고 함수입니다.|
-|`keyPath`|입력 지정 된 ECEK에서 참조 하는 CMK에 대 한 [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) metadata 특성의 값입니다. Null로 종료된 와이드 문자*열입니다. 이 공급자가 처리 하는 CMK를 식별 하기 위한 것입니다.|
-|`alg`|입력 지정 된 ECEK에 대 한 [알고리즘](../../t-sql/statements/create-column-encryption-key-transact-sql.md) 메타 데이터 특성의 값입니다. Null로 종료된 와이드 문자*열입니다. 이는 지정 된 ECEK를 암호화 하는 데 사용 되는 암호화 알고리즘을 식별 하기 위한 것입니다.|
-|`ecek`|입력 암호를 해독할 ECEK에 대 한 포인터입니다.|
-|`ecekLen`|입력 ECEK의 길이입니다.|
-|`cekOut`|출력 공급자는 해독 된 ECEK에 대해 메모리를 할당 하 고 cekOut에서 가리키는 포인터에 해당 주소를 씁니다. [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) 또는 Free (Linux/Mac) 함수를 사용 하 여이 메모리 블록을 해제할 수 있어야 합니다. 오류가 발생 하거나 다른 방법으로 인해 메모리가 할당 되지 않은 경우 공급자는 * cekOut을 null 포인터로 설정 해야 합니다.|
-|`cekLen`|출력 공급자는 * * Ceklen에 기록한 해독 된 ECEK의 길이를 cekLen에서 가리키는 주소에 써야 합니다.|
-|`Return Value`|성공 여부를 나타내려면 0이 아닌 값을 반환 하 고, 실패를 나타내려면 0을 반환 합니다.|
+|`ctx`|[Input] 작업 컨텍스트입니다.|
+|`onError`|[Input] 오류 보고 함수입니다.|
+|`keyPath`|[Input] 지정된 ECEK가 참조하는 CMK에 대한 [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) 메타데이터 특성의 값입니다. Null로 종료된 와이드 문자*열입니다. 이 공급자가 처리하는 CMK를 식별하기 위한 것입니다.|
+|`alg`|[Input] 지정된 ECEK에 대한 [ALGORITHM](../../t-sql/statements/create-column-encryption-key-transact-sql.md) 메타데이터 특성의 값입니다. Null로 종료된 와이드 문자*열입니다. 이는 지정된 ECEK를 암호화하는 데 사용되는 암호화 알고리즘을 식별하기 위한 것입니다.|
+|`ecek`|[Input] 암호를 해독할 ECEK에 대한 포인터입니다.|
+|`ecekLen`|[Input] ECEK의 길이입니다.|
+|`cekOut`|[Output] 공급자는 해독된 ECEK에 메모리를 할당하고 cekOut이 가리키는 포인터에 주소를 씁니다. [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree)(Windows) 또는 free(Linux/Mac) 함수를 사용하여 이 메모리 블록을 해제할 수 있어야 합니다. 오류로 인해 메모리가 할당되지 않은 경우 공급자는 *cekOut을 null 포인터로 설정해야 합니다.|
+|`cekLen`|[Output] 공급자는 **cekOut에 쓴 암호 해독된 ECEK의 길이를 cekLen이 가리키는 주소에 써야 합니다.|
+|`Return Value`|성공 여부를 나타내려면 0이 아닌 값을 반환하고, 실패를 나타내려면 0을 반환합니다.|
 
 ```
 int (*EncryptCEK)( CEKEYSTORECONTEXT *ctx, errFunc *onError, const wchar_t *keyPath, const wchar_t *alg, unsigned char *cek,unsigned short cekLen, unsigned char **ecekOut, unsigned short *ecekLen);
 ```
-공급자 정의 CEK 암호화 함수의 자리 표시자 이름입니다. 드라이버는이 함수를 호출 하거나 ODBC 인터페이스를 통해 해당 기능을 노출 하지 않지만 키 관리 도구를 사용 하 여 ECEK 생성에 프로그래밍 방식으로 액세스할 수 있습니다.
+공급자 정의 CEK 암호화 함수의 자리 표시자 이름입니다. 드라이버는 이 함수를 호출하거나 ODBC 인터페이스를 통해 공개하지 않지만 키 관리 도구를 사용하여 ECEK 생성에 프로그래밍 방식으로 액세스할 수 있습니다.
 
-|인수|설명|
+|인수|Description|
 |:--|:--|
-|`ctx`|입력 작업 컨텍스트입니다.|
-|`onError`|입력 오류 보고 함수입니다.|
-|`keyPath`|입력 지정 된 ECEK에서 참조 하는 CMK에 대 한 [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) metadata 특성의 값입니다. Null로 종료된 와이드 문자*열입니다. 이 공급자가 처리 하는 CMK를 식별 하기 위한 것입니다.|
-|`alg`|입력 지정 된 ECEK에 대 한 [알고리즘](../../t-sql/statements/create-column-encryption-key-transact-sql.md) 메타 데이터 특성의 값입니다. Null로 종료된 와이드 문자*열입니다. 이는 지정 된 ECEK를 암호화 하는 데 사용 되는 암호화 알고리즘을 식별 하기 위한 것입니다.|
-|`cek`|입력 암호화할 CEK에 대 한 포인터입니다.|
-|`cekLen`|입력 CEK의 길이입니다.|
-|`ecekOut`|출력 공급자는 암호화 된 CEK에 대해 메모리를 할당 하 고 ecekOut가 가리키는 포인터에 해당 주소를 씁니다. [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) 또는 Free (Linux/Mac) 함수를 사용 하 여이 메모리 블록을 해제할 수 있어야 합니다. 오류가 발생 하거나 다른 방법으로 인해 메모리가 할당 되지 않은 경우 공급자는 * ecekOut을 null 포인터로 설정 해야 합니다.|
-|`ecekLen`|출력 공급자는 * * ecekOut에 기록한 암호화 된 CEK의 길이를 ecekLen 하 여 가리키는 주소에 써야 합니다.|
-|`Return Value`|성공 여부를 나타내려면 0이 아닌 값을 반환 하 고, 실패를 나타내려면 0을 반환 합니다.|
+|`ctx`|[Input] 작업 컨텍스트입니다.|
+|`onError`|[Input] 오류 보고 함수입니다.|
+|`keyPath`|[Input] 지정된 ECEK가 참조하는 CMK에 대한 [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) 메타데이터 특성의 값입니다. Null로 종료된 와이드 문자*열입니다. 이 공급자가 처리하는 CMK를 식별하기 위한 것입니다.|
+|`alg`|[Input] 지정된 ECEK에 대한 [ALGORITHM](../../t-sql/statements/create-column-encryption-key-transact-sql.md) 메타데이터 특성의 값입니다. Null로 종료된 와이드 문자*열입니다. 이는 지정된 ECEK를 암호화하는 데 사용되는 암호화 알고리즘을 식별하기 위한 것입니다.|
+|`cek`|[Input] 암호화할 CEK에 대한 포인터입니다.|
+|`cekLen`|[Input] CEK의 길이입니다.|
+|`ecekOut`|[Output] 공급자는 암호화된 CEK에 메모리를 할당하고 ecekOut이 가리키는 포인터에 주소를 씁니다. [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree)(Windows) 또는 free(Linux/Mac) 함수를 사용하여 이 메모리 블록을 해제할 수 있어야 합니다. 오류로 인해 메모리가 할당되지 않은 경우 공급자는 *ecekOut을 null 포인터로 설정해야 합니다.|
+|`ecekLen`|[Output] 공급자는 **ecekOut에 쓴 암호화된 CEK의 길이를 ecekLen이 가리키는 주소에 써야 합니다.|
+|`Return Value`|성공 여부를 나타내려면 0이 아닌 값을 반환하고, 실패를 나타내려면 0을 반환합니다.|
 
 ```
 void (*Free)();
 ```
-공급자 정의 종료 함수의 자리 표시자 이름입니다. 프로세스가 정상적으로 종료 되 면 드라이버에서이 함수를 호출할 수 있습니다.
+공급자 정의 종료 함수의 자리 표시자 이름입니다. 프로세스가 정상적으로 종료되면 드라이버에서 이 함수를 호출할 수 있습니다.
 
 > [!NOTE]
-> *와이드 문자 문자열은 SQL Server 저장 하는 방법 때문에 2 바이트 문자 (UTF-16)입니다.*
+> *와이드 문자열은 SQL Server가 저장하는 방식으로 인해 2바이트 문자(UTF-16)입니다.*
 
 
 ### <a name="error-handling"></a>오류 처리
 
-공급자를 처리 하는 동안 오류가 발생할 수 있으므로 부울 성공/실패와 관련 하 여 오류를 드라이버에 다시 보고할 수 있는 메커니즘이 제공 됩니다. 대부분의 함수에는 성공/실패 반환 값 외에도이 목적으로 함께 사용 되는 **ctx** 및 **onError**매개 변수 쌍이 있습니다.
+공급자가 처리하는 동안 오류가 발생할 수 있으므로 부울 성공/실패보다 드라이버에 오류를 더 자세하게 보고할 수 있는 메커니즘이 제공됩니다. 대부분의 함수에는 성공/실패 반환 값 외에도 이 목적으로 함께 사용되는 **ctx** 및 **onError**의 매개 변수 쌍이 있습니다.
 
-**Ctx** 매개 변수는 공급자 작업이 발생 하는 컨텍스트를 식별 합니다.
+**ctx** 매개 변수는 공급자 작업이 발생하는 컨텍스트를 식별합니다.
 
-**OnError** 매개 변수는 다음 프로토타입을 사용 하 여 오류 보고 함수를 가리킵니다.
+**onError** 매개 변수는 다음 프로토타입을 사용하여 오류 보고 함수를 가리킵니다.
 
 `typedef void errFunc(CEKEYSTORECONTEXT *ctx, const wchar_t *msg, ...);`
 
-|인수|설명|
+|인수|Description|
 |:--|:--|
-|`ctx`|입력 오류를 보고할 컨텍스트입니다.|
-|`msg`|입력 보고할 오류 메시지입니다. Null로 종료된 와이드 문자열입니다. 매개 변수가 있는 정보를 제공 하도록 허용 하려면이 문자열에 [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) 함수에서 허용 하는 형식의 삽입 형식 지정 시퀀스가 포함 될 수 있습니다. 확장 된 기능은 아래에 설명 된 대로이 매개 변수로 지정할 수 있습니다.|
-|...|입력 필요에 따라 메시지의 형식 지정자에 맞는 추가 variadic 매개 변수입니다.|
+|`ctx`|[Input] 오류를 보고할 컨텍스트입니다.|
+|`msg`|[Input] 보고할 오류 메시지입니다. Null로 종료된 와이드 문자열입니다. 매개 변수화된 정보를 제공하기 위해 이 문자열에는 [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) 함수에서 허용하는 형식의 삽입 형식 지정 시퀀스가 포함될 수 있습니다. 확장된 기능은 아래에 설명된 대로 이 매개 변수로 지정할 수 있습니다.|
+|...|[Input] 메시지의 형식 지정자에 적합한 추가 가변 매개 변수입니다.|
 
-오류가 발생 한 경우를 보고 하기 위해 공급자는 onError를 호출 하 여 공급자 함수에 전달 된 컨텍스트 매개 변수를 드라이버에 전달 하 고 선택적으로 추가 매개 변수를 지정할 수 있는 오류 메시지를 제공 합니다. 공급자는이 함수를 여러 번 호출 하 여 한 공급자 함수 호출 내에 여러 오류 메시지를 연속적으로 게시할 수 있습니다. 예를 들어
+오류가 발생한 경우를 보고하기 위해 공급자는 onError를 호출하여 드라이버가 공급자 함수에 전달한 컨텍스트 매개 변수 및 형식을 지정할 선택적 추가 매개 변수가 포함된 오류 메시지를 제공합니다. 공급자는 이 함수를 여러 번 호출하여 한 공급자 함수 호출에 여러 오류 메시지를 연속적으로 게시할 수 있습니다. 다음은 그 예입니다.
 
 ```
     if (!doSomething(...))
@@ -201,18 +201,18 @@ void (*Free)();
 ```
 
 
-`msg` 매개 변수는 일반적으로 와이드 문자 문자열 이지만 추가 확장을 사용할 수 있습니다.
+`msg` 매개 변수는 일반적으로 와이드 문자열이지만 추가 확장을 사용할 수 있습니다.
 
-IDS_MSG 매크로를 사용 하 여 미리 정의 된 특수 값 중 하나를 사용 하 여 기존 및 드라이버의 localised 형식에 일반적인 오류 메시지를 활용할 수 있습니다. 예를 들어 공급자가 메모리 `IDS_S1_001` 할당에 실패 하면 "메모리 할당 오류" 메시지를 사용할 수 있습니다.
+IDS_MSG 매크로와 함께 미리 정의된 특수 값 중 하나를 사용하면 드라이버에 이미 존재하고 지역화된 형식의 일반 오류 메시지가 사용될 수 있습니다. 예를 들어 공급자가 메모리를 할당하지 못한 경우 `IDS_S1_001` "메모리 할당 오류" 메시지를 사용할 수 있습니다.
 
 `onError(ctx, IDS_MSG(IDS_S1_001));`
 
-드라이버에서 오류를 failedodatapropertyname 공급자 함수는 오류를 반환 해야 합니다. Odbc 작업의 컨텍스트에서 수행 되는 경우 게시 된 오류는 표준 ODBC 진단 메커니즘 (`SQLError`, `SQLGetDiagRec`및 `SQLGetDiagField`)을 통해 연결 또는 문 핸들에서 액세스할 수 있게 됩니다.
+드라이버가 오류를 인식하려면 공급자 함수가 실패를 반환해야 합니다. 이 작업이 ODBC 작업의 컨텍스트에서 수행되면 표준 ODBC 진단 메커니즘(`SQLError`, `SQLGetDiagRec` 및 `SQLGetDiagField`)을 통해 연결 또는 명령문 핸들에서 게시된 오류에 액세스할 수 있습니다.
 
 
 ### <a name="context-association"></a>컨텍스트 연결
 
-구조 `CEKEYSTORECONTEXT` 는 오류 콜백에 대 한 컨텍스트를 제공 하는 것 외에도 공급자 작업이 실행 되는 ODBC 컨텍스트를 결정 하는 데 사용할 수 있습니다. 이렇게 하면 공급자가 이러한 각 컨텍스트에 데이터를 연결할 수 있습니다. 예를 들어 연결 단위 구성을 구현 합니다. 이러한 목적을 위해 구조에는 환경, 연결 및 문 컨텍스트에 해당 하는 3 개의 불투명 포인터가 포함 됩니다.
+오류 콜백에 컨텍스트를 제공하는 것 외에도 `CEKEYSTORECONTEXT` 구조를 사용하여 공급자 작업이 실행되는 ODBC 컨텍스트를 결정할 수 있습니다. 이렇게 하면 공급자가 이러한 각 컨텍스트에 데이터를 연결할 수 있습니다. 예를 들어 연결별 구성을 구현합니다. 이를 위해 구조에는 환경, 연결 및 문 컨텍스트에 해당하는 3개의 불투명 포인터가 포함됩니다.
 
 ```
 typedef struct CEKeystoreContext
@@ -223,13 +223,13 @@ void *stmtCtx;
 } CEKEYSTORECONTEXT;
 ```
 
-|필드|설명|
+|필드|Description|
 |:--|:--|
 |`envCtx`|환경 컨텍스트입니다.|
 |`dbcCtx`|연결 컨텍스트입니다.|
 |`stmtCtx`|문 컨텍스트입니다.|
 
-이러한 각 컨텍스트는 불투명 값으로, 해당 ODBC 핸들과 동일 하지 않지만 핸들의 고유 식별자로 사용할 수 있습니다. 즉, 핸들 *X* 가 컨텍스트 값 *Y*와 연결 된 경우 다른 환경, 연결 또는 *x* 와 동일한 시간에 동시에 존재 하는 문 핸들은 *Y*의 컨텍스트 값을 가지 며, 다른 컨텍스트 값은 핸들 *X*와 연결 되지 않습니다. 수행 중인 공급자 작업에 특정 핸들 컨텍스트가 없는 경우 (예: SQLSetConnectAttr를 호출 하 여 문 핸들이 없는 공급자를 로드 하 고 구성 하는 경우) 구조체의 해당 컨텍스트 값은 null입니다.
+이러한 각 컨텍스트는 해당 ODBC 핸들과 동일하지 않지만 핸들의 고유 식별자로 사용될 수 있는 불투명한 값입니다. 즉, *X* 핸들이 컨텍스트 값 *Y*와 연결되어 있으면 동시에 존재하는 다른 환경, 연결 또는 문 핸들이 없습니다. *X*의 컨텍스트 값은 *Y*이며 다른 컨텍스트 값은 *X* 핸들과 연결되지 않습니다. 수행 중인 공급자 작업에 특정 핸들 컨텍스트가 없는 경우(예: SQLSetConnectAttr을 호출하여 문 핸들이 없는 공급자를 로드하고 구성하는 경우) 구조의 해당 컨텍스트 값은 null입니다.
 
 
 ## <a name="example"></a>예제
@@ -359,9 +359,9 @@ CEKEYSTOREPROVIDER *CEKeystoreProvider[] = {
 };
 ```
 
-### <a name="odbc-application"></a>ODBC 응용 프로그램
+### <a name="odbc-application"></a>ODBC 애플리케이션
 
-다음 코드는 위의 키 저장소 공급자를 사용 하는 데모 응용 프로그램입니다. 이를 실행 하는 경우 공급자 라이브러리가 응용 프로그램 이진 파일의 디렉터리와 동일한 디렉터리에 있는지 확인 하 고, 연결 문자열에서 해당 `ColumnEncryption=Enabled` 설정이 포함 된 DSN을 지정 하거나 지정 합니다.
+다음 코드는 위의 키 저장소 공급자를 사용하는 데모 애플리케이션입니다. 이를 실행하는 경우 공급자 라이브러리가 애플리케이션 이진과 동일한 디렉터리에 있고 연결 문자열이 `ColumnEncryption=Enabled` 설정을 지정(또는 포함하는 DSN을 지정)하는지 확인합니다.
 
 ```
 /*

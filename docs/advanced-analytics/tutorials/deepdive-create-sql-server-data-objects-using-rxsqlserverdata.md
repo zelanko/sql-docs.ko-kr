@@ -1,6 +1,6 @@
 ---
 title: RxSqlServerData 개체 만들기
-description: SQL Server에서 R 언어를 사용하여 데이터 개체를 만드는 방법에 대한 자습서 연습입니다.
+description: 'RevoScaleR 자습서 2: SQL Server에서 R 언어를 사용하여 데이터 개체를 만드는 방법.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/26/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fb6c88c5ce53a072d8cd9611d80cbe621c0fa485
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 7869fc3fc67cb24542223c2300cd7b6ebcf1eb41
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727260"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76922566"
 ---
 # <a name="create-sql-server-data-objects-using-rxsqlserverdata-sql-server-and-revoscaler-tutorial"></a>RxSqlServerData를 사용하여 SQL Server 데이터 개체 만들기(SQL Server 및 RevoScaleR 자습서)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 단원은 SQL Server에서 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)의 일부입니다.
+이것은 SQL Server에서 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서 시리즈](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 중 자습서 2에 해당됩니다.
 
-2단원은 테이블을 추가하고 데이터를 로드하는 데이터 생성 작업의 연속입니다. [1단원](deepdive-work-with-sql-server-data-using-r.md)에서 DBA가 데이터베이스 및 로그인을 만든 경우 RStudio와 같은 R IDE 또는 **Rgui** 같은 기본 제공 도구를 사용하여 테이블을 추가할 수 있습니다.
+이 자습서는 테이블을 추가하고 데이터를 로드하는 데이터 생성 작업에 이어지는 것입니다. [자습서 2](deepdive-work-with-sql-server-data-using-r.md)에서 DBA가 데이터베이스 및 로그인을 만들었다면 RStudio와 같은 R IDE 또는 **Rgui** 같은 기본 제공 도구를 사용하여 테이블을 추가할 수 있습니다.
 
 R에서 SQL Server에 연결하고 **RevoScaleR** 함수를 사용하여 다음 작업을 수행합니다.
 
@@ -145,7 +145,7 @@ R 작업 영역에서 연결 문자열 및 기타 매개 변수를 변수로 이
     
     연결 문자열에 문제가 없다고 가정하면 잠시 후 다음과 같은 결과가 표시됩니다.
   
-    *Total Rows written: 10000, Total time: 0.466* *Rows Read: 10000, Total Rows Processed: 10000, Total Chunk Time: 0.577 seconds*
+    *Total Rows written: 10000, Total time: 0.466* *읽은 행: 10000, Total Rows Processed: 10000, Total Chunk Time: 0.577 seconds*
   
 5. 테이블 목록을 새로 고칩니다. 각 변수의 데이터 형식이 올바르고 각 변수를 가져왔는지 확인하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 테이블을 마우스 오른쪽 단추로 클릭하고 **상위 1,000개의 행 선택**을 선택할 수도 있습니다.
 

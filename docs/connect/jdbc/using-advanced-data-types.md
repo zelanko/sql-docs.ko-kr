@@ -11,10 +11,10 @@ ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a50bc3e4fae8fe45004374d3dd019a0f65fe544f
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027014"
 ---
 # <a name="using-advanced-data-types"></a>고급 데이터 형식 사용
@@ -23,22 +23,22 @@ ms.locfileid: "69027014"
 
 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 JDBC 고급 데이터 형식을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 Java 프로그래밍 언어가 인식할 수 있는 형식으로 변환합니다.  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 다음 표에서는 고급 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], JDBC 및 Java 프로그래밍 언어 데이터 형식 간의 기본 매핑을 나열합니다.  
   
 |SQL Server 형식|JDBC 형식(java.sql.Types)|Java 언어 형식|  
 |----------------------|-----------------------------------|-------------------------|  
-|varbinary(max)<br /><br /> image|LONGVARBINARY|byte[]\(기본값), Blob, InputStream, String|  
+|varbinary(max)<br /><br /> 이미지|LONGVARBINARY|byte[]\(기본값), Blob, InputStream, String|  
 |text<br /><br /> varchar(max)|LONGVARCHAR|String(기본값), Clob, InputStream|  
 |ntext<br /><br /> nvarchar(max)|LONGVARCHAR<br /><br /> LONGNVARCHAR(Java SE 6.0)|String(기본값), Clob, NClob|  
-|xml|LONGVARCHAR<br /><br /> SQLXML|String(기본값), InputStream, Clob, byte[],Blob, SQLXML|  
+|Xml|LONGVARCHAR<br /><br /> SQLXML|String(기본값), InputStream, Clob, byte[],Blob, SQLXML|  
 |Udt<sup>1</sup>|VARBINARY|String(기본값), byte[], InputStream|  
 |sqlvariant|SQLVARIANT|Object|  
 |geometry<br /><br /> geography|VARBINARY|byte[]|  
 
 
-<sup>1</sup> [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 이진 데이터 형식으로 CLR UDT 전송 및 검색을 지원하지만 CLR 메타데이터의 조작은 지원하지 않습니다.  
+<sup>1</sup>[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 이진 데이터 형식으로 CLR UDT 전송 및 검색을 지원하지만 CLR 메타데이터의 조작은 지원하지 않습니다.  
   
 다음 섹션에서는 JDBC 드라이버와 고급 데이터 형식을 사용하는 방법의 예를 보여 줍니다.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "69027014"
 JDBC 드라이버는 java.sql.Blob, java.sql.Clob 및 java.sql.NClob 인터페이스의 모든 메서드를 구현합니다.  
   
 > [!NOTE]  
-> CLOB 값은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상의 큰 값 데이터 형식과 함께 사용할 수 있습니다. 특히 CLOB 형식은 **varchar (max)** 및 **nvarchar (max)** 데이터 형식과 함께 사용할 수 있고, BLOB 형식은 **varbinary (max)** 및 **image** 데이터 형식과 함께 사용할 수 있으며, NCLOB 형식은 **ntext** 및 **nvarchar (max)와 함께 사용할 수 있습니다. )** .  
+> CLOB 값은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상의 큰 값 데이터 형식과 함께 사용할 수 있습니다. 특히 CLOB 형식은 **varchar(max)** 및 **nvarchar(max)** 데이터 형식과 함께 사용할 수 있고, BLOB 형식은 **varbinary(max)** 및 **image** 데이터 형식과 함께 사용할 수 있으며, NCLOB 형식은 **ntext** 및 **nvarchar(max)** 와 함께 사용할 수 있습니다.  
 
 ## <a name="large-value-data-types"></a>큰 값 데이터 형식
 
@@ -66,7 +66,7 @@ Reader reader = rs.getCharacterStream(2);
 ```
 
 > [!NOTE]
-> 이 방법은 **text**, **ntext**및 **nvarchar (max)** 데이터 형식에도 사용할 수 있습니다.  
+> 이 방법은 **text**, **ntext** 및 **nvarchar(max)** 데이터 형식에도 사용할 수 있습니다.  
 
 **varbinary(max)** 데이터 형식과 같은 이진 큰 값 데이터 형식을 데이터베이스에서 검색할 때 사용할 수 있는 방법에는 몇 가지가 있습니다. 가장 효율적인 방법은 다음과 같이 데이터를 이진 스트림으로 읽는 것입니다.  
 
@@ -101,7 +101,7 @@ pstmt.executeUpdate();
 ```
 
 > [!NOTE]  
-> 이 방법은 **text**, **ntext**및 **nvarchar (max)** 열에 저장 된 값에도 사용할 수 있습니다.  
+> 이 방법은 **text**, **ntext** 및 **nvarchar(max)** 열에 저장된 값에도 사용할 수 있습니다.  
 
 서버에 이미지 라이브러리가 있는데 전체 이진 이미지 파일을 **varbinary(max)** 열에 업로드해야 하는 경우 JDBC 드라이버를 사용하는 가장 효율적인 방법은 다음과 같이 스트림을 직접 사용하는 것입니다.  
 
@@ -148,7 +148,7 @@ try (Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, Resul
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 XML 문서와 조각을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 저장할 수 있도록 하는 **xml** 데이터 형식을 제공합니다. **xml** 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 제공 데이터 형식이며 **int** 및 **varchar**와 같은 다른 기본 제공 형식과 비슷합니다. 다른 기본 제공 유형과 마찬가지로 변수 유형, 매개 변수 유형, 함수 반환 형식 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST 및 CONVERT 함수로 테이블을 만들 때 **xml** 데이터 형식을 열 유형으로 사용할 수 있습니다.  
   
-JDBC 드라이버에서 **xml** 데이터 형식은 문자열, 바이트 배열, 스트림, CLOB, BLOB 또는 SQLXML 개체로 매핑될 수 있습니다. 기본값은 문자열입니다. JDBC 드라이버 버전 2.0 이상에서는 SQLXML 인터페이스가 추가된 JDBC 4.0 API가 지원됩니다. SQLXML 인터페이스는 XML 데이터에 대한 상호 작용 및 조작을 수행하는 메서드를 정의합니다. **SQLXML** 데이터 형식은 **xml** 데이터 형식에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]매핑됩니다. **SQLXML** Java 데이터 형식으로 관계형 데이터베이스에서 XML 데이터를 읽고 쓰는 방법은 [XML 데이터 지원](../../connect/jdbc/supporting-xml-data.md)을 참조하세요.  
+JDBC 드라이버에서 **xml** 데이터 형식은 문자열, 바이트 배열, 스트림, CLOB, BLOB 또는 SQLXML 개체로 매핑될 수 있습니다. 기본값은 문자열입니다. JDBC 드라이버 버전 2.0 이상에서는 SQLXML 인터페이스가 추가된 JDBC 4.0 API가 지원됩니다. SQLXML 인터페이스는 XML 데이터에 대한 상호 작용 및 조작을 수행하는 메서드를 정의합니다. **SQLXML** 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**xml** 데이터 형식에 매핑됩니다. **SQLXML** Java 데이터 형식으로 관계형 데이터베이스에서 XML 데이터를 읽고 쓰는 방법은 [XML 데이터 지원](../../connect/jdbc/supporting-xml-data.md)을 참조하세요.  
   
 JDBC 드라이버의 **xml** 데이터 형식 구현에서는 다음을 지원합니다.  
   
@@ -172,12 +172,12 @@ JDBC 드라이버의 **xml** 데이터 형식 구현에서는 다음을 지원�
   
 ## <a name="sql_variant-data-type"></a>Sql_variant 데이터 형식
 
-Sql_variant 데이터 형식에 대 한 자세한 내용은 [sql_variant 데이터 형식 사용](../../connect/jdbc/using-sql-variant-datatype.md)을 참조 하세요.  
+sql_variant 데이터 형식에 대한 자세한 내용은 [Sql_variant 데이터 형식 사용](../../connect/jdbc/using-sql-variant-datatype.md)을 참조하세요.  
 
 ## <a name="spatial-data-types"></a>공간 데이터 형식
 
-공간 데이터 형식에 대 한 자세한 내용은 [공간](../../connect/jdbc/use-spatial-datatypes.md)데이터 형식 사용을 참조 하세요.  
+공간 데이터 형식에 대한 자세한 내용은 [공간 데이터 형식 사용](../../connect/jdbc/use-spatial-datatypes.md)을 참조하세요.  
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [JDBC 드라이버 데이터 형식 이해](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

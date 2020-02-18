@@ -1,6 +1,6 @@
 ---
-title: SQLdiag 유틸리티 | Microsoft Docs
-ms.custom: ''
+title: SQLdiag Utility
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7eadacbf0e3137cf22c9a870783da41a046c86fb
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
-ms.translationtype: MTE75
+ms.openlocfilehash: a94daa3fc9756c690a5cd6188e59a9bfd97ca27d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251361"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306667"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag Utility
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -103,7 +103,7 @@ sqldiag
 >  **SQLDIAG /P %cd%**  
   
  **/N** _output_folder_management_option_  
- **SQLdiag** 가 시작될 때 출력 폴더를 덮어쓸 것인지 또는 이름을 바꿀 것인지 설정합니다. 사용 가능한 옵션은 다음과 같습니다.  
+ **SQLdiag** 가 시작될 때 출력 폴더를 덮어쓸 것인지 또는 이름을 바꿀 것인지 설정합니다. 사용 가능한 옵션은  
   
  1 = 출력 폴더를 덮어씁니다(기본값).  
   
@@ -118,7 +118,7 @@ sqldiag
  *\@machinelistfile*을 사용하면 구성 파일에 저장할 컴퓨터 목록 파일 이름이 지정됩니다.  
   
  **/C** _file_compression_type_  
- **SQLdiag** 출력 폴더 파일에서 사용되는 파일 압축 유형을 설정합니다. 사용 가능한 옵션은 다음과 같습니다.  
+ **SQLdiag** 출력 폴더 파일에서 사용되는 파일 압축 유형을 설정합니다. 사용 가능한 옵션은  
   
  0 = 없음(기본값)  
   
@@ -159,11 +159,11 @@ sqldiag
   
  *SQLdiag_application_name* 은 특정 **SQLdiag** 서비스 인스턴스를 시작하거나 중지하는 데 사용할 수 있습니다.  
   
- 예를 들어  
+ 다음은 그 예입니다.  
   
  **SQLDIAG START /A**  _SQLdiag_application_name_  
   
- 또한 **/R** 옵션과 함께 사용하여 특정 **SQLdiag** 인스턴스를 서비스로 등록할 수 있습니다. 예를 들어  
+ 또한 **/R** 옵션과 함께 사용하여 특정 **SQLdiag** 인스턴스를 서비스로 등록할 수 있습니다. 다음은 그 예입니다.  
   
  **SQLDIAG /R /A** _SQLdiag_application_name_  
   
@@ -222,16 +222,16 @@ sqldiag
  **START** | **STOP** | **STOP_ABORT**  
  **SQLdiag** 서비스를 시작하거나 중지합니다. **STOP_ABORT** 는 현재 수행하고 있는 진단 정보 수집을 완료하지 않고 가능한 빨리 서비스를 강제 종료합니다.  
   
- 이러한 서비스 제어 인수를 사용할 때는 명령줄에서 첫 번째 인수로 사용해야 합니다. 예를 들어  
+ 이러한 서비스 제어 인수를 사용할 때는 명령줄에서 첫 번째 인수로 사용해야 합니다. 다음은 그 예입니다.  
   
  **SQLDIAG START**  
   
- 명명된 **SQLdiag** 인스턴스를 지정하는 **/A**인수만 **START**, **STOP**또는 **STOP_ABORT** 와 함께 사용하여 특정 **SQLdiag** 서비스 인스턴스를 제어할 수 있습니다. 예를 들어  
+ 명명된 **SQLdiag** 인스턴스를 지정하는 **/A**인수만 **START**, **STOP**또는 **STOP_ABORT** 와 함께 사용하여 특정 **SQLdiag** 서비스 인스턴스를 제어할 수 있습니다. 다음은 그 예입니다.  
   
  **SQLDIAG START /A** _SQLdiag_application_name_  
   
 ## <a name="security-requirements"></a>보안 요구 사항  
- **SQLdiag** 명령줄 인수를 지정하여 일반 모드에서 **SQLdiag** 를 실행하지 않을 경우 **SQLdiag** 를 실행하는 사용자는 Windows **Administrators** 그룹의 멤버이면서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sysadmin** 고정 서버 역할의 멤버여야 합니다. 기본적으로 **SQLdiag** 에서는 Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 연결하지만 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증도 지원합니다.  
+ **/G** 명령줄 인수를 지정하여 일반 모드에서 **SQLdiag**를 실행하지 않을 경우 **SQLdiag**를 실행하는 사용자는 Windows **Administrators** 그룹의 멤버이면서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sysadmin** 고정 서버 역할의 멤버이어야 합니다. 기본적으로 **SQLdiag** 에서는 Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 연결하지만 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증도 지원합니다.  
   
 ## <a name="performance-considerations"></a>성능 고려 사항  
  **SQLdiag** 를 실행할 때 성능에 주는 영향은 수집하도록 구성한 진단 데이터의 종류에 따라 다릅니다. 예를 들어 **추적 정보를 수집하도록** SQLdiag [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 를 구성한 경우 추적할 이벤트 클래스를 많이 선택할수록 서버 성능에 더 많은 영향을 줍니다.  
@@ -260,7 +260,7 @@ sqldiag
   
  **SQLdiag** 를 사용하여 재현할 수 있는 문제를 진단하는 경우 이 메시지가 표시된 다음에 서버에서 해당 문제를 재현해야 합니다.  
   
- **SQLdiag** 에서는 대부분의 진단 데이터를 병렬로 수집합니다. Windows 성능 로그 및 이벤트 로그에서 정보를 수집하는 경우를 제외하고 모든 진단 정보는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sqlcmd** 유틸리티나 Windows 명령 처리기와 같은 도구에 연결하여 수집합니다. **SQLdiag** 에서는 컴퓨터당 작업자 스레드를 하나씩 사용하여 이러한 도구의 진단 데이터 수집을 모니터링하므로 동시에 여러 도구가 완료되기까지 기다려야 하는 경우도 있습니다. 수집이 진행되는 동안 **SQLdiag** 는 각 진단의 출력을 출력 폴더로 라우팅합니다.  
+ **SQLdiag** 에서는 대부분의 진단 데이터를 병렬로 수집합니다. Windows 성능 로그 및 이벤트 로그에서 정보를 수집하는 경우를 제외하고 모든 진단 정보는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sqlcmd** 유틸리티 또는 Windows 명령 프로세서와 같은 도구에 연결하여 수집합니다. **SQLdiag** 에서는 컴퓨터당 작업자 스레드를 하나씩 사용하여 이러한 도구의 진단 데이터 수집을 모니터링하므로 동시에 여러 도구가 완료되기까지 기다려야 하는 경우도 있습니다. 수집이 진행되는 동안 **SQLdiag** 는 각 진단의 출력을 출력 폴더로 라우팅합니다.  
   
 ## <a name="stopping-data-collection"></a>데이터 수집 중지  
  **SQLdiag** 에서 진단 데이터를 수집하기 시작하면 사용자가 직접 중지하거나 지정한 시간에 중지되도록 구성한 경우를 제외하고 계속해서 데이터를 수집합니다. **/E** 인수를 사용하여 중지 시간을 지정하거나 **/X** 인수를 사용하여 **SQLdiag** 를 스냅샷 모드로 실행하면 지정한 시간에 중지되도록 **SQLdiag** 를 구성할 수 있습니다.  
@@ -303,7 +303,7 @@ sqldiag /B +01:00:00 /E +03:00:00
   
  상대적인 *start_time* 을 지정하면 현재 날짜와 시간에 대한 상대 시간에 **SQLdiag** 가 시작됩니다. 상대적인 *end_time* 을 지정하면 지정한 **start_time** 에 대한 상대 시간에 *SQLdiag*가 종료됩니다. 지정한 시작 및 종료 날짜와 시간이 과거인 경우 **SQLdiag** 에서 시작 날짜와 시간이 미래가 되도록 시작 날짜를 강제로 변경합니다.  
   
- 이는 선택하는 시작 및 종료 날짜에 중요한 영향을 줍니다. 다음 예를 살펴 보십시오.  
+ 이는 선택하는 시작 및 종료 날짜에 중요한 영향을 줍니다. 다음과 같은 예제를 참조하세요.  
   
 ```  
 sqldiag /B +01:00:00 /E 08:30:00  

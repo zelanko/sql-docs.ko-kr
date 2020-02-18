@@ -1,6 +1,6 @@
 ---
-title: tablediff 유틸리티 | Microsoft Docs
-ms.custom: ''
+title: tablediff 유틸리티
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -19,12 +19,12 @@ ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 48fc2d25bc65e76156da80c6b6117a62fa39e2a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: cb12cc164490e249dae13ef22cdd5279a0427102
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986040"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75304802"
 ---
 # <a name="tablediff-utility"></a>tablediff 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -155,7 +155,7 @@ tablediff
  **-rc** _number_of_retries_  
  유틸리티가 실패한 작업을 다시 시도하는 횟수입니다.  
   
- **-ri**  _retry_interval_  
+ **-ri** _retry_interval_  
  다시 시도 작업 사이의 대기 간격(초)입니다.  
   
  **-strict**  
@@ -164,15 +164,15 @@ tablediff
  **-t** _connection_timeouts_  
  원본 서버 및 대상 서버에 대한 연결 제한 시간(초)을 설정합니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
-|**0**|성공|  
+|**0**|Success|  
 |**1**|오류|  
 |**2**|테이블 차이|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 이외 서버에서는 **tablediff** 유틸리티를 사용할 수 없습니다.  
   
  데이터 형식이 **sql_variant** 인 열이 있는 테이블은 지원되지 않습니다.  
@@ -190,7 +190,7 @@ tablediff
 |**varbinary(max)**|**image**|  
 |**text**|**varchar(max)**|  
 |**ntext**|**nvarchar(max)**|  
-|**이미지**|**varbinary(max)**|  
+|**image**|**varbinary(max)**|  
   
  **-strict** 옵션을 사용하여 이러한 매핑을 허용하지 않고 유효성 검사를 엄격하게 수행할 수 있습니다.  
   

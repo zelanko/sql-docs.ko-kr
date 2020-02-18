@@ -1,6 +1,6 @@
 ---
 title: RevoScaleR 계산 컨텍스트 사용
-description: SQL Server에서 R 언어를 사용하여 계산 컨텍스트를 정의하는 방법에 대한 자습서 연습입니다.
+description: 'RevoScaleR 자습서 4: SQL Server에서 R 언어를 사용하여 컴퓨팅 컨텍스트를 정의하는 방법.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0ae3f3ac7747410730cb91cf56733130ab9f0abb
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: c90c935f85584f8886ae112d5cfc03759c0a129a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727193"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947224"
 ---
 # <a name="define-and-use-compute-contexts-sql-server-and-revoscaler-tutorial"></a>계산 컨텍스트 정의 및 사용(SQL Server 및 RevoScaleR 자습서)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 단원은 SQL Server에서 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)의 일부입니다.
+이것은 SQL Server에서 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서 시리즈](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 중 자습서 4에 해당됩니다.
 
-이전 단원에서는 **RevoScaleR** 함수를 사용하여 데이터 개체를 검사했습니다. 이 단원에서는 원격 SQL Server에 대한 계산 컨텍스트를 정의할 수 있게 해주는 [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) 함수에 대해 설명합니다. 원격 계산 컨텍스트에서는 서버의 로컬 세션에서 원격 세션으로 R 실행을 전환할 수 있습니다. 
+이전 자습서에서는 **RevoScaleR** 함수를 사용하여 데이터 개체를 검사했습니다. 이 자습서에서는 원격 SQL Server에 대한 컴퓨팅 컨텍스트를 정의할 수 있게 해주는 [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) 함수를 소개합니다. 원격 계산 컨텍스트에서는 서버의 로컬 세션에서 원격 세션으로 R 실행을 전환할 수 있습니다. 
 
 > [!div class="checklist"]
 > * 원격 SQL Server 계산 컨텍스트에 대한 요소 알아보기
@@ -108,7 +108,7 @@ SQL Server 계산 컨텍스트를 만드는 **RxInSqlServer** 함수는 다음 �
     rxGetComputeContext()
     ```
 
-7. "로컬" 키워드를 지정하여 계산 컨텍스트를 다시 로컬 컴퓨터로 재설정합니다. 다음 단원에서는 원격 계산 컨텍스트 사용에 관해 설명합니다.
+7. "로컬" 키워드를 지정하여 컴퓨팅 컨텍스트를 다시 로컬 컴퓨터로 재설정합니다. 다음 자습서에서는 원격 컴퓨팅 컨텍스트 사용에 관해 설명합니다.
 
     ```R
     rxSetComputeContext("local")
