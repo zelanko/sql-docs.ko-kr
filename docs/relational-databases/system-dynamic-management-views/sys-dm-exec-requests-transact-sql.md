@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 10/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: sstein
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -19,13 +18,14 @@ helpviewer_keywords:
 ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
 author: pmasl
 ms.author: pelopes
+ms.reviewer: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 20257eb1a91b35dd45e1b4fc79f84533c64b2561
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 16939894f9e43e4538a8d56e76632af891d9714a
+ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74307992"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77429024"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests(Transact-SQL)
 
@@ -40,9 +40,9 @@ ms.locfileid: "74307992"
 |start_time|**datetime**|요청이 도착한 타임스탬프입니다. Null을 허용하지 않습니다.|  
 |상태|**nvarchar (30)**|요청의 상태입니다. 다음 중 하나일 수 있습니다.<br /><br /> 배경<br />실행 중<br />실행 가능<br />중지 중<br />Suspended<br /><br /> Null을 허용하지 않습니다.|  
 |command|**nvarchar (32)**|처리되고 있는 명령의 현재 유형을 식별합니다. 일반 명령 유형은 다음과 같습니다.<br /><br /> SELECT<br />INSERT<br />UPDATE<br />Delete<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> 요청 텍스트는 요청에 대한 해당 sql_handle과 함께 sys.dm_exec_sql_text를 사용하여 검색할 수 있습니다. 내부 시스템 프로세스는 수행하는 태스크 유형에 따라 명령을 설정합니다. 태스크는 다음과 같습니다.<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> Null을 허용하지 않습니다.|  
-|sql_handle|**varbinary (64)**|쿼리가 속하는 일괄 처리 또는 저장 프로시저를 고유 하 게 식별 하는 토큰입니다. Null을 허용합니다.|  
-|statement_start_offset|**int**|현재 실행 중인 일괄 처리 또는 저장 프로시저에서 현재 실행 중인 문이 시작되는 위치까지의 문자 수입니다. sql_handle, statement_end_offset 및 sys.dm_exec_sql_text 동적 관리 함수와 함께 사용하여 요청에 대해 현재 실행 중인 문을 검색할 수 있습니다. Null을 허용합니다.|  
-|statement_end_offset|**int**|현재 실행 중인 일괄 처리 또는 저장 프로시저에서 현재 실행 중인 문이 종료되는 위치까지의 문자 수입니다. sql_handle, statement_end_offset 및 sys.dm_exec_sql_text 동적 관리 함수와 함께 사용하여 요청에 대해 현재 실행 중인 문을 검색할 수 있습니다. Null을 허용합니다.|  
+|sql_handle|**varbinary (64)**|쿼리가 속하는 일괄 처리 또는 저장 프로시저를 고유 하 게 식별 하는 토큰입니다. Null을 허용합니다.| 
+|statement_start_offset|**int**|현재 실행 중인 일괄 처리 또는 지속형 개체에 대해 현재 실행 중인 문의 시작 위치 (0부터 시작)를 나타냅니다. 는 `sql_handle`, `statement_end_offset`및 `sys.dm_exec_sql_text` 동적 관리 함수와 함께 사용 하 여 요청에 대해 현재 실행 중인 문을 검색할 수 있습니다. Null을 허용합니다.|  
+|statement_end_offset|**int**|현재 실행 중인 일괄 처리 또는 지속형 개체에 대해 현재 실행 중인 문의 끝 위치 (0부터 시작)를 나타냅니다. 는 `sql_handle`, `statement_start_offset`및 `sys.dm_exec_sql_text` 동적 관리 함수와 함께 사용 하 여 요청에 대해 현재 실행 중인 문을 검색할 수 있습니다. Null을 허용합니다.|  
 |plan_handle|**varbinary (64)**|현재 실행 중인 일괄 처리에 대 한 쿼리 실행 계획을 고유 하 게 식별 하는 토큰입니다. Null을 허용합니다.|  
 |database_id|**smallint**|요청을 실행 중인 대상 데이터베이스의 ID입니다. Null을 허용하지 않습니다.|  
 |user_id|**int**|요청을 제출한 사용자의 ID입니다. Null을 허용하지 않습니다.|  

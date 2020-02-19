@@ -1,7 +1,7 @@
 ---
 title: sys.debug (Transact-sql) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 02/12/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: 066bd9ac-6554-4297-88fe-d740de1f94a8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d4d307ea18127586ac46b0f6afb973ef62cf6ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3208f538a1c1e111913c0808a8213743fed41bcc
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74761482"
+ms.lasthandoff: 02/13/2020
+ms.locfileid: "77179294"
 ---
 # <a name="sysindexes-transact-sql"></a>sys.indexes(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "74761482"
 |**allow_row_locks**|**bit**|1 = 인덱스에서 행 잠금을 허용합니다.<br /><br /> 0 = 인덱스에서 행 잠금을 허용하지 않습니다.<br /><br /> 클러스터형 columnstore 인덱스의 경우 항상 0입니다.|  
 |**allow_page_locks**|**bit**|1 = 인덱스에서 페이지 잠금을 허용합니다.<br /><br /> 0 = 인덱스에서 페이지 잠금을 허용하지 않습니다.<br /><br /> 클러스터형 columnstore 인덱스의 경우 항상 0입니다.|  
 |**has_filter**|**bit**|1 = 인덱스에 필터가 있고 포함된 모든 행이 필터 정의를 만족합니다.<br /><br /> 0 = 인덱스에 필터가 없습니다.|  
-|**filter_definition**|**nvarchar(max)**|필터링된 인덱스에 포함된 행 하위 집합에 대한 식입니다.<br /><br /> 힙 또는 필터링되지 않은 인덱스의 경우 NULL입니다.|  
+|**filter_definition**|**nvarchar(max)**|필터링된 인덱스에 포함된 행 하위 집합에 대한 식입니다.<br /><br /> 힙, 필터링 되지 않은 인덱스 또는 테이블에 대 한 권한이 부족 한 경우 NULL입니다.|  
 |**auto_created**|**bit**|1 = 자동 조정으로 인덱스를 만들었습니다.<br /><br />0 = 사용자가 인덱스를 만들었습니다.
 |**optimize_for_sequential_key**|**bit**|1 = 인덱스에서 마지막 페이지 삽입 최적화를 사용 하도록 설정 했습니다.<br><br>0 = 기본값 인덱스에서 마지막 페이지 삽입 최적화를 사용할 수 없습니다.|
 

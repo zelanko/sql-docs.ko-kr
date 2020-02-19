@@ -7,7 +7,6 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: reference
 dev_langs:
-- TSQL
 - VB
 - CSharp
 helpviewer_keywords:
@@ -21,12 +20,12 @@ ms.assetid: bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9f509b2a2544c67c9113bc700b7d98bfd4a24024
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e7e79307e2c913841ae1e017e6a5c180dfd55b6b
+ms.sourcegitcommit: 9b8b71cab6e340f2cb171397f66796d7a76c497e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62753823"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77213965"
 ---
 # <a name="clr-stored-procedures"></a>CLR 저장 프로시저
   저장 프로시저는 스칼라 식에서 사용할 수 없는 루틴입니다. 스칼라 함수와 달리 저장 프로시저는 테이블 형식의 결과와 메시지를 클라이언트에 반환하고 DDL(데이터 정의 언어) 및 DML(데이터 조작 언어) 문을 호출하고 출력 매개 변수를 반환할 수 있습니다. CLR 통합의 장점 및 관리 코드와 [!INCLUDE[tsql](../../includes/tsql-md.md)]관리 코드를 선택 하는 방법에 대 한 자세한 내용은 [clr 통합 개요](../../relational-databases/clr-integration/clr-integration-overview.md)를 참조 하세요.  
@@ -52,9 +51,9 @@ ms.locfileid: "62753823"
 ### <a name="output-parameters-and-clr-stored-procedures"></a>OUTPUT 매개 변수 및 CLR 저장 프로시저  
  
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저와 마찬가지로 OUTPUT 매개 변수를 사용하여 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 저장 프로시저에서 정보를 반환할 수 있습니다. 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저를 만드는 데 사용하는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] DML 구문은 [!INCLUDE[tsql](../../includes/tsql-md.md)]로 작성된 저장 프로시저를 만드는 데 사용하는 구문과 같습니다. 구현 코드의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 클래스에 있는 해당 매개 변수는 참조 전달(pass-by-reference) 매개 변수를 인수로 사용해야 합니다. Visual Basic은 Visual C#과 같은 방식으로 출력 매개 변수를 지원하지 않습니다. 다음과 같이 참조로 매개 변수를 지정 하 고 \<Out () > 특성을 적용 하 여 출력 매개 변수를 나타내야 합니다.  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저를 만드는 데 사용하는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] DML 구문은 [!INCLUDE[tsql](../../includes/tsql-md.md)]로 작성된 저장 프로시저를 만드는 데 사용하는 구문과 같습니다. 구현 코드의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 클래스에 있는 해당 매개 변수는 참조 전달(pass-by-reference) 매개 변수를 인수로 사용해야 합니다. Visual Basic는 c #에서와 동일한 방식으로 출력 매개 변수를 지원 하지 않습니다. 다음과 같이 참조로 매개 변수를 지정 하 고 \<Out () > 특성을 적용 하 여 출력 매개 변수를 나타내야 합니다.  
   
-```  
+```vb
 Imports System.Runtime.InteropServices  
 ...  
 Public Shared Sub PriceSum ( <Out()> ByRef value As SqlInt32)  
@@ -62,9 +61,7 @@ Public Shared Sub PriceSum ( <Out()> ByRef value As SqlInt32)
   
  다음 코드는 OUTPUT 매개 변수를 통해 정보를 반환하는 저장 프로시저를 보여 줍니다.  
   
- C#  
-  
-```  
+```csharp  
 using System;  
 using System.Data.SqlTypes;  
 using System.Data.SqlClient;  
@@ -94,9 +91,7 @@ public class StoredProcedures
 }  
 ```  
   
- Visual Basic  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -132,7 +127,7 @@ End Class
   
  위의 CLR 저장 프로시저가 포함 된 어셈블리를 서버에서 작성 하 고 만든 후에는 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용 하 여 데이터베이스에 프로시저를 만들고 *sum* 을 OUTPUT 매개 변수로 지정 합니다.  
   
-```  
+```sql
 CREATE PROCEDURE PriceSum (@sum int OUTPUT)  
 AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum  
 -- if StoredProcedures class was inside a namespace, called MyNS,  
@@ -157,9 +152,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 ###### <a name="returning-tabular-results"></a>테이블 형식 결과 반환  
  쿼리 결과를 직접 클라이언트로 보내려면 `Execute` 메서드 오버로드 중 하나를 `SqlPipe` 개체에 사용합니다. 이 방법이 결과 집합을 가장 효율적으로 클라이언트에 반환하는 방법입니다. 그 이유는 데이터가 관리되는 메모리에 복사되지 않고 네트워크 버퍼로 전송되기 때문입니다. 다음은 그 예입니다.  
   
- [C#]  
-  
-```  
+```csharp  
 using System;  
 using System.Data;  
 using System.Data.SqlTypes;  
@@ -184,9 +177,7 @@ public class StoredProcedures
 }  
 ```  
   
- [Visual Basic]  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -237,10 +228,8 @@ public class StoredProcedures
    }  
 }  
 ```  
-  
- [Visual Basic]  
-  
-```  
+ 
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -294,9 +283,7 @@ public class StoredProcedures
 }  
 ```  
   
- [Visual Basic]  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -346,9 +333,7 @@ public class StoredProcedures
 }  
 ```  
   
- [Visual Basic]  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -379,7 +364,7 @@ End Class
   
  이러한 예는 이해를 돕기 위한 목적으로만 사용되었습니다. 계산을 많이 수행하는 애플리케이션의 경우 단순한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문보다 CLR 함수가 적합합니다. 앞의 예와 거의 비슷한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저는 다음과 같습니다.  
   
-```  
+```sql
 CREATE PROCEDURE HelloWorld() AS  
 BEGIN  
 PRINT('Hello world!')  
@@ -392,13 +377,13 @@ END;
   
  위의 Visual C# 코드를 MyFirstUdp.cs 파일에 저장한 경우 다음 코드를 사용하여 컴파일합니다.  
   
-```  
+```console
 csc /t:library /out:MyFirstUdp.dll MyFirstUdp.cs   
 ```  
   
  또는 위의 Visual Basic 코드를 MyFirstUdp.vb 파일에 저장한 경우 다음 코드를 사용하여 컴파일합니다.  
   
-```  
+```console
 vbc /t:library /out:MyFirstUdp.dll MyFirstUdp.vb   
 ```  
   
@@ -408,7 +393,7 @@ vbc /t:library /out:MyFirstUdp.dll MyFirstUdp.vb
   
  결과 어셈블리를 등록한 후 다음 DDL을 사용하여 진입점을 호출할 수 있습니다.  
   
-```  
+```sql
 CREATE ASSEMBLY MyFirstUdp FROM 'C:\Programming\MyFirstUdp.dll';  
 CREATE PROCEDURE HelloWorld  
 AS EXTERNAL NAME MyFirstUdp.StoredProcedures.HelloWorld;  

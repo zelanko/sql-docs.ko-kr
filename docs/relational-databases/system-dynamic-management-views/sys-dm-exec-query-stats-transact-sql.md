@@ -20,12 +20,12 @@ ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a4fba10bd080c4b97cd38a7330611bed51f3d225
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 23fd1a0c896436dad27ab771e2ed04c775938091
+ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73982648"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77429017"
 ---
 # <a name="sysdm_exec_query_stats-transact-sql"></a>sys.dm_exec_query_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "73982648"
 |-----------------|---------------|-----------------|  
 |**sql_handle**|**varbinary (64)**  |쿼리가 속하는 일괄 처리 또는 저장 프로시저를 고유 하 게 식별 하는 토큰입니다.<br /><br /> **statement_start_offset** 및 **statement_end_offset**와 함께 **sql_handle**를 사용 하 여 **dm_exec_sql_text** 동적 관리 함수를 호출 하 여 쿼리의 sql 텍스트를 검색할 수 있습니다.|  
 |**statement_start_offset**|**int**|0부터 시작하여 일괄 처리 또는 지속형 개체의 텍스트 내에서 행이 설명하는 쿼리의 시작 위치(바이트)를 나타냅니다.|  
-|**statement_end_offset**|**int**|0부터 시작하여 일괄 처리 또는 지속형 개체의 텍스트 내에서 행이 설명하는 쿼리의 끝 위치(바이트)를 나타냅니다. 이전 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]버전의 경우 값-1은 일괄 처리의 끝을 나타냅니다. 후행 주석은 더 이상 포함 되지 않습니다.|  
+|**statement_end_offset**|**int**|0부터 시작하여 일괄 처리 또는 지속형 개체의 텍스트 내에서 행이 설명하는 쿼리의 끝 위치(바이트)를 나타냅니다. 이전 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]버전의 경우 값-1은 일괄 처리의 끝을 나타냅니다. 후행 주석을 더이상 포함하지 않습니다.|  
 |**plan_generation_num**|**bigint**|다시 컴파일한 후 계획의 인스턴스 간을 서로 구별하는 데 사용될 수 있는 시퀀스 번호입니다.|  
 |**plan_handle**|**varbinary (64)**|실행 된 일괄 처리에 대 한 쿼리 실행 계획을 고유 하 게 식별 하는 토큰 이며 계획 캐시에 있거나 현재 실행 중인 일괄 처리에 대 한 쿼리 실행 계획을 고유 하 게 식별 합니다. 이 값은 [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) 동적 관리 함수로 전달되어 쿼리 계획을 가져올 수 있습니다.<br /><br /> 고유하게 컴파일된 저장 프로시저에서 메모리 최적화 테이블을 쿼리하는 경우 항상 0x000입니다.|  
 |**creation_time**|**datetime**|이 계획이 컴파일된 시간입니다.|  
