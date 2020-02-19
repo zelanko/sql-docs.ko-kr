@@ -1,6 +1,7 @@
 ---
-title: '4단원: 보고서에 테이블 추가(Reporting Services) | Microsoft Docs'
-ms.date: 04/29/2019
+title: '4단원: 보고서에 테이블 추가 | Microsoft Docs'
+description: 데이터 집합을 정의하고 나면 페이지가 매겨진 보고서의 디자인을 시작할 수 있습니다. 도구 상자 창에서 디자인 화면으로 보고서 개체를 끌어다 놓아 보고서 레이아웃을 만듭니다.
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -8,21 +9,21 @@ ms.topic: conceptual
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e925dec5eb14365a6c313349599a77ffe1d7ab13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: fca89bf8992db9ec3b07cea422ec146993e8aec8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65106013"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244296"
 ---
-# <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>4단원: 보고서에 테이블 추가(Reporting Services)
+# <a name="lesson-4-add-a-table-to-the-report-reporting-services"></a>4단원: 보고서에 테이블 추가(Reporting Services)
 
-데이터 세트가 정의되면 보고서 디자인을 시작할 수 있습니다. **도구 상자** 창에서 **디자인 화면**으로 ‘보고서 개체’를 끌어다 놓아 보고서 레이아웃을 만듭니다.  보고서 개체의 몇 가지 유형은 다음과 같습니다.
+데이터 집합을 정의하고 나면 페이지가 매겨진 보고서의 디자인을 시작할 수 있습니다. **도구 상자** 창에서 **디자인 화면**으로 ‘보고서 개체’를 끌어다 놓아 보고서 레이아웃을 만듭니다.  보고서 개체의 몇 가지 유형은 다음과 같습니다.
 
-- Table
+- 테이블
 - 텍스트 상자
-- image
-- 선
+- 이미지
+- 꺾은선형
 - 직사각형
 - 차트
 - 지도
@@ -54,7 +55,7 @@ ms.locfileid: "65106013"
 
 7. 같은 방법으로 `[LineTotal]` 필드를 추가하여 다섯 번째 열을 만듭니다. 열 레이블이 “Line Total”로 추가됩니다. 보고서 디자이너가 자동으로 “LineTotal”을 두 단어로 분리하여 열 이름을 만듭니다.
 
-다음 다이어그램은 Date, Order, Product, Qty 및 Line Total 필드가 있는 테이블 데이터 영역을 보여 줍니다.
+다음 다이어그램에는 Date, Order, Product, Qty, Line Total 필드가 포함된 테이블 데이터 영역이 표시됩니다.
 ![rs_BasicTableDetailsDesign](media/rs-basictabledetailsdesign.png)
 
 ## <a name="preview-your-report"></a>보고서 미리 보기
@@ -69,7 +70,7 @@ ms.locfileid: "65106013"
 
 다음 다이어그램은 **미리 보기** 뷰에 표시된 보고서의 일부를 보여 줍니다.
 
-   ![미리 보기, 5개의 열이 있는 테이블의 세부 정보 행](media/rs-basictabledetailspreview.png "미리 보기, 5개의 열이 있는 테이블의 세부 정보 행")
+   ![미리 보기, 5개의 열이 있는 테이블의 정보 행](media/rs-basictabledetailspreview.png "미리 보기, 5개의 열이 있는 테이블의 정보 행")
 
 Date 및 Line Total 값을 확인합니다. 다음 단원에서는 좀 더 깔끔하게 표시되도록 서식을 지정하는 방법을 알아보겠습니다.
 
@@ -78,9 +79,9 @@ Date 및 Line Total 값을 확인합니다. 다음 단원에서는 좀 더 깔�
 
 ## <a name="next-steps"></a>다음 단계
 
-보고서에 테이블 데이터 영역을 추가하고 데이터 영역에 필드를 추가한 다음, 보고서를 미리 보기 했습니다. 다음 단원에서는 열 머리글과 필드 식에 서식을 지정하는 방법을 알아보겠습니다. [5단원: 보고서 서식 지정 &#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md)에서 계속 진행하세요.
+보고서에 테이블 데이터 영역을 추가하고 데이터 영역에 필드를 추가한 다음, 보고서를 미리 보기 했습니다. 다음 단원에서는 열 머리글과 필드 식에 서식을 지정하는 방법을 알아보겠습니다. 다음으로 [5단원: 보고서 서식 지정&#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md)을 참조하세요.
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [테이블&#40;보고서 작성기 및 SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)  
 [데이터 세트 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md)  

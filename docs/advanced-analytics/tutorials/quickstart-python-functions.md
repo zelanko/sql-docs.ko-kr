@@ -1,35 +1,34 @@
 ---
-title: '빠른 시작: Python 함수 쓰기'
-titleSuffix: SQL Server Machine Learning Services
-description: 이 빠른 시작에서는 SQL Server Machine Learning Services를 사용하여 고급 통계 계산을 위한 Python 함수를 작성하는 방법을 알아봅니다.
+title: '빠른 시작: Python 함수'
+description: 이 빠른 시작에서는 SQL Server Machine Learning Services와 함께 Python 수학 및 유틸리티 함수를 사용하는 방법에 대해 알아보겠습니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 08f43c6406d0ca2c95cc21a207cae63af6e86902
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: d939e04c4a82575cf8210f2c11e734b9912c0fe5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727003"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831404"
 ---
-# <a name="quickstart-write-advanced-python-functions-with-sql-server-machine-learning-services"></a>빠른 시작: SQL Server Machine Learning Services를 사용하여 고급 Python 함수 작성
+# <a name="quickstart-python-functions-with-sql-server-machine-learning-services"></a>빠른 시작: SQL Server Machine Learning Services를 사용한 Python 함수
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 빠른 시작에서는 SQL Server Machine Learning Services를 사용하여 SQL 저장 프로시저에 Python 수학 및 유틸리티 함수를 포함하는 방법을 설명합니다. T-SQL에서 구현하기에 복잡한 고급 통계 함수는 단일 줄의 코드만으로 Python에서 수행할 수 있습니다.
+이 빠른 시작에서는 SQL Server Machine Learning Services와 함께 Python 수학 및 유틸리티 함수를 사용하는 방법에 대해 알아보겠습니다. 통계 함수는 T-SQL에서 구현하기에 복잡한 경우가 많으며 다만 몇 줄의 코드만으로 Python에서 수행할 수 있습니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-- 이 빠른 시작에서는 Python 언어가 설치된 [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)를 사용하여 SQL Server 인스턴스에 액세스해야 합니다.
+- 이 빠른 시작을 수행하려면 Python 언어가 설치된 [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)가 포함된 SQL Server 인스턴스에 대한 액세스 권한이 필요합니다.
 
   SQL Server 인스턴스는 Azure 가상 머신 또는 온-프레미스에 있을 수 있습니다. 외부 스크립팅 기능은 기본적으로 사용하지 않도록 설정되어 있으므로 시작하기 전에 [외부 스크립팅을 활성화](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)하고 **SQL Server 실행 패드 서비스**가 실행 중인지 확인해야 합니다.
 
-- Python 스크립트가 포함된 SQL 쿼리를 실행하기 위한 도구도 필요합니다. SQL Server 인스턴스에 연결할 수 있는 데이터베이스 관리 또는 쿼리 도구를 사용하여 이러한 스크립트를 실행하고 T-SQL 쿼리 또는 저장 프로시저를 실행할 수 있습니다. 이 빠른 시작에서는 [SSMS(SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)를 사용합니다.
+- 또한 Python 스크립트가 포함된 SQL 쿼리를 실행하기 위한 도구가 필요합니다. SQL Server 인스턴스에 연결할 수 있는 데이터베이스 관리 또는 쿼리 도구를 사용하여 이러한 스크립트를 실행하고 T-SQL 쿼리 또는 저장 프로시저를 실행할 수 있습니다. 이 빠른 시작에서는 [SSMS(SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)를 사용합니다.
 
 ## <a name="create-a-stored-procedure-to-generate-random-numbers"></a>난수를 생성하는 저장 프로시저 만들기
 

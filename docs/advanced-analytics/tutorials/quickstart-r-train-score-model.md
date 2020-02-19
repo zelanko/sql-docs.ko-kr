@@ -1,39 +1,38 @@
 ---
 title: '빠른 시작: R에서 모델 학습'
-titleSuffix: SQL Server Machine Learning Services
-description: R에서 SQL Server Machine Learning Services를 사용하여 간단한 예측 모델을 만든 다음, 새 데이터를 사용하여 결과를 예측합니다.
+description: 이 빠른 시작에서는 T를 사용하여 예측 모델을 만들어 학습시키고, 모델을 SQL Server 인스턴스의 테이블에 저장한 다음, SQL Server Machine Learning Services를 사용하여 모델로 새 데이터의 값을 예측합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bd91191a84aac8c245bdcbbe0afd2bf3241aa6b3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: b6be97041912027cf284ff34c2c826a37edabe93
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73726520"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831727"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>빠른 시작: SQL Server Machine Learning Services를 사용하여 R에서 예측 모델 만들기 및 채점
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 빠른 시작에서는 R을 사용하여 예측 모델을 만들어 학습시키고, 모델을 SQL Server 인스턴스의 테이블에 저장한 다음, [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md)를 사용하여 모델로 새 데이터의 값을 예측할 수 있습니다.
+이 빠른 시작에서는 T를 사용하여 예측 모델을 만들어 학습시키고, 모델을 SQL Server 인스턴스의 테이블에 저장한 다음, [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md)를 사용하여 모델로 새 데이터의 값을 예측합니다.
 
 SQL에서 실행되는 두 개의 저장 프로시저를 만들고 실행합니다. 첫 번째 저장 프로시저는 R에 포함된 **mtcars** 데이터 세트를 사용하여 차량에 수동 변속기가 장착되었을 확률을 예측하는 단순한 일반화된 선형 모델(GLM)을 생성합니다. 두 번째 저장 프로시저는 첫 번째 프로시저에서 생성된 모델을 호출하여 새 데이터를 기반으로 예측 세트를 출력합니다. SQL 저장 프로시저에 R 코드를 배치하면 작업이 SQL에 포함되고 다시 사용할 수 있으며 다른 저장 프로시저와 클라이언트 애플리케이션에서 호출할 수 있습니다.
 
 > [!TIP]
-> 선형 모델에 리프레셔가 필요한 경우 rxLinMod를 사용하여 모델을 맞추는 프로세스를 설명하는 다음 자습서를 참조하세요.  [Fitting Linear Models](/machine-learning-server/r/how-to-revoscaler-linear-model)(선형 모델 맞춤)
+> 선형 모델에 리프레셔가 필요한 경우 rxLinMod를 사용하여 모델을 맞추는 프로세스를 설명하는 다음 자습서를 참조하세요.  [선형 모델 맞춤](/machine-learning-server/r/how-to-revoscaler-linear-model) 자습서를 권장합니다.
 
 이 빠른 시작을 완료하면 다음을 배울 수 있습니다.
 
 > [!div class="checklist"]
 > - 저장 프로시저에 R 코드를 포함하는 방법
 > - 저장 프로시저의 입력을 통해 코드에 입력을 전달하는 방법
-> - 저장 프로시저를 사용하여 모델을 운영화하는 방법
+> - 저장 프로시저를 사용하여 모델을 운영하는 방법
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -107,7 +106,7 @@ GO
 ```
 
 - `glm`에 대한 첫 번째 인수는 `am`를 `hp + wt`에 종속된 것으로 정의하는 *formula* 매개 변수입니다.
-- 입력 데이터는 SQL 쿼리에 의해 채워지는 `MTCarsData` 변수에 저장됩니다. 입력 데이터에 특정 이름을 할당하지 않는 경우 기본 변수 이름은 _InputDataSet_입니다.
+- 입력 데이터는 SQL 쿼리에 의해 채워지는 `MTCarsData` 변수에 저장됩니다. 입력 데이터에 구체적인 이름을 할당하지 않으면 기본 변수 이름 _InputDataSet_가 사용됩니다.
 
 ### <a name="store-the-model-in-the-sql-database"></a>모델을 SQL 데이터베이스에 저장
 
@@ -132,7 +131,7 @@ GO
    ```
 
    > [!TIP]
-   > 이 코드를 두 번째로 실행하면 다음 오류가 표시됩니다. "PRIMARY KEY 제약 조건 위반...dbo.stopping_distance_models 개체에 중복 키를 삽입할 수 없습니다." 이 오류를 방지하는 한 가지 옵션은 각 새 모델의 이름을 업데이트하는 것입니다. 예를 들어 이름을 추가 설명이 포함된 이름으로 변경하고 모델 유형, 모델 유형을 만든 날짜 등을 포함할 수 있습니다.
+   > 이 코드를 두 번째로 실행하면 다음 오류가 표시됩니다. "PRIMARY KEY 제약 조건 위반...dbo.stopping_distance_models 개체에 중복 키를 삽입할 수 없습니다." 이 오류를 방지하는 한 가지 옵션은 각 새 모델의 이름을 업데이트하는 것입니다. 예를 들어 좀 더 구체적인 이름으로 변경하고 모델 유형, 만든 날짜 등을 포함할 수 있습니다.
 
      ```sql
      UPDATE GLM_models
@@ -202,11 +201,11 @@ WITH RESULT SETS ((new_hp INT, new_wt DECIMAL(10,3), predicted_am DECIMAL(10,3))
 
 위의 스크립트는 다음 단계를 수행합니다.
 
-- SELECT 문을 사용하여 테이블에서 단일 모델을 가져오고 입력 매개 변수로 전달합니다.
+- SELECT 문을 사용하여 테이블에서 단일 모델을 가져온 후 입력 매개 변수로 전달합니다.
 
 - 테이블에서 모델을 검색한 후 모델에서 `unserialize` 함수를 호출합니다.
 
-- 적절한 인수를 사용하여 `predict` 함수를 적용하고 새 입력 데이터를 제공합니다.
+- 적절한 인수를 사용하여 `predict` 함수를 모델에 적용하고, 새 입력 데이터를 제공합니다.
 
 > [!NOTE]
 > 이 예에서는 R에서 반환되는 데이터의 스키마를 확인하기 위해 테스트 단계에서 `str` 함수가 추가되었습니다. 나중에 해당 문을 제거할 수 있습니다.

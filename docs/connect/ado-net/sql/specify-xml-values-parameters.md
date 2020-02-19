@@ -1,6 +1,6 @@
 ---
 title: XML 값을 매개 변수로 지정
-description: 명령에 XML 데이터를 매개 변수로 전달 하는 방법을 보여 줍니다.
+description: 하나의 명령에 XML 데이터를 매개 변수로서 전달하는 방법을 보여줍니다.
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 5ef73529119245397932a3a2414ce65f381b55bd
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 7f9893d7ac9dd83ae5212684678fc240a8d77097
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452116"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251141"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>XML 값을 매개 변수로 지정
 
@@ -29,11 +29,11 @@ ms.locfileid: "72452116"
 다음 콘솔 애플리케이션에서는 **AdventureWorks** 데이터베이스에 새 테이블을 만듭니다. 이 새 테이블에는 **SalesID**라는 열과 **SalesInfo**라는 XML 열이 포함되어 있습니다.  
   
 > [!NOTE]
->  **AdventureWorks** 샘플 데이터베이스는 SQL Server를 설치할 때 기본적으로 설치되지 않으며 SQL Server 설치 프로그램을 실행 하 여 설치할 수 있습니다.  
+>  **AdventureWorks** 샘플 데이터베이스는 SQL Server를 설치할 때 기본적으로 설치되지 않으며 SQL Server Setup을 실행하여 설치할 수 있습니다.  
   
-이 예에서는 새 테이블에 행을 삽입 하는 <xref:Microsoft.Data.SqlClient.SqlCommand> 개체를 준비 합니다. 저장된 파일에서는 **SalesInfo** 열에 필요한 XML 데이터를 제공합니다.  
+이 예제에서는 새 테이블에 행을 삽입할 <xref:Microsoft.Data.SqlClient.SqlCommand> 개체를 준비합니다. 저장된 파일에서는 **SalesInfo** 열에 필요한 XML 데이터를 제공합니다.  
   
-예제를 실행 하는 데 필요한 파일을 만들려면 프로젝트와 동일한 폴더에 새 텍스트 파일을 만듭니다. 파일 이름을 MyTestStoreData로 합니다. 메모장에서 파일을 열고 다음 텍스트를 복사 하 여 붙여 넣습니다.  
+예제를 실행하는 데 필요한 파일을 만들려면 프로젝트와 동일한 폴더에 새 텍스트 파일을 만듭니다. 파일 이름을 MyTestStoreData.xml로 지정합니다. 파일을 메모장에서 열고 다음 텍스트를 복사해 붙여넣습니다.  
   
 ```xml  
 <StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  

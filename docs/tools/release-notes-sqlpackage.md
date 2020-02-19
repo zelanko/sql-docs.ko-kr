@@ -1,5 +1,5 @@
 ---
-title: DacFx 및 SqlPackage 릴리스 정보 | Microsoft Docs
+title: DacFx 및 SqlPackage 릴리스 정보
 description: Microsoft sqlpackage에 대한 릴리스 정보입니다.
 ms.custom: tools|sos
 ms.date: 02/02/2019
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 11e10f4a29b15efbd2b0ee513080a2000ae7e2f1
-ms.sourcegitcommit: 82b70c39550402a2b0b327db32bf5ecf88b50d3c
-ms.translationtype: MTE75
+ms.openlocfilehash: 9dfbb1192c160fb032afa6dbb56ee7b24b80bcd6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73033046"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241224"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>SqlPackage.exe에 대한 릴리스 정보
 
@@ -34,10 +34,25 @@ Or, if there is no relationship, remove 'DacFx' from the metadata 'title:'.
 I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
+## <a name="1841-sqlpackage"></a>18.4.1 sqlpackage
+
+|플랫폼|다운로드|릴리스 날짜|버전|빌드
+|:---|:---|:---|:---|:---|
+|Windows|[MSI 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2113703)|2019년 12월 13일|18.4.1|15.0.4630.1|
+|macOS .NET Core |[zip 파일](https://go.microsoft.com/fwlink/?linkid=2113705)|2019년 12월 13일| 18.4.1|15.0.4630.1|
+|Linux .NET Core |[zip 파일](https://go.microsoft.com/fwlink/?linkid=2113331)|2019년 12월 13일| 18.4.1|15.0.4630.1|
+|Windows .NET Core |[zip 파일](https://go.microsoft.com/fwlink/?linkid=2113704)|2019년 12월 13일| 18.4.1|15.0.4630.1|
+
+### <a name="fixes"></a>수정 프로그램
+| Fix | 세부 정보 |
+| :-- | :------ |
+| ScriptDom |  ScriptDom 구문 분석 회귀는 'RENAME'이 최상위 토큰으로 잘못 처리되어 구문 분석이 실패하는 18.3.1에서 도입되었습니다.
+| &nbsp; | &nbsp; |
+
 
 ## <a name="184-sqlpackage"></a>18.4 sqlpackage
 
-|플랫폼|다운로드|릴리스 날짜|버전 옵션|빌드
+|플랫폼|다운로드|릴리스 날짜|버전|빌드
 |:---|:---|:---|:---|:---|
 |Windows|[MSI 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2108813)|2019년 10월 29일|18.4|15.0.4573.2|
 |macOS .NET Core |[zip 파일](https://go.microsoft.com/fwlink/?linkid=2108815)|2019년 10월 29일| 18.4|15.0.4573.2|
@@ -48,71 +63,71 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | 기능 | 세부 정보 |
 | :------ | :------ |
-| 배포 | Azure SQL Data Warehouse에 배포할 수 있도록 지원 (GA)을 추가 합니다. | 
-| 플랫폼 | macOS, Linux 및 Windows 용 .NET Core GA를 sqlpackage. | 
-| 보안 | SHA1 코드 서명을 제거 합니다. |
-| 배포 | 새 Azure 데이터베이스 버전에 대 한 지원 추가: 일반 용도, BusinessCritical, Hyperscale |
-| 배포 | AAD 사용자 및 그룹에 대 한 Managed Instance 지원을 추가 합니다. |
-| 배포 | .NET Core의 sqlpackage에 대 한/AccessToken 매개 변수를 지원 합니다. |
+| 배포 | Azure SQL Data Warehouse에 배포할 수 있도록 지원을 추가합니다(GA). | 
+| 플랫폼 | macOS, Linux 및 Windows용 sqlpackage .NET Core GA. | 
+| 보안 | SHA1 코드 서명을 제거합니다. |
+| 배포 | 새 Azure 데이터베이스 버전에 대한 지원을 추가합니다. GeneralPurpose, BusinessCritical, Hyperscale |
+| 배포 | AAD 사용자 및 그룹에 대한 Managed Instance 지원을 추가합니다. |
+| 배포 | .NET Core에서 sqlpackage에 대한 /AccessToken 매개 변수를 지원합니다. |
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>알려진 문제 
 
 | 기능 | 세부 정보 |
 | :------ | :------ |
-| ScriptDom |  ScriptDom 구문 분석 회귀는 ' RENAME '이 최상위 토큰으로 잘못 처리 되어 구문 분석이 실패 하는 18.3.1에서 도입 되었습니다. 이 문제는 다음 sqlpackage 릴리스에서 수정 될 예정입니다. | 
+| ScriptDom |  ScriptDom 구문 분석 회귀는 'RENAME'이 최상위 토큰으로 잘못 처리되어 구문 분석이 실패하는 18.3.1에서 도입되었습니다. 이 문제는 다음 sqlpackage 릴리스에서 수정될 예정입니다. | 
 | &nbsp; | &nbsp; |
 
-### <a name="known-issues-for-net-core"></a>.NET Core에 대 한 알려진 문제
+### <a name="known-issues-for-net-core"></a>.NET Core에 대한 알려진 문제
 
 | 기능 | 세부 정보 |
 | :------ | :------ |
-| 가져오기 |  크기가 4GB를 초과 하는 압축 파일이 포함 된 bacpac 파일의 경우 sqlpackage의 .NET Core 버전을 사용 하 여 가져오기를 수행 해야 할 수 있습니다.  이 동작은 .net Core가 sqlpackage의 .NET 전체 프레임 워크 버전에서 사용할 수 없는 zip 헤더를 생성 하는 방법 때문에 발생 합니다. | 
-| 배포 | 매개 변수/p: Storage = File은 지원 되지 않습니다. .NET Core 에서만 메모리를 사용할 수 있습니다. | 
-| Always Encrypted | sqlpackage .NET Core는 Always Encrypted 열을 지원 하지 않습니다. | 
-| 보안 | sqlpackage .NET Core는 multi-factor authentication에 대해/sera 매개 변수를 지원 하지 않습니다. | 
+| 가져오기 |  크기가 4GB를 초과하는 압축 파일이 포함된 .bacpac 파일의 경우 sqlpackage의 .NET Core 버전을 사용하여 가져오기를 수행해야 할 수 있습니다.  이 동작은 .NET Core가 sqlpackage의 .NET Full Framework 버전에서 사용할 수 없는 zip 헤더를 생성하는 방식 때문입니다. | 
+| 배포 | /p:Storage=File 매개 변수는 지원되지 않습니다. 메모리만 .NET Core에서 지원됩니다. | 
+| Always Encrypted | sqlpackage .NET Core는 Always Encrypted 열을 지원하지 않습니다. | 
+| 보안 | sqlpackage .NET Core는 다단계 인증에 대한 /ua 매개 변수를 지원하지 않습니다. | 
 | 배포 | Json 데이터 serialization을 사용하는 이전 V2 .dacpac 및.bacpac 파일이 지원되지 않습니다. |
 | &nbsp; | &nbsp; |
 
 ## <a name="1831-sqlpackage"></a>18.3.1 sqlpackage
 
-|플랫폼|다운로드|릴리스 날짜|버전 옵션|빌드
+|플랫폼|다운로드|릴리스 날짜|버전|빌드
 |:---|:---|:---|:---|:---|
 |Windows|[MSI 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2102893)|2019년 9월 13일|18.3.1|15.0.4538.1|
 |macOS .NET Core(미리 보기)|[zip 파일](https://go.microsoft.com/fwlink/?linkid=2102894)|2019년 9월 13일| 18.3.1|15.0.4538.1|
 |Linux .NET Core(미리 보기)|[zip 파일](https://go.microsoft.com/fwlink/?linkid=2102978)|2019년 9월 13일| 18.3.1|15.0.4538.1|
-|Windows .NET Core (미리 보기)|[zip 파일](https://go.microsoft.com/fwlink/?linkid=2102979)|2019년 9월 13일| 18.13.1|15.0.4538.1|
+|Windows .NET Core(미리 보기)|[zip 파일](https://go.microsoft.com/fwlink/?linkid=2102979)|2019년 9월 13일| 18.13.1|15.0.4538.1|
 
 ### <a name="features"></a>기능
 
 | 기능 | 세부 정보 |
 | :------ | :------ |
-| 배포 | Azure SQL Data Warehouse (미리 보기)에 배포할 지원을 추가 합니다. | 
-| 배포 | Sqlpackage에/p: DatabaseLockTimeout = (INT32 ' 60 ') 매개 변수를 추가 합니다. | 
-| 배포 | Sqlpackage에/p: LongRunningCommandTimeout = (INT32) 매개 변수를 추가 합니다. |
-| 내보내기/추출 | Sqlpackage에/p: TempDirectoryForTableData = (STRING) 매개 변수를 추가 합니다. |
-| 배포 | 배포 참가자가 추가 위치에서 로드 될 수 있도록 허용 합니다. 배포 참가자는 배포 되는 대상으로 동일한 디렉터리에서 로드 되며, sqlpackage 바이너리에 상대적인 확장 디렉터리와 sqlpackage에 추가 된/p: AdditionalDeploymentContributorPaths = (STRING) 매개 변수입니다. 추가 디렉터리 위치를 지정할 수 있습니다. |
-| 배포 | OPTIMIZE_FOR_SEQUENTIAL_KEY에 대 한 지원을 추가 합니다. |
+| 배포 | Azure SQL Data Warehouse에 배포할 수 있도록 지원을 추가합니다(미리 보기). | 
+| 배포 | sqlpackage에 /p:DatabaseLockTimeout=(INT32 '60') 매개 변수를 추가합니다. | 
+| 배포 | sqlpackage에 /p:LongRunningCommandTimeout=(INT32) 매개 변수를 추가합니다. |
+| 내보내기/추출 | sqlpackage에 /p:TempDirectoryForTableData=(STRING) 매개 변수를 추가합니다. |
+| 배포 | 배포 참가자가 추가 위치에서 로드될 수 있도록 허용합니다. 배포 참가자는 배포되는 대상 .dacpac과 동일한 디렉터리, sqlpackage.exe 이진 파일에 상대적인 Extensions 디렉터리, 추가 디렉터리 위치를 지정할 수 있는 sqlpackage에 추가된 /p:AdditionalDeploymentContributorPaths=(STRING) 매개 변수에서 로드됩니다. |
+| 배포 | OPTIMIZE_FOR_SEQUENTIAL_KEY에 대한 지원을 추가합니다. |
 | &nbsp; | &nbsp; |
 
 ### <a name="fixes"></a>수정 프로그램
 
 | Fix | 세부 정보 |
 | :-- | :------ |
-| 배포 | 자동 인덱스를 무시 하 여 배포 시 삭제 되지 않도록 수정 합니다. | 
-| Always Encrypted | Always Encrypted varchar 열 처리를 수정 합니다. | 
-| 빌드/배포 | Xml 열 집합에 대 한 nodes () 메서드를 해결 하려면 수정 합니다.| 
-| ScriptDom | ' URL ' 문자열이 최상위 토큰으로 해석 된 추가 사례를 수정 합니다. | 
-| 그래프 | 제약 조건에서 의사 열 참조에 대해 생성 된 TSQL을 수정 합니다.  | 
-| 내보내기 | 복잡성 요구 사항을 충족 하는 임의의 암호를 생성 합니다. | 
-| 배포 | 제약 조건을 검색할 때 명령 시간 제한을 적용 하도록 수정 합니다. | 
-| .NET Core (미리 보기) | 파일에 대 한 진단 로깅을 수정 합니다. | 
-| .NET Core (미리 보기) | 스트림을 사용 하 여 테이블 데이터를 내보내 많은 테이블을 지원 합니다. | 
+| 배포 | 배포 시 삭제되지 않게 자동 인덱스를 무시하도록 수정합니다. | 
+| Always Encrypted | Always Encrypted varchar 열 처리를 수정합니다. | 
+| 빌드/배포 | xml 열 집합에 대한 nodes() 메서드를 해결하도록 수정합니다.| 
+| ScriptDom | 'URL' 문자열이 최상위 토큰으로 해석된 추가 사례를 수정합니다. | 
+| 그래프 | 제약 조건에서 의사 열 참조에 대해 생성된 TSQL을 수정합니다.  | 
+| 내보내기 | 복잡성 요구 사항을 충족하는 임의 암호를 생성합니다. | 
+| 배포 | 제약 조건을 검색할 때 명령 제한 시간을 적용하도록 수정합니다. | 
+| .NET Core(미리 보기) | 파일에 대한 진단 로깅을 수정합니다. | 
+| .NET Core(미리 보기) | 대용량 테이블을 지원하기 위해 스트리밍을 사용하여 테이블 데이터를 내보냅니다. | 
 | &nbsp; | &nbsp; |
 
 ## <a name="182-sqlpackage"></a>18.2 sqlpackage
 
-|플랫폼|다운로드|릴리스 날짜|버전 옵션|빌드
+|플랫폼|다운로드|릴리스 날짜|버전|빌드
 |:---|:---|:---|:---|:---|
 |Windows|[MSI 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2087429)|2019년 4월 15일|18.2|15.0.4384.2|
 |macOS .NET Core(미리 보기)|[zip 파일](https://go.microsoft.com/fwlink/?linkid=2087247)|2019년 4월 15일 | 18.2 |15.0.4384.2|
@@ -204,7 +219,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 ## <a name="178-sqlpackage"></a>17.8 sqlpackage
 
-릴리스 날짜: &nbsp; 2018년 6월 22일  
+릴리스 날짜: &nbsp; June 22, 2018  
 빌드: &nbsp; 14.0.4079.2
 
 ### <a name="features"></a>기능
@@ -242,7 +257,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | :-- | :------ |
 | 가져오기 | Azure SQL Database .bacpac를 온-프레미스 인스턴스로 가져올 때 _이 버전의 SQL Server에서는 암호가 없는 데이터베이스 마스터 키가 지원되지 않습니다_로 인한 오류를 수정했습니다. |
 | 그래프 | 그래프 테이블에 대한 확인되지 않은 의사(pseudo) 열 오류를 수정했습니다. |
-| 스키마 비교 | 스키마를 비교 하는 SQL 인증을 수정 했습니다. | 
+| 스키마 비교 | 스키마를 비교하는 SQL 인증을 수정했습니다. | 
 | &nbsp; | &nbsp; |
 
 ## <a name="1740-sqlpackage"></a>17.4.0 sqlpackage

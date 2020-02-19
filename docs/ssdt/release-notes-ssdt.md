@@ -1,5 +1,5 @@
 ---
-title: SSDT(SQL Server Data Tools) 릴리스 정보 | Microsoft Docs
+title: SSDT(SQL Server Data Tools) 릴리스 정보
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssdt
@@ -7,16 +7,17 @@ ms.topic: conceptual
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
 author: markingmyname
 ms.author: maghan
+manager: jroth
 ms.reviewer: ''
-ms.custom: ''
-ms.date: 08/15/2019
+ms.custom: seo-lt-2019
+ms.date: 12/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f4fa51ff0ba9a5ce3e2960ab07e3e1994ddb881
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 860888bf0f2292a68fa6a4c6a6b92489466a586c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874895"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75688784"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools) 릴리스 정보
 
@@ -43,6 +44,40 @@ GeneMi , 2019/03/22.
 
 P.S.  There is no need to keep this large HTML comment indefinitely.
 -->
+
+## <a name="1593nbsp-ssdt-for-vs-2017"></a>15.9.3,&nbsp; VS 2017용 SSDT
+
+_릴리스 날짜:_ &nbsp; 2020년 1월 3일  
+_빌드 번호:_ &nbsp; 14.0.16203.0  
+_Visual Studio 2017용 SSDT._
+
+### <a name="whats-new"></a>새로운 기능
+
+| 새 항목 | 세부 정보 |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services(SSIS) | SQL Server 2017용 수신함 구성 요소 파워 쿼리 원본을 제거했습니다. 이제 SQL Server 2017 및 2019용 파워 쿼리 원본을 기본 구성 요소로 발표했습니다. 이 구성 요소는 [여기](https://www.microsoft.com/en-us/download/details.aspx?id=100619)에서 다운로드할 수 있습니다. |
+| Integration Services(SSIS) | SQL Server 2019용 수신함 구성 요소 Microsoft Oracle Connector를 제거했습니다. 이제 SQL Server 2019용 Microsoft Oracle Connector를 기본 구성 요소로 발표했습니다. 이 구성 요소는 [여기](https://www.microsoft.com/en-us/download/details.aspx?id=58228)에서 다운로드할 수 있습니다. |
+| Integration Services(SSIS) | 대상 서버 버전이 SQL Server 2017 또는 2019인 경우 IDtsHost 인터페이스가 등록되지 않아 때때로 SSIS 디버거가 시작되지 않을 수 있는 문제를 해결했습니다. |
+| Integration Services(SSIS) | 고 DPI 모드에서 주요 UI 레이아웃 문제를 수정했습니다. |
+| Integration Services(SSIS) | 대상 서버 버전이 SQL Server 2019인 경우 스크립트 태스크/구성 요소에 대한 .NET Framework 버전을 4.7로 업그레이드했습니다. |
+| Integration Services(SSIS) | ODBC 연결 관리자에서 프록시로 자체 호스트된 Integration Runtime을 사용하도록 지원하기 위해 ODBC 연결 관리자에 ConnectByProxy 속성을 추가했습니다. |
+| Integration Services(SSIS) | 사용자가 패키지 배포 모드에서 새 데이터 원본을 추가할 수 없는 문제를 해결했습니다. |
+| Integration Services(SSIS) | 코드가 .NET 4.5 이후에 도입된 새 구문을 사용하는 경우 사용자가 스크립트 태스크/구성 요소를 디버그할 수 없는 문제를 해결했습니다. |
+| Integration Services(SSIS) | Data Factory 리소스 공급자가 등록되지 않아 Integration Runtime 만들기 마법사를 통해 Azure 구독의 첫 번째 Data Factory를 만드는 데 실패할 수 있는 문제를 해결했습니다. |
+| Integration Services(SSIS) | 구독에 파일 전용 스토리지 계정이 구독에 있는 경우 ADF 연결 마법사의 SSIS가 Azure storage 계정 목록을 올바르게 표시하지 못하는 문제를 해결했습니다. |
+| Integration Services(SSIS) | 패키지가 컨테이너를 포함하는 경우 "Azure에서 실행"이 작동하지 않는 문제를 했습니다. |
+| Integration Services(SSIS) | Oracle Connector에서 char(n char) 및 varchar2(n char)가 잘못된 DTS 형식에 매핑되는 문제를 해결했습니다. |
+
+### <a name="known-issues"></a>알려진 문제
+
+| 알려진 문제 | 세부 정보 |
+| :---------- | :------ |
+| SSIS 패키지 실행 태스크는 ExecuteOutOfProcess가 True로 설정되었을 때 디버깅을 지원하지 않습니다. | 이 문제는 디버깅에만 적용됩니다. DTExec.exe 또는 SSIS 카탈로그를 통한 저장, 배포 및 실행은 영향을 받지 않습니다. |
+| Visual Studio 2017용 SSDT 15.8 이상은 Teradata 원본/대상이 포함된 패키지 디자인을 지원하지 않습니다. | Visual Studio 2017용 SSDT(15.8)를 사용하세요. |
+| SSIS 및 SSAS가 동일한 Visual Studio 인스턴스에 설치되면 파워 쿼리 원본은 OData v4를 지원하지 않습니다. | &nbsp; |
+| SSIS 및 SSAS가 동일한 Visual Studio 인스턴스에 설치되면 파워 쿼리 원본은 Oracle에 연결하는 데 ODBC를 사용하도록 지원하지 않습니다. | &nbsp; |
+| 파워 쿼리 원본이 지역화되지 않았습니다. | &nbsp; |
+| &nbsp; | &nbsp; |
 
 ## <a name="1592nbsp-ssdt-for-vs-2017"></a>15.9.2,&nbsp; VS 2017용 SSDT
 
@@ -116,7 +151,7 @@ _Visual Studio 2017용 SSDT._
 | Integration Services(SSIS) | ADF 2017의 SSIS용 파워 쿼리 원본(미리 보기)을 추가합니다. |
 | Integration Services(SSIS) | SQL Server 2012에 대한 지원을 다시 추가합니다. |
 | Integration Services(SSIS) | SQL Server 2019에 대한 Oracle 원본 및 대상을 추가합니다. |
-| Integration Services(SSIS) | SQL Server 2019에 대한 Oracle 원본 및 대상은 SSDT에 의해 이미 설치되어 있습니다. <br/></br> 서버 버전 2017 이하를 대상으로 하는 패키지를 디자인하려면 Microsoft 다운로드 사이트에서 해당 Oracle 커넥터 버전을 다운로드하여 SSDT 머신에 설치하세요. <br/></br> [SQL Server 2017을 대상으로 하는 Attunity의 Oracle용 Microsoft Connector 버전 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=55179 ) <br/></br> [SQL Server 2016을 대상으로 하는 Attunity의 Oracle용 Microsoft Connector 버전 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=52950 )<br/></br> [SQL Server 2014를 대상으로 하는 Attunity의 Oracle용 Microsoft Connector 버전 3.0](https://www.microsoft.com/en-us/download/details.aspx?id=44582 )<br/></br> [SQL Server 2012를 대상으로 하는 Attunity의 Oracle용 Microsoft Connector 버전 2.0](https://www.microsoft.com/en-us/download/details.aspx?id=29283 ) |
+| Integration Services(SSIS) | SQL Server 2019에 대한 Oracle 원본 및 대상은 SSDT에 의해 이미 설치되어 있습니다. <br/></br> 서버 버전 2017 이하를 대상으로 하는 패키지를 디자인하려면 Microsoft 다운로드 사이트에서 해당 Oracle 커넥터 버전을 다운로드하여 SSDT 머신에 설치하세요. <br/></br> [SQL Server 2017을 대상으로 하는 Attunity의 Oracle용 Microsoft Connector 버전 5.0](https://www.microsoft.com/download/details.aspx?id=55179 ) <br/></br> [SQL Server 2016을 대상으로 하는 Attunity의 Oracle용 Microsoft Connector 버전 4.0](https://www.microsoft.com/download/details.aspx?id=52950 )<br/></br> [SQL Server 2014를 대상으로 하는 Attunity의 Oracle용 Microsoft Connector 버전 3.0](https://www.microsoft.com/download/details.aspx?id=44582 )<br/></br> [SQL Server 2012를 대상으로 하는 Attunity의 Oracle용 Microsoft Connector 버전 2.0](https://www.microsoft.com/download/details.aspx?id=29283 ) |
 | Integration Services(SSIS) | 이전 SSIS 버전에서 마이그레이션하면 스크립트 작업/구성 요소를 로드할 수 없음 문제가 해결되었습니다. |
 | Integration Services(SSIS) | 데이터는 뷰어가 Windows 7 SP1 및 Windows 8.1에서 작동하지 않음 문제가 해결되었습니다. |
 | Integration Services(SSIS) | 일부 경우에 패키지를 저장하면 Visual Studio에서 충돌이 발생함 문제가 해결되었습니다. |
@@ -568,7 +603,7 @@ _Visual Studio 2015용 SSDT._
 - KPI 서식에 대해 편집한 항목이 일부 경우에 지속되지 않는 문제를 해결함.
 - PowerQuery UI에서 수식 입력줄이 표시되었는지에 따라 잘못된 메뉴 확인됨 상태를 보여 주는 문제를 해결함.
 - PowerQuery 데이터 원본을 포함한 AS 테이블 형식 1400-compat 수준 프로젝트에서 테이블 형식 모델 탐색기에서 데이터 소스 변경 메뉴를 선택할 때 VS와 충돌할 수 있는 문제를 해결함.
-- 1400 테이블 형식 모델을 로드할 때 ‘파일이나 어셈블리 'Microsoft.ProBI.MashupLibrary를 로드할 수 없음’ 오류가 나타날 수 있는 간헐적 문제를 해결함.
+- 1400 테이블 형식 모델을 로드할 때 ‘파일이나 어셈블리 'Microsoft.ProBI.MashupLibrary를 로드할 수 없음’ 오류가 나타날 수 있는 간헐적 문제를 해결함. 
 
 **RS 프로젝트**
 - RS 눈금자 및 매개 변수 상자 설정 선택 상태에 대한 사용자 기본 설정은 세션 간에 올바로 기억됩니다.
@@ -639,11 +674,11 @@ _SQL Server 2017까지 지원._
         - 레거시 리디렉션 사용(기본값은 false. true로 설정할 경우 매시업 엔진이 안전하지 않을 수 있는 HTTP 리디렉션을 추적함.  예: HTTPS에서 HTTP URI로 리디렉션)  
         - 오류 값을 Null로 반환(기본값은 false. true로 설정할 경우 셀 수준 오류가 null로 반환됨. false인 경우 셀에 오류가 포함되어 있으면 예외가 발생함)  
     - PowerQuery를 사용하는 추가 데이터 원본(파일 데이터 원본)
-        - 내보내기 
+        - Excel 
         - Text/CSV 
         - Xml 
         - Json 
-        - Folder 
+        - 폴더 
         - Access 데이터베이스 
         - Azure Blob Storage 
     - 지역화된 PowerQuery 사용자 인터페이스
@@ -714,7 +749,7 @@ _SQL Server 2017까지 지원._
 - DeploymentContributors에서 공개 모델에 액세스할 수 있지만 지원 스키마가 초기화되지 않는 문제를 해결함. [ 문제](https://github.com/Microsoft/DACExtensions/issues/8)
 - 파일 그룹 배치에 대한 DacFx 임시 수정
 - 외부 동의어에 대한 "확인되지 않은 참조" 오류에 대한 수정 
-- 항상 암호화: 온라인 암호화가 취소 시 변경 내용 추적을 사용하지 않도록 설정하지 않으며 암호화 시작 전에 변경 내용 추적이 정리되지 않은 경우 올바로 작동하지 않음
+- Always Encrypted: 온라인 암호화가 취소 시 변경 내용 추적을 사용하지 않도록 설정하지 않으며 암호화 시작 전에 변경 내용 추적이 정리되지 않은 경우 올바로 작동하지 않음
 
 ## <a name="165nbsp-ssdt-for-vs-2015"></a>16.5,&nbsp; VS 2015용 SSDT
 

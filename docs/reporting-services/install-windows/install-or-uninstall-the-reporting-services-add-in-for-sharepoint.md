@@ -1,30 +1,32 @@
 ---
 title: SharePoint용 Reporting Services 추가 기능 설치 또는 제거 | Microsoft Docs
-ms.date: 08/17/2017
+description: SharePoint 배포 내에서 Reporting Services 기능을 사용하도록 설정하려면 SharePoint 서버에서 SharePoint 제품용 설치 패키지 Microsoft SQL Server Reporting Services 추가 기능(rsSharePoint.msi)을 실행하는 방법을 알아보세요.
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 41a93cfdac331830477171dfdfc4f306c073bda3
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.openlocfilehash: 1f401a51defd84d9ed6a3160c4961b3087847b2d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893370"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866366"
 ---
-# <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint"></a>SharePoint용 Reporting Services 추가 기능 설치 또는 제거
+# <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-ssrs"></a>SharePoint용 Reporting Services 추가 기능(SSRS) 설치 또는 제거
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-  SharePoint 서버에서 SharePoint 제품용 설치 패키지 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능(rsSharePoint.msi)을 실행하여 SharePoint 배포 내에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능을 사용하도록 설정합니다. 이러한 기능에는 SharePoint 사이트에서 보고서, 데이터 원본 및 기타 보고서 서버 내용을 생성, 확인 및 관리할 수 있도록 파워 뷰, 보고서 뷰어 웹 파트, URL 프록시 엔드포인트, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 콘텐츠 형식 및 애플리케이션 페이지가 포함됩니다. SharePoint 제품용 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능은 SharePoint 모드에서 실행되는 보고서 서버의 필수 구성 요소입니다. 추가 기능은 SQL Server 2016 설치 마법사에서 설치하거나 SQL Server 2016 기능 팩에서 rsSharePoint.msi를 다운로드하여 설치할 수 있습니다. 추가 기능의 버전 목록 및 다운로드 페이지는 [SharePoint 제품용 Reporting Services 추가 기능 검색 위치](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)를 참조하세요.  
+  SharePoint 배포 내에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능을 사용하도록 설정하려면 SharePoint 서버에서 설치 패키지 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 제품용 추가 기능(rsSharePoint.msi)을 실행합니다. 이러한 기능에는 SharePoint 사이트에서 보고서, 데이터 원본 및 기타 보고서 서버 내용을 생성, 확인 및 관리할 수 있도록 파워 뷰, 보고서 뷰어 웹 파트, URL 프록시 엔드포인트, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 콘텐츠 형식 및 애플리케이션 페이지가 포함됩니다. SharePoint 제품용 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능은 SharePoint 모드에서 실행되는 보고서 서버의 필수 구성 요소입니다. 추가 기능은 SQL Server 2016 설치 마법사에서 설치하거나 SQL Server 2016 기능 팩에서 rsSharePoint.msi를 다운로드하여 설치할 수 있습니다. 추가 기능의 버전 목록 및 다운로드 페이지는 [SharePoint 제품용 Reporting Services 추가 기능 검색 위치](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)를 참조하세요.  
   
 > [!NOTE]
 > SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.
   
-##  <a name="bkmk_prereq"></a> 사전 요구 사항  
+##  <a name="bkmk_prereq"></a> 필수 조건  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능 설치 작업은 보고서 서버를 SharePoint 제품 인스턴스와 통합하는 데 필요한 몇 가지 단계 중 하나입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치 및 구성에 대한 자세한 내용은 [SharePoint 모드에서 첫 번째 보고서 서버 설치](install-the-first-report-server-in-sharepoint-mode.md)를 참조하세요.  
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 웹 프런트 엔드 애플리케이션이 여러 개 있는 SharePoint 팜과 통합하는 경우 웹 서버 프런트 엔드가 있는 팜의 각 컴퓨터에 추가 기능을 설치합니다. 이 작업은 보고서 서버 내용에 액세스하는 데 사용될 웹 프런트 엔드에 대해서만 수행합니다.  
@@ -53,7 +55,7 @@ ms.locfileid: "68893370"
   
 -   **설치 마법사:** ![참고](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "참고") SQL Server 2016에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사를 사용하여 이 추가 기능을 설치할 수 있습니다. 마법사의 **기능 선택** 페이지에서 **SharePoint 제품용 Reporting Services 추가 기능** 을 선택합니다.  
   
--   **rsSharepoint.msi:** 추가 기능 파일은 설치 미디어에서 직접 설치하거나 다운로드한 후 설치할 수 있습니다. rsSharepoint.msi는 그래픽 사용자 인터페이스 및 명령줄 설치를 둘 다 지원합니다. 먼저 승격된 권한으로 명령 프롬프트 창을 연 다음 명령줄에서 rsSharepoint.msi를 실행하여 관리자 권한으로 .msi를 실행해야 합니다. 추가 기능 다운로드에 대한 자세한 내용은 [SharePoint 제품용 Reporting Services 추가 기능 검색 위치](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)를 참조하세요.  
+-   **rsSharepoint.msi:** 설치 미디어에서 직접 추가 기능을 설치하거나 다운로드하여 설치할 수 있습니다. rsSharepoint.msi는 그래픽 사용자 인터페이스 및 명령줄 설치를 둘 다 지원합니다. 먼저 승격된 권한으로 명령 프롬프트 창을 연 다음 명령줄에서 rsSharepoint.msi를 실행하여 관리자 권한으로 .msi를 실행해야 합니다. 추가 기능 다운로드에 대한 자세한 내용은 [SharePoint 제품용 Reporting Services 추가 기능 검색 위치](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)를 참조하세요.  
   
     > [!NOTE]  
     >  자동 명령줄 설치를 위해 **/q** 스위치를 사용할 경우 최종 사용자 사용권 계약이 표시되지 않습니다. 설치 방법에 관계없이 본 소프트웨어의 설치는 사용권 계약에 의해 제한되며 사용자는 사용권 계약을 준수해야 합니다.  
@@ -73,7 +75,7 @@ Rssharepoint.msi /?
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\15\` (SharePoint 2013)
   
-     로 구분하거나 여러  
+     또는  
   
      `%program files%\common files\Microsoft Shared\Web Server Extensions\16\` (SharePoint 2016)  
   
@@ -84,7 +86,7 @@ Rssharepoint.msi /?
   
 1.  **관리자 권한으로**명령 프롬프트를 엽니다.  
   
-2.  다음 명령을 실행합니다.  
+2.  다음 명령 실행:  
   
     ```  
     Msiexec.exe /i rsSharePoint.msi SKIPCA=1  
@@ -123,7 +125,7 @@ Rssharepoint.msi /?
   
 1.  **관리자 권한으로**명령 프롬프트를 엽니다.  
   
-2.  다음 명령을 실행합니다.  
+2.  다음 명령 실행:  
   
     ```  
     Msiexec.exe /i rsSharePoint.msi /q  
@@ -166,7 +168,7 @@ Rssharepoint.msi /?
   
 1.  **관리자 권한으로**명령 프롬프트를 엽니다.  
   
-2.  다음 명령을 실행합니다.  
+2.  다음 명령 실행:  
   
     ```  
     msiexec.exe /uninstall rsSharePoint.msi  
@@ -179,7 +181,7 @@ Rssharepoint.msi /?
   
 1.  **관리자 권한으로**명령 프롬프트를 엽니다.  
   
-2.  다음 명령을 실행합니다.  
+2.  다음 명령 실행:  
   
     ```  
     Msiexec.exe /uninstall rsSharePoint.msi LocalOnly=1  
@@ -191,7 +193,7 @@ Rssharepoint.msi /?
   
 1.  **관리자 권한으로**명령 프롬프트를 엽니다.  
   
-2.  다음 명령을 실행합니다.  
+2.  다음 명령 실행:  
   
     ```  
     rsCustomAction.exe /p  
@@ -204,7 +206,7 @@ Rssharepoint.msi /?
   
 1.  **관리자 권한으로**명령 프롬프트를 엽니다.  
   
-2.  다음 명령을 실행합니다.  
+2.  다음 명령 실행:  
   
     ```  
     msiexec.exe /f rssharepoint.msi  
@@ -242,7 +244,7 @@ Rssharepoint.msi /?
   
 2.  출력은 다음과 비슷합니다.  
   
-     `2011-05-23 12:40:12: SSRSCustomActionError: SharePoint is installed, but not configured`를 참조하세요.  
+     `2011-05-23 12:40:12: SSRSCustomActionError: SharePoint is installed, but not configured`입니다.  
   
 ##  <a name="bkmk_upgrade"></a> 업그레이드  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능이 이미 설치되어 있으면 현재 버전으로 업그레이드할 수 있습니다. 추가 기능 설치 프로그램이 기존 버전을 감지하여 업데이트할 것인지 확인하는 메시지를 표시합니다. 메시지는 다음과 유사합니다.  
@@ -256,7 +258,7 @@ Rssharepoint.msi /?
 ##  <a name="bkmk_rscustomaction"></a> RsCustomAction.exe  
  다음 표에서는 rscustomaction.exe 스위치를 요약해서 보여 줍니다.  
   
-|스위치|설명|  
+|스위치|Description|  
 |------------|-----------------|  
 |i|사용자 지정 동작을 설치합니다. 그러면 SharePoint의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 요소가 등록되고 W3SVCservice가 다시 시작됩니다.|  
 |r|Repair|  

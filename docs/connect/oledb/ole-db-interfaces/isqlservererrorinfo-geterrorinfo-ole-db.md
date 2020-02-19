@@ -1,5 +1,5 @@
 ---
-title: 'ISQLServerErrorInfo:: GetErrorInfo (OLE DB) | Microsoft Docs'
+title: ISQLServerErrorInfo::GetErrorInfo(OLE DB) | Microsoft Docs
 description: ISQLServerErrorInfo::GetErrorInfo(OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 54e9c71ca21647004ea3899306dcb15689dcc3d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015443"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo(OLE DB)
@@ -27,9 +27,9 @@ ms.locfileid: "68015443"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 오류 정보를 포함 하는 SQL Server SSERRORINFO 구조체의 OLE DB 드라이버에 대 한 포인터를 반환 합니다.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 오류 정보가 포함된 OLE DB Driver for SQL Server SSERRORINFO에 대한 포인터를 반환합니다.  
   
- SQL Server에 대 한 OLE DB 드라이버는 **ISQLServerErrorInfo** error 인터페이스를 정의 합니다. 이 인터페이스는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 오류의 심각도 및 상태를 비롯하여 오류에 대한 자세한 정보를 반환합니다.  
+ OLE DB Driver for SQL Server는 **ISQLServerErrorInfo** 오류 인터페이스를 정의합니다. 이 인터페이스는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 오류의 심각도 및 상태를 비롯하여 오류에 대한 자세한 정보를 반환합니다.  
 
   
 ## <a name="syntax"></a>구문  
@@ -53,12 +53,12 @@ HRESULT GetErrorInfo(
  메서드가 성공했습니다.  
   
  E_INVALIDARG  
- *PpSSErrorInfo* 또는 *ppErrorStrings* 인수가 NULL입니다.  
+ *ppSSErrorInfo* 또는 *ppErrorStrings* 인수는 NULL입니다.  
   
  E_OUTOFMEMORY  
- SQL Server에 대 한 OLE DB 드라이버에서 요청을 완료 하기에 충분 한 메모리를 할당할 수 없습니다.  
+ OLE DB Driver for SQL Server에서 요청을 완료하기에 충분한 메모리를 할당할 수 없습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  SQL Server용 OLE DB 드라이버가 소비자에 의해 전달된 포인터를 통해 반환된 SSERRORINFO 및 OLECHAR 문자열을 위한 메모리를 할당했습니다. 소비자는 오류 데이터에 액세스할 필요가 없게 되면 **IMalloc::Free** 메서드를 사용하여 이 메모리의 할당을 취소해야 합니다.  
   
  SSERRORINFO 구조는 다음과 같이 정의됩니다.  
@@ -77,7 +77,7 @@ typedef struct tagSSErrorInfo
 SSERRORINFO;  
 ```  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |*pwszMessage*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 전달하는 오류 메시지입니다. 이 메시지는 **IErrorInfo::GetDescription** 메서드를 통해 반환됩니다.|  
 |*pwszServer*|오류가 발생한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|  

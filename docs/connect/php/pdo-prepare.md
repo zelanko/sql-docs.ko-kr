@@ -1,7 +1,7 @@
 ---
 title: PDO::prepare | Microsoft Docs
 ms.custom: ''
-ms.date: 04/25/2019
+ms.date: 01/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3bb02fefe4e4845a1ab1e7b7a7117845fdaebf13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 902a1e986f79205dfd676c635ac54814382c2ec3
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67993197"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76941203"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,19 +29,19 @@ PDOStatement PDO::prepare ( $statement [, array(key_pair)] )
 ```
 
 #### <a name="parameters"></a>매개 변수
-$*statement*: SQL 문이 포함된 문자열입니다.
+$*문*: SQL 문이 포함된 문자열입니다.
 
-*key_pair*: 특성 이름 및 값이 포함된 배열입니다. 자세한 내용은 주의 섹션을 참조하십시오.
+*key_pair*: 특성 이름 및 값이 들어 있는 배열입니다. 자세한 내용은 주의 섹션을 참조하십시오.
 
-## <a name="return-value"></a>반환 값
+## <a name="return-value"></a>Return Value
 성공하면 PDOStatement 개체를 반환합니다. 실패하면 `PDO::ATTR_ERRMODE` 값에 따라 PDOException 개체 또는 false를 반환합니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 는 실행 때까지 준비된 문을 평가하지 않습니다.
 
 다음 표에서는 가능한 *key_pair* 값을 나열합니다.
 
-|Key|설명|
+|키|Description|
 |-------|---------------|
 |PDO::ATTR_CURSOR|커서 동작을 지정합니다. 기본값은 `PDO::CURSOR_FWDONLY`로, 스크롤할 수 없는 정방향 커서입니다. `PDO::CURSOR_SCROLL`은 스크롤 가능 커서입니다.<br /><br />`array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY )`)을 입력합니다.<br /><br />`PDO::CURSOR_SCROLL`로 설정하면, `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE`을 사용하여 아래에 설명된 스크롤 가능 커서 형식을 설정할 수 있습니다.<br /><br />PDO_SQLSRV 드라이버의 결과 집합 및 커서에 대한 자세한 내용은 [커서 유형&#40;PDO_SQLSRV 드라이버&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)를 참조하세요.|
 |PDO::ATTR_EMULATE_PREPARES|기본적으로 이 특성은 false이며, `PDO::ATTR_EMULATE_PREPARES => true`를 사용하여 변경할 수 있습니다. 자세한 내용과 예제는 [Emulate Prepare](#emulate-prepare)를 참조하세요.|
@@ -49,7 +49,7 @@ $*statement*: SQL 문이 포함된 문자열입니다.
 |PDO::SQLSRV_ATTR_DECIMAL_PLACES|가져온 money 값의 서식을 지정할 때 사용할 소수 자릿수를 지정합니다. 이 옵션은 `PDO::SQLSRV_ATTR_FORMAT_DECIMALS`가 true인 경우에만 실행됩니다. 자세한 내용은 [10진수 문자열 및 Money 값 서식 지정(PDO_SQLSRV 드라이버)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)을 참조하세요.|
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|True이면 직접 쿼리 실행을 지정합니다. False는 준비된 문을 실행합니다. `PDO::SQLSRV_ATTR_DIRECT_QUERY`에 대한 자세한 내용은 [PDO_SQLSRV 드라이버의 직접 문 실행 및 준비된 문 실행](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)을 참조하세요.|
 |PDO::SQLSRV_ATTR_ENCODING|PDO::SQLSRV_ENCODING_UTF8(기본값)<br /><br />PDO::SQLSRV_ENCODING_SYSTEM<br /><br />PDO::SQLSRV_ENCODING_BINARY|
-|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|날짜 및 시간 형식을 [PHP DateTime](http://php.net/manual/en/class.datetime.php) 개체로 검색할지를 지정합니다. 자세한 내용은 [방법: PDO_SQLSRV 드라이버를 사용하여 날짜 및 시간 형식을 PHP DateTime 개체로 검색](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)을 참조하세요.|  
+|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|날짜 및 시간 형식을 [PHP DateTime](http://php.net/manual/en/class.datetime.php) 개체로 검색할지를 지정합니다. 자세한 내용은 [방법: PDO_SQLSRV 드라이버를 사용하여 날짜 및 시간 형식을 PHP 날짜/시간 개체로 검색](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)을 참조하세요.|  
 |PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|숫자 SQL 형식의 열에서 숫자 가져오기를 처리합니다. 자세한 내용은 [PDO::setAttribute](../../connect/php/pdo-setattribute.md)을 참조하세요.|
 |PDO::SQLSRV_ATTR_FORMAT_DECIMALS|해당하는 경우 10진수 문자열에 앞에 오는 0을 추가할지를 지정합니다. 이 옵션을 설정하면 money 형식의 서식 지정을 위한 `PDO::SQLSRV_ATTR_DECIMAL_PLACES` 옵션을 사용할 수 있습니다. 자세한 내용은 [10진수 문자열 및 Money 값 서식 지정(PDO_SQLSRV 드라이버)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)을 참조하세요.| 
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|자세한 내용은 [PDO::setAttribute](../../connect/php/pdo-setattribute.md)을 참조하세요.|
@@ -60,7 +60,7 @@ array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL, PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYP
 ```
 다음 표에서는 `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE`에 사용할 수 있는 값을 보여 줍니다. 스크롤 가능 커서에 대한 자세한 내용은 [커서 형식 &#40;PDO_SQLSRV 드라이버&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)을 참조하세요.
 
-|값|설명|
+|값|Description|
 |---------|---------------|
 |PDO::SQLSRV_CURSOR_BUFFERED|클라이언트 머신의 메모리에 결과 집합을 버퍼링하는 클라이언트 쪽(버퍼링됨) 정적 커서를 만듭니다.|
 |PDO::SQLSRV_CURSOR_DYNAMIC|서버 쪽(버퍼되지 않음) 동적 커서를 만들고 이를 통해 순서에 관계없이 행에 액세스할 수 있으며 데이터베이스에 변경 내용이 반영됩니다.|
@@ -139,6 +139,33 @@ print_r($row);
 ?>
 ```
 
+## <a name="example"></a>예제
+다음 두 코드 조각은 CHAR/VARCHAR 열을 대상으로 하는 데이터로 PDO::prepare를 사용하는 방법을 보여줍니다. PDO::prepare의 기본 인코딩은 UTF-8이므로 사용자는 `PDO::SQLSRV_ENCODING_SYSTEM` 옵션을 사용하여 암시적 전환을 방지할 수 있습니다.
+
+**옵션 1**
+```
+$options = array(PDO::SQLSRV_ATTR_ENCODING => PDO::SQLSRV_ENCODING_SYSTEM);
+$statement = $pdo->prepare(
+  'SELECT *
+   FROM myTable
+   WHERE myVarcharColumn = :myVarcharValue',
+  $options
+);
+
+$statement->bindValue(':myVarcharValue', 'my data', PDO::PARAM_STR);
+```
+
+**옵션 2**
+```
+$statement = $pdo->prepare(
+  'SELECT *
+   FROM myTable
+   WHERE myVarcharColumn = :myVarcharValue'
+);
+$p = 'my data';
+$statement->bindParam(':myVarcharValue', $p, PDO::PARAM_STR, 0, PDO::SQLSRV_ENCODING_SYSTEM);
+```
+
 <a name="emulate-prepare" />
 
 ## <a name="example"></a>예제
@@ -209,13 +236,59 @@ Information on :con_name parameter
 > [!NOTE]
 > emulate prepares를 true로 설정하면 매개 변수가 있는 쿼리의 보안이 적용되지 않습니다. 따라서 애플리케이션에서는 매개 변수에 바인딩되는 데이터에 악성 Transact-SQL 코드가 들어 있지 않은지 확인해야 합니다.
 
-### <a name="encoding"></a>인코딩
+### <a name="encoding"></a>Encoding
 
 사용자가 다른 인코딩(예: UTF-8 또는 이진)을 사용하여 매개 변수를 바인딩하려는 경우, PHP 스크립트에서 인코딩을 명확하게 지정해야 합니다.
 
 PDO_SQLSRV 드라이버는 `PDO::bindParam()`에 지정된 인코딩(예: `$statement->bindParam(:cus_name, "Cardinal", PDO::PARAM_STR, 10, PDO::SQLSRV_ENCODING_UTF8)`)을 먼저 확인합니다.
 
 인코딩이 없으면, 드라이버는 `PDO::prepare()` 또는 `PDOStatement::setAttribute()`에 인코딩이 설정되어 있는지 확인합니다. 인코딩이 없으면, 드라이버는 `PDO::__construct()` 또는 `PDO::setAttribute()`에 지정된 인코딩을 사용합니다.
+
+또한 버전 5.8.0부터는 true로 설정된 `PDO::ATTR_EMULATE_PREPARES`로 PDO::prepare를 사용할 때 사용자가 [PHP 7.2에 도입된 확장형 문자열 형식](https://wiki.php.net/rfc/extended-string-types-for-pdo)을 사용하여 `N` 접두사가 사용되도록 할 수 있습니다. 아래 코드 조각은 다양한 대안을 표시합니다.
+
+> [!NOTE]
+> 기본적으로 에뮬레이션 준비는 false로 설정되며 이 경우 확장형 PDO 문자열 제한은 무시됩니다.
+
+**바인딩 시 드라이버 옵션 PDO::SQLSRV_ENCODING_UTF8 사용**
+
+```
+$p = '가각';
+$sql = 'SELECT :value';
+$options = array(PDO::ATTR_EMULATE_PREPARES => true);
+$stmt = $conn->prepare($sql, $options);
+$stmt->bindParam(':value', $p, PDO::PARAM_STR, 0, PDO::SQLSRV_ENCODING_UTF8);
+$stmt->execute();
+```
+
+**PDO::SQLSRV_ATTR_ENCODING 속성 사용**
+
+```
+$p = '가각';
+$sql = 'SELECT :value';
+$options = array(PDO::ATTR_EMULATE_PREPARES => true, PDO::SQLSRV_ATTR_ENCODING => PDO::SQLSRV_ENCODING_UTF8);
+$stmt = $conn->prepare($sql, $options);
+$stmt->execute([':value' => $p]);
+```
+
+**PDO 상수 PDO::PARAM_STR_NATL 사용**
+```
+$p = '가각';
+$sql = 'SELECT :value';
+$options = array(PDO::ATTR_EMULATE_PREPARES => true);
+$stmt = $conn->prepare($sql, $options);
+$stmt->bindParam(':value', $p, PDO::PARAM_STR | PDO::PARAM_STR_NATL);
+$stmt->execute();
+```
+
+**기본 문자열 매개 변수 형식 PDO::PARAM_STR_NATL 설정**
+```
+$conn->setAttribute(PDO::ATTR_DEFAULT_STR_PARAM, PDO::PARAM_STR_NATL);
+$p = '가각';
+$sql = 'SELECT :value';
+$options = array(PDO::ATTR_EMULATE_PREPARES => true);
+$stmt = $conn->prepare($sql, $options);
+$stmt->execute([':value' => $p]);
+```
 
 ### <a name="limitations"></a>제한 사항
 

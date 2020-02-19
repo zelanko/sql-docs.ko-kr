@@ -1,6 +1,6 @@
 ---
 title: RevoScaleR을 사용하여 데이터 점수 매기기
-description: SQL Server에서 R 언어를 사용하여 데이터 점수를 매기는 방법에 대한 자습서 연습입니다.
+description: 'RevoScaleR 자습서 8: SQL Server에서 R 언어를 사용하여 데이터 점수를 매기는 방법입니다.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bf4198e4f8baa0c572f5da3d2b4cf457e695a4b7
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 26f5c7b56298e6a3bd5f1fa9d8bc1d4db79d60af
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727180"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947201"
 ---
 # <a name="score-new-data-sql-server-and-revoscaler-tutorial"></a>새 데이터 점수 매기기(SQL Server 및 RevoScaleR 자습서)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 단원은 SQL Server에서 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)의 일부입니다.
+이것은 SQL Server에서 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서 시리즈](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 중 자습서 8에 해당됩니다.
 
-이 단계에서는 이전 단원에서 만든 로지스틱 회귀 분석 모델을 사용하여 입력과 같은 독립 변수를 사용하는 다른 데이터 세트에 대한 점수를 계산합니다.
+이 자습서에서는 이전 자습서에서 만든 로지스틱 회귀 분석 모델을 사용하여 입력과 같은 독립 변수를 사용하는 다른 데이터 세트에 대한 점수를 계산합니다.
 
 > [!div class="checklist"]
 > * 새 데이터 점수 매기기
@@ -32,7 +32,7 @@ ms.locfileid: "73727180"
 
 ## <a name="generate-and-save-scores"></a>점수 생성 및 저장
   
-1. 이전 단원에서 만든 열 정보를 사용하도록 sqlScoreDS 데이터 원본([2단원](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)에서 생성됨)을 업데이트합니다.
+1. 이전 자습서에서 만든 열 정보를 사용하도록 sqlScoreDS 데이터 원본([자습서 2](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)에서 생성됨)을 업데이트합니다.
   
     ```R
     sqlScoreDS <- RxSqlServerData(

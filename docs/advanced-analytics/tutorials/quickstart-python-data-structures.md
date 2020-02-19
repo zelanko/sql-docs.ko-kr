@@ -1,29 +1,28 @@
 ---
-title: '빠른 시작: Python 데이터 형식'
-titleSuffix: SQL Server Machine Learning Services
-description: 이 빠른 시작에서는 SQL Server Machine Learning Services의 Python 및 SQL Server에서 데이터 형식 및 데이터 개체로 작업을 수행하는 방법을 알아봅니다.
+title: '빠른 시작: Python 데이터 구조'
+description: 이 빠른 시작에서는 Python 및 SQL Server Machine Learning Services에서 데이터 형식과 데이터 개체로 작업을 수행하는 방법을 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1bac339105acdb7318b29426cd0bb4afdc2481e7
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 0f04e021664a92241c8c029d296a298b10c142d2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727022"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831907"
 ---
-# <a name="quickstart-handle-data-types-and-objects-using-python-in-sql-server-machine-learning-services"></a>빠른 시작: SQL Server Machine Learning Services에서 Python을 사용하여 데이터 형식 및 개체 처리
+# <a name="quickstart-data-structures-and-objects-using-python-in-sql-server-machine-learning-services"></a>빠른 시작: SQL Server Machine Learning Services에서 Python을 사용하는 데이터 구조 및 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 빠른 시작은 SQL Server Machine Learning Services에서 Python을 사용할 때 데이터 구조를 사용하는 방법을 보여줍니다.
+이 빠른 시작에서는 SQL Server Machine Learning Services에서 Python을 사용할 때 데이터 구조를 사용하는 방법을 알아봅니다.
 
-SQL Server는 표 형식 데이터를 사용할 때 유용한 Python **pandas** 패키지를 사용합니다. 하지만 Python에서 SQL Server로 스칼라를 전달만 해도 "단순히 작동"하는 것은 아닙니다. 이 빠른 시작에서는 Python과 SQL Server 사이에 표 형식 데이터를 전달할 때 발생할 수 있는 추가적인 문제들을 준비하기 위해 몇 가지 기본적인 데이터 형식 정의를 검토합니다.
+SQL Server는 표 형식 데이터를 사용할 때 유용한 Python **pandas** 패키지를 사용합니다. 하지만 Python에서 SQL Server로 스칼라를 전달만 해도 "단순히 작동"하는 것은 아닙니다. 이 빠른 시작에서는 Python과 SQL Server 사이에 표 형식 데이터를 전달할 때 발생할 수 있는 추가적인 문제들을 준비하기 위해 몇 가지 기본적인 데이터 구조 정의를 검토합니다.
 
 처음에 알아야 할 개념은 다음과 같습니다.
 

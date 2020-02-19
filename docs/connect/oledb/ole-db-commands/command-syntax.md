@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 15d6d221c9e3435a3ba4c3f58c7d6b6e55314f29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68016125"
 ---
 # <a name="command-syntax"></a>명령 구문
@@ -27,7 +27,7 @@ ms.locfileid: "68016125"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server에 대 한 OLE DB 드라이버는 DBGUID_SQL 매크로로 지정 된 명령 구문을 인식 합니다. SQL Server에 대 한 OLE DB 드라이버의 경우 지정자는 ODBC SQL, ISO 및 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 의 amalgam가 유효한 구문 임을 나타냅니다. 예를 들어 다음 SQL 문은 ODBC SQL 이스케이프 시퀀스를 사용하여 LCASE 문자열 함수를 지정합니다.  
+  OLE DB Driver for SQL Server는 DBGUID_SQL 매크로로 지정된 명령 구문을 인식합니다. OLE DB Driver for SQL Server의 경우, 지정자는 ODBC SQL, ISO 및 [!INCLUDE[tsql](../../../includes/tsql-md.md)]이 모두 유효함을 나타냅니다. 예를 들어 다음 SQL 문은 ODBC SQL 이스케이프 시퀀스를 사용하여 LCASE 문자열 함수를 지정합니다.  
   
 ```  
 SELECT customerid={fn LCASE(CustomerID)} FROM Customers  
@@ -57,6 +57,6 @@ SELECT customerid=LOWER(CustomerID) FROM Customers
     ```  
   
 ## <a name="see-also"></a>참고 항목  
- [도구](../../oledb/ole-db-commands/commands.md)  
+ [명령](../../oledb/ole-db-commands/commands.md)  
   
   

@@ -14,16 +14,16 @@ ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b385e04cf2efa103dba4a66d4e794a7984814fb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140265"
 ---
 # <a name="create-modify-and-delete-data-driven-subscriptions"></a>데이터 기반 구독 만들기, 수정 및 삭제
   데이터 기반 구독은 런타임에 구독을 처리하는 데 사용하는 데이터 값을 가져오는 쿼리 기반 구독입니다. 구독이 실행될 때 받는 사람, 보고서 배달 옵션, 렌더링 형식 및 매개 변수 설정에 대한 최신 정보를 가져오기 위한 쿼리가 처리됩니다. 쿼리 결과가 구독 정의에 조합되어 직원 데이터베이스, 고객 데이터베이스 또는 구독자 데이터로 사용할 수 있는 정보가 포함된 기타 데이터베이스에서 이미 유지 관리되고 있는 데이터를 사용하는 동적 구독을 형성합니다.  
   
- 새 데이터 기반 구독을 만들거나 기존 구독을 수정 하려면 사용 합니다 **관리** > **구독** 웹 포털에서 페이지입니다. 합니다 **구독** 페이지 만들기 또는 구독을 수정 하는 각 단계를 안내 메시지를 표시 합니다. 구독을 만든 다음 액세스하려면 **내 구독** 페이지나 보고서의 구독 목록을 사용합니다. 데이터 기반 구독을 만드는 방법에 대한 자세한 내용은 [데이터 기반 구독 만들기&#40;SSRS 자습서&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)를 참조하세요.  
+ 새 데이터 기반 구독을 만들거나 기존 구독을 수정하려면 웹 포털에서 **관리** > **구독** 페이지를 사용합니다. **구독** 페이지에서는 구독을 만들거나 수정하는 각 단계를 안내합니다. 구독을 만든 다음 액세스하려면 **내 구독** 페이지나 보고서의 구독 목록을 사용합니다. 데이터 기반 구독을 만드는 방법에 대한 자세한 내용은 [데이터 기반 구독 만들기&#40;SSRS 자습서&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)를 참조하세요.  
   
  이 문서의 내용  
   
@@ -36,9 +36,9 @@ ms.locfileid: "67140265"
 -   [구독 실행](#bkmk_run_subscription)  
   
 ##  <a name="bkmk_manage_and_delete"></a> 데이터 기반 구독 관리 및 삭제  
- 진행 중인 데이터 기반 구독을 중지 하거나 웹 포털에서 삭제할 수 있습니다. 그러므로 공유 일정을 사용하여 데이터 기반 구독을 트리거하는 것이 좋습니다. 구독이 일시적으로 처리되지 않도록 하려는 경우 이 방법을 사용하면 구독을 트리거하는 일정을 일시 중지할 수 있습니다. 자세한 내용은 [기본 모드 보고서 서버 구독 만들기 및 관리](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)를 참조하세요.  
+ 진행 중인 데이터 기반 구독은 웹 포털을 통해 중지하거나 삭제할 수 없습니다. 그러므로 공유 일정을 사용하여 데이터 기반 구독을 트리거하는 것이 좋습니다. 구독이 일시적으로 처리되지 않도록 하려는 경우 이 방법을 사용하면 구독을 트리거하는 일정을 일시 중지할 수 있습니다. 자세한 내용은 [기본 모드 보고서 서버 구독 만들기 및 관리](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)를 참조하세요.  
   
- 데이터 기반 구독을 삭제 하려면에서 보고서 옆의 확인란을 선택 합니다 **구독** 페이지를 선택한 후 **삭제**합니다.  
+ 데이터 기반 구독을 삭제하려면 **구독** 페이지에서 보고서 옆에 있는 확인란을 선택한 다음 **삭제**를 선택합니다.  
   
  데이터 기반 구독을 취소하는 방법에 대한 자세한 내용은 [실행 중인 프로세스 관리](../../reporting-services/subscriptions/manage-a-running-process.md)를 참조하세요.  
   
@@ -47,11 +47,11 @@ ms.locfileid: "67140265"
   
 ### <a name="to-create-a-data-driven-subscription-native-mode"></a>데이터 기반 구독을 만들려면(기본 모드)  
   
-1. 웹 포털에서 보고서가 포함 된 폴더로 이동, 보고서를 마우스 오른쪽 단추로 클릭 하 고 선택 **관리** 드롭다운 메뉴에서.  
+1. 웹 포털에서 보고서가 포함된 폴더로 이동하여 보고서를 마우스 오른쪽 단추로 클릭하고 드롭다운 메뉴에서 **관리**를 선택합니다.  
   
 2. **구독** 탭을 선택합니다.  
   
-3. 선택 **+ 새 구독** 에 **구독** 페이지입니다.  
+3. **구독 페이지**에서 **+ 새 구독**을 선택합니다.  
   
 ### <a name="to-create-a-data-driven-subscription-sharepoint-mode"></a>데이터 기반 구독을 만들려면(SharePoint 모드)  
   
@@ -61,11 +61,11 @@ ms.locfileid: "67140265"
   
 ### <a name="to-modify-an-existing-data-driven-subscription-native-mode"></a>기존 데이터 기반 구독을 수정하려면(기본 모드)  
   
-1. 웹 포털에서 보고서가 포함 된 폴더로 이동, 보고서를 마우스 오른쪽 단추로 클릭 하 고 선택 **관리** 드롭다운 메뉴에서.  
+1. 웹 포털에서 보고서가 포함된 폴더로 이동하여 보고서를 마우스 오른쪽 단추로 클릭하고 드롭다운 메뉴에서 **관리**를 선택합니다.  
   
 2. **구독** 탭을 선택합니다.  
   
-3. 수정 하 고 선택 하려면 구독 옆의 확인란을 선택 **편집**합니다. 데이터 기반 구독에 포함 됩니다는 값 "데이터 기반"를 **형식** 열입니다.  
+3. 수정하려는 구독 옆의 확인란을 선택하고 **편집**을 선택합니다. 데이터 기반 구독에는 **형식** 열에 "데이터 기반" 값이 있습니다.  
   
 ### <a name="to-modify-an-existing-data-driven-subscription-sharepoint-mode"></a>기존 데이터 기반 구독을 수정하려면(SharePoint 모드)  
   
@@ -98,10 +98,10 @@ ms.locfileid: "67140265"
 ##  <a name="bkmk_run_subscription"></a> 구독 실행  
  구독의 처리 조건을 지정해야 합니다. 일정을 지정하거나 보고서 실행 스냅샷 업데이트에 맞춰 구독을 실행할 수 있습니다. 데이터 기반 구독 처리 방법은 표준 구독 처리 방법과 동일합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [기본 모드 보고서 서버 구독 만들기 및 관리](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [구독 및 배달&#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [보고서 서버의 웹 포털(SSRS 기본 모드)](../../reporting-services/web-portal-ssrs-native-mode.md)   
  [기본 모드 보고서 서버 구독 만들기 및 관리](create-and-manage-subscriptions-for-native-mode-report-servers.md)   
- [구독 사용 (웹 포털)](../../reporting-services/working-with-subscriptions-web-portal.md) [내 구독 사용 (기본 모드 보고서 서버)](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
+ [구독 작업(웹 포털)](../../reporting-services/working-with-subscriptions-web-portal.md) [내 구독 사용(기본 모드 보고서 서버)](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
  

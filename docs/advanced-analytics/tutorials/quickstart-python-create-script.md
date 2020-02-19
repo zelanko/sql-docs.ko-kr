@@ -1,27 +1,26 @@
 ---
-title: '빠른 시작: Python 스크립트 만들기'
-titleSuffix: SQL Server Machine Learning Services
-description: SQL Server Machine Learning Services를 사용하여 SQL Server 인스턴스에서 간단한 Python 스크립트를 만들고 실행합니다.
+title: '빠른 시작: Python 스크립트 실행'
+description: SQL Server Machine Learning Services를 사용하여 간단한 Python 스크립트 집합을 실행합니다. 저장 프로시저 sp_execute_external_script를 사용하여 SQL Server 인터페이스에서 스크립트를 실행하는 방법을 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8409eaf8129d7c8eb2eecd5a1157a17444341734
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 8c1347d58f0b8a4014a51a220b6ecded5a343082
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727028"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831912"
 ---
-# <a name="quickstart-create-and-run-simple-python-scripts-with-sql-server-machine-learning-services"></a>빠른 시작: SQL Server Machine Learning Services를 사용하여 간단한 Python 스크립트 만들기 및 실행
+# <a name="quickstart-run-simple-python-scripts-with-sql-server-machine-learning-services"></a>빠른 시작: SQL Server Machine Learning Services로 간단한 Python 스크립트 실행
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 빠른 시작에서는 [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md)를 사용하여 간단한 Python 스크립트 세트를 만들고 실행합니다. 저장 프로시저 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)에서 잘 구성된 Python 스크립트를 래핑하고 스크립트를 SQL Server 인스턴스에서 실행하는 방법을 알아봅니다.
+이 빠른 시작에서는 [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md)를 사용하여 간단한 Python 스크립트 세트를 실행합니다. 저장 프로시저 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)를 사용하여 SQL Server 인터페이스에서 스크립트를 실행하는 방법을 알아봅니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -89,7 +88,7 @@ GO
 | | |
 |-|-|
 | @language | 호출할 언어 확장을 정의합니다(이 경우에는 Python). |
-| @script | Python 런타임으로 전달되는 명령을 정의합니다.<br>이 인수에서 전체 Python 스크립트는 유니코드 텍스트로 묶어야 합니다. 또한 **nvarchar** 유형의 변수에 텍스트를 추가한 후 변수를 호출할 수도 있습니다. |
+| @script | Python 런타임으로 전달되는 명령을 정의합니다.<br>이 인수에서 전체 Python 스크립트는 유니코드 텍스트로 묶어야 합니다. **nvarchar** 형식의 변수에 텍스트를 추가한 다음, 변수를 호출할 수도 있습니다. |
 | @input_data_1 | 쿼리로 반환되고 Python 런타임으로 전달되는 데이터입니다. 데이터를 SQL Server에 데이터 프레임으로 반환합니다. |
 |WITH RESULT SETS | 이 절은 SQL Server에 대해 반환된 데이터 테이블의 스키마를 정의합니다. 이 경우에는 "Hello World"를 열 이름 및 **int**(데이터 형식)로 추가합니다. |
 
@@ -159,11 +158,11 @@ GO
     Python은 대/소문자를 구분합니다. Python 스크립트(**SQL_out**, **SQL_in**)에 사용되는 입력 및 출력 변수는 대/소문자를 포함하여 `@input_data_1_name` 및 `@output_data_1_name`으로 정의된 이름과 일치해야 합니다.
 
    > [!TIP]
-   > 하나의 입력 데이터 세트만 매개 변수로 전달할 수 있으며 하나의 데이터 세트만 반환할 수 있습니다. 그러나 Python 코드 내에서 다른 데이터 세트를 호출할 수 있으며 데이터 세트 외에 다른 유형의 출력을 반환할 수 있습니다. 또한 모든 매개 변수에 OUTPUT 키워드를 추가하여 결과와 함께 매개 변수를 반환할 수도 있습니다.
+   > 하나의 입력 데이터 세트만 매개 변수로 전달할 수 있으며 하나의 데이터 세트만 반환할 수 있습니다. 그러나 Python 코드 내에서 다른 데이터 세트를 호출할 수 있으며 데이터 세트 외에 다른 유형의 출력을 반환할 수 있습니다. 또한 모든 매개 변수에 OUTPUT 키워드를 추가하여 결과와 함께 반환되게 만들 수 있습니다.
 
 1. 또한 입력 데이터 없이 Python 스크립트를 사용하여 값을 생성할 수도 있습니다(`@input_data_1`이 빈 값으로 설정됨).
 
-   다음 스크립트는 텍스트 "hello" 및 "world"를 출력합니다.
+   다음 스크립트는 "hello" 및 "world" 텍스트를 출력합니다.
 
    ```sql
    EXECUTE sp_execute_external_script @language = N'Python'
@@ -178,7 +177,7 @@ GO
 
    **결과**
 
-   ![@script를 입력으로 사용하여 결과 쿼리](./media/python-data-generated-output.png)
+   ![@script를 입력으로 사용하는 쿼리 결과](./media/python-data-generated-output.png)
 
 > [!NOTE]
 > Python은 선행 공백을 사용하여 문을 그룹화합니다. 따라서 앞의 스크립트와 같이 포함된 Python 스크립트가 여러 줄에 걸쳐 있으면 SQL 명령과 일치하도록 Python 명령을 들여쓰기 하지 마십시오. 예를 들어 다음 스크립트는 오류가 발생합니다.
@@ -225,40 +224,27 @@ Microsoft는 SQL Server 인스턴스에서 SQL Server Machine Learning Services�
 ```SQL
 EXECUTE sp_execute_external_script @language = N'Python'
     , @script = N'
-import pip
-for i in pip.get_installed_distributions():
-    print(i)
+import pkg_resources
+import pandas
+dists = [str(d) for d in pkg_resources.working_set]
+OutputDataSet = pandas.DataFrame(dists)
 '
+WITH RESULT SETS(([Package] NVARCHAR(max)))
 GO
 ```
 
-출력은 Python의 `pip.get_installed_distributions()`에서 수행되고 `STDOUT` 메시지로 반환됩니다.
+이 목록은 Python의 `pkg_resources.working_set`에서 데이터 프레임으로 SQL에 반환됩니다.
 
 **결과**
 
-```text
-STDOUT message(s) from external script:
-xlwt 1.2.0
-XlsxWriter 0.9.6
-xlrd 1.0.0
-win-unicode-console 0.5
-widgetsnbextension 2.0.0
-wheel 0.29.0
-Werkzeug 0.12.1
-wcwidth 0.1.7
-unicodecsv 0.14.1
-traitlets 4.3.2
-tornado 4.4.2
-toolz 0.8.2
-. . .
-```
+:::image type="content" source="media/python-package-list.png" alt-text="설치된 Python 패키지 목록":::
 
 ## <a name="next-steps"></a>다음 단계
 
 SQL Server Machine Learning Services에서 Python을 사용할 때 데이터 구조를 사용하는 방법을 알아보려면 다음 빠른 시작을 참조하세요.
 
 > [!div class="nextstepaction"]
-> [SQL Server Machine Learning Services에서 Python을 사용하여 데이터 형식 및 개체 처리](quickstart-python-data-structures.md)
+> [빠른 시작: SQL Server Machine Learning Services에서 Python을 사용하는 데이터 구조 및 개체](quickstart-python-data-structures.md)
 
 SQL Server Machine Learning Services에서 Python 사용에 대한 자세한 내용은 다음 문서를 참조하세요.
 

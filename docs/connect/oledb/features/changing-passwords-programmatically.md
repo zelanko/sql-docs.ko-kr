@@ -1,6 +1,6 @@
 ---
 title: 프로그래밍 방식으로 암호 변경 | Microsoft Docs
-description: SQL Server에 대 한 OLE DB 드라이버를 사용 하 여 프로그래밍 방식으로 암호 변경
+description: OLE DB Driver for SQL Server를 사용하여 프로그래밍 방식으로 암호 변경
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -21,10 +21,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: a6c9e52dc46818d3d188f2fa742e2bccad769cf8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67989136"
 ---
 # <a name="changing-passwords-programmatically"></a>프로그래밍 방식으로 암호 변경
@@ -32,7 +32,7 @@ ms.locfileid: "67989136"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이전에는 사용자 암호가 만료될 때 관리자만 암호를 다시 설정할 수 있었습니다. 부터 SQL Server에 대 한 OLE DB 드라이버는 OLE DB 드라이버를 통해 프로그래밍 방식으로 암호 만료를 처리 하 고 **SQL Server 로그인** 대화 상자를 변경 하는 것을 지원 합니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]  
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이전에는 사용자 암호가 만료될 때 관리자만 암호를 다시 설정할 수 있었습니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]부터 OLE DB Driver for SQL Server는 OLE DB Driver 및 **SQL Server 로그인** 대화 상자의 변경 사항을 통한 프로그래밍 방식의 암호 만료 처리를 지원합니다.  
   
 > [!NOTE]  
 >  가능한 경우 런타임에 자격 증명을 입력하라는 메시지를 사용자에게 표시하고 해당 자격 증명을 지속형 형식으로 저장하지 마십시오. 자격 증명을 저장해야 하는 경우 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 암호화해야 합니다. 암호 사용에 대한 자세한 내용은 [강력한 암호](../../../relational-databases/security/strong-passwords.md)를 참조하세요.  
@@ -42,18 +42,18 @@ ms.locfileid: "67989136"
   
 |SQL Server 오류 코드|오류 메시지|  
 |---------------------------|-------------------|  
-|15113|사용자 '%. * l s '이 (가) 로그인 하지 못했습니다. 이유: 암호 유효성 검사에 실패 했습니다. 계정이 잠겼습니다.|  
-|18463|사용자 '%.*ls'이(가) 로그인하지 못했습니다. 원인: 암호를 변경하지 못했습니다. 지금은 암호를 사용할 수 없습니다.|  
-|18464|사용자 '%.*ls'이(가) 로그인하지 못했습니다. 원인: 암호를 변경하지 못했습니다. 암호가 너무 짧아서 정책 요구 사항에 맞지 않습니다.|  
-|18465|사용자 '%.*ls'이(가) 로그인하지 못했습니다. 원인: 암호를 변경하지 못했습니다. 암호가 너무 길어서 정책 요구 사항에 맞지 않습니다.|  
-|18466|사용자 '%.*ls'이(가) 로그인하지 못했습니다. 원인: 암호를 변경하지 못했습니다. 암호가 복잡하지 않기 때문에 정책 요구 사항에 맞지 않습니다.|  
-|18467|사용자 '%.*ls'이(가) 로그인하지 못했습니다. 원인: 암호를 변경하지 못했습니다. 암호가 암호 필터 DLL의 요구 사항에 맞지 않습니다.|  
-|18468|사용자 '%.*ls'이(가) 로그인하지 못했습니다. 원인: 암호를 변경하지 못했습니다. 암호 유효성 검사 중에 오류가 발생했습니다.|  
-|18487|사용자 '%.*ls'이(가) 로그인하지 못했습니다. 원인: 계정의 암호가 만료되었습니다.|  
-|18488|사용자 '%.*ls'이(가) 로그인하지 못했습니다. 원인: 계정의 암호를 변경해야 합니다.|  
+|15113|사용자 '%.*ls'이(가) 로그인하지 못했습니다. 원인: 암호의 유효성을 검사하지 못했습니다. 계정이 잠겼습니다.|  
+|18463|사용자 '%.*ls'이(가) 로그인하지 못했습니다. 이유: 암호를 변경하지 못했습니다. 지금은 암호를 사용할 수 없습니다.|  
+|18464|사용자 '%.*ls'이(가) 로그인하지 못했습니다. 이유: 암호를 변경하지 못했습니다. 암호가 너무 짧아서 정책 요구 사항에 맞지 않습니다.|  
+|18465|사용자 '%.*ls'이(가) 로그인하지 못했습니다. 이유: 암호를 변경하지 못했습니다. 암호가 너무 길어서 정책 요구 사항에 맞지 않습니다.|  
+|18466|사용자 '%.*ls'이(가) 로그인하지 못했습니다. 이유: 암호를 변경하지 못했습니다. 암호가 복잡하지 않기 때문에 정책 요구 사항에 맞지 않습니다.|  
+|18467|사용자 '%.*ls'이(가) 로그인하지 못했습니다. 이유: 암호를 변경하지 못했습니다. 암호가 암호 필터 DLL의 요구 사항에 맞지 않습니다.|  
+|18468|사용자 '%.*ls'이(가) 로그인하지 못했습니다. 이유: 암호를 변경하지 못했습니다. 암호 유효성 검사 중에 오류가 발생했습니다.|  
+|18487|사용자 '%.*ls'이(가) 로그인하지 못했습니다. 이유: 계정의 암호가 만료되었습니다.|  
+|18488|사용자 '%.*ls'이(가) 로그인하지 못했습니다. 이유: 계정의 암호를 변경해야 합니다.|  
   
 ## <a name="ole-db-driver-for-sql-server"></a>SQL Server용 OLE DB 드라이버  
- SQL Server에 대 한 OLE DB 드라이버는 사용자 인터페이스와 프로그래밍 방식으로 암호 만료를 지원 합니다.  
+ OLE DB Driver for SQL Server는 사용자 인터페이스와 프로그래밍 방식을 통해 암호 만료를 지원합니다.  
   
 ### <a name="ole-db-user-interface-password-expiration"></a>OLE DB 사용자 인터페이스 암호 만료  
  SQL Server용 OLE DB 드라이버는 **SQL Server 로그인** 대화 상자의 변경 내용을 통해 암호 만료를 지원합니다. DBPROP_INIT_PROMPT 값을 DBPROMPT_NOPROMPT로 설정하면 암호가 만료할 경우 초기 연결 시도가 실패합니다.  
@@ -89,7 +89,7 @@ ms.locfileid: "67989136"
   
  암호 변경 시도가 예기치 않게 실패하는 경우 서버에서 오류 코드 18468을 반환합니다. 연결 시도에서 표준 OLEDB 오류가 반환됩니다.  
   
- DBPROPSET_SQLSERVERDBINIT 속성 집합에 대 한 자세한 내용은 [초기화 및 권한 부여 속성](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md)을 참조 하세요.  
+ DBPROPSET_SQLSERVERDBINIT 속성 집합에 대한 자세한 정보는 p[초기화 및 권한 부여 속성](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md)을 참조하세요.  
 
   
 ## <a name="see-also"></a>참고 항목  

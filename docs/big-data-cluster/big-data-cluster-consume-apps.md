@@ -5,18 +5,19 @@ description: RESTful 웹 서비스를 사용하여 SQL Server 빅 데이터 클�
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 01/07/2020
+ms.metadata: seo-lt-2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 32b3884b48e20b73da186f8c0d80e6c85516a8ed
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 305080d5c3b0a1c517d757c1f6f2bd07fefb216c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73707177"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75721408"
 ---
-# <a name="consume-an-app-deployed-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-using-a-restful-web-service"></a>RESTful 웹 서비스를 사용하여 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에 배포된 앱을 사용합니다.
+# <a name="consume-an-app-deployed-on-big-data-clusters-2019-using-a-restful-web-service"></a>RESTful 웹 서비스를 사용하여 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에 배포된 앱을 사용합니다.
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -28,11 +29,11 @@ ms.locfileid: "73707177"
 - [azdata 명령줄 유틸리티](deploy-install-azdata.md)
 - [azdata](big-data-cluster-create-apps.md) 또는 [앱 배포 확장](app-deployment-extension.md)을 사용하여 배포된 앱
 
-## <a name="capabilities"></a>Capabilities
+## <a name="capabilities"></a>기능
 
 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]에 애플리케이션을 배포한 후에 RESTful 웹 서비스를 사용하여 해당 애플리케이션에 액세스하고 사용할 수 있습니다. 이 기능을 사용하면 다른 애플리케이션 또는 서비스(예: 모바일 앱 또는 웹 사이트)에서 해당 앱을 통합할 수 있습니다. 다음 표에서는 앱의 RESTful 웹 서비스에 대한 정보를 가져오기 위해 **azdata**와 함께 사용할 수 있는 애플리케이션 배포 명령을 설명합니다.
 
-|Command |설명 |
+|명령 |Description |
 |:---|:---|
 |`azdata app describe` | 애플리케이션을 설명합니다. |
 
@@ -90,7 +91,16 @@ azdata app describe --name add-app --version v1
 
 ## <a name="generate-a-jwt-access-token"></a>JWT 액세스 토큰 생성
 
-배포한 앱의 RESTful 웹 서비스에 액세스하려면 먼저 JWT 액세스 토큰을 생성해야 합니다. 위에서 `describe` 명령을 실행하여 검색한 IP 주소와 포트를 사용하여 브라우저에서 URL `https://[IP]:[PORT]/docs/swagger.json`을 엽니다. `azdata login`에 사용한 것과 동일한 자격 증명으로 로그인해야 합니다.
+배포한 앱의 RESTful 웹 서비스에 액세스하려면 먼저 JWT 액세스 토큰을 생성해야 합니다. 액세스 토큰의 URL은 빅 데이터 클러스터의 버전에 따라 달라집니다. 
+
+|버전 |URL|
+|------------|------|
+|GDR1|  `https://[IP]:[PORT]/docs/swagger.json`|
+|CU1 이상| `https://[IP]:[PORT]/api/v1/swagger.json`|
+
+> 버전 정보는 [릴리스 기록](release-notes-big-data-cluster.md#release-history)을 참조하세요.
+
+위에서 [`describe`](#retrieve-the-endpoint) 명령을 실행하여 검색한 IP 주소와 포트를 사용해 브라우저에서 적절한 URL을 엽니다. `azdata login`에 사용한 것과 동일한 자격 증명으로 로그인합니다.
 
 `swagger.json`의 내용을 [Swagger 편집기](https://editor.swagger.io)에 붙여넣어 사용할 수 있는 메서드를 파악합니다.
 
@@ -125,4 +135,4 @@ azdata app describe --name add-app --version v1
 
 [앱 배포 샘플](https://aka.ms/sql-app-deploy)에서 추가 샘플을 확인할 수도 있습니다.
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에 대한 자세한 내용은 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]란 무엇인가요?](big-data-cluster-overview.md)를 참조하세요.
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에 대한 자세한 내용은 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]란?](big-data-cluster-overview.md)을 참조하세요.

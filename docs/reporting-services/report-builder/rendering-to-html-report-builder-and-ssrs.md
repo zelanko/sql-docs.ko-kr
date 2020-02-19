@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: de76ab165f201500399ff6c0585a49122d6b9cc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: f30568da0ea6f8b937fd87a4891058b9d68949fe
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580661"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74957447"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>HTML로 렌더링(보고서 작성기 및 SSRS)
   HTML 렌더링 확장 프로그램은 페이지를 매긴 보고서를 HTML 형식으로 렌더링합니다. 완전한 형식의 HTML 페이지 또는 HTML 조각을 만들어 다른 HTML 페이지에 포함시킬 수도 있습니다. 모든 HTML은 UTF-8 인코딩을 사용하여 만들어집니다.  
@@ -84,6 +84,8 @@ ms.locfileid: "65580661"
   
  ReportViewer Web Forms 컨트롤을 통해 추가 검색 및 찾기 기능이 제공됩니다.  
   
+##  <a name="FontsOnClient"></a> 클라이언트 컴퓨터의 글꼴
+ 보고서 내에 사용되면 사용자 지정 글꼴이 보고서를 보는 데 사용되는 컴퓨터(클라이언트 컴퓨터)에도 해당 글꼴이 설치되어 있어야 보고서가 제대로 표시됩니다. 클라이언트 컴퓨터에 글꼴이 설치되어 있지 않으면 보고서는 사용자 지정 글꼴이 아닌 시스템 기본 글꼴로 표시됩니다.
   
 ##  <a name="DeviceInfo"></a> 디바이스 정보 설정  
  디바이스 정보 설정을 변경하여 렌더링할 모드를 비롯한 이 렌더러의 일부 기본 설정을 변경할 수 있습니다. 자세한 내용은 [HTML Device Information Settings](../../reporting-services/html-device-information-settings.md)을 참조하세요.  

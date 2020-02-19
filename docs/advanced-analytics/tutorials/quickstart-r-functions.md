@@ -1,27 +1,26 @@
 ---
-title: '빠른 시작: R 함수 작성'
-titleSuffix: SQL Server Machine Learning Services
-description: 이 빠른 시작에서는 SQL Server Machine Learning Services를 사용하여 고급 통계 계산을 위한 R 함수를 작성하는 방법을 알아봅니다.
+title: '빠른 시작: R 함수'
+description: 이 빠른 시작에서는 SQL Server Machine Learning Services와 함께 R 수학 및 유틸리티 함수를 사용하는 방법에 대해 알아보겠습니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e725282aaacde748b43a37a317037b5471efd009
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: e67dcbc35bf5af88d2a7fab37f795cd5cc1d55d9
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73726888"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831771"
 ---
-# <a name="quickstart-write-advanced-r-functions-with-sql-server-machine-learning-services"></a>빠른 시작: SQL Server Machine Learning Services를 사용하여 고급 R 함수 작성
+# <a name="quickstart-r-functions-with-sql-server-machine-learning-services"></a>빠른 시작: SQL Server Machine Learning Services를 사용한 R 함수
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 빠른 시작에서는 SQL Server Machine Learning Services를 사용하여 SQL 저장 프로시저에 R 수학 및 유틸리티 함수를 포함하는 방법을 설명합니다. T-SQL에서 구현하기에 복잡한 고급 통계 함수는 단일 줄의 코드만으로 R에서 수행할 수 있습니다.
+이 빠른 시작에서는 SQL Server Machine Learning Services와 함께 R 수학 및 유틸리티 함수를 사용하는 방법에 대해 알아보겠습니다. 통계 함수는 T-SQL에서 구현하기에 복잡한 경우가 많으며 다만 몇 줄의 코드만으로 R에서 수행할 수 있습니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -111,7 +110,7 @@ WITH RESULT SETS (([Col1] int not null));
 SQL Server에서 R을 사용하여 기계 학습 모델을 만들려면 다음 빠른 시작을 수행합니다.
 
 > [!div class="nextstepaction"]
-> [SQL Server Machine Learning Services를 사용하여 R에서 예측 모델 만들기 및 점수 매기기](quickstart-r-train-score-model.md)
+> [SQL Server Machine Learning Services를 사용하여 R에서 예측 모델 만들기 및 채점](quickstart-r-train-score-model.md)
 
 SQL Server Machine Learning Services에 대한 자세한 내용은 다음을 참조하세요.
 

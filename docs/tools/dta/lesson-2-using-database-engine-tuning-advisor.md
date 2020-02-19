@@ -1,10 +1,7 @@
 ---
-title: '2단원: 데이터베이스 엔진 튜닝 관리자 사용 | Microsoft'
-ms.custom: ''
-ms.date: 03/01/2017
+title: 데이터베이스 엔진 튜닝 관리자 사용
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,15 +9,21 @@ helpviewer_keywords:
 ms.assetid: 3317d4f8-ed9e-4f2e-b5f1-a6bf3a9d6c8d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b2f526510f69a91e3228431953f73717790246f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 6352a5d32f7b173343729582cdb1bfb0c1de99b3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034745"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307629"
 ---
 # <a name="lesson-2-using-database-engine-tuning-advisor"></a>2단원: 데이터베이스 엔진 튜닝 관리자 사용
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
 데이터베이스 엔진 튜닝 관리자를 사용하면 데이터베이스를 튜닝하고 튜닝 세션을 관리하며 튜닝 권장 구성을 확인할 수 있습니다. 물리적 디자인 구조에 대해 잘 아는 사용자라면 이 도구를 사용하여 탐구적인 데이터베이스 튜닝 분석을 수행할 수 있습니다. 데이터베이스 튜닝에 대해 잘 모르는 사용자도 이 도구를 사용하여 자신이 튜닝하는 작업에 가장 적합한 물리적 디자인 구조 구성을 찾을 수 있습니다. 이 단원에서는 데이터베이스 엔진 튜닝 관리자 그래픽 사용자 인터페이스를 처음 접하는 데이터베이스 관리자와 물리적 디자인 구조에 대한 광범위한 지식이 없는 시스템 관리자에게 기본 연습을 제공합니다.  
 
 ## <a name="prerequisites"></a>사전 요구 사항 
@@ -35,12 +38,12 @@ ms.locfileid: "68034745"
 SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이스 복원](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)을 참조하세요.
 
   >[!NOTE]
-  > 이 자습서는 SQL Server Management Studio 및 기본적인 데이터베이스 관리 작업을 사용 하는 데 익숙한 사용자를 위한 것입니다. 
+  > 이 자습서는 SQL Server Management Studio 및 기본적인 데이터베이스 관리 작업을 사용하는 데 익숙한 사용자를 위한 것입니다. 
   
 ## <a name="tuning-a-workload"></a>작업 튜닝
 데이터베이스 엔진 튜닝 관리자를 사용하여 튜닝하려고 선택한 데이터베이스와 테이블의 쿼리 성능에 가장 적합한 물리적 데이터베이스 디자인을 찾을 수 있습니다.  
 
-1.  Sample [select](../../t-sql/queries/select-examples-transact-sql.md) 문을 복사 하 여의 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]쿼리 편집기에 문을 붙여넣습니다. 쉽게 찾을 수 있는 디렉터리에 **MyScript.sql**이라는 이름으로 파일을 저장합니다. AdventureWorks2017 데이터베이스에 대해 작동 하는 예제는 아래에 제공 되어 있습니다.  
+1.  샘플 [SELECT](../../t-sql/queries/select-examples-transact-sql.md) 문을 복사하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 쿼리 편집기에 붙여 넣습니다. 쉽게 찾을 수 있는 디렉터리에 **MyScript.sql**이라는 이름으로 파일을 저장합니다. AdventureWorks2017 데이터베이스에 대해 작동하는 예제는 아래에 제공되어 있습니다.  
 
  ```sql
  Use [Adventureworks2017]; -- may need to modify database name to match database
@@ -62,17 +65,17 @@ SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이�
 
   ![SQL 쿼리 저장](media/dta-tutorials/dta-save-query.png)
   
-2.  데이터베이스 엔진 튜닝 관리자를 시작합니다. SSMS (SQL Server Management Studio)의 **도구** 메뉴에서 **데이터베이스 튜닝 관리자** 를 선택 합니다.  자세한 내용은 [Launch Database Engine Tuning Advisor](lesson-1-basic-navigation-in-database-engine-tuning-advisor.md#launch-database-tuning-advisor)(데이터베이스 엔진 튜닝 관리자 시작)를 참조하세요. **서버에 연결** 대화 상자에서 SQL Server에 연결 합니다.  
+2.  데이터베이스 엔진 튜닝 관리자를 시작합니다. SSMS(SQL Server Management Studio)의 **도구** 메뉴에서 **데이터베이스 튜닝 관리자**를 선택합니다.  자세한 내용은 [Launch Database Engine Tuning Advisor](lesson-1-basic-navigation-in-database-engine-tuning-advisor.md#launch-database-tuning-advisor)(데이터베이스 엔진 튜닝 관리자 시작)를 참조하세요. **서버 연결** 대화 상자에서 SQL Server에 연결합니다.  
   
 3.  데이터베이스 엔진 튜닝 관리자 GUI 오른쪽 창의 **일반** 탭에서 **세션 이름**에 **MySession**을 입력합니다. 
   
-4.  **작업**에 대해 **파일** 을 선택 하 고 쌍안경 아이콘을 선택 하 여 **작업 파일을 찾습니다**. 1 단계에서 저장 한 **MyScript** 파일을 찾습니다.  
+4.  **워크로드**에 대한 **파일**을 선택하고 쌍안경 아이콘을 선택하여 **워크로드 파일을 찾습니다**. 1단계에서 저장한 **MyScript** 파일을 찾습니다.  
 
-   ![이전에 저장 된 스크립트 찾기](media/dta-tutorials/dta-script.png)
+   ![이전에 저장한 스크립트 찾기](media/dta-tutorials/dta-script.png)
   
 5.  **작업 분석용 데이터베이스** 목록에서 AdventureWorks2017을 선택하고 **튜닝할 데이터베이스 및 테이블 선택** 그리드에서 AdventureWorks2017을 선택하고 **튜닝 로그 저장**을 선택합니다. **작업 분석용 데이터베이스** 는 작업 튜닝 시 데이터베이스 엔진 튜닝 관리자가 연결하는 첫 번째 데이터베이스를 지정합니다. 튜닝이 시작된 후 데이터베이스 엔진 튜닝 관리자는 작업에 포함된 `USE DATABASE` 문으로 지정한 데이터베이스에 연결합니다.  
 
-  ![Db에 대 한 DTA 옵션](media/dta-tutorials/dta-select-db.png)
+  ![db에 대한 DTA 옵션](media/dta-tutorials/dta-select-db.png)
   
 6.  **튜닝 옵션** 탭을 클릭합니다. 이 연습에서는 튜닝 옵션을 전혀 설정하지 않지만 잠시 기본 튜닝 옵션을 검토합니다. 이 탭 페이지에 대한 도움말을 보려면 F1 키를 누릅니다. 추가 튜닝 옵션을 보려면 **고급 옵션** 을 클릭합니다. **고급 튜닝 옵션** 대화 상자에서 표시된 튜닝 옵션에 대한 정보를 보려면 **도움말** 을 클릭합니다. 기본 옵션을 선택한 상태에서 **고급 튜닝 옵션** 대화 상자를 닫으려면 **취소** 를 클릭합니다.  
 
@@ -87,7 +90,7 @@ SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이�
   
 8.  분석을 완료한 후 [!INCLUDE[tsql](../../includes/tsql-md.md)] 동작 **메뉴에서** 권장 구성 저장 **을 클릭하여** 스크립트로 권장 구성을 저장합니다. **다른 이름으로 저장** 대화 상자에서 권장 구성 스크립트를 저장할 디렉터리로 이동하고 파일 이름 **MyRecommendations**를 입력합니다.  
 
-  ![DTA 권장 사항 저장](media/dta-tutorials/dta-save-recommendations.png)
+  ![DTA 권장 구성 저장](media/dta-tutorials/dta-save-recommendations.png)
 
 ## <a name="view-tuning-recommendations"></a>튜닝 권장 구성 보기
   
@@ -99,7 +102,7 @@ SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이�
   
 2.  **인덱스 권장 구성** 창의 표를 마우스 오른쪽 단추로 클릭합니다. 바로 가기 메뉴에서 권장 구성을 선택하거나 권장 구성의 선택을 취소할 수 있습니다. 표 텍스트의 글꼴을 변경할 수도 있습니다.  
  
-   ![인덱스 권장 사항에 대 한 선택 메뉴](media/dta-tutorials/dta-index-recommendation-options.png)
+   ![인덱스 권장 사항에 대한 선택 메뉴](media/dta-tutorials/dta-index-recommendation-options.png)
   
 3.  **동작** 메뉴에서 **권장 구성 저장** 을 클릭하여 모든 권장 구성을 하나의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트에 저장합니다. 스크립트 이름을 **MySessionRecommendations.sql**로 지정합니다.  
   
@@ -122,14 +125,14 @@ SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이�
 튜닝 결과를 구현하는 데 사용할 수 있는 스크립트를 보면 도움이 되지만 데이터베이스 엔진 튜닝 관리자에서 제공하는 여러 가지 보고서를 보아도 유용합니다. 이러한 보고서는 튜닝하고 있는 데이터베이스의 기존 물리적 디자인 구조와 권장 구조에 대한 정보를 제공합니다. 튜닝 보고서는 다음 연습에서 설명하는 대로 **보고서** 탭을 클릭하여 볼 수 있습니다.
 
 
-1. 데이터베이스 튜닝 관리자에서 **보고서** 탭을 선택 합니다. 
+1. 데이터베이스 튜닝 관리자에서 **보고서** 탭을 선택합니다. 
 2. **튜닝 요약** 창에서 이 튜닝 세션에 대한 정보를 볼 수 있습니다. 스크롤 막대를 사용하여 모든 창 내용을 볼 수 있습니다. **예상 향상률** 과 **권장 구성이 사용하는 공간**을 확인합니다. 튜닝 옵션을 설정할 때 권장 구성이 사용하는 공간을 제한할 수 있습니다. **튜닝 옵션** 탭에서 **고급 옵션**을 선택합니다. **권장 구성에 필요한 최대 공간 정의**를 선택하고 권장 구성이 사용할 수 있는 최대 공간(MB)을 지정합니다. 도움말 브라우저의 **뒤로** 단추를 사용하여 이 자습서로 돌아올 수 있습니다. 
 
     ![DTA 튜닝 요약](media/dta-tutorials/dta-tuning-summary.png)
   
 3.  **튜닝 보고서** 창의 **보고서 선택** 목록에서 **문 비용 보고서** 를 클릭합니다. 보고서를 표시할 공간이 더 필요한 경우 **세션 모니터** 창 테두리를 왼쪽으로 끕니다. 데이터베이스의 테이블에 대해 실행되는 각 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에는 성능 비용이 연결되어 있습니다. 테이블에서 자주 액세스되는 열에 효율적인 인덱스를 만들어 이 성능 비용을 줄일 수 있습니다. 이 보고서에는 작업에서 문을 실행한 경우의 원래 비용과 튜닝 권장 구성이 구현된 경우의 비용 간에 예상되는 향상률이 표시됩니다. 보고서에 포함된 정보의 양은 작업의 길이와 복잡성을 기반으로 합니다.  
 
-    ![DTA 보고서-문 비용](media/dta-tutorials/dta-statement-cost.png)
+    ![DTA 보고서 - 문 비용](media/dta-tutorials/dta-statement-cost.png)
   
 4.  표 영역에서 **문 비용 보고서** 창을 마우스 오른쪽 단추로 클릭하고 **파일로 내보내기**를 클릭합니다. **MyReport**라는 이름으로 보고서를 저장합니다. 파일 이름에 .xml 확장명이 자동으로 추가됩니다. 즐겨 사용하는 XML 편집기나 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 MyReport.xml을 열어 보고서 내용을 볼 수 있습니다.  
   

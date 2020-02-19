@@ -11,15 +11,15 @@ ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 50347f9a975aeb4856a5ee140697f7b13de3e3b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140481"
 ---
 # <a name="create-the-rsexecrole"></a>RSExecRole 만들기
 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 **RSExecRole** 이라는 미리 정의된 데이터베이스 역할을 사용하여 보고서 서버 데이터베이스에 대한 보고서 서버 사용 권한을 부여합니다. **RSExecRole** 역할은 보고서 서버 데이터베이스와 함께 자동으로 만들어집니다. 일반적으로 이 역할을 수정하거나 다른 사용자를 이 역할에 할당해서는 안 됩니다. 그러나 보고서 서버 데이터베이스를 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 또는 다른 설치로 이동하는 경우에는 Master 및 MSDB 시스템 데이터베이스에서 해당 역할을 다시 만들어야 합니다.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 **RSExecRole** 이라는 미리 정의된 데이터베이스 역할을 사용하여 보고서 서버 데이터베이스에 대한 보고서 서버 사용 권한을 부여합니다. **RSExecRole** 역할은 보고서 서버 데이터베이스와 함께 자동으로 만들어집니다. 일반적으로 이 역할을 수정하거나 다른 사용자를 이 역할에 할당해서는 안 됩니다. 그러나 보고서 서버 데이터베이스를 새로운 또는 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 설치로 이동하는 경우에는 Master 및 MSDB 시스템 데이터베이스에서 해당 역할을 다시 만들어야 합니다.  
   
  아래 지침에 따라 다음 단계를 수행합니다.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "67140481"
 > [!NOTE]  
 > 이 항목의 지침은 보고서 서버 데이터베이스를 제공하기 위해 WMI 코드를 작성하거나 스크립트를 실행하지 않으려는 사용자를 위한 것입니다. 큰 배포를 관리하며 데이터베이스를 정기적으로 이동하는 경우에는 스크립트를 작성하여 이러한 단계를 자동화해야 합니다. 자세한 내용은 [Reporting Services WMI 공급자 액세스](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)를 참조하세요.  
   
-## <a name="before-you-start"></a>시작하기 전 주의 사항  
+## <a name="before-you-start"></a>시작하기 전에  
   
 -   데이터베이스를 이동한 후 암호화 키를 복원할 수 있도록 해당 키를 백업합니다. 이 단계는 **RSExecRole**을 만들고 제공하는 기능에 직접적인 영향을 주지는 않지만 작업을 확인하려면 해당 키의 백업이 있어야 합니다. 자세한 내용은 [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)을 참조하세요.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "67140481"
   
 ### <a name="to-create-rsexecrole-in-the-master-system-database-using-management-studio"></a>Management Studio를 사용하여 master 시스템 데이터베이스에서 RSExecRole을 만들려면  
   
-1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 시작하고 보고서 서버 인스턴스를 호스팅하는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결합니다.  
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 시작하고 보고서 서버 인스턴스를 호스팅하는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결합니다.  
   
 2.  **데이터베이스**를 엽니다.  
   
@@ -59,13 +59,13 @@ ms.locfileid: "67140481"
   
 6.  **역할**을 엽니다.  
   
-7.  **데이터베이스 역할**을 마우스 오른쪽 단추로 클릭하고 **새 데이터베이스 역할**을 선택합니다. 합니다 **데이터베이스 역할-새** 페이지가 나타납니다.  
+7.  **데이터베이스 역할**을 마우스 오른쪽 단추로 클릭하고 **새 데이터베이스 역할**을 선택합니다. **데이터베이스 역할 - 새** 페이지가 나타납니다.  
   
 8.  **역할 이름**에 **RSExecRole**을 입력합니다.  
   
 9. **소유자**에 **dbo**를 입력합니다.  
   
-10. 페이지 선택 **보안 개체**합니다.  
+10. 페이지 **보안 개체**를 선택합니다.  
   
 11. **검색**을 클릭합니다. **개체 추가** 대화 상자가 표시됩니다. 기본적으로 **특정 개체** 옵션이 선택되어 있습니다.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "67140481"
   
 18. **확인**을 클릭하고 **확인** 한번 더 클릭합니다.  
   
-19. 에 **Execute** 행의 **부여** 열 확인란을 선택 합니다.  
+19. **Execute** 행의 **허용** 열에서 확인란을 선택합니다.  
   
 20. 나머지 저장 프로시저 각각에 대해 반복합니다. 3개의 저장 프로시저 모두에 대해**RSExecRole** 에 Execute 권한을 부여해야 합니다.  
 
@@ -116,7 +116,7 @@ ms.locfileid: "67140481"
   
 7.  소유자에 **dbo**를 입력합니다.  
   
-8.  선택 된 **보안 개체** 페이지입니다.  
+8.  **보안 개체** 페이지를 선택합니다.  
   
 9.  **검색**을 클릭합니다. **개체 추가** 대화 상자가 표시됩니다. 기본적으로 **특정 개체** 옵션이 선택되어 있습니다.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "67140481"
   
 19. 나머지 저장 프로시저 각각에 대해 반복합니다. 10개의 저장 프로시저 모두에 대해 RSExecRole에 Execute 권한을 부여해야 합니다.  
   
-20. **보안 개체** 페이지에서 클릭 **검색** 다시 합니다. **개체 추가** 대화 상자가 표시됩니다. 기본적으로 **특정 개체** 옵션이 선택되어 있습니다.  
+20. **보안 개체** 페이지에서 **검색**을 다시 클릭합니다. **개체 추가** 대화 상자가 표시됩니다. 기본적으로 **특정 개체** 옵션이 선택되어 있습니다.  
   
 21. **확인**을 클릭합니다.  
   
@@ -210,9 +210,9 @@ ms.locfileid: "67140481"
   
 5.  데이터베이스 엔진의 서버 이름을 입력합니다. 보고서 서버 데이터베이스를 명명된 인스턴스에 연결한 경우 인스턴스 이름을 \<servername>\\<instancename\> 형식으로 입력해야 합니다.  
   
-6.  **연결 테스트**를 클릭합니다. "테스트 연결 성공 합니다." 라는 내용이 있는 대화 상자 표시
+6.  **연결 테스트**를 클릭합니다. "연결 테스트에 성공했습니다"라는 대화 상자가 표시됩니다.
   
-7.  선택 **Ok** 대화 상자를 닫고 선택한 **다음**합니다.  
+7.  **확인**을 클릭하여 대화 상자를 닫고 **다음**을 선택합니다.  
   
 8.  데이터베이스에서 보고서 서버 데이터베이스를 선택합니다.  
   
@@ -228,7 +228,7 @@ ms.locfileid: "67140481"
   
 14. **웹 포털 URL**을 클릭합니다.  
   
-15. 웹 포털을 여는 링크를 클릭 합니다. 보고서 서버 데이터베이스의 보고서 서버 항목이 표시되어야 합니다.  
+15. 링크를 클릭하여 웹 포털을 엽니다. 보고서 서버 데이터베이스의 보고서 서버 항목이 표시되어야 합니다.  
 
 ## <a name="creating-the-rsexecrole-role-and-permissions-using-t-sql"></a>T-SQL을 사용하여 RSExecRole 역할 및 권한 만들기
 다음 T-SQL 스크립트를 사용하여 시스템 데이터베이스에서 역할을 만들고 적용 가능한 권한을 부여할 수 있습니다.

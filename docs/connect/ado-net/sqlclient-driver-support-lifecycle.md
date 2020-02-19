@@ -1,7 +1,7 @@
 ---
 title: SqlClient 드라이버 지원 기간
-description: 제품 지원 기간 정보를 포함 하는 페이지입니다.
-ms.date: 08/15/2019
+description: 제품 지원 기간 정보가 포함된 페이지입니다.
+ms.date: 11/25/2019
 dev_langs:
 - csharp
 - vb
@@ -10,29 +10,39 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: eafe3463a091ea6d511b1ca71dea6a977411cff6
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 42a64af2e638521a3428d656240944a16b29cd44
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451875"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253360"
 ---
 # <a name="sqlclient-driver-support-lifecycle"></a>SqlClient 드라이버 지원 기간
 
 ![Download-DownArrow-Circled](../../ssdt/media/download.png)[ADO.NET 다운로드](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-SQL Server에 대 한 Microsoft SqlClient Data Provider의 각 반복은 관련 된 플랫폼과 함께 제공 됩니다. 수명 주기 정보는 다음과 같습니다.
+Microsoft.Data.SqlClient 라이브러리는 모든 릴리스에 대한 최신 .NET Core 지원 정책을 준수합니다.
 
-## <a name="microsoft-support-for-net-core"></a>.NET Core에 대 한 Microsoft 지원
+[.NET Core 지원 정책 보기](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)
 
-|  버전 옵션  |  출시 날짜 | 지원 수준 | 지원 되는 패치 버전 | 지원 종료 |
-| -- | -- | -- | -- | -- |
-| [.NET Core 2.2](https://aka.ms/netcore22announce) | 2018년 12월 4일 | 현재 | [2.2.6](https://www.microsoft.com/net/download/dotnet-core/runtime-2.2.6) | |
-| [.NET Core 2.1](https://blogs.msdn.microsoft.com/dotnet/2018/05/30/announcing-net-core-2-1) | 2018년 5월 30일 | LTS | [2.1.12](https://www.microsoft.com/net/download/dotnet-core/runtime-2.1.12) | LTS 선언에서 3 년 이상 (2018 년 8 월 21 일) |
+## <a name="microsoftdatasqlclient-release-cadence"></a>Microsoft.Data.SqlClient 릴리스 주기
 
-## <a name="microsoft-support-for-net-framework"></a>.NET Framework에 대 한 Microsoft 지원
+안정적인 새로운(GA) 릴리스는 버전 1.2부터 6개월마다 정기적으로 게시되며 그 사이에 2~3 미리보기 릴리스도 게시됩니다. 몇 가지 조건과 고객 응답을 바탕으로 관련자와 유지 관리자가 장기 지원(LTS) 릴리스를 선택합니다.
 
-[이](https://support.microsoft.com/lifecycle/search?alpha=.net%20framework) 페이지에서 .net Framework 제품 수명 주기를 볼 수 있습니다.
+## <a name="release-life-cycles"></a>릴리스 수명 주기
+
+| 버전 | 공식 릴리스 날짜 | 최신 패치 버전 | 패치 릴리스 날짜 | 지원 수준  | 지원 종료 |
+| -- | -- | -- | -- | -- | -- |
+| 1.1 | 2019년 11월 20일 |  |  | 현재 |  |
+| 1.0 | 2019년 8월 28일 | 1.0.19269.1 | 2019년 9월 26일 | 현재 | 2020년 2월 20일 |
+
+## <a name="long-term-support-lts-releases"></a>LTS(장기 지원) 릴리스
+
+LTS 릴리스는 첫 릴리스 후 3년 동안 지원됩니다.
+
+## <a name="current-releases"></a>현재 릴리스
+
+현재 릴리스는 이어지는 현재 또는 LTS 릴리스 후 3개월 동안 지원됩니다.

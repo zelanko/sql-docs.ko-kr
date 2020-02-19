@@ -14,16 +14,16 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 72ae0e8ed3c65a795723326d7ca49e2f5a909f18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971140"
 ---
 # <a name="sqlserverexception-constructor-javalangobject-javalangstring-javalangstring-int-boolean"></a>SQLServerException 생성자(java.lang.Object, java.lang.String, java.lang.String, int, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  **개체**, **문자열** 개체, **문자열** 개체, **Int**및 **부울**이 지정 된 경우 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) 클래스의 새 인스턴스를 초기화 합니다.
+  **개체**, **문자열** 개체, **문자열** 개체 **int**, 및 **부울**이 주어진 경우 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) 클래스의 새 인스턴스를 초기화합니다.
 
 ## <a name="syntax"></a>구문  
   
@@ -41,23 +41,23 @@ public SQLServerException(java.lang.Object obj,
 #### <a name="parameters"></a>매개 변수  
  *obj*  
   
- 예외를 생성 한 IO 버퍼입니다.
+ 예외를 생성한 IO 버퍼입니다.
 
  *errText*  
   
- 오류 텍스트를 포함 하는 문자열입니다.
+ 오류 문자가 포함된 문자열입니다.
   
  *sqlState*  
   
- SQL 상태를 포함 하는 enum 개체입니다.
+ SQL 상태가 포함된 열거형 개체입니다.
  
  *errNum*  
   
- 예외에 대 한 오류 코드를 포함 하는 int입니다.
+ 예외의 오류 코드가 포함된 int입니다.
  
  *bStack*  
   
- 스택 추적을 생성 해야 하는지 여부를 나타내는 부울입니다.
+ 스택 추적을 생성해야 하는지 여부를 나타내는 부울입니다.
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerException 생성자](../../../connect/jdbc/reference/sqlserverexception-constructors.md)   

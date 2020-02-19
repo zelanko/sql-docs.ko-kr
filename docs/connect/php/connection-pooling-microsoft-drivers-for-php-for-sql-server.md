@@ -13,10 +13,10 @@ ms.assetid: 4d9a83d4-08de-43a1-975c-0a94005edc94
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 13e1075cd25fa352543837afa31ff2a3d540704f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015126"
 ---
 # <a name="connection-pooling-microsoft-drivers-for-php-for-sql-server"></a>연결 풀링(Microsoft Drivers for PHP for SQL Server)
@@ -26,7 +26,7 @@ ms.locfileid: "68015126"
   
 -   [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 는 ODBC 연결 풀링을 사용합니다.  
   
--   기본적으로 Windows에서는 연결 풀링이 사용하도록 설정되어 있습니다. Linux 및 macOS에서 연결은 ODBC에 대해 연결 풀링을 사용 하도록 설정 된 경우에만 풀링 됩니다 ( [연결 풀링 사용/사용 안 함](#enablingdisabling-connection-pooling)참조). 연결 풀링을 사용 하도록 설정 하 고 서버에 연결 하는 경우 드라이버는 새 연결을 만들기 전에 풀링된 연결을 사용 하려고 시도 합니다. 해당 연결이 풀에 없는 경우 새 연결이 만들어지고 풀에 추가됩니다. 드라이버가 연결 문자열을 비교하여 연결이 동일한지 여부를 확인합니다.  
+-   기본적으로 Windows에서는 연결 풀링이 사용하도록 설정되어 있습니다. Linux 및 macOS에서 연결은 ODBC에 대해 연결 풀링을 사용하도록 설정된 경우에만 풀링됩니다([연결 풀링 사용/사용 안 함](#enablingdisabling-connection-pooling) 참조). 연결 풀링을 사용하도록 설정하고 서버에 연결하면 드라이버는 새 연결을 만들기 전에 풀링된 연결을 사용하려고 시도합니다. 해당 연결이 풀에 없는 경우 새 연결이 만들어지고 풀에 추가됩니다. 드라이버가 연결 문자열을 비교하여 연결이 동일한지 여부를 확인합니다.  
   
 -   풀에서 연결이 사용되는 경우 연결 상태가 재설정됩니다.  
   
@@ -42,11 +42,11 @@ ms.locfileid: "68015126"
   
 다른 연결 특성에 대한 자세한 내용은 [Connection Options](../../connect/php/connection-options.md)을 참조하세요.  
 ### <a name="linux-and-macos"></a>Linux 및 macOS
-*Connectionpooling* 특성은 연결 풀링을 사용 하거나 사용 하지 않도록 설정 하는 데 사용할 수 없습니다. 
+연결 풀링을 사용하거나 사용하지 않도록 설정하는 데 *ConnectionPooling* 특성을 사용할 수 없습니다. 
 
-Odbcinst.ini 구성 파일을 편집 하 여 연결 풀링을 사용/사용 하지 않도록 설정할 수 있습니다. 변경 내용을 적용 하려면 드라이버를 다시 로드 해야 합니다.
+odbcinst.ini 구성 파일을 편집하여 연결 풀링을 사용/사용하지 않도록 설정할 수 있습니다. 변경 내용을 적용하려면 드라이버를 다시 로드해야 합니다.
 
-을 `Pooling` 로 `Yes` 설정 하 고 `CPTimeout` odbcinst.ini 파일에서 양수 값을 설정 하면 연결 풀링이 가능 합니다. 
+`Pooling`을 `Yes`로 설정하고 odbcinst.ini 파일에서 양의 `CPTimeout` 값을 설정하면 연결 풀링을 사용할 수 있습니다. 
 ```
 [ODBC]
 Pooling=Yes
@@ -55,7 +55,7 @@ Pooling=Yes
 CPTimeout=<int value>
 ```
   
-최소한 odbcinst.ini 파일은 다음 예제와 같이 표시 되어야 합니다.
+최소한 odbcinst.ini 파일은 다음 예제와 비슷해야 합니다.
 
 ```
 [ODBC]
@@ -68,16 +68,16 @@ UsageCount=1
 CPTimeout=120
 ```
 
-Odbcinst.ini `Pooling` 파일 `No` 에서를로 설정 하면 드라이버가 새 연결을 강제로 만듭니다.
+odbcinst.ini 파일에서 `Pooling`를 `No`로 설정하면 드라이버가 강제로 새 연결을 만듭니다.
 ```
 [ODBC]
 Pooling=No
 ```
 
-## <a name="remarks"></a>Remarks
-- Linux 또는 macOS에서는 odbcinst.ini 파일에서 풀링이 사용 되는 경우 모든 연결이 풀링되지 않습니다. 즉, ConnectionPooling 연결 옵션이 적용 되지 않습니다. 풀링을 사용 하지 않도록 설정 하려면 odbcinst.ini 파일에서 Pooling = No를 설정 하 고 드라이버를 다시 로드 합니다.
-  - 2\.3.4 (Linux 및 macOS)는 오류 메시지, 경고 및 정보 메시지와 같은 적절 한 진단 정보를 반환 하지 않을 수 있습니다. <
-  - 따라서 SQLSRV 및 PDO_SQLSRV 드라이버는 long 데이터 (예: xml, 이진)를 문자열로 제대로 인출 하지 못할 수 있습니다. Long 데이터를 해결 방법으로 스트림으로 페치할 수 있습니다. 아래의 SQLSRV 예제를 참조하세요.
+## <a name="remarks"></a>설명
+- Linux 또는 macOS에서는 odbcinst.ini 파일에서 풀링이 사용하도록 설정된 경우 모든 연결이 풀링됩니다. 즉, ConnectionPooling 연결 옵션이 적용되지 않습니다. 풀링을 사용하지 않도록 설정하려면 odbcinst.ini 파일에서 Pooling=No를 설정하고 드라이버를 다시 로드합니다.
+  - 2\.3.4 이하 unixODBC(Linux 및 macOS)는 오류 메시지, 경고 및 정보 메시지와 같은 적절한 진단 정보를 반환하지 않을 수 있습니다.
+  - 따라서 SQLSRV 및 PDO_SQLSRV 드라이버는 긴 데이터(예: xml, 이진)를 문자열로 제대로 페치하지 못할 수 있습니다. 해결 방법으로 긴 데이터를 스트림으로 페치할 수 있습니다. 아래의 SQLSRV 예제를 참조하세요.
 
 ```
 <?php

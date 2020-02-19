@@ -1,5 +1,5 @@
 ---
-title: SQL Server 프로그래밍에 대 한 OLE DB 드라이버 | Microsoft Docs
+title: SQL Server 프로그래밍용 OLE DB 드라이버 | Microsoft Docs
 description: SQL Server 프로그래밍용 OLE DB 드라이버
 ms.custom: ''
 ms.date: 06/12/2018
@@ -19,10 +19,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 0645659036af0b00e2cf1b62b67830ded43aecbe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993917"
 ---
 # <a name="ole-db-driver-for-sql-server-programming"></a>SQL Server 프로그래밍용 OLE DB 드라이버
@@ -30,11 +30,11 @@ ms.locfileid: "67993917"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server에 대 한 OLE DB 드라이버는 데이터 액세스에 사용 되는 하위 수준 COM API입니다. 고성능이 필요한 도구, 유틸리티 및 하위 수준 구성 요소 개발에는 SQL Server용 OLE DB 드라이버를 사용하는 것이 좋습니다. SQL Server용 OLE DB 드라이버는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] TDS(Tabular Data Stream) 프로토콜에 직접적으로 액세스하는 고성능 네이티브 공급자입니다.  
+  OLE DB Driver for SQL Server는 데이터 액세스에 사용되는 낮은 수준의 COM API입니다. 고성능이 필요한 도구, 유틸리티 및 하위 수준 구성 요소 개발에는 SQL Server용 OLE DB 드라이버를 사용하는 것이 좋습니다. SQL Server용 OLE DB 드라이버는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] TDS(Tabular Data Stream) 프로토콜에 직접적으로 액세스하는 고성능 네이티브 공급자입니다.  
   
- SQL Server에 대 한 OLE DB 드라이버는에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]연결 하는 응용 프로그램에 대 한 OLE DB 지원을 제공 합니다.  
+ OLE DB Driver for SQL Server는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 연결된 애플리케이션에 OLE DB 지원을 제공합니다.  
   
- SQL Server에 대 한 OLE DB 드라이버는 OLE DB 버전 2.0 호환 공급자입니다.  
+ OLE DB Driver for SQL Server는 OLE DB 버전 2.0 호환 공급자입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -42,7 +42,7 @@ ms.locfileid: "67993917"
   
 -   [데이터 원본 개체 &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
--   [도구](../../oledb/ole-db-commands/commands.md)  
+-   [명령](../../oledb/ole-db-commands/commands.md)  
   
 -   [행 집합](../../oledb/ole-db-rowsets/rowsets.md)  
   
@@ -66,13 +66,13 @@ ms.locfileid: "67993917"
   
 -   [트랜잭션](../../oledb/ole-db-transactions/transactions.md)  
   
--   [오류](../../oledb/ole-db-errors/errors.md)  
+-   [Errors](../../oledb/ole-db-errors/errors.md)  
   
 -   [클라이언트 연결&#40;OLE DB&#41;의 SPN&#40;서비스 사용자 이름&#41;](../../oledb/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
   
 -   [스파스 열 지원&#40;OLE DB&#41;](../../oledb/ole-db/sparse-columns-support-ole-db.md)  
   
--   [SQL Server &#40;OLE DB&#41; 참조 OLE DB 드라이버](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
+-   [OLE DB Driver for SQL Server&#40;OLE DB&#41; 참조](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
   
 -   [OLE DB 방법 도움말 항목](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   

@@ -7,10 +7,10 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
 ms.openlocfilehash: c2013e99f5e222c50d954e292cbc0b48b39cb7c9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68265639"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Power BI 보고서 서버 통합(구성 관리자)
@@ -33,15 +33,15 @@ ms.locfileid: "68265639"
 
 - 고정하려는 보고서는 저장된 자격 증명을 사용해야 합니다. 이는 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 통합 자체의 요구 사항이 아니라 고정된 항목에 대한 새로 고침 프로세스의 요구 사항입니다.  보고서 항목 고정 작업은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독을 만들어 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]에서 타일의 새로 고침 일정을 관리합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독에는 저장된 자격 증명이 필요합니다. 보고서에서 저장된 자격 증명을 사용하지 않는 경우 사용자는 보고서 항목을 고정할 수 있지만 연결된 구독에서 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]에 데이터를 새로 고치려고 경우 **내 구독** 페이지에 다음과 유사한 오류 메시지가 표시됩니다.
 
-    PowerBI 배달 오류: 대시보드: IT 지출 분석 샘플, visual: Chart2, 오류: 현재 작업을 완료할 수 없습니다. 사용자 데이터 원본 자격 증명이 요구 사항을 준수하지 않아 이 보고서 또는 공유 데이터 세트를 실행할 수 없습니다. 뿐만 아니라 사용자 데이터 원본 자격 증명도 실행할 수 없습니다.
+    PowerBI 배달 오류: 대시보드: IT 지출 분석 샘플, 시각적 개체: Chart2, 오류: 현재 작업을 완료할 수 없습니다. 사용자 데이터 원본 자격 증명이 요구 사항을 준수하지 않아 이 보고서 또는 공유 데이터 세트를 실행할 수 없습니다. 뿐만 아니라 사용자 데이터 원본 자격 증명도 실행할 수 없습니다.
 
 자격 증명을 저장하는 방법은 [Reporting Services 데이터 원본에 자격 증명 저장](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)에서 "보고서별 데이터 원본에 대한 저장된 자격 증명 구성" 섹션을 참조하세요.
 
 관리자는  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 로그 파일에서 자세한 내용을 검토할 수 있습니다.  다음과 유사한 메시지가 표시됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 로그 파일을 검토하고 모니터링하는 유용한 방법은 파일에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 파워 쿼리를 사용하는 것입니다.  자세한 내용 및 간단한 비디오는 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)를 참조하세요.
 
-- subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: PowerBI 배달 오류: 대시보드: IT 지출 분석 샘플, visual: Chart2, 오류: 현재 작업을 완료할 수 없습니다. 사용자 데이터 원본 자격 증명이 요구 사항을 준수하지 않아 이 보고서 또는 공유 데이터 세트를 실행할 수 없습니다. 사용자 데이터 원본 자격 증명이 보고서 서버 데이터베이스에 저장되어 있지 않거나, 사용자 데이터 원본이 자격 증명을 요구하지 않도록 구성되어 있지만 무인 실행 계정이 지정되어 있지 않습니다.
+- subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e 오류: PowerBI 배달 오류: 대시보드: IT 지출 분석 샘플, 시각적 개체: Chart2, 오류: 현재 작업을 완료할 수 없습니다. 사용자 데이터 원본 자격 증명이 요구 사항을 준수하지 않아 이 보고서 또는 공유 데이터 세트를 실행할 수 없습니다. 사용자 데이터 원본 자격 증명이 보고서 서버 데이터베이스에 저장되어 있지 않거나, 사용자 데이터 원본이 자격 증명을 요구하지 않도록 구성되어 있지만 무인 실행 계정이 지정되어 있지 않습니다.
 
-- notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Error occurred processing subscription fcdb8581-d763-4b3b-ba3e-8572360df4f9: PowerBI 배달 오류: 대시보드: IT 지출 분석 샘플, visual: Chart2, 오류: 현재 작업을 완료할 수 없습니다. 사용자 데이터 원본 자격 증명이 요구 사항을 준수하지 않아 이 보고서 또는 공유 데이터 집합을 실행할 수 없습니다. 사용자 데이터 원본 자격 증명이 보고서 서버 데이터베이스에 저장되어 있지 않거나, 사용자 데이터 원본이 자격 증명을 요구하지 않도록 구성되어 있지만 무인 실행 계정이 지정되어 있지 않습니다.
+- notification!WindowsService_1!1458!09/24/2015-00:09:27:: e 오류: 구독 fcdb8581-d763-4b3b-ba3e-8572360df4f9을 처리하던 중에 발생한 오류: PowerBI 배달 오류: 대시보드: IT 지출 분석 샘플, 시각적 개체: Chart2, 오류: 현재 작업을 완료할 수 없습니다. 사용자 데이터 원본 자격 증명이 요구 사항을 준수하지 않아 이 보고서 또는 공유 데이터 집합을 실행할 수 없습니다. 사용자 데이터 원본 자격 증명이 보고서 서버 데이터베이스에 저장되어 있지 않거나, 사용자 데이터 원본이 자격 증명을 요구하지 않도록 구성되어 있지만 무인 실행 계정이 지정되어 있지 않습니다.
 
 ## <a name="bkmk_steps2integrate"></a> 보고서 서버를 통합하고 등록하려면
 
@@ -110,9 +110,9 @@ ms.locfileid: "68265639"
 
  **사용자가 대시보드에 보고서 항목을 고정하는 경우**
 
-1. 사용자가 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 에서 보고서를 미리 보고 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]에서 보고서 항목을 고정하려고 처음 클릭합니다.
+1. 사용자가 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)][!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]에서 보고서를 미리 보고 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]에서 보고서 항목을 고정하려고 처음 클릭합니다.
 
-2. 이렇게 하면 Azure AD 로그인 페이지로 리디렉션됩니다. [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] **내 설정** 페이지에서 로그인할 수도 있습니다. 사용자가 Azure 관리되는 테넌트에 로그인하면 사용자의 Azure 계정과 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 권한 간에 관계가 설정됩니다.  자세한 내용은 [Power BI 통합을 위한 내 설정&#40;웹 포털&#41;](../my-settings-for-power-bi-integration-web-portal.md)을 참조하세요.
+2. 이렇게 하면 Azure AD 로그인 페이지로 리디렉션됩니다. [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]**내 설정** 페이지에서 로그인할 수도 있습니다. 사용자가 Azure 관리되는 테넌트에 로그인하면 사용자의 Azure 계정과 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 권한 간에 관계가 설정됩니다.  자세한 내용은 [Power BI 통합을 위한 내 설정&#40;웹 포털&#41;](../my-settings-for-power-bi-integration-web-portal.md)과 통합해야 합니다.
 
 3. 사용자 보안 토큰이 보고서 서버에 반환됩니다.
 
@@ -124,7 +124,7 @@ ms.locfileid: "68265639"
 
 7. 대시보드 타일에서 보고서 항목의 예약된 새로 고침을 관리하기 위해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독이 만들어집니다. 이 구독에서는 사용자가 로그인할 때 생성된 보안 토큰을 사용합니다.
 
-     토큰은 **90일**동안 유효합니다. 이후에는 사용자가 다시 로그인하여 새 사용자 토큰을 만들어야 합니다. 토큰이 만료된 경우 고정된 타일은 대시보드에 계속 표시되지만 데이터가 더 이상 새로 고쳐지지 않습니다.  새 사용자 토큰이 만들어질 때까지 고정된 항목에 사용된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독에서 오류가 발생합니다. [Power BI 통합을 위한 내 설정&#40;웹 포털&#41;](../my-settings-for-power-bi-integration-web-portal.md)을 참조하세요. 을 참조하십시오.
+     토큰은 **90일**동안 유효합니다. 이후에는 사용자가 다시 로그인하여 새 사용자 토큰을 만들어야 합니다. 토큰이 만료된 경우 고정된 타일은 대시보드에 계속 표시되지만 데이터가 더 이상 새로 고쳐지지 않습니다.  새 사용자 토큰이 만들어질 때까지 고정된 항목에 사용된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독에서 오류가 발생합니다. [Power BI 통합을 위한 내 설정&#40;웹 포털&#41;](../my-settings-for-power-bi-integration-web-portal.md)을 참조하세요. 참조하세요.
 
 사용자가 두 번째로 항목을 고정하는 경우에는 1~4단계를 건너뛰고 대신 앱 ID와 URL이 ReportServer 데이터베이스에서 검색되며 5단계로 진행됩니다.
 

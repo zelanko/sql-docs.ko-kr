@@ -1,6 +1,7 @@
 ---
-title: 쿼럼 강제를 통해 WSFC 재해 복구(SQL Server) | Microsoft 문서
-ms.custom: ''
+title: 쿼럼 강제를 통한 재해 복구
+description: 쿼럼 실패에서 복구하려면 수동 개입이 필요합니다. 이 문서에서는 SQL Server 장애 조치(failover) 클러스터 인스턴스(FCI)에 재해가 발생할 경우 쿼럼 강제 방법을 어떻게 다루는지를 설명합니다.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2453c994ca274d4fd584d04026e3f4e0eb0cecf6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 36eebd77371cf2cede1e36ab68873c080a752128
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904950"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74821986"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>강제 쿼럼을 통해 WSFC 재해 복구(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,13 +35,13 @@ ms.locfileid: "67904950"
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 조건  
  강제 쿼럼 절차는 쿼럼 실패 전에 정상 상태의 쿼럼이 있었다고 가정합니다.  
   
 > [!WARNING]  
 >  사용자는 Windows Server 장애 조치(Failover) 클러스터링, WSFC 쿼럼 모델, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]및 환경의 특정 배포 구성에 대한 개념 및 상호 작용에 대해 잘 알고 있어야 합니다.  
 >   
->  참조 항목:  [SQL Server의 WSFC(Windows Server 장애 조치(Failover) 클러스터링)](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [WSFC 쿼럼 모드 및 투표 구성(SQL Server)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
+>  자세한 내용은 다음을 참조하세요.  [SQL Server의 WSFC(Windows Server 장애 조치(Failover) 클러스터링)](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [WSFC 쿼럼 모드 및 투표 구성(SQL Server)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
   
 ###  <a name="Security"></a> 보안  
  사용자는 WSFC 클러스터의 각 노드에 대한 로컬 Administrators 그룹의 멤버인 도메인 계정이어야 합니다.  
@@ -65,7 +66,7 @@ ms.locfileid: "67904950"
   
      이 노드에서 강제 쿼럼 절차를 수행하여 수동으로 클러스터를 온라인 상태로 전환합니다.  데이터 손실 위험을 최소화하려면 가용성 그룹 주 복제본을 마지막으로 호스팅한 노드를 선택합니다.  
   
-     참조 항목:  [쿼럼 없이 WSFC 클러스터 강제 시작](https://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)  
+     자세한 내용은 다음을 참조하세요.  [쿼럼 없이 WSFC 클러스터 강제 시작](https://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)  
   
     > [!NOTE]  
     >  강제 쿼럼 설정은 클러스터 전반에 영향을 주어 논리적 WSFC 클러스터가 과반수의 투표를 확보하고 자동으로 정상 쿼럼 작업 모드로 전환될 때까지 쿼럼 검사를 차단합니다.  
@@ -103,11 +104,11 @@ ms.locfileid: "67904950"
   
 8.  **RPO/RTO 분석 실시.** SQL Server 시스템 로그, 데이터베이스 타임스탬프 및 Windows 이벤트 로그를 분석하여 실패의 근본 원인을 파악하고 실제 복구 지점 및 복구 시간 방법을 문서화해야 합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [쿼럼 없이 WSFC 클러스터 강제 시작](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
--   [가용성 그룹의 강제 수동 장애 조치(failover) 수행&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
+-   [가용성 그룹의 강제 수동 장애 조치(Failover) 수행&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
   
 -   [클러스터 쿼럼 NodeWeight 설정 보기](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
   

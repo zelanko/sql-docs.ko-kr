@@ -1,29 +1,38 @@
 ---
 title: Azure 가상 머신에 설치
-description: Azure 클라우드의 SQL Server 가상 머신에서 R 및 Python 데이터 과학 및 기계 학습 솔루션을 실행합니다.
+description: Azure 클라우드의 SQL Server Machine Learning Services에서 Python과 R 데이터 과학 및 기계 학습 솔루션을 실행합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/09/2018
+ms.date: 01/02/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: aeec25b561822e8083b89e03f0f7e74f40660f7b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: d81237f67c82fd7cc8b9259fcd7a0202ffb7fd4b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727619"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75776594"
 ---
-# <a name="install-sql-server-machine-learning-services-with-r-and-python-on-an-azure-virtual-machine"></a>Azure 가상 머신에 R 및 Python과 함께 SQL Server Machine Learning Services 설치
+# <a name="install-sql-server-machine-learning-services-with-python-and-r-on-an-azure-virtual-machine"></a>Azure 가상 머신에 Python과 R을 지원하는 SQL Server Machine Learning Services 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Azure의 SQL Server 가상 머신에 Machine Learning Services와 R 및 Python 통합을 설치하여 설치 및 구성 작업을 제거할 수 있습니다. 가상 머신이 배포되면 해당 기능을 사용할 수 있습니다.
- 
-단계별 지침은 [Azure Portal에서 Windows SQL Server 가상 머신을 프로비저닝하는 방법](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision)을 참조하세요.
+Azure 가상 머신에 Python과 R을 지원하는 SQL Server Machine Learning Services를 설치하는 방법을 알아봅니다. 이렇게 하면 Machine Learning Services에 설치 및 구성 작업을 수행할 필요가 없습니다.
 
-[SQL 서버 설정 구성](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings) 단계는 인스턴스에 기계 학습을 추가하는 단계입니다.
+다음 단계를 수행하세요.
+
+1. Azure에서 SQL Server 가상 머신 프로비전
+1. 방화벽 차단 해제
+1. 원격 클라이언트에 대한 ODBC 콜백 사용
+1. 네트워크 프로토콜 추가
+
+## <a name="provision-sql-server-virtual-machine-in-azure"></a>Azure에서 SQL Server 가상 머신 프로비전
+
+단계별 지침은 [Azure Portal에서 Windows SQL Server 가상 머신을 프로비저닝하는 방법](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision)을 참조하세요. 
+
+[SQL 서버 설정 구성](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings) 단계는 인스턴스에 Machine Learning Services를 추가하는 단계입니다.
 
 <a name="firewall"></a>
 

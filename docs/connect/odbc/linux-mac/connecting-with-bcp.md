@@ -1,5 +1,5 @@
 ---
-title: Bcp를 사용 하 여 연결 | Microsoft Docs
+title: bcp를 사용하여 연결 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1dd80df3a0f7fabec7ae9ddc51b16cb4456c7970
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67996613"
 ---
 # <a name="connecting-with-bcp"></a>bcp를 사용하여 연결
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-[bcp](https://go.microsoft.com/fwlink/?LinkID=190626) 유틸리티는 Linux 및 macOS 기반 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 사용할 수 있습니다. 이 페이지에서는 Windows 버전의 `bcp`차이점을 설명 합니다.
+[bcp](https://go.microsoft.com/fwlink/?LinkID=190626) 유틸리티는 Linux 및 macOS 기반 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 사용할 수 있습니다. 이 페이지에서는 `bcp` Windows 버전과의 차이점을 설명합니다.
   
 - 필드 종결자는 탭("\t")입니다.  
   
@@ -63,7 +63,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 - -d  
 `bcp` -S 옵션에 전달된 값이 DSN(데이터 원본 이름)으로 해석되도록 합니다. 자세한 내용은 [Connecting with sqlcmd](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)에서 "sqlcmd 및 bcp에서 DSN 지원"을 참조하세요.  
   
-- -e *error_file* `bcp` 유틸리티가 파일에서 데이터베이스로 전송할 수 없는 행을 저장하는 데 사용되는 오류 파일의 전체 경로를 지정합니다.  
+- -e *error_file*`bcp` 유틸리티가 파일에서 데이터베이스로 전송할 수 없는 행을 저장하는 데 사용되는 오류 파일의 전체 경로를 지정합니다.  
   
 - -E  
 가져온 데이터 파일의 ID 값을 ID 열에 사용합니다.  
@@ -78,7 +78,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 작업 시 삽입된 열에 기본값이 지정되지 않고 빈 열이 Null 값을 보유하도록 지정합니다.  
   
 - -l  
-로그인 시간 제한을 지정합니다. -l 옵션을 사용하여 서버에 연결을 시도할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 로그인 제한 시간(초)을 지정합니다. 기본 로그인 제한 시간은 15 초입니다. 로그인 제한 시간은 0에서 65534 사이의 숫자여야 합니다. 입력한 값이 숫자가 아니거나 이 범위에 속하지 않을 경우 `bcp`는 오류 메시지를 생성합니다. 값 0은 무한 시간 제한을 지정 합니다.
+로그인 시간 제한을 지정합니다. -l 옵션을 사용하여 서버에 연결을 시도할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 로그인 제한 시간(초)을 지정합니다. 기본 로그인 제한 시간은 15초입니다. 로그인 제한 시간은 0에서 65534 사이의 숫자여야 합니다. 입력한 값이 숫자가 아니거나 이 범위에 속하지 않을 경우 `bcp`는 오류 메시지를 생성합니다. 값 0은 제한 시간을 무한으로 지정합니다.
   
 - -L *last_row*  
 테이블에서 내보내거나 데이터 파일에서 가져올 마지막 행 번호를 지정합니다.  
@@ -98,11 +98,11 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 - -r *row_terminator*  
 행 종결자를 지정합니다.  
   
-- -r  
+- -R  
 클라이언트 컴퓨터의 로캘 설정에 정의된 국가별 형식을 사용하여 통화, 날짜 및 시간 데이터를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로 대량 복사하도록 지정합니다.  
   
 - -S *server*  
-연결할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정 하거나,-D를 사용 하는 경우 DSN을 지정 합니다.  
+연결할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정하거나 -D가 사용된 경우 DSN를 지정합니다.  
   
 - -t *field_terminator*  
 필드 종결자를 지정합니다.  
@@ -113,7 +113,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 - -U *login_id*  
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]연결에 사용하는 로그인 ID를 지정합니다.  
   
-- -V  
+- -v  
 `bcp` 유틸리티 버전 번호 및 저작권을 보고합니다.  
   
 - -w  
@@ -133,14 +133,14 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 - -i *input_file*  
 지시 파일의 이름을 지정합니다.  
   
-- -n  
+- -N  
 문자가 아닌 데이터의 경우 데이터의 네이티브(데이터베이스) 데이터 형식을 사용하고 문자 데이터의 경우 유니코드 문자를 사용합니다.  
   
 - -o *output_file*  
 명령 프롬프트에서 리디렉션된 출력을 받는 파일의 이름을 지정합니다.  
   
 - -V (80 | 90 | 100)  
-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]이전 버전의 데이터 형식을 사용합니다.  
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 이전 버전에서 데이터 형식을 사용합니다.  
   
 - -X  
 서식 및 -f format_file 옵션과 함께 사용되며 기본 비 XML 서식 파일 대신 XML 기반 서식 파일을 생성합니다.  

@@ -1,42 +1,38 @@
 ---
-title: SQL Server Profiler 실행 | Microsoft Docs
-ms.custom: ''
-ms.date: 07/07/2017
+title: SQL Server Profiler 실행
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- Profiler [SQL Server Profiler], starting
-- SQL Server Profiler, starting
-- starting SQL Server Profiler
-- Profiler [SQL Server Profiler], running
-- SQL Server Profiler, running
-- running SQL Server Profiler
 ms.assetid: 22e57ffa-63b0-4de3-b92e-df297dda1226
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 697905061bb60e91884d8844a103ba1302c5c4ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 07/07/2017
+ms.openlocfilehash: 89089c07a3b13ee7764770df3d582ba449b65f53
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059625"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307792"
 ---
 # <a name="run-sql-server-profiler"></a>SQL Server Profiler 실행
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  다양한 시나리오에서 추적 출력 수집을 지원하기 위해 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 여러 가지 방법으로 실행할 수 있습니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]는 Windows 10 **시작** 메뉴, [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자의 **도구** 메뉴 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 여러 위치에서 시작할 수 있습니다.  
+
+다양한 시나리오에서 추적 출력 수집을 지원하기 위해 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 여러 가지 방법으로 실행할 수 있습니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]는 Windows 10 **시작** 메뉴, [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자의 **도구** 메뉴 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 여러 위치에서 시작할 수 있습니다.  
   
 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 처음 시작하고 **파일** 메뉴에서 **새 추적**을 선택하면 연결할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 지정할 수 있는 **서버에 연결** 대화 상자가 표시됩니다.  
 ## <a name="to-start-sql-server-profiler-from-the-windows-10-start-menu"></a>Windows 10 시작 메뉴에서 SQL Server Profiler를 시작하려면  
--  Windows **시작** 아이콘을 클릭 하거나 windows 키를 누르고 "SQL Server Profiler 17" 형식으로 시작 합니다. **SQL Server Profiler 17** 타일이 표시 되 면 클릭 합니다.   
+-  Windows **시작** 아이콘을 클릭하거나 Windows 키를 누른 다음 "SQL Server Profiler 17"을 입력합니다. **SQL Server Profiler 17** 타일이 표시되면 클릭합니다.   
 
 ## <a name="to-start-sql-server-profiler-in-database-engine-tuning-advisor"></a>데이터베이스 엔진 튜닝 관리자에서 SQL Server Profiler를 시작하려면  
 -  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자의 **도구** 메뉴에서 **SQL Server Profiler**를 클릭합니다.  
 
-## <a name="to-start-sql-server-profiler-in-sql-server-management-studio"></a>SQL Server Management Studio에서 SQL Server Profiler를 시작 하려면  
- [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 의[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]여러 위치에서 시작할 수 있습니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 시작하면 시작 지점의 연결 컨텍스트, 추적 템플릿 및 필터 컨텍스트가 로드됩니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]는 각 SQL Server Profiler 세션을 자체 인스턴스에서 시작 하 고, 종료 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]하면 프로파일러가 계속 실행 됩니다.  
+## <a name="to-start-sql-server-profiler-in-sql-server-management-studio"></a>SQL Server Management Studio에서 SQL Server Profiler를 시작하려면  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 여러 위치에서 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 시작할 수 있습니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 시작하면 시작 지점의 연결 컨텍스트, 추적 템플릿 및 필터 컨텍스트가 로드됩니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]는 각 SQL Server Profiler 세션을 자체 인스턴스에서 시작하므로 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 중지해도 이러한 Profiler는 계속 실행됩니다.  
 ### <a name="to-start-sql-server-profiler-from-the-tools-menu"></a>도구 메뉴에서 SQL Server Profiler를 시작하려면  
 -  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **도구** 메뉴에서 **SQL Server Profiler**를 클릭합니다.  
 

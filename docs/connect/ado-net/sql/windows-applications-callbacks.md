@@ -1,6 +1,6 @@
 ---
 title: 콜백을 사용하는 Windows 애플리케이션
-description: 비동기 명령을 안전 하 게 실행 하는 방법을 보여 주는 예제를 제공 합니다 .이 예제에서는 별도의 스레드에서 폼과 해당 콘텐츠를 사용 하 여 상호 작용을 올바르게 처리 합니다.
+description: 비동기 명령을 안전하게 실행하는 방법을 보여 주는 예제를 제공합니다. 이 예제에서는 별도의 스레드에서 양식과 해당 내용을 사용하여 상호 작용을 올바르게 처리합니다.
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -9,30 +9,30 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 5c2d46e3f2b26a8106e75f2bb116907e2f27a7b9
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 83dca011087150eef5d8fdc948bb65cc6808830e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451905"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253377"
 ---
 # <a name="windows-applications-using-callbacks"></a>콜백을 사용하는 Windows 애플리케이션
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET 다운로드](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-대부분의 비동기 처리 시나리오에서는 데이터베이스 작업을 시작 하 고 데이터베이스 작업이 완료 될 때까지 기다리지 않고 다른 프로세스를 계속 실행 하려고 합니다. 그러나 데이터베이스 작업이 종료 된 후에는 많은 시나리오에서 작업을 수행 해야 합니다. 예를 들어 Windows 응용 프로그램에서는 장기 실행 작업을 백그라운드 스레드에 위임 하는 동시에 사용자 인터페이스 스레드가 응답성을 유지할 수 있도록 하는 것이 좋습니다. 그러나 데이터베이스 작업이 완료 되 면 결과를 사용 하 여 폼을 채워야 합니다. 이 시나리오 유형은 콜백을 사용 하 여 구현 하는 것이 가장 좋습니다.  
+대부분의 비동기 처리 시나리오에서는 데이터베이스 작업을 시작하고 데이터베이스 작업이 완료될 때까지 기다리지 않고 다른 프로세스를 계속 실행하려고 합니다. 그러나 많은 시나리오에서는 데이터베이스 작업이 종료된 후 다른 작업을 수행해야 합니다. 예를 들어 Windows 애플리케이션에서 장기 실행 작업을 백그라운드 스레드에 위임하는 동시에 사용자 인터페이스 스레드가 응답성을 유지하기를 원합니다. 그러나 데이터베이스 작업이 완료되면 결과를 사용하여 양식을 채워야 합니다. 이 시나리오 유형은 콜백을 사용하여 구현하는 것이 가장 좋습니다.  
   
-@No__t_1, <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> 또는 <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> 메서드에서 <xref:System.AsyncCallback> 대리자를 지정 하 여 콜백을 정의 합니다. 작업이 완료 되 면 대리자가 호출 됩니다. @No__t_0 자체에 대 한 참조를 대리자에 게 전달 하 여 <xref:Microsoft.Data.SqlClient.SqlCommand> 개체에 쉽게 액세스 하 고 전역 변수를 사용 하지 않고 적절 한 `End` 메서드를 호출할 수 있습니다.  
+<xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> 또는 <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> 메서드에서 <xref:System.AsyncCallback> 대리자를 지정하여 콜백을 정의합니다. 작업이 완료되면 대리자가 호출됩니다. <xref:Microsoft.Data.SqlClient.SqlCommand> 자체에 대한 참조를 대리자에게 전달할 수 있습니다. 그러면 대리자가 쉽게 <xref:Microsoft.Data.SqlClient.SqlCommand> 개체에 액세스하고 전역 변수를 사용하지 않고 적절한 `End` 메서드를 호출할 수 있습니다.  
   
 ## <a name="example"></a>예제  
-다음 Windows 응용 프로그램에서는 <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> 메서드를 사용 하 여 몇 초의 지연이 포함 된 Transact-sql 문을 실행 하는 방법을 보여 줍니다 (장기 실행 명령을 에뮬레이션).  
+다음 Windows 애플리케이션에서는 <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> 메서드를 사용하여 몇 초의 지연이 포함된 Transact-SQL 문을 실행하는 방법을 보여 줍니다(장기 실행 명령을 에뮬레이션).  
   
-이 예제에서는 별도의 스레드에서 양식과 상호 작용 하는 메서드를 호출 하는 등의 여러 가지 중요 한 기술을 보여 줍니다. 또한이 예제에서는 사용자가 여러 번 명령을 동시에 실행 하는 것을 차단 하는 방법과 콜백 프로시저를 호출 하기 전에 폼이 닫히지 않도록 해야 하는 방법을 보여 줍니다.  
+이 예제에서는 별도의 스레드에서 양식과 상호 작용하는 메서드를 호출하는 등의 여러 가지 중요한 기술을 보여 줍니다. 또한 이 예제에서는 사용자가 여러 명령을 동시에 실행하는 것을 차단하는 방법과 콜백 프로시저를 호출하기 전에 양식이 닫히지 않도록 하는 방법을 보여 줍니다.  
   
-이 예제를 설정 하려면 새 Windows 응용 프로그램을 만듭니다. 각 컨트롤의 기본 이름을 적용 하 여 <xref:System.Windows.Forms.Button> 컨트롤과 두 개의 <xref:System.Windows.Forms.Label> 컨트롤을 폼에 저장 합니다. 사용자 환경에 필요한 대로 연결 문자열을 수정 하 여 폼의 클래스에 다음 코드를 추가 합니다.  
+이 예제를 설정하려면 새 Windows 애플리케이션을 만듭니다. 각 컨트롤에 대해 기본 이름을 적용하여 양식에 <xref:System.Windows.Forms.Button> 컨트롤과 2개의 <xref:System.Windows.Forms.Label> 컨트롤을 배치합니다. 사용자의 환경에 필요한 대로 연결 문자열을 수정하여 양식의 클래스에 다음 코드를 추가합니다.  
   
 ```csharp  
 // Add these to the top of the class, if they're not already there:  

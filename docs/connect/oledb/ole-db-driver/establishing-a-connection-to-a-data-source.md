@@ -1,6 +1,6 @@
 ---
-title: 데이터 원본에 대 한 연결 설정 | Microsoft Docs
-description: SQL Server에 대 한 OLE DB 드라이버를 사용 하 여 데이터 원본에 대 한 연결 설정
+title: 데이터 원본에 대한 연결 설정 | Microsoft Docs
+description: OLE DB Driver for SQL Server를 사용하여 데이터 원본에 대한 연결 설정
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 268c81f98a46174aa09df80e8459529e0f854bfc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67995000"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>데이터 원본에 대한 연결 설정
@@ -28,13 +28,13 @@ ms.locfileid: "67995000"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server용 OLE DB 드라이버에 액세스하려면 소비자는 먼저 **CoCreateInstance** 메서드를 호출하여 데이터 원본 개체의 인스턴스를 만들어야 합니다. 각 OLE DB 공급자는 고유한 CLSID(클래스 ID)를 사용하여 식별합니다. SQL Server에 대 한 OLE DB 드라이버의 경우 클래스 식별자는 CLSID_MSOLEDBSQL입니다. MSOLEDBSQL_CLSID 기호를 사용 하 여 참조 하는 MSOLEDBSQL에서 사용 되는 SQL Server에 대 한 OLE DB 드라이버로 확인할 수도 있습니다.  
+  SQL Server용 OLE DB 드라이버에 액세스하려면 소비자는 먼저 **CoCreateInstance** 메서드를 호출하여 데이터 원본 개체의 인스턴스를 만들어야 합니다. 각 OLE DB 공급자는 고유한 CLSID(클래스 ID)를 사용하여 식별합니다. OLE DB Driver for SQL Server의 경우 클래스 식별자는 CLSID_MSOLEDBSQL입니다. 참조하는 msoledbsql.h에서 사용되는 OLE DB Driver for SQL Server로 확인되는 기호 MSOLEDBSQL_CLSID를 사용할 수도 있습니다.  
   
  소비자는 데이터 원본 개체가 공개하는 **IDBProperties** 인터페이스를 사용하여 서버 이름, 데이터베이스 이름, 사용자 ID 및 암호와 같은 기본 인증 정보를 제공할 수 있습니다. 이러한 속성을 설정하려면 **IDBProperties::SetProperties** 메서드를 호출합니다.  
   
  컴퓨터에서 여러 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 실행되는 경우 서버 이름은 ServerName\InstanceName 형식으로 지정됩니다.  
   
- 데이터 원본 개체는 또한 **IDBInitialize** 인터페이스를 공개합니다. 속성을 설정한 다음에는 **IDBInitialize::Initialize** 메서드를 호출하여 데이터 원본에 연결할 수 있습니다. 예를 들어  
+ 데이터 원본 개체는 또한 **IDBInitialize** 인터페이스를 공개합니다. 속성을 설정한 다음에는 **IDBInitialize::Initialize** 메서드를 호출하여 데이터 원본에 연결할 수 있습니다. 다음은 그 예입니다.  
   
 ```cpp
 CoCreateInstance(CLSID_MSOLEDBSQL,   
@@ -46,7 +46,7 @@ CoCreateInstance(CLSID_MSOLEDBSQL,
   
  이렇게 **CoCreateInstance**를 호출하면 CLSID_MSOLEDBSQL(개체를 만드는 데 사용되는 데이터 및 코드와 연관된 CLSID)과 연관된 클래스의 단일 개체가 생성됩니다. IID_IDBInitialize는 개체와 통신하는 데 사용되는 인터페이스(**IDBInitialize**)의 식별자에 대한 참조입니다.  
   
- 다음 샘플에서는 데이터 소스에 대 한 연결을 초기화 하 고 설정 하는 방법을 보여 줍니다.
+ 다음 샘플은 데이터 원본에 대한 연결을 시작하고 설정하는 방법을 보여줍니다.
   
 ```cpp
 #include "msoledbsql.h"

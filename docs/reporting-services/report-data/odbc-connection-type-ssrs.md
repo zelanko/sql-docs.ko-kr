@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.assetid: 24163866-f37a-4c38-982e-c3d79bf64d4c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 11e1f8b080d76dce34b621e79e28a0771431f61c
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 81a5b6bda053360aa50b1b9ddfef7b573310a735
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593971"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190774"
 ---
 # <a name="odbc-connection-type-ssrs"></a>ODBC 연결 형식(SSRS)
-  ODBC 데이터 공급자의 데이터를 포함하려면 ODBC 유형의 보고서 데이터 원본에 기초하는 데이터 세트가 있어야 합니다. 이 기본 제공 데이터 원본 유형은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ODBC 데이터 처리 확장 프로그램을 기반으로 합니다.  
+  ODBC 데이터 공급자의 데이터를 포함하려면 ODBC 유형의 보고서 데이터 원본에 기초하는 데이터 세트가 있어야 합니다. 이 기본 제공 데이터 원본 형식은 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ODBC 데이터 처리 확장 프로그램을 기반으로 합니다.  
   
  이 항목의 정보를 사용하여 데이터 원본을 작성할 수 있습니다. 단계별 지침은 [데이터 연결 추가 및 확인&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)을 참조하세요.  
   
@@ -38,7 +38,7 @@ Driver={SQL Server Native Client 10.0};Server=server;Database=AdventureWorks;Tru
 > [!NOTE]  
 >  연결 문자열에 암호와 같은 로그인 정보를 추가하지 않는 것이 좋습니다. 보고서 작성기는 **데이터 원본** 대화 상자에서 자격 증명을 입력하는 데 사용할 수 있는 별도의 탭을 제공합니다.  
   
- 자세한 내용은 [데이터 연결, 데이터 원본 및 연결 &#40;문자열 보고서 작성기 및 SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 또는 [보고서 데이터 원본에 대 한 자격 증명 및 연결 정보 지정](specify-credential-and-connection-information-for-report-data-sources.md)을 참조 하세요.  
+ 자세한 내용은 [데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 또는 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요.  
   
   
 ##  <a name="Remarks"></a> 주의  
@@ -47,7 +47,7 @@ Driver={SQL Server Native Client 10.0};Server=server;Database=AdventureWorks;Tru
  ODBC 연결 문자열을 작성할 수 있으려면 먼저 ODBC 드라이버가 설치되어 있고 컴퓨터 또는 시스템 DSN을 작성해야 합니다. 원하는 데이터를 성공적으로 검색하려면 드라이버가 지원하는 쿼리 구문을 제공해야 합니다. 매개 변수 지원은 드라이버에 따라 다릅니다. 자세한 내용은 선택한 드라이버와 관련된 항목을 참조하세요(예: [SQL Server Native Client&#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)).  
   
 ###### <a name="platform-and-version-information"></a>플랫폼 및 버전 정보  
- 특정 ODBC 데이터 공급자에 대 한 자세한 내용은 [Reporting Services &#40;SSRS&#41;에서 지 원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)을 참조 하세요.
+ 특정 ODBC 데이터 공급자에 대한 자세한 내용은 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)을 참조하세요.
   
   
 ##  <a name="HowTo"></a> 방법 도움말 항목  
@@ -66,7 +66,7 @@ Driver={SQL Server Native Client 10.0};Server=server;Database=AdventureWorks;Tru
  [보고서 데이터 세트&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  보고서의 데이터 액세스에 대한 개요를 제공합니다.  
   
- [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  데이터 연결 및 데이터 원본에 대한 정보를 제공합니다.  
   
  [보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

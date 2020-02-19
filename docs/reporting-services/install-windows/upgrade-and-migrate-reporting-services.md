@@ -12,10 +12,10 @@ ms.author: maggies
 ms.topic: conceptual
 ms.date: 08/17/2017
 ms.openlocfilehash: 9d0ff28e1e9c7784da2c1206f72573ba608797a1
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68264987"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
@@ -24,9 +24,9 @@ ms.locfileid: "68264987"
 
   이 항목은 SQL Server Reporting Services의 업그레이드 및 마이그레이션 옵션에 대한 개요입니다. SQL Server Reporting Services 배포를 업그레이드하는 방법은 일반적으로 두 가지가 있습니다.  
  
--   **업그레이드:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 요소를 현재 설치되어 있는 서버 및 인스턴스에서 업그레이드합니다. 이를 일반적으로 "현재 위치" 업그레이드라고 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서버의 한 모드에서 다른 모드로의 전체 업그레이드는 지원되지 않습니다. 예를 들어 기본 모드 보고서 서버를 SharePoint 모드 보고서 서버로 업그레이드할 수 없습니다. 보고서 항목을 한 모드에서 다른 모드로 마이그레이션할 수 있습니다. 자세한 내용은 이 문서 뒷부분에 나오는 '기본 모드에서 SharePoint 모드로 마이그레이션' 섹션을 참조하세요.  
+-   **업그레이드:** 현재 설치된 서버 및 인스턴스의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 요소를 업그레이드합니다. 이를 일반적으로 "현재 위치" 업그레이드라고 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서버의 한 모드에서 다른 모드로의 전체 업그레이드는 지원되지 않습니다. 예를 들어 기본 모드 보고서 서버를 SharePoint 모드 보고서 서버로 업그레이드할 수 없습니다. 보고서 항목을 한 모드에서 다른 모드로 마이그레이션할 수 있습니다. 자세한 내용은 이 문서 뒷부분에 나오는 '기본 모드에서 SharePoint 모드로 마이그레이션' 섹션을 참조하세요.  
   
--   **마이그레이션**: 새 SharePoint 환경을 설치 및 구성하고, 보고서 항목 및 리소스를 새 환경에 복사하고, 기존 콘텐츠를 사용하도록 새 환경을 구성합니다. 낮은 수준 형식의 마이그레이션은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터베이스, 구성 파일 및 SharePoint 콘텐츠 데이터베이스(SharePoint 모드를 사용하는 경우)를 복사하는 것입니다.  
+-   **마이그레이션**: 새 SharePoint 환경을 설치 및 구성하고 보고서 항목 및 리소스를 새 환경에 복사하고 기존 내용을 사용하도록 새 환경을 구성합니다. 낮은 수준 형식의 마이그레이션은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터베이스, 구성 파일 및 SharePoint 콘텐츠 데이터베이스(SharePoint 모드를 사용하는 경우)를 복사하는 것입니다.  
     
 > **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드
 
@@ -83,7 +83,7 @@ ms.locfileid: "68264987"
   
 -   IIS의 기존 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 가상 디렉터리에 대한 모든 사용자 지정을 백업합니다.  
   
--   잘못된 SSL 인증서를 제거합니다.  여기에는 만료된 인증서 및 Reporting Services를 업그레이드하기 전에 업그레이드하지 않을 인증서가 포함됩니다.  잘못된 인증서가 있으면 업그레이드가 실패하고 Reporting Services 로그 파일에 **Microsoft.ReportingServices.WmiProvider.Exception: 웹 사이트에 SSL(Secure Sockets Layer) 인증서가 구성되어 있지 않습니다.** 라는 오류 메시지가 기록됩니다.  
+-   잘못된 SSL 인증서를 제거합니다.  여기에는 만료된 인증서 및 Reporting Services를 업그레이드하기 전에 업그레이드하지 않을 인증서가 포함됩니다.  잘못된 인증서가 있으면 업그레이드가 실패하고 Reporting Services 로그 파일에 다음과 같은 오류 메시지가 기록됩니다. **Microsoft.ReportingServices.WmiProvider.WMIProviderException: 웹 사이트에 SSL(Secure Sockets Layer) 인증서가 구성되어 있지 않습니다.** .  
   
  프로덕션 환경을 업그레이드하기 전에 프로덕션 환경과 동일하게 구성된 사전 프로덕션 환경에서 항상 테스트 업그레이드를 실행하십시오.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "68264987"
   
   
 ##  <a name="bkmk_native_scenarios"></a> 기본 모드 업그레이드 및 마이그레이션 시나리오  
- **업그레이드:** 기본 모드의 현재 위치 업그레이드 프로세스는 이 항목의 앞부분에 나와 있는 지원되는 각 버전에 사용되는 프로세스와 동일합니다. SQL Server 설치 마법사 또는 명령줄 설치를 실행합니다. 설치하면 보고서 서버 데이터베이스가 새 보고서 서버 데이터베이스 스키마로 자동 업그레이드됩니다. 자세한 내용은 이 항목의 [현재 위치 업그레이드](#bkmk_inplace_upgrade) 섹션을 참조하세요.  
+ **업그레이드:** 기본 모드의 내부 업그레이드는 이 항목의 앞부분에 나와 있는 지원되는 각 버전에 사용되는 프로세스와 동일합니다. SQL Server 설치 마법사 또는 명령줄 설치를 실행합니다. 설치하면 보고서 서버 데이터베이스가 새 보고서 서버 데이터베이스 스키마로 자동 업그레이드됩니다. 자세한 내용은 이 항목의 [현재 위치 업그레이드](#bkmk_inplace_upgrade) 섹션을 참조하세요.  
   
  업그레이드할 기존 보고서 서버 인스턴스를 선택하면 업그레이드 프로세스가 시작됩니다.  
   
@@ -162,30 +162,30 @@ ms.locfileid: "68264987"
 > [!IMPORTANT]  
 >  다음 시나리오 중 일부의 경우 업그레이드해야 하는 여러 기술 때문에 SharePoint 환경의 작동 중단이 필요합니다. 작동 중단이 허용되지 않는 상황에서는 내부 업그레이드 대신 마이그레이션을 완료해야 합니다.  
   
-### <a name="includesssql14includessssql14-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 SQL Server Reporting Services  
+### <a name="sssql14-to-sql-server-reporting-services"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 SQL Server Reporting Services  
  **시작 환경:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1, SharePoint 2010 또는 SharePoint 2013.  
   
  **종료 환경:** SQL Server Reporting Services, SharePoint 2013 또는 SharePoint 2016.   
   
--   **SharePoint 2013/2016:** SharePoint 2013/2016에서 SharePoint 2013으로 현재 위치 업그레이드를 수행할 수는 없습니다. 그러나 **데이터베이스 연결 업그레이드 절차는 지원**  됩니다.
+-   **SharePoint 2013/2016:** SharePoint 2013/2016은 SharePoint 2010에서의 현재 위치 업그레이드를 지원하지 않습니다. 그러나 **데이터베이스 연결 업그레이드 절차는 지원**  됩니다.
   
      [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치가 SharePoint 2010에 통합되어 있는 경우에는 SharePoint 서버를 전체 업그레이드할 수 없습니다. 그러나 SharePoint 2010 팜에서 콘텐츠 데이터베이스 및 서비스 애플리케이션 데이터베이스를 SharePoint 2013/2016 팜으로 마이그레이션할 수 있습니다.  
   
-### <a name="includesssql11includessssql11-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 SQL Server Reporting Services  
- **시작 환경:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)], SharePoint 2010  
+### <a name="sssql11-to-sql-server-reporting-services"></a>[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 SQL Server Reporting Services  
+ **시작 환경:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)], SharePoint 2010.  
   
  **종료 환경:** SQL Server Reporting Services, SharePoint 2013 또는 SharePoint 2016.   
   
--   **SharePoint 2013/2016:** SharePoint 2013/2016에서 SharePoint 2013으로 현재 위치 업그레이드를 수행할 수는 없습니다. 그러나 **데이터베이스 연결 업그레이드 절차는 지원**  됩니다.
+-   **SharePoint 2013/2016:** SharePoint 2013/2016은 SharePoint 2010에서의 현재 위치 업그레이드를 지원하지 않습니다. 그러나 **데이터베이스 연결 업그레이드 절차는 지원**  됩니다.
   
      [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치가 SharePoint 2010에 통합되어 있는 경우에는 SharePoint 서버를 전체 업그레이드할 수 없습니다. 그러나 SharePoint 2010 팜에서 콘텐츠 데이터베이스 및 서비스 애플리케이션 데이터베이스를 SharePoint 2013/2016 팜으로 마이그레이션할 수 있습니다.  
   
-### <a name="includesskilimanjaroincludessskilimanjaro-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]에서 SQL Server Reporting Services  
- **시작 환경:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], SharePoint 2010  
+### <a name="sskilimanjaro-to-sql-server-reporting-services"></a>[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]에서 SQL Server Reporting Services  
+ **시작 환경:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], SharePoint 2010.  
   
  **종료 환경:** SQL Server Reporting Services, SharePoint 2013 또는 SharePoint 2016.  
  
--   **SharePoint 2013/2016:** SharePoint 2013/2016에서 SharePoint 2013으로 현재 위치 업그레이드를 수행할 수는 없습니다. 그러나 **데이터베이스 연결 업그레이드 절차는 지원**  됩니다.
+-   **SharePoint 2013/2016:** SharePoint 2013/2016은 SharePoint 2010에서의 현재 위치 업그레이드를 지원하지 않습니다. 그러나 **데이터베이스 연결 업그레이드 절차는 지원**  됩니다.
 
     Reporting Services를 업그레이드하기 전에 먼저 SharePoint를 마이그레이션해야 합니다.
   
@@ -206,11 +206,11 @@ ms.locfileid: "68264987"
   
  보고서 서버 설치를 다른 컴퓨터로 이동하면 보고서 서버 데이터베이스에 저장되어 있는 중요한 데이터의 보안을 강화하는 데 사용된 암호화 키를 보호하는 해시가 무효화됩니다. 데이터베이스를 사용하는 각 보고서 서버 인스턴스에는 암호화 키의 복사본이 포함되며 이 복사본은 현재 컴퓨터에서 정의될 때 서비스 계정의 ID로 암호화됩니다. 컴퓨터를 변경하는 경우 새 컴퓨터에서 동일한 계정 이름을 사용하더라도 서비스에서 더 이상 해당 키에 액세스할 수 없게 됩니다.  
   
- 새 보고서 서버 컴퓨터에서 해독 가능한 암호화를 다시 설정하려면 이전에 백업한 키를 복원해야 합니다. 보고서 서버 데이터베이스에 저장되는 전체 키 집합은 대칭 키 값과 키를 저장한 보고서 인스턴스만 사용할 수 있도록 키에 대한 액세스를 제한하는 데 사용된 서비스 ID 정보로 구성됩니다. 키를 복원하는 동안 보고서 서버는 기존 키 복사본을 새 버전으로 바꿉니다. 새 버전에는 현재 컴퓨터에서 정의된 컴퓨터 및 서비스 ID 값이 포함됩니다. 자세한 내용은 다음 항목을 참조하십시오.  
+ 새 보고서 서버 컴퓨터에서 해독 가능한 암호화를 다시 설정하려면 이전에 백업한 키를 복원해야 합니다. 보고서 서버 데이터베이스에 저장되는 전체 키 집합은 대칭 키 값과 키를 저장한 보고서 인스턴스만 사용할 수 있도록 키에 대한 액세스를 제한하는 데 사용된 서비스 ID 정보로 구성됩니다. 키를 복원하는 동안 보고서 서버는 기존 키 복사본을 새 버전으로 바꿉니다. 새 버전에는 현재 컴퓨터에서 정의된 컴퓨터 및 서비스 ID 값이 포함됩니다. 자세한 내용은 아래 항목을 참조하세요.  
   
--   SharePoint 모드: 자세한 내용은 [Reporting Services SharePoint 서비스 애플리케이션 관리](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)의 "키 관리" 섹션 참조  
+-   SharePoint 모드: 자세한 내용은 [Reporting Services SharePoint 서비스 애플리케이션 관리](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)의 "키 관리" 섹션을 참조하세요.  
   
--   기본 모드: [Reporting Services 암호화 키 백업 및 복원](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)참조  
+-   기본 모드: [Reporting Services 암호화 키 백업 및 복원](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)을 참조하세요.  
   
   
 ### <a name="fixed-database-name"></a>고정 데이터베이스 이름  

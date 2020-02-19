@@ -1,0 +1,214 @@
+### YamlMime:Landing
+title: 교육용 SQL 리소스
+summary: 자습서, 빠른 시작 및 기타 교육용 리소스를 사용하여 SQL Server 및 Azure SQL Database를 사용하는 방법을 배울 수 있습니다.
+metadata:
+  title: 교육용 SQL 리소스
+  description: SQL Server 및 Azure SQL Database를 사용하는 방법을 배울 수 있는 자습서 및 빠른 시작 모음입니다.
+  ms.prod: sql
+  ms.topic: landing-page
+  author: MashaMSFT
+  ms.author: mathoma
+  ms.date: 01/07/2020
+  ms.openlocfilehash: 6ff11b20d71d7af251c1d28d57bd86aef278c330
+  ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 01/31/2020
+  ms.locfileid: "76832214"
+landingContent:
+- title: SQL Server
+  linkLists:
+  - linkListType: learn
+    links:
+    - text: SQL Server 업그레이드
+      url: https://docs.microsoft.com/learn/modules/introduction-upgrading-sql-server/
+    - text: 쿼리 튜닝 도우미 사용
+      url: https://docs.microsoft.com/learn/modules/use-sql-server-query-tuning-assistant/
+    - text: SQL Server 워크샵
+      url: https://aka.ms/sqlworkshops
+  - linkListType: quickstart
+    links:
+    - text: Azure Data Studio를 사용하여 연결 및 쿼리
+      url: ../azure-data-studio/quickstart-sql-server.md
+    - text: SSMS를 사용하여 연결 및 쿼리
+      url: ../ssms/tutorials/connect-query-sql-server.md
+    - text: T-SQL(Transact-SQL) 작성
+      url: ../t-sql/tutorial-writing-transact-sql-statements.md
+    - text: 확장 이벤트
+      url: ../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md
+    - text: 온-프레미스로 백업 및 복원
+      url: ../relational-databases/backup-restore/quickstart-backup-restore-database.md
+    - text: Azure Blob 스토리지로 백업 및 복원
+      url: ../relational-databases/backup-restore/quickstart-backup-restore-database.md
+  - linkListType: tutorial
+    links:
+    - text: 가용성 그룹
+      url: ../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md
+    - text: 트랜잭션 복제
+      url: ../relational-databases/replication/tutorial-replicating-data-between-continuously-connected-servers.md
+    - text: 병합 복제
+      url: ../relational-databases/replication/tutorial-replicating-data-with-mobile-clients.md
+    - text: 메모리 내 테이블 만들기
+      url: ../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md
+    - text: 인증서로 저장 프로시저 서명
+      url: ../relational-databases/tutorial-signing-stored-procedures-with-a-certificate.md
+    - text: Azure Blob 스토리지 서비스
+      url: ../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md
+    - text: 데이터베이스 튜닝 관리자
+      url: ../tools/dta/tutorial-database-engine-tuning-advisor.md
+  - linkListType: architecture
+    links:
+    - text: 인덱스 아키텍처 및 디자인
+      url: ../relational-databases/sql-server-index-design-guide.md
+    - text: 페이지 및 익스텐트 아키텍처
+      url: ../relational-databases/pages-and-extents-architecture-guide.md
+    - text: 마이그레이션 후 유효성 검사 및 최적화
+      url: ../relational-databases/post-migration-validation-and-optimization-guide.md
+    - text: 쿼리 처리 아키텍처
+      url: ../relational-databases/query-processing-architecture-guide.md
+    - text: 스레드 및 작업 아키텍처
+      url: ../relational-databases/thread-and-task-architecture-guide.md
+    - text: 트랜잭션 로그 아키텍처
+      url: ../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md
+    - text: 트랜잭션 잠금 및 행 버전 관리
+      url: ../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md
+    - text: 메모리 관리 아키텍처
+      url: ../relational-databases/memory-management-architecture-guide.md
+- title: Azure VM의 SQL Server(IaaS)
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: 포털을 사용하여 VM 만들기
+      url: /azure/virtual-machines/windows/sql/quickstart-sql-vm-create-portal
+    - text: PowerShell을 사용하여 VM 만들기
+      url: /azure/virtual-machines/windows/sql/quickstart-sql-vm-create-powershell
+  - linkListType: how-to-guide
+    links:
+    - text: 리소스 공급자 등록
+      url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-register-with-resource-provider
+    - text: Az CLI를 사용하여 가용성 그룹 구성
+      url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-availability-group-cli
+    - text: 프리미엄 파일 공유를 사용하여 FCI 만들기
+      url: /azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-create-failover-cluster-premium-file-share
+    - text: 백업 및 복원용 Azure Storage 사용
+      url: /azure/virtual-machines/windows/sql/virtual-machines-windows-use-storage-sql-server-backup-restore
+- title: Azure SQL Database 단일 데이터베이스
+  linkLists:
+  - linkListType: learn
+    links:
+    - text: 데이터 스토리지 접근 방식 선택
+      url: https://docs.microsoft.com/learn/modules/choose-storage-approach-in-azure/
+    - text: SQL Database 보호
+      url: https://docs.microsoft.com/learn/modules/secure-your-azure-sql-database/
+    - text: 지리적으로 분산된 앱
+      url: https://docs.microsoft.com/learn/modules/design-a-geographically-distributed-application/
+    - text: SQL Database를 쿼리하기 위한 ASP.NET 앱
+      url: https://docs.microsoft.com/learn/modules/develop-app-that-queries-azure-sql/
+  - linkListType: quickstart
+    links:
+    - text: 포털 또는 코드를 사용하여 DB 만들기
+      url: /azure/sql-database/sql-database-single-database-get-started
+    - text: 템플릿을 사용하여 DB 만들기
+      url: /azure/sql-database/sql-database-single-database-get-started-template
+    - text: 서버 수준 IP 방화벽 규칙 구성
+      url: /azure/sql-database/sql-database-server-level-firewall-rule
+  - linkListType: tutorial
+    links:
+    - text: Azure Database Migration Service를 사용하여 마이그레이션
+      url: /azure/dms/tutorial-sql-server-to-azure-sql?toc=/azure/sql-database/toc.json
+    - text: 장애 조치(failover) 그룹에 단일 DB 추가
+      url: /azure/sql-database/sql-database-single-database-failover-group-tutorial
+    - text: 장애 조치(failover) 그룹에 탄력적 풀 추가
+      url: /azure/sql-database/sql-database-elastic-pool-failover-group-tutorial
+    - text: 활성 지역 복제 구성
+      url: /azure/sql-database/sql-database-active-geo-replication-portal
+    - text: 보안 구성
+      url: /azure/sql-database/sql-database-security-tutorial
+- title: 추가 리소스
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Microsoft Learn
+      url: /azure/sql-database/sql-database-single-database
+    - text: LinkedIn Learning
+      url: /azure/sql-database/sql-database-managed-instance
+    - text: Microsoft Virtual Academy
+      url: /azure/sql-database/sql-database-single-database
+    - text: Pluralsight
+      url: /azure/sql-database/sql-database-managed-instance
+    - text: 채널 9
+      url: /azure/sql-database/sql-database-managed-instance
+- title: SQL Server on Linux
+  linkLists:
+  - linkListType: learn
+    links:
+    - text: 소개
+      url: https://docs.microsoft.com/learn/modules/introduction-sql-server-linux/
+    - text: 배포
+      url: https://docs.microsoft.com/learn/modules/deploy-sql-server-linux/
+    - text: 자동 튜닝
+      url: https://docs.microsoft.com/learn/modules/automatically-tune-sql-server-linux/
+    - text: 컨테이너
+      url: https://docs.microsoft.com/learn/modules/run-sql-server-2017-linux-containers/
+  - linkListType: quickstart
+    links:
+    - text: Red Hat
+      url: ../linux/quickstart-install-connect-red-hat.md
+    - text: SUSE
+      url: ../linux/quickstart-install-connect-suse.md
+    - text: Ubuntu
+      url: ../linux/quickstart-install-connect-ubuntu.md
+    - text: Docker
+      url: ../linux/quickstart-install-connect-docker.md
+    - text: Azure
+      url: /azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine
+  - linkListType: tutorial
+    links:
+    - text: Windows에서 마이그레이션
+      url: ../linux/sql-server-linux-migrate-restore-database.md
+    - text: Docker로 마이그레이션
+      url: ../linux/tutorial-restore-backup-in-sql-server-container.md
+    - text: 작업 만들기
+      url: ../linux/sql-server-linux-run-sql-server-agent-job.md
+    - text: Azure Active Directory 인증 설정
+      url: ../linux/sql-server-linux-active-directory-authentication.md
+    - text: FCI 구성
+      url: ../linux/sql-server-linux-shared-disk-cluster-configure.md
+    - text: Pacemaker 클러스터 배포
+      url: ../linux/sql-server-linux-deploy-pacemaker-cluster.md
+    - text: 가용성 그룹 생성 및 구성
+      url: ../linux/sql-server-linux-create-availability-group.md
+    - text: Kubernetes에서 배포
+      url: ../linux/tutorial-sql-server-containers-kubernetes.md
+    - text: 복제 구성
+      url: ../linux/sql-server-linux-replication-tutorial-tsql.md
+- title: Azure SQL Database Managed Instance
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: 포털을 사용하여 인스턴스 만들기
+      url: /azure/sql-database/sql-database-managed-instance-get-started
+    - text: PowerShell을 사용하여 인스턴스 만들기
+      url: /azure/sql-database/scripts/sql-database-create-configure-managed-instance-powershell
+    - text: 인스턴스 풀 만들기
+      url: /azure/sql-database/sql-database-instance-pools-how-to
+    - text: 공용 엔드포인트 구성
+      url: /azure/sql-database/sql-database-managed-instance-public-endpoint-configure
+    - text: 클라이언트 VM 연결
+      url: /azure/sql-database/sql-database-managed-instance-configure-vm
+    - text: 지점 및 사이트 간 연결 구성
+      url: /azure/sql-database/sql-database-managed-instance-configure-p2s
+    - text: 데이터베이스 백업 복원
+      url: /azure/sql-database/sql-database-managed-instance-get-started-restore
+  - linkListType: tutorial
+    links:
+    - text: Azure Database Migration Service를 사용하여 마이그레이션
+      url: /azure/dms/tutorial-sql-server-to-managed-instance?toc=/azure/sql-database/toc.json
+    - text: 트랜잭션 복제 구성
+      url: /azure/sql-database/sql-database-managed-instance-configure-replication-tutorial
+    - text: 장애 조치(failover) 그룹 추가
+      url: /azure/sql-database/sql-database-managed-instance-failover-group-tutorial?tabs=azure-portal
+    - text: 온-프레미스 사용자 및 그룹 마이그레이션
+      url: /azure/sql-database/tutorial-managed-instance-azure-active-directory-migration
+    - text: 보안 구성
+      url: /azure/sql-database/sql-database-managed-instance-aad-security-tutorial

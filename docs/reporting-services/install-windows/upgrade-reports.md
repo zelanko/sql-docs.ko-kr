@@ -17,10 +17,10 @@ ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c4d5684850dff9157a56435547e48b5446dd929c
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69494548"
 ---
 # <a name="upgrade-reports-ssrs"></a>보고서 업그레이드(SSRS)
@@ -72,24 +72,24 @@ ms.locfileid: "69494548"
   
 -   주 보고서와 모든 하위 보고서를 성공적으로 업그레이드할 수 있습니다. 이러한 보고서는 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 보고서 처리기를 사용하여 처리됩니다.  
   
--   주 보고서와 모든 하위 보고서를 업그레이드할 수 없습니다. 이러한 보고서는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 처리기를 사용하여 처리되고  
+-   주 보고서와 모든 하위 보고서를 업그레이드할 수 없습니다. 이러한 보고서는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 처리기를 사용하여 처리됩니다.  
   
 -   주 보고서는 업그레이드할 수 있지만 하나 이상의 하위 보고서를 업그레이드할 수 없습니다. 주 보고서는 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 보고서 처리기를 사용하여 처리되지만 렌더링된 보고서의 경우에는 업그레이드할 수 없는 하위 보고서가 표시될 위치에 "오류: 하위 보고서를 처리할 수 없습니다"라는 메시지가 나타납니다.  
   
--   주 보고서를 업그레이드할 수 없지만 하나 이상의 하위 보고서는 업그레이드할 수 있습니다. 주 보고서는 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 보고서 처리기를 사용하여 처리되지만 렌더링된 보고서의 경우에는 하위 보고서가 나타나는 위치에 "오류: 하위 보고서를 처리할 수 없습니다"라는 메시지를 표시합니다.  
+-   주 보고서를 업그레이드할 수 없지만 하나 이상의 하위 보고서는 업그레이드할 수 있습니다. 주 보고서는 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 보고서 처리기를 사용하여 처리되지만 렌더링된 보고서의 경우에는 하위 보고서가 표시될 위치에 "오류: 하위 보고서를 처리할 수 없습니다"라는 메시지가 나타납니다.  
   
- "오류: 하위 보고서를 처리할 수 없습니다"라는 메시지가 나타나면 동일한 버전의 보고서 처리기를 사용하여 보고서를 처리할 수 있도록 주 보고서 또는 하위 보고서의 정의를 변경해야 합니다.  
+ 오류 "오류: 하위 보고서를 처리할 수 없습니다"가 나타나면 동일한 버전의 보고서 처리기를 사용하여 보고서를 처리할 수 있도록 주 보고서 또는 하위 보고서의 정의를 변경해야 합니다.  
   
  드릴스루 보고서는 독립적인 보고서로 처리되므로 이러한 제한이 없습니다.  
   
 ##  <a name="bkmk_CRIs"></a> 사용자 지정 보고서 항목이 있는 보고서 업그레이드  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서에는 타사 소프트웨어 공급업체에서 제공하고 보고서 작성 컴퓨터 및 보고서 서버의 시스템 관리자가 설치한 CRI(사용자 지정 보고서 항목)가 포함될 수 있습니다. CRI가 포함된 보고서는 다음과 같은 방법으로 업그레이드할 수 있습니다.  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서에는 타사 소프트웨어 공급업체에서 제공하고 보고서 작성 컴퓨터 및 보고서 서버의 시스템 관리자가 설치한 CRI(사용자 지정 보고서 항목)가 포함될 수 있습니다. CRI가 포함된 보고서는 다음과 같은 방법으로 업그레이드할 수 있습니다.  
   
--   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버를 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 보고서 서버로 업그레이드합니다. 보고서 서버에 게시된 보고서는 처음 사용할 때 자동으로 업그레이드됩니다.  
+-   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버를 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 보고서 서버로 업그레이드합니다. 보고서 서버에 게시된 보고서는 처음 사용할 때 자동으로 업그레이드됩니다.  
   
--   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 보고서 서버에 업로드합니다. 보고서는 처음 사용할 때 자동으로 업그레이드됩니다.  
+-   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 보고서 서버에 업로드합니다. 보고서는 처음 사용할 때 자동으로 업그레이드됩니다.  
   
--   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너에서 엽니다. 원본 보고서의 백업 복사본이 만들어집니다. 다음 두 가지 경우 중 하나가 발생합니다.  
+-   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너에서 엽니다. 원본 보고서의 백업 복사본이 만들어집니다. 다음 두 가지 경우 중 하나가 발생합니다.  
   
     1.  보고서에 있는 모든 CRI에 지원되지 않는 기능이 포함되어 있지 않습니다. CRI가 새 보고서 정의 스키마의 보고서 항목으로 변환되어 전체 보고서가 업그레이드됩니다. 이 파일을 저장하면 현재 RDL 네임스페이스에 저장됩니다.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "69494548"
  보고서 서버, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 또는 보고서의 현재 RDL 네임스페이스를 확인하는 방법은 [보고서 정의 스키마 버전 찾기&#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)를 참조하세요.  
   
 ### <a name="upgrading-reports-on-a-report-server"></a>보고서 서버에서 보고서 업그레이드  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]보고서 서버로 업그레이드된 보고서 서버에서 처음으로 실행하는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 또는 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 보고서는 보고서 서버에서 지원하는 현재 보고서 정의 네임스페이스로 자동 업그레이드됩니다. 보고서는 업그레이드 전에 보고서 서버에 있었을 수도 있고, [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 보고서 디자이너에서 보고서 서버로 게시되었거나 웹 포털을 통해 업로드되었을 수도 있습니다.  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]보고서 서버로 업그레이드된 보고서 서버에서 처음으로 실행하는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 또는 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 보고서는 보고서 서버에서 지원하는 현재 보고서 정의 네임스페이스로 자동 업그레이드됩니다. 보고서는 업그레이드 전에 보고서 서버에 있었을 수도 있고, [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 보고서 디자이너에서 보고서 서버로 게시되었거나 웹 포털을 통해 업로드되었을 수도 있습니다.  
   
  다음 표에서는 보고서 서버에서 보고서에 있는 특정 유형의 CRI에 대해 수행하는 업그레이드 동작을 보여 줍니다.  
   

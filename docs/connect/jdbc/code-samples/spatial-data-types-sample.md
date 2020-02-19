@@ -10,17 +10,17 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d2f56ed8036602357f8128b0426fbb90c0bab801
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028268"
 ---
 # <a name="spatial-data-types-sample"></a>공간 데이터 형식 샘플
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-이 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 샘플 응용 프로그램에서는 공간 데이터 형식 (Geometry 및 Geography)을 만들고 삽입 하 고 검색 하는 방법을 보여 줍니다.
+이 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 샘플 애플리케이션은 공간 데이터 형식(Geometry 및 Geography)의 생성, 삽입, 검색 방법을 보여줍니다.
   
 이 샘플의 코드 파일 이름은 SpatialDataTypes.java이며 다음과 같은 위치에 있습니다.  
 
@@ -30,18 +30,18 @@ ms.locfileid: "69028268"
 
 ## <a name="requirements"></a>요구 사항  
 
-이 샘플 애플리케이션을 실행하려면 mssql-jdbc jar 파일을 포함하도록 클래스 경로를 설정해야 합니다. 클래스 경로를 설정 하는 방법에 대 한 자세한 내용은 [JDBC 드라이버 사용](../../../connect/jdbc/using-the-jdbc-driver.md)을 참조 하세요.  
+이 샘플 애플리케이션을 실행하려면 mssql-jdbc jar 파일을 포함하도록 클래스 경로를 설정해야 합니다. 클래스 경로를 설정하는 방법에 대한 자세한 내용은 [JDBC 드라이버 사용](../../../connect/jdbc/using-the-jdbc-driver.md)을 참조하세요.  
 
 > [!NOTE]  
-> [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]는 기본 설정된 JRE(Java Runtime Environment)에 따라 사용할 수 있는 mssql-jdbc 클래스 라이브러리 파일을 제공합니다. 선택할 JAR 파일에 대한 자세한 내용은 [JDBC 드라이버 시스템 요구 사항](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)를 참조하세요.  
+> [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]는 기본 설정된 JRE(Java Runtime Environment)에 따라 사용할 수 있는 mssql-jdbc 클래스 라이브러리 파일을 제공합니다. 선택할 JAR 파일에 대한 자세한 내용은 [JDBC 드라이버 시스템 요구 사항](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)을 참조하세요.  
   
 ## <a name="example"></a>예제
 
-다음 예제에서 샘플 코드는 ' Geometry ' 및 ' Geography ' 열을 포함 하는 SpatialDataTypesTable_JDBC_Sample 라는 테이블을 만듭니다.
+다음 예제에서는 샘플 코드로 'Geometry' 및 'Geography' 열이 포함된 SpatialDataTypesTable_JDBC_Sample이라는 테이블을 만듭니다.
 
-이 샘플에서는 먼저 점을 나타내는 WKT (잘 알려진 텍스트)에서 ' Geometry ' 및 ' Geography ' 개체를 만듭니다. 매개 변수가 있는 쿼리와 함께 SQLServerPreparedStatement를 사용 하 여 각 열에 데이터를 적절 하 게 매핑합니다.
+샘플은 POINT를 나타내는 WKT(Well-Known-Text)에서 먼저 'Geometry'와 'Geography' 개체를 만듭니다. 매개 변수가 있는 쿼리로 SQLServerPreparedStatement를 사용하여 데이터를 각 열에 적절하게 매핑합니다.
 
-마지막으로이 샘플에서는 데이터를 테이블에 삽입 하 고 검색 합니다. 데이터는 WKT 형식으로 표시 됩니다.
+마지막으로 샘플은 테이블에 데이터를 삽입한 다음 검색합니다. 데이터는 WKT 형식으로 표시됩니다.
 
 ```java
 import java.sql.Connection;
@@ -95,7 +95,7 @@ public class SpatialDataTypes {
 }
 ```
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 
 [데이터 형식 작업 &#40;JDBC&#41;](../../../connect/jdbc/code-samples/working-with-data-types-jdbc.md)  
   

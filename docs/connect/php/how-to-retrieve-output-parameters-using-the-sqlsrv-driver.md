@@ -12,10 +12,10 @@ ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: db1216f513f353a6c703805c7aabe7b8dd468115
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993404"
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>방법: SQLSRV 드라이버를 사용하여 출력 매개 변수 검색
@@ -32,7 +32,7 @@ SQLSRV_SQLTYPE_VARCHAR('max') 같은 스트림 형식을 출력 매개 변수로
 다음 예제에서는 지정된 직원이 연간 누계 판매를 반환하는 저장 프로시저를 호출합니다. PHP 변수 *$lastName* 이 입력 매개 변수이고 *$salesYTD* 가 출력 매개 변수입니다.  
   
 > [!NOTE]  
-> *$salesYTD* 를 0.0으로 초기화하면 반환된 PHPTYPE을 **부동**으로 설정합니다. 데이터 형식 무결성을 보장하려면 저장 프로시저를 호출하기 전에 출력 매개 변수를 초기화하거나 원하는 PHPTYPE을 지정해야 합니다. PHPTYPE 지정에 대한 자세한 내용은 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)을 참조하세요.  
+> *$salesYTD* 를 0.0으로 초기화하면 반환된 PHPTYPE을 **부동**으로 설정합니다. 데이터 형식 무결성을 보장하려면 저장 프로시저를 호출하기 전에 출력 매개 변수를 초기화하거나 원하는 PHPTYPE을 지정해야 합니다. PHPTYPE 지정에 대한 자세한 내용은 [방법: PHP 데이터 형식 지정](../../connect/php/how-to-specify-php-data-types.md)을 참조하세요.  
   
 저장 프로시저에서 하나의 결과만 반환하기 때문에 *$salesYTD* 에는 저장 프로시저가 실행된 직후 반환되는 출력 매개 변수 값이 들어 있습니다.  
   
@@ -120,10 +120,10 @@ sqlsrv_close( $conn);
 ```  
 
 > [!NOTE]
-> 출력 매개 변수를 bigint 형식에 바인딩하는 경우 값이 [정수](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)범위를 벗어나면 해당 SQL 필드 형식을 SQLSRV_SQLTYPE_BIGINT로 지정 해야 합니다. 그렇지 않으면 "값이 범위를 벗어남" 예외가 발생할 수 있습니다.
+> 출력 매개 변수를 bigint 형식에 바인딩할 때 값이 [정수](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)의 범위를 벗어날 수 있는 경우, 해당 SQL 필드 형식을 SQLSRV_SQLTYPE_BIGINT으로 지정해야 합니다. 그렇지 않으면 "값이 범위를 벗어났습니다" 예외가 발생할 수 있습니다.
 
 ## <a name="example-2"></a>예제 2
-이 코드 샘플에서는 대량 bigint 값을 output 매개 변수로 바인딩하는 방법을 보여 줍니다.  
+이 코드 샘플에서는 큰 bigint 값을 출력 매개 변수로 바인딩하는 방법을 보여 줍니다.  
 
 ```
 <?php

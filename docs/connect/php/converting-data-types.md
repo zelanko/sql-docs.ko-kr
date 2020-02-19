@@ -11,10 +11,10 @@ ms.assetid: 508542ec-cc28-4a17-80f4-52325d6a48db
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ca79a13146df59b0c7159de112feee3ec478249d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015102"
 ---
 # <a name="converting-data-types"></a>데이터 형식 변환
@@ -24,17 +24,17 @@ ms.locfileid: "68015102"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |---------|---------------|  
 |[기본 SQL Server 데이터 형식](../../connect/php/default-sql-server-data-types.md)|데이터를 서버에 보낼 때 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 대한 정보를 제공합니다.|  
 |[기본 PHP 데이터 형식](../../connect/php/default-php-data-types.md)|서버에서 데이터를 검색할 때 기본 PHP 데이터 형식에 대한 정보를 제공합니다.|  
 |[방법: SQL Server 데이터 형식 지정](../../connect/php/how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md)|데이터를 서버에 보낼 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지정하는 방법을 보여 줍니다.|  
 |[방법: PHP 데이터 형식 지정](../../connect/php/how-to-specify-php-data-types.md)|서버에서 데이터를 검색할 때 PHP 데이터 형식을 지정하는 방법을 보여 줍니다.|  
 |[방법: 기본 제공 UTF-8 지원을 사용하여 UTF-8 데이터 보내기 및 검색](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)|UTF-8 데이터에 대한 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 기본 제공 지원을 사용하는 방법을 보여 줍니다.<br /><br />UTF-8 문자 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 1.1에 추가되었습니다.|  
-|[방법: Linux 및 macOS에서 ASCII 데이터 전송 및 검색](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)|Linux 또는 macos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]에서 ASCII 데이터에 대 한 지원을 사용 하는 방법을 보여 줍니다.<br /><br />Windows 이외의 환경에서 ASCII 문자에 대 한 지원이의 버전 5.2 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]에 추가 되었습니다.|
+|[방법: Linux 및 macOS에서 ASCII 데이터 전송 및 검색](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)|Linux 또는 macOS에서 ASCII 데이터에 대한 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 지원을 사용하는 방법을 보여줍니다.<br /><br />Windows가 아닌 다른 OS 환경의 ASCII 문자에 대한 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 5.2에 추가되었습니다.|
   
 ## <a name="see-also"></a>참고 항목  
-[Microsoft Drivers for PHP for SQL Server 프로그래밍 가이드](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 프로그래밍 가이드 | Microsoft Docs](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)
 
