@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: a5194f251b7ea47e0d9485446b8957e96037ded0
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68714967"
 ---
 # <a name="create-a-login-for-sqlrusergroup"></a>SQLRUserGroup에 대한 로그인 만들기
@@ -33,15 +33,15 @@ ms.locfileid: "68714967"
 
 2. **로그인 - 새로 만들기** 대화 상자에서 **검색**을 선택합니다. (상자에 아직 아무 것도 입력하지 마세요.)
     
-     ![검색을 클릭하여 기계 학습을 위한 새 로그인 추가](media/implied-auth-login1.png "검색을 클릭하여 기계 학습을 위한 새 로그인 추가")
+     ![검색을 클릭하여 새로운 기계 학습 로그인 추가](media/implied-auth-login1.png "검색을 클릭하여 새로운 기계 학습 로그인 추가")
 
 3. **사용자 또는 그룹 선택** 상자에서 **개체 유형** 단추를 클릭합니다.
 
-     ![개체 유형을 검색하여 기계 학습을 위한 새 로그인 추가](media/implied-auth-login2.png "개체 유형을 검색하여 기계 학습을 위한 새 로그인 추가")
+     ![개체 형식을 검색하여 새로운 기계 학습 로그인 추가](media/implied-auth-login2.png "개체 형식을 검색하여 새로운 기계 학습 로그인 추가")
 
 4. **개체 유형** 대화 상자에서 **그룹**을 선택합니다. 다른 모든 확인란의 선택을 취소합니다.
 
-     ![개체 유형 대화 상자에서 그룹 선택](media/implied-auth-login3.png "개체 유형 대화 상자에서 그룹 선택")
+     ![개체 형식 대화 상자에서 그룹 선택](media/implied-auth-login3.png "개체 형식 대화 상자에서 그룹 선택")
 
 4. **고급**을 클릭하고 검색할 위치가 현재 컴퓨터인지 확인한 다음, **지금 찾기**를 클릭합니다.
 
@@ -52,7 +52,7 @@ ms.locfileid: "68714967"
     + _기본 인스턴스_에 대한 실행 패드 서비스와 연결된 그룹의 이름은 R과 Python 중 어떤 언어를 설치했는지에 관계없이 항상 **SQLRUserGroup**입니다. 기본 인스턴스의 경우에만 이 계정을 선택합니다.
     + _명명된 인스턴스_를 사용하는 경우 기본 작업자 그룹 이름 `SQLRUserGroup`에 인스턴스 이름이 추가됩니다. 예를 들어, 인스턴스의 이름이 "MLTEST"인 경우 이 인스턴스의 기본 사용자 그룹 이름은 **SQLRUserGroupMLTest**가 됩니다.
  
-    ![서버 그룹 예제](media/implied-auth-login5.png "서버 그룹 예제")
+    ![서버에 있는 그룹의 예](media/implied-auth-login5.png "서버에 있는 그룹의 예")
    
 5. **확인**을 클릭하여 고급 검색 대화 상자를 닫습니다.
 

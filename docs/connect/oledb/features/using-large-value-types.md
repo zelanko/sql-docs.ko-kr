@@ -1,6 +1,6 @@
 ---
-title: 대량 값 형식 사용 | Microsoft Docs
-description: SQL Server에 대 한 OLE DB 드라이버에서 많은 값 형식 사용
+title: 큰 값 형식 사용 | Microsoft Docs
+description: OLE DB Driver for SQL Server에서 큰 값 형식 사용
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 2847838b37a9f5c233f649b6a712d4c0b2d150f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67988861"
 ---
 # <a name="using-large-value-types"></a>큰 값 형식 사용
@@ -33,7 +33,7 @@ ms.locfileid: "67988861"
 > [!NOTE]  
 >  큰 값 데이터 형식은 1-8KB의 최대 크기를 가질 수 있거나 무제한으로 지정될 수 있습니다.  
   
- 이전에는 **text**, **ntext** 및 **image**와 같은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식만 이러한 길이에 도달할 수 있었습니다. **varchar**, **nvarchar** 및 **varbinary**에 대한 **max** 지정자로 인해 이러한 데이터 형식은 중복이 되었습니다. 그러나 긴 데이터 형식은 여전히 사용할 수 있으므로, OLE DB 데이터 액세스 구성 요소에 대한 대부분의 인터페이스는 동일하게 유지됩니다. 이전 릴리스와의 호환성을 위해 SQL Server에 대 한 OLE DB 드라이버의 DBCOLUMNFLAGS_ISLONG 플래그는 계속 사용 됩니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이상 버전 대해 작성된 공급자와 드라이버는 무제한 최대 길이로 설정된 경우 새 형식에 대해 계속 이러한 용어를 사용합니다.  
+ 이전에는 **text**, **ntext** 및 **image**와 같은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식만 이러한 길이에 도달할 수 있었습니다. **varchar**, **nvarchar** 및 **varbinary**에 대한 **max** 지정자로 인해 이러한 데이터 형식은 중복이 되었습니다. 그러나 긴 데이터 형식은 여전히 사용할 수 있으므로, OLE DB 데이터 액세스 구성 요소에 대한 대부분의 인터페이스는 동일하게 유지됩니다. 이전 릴리스와의 호환성을 위해 OLE DB Driver for SQL Server의 DBCOLUMNFLAGS_ISLONG 플래그가 계속 사용됩니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이상 버전 대해 작성된 공급자와 드라이버는 무제한 최대 길이로 설정된 경우 새 형식에 대해 계속 이러한 용어를 사용합니다.  
   
 > [!NOTE]  
 >  저장 프로시저, 함수 반환 형식 또는 [CAST 및 CONVERT](../../../t-sql/functions/cast-and-convert-transact-sql.md) 함수의 입력 및 출력 매개 변수 형식으로 **varchar(max)** , **nvarchar(max)** 및 **varbinary(max)** 데이터 형식을 지정할 수도 있습니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "67988861"
   
 -   DBTYPE_IUNKNOWN으로 바인딩하고 스트리밍을 사용합니다.  
   
- 열의 최대 크기를 보고할 때 SQL Server에 대 한 OLE DB 드라이버는 다음을 보고 합니다.  
+ 열의 최대 크기를 보고할 때 OLE DB Driver for SQL Server는 다음 중 하나를 보고합니다.  
   
 -   정의된 최대 크기(예를 들어 **varchar(** 2000 **)** 열의 경우 2000) 또는  
   
@@ -690,7 +690,7 @@ _ExitProcessResultSet:
 }  
 ```  
   
- SQL Server OLE DB 드라이버가 많은 값 데이터 형식을 노출 하는 방법에 대 한 자세한 내용은 [blob 및 OLE 개체](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)를 참조 하세요.  
+ OLE DB Driver for SQL Server서버가 큰 값 데이터 형식을 노출하는 방법에 관한 자세한 내용은 [BLOBs and OLE Objects](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)를 참조하세요.  
 
   
 ## <a name="see-also"></a>참고 항목  

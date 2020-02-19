@@ -1,6 +1,6 @@
 ---
 title: RevoScaleR 심층 학습 자습서
-description: 이 자습서에서는 SQL Server Machine Learning R 통합을 사용하여 RevoScaleR 함수를 호출하는 방법을 알아봅니다.
+description: 이 자습서 시리즈에서는 SQL Server Machine Learning R 통합을 사용하여 RevoScaleR 함수를 호출하는 방법을 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 853f2e33ff4f801c3668a9f79bcec247dc13963e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: fc1f427659155b5379a681787a633b6037b4bd87
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727221"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76918835"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>자습서: RevoScaleR R 함수를 SQL Server 데이터와 함께 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)은 데이터 과학 및 기계 학습 워크로드에 대한 분산 및 병렬 처리를 제공하는 Microsoft R 패키지입니다. SQL Server에서 R을 개발하는 경우에 사용되는 **RevoScaleR**은 데이터 원본 개체를 만들고, 컴퓨팅 컨텍스트를 설정하고, 패키지를 관리하고, 가져오기부터 시각화 및 분석까지 엔드투엔드 데이터 작업(가장 중요)에 필요한 함수가 포함된 핵심 기본 제공 패키지 중 하나입니다. SQL Server Machine Learning 알고리즘은 **RevoScaleR** 데이터 원본에 대한 종속성이 있습니다. **RevoScaleR**의 중요성을 고려하여 해당 함수를 호출하는 시기와 방법을 알고 있어야 합니다. 
+여러 부분으로 이루어진 이 자습서 시리즈에서는 데이터 과학과 관련된 작업에 필요한 다양한 **RevoScaleR** 함수를 소개합니다. 이 프로세스에서는 원격 컴퓨팅 컨텍스트를 만들고, 로컬 및 원격 컴퓨팅 컨텍스트 간에 데이터를 이동하고, 원격 SQL Server에서 R 코드를 실행하는 방법을 알아봅니다. 또한 로컬 및 원격 서버에서 데이터를 분석하고 그리는 방법과 모델을 만들고 배포하는 방법을 알아봅니다.
 
-여러 부분으로 이루어진 이 자습서에서는 데이터 과학과 관련된 작업에 필요한 다양한 **RevoScaleR** 함수를 소개합니다. 이 프로세스에서는 원격 컴퓨팅 컨텍스트를 만들고, 로컬 및 원격 컴퓨팅 컨텍스트 간에 데이터를 이동하고, 원격 SQL Server에서 R 코드를 실행하는 방법을 알아봅니다. 또한 로컬 및 원격 서버에서 데이터를 분석하고 그리는 방법과 모델을 만들고 배포하는 방법을 알아봅니다.
+[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)은 데이터 과학 및 기계 학습 워크로드에 대한 분산 및 병렬 처리를 제공하는 Microsoft R 패키지입니다. SQL Server에서 R을 개발하는 경우에 사용되는 **RevoScaleR**은 데이터 원본 개체를 만들고, 컴퓨팅 컨텍스트를 설정하고, 패키지를 관리하고, 가져오기부터 시각화 및 분석까지 엔드투엔드 데이터 작업(가장 중요)에 필요한 함수가 포함된 핵심 기본 제공 패키지 중 하나입니다. SQL Server Machine Learning 알고리즘은 **RevoScaleR** 데이터 원본에 대한 종속성이 있습니다. **RevoScaleR**의 중요성을 고려하여 해당 함수를 호출하는 시기와 방법을 알고 있어야 합니다. 
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -49,7 +49,7 @@ ms.locfileid: "73727221"
 
 R 개발자는 일반적으로 R 코드를 작성하고 디버깅하는 데 IDE를 사용합니다. 다음은 몇 가지 제안 사항입니다.
 
-- **Visual Studio용 R 도구**(RTVS)는 Intellisense, 디버깅, Microsoft R 지원을 제공하는 무료 플러그 인입니다. R Server 및 SQL Server Machine Learning Services 모두에서 사용할 수 있습니다. 다운로드하려면 [R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/)를 참조하세요.
+- **Visual Studio용 R 도구**(RTVS)는 Intellisense, 디버깅, Microsoft R 지원을 제공하는 무료 플러그 인입니다. R Server 및 SQL Server Machine Learning Services 모두에서 사용할 수 있습니다. 다운로드하려면 [R Tools for Visual Studio](https://marketplace.visualstudio.com/items?itemName=MikhailArkhipov007.RTVS2019)를 참조하세요.
 
 - **RStudio** 는 R 개발에 많이 사용되는 환경 중 하나입니다. 자세한 내용은 [https://www.rstudio.com/products/RStudio/](https://www.rstudio.com/products/RStudio/)를 참조하세요.
 
@@ -71,4 +71,4 @@ R 개발자는 일반적으로 R 코드를 작성하고 디버깅하는 데 IDE�
 ## <a name="next-steps"></a>다음 단계
 
 > [!div class="nextstepaction"]
-> [1단원: 데이터베이스 및 사용 권한 만들기](deepdive-work-with-sql-server-data-using-r.md)
+> [자습서 1: 데이터베이스 및 사용 권한 만들기](deepdive-work-with-sql-server-data-using-r.md)

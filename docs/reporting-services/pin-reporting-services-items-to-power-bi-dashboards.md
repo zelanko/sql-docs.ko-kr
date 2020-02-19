@@ -1,6 +1,6 @@
 ---
 title: Power BI 대시보드에 페이지를 매긴 보고서 항목 고정 - Reporting Services | Microsoft Docs
-ms.date: 12/05/2018
+ms.date: 01/14/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8e91341c5c1d6b4f9ddd521a4735f22f63907784
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.openlocfilehash: da984efa4e0b4d964cf947929094ee7b392063f2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68891998"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75952475"
 ---
 # <a name="pin-reporting-services-paginated-report-items-to-dashboards-in-power-bi"></a>Power BI의 대시보드에 Reporting Services 페이지를 매긴 보고서 항목 고정
 
@@ -40,7 +40,7 @@ ms.locfileid: "68891998"
   
 -   고정된 항목을 새로 고치려면 저장된 자격 증명에 대한 보고서를 구성해야 합니다.  항목을 고정하면 대시보드에 대한 항목의 데이터 새로 고침을 관리하기 위해 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구독이 자동으로 생성됩니다.  보고서에 저장된 자격 증명을 사용하지 않는 경우 구독이 실행될 때 **내 구독** 페이지에 다음과 유사한 오류 메시지가 표시됩니다.  
   
-    "PowerBI 전송 오류: 대시보드: IT 지출 분석 샘플, visual: Chart2, 오류: 현재 작업을 완료할 수 없습니다. 사용자 데이터 원본 자격 증명이 요구 사항을 준수하지 않아 이 보고서 또는 공유 데이터 세트를 실행할 수 없습니다. 사용자 데이터 원본 자격 증명."
+    "Power BI 배달 오류: 대시보드: IT 지출 분석 샘플, 시각적 개체: Chart2, 오류: 현재 작업을 완료할 수 없습니다. 사용자 데이터 원본 자격 증명이 요구 사항을 준수하지 않아 이 보고서 또는 공유 데이터 세트를 실행할 수 없습니다. 사용자 데이터 원본 자격 증명."
  
     [Reporting Services 데이터 원본에 자격 증명 저장](../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)에서 "보고서별 데이터 원본에 대한 저장된 자격 증명 구성(기본 모드)" 섹션을 참조하세요.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68891998"
   
 -   차트  
 -   계기 패널(gauge panel)  
--   맵  
+-   지도  
 -   이미지  
 -   항목이 보고서 본문에 있어야 합니다.  페이지 머리글 또는 페이지 바닥글에 있는 항목을 고정할 수 없습니다.  
 -   최상위 수준 사각형 내에 있는 개별 항목을 고정할 수 있지만 해당 항목을 모두 단일 그룹으로 고정할 수 없습니다.  
@@ -96,38 +96,40 @@ ms.locfileid: "68891998"
   
 ##  <a name="bkmk-troubleshoot"></a> 문제 해결  
   
--   보고서 뷰어 도구 모음에 단추 **없음[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]:** 이 메시지는 보고서 서버가 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]에 통합되지 않았음을 나타냅니다. 자세한 내용은 [Power BI 보고서 서버 통합&#40;구성 관리자&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)과 통합해야 합니다.  
+-   **보고서 뷰어 도구 모음의 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 단추 없음:**  이 메시지는 보고서 서버가 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]와 통합되지 않았음을 나타냅니다. 자세한 내용은 [Power BI 보고서 서버 통합&#40;구성 관리자&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)과 통합해야 합니다.  
   
-- **고정할 수 없음**: 항목의 고정을 시도할 때 다음과 같은 오류 메시지가 표시됩니다. [고정할 수 있는 항목](#bkmk_supported_items)섹션을 참조하세요.  
+- **고정할 수 없음**: 항목의 고정을 시도할 때 다음과 같은 오류 메시지가 표시됩니다. [고정할 수 있는 항목](#bkmk_supported_items) 섹션을 참조하세요.  
   
-      Cannot Pin: There are no report items on this page that you can pin to [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
+    "고정할 수 없음: 이 페이지에는 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]에 고정할 수 있는 보고서 항목이 없습니다."  
   
 -   **고정된 항목이 부실 데이터** 를 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 대시보드에 표시하며 일정 기간 동안 업데이트되었습니다.  사용자 자격 증명 토큰이 만료되었으며 다시 로그인해야 합니다.  Azure 및 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 에 대한 사용자 자격 증명 등록은 90일 동안 유효합니다. [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]에서 **내 설정**을 클릭합니다. 자세한 내용은 [Power BI 통합을 위한 내 설정&#40;웹 포털&#41;](my-settings-for-power-bi-integration-web-portal.md)과 통합해야 합니다.  
   
 -   **고정된 항목이 부실 데이터** 를 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 대시보드에 표시하며 한 번도 새로 고쳐지지 않았습니다.  문제는 보고서가 저장된 자격 증명을 사용하도록 구성되지 않은 것입니다. 보고서 항목 고정 작업은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구독을 만들어 타일의 새로 고침 일정을 관리하므로 보고서는 저장된 자격 증명을 사용해야 합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구독에는 저장된 자격 증명이 필요합니다. **내 구독** 페이지를 검토하면 다음과 유사한 오류 메시지가 표시됩니다.  
   
-        PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The current action can't be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified. (rsInvalidDataSourceCredentialSetting)
+    "Power BI 배달 오류: 대시보드: SSRS 항목, 시각적 개체: Image3, 오류: 현재 작업을 완료할 수 없습니다. 사용자 데이터 원본 자격 증명이 요구 사항을 준수하지 않아 이 보고서 또는 공유 데이터 세트를 실행할 수 없습니다. 사용자 데이터 원본 자격 증명이 보고서 서버 데이터베이스에 저장되어 있지 않거나, 사용자 데이터 원본이 자격 증명을 요구하지 않도록 구성되어 있지만 무인 실행 계정이 지정되어 있지 않습니다. (rsInvalidDataSourceCredentialSetting)"
   
--   **만료된 Power BI 자격 증명:**  항목의 고정을 시도하는데 다음과 같은 오류 메시지가 표시됩니다. [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]에서 **내 설정** 을 클릭하고 내 설정 페이지에서 **로그인**을 클릭합니다. 자세한 내용은 [My Settings for Power BI Integration &#40;web portal&#41;](my-settings-for-power-bi-integration-web-portal.md)(Power BI 통합을 위한 내 설정&#40;웹 포털&#41;)을 참조하세요.  
+-   **만료된 Power BI 자격 증명:**  항목을 고정하려고 하면 다음과 같은 오류 메시지가 표시됩니다. [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]에서 **내 설정** 을 클릭하고 내 설정 페이지에서 **로그인**을 클릭합니다. 자세한 내용은 [My Settings for Power BI Integration &#40;web portal&#41;](my-settings-for-power-bi-integration-web-portal.md)(Power BI 통합을 위한 내 설정&#40;웹 포털&#41;)을 참조하세요.  
   
-        Cannot Pin: Unexpected Server Error: Missing, invalid or expired Power BI credentials.  
+    "고정할 수 없음: 예기치 않은 서버 오류: 누락되고, 유효하지 않거나 만료된 Power BI 자격 증명입니다."  
   
 -   **고정할 수 없음**: 읽기 전용 상태에 있는 대시보드에 항목의 고정을 시도하면 다음과 유사한 오류 메시지가 표시됩니다.  
   
-        Server Error: The item 'Dashboard deleted 015cf022-8e2f-462e-88e5-75ab0a04c4d0' can't be found. (rsItemNotFound)  
-  
+    "서버 오류: 항목 '대시보드 삭제됨 015cf022-8e2f-462e-88e5-75ab0a04c4d0'을 찾을 수 없습니다. (rsItemNotFound)"  
+
+-   **Power BI 앱의 타일에 부실 데이터 표시:** 대시보드에 Reporting Services 보고서 항목을 고정한 다음 앱에서 해당 대시보드를 배포한 경우 해당 대시보드에 고정된 보고서는 업데이트되지 않습니다. 
+
 ##  <a name="bkmk_subscription_management"></a> 구독 관리  
  문제 해결 섹션에서 설명한 구독 관련 문제 외에도 다음 정보는 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 관련 구독을 유지 관리하는 데 도움이 됩니다.
   
 -   **항목 이름이 변경됨:** 고정된 보고서 항목이 이름 변경되거나 삭제된 경우 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 타일이 더 이상 업데이트되지 않으며 다음과 유사한 오류 메시지가 표시됩니다.  항목 이름을 원래 이름으로 다시 바꾸면 구독이 다시 작동하기 시작하며 구독 일정에서 타일이 새로 고쳐집니다.  
   
-        PowerBI Delivery error: dashboard: SSRS items, visual: Image1, error: Error: Report item 'Image1' cannot be found.  
+    "Power BI 배달 오류: 대시보드: SSRS 항목, 시각적 개체: Image1, 오류: 오류: 보고서 항목 'Image1'을 찾을 수 없습니다."  
   
-     또한 구독 속성을 편집하고 **보고서 시각적 이름** 을 적절한 보고서 항목 이름으로 변경할 수 있습니다. ![power bi 새로 고침에 사용되는 시각적 개체 변경](../reporting-services/media/ssrs-powerbi-subscription-visual.png "power bi 새로 고침에 사용되는 시각적 개체 변경")  
+    또한 구독 속성을 편집하고 **보고서 시각적 이름** 을 적절한 보고서 항목 이름으로 변경할 수 있습니다. ![Power BI 새로 고침에 사용되는 시각적 개체 변경](../reporting-services/media/ssrs-powerbi-subscription-visual.png "Power BI 새로 고침에 사용되는 시각적 개체 변경")  
   
 -   **타일을 삭제**합니다. [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]에서 타일을 삭제했는데 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 및 **내 구독**페이지에서 연결된 구독이 삭제되지 않은 경우 다음과 유사한 오류가 표시됩니다. 구독만 삭제할 수 있습니다.  
   
-        PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The item 'Tile deleted af7131d9-5eaf-480f-ba45-943a07d19c9f' cannot be found.  
+    "Power BI 배달 오류: 대시보드: SSRS 항목, 시각적 개체: Image3, 오류: '삭제된 타일 af7131d9-5eaf-480f-ba45-943a07d19c9f' 항목을 찾을 수 없습니다."  
 
 ## <a name="video"></a>비디오
 

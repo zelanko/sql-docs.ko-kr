@@ -12,10 +12,10 @@ ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6b2be1e020354f47aa21dc83f17ff6169bcf2d72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66174998"
 ---
 # <a name="preload-the-cache"></a>캐시 미리 로드  
@@ -23,7 +23,7 @@ ms.locfileid: "66174998"
   
  다음과 같은 두 가지 방법으로 보고서에 대한 캐시를 미리 로드할 수 있습니다.  
   
-1.  보고서에 대한 캐시 새로 고침 계획을 만듭니다. 이것은 기본적으로 사용되는 방법입니다.  
+1.  보고서에 대한 캐시 새로 고침 계획을 만듭니다. 이는 선호되는 방법입니다.  
   
 2.  데이터 기반 구독을 사용하여 매개 변수가 있는 보고서 인스턴스와 함께 캐시를 미리 로드할 수 있습니다. 이것이 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 이전의 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]버전에서 캐시를 미리 로드할 수 있는 유일한 방법이었습니다. 자세한 내용은 [보고서 캐시&#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)버전에서 캐시를 미리 로드할 수 있는 유일한 방법이었습니다.  
   
@@ -48,8 +48,8 @@ ms.locfileid: "66174998"
 5. 데이터 세트의 캐싱을 활성화하려면 **이 데이터 세트의 복사본을 캐시하고 사용 가능할 때 사용** 라디오 단추를 선택합니다. 아래쪽에 **캐시 만료** 섹션이 나타납니다. 다음 라디오 단추 중 하나를 선택합니다.
 
     - **다음 시간 이후 캐시 만료(분)** (원하는 분 수(x) 입력)
-    - **일정에 따라 캐시 만료**.  Reporting Services는 처리, 일관된 콘텐츠 및 보고서 배포의 성능을 제어할 수 있는 공유 일정 및 보고서별 일정을 제공합니다. 자세한 내용은 [일정 만들기, 수정 및 삭제](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md "일정 만들기, 수정 및 삭제")를 참조하세요. 일정을 만드는 몇 가지 방법 옵션이 제공됩니다. 이 경우에는 캐시 만료에 대해 아래의 두 가지 일정 옵션 중 하나를 선택합니다.  
-      - **공유 일정** 라디오 단추를 선택한 다음, 드롭다운 텍스트 상자의 **공유 일정 선택**에서 일정을 선택합니다. 자세한 내용은 [일정](../../reporting-services/subscriptions/schedules.md "일정")을 참조하세요.  
+    - **일정에 따라 캐시 만료**.  Reporting Services는 처리, 일관된 콘텐츠 및 보고서 배포의 성능을 제어할 수 있는 공유 일정 및 보고서별 일정을 제공합니다. 자세한 내용은 [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md "일정 만들기, 수정 및 삭제")을 참조하세요. 일정을 만드는 방법에 대한 몇 가지 옵션이 제공됩니다. 이 경우에는 캐시 만료에 대해 아래의 두 가지 일정 옵션 중 하나를 선택합니다.  
+      - **공유 일정** 라디오 단추를 선택한 다음, 드롭다운 텍스트 상자의 **공유 일정 선택**에서 일정을 선택합니다. 자세한 내용은 [Schedules](../../reporting-services/subscriptions/schedules.md "일정")을(를) 참조하세요.  
       - **보고서별 일정** 라디오 단추를 선택하고 필요한 경우 **일정 편집** 링크를 선택하여 *일정 정보* 페이지를 표시합니다.  
 
          ![데이터 세트에 대한 웹 포털 캐시 만료 일정 세부 정보 페이지](../../reporting-services/report-server/media/preload-the-cache/web-portal-dataset-cache-schedule-details.png "데이터 세트 캐시 일정 세부 정보 페이지")
@@ -58,7 +58,7 @@ ms.locfileid: "66174998"
          - 일정 유형:
            - **시간** - 다음 시간마다 일정을 실행합니다. 시간 및 분과 시작 시간을 지정합니다.
            - **요일** - 아래 세 가지 선택 옵션 중 하나를 선택합니다.  
-              - **다음 요일에** - (일, 월, 화, 수, 목, 금, 토)
+              - **다음 요일에**: (일요일, 월요일, 화요일, 수요일, 목요일, 금요일, 토요일)
               - **주중 매일**
               - **다음 일마다 반복** - 숫자를 지정합니다.  
            - **주** - 다음 두 항목을 모두 지정합니다.
@@ -118,7 +118,7 @@ ms.locfileid: "66174998"
    data source=<servername>;initial catalog=Subscribers  
    ```
   
-10. **쿼리** 섹션 - 원하는 구독자 데이터를 검색하는 쿼리를 지정합니다.  예를 들어  
+10. **쿼리** 섹션 - 원하는 구독자 데이터를 검색하는 쿼리를 지정합니다.  다음은 그 예입니다.  
   
     ```T-SQL  
     Select * from RptSubscribers  
@@ -132,14 +132,14 @@ ms.locfileid: "66174998"
 
 13. **구독 만들기**를 선택합니다.  
   
-14. 새 데이터 기반 구독을 나타내는 **구독** 페이지가 표시됩니다. 준비가 완료되면 이 페이지에서 왼쪽에 있는 확인란을 선택하고 **사용** 단추를 선택하여 구독을 사용하도록 설정할 수 있습니다. ![구독 페이지 사용 단추](../../reporting-services/report-server/media/preload-the-cache/subscriptions-page-enable-button.png "구독 페이지의 사용 단추")
+14. 새 데이터 기반 구독을 나타내는 **구독** 페이지가 표시됩니다. 준비가 완료되면 이 페이지에서 왼쪽에 있는 확인란을 선택하고 **사용** 단추를 선택하여 구독을 사용하도록 설정할 수 있습니다. ![구독 페이지 사용 단추](../../reporting-services/report-server/media/preload-the-cache/subscriptions-page-enable-button.png "구독 페이지 사용 단추")
 
 15. 구독 처리 시기를 지정합니다. **보고서 서버에서 보고서 데이터가 업데이트될 때**는 선택하지 마세요. 이 설정은 스냅샷에만 사용할 수 있습니다. 기존 일정을 사용하려면 **공유 일정**을 선택합니다.  
   
      그렇지 않고 사용자 지정 일정을 만들려면 **이 구독에 대해 생성된 일정**을 선택한 후 **다음**을 선택합니다. 일정을 구성하고 **마침**을 선택합니다.  
   
     > [!NOTE]  
-    > 구독자가 최신 보고서를 받도록 하려면 구성하는 일정이 구독자에 대해 정의한 보고서 배달 일정과 일치해야 합니다. 자세한 내용은 [보고서 서버의 웹 포털](../../reporting-services/web-portal-ssrs-native-mode.md  "보고서 서버의 웹 포털")을 참조하세요.  
+    > 구독자가 최신 보고서를 받도록 하려면 구성하는 일정이 구독자에 대해 정의한 보고서 배달 일정과 일치해야 합니다. 자세한 정보는 [보고서 서버의 웹 포털](../../reporting-services/web-portal-ssrs-native-mode.md  "보고서 서버의 웹 포털")을 참조하세요.  
   
 16. 다음과 같이 보고서에 대한 실행 옵션을 구성합니다. 보고서 페이지에서 **속성** 탭을 선택합니다.  
   
@@ -155,11 +155,11 @@ ms.locfileid: "66174998"
   
 20. **적용**을 선택합니다.
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 
  [데이터 기반 구독](../../reporting-services/subscriptions/data-driven-subscriptions.md)  
  [데이터 기반 구독 만들기&#40;SSRS 자습서&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)  
- [성능, 스냅숏, 캐싱&#40;Reporting Services&#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)  
+ [성능, 스냅샷, 캐싱&#40;Reporting Services&#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)  
  [보고서 처리 속성 설정](../../reporting-services/report-server/set-report-processing-properties.md)  
  [보고서 캐시&#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)  
  [공유 데이터 세트 작업](../../reporting-services/work-with-shared-datasets-web-portal.md)  

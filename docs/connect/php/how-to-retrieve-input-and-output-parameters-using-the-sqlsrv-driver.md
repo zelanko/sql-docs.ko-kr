@@ -12,10 +12,10 @@ ms.assetid: 9a7c5f60-67f9-4968-a3a8-c256ee481da2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 27290272b72b27d3bb051da4e7d9a8df202461c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993461"
 ---
 # <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>방법: SQLSRV 드라이버를 사용하여 입력 및 출력 매개 변수 검색
@@ -30,7 +30,7 @@ ms.locfileid: "67993461"
 다음 예제에서는 지정된 직원이 사용할 수 있는 휴가 시간에서 사용한 휴가 시간을 빼는 저장 프로시저를 호출합니다. 사용한 휴가 시간을 나타내는 변수 *$vacationHrs*가 저장 프로시저에 입력 매개 변수로 전달됩니다. 사용할 수 있는 휴가 시간을 업데이트한 다음 저장 프로시저는 동일한 매개 변수를 사용하여 나머지 휴가 시간 수를 반환합니다.  
   
 > [!NOTE]  
-> *$vacationHrs* 를 4로 초기화하면 반환된 PHPTYPE을 정수로 설정합니다. 데이터 형식 무결성을 보장하려면 저장 프로시저를 호출하기 전에 입출력 매개 변수를 초기화하거나 원하는 PHPTYPE을 지정해야 합니다. PHPTYPE 지정에 대한 자세한 내용은 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)을 참조하세요.  
+> *$vacationHrs* 를 4로 초기화하면 반환된 PHPTYPE을 정수로 설정합니다. 데이터 형식 무결성을 보장하려면 저장 프로시저를 호출하기 전에 입출력 매개 변수를 초기화하거나 원하는 PHPTYPE을 지정해야 합니다. PHPTYPE 지정에 대한 자세한 내용은 [방법: PHP 데이터 형식 지정](../../connect/php/how-to-specify-php-data-types.md)을 참조하세요.  
   
 저장 프로시저가 두 결과를 반환하기 때문에 저장 프로시저가 출력 매개 변수 값을 사용할 수 있도록 실행된 후 [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md)가 호출되어야 합니다. **sqlsrv_next_result**를 호출한 후 *$vacationHrs*에는 저장 프로시저에서 반환된 출력 매개 변수의 값이 들어 있습니다.  
   
@@ -122,10 +122,10 @@ sqlsrv_close( $conn);
 ```  
 
 > [!NOTE]
-> 입력/출력 매개 변수를 bigint 형식에 바인딩하는 경우 값이 [정수](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)범위를 벗어나면 해당 SQL 필드 형식을 SQLSRV_SQLTYPE_BIGINT로 지정 해야 합니다. 그렇지 않으면 "값이 범위를 벗어남" 예외가 발생할 수 있습니다.
+> 입/출력 매개 변수를 bigint 형식에 바인딩할 때 값이 [정수](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)의 범위를 벗어날 수 있는 경우, 해당 SQL 필드 형식을 SQLSRV_SQLTYPE_BIGINT으로 지정해야 합니다. 그렇지 않으면 "값이 범위를 벗어났습니다" 예외가 발생할 수 있습니다.
 
 ## <a name="example-2"></a>예제 2
-이 코드 샘플에서는 긴 bigint 값을 입력/출력 매개 변수로 바인딩하는 방법을 보여 줍니다.  
+이 코드 샘플에서는 큰 bigint 값을 입/출력 매개 변수로 바인딩하는 방법을 보여 줍니다.  
 
 ```
 <?php

@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-makouz
 ms.author: genemi
-ms.openlocfilehash: d87e39bcabeabe5c0ea5d5648456eded8ea75510
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
-ms.translationtype: MTE75
+ms.openlocfilehash: bf0961b8ef53060904ad797832e7c7467a859c2b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742795"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76911195"
 ---
 # <a name="programming-guidelines"></a>프로그래밍 지침
 
@@ -64,7 +64,7 @@ ODBC([SQL Server Native Client(ODBC)](https://go.microsoft.com/fwlink/?LinkID=13
     -   SQL_COPT_SS_PERF_QUERY  
     -   SQL_COPT_SS_PERF_QUERY_INTERVAL  
     -   SQL_COPT_SS_PERF_QUERY_LOG  
--   SQLBrowseConnect (버전 17.2 이전)
+-   SQLBrowseConnect(17.2 이전 버전)
 -   SQL_C_INTERVAL_YEAR_TO_MONTH와 같은 C 간격 유형([데이터 형식 식별자 및 설명자](https://msdn.microsoft.com/library/ms716351(VS.85).aspx)에 설명됨)
 -   SQLSetConnectAttr 함수의 SQL_ATTR_ODBC_CURSORS 특성에 대한 SQL_CUR_USE_ODBC 값입니다.
 
@@ -74,9 +74,14 @@ ODBC 드라이버 13 및 13.1의 경우 SQLCHAR 데이터는 UTF-8이어야 합�
 
 ODBC 드라이버 17의 경우 다음 문자 세트/인코딩 중 하나의 SQLCHAR 데이터가 지원됩니다.
 
-|속성|설명|
+> [!NOTE]  
+> `musl`과 `glibc`의 `iconv` 차이로 인해 이러한 로캘 대부분은 Alpine Linux에서 지원되지 않습니다.
+>
+> 자세한 내용은 [glibc의 기능 차이점](https://wiki.musl-libc.org/functional-differences-from-glibc.html)을 참조하세요.
+
+|속성|Description|
 |-|-|
-|UTF-8|유니코드|
+|UTF-8|Unicode|
 |CP437|MS-DOS 라틴어 미국|
 |CP850|MS-DOS 라틴어 1|
 |CP874|라틴어/태국어|
@@ -118,10 +123,13 @@ Windows와 Linux 및 macOS 기반 iconv 라이브러의 여러 버전 간에는 
 ODBC 드라이버 13 및 13.1에서 UTF-8 멀티바이트 문자 또는 UTF-16 서로게이트가 SQLPutData 버퍼로 분할되면 데이터 손상이 발생합니다. 버퍼를 부분 문자 인코딩으로 끝나지 않는 SQLPutData 스트리밍에 사용합니다. 이 제한 사항은 ODBC 드라이버 17에서 제거되었습니다.
 
 ## <a name="bkmk-openssl"></a>OpenSSL
-버전 17.4부터 드라이버는 OpenSSL를 동적으로 로드 하므로 별도의 드라이버 파일을 사용 하지 않고 버전 1.0 또는 1.1를 사용 하는 시스템에서 실행할 수 있습니다. 여러 버전의 OpenSSL가 있는 경우 드라이버에서 최신 버전의 로드를 시도 합니다. 드라이버는 현재 OpenSSL 1.0. x 및 1.1. x를 지원 합니다.
+드라이버는 버전 17.4부터 OpenSSL을 동적으로 로드하므로 별도의 드라이버 파일 없이 버전 1.0 또는 1.1을 사용하는 시스템에서 실행할 수 있습니다. 여러 버전의 OpenSSL가 있는 경우에는 드라이버에서 최신 버전의 로드를 시도합니다. 드라이버는 현재 OpenSSL 1.0.x 및 1.1.x를 지원합니다.
 
 > [!NOTE]  
-> 드라이버 또는 해당 구성 요소 중 하나를 사용 하는 응용 프로그램이 서로 다른 버전의 OpenSSL를 연결 하거나 동적으로 로드 하는 경우 잠재적인 충돌이 발생할 수 있습니다. 여러 버전의 OpenSSL가 시스템에 있고 응용 프로그램에서이를 사용 하는 경우, 오류가 발생 하 여 메모리를 손상 시킬 수 있으므로 응용 프로그램 및 드라이버에 의해 로드 된 버전이 일치 하지 않는지 확인 하는 것이 좋습니다. 는 명확 하거나 일관 된 방식으로 매니페스트가 아닐 수도 있습니다.
+> 드라이버나 그 구성 요소 중 하나를 사용하는 애플리케이션이 서로 다른 버전의 OpenSSL를 연결하거나 동적으로 로드하는 경우 잠재적 충돌 가능성이 있습니다. 여러 버전의 OpenSSL이 시스템에 있고 애플리케이션에서 이를 사용하는 경우, 오류로 인해 메모리가 손상되어 명확하거나 일관되게 표시되지 않을 수도 있으므로 애플리케이션과 드라이버에 의해 로드된 버전이 일치하지는 않는지 확인하는 것이 좋습니다.
+
+## <a name="bkmk-alpine"></a>Alpine Linux
+이 문서를 작성한 시점을 기준으로 MUSL의 기본 스택 크기는 128K이어서 기본 ODBC 드라이버 기능에 충분하지만 애플리케이션이 무얼 하느냐에 따라 이 한도를 쉽게 초과할 수도 있으며, 특히 여러 스레드에서 드라이버를 호출하는 경우가 여기에 해당합니다. Alpine Linux상의 ODBC 애플리케이션이 `-Wl,-z,stack-size=<VALUE IN BYTES>`로 컴파일되어 스택 크기를 늘리는 것이 좋습니다. 참고로 대다수 GLIBC 시스템의 기본 스택 크기는 2MB입니다.
 
 ## <a name="additional-notes"></a>참고 사항  
 
@@ -136,7 +144,7 @@ ODBC 드라이버 13 및 13.1에서 UTF-8 멀티바이트 문자 또는 UTF-16 �
     
 2.  UnixODBC 드라이버 관리자는 문 특성이 SQLSetConnectAttr을 통해 전달될 때 모든 문 특성에 대해 "잘못된 특성/옵션 식별자"를 반환합니다. Windows에서 SQLSetConnectAttr이 명령문 특성 값을 받을 때 드라이버가 연결 핸들의 자식인 모든 활성 명령문의 해당 값을 설정합니다.  
 
-3.  다중 스레드 응용 프로그램에서 드라이버를 사용 하는 경우 다중 스레드 처리 유효성 검사가 성능 병목 상태가 될 수 있습니다. 이러한 시나리오에서는 `--enable-fastvalidate` 옵션을 사용 하 여 다양 한 옵션을 사용 하 여 다양 한 성능을 얻을 수 있습니다. 그러나이로 인해 오류가 반환 `SQL_INVALID_HANDLE` 되는 것이 아니라 ODBC api에 잘못 된 핸들을 전달 하는 응용 프로그램이 작동 하지 않을 수 있습니다.
+3.  다중 스레드 애플리케이션에서 드라이버를 사용하는 경우 unixODBC의 처리 유효성 검사가 성능 병목 상태가 될 수 있습니다. 이러한 시나리오에서는 `--enable-fastvalidate` 옵션으로 unixODBC를 컴파일링하여 성능을 크게 향상할 수 있습니다. 다만 이로 인해 잘못된 핸들을 ODBC API로 전달하는 애플리케이션의 경우 `SQL_INVALID_HANDLE` 오류 반환이 아닌 충돌이 발생할 수 있다는 데 유의해야 합니다.
 
 ## <a name="see-also"></a>참고 항목  
 [질문과 대답](../../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)

@@ -11,10 +11,10 @@ ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6dad85f35be1d7fb26f4c9eef6241e01baadb692
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67492799"
 ---
 # <a name="create-a-linked-report"></a>링크된 보고서 만들기
@@ -28,23 +28,23 @@ ms.locfileid: "67492799"
   
 ## <a name="to-create-a-linked-report"></a>링크된 보고서를 만들려면  
   
-1. 웹 포털에서 원하는 보고서로 이동를 마우스 오른쪽 단추로 **관리** 드롭다운 메뉴에서에서.
+1. 웹 포털에서 원하는 보고서로 이동하여 마우스 오른쪽 단추로 클릭하고 드롭다운 메뉴에서 **관리**를 선택합니다.
 
-2. 에 **관리 <reportname>**  페이지에서 **링크 된 보고서 만들기**합니다.  
+2. **관리 <reportname>** 페이지에서 **링크된 보고서 만들기**를 선택합니다.  
   
-3. 새 링크된 보고서의 이름을 입력합니다. 필요에 따라 설명을 입력 합니다.  
+3. 새 링크된 보고서의 이름을 입력합니다. 선택적으로 설명을 입력합니다.  
   
-4. 보고서에 대 한 다른 폴더를 선택 하려면 오른쪽의 줄임표 단추 (...)를 선택 ***위치***합니다.  선택한 보고서에 대 한 새 폴더를 이동할 **선택**합니다. 다른 폴더를 선택 하지 않으면 현재 폴더에 링크 된 보고서 생성 됩니다.  
+4. 보고서에 다른 폴더를 선택하려면 ***위치*** 오른쪽에 있는 줄임표 단추(...)를 선택합니다.  보고서의 새 폴더로 이동한 다음 **선택**을 선택합니다. 다른 폴더를 선택하지 않으면 링크된 보고서가 현재 폴더에 만들어집니다.  
   
-5. **만들기**를 선택합니다. 링크 된 보고서가 생성 됩니다.  
+5. **만들기**를 선택합니다. 링크된 보고서가 만들어집니다.  
 
-6. 아래 **고급**, 다른 **보고서 제한 시간** 원한다 면 값 및 선택 **적용** 변경 내용을 저장 합니다.
+6. **고급**에서 원할 경우 다른 **보고서 시간 제한** 값을 선택하고 **적용**을 선택하여 변경 사항을 저장합니다.
   
      링크된 보고서의 아이콘은 보고서 서버가 관리하는 다른 항목의 아이콘과 다릅니다. 다음 아이콘은 링크된 보고서를 나타냅니다.  
   
      ![링크된 보고서 아이콘](../../reporting-services/report-server/media/hlp-16linked.gif "링크된 보고서 아이콘")  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 
  [Reporting Services 개념&#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)  
  [보고서 서버의 웹 포털(SSRS 기본 모드)](../../reporting-services/web-portal-ssrs-native-mode.md)

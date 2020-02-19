@@ -1,20 +1,21 @@
 ---
 title: Spark 작업을 사용하여 데이터 수집
-titleSuffix: SQL Server big data clusters
-description: 이 자습서에서는 Azure Data Studio에서 Spark 작업을 사용하여 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]의 데이터 풀로 데이터를 수집하는 방법을 보여 줍니다.
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: shivsood
-ms.date: 08/21/2019
+titleSuffix: SQL Server Big Data Clusters
+description: 이 자습서에서는 Azure Data Studio에서 Spark 작업을 사용하여 SQL Server 빅 데이터 클러스터의 데이터 풀로 데이터를 수집하는 방법을 보여 줍니다.
+author: rajmera3
+ms.author: raajmera
+ms.reviewer: mikeray
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c6f66b42fe280ef6612a5e9974ddcf4f1f7ccfcb
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: 1f3a8956120f16282cf0a3829f03bf5586c9d791
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119200"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75776545"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>자습서: Spark 작업을 사용하여 SQL Server 데이터 풀로 데이터 수집
 
@@ -32,7 +33,7 @@ ms.locfileid: "74119200"
 > [!TIP]
 > 원하는 경우 이 자습서의 명령을 위해 스크립트를 다운로드하여 실행할 수 있습니다. 자세한 내용은 GitHub에서 [데이터 풀 샘플](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool)을 참조하세요.
 
-## <a id="prereqs"></a> 사전 요구 사항
+## <a id="prereqs"></a> 필수 조건
 
 - [빅 데이터 도구](deploy-big-data-tools.md)
    - **kubectl**
@@ -49,6 +50,23 @@ ms.locfileid: "74119200"
 1. **서버** 창에서 연결을 두 번 클릭하여 SQL Server 마스터 인스턴스의 서버 대시보드를 표시합니다. **새 쿼리**를 선택합니다.
 
    ![SQL Server 마스터 인스턴스 쿼리](./media/tutorial-data-pool-ingest-spark/sql-server-master-instance-query.png)
+
+1. MSSQL-Spark 커넥터에 대한 사용 권한을 만듭니다.
+   ```sql
+   USE Sales
+   CREATE LOGIN sample_user  WITH PASSWORD ='password123!#' 
+   CREATE USER sample_user FROM LOGIN sample_user
+
+   -- To create external tables in data pools
+   GRANT ALTER ANY EXTERNAL DATA SOURCE TO sample_user;
+
+   -- To create external table
+   GRANT CREATE TABLE TO sample_user;
+   GRANT ALTER ANY SCHEMA TO sample_user;
+
+   ALTER ROLE [db_datareader] ADD MEMBER sample_user
+   ALTER ROLE [db_datawriter] ADD MEMBER sample_user
+   ```
 
 1. 데이터 풀에 외부 데이터 원본이 아직 없는 경우 새로 만듭니다.
 
@@ -74,8 +92,15 @@ ms.locfileid: "74119200"
          DISTRIBUTION = ROUND_ROBIN
       );
    ```
-  
-1. CTP 3.1에서는 데이터 풀을 만드는 작업이 비동기적으로 수행되지만, 이미 완료되었는지 확인할 수 있는 방법이 없습니다. 데이터 풀이 생성될 때까지 2분 정도 기다렸다가 계속 진행합니다.
+   
+1. 데이터 풀의 로그인을 만들고 사용자에게 사용 권한을 제공합니다.
+   ```sql 
+   EXECUTE( ' Use Sales; CREATE LOGIN sample_user  WITH PASSWORD = ''password123!#'' ;') AT  DATA_SOURCE SqlDataPool;
+
+   EXECUTE('Use Sales; CREATE USER sample_user; ALTER ROLE [db_datareader] ADD MEMBER sample_user;  ALTER ROLE [db_datawriter] ADD MEMBER sample_user;') AT DATA_SOURCE SqlDataPool;
+   ```
+   
+데이터 풀 외부 테이블을 만드는 작업은 차단 작업입니다. 모든 백 엔드 데이터 풀 노드에서 지정된 테이블이 만들어질 때 컨트롤이 반환됩니다. 만들기 작업 중 실패가 발생한 경우 오류 메시지가 호출자에게 반환됩니다.
 
 ## <a name="start-a-spark-streaming-job"></a>Spark 스트리밍 작업 시작
 
@@ -125,14 +150,14 @@ ms.locfileid: "74119200"
                   .option("dataPoolDataSource",datasource_name).save()
                }.start()
 
-      query.processAllAvailable()
       query.awaitTermination(40000)
+      query.stop()
       ```
 ## <a name="query-the-data"></a>데이터 쿼리
 
 다음 단계에서는 Spark 스트리밍 작업이 HDFS에서 데이터 풀로 데이터를 로드하는 방법을 보여 줍니다.
 
-1. 수집한 데이터를 쿼리하기 전에 Yarn 앱 ID, Spark UI 및 드라이버 로그를 포함하는 Spark 실행 상태를 확인합니다.
+1. 수집한 데이터를 쿼리하기 전에 Yarn 앱 ID, Spark UI 및 드라이버 로그를 포함하는 Spark 실행 상태를 확인합니다. Spark 애플리케이션을 처음 시작할 때 이 정보는 Notebook에 표시됩니다.
 
    ![Spark 실행 세부 정보](./media/tutorial-data-pool-ingest-spark/Spark-Joblog-sparkui-yarn.png)
 

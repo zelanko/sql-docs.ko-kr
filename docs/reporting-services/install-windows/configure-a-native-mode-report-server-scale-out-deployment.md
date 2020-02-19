@@ -12,10 +12,10 @@ ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9822af554536d9168c2ee3dd690c641865e66574
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593864"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>기본 모드 보고서 서버 확장 배포 구성
@@ -136,7 +136,7 @@ An error occurred within the report server database.  This may be due to a conne
 3.  확장 배포 페이지에서 배포에 조인되기를 기다리고 있는 보고서 서버 인스턴스를 선택한 다음 **서버 추가**를 선택합니다.  
   
     > [!NOTE]  
-    >  **문제:** Reporting Services 보고서 서버 인스턴스를 스케일 아웃 배포에 조인하려고 할 때 ‘액세스가 거부되었습니다’와 유사한 오류 메시지가 표시될 수 있습니다.  
+    >  **문제:** Reporting Services 보고서 서버 인스턴스를 스케일 아웃 배포에 조인하려고 할 때 ‘액세스가 거부되었습니다.’와 유사한 오류 메시지가 표시될 수 있습니다.  
     >   
     >  **해결 방법:** 첫 번째 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 암호화 키를 백업하고 이 키를 두 번째 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에 복원합니다. 그런 다음 두 번째 서버를 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 스케일 아웃 배포에 조인합니다.  
   
@@ -146,8 +146,8 @@ An error occurred within the report server database.  This may be due to a conne
 
 ## <a name="next-steps"></a>다음 단계
 
-[서비스 계정을 구성](configure-the-report-server-service-account-ssrs-configuration-manager.md) 하 여 [URL  구성](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)
-  
+[서비스 계정 구성](configure-the-report-server-service-account-ssrs-configuration-manager.md)
+[URL 구성](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
 [기본 모드 보고서 서버 데이터베이스 만들기](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
 [보고서 서버 URL 구성](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
 [보고서 서버 데이터베이스 연결 구성](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   

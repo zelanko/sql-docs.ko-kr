@@ -1,6 +1,6 @@
 ---
 title: 사용자 정의 형식 사용 | Microsoft Docs
-description: SQL Server에 대 한 OLE DB 드라이버에서 사용자 정의 형식 사용
+description: OLE DB Driver for SQL Server에서 사용자 정의 형식 사용
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -22,10 +22,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 731e00fdf4c9f073348389f537fa812e10bcbab5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67988802"
 ---
 # <a name="using-user-defined-types"></a>사용자 정의 형식 사용
@@ -44,18 +44,18 @@ ms.locfileid: "67988802"
 >  **IRowsetFind::FindNextRow** 메서드는 UDT 데이터 형식과 함께 사용할 수 없습니다. UDT가 검색 열 유형으로 사용되는 경우 DB_E_BADCOMPAREOP가 반환됩니다.  
   
 ### <a name="data-bindings-and-coercions"></a>데이터 바인딩 및 강제 변환  
- 다음 표에서는 표의 데이터 형식을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UDT와 함께 사용할 때 발생하는 바인딩 및 강제 변환에 대해 설명합니다. UDT 열은 DBTYPE_UDT의 SQL Server에 대 한 OLE DB 드라이버를 통해 노출 됩니다. 적절한 스키마의 행 집합을 통해 메타데이터를 얻을 수 있으므로 사용자 정의 형식을 개체로 관리할 수 있습니다.  
+ 다음 표에서는 표의 데이터 형식을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UDT와 함께 사용할 때 발생하는 바인딩 및 강제 변환에 대해 설명합니다. UDT 열은 OLE DB Driver for SQL Server를 통해 DBTYPE_UDT로 노출됩니다. 적절한 스키마의 행 집합을 통해 메타데이터를 얻을 수 있으므로 사용자 정의 형식을 개체로 관리할 수 있습니다.  
   
 |데이터 형식|SQL Server의<br /><br /> **UDT**|SQL Server의<br /><br /> **non-UDT**|SQL Server의<br /><br /> **UDT**|SQL Server의<br /><br /> **non-UDT**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
-|DBTYPE_UDT|지원 됨<sup>6</sup>|오류<sup>1</sup>|지원 됨<sup>6</sup>|오류<sup>5</sup>|  
-|DBTYPE_BYTES|지원 됨<sup>6</sup>|해당 없음<sup>2</sup>|지원 됨<sup>6</sup>|해당 없음<sup>2</sup>|  
-|DBTYPE_WSTR|지원 되<sup>는 3, 6</sup>|해당 없음<sup>2</sup>|지원 되<sup>는 4, 6</sup>|해당 없음<sup>2</sup>|  
-|DBTYPE_BSTR|지원 되<sup>는 3, 6</sup>|해당 없음<sup>2</sup>|지원 됨<sup>4</sup>|해당 없음<sup>2</sup>|  
-|DBTYPE_STR|지원 되<sup>는 3, 6</sup>|해당 없음<sup>2</sup>|지원 되<sup>는 4, 6</sup>|해당 없음<sup>2</sup>|  
+|DBTYPE_UDT|지원됨<sup>6</sup>|오류<sup>1</sup>|지원됨<sup>6</sup>|오류<sup>5</sup>|  
+|DBTYPE_BYTES|지원됨<sup>6</sup>|해당 없음<sup>2</sup>|지원됨<sup>6</sup>|해당 없음<sup>2</sup>|  
+|DBTYPE_WSTR|지원됨<sup>3,6</sup>|해당 없음<sup>2</sup>|지원됨<sup>4,6</sup>|해당 없음<sup>2</sup>|  
+|DBTYPE_BSTR|지원됨<sup>3,6</sup>|해당 없음<sup>2</sup>|지원됨<sup>4</sup>|해당 없음<sup>2</sup>|  
+|DBTYPE_STR|지원됨<sup>3,6</sup>|해당 없음<sup>2</sup>|지원됨<sup>4,6</sup>|해당 없음<sup>2</sup>|  
 |DBTYPE_IUNKNOWN|지원되지 않음|해당 없음<sup>2</sup>|지원되지 않음|해당 없음<sup>2</sup>|  
-|DBTYPE_VARIANT(VT_UI1 &#124; VT_ARRAY)|지원 됨<sup>6</sup>|해당 없음<sup>2</sup>|지원 됨<sup>4</sup>|해당 없음<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|지원 되<sup>는 3, 6</sup>|해당 없음<sup>2</sup>|해당 사항 없음|해당 없음<sup>2</sup>|  
+|DBTYPE_VARIANT(VT_UI1 &#124; VT_ARRAY)|지원됨<sup>6</sup>|해당 없음<sup>2</sup>|지원됨<sup>4</sup>|해당 없음<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|지원됨<sup>3,6</sup>|해당 없음<sup>2</sup>|해당 없음|해당 없음<sup>2</sup>|  
   
  <sup>1</sup>DBTYPE_UDT 이외의 서버 유형이 **ICommandWithParameters::SetParameterInfo**로 지정되고 접근자 유형이 DBTYPE_UDT인 경우 문을 실행하면 오류가 발생합니다(DB_E_ERRORSOCCURRED, 매개 변수 상태는 DBSTATUS_E_BADACCESSOR임). 그렇지 않은 경우에는 데이터가 서버로 전송되지만 UDT에서 매개 변수의 데이터 형식으로의 암시적 변환이 이루어지지 않았음을 나타내는 오류가 반환됩니다.  
   
@@ -81,12 +81,12 @@ ms.locfileid: "67988802"
  OLE DB 핵심 서비스(**IDataConvert**)에서 제공하는 데이터 변환은 DBTYPE_UDT에는 적용되지 않습니다. 다른 바인딩은 지원되지 않습니다.  
   
 ### <a name="ole-db-rowset-additions-and-changes"></a>OLE DB 행 집합의 추가 내용 및 변경 내용  
- SQL Server에 대 한 OLE DB 드라이버는 많은 핵심 OLE DB 스키마 행 집합에 새로운 값 이나 변경 내용을 추가 합니다.  
+ OLE DB Driver for SQL Server는 많은 핵심 OLE DB 스키마 행 집합에 새로운 값 또는 변경 내용을 추가합니다.  
   
 #### <a name="the-procedure_parameters-schema-rowset"></a>PROCEDURE_PARAMETERS 스키마 행 집합  
  PROCEDURE_PARAMETERS 스키마 행 집합에 다음이 추가되었습니다.  
   
-|열 이름|형식|설명|  
+|열 이름|Type|Description|  
 |-----------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|세 부분으로 구성된 이름 식별자입니다.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|세 부분으로 구성된 이름 식별자입니다.|  
@@ -96,7 +96,7 @@ ms.locfileid: "67988802"
 #### <a name="the-sql_assemblies-schema-rowset"></a>SQL_ASSEMBLIES 스키마 행 집합  
  SQL Server용 OLE DB 드라이버는 등록된 UDT를 설명하는 새 공급자별 스키마 행 집합을 노출합니다. ASSEMBLY 서버가 DBTYPE_WSTR로 지정되지만 행 집합에는 없을 수 있습니다. 이 속성이 지정되지 않은 경우 행 집합은 기본적으로 현재 서버를 사용합니다. SQL_ASSEMBLIES 스키마 행 집합은 다음 표에 정의되어 있습니다.  
   
-|열 이름|형식|설명|  
+|열 이름|Type|Description|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|형식을 포함하는 어셈블리의 카탈로그 이름입니다.|  
 |ASSEMBLY_SCHEMA|DBTYPE_WSTR|형식을 포함하는 어셈블리의 스키마 이름 또는 소유자 이름입니다. 어셈블리 범위는 스키마가 아니라 데이터베이스에 의해 결정되지만 여전히 여기에서 나타내는 소유자를 가집니다.|  
@@ -108,7 +108,7 @@ ms.locfileid: "67988802"
 #### <a name="the-sql_assemblies_-dependencies-schema-rowset"></a>SQL_ASSEMBLIES_ DEPENDENCIES 스키마 행 집합  
  SQL Server용 OLE DB 드라이버는 지정된 서버의 어셈블리 종속성을 설명하는 새 공급자별 스키마 행 집합을 노출합니다. ASSEMBLY_SERVER가 호출자에 의해 DBTYPE_WSTR로 지정되지만 행 집합에는 없을 수 있습니다. 이 속성이 지정되지 않은 경우 행 집합은 기본적으로 현재 서버를 사용합니다. SQL_ASSEMBLY_DEPENDENCIES 스키마 행 집합은 다음 표에 정의되어 있습니다.  
   
-|열 이름|형식|설명|  
+|열 이름|Type|Description|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|형식을 포함하는 어셈블리의 카탈로그 이름입니다.|  
 |ASSEMBLY_SCHEMA|DBTYPE_WSTR|형식을 포함하는 어셈블리의 스키마 이름 또는 소유자 이름입니다. 어셈블리 범위는 스키마가 아니라 데이터베이스에 의해 결정되지만 여전히 여기에서 나타내는 소유자를 가집니다.|  
@@ -118,7 +118,7 @@ ms.locfileid: "67988802"
 #### <a name="the-sql_user_types-schema-rowset"></a>SQL_USER_TYPES 스키마 행 집합  
  SQL Server용 OLE DB 드라이버는 새 스키마 행 집합인 SQL_USER_TYPES를 노출합니다. 이 행 집합은 지정된 서버의 등록된 UDT가 추가되는 시점을 설명합니다. UDT_SERVER가 호출자에 의해 DBTYPE_WSTR로 지정되어야 하지만 행 집합에는 없을 수 있습니다. SQL_USER_TYPES 스키마 행 집합은 다음 표에 정의되어 있습니다.  
   
-|열 이름|형식|설명|  
+|열 이름|Type|Description|  
 |-----------------|----------|-----------------|  
 |UDT_CATALOGNAME|DBTYPE_WSTR|UDT 열의 경우 이 속성이 UDT가 정의되어 있는 카탈로그의 이름을 지정하는 문자열입니다.|  
 |UDT_SCHEMANAME|DBTYPE_WSTR|UDT 열의 경우 이 속성이 UDT가 정의되어 있는 스키마의 이름을 지정하는 문자열입니다.|  
@@ -128,7 +128,7 @@ ms.locfileid: "67988802"
 #### <a name="the-columns-schema-rowset"></a>COLUMNS 스키마 행 집합  
  COLUMNS 스키마 행 집합에 추가된 열은 다음과 같습니다.  
   
-|열 이름|형식|설명|  
+|열 이름|Type|Description|  
 |-----------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|UDT 열의 경우 이 속성이 UDT가 정의되어 있는 카탈로그의 이름을 지정하는 문자열입니다.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|UDT 열의 경우 이 속성이 UDT가 정의되어 있는 스키마의 이름을 지정하는 문자열입니다.|  
@@ -136,12 +136,12 @@ ms.locfileid: "67988802"
 |SS_UDT_ASSEMBLY_TYPENAME|DBTYPE_WSTR|전체 형식 이름(AQN)은 적용 가능한 경우 네임스페이스에 따른 접두사가 추가된 형식 이름을 포함합니다.|  
   
 ### <a name="ole-db-property-set-additions-and-changes"></a>OLE DB 속성 집합의 추가 내용 및 변경 내용  
- SQL Server에 대 한 OLE DB 드라이버는 많은 핵심 OLE DB 속성 집합에 새 값 또는 변경 사항을 추가 합니다.  
+ OLE DB Driver for SQL Server는 여러 핵심 OLE DB 속성 집합에 새 값 또는 변경 사항을 추가합니다.  
   
 #### <a name="the-dbpropset_sqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER 속성 집합  
  OLE DB를 통해 UDT를 지원하기 위해 SQL Server용 OLE DB 드라이버는 다음 값이 포함된 새로운 DBPROPSET_SQLSERVERPARAMETER 속성 집합을 구현합니다.  
   
-|속성|형식|설명|  
+|속성|Type|Description|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_UDT_CATALOGNAME|DBTYPE_WSTR|세 부분으로 구성된 이름 식별자입니다.<br /><br /> UDT 매개 변수의 경우 이 속성이 사용자 정의 형식이 정의되어 있는 카탈로그의 이름을 지정하는 문자열입니다.|  
 |SSPROP_PARAM_UDT_SCHEMANAME|DBTYPE_WSTR|세 부분으로 구성된 이름 식별자입니다.<br /><br /> UDT 매개 변수의 경우 이 속성이 사용자 정의 형식이 정의되어 있는 스키마의 이름을 지정하는 문자열입니다.|  
@@ -152,7 +152,7 @@ ms.locfileid: "67988802"
 #### <a name="the-dbpropset_sqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN 속성 집합  
  **ITableDefinition** 인터페이스를 통한 테이블 생성을 지원하기 위해 SQL Server용 OLE DB 드라이버는 DBPROPSET_SQLSERVERCOLUMN 속성 집합에 다음과 같은 세 개의 새로운 열을 추가합니다.  
   
-|속성|설명|형식|설명|  
+|속성|Description|Type|Description|  
 |----------|-----------------|----------|-----------------|  
 |SSPROP_COL_UDT_CATALOGNAME|UDT_CATALOGNAME|VT_BSTR|DBTYPE_UDT 형식인 열의 경우 이 속성이 UDT가 정의되어 있는 카탈로그의 이름을 지정하는 문자열입니다.|  
 |SSPROP_COL_UDT_SCHEMANAME|UDT_SCHEMANAME|VT_BSTR|DBTYPE_UDT 형식인 열의 경우 이 속성이 UDT가 정의되어 있는 스키마의 이름을 지정하는 문자열입니다.|  
@@ -172,7 +172,7 @@ ms.locfileid: "67988802"
  UDT 정의가 다른 데이터베이스에 속하는 경우 SSPROP_COL_UDT_CATALOGNAME 및 SSPROP_COL_UDT_SCHEMANAME을 모두 지정해야 합니다.  
   
 ### <a name="ole-db-interface-additions-and-changes"></a>OLE DB 인터페이스의 추가 내용 및 변경 내용  
- SQL Server에 대 한 OLE DB 드라이버는 여러 핵심 OLE DB 인터페이스에 새 값 또는 변경 사항을 추가 합니다.  
+ OLE DB Driver for SQL Server는 여러 핵심 OLE DB 인터페이스에 새 값 또는 변경 사항을 추가합니다.  
   
 #### <a name="the-isscommandwithparameters-interface"></a>ISSCommandWithParameters 인터페이스  
  OLE DB를 통해 UDT를 지원하기 위해 SQL Server용 OLE DB 드라이버는 **ISSCommandWithParameters** 인터페이스의 추가를 비롯하여 많은 변경을 구현합니다. 이 새 인터페이스는 핵심 OLE DB 인터페이스인 **ICommandWithParameters**에서 상속됩니다. **ICommandWithParameters**에서 상속되는 세 개의 메서드인 **GetParameterInfo**, **MapParameterNames** 및 **SetParameterInfo** 외에도 **ISSCommandWithParameters**는 서버 데이터 형식을 처리하는 데 사용되는 **GetParameterProperties** 및 **SetParameterProperties** 메서드를 제공합니다.  
@@ -183,7 +183,7 @@ ms.locfileid: "67988802"
 #### <a name="the-icolumnsrowset-interface"></a>IColumnsRowset 인터페이스  
  **ISSCommandWithParameters** 인터페이스 이외에도 SQL Server용 OLE DB 드라이버는 **IColumnsRowset::GetColumnRowset** 메서드를 호출하여 반환되는 행 집합에 다음을 비롯한 새 값을 추가합니다.  
   
-|열 이름|형식|설명|  
+|열 이름|Type|Description|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_UDT_CATALOGNAME|DBTYPE_WSTR|UDT 카탈로그 이름 식별자입니다.|  
 |DBCOLUMN_SS_UDT_SCHEMANAME|DBTYPE_WSTR|UDT 스키마 이름 식별자입니다.|  

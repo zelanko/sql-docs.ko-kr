@@ -1,6 +1,6 @@
 ---
 title: 테이블 반환 매개 변수 형식 검색 | Microsoft Docs
-description: SQL Server에 대 한 OLE DB 드라이버를 사용 하 여 테이블 반환 매개 변수 형식 검색
+description: OLE DB Driver for SQL Server를 사용하여 테이블 반환 매개 변수 형식 검색
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 4e824e39a44985dc2f46a1a27c7b5b4e8d05a6dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015284"
 ---
 # <a name="table-valued-parameter-type-discovery"></a>테이블 반환 매개 변수 형식 검색
@@ -26,9 +26,9 @@ ms.locfileid: "68015284"
 
   소비자(SQL Server용 OLE DB 드라이버를 사용하는 클라이언트 애플리케이션)는 OLE DB 공급자에 명령 텍스트가 지정되어 있는 경우 각 명령 매개 변수의 형식을 검색할 수 있습니다. 테이블 반환 매개 변수의 형식이 확인되면 소비자가 테이블 반환 매개 변수의 개별 열에 대한 메타데이터 정보를 검색할 수 있습니다.  
   
- 프로시저 매개 변수의 형식 정보는 대부분의 매개 변수 형식에 대해 ICommandWithParameters:: GetParameterInfo에서 지원 됩니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]부터 사용자 정의 형식과 **xml** 데이터 형식이 도입되면서 GetParameterInfo 메서드는 ICommandWithParameters를 통해 사용자 정의 형식 정보(이름, 스키마 및 카탈로그)를 제공할 수 없으므로 이러한 용도에 적합하지 않게 되었습니다. 새 인터페이스인 ISSCommandWithParameters는 확장 형식 정보를 제공 하도록 정의 되었습니다.  
+ 프로시저 매개 변수의 형식 정보는 대부분의 매개 변수 형식에서 ICommandWithParameters::GetParameterInfo를 통해 지원됩니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]부터 사용자 정의 형식과 **xml** 데이터 형식이 도입되면서 GetParameterInfo 메서드는 ICommandWithParameters를 통해 사용자 정의 형식 정보(이름, 스키마 및 카탈로그)를 제공할 수 없으므로 이러한 용도에 적합하지 않게 되었습니다. 따라서 확장된 형식 정보를 제공하기 위해 새로운 인터페이스인 ISSCommandWithParameters가 정의되었습니다.  
   
- 또한 테이블 반환 매개 변수의 경우 ISSCommandWithParameters 인터페이스를 사용 하 여 자세한 정보를 검색 합니다. 클라이언트는 command 개체를 준비한 후 ISSCommandWithParameters:: GetParameterInfo를 호출 합니다. 테이블 반환 매개 변수의 경우 공급자에 의해 DBPARAMINFO 구조의 *wType* 멤버가 DBTYPE_TABLE로 설정됩니다. DBPARAMINFO 구조의 *ulParamSize* 필드 값은 ~0입니다.  
+ 테이블 반환 매개 변수의 경우 ISSCommandWithParameters 인터페이스를 사용하여 자세한 정보를 검색할 수도 있습니다. 명령 개체를 준비하고 나면 클라이언트가 ISSCommandWithParameters::GetParameterInfo를 호출합니다. 테이블 반환 매개 변수의 경우 공급자에 의해 DBPARAMINFO 구조의 *wType* 멤버가 DBTYPE_TABLE로 설정됩니다. DBPARAMINFO 구조의 *ulParamSize* 필드 값은 ~0입니다.  
   
  그런 다음, 소비자는 ISSCommandWithParameters::GetParameterProperties를 사용하여 추가 속성(테이블 반환 매개 변수 형식 카탈로그 이름, 테이블 반환 매개 변수 형식 스키마 이름, 테이블 반환 매개 변수 형식 이름, 열 순서 및 기본 열)을 요청합니다.  
   

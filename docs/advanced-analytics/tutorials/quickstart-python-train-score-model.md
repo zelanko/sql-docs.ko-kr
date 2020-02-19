@@ -1,27 +1,26 @@
 ---
 title: '빠른 시작: Python에서 모델 학습'
-titleSuffix: SQL Server Machine Learning Services
-description: Python에서 SQL Server Machine Learning Services를 사용하여 간단한 예측 모델을 만든 다음, 새 데이터를 사용하여 결과를 예측합니다.
+description: 이 빠른 시작에서는 Python을 사용하여 예측 모델을 만들고 학습합니다. SQL Server 인스턴스의 테이블에 모델을 저장한 다음 SQL Server Machine Learning Services로 새로운 데이터의 값을 예측하는 데 해당 모델을 사용합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/14/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fcf43d57488578020eed09080668156fb926d1b0
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: c8fd7d734bee00a22af02b014e950f6694b534a1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73726999"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831761"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>빠른 시작: SQL Server Machine Learning Services를 사용하여 Python에서 예측 모델 만들기 및 채점
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 빠른 시작에서는 Python을 사용하여 예측 모델을 만들어 학습시키고, 모델을 SQL Server 인스턴스의 테이블에 저장한 다음, [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md)를 사용하여 모델로 새 데이터의 값을 예측할 수 있습니다.
+이 빠른 시작에서는 Python을 사용하여 예측 모델을 만들고 학습합니다. SQL Server 인스턴스의 테이블에 모델을 저장한 다음 [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md)로 새로운 데이터의 값을 예측하는 데 해당 모델을 사용합니다.
 
 SQL에서 실행되는 두 개의 저장 프로시저를 만들고 실행합니다. 첫 번째 저장 프로시저는 클래식 아이리스 꽃 데이터 세트를 사용하여 꽃 특성을 기반으로 아이리스 종류를 예측하는 Naive Bayes 모델을 생성합니다. 두 번째 저장 프로시저는 첫 번째 프로시저에서 생성된 모델을 호출하여 새 데이터를 기반으로 예측 세트를 출력합니다. SQL 저장 프로시저에 Python 코드를 배치하면 작업이 SQL에 포함되고 다시 사용할 수 있으며, 다른 저장 프로시저와 클라이언트 애플리케이션에서 호출할 수 있습니다.
 

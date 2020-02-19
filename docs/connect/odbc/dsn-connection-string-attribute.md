@@ -6,15 +6,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-ms.reviewer: MightyPen
+ms.reviewer: v-chojas
 ms.author: v-jizho2
 author: karinazhou
-ms.openlocfilehash: c06f6e9f95af02ba6240f9f71ac6a92c25bec755
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
-ms.translationtype: MTE75
+ms.openlocfilehash: bf9b755176913ad144781c5be0ad53150aedcd1b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71712924"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76911247"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN 및 연결 문자열 키워드 및 특성
 
@@ -22,7 +22,7 @@ ms.locfileid: "71712924"
 
 ## <a name="supported-dsnconnection-string-keywords-and-connection-attributes"></a>지원되는 DSN/연결 문자열 키워드 및 연결 특성
 
-다음 표에 각 플랫폼(L: Linux, M: Mac, W: Windows)에 사용할 수 있는 키워드 및 특성을 나열합니다. 자세한 내용을 보려면 키워드 또는 특성을 클릭하세요.
+다음 표에는 각 플랫폼(L: Linux, M: Mac, W: Windows)에 사용할 수 있는 키워드 및 특성이 나열되어 있습니다. 자세한 내용을 보려면 키워드 또는 특성을 클릭하세요.
 
 | DSN/연결 문자열 키워드 | 연결 특성 | 플랫폼 |
 |-|-|-|
@@ -37,7 +37,7 @@ ms.locfileid: "71712924"
 | [ColumnEncryption](../../connect/odbc/dsn-connection-string-attribute.md#columnencryption---sql_copt_ss_column_encryption) | [SQL_COPT_SS_COLUMN_ENCRYPTION](../../connect/odbc/dsn-connection-string-attribute.md#columnencryption---sql_copt_ss_column_encryption) | LMW |
 | [ConnectRetryCount](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | [SQL_COPT_SS_CONNECT_RETRY_COUNT](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | W |
 | [ConnectRetryInterval](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | [SQL_COPT_SS_CONNECT_RETRY_INTERVAL](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | W |
-| [데이터베이스 백업](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_ATTR_CURRENT_CATALOG](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | LMW |
+| [Database](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_ATTR_CURRENT_CATALOG](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | LMW |
 | [설명](../../connect/odbc/dsn-connection-string-attribute.md#description) | | LMW |
 | [드라이버](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [DSN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
@@ -45,8 +45,8 @@ ms.locfileid: "71712924"
 | [Failover_Partner](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_FAILOVER_PARTNER](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssfailoverpartner) | W |
 | [FailoverPartnerSPN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_FAILOVER_PARTNER_SPN](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | W |
 | [FileDSN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
-| [KeepAlive](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v 17.4 +, DSN 전용)| | LMW |
-| [KeepAliveInterval](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v 17.4 +, DSN 전용) | | LMW |
+| [KeepAlive](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)(v17.4+, DSN 전용)| | LMW |
+| [KeepAliveInterval](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)(v17.4+, DSN 전용) | | LMW |
 | [KeystoreAuthentication](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
 | [KeystorePrincipalId](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
 | [KeystoreSecret](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
@@ -113,6 +113,7 @@ ms.locfileid: "71712924"
 | | [SQL_COPT_SS_OLDPWD](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssoldpwd) | LMW |
 | | [SQL_COPT_SS_PERF_DATA_LOG_NOW](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssperfdatalognow) | W |
 | | [SQL_COPT_SS_PRESERVE_CURSORS](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsspreservecursors) | LMW |
+| | [SQL_COPT_SS_SPID](../../connect/odbc/dsn-connection-string-attribute.md#sql_copt_ss_spid)(v17.5+) | LMW |
 | | [SQL_COPT_SS_TXN_ISOLATION](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsstxnisolation) | LMW |
 | | [SQL_COPT_SS_USER_DATA](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssuserdata) | LMW |
 | | [SQL_COPT_SS_WARN_ON_CP_ERROR](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsswarnoncperror) | LMW |
@@ -122,7 +123,7 @@ ms.locfileid: "71712924"
 
 다음은 [SQL Server Native Client에서 연결 문자열 키워드 사용](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md), [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 및 [SQLSetConnectAttr Function](../../odbc/reference/syntax/sqlsetconnectattr-function.md)에 나오지 않는 몇 가지 문자열 키워드 및 연결 특성입니다.
 
-### <a name="description"></a>설명
+### <a name="description"></a>Description
 
 데이터 원본을 설명하는 데 사용됩니다.
 
@@ -130,7 +131,7 @@ ms.locfileid: "71712924"
 
 ANSI에서 OEM으로 데이터 변환을 제어합니다. 
 
-| 특성 값 | 설명 |
+| 특성 값 | Description |
 |-|-|
 | SQL_AO_OFF | (기본값) 변환이 수행되지 않습니다. |
 | SQL_AO_ON | 변환이 수행됩니다. |
@@ -139,7 +140,7 @@ ANSI에서 OEM으로 데이터 변환을 제어합니다.
 
 SQL Server 대체 연결의 사용을 제어합니다. 이 값은 더 이상 지원되지 않습니다.
 
-| 특성 값 | 설명 |
+| 특성 값 | Description |
 |-|-|
 | SQL_FB_OFF | (기본값) 대체 연결을 사용하지 않습니다. |
 | SQL_FB_ON | (기본값) 대체 연결을 사용합니다. |
@@ -152,7 +153,7 @@ SQL Server 대체 연결의 사용을 제어합니다. 이 값은 더 이상 지
 
 SQL Server에 연결할 때 사용할 인증 모드를 설정합니다. 자세한 내용은 [Azure Active Directory 사용](using-azure-active-directory.md)을 참조하세요.
 
-| 키워드 값 | 특성 값 | 설명 |
+| 키워드 값 | 특성 값 | Description |
 |-|-|-|
 | |SQL_AU_NONE|(기본값) 설정 안 함. 다른 특성의 조합으로 인증 모드를 결정합니다.|
 |SqlPassword|SQL_AU_PASSWORD|사용자 이름 및 암호를 사용한 SQL Server 인증|
@@ -169,9 +170,9 @@ SQL Server에 연결할 때 사용할 인증 모드를 설정합니다. 자세�
 
 투명한 열 암호화(Always Encrypted)를 제어합니다. 자세한 내용은 [Always Encrypted 사용(ODBC)](using-always-encrypted-with-the-odbc-driver.md)을 참조하세요.
 
-| 키워드 값 | 특성 값 | 설명 |
+| 키워드 값 | 특성 값 | Description |
 |-|-|-|
-|설정|SQL_CE_ENABLED|Always Encrypted를 사용하도록 설정합니다.|
+|사용|SQL_CE_ENABLED|Always Encrypted를 사용하도록 설정합니다.|
 |사용 안 함|SQL_CE_DISABLED|(기본값) Always Encrypted를 사용하지 않도록 설정합니다.|
 | |SQL_CE_RESULTSETONLY|암호 해독만 사용하도록 설정합니다(결과 및 반환 값).|
 
@@ -179,50 +180,50 @@ SQL Server에 연결할 때 사용할 인증 모드를 설정합니다. 자세�
 
 다시 연결 시도가 더 빨리 실행될 수 있도록 MultiSubnetFailover와 상호 작용하는 투명한 네트워크 IP 확인 기능을 제어합니다. 자세한 내용은 [투명한 네트워크 IP 확인 사용](using-transparent-network-ip-resolution.md)을 참조하세요.
 
-| 키워드 값 | 특성 값| 설명 |
+| 키워드 값 | 특성 값| Description |
 |-|-|-|
-|예|SQL_IS_ON|(기본값) 투명 네트워크 IP 확인 사용|
-|아니오|SQL_IS_OFF|투명 네트워크 IP 확인 사용 안 함|
+|사용|SQL_IS_ON|(기본값) 투명 네트워크 IP 확인 사용|
+|사용 안 함|SQL_IS_OFF|투명 네트워크 IP 확인 사용 안 함|
 
 ### <a name="usefmtonly"></a>UseFMTONLY
 
 SQL Server 2012 이상에 연결할 때 메타데이터에 대한 SET FMTONLY 사용을 제어합니다.
 
-| 키워드 값 | 설명 |
+| 키워드 값 | Description |
 |-|-|
-|아니오|(기본값) 사용 가능한 경우 메타데이터에 sp_describe_first_result_set을 사용합니다. |
-|예| 메타데이터에 SET FMTONLY를 사용합니다. |
+|예|(기본값) 사용 가능한 경우 메타데이터에 sp_describe_first_result_set을 사용합니다. |
+|yes| 메타데이터에 SET FMTONLY를 사용합니다. |
 
 
 ## <a name="clientcertificate"></a>ClientCertificate
 
-인증에 사용할 인증서를 지정 합니다. 다음 옵션을 사용할 수 있습니다. 
+인증에 사용할 인증서를 지정합니다. 옵션은 다음과 같습니다. 
 
-| 옵션 값 | 설명 |
+| 옵션 값 | Description |
 |-|-|
-| sha1:`<hash_value>` | ODBC 드라이버는 SHA1 해시를 사용 하 여 Windows 인증서 저장소에서 인증서를 찾습니다. |
-| 제목:`<subject>` | ODBC 드라이버는 주체를 사용 하 여 Windows 인증서 저장소에서 인증서를 찾습니다. |
-| 파일: `<file_location>` [, 암호: `<password>`] | ODBC 드라이버는 인증서 파일을 사용 합니다. |
+| sha1:`<hash_value>` | ODBC 드라이버는 SHA1 해시를 사용하여 Windows 인증서 저장소에서 인증서를 찾습니다. |
+| 제목:`<subject>` | ODBC 드라이버는 제목을 사용하여 Windows 인증서 저장소에서 인증서를 찾습니다. |
+| 파일:`<file_location>`[,암호:`<password>`] | ODBC 드라이버는 인증서 파일을 사용합니다. |
 
-인증서가 PFX 형식이 고 PFX 인증서 내의 개인 키가 암호로 보호 되는 경우 password 키워드가 필요 합니다. PEM 및 DER 형식의 인증서의 경우 ClientKey 특성이 필요 합니다.
+인증서가 PFX 형식이고 PFX 인증서 내의 프라이빗 키가 암호로 보호되는 경우에는 암호 키워드가 필요합니다. PEM 및 DER 형식의 인증서는 ClientKey 특성이 필요합니다.
 
 
 ## <a name="clientkey"></a>ClientKey
 
-ClientCertificate 특성으로 지정 된 PEM 또는 DER 인증서에 대 한 개인 키의 파일 위치를 지정 합니다. 형식: 
+ClientCertificate 특성에 따라 지정된 PEM 또는 DER 인증서에 대해 프라이빗 키의 파일 위치를 지정합니다. 형식: 
 
-| 옵션 값 | 설명 |
+| 옵션 값 | Description |
 |-|-|
-| 파일: `<file_location>` [, 암호: `<password>`] | 개인 키 파일의 위치를 지정 합니다. |
+| 파일:`<file_location>`[,암호:`<password>`] | 프라이빗 키 파일의 위치를 지정합니다. |
 
-개인 키 파일이 암호로 보호 되는 경우 password 키워드가 필요 합니다. 암호에 "," 문자가 포함 된 경우 추가 "," 문자는 각 문자 바로 뒤에 추가 됩니다. 예를 들어 암호가 "a, b, c" 인 경우 연결 문자열에 있는 이스케이프 된 암호는 "a,, b,, c"입니다. 
+프라이빗 키 파일이 암호로 보호되는 경우에는 암호 키워드가 필요합니다. 암호에 "," 문자가 포함된 경우, 각 문자 바로 뒤에 "," 문자가 더 추가됩니다. 예를 들어 암호가 "a,b,c"라면 해당 문자열에 있는 이스케이프된 암호는 "a,,b,,c"입니다. 
     
 
 ### <a name="sql_copt_ss_access_token"></a>SQL_COPT_SS_ACCESS_TOKEN
 
 인증에 Azure Active Directory 액세스 토큰을 사용하도록 허용합니다. 자세한 내용은 [Azure Active Directory 사용](using-azure-active-directory.md)을 참조하세요.
 
-| 특성 값 | 설명 |
+| 특성 값 | Description |
 |-|-|
 | NULL | (기본값) 액세스 토큰을 제공하지 않습니다. |
 | ACCESSTOKEN* | 액세스 토큰 포인터입니다. |
@@ -231,7 +232,7 @@ ClientCertificate 특성으로 지정 된 PEM 또는 DER 인증서에 대 한 �
 
 로드된 키 저장소 공급자 라이브러리와 통신합니다. 투명한 열 암호화(Always Encrypted) 제어를 참조하세요. 이 특성에는 기본값이 없습니다. 자세한 내용은 [사용자 지정 키 저장소 공급자](custom-keystore-providers.md)을 참조하세요.
 
-| 특성 값 | 설명 |
+| 특성 값 | Description |
 |-|-|
 | CEKEYSTOREDATA * | 키 저장소 라이브러리에 대한 통신 데이터 구조 |
 
@@ -239,7 +240,7 @@ ClientCertificate 특성으로 지정 된 PEM 또는 DER 인증서에 대 한 �
 
 Always Encrypted용 키 저장소 공급자 라이브러리를 로드하거나 로드된 키 저장소 공급자 라이브러리의 이름을 검색합니다. 자세한 내용은 [사용자 지정 키 저장소 공급자](custom-keystore-providers.md)을 참조하세요. 이 특성에는 기본값이 없습니다.
 
-| 특성 값 | 설명 |
+| 특성 값 | Description |
 |-|-|
 | char * | 키 저장소 공급자 라이브러리에 대한 경로 |
 
@@ -254,10 +255,18 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XA
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, (SQLPOINTER)TRUE, 0);
 ``` 
 
-|값|설명|플랫폼|  
+|값|Description|플랫폼|  
 |-----------|-----------------|-----------------|  
 |XACALLPARAM 개체*|`XACALLPARAM` 개체에 대한 포인터입니다.|Windows, Linux 및 Mac|
 |TRUE|XA 트랜잭션을 ODBC 연결과 연결합니다. 관련된 모든 데이터베이스 작업은 XA 트랜잭션의 보호 아래 수행됩니다.|Windows|  
 |FALSE|ODBC 연결과 트랜잭션의 연결을 해제합니다.|Windows|
 
  XA 트랜잭션에 대한 자세한 내용은 [XA 트랜잭션 사용](../../connect/odbc/use-xa-with-dtc.md)을 참조하세요.
+
+### <a name="sql_copt_ss_spid"></a>SQL_COPT_SS_SPID
+
+연결의 서버 프로세스 ID를 검색합니다. 이는 서버에 대한 라운드트립이 추가로 발생하지 않는다는 점을 제외하고는 T-SQL [@@SPID](../../t-sql/functions/spid-transact-sql.md) 변수와 같습니다.
+
+| 특성 값 | Description |
+|-|-|
+| DWORD | SPID |

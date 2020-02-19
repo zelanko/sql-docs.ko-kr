@@ -1,6 +1,7 @@
 ---
-title: 보고서 찾기, 보기 및 관리(보고서 작성기 및 SSRS) | Microsoft Docs
-ms.date: 05/20/2019
+title: 보고서 찾기, 보기 및 관리(보고서 작성기 및 SSRS ) | Microsoft Docs
+description: 이 보고서 작성기 및 보고서 디자이너에서 페이지를 매긴 보고서, 공유된 데이터 원본, 모델, 기타 관련 보고서 항목을 찾아 볼 수 있습니다.
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-builder
@@ -8,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c2e379d463734b751770a8b9a844ea92b1f328b6
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.openlocfilehash: 74c4591122fa45d4e050718e78296ed672a4c210
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67492863"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258099"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>보고서 찾기, 보기 및 관리(보고서 작성기 및 SSRS)
-  보고서 작성기에서는 보고서 서버 또는 SharePoint 사이트의 폴더를 탐색하여 보고서, 공유 데이터 원본, 모델 및 기타 관련 보고서 항목을 찾고 컴퓨터에서 로컬 보고서를 찾아볼 수 있습니다. 보고서를 쉽게 찾을 수 있도록 보고서 작성기에는 최근에 사용한 서버 및 사이트 목록이 유지되며 컴퓨터 파일 시스템의 바탕 화면, 내 문서 및 내 컴퓨터 폴더에 대한 직접 액세스 기능이 제공됩니다.  
+  보고서 작성기에서는 보고서 서버 또는 SharePoint 사이트의 폴더를 탐색하여 페이지를 매긴 보고서, 공유 데이터 원본, 모델 및 기타 관련 보고서 항목을 찾고 컴퓨터에서 로컬 보고서를 찾아볼 수 있습니다. 보고서를 쉽게 찾을 수 있도록 보고서 작성기에는 최근에 사용한 서버 및 사이트 목록이 유지되며 컴퓨터 파일 시스템의 바탕 화면, 내 문서 및 내 컴퓨터 폴더에 대한 직접 액세스 기능이 제공됩니다.  
   
- 보고서 디자이너에서 컴퓨터를 검색하여 로컬 보고서를 찾을 수도 있습니다. 보고서 서버 또는 SharePoint 사이트에 보고서를 배포한 후 웹 포털을 사용하여 보고서 서버를 탐색하거나 SharePoint 사이트를 검색하여 보고서를 찾을 수 있습니다. 보고서 및 관련된 항목은 배포된 후 로컬로 사용할 수 있는 상태로 유지됩니다.  
+ 보고서 디자이너에서 컴퓨터를 탐색하여 페이지를 매긴 로컬 보고서를 찾을 수도 있습니다. 보고서 서버 또는 SharePoint 사이트에 보고서를 배포한 후 웹 포털을 사용하여 보고서 서버를 탐색하거나 SharePoint 사이트를 검색하여 보고서를 찾을 수 있습니다. 보고서 및 관련된 항목은 배포된 후 로컬로 사용할 수 있는 상태로 유지됩니다.  
   
 > [!NOTE]  
 > 보고서 작성기는 로컬 모드로 또는 보고서 서버에 연결하여 사용할 수 있습니다. 보고서 서버에 연결되어 있지 않은 경우 몇 가지 제한이 따릅니다.  
@@ -141,7 +142,7 @@ ms.locfileid: "67492863"
  [보고서 작성기에서 보고서 미리 보기](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)  
  보고서를 만들거나 업데이트하는 동안 보고서를 미리 보는 방법에 설명합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보고서 저장&#40;보고서 작성기&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)   
  [SQL Server의 보고서 작성기](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  

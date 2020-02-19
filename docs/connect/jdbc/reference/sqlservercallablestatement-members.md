@@ -12,10 +12,10 @@ ms.assetid: 5ebdc186-e50f-4d14-bbf4-95af5051e4a4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69a12437e3b1e611cf9e48d60c9fd77cd02f63bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971871"
 ---
 # <a name="sqlservercallablestatement-members"></a>SQLServerCallableStatement 멤버
@@ -37,7 +37,7 @@ ms.locfileid: "67971871"
   
 ## <a name="methods"></a>메서드  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)|[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)에서 상속되며, 이 CallableStatement 개체의 명령 일괄 처리에 대한 매개 변수 세트를 추가합니다.|  
 |[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)에서 상속되며, 이 CallableStatement 개체에 의해 현재 실행되고 있는 SQL 문을 취소합니다.|  
@@ -50,14 +50,14 @@ ms.locfileid: "67971871"
 |[executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md)|[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)에서 상속되며, 이 CallableStatement 개체에서 SQL 쿼리를 실행하고 쿼리에 의해 생성된 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체를 반환합니다.|  
 |[executeUpdate](../../../connect/jdbc/reference/executeupdate-method-sqlserverpreparedstatement.md)|[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)에서 상속되며, 이 CallableStatement 개체에서 SQL INSERT, UPDATE, MERGE 또는 DELETE 문과 같은 SQL 문이나 DDL 문 같이 아무 것도 반환하지 않는 SQL 문을 실행합니다.|  
 |[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverstatement.md)|[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)에서 상속되며, 이 CallableStatement 개체를 생성한 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 개체를 검색합니다.|  
-|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)|지정 된 열의 값을 검색 하 여 [DateTimeOffset 클래스](../../../connect/jdbc/reference/datetimeoffset-class.md) 개체로 반환 합니다.|  
+|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)|지정된 열의 값을 검색하여 [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) 개체로 반환합니다.|  
 |[getFetchDirection](../../../connect/jdbc/reference/getfetchdirection-method-sqlserverstatement.md)|[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)에서 상속되며, 이 CallableStatement 개체에서 생성된 결과 집합에 기본값으로 사용되는 데이터베이스 테이블에서의 행 인출 방향을 검색합니다.|  
 |[getFetchSize](../../../connect/jdbc/reference/getfetchsize-method-sqlserverstatement.md)|[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)에서 상속되며, 이 CallableStatement 개체에서 생성된 결과 집합 개체의 기본 인출 크기로 사용되는 결과 집합 행 수를 검색합니다.|  
 |[getGeneratedKeys](../../../connect/jdbc/reference/getgeneratedkeys-method-sqlserverstatement.md)|[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)에서 상속되며, 이 CallableStatement 개체를 실행한 결과로 만들어진 자동 생성 키를 검색합니다.|  
 |[getMaxFieldSize](../../../connect/jdbc/reference/getmaxfieldsize-method-sqlserverstatement.md)|[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)에서 상속되며, 이 CallableStatement 개체에 의해 생성된 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 문자 및 이진 열 값에 대해 반환될 수 있는 최대 바이트 수를 검색합니다.|  
 |[getMaxRows](../../../connect/jdbc/reference/getmaxrows-method-sqlserverstatement.md)|[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)에서 상속되며, 이 CallableStatement 개체에 의해 생성된 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체에 포함될 수 있는 최대 행 수를 검색합니다.|  
 |[getMetaData](../../../connect/jdbc/reference/getmetadata-method-sqlserverpreparedstatement.md)|[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)에서 상속되며, 이 CallableStatement 개체가 실행될 때 반환되는 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 열에 대한 정보가 들어 있는 [SQLServerResultSetMetaData Class](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) 개체를 검색합니다.|  
-|[getMoreResults](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)|[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)에서 상속되며, 이 CallableStatement 개체의 다음 결과로 이동 합니다.|  
+|[getMoreResults](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)|[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)에서 상속되며, 이 CallableStatement 개체의 다음 결과로 이동합니다.|  
 |[getParameterMetaData](../../../connect/jdbc/reference/getparametermetadata-method-sqlserverpreparedstatement.md)|[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)에서 상속되며, 이 CallableStatement 개체에 대한 매개 변수의 수, 형식 및 속성을 검색합니다.|  
 |[getArray](../../../connect/jdbc/reference/getarray-method-sqlservercallablestatement.md)|지정된 매개 변수의 값을 Array 개체로 검색합니다.|  
 |[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlservercallablestatement.md)|지정된 매개 변수의 값을 **ASCII** 문자의 스트림으로 검색합니다.|  
@@ -70,14 +70,14 @@ ms.locfileid: "67971871"
 |[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlservercallablestatement.md)|지정된 매개 변수의 값을 검색하여 java.io.Reader 개체로 반환합니다.|  
 |[getClob](../../../connect/jdbc/reference/getclob-method-sqlservercallablestatement.md)|지정된 JDBC Blob 매개 변수의 값을 Java 프로그래밍 언어의 Clob 개체로 검색합니다.|  
 |[getDate](../../../connect/jdbc/reference/getdate-method-sqlservercallablestatement.md)|지정된 매개 변수의 값을 검색하여 Java 프로그래밍 언어의 java.sql.Date 개체로 반환합니다.|  
-|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)|지정 된 열의 값을 검색 하 여[DateTimeOffset 클래스](../../../connect/jdbc/reference/datetimeoffset-class.md) 개체로 반환 합니다.|  
+|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)|지정된 열의 값을 검색하여 [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) 개체로 반환합니다.|  
 |[getDouble](../../../connect/jdbc/reference/getdouble-method-sqlservercallablestatement.md)|지정된 매개 변수의 값을 Java 프로그래밍 언어의 **double**로 검색합니다.|  
 |[getFloat](../../../connect/jdbc/reference/getfloat-method-sqlservercallablestatement.md)|지정된 매개 변수의 값을 Java 프로그래밍 언어의**float**로 검색합니다.|  
 |[getInt](../../../connect/jdbc/reference/getint-method-sqlservercallablestatement.md)|지정된 매개 변수의 값을 Java 프로그래밍 언어의 **int**로 검색합니다.|  
 |[getLong](../../../connect/jdbc/reference/getlong-method-sqlservercallablestatement.md)|지정된 매개 변수의 값을 Java 프로그래밍 언어의**long**으로 검색합니다.|  
 |[getNCharacterStream](../../../connect/jdbc/reference/getncharacterstream-method-sqlservercallablestatement.md)|지정된 매개 변수의 값을 Reader 개체로 검색합니다.|  
 |[getNClob](../../../connect/jdbc/reference/getnclob-method-sqlservercallablestatement.md)|지정된 JDBC **NCLOB** 매개 변수의 값을 Java 프로그래밍 언어의 **NClob** 개체로 검색합니다.|  
-|[getNString](../../../connect/jdbc/reference/getnstring-method-sqlservercallablestatement.md)|지정 된 **NCHAR**, **NVARCHAR** 또는 **LONGNVARCHAR** 매개 변수의 값을 검색 하 여 Java 프로그래밍 언어의 문자열로 반환 합니다.|  
+|[getNString](../../../connect/jdbc/reference/getnstring-method-sqlservercallablestatement.md)|Java 프로그래밍 언어인 문자열로 지정된 **NCHAR**, **NVARCHAR** 또는 **LONGNVARCHAR** 매개 변수 값을 검색합니다.|  
 |[getObject](../../../connect/jdbc/reference/getobject-method-sqlservercallablestatement.md)|지정된 매개 변수의 값을 검색하여 Java 프로그래밍 언어의 개체로 반환합니다.|  
 |[getQueryTimeout](../../../connect/jdbc/reference/getquerytimeout-method-sqlserverstatement.md)|[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)에서 상속되며, [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]에서 이 CallableStatement 개체가 실행될 때까지 대기하는 시간(초)을 검색합니다.|  
 |[getRef](../../../connect/jdbc/reference/getref-method-sqlservercallablestatement.md)|지정된 매개 변수의 값을 Java 프로그래밍 언어의 Ref 개체로 검색합니다.|  
@@ -110,7 +110,7 @@ ms.locfileid: "67971871"
 |[setClob](../../../connect/jdbc/reference/setclob-method-sqlservercallablestatement.md)|[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)에서 상속되며, 지정된 매개 변수를 지정된 개체로 설정합니다.|  
 |[setCursorName](../../../connect/jdbc/reference/setcursorname-method-sqlserverstatement.md)|[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)에서 상속되며, SQL 커서 이름을 이후 실행 메서드에 사용될 지정된 문자열로 설정합니다.|  
 |[setDate](../../../connect/jdbc/reference/setdate-method-sqlservercallablestatement.md)|지정된 매개 변수를 지정된 날짜 값으로 설정합니다.|  
-|[setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md)|지정 된 열의 값을 [DateTimeOffset 클래스](../../../connect/jdbc/reference/datetimeoffset-class.md) 값으로 설정 합니다.|  
+|[setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md)|[DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) 값에 지정된 열의 값을 설정합니다.|  
 |[setDouble](../../../connect/jdbc/reference/setdouble-method-sqlservercallablestatement.md)|지정된 매개 변수를 지정된 **double** 값으로 설정합니다.|  
 |[setEscapeProcessing](../../../connect/jdbc/reference/setescapeprocessing-method-sqlserverstatement.md)|[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)에서 상속되며, 이스케이프 처리 모드를 설정합니다.|  
 |[setFetchDirection](../../../connect/jdbc/reference/setfetchdirection-method-sqlserverstatement.md)|[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)에서 상속되며, 결과 집합 행을 처리할 방향에 관한 힌트를 JDBC 드라이버에 제공합니다.|  
@@ -125,7 +125,7 @@ ms.locfileid: "67971871"
 |[setNString](../../../connect/jdbc/reference/setnstring-method-sqlservercallablestatement.md)|지정된 매개 변수를 지정된 String 개체로 설정합니다.|  
 |[setNull](../../../connect/jdbc/reference/setnull-method-sqlservercallablestatement.md)|설정할 매개 변수 형식이 지정된 경우 지정된 매개 변수를 null 값으로 설정합니다.|  
 |[setObject](../../../connect/jdbc/reference/setobject-method-sqlservercallablestatement.md)|지정된 개체를 사용하여 지정된 매개 변수의 값을 설정합니다.|  
-|[setPoolable](../../../connect/jdbc/reference/setpoolable-method-sqlserverstatement.md)|[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)에서 상속되며, 문을 풀링하거나 풀링하지 않도록 요청합니다. 기본적으로 SQLServerCallableStatement 개체는 생성 시 poolable 됩니다.|  
+|[setPoolable](../../../connect/jdbc/reference/setpoolable-method-sqlserverstatement.md)|[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)에서 상속되며, 문을 풀링하거나 풀링하지 않도록 요청합니다. 기본적으로 SQLServerCallableStatement 개체는 생성될 때 풀이 가능합니다.|  
 |[setQueryTimeout](../../../connect/jdbc/reference/setquerytimeout-method-sqlserverstatement.md)|[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)에서 상속되며, 드라이버에서 CallableStatement 개체가 실행될 때까지 대기하는 시간(초)을 지정된 시간(초)으로 설정합니다.|  
 |[setRef](../../../connect/jdbc/reference/setref-method-sqlserverpreparedstatement.md)|[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)에서 상속되며, 지정된 매개 변수를 지정된 Ref 개체로 설정합니다.|  
 |[setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)|[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)에서 상속되며, 이 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체의 응답 버퍼링 모드를 대/소문자를 구분하지 않는 **String full** 또는 **adaptive**로 설정합니다.|  

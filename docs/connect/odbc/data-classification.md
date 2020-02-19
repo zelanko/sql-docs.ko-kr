@@ -1,5 +1,5 @@
 ---
-title: Microsoft ODBC Driver for SQL Server에서 데이터 분류 사용 | Microsoft Docs
+title: Microsoft ODBC Driver for SQL Server와 데이터 분류 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2018
 ms.prod: sql
@@ -14,24 +14,24 @@ author: v-makouz
 ms.author: v-makouz
 manager: kenvh
 ms.openlocfilehash: 8f0f821890cabe25a9abb572e453c9846c75ec94
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72041126"
 ---
 # <a name="data-classification"></a>데이터 분류
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ## <a name="overview"></a>개요
-중요 한 데이터를 관리 하기 위해 SQL Server 및 Azure SQL Server는 클라이언트 응용 프로그램에서 다양 한 유형의 중요 한 데이터 (예: 상태, 금융 등)를 처리할 수 있도록 하는 민감도 메타 데이터를 데이터베이스 열에 제공 하는 기능을 도입 했습니다. )를 사용 합니다.
+SQL Server와 Azure SQL Server는 중요 데이터 관리를 위해 데이터 보호 정책에 따라 클라이언트 애플리케이션에서 다양한 유형의 중요 데이터(예: 건강, 재무 등)를 처리할 수 있도록 하는 민감도 메타데이터를 데이터베이스 열에 제공하는 기능을 도입했습니다.
 
-열에 분류를 할당 하는 방법에 대 한 자세한 내용은 [SQL 데이터 검색 및 분류](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017)를 참조 하세요.
+열에 분류를 할당하는 방법에 대한 자세한 내용은 [SQL 데이터 검색 및 분류](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017)를 참조하세요.
 
-Microsoft ODBC Driver 17.2에서는 SQL_CA_SS_DATA_CLASSIFICATION 필드 식별자를 사용 하 여 SQLGetDescField를 통해이 메타 데이터를 검색할 수 있습니다.
+Microsoft ODBC Driver 17.2는 SQL_CA_SS_DATA_CLASSIFICATION 필드 식별자를 사용하는 SQLGetDescField를 통해 이 메타데이터를 검색할 수 있도록 합니다.
 
 ## <a name="format"></a>형식
-SQLGetDescField에는 다음 구문이 있습니다.
+SQLGetDescField의 구문은 다음과 같습니다.
 
 ```  
 SQLRETURN SQLGetDescField(  
@@ -43,7 +43,7 @@ SQLRETURN SQLGetDescField(
      SQLINTEGER *    StringLengthPtr);  
 ```
 *DescriptorHandle*  
- 입력 IRD (구현 행 설명자) 핸들입니다. SQL_ATTR_IMP_ROW_DESC 문 특성을 사용 하 여 SQLGetStmtAttr를 호출 하 여 검색할 수 있습니다.
+ [Input] IRD(구현 행 설명자) 핸들입니다. SQL_ATTR_IMP_ROW_DESC 문 특성의 SQLGetStmtAttr를 호출하여 검색할 수 있습니다.
   
  *RecNumber*  
  [Input] 0
@@ -52,44 +52,44 @@ SQLRETURN SQLGetDescField(
  [입력] SQL_CA_SS_DATA_CLASSIFICATION
   
  *ValuePtr*  
- 출력 출력 버퍼
+ [Output] 출력 버퍼
   
  *BufferLength*  
- 입력 출력 버퍼의 길이 (바이트)
+ [Input] 출력 버퍼의 길이(바이트)
 
- *StringLengthPtr* [Output] *valueptr*에서 반환할 수 있는 총 바이트 수를 반환 하는 버퍼에 대 한 포인터입니다.
+ *StringLengthPtr* [Output] *ValuePtr*에 반환할 수 있는 총 바이트 수를 반환할 버퍼에 대한 포인터입니다.
  
 > [!NOTE]
-> 버퍼의 크기를 알 수 없는 경우 *SQLGetDescField를 NULL로 호출* 하 고 *StringLengthPtr*의 값을 검사 하 여이를 확인할 수 있습니다.
+> 버퍼의 크기를 알 수 없다면 *ValuePtr*이 있는 SQLGetDescField를 NULL로 호출하고 *StringLengthPtr*의 값을 검사하여 확인할 수 있습니다.
  
-데이터 분류 정보를 사용할 수 없는 경우 *잘못 된 설명자 필드* 오류가 반환 됩니다.
+데이터 분류 정보를 사용할 수 없는 경우 *잘못된 설명자 필드* 오류가 반환됩니다.
 
-SQLGetDescField에 대 한 호출이 성공적으로 완료 되 면,이에 따라 결정 되는 버퍼에는 다음 데이터가 *포함 됩니다.*
+SQLGetDescField에 대한 호출이 성공적으로 완료되면 *ValuePtr*이 가리키는 버퍼에 다음 데이터가 포함됩니다.
 
  `nn nn [n sensitivitylabels] tt tt [t informationtypes] cc cc [c columnsensitivitys]`
 
 > [!NOTE]
-> `nn nn`, `tt tt` 및 `cc cc`는 가장 낮은 주소에서 가장 덜 중요 한 바이트로 저장 된 멀티 바이트 정수입니다.
+> `nn nn`, `tt tt`, `cc cc`는 가장 낮은 주소에서 최하위 바이트로 저장된 멀티바이트 정수입니다.
 
-*`sensitivitylabel`* 과 *`informationtype`* 은 모두 형식입니다.
+*`sensitivitylabel`* 및 *`informationtype`* 은 모두 다음 형식을 취합니다.
 
  `nn [n bytes name] ii [i bytes id]`
 
-*`columnsensitivity`* 은 형식입니다.
+*`columnsensitivity`* 는 다음 형식을 취합니다.
 
  `nn nn [n sensitivityprops]`
 
-각 열 *(c)* 에 대해 *n* 4 바이트 *`sensitivityprops`* 이 제공 됩니다.
+각 열의 경우에는 *(c)* , *n* 4-byte *`sensitivityprops`* 가 있습니다.
 
  `ss ss tt tt`
 
-s- *@no__t* 배열에 대 한 인덱스입니다. 레이블이 지정 되지 않은 경우 `FF FF`입니다.
+s - *`sensitivitylabels`* 배열의 인덱스, 레이블 지정이 되지 않을 경우 `FF FF`
 
-*`informationtypes`* 배열에 t 인덱스 @no__t를 지정 합니다.
+t - *`informationtypes`* 배열의 인덱스, 레이블 지정이 되지 않을 경우 `FF FF`
 
 
 <br><br>
-데이터 형식은 다음과 같은 의사 구조체로 표현 될 수 있습니다.
+데이터 형식은 다음과 같은 의사 구조체로 표현될 수 있습니다.
 
 ```
 struct IDnamePair {
@@ -117,7 +117,7 @@ struct {
 
 
 ## <a name="code-sample"></a>코드 샘플
-데이터 분류 메타 데이터를 읽는 방법을 보여 주는 테스트 응용 프로그램입니다. Windows에서는 `cl /MD dataclassification.c /I (directory of msodbcsql.h) /link odbc32.lib`을 사용 하 여 컴파일하고, 연결 문자열과 함께 실행 하 고, 분류 된 열을 매개 변수로 반환 하는 SQL 쿼리를 실행할 수 있습니다.
+데이터 분류 메타데이터를 읽는 방법을 시연하는 테스트 애플리케이션입니다. Windows에서는 `cl /MD dataclassification.c /I (directory of msodbcsql.h) /link odbc32.lib`를 사용하여 컴파일하고 연결 문자열과 함께 실행할 수 있으며, 분류된 열을 반환하는 SQL 쿼리를 매개 변수로 사용할 수 있습니다.
 
 ```
 #ifdef _WIN32
@@ -243,23 +243,23 @@ int main(int argc, char **argv)
 }
 ```
 
-## <a name="bkmk-version"></a>지원 되는 버전
-Microsoft ODBC Driver 17.2는 `FieldIdentifier`이 `SQL_CA_SS_DATA_CLASSIFICATION` (1237)로 설정 된 경우 `SQLGetDescField`을 통해 검색 데이터 분류 정보를 허용 합니다. 
+## <a name="bkmk-version"></a>지원되는 버전
+Microsoft ODBC Driver 17.2는 `FieldIdentifier`가 `SQL_CA_SS_DATA_CLASSIFICATION`(1237)으로 설정된 경우 `SQLGetDescField`를 통해 데이터 분류 정보 검색을 허용합니다. 
 
-Microsoft ODBC Driver 17.4.1.1부터 `SQL_CA_SS_DATA_CLASSIFICATION_VERSION` (1238) 필드 식별자를 사용 하 여 `SQLGetDescField`을 통해 서버에서 지 원하는 데이터 분류 버전을 검색할 수 있습니다. 17.4.1.1에서 지원 되는 데이터 분류 버전은 "2"로 설정 됩니다.
+Microsoft ODBC Driver 17.4.1.1부터는 `SQL_CA_SS_DATA_CLASSIFICATION_VERSION`(1238) 필드 식별자를 사용하여 `SQLGetDescField`를 통해 서버에서 지원하는 데이터 분류 버전을 검색할 수 있습니다. 17.4.1.1에서는 지원되는 데이터 분류 버전이 "2"로 설정됩니다.
 
  
 
-17.4.2.1에서 시작 하는 경우 "1"로 설정 되 고 버전 드라이버가 지원 되는 SQL Server에 보고 하는 데이터 분류의 기본 버전이 도입 되었습니다. 새 연결 특성 `SQL_COPT_SS_DATACLASSIFICATION_VERSION` (1400)을 사용 하 여 응용 프로그램에서 지원 되는 버전의 데이터 분류를 "1"에서 최대 지원까지 변경할 수 있습니다.  
+17.4.2.1부터는 "1"로 설정되고 드라이버가 SQL Server에 지원 대상으로 보고하는 버전인 기본적 데이터 분류 버전이 도입되었습니다. 새 연결 특성 `SQL_COPT_SS_DATACLASSIFICATION_VERSION`(1400)은 지원되는 버전의 데이터 분류를 애플리케이션에서 "1"부터 지원되는 최대 수까지 변경하도록 허용합니다.  
 
-예: 
+예제: 
 
-버전을 설정 하려면이 호출은 SQLConnect 또는 SQLDriverConnect 호출 바로 앞에와 야 합니다.
+버전을 설정하려면 SQLConnect 또는 SQLDriverConnect 호출 바로 전에 이 호출이 실행되어야 합니다.
 ```
 ret = SQLSetConnectAttr(dbc, SQL_COPT_SS_DATACLASSIFICATION_VERSION, (SQLPOINTER)2, SQL_IS_INTEGER);
 ```
 
-현재 지원 되는 데이터 분류 버전의 값은 SQLGetConnectAttr 호출을 통해 retirved 수 있습니다. 
+현재 지원되는 데이터 분류 버전의 값은 SQLGetConnectAttr 호출을 통해 검색할 수 있습니다. 
 ```
 ret = SQLGetConnectAttr(dbc, SQL_COPT_SS_DATACLASSIFICATION_VERSION, (SQLPOINTER)&dataClassVersion, SQL_IS_INTEGER, 0);
 ```
