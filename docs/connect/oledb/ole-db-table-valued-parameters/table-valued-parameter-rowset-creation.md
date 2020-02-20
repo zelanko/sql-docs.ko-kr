@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: c771d8bde657b464b29a109dadd7a4d6fa33fbdb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994112"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>테이블 반환 매개 변수 행 집합 만들기
@@ -29,11 +29,11 @@ ms.locfileid: "67994112"
  테이블 반환 매개 변수 행 집합 개체는 소비자가 여러 세션 수준 인터페이스를 통해 입력 매개 변수에 대해서 명시적으로 생성합니다. 테이블 반환 매개 변수 행 집합 개체의 인스턴스는 테이블 반환 매개 변수당 하나씩 생성됩니다. 소비자는 이미 알려진 메타데이터 정보를 제공(정적 시나리오)하거나 공급자 인터페이스를 통해 해당 정보를 검색(동적 시나리오)하는 방법으로 테이블 반환 매개 변수 행 집합 개체를 만들 수 있습니다. 다음 섹션에서는 이러한 두 시나리오에 대해 설명합니다.  
   
 ## <a name="static-scenario"></a>정적 시나리오  
- 형식 정보를 알고 있으면 소비자는 ITableDefinitionWithConstraints:: CreateTableWithConstraints를 사용 하 여 테이블 반환 매개 변수에 해당 하는 테이블 반환 매개 변수 행 집합 개체를 인스턴스화합니다.  
+ 형식 정보가 알려져 있는 경우, 소비자는 ITableDefinitionWithConstraints::CreateTableWithConstraints를 사용하여 테이블 반환 매개 변수에 해당하는 테이블 반환 매개 변수 행 집합 개체를 인스턴스화합니다.  
   
- *Guid* 필드 (*pTableID* 매개 변수)에는 특수 guid (CLSID_ROWSET_TVP)가 포함 되어 있습니다. *pwszName* 멤버에는 소비자가 인스턴스화할 테이블 반환 매개 변수 형식의 이름이 포함되어 있습니다. *eKind* 필드는 DBKIND_GUID_NAME으로 설정됩니다. 이 이름은 명령문이 임시 SQL일 때 필요하며 명령문이 프로시저 호출일 때는 선택 사항입니다.  
+ *guid* 필드(*pTableID* 매개 변수)에는 특별한 GUID(CLSID_ROWSET_TVP)가 포함되어 있습니다. *pwszName* 멤버에는 소비자가 인스턴스화할 테이블 반환 매개 변수 형식의 이름이 포함되어 있습니다. *eKind* 필드는 DBKIND_GUID_NAME으로 설정됩니다. 이 이름은 명령문이 임시 SQL일 때 필요하며 명령문이 프로시저 호출일 때는 선택 사항입니다.  
   
- 집계의 경우 소비자는 *pUnkOuter* 매개 변수를 제어용 IUnknown으로 전달 합니다.  
+ 소비자는 집계를 위해 제어용 IUnknown을 사용하여 *pUnkOuter* 매개 변수를 전달합니다.  
   
  테이블 반환 매개 변수 행 집합 개체 속성은 읽기 전용이므로 소비자는 *rgPropertySets*의 속성을 설정할 수 없습니다.  
   
@@ -41,16 +41,16 @@ ms.locfileid: "67994112"
   
  소비자는 테이블 반환 매개 변수 행 집합 개체에서 해당 정보를 검색하기 위해 IRowsetInfo::GetProperties를 사용합니다.  
   
- 각 열의 null, 고유, 계산 및 업데이트 상태에 대 한 정보를 검색 하기 위해 소비자는 IColumnsRowset:: GetColumnsRowset 또는 IColumnsInfo:: GetColumnInfo를 사용할 수 있습니다. 이러한 메서드는 각 테이블 반환 매개 변수 행 집합 열에 대해 자세한 정보를 제공합니다.  
+ 각 열의 null, 고유, 계산 및 업데이트 상태에 관한 정보를 검색하기 위해 소비자는 IColumnsRowset::GetColumnsRowset 또는 IColumnsInfo::GetColumnInfo를 사용할 수 있습니다. 이러한 메서드는 각 테이블 반환 매개 변수 행 집합 열에 대해 자세한 정보를 제공합니다.  
   
- 소비자는 테이블 반환 매개 변수의 각 열 유형을 지정합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 테이블을 만드는 경우 열을 지정하는 방법과 비슷합니다. 소비자는 *ppRowset* output 매개 변수를 통해 SQL Server에 대 한 OLE DB 드라이버에서 테이블 반환 매개 변수 행 집합 개체를 가져옵니다.  
+ 소비자는 테이블 반환 매개 변수의 각 열 유형을 지정합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 테이블을 만드는 경우 열을 지정하는 방법과 비슷합니다. 소비자는 *ppRowset* 출력 매개 변수를 통해 OLE DB Driver for SQL Server에서 테이블 반환 매개 변수 행 집합 개체를 가져옵니다.  
   
 ## <a name="dynamic-scenario"></a>동적 시나리오  
- 소비자에 게 형식 정보가 없으면 IOpenRowset:: OpenRowset을 사용 하 여 테이블 반환 매개 변수 행 집합 개체를 인스턴스화해야 합니다. 이때 소비자는 공급자에게 유형 이름을 제공해야 합니다.  
+ 소비자에게 형식 정보가 없는 경우, IOpenRowset::OpenRowset를 사용하여 테이블 반환 매개 변수 행 집합 개체를 인스턴스화해야 합니다. 이때 소비자는 공급자에게 유형 이름을 제공해야 합니다.  
   
  이 시나리오에서는 공급자가 소비자 대신 서버에서 테이블 반환 매개 변수 행 집합 개체에 대한 유형 정보를 가져옵니다.  
   
- *PTableID* 및 *pUnkOuter* 매개 변수는 정적 시나리오에서로 설정 되어야 합니다. 그런 다음, SQL Server용 OLE DB 드라이버는 서버에서 유형 정보(열 정보 및 제약 조건)를 가져오고 *ppRowset* 매개 변수를 통해 테이블 반환 매개 변수 행 집합 개체를 반환합니다. 이 경우 서버와의 통신이 필요하므로 이 작업은 정적 시나리오와 같은 방식으로 수행되지 않습니다. 동적 시나리오는 매개 변수가 있는 프로시저 호출의 경우에만 사용할 수 있습니다.  
+ *pTableID* 및 *pUnkOuter* 매개 변수는 정적 시나리오의 경우와 마찬가지로 설정해야 합니다. 그런 다음, SQL Server용 OLE DB 드라이버는 서버에서 유형 정보(열 정보 및 제약 조건)를 가져오고 *ppRowset* 매개 변수를 통해 테이블 반환 매개 변수 행 집합 개체를 반환합니다. 이 경우 서버와의 통신이 필요하므로 이 작업은 정적 시나리오와 같은 방식으로 수행되지 않습니다. 동적 시나리오는 매개 변수가 있는 프로시저 호출의 경우에만 사용할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [테이블 반환 매개 변수&#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   

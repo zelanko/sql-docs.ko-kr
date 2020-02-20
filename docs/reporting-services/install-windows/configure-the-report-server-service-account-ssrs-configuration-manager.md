@@ -1,18 +1,19 @@
 ---
-title: 보고서 서버 서비스 계정 구성(SSRS 구성 관리자) | Microsoft Docs
+title: 보고서 서버 서비스 계정 구성(구성 관리자) | Microsoft Docs
+description: Reporting Services는 예약된 보고서 처리와 구독 배달에 사용되는 보고서 서버 웹 서비스, 웹 포털 및 백그라운드 처리 애플리케이션을 포함하는 단일 서비스로 구현됩니다.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
-ms.custom: seodec18
-ms.date: 12/10/2018
-ms.openlocfilehash: 3cf868f9fb89bf6daa20ae6977bf1111649d46c1
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019, seo-mmd-2019
+ms.date: 12/04/2019
+ms.openlocfilehash: 49a5f8e19db65691fe8e521d7ca6a65e828fe6bd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594088"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866026"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>보고서 서버 서비스 계정 구성(SSRS 구성 관리자)
 
@@ -36,7 +37,7 @@ ms.locfileid: "73594088"
   
 - 보고서 서버 데이터베이스 호스팅에 사용되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 대한 로그인 권한을 자동으로 업데이트합니다. 새 계정이 **RSExecRole**에 추가됩니다.  
   
-     이전 계정에 대한 데이터베이스 로그인은 자동으로 제거되지 않습니다. 더 이상 사용하지 않는 계정을 제거해야 합니다. 자세한 내용은 [보고서 서버 데이터베이스 &#40;SSRS 기본 모드&#41;관리](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)를 참조 하세요.  
+     이전 계정에 대한 데이터베이스 로그인은 자동으로 제거되지 않습니다. 더 이상 사용하지 않는 계정을 제거해야 합니다. 자세한 내용은 [보고서 서버 데이터베이스 관리&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)를 참조하세요.  
   
      처음에 서비스 계정을 사용하도록 보고서 서버 데이터베이스 연결을 구성한 경우에만 데이터베이스 권한이 새 서비스 계정에 부여됩니다. 도메인 사용자 계정 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 로그인을 사용하도록 보고서 서버 데이터베이스 연결을 구성한 경우에는 연결 정보는 서비스 계정 업데이트의 영향을 받지 않습니다.  
   
@@ -59,7 +60,7 @@ ms.locfileid: "73594088"
   
 5. 대칭 키를 백업하라는 메시지가 표시되면 대칭 키를 백업할 파일 이름과 위치를 입력하고 파일을 잠그거나 잠금 해제할 때 사용할 암호를 입력한 다음 **확인**을 클릭합니다.  
   
-6. 보고서 서버에서 서비스 계정을 사용하여 보고서 서버 데이터베이스에 연결하는 경우 새 계정 또는 암호를 사용하도록 연결 정보가 업데이트됩니다. 연결 정보를 업데이트하려면 데이터베이스에 연결해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **데이터베이스 연결** 대화 상자가 나타나면 데이터베이스에 연결할 권한이 있는 자격 증명을 입력한 다음 **확인**을 클릭합니다.  
+6. 보고서 서버에서 서비스 계정을 사용하여 보고서 서버 데이터베이스에 연결하는 경우 새 계정 또는 암호를 사용하도록 연결 정보가 업데이트됩니다. 연결 정보를 업데이트하려면 데이터베이스에 연결해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **데이터베이스 연결** 대화 상자가 나타나면 데이터베이스에 연결할 권한이 있는 자격 증명을 입력한 후 **확인**을 클릭합니다.  
   
 7. 대칭 키를 복원하라는 메시지가 표시되면 5단계에서 지정한 암호를 입력한 다음 **확인**을 클릭합니다.  
   
@@ -111,7 +112,7 @@ ms.locfileid: "73594088"
   
 - 서비스 계정을 업데이트할 때 URL 예약 오류가 발생할 수 있습니다. 각 URL 예약에는 서비스 계정에 URL 요청을 수락할 권한을 부여하는 DACL(임의 액세스 제어 목록)이 포함된 보안 설명자가 있습니다. 계정을 업데이트할 때 URL을 다시 만들어 새 계정 정보로 DACL을 업데이트해야 합니다. URL 예약을 다시 만들 수 없지만 올바른 계정임이 확실한 경우에는 컴퓨터를 다시 시작합니다. 그래도 오류가 계속되면 다른 계정을 사용해 보십시오.  
   
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>다음 단계
 
  [보고서 서버 URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
  [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)

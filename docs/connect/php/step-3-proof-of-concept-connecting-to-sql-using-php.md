@@ -11,19 +11,19 @@ ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8d685c15b4cc30dc093a47b37e6bfc29368e91f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014806"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>3단계: PHP를 사용하는 SQL과 연결된 개념 증명
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>3단계: PHP를 사용하여 SQL에 연결하는 개념 증명
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-## <a name="step-1--connect"></a>1 단계: 연결  
+## <a name="step-1--connect"></a>1단계:  연결  
   
   
-이 **OpenConnection** 함수는 다음에 나오는 모든 함수의 위쪽 근처에서 호출 됩니다.  
+이 **OpenConnection** 함수는 이어지는 모든 함수의 거의 최상위에서 호출됩니다.  
   
   
 ```php 
@@ -45,9 +45,9 @@ ms.locfileid: "68014806"
     }  
 ```  
   
-## <a name="step-2--execute-query"></a>2 단계: 쿼리 실행  
+## <a name="step-2--execute-query"></a>2단계:  쿼리 실행  
   
-[Sqlsrv_query ()](https://php.net/manual/en/function.sqlsrv-query.php) 함수를 사용 하 여 SQL Database에 대 한 쿼리에서 결과 집합을 검색할 수 있습니다. 이 함수는 기본적으로 모든 쿼리 및 연결 개체를 허용 하 고 [sqlsrv_fetch_array ()](https://php.net/manual/en/function.sqlsrv-fetch-array.php)를 사용 하 여 반복 될 수 있는 결과 집합을 반환 합니다.  
+[sqlsrv_query()](https://php.net/manual/en/function.sqlsrv-query.php) 함수를 사용하여 SQL Database에 대한 쿼리에서 결과 집합을 검색할 수 있습니다. 이 함수는 본질적으로 모든 쿼리 및 연결 개체를 허용하며, [sqlsrv_fetch_array()](https://php.net/manual/en/function.sqlsrv-fetch-array.php)를 사용하여 반복될 수 있는 결과 집합을 반환합니다.  
   
 ```php  
     function ReadData()  
@@ -77,9 +77,9 @@ ms.locfileid: "68014806"
 ```  
   
   
-## <a name="step-3--insert-a-row"></a>3 단계: 행 삽입  
+## <a name="step-3--insert-a-row"></a>3단계:  행 삽입  
   
-이 예제에서는 [SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md) [삽입](../../t-sql/statements/insert-transact-sql.md) 값 으로부터 응용 프로그램을 보호 하는 매개 변수를 안전 하 게 실행 하는 방법을 확인 합니다.    
+이 예제에서는 [INSERT](../../t-sql/statements/insert-transact-sql.md) 명령문을 안전하게 실행하고 [SQL injection](../../relational-databases/tables/primary-and-foreign-key-constraints.md) 값으로부터 애플리케이션을 보호하는 매개 변수를 전달하는 방법을 보여줍니다.    
   
   
 ```php 
@@ -109,16 +109,16 @@ ms.locfileid: "68014806"
     }  
 ```  
   
-## <a name="step-4--rollback-a-transaction"></a>4 단계: 트랜잭션 롤백  
+## <a name="step-4--rollback-a-transaction"></a>4단계:  트랜잭션 롤백  
   
   
-이 코드 예제에서는 다음을 수행 하는 트랜잭션을 사용 하는 방법을 보여 줍니다.  
+이 코드 예제는 다음과 같은 트랜잭션의 사용법을 보여줍니다.  
   
--트랜잭션을 시작 합니다.  
+-트랜잭션 시작  
   
--데이터 행을 삽입 하 고 다른 데이터 행을 업데이트 합니다.  
+-데이터의 행 삽입, 데이터의 다른 행 업데이트  
   
--삽입 및 업데이트가 성공한 경우 트랜잭션을 커밋하고 트랜잭션 중 하나가 없는 경우 트랜잭션을 롤백합니다.  
+-삽입 및 업데이트가 성공한 경우 트랜잭션 커미트, 둘 중 하나가 성공하지 못한 경우 트랜잭션 롤백  
   
   
 ```php 

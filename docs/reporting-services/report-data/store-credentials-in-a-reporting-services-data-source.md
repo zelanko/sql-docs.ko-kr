@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 05/24/2018
 ms.openlocfilehash: 09fcacbd2f1c5c197517f962073dce6294aed2e2
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68891853"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Reporting Services 데이터 원본에 자격 증명 저장
@@ -67,13 +67,13 @@ ms.locfileid: "68891853"
   
 8.  **적용**을 클릭합니다.  
   
-     ![맨 위 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [저장된 자격 증명에 대한 보안 정책 요구 사항](#bkmk_top)  
+     ![맨 위 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [저장된 자격 증명에 대한 보안 정책 요구 사항](#bkmk_top)  
   
 ##  <a name="bkmk_stored_credentials_data_source_sharepoint"></a> 보고서별 데이터 원본에 대해 저장된 자격 증명 구성(SharePoint 모드)  
   
-1.  보고서가 들어 있는 문서 라이브러리로 이동한 다음 열기 메뉴 ![SSRS의 문서 라이브러리 상황에 맞는 메뉴 항목](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "SSRS의 문서 라이브러리 상황에 맞는 메뉴 항목")을 클릭합니다.  
+1.  보고서가 들어 있는 문서 라이브러리로 이동한 다음, 열기 메뉴 ![SSRS의 문서 라이브러리 상황에 맞는 메뉴 항목](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "SSRS의 문서 라이브러리 상황에 맞는 메뉴 항목")을 클릭합니다.  
   
-2.  두 번째 열기 메뉴 ![SSRS의 문서 라이브러리 상황에 맞는 메뉴 항목](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "SSRS의 문서 라이브러리 상황에 맞는 메뉴 항목")을 클릭한 다음 **데이터 원본 관리**를 클릭합니다.  
+2.  두 번째 열기 메뉴 ![SSRS의 문서 라이브러리 상황에 맞는 메뉴 항목](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "SSRS의 문서 라이브러리 상황에 맞는 메뉴 항목") 및 **데이터 원본 관리**를 클릭합니다.  
   
 3.  저장된 자격 증명으로 구성할 **사용자 지정** 데이터 원본의 이름을 클릭합니다.  
   
@@ -93,9 +93,9 @@ ms.locfileid: "68891853"
   
     -   사용자 이름과 암호가 데이터베이스 자격 증명인 경우 **Windows 자격 증명으로 사용**을 선택하지 않습니다. 데이터베이스 서버에서 가장 또는 위임이 지원되는 경우 **실행 컨텍스트를 이 계정으로 설정**을 선택할 수 있습니다.  
   
-8.  **확인**을 클릭합니다.  
+8.  **OK**(확인)를 클릭합니다.  
   
-     ![맨 위 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [저장된 자격 증명에 대한 보안 정책 요구 사항](#bkmk_top)  
+     ![맨 위 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [저장된 자격 증명에 대한 보안 정책 요구 사항](#bkmk_top)  
   
 ##  <a name="bkmk_stored_credentials_shared_data_source_native"></a> 공유 데이터 원본에 대해 저장된 자격 증명 구성(기본 모드)  
   
@@ -121,13 +121,13 @@ ms.locfileid: "68891853"
   
 6.  **적용**을 클릭합니다.  
   
-     ![맨 위 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [저장된 자격 증명에 대한 보안 정책 요구 사항](#bkmk_top)  
+     ![맨 위 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [저장된 자격 증명에 대한 보안 정책 요구 사항](#bkmk_top)  
   
 ##  <a name="bkmk_stored_credentials_shared_data_source_sharepoint"></a> 공유 데이터 원본에 대해 저장된 자격 증명 구성(SharePoint 모드)  
   
 1.  문서 라이브러리에서 공유 데이터 원본 항목을 찾습니다.![공유 데이터 원본 아이콘](../../reporting-services/report-data/media/hlp-16datasource.png "공유 데이터 원본 아이콘")  
   
-2.  상황에 맞는 메뉴 ![SSRS의 문서 라이브러리 상황에 맞는 메뉴 항목](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "SSRS의 문서 라이브러리 상황에 맞는 메뉴 항목")을 클릭한 다음 두 번째 상황에 맞는 메뉴![SSRS의 문서 라이브러리 상황에 맞는 메뉴 항목](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "SSRS의 문서 라이브러리 상황에 맞는 메뉴 항목")을 클릭합니다.  
+2.  바로 가기 메뉴인 ![SSRS의 문서 라이브러리 상황에 맞는 메뉴 항목](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "SSRS의 문서 라이브러리 상황에 맞는 메뉴 항목")을 클릭한 다음, 두 번째 바로 가기 메뉴인 ![SSRS의 문서 라이브러리 상황에 맞는 메뉴 항목](../../reporting-services/report-data/media/ssrs-sharepoint-item-context-menu.png "SSRS의 문서 라이브러리 상황에 맞는 메뉴 항목")을 클릭합니다.  
   
 3.  **데이터 원본 정의 편집**을 클릭합니다.  
   
@@ -147,9 +147,9 @@ ms.locfileid: "68891853"
   
     -   사용자 이름과 암호가 데이터베이스 자격 증명인 경우 **Windows 자격 증명으로 사용**을 선택하지 않습니다. 데이터베이스 서버에서 가장 또는 위임이 지원되는 경우 **실행 컨텍스트를 이 계정으로 설정**을 선택할 수 있습니다.  
   
-7.  **확인**을 클릭합니다.  
+7.  **Ok**를 클릭합니다.  
   
-     ![맨 위 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [저장된 자격 증명에 대한 보안 정책 요구 사항](#bkmk_top)  
+     ![맨 위 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [저장된 자격 증명에 대한 보안 정책 요구 사항](#bkmk_top)  
   
 ## <a name="see-also"></a>참고 항목  
  [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   

@@ -16,10 +16,10 @@ ms.assetid: 78db89d6-a8a0-4116-8885-548e627220ed
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 87d3dfc2183bdc00261417a024507b41ea5fde28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67952748"
 ---
 # <a name="getconnection-method-javalangstring-javalangstring"></a>getConnection 메서드(java.lang.String, java.lang.String)
@@ -44,16 +44,16 @@ public java.sql.Connection getConnection(java.lang.String username,
   
  암호가 포함된 **문자열**입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
- 이 getConnection 메서드는 javax.sql 인터페이스의 getConnection 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 getConnection 메서드는 javax.sql.DataSource 인터페이스의 getConnection 메서드에 의해 지정됩니다.  
   
- Null이 아닌 사용자 이름 또는 암호로 getConnection 메서드를 호출 하면 SQLServerConnection 개체를 초기화할 때 SQLServerDataSource 클래스에 설정 된 사용자 이름 및 암호 속성이 바뀝니다. 예를 들어 호출자가 데이터 원본에 대해 [setUser](../../../connect/jdbc/reference/setuser-method-sqlserverdatasource.md) 및 [setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md)를 호출한 다음, getConnection을 호출하고 null이 아닌 사용자 이름이나 null이 아닌 암호를 제공하면 setUser 및 setPassword로 설정된 사용자 이름과 암호는 getConnection에 전달된 사용자 이름 및 암호로 대체됩니다.  
+ null이 아닌 사용자 이름 또는 암호를 사용하여 getConnection 메서드를 호출하면 SQLServerConnection 개체를 초기화할 때 SQLServerDataSource 클래스에 설정된 사용자 이름 및 암호 속성이 대체됩니다. 예를 들어 호출자가 데이터 원본에 대해 [setUser](../../../connect/jdbc/reference/setuser-method-sqlserverdatasource.md) 및 [setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md)를 호출한 다음, getConnection을 호출하고 null이 아닌 사용자 이름이나 null이 아닌 암호를 제공하면 setUser 및 setPassword로 설정된 사용자 이름과 암호는 getConnection에 전달된 사용자 이름 및 암호로 대체됩니다.  
   
 > [!NOTE]  
 >  [setURL](../../../connect/jdbc/reference/seturl-method-sqlserverdatasource.md) 메서드를 호출하여 URL 내부에서 설정된 사용자 이름 및 암호는 이 경우에도 변경되지 않습니다.  

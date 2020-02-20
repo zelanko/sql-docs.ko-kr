@@ -1,6 +1,6 @@
 ---
 title: rxDataStep을 사용하여 테이블 만들기
-description: SQL Server에서 R 언어를 사용하여 SQL Server 테이블을 만드는 방법에 대한 자습서 연습입니다.
+description: 'RevoScaleR 자습서 11: SQL Server에서 R 언어를 사용하여 SQL Server 테이블을 만드는 방법을 안내합니다.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,28 +9,28 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f4ac51fc1affb4128abab017eb00cba4b56960fa
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 99f693210b567523b74f851d1db68470cae2891d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727250"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947262"
 ---
 # <a name="create-new-sql-server-table-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>rxDataStep을 사용하여 새 SQL Server 테이블 만들기(SQL Server 및 RevoScaleR 자습서)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 단원은 SQL Server에서 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)의 일부입니다.
+이 자습서는 SQL Server에서 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서 시리즈](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 중 자습서 11에 해당됩니다.
 
-이 단원에서는 메모리 내 데이터 프레임, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컨텍스트 및 로컬 파일 간에 데이터를 이동하는 방법을 알아봅니다.
+이 자습서에서는 메모리 내 데이터 프레임, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컨텍스트 및 로컬 파일 간에 데이터를 이동하는 방법을 알아봅니다.
 
 > [!NOTE]
-> 이 단원에서는 다른 데이터 세트가 사용됩니다. 항공사 지연 데이터 세트는 Machine Learning 실험을 위해 널리 사용되는 공용 데이터 세트입니다. 이 예제에 사용되는 데이터 파일은 다른 제품 샘플들과 동일한 디렉터리에 있습니다.
+> 이 자습서에서는 다른 데이터 세트가 사용됩니다. 항공사 지연 데이터 세트는 Machine Learning 실험을 위해 널리 사용되는 공용 데이터 세트입니다. 이 예제에 사용되는 데이터 파일은 다른 제품 샘플들과 동일한 디렉터리에 있습니다.
 
 ## <a name="load-data-from-a-local-xdf-file"></a>로컬 XDF 파일에서 데이터 로드
 
-이 자습서의 처음 절반 부분에서는 **RxTextData** 함수를 사용하여 데이터를 텍스트 파일에서 R로 가져온 후, **RxDataStep** 함수를 사용하여 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 이동했습니다.
+이 자습서 시리즈의 처음 절반 부분에서는 **RxTextData** 함수를 사용하여 데이터를 텍스트 파일에서 R로 가져온 후, **RxDataStep** 함수를 사용하여 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 이동했습니다.
 
-이 단원에서는 다른 접근 방법에 따라 [XDF 형식](https://en.wikipedia.org/wiki/Extensible_Data_Format)으로 저장된 파일의 데이터를 사용합니다. XDF 파일을 사용하여 데이터에 대해 몇 가지 간단한 변환을 수행한 후 변환된 데이터를 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 저장합니다.
+이 자습서에서는 다른 접근 방법에 따라 [XDF 형식](https://en.wikipedia.org/wiki/Extensible_Data_Format)으로 저장된 파일의 데이터를 사용합니다. XDF 파일을 사용하여 데이터에 대해 몇 가지 간단한 변환을 수행한 후 변환된 데이터를 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 저장합니다.
 
 **XDF란?**
 

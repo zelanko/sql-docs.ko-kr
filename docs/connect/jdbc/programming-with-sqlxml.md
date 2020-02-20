@@ -11,10 +11,10 @@ ms.assetid: 4d2cc57c-7293-4d92-b8b1-525e2b35f591
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22f225799e704b7a34449bbfc69ef351cc4d4ac1
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027768"
 ---
 # <a name="programming-with-sqlxml"></a>SQLXML을 사용한 프로그래밍
@@ -27,11 +27,11 @@ ms.locfileid: "69027768"
 ## <a name="reading-and-writing-xml-data-with-sqlxml-objects"></a>SQLXML 개체를 사용하여 XML 데이터 읽기 및 쓰기  
  다음 목록은 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] API 메서드를 사용하여 SQLXML 개체를 통해 XML 데이터를 읽고 쓰는 방법에 대해 설명합니다.  
   
--   SQLXML 개체를 만들려면 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스의 [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) 메서드를 사용합니다. 이 메서드는 데이터가 포함되어 있지 않은 SQLXML 개체를 만듭니다. SQLXML 개체에 **xml** 데이터를 추가 하려면 sqlxml 인터페이스에 지정 된 다음 메서드 (setresult, SetCharacterStream, setBinaryStream 또는 setresult) 중 하나를 호출 합니다.  
+-   SQLXML 개체를 만들려면 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스의 [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) 메서드를 사용합니다. 이 메서드는 데이터가 포함되어 있지 않은 SQLXML 개체를 만듭니다. SQLXML 개체에 **xml** 데이터를 추가하려면 SQLXML 인터페이스에 지정된 메서드 setResult, setCharacterStream, setBinaryStream 또는 setString 중 하나를 호출합니다.  
   
 -   SQLXML 개체 자체를 검색하려면 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스 또는 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스의 getSQLXML 메서드를 사용합니다.  
   
--   SQLXML 개체에서 **xml** 데이터를 검색 하려면 sqlxml 인터페이스에 지정 된 Getsource, GetCharacterStream, getBinaryStream 또는 getString 메서드 중 하나를 사용 합니다.  
+-   SQLXML 개체에서 **xml** 데이터를 검색하려면 SQLXML 인터페이스에 지정된 메서드 getSource, getCharacterStream, getBinaryStream 또는 getString중 하나를 사용합니다.  
   
 -   SQLXML 개체의 **xml** 데이터를 업데이트하려면 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스의 [updateSQLXML](../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md) 메서드를 사용합니다.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "69027768"
 ## <a name="adaptive-buffering-and-sqlxml-support"></a>적응 버퍼링 및 SQLXML 지원  
  SQLXML 개체가 반환하는 이진 및 문자 스트림은 선택 또는 전체 버퍼링 모드를 따르지만 XML 파서가 스트림이 아닌 경우에는 선택 또는 전체 설정을 따르지 않습니다. 적응 버퍼링 사용에 대한 자세한 내용은 [적응 버퍼링 사용](../../connect/jdbc/using-adaptive-buffering.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [XML 데이터 지원](../../connect/jdbc/supporting-xml-data.md)  
   
   

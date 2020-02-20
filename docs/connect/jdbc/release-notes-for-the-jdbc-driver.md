@@ -11,10 +11,10 @@ ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 04a179492b151e664dfe31f4fe4e51c5440fcef5
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027795"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Microsoft JDBC Driver에 대한 릴리스 정보
@@ -24,35 +24,35 @@ ms.locfileid: "69027795"
 이 문서에는 _SQL Server용 Microsoft JDBC Driver_의 릴리스가 나열되어 있습니다. 릴리스 버전별로 변경 내용을 밝히고 설명합니다.
 ## <a name="741"></a>7.4.1
 
-### <a name="compliance"></a>호환성
+### <a name="compliance"></a>규정 준수
 
-2019 년 8 월 2 일
+2019년 8월 2일
 
 | 규정 준수 변경 | 세부 정보 |
 | :---------------- | :------ |
 | JDBC Driver 7.4의 최신 업데이트를 다운로드합니다. | &bull; &nbsp; [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?linkid=2099962)<br/>&bull; &nbsp; [GitHub, 7.4.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.4.1)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
 | JDBC API 사양 4.2를 완벽히 준수합니다. | 7\.4 패키지의 jar는 Java 버전 호환성에 따라 이름이 지정됩니다.<br/><br/>예를 들어 7.4 패키지의 mssql-jdbc-7.4.1.jre11.jar 파일은 Java 11과 함께 사용해야 합니다. |
-| JDK (Java Development Kit) 버전 12.0, 11.0 및 1.8와 호환 됩니다. | SQL Server용 Microsoft JDBC Driver 7.4는 이제 JDK 11.0 및 1.8 외에도 JDK(Java Development Kit) 버전 12.0과도 호환됩니다. |
+| JDK(Java Development Kit) 버전 12.0, 11.0 및 1.8과 호환됩니다. | SQL Server용 Microsoft JDBC Driver 7.4는 이제 JDK 11.0 및 1.8 외에도 JDK(Java Development Kit) 버전 12.0과도 호환됩니다. |
 | &nbsp; | &nbsp; |
 
 ### <a name="support-for-jdk-12"></a>JDK 12 지원
 
 SQL Server용 Microsoft JDBC Driver 7.4는 이제 JDK 11.0 및 1.8 외에도 JDK(Java Development Kit) 버전 12.0과도 호환됩니다.
 
-### <a name="introduces-ntlm-authentication"></a>NTLM 인증 도입
+### <a name="introduces-ntlm-authentication"></a>NTLM 인증 소개
 
 | NTLM 변경 | 세부 정보 |
 | :--------- | :------ |
-| NTLM 인증 모드를 지원 합니다. | 이 인증 모드를 사용 하면 windows 및 비 Windows 클라이언트 모두 Windows 도메인 사용자를 사용 하 여 SQL Server에 대해 인증할 수 있습니다. |
-| 이 인증 모드를 사용하기 위한 자세한 내용 및 애플리케이션 예제 | [NTLM 인증을 사용 하 여 연결](../../connect/jdbc/using-ntlm-authentication-to-connect-to-sql-server.md)을 참조 하세요. |
+| NTLM 인증 모드를 지원합니다. | 이 인증 모드를 사용하면 Windows 및 다른 운영 체제의 클라이언트가 모두 Windows 도메인 사용자를 사용하여 SQL Server에 대해 자신을 인증할 수 있습니다. |
+| 이 인증 모드를 사용하기 위한 자세한 내용 및 애플리케이션 예제 | [NTLM 인증을 사용하여 연결](../../connect/jdbc/using-ntlm-authentication-to-connect-to-sql-server.md)을 참조하세요. |
 | &nbsp; | &nbsp; |
 
-### <a name="introduces-querying-parametermetadata-via-_usefmtonly_"></a>_UseFmtOnly_ 를 통해 parametermetadata 쿼리를 소개 합니다.
+### <a name="introduces-querying-parametermetadata-via-_usefmtonly_"></a>_useFmtOnly_를 통해 ParameterMetaData 쿼리를 소개
 
 | useFmtOnly 변경 | 세부 정보 |
 | :---------- | :------ |
-| **useFmtOnly** 연결 속성이 추가 되었습니다. | 이 기능을 사용 하면 사용자가 필요에 따라 레거시 `SET FMTONLY ON` API를 통해 parametermetadata를 쿼리할 수 있습니다. 이는가 예상 대로 수행 `sp_describe_undeclared_parameters` 되지 않는 시나리오에 유용 합니다. |
-| 추가 정보 및 제한 사항. | [useFmtOnly 사용](../../connect/jdbc/using-usefmtonly.md) 참조 |
+| **useFmtOnly** 연결 속성이 추가되었습니다. | 이 기능을 사용하면 `SET FMTONLY ON` 레거시 API를 통해 ParameterMetaData를 선택적으로 쿼리할 수 있습니다. 이 기능은 `sp_describe_undeclared_parameters`가 예상대로 작동하지 않는 시나리오에 유용합니다. |
+| 세부 사항 및 제한 사항 | [useFmtOnly 사용](../../connect/jdbc/using-usefmtonly.md) 참조 |
 | &nbsp; | &nbsp; |
 
 ### <a name="updated-_microsoft-azure-key-vault-sdk-for-java_-version-121"></a>업데이트된 _Java용 Microsoft Azure Key Vault SDK_ 버전: 1.2.1
@@ -69,12 +69,12 @@ SQL Server용 Microsoft JDBC Driver 7.4는 이제 JDK 11.0 및 1.8 외에도 JDK
 | 알려진 문제 | 세부 정보 |
 | :----------- | :------ |
 | NTLM 인증을 사용하는 경우 | 확장 보호 및 암호화된 연결을 동시에 활성화하는 기능은 현재 지원되지 않습니다. |
-| useFmtOnly를 사용하는 경우 | 이 기능에는 SQL 구문 분석 논리의 결함으로 인해 발생하는 몇 가지 문제가 있습니다. 자세한 내용 및 해결 방법에 대해서는 [UseFmtOnly 사용](../../connect/jdbc/using-usefmtonly.md) 을 참조 하세요. |
+| useFmtOnly를 사용하는 경우 | 이 기능에는 SQL 구문 분석 논리의 결함으로 인해 발생하는 몇 가지 문제가 있습니다. 자세한 내용 및 해결 방법에 관한 제안은 [useFmtOnly 사용](../../connect/jdbc/using-usefmtonly.md)을 참조하세요. |
 | &nbsp; | &nbsp; |
 
 ## <a name="722"></a>7.2.2
 
-### <a name="compliance"></a>호환성
+### <a name="compliance"></a>규정 준수
 
 2019년 4월 16일
 
@@ -213,7 +213,7 @@ SQL Server용 Microsoft JDBC Driver 6.4는 JDBC API 사양 4.1 및 4.2를 완벽
 
 ### <a name="added-connection-property-sslprotocol"></a>추가된 연결 속성: sslProtocol
 
-새 연결 속성을 사용하면 TLS 프로토콜 키워드를 지정할 수 있습니다. 가능한 값은 "TLS", "TLSv1", "TLSv1.1" 및 "TLSv1.2"입니다. 자세한 내용은 [SSLProtocol](https://github.com/Microsoft/mssql-jdbc/wiki/SSLProtocol)을 참조하세요.
+새 연결 속성을 사용하면 TLS 프로토콜 키워드를 지정할 수 있습니다. 가능한 값은 다음과 같습니다. "TLS", "TLSv1", "TLSv1.1" 및 "TLSv1.2". 자세한 내용은 [SSLProtocol](https://github.com/Microsoft/mssql-jdbc/wiki/SSLProtocol)을 참조하세요.
 
 ### <a name="deprecated-connection-property-fipsprovider"></a>사용되지 않는 연결 속성: fipsProvider
 
@@ -297,7 +297,7 @@ SQL Server용 Microsoft JDBC Driver 6.1은 JDBC API 사양 4.1 및 4.2를 완벽
 
 SQL Server용 Microsoft JDBC Driver 6.0은 JDBC API 사양 4.1 및 4.2를 완벽하게 준수합니다. 6\.0 패키지의 jar는 JDBC API 버전에 따라 이름이 지정됩니다. 예를 들어 6.0 패키지의 sqljdbc42.jar는 JDBC API 4.2를 준수합니다. 마찬가지로 sqljdbc41.jar 파일은 JDBC API 4.1을 준수합니다.
 
-적절한 sqljdbc42.jar 또는 sqljdbc41.jar 파일이 있는지 확인하려면 다음 코드 줄을 실행합니다. 출력이 "드라이버 버전: 6.0.7507.100"이면 JDBC Driver 6.0 패키지가 있는 것입니다.
+적절한 sqljdbc42.jar 또는 sqljdbc41.jar 파일이 있는지 확인하려면 다음 코드 줄을 실행합니다. 출력이 "드라이버 버전: 6.0.7507.100"인 경우 JDBC 드라이버 6.0 패키지가 있음을 의미합니다.
 
 ```java
 Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;user=<user>;password=<password>;");
@@ -334,7 +334,7 @@ TVP를 사용하면 데이터를 처리하는 데 여러 번 왕복하거나 서
 
 SQL Server용 Microsoft JDBC Driver 4.2는 JDBC API 사양 4.1 및 4.2를 완벽하게 준수합니다. 4\.2 패키지의 jar는 JDBC API 버전에 따라 이름이 지정됩니다. 예를 들어 4.2 패키지의sqljdbc42.jar 파일은 JDBC API 4.2를 준수합니다. 마찬가지로 sqljdbc41.jar 파일은 JDBC API 4.1을 준수합니다.
 
-적절한 sqljdbc42.jar 또는 sqljdbc41.jar 파일이 있는지 확인하려면 다음 코드 줄을 실행합니다. 출력이 "드라이버 버전: 4.2.6420.100"이면 JDBC Driver 4.2 패키지가 있는 것입니다.
+적절한 sqljdbc42.jar 또는 sqljdbc41.jar 파일이 있는지 확인하려면 다음 코드 줄을 실행합니다. 출력이 "드라이버 버전: 4.2.6420.100"인 경우 JDBC 드라이버 4.2 패키지가 있음을 의미합니다.
 
 ```java
 Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;user=<user>;password=<password>;");
@@ -371,6 +371,6 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
 
 SQL Server 애플리케이션용 Microsoft JDBC Driver 6.4, 6.0, 4.2 및 4.1은 Itanium 컴퓨터에서 실행할 수 없습니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [JDBC 드라이버 개요](../../connect/jdbc/overview-of-the-jdbc-driver.md)

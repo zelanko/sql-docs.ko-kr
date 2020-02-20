@@ -12,10 +12,10 @@ ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d7cbcb0b2cd0da8bd13d28620261c2e9894463db
-ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67564030"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>보고서 서버 애플리케이션을 위한 사용 가능한 메모리 구성
@@ -36,10 +36,10 @@ ms.locfileid: "67564030"
   
  시스템에 메모리 가중 상태가 없는 경우 각 서버 애플리케이션은 실제로 요청을 받을 때 최적의 성능을 제공할 수 있도록 요청을 받기 전에 시작 시 약간의 메모리를 요청합니다. 메모리 가중 정도가 심해지면 보고서 서버가 다음 표에 설명된 대로 해당 프로세스 모델을 조정합니다.  
   
-|메모리 가중|서버 응답|  
+|메모리 압력|서버 응답|  
 |---------------------|---------------------|  
 |낮음|현재 요청이 계속 처리됩니다. 새 요청은 대부분 받아들여집니다. 백그라운드 처리 애플리케이션으로 전송된 요청에는 보고서 서버 웹 서비스로 전송된 요청보다 낮은 우선 순위가 부여됩니다.|  
-|보통|현재 요청이 계속 처리됩니다. 새 요청은 받아들여질 수 있습니다. 백그라운드 처리 애플리케이션으로 전송된 요청에는 보고서 서버 웹 서비스로 전송된 요청보다 낮은 우선 순위가 부여됩니다. 웹 서비스 요청에 더 많은 메모리를 사용할 수 있도록 백그라운드 처리의 메모리를 상대적으로 더 많이 줄여 세 개의 서버 애플리케이션 모두에 대한 메모리 할당이 줄어듭니다.|  
+|중간|현재 요청이 계속 처리됩니다. 새 요청은 받아들여질 수 있습니다. 백그라운드 처리 애플리케이션으로 전송된 요청에는 보고서 서버 웹 서비스로 전송된 요청보다 낮은 우선 순위가 부여됩니다. 웹 서비스 요청에 더 많은 메모리를 사용할 수 있도록 백그라운드 처리의 메모리를 상대적으로 더 많이 줄여 세 개의 서버 애플리케이션 모두에 대한 메모리 할당이 줄어듭니다.|  
 |높음|메모리 할당이 더 줄어듭니다. 더 많은 메모리를 요청하는 서버 애플리케이션은 거부됩니다. 현재 요청은 느려져 완료되는 데 더 많은 시간이 소요됩니다. 새 요청은 받아들여지지 않습니다. 보고서 서버가 메모리 내 데이터 파일을 디스크로 스왑합니다.<br /><br /> 메모리 제약 조건이 심해지고 새 요청을 처리하는 데 사용할 수 있는 메모리가 없는 경우 보고서 서버는 현재 요청이 완료되는 동안 HTTP 503 서버 사용할 수 없음 오류를 반환합니다. 경우에 따라 메모리 가중 정도를 즉시 낮추기 위해 애플리케이션 도메인이 재활용될 수 있습니다.|  
   
  다양한 메모리 가중 시나리오에 대한 보고서 서버 응답을 사용자 지정할 수는 없지만 메모리 가중 응답을 높음, 보통, 낮음으로 구분하는 경계를 정의하는 구성 설정을 지정할 수 있습니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "67564030"
   
  다음 표에서는 **WorkingSetMaximum**, **WorkingSetMinimum**, **MemorySafetyMargin**및 **MemoryThreshold** 설정을 설명합니다. 구성 설정은 [RSReportServer 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)에 지정되어 있습니다.  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |**WorkingSetMaximum**|값 초과 시 보고서 서버 애플리케이션에 대한 새 메모리 할당 요청이 더 이상 허가되지 않는 메모리 임계값을 지정합니다.<br /><br /> 기본적으로 보고서 서버는 **WorkingSetMaximum** 을 컴퓨터에서 사용 가능한 메모리 양으로 설정합니다. 이 값은 서비스가 시작될 때 검색됩니다.<br /><br /> 이 설정을 직접 추가하지 않으면 RSReportServer.config 파일에 나타나지 않습니다. 보고서 서버가 메모리를 더 적게 사용하도록 하려면 RSReportServer.config 파일을 수정하고 요소와 값을 추가합니다. 유효한 값은 0에서 최대 정수 사이입니다. 이 값은 KB로 표시됩니다.<br /><br /> **WorkingSetMaximum** 의 값에 도달하면 보고서 서버가 새 요청을 받아들이지 않습니다. 현재 진행 중인 요청은 완료되도록 허용됩니다. 새 요청은 메모리 사용이 **WorkingSetMaximum**을 통해 지정된 값 아래로 떨어질 때만 받아들여집니다.<br /><br /> **WorkingSetMaximum** 값에 도달한 후에도 기존 요청이 추가 메모리를 계속 사용하는 경우 모든 보고서 서버 애플리케이션 도메인이 재활용됩니다. 자세한 내용은 [Application Domains for Report Server Applications](../../reporting-services/report-server/application-domains-for-report-server-applications.md)을 참조하세요.|  
 |**WorkingSetMinimum**|리소스 소비량에 대한 하한값을 지정합니다. 보고서 서버는 전체 메모리 사용이 이 값 미만인 경우 메모리를 해제하지 않습니다.<br /><br /> 기본적으로 이 값은 서비스 시작 시 계산됩니다. 계산 시 초기 메모리 할당 요청은 **WorkingSetMaximum**의 60%입니다.<br /><br /> 이 설정을 직접 추가하지 않으면 RSReportServer.config 파일에 나타나지 않습니다. 이 값을 사용자 지정하려는 경우 RSReportServer.config 파일에 **WorkingSetMinimum** 요소를 추가해야 합니다. 유효한 값은 0에서 최대 정수 사이입니다. 이 값은 KB로 표시됩니다.|  
@@ -86,9 +86,9 @@ ms.locfileid: "67564030"
 ```  
   
 #### <a name="about-aspnet-memory-configuration-settings"></a>ASP.NET 메모리 구성 설정 정보  
- 이전 버전은 2016 이상 보고서 서버 웹 서비스 및 웹 포털은 HTML5 응용 프로그램 이지만 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 응용 프로그램의 경우 모두 응용 프로그램에서 지정 하는 메모리 구성 설정에 응답 합니다 **processModel**  섹션에 대 한 machine.config의 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] IIS 5.0 및 더 높은 호환성 모드에서 실행 되는 응용 프로그램입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 RSReportServer.config 파일에서만 메모리 구성 설정을 읽습니다.  
+ 2016 및 이후 보고서 서버 웹 서비스와 웹 포털은 HTML5 애플리케이션이며 이전 버전은 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 애플리케이션이지만 이 중 어떤 애플리케이션도 IIS 5.0 이상의 호환성 모드에서 실행되는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 애플리케이션의 machine.config **processModel** 섹션에서 지정하는 메모리 구성 설정에 응답하지 않습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 RSReportServer.config 파일에서만 메모리 구성 설정을 읽습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [RSReportServer 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
  [보고서 서버 애플리케이션을 위한 애플리케이션 도메인](../../reporting-services/report-server/application-domains-for-report-server-applications.md)  

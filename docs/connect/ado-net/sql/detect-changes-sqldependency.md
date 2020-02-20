@@ -1,6 +1,6 @@
 ---
 title: SqlDependency로 변경 내용 감지
-description: 쿼리 결과가 원래 수신 된 결과와 다를 때를 검색 하는 방법을 보여 줍니다.
+description: 쿼리 결과가 원래 수신된 결과와 다를 때를 감지하는 방법을 보여 줍니다.
 ms.date: 09/30/2019
 dev_langs:
 - csharp
@@ -9,45 +9,45 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 2d2c4c48a9085fa83d6104233be5f2e1c6b11318
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 6a003670c15ac95b6f0a5f70d0997c1c854b089e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452241"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247817"
 ---
 # <a name="detecting-changes-with-sqldependency"></a>SqlDependency로 변경 내용 감지
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET 다운로드](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-쿼리 결과가 원래 검색 된 결과와 다를 때를 감지 하기 위해 <xref:Microsoft.Data.SqlClient.SqlDependency> 개체를 <xref:Microsoft.Data.SqlClient.SqlCommand>에 연결할 수 있습니다. 연결 된 명령의 결과가 변경 될 때 발생 하는 `OnChange` 이벤트에 대리자를 할당할 수도 있습니다. 명령을 실행 하기 전에 <xref:Microsoft.Data.SqlClient.SqlDependency>를 명령과 연결 해야 합니다. @No__t_1의 `HasChanges` 속성을 사용 하 여 데이터를 처음 검색 한 이후 쿼리 결과가 변경 되었는지 여부를 확인할 수도 있습니다.
+쿼리 결과가 원래 검색된 결과와 다를 때를 감지하기 위해 <xref:Microsoft.Data.SqlClient.SqlDependency> 개체를 <xref:Microsoft.Data.SqlClient.SqlCommand>에 연결할 수 있습니다. 연결된 명령의 결과가 변경될 때 발생하는 `OnChange` 이벤트에 대리자를 할당할 수도 있습니다. 명령을 실행하기 전에 <xref:Microsoft.Data.SqlClient.SqlDependency>를 명령과 연결해야 합니다. <xref:Microsoft.Data.SqlClient.SqlDependency>의 `HasChanges` 속성을 사용하여 데이터를 처음 검색한 이후 쿼리 결과가 변경되었는지 여부를 확인할 수도 있습니다.
 
 ## <a name="security-considerations"></a>보안 고려 사항
 
-종속성 인프라는 지정 된 명령에 대 한 기본 데이터가 변경 되었다는 알림을 받기 위해 <xref:Microsoft.Data.SqlClient.SqlDependency.Start%2A> 호출 될 때 열리는 <xref:Microsoft.Data.SqlClient.SqlConnection>에 의존 합니다. 클라이언트에서 `SqlDependency.Start`에 대 한 호출을 시작 하는 기능은 <xref:Microsoft.Data.SqlClient.SqlClientPermission> 및 코드 액세스 보안 특성을 사용 하 여 제어 됩니다. 자세한 내용은 [쿼리 알림 사용](enable-query-notifications.md)을 참조 하세요.
+종속성 인프라는 지정된 명령에 대한 기본 데이터가 변경되었다는 알림을 받기 위해 <xref:Microsoft.Data.SqlClient.SqlDependency.Start%2A>가 호출될 때 열리는 <xref:Microsoft.Data.SqlClient.SqlConnection>에 의존합니다. 클라이언트에서 `SqlDependency.Start`에 대한 호출을 시작하는 기능은 <xref:Microsoft.Data.SqlClient.SqlClientPermission> 및 코드 액세스 보안 특성을 사용하여 제어됩니다. 자세한 내용은 [쿼리 알림 사용](enable-query-notifications.md)을 참조하세요.
 
 ### <a name="example"></a>예제
 
-다음 단계에서는 종속성을 선언 하 고, 명령을 실행 하 고, 결과 집합이 변경 될 때 알림을 수신 하는 방법을 보여 줍니다.
+다음 단계에서는 종속성을 선언하고, 명령을 실행하고, 결과 집합이 변경될 때 알림을 받는 방법을 보여 줍니다.
 
 1. 서버에 대한 `SqlDependency` 연결을 개시합니다.
 
-2. 서버에 연결 하 고 Transact-sql 문을 정의 하는 <xref:Microsoft.Data.SqlClient.SqlConnection> 및 <xref:Microsoft.Data.SqlClient.SqlCommand> 개체를 만듭니다.
+2. <xref:Microsoft.Data.SqlClient.SqlConnection> 및 <xref:Microsoft.Data.SqlClient.SqlCommand> 개체를 만들어 서버에 연결하고 Transact-SQL 문을 정의합니다.
 
-3. 새 `SqlDependency` 개체를 만들거나 기존 개체를 사용 하 여 `SqlCommand` 개체에 바인딩합니다. 내부적으로는 <xref:Microsoft.Data.Sql.SqlNotificationRequest> 개체를 만들고 필요에 따라 명령 개체에 바인딩합니다. 이 알림 요청에는이 `SqlDependency` 개체를 고유 하 게 식별 하는 내부 식별자가 포함 됩니다. 또한 아직 활성 상태가 아닌 경우 클라이언트 수신기를 시작 합니다.
+3. 새 `SqlDependency` 개체를 만들거나 기존 개체를 사용하여 `SqlCommand` 개체에 바인딩합니다. 내부적으로 이는 <xref:Microsoft.Data.Sql.SqlNotificationRequest> 개체를 만들고 필요에 따라 명령 개체에 바인딩합니다. 이 알림 요청에는 이 `SqlDependency` 개체를 고유하게 식별하는 내부 식별자가 포함됩니다. 또한 아직 활성 상태가 아닌 경우 클라이언트 수신기를 시작합니다.
 
-4. @No__t_1 개체의 `OnChange` 이벤트에 이벤트 처리기를 구독 합니다.
+4. `SqlDependency` 개체의 `OnChange` 이벤트에 이벤트 처리기를 구독합니다.
 
-5. @No__t_1 개체의 `Execute` 메서드 중 하나를 사용 하 여 명령을 실행 합니다. 명령이 알림 개체에 바인딩되기 때문에 서버에서는 알림을 생성해야 하는 것으로 인식하며 큐 정보는 종속성 큐를 가리킵니다.
+5. `SqlCommand` 개체의 `Execute` 메서드 중 하나를 사용하여 명령을 실행합니다. 명령이 알림 개체에 바인딩되기 때문에 서버에서는 알림을 생성해야 하는 것으로 인식하며 큐 정보는 종속성 큐를 가리킵니다.
 
-6. 서버에 대 한 `SqlDependency` 연결을 중지 합니다.
+6. 서버에 대한 `SqlDependency` 연결을 중단합니다.
 
-이후에 사용자가 기본 데이터를 변경 하는 경우 Microsoft SQL Server는 이러한 변경에 대해 보류 중인 알림이 있음을 감지 하 고,에서 생성 된 기본 `SqlConnection`를 통해 처리 되어 클라이언트에 전달 되는 알림을 게시 합니다. `SqlDependency.Start`를 호출 합니다. 클라이언트 수신기는 무효화 메시지를 수신 합니다. 그런 다음 클라이언트 수신기는 연결 된 `SqlDependency` 개체를 찾고 `OnChange` 이벤트를 발생 시킵니다.
+이후에 사용자가 기본 데이터를 변경하는 경우 Microsoft SQL Server는 이러한 변경 내용에 대해 보류 중 알림이 있음을 감지하고, `SqlDependency.Start`를 호출하여 생성된 기본 `SqlConnection`을 통해 처리되어 클라이언트로 전달되는 알림을 게시합니다. 클라이언트 수신기는 무효화 메시지를 수신합니다. 그런 다음 클라이언트 수신기는 연결된 `SqlDependency` 개체를 찾고 `OnChange` 이벤트를 발생시킵니다.
 
-다음 코드 조각에서는 샘플 응용 프로그램을 만드는 데 사용 하는 디자인 패턴을 보여 줍니다.
+다음 코드 조각에서는 애플리케이션 예제를 만드는 데 사용할 디자인 패턴을 보여 줍니다.
 
 ```csharp
 void Initialization()

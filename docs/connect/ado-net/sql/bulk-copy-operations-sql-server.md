@@ -7,23 +7,23 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 70eed483eb7cb857e23b110b7149badff14ab46f
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: d038b0a67923d7c475011b8f3d141f7d64358f61
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452296"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247857"
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>SQL Server에서 대량 복사 작업
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET 다운로드](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Microsoft SQL Server에는 **bcp**라는 많이 사용되는 명령줄 유틸리티가 있어 SQL Server 데이터베이스의 테이블이나 뷰로 큰 파일을 신속하게 대량 복사할 수 있습니다. @No__t_0 클래스를 사용 하면 비슷한 기능을 제공 하는 관리 코드 솔루션을 작성할 수 있습니다. INSERT 문과 같은 다른 방법을 사용하여 데이터를 SQL Server 테이블에 로드할 수 있지만 <xref:Microsoft.Data.SqlClient.SqlBulkCopy>는 훨씬 더 향상된 성능을 제공합니다.  
+Microsoft SQL Server에는 **bcp**라는 많이 사용되는 명령줄 유틸리티가 있어 SQL Server 데이터베이스의 테이블이나 뷰로 큰 파일을 신속하게 대량 복사할 수 있습니다. <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 클래스를 사용하면 비슷한 기능을 제공하는 관리 코드 솔루션을 작성할 수 있습니다. INSERT 문과 같은 다른 방법을 사용하여 데이터를 SQL Server 테이블에 로드할 수 있지만 <xref:Microsoft.Data.SqlClient.SqlBulkCopy>는 훨씬 더 향상된 성능을 제공합니다.  
   
-@No__t_0 클래스를 사용 하 여 다음을 수행할 수 있습니다.  
+<xref:Microsoft.Data.SqlClient.SqlBulkCopy> 클래스를 사용하면 다음을 수행할 수 있습니다.  
   
 - 단일 대량 복사 작업  
   
@@ -36,16 +36,16 @@ Microsoft SQL Server에는 **bcp**라는 많이 사용되는 명령줄 유틸리
   
 ## <a name="in-this-section"></a>섹션 내용  
 [대량 복사 예제 설정](bulk-copy-example-setup.md)  
-대량 복사 예에 사용 된 테이블에 대해 설명 하 고 AdventureWorks 데이터베이스에서 테이블을 만들기 위한 SQL 스크립트를 제공 합니다.  
+대량 복사 예제에 사용된 테이블에 대해 설명하고 AdventureWorks 데이터베이스에서 테이블을 만들기 위한 SQL 스크립트를 제공합니다.  
   
 [단일 대량 복사 작업](single-bulk-copy-operations.md)  
-@No__t_0 클래스를 사용 하 여 SQL Server 인스턴스에 데이터의 단일 대량 복사를 수행 하는 방법 및 Transact-sql 문과 <xref:Microsoft.Data.SqlClient.SqlCommand> 클래스를 사용 하 여 대량 복사 작업을 수행 하는 방법을 설명 합니다.  
+<xref:Microsoft.Data.SqlClient.SqlBulkCopy> 클래스를 사용하여 SQL Server 인스턴스에 데이터의 단일 대량 복사를 수행하는 방법 및 Transact-SQL 문과 <xref:Microsoft.Data.SqlClient.SqlCommand> 클래스를 사용하여 대량 복사 작업을 수행하는 방법을 각각 설명합니다.  
   
 [여러 대량 복사 작업](multiple-bulk-copy-operations.md)  
-@No__t_0 클래스를 사용 하 여 SQL Server 인스턴스에 데이터의 여러 대량 복사 작업을 수행 하는 방법을 설명 합니다.  
+<xref:Microsoft.Data.SqlClient.SqlBulkCopy> 클래스를 사용하여 SQL Server 인스턴스에 데이터의 여러 대량 복사 작업을 수행하는 방법을 설명합니다.  
   
 [트랜잭션 및 대량 복사 작업](transaction-bulk-copy-operations.md)  
-트랜잭션을 커밋하거나 롤백하는 방법을 포함 하 여 트랜잭션 내에서 대량 복사 작업을 수행 하는 방법을 설명 합니다.  
+트랜잭션을 커밋하거나 롤백하는 방법을 포함해 트랜잭션 내에서 대량 복사 작업을 수행하는 방법을 설명합니다.  
   
 ## <a name="next-steps"></a>다음 단계
 - [SQL Server 및 ADO.NET](index.md)

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6e7f602107e828ee0bd985345ed5e641d6870558
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.openlocfilehash: 3e249bb515ca0a8b579e923e7d289fccd80ce6ef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69027223"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947135"
 ---
 # <a name="understanding-xa-transactions"></a>XA 트랜잭션 이해
 
@@ -23,14 +23,16 @@ ms.locfileid: "69027223"
 
 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 Java Platform, Enterprise Edition/JDBC 2.0 분산 트랜잭션(옵션)을 지원합니다. [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) 클래스에서 가져온 JDBC 연결은 Java Platform, Enterprise Edition(Java EE) 애플리케이션 서버와 같은 표준 분산 트랜잭션 처리 환경에 참여할 수 있습니다.  
 
-> [!WARNING]  
-> SQL용 Microsoft JDBC Driver 4.2 이상에서는 준비되지 않은 트랜잭션의 자동 롤백에 대한 기존 기능에 대해 새로운 제한 시간 옵션을 제공합니다. 자세한 내용은이 항목의 뒷부분에 나오는 준비 되지 않은 [트랜잭션의 자동 롤백에 대 한 서버 쪽 제한 시간 설정 구성](../../connect/jdbc/understanding-xa-transactions.md#BKMK_ServerSide) 을 참조 하세요.  
+이 문서에서 XA는 확장 아키텍처를 나타냅니다.
 
-## <a name="remarks"></a>Remarks
+> [!WARNING]  
+> SQL용 Microsoft JDBC Driver 4.2 이상에서는 준비되지 않은 트랜잭션의 자동 롤백에 대한 기존 기능에 대해 새로운 제한 시간 옵션을 제공합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [준비되지 않은 트랜잭션의 자동 롤백에 대해 서버 쪽 제한 시간 설정 구성](../../connect/jdbc/understanding-xa-transactions.md#BKMK_ServerSide)을 참조하세요.  
+
+## <a name="remarks"></a>설명
 
 분산 트랜잭션을 구현하는 데 필요한 클래스는 다음과 같습니다.  
   
-| 클래스                                              | 구현                      | 설명                                       |
+| 클래스                                              | 구현                      | Description                                       |
 | -------------------------------------------------- | ------------------------------- | ------------------------------------------------- |
 | com.microsoft.sqlserver.jdbc.SQLServerXADataSource | javax.sql.XADataSource          | 분산 연결용 클래스 팩터리입니다.    |
 | com.microsoft.sqlserver.jdbc.SQLServerXAResource   | javax.transaction.xa.XAResource | 트랜잭션 관리자용 리소스 어댑터입니다. |
@@ -44,9 +46,9 @@ ms.locfileid: "69027223"
 
 - XA 트랜잭션을 MS DTC(Distributed Transaction Coordinator)와 함께 사용할 경우 MS DTC의 현재 버전이 밀접하게 결합된 XA 분기 동작을 지원하지 않습니다. 예를 들어 MS DTC에는 XID(XA 분기 트랜잭션 ID)와 MS DTC 트랜잭션 ID 간에 일 대 일 매핑이 있으며 느슨하게 연결된 XA 분기에서 수행되는 작업이 다른 작업과 격리됩니다.  
   
-     [MSDTC 및 밀접하게 결합된 트랜잭션](https://support.microsoft.com/kb/938653)에서 제공하는 핫픽스를 사용하면 같은 GTRID(글로벌 트랜잭션 ID)를 사용하는 여러 개의 XA 분기가 단일 MS DTC 트랜잭션 ID에 매핑되는 밀접하게 결합된 XA 분기를 지원할 수 있습니다. 이러한 지원을 통해 밀접하게 결합된 XA 분기가 리소스 관리자에서 서로의 변경 내용을 확인할 수 있습니다(예: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]).
+- 또한 MS DTC는 동일한 GTRID(전역 트랜잭션 ID)를 사용하는 여러 XA 분기가 단일 MS DTC 트랜잭션 ID에 매핑되는 긴밀하게 결합된 XA 분기를 지원합니다. 이러한 지원을 통해 밀접하게 결합된 XA 분기가 리소스 관리자에서 서로의 변경 내용을 확인할 수 있습니다(예: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]).
   
-- [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) 플래그를 사용하면 애플리케이션에서 BQUAL(XA 분기 트랜잭션 ID)은 다르지만 GTRID(글로벌 트랜잭션 ID) 및 FormatID(형식 ID)는 동일한, 밀접하게 결합된 XA 트랜잭션을 사용할 수 있습니다. 이 기능을 사용 하려면 XAResource. start 메서드의 flags 매개 변수에 [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) 를 설정 해야 합니다.
+- [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) 플래그를 사용하면 애플리케이션에서 BQUAL(XA 분기 트랜잭션 ID)은 다르지만 GTRID(글로벌 트랜잭션 ID) 및 FormatID(형식 ID)는 동일한, 밀접하게 결합된 XA 트랜잭션을 사용할 수 있습니다. 이 기능을 사용하려면 XAResource.start 메서드의 flags 매개 변수에 [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md)를 설정해야 합니다.
   
     ```java
     xaRes.start(xid, SQLServerXAResource.SSTRANSTIGHTLYCPLD);  
@@ -60,12 +62,12 @@ MS DTC(Microsoft Distributed Transaction Coordinator)와 XA 데이터 원본을 
 > JDBC 분산 트랜잭션 구성 요소는 JDBC 드라이버 설치의 xa 디렉터리에 있습니다. 이 구성 요소에는 xa_install.sql 및 sqljdbc_xa.dll 파일이 포함됩니다.  
 
 > [!NOTE]  
-> SQL Server 2019 공개 미리 보기 CTP 2.0부터 JDBC XA 분산 트랜잭션 구성 요소는 SQL Server 엔진에 포함 되며 시스템 저장 프로시저를 사용 하 여 사용 하거나 사용 하지 않도록 설정할 수 있습니다.
-> JDBC 드라이버를 사용 하 여 XA 분산 트랜잭션을 수행 하는 데 필요한 구성 요소를 사용 하도록 설정 하려면 다음 저장 프로시저를 실행 합니다.
+> SQL Server 2019 공개 미리 보기 CTP 2.0부터 JDBC XA 분산 트랜잭션 구성 요소는 SQL Server 엔진에 포함되며 시스템 저장 프로시저를 사용하여 사용하거나 사용하지 않도록 설정할 수 있습니다.
+> JDBC 드라이버를 사용하여 XA 분산 트랜잭션을 수행하는 데 필요한 구성 요소를 사용하도록 설정하려면 다음 저장 프로시저를 실행합니다.
 >
 > EXEC sp_sqljdbc_xa_install
 >
-> 이전에 설치 된 구성 요소를 사용 하지 않도록 설정 하려면 다음 저장 프로시저를 실행 합니다.
+> 이전에 설치된 구성 요소를 사용하지 않도록 설정하려면 다음 저장 프로시저를 실행합니다.
 >
 > EXEC sp_sqljdbc_xa_uninstall
 
@@ -108,9 +110,9 @@ Windows Vista 이상:
   
 1. 분산 트랜잭션에 참여할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터의 LOG 디렉터리를 엽니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "ERRORLOG" 파일을 선택하여 엽니다. "ERRORLOG" 파일에서 "Using 'SQLJDBC_XA.dll' version ..." 구를 검색합니다.  
   
-2. 분산 트랜잭션에 참여할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터의 Binn 디렉터리를 엽니다. Sqljdbc_xa 어셈블리를 선택 합니다.
+2. 분산 트랜잭션에 참여할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터의 Binn 디렉터리를 엽니다. sqljdbc_xa.dll 어셈블리를 선택합니다.
 
-    - Windows Vista 이상의 경우 sqljdbc_xa.dll을 마우스 오른쪽 단추로 클릭한 다음 속성을 선택합니다. 그런 다음, **세부 정보** 탭을 클릭합니다. **파일 버전** 필드에는 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 설치되어 있는 sqljdbc_xa.dll 버전이 표시됩니다.  
+    - Windows Vista 이상: sqljdbc_xa.dll을 마우스 오른쪽 단추로 클릭한 다음 속성을 선택합니다. 그런 다음, **세부 정보** 탭을 클릭합니다. **파일 버전** 필드에는 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 설치되어 있는 sqljdbc_xa.dll 버전이 표시됩니다.  
   
 3. 다음 섹션의 코드 예제에서와 같이 로깅 기능을 설정합니다. 출력 로그 파일에서 "Server XA DLL version:..." 구를 검색합니다.  
 
@@ -121,9 +123,9 @@ Windows Vista 이상:
 
 분산 트랜잭션의 제한 시간 동작을 제어하는 두 가지 레지스트리 설정(DWORD 값)이 있습니다.  
   
-- **Xadefaulttimeout** (초): 사용자가 시간 제한을 지정 하지 않을 때 사용할 기본 시간 제한 값입니다. 기본값은 0입니다.  
+- **XADefaultTimeout**(초): 사용자가 제한 시간을 지정하지 않는 경우 사용할 기본 제한 시간 값입니다. 기본값은 0입니다.  
   
-- **XAMaxTimeout** (초): 사용자가 설정할 수 있는 최대 제한 시간 값입니다. 기본값은 0입니다.  
+- **XAMaxTimeout**(초): 사용자가 설정할 수 있는 최대 제한 시간 값입니다. 기본값은 0입니다.  
   
 이러한 설정은 SQL Server 인스턴스와 관련되며 다음 레지스트리 키 아래에 만들어야 합니다.  
 
@@ -159,7 +161,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL<version>.<insta
 > [!IMPORTANT]  
 > 유지 관리 창에 있는 동안 또는 MS DTC 트랜잭션을 진행하지 않을 때 sqljdbc_xa.dll을 업그레이드해야 합니다.
   
-1. [!INCLUDE[tsql](../../includes/tsql-md.md)] **DBCC sqljdbc_xa (FREE)** 명령을 사용 하 여 sqljdbc_xa를 언로드합니다.  
+1. [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령 **DBCC sqljdbc_xa(무료)** 를 사용하여 sqljdbc_xa.dll을 언로드합니다.  
   
 2. JDBC 드라이버 설치 디렉터리에 있는 새 sqljdbc_xa.dll을 분산 트랜잭션에 참여할 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터의 Binn 디렉터리에 복사합니다.  
   
@@ -347,6 +349,6 @@ class XidImpl implements Xid {
 
 ```
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 
 [JDBC 드라이버로 트랜잭션 수행](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  

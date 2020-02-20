@@ -1,24 +1,26 @@
 ---
 title: SSRS(SQL Server Reporting Services)의 제품 키 찾기 | Microsoft Docs
-ms.date: 10/02/2019
+description: 프로덕션 환경에 서버를 설치할 수 있도록 SSRS(SQL Server Reporting Services) 2017 및 2019의 제품 키를 찾는 방법을 알아봅니다.
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6033b15655cebd557ee93efabce32ea0981072f1
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
-ms.translationtype: MTE75
+ms.openlocfilehash: c85fc8de816c24496fe0ffb353f7d51e20b07389
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71952720"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866056"
 ---
 # <a name="find-the-product-key-for-sql-server-reporting-services"></a>SQL Server Reporting Services의 제품 키를 찾습니다.
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
-프로덕션 환경에 서버를 설치할 수 있도록 SQL Server Reporting Services (SSRS) 2017 및 2019에 대 한 제품 키를 찾는 방법에 대해 알아봅니다.
+프로덕션 환경에 서버를 설치할 수 있도록 SSRS(SQL Server Reporting Services) 2017 및 2019의 제품 키를 찾는 방법을 알아봅니다.
 
 제품 키를 찾으려면 먼저 SQL Server 설치 프로그램을 다운로드하고 실행합니다.
 
@@ -27,7 +29,7 @@ ms.locfileid: "71952720"
 
     ![SQL Server 제품 키 복사](media/find-reporting-services-product-key-ssrs/ssrs-ss2017-copy-product-key.png)
 
-1. [Reporting Services 다운로드](install-reporting-services.md)하 여 설치 프로그램을 실행 하 고 키를 붙여넣습니다.
+1. [Reporting Services를 다운로드](install-reporting-services.md)하고 설치 프로그램을 실행한 후, 다음과 같이 키를 붙여넣습니다.
 
      ![제품 키 붙여넣기](media/find-reporting-services-product-key-ssrs/ssrs-ssrs2017-paste-product-key.png)
 

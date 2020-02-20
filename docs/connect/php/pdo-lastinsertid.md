@@ -11,16 +11,16 @@ ms.assetid: 0c617b53-a74b-4d5b-b76b-3ec7f1b8e8de
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2068b4099649b7ebd8aa2bcb4c58aa0d59e123d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936213"
 ---
 # <a name="pdolastinsertid"></a>PDO::lastInsertId
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-데이터베이스의 테이블에 가장 최근에 삽입된 행에 대한 식별자를 반환합니다. 테이블에 IDENTITY NOT NULL 열이 있어야 합니다. 시퀀스 이름이 제공 `lastInsertId` 된 경우 제공 된 시퀀스 이름에 대해 가장 최근에 삽입 된 시퀀스 번호를 반환 합니다. 시퀀스 번호에 대 한 자세한 내용은 [여기](https://docs.microsoft.com/sql/relational-databases/sequence-numbers/sequence-numbers)를 참조 하세요.
+데이터베이스의 테이블에 가장 최근에 삽입된 행에 대한 식별자를 반환합니다. 테이블에 IDENTITY NOT NULL 열이 있어야 합니다. 시퀀스 이름이 제공된 경우 `lastInsertId`는 제공된 시퀀스 이름에 대해 가장 최근에 삽입된 시퀀스 번호를 반환합니다. 시퀀스 번호에 대한 자세한 내용은 [여기](https://docs.microsoft.com/sql/relational-databases/sequence-numbers/sequence-numbers)를 참조하세요.
   
 ## <a name="syntax"></a>구문  
   
@@ -32,17 +32,17 @@ string PDO::lastInsertId ([ $name = NULL ] );
 #### <a name="parameters"></a>매개 변수  
 $*name*: 시퀀스 이름을 지정할 수 있는 선택적 문자열입니다. 
   
-## <a name="return-value"></a>반환 값  
-시퀀스 이름을 제공 하지 않으면 가장 최근에 추가 된 행에 대 한 식별자의 문자열입니다.
-시퀀스 이름이 제공 된 경우 가장 최근에 추가 된 시퀀스에 대 한 식별자의 문자열입니다.
-메서드 호출이 실패 하면 빈 문자열이 반환 됩니다.
+## <a name="return-value"></a>Return Value  
+시퀀스 이름이 제공되지 않은 경우 가장 최근에 추가된 행에 대한 식별자의 문자열입니다.
+시퀀스 이름이 제공된 경우 가장 최근에 추가된 시퀀스에 대한 식별자의 문자열입니다.
+메서드 호출이 실패하면 빈 문자열이 반환됩니다.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 PDO 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 2.0에 추가되었습니다.  
-버전 2.0과 4.3 사이에서 선택적 매개 변수는 테이블 이름이 고 반환 값은 제공 된 테이블에 가장 최근에 추가 된 행의 ID입니다.
-5\.0부터 선택적 매개 변수는 시퀀스 이름으로 간주 되 고 반환 값은 제공 된 시퀀스 이름에 가장 최근에 추가 된 시퀀스입니다.
-4\.3 이후의 버전에 대해 테이블 이름이 제공 되는 경우 `lastInsertId` 는 빈 문자열을 반환 합니다.
-시퀀스는 SQL Server 2012 이상 에서만 지원 됩니다.
+버전 2.0부터 4.3까지 선택적 매개 변수는 테이블 이름이고 반환 값은 제공된 테이블에 가장 최근에 추가된 행의 ID입니다.
+5\.0부터 선택적 매개 변수는 시퀀스 이름으로 간주되고 반환 값은 제공된 시퀀스 이름에 가장 최근에 추가된 시퀀스입니다.
+4\.3 이후 버전에서 테이블 이름이 제공된 경우 `lastInsertId`는 빈 문자열을 반환합니다.
+시퀀스는 SQL Server 2012 이상에서만 지원됩니다.
   
 ## <a name="example"></a>예제
   

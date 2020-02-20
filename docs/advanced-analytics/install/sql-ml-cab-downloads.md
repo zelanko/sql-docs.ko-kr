@@ -1,37 +1,46 @@
 ---
 title: 오프라인 설치를 위한 업데이트 다운로드
-description: SQL Server Machine Learning Services 및 SQL Server 2016 R Services를 위한 R 및 Python CAB 및 패키지 파일을 다운로드합니다.
+description: SQL Server Machine Learning Services용 Python 및 R CAB 파일을 다운로드합니다. 이러한 CAB 파일은 Machine Learning Services(Python 및 R) 기능에 대한 업데이트를 포함하며 인터넷에 액세스할 수 없는 서버에 SQL Server를 설치할 때 사용됩니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e7266d90e04071c242145fc0df2e59ce86d86a16
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: b2b84349e60bf89a066fb2157a9c521d7be8ecbd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727631"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75776537"
 ---
-# <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>SQL Server 데이터베이스 내 분석 인스턴스의 누적 업데이트를 위한 CAB 다운로드
+# <a name="cab-downloads-for-cumulative-updates-of-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 누적 업데이트를 위한 CAB 다운로드
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-데이터베이스 내 분석을 위해 구성된 SQL Server 인스턴스에는 R 및 Python 기능이 포함됩니다. 이러한 기능은 SQL Server 설치 프로그램을 통해 설치 및 서비스되는 CAB 파일로 제공됩니다. 인터넷 연결 디바이스에서 CAB 업데이트는 일반적으로 Windows 업데이트를 통해 적용됩니다. 연결되지 않은 서버에서는 CAB 파일을 수동으로 다운로드하고 적용해야 합니다. 
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+SQL Server Machine Learning Services용 Python 및 R CAB 파일을 다운로드합니다. 이러한 CAB 파일은 Machine Learning Services(Python 및 R) 기능에 대한 업데이트를 포함하며 인터넷에 액세스할 수 없는 서버에 SQL Server를 설치할 때 사용됩니다.
+::: moniker-end
 
-이 문서에서는 각 누적 업데이트에 대한 CAB 파일 다운로드 링크를 제공합니다. 오프라인 설치에 대한 자세한 내용은 [인터넷 액세스 없이 SQL Server Machine Learning 구성 요소 설치](sql-ml-component-install-without-internet-access.md#apply-cu)를 참조하세요.
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+SQL Server 2016 R Services용 Python 및 R CAB 파일을 다운로드합니다. 이러한 CAB 파일은 R Services 기능에 대한 업데이트를 포함하며 인터넷에 액세스할 수 없는 서버에 SQL Server를 설치할 때 사용됩니다.
+::: moniker-end
+
+각 누적 업데이트에 대한 CAB 파일 다운로드 링크들은 아래와 같습니다. 오프라인 설치에 대한 자세한 내용은 [인터넷 액세스 없이 SQL Server Machine Learning 구성 요소 설치](sql-ml-component-install-without-internet-access.md#apply-cu)를 참조하세요.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-기본 설치로 시작합니다.
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+기본 설치로 시작합니다. SQL Server Machine Learning Services에서 초기 릴리스가 기본 설치입니다. 
+::: moniker-end
 
-+ SQL Server Machine Learning Services에서 초기 릴리스가 기본 설치입니다. 
-+ SQL Server 2016 R Services에서는 초기 릴리스, SP1 또는 SP2로 시작할 수 있습니다. 
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+기본 설치로 시작합니다.  SQL Server 2016 R Services에서는 초기 릴리스, SP1 또는 SP2로 시작할 수 있습니다. 
+::: moniker-end
 
-또한 독립형 서버에 누적 업데이트를 적용할 수도 있습니다.
+누적 업데이트를 적용할 수도 있습니다.
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
@@ -39,7 +48,7 @@ ms.locfileid: "73727631"
 
 CAB 파일은 시간의 역순으로 나열됩니다. CAB 파일을 다운로드하고 이를 대상 컴퓨터로 전송할 때는 **Downloads** 또는 설치 프로그램 사용자의 %temp% 폴더와 같은 편리한 폴더에 배치합니다.
 
-|릴리스  |구성 요소 | 다운로드 링크  | 해결된 문제 | 
+|해제  |구성 요소 | 다운로드 링크  | 해결된 문제 | 
 |---------|----------|----------------|------------------|
 |**[SQL Server 2017 CU14](https://support.microsoft.com/help/4484710/)-[CU15](https://support.microsoft.com/help/4498951/)-[CU16](https://support.microsoft.com/help/4508218/)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073898&clcid=1033)| 패키지 내의 이진 파일이 이제 서명된 상태입니다. |
@@ -94,7 +103,7 @@ CAB 파일은 시간의 역순으로 나열됩니다. CAB 파일을 다운로드
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
 <a name="bkmk_2016Installers"></a>
 
@@ -102,38 +111,38 @@ CAB 파일은 시간의 역순으로 나열됩니다. CAB 파일을 다운로드
 
 SQL Server 2016 R Services의 경우 기본 릴리스는 RTM 버전 또는 서비스 팩 버전입니다.
 
-|릴리스  |다운로드 링크  |
+|해제  |다운로드 링크  |
 |---------|---------------|
 |**SQL Server 2016 SP2 CU6**     |
 |Microsoft R Open     |[SRO_3.2.2.20100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2079936&clcid=1033)|
-|Microsoft R Server    |[SRS_8.0.3.20100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2079933&clcid=1033)|
+|Microsoft R 서버    |[SRS_8.0.3.20100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2079933&clcid=1033)|
 |**SQL Server 2016 SP2 CU1-CU5**     |
 |Microsoft R Open     |[SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836819)|
-|Microsoft R Server    |[SRS_8.0.3.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866038)|
+|Microsoft R 서버    |[SRS_8.0.3.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866038)|
 |**SQL Server 2016 SP2**     |
 |Microsoft R Open     |[SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836819)|
-|Microsoft R Server    |[SRS_8.0.3.17000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=850317)|
+|Microsoft R 서버    |[SRS_8.0.3.17000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=850317)|
 |**SQL Server 2016 SP1 CU14**     |
 |Microsoft R Open     |[SRO_3.2.2.16100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2080130&clcid=1033)|
-|Microsoft R Server    |[SRS_8.0.3.17200_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2079935&clcid=1033)|
+|Microsoft R 서버    |[SRS_8.0.3.17200_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2079935&clcid=1033)|
 |**SQL Server 2016 SP1 CU1-CU13**     |
 |Microsoft R Open     |[SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836819)|
-|Microsoft R Server    |[SRS_8.0.3.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836818)|
+|Microsoft R 서버    |[SRS_8.0.3.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836818)|
 |**SQL Server 2016 SP1**     |
 |Microsoft R Open     |[SRO_3.2.2.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824879)|
-|Microsoft R Server     |[SRS_8.0.3.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824881)|
+|Microsoft R 서버     |[SRS_8.0.3.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824881)|
 |**SQL Server 2016 CU4-CU9**     |
 |Microsoft R Open     |[SRO_3.2.2.13000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=831785)|
-|Microsoft R Server     |[SRS_8.0.3.13000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=831676)|
+|Microsoft R 서버     |[SRS_8.0.3.13000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=831676)|
 |**SQL Server 2016 CU2-CU3**     |
 |Microsoft R Open     |[SRO_3.2.2.12000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=827398)|
-|Microsoft R Server     |[SRS_8.0.3.12000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=827399)|
+|Microsoft R 서버     |[SRS_8.0.3.12000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=827399)|
 |**SQL Server 2016 CU1**     |
 |Microsoft R Open     |[SRO_3.2.2.10000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=808803)|
-|Microsoft R Server     |[SRS_8.0.3.10000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=808805)|
+|Microsoft R 서버     |[SRS_8.0.3.10000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=808805)|
 |**SQL Server 2016 RTM**     |
 |Microsoft R Open     |[SRO_3.2.2.803_1033.cab](https://go.microsoft.com/fwlink/?LinkId=761266)|
-|Microsoft R Server     |[SRS_8.0.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=735051)|
+|Microsoft R 서버     |[SRS_8.0.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=735051)|
 
 > [!NOTE]
 > 

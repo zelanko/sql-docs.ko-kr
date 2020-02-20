@@ -9,24 +9,24 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: d6c83ffd407a9b27a04b254fb3e9e5673a600417
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: d1b5742d082fdb40b03663cf2db719399290a010
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452204"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247769"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>SQL Server의 인스턴스 열거(ADO.NET)
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET 다운로드](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-SQL Server를 사용 하면 응용 프로그램이 현재 네트워크 내에서 SQL Server 인스턴스를 찾을 수 있습니다. @No__t_0 클래스는 표시 되는 모든 서버에 대 한 정보를 포함 하는 <xref:System.Data.DataTable>를 제공 하 여 응용 프로그램 개발자에 게이 정보를 노출 합니다. 이 반환된 테이블은 사용자가 새 연결을 만들려고 할 때 제공되는 목록과 일치하는 네트워크상에서 사용 가능한 서버 인스턴스의 목록을 포함하며, **Connection Properties** 대화 상자에서 사용 가능한 모든 서버가 포함된 드롭다운 목록을 확장합니다. 표시 되는 결과는 항상 완전 하지는 않습니다.  
+SQL Server에서 애플리케이션이 현재 네트워크 내에서 SQL Server 인스턴스를 찾을 수 있습니다. <xref:System.Data.Sql.SqlDataSourceEnumerator> 클래스는 표시되는 모든 서버에 대한 정보가 포함된 <xref:System.Data.DataTable>을 제공하여 애플리케이션 개발자에게 이 정보를 노출합니다. 이 반환된 테이블은 사용자가 새 연결을 만들려고 할 때 제공되는 목록과 일치하는 네트워크상에서 사용 가능한 서버 인스턴스의 목록을 포함하며, **Connection Properties** 대화 상자에서 사용 가능한 모든 서버가 포함된 드롭다운 목록을 확장합니다. 표시되는 결과가 항상 완전하지는 않습니다.  
   
 > [!NOTE]
->  대부분의 Windows 서비스와 마찬가지로 가장 가능성이 낮은 권한으로 SQL Browser 서비스를 실행 하는 것이 가장 좋습니다. SQL Browser 서비스와 이 서비스의 동작을 관리하는 방법에 대한 자세한 내용은 SQL Server 온라인 설명서를 참조하세요.  
+>  대부분의 Windows 서비스와 마찬가지로 최소 권한으로 SQL Browser 서비스를 실행하는 것이 가장 좋습니다. SQL Browser 서비스와 이 서비스의 동작을 관리하는 방법에 대한 자세한 내용은 SQL Server 온라인 설명서를 참조하세요.  
   
 ## <a name="retrieving-an-enumerator-instance"></a>열거자 인스턴스 검색  
 사용 가능한 SQL Server 인스턴스에 대한 정보가 포함된 테이블을 검색하려면 먼저 공유/정적 <xref:System.Data.Sql.SqlDataSourceEnumerator.Instance%2A> 속성을 사용하여 열거자를 검색해야 합니다.  
@@ -36,30 +36,30 @@ System.Data.Sql.SqlDataSourceEnumerator instance =
    System.Data.Sql.SqlDataSourceEnumerator.Instance  
 ```  
   
-정적 인스턴스를 검색 한 후에는 사용 가능한 서버에 대 한 정보를 포함 하는 <xref:System.Data.DataTable>을 반환 하는 <xref:System.Data.Sql.SqlDataSourceEnumerator.GetDataSources%2A> 메서드를 호출할 수 있습니다.  
+정적 인스턴스를 검색한 후에는 사용 가능한 서버에 대한 정보가 포함된 <xref:System.Data.DataTable>을 반환하는 <xref:System.Data.Sql.SqlDataSourceEnumerator.GetDataSources%2A> 메서드를 호출할 수 있습니다.  
   
 ```csharp  
 System.Data.DataTable dataTable = instance.GetDataSources();  
 ```  
   
-메서드 호출에서 반환 된 테이블에는 다음 열이 포함 되어 있으며, 모든 열에는 `string` 값이 포함 되어 있습니다.  
+메서드 호출에서 반환된 테이블에는 다음 열이 포함되어 있으며, 모든 열은 `string` 값을 포함합니다.  
   
-|Column|설명|  
+|열|Description|  
 |------------|-----------------|  
 |**데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면**|서버의 이름입니다.|  
-|**InstanceName**|서버 인스턴스의 이름입니다. 서버를 기본 인스턴스로 실행 하는 경우에는 비어 있습니다.|  
-|**IsClustered**|서버가 클러스터의 일부 인지 여부를 나타냅니다.|  
-|**버전(Version)**|서버 버전입니다. 예를 들어<br /><br /> -   9.00.x (SQL Server 2005)<br />-10.0. xx (SQL Server 2008)<br />-   10.50.x (SQL Server 2008 R2)<br />-11.0. xx (SQL Server 2012)|  
+|**InstanceName**|서버 인스턴스의 이름입니다. 서버를 기본 인스턴스로 실행하는 경우에는 비어있습니다.|  
+|**IsClustered**|서버가 클러스터의 일부인지 여부를 나타냅니다.|  
+|**버전**|서버 버전입니다. 다음은 그 예입니다.<br /><br /> -   9.00.x (SQL Server 2005)<br />-   10.0.xx (SQL Server 2008)<br />-   10.50.x (SQL Server 2008 R2)<br />-   11.0.xx (SQL Server 2012)|  
   
 ## <a name="enumeration-limitations"></a>열거형 제한 사항  
-사용 가능한 모든 서버가 나열 될 수도 있고 그렇지 않을 수도 있습니다. 이 목록은 시간 제한 및 네트워크 트래픽과 같은 요인에 따라 달라질 수 있습니다. 이로 인해 두 번의 연속 호출에서 목록이 다를 수 있습니다. 동일한 네트워크에 있는 서버만 나열 됩니다. 브로드캐스트 패킷은 일반적으로 라우터를 트래버스 하지 않습니다. 즉, 나열 된 서버가 표시 되지 않지만 호출에서 안정적으로 작동 합니다.  
+사용 가능한 서버가 모두 나열될 수도 있고 그렇지 않을 수도 있습니다. 이 목록은 제한 시간, 네트워크 트래픽과 같은 요인에 따라 달라질 수 있습니다. 이로 인해 두 번의 연속 호출에서 목록이 다를 수 있습니다. 동일한 네트워크에 있는 서버만 나열됩니다. 브로드캐스트 패킷은 일반적으로 라우터를 트래버스하지 않습니다. 즉, 나열된 서버가 표시되지 않을 수 있지만 호출에서 안정적으로 작동합니다.  
   
-나열 된 서버에는 `IsClustered` 및 버전과 같은 추가 정보가 있을 수도 있고 없을 수도 있습니다. 이는 목록을 가져온 방법에 따라 달라 집니다. SQL Server 브라우저 서비스를 통해 나열된 서버에서는 Windows 인프라를 통해 찾은 정보(이름만 나열됨)보다 더 자세한 정보를 제공합니다.  
+나열된 서버에는 `IsClustered` 및 버전과 같은 추가 정보가 있을 수도 있고 없을 수도 있습니다. 이는 목록을 가져온 방법에 따라 달라집니다. SQL Server 브라우저 서비스를 통해 나열된 서버에서는 Windows 인프라를 통해 찾은 정보(이름만 나열됨)보다 더 자세한 정보를 제공합니다.  
   
 > [!NOTE]
->  서버 열거는 완전 신뢰로 실행 되는 경우에만 사용할 수 있습니다. 부분적으로 신뢰할 수 있는 환경에서 실행 되는 어셈블리는 <xref:Microsoft.Data.SqlClient.SqlClientPermission> CAS (코드 액세스 보안) 권한이 있는 경우에도이를 사용할 수 없습니다.  
+>  서버 열거는 완전 신뢰로 실행되는 경우에만 사용할 수 있습니다. 부분적으로 신뢰할 수 있는 환경에서 실행되는 어셈블리는 <xref:Microsoft.Data.SqlClient.SqlClientPermission> CAS(코드 액세스 보안) 권한이 있는 경우에도 이를 사용할 수 없습니다.  
   
-SQL Server에서는 SQL Browser라고 하는 외부 Windows 서비스를 사용하여 <xref:System.Data.Sql.SqlDataSourceEnumerator>에 대한 정보를 제공합니다. 이 서비스는 기본적으로 사용 하도록 설정 되어 있지만 관리자가 해제 하거나 사용 하지 않도록 설정 하 여 서버 인스턴스를이 클래스에 표시 하지 않을 수 있습니다.  
+SQL Server에서는 SQL Browser라고 하는 외부 Windows 서비스를 사용하여 <xref:System.Data.Sql.SqlDataSourceEnumerator>에 대한 정보를 제공합니다. 이 서비스는 기본적으로 사용하도록 설정되어 있지만 관리자가 해제하거나 사용하지 않도록 설정하여 서버 인스턴스를 이 클래스에 표시하지 않을 수 있습니다.  
   
 ## <a name="example"></a>예제  
 다음 콘솔 애플리케이션에서는 표시되는 모든 SQL Server 인스턴스에 대한 정보를 검색하여 콘솔 창에 표시합니다.  

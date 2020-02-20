@@ -1,9 +1,11 @@
 ---
-title: 웹 응용 프로그램-Reporting Services SOAP API를 사용 하 여 | Microsoft Docs
+title: 웹 애플리케이션에서 SOAP API 사용
+description: Reporting Services SOAP API를 통해 보고서 서버의 전체 기능에 액세스할 수 있습니다.
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - SOAP [Reporting Services], Web applications
@@ -14,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e8ca4455-0dc3-4741-8872-3636114938ad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3d9b086f6ec5a57493c96e3a4d0462a44d9c2e3c
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.openlocfilehash: d7ae6c53033d1ea79a58d566bf57d8ed622e8f8d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67492772"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796836"
 ---
 # <a name="integrating-reporting-services-using-soap---web-application"></a>SOAP를 사용하여 Reporting Services 통합 - 웹 애플리케이션
-  Reporting Services SOAP API를 통해 보고서 서버의 전체 기능에 액세스할 수 있습니다. SOAP API는 웹 서비스이므로 쉽게 액세스하여 사용자 지정 비즈니스 애플리케이션에 엔터프라이즈 보고 기능을 제공할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 애플리케이션에서 SOAP API에 액세스하는 것과 동일한 방법으로 웹 애플리케이션에서 보고서 서버 웹 서비스에 액세스합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 사용하여 보고서 서버 웹 서비스의 속성 및 메서드를 표시하는 프록시 클래스를 생성할 수 있으며 친숙한 인프라와 도구를 통해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기술 기반의 비즈니스 애플리케이션을 빌드할 수도 있습니다.  
+  Reporting Services SOAP API를 통해 보고서 서버의 전체 기능에 액세스할 수 있습니다. SOAP API는 웹 서비스이므로 쉽게 액세스하여 사용자 지정 비즈니스 애플리케이션에 엔터프라이즈 보고 기능을 제공할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 애플리케이션에서 SOAP API에 액세스하는 것과 동일한 방법으로 웹 애플리케이션에서 보고서 서버 웹 서비스에 액세스합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 사용하여 보고서 서버 웹 서비스의 속성 및 메서드를 표시하는 프록시 클래스를 생성할 수 있으며 친숙한 인프라와 도구를 통해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기술 기반의 비즈니스 애플리케이션을 빌드할 수도 있습니다.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 관리 기능은 Windows 애플리케이션에서 액세스하는 것과 마찬가지로 웹 애플리케이션에서도 쉽게 액세스할 수 있습니다. 웹 애플리케이션에서는 보고서 서버 데이터베이스에서 항목 추가 및 제거, 항목 보안 설정, 보고서 서버 데이터베이스 항목 수정, 일정 예약 및 배달 관리 등을 수행할 수 있습니다.  
   
@@ -37,7 +39,7 @@ ms.locfileid: "67492772"
 > [!NOTE]  
 >  가장은 기본적으로 사용 안 함으로 설정되어 있습니다.  
   
- [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 가장에 대한 자세한 내용은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK 설명서를 참조하십시오.  
+ [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 가장에 대한 자세한 내용은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK 설명서를 참조하세요.  
   
 ## <a name="managing-the-report-server-using-soap-api"></a>SOAP API를 사용하여 보고서 서버 관리  
 
@@ -49,7 +51,7 @@ ms.locfileid: "67492772"
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
- 웹 애플리케이션을 사용하여 보고서 서버 및 콘텐츠를 관리할 수도 있습니다. 웹 포털을 사용 하 여 포함된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]은 Reporting Services를 사용 하 여 일반적으로 수행 하는 작업의 대부분을 관리 하는 웹 응용 프로그램의 예입니다. 웹 포털의 보고서 관리 기능을 사용자 지정 웹 애플리케이션에 추가할 수 있습니다. 예를 들어 보고서 서버 데이터베이스에서 사용 가능한 보고서 목록을 반환하여 이를 사용자가 선택할 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] **Listbox** 컨트롤에 표시해야 할 수 있습니다. 다음 코드는 보고서 서버 데이터베이스에 연결하고 보고서 서버 데이터베이스의 항목 목록을 반환합니다. 그러면 사용 가능한 보고서가 Listbox 컨트롤에 추가되고 각 보고서의 경로가 표시됩니다.  
+ 웹 애플리케이션을 사용하여 보고서 서버 및 콘텐츠를 관리할 수도 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 함께 제공되는 웹 포털은 일반적으로 Reporting Services를 사용하여 수행하는 대부분의 작업을 관리하는 웹 애플리케이션의 한 예입니다. 웹 포털의 보고서 관리 기능을 사용자 지정 웹 애플리케이션에 추가할 수 있습니다. 예를 들어 보고서 서버 데이터베이스에서 사용 가능한 보고서 목록을 반환하여 이를 사용자가 선택할 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] **Listbox** 컨트롤에 표시해야 할 수 있습니다. 다음 코드는 보고서 서버 데이터베이스에 연결하고 보고서 서버 데이터베이스의 항목 목록을 반환합니다. 그러면 사용 가능한 보고서가 Listbox 컨트롤에 추가되고 각 보고서의 경로가 표시됩니다.  
 
 ::: moniker-end
   

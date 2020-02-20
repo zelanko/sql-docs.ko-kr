@@ -8,14 +8,14 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3aa251e7d31f21cf51f4f528b1f0ccd35c0afb2c
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 0cddfe78555d5e5f57e57346aff1ead52f05cebf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844562"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831558"
 ---
-# <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 새로운 기능
+# <a name="whats-new-in-sql-server-2019"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 새로운 기능
 
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
@@ -29,15 +29,20 @@ ms.locfileid: "73844562"
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에서 [!INCLUDE[sql-server](../includes/ssnoversion-md.md)]용 [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]를 소개합니다. 또한 SQL Server 데이터베이스 엔진, SQL Server Analysis Services, SQL Server Machine Learning Services, SQL Server on Linux 및 SQL Server Master Data Services에 대한 추가 기능과 개선 사항을 제공합니다.
 
+다음 비디오는 SQL Server 2019에 대해 13분간 소개합니다.
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-SQL-Server-2019/player?WT.mc_id=dataexposed-c9-niner]
+
+
 다음 섹션에서는 이러한 기능에 대한 개요를 제공합니다.
 
-## <a name="data-virtualization-and-includebig-data-clusters-2019includesssbigdataclusters-ver15md"></a>데이터 가상화 및 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]
+## <a name="data-virtualization-and-big-data-clusters-2019"></a>데이터 가상화 및 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]
 
 오늘날의 기업은 회사 전체의 고립된 데이터 원본에 호스트되는, 점점 증가하는 데이터 세트로 구성된 광범위한 데이터 자산을 관리하는 경우가 많습니다. 기계 학습 및 AI 기능을 포함하여 대규모 데이터 세트를 사용하여 작업하기 위한 완전한 환경을 제공하는 SQL Server 2019 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]로 모든 데이터에서 거의 실시간으로 인사이트를 얻을 수 있습니다.
 
 | 새로운 기능 또는 업데이트 | 세부 정보 |
 |:---|:---|
-| 확장 가능한 빅 데이터 솔루션 | Kubernetes에서 실행되는 SQL Server, Spark 및 HDFS 컨테이너의 [확장 가능한 클러스터를 배포](../big-data-cluster/deploy-get-started.md) <br/><br/> Transact-SQL 또는 Spark에서 빅 데이터 읽기, 쓰기 및 처리<br/><br/> 대용량 빅 데이터를 사용하여 가치 높은 관계형 데이터를 쉽게 조합 및 분석<br/><br/>외부 데이터 원본 쿼리<br/><br/>SQL Server에서 관리하는 HDFS에 빅 데이터 저장<br/><br/>클러스터를 통해 여러 외부 데이터 원본에서 데이터 쿼리<br/><br/> AI, 기계 학습 및 기타 분석 작업에 데이터 사용<br/><br/> [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]에서 [애플리케이션 배포 및 실행](../big-data-cluster/concept-application-deployment.md) <br/><br/> SQL Server 마스터 인스턴스는 Always On 가용성 그룹 기술을 사용하여 모든 데이터베이스에 대해 고가용성 및 재해 복구를 제공합니다.<br/>|
+| 확장 가능한 빅 데이터 솔루션 | Kubernetes에서 실행되는 SQL Server, Spark 및 HDFS 컨테이너의 [확장성 있는 클러스터 배포](../big-data-cluster/deploy-get-started.md) <br/><br/> Transact-SQL 또는 Spark에서 빅 데이터 읽기, 쓰기 및 처리<br/><br/> 대용량 빅 데이터를 사용하여 가치 높은 관계형 데이터를 쉽게 조합 및 분석<br/><br/>외부 데이터 원본 쿼리<br/><br/>SQL Server에서 관리하는 HDFS에 빅 데이터 저장<br/><br/>클러스터를 통해 여러 외부 데이터 원본에서 데이터 쿼리<br/><br/> AI, 기계 학습 및 기타 분석 작업에 데이터 사용<br/><br/> [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]에서 [애플리케이션 배포 및 실행](../big-data-cluster/concept-application-deployment.md) <br/><br/> SQL Server 마스터 인스턴스는 Always On 가용성 그룹 기술을 사용하여 모든 데이터베이스에 대해 고가용성 및 재해 복구를 제공합니다.<br/>|
 |PolyBase를 사용한 데이터 가상화 | 외부 테이블을 사용하여 외부 SQL Server, Oracle, Teradata, MongoDB 및 ODBC 데이터 원본의 데이터를 쿼리하며, 이제 [UTF-8 인코딩을 지원](../relational-databases/collations/collation-and-unicode-support.md)합니다. 자세한 내용은 [PolyBase란?](../relational-databases/polybase/polybase-guide.md)을 참조하세요.|
 | &nbsp; | &nbsp; |
 
@@ -70,7 +75,7 @@ ms.locfileid: "73844562"
 | &nbsp; | &nbsp; |
 
 ### <a name="intelligent-performance"></a>지능형 성능
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]는 이전 릴리스의 지능형 데이터베이스 혁신을 기반으로 [더 빠르게 실행](https://blogs.msdn.microsoft.com/bobsql/tag/it-just-runs-faster/)됩니다. 이러한 향상된 기능을 통해 알려진 리소스 병목 현상을 극복하고 모든 워크로드에 대해 예측 가능한 성능을 제공하도록 데이터베이스 서버를 구성하는 옵션을 제공합니다.
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]는 이전 릴리스의 지능형 데이터베이스 혁신을 기반으로 [더 빠르게 실행](https://docs.microsoft.com/archive/blogs/bobsql/)됩니다. 이러한 향상된 기능을 통해 알려진 리소스 병목 현상을 극복하고 모든 워크로드에 대해 예측 가능한 성능을 제공하도록 데이터베이스 서버를 구성하는 옵션을 제공합니다.
 
 |새로운 기능 또는 업데이트 | 세부 정보 |
 |:---|:---|
@@ -79,7 +84,7 @@ ms.locfileid: "73844562"
 |리소스 거버넌스| `CREATE WORKLOAD GROUP` 및 `ALTER WORKLOAD GROUP`의 `REQUEST_MAX_MEMORY_GRANT_PERCENT` 옵션에 대해 구성 가능한 값이 정수에서 부동 소수점 수 데이터 유형으로 변경되어 메모리 제한의 더 세분화된 제어가 가능합니다. [ALTER WORKLOAD GROUP](../t-sql/statements/alter-workload-group-transact-sql.md) 및 [CREATE WORKLOAD GROUP](../t-sql/statements/create-workload-group-transact-sql.md)을 참조하세요.|
 |워크로드에 대한 다시 컴파일 감소| 불필요한 다시 컴파일을 줄임으로써 여러 범위에서 임시 테이블을 사용할 때 성능을 향상시킵니다. [워크로드에 대한 다시 컴파일 감소](../relational-databases/tables/tables.md#ctp23)를 참조하세요. |
 |간접 검사점 확장성 |[향상된 간접 검사점 확장성](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23)을 참조하세요.|
-|동시 PFS 업데이트|[PFS(Page Free Space) 페이지](https://techcommunity.microsoft.com/t5/SQL-Server/Under-the-covers-GAM-SGAM-and-PFS-pages/ba-p/383125)는 SQL Server가 개체 공간을 할당할 때 여유 공간을 찾는 데 사용하는 데이터베이스 파일 내의 특수 페이지입니다. PFS 페이지에서 페이지 래치 경합은 일반적으로 [TempDB](https://support.microsoft.com/en-us/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d)와 관련이 있지만 동시 개체 할당 스레드가 많은 경우 사용자 데이터베이스에서도 발생할 수 있습니다. 이 개선 사항은 PFS 업데이트로 동시성을 관리하는 방식을 변경하여 단독 래치가 아닌 공유 래치에서 업데이트할 수 있도록 합니다. 이 동작은 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]부터 모든 데이터베이스(TempDB 포함)에서 기본적으로 설정되어 있습니다.|
+|동시 PFS 업데이트|[PFS(Page Free Space) 페이지](https://techcommunity.microsoft.com/t5/SQL-Server/Under-the-covers-GAM-SGAM-and-PFS-pages/ba-p/383125)는 SQL Server가 개체 공간을 할당할 때 여유 공간을 찾는 데 사용하는 데이터베이스 파일 내의 특수 페이지입니다. PFS 페이지에서 페이지 래치 경합은 일반적으로 [TempDB](https://support.microsoft.com/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d)와 관련이 있지만 동시 개체 할당 스레드가 많은 경우 사용자 데이터베이스에서도 발생할 수 있습니다. 이 개선 사항은 PFS 업데이트로 동시성을 관리하는 방식을 변경하여 단독 래치가 아닌 공유 래치에서 업데이트할 수 있도록 합니다. 이 동작은 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]부터 모든 데이터베이스(TempDB 포함)에서 기본적으로 설정되어 있습니다.|
 |스케줄러 작업자 마이그레이션 |작업자 마이그레이션을 사용하면 유휴 스케줄러가 동일한 NUMA 노드에 있는 다른 스케줄러의 실행 가능한 큐에서 작업자를 마이그레이션하고 마이그레이션된 작업자의 작업을 즉시 다시 시작할 수 있습니다. 이러한 향상된 기능은 장기 실행 작업이 동일한 스케줄러에 할당되는 경우에 더 분산된 CPU 사용량을 제공합니다. 자세한 내용은 [SQL Server 2019 지능형 성능 - 작업자 마이그레이션](https://techcommunity.microsoft.com/t5/SQL-Server/SQL-Server-2019-Intelligent-Performance-Worker-Migration/ba-p/939610)을 참조하세요. |
 | &nbsp; | &nbsp; |
 
@@ -152,8 +157,9 @@ ms.locfileid: "73844562"
 |새로운 기능 또는 업데이트 | 세부 정보 |
 |:---|:---|
 |보안 Enclave를 사용한 Always Encrypted|서버 쪽 보안 Enclave 내에서 일반 텍스트 데이터에 대한 계산을 사용하도록 설정하여 현재 위치의 암호화 및 다양한 계산을 사용하여 Always Encrypted 시에 확장합니다. 내부 암호화는 데이터베이스 외부로 데이터 이동을 방지하므로 암호화 작업(열 암호화, 열 회전 암호화 키 등)의 성능 및 안정성을 개선합니다.<br><br> 다양한 계산(패턴 일치 및 비교 연산)이 지원되면 중요한 데이터 보호를 요구하는 한편 Transact-SQL 쿼리에서 풍부한 기능을 필요로 하는 광범위한 시나리오와 애플리케이션에서 Always Encrypted를 사용할 수 있게 됩니다. [보안 Enclave를 사용한 Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md)를 참조하세요.|
-|SQL Server 구성 관리자의 인증서 관리|[인증서 관리(SQL Server 구성 관리자)](../database-engine/configure-windows/manage-certificates.md)를 참조하세요.|
-|데이터 검색 및 분류|데이터 검색 및 분류는 데이터베이스의 중요한 데이터 분류, 레이블 지정 및 보호를 위해 SQL Server에 기본적으로 제공되는 고급 기능을 제공합니다. 가장 중요한 데이터(비즈니스, 재무, 보건, PII 등)를 분류하면 조직의 정보 보호 수준에서 중요한 역할을 담당할 수 있습니다. 다음에 대한 인프라를 제공할 수 있습니다.<ul><li>데이터 개인 정보 보호 표준 및 규정 준수 요구 사항 충족 지원</li><li>중요한 데이터에 대한 비정상적인 액세스 모니터링(감사) 및 경고와 같은 다양한 보안 시나리오</li><li>엔터프라이즈에서 중요한 데이터가 있는 위치를 보다 쉽게 파악할 수 있으므로 관리자는 데이터베이스를 보호하기 위한 적절한 단계를 수행할 수 있습니다.</li></ul>또한 [감사](../relational-databases/security/auditing/sql-server-audit-database-engine.md) 기능도 감사 로그에 `data_sensitivity_information`라는 새 필드를 포함하도록 개선되었습니다. 이 필드는 쿼리가 반환한 실제 데이터의 민감도 분류(레이블)를 기록합니다. 자세한 내용과 예제는 [민감도 분류 추가](../t-sql/statements/add-sensitivity-classification-transact-sql.md)를 참조하세요.|
+|SQL Server 구성 관리자의 인증서 관리|이제 SQL Server 구성 관리자를 사용하여 인증서 보기 및 배포와 같은 인증서 관리 작업을 수행할 수 있습니다. [인증서 관리(SQL Server 구성 관리자)](../database-engine/configure-windows/manage-certificates.md)를 참조하세요.|
+|데이터 검색 및 분류|데이터 검색 및 분류는 사용자 테이블에서 열을 분류하고 레이블을 지정하는 기능을 제공합니다. 중요 데이터 분류(비즈니스, 재무, 보건, PII 등)는 조직의 정보 보호 수준에서 중요한 역할을 담당할 수 있습니다. 다음에 대한 인프라를 제공할 수 있습니다.<ul><li>데이터 개인 정보 보호 표준 및 규정 준수 요구 사항 충족 지원</li><li>중요한 데이터에 대한 비정상적인 액세스 모니터링(감사) 및 경고와 같은 다양한 보안 시나리오</li><li>엔터프라이즈에서 중요한 데이터가 있는 위치를 보다 쉽게 파악할 수 있으므로 관리자는 데이터베이스를 보호하기 위한 적절한 단계를 수행할 수 있습니다.</li></ul>|
+|SQL Server Audit|감사[감사](../relational-databases/security/auditing/sql-server-audit-database-engine.md) 기능도 감사 로그 레코드에 새 필드 `data_sensitivity_information`을 포함하도록 개선되었습니다. 이 필드에는 쿼리가 반환한 실제 데이터의 민감도 분류(레이블)가 기록됩니다. 자세한 내용 및 예제를 보려면 [`ADD SENSITIVITY CLASSIFICATION`](../t-sql/statements/add-sensitivity-classification-transact-sql.md)를 참조하세요.|
 | &nbsp; | &nbsp; |
 
 ## <a name="high-availability"></a>고가용성
@@ -200,7 +206,7 @@ ms.locfileid: "73844562"
 | CDC(변경 데이터 캡처) 지원 | CDC(변경 데이터 캡처)는 이제 Linux에서 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에 대해 지원됩니다. |
 | &nbsp; | &nbsp; |
 
-### <a name="containers"></a>SSIS 로그 구성
+### <a name="containers"></a>컨테이너
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 작업을 시작하는 가장 쉬운 방법은 컨테이너를 사용하는 것입니다. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]는 이전 버전에서 도입된 혁신을 기반으로 더 안전한 방식으로 또한 더 많은 기능으로 새 플랫폼에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 컨테이너를 배포할 수 있습니다.
 
 |새로운 기능 또는 업데이트 | 세부 정보 |
@@ -217,6 +223,7 @@ ms.locfileid: "73844562"
 |:---|:---| 
 |새 메모리 설정 옵션 | 설치 중에 *최소 서버 메모리(MB)* 및 *최대 서버 메모리(MB)* 서버 구성을 설정합니다. [데이터베이스 엔진 구성 - 메모리 페이지](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory)와 [명령 프롬프트에서 SQL Server 설치](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install)의 `USESQLRECOMMENDEDMEMORYLIMITS`, `SQLMINMEMORY` 및 `SQLMAXMEMORY` 매개 변수를 참조하세요. 제안된 값은 [서버 메모리 구성 옵션](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)의 메모리 구성 지침에 따른 것입니다.| 
 |새 병렬 처리 설정 옵션 | 설치 중에 *최대 병렬 처리 수준* 서버 구성을 설정합니다. [데이터베이스 엔진 구성 - MaxDOP 페이지](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop)와 [ SQL Server 설치](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install)의 `SQLMAXDOP` 매개 변수를 참조하세요. 기본값은 [최대 병렬 처리 수준 서버 구성 옵션 구성](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)의 최대 병렬 처리 수준 지침에 따른 것입니다.| 
+|서버/CAL 라이선스 제품 키에 대한 설정 경고|엔터프라이즈 서버/CAL 라이선스 제품 키를 입력했으며, 머신에 20개가 넘는 물리적 코어가 있거나 하이퍼스레딩을 사용하는 경우 40개가 넘는 논리적 코어가 있는 경우 설치 중에 경고가 표시됩니다. 사용자는 여전히 제한을 승인하고 설치를 계속하거나 운영 체제의 최대 프로세서 수를 지원하는 라이선스 키를 입력할 수 있습니다.|
 | &nbsp; | &nbsp; |
 
 ## <a id="ml"></a> SQL Server Machine Learning Services
@@ -250,7 +257,7 @@ ms.locfileid: "73844562"
 |유연한 파일 작업 |로컬 파일 시스템, Azure Blob Storage 및 Azure Data Lake Storage Gen2에서 파일 작업을 수행합니다. [유연한 파일 작업](../integration-services/control-flow/flexible-file-task.md)을 참조하세요.|
 |유연한 파일 원본 및 대상 |Azure Blob Storage 및 Azure Data Lake Storage Gen2에 대한 데이터를 읽고 씁니다. [유연한 파일 원본](../integration-services/data-flow/flexible-file-source.md) 및 [유연한 파일 대상](../integration-services/data-flow/flexible-file-destination.md)을 참조하세요. |
 
-## <a name="sql-server-includemaster-data-servicesincludesssmdsshort-mdmd"></a>SQL Server [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
+## <a name="sql-server-master-data-services"></a>SQL Server [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
 
 | 새로운 기능 또는 업데이트 | 세부 정보 |
 |:---|:---|
@@ -262,7 +269,7 @@ ms.locfileid: "73844562"
 
 이 버전의 SQL Server Reporting Services는 Azure SQL Database Managed Instance, Power BI Premium 데이터 세트, 향상된 접근성, Azure Active Directory 애플리케이션 프록시 및 투명한 데이터베이스 암호화를 지원합니다. 또한 Microsoft 보고서 작성기에 대한 업데이트도 제공합니다. 자세한 내용은 [SSRS(SQL Server Reporting Services)의 새로운 기능](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)을 참조하세요.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 - [`SqlServer` PowerShell 모듈](https://www.powershellgallery.com/packages/Sqlserver)
 - [SQL Server PowerShell 설명서](../powershell/sql-server-powershell.md)

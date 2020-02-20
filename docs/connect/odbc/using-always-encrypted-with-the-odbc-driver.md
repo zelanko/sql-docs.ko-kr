@@ -7,13 +7,13 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
-author: MightyPen
-ms.openlocfilehash: bf15831517ebaa8646c1d6f3c080033c3a41405d
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+author: v-chojas
+ms.openlocfilehash: c140087942ebe39870316e21994b6a1169daeba0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594372"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76706276"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server용 ODBC 드라이버와 함께 상시 암호화 사용
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "73594372"
 
 Always Encrypted를 사용하면 클라이언트 애플리케이션이 중요한 데이터를 암호화하고 해당 데이터 또는 암호화 키를 SQL Server 또는 Azure SQL Database에 표시하지 않을 수 있습니다. SQL Server용 ODBC 드라이버와 같은 상시 암호화 지원 드라이버는 클라이언트 애플리케이션의 중요한 데이터를 투명하게 암호화하고 암호 해독합니다. 이 드라이버는 중요 데이터베이스 열에 해당하는 쿼리 매개 변수를 자동으로 확인하고(Always Encrypted를 사용하여 보호) 데이터를 SQL Server 또는 Azure SQL Database로 전달하기 전에 이러한 매개 변수의 값을 암호화합니다. 마찬가지로, 이 드라이버는 쿼리 결과의 암호화된 데이터베이스 열에서 검색한 데이터의 암호를 투명하게 해독합니다. *보안 Enclave를 사용한* Always Encrypted는 이 기능을 확장하여 데이터 기밀성을 유지하면서 중요한 데이터에 대해 보다 풍부한 기능을 사용하도록 설정합니다.
 
-자세한 내용은 [Always Encrypted (데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 및 [Always Encrypted with Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md)를 참조 하세요.
+자세한 내용은 [Always Encrypted(데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 및 [보안 Enclave를 사용한 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)를 참조하세요.
 
 ### <a name="prerequisites"></a>사전 요구 사항
 
@@ -59,23 +59,26 @@ Always Encrypted를 사용하도록 설정해도 암호화 또는 암호 해독�
 
 ### <a name="enabling-always-encrypted-with-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted를 사용하도록 설정
 
-버전 17.4부터 드라이버는 보안 Enclave를 사용한 Always Encrypted를 지원합니다. SQL Server 2019 이상에 연결할 때 enclave를 사용할 수 있도록 하려면 `ColumnEncryption` DSN, 연결 문자열 또는 연결 특성을 enclave 유형 및 증명 프로토콜 이름으로 설정 하 고, 연결 된 증명 데이터를 쉼표로 구분 하 여 설정 합니다. 버전 17.4에서는 `VBS-HGS`로 표시 되는 [가상화 기반 Security](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) enclave Type 및 [Host 보호자 서비스](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server) 증명 프로토콜만 지원 됩니다. 이를 사용 하려면 증명 서버의 URL을 지정 합니다. 예를 들면 다음과 같습니다.
+> [!NOTE]
+> Linux 및 Mac에서는 보안 Enclave를 사용한 Always Encrypted를 사용하는 데 OpenSSL 버전 1.0.1 이상이 필요합니다.
+
+버전 17.4부터 드라이버는 보안 Enclave를 사용한 Always Encrypted를 지원합니다. SQL Server 2019 이상에 연결할 때 Enclave를 사용할 수 있도록 하려면 `ColumnEncryption` DSN, 연결 문자열 또는 연결 특성을 Enclave 유형 및 증명 프로토콜의 이름 그리고 연결된 증명 데이터를 쉼표로 구분하여 설정합니다. 버전 17.4에서는 [가상화 기반 보안](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) Enclave 유형 및 [호스트 보호 서비스](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server) 증명 프로토콜(`VBS-HGS`)만 지원됩니다. 이를 사용하려면 증명 서버의 URL을 지정합니다. 예를 들면 다음과 같습니다.
 
 ```
 Driver=ODBC Driver 17 for SQL Server;Server=yourserver.yourdomain;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://attestationserver.yourdomain/Attestation
 ```
 
-서버 및 증명 서비스가 올바르게 구성 되어 있고 원하는 열에 대해 enclave 사용 CMKs 및 CEKs를 사용 하는 경우에는 현재 내부 암호화와 같은 enclave을 사용 하는 쿼리를 실행할 수 있어야 합니다. Always Encrypted에서 제공 하는 기존 기능 자세한 내용은 [Configure Always Encrypted with secure enclaves](../../relational-databases/security/encryption/configure-always-encrypted-enclaves.md) 를 참조 하세요.
+서버 및 증명 서비스가 올바르게 구성되어 있고 원하는 열에 대해 Enclave 지원 CMK 및 CEK를 사용하는 경우에는 Always Encrypted에서 제공하는 기존 기능 이외에 내부 암호화, 리치 계산과 같이 Enclave를 사용하는 쿼리를 실행할 수 있어야 합니다. 자세한 내용은 [보안 Enclave를 사용한 Always Encrypted](../../relational-databases/security/encryption/configure-always-encrypted-enclaves.md)를 참조하세요.
 
 
 ### <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>암호화된 열에서 데이터 검색 및 수정
 
-연결에 Always Encrypted을 사용 하도록 설정 하면 표준 ODBC Api를 사용할 수 있습니다. ODBC Api는 암호화 된 데이터베이스 열의 데이터를 검색 하거나 수정할 수 있습니다. 다음 설명서 항목은이 작업에 도움이 될 수 있습니다.
+연결에 Always Encrypted를 사용하도록 설정하면 표준 ODBC API를 사용할 수 있습니다. ODBC API는 암호화된 데이터베이스 열의 데이터를 검색하거나 수정할 수 있습니다. 다음 설명서 항목은 이러한 작업에 도움이 될 수 있습니다.
 
 - [ODBC 샘플 코드](cpp-code-example-app-connect-access-sql-db.md)
 - [ODBC 프로그래머 참조](../../odbc/reference/odbc-programmer-s-reference.md)
 
-응용 프로그램에 필요한 데이터베이스 권한이 있어야 하 고 열 마스터 키에 액세스할 수 있어야 합니다. 그런 다음, 드라이버는 암호화 된 열을 대상으로 하는 모든 쿼리 매개 변수를 암호화 합니다. 또한이 드라이버는 암호화 된 열에서 검색 된 데이터의 암호를 해독 합니다. 드라이버는 소스 코드의 도움 없이 모든 암호화 및 암호 해독을 수행 합니다. 프로그램에는 열이 암호화 되지 않은 것 처럼 됩니다.
+애플리케이션에 필요한 데이터베이스 권한이 있어야 하고 열 마스터 키에 액세스할 수 있어야 합니다. 그러면 드라이버가 암호화된 열을 대상으로 하는 모든 쿼리 매개 변수를 암호화합니다. 또한 드라이버는 암호화된 열에서 검색된 데이터의 암호를 해독합니다. 드라이버는 소스 코드의 도움 없이 모든 암호화 및 암호 해독을 수행합니다. 프로그램에는 열이 암호화되지 않은 것처럼 됩니다.
 
 상시 암호화를 사용하지 않는 경우 암호화된 열을 대상으로 하는 매개 변수가 있는 쿼리가 실패합니다. 쿼리에 암호화된 열을 대상으로 하는 매개 변수가 없는 경우 암호화된 열에서 데이터를 검색할 수 있습니다. 그러나 드라이버에서 암호 해독을 시도하지 않고, 애플리케이션이 암호화된 이진 데이터를 바이트 배열로 수신합니다.
 
@@ -107,13 +110,13 @@ CREATE TABLE [dbo].[Patients](
 
 #### <a name="data-insertion-example"></a>데이터 삽입 예제
 
-이 예제에서는 Patients 테이블에 행을 삽입합니다. 다음에 유의하세요.
+이 예제에서는 Patients 테이블에 행을 삽입합니다. 다음 사항에 유의하세요.
 
 - 샘플 코드에는 암호화에 대한 내용이 없습니다. 드라이버에서 암호화된 열을 대상으로 하는 SSN 및 날짜 매개 변수의 값을 자동으로 검색하고 암호화합니다. 이렇게 하면 애플리케이션에 투명하게 암호화할 수 있습니다.
 
 - 암호화된 열을 포함하여 데이터베이스 열에 삽입된 값은 바인딩된 매개 변수로 전달됩니다([SQLBindParameter Function](https://msdn.microsoft.com/library/ms710963(v=vs.85).aspx) 참조). 매개 변수를 사용하여 암호화되지 않은 열에 값을 전달하는 것은 선택 사항이지만(그러나 SQL 삽입을 방지할 수 있으므로 매우 권장됨) 암호화된 열을 대상으로 하는 값에 필요합니다. SSN 또는 BirthDate 열에 삽입된 값을 쿼리 문에 포함된 리터럴로 전달하면, 드라이버에서 쿼리의 리터럴을 암호화하거나 다른 방식으로 처리하지 않기 때문에 쿼리가 실패합니다. 결과적으로, 암호화된 열과 호환 불가능한 것으로 간주하여 서버에서 거부합니다.
 
-- SSN 열에 삽입된 매개 변수의 SQL 형식은 **char** SQL Server 데이터 형식(`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`)에 매핑되는 SQL_CHAR로 설정됩니다. 매개 변수 형식을 **nchar**에 매핑되는 SQL_WCHAR로 설정하면 Always Encrypted에서 암호화된 nchar 값을 암호화된 char 값으로 변환하는 서버 쪽 작업을 지원하지 않으므로 쿼리가 실패합니다. 데이터 형식 매핑에 대한 자세한 내용은 [ODBC 프로그래머 참조 - 부록 D: 데이터 형식](https://msdn.microsoft.com/library/ms713607.aspx)을 참조하세요.
+- SSN 열에 삽입된 매개 변수의 SQL 형식은 **char** SQL Server 데이터 형식(`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`)에 매핑되는 SQL_CHAR로 설정됩니다. 매개 변수 형식을 **nchar**에 매핑되는 SQL_WCHAR로 설정하면 Always Encrypted에서 암호화된 nchar 값을 암호화된 char 값으로 변환하는 서버 쪽 작업을 지원하지 않으므로 쿼리가 실패합니다. 데이터 형식 매핑에 대한 자세한 내용은 [ODBC 프로그래머 참조 -- 부록 D: 데이터 형식](https://msdn.microsoft.com/library/ms713607.aspx)을 참조하세요.
 
 ```
     SQL_DATE_STRUCT date;
@@ -154,14 +157,14 @@ CREATE TABLE [dbo].[Patients](
 
 #### <a name="plaintext-data-retrieval-example"></a>일반 텍스트 데이터 검색 예제
 
-다음 예제에서는 암호화된 값을 기준으로 데이터를 필터링하고 암호화된 열에서 일반 텍스트 데이터를 검색하는 방법을 보여 줍니다. 다음에 유의하세요.
+다음 예제에서는 암호화된 값을 기준으로 데이터를 필터링하고 암호화된 열에서 일반 텍스트 데이터를 검색하는 방법을 보여 줍니다. 다음 사항에 유의하세요.
 
 - 해당 드라이버가 서버로 전달하기 전에 투명하게 암호화할 수 있도록 SQLBindParameter 매개 변수를 사용하여 SSN 열에서 필터링하기 위해 WHERE 절에 사용되는 값을 전달해야 합니다.
 
 - 이 드라이버는 SSN 및 BirthDate 열에서 검색한 데이터의 암호를 투명하게 해독하므로 프로그램에서 인쇄한 모든 값은 일반 텍스트로 표시됩니다.
 
 > [!NOTE]
-> 암호화가 결정적 이거나 secure enclave가 사용 하도록 설정 된 경우에만 쿼리에서 암호화 된 열에 대 한 같음 비교를 수행할 수 있습니다. 자세한 내용은 [결정적 또는 임의 암호화 선택](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption)을 참조하세요.
+> 암호화가 결정적인 경우에만 또는 보안 Enclave를 사용하는 경우에 암호화된 열에 대해 동등 비교를 수행할 수 있습니다. 자세한 내용은 [결정적 또는 임의 암호화 선택](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption)을 참조하세요.
 
 ```
 SQLCHAR SSN[12];
@@ -207,7 +210,7 @@ while (SQL_SUCCEEDED(SQLFetch(hstmt)))
 
 상시 암호화를 사용하지 않는 경우에도 쿼리에 암호화된 열을 대상으로 하는 매개 변수가 없으면 암호화된 열에서 데이터를 검색할 수 있습니다.
 
-다음 예제에서는 암호화된 열에서 암호화된 이진 데이터를 검색하는 방법을 보여 줍니다. 다음에 유의하세요.
+다음 예제에서는 암호화된 열에서 암호화된 이진 데이터를 검색하는 방법을 보여 줍니다. 다음 사항에 유의하세요.
 
 - 연결 문자열에서는 상시 암호화를 사용하지 않으므로 쿼리에서 SSN 및 BirthDate의 암호화된 값을 바이트 배열로 반환합니다(프로그램에서 값을 문자열로 변환).
 - 암호화된 열을 대상으로 하는 매개 변수가 없으면 상시 암호화를 사용하지 않고 암호화된 열에서 데이터를 검색하는 쿼리에 매개 변수가 있을 수 있습니다. 위의 쿼리는 LastName을 기준으로 필터링되며 데이터베이스에서 암호화되지 않습니다. 쿼리가 SSN 또는 BirthDate를 기준으로 필터링되면 쿼리가 실패합니다.
@@ -289,11 +292,11 @@ string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo
 
 #### <a name="sqlmoreresults--sqldescribecol"></a>SQLMoreResults 및 SQLDescribeCol
 
-애플리케이션 프로그램에서 [SQLDescribeCol](https://msdn.microsoft.com/library/ms716289(v=vs.85).aspx)을 호출하여 준비된 문의 열에 대한 메타데이터를 반환할 수 있습니다.  Always Encrypted를 사용하는 경우, `SQLMoreResults`를 호출한 *후에* `SQLDescribeCol`을 호출하면 [sp_describe_first_result_set](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)가 호출되어 암호화된 열에 대한 일반 텍스트 메타데이터가 올바르게 반환되지 않습니다. 이 문제를 방지하려면 준비된 문에서 `SQLDescribeCol`을 호출한 *후에* `SQLMoreResults`를 호출합니다.
+애플리케이션 프로그램에서 [SQLDescribeCol](https://msdn.microsoft.com/library/ms716289(v=vs.85).aspx)을 호출하여 준비된 문의 열에 대한 메타데이터를 반환할 수 있습니다.  Always Encrypted를 사용하는 경우, `SQLMoreResults`를 호출한 *후에* `SQLDescribeCol`을 호출하면 [sp_describe_first_result_set](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)가 호출되어 암호화된 열에 대한 일반 텍스트 메타데이터가 올바르게 반환되지 않습니다. 이 문제를 방지하려면 준비된 문에서 `SQLDescribeCol`을 호출한 *후에*`SQLMoreResults`를 호출합니다.
 
 ## <a name="controlling-the-performance-impact-of-always-encrypted"></a>상시 암호화의 성능 영향 제어
 
-상시 암호화는 클라이언트 쪽 암호화 기술이므로 데이터베이스가 아닌 클라이언트 쪽에서 대부분의 성능 오버헤드가 발생합니다. 암호화 및 암호 해독 작업의 비용 외에 클라이언트 쪽 성능 오버헤드의 원인은 다음과 같습니다.
+Always Encrypted는 클라이언트 쪽 암호화 기술이므로 데이터베이스가 아닌 클라이언트 쪽에서 대부분의 성능 오버헤드가 발생합니다. 암호화 및 암호 해독 작업의 비용 외에 클라이언트 쪽 성능 오버헤드의 원인은 다음과 같습니다.
 
 - 쿼리 매개 변수에 대한 메타데이터를 검색하기 위해 데이터베이스에 대한 추가 왕복
 
@@ -303,7 +306,7 @@ string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>쿼리 매개 변수에 대한 메타데이터를 검색하기 위한 왕복 제어
 
-연결에 대한 상시 암호화가 설정된 경우 기본적으로 드라이버는 각 매개 변수화된 쿼리에 대해 [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)을 호출하고 매개 변수 값 없이 쿼리 문을 SQL Server에 전달합니다. 이 저장 프로시저는 쿼리 문을 분석하여 암호화해야 하는 매개 변수가 있는지 확인하고, 있을 경우 드라이버에서 매개 변수를 암호화할 수 있도록 각 매개 변수에 대한 암호화 관련 정보를 반환합니다. 위의 동작은 클라이언트 애플리케이션에 대한 높은 수준의 투명성을 보장합니다. 암호화된 열을 대상으로 하는 값이 매개 변수로 드라이버에 전달되는 한, 애플리케이션(및 애플리케이션 개발자)에서는 어떤 쿼리가 암호화된 열에 액세스하는지 유의하지 않아도 됩니다.
+연결에 대한 상시 암호화가 설정된 경우 기본적으로 드라이버는 각 매개 변수화된 쿼리에 대해 [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)을 호출하고 매개 변수 값 없이 쿼리 문을 SQL Server에 전달합니다. 이 저장 프로시저는 쿼리 문을 분석하여 암호화해야 하는 매개 변수가 있는지 확인하고, 있을 경우 드라이버에서 매개 변수를 암호화할 수 있도록 각 매개 변수에 대한 암호화 관련 정보를 반환합니다. 위의 동작은 클라이언트 애플리케이션에 대한 높은 수준의 투명도를 보장합니다. 애플리케이션(및 애플리케이션 개발자)에서는 암호화된 열을 대상으로 하는 값이 매개 변수로 드라이버에 전달되는 한, 어떤 쿼리가 암호화된 열에 액세스하는지 유의하지 않아도 됩니다.
 
 ### <a name="per-statement-always-encrypted-behavior"></a>문 단위의 Always Encrypted 동작
 
@@ -311,7 +314,7 @@ string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo
 
 Always Encrypted의 문 동작을 제어하려면 SQLSetStmtAttr을 호출하여 `SQL_SOPT_SS_COLUMN_ENCRYPTION` 문 특성을 다음 값 중 하나로 설정합니다.
 
-|값|설명|
+|값|Description|
 |-|-|
 |`SQL_CE_DISABLED` (0)|문에 대해 Always Encrypted를 사용할 수 없습니다.|
 |`SQL_CE_RESULTSETONLY` (1)|암호 해독만 수행합니다. 결과 집합과 반환 값의 암호가 해독되고, 매개 변수는 암호화되지 않습니다.|
@@ -364,7 +367,7 @@ ECEK의 일반 텍스트 값을 가져오기 위해 드라이버는 먼저 CEK�
 
 ODBC Driver for SQL Server에는 다음과 같은 기본 제공 키 저장소 공급자가 포함되어 있습니다.
 
-| 속성 | 설명 | 공급자 (메타데이터) 이름 |가용성|
+| 속성 | Description | 공급자 (메타데이터) 이름 |가용성|
 |:---|:---|:---|:---|
 |Azure Key Vault |Azure Key Vault에 CMK를 저장합니다. | `AZURE_KEY_VAULT` |Windows, macOS, Linux|
 |Windows 인증서 저장소|Windows 키 저장소에 CMK를 로컬로 저장합니다.| `MSSQL_CERTIFICATE_STORE`|Windows|
@@ -378,7 +381,7 @@ ODBC Driver for SQL Server에는 다음과 같은 기본 제공 키 저장소 �
 AKV(Azure Key Vault)는 Always Encrypted에 대한 열 마스터 키를 저장 및 관리하는 편리한 옵션입니다(특히 애플리케이션이 Azure에서 호스트되는 경우). Linux, macOS 및 Windows의 ODBC Driver for SQL Server에는 Azure Key Vault용 기본 제공 열 마스터 키 저장소 공급자가 포함되어 있습니다. Always Encrypted에 대해 Azure Key Vault를 구성하는 방법에 대한 자세한 내용은 [Azure Key Vault - 단계별](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/), [Key Vault 시작](https://azure.microsoft.com/documentation/articles/key-vault-get-started/) 및 [Azure Key Vault에 열 마스터 키 만들기](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2)를 참조하세요.
 
 > [!NOTE]
-> ODBC 드라이버는 AKV 인증에 대 한 Active Directory Federation Services 지원 하지 않습니다. AKV에 Azure Active Directory 인증을 사용 하는 경우 Active Directory 구성에 페더레이션된 서비스가 포함 되 면 인증에 실패할 수 있습니다.
+> ODBC 드라이버는 AKV 인증에 Active Directory Federation Services를 지원하지 않습니다. AKV에 Azure Active Directory 인증을 사용하는 경우 Active Directory 구성에 페더레이션된 서비스가 포함되면 인증에 실패할 수 있습니다.
 > Linux 및 macOS의 드라이버 버전 17.2 이상에서 이 공급자를 사용하려면 `libcurl`이 필요하지만, 다른 드라이버 관련 작업에서는 필요하지 않기 때문에 명시적 종속성은 아닙니다. `libcurl`에 관한 오류가 발생하는 경우 해당 패키지가 설치되었는지 확인하십시오.
 
 드라이버에서 다음과 같은 자격 증명 유형을 사용하여 Azure Key Vault에 인증할 수 있습니다.
@@ -420,7 +423,7 @@ Windows의 ODBC Driver for SQL Server에는 `MSSQL_CERTIFICATE_STORE`라는 Wind
 
 ODBC Driver for SQL Server는 CEKeystoreProvider 인터페이스를 사용하여 사용자 지정 타사 키 저장소 공급자도 지원합니다. 이 기능을 통해 애플리케이션에서 드라이버가 암호화된 열에 액세스하는 데 사용할 수 있도록 키 저장소 공급자를 로드, 쿼리 및 구성할 수 있습니다. 애플리케이션에서 SQL Server에 저장할 CEK를 암호화하고 ODBC를 사용하여 암호화된 열에 액세스하는 이상의 태스크를 수행하기 위해 키 스토리지 공급자와 직접 상호 작용할 수도 있습니다. 자세한 내용은 [사용자 지정 키 스토리지 공급자](../../connect/odbc/custom-keystore-providers.md)를 참조하세요.
 
-두 개의 연결 특성이 사용자 지정 키 저장소 공급자와 상호 작용하는 데 사용됩니다. 반환할 수 있습니다.
+두 개의 연결 특성이 사용자 지정 키 저장소 공급자와 상호 작용하는 데 사용됩니다. 아래에 이 계정과 키의 예제가 나와 있습니다.
 
 - `SQL_COPT_SS_CEKEYSTOREPROVIDER`
 
@@ -436,7 +439,7 @@ ODBC Driver for SQL Server는 CEKeystoreProvider 인터페이스를 사용하여
 SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER StringLength);
 ```
 
-| 인수 | 설명 |
+| 인수 | Description |
 |:---|:---|
 |`ConnectionHandle`|[Input] 연결 핸들입니다. 유효한 연결 핸들이어야 하지만, 한 연결 핸들을 통해 로드된 공급자를 같은 프로세스의 다른 모든 연결 핸들에서 액세스할 수 있습니다.|
 |`Attribute`|[Input] 설정할 특성으로, `SQL_COPT_SS_CEKEYSTOREPROVIDER` 상수입니다.|
@@ -445,7 +448,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 드라이버는 플랫폼에서 정의된 동적 라이브러리 로드 메커니즘(Linux 및 macOS에서는 `dlopen()`, Windows에서는 `LoadLibrary()`)을 사용하여 ValuePtr 매개 변수로 식별된 라이브러리를 로드하고, 라이브러리에 정의된 모든 공급자를 드라이버에 알려진 공급자 목록에 추가합니다. 다음 오류가 발생할 수 있습니다.
 
-| Error | 설명 |
+| Error | Description |
 |:--|:--|
 |`CE203`|동적 라이브러리를 로드할 수 없습니다.|
 |`CE203`|라이브러리에 “CEKeyStoreProvider” 내보낸 기호가 없습니다.|
@@ -456,7 +459,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 > [!NOTE]
 > 애플리케이션 프로그래머는 사용자 지정 공급자가 로드된 후에 사용자 지정 공급자를 요구하는 쿼리가 연결을 통해 전송되도록 해야 합니다. 그렇게 하지 않으면 오류가 발생합니다.
 
-| Error | 설명 |
+| Error | Description |
 |:--|:--|
 |`CE200`|키 저장소 공급자 %1을(를) 찾을 수 없습니다. 해당하는 키 저장소 공급자 라이브러리가 로드되어 있는지 확인하세요.|
 
@@ -471,7 +474,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER BufferLength, SQLINTEGER * StringLengthPtr);
 ```
 
-| 인수 | 설명 |
+| 인수 | Description |
 |:---|:---|
 |`ConnectionHandle`|[Input] 연결 핸들입니다. 유효한 연결 핸들이어야 하지만, 한 연결 핸들을 통해 로드된 공급자를 같은 프로세스의 다른 모든 연결 핸들에서 액세스할 수 있습니다.|
 |`Attribute`|[Input] 검색할 특성으로, `SQL_COPT_SS_CEKEYSTOREPROVIDER` 상수입니다.|
@@ -498,7 +501,7 @@ char data[];
 } CEKEYSTOREDATA;
 ```
 
-| 인수 | 설명 |
+| 인수 | Description |
 |:---|:---|
 |`name`|[Input] Set에서 데이터가 전송되는 공급자 이름입니다. Get에서는 무시됩니다. null로 종료된 와이드 문자열입니다.|
 |`dataSize`|[Input] 구조를 따르는 데이터 배열의 크기입니다.|
@@ -511,7 +514,7 @@ char data[];
 SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER StringLength);
 ```
 
-| 인수 | 설명 |
+| 인수 | Description |
 |:---|:---|
 |`ConnectionHandle`| [Input] 연결 핸들입니다. 유효한 연결 핸들이어야 하지만, 한 연결 핸들을 통해 로드된 공급자를 같은 프로세스의 다른 모든 연결 핸들에서 액세스할 수 있습니다.|
 |`Attribute`|[Input] 설정할 특성으로, `SQL_COPT_SS_CEKEYSTOREDATA` 상수입니다.|
@@ -531,7 +534,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQLPOINTER ValuePtr, SQLINTEGER BufferLength, SQLINTEGER * StringLengthPtr);
 ```
 
-| 인수 | 설명 |
+| 인수 | Description |
 |:---|:---|
 |`ConnectionHandle`|[Input] 연결 핸들입니다. 유효한 연결 핸들이어야 하지만, 한 연결 핸들을 통해 로드된 공급자를 같은 프로세스의 다른 모든 연결 핸들에서 액세스할 수 있습니다.|
 |`Attribute`|[Input] 검색할 특성으로, `SQL_COPT_SS_CEKEYSTOREDATA` 상수입니다.|
@@ -569,11 +572,11 @@ ODBC Driver 17 for SQL Server부터 Always Encrypted에서 [SQL 대량 복사 �
 
 - varbinary(max) 형식으로 암호 텍스트를 삽입하려면(예: 위에서 검색한 경우), `BCPMODIFYENCRYPTED` 옵션을 TRUE로 설정하고 BCP IN 작업을 수행합니다. 결과 데이터의 암호 해독이 가능하도록 대상 열의 CEK가 원래 암호 텍스트를 얻는 데 사용한 CEK와 같은지 확인합니다.
 
-**bcp** 유틸리티를 사용하는 경우 `ColumnEncryption` 설정을 제어하려면 -D 옵션을 사용하고 원하는 값이 포함된 DSN을 지정합니다. 암호 텍스트를 삽입하려면 사용자의 `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` 설정이 사용되었는지 확인합니다.
+**bcp** 유틸리티를 사용하는 경우: `ColumnEncryption` 설정을 제어하려면 -D 옵션을 사용하고 원하는 값이 포함된 DSN을 지정합니다. 암호 텍스트를 삽입하려면 사용자의 `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` 설정이 사용되었는지 확인합니다.
 
 다음 표에는 암호화된 열에서 작업하는 경우의 작업 요약이 나와 있습니다.
 
-|`ColumnEncryption`|BCP 방향|설명|
+|`ColumnEncryption`|BCP 방향|Description|
 |----------------|-------------|-----------|
 |`Disabled`|OUT(클라이언트로)|암호 텍스트를 검색합니다. 관찰한 데이터 형식은 **varbinary(max)** 입니다.|
 |`Enabled`|OUT(클라이언트로)|일반 텍스트를 검색합니다. 드라이버에서 열 데이터의 암호를 해독합니다.|
@@ -590,9 +593,9 @@ ODBC Driver 17 for SQL Server부터 Always Encrypted에서 [SQL 대량 복사 �
 
 ### <a name="connection-string-keywords"></a>연결 문자열 키워드
 
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
-|`ColumnEncryption`|허용되는 값은 `Enabled`/`Disabled`입니다.<br>`Enabled` - 연결에 상시 암호화 기능을 사용하도록 설정합니다.<br>`Disabled` - 연결에 Always Encrypted 기능을 사용하지 않도록 설정합니다.<br>*유형*,*데이터* --(버전 17.4 이상)를 사용 하면 보안 enclave 및 증명 프로토콜 *유형*및 연결 된 증명 데이터 *데이터*를 사용 하 여 Always Encrypted 수 있습니다. <br><br>기본값은 `Disabled`입니다.|
+|`ColumnEncryption`|허용되는 값은 `Enabled`/`Disabled`입니다.<br>`Enabled` - 연결에 상시 암호화 기능을 사용하도록 설정합니다.<br>`Disabled` - 연결에 Always Encrypted 기능을 사용하지 않도록 설정합니다.<br>*type*,*data* -- (버전 17.4 이상) 보안 Enclave를 사용한 Always Encrypted 및 증명 프로토콜(*type*) 및 연결된 증명 데이터(*data*)를 사용하도록 설정합니다. <br><br>기본값은 `Disabled`입니다.|
 |`KeyStoreAuthentication` | 유효한 값: `KeyVaultPassword`,`KeyVaultClientSecret` |
 |`KeyStorePrincipalId` | `KeyStoreAuthentication` = `KeyVaultPassword`이면, 이 값을 유효한 Azure Active Directory 사용자 계정 이름으로 설정합니다. <br>`KeyStoreAuthetication` = `KeyVaultClientSecret`이면, 이 값을 유효한 Azure Active Directory 애플리케이션 클라이언트 ID로 설정합니다. |
 |`KeyStoreSecret` | `KeyStoreAuthentication` = `KeyVaultPassword`이면, 이 값을 해당 사용자 이름의 암호로 설정합니다. <br>`KeyStoreAuthentication` = `KeyVaultClientSecret`이면, 이 값을 유효한 Azure Active Directory 애플리케이션 클라이언트 ID와 관련된 애플리케이션 비밀로 설정합니다. |
@@ -600,9 +603,9 @@ ODBC Driver 17 for SQL Server부터 Always Encrypted에서 [SQL 대량 복사 �
 
 ### <a name="connection-attributes"></a>연결 특성
 
-|속성|형식|설명|  
+|속성|Type|Description|  
 |----------|-------|----------|  
-|`SQL_COPT_SS_COLUMN_ENCRYPTION`|연결 전|`SQL_COLUMN_ENCRYPTION_DISABLE`(0) - Always Encrypted를 사용하지 않도록 설정합니다. <br>`SQL_COLUMN_ENCRYPTION_ENABLE`(1) - Always Encrypted를 사용하도록 설정합니다.<br> *형식*에 대 한 포인터,*데이터* 문자열--(버전 17.4 이상)에서 secure enclave를 사용 하도록 설정|
+|`SQL_COPT_SS_COLUMN_ENCRYPTION`|연결 전|`SQL_COLUMN_ENCRYPTION_DISABLE`(0) - Always Encrypted를 사용하지 않도록 설정합니다. <br>`SQL_COLUMN_ENCRYPTION_ENABLE`(1) - Always Encrypted를 사용하도록 설정합니다.<br> *type*,*data* 문자열에 대한 포인터 -- (버전 17.4 이상) 보안 Enclave를 사용하도록 설정합니다.|
 |`SQL_COPT_SS_CEKEYSTOREPROVIDER`|연결 후|[Set] CEKeystoreProvider 로드 시도<br>[Get] CEKeystoreProvider 이름 반환|
 |`SQL_COPT_SS_CEKEYSTOREDATA`|연결 후|[Set] CEKeystoreProvider에 데이터 쓰기<br>[Get] CEKeystoreProvider에서 데이터 읽기|
 |`SQL_COPT_SS_CEKCACHETTL`|연결 후|[Set] CEK 캐시 TTL 설정<br>[Get] 현재 CEK 캐시 TTL 가져오기|
@@ -610,21 +613,42 @@ ODBC Driver 17 for SQL Server부터 Always Encrypted에서 [SQL 대량 복사 �
 
 ### <a name="statement-attributes"></a>문 특성
 
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |`SQL_SOPT_SS_COLUMN_ENCRYPTION`|`SQL_CE_DISABLED`(0) - 문에 대해 Always Encrypted를 사용할 수 없습니다. <br>`SQL_CE_RESULTSETONLY`(1) - 암호 해독만 수행합니다. 결과 집합과 반환 값의 암호가 해독되고, 매개 변수는 암호화되지 않습니다. <br>`SQL_CE_ENABLED`(3) - Always Encrypted를 사용할 수 있고, 매개 변수와 결과에 모두 사용됩니다.|
 
 ### <a name="descriptor-fields"></a>설명자 필드
 
-|IPD 필드|크기/형식|기본값|설명|
+|IPD 필드|크기/형식|기본값|Description|
 |-|-|-|-|  
 |`SQL_CA_SS_FORCE_ENCRYPT` (1236)|WORD(2바이트)|0|0(기본값)인 경우: 이 매개 변수의 암호화가 암호화 메타데이터의 사용 가능 여부에 따라 결정됩니다.<br><br>0이 아닌 경우: 이 매개 변수에 대한 암호화 메타데이터를 사용할 수 있으면 암호화됩니다. 암호화 메타데이터를 사용할 수 없으면 다음 오류가 발생하고 요청이 실패합니다. [CE300] [Microsoft][ODBC Driver 13 for SQL Server]매개 변수에 대해 필수 암호화가 지정되었지만 서버에서 제공된 암호화 메타데이터가 없습니다.|
 
 ### <a name="bcp_control-options"></a>bcp_control 옵션
 
-|옵션 이름|기본값|설명|
+|옵션 이름|기본값|Description|
 |-|-|-|
 |`BCPMODIFYENCRYPTED` (21)|FALSE|TRUE이면, varbinary(max) 값을 암호화된 열에 삽입할 수 있습니다. FALSE이면, 올바른 형식 및 암호화 메타데이터를 제공해야만 삽입할 수 있습니다.|
+
+## <a name="troubleshooting"></a>문제 해결
+
+Always Encrypted를 사용하는 데 문제가 발생할 경우 다음 사항부터 확인을 시작합니다.
+
+- 원하는 열을 암호화하는 CEK가 있고 서버에서 액세스할 수 있습니다.
+
+- CEK를 암호화하는 CMK가 서버에서 액세스할 수 있는 메타데이터를 포함하며 클라이언트에서도 액세스할 수 있습니다.
+
+- `ColumnEncryption`이 DSN, 연결 문자열 또는 연결 특성에서 사용되도록 설정되고, 보안 Enclave를 사용하는 경우에는 올바른 형식입니다.
+
+
+또한 보안 Enclave을 사용하는 경우 증명 오류는 다음 표에 따라 오류가 발생한 증명 프로세스의 단계를 식별합니다.
+
+|단계|Description|
+|----|-----------|
+|0-99| 증명 응답이 잘못되었거나 서명 확인 오류가 발생했습니다. |
+|100-199| 증명 URL에서 인증서를 검색하는 동안 오류가 발생했습니다. `<attestation URL>/v2.0/signingCertificates`가 올바르고 액세스할 수 있는지 확인합니다. |
+|200-299| Enclave의 ID가 예기치 않거나 잘못된 형식입니다. |
+|300-399| Enclave로 보안 채널을 설정하는 동안 오류가 발생했습니다. |
+
 
 ## <a name="see-also"></a>참고 항목
 

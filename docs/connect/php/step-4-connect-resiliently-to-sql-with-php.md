@@ -1,5 +1,5 @@
 ---
-title: '4 단계: PHP를 사용 하 여 탄력적으로를 SQL에 연결 | Microsoft Docs'
+title: '4단계: PHP로 SQL에 탄력적으로 연결 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/22/2018
 ms.prod: sql
@@ -11,21 +11,21 @@ ms.assetid: 8013474f-48e9-43d5-ab89-7b0504044468
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 002c27145360e0877d4e1bff816c25070247ddd8
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70874368"
 ---
-# <a name="step-4-connect-resiliently-to-sql-with-php"></a>4단계: PHP를 사용하여 탄력적으로 SQL에 연결
+# <a name="step-4-connect-resiliently-to-sql-with-php"></a>4단계: PHP로 SQL에 탄력적으로 연결
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
   
-데모 프로그램은 연결 시도를 시도 하는 동안 일시적인 오류 (이 [부록](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes)에 나열 된 접두사 ' 08 '이 포함 된 오류 코드)가 다시 시도 될 수 있도록 설계 되었습니다. 그러나 쿼리 명령을 실행 하는 동안 일시적인 오류가 발생 하면 프로그램에서 연결을 삭제 하 고 새 연결을 만든 다음 쿼리 명령을 다시 시도 합니다. 이 디자인을 선택 하지 않는 것이 좋습니다. 데모 프로그램은 사용자에 게 제공 되는 몇 가지 디자인 유연성을 보여 줍니다.  
+데모 프로그램은 연결 시도 중 (이 [부록](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes)에 제시된 바와 같이 접두사 '08 '이 포함된 오류 코드에 해당되는) 일시적인 오류로 다시 시도하도록 설계되었습니다. 하지만 쿼리 명령 동안 일시적 오류로 프로그램이 연결을 무시하고 쿼리 명령을 다시 시도하기 전에 새 연결을 만듭니다. 이 디자인 선택을 권장하지 않거나, 또는 권장하지도 않습니다. 데모 프로그램은 사용할 수 있는 디자인 유연성 중 일부를 보여줍니다.  
   
-이 코드 샘플의 길이는 주로 예외 catch 논리로 인해 발생 합니다.   
+이 코드 샘플의 길이는 주로 catch 예외 논리 때문입니다.   
   
-[Sqlsrv_query ()](../../connect/php/sqlsrv-query.md) 함수를 사용 하 여 SQL Database에 대 한 쿼리에서 결과 집합을 검색할 수 있습니다. 이 함수는 기본적으로 모든 쿼리 및 연결 개체를 허용 하 고 [sqlsrv_fetch_array ()](../../connect/php/sqlsrv-fetch-array.md)를 사용 하 여 반복 될 수 있는 결과 집합을 반환 합니다. 
+[sqlsrv_query()](../../connect/php/sqlsrv-query.md) 함수를 사용하여 SQL Database에 대한 쿼리에서 결과 집합을 검색할 수 있습니다. 이 함수는 본질적으로 모든 쿼리 및 연결 개체를 허용하며, [sqlsrv_fetch_array()](../../connect/php/sqlsrv-fetch-array.md)을 사용하여 반복될 수 있는 결과 집합을 반환합니다. 
   
 ```php
 

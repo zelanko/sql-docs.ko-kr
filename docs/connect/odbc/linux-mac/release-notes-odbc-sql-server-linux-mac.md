@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/30/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: MightyPen
+ms.reviewer: v-jizho2
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-makouz
+author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: e7a3d7b7f67abae251041ff2b702d93b60228958
-ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
-ms.translationtype: MTE75
+ms.openlocfilehash: cf6cd4cce3435491632afa98195650a73fe4a23b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72173143"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76911204"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-to-sql-server-on-linux-and-macos"></a>Linux 및 macOS 기반 Microsoft ODBC Driver for SQL Server에 대한 릴리스 정보
 
@@ -35,18 +35,29 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+
+## <a name="175-january-2020"></a>17.5, 2020년 1월
+
+| 추가된 기능 | 세부 정보 |
+| :------------ | :------ |
+| 서버를 왕복하지 않고 SPID를 검색하는 SQL_COPT_SS_SPID 연결 특성 | [DSN 및 연결 문자열 특성과 키워드](../dsn-connection-string-attribute.md)를 참조하세요. |
+| Debian 및 Ubuntu에서 `debconf`를 통해 EULA 승인 표시를 지원 | [드라이버 설치](./installing-the-microsoft-odbc-driver-for-sql-server.md)를 참조하세요. |
+| 지원되는 새 배포. | &bull; &nbsp; &nbsp; Alpine Linux(3.10, 3.11)<br/>&bull; &nbsp; &nbsp; Oracle Linux 8<br/>&bull; &nbsp; &nbsp; Ubuntu 19.10<br/>&bull; &nsbp; &nbsp; macOS 10.15 |
+| 버그 수정. | [버그 수정](../bug-fixes.md)을 참조하세요. |
+| &nbsp; | &nbsp; |
+
 ## <a name="1742-october-2019"></a>17.4.2, 2019년 10월
 
 | 추가된 기능 | 세부 정보 |
 | :------------ | :------ |
-| 추가 Azure Key Vault 끝점에 대 한 지원 | [Always Encrypted와 ODBC 드라이버 사용](../using-always-encrypted-with-the-odbc-driver.md)을 참조하세요. |
+| 추가 Azure Key Vault 엔드포인트 지원 | [Always Encrypted와 ODBC 드라이버 사용](../using-always-encrypted-with-the-odbc-driver.md)을 참조하세요. |
 | 데이터 분류 버전 설정 지원 | [데이터 분류](../data-classification.md#bkmk-version)를 참조하세요. |
 | 버그 수정. | [버그 수정](../bug-fixes.md)을 참조하세요. |
 | &nbsp; | &nbsp; |
 
 **알려진 문제:**
 
-Secure enclaves 및 Azure Key Vault에서 Always Encrypted를 사용 하는 경우 홀수 키 경로 길이는 CMK 서명 확인 오류가 발생할 수 있습니다. 이 문제가 발생 하는 경우 AKV 키 이름을 바꿔서 keypath의 길이를 한 문자씩 변경해 보세요.
+보안 enclave 및 Azure Key Vault에서 Always Encrypted를 사용하는 경우 홀수 키 경로 길이는 CMK 서명 확인 오류가 발생할 수 있습니다. 이 문제가 발생하는 경우 AKV 키 이름을 바꿔서 키 경로의 길이를 한 문자씩 변경해 보세요.
 
 ## <a name="174-august-2019"></a>17.4, 2019년 8월
 
@@ -94,7 +105,7 @@ Secure enclaves 및 Azure Key Vault에서 Always Encrypted를 사용 하는 경�
 
 **지원되는 새 배포**: macOS High Sierra 및 Ubuntu 17.10 
 
-**성능 향상**: 드라이버가 UTF-8/16으로/에서 변환하는 경우 성능이 10배 이상 개선됩니다.
+**향상된 성능**: 드라이버가 UTF-8/16으로 또는 UTF-8/16에서 변환하는 경우 성능이 10배 이상 개선됩니다.
 
 **추가된 기능**:
 
@@ -116,17 +127,17 @@ Azure SQL Managed Instance 지원(프라이빗 미리 보기 확장).
 > -   ALTER DATABASE [dbname1] MODIFY NAME = [dbname2]가 지원되지 않음
 > -   오류 메시지는 언어 설정(Azure와 동일)에 관계 없이 항상 영어로 표시됨 
 
-## <a name="131-for-includessnoversionincludesssnoversion-mdmd-on-linux-and-macos-may-2017"></a>13.1, Linux 및 macOS 기반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 경우, 2017년 5월
+## <a name="131-for-ssnoversion-on-linux-and-macos-may-2017"></a>13.1, Linux 및 macOS 기반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 경우, 2017년 5월
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]용 ODBC 드라이버 13.1은 Microsoft SQL Server 2016과 함께 사용하는 경우 Always Encrypted 및 Azure Active Directory ODBC 드라이버 지원을 추가합니다.
 
-**지원되는 새 배포**: OS X 10.11 및 macOS 10.12는 macOS 기반 ODBC 드라이버의 첫 번째 릴리스에서 지원됩니다. 이제 Red Hat 6, 7 및 SUSE 12와 함께 Ubuntu 16.10도 지원됩니다. 각 플랫폼에는 설치 및 구성을 용이하게 해주기 위한 플랫폼 관련 패키지(RPM 또는 DEB)가 있습니다.  설치 지침은 [드라이버 설치](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)를 참조하세요.
+**지원되는 새 배포.** : OS X 10.11 및 macOS 10.12는 macOS 기반 ODBC 드라이버의 첫 번째 릴리스에서 지원됩니다. 이제 Red Hat 6, 7 및 SUSE 12와 함께 Ubuntu 16.10도 지원됩니다. 각 플랫폼에는 설치 및 구성을 용이하게 해주기 위한 플랫폼 관련 패키지(RPM 또는 DEB)가 있습니다.  설치 지침은 [드라이버 설치](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)를 참조하세요.
 
-**unixODBC 드라이버 관리자 2.3.1 지원 변경**: ODBC 드라이버는 더 이상 unixODBC 드라이버 관리자용 사용자 지정 패키징(RedHat 6의 경우 제외)에 의존하지 않으며, 배포 패키지 관리자에 의존하여 배포의 리포지토리에서 UnixODBC 종속성을 해결합니다.
+**unixODBC 드라이버 관리자 2.3.1 지원 변경 사항**: ODBC 드라이버는 더 이상 unixODBC 드라이버 관리자용 사용자 지정 패키징(RedHat 6의 경우 제외)에 의존하지 않으며, 배포 패키지 관리자에 의존하여 배포의 리포지토리에서 UnixODBC 종속성을 해결합니다.
 
 **BCP API 지원**: Linux 및 macOS ODBC 드라이버는 이제 [BCP API 함수(**bcp_init** 등)](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md) 사용을 지원합니다.
 
-## <a name="130-for-includessnoversionincludesssnoversion-mdmd-on-linux"></a>13.0, Linux 기반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 경우
+## <a name="130-for-ssnoversion-on-linux"></a>13.0, Linux 기반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 경우
 
 이제 Microsoft ODBC Driver 13.0 for SQL Server, SQL Server 2014 및 SQL Server 2016도 지원됩니다.  
 
@@ -136,16 +147,16 @@ Azure SQL Managed Instance 지원(프라이빗 미리 보기 확장).
 
 **unixODBC 드라이버 관리자 2.3.1 지원**: 최신 드라이버 관리자뿐만 아니라 설치 및 구성을 용이하게 해주는 이 종속성을 설치하기 위한 패키지도 있습니다.  
 
-**투명한 네트워크 IP 확인**: 투명한 네트워크 IP 확인은 호스트 이름의 첫 번째 확인된 IP가 응답하지 않고 해당 소스트 이름과 연결된 복수의 IP가 있는 경우 드라이버의 연결 순서에 영향을 주는 기존 다중 서브넷 장애 조치(failover) 기능의 개정판입니다.
+**투명 네트워크 IP 확인**: 투명한 네트워크 IP 확인은 호스트 이름의 첫 번째 확인된 IP가 응답하지 않고 해당 호스트 이름과 연결된 복수의 IP가 있는 경우 드라이버의 연결 순서에 영향을 주는 기존 다중 서브넷 장애 조치(failover) 기능의 개정판입니다.
 
 **TLS 1.2 지원**: Linux 기반 Microsoft ODBC Driver 13.0 for SQL Server는 이제 SQL Server와의 보안 통신을 사용하는 경우 TLS 1.2를 지원합니다.
 
-## <a name="11-for-includessnoversionincludesssnoversion-mdmd-on-linux"></a>11, Linux 기반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 경우
+## <a name="11-for-ssnoversion-on-linux"></a>11, Linux 기반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 경우
 
 SUSE Linux(Preview)의 ODBC 드라이버는 64비트 SUSE Linux Enterprise 11 서비스 팩 2를 지원합니다. 자세한 내용은 [System Requirements](../../../connect/odbc/linux-mac/system-requirements.md)을 참조하세요.  
 
 Linux 기반 ODBC 드라이버는 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]을 지원합니다. 자세한 내용은 [고가용성, 재해 복구를 위한 Linux 기반 ODBC 드라이버 지원](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)을 참조하세요.  
 
-Linux 기반 ODBC 드라이버는 Microsoft Azure SQL 데이터베이스에 대한 연결을 지원합니다. 자세한 내용은 [방법: ODBC를 사용하여 Azure SQL 데이터베이스에 연결](https://msdn.microsoft.com/library/hh974312.aspx)을 참조하세요.  
+Linux 기반 ODBC 드라이버는 Microsoft Azure SQL 데이터베이스에 대한 연결을 지원합니다. 자세한 내용은 [방법: ODBC를 사용하여 Azure SQL Database에 연결](https://msdn.microsoft.com/library/hh974312.aspx)을 참조하세요.  
 
 `bcp`에 `-l` 옵션(로그인 시간 제한)이 추가되었습니다. 자세한 내용은 [Connecting with **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md)을 참조하세요.

@@ -1,11 +1,13 @@
 ---
-title: 암호화 키 삭제 및 다시 만들기(SSRS 구성 관리자) | Microsoft Docs
-ms.date: 05/31/2016
+title: 암호화 키 삭제 및 다시 만들기(구성 관리자) | Microsoft Docs
+description: 암호화 키를 삭제했다가 다시 만드는 작업은 정기적인 암호화 키 유지 관리 작업에 해당되지 않습니다.
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
-- re-creating encryption keys
+- recreating encryption keys
 - encryption keys [Reporting Services]
 - deleting encryption keys
 - symmetric keys [Reporting Services]
@@ -14,28 +16,28 @@ helpviewer_keywords:
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5bf83ea3eb7ed7f4ef28872b964449d2924aab48
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 13f0237a987a87087f04da88f4a21173611c4437
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593532"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866306"
 ---
-# <a name="ssrs-encryption-keys---delete-and-re-create-encryption-keys"></a>SSRS 암호화 키 - 암호화 키 삭제 및 다시 만들기
+# <a name="delete-and-recreate-encryption-keys-ssrs-configuration-manager"></a>암호화 키 삭제 및 다시 만들기(SSRS 구성 관리자)
   암호화 키를 삭제했다가 다시 만드는 작업은 정기적인 암호화 키 유지 관리 작업에 해당되지 않습니다. 보고서 서버가 위협을 받을 때나 보고서 서버 데이터베이스에 더 이상 액세스할 수 없을 때 마지막 수단으로 이러한 태스크를 수행합니다.  
   
 -   기존 대칭 키가 노출된 것으로 판단되면 대칭 키를 다시 만듭니다. 또한 보안을 향상시키기 위해 정기적으로 키를 다시 만들 수 있습니다.  
   
 -   대칭 키를 복원할 수 없는 경우 기존 암호화 키를 삭제하고 암호화된 내용을 비활성화합니다.  
   
-## <a name="re-creating-encryption-keys"></a>암호화 키 다시 만들기  
- 허가되지 않은 사용자가 대칭 키를 알고 있다고 간주되거나 보고서 서버가 공격을 받고 있어 예방 차원에서 대칭 키를 다시 설정하려는 경우 대칭 키를 다시 만들 수 있습니다. 대칭 키를 다시 만들면 암호화된 모든 값이 새 값을 사용하여 다시 암호화됩니다. 스케일 아웃 배포에서 여러 보고서 서버를 실행할 경우 대칭 키의 모든 복사본이 새 값으로 업데이트됩니다. 보고서 서버는 사용 가능한 공개 키를 사용하여 배포의 각 서버에 대해 해당 대칭 키를 업데이트합니다.  
+## <a name="recreating-encryption-keys"></a>암호화 키 다시 만들기  
+ 허가되지 않은 사용자가 대칭 키를 알고 있다고 여겨지거나 보고서 서버가 공격을 받고 있어 예방 차원에서 대칭 키를 다시 설정하려는 경우 대칭 키를 다시 만들 수 있습니다. 대칭 키를 다시 만들면 암호화된 모든 값이 새 값을 사용하여 다시 암호화됩니다. 스케일 아웃 배포에서 여러 보고서 서버를 실행할 경우 대칭 키의 모든 복사본이 새 값으로 업데이트됩니다. 보고서 서버는 사용 가능한 공개 키를 사용하여 배포의 각 서버에 대해 해당 대칭 키를 업데이트합니다.  
   
  보고서 서버가 작동 상태일 때만 대칭 키를 다시 만들 수 있습니다. 암호화 키를 다시 만들고 내용을 다시 암호화하면 서버 작동이 중단됩니다. 다시 암호화하는 동안 서버를 오프라인으로 만들어야 합니다. 다시 암호화하는 동안에는 보고서 서버에 대해 요청이 수행되면 안 됩니다.  
   
  Reporting Services 구성 도구나 **rskeymgmt** 유틸리티를 사용하여 대칭 키와 암호화된 데이터를 다시 설정할 수 있습니다. 대칭 키를 만드는 방법은 [보고서 서버 초기화&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)를 참조하세요.  
   
-### <a name="how-to-re-create-encryption-keys-reporting-services-configuration-tool"></a>암호화 키를 다시 만드는 방법(Reporting Services 구성 도구)  
+### <a name="how-to-recreate-encryption-keys-reporting-services-configuration-tool"></a>암호화 키를 다시 만드는 방법(Reporting Services 구성 도구)  
   
 1.  rsreportserver.config 파일에서 **IsWebServiceEnabled** 속성을 수정하여 보고서 서버 웹 서비스 및 HTTP 액세스를 사용하지 않도록 설정합니다. 이 단계에서는 서버를 완전히 종료하지 않고 보고서 서버로 보내는 인증 요청을 임시로 중지합니다. 키를 다시 만들 수 있는 최소한의 서비스가 필요합니다.  
   
@@ -55,7 +57,7 @@ ms.locfileid: "73593532"
   
 5.  rsreportserver.config 파일에서 **IsWebServiceEnabled** 속성을 수정하여 웹 서비스 및 HTTP 액세스를 다시 사용하도록 설정합니다. 확장 배포 구성에서 작업할 경우에는 모든 인스턴스에 대해 이 작업을 수행합니다.  
   
-### <a name="how-to-re-create-encryption-keys-rskeymgmt"></a>암호화 키를 다시 만드는 방법(rskeymgmt)  
+### <a name="how-to-recreate-encryption-keys-rskeymgmt"></a>암호화 키를 다시 만드는 방법(rskeymgmt)  
   
 1.  보고서 서버 웹 서비스 및 HTTP 액세스를 사용하지 않도록 설정합니다. 이전 절차의 지시대로 웹 서비스 작업을 중지합니다.  
   

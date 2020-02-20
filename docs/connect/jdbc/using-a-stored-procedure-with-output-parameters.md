@@ -11,10 +11,10 @@ ms.assetid: 1c006f27-7e99-43d5-974c-7b782659290c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: efafaa709666620e7237f2481c392aba25dfd5f8
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026829"
 ---
 # <a name="using-a-stored-procedure-with-output-parameters"></a>출력 매개 변수가 있는 저장 프로시저 사용
@@ -28,11 +28,11 @@ JDBC 드라이버를 사용하여 이러한 종류의 저장 프로시저를 호
 `{call procedure-name[([parameter][,[parameter]]...)]}`
 
 > [!NOTE]  
-> SQL 이스케이프 시퀀스에 대 한 자세한 내용은 [sql 이스케이프 시퀀스 사용](../../connect/jdbc/using-sql-escape-sequences.md)을 참조 하세요.
+> SQL 이스케이프 시퀀스에 대한 자세한 내용은 [SQL 이스케이프 시퀀스 사용](../../connect/jdbc/using-sql-escape-sequences.md)을 참조하세요.
 
 `call` 이스케이프 시퀀스를 만드는 경우 물음표(?) 문자를 사용하여 입력 매개 변수를 지정합니다. 이 문자는 저장 프로시저에서 반환될 매개 변수 값에 대한 자리 표시자로 사용됩니다. OUT 매개 변수에 대한 값을 지정하려면 저장 프로시저를 실행하기 전에 SQLServerCallableStatement 클래스의 [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) 메서드를 사용하여 각 매개 변수의 데이터 형식을 지정해야 합니다.
 
-registerOutParameter 메서드에서 OUT 매개 변수에 대해 지정하는 값은 java.sql.Types에 들어 있는 JDBC 데이터 형식 중 하나여야 합니다. 또한 이 값은 네이티브 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식 중 하나에 매핑됩니다. Jdbc 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 대 한 자세한 내용은 [jdbc 드라이버 데이터 형식 이해](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)를 참조 하세요.
+registerOutParameter 메서드에서 OUT 매개 변수에 대해 지정하는 값은 java.sql.Types에 들어 있는 JDBC 데이터 형식 중 하나여야 합니다. 또한 이 값은 네이티브 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식 중 하나에 매핑됩니다. JDBC 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 관한 자세한 내용은 [JDBC 드라이버 데이터 형식 이해](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)를 참조하세요.
 
 OUT 매개 변수에 대한 registerOutParameter 메서드에 값을 전달하는 경우 해당 매개 변수에 사용할 데이터 형식은 물론 저장 프로시저 호출에서 매개 변수의 서수 위치 또는 매개 변수의 이름도 지정해야 합니다. 예를 들어, 저장 프로시저에 하나의 출력 매개 변수가 들어 있는 경우 서수 값은 1이 됩니다. 또한 저장 프로시저에 출력 매개 변수가 두 개이면 첫 번째 서수 값은 1이고 두 번째 서수 값은 2가 됩니다.
 
@@ -82,10 +82,10 @@ public static void executeStoredProcedure(Connection con) throws SQLException {
 ```
 
 > [!NOTE]  
-> 이 예에서는 SQLServerCallableStatement 클래스의 execute 메서드를 사용 하 여 저장 프로시저를 실행 합니다. 이 메서드를 사용하는 이유는 저장 프로시저에서 결과 집합을 반환하지 않았기 때문입니다. 저장 프로시저에서 결과 집합을 반환한 경우에는 [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 메서드를 사용합니다.
+> 이들 예제에서는 SQLServerCallableStatement 클래스의 Execute 메서드를 사용하여 저장 프로시저를 실행합니다. 이 메서드를 사용하는 이유는 저장 프로시저에서 결과 집합을 반환하지 않았기 때문입니다. 저장 프로시저에서 결과 집합을 반환한 경우에는 [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 메서드를 사용합니다.
 
-저장 프로시저는 업데이트 횟수 및 다중 결과 집합을 반환할 수 있습니다. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 OUT 매개 변수를 검색하기 전에 다중 결과 집합 및 업데이트 횟수를 검색해야 한다는 JDBC 3.0 사양을 따릅니다. 즉, 응용 프로그램은 CallableStatement. getter 메서드를 사용 하 여 OUT 매개 변수를 검색 하기 전에 모든 ResultSet 개체 및 업데이트 횟수를 검색 해야 합니다. 그렇지 않으면 이미 검색되지 않은 ResultSet 개체와 업데이트 회수는 OUT 매개 변수를 검색할 때 손실됩니다. 업데이트 개수 및 여러 결과 집합에 대 한 자세한 내용은 [업데이트 횟수를 포함 하는 저장 프로시저 사용](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md) 및 [여러 결과 집합 사용](../../connect/jdbc/using-multiple-result-sets.md)을 참조 하세요.
+저장 프로시저는 업데이트 횟수 및 다중 결과 집합을 반환할 수 있습니다. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 OUT 매개 변수를 검색하기 전에 다중 결과 집합 및 업데이트 횟수를 검색해야 한다는 JDBC 3.0 사양을 따릅니다. 즉, 애플리케이션은 CallableStatement.getter 메서드를 사용하여 OUT 매개 변수를 검색하기 전에 모든 ResultSet 개체 및 업데이트 횟수를 검색해야 합니다. 그렇지 않으면 이미 검색되지 않은 ResultSet 개체와 업데이트 회수는 OUT 매개 변수를 검색할 때 손실됩니다. 업데이트 횟수 및 다중 결과 집합에 관한 자세한 내용은 [업데이트 횟수가 있는 저장 프로시저 사용](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md) 및 [다중 결과 집합 사용](../../connect/jdbc/using-multiple-result-sets.md)을 참조하세요.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [저장 프로시저가 있는 문 사용](../../connect/jdbc/using-statements-with-stored-procedures.md)

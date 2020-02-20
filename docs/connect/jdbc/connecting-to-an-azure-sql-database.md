@@ -1,5 +1,5 @@
 ---
-title: Azure SQL database에 연결 | Microsoft Docs
+title: Azure SQL 데이터베이스에 연결 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58a0b6f11fa28dca0e8aae98cb1794b12e3fc227
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70155106"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Azure SQL 데이터베이스에 연결
@@ -31,8 +31,8 @@ ms.locfileid: "70155106"
   
 ## <a name="details"></a>세부 정보
 
-에 연결할 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]때 **SQLServerDatabaseMetaData**를 호출 하려면 master 데이터베이스에 연결 해야 합니다.  
-[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]는 사용자 데이터베이스에서 전체 카탈로그 집합을 반환하는 기능을 지원하지 않습니다. **SQLServerDatabaseMetaData** 뷰를 사용 하 여 카탈로그를 가져옵니다. **SQLServerDatabaseMetaData** [(transact-sql)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 의 사용 권한에 대 한 설명을 참조 하 여의 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]동작을 이해 하십시오.  
+[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]에 연결할 때 **SQLServerDatabaseMetaData.getCatalogs**를 호출하려면 master 데이터베이스에 연결해야 합니다.  
+[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]는 사용자 데이터베이스에서 전체 카탈로그 집합을 반환하는 기능을 지원하지 않습니다. **SQLServerDatabaseMetaData.getCatalogs**는 sys.databases 보기를 사용하여 카탈로그를 가져옵니다. **SQLServerDatabaseMetaData**[(transact-sql)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 의 사용 권한에 대 한 설명을 참조 하 여의 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]동작을 이해 하십시오.  
   
 ## <a name="connections-dropped"></a>연결이 삭제됨
 
@@ -44,7 +44,7 @@ ms.locfileid: "70155106"
   
 네트워크 구성 요소에서 유휴 연결을 삭제하지 않도록 하려면 드라이버가 로드된 운영 체제에서 다음 레지스트리 설정(또는 Windows가 아닌 경우 이에 해당하는 설정)을 설정해야 합니다.  
   
-|레지스트리 설정|권장 값|  
+|레지스트리 설정|권장되는 값|  
 |----------------------|-----------------------|  
 |HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveTime|30000|  
 |HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveInterval|1000|  
@@ -80,14 +80,14 @@ shutdown /r /t 1
 
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>암호화 사용에 hostNameInCertificate 설정 필요
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]7.2 버전 이전에서는에 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]연결할 때 **encrypt = true** (연결 문자열의 서버 이름이 *짧은 이름*인 경우)를 지정 하는 경우 **hostNameInCertificate** 을 지정 해야 합니다. *domainName*으로 **hostNameInCertificate** 속성을로 \*설정 합니다. *domainName*.). 드라이버 버전 7.2의 경우이 속성은 선택 사항입니다.
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]의 7.2 버전 이전에서는 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]에 연결할 때 **encrypt=true**를 지정하면 **hostNameInCertificate**를 지정해야 합니다(연결 문자열의 서버 이름이 *shortName*.*domainName*인 경우 **hostNameInCertificate** 속성을 \*.*domainName*으로 설정). 드라이버 버전 7.2부터 이 속성은 선택 사항입니다.
 
-예를 들어
+다음은 그 예입니다.
 
 ```java
 jdbc:sqlserver://abcd.int.mscds.com;databaseName=myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate=*.int.mscds.com;
 ```
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [JDBC 드라이버로 SQL Server에 연결](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  

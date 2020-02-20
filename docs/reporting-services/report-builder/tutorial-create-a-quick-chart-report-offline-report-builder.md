@@ -13,15 +13,15 @@ ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 72e6846ef10bc86c1711958e144601d8bff5caac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67037965"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>자습서: 오프라인에서 빠른 차트 보고서 만들기(보고서 작성기)
 
-  이 자습서에서는 마법사를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]의 페이지가 매겨진 보고서로 원형 차트를 만듭니다. 그런 다음 백분율을 추가하고 원형 차트를 약간 수정합니다. 
+  이 자습서에서는 마법사를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]의 페이지가 매겨진 보고서로 원형 차트를 만듭니다. 그런 다음 백분율을 추가하고 원형 차트를 약간 수정합니다. 
   
 이 자습서는 다음 두 가지 방법으로 진행할 수 있습니다. 두 방법 모두 결과는 동일하며 이 그림의 원형 차트와 같은 원형 차트가 만들어집니다.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "67037965"
   
  [XML 데이터로 원형 차트 만들기](#CreatePieChartXML)  
   
-### <a name="using-a-includetsqlincludestsql-mdmd-query-that-contains-data-for-this-tutorial"></a>이 자습서의 데이터가 포함된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 사용  
+### <a name="using-a-tsql-query-that-contains-data-for-this-tutorial"></a>이 자습서의 데이터가 포함된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 사용  
  이 항목에서 데이터가 포함된 쿼리를 복사하여 마법사에 붙여 넣을 수 있습니다. SQL Server의 인스턴스 이름과 모든 데이터베이스에 대한 읽기 전용 액세스 권한이 있는 자격 증명이 있어야 합니다. 자습서의 데이터 세트 쿼리에서는 리터럴 데이터를 사용하지만 쿼리를 SQL Server의 인스턴스에서 처리해야 보고서 데이터 세트에 필요한 메타데이터가 반환됩니다.  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 사용하는 경우 이점은 나머지 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 자습서에서도 동일한 방법을 사용하기 때문에 다른 자습서를 이용하는 방식을 미리 알 수 있다는 점입니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "67037965"
   
      **시작** 대화 상자가 나타납니다.  
   
-     ![보고서 작성기 시작](../../reporting-services/media/rb-getstarted.png "보고서 작성기 시작")  
+     ![보고서 작성기 시작하기](../../reporting-services/media/rb-getstarted.png "보고서 작성기 시작하기")  
   
      **시작** 대화 상자가 나타나지 않을 경우 **파일** >**새로 만들기**를 클릭합니다. **새 보고서 또는 데이터 세트** 대화 상자에 **시작** 대화 상자와 같은 내용이 가장 많이 들어 있습니다.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "67037965"
   
      ![보고서 작성기 새 차트 미리 보기](../../reporting-services/report-builder/media/rb-newchartpreview.png "보고서 작성기 새 차트 미리 보기")  
   
-16. **마침**을 클릭합니다.  
+16. **Finish**를 클릭합니다.  
   
      그러면 이번에도 대표적 데이터를 이용한 새 원형 차트 보고서가 디자인 보기에 표시됩니다.  
   
@@ -181,7 +181,7 @@ ms.locfileid: "67037965"
   
 12. **사용 가능한 필드** 상자에서 **FullName** 필드를 **범주** 상자로 끌어 오거나 FullName 필드를 두 번 클릭하여 **범주** 상자로 이동한 후 **다음**을 클릭합니다.  
   
-13. **마침**을 클릭합니다.  
+13. **Finish**를 클릭합니다.  
   
      이제 새 원형 차트 보고서가 디자인 화면에 나타납니다. 이 원형 차트 보고서에는 보고서 내용이 대략적으로 나타납니다. 영업 사원 이름 대신 Full Name 1, Full Name 2 등의 범례가 표시되고 원형 차트의 각 조각 크기도 정확하게 나타나지 않습니다. 이 보고서는 단순히 보고서의 대략적인 모양을 보여 주는 역할을 합니다.  
   
@@ -220,7 +220,7 @@ ms.locfileid: "67037965"
  차트 레이블 및 범례를 사용자 지정하는 방법에 대한 자세한 내용은 [원형 차트에서 백분율 값 표시 &#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) 및 [범례 항목의 텍스트 변경 #40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)를 참조하세요.  
   
 ##  <a name="WhatsNext"></a> 다음 단계  
- [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]에서 첫 번째 보고서를 만들었으므로 이제 다른 자습서를 수행하고 고유의 데이터로 보고서를 만들 수 있습니다. [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]를 실행하려면 *연결 문자열*을 사용하여 데이터베이스 등의 데이터 원본에 액세스할 수 있는 권한이 있어야 합니다. 연결 문자열은 실제로 사용자를 데이터 원본에 연결하는 역할을 합니다. 시스템 관리자가 연결 문자열 정보를 가지고 있으며 사용자에 대해 데이터 원본 연결을 설정할 수 있습니다.  
+ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]에서 첫 번째 보고서를 만들었으므로 이제 다른 자습서를 수행하고 고유의 데이터로 보고서를 만들 수 있습니다. [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]를 실행하려면 데이터 원본에 실제로 연결되는 *연결 문자열*을 사용하여 데이터베이스와 같은 데이터 원본에 액세스할 수 있는 권한이 있어야 합니다. 시스템 관리자가 연결 문자열 정보를 가지고 있으며 사용자에 대해 데이터 원본 연결을 설정할 수 있습니다.  
   
  다른 자습서를 진행하려면 SQL Server의 인스턴스 이름과 모든 데이터베이스에 대한 읽기 전용 액세스 권한이 있는 자격 증명만 있으면 됩니다. 데이터베이스 액세스 권한은 시스템 관리자가 대신 설정할 수 있습니다.  
   

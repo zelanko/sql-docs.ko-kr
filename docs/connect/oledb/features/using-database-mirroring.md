@@ -1,6 +1,6 @@
 ---
 title: 데이터베이스 미러링 사용 | Microsoft Docs
-description: SQL Server 용 OLE DB Driver와 함께 데이터베이스 미러링 사용
+description: OLE DB Driver for SQL Server와 함께 데이터베이스 미러링 사용
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 9d61dfe1441029cfa1b742e3b56021e55764d4eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67988871"
 ---
 # <a name="using-database-mirroring"></a>데이터베이스 미러링 사용
@@ -31,7 +31,7 @@ ms.locfileid: "67988871"
 
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)] [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 대신 사용합니다.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 대신 사용합니다.  
   
  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에 도입된 데이터베이스 미러링은 데이터베이스 가용성과 데이터 중복을 높이는 솔루션입니다. SQL Server용 OLE DB 드라이버는 데이터베이스 미러링을 암시적으로 지원하므로 데이터베이스에 미러링이 구성되고 나면 개발자는 코드를 작성하거나 별도의 조치를 취할 필요가 없습니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "67988871"
  미러 데이터베이스 이름을 지정할 때 별칭을 사용할 수도 있습니다.  
   
 > [!NOTE]  
->  미러된 데이터베이스에 대 한 초기 연결 시도 및 다시 연결 시도에 대 한 자세한 내용은 [데이터베이스 미러링 세션 &#40;에 클라이언트 연결&#41;SQL Server](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)을 참조 하세요.  
+>  미러링된 데이터베이스에 대한 초기 연결 시도 및 재연결 시도에 대한 자세한 내용은 [데이터베이스 미러링 세션에 클라이언트 연결&#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)을 참조하세요.  
   
 ## <a name="programming-considerations"></a>프로그래밍 고려 사항  
  주 데이터베이스 서버가 실패하면 클라이언트 애플리케이션에서 API 호출에 대한 응답으로 오류를 받게 되는데, 이는 데이터베이스 연결이 끊어졌다는 의미입니다. 이러한 경우 커밋되지 않은 데이터베이스 변경 내용이 손실되고 현재 트랜잭션은 롤백됩니다. 또한 애플리케이션에서는 연결을 종료하거나 데이터 원본 개체를 해제한 후 다시 연결해야 합니다. 이 연결은 이제 주 서버 역할을 수행할 미러 데이터베이스로 투명하게 리디렉션됩니다.  
@@ -54,18 +54,18 @@ ms.locfileid: "67988871"
  연결이 설정되면 주 서버는 장애 조치(Failover) 파트너의 ID를 장애 조치(Failover) 시 사용할 클라이언트로 보냅니다. 애플리케이션이 실패한 주 서버에 연결하려는 경우 클라이언트는 장애 조치(Failover) 파트너의 ID를 모릅니다. 클라이언트는 초기화 속성 및 이와 관련된 연결 문자열 키워드를 사용하여 직접 장애 조치(Failover) 파트너의 ID를 지정함으로써 이러한 시나리오에 대처할 수 있습니다. 클라이언트 특성은 이 시나리오에서만 사용되며 주 서버를 사용할 수 있는 경우에는 사용되지 않습니다. 클라이언트가 제공한 장애 조치(Failover) 파트너 서버가 장애 조치(Failover) 파트너 역할을 하는 서버를 참조하지 않는 경우 해당 서버에서 연결을 거부합니다. 연결이 설정된 후 특성을 조사하여 실제 장애 조치(Failover) 파트너의 ID를 확인하면 애플리케이션에 구성 변경 내용을 적용할 수 있습니다. 첫 번째 연결 시도가 실패한 경우에는 파트너 정보를 캐싱하여 연결 문자열을 업데이트하거나 재시도 전략을 세우는 방법을 고려해 보십시오.  
   
 > [!NOTE]  
->  이 기능을 DSN, 연결 문자열 또는 연결 속성/특성에서 사용하려는 경우에는 연결에 사용할 데이터베이스를 명시적으로 지정해야 합니다. 이 작업이 수행 되지 않으면 SQL Server에 대 한 OLE DB 드라이버가 파트너 데이터베이스로 장애 조치 (failover)를 시도 하지 않습니다.  
+>  이 기능을 DSN, 연결 문자열 또는 연결 속성/특성에서 사용하려는 경우에는 연결에 사용할 데이터베이스를 명시적으로 지정해야 합니다. 그렇지 않으면 OLE DB Driver for SQL Server가 파트너 데이터베이스에 장애 조치(Failover)를 시도하지 않습니다.  
 >   
 >  미러링은 데이터베이스의 기능입니다. 여러 데이터베이스를 사용하는 애플리케이션에서는 이 기능을 이용하지 못할 수 있습니다.  
 >   
 >  또한 서버 이름은 대/소문자를 구분하지 않지만 데이터베이스 이름은 대/소문자를 구분합니다. 따라서 DSN 및 연결 문자열에서 동일한 대/소문자 조합을 사용해야 합니다.  
   
 ## <a name="ole-db-driver-for-sql-server"></a>SQL Server용 OLE DB 드라이버  
- SQL Server용 OLE DB 드라이버는 연결 및 연결 문자열 특성을 통해 데이터베이스 미러링을 지원합니다. DBPROPSET_SQLSERVERDBINIT 속성 집합에 SSPROP_INIT_FAILOVERPARTNER 속성이 추가되었으며 DBPROP_INIT_PROVIDERSTRING의 새로운 연결 문자열 특성으로 **FailoverPartner** 키워드가 추가되었습니다. 자세한 내용은 [SQL Server에 대 한 OLE DB 드라이버를 사용 하 여 연결 문자열 키워드 사용](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)을 참조 하세요.  
+ SQL Server용 OLE DB 드라이버는 연결 및 연결 문자열 특성을 통해 데이터베이스 미러링을 지원합니다. DBPROPSET_SQLSERVERDBINIT 속성 집합에 SSPROP_INIT_FAILOVERPARTNER 속성이 추가되었으며 DBPROP_INIT_PROVIDERSTRING의 새로운 연결 문자열 특성으로 **FailoverPartner** 키워드가 추가되었습니다. 자세한 내용은 [OLE DB Driver for SQL Server에서 연결 문자열 키워드 사용](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)을 참조하세요.  
   
  장애 조치(Failover) 캐시는 공급자가 로드되어 있는 동안, 즉 **CoUninitialize**가 호출되기 전까지 또는 애플리케이션이 SQL Server용 OLE DB 드라이버가 관리하는 일부 개체(예: 데이터 원본 개체)에 대한 참조를 가지고 있는 동안 유지됩니다.  
   
- 데이터베이스 미러링에 대 한 SQL Server 지원 OLE DB 드라이버에 대 한 자세한 내용은 [초기화 및 권한 부여 속성](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md)을 참조 하세요.  
+ 데이터베이스 미러링을 위한 OLE DB Driver for SQL Server 지원에 관한 자세한 내용은 [초기화 및 권한 부여 속성](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md)을 참조하세요.  
  
   
 ## <a name="see-also"></a>참고 항목  

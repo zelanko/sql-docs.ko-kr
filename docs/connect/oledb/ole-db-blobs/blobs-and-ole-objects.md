@@ -1,5 +1,5 @@
 ---
-title: Blob 및 OLE 개체 | Microsoft Docs
+title: BLOB 및 OLE 개체 | Microsoft Docs
 description: BLOB 및 OLE 개체
 ms.custom: ''
 ms.date: 06/14/2018
@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 70d3ffccfc9613434b09335944e445a2705b95c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67988674"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB 및 OLE 개체
@@ -28,9 +28,9 @@ ms.locfileid: "67988674"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server용 OLE DB 드라이버는 소비자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**, **text**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** 및 XML 데이터 형식을 BLOB(Binary Large Object)으로 액세스할 수 있도록 지원하기 위해 **ISequentialStream** 인터페이스를 공개합니다. **ISequentialStream**에서 **Read** 메서드를 사용하면 소비자가 많은 양의 데이터를 관리하기 쉬운 청크로 가져올 수 있습니다.  
+  OLE DB Driver for SQL Server는 소비자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**, **text**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** 및 XML 데이터 형식을 BLOB(Binary Large Object)으로 액세스할 수 있도록 지원하기 위해 **ISequentialStream** 인터페이스를 공개합니다. **ISequentialStream**에서 **Read** 메서드를 사용하면 소비자가 많은 양의 데이터를 관리하기 쉬운 청크로 가져올 수 있습니다.  
   
- 이 기능을 보여 주는 샘플은 [Large Data &#40;OLE DB&#41;설정](../../oledb/ole-db-how-to/set-large-data-ole-db.md)을 참조 하세요.  
+ 이 기능을 보여주는 샘플을 보려면 [큰 데이터 설정&#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)을 참조하세요.  
   
  소비자가 데이터 수정을 위해 바인딩한 접근자에서 인터페이스 포인터를 제공하면 SQL Server용 OLE DB 드라이버는 소비자가 구현한 **IStorage** 인터페이스를 사용할 수 있습니다.  
   
@@ -46,11 +46,11 @@ ms.locfileid: "67988674"
   
 -   DBTYPE_IUNKNOWN으로 바인딩하고 스트리밍을 사용합니다.  
   
- DBTYPE_IUNKNOWN으로 바인딩하면 ISequentialStream 스트림 기능이 사용됩니다. SQL Server에 대 한 OLE DB 드라이버는 대량 값 데이터 형식에 대 한 DBTYPE_IUNKNOWN에 대 한 바인딩 출력 매개 변수를 지원 합니다. 이는 저장 프로시저가 이러한 데이터 형식을 반환 값으로 반환 하는 시나리오를 지원 하기 위한 것으로,이는 클라이언트에 DBTYPE_IUNKNOWN으로 반환 됩니다.  
+ DBTYPE_IUNKNOWN으로 바인딩하면 ISequentialStream 스트림 기능이 사용됩니다. OLE DB Driver for SQL Server는 큰 값 데이터 형식에 대한 DBTYPE_IUNKNOWN으로 출력 매개 변수를 지원합니다. 이는 저장 프로시저가 이러한 데이터 형식을 반환 값으로 반환하는 시나리오를 지원하기 위한 것이며, 그 값은 클라이언트에 DBTYPE_IUNKNOWN으로 반환됩니다.  
   
 ## <a name="storage-object-limitations"></a>스토리지 개체 제한 사항  
   
--   SQL Server에 대 한 OLE DB 드라이버는 열려 있는 단일 저장소 개체만 지원할 수 있습니다. 스토리지 개체를 하나를 초과해 열려고 하면, 즉 하나를 초과하는 **ISequentialStream** 인터페이스 포인터에 대한 참조를 얻으려고 하면 DBSTATUS_E_CANTCREATE가 반환됩니다.  
+-   OLE DB Driver for SQL Server는 열린 스토리지 개체를 하나만 지원할 수 있습니다. 스토리지 개체를 하나를 초과해 열려고 하면, 즉 하나를 초과하는 **ISequentialStream** 인터페이스 포인터에 대한 참조를 얻으려고 하면 DBSTATUS_E_CANTCREATE가 반환됩니다.  
   
 -   SQL Server용 OLE DB 드라이버에서 DBPROP_BLOCKINGSTORAGEOBJECTS 읽기 전용 속성의 기본값은 VARIANT_TRUE입니다. 따라서 스토리지 개체가 활성화되면 스토리지 개체에 있는 메서드를 제외한 일부 메서드가 E_UNEXPECTED 오류와 함께 실패하게 됩니다.  
   

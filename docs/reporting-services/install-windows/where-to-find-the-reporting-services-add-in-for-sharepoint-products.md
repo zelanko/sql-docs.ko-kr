@@ -1,8 +1,10 @@
 ---
-title: SharePoint 제품용 Reporting Services 추가 기능 검색 위치 | Microsoft Docs
-ms.date: 05/30/2016
+title: SharePoint용 SSRS 추가 기능 검색 위치 | Microsoft Docs
+description: SharePoint 제품 및 기술용 SSRS(SQL Server Reporting Services) 추가 기능(rssharepoint.msi)은 SharePoint 배포와 보고서 서버를 통합하는 기능을 제공하는 웹 다운로드입니다.
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
 - rsSharePoint
@@ -10,16 +12,16 @@ ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 35d35caf3bf1d16696b88dcba9b81c2274be7234
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
-ms.translationtype: MTE75
+ms.openlocfilehash: ba6987367e72ed544df13216b31aebe85af500e2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73637844"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866296"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>SharePoint 제품용 Reporting Services 추가 기능 검색 위치
 
-SharePoint 제품 및 기술용 SSRS( [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ) 추가 기능(rssharepoint.msi)은 SharePoint 배포와 보고서 서버를 통합하는 기능을 제공하는 웹 다운로드입니다.  
+SharePoint 제품 및 기술용 SSRS([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]) 추가 기능(rssharepoint.msi)은 SharePoint 배포와 보고서 서버를 통합하는 기능을 제공하는 웹 다운로드입니다.  
   
 > [!IMPORTANT]  
 >  지원되는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능, 보고서 서버 및 SharePoint 조합의 목록은 [지원되는 SharePoint와 Reporting Services 서버 및 추가 기능 조합&#40;SQL Server 2016&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)을 참조하세요.  

@@ -1,5 +1,6 @@
 ---
 title: 구독 소유자 관리 및 구독 실행 - PowerShell | Microsoft Docs
+description: Reporting Services 구독 소유권을 프로그래밍 방식으로 한 사용자에서 다른 사용자에게 이전할 수 있습니다.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: subscriptions
@@ -8,13 +9,13 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 04/26/2019
-ms.openlocfilehash: 2a0972f5cd644ed06718791ee20b2c5dfd9a1660
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.date: 01/16/2020
+ms.openlocfilehash: a5ec1524c7105c5a408aa11448984b9366e6d51d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893433"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76259341"
 ---
 # <a name="manage-subscription-owners-and-run-subscription---powershell"></a>구독 소유자 관리 및 구독 실행 - PowerShell
 
@@ -32,7 +33,7 @@ ms.locfileid: "68893433"
   
 - [스크립트: 특정 사용자가 소유하는 모든 구독 나열](#bkmk_list_all_one_user)  
   
-- [스크립트: 특정 소유자가 소유하는 모든 구독의 소유권 변경](#bkmk_change_all)  
+- [스크립트: 특정 사용자가 소유하는 모든 구독의 소유권 변경](#bkmk_change_all)  
   
 - [스크립트: 특정 보고서와 연결된 모든 구독 나열](#bkmk_list_for_1_report)  
   
@@ -56,17 +57,17 @@ ms.locfileid: "68893433"
   
 **기본 모드:**
   
-- 구독 나열: [보고서의 ReportOperation 열거형](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx) 및 사용자는 구독 소유자임) 또는 ReadAnySubscription  
+- 구독 나열: [보고서의 ReportOperation 열거형](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx) + 사용자는 구독 소유자, 또는 ReadAnySubscription  
   
-- 구독 변경: 사용자는 BUILTIN\Administrators 그룹의 구성원이어야 합니다.  
+- 구독 변경: 사용자는 BUILTIN\Administrators 그룹의 구성원여야 합니다.  
   
 - 자식 나열: 항목의 ReadProperties  
   
-- 이벤트 발생: GenerateEvents (System)  
+- 이벤트 발생: GenerateEvents(System)  
   
  **SharePoint 모드:**
   
-- 구독 나열: ManageAlerts 또는 [보고서의 CreateAlerts](https://msdn.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx) 및 사용자는 구독 소유자이며 구독은 정기 구독임)  
+- 구독 나열: ManageAlerts, 또는 보고서의 [CreateAlerts](https://msdn.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx) + 사용자는 구독 소유자이며 구독은 정기 구독  
   
 - 구독 변경: ManageWeb  
   
@@ -84,7 +85,7 @@ ms.locfileid: "68893433"
   
 2. 각 스크립트의 텍스트 파일을 만들고 c:\scripts 폴더에 파일을 저장합니다. .ps1 파일을 만들 때 각 예제 명령줄 구문의 이름을 사용합니다.  
   
-3. 관리 권한으로 명령 프롬프트를 엽니다.  
+3. 관리자 권한으로 명령 프롬프트를 엽니다.  
   
 4. 각 예제에 제공된 샘플 명령줄 구문을 사용하여 각 스크립트 파일을 실행합니다.  
   
@@ -174,7 +175,7 @@ Write-Host "----- $currentOwner's Subscriptions: "
 $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastexecuted,Status | where {$_.owner -eq $currentOwner}  
 ```  
   
-## <a name="bkmk_change_all"></a> 스크립트: 특정 소유자가 소유하는 모든 구독의 소유권 변경
+## <a name="bkmk_change_all"></a> 스크립트: 특정 사용자가 소유하는 모든 구독의 소유권 변경
 
 이 스크립트는 특정 소유자가 소유하는 모든 구독의 소유권을 새 소유자 매개 변수로 변경합니다.  
   
@@ -216,7 +217,7 @@ ForEach ($item in $items)
         $curRepSubs = $rs2010.ListSubscriptions($item.Path);  
         ForEach ($curRepSub in $curRepSubs)  
         {  
-            if ($curRepSub.Owner -eq $previousOwner)  
+            if ($curRepSub.Owner -eq $currentOwner)  
             {  
                 $subscriptions += $curRepSub;  
             }  
@@ -384,7 +385,7 @@ $subscriptions | select Status, Path, report, Description, Owner, SubscriptionID
   
 ```  
 
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 
 - [ReportingService2010.ListSubscriptions 메서드](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
 

@@ -19,10 +19,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: abe874a50e8534291a67393dfaf3485c96405b02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015856"
 ---
 # <a name="data-type-mapping-in-itabledefinition"></a>ITableDefinition의 데이터 형식 매핑
@@ -37,7 +37,7 @@ ms.locfileid: "68015856"
 |OLE DB 데이터 형식|SQL Server<br /><br /> 데이터 형식|추가 정보|  
 |----------------------|------------------------------|----------------------------|  
 |DBTYPE_BOOL|**bit**||  
-|DBTYPE_BYTES|**binary**, **varbinary**, **image** 또는 **varbinary(max)**|SQL Server에 대 한 OLE DB 드라이버는 DBCOLUMNDESC 구조의 *Ulcolumnsize* 멤버를 검사 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 값 및 버전에 따라 SQL Server에 대 한 OLE DB 드라이버는 형식을 **image**에 매핑합니다.<br /><br /> *ulColumnSize* 값이 **binary** 데이터 형식 열의 최대 길이보다 작으면 SQL Server용 OLE DB 드라이버는 DBCOLUMNDESC *rgPropertySets* 멤버를 검사합니다. DBPROP_COL_FIXEDLENGTH가 VARIANT_TRUE 인 경우 SQL Server에 대 한 OLE DB 드라이버는 형식을 **이진**으로 매핑합니다. 속성의 값이 VARIANT_FALSE 인 경우 SQL Server에 대 한 OLE DB 드라이버는 형식을 **varbinary**에 매핑합니다. 두 경우 모두 생성되는 SQL Server 열의 너비는 DBCOLUMNDESC *ulColumnSize* 멤버에 따라 결정됩니다.|  
+|DBTYPE_BYTES|**binary**, **varbinary**, **image** 또는 **varbinary(max)**|OLE DB Driver for SQL Server는 DBCOLUMNDESC 구조체의 *ulColumnSize* 멤버를 검사합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 값 및 버전에 따라 OLE DB Driver for SQL Server는 형식을 **image**에 매핑합니다.<br /><br /> *ulColumnSize* 값이 **binary** 데이터 형식 열의 최대 길이보다 작으면 SQL Server용 OLE DB 드라이버는 DBCOLUMNDESC *rgPropertySets* 멤버를 검사합니다. DBPROP_COL_FIXEDLENGTH가 VARIANT_TRUE인 경우 OLE DB Driver for SQL Server는 형식을 **binary**에 매핑합니다. 이 속성의 값이 VARIANT_FALSE인 경우 OLE DB Driver for SQL Server는 형식을 **varbinary**에 매핑합니다. 두 경우 모두 생성되는 SQL Server 열의 너비는 DBCOLUMNDESC *ulColumnSize* 멤버에 따라 결정됩니다.|  
 |DBTYPE_CY|**money**||  
 |DBTYPE_DBTIMESTAMP|**datetime2**||  
 |DBTYPE_GUID|**uniqueidentifier**||  
@@ -47,17 +47,17 @@ ms.locfileid: "68015856"
 |DBTYPE_NUMERIC|**numeric**|SQL Server용 OLE DB 드라이버는 DBCOLUMDESC *bPrecision* 및 *bScale* 멤버를 검사하여 **numeric** 열의 전체 자릿수 및 소수 자릿수를 확인합니다.|  
 |DBTYPE_R4|**real**||  
 |DBTYPE_R8|**float**||  
-|DBTYPE_STR|**char**, **varchar**, **text** 또는 **varchar(max)**|SQL Server에 대 한 OLE DB 드라이버는 DBCOLUMNDESC 구조의 *Ulcolumnsize* 멤버를 검사 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 값 및 버전에 따라 SQL Server에 대 한 OLE DB 드라이버는 형식을 **텍스트**에 매핑합니다.<br /><br /> *ulColumnSize* 값이 멀티바이트 문자 데이터 형식 열의 최대 길이보다 작으면 SQL Server용 OLE DB 드라이버는 DBCOLUMNDESC *rgPropertySets* 멤버를 검사합니다. DBPROP_COL_FIXEDLENGTH가 VARIANT_TRUE 인 경우 SQL Server에 대 한 OLE DB 드라이버는 형식을 **char**에 매핑합니다. 속성의 값이 VARIANT_FALSE 인 경우 SQL Server에 대 한 OLE DB 드라이버는 유형을 **varchar**에 매핑합니다. 두 경우 모두 생성되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 열의 너비는 DBCOLUMNDESC *ulColumnSize* 멤버에 따라 결정됩니다.|  
-|DBTYPE_UDT|**UDT**|UDT 열이 필요한 경우 **ITableDefinition::CreateTable**에서 **DBCOLUMNDESC** 구조에 사용하는 정보는 다음과 같습니다.<br /><br /> *pwSzTypeName* 은 무시 됩니다.<br /><br /> *rgPropertySets* 은 [사용자 정의 형식 사용](../../oledb/features/using-user-defined-types.md)에서 **DBPROPSET_SQLSERVERCOLUMN**에 대 한 섹션에 설명 된 대로 **DBPROPSET_SQLSERVERCOLUMN** 속성 집합을 포함 해야 합니다.|  
+|DBTYPE_STR|**char**, **varchar**, **text** 또는 **varchar(max)**|OLE DB Driver for SQL Server는 DBCOLUMNDESC 구조체의 *ulColumnSize* 멤버를 검사합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 값 및 버전에 따라 OLE DB Driver for SQL Server는 형식을 **text**에 매핑합니다.<br /><br /> *ulColumnSize* 값이 멀티바이트 문자 데이터 형식 열의 최대 길이보다 작으면 SQL Server용 OLE DB 드라이버는 DBCOLUMNDESC *rgPropertySets* 멤버를 검사합니다. DBPROP_COL_FIXEDLENGTH가 VARIANT_TRUE인 경우 OLE DB Driver for SQL Server는 형식을 **char**에 매핑합니다. 이 속성의 값이 VARIANT_FALSE인 경우 OLE DB Driver for SQL Server는 형식을 **varchar**에 매핑합니다. 두 경우 모두 생성되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 열의 너비는 DBCOLUMNDESC *ulColumnSize* 멤버에 따라 결정됩니다.|  
+|DBTYPE_UDT|**UDT**|UDT 열이 필요한 경우 **ITableDefinition::CreateTable**에서 **DBCOLUMNDESC** 구조에 사용하는 정보는 다음과 같습니다.<br /><br /> *pwSzTypeName*은 무시됩니다.<br /><br /> *rgPropertySets*는 [사용자 정의 형식 사용](../../oledb/features/using-user-defined-types.md)의 **DBPROPSET_SQLSERVERCOLUMN** 섹션에 설명된 대로 **DBPROPSET_SQLSERVERCOLUMN** 속성 집합을 포함해야 합니다.|  
 |DBTYPE_UI1|**tinyint**||  
 |DBTYPE_VARIANT|**sql_variant**||
-|DBTYPE_WSTR|**nchar**, **nvarchar**, **ntext** 또는 **nvarchar(max)**|SQL Server에 대 한 OLE DB 드라이버는 DBCOLUMNDESC 구조의 *Ulcolumnsize* 멤버를 검사 합니다. 값을 기준으로 SQL Server에 대 한 OLE DB 드라이버는 형식을 **ntext**에 매핑합니다.<br /><br /> *ulColumnSize* 값이 유니코드 문자 데이터 형식 열의 최대 길이보다 작으면 SQL Server용 OLE DB 드라이버는 DBCOLUMNDESC *rgPropertySets* 멤버를 검사합니다. DBPROP_COL_FIXEDLENGTH가 VARIANT_TRUE 인 경우 SQL Server에 대 한 OLE DB 드라이버는 형식을 **nchar**에 매핑합니다. 속성의 값이 VARIANT_FALSE 인 경우 SQL Server에 대 한 OLE DB 드라이버는 형식을 **nvarchar**에 매핑합니다. 두 경우 모두 생성되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 열의 너비는 DBCOLUMNDESC *ulColumnSize* 멤버에 따라 결정됩니다.|  
+|DBTYPE_WSTR|**nchar**, **nvarchar**, **ntext** 또는 **nvarchar(max)**|OLE DB Driver for SQL Server는 DBCOLUMNDESC 구조체의 *ulColumnSize* 멤버를 검사합니다. 이 값을 기준으로 OLE DB Driver for SQL Server는 형식을 **ntext**에 매핑합니다.<br /><br /> *ulColumnSize* 값이 유니코드 문자 데이터 형식 열의 최대 길이보다 작으면 SQL Server용 OLE DB 드라이버는 DBCOLUMNDESC *rgPropertySets* 멤버를 검사합니다. DBPROP_COL_FIXEDLENGTH가 VARIANT_TRUE인 경우 OLE DB Driver for SQL Server는 형식을 **nchar**에 매핑합니다. 이 속성의 값이 VARIANT_FALSE인 경우 OLE DB Driver for SQL Server는 형식을 **nvarchar**에 매핑합니다. 두 경우 모두 생성되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 열의 너비는 DBCOLUMNDESC *ulColumnSize* 멤버에 따라 결정됩니다.|  
 |DBTYPE_XML|**XML**||  
 
 > [!NOTE]  
 >  새 테이블을 만들 때 SQL Server용 OLE DB 드라이버는 위 표에 지정된 OLE DB 데이터 형식 열거형 값만 매핑합니다. 다른 OLE DB 데이터 형식의 열로 테이블을 만들려고 하면 오류가 생성됩니다.  
 
 ## <a name="see-also"></a>참고 항목  
- [데이터 형식 &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
+ [데이터 형식&#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
   

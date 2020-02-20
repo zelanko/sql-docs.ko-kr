@@ -14,10 +14,10 @@ ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ae8d963b599191970497d841a6caa1f73fd920b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580348"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Reporting Services에 대한 클라이언트 쪽 인쇄 기능 설정 및 해제
@@ -36,7 +36,7 @@ ms.locfileid: "65580348"
 |첫 번째 대화 상자는 모든 브라우저에 대해 동일하며 방향과 같은 기본적인 레이아웃 속성을 변경할 수 있습니다. **인쇄**를 클릭할 때 환경은 사용 중인 브라우저에 따라 약간 다릅니다.|![ssrs_pdfprint_chrome1](../../reporting-services/report-server/media/ssrs-pdfprint-chrome1.png "ssrs_pdfprint_chrome1")|  
 |Chrome에서는 자세한 브라우저 인쇄 대화 상자가 열립니다.   인쇄 구성을 변경하고, 인쇄하고, 운영 체제 인쇄 대화 상자를 열 수 있습니다.|![ssrs_pdfprint_chrome2](../../reporting-services/report-server/media/ssrs-pdfprint-chrome2.png "ssrs_pdfprint_chrome2") ![ssrs_pdfprint_chrome3.png](../../reporting-services/report-server/media/ssrs-pdfprint-chrome3-png.png "ssrs_pdfprint_chrome3.png")|  
 |PDF 판독기 애플리케이션이 설치된 경우 인쇄 버튼을 클릭하면 PDF 파일의 미리 보기 창이 열리며 해당 파일을 저장하거나 인쇄할 수 있습니다.||  
-|PDF 판독기 애플리케이션이 설치되지 않은 경우 두 가지 사용자 환경이 있습니다.<br /><br /> 보고서가 자동으로 렌더링되며 브라우저 다운로드 프로세스를 사용하여 PDF 파일을 다운로드합니다.   **참고:** 보고서가 복잡할수록 **인쇄** 를 클릭한 후 브라우저 다운로드 알림이 표시될 때까지 지연 시간이 더 길어집니다. 또한 **보고서의 PDF를 보려면 여기를 클릭하세요.** 를 클릭하여 다운로드를 강제로 다시 실행할 수 있습니다.<br /><br /> **보고서의 PDF를 보려면 여기를 클릭하세요.** 를 클릭하여 PDF 다운로드를 강제로 다시 실행합니다.|![ssrs_pdfprint_firefox2](../../reporting-services/report-server/media/ssrs-pdfprint-firefox2.png "ssrs_pdfprint_firefox2")|  
+|PDF 판독기 애플리케이션이 설치되지 않은 경우 두 가지 사용자 환경이 있습니다.<br /><br /> 보고서가 자동으로 렌더링되며 브라우저 다운로드 프로세스를 사용하여 PDF 파일을 다운로드합니다.   **참고:** 보고서가 복잡할수록 **인쇄**를 클릭한 후 브라우저 다운로드 알림이 표시될 때까지 지연 시간이 더 길어집니다. 또한 **보고서의 PDF를 보려면 여기를 클릭하세요.** 를 클릭하여 다운로드를 강제로 다시 실행할 수 있습니다.<br /><br /> **보고서의 PDF를 보려면 여기를 클릭하세요.** 를 클릭하여 PDF 다운로드를 강제로 다시 실행합니다.|![ssrs_pdfprint_firefox2](../../reporting-services/report-server/media/ssrs-pdfprint-firefox2.png "ssrs_pdfprint_firefox2")|  
   
 ##  <a name="bkmk_troubleshoot_clientsideprinting"></a> 클라이언트 쪽 인쇄 문제 해결  
  보고서 뷰어 도구 모음의 인쇄 버튼이 비활성화된 경우 다음을 확인합니다.  
@@ -84,7 +84,7 @@ ms.locfileid: "65580348"
   
 -   보고서 서버 시스템 속성 **EnableClientPrinting** 을 **false.** 로 설정하는 스크립트나 코드를 작성합니다.  
   
- 다음 예제 스크립트에서는 클라이언트 쪽 인쇄 기능을 해제하는 한 가지 방법을 보여 줍니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 속성을 **EnableClientPrinting** 로 설정하려면 다음 **False**를 클릭하여 다운로드를 강제로 다시 실행할 수 있습니다. 코드를 실행한 후에는 IIS를 다시 시작합니다.  
+ 다음 예제 스크립트에서는 클라이언트 쪽 인쇄 기능을 해제하는 한 가지 방법을 보여 줍니다. 다음 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 코드를 컴파일한 후 실행하여 **EnableClientPrinting** 속성을 **False**로 설정합니다. 코드를 실행한 후에는 IIS를 다시 시작합니다.  
   
 ### <a name="sample-script"></a>예제 스크립트  
   

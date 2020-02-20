@@ -1,6 +1,6 @@
 ---
-title: Oracle 연결 형식 (SSRS, Power BI Report Server 및 보고서 작성기) | Microsoft Docs
-ms.date: 07/26/2019
+title: Oracle 연결 형식(SSRS, Power BI Report Server 및 보고서 작성기) | Microsoft Docs
+ms.date: 01/16/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -8,31 +8,55 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2942ad1432b2674ab0b9906b5ab6e2f07be83ae7
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
-ms.translationtype: MTE75
+ms.openlocfilehash: f6918d240a6da7f961899d1a4cb71996bbec9ec6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68632079"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76259401"
 ---
-# <a name="oracle-connection-type-ssrs-power-bi-report-server-and-report-builder"></a>Oracle 연결 형식 (SSRS, Power BI Report Server 및 보고서 작성기)
+# <a name="oracle-connection-type-ssrs-power-bi-report-server-and-report-builder"></a>Oracle 연결 형식(SSRS, Power BI Report Server 및 보고서 작성기)
 
-보고서에서 Oracle 데이터베이스의 데이터를 사용하려면 Oracle 유형의 보고서 데이터 원본을 기반으로 하는 데이터 세트가 있어야 합니다. 이 기본 제공 데이터 원본 유형은 Oracle Data Provider를 사용하며 Oracle 클라이언트 소프트웨어 구성 요소를 필요로 합니다. 이 문서에서는 Reporting Services, Power BI Report Server 및 보고서 작성기에 대 한 드라이버를 다운로드 하 고 설치 하는 방법을 설명 합니다.
+보고서에서 Oracle 데이터베이스의 데이터를 사용하려면 Oracle 유형의 보고서 데이터 원본을 기반으로 하는 데이터 세트가 있어야 합니다. 이 기본 제공 데이터 원본 유형은 Oracle Data Provider를 사용하며 Oracle 클라이언트 소프트웨어 구성 요소를 필요로 합니다. 이 문서에서는 Reporting Services, Power BI Report Server 및 보고서 작성기에 대한 드라이버를 다운로드하고 설치하는 방법을 설명합니다.
 
-## <a name="64-bit-drivers-for-the-report-servers"></a>보고서 서버용 64 비트 드라이버
+## <a name="64-bit-drivers-for-the-report-servers"></a>보고서 서버용 64비트 드라이버
 
-Power BI Report Server 및 SQL Server Reporting Services 2016 및 2017는 모두 관리 되는 ODP.NET을 사용 합니다. 다음 단계는 최신 18x 드라이버를 사용 하는 경우에만 필요 합니다. C:\oracle64.에 파일을 설치 했다고 가정 합니다.
+Power BI Report Server 및 SQL Server Reporting Services 2016 및 2017는 모두 관리되는 ODP.NET을 사용합니다. 다음 단계는 최신 18x 드라이버를 사용하는 경우에만 필요합니다. 이러한 단계에서는 C:\oracle64에 파일을 설치했다고 가정합니다.
 
-1. Oracle 다운로드 사이트에서 [oracle 64-BIT ODAC Oracle Universal Installer (oua)](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdeploy-4242173.html)를 설치 합니다. 
-2. ODP.NET 관리 클라이언트를 GAC: C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe/action: gac/providerpath: C:\oracle64\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll에 등록 합니다.
-3. ODP.NET 관리 되는 클라이언트 항목을 machine.config에 추가: C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe/action: config/force/제품: odpm/frameworkversion: v 4.0.30319/productversion: 4.122.18.3
+1. Oracle 다운로드 사이트에서 [Oracle 64-bit ODAC Oracle Universal Installer(OUI)](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdeploy-4242173.html)를 설치합니다. 
+2. ODP.NET 관리 클라이언트를 GAC에 등록합니다.  C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle64\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
+3. machine.config에 ODP.NET 관리되는 클라이언트 항목을 추가합니다.  C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odpm /frameworkversion:v4.0.30319 /productversion:4.122.18.3
 
-## <a name="32-bit-drivers-for-report-builder"></a>보고서 작성기에 대 한 32 비트 드라이버
-다음 단계는 최신 18x 드라이버를 사용 하는 경우에만 필요 합니다. C:\oracle32.에 파일을 설치 했다고 가정 합니다.
+### <a name="power-bi-reports-use-unmanaged-odpnet"></a>Power BI 보고서는 관리되지 않는 ODP.NET을 사용
 
-1. Oracle 다운로드 사이트에서 [oracle 32-BIT ODAC Oracle Universal Installer (oua)](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdev-4242174.html)를 설치 합니다.
-2. ODP.NET 관리 클라이언트를 GAC: C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe/action: gac/providerpath: C:\oracle32\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll에 등록 합니다.
-3. ODP.NET 관리 되는 클라이언트 항목을 machine.config에 추가: C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe/action: config/force/제품: odpm/frameworkversion: v 4.0.30319/productversion: 4.122.18.3
+Power BI 보고서는 **관리되지 않는 ODP.NET**을 사용합니다. 다음 단계를 수행하여 관리되지 않는 ODP.NET을 등록합니다.
+
+1. ODP.NET 관리되지 않는 클라이언트를 GAC에 등록합니다.
+
+   C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll
+2. machine.config에 ODP.NET 관리되지 않는 클라이언트 항목을 추가합니다.
+
+   C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odp /frameworkversion:v4.0.30319 /productversion:4.122.18.3
+ 
+## <a name="32-bit-drivers-for-report-builder"></a>보고서 작성기용 32비트 드라이버
+
+다음 단계는 최신 18x 드라이버를 사용하는 경우에만 필요합니다. 이러한 단계에서는 C:\oracle32에 파일을 설치했다고 가정합니다.
+
+1. Oracle 다운로드 사이트에서 [Oracle 32-bit ODAC Oracle Universal Installer(OUI)](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdev-4242174.html)를 설치합니다.
+2. ODP.NET 관리 클라이언트를 GAC에 등록합니다.  C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle32\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
+3. machine.config에 ODP.NET 관리되는 클라이언트 항목을 추가합니다.  C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odpm /frameworkversion:v4.0.30319 /productversion:4.122.18.3
+
+### <a name="power-bi-reports-use-unmanaged-odpnet"></a>Power BI 보고서는 관리되지 않는 ODP.NET을 사용  
+
+Power BI 보고서는 **관리되지 않는 ODP.NET**을 사용합니다. 다음 단계를 수행하여 관리되지 않는 ODP.NET을 등록합니다.
+
+1. ODP.NET 관리되지 않는 클라이언트를 GAC에 등록합니다.
+
+   C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:gac /providerpath:C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll
+2. machine.config에 ODP.NET 관리되지 않는 클라이언트 항목을 추가합니다.
+
+   C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe /action:config /force /product:odp /frameworkversion:v4.0.30319 /productversion:4.122.18.3
+ 
 
  이 항목의 정보를 사용하여 데이터 원본을 작성할 수 있습니다. 단계별 지침은 [데이터 연결 추가 및 확인&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)을 참조하세요.  
   
@@ -43,7 +67,7 @@ Power BI Report Server 및 SQL Server Reporting Services 2016 및 2017는 모두
 Data Source="Oracle"; Unicode="True"  
 ```  
   
- 연결 문자열 예제는 [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)을 참조하세요.  
+ 연결 문자열 예제는 [데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)를 참조하세요.  
   
 ##  <a name="Credentials"></a> 자격 증명  
  쿼리를 실행하거나 보고서를 로컬로 미리 보거나 보고서 서버의 보고서를 미리 보려면 자격 증명이 필요합니다.  
@@ -56,18 +80,18 @@ Data Source="Oracle"; Unicode="True"
 ##  <a name="Query"></a> 쿼리  
  데이터 세트를 만들려면 드롭다운 목록에서 저장 프로시저를 선택하거나 SQL 쿼리를 만듭니다. 쿼리를 만들려면 텍스트 기반 쿼리 디자이너를 사용해야 합니다. 자세한 내용은 [텍스트 기반 쿼리 디자이너 사용자 인터페이스&#40;보고서 작성기&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)를 참조하세요.  
   
- 결과 집합을 하나만 반환하는 저장 프로시저를 지정할 수 있습니다. 커서 기반 쿼리는 사용할 수 없습니다.  
+ 결과 집합을 하나만 반환하는 저장 프로시저를 지정할 수 있습니다. 커서 기반 쿼리는 지원되지 않습니다.  
   
 ##  <a name="Parameters"></a> 매개 변수  
  쿼리에 쿼리 변수가 포함된 경우 해당 보고서 매개 변수가 자동으로 생성됩니다. 이 확장 프로그램은 명명된 매개 변수를 지원합니다. Oracle 버전 9 이상의 경우 다중값 매개 변수가 지원됩니다.  
   
- 보고서 매개 변수는 수정해야 할 수도 있는 기본 속성 값을 사용하여 만들어집니다. 예를 들어 각 보고서 매개 변수의 데이터 형식은 **Text**입니다. 보고서 매개 변수가 만들어진 후에는 기본값을 변경해야 할 수 있습니다. 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)유형의 보고서 데이터 원본을 기반으로 하는 데이터 집합이 있어야 합니다.  
+ 보고서 매개 변수는 수정해야 할 수도 있는 기본 속성 값을 사용하여 만들어집니다. 예를 들어 각 보고서 매개 변수의 데이터 형식은 **Text**입니다. 보고서 매개 변수가 만들어진 후에는 기본값을 변경해야 할 수 있습니다. 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)에 대해 자세히 알아봅니다.  
   
   
 ##  <a name="Remarks"></a> 주의  
  Oracle 데이터 원본을 연결하려면 시스템 관리자가 Oracle 데이터베이스에서 데이터를 검색할 수 있도록 하는 .NET Data Provider for Oracle 버전을 설치해야 합니다. 이 데이터 공급자는 보고서 작성기와 동일한 컴퓨터뿐 아니라 보고서 서버에도 설치되어야 합니다.  
   
- 자세한 내용은 다음 항목을 참조하세요.  
+ 자세한 내용은 다음 문서를 참조하세요.  
   
 -   [Reporting Services를 사용한 Oracle 데이터 원본 구성 및 액세스 방법](https://support.microsoft.com/kb/834305)  
 -   [NETWORK SERVICE 보안 주체에 대한 사용 권한을 추가하는 방법](https://support.microsoft.com/kb/870668)  

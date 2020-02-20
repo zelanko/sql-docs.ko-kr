@@ -1,5 +1,5 @@
 ---
-title: 'ISSAsynchStatus:: GetStatus (OLE DB) | Microsoft Docs'
+title: ISSAsynchStatus::GetStatus(OLE DB) | Microsoft Docs
 description: ISSAsynchStatus::GetStatus(OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 6f05b5c7c7b03fa1b68f3da5c6fbed29ed98a3c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994379"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus(OLE DB)
@@ -44,10 +44,10 @@ HRESULT GetStatus(
   
 ## <a name="arguments"></a>인수  
  *hChapter*[in]  
- 장 핸들입니다. 폴링 된 개체가 행 집합 개체가 아니거나 장에 적용 되지 않는 경우에는 공급자가 무시 하는 DB_NULL_HCHAPTER로 설정 해야 합니다.  
+ 장 핸들입니다. 폴링되는 개체가 행 집합 개체가 아니거나 작업이 하나의 장에 적용되지 않는 경우, 이 값은 공급자가 무시하는 DB_NULL_HCHAPTER로 설정해야 합니다.  
   
  *eOperation*[in]  
- 비동기 상태가 요청되는 작업입니다. 다음 값을 사용 해야 합니다.  
+ 비동기 상태가 요청되는 작업입니다. 다음과 같은 값을 사용해야 합니다.  
   
  DBASYNCHOP_OPEN - 소비자가 행 세트의 비동기 열기 또는 채우기나 데이터 원본 개체의 비동기 초기화에 대한 정보를 요청합니다. 공급자가 직접 URL 바인딩을 지원하는 OLE DB 2.5 규격 공급자이면 소비자는 데이터 원본, 행 집합, 행 또는 스트림 개체의 비동기 초기화나 채우기에 대한 정보를 요청합니다.  
   
@@ -109,7 +109,7 @@ HRESULT GetStatus(
  E_FAIL  
  공급자 관련 오류가 발생했습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **ISSAsynchStatus::GetStatus** 메서드는 데이터 원본 개체의 초기화가 중단될 경우 DB_E_CANCELED 대신 E_UNEXPECTED가 반환된다는 점만 제외하고 **IDBAsynchStatus::GetStatus** 메서드와 동일하게 동작합니다. 단, [ISSAsynchStatus::WaitForAsynchCompletion](../../oledb/ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md)은 DB_E_CANCELED를 반환합니다. 추가적인 초기화 작업이 시도될 수 있도록 중단 이후 데이터 원본 개체가 평소의 좀비 상태로 유지되지 않기 때문입니다.  
   
  행 집합이 비동기적으로 초기화되거나 채워진 경우 이 메서드를 지원해야 합니다.  
@@ -126,6 +126,6 @@ HRESULT GetStatus(
   
 ## <a name="see-also"></a>참고 항목  
  [비동기 작업 수행](../../oledb/features/performing-asynchronous-operations.md)   
- [ISSAsynchStatus &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
+ [ISSAsynchStatus&#40;OLE DB&#41;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   

@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 350856cc27bdec601e0db2998f9ff9953cdf6ec7
-ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
-ms.translationtype: MTE75
+ms.openlocfilehash: 23c730ce0bba9003b47b777108907763d981c551
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72381728"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74401528"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>SQL Server용 Microsoft OLE DB 드라이버에 대한 릴리스 정보
 
@@ -38,14 +38,14 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 | 추가된 기능 | 세부 정보 |
 | :------------ | :------ |
 | Azure Active Directory 인증 지원(`ActiveDirectoryInteractive`, `ActiveDirectoryMSI`). | [Azure Active Directory 사용](features/using-azure-active-directory.md). |
-| ADAL (embedded Active Directory 인증 라이브러리) 지원. | 별도의 ADAL 설치는 특정 인증 방법을 사용 하는 데 더 이상 필요 하지 않습니다. |
+| Azure ADAL(Active Directory Authentication Library)(adal.dll)을 설치 프로그램에 포함 | 이제는 기본 드라이버 설치에 포함되어 있으므로 Microsoft Active Directory Authentication Library for SQL Server의 기존 설치를 업그레이드하며 Windows의 설치된 애플리케이션 목록에서 제거됩니다. |
 | &nbsp; | &nbsp; |
 
 ### <a name="bugs-fixed"></a>버그 수정
 
 | 버그 수정 | 세부 정보 |
 | :-------- | :------ |
-| [Iindexdefinition::D ropindex](https://go.microsoft.com/fwlink/?linkid=2106448)에서 drop index 논리를 수정 했습니다. | 이전 버전의 OLE DB 드라이버는 인덱스 소유자의 스키마 ID와 사용자 ID가 같지 않은 경우 기본 키 인덱스를 삭제할 수 없습니다. |
+| [IIndexDefinition::DropIndex](https://go.microsoft.com/fwlink/?linkid=2106448)의 인덱스 삭제 논리를 수정했습니다. | 이전 버전의 OLE DB 드라이버는 스키마 ID와 인덱스 소유자의 사용자 ID가 서로 다르면 기본 키 인덱스를 삭제할 수 없습니다. |
 | &nbsp; | &nbsp; |
 
 ## <a name="1823"></a>18.2.3
@@ -56,7 +56,7 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 | 추가된 기능 | 세부 정보 |
 | :------------ | :------ |
-| SQL Server 이동식 미디어에서 드라이버 업그레이드 지원 | 이러한 향상으로 SQL Server 이동식 미디어에서 직접 드라이버를 업그레이드할 수 있습니다. |
+| SQL Server 이동식 미디어에서 드라이버 업그레이드를 지원합니다. | 이러한 개선으로 SQL Server 이동식 미디어에서 드라이버를 직접 업그레이드할 수 있습니다. |
 | &nbsp; | &nbsp; |
 
 ## <a name="1822"></a>18.2.2
@@ -90,7 +90,7 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 | 추가된 기능 | 세부 정보 |
 | :------------ | :------ |
-| `UseFMTONLY` 연결 문자열 키워드 및 `SSPROP_INIT_USEFMTONLY` 초기화 속성에 대해 지원합니다. | `UseFMTONLY`는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상에 연결할 때 메타데이터를 검색하는 방법을 제어합니다.<br/><br/>자세한 내용은 [SQL Server에 대 한 OLE DB 드라이버와 연결 문자열 키워드 사용](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)을 참조 하세요. |
+| `UseFMTONLY` 연결 문자열 키워드 및 `SSPROP_INIT_USEFMTONLY` 초기화 속성에 대해 지원합니다. | `UseFMTONLY`는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상에 연결할 때 메타데이터를 검색하는 방법을 제어합니다.<br/><br/>자세한 내용은 다음을 참조하세요. [SQL Server용 OLE DB 드라이버에서 연결 문자열 키워드 사용](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
 ### <a name="bugs-fixed"></a>버그 수정
@@ -106,9 +106,9 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 | 추가된 기능 | 세부 정보 |
 | :------------ | :------ |
-| `MultiSubnetFailover` 연결 문자열 키워드 및 `SSPROP_INIT_MULTISUBNETFAILOVER` 초기화 속성을 지원합니다. | 참조 항목:<br/>&bull; &nbsp; [OLE DB Driver for SQL Server의 고가용성, 재해 복구 지원](features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).<br/>&bull; &nbsp; [SQL Server용 OLE DB 드라이버에서 연결 문자열 키워드 사용](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
+| `MultiSubnetFailover` 연결 문자열 키워드 및 `SSPROP_INIT_MULTISUBNETFAILOVER` 초기화 속성을 지원합니다. | 자세한 내용은 다음을 참조하세요.<br/>&bull; &nbsp; [OLE DB Driver for SQL Server의 고가용성, 재해 복구 지원](features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).<br/>&bull; &nbsp; [SQL Server용 OLE DB 드라이버에서 연결 문자열 키워드 사용](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [SQL Server용 Microsoft OLE DB 드라이버](oledb-driver-for-sql-server.md)

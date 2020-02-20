@@ -1,7 +1,7 @@
 ---
 title: 보안 개념
 titleSuffix: SQL Server big data clusters
-description: 이 문서에서는 SQL Server 빅 데이터 클러스터의 보안 개념을 설명합니다. 여기에는 클러스터 엔드포인트 및 클러스터 인증 설명이 포함됩니다.
+description: 이 문서에서는 SQL Server 빅 데이터 클러스터의 보안 개념을 설명합니다. 이 내용에는 클러스터 엔드포인트 및 클러스터 인증 설명이 포함됩니다.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
@@ -9,24 +9,29 @@ ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 35eb5e0a3236d8f016ed5ca99b769d628a4d81ed
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 0219022ee2f4d813261aa6181416521e88e5d0f6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532371"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253119"
 ---
-# <a name="security-concepts-for-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]의 보안 개념
+# <a name="security-concepts-for-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]의 보안 개념
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 이 문서에서는 빅 데이터 클러스터의 주요 보안 관련 개념을 설명합니다.
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]는 균일하고 일관적인 권한 부여 및 인증을 제공합니다. 기존 도메인에 대한 Active Directory 통합을 설정하는 완전히 자동화된 배포를 통해 빅 데이터 클러스터를 Active Directory와 통합할 수 있습니다. Active Directory 통합을 통해 빅 데이터 클러스터를 구성한 후에는 기존 ID 및 사용자 그룹을 활용하여 모든 엔드포인트에서 통합 액세스를 수행할 수 있습니다. 또한 SQL Server에서 외부 테이블을 만든 후에는 Active Directory 사용자와 그룹에 외부 테이블에 대한 액세스 권한을 부여하여 데이터 원본에 대한 액세스를 제어할 수 있으므로, 데이터 액세스 정책을 단일 위치에 중앙 집중화할 수 있습니다.
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]는 균일하고 일관적인 권한 부여 및 인증을 제공합니다. 기존 도메인에 대한 AD(Active Directory) 통합을 설정하는 완전히 자동화된 배포를 통해 빅 데이터 클러스터를 AD와 통합할 수 있습니다. AD 통합을 통해 빅 데이터 클러스터를 구성한 후에는 기존 ID 및 사용자 그룹을 활용하여 모든 엔드포인트에서 통합 액세스를 수행할 수 있습니다. 또한 SQL Server에서 외부 테이블을 만든 후에는 AD 사용자와 그룹에 외부 테이블에 대한 액세스 권한을 부여하여 데이터 원본에 대한 액세스를 제어할 수 있으므로, 데이터 액세스 정책을 단일 위치에 중앙 집중화할 수 있습니다.
+
+이 비디오(14분)에서는 빅 데이터 클러스터 보안에 대한 개요를 제공합니다.
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Overview-Big-Data-Cluster-Security/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ## <a name="authentication"></a>인증
 
-외부 클러스터 엔드포인트는 Active Directory 인증을 지원합니다. 즉, AD ID를 사용하여 빅 데이터 클러스터에 인증할 수 있습니다.
+외부 클러스터 엔드포인트는 AD 인증을 지원합니다. AD ID를 사용하여 빅 데이터 클러스터에 인증할 수 있습니다.
 
 ### <a name="cluster-endpoints"></a>클러스터 엔드포인트
 
@@ -34,7 +39,7 @@ ms.locfileid: "73532371"
 
 * 마스터 인스턴스 - SSMS 또는 Azure Data Studio 같은 데이터베이스 도구와 애플리케이션을 사용하여 클러스터의 SQL Server 마스터 인스턴스에 액세스할 수 있는 TDS 엔드포인트입니다. azdata에서 HDFS 또는 SQL Server 명령을 사용하는 경우 도구가 작업에 따라 다른 엔드포인트에 연결합니다.
 
-* HDFS 파일, Spark(Knox)에 액세스하는 게이트웨이 - HTTPS 기반 엔드포인트입니다. 이 엔드포인트는 webHDFS 및 Spark 같은 서비스에 액세스하는 데 사용됩니다.
+* HDFS 파일, Spark(Knox)에 액세스하는 게이트웨이 - webHDFS 및 Spark와 같은 서비스에 액세스하기 위한 HTTPS 엔드포인트입니다.
 
 * 클러스터 관리 서비스(컨트롤러) 엔드포인트 - 클러스터를 관리하기 위한 REST API를 공개하는 빅 데이터 클러스터 관리 서비스입니다. Azdata 도구를 사용하려면 이 엔드포인트에 연결해야 합니다.
 
@@ -64,15 +69,14 @@ ms.locfileid: "73532371"
 
 ## <a name="basic-administrator-login"></a>기본 관리자 로그인
 
-Active Directory 모드에서 또는 기본 관리자 로그인만 사용하여 클러스터를 배포하도록 선택할 수 있습니다. 기본 관리자 로그인만 사용하는 것은 프로덕션 지원 보안 모드가 아니며, 주로 제품 평가에 사용됩니다.
+AD 모드에서 또는 기본 관리자 로그인만 사용하여 클러스터를 배포하도록 선택할 수 있습니다. 기본 관리자 로그인만 사용하는 것은 프로덕션 지원 보안 모드가 아니며, 제품 평가에 사용됩니다.
 
-Active Directory 모드를 선택하더라도 클러스터 관리자에 대한 기본 로그인이 생성됩니다. 따라서 AD 연결이 끊어질 때 "백도어"가 제공됩니다.
+Active Directory 모드를 선택하더라도 클러스터 관리자에 대한 기본 로그인이 생성됩니다. 이 기능은 AD 연결이 중단되는 경우 대체 액세스를 제공합니다.
 
-배포 시 이 기본 로그인에는 클러스터의 관리자 권한이 부여됩니다. 즉, 사용자는 SQL Server 마스터 인스턴스의 시스템 관리자이자 클러스터 컨트롤러의 관리자가 됩니다.
-Hadoop 구성 요소는 혼합 모드 인증을 지원하지 않으므로, 기본 관리자 로그인을 사용하여 게이트웨이(knox)를 인증할 수 없습니다.
+배포 시 이 기본 로그인에는 클러스터의 관리자 권한이 부여됩니다. 로그인 사용자는 SQL Server 마스터 인스턴스의 시스템 관리자이자 클러스터 컨트롤러의 관리자가 됩니다.
+Hadoop 구성 요소는 혼합 모드 인증을 지원하지 않으므로, 기본 관리자 로그인을 사용하여 게이트웨이(Knox)를 인증할 수 없습니다.
 
-
-배포 시 이러한 로그인 자격 증명을 정의해야 합니다.
+배포 시 정의해야 하는 로그인 자격 증명은 다음과 같습니다.
 
 클러스터 관리 사용자 이름:
  + `AZDATA_USERNAME=<username>`

@@ -16,10 +16,10 @@ ms.assetid: 7f8bd0f1-f340-4bb9-b559-0a6176124033
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 786f55e436b9582eaed875f8c7cd265b1d3e2cc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953450"
 ---
 # <a name="getcatalogs-method-sqlserverdatabasemetadata"></a>getCatalogs 메서드(SQLServerDatabaseMetaData)
@@ -34,26 +34,26 @@ ms.locfileid: "67953450"
 public java.sql.ResultSet getCatalogs()  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 getCatalogs 메서드는 java.sql.DatabaseMetaData 인터페이스의 getCatalogs 메서드에 의해 지정됩니다.  
   
 > [!NOTE]  
->  SQL Azure에서 **SQLServerDatabaseMetaData**을 호출 하려면 master 데이터베이스에 연결 해야 합니다. SQL Azure는 사용자 데이터베이스에서 전체 카탈로그 집합을 반환하는 기능을 지원하지 않습니다. **SQLServerDatabaseMetaData** 는 데이터베이스 뷰를 사용 하 여 카탈로그를 가져옵니다. [Database_usage (Azure SQL Database)](../../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md) 의 사용 권한에 대 한 설명을 참조 하 여 SQL Azure에서 **SQLServerDatabaseMetaData** 동작을 이해 하십시오.  
+>  SQL Azure에서는 **SQLServerDatabaseMetaData.getCatalogs**를 호출하려면 master 데이터베이스에 연결해야 합니다. SQL Azure는 사용자 데이터베이스에서 전체 카탈로그 집합을 반환하는 기능을 지원하지 않습니다. **SQLServerDatabaseMetaData.getCatalogs**는 sys.databases 보기를 사용하여 카탈로그를 가져옵니다. SQL Azure에서 **SQLServerDatabaseMetaData.getCatalogs** 동작을 이해하려면 [sys.database_usage(Azure SQL Database)](../../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md)의 사용 권한에 대한 설명을 참조하세요.  
   
  getCatalogs 메서드에서 반환되는 결과 집합에는 다음 정보가 포함됩니다.  
   
-|속성|형식|설명|  
+|속성|Type|Description|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|[!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 시스템 데이터베이스를 비롯한 카탈로그의 이름입니다.|  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 getCatalogs 메서드를 사용하여 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 포함된 시스템 데이터베이스를 비롯한 모든 데이터베이스의 이름을 반환하는 방법을 보여 줍니다.  
+ 다음 예제에서는 getCatalogs 메서드를 사용하여 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 포함된 시스템 데이터베이스를 비롯한 모든 데이터베이스의 이름을 반환하는 방법을 보여줍니다.  
   
 ```  
 public static void executeGetCatalogs(Connection con) {  

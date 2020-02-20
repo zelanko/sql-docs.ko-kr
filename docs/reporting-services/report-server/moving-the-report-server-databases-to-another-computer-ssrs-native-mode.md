@@ -1,6 +1,7 @@
 ---
-title: 다른 컴퓨터로 보고서 서버 데이터베이스 이동(SSRS 기본 모드) | Microsoft Docs
-ms.date: 05/30/2017
+title: 다른 컴퓨터로 보고서 서버 데이터베이스 이동(기본 모드) | Microsoft Docs
+description: SQL Server DB 엔진 설치에 사용되는 보고서 서버 데이터베이스를 다른 컴퓨터에 있는 인스턴스로 이동할 수 있습니다.
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -8,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: be1e4f34356f611e4c76ba57aa12bd13b0bf8f30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 762bee43a32bed19b5646ad982467c67c933ed85
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65619678"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254583"
 ---
-# <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>다른 컴퓨터로 보고서 서버 데이터베이스 이동(SSRS 기본 모드)
+# <a name="moving-report-server-databases-to-another-computer-ssrs-native-mode"></a>다른 컴퓨터로 보고서 서버 데이터베이스 이동(SSRS 기본 모드)
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 설치에 사용되는 보고서 서버 데이터베이스를 다른 컴퓨터에 있는 인스턴스로 이동할 수 있습니다. reportserver 데이터베이스와 reportservertempdb 데이터베이스를 모두 이동하거나 함께 복사해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 설치하려면 두 데이터베이스가 모두 필요합니다. reportservertempdb 데이터베이스는 이동하는 주 reportserver 데이터베이스와 이름으로 관련되어야 합니다.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드입니다.  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드.  
   
  데이터베이스를 이동해도 보고서 서버 항목에 대해 현재 정의되어 있는 예약된 작업에는 영향을 주지 않습니다.  
   
@@ -45,7 +46,7 @@ ms.locfileid: "65619678"
   
 2.  보고서 서버 서비스를 중지합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하여 서비스를 중지할 수 있습니다.  
   
-3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 시작하고 보고서 서버 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결을 엽니다.  
+3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 시작하고 보고서 서버 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결을 엽니다.  
   
 4.  보고서 서버 데이터베이스를 마우스 오른쪽 단추로 클릭하고 태스크를 가리킨 다음 **분리**를 클릭합니다. 보고서 서버 임시 데이터베이스에 대해 이 단계를 반복합니다.  
   
@@ -72,7 +73,7 @@ ms.locfileid: "65619678"
 ## <a name="backing-up-and-restoring-the-report-server-databases"></a>보고서 서버 데이터베이스 백업 및 복원  
  보고서 서버를 오프라인으로 설정할 수 없는 경우 백업 후 복원 방법을 사용하여 보고서 서버 데이터베이스 위치를 다시 지정할 수 있습니다. 백업 및 복원을 수행하려면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용해야 합니다. 데이터베이스를 복원한 후에 새 서버 인스턴스의 데이터베이스를 사용하도록 보고서 서버를 구성해야 합니다. 자세한 내용은 이 항목의 마지막 부분에 있는 지침을 참조하십시오.  
   
-### <a name="using-backup-and-copyonly-to-backup-the-report-server-databases"></a>BACKUP 및 COPY_ALL을 사용하여 보고서 서버 데이터베이스 백업  
+### <a name="using-backup-and-copy_only-to-backup-the-report-server-databases"></a>BACKUP 및 COPY_ALL을 사용하여 보고서 서버 데이터베이스 백업  
  데이터베이스를 백업할 때는 COPY_ONLY 인수를 설정합니다. 두 데이터베이스와 로그 파일을 모두 백업해야 합니다.  
   
 ```  
