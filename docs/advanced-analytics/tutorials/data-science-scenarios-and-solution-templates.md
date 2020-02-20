@@ -1,6 +1,6 @@
 ---
 title: 데이터 과학 솔루션 템플릿
-description: 이 문서에서는 모범 사례를 보여 주고 솔루션을 빠르게 구현할 수 있도록 구성 요소를 제공하는 템플릿을 설명합니다. 각 템플릿은 특정 업종 또는 업계의 특정 문제를 해결하도록 설계되었습니다.
+description: 이 문서에서는 모범 사례를 보여 주고 기계 학습 솔루션을 구현할 수 있도록 구성 요소를 제공하는 산업별 템플릿을 설명합니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 03/29/2019
@@ -9,17 +9,26 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 01893edd0174ec7aeab262b8aeddc3babb8194f7
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 6d87fbbb60f70292075d4f24080798d017ee5288
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727274"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947284"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>데이터 과학 시나리오 및 솔루션 템플릿
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-템플릿은 모범 사례를 보여 주고 솔루션을 더 빠르게 구현할 수 있도록 구성 요소를 제공하는 샘플 솔루션입니다. 각 템플릿은 특정 업종 또는 업계의 특정 문제를 해결하도록 설계되었습니다. 각 템플릿의 작업은 데이터 준비 및 기능 엔지니어링에서 모델 학습 및 점수 매기기까지 확장됩니다. [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 작동 방법을 알아보려면 이러한 템플릿을 사용하세요. 그런 다음, 사용자의 시나리오에 맞게 템플릿을 자유롭게 사용자 지정하고 사용자 지정 솔루션을 빌드할 수 있습니다. 
+이 문서에서는 다양한 SQL Server 기계 학습 솔루션 템플릿을 설명합니다. 이 템플릿은 모범 사례를 보여주고 기계 학습 솔루션을 빠르게 구현할 수 있도록 구성 요소를 제공합니다. 각 템플릿은 특정 업종 또는 업계의 특정 데이터 과학 문제를 해결하도록 설계되었습니다.
+각 템플릿의 작업은 데이터 준비 및 기능 엔지니어링에서 모델 학습 및 점수 매기기까지 확장됩니다. 
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 작동 방법을 알아보려면 이러한 템플릿을 사용하세요. 그런 다음, 사용자의 시나리오에 맞게 템플릿을 자유롭게 사용자 지정하고 사용자 지정 솔루션을 빌드할 수 있습니다.
+::: moniker-end
+
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+이러한 템플릿을 사용하여 SQL Server Machine Learning Services의 작동 방식을 알아보세요. 그런 다음, 사용자의 시나리오에 맞게 템플릿을 자유롭게 사용자 지정하고 사용자 지정 솔루션을 빌드할 수 있습니다.
+::: moniker-end
 
 각 솔루션에는 샘플 데이터, R 코드 또는 Python 코드 및 SQL 저장 프로시저(해당하는 경우)가 포함됩니다. SQL Server에서 계산을 수행하여 선호하는 R 또는 Python 개발 환경에서 코드를 실행할 수 있습니다. 경우에 따라 T-SQL 및 SQL Server Management Studio와 같은 모든 SQL 클라이언트 도구를 사용하여 코드를 직접 실행할 수 있습니다.
 
@@ -29,7 +38,7 @@ ms.locfileid: "73727274"
 
 + 다운로드 및 설치 지침은 [템플릿 사용 방법](#bkmk_HowTo)을 참조하세요.
 
-## <a name="fraud-detection"></a>사기 검색
+## <a name="fraud-detection"></a>부정 행위 감지
 
 [온라인 사기 검색 템플릿(SQL Server R Services)](https://github.com/Microsoft/r-server-fraud-detection)
 

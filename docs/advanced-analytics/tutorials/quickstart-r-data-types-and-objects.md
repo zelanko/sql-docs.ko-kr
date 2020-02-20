@@ -1,27 +1,26 @@
 ---
-title: '빠른 시작: R 데이터 형식'
-titleSuffix: SQL Server Machine Learning Services
-description: 이 빠른 시작에서는 SQL Server Machine Learning Services의 R 및 SQL Server에서 데이터 형식 및 데이터 개체로 작업을 수행하는 방법을 알아봅니다.
+title: '빠른 시작: R 데이터 구조, 데이터 형식, 개체'
+description: 이 빠른 시작에서 SQL Server Machine Learning Services에서 R을 사용하는 경우 데이터 구조, 데이터 형식, 개체를 사용하는 방법을 알아봅니다. R과 SQL Server 서버 사이의 데이터 이동과 일반적으로 발생할 수 있는 문제에 대해 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4dab7cca8edcc01052ced81ec33a1f411da7ba9a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: a3f978865d2fdd643650a7c7308adb65d2c79fa7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73726982"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76916410"
 ---
-# <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>빠른 시작: SQL Server Machine Learning Services에서 R을 사용하여 데이터 형식 및 개체 처리
+# <a name="quickstart-data-structures-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>빠른 시작: SQL Server Machine Learning Services에서 R을 사용하는 데이터 구조, 데이터 형식 및 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 빠른 시작에서는 R 및 SQL Server 사이에 데이터를 이동할 때 발생하는 일반적인 문제에 대해 알아봅니다. 이 연습은 고유 스크립트로 데이터 작업을 수행할 때 필요한 기본 배경 지식을 제공합니다.
+이 빠른 시작에서는 SQL Server Machine Learning Services에서 R을 사용하는 경우 데이터 구조와 데이터 형식을 사용하는 방법을 알아봅니다. R과 SQL Server 서버 사이의 데이터 이동과 일반적으로 발생할 수 있는 문제에 대해 알아봅니다.
 
 처음에 알아야 할 일반적인 문제는 다음과 같습니다.
 
@@ -186,7 +185,7 @@ execute sp_execute_external_script
 |---|
 |1542|
 
-이유가 무엇일까요? 이 경우 두 인수가 동일한 길이의 벡터로 처리될 수 있기 때문에 R는 내부 곱을 행렬로 반환합니다.  이것은 선형 대수 규칙에 따라 예상된 동작입니다. 하지만 다운스트림 애플리케이션에서 출력 스키마가 절대 변경되지 않을 것으로 예상할 경우에는 이 동작으로 인해 문제가 발생할 수 있습니다.
+그 이유는 이 경우 두 인수가 동일한 길이의 벡터로 처리될 수 있기 때문에 R는 내부 곱을 행렬로 반환합니다.  이것은 선형 대수 규칙에 따라 예상된 동작입니다. 하지만 다운스트림 애플리케이션에서 출력 스키마가 절대 변경되지 않을 것으로 예상할 경우에는 이 동작으로 인해 문제가 발생할 수 있습니다.
 
 > [!TIP]
 > 
@@ -308,5 +307,5 @@ SQL Server에서 고급 R 함수 작성에 대해 알아보려면 다음 빠른 
 
 SQL Server Machine Learning Services에서 R 사용에 대한 자세한 내용은 다음 문서를 참조하세요.
 
-- [SQL Server Machine Learning Services를 사용하여 R에서 예측 모델 만들기 및 점수 매기기](quickstart-r-train-score-model.md)
+- [SQL Server Machine Learning Services를 사용하여 R에서 예측 모델 만들기 및 채점](quickstart-r-train-score-model.md)
 - [SQL Server Machine Learning Services(Python 및 R)란?](../what-is-sql-server-machine-learning.md)

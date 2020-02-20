@@ -1,5 +1,6 @@
 ---
-title: '3단원: 테이블 보고서에 대한 데이터 세트 정의(Reporting Services) | Microsoft Docs'
+title: '3단원: 테이블 보고서에 대한 데이터 세트 정의 | Microsoft Docs'
+description: 페이지를 매긴 보고서에 대해 데이터 원본을 정의한 후에는 데이터 세트를 정의해야 합니다. SQL Server Reporting Services에서 보고서에 사용되는 데이터는 데이터 세트에 포함됩니다.
 ms.date: 05/01/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: eaa2af570ae363e6a48c8d14e5b73c70e6790b5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 25c62e0cd615748a764937d6dc2b8e4c952e59a1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65106022"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244313"
 ---
-# <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>3단원: 테이블 보고서에 대한 데이터 세트 정의(Reporting Services)
+# <a name="lesson-3-define-a-dataset-for-the-table-report---sql-server-reporting-services"></a>3단원: 테이블 보고서에 대한 데이터 세트 정의 - SQL Server Reporting Services
 
-데이터 원본을 정의한 후에는 데이터 세트를 정의해야 합니다. [!INCLUDE[ssrsnoversion](../includes/ssrsnoversion-md.md)]에서 보고서에 사용하는 데이터는 *데이터 세트*에 포함됩니다. 데이터 세트에는 데이터 원본에 대한 포인터와 보고서, 계산 필드 및 변수에 사용할 쿼리가 포함됩니다.
+페이지를 매긴 보고서에 대해 데이터 원본을 정의한 후에는 데이터 세트를 정의해야 합니다. [!INCLUDE[ssrsnoversion](../includes/ssrsnoversion-md.md)]에서 보고서에 사용하는 데이터는 *데이터 세트*에 포함됩니다. 데이터 세트에는 데이터 원본에 대한 포인터와 보고서, 계산 필드 및 변수에 사용할 쿼리가 포함됩니다.
 
 보고서 디자이너의 쿼리 디자이너를 사용하여 데이터 세트를 정의합니다. 이 자습서에서는 AdventureWorks2016 데이터베이스에서 판매 주문 정보를 검색하는 쿼리를 만들겠습니다.
 
@@ -60,7 +61,7 @@ ms.locfileid: "65106022"
     HAVING ppc.Name = 'Clothing'
     ```
 
-7. (선택 사항) **쿼리 디자이너** 단추를 선택합니다. 텍스트 기반 ‘쿼리 디자이너’에 쿼리가 표시됩니다.  **쿼리 디자이너** 도구 모음에서 ![ssrs_querydesigner_run](media/ssrs-querydesigner-run.png) **실행** 단추를 선택하여 쿼리 결과를 봅니다. 표시되는 데이터 세트에는 AdventureWorks2016 데이터베이스에 있는 테이블 4개의 필드 6개가 포함됩니다. 쿼리는 Transact-SQL 기능을 별칭으로 사용합니다. 예를 들어 SalesOrderHeader 테이블을 *soh*라고 합니다.
+7. (선택 사항) **쿼리 디자이너** 단추를 선택합니다. 텍스트 기반 ‘쿼리 디자이너’에 쿼리가 표시됩니다.  **Query Designer** 도구 모음에서 ![ssrs_querydesigner_run](media/ssrs-querydesigner-run.png) **실행** 단추를 선택하여 쿼리 결과를 확인합니다. 표시되는 데이터 세트에는 AdventureWorks2016 데이터베이스에 있는 테이블 4개의 필드 6개가 포함됩니다. 쿼리는 Transact-SQL 기능을 별칭으로 사용합니다. 예를 들어 SalesOrderHeader 테이블을 *soh*라고 합니다.
 
 8. **확인**을 선택하여 **쿼리 디자이너**를 종료합니다.
 
@@ -72,10 +73,10 @@ ms.locfileid: "65106022"
 
 ## <a name="next-steps"></a>다음 단계
 
-보고서에 대한 데이터를 검색하는 쿼리를 성공적으로 지정했습니다. 다음으로, 보고서 레이아웃을 만들어 보겠습니다. [4단원: 보고서에 테이블 추가 &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)에서 계속 진행하세요.
+보고서에 대한 데이터를 검색하는 쿼리를 성공적으로 지정했습니다. 다음으로, 보고서 레이아웃을 만들어 보겠습니다. [4단원: 보고서에 테이블 추가&#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)를 참조하세요.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
-[쿼리 디자인 도구 &#40;SSRS&#41;](../reporting-services/report-data/query-design-tools-ssrs.md)
-[SQL Server 연결 형식 &#40;SSRS&#41;](../reporting-services/report-data/sql-server-connection-type-ssrs.md)
+[쿼리 디자인 도구&#40;SSRS&#41;](../reporting-services/report-data/query-design-tools-ssrs.md)
+[SQL Server 연결 형식&#40;SSRS&#41;](../reporting-services/report-data/sql-server-connection-type-ssrs.md)
 [자습서: Transact-SQL 문 작성](../t-sql/tutorial-writing-transact-sql-statements.md)

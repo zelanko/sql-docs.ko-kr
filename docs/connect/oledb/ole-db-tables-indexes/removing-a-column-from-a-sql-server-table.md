@@ -1,6 +1,6 @@
 ---
 title: SQL Server 테이블에서 열 제거 | Microsoft Docs
-description: SQL Server 용 OLE DB Driver를 사용 하 여 SQL Server 테이블에서 열 제거
+description: OLE DB Driver for SQL Server를 사용하여 SQL Server 테이블에서 열 제거
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 7e367c1b0664b0b43007db3a465dcbec0ffa90d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993991"
 ---
 # <a name="removing-a-column-from-a-sql-server-table"></a>SQL Server 테이블에서 열 제거
@@ -27,11 +27,11 @@ ms.locfileid: "67993991"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server에 대 한 OLE DB 드라이버는 **Itabledefinition::D ropcolumn** 함수를 노출 합니다. 이 함수를 사용하여 소비자는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블에서 열을 제거할 수 있습니다.  
+  OLE DB Driver for SQL Server는 **ITableDefinition::DropColumn** 함수를 노출합니다. 이 함수를 사용하여 소비자는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블에서 열을 제거할 수 있습니다.  
   
  소비자는 *pTableID* 매개 변수에서 *uName* 공용 구조체의 *pwszName* 멤버에서 테이블 이름을 유니코드 문자열로 지정합니다. *pTableID*의 *eKind*멤버는 DBKIND_NAME이어야 합니다.  
   
- 소비자는 *pColumnID* 매개 변수에서 *uName* 공용 구조체의 *pwszName*멤버에 열 이름을 표시 합니다. 열 이름은 유니코드 문자열입니다. *pColumnID*의 *eKind*멤버는 DBKIND_NAME이어야 합니다.  
+ 소비자는 *pColumnID* 매개 변수에서 *uName* 공용 구조체의 *pwszName* 구성원에 열 이름을 표시합니다. 열 이름은 유니코드 문자열입니다. *pColumnID*의 *eKind*멤버는 DBKIND_NAME이어야 합니다.  
   
 ## <a name="example"></a>예제  
   

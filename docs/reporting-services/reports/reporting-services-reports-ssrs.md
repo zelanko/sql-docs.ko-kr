@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5f0d3a49ae2fc2b0b5f8ecf8f8a92161f66aa839
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
-ms.translationtype: MTE75
+ms.openlocfilehash: 6a0b224d51daad95e4d19cc614d3a964779cd11b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67314024"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190447"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services 보고서(SSRS)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지가 매겨진 보고서는 보고서 데이터 및 보고서 레이아웃 요소가 포함된 XML 기반 보고서 정의입니다. 보고서 정의는 .rdl 확장자로 클라이언트 파일 시스템에 저장됩니다. 페이지가 매겨진 보고서를 게시한 후에는 보고서 서버 또는 SharePoint 사이트에 저장된 보고서 항목이 됩니다. 페이지가 매겨진 보고서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 제공하는 서버 기반 보고 플랫폼의 일부입니다. [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)도 가능합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지가 매겨진 보고서는 보고서 데이터 및 보고서 레이아웃 요소가 포함된 XML 기반 보고서 정의입니다. 보고서 정의는 .rdl 확장자로 클라이언트 파일 시스템에 저장됩니다. 페이지가 매겨진 보고서를 게시한 후에는 보고서 서버 또는 SharePoint 사이트에 저장된 보고서 항목이 됩니다. 페이지가 매겨진 보고서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 제공하는 서버 기반 보고 플랫폼의 일부입니다. [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)도 가능합니다.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 처음 사용하는 경우 [Reporting Services 개념&#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)에 설명된 정보를 검토해야 합니다.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "67314024"
   
 -   각 보고서에 대해 다음을 수행합니다.  
   
-    -   **데이터 원본을 확인합니다.** 각 데이터 원본에 하나씩 보고서 데이터 원본을 정의합니다. 자세한 내용은 [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)을 참조하세요.  
+    -   **데이터 원본을 확인합니다.** 각 데이터 원본에 하나씩 보고서 데이터 원본을 정의합니다. 자세한 정보는 [데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)를 참조하세요.  
   
     -   **각 원본에서 사용할 데이터를 선택합니다.** 각 데이터 원본에 대해 보고서 데이터 세트를 정의합니다. 각 데이터 세트에는 사용할 데이터를 지정하는 쿼리가 포함되어 있습니다. 보고서 매개 변수가 있는 경우 각 매개 변수에 사용 가능한 값 목록을 채울 데이터 세트를 정의합니다. 자세한 내용은 [보고서 데이터 세트&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md) 및 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)을 참조하세요.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "67314024"
   
 -   **인쇄.**  보고서 구독자는 보고서가 표시된 방식에 따라 보고서 또는 보고서 페이지를 인쇄할 수 있습니다. 자세한 내용은 [보고서 인쇄&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)를 참조하세요.  
   
--   **웹 또는 Windows Form 애플리케이션.**  SSRS를 통해 보고를 용이 하 게 하는 응용 프로그램을 개발 하려면 Visual Studio를 사용 합니다. 자세한 내용은 참조 하세요. [[응용 프로그램에 Reporting Services 통합](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)합니다.  
+-   **웹 또는 Windows Form 애플리케이션.**  SSRS를 통해 보고를 용이하게 만드는 애플리케이션을 개발하려면 Visual Studio를 사용합니다. 자세한 정보는 [[애플리케이션에 Reporting Services 통합](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)을 참조하세요.  
   
 ## <a name="manage-reports"></a>보고서 관리  
  게시된 보고서를 관리하는 방법은 다음과 같습니다.  
@@ -149,11 +149,11 @@ ms.locfileid: "67314024"
   
 -   **보고서 캐시.**  대형 보고서가 사용률이 낮은 시간에 실행되도록 예약하여 중요한 업무 시간 동안 보고서 서버 처리로 인한 영향을 줄일 수 있습니다.  
   
--   **스냅숏**  동일한 데이터 집합으로 작업해야 하는 여러 사용자에게 일관된 결과를 제공하려는 경우 보고서 스냅샷을 사용합니다. 일시적인 데이터로 요청 시 실행 보고서를 사용하면 매 시간마다 다른 결과를 생성할 수 있습니다. 하지만 보고서 스냅샷을 사용하면 같은 시점의 데이터가 들어 있는 다른 보고서나 분석 도구와 비교하여 유효한 결과를 생성할 수 있습니다.  
+-   **스냅샷**  동일한 데이터 집합으로 작업해야 하는 여러 사용자에게 일관된 결과를 제공하려는 경우 보고서 스냅샷을 사용합니다. 일시적인 데이터로 요청 시 실행 보고서를 사용하면 매 시간마다 다른 결과를 생성할 수 있습니다. 하지만 보고서 스냅샷을 사용하면 같은 시점의 데이터가 들어 있는 다른 보고서나 분석 도구와 비교하여 유효한 결과를 생성할 수 있습니다.  
   
 -   **보고서 기록.** 일련의 보고서 스냅샷을 만들어서 시간에 따른 데이터 변경 내역을 보여 주는 보고서 기록을 작성할 수 있습니다.  
   
- 성능에 대한 자세한 내용은 [성능, 스냅숏, 캐시&#40;Reporting Services&#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)을 참조하세요.  
+ 성능에 대한 자세한 내용은 [성능, 스냅샷, 캐시&#40;Reporting Services&#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)을 참조하세요.  
   
 ##  <a name="bkmk_SecureReportsSummary"></a> 보고서 보안  
  보고서 보안을 유지하려면  
@@ -177,8 +177,8 @@ SharePoint 사이트에 게시된 보고서에 대한 데이터 경고를 만들
   
 - **추가 정보를 찾을 수 있는 위치를 확인합니다.** 예를 들어 식이 포함된 보고서 디자인의 경우 보고서 디자이너 도구가 보고서 작성기 도구보다 식 평가 문제에 대한 보다 자세한 정보를 제공합니다. 보고서 처리 오류의 경우 로그 파일에 자세한 정보가 포함됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services 도구](../../reporting-services/tools/reporting-services-tools.md)   
  [확장 프로그램&#40;SSRS&#41;](../../reporting-services/extensions-ssrs.md)   
- [네이티브 및 SharePoint Reporting Services 보고서 서버를 비교합니다.](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
+ [기본 및 SharePoint Reporting Services 보고서 서버 비교](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
   

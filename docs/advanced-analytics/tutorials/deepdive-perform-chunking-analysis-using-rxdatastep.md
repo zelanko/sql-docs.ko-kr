@@ -1,6 +1,6 @@
 ---
 title: RevoScaleR의 청킹 분석
-description: SQL Server에서 R 언어를 사용하여 분산 분석용 데이터를 청크하는 방법에 대한 자습서 연습입니다.
+description: 'RevoScaleR 자습서 12: SQL Server에서 R 언어를 사용하여 분산 분석용 데이터를 청크하는 방법입니다.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,22 +9,22 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8c7aa853f44a04e55802012e81e59a15d2b5282b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 0ad082c3a21292b782d5888b48b698c986c0b5b2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727239"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947221"
 ---
 # <a name="perform-chunking-analysis-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>rxDataStep을 사용하여 청킹 분석 수행(SQL Server 및 RevoScaleR 자습서)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 단원은 SQL Server에서 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)의 일부입니다.
+이것은 SQL Server에서 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서 시리즈](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 중 자습서 12에 해당됩니다.
 
-이 단원에서는 기존 R에서처럼 전체 데이터 세트를 메모리로 로드하여 한 번에 처리할 필요 없이 **rxDataStep** 함수를 사용하여 데이터를 청크로 처리합니다. **rxDataStep** 함수는 데이터를 청크로 읽고 각 데이터 청크에 R 함수를 차례로 적용한 다음, 각 청크에 대한 요약 결과를 공통 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본에 저장합니다. 모든 데이터를 읽으면 결과가 결합됩니다.
+이 자습서에서는 기존 R에서처럼 전체 데이터 세트를 메모리로 로드하여 한 번에 처리할 필요 없이 **rxDataStep** 함수를 사용하여 데이터를 청크로 처리합니다. **rxDataStep** 함수는 데이터를 청크로 읽고 각 데이터 청크에 R 함수를 차례로 적용한 다음, 각 청크에 대한 요약 결과를 공통 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본에 저장합니다. 모든 데이터를 읽으면 결과가 결합됩니다.
 
 > [!TIP]
-> 이 단원에서는 R의 **table** 함수를 사용하여 대체 테이블을 계산합니다. 이 예는 교육용으로만 제공됩니다. 
+> 이 자습서에서는 R의 **table** 함수를 사용하여 대체 테이블을 계산합니다. 이 예는 교육용으로만 제공됩니다. 
 > 
 > 실제 데이터 세트를 테이블 형식으로 표시해야 하는 경우 이러한 종류의 작업에 최적화된 **RevoScaleR**의 **rxCrossTabs** 또는 **rxCube** 함수를 사용하는 것이 좋습니다.
 

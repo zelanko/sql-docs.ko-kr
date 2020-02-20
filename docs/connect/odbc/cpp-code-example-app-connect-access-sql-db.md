@@ -1,5 +1,5 @@
 ---
-title: C++SQL database에 액세스 하는 ODBC 응용 프로그램
+title: SQL 데이터베이스에 액세스하는 C++ ODBC 앱
 ms.custom: ''
 ms.date: 07/08/2019
 ms.prod: sql
@@ -10,19 +10,19 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 541757a8a6919577cfe54c7dd6efa461ae0f1449
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67690557"
 ---
-# <a name="c-odbc-example-application-accesses-a-sql-database"></a>C++ODBC 예제 응용 프로그램에 SQL 데이터베이스에 액세스
+# <a name="c-odbc-example-application-accesses-a-sql-database"></a>C++ ODBC 예제 애플리케이션의 SQL 데이터베이스 액세스
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-이 C++ 샘플 응용 프로그램에 연결 하 여 SQL database에 액세스 하는 ODBC Api를 사용 하는 방법을 보여 줍니다.
+C++ 샘플 애플리케이션은 ODBC API를 사용하여 SQL 데이터베이스에 연결하고 액세스하는 방법을 보여줍니다.
 
-2013 년 10 월 사이의 2019 년 7 월,이 샘플 C++ ODBC 응용 프로그램 47,300 번 다운로드 되었습니다. 2019 년 7 월에에서이 응용 프로그램 원본은 Microsoft의 코드 갤러리에서이 웹 페이지로 이동 되었습니다.
+2013년 10월부터 2019년 7월 사이에 이 C++ ODBC 애플리케이션은 47,300회 다운로드되었습니다. 2019년 7월 이 애플리케이션 원본은 Microsoft의 코드 갤러리에서 이 웹 페이지로 옮겨 왔습니다.
 
 <!-- 
 docs/connect/odbc/ , cpp-code-example-app-connect-access-sql-db.md
@@ -31,7 +31,7 @@ New as .md file on 2019/July/08.  GeneMi.
 Was:  https://code.msdn.microsoft.com/windowsapps/ODBC-sample-191624ae/sourcecode?fileId=51137&pathId=1980325953
 -->
 
-## <a name="a-readmetxt"></a>1\. ReadMe.txt
+## <a name="a-readmetxt"></a>A. ReadMe.txt
 
 ```
 Environment Where Tested
@@ -79,7 +79,7 @@ To run the sample:
      3. Select the ODBC DSN to connect to. Follow the message of the sample application to input SQL query.
 ```
 
-## <a name="b-odbcsqlcpp-code"></a>2\. odbcsql.cpp code
+## <a name="b-odbcsqlcpp-code"></a>B. odbcsql.cpp code
 
 ```cpp
 /******************************************************************************* 
@@ -943,6 +943,6 @@ EndGlobal
 </Project>
 ```
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]

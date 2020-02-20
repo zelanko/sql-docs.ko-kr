@@ -1,5 +1,5 @@
 ---
-title: 매개 변수 및 행 집합 메타 데이터 | Microsoft Docs
+title: 매개 변수 및 행 집합 메타데이터 | Microsoft Docs
 description: 매개 변수 및 행 집합 메타데이터
 ms.custom: ''
 ms.date: 06/14/2018
@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 641859e134a5f3c3201f239023f911b79de1c11e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67995101"
 ---
 # <a name="metadata---parameter-and-rowset"></a>메타데이터 - 매개 변수 및 행 집합
@@ -41,12 +41,12 @@ ms.locfileid: "67995101"
   
 |매개 변수 유형|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
-|날짜|DBTYPE_DBDATE|6|10|0|지우기|  
-|Time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
+|date|DBTYPE_DBDATE|6|10|0|지우기|  
+|time|DBTYPE_DBTIME2|10|8, 10..16|0..7|설정|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|지우기|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|지우기|  
-|Datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Set|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Set|  
+|Datetime|DBTYPE_DBTIMESTAMP|16|23|3|지우기|  
+|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|설정|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|설정|  
   
  값 범위가 연속되지 않을 수도 있습니다. 이러한 경우는 소수 부분 자릿수가 0보다 커서 소수점을 추가했을 때 발생합니다.  
   
@@ -58,40 +58,40 @@ ms.locfileid: "67995101"
 |*pwszDataSourceType*<br /><br /> (공급자별로 다름)|*pwszDataSourceType*<br /><br /> (OLE DB 일반)|*ulParamSize*|*bScale*|  
 |----------------------------------------------------|-------------------------------------------------|-------------------|--------------|  
 ||DBTYPE_DATE|6|무시됨|  
-|날짜|DBTYPE_DBDATE|6|무시됨|  
+|date|DBTYPE_DBDATE|6|무시됨|  
 ||DBTYPE_DBTIME|10|무시됨|  
-|Time|DBTYPE_DBTIME2|10|0..7|  
+|time|DBTYPE_DBTIME2|10|0..7|  
 |smalldatetime||16|무시됨|  
-|DATETIME||16|무시됨|  
+|Datetime||16|무시됨|  
 |datetime2 또는 DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|16|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|0..7|  
   
- *Bprecision* 매개 변수는 무시 됩니다.  
+ *bPrecision* 매개 변수는 무시됩니다.  
   
- "DBPARAMFLAGS_SS_ISVARIABLESCALE"은 데이터를 서버로 보낼 때 무시됩니다. 애플리케이션은 공급자별 유형 이름 "**datetime**" 및 "**smalldatetime**"을 사용하여 레거시 TDS(Tabular Data Stream) 유형의 사용을 강제할 수 있습니다. [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이상 버전의 서버에 연결된 경우 "**datetime2**" 형식이 사용되며, 유형 이름이 "**datetime2**" 또는 "DBTYPE_DBTIMESTAMP"이면 필요에 따라 암시적 서버 변환이 발생합니다. 공급자별 형식 이름 "**datetime**" 또는 "**smalldatetime**"을 사용 하는 경우에는 *눈금이* 무시 됩니다. 그렇지 않으면 응용 프로그램에서 *Bscale* 이 올바르게 설정 되었는지 확인 해야 합니다. DBTYPE_DBTIMESTAMP를 사용 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 하는 MDAC 및 SQL Server 용 OLE DB 드라이버에서 업그레이드 한 응용 프로그램은 *bscale* 을 올바르게 설정 하지 않은 경우 실패 합니다. [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이전 버전의 서버 인스턴스에 연결된 경우 "DBTYPE_DBTIMESTAMP"가 있는 *bScale* 값이 0 또는 3이 아니면 오류이며 E_FAIL이 반환됩니다.  
+ "DBPARAMFLAGS_SS_ISVARIABLESCALE"은 데이터를 서버로 보낼 때 무시됩니다. 애플리케이션은 공급자별 유형 이름 "**datetime**" 및 "**smalldatetime**"을 사용하여 레거시 TDS(Tabular Data Stream) 유형의 사용을 강제할 수 있습니다. [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이상 버전의 서버에 연결된 경우 "**datetime2**" 형식이 사용되며, 유형 이름이 "**datetime2**" 또는 "DBTYPE_DBTIMESTAMP"이면 필요에 따라 암시적 서버 변환이 발생합니다. 공급자 관련 형식 이름 "**datetime**" 또는 "**smalldatetime**"이 사용되는 경우 *bScale*은 무시됩니다. 그렇지 않으면 애플리케이션에서 *bScale*이 올바르게 설정되었는지 확인해야 합니다. "DBTYPE_DBTIMESTAMP"를 사용하는 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]의 MDAC와 OLE DB Driver for SQL Server에서 업그레이드된 애플리케이션은 *bScale*을 올바르게 설정하지 않을 경우 실패합니다. [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이전 버전의 서버 인스턴스에 연결된 경우 "DBTYPE_DBTIMESTAMP"가 있는 *bScale* 값이 0 또는 3이 아니면 오류이며 E_FAIL이 반환됩니다.  
   
- ICommandWithParameters:: SetParameterInfo를 호출 하지 않으면 공급자는 다음과 같이 IAccessor:: CreateAccessor에 지정 된 바인딩 형식의 서버 유형을 의미 합니다.  
+ ICommandWithParameters::SetParameterInfo가 호출되지 않으면 공급자는 IAccessor::CreateAccessor에 다음과 같이 지정된 대로 바인딩 형식의 서버 형식을 의미합니다.  
   
 |바인딩 유형|*pwszDataSourceType*<br /><br /> (공급자별로 다름)|  
 |------------------|----------------------------------------------------|  
 |DBTYPE_DATE|datetime2(0)|  
-|DBTYPE_DBDATE|날짜|  
+|DBTYPE_DBDATE|date|  
 |DBTYPE_DBTIME|time(0)|  
 |DBTYPE_DBTIME2|time(7)|  
 |DBTYPE_DBTIMESTAMP|datetime2(7)|  
 |DBTYPE_DBTIMESTAMPOFFSET|datetimeoffset(7)|  
   
 ## <a name="icolumnsrowsetgetcolumnsrowset"></a>IColumnsRowset::GetColumnsRowset  
- **IColumnsRowset:: GetColumnsRowset** 는 다음 열을 반환 합니다.  
+ **IColumnsRowset::GetColumnsRowset**은 다음 열을 반환합니다.  
   
 |열 유형|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS, DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
-|날짜|DBTYPE_DBDATE|6|10|0|지우기|  
-|Time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
+|date|DBTYPE_DBDATE|6|10|0|지우기|  
+|time|DBTYPE_DBTIME2|10|8, 10..16|0..7|설정|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|지우기|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|지우기|  
-|Datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Set|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Set|  
+|Datetime|DBTYPE_DBTIMESTAMP|16|23|3|지우기|  
+|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|설정|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|설정|  
   
  DBCOLUMN_FLAGS에서 날짜/시간 유형에 대해 DBCOLUMNFLAGS_ISFIXEDLENGTH는 항상 true이지만 다음과 같은 플래그는 항상 false입니다.  
   
@@ -120,12 +120,12 @@ ms.locfileid: "67995101"
   
 |매개 변수 유형|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------------------|  
-|날짜|DBTYPE_DBDATE|6|10|0|지우기|  
-|time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
+|date|DBTYPE_DBDATE|6|10|0|지우기|  
+|time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|설정|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|지우기|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|지우기|  
-|Datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Set|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Set|  
+|Datetime|DBTYPE_DBTIMESTAMP|16|23|3|지우기|  
+|datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|설정|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|설정|  
   
  *dwFlags*에서 날짜/시간 유형에 대해 DBCOLUMNFLAGS_ISFIXEDLENGTH는 항상 true이지만 다음과 같은 플래그는 항상 false입니다.  
   

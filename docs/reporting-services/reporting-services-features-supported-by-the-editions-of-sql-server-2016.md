@@ -1,67 +1,67 @@
 ---
-title: SQL Server 버전에서 지원하는 SQL Server Reporting Services 기능
+title: 다른 버전에서 지원되는 기능 - SQL Server Reporting Services | Microsoft Docs
+description: 이 항목은 다른 SQL Server 버전에서 지원하는 SSRS(SQL Server Reporting Services) 기능을 설명합니다. SQL Server 평가 버전은 180일 동안 시험용으로 사용할 수 있습니다.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/20/2019
-ms.openlocfilehash: 3e61381c2298a197be698ed82c247023ad708789
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.date: 12/16/2019
+ms.openlocfilehash: 96fe1480deed7dad420687b5b3b08a3ea8da2ffd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893278"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76516604"
 ---
-# <a name="sql-server-reporting-services-features-supported-by-its-editions"></a>SQL Server 버전에서 지원하는 SQL Server Reporting Services 기능
+# <a name="sql-server-reporting-services-features-supported-by-editions"></a>버전별로 지원되는 SQL Server Reporting Services 기능
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 이 항목은 다른 SQL Server 버전에서 지원하는 SSRS(SQL Server Reporting Services) 기능을 설명합니다. SQL Server 평가 버전은 180일 동안 시험용으로 사용할 수 있습니다.  
+
+## <a name="related-links"></a>관련 링크
   
- 최신 SQL Server 릴리스 정보는 [SQL Server 2017 Release Notes](../sql-server/sql-server-2017-release-notes.md)를 참조하세요. 새로운 기능에 대한 최신 정보는 [SSRS(SQL Server Reporting Services)의 새로운 기능](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)을 참조하세요.
+ - [SQL Server Reporting Services(SSRS) 릴리스 정보](release-notes-reporting-services.md). 
+ - [SQL Server Reporting Services(SSRS)의 새로운 기능](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
+ - [SQL Server 버전에서 지원하는 기능](~/sql-server/editions-and-components-of-sql-server-version-15.md)
 
- ## <a name="try-sql-server-2017"></a>SQL Server 2017을 사용해 보세요.
-
-> [![SQL Server 2017 다운로드](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **[평가 센터에서 SQL Server 2017을 다운로드하세요.](https://go.microsoft.com/fwlink/?LinkID=829477)**    
->
-> ![Azure Virtual Machine 소형](https://docs.microsoft.com/analysis-services/analysis-services/media/azure-virtual-machine-small.png) **[이미 설치된 SQL Server 2017로 Virtual Machine을 스핀업](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
+##  <a name="SSRS"></a> SQL Server Reporting Services  
 
 Evaluation 및 Developer 버전에서 지원하는 기능은 다음 표의 SQL Server Enterprise Edition 열을 참조하세요.
 
-##  <a name="SSRS"></a> SQL Server Reporting Services  
-  
-|기능 이름|Enterprise|Standard|Web|Express with Advanced Services|Developer|  
-|------------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|모바일 보고서 및 분석|예||||예|  
-|지원되는 카탈로그 데이터베이스 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전|Standard 이상|Standard 이상|Web|Express|Standard 이상|  
-|지원되는 데이터 원본 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전|모든   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전|모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전|Web|Express|모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전|  
-|보고서 서버|예|예|예|예|예|  
-|보고서 디자이너|예|예|예|예|예|  
-|보고서 디자이너 웹 포털|예|예|예|예|예|  
-|역할 기반 보안|예|예|예|예|예|  
-|Excel, PowerPoint, Word, PDF 및 이미지로 내보내기|예|예|예|예|예|  
-|향상된 계기 및 차트|예|예|예|예|예|  
-|[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 대시보드에 보고서 항목 고정|예|예|예|예|예|  
-|사용자 지정 인증|예|예|예||예|  
-|데이터 피드로 보고서 사용|예|예|예|예|예|  
-|모델 지원|예|예|예||예|  
-|역할 기반 보안을 위해 사용자 지정 역할 만들기|예|예|||예|  
-|모델 항목 보안|예|예|||예|  
-|무한 클릭 광고|예|예|||예|  
-|공유 구성 요소 라이브러리|예|예|||예|  
-|전자 메일 및 파일 공유 구독/일정 예약|예|예|||예|  
-|보고서 기록, 스냅샷 실행 및 캐싱|예|예|||예|  
-|SharePoint 통합<sup>2</sup>|예|예|||예|  
-|원격 및 비 SQL 데이터 원본 지원<sup>1</sup>|예|예|||예|  
-|데이터 원본, 배달, 렌더링 및 RDCE 확장성|예|예|||예|  
-|사용자 지정 브랜딩|예||||예|  
-|데이터 기반 보고서 구독|예||||예|  
-|스케일 아웃 배포(웹 팜)|예||||예|  
-|경고<sup>2</sup>(SSRS 2016) |예||||예|  
-|파워 뷰<sup>2</sup>(SSRS 2016) |예||||예| 
-|주석<sup>3</sup> |예|예|예|예|예|  
+|기능 이름|Enterprise|Standard|웹|Express with Advanced Services|Developer|  
+|------|---------|---------------|-----------|-------|---------|  
+| Power BI 보고서 및 Excel 통합 문서 | yes, Software Assurance | | | | yes |
+|모바일 보고서 및 분석|yes||||yes|  
+|지원되는 카탈로그 데이터베이스 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전|Standard 이상|Standard 이상|웹|Express|Standard 이상|  
+|지원되는 데이터 원본 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전|모든   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전|모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전|웹|Express|모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전|  
+|보고서 서버|yes|yes|yes|yes|yes|  
+|보고서 디자이너|yes|yes|yes|yes|yes|  
+|보고서 디자이너 웹 포털|yes|yes|yes|yes|yes|  
+|역할 기반 보안|yes|yes|yes|yes|yes|  
+|Excel, PowerPoint, Word, PDF 및 이미지로 내보내기|yes|yes|yes|yes|yes|  
+|향상된 계기 및 차트|yes|yes|yes|yes|yes|  
+|[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 대시보드에 보고서 항목 고정|yes|yes|yes|yes|yes|  
+|사용자 지정 인증|yes|yes|yes||yes|  
+|데이터 피드로 보고서 사용|yes|yes|yes|yes|yes|  
+|모델 지원|yes|yes|yes||yes|  
+|역할 기반 보안을 위해 사용자 지정 역할 만들기|yes|yes|||yes|  
+|모델 항목 보안|yes|yes|||yes|  
+|무한 클릭 광고|yes|yes|||yes|  
+|공유 구성 요소 라이브러리|yes|yes|||yes|  
+|전자 메일 및 파일 공유 구독/일정 예약|yes|yes|||yes|  
+|보고서 기록, 스냅샷 실행 및 캐싱|yes|yes|||yes|  
+|SharePoint 통합<sup>2</sup>|yes|yes|||yes|  
+|원격 및 비 SQL 데이터 원본 지원<sup>1</sup>|yes|yes|||yes|  
+|데이터 원본, 배달, 렌더링 및 RDCE 확장성|yes|yes|||yes|  
+|사용자 지정 브랜딩|yes||||yes|  
+|데이터 기반 보고서 구독|yes||||yes|  
+|스케일 아웃 배포(웹 팜)|yes||||yes|  
+|경고<sup>2</sup>(SSRS 2016) |yes||||yes|  
+|파워 뷰<sup>2</sup>(SSRS 2016) |yes||||yes| 
+|주석<sup>3</sup> |yes|yes|yes|yes|yes|  
 
  <sup>1</sup> SSRS(SQL Server Reporting Services)에서 지원하는 데이터 원본에 대한 자세한 내용은 [Reporting Services에서 지원하는 데이터 원본 &#40;SSRS&#41;](../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)를 참조하세요.  
   
@@ -79,18 +79,19 @@ Evaluation 및 Developer 버전에서 지원하는 기능은 다음 표의 SQL S
 |----------------------------------------------------------------------|---------------------------------------------------------------------------|  
 |Enterprise|Enterprise 또는 Standard Edition(로컬 또는 원격)|  
 |Standard|Enterprise 또는 Standard Edition(로컬 또는 원격)|  
-|Web|Web Edition(로컬 전용)|  
+|웹|Web Edition(로컬 전용)|  
 |Express with Advanced Services|Express with Advanced Services(로컬 전용)|  
-|Evaluation|Evaluation|  
+|평가|평가|  
   
 ##  <a name="BIC"></a> 비즈니스 인텔리전스 클라이언트  
 Microsoft 다운로드 센터에서 다음 소프트웨어 클라이언트 애플리케이션을 사용할 수 있습니다. 다음 애플리케이션을 통해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 실행되는 비즈니스 인텔리전스 문서를 만들 수 있습니다. 이러한 문서를 서버 환경에서 호스트하려는 경우 해당 문서 유형을 지원하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전을 사용하세요. 다음 표에서는 이러한 클라이언트 애플리케이션에서 만든 문서를 호스팅하는 데 필요한 서버 기능이 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전을 보여 줍니다.  
   
-|도구 이름|Enterprise|Standard|Web|Express with Advanced Services|Developer|  
-|---------------|----------------|--------------|------------------------|-------------|---------------|  
-|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)], **.rdl** 및 **.rds**|예|예|예|예|예|  
-|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)], **.rsmobile**|예||||예|  
-|모바일 디바이스용 Power BI 앱(iOS, Windows 10, Android), **.rsmobile**|예||||예|  
+|도구 이름|Enterprise|Standard|웹|Express with Advanced Services|Developer|  
+|---------------|----------------|--------------|------------------------|-------------|---------------| 
+| Power BI Report Server에 최적화된 Power BI Desktop, **.pbix** | Yes, Software Assurance | | | | yes |
+|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)], **.rdl** 및 **.rds**|yes|yes|yes|yes|yes|  
+|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)], **.rsmobile**|yes||||yes|  
+|모바일 디바이스용 Power BI 앱(iOS, Windows 10, Android), **.rsmobile**|yes||||yes|  
   
 > [!NOTE]  
 > * 앞의 표는 해당 클라이언트 도구를 사용하도록 설정하는 데 필요한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전이 나와 있습니다. 그러나 이 도구를 사용하여 모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전에서 호스팅되는 데이터에 액세스할 수 있습니다.  

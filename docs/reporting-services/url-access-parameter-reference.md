@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fba128636ce726396b499200b060592a63db5f65
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
-ms.translationtype: MTE75
+ms.openlocfilehash: 18b60a7359392a973a9486c9d4c8266e6997c9df
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72542185"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76516524"
 ---
 # <a name="url-access-parameter-reference"></a>URL 액세스 매개 변수 참조
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]보고서의 모양과 느낌을 구성하는 URL의 일부로 다음 매개 변수를 사용할 수 있습니다. 이 섹션에는 가장 일반적인 매개 변수가 나열됩니다. 매개 변수는 대/소문자를 구분하지 않으며, 매개 변수 접두사는 보고서 서버로 전달되는 경우 *rs:* 로 시작하고 HTML 뷰어로 전달되는 경우 *rc:* 로 시작합니다. 디바이스 또는 렌더링 확장 프로그램에 특정하는 매개 변수를 지정할 수도 있습니다. 디바이스별 매개 변수에 대한 자세한 내용은 [URL에 디바이스 정보 설정 지정](../reporting-services/specify-device-information-settings-in-a-url.md)을 참조하세요.  
@@ -43,7 +43,7 @@ ms.locfileid: "72542185"
     > [!IMPORTANT]  
     >  *rc:Toolbar*=**false** 는 도메인 이름 대신 IP 주소를 사용하여 SharePoint 사이트에 호스트된 보고서에 대한 대상을 지정하는 URL 액세스 문자열에는 사용할 수 없습니다.  
   
--   *Parameters* : 도구 모음의 매개 변수 영역을 표시하거나 숨깁니다. 이 매개 변수를 **true**로 설정하면 도구 모음의 매개 변수 영역이 표시됩니다. 이 매개 변수를 **false**로 설정하면 매개 변수 영역이 표시되지 않고 사용자가 영역을 표시할 수 없습니다. 이 매개 변수를 **Collapsed**값으로 설정하면 매개 변수 영역이 표시되지 않지만 최종 사용자가 영역을 토글할 수 있습니다. 이 매개 변수의 기본값은 **true**입니다.  
+-   *Parameters*: 도구 모음의 매개 변수 영역을 표시하거나 숨깁니다. 이 매개 변수를 **true**로 설정하면 도구 모음의 매개 변수 영역이 표시됩니다. 이 매개 변수를 **false**로 설정하면 매개 변수 영역이 표시되지 않고 사용자가 영역을 표시할 수 없습니다. 이 매개 변수를 **Collapsed**값으로 설정하면 매개 변수 영역이 표시되지 않지만 최종 사용자가 영역을 토글할 수 있습니다. 이 매개 변수의 기본값은 **true**입니다.  
   
      **Native** 모드의 예제:  
   
@@ -57,7 +57,7 @@ ms.locfileid: "72542185"
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Parameters=Collapsed  
     ```  
   
--   *Zoom* : 보고서 확대/축소 값을 정수 백분율 또는 문자열 상수로 설정합니다. 표준 문자열 값에는 **Page Width** 및 **Whole Page**가 포함됩니다. Internet Explorer 5.0 이전 버전과 모든 비[!INCLUDE[msCoName](../includes/msconame-md.md)] 브라우저에서는 이 매개 변수가 무시됩니다. 이 매개 변수의 기본값은 **100**입니다.  
+-   *Zoom*: 보고서 확대/축소 값을 정수 백분율 또는 문자열 상수로 설정합니다. 표준 문자열 값에는 **Page Width** 및 **Whole Page**가 포함됩니다. Internet Explorer 5.0 이전 버전과 모든 비[!INCLUDE[msCoName](../includes/msconame-md.md)] 브라우저에서는 이 매개 변수가 무시됩니다. 이 매개 변수의 기본값은 **100**입니다.  
   
      **Native** 모드의 예제:  
   
@@ -71,7 +71,7 @@ ms.locfileid: "72542185"
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Zoom=Page Width  
     ```  
   
--   *Section* : 보고서에 표시할 페이지를 설정합니다. 보고서의 페이지 수보다 큰 값을 입력하면 마지막 페이지가 표시됩니다. **0** 보다 작은 값을 입력하면 보고서의 1페이지가 표시됩니다. 이 매개 변수의 기본값은 **1**입니다.  
+-   *Section*: 보고서에 표시할 페이지를 설정합니다. 보고서의 페이지 수보다 큰 값을 입력하면 마지막 페이지가 표시됩니다. **0** 보다 작은 값을 입력하면 보고서의 1페이지가 표시됩니다. 이 매개 변수의 기본값은 **1**입니다.  
   
      보고서의 2 페이지를 표시하기 위한 **Native** 모드의 예제:  
   
@@ -99,7 +99,7 @@ ms.locfileid: "72542185"
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:FindString=Mountain-400  
     ```  
   
--   *StartFind* : 검색할 마지막 섹션을 지정합니다. 이 매개 변수의 기본값은 보고서의 마지막 페이지입니다.  
+-   *StartFind*: 검색할 마지막 섹션을 지정합니다. 이 매개 변수의 기본값은 보고서의 마지막 페이지입니다.  
   
      Product Catalog 예제 보고서의 1페이지부터 5페이지까지 첫 번째 "Mountain-400"을 검색하는 **Native** 모드의 예제입니다.  
   
@@ -107,23 +107,23 @@ ms.locfileid: "72542185"
     https://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:StartFind=1&rc:EndFind=5&rc:FindString=Mountain-400  
     ```  
   
--   *EndFind* : 검색에 사용할 마지막 페이지 번호를 설정합니다. 예를 들어, 값 **5** 는 검색할 마지막 페이지가 보고서의 5페이지임을 나타냅니다. 기본값은 현재 페이지 번호입니다. 이 매개 변수는 *StartFind* 매개 변수와 함께 사용하십시오. 위 예제를 참조하십시오.  
+-   *EndFind*: 검색에 사용할 마지막 페이지 번호를 설정합니다. 예를 들어, 값 **5** 는 검색할 마지막 페이지가 보고서의 5페이지임을 나타냅니다. 기본값은 현재 페이지 번호입니다. 이 매개 변수는 *StartFind* 매개 변수와 함께 사용하십시오. 위 예제를 참조하십시오.  
   
--   *FallbackPage* : 검색 또는 문서 구조 선택을 실패할 때 표시할 페이지 번호를 설정합니다. 기본값은 현재 페이지 번호입니다.  
+-   *FallbackPage*: 검색 또는 문서 구조 선택을 실패할 때 표시할 페이지 번호를 설정합니다. 기본값은 현재 페이지 번호입니다.  
   
--   *GetImage* : HTML 뷰어 사용자 인터페이스에 대한 특정 아이콘을 가져옵니다.  
+-   *GetImage*: HTML 뷰어 사용자 인터페이스에 대한 특정 아이콘을 가져옵니다.  
   
--   *Icon* : 특정 렌더링 확장 프로그램의 아이콘을 가져옵니다.  
+-   *Icon*: 특정 렌더링 확장 프로그램의 아이콘을 가져옵니다.  
   
 -   *Stylesheet*: HTML 뷰어에 적용할 스타일시트를 지정합니다.  
   
--   디바이스 정보 설정: `rc:tag=value`형식으로 디바이스 정보 설정을 지정합니다. 여기서 *tag* 는 현재 사용되는 렌더링 확장 프로그램별 디바이스 정보 설정의 이름입니다( *Format* 매개 변수에 대한 설명 참조). 예를 들어 이미지 렌더링 확장 프로그램에서 URL 액세스 문자열에 다음 매개 변수를 사용하는 JPEG 이미지에 보고서를 렌더링할 수 있도록 *OutputFormat* 디바이스 정보 설정을 사용할 수 있습니다. `...&rs:Format=IMAGE&rc:OutputFormat=JPEG` 모든 확장 프로그램별 디바이스 정보 설정에 대한 자세한 내용은 [렌더링 확장 프로그램에 대한 디바이스 정보 설정&#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)을 참조하세요.  
+-   디바이스 정보 설정: `rc:tag=value` 형식으로 디바이스 정보 설정을 지정합니다. 여기에서 *tag*는 현재 사용되는 렌더링 확장 프로그램별 디바이스 정보 설정의 이름입니다(*Format* 매개 변수 설명 참조). 예를 들어 이미지 렌더링 확장 프로그램에서 URL 액세스 문자열에 다음 매개 변수를 사용하는 JPEG 이미지에 보고서를 렌더링할 수 있도록 *OutputFormat* 디바이스 정보 설정을 사용할 수 있습니다. `...&rs:Format=IMAGE&rc:OutputFormat=JPEG` 모든 확장 프로그램별 디바이스 정보 설정에 대한 자세한 내용은 [렌더링 확장 프로그램에 대한 디바이스 정보 설정&#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)을 참조하세요.  
   
 ##  <a name="bkmk_reportserver"></a> 보고서 서버 명령(rs:)  
  보고서 서버 명령은 *rs:* 접두사가 추가되며 보고서 서버를 대상 지정하는 데 사용:  
   
--   *Command*:  
-                  해당 항목 유형에 따라 카탈로그 항목에 동작을 수행합니다. 기본값은 URL 액세스 문자열에 참조된 카탈로그 항목의 유형에 의해 결정됩니다. 유효한 값은  
+-   *명령*:  
+                  해당 항목 유형에 따라 카탈로그 항목에 동작을 수행합니다. 기본값은 URL 액세스 문자열에 참조된 카탈로그 항목의 유형에 의해 결정됩니다. 유효한 값은 다음과 같습니다.  
   
     -   **ListChildren** 및 **GetChildren** . 폴더 내용을 표시합니다. 폴더 항목은 일반 항목 탐색 페이지 내에 표시됩니다.  
   
@@ -212,9 +212,13 @@ ms.locfileid: "72542185"
   
     -   **IMAGE**  
   
-    -   **EXCEL**  
+    -   **EXCEL**(.xls)
+    
+    -   **EXCELOPENXML**(.xlsx)
   
-    -   **WORD**  
+    -   **WORD**(.doc)
+    
+    -   **WORDOPENXML**(.docx)
   
     -   **CSV**  
   
@@ -247,7 +251,7 @@ ms.locfileid: "72542185"
     https://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render&StartDate=4/10/2008&EndDate=11/10/2008&rs:ParameterLanguage=de-DE  
     ```  
   
--   *Snapshot* : 보고서 기록 스냅샷을 기반으로 보고서를 렌더링합니다. 자세한 내용은 [URL 액세스를 사용하여 보고서 기록 스냅샷 렌더링](../reporting-services/render-a-report-history-snapshot-using-url-access.md)을 참조하세요.  
+-   *Snapshot*: 보고서 기록 스냅샷을 기반으로 보고서를 렌더링합니다. 자세한 내용은 [URL 액세스를 사용하여 보고서 기록 스냅샷 렌더링](../reporting-services/render-a-report-history-snapshot-using-url-access.md)을 참조하세요.  
   
      타임스탬프가 13:40:02인 2003-04-07 날짜의 보고서 기록 스냅샷을 검색하는 **Native** 모드의 예제입니다.  
   
@@ -278,7 +282,7 @@ ms.locfileid: "72542185"
 ##  <a name="bkmk_webpart"></a> 보고서 뷰어 웹 파트 명령(rv:)  
  다음 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 예약된 보고서 매개 변수 이름은 SharePoint와 통합된 보고서 뷰어 웹 파트를 대상 지정하는 데 사용됩니다. 이러한 매개 변수 이름은 접두사 *rv:* 로 시작합니다. 보고서 뷰어 웹 파트에는 *rs:ParameterLanguage* 매개 변수도 사용할 수 있습니다.  
   
--   *Toolbar*: 보고서 뷰어 웹 파트에 대한 도구 모음 표시를 제어합니다. 기본값은 **Full**입니다. 사용할 수 있는 값에는  
+-   *Toolbar*: 보고서 뷰어 웹 파트에 대한 도구 모음 표시를 제어합니다. 기본값은 **Full**입니다. 값은  
   
     -   **Full**: 전체 도구 모음을 표시합니다.  
   
@@ -292,7 +296,7 @@ ms.locfileid: "72542185"
     https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:Toolbar=Navigation  
     ```  
   
--   *HeaderArea*: 보고서 뷰어 웹 파트에 대한 머리글 표시를 제어합니다. 기본값은 **Full**입니다. 사용할 수 있는 값에는  
+-   *HeaderArea*: 보고서 뷰어 웹 파트에 대한 머리글 표시를 제어합니다. 기본값은 **Full**입니다. 값은  
   
     -   **Full**: 전체 머리글을 표시합니다.  
   
@@ -310,7 +314,7 @@ ms.locfileid: "72542185"
   
 -   *AsyncRender*: 보고서가 비동기적으로 렌더링되는지 여부를 제어합니다. 기본값 **true**는 보고서가 비동기적으로 렌더링됨을 지정합니다. 부울 값 **true** 또는 **false**여야 합니다.  
   
--   *ParamMode*: 보고서 뷰어 웹 파트의 매개 변수 프롬프트 영역이 전체 페이지 뷰에서 표시되는 방식을 제어합니다. 기본값은 **Full**입니다. 유효한 값은  
+-   *ParamMode*: 보고서 뷰어 웹 파트의 매개 변수 프롬프트 영역이 전체 페이지 뷰에서 표시되는 방식을 제어합니다. 기본값은 **Full**입니다. 유효한 값은 다음과 같습니다.  
   
     -   **Full**: 매개 변수 프롬프트 영역을 표시합니다.  
   
@@ -324,7 +328,7 @@ ms.locfileid: "72542185"
     https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ParamMode=Collapsed  
     ```  
   
--   *DocMapMode*: 보고서 뷰어 웹 파트의 문서 구조 영역이 전체 페이지 뷰에서 표시되는 방식을 제어합니다. 기본값은 **Full**입니다. 유효한 값은  
+-   *DocMapMode*: 보고서 뷰어 웹 파트의 문서 구조 영역이 전체 페이지 뷰에서 표시되는 방식을 제어합니다. 기본값은 **Full**입니다. 유효한 값은 다음과 같습니다.  
   
     -   **Full**: 문서 구조 영역을 표시합니다.  
   
@@ -332,7 +336,7 @@ ms.locfileid: "72542185"
   
     -   **Hidden**: 문서 구조 영역을 숨깁니다.  
   
--   *DockToolBar*: 보고서 뷰어 웹 파트의 도구 모음이 상단 또는 하단 중 어디에 도킹되는지를 제어합니다. 유효한 값은 **Top** 및 **Bottom**입니다. 기본값은 **Top**입니다.  
+-   *DockToolBar*: 보고서 뷰어 웹 파트의 도구 모음이 위쪽이나 아래쪽에 도킹되는지 여부를 제어합니다. 유효한 값은 **Top** 및 **Bottom**입니다. 기본값은 **Top**입니다.  
   
      예를 들어 **SharePoint** 모드에서는 도구 모음을 아래쪽에 도킹합니다.  
   
@@ -340,7 +344,7 @@ ms.locfileid: "72542185"
     https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom  
     ```  
   
--   *ToolBarItemsDisplayMode*: 도구 모음 항목 표시 여부를 제어합니다. 비트 열거 값입니다. 도구 모음 항목을 포함시키려면 합계 값에 항목의 값을 추가합니다. 예를 들어 동작 없음 메뉴의 경우 rv:ToolBarItemsDisplayMode=63(또는 0x3F)(1+2+4+8+16+32)을 사용하며, 동작 메뉴의 경우에만 rv:ToolBarItemsDisplayMode=960(또는 0x3C0)을 사용합니다. 기본값은 **-1**이며, 모든 도구 모음 항목을 포함합니다. 유효한 값은  
+-   *ToolBarItemsDisplayMode*: 도구 모음 항목 표시 여부를 제어합니다. 비트 열거 값입니다. 도구 모음 항목을 포함시키려면 합계 값에 항목의 값을 추가합니다. 예를 들어 동작 없음 메뉴의 경우 rv:ToolBarItemsDisplayMode=63(또는 0x3F)(1+2+4+8+16+32)을 사용하며, 동작 메뉴의 경우에만 rv:ToolBarItemsDisplayMode=960(또는 0x3C0)을 사용합니다. 기본값은 **-1**이며, 모든 도구 모음 항목을 포함합니다. 유효한 값은 다음과 같습니다.  
   
     -   1(0x1): **뒤로** 단추  
   
@@ -372,6 +376,6 @@ ms.locfileid: "72542185"
   
 ## <a name="see-also"></a>참고 항목  
  [URL 액세스&#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
- [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md)  
+ [URL 액세스를 사용하여 보고서 내보내기](../reporting-services/export-a-report-using-url-access.md)  
   
   

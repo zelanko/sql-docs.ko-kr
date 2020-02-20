@@ -1,5 +1,5 @@
 ---
-title: 데이터 원본 마법사 화면 3 (ODBC Driver for SQL Server) | Microsoft Docs
+title: 데이터 원본 마법사 화면 3(ODBC Driver for SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 63391969f378fdefbfa9547c079dcce4ff259e22
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936542"
 ---
 # <a name="data-source-wizard-screen-3"></a>데이터 원본 마법사 화면 3
@@ -67,23 +67,23 @@ ANSI_PADDING이 설정되면 **varchar** 값의 후행 공백과 **varbinary** �
 
 ### <a name="multi-subnet-failover"></a>다중 서브넷 장애 조치(failover)
 
-응용 프로그램이 다른 서브넷에 있는 고가용성, 재해 복구 AlwaysOn 가용성 그룹 (AG) 가용성 그룹 (AG)에 연결 하는 경우 **다중 서브넷 장애 조치 (failover** )를 사용 하도록 설정 합니다. 현재 활성 상태인 서버를 더 빠르게 검색하고 연결할 수 있도록 ODBC Driver for SQL Server를 구성합니다.
+애플리케이션이 다른 서브넷의 고가용성 재해 복구(AlwaysOn 가용성 그룹) 가용성 그룹(AG)에 연결되어 있는 경우 **다중 서브넷 장애 조치(failover)** 를 사용하도록 설정합니다. 현재 활성 상태인 서버를 더 빠르게 검색하고 연결할 수 있도록 ODBC Driver for SQL Server를 구성합니다.
 
 ### <a name="transparent-network-ip-resolution"></a>투명 네트워크 IP 확인.
 
-장애 조치 중에 더 빠르게 다시 연결할 수 있도록 **다중 서브넷 장애 조치 (failover)** 의 동작을 변경 합니다. 자세한 내용은 [투명한 네트워크 IP 확인 사용](../../../connect/odbc/using-transparent-network-ip-resolution.md)을 참조하세요.
+장애 조치(failover) 중에 더 빠르게 다시 연결할 수 있도록 **다중 서브넷 장애 조치(failover)** 동작을 변경합니다. 자세한 내용은 [투명한 네트워크 IP 확인 사용](../../../connect/odbc/using-transparent-network-ip-resolution.md)을 참조하세요.
 
 ### <a name="column-encryption"></a>열 암호화.
 
-SQL Server 2016 이상에서 사용할 수 있는 [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) 기능을 사용 하 여 암호화 된 열에 대 한 데이터 전송의 자동 해독 및 암호화를 사용 하도록 설정 합니다.
+SQL Server 2016 이상에서 제공되는 [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) 기능으로 열에 대한 데이터 전송의 자동 암호화 및 암호 해독을 사용하도록 설정합니다.
 
-### <a name="use-fmtonly-metadata-discovery"></a>FMTONLY 메타 데이터 검색 사용:
+### <a name="use-fmtonly-metadata-discovery"></a>FMTONLY 메타데이터 검색을 사용합니다.
 
-SQL Server 2012 이상에 연결 하는 경우 레거시 SET FMTONLY metadata discovery 메서드를 사용 합니다. [Sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)에서 지원 하지 않는 쿼리 (예: 임시 테이블 포함)를 사용 하는 경우에만이 기능을 사용 하도록 설정 합니다. 
+SQL Server 2012 이상에 연결하는 경우 레거시 SET FMTONLY 메타데이터 검색 방법을 사용합니다. 임시 테이블이 포함된 쿼리와 같이 [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)에서 지원되지 않는 쿼리를 사용하는 경우에만 사용하도록 설정합니다. 
 
 ### <a name="next"></a>다음
 
-마법사의 다음 화면으로 진행 합니다.
+마법사의 다음 화면으로 진행합니다.
 
 ### <a name="back"></a>뒤로
 

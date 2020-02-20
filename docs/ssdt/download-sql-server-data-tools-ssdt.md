@@ -1,5 +1,5 @@
 ---
-title: SSDT(SQL Server Data Tools) 다운로드 | Microsoft 문서
+title: SSDT(SQL Server Data Tools) 다운로드
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssdt
@@ -8,16 +8,17 @@ keywords: ssdt 설치, ssdt 다운로드, 최신 ssdt
 ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361
 author: markingmyname
 ms.author: maghan
+manager: jroth
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 08/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: a79940fa5696a65ed580d8550984d090a48eebdf
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 48426127a379efecbc61587f60a798fff14190b8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72807447"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75688235"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Visual Studio용 SSDT(SQL Server Data Tools) 다운로드 및 설치
 
@@ -60,15 +61,17 @@ AS, IS 및 RS 프로젝트 지원을 설치하려면 [SSDT 독립 실행형 설�
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>VS 2017용 SSDT(독립 실행형 설치 관리자)
 
-[![다운로드](../ssdt/media/download.png) Visual Studio 2017용 SSDT(15.9.2) 다운로드](https://go.microsoft.com/fwlink/?linkid=2095463)
+[![다운로드](../ssdt/media/download.png)Visual Studio 2017용 SSDT(15.9.3) 다운로드](https://go.microsoft.com/fwlink/?linkid=2110080)
 
 > [!IMPORTANT]
-> - Visual Studio 2017용 SSDT(15.9.2)를 설치하기 전에 *Analysis Services Projects* 및 *Reporting Services Projects* 확장이 이미 설치되어 있는 경우 모두 제거하고, VS 인스턴스를 모두 닫습니다.
+> - Visual Studio 2017용 SSDT(15.9.3)를 설치하기 전에 *Analysis Services Projects* 및 *Reporting Services Projects* 확장이 이미 설치되어 있는 경우 모두 제거하고, VS 인스턴스를 모두 닫습니다.
+> - SQL Server 2017용 수신함 구성 요소 파워 쿼리 원본을 제거했습니다. 이제 SQL Server 2017 및 2019용 파워 쿼리 원본을 기본 구성 요소로 발표했습니다. 이 구성 요소는 [여기](https://www.microsoft.com/en-us/download/details.aspx?id=100619)에서 다운로드할 수 있습니다.
+> - SQL Server 2019용 수신함 구성 요소 Microsoft Oracle Connector를 제거했습니다. 이제 SQL Server 2019용 Microsoft Oracle Connector를 기본 구성 요소로 발표했습니다. 이 구성 요소는 [여기](https://www.microsoft.com/en-us/download/details.aspx?id=58228)에서 다운로드할 수 있습니다.
 > - Teradata 원본/대상이 포함된 SSIS 패키지 디자인에 Visual Studio 2017(15.8.0)이나 그 이전 버전을 위한 SSDT를 사용하세요. 15.8.0 이후의 Visual Studio 2017용 SSDT로는 Attunity의 Teradata 원본/대상이 포함된 SSIS 패키지를 디자인할 수 없습니다.
 
 ### <a name="version-information"></a>버전 정보
 
-릴리스 번호: 15.9.2 빌드 번호: 14.0.16194.0 출시 날짜: 2019년 7월 17일 
+릴리스 번호: 15.9.3 빌드 번호: 14.0.16203.0 릴리스 날짜: 2020년 1월 3일 
 
 전체 변경 내용은 [Release notes for SQL Server Data Tools(SSDT)](release-notes-ssdt.md)(SQL Server Data Tools 릴리스 정보)를 참조하세요.
 
@@ -78,17 +81,17 @@ Visual Studio 2017용 SSDT는 Visual Studio와 동일한 [시스템 요구 사�
 
 이 **VS 2017용 SSDT** 릴리스는 다음 언어로 설치할 수 있습니다.
 
-- [중국어(간체)]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x804)
-- [중국어(번체)]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x404)
-- [영어(미국)]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x409)
-- [프랑스어]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x40c)
-- [독일어]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x407)
-- [이탈리아어]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x410)
-- [일본어]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x411)
-- [한국어]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x412)
-- [포르투갈어(브라질)]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x416)
-- [러시아어]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x419)
-- [스페인어]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x40a)
+- [중국어(간체)]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x804)
+- [중국어(번체)]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x404)
+- [영어(미국)]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x409)
+- [프랑스어]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x40c)
+- [독일어]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x407)
+- [이탈리아어]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x410)
+- [일본어]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x411)
+- [한국어]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x412)
+- [포르투갈어(브라질)]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x416)
+- [러시아어]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x419)
+- [스페인어]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x40a)
 
 ## <a name="offline-install"></a>오프라인 설치
 
@@ -124,7 +127,7 @@ Visual Studio 2017용 SSDT는 Visual Studio와 동일한 [시스템 요구 사�
  
 |프로젝트 템플릿|지원 되는 SQL 플랫폼| 
 |-------------------|--------------------| 
-|관계형 데이터베이스| SQL Server 2005\* - SQL Server 2017<br> (Visual Studio 2017에 대해 SSDT 17.x 또는 SSDT를 사용하여 [Linux의 SQL Server](../linux/sql-server-linux-overview.md)에 연결)<br /><br />Azure SQL 데이터베이스<br /><br />Azure SQL Data Warehouse(쿼리만 지원, 데이터베이스 프로젝트는 아직 지원되지 않음)<br /><br /> \* SQL Server 2005는 더 이상 지원되지 않습니다.<br /><br /> 공식적으로 지원되는 SQL 버전으로 전환하세요.|
+|관계형 데이터베이스| SQL Server 2005\* - SQL Server 2017<br> (Visual Studio 2017에 대해 SSDT 17.x 또는 SSDT를 사용하여 [Linux의 SQL Server](../linux/sql-server-linux-overview.md)에 연결)<br /><br />Azure SQL Database<br /><br />Azure SQL Data Warehouse(쿼리만 지원, 데이터베이스 프로젝트는 아직 지원되지 않음)<br /><br /> \* SQL Server 2005는 더 이상 지원되지 않습니다.<br /><br /> 공식적으로 지원되는 SQL 버전으로 전환하세요.|
 |Analysis Services 모델<br /><br />Reporting Services 보고서 | SQL Server 2008 - SQL Server 2017|
 |Integration Services 패키지| SQL Server 2012 - SQL Server 2019 |
 

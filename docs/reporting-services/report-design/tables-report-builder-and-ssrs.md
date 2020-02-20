@@ -9,10 +9,10 @@ ms.assetid: 0a95c339-c5aa-49ad-b1c8-72824b7a9c82
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 319f221116d49cab52b0c01a273db565a9049669
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574732"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>테이블(보고서 작성기 및 SSRS)
@@ -40,15 +40,15 @@ ms.locfileid: "65574732"
   
  테이블을 선택할 때는 테이블 밖에 행 및 열 핸들이 표시되고 셀 안에는 대괄호가 표시됩니다. 행 핸들에는 각 행의 용도를 이해하는 데 도움이 되는 그래픽이 표시됩니다. 대괄호는 선택한 셀에 대한 그룹 멤버 자격을 나타냅니다. 다음 그림에서는 기본 테이블에서 선택된 빈 셀을 보여 줍니다.  
   
- ![디자인 화면에서 테이블 템플릿 선택](../../reporting-services/report-design/media/rs-tabletemplatenewselected.gif "디자인 화면에서 테이블 템플릿 선택")  
+ ![디자인 화면에서 테이블 템플릿이 선택됨](../../reporting-services/report-design/media/rs-tabletemplatenewselected.gif "디자인 화면에서 테이블 템플릿이 선택됨")  
   
- 데이터 행에 대한 행 핸들은 세부 정보 기호를 보여줍니다(![세부 정보 행에 3개의 평행선이 있는 행 핸들](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "세부 정보 행에 3개의 평행선이 있는 행 핸들")). 이러한 행에서 데이터를 표시하려면 보고서 데이터 창의 필드를 머리글 행 또는 정보 행의 테이블 셀로 끌어옵니다. 두 행이 동시에 채워집니다. 열을 더 추가하려면 삽입 지점이 보일 때까지 해당 필드를 테이블로 끌어옵니다. 데이터 세트 필드를 테이블에 추가한 후에는 날짜 및 통화에 대한 기본 서식을 변경하여 보고서에 표시되는 방법을 제어할 수 있습니다. 다음 다이어그램에서는 Date, Order, Product, Qty 및 Line Total 필드가 있는 테이블 데이터 영역을 보여 줍니다.  
+ 데이터 행에 대한 행 핸들은 세부 정보 기호를 표시합니다(![세부 정보 행에 3개의 평행선이 있는 행 핸들](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "3개의 평행선이 있는 정보 행에 대한 행 핸들")). 이러한 행에서 데이터를 표시하려면 보고서 데이터 창의 필드를 머리글 행 또는 정보 행의 테이블 셀로 끌어옵니다. 두 행이 동시에 채워집니다. 열을 더 추가하려면 삽입 지점이 보일 때까지 해당 필드를 테이블로 끌어옵니다. 데이터 세트 필드를 테이블에 추가한 후에는 날짜 및 통화에 대한 기본 서식을 변경하여 보고서에 표시되는 방법을 제어할 수 있습니다. 다음 다이어그램에는 Date, Order, Product, Qty, Line Total 필드가 포함된 테이블 데이터 영역이 표시됩니다.  
   
- ![디자인, 열 헤더가 굵게 설정된 테이블](../../reporting-services/report-design/media/rs-basictabledetailsformatteddesign.gif "디자인, 열 헤더가 굵게 설정된 테이블")  
+ ![디자인, 열 머리글이 굵게 설정된 테이블](../../reporting-services/report-design/media/rs-basictabledetailsformatteddesign.gif "디자인, 열 머리글이 굵게 설정된 테이블")  
   
  미리 보기로 보고서를 보고 디자인을 확인합니다. 테이블은 필요에 따라 페이지 아래로 확장됩니다. 데이터 세트 쿼리 결과 집합의 모든 행에 대해 레이블 행 및 정보 행이 한 번씩 표시됩니다. 다음 그림과 같이 주문에서 판매된 각 제품이 품목에 대한 수량 및 라인 총합계와 함께 별도의 행으로 표시됩니다.  
   
- ![열 헤더가 굵게 설정된 테이블의 미리 보기](../../reporting-services/media/rs-basictabledetailsformattedpreview.png "열 헤더가 굵게 설정된 테이블의 미리 보기")  
+ ![열 머리글이 굵게 설정된 테이블의 미리 보기](../../reporting-services/media/rs-basictabledetailsformattedpreview.png "열 머리글이 굵게 설정된 테이블의 미리 보기")  
   
  시작 테이블은 테이블릭스 데이터 영역을 기반으로 하는 템플릿입니다. 기본 테이블릭스 데이터 영역에서 지원하는 기능을 추가하여 테이블의 디자인을 향상시킬 수 있습니다. 자세한 내용은 [보고서 페이지에서 테이블릭스 데이터 영역 표시 제어&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)를 참조하세요. 행 그룹 또는 열 그룹을 추가하거나 세부 그룹을 추가 또는 제거하여 끊임없이 테이블을 개발할 수 있습니다. 자세한 내용은 [테이블릭스 데이터 영역의 유연성 살펴보기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)를 참조하세요.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "65574732"
   
  미리 보기에서 보고서에는 다음 그림과 같이 날짜와 주문 순서로 그룹화된 주문 데이터가 표시됩니다.  
   
- ![Date 다음 Order 기준으로 그룹화된 테이블](../../reporting-services/media/rs-basictablegroupspreview.png "Date 다음 Order 기준으로 그룹화된 테이블")  
+ ![Date 및 Order 기준으로 그룹화된 테이블](../../reporting-services/media/rs-basictablegroupspreview.png "Date 및 Order 기준으로 그룹화된 테이블")  
   
  그룹화된 데이터를 표시하는 다른 방법은 각 값을 고유한 열로 표시하지 않고 그룹 계층 구조를 들여쓰기하여 그룹의 중첩 관계를 표시하는 것입니다. 이러한 서식 지정 스타일을 단계별 보고서라고 합니다. 그룹 정보를 단계별 보고서로 서식을 지정하는 방법에 대한 자세한 내용은 [단계별 보고서 만들기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/create-a-stepped-report-report-builder-and-ssrs.md)를 참조하세요.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "65574732"
   
  보고서를 볼 때 주문 부분합을 표시하는 행이 주문 번호마다 한 번씩 반복됩니다. 테이블 바닥글에는 모든 날짜의 합계가 표시됩니다. 다음 그림에서 마지막 몇 개 행은 3개의 정보 행과 마지막 주문 번호인 SO71952에 대한 부분합 및 테이블의 모든 날짜에 대한 합계를 보여 줍니다.  
   
- ![미리 보기, 그룹 합계와 마지막 행이 있는 테이블](../../reporting-services/report-design/media/rs-basictablegroupstotalscolorpreviewbottom.gif "미리 보기, 그룹 합계와 마지막 행이 있는 테이블")  
+ ![미리 보기, 그룹 합계가 있는 테이블, 마지막 행](../../reporting-services/report-design/media/rs-basictablegroupstotalscolorpreviewbottom.gif "미리 보기, 그룹 합계가 있는 테이블, 마지막 행")  
   
  자세한 내용은 [그룹 또는 테이블릭스 데이터 영역에 합계 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)를 참조하세요.  
   

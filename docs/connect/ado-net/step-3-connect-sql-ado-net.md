@@ -1,36 +1,36 @@
 ---
 title: '3단계: ADO.NET을 사용하여 SQL에 연결하는 개념 증명 | Microsoft Docs'
-description: SQL Server C# 에 연결 하 고 쿼리를 실행 하 고 행을 삽입 하는 코드 예제를 포함 합니다.
+description: SQL Server 연결, 쿼리 실행, 행 삽입을 수행하는 C# 코드 예시가 포함됩니다.
 ms.custom: ''
 ms.date: 08/15/2019
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: rothja
+ms.reviewer: v-kaywon
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: aebe3dc6-3ee4-4d11-8e43-5d32b3f91490
-author: v-kaywon
-ms.author: v-kaywon
-ms.openlocfilehash: 2819697746f810e0c0b19a9ab7d076fa79c15a2f
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cff776c4881dcc012a825bcd48f6d6271b95bb75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451810"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247524"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>3단계: ADO.NET을 사용하여 SQL에 연결하는 개념 증명
 
 ![Download-DownArrow-Circled](../../ssdt/media/download.png)[ADO.NET 다운로드](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 - 이전 문서:&nbsp;&nbsp;&nbsp;[2단계: ADO.NET 개발을 위한 SQL 데이터베이스 만들기](step-2-create-sql-database-ado-net-development.md)  
-- 다음 문서:&nbsp;&nbsp;&nbsp;[4단계: ADO.NET을 사용하여 탄력적으로 SQL에 연결](step-4-connect-resiliently-sql-ado-net.md)  
+- 다음 문서:&nbsp;&nbsp;&nbsp;[4단계: ADO.NET으로 SQL에 탄력적으로 연결](step-4-connect-resiliently-sql-ado-net.md)  
 
   
-이 C# 코드 예제는 개념 증명 으로만 간주 해야 합니다. 이 샘플 코드는 명확 하 게 하기 위해 단순화 되었으며 Microsoft에서 권장 하는 모범 사례를 나타내지는 않습니다.  
+이 C# 코드 예제는 개념 증명으로만 간주되어야 합니다. 이 샘플 코드는 명확히 이해할 수 있도록 단순화되었으며 Microsoft에서 권장하는 모범 사례를 대표하는 것은 아닙니다.  
   
-## <a name="step-1-connect"></a>1 단계: 연결
+## <a name="step-1-connect"></a>1단계: 연결
   
-**SqlConnection** 메서드는 SQL 데이터베이스에 연결 하는 데 사용 됩니다.  
+**SqlConnection.Open** 메서드는 SQL 데이터베이스에 연결하는 데 사용됩니다.  
 
 
 ```csharp
@@ -69,10 +69,10 @@ Press any key to finish...
 
 ## <a name="step-2-execute-a-query"></a>2단계: 쿼리 실행  
   
-ExecuteReader 메서드는 다음과 같습니다.  
+SqlCommand.ExecuteReader 메서드는 다음과 같습니다.  
   
-- Sql SELECT 문을 SQL 시스템에 발급 합니다.  
-- 결과 행에 대 한 액세스를 제공 하기 위해 SqlDataReader의 인스턴스를 반환 합니다.  
+- SQL SELECT 문을 SQL 시스템으로 실행합니다.  
+- SqlDataReader 인스턴스를 반환하여 결과 행에 대한 액세스를 제공합니다.  
   
   
   
@@ -153,14 +153,14 @@ Press any key to finish...
   
   
   
-## <a name="step-3-insert-a-row"></a>3 단계: 행 삽입  
+## <a name="step-3-insert-a-row"></a>3단계: 행 삽입  
   
   
 이 예에서는 다음을 수행하는 방법을 보여 줍니다.  
   
-- 매개 변수를 전달 하 여 SQL INSERT 문을 안전 하 게 실행 합니다.  
-  - 매개 변수를 사용 하면 SQL 삽입 공격 으로부터 보호 됩니다.  
-- 자동 생성 된 값을 검색 합니다.  
+- 매개 변수를 전달하여 SQL INSERT 문을 실행합니다.  
+  - 매개 변수를 사용하여 SQL 삽입 공격으로부터 보호합니다.  
+- 자동 생성된 값을 검색합니다.  
   
   
   

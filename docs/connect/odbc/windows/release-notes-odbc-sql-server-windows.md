@@ -7,16 +7,16 @@ ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: b8459ed8-625e-4d8b-891c-e7e78c9977cc
-ms.reviewer: v-jizho2, v-chojas, genemi
+ms.reviewer: v-chojas
 author: v-makouz
-ms.author: v-makouz
+ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 98e7aec7883bc12d04ce24aba7b9a93244f707f6
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
-ms.translationtype: MTE75
+ms.openlocfilehash: c53832e40b055792d98b9bffea368d156d535545
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72041162"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910937"
 ---
 # <a name="release-notes-for-odbc-to-sql-server-on-windows"></a>Windows 기반 SQL Server에 대한 ODBC 릴리스 정보
 
@@ -44,13 +44,21 @@ Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
 
+## <a name="175-january-2020"></a>17.5, 2020년 1월
+
+| 추가된 기능 | 세부 정보 |
+| :------------ | :------ |
+| 서버를 왕복하지 않고 SPID를 검색하는 SQL_COPT_SS_SPID 연결 특성 | [DSN 및 연결 문자열 특성과 키워드](../dsn-connection-string-attribute.md)를 참조하세요. |
+| 버그 수정. | [버그 수정](../bug-fixes.md)을 참조하세요. |
+| &nbsp; | &nbsp; |
+
 ## <a name="1742-october-2019"></a>17.4.2, 2019년 10월
 
 | 추가된 기능 | 세부 정보 |
 | :------------ | :------ |
-| 추가 Azure Key Vault 끝점에 대 한 지원 | [Always Encrypted와 ODBC 드라이버 사용](../using-always-encrypted-with-the-odbc-driver.md)을 참조하세요. |
+| 추가 Azure Key Vault 엔드포인트 지원 | [Always Encrypted와 ODBC 드라이버 사용](../using-always-encrypted-with-the-odbc-driver.md)을 참조하세요. |
 | 데이터 분류 버전 설정 지원 | [데이터 분류](../data-classification.md#bkmk-version)를 참조하세요. |
-| 이제 드라이버가 Azure에 인증 하는 데 사용 되는 Azure Active Drirectory 인증 라이브러리 (adal)를 설치 합니다. | |
+| 설치 프로그램에 Azure ADAL(Active Directory 인증 라이브러리)(adal.dll) 포함 | 이제는 기본 드라이버 설치에 포함되어 있으므로 SQL Server용 Microsoft Active Directory 인증 라이브러리의 기존 설치를 업그레이드하며 Windows의 설치된 애플리케이션 목록에서 제거됩니다. |
 | 버그 수정. | [버그 수정](../bug-fixes.md)을 참조하세요. |
 | &nbsp; | &nbsp; |
 

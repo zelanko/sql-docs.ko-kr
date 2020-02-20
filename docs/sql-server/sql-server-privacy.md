@@ -7,22 +7,22 @@ ms.custom: ''
 ms.topic: conceptual
 f1_keywords: ''
 helpviewer_keywords: ''
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: c92eead00b10c4a26a93234c3bbfeebf254f6aff
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 946e99884b4c261393c29cd06747823c3aa7e3a1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028839"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76761808"
 ---
 # <a name="sql-server-privacy-supplement"></a>SQL Server 개인 정보 제공
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 문서에서는 익명 기능 사용 및 진단 데이터를 수집하고 Microsoft에 보낼 수 있는 인터넷 사용 기능을 요약해서 설명합니다. SQL Server는 표준 컴퓨터 정보와 사용 및 성능 데이터를 수집할 수 있습니다. 이 데이터는 Microsoft로 전송되어 제품의 품질, 보안 및 안정성 개선을 위해 분석될 수 있습니다. 이 문서는 전반적인 [Microsoft 개인정보처리방침](https://go.microsoft.com/fwlink/?LinkId=521839)에 대한 추록입니다. 이 문서에서 데이터 분류는 SQL Server 온-프레미스 제품의 버전에만 적용됩니다. 항목에 적용되지 않습니다.
+이 문서에서는 익명 기능 사용 및 진단 데이터를 수집하고 Microsoft에 보낼 수 있는 인터넷 사용 기능을 요약해서 설명합니다. SQL Server는 표준 컴퓨터 정보와 사용 및 성능 데이터를 수집할 수 있습니다. 이 데이터는 Microsoft로 전송되어 제품의 품질, 보안 및 안정성 개선을 위해 분석될 수 있습니다. Microsoft Azure 서비스의 가상 머신에 SQL Server를 설치하면 환경 정보가 Microsoft로 전송되므로 Microsoft에서 Azure 구독 내 리소스 공급자를 통해 SQL Server 가상 머신 리소스를 등록할 수 있습니다. 자세한 정보는 [여기](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-register-with-resource-provider)를 참조하세요. SQL Server 가상 머신 리소스 등록의 일부인 SQL Server IaaS Agent Extension는 [여기](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-agent-extension)에 자세히 설명된 대로 가상 머신에 설치할 수 있습니다. 이 문서는 전반적인 [Microsoft 개인정보처리방침](https://go.microsoft.com/fwlink/?LinkId=521839)에 대한 추록입니다. 이 문서에서 데이터 분류는 SQL Server 온-프레미스 제품의 버전에만 적용됩니다. 항목에 적용되지 않습니다.
 
-- Azure SQL 데이터베이스
+- Azure SQL Database
 - [SSMS(SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
 - SSDT(SQL Server Data Tools)
 - Azure Data Studio
@@ -32,7 +32,7 @@ ms.locfileid: "69028839"
 
 *허용된 사용 시나리오*의 정의입니다. Microsoft는 이 문서의 컨텍스트에서 Microsoft에서 시작된 작업이나 작업으로 "허용된 사용 시나리오"를 정의합니다.
 
-## <a name="access-control"></a>액세스 제어
+## <a name="access-control"></a>Access Control
 
 SQL Server 설치 내에서 로그인, 사용자 또는 계정을 보호하는 데 사용되는 자격 증명 관련 정보입니다.
 

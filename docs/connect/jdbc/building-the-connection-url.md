@@ -11,10 +11,10 @@ ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 18ed8477e6fc7c276db1842dba4f8856629bd29a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028449"
 ---
 # <a name="building-the-connection-url"></a>연결 URL 작성
@@ -40,7 +40,7 @@ ms.locfileid: "69028449"
 -   **property**(옵션)는 하나 이상의 옵션 연결 속성입니다. 자세한 내용은 [연결 속성 설정](../../connect/jdbc/setting-the-connection-properties.md)을 참조하세요. 목록에 있는 속성은 모두 지정할 수 있습니다. 속성은 세미콜론(';')으로만 구분할 수 있고 중복될 수 없습니다.  
   
 > [!CAUTION]  
->  보안을 위해 사용자 입력을 토대로 연결 URL을 작성하지 않는 것이 좋습니다. URL에는 서버 이름과 드라이버만 지정해야 합니다. 사용자 이름 및 암호 값에는 연결 속성 컬렉션을 사용합니다. JDBC 응용 프로그램의 보안에 대 한 자세한 내용은 [jdbc 드라이버 응용 프로그램](../../connect/jdbc/securing-jdbc-driver-applications.md)보안을 참조 하세요.  
+>  보안을 위해 사용자 입력을 토대로 연결 URL을 작성하지 않는 것이 좋습니다. URL에는 서버 이름과 드라이버만 지정해야 합니다. 사용자 이름 및 암호 값에는 연결 속성 컬렉션을 사용합니다. JDBC 애플리케이션의 보안에 대한 자세한 정보는 [JDBC 드라이버 애플리케이션 보안](../../connect/jdbc/securing-jdbc-driver-applications.md)을 참조하세요.  
   
 ## <a name="connection-examples"></a>연결 예  
  사용자 이름 및 암호를 사용하여 로컬 컴퓨터에서 기본 데이터베이스에 연결합니다.  
@@ -73,7 +73,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
  `jdbc:sqlserver://localhost;databaseName=AdventureWorks;integratedSecurity=true;applicationName=MyApp;`  
   
 ## <a name="named-and-multiple-sql-server-instances"></a>명명된 다중 SQL Server 인스턴스  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 서버당 여러 개의 데이터베이스 인스턴스를 설치할 수 있습니다. 각 인스턴스는 특정 이름으로 식별합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 명명된 인스턴스에 연결하려면 명명된 인스턴스의 포트 번호를 지정하거나(기본 설정) 인스턴스 이름을 JDBC URL 속성 또는 **datasource** 속성으로 지정합니다. 인스턴스 이름이나 포트 번호 속성을 지정하지 않으면 기본 인스턴스에 대한 연결이 설정됩니다. 다음 예를 참조하십시오.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 서버당 여러 개의 데이터베이스 인스턴스를 설치할 수 있습니다. 각 인스턴스는 특정 이름으로 식별합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 명명된 인스턴스에 연결하려면 명명된 인스턴스의 포트 번호를 지정하거나(기본 설정) 인스턴스 이름을 JDBC URL 속성 또는 **datasource** 속성으로 지정합니다. 인스턴스 이름이나 포트 번호 속성을 지정하지 않으면 기본 인스턴스에 대한 연결이 설정됩니다. 다음 예제를 참조하세요.  
   
  포트 번호를 사용하려면 다음을 수행합니다.  
   
@@ -98,7 +98,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  \<*설치 디렉터리*>\sqljdbc_\<*버전*>\\<*언어*>\auth\  
   
- 에서 지 원하는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]모든 운영 체제의 경우 응용 프로그램이 통합을 사용 하 여 데이터베이스에 연결할 수 있도록 하 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 는 [Kerberos 통합 인증을 사용 하 여 SQL Server에 연결](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) 을 참조 하세요. 유형 4 Kerberos 인증.  
+ [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에서 지원되는 운영 체제의 경우 [Kerberos 통합 인증을 사용하여 SQL Server에 연결](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)에서 애플리케이션이 유형 4 Kerberos 통합 인증을 사용하는 데이터베이스에 연결할 수 있도록 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]에 추가된 기능에 대한 설명을 참조하세요.  
   
 > [!NOTE]  
 >  32비트 JVM(Java Virtual Machine)을 실행할 경우 운영 체제가 x64 버전이라도 x86 폴더에 있는 sqljdbc_auth.dll 파일을 사용하십시오. x64 프로세서에서 64비트 JVM을 실행할 경우 x64 폴더의 sqljdbc_auth.dll 파일을 사용하십시오.  
@@ -122,7 +122,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  `Connection con = DriverManager.getConnection("jdbc:sqlserver://;integratedSecurity=true;", pro);`  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [JDBC 드라이버로 SQL Server에 연결](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   

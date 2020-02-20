@@ -1,5 +1,5 @@
 ---
-title: 데이터 원본 개체 (OLE DB) | Microsoft Docs
+title: 데이터 원본 개체(OLE DB) | Microsoft Docs
 description: 데이터 원본 개체(OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -19,10 +19,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: e0394c5fd3b72c538904c9b8cf946316e76e6650
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015917"
 ---
 # <a name="data-source-objects-ole-db"></a>데이터 원본 개체(OLE DB)
@@ -30,15 +30,15 @@ ms.locfileid: "68015917"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server용 OLE DB 드라이버에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와 같은 데이터 저장소에 연결할 때 사용되는 OLE DB 인터페이스 집합에 데이터 원본이라는 용어를 사용합니다. 공급자의 데이터 원본 개체의 인스턴스를 만드는 것은 SQL Server 소비자에 대 한 OLE DB 드라이버의 첫 번째 작업입니다.  
+  SQL Server용 OLE DB 드라이버에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와 같은 데이터 저장소에 연결할 때 사용되는 OLE DB 인터페이스 집합에 데이터 원본이라는 용어를 사용합니다. OLE DB Driver for SQL Server 소비자의 첫 번째 태스크는 공급자의 데이터 원본 개체 인스턴스를 만드는 것입니다.  
   
- 각 OLE DB 공급자는 자체적으로 사용할 CLSID(클래스 식별자)를 선언합니다. SQL Server에 대 한 OLE DB 드라이버의 CLSID는 C/C++ GUID CLSID_MSOLEDBSQL (기호 MSOLEDBSQL_CLSID는 참조 하는 MSOLEDBSQL 파일의 올바른 progid로 확인 됨). CLSID가 있으면 소비자는 OLE **CoCreateInstance** 함수를 사용하여 데이터 원본 개체의 인스턴스를 만듭니다.  
+ 각 OLE DB 공급자는 자체적으로 사용할 CLSID(클래스 식별자)를 선언합니다. OLE DB Driver for SQL Server에 대한 CLSID는 C/C++ GUID CLSID_MSOLEDBSQL입니다(기호 MSOLEDBSQL_CLSID는 참조하는 msoledbsql.h 파일의 올바른 progid로 확인됨). CLSID가 있으면 소비자는 OLE **CoCreateInstance** 함수를 사용하여 데이터 원본 개체의 인스턴스를 만듭니다.  
   
- SQL Server에 대 한 OLE DB 드라이버는 in-process 서버입니다. SQL Server용 OLE DB 드라이버 개체의 인스턴스는 실행 가능 콘텐츠를 나타내기 위해 CLSCTX_INPROC_SERVER 매크로를 사용하여 만들어집니다.  
+ OLE DB Driver for SQL Server는 in-process 서버입니다. SQL Server용 OLE DB 드라이버 개체의 인스턴스는 실행 가능 콘텐츠를 나타내기 위해 CLSCTX_INPROC_SERVER 매크로를 사용하여 만들어집니다.  
   
  SQL Server용 OLE DB 드라이버 데이터 원본 개체는 소비자가 기존 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 연결하는 데 사용할 수 있는 OLE DB 초기화 인터페이스를 노출합니다.  
   
- SQL Server에 대 한 OLE DB 드라이버를 통해 수행 된 모든 연결은 자동으로 다음 옵션을 설정 합니다.  
+ OLE DB Driver for SQL Server를 통해 이루어지는 모든 연결에는 다음과 같은 옵션이 자동으로 설정됩니다.  
   
 -   SET ANSI_WARNINGS ON  
   

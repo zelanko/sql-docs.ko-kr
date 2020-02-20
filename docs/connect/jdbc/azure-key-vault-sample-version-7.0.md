@@ -10,19 +10,19 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b1ef38ec5175d97c3896c3e6450d6e403f7850fa
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028438"
 ---
 # <a name="azure-key-vault-sample"></a>Azure Key Vault 샘플
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-## <a name="sample-application-using-azure-key-vault-feature"></a>Azure Key Vault 기능을 사용 하는 샘플 응용 프로그램
+## <a name="sample-application-using-azure-key-vault-feature"></a>Azure Key Vault 기능을 사용한 샘플 애플리케이션
 
-이 응용 프로그램은 JDBC 드라이버 7.0 이상 및 Azure-Keyvault (버전 1.0.0), Adal4j (버전 1.6.0) 및 해당 종속성을 사용 하 여 실행할 수 있습니다.  [여기](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)에 설명 된 대로 프로젝트의 pom 파일에 이러한 라이브러리를 추가 하 여 기본 종속성을 확인할 수 있습니다.
+이 애플리케이션은 JDBC Driver 7.0 이상 및 Azure-Keyvault(버전 1.0.0), Adal4j(버전 1.6.0) 및 그 종속성을 사용해 실행할 수 있습니다.  [여기](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)에 설명된 대로 프로젝트의 pom 파일에 이러한 라이브러리를 추가하면 기본 종속성을 확인할 수 있습니다.
 
 ```java
 import java.net.URISyntaxException;
@@ -243,7 +243,7 @@ public class AKV {
 }
 ```
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [Azure Key vault 샘플 버전 6.2.2](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)  
 [Azure Key vault 샘플 버전 6.0.0](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md)  
