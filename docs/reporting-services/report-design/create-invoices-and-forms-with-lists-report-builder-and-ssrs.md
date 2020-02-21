@@ -9,16 +9,16 @@ ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b8ec0531056ea1a4ae3ff1850baed21dfb61df8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581502"
 ---
 # <a name="create-invoices-and-forms-with-lists-report-builder-and-ssrs"></a>목록을 사용하여 송장 및 양식 만들기(보고서 작성기 및 SSRS)
   목록 데이터 영역은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서 데이터 세트의 각 그룹 또는 행에서 반복됩니다. 목록은 자유 형식 보고서나 송장 등의 양식을 만드는 데 사용하거나 다른 데이터 영역과 함께 사용할 수 있습니다. 여러 보고서 항목을 포함하는 목록을 정의할 수 있습니다. 목록은 중첩된 wit일 수 있습니다.  
   
- 목록을 사용하여 빠르게 시작하려면 [자습서: 자유 형식 보고서 만들기&#40;보고서 작성기&#41;](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)를 참조하세요.  
+ 목록을 빠르게 시작하려면 [자습서: 자유 형식 보고서 만들기&#40;보고서 작성기&#41;](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)를 참조하세요.  
   
 > [!NOTE]  
 >  목록을 보고서와는 별도로 보고서 파트로 게시할 수 있습니다. [보고서 파트(보고서 작성기 및 SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)에 대해 자세히 알아봅니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "65581502"
   
  디자인 화면에서 목록을 선택하면 다음 그림과 같이 행 및 열 핸들이 나타납니다.  
   
- ![도구 상자에서 추가된 새 목록 선택](../../reporting-services/report-design/media/rs-listtemplatenewselected.gif "도구 상자에서 추가된 새 목록 선택")  
+ ![도구 상자에서 추가된 새 목록이 선택됨](../../reporting-services/report-design/media/rs-listtemplatenewselected.gif "도구 상자에서 추가된 새 목록이 선택됨")  
   
  시작 목록은 테이블릭스 데이터 영역을 기반으로 하는 템플릿입니다. 목록을 추가한 후 필터, 정렬 또는 그룹 식을 지정하거나 목록이 보고서 페이지에 표시되는 방법을 변경하여 목록의 콘텐츠나 모양을 변경하는 등 디자인을 계속 향상시킬 수 있습니다. 자세한 내용은 [보고서 페이지에서 테이블릭스 데이터 영역 표시 제어&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)를 참조하세요. 목록이 단일 행 및 열로 시작하는 경우에도 중첩 또는 인접 행 그룹이나 열 그룹을 추가하거나 정보 행을 더 추가하여 끊임없이 목록 디자인을 개발할 수 있습니다. 자세한 내용은 [테이블릭스 데이터 영역의 유연성 살펴보기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)를 참조하세요.  
   

@@ -15,10 +15,10 @@ ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 02b9884d4f1f9d7928db80091c68678dbc55fa10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573661"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services"></a>Analysis Services용 MDX 쿼리 디자이너에서 매개 변수 정의
@@ -29,7 +29,7 @@ ms.locfileid: "65573661"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-design-mode"></a>디자인 모드에서 MDX의 쿼리 매개 변수를 정의하려면  
   
-1.  보고서 데이터 창에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본 유형에서 만든 데이터 세트를 마우스 오른쪽 단추로 클릭한 다음, **쿼리**를 클릭합니다. MDX 쿼리 디자이너가 디자인 모드에서 열립니다.  
+1.  보고서 데이터 창에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본 유형에서 만든 데이터 세트를 마우스 오른쪽 단추로 클릭한 다음에 **쿼리**를 클릭합니다. MDX 쿼리 디자이너가 디자인 모드에서 열립니다.  
   
 2.  차원을 필터 영역으로 끈 다음 **차원** 열의 첫 번째 셀 위에 놓습니다.  
   
@@ -53,11 +53,11 @@ ms.locfileid: "65573661"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-query-mode"></a>쿼리 모드에서 MDX의 쿼리 매개 변수를 정의하려면  
   
-1.  보고서 데이터 창에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본 유형에서 만든 데이터 세트를 마우스 오른쪽 단추로 클릭한 다음, **쿼리**를 클릭합니다. MDX 쿼리 디자이너가 디자인 모드에서 열립니다.  
+1.  보고서 데이터 창에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본 유형에서 만든 데이터 세트를 마우스 오른쪽 단추로 클릭한 다음에 **쿼리**를 클릭합니다. MDX 쿼리 디자이너가 디자인 모드에서 열립니다.  
   
 2.  도구 모음에서 **디자인** 을 클릭하여 쿼리 모드로 전환합니다.  
   
-3.  MDX 쿼리 디자이너 도구 모음에서 **쿼리 매개 변수**(![쿼리 매개 변수 대화 상자의 아이콘](../../reporting-services/report-data/media/iconqueryparameter.gif "쿼리 매개 변수 대화 상자의 아이콘"))를 클릭합니다. 쿼리 매개 변수 대화 상자가 열립니다.  
+3.  MDX 쿼리 디자이너 도구 모음에서 **쿼리 매개 변수**(![쿼리 매개 변수 대화 상자의 아이콘](../../reporting-services/report-data/media/iconqueryparameter.gif "쿼리 매개 변수 대화 상자 아이콘"))를 클릭합니다. 쿼리 매개 변수 대화 상자가 열립니다.  
   
 4.  **매개 변수** 열에서 **\<매개 변수 입력>** 을 클릭한 다음 매개 변수 이름을 입력합니다.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "65573661"
      보고서 매개 변수에 대해 사용 가능한 값을 제공하는 데이터 세트를 보려면 보고서 데이터 창의 빈 영역을 마우스 오른쪽 단추로 클릭한 다음, **숨겨진 데이터 세트 표시**를 클릭합니다. 보고서 데이터 창에 보고서의 모든 데이터 세트가 표시됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [MDX용 Analysis Services 연결 형식 &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)   
+ [MDX용 Analysis Services 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)   
  [Analysis Services MDX 쿼리 디자이너 사용자 인터페이스](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)  
   
   

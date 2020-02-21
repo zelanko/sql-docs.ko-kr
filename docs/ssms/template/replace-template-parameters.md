@@ -1,6 +1,6 @@
 ---
-title: 템플릿 매개 변수 바꾸기 | Microsoft 문서
-ms.custom: ''
+title: 템플릿 매개 변수 바꾸기
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: 1234aa14-3464-4a3e-922a-5cfb8fb23627
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bd68bc3a3334991a7c81db547a9fc8117c86996a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: b0c4cc26fddff13e388b74593aa9d8f9331359f8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266735"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245676"
 ---
 # <a name="replace-template-parameters"></a>템플릿 매개 변수 바꾸기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 템플릿에는 템플릿이 사용될 때마다 구현별 값으로 바꿀 수 있는 매개 변수가 포함되어 있습니다. 코드 편집기에서 템플릿을 연 후 매개 변수를 구현과 관련된 값으로 바꿀 수 있습니다.  
   
-## <a name="before-you-begin"></a>시작하기 전 주의 사항  
+## <a name="before-you-begin"></a>시작하기 전에  
 **템플릿 매개 변수 값 지정** 대화 상자는 세 개의 열이 있는 표입니다. **매개 변수** 및 **형식** 열은 읽기 전용이므로 변경할 수 없습니다. **값** 열의 내용을 검토하고 기본값을 구현에 적절한 값으로 변경합니다.  
   
-이 대화 상자를 사용하려면 스크립트의 매개 변수를 꺾쇠 괄호(`< >`)로 묶어 `<`*parameter_name*`,` *data_type*`,` *default_value*`>`형식으로 표시해야 합니다.  
+이 대화 상자를 사용하려면 스크립트의 매개 변수를 꺾쇠 괄호(`< >`)로 묶어 `<`*parameter_name*`,` *data_type*`,` *default_value*`>` 형식으로 표시해야 합니다.  
   
 ## <a name="replace-template-parameters"></a>템플릿 매개 변수 바꾸기  
 코드 편집기 창에서 템플릿을 연 후 다음 작업을 수행합니다.  

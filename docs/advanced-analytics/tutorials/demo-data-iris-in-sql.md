@@ -1,6 +1,6 @@
 ---
 title: 자습서용 아이리스 데모 데이터 세트
-Description: 모델을 저장하는 데 사용할 아이리스 데이터 세트와 테이블을 포함하는 데이터베이스 만들기 이 데이터 세트는 SQL Server 저장 프로시저에서 R 언어 또는 Python 코드를 래핑하는 방법을 보여주는 연습에 사용됩니다.
+Description: 아이리스 데이터 세트 및 예상 모델을 포함하는 데이터베이스를 만듭니다. 이 데이터 세트는 SQL Server Machine Learning Services용 R 및 Python 자습서에서 사용됩니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e580a4d3b8d0e294573cf19c0194cc9b8a103518
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: c87b5c9fede3a8a9ab72add650447d1b02ac89c7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727099"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74908758"
 ---
 #  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>SQL Server의 Python 및 R 자습서용 아이리스 데모 데이터 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

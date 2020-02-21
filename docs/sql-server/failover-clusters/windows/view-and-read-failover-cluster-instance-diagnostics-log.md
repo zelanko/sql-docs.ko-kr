@@ -1,6 +1,7 @@
 ---
-title: 장애 조치(failover) 클러스터 인스턴스 진단 로그 보기 및 읽기 | Microsoft 문서
-ms.custom: ''
+title: 장애 조치(failover) 클러스터 인스턴스 진단 로그 보기 및 읽기
+description: SQL Server 장애 조치(failover) 클러스터 인스턴스에서 생성된 진단 로그를 보고 읽는 방법에 대해 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0932181110c5c4ec34e3d4bdf6b1395bffc65cca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 44b631bb1c453ebc09e8a38a57b1a3160084b09d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904993"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242877"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>장애 조치(failover) 클러스터 인스턴스 진단 로그 보기 및 읽기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "67904993"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  **fn_xe_file_target_read_file**을 실행하려면 VIEW SERVER STATE 권한이 필요합니다.  
   
  SQL Server Management Studio를 관리자로 열기  
@@ -100,14 +101,14 @@ ORDER BY Time;
 ####  <a name="TsqlExample"></a> Setting diagnostic log options  
  이 섹션의 예에서는 진단 로그 옵션 값을 설정하는 방법을 보여 줍니다.  
   
-##### <a name="a-starting-diagnostic-logging"></a>1\. 진단 로깅 시작  
+##### <a name="a-starting-diagnostic-logging"></a>A. 진단 로깅 시작  
  다음 예에서는 진단 데이터의 로깅을 시작합니다.  
   
 ```  
 ALTER SERVER CONFIGURATION SET DIAGNOSTICS LOG ON;  
 ```  
   
-##### <a name="b-stopping-diagnostic-logging"></a>2\. 진단 로깅 중지  
+##### <a name="b-stopping-diagnostic-logging"></a>B. 진단 로깅 중지  
  다음 예에서는 진단 데이터의 로깅을 중지합니다.  
   
 ```  
@@ -131,6 +132,6 @@ SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [장애 조치(failover) 클러스터 인스턴스용 장애 조치(failover) 정책](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
+ [Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

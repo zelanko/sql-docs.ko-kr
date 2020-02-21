@@ -5,29 +5,24 @@ description: 설치 관리자(Linux)를 사용하여 SQL Server 빅 데이터 �
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9d8d4a34e89de7c136e1e80b43929531a2d10eba
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: ac50d0c20f76e78aaa5016f62cefb8c7cc7f075a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532069"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75728584"
 ---
-# <a name="install-azdata-to-manage-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-linux"></a>Linux에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]를 관리하기 위한 `azdata` 설치
+# <a name="install-azdata-with-apt"></a>apt를 사용하여 `azdata` 설치
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 이 문서에서는 Linux에서 SQL Server 2019 빅 데이터 클러스터용 `azdata`를 설치하는 방법을 설명합니다. 패키지 관리자가 출시되기 전에는 `azdata`를 설치하려면 `pip`가 필요했습니다.
 
-패키지 관리자는 다양한 운영 체제와 배포판을 위해 설계되었습니다.
-
-- Windows 및 Linux(Ubuntu 배포판)의 경우 [패키지 관리자](./deploy-install-azdata-installer.md)를 사용하여 간단한 환경을 설치할 수 있습니다.
-- Linux(Ubuntu)의 경우 [`apt`를 사용하여 `azdata` 설치](#azdata-apt)
-
-지금은 다른 운영 체제 또는 배포판에 `azdata`를 설치할 수 있는 패키지 관리자가 없습니다. 이러한 플랫폼은 [패키지 관리자 없이 `azdata` 설치](./deploy-install-azdata.md)를 참조하세요.
+[!INCLUDE [azdata-package-installation-remove-pip-install](../includes/azdata-package-installation-remove-pip-install.md)]
 
 ## <a id="linux"></a>Linux용 `azdata` 설치
 
@@ -42,19 +37,27 @@ ms.locfileid: "73532069"
 
     ```bash
     sudo apt-get update
-    sudo apt-get install gnupg ca-certificates curl apt-transport-https lsb-release -y
+    sudo apt-get install gnupg ca-certificates curl wget software-properties-common apt-transport-https lsb-release -y
     ```
 
 2. 서명 키를 다운로드하여 설치합니다.
 
     ```bash
-    wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+    curl -sL https://packages.microsoft.com/keys/microsoft.asc |
+    gpg --dearmor |
+    sudo tee /etc/apt/trusted.gpg.d/microsoft.asc.gpg > /dev/null
     ```
 
 3. `azdata` 리포지토리 정보를 추가합니다.
 
+   Ubuntu 16.04 클라이언트 실행의 경우:
     ```bash
     sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
+    ```
+
+   Ubuntu 18.04 클라이언트 실행의 경우:
+    ```bash
+    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"
     ```
 
 4. 리포지토리 정보를 업데이트하고 `azdata`를 설치합니다.
@@ -70,7 +73,7 @@ ms.locfileid: "73532069"
     azdata --version
     ```
 
-### <a name="update"></a>Update
+### <a name="update"></a>업데이트
 
 `azdata`만 업그레이드합니다.
 
@@ -78,7 +81,7 @@ ms.locfileid: "73532069"
 sudo apt-get update && sudo apt-get install --only-upgrade -y azdata-cli
 ```
 
-### <a name="uninstall"></a>Uninstall
+### <a name="uninstall"></a>제거
 
 1. apt-get remove를 사용하여 제거합니다.
 

@@ -1,10 +1,9 @@
 ---
-title: 운영자 만들기 | Microsoft 문서
-ms.custom: ''
+title: 운영자 만들기
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,13 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1359d790-5905-4927-a208-e7155e7768a2
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 27f99081b3af76448732ae887fb6f6059628fd4a
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 65c9940c130dbaf27d5b50b73d11b22adb11664e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553049"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258769"
 ---
 # <a name="create-an-operator"></a>운영자 만들기
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "69553049"
 > [!IMPORTANT]  
 > 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
 
-이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업에 대한 알림을 받도록 사용자를 구성하는 방법에 대해 설명합니다.  
+이 문서에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업에 대한 알림을 받도록 사용자를 구성하는 방법에 대해 설명합니다.  
   
 ## <a name="BeforeYouBegin"></a>시작하기 전 주의 사항  
   
@@ -45,7 +46,7 @@ ms.locfileid: "69553049"
   
 ### <a name="Security"></a>보안  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>권한  
 **sysadmin** 고정 서버 역할의 멤버만이 운영자를 만들 수 있습니다.  
   
 ## <a name="SSMSProcedure"></a>SQL Server Management Studio 사용  
@@ -107,7 +108,7 @@ ms.locfileid: "69553049"
     **호출기**  
     호출기 주소로 전자 메일을 보내 이 운영자에게 알립니다.  
   
-    **Net send**  
+    **Net Send**  
     **net send**를 사용하여 이 운영자에게 알립니다.  
   
 4.  새 운영자 만들기를 마쳤으면 **확인**을 클릭합니다.  

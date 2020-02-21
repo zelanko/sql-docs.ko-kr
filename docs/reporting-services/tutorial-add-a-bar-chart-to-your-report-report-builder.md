@@ -9,14 +9,14 @@ ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8e6855a7a6a47021a635e12b2c53515ed20aa6f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63041187"
 ---
-# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>자습서: 보고서에 막대형 차트 추가(보고서 작성기)
-이 자습서에서는 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 의 마법사를 사용하여 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서에 가로 막대형 차트를 만듭니다. 그런 다음 필터를 추가하고 차트를 향상시킵니다. 
+# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>자습서: 보고서에 가로 막대형 차트 추가(보고서 작성기)
+이 자습서에서는 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)]의 마법사를 사용하여 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서에 가로 막대형 차트를 만듭니다. 그런 다음 필터를 추가하고 차트를 향상시킵니다. 
 
 가로 막대형 차트는 범주 데이터를 가로로 표시합니다. 이렇게 하면 다음 작업에 도움이 됩니다.  
   
@@ -30,9 +30,9 @@ ms.locfileid: "63041187"
   
  
 > [!NOTE]  
-> 이 자습서에서 마법사의 단계는 하나의 절차로 통합됩니다. 보고서 서버를 찾고, 데이터 세트를 만들고, 데이터 원본을 선택하는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)을 참조하세요.  
+> 이 자습서에서 마법사의 단계는 하나의 절차로 통합됩니다. 보고서 서버를 찾고 데이터 세트를 만들고 데이터 원본을 선택하는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 다음 자습서를 참조하세요. [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-이 자습서에 소요되는 예상 시간: 15분  
+이 자습서에 소요되는 예상 시간: 15분.  
   
 ## <a name="requirements"></a>요구 사항  
 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)을 참조하세요.  
@@ -47,7 +47,7 @@ ms.locfileid: "63041187"
   
      **시작** 대화 상자가 나타납니다.  
   
-     ![보고서 작성기 시작](../reporting-services/media/rb-getstarted.png "보고서 작성기 시작")  
+     ![보고서 작성기 시작하기](../reporting-services/media/rb-getstarted.png "보고서 작성기 시작하기")  
   
      **시작** 대화 상자가 나타나지 않을 경우 **파일** >**새로 만들기**를 클릭합니다. **새 보고서 또는 데이터 세트** 대화 상자에 **시작** 대화 상자와 같은 내용이 가장 많이 들어 있습니다. 
       
@@ -93,7 +93,7 @@ ms.locfileid: "63041187"
   
 2.  **가로 막대형**을 클릭하고 **다음**을 클릭합니다.  
   
-    **차트 필드 정렬** 페이지의 **사용 가능한 필드** 창에는 FirstName, LastName, SalesYear2015 및 SalesYear2014의 4개 필드가 있습니다.  
+    **차트 필드 정렬** 페이지의 **사용 가능한 필드** 창에는 FirstName, LastName, SalesYear2015 및 SalesYear2014 필드가 있습니다.  
   
 3.  LastName을 범주 창으로 끌어 옵니다.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "63041187"
   
 6.  **다음**을 클릭합니다.  
   
-7.  **마침**을 클릭합니다.  
+7.  **Finish**를 클릭합니다.  
   
     디자인 화면에 차트가 추가됩니다. 새 가로 막대형 차트에는 대표 데이터만 표시됩니다. 범례는 사용자 이름이 아니라 Last Name A, Last Name B 등으로, 보고서의 대략적인 모양을 보여 줍니다. 
   
@@ -199,7 +199,7 @@ ms.locfileid: "63041187"
   
 1.  보고서 디자인 뷰로 전환합니다.  
   
-2.  차트 맨 위의 **차트 제목** 단어를 선택하고 **Sales for 2014 and 2015**를 입력합니다.  
+2.  차트 맨 위의 **차트 제목** 단어를 선택한 다음, **Sales for 2014 and 2015**를 입력합니다.  
   
 3.  속성 창에서 제목이 선택된 상태로 **색** 을 **검정** 으로, **FontSize** 를 **12pt**로 설정합니다. 
   
@@ -293,7 +293,7 @@ ms.locfileid: "63041187"
   
 4.  **저장**을 클릭합니다.   
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
 보고서에 가로 막대형 차트 추가 자습서를 성공적으로 완료했습니다. 차트에 대한 자세한 내용은 [차트](../reporting-services/report-design/charts-report-builder-and-ssrs.md) 및 [가로 막대형 차트](../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

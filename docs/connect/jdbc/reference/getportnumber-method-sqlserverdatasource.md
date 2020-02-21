@@ -16,10 +16,10 @@ ms.assetid: e5dc38d0-4340-4ad7-a56e-1d2a0f0fd846
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 20850d10352a583abd7e0a8bd9747b6346ec3aaa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980830"
 ---
 # <a name="getportnumber-method-sqlserverdatasource"></a>getPortNumber 메서드(SQLServerDataSource)
@@ -34,14 +34,14 @@ ms.locfileid: "67980830"
 public int getPortNumber()  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  현재 포트 번호가 들어 있는 **int** 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  포트 번호는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 소켓 연결을 열 때 사용되는 TCP/IP 포트 번호입니다. portNumber 속성이 설정되어 있지 않으면 getPortNumber 메서드는 기본값인 -1을 반환합니다.  
   
 > [!NOTE]  
->  [SetPortNumber](../../../connect/jdbc/reference/setportnumber-method-sqlserverdatasource.md) 메서드는 전달 된 포트 값에 대 한 범위 검사를 수행 하지 않습니다. 오류가 발생 하지 않고 유효 하지 않은 불법 행위 등 번호 (예: 99999)를 전달할 수 있습니다.  
+>  [setPortNumber](../../../connect/jdbc/reference/setportnumber-method-sqlserverdatasource.md) 메서드는 전달된 포트 값에 대해 범위 검사를 수행하지 않습니다. 따라서 99999와 같이 유효하지 않은 포트 번호를 전달해도 오류가 트리거되지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDataSource 멤버](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

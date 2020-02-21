@@ -16,10 +16,10 @@ ms.assetid: 0304acc2-1fd7-437b-94d9-1c1073dd3ca4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e5612bc9326a359a287501aedc5227436cc576eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570862"
 ---
 # <a name="configurationsetting-method---initializereportserver"></a>ConfigurationSetting 메서드 - InitializeReportServer
@@ -47,10 +47,10 @@ public void InitializeReportServer(string InstallationID,
  *ExtendedErrors[]*  
  [out] 호출에서 반환되는 추가 오류가 들어 있는 문자열 배열입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드 호출의 성공 또는 실패를 나타내는 *HRESULT* 를 반환합니다. 0 값은 메서드 호출이 성공했음을 나타냅니다. 0 이외의 값은 오류가 발생했음을 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 메서드를 호출하면 보고서 서버 데이터베이스 보안 정보에 액세스하는 암호화 키가 *InstallationID*에 의해 식별되는 보고서 서버의 공개 키를 사용하여 암호화됩니다.  
   
  지정된 보고서 서버의 공개 키는 이전에 보고서 서버 데이터베이스에 기록되어 있어야 합니다.  

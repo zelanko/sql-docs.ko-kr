@@ -1,8 +1,10 @@
 ---
-title: URL 예약 및 등록 정보(SSRS 구성 관리자) | Microsoft Docs
-ms.date: 06/20/2019
+title: URL 예약 및 등록(구성 관리자) | Microsoft Docs
+description: Reporting Services 애플리케이션의 URL은 HTTP.SYS에서 URL 예약으로 정의됩니다.
+ms.date: 01/16/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
@@ -11,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dba8913c5aa5fa0aa8d93dd1c4dd639f85ac3081
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
-ms.translationtype: MTE75
+ms.openlocfilehash: 64c458b703d740fa50ff7bcdd6fce20752e6746a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67314035"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76259336"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>URL 예약 및 등록 정보(SSRS 구성 관리자)
   Reporting Services 애플리케이션의 URL은 HTTP.SYS에서 URL 예약으로 정의됩니다. URL 예약은 웹 애플리케이션에 대한 URL 엔드포인트 구문을 정의합니다. 보고서 서버에서 애플리케이션을 구성하는 경우 보고서 서버 웹 서비스와 웹 포털 두에 대해 URL 예약이 정의됩니다. 설치 프로그램 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 통해 URL을 구성하면 URL 예약이 자동으로 생성됩니다.  
@@ -82,8 +84,8 @@ ms.locfileid: "67314035"
   
 |인스턴스 유형|애플리케이션|기본 URL|HTTP.SYS의 실제 URL 예약|  
 |-------------------|-----------------|-----------------|----------------------------------------|  
-|기본 인스턴스|보고서 서버 웹 서비스|`https://\<servername>/reportserver`|`https://<servername>:80/reportserver`|  
-|기본 인스턴스|웹 포털|`https://<servername>/reportserver`|`https://<servername>:80/reportserver`|  
+|기본 인스턴스|보고서 서버 웹 서비스|`https://<servername>/reportserver`|`https://<servername>:80/reportserver`|  
+|기본 인스턴스|웹 포털|`https://<servername>/reports`|`https://<servername>:80/reports`|  
 |명명된 인스턴스|보고서 서버 웹 서비스|`https://<servername>/reportserver_<instancename>`|`https://<servername>:80/reportserver_<instancename>`|  
 |명명된 인스턴스|웹 포털|`https://<servername>/reports_<instancename>`|`https://<servername>:80/reports_<instancename>`|  
 |SQL Server Express|보고서 서버 웹 서비스|`https://<servername>/reportserver_SQLExpress`|`https://<servername>:80/reportserver_SQLExpress`|  
@@ -102,7 +104,7 @@ ms.locfileid: "67314035"
   
  [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)], [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] 이후에는 실수로 프로그램을 높은 권한으로 실행하는 위험을 최소화하는 새로운 보안 기능이 포함되어 있습니다. 이 운영 체제에서 로컬 관리를 사용하려면 추가 단계가 필요합니다. 자세한 내용은 [로컬 관리에 대해 기본 모드 보고서 서버 구성&#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [URL 예약 구문&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
   

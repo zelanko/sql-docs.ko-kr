@@ -1,11 +1,7 @@
 ---
-title: '방법: 테이블 디자이너를 사용하여 테이블 및 관계 관리 | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 테이블 디자이너를 사용하여 테이블 및 관계 관리
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.design.table.columnspecification.index.dialog
@@ -14,14 +10,19 @@ f1_keywords:
 ms.assetid: 322a2903-d7a6-4f52-9048-1bd413b4c799
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 91fddb94bf028ec884a4589c7c4a88bd3be923e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 924a48ffe75c043385043f02125c8e07cfe3fbbc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097486"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75226830"
 ---
 # <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>방법: 테이블 디자이너를 사용하여 테이블 및 관계 관리
+
 테이블 디자이너에서는 Transact\-SQL 편집기와 함께 테이블 관련 프로그래밍 개체를 포함하여 SQL Server 데이터베이스의 테이블 구조를 만들고 편집하기 위한 시각적 환경을 제공합니다.  연결된 데이터베이스 또는 프로젝트의 새 테이블을 만들거나 SQL Server 개체 탐색기 또는 솔루션 탐색기에서 테이블을 편집하기 위해 두 번 클릭하면 테이블 디자이너가 시작됩니다.  
   
 이 디자이너는 열 표, 스크립트 창 및 컨텍스트 창으로 구성되어 있습니다. 열 표에는 테이블의 모든 열이 나열됩니다. 이 표에서 열을 추가, 편집 및 삭제할 수 있습니다.  컨텍스트 창에는 키, 인덱스, 제약 조건, 트리거 등의 테이블 정의에 대한 논리 뷰가 제공되며, 이 창에서 개체를 선택하여 개별 열과의 관계를 강조 표시할 수 있습니다. 이 창에서 테이블에 새 개체를 추가하고 속성 표에서 선택한 개체의 속성을 편집할 수도 있습니다. 스크립트 창에는 테이블 구조의 정의가 표시되고, 컨텍스트 창 또는 열 표에서 선택한 개체의 스크립트가 강조 표시됩니다. 뷰에 열 표와 컨텍스트 창을 함께 표시하고 스크립트를 편집할 수 있습니다. 세 창 중 하나에서 변경한 내용은 즉시 다른 두 창에 전파됩니다.  

@@ -16,17 +16,17 @@ ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 05ed8b22882264aa16efc8c5b7736bcc517e44f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581450"
 ---
 # <a name="report-and-snapshot-size-limits"></a>보고서 및 스냅샷 크기 제한
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 배포를 관리하는 관리자는 이 항목의 정보를 통해 보고서가 보고서 서버에 게시되고, 런타임에 렌더링되고, 파일 시스템에 저장될 때 적용되는 보고서 크기 제한을 이해할 수 있습니다. 이 항목에서는 보고서 서버 데이터베이스의 크기를 측정하는 방법에 대한 지침을 제공하고 스냅샷 크기가 서버 성능에 미치는 영향에 대해 설명합니다.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 배포를 관리하는 관리자는 이 항목의 정보를 통해 보고서가 보고서 서버에 게시되고, 런타임에 렌더링되고, 파일 시스템에 저장될 때 적용되는 보고서 크기 제한을 이해할 수 있습니다. 이 문서에서는 보고서 서버 데이터베이스의 크기를 측정하는 방법에 대한 지침을 제공하고 스냅샷 크기가 서버 성능에 미치는 영향에 대해 설명합니다.  
   
 ## <a name="maximum-size-for-published-reports"></a>게시된 보고서의 최대 크기  
- 보고서 서버에서 보고서 및 모델 크기는 보고서 서버에 게시하는 보고서 정의 파일(.rdl) 및 보고서 모델 파일(.smdl)의 크기를 기반으로 합니다. 보고서 서버에서는 사용자가 게시하는 보고서의 크기를 제한하지 않습니다. 그러나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 에서는 서버에 게시되는 항목에 대한 최대 크기를 제한합니다. 기본적으로 이 제한은 4MB입니다. 이 제한을 초과하는 파일을 보고서 서버에 업로드하거나 게시하면 HTTP 예외가 발생합니다. 이런 경우 Machine.config 파일에서 **maxRequestLength** 요소의 값을 늘려 기본값을 수정할 수 있습니다.  
+ 보고서 서버에서 보고서 및 모델 크기는 보고서 서버에 게시하는 보고서 정의 파일(.rdl) 및 보고서 모델 파일(.smdl)의 크기를 기반으로 합니다. 보고서 서버에서는 사용자가 게시하는 보고서의 크기를 제한하지 않습니다. 그러나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]에서는 서버에 게시되는 항목에 대한 최대 크기를 제한합니다. 기본적으로 이 제한은 4MB입니다. 이 제한을 초과하는 파일을 보고서 서버에 업로드하거나 게시하면 HTTP 예외가 발생합니다. 이런 경우 Machine.config 파일에서 **maxRequestLength** 요소의 값을 늘려 기본값을 수정할 수 있습니다.  
   
  보고서 모델은 매우 클 수 있지만 보고서 정의는 대부분 4MB를 초과하지 않습니다. 일반적인 보고서 크기는 KB 단위입니다. 그러나 포함 이미지를 포함시키면 해당 이미지에 대한 인코딩으로 인해 보고서 정의가 4MB의 기본값을 초과할 수 있습니다.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "65581450"
  Excel 형식으로 렌더링할 때만 보고서 크기가 엄격하게 제한됩니다. 워크시트의 행과 열은 각각 65536개와 256개를 초과할 수 없습니다. 다른 렌더링 형식은 이러한 제한이 없으므로 서버에 있는 리소스 양에 의해서만 크기가 제한됩니다.  
   
 > [!NOTE]  
->  보고서 처리 및 렌더링은 메모리에서 수행됩니다. 보고서가 크거나 사용자 수가 많은 경우에는 보고서 서버 배포가 사용자에게 만족스러운 수준에서 수행될 수 있도록 용량 계획을 세워야 합니다. 도구 및 지침에 대한 자세한 내용은 MSDN의 [Reporting Services의 확장성 및 성능 계획](/previous-versions/sql/sql-server-2005/administrator/cc966418(v=technet.10)) 및 [Visual Studio 2005를 사용한 SQL Server 2005 Reporting Services 보고서 서버의 부하 테스트 수행](https://go.microsoft.com/fwlink/?LinkID=77519)을 참조하십시오.  
+>  보고서 처리 및 렌더링은 메모리에서 수행됩니다. 보고서가 크거나 사용자 수가 많은 경우에는 보고서 서버 배포가 사용자에게 만족스러운 수준에서 수행될 수 있도록 용량 계획을 세워야 합니다. 도구 및 지침에 대한 자세한 내용은 MSDN의 [Reporting Services의 확장성 및 성능 계획](/previous-versions/sql/sql-server-2005/administrator/cc966418(v=technet.10)) 및 [Visual Studio 2005를 사용한 SQL Server 2005 Reporting Services 보고서 서버의 부하 테스트 수행](https://go.microsoft.com/fwlink/?LinkID=77519)을 참조하세요.  
   
 ## <a name="measuring-snapshot-storage"></a>스냅샷 스토리지 측정  
  특정 스냅샷의 크기는 보고서에 있는 데이터 양에 비례합니다. 스냅샷은 일반적으로 보고서 서버에 저장된 다른 항목보다 훨씬 큽니다. 스냅샷 크기는 몇 MB에서 수십 MB에 이르기까지 다양합니다. 보고서가 아주 큰 경우 스냅샷은 훨씬 더 커집니다. 스냅샷 사용 빈도와 보고서 기록 구성 방법에 따라 보고서 서버 데이터베이스에 필요한 디스크 공간 크기가 짧은 기간 동안에 빠르게 늘어날 수 있습니다.  

@@ -1,6 +1,6 @@
 ---
-title: 다른 이름으로 저장 | Microsoft 문서
-ms.custom: ''
+title: 다른 이름으로 저장
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ef6bd7f10ba88988b02dce010f7cce235ad2c751
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 75a385cb2898c48e980f7f6b539d9a21879d8c56
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256989"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75240517"
 ---
 # <a name="save-as"></a>다른 이름으로 저장
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-지정한 파일 형식으로 지정한 위치에 현재 항목의 인스턴스를 저장하는 데 사용됩니다. 클릭 **저장** *<file>* **으로** 에 **파일** 메뉴 (여기서 *<file>* 되는 이름 현재 항목), 또는 ALT + F, A 코드 편집기에서 키를 누릅니다.  
+지정한 파일 형식으로 지정한 위치에 현재 항목의 인스턴스를 저장하는 데 사용됩니다. **파일** 메뉴에서 **다른 이름으로** *<file>* **저장**을 클릭하거나(여기서 *<file>* 은 현재 항목의 이름), 코드 편집기에서 ALT+F, A 키를 누릅니다.  
   
 ## <a name="central-panel"></a>중앙 창  
 **저장 위치**  

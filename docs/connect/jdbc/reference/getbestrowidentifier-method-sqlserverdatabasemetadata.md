@@ -1,5 +1,5 @@
 ---
-title: getBestRowIdentifier 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs
+title: getBestRowIdentifier 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: c19e9ca6-2a53-4a0c-91ab-80090c3f7229
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9a19bd01a8ebf54eb3e819bd4a82400b8107e382
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954023"
 ---
 # <a name="getbestrowidentifier-method-sqlserverdatabasemetadata"></a>getBestRowIdentifier 메서드(SQLServerDatabaseMetaData)
@@ -65,18 +65,18 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
   
  Null 허용 열을 포함하려면 **true**이고, 그렇지 않으면 **false**입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 getBestRowIdentifier 메서드는 getBestRowIdentifier 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 getBestRowIdentifier 메서드는 java.sql.DatabaseMetaData 인터페이스의 getBestRowIdentifier 메서드에 의해 지정됩니다.  
   
  getBestRowIdentifier 메서드에서 반환되는 결과 집합에는 다음 정보가 포함됩니다.  
   
-|속성|형식|설명|  
+|속성|Type|Description|  
 |----------|----------|-----------------|  
 |SCOPE|short|반환된 결과의 범위입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> bestRowTemporary(0)<br /><br /> bestRowTransaction(1)<br /><br /> bestRowSession(2)|  
 |COLUMN_NAME|String|열 이름입니다.|  

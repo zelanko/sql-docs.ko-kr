@@ -1,6 +1,6 @@
 ---
-title: 외부 도구 대화 상자 | Microsoft 문서
-ms.custom: ''
+title: 외부 도구 대화 상자
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: ba797203-24d0-4922-9b97-8ab483f1db14
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 22b70fa3a33404cee302f12ccb98ea03dbdb9aed
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: deeb0a237d1982a92e08c056375fca277f095017
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265118"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245027"
 ---
 # <a name="external-tools-dialog-box"></a>외부 도구 대화 상자
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-**외부 도구** 대화 상자를 사용하여 SQLCMD 또는 메모장과 같은 외부 도구를 **도구** 메뉴에 추가할 수 있습니다. 외부 도구를 추가하면 [!INCLUDE[msCoName](../includes/msconame_md.md)][!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 환경에서 작업하는 동안에 다른 애플리케이션을 간편하게 시작할 수 있습니다. 도구를 실행할 때 인수 및 작업 디렉터리를 지정할 수 있습니다. 또한 일부 도구의 출력을 **출력** 창에 표시할 수 있습니다. **외부 도구** 대화 상자는 **도구** 메뉴에서 사용할 수 있습니다.  
+**외부 도구** 대화 상자를 사용하여 SQLCMD 또는 메모장과 같은 외부 도구를 **도구** 메뉴에 추가할 수 있습니다. 외부 도구를 추가하면 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 환경에서 작업하는 동안에 다른 애플리케이션을 간편하게 시작할 수 있습니다. 도구를 실행할 때 인수 및 작업 디렉터리를 지정할 수 있습니다. 또한 일부 도구의 출력을 **출력** 창에 표시할 수 있습니다. **외부 도구** 대화 상자는 **도구** 메뉴에서 사용할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
 **메뉴 내용**  
@@ -41,10 +41,10 @@ ms.locfileid: "68265118"
 **Delete**  
 **메뉴 내용** 목록과 **도구** 메뉴에서 도구나 명령을 제거합니다.  
   
-**Title**  
+**제목**  
 **도구** 메뉴의 **외부 도구** 하위 메뉴에 나타날 도구 또는 명령의 이름을 입력합니다. 특정 문자를 키보드 바로 가기로 지정하려면 도구 이름에서 해당 문자 앞에 앰퍼샌드(&)를 추가합니다. 예를 들어 "&SQLCMD"는 **도구** 메뉴에 SQLCMD를 표시합니다.  
   
-**Command**  
+**명령**  
 시작할 파일 경로를 지정합니다.  
   
 **인수**  
@@ -68,10 +68,10 @@ ms.locfileid: "68265118"
 ## <a name="example"></a>예제  
 **외부 도구** 대화 상자에 다음 값을 입력하면 "DAC"라는 메뉴 항목이 생성됩니다. 이 메뉴 항목을 선택하면 명령 프롬프트가 열리고 관리자 전용 연결을 사용하여 **sqlcmd** 유틸리티가 실행됩니다.  
   
-|상자|값|  
+|Box|값|  
 |-------|---------|  
-|**Title**|DAC|  
-|**Command**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath-md.md)]Tools\Binn\SQLCMD.exe|  
+|**제목**|DAC|  
+|**명령**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath-md.md)]Tools\Binn\SQLCMD.exe|  
 |**인수**|-A|  
   
 ## <a name="see-also"></a>참고 항목  

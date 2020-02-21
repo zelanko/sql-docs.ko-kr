@@ -1,5 +1,5 @@
 ---
-title: Reporting Services-보고서 기록을 제한 | Microsoft Docs
+title: 보고서 기록 제한 - Reporting Services | Microsoft Docs
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,10 +15,10 @@ ms.assetid: 8e255792-d9ef-496f-a26c-9e969c1209a0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2dd66078363e281c2a73bfcc70ba685493bc3b88
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67492598"
 ---
 # <a name="limit-report-history---reporting-services"></a>보고서 기록 제한 - Reporting Services
@@ -44,10 +44,10 @@ ms.locfileid: "67492598"
   
 3.  **기록** 탭을 클릭합니다.  
   
-4.  보고서에 대한 옵션을 선택하고 **적용**을 클릭합니다. 각 옵션에 대한 자세한 내용은 [스냅숏 옵션 속성 페이지&#40;보고서 관리자&#41;](https://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679)를 참조하세요.  
+4.  보고서에 대한 옵션을 선택하고 **적용**을 클릭합니다. 각 옵션에 대한 자세한 내용은 [스냅샷 옵션 속성 페이지&#40;보고서 관리자&#41;](https://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [보고서 기록에 스냅숏 추가&#40;보고서 관리자&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [보고서 기록에 스냅샷 추가&#40;보고서 관리자&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [보고서 관리자&#40;SSRS 기본 모드&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
 
 ::: moniker-end
@@ -73,7 +73,7 @@ ms.locfileid: "67492598"
 4.  보고서에 대한 옵션을 선택하고 **적용**을 클릭합니다. 각 옵션에 대한 자세한 내용은 [스냅샷 옵션 속성 페이지](https://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [보고서 기록에 스냅숏 추가](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [보고서 기록에 스냅샷 추가](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
 
 ::: moniker-end
   

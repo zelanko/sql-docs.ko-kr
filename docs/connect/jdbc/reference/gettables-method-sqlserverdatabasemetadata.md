@@ -16,10 +16,10 @@ ms.assetid: a7514673-3457-4541-9560-28a8284ad9e3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e8dfd7f14d6006f5a41a7cd2a9b0cae4933804fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979216"
 ---
 # <a name="gettables-method-sqlserverdatabasemetadata"></a>getTables 메서드(SQLServerDatabaseMetaData)
@@ -54,18 +54,18 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
   
  포함할 테이블의 형식이 들어 있는 문자열 배열입니다. Null은 모든 테이블 형식이 포함되어야 함을 나타냅니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 getTables 메서드는 java.sql.DatabaseMetaData 인터페이스의 getTables 메서드에 의해 지정됩니다.  
   
  getTables 메서드에서 반환되는 결과 집합에는 다음 정보가 포함됩니다.  
   
-|속성|형식|설명|  
+|속성|Type|Description|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|지정된 테이블이 있는 데이터베이스의 이름입니다.|  
 |TABLE_SCHEM|**String**|테이블 스키마 이름입니다.|  

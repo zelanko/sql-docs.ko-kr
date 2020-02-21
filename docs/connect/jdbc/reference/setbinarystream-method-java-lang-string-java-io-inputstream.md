@@ -1,5 +1,5 @@
 ---
-title: setBinaryStream 메서드를 입력 스트림으로 Microsoft Docs
+title: 입력 스트림에 대한 setBinaryStream 메서드 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 339c8277-2d08-4094-9fa9-26c8ad3e7348
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 04a286c4d6c8b44482c254e7fe30b84836283df0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975136"
 ---
 # <a name="setbinarystream-method-javalangstring-javaioinputstream"></a>setBinaryStream 메서드(java.lang.String, java.io.InputStream)
@@ -42,8 +42,8 @@ public void setBinaryStream(java.lang.String parameterName,
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 setBinaryStream 메서드는 java. CallableStatement 인터페이스의 setBinaryStream 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 setBinaryStream 메서드는 java.sql.CallableStatement 인터페이스의 setBinaryStream 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [setBinaryStream&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setbinarystream-sqlservercallablestatement.md)   

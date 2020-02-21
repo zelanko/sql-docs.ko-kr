@@ -1,5 +1,5 @@
 ---
-title: TYPE_SS_SERVER_CURSOR_FORWARD_ONLY 필드 (SQLServerResultSet) | Microsoft Docs
+title: TYPE_SS_SERVER_CURSOR_FORWARD_ONLY 필드(SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ ms.assetid: 16370bc2-6ec1-402d-83f6-213a6831d2ee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8d17b3bdeb0c08c3e4a5e631b6122af04f110690
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67989492"
 ---
-# <a name="typessservercursorforwardonly-field-sqlserverresultset"></a>TYPE_SS_SERVER_CURSOR_FORWARD_ONLY 필드(SQLServerResultSet)
+# <a name="type_ss_server_cursor_forward_only-field-sqlserverresultset"></a>TYPE_SS_SERVER_CURSOR_FORWARD_ONLY 필드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 빠른 정방향 전용의 읽기 전용 커서 유형을 지정하는 데 사용됩니다.  

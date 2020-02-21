@@ -1,10 +1,9 @@
 ---
-title: SQL Server 에이전트 마스터 작업 수정 | Microsoft 문서
-ms.custom: ''
+title: SQL Server 에이전트 마스터 작업 수정
+ms.custom: seo-lt-2019
 ms.date: 02/28/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,13 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4fd5e734-1a57-47d7-b3af-03a726b619a4
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ef8ca56120197c6f21908b60eccba25043c75596
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 721b9fb2849763dedd8787cc7e24cec4fab90094
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267551"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255827"
 ---
 # <a name="modify-a-sql-server-agent-master-job"></a>SQL Server 에이전트 마스터 작업 수정
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -30,11 +31,11 @@ ms.locfileid: "68267551"
 
 다음 항목에서는 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 마스터 작업을 수정하는 방법에 대해 설명합니다.  
   
-[Change the Scheduling Details for a SQL Server Agent Master Job](../../ssms/agent/change-the-scheduling-details-for-a-sql-server-agent-master-job.md)  
+[SQL Server 에이전트 마스터 작업에 대한 일정 정보 변경](../../ssms/agent/change-the-scheduling-details-for-a-sql-server-agent-master-job.md)  
   
 [SQL Server 에이전트 마스터 작업에 단계 추가](../../ssms/object/add-steps-to-a-sql-server-agent-master-job.md)  
   
-[Change Steps of a SQL Server Agent Master Job](../../ssms/agent/change-steps-of-a-sql-server-agent-master-job.md)  
+[SQL Server 에이전트 마스터 작업의 단계 변경](../../ssms/agent/change-steps-of-a-sql-server-agent-master-job.md)  
   
 [Remove Steps from a SQL Server Agent Master Job](../../ssms/agent/remove-steps-from-a-sql-server-agent-master-job.md)  
   

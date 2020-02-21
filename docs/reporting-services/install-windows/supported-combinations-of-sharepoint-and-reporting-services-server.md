@@ -1,8 +1,10 @@
 ---
 title: 지원되는 SharePoint와 Reporting Services 서버의 조합 | Microsoft Docs
-ms.date: 07/01/2017
+description: SharePoint 모드로 설치된 SQL Server Reporting Services 보고서 서버에는 SharePoint 서버에 설치하는 SharePoint의 버전과 SharePoint용 SQL Server Reporting Services 추가 기능(rsSharePoint.msi) 제품이 필요합니다.
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint mode
@@ -12,12 +14,12 @@ ms.assetid: dc6a3372-db26-43f0-b7aa-f725acc635c2
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 59cd04ffa97005edc1e957ed4fcefb66685c2256
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
-ms.translationtype: MTE75
+ms.openlocfilehash: 56da894b141733357ff33ec820073c52836e4cca
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68995861"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866066"
 ---
 # <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>지원되는 SharePoint와 Reporting Services 서버의 조합
 

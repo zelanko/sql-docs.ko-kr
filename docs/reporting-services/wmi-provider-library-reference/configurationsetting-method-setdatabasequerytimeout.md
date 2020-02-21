@@ -16,10 +16,10 @@ ms.assetid: bd2809e5-7848-45b3-a502-b04fc698b646
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 59c7b026884244d37aaa59722abf2e07b3e4cc6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580044"
 ---
 # <a name="configurationsetting-method---setdatabasequerytimeout"></a>ConfigurationSetting 메서드 - SetDatabaseQueryTimeout
@@ -44,7 +44,7 @@ public void SetDatabaseQueryTimeout (Int32 LogonTimeout,
  *HRESULT*  
  [out] 호출의 성공 여부를 나타내는 값입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드 호출의 성공 또는 실패를 나타내는 *HRESULT* 를 반환합니다. 0 값은 메서드 호출이 성공했음을 나타냅니다. 0 이외의 값은 오류가 발생했음을 나타냅니다.  
   
 ## <a name="requirements"></a>요구 사항  

@@ -16,10 +16,10 @@ ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 35355b32c8e4b59618cf146d9de04f3242ec6e6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66403270"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>로컬 관리에 대해 기본 모드 보고서 서버 구성(SSRS)
@@ -174,7 +174,7 @@ ms.locfileid: "66403270"
 ##  <a name="bkmk_addiitonal_informaiton"></a> 추가 정보  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 관리와 관련된 일반적인 추가 구성 단계는 보고서 서버 컴퓨터에 대한 액세스를 허용하도록 Windows 방화벽에서 포트 80을 여는 것입니다. 자세한 내용은 [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services 기본 모드 보고서 서버 관리](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
   
   

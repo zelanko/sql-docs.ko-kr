@@ -14,10 +14,10 @@ ms.assetid: 21e5c32f-ad67-4917-b55a-8e21bd64f5a6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b0bd7ad95fcda039c6fd5a9299f4339d35b8a619
-ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67564128"
 ---
 # <a name="reporting-services-configuration-files"></a>Reporting Services 구성 파일
@@ -45,13 +45,13 @@ C:\Program Files\Microsoft SQL Server Reporting Services\SSRS
   depending on the SSRS version
 ```  
   
-|저장 위치|설명|위치|  
+|저장 위치|Description|위치|  
 |----------------|-----------------|--------------|  
 |RSReportServer.config|보고서 서버 서비스의 기능 영역인 보고서 관리자 또는 웹 포털, 보고서 서버 웹 서비스 및 백그라운드 처리에 대한 구성 설정을 저장합니다. 각 설정에 대한 자세한 내용은 [RsReportServer.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)을 참조하세요.|\<Installation directory> \Reporting Services \ReportServer|  
 |RSSrvPolicy.config|서버 확장 프로그램에 대한 코드 액세스 보안 정책을 저장합니다. 이 파일에 대한 자세한 내용은 [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)을 참조하세요.|\<Installation directory> \Reporting Services \ReportServer|  
 |RSMgrPolicy.config|웹 포털에 대한 코드 액세스 보안 정책을 저장합니다. 이 파일에 대한 자세한 내용은 [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)을 참조하세요.|\<Installation directory> \Reporting Services \ReportManager|  
 |보고서 서버 웹 서비스용 Web.config|ASP.NET에 필요한 설정만 포함합니다.|\<Installation directory> \Reporting Services \ReportServer|  
-|보고서 관리자용 Web.config|SSRS 버전에 해당 하는 경우에 ASP.NET에 대 한 필요한 설정만을 포함 되어 있습니다.|\<Installation directory> \Reporting Services \ReportManager|  
+|보고서 관리자용 Web.config|SSRS 버전에 해당하는 경우 ASP.NET에 필요한 설정만 포함합니다.|\<Installation directory> \Reporting Services \ReportManager|  
 |ReportingServicesService.exe.config|보고서 서버 서비스에 대한 추적 수준 및 로깅 옵션을 지정하는 구성 설정을 저장합니다. 이 파일의 요소에 대한 자세한 내용은 [ReportingServicesService Configuration File](../../reporting-services/report-server/reportingservicesservice-configuration-file.md)을 참조하세요.|\<Installation directory> \Reporting Services \ReportServer \Bin|  
 |레지스트리 설정|Reporting Services 제거에 사용되는 구성 상태 및 기타 설정을 저장합니다. 설치 또는 구성 문제를 해결하는 경우 이러한 설정을 확인하여 보고서 서버가 구성된 방식에 대한 정보를 얻을 수 있습니다.<br /><br /> 설치가 무효화될 수 있으므로 이러한 설정을 직접 수정하지 마세요.|HKEY_LOCAL_MACHINE \SOFTWARE \Microsoft \Microsoft SQL Server \\<InstanceID\> \Setup<br /><br /> **-및-**<br /><br /> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\Services\ReportServer|  
 |RSReportDesigner.config|보고서 디자이너에 대한 구성 설정을 저장합니다. 자세한 내용은 [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)을 참조하세요.|\<drive>:\Program Files \Microsoft Visual Studio 10 \Common7 \IDE \PrivateAssemblies.|  
@@ -67,15 +67,15 @@ Install path
 C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting  
 ```  
   
-|저장 위치|설명|위치|  
+|저장 위치|Description|위치|  
 |----------------|-----------------|--------------|  
 |RSReportServer.config|보고서 서버 서비스의 기능 영역인 보고서 관리자 또는 웹 포털, 보고서 서버 웹 서비스 및 백그라운드 처리에 대한 구성 설정을 저장합니다. 각 설정에 대한 자세한 내용은 [RsReportServer.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)을 참조하세요.|\<Installation directory> \Reporting Services \ReportServer|  
 |RSSrvPolicy.config|서버 확장 프로그램에 대한 코드 액세스 보안 정책을 저장합니다. 이 파일에 대한 자세한 내용은 [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)을 참조하세요.|\<Installation directory> \Reporting Services \ReportServer|  
-|보고서 서버 웹 서비스용 Web.config|SSRS 버전에 해당 하는 경우에 ASP.NET에 대 한 필요한 설정만을 포함 되어 있습니다.|\<Installation directory> \Reporting Services \ReportServer|  
+|보고서 서버 웹 서비스용 Web.config|SSRS 버전에 해당하는 경우 ASP.NET에 필요한 설정만 포함합니다.|\<Installation directory> \Reporting Services \ReportServer|  
 |레지스트리 설정|Reporting Services 제거에 사용되는 구성 상태 및 기타 설정을 저장합니다. 각 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션에 대한 정보도 저장합니다.<br /><br /> 설치가 무효화될 수 있으므로 이러한 설정을 직접 수정하지 마세요.|HKEY_LOCAL_MACHINE \SOFTWARE \Microsoft \Microsoft SQL Server \\<InstanceID\> \Setup<br /><br /> 예제 인스턴스 ID: MSSQL13.MSSQLSERVER<br /><br /> **-및-**<br /><br /> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\Reporting Services\Service Applications|  
 |RSReportDesigner.config|보고서 디자이너에 대한 구성 설정을 저장합니다. 자세한 내용은 [RSReportDesigner Configuration File](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)을 참조하세요.|\<drive>:\Program Files \Microsoft Visual Studio 10 \Common7 \IDE \PrivateAssemblies.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services 보고서 서버&#40;기본 모드&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Reporting Services 확장 프로그램](../../reporting-services/extensions/reporting-services-extensions.md)   
  [rsconfig 유틸리티&#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)   

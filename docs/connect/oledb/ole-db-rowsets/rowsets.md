@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 23d07cd93ada1d1eeae36b4e4ed104906feef88d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015373"
 ---
 # <a name="rowsets"></a>행 집합
@@ -30,7 +30,7 @@ ms.locfileid: "68015373"
 
   행 집합은 데이터 열이 포함된 행의 집합입니다. 행 집합은 모든 OLE DB 데이터 공급자가 결과 집합 데이터를 테이블 형식으로 노출할 수 있도록 하는 중앙 개체입니다.  
   
- 소비자는 **IDBCreateSession::CreateSession** 메서드를 사용하여 세션을 만든 후 세션에서 **IOpenRowset** 또는 **IDBCreateCommand** 인터페이스를 사용하여 행 집합을 만들 수 있습니다. SQL Server에 대 한 OLE DB 드라이버는 이러한 두 인터페이스를 모두 지원 합니다. 여기서는 두 메서드에 대해 모두 설명합니다.  
+ 소비자는 **IDBCreateSession::CreateSession** 메서드를 사용하여 세션을 만든 후 세션에서 **IOpenRowset** 또는 **IDBCreateCommand** 인터페이스를 사용하여 행 집합을 만들 수 있습니다. OLE DB Driver for SQL Server는 해당 인터페이스를 둘 다 지원합니다. 여기서는 두 메서드에 대해 모두 설명합니다.  
   
 -   **IOpenRowset::OpenRowset** 메서드를 호출하여 행 집합을 만듭니다.  
   

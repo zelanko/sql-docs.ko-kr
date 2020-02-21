@@ -1,6 +1,6 @@
 ---
 title: rxImport를 사용하여 데이터 로드
-description: SQL Server에서 R 언어를 사용하여 데이터를 로드하는 방법에 대한 자습서 연습입니다.
+description: 'RevoScaleR 자습서 10: SQL Server에서 R 언어를 사용하여 데이터를 로드하는 방법입니다.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,21 +9,21 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ee0a1ddf8ccfdaf9c2b7b4f2ba5724451e7d71b8
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: b9b3924f2c9b315e519d5f65e68d2006a2a6edf4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727225"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947083"
 ---
 # <a name="load-data-into-memory-using-rximport-sql-server-and-revoscaler-tutorial"></a>rxImport를 사용하여 메모리에 데이터 로드(SQL Server 및 RevoScaleR 자습서)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 단원은 SQL Server에서 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)의 일부입니다.
+이것은 SQL Server에서 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서 시리즈](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 중 자습서 10에 해당됩니다.
+
+이 자습서에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터를 가져온 다음, **rxImport** 함수를 사용하여 관심 있는 데이터를 로컬 파일에 저장하는 방법을 알아봅니다. 이렇게 하면 데이터베이스를 다시 쿼리하지 않고도 로컬 컴퓨팅 컨텍스트에서 반복하여 데이터를 분석할 수 있습니다.
 
 [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) 함수를 사용하여 데이터 원본의 데이터를 세션 메모리의 데이터 프레임 또는 디스크의 XDF 파일로 이동할 수 있습니다. 파일을 대상으로 지정하지 않으면 데이터는 메모리에 데이터 프레임으로 저장됩니다.
-
-이 단계에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터를 가져온 다음, **rxImport** 함수를 사용하여 관심 있는 데이터를 로컬 파일에 저장하는 방법을 알아봅니다. 이렇게 하면 데이터베이스를 다시 쿼리하지 않고도 로컬 컴퓨팅 컨텍스트에서 반복하여 데이터를 분석할 수 있습니다.
 
 ## <a name="extract-a-subset-of-data-from-sql-server-to-local-memory"></a>SQL Server에서 로컬 메모리로 데이터 하위 집합 추출
 

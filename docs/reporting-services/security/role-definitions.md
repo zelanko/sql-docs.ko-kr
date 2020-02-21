@@ -14,10 +14,10 @@ ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 22087b03c0c11d008d91de80930d98fef79fc3a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570585"
 ---
 # <a name="role-definitions"></a>역할 정의
@@ -53,7 +53,7 @@ ms.locfileid: "65570585"
  더 이상 사용하지 않는 역할 정의는 삭제할 수 있습니다. 내 보고서 기능을 사용하는 한 해당 기능에 대해 선택된 역할 정의는 삭제할 수 없습니다. 내 보고서에서 사용되는 역할 정의를 삭제하려면 먼저 이 기능을 해제하거나 이 기능에서 다른 역할 정의를 사용하도록 선택해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md)   
+ [태스크 및 권한](../../reporting-services/security/tasks-and-permissions.md)   
  [기본 모드 보고서 서버에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [역할 만들기, 삭제 또는 수정&#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
  [사용자에게 보고서 서버에 대한 액세스 권한 부여&#40;보고서 관리자&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   

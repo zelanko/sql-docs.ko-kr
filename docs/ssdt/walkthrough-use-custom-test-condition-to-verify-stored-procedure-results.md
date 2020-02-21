@@ -1,23 +1,24 @@
 ---
-title: '연습: 사용자 지정 테스트 조건을 사용하여 저장 프로시저 결과 확인 | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 저장 프로시저 결과를 확인하기 위한 사용자 지정 테스트 조건
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 4c33b494-a85e-4dd2-97b6-c88ee858a99c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6ef888bf2cf4259ec904194a39aa74ed44040586
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 60160fe3f36d61364b8bf4385fa53b744f9a3475
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068978"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242664"
 ---
 # <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>연습: 사용자 지정 테스트 조건을 사용하여 저장 프로시저 결과 확인
+
 이 기능 확장 연습에서는 테스트 조건을 만든 후 SQL Server 단위 테스트를 만들어 해당 기능을 확인합니다. 이 프로세스에는 테스트 조건에 대한 클래스 라이브러리 프로젝트를 만들고 이 프로젝트를 서명 및 설치하는 작업이 포함됩니다. 업데이트할 테스트 조건이 이미 있는 경우 [방법: 이전 릴리스의 Visual Studio 2010 사용자 지정 테스트 조건을 SQL Server Data Tools로 업그레이드](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)를 참조하세요.  
   
 이 연습에서는 다음 작업을 수행합니다.  
@@ -120,7 +121,7 @@ ms.locfileid: "68068978"
     public class ResultSetColumnCountCondition : TestCondition  
     ```  
   
-5.  [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx)를 추가합니다. UnitTesting.Conditions.ExportTestConditionAttribute에 대한 자세한 내용은 [방법: SQL Server 단위 테스트 디자이너용 테스트 조건 만들기](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md)를 참조하세요.  
+5.  [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx)를 추가합니다. [방법: SQL Server 단위 테스트 디자이너용 테스트 조건 만들기](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md)를 참조하세요.  
   
     ```  
     [ExportTestCondition("ResultSet Column Count", typeof(ResultSetColumnCountCondition))]  

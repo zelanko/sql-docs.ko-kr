@@ -1,6 +1,7 @@
 ---
-title: SQL Server PowerShell 공급자에 인스턴스 지정 | Microsoft 문서
-ms.custom: ''
+title: SQL Server PowerShell 공급자에 인스턴스 지정
+description: SQL Server PowerShell 공급자를 사용하는 경우 인스턴스를 지정하는 방법을 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9373de68-fd43-45f2-b9a6-149c96610aeb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 470b15071349299a8306d3dc40125dd0b0b88270
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c884fc97632860bff36a05e3340e6925871ff7e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049086"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75557932"
 ---
 # <a name="specify-instances-in-the-sql-server-powershell-provider"></a>SQL Server PowerShell 공급자에 인스턴스 지정
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +28,7 @@ SQL Server PowerShell 공급자에 대해 지정되는 경로는 [!INCLUDE[ssDE]
 > **SqlServer** 모듈을 설치하려면 [SQL Server PowerShell 설치](download-sql-server-ps-module.md)를 참조하세요.
   
   
-## <a name="before-you-begin"></a>시작하기 전 주의 사항  
+## <a name="before-you-begin"></a>시작하기 전에  
  SQL Server 공급자 경로에서 SQLSERVER:\SQL 다음에 오는 첫 번째 노드는 [!INCLUDE[ssDE](../includes/ssde-md.md)]인스턴스를 실행하는 컴퓨터 이름입니다. 예를 들면 다음과 같습니다.  
   
 ```  

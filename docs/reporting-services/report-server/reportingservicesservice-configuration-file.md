@@ -13,10 +13,10 @@ ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: dfb0f48bb35e6341e2b2a9a72007ef4eb09c2b9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66506627"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService 구성 파일
@@ -26,7 +26,7 @@ ms.locfileid: "66506627"
 ReportingServicesService.exe.config 파일에는 추적을 구성하는 설정이 들어 있습니다.  
   
 ## <a name="file-location"></a>파일 위치  
-아래 경로 중 하나에서이 파일을 찾을 수 없습니다.  
+이 파일은 다음 경로 중 하나에 있을 수 있습니다.  
 
 ``` Paths  
 \Reporting Services\Report Server\Bin  
@@ -77,7 +77,7 @@ ReportingServicesService.exe.config 파일에는 추적을 구성하는 설정�
 ## <a name="configuration-settings"></a>구성 설정  
  다음 표는 특정 설정에 대한 정보를 제공합니다. 설정은 구성 파일에 나타나는 순서로 표시됩니다.  
   
-|설정|설명|  
+|설정|Description|  
 |-------------|-----------------|  
 |**RStrace**|오류 및 추적에 사용되는 네임스페이스를 지정합니다.|  
 |**DefaultTraceSwitch**|ReportServerService 추적 로그에 보고되는 정보의 수준을 지정합니다. 각 수준에는 낮은 번호가 매겨진 모든 수준별로 보고된 정보가 들어 있습니다. 추적을 설정하는 것이 좋습니다. 유효한 값은 다음과 같습니다.<br /><br /> 0= 추적 해제<br /><br /> 1= 예외 및 다시 시작<br /><br /> 2= 예외, 다시 시작, 경고<br /><br /> 3= 예외, 다시 시작, 경고, 상태 메시지(기본값)<br /><br /> 4= 세부 정보 표시 모드|  
@@ -90,7 +90,7 @@ ReportingServicesService.exe.config 파일에는 추적을 구성하는 설정�
 |**Components**|추적 로그를 생성할 구성 요소를 지정합니다. 기본값은 **all**입니다. 이 설정에 대한 기타 유효한 값에는 내부 구성 요소의 이름이 포함됩니다. 이 값은 수정하지 마세요.|  
 |**런타임**|이전 버전과의 호환성을 지원하는 구성 설정을 지정합니다. 런타임 설정은 이전 버전의 Microsoft.ReportingServices.Interfaces를 대상으로 하는 요청을 새 버전으로 리디렉션하는 데 사용됩니다.<br /><br /> 이 섹션의 모든 구성 설정은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 제품 설명서에 설명되어 있습니다. 자세한 내용을 보려면 MSDN 웹 사이트 또는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 설명서에서 "Runtime Schema Settings"를 검색하십시오.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [Reporting Services 구성 파일](../../reporting-services/report-server/reporting-services-configuration-files.md)  
 [보고서 서버 서비스 추적 로그](../../reporting-services/report-server/report-server-service-trace-log.md)  
   

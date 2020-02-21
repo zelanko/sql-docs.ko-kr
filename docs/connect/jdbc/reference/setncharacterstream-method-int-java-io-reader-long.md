@@ -1,5 +1,5 @@
 ---
-title: setNCharacterStream 개체에 대 한 메서드를 출력 합니다. Microsoft Docs
+title: java.io.Reader 개체에 대한 setNCharacterStream 메서드 - long | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 36396dc9-f109-4da0-bd64-726704046bbf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 76c59a5e367e3d3e8524a64f5ae7ac6dab85b529
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973953"
 ---
 # <a name="setncharacterstream-method-int-javaioreader-long"></a>setNCharacterStream 메서드(int, java.io.Reader, long)
@@ -47,10 +47,10 @@ public final void setNCharacterStream(int parameterIndex,
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 setNCharacterStream 메서드는 Java.sql.preparedstatement 인터페이스의 setNCharacterStream 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 setNCharacterStream 메서드는 java.sql.PreparedStatement 인터페이스의 setNCharacterStream 메서드에 의해 지정됩니다.  
   
- 이 메서드는 **NCHAR**, **NVARCHAR**, **NTEXT**및 **XML** 데이터 형식에 사용 해야 합니다.  
+ 이 메서드는 **NCHAR**, **NVARCHAR**, **NTEXT**및 **XML** 데이터 형식에 사용해야 합니다.  
   
  스트림의 길이가 *length* 매개 변수에 지정된 길이와 다르면 행이 업데이트되거나 삽입될 때 JDBC 드라이버에서 예외가 발생합니다.  
   

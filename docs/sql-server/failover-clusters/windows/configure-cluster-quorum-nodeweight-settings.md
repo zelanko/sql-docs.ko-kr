@@ -1,6 +1,7 @@
 ---
-title: 클러스터 쿼럼 NodeWeight 설정 구성 | Microsoft 문서
-ms.custom: ''
+title: 클러스터 쿼럼 NodeWeight 설정 구성
+descriptoin: Describes how to configure the NodeWeight settings for a member node in a Windows Server Failover Cluster.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: cb3fd9a6-39a2-4e9c-9157-619bf3db9951
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c42abb37423cd03b4c0233ac44244cdea00708a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5b7fcc8a38ab33ebb3330826313db70458518d0e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063782"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74822034"
 ---
 # <a name="configure-cluster-quorum-nodeweight-settings"></a>클러스터 쿼럼 NodeWeight 설정 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에서는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 클러스터의 멤버 노드에 대한 NodeWeight 설정을 구성하는 방법에 대해 설명합니다. NodeWeight 설정은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스의 재해 복구 및 다중 서브넷 시나리오를 지원하기 위한 쿼럼 투표 동안 사용됩니다.  
+  이 문서에서는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 클러스터의 멤버 노드에 대한 NodeWeight 설정을 구성하는 방법에 대해 설명합니다. NodeWeight 설정은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스의 재해 복구 및 다중 서브넷 시나리오를 지원하기 위한 쿼럼 투표 동안 사용됩니다.  
   
 -   **시작하기 전에:**  [필수 구성 요소](#Prerequisites), [보안](#Security)  
   
@@ -31,7 +32,7 @@ ms.locfileid: "68063782"
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 조건  
  이 기능은 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 이상 버전에서만 지원됩니다.  
   
 > [!IMPORTANT]  

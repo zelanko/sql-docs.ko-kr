@@ -1,6 +1,6 @@
 ---
-title: 옵션(환경 - 도움말 - 일반 페이지) | Microsoft 문서
-ms.custom: ''
+title: 옵션(환경 - 도움말 - 일반 페이지)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: deaf23d6-6cbe-4984-ab09-71d2a7ba06c8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 63331d03066e10a5e6364b73bc61814569e41102
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: b5c3935ebf4c42cf971c7b01dd7d79b9d2d1b5c1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68257221"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252353"
 ---
 # <a name="options-environment---help---general-page"></a>옵션(환경 - 도움말 - 일반 페이지)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

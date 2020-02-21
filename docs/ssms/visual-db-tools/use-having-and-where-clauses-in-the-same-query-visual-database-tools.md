@@ -1,10 +1,9 @@
 ---
-title: 동일한 쿼리에서 HAVING 및 WHERE 절 사용 | Microsoft 문서
-ms.custom: ''
+title: 동일한 쿼리에서 HAVING 및 WHERE 절 사용
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,14 @@ helpviewer_keywords:
 ms.assetid: 1e07cf56-b4b7-4c49-8ddd-c276812a7148
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 84abe2405901012565e98950320c8d5aa92fa903
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: b74f4847964be363972c4226f124c94cce032a07
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263036"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246017"
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>동일한 쿼리에서 HAVING 및 WHERE 절 사용(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +57,7 @@ HAVING 절과 WHERE 절을 모두 조건 창에서 만들 수 있습니다. 기�
   
 ### <a name="to-specify-a-where-condition-in-an-aggregate-query"></a>집계 쿼리에서 WHERE 조건을 지정하려면  
   
-1.  쿼리의 그룹을 지정합니다. 자세한 내용은 [쿼리 결과 행 그룹화(Visual Database Tools)](../../ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md)를 참조하세요.  
+1.  쿼리의 그룹을 지정합니다. 자세한 내용은 [쿼리 결과 행 그룹화](../../ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md)를 참조하세요.  
   
 2.  WHERE 조건의 기반으로 삼을 열이 아직 조건 창에 없으면 이 열을 추가합니다.  
   
@@ -90,6 +91,6 @@ HAVING 절과 WHERE 절을 모두 조건 창에서 만들 수 있습니다. 기�
     ```  
   
 ## <a name="see-also"></a>참고 항목  
-[쿼리 결과 정렬 및 그룹화(Visual Database Tools)](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
-[쿼리 결과 요약(Visual Database Tools)](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
+[쿼리 결과 정렬 및 그룹화](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
+[쿼리 결과 요약](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
   

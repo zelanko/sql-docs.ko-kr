@@ -8,12 +8,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
-ms.openlocfilehash: 66bc987b71bb8b139eec5b69e78532aa54f1294d
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: e16304765e5f4a51feed4d3d59e790505baa740d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531954"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252029"
 ---
 # <a name="run-python-and-r-scripts-with-machine-learning-services-on-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터에서 Machine Learning Services를 사용하여 Python 및 R 스크립트 실행
 
@@ -36,7 +36,7 @@ RECONFIGURE WITH OVERRIDE
 GO
 ```
 
-## <a name="enable-always-on-availability-groups"></a>Always On 가용성 그룹 활성화
+## <a name="enable-always-on-availability-groups"></a>Always On 가용성 그룹 사용
 
 [Always On 가용성 그룹](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)에서 SQL Server 빅 데이터 클러스터를 사용하는 경우 Machine Learning Services를 사용하려면 몇 가지 단계를 추가로 수행해야 합니다.
 

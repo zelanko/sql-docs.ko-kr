@@ -1,6 +1,6 @@
 ---
 title: 행 페치 | Microsoft Docs
-description: IRowset 인터페이스를 사용 하 여 행 페치
+description: IRowset 인터페이스를 사용하여 행 페치
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: d47e94795f3bb81dd7a2d870190f081436c47e07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015357"
 ---
 # <a name="fetching-rows"></a>행 인출

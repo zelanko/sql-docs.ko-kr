@@ -1,5 +1,5 @@
 ---
-title: getPrecision 메서드 (SQLServerParameterMetaData) | Microsoft Docs
+title: getPrecision 메서드(SQLServerParameterMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 8bd79484-bab6-423b-978f-d7ec7132ebeb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b0c6b7d8c69e1cc6bc4a9e8d239c3a47c24573d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980784"
 ---
 # <a name="getprecision-method-sqlserverparametermetadata"></a>getPrecision 메서드(SQLServerParameterMetaData)
@@ -39,14 +39,14 @@ public int getPrecision(int param)
   
  매개 변수 인덱스를 나타내는 **int**입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  지정된 매개 변수의 전체 자릿수를 나타내는 **int**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 getPrecision 메서드는 java. ParameterMetaData 인터페이스의 getPrecision 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 getPrecision 메서드는 java.sql.ParameterMetaData 인터페이스의 getPrecision 메서드에 의해 지정됩니다.  
   
  숫자 형식의 경우 이 메서드는 자릿수를 가져옵니다. 문자 형식의 경우에는 최대 길이(문자 수)를 가져옵니다. 이진 형식의 경우에는 최대 길이(바이트)를 가져옵니다. 자릿수를 알 수 없으면 이 메서드는 "0"을 반환합니다.  
   

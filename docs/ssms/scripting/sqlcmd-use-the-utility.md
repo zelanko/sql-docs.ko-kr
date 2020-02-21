@@ -1,6 +1,6 @@
 ---
-title: sqlcmd 유틸리티 사용 | Microsoft 문서
-ms.custom: ''
+title: sqlcmd 유틸리티 사용
+ms.custom: seo-lt-2019
 ms.date: 06/06/2017
 ms.prod: sql
 ms.technology: scripting
@@ -17,12 +17,12 @@ ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7fd1c2eafec0d0dd832e4d01d43195d7ec175485
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: f3e77699ce94f150bc5ec38fa40c400884d38faa
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816609"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243456"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - 유틸리티 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "71816609"
     sqlcmd -S <ComputerName>\<InstanceName>  
     ```  
   
-     로 구분하거나 여러  
+     또는  
   
     ```  
     sqlcmd -S .\<InstanceName>  
@@ -97,7 +97,7 @@ ms.locfileid: "71816609"
     > **힌트** **sqlcmd** 유틸리티에서 지원하는 옵션 목록을 보려면 `sqlcmd -?`를 실행하세요.  
   
 ## <a name="run-transact-sql-statements-interactively-by-using-sqlcmd"></a>sqlcmd를 사용하여 대화형으로 Transact-SQL 문 실행  
- **sqlcmd** 유틸리티를 대화형으로 사용하여 명령 프롬프트 창에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] sqlcmd **를 사용하여**문을 대화형으로 실행하려면 입력 파일이나 쿼리를 지정하는 **-Q**, **-q**, **-Z**또는 **-i** 옵션을 사용하지 않고 유틸리티를 실행합니다. 예를 들어  
+ **sqlcmd** 유틸리티를 대화형으로 사용하여 명령 프롬프트 창에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] sqlcmd **를 사용하여**문을 대화형으로 실행하려면 입력 파일이나 쿼리를 지정하는 **-Q**, **-q**, **-Z**또는 **-i** 옵션을 사용하지 않고 유틸리티를 실행합니다. 다음은 그 예입니다.  
   
  `sqlcmd -S <ComputerName>\<InstanceName>`  
   
@@ -112,7 +112,7 @@ ms.locfileid: "71816609"
 ## <a name="quoted-strings"></a>따옴표 붙은 문자열  
  따옴표 두 개를 연속으로 입력하여 문자열 내에 따옴표를 삽입하는 예외적인 경우를 제외하고 따옴표로 묶인 문자는 추가적인 전처리 없이 사용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이러한 문자 시퀀스를 하나의 따옴표로 처리합니다. 변환은 서버에서 발생합니다. 스크립팅 변수 역시 문자열 내에서는 단순한 문자로 처리됩니다.  
   
- 예를 들어  
+ 다음은 그 예입니다.  
   
  `sqlcmd`  
   
@@ -211,7 +211,7 @@ ms.locfileid: "71816609"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-running-a-script-by-using-sqlcmd"></a>1\. sqlcmd를 사용하여 스크립트 실행  
+### <a name="a-running-a-script-by-using-sqlcmd"></a>A. sqlcmd를 사용하여 스크립트 실행  
  메모장을 시작하고 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 입력합니다.  
   
  `USE AdventureWorks2012;`  
@@ -244,7 +244,7 @@ ms.locfileid: "71816609"
   
  `(3 rows affected)`  
   
-### <a name="b-using-sqlcmd-with-a-dedicated-administrative-connection"></a>2\. 전용 관리 연결에 sqlcmd 사용  
+### <a name="b-using-sqlcmd-with-a-dedicated-administrative-connection"></a>B. 전용 관리 연결에 sqlcmd 사용  
  다음 예에서 `sqlcmd` 는 DAC(관리자 전용 연결)를 사용하여 차단 문제가 발생한 서버에 연결하는 데 사용됩니다.  
   
  `C:\>sqlcmd -S ServerName -A`  

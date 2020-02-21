@@ -11,10 +11,10 @@ ms.assetid: 9a86daeb-03b2-45ef-82d3-495f33fb0113
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6fc825228c8092a5a9dce998f53e1fbf763cff8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981453"
 ---
 # <a name="getnclob-method-sqlservercallablestatement"></a>getNClob 메서드(SQLServerCallableStatement)
@@ -24,9 +24,9 @@ ms.locfileid: "67981453"
   
 ## <a name="overload-list"></a>오버로드 목록  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
-|[getNClob 메서드 &#40;int&#41;](../../../connect/jdbc/reference/getnclob-method-int.md)|지정된 JDBC **NCLOB** 매개 변수의 값을 Java 프로그래밍 언어의 **NClob** 개체로 검색합니다.|  
+|[getNClob 메서드&#40;int&#41;](../../../connect/jdbc/reference/getnclob-method-int.md)|지정된 JDBC **NCLOB** 매개 변수의 값을 Java 프로그래밍 언어의 **NClob** 개체로 검색합니다.|  
 |[getNClob 메서드&#40;java.lang.String&#41;](../../../connect/jdbc/reference/getnclob-method-java-lang-string.md)|JDBC **NCLOB** 매개 변수의 값을 Java 프로그래밍 언어의 **NClob** 개체로 검색합니다.|  
   
 ## <a name="see-also"></a>참고 항목  

@@ -1,6 +1,7 @@
 ---
-title: '1단원: 보고서 서버 프로젝트 만들기(Reporting Services) | Microsoft Docs'
-ms.date: 05/01/2019
+title: '1단원: 보고서 서버 프로젝트 만들기 | Microsoft Docs'
+description: 이 단원에서는 보고서 디자이너를 사용하여 보고서 서버 프로젝트 및 보고서 정의(.rdl) 파일을 만듭니다.
+ms.date: 12/09/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -8,19 +9,19 @@ ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c3a32b6b27a8919d729c95bfe29f50c2bda81db8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: db412b18a0189f9f68caff79f8e904db5424d673
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095853"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244320"
 ---
-# <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>1단원: 보고서 서버 프로젝트 만들기(Reporting Services)
+# <a name="lesson-1-create-a-report-server-project-reporting-services"></a>1단원: 보고서 서버 프로젝트 만들기(Reporting Services)
 
 이 단원에서는 ‘보고서 디자이너’를 사용하여 ‘보고서 서버 프로젝트’ 및 ‘보고서 정의(.rdl)’ 파일을 만듭니다.   
 
 > [!NOTE]
-> [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 비즈니스 인텔리전스 솔루션을 만들기 위한 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 환경입니다. SSDT에서는 페이지를 매긴 [!INCLUDE[ssrsnoversion_md](../includes/ssrsnoversion-md.md)] 보고서 정의, 공유 데이터 원본, 공유 데이터 세트 및 보고서 파트를 열고 수정하고 미리 보고 저장하고 배포할 수 있는 보고서 디자이너 제작 환경을 사용할 수 있습니다.
+> [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]는 비즈니스 인텔리전스 솔루션을 만들기 위한 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 환경입니다. SSDT에서는 페이지를 매긴 [!INCLUDE[ssrsnoversion_md](../includes/ssrsnoversion-md.md)] 보고서 정의, 공유 데이터 원본, 공유 데이터 세트 및 보고서 파트를 열고 수정하고 미리 보고 저장하고 배포할 수 있는 보고서 디자이너 제작 환경을 사용할 수 있습니다.
 
 보고서 디자이너에서 보고서를 만들면, 보고서 파일과 보고서에 사용되는 기타 리소스 파일이 포함된 보고서 서버 프로젝트가 만들어집니다.
 
@@ -37,7 +38,7 @@ ms.locfileid: "65095853"
     > [!IMPORTANT]
     > VS에서 왼쪽 열에 Reporting Services가 표시되지 않는 경우, SSDT 워크로드를 설치하여 보고서 디자이너를 추가합니다. **도구** 메뉴에서 **도구 및 기능 가져오기...** 를 선택한 다음, 표시되는 워크로드에서 **SQL Server Data Tools**를 선택합니다. 가운데 열에 Report Services 개체가 표시되지 않는 경우 Reporting Services 확장을 추가합니다. **도구** 메뉴에서 **확장 및 업데이트** > **온라인**을 선택합니다. 가운데 열에 표시된 확장에서 **Microsoft Reporting Services Projects** > **다운로드**를 선택합니다. SSDT의 경우 [SSDT(SQL Server Data Tools) 다운로드](../ssdt/download-sql-server-data-tools-ssdt.md)를 참조하세요.
 
-3. **새 프로젝트** 대화 상자의 가운데 열에서 **보고서 서버 프로젝트** 아이콘 &nbsp;&nbsp;![ssrs_ssdt_report_server_project](media/ssrs-ssdt-report-server-project.png) &nbsp;&nbsp;을 선택합니다.
+3. **새 프로젝트** 대화 상자의 가운데 열에서 **보고서 서버 프로젝트** 아이콘 &nbsp;&nbsp;![ssrs_ssdt_report_server_project](media/ssrs-ssdt-report-server-project.png)를 선택합니다.&nbsp;&nbsp;
 
 4. **이름** 텍스트 상자에 프로젝트 이름으로 “Tutorial”을 입력합니다. 기본적으로, **위치** 텍스트 상자에는 "Documents\Visual Studio 20xx\Projects\" 폴더의 경로가 표시됩니다. 보고서 디자이너는 이 경로 아래에 Tutorial이라는 폴더를 만들고, 이 폴더에 Tutorial 프로젝트를 만듭니다. 프로젝트가 VS 솔루션에 속하지 않는 경우 VS도 솔루션 파일(.sln)을 만듭니다.
 
@@ -67,4 +68,4 @@ ms.locfileid: "65095853"
 - 데이터 원본에서 데이터 세트 만들기
 - 보고서 레이아웃 디자인 및 서식 지정
 
-[2단원: 연결 정보 지정 &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md)에서 계속 진행하세요.
+다음으로 [2단원: 연결 정보 지정&#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md)을 참조하세요.

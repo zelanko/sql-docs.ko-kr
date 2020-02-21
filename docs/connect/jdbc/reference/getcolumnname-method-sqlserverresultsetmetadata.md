@@ -1,5 +1,5 @@
 ---
-title: getColumnName 메서드 (SQLServerResultSetMetaData) | Microsoft Docs
+title: getColumnName 메서드(SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 0330ca1d-5e24-4ce3-9d2a-b931f20a0fcf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 393eba0d3ac6df43427e4b5f5774479c43f9bedc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67952899"
 ---
 # <a name="getcolumnname-method-sqlserverresultsetmetadata"></a>getColumnName 메서드(SQLServerResultSetMetaData)
@@ -39,14 +39,14 @@ public java.lang.String getColumnName(int column)
   
  열 인덱스를 나타내는 **int**입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  열 이름이 포함된 **문자열**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 getColumnName 메서드는 java .sql. ResultSetMetaData 인터페이스의 getColumnName 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 getColumnName 메서드는 java.sql.ResultSetMetaData 인터페이스의 getColumnName 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerResultSetMetaData 메서드](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

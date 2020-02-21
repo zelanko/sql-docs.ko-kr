@@ -1,5 +1,5 @@
 ---
-title: getBinaryStream 메서드 () | Microsoft Docs
+title: getBinaryStream 메서드() | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 0c8f7741-daba-4c04-adc0-8d76345a899a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 486958cb6df51accc3446d1545b734efe9a6fc66
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953629"
 ---
 # <a name="getbinarystream-method-"></a>getBinaryStream 메서드()
@@ -34,14 +34,14 @@ ms.locfileid: "67953629"
 public java.io.InputStream getBinaryStream()  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  BLOB 데이터가 들어 있는 입력 스트림입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 getBinaryStream 메서드는 java. Blob 인터페이스의 getBinaryStream 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 getBinaryStream 메서드는 java.sql.Blob 인터페이스의 getBinaryStream 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerBlob 메서드](../../../connect/jdbc/reference/sqlserverblob-methods.md)   

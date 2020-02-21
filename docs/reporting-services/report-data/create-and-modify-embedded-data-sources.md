@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 1c38c2e8-7a29-4f79-a4a3-85ed2b13723b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0daca68faa97a59b9c98b13ab9ca8f867341917c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: f2ce2535a28661e40e845aa87936f3c23353e544
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500474"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190844"
 ---
 # <a name="create-and-modify-embedded-data-sources"></a>포함된 데이터 원본 만들기 및 수정
   포함된 데이터 원본은 보고서 정의에서 정의되고 해당 보고서에서만 사용됩니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "66500474"
   
     2.  다음 대체 방법 중 하나를 사용하여 연결 문자열을 지정합니다.  
   
-        -   **연결 문자열** 입력란에 연결 문자열을 직접 입력합니다. 연결 문자열 예제 목록은 [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 또는 [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)을 참조하세요.  
+        -   **연결 문자열** 입력란에 연결 문자열을 직접 입력합니다. 연결 문자열 예제 목록은 [데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)를 참조하세요.  
   
         -   식 단추(**fx** )를 클릭하여 연결 문자열로 계산되는 식을 만듭니다. **식** 대화 상자의 식 창에 식을 입력합니다. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66500474"
   
     2.  다음 대체 방법 중 하나를 사용하여 연결 문자열을 지정합니다.  
   
-        -   **연결 문자열** 입력란에 연결 문자열을 직접 입력합니다. 연결 문자열 예제 목록은 [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)을 참조하세요.  
+        -   **연결 문자열** 입력란에 연결 문자열을 직접 입력합니다. 연결 문자열 예제 목록은 [데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)를 참조하세요.  
   
         -   식 단추(**fx** )를 클릭하여 연결 문자열로 계산되는 식을 만듭니다. **식** 대화 상자의 식 창에 식을 입력합니다. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

@@ -12,10 +12,10 @@ ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2791293f805f1e2c0d9bd39822bc3f452777c007
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66175603"
 ---
 # <a name="data-driven-subscriptions"></a>데이터 기반 구독
@@ -50,14 +50,14 @@ ms.locfileid: "66175603"
 ## <a name="working-with-data-driven-subscriptions"></a>데이터 기반 구독 작업  
  다음 항목은 데이터 기반 구독에 대한 추가 정보를 제공합니다.  
   
-|항목|설명|  
+|토픽|Description|  
 |------------|-----------------|  
 |[데이터 기반 구독 만들기, 수정 및 삭제](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)|데이터 기반 구독을 만들고, 수정하고, 삭제하는 방법을 설명합니다.|  
 |[구독자 데이터에 외부 데이터 원본 사용&#40;데이터 기반 구독&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)|데이터 기반 구독에 사용할 수 있는 데이터 원본에 대한 정보를 제공합니다.|  
 |[데이터 기반 구독 만들기&#40;SSRS 자습서&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)|데이터 기반 구독을 만드는 방법에 대한 단계별 학습 지침을 제공합니다.|  
 |[보고서 캐시&#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)|데이터 기반 구독과 함께 Null 배달 공급자를 사용하여 캐시를 미리 로드하는 방법을 설명합니다.|  
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
  [구독 및 배달&#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
  [캐시 미리 로드 &#40;웹 포털&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)  

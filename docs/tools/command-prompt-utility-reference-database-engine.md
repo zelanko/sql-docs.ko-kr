@@ -1,10 +1,7 @@
 ---
-title: SQL 명령 프롬프트 유틸리티 (데이터베이스 엔진) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: SQL 명령 프롬프트 유틸리티(데이터베이스 엔진)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,21 +13,25 @@ helpviewer_keywords:
 ms.assetid: 48364bd9-6ea7-45e9-a332-acf3d81bbfae
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2b4dd847c828d18f30c161d9cfb1d8ab30e8ebb9
-ms.sourcegitcommit: b4962530f90234017073b3fdd2248936b2de4e69
-ms.translationtype: MTE75
+ms.openlocfilehash: a25fcbb39b2b4edacd3d9e6ddab64a88d5888fe9
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71077532"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74992743"
 ---
-# <a name="sql-command-prompt-utilities-database-engine"></a>SQL 명령 프롬프트 유틸리티 (데이터베이스 엔진)
+# <a name="sql-command-prompt-utilities-database-engine"></a>SQL 명령 프롬프트 유틸리티(데이터베이스 엔진)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  명령 프롬프트 유틸리티를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 작업을 스크립트로 작성할 수 있습니다. 다음 표에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 제공하는 다양한 명령 프롬프트 유틸리티를 보여 줍니다.  
 
-*기본* sql gui 및 명령줄 도구에 대 한 자세한 내용은 [sql 도구 개요](overview-sql-tools.md)를 참조 하세요.
+명령 프롬프트 유틸리티를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 작업을 스크립트로 작성할 수 있습니다. 다음 표에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 제공하는 다양한 명령 프롬프트 유틸리티를 보여 줍니다.
 
-  
+‘기본’ SQL GUI 및 명령줄 도구에 대한 자세한 내용은 [SQL 도구 개요](overview-sql-tools.md)를 참조하세요. 
+
 |**유틸리티**|**설명**|**설치 위치**|  
 |-----------------|---------------------|----------------------|  
 |[bcp 유틸리티](../tools/bcp-utility.md)|[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스와 사용자가 지정한 형식의 데이터 파일 간에 데이터를 복사하는 데 사용합니다.|\<*드라이브*:>\Program Files\\[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\Client SDK\ODBC\110\Tools\Binn|  
@@ -56,18 +57,17 @@ ms.locfileid: "71077532"
 
 ## <a name="command-prompt-utilities-syntax-conventions"></a>명령 프롬프트 유틸리티 구문 규칙  
   
-|**규칙**|**사용 대상**|  
+|**규칙**|**용도**|  
 |--------------------|------------------|  
 |대문자|운영 체제 수준에서 사용하는 문 및 용어|  
 |`monospace`|예제 명령 및 프로그램 코드|  
 |*기울임꼴*|사용자가 제공하는 매개 변수|  
 |**굵게**|표시된 대로 입력해야 하는 명령, 매개 변수 및 다른 구문|  
-  
-## <a name="see-also"></a>참고 항목  
- [복제 배포 에이전트](../relational-databases/replication/agents/replication-distribution-agent.md)   
- [복제 로그 판독기 에이전트](../relational-databases/replication/agents/replication-log-reader-agent.md)   
- [복제 병합 에이전트](../relational-databases/replication/agents/replication-merge-agent.md)   
- [복제 큐 판독기 에이전트](../relational-databases/replication/agents/replication-queue-reader-agent.md)   
- [Replication Snapshot Agent](../relational-databases/replication/agents/replication-snapshot-agent.md)  
-  
-  
+
+## <a name="see-also"></a>참고 항목
+
+* [Replication Distribution Agent](../relational-databases/replication/agents/replication-distribution-agent.md)
+* [복제 로그 판독기 에이전트](../relational-databases/replication/agents/replication-log-reader-agent.md)
+* [Replication Merge Agent](../relational-databases/replication/agents/replication-merge-agent.md)
+* [Replication Queue Reader Agent](../relational-databases/replication/agents/replication-queue-reader-agent.md)
+* [Replication Snapshot Agent](../relational-databases/replication/agents/replication-snapshot-agent.md)

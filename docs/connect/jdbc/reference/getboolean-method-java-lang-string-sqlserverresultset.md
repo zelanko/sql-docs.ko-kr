@@ -16,10 +16,10 @@ ms.assetid: ba98a27b-722d-4904-ac65-0f082fde1fe6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a9bdf91105e9e7db82f51b5ba9885506e2edd8cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953534"
 ---
 # <a name="getboolean-method-javalangstring-sqlserverresultset"></a>getBoolean 메서드(java.lang.String)(SQLServerResultSet)
@@ -39,16 +39,16 @@ public boolean getBoolean(java.lang.String columnName)
   
  열 이름이 포함된 **문자열**입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  **부울** 값입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 getBoolean 메서드는 java.sql.ResultSet 인터페이스의 getBoolean 메서드에 의해 지정됩니다.  
   
- 이 메서드는 숫자 및 문자 데이터 형식에서만 지원됩니다. "1", 1, "**true**" 값을 **true**로, "0", 0 및 "**false**" 값을 **false**로 변환 합니다. 다른 모든 값에 대한 동작은 정의되어 있지 않습니다.  
+ 이 메서드는 숫자 및 문자 데이터 형식에서만 지원됩니다. “1”, 1 및 “**true**” 값을 **true**로 변환하고, “0”, 0 및 “**false**” 값을 **false**로 변환합니다. 다른 모든 값에 대한 동작은 정의되어 있지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [getBoolean 메서드&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getboolean-method-sqlserverresultset.md)   

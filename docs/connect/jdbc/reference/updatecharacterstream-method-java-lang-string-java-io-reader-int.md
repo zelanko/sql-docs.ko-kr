@@ -16,10 +16,10 @@ ms.assetid: 08cfc4e0-83f0-4f2f-ac55-b381f34fe67f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 20249faca3338a5f085de0e0071b20206b13dee1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67996747"
 ---
 # <a name="updatecharacterstream-method-javalangstring-javaioreader-int"></a>updateCharacterStream 메서드(java.lang.String, java.io.Reader, int)
@@ -43,7 +43,7 @@ public void updateCharacterStream(java.lang.String columnName,
   
  *readerValue*  
   
- 판독기 개체입니다.  
+ Reader 개체입니다.  
   
  *length*  
   
@@ -52,8 +52,8 @@ public void updateCharacterStream(java.lang.String columnName,
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 updateCharacterStream 메서드는 updateCharacterStream 인터페이스의 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 updateCharacterStream 메서드는 java.sql.ResultSet 인터페이스의 updateCharacterStream 메서드에 의해 지정됩니다.  
   
  이 메서드는 판독기 개체의 유니코드 문자를 선택된 텍스트 및 이진 열에 전달합니다. 여기에는 모든 텍스트 열과 **binary**, **varbinary**, **varbinary(max)** , **image** 및 **xml** 열이 포함되지만 **udt** 열은 포함되지 않습니다.  
   

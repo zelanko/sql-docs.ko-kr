@@ -1,5 +1,5 @@
 ---
-title: isDefinitelyWritable 가능 메서드 (SQLServerResultSetMetaData) | Microsoft Docs
+title: isDefinitelyWritable 메서드(SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 7650e89a-dc8e-43ca-8eb2-f962f1a4b4ae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 49ca65fc7fd2c7768db81460e331d960bad1c5ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977643"
 ---
 # <a name="isdefinitelywritable-method-sqlserverresultsetmetadata"></a>isDefinitelyWritable 메서드(SQLServerResultSetMetaData)
@@ -39,14 +39,14 @@ public boolean isDefinitelyWritable(int column)
   
  열 인덱스를 나타내는 **int**입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  열 쓰기가 확실하게 성공하면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 isDefinitelyWritable 가능 메서드는 java. .sql Setmetadata 인터페이스의 isDefinitelyWritable 가능 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 isDefinitelyWritable 메서드는 java.sql.ResultSetMetaData 인터페이스의 isDefinitelyWritable 메서드에 의해 지정됩니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스와 함께 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]를 사용할 경우 이 메서드는 항상 false를 반환합니다.  

@@ -9,10 +9,10 @@ ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3b39bf6a3a7c04d5d8ca457bb199229fdaebae76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581846"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>기본 제공 컬렉션 - 기본 제공 Globals 및 Users 참조(보고서 작성기)
@@ -27,14 +27,14 @@ ms.locfileid: "65581846"
 |**멤버**|**형식**|**설명**|  
 |----------------|--------------|---------------------|  
 |ExecutionTime|**DateTime**|보고서가 실행되기 시작한 날짜와 시간입니다.|  
-|PageNumber|**Integer**|페이지 번호를 다시 설정하는 페이지 나누기를 기준으로 한 현재 페이지 번호입니다. 보고서 처리를 시작할 때 초기 값은 -1로 설정됩니다. 페이지 번호는 각 렌더링된 페이지에 대해 증가합니다.<br /><br /> 사각형, 데이터 영역, 데이터 영역 그룹 또는 지도에 대해 페이지 나누기 내에서 페이지 번호를 매기려면 PageBreak 속성에 대해 ResetPageNumber 속성을 **True**로 설정합니다. 테이블릭스 열 계층 구조 그룹에는 지원되지 않습니다.<br /><br /> PageNumber는 페이지 머리글 또는 페이지 바닥글의 식에만 사용할 수 있습니다.|  
+|PageNumber|**정수**|페이지 번호를 다시 설정하는 페이지 나누기를 기준으로 한 현재 페이지 번호입니다. 보고서 처리를 시작할 때 초기 값은 -1로 설정됩니다. 페이지 번호는 각 렌더링된 페이지에 대해 증가합니다.<br /><br /> 사각형, 데이터 영역, 데이터 영역 그룹 또는 지도에 대해 페이지 나누기 내에서 페이지 번호를 매기려면 PageBreak 속성에 대해 ResetPageNumber 속성을 **True**로 설정합니다. 테이블릭스 열 계층 구조 그룹에는 지원되지 않습니다.<br /><br /> PageNumber는 페이지 머리글 또는 페이지 바닥글의 식에만 사용할 수 있습니다.|  
 |ReportFolder|**String**|보고서를 포함하는 폴더의 전체 경로입니다. 여기에는 보고서 서버 URL이 포함되지 않습니다.|  
 |ReportName|**String**|보고서 서버 데이터베이스에 저장되어 있는 보고서의 이름입니다.|  
 |ReportServerUrl|**String**|보고서가 실행 중인 보고서 서버의 URL입니다.|  
-|TotalPages|**Integer**|PageNumber를 다시 설정하는 페이지 나누기를 기준으로 한 총 페이지 수입니다. 페이지 나누기가 설정되어 있지 않으면 이 값은 OverallTotalPages와 같습니다.<br /><br /> TotalPages는 페이지 머리글 또는 페이지 바닥글의 식에만 사용할 수 있습니다.|  
+|TotalPages|**정수**|PageNumber를 다시 설정하는 페이지 나누기를 기준으로 한 총 페이지 수입니다. 페이지 나누기가 설정되어 있지 않으면 이 값은 OverallTotalPages와 같습니다.<br /><br /> TotalPages는 페이지 머리글 또는 페이지 바닥글의 식에만 사용할 수 있습니다.|  
 |PageName|**String**|페이지의 이름입니다. 보고서 처리를 시작할 때 초기 값은 InitialPageName(보고서 속성)에서 설정됩니다. 각 보고서 항목을 처리하면 이 값은 사각형, 데이터 영역, 데이터 영역 그룹 또는 지도의 해당 PageName 값으로 바뀝니다. 테이블릭스 열 계층 구조 그룹에는 지원되지 않습니다.<br /><br /> PageName은 페이지 머리글 또는 페이지 바닥글의 식에만 사용할 수 있습니다.|  
 |OverallPageNumber|**정수**|전체 보고서에서 현재 페이지의 페이지 번호입니다. 이 값은 ResetPageNumber의 영향을 받지 않습니다.<br /><br /> OverallPageNumber는 페이지 머리글 또는 페이지 바닥글의 식에만 사용할 수 있습니다.|  
-|OverallTotalPages|**Integer**|전체 보고서의 총 페이지 수입니다. 이 값은 ResetPageNumber의 영향을 받지 않습니다.<br /><br /> OverallTotalPages는 페이지 머리글 또는 페이지 바닥글의 식에만 사용할 수 있습니다.|  
+|OverallTotalPages|**정수**|전체 보고서의 총 페이지 수입니다. 이 값은 ResetPageNumber의 영향을 받지 않습니다.<br /><br /> OverallTotalPages는 페이지 머리글 또는 페이지 바닥글의 식에만 사용할 수 있습니다.|  
 |RenderFormat|**RenderFormat**|현재 렌더링 요청에 대한 정보입니다.<br /><br /> 자세한 내용은 다음 섹션의 "RenderFormat"을 참조하십시오.|  
   
  **Globals** 컬렉션 멤버는 variant를 반환합니다. 특정 데이터 형식이 필요한 식에서 이 컬렉션의 멤버를 사용하려면 먼저 변수를 캐스팅해야 합니다. 예를 들어 실행 시간 variant를 날짜 형식으로 변환하려면 `=CDate(Globals!ExecutionTime)`를 사용합니다. 자세한 내용은 [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)).  
@@ -42,7 +42,7 @@ ms.locfileid: "65581846"
 ### <a name="renderformat"></a>RenderFormat  
  다음 표에서는 **RenderFormat**의 멤버에 대해 설명합니다.  
   
-|멤버|형식|설명|  
+|멤버|Type|Description|  
 |------------|----------|-----------------|  
 |속성|**String**|RSReportServer 구성 파일에 등록된 렌더러 이름입니다.<br /><br /> 보고서 처리/렌더링 주기의 특정 부분에서 사용 가능합니다.|  
 |IsInteractive|**Boolean**|현재 렌더링 요청이 대화형 렌더링 형식을 사용하는지 여부입니다.|  
@@ -72,7 +72,7 @@ ms.locfileid: "65581846"
   
 |**멤버**|**형식**|**설명**|  
 |----------------|--------------|---------------------|  
-|**언어**|**문자열**|보고서를 실행하는 사용자의 `en-US`)을 입력합니다.|  
+|**언어**|**String**|보고서를 실행하는 사용자의 `en-US`)을 입력합니다.|  
 |**UserID**|**String**|보고서를 실행하는 사용자의 ID입니다. Windows 인증을 사용하는 경우 이 값은 현재 사용자의 도메인 계정입니다. 값은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보안 확장 프로그램에 의해 결정되며 이 프로그램은 Windows 인증 또는 사용자 지정 인증을 사용할 수 있습니다.|  
  
 ### <a name="using-locale-settings"></a>로캘 설정 사용  

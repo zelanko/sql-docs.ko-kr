@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f2ae96a04da69835b4b13886637cf87e62996b57
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: b389f8ba8e99678f98ef4eb22d3fe51d8b04bee3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653317"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75325433"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>자습서: Transact-SQL을 사용하여 SQL Server 데이터 풀에 데이터 수집
 
@@ -30,9 +30,9 @@ ms.locfileid: "69653317"
 > * 데이터 풀 테이블의 데이터를 로컬 테이블에 조인합니다.
 
 > [!TIP]
-> 원하는 경우 이 자습서의 명령에 대한 스크립트를 다운로드하여 실행할 수 있습니다. 자세한 내용은 GitHub에서 [데이터 풀 샘플](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool)을 참조하세요.
+> 원하는 경우 이 자습서의 명령을 위해 스크립트를 다운로드하여 실행할 수 있습니다. 자세한 내용은 GitHub에서 [데이터 풀 샘플](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool)을 참조하세요.
 
-## <a id="prereqs"></a> 사전 요구 사항
+## <a id="prereqs"></a> 필수 조건
 
 - [빅 데이터 도구](deploy-big-data-tools.md)
    - **kubectl**
@@ -77,8 +77,8 @@ ms.locfileid: "69653317"
          DISTRIBUTION = ROUND_ROBIN
       );
    ```
-  
-1. CTP 3.1에서 데이터 풀 만들기는 비동기식으로 진행되지만 이미 완료되었는지 여부를 확인할 방법이 없습니다. 데이터 풀이 생성될 때까지 2분 정도 기다렸다가 계속 진행합니다.
+
+데이터 풀 외부 테이블을 만드는 작업은 차단 작업입니다. 모든 백 엔드 데이터 풀 노드에서 지정된 테이블이 만들어질 때 컨트롤이 반환됩니다. 만들기 작업 중 실패가 발생한 경우 오류 메시지가 호출자에게 반환됩니다.
 
 ## <a name="load-data"></a>데이터 로드
 

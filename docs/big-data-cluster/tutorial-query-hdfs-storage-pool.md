@@ -1,20 +1,21 @@
 ---
-title: 스토리지 풀에서 HDFS 데이터 쿼리
-titleSuffix: SQL Server big data clusters
+title: 'HDFS 데이터 쿼리: 스토리지 풀'
+titleSuffix: SQL Server Big Data Clusters
 description: 이 자습서에서는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]에서 HDFS 데이터를 쿼리하는 방법을 보여 줍니다. 스토리지 풀의 데이터에 대해 외부 테이블을 만든 다음, 쿼리를 실행합니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7ba5721ef461fe327a3309431cc994a5ed377be7
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: cf20e6b02e67655b7347a2a53d1e62501d357f30
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652448"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75226477"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>자습서: SQL Server 빅 데이터 클러스터에서 HDFS 쿼리
 
@@ -29,9 +30,13 @@ ms.locfileid: "69652448"
 > * 이 데이터를 마스터 인스턴스의 중요 데이터와 조인합니다.
 
 > [!TIP]
-> 원하는 경우 이 자습서의 명령에 대한 스크립트를 다운로드하여 실행할 수 있습니다. 자세한 내용은 GitHub의 [데이터 가상화 샘플](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization)을 참조하세요.
+> 원하는 경우 이 자습서의 명령을 위해 스크립트를 다운로드하여 실행할 수 있습니다. 자세한 내용은 GitHub의 [데이터 가상화 샘플](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization)을 참조하세요.
 
-## <a id="prereqs"></a> 사전 요구 사항
+7분 분량의 다음 동영상에서는 빅 데이터 클러스터에서 HDFS 데이터를 쿼리하는 과정을 안내합니다.
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Query-HDFS-data-inside-SQL-Server-big-data-cluster/player?WT.mc_id=dataexposed-c9-niner]
+
+## <a id="prereqs"></a> 필수 조건
 
 - [빅 데이터 도구](deploy-big-data-tools.md)
    - **kubectl**

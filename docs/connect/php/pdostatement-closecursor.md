@@ -1,5 +1,5 @@
 ---
-title: 'PDOStatement:: closeCursor | Microsoft Docs'
+title: PDOStatement::closeCursor | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 8997ab61-e948-4d54-8d32-fc080d55525c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: caf214fa7055bb0e8000f52f5db43c4f76e48e1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993104"
 ---
 # <a name="pdostatementclosecursor"></a>PDOStatement::closeCursor
@@ -29,10 +29,10 @@ ms.locfileid: "67993104"
 bool PDOStatement::closeCursor();  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 성공하면 true이고, 그렇지 않으면 false입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 MultipleActiveResultSets 연결 옵션이 false로 설정될 때 closeCursor에 효과가 있습니다.  MultipleActiveResultSets 연결 옵션에 대한 자세한 내용은 [방법: MARS(Multiple Active Result Set)를 사용하지 않도록 설정](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md)을 참조하세요.  
   
 closeCursor를 호출하지 않고 문 핸들을 null로 설정할 수도 있습니다.  

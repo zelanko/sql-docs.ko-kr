@@ -1,29 +1,30 @@
 ---
-title: 빌드 및 배포 참가자를 사용하여 데이터베이스 빌드 및 배포 사용자 지정 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 배포 기여자를 사용하여 데이터베이스 배포 사용자 지정
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: fe2064bb-e01e-4a12-9f12-a99aa9a5203f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aa22592bbe86707ec4efa43ba0c188c21a07351e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 4d0c83e0b6adb5981adde576e06b0b74faf42eeb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110570"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256249"
 ---
 # <a name="customize-database-build-and-deployment-by-using-build-and-deployment-contributors"></a>빌드 및 배포 참가자를 사용하여 데이터베이스 빌드 및 배포 사용자 지정
+
 Visual Studio는 데이터베이스 프로젝트에 대한 빌드 및 배포 작업의 동작을 수정하기 위해 사용할 수 있는 확장성 지점을 제공합니다.  
   
 ## <a name="available-extensibility-points"></a>사용 가능한 확장성 지점  
 다음 표에 표시된 것처럼 확장성 지점에 대한 확장을 만들 수 있습니다.  
   
-|**동작**|**참가자 유형**|**참고**|  
+|**동작**|**참가자 유형**|**참고 사항**|  
 |--------------|------------------------|-------------|  
 |빌드|BuildContributor|이 유형의 확장은 프로젝트 모델이 완전히 유효성 검사된 후 SQL 프로젝트를 빌드할 때 실행됩니다. 빌드 참가자는 빌드 작업의 모든 속성 및 모든 사용자 지정 인수뿐만 아니라 완료된 모델에 액세스할 수 있습니다.|  
 |배포|DeploymentPlanModifier|이 유형의 확장은 배포 계획이 생성된 후 실행되기 전에 배포 파이프라인의 일부로 SQL 프로젝트가 배포될 때 실행됩니다. DeploymentPlanModifier를 사용하면 단계를 추가하거나 제거하여 배포 계획을 수정할 수 있습니다. 배포 참가자는 배포 계획, 비교 결과 및 원본 및 대상 모델에 액세스할 수 있습니다.|  

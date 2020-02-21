@@ -1,6 +1,6 @@
 ---
-title: 찾을 수 없는 이름 대화 상자 | Microsoft 문서
-ms.custom: ''
+title: 찾을 수 없는 이름 대화 상자
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 74e34004-091b-4ac8-8824-5d6c6f8b1b6b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d2ba40f3580a01bb7f72f54bd69407853820a6d7
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: c6dc23b79346a3e163f896b3f85f120cc9ccc903
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264066"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257167"
 ---
 # <a name="name-not-found-dialog-box"></a>찾을 수 없는 이름 대화 상자
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,6 +38,6 @@ ms.locfileid: "68264066"
 **개체 이름 입력**  
 찾을 수 없는 개체 이름이 들어 있습니다. 개체 이름을 수정하거나 새 개체 이름을 입력합니다.  
   
-선택 항목에서 *<object name>*  ****제거****  
+**선택 항목에서** *<object name>* **제거**  
 **이름을 찾을 수 없음** 대화 상자를 닫고 **개체 선택** 대화 상자에서 항목을 제거하려면 선택합니다.  
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 0c0e6085ec4e922619c4f2595c63751e82c5a50a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571485"
 ---
 # <a name="data-alert-manager-for-sharepoint-users"></a>SharePoint 사용자용 데이터 경고 관리자
@@ -74,7 +74,7 @@ SharePoint 사이트가 데이터 경고 기능을 사용하도록 설정된 경
 >  **실행**  옵션을 클릭하면 몇 초 후에 **상태** 열의 값이 업데이트되어 경고가 처리 중임을 나타냅니다. **실행**  옵션을 여러 번 클릭하면 경고가 여러 번 처리됩니다. 그러면 보고서 서버의 리소스가 불필요하게 소비되어 보고서 서버의 성능에 영향을 줄 수 있습니다. 경고에 대해 업데이트된 정보를 보려면 웹 브라우저의 새로 고침 단추를 클릭하여 상태 업데이트와 경고에 대한 다른 정보를 확인합니다.  
   
   
-##  <a name="HowTo"></a> 관련 태스크  
+##  <a name="HowTo"></a> 관련 작업  
  이 섹션에는 경고를 관리하고 경고 정의를 편집하는 방법을 보여 주는 절차가 나열되어 있습니다.  
   
 -   [데이터 경고 관리자에서 내 데이터 경고 관리](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)  

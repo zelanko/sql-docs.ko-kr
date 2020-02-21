@@ -16,10 +16,10 @@ ms.assetid: af1f67f4-f568-4e58-abcc-5c809a89b547
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cbd009f2052c911c469b842e2cd5353276d5d2c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954041"
 ---
 # <a name="getautocommit-method-sqlserverconnection"></a>getAutoCommit 메서드(SQLServerConnection)
@@ -34,14 +34,14 @@ ms.locfileid: "67954041"
 public boolean getAutoCommit()  
 ```  
   
-## <a name="return-value"></a>반환 값  
- 자동 커밋 모드가 설정 되어 있으면 **true** 이 고, 그렇지 않으면 **false** 입니다.  
+## <a name="return-value"></a>Return Value  
+ 자동 커밋 모드가 사용하도록 설정되면 **true**이고, 그러지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 getAutoCommit 커밋 메서드는 java. .sql. 연결 인터페이스의 getAutoCommit 커밋 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 getAutoCommit 메서드는 java.sql.Connection 인터페이스의 getAutoCommit 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerConnection 멤버](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

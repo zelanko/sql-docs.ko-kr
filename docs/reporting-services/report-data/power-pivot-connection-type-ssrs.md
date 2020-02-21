@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ed100221dd827b84dba935db730d02e8268aac41
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
-ms.translationtype: MTE75
+ms.openlocfilehash: 8d6c9273abda883b175a46d9695d4d231cc5bc73
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73638001"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190760"
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>파워 피벗 연결 형식(SSRS)
   SQL Server Analysis Services 데이터 처리 확장 프로그램을 사용하면 SharePoint [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리에 게시된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에서 데이터를 검색할 수 있습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "73638001"
  연결 문자열은 SharePoint의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리 또는 기타 라이브러리에 게시된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에 대한 URL입니다(예: `https://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`).  
   
 ## <a name="credentials"></a>자격 증명  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서 및 SharePoint 사이트에 액세스하는 데 필요한 자격 증명을 지정합니다. 예를 들어 Windows 인증(통합 보안)을 지정합니다. 자세한 내용은 [데이터 연결, 데이터 원본 및 연결 &#40;문자열 보고서 작성기 및 SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 또는 [보고서 데이터 원본에 대 한 자격 증명 및 연결 정보 지정](specify-credential-and-connection-information-for-report-data-sources.md)을 참조 하세요.  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서 및 SharePoint 사이트에 액세스하는 데 필요한 자격 증명을 지정합니다. 예를 들어 Windows 인증(통합 보안)을 지정합니다. 자세한 내용은 [데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 또는 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요.  
   
 ## <a name="queries"></a>쿼리  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 원본에 연결한 후 MDX 그래픽 쿼리를 통해 기본 데이터 구조에서 찾아보고 선택하여 쿼리를 작성합니다. 쿼리를 작성한 후에는 해당 쿼리를 실행하여 결과 창에서 예제 데이터를 봅니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "73638001"
 ## <a name="parameters"></a>매개 변수  
  필터 창에서 필터 선택 사항에 해당되는 사용 가능한 값을 사용하여 자동으로 보고서 매개 변수를 만드는 필터에 대한 **매개 변수** 옵션을 선택합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에서 보고서 작성기를 여는 경우 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서의 피벗 테이블, 피벗 차트, 슬라이서 및 기타 레이아웃과 분석 기능이 보고서에서 다시 생성되지 않습니다. 대신 빈 보고서에 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서의 데이터를 가리키는 미리 구성된 데이터 원본이 포함됩니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 기준으로 보고서를 디자인하는 작업은 보고서에서 다시 만들 슬라이서, 필터 및 테이블 또는 차트 수에 따라 복잡하고 시간이 많이 걸릴 수 있습니다. 따라서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 디자인과 독립적으로 보고서에 포함하려는 데이터의 표현을 구상하는 방식이 보다 효율적입니다.  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서의 데이터는 고도로 압축되지만 보고서용으로 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에서 검색되는 데이터는 압축되지 않습니다. 쿼리 디자이너를 사용하여 보고서에 필요한 데이터만 포함되도록 제한할 필터 및 매개 변수를 지정합니다.  

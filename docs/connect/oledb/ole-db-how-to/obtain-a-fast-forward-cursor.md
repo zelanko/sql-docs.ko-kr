@@ -1,6 +1,6 @@
 ---
 title: FAST_FORWARD 커서 가져오기 | Microsoft Docs
-description: SQL Server에 대 한 OLE DB 드라이버를 사용 하 여 FAST_FORWARD 커서 가져오기
+description: OLE DB Driver for SQL Server를 사용하여 FAST_FORWARD 커서 가져오기
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,13 +13,13 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 2b49071908be3d8093d66358148e305b79476324
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994733"
 ---
-# <a name="obtain-a-fastforward-cursor"></a>FAST_FORWARD 커서 가져오기
+# <a name="obtain-a-fast_forward-cursor"></a>FAST_FORWARD 커서 가져오기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "67994733"
 > [!IMPORTANT]  
 >  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
   
-### <a name="to-obtain-fastforward-cursor"></a>FAST_FORWARD 커서를 가져오려면  
+### <a name="to-obtain-fast_forward-cursor"></a>FAST_FORWARD 커서를 가져오려면  
   
 1.  데이터 원본에 대한 연결을 설정합니다.  
   

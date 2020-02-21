@@ -1,5 +1,5 @@
 ---
-title: 격리 수준 (OLE DB) | Microsoft Docs
+title: 격리 수준(OLE DB) | Microsoft Docs
 description: 격리 수준(OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 2c9f3a7cd06f801555ab373e7e54fbf1b620d894
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993966"
 ---
 # <a name="isolation-levels-ole-db"></a>격리 수준(OLE DB)
@@ -27,11 +27,11 @@ ms.locfileid: "67993966"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클라이언트는 연결에 대한 트랜잭션 격리 수준을 제어할 수 있습니다. 트랜잭션 격리 수준을 제어 하기 위해 SQL Server 소비자 용 OLE DB 드라이버는 다음을 사용 합니다.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클라이언트는 연결에 대한 트랜잭션 격리 수준을 제어할 수 있습니다. 트랜잭션 격리 수준을 제어하기 위해 OLE DB Driver for SQL Server 소비자는 다음을 사용합니다.  
   
 -   SQL Server용 OLE DB 드라이버 기본 자동 커밋 모드에 대해 DBPROPSET_SESSION 속성 DBPROP_SESS_AUTOCOMMITISOLEVELS를 사용합니다.  
   
-     수준에 대 한 OLE DB 드라이버 SQL Server 기본값은 DBPROPVAL_TI_READCOMMITTED입니다.  
+     수준에 대한 OLE DB Driver for SQL Server 기본값은 DBPROPVAL_TI_READCOMMITTED입니다.  
   
 -   로컬 수동 커밋 트랜잭션에 대한 **ITransactionLocal::StartTransaction** 메서드의 *isoLevel* 매개 변수를 사용합니다.  
   

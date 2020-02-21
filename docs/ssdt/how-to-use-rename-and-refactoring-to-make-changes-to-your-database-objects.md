@@ -1,11 +1,7 @@
 ---
-title: '방법: 이름 바꾸기 및 리팩터링을 사용하여 데이터베이스 개체 변경 | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 데이터베이스 개체를 변경하기 위한 이름 바꾸기 및 리팩터링
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.dbrefactoring.previewdialog
@@ -16,14 +12,19 @@ f1_keywords:
 ms.assetid: f35520e6-8e6e-47b1-87a3-22c0cf2cabdb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0897d9498ca93e915dba5df9c32c4544fe08767d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: ac10530cf2fa3831a26733e7470b6bd107d17121
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097468"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244238"
 ---
 # <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>방법: 이름 바꾸기 및 리팩터링을 사용하여 데이터베이스 개체 변경
+
 Transact\-SQL 편집기의 리팩터링 상황에 맞는 메뉴를 사용하여 개체의 이름을 바꾸거나 개체를 다른 스키마로 이동하고, 변경 내용을 커밋하기 전에 영향을 받는 모든 영역을 미리 볼 수 있습니다. 리팩터링 메뉴를 사용하여 데이터베이스 개체에 대한 모든 참조를 정규화하거나 데이터베이스 프로젝트에서 `SELECT` 문의 와일드카드 문자를 확장할 수도 있습니다.  
   
 > [!NOTE]  

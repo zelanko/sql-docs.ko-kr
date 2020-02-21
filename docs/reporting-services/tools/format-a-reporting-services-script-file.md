@@ -12,10 +12,10 @@ ms.assetid: 85a207dd-4e0f-4d40-a41e-0c75f65d719c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1979e19b3d93e9687d6abb137758bc71548b10ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577794"
 ---
 # <a name="format-a-reporting-services-script-file"></a>Reporting Services 스크립트 파일 형식 지정
@@ -46,7 +46,7 @@ End Sub
 > [!IMPORTANT]  
 >  사용자 자격 증명은 스크립트 환경에서 관리되며 RS.exe를 사용하여 명령 프롬프트 인수를 통해 전달됩니다. *rs* 변수를 사용하여 웹 서비스의 인증을 설정할 수도 있지만 스크립트 환경을 사용하는 것이 좋습니다. 스크립트 파일 자체에서 웹 서비스를 인증하지 않아도 됩니다. 스크립트 환경 인증에 대한 자세한 내용은 [RS.exe 유틸리티&#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)를 참조하세요.  
   
- 스크립트 파일 내에서는 네임스페이스를 선언하지 않습니다. 스크립팅 환경에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] namespaces available to you: **System.Web.Services**, **System.Web.Services.Protocols**, **System.Xml**, and **System.IO**.  
+ 스크립트 파일 내에서는 네임스페이스를 선언하지 않습니다. 스크립팅 환경에서는 유용한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 네임스페이스인 **System.Web.Services**, **System.Web.Services.Protocols**, **System.Xml** 및 **System.IO**를 사용할 수 있습니다.  
   
  스크립트 예제는 [SQL Server Reporting Services 제품 예제(SQL Server Reporting Services Product Samples)](https://go.microsoft.com/fwlink/?LinkId=177889)를 참조하십시오.  
   

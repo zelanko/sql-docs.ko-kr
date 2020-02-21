@@ -11,10 +11,10 @@ ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 54bd3d5acaf487909a4965c1f73a2e8c00aef82a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580228"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>보고서로 HTML 가져오기(보고서 작성기 및 SSRS)
@@ -27,18 +27,18 @@ ms.locfileid: "65580228"
 > [!NOTE]  
 >  HTML 태그가 들어 있는 텍스트를 가져오면 입력란에서 항상 데이터 구문을 분석합니다. HTML 태그의 하위 집합만 지원되기 때문에 렌더링된 보고서에 표시되는 HTML이 원래 HTML과 다를 수 있습니다.  
   
- 빠르게 시작하려면 [자습서: 텍스트 서식 지정&#40;보고서 작성기&#41;](../../reporting-services/tutorial-format-text-report-builder.md)을 참조하세요.  
+ 빠르게 시작하려면 [자습서: 텍스트 서식 지정&#40;보고서 작성기&#41;](../../reporting-services/tutorial-format-text-report-builder.md)를 참조하세요.  
   
 ## <a name="supported-html-tags"></a>지원되는 HTML 태그  
  다음은 자리 표시자 텍스트로 정의될 때 HTML로 렌더링될 전체 태그 목록입니다.  
   
 -   하이퍼링크: \<A HREF>  
   
--   글꼴: \<FONT>  
+-   글꼴: \<글꼴>  
   
--   머리글, 스타일 및 블록 요소: \<H{n}>, \<DIV>, \<SPAN>,\<P>, \<DIV>, \<LI>, \<HN>  
+-   헤더, 스타일 및 블록 요소: \<H{n}>, \<DIV>, \<SPAN>,\<P>, \<DIV>, \<LI>, \<HN>  
   
--   텍스트 서식: \<B>, \<I>, \<U>, \<S>  
+-   텍스트 형식: \<B>, \<I>, \<U>, \<S>  
   
 -   목록 처리: \<OL>, \<UL>, \<LI>  
   
@@ -63,7 +63,7 @@ ms.locfileid: "65580228"
   
     -   상대 CSS 길이 단위는 무시되고 지원되지 않습니다. 지원되지 않는 단위에는 em, ex, px, %, rem이 있습니다.  
   
--   color  
+-   색  
   
 -   padding, padding-bottom, padding-top, padding-right, padding-left  
   

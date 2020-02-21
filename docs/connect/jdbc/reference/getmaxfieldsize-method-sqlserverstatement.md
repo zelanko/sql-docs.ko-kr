@@ -16,10 +16,10 @@ ms.assetid: ed7bbcb8-660b-4e9b-8241-e216c42826f9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9a1700cc8bb2bfb54dd9ddee52da54899f764650
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982105"
 ---
 # <a name="getmaxfieldsize-method-sqlserverstatement"></a>getMaxFieldSize 메서드(SQLServerStatement)
@@ -34,14 +34,14 @@ ms.locfileid: "67982105"
 public final int getMaxFieldSize()  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  열에 포함될 수 있는 최대 바이트 수를 나타내는 **int**이거나, 제한이 없는 경우 0입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 getMaxFieldSize 메서드는 java. s q l. s a l. s a l.  
+## <a name="remarks"></a>설명  
+ 이 getMaxFieldSize 메서드는 java.sql.Statement 인터페이스의 getMaxFieldSize 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerStatement 메서드](../../../connect/jdbc/reference/sqlserverstatement-methods.md)   

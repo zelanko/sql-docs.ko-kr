@@ -12,10 +12,10 @@ ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d660cc7b3c15706951981540f592589ba92e9df2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62513664"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>Reporting Services 2016 기본 모드 보고서 서버 설치
@@ -38,7 +38,7 @@ ms.locfileid: "62513664"
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 명령줄 유틸리티(rsconfig.exe, rskeymgmt.exe 및 rs.exe).  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 및 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 이 이제 별도로 다운로드됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 및 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]는 이제 별도로 다운로드됩니다.  
   
  기본 모드 보고서 서버 설치에 대해 구성되는 항목은 다음과 같습니다.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "62513664"
   
 -   [SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)을 검토합니다.  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 같은 인스턴스에 함께 설치해야 합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스는 설치 프로그램에서 만들어 구성한 보고서 서버 데이터베이스를 호스팅합니다.  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 같은 인스턴스에 함께 설치해야 합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스는 설치 프로그램에서 만들어 구성한 보고서 서버 데이터베이스를 호스팅합니다.  
   
 -   설치 프로그램을 실행하는 데 사용된 사용자 계정은 로컬 Administrators 그룹에 속해야 하고, 보고서 서버 데이터베이스를 호스팅하는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에서 데이터베이스에 액세스하고 이러한 데이터베이스를 만들 수 있는 권한이 있어야 합니다.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "62513664"
 ##  <a name="bkmk_defaultURLreservations"></a> 기본 URL 예약  
  URL 예약은 접두사, 호스트 이름, 포트 및 가상 디렉터리로 구성됩니다.  
   
-|부분|설명|  
+|부분|Description|  
 |----------|-----------------|  
 |접두사|기본 접두사는 HTTP입니다. 이전에 SSL(Secure Sockets Layer) 인증서를 설치한 경우 설치 프로그램에서 HTTPS 접두사를 사용하는 URL 예약을 만들려고 시도합니다.|  
 |호스트 이름|기본 호스트 이름은 강력한 와일드카드(+)로서 보고서 서버가 `https://<computername>/reportserver`, `https://localhost/reportserver` 또는 `https://<IPAddress>/reportserver`를 포함하여 컴퓨터로 확인되는 모든 호스트 이름에 대해 지정된 포트에서 HTTP 요청을 수락하도록 지정합니다.|  
@@ -155,11 +155,11 @@ ms.locfileid: "62513664"
   
     -   **관리자 권한을 가진** 브라우저를 열고 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]에 연결합니다. 예를 들어 `https://localhost/Reports`입니다.  
   
-    -   관리자 권한을 가진 브라우저를 열고 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버 페이지에 연결합니다. 예:  `https://localhost/ReportServer`  
+    -   관리자 권한을 가진 브라우저를 열고 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버 페이지에 연결합니다. 예: `https://localhost/ReportServer`  
   
  자세한 내용은 다음 두 항목의 기본 섹션을 참조하세요.  
   
- [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)  
+ [Reporting Services 설치 확인](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)  
   
  [Reporting Services 설치 문제 해결](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)   
   

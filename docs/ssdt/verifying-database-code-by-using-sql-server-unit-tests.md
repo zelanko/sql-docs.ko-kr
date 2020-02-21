@@ -1,23 +1,24 @@
 ---
-title: SQL Server 단위 테스트를 사용하여 데이터베이스 코드 확인 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: v를 사용하여 데이터베이스 코드 확인
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 003713e2-de6b-4277-a0a8-7d1f2f4ffb39
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b3e720389f790282f1ad7a33302e2d277128178f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: ab6cccf656d0951c5f8fd72bb5863bbe91f0e74d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140948"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243494"
 ---
 # <a name="verifying-database-code-by-using-sql-server-unit-tests"></a>SQL Server 단위 테스트를 사용하여 데이터베이스 코드 확인
+
 SQL Server 단위 테스트를 사용하면 데이터베이스의 기준 상태를 설정하고 이후 데이터베이스 개체에 대해 수행하는 변경 내용을 확인할 수 있습니다.  
   
 데이터베이스의 기준 상태를 설정하려면 테스트 프로젝트를 만들고 데이터베이스 개체에 대해 실행되는 Transact\-SQL 집합을 작성합니다. 이러한 테스트를 사용하여 격리된 개발 환경에서 해당 개체가 예상대로 작동하는지 여부를 확인할 수 있습니다. SQL Server 단위 테스트는 SQL Server 데이터베이스 프로젝트를 사용하는 오프라인 데이터베이스 개발에서 수행하면 효과적입니다(자세한 내용은 [프로젝트 기반 오프라인 데이터베이스 개발](../ssdt/project-oriented-offline-database-development.md) 참조). SQL Server 단위 테스트의 기준 집합이 준비되었으면 변경 내용을 버전 제어에 체크 인하기 전에 이러한 테스트를 사용하여 데이터베이스가 올바르게 작동하는지 확인할 수 있습니다.  

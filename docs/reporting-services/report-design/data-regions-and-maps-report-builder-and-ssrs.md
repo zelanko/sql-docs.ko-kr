@@ -11,10 +11,10 @@ ms.assetid: 3afb8874-b36c-4e44-a0d8-80d2f7135fb1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3ddd2d78cc983e1855007d144193d70035931177
-ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67037834"
 ---
 # <a name="data-regions-and-maps-report-builder-and-ssrs"></a>데이터 영역 및 지도(보고서 작성기 및 SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "67037834"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="table"></a>Table  
+## <a name="table"></a>테이블  
  테이블은 데이터를 행 단위로 표시하는 데이터 영역입니다. 테이블의 열은 고정되어 있습니다. 열의 개수는 보고서를 디자인할 때 결정합니다. 그러나 테이블 행은 고정되지 않고 데이터에 맞게 아래쪽으로 확장됩니다. 테이블에 그룹을 추가하여 선택한 필드나 식으로 데이터를 구성할 수 있습니다. 보고서에 테이블을 추가하는 방법에 대한 자세한 내용은 [테이블&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)을 참조하세요.  
   
 ## <a name="matrix"></a>행렬  
@@ -41,7 +41,7 @@ ms.locfileid: "67037834"
  계기는 범위 내의 특정 값을 가리키는 표시기가 있는 범위로 데이터를 나타냅니다. 계기는 KPI(핵심 성과 지표)와 기타 메트릭을 표시하는 데 사용됩니다. 계기의 예로는 선형 계기와 원형 계기가 있습니다. 자세한 내용은 [보고서에 계기 추가](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="map"></a>지도  
- 지도를 사용하면 지리적 배경을 바탕으로 데이터를 제공할 수 있습니다. 지도 데이터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리의 공간 데이터, ESRI 셰이프 파일 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bing 지도 타일일 수 있습니다. 공간 데이터는 모양이나 영역을 나타내는 다각형, 경로나 길을 나타내는 선, 표식으로 나타내는 점 등을 정의하는 좌표 집합으로 구성됩니다. 집계 데이터와 지도 요소를 연결하면 지도 요소의 색과 크기를 자동으로 변경할 수 있습니다. 예를 들어 판매액을 기준으로 상점의 표식 유형을 변경하거나 속도 제한을 기준으로 길의 색을 변경할 수 있습니다. 자세한 내용은 [지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)를 참조하세요.  
+ 지도를 사용하여 지리적 배경에 대한 데이터를 제공할 수 있습니다. 지도 데이터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리의 공간 데이터, ESRI 셰이프 파일 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bing 지도 타일일 수 있습니다. 공간 데이터는 모양이나 영역을 나타내는 다각형, 경로나 길을 나타내는 선, 표식으로 나타내는 점 등을 정의하는 좌표 집합으로 구성됩니다. 집계 데이터와 지도 요소를 연결하면 지도 요소의 색과 크기를 자동으로 변경할 수 있습니다. 예를 들어 판매액을 기준으로 상점의 표식 유형을 변경하거나 속도 제한을 기준으로 길의 색을 변경할 수 있습니다. 자세한 내용은 [지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="data-regions-in-the-report-layout"></a>보고서 레이아웃의 데이터 영역  
  보고서에는 여러 데이터 영역을 추가할 수 있으며, 데이터 영역은 연결된 보고서 데이터 세트의 데이터에 맞게 확장됩니다. 예를 들어 연도별 각 제품의 판매량을 표시하는 행렬에는 제품 이름을 기반으로 하는 행 그룹과 연도를 기반으로 하는 열 그룹이 있습니다. 보고서를 실행하면 행렬은 각 제품에 대해 페이지 아래쪽으로 확장되고, 각 연도에 대해 페이지 가로 방향으로 확장됩니다. 보고서 디자인 화면의 행렬 옆에 있는 차트는 렌더링된 보고서의 확장된 행렬 옆에 표시됩니다. 페이지에서 데이터 영역이 렌더링되는 방식은 보고서 출력 형식을 기반으로 하는 규칙 집합을 따릅니다. 예를 들어 차트 및 행렬이 페이지에서 렌더링되는 방식을 제어하려는 경우 사각형을 컨테이너로 사용하거나 목록에 있는 두 데이터 영역을 중첩할 수 있습니다. 자세한 내용은 [페이지 레이아웃 및 렌더링&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)로 저장할 수 있습니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "67037834"
  자세한 내용은 [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Reporting Services 개념 (SSRS)](../reporting-services-concepts-ssrs.md) [보고서, 보고서 파트 및 보고서 정의 &#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
+ [Reporting Services 개념(SSRS)](../reporting-services-concepts-ssrs.md) [보고서, 보고서 파트 및 보고서 정의&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [페이지 레이아웃 및 렌더링&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
  [보고서 작성기 자습서](../../reporting-services/report-builder-tutorials.md)   
  [Reporting Services&#40;SSRS&#41; 자습서](../../reporting-services/reporting-services-tutorials-ssrs.md)  

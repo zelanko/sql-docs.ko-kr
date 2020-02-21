@@ -11,22 +11,22 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: 2c928db781c6e7d31f07e1cea37ed80481b8fed6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68136477"
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 릴리스 정보
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
-이 문서에서는 SQL Server 2017의 관련 제한 사항 및 문제에 대해 설명합니다. 관련 내용은 다음을 참조하세요.
+이 문서에서는 SQL Server 2017의 관련 제한 사항 및 문제에 대해 설명합니다. 관련 정보는 다음을 참조하세요.
 - [SQL Server 2017의 새로운 기능](../sql-server/what-s-new-in-sql-server-2017.md)
 - [Linux 릴리스 노트의 SQL Server](../linux/sql-server-linux-release-notes.md)
 - 최신 CU(누적 업데이트) 릴리스에 대한 자세한 내용: [SQL Server 2017 누적 업데이트](https://aka.ms/sql2017cu)
 
 **SQL Server를 사용해 보세요.**
 - [![평가 센터에서 다운로드](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) [SQL Server 2017 다운로드](https://go.microsoft.com/fwlink/?LinkID=829477)
-- [![가상 컴퓨터 만들기](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [SQL Server 2017이 있는 가상 컴퓨터 실행](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
+- [![가상 머신 만들기](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [SQL Server 2017이 있는 가상 머신 실행](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 
 > [!NOTE]
 > 이제 SQL Server 2019 미리 보기를 사용할 수 있습니다. 자세한 내용은 [SQL Server 2019의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15)을 참조하세요.
@@ -99,7 +99,7 @@ ms.locfileid: "68136477"
 
     3. 그런 다음 남아 있는 기능에 따라 *SSRS* 또는 *PBIRS* 폴더로 이동합니다.
     4. WMI 폴더로 이동합니다.
-    5. 다음 명령을 실행합니다.
+    5. 다음 명령 실행:
 
         ```console
         regsvr32 /i ReportingServicesWMIProvider.dll

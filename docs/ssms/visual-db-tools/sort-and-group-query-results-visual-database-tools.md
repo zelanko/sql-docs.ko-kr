@@ -1,10 +1,9 @@
 ---
-title: 쿼리 결과 정렬 및 그룹화(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 쿼리 결과 정렬 및 그룹화
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,14 @@ helpviewer_keywords:
 ms.assetid: b004e1c0-cacc-4241-9426-9fd426978918
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d285e646bec8a09dbd9b32b4d71766907772bb4a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 4924e002cecaca30538ec20045d57a1ec901b68e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266809"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255040"
 ---
 # <a name="sort-and-group-query-results-visual-database-tools"></a>쿼리 결과 정렬 및 그룹화(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

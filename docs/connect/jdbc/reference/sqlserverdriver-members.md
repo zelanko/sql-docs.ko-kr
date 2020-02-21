@@ -11,10 +11,10 @@ ms.assetid: 079c7eb7-71e4-4109-83de-f6d785433c95
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 069b366f4414d4d6706ba14eb44662996273dad0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971186"
 ---
 # <a name="sqlserverdriver-members"></a>SQLServerDriver 멤버
@@ -24,7 +24,7 @@ ms.locfileid: "67971186"
   
 ## <a name="constructors"></a>생성자  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[SQLServerDriver()](../../../connect/jdbc/reference/sqlserverdriver-constructor.md)|[SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md) 클래스의 새 인스턴스를 초기화합니다.|  
   
@@ -36,7 +36,7 @@ ms.locfileid: "67971186"
   
 ## <a name="methods"></a>메서드  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[acceptsURL](../../../connect/jdbc/reference/acceptsurl-method-sqlserverdriver.md)|지정된 URL이 유효한지 확인합니다.|  
 |[connect](../../../connect/jdbc/reference/connect-method-sqlserverdriver.md)|데이터베이스에 대한 연결을 만듭니다.|  

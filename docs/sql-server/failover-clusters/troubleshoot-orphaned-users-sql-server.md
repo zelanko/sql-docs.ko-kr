@@ -1,6 +1,7 @@
 ---
-title: 분리된 사용자 문제 해결(SQL Server) | Microsoft 문서
-ms.custom: ''
+title: 분리된 사용자 문제 해결
+description: 분리된 사용자는 데이터베이스 사용자 로그인이 master 데이터베이스에 더 이상 존재하지 않는 경우 발생합니다. 이 문서에서는 분리된 사용자를 식별 및 해결하는 방법을 설명합니다.
+ms.custom: seo-lt-2019
 ms.date: 07/14/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -19,17 +20,17 @@ ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d42da661015f1184945d4e4ae45cb3f70016e987
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 91d3d04efa0300683a5ee727cfa0a1fcd31e3c10
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063810"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74822055"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>분리된 사용자 문제 해결(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 분리된 사용자는 데이터베이스 사용자가 **마스터** 데이터베이스의 로그인을 기반으로 하지만 해당 로그인이 **마스터**에 더 이상 존재하지 않는 경우 발생합니다. 이는 로그인이 삭제되었거나 데이터베이스가 로그인이 존재하지 않는 다른 서버로 이동된 경우에 발생할 수 있습니다. 이 항목에서는 분리된 사용자를 찾아서 로그인에 다시 매핑하는 방법을 설명합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 분리된 사용자는 데이터베이스 사용자가 **마스터** 데이터베이스의 로그인을 기반으로 하지만 해당 로그인이 **마스터**에 더 이상 존재하지 않는 경우 발생합니다. 이는 로그인이 삭제되었거나 데이터베이스가 로그인이 존재하지 않는 다른 서버로 이동된 경우에 발생할 수 있습니다. 이 문서에서는 분리된 사용자를 찾아서 로그인에 다시 매핑하는 방법을 설명합니다.  
   
 > [!NOTE]  
 >  포함된 데이터베이스 사용자를 이동될 수 있는 데이터베이스에 사용하면 분리된 사용자가 발생할 가능성이 감소합니다. 자세한 내용은 [포함된 데이터베이스 사용자 - 이식 가능한 데이터베이스 만들기](../../relational-databases/security/contained-database-users-making-your-database-portable.md)를 참조하세요.  
@@ -55,7 +56,7 @@ ms.locfileid: "68063810"
   
  해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 서버 인스턴스에서 정의되지 않았거나 잘못 정의되어 있는 데이터베이스 사용자(로그인 기반)는 이 인스턴스에 로그인할 수 없습니다. 이러한 사용자는 해당 서버 인스턴스에 있는 데이터베이스의 *분리된 사용자* 라고 합니다. 데이터베이스 사용자가 `master` 인스턴스에 없는 로그인 SID로 매핑되는 경우 사용자가 분리될 수 있습니다. 로그인이 생성되지 않은 경우 데이터베이스가 복원되거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 다른 인스턴스에 연결된 후 데이터베이스 사용자가 분리될 수 있습니다. 또한 데이터베이스 사용자는 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 삭제되면 분리될 수 있습니다. 로그인을 다시 만들더라도 SID가 다르므로 여전히 데이터베이스 사용자가 분리됩니다.  
   
-## <a name="to-detect-orphaned-users"></a>분리된 사용자를 검색하려면  
+## <a name="detect-orphaned-users"></a>분리된 사용자 검색  
 
 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 PDW의 경우**
 
@@ -95,7 +96,7 @@ SQL 데이터베이스 또는 SQL 데이터 웨어하우스에서는 `sys.server
 
 3. 두 목록을 비교하여 사용자 데이터베이스 `sys.database_principals` 테이블에 master 데이터베이스 `sql_logins` 테이블의 로그인 SID와 일치하지 않는 사용자 SID가 있는지 확인합니다. 
   
-## <a name="to-resolve-an-orphaned-user"></a>분리된 사용자를 확인하려면  
+## <a name="resolve-an-orphaned-user"></a>분리된 사용자 해결  
 master 데이터베이스에서 [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) 문을 SID 옵션과 함께 사용하고 이전 섹션에서 받은 데이터베이스 사용자의 `SID` 를 제공하여 누락된 로그인을 다시 만듭니다.  
   
 ```  
@@ -132,6 +133,6 @@ ALTER LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
  [sp_grantlogin&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [sp_password&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-password-transact-sql.md)   
  [sys.sysusers&#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysusers-transact-sql.md)   
- [sys.sql_logins](../../relational-databases/system-catalog-views/sys-sql-logins-transact-sql.md) [sys.syslogins &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslogins-transact-sql.md)  
+ [sys.sql_logins](../../relational-databases/system-catalog-views/sys-sql-logins-transact-sql.md) [sys.syslogins&#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslogins-transact-sql.md)  
   
   

@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 105fa47ecaa560eace9d798a39950639ecbcb5c0
-ms.sourcegitcommit: 043c0be0ceab09434c394bf0d72aea5b7ae88cb5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "76831181"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>MSSQL Spark 커넥터를 사용하여 Spark에서 SQL Server를 읽고 쓰는 방법

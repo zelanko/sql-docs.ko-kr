@@ -1,5 +1,5 @@
 ---
-title: 'PDOStatement:: fetch | Microsoft Docs'
+title: PDOStatement::fetch | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 4368e362-5bda-4da1-8462-33714683c39f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a69b1093240112a804504f8d0e636ffbdfe8439e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993062"
 ---
 # <a name="pdostatementfetch"></a>PDOStatement::fetch
@@ -36,16 +36,16 @@ $*cursor_orientation*: prepare 문이 `PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL`�
   
 $*cursor_offset*: $*cursor_orientation*이 PDO::FETCH_ORI_ABS이거나 PDO::FETCH_ORI_REL 및 PDO::ATTR_CURSOR가 PDO::CURSOR_SCROLL인 경우 페치할 행을 지정하는 선택적 (정수) 기호입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 행 또는 false를 반환하는 혼합 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 페치가 호출되면 커서가 자동으로 이동합니다. 다음 표에는 가능한 $*fetch_style* 값 목록이 나와 있습니다.  
   
-|$*fetch_style*|설명|  
+|$*fetch_style*|Description|  
 |-------------------|---------------|  
 |PDO::FETCH_ASSOC|열 이름으로 인덱싱된 배열을 지정합니다.|  
-|PDO::FETCH_BOTH|열 이름 및 0부터 시작하는 순서에 따라 인덱싱된 배열을 지정합니다. 기본값입니다.|  
+|PDO::FETCH_BOTH|열 이름 및 0부터 시작하는 순서에 따라 인덱싱된 배열을 지정합니다. 이것이 기본값입니다.|  
 |PDO::FETCH_BOUND|True를 반환하고 [PDOStatement::bindColumn](../../connect/php/pdostatement-bindcolumn.md)에서 지정한 대로 값을 할당합니다.|  
 |PDO::FETCH_CLASS|인스턴스를 만들고 열을 명명된 속성에 매핑합니다.<br /><br />페치를 호출하기 전에 [PDOStatement::setFetchMode](../../connect/php/pdostatement-setfetchmode.md) 를 호출합니다.|  
 |PDO::FETCH_INTO|요청된 클래스의 인스턴스를 새로 고칩니다.<br /><br />페치를 호출하기 전에 [PDOStatement::setFetchMode](../../connect/php/pdostatement-setfetchmode.md) 를 호출합니다.|  
@@ -57,9 +57,9 @@ $*cursor_offset*: $*cursor_orientation*이 PDO::FETCH_ORI_ABS이거나 PDO::FETC
   
 커서가 스크롤 가능한 경우(PDO::ATTR_CURSOR = PDO::CURSOR_SCROLL) 페치는 결과 집합 경계 내에서 커서를 이동합니다. 다음 표에는 가능한 $*cursor_orientation* 값 목록이 나와 있습니다.  
   
-|$*cursor_orientation*|설명|  
+|$*cursor_orientation*|Description|  
 |--------------------------|---------------|  
-|PDO::FETCH_ORI_NEXT|다음 행을 검색합니다. 기본값입니다.|  
+|PDO::FETCH_ORI_NEXT|다음 행을 검색합니다. 이것이 기본값입니다.|  
 |PDO::FETCH_ORI_PRIOR|이전 행을 검색합니다.|  
 |PDO::FETCH_ORI_FIRST|첫 번째 행을 검색합니다.|  
 |PDO::FETCH_ORI_LAST|마지막 행을 검색합니다.|  

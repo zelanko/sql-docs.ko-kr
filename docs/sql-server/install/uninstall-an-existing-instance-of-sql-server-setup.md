@@ -1,7 +1,7 @@
 ---
-title: SQL Server의 기존 인스턴스 제거(설치) | Microsoft 문서
-ms.custom: ''
-ms.date: 09/11/2019
+title: 기존 인스턴스 제거
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 16c406052b563accdc2cd98fd629909cce38e0ce
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: 980982f6ae55d72ef6a54fdc07c0c707c4752b8f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71251064"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258954"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>SQL Server의 기존 인스턴스 제거(설치)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -55,13 +55,13 @@ ms.locfileid: "71251064"
     > ReportServer 데이터베이스는 SQL Server Reporting Service에 포함되어 있습니다.   
 
  
-1.  **모든** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **서비스 를 중지합니다.** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 제거하기 전에 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 중지하는 것이 좋습니다. 활성 연결로 인해 제거 작업이 실패할 수 있습니다.  
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **서비스를** **모두 중지합니다.** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 제거하기 전에 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 중지하는 것이 좋습니다. 활성 연결로 인해 제거 작업이 실패할 수 있습니다.  
   
 1.  **적합한 권한을 가진 계정을 사용합니다.** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정 또는 동등한 권한을 가진 계정을 사용하여 서버에 로그온합니다. 예를 들어 로컬 Administrators 그룹의 멤버 계정을 사용하여 서버에 로그온할 수 있습니다.  
   
-## <a name="uninstall"></a>Uninstall 
+## <a name="uninstall"></a>제거 
 
-# <a name="windows-10--2016-tabwindows10"></a>[Windows 10/2016+](#tab/Windows10)
+# <a name="windows-10--2016-"></a>[Windows 10/2016+](#tab/Windows10)
 
 Windows 10, Windows Server 2016, Windows Server 2019 이상에서 SQL Server를 제거하려면 다음 단계를 수행합니다. 
 
@@ -84,7 +84,7 @@ Windows 10, Windows Server 2016, Windows Server 2019 이상에서 SQL Server를 
  
 1. **앱 및 기능** 창을 새로 고쳐서 SQL Server 인스턴스가 성공적으로 제거되었는지 확인하고 여전히 존재하는 SQL Server 구성 요소가 있는지 확인합니다. 그렇게 선택한 경우 이 창에서도 이러한 구성 요소를 제거합니다. 
 
-# <a name="windows-2008---2012-r2tabwindows2012"></a>[Windows 2008 - 2012 R2](#tab/windows2012)
+# <a name="windows-2008---2012-r2"></a>[Windows 2008 - 2012 R2](#tab/windows2012)
 
 Windows Server 2008, Windows Server 2012 및 Windows 2012 R2에서 SQL Server를 제거하려면 다음 단계를 수행합니다. 
 

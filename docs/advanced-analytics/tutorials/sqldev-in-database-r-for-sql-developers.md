@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f0734203a5b5e49ad344b2c0440208c6b652c080
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 9669b2c38d2e8b571ef7e519100b13cf5a63a10d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73725470"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479410"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>자습서: SQL 개발자를 위한 R 데이터 분석
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-SQL 프로그래머를 위한 이 자습서에서는 SQL Server에서 [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) 데이터베이스를 사용하여 R 기반 기계 학습 솔루션을 빌드 및 배포하여 R 통합에 대해 알아봅니다. [Machine Learning Services]([Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) 및 R 언어 지원 기능과 함께 T-SQL, SQL Server Management Studio 및 데이터베이스 엔진 인스턴스를 사용합니다.
+SQL 프로그래머를 위한 이 자습서에서는 SQL Server에서 [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) 데이터베이스를 사용하여 R 기반 기계 학습 솔루션을 빌드 및 배포하여 R 통합에 대해 알아봅니다. [Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) 및 R 언어 지원 기능과 함께 T-SQL, SQL Server Management Studio 및 데이터베이스 엔진 인스턴스를 사용합니다.
 
 이 자습서에서는 데이터 모델링 워크플로에 사용되는 R 함수를 소개합니다. 단계에는 데이터 탐색, 이진 분류 모델 빌드 및 학습, 모델 배포가 포함됩니다. 빌드할 모델은 하루의 시간, 이동 거리 및 선택 위치를 기준으로 트립이 팁을 생성할 수 있는지 여부를 예측합니다. 
 
@@ -58,7 +58,7 @@ SQL 프로그래머를 위한 이 자습서에서는 SQL Server에서 [NYCTaxi_s
 
 + [R 라이브러리](../package-management/r-package-information.md)
 
-+ [사용 권한](../security/user-permission.md)
++ [권한](../security/user-permission.md)
 
 + [NYC Taxi 데모 데이터베이스](demo-data-nyctaxi-in-sql.md)
 

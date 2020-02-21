@@ -1,22 +1,23 @@
 ---
-title: SQL Server 빅 데이터 클러스터의 Azure Toolkit for IntelliJ에서 Spark 작업 실행
-titleSuffix: SQL Server big data clusters
+title: 'Spark 작업 실행: IntelliJ용 Azure 도구 키트'
+titleSuffix: SQL Server Big Data Clusters
 description: Azure Toolkit for IntelliJ의 SQL Server 빅 데이터 클러스터에 Spark 작업 제출
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 08/21/2019
 ms.topic: conceptual
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 59946731dc1e76716b6202dd6f8aa93d777986b3
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 70cdc7e9738abdde2dfaf479320b11a94469f661
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653713"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244076"
 ---
-# <a name="submit-spark-jobs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-intellij"></a>IntelliJ에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에 Spark 작업 제출
+# <a name="submit-spark-jobs-on-big-data-clusters-2019-in-intellij"></a>IntelliJ에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에 Spark 작업 제출
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -51,9 +52,9 @@ ms.locfileid: "69653713"
 
 1. IntelliJ IDEA를 시작하고 프로젝트를 만듭니다. **새 프로젝트** 대화 상자에서 아래 단계를 수행합니다. 
 
-   1\. **Azure Spark/HDInsight** > **Spark 프로젝트(샘플 포함)(Scala)** 를 선택합니다.
+   a. **Azure Spark/HDInsight** > **Spark 프로젝트(샘플 포함)(Scala)** 를 선택합니다.
 
-   2\. **빌드 도구** 목록에서 필요에 따라 다음 중 하나를 선택합니다.
+   b. **빌드 도구** 목록에서 필요에 따라 다음 중 하나를 선택합니다.
 
       * **Maven**: Scala 프로젝트 만들기 마법사 지원
       * **SBT**: Scala 프로젝트에 대해 종속성 관리 및 빌드 수행
@@ -74,19 +75,19 @@ ms.locfileid: "69653713"
 
     ![Spark SDK 선택](./media/spark-submit-job-intellij-tool-plugin/hdi-new-project.png)
 
-   1\. 프로젝트 이름 및 위치를 입력합니다.
+   a. 프로젝트 이름 및 위치를 입력합니다.
 
-   2\. **프로젝트 SDK** 드롭다운 목록에서 Spark 2.x 클러스터에 대해 **Java 1.8**을 선택하거나 Spark 1.x 클러스터에 대해 **Java 1.7**을 선택합니다.
+   b. **프로젝트 SDK** 드롭다운 목록에서 Spark 2.x 클러스터에 대해 **Java 1.8**을 선택하거나 Spark 1.x 클러스터에 대해 **Java 1.7**을 선택합니다.
 
-   c. **Spark 버전** 드롭다운 목록에서 Scala 프로젝트 만들기 마법사는 적절한 버전의 Spark SDK 및 Scala SDK를 연결합니다. Spark 클러스터 버전이 2.0 이전인 경우 **Spark 1.x**를 선택합니다. 그렇지 않으면 **Spark2.x**를 선택합니다. 이 예제에서는 **Spark 2.0.2(Scala 2.11.8)** 를 사용합니다.
+   다. **Spark 버전** 드롭다운 목록에서 Scala 프로젝트 만들기 마법사는 적절한 버전의 Spark SDK 및 Scala SDK를 연결합니다. Spark 클러스터 버전이 2.0 이전인 경우 **Spark 1.x**를 선택합니다. 그렇지 않으면 **Spark2.x**를 선택합니다. 이 예제에서는 **Spark 2.0.2(Scala 2.11.8)** 를 사용합니다.
 
 6. **마침**을 선택합니다.
 
 7. Spark 프로젝트가 자동으로 아티팩트를 만듭니다. 아티팩트를 보려면 다음 단계를 수행합니다.
 
-   1\. **파일** 메뉴에서 **프로젝트 구조**를 선택합니다.
+   a. **파일** 메뉴에서 **프로젝트 구조**를 선택합니다.
 
-   2\. **프로젝트 구조** 대화 상자에서 **아티팩트**를 선택하여 만든 기본 아티팩트를 봅니다. 더하기 기호( **+** )를 선택하여 사용자 고유의 아티팩트를 만들 수도 있습니다.
+   b. **프로젝트 구조** 대화 상자에서 **아티팩트**를 선택하여 만든 기본 아티팩트를 봅니다. 더하기 기호( **+** )를 선택하여 사용자 고유의 아티팩트를 만들 수도 있습니다.
 
       ![대화 상자의 아티팩트 정보](./media/spark-submit-job-intellij-tool-plugin/default-artifact.png)
       

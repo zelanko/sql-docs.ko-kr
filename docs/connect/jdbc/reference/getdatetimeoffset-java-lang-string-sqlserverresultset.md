@@ -11,10 +11,10 @@ ms.assetid: e585927c-0dee-43fd-b71e-c9f1701790bd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a929b5869e58f4f1207b14474302fdb247251850
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983860"
 ---
 # <a name="getdatetimeoffsetjavalangstring-sqlserverresultset"></a>getDateTimeOffset(java.lang.string)(SQLServerResultSet)
@@ -36,14 +36,14 @@ public microsoft.sql.DateTimeOffset getDateTimeOffset(String columnName)
   
  열 이름입니다.  
   
-## <a name="return-value"></a>반환 값  
- [DateTimeOffset 클래스](../../../connect/jdbc/reference/datetimeoffset-class.md) 개체입니다.  
+## <a name="return-value"></a>Return Value  
+ [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- [SQLServerResultSet](../../../connect/jdbc/reference/updatedatetimeoffset-sqlserverresultset.md)를 사용 하 여 [datetimeoffset 클래스](../../../connect/jdbc/reference/datetimeoffset-class.md) 값을 업데이트할 수 있습니다.  
+## <a name="remarks"></a>설명  
+ [SQLServerResultSet.updateDateTimeOffset](../../../connect/jdbc/reference/updatedatetimeoffset-sqlserverresultset.md)을 사용하여 [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) 값을 업데이트할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

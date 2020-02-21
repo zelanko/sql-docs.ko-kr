@@ -1,5 +1,5 @@
 ---
-title: getPooledConnection 메서드 () | Microsoft Docs
+title: getPooledConnection 메서드() | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: aad6c325-3398-462c-aa6e-201dc89fa5ef
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 89b0379d9708a0f0d8809362afed6e64fe19f052
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980824"
 ---
 # <a name="getpooledconnection-method-"></a>getPooledConnection 메서드()
@@ -34,14 +34,14 @@ ms.locfileid: "67980824"
 public javax.sql.PooledConnection getPooledConnection()  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
- 이 getPooledConnection 메서드는 javax.sql의 getPooledConnection 메서드를 통해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 getPooledConnection 메서드는 javax.sql.ConnectionPoolDataSource 인터페이스의 getPooledConnection 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [getPooledConnection](../../../connect/jdbc/reference/getpooledconnection-method-sqlserverconnectionpooldatasource.md)   

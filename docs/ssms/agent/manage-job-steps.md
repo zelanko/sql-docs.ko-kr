@@ -1,10 +1,9 @@
 ---
-title: 작업 단계 관리 | Microsoft 문서
-ms.custom: ''
+title: 작업 단계 관리
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -24,13 +23,15 @@ helpviewer_keywords:
 ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7dfb4633efcc190782ce62c17d8c7f26f29b8a0a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 61bf9d30ef6e789e56784ac78bf95215f377e85a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258047"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256107"
 ---
 # <a name="manage-job-steps"></a>작업 단계 관리
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -63,7 +64,7 @@ ms.locfileid: "68258047"
   
 -   실행 프로그램 및 운영 체제 명령  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 통해 데이터를 대량으로 가져오는 데 서식 파일을 사용하는 방법을 보여 줍니다.  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] 문.  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] 태스크  
   

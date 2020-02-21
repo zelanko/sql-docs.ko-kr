@@ -12,10 +12,10 @@ ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 948abaaae630de34f4340370fd2f6f0f4e0a1d34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65503071"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML 뷰어 및 보고서 도구 모음
@@ -30,7 +30,7 @@ ms.locfileid: "65503071"
   
  보고서 도구 모음은 다음 그림과 같습니다. 그러나 실제 보고서 도구 모음은 사용할 수 있는 보고서 기능이나 렌더링 옵션에 따라 다를 수 있습니다.  
   
- ![Report toolbar](../reporting-services/media/ssrs-htmlviewer-toolbar.png "Report toolbar")  
+ ![보고서 도구 모음](../reporting-services/media/ssrs-htmlviewer-toolbar.png "보고서 도구 모음")  
   
  다음 표에서는 일반적으로 사용되는 보고서 도구 모음 기능을 설명합니다. 각 기능은 해당 기능을 액세스하는 데 사용하는 컨트롤로 구분됩니다.  
   
@@ -52,13 +52,13 @@ ms.locfileid: "65503071"
   
  기본 보고서 서버 설치에는 다음과 같은 내보내기 형식이 포함되어 있습니다. 실제로 사용할 수 있는 내보내기 형식 목록은 여기에 나열된 것과 다를 수 있습니다.  
   
-|내보내기 형식|설명|  
+|내보내기 형식|Description|  
 |-------------------|-----------------|  
 |XML|보고서를 XML 구문으로 표시합니다. XML로 표시된 보고서는 새 브라우저 창에서 열립니다.|  
 |CSV|보고서를 쉼표로 분리된 형식으로 표시합니다. 보고서가 CSV 파일 형식과 연결된 애플리케이션에서 열립니다.|  
 |PDF|클라이언트 쪽 PDF 뷰어를 사용하여 보고서를 봅니다. 이 형식을 사용하려면 타사의 PDF Viewer(예: Adobe Acrobat Reader)가 있어야 합니다.|  
 |MHTML|보고서와 함께 이미지와 연결된 내용을 유지하는 MIME로 인코딩된 HTML 형식으로 보고서를 봅니다.|  
-|내보내기|[!INCLUDE[msCoName](../includes/msconame-md.md)] Excel에서 보고서(.xlsx 파일)를 봅니다.|  
+|Excel|[!INCLUDE[msCoName](../includes/msconame-md.md)] Excel에서 보고서(.xlsx 파일)를 봅니다.|  
 |PowerPoint|[!INCLUDE[msCoName](../includes/msconame-md.md)] PowerPoint에서 보고서(.pptx 파일)를 봅니다.|  
 |TIFF 파일|기본 TIFF 뷰어로 보고서를 봅니다. 일부 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 클라이언트의 경우 이 뷰어는 Windows 사진 및 팩스 뷰어입니다. 페이지 단위의 레이아웃으로 보고서를 보려면 이 형식을 선택합니다.|  
 |Word|[!INCLUDE[msCoName](../includes/msconame-md.md)] Word에서 보고서(.docx 파일)를 봅니다.|  

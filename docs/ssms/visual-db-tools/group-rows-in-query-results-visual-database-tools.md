@@ -1,10 +1,7 @@
 ---
-title: 쿼리 결과 행 그룹화(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
-ms.date: 01/19/2017
+title: 쿼리 결과 행 그룹화
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,14 +11,18 @@ helpviewer_keywords:
 ms.assetid: b07082d5-4d55-4903-9af9-4c470554c6d3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3208a3458098b85325a19c014d99bca3b4f05c4d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: 508c7561dc77f375375e174d68d3955e044ae4ee
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254472"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247202"
 ---
 # <a name="group-rows-in-query-results-visual-database-tools"></a>쿼리 결과 행 그룹화(Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 부분합을 계산하거나 테이블의 하위 집합에 대한 다른 요약 정보를 표시하려면 집계 쿼리를 사용하여 그룹을 만듭니다. 각 그룹은 테이블에서 값이 동일한 모든 행의 데이터를 요약하는 데 사용됩니다.  
   
@@ -71,7 +72,7 @@ GROUP BY pub_id, type
   
 5.  집계하려는 열에 대한 **그룹화 방법** 표 셀에서 적절한 집계 함수를 선택합니다.  
   
-    쿼리 및 뷰 디자이너에서 요약 대상 열에 대한 열 별칭이 자동으로 할당됩니다. 자동으로 생성된 이 별칭을 좀 더 의미 있는 별칭으로 바꿀 수 있습니다. 자세한 내용은 [열 별칭 만들기(Visual Database Tools)](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md)를 참조하세요.  
+    쿼리 및 뷰 디자이너에서 요약 대상 열에 대한 열 별칭이 자동으로 할당됩니다. 자동으로 생성된 이 별칭을 좀 더 의미 있는 별칭으로 바꿀 수 있습니다. 자세한 내용은 [열 별칭 만들기](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md)를 참조하세요.  
   
     ![쿼리 결과 집합에 열 별칭 추가](../../ssms/visual-db-tools/media/dv3w9e3.gif "쿼리 결과 집합에 열 별칭 추가")  
   
@@ -84,5 +85,5 @@ GROUP BY pub_id, type
     ```  
   
 ## <a name="see-also"></a>참고 항목  
-[쿼리 결과 정렬 및 그룹화(Visual Database Tools)](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
+[쿼리 결과 정렬 및 그룹화](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
   

@@ -16,10 +16,10 @@ ms.assetid: c1de9804-1f27-4854-8985-3385fadcbebb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0e0eee2cafe95e04ffd5c697667cac2701ee0b80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953037"
 ---
 # <a name="getclob-method-javalangstring-sqlserverresultset"></a>getClob 메서드(java.lang.String)(SQLServerResultSet)
@@ -39,13 +39,13 @@ public java.sql.Clob getClob(java.lang.String colName)
   
  열 이름이 포함된 **문자열**입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  Clob 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 getClob 메서드는 java.sql.ResultSet 인터페이스의 getClob 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

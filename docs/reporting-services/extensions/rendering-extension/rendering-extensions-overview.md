@@ -12,21 +12,21 @@ ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c411048c247224f0d1af95329480f24d9b6ccdad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193888"
 ---
 # <a name="rendering-extensions-overview"></a>렌더링 확장 프로그램 개요
-  렌더링 확장 프로그램은 보고서 데이터 및 레이아웃 정보를 디바이스별 형식으로 변환하는 보고서 서버의 구성 요소 또는 모듈입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에는 HTML, Excel, Word, CSV 또는 텍스트, XML, 이미지 및 PDF의 7개 렌더링 확장 프로그램이 포함되어 있습니다. 추가 렌더링 확장 프로그램을 만들어 다른 형식으로 보고서를 생성할 수 있습니다.  
+  렌더링 확장 프로그램은 보고서 데이터 및 레이아웃 정보를 디바이스별 형식으로 변환하는 보고서 서버의 구성 요소 또는 모듈입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에는 HTML, Excel, Word, CSV 또는 텍스트, XML, 이미지, PDF의 7가지 렌더링 확장 프로그램이 포함되어 있습니다. 추가 렌더링 확장 프로그램을 만들어 다른 형식으로 보고서를 생성할 수 있습니다.  
   
 > [!NOTE]  
 >  사용 가능한 렌더링 확장 프로그램을 확인하려면 RSReportServer.config 파일에서 설치된 확장 프로그램 목록을 볼 수 있습니다.  
   
  다음 표에서는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에 포함된 렌더링 확장 프로그램을 설명합니다.  
   
-|Extension Name|설명|  
+|확장 이름|Description|  
 |--------------------|-----------------|  
 |**XML**|보고서를 XML로 렌더링합니다. 보고서가 브라우저에서 열립니다. 이 XML 출력에 적용되는 추가 변환은 고유의 렌더링 확장 프로그램을 개발하지 않아도 되도록 하여 비용 효율적인 방법이 될 수 있습니다.|  
 |**CSV**|보고서를 쉼표로 분리된 형식으로 렌더링합니다. 보고서가 CSV 파일 형식과 연결된 보기 도구에서 열립니다.|  
@@ -46,7 +46,7 @@ ms.locfileid: "63193888"
  보고서를 처리했을 때 나오는 결과는 ROM(렌더링 개체 모델)이라고 하는 공개적으로 표시되는 개체 모델입니다. 렌더링 개체 모델은 처리된 보고서의 내용, 레이아웃 및 데이터를 정의하는 클래스 모음입니다. ROM은 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]용 사용자 지정 렌더링 확장 프로그램을 디자인, 개발 및 배포하려는 개발자가 사용할 수 있습니다. ROM은 보고서 서버에서 사용자 정의 보고서 데이터와 함께 보고서의 XML 정의를 처리할 때 만들어집니다. 처리가 완료되면 렌더링 확장 프로그램에서 공용 개체 모델을 사용하여 보고서의 출력을 정의합니다. ROM의 사용 가능한 공용 클래스는 **Microsoft.ReportingServices.OnDemandReportRendering** 네임스페이스에 정의되어 있습니다.  
   
 ## <a name="writing-custom-rendering-extensions"></a>사용자 지정 렌더링 확장 프로그램 작성  
- 사용자 지정 렌더링 확장 프로그램을 만들도록 결정하기 전에 더 간단한 다른 방법이 있는지 평가해야 합니다. 다음 작업을 수행할 수 있습니다.  
+ 사용자 지정 렌더링 확장 프로그램을 만들도록 결정하기 전에 더 간단한 다른 방법이 있는지 평가해야 합니다. 다음을 수행할 수 있습니다.  
   
 -   기존 확장 프로그램에 대한 디바이스 정보 설정을 지정하여 렌더링되는 출력을 사용자 지정합니다.  
   

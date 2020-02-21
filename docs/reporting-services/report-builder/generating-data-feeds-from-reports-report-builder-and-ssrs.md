@@ -9,10 +9,10 @@ ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 851a574989f56609298e4283a398fcddce027024
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580732"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>보고서에서 데이터 피드 만들기(보고서 작성기 및 SSRS)
@@ -54,7 +54,7 @@ ms.locfileid: "65580732"
   
  ![RS_Atom_PeerDynamicColumns](../../reporting-services/report-builder/media/rs-atom-peerdynamiccolumns.gif "RS_Atom_PeerDynamicColumns")  
   
- 이 보고서에서 생성된 Atom 서비스 문서는 각 동적 피어 열에 대한 데이터 피드 즉, 지역 및 연도의 두 가지 데이터 피드를 포함합니다. 다음 다이어그램에서는 각 데이터 피드의 내용을 보여 줍니다.  
+ 이 보고서에서 생성된 Atom 서비스 문서는 두 가지 데이터 피드(각 동적 피어 열에 대한 데이터 피드)인 Territory 및 Year를 포함합니다. 다음 다이어그램에서는 각 데이터 피드의 내용을 보여 줍니다.  
   
  ![RS_Atom_PeerDynamicDataFeeds](../../reporting-services/report-builder/media/rs-atom-peerdynamicdatafeeds.gif "RS_Atom_PeerDynamicDataFeeds")  
   
@@ -105,7 +105,7 @@ ms.locfileid: "65580732"
  `</entry>`  
   
 ### <a name="working-with-data-feeds"></a>데이터 피드 작업  
- 보고서에서 생성하는 모든 데이터 피드에는 데이터 피드를 생성하는 데이터 영역의 부모 범위에 있는 보고서 항목이 포함되어 있습니다. 와 통합된 SharePoint 사이트를 사용하여 Atom 서비스 문서와 데이터 피드를 생성할 수 있습니다. 예를 들어 몇 가지 테이블과 차트가 있는 보고서의 경우 보고서 본문의 입력란에서는 각 데이터 영역을 설명하는 텍스트를 제공하고, 보고서에서 생성하는 모든 데이터 피드의 각 항목에는 이 입력란 값이 포함됩니다. 예를 들어 텍스트가 "Chart displays monthly sales averages by sales region"인 경우 세 데이터 피드는 모두 각 행에서 이 텍스트를 포함합니다.  
+ 보고서에서 생성하는 모든 데이터 피드에는 데이터 피드를 생성하는 데이터 영역의 부모 범위에 있는 보고서 항목이 포함되어 있습니다. . 예를 들어 몇 가지 테이블과 차트가 있는 보고서의 경우 보고서 본문의 입력란에서는 각 데이터 영역을 설명하는 텍스트를 제공하고, 보고서에서 생성하는 모든 데이터 피드의 각 항목에는 이 입력란 값이 포함됩니다. 예를 들어 텍스트가 "Chart displays monthly sales averages by sales region"인 경우 세 데이터 피드는 모두 각 행에서 이 텍스트를 포함합니다.  
   
  보고서 레이아웃에 중첩 데이터 영역과 같은 계층적 데이터 관계가 포함된 경우 해당 관계가 보고서 데이터의 일반화된 행 집합에 포함됩니다.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "65580732"
   
 |항목|렌더링 동작|  
 |----------|------------------------|  
-|Table|테이블을 확장하고 최하위 수준에서 각 행과 열에 대한 행과 열을 만들어 렌더링합니다. 부분합 행과 열에는 열 머리글이나 행 머리글이 없습니다. 드릴스루 보고서는 지원되지 않습니다.|  
+|테이블|테이블을 확장하고 최하위 수준에서 각 행과 열에 대한 행과 열을 만들어 렌더링합니다. 부분합 행과 열에는 열 머리글이나 행 머리글이 없습니다. 드릴스루 보고서는 지원되지 않습니다.|  
 |행렬|행렬을 확장하고 최하위 수준에서 각 행과 열에 행과 열을 만들어 렌더링합니다. 부분합 행과 열에는 열 머리글이나 행 머리글이 없습니다.|  
 |목록|목록의 각 정보 행이나 인스턴스에 대해 레코드를 렌더링합니다.|  
 |하위 보고서|내용의 각 인스턴스에 대해 부모 항목이 반복됩니다.|  

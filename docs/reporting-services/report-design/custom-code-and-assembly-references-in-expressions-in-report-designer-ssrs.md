@@ -18,10 +18,10 @@ ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1a440ba648fd7ca0c377cc09b8bf67ac799e2e9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581497"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조(SSRS)
@@ -63,7 +63,7 @@ ms.locfileid: "65581497"
  외부 어셈블리의 클래스에 대한 참조를 포함하려면 보고서 처리기에 대한 어셈블리를 확인해야 합니다. **보고서 속성** 대화 상자의 **참조** 페이지를 사용하여 보고서에 추가할 어셈블리의 정규화된 이름을 지정할 수 있습니다. 식에서 어셈블리의 클래스에 대한 정규화된 이름을 사용해야 합니다. 외부 어셈블리의 클래스는 **식** 대화 상자에 표시되지 않으므로 정확한 클래스 이름을 입력해야 합니다. 정규화된 이름에는 네임스페이스, 클래스 이름 및 멤버 이름이 포함됩니다.  
   
 ##  <a name="Embedded"></a> 포함 코드 포함  
- 보고서에 포함 코드를 추가하려면 **보고서 속성** 대화 상자의 코드 탭을 사용합니다. 만드는 코드 블록에는 여러 메서드가 포함될 수 있습니다. 포함 코드의 메서드는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 으로 작성되고 인스턴스를 기반으로 해야 합니다. 보고서 처리기는 System.Convert 및 System.Math 네임스페이스에 대한 참조를 자동으로 추가합니다. **보고서 속성** 대화 상자의 **참조** 페이지를 사용하여 다른 어셈블리 참조를 추가할 수 있습니다. 자세한 내용은 [보고서에 어셈블리 참조 추가&#40;SSRS&#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)를 참조하세요.  
+ 보고서에 포함 코드를 추가하려면 **보고서 속성** 대화 상자의 코드 탭을 사용합니다. 만드는 코드 블록에는 여러 메서드가 포함될 수 있습니다. 포함 코드의 메서드는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]으로 작성되고 인스턴스를 기반으로 해야 합니다. 보고서 처리기는 System.Convert 및 System.Math 네임스페이스에 대한 참조를 자동으로 추가합니다. **보고서 속성** 대화 상자의 **참조** 페이지를 사용하여 다른 어셈블리 참조를 추가할 수 있습니다. 자세한 내용은 [보고서에 어셈블리 참조 추가&#40;SSRS&#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)를 참조하세요.  
   
  포함 코드의 메서드는 전역적으로 정의된 **Code** 멤버를 통해 사용할 수 있습니다. **Code** 멤버와 메서드 이름을 참조하여 이러한 메서드에 액세스합니다. 다음 예에서는 **필드 값을 달러 값으로 변환하는**ToUSD `StandardCost` 메서드를 호출합니다.  
   
@@ -115,7 +115,7 @@ End Function
  기본 제공 개체 컬렉션 및 초기화에 대한 자세한 내용은 [기본 제공 Globals 및 Users 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md) 및 [사용자 지정 어셈블리 개체 초기화](../../reporting-services/custom-assemblies/initializing-custom-assembly-objects.md)를 참조하세요.  
   
 ##  <a name="Parameters"></a> 코드에서 매개 변수에 대한 참조 포함  
- 보고서 정의의 코드 블록 또는 사용자가 제공하는 사용자 지정 어셈블리에서 사용자 지정 코드를 통해 전역 매개 변수 컬렉션을 참조할 수 있습니다. 매개 변수 컬렉션은 읽기 전용이며 공개 반복기는 없습니다. [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **For Each** 구조를 사용하여 컬렉션을 단계별로 실행할 수 없습니다. 보고서 정의에 정의된 매개 변수 이름을 알아야 사용자의 코드에서 해당 매개 변수를 참조할 수 있습니다. 하지만 다중값 매개 변수의 모든 값을 반복할 수 있습니다.  
+ 보고서 정의의 코드 블록 또는 사용자가 제공하는 사용자 지정 어셈블리에서 사용자 지정 코드를 통해 전역 매개 변수 컬렉션을 참조할 수 있습니다. 매개 변수 컬렉션은 읽기 전용이며 공개 반복기는 없습니다. [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **For Each** 구문을 사용하여 컬렉션을 단계별로 실행할 수 없습니다. 보고서 정의에 정의된 매개 변수 이름을 알아야 사용자의 코드에서 해당 매개 변수를 참조할 수 있습니다. 하지만 다중값 매개 변수의 모든 값을 반복할 수 있습니다.  
   
  다음 표에는 사용자 지정 코드에서 기본 제공 컬렉션 `Parameters` 를 참조하는 예가 들어 있습니다.  
   
@@ -178,7 +178,7 @@ End Function
  코드에 액세스하는 방법은 [Accessing Custom Assemblies Through Expressions](../../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md)를 참조하세요.  
   
 ##  <a name="collections"></a> 사용자 지정 어셈블리에 기본 제공 컬렉션 전달  
- 처리 작업을 위해 *전역* 또는 *매개 변수* 컬렉션과 같은 기본 제공 컬렉션을 사용자 지정 어셈블리에 전달하려는 경우 기본 제공 컬렉션을 정의하고 올바른 네임스페이스에 액세스하는 어셈블리에 코드 프로젝트의 어셈블리 참조를 추가해야 합니다. 보고서 서버에서 실행되는 보고서(서버 보고서)에 대한 사용자 지정 어셈블리를 개발하는지, 아니면 .NET 애플리케이션에서 로컬로 실행되는 보고서(로컬 보고서)에 대한 사용자 지정 어셈블리를 개발하는지에 따라 다른 어셈블리를 참조해야 합니다. 자세한 내용은 아래를 참조하세요.  
+ 처리 작업을 위해 *전역* 또는 *매개 변수* 컬렉션과 같은 기본 제공 컬렉션을 사용자 지정 어셈블리에 전달하려는 경우 기본 제공 컬렉션을 정의하고 올바른 네임스페이스에 액세스하는 어셈블리에 코드 프로젝트의 어셈블리 참조를 추가해야 합니다. 보고서 서버에서 실행되는 보고서(서버 보고서)에 대한 사용자 지정 어셈블리를 개발하는지, 아니면 .NET 애플리케이션에서 로컬로 실행되는 보고서(로컬 보고서)에 대한 사용자 지정 어셈블리를 개발하는지에 따라 다른 어셈블리를 참조해야 합니다. 자세한 내용은 다음을 참조하세요.  
   
 -   **네임스페이스:** Microsoft.ReportingServices.ReportProcessing.ReportObjectModel  
   

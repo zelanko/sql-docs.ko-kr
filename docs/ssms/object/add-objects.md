@@ -1,6 +1,6 @@
 ---
-title: 개체 추가 | Microsoft 문서
-ms.custom: ''
+title: 개체 추가
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 17ac0e99-8490-46b0-8515-e5012bc9e0cf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b2df868e1ad911789ae98f3d48f191f5d29db5d3
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7ce5cc43860b895a449e62ff9e618b187957651e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263382"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251353"
 ---
 # <a name="add-objects"></a>개체 추가
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

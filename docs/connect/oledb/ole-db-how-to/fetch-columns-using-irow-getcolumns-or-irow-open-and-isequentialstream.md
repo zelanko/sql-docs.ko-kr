@@ -15,10 +15,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 0ff29e4ed9a5986173020530bd691d0c95a89749
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994802"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>IRow::GetColumns/IRow::Open 및 ISequentialStream을 사용하여 열 인출
@@ -37,13 +37,13 @@ ms.locfileid: "67994802"
   
 2.  명령을 실행합니다. 다음 예에서는 IID_IRow를 사용하여 **ICommandExecute::Execute()** 가 호출됩니다.  
   
-3.  **IRow:: Open ()** 또는 **IRow:: getcolumns ()** 를 사용 하 여 열 데이터를 가져옵니다.  
+3.  **IRow::Open()** 또는 **IRow::GetColumns()** 를 사용하여 열 데이터를 페치합니다.  
   
-    -   **IRow:: open ()** 을 사용 하 여 행에서 **ISequentialStream** 를 열 수 있습니다. DBGUID_STREAM을 지정하여 열에 이진 데이터 스트림이 있음을 나타냅니다. 그런 다음, **IStream** 또는 **ISequentialStream**을 사용하여 열에서 데이터를 읽을 수 있습니다.  
+    -   **IRow::Open()** 을 사용하여 행에서 **ISequentialStream**을 열 수 있습니다. DBGUID_STREAM을 지정하여 열에 이진 데이터 스트림이 있음을 나타냅니다. 그런 다음, **IStream** 또는 **ISequentialStream**을 사용하여 열에서 데이터를 읽을 수 있습니다.  
   
     -   **IRow::GetColumns()** 를 사용하는 경우 DBCOLUMNACCESS 구조의 **pData** 요소가 스트림 개체를 가리키도록 설정됩니다.  
   
-4.  **ISequentialStream:: Read ()** 를 반복 해 서 사용 하 여 지정 된 바이트 수를 소비자 버퍼로 읽습니다.  
+4.  **ISequentialStream::Read()** 를 반복해서 사용하여 지정된 바이트 수를 소비자 버퍼로 읽습니다.  
   
 ## <a name="example"></a>예제  
  이 예에서는 IRow를 사용하여 단일 행을 인출하는 방법을 보여 줍니다. 이 예에서는 행에서 한 번에 한 개의 열이 검색됩니다. 이 예에서는 IRow::GetColumns()와 IRow::Open()을 사용하는 방법을 보여 줍니다. 이 예에서는 ISequentialStream::Read를 사용하여 열 데이터를 읽습니다.  

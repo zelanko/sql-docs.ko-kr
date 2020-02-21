@@ -1,5 +1,5 @@
 ---
-title: setClientInfo 메서드 () | Microsoft Docs
+title: setClientInfo 메서드(java.util.Properties) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: b2a8ec0b-40a2-44d1-90d9-a810d4132e56
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a332f42c8193c851a33036af214ac31366986023
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974747"
 ---
 # <a name="setclientinfo-method-javautilproperties"></a>setClientInfo 메서드(java.util.Properties)
@@ -37,8 +37,8 @@ public void setClientInfo (java.util.Properties properties)
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 setClientInfo 메서드는 setClientInfo 인터페이스의 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 setClientInfo 메서드는 java.sql.Connection 인터페이스의 setClientInfo 메서드에 의해 지정됩니다.  
   
  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]에서는 클라이언트 정보 속성을 지원하지 않습니다. 이 메서드는 *properties* 입력 매개 변수가 빈 속성 집합을 참조하지 않을 경우 경고를 생성합니다. 즉, 이 메서드는 애플리케이션에서 설정하려고 하는 속성에 대한 경고를 생성합니다. 애플리케이션에서는 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스의 [getWarnings](../../../connect/jdbc/reference/getwarnings-method-sqlserverconnection.md) 메서드를 사용하여 각 경고를 검색해야 합니다.  
   

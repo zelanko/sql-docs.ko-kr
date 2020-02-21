@@ -1,5 +1,5 @@
 ---
-title: removeConnectionEventListener 메서드 (SQLServerPooledConnection) | Microsoft Docs
+title: removeConnectionEventListener 메서드(SQLServerPooledConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 46902e89-f512-40af-a2d9-a896f03d1200
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b9d2980b86704efe7e611878d373e0dd9b5cb7fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975752"
 ---
 # <a name="removeconnectioneventlistener-method-sqlserverpooledconnection"></a>removeConnectionEventListener 메서드(SQLServerPooledConnection)
@@ -39,8 +39,8 @@ public void removeConnectionEventListener(javax.sql.ConnectionEventListener list
   
  ConnectionEventListener 개체입니다.  
   
-## <a name="remarks"></a>Remarks  
- 이 removeConnectionEventListener 메서드는 javax.sql 연결 인터페이스의 removeConnectionEventListener 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 removeConnectionEventListener 메서드는 javax.sql.PooledConnection 인터페이스의 removeConnectionEventListener 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerPooledConnection 메서드](../../../connect/jdbc/reference/sqlserverpooledconnection-methods.md)   

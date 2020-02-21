@@ -16,10 +16,10 @@ ms.assetid: f2e6391d-9aaf-4b09-ae1c-a27c1ada6301
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69a9db6da093341264953e698cdbb1145093d9a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980874"
 ---
 # <a name="getpooledconnection-method-javalangstring-javalangstring"></a>getPooledConnection 메서드(java.lang.String, java.lang.String)
@@ -44,14 +44,14 @@ public javax.sql.PooledConnection getPooledConnection(java.lang.String user,
   
  암호가 포함된 **문자열**입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
- 이 getPooledConnection 메서드는 javax.sql의 getPooledConnection 메서드를 통해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 getPooledConnection 메서드는 javax.sql.ConnectionPoolDataSource 인터페이스의 getPooledConnection 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [getPooledConnection](../../../connect/jdbc/reference/getpooledconnection-method-sqlserverconnectionpooldatasource.md)   

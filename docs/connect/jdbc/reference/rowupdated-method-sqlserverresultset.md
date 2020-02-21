@@ -16,10 +16,10 @@ ms.assetid: 29303550-294e-4d43-b892-312b42e21271
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9eb0f1bf73f719550ce0a00b3b7f96fab9c2af38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975666"
 ---
 # <a name="rowupdated-method-sqlserverresultset"></a>rowUpdated 메서드(SQLServerResultSet)
@@ -34,14 +34,14 @@ ms.locfileid: "67975666"
 public boolean rowUpdated()  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  행이 소유자나 다른 사용자에 의해 시각적으로 업데이트되었고 업데이트가 검색되었으면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 rowUpdated 메서드는 rowUpdated 인터페이스의 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 rowUpdated 메서드는 java.sql.ResultSet 인터페이스의 rowUpdated 메서드에 의해 지정됩니다.  
   
  반환되는 값은 결과 집합에서 업데이트를 검색할 수 있는지 여부에 따라 달라집니다.  
   

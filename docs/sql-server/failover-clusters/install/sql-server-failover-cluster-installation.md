@@ -1,7 +1,7 @@
 ---
-title: SQL Server 장애 조치(Failover) 클러스터 설치 | Microsoft 문서
-ms.custom: ''
-ms.date: 03/14/2017
+title: 장애 조치(failover) 클러스터 인스턴스 설치
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cdc11ab9550b0faaf1fcdc9aa3ba5d7d3fe09eaf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c3de22853ccef8bd38c338b05043da7061ffeed0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063869"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230618"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>SQL Server 장애 조치(Failover) 클러스터 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "68063869"
     - 다중 도메인 클러스터에 대한 SQL FCI   
     - 도메인 + 작업 그룹 클러스터에 대한 SQL FCI 
 
-## <a name="includessnoversionincludesssnoversion-mdmd-failover-cluster-installation-options"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 설치 옵션  
+## <a name="ssnoversion-failover-cluster-installation-options"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 설치 옵션  
   
 ##### <a name="option-1-integrated-installation-with-add-node"></a>옵션 1: 통합 설치 - 노드 추가  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 통합 장애 조치(Failover) 클러스터 설치는 두 단계로 구성됩니다.  
@@ -81,13 +81,13 @@ ms.locfileid: "68063869"
   
  **참고** IPV6 IP 주소는 지원되지 않습니다.  IPV4와 IPV6을 둘 다 구성하면 서로 다른 서브넷으로 처리되고 IPV6이 먼저 온라인 상태가 됩니다.  
   
-##### <a name="includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 다중 서브넷 장애 조치(failover) 클러스터  
+##### <a name="ssnoversion-multi-subnet-failover-cluster"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 다중 서브넷 장애 조치(failover) 클러스터  
  클러스터의 노드가 서로 다른 서브넷에 있는 경우 종속성을 OR로 설정할 수 있습니다. 그러나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 다중 서브넷 장애 조치(Failover) 클러스터의 각 노드가 지정된 IP 주소를 하나 이상 소유할 수 있어야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [장애 조치(Failover) 클러스터링을 설치하기 전에](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)   
  [새 SQL Server 장애 조치(failover) 클러스터 만들기&#40;설치 프로그램&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)   
  [명령 프롬프트에서 SQL Server 2016 설치](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
- [SQL Server 장애 조치(failover) 클러스터 인스턴스 업그레이드](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  
+ [SQL Server 장애 조치(Failover) 클러스터 인스턴스 업그레이드](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  
   
   

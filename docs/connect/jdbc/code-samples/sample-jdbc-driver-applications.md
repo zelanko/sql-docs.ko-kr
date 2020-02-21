@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e136b87c-a138-45d6-8c3e-bcef94b7e483
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6ef5c2d71d398be52ebed2b69020e87d54818176
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.openlocfilehash: d4021211b212ace43257637dad348a0da1e82f21
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028310"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910739"
 ---
 # <a name="sample-jdbc-driver-applications"></a>샘플 JDBC 드라이버 애플리케이션
 
@@ -33,14 +33,14 @@ ms.locfileid: "69028310"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-| 항목                                                                                                                  | 설명                                                                                                                                                                                                                                                                   |
+| 항목                                                                                                                  | Description                                                                                                                                                                                                                                                                   |
 | ---------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [데이터 연결 및 검색](../../../connect/jdbc/code-samples/connecting-and-retrieving-data.md)                              | 이 샘플 애플리케이션은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 연결하는 방법을 보여줍니다. 또한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에서 데이터를 검색하는 다양한 방법도 보여줍니다. |
 | [데이터 형식 작업 &#40;JDBC&#41;](../../../connect/jdbc/code-samples/working-with-data-types-jdbc.md)                        | 이 샘플 애플리케이션은 JDBC 드라이버 데이터 형식을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스의 데이터로 작업하는 방법을 보여줍니다.                                                                                              |
 | [결과 집합 작업](../../../connect/jdbc/code-samples/working-with-result-sets.md)                                          | 이 샘플 애플리케이션은 결과 집합을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 포함된 데이터를 처리하는 방법을 소개합니다.                                                                                                            |
 | [대규모 데이터 작업](../../../connect/jdbc/code-samples/working-with-large-data.md)                                            | 이러한 샘플 애플리케이션은 선택 버퍼링을 사용하여 서버 커서 오버헤드 없이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에서 큰 값 데이터를 검색하는 방법에 대해 설명합니다.                                                         |
-| [SQL 데이터 검색 및 분류](../../jdbc/code-samples/data-discovery-and-classification-sample.md) | 이 샘플 응용 프로그램은 JDBC 드라이버를 사용 하 여 ResultSet 개체에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 포함 된 데이터 검색 및 분류 정보를 검색 하는 방법을 보여 줍니다.                                            |
+| [SQL 데이터 검색 및 분류](../../jdbc/code-samples/data-discovery-and-classification-sample.md) | 이 샘플 애플리케이션은 JDBC 드라이버를 사용하여 ResultSet 개체에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 포함된 데이터 검색 및 분류 정보를 검색하는 방법을 보여 줍니다.                                            |
   
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [JDBC 드라이버 개요](../../../connect/jdbc/overview-of-the-jdbc-driver.md)

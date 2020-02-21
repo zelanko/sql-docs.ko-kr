@@ -16,10 +16,10 @@ ms.assetid: 8a487497-c207-45b2-8c92-87c58cc68716
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 84265b1a72d93a2d8de8332e0309093a9a506ea0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571436"
 ---
 # <a name="configurationsetting-method---reencryptsecureinformation"></a>ConfigurationSetting 메서드 - ReencryptSecureInformation
@@ -42,10 +42,10 @@ public void ReencryptSecureInformation (out Int32 HRESULT, out string[] Extended
  *ExtendedErrors[]*  
  [out] 호출에서 반환되는 추가 오류가 들어 있는 문자열 배열입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드 호출의 성공 또는 실패를 나타내는 *HRESULT* 를 반환합니다. 0 값은 메서드 호출이 성공했음을 나타냅니다. 0 이외의 값은 오류가 발생했음을 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  관리자는 ReencryptSecureInformation 메서드를 사용하여 기존 암호화 키를 새 키로 바꿀 수 있습니다.  
   
  이 메서드가 호출되면 보고서 서버가 새 암호화 키를 생성하고 이 새 암호화 키로 모든 암호화 내용을 반복하여 다시 암호화합니다.  

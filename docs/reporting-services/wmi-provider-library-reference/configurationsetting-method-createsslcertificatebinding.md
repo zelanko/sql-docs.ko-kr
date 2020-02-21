@@ -11,10 +11,10 @@ ms.assetid: 407d50e4-0a55-43cb-8ddf-2d82714071b1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7b65838720b7300b92829aa57da58563628740cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570754"
 ---
 # <a name="configurationsetting-method---createsslcertificatebinding"></a>ConfigurationSetting 메서드 - CreateSSLCertificateBinding
@@ -57,10 +57,10 @@ public void CreateSSLCertificateBinding(string application,
  *HRESULT*  
  [out] 호출의 성공 여부를 나타내는 값입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드 호출의 성공 또는 실패를 나타내는 *HRESULT* 를 반환합니다. 0 값은 메서드 호출이 성공했음을 나타내고 오류 코드는 호출이 실패했음을 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 메서드는 애플리케이션의 rsreportserver.config에 바인딩을 추가합니다. HTTP.SYS에 바인딩이 없으면 이 파일에 바인딩이 만들어집니다.  
   
  바인딩을 만들기 전에 메서드 호출은 지정된 애플리케이션에 대한 URL 예약을 검사하여 SSL 인증서 바인딩이 유효한지 확인합니다.  

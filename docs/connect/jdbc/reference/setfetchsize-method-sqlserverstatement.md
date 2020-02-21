@@ -16,10 +16,10 @@ ms.assetid: 760e555e-9667-4b40-b0ba-778026ff2923
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58af3c6d8b9d0967ff370047e49a377bf52ec985
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974242"
 ---
 # <a name="setfetchsize-method-sqlserverstatement"></a>setFetchSize 메서드(SQLServerStatement)
@@ -42,8 +42,8 @@ public final void setFetchSize(int rows)
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 setFetchSize 메서드는 java. Statement 인터페이스의 setFetchSize 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 setFetchSize 메서드는 java.sql.Statement 인터페이스의 setFetchSize 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerStatement 멤버](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

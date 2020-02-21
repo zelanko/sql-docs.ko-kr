@@ -1,5 +1,5 @@
 ---
-title: isSameRM 메서드 (SQLServerXAResource) | Microsoft Docs
+title: isSameRM 메서드(SQLServerXAResource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: bfa24c46-b7cf-470a-afa1-52301847a448
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: acd1beaa07ab9d1867fe99e519d3969f4efec3ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977304"
 ---
 # <a name="issamerm-method-sqlserverxaresource"></a>isSameRM 메서드(SQLServerXAResource)
@@ -39,13 +39,13 @@ public boolean isSameRM(javax.transaction.xa.XAResource xares)
   
  XAResource 개체입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  인스턴스가 동일하면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  javax.transaction.xa.XAException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 commit 메서드는 javax.transaction.xa.XAResource 인터페이스의 commit 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

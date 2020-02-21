@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 17cffe2f1eaf94174301212c6bb926528c56c7d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63225686"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>팜에 추가 보고서 서버 추가(SSRS 확장)
@@ -30,7 +30,7 @@ ms.locfileid: "63225686"
 ##  <a name="bkmk_loadbalancing"></a> 부하 분산  
  사용자 환경에 사용자 지정 또는 타사 부하 분산 솔루션이 없는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션의 부하 분산은 SharePoint에서 자동으로 관리됩니다. 기본 SharePoint 부하 분산 동작은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스를 시작한 모든 애플리케이션 서버에서 각 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션의 부하를 분산하는 것입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스가 설치되고 시작되었는지 확인하려면 SharePoint 중앙 관리에서 **서버의 서비스 관리** 를 클릭합니다.  
   
-##  <a name="bkmk_prerequisites"></a> 사전 요구 사항  
+##  <a name="bkmk_prerequisites"></a> 필수 조건  
   
 -   SQL Server 설치 프로그램을 실행하려면 로컬 관리자여야 합니다.  
   

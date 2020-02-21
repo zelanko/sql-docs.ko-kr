@@ -16,10 +16,10 @@ ms.assetid: 67b2bb4b-9714-4ba5-8739-50c632830451
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c9b9a213b4863e068b0e9f5eb4115334d47e8e71
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982680"
 ---
 # <a name="getjdbcmajorversion-method-sqlserverdatabasemetadata"></a>getJDBCMajorVersion 메서드(SQLServerDatabaseMetaData)
@@ -34,14 +34,14 @@ ms.locfileid: "67982680"
 public int getJDBCMajorVersion()  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  주 JDBC 버전을 나타내는 **int**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 getJDBCMajorVersion 메서드는 java. DatabaseMetaData 인터페이스의 getJDBCMajorVersion 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 getJDBCMajorVersion 메서드는 java.sql.DatabaseMetaData 인터페이스의 getJDBCMajorVersion 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

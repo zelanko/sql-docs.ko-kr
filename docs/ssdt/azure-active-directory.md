@@ -1,20 +1,21 @@
 ---
-title: SSDT(SQL Server Data Tools)의 Azure Active Directory | Microsoft Docs
-ms.custom: ''
-ms.date: 10/28/2019
+title: SSDT의 Azure Active Directory
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: ssdt
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
+manager: jroth
+reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 10/28/2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 302345a2d7e8c1bd9192c91c6f88253c9a4668f2
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.openlocfilehash: ed7bc77b48881351a144ed5d217454518abafcc2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049897"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245584"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools)의 Azure Active Directory 지원
 
@@ -30,8 +31,8 @@ Visual Studio에서 **보기** 메뉴에서 **SQL Server 개체 탐색기**를 �
 
 이 문서에서는 [Azure 클라우드](https://azure.microsoft.com/)에서 다음 *Azure SQL 제품* 목록에 대해 Azure AD를 설명합니다.
 
-- Azure SQL 데이터베이스
-- Azure SQL 데이터 웨어하우스
+- Azure SQL Database
+- Azure SQL Data Warehouse
 
 ## <a name="active-directory-password-authentication"></a>Active Directory 암호 인증
 
@@ -40,11 +41,11 @@ Visual Studio에서 **보기** 메뉴에서 **SQL Server 개체 탐색기**를 �
 - Azure와 페더레이션되지 않은 도메인에서 자격 증명을 사용하여 Windows에 로그온합니다.
 - Azure AD와 함께 Azure AD 인증을 사용합니다. 이는 초기 또는 클라이언트 도메인에 기반합니다.
 
-자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL 데이터베이스에 연결](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)을 참조하세요.  
+자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL Database에 연결](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)을 참조하세요.  
 
 ## <a name="active-directory-integrated-authentication"></a>Active Directory 통합 인증
 
-*Active Directory 통합 인증*은 Azure AD(Azure Active Directory)에서 ID를 사용하여 나열된 Azure SQL 제품에 연결하는 메커니즘입니다. 페더레이션된 도메인에서 Azure Active Directory 자격 증명을 사용하여 Windows에 로그인하는 경우 이 방법으로 연결합니다. 자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL 데이터베이스에 연결](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)을 참조하세요.
+*Active Directory 통합 인증*은 Azure AD(Azure Active Directory)에서 ID를 사용하여 나열된 Azure SQL 제품에 연결하는 메커니즘입니다. 페더레이션된 도메인에서 Azure Active Directory 자격 증명을 사용하여 Windows에 로그인하는 경우 이 방법으로 연결합니다. 자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL Database에 연결](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)을 참조하세요.
 
 ## <a name="active-directory-interactive-authentication"></a>Active Directory 대화형 인증
 

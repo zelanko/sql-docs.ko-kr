@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1b2a838f8ad386b8a236304401308d5be0f63ff1
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: b2f96f79b81b79d2abfaadc40c37b864d20a93dc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706346"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831398"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>python 스크립트를 사용하여 AKS(Azure Kubernetes Service)에 SQL Server 빅 데이터 클러스터 배포
 
@@ -57,7 +57,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 
 ## <a name="run-the-deployment-script"></a>배포 스크립트 실행
 
-다음 단계를 사용하여 배포 스크립트를 실행합니다. 이 스크립트는 Azure에서 AKS 서비스를 만든 다음, AKS에 SQL Server 2019 빅 데이터 클러스터를 배포합니다. 다른 [환경 변수](deployment-guidance.md#configfile)로 스크립트를 수정하여 사용자 지정 배포를 만들 수도 있습니다.
+다음 단계를 사용하여 Windows PowerShell 또는 Linux bash 프롬프트에서 배포 스크립트를 실행합니다. 이 스크립트는 Azure에서 AKS 서비스를 만든 다음, AKS에 SQL Server 2019 빅 데이터 클러스터를 배포합니다. 다른 [환경 변수](deployment-guidance.md#configfile)로 스크립트를 수정하여 사용자 지정 배포를 만들 수도 있습니다.
 
 1. 다음 명령을 사용하여 스크립트를 실행합니다.
 
@@ -70,7 +70,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 
 1. 메시지가 표시되면 다음 정보를 입력합니다.
 
-   | 값 | 설명 |
+   | 값 | Description |
    |---|---|
    | **Azure 구독 ID** | AKS에 사용할 Azure 구독 ID입니다. 다른 명령줄에서 `az account list`를 실행하여 모든 구독과 해당 ID를 나열할 수 있습니다. |
    | **Azure 리소스 그룹** | AKS 클러스터에 대해 만들 Azure 리소스 그룹 이름입니다. |
@@ -88,8 +88,6 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    > 빅 데이터 클러스터 배포 중에는 SQL Server `sa` 계정을 사용할 수 없습니다. 새 sysadmin 로그인은 **사용자 이름** 입력에 지정된 것과 동일한 이름과 **암호** 입력에 해당하는 암호로 SQL Server 마스터 인스턴스에 프로비저닝됩니다. 컨트롤러 관리 사용자를 프로비저닝하는 데 동일한 **사용자 이름** 및 **암호** 값이 사용됩니다. 게이트웨이(Knox)에 대해 지원되는 사용자만 **루트**이며 암호는 위와 동일합니다.
 
 1. 스크립트는 먼저 지정된 매개 변수를 사용하여 AKS 클러스터를 만듭니다. 이 단계는 몇 분 정도 걸립니다.
-
-   <img src="./media/quickstart-big-data-cluster-deploy/script-parameters.png" width="800px" alt="Script parameters and AKS cluster creation"/>
 
 ## <a name="monitor-the-status"></a>상태 모니터링
 
@@ -109,7 +107,7 @@ AKS 클러스터를 만든 후에 스크립트는 앞서 지정된 설정을 사
 ```
 
 > [!IMPORTANT]
-> 빅 데이터 클러스터 구성 요소의 컨테이너 이미지를 다운로드하는 데 필요한 시간 때문에 전체 배포는 시간이 오래 걸릴 수 있습니다. 그러나 몇 시간이 걸리면 안 됩니다. 배포에서 문제가 발생하는 경우 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 모니터링 및 문제 해결](cluster-troubleshooting-commands.md)을 참조하세요.
+> 빅 데이터 클러스터 구성 요소의 컨테이너 이미지를 다운로드하는 데 필요한 시간 때문에 전체 배포는 시간이 오래 걸릴 수 있습니다. 그러나 몇 시간이 걸리면 안 됩니다. 배포에 문제가 있는 경우 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 모니터링 및 문제 해결](cluster-troubleshooting-commands.md)을 참조하세요.
 
 ## <a name="inspect-the-cluster"></a>클러스터 검사
 

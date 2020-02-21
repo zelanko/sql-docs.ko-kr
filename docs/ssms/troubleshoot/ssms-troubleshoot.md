@@ -1,5 +1,5 @@
 ---
-title: SSMS(SQL Server Management Studio)의 중단 또는 충돌 문제 해결
+title: SSMS를 사용하여 중단 또는 크래시 문제 해결
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: dnethi
@@ -8,14 +8,14 @@ ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 09/18/2019
-ms.openlocfilehash: 2bfe5606c55fd0f242650e5fffdb8cc20dc9f726
-ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
+ms.openlocfilehash: f994a44d6fe0f458ae8f8d8be0351421322e7967
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71127254"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243878"
 ---
 # <a name="get-diagnostic-data-after-a-sql-server-management-studio-ssms-crash"></a>SSMS(SQL Server Management Studio) 충돌이 발생한 후 진단 데이터 가져오기
 

@@ -11,10 +11,10 @@ ms.assetid: 0afea5d5-8797-4a85-b1b4-8cde1f3888a3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2765df415cd4e45469f48c30dc2c0937361ce3aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015073"
 ---
 # <a name="handling-errors-and-warnings"></a>오류 및 경고 처리
@@ -26,7 +26,7 @@ PDO_SQLSRV 드라이버를 사용하는 경우 [PDO](https://php.net/manual/book
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |---------|---------------|  
 |[방법: SQLSRV 드라이버를 사용하여 오류 및 경고 처리 구성](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)|오류 및 경고 처리에 대한 구성 설정을 변경하는 방법을 보여 줍니다.|  
 |[방법: SQLSRV 드라이버를 사용하여 오류 및 경고 처리](../../connect/php/how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md)|오류와 경고를 별도로 처리하는 방법을 보여 줍니다.|  
@@ -39,5 +39,5 @@ PDO_SQLSRV 드라이버를 사용하는 경우 [PDO](https://php.net/manual/book
 [sqlsrv_get_config](../../connect/php/sqlsrv-get-config.md)  
   
 ## <a name="see-also"></a>참고 항목  
-[Microsoft Drivers for PHP for SQL Server 프로그래밍 가이드](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 프로그래밍 가이드 | Microsoft Docs](../../connect/php/programming-guide-for-php-sql-driver.md)
   

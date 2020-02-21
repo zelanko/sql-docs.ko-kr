@@ -9,12 +9,12 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 634f9f62a3ff1de70be84fd5a7721d8efed891bf
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: fe7a83c66dba9af372e82fc2814828aae32d6a2d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149936"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558291"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>SQL Server Machine Learning Services(Python 및 R)이란?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ Machine Learning Services는 확장성 프레임워크를 사용하여 SQL Serve
 
 ## <a name="what-can-i-do-with-machine-learning-services"></a>Machine Learning Services로 어떤 작업을 할 수 있나요?
 
-Machine Learning Services를 사용하여 SQL Server 내에서 기계 학습 및 딥 러닝 모델을 작성하고 학습할 수 있습니다. 기존 모델을 Machine Learning Services에 배포하고 예측에 관계형 데이터를 사용할 수도 있습니다.
+Machine Learning Services를 사용하여 SQL Server 내에서 기계 학습 및 딥 러닝 모델을 작성하고 학습시킬 수 있습니다. 기존 모델을 Machine Learning Services에 배포하고 예측에 관계형 데이터를 사용할 수도 있습니다.
 
 SQL Server Machine Learning Services를 사용할 수 있는 예측 유형의 예는 다음과 같습니다.
 
@@ -50,7 +50,7 @@ SQL Server Machine Learning Services를 사용할 수 있는 예측 유형의 �
 |-|-|
 |분류/범주화|사용자 의견을 긍정 및 부정 범주로 자동으로 구분|
 |회귀/연속 값 예측|크기 및 위치를 기준으로 주택 가격 예측|
-|변칙 검색|사기성 은행 거래 감지 |
+|이상 감지|사기성 은행 거래 감지 |
 |권장 사항|이전 구매에 따라 온라인 쇼핑객이 구매하려고 할 수 있는 제품 제안|
 
 ### <a name="how-to-execute-python-and-r-scripts"></a>Python 및 R 스크립트를 실행하는 방법
@@ -67,7 +67,7 @@ Machine Learning Services에서 Python 및 R 스크립트를 실행하는 두 �
 
 Microsoft의 엔터프라이즈 패키지 외에도 오픈 소스 패키지 및 프레임워크를 사용할 수 있습니다. 가장 일반적인 오픈 소스 Python 및 R 패키지는 Machine Learning Services에 미리 설치되어 있습니다. Microsoft의 다음 Python 및 R 패키지도 포함되어 있습니다.
 
-| 언어 | 패키지 | 설명 |
+| 언어 | 패키지 | Description |
 |-|-|-|
 | Python | [revoscalepy](python/ref-py-revoscalepy.md) | 확장 가능한 Python의 기본 패키지입니다. 데이터 변환 및 조작, 통계 요약, 시각화 및 많은 형식의 모델링에 사용됩니다. 또한 이 패키지의 함수는 병렬 처리를 위해 사용 가능한 코어 간에 워크로드를 자동으로 분산합니다. |
 | Python | [microsoftml](python/ref-py-microsoftml.md) | 텍스트 분석, 이미지 분석 및 감정 분석을 위한 사용자 지정 모델을 만들기 위한 기계 학습 알고리즘을 추가합니다. | 

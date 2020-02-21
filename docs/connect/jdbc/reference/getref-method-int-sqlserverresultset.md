@@ -16,10 +16,10 @@ ms.assetid: fc3f2d79-7cc3-47fa-a05e-4f7939d7f090
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8ad14430d5750befc073489596de2a4082f4ff8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980605"
 ---
 # <a name="getref-method-int-sqlserverresultset"></a>getRef 메서드(int)(SQLServerResultSet)
@@ -39,17 +39,17 @@ public java.sql.Ref getRef(int i)
   
  열 인덱스를 나타내는 **int**입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  Ref 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 getRef 메서드는 java.sql.ResultSet 인터페이스의 getRef 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [getRef 메서드 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getref-method-sqlserverresultset.md)   
+ [getRef 메서드&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getref-method-sqlserverresultset.md)   
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 클래스](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

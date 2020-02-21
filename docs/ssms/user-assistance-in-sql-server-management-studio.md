@@ -1,6 +1,6 @@
 ---
-title: SQL Server Management Studio의 사용자 지원 | Microsoft 문서
-ms.custom: ''
+title: SQL Server Management Studio의 사용자 지원
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 46393ffe47252be2d445647d1b3ebed45f72f946
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 01d2738b6a095646d1585857fdee7760079672c3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263388"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252213"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>SQL Server Management Studio의 사용자 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "68263388"
 도움말에 대한 도움말([!INCLUDE[msCoName](../includes/msconame_md.md)] Document Explorer 도움말)은 도움말 뷰어에 대한 설명서를 볼 수 있는 링크를 제공하지만 항목은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서와 별개의 컬렉션에 있습니다. 도움말 뷰어에 대한 자세한 내용을 보려면 **온라인 설명서의 도움말 메뉴에서** 도움말에 대한 도움말 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 을 선택합니다.  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>MSDN 온라인 및 SQL Server 커뮤니티  
-[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 의 도움말을 사용하면 정보를 얻기 위해 웹상의 MSDN 온라인 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]관련 커뮤니티에 연결할 수도 있습니다. 다음 작업을 수행할 수 있습니다.  
+[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 의 도움말을 사용하면 정보를 얻기 위해 웹상의 MSDN 온라인 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]관련 커뮤니티에 연결할 수도 있습니다. 다음을 수행할 수 있습니다.  
   
 -   어떻게 할까요? 페이지에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 커뮤니티에 액세스합니다.  
   

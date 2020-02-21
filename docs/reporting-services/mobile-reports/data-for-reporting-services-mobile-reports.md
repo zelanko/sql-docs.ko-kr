@@ -9,10 +9,10 @@ ms.assetid: 91138ef8-ddb4-4ac5-a1e4-fa4cf1c58dcc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b6131f6bce9cb6d1c87a4a75215a906b6d097c7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63129737"
 ---
 # <a name="data-for-reporting-services-mobile-reports"></a>Data for Reporting Services mobile reports
@@ -34,8 +34,8 @@ ms.locfileid: "63129737"
   
 모바일 보고서 런타임은 사용자의 선택 항목에 따라 계기에 대해 집계된 값을 제공합니다. 같은 방사형 계기 인스턴스의 비교 값을 다른 데이터 세트의 필드에 바인딩할 수 있습니다.   
   
-### <a name="see-also"></a>관련 항목:  
--  [Prepare data for Reporting Services mobile reports](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)
+### <a name="see-also"></a>참고 항목  
+-  [Reporting Services 모바일 보고서에 대한 데이터 준비](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)
 - [SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기 및 게시](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 - [공유 데이터 세트에서 데이터 가져오기](../../reporting-services/mobile-reports/get-data-from-shared-datasets-in-reporting-services-mobile-reports.md)
 - [모바일 보고서에서 Analysis Services 데이터에 대한 날짜 형식 지정 유지](../../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md) 

@@ -1,34 +1,28 @@
 ---
-title: 추적 및 추적 템플릿 저장 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 추적 및 추적 템플릿 저장
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- saving traces
-- traces [SQL Server], saving
-- templates [SQL Server], SQL Server Profiler
-- Profiler [SQL Server Profiler], templates
-- trace templates [SQL Server]
-- exporting trace templates
-- importing trace templates
-- SQL Server Profiler, templates
 ms.assetid: 957e6bf8-e7a3-4a59-a1cd-0a41538a8158
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9d3c8a9ddcaa11f4bcfae6e5abd4c000f1ffbdba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 9d3437ca51d12de09c7f0ae386b2e1c09ad50eab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928740"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307421"
 ---
 # <a name="save-traces-and-trace-templates"></a>추적 및 추적 템플릿 저장
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  추적 파일의 저장과 추적 템플릿의 저장을 구분하는 것은 중요합니다. 추적 파일 저장은 캡처된 데이터를 지정한 장소로 저장하는 것이며 추적 템플릿 저장은 지정한 데이터 열, 이벤트 클래스 또는 필터 등의 추적 정의를 저장하는 것입니다.  
+
+추적 파일의 저장과 추적 템플릿의 저장을 구분하는 것은 중요합니다. 추적 파일 저장은 캡처된 데이터를 지정한 장소로 저장하는 것이며 추적 템플릿 저장은 지정한 데이터 열, 이벤트 클래스 또는 필터 등의 추적 정의를 저장하는 것입니다.  
   
 ## <a name="saving-traces"></a>추적 저장  
  캡처한 데이터를 나중에 분석하거나 재생해야 하는 경우 캡처한 이벤트 데이터를 파일 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 테이블에 저장합니다. 추적 파일을 사용하여 다음을 수행할 수 있습니다.  
@@ -51,7 +45,7 @@ ms.locfileid: "67928740"
  추적의 템플릿 정의에는 추적을 만드는 데 사용된 이벤트 클래스, 데이터 열, 필터 및 나머지 속성(캡처된 이벤트 데이터 제외)이 포함됩니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 데이터베이스 엔진 튜닝 관리자가 물리적 데이터베이스 설계를 튜닝하는 데 사용할 수 있는 작업 만들기와 같은 특정 작업 및 일반적인 추적 작업에 대해 미리 정의된 시스템 템플릿을 제공합니다. 사용자 정의 템플릿을 만들고 저장할 수도 있습니다.  
   
 ### <a name="importing-and-exporting-templates"></a>템플릿 가져오기 및 내보내기  
- [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 템플릿을 한 서버에서 다른 서버로 가져오거나 내보낼 수 있습니다. 템플릿을 내보내면 기존 템플릿의 사본이 지정한 디렉터리로 이동됩니다. 템플릿을 가져오면 지정한 템플릿의 사본이 생성됩니다. 이러한 템플릿은 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]에 표시될 때 템플릿 이름 뒤에 오는 단어 "(user)"로 시스템 템플릿과 구분할 수 있습니다. 미리 정의된 시스템 템플릿은 덮어쓰거나 직접 수정할 수 없습니다.  
+ [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 템플릿을 한 서버에서 다른 서버로 가져오거나 내보낼 수 있습니다. 템플릿을 내보내면 기존 템플릿의 사본이 지정한 디렉터리로 이동됩니다. 템플릿을 가져오면 지정한 템플릿의 사본이 생성됩니다. 해당 템플릿은 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]에 표시될 때 템플릿 이름 뒤에 오는 단어 “(user)”로 시스템 템플릿과 구분할 수 있습니다. 미리 정의된 시스템 템플릿은 덮어쓰거나 직접 수정할 수 없습니다.  
   
 ### <a name="analyzing-performance-with-templates"></a>템플릿으로 성능 분석  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 자주 모니터링하는 경우 템플릿을 사용하여 성능을 분석할 수 있습니다. 템플릿은 매번 같은 이벤트 데이터를 캡처하고 같은 추적 정의를 사용하여 같은 이벤트를 모니터링합니다. 추적을 만들 때마다 이벤트 클래스와 데이터 열을 정의할 필요가 없습니다. 또한 다른 사용자에게 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트를 모니터링하는 데 사용하도록 템플릿을 줄 수도 있습니다. 예를 들어 지원 공급자는 고객에게 템플릿을 제공할 수 있습니다. 고객은 템플릿을 사용하여 필요한 이벤트 데이터를 캡처해 지원 공급자에게 분석을 위해 보낼 수 있습니다.  

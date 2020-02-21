@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows 인증을 사용 하 여 연결 | Microsoft Docs'
+title: '방법: Windows 인증을 사용하여 연결 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: f403a4e0-b0a8-4939-9dc1-e1209626367e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 84707c67491d4f02be41e6506fb233ee7afef9fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936503"
 ---
 # <a name="how-to-connect-using-windows-authentication"></a>방법: Windows 인증을 사용하여 연결
@@ -39,7 +39,7 @@ Windows 인증을 사용하여 SQL Server에 연결할 때 다음 사항을 고�
   
 -   사용자가 중앙 집중식 계정 관리를 받습니다. 암호 만료 기간, 최소 암호 길이 및 잘못된 로그온 요청이 여러 번 있을 경우 계정 잠금 등의 보안 정책을 강제로 적용합니다.  
   
-Windows 인증이 실제 옵션이 아니면 [How to: Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md)을 참조하세요.  
+Windows 인증이 실제 옵션이 아니면 [방법: SQL Server 인증을 사용하여 연결](../../connect/php/how-to-connect-using-sql-server-authentication.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 SQLSRV 드라이버를 사용하는 경우 다음 예제에서는 Windows 인증을 사용하여 SQL Server의 로컬 인스턴스에 연결합니다. 연결이 설정된 후 데이터베이스에 액세스하는 사용자의 로그인에 대해 서버가 쿼리됩니다.  
@@ -107,7 +107,7 @@ while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
 ## <a name="see-also"></a>참고 항목  
 [방법: SQL Server 인증을 사용하여 연결](../../connect/php/how-to-connect-using-sql-server-authentication.md)
 
-[Microsoft Drivers for PHP for SQL Server 프로그래밍 가이드](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 프로그래밍 가이드 | Microsoft Docs](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [설명서의 코드 예제 정보](../../connect/php/about-code-examples-in-the-documentation.md)
 

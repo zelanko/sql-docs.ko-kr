@@ -15,10 +15,10 @@ ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 574fcc9c8e180b75d5d3def6d97798708c40996c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140257"
 ---
 # <a name="process-large-reports"></a>큰 보고서 처리
@@ -36,7 +36,7 @@ ms.locfileid: "67140257"
 ## <a name="configuration-recommendations"></a>구성 권장 사항  
  보고서 실행, 보고서 렌더링 및 보고서 액세스에 대한 권장 사항은 다음과 같습니다.  
   
--   페이지 매김을 지원하도록 보고서를 디자인합니다. 보고서 서버는 보고서를 한 번에 한 페이지씩 보냅니다. 보고서에 페이지 매김이 포함되어 있는 경우 브라우저에 스트림되는 데이터의 양을 제어할 수 있습니다. 자세한 내용은 [캐시 (SSRS)를 미리 로드](../../reporting-services/report-server/preload-the-cache-report-manager.md)합니다.  
+-   페이지 매김을 지원하도록 보고서를 디자인합니다. 보고서 서버는 보고서를 한 번에 한 페이지씩 보냅니다. 보고서에 페이지 매김이 포함되어 있는 경우 브라우저에 스트림되는 데이터의 양을 제어할 수 있습니다. 자세한 내용은 [캐시 미리 로드(SSRS)](../../reporting-services/report-server/preload-the-cache-report-manager.md)를 참조하세요.  
   
 -   보고서가 요청이 있을 때 실행되지 않도록 보고서를 예약된 보고서 스냅샷으로 실행되도록 구성합니다. 보고서 실행에 대한 시간 제한 값을 설정하지 마십시오. 사용률이 낮은 시간에 보고서를 실행합니다.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "67140257"
   
  이러한 방법 대신 개인 사용자에게 보고서를 배포할 수도 있습니다. 배달 옵션을 주의해서 구성하면 구독을 통해 큰 보고서를 배포할 수 있습니다. 표준 구독 또는 데이터 기반 구독을 사용하여 보고서를 배달할 수 있습니다. 구독 및 배달 권장 사항은 다음과 같습니다.  
   
--   웹 보관 파일(MHTML), PDF 또는 Excel을 사용하도록 구독을 구성합니다.  
+-   웹 보관(MHTML), PDF 또는 Excel을 사용하도록 구독을 구성합니다.  
   
 -   PDF 또는 Excel을 사용할 경우 파일 공유 배달을 사용하도록 구독을 구성합니다. 배달된 보고서는 데스크톱 애플리케이션을 통해 사용할 수 있습니다. 파일 공유에 대한 사용 권한을 설정하여 보고서를 볼 수 있는 사용자를 결정해야 합니다.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "67140257"
   
  전자 메일 보고서 배달을 사용하려면 링크를 포함하도록 구독을 구성합니다. 보고서를 첨부 파일로 보내지는 마십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [구독 및 배달&#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [보고서 처리 속성 설정](../../reporting-services/report-server/set-report-processing-properties.md)   
  [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   

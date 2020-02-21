@@ -1,6 +1,6 @@
 ---
-title: 클라이언트 프로토콜 - 공유 메모리 속성(프로토콜 탭) | Microsoft Docs
-ms.custom: ''
+title: 클라이언트 프로토콜 - 공유 메모리 속성(프로토콜 탭)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ ms.assetid: 941369bd-cd4d-4a64-8e42-724d9a866eb7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 436016fbcb703244a75ba9b77191f0c488bd4283
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 94d4a6995b605a88c4f64e41620d0cfc109247e3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010234"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306503"
 ---
 # <a name="client-protocols---shared-memory-properties-protocol-tab"></a>클라이언트 프로토콜 - 공유 메모리 속성(프로토콜 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

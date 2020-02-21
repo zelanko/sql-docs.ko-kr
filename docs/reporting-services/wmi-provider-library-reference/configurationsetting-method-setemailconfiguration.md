@@ -16,10 +16,10 @@ ms.assetid: b40a2224-2c90-4d32-892f-1fe73a0591ca
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3e2b3e3c1d3d9fc5193a8c87c2aa96f9ff2d3ba2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581005"
 ---
 # <a name="configurationsetting-method---setemailconfiguration"></a>ConfigurationSetting 메서드 - SetEmailConfiguration
@@ -41,7 +41,7 @@ public void SetEmailConfiguration (Boolean SendUsingSMTPServer,
   
 ## <a name="parameters"></a>매개 변수  
  *SendUsingSMTPServer*  
- 전자 메일을 보내는 데 SMTP 서버를 사용하는지 여부를 나타내는 부울 값입니다. 이 값은 true로만 설정할 수 있습니다. 기본값은 false입니다.  
+ 전자 메일을 보내는 데 SMTP 서버를 사용하는지 여부를 나타내는 부울 값입니다. 이 값은 true로만 설정할 수 있습니다. 기본값은 False입니다.  
   
  *SMTPServer*  
  SMTP 서버의 이름이나 IP 주소가 들어 있는 문자열입니다.  
@@ -52,10 +52,10 @@ public void SetEmailConfiguration (Boolean SendUsingSMTPServer,
  *HRESULT*  
  [out] 호출의 성공 여부를 나타내는 값입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드 호출의 성공 또는 실패를 나타내는 *HRESULT* 를 반환합니다. 0 값은 메서드 호출이 성공했음을 나타냅니다. 0 이외의 값은 오류가 발생했음을 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  *SendUsingSMTPServer* 매개 변수를 **true**로 설정하면 보고서 서버 구성 파일의 **SendUsing** 항목이 1로 설정됩니다. *SendUsingSMTPServer* 매개 변수를 **false**로 설정하면 **SendUsing** 항목이 구성되지 않습니다.  
   
  이 메서드를 사용하면 보고서 서버 구성 파일의 **SendUsing** 항목을 1이 아닌 다른 값으로 설정할 수 없습니다. SMTP 메일 외의 다른 항목에 대해 보고서 서버를 구성하려면 구성 파일을 수동으로 편집해야 합니다.  

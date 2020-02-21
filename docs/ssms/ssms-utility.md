@@ -14,14 +14,14 @@ ms.assetid: aafda520-9e2a-4e1e-b936-1b165f1684e8
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 08/07/2019
-ms.openlocfilehash: 4fa84860e2d101b43b1ea4ebfe09d9580c0088ee
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 5a31fb94fad2e063fe9846bd820957abb4ce9b32
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893221"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243903"
 ---
 # <a name="ssms-utility"></a>SSMS 유틸리티
 
@@ -59,7 +59,7 @@ ms.locfileid: "68893221"
 > [!Note]
 > **Active Directory - MFA 지원을 포함한 유니버설 인증**은 현재 지원되지 않습니다.
  
-[ **-U** _username_] SQL 인증을 사용하여 연결할 때 사용하는 사용자 이름
+[ **-U** _username_] ‘SQL 인증’을 사용하여 연결할 때 사용하는 사용자 이름
  
 [ **-E**] Windows 인증을 사용하여 연결
  
@@ -69,7 +69,7 @@ ms.locfileid: "68893221"
  
 [ **-?** ] 명령줄 도움말 표시
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 모든 스위치는 선택 사항이며 쉼표로 구분되는 파일을 제외하고 공백으로 구분합니다. 스위치를 지정하지 않으면 **Ssms** 가 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 도구 **메뉴의** 옵션 **설정에 지정된 대로** 를 엽니다. 예를 들어 **환경/일반** 페이지에서 **시작 시** 옵션으로 **새 쿼리 창 열기**를 지정할 경우 **Ssms** 는 빈 쿼리 편집기를 엽니다.
  
@@ -79,7 +79,7 @@ ms.locfileid: "68893221"
 
 다음 표에서는 서버 유형과 연결된 파일 확장명을 보여 줍니다.
  
-|서버 유형|확장명| 
+|서버 유형|내선 번호| 
 |-----------------|---------------| 
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|.sql|
 |SQL Server Analysis Services|.mdx<br /><br /> .xmla|

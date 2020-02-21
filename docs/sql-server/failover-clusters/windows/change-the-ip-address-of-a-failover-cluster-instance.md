@@ -1,6 +1,7 @@
 ---
-title: 장애 조치(failover) 클러스터 인스턴스의 IP 주소 변경 | Microsoft 문서
-ms.custom: ''
+title: 장애 조치(failover) 클러스터 인스턴스의 IP 주소 변경
+description: 장애 조치(failover) 클러스터 관리자를 사용하여 SQL Server 장애 조치(failover) 클러스터 인스턴스의 IP 주소를 변경하는 방법에 대해 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -14,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: b685f400-cbfe-4c5d-a070-227a1123dae4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 93738cb12b13b5f7c6434acd7d7d86b5496d4fc3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4960a10a44e3a84b42c0bf43872a38be05be292
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063795"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230139"
 ---
 # <a name="change-the-ip-address-of-a-failover-cluster-instance"></a>장애 조치(failover) 클러스터 인스턴스의 IP 주소 변경
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에서는 장애 조치(failover) 클러스터 관리자 스냅인을 사용하여 Always On 장애 조치(failover) 클러스터 인스턴스(FCI)에 IP 주소 리소스를 변경하는 방법에 대해 설명합니다. 장애 조치 클러스터 관리자 스냅인은 WSFC(Windows Server 장애 조치(failover) 클러스터링) 서비스용 클러스터 관리 애플리케이션입니다.  
+  이 문서에서는 장애 조치(failover) 클러스터 관리자 스냅인을 사용하여 Always On 장애 조치(failover) 클러스터 인스턴스(FCI)에 IP 주소 리소스를 변경하는 방법에 대해 설명합니다. 장애 조치 클러스터 관리자 스냅인은 WSFC(Windows Server 장애 조치(failover) 클러스터링) 서비스용 클러스터 관리 애플리케이션입니다.  
   
 -   **시작하기 전 주의 사항:**  [보안](#Security)  
   
@@ -32,7 +33,7 @@ ms.locfileid: "68063795"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 사용 권한  
+####  <a name="Permissions"></a> 권한  
  FCI를 유지 관리 또는 업데이트하려면 FCI의 모든 노드 서비스로 로그온할 수 있는 권한을 가진 로컬 관리자여야 합니다.  
   
 ##  <a name="WSFC"></a> 장애 조치(Failover) 클러스터 관리자 스냅인 사용  

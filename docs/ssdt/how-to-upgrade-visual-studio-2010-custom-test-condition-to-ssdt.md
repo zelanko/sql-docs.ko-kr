@@ -1,23 +1,24 @@
 ---
-title: '방법: 이전 릴리스의 Visual Studio 2010 사용자 지정 테스트 조건을 SQL Server Data Tools로 업그레이드 | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 이전 릴리스의 Visual Studio 2010 사용자 지정 테스트 조건 업그레이드
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 44c895a3-dee0-4032-a60f-812f5fe3c713
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2b46be709cb14ff9105bcfbcacd65bc32af8de77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 333ef282fe4e1f9d7af53cd3569371e88018a03f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035008"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251069"
 ---
 # <a name="how-to-upgrade-a-visual-studio-2010-custom-test-condition-from-a-previous-release-to-sql-server-data-tools"></a>방법: 이전 릴리스의 Visual Studio 2010 사용자 지정 테스트 조건을 SQL Server Data Tools로 업그레이드
+
 SQL Server Data Tools 이전 버전에서 만든 단위 테스트 조건을 사용하려면 이를 업그레이드해야 합니다.  
   
 -   [참조 업데이트](#UpdateReferences)  

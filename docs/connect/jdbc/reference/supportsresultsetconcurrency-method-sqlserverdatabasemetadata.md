@@ -1,5 +1,5 @@
 ---
-title: supportsResultSetConcurrency 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs
+title: supportsResultSetConcurrency 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 8f7573b2-ac5c-4721-8a02-4b6cb60c74b2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 43c3fb3800b18af27d811fd7679e4b957f1e2113
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67968958"
 ---
 # <a name="supportsresultsetconcurrency-method-sqlserverdatabasemetadata"></a>supportsResultSetConcurrency 메서드(SQLServerDatabaseMetaData)
@@ -74,14 +74,14 @@ public boolean supportsResultSetConcurrency(int type,
   
  CONCUR_SS_OPTIMISTIC_VAL  
   
-## <a name="return-value"></a>반환 값  
- 지원 되는 경우 **true** 입니다. 그렇지 않으면 **false**입니다.  
+## <a name="return-value"></a>Return Value  
+ 지원되는 경우 **true**입니다. 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 supportsResultSetConcurrency 메서드는 java. DatabaseMetaData 인터페이스의 supportsResultSetConcurrency 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 supportsResultSetConcurrency 메서드는 java.sql.DatabaseMetaData 인터페이스의 supportsResultSetConcurrency 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

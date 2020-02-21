@@ -1,10 +1,9 @@
 ---
-title: 다이어그램에서 테이블 간의 관계 만들기 | Microsoft 문서
-ms.custom: ''
+title: 다이어그램에서 테이블 간 관계 만들기
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +11,14 @@ helpviewer_keywords:
 ms.assetid: 28e9630c-dff4-46cc-bb0e-fe77998b6ac2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e6ad73857c6eddd459f86663acffb2a49d74d16e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: b206d31d349119ed361e00ff1ff697c438ec3ba4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264288"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254272"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>다이어그램에서 테이블 간의 관계 만들기(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,6 +50,6 @@ ms.locfileid: "68264288"
   
 ## <a name="see-also"></a>참고 항목  
 [테이블 및 열 대화 상자&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/tables-and-columns-dialog-box-visual-database-tools.md)  
-[제약 조건 작업(Visual Database Tools)](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
+[제약 조건 작업(https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e) ]  
 [데이터베이스 다이어그램에서 테이블 작업&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
   

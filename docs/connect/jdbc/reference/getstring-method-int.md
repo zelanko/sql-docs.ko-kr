@@ -1,5 +1,5 @@
 ---
-title: getString 메서드 (int) | Microsoft Docs
+title: getString 메서드(int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: f3fce8bf-8d6e-476f-aa6d-992daa79b899
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2160e7214b3ad60d2c8629d55bd79de8a5b15905
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979495"
 ---
 # <a name="getstring-method-int"></a>getString 메서드(int)
@@ -39,13 +39,13 @@ public java.lang.String getString(int index)
   
  매개 변수 인덱스를 나타내는 **int**입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  **문자열** 값입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 getString 메서드는 java.sql.CallableStatement 인터페이스의 getString 메서드에 의해 지정됩니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 모든 열은 문자열로 반환될 수 있습니다. 즉, 모든 숫자 기반 및 문자 기반 형식의 문자열 표현과 binary, varbinary, varbinary(max), image, timestamp 및 uniqueidentifier 같은 이진 열의 16진수 문자 표현이 반환될 수 있습니다.  

@@ -1,9 +1,11 @@
 ---
-title: Windows 애플리케이션에서 SOAP API 사용 | Microsoft Docs
+title: Windows 애플리케이션에서 SOAP API 사용
+description: Reporting Services SOAP API를 통해 보고서 서버의 전체 기능에 액세스할 수 있습니다. 서비스를 호출하는 코드를 작성하여 Windows 애플리케이션에서 웹 서비스에 액세스합니다.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - rendered reports [Reporting Services]
@@ -13,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e4804792-20cd-4df2-9257-fb958ff447b4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d9802e3b2c60a345d789a63ec5f2bc2cc9198ba2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: a2cd3fce2844fc815981f7e5ad4850236445f281
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62741774"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796984"
 ---
 # <a name="integrating-reporting-services-using-soap---windows-application"></a>SOAP를 사용하여 Reporting Services 통합 - Windows 애플리케이션
-  Reporting Services SOAP API를 통해 보고서 서버의 전체 기능에 액세스할 수 있습니다. SOAP API는 웹 서비스이므로 쉽게 액세스하여 사용자 지정 비즈니스 애플리케이션에 엔터프라이즈 보고 기능을 제공할 수 있습니다. 서비스를 호출하는 코드를 작성하기만 하면 Windows 애플리케이션에서 웹 서비스에 액세스할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 사용하여 웹 서비스의 속성 및 메서드를 표시하고 친숙한 인프라와 도구를 통해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기술 기반의 비즈니스 애플리케이션을 만들 수 있는 프록시 클래스를 생성할 수 있습니다.  
+  Reporting Services SOAP API를 통해 보고서 서버의 전체 기능에 액세스할 수 있습니다. SOAP API는 웹 서비스이므로 쉽게 액세스하여 사용자 지정 비즈니스 애플리케이션에 엔터프라이즈 보고 기능을 제공할 수 있습니다. 서비스를 호출하는 코드를 작성하기만 하면 Windows 애플리케이션에서 웹 서비스에 액세스할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 사용하여 웹 서비스의 속성 및 메서드를 표시하고 친숙한 인프라와 도구를 통해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기술 기반의 비즈니스 애플리케이션을 빌드할 수 있는 프록시 클래스를 생성할 수 있습니다.  
   
 ## <a name="integrating-report-management-functionality-using-windows-forms"></a>Windows Forms를 사용하여 보고서 관리 기능 통합  
  URL 액세스와 달리 SOAP API는 보고서 서버를 통해 사용 가능한 전체 관리 기능 집합을 표시합니다. 다시 말해서 개발자가 SOAP을 통해 보고서 관리자의 전체 관리 기능을 사용할 수 있습니다. 그러므로 Windows Forms를 사용하여 완전한 관리 도구를 개발할 수 있습니다. 예를 들어 Windows 애플리케이션에서 사용자들이 보고서 서버 네임스페이스의 내용을 검색할 수 있도록 설정해야 할 경우가 있습니다. 이런 경우 웹 서비스 <xref:ReportService2010.ReportingService2010.ListChildren%2A> 메서드를 사용하여 보고서 서버 데이터베이스의 모든 항목을 나열한 다음 Listview, Treeview 또는 Combobox 컨트롤을 사용하여 이러한 항목을 사용자에게 표시할 수 있습니다. 다음 웹 서비스 코드를 사용하면 사용자가 폼에서 단추를 클릭할 때 사용자의 내 보고서 폴더에서 사용 가능한 보고서의 현재 목록을 검색하도록 할 수 있습니다.  

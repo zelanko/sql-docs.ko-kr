@@ -1,8 +1,7 @@
 ---
-title: SSMS(SQL Server Management Studio) 다운로드 | Microsoft 문서
+title: SSMS(SQL Server Management Studio) 다운로드
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: sstein, maghan
 ms.technology: ssms
 ms.topic: conceptual
 keywords:
@@ -21,14 +20,15 @@ keywords:
 ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dnethi
 ms.author: dinethi
-ms.custom: ''
+ms.reviewer: sstein, maghan
+ms.custom: seo-lt-2019
 ms.date: 11/04/2019
-ms.openlocfilehash: 38c594e235bf68c18ec493fd8ec43f585ea0378c
-ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
+ms.openlocfilehash: 3532c1d7cfe148c4fe4f1d5331e711a994916818
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74097850"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76761797"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 다운로드
 
@@ -44,7 +44,7 @@ SSMS는 무료입니다.
 
 **[![다운로드](media/download-icon.png) SSMS(SQL Server Management Studio) 다운로드](https://aka.ms/ssmsfullsetup)**
 
-SSMS 18.4는 SSMS의 최신 GA(일반 공급) 버전입니다. 이전 GA 버전의 SSMS 18이 설치된 경우 SSMS 18.4를 설치하면 18.4로 업그레이드됩니다. SSMS 18.x의 *미리 보기* 버전이 설치된 경우에는 이것을 제거한 후에 SSMS 18.4를 설치해야 합니다.
+SSMS 18.4는 SSMS의 최신 GA(일반 공급) 버전입니다. 이전 GA 버전의 SSMS 18이 설치된 경우 SSMS 18.4를 설치하면 18.4로 업그레이드됩니다.
 
 ### <a name="version-information"></a>버전 정보
 
@@ -54,7 +54,7 @@ SSMS 18.4는 SSMS의 최신 GA(일반 공급) 버전입니다. 이전 GA 버전�
 
 의견 또는 제안 사항이 있거나 문제를 보고하려는 경우 SSMS 팀에 연락하는 가장 좋은 방법은 [UserVoice](https://aka.ms/sqlfeedback)를 사용하는 것입니다.
 
-SSMS 18.x 설치는 SSMS 17.x 이전 버전을 업그레이드 또는 대체하지 않습니다. SSMS 18.x는 이전 버전과 함께 설치되므로 두 버전을 모두 사용할 수 있습니다.
+SSMS 18.x 설치는 SSMS 17.x 이전 버전을 업그레이드 또는 대체하지 않습니다. SSMS 18.x는 이전 버전과 함께 설치되므로 두 버전을 모두 사용할 수 있습니다. 그러나 SSMS 18.x의 ***미리 보기*** 버전이 설치된 경우에는 해당 버전을 **제거**한 후에 SSMS 18.4를 설치해야 합니다.
 
 컴퓨터에 SSMS가 병렬로 설치되어 있으면 특정 요구에 맞는 올바른 버전을 시작해야 합니다. 최신 버전에는 **Microsoft SQL Server Management Studio 18** 레이블이 지정됩니다.
 
@@ -112,7 +112,7 @@ SQL Server Management Studio 18.4:
 <sup>*</sup> 버전 1607(10.0.14393) 이상이 필요
 
 > [!NOTE]
-> SSMS는 Windows에서만 실행됩니다. Windows 이외의 플랫폼에서 실행되는 도구가 필요한 경우 Azure Data Studio를 살펴보세요. Azure Data Studio는 macOS, Linux 및 Windows를 실행하는 새로운 플랫폼 간 도구입니다. 자세한 내용은 [Azure Data Studio](../azure-data-studio/what-is.md)를 참조하세요.
+> SSMS는 Windows(AMD 또는 Intel)에서만 실행됩니다. Windows 이외의 플랫폼에서 실행되는 도구가 필요한 경우 Azure Data Studio를 살펴보세요. Azure Data Studio는 macOS, Linux 및 Windows에서 실행되는 새로운 플랫폼 간 도구입니다. 자세한 내용은 [Azure Data Studio](../azure-data-studio/what-is.md)를 참조하세요.
 
 ## <a name="release-notes-ssms-184"></a>릴리스 정보(SSMS 18.4)
 
@@ -126,11 +126,13 @@ SQL Server Management Studio 18.4:
 
 [!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 - [자습서: SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
 - [SQL Server Management Studio 설명서](sql-server-management-studio-ssms.md)
-- [추가 업데이트 및 서비스 팩](https://technet.microsoft.com/sqlserver/ff803383.aspx)
+- [최신 업데이트](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
+- [Azure Data Studio](../azure-data-studio/what-is.md)
 - [SSDT(SQL Server Data Tools) 다운로드](../ssdt/download-sql-server-data-tools-ssdt.md)
+- [Azure 데이터 아키텍처 가이드](https://docs.microsoft.com/azure/architecture/data-guide/)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

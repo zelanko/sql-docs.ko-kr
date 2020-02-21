@@ -1,5 +1,5 @@
 ---
-title: getCharacterStream () | Microsoft Docs
+title: getCharacterStream(java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 5281e1b8-19b8-4fe5-83be-929d1987e25d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e52ff3e9bc9da36d3874382341a1f46eb722ad3c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953543"
 ---
 # <a name="getcharacterstream-javalangstring"></a>getCharacterStream(java.lang.String)
@@ -39,8 +39,8 @@ public final java.io.Reader getCharacterStream(java.lang.String paramName)
   
  매개 변수 이름을 나타내는 **문자열**입니다.  
   
-## <a name="return-value"></a>반환 값  
- 판독기 개체입니다.  
+## <a name="return-value"></a>Return Value  
+ Reader 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

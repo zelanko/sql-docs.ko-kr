@@ -1,6 +1,6 @@
 ---
-title: 서버에 연결(연결 속성 페이지) 데이터베이스 엔진 | Microsoft 문서
-ms.custom: ''
+title: 서버에 연결(연결 속성 페이지) 데이터베이스 엔진
+ms.custom: seo-lt-2019
 ms.date: 08/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: edc1143c-6a47-4b02-92ab-441bdea8ea8a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 93c9069cf3a52cbbfa961737350976c3beda4304
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: cb62bd419c08b1562a6b636685e360501f574ae3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265096"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245005"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>서버에 연결(연결 속성 페이지) 데이터베이스 엔진
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 인스턴스에 연결하거나 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 을 **등록된 서버**에 등록할 때 이 탭을 사용하여 옵션을 확인하거나 지정할 수 있습니다. **연결** 및 **옵션** 은 [!INCLUDE[ssDE](../../includes/ssde_md.md)]인스턴스에 연결 중인 경우에만 이 대화 상자에 나타납니다. **테스트** 및 **저장** 은 [!INCLUDE[ssDE](../../includes/ssde_md.md)]등록 시에만 이 대화 상자에 나타납니다.  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 인스턴스에 연결하거나 [!INCLUDE[ssDE](../../includes/ssde_md.md)]을 **등록된 서버**에 등록할 때 이 탭을 사용하여 옵션을 확인하거나 지정할 수 있습니다. **연결** 및 **옵션** 은 [!INCLUDE[ssDE](../../includes/ssde_md.md)]인스턴스에 연결 중인 경우에만 이 대화 상자에 나타납니다. **테스트** 및 **저장** 은 [!INCLUDE[ssDE](../../includes/ssde_md.md)]등록 시에만 이 대화 상자에 나타납니다.  
   
 **데이터베이스에 연결**  
 목록에서 연결할 데이터베이스를 선택합니다. **<default>** 를 선택하면 서버의 기본 데이터베이스에 연결됩니다. **<Browse server>** 를 선택하면 연결하려는 데이터베이스에 대한 서버를 찾아볼 수 있습니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "68265096"
 **옵션**  
 대화 상자를 변경하여 암호 저장과 같은 추가 서버 연결 옵션을 숨기려면 클릭합니다.  
   
-**테스트**  
+**Test**  
 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 을 **등록된 서버**에 등록하는 경우 연결을 테스트하려면 클릭합니다.  
   
 **저장**  

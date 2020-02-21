@@ -16,10 +16,10 @@ ms.assetid: 553c0603-c07d-436a-86eb-3ba6b51bd696
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 78b4d49029c6a0f2696cc93348bff7b32767bc13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974834"
 ---
 # <a name="setcatalog-method-sqlserverconnection"></a>setCatalog 메서드(SQLServerConnection)
@@ -42,8 +42,8 @@ public void setCatalog(java.lang.String catalog)
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 setCatalog 메서드는 java. .sql. Connection 인터페이스의 setCatalog 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 setCatalog 메서드는 java.sql.Connection 인터페이스의 setCatalog 메서드에 의해 지정됩니다.  
   
  *catalog* 인수는 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]에 의해 자동으로 이스케이프됩니다. 이 메서드를 사용하면 Connection 개체의 카탈로그 속성이 설정됩니다. 이 속성은 다른 방법으로 암시적으로 설정되지 않습니다.  
   

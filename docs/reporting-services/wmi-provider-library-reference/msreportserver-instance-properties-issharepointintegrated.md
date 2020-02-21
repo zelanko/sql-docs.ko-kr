@@ -11,13 +11,13 @@ ms.assetid: e21d00ad-5d9a-4290-8d74-7eeeda39e1ed
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a1e785172a14ad553f40f8b151b0ee3715490fd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65569116"
 ---
-# <a name="msreportserverinstance-properties---issharepointintegrated"></a>MSReportServer_Instance 속성 - IsSharePointIntegrated
+# <a name="msreportserver_instance-properties---issharepointintegrated"></a>MSReportServer_Instance 속성 - IsSharePointIntegrated
   보고서 서버가 SharePoint 통합 모드에 있는지 여부를 지정합니다. SharePoint 모드에서는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]인스턴스가 SharePoint 공유 서비스이며 WMI 공급자를 통해 제어되지 않으므로 **부터는 이 속성이 항상** False [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 반환합니다.  
   
 ## <a name="syntax"></a>구문  

@@ -11,10 +11,10 @@ ms.assetid: 546290e0-9411-4a2b-aa36-61251e70e9cf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b0721341cbf095e0aa27fab392c8d03f72dc2e3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970894"
 ---
 # <a name="sqlserverparametermetadata-class"></a>SQLServerParameterMetaData 클래스
@@ -35,7 +35,7 @@ ms.locfileid: "67970894"
 public class SQLServerParameterMetaData  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  매개 변수 메타데이터를 검색하려면 준비된 문을 SET FMT ONLY를 사용하여 실행합니다. 호출 가능한 문에서는 sp_sproc_columns를 호출하여 프로시저 매개 변수의 이름과 메타데이터를 검색합니다.  
   
 ## <a name="see-also"></a>참고 항목  

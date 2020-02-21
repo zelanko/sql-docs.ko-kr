@@ -1,6 +1,6 @@
 ---
-title: sqlmaint 유틸리티 | Microsoft Docs
-ms.custom: ''
+title: sqlmaint 유틸리티
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ecc0a38acd6ea00656e67e9f582a55c05ca15583
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: c0f87bca3404505e82c903bd868e9b5c2da00bed
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986289"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306966"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint 유틸리티
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -178,7 +178,7 @@ dbname_db_yyyyMMddhhmm.BAK
   
 ```  
   
- 여기서  
+ 라는 설치 관리자 실행 파일에 포함됩니다. 여기서  
   
 -   *dbname* 은 백업하는 데이터베이스의 이름입니다.  
   
@@ -228,7 +228,7 @@ dbname_log_yyyymmddhhmm.BAK
   
  *number* 만 지정하면 기본적으로 날짜 부분에 **weeks**가 사용됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sqlmaint** 유틸리티는 하나 이상의 데이터베이스에서 유지 관리 작업을 수행합니다. **-D** 를 지정할 경우 지정한 데이터베이스에서만 나머지 스위치에 지정된 작업이 수행됩니다. **-PlanName** 또는 **-PlanID** 를 지정할 경우 **sqlmaint** 가 지정된 유지 관리 작업에서 정보를 검색하면 계획에 있는 데이터베이스 목록만 검색됩니다. 나머지 **sqlmaint** 매개 변수에 지정된 모든 작업은 계획에서 가져온 목록의 각 데이터베이스에 대해 적용됩니다. **sqlmaint** 유틸리티는 계획 자체에 정의된 유지 관리 작업을 적용하지는 않습니다.  
   
  **sqlmaint** 유틸리티가 성공적으로 실행되면 0을 반환하고 실패하면 1을 반환합니다. 실패는 보고됩니다.  
@@ -246,13 +246,13 @@ dbname_log_yyyymmddhhmm.BAK
   
 ## <a name="examples"></a>예  
   
-### <a name="a-performing-dbcc-checks-on-a-database"></a>1\. 데이터베이스에서 DBCC 검사를 수행합니다.  
+### <a name="a-performing-dbcc-checks-on-a-database"></a>A. 데이터베이스에서 DBCC 검사를 수행합니다.  
   
 ```  
 sqlmaint -S MyServer -D AdventureWorks2012 -CkDB -CkAl -CkCat -Rpt C:\MyReports\AdvWks_chk.rpt  
 ```  
   
-### <a name="b-updating-statistics-using-a-15-sample-in-all-databases-in-a-plan-also-shrink-any-of-the-database-that-have-reached-110-mb-to-having-only-10-free-space"></a>2\. 계획의 모든 데이터베이스에서 15% 샘플을 사용하여 통계를 업데이트합니다. 또한 110MB에 도달한 데이터베이스를 축소하여 빈 공간이 10%가 되도록 합니다.  
+### <a name="b-updating-statistics-using-a-15-sample-in-all-databases-in-a-plan-also-shrink-any-of-the-database-that-have-reached-110-mb-to-having-only-10-free-space"></a>B. 계획의 모든 데이터베이스에서 15% 샘플을 사용하여 통계를 업데이트합니다. 또한 110MB에 도달한 데이터베이스를 축소하여 빈 공간이 10%가 되도록 합니다.  
   
 ```  
 sqlmaint -S MyServer -PlanName MyUserDBPlan -UpdOptiStats 15 -RmUnusedSpace 110 10  

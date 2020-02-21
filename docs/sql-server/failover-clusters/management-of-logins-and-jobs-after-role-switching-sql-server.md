@@ -1,6 +1,7 @@
 ---
-title: 역할 전환 후 로그인 및 작업 관리(SQL Server) | Microsoft 문서
-ms.custom: ''
+title: 미러 장애 조치(failover) 후 로그인 및 작업 관리
+description: 미러된 데이터베이스를 주 데이터베이스에서 보조 데이터베이스로 장애 조치(failover)한 후 로그인 및 작업을 관리하는 방법에 대해 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2887cfe969afd8739b15646efb8ee4700c8affff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bf355678b3219fb0bf32ecd1620c00b0e58f346f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063850"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230219"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>역할 전환 후 로그인 및 작업 관리(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "68063850"
   
  자세한 내용은 [데이터베이스 미러링 및 로그 전달에서의 분리된 사용자](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (데이터베이스 엔진 블로그)를 참조하세요.  
   
-## <a name="jobs"></a>에서  
+## <a name="jobs"></a>작업  
  백업과 같은 작업에는 특별한 주의가 필요합니다. 일반적으로 역할 전환 후 데이터베이스 소유자 또는 시스템 관리자는 새 주 데이터베이스의 작업을 다시 만들어야 합니다.  
   
  이전 주 서버 인스턴스를 사용할 수 있는 경우 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 원래 작업을 삭제해야 합니다. 현재 미러 데이터베이스가 RESTORING 상태에 있어서 사용할 수 없으므로 현재 미러 데이터베이스의 작업은 실패합니다.  

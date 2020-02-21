@@ -1,26 +1,32 @@
 ---
-title: Azure Data Studio에서 Notebook 실행
-titleSuffix: SQL Server big data clusters
+title: 'Notebook 실행: Azure Data Studio'
+titleSuffix: SQL Server Big Data Clusters
 description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터에 연결된 Azure Data Studio에서 Jupyter Notebook을 실행하는 방법을 설명합니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 05/08/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 23ff737a0fe1434c29b9cdf09102bc5042e68dc3
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: ff3f569761b7ba95a64f693f1726df589ce7e579
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844296"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244099"
 ---
 # <a name="how-to-use-notebooks-in-sql-server"></a>SQL Server에서 Notebooks를 사용하는 방법
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 이 문서에서는 최신 버전의 [**Azure Data Studio**](../azure-data-studio/download.md)에서 Notebook 환경을 시작하는 방법 및 고유한 Notebook 작성을 시작하는 방법을 설명합니다. 또한 다양한 커널을 사용하여 Notebook을 작성하는 방법을 보여 줍니다.
+
+Azure Data Studio에서 Notebook에 대한 소개는 5분 분량의 다음 동영상을 시청하세요.
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introduction-to-Azure-Data-Studio-Notebooks/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ## <a name="connect-to-sql-server"></a>SQL Server에 연결
 
@@ -96,7 +102,7 @@ SQL 커널에 연결된 기존 Notebook에 텍스트 셀을 추가하려면 도�
 
 ![Jupyter 백 엔드](media/notebooks-guidance/jupyter-backend.png)
 
-|커널|설명
+|커널|Description
 |:-----|:-----
 | SQL 커널 | 관계형 데이터베이스를 대상으로 하는 SQL 코드를 작성합니다.
 |PySpark3 및 PySpark 커널| 클러스터의 Spark 컴퓨팅을 사용하여 Python 코드를 작성합니다.

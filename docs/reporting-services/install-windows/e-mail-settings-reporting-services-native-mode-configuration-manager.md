@@ -1,8 +1,10 @@
 ---
-title: 전자 메일 설정 - Reporting Services 기본 모드(구성 관리자) | Microsoft Docs
-ms.date: 06/01/2016
+title: SSRS 기본 모드의 메일 설정(구성 관리자) | Microsoft Docs
+description: SQL Server Reporting Services에는 메일을 통해 보고서를 배포할 수 있는 메일 배달 확장 프로그램이 있습니다.
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 f1_keywords:
 - SQL13.rsconfigtool.emailsettings.F1
@@ -11,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 872c7e4d501017627fcc64eca7ed48204c9d3533
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 9ceb9ccbbe9c54ab24b6a37e8f86c109f0e69bd6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593815"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866006"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>전자 메일 설정 - Reporting Services 기본 모드(구성 관리자)
-Reporting Service에는 메일을 통해 보고서를 배포할 수 있는 메일 배달 확장 프로그램이 있습니다. 전자 메일 구독을 정의하는 방법에 따라 배달은 알림, 링크, 첨부 파일 또는 포함된 보고서로 구성될 수 있습니다. 전자 메일 배달 확장 프로그램은 기존 메일 서버 기술을 사용합니다. 메일 서버는 SMTP 서버 또는 전달자여야 합니다. 보고서 서버는 운영 체제에서 제공하는 CDO(Collaboration Data Objects) 라이브러리(cdosys.dll)를 통해 SMTP 서버에 연결합니다.
+SQL Server Reporting Services에는 메일을 통해 보고서를 배포할 수 있는 메일 배달 확장 프로그램이 있습니다. 전자 메일 구독을 정의하는 방법에 따라 배달은 알림, 링크, 첨부 파일 또는 포함된 보고서로 구성될 수 있습니다. 전자 메일 배달 확장 프로그램은 기존 메일 서버 기술을 사용합니다. 메일 서버는 SMTP 서버 또는 전달자여야 합니다. 보고서 서버는 운영 체제에서 제공하는 CDO(Collaboration Data Objects) 라이브러리(cdosys.dll)를 통해 SMTP 서버에 연결합니다.
 
 보고서 서버 전자 메일 배달 확장 프로그램은 기본적으로 구성되어 있지 않습니다. 따라서 Reporting Services 구성 관리자를 사용하여 확장 프로그램을 최소한으로 구성해야 합니다. 고급 속성을 설정하려면 RSReportServer.config 파일을 편집해야 합니다. 이 확장 프로그램을 사용할 수 있도록 보고서 서버를 구성할 수 없는 경우에는 보고서를 공유 폴더로 배달할 수 있습니다. 자세한 내용은 Reporting Services의 파일 공유 배달을 참조하세요.
 
@@ -109,7 +111,7 @@ Reporting Service에는 메일을 통해 보고서를 배포할 수 있는 메�
      <SendPassword></SendPassword>
 </RSEmailDPConfiguration>
 ```
-## <a name="configuration-options-for-setting-the-to-field-in-a-message"></a>메시지의 받는 사람: 필드 설정을 위한 구성 옵션
+## <a name="configuration-options-for-setting-the-to-field-in-a-message"></a>메시지의 받는 사람: 필드 설정을 위한  구성 옵션
 개인 구독 관리 태스크에 의해 부여된 권한에 따라 만들어진 사용자 정의 구독에는 도메인 사용자 계정에 따라 사전 설정된 사용자 이름이 들어 있습니다. 사용자가 구독을 생성할 때 구독을 생성하는 사람의 도메인 사용자 계정이 **받는 사람:** 필드의 수신자 이름으로 자동으로 삽입됩니다.
 
 도메인 사용자 계정과는 다른 전자 메일 계정을 사용하는 SMTP 서버 또는 전달자를 사용하는 경우 SMTP 서버가 보고서를 해당 사용자에게 배달할 수 없습니다.
@@ -173,7 +175,7 @@ Reporting Service에는 메일을 통해 보고서를 배포할 수 있는 메�
   > [!NOTE] 
   > 로컬 SMTP 서버를 사용하는 경우 SMTPServer를 설정하지 마세요.
 
-- **From** 은 메일 메시지의 **보낸 사람:** 줄에 표시할 값을 설정합니다. 이 값은 필수 사항입니다.
+- **From** 은 메일 메시지의 **보낸 사람:** 줄에 표시할 값을 설정합니다. 이 값은 필수입니다.
 
 ### <a name="to-configure-a-local-smtp-service-for-the-report-server"></a>보고서 서버에 대해 로컬 SMTP 서비스를 구성하려면
 

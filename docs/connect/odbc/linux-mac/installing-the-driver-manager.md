@@ -13,10 +13,10 @@ ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6fc46627dcbd10e4fc64a8520412105475e9c0a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68008787"
 ---
 # <a name="installing-the-driver-manager"></a>드라이버 관리자 설치
@@ -65,13 +65,13 @@ ms.locfileid: "68008787"
 
 1.  이전에 설치된 unixODBC 버전(예: unixODBC 2.2.11)을 제거합니다. Red Hat Enterprise Linux 5 또는 6에서 **yum remove unixODBC** 명령을 실행합니다. SUSE Linux enterprise **zypper 제거 unixODBC**합니다.  
   
-2.  [http://www.unixodbc.org](http://www.unixodbc.org/)으로 이동하여 페이지 왼쪽에서 **다운로드** 링크를 클릭하여 다운로드 페이지로 이동합니다. 그런 다음 적절한 링크를 클릭하여 unixODBC-2.3.0.tar.gz 파일을 컴퓨터에 저장합니다. UnixODBC-2.3.1은 이 릴리스의 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 지원되지 않습니다.  
+2.  [http://www.unixodbc.org](http://www.unixodbc.org/)로 이동합니다. 페이지 왼쪽에서 **다운로드** 링크를 클릭하여 다운로드 페이지로 이동합니다. 그런 다음 적절한 링크를 클릭하여 unixODBC-2.3.0.tar.gz 파일을 컴퓨터에 저장합니다. UnixODBC-2.3.1은 이 릴리스의 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 지원되지 않습니다.  
   
 3.  Linux 컴퓨터에서 명령을 실행 합니다. **tar xvzf unixODBC-2.3.0.tar.gz**합니다.  
   
 4.  unixODBC-2.3.0 디렉터리로 변경합니다.  
   
-5.  명령 프롬프트에서 명령을 실행 합니다. **CPPFLAGS = "-DSIZEOF_LONG_INT 8 ="** 합니다.  
+5.  명령 프롬프트에서 다음 명령을 실행합니다. **CPPFLAGS="-DSIZEOF_LONG_INT=8"** .  
   
 6.  명령 프롬프트에서 명령을 실행 합니다. **export CPPFLAGS**합니다.  
   

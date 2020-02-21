@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 18dc87158bc1a6086cf8406423c123b0789b0f08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015542"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>IROWSETFASTLOAD 및 ISEQUENTIALSTREAM을 사용하여 BLOB 데이터를 SQL Server로 보내기(OLE DB)
@@ -34,7 +34,7 @@ ms.locfileid: "68015542"
   
  DBTYPE_IUNKNOWN은 바인딩에 데이터 형식으로 지정되었으므로 열이나 대상 매개 변수의 유형과 일치해야 합니다. 행 집합 인터페이스에서 ISequentialStream을 통해 데이터를 보낼 때 변환은 불가능합니다. 매개 변수의 경우 ICommandWithParameters::SetParameterInfo의 사용을 피하고 다른 유형을 지정하여 변환을 강제 실행하도록 합니다. 이 경우 공급자는 모든 BLOB 데이터를 SQL Server로 보내기 전에 로컬에서 데이터를 캐싱하고 변환해야 할 수 있습니다. 큰 BLOB을 로컬에서 캐싱하고 변환하면 성능이 저하됩니다.  
   
- 자세한 내용은 [blob 및 OLE 개체](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)를 참조 하세요.  
+ 자세한 내용은 [Blob 및 OLE 개체](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)를 참조하세요.  
   
 > [!IMPORTANT]  
 >  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  

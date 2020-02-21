@@ -9,10 +9,10 @@ ms.assetid: 938a6450-67c1-4eef-80b4-8fdaefeed584
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ccc5c2950baf10cad0e7f9495b446286576b27bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579352"
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>드릴스루 보고서(보고서 작성기 및 SSRS)

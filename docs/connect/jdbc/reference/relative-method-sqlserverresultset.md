@@ -16,10 +16,10 @@ ms.assetid: 2bcdbb69-95fd-4ae8-8488-1a75a91fe2e0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b2e644feff3cd2787cc6bd80bce54562ad20794
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975788"
 ---
 # <a name="relative-method-sqlserverresultset"></a>relative 메서드(SQLServerResultSet)
@@ -39,14 +39,14 @@ public boolean relative(int nRows)
   
  이동할 행 수를 나타내는 **int**입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  커서가 행에 있으면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 상대 메서드는 java. ResultSet 인터페이스의 상대 메서드로 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 relative 메서드는 java.sql.ResultSet 인터페이스의 relative 메서드에 의해 지정됩니다.  
   
  결과 집합의 첫 번째 또는 마지막 행을 지나 이동하려고 하면 커서가 첫 번째 행의 앞이나 마지막 행의 뒤에 놓입니다. `relative(0)`를 호출할 수는 있지만 이 경우 커서 위치가 변경되지 않습니다.  
   

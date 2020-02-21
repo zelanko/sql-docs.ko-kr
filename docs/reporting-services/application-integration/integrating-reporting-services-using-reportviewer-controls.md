@@ -1,9 +1,11 @@
 ---
-title: 보고서 뷰어 컨트롤을 사용하여 Reporting Services 통합 | Microsoft Docs
+title: 보고서 뷰어 컨트롤을 사용하여 통합
+description: Visual Studio는 보고서 보기 기능을 애플리케이션에 통합하기 위한 보고서 뷰어 컨트롤을 두 가지 제공합니다.
 ms.date: 09/18/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - Report Viewer controls
@@ -11,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 3ba47fb4-73a9-4059-89fd-329adebe94a8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8ffaeb12bc961256959571d18808e2869a1d7485
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 1ce8530e2f7afb998c14838efb91c93d0b1cae3c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62741886"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796868"
 ---
-# <a name="integrating-reporting-services-using-report-viewer-controls"></a>보고서 뷰어 컨트롤을 사용하여 Reporting Services 통합
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 2015는 보고서 보기 기능을 애플리케이션에 통합하기 위한 보고서 뷰어 컨트롤을 두 가지 제공합니다. Windows Forms 기반 애플리케이션용 버전과 Web Forms 애플리케이션용 버전이 있습니다. 각 컨트롤은 유사한 기능을 제공하지만 개별 환경에 맞게 디자인되었습니다. 두 컨트롤 모두 보고서 서버에 배포되거나(원격 처리 모드) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]이(가) 설치되지 않은 컴퓨터에 복사된(로컬 처리 모드) 보고서를 처리할 수 있습니다.  
+# <a name="integrate-reporting-services-using-report-viewer-controls"></a>보고서 뷰어 컨트롤을 사용하여 Reporting Services 통합
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 2015는 보고서 보기 기능을 애플리케이션에 통합하기 위한 보고서 뷰어 컨트롤을 두 가지 제공합니다. Windows Forms 기반 애플리케이션용 버전과 Web Forms 애플리케이션용 버전이 있습니다. 각 컨트롤은 유사한 기능을 제공하지만 개별 환경에 맞게 디자인되었습니다. 두 컨트롤 모두 보고서 서버에 배포되거나(원격 처리 모드) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]가 설치되지 않은 컴퓨터에 복사된(로컬 처리 모드) 보고서를 처리할 수 있습니다.  
   
  보고서 뷰어 컨트롤에는 화면 해상도가 다른 여러 디바이스에 동적으로 채택할 수 있는 기본 제공 지원이 포함되지 않습니다.  
   

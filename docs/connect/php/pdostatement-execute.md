@@ -1,5 +1,5 @@
 ---
-title: 'PDOStatement:: execute | Microsoft Docs'
+title: PDOStatement::execute | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2018
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: c2e80566-fa41-4918-8521-cf2e05374cbd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 31e7465b2fca0d76f569afb83e3a7d8501fd6036
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936040"
 ---
 # <a name="pdostatementexecute"></a>PDOStatement::execute
@@ -30,12 +30,12 @@ bool PDOStatement::execute ([ $input ] );
 ```  
   
 #### <a name="parameters"></a>매개 변수  
-*$input*: (선택 사항) 매개 변수 표식에 대한 값이 포함된 결합형 배열입니다.  
+*$input*: (선택 사항) 매개 변수 표식에 대한 값을 포함하는 결합형 배열입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 성공하면 true이고, 그렇지 않으면 false입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 PDOStatement::execute와 함께 실행되는 문은 먼저 [PDO::prepare](../../connect/php/pdo-prepare.md)를 사용하여 준비해야 합니다. 직접 문 또는 준비된 문 실행을 지정하는 방법에 대한 자세한 내용은 [PDO_SQLSRV 드라이버에서 직접 문 실행 및 준비된 문 실행](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md) 을 참조하세요.  
   
 입력 매개 변수 배열의 모든 값은 PDO::PARAM_STR 값으로 처리됩니다.  

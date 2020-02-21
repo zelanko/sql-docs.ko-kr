@@ -1,5 +1,5 @@
 ---
-title: 'PDO:: beginTransaction | Microsoft Docs'
+title: PDO::beginTransaction | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 4d5db438-9df7-4d22-9907-3ddc63bd2220
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 739565ae633140cef7d0df6531b6adfd6389d1e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993296"
 ---
 # <a name="pdobegintransaction"></a>PDO::beginTransaction
@@ -29,10 +29,10 @@ ms.locfileid: "67993296"
 bool PDO::beginTransaction();  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 메서드 호출에 성공하면 true이고, 그렇지 않으면 false입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 PDO::beginTransaction으로 시작한 트랜잭션은 [PDO::commit](../../connect/php/pdo-commit.md) 또는 [PDO::rollback](../../connect/php/pdo-rollback.md) 이 호출될 때 종료됩니다.  
   
 PDO::beginTransaction은 PDO::ATTR_AUTOCOMMIT 값에 의해 영향을 받지도 않고 영향을 주지도 않습니다.  

@@ -1,10 +1,8 @@
 ---
-title: 오류 목록 창(Management Studio) | Microsoft 문서
-ms.custom: ''
-ms.date: 03/14/2017
+title: 오류 목록 창
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -14,20 +12,28 @@ helpviewer_keywords:
 ms.assetid: fae6327d-e268-44ae-a474-4a8f8f843129
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dcf0886a58e1e735e95ed0383313769f4796bd24
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 64fa6b834d3f771712f9ce09dedb237fff46ed2c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68253628"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243389"
 ---
 # <a name="transact-sql-debugger---error-list-window"></a>Transact-SQL 디버거 - 오류 목록 창
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **오류 목록** 은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기의 IntelliSense 코드에서 생성된 구문 및 의미 체계 오류를 표시합니다.  
-  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **오류 목록**은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기의 IntelliSense 코드에서 생성된 구문 및 의미 체계 오류를 표시합니다.  
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
 ## <a name="features-of-the-error-list"></a>오류 목록의 기능  
- **오류 목록** 은 다음 기능을 제공합니다.  
+
+**오류 목록** 은 다음 기능을 제공합니다.  
   
 -   스크립트를 편집할 때 **오류 목록** 은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기의 IntelliSense에 의해 생성되는 오류 및 경고를 표시합니다.  
   
@@ -77,7 +83,7 @@ ms.locfileid: "68253628"
  **설명**  
  오류 항목의 텍스트를 표시합니다. 설명이 길어지면 다음 줄로 줄 바꿈됩니다.  
   
- **파일**  
+ **최근에 사용한 파일**  
  오류를 생성한 스크립트 파일의 이름을 표시합니다.  
   
  **선**  

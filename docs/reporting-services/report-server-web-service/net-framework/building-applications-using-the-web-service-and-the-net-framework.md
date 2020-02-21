@@ -19,10 +19,10 @@ ms.assetid: 92a9678c-bc4f-4d7a-ba44-85989bfe27ca
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f22f1b32318f5f6440b4506adcbb4926224908e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63284652"
 ---
 # <a name="building-applications-using-the-web-service-and-the-net-framework"></a>웹 서비스 및 .NET Framework를 사용하여 애플리케이션 작성
@@ -46,7 +46,7 @@ ms.locfileid: "63284652"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[웹 서비스 프록시 만들기](../../../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md)|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]를 사용하여 프로젝트에 프록시 클래스를 추가하는 방법을 설명합니다.|  
 |[웹 서비스 인증](../../../reporting-services/report-server-web-service/net-framework/web-service-authentication.md)|보고서 서버 웹 서비스에 대한 호출의 인증 방법을 설명합니다.|  

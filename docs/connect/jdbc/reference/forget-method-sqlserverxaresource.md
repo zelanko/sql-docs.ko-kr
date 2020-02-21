@@ -1,5 +1,5 @@
 ---
-title: 잊은 메서드 (SQLServerXAResource) | Microsoft Docs
+title: forget 메서드(SQLServerXAResource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 6d83138d-aa45-4d94-9da6-fdfe7ed28edc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5eaaa98b2d79dc29558d32a254d338c9891372f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954542"
 ---
 # <a name="forget-method-sqlserverxaresource"></a>forget 메서드(SQLServerXAResource)
@@ -42,7 +42,7 @@ public void forget(javax.transaction.xa.Xid xid)
 ## <a name="exceptions"></a>예외  
  javax.transaction.xa.XAException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 forget 메서드는 javax.transaction.xa.XAResource 인터페이스의 forget 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -26,14 +26,14 @@ ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6eeec8517b9b55e30eb51abc25fefed0b36b2a79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579010"
 ---
 # <a name="manage-a-running-process"></a>실행 중인 프로세스 관리
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 보고서 서버에서 실행 중인 작업의 상태를 모니터링합니다. 보고서 서버는 진행 중인 작업을 정기적으로 검색하고 SharePoint 모드용 서비스 애플리케이션 데이터베이스 또는 보고서 서버 데이터베이스에 상태 정보를 씁니다. 원격 또는 로컬 데이터베이스 서버에서 쿼리가 실행되거나 보고서가 처리되거나 보고서가 렌더링되는 경우 작업이 진행 중인 것입니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 보고서 서버에서 실행 중인 작업의 상태를 모니터링합니다. 보고서 서버는 진행 중인 작업을 정기적으로 검색하고 SharePoint 모드용 서비스 애플리케이션 데이터베이스 또는 보고서 서버 데이터베이스에 상태 정보를 씁니다. 원격 또는 로컬 데이터베이스 서버에서 쿼리가 실행되거나 보고서가 처리되거나 보고서가 렌더링되는 경우 작업이 진행 중인 것입니다.  
   
  *사용자 작업* 과 *시스템 작업*을 모두 관리할 수 있습니다.  
   
@@ -65,9 +65,9 @@ ms.locfileid: "65579010"
 -   [프로그래밍 방식으로 작업 관리](#bkmk_programmatically)  
   
 ##  <a name="bkmk_native"></a> 작업 보기 및 취소(기본 모드)  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하여 보고서 서버에서 실행 중인 작업을 보거나 취소할 수 있습니다. 현재 실행 중인 작업 목록을 검색하거나 보고서 서버 데이터베이스에서 최신 작업 상태를 가져오려면 페이지를 새로 고쳐야 합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 보고서 서버에 연결하면 작업 폴더를 열어 보고서 서버 컴퓨터에서 현재 처리 중인 보고서 목록을 볼 수 있습니다. 각 작업에 대한 상태 정보는 작업 속성 페이지에 표시됩니다. 보고서 서버 작업 취소 대화 상자를 열어 모든 작업에 대한 상태 정보를 볼 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용하여 보고서 서버에서 실행 중인 작업을 보거나 취소할 수 있습니다. 현재 실행 중인 작업 목록을 검색하거나 보고서 서버 데이터베이스에서 최신 작업 상태를 가져오려면 페이지를 새로 고쳐야 합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 보고서 서버에 연결하면 작업 폴더를 열어 보고서 서버 컴퓨터에서 현재 처리 중인 보고서 목록을 볼 수 있습니다. 각 작업에 대한 상태 정보는 작업 속성 페이지에 표시됩니다. 보고서 서버 작업 취소 대화 상자를 열어 모든 작업에 대한 상태 정보를 볼 수 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하여 보고서 서버에서 실행 중인 작업을 보거나 취소할 수 있습니다. 현재 실행 중인 작업 목록을 검색하거나 보고서 서버 데이터베이스에서 최신 작업 상태를 가져오려면 페이지를 새로 고쳐야 합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 보고서 서버에 연결하면 작업 폴더를 열어 보고서 서버 컴퓨터에서 현재 처리 중인 보고서 목록을 볼 수 있습니다. 각 작업에 대한 상태 정보는 작업 속성 페이지에 표시됩니다. 보고서 서버 작업 취소 대화 상자를 열어 모든 작업에 대한 상태 정보를 볼 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용하여 보고서 서버에서 실행 중인 작업을 보거나 취소할 수 있습니다. 현재 실행 중인 작업 목록을 검색하거나 보고서 서버 데이터베이스에서 최신 작업 상태를 가져오려면 페이지를 새로 고쳐야 합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 보고서 서버에 연결하면 작업 폴더를 열어 보고서 서버 컴퓨터에서 현재 처리 중인 보고서 목록을 볼 수 있습니다. 각 작업에 대한 상태 정보는 작업 속성 페이지에 표시됩니다. 보고서 서버 작업 취소 대화 상자를 열어 모든 작업에 대한 상태 정보를 볼 수 있습니다.  
   
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하여 모델 생성, 모델 처리 또는 데이터 기반 구독을 나열하거나 취소할 수 없습니다. Reporting Services는 모델 생성 또는 처리를 취소하는 방법을 제공하지 않습니다. 그러나 이 항목에 제공된 지침에 따라 데이터 기반 구독을 취소할 수 있습니다.  
   

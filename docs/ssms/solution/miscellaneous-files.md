@@ -1,6 +1,6 @@
 ---
-title: 기타 파일 | Microsoft 문서
-ms.custom: ''
+title: 기타 파일
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3c952b0b-8f5f-4d86-9e5d-616c10b9df0d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3660efc7fe371c111fb06e4022e07d3d09b7e2b4
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 79438b43ed00fb30b7f70c832ebf8830bf20f7bf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264868"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251882"
 ---
 # <a name="miscellaneous-files"></a>기타 파일
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

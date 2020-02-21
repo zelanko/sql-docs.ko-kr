@@ -16,10 +16,10 @@ ms.assetid: ebfe236a-dc02-493e-a3ab-5353d3769e36
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bdb1eb0053c9bb15c6d03013df13635e022a5072
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980759"
 ---
 # <a name="getprimarykeys-method-sqlserverdatabasemetadata"></a>getPrimaryKeys 메서드(SQLServerDatabaseMetaData)
@@ -49,18 +49,18 @@ public java.sql.ResultSet getPrimaryKeys(java.lang.String cat,
   
  테이블 이름이 들어 있는 **문자열**입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 getPrimaryKeys 메서드는 java .sql. DatabaseMetaData 인터페이스의 getPrimaryKeys 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 getPrimaryKeys 메서드는 java.sql.DatabaseMetaData 인터페이스의 getPrimaryKeys 메서드에 의해 지정됩니다.  
   
  getPrimaryKeys 메서드에서 반환되는 결과 집합에는 다음 정보가 포함됩니다.  
   
-|속성|형식|설명|  
+|속성|Type|Description|  
 |----------|----------|-----------------|  
 |TABLE_CAT|String|지정된 테이블이 있는 데이터베이스의 이름입니다.|  
 |TABLE_SCHEM|String|테이블의 스키마입니다.|  

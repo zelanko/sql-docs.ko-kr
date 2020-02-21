@@ -14,10 +14,10 @@ ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ae00c01e962da05015a5132608915fc9d70258f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936392"
 ---
 # <a name="how-to-specify-php-data-types"></a>방법: PHP 데이터 형식 지정
@@ -33,7 +33,7 @@ PDO_SQLSRV 드라이버를 사용하는 경우 서버에서 데이터를 검색�
   
 3.  원하는 PHP 데이터 형식을 선택적인 세 번째 매개 변수로 지정한 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) 를 사용하여 반환된 행에서 필드 데이터를 검색합니다. 선택적인 세 번째 매개 변수를 지정하지 않으면 데이터가 기본 PHP 형식에 따라 반환됩니다. 기본 PHP 반환 형식에 대한 자세한 내용은 [Default PHP Data Types](../../connect/php/default-php-data-types.md)을 참조하세요.  
   
-    PHP 데이터 형식을 지정하는 데 사용하는 상수에 대한 자세한 내용은 [상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)의 PHPTYPE 섹션을 참조하세요.  
+    PHP 데이터 형식을 지정하는 데 사용하는 상수에 대한 자세한 내용은 [상수(Microsoft Drivers for PHP for SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)의 PHPTYPE 섹션을 참조하세요.  
   
 ## <a name="example"></a>예제  
 다음 예제에서는 AdventureWorks 데이터베이스의 *Production.ProductReview* 테이블에서 행을 검색합니다. 반환된 각 행에서 *ReviewDate* 필드는 문자열로 검색되고 *Comments* 필드는 스트림으로 검색됩니다. 스트림 데이터는 PHP [fpassthru](https://php.net/manual/en/function.fpassthru.php) 함수를 사용하여 표시됩니다.  

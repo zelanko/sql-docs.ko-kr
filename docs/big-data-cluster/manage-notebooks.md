@@ -1,20 +1,21 @@
 ---
-title: Azure Data Studio Notebooks를 사용하여 SQL Server 빅 데이터 클러스터 관리
-titleSuffix: Manage SQL Server Big Data Clusters with Azure Data Studio notebooks
+title: '관리: Azure Data Studio Notebook'
+titleSuffix: SQL Server Big Data Clusters
 description: Azure Data Studio에서 Notebook을 사용하여 빅 데이터 클러스터를 관리하고 문제를 해결합니다.
 author: yualan
 ms.author: alanyu
 ms.reviewer: mikeray
-ms.date: 09/09/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 860524daa5e6ab2db17fdf95cf5aa785aeb4fdf7
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: d2a051e297b48ed8d813fce0e0e8ffa748a84d16
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844293"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252021"
 ---
 # <a name="manage-sql-server-big-data-clusters-with-azure-data-studio-notebooks"></a>Azure Data Studio Notebooks를 사용하여 SQL Server 빅 데이터 클러스터 관리
 

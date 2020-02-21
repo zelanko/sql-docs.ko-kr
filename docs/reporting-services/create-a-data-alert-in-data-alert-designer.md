@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 5be6c645caadfc2b619e3fbd6d8f6b2a78ad2ff0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571574"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>데이터 경고 디자이너에서 데이터 경고 만들기
@@ -123,7 +123,7 @@ ms.locfileid: "65571574"
 ## <a name="see-also"></a>참고 항목
 
 [데이터 경고 디자이너](../reporting-services/data-alert-designer.md)   
-[경고 담당자를 위한 데이터 경고 관리자입니다.](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
+[경고 담당자를 위한 데이터 경고 관리자](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Reporting Services 데이터 경고](../reporting-services/reporting-services-data-alerts.md)  
 
 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

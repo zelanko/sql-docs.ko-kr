@@ -13,10 +13,10 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 034df879dc79f920219a43e2faaaf0e3ac4fc17b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68008705"
 ---
 # <a name="using-integrated-authentication"></a>통합 인증 사용
@@ -24,9 +24,9 @@ ms.locfileid: "68008705"
 
 Linux 및 macOS 기반 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 Kerberos 통합된 인증을 사용하는 연결을 지원합니다. MIT Kerberos KDC(키 배포 센터)를 지원하고 GSSAPI(Generic Security Services Application Program Interface) 및 Kerberos v5 라이브러리를 사용하여 작동합니다.
   
-## <a name="using-integrated-authentication-to-connect-to-includessnoversionincludesssnoversion-mdmd-from-an-odbc-application"></a>통합 인증을 사용하여 ODBC 애플리케이션에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 연결  
+## <a name="using-integrated-authentication-to-connect-to-ssnoversion-from-an-odbc-application"></a>통합 인증을 사용하여 ODBC 애플리케이션에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 연결  
 
-**SQLDriverConnect** 또는 **SQLConnect**의 연결 문자열에서 **Trusted_Connection = yes**를 지정하여 Kerberos 통합 인증을 사용하도록 설정할 수 있습니다. 예를 들어  
+**SQLDriverConnect** 또는 **SQLConnect**의 연결 문자열에서 **Trusted_Connection = yes**를 지정하여 Kerberos 통합 인증을 사용하도록 설정할 수 있습니다. 다음은 그 예입니다.  
 
 ```
 Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes  
@@ -60,11 +60,11 @@ Kerberos 자격 증명이 설계에 따라 만료되므로 애플리케이션이
   
 ## <a name="tracking-access-to-a-database"></a>데이터베이스에 대한 액세스 추적
 
-시스템 계정을 사용할 때 데이터베이스 관리자는 데이터베이스에 대한 액세스의 감사 내역을 만들어 통합 인증을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 액세스할 수 있습니다.  
+시스템 계정을 사용할 때 데이터베이스 관리자는 데이터베이스에 대한 액세스의 감사 내역을 만들어 통합 인증을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 액세스할 수 있습니다.  
   
-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 로그인할 때 시스템 계정을 사용하고 보안 컨텍스트를 가장하기 위한 Linux 기능은 없습니다. 그러므로 사용자를 확인하기 위해 필요한 작업이 더 이상 없습니다.
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 로그인할 때 시스템 계정을 사용하고 보안 컨텍스트를 가장하기 위한 Linux 기능은 없습니다. 그러므로 사용자를 확인하기 위해 필요한 작업이 더 이상 없습니다.
   
-시스템 계정이 아닌 사용자 대신 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 활동을 감사하려면 애플리케이션이 [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE AS**를 사용해야 합니다.  
+시스템 계정이 아닌 사용자 대신 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 활동을 감사하려면 애플리케이션이 [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE AS**를 사용해야 합니다.  
   
 애플리케이션 성능을 향상하려면 애플리케이션이 통합 인증 및 감사를 사용하는 연결 풀링을 사용하면 됩니다. 그러나 연결 풀링, 통합 인증 및 감사를 함께 사용하면 unixODBC 드라이버 관리자가 서로 다른 사용자에게 풀링 연결을 다시 사용하도록 허용하기 때문에 보안 위험이 생깁니다. 자세한 내용은 [ODBC 연결 풀링](http://www.unixodbc.org/doc/conn_pool.html)을 참조하세요.  
 
@@ -94,11 +94,11 @@ Kerberos 자격 증명이 설계에 따라 만료되므로 애플리케이션이
   
 `-T`를 `-U` 또는 `-P` 옵션과 함께 사용하는 것은 오류입니다.
   
-## <a name="supported-syntax-for-an-spn-registered-by-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 등록한 SPN에 대해 지원되는 구문
+## <a name="supported-syntax-for-an-spn-registered-by-ssnoversion"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 등록한 SPN에 대해 지원되는 구문
 
 SPN이 연결 문자열 또는 연결 특성에서 사용하는 구문은 다음과 같습니다.  
 
-|구문|설명|  
+|구문|Description|  
 |----------|---------------|  
 |MSSQLSvc/*fqdn*:*port*|TCP가 사용될 때 공급자가 생성하는 기본 SPN입니다. *port* 는 TCP 포트 번호입니다. *fqdn* 은 정규화된 도메인 이름입니다.|  
   

@@ -1,6 +1,6 @@
 ---
-title: sqlagent90 응용 프로그램 | Microsoft Docs
-ms.custom: ''
+title: sqlagent90 애플리케이션
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e8b80e8d-d0c9-4500-a868-0ce08233da08
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 20405a10a2e36232068329542923aae65c10c4e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 5c75d932356d24bd5a268eb27d50deee91a6329f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059589"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307762"
 ---
 # <a name="sqlagent90-application"></a>sqlagent90 애플리케이션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,10 @@ sqlagent90
  **-i** *instance_name*  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 으로 지정한 명명된 *인스턴스에*에이전트가 연결됨을 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  저작권 정보가 표시된 다음 **sqlagent90** 은 **-v** 스위치가 지정된 경우에만 명령 프롬프트 창에 출력을 표시합니다. **sqlagent90**을 중지하려면 명령 프롬프트에서 Ctrl+C를 누릅니다. 또한 **sqlagent90**을 중지하기 전에 먼저 명령 프롬프트 창을 닫지 마십시오.  
   
 ## <a name="see-also"></a>참고 항목  
- [관리 태스크 자동화&#40;SQL Server Agent&#41;](https://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0)  
+ [관리 태스크 자동화&#40;SQL Server 에이전트&#41;](https://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0)  
   
   

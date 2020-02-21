@@ -1,5 +1,5 @@
 ---
-title: LINKEDSERVERS 행 집합 (OLE DB) | Microsoft Docs
+title: LINKEDSERVERS 행 집합(OLE DB) | Microsoft Docs
 description: LINKEDSERVERS 행 집합(OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 75b443df235fd99f262cf3fda0abf6a6354da413
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993885"
 ---
 # <a name="schema-rowsets---linkedservers-rowset"></a>스키마 행 집합 - LINKEDSERVERS 행 집합
@@ -29,7 +29,7 @@ ms.locfileid: "67993885"
   
  **LINKEDSERVERS** 행 집합에는 다음 열이 포함되어 있습니다.  
   
-|열 이름|유형 표시기|설명|  
+|열 이름|유형 표시기|Description|  
 |-----------------|--------------------|-----------------|  
 |SVR_NAME|DBTYPE_WSTR|연결된 서버의 이름입니다.|  
 |SVR_PRODUCT|DBTYPE_WSTR|연결된 서버 이름이 나타내는 데이터 저장소 유형을 식별하는 제조업체 또는 기타 이름입니다.|  

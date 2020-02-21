@@ -1,22 +1,23 @@
 ---
-title: MLeap이 있는 Spark Machine Learning 모델 만들기 및 내보내기
-titleSuffix: SQL Server big data clusters
+title: 'Spark ML 모델 만들기, 내보내기: MLeap'
+titleSuffix: SQL Server Big Data Clusters
 description: PySpark를 사용하여 SQL Server 빅 데이터 클러스터에서 Spark로 Machine Learning 모델을 학습하고 만듭니다. MLeap을 사용하여 내보낸 후 SQL Server에서 Java를 사용하여 모델을 채점합니다.
 author: RogPodge
 ms.author: roliu
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bc9191ad90b05e9f48facab0cc4003bbf5adce11
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 717093278790c90486b424678d332f73e056e86e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844225"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255907"
 ---
-# <a name="create-export-and-score-spark-machine-learning-models-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에서 Spark Machine Learning 모델을 만들고, 내보내고, 채점합니다.
+# <a name="create-export-and-score-spark-machine-learning-models-on-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에서 Spark Machine Learning 모델을 만들고, 내보내고, 채점합니다.
 
 다음 샘플은 [Spark ML](https://spark.apache.org/docs/latest/ml-guide.html)을 사용하여 모델을 빌드하고, 모델을 [MLeap](http://mleap-docs.combust.ml/)으로 내보내고, SQL Server에서 해당 [Java 언어 확장 프로그램](../language-extensions/language-extensions-overview.md)을 사용하여 모델을 채점하는 방법을 보여줍니다. 이 작업은 SQL Server 2019 빅 데이터 클러스터의 컨텍스트에서 수행됩니다.
 

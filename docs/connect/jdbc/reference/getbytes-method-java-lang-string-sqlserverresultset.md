@@ -16,10 +16,10 @@ ms.assetid: ff617165-47f8-41c1-9c51-37ffc7714923
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4591a91d1adb924801a39a132a0f20c68579e31b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953380"
 ---
 # <a name="getbytes-method-javalangstring-sqlserverresultset"></a>getBytes 메서드(java.lang.String)(SQLServerResultSet)
@@ -39,13 +39,13 @@ public byte[] getBytes(java.lang.String columnName)
   
  열 이름이 포함된 **문자열**입니다.  
   
-## <a name="return-value"></a>반환 값  
- **바이트** 값의 배열입니다.  
+## <a name="return-value"></a>Return Value  
+ **byte** 값의 배열입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 getBytes 메서드는 java.sql.ResultSet 인터페이스의 getBytes 메서드에 의해 지정됩니다.  
   
  이 메서드를 사용하면 모든 열을 서버에서 읽어 온 원시 바이트로 검색할 수 있습니다. 이 메서드는 서버에 저장된 형식으로 서버에서 직접 바이트 배열을 반환합니다.  

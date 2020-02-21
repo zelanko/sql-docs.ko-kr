@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b8bec553502b2e5c8d69436e539437be9a5989aa
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 87194c1a77964f0e5aef3d0fae008d14cbfb8eb2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73724882"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74901802"
 ---
 # <a name="train-and-save-a-python-model-using-t-sql"></a>T-SQL을 사용하여 Python 모델 학습 및 저장
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +115,7 @@ SQL Server 저장 프로시저를 통해 모듈을 로드하고 필요한 함수
     INSERT INTO nyc_taxi_models (name, model) VALUES('SciKit_model', @model);
     ```
 
-    데이터를 처리하고 모델을 맞추는 데 몇 분 정도 걸릴 수 있습니다. Python의 **stdout** 스트림에 파이프되는 메시지는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 **메시지** 창에 표시됩니다. 예를 들어
+    데이터를 처리하고 모델을 맞추는 데 몇 분 정도 걸릴 수 있습니다. Python의 **stdout** 스트림에 파이프되는 메시지는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 **메시지** 창에 표시됩니다. 다음은 그 예입니다.
 
     *외부 스크립트의 STDOUT 메시지:* 
   *C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy*
@@ -179,7 +179,7 @@ SQL Server 저장 프로시저를 통해 모듈을 로드하고 필요한 함수
     INSERT INTO nyc_taxi_models (name, model) VALUES('revoscalepy_model', @model);
     ```
 
-    데이터를 처리하고 모델을 맞추는 데 시간이 걸릴 수도 있습니다. Python의 **stdout** 스트림에 파이프되는 메시지는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 **메시지** 창에 표시됩니다. 예를 들어
+    데이터를 처리하고 모델을 맞추는 데 시간이 걸릴 수도 있습니다. Python의 **stdout** 스트림에 파이프되는 메시지는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 **메시지** 창에 표시됩니다. 다음은 그 예입니다.
 
     *외부 스크립트의 STDOUT 메시지:* 
   *C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy*

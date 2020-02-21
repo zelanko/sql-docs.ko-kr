@@ -14,13 +14,13 @@ ms.assetid: c832210e-bb2a-47b5-a505-160b02d1d95e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e26c0e06ea9a71bdb6b9e39126e646d22ad40ea2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014982"
 ---
-# <a name="sqlsrvnumrows"></a>sqlsrv_num_rows
+# <a name="sqlsrv_num_rows"></a>sqlsrv_num_rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 결과 집합의 행 수를 보고합니다.  
@@ -35,10 +35,10 @@ sqlsrv_num_rows( resource $stmt )
 #### <a name="parameters"></a>매개 변수  
 *$stmt*: 행 수를 계산할 결과 집합입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 행 수를 계산하는 중 오류가 발생하면**false** 이고, 그렇지 않으면 결과 집합의 행 수를 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 sqlsrv_num_rows에는 클라이언트 쪽, 정적 또는 키 집합 커서가 필요하며 정방향 커서 또는 동적 커서를 사용하는 경우 **false**를 반환합니다. (정방향 커서가 기본값입니다.) 커서에 대한 자세한 내용은 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 및 [커서 유형&#40;SQLSRV 드라이버&#41;](../../connect/php/cursor-types-sqlsrv-driver.md)를 참조하세요.  
   
 ## <a name="example"></a>예제  

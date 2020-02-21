@@ -1,21 +1,23 @@
 ---
-title: Reporting Services에서 URL 액세스와 SOAP 중 선택 | Microsoft Docs
+title: URL 액세스와 SOAP 중 선택
+description: Reporting Services를 사용자 지정 애플리케이션에 통합하기 위한 방법에는 URL 액세스와 Reporting Services SOAP API의 두 가지 방법이 있습니다. 어느 방법을 사용할지는 여러 요소에 따라 달라집니다.
 ms.date: 10/19/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8a9c28c2e0eeae14dbc25db3c78c3962ddebd89e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: d401c7d95cff5011dffbfaac2ebcc9bfa5ea5c24
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62704064"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796916"
 ---
-# <a name="choosing-between-url-access-and-soap-in-reporting-services"></a>Reporting Services에서 URL 액세스와 SOAP 중 선택
+# <a name="choose-between-url-access-and-soap-in-reporting-services"></a>Reporting Services에서 URL 액세스와 SOAP 중 선택
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -24,7 +26,7 @@ ms.locfileid: "62704064"
 > [!NOTE]
 > SQL Server 2017 Reporting Services부터 솔루션을 개발하는 데 REST API 액세스를 사용할 수 있습니다. SOAP API 액세스는 더 이상 사용되지 않습니다. 자세한 내용은 [Reporting Services에 대한 REST API를 사용하여 개발](../developer/rest-api.md)을 참조하세요.
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 사용자 지정 애플리케이션에 통합하는 방법에는 URL 액세스와 Reporting Services SOAP API 두 가지가 있습니다. 어느 방법을 사용할지는 여러 요소에 따라 달라집니다. 경우에 따라 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 사용자 지정 비즈니스 애플리케이션에 통합하기 위해서는 URL 액세스와 SOAP 두 가지 모두를 사용해야 합니다. 다음과 같은 질문을 고려해야 합니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 사용자 지정 애플리케이션에 통합하기 위한 방법에는 URL 액세스와 Reporting Services SOAP API의 두 가지 방법이 있습니다. 어느 방법을 사용할지는 여러 요소에 따라 달라집니다. 경우에 따라 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 사용자 지정 비즈니스 애플리케이션에 통합하기 위해서는 URL 액세스와 SOAP 두 가지 모두를 사용해야 합니다. 다음과 같은 질문을 고려해야 합니다.  
   
 -   자신 또는 최종 사용자에게 어떤 유형의 엔터프라이즈 보고 기능이 필요합니까? 보고서를 간단하게 시작하고 탐색할 수 있는 방법이 필요합니까 아니면 사용자 지정 비즈니스 솔루션에서 고급 보고서 서버 관리 기능이 필요합니까?  
   

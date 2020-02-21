@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ba5f48b7788b6ebec63149175568777e6659017f
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 2aef2ed82803af2a6ca1966cde5f5bf6675ca016
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73725068"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74901842"
 ---
 # <a name="explore-and-visualize-the-data"></a>데이터 탐색 및 시각화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ _hack_license_ 열은 택시 기사의 운전 면허 번호(익명)를 포함합
 1. PowerShell 스크립트로 아직 저장 프로시저 **PyPlotMatplotlib**가 만들어지지 않았으면, 만듭니다.
 
     - `@query` 변수는 스크립트 입력 변수 `@input_data_1`에 대한 인수로 Python 코드 블록에 전달되는 쿼리 텍스트 `SELECT tipped FROM nyctaxi_sample`을 정의합니다.
-    - Python 스크립트는 상당히 단순합니다. 히스토그램 및 산점도를 만들기 위해 **matplotlib** `figure` 개체가 사용되고, 이러한 개체는 `pickle` 라이브러리를 사용하여 직렬화됩니다.
+    - Python 스크립트는 상당히 단순합니다. 히스토그램 및 산점도를 만들기 위해 **matplotlib** `figure` 개체가 사용되고, 해당 개체는 `pickle` 라이브러리를 사용하여 직렬화됩니다.
     - Python 그래픽 개체는 출력의 **pandas** DataFrame으로 직렬화됩니다.
   
     ```sql

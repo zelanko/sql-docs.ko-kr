@@ -1,5 +1,5 @@
 ---
-title: getCharacterStream 메서드 () | Microsoft Docs
+title: getCharacterStream 메서드(java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: cdddc572-05c1-480d-b3e5-28270001575c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 174deb24d78821e30d69dc899c5657909241ad3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953289"
 ---
 # <a name="getcharacterstream-method-javalangstring"></a>getCharacterStream 메서드(java.lang.String)
@@ -39,14 +39,14 @@ public java.io.Reader getCharacterStream(java.lang.String columnName)
   
  열 이름이 포함된 **문자열**입니다.  
   
-## <a name="return-value"></a>반환 값  
- 판독기 개체입니다.  
+## <a name="return-value"></a>Return Value  
+ Reader 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 getCharacterStream 메서드는 getCharacterStream 인터페이스의 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 getCharacterStream 메서드는 java.sql.ResultSet 인터페이스의 getCharacterStream 메서드에 의해 지정됩니다.  
   
  이 메서드는 nchar, nvarchar, nvarchar(max) 및 ntext와 같은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 유니코드 문자 데이터 형식만 읽습니다. ASCII 문자 형식을 비롯한 다른 모든 데이터 형식에서는 예외가 발생합니다. ASCII 데이터 형식을 읽으려면 [getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md) 메서드를 사용합니다.  
   

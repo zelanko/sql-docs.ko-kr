@@ -9,10 +9,10 @@ ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9285b9b89930fe540f9b5493f1730184cf4e9526
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62499952"
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>Reporting Services 모바일 보고서에 대한 Excel 데이터 준비
@@ -63,7 +63,7 @@ Excel 파일을 모바일 보고서에 대한 데이터 세트로 준비할 때�
   
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]에 가져오는 Excel 파일을 저장하는 위치에 관한 제한은 없습니다. 그러나 파일을 가져온 후 이동하거나 이름 변경하는 경우 데이터 뷰에서 찾을 수 있는 **모든 데이터 새로 고침** 명령을 통해 해당 데이터를 새로 고칠 수 없습니다.   
   
->**참고**: [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 은 Excel 데이터를 새로 고치지 않습니다. 이동하지 않은 경우에만 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] **새로 고침** 명령을 통해 데이터를 새로 고칠 수 있습니다.  
+>**참고**: [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 은 Excel 데이터를 새로 고치지 않습니다. 파일을 이동하지 않은 경우에만 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] **새로 고침** 명령을 통해 데이터를 새로 고칠 수 있습니다.  
   
 ## <a name="dates"></a>날짜  
   
@@ -83,8 +83,8 @@ Excel 파일을 모바일 보고서에 대한 데이터 세트로 준비할 때�
   
 피벗 테이블, 시각화 및 이미지를 포함한 Excel 워크시트의 사용자 지정 개체는 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]에 가져오지 않습니다.  
   
-### <a name="see-also"></a>관련 항목:  
-- [Prepare data for Reporting Services mobile reports](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)  
+### <a name="see-also"></a>참고 항목  
+- [Reporting Services 모바일 보고서에 대한 데이터 준비](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)  
 - [SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기 및 게시](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 -  [iPad 앱에서 SQL Server 모바일 보고서 및 KPI](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  보기(iOS용 Power BI)  
 -  [iPhone 앱에서 SQL Server 모바일 보고서 및 KPI](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-iphone-kpis-mobile-reports) 보기(iOS용 Power BI)  

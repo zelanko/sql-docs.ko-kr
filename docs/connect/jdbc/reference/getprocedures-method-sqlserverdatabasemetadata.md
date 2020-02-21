@@ -16,10 +16,10 @@ ms.assetid: 66c9a8b0-dc4c-4cbb-8004-c7157368cab4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 054ce4f6f646f873d4aff05fbe1d31aa9903ded9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980745"
 ---
 # <a name="getprocedures-method-sqlserverdatabasemetadata"></a>getProcedures 메서드(SQLServerDatabaseMetaData)
@@ -49,18 +49,18 @@ public java.sql.ResultSet getProcedures(java.lang.String sCatalog,
   
  프로시저 이름 패턴이 들어 있는 **문자열**입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 getProcedures 메서드는 java. DatabaseMetaData 인터페이스의 getProcedures 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 getProcedures 메서드는 java.sql.DatabaseMetaData 인터페이스의 getProcedures 메서드에 의해 지정됩니다.  
   
  getProcedures 메서드에서 반환되는 결과 집합에는 다음 정보가 포함됩니다.  
   
-|속성|형식|설명|  
+|속성|Type|Description|  
 |----------|----------|-----------------|  
 |PROCEDURE_CAT|**String**|지정된 저장 프로시저가 있는 데이터베이스의 이름입니다.|  
 |PROCEDURE_SCHEM|**String**|저장 프로시저의 스키마입니다.|  

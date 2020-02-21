@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: garyericson
 ms.author: garye
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8c3cf3c1debc03c169c585521b8b46dd8b1365c5
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.openlocfilehash: 41e5f384878dfb284c31d6ba2886c9e223d03ca3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69641160"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479419"
 ---
 # <a name="get-r-package-information"></a>R 패키지 정보 가져오기
 
@@ -85,23 +85,23 @@ EXECUTE sp_execute_external_script
 
 다음 R 패키지는 SQL Server R Services와 함께 설치됩니다.
 
-|패키지 | 버전 옵션 | 설명 |
+|패키지 | 버전 | Description |
 |---------|---------|-------------|
 | [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 8.0.3 | 데이터 가져오기 및 변환, 모델링, 시각화 및 분석을 위해 원격 컴퓨팅 컨텍스트, 스트리밍, rx 함수의 병렬 실행에 사용됩니다. |
-| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 8.0.3 | 저장 프로시저에 R 스크립트를 포함하는 데 사용됩니다. |
+| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | 저장 프로시저에 R 스크립트를 포함하는 데 사용됩니다. |
 
 ::: moniker-end
 
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
 설치하는 동안 R 기능을 선택하면 다음 R 패키지가 SQL Server Machine Learning Services와 함께 설치됩니다.
 
-|패키지 | 버전 옵션 | 설명 |
+|패키지 | 버전 | Description |
 |---------|---------|-------------|
 | [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 9.2 | 데이터 가져오기 및 변환, 모델링, 시각화 및 분석을 위해 원격 컴퓨팅 컨텍스트, 스트리밍, rx 함수의 병렬 실행에 사용됩니다. |
-| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 9.2 | 저장 프로시저에 R 스크립트를 포함하는 데 사용됩니다. |
-| [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| 9.2 | R에서 기계 학습 알고리즘을 추가합니다. | 
-| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 9.2 | R에서 MDX 문을 작성하는 데 사용됩니다. |
+| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 1.0.0 | 저장 프로시저에 R 스크립트를 포함하는 데 사용됩니다. |
+| [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| 1.4.0 | R에서 기계 학습 알고리즘을 추가합니다. | 
+| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0.0 | R에서 MDX 문을 작성하는 데 사용됩니다. |
 
 ::: moniker-end
 
@@ -178,7 +178,12 @@ print(packageDescription("glue"))
 
 ## <a name="next-steps"></a>다음 단계
 
-+ [새 R 패키지 설치](../r/install-additional-r-packages-on-sql-server.md)
+::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
++ [R 도구를 사용하여 패키지 설치](install-r-packages-standard-tools.md)
+::: moniker-end
+::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
++ [sqlmlutils를 사용하여 새 R 패키지 설치](install-additional-r-packages-on-sql-server.md)
+::: moniker-end
 + [Python 패키지 정보 가져오기](python-package-information.md)
 + [새 Python 패키지 설치](../python/install-additional-python-packages-on-sql-server.md)
 + [R 및 Python 자습서](../tutorials/machine-learning-services-tutorials.md)

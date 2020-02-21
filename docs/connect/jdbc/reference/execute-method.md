@@ -1,5 +1,5 @@
 ---
-title: execute 메서드 () | Microsoft Docs
+title: execute 메서드() | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: fa96d0f8-101b-422f-a767-405be9a5f74f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f7e87040fa74954435ed52f9923568e8bfed3fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954924"
 ---
 # <a name="execute-method-"></a>execute 메서드()
@@ -34,13 +34,13 @@ ms.locfileid: "67954924"
 public boolean execute()  
 ```  
   
-## <a name="return-value"></a>반환 값  
- 문에서 결과 집합을 반환 하면 **true** 입니다. 업데이트 횟수가 반환 되거나 결과가 반환 되지 않으면 **false** 입니다.  
+## <a name="return-value"></a>Return Value  
+ 문이 결과 집합을 반환하는 경우 **true**입니다. 업데이트 수를 반환하거나 결과를 반환하지 않는 경우 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 execute 메서드는 java.sql.PreparedStatement 인터페이스의 execute 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

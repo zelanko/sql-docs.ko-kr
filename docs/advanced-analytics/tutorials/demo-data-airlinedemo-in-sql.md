@@ -1,6 +1,6 @@
 ---
 title: 자습서에 대한 항공 비행 데모 데이터
-Description: R 및 Python에서 Airline 데이터 세트를 포함하는 데이터베이스를 만듭니다. 이 데이터 세트는 SQL Server 저장 프로시저에서 R 언어 또는 Python 코드를 래핑하는 방법을 보여 주는 연습에 사용됩니다.
+Description: R 및 Python에서 Airline 데이터 세트를 포함하는 데이터베이스를 만듭니다. 이 데이터 세트는 SQL Server Machine Learning Services용 R 및 Python 자습서에서 사용됩니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/22/2018
@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 520a94f5f92c8b7e7d8bf7ba4efc851ce0c3e723
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 9bb8d26acb21ff38725c6e993c0b6080a35410f1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727152"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74908911"
 ---
 #  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>SQL Server Python 및 R 자습서에 대한 항공 비행 도착 데모 데이터
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

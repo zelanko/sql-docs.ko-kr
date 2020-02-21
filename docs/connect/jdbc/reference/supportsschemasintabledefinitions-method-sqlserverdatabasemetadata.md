@@ -16,10 +16,10 @@ ms.assetid: 3326b1b0-53e2-42ae-9ff7-98e8c7017ffa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5803fe31d5e46682ed31f483addff7593c399211
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67968878"
 ---
 # <a name="supportsschemasintabledefinitions-method-sqlserverdatabasemetadata"></a>supportsSchemasInTableDefinitions 메서드(SQLServerDatabaseMetaData)
@@ -34,14 +34,14 @@ ms.locfileid: "67968878"
 public boolean supportsSchemasInTableDefinitions()  
 ```  
   
-## <a name="return-value"></a>반환 값  
- 지원 되는 경우 **true** 입니다. 그렇지 않으면 **false**입니다.  
+## <a name="return-value"></a>Return Value  
+ 지원되는 경우 **true**입니다. 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 Supportsschemasintabledefinitions 메서드는 java. DatabaseMetaData 인터페이스의 supportsSchemasInTableDefinitions 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 supportsSchemasInTableDefinitions 메서드는 java.sql.DatabaseMetaData 인터페이스의 supportsSchemasInTableDefinitions 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

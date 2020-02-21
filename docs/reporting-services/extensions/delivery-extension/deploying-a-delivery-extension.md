@@ -13,10 +13,10 @@ ms.assetid: 4436ce48-397d-42c7-9b5d-2a267e2a1b2c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 06cffe614eaa55713fed862dc03f7c81da7bc287
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193766"
 ---
 # <a name="deploying-a-delivery-extension"></a>배달 확장 프로그램 배포
@@ -31,7 +31,7 @@ ms.locfileid: "63193766"
   
  다음 표는 배달 확장 프로그램에 대한 **Extension** 요소의 특성을 설명합니다.  
   
-|attribute|설명|  
+|attribute|Description|  
 |---------------|-----------------|  
 |**이름**|확장 프로그램에 대한 고유한 이름으로서 예를 들면 전자 메일 배달 확장 프로그램의 경우 "Report Server E-Mail", 파일 공유 배달 확장 프로그램의 경우 "Report Server FileShare" 등입니다. **Name** 특성의 최대 길이는 255자입니다. 이름은 구성 파일의 **Extension** 요소에 있는 모든 항목 중에서 고유해야 합니다. 중복된 이름이 있을 경우 보고서 서버에서 오류를 반환합니다.|  
 |**형식**|정규화된 네임스페이스와 어셈블리 이름을 포함하는 쉼표로 구분된 목록입니다.|  

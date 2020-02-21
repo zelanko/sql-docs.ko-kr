@@ -9,10 +9,10 @@ ms.assetid: a8b1aac1-53ef-47a4-afc0-8fa866c6c480
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d9bb437acf4b30a4a497286e3b8c6adabd6b5291
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581905"
 ---
 # <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>표시기 추가 또는 삭제(보고서 작성기 및 SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "65581905"
   
  표시기를 처음 추가하면 기본적으로 백분율을 단위로 사용하도록 표시기가 구성됩니다. 백분율 범위는 표시기 집합의 멤버 간에 균등하게 분포되며 표시기가 나타내는 값의 범위는 테이블이나 행렬과 같은 표시기의 부모입니다.  
   
- 표시기의 값과 상태를 업데이트할 수 있습니다. 자세한 내용은 다음 항목을 참조하십시오.  
+ 표시기의 값과 상태를 업데이트할 수 있습니다. 자세한 내용은 아래 항목을 참조하세요.  
   
 -   [표시기 아이콘 및 표시기 집합 변경&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   

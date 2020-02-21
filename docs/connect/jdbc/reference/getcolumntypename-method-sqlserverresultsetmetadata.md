@@ -1,5 +1,5 @@
 ---
-title: getColumnTypeName 메서드 (SQLServerResultSetMetaData) | Microsoft Docs
+title: getColumnTypeName 메서드(SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: a444da82-c1af-40a5-9774-02476416c92c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6ff7fbebe710b9d52394b12bbd1524ff9785ba7e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67952803"
 ---
 # <a name="getcolumntypename-method-sqlserverresultsetmetadata"></a>getColumnTypeName 메서드(SQLServerResultSetMetaData)
@@ -39,14 +39,14 @@ public java.lang.String getColumnTypeName(int column)
   
  열 인덱스를 나타내는 **int**입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  열의 서버 이름이 들어 있는 **문자열**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 getColumnTypeName 메서드는 getColumnTypeName 메서드에서 지정 하는 java. .sql Setmetadata 인터페이스입니다.  
+## <a name="remarks"></a>설명  
+ 이 getColumnTypeName 메서드는 java.sql.ResultSetMetaData 인터페이스의 getColumnTypeName 메서드에 의해 지정됩니다.  
   
  [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC 드라이버 3.0에서는 TYPE_NAME 열의 동작이 변경되었습니다. 자세한 내용은 [SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md)를 참조하십시오.  
   

@@ -1,20 +1,21 @@
 ---
-title: SQL Server 빅 데이터 클러스터에서 VS Code용 Spark & Hive Tools를 사용하여 Spark 작업 실행
-titleSuffix: SQL Server big data clusters
+title: '작업 실행: VS Code용 Spark 및 Hive 도구'
+titleSuffix: SQL Server Big Data Clusters
 description: SQL Server 빅 데이터 클러스터에서 Visual Studio Code용 Spark & Hive Tools를 사용하여 spark 작업을 제출합니다.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b09a5febe9bc67f04d70c4d5b7850ef26ebac750
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 732db8e12b2923dfdd74727c5e9e0a5a56483fc4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653726"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255925"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-cluster-in-visual-studio-code"></a>Visual Studio Code에서 SQL Server 빅 데이터 클러스터에 대한 Spark 작업 제출
 
@@ -146,7 +147,7 @@ Visual Studio Code에서 클러스터로 스크립트를 제출하려면 먼저 
 
    ![pyspark 대화형 python 대화형 창](./media/spark-hive-tools-vscode/pyspark-interactive-python-interactive-window.png) 
 
-6. **“%% Info”** 를 입력하고 **Shift+Enter**를 눌러 작업 정보를 봅니다. (옵션)
+6. **“%% Info”** 를 입력하고 **Shift+Enter**를 눌러 작업 정보를 봅니다. (선택 사항)
 
    ![작업 정보 보기](./media/spark-hive-tools-vscode/pyspark-interactive-view-job-information.png)
 
@@ -177,7 +178,7 @@ Visual Studio Code에서 클러스터로 스크립트를 제출하려면 먼저 
 
 ### <a id="triggerlivyconf"></a>**Livy 구성을 트리거하는 방법**
 
-#### <a name="method-1"></a>메서드 1
+#### <a name="method-1"></a>방법 1
 
 1. 메뉴 모음에서 **파일** > **기본 설정** > **설정**으로 이동합니다.  
 2. **검색 설정** 텍스트 상자에 **HDInsight 작업 제출: Livy 구성**을 입력합니다.  
@@ -200,36 +201,36 @@ Visual Studio Code에서 클러스터로 스크립트를 제출하려면 먼저 
 
 **요청 본문**
 
-| NAME | description | 유형 |
+| name | description | type |
 | :- | :- | :- |
 | 파일 | 실행할 애플리케이션이 포함된 파일 | path(필수) |
-| proxyUser | 작업을 실행할 때 가장할 사용자 | string |
-| className | 애플리케이션 Java/Spark 주 클래스 | string |
+| proxyUser | 작업을 실행할 때 가장할 사용자 | 문자열 |
+| className | 애플리케이션 Java/Spark 주 클래스 | 문자열 |
 | args | 애플리케이션의 명령줄 인수 | 문자열 목록 |
 | jars | 이 세션에서 사용할 jar | 문자열 목록 |
 | pyFiles | 이 세션에서 사용할 Python 파일 | 문자열 목록 |
 | files | 이 세션에서 사용할 파일 | 문자열 목록 |
-| driverMemory | 드라이버 프로세스에 사용할 메모리 크기 | string |
+| driverMemory | 드라이버 프로세스에 사용할 메모리 크기 | 문자열 |
 | driverCores | 드라이버 프로세스에 사용할 코어 수 | int |
-| executorMemory | 실행기 프로세스당 사용할 메모리 크기 | string |
+| executorMemory | 실행기 프로세스당 사용할 메모리 크기 | 문자열 |
 | executorCores | 각 실행기에 사용할 코어 수 | int |
 | numExecutors | 이 세션에서 시작할 실행기 수 | int |
 | archives | 이 세션에서 사용할 보관 파일 | 문자열 목록 |
-| queue | 제출된 대상 YARN 큐의 이름 | string |
-| NAME | 이 세션의 이름 | string |
+| queue | 제출된 대상 YARN 큐의 이름 | 문자열 |
+| name | 이 세션의 이름 | 문자열 |
 | conf | Spark 구성 속성 | 키=값 맵 |
 
 #### <a name="response-body"></a>응답 본문
 
 만든 일괄 처리 개체입니다.
 
-| NAME | description | 유형 |
+| name | description | type |
 | :- | :- | :- |
 | id | 세션 ID | int |
 | appId | 이 세션의 애플리케이션 ID | String |
 | appInfo | 자세한 애플리케이션 정보 | 키=값 맵 |
 | log | 로그 줄 | 문자열 목록 |
-| state | 일괄 처리 상태 | string |
+| state | 일괄 처리 상태 | 문자열 |
 
 >[!NOTE]
 >할당된 Livy 구성은 스크립트를 제출할 때 출력 창에 표시됩니다.

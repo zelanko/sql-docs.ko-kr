@@ -1,5 +1,5 @@
 ---
-title: setBytes 메서드 (long, byte) | Microsoft Docs
+title: setBytes 메서드(long, byte) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: ffb8f107-0f9d-4410-957f-62b718e1e872
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 02c8e541b237cbf72fc2b3da3ed5c2b0759b0eb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974916"
 ---
 # <a name="setbytes-method-long-byte"></a>setBytes 메서드(long, byte)
@@ -44,19 +44,19 @@ public int setBytes(long pos,
   
  BLOB에 쓸 바이트의 배열입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  쓴 바이트 수를 지정하는 **long** 값입니다.  
   
 ## <a name="exceptions"></a>예외  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 setBytes 메서드는 java.sql.Blob 인터페이스의 setBytes 메서드에 의해 지정됩니다.  
   
  데이터는 지정된 위치부터 덮어쓰여지며 BLOB의 초기 길이를 초과할 수 있습니다. 위치+1 값을 지정하면 바이트가 추가되고, 위치+2 이상(또는 0 이하)의 값을 전달하면 위치 오류가 발생합니다. 길이가 0인 **byte** 배열을 전달하면 작성된 바이트가 없으므로 0이 반환됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [setBytes 메서드 &#40;SQLServerBlob&#41;](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)   
+ [setBytes 메서드&#40;SQLServerBlob&#41;](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)   
  [SQLServerBlob 메서드](../../../connect/jdbc/reference/sqlserverblob-methods.md)   
  [SQLServerBlob 멤버](../../../connect/jdbc/reference/sqlserverblob-members.md)   
  [SQLServerBlob 클래스](../../../connect/jdbc/reference/sqlserverblob-class.md)  

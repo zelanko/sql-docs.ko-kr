@@ -11,10 +11,10 @@ ms.assetid: 34b4b2e7-ec00-42aa-82ec-9cb01b538998
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d673cf36e3b9ed4d3012e49c620aed8c8e34eb94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970636"
 ---
 # <a name="sqlserverresource-members"></a>SQLServerResource 멤버
@@ -24,7 +24,7 @@ ms.locfileid: "67970636"
   
 ## <a name="constructors"></a>생성자  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[SQLServerResource ()](../../../connect/jdbc/reference/sqlserverresource-constructor.md)|[SQLServerResource](../../../connect/jdbc/reference/sqlserverresource-class.md) 클래스의 새 인스턴스를 초기화합니다. 이 생성자는 내부 전용입니다.|  
   
@@ -33,13 +33,13 @@ ms.locfileid: "67970636"
   
 ## <a name="inherited-fields"></a>상속된 필드  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |java.util.ResourceBundle|부모(parent)|  
   
 ## <a name="methods"></a>메서드  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[getContents](../../../connect/jdbc/reference/getcontents-method-sqlserverresource.md)|오류 문자열 정보를 검색합니다. 이 메서드는 내부 전용입니다.|  
   

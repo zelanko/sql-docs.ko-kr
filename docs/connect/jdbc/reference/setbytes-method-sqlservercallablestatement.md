@@ -16,10 +16,10 @@ ms.assetid: f264f1a6-ee35-4eaf-81d8-ecf99f03b35d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 53a75e8bd85a3601673f51111d87c34eb050a980
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974876"
 ---
 # <a name="setbytes-method-sqlservercallablestatement"></a>setBytes 메서드(SQLServerCallableStatement)
@@ -42,12 +42,12 @@ public void setBytes(java.lang.String sCol,
   
  *b*  
   
- **바이트** 값의 배열입니다.  
+ **byte** 값의 배열입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이전 버전의 드라이버에서는 SQLServerCallableStatement.setBytes를 사용하여 바이트 배열과 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식 **date**, **time**, **datetime2** 또는 **datetimeoffset** 간에 값을 변환할 수 있었습니다. 이제 이 메서드와 이러한 데이터 형식을 함께 사용하면 변환이 지원되지 않음을 나타내는 예외가 발생합니다.  
   
  이 setBytes 메서드는 java.sql.CallableStatement 인터페이스의 setBytes 메서드에 의해 지정됩니다.  

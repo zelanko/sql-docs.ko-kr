@@ -1,7 +1,5 @@
 ---
-title: 등록된 서버 제거(SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: 등록된 서버 제거
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -14,23 +12,26 @@ helpviewer_keywords:
 ms.assetid: 1f7f755f-7ed2-4572-aa18-13cdd92e350e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8ff49e0a8f369c40b37759b2b59cd7f5e1897e66
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: f6eef59f7e3a8b5632b6bd1efc6cbe5b87eefc2b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266078"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256210"
 ---
 # <a name="remove-a-registered-server-sql-server-management-studio"></a>등록된 서버 제거(SQL Server Management Studio)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 등록된 서버에서 서버를 제거하는 방법에 대해 설명합니다.  
-  
-##  <a name="SSMSProcedure"></a>  
-  
-#### <a name="to-remove-a-registered-server"></a>등록된 서버를 제거하려면  
-  
-1.  등록된 서버에서 서버를 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다.  
-  
-2.  **삭제 확인** 대화 상자에서 **예**를 클릭합니다.  
-  
-  
+
+이 문서에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 등록된 서버에서 서버를 제거하는 방법에 대해 설명합니다.
+
+## <a name="SSMSProcedure"></a>
+
+### <a name="to-remove-a-registered-server"></a>등록된 서버를 제거하려면
+
+1. 등록된 서버에서 서버를 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다.
+
+2. **삭제 확인** 대화 상자에서 **예**를 클릭합니다.

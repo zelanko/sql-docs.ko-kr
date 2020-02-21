@@ -1,10 +1,9 @@
 ---
-title: 이전 버전에서 데이터베이스 다이어그램 업그레이드 | Microsoft 문서
-ms.custom: ''
+title: 이전 버전에서 데이터베이스 다이어그램 업그레이드
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,16 +17,18 @@ helpviewer_keywords:
 ms.assetid: c5434211-697a-423f-ad71-d78178b69a78
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d28b90273084e9a5b2f9678500efcd68dba924e0
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 11617b30fef96d189f5d91f46c3fc272d86a153f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263130"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246054"
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>이전 버전에서 데이터베이스 다이어그램 업그레이드(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 기반으로 만든 데이터베이스 다이어그램을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 데이터베이스 다이어그램으로 설정하면 자동으로 업그레이드됩니다. 다이어그램을 설정하는 자세한 단계는 [데이터베이스 다이어그램 디자이너 설정(Visual Database Tools)](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)을 참조하세요.  
+이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 기반으로 만든 데이터베이스 다이어그램을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 데이터베이스 다이어그램으로 설정하면 자동으로 업그레이드됩니다. 다이어그램을 설정하는 자세한 단계는 [데이터베이스 다이어그램 디자이너 설정](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)을 참조하세요.  
   
 ### <a name="to-upgrade-legacy-database-diagrams"></a>레거시 데이터베이스 다이어그램을 업그레이드하려면  
   
@@ -40,6 +41,6 @@ ms.locfileid: "68263130"
     데이터베이스에 저장된 다이어그램이 업그레이드됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[데이터베이스 다이어그램 소유권 이해(Visual Database Tools)](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
-[데이터베이스 다이어그램 디자이너 설정(Visual Database Tools)](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)  
+[데이터베이스 다이어그램 소유권 이해](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
+[데이터베이스 다이어그램 디자이너 설정](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)  
   

@@ -1,10 +1,7 @@
 ---
-title: SQL Server 에이전트 서비스의 계정 선택 | Microsoft 문서
-ms.custom: ''
-ms.date: 05/04/2017
+title: SQL Server 에이전트 서비스의 계정 선택
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,15 +18,20 @@ helpviewer_keywords:
 ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 05/04/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a1398e56ccb4ade7504d20708fda3c4bdec9d34b
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 86ee07ffd09ab72fdce4bde1a247e37328c4b626
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811546"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253228"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>SQL Server 에이전트 서비스의 계정 선택
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -85,7 +87,7 @@ ms.locfileid: "68811546"
 |[!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 도메인 계정(Windows Administrators 그룹의 멤버)|지원됨|지원됨|지원됨|  
 |Windows 도메인 계정(비관리자)|지원됨<br /><br />아래의 제한 사항 1을 참조하세요.|지원됨<br /><br />아래의 제한 사항 1을 참조하세요.|지원됨<br /><br />아래의 제한 사항 1을 참조하세요.|  
 |네트워크 서비스 계정(NT AUTHORITY\NetworkService)|지원됨<br /><br />아래의 제한 사항 1, 3 및 4를 참조하세요.|지원되지 않음|지원되지 않음|  
-|로컬 사용자 계정(비관리자)|지원됨<br /><br />아래의 제한 사항 1을 참조하세요.|지원되지 않음|해당 사항 없음|  
+|로컬 사용자 계정(비관리자)|지원됨<br /><br />아래의 제한 사항 1을 참조하세요.|지원되지 않음|해당 없음|  
 |로컬 시스템 계정(NT AUTHORITY\System)|지원됨<br /><br />아래의 제한 사항 2를 참조하세요.|지원되지 않음|지원됨<br /><br />아래의 제한 사항 2를 참조하세요.|  
 |로컬 서비스 계정(NT AUTHORITY\LocalService)|지원되지 않음|지원되지 않음|지원되지 않음|  
   
@@ -118,7 +120,7 @@ ms.locfileid: "68811546"
   
 **SQL Server 에이전트의 메일 프로필을 지정하려면**  
   
--   [방법: 데이터베이스 메일을 사용하도록 SQL Server 에이전트 메일 구성(SQL Server Management Studio)](https://msdn.microsoft.com/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
+-   [방법: 데이터베이스 메일을 사용하도록 SQL Server 에이전트 메일 구성](https://msdn.microsoft.com/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
   
 > [!NOTE]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 운영 체제가 시작될 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 시작되도록 지정할 수 있습니다.  

@@ -26,10 +26,10 @@ ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 32b0e633aa95ab2d9e4eadea822d10dbfe47d8d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65582073"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>지도 또는 지도 계층 추가, 변경 또는 삭제(보고서 작성기 및 SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "65582073"
   
  다음 표에서는 **지도** 창의 도구 모음 아이콘을 보여 줍니다.  
   
-|기호|설명|사용 시기|  
+|기호|Description|사용 시기|  
 |------------|-----------------|-----------------|  
 |![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")|지도 계층 마법사|마법사를 사용하여 계층을 추가하려면 **새 계층 마법사**를 클릭합니다.|  
 |![rs_IconMapAddLayer](../../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")|계층 추가|계층을 수동으로 추가하려면 **계층 추가**를 클릭한 다음 추가할 지도 계층의 유형을 클릭합니다.|  
@@ -67,7 +67,7 @@ ms.locfileid: "65582073"
   
 ##  <a name="ChangeLayer"></a> 지도 계층 마법사를 사용하여 계층의 옵션을 변경하려면  
   
--   지도 계층 마법사를 실행합니다. 이 마법사를 통해 지도 계층 마법사를 사용하여 만든 계층의 옵션을 변경할 수 있습니다. 지도 창에서 계층을 마우스 오른쪽 단추로 클릭한 다음 도구 모음에서 계층 마법사 단추(![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"))를 클릭합니다.  
+-   지도 계층 마법사를 실행합니다. 이 마법사를 통해 지도 계층 마법사를 사용하여 만든 계층의 옵션을 변경할 수 있습니다. 지도 창에서 계층을 마우스 오른쪽 단추로 클릭한 다음에 도구 모음에서 계층 마법사 단추(![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"))를 클릭합니다.  
   
      자세한 내용은 [지도 마법사 및 지도 계층 마법사&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)를 참조하세요.  
   
@@ -75,10 +75,10 @@ ms.locfileid: "65582073"
   
 1.  지도 창이 나타날 때까지 지도를 클릭합니다.  
   
-2.  도구 모음에서 **계층 추가** 단추를 클릭하고 드롭다운 목록의 **점**, **선**또는 **다각형**중에서 추가할 계층의 유형을 클릭합니다.  
+2.  도구 모음에서 **계층 추가** 단추를 클릭하고 드롭다운 목록의 **점**, **선** 또는 **다각형** 중에서 추가할 계층의 유형을 클릭합니다.  
   
     > [!NOTE]  
-    >  지도 계층을 추가하고 수동으로 구성할 수 있지만 지도 계층 마법사를 사용하여 새 계층을 추가하는 것이 좋습니다. 지도 창 도구 모음에서에서 마법사를 시작하려면 계층 마법사 단추(![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"))를 클릭합니다.  
+    >  지도 계층을 추가하고 수동으로 구성할 수 있지만 지도 계층 마법사를 사용하여 새 계층을 추가하는 것이 좋습니다. 지도 창 도구 모음에서 마법사를 실행하려면 계층 마법사 단추(![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"))를 클릭합니다.  
   
 3.  계층을 마우스 오른쪽 단추로 클릭한 다음 **계층 데이터**를 클릭합니다.  
   
@@ -250,6 +250,6 @@ ms.locfileid: "65582073"
   
 ## <a name="see-also"></a>참고 항목  
  [지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [보고서 문제해결: 지도 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [보고서 문제 해결: 맵 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

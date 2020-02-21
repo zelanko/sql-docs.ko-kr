@@ -9,14 +9,14 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 818ffbb7a8957fbcec67e6686b12a731397b6501
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.openlocfilehash: 94e2fe49e52ed224a35183f9629bf8eeab112d17
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74127378"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831601"
 ---
-# <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Kubernetes에 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]를 배포하는 방법
+# <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Kubernetes에 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]를 배포하는 방법
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -33,7 +33,7 @@ SQL Server 2019 빅 데이터 클러스터를 배포하기 전에 먼저 [빅 �
 - `azdata`
 - `kubectl`
 - Azure Data Studio
-- Azure Data Studio용 SQL Server 2019 확장
+- Azure Data Studio용 [데이터 가상화 확장](../azure-data-studio/data-virtualization-extension.md)
 
 ## <a id="prereqs"></a> Kubernetes 필수 조건
 
@@ -48,7 +48,7 @@ SQL Server 2019 빅 데이터 클러스터를 배포하기 전에 먼저 [빅 �
 
 다음 세 가지 방법 중 하나로 Kubernetes를 배포할 수 있습니다.
 
-| Kubernetes 배포 위치: | 설명 | 링크 |
+| Kubernetes 배포 위치: | Description | 링크 |
 |---|---|---|
 | **AKS(Azure Kubernetes Service)** | Azure의 관리되는 Kubernetes 컨테이너 서비스입니다. | [지침](deploy-on-aks.md) |
 | **단일 또는 여러 머신(`kubeadm`)** | `kubeadm`을 사용하여 물리적 머신 또는 가상 머신에 배포된 Kubernetes 클러스터입니다. | [지침](deploy-with-kubeadm.md) |
@@ -169,13 +169,13 @@ azdata bdc create --accept-eula=yes
 
 다음 환경 변수는 배포 구성 파일에 저장되지 않은 보안 설정에 사용됩니다. 자격 증명을 제외한 Docker 설정은 구성 파일에서 설정할 수 있습니다.
 
-| 환경 변수 | 요구 사항 |설명 |
+| 환경 변수 | 요구 사항 |Description |
 |---|---|---|
 | `AZDATA_USERNAME` | 필수 |SQL Server 빅 데이터 클러스터 관리자의 사용자 이름입니다. 이름이 같은 sysadmin 로그인이 SQL Server 마스터 인스턴스에 만들어집니다. 보안 모범 사례에 따라 `sa` 계정은 사용하지 않도록 설정됩니다. |
 | `AZDATA_PASSWORD` | 필수 |위에서 만든 사용자 계정의 암호입니다. Knox 게이트웨이 및 HDFS를 보호하는 데 사용되는 것과 동일한 암호가 `root` 사용자에게 사용됩니다. |
 | `ACCEPT_EULA`| `azdata`를 처음 사용하는 경우 필수| "예"로 설정합니다. 환경 변수로 설정하면 SQL Server와 `azdata`에 모두 EULA가 적용됩니다. 환경 변수로 설정하지 않을 경우 `azdata`를 처음 사용할 때 `--accept-eula=yes`를 포함할 수 있습니다.|
-| `DOCKER_USERNAME` | 선택 사항 | 프라이빗 리포지토리에 저장된 컨테이너 이미지에 액세스하는 데 사용할 사용자 이름입니다. 빅 데이터 클러스터 배포에서 프라이빗 Docker 리포지토리를 사용하는 방법에 대한 자세한 내용은 [오프라인 배포](deploy-offline.md) 항목을 참조하세요.|
-| `DOCKER_PASSWORD` | 선택 사항 |위 프라이빗 리포지토리에 액세스하는 데 사용할 암호입니다. |
+| `DOCKER_USERNAME` | 옵션 | 프라이빗 리포지토리에 저장된 컨테이너 이미지에 액세스하는 데 사용할 사용자 이름입니다. 빅 데이터 클러스터 배포에서 프라이빗 Docker 리포지토리를 사용하는 방법에 대한 자세한 내용은 [오프라인 배포](deploy-offline.md) 항목을 참조하세요.|
+| `DOCKER_PASSWORD` | 옵션 |위 프라이빗 리포지토리에 액세스하는 데 사용할 암호입니다. |
 
 `azdata bdc create`를 호출하기 전에 이러한 환경 변수를 설정해야 합니다. 변수를 설정하지 않으면 변수를 입력하라는 메시지가 표시됩니다.
 
@@ -193,7 +193,8 @@ SET AZDATA_PASSWORD=<password>
 ```
 
 > [!NOTE]
-> 위의 암호를 사용하여 Knox 게이트웨이에 `root` 사용자를 사용해야 합니다. `root`는 이 기본 인증(사용자 이름/암호) 설정에서 유일하게 지원되는 사용자입니다. SQL Server 마스터의 경우 위의 암호와 함께 사용하도록 프로비저닝되는 사용자 이름은 `sa`입니다.
+> 위의 암호를 사용하여 Knox 게이트웨이에 `root` 사용자를 사용해야 합니다. `root`는 이 기본 인증(사용자 이름/암호)에서 유일하게 지원되는 사용자입니다.
+> 기본 인증을 사용하여 SQL Server에 연결하려면 AZDATA_USERNAME 및 AZDATA_PASSWORD [환경 변수](#env)와 동일한 값을 사용합니다. 
 
 
 환경 변수를 설정한 후에는 `azdata bdc create`를 실행하여 배포를 트리거해야 합니다. 이 예제에서는 위에서 만든 클러스터 구성 프로필을 사용합니다.

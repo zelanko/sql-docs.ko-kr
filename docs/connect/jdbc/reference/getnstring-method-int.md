@@ -1,5 +1,5 @@
 ---
-title: getNString 메서드 (int) | Microsoft Docs
+title: getNString 메서드(int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,16 +11,16 @@ ms.assetid: 2048bb9f-7d9b-4aaa-b135-c716910cc800
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bbe3bc040ba79ad7699a571b13b48f2c41965c60
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981424"
 ---
 # <a name="getnstring-method-int"></a>getNString 메서드(int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  지정 된 **NCHAR**, **NVARCHAR**또는 **LONGNVARCHAR** 매개 변수의 값을 검색 하 여 Java 프로그래밍 언어의 문자열로 반환 합니다.  
+  Java 프로그래밍 언어인 문자열로 지정된 **NCHAR**, **NVARCHAR** 또는 **LONGNVARCHAR** 매개 변수 값을 검색합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,13 +34,13 @@ public final java.lang.String getNString(int parameterIndex)
   
  매개 변수 인덱스를 나타내는 **int**입니다.  
   
-## <a name="return-value"></a>반환 값  
- AStringobject입니다.  
+## <a name="return-value"></a>Return Value  
+ String 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 getNString 메서드는 java.sql.CallableStatement 인터페이스의 getNString 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

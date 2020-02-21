@@ -11,10 +11,10 @@ ms.assetid: 1a25cb1d-38d5-401a-970b-87b642a780e4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3e00728af89cf85beb53ef667e91f4011b3fd9e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573552"
 ---
 # <a name="configurationsetting-method---setvirtualdirectory"></a>ConfigurationSetting 메서드 - SetVirtualDirectory
@@ -49,10 +49,10 @@ public void SetVirtualDirectory(string Application, string VirtualDirectory,
  *HRESULT*  
  [out] 호출의 성공 여부를 나타내는 값입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드 호출의 성공 또는 실패를 나타내는 *HRESULT* 를 반환합니다. 0 값은 메서드 호출이 성공했음을 나타내고 오류 코드는 호출이 실패했음을 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  각 애플리케이션의 모든 URL 예약에 대해 하나의 가상 디렉터리 이름만 지정할 수 있습니다.  
   
  VirtualDirectory는 가상 디렉터리의 명명 규칙을 준수해야 합니다. VirtualDirectory는 빈 문자열이나 공백이 될 수 없습니다.  

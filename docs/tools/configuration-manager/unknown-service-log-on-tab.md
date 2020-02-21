@@ -1,6 +1,6 @@
 ---
-title: 알 수 없는 서비스 (로그온 탭) | Microsoft Docs
-ms.custom: ''
+title: 알 수 없는 서비스(로그온 탭)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: e9b35cb5-d8ae-42ea-b59e-deedc99c4823
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 32b6943792ae89d25709217fe9325d2450aba893
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 8fae62bb72e41cd9f87200a6bcfd2f17eb780697
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023779"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307589"
 ---
 # <a name="unknown-service-log-on-tab"></a>알 수 없는 서비스(로그온 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "68023779"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 서비스가 실행되는 컴퓨터의 WMI 공급자로부터 서비스 정보를 받습니다. 서비스 속성을 읽는 동안 오류가 발생했거나 서비스 속성이 완전하지 않습니다. 이 문제를 해결하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 닫은 후 다시 열거나 서비스가 실행되는 컴퓨터의 WMI 공급자를 확인하십시오.  
   
- WMI 공급자는 Windows 구성 요소입니다. WMI 공급자에 대한 사용 권한을 확인하는 방법은 SQL Server 온라인 설명서의 "방법: WMI를 구성하여 SQL Server 도구에 서버 상태 표시"를 참조하세요.  
+ WMI 공급자는 Windows 구성 요소입니다. WMI 공급자에 대한 권한을 확인하는 방법은 SQL Server 온라인 설명서의 “방법: WMI를 구성하여 SQL Server 도구에 서버 상태 표시”를 참조하세요.  
   
  올바른 서비스가 표시되는 경우 **알 수 없는 서비스 속성** 대화 상자의 **로그온** 탭을 사용하여 이 서비스에서 사용할 계정을 지정할 수 있으며 서비스를 시작 및 중지할 수 있습니다.  
   

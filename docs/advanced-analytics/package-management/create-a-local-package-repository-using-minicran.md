@@ -3,19 +3,19 @@ title: miniCRAN을 사용하여 리포지토리 만들기
 description: miniCRAN 패키지를 사용하여 오프라인으로 R 패키지를 설치하고 패키지 및 종속성의 로컬 리포지토리를 만드는 방법을 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2019
+ms.date: 11/20/2019
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9b83a0c016cf16e4df8ef7fcb90b3711eabe4933
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: c8ddfcf997cd4cc62f1c65efd7ecfc4cf3aff730
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727574"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479467"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>miniCRAN을 사용하여 로컬 R 패키지 리포지토리 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "73727574"
 
 - **보안**: 많은 R 사용자는 CRAN 또는 미러 사이트 중 하나에서 새 R 패키지를 다운로드하여 설치하는 데 익숙합니다. 그러나 보안상의 이유로 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]를 실행하는 프로덕션 서버는 일반적으로 인터넷에 연결되지 않습니다.
 
-- **간편한 오프라인 설치**: 오프라인 서버에 패키지를 설치하려면 모든 패키지 종속 요소도 다운로드해야 합니다. miniCRAN을 사용하면 모든 종속 요소를 올바른 형식으로 보다 쉽게 가져올 수 있습니다. miniCRAN을 사용하면 [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) 문을 사용하여 설치할 패키지를 준비할 때 패키지 종속성 오류를 방지할 수 있습니다.
+- **간편한 오프라인 설치**: 오프라인 서버에 패키지를 설치하려면 모든 패키지 종속 요소도 다운로드해야 합니다. miniCRAN을 사용하면 보다 쉽게 모든 종속 요소를 올바른 형식으로 가져오고 종속성 오류를 피할 수 있습니다.
 
 - **개선된 버전 관리**: 다중 사용자 환경에서는 서버에 여러 패키지 버전을 무제한으로 설치하지 않는 것이 좋습니다. 로컬 리포지토리를 사용하여 사용자에게 일관적인 패키지 세트를 제공하세요.
 
@@ -112,6 +112,11 @@ pdb[, c("Package", "Version", "License")]
 
 필요한 패키지가 포함된 로컬 리포지토리를 만든 후에는 패키지 리포지토리를 SQL Server 컴퓨터로 이동합니다. 다음 절차에서는 R 도구를 사용하여 패키지를 설치하는 방법을 설명합니다.
 
+::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+> [!NOTE]
+> 패키지는 **sqlmlutils**를 사용하여 설치하는 것이 좋습니다. [sqlmlutils를 사용하여 새 R 패키지 설치](install-additional-r-packages-on-sql-server.md)를 참조하세요.
+::: moniker-end
+
 1. miniCRAN 리포지토리가 포함된 폴더 전체를, 패키지를 설치할 서버에 복사합니다. 일반적으로 이 폴더의 구조는 다음과 같습니다. 
 
    `<miniCRAN root>/bin/windows/contrib/version/<all packages>`
@@ -124,7 +129,7 @@ pdb[, c("Package", "Version", "License")]
    - 예를 들어 RGUI의 기본 파일 위치는 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`입니다.
    ::: moniker-end
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range"=sql-server-2017||=sqlallproducts-allversions"
    - 예를 들어 RGUI의 파일 위치는 `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`입니다.
    ::: moniker-end
 
@@ -135,7 +140,7 @@ pdb[, c("Package", "Version", "License")]
 3. 인스턴스 라이브러리의 경로를 가져와서 라이브러리 경로 목록에 추가합니다.
 
    ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-   예:
+   예를 들면 다음과 같습니다.
 
    ```R
    outputlib <- "C:/Program Files/Microsoft SQL Server/MSSQL13.MSSQLSERVER/R_SERVICES/library"
@@ -144,7 +149,7 @@ pdb[, c("Package", "Version", "License")]
    ::: moniker-end
 
    ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-   예:
+   예를 들면 다음과 같습니다.
 
    ```R
    outputlib <- "C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER/R_SERVICES/library"
@@ -153,7 +158,7 @@ pdb[, c("Package", "Version", "License")]
    ::: moniker-end
 
    ::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
-   예:
+   예를 들면 다음과 같습니다.
 
    ```R
    outputlib <- "C:/Program Files/Microsoft SQL Server/MSSQL15.MSSQLSERVER/R_SERVICES/library"
@@ -187,7 +192,7 @@ pdb[, c("Package", "Version", "License")]
     installed.packages()
     ```
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 + [R 패키지 정보 가져오기](../package-management/r-package-information.md)
 + [R 자습서](../tutorials/sql-server-r-tutorials.md)

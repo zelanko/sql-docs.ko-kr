@@ -1,8 +1,10 @@
 ---
-title: 기본 모드 보고서 서버 데이터베이스 만들기(SSRS 구성 관리자) | Microsoft Docs
-ms.date: 05/24/2018
+title: 기본 모드 보고서 서버 데이터베이스 만들기(구성 관리자) | Microsoft Docs
+description: 기본 모드 Reporting Services에서는 내부 스토리지에 SQL Server 데이터베이스를 사용합니다. 이 데이터베이스는 필수 항목이며 게시된 보고서, 모델, 공유 데이터 원본, 세션 데이터, 리소스 및 서버 메타데이터를 저장하는 데 사용됩니다.
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], databases
@@ -10,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5b80a7e6ee0d68009ff21f01ba0c75b3f0a7fb33
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: dbe8c7f4d755d18c0baa01f5f6ef37601292047b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593550"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866336"
 ---
-# <a name="create-a-native-mode-report-server-database"></a>기본 모드 보고서 서버 데이터베이스 만들기
+# <a name="create-a-native-mode-report-server-database-ssrs-configuration-manager"></a>기본 모드 보고서 서버 데이터베이스 만들기(SSRS 구성 관리자)
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
 
-기본 모드 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 내부 스토리지로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 사용합니다. 이 데이터베이스는 필수 항목이며 게시된 보고서, 모델, 공유 데이터 원본, 세션 데이터, 리소스 및 서버 메타데이터를 저장하는 데 사용됩니다.  
+기본 모드 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서는 내부 스토리지에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 사용합니다. 이 데이터베이스는 필수 항목이며 게시된 보고서, 모델, 공유 데이터 원본, 세션 데이터, 리소스 및 서버 메타데이터를 저장하는 데 사용됩니다.  
 
 보고서 서버 데이터베이스를 만들거나 연결 문자열 또는 자격 증명을 변경하려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자의 데이터베이스 페이지에 있는 옵션을 사용하십시오.  
   
@@ -71,7 +73,7 @@ ms.locfileid: "73593550"
   
 ### <a name="to-create-a-local-report-server-database"></a>로컬 보고서 서버 데이터베이스를 만들려면  
   
-1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 시작한 다음 데이터베이스를 만들려는 보고서 서버 인스턴스에 연결합니다. 자세한 내용은 [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)의 지원되는 버전을 검토합니다.  
+1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 시작한 다음 데이터베이스를 만들려는 보고서 서버 인스턴스에 연결합니다. 자세한 내용은 [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)을 참조하세요.  
   
 2.  데이터베이스 페이지에서 **데이터베이스 변경**을 선택합니다.  
   

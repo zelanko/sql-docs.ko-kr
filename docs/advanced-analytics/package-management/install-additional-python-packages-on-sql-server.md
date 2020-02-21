@@ -1,20 +1,20 @@
 ---
-title: PIP를 사용하여 Python 패키지 설치
+title: sqlmlutils를 사용하여 Python 패키지 설치
 description: Python pip를 사용하여 SQL Server Machine Learning Services 인스턴스에 새 Python 패키지를 설치하는 방법을 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/22/2019
+ms.date: 01/30/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 2e3452a6aad04d0d524e4eb0e6bd473fd39a2bf7
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 9d759921ac82f34156856b587161f44c64269ea0
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72542155"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76929896"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>sqlmlutils를 사용하여 Python 패키지 설치
 
@@ -25,7 +25,7 @@ ms.locfileid: "72542155"
 패키지 위치 및 설치 경로에 대한 자세한 내용은 [Python 패키지 정보 가져오기](../package-management/python-package-information.md)를 참조하세요.
 
 > [!NOTE]
-> SQL Server에 Python 패키지를 추가하는 경우 표준 Python `pip install` 명령이 권장되지 않습니다. 대신, 이 문서에 설명된 대로 **sqlmlutils**를 사용하세요.
+> SQL Server 2019에 Python 패키지를 추가하는 경우 표준 Python `pip install` 명령이 권장되지 않습니다. 대신, 이 문서에 설명된 대로 **sqlmlutils**를 사용하세요.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -56,14 +56,15 @@ ms.locfileid: "72542155"
 
 ## <a name="install-sqlmlutils-on-the-client-computer"></a>클라이언트 컴퓨터에 sqlmlutils 설치
 
-**sqlmlutils**를 사용하려면 먼저 SQL Server에 연결하는 데 사용하는 클라이언트 컴퓨터에 설치해야 합니다.
+**sqlmlutils**를 사용하려면 먼저 SQL Server에 연결하는 데 사용하는 클라이언트 컴퓨터에 설치해야 합니다. `pip`를 설치했는지 확인합니다. 자세한 내용은 [pip 설치](https://pip.pypa.io/en/stable/installing/)를 참조하세요.
 
-1. 최신 **sqlmlutils** zip 파일을 https://github.com/Microsoft/sqlmlutils/tree/master/Python/dist 에서 클라이언트 컴퓨터로 다운로드합니다. 파일 압축을 풀지 않도록 합니다.
+1. 최신 **sqlmlutils** zip 파일을 https://github.com/Microsoft/sqlmlutils/tree/master/Python/dist 에서 클라이언트 컴퓨터로 다운로드합니다. 파일 압축을 풀지 마세요.
 
-1. **명령 프롬프트**를 열고 다음 명령을 실행하여 **sqlmlutils** 패키지를 설치합니다. 다운로드한 **sqlmlutils** zip 파일의 전체 경로를 대체합니다. 이 예제에서는 다운로드한 파일을 `c:\temp\sqlmlutils_0.6.0.zip`이라고 가정합니다.
+1. **명령 프롬프트**를 열고 다음 명령을 실행하여 **sqlmlutils** 패키지를 설치합니다. 다운로드한 **sqlmlutils** zip 파일의 전체 경로를 대체합니다. 이 예제에서는 다운로드한 파일을 `c:\temp\sqlmlutils_0.7.2.zip`이라고 가정합니다.
 
    ```console
-   pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils_0.6.0.zip
+   pip install "pymssql<3.0"
+   pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils_0.7.2.zip
    ```
 
 ## <a name="add-a-python-package-on-sql-server"></a>SQL Server에 Python 패키지 추가
@@ -76,7 +77,7 @@ SQL Server에 연결하는 데 사용하는 클라이언트 컴퓨터가 인터�
 
 1. 클라이언트 컴퓨터에서 **Python** 또는 Python 환경을 엽니다.
 
-1. 다음 명령을 사용하여 **text-tools** 패키지를 설치합니다. 사용자 고유의 SQL Server 데이터베이스 연결 정보를 대체합니다(Windows 인증을 사용하지 않는 경우 `uid` 및 `pwd` 매개 변수 추가).
+1. 다음 명령을 사용하여 **text-tools** 패키지를 설치합니다. SQL Server 데이터베이스 연결 정보를 바꿉니다(Windows 인증을 사용하지 않는 경우 `uid` 및 `pwd` 매개 변수 추가).
 
    ```python
    import sqlmlutils
@@ -114,7 +115,7 @@ sqlmlutils.SQLPackageManager(connection).install("c:/temp/packages/text-tools/te
 
 ## <a name="use-the-package-in-sql-server"></a>SQL Server에서 패키지 사용
 
-이제 SQL Server의 Python 스크립트에서 이 패키지를 사용할 수 있습니다. 예를 들어
+이제 SQL Server의 Python 스크립트에서 이 패키지를 사용할 수 있습니다. 다음은 그 예입니다.
 
 ```python
 EXECUTE sp_execute_external_script
@@ -136,7 +137,7 @@ print(first_match)
 sqlmlutils.SQLPackageManager(connection).uninstall("text-tools")
 ```
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 + SQL Server Machine Learning Services에 설치된 Python 패키지에 대한 정보를 보려면 [Python 패키지 정보 가져오기](../package-management/python-package-information.md)를 참조하세요.
 

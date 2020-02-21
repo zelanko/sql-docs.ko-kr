@@ -1,7 +1,6 @@
 ---
-title: 재생 결과 검토 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 재생 결과 검토
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -10,18 +9,22 @@ ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e6b68d6e5376bdf24efb09c50e3df63ed5810373
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 03c6f6e0bcb58037e362ffd4b3ad20914fd9c328
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67949932"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306939"
 ---
 # <a name="review-the-replay-results"></a>재생 결과 검토
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 기능이 분산 재생을 완료하면 각 클라이언트에 대한 재생 작업을 캡처하여 각 클라이언트의 결과 추적 파일에 저장할 수 있습니다. 이 작업을 캡처하려면 **replay** 옵션을 사용하여 관리 도구를 실행할 때 **-o** 매개 변수를 사용해야 합니다. 재생 옵션에 대한 자세한 내용은 [재생 옵션&#40;Distributed Replay Administration Tool&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)을 참조하세요.  
+
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 기능이 분산 재생을 완료하면 각 클라이언트에 대한 재생 작업을 캡처하여 각 클라이언트의 결과 추적 파일에 저장할 수 있습니다. 이 작업을 캡처하려면 **replay** 옵션을 사용하여 관리 도구를 실행할 때 **-o** 매개 변수를 사용해야 합니다. 재생 옵션에 대한 자세한 내용은 [재생 옵션&#40;Distributed Replay Administration Tool&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)을 참조하세요.  
   
- 결과 추적 파일이 저장되는 위치는 각 클라이언트에 있는 클라이언트 구성 파일 `<ResultDirectory>`의 `DReplayClient.xml` XML 요소에 지정됩니다. 클라이언트 결과 디렉터리의 추적 파일은 각 재생 시 덮어씁니다.  
+ 결과 추적 파일이 저장되는 위치는 각 클라이언트에 있는 클라이언트 구성 파일 `<ResultDirectory>` 의 `DReplayClient.xml`XML 요소에 지정됩니다. 클라이언트 결과 디렉터리의 추적 파일은 각 재생 시 덮어씁니다.  
   
  결과 추적 파일에 캡처할 출력의 종류를 지정하려면 재생 구성 파일 `DReplay.exe.replay.config`를 수정합니다. `<OutputOptions>` XML 요소를 사용하여 행 개수나 결과 집합의 내용을 기록할지 여부를 지정할 수 있습니다.  
   
@@ -30,10 +33,10 @@ ms.locfileid: "67949932"
 ## <a name="event-classes-captured-in-result-trace-files"></a>결과 추적 파일에 캡처되는 이벤트 클래스  
  다음 표에서는 결과 추적 데이터에 캡처되는 이벤트 클래스를 모두 나열합니다.  
   
-|범주|EventClass 이름|캡처 빈도|캡처 시점|  
+|Category|EventClass 이름|캡처 빈도|캡처 시점|  
 |--------------|---------------------|-----------------------|----------------------|  
-|Replayable Events|Audit Login|원래 추적 데이터의 각 Audit Login 이벤트에 대해 한 번|이벤트가 성공적으로 완료되거나 실패할 때|  
-||Audit Logout|원래 추적 데이터의 각 Audit Logout 이벤트에 대해 한 번|이벤트가 성공적으로 완료되거나 실패할 때|  
+|Replayable Events|로그인 감사|원래 추적 데이터의 각 Audit Login 이벤트에 대해 한 번|이벤트가 성공적으로 완료되거나 실패할 때|  
+||로그아웃 감사|원래 추적 데이터의 각 Audit Logout 이벤트에 대해 한 번|이벤트가 성공적으로 완료되거나 실패할 때|  
 ||SQL:BatchCompleted|원래 추적 데이터의 각 SQL:BatchStarting 이벤트에 대해 한 번|이벤트가 성공적으로 완료되거나 실패할 때|  
 ||RPC:Completed|원래 추적 데이터의 각 RPC:Starting 이벤트에 대해 한 번|이벤트가 성공적으로 완료되거나 실패할 때|  
 |Statistics and Results|Replay Settings Event|한 번|결과 추적의 첫 번째 이벤트|  
@@ -43,7 +46,7 @@ ms.locfileid: "67949932"
 |오류 및 경고|Replay Internal Error|각 내부 오류에 대해 한 번|내부 오류 조건이 발생할 때|  
 ||Replay Provider Error|각 공급자 오류에 대해 한 번|공급자 오류 조건이 발생할 때|  
   
- 다음에 유의하세요.  
+ 다음 사항에 유의하세요.  
   
 -   대상 서버에서 성공적으로 재생된 각 이벤트에 해당하는 출력 이벤트 클래스가 하나씩 있습니다.  
   
@@ -52,12 +55,12 @@ ms.locfileid: "67949932"
 ## <a name="event-class-column-mapping"></a>이벤트 클래스 열 매핑  
  다음 표에서는 재생 중 캡처되는 각 이벤트 클래스 유형에 사용할 수 있는 결과 추적 열을 나열합니다.  
   
- ![Event class column mapping](../../tools/distributed-replay/media/eventclassmappings.gif "Event class column mapping")  
+ ![이벤트 클래스 열 매핑](../../tools/distributed-replay/media/eventclassmappings.gif "이벤트 클래스 열 매핑")  
   
 ## <a name="column-descriptions-for-result-trace"></a>결과 추적의 열에 대한 설명  
  다음 표에서는 결과 추적 데이터의 열에 대해 설명합니다.  
   
-|데이터 열 이름|데이터 형식|설명|열 ID|  
+|데이터 열 이름|데이터 형식|Description|열 ID|  
 |----------------------|---------------|-----------------|---------------|  
 |EventClass|**nvarchar**|이벤트 클래스의 이름입니다.|1|  
 |EventSequence|**bigint**|공급자 오류 및 내부 오류와 경고의 경우 오류나 경고에 해당하는 캡처 이벤트 순서입니다.<br /><br /> 다른 모든 이벤트 클래스의 경우 원래 추적 데이터의 이벤트 순서입니다.|2|  

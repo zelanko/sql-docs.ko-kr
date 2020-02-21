@@ -11,10 +11,10 @@ ms.assetid: 937292a6-1525-423e-a2b2-a18fd34c2893
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7e09c80081dc4e3c9230cfba51b1b477420146fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971744"
 ---
 # <a name="sqlserverconnection-class"></a>SQLServerConnection 클래스
@@ -24,7 +24,7 @@ ms.locfileid: "67971744"
   
  **패키지:** com.microsoft.sqlserver.jdbc  
   
- **Implements:** [ISQLServerConnection](../../../connect/jdbc/reference/isqlserverconnection-interface.md), java.io.Serializable  
+ **구현:** [ISQLServerConnection](../../../connect/jdbc/reference/isqlserverconnection-interface.md), java.io.Serializable  
   
 ## <a name="syntax"></a>구문  
   
@@ -33,15 +33,15 @@ ms.locfileid: "67971744"
 public class SQLServerConnection  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  SQLServerConnection은 JDBC 연결 풀링을 지원하며 물리적 JDBC 연결 또는 논리적 JDBC 연결이 될 수 있습니다. SQLServerConnection은 만들어진 모든 문에 대한 트랜잭션 컨트롤을 관리하며 XAResource 어댑터를 통해 관리되는 XA 분산 트랜잭션에 참여할 수 있습니다.  
   
- SQLServerConnection은 준비 된 문 핸들의 풀을 관리 합니다. 준비된 문은 한 번만 준비하면 매개 변수의 데이터 값을 달리 하여 여러 번 실행할 수 있는 문입니다. 준비된 문은 논리적(풀링된) 연결 닫기를 통해서도 유지 관리됩니다.  
+ SQLServerConnection은 준비된 문 핸들의 풀을 관리합니다. 준비된 문은 한 번만 준비하면 매개 변수의 데이터 값을 달리 하여 여러 번 실행할 수 있는 문입니다. 준비된 문은 논리적(풀링된) 연결 닫기를 통해서도 유지 관리됩니다.  
   
 > [!NOTE]  
->  SQLServerConnection은 스레드로부터 안전 하지 않습니다. 그러나 단일 연결에서 만들어진 여러 문을 현재 스레드에서 동시에 처리할 수 있습니다.  
+>  SQLServerConnection은 스레드로부터 안전하지 않습니다. 그러나 단일 연결에서 만들어진 여러 문을 현재 스레드에서 동시에 처리할 수 있습니다.  
   
- 이 클래스는 래핑 해제 클래스, SQLServerConnection, ISQLServerConnection 인터페이스를 지원 합니다. 자세한 내용은 [래퍼 및 인터페이스](../../../connect/jdbc/wrappers-and-interfaces.md)를 참조 하세요.  
+ 이 클래스는 SQLServerConnection 클래스, java.sql.connection 인터페이스 및 ISQLServerConnection 인터페이스에 대한 래핑 해제를 지원합니다. 자세한 내용은 [래퍼 및 인터페이스](../../../connect/jdbc/wrappers-and-interfaces.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerConnection 멤버](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

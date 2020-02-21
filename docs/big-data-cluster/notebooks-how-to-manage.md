@@ -1,20 +1,21 @@
 ---
-title: Azure Data Studio에서 Notebook 관리
-titleSuffix: SQL Server big data clusters
+title: 'Notebook 관리: Azure Data Studio'
+titleSuffix: SQL Server Big Data Clusters
 description: Azure Data Studio에서 Notebook을 관리하는 방법을 알아봅니다. 여기에는 Notebook 열기, Notebook 저장, 빅 데이터 클러스터 연결 변경이 포함됩니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 12/06/2018
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fb081c84de1fc9548ef1ea1f19bb2e286d0be636
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 8cf37ff6a4ad5e2b627fa5d968391cc5a7597a4a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844270"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244085"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Azure Data Studio에서 Notebook을 관리하는 방법
 

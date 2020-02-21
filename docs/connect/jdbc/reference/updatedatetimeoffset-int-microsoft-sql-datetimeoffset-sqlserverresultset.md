@@ -1,5 +1,5 @@
 ---
-title: updateDateTimeOffset (int) (SQLServerResultSet) | Microsoft Docs
+title: updateDateTimeOffset(int)(SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 21ec0054-c808-4e88-9c8d-c71b696ce658
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: caad3533d06ad7c00a4fb2cd8000bdd12c51acdc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67999113"
 ---
 # <a name="updatedatetimeoffsetint-microsoftsqldatetimeoffset-sqlserverresultset"></a>updateDateTimeOffset(int, microsoft.sql.DateTimeOffset)(SQLServerResultSet)
@@ -38,13 +38,13 @@ public void updateDateTimeOffset(int index, microsoft.sql.DateTimeOffset x)
   
  *x*  
   
- [DateTimeOffset 클래스](../../../connect/jdbc/reference/datetimeoffset-class.md) 개체입니다.  
+ [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- [SQLServerResultSet](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)를 사용 하 여 [datetimeoffset 클래스](../../../connect/jdbc/reference/datetimeoffset-class.md) 값을 검색할 수 있습니다.  
+## <a name="remarks"></a>설명  
+ [SQLServerResultSet.getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)을 사용하여 [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) 값을 검색할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [updateDateTimeOffset&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatedatetimeoffset-sqlserverresultset.md)   

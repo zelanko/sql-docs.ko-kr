@@ -1,5 +1,5 @@
 ---
-title: getClientInfoProperties 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs
+title: getClientInfoProperties 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 1568aef4-f4c4-40a0-a1ab-9c106905bd92
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 08b919ec6b626cd61b757b380d24efffcada0d55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953100"
 ---
 # <a name="getclientinfoproperties-method-sqlserverdatabasemetadata"></a>getClientInfoProperties 메서드(SQLServerDatabaseMetaData)
@@ -29,17 +29,17 @@ ms.locfileid: "67953100"
 public java.sql.ResultSet getClientInfoProperties()  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  ResultSet 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 getClientInfoProperties 메서드는 java .sql. DatabaseMetaData 인터페이스의 getClientInfoProperties 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 getClientInfoProperties 메서드는 java.sql.DatabaseMetaData 인터페이스의 getClientInfoProperties 메서드에 의해 지정됩니다.  
   
 > [!NOTE]  
->  이 메서드는 빈 결과 집합을 반환합니다. 드라이버는 **applicationname** 만 설정 하 고 연결 시에는 **applicationname** 을 설정 하도록 지원 합니다. SQL Server에서는 연결이 설정된 후 클라이언트 애플리케이션 정보에 대한 업데이트를 지원하지 않습니다.  
+>  이 메서드는 빈 결과 집합을 반환합니다. 드라이버에서는 **applicationName**을 설정하는 것만 지원하며, 연결 시에만 **applicationName**을 설정합니다. SQL Server에서는 연결이 설정된 후 클라이언트 애플리케이션 정보에 대한 업데이트를 지원하지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 멤버](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   

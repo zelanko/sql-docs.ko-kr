@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: e0a18b05395cffaa4154e8f4a7d74ed04750e430
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 5492b4ff50baa805989df3521b01856eb028328e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72904307"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831622"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>SQL Server 설명서 탐색 가이드 
 
@@ -37,7 +37,7 @@ PDF를 만들려는 경우 모든 목차의 맨 아래에 있는 **PDF 다운로
 
 ![PDF 다운로드](media/sql-server-docs-navigation-guide/download-pdf.png)
 
-## <a name="toc-navigation-hints"></a>목차 탐색 힌트
+## <a name="toc-symbols"></a>TOC 기호 
 
 항목 끝에 `>` 표시가 있는 TOC(목차)의 항목은 사용자가 다른 목차가 있는 기술 설명서로 이동하게 된다는 의미입니다. 
 
@@ -51,7 +51,7 @@ PDF를 만들려는 경우 모든 목차의 맨 아래에 있는 **PDF 다운로
 
 ![SQL 목차로 다시 이동](media/sql-server-docs-navigation-guide/navigate-back-to-sql-toc.png)
 
-## <a name="toc-search-tip"></a>목차 검색 팁
+## <a name="toc-search"></a>TOC 검색 
 docs.microsoft.com에서 맨 위에 있는 필터 검색 상자를 사용하여 목차의 내용을 검색할 수 있습니다. 
 
 ![필터 상자 사용](media/sql-server-docs-navigation-guide/sql-docs-toc-filter.gif)
@@ -63,14 +63,13 @@ SQL Server 기술 설명서에서는 지원되는 여러 SQL Server 버전에 �
 
 ![SQL 설명서 버전 필터](media/sql-server-docs-navigation-guide/sql-docs-version-filter.gif)
 
-**모든 SQL**\>**모두 표시**를 선택하면 모든 콘텐츠가 표시되고 버전 필터 뒤에 숨겨진 내용이 없습니다. **모두 표시** 옵션은 같은 문서 내에 여러 다른 버전의 SQL Server와 관련된 콘텐츠를 표시할 수 있으며 이는 모순되거나 명확하지 않거나 혼동될 수 있습니다. 이러한 [**모두 표시** 옵션은 일반적인 경우에는 권장되지 않습니다](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing). 
+**모든 SQL** \> **모두 표시**를 선택하면 모든 콘텐츠가 표시되고 버전 필터 뒤에 숨겨진 내용이 없습니다. **모두 표시** 옵션은 같은 문서 내에 여러 다른 버전의 SQL Server와 관련된 콘텐츠를 표시할 수 있으며 이는 모순되거나 명확하지 않거나 혼동될 수 있습니다. 이러한 [**모두 표시** 옵션은 일반적인 경우에는 권장되지 않습니다](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing). 
 
 ## <a name="breadcrumbs"></a>이동 경로
 
 이동 경로는 헤더 아래와 목차 위에 있으며 현재 문서가 목차에서 어느 부분에 있는지 나타냅니다.  이를 통해 컨텍스트를 현재 읽고 있는 콘텐츠 형식으로 설정할 수 있으며 목차 트리를 다시 탐색할 수도 있습니다.
 
 ![SQL 설명서 이동 경로](media/sql-server-docs-navigation-guide/sql-docs-bread-crumbs.gif)
-
 
 ## <a name="article-section-navigation"></a>문서 섹션 탐색
 
@@ -95,4 +94,4 @@ SQL Server 기술 설명서에서는 지원되는 여러 SQL Server 버전에 �
 
 - [SQL Server 기술 설명서](index.yml)를 시작하세요.
 - SQL Server에 대한 피드백 제출 또는 도움말에 대한 자세한 내용은 [도움말 보기](sql-server-get-help.md) 페이지를 참조하세요. 
-- 모든 빠른 시작 및 자습서에 빠르게 액세스하려면 [SQL Server 교육 센터](../lp/sql-server/sql-education-center.md)로 이동하세요.
+- 모든 빠른 시작 및 자습서에 빠르게 액세스하려면 [교육용 SQL 리소스](../sql-server/educational-sql-resources.yml)를 참조하세요.

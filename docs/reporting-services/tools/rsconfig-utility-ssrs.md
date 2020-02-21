@@ -15,10 +15,10 @@ ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 38c2cd6242e9515872ef086ec4851bf6cec103ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571523"
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig 유틸리티(SSRS)
@@ -63,7 +63,7 @@ rsconfig {-?}
 ## <a name="file-location"></a>파일 위치  
  Rsconfig.exe는 **\Program Files\Microsoft SQL Server\110\Tools\Binn**에 있습니다. 파일 시스템의 모든 폴더에서 유틸리티를 실행할 수 있습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  Rsconfig.exe는 다음 두 가지 목적으로 사용됩니다.  
   
 -   보고서 서버에서 보고서 서버 데이터베이스에 연결하는 데 사용하는 연결 정보를 수정하려는 경우  

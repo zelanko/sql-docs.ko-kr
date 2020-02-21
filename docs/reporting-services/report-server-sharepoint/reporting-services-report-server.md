@@ -1,5 +1,5 @@
 ---
-title: 네이티브 및 SharePoint Reporting Services 보고서 서버를 비교 합니다. | Microsoft Docs
+title: 기본 및 SharePoint Reporting Services 보고서 서버 비교 | Microsoft Docs
 ms.date: 06/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,13 +8,13 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f7a75f578c025386966fc4fc7a15c41e7e44e0a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67038018"
 ---
-# <a name="comparing-native-and-sharepoint-reporting-services-report-servers"></a>네이티브 및 SharePoint Reporting Services 보고서 서버를 비교합니다.
+# <a name="comparing-native-and-sharepoint-reporting-services-report-servers"></a>기본 및 SharePoint Reporting Services 보고서 서버 비교
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
@@ -49,21 +49,21 @@ Reporting Services 보고서 서버는 기본 모드 또는 SharePoint 모드 �
   
 |기능 또는 구성 요소|기본 모드|SharePoint 모드|  
 |--------------------------|-----------------|---------------------|  
-|**URL 주소 지정**|예|URL 주소 지정이 SharePoint 통합 모드에서 다르게 작동합니다. SharePoint URL은 보고서, 보고서 모델, 공유 데이터 원본 및 리소스를 참조하는 데 사용됩니다. 보고서 서버 폴더 계층은 사용되지 않습니다. 사용자 지정 애플리케이션이 기본 모드 보고서 서버에서 지원되는 URL 액세스에 의존하는 경우 보고서 서버를 SharePoint 통합용으로 구성하면 해당 기능이 더 이상 작동하지 않습니다.<br /><br /> URL 액세스에 대한 자세한 내용은 [URL 액세스 매개 변수 참조](../../reporting-services/url-access-parameter-reference.md)를 참조하세요.|  
-|**사용자 지정 보안 확장 프로그램**|예|Reporting Services 사용자 지정 보안 확장 프로그램을 보고서 서버에서 배포하거나 사용할 수 없습니다. 보고서 서버에는 SharePoint 통합 모드에서 실행되도록 보고서 서버를 구성할 때마다 사용되는 특수한 용도의 보안 확장 프로그램이 포함되어 있습니다. 이 보안 확장 프로그램은 내부 구성 요소로, 통합 작업에 필요합니다.|  
-|**구성 관리자**|예|**\*\* 중요 \*\*** 구성 관리자를 사용하여 SharePoint 모드 보고서 서버를 관리할 수 없습니다. 대신 SharePoint 중앙 관리를 사용하세요.|  
-|**웹 포털**|예|웹 포털에서 SharePoint 모드를 관리할 수 없습니다. SharePoint 애플리케이션 페이지를 사용합니다. 자세한 내용은 [Reporting Services SharePoint Service 및 서비스 애플리케이션](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)을 참조하세요.|  
-|**링크된 보고서**|예|아니요.|  
-|**내 보고서**|예|아니오|  
-|**내 구독** 및 일괄 처리 방법|예|아니오|  
-|**데이터 경고**|아니오|예|  
-|**파워 뷰**|아니오|예<br /><br /> 클라이언트 브라우저에 Silverlight가 필요합니다. 브라우저 요구 사항에 대한 자세한 내용은 [Reporting Services 및 파워 뷰에 대한 브라우저 지원](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)을 참조하세요.|  
-|**.RDL 보고서**|예|예<br /><br /> .RDL 보고서는 Reporting Services 보고서 서버에서 기본 모드 또는 SharePoint 모드로 실행될 수 있습니다.|  
-|**.RDLX 보고서**|아니오|예<br /><br /> 파워 뷰 .RDLX 보고서는 Reporting Services 보고서 서버에서만 SharePoint 모드로 실행될 수 있습니다.|  
-|**SharePoint 목록 확장 프로그램을 위한 SharePoint 사용자 토큰 자격 증명**|아니오|예|  
-|**인터넷 연결 배포를 위한 AAM 영역**|아니오|예|  
-|**SharePoint 백업 및 복구**|아니오|예|  
-|**ULS 로그 지원**|아니오|예|  
+|**URL 주소 지정**|yes|URL 주소 지정이 SharePoint 통합 모드에서 다르게 작동합니다. SharePoint URL은 보고서, 보고서 모델, 공유 데이터 원본 및 리소스를 참조하는 데 사용됩니다. 보고서 서버 폴더 계층은 사용되지 않습니다. 사용자 지정 애플리케이션이 기본 모드 보고서 서버에서 지원되는 URL 액세스에 의존하는 경우 보고서 서버를 SharePoint 통합용으로 구성하면 해당 기능이 더 이상 작동하지 않습니다.<br /><br /> URL 액세스에 대한 자세한 내용은 [URL 액세스 매개 변수 참조](../../reporting-services/url-access-parameter-reference.md)를 참조하세요.|  
+|**사용자 지정 보안 확장 프로그램**|yes|Reporting Services 사용자 지정 보안 확장 프로그램을 보고서 서버에서 배포하거나 사용할 수 없습니다. 보고서 서버에는 SharePoint 통합 모드에서 실행되도록 보고서 서버를 구성할 때마다 사용되는 특수한 용도의 보안 확장 프로그램이 포함되어 있습니다. 이 보안 확장 프로그램은 내부 구성 요소로, 통합 작업에 필요합니다.|  
+|**구성 관리자**|yes|**\*\* 중요 \*\*** 구성 관리자를 사용하여 SharePoint 모드 보고서 서버를 관리할 수 없습니다. 대신 SharePoint 중앙 관리를 사용하세요.|  
+|**웹 포털**|yes|웹 포털에서는 SharePoint 모드를 관리할 수 없습니다. SharePoint 애플리케이션 페이지를 사용합니다. 자세한 내용은 [Reporting Services SharePoint Service 및 서비스 애플리케이션](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)을 참조하세요.|  
+|**링크된 보고서**|yes|아니요.|  
+|**내 보고서**|yes|예|  
+|**내 구독** 및 일괄 처리 방법|yes|예|  
+|**데이터 경고**|예|yes|  
+|**파워 뷰**|예|yes<br /><br /> 클라이언트 브라우저에 Silverlight가 필요합니다. 브라우저 요구 사항에 대한 자세한 내용은 [Reporting Services 및 파워 뷰에 대한 브라우저 지원](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)을 참조하세요.|  
+|**.RDL 보고서**|yes|yes<br /><br /> .RDL 보고서는 Reporting Services 보고서 서버에서 기본 모드 또는 SharePoint 모드로 실행될 수 있습니다.|  
+|**.RDLX 보고서**|예|yes<br /><br /> 파워 뷰 .RDLX 보고서는 Reporting Services 보고서 서버에서만 SharePoint 모드로 실행될 수 있습니다.|  
+|**SharePoint 목록 확장 프로그램을 위한 SharePoint 사용자 토큰 자격 증명**|예|yes|  
+|**인터넷 연결 배포를 위한 AAM 영역**|예|yes|  
+|**SharePoint 백업 및 복구**|예|yes|  
+|**ULS 로그 지원**|예|yes|  
   
 ## <a name="native-mode"></a>기본 모드
 
@@ -97,7 +97,7 @@ Reporting Services 보고서 서버는 기본 모드 또는 SharePoint 모드 �
   
  ![SSRS SharePoint 기능 아키텍처](../../reporting-services/report-server-sharepoint/media/rs-sharepoint-architecture.gif "SSRS SharePoint 기능 아키텍처")  
   
-||설명|  
+||Description|  
 |-|-----------------|  
 |**(1)**|웹 서버 또는 WFE(웹 프런트 엔드). Reporting Services 추가 기능은 데이터 원본 또는 구독 관리와 같은 작업을 위해 보고서 또는 Reporting Services 관리 페이지 보기와 같은 웹 애플리케이션 기능을 활용하려는 각 웹 서버에 설치해야 합니다.|  
 |**(2)**|추가 기능은 Reporting Services 서비스 프록시를 통해 클라이언트가 애플리케이션 서버와 통신할 수 있도록 URL 및 SOAP 엔드포인트를 설치합니다.|  
@@ -112,7 +112,7 @@ Reporting Services 보고서 서버는 기본 모드 또는 SharePoint 모드 �
   
 ## <a name="report-server-database"></a>보고서 서버 데이터베이스
 
- 보고서 서버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 모든 속성, 개체 및 메타데이터를 저장하는 상태 비저장 서버입니다. 저장되는 데이터로는 게시된 보고서, 컴파일된 보고서, 보고서 모델 및 보고서 서버가 관리하는 모든 항목에 대한 주소를 지정하는 폴더 계층 구조가 있습니다. 보고서 서버 데이터베이스는 단일 Reporting Services 설치 또는 스케일 아웃 배포에 속하는 여러 보고서 서버를 위한 내부 스토리지를 제공할 수 있습니다. SharePoint 제품 또는 기술의 대규모 배포에서 실행되도록 보고서 서버를 구성한 경우 보고서 서버는 보고서 서버 데이터베이스 이외에도 SharePoint 데이터베이스를 사용합니다. Reporting Services 설치에 사용되는 데이터 저장소에 대한 자세한 내용은 [보고서 서버 데이터베이스&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)를 참조하세요.  
+ 보고서 서버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 모든 속성, 개체 및 메타데이터를 저장하는 상태 비저장 서버입니다. 저장되는 데이터로는 게시된 보고서, 컴파일된 보고서, 보고서 모델 및 보고서 서버가 관리하는 모든 항목에 대한 주소를 지정하는 폴더 계층 구조가 있습니다. 보고서 서버 데이터베이스는 단일 Reporting Services 설치 또는 스케일 아웃 배포에 속하는 여러 보고서 서버를 위한 내부 스토리지를 제공할 수 있습니다. SharePoint 제품 또는 기술의 대규모 배포에서 실행되도록 보고서 서버를 구성한 경우 보고서 서버는 보고서 서버 데이터베이스 이외에도 SharePoint 데이터베이스를 사용합니다. Reporting Services 설치에 사용되는 데이터 저장소에 대한 자세한 내용은 [보고서 서버 데이터베이스&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)을 참조하세요.  
   
 ## <a name="authentication-rendering-data-and-delivery-extensions"></a>인증, 렌더링, 데이터 및 배달 확장 프로그램
 
@@ -120,7 +120,7 @@ Reporting Services 보고서 서버는 기본 모드 또는 SharePoint 모드 �
   
  사용자 지정 구성 요소를 개발할 필요 없이 모든 서버 기능을 사용할 수 있도록 Reporting Services에서는 기본 확장 프로그램을 제공합니다. 다음 표에서는 즉시 사용 가능한 기능을 제공하는 전체 보고서 서버 인스턴스에 영향을 주는 기본 확장 프로그램에 대해 설명합니다.  
   
-|형식|Default|  
+|Type|기본값|  
 |----------|-------------|  
 |인증|기본 보고서 서버 인스턴스는 가장 및 위임 기능(도메인에 설정된 경우)을 비롯한 Windows 인증을 지원합니다.|  
 |데이터 처리|기본 보고서 서버 인스턴스에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], Oracle, Hyperion Essbase, SAPBW, OLE DB, 병렬 데이터 웨어하우스 및 ODBC 데이터 원본용 데이터 처리 확장 프로그램이 있습니다.|  
@@ -134,13 +134,13 @@ Reporting Services 보고서 서버는 기본 모드 또는 SharePoint 모드 �
 
  다음 문서에서는 보고서 서버 설치, 사용 및 유지 관리에 관한 추가 정보를 제공합니다.  
   
-|태스크|링크|  
+|Task|링크|  
 |----------|----------|  
 |하드웨어 및 소프트웨어 요구 사항을 검토합니다.|[Hardware and Software Requirements for Reporting Services in SharePoint Mode](https://msdn.microsoft.com/library/ed91877d-4f74-4266-a932-b824b4810c99)입니다.|  
 |SharePoint 모드로 Reporting Services를 설치합니다.|[SharePoint 2010용 Reporting Services SharePoint 모드 설치](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)|  
 |보고서 서버 웹 서비스 및 Windows 서비스에 대한 메모리 설정을 튜닝하는 방법에 대해 설명합니다.|[보고서 서버 애플리케이션을 위한 사용 가능한 메모리 구성](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)|  
 |원격 관리를 위해 보고서 서버를 구성하는 권장 단계에 대해 설명합니다.|[원격 관리를 위한 보고서 서버 구성](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)|  
-|기본 보고서 서버 인스턴스에서 **내 보고서** 의 가용성을 구성하는 방법에 대한 지침을 제공합니다.|[내 보고서 설정 및 해제](../../reporting-services/report-server/enable-and-disable-my-reports.md)|  
+|기본 보고서 서버 인스턴스에서 **내 보고서** 의 가용성을 구성하는 방법에 대한 지침을 제공합니다.|[내 보고서 사용 및 사용 안 함 설정](../../reporting-services/report-server/enable-and-disable-my-reports.md)|  
 |지원되는 브라우저 내에서 인쇄 기능을 제공하는 RSClientPrint 컨트롤을 설정하는 방법에 대한 지침을 제공합니다. 브라우저 요구 사항에 대한 자세한 내용은 [Reporting Services 및 파워 뷰에 대한 브라우저 지원](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)을 참조하세요.|[Reporting Services에 대한 클라이언트 쪽 인쇄 기능 사용 및 사용 안 함 설정](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)|  
 
 ## <a name="next-steps"></a>다음 단계

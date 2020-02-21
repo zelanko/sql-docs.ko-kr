@@ -9,18 +9,22 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f984871729ea1d92b8da3b90751988fc33e741ff
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 0bed12749231eb9ca4c4398699d662666004613a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532036"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558318"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>클러스터 리소스 및 서비스에 대한 배포 설정 구성
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 `azdata` 관리 도구에 기본적으로 제공되는 미리 정의된 구성 프로필 세트에서 시작하여 BDC 워크로드 요구 사항에 더 잘 맞도록 기본 설정을 쉽게 수정할 수 있습니다. 구성 파일의 구조를 사용하면 리소스의 각 서비스에 대한 설정을 세부적으로 업데이트할 수 있습니다.
+
+빅 데이터 클러스터 구성에 대한 개요는 13분 분량의 다음 동영상을 시청하세요.
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Big-Data-Cluster-Configuration/player?WT.mc_id=dataexposed-c9-niner]
 
 > [!TIP]
 > 고가용성 서비스를 배포하는 방법에 대한 자세한 내용은 [SQL Server 마스터](deployment-high-availability.md) 또는 [HDFS 이름 노드](deployment-high-availability-hdfs-spark.md)와 같은 중요 업무용 구성 요소에 **고가용성**을 구성하는 방법에 대한 문서를 참조하세요.
@@ -210,7 +214,7 @@ azdata bdc config replace -c custom-bdc/control.json -j "$.spec.docker.imageTag=
 > 버전별 이미지 태그는 사용하지만 `latest` 이미지 태그는 사용하지 않는 것이 좋습니다. 그렇지 않으면 이로 인해 클러스터 상태 문제가 발생하는 버전이 일치하지 않을 수 있습니다.
 
 > [!TIP]
-> 빅 데이터 클러스터 배포를 배포하는 경우 컨테이너 이미지를 가져올 컨테이너 레지스트리와 리포지토리에 액세스할 수 있어야 합니다. 환경에서 기본 Microsoft Container Registry에 액세스할 수 없는 경우 필요한 이미지가 먼저 프라이빗 Docker 리포지토리에 배치되는 오프라인 설치를 수행할 수 있습니다. 오프라인 설치에 대한 자세한 내용은[SQL Server 빅 데이터 클러스터의 오프라인 배포 수행](deploy-offline.md)을 참조하세요. 배포를 실행하기 전에 배포 워크플로에서 프라이빗 리포지토리에 액세스하여 이미지를 가져오도록 `DOCKER_USERNAME` 및 `DOCKER_PASSWORD` [환경 변수](deployment-guidance.md#env)를 설정해야 합니다.
+> 빅 데이터 클러스터 배포를 배포하는 경우 컨테이너 이미지를 가져올 컨테이너 레지스트리와 리포지토리에 액세스할 수 있어야 합니다. 환경에서 기본 Microsoft Container Registry에 액세스할 수 없는 경우 필요한 이미지가 먼저 프라이빗 Docker 리포지토리에 배치되는 오프라인 설치를 수행할 수 있습니다. 오프라인 설치에 대한 자세한 내용은[SQL Server 빅 데이터 클러스터의 오프라인 배포 수행](deploy-offline.md)을 참조하세요. 배포를 실행하기 전에 배포 워크플로에서 프라이빗 리포지토리에 액세스하여 이미지를 끌어오도록 `DOCKER_USERNAME` 및 `DOCKER_PASSWORD` [환경 변수](deployment-guidance.md#env)를 설정해야 합니다.
 
 ## <a id="clustername"></a> 클러스터 이름 변경
 
@@ -448,12 +452,12 @@ kubectl label node <kubernetesNodeName8> mssql-cluster=bdc mssql-resource=bdc-st
 
 ```bash
 azdata bdc config add -c custom-bdc/control.json -j "$.spec.clusterLabel=bdc"
-azdata bdc config add -c custom-bdc/control.json -j "$.spec.clusterLabel=bdc-shared"
+azdata bdc config add -c custom-bdc/control.json -j "$.spec.nodeLabel=bdc-shared"
 
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.master.spec.nodeLabel=bdc-master"
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.compute-0.spec.nodeLabel=bdc-compute-pool"
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.data-0.spec.nodeLabel=bdc-compute-pool"
-azdata bdc config add -c custom-bdc/bdc.json-j "$.spec.resources.storage-0.spec.nodeLabel=bdc-storage-pool"
+azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.storage-0.spec.nodeLabel=bdc-storage-pool"
 
 # below can be omitted in which case we will take the node label default from the control.json
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.nmnode-0.spec.nodeLabel=bdc-shared"
@@ -604,7 +608,7 @@ JSON 패치 파일은 한 번에 여러 설정을 구성합니다. JSON 패치�
 > [!TIP]
 > 배포 구성 파일을 변경하기 위한 구조 및 옵션에 대한 자세한 내용은 [빅 데이터 클러스터의 배포 구성 파일 참조](reference-deployment-config.md)를 참조하세요.
 
-`azdata bdc config` 명령을 사용하여 JSON 패치 파일의 변경 내용을 적용합니다. 다음 예제에서는 `patch.json` 파일을 `custom-bdc/bdc.json` 대상 배포 구성 파일에 적용합니다.
+`azdata bdc config` 명령을 사용하여 JSON 패치 파일의 변경 내용을 적용합니다. 다음 예제에서는 `patch.json` 파일을 대상 배포 구성 파일 `custom-bdc/bdc.json`에 적용합니다.
 
 ```bash
 azdata bdc config patch --config-file custom-bdc/bdc.json --patch-file ./patch.json

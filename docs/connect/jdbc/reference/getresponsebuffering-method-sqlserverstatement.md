@@ -1,5 +1,5 @@
 ---
-title: getResponseBuffering 메서드 (SQLServerStatement) | Microsoft Docs
+title: getResponseBuffering 메서드(SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: a9a9ffdd-7ce3-4e0a-907c-34d6a54e6865
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cf5a9ee4d4aa001103840ba8768ba338baa42db8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980406"
 ---
 # <a name="getresponsebuffering-method-sqlserverstatement"></a>getResponseBuffering 메서드(SQLServerStatement)
@@ -34,17 +34,17 @@ ms.locfileid: "67980406"
 public final java.lang.String getResponseBuffering()  
 ```  
   
-## <a name="return-value"></a>반환 값  
- 소문자 **full** 또는 **적응형**를 포함 하는 **문자열** 입니다.  
+## <a name="return-value"></a>Return Value  
+ 소문자 **full** 또는 **adaptive**가 들어 있는 **문자열**입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **adaptive**는 필요할 때 가능한 최소한의 데이터를 버퍼링하도록 지정합니다.  
   
  **full**은 런타임에 서버의 전체 결과를 읽도록 지정합니다.  
   
- **적응** 은 JDBC 드라이버 버전 2.0 및 3.0의 기본값입니다. JDBC 드라이버 버전 2.0 이전에는 **full** 이 기본값 이었습니다.  
+ JDBC 드라이버 버전 2.0과 3.0에서는 **adaptive**가 기본값입니다. JDBC 드라이버 버전 2.0 이전에는 **full**이 기본값이었습니다.  
   
- 응답 버퍼링 모드를 사용 하는 방법에 대 한 자세한 내용은 [적응 버퍼링 사용](../../../connect/jdbc/using-adaptive-buffering.md)을 참조 하세요.  
+ 응답 버퍼링 모드 사용에 대한 자세한 내용은 [적응 버퍼링 사용](../../../connect/jdbc/using-adaptive-buffering.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [setResponseBuffering 메서드(SQLServerStatement)](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)   

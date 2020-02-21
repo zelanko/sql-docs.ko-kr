@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: a9fc49d1d84fc714fca13519abad4fd92c21f08a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571552"
 ---
 # <a name="data-alert-messages"></a>데이터 경고 메시지
@@ -22,7 +22,7 @@ ms.locfileid: "65571552"
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-SQL Server Reporting Services 데이터 경고는 데이터 경고 결과가 포함된 메시지와 오류 설명이 포함된 메시지의 두 가지 종류의 데이터 경고 메시지를 전자 메일로 제공합니다. 결과가 포함된 메시지는 모든 받는 사람에게 유용하고 비즈니스 의사 결정을 내리는 데 중요한 보고서 데이터 변경 사항에 대해 알려줍니다. 오류가 발생하여 결과를 사용할 수 없는 경우 오류 메시지를 대신 보냅니다.
+SQL Server Reporting Services 데이터 경고는 데이터 경고 결과가 포함된 메시지와 오류 설명이 포함된 메시지라는 두 가지 종류의 데이터 경고 메시지를 메일로 제공합니다. 결과가 포함된 메시지는 모든 받는 사람에게 유용하고 비즈니스 의사 결정을 내리는 데 중요한 보고서 데이터 변경 사항에 대해 알려줍니다. 오류가 발생하여 결과를 사용할 수 없는 경우 오류 메시지를 대신 보냅니다.
 
 또한 데이터 경고 정의 소유자는 데이터 경고 관리자에서 데이터 경고 인스턴스에 대한 정보를 볼 수 있습니다. 자세한 내용은 [Data Alert Manager for SharePoint Users](../reporting-services/data-alert-manager-for-sharepoint-users.md)을 참조하세요.  
 
@@ -34,9 +34,9 @@ SQL Server Reporting Services 데이터 경고는 데이터 경고 결과가 포
   
  **결과 메시지**  
   
- ![결과가 포함된 데이터 경고 전자 메일 메시지](../reporting-services/media/rs-alertmessageresults.gif "결과가 포함된 데이터 경고 전자 메일 메시지")  
+ ![결과가 포함된 데이터 경고 메일 메시지](../reporting-services/media/rs-alertmessageresults.gif "결과가 포함된 데이터 경고 메일 메시지")  
   
- **오류 메시지입니다.**  
+ **오류 메시지**  
   
  ![오류 메시지가 포함된 데이터 경고 메시지](../reporting-services/media/rs-alertmessageerrror.gif "오류 메시지가 포함된 데이터 경고 메시지")  
   
@@ -59,7 +59,7 @@ SQL Server Reporting Services 데이터 경고는 데이터 경고 결과가 포
  두 메시지 형식 간의 유일한 차이점은 항목 5, **경고 결과**입니다. 데이터 경고 인스턴스 또는 데이터 경고 메시지를 만들 때 오류가 발생한 경우 **경고 결과** 에 문제를 설명하는 오류 메시지가 표시됩니다. 모든 받는 사람에게 보낸 오류 메시지를 통해 비즈니스 의사 결정을 내리는 데 필요한 원하는 경고 결과를 사용할 수 없다는 것을 알 수 있습니다.  
   
   
-##  <a name="HowTo"></a> 관련 태스크  
+##  <a name="HowTo"></a> 관련 작업  
  이 섹션에는 데이터 경고 메시지에 표시되는 많은 정보를 제공하는 데이터 경고 정의를 만들고 편집하는 방법을 보여 주는 절차가 나열되어 있습니다.  
   
 -   [데이터 경고 디자이너에서 데이터 경고 만들기](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  

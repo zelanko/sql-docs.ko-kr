@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 1dffc95e50ffb1e7e2cba68700a26ade0a72da6a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015575"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>IRowsetFastUpload를 사용하여 FILESTREAM 열에 데이터 전송(OLE DB)
@@ -24,10 +24,10 @@ ms.locfileid: "68015575"
 
   이 예제에서는 IRowsetFastUpload 인터페이스를 사용하여 filestream 열에 4MB에서 4GB 사이의 데이터를 전송합니다.  
   
- Filestream 기능에 대 한 자세한 내용은 [Filestream 지원](../../../oledb/features/filestream-support.md)을 참조 하세요.  
+ 파일 스트림 기능에 대한 자세한 내용은 [FILESTREAM 지원](../../../oledb/features/filestream-support.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
- 이 샘플을 컴파일하고 실행 하기 전에 FILESTREAM 지원 ([Filestream 설정 및 구성](../../../../relational-databases/blob/enable-and-configure-filestream.md))을 사용 하도록 설정 합니다.  
+ 이 샘플을 컴파일하고 실행하기 전에 FILESTREAM 지원을 설정합니다([FILESTREAM 사용 및 구성](../../../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
  INCLUDE 환경 변수에 msoledbsql.h가 들어 있는 디렉터리를 포함해야 합니다.  
   

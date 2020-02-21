@@ -1,5 +1,5 @@
 ---
-title: getDateTimeOffset 메서드 (int) | Microsoft Docs
+title: getDateTimeOffset 메서드(int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 8bb00356-4d6e-4625-b924-67646930fdf2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ec297d1b01b6d7cf8d292d2f4518aa5b51cd9704
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983834"
 ---
 # <a name="getdatetimeoffset-method-int"></a>getDateTimeOffset 메서드(int)
@@ -36,14 +36,14 @@ public microsoft.sql.DateTimeOffset getDateTimeOffset(int index)
   
  매개 변수 서수(1부터 시작)입니다.  
   
-## <a name="return-value"></a>반환 값  
- [DateTimeOffset 클래스](../../../connect/jdbc/reference/datetimeoffset-class.md) 개체입니다.  
+## <a name="return-value"></a>Return Value  
+ [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- [SQLServerCallableStatement](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md)를 사용 하 여 [datetimeoffset 클래스](../../../connect/jdbc/reference/datetimeoffset-class.md) 매개 변수 값을 설정할 수 있습니다.  
+## <a name="remarks"></a>설명  
+ [SQLServerCallableStatement.setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md)을 사용하여 [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) 매개 변수 값을 설정할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [getDateTimeOffset 메서드&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)   

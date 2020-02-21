@@ -16,10 +16,10 @@ ms.assetid: 093f6c3b-49a6-4043-9993-bd0482de04dd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 42045bee1dca5d2a9c5fc748f5d7a1c5ebbca9de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67956011"
 ---
 # <a name="addbatch-method-javalangstring"></a>addBatch 메서드(java.lang.String)
@@ -42,8 +42,8 @@ public void addBatch(java.lang.String sql)
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 addBatch 메서드는 java. Statement 인터페이스의 addBatch 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 addBatch 메서드는 java.sql.Statement 인터페이스의 addBatch 메서드에 의해 지정됩니다.  
   
  SQLServerPreparedStatement 개체에 대한 SQL 문은 개체가 만들어질 때 지정되므로 이 메서드를 호출하면 예외가 발생합니다.  
   

@@ -11,10 +11,10 @@ ms.assetid: 0b55da26-ddeb-4e89-872a-91e0aba57103
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d3d5a6afaa4580623bade5ac6d7dd5b13a4cbdc6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992782"
 ---
 # <a name="sqlsrv-driver-api-reference"></a>SQLSRV 드라이버 API 참조
@@ -25,7 +25,7 @@ ms.locfileid: "67992782"
 ## <a name="in-this-section"></a>섹션 내용  
 SQLSRV 드라이버에는 다음과 같은 함수가 포함되어 있습니다.  
   
-|함수|설명|  
+|함수|Description|  
 |------------|---------------|  
 |[sqlsrv_begin_transaction](../../connect/php/sqlsrv-begin-transaction.md)|트랜잭션을 시작합니다.|  
 |[sqlsrv_cancel](../../connect/php/sqlsrv-cancel.md)|문을 취소하고 문에 대한 모든 보류 중인 결과를 삭제합니다.|  
@@ -62,7 +62,7 @@ SQLSRV 드라이버에는 다음과 같은 함수가 포함되어 있습니다.
 
 [상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
-[Microsoft Drivers for PHP for SQL Server 프로그래밍 가이드](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 프로그래밍 가이드 | Microsoft Docs](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [Microsoft Drivers for PHP for SQL Server 시작](../../connect/php/getting-started-with-the-php-sql-driver.md)
   

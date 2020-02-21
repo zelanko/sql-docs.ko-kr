@@ -16,10 +16,10 @@ ms.assetid: fcb66851-db5f-4ae8-b728-d129480b6f42
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4aa608851ddbe00c8d7c09523c0f3b8f9ec95ff6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978208"
 ---
 # <a name="geturl-method-sqlserverdatabasemetadata"></a>getURL 메서드(SQLServerDatabaseMetaData)
@@ -34,20 +34,20 @@ ms.locfileid: "67978208"
 public java.lang.String getURL()  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  URL을 포함하는 **문자열**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 getURL 메서드는 java.sql.DatabaseMetaData 인터페이스의 getURL 메서드에 의해 지정됩니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스와 함께 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]를 사용할 경우 이 메서드는 다음 정보가 들어 있는 **문자열** 값을 반환합니다.  
   
 -   URL 값 "jdbc:sqlserver://"  
   
--   **서버 이름**, **인스턴스**이름 및 **portNumber** 와 같은 선택적 연결 속성  
+-   선택적 연결 속성(예: **serverName**, **instanceName** 및 **portNumber**)  
   
 -   사용자가 설정한 기타 연결 속성과 비어 있지 않거나 null이 아닌 드라이버 기본값을 갖는 모든 연결 속성(**userName**, **password** 및 **integratedSecurity** 제외)  
   

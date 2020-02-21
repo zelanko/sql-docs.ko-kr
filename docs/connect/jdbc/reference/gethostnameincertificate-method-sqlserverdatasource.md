@@ -1,5 +1,5 @@
 ---
-title: getHostNameInCertificate 메서드 (SQLServerDataSource) | Microsoft Docs
+title: getHostNameInCertificate 메서드(SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 45ea04e2-9ea5-4171-9136-d09f8a95e128
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 67978d2597a5167d3930c85ee453dc6d985f021e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982905"
 ---
 # <a name="gethostnameincertificate-method-sqlserverdatasource"></a>getHostNameInCertificate 메서드(SQLServerDataSource)
@@ -34,10 +34,10 @@ ms.locfileid: "67982905"
 public java.lang.String getHostNameInCertificate()  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  호스트 이름이 들어 있는 **String**이며, 값이 설정되어 있지 않은 경우 null입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  호스트 이름은 통신 계층이 SSL을 사용하여 암호화된 경우 SQL Server SSL 인증서 값의 유효성을 검사하는 데 사용됩니다.  
   
  호스트 이름이 설정되어 있지 않으면 [getHostNameInCertificate](../../../connect/jdbc/reference/gethostnameincertificate-method-sqlserverdatasource.md) 메서드는 null을 반환합니다.  

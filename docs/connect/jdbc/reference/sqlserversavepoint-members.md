@@ -11,10 +11,10 @@ ms.assetid: 3aef1550-3798-4095-bd1c-1a4be09804e8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 76a07cf83f7b4356443d2180a48870b80dba4c69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970403"
 ---
 # <a name="sqlserversavepoint-members"></a>SQLServerSavepoint 멤버
@@ -24,7 +24,7 @@ ms.locfileid: "67970403"
   
 ## <a name="constructors"></a>생성자  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[SQLServerSavepoint(SQLServerConnection, java.lang.StringName)](../../../connect/jdbc/reference/sqlserversavepoint-constructor-sqlserverconnection-java-lang-stringname.md)|지정된 연결 및 이름에 따라 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) 클래스의 새 인스턴스를 초기화합니다.|  
   
@@ -36,7 +36,7 @@ ms.locfileid: "67970403"
   
 ## <a name="methods"></a>메서드  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[getLabel](../../../connect/jdbc/reference/getlabel-method-sqlserversavepoint.md)|저장점 레이블의 이름을 가져옵니다.|  
 |[getSavepointId](../../../connect/jdbc/reference/getsavepointid-method-sqlserversavepoint.md)|저장점의 ID를 가져옵니다.|  

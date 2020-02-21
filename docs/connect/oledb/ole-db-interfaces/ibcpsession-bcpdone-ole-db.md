@@ -1,5 +1,5 @@
 ---
-title: 'IBCPSession:: BCPDone (OLE DB) | Microsoft Docs'
+title: IBCPSession::BCPDone(OLE DB) | Microsoft Docs
 description: IBCPSession::BCPDone(OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 9df2726898fdbd3d877296d4da67738c3f792234
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994559"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone(OLE DB)
@@ -36,7 +36,7 @@ ms.locfileid: "67994559"
 HRESULT BCPDone(void);  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **BCPDone** 메서드를 호출한 후에는 [IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md) 인터페이스에 대해 다른 작업을 호출할 수 없습니다. [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 메서드를 호출하여 새 대량 복사 작업을 시작하는 것만 가능합니다. 이 동작은 [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md) 메서드를 호출하는 것과 유사합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -65,7 +65,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  BCP를 사용하여 이 데이터를 테이블에 다시 추가할 수 있습니다. 예를 들어 다음 명령을 사용할 수 있습니다.  
   
- **bcp master..fltest in outfile.dat -n -T -S** *서버*  
+ **bcp master..fltest in outfile.dat -n -T -S** *server*  
   
 ```cpp  
 #define DBINITCONSTANTS   // Defined to initialize constants in oledb.h  
@@ -463,7 +463,7 @@ void wmain() {
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
+ [IBCPSession&#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [대량 복사 작업 수행](../../oledb/features/performing-bulk-copy-operations.md)  
   
   

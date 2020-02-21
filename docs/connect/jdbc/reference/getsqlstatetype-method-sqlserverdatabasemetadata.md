@@ -16,10 +16,10 @@ ms.assetid: ee4d6751-68a3-4d04-831c-e6d704c59e63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 76faa3bcaccac4f75d95dc49276c669a5631b5a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979737"
 ---
 # <a name="getsqlstatetype-method-sqlserverdatabasemetadata"></a>getSQLStateType 메서드(SQLServerDatabaseMetaData)
@@ -34,18 +34,18 @@ ms.locfileid: "67979737"
 public int getSQLStateType()  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  다음 값 중 하나에 해당되는 SQLSTATE 형식을 나타내는 **int**입니다.  
   
--   Java Runtime Environment 버전 5.0: **Xopenstates** 연결 속성이 **true**로 설정 된 경우이 메서드는 Databasemetadata. sqlstatexopen을 반환 합니다. 그렇지 않으면 DatabaseMetaData.sqlStateSQL99를 반환합니다.  
+-   Java Runtime Environment 버전 5.0의 경우: **xopenStates** 연결 속성이 **true**로 설정된 경우 이 메서드는 DatabaseMetaData.sqlStateXOpen을 반환합니다. 그렇지 않으면 DatabaseMetaData.sqlStateSQL99를 반환합니다.  
   
--   Java Runtime Environment 버전 6.0: **Xopenstates** 연결 속성이 **true**로 설정 된 경우이 메서드는 Databasemetadata. sqlstatexopen을 반환 합니다. 그렇지 않으면 DatabaseMetaData.sqlStateSQL을 반환합니다.  
+-   Java Runtime Environment 버전 6.0의 경우: **xopenStates** 연결 속성이 **true**로 설정된 경우 이 메서드는 DatabaseMetaData.sqlStateXOpen을 반환합니다. 그렇지 않으면 DatabaseMetaData.sqlStateSQL을 반환합니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 getSQLStateType 메서드는 getSQLStateType 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 getSQLStateType 메서드는 java.sql.DatabaseMetaData 인터페이스의 getSQLStateType 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

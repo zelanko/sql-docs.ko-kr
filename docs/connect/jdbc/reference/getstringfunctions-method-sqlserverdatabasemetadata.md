@@ -16,10 +16,10 @@ ms.assetid: 4fb489ee-185e-405a-a4f7-3eb73c29bcd6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7a17f4482c46b9e9650b9debbb8a1517f022f1bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979374"
 ---
 # <a name="getstringfunctions-method-sqlserverdatabasemetadata"></a>getStringFunctions 메서드(SQLServerDatabaseMetaData)
@@ -34,13 +34,13 @@ ms.locfileid: "67979374"
 public java.lang.String getStringFunctions()  
 ```  
   
-## <a name="return-value"></a>반환 값  
- **문자열** 함수를 포함 하는 **문자열** 입니다.  
+## <a name="return-value"></a>Return Value  
+ **String** 함수를 포함하는 **문자열**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 getStringFunctions 메서드는 java.sql.DatabaseMetaData 인터페이스의 getStringFunctions 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -9,10 +9,10 @@ ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4db47bde02745ddc554f17e1f951c836c1542cc8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63041668"
 ---
 # <a name="tutorial-map-report-report-builder"></a>자습서: 지도 보고서(보고서 작성기)
@@ -27,9 +27,9 @@ ms.locfileid: "63041668"
 이 자습서에서는 뉴욕 주의 군에 있는 상점 위치를 표시하는 지도 보고서를 작성합니다.  
    
 > [!NOTE]  
-> 이 자습서에서 마법사의 단계는 두 개의 절차로 통합됩니다. 하나는 데이터 세트를 만드는 절차이고 다른 하나는 테이블을 만드는 절차입니다. 보고서 서버를 찾고, 데이터 원본을 선택하고, 데이터 세트를 만들고, 마법사를 실행하는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)을 참조하세요.  
+> 이 자습서에서 마법사의 단계는 두 개의 절차로 통합됩니다. 하나는 데이터 세트를 만드는 절차이고 다른 하나는 테이블을 만드는 절차입니다. 보고서 서버를 찾고, 데이터 원본을 선택하고, 데이터 세트를 만들고, 마법사를 실행하는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서를 참조하세요. [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-이 자습서에 소요되는 예상 시간: 30분  
+이 자습서에 소요되는 예상 시간: 30분.  
   
 ## <a name="requirements"></a>요구 사항  
 이 자습서에서는 Bing 지도를 배경으로 지원하도록 보고서 서버를 구성해야 합니다. 자세한 내용은 [지도 보고서 지원 계획](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)을 참조하세요. 
@@ -85,7 +85,7 @@ ms.locfileid: "63041668"
     
     ![report-builder-map-choose-color-theme](../reporting-services/media/report-builder-map-choose-color-theme.png)
   
-14. **마침**을 클릭합니다.  
+14. **Finish**를 클릭합니다.  
   
     디자인 화면에 지도가 추가됩니다.  
   
@@ -174,7 +174,7 @@ ms.locfileid: "63041668"
     *   **SellingArea**: 455평방피트에서 1125평방피트 사이의 제품 전시 영역입니다.
     *   **City**.
     *   **County**.
-    *   **Sales**: 총 판매량입니다. 
+    *   **판매**: 총 판매량입니다. 
     *   **SpatialLocation**: 경도 및 위도 위치입니다. 
 
     ![report-builder-map-design-query](../reporting-services/media/report-builder-map-design-query.png) 
@@ -199,7 +199,7 @@ ms.locfileid: "63041668"
   
 18. **레이블 표시**를 선택한 다음 **데이터 필드**서 `[City]`를 선택합니다.
 
-18. **마침**을 클릭합니다.  
+18. **Finish**를 클릭합니다.  
   
     보고서에 지도 계층이 추가됩니다. 범례에 SellingArea 값에 따른 거품 크기가 표시됩니다.  
   
@@ -269,7 +269,7 @@ ms.locfileid: "63041668"
   
 13. **색 테마 및 데이터 시각화 선택**에서 **단색 지도**옵션을 선택합니다. 경로가 선택한 테마에 따라 단색으로 표시됩니다.  
   
-14. **마침**을 클릭합니다.  
+14. **Finish**를 클릭합니다.  
 
     ![report-builder-map-line](../reporting-services/media/report-builder-map-line.png)
   
@@ -289,7 +289,7 @@ ms.locfileid: "63041668"
   
 1.  디자인 뷰로 전환합니다.  
   
-2.  지도를 두 번 클릭하여 **지도 계층** 창을 표시합니다. 도구 모음에서 **계층 추가** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")를 클릭합니다.  
+2.  지도를 두 번 클릭하여 **지도 계층** 창을 표시합니다. 도구 모음에서 **계층 추가**![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")를 클릭합니다.  
   
 3.  드롭다운 목록에서 **타일 계층**을 클릭합니다.  
   
@@ -453,7 +453,7 @@ ms.locfileid: "63041668"
   
 1.  디자인 뷰로 전환합니다.  
   
-2.  지도를 두 번 클릭하여 **지도 계층** 창을 표시합니다. 도구 모음에서 **계층 추가**  ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")를 클릭한 다음 **점 계층**을 클릭합니다.  
+2.  지도를 두 번 클릭하여 **지도 계층** 창을 표시합니다. 도구 모음에서 **계층 추가** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")를 클릭한 다음, **점 계층**을 클릭합니다.  
   
     새 점 계층이 지도에 추가됩니다. 기본적으로 점 계층의 공간 데이터 형식은 **포함**입니다.  
   
@@ -536,7 +536,7 @@ ms.locfileid: "63041668"
 
 ![report-builder-map-in-portal](../reporting-services/media/report-builder-map-in-portal.png) 
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
 보고서에 지도를 추가하는 방법에 대한 연습을 완료했습니다.  
   
 자세한 내용은 [지도&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/maps-report-builder-and-ssrs.md)를 참조하세요.  

@@ -1,10 +1,9 @@
 ---
-title: 다이어그램 창(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 다이어그램 창
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +14,14 @@ helpviewer_keywords:
 ms.assetid: 399dfc7b-e2e7-47d3-bd11-163cbe0ce13c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 00f4257a78b06d9f0ce3c21cb16ef04514eda76d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 9ba8a064256541ffc756ef37fe01f1205e6bc243
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263849"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251895"
 ---
 # <a name="diagram-pane-visual-database-tools"></a>다이어그램 창(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,7 +55,7 @@ ms.locfileid: "68263849"
   
 |아이콘|개체 유형|  
 |--------|---------------|  
-|![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbi1.gif "Visual Database Tools 아이콘")|Table|  
+|![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbi1.gif "Visual Database Tools 아이콘")|테이블|  
 |![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbi2.gif "Visual Database Tools 아이콘")|쿼리 또는 뷰|  
 |![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbi3.gif "Visual Database Tools 아이콘")|연결된 테이블|  
 |![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dvudficon.gif "Visual Database Tools 아이콘")|사용자 정의 함수|  
@@ -64,7 +65,7 @@ ms.locfileid: "68263849"
   
 다음 표에는 각 테이블 또는 테이블 반환 개체의 사각형에서 사용하는 확인란 및 기호가 나열되어 있습니다.  
   
-|확인란 또는 기호|설명|  
+|확인란 또는 기호|Description|  
 |-----------------------|---------------|  
 |![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbi7.gif "Visual Database Tools 아이콘")<br /><br />![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbi8.gif "Visual Database Tools 아이콘")<br /><br />![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbi9.gif "Visual Database Tools 아이콘")<br /><br />![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbia.gif "Visual Database Tools 아이콘")|데이터 열을 쿼리 결과 집합(선택 쿼리)에 나타낼지 또는 업데이트, 삽입 원본, 테이블 만들기 또는 삽입 위치 쿼리에서 사용할지 여부를 지정합니다. 열을 선택하여 결과에 추가합니다. **(모든 열)** 을 선택하면 모든 데이터 열이 출력에 나타납니다.<br /><br />확인란과 함께 사용하는 아이콘은 만드는 쿼리 형식에 따라 변경됩니다. 삭제 쿼리를 만들 때에는 열을 개별적으로 선택할 수 없습니다.|  
 |![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbib.gif "Visual Database Tools 아이콘")<br /><br />![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbic.gif "Visual Database Tools 아이콘")|데이터 열이 ORDER BY 절의 일부인 쿼리 결과를 정렬하는 데 사용되고 있음을 나타냅니다. 정렬 순서가 오름차순이면 아이콘이 A-Z로 나타나고 내림차순이면 Z-A로 나타납니다.|  
@@ -80,7 +81,7 @@ ms.locfileid: "68263849"
   
 조인 선의 가운데 있는 아이콘 모양은 테이블 또는 테이블 구조 개체가 조인되는 방법을 보여 줍니다. 조인 절이 등호(=)가 아닌 연산자를 사용하는 경우 조인 선 아이콘에 해당 연산자가 표시됩니다. 다음 표는 조인 선에 표시될 수 있는 아이콘 목록입니다.  
   
-|조인 선 아이콘|설명|  
+|조인 선 아이콘|Description|  
 |------------------|---------------|  
 |![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbih.gif "Visual Database Tools 아이콘")|등호를 사용하여 만든 내부 조인|  
 |![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbii.gif "Visual Database Tools 아이콘")|">" 연산자를 기반으로 하는 내부 조인 조인 선 아이콘에 표시되는 연산자는 조인에 사용한 연산자를 나타냅니다.|  
@@ -90,7 +91,7 @@ ms.locfileid: "68263849"
   
 조인 선 끝에 있는 아이콘은 조인 형식을 나타냅니다. 다음 표는 조인 선 끝에 표시될 수 있는 조인 형식 및 아이콘 목록입니다.  
   
-|조인 선 끝의 아이콘|설명|  
+|조인 선 끝의 아이콘|Description|  
 |-----------------------------|---------------|  
 |![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbim.gif "Visual Database Tools 아이콘")|일 대 일 조인|  
 |![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbin.gif "Visual Database Tools 아이콘")|일 대 다 조인|  

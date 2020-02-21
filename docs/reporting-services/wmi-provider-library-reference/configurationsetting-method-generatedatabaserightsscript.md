@@ -16,10 +16,10 @@ ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8714aee2b5bb33c84a1d9f11b626d3e21e06ed1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570965"
 ---
 # <a name="configurationsetting-method---generatedatabaserightsscript"></a>ConfigurationSetting 메서드 - GenerateDatabaseRightsScript
@@ -58,10 +58,10 @@ out Int32 HRESULT);
  *HRESULT*  
  [out] 호출의 성공 여부를 나타내는 값입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드 호출의 성공 또는 실패를 나타내는 *HRESULT* 를 반환합니다. 0 값은 메서드 호출이 성공했음을 나타냅니다. 0 이외의 값은 오류가 발생했음을 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  *DatabaseName* 이 비어 있으면 *IsRemote* 는 무시되고 데이터베이스 이름에 보고서 서버 구성 파일 값이 사용됩니다.  
   
  *IsWindowsUser*가 **true**로 설정된 경우 *UserName*은 \<domain>\\<username\> 형식이어야 합니다.  
@@ -87,7 +87,7 @@ out Int32 HRESULT);
   
  **LocalService** 기본 제공 계정이 지정되어 있고 보고서 서버 데이터베이스가 원격이면 오류가 반환됩니다.  
   
- *IsWindowsUser* 가 true이고 *UserName* 에 제공된 값을 변환해야 하는 경우, WMI 공급자는 보고서 서버 데이터베이스가 같은 컴퓨터에 있는지 또는 원격 컴퓨터에 있는지를 확인합니다. WMI 공급자는 로컬 설치 여부를 확인하기 위해 다음 값 목록에 대해 DatabaseServerName 속성을 평가합니다. 일치 항목이 있으면 로컬 데이터베이스이고, 그렇지 않으면 원격 데이터베이스입니다. 비교 시 대/소문자는 구분되지 않습니다.  
+ *IsWindowsUser* 가 true이고 *UserName* 에 제공된 값을 변환해야 하는 경우, WMI 공급자는 보고서 서버 데이터베이스가 같은 컴퓨터에 있는지 또는 원격 컴퓨터에 있는지를 확인합니다. WMI 공급자는 로컬 설치 여부를 확인하기 위해 다음 값 목록에 대해 DatabaseServerName 속성을 평가합니다. 일치 항목이 있으면 로컬 데이터베이스이고, 그렇지 않으면 원격 데이터베이스입니다. 비교는 대/소문자를 구분합니다.  
   
 |DatabaseServerName 값|예제|  
 |---------------------------------|-------------|  
@@ -107,7 +107,7 @@ out Int32 HRESULT);
   
  보고서 서버에 보고서 서버 데이터베이스가 지정되어 있지 않은 경우 GrantRightsToDatabaseUser를 호출하면 오류가 반환됩니다.  
   
- 생성된 스크립트는 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 및 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]을 지원합니다.  
+ 생성된 스크립트는 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 및 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]을(를) 지원합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

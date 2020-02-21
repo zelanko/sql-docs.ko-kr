@@ -1,5 +1,5 @@
 ---
-title: updateByte 메서드 (String.format, byte) | Microsoft Docs
+title: updateByte 메서드(java.lang.String, byte) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 5416aed2-a5b6-4e3b-9750-90db8cda8cec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7ebc4d505cd116e98f5e5c68e66be7b2ea6c0274
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67996922"
 ---
 # <a name="updatebyte-method-javalangstring-byte"></a>updateByte 메서드(java.lang.String, byte)
@@ -47,7 +47,7 @@ public void updateByte(java.lang.String columnName,
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 updateByte 메서드는 java.sql.ResultSet 인터페이스의 updateByte 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -1,5 +1,5 @@
 ---
-title: 예제 응용 프로그램 (PDO_SQLSRV 드라이버) | Microsoft Docs
+title: 예제 애플리케이션(PDO_SQLSRV 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -11,13 +11,13 @@ ms.assetid: a153e4ce-992d-4211-9a0f-c0998c706402
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8414497fed891e153399febf84151c82d915d77a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993593"
 ---
-# <a name="example-application-pdosqlsrv-driver"></a>예제 애플리케이션(PDO_SQLSRV 드라이버)
+# <a name="example-application-pdo_sqlsrv-driver"></a>예제 애플리케이션(PDO_SQLSRV 드라이버)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 AdventureWorks 제품 검토 예제 애플리케이션은 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 PDO_SQLSRV 드라이버를 사용하는 웹 애플리케이션입니다. 이 애플리케이션을 사용하면 사용자가 키워드를 입력하여 제품을 검색하고, 선택한 제품에 대한 검토를 보거나 쓰고, 선택한 제품에 대한 이미지를 업로드할 수 있습니다.  
@@ -32,7 +32,7 @@ AdventureWorks 제품 검토 예제 애플리케이션은 [!INCLUDE[ssDriverPHP]
 ## <a name="requirements"></a>요구 사항  
 AdventureWorks 제품 검토 예제 애플리케이션을 실행하려면 해당 컴퓨터에 대해 다음 조건을 만족해야 합니다.  
   
--   시스템이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]요구 사항을 만족해야 합니다. 자세한 내용은 [Microsoft Drivers FOR PHP for SQL Server의 시스템 요구 사항](../../connect/php/system-requirements-for-the-php-sql-driver.md)을 참조 하세요.  
+-   시스템이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]요구 사항을 만족해야 합니다. 자세한 내용은 [Microsoft Drivers for PHP for SQL Server에 대한 시스템 요구 사항](../../connect/php/system-requirements-for-the-php-sql-driver.md)을 참조하세요.  
  -   adventureworks_demo.php 및 photo.php 파일이 웹 서버의 루트 디렉터리에 있어야 합니다. 파일에 이 문서 뒷부분에 나열된 코드가 있어야 합니다.  
 -   [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 연결된 SQL Server 2005 또는 SQL Server 2008이 로컬 컴퓨터에 설치되어 있어야 합니다.  
 -   웹 브라우저가 설치됩니다.  
@@ -41,8 +41,8 @@ AdventureWorks 제품 검토 예제 애플리케이션을 실행하려면 해당
 AdventureWorks 제품 검토 예제 애플리케이션은 다음을 보여 줍니다.  
   
 -   Windows 인증을 사용하여 SQL Server에 대한 연결을 여는 방법  
--   매개 변수가 있는 쿼리를 준비 하 고 실행 하는 방법입니다.  
--   데이터를 검색 하는 방법  
+-   매개 변수가 있는 쿼리를 준비 및 실행하는 방법  
+-   데이터를 검색하는 방법  
 -   오류를 확인하는 방법  
   
 ## <a name="example"></a>예제  

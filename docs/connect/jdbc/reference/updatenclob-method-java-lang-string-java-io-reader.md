@@ -11,10 +11,10 @@ ms.assetid: 87621ca7-e64a-49e2-b9c2-551390adaa26
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 429ff64469bb904a3cc8de65f518b0e5fa72abad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998619"
 ---
 # <a name="updatenclob-method-javalangstring-javaioreader"></a>updateNClob 메서드(java.lang.String, java.io.Reader)
@@ -37,15 +37,15 @@ public void updateNClob(java.lang.String columnLabel,
   
  *reader*  
   
- 판독기 개체입니다.  
+ Reader 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 updateNClob 메서드는 java.sql.ResultSet 인터페이스의 updateNClob 메서드에 의해 지정됩니다.  
   
- 이 메서드는 **nvarchar (max)** , **ntext**및 **xml** 열 에서만 지원 됩니다. 다른 데이터 형식에 이 메서드를 사용하면 예외가 발생합니다.  
+ 이 메서드는 **nvarchar(max)** , **ntext** 및 **xml** 열에서만 지원됩니다. 다른 데이터 형식에 이 메서드를 사용하면 예외가 발생합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [updateNClob 메서드&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenclob-method-sqlserverresultset.md)   

@@ -1,10 +1,9 @@
 ---
-title: 경고 속성(기록 페이지) | Microsoft 문서
-ms.custom: ''
+title: 경고 속성(기록 페이지)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,13 +11,15 @@ f1_keywords:
 ms.assetid: f5359f5c-93a3-4a4a-8286-e9fe6f0196c7
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b88f208afdb819c106991675c4ba9a23b83477ba
-ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
+ms.openlocfilehash: 6be187d6d8a54468fba199753c145f837470dd1f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383464"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254540"
 ---
 # <a name="alert-properties-history-page"></a>경고 속성(기록 페이지)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

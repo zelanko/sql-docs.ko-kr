@@ -1,10 +1,10 @@
 ---
-title: '자습서: Reporting Services 도구를 찾고 시작하는 방법(SSRS) | Microsoft Docs'
-ms.date: 05/15/2019
+title: '자습서: Reporting Services 도구 찾기 및 시작 | Microsoft Docs'
+description: 이 자습서에서는 보고서 서버를 구성하고, 보고서 서버 콘텐츠 및 작업을 관리하고, 페이지를 매긴 보고서 및 모바일 Reporting Services 보고서를 만들어 게시하는 데 사용되는 도구를 소개합니다.
+ms.date: 12/09/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: tools
-description: 이 자습서에서는 보고서 서버를 구성하고, 보고서 서버 콘텐츠 및 작업을 관리하고, 페이지를 매긴 보고서 및 모바일 Reporting Services 보고서를 만들어 게시하는 데 사용되는 도구를 소개합니다.
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,14 +20,14 @@ helpviewer_keywords:
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 27e90deec22d20f65943f9c7e07cf425772c7737
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: be9da26fc71dbcbf9fd47aa94c0ee721b160eed6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65875169"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245524"
 ---
-# <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>자습서: Reporting Services 도구를 찾고 시작하는 방법
+# <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>자습서: Reporting Services 도구 찾기 및 시작 방법(SSRS)
 
   이 자습서에서는 보고서 서버를 구성하고, 보고서 서버 콘텐츠 및 작업을 관리하고, 페이지를 매긴 보고서 및 모바일 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 만들어 게시하는 데 사용되는 도구를 소개합니다. 도구 사용법을 이미 잘 알고 있다면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]사용을 위한 기술을 배울 수 있는 다른 자습서로 이동할 수 있습니다. 다른 자습서는 [Reporting Services&#40;SSRS&#41; 자습서](../../reporting-services/reporting-services-tutorials-ssrs.md)사용을 위한 기술을 배울 수 있는 다른 자습서로 이동할 수 있습니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "65875169"
   
 1.  Windows 시작 화면에서 **reporting** 을 입력하고 **앱** 검색 결과에서 **Reporting Services 구성 관리자**를 클릭합니다.  
   
-     ![시작 시 reporting services 구성 관리자](../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif "시작 시 reporting services 구성 관리자")  
+     ![Reporting Services 구성 관리자 시작](../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif "Reporting Services 구성 관리자 시작")  
   
      **Or**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "65875169"
   
      원격 컴퓨터를 지정하는 경우 **찾기** 를 클릭하여 연결을 설정합니다. 미리 보고서 서버를 원격 관리용으로 구성해야 합니다. 자세한 내용은 [원격 관리를 위한 보고서 서버 구성](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)을 참조하세요.  
   
-3.  **stance Name**에서 구성할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스를 선택합니다. SQL Server 2008 이상 보고서 서버 인스턴스만 목록에 표시됩니다. 이전 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 구성할 수 없습니다.  
+3.  **인스턴스 이름**에서 구성할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스를 선택합니다. SQL Server 2008 이상 보고서 서버 인스턴스만 목록에 표시됩니다. 이전 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 구성할 수 없습니다.  
   
 4.  **연결**을 클릭합니다.  
   
@@ -68,12 +68,12 @@ ms.locfileid: "65875169"
   
      ![Reporting Services 구성 도구](../../reporting-services/tools/media/rs-ui-reportserverconfigkatmai.png "Reporting Services 구성 도구")  
   
- **다음 단계:** [보고서 서버 구성 및 관리&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) 및 [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ **다음 단계:** [보고서 서버 구성 및 관리&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) 및 [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
 ##  <a name="web-portal-native-mode"></a>웹 포털(기본 모드)  
  [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md) 을 사용하여 권한 설정, 구독 및 일정 관리, 보고서 작업을 수행할 수 있습니다. 또한 웹 포털을 사용하여 보고서를 볼 수 있습니다.  
   
- **설치:** 웹 포털은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드( [Reporting Services 기본 모드 보고서 서버 설치](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)  
+ **설치:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드를 설치할 때 웹 포털이 설치됩니다. [Reporting Services 기본 모드 보고서 서버 설치](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)  
   
  웹 포털을 열려면 먼저 충분한 권한이 있어야 합니다. 처음에는 로컬 관리자 그룹의 멤버만 웹 포털 기능에 액세스할 수 있습니다. 웹 포털은 현재 사용자의 역할 할당에 따라 다양한 페이지와 옵션을 제공합니다. 사용 권한이 없는 사용자에게는 빈 페이지가 나타납니다. 보고서를 볼 권한이 있는 사용자에게는 클릭하여 보고서를 열 수 있는 링크가 나타납니다. 권한에 대한 자세한 내용은 [역할 및 권한&#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)를 참조하세요.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "65875169"
 5.  **연결**을 클릭합니다. 루트 노드를 확장하여 서버 속성을 설정하거나 역할 정의를 수정하거나 보고서 서버 기능을 해제할 수 있습니다.  
   
 ##  <a name="bkmk_ssdt"></a> 보고서 디자이너 및 보고서 마법사가 포함된 SQL Server Data Tools  
- 보고서 디자이너 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고서 작성기 [의 두 가지 도구 중에서 선택하여 페이지를 매긴](#bkmk_report_builder)보고서를 만들 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 페이지를 매긴 보고서를 만들기 위한    보고서 작성기 및 [보고서 디자이너 기능](#bkmk_report_builder) 도구를 선택할 수 있습니다.  
   
  보고서 디자이너는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] -Visual Studio에서 제공됩니다. 보고서 디자이너의 디자인 화면에는 보고서 제작 기능에 액세스하는 데 사용되는 탭 창, 마법사 및 메뉴가 있습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 보고서 서버 프로젝트 또는 보고서 서버 마법사 템플릿을 선택하면 보고서 디자이너 도구를 사용할 수 있습니다. 자세한 내용은 [SQL Server Data Tools의 Reporting Services&#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)를 참조하세요. 
  
@@ -129,7 +129,7 @@ ms.locfileid: "65875169"
   
 5.  프로젝트의 이름과 위치를 입력하거나 **찾아보기** 를 클릭하여 위치를 선택합니다.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 시작 페이지와 함께 열립니다. 솔루션 탐색기는 보고서 및 데이터 원본을 만드는 범주를 제공합니다. 이러한 범주를 사용하여 새 보고서 및 데이터 원본을 만들 수 있습니다. 보고서 정의를 만들면 탭 창이 표시됩니다. 탭 창은 데이터, 레이아웃 및 미리 보기입니다.  
+6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]는 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 시작 페이지와 함께 열립니다. 솔루션 탐색기는 보고서 및 데이터 원본을 만드는 범주를 제공합니다. 이러한 범주를 사용하여 새 보고서 및 데이터 원본을 만들 수 있습니다. 보고서 정의를 만들면 탭 창이 표시됩니다. 탭 창은 데이터, 레이아웃 및 미리 보기입니다.  
   
  첫 번째 보고서를 시작하려면 [기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)를 참조하세요. 보고서 디자이너에서 사용할 수 있는 쿼리 디자이너에 대한 자세한 내용은 [쿼리 디자인 도구&#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)사용을 위한 기술을 배울 수 있는 다른 자습서로 이동할 수 있습니다.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "65875169"
   
  Microsoft 다운로드 센터에서[보고서 작성기를 다운로드](https://go.microsoft.com/fwlink/?LinkID=219138) 하세요.  
   
-### <a name="to-start-includessrbnoversionincludesssrbnoversionmd"></a>시작하려면 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
+### <a name="to-start-ssrbnoversion"></a>시작하려면 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 웹 포털의  **새로 만들기** 메뉴에서 **페이지를 매긴 보고서**를 선택합니다.  
   
@@ -159,7 +159,7 @@ ms.locfileid: "65875169"
   
  Microsoft 다운로드 센터에서[SQL Server 모바일 보고서 게시자를 다운로드](https://go.microsoft.com/fwlink/?LinkID=733527) 하세요.  
   
-### <a name="to-start-includessmobilereptpubshortincludesss-mobilereptpub-shortmd"></a>시작하려면 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]  
+### <a name="to-start-ss_mobilereptpub_short"></a>시작하려면 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 웹 포털의  **새로 만들기** 메뉴에서 **모바일 보고서**를 선택합니다.  
   

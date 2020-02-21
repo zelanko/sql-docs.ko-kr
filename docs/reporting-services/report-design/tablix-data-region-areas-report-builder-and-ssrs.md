@@ -9,10 +9,10 @@ ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 944b6c7053b024a0a62cc24c53095464844d4387
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573945"
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>테이블릭스 데이터 영역(보고서 작성기 및 SSRS)
@@ -26,7 +26,7 @@ ms.locfileid: "65573945"
   
 디자인 화면에서 점선은 선택한 테이블릭스 데이터 영역의 네 영역을 표시합니다. 다음 그림에서는 범주 및 하위 범주를 기준으로 하는 중첩된 행 그룹, 지리 및 국가/지역을 기준으로 하는 중첩된 열 그룹 그리고 연도를 기준으로 하는 인접한 열 그룹이 있는 테이블릭스 영역의 영역을 보여 줍니다.  
   
- ![Tablix data region areas](../../reporting-services/report-design/media/rs-tablixareas.gif "Tablix data region areas")  
+ ![테이블릭스 데이터 영역](../../reporting-services/report-design/media/rs-tablixareas.gif "테이블릭스 데이터 영역")  
   
  다음 목록에서는 각 영역에 대해 설명합니다.  
   

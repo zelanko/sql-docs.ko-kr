@@ -12,10 +12,10 @@ ms.assetid: ef84ce9d-9156-48e9-8073-7e0535476932
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5723122c76b02900f6906c03efb807e58ebcc6d9
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67313976"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>보고서 서버(Reporting Services 기본 모드) 구성
@@ -29,7 +29,7 @@ ms.locfileid: "67313976"
   
  기본 모드 기본 구성 또는 SharePoint 통합 모드 기본 구성 설치 옵션 중 하나를 선택한 경우 설치 프로그램은 최소 설정을 구성합니다. 파일만 모드로 보고서 서버를 설치한 경우(설치 마법사의 **구성 없이 설치** 옵션) 서비스 계정만 구성됩니다. 설치가 완료된 후 웹 서비스 URL과 보고서 서버 데이터베이스를 구성해야 합니다.  
   
-보고서 서버에 대 한 사용자 액세스 권한을 부여 하 고 보고서 서버 내용을 관리할 수 있도록 웹 포털을 구성 하는 것이 좋습니다. 보고서 서버를 SharePoint 통합 모드로 배포하는 경우 SharePoint 서버의 웹 프런트 엔드를 사용하여 액세스 권한을 부여할 수 있습니다.  
+사용자에게 보고서 서버에 대한 액세스 권한을 부여하고 보고서 서버 콘텐츠를 관리할 수 있도록 웹 포털을 구성하는 것이 좋습니다. 보고서 서버를 SharePoint 통합 모드로 배포하는 경우 SharePoint 서버의 웹 프런트 엔드를 사용하여 액세스 권한을 부여할 수 있습니다.  
   
  필요한 경우 보고서 서버 전자 메일 및 무인 실행 계정과 같은 추가 기능을 구성할 수 있습니다. 자세한 내용은 [Reporting Services 기본 모드 보고서 서버 관리](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)를 참조하세요.  
   
@@ -47,8 +47,8 @@ ms.locfileid: "67313976"
   
 5.  "다음 단계"의 지침에 따라 배포를 완료합니다.  
   
-## <a name="next-steps"></a>Next Steps  
- 배포를 완료하려면 웹 포털 또는 SharePoint 통합을 구성해야 합니다. 자세한 내용은 [웹 포털 구성](../../reporting-services/report-server/configure-web-portal.md)합니다.  
+## <a name="next-steps"></a>다음 단계  
+ 배포를 완료하려면 웹 포털 또는 SharePoint 통합을 구성해야 합니다. 자세한 내용은 [웹 포털 구성](../../reporting-services/report-server/configure-web-portal.md)을 참조하세요.  
   
  Windows 방화벽을 켜면 보고서 서버에서 사용하도록 구성된 포트는 대부분 닫혀 있습니다. 원격 클라이언트 컴퓨터에서 웹 포털을 열 때 빈 페이지가 표시되면 포트가 닫혀 있기 때문일 수 있습니다. 방화벽을 구성하는 방법은 [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)을 참조하십시오.  
   
@@ -56,9 +56,9 @@ ms.locfileid: "67313976"
   
  폴더를 만들고 항목을 업로드하고 보고서를 실행하여 설치가 제대로 되었는지 확인합니다. [Reporting Services 설치 확인](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) 의 지침에 따라 설치를 확인합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services 기본 모드 보고서 서버 관리](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
- [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)   
+ [보고서 서버 액세스를 위한 방화벽 구성](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)   
  [로컬 관리에 대해 기본 모드 보고서 서버 구성&#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)   
  [원격 관리를 위한 보고서 서버 구성](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)   
  [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  

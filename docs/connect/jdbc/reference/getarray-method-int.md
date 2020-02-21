@@ -1,5 +1,5 @@
 ---
-title: getArray 메서드 (int) | Microsoft Docs
+title: getArray 메서드(int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 5b839d3f-5a4e-43da-b93c-dc9e0f6d4b3b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 27e9502c707f35ae0406b3cf99843a3e22ea1008
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954373"
 ---
 # <a name="getarray-method-int"></a>getArray 메서드(int)
@@ -39,13 +39,13 @@ public java.sql.Array getArray(int i)
   
  매개 변수 인덱스를 나타내는 **int**입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  배열 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 getArray 메서드는 java.sql.CallableStatement 인터페이스의 getArray 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

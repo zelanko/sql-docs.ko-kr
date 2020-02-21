@@ -16,10 +16,10 @@ ms.assetid: 2a3dde54-aace-42b1-97da-4b6a0918a346
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0915de12eddfceff753b045c20400c3670a7500b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954140"
 ---
 # <a name="getasciistream-method-sqlservercallablestatement"></a>getAsciiStream 메서드(SQLServerCallableStatement)
@@ -29,10 +29,10 @@ ms.locfileid: "67954140"
   
 ## <a name="overload-list"></a>오버로드 목록  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[getAsciiStream &#40;int&#41;](../../../connect/jdbc/reference/getasciistream-int.md)|매개 변수 인덱스가 지정된 경우 지정된 매개 변수의 값을 **ASCII** 문자의 스트림으로 검색합니다.|  
-|[getAsciiStream &#40;&#41;](../../../connect/jdbc/reference/getasciistream-java-lang-string.md)|매개 변수 이름이 지정된 경우 지정된 매개 변수의 값을 **ASCII** 문자의 스트림으로 검색합니다.|  
+|[getAsciiStream&#40;java.lang.String&#41;](../../../connect/jdbc/reference/getasciistream-java-lang-string.md)|매개 변수 이름이 지정된 경우 지정된 매개 변수의 값을 **ASCII** 문자의 스트림으로 검색합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerCallableStatement 멤버](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

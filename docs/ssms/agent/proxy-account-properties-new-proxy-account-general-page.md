@@ -1,10 +1,9 @@
 ---
-title: 프록시 계정 속성 - 새 프록시 계정(일반 페이지) | Microsoft 문서
-ms.custom: ''
+title: 프록시 계정 속성 - 새 프록시 계정(일반 페이지)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,13 +11,15 @@ f1_keywords:
 ms.assetid: 5cd81265-bf59-413b-8397-150ddc70d0c7
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e1dabf36ad4e7c1d24b3fd1d4f5510ec711d715b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 86c381bb502b95fc0875ea45348dc01912ccb64c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266824"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247593"
 ---
 # <a name="proxy-account-properties---new-proxy-account-general-page"></a>프록시 계정 속성 - 새 프록시 계정(일반 페이지)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "68266824"
 프록시에 대한 자격 증명 이름을 입력합니다.  
   
 > [!NOTE]  
-> 기존 자격 증명의 이름을 제공해야 합니다. 자격 증명 만들기에 대한 자세한 내용은 [방법: 프록시 만들기(SQL Server Management Studio)](https://msdn.microsoft.com/c1e77e91-2a69-40d9-b8b3-97cffc710586)를 참조하세요.  
+> 기존 자격 증명의 이름을 제공해야 합니다. 자격 증명 만들기에 대한 자세한 내용은 [방법: 프록시 만들기](https://msdn.microsoft.com/c1e77e91-2a69-40d9-b8b3-97cffc710586)  
   
 **...**  
 **자격 증명 선택** 대화 상자를 시작합니다.  

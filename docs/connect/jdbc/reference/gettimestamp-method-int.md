@@ -1,5 +1,5 @@
 ---
-title: getTimestamp 메서드 (int) | Microsoft Docs
+title: getTimestamp 메서드(int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: a9fd6496-c72e-4cc6-b46a-4aa9f13f90ff
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b9a349122b907ff535de8ba3f90e0746465d244
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978819"
 ---
 # <a name="gettimestamp-method-int"></a>getTimestamp 메서드(int)
@@ -39,13 +39,13 @@ public java.sql.Timestamp getTimestamp(int index)
   
  매개 변수 인덱스를 나타내는 **int**입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  Timestamp 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 getTimestamp 메서드는 java.sql.CallableStatement 인터페이스의 getTimestamp 메서드에 의해 지정됩니다.  
   
  이 메서드는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **datetime** 및 **smalldatetime** 열에서만 값을 반환합니다.  

@@ -12,10 +12,10 @@ ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 640cd9bfd39b272e7829cc25b51ee50a82176a65
-ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67037869"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>보고서, 보고서 파트 및 보고서 정의(보고서 작성기 및 SSRS)
@@ -60,10 +60,10 @@ ms.locfileid: "67037869"
   
 -   사용자가 지정한 출력 형식으로 전자 메일 받은 편지함이나 파일 공유 위치로 배달되는 보고서를 구독합니다.  
   
- 사용자가 지정한 출력 형식으로 전자 메일 받은 편지함이나 파일 공유 위치로 배달되는 보고서를 구독합니다. 보고서의 기본 렌더링 형식은 HTML 4.0입니다. 보고서는 HTML 외에도 Excel, Word, XML, PDF, TIFF 및 CSV를 비롯한 다양한 출력 형식으로 렌더링할 수 있습니다. 게시된 보고서와 마찬가지로 렌더링된 보고서는 편집하거나 보고서 서버에 다시 저장할 수 없습니다. 자세한 내용은 [보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)를 참조하세요.  
+ 사용자가 지정한 출력 형식으로 전자 메일 받은 편지함이나 파일 공유 위치로 배달되는 보고서를 구독합니다. 보고서의 기본 렌더링 형식은 HTML 4.0입니다. 보고서는 HTML 외에도 Excel, Word, XML, PDF, TIFF 및 CSV를 비롯한 다양한 출력 형식으로 렌더링할 수 있습니다. 게시된 보고서와 마찬가지로 렌더링된 보고서는 편집하거나 보고서 서버에 다시 저장할 수 없습니다. 자세한 내용은 [보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)에서 페이지 매김을 제어하는 데 사용되는 규칙을 이해해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Reporting Services 개념 (SSRS)](../reporting-services-concepts-ssrs.md) [SQL Server의 보고서 작성기](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
+ [Reporting Services 개념(SSRS)](../reporting-services-concepts-ssrs.md) [SQL Server의 보고서 작성기](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   

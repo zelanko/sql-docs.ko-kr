@@ -9,10 +9,10 @@ ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b273ef327b666c7c660349657fa9ca9eabe9f4a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570992"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Reporting Services 인증에 대한 확장된 보호
@@ -81,8 +81,8 @@ SSRS는 운영 체제에서 사용하도록 설정된 확장된 보호를 지원
 |시나리오|시나리오 다이어그램|보안 설정 방법|  
 |--------------|----------------------|-------------------|  
 |HTTP 통신. 보고서 서버가 클라이언트에서 보고서 서버로의 서비스 바인딩을 적용합니다.|![RS_ExtendedProtection_Indirect](../../reporting-services/security/media/rs-extendedprotection-indirect.gif "RS_ExtendedProtection_Indirect")<br /><br /> 1) 클라이언트 애플리케이션<br /><br /> 2) 보고서 서버<br /><br /> 3) 프록시|**RSWindowsExtendedProtectionLevel** 을 **Allow** 또는 **Require**로 설정합니다.<br /><br /> **RSWindowsExtendedProtectionScenario** 를 **Any**로 설정합니다.<br /><br /> <br /><br /> -SSL 채널이 없으므로 채널 바인딩을 적용할 수 없습니다.<br /><br /> -서비스 바인딩이 제대로 적용되려면 보고서 서버가 프록시 서버의 이름을 인식하도록 구성해야 합니다.|  
-|HTTP 통신.<br /><br /> 보고서 서버가 클라이언트에서 프록시로의 채널 바인딩 및 클라이언트에서 보고서 서버로의 서비스 바인딩을 적용합니다.|![RS_ExtendedProtection_Indirect_SSL](../../reporting-services/security/media/rs-extendedprotection-indirect-ssl.gif "RS_ExtendedProtection_Indirect_SSL")<br /><br /> 1) 클라이언트 애플리케이션<br /><br /> 2) 보고서 서버<br /><br /> 3) 프록시|Set <br />                    **RSWindowsExtendedProtectionLevel** 을 **Allow** 또는 **Require**로 설정합니다.<br /><br /> **RSWindowsExtendedProtectionScenario** 를 **Proxy**로 설정합니다.<br /><br /> <br /><br /> -프록시에 대한 SSL 채널을 사용할 수 있으므로 프록시로의 채널 바인딩이 적용될 수 있습니다.<br /><br /> -서비스 바인딩도 적용될 수 있습니다.<br /><br /> -보고서 서버에서 프록시 이름을 알 수 있어야 하므로 보고서 서버 관리자는 호스트 헤더를 사용하여 프록시에 대한 URL 예약을 만들거나 Windows 레지스트리 항목 **BackConnectionHostNames**에서 프록시 이름을 구성해야 합니다.|  
-|보안 프록시를 사용한 간접 HTTPS 통신. 보고서 서버가 클라이언트에서 프록시로의 채널 바인딩 및 클라이언트에서 보고서 서버로의 서비스 바인딩을 적용합니다.|![RS_ExtendedProtection_IndirectSSLandHTTPS](../../reporting-services/security/media/rs-extendedprotection-indirectsslandhttps.gif "RS_ExtendedProtection_IndirectSSLandHTTPS")<br /><br /> 1) 클라이언트 애플리케이션<br /><br /> 2) 보고서 서버<br /><br /> 3) 프록시|Set <br />                    **RSWindowsExtendedProtectionLevel** 을 **Allow** 또는 **Require**로 설정합니다.<br /><br /> **RSWindowsExtendedProtectionScenario** 를 **Proxy**로 설정합니다.<br /><br /> <br /><br /> -프록시에 대한 SSL 채널을 사용할 수 있으므로 프록시로의 채널 바인딩이 적용될 수 있습니다.<br /><br /> -서비스 바인딩도 적용될 수 있습니다.<br /><br /> -보고서 서버에서 프록시 이름을 알 수 있어야 하므로 보고서 서버 관리자는 호스트 헤더를 사용하여 프록시에 대한 URL 예약을 만들거나 Windows 레지스트리 항목 **BackConnectionHostNames**에서 프록시 이름을 구성해야 합니다.|  
+|HTTP 통신.<br /><br /> 보고서 서버가 클라이언트에서 프록시로의 채널 바인딩 및 클라이언트에서 보고서 서버로의 서비스 바인딩을 적용합니다.|![RS_ExtendedProtection_Indirect_SSL](../../reporting-services/security/media/rs-extendedprotection-indirect-ssl.gif "RS_ExtendedProtection_Indirect_SSL")<br /><br /> 1) 클라이언트 애플리케이션<br /><br /> 2) 보고서 서버<br /><br /> 3) 프록시|설정 <br />                    **RSWindowsExtendedProtectionLevel** 을 **Allow** 또는 **Require**로 설정합니다.<br /><br /> **RSWindowsExtendedProtectionScenario** 를 **Proxy**로 설정합니다.<br /><br /> <br /><br /> -프록시에 대한 SSL 채널을 사용할 수 있으므로 프록시로의 채널 바인딩이 적용될 수 있습니다.<br /><br /> -서비스 바인딩도 적용될 수 있습니다.<br /><br /> -보고서 서버에서 프록시 이름을 알 수 있어야 하므로 보고서 서버 관리자는 호스트 헤더를 사용하여 프록시에 대한 URL 예약을 만들거나 Windows 레지스트리 항목 **BackConnectionHostNames**에서 프록시 이름을 구성해야 합니다.|  
+|보안 프록시를 사용한 간접 HTTPS 통신. 보고서 서버가 클라이언트에서 프록시로의 채널 바인딩 및 클라이언트에서 보고서 서버로의 서비스 바인딩을 적용합니다.|![RS_ExtendedProtection_IndirectSSLandHTTPS](../../reporting-services/security/media/rs-extendedprotection-indirectsslandhttps.gif "RS_ExtendedProtection_IndirectSSLandHTTPS")<br /><br /> 1) 클라이언트 애플리케이션<br /><br /> 2) 보고서 서버<br /><br /> 3) 프록시|설정 <br />                    **RSWindowsExtendedProtectionLevel** 을 **Allow** 또는 **Require**로 설정합니다.<br /><br /> **RSWindowsExtendedProtectionScenario** 를 **Proxy**로 설정합니다.<br /><br /> <br /><br /> -프록시에 대한 SSL 채널을 사용할 수 있으므로 프록시로의 채널 바인딩이 적용될 수 있습니다.<br /><br /> -서비스 바인딩도 적용될 수 있습니다.<br /><br /> -보고서 서버에서 프록시 이름을 알 수 있어야 하므로 보고서 서버 관리자는 호스트 헤더를 사용하여 프록시에 대한 URL 예약을 만들거나 Windows 레지스트리 항목 **BackConnectionHostNames**에서 프록시 이름을 구성해야 합니다.|  
   
 ### <a name="gateway"></a>게이트웨이  
  이 시나리오는 SSL을 수행하고 사용자를 인증하는 디바이스나 소프트웨어에 연결하는 클라이언트 애플리케이션을 설명합니다. 그런 다음 이 디바이스나 소프트웨어는 사용자의 컨텍스트 또는 다른 사용자의 컨텍스트를 가장하여 보고서 서버로 요청을 보냅니다.  
@@ -110,10 +110,10 @@ SSRS는 운영 체제에서 사용하도록 설정된 확장된 보호를 지원
 ###  <a name="ConfigurationSettings"></a> Reporting Services 확장된 보호에 대한 구성 설정  
  다음 표에서는 **rsreportserver.config** 파일에 나오는 확장된 보호 구성 설정에 대한 정보를 제공합니다.  
   
-|설정|설명|  
+|설정|Description|  
 |-------------|-----------------|  
-|**RSWindowsExtendedProtectionLevel**|확장된 보호를 적용하는 수준을 지정합니다. 유효한 값은<br /><br /> **Off**: 기본값입니다. 채널 바인딩이나 서비스 바인딩을 확인하지 않도록 지정합니다.<br /><br /> **Allow** 를 사용하는 경우 확장된 보호가 지원은 되지만 반드시 사용할 필요는 없습니다.  이 값을 사용하는 경우 다음 사항이 지정됩니다.<br /><br /> -확장된 보호를 지원하는 운영 체제에서 실행되는 클라이언트 애플리케이션에 대해 확장된 보호가 적용됩니다. \- **RsWindowsExtendedProtectionScenario**를 설정하여 보호 적용 방법을 결정합니다.<br /><br /> -확장된 보호를 지원하지 않는 운영 체제에서 실행되는 애플리케이션에 대해 인증이 허용됩니다.<br /><br /> **Require** 를 사용하는 경우 다음 사항이 지정됩니다.<br /><br /> -확장된 보호를 지원하는 운영 체제에서 실행되는 클라이언트 애플리케이션에 대해 확장된 보호가 적용됩니다.<br /><br /> -확장된 보호를 지원하지 않는 운영 체제에서 실행되는 애플리케이션에 대해 인증이 허용되지 **않습니다** .|  
-|**RsWindowsExtendedProtectionScenario**|유효성을 검사할 확장된 보호의 형식(채널 바인딩, 서비스 바인딩, 둘 다)을 지정합니다. 유효한 값은<br /><br /> **Proxy**: 기본값입니다. 이 값을 사용하는 경우 다음 사항이 지정됩니다.<br /><br /> -채널 바인딩 토큰이 있으면 Windows NTLM, Kerberos 및 협상 인증이 지정됩니다.<br /><br /> -서비스 바인딩이 적용됩니다.<br /><br /> **Any** 를 사용하는 경우 다음 사항이 지정됩니다.<br /><br /> -Windows NTLM, Kerberos 및 협상 인증이 지정되며 채널 바인딩은 필요하지 않습니다.<br /><br /> -서비스 바인딩이 적용됩니다.<br /><br /> **Direct** 를 사용하는 경우 다음 사항이 지정됩니다.<br /><br /> --CBT가 있고, 현재 서비스로의 SSL 연결이 있으며, SSL 연결의 CBT가 NTLM/Kerberos/협상 토큰의 CBT와 일치하면 Windows NTLM, Kerberos 및 협상 인증이 지정됩니다.<br /><br /> -서비스 바인딩이 적용되지 않습니다.<br /><br /> <br /><br /> 참고: **RsWindowsExtendedProtectionLevel** 이 **OFF** 로 설정되어 있으면 **RsWindowsExtendedProtectionScenario**설정은 무시됩니다.|  
+|**RSWindowsExtendedProtectionLevel**|확장된 보호를 적용하는 수준을 지정합니다. 유효한 값은 다음과 같습니다.<br /><br /> **Off**: 기본값 채널 바인딩이나 서비스 바인딩을 확인하지 않도록 지정합니다.<br /><br /> **Allow** 를 사용하는 경우 확장된 보호가 지원은 되지만 반드시 사용할 필요는 없습니다.  이 값을 사용하는 경우 다음 사항이 지정됩니다.<br /><br /> -확장된 보호를 지원하는 운영 체제에서 실행되는 클라이언트 애플리케이션에 대해 확장된 보호가 적용됩니다. \- **RsWindowsExtendedProtectionScenario**를 설정하여 보호 적용 방법을 결정합니다.<br /><br /> -확장된 보호를 지원하지 않는 운영 체제에서 실행되는 애플리케이션에 대해 인증이 허용됩니다.<br /><br /> **Require** 를 사용하는 경우 다음 사항이 지정됩니다.<br /><br /> -확장된 보호를 지원하는 운영 체제에서 실행되는 클라이언트 애플리케이션에 대해 확장된 보호가 적용됩니다.<br /><br /> -확장된 보호를 지원하지 않는 운영 체제에서 실행되는 애플리케이션에 대해 인증이 허용되지 **않습니다** .|  
+|**RsWindowsExtendedProtectionScenario**|유효성을 검사할 확장된 보호의 형태, 즉 채널 바인딩, 서비스 바인딩 또는 둘 다를 지정합니다. 유효한 값은 다음과 같습니다.<br /><br /> **프록시**: 기본값 이 값을 사용하는 경우 다음 사항이 지정됩니다.<br /><br /> -채널 바인딩 토큰이 있으면 Windows NTLM, Kerberos 및 협상 인증이 지정됩니다.<br /><br /> -서비스 바인딩이 적용됩니다.<br /><br /> **Any** 를 사용하는 경우 다음 사항이 지정됩니다.<br /><br /> -Windows NTLM, Kerberos 및 협상 인증이 지정되며 채널 바인딩은 필요하지 않습니다.<br /><br /> -서비스 바인딩이 적용됩니다.<br /><br /> **Direct** 를 사용하는 경우 다음 사항이 지정됩니다.<br /><br /> --CBT가 있고, 현재 서비스로의 SSL 연결이 있으며, SSL 연결의 CBT가 NTLM/Kerberos/협상 토큰의 CBT와 일치하면 Windows NTLM, Kerberos 및 협상 인증이 지정됩니다.<br /><br /> -서비스 바인딩이 적용되지 않습니다.<br /><br /> <br /><br /> 참고: **RsWindowsExtendedProtectionLevel**이 **OFF**로 설정되어 있으면 **RsWindowsExtendedProtectionScenario** 설정은 무시됩니다.|  
   
  **rsreportserver.config** 구성 파일의 항목 예:  
   
@@ -142,7 +142,7 @@ SSRS는 운영 체제에서 사용하도록 설정된 확장된 보호를 지원
 ### <a name="hosts-collection-sources"></a>호스트 컬렉션 원본  
  다음 표에서는 호스트 컬렉션의 가능한 원본을 보여 줍니다.  
   
-|원본 유형|설명|  
+|원본 유형|Description|  
 |--------------------|-----------------|  
 |ComputerNameDnsDomain|로컬 컴퓨터에 할당된 DNS 도메인의 이름입니다. 로컬 컴퓨터가 클러스터의 노드인 경우 클러스터 가상 서버의 DNS 도메인 이름이 사용됩니다.|  
 |ComputerNameDnsFullyQualified|로컬 컴퓨터를 고유하게 식별하는 정규화된 DNS 이름입니다. 이 이름은 *HostName*.*DomainName*형식으로 DNS 호스트 이름과 DNS 도메인 이름을 결합한 것입니다. 로컬 컴퓨터가 클러스터의 노드인 경우 클러스터 가상 서버의 정규화된 DNS 이름이 사용됩니다.|  
@@ -166,7 +166,7 @@ SSRS는 운영 체제에서 사용하도록 설정된 확장된 보호를 지원
 [확장된 보호를 사용하여 데이터베이스 엔진에 연결](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
 [인증에 대한 확장된 보호 개요](https://go.microsoft.com/fwlink/?LinkID=177943)   
 [확장된 보호를 사용하는 Windows 통합 인증(Integrated Windows Authentication with Extended Protection)](https://go.microsoft.com/fwlink/?LinkId=179922)   
-[Microsoft 보안 공지: 인증에 대한 확장된 보호](https://go.microsoft.com/fwlink/?LinkId=179923)   
+[Microsoft 보안 권고: 인증에 대한 확장된 보호](https://go.microsoft.com/fwlink/?LinkId=179923)   
 [보고서 서버 서비스 추적 로그](../../reporting-services/report-server/report-server-service-trace-log.md)   
 [RSReportServer 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [SetExtendedProtectionSettings 메서드&#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  

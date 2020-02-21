@@ -1,10 +1,7 @@
 ---
-title: ssbdiagnose 유틸리티(Service Broker) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: ssbdiagnose 유틸리티(Service Broker)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
@@ -25,16 +22,22 @@ helpviewer_keywords:
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3a4f198a1b492719a6cf6916f4ee483424b3a7fa
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 5775600e5dc6e0bebd74104dcc9bfa350873de3e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70211409"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254200"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 유틸리티(Service Broker)
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  **ssbdiagnose** 유틸리티는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 서비스 구성이나 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화의 문제를 보고합니다. 이때 두 서비스나 한 서비스에 대한 구성 검사를 수행할 수 있습니다. 오류는 명령 프롬프트 창에 사람이 읽을 수 있는 텍스트 또는 다른 응용 프로그램으로 리디렉션될 수 있는 서식이 설정된 XML로 보고됩니다.
+
+**ssbdiagnose** 유틸리티는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 서비스 구성이나 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화의 문제를 보고합니다. 이때 두 서비스나 한 서비스에 대한 구성 검사를 수행할 수 있습니다. 오류는 명령 프롬프트 창에 사람이 읽을 수 있는 텍스트 또는 다른 응용 프로그램으로 리디렉션될 수 있는 서식이 설정된 XML로 보고됩니다.
 
 ## <a name="syntax"></a>구문  
   
@@ -201,7 +204,7 @@ WHERE database_id = DB_ID();
  대화 ID는 **sys.conversation_endpoints** 카탈로그 뷰의 **conversation_id** 열에서 보고됩니다.  
   
  **-TIMEOUT** _timeout_interval_  
- **RUNTIME** 보고서를 실행할 시간(초)을 지정합니다. **-TIMEOUT** 을 지정하지 않을 경우 런타임 보고서가 무기한 실행됩니다. **-TIMEOUT** 은 **RUNTIME** 보고서에서만 사용됩니다. **CONFIGURATION** 보고서에서는 사용되지 않습니다. Ctrl+C를 사용하면 **-TIMEOUT** 을 지정하지 않은 경우 **ssbdiagnose** 를 종료하거나 제한 시간 간격이**-** 만료되기 전에 런타임 보고서를 종료할 수 있습니다. *timeout_interval* 은 1에서 2,147,483,647 사이의 숫자여야 합니다.  
+ **RUNTIME** 보고서를 실행할 시간(초)을 지정합니다. **-TIMEOUT** 을 지정하지 않을 경우 런타임 보고서가 무기한 실행됩니다. **-TIMEOUT** 은 **RUNTIME** 보고서에서만 사용됩니다. **CONFIGURATION** 보고서에서는 사용되지 않습니다. Ctrl+C를 사용하면 **-TIMEOUT** 을 지정하지 않은 경우 **ssbdiagnose** 를 종료하거나 제한 시간 간격이 **-** 만료되기 전에 런타임 보고서를 종료할 수 있습니다. *timeout_interval* 은 1에서 2,147,483,647 사이의 숫자여야 합니다.  
   
  **\<runtimeconnectionoptions>**  
  모니터링 중인 대화 요소와 연결된 서비스를 포함하는 데이터베이스에 대한 연결 정보를 지정합니다. 모든 서비스가 동일한 데이터베이스에 있으면 **CONNECT TO** 절을 하나만 지정하면 됩니다. 서비스가 서로 다른 데이터베이스에 있으면 각 데이터베이스에 대해 **CONNECT TO** 절을 제공해야 합니다. **runtimeconnectionoptions** 를 지정하지 않은 경우 **ssbdiagnose** 는 **baseconnectionoptions**의 연결 정보를 사용합니다.  
@@ -231,7 +234,7 @@ WHERE database_id = DB_ID();
  **-P** 옵션을 암호 없이 지정할 경우 **ssbdiagnose** 는 기본 암호(NULL)를 사용합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] 자세한 내용은 [Strong Passwords](../../relational-databases/security/strong-passwords.md)을 참조하세요.  
+>  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] 자세한 내용은 [강력한 암호](../../relational-databases/security/strong-passwords.md)를 참조하세요.  
   
  암호 프롬프트는 다음과 같이 콘솔에 출력되어 표시됩니다. `Password:`  
   
@@ -241,12 +244,12 @@ WHERE database_id = DB_ID();
   
  **-P** 옵션 다음에 둘 이상의 인수를 지정하면 오류 메시지가 생성됩니다.  
   
- **baseconnetionoptions** _server_name_[\\*instance_name*]  
+ **-S** _server_name_[\\*instance_name*]  
  분석할 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스를 보유하는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 인스턴스를 지정합니다.  
   
- 해당 서버에 있는 기본 *인스턴스에 연결하려면* server_name [!INCLUDE[ssDE](../../includes/ssde-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결하려면 _server\_name_**\\**_instance\_name_을 지정합니다. **-S** 를 지정하지 않으면 **ssbdiagnose** 가 기본적으로 SQLCMDSERVER 환경 변수의 값을 사용합니다. SQLCMDSERVER도 설정하지 않을 경우 **ssbdiagnose** 는 로컬 컴퓨터에 있는 기본 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결합니다.  
+ 해당 서버에 있는 기본 *인스턴스에 연결하려면* server_name [!INCLUDE[ssDE](../../includes/ssde-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결하려면 _server\_name_ **\\** _instance\_name_을 지정합니다. **-S** 를 지정하지 않으면 **ssbdiagnose** 가 기본적으로 SQLCMDSERVER 환경 변수의 값을 사용합니다. SQLCMDSERVER도 설정하지 않을 경우 **ssbdiagnose** 는 로컬 컴퓨터에 있는 기본 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결합니다.  
   
- **-S** _database_name_  
+ **-d** _database_name_  
  분석할 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 서비스를 보유하는 데이터베이스를 지정합니다. 데이터베이스가 없을 경우에는 오류가 생성됩니다. **-d** 를 지정하지 않을 경우 기본적으로 로그인의 기본 데이터베이스 속성에 지정된 데이터베이스가 사용됩니다.  
   
  **-l** _login_timeout_  
@@ -255,7 +258,7 @@ WHERE database_id = DB_ID();
  **-?**  
  명령줄 도움말을 표시합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **ssbdiagnose** 를 사용하여 다음을 수행할 수 있습니다.  
   
 -   새로 구성된 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 애플리케이션에 구성 오류가 없음을 확인합니다.  
@@ -315,7 +318,7 @@ WHERE database_id = DB_ID();
 ## <a name="examples"></a>예  
  이 섹션에는 명령 프롬프트에서 **ssbdiagnose** 를 사용하는 예가 포함되어 있습니다.  
   
-### <a name="a-checking-the-configuration-of-two-services-in-the-same-database"></a>1. 동일한 데이터베이스에 있는 두 서비스의 구성 검사  
+### <a name="a-checking-the-configuration-of-two-services-in-the-same-database"></a>A. 동일한 데이터베이스에 있는 두 서비스의 구성 검사  
  다음 예에서는 아래 조건에 해당하는 경우 구성 보고서를 요청하는 방법을 보여 줍니다.  
   
 -   시작자 서비스와 대상 서비스가 동일한 데이터베이스에 있습니다.  
@@ -330,7 +333,7 @@ WHERE database_id = DB_ID();
 ssbdiagnose -E -d MyDatabase CONFIGURATION FROM SERVICE /test/initiator TO SERVICE /test/target  
 ```  
   
-### <a name="b-checking-the-configuration-of-two-services-on-separate-computers-that-use-one-login"></a>2. 별개의 컴퓨터에 있지만 동일한 로그인을 사용하는 두 서비스의 구성 검사  
+### <a name="b-checking-the-configuration-of-two-services-on-separate-computers-that-use-one-login"></a>B. 별개의 컴퓨터에 있지만 동일한 로그인을 사용하는 두 서비스의 구성 검사  
  다음 예에서는 시작자 서비스와 대상 서비스가 서로 다른 컴퓨터에 있지만 동일한 Windows 인증 로그인을 사용하여 액세스할 수 있는 경우 구성 보고서를 요청하는 방법을 보여 줍니다.  
   
 ```  
@@ -401,7 +404,7 @@ ssbdiagnose -E -S TestComputer/DevTestInstance RUNTIME -SHOWEVENTS
 -d InitiatorDatabase CONNECT TO -d TargetDatabase  
 ```  
   
-### <a name="i-monitor-the-status-of-two-conversations-between-two-databases"></a>9. 두 데이터베이스 간의 두 대화 상태 모니터링  
+### <a name="i-monitor-the-status-of-two-conversations-between-two-databases"></a>9\. 두 데이터베이스 간의 두 대화 상태 모니터링  
  다음 예에서는 시작자 서비스와 대상 서비스가 동일한 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스의 서로 다른 데이터베이스에 있는 두 대화를 모니터링하는 방법을 보여 줍니다. 이 예에서는 **baseconnectionoptions** 를 사용하여 인스턴스 및 로그인 정보를 지정하고 두 개의 CONNECT TO 절을 사용하여 데이터베이스를 지정합니다.  
   
 ```  
@@ -411,7 +414,7 @@ ssbdiagnose -E -S TestComputer/DevTestInstance RUNTIME
 -d InitiatorDatabase CONNECT TO -d TargetDatabase  
 ```  
   
-### <a name="j-monitor-the-status-of-all-conversations-between-two-databases"></a>10. 두 데이터베이스 간의 모든 대화 상태 모니터링  
+### <a name="j-monitor-the-status-of-all-conversations-between-two-databases"></a>J. 두 데이터베이스 간의 모든 대화 상태 모니터링  
  다음 예에서는 동일한 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 있는 두 데이터베이스 간의 모든 대화를 모니터링하는 방법을 보여 줍니다. 이 예에서는 **baseconnectionoptions** 를 사용하여 인스턴스 및 로그인 정보를 지정하고 두 개의 CONNECT TO 절을 사용하여 데이터베이스를 지정합니다.  
   
 ```  
@@ -459,9 +462,9 @@ ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE
  [CREATE REMOTE SERVICE BINDING&#40;Transact-SQL&#41;](../../t-sql/statements/create-remote-service-binding-transact-sql.md)   
  [CREATE ROUTE&#40;Transact-SQL&#41;](../../t-sql/statements/create-route-transact-sql.md)   
  [CREATE SERVICE&#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   
- [RECEIVE&#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)   
+ [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)   
  [sys.transmission_queue&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)   
- [sys.conversation_endpoints&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
+ [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
  [sys.conversation_groups&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)  
   
   

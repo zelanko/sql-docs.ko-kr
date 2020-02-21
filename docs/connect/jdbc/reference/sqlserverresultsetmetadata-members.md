@@ -11,10 +11,10 @@ ms.assetid: 37587981-2979-49a3-a6ab-df4bfb9b8748
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5998d16986c23b351fe565bbad0d84d2619aaa2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970526"
 ---
 # <a name="sqlserverresultsetmetadata-members"></a>SQLServerResultSetMetaData 멤버
@@ -30,13 +30,13 @@ ms.locfileid: "67970526"
   
 ## <a name="inherited-fields"></a>상속된 필드  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |java.sql.ResultSetMetaData|columnNoNulls, columnNullable, columnNullableUnknown|  
   
 ## <a name="methods"></a>메서드  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[getCatalogName](../../../connect/jdbc/reference/getcatalogname-method-sqlserverresultsetmetadata.md)|지정된 열이 포함된 테이블의 카탈로그 이름을 가져옵니다.|  
 |[getColumnClassName](../../../connect/jdbc/reference/getcolumnclassname-method-sqlserverresultsetmetadata.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스의 [getObject](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md) 메서드를 호출하여 열에서 값을 검색할 경우 인스턴스가 생성되는 Java 클래스의 정규화된 이름을 반환합니다.|  

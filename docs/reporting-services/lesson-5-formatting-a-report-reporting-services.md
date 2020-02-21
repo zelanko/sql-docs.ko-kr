@@ -9,10 +9,10 @@ ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a8bf8b6814f7989a904507cd89fbea397b8b6930
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65105933"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>5단원: 보고서 서식 지정(Reporting Services)
@@ -57,17 +57,17 @@ LineTotal 필드 식은 일반 숫자를 표시합니다. 숫자에 서식을 �
 
 3. 열 머리글 레이블이 있는 행을 선택하고 **서식** 메뉴에서 **글꼴** > **굵게**를 선택합니다.
 
-4. 보고서를 미리 보기합니다. 아래와 같이 표시됩니다.
+4. 보고서를 미리 봅니다. 아래와 같이 표시됩니다.
 
-    ![열 헤더가 굵게 설정된 테이블의 미리 보기](media/rs-basictabledetailsformattedpreview.png "열 헤더가 굵게 설정된 테이블의 미리 보기")  
+    ![열 머리글이 굵게 설정된 테이블의 미리 보기](media/rs-basictabledetailsformattedpreview.png "열 머리글이 굵게 설정된 테이블의 미리 보기")  
 
 5. **파일** 메뉴에서 **모두 저장**을 선택하여 보고서를 저장합니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-이 단원에서는 열 머리글과 필드 식에 성공적으로 서식을 지정했습니다. 다음으로, 보고서에 그룹화 및 합계를 추가해 보겠습니다. [6단원: 그룹화 및 합계 추가 &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)에서 계속 진행하세요.
+이 단원에서는 열 머리글과 필드 식에 성공적으로 서식을 지정했습니다. 다음으로, 보고서에 그룹화 및 합계를 추가해 보겠습니다. 다음으로 [6단원: 그룹화 및 합계 추가&#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)를 참조하세요.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [숫자 및 날짜 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)
 [렌더링 동작 &#40;보고서 작성기 및 SSRS&#41;](report-design/rendering-behaviors-report-builder-and-ssrs.md)

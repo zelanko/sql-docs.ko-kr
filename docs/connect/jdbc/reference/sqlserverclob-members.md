@@ -12,10 +12,10 @@ ms.assetid: 7db785ca-edd5-4833-8053-17fdbf87279a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 55e306b2fe7b8f52655f504d63f02ffc26e04ea1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971786"
 ---
 # <a name="sqlserverclob-members"></a>SQLServerClob 멤버
@@ -25,7 +25,7 @@ ms.locfileid: "67971786"
   
 ## <a name="constructors"></a>생성자  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-constructor-sqlserverconnection-java-lang-string.md)|SQLServerClob 클래스의 새 인스턴스를 초기화합니다.|  
   
@@ -37,7 +37,7 @@ ms.locfileid: "67971786"
   
 ## <a name="methods"></a>메서드  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[free](../../../connect/jdbc/reference/free-method-sqlserverclob.md)|이 메서드는 CLOB 개체 및 이 개체가 보유한 리소스를 해제합니다.|  
 |[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverclob.md)|Clob을 ASCII 스트림으로 구체화합니다.|  

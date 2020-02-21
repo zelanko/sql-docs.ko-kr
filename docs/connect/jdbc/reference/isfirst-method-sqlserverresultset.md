@@ -16,10 +16,10 @@ ms.assetid: 2ff94b95-32ad-4378-8bb1-970030527bb2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b847361621ad8d44840aa4bab02e4877128e8f48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977626"
 ---
 # <a name="isfirst-method-sqlserverresultset"></a>isFirst 메서드(SQLServerResultSet)
@@ -34,13 +34,13 @@ ms.locfileid: "67977626"
 public boolean isFirst()  
 ```  
   
-## <a name="return-value"></a>반환 값  
- 커서가 첫 번째 행에 있으면 **true** 입니다. 커서가 다른 위치에 있거나 결과 집합에 행이 포함 되어 있지 않으면 **false** 입니다.  
+## <a name="return-value"></a>Return Value  
+ 커서가 첫 번째 행에 있으면 **true**입니다. 커서가 그 외의 위치에 있거나 결과 집합에 행이 들어 있지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 isFirst 메서드는 java.sql.ResultSet 인터페이스의 isFirst 메서드에 의해 지정됩니다.  
   
  이 메서드를 정방향 및 동적 커서와 함께 사용하면 예외가 발생합니다.  

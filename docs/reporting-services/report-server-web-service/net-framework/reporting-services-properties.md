@@ -18,10 +18,10 @@ ms.assetid: 8c855194-4c20-4ecc-a328-5137d54b560c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 36a105d3220755dd03ff05a50dd403d4bac25d3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62703841"
 ---
 # <a name="reporting-services-properties"></a>Reporting Services 속성
@@ -29,7 +29,7 @@ ms.locfileid: "62703841"
   
  다음 웹 서비스 메서드는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 속성을 검색하고 설정합니다.  
   
-|메서드|작업|  
+|방법|작업|  
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.GetProperties%2A>|보고서 서버 데이터베이스의 항목에 대한 속성 값을 하나 이상 반환합니다.|  
 |<xref:ReportService2010.ReportingService2010.GetSystemProperties%2A>|시스템 속성을 하나 이상 반환합니다.|  
@@ -38,7 +38,7 @@ ms.locfileid: "62703841"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[보고서 서버 항목 속성](../../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-item-properties.md)|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 항목별 속성에 대해 설명합니다.|  
 |[보고서 서버 시스템 속성](../../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 시스템별 속성에 대해 설명합니다.|  

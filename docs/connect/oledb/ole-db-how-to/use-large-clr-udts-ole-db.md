@@ -1,5 +1,5 @@
 ---
-title: 대량 CLR Udt 사용 (OLE DB) | Microsoft Docs
+title: 큰 CLR UDT 사용(OLE DB) | Microsoft Docs
 description: 큰 CLR UDT 사용(OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 07a3023f61f26bbc4850eaa495f134d87c6a61c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994605"
 ---
 # <a name="use-large-clr-udts-ole-db"></a>큰 CLR UDT 사용(OLE DB)
@@ -22,7 +22,7 @@ ms.locfileid: "67994605"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  이 예제에서는 결과 집합에서 큰 사용자 정의 형식의 행을 인출하는 방법을 보여 줍니다. 자세한 내용은 [OLE DB &#40;&#41;대량 CLR 사용자 정의 형식](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md)을 참조 하세요. 이 예제는 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이상에서만 작동합니다.  
+  이 예제에서는 결과 집합에서 큰 사용자 정의 형식의 행을 인출하는 방법을 보여 줍니다. 자세한 내용은 [큰 CLR 사용자 정의 형식&#40;OLE DB&#41;](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md)을 참조하세요. 이 예제는 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이상에서만 작동합니다.  
   
 ## <a name="example"></a>예제  
  이 예제에는 두 개의 프로젝트가 포함되어 있습니다. 첫 번째 프로젝트는 C# 원본 코드에서 어셈블리(DLL)를 만듭니다. 이 어셈블리에는 CLR 유형이 포함되어 있습니다. 테이블이 데이터베이스에 추가됩니다. 테이블의 열은 어셈블리에 정의된 유형으로 지정됩니다. 기본적으로 이 예제에서는 master 데이터베이스를 사용합니다. 두 번째 프로젝트는 테이블에서 데이터를 읽는 네이티브 C 애플리케이션입니다.  

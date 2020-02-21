@@ -9,13 +9,13 @@ ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b5b9846a20615cf613dd50752ac63f2669b1e399
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65089676"
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>6단원: 그룹화 및 합계 추가(Reporting Services)
 
 최종 자습서 단원에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서에 그룹화 및 합계를 추가하여 데이터를 구성하고 합산하겠습니다.  
 
@@ -28,7 +28,7 @@ ms.locfileid: "65089676"
     > [!NOTE]
     > 이제 행 핸들 안에 대괄호가 포함되어 그룹임을 나타냅니다. 또한 테이블에서 세로 점선의 양쪽에 하나씩, 두 개의 `[Date]` 식 열이 있습니다.
     >
-    >![추가된 날짜 그룹](media/rs-basictablegroups1design.png "추가된 날짜 그룹")
+    >![날짜 그룹 추가됨](media/rs-basictablegroups1design.png "날짜 그룹 추가됨")
 4. **보고서 데이터** 창에서 `[Order]` 필드를 **행 그룹** 창으로 끕니다. **Date** 아래, **= (자세히)** 위에 놓습니다.
 
     ![ssrs_ssdt_addorderfield](media/ssrs-ssdt-addorderfield.png)
@@ -68,7 +68,7 @@ ms.locfileid: "65089676"
 4. **서식** 메뉴에서 **배경색** > **주황** 사각형을 선택합니다.
 5. **확인**을 선택하여 서식을 적용합니다.
 
-   ![배경색을 주황색으로 설정합니다](media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")
+   ![배경색을 주황색으로 설정](media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")
 
 ## <a name="add-the-grand-total-to-the-report"></a>보고서에 총합계 추가
 
@@ -101,15 +101,15 @@ ms.locfileid: "65089676"
 
     **출력** 창에 아래와 같은 메시지가 표시되는 경우 배포에 성공했음을 나타냅니다.
 
-    > ------ 빌드 시작: 자습서, 구성: 디버그 ------  
+    > ------ 빌드 시작: 프로젝트: 자습서, 구성: 디버그 ------  
     > 'Sales Orders.rdl'을 건너뜁니다. 최신 항목입니다.  
     > 빌드 완료 -- 0개 오류, 0개 경고  
-    > ------ 배포 시작: 자습서, 구성: 디버그 ------  
+    > --- 배포 시작: 프로젝트: 자습서, 구성: 디버그 ------  
     > `https://[server name]/reportserver`에 배포하는 중  
     > '/tutorial/Sales Orders' 보고서를 배포하는 중  
     > 배포 완료 -- 0개 오류, 0개 경고  
     > ========== 빌드: 1개 성공 또는 최신, 0개 실패, 0개 건너뜀 ==========  
-    > ========== 배포: 1개 성공, 0개 실패, 0개 건너뜀 ==========  
+    > ========== 배포: 1개 성공, 0개 실패, 0개 생략 ==========  
 
     다음과 비슷한 오류 메시지가 표시되면 보고서 서버에서 적절한 권한이 있고, 관리자 권한으로 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]를 시작했는지 확인합니다.
     >
@@ -126,6 +126,6 @@ ms.locfileid: "65089676"
 
 **기본 테이블 보고서 만들기 자습서**를 성공적으로 완료했습니다.
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)

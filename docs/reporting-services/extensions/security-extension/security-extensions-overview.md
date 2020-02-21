@@ -11,10 +11,10 @@ ms.assetid: 24ccd795-6506-457c-93ac-6a9dd6bb9a46
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c066c893833e1c8588be2460959ed298d6cf1b4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63225868"
 ---
 # <a name="security-extensions-overview---reporting-services-ssrs"></a>보안 확장 프로그램 개요 - Reporting Services(SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "63225868"
   
  보안 확장 프로그램은 확장 가능한 개방형 API를 기반으로 하므로 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 새 인증 및 권한 부여 확장 프로그램을 만들 수 있습니다. 다음은 Forms 기반 인증 및 권한 부여를 사용하는 일반적인 보안 확장 구현의 예입니다.  
   
- ![Reporting Services 보안 확장 프로세스](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionflow.gif "Reporting Services 보안 확장 프로세스")  
+ ![Reporting Services 보안 확장 프로그램 프로세스](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionflow.gif "Reporting Services 보안 확장 프로그램 프로세스")  
   
  그림에서 볼 수 있듯이 인증 및 권한 부여는 다음과 같이 발생합니다.  
   

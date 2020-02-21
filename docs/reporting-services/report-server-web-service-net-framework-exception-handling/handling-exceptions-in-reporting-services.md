@@ -14,10 +14,10 @@ ms.assetid: 1a443432-2db5-48c5-bc29-433b4688082f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7fbf4c9d89d35f4fbb437a41c691f7f8c6578b9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63028570"
 ---
 # <a name="handling-exceptions-in-reporting-services"></a>Reporting Services의 예외 처리

@@ -11,10 +11,10 @@ ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 71c0d3d28de1a9c63770b37f2bb6013768aaee78
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576165"
 ---
 # <a name="report-server-properties-general-page"></a>보고서 서버 속성(일반 페이지)
@@ -29,10 +29,10 @@ ms.locfileid: "65576165"
   
 ## <a name="options"></a>옵션  
  **이름**  
- 웹 포털의 맨 위에 표시되는 이름을 입력합니다. 기본적으로 이 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]입니다. 지정한 이름은 보고서 관리자에만 나타납니다.  
+ 웹 포털의 맨 위에 표시되는 이름을 입력합니다. 이 값은 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]입니다. 지정한 이름은 보고서 관리자에만 나타납니다.  
   
- **버전(Version)**  
- 이 속성은 읽기 전용입니다. 사용 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 버전을 지정합니다.  
+ **버전**  
+ 이 속성은 읽기 전용입니다. 사용 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 버전을 지정합니다.  
   
  **버전(Edition)**  
  이 속성은 읽기 전용입니다. 현재 보고서 서버 인스턴스를 지정합니다. 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서는 보고서 관리자를 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2017의 버전과 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-2017.md)을 참조하세요.  
@@ -53,9 +53,9 @@ ms.locfileid: "65576165"
 ## <a name="see-also"></a>참고 항목  
  [보고서 서버 속성 설정&#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
  [Management Studio에서 보고서 서버에 연결](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [내 보고서 설정 및 해제](../../reporting-services/report-server/enable-and-disable-my-reports.md)   
+ [내 보고서 사용 및 사용 안 함 설정](../../reporting-services/report-server/enable-and-disable-my-reports.md)   
  [Management Studio의 보고서 서버 F1 도움말](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [내 보고서 보안 설정](../../reporting-services/security/secure-my-reports.md)  
+ [내 보고서 보안](../../reporting-services/security/secure-my-reports.md)  
   
   
 

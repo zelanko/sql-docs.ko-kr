@@ -1,5 +1,5 @@
 ---
-title: othersUpdatesAreVisible 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs
+title: othersUpdatesAreVisible 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 3615c01f-ae0b-42a7-92b5-e8770d841c45
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 56380d1b81f5b5e4968217ce0bf4bbe5207eca01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976569"
 ---
 # <a name="othersupdatesarevisible-method-sqlserverdatabasemetadata"></a>othersUpdatesAreVisible 메서드(SQLServerDatabaseMetaData)
@@ -57,14 +57,14 @@ public boolean othersUpdatesAreVisible(int type)
   
  TYPE_SS_SCROLL_DYNAMIC  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  업데이트 내용이 표시되면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 othersUpdatesAreVisible 메서드는 othersUpdatesAreVisible 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 othersUpdatesAreVisible 메서드는 java.sql.DatabaseMetaData 인터페이스의 othersUpdatesAreVisible 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

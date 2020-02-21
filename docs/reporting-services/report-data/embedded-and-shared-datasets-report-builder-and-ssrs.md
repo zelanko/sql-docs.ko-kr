@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: adc95cc0-d15a-413d-bc5a-302eab37a069
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a3add572d240cc09a33f083d9f86a3791afd18c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 2ba5d42e04758b0577ca77e761a67b352dbbf163
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500445"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190822"
 ---
 # <a name="embedded-and-shared-datasets-report-builder-and-ssrs"></a>포함된 데이터 세트 및 공유 데이터 세트(보고서 작성기 및 SSRS)
   보고서에서 데이터 세트는 외부 데이터 원본에 대해 쿼리를 실행할 때 반환되는 보고서 데이터를 나타냅니다. 데이터 세트는 외부 데이터 원본에 대한 정보를 포함하는 데이터 연결에 따라 달라집니다. 이때 데이터 자체가 보고서 정의에 포함되지는 않습니다. 데이터 세트에는 쿼리 명령, 필드 컬렉션, 매개 변수, 필터 및 대/소문자 구분, 데이터 정렬 등의 데이터 옵션이 포함됩니다. 데이터 세트에는 두 가지 유형이 있습니다.  
@@ -57,11 +57,9 @@ ms.locfileid: "66500445"
  포함된 데이터 세트를 만들거나 편집하려면 보고서 데이터 창을 사용합니다. 데이터 세트를 만든 후에 **데이터 세트 속성** 대화 상자에서 속성을 구성할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [포함된 데이터 연결 및 공유 데이터 연결 또는 데이터 원본&#40;보고서 작성기 및 SSRS&#41;](https://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
- [공유 데이터 세트 또는 포함된 데이터 세트 만들기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [포함된 데이터 원본 및 공유 데이터 원본 비교 - 보고서 작성기 및 SSRS](compare-shared-embedded-data-sources-report-builder-ssrs.md) [공유 데이터 세트 또는 포함된 데이터 세트 만들기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [보고서 데이터 세트&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [데이터 세트 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
- [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   

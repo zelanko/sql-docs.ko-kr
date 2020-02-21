@@ -1,5 +1,5 @@
 ---
-title: 테이블 반환 매개 변수 (OLE DB) 사용 | Microsoft Docs
+title: 테이블 반환 매개 변수 사용(OLE DB) | Microsoft Docs
 description: 테이블 반환 매개 변수 사용(OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 7ec89b3fdafaba7fe81849ab2ae5b2baf926ef83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994593"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>테이블 반환 매개 변수 사용(OLE DB)
@@ -22,7 +22,7 @@ ms.locfileid: "67994593"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  이 예제는 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이상에서만 작동합니다. 이 예제에서는 다음을 수행합니다.  
+  이 예제는 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이상에서만 작동합니다. 이 샘플 애플리케이션은 다음을 수행합니다.  
   
 -   IOpenRowset::OpenRowset을 통해 동적 검색을 사용하여 테이블 반환 매개 변수를 만듭니다.  
   
@@ -32,9 +32,9 @@ ms.locfileid: "67994593"
   
 -   ISSCommandWithParameters를 사용하는 사용자 지정 매개 변수 속성을 사용합니다.  
   
--   MSOLEDBSQL 오류에 대 한 오류 처리를 보여 줍니다.  
+-   MSOLEDBSQL 오류를 처리하는 방법을 보여 줍니다.  
   
- 테이블 반환 매개 변수에 대 한 자세한 내용은 [SQL Server&#41;드라이버 OLE DB 테이블 반환 매개 &#40;변수](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md)를 참조 하세요.  
+ 테이블 반환 매개 변수에 대한 자세한 내용은 [테이블 반환 매개 변수&#40;OLE DB Driver for SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md).  
   
 ## <a name="example"></a>예제  
  첫 번째([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 코드 목록은 예제에서 사용하는 데이터베이스를 만듭니다.  

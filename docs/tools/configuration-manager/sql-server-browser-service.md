@@ -1,6 +1,6 @@
 ---
-title: SQL Server Browser 서비스 | Microsoft Docs
-ms.custom: ''
+title: SQL Server Browser 서비스
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -19,16 +19,16 @@ ms.assetid: 3cc00d3a-487c-4cd9-a155-655f02485fa0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ccac0c03b9dfcd4291227100787bb39072e91dca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: ba9a8f2af9b703b64ffadb597d9eda2edb28a0b8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024107"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307086"
 ---
 # <a name="sql-server-browser-service"></a>SQL Server Browser 서비스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser 프로그램은 Windows 서비스로 실행됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스에 대해 들어오는 요청을 수신하고 컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 정보를 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser를 사용할 수 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser 프로그램은 Windows 서비스로 실행됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스에 대해 들어오는 요청을 수신 대기하고 컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 정보를 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser를 사용할 수 있습니다.  
   
 -   사용할 수 있는 서버 목록 찾아보기  
   
@@ -130,7 +130,7 @@ ms.locfileid: "68024107"
  숨겨진 인스턴스는 공유 메모리 연결만 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 `HideInstance` 플래그를 설정하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser에서 이 서버 인스턴스에 대한 정보를 사용하여 응답할 수 없음을 나타내십시오.  
   
 ### <a name="using-a-firewall"></a>방화벽 사용  
- 방화벽이 설치된 서버의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스와 통신하려면 UDP 포트 1434 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 사용되는 1433 등의 TCP 포트를 여십시오. 방화벽 작업 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 “방법: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 액세스를 허용하도록 방화벽 구성”을 참조하십시오.  
+ 방화벽이 설치된 서버의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스와 통신하려면 UDP 포트 1434 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 사용되는 1433 등의 TCP 포트를 여십시오. 방화벽 작업 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "방법: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 액세스를 허용하도록 방화벽 구성"을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [네트워크 프로토콜 및 네트워크 라이브러리](../../sql-server/install/network-protocols-and-network-libraries.md)  

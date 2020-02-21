@@ -1,6 +1,6 @@
 ---
-title: SQL Server Integration Services 속성(로그온 탭) | Microsoft Docs
-ms.custom: ''
+title: SQL Server Integration Services 속성(로그온 탭)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: c0eb1b87-6bb0-475e-8492-0fd3c3f910ea
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 448653690fb6ff0f58b5bed308434c3bcff9a1e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 59fd7444eecfd0beb6310ecfec3380eaf1b8b3f3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024064"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306858"
 ---
 # <a name="sql-server-integration-services-properties-log-on-tab"></a>SQL Server Integration Services 속성(로그온 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

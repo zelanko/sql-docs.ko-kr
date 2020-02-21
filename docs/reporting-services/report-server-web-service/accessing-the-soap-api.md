@@ -20,10 +20,10 @@ ms.assetid: 63bb870a-4dbf-46bd-8921-78f8ebe5fd75
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c78f160e51265e4ce87a191aa3076dc4464c31d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63026168"
 ---
 # <a name="accessing-the-soap-api"></a>SOAP API 액세스
@@ -35,7 +35,7 @@ ms.locfileid: "63026168"
  보고서 서버 웹 서비스는 세 가지 엔드포인트로 표시되며, WSDL 파일의 이름은 각 엔드포인트에 대해 서로 다릅니다. <xref:ReportService2010> 엔드포인트는 기본 모드 또는 SharePoint 통합 모드에서 보고서 서버의 개체를 관리하는 메서드를 포함합니다. 이 엔드포인트에 대한 WSDL은 `ReportService2010.asmx?wsdl.`을 통해 액세스됩니다.  
   
 > [!NOTE]  
->  <xref:ReportService2005> 및 <xref:ReportService2006> 엔드포인트는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]에서 더 이상 사용되지 않습니다. <xref:ReportService2010> 엔드포인트에는 두 엔드포인트의 기능이 모두 포함되어 있으며 추가 관리 기능도 포함되어 있습니다.  
+>  <xref:ReportService2005> 및 <xref:ReportService2006> 엔드포인트는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]에서 더 이상 사용되지 않습니다. <xref:ReportService2010>엔드포인트에는 두 엔드포인트의 기능이 모두 포함되어 있으며 추가 관리 기능도 포함되어 있습니다.  
   
 -   <xref:ReportExecution2005> 엔드포인트를 통해 개발자는 보고서 서버의 보고서를 프로그래밍 방식으로 처리하고 렌더링할 수 있습니다. 이 엔드포인트에 대한 WSDL은 `ReportExecution2005.asmx?wsdl`을 통해 액세스됩니다.  
   
@@ -49,7 +49,7 @@ https://server/reportserver/ReportService2010.asmx?wsdl
   
  다음 표에서는 URL의 각 요소에 대해 설명합니다.  
   
-|URL 요소|설명|  
+|URL 요소|Description|  
 |-----------------|-----------------|  
 |*server*|보고서 서버가 배포된 서버의 이름입니다.|  
 |*reportserver*|XML 웹 서비스가 포함된 폴더의 이름입니다. 이 폴더는 설치 중 구성됩니다.|  

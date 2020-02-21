@@ -1,20 +1,21 @@
 ---
-title: 보고서 뷰어 현재 분기 버전 지원
+title: 보고서 뷰어 컨트롤 버전 지원
+description: Microsoft Report Viewer 컨트롤은 Microsoft 최신 수명 주기 정책 지원을 따르는 SQL Server Reporting Services 및 Power BI Report Server와 호환됩니다.
 author: maggiesMSFT
+ms.custom: ''
 ms.author: maggies
 ms.reviewer: jonhp
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
 ms.topic: reference
-ms.custom: ''
 ms.date: 01/09/2019
-ms.openlocfilehash: b67b62ae0155355d4bd13ce67880c6fa3c5ed002
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.openlocfilehash: 66691267ecdd2814cc84b2bfe544acce1d17ae82
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266943"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796875"
 ---
 # <a name="support-for-report-viewer-current-branch-versions"></a>보고서 뷰어 현재 분기 버전 지원
 

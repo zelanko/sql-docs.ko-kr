@@ -1,10 +1,7 @@
 ---
-title: AND에 우선 순위가 있는 조건 조합(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
-ms.date: 01/19/2017
+title: AND에 우선 순위가 있는 경우 조건 조합
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,26 +13,32 @@ helpviewer_keywords:
 ms.assetid: 450eb2eb-6ea3-405b-8dd2-1ff926c016e7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 58519cd3150c11496c3b8d3b672f3fe9001ae39a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: 0f7ca7c3a99165d15b7d5ac38450a3eb7e49d3a3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262508"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241232"
 ---
-# <a name="combine-conditions-when-and-has-precedence-visual-database-tools"></a>AND에 우선 순위가 있는 조건 조합(Visual Database Tools)
+# <a name="combine-conditions-when-and-has-precedence-visual-database-tools"></a>AND에 우선 순위가 있는 경우 조건 조합(Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
 AND를 사용하여 조건을 조합하려면 각 조건에 한 번씩, 즉 쿼리에 열을 두 번 추가합니다. 조건을 OR와 조합하려면 첫째 조건은 필터 열에 지정하고 추가 조건은 **또는...** 열에 지정합니다.  
   
 예를 들어, 근무 연수가 5년이 넘으면서 직급이 낮은 직원과 고용 날짜에 상관 없이 중간 직급인 직원을 찾는다고 가정합니다. 이 쿼리에는 세 개의 조건이 필요하며 그 중 두 조건은 AND로 연결되어 있어야 합니다.  
   
 -   근무 연수가 5년이 넘으면서 직급이 100인 직원  
   
-    -또는-  
+    또는  
   
 -   직급이 200인 직원  
   
-### <a name="to-combine-conditions-when-and-has-precedence"></a>AND에 우선 순위가 있는 경우 조건을 조합하려면  
+## <a name="to-combine-conditions-when-and-has-precedence"></a>AND에 우선 순위가 있는 경우 조건을 조합하려면  
   
 1.  [조건 창](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)에서 검색할 데이터 열을 추가합니다. AND로 연결된 둘 이상의 조건을 사용하여 동일한 열을 검색하려면 검색할 각 값에 대하여 한 번씩 데이터 열 이름을 표에 추가해야 합니다.  
   
@@ -58,9 +61,9 @@ AND를 사용하여 조건을 조합하려면 각 조건에 한 번씩, 즉 쿼�
       (job_lvl = 200)  
     ```  
   
-## <a name="see-also"></a>참고 항목  
-[OR에 우선 순위가 있는 조건 조합(Visual Database Tools)](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
-[조건 창의 검색 조건 결합 규칙(Visual Database Tools)](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
-[검색 값 입력 규칙(Visual Database Tools)](../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  
-[검색 조건 지정(Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
-  
+## <a name="see-also"></a>참고 항목
+
+[OR에 우선 순위가 있는 경우 조건 결합](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
+[조건 창의 검색 조건 결합 규칙](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
+[검색 값 입력 규칙](../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  
+[검색 조건 지정](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)

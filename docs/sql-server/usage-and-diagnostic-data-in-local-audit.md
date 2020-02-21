@@ -1,6 +1,7 @@
 ---
-title: SQL Server 사용 현황 및 진단 데이터 수집에 대한 로컬 감사 | Microsoft Docs
-ms.custom: ''
+title: 사용량 현황 및 진단 데이터 수집의 로컬 감사
+description: 사용량 현황 및 진단 데이터를 수집하고 Microsoft에 보내기 위해 SQL Server에서 사용하는 로컬 감사에 대해 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 03/27/2019
 ms.prod: sql
 ms.prod_service: security
@@ -13,12 +14,12 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3c7697d72aa98429bdaff64044f447dd11384f6d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b34d69ea0d402f568efa4e6951367cce3cfa0eca
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984770"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558060"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>SQL Server 사용 현황 및 진단 데이터 수집(CEIP)에 대한 로컬 감사
 
@@ -30,7 +31,7 @@ Microsoft SQL Server에는 컴퓨터 또는 디바이스에 대한 정보를 수
 
 SQL Server 2016 CU2부터 SQL Server 데이터베이스 엔진 및 SSAS(SQL Server Analysis Services)에 대한 인스턴스 수준에서 구성할 수 있습니다. SQL Server 2016 CU4 및 SQL Server 2016 SP1에서는 SSIS(SQL Server Integration Services)에도 로컬 감사를 사용할 수 있습니다. 설정 중 설치한 다른 SQL Server 구성 요소와 설정 후 다운로드하거나 설치한 SQL Server 도구에는 사용 현황 및 진단 데이터 수집에 대한 로컬 감사 기능이 포함되어 있지 않습니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
  - SQL CEIP 서비스 제거 또는 비활성화는 지원되지 않습니다. 
  - 클러스터 그룹에서 SQL CEIP 리소스를 제거하는 것은 지원되지 않습니다. 
@@ -93,7 +94,7 @@ SQL Server CEIP 서비스 로그온 계정을 가져오려면 다음 단계를 �
 
 1. **보안 탭**에서 **편집** 관리 권한을 선택합니다.
 
-1. **추가**를 선택하고 SQL Server CEIP 서비스의 자격 증명을 입력합니다. 예를 들면 `NT Service\SQLTELEMETRY`입니다.
+1. **추가**를 선택하고 SQL Server CEIP 서비스의 자격 증명을 입력합니다. 예: `NT Service\SQLTELEMETRY`.
 
 1. **이름 확인**을 선택하여 제공한 이름의 유효성을 검사한 후 **확인**을 선택합니다.
 
@@ -107,23 +108,26 @@ SQL Server CEIP 서비스 로그온 계정을 가져오려면 다음 단계를 �
 
 1. 적절한 CPE 경로로 이동합니다.
 
-   | 버전 옵션 | ***데이터베이스 엔진*** -레지스트리 키 |
+   | 버전 | ***데이터베이스 엔진*** -레지스트리 키 |
    | :------ | :----------------------------- |
    | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**13**.*Your-Instance-Name*\\CPE |
    | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**14**.*Your-Instance-Name*\\CPE |
+   | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**15**.*Your-Instance-Name*\\CPE |
    | &nbsp; | &nbsp; |
 
-   | 버전 옵션 | ***Analysis Services*** - 레지스트리 키 |
+   | 버전 | ***Analysis Services*** - 레지스트리 키 |
    | :------ | :------------------------------- |
    | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**13**.*Your-Instance-Name*\\CPE |
    | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**14**.*Your-Instance-Name*\\CPE |
+   | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**15**.*Your-Instance-Name*\\CPE |  
    | &nbsp; | &nbsp; |
 
-  | 버전 옵션 | ***Integration Services*** - 레지스트리 키 |
-  | :------ | :---------------------------------- |
-  | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**130** |
-  | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**140** |
-  | &nbsp; | &nbsp; |
+   | 버전 | ***Integration Services*** - 레지스트리 키 |
+   | :------ | :---------------------------------- |
+   | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**130** |
+   | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**140** |
+   | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**150** |
+   | &nbsp; | &nbsp; |
 
 1. CPE 경로를 마우스 오른쪽 단추로 클릭하고 **새로 만들기**를 선택합니다. **문자열 값**을 선택합니다.
 
@@ -154,8 +158,9 @@ SQL Server CEIP 서비스 로그온 계정을 가져오려면 다음 단계를 �
     - 데이터베이스 엔진의 경우 **SQL Server CEIP 서비스(*Your-Instance-Name*)** 를 사용합니다.     
     - Analysis Services의 경우 **SQL Server Analysis Services CEIP(*Your-Instance-Name*)** 를 사용합니다.
     - Integration Services의 경우 
-        - SQL 2016의 경우 *SQL Server Integration Services CEIP 서비스 13.0*을 사용합니다.
-        - SQL 2017의 경우 *SQL Server Integration Services CEIP 서비스 14.0*을 사용합니다.
+        - SQL 2016의 경우 ‘SQL Server Integration Services CEIP 서비스 13.0’을 사용합니다. 
+        - SQL 2017의 경우 ‘SQL Server Integration Services CEIP 서비스 14.0’을 사용합니다. 
+    - SQL 2019의 경우 ‘SQL Server Integration Services CEIP 서비스 15.0’을 사용합니다. 
 
 1. 서비스를 마우스 오른쪽 단추로 클릭하고 다시 시작을 선택합니다. 
 
@@ -185,18 +190,18 @@ SQL Server CEIP 서비스 로그온 계정을 가져오려면 다음 단계를 �
 
 | 논리적 로컬 감사 정보 계층 구조 | 관련 열 |
 | ------ | -------|
-| 머리글 | emitTime, schemaVersion 
+| 헤더 | emitTime, schemaVersion 
 | 컴퓨터 | operatingSystem 
 | 인스턴스 | instanceUniqueID, correlationID, clientVersion 
-| Session | sessionID, traceName 
+| 세션 | sessionID, traceName 
 | 쿼리 | sequence, querySetVersion, queryIdentifier, query, queryTimeInTicks 
-| data |  data 
+| 데이터 |  데이터 
 
 ### <a name="namevalue-pairs-definition-and-examples"></a>이름/값 쌍 정의 및 예제 
 
 아래 나열된 열은 로컬 감사 파일 출력 순서를 나타냅니다. SHA 256을 사용하는 단방향 해시를 통해 아래의 다양한 열이 익명 값으로 처리됩니다.  
 
-| 속성 | 설명 | 예제 값
+| 속성 | Description | 예제 값
 |-------|--------| ----------|
 |instanceUniqueID| 익명화된 인스턴스 식별자 | 888770C4D5A8C6729F76F33D472B28883AE518C92E1999888B171A085059FD 
 |schemaVersion| SQLCEIP의 스키마 버전 |  3 
@@ -209,7 +214,7 @@ SQL Server CEIP 서비스 로그온 계정을 가져오려면 다음 단계를 �
 |querySetVersion | 쿼리 정의의 그룹 버전 | 1.0.0.0 
 |queryIdentifier | 추적 범주: (SQLServerXeQueries, SQLServerPeriodicQueries, SQLServerOneSettingsException) | SQLServerPeriodicQueries 
 |traceName | 쿼리 식별자 | SQLServerProperties.002 
-|data   | T-SQL 쿼리, XE 세션 또는 애플리케이션의 출력으로 queryIdentifier에서 수집된 정보 출력 |  [{"Collation": "SQL_Latin1_General_CP1_CI_AS","SqlFTinstalled": "0" "SqlIntSec": "1","IsSingleUser": "0","SqlFilestreamMode": "0","SqlPbInstalled": "0","SqlPbNodeRole": "","SqlVersionMajor": "13","SqlVersionMinor": "0","SqlVersionBuild": "2161","ProductBuildType": "","ProductLevel": "RTM","ProductUpdateLevel": "CU2","ProductUpdateReference": "KB3182270","ProductRevision": "3","SQLEditionId": "-1534726760","IsClustered": "0","IsHadrEnabled": "0","SqlAdvAInstalled": "0","PacketReceived": "1210","Version": "Microsoft SQL Server 2016(RTM-CU2) (KB3182270) - Windows Server 2012 R2 Datacenter 6.3 \u003cX64\u003e (Build 9600: ) (Hypervisor)\n"}]의 13.0.2161.3 (X64) \n\tSep  7 2016 14:24:16 \n\tCopyright(c) Microsoft Corporation\n\tStandard Edition(64비트)
+|데이터   | T-SQL 쿼리, XE 세션 또는 애플리케이션의 출력으로 queryIdentifier에서 수집된 정보 출력 |  [{"Collation": "SQL_Latin1_General_CP1_CI_AS","SqlFTinstalled": "0" "SqlIntSec": "1","IsSingleUser": "0","SqlFilestreamMode": "0","SqlPbInstalled": "0","SqlPbNodeRole": "","SqlVersionMajor": "13","SqlVersionMinor": "0","SqlVersionBuild": "2161","ProductBuildType": "","ProductLevel": "RTM","ProductUpdateLevel": "CU2","ProductUpdateReference": "KB3182270","ProductRevision": "3","SQLEditionId": "-1534726760","IsClustered": "0","IsHadrEnabled": "0","SqlAdvAInstalled": "0","PacketReceived": "1210","Version": "Microsoft SQL Server 2016(RTM-CU2) (KB3182270) - Windows Server 2012 R2 Datacenter 6.3 \u003cX64\u003e (Build 9600: ) (Hypervisor)\n"}]의 13.0.2161.3 (X64) \n\tSep  7 2016 14:24:16 \n\tCopyright(c) Microsoft Corporation\n\tStandard Edition(64비트)
 |Query| 해당하는 경우 데이터를 생성하는 queryIdentifier와 관련된 T-SQL 쿼리 정의.        이 구성 요소는 SQL Server CEIP 서비스에서 업로드되지 않습니다. 고객에 대한 참조로만 로컬 감사에 포함됩니다.| SELECT\n      SERVERPROPERTY(\u0027Collation\u0027) AS [Collation],\n      SERVERPROPERTY(\u0027IsFullTextInstalled\u0027) AS [SqlFTinstalled],\n      SERVERPROPERTY(\u0027IsIntegratedSecurityOnly\u0027) AS [SqlIntSec],\n      SERVERPROPERTY(\u0027IsSingleUser\u0027) AS [IsSingleUser],\n      SERVERPROPERTY (\u0027FileStreamEffectiveLevel\u0027) AS [SqlFilestreamMode],\n      SERVERPROPERTY(\u0027IsPolyBaseInstalled\u0027) AS [SqlPbInstalled],\n      SERVERPROPERTY(\u0027PolyBaseRole\u0027) AS [SqlPbNodeRole],\n      SERVERPROPERTY(\u0027ProductMajorVersion\u0027) AS [SqlVersionMajor],\n      SERVERPROPERTY(\u0027ProductMinorVersion\u0027) AS [SqlVersionMinor],\n      SERVERPROPERTY(\u0027ProductBuild\u0027) AS [SqlVersionBuild],\n      SERVERPROPERTY(\u0027ProductBuildType\u0027) AS ProductBuildType,\n      SERVERPROPERTY(\u0027ProductLevel\u0027) AS ProductLevel,\n      SERVERPROPERTY(\u0027ProductUpdateLevel\u0027) AS ProductUpdateLevel,\n      SERVERPROPERTY(\u0027ProductUpdateReference\u0027) AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)),CHARINDEX(\u0027.\u0027, REVERSE(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY(\u0027EditionID\u0027) AS SQLEditionId,\n      SERVERPROPERTY(\u0027IsClustered\u0027) AS IsClustered,\n      SERVERPROPERTY(\u0027IsHadrEnabled\u0027) AS IsHadrEnabled,\n      SERVERPROPERTY(\u0027IsAdvancedAnalyticsInstalled\u0027) AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version
 |queryTimeInTicks | 다음 추적 범주가 포함된 쿼리를 실행하는 데 소요되는 기간: (SQLServerXeQueries, SQLServerPeriodicQueries) |  0 
  
@@ -374,5 +379,5 @@ FROM OPENJSON(@JSONFile)
 WHERE queryIdentifier = 'DatabaseProperties.001'
 ```
 
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 [SSMS 사용 현황 및 진단 데이터 수집에 대한 로컬 감사](../ssms/sql-server-management-studio-telemetry-ssms.md)

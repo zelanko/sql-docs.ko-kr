@@ -1,10 +1,7 @@
 ---
-title: 작업 단계 속성 - 새 작업 단계(일반 페이지) | Microsoft 문서
-ms.custom: ''
-ms.date: 01/19/2017
+title: 새 작업 단계 속성(일반 페이지)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,15 +9,20 @@ f1_keywords:
 ms.assetid: 8d1885ba-4386-4528-8f2b-68c16852720c
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 173f317ba66a9b05bfa6d99bf28f60ecf518ae19
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7c8c707e8a1916041b32a2509e54d6150ea8df9a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267570"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242217"
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>작업 단계 속성 - 새 작업 단계(일반 페이지)
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -40,20 +42,20 @@ ms.locfileid: "68267570"
 **다음 계정으로 실행**  
 작업 단계에 사용할 프록시 계정을 설정합니다. sysadmin 고정 서버 역할의 멤버는 **SQL 에이전트 서비스 계정**도 지정할 수 있습니다.  
   
-**데이터베이스 백업**  
+**Database**  
 작업 단계가 실행되는 데이터베이스를 설정합니다. 일부 작업 단계 유형에 대해서는 이 옵션을 사용할 수 없습니다.  
   
-**Command**  
+**명령**  
 작업 단계에서 실행하는 명령을 설정합니다.  
   
 ## <a name="options-for-transact-sql-job-steps"></a>Transact-SQL 작업 단계 옵션  
-**파일**  
+**열기**  
 파일에서 명령을 로드합니다.  
   
 **모두 선택**  
 명령의 텍스트를 선택합니다.  
   
-**복사**  
+**Copy**  
 선택한 텍스트를 클립보드에 복사합니다.  
   
 **붙여넣기**  
@@ -76,13 +78,13 @@ ms.locfileid: "68267570"
 **기타**  
 다른 스크립트 언어로 작성된 작업 단계에 사용할 언어 이름을 입력합니다.  
   
-**파일**  
+**열기**  
 파일에서 명령을 로드합니다.  
   
 **모두 선택**  
 명령의 텍스트를 선택합니다.  
   
-**복사**  
+**Copy**  
 선택한 텍스트를 복사합니다.  
   
 **붙여넣기**  
@@ -92,26 +94,26 @@ ms.locfileid: "68267570"
 **성공한 명령의 프로세스 종료 코드**  
 성공을 나타내기 위해 명령에서 반환하는 종료 코드를 입력합니다.  
   
-**파일**  
+**열기**  
 파일에서 명령을 로드합니다.  
   
 **모두 선택**  
 명령의 텍스트를 선택합니다.  
   
-**복사**  
+**Copy**  
 선택한 텍스트를 복사합니다.  
   
 **붙여넣기**  
 클립보드의 내용을 붙여 넣습니다.  
   
 ## <a name="options-for-powershell-job-steps"></a>PowerShell 작업 단계 옵션  
-**파일**  
+**열기**  
 파일로부터 스크립트를 로드합니다.  
   
 **모두 선택**  
 스크립트의 텍스트를 선택합니다.  
   
-**복사**  
+**Copy**  
 선택한 텍스트를 복사합니다.  
   
 **붙여넣기**  
@@ -121,7 +123,7 @@ ms.locfileid: "68267570"
 **모두 선택**  
 명령의 텍스트를 선택합니다.  
   
-**복사**  
+**Copy**  
 선택한 텍스트를 복사합니다.  
   
 **붙여넣기**  
@@ -131,20 +133,20 @@ ms.locfileid: "68267570"
 **모두 선택**  
 명령의 텍스트를 선택합니다.  
   
-**복사**  
+**Copy**  
 선택한 텍스트를 복사합니다.  
   
 **붙여넣기**  
 클립보드의 내용을 붙여 넣습니다.  
   
 ## <a name="options-for-replication-queue-reader-job-steps"></a>복제 큐 판독기 작업 단계 옵션  
-**데이터베이스 백업**  
+**Database**  
 작업 단계에 사용할 데이터베이스입니다.  
   
 **모두 선택**  
 명령의 텍스트를 선택합니다.  
   
-**복사**  
+**Copy**  
 선택한 텍스트를 복사합니다.  
   
 **붙여넣기**  
@@ -154,7 +156,7 @@ ms.locfileid: "68267570"
 **모두 선택**  
 명령의 텍스트를 선택합니다.  
   
-**복사**  
+**Copy**  
 선택한 텍스트를 복사합니다.  
   
 **붙여넣기**  
@@ -164,7 +166,7 @@ ms.locfileid: "68267570"
 **모두 선택**  
 명령의 텍스트를 선택합니다.  
   
-**복사**  
+**Copy**  
 선택한 텍스트를 복사합니다.  
   
 **붙여넣기**  
@@ -180,7 +182,7 @@ ms.locfileid: "68267570"
 **모두 선택**  
 명령의 텍스트를 선택합니다.  
   
-**복사**  
+**Copy**  
 선택한 텍스트를 복사합니다.  
   
 **붙여넣기**  
@@ -190,16 +192,16 @@ ms.locfileid: "68267570"
 **Server**  
 작업 단계를 실행할 서버를 선택합니다.  
   
-**데이터베이스**  
+**Database**  
 작업 단계에 사용할 데이터베이스입니다.  
   
-**파일**  
+**열기**  
 파일에서 명령을 로드합니다.  
   
 **모두 선택**  
 명령의 텍스트를 선택합니다.  
   
-**복사**  
+**Copy**  
 선택한 텍스트를 복사합니다.  
   
 **붙여넣기**  
@@ -330,7 +332,7 @@ ms.locfileid: "68267570"
 **속성 경로**  
 속성 경로를 표시하거나 변경합니다.  
   
-**Value**  
+**값**  
 속성 값을 표시하거나 변경합니다.  
   
 **제거**  

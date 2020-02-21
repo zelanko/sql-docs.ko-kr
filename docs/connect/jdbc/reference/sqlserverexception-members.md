@@ -11,10 +11,10 @@ ms.assetid: 610be62e-0994-40bc-9348-4615b9b7a180
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7df5cc4b13ed8896cdd140195bdecc10ea304b40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971003"
 ---
 # <a name="sqlserverexception-members"></a>SQLServerException 멤버
@@ -24,9 +24,9 @@ ms.locfileid: "67971003"
   
 ## <a name="constructors"></a>생성자  
 
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
-|[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-constructors.md)|SQLServerException 클래스의 새 인스턴스를 초기화 합니다.|  
+|[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-constructors.md)|SQLServerException 클래스의 새 인스턴스를 초기화합니다.|  
   
 ## <a name="fields"></a>필드  
  없음  

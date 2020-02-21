@@ -16,10 +16,10 @@ ms.assetid: 9bbc734c-9e69-48c2-8bec-8abe7c6cc987
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5b12b21fe8e51f8c03bf01efd7df63053c528781
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570919"
 ---
 # <a name="configurationsetting-method---setwindowsserviceidentity"></a>ConfigurationSetting 메서드 - SetWindowsServiceIdentity
@@ -50,10 +50,10 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
  *HRESULT*  
  [out] 호출의 성공 여부를 나타내는 값입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드 호출의 성공 또는 실패를 나타내는 *HRESULT* 를 반환합니다. 0 값은 메서드 호출이 성공했음을 나타냅니다. 0 이외의 값은 오류가 발생했음을 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  *UseBuiltInAccount* 매개 변수가 **true** 로 설정되어 있고 보고서 서버가 Microsoft [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)] 또는 Windows XP에서 실행되고 있으면 *Name*, *Domain*및 *Password* 매개 변수의 값이 무시되고 로컬 시스템 계정이 사용됩니다.  
   
  *UseBuiltInAccount* 매개 변수가 **true**로 설정되어 있고 보고서 서버가 Windows Server 2003에서 실행되고 있으면 *Domain* 및 *Password* 속성이 무시되고 이름 필드에 "Builtin\NetworkService", "Builtin\System" 또는 "Builtin\LocalService"가 포함되어야 합니다.  

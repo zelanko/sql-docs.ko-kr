@@ -16,10 +16,10 @@ ms.assetid: 9a7c754c-2d72-4207-b3bd-2afc6047fb3d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 11a92c879995d198658853ef9b5cec9d00449230
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976831"
 ---
 # <a name="movetocurrentrow-method-sqlserverresultset"></a>moveToCurrentRow 메서드(SQLServerResultSet)
@@ -37,8 +37,8 @@ public void moveToCurrentRow()
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 moveToCurrentRow 메서드는 moveToCurrentRow 인터페이스의 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 moveToCurrentRow 메서드는 java.sql.ResultSet 인터페이스의 moveToCurrentRow 메서드에 의해 지정됩니다.  
   
  커서가 삽입 행에 있지 않으면 이 메서드는 아무 영향도 주지 않습니다.  
   

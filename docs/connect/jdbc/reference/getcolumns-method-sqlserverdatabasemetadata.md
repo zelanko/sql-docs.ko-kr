@@ -16,10 +16,10 @@ ms.assetid: f173fa5d-e114-4a37-a5c4-2baad9ff3af1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d34f5748a5a85d67754ea9a001ba1819935e53a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67952833"
 ---
 # <a name="getcolumns-method-sqlserverdatabasemetadata"></a>getColumns 메서드(SQLServerDatabaseMetaData)
@@ -54,18 +54,18 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  열 이름 패턴이 포함된 **문자열**입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 getColumns 메서드는 java.sql.DatabaseMetaData 인터페이스의 getColumns 메서드에 의해 지정됩니다.  
   
  getColumns 메서드에서 반환되는 결과 집합에는 다음 정보가 포함됩니다.  
   
-|속성|형식|설명|  
+|속성|Type|Description|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|카탈로그 이름입니다.|  
 |TABLE_SCHEM|**String**|테이블 스키마 이름입니다.|  
@@ -95,7 +95,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |SS_XML_SCHEMACOLLECTION_CATALOG_NAME|**String**|XML 스키마 컬렉션 이름이 정의된 카탈로그의 이름입니다. 카탈로그 이름을 찾을 수 없는 경우 이 변수에는 빈 문자열이 포함됩니다. <sup>1</sup>|  
 |SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|**String**|XML 스키마 컬렉션 이름이 정의된 스키마의 이름입니다. 스키마 이름을 찾을 수 없는 경우 이 변수는 빈 문자열입니다. <sup>1</sup>|  
 |SS_XML_SCHEMACOLLECTION_NAME|**String**|XML 스키마 컬렉션의 이름입니다. 이름을 찾을 수 없는 경우 이 변수는 빈 문자열입니다. <sup>1</sup>|  
-|SS_DATA_TYPE|**tinyint**|확장 저장 프로시저에 사용되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식입니다.<br /><br /> **참고** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 반환하는 데이터 형식에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 온라인 설명서의 “데이터 형식(Transact-SQL)”을 참조하십시오.|  
+|SS_DATA_TYPE|**tinyint**|확장 저장 프로시저에 사용되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식입니다.<br /><br /> **참고**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 반환하는 데이터 형식에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 온라인 설명서의 “데이터 형식(Transact-SQL)”을 참조하십시오.|  
   
  (1) 이 열은 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에 연결하고 있는 경우에는 표시되지 않습니다.  
   
@@ -114,9 +114,9 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |varbinary(max)|LONGVARBINARY(-4)|VARBINARY(-3)|  
 |nvarchar(max)|LONGVARCHAR(-1) 또는 LONGNVARCHAR(JDBC 4)(-16)|VARCHAR(12) 또는 NVARCHAR(JDBC 4)(-9)|  
 |varchar(max)|LONGVARCHAR(-1)|VARCHAR(12)|  
-|Time|VARCHAR(12) 또는 NVARCHAR(JDBC 4)(-9)|TIME(-154)|  
-|날짜|VARCHAR(12) 또는 NVARCHAR(JDBC 4)(-9)|DATE(91)|  
-|Datetime2|VARCHAR(12) 또는 NVARCHAR(JDBC 4)(-9)|TIMESTAMP(93)|  
+|time|VARCHAR(12) 또는 NVARCHAR(JDBC 4)(-9)|TIME(-154)|  
+|date|VARCHAR(12) 또는 NVARCHAR(JDBC 4)(-9)|DATE(91)|  
+|datetime2|VARCHAR(12) 또는 NVARCHAR(JDBC 4)(-9)|TIMESTAMP(93)|  
 |datetimeoffset|VARCHAR(12) 또는 NVARCHAR(JDBC 4)(-9)|microsoft.sql.Types.DATETIMEOFFSET(-155)|  
   
  COLUMN_SIZE 열의 변경 사항은 다음과 같습니다.  
@@ -124,11 +124,11 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식|JDBC 드라이버 2.0의 반환 형식|JDBC 드라이버 3.0의 반환 형식|  
 |-------------------------------------------------------------------|------------------------------------|------------------------------------|  
 |nvarchar(max)|1073741823|2147483647(데이터베이스 메타데이터)|  
-|xml|1073741823|2147483647(데이터베이스 메타데이터)|  
+|Xml|1073741823|2147483647(데이터베이스 메타데이터)|  
 |8KB 이하의 사용자 정의 형식|8KB(결과 집합 및 매개 변수 메타데이터)|저장 프로시저에서 반환되는 실제 크기|  
-|Time||형식에 대한 문자열 표현의 문자 길이로, 소수 자릿수 초 구성 요소가 최대 허용 전체 자릿수라고 가정합니다.|  
-|날짜||time과 동일|  
-|Datetime2||time과 동일|  
+|time||형식에 대한 문자열 표현의 문자 길이로, 소수 자릿수 초 구성 요소가 최대 허용 전체 자릿수라고 가정합니다.|  
+|date||time과 동일|  
+|datetime2||time과 동일|  
 |datetimeoffset||time과 동일|  
   
  BUFFER_LENGTH 열의 변경 사항은 다음과 같습니다.  
@@ -142,15 +142,15 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식|JDBC 드라이버 2.0의 반환 형식|JDBC 드라이버 3.0의 반환 형식|  
 |-------------------------------------------------------------------|------------------------------------|------------------------------------|  
 |varchar(max)|text|varchar|  
-|varbinary(max)|image|varbinary|  
+|varbinary(max)|이미지|varbinary|  
   
  DECIMAL_DIGITS 열의 변경 사항은 다음과 같습니다.  
   
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 형식|JDBC 드라이버 2.0|JDBC 드라이버 3.0|  
 |--------------------------------------------------------------|---------------------|---------------------|  
-|Time|null|7(또는 지정된 경우 7 미만)|  
-|날짜|null|null|  
-|Datetime2|null|7(또는 지정된 경우 7 미만)|  
+|time|null|7(또는 지정된 경우 7 미만)|  
+|date|null|null|  
+|datetime2|null|7(또는 지정된 경우 7 미만)|  
 |datetimeoffset|null|7(또는 지정된 경우 7 미만)|  
   
  SQL_DATA_TYPE 열의 변경 사항은 다음과 같습니다.  
@@ -159,15 +159,15 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |-------------------------------------------------------------------|--------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|  
 |varchar(max)|-10|-9|  
 |nvarchar(max)|-1|-9|  
-|xml|-10|-152|  
+|Xml|-10|-152|  
 |8KB 이하의 사용자 정의 형식|-3|-151|  
 |8KB를 초과하는 사용자 정의 형식|JDBC 드라이버 2.0에서는 사용할 수 없음|-151|  
 |geography|-4|-151|  
 |geometry|-4|-151|  
 |hierarchyid|-4|-151|  
-|Time|-9|92|  
-|날짜|-9|91|  
-|Datetime2|-9|93|  
+|time|-9|92|  
+|date|-9|91|  
+|datetime2|-9|93|  
 |datetimeoffset|-9|-155|  
   
 ## <a name="example"></a>예제  

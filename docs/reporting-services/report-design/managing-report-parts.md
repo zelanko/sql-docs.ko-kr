@@ -9,10 +9,10 @@ ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 241d74d615f9aac2cbe48d084fd2d8e91ea9abbf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580095"
 ---
 # <a name="managing-report-parts"></a>보고서 파트 관리
@@ -22,7 +22,7 @@ ms.locfileid: "65580095"
  보고서 파트를 관리하려면 기본 모드로 보고서 서버의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 사용하거나 SharePoint 통합 모드로 보고서 서버의 애플리케이션 페이지를 사용합니다.  
   
 ### <a name="server-side-interaction-and-search"></a>서버 쪽 상호 작용 및 검색  
- 보고서 파트는 기본 모드 또는 SharePoint 통합 모드에서 보고서 서버에 게시할 수 있습니다. 사용자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보고서 작성기와 같은 보고서 제작 애플리케이션의 보고서 파트 갤러리 기능을 사용하여 보고서 파트를 찾고 이를 보고서에 추가할 수 있습니다. 사용자가 보고서 파트를 검색할 경우 서버가 설치된 모드와 상관없이 보고서 서버 카탈로그에서 검색이 수행됩니다.  
+ 보고서 파트는 기본 모드 또는 SharePoint 통합 모드에서 보고서 서버에 게시할 수 있습니다. 사용자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보고서 작성기와 같은 보고서 제작 애플리케이션의 보고서 파트 갤러리 기능을 사용하여 보고서 파트를 찾고 이를 보고서에 추가할 수 있습니다. 사용자가 보고서 파트를 검색할 경우 서버가 설치된 모드와 상관없이 보고서 서버 카탈로그에서 검색이 수행됩니다.  
   
  보고서 작성기와 같은 보고서 제작 애플리케이션에서 SharePoint 통합 모드의 보고서 서버로 보고서 파트를 게시하면 보고서 서버 카탈로그도 업데이트되므로 갤러리 검색에도 새 보고서 파트나 업데이트 보고서 파트가 정확히 반영됩니다.  
   
@@ -47,15 +47,15 @@ ms.locfileid: "65580095"
   
  별표(*)는 이번 릴리스에 새로 추가된 것임을 나타냅니다.  
   
-|속성|설명|보고서 파트<br /><br /> 갤러리 검색 조건|  
+|속성|Description|보고서 파트<br /><br /> 갤러리 검색 조건|  
 |--------------|-----------------|---------------------------------------------|  
-|속성|사용자가 보고서 파트 갤러리에서 검색할 수 있는 조건 중 하나입니다.|예|  
-|설명|사용자가 갤러리에서 쉽게 찾을 수 있도록 보고서 파트 이름을 구성할 수 있습니다. 예를 들어 판매 관련 데이터 및 프레젠테이션이 포함되는 모든 보고서 파트를 찾을 때 "판매>>"로 시작하는 설명을 검색할 수 있습니다.|예|  
-|CreatedBy|보고서 파트를 보고서 서버 데이터베이스에 추가한 사용자의 ID입니다. 정확한 형식은 인증 방식에 따라 다릅니다. 예를 들어 일부 인증 방법은 CreatedBy 및 ModifiedBy 필드에 전체 도메인\사용자 이름이 표시됩니다.|예|  
-|CreationDate|보고서 파트가 처음 생성된 날짜입니다.<br /><br /> 사용자가 보고서 파트 갤러리에서 검색할 수 있는 조건 중 하나입니다.|예|  
-|ModifiedBy|ModifiedBy는 보고서 파트를 마지막으로 수정한 사람의 ID입니다.|예|  
-|ModifiedDate|서버에서 보고서 파트가 마지막으로 수정된 날짜입니다.<br /><br /> 이 필드는 보고서 파트에 대해 서버 쪽 업데이트가 이루어진 시점을 확인하는 논리의 일부로 사용됩니다. 자세한 내용은 이 표의 뒷부분에 나오는 ComponentID에 대한 설명을 참조하십시오.|예|  
-|SubType (*)|SubType은 "테이블릭스" 또는 "차트"와 같이 검색할 보고서 파트의 종류를 나타내는 문자열입니다.|예|  
+|속성|사용자가 보고서 파트 갤러리에서 검색할 수 있는 조건 중 하나입니다.|yes|  
+|Description|사용자가 갤러리에서 쉽게 찾을 수 있도록 보고서 파트 이름을 구성할 수 있습니다. 예를 들어 판매 관련 데이터 및 프레젠테이션이 포함되는 모든 보고서 파트를 찾을 때 "판매>>"로 시작하는 설명을 검색할 수 있습니다.|yes|  
+|CreatedBy|보고서 파트를 보고서 서버 데이터베이스에 추가한 사용자의 ID입니다. 정확한 형식은 인증 방식에 따라 다릅니다. 예를 들어 일부 인증 방법은 CreatedBy 및 ModifiedBy 필드에 전체 도메인\사용자 이름이 표시됩니다.|yes|  
+|CreationDate|보고서 파트가 처음 생성된 날짜입니다.<br /><br /> 사용자가 보고서 파트 갤러리에서 검색할 수 있는 조건 중 하나입니다.|yes|  
+|ModifiedBy|ModifiedBy는 보고서 파트를 마지막으로 수정한 사람의 ID입니다.|yes|  
+|ModifiedDate|서버에서 보고서 파트가 마지막으로 수정된 날짜입니다.<br /><br /> 이 필드는 보고서 파트에 대해 서버 쪽 업데이트가 이루어진 시점을 확인하는 논리의 일부로 사용됩니다. 자세한 내용은 이 표의 뒷부분에 나오는 ComponentID에 대한 설명을 참조하십시오.|yes|  
+|SubType (*)|SubType은 "테이블릭스" 또는 "차트"와 같이 검색할 보고서 파트의 종류를 나타내는 문자열입니다.|yes|  
 |ComponentID (*)|ComponentID는 보고서 파트의 고유 식별자입니다. 카탈로그에 추가되는 새 필드로, 서버 쪽뿐만 아니라 보고서 작성기와 같은 보고서 제작 애플리케이션에서도 표시됩니다.<br /><br /> 클라이언트 애플리케이션이 서버에서 보고서 파트의 업데이트를 확인할 때도 이 필드가 사용됩니다. 클라이언트 애플리케이션은 서버에서 현재 클라이언트 쪽 보고서에 있는 ComponentID를 검색합니다. 일치하는 ComponentID가 있으면, ModifiedDate를 보고서 항목의 클라이언트 쪽 SyncDate와 비교합니다.|지원 안 함|  
   
 ## <a name="controlling-access-to-report-parts"></a>보고서 파트에 대한 액세스 제어  
@@ -74,7 +74,7 @@ ms.locfileid: "65580095"
 |동작|역할|  
 |-------------|----------|  
 |보고서 파트 추가, 삭제, 항목 속성 편집, 보안 관리 및 다운로드|모든 권한|  
-|보고서 파트 추가, 삭제, 항목 속성 편집 및 다운로드|디자인<br /><br /> 참가|  
+|보고서 파트 추가, 삭제, 항목 속성 편집 및 다운로드|디자인<br /><br /> 기고|  
 |검색 및 다시 사용|읽기<br /><br /> 보기만|  
   
 ### <a name="security-considerations"></a>보안 고려 사항  

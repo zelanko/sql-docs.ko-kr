@@ -16,10 +16,10 @@ ms.assetid: e9570228-4500-44b6-b2f1-84ac050b5112
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e319f5f924fc82b3b7dfac31d5d64d8ea15ee3ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978388"
 ---
 # <a name="getupdatecount-method-sqlserverstatement"></a>getUpdateCount 메서드(SQLServerStatement)
@@ -34,14 +34,14 @@ ms.locfileid: "67978388"
 public final int getUpdateCount()  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  업데이트 횟수가 들어 있는 **int**입니다. 반환된 결과가 결과 집합 개체이거나 결과가 더 이상 없으면 -1이 반환됩니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 getUpdateCount 메서드는 java. Statement 인터페이스의 getUpdateCount 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 getUpdateCount 메서드는 java.sql.Statement 인터페이스의 getUpdateCount 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerStatement 멤버](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

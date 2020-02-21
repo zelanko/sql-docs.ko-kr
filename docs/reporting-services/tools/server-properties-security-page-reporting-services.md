@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/10/2016
 ms.openlocfilehash: 0e29dcf7681d105f92b3bf187c38ebe764d2449e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571320"
 ---
 # <a name="server-properties-security-page---reporting-services"></a>서버 속성(보안 페이지) - Reporting Services
@@ -45,4 +45,4 @@ ms.locfileid: "65571320"
   
 ## <a name="see-also"></a>참고 항목
 
- [보고서 서버 속성 설정 &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md) [Management Studio에서 보고서 서버에 연결](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md) [보고서 데이터 원본에 대한 자격증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) [Management Studio F1 도움말의 보고서 서버](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)
+ [보고서 서버 속성 설정&#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md) [Management Studio에서 보고서 서버에 연결](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md) [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) [Management Studio F1 도움말의 보고서 서버](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)

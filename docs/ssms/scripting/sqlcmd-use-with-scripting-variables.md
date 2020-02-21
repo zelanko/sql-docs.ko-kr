@@ -1,6 +1,6 @@
 ---
-title: 스크립팅 변수와 함께 sqlcmd 사용 | Microsoft 문서
-ms.custom: ''
+title: 스크립팅 변수와 함께 sqlcmd 사용
+ms.custom: seo-lt-2019
 ms.date: 08/09/2016
 ms.prod: sql
 ms.technology: scripting
@@ -18,18 +18,18 @@ ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 142fd6bdd0ceb39003aba5c8ec8131c9df6427dd
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 3a084f84473dd6394aa0ad09e1730bcdb13e4a22
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262860"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76761617"
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd - 스크립팅 변수와 함께 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   스크립트에서 사용할 수 있는 변수를 스크립팅 변수라고 합니다. 스크립팅 변수를 사용하면 하나의 스크립트를 여러 시나리오에서 사용할 수 있습니다. 예를 들어 하나의 스크립트를 여러 서버에서 실행해야 하는 경우 각 서버에 맞게 스크립트를 수정하는 대신 서버 이름에 스크립팅 변수를 사용할 수 있습니다. 스크립팅 변수로 제공되는 서버 이름을 변경하여 같은 스크립트를 다른 서버에서 실행할 수 있습니다.  
   
- 스크립팅 변수는 **setvar** 명령을 사용하여 명시적으로 정의하거나 **sqlcmd-v** 옵션을 사용하여 암시적으로 정의할 수 있습니다.  
+ 스크립팅 변수는 **setvar** 명령을 사용하여 명시적으로 정의하거나 **sqlcmd -v** 옵션을 사용하여 암시적으로 정의할 수 있습니다.  
   
  이 항목에는 **SET**를 사용하여 Cmd.exe 명령 프롬프트에서 환경 변수를 정의하는 예도 포함되어 있습니다.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68262860"
   
 3.  **SET X=Y**를 시작하기 전에 명령 프롬프트에서 설정된 명령 셸( **SET X=Y**)  
   
-4.  **sqlcmd-v** X=Y  
+4.  **sqlcmd -v** X=Y  
   
 5.  **:Setvar** X Y  
   
@@ -100,7 +100,7 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 -   변수 값에 따옴표가 포함되는 경우 따옴표를 이스케이프 처리해야 합니다. 예를 들면 :`setvar MyVar "spac""e"`와 같습니다.  
   
 ## <a name="guidelines-for-cmdexe-set-variable-values-and-names"></a>Cmd.exe SET 변수 값 및 이름에 대한 지침  
- SET를 사용하여 정의한 변수는 Cmd.exe 환경의 일부이며 **sqlcmd**에서 참조될 수 있습니다. 다음 지침을 살펴 보십시오.  
+ SET를 사용하여 정의한 변수는 Cmd.exe 환경의 일부이며 **sqlcmd**에서 참조될 수 있습니다. 다음 지침을 고려하세요.  
   
 -   변수 이름은 공백 문자나 따옴표를 포함할 수 없습니다.  
   
@@ -109,7 +109,7 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 ## <a name="sqlcmd-scripting-variables"></a>sqlcmd 스크립팅 변수  
  **sqlcmd** 에서 정의하는 변수를 스크립팅 변수라고 합니다. 다음 표에는 **sqlcmd** 스크립팅 변수가 나와 있습니다.  
   
-|        변수         | 관련 옵션 | R/W |         Default         |
+|        변수         | 관련 옵션 | R/W |         기본값         |
 | ----------------------- | -------------- | --- | ----------------------- |
 | SQLCMDUSER\*             | -U             | R   | ""                      |
 | SQLCMDPASSWORD\*         | -P             | --  | ""                      |
@@ -121,7 +121,7 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 | SQLCMDHEADERS           | -H             | R/W | "0"                     |
 | SQLCMDCOLSEP            | -S             | R/W | " "                     |
 | SQLCMDCOLWIDTH          | -w             | R/W | "0"                     |
-| SQLCMDPACKETSIZE        | -A             | R   | "4096"                  |
+| SQLCMDPACKETSIZE        | 지정하지 않을 경우             | R   | "4096"                  |
 | SQLCMDERRORLEVEL        | -M             | R/W | "0"                     |
 | SQLCMDMAXVARTYPEWIDTH   | -y             | R/W | "256"                   |
 | SQLCMDMAXFIXEDTYPEWIDTH | -y             | R/W | "0" = 제한 없음         |
@@ -136,7 +136,7 @@ R/W는 **setvar** 명령을 사용하여 값을 다시 설정할 수 있으며 �
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-the-setvar-command-in-a-script"></a>1\. 스크립트에서 setvar 명령 사용  
+### <a name="a-using-the-setvar-command-in-a-script"></a>A. 스크립트에서 setvar 명령 사용  
  **setvar** 명령을 사용하면 스크립트에서 여러 **sqlcmd** 옵션을 제어할 수 있습니다. 다음 예에서는 `test.sql` 변수가 `SQLCMDLOGINTIMEOUT` 초로 설정되고 다른 스크립팅 변수인 `60` 가 `server`로 설정된 `testserver`스크립트를 만듭니다. `test.sql`의 코드는 다음과 같습니다.  
 
 ```
@@ -156,7 +156,7 @@ FROM Person.Person;
 sqlcmd -i c:\test.sql
 ```
   
-### <a name="b-using-the-setvar-command-interactively"></a>2\. 대화식으로 setvar 명령 사용  
+### <a name="b-using-the-setvar-command-interactively"></a>B. 대화식으로 setvar 명령 사용  
  다음 예에서는 `setvar` 명령을 사용하여 대화식으로 스크립팅 변수를 설정하는 방법을 보여 줍니다.  
 
 ```
@@ -332,7 +332,7 @@ C:\> sqlcmd
   
 ## <a name="see-also"></a>참고 항목  
  [sqlcmd 유틸리티 사용](../../relational-databases/scripting/sqlcmd-use-the-utility.md)   
- [-b](../../tools/sqlcmd-utility.md)   
+ [sqlcmd 유틸리티](../../tools/sqlcmd-utility.md)   
  [명령 프롬프트 유틸리티 참조&#40;데이터베이스 엔진#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

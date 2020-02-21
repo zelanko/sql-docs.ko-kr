@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 9ba062c9718203c52659dd0c35fa7bcb76b1a40c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994181"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>행 집합 및 SQL Server 커서
@@ -62,7 +62,7 @@ ms.locfileid: "67994181"
   
  소비자는 특정 행 집합 속성을 설정하여 행 집합에 다른 커서 동작을 요청할 수 있습니다. 소비자가 이러한 행 집합 속성 중 하나를 설정하지 않거나 모두 해당 기본값으로 설정하면 SQL Server용 OLE DB 드라이버는 기본 결과 집합을 사용하여 행 집합을 구현합니다. 이러한 속성 중 하나라도 기본값이 아닌 값으로 설정하면 SQL Server용 OLE DB 드라이버는 서버 커서를 사용하여 행 집합을 구현합니다.  
   
- 다음 행 집합 속성은 커서를 사용 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 하도록 SQL Server에 대 한 OLE DB 드라이버를 지시 합니다. 일부 속성은 다른 속성과 안전하게 조합할 수 있습니다. 예를 들어 DBPROP_IRowsetScroll 및 DBPROP_IRowsetChange 속성을 나타내는 행 집합은 즉시 업데이트 동작을 표시하는 책갈피 행 집합이 됩니다. 다른 속성은 함께 사용할 수 없습니다. 예를 들어 DBPROP_OTHERINSERT를 나타내는 행 집합은 책갈피를 포함할 수 없습니다.  
+ 다음 행 집합 속성은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커서를 사용하도록 OLE DB Driver for SQL Server에 지시합니다. 일부 속성은 다른 속성과 안전하게 조합할 수 있습니다. 예를 들어 DBPROP_IRowsetScroll 및 DBPROP_IRowsetChange 속성을 나타내는 행 집합은 즉시 업데이트 동작을 표시하는 책갈피 행 집합이 됩니다. 다른 속성은 함께 사용할 수 없습니다. 예를 들어 DBPROP_OTHERINSERT를 나타내는 행 집합은 책갈피를 포함할 수 없습니다.  
   
 |속성 ID|값|행 집합 동작|  
 |-----------------|-----------|---------------------|  
@@ -93,7 +93,7 @@ ms.locfileid: "67994181"
   
  특정 유형의 커서 모델을 사용하려면 커서 모델에 해당하는 열을 찾아 열에 값 'T'가 포함된 행 집합 속성을 모두 찾습니다. 특정 커서 모델을 사용하려면 이러한 행 집합 속성을 VARIANT_TRUE로 설정합니다. 값이 '-'인 행 집합 속성은 VARIANT_TRUE 또는 VARIANT_FALSE로 설정할 수 있습니다.  
   
-|행 집합 속성/커서 모델|Default<br /><br /> result<br /><br /> 집합<br /><br /> (RO)|빠름<br /><br /> 정방향<br /><br /> 전용<br /><br /> (RO)|정적<br /><br /> (RO)|Keyset<br /><br /> 집합<br /><br /> (RO)|  
+|행 집합 속성/커서 모델|기본값<br /><br /> result<br /><br /> set<br /><br /> (RO)|빠름<br /><br /> 정방향<br /><br /> 전용<br /><br /> (RO)|정적<br /><br /> (RO)|Keyset<br /><br /> 집합<br /><br /> (RO)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
 |DBPROP_SERVERCURSOR|F|T|T|T|  
 |DBPROP_DEFERRED|F|F|-|-|  

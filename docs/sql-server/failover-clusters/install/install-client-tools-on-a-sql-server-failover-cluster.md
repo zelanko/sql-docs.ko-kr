@@ -1,7 +1,7 @@
 ---
-title: SQL Server 장애 조치(Failover) 클러스터에 클라이언트 도구 설치 | Microsoft 문서
-ms.custom: ''
-ms.date: 03/14/2017
+title: '클라이언트 도구 설치: 장애 조치(failover) 클러스터'
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.reviewer: ''
 ms.prod: sql
 ms.technology: install
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3c82d510-9798-46be-bebb-cac9bef56936
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 359548f6315535e324158cdecd015c1c03266d7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c4918cdbb99a49bf577f9efad19ed0360c9a4911
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063940"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230495"
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>SQL Server 장애 조치 클러스터에 클라이언트 도구 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "68063940"
   
 ## <a name="installation-procedures"></a>설치 절차  
   
-#### <a name="installing-includessnoversionincludesssnoversion-mdmd-client-tools-using-the-setup-user-interface"></a>설치 사용자 인터페이스를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클라이언트 도구 설치  
+#### <a name="installing-ssnoversion-client-tools-using-the-setup-user-interface"></a>설치 사용자 인터페이스를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클라이언트 도구 설치  
   
 1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 미디어를 넣고 루트 설치 폴더에서 Setup.exe를 두 번 클릭합니다. 네트워크 공유에서 설치하려면 공유에서 루트 폴더를 찾은 다음 Setup.exe를 두 번 클릭합니다.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "68063940"
   
 5.  **기능 선택** 페이지에서 설치할 도구를 선택하고 설치 프로세스의 나머지 단계를 진행합니다.  
   
-#### <a name="installing-includessnoversionincludesssnoversion-mdmd-client-tools-at-the-command-prompt"></a>명령 프롬프트를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클라이언트 도구 설치  
+#### <a name="installing-ssnoversion-client-tools-at-the-command-prompt"></a>명령 프롬프트를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클라이언트 도구 설치  
   
 1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클라이언트 도구 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 온라인 설명서를 설치하려면 다음 명령을 실행합니다. Setup.exe/q/Action=Install /Features=Tools  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68063940"
   
 3.  전체 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 관리 도구를 설치하려면 다음 명령을 실행합니다. Setup.exe/q/Action=Install /Features=ADV_SSMS. 기능의 매개 변수 값에 대한 자세한 내용은 [명령 프롬프트에서 SQL Server 2016 설치](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)를 참조하세요.  
   
-### <a name="uninstalling-includessnoversionincludesssnoversion-mdmd-client-tools"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클라이언트 도구 제거  
+### <a name="uninstalling-ssnoversion-client-tools"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클라이언트 도구 제거  
  클라이언트 도구는 제어판의 프로그램 추가/제거에 **[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]** 로 나타나고 여기서 제거할 수 있습니다. 장애 조치(Failover) 클러스터에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 제거하기 위해 노드 제거를 사용하면 클라이언트 구성 요소가 동시에 제거되지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  

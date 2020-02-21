@@ -11,10 +11,10 @@ ms.assetid: 630a93b0-6e3c-4255-a007-1097ce0ee243
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3d70c72b860044a7e61b4a6dc5474c465fb60e89
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955400"
 ---
 # <a name="createblob-method-sqlserverconnection"></a>createBlob 메서드(SQLServerConnection)
@@ -29,16 +29,16 @@ ms.locfileid: "67955400"
 public java.sql.Blob createBlob()  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  Blob 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 createBlob 메서드는 java.sql.Connection 인터페이스의 createBlob 메서드에 의해 지정됩니다.  
   
- 이 메서드는 [SQLServerBlob 생성자 &#40;SQLServerConnection, byte&#41;](../../../connect/jdbc/reference/sqlserverblob-constructor-sqlserverconnection-byte.md)의 필요성을 대체 합니다.  
+ 이 메서드를 사용하면 [SQLServerBlob 생성자&#40;SQLServerConnection, byte&#41;](../../../connect/jdbc/reference/sqlserverblob-constructor-sqlserverconnection-byte.md)를 사용할 필요가 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerConnection 멤버](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

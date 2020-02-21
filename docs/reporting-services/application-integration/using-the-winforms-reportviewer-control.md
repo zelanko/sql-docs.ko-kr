@@ -1,28 +1,30 @@
 ---
-title: WinForms ReportViewer 컨트롤 사용 | Microsoft Docs
+title: WinForms ReportViewer 컨트롤 사용
+description: 보고서 서버에 배포된 보고서 또는 로컬 파일 시스템에 있는 보고서를 보려면 WinForms ReportViewer 컨트롤을 사용하여 Windows 애플리케이션에서 렌더링할 수 있습니다.
 ms.date: 09/06/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - ReportViewer controls
 ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d43534148ccf22419c630880192ff21eba2a441
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: b5b294d78c3e63766ac72b2cdfcfd3c592df3690
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63195267"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796882"
 ---
-# <a name="using-the-winforms-reportviewer-control"></a>WinForms ReportViewer 컨트롤 사용
+# <a name="use-the-winforms-reportviewer-control"></a>WinForms ReportViewer 컨트롤 사용
   보고서 서버에 배포된 보고서 또는 로컬 파일 시스템에 있는 보고서를 보려면 WinForms ReportViewer 컨트롤을 사용하여 Windows 애플리케이션에서 렌더링할 수 있습니다.  
   
 ## <a name="to-add-the-reportviewer-control-to-a-windows-application"></a>ReportViewer 컨트롤을 Windows 애플리케이션에 추가하려면  
   
-1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[csprcs](../../includes/csprcs-md.md)] 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]을 사용하여 새 Windows 애플리케이션을 만듭니다.  
+1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]을 사용하여 새 Windows 애플리케이션을 만듭니다.  
   
      \- 또는 -  
   
@@ -38,7 +40,7 @@ ms.locfileid: "63195267"
   
  컨트롤이 폼에 추가되면 **ReportViewer 태스크** 스마트 태그가 나타나 보고서를 선택하도록 알립니다.  
   
- 보려는 보고서가 보고서 서버에 배포된 경우 **보고서 선택** 드롭다운 목록에서 **\<서버 보고서>** 옵션을 선택합니다. **\<서버 보고서>** 옵션이 선택되면 **보고서 서버 URL** 및 **보고서 경로**의 두 가지 속성이 추가로 나타납니다. **보고서 서버 URL**은 보고서 서버에 대한 주소이고 **보고서 경로**는 렌더링할 보고서의 전체 경로입니다.  
+ 보려는 보고서가 보고서 서버에 배포된 경우 **보고서 선택** 드롭다운 목록에서 **\<서버 보고서>** 옵션을 선택합니다. **\<서버 보고서>** 옵션을 선택한 후에는 다음과 같은 두 가지 추가 속성이 표시됩니다. **보고서 서버 URL** 및 **보고서 경로**의 두 가지 속성이 추가로 나타납니다. **보고서 서버 URL**은 보고서 서버에 대한 주소이고 **보고서 경로**는 렌더링할 보고서의 전체 경로입니다.  
   
  ![서버 보고서 선택](../../reporting-services/application-integration/media/windowsapp-serverreportsettings.png "서버 보고서 선택")  
   

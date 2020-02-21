@@ -1,23 +1,24 @@
 ---
-title: 데이터베이스 코드 분석 규칙의 확장성 개요 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 데이터베이스 코드 분석 규칙의 확장성
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 62f5c980-18d5-43fe-b443-c9e149d01fc7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fd64a7c3152941a88122543dc4b8b80045f175a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: ef4ab84a123252dd35da85213110b8b4abb616ad
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984486"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251964"
 ---
 # <a name="overview-of-extensibility-for-database-code-analysis-rules"></a>데이터베이스 코드 분석 규칙의 확장성 개요
+
 SQL Server Data Tools가 포함된 Visual Studio 버전에는 데이터베이스 코드의 Transact\-SQL 디자인, 명명 및 성능 경고에 대해 보고하는 코드 분석 규칙이 포함되어 있습니다. 자세한 내용은 [데이터베이스 코드를 분석하여 코드 품질 향상](https://msdn.microsoft.com/library/dd172133(v=vs.100).aspx)을 참조하세요.  
   
 포함하려는 특정 Transact\-SQL 문제에 대한 처리가 기본 제공 코드 분석 규칙에 포함되지 않은 경우 사용자 지정 데이터베이스 코드 분석 규칙을 만들 수 있습니다. 예를 들어 [SQL Server의 사용자 지정 정적 코드 분석 규칙 어셈블리 작성 연습](../ssdt/walkthrough-author-custom-static-code-analysis-rule-assembly.md)에 나와 있듯이 WAITFOR DELAY 문의 사용을 방지하는 사용자 지정 규칙을 만들 수 있습니다. 사용자 지정 데이터베이스 코드 분석 규칙을 만들려면 [CodeAnalysis](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.codeanalysis.aspx) 네임스페이스의 클래스를 사용합니다.  

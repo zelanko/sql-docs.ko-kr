@@ -9,10 +9,10 @@ ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5a97a0cfc446a32e02172d22391dec8e5ca13af6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63041207"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>자습서: 기본 테이블 보고서 만들기(보고서 작성기)
@@ -21,7 +21,7 @@ ms.locfileid: "63041207"
 ![SSRS_Tutorial_Basic_Table_Report](../reporting-services/media/ssrs-tutorial-basic-table-report.png)  
   
 
-이 자습서에 소요되는 예상 시간: 20분  
+이 자습서에 소요되는 예상 시간: 20분.  
   
 ## <a name="requirements"></a>요구 사항  
 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)을 참조하세요.  
@@ -350,7 +350,7 @@ SalesDate 값이 월에 해당하는 숫자 대신 월 이름을 표시합니다
   
 2.  통합 문서 탭의 이름이 **Product Sales Excel**인지 확인합니다.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
 이것으로 기본 테이블 보고서를 만드는 방법에 대한 연습을 마칩니다. 테이블에 대한 자세한 내용은 [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

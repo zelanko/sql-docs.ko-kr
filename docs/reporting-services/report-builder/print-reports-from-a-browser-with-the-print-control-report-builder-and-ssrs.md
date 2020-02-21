@@ -9,16 +9,16 @@ ms.assetid: 10054250-d915-4bcb-8a1d-26837db4e932
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 535d35ad80f940e7d3ed4a9163b2e65757088e58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581167"
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>인쇄 컨트롤을 사용하여 브라우저에서 보고서 인쇄(보고서 작성기 및 SSRS)
   보고서를 인쇄하는 데 가장 많이 사용되는 클라이언트 애플리케이션은 브라우저이지만 브라우저 인쇄 기능이 보고서 인쇄에 이상적이지는 않습니다. 브라우저의 인쇄 기능은 웹 페이지 인쇄용으로 개발되었기 때문입니다. 일반적으로 브라우저에서 인쇄하는 페이지에는 웹 페이지의 모든 시각적 요소뿐만 아니라 페이지나 웹 사이트를 식별하는 머리글 및 바닥글 정보가 포함됩니다. 브라우저에서 인쇄하면 현재 창의 내용이 인쇄됩니다. 여러 페이지로 구성된 보고서의 경우 브라우저에서는 첫 페이지만 인쇄됩니다. 보고서 페이지가 인쇄된 페이지보다 크면 첫 페이지도 제대로 인쇄되지 않을 수 있습니다.  
   
- 브라우저에 표시되는 보고서의 인쇄 품질을 향상시키고 여러 페이지를 인쇄하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 제공하는 클라이언트 쪽 인쇄 기능을 사용하는 것이 좋습니다. 클라이언트 쪽 인쇄 기능에서 제공하는 표준 **인쇄** 대화 상자를 사용하여 프린터를 선택하고 페이지와 여백을 지정하고 인쇄 전에 보고서를 미리 볼 수 있습니다. 브라우저의 **파일** 메뉴에 있는 **인쇄** 명령 대신 클라이언트 쪽 인쇄 기능을 사용할 수 있습니다. 클라이언트 쪽 인쇄 기능을 사용하면 웹 페이지 인쇄 결과물에 나타나는 추가 요소 없이 보고서가 디자인된 그대로 인쇄됩니다.  
+ 브라우저에 표시되는 보고서의 인쇄 품질을 향상하고 여러 페이지를 인쇄하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 제공하는 클라이언트 쪽 인쇄 기능을 사용하는 것이 좋습니다. 클라이언트 쪽 인쇄 기능에서 제공하는 표준 **인쇄** 대화 상자를 사용하여 프린터를 선택하고 페이지와 여백을 지정하고 인쇄 전에 보고서를 미리 볼 수 있습니다. 브라우저의 **파일** 메뉴에 있는 **인쇄** 명령 대신 클라이언트 쪽 인쇄 기능을 사용할 수 있습니다. 클라이언트 쪽 인쇄 기능을 사용하면 웹 페이지 인쇄 결과물에 나타나는 추가 요소 없이 보고서가 디자인된 그대로 인쇄됩니다.  
   
  클라이언트 쪽 인쇄를 사용하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX 컨트롤을 설치해야 합니다. 자세한 내용은 [Reporting Services에 대한 클라이언트 쪽 인쇄 기능 설정 및 해제](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)를 참조하세요.  
   

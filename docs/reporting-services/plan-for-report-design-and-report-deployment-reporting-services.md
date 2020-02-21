@@ -9,14 +9,14 @@ ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bca1457eb9be7b686ccfe86a1f7e7bdcab15cc14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581242"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>보고서 디자인 및 보고서 배포 계획 | Reporting Services
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에서는 페이지를 매긴 보고서를 여러 가지 방법으로 작성 및 배포할 수 있습니다. 보고서 제작 및 함께 작동하는 보고서 서버 환경을 계획하는 방법을 알아봅니다.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서는 페이지를 매긴 보고서를 여러 가지 방법으로 작성 및 배포할 수 있습니다. 보고서 제작 및 함께 작동하는 보고서 서버 환경을 계획하는 방법을 알아봅니다.
 
 이 항목은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구성 요소에서 지원되는 보고서 정의에 대한 개요를 보여 줍니다. 보고서 정의는 RDL(Report Definition Language) 또는 RDLC(Report Definition Language for Clients)로 작성된 XML 파일입니다. 각 보고서 정의는 파일의 첫 부분에 나열되어 있는 특정 스키마 버전을 따릅니다.  
   
@@ -109,7 +109,7 @@ SharePoint 모드 배포에서는 문서 라이브러리로 이동해서 보고�
 |[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2015 <br/><br/>또는<br/><br/>[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2013<br /><br /> 또는<br /><br /> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2012<br /><br /> 또는<br /><br /> [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]|2008 RDL|  
 |[!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)]<br /><br /> 또는<br /><br /> [!INCLUDE[vsOrcas](../includes/vsorcas-md.md)]|2005 RDL|  
   
- 자세한 내용은 다음 항목을 참조하세요.  
+ 자세한 내용은  
   
 -   [RDLC 파일을 RDL 파일로 변환](https://msdn.microsoft.com/library/ms252109.aspx)  
   

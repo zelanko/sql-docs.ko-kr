@@ -16,10 +16,10 @@ ms.assetid: 3fe74b50-9ccd-4973-a93a-6da2c20a4154
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e023030d01459ef0f7be9b9c61e5f6b8ba1e4d14
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953593"
 ---
 # <a name="getblob-method-javalangstring"></a>getBlob 메서드(java.lang.String)
@@ -39,13 +39,13 @@ public java.sql.Blob getBlob(java.lang.String sCol)
   
  매개 변수 이름이 들어 있는 **문자열**입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  Blob 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 getBlob 메서드는 java.sql.CallableStatement 인터페이스의 getBlob 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

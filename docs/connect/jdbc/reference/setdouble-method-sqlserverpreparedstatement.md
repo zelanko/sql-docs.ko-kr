@@ -16,10 +16,10 @@ ms.assetid: 295c16b7-1532-40e1-93ef-64462a2c0ab6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 03db1f238aba30ab28d8277afc180fdaf432fd13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974319"
 ---
 # <a name="setdouble-method-sqlserverpreparedstatement"></a>setDouble 메서드(SQLServerPreparedStatement)
@@ -42,12 +42,12 @@ public final void setDouble(int n,
   
  *x*  
   
- **Double** 값입니다.  
+ **double** 값입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 setDouble 메서드는 java.sql.PreparedStatement 인터페이스의 setDouble 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

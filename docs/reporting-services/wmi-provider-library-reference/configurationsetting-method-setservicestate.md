@@ -16,10 +16,10 @@ ms.assetid: 9e1ee42d-b388-4929-89c7-8741b956c3be
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 83aa9fb906fc71b1dfb7fd3d036c119d9b4e41e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580984"
 ---
 # <a name="configurationsetting-method---setservicestate"></a>ConfigurationSetting 메서드 - SetServiceState
@@ -54,10 +54,10 @@ public void SetServiceState(Boolean EnableWindowsService,
  *HRESULT*  
  [out] 호출의 성공 여부를 나타내는 값입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드 호출의 성공 또는 실패를 나타내는 *HRESULT* 를 반환합니다. 0 값은 메서드 호출이 성공했음을 나타냅니다. 0 이외의 값은 오류가 발생했음을 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 ## <a name="requirements"></a>요구 사항  
  **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

@@ -11,10 +11,10 @@ ms.assetid: 143bff3e-2b5c-485d-9529-1c2387560094
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b3e75b36daaccb0526674da64591b409f5c9856e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67985522"
 ---
 # <a name="updateasciistream-method-int-javaioinputstream-long"></a>updateAsciiStream 메서드(int, java.io.InputStream, long)
@@ -47,8 +47,8 @@ public void updateAsciiStream(int columnIndex,
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 updateAsciiStream 메서드는 java. ResultSet 인터페이스의 updateAsciiStream 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 updateAsciiStream 메서드는 java.sql.ResultSet 인터페이스의 updateAsciiStream 메서드에 의해 지정됩니다.  
   
  이 메서드는 InputStream 개체의 ASCII 문자(바이트)를 변환 가능한 문자 열에 전달합니다. 이러한 열은 유니코드의 ASCII 범위 [0x00 – 0x7F]와 874, 932, 936, 949, 950, 1250-1258 코드 페이지입니다. 이 메서드는 대상 데이터 정렬 페이지에 대한 변환을 수행합니다. 변환할 수 없는 대상 열을 업데이트하려고 하면 예외가 발생합니다. 이진 열의 경우 원시 바이트가 전달됩니다.  
   

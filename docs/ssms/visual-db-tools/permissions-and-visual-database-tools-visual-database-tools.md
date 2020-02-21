@@ -1,10 +1,9 @@
 ---
-title: 사용 권한 및 Visual Database Tools(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 권한 및 Visual Database Tools
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +11,14 @@ helpviewer_keywords:
 ms.assetid: c09a6bb7-efc3-4471-819e-c60f11de96f0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 139f0966c08e4ceafdb4ccf76d656d9462ab7b59
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: c3222a1ae0e951f2ee2a7fca7b2b08d6dda2669f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266388"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255356"
 ---
 # <a name="permissions-and-visual-database-tools-visual-database-tools"></a>사용 권한 및 Visual Database Tools(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

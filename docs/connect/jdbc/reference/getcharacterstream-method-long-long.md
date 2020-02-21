@@ -1,5 +1,5 @@
 ---
-title: getCharacterStream 메서드 (long, long) | Microsoft Docs
+title: getCharacterStream 메서드(long, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: d70f502f-f60f-436a-83e6-797a0ed71bf3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a47b7ea56873b0b502ba39a91e4d1ba30044e993
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953250"
 ---
 # <a name="getcharacterstream-method-long-long"></a>getCharacterStream 메서드(long, long)
@@ -39,14 +39,14 @@ public java.io.Reader getCharacterStream(long pos,
   
  검색할 부분 값의 문자 길이를 나타내는 **long**입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  **Clob** 데이터가 들어 있는 Reader 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 getCharacterStream 메서드는 getCharacterStream 인터페이스의 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 getCharacterStream 메서드는 java.sql.Clob 인터페이스의 getCharacterStream 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [getCharacterStream 메서드(SQLServerClob)](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverclob.md)   

@@ -1,5 +1,5 @@
 ---
-title: getCatalogName 메서드 (SQLServerResultSetMetaData) | Microsoft Docs
+title: getCatalogName 메서드(SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 64f62569-5d8e-411f-a98d-ddc52798391e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f734a6779847aa72b9a41015470b377489c686bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68213704"
 ---
 # <a name="getcatalogname-method-sqlserverresultsetmetadata"></a>getCatalogName 메서드(SQLServerResultSetMetaData)
@@ -39,14 +39,14 @@ public java.lang.String getCatalogName(int column)
   
  열 인덱스를 나타내는 **int**입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  카탈로그 이름이 포함하는 **문자열**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 getCatalogName 메서드는 getCatalogName 메서드에서 지정 하는 java. .sql Setmetadata 인터페이스입니다.  
+## <a name="remarks"></a>설명  
+ 이 getCatalogName 메서드는 java.sql.ResultSetMetaData 인터페이스의 getCatalogName 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerResultSetMetaData 메서드](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

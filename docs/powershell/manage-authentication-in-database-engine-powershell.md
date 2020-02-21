@@ -1,6 +1,8 @@
 ---
-title: 데이터베이스 엔진 PowerShell에서 인증 관리 | Microsoft 문서
-ms.custom: ''
+title: 'PowerShell: 인증 관리'
+titleSuffix: SQL Server on Linux
+description: PowerShell을 사용하여 SQL Server에 대한 Windows 및 SQL 인증을 관리하는 방법에 대해 알아봅니다.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,14 +11,14 @@ ms.topic: conceptual
 ms.assetid: ab9212a6-6628-4f08-a38c-d3156e05ddea
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c246a68216d6de4b1a21d2d2c5c0999703362c36
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 22c48323aa7570440a3edb06400d9a96e9bd9924
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049138"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75557968"
 ---
-# <a name="manage-authentication-in-database-engine-powershell"></a>데이터베이스 엔진 PowerShell에서 인증 관리
+# <a name="powershell-manage-authentication-to-sql-server"></a>PowerShell: SQL Server에 대한 인증 관리
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 기본적으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 구성 요소는 Windows 인증을 사용하여 [!INCLUDE[ssDE](../includes/ssde-md.md)]인스턴스에 연결합니다. PowerShell 가상 드라이브를 정의하거나 **Invoke-Sqlcmd**에 대한 **-Username** 및 **-Password**매개 변수를 지정하여 SQL Server 인증을 사용할 수 있습니다.  
@@ -27,7 +29,7 @@ ms.locfileid: "68049138"
 > **SqlServer** 모듈을 설치하려면 [SQL Server PowerShell 설치](download-sql-server-ps-module.md)를 참조하세요.
 
   
-##  <a name="Permissions"></a> 사용 권한  
+##  <a name="Permissions"></a> 권한  
  [!INCLUDE[ssDE](../includes/ssde-md.md)] 의 인스턴스에서 수행할 수 있는 모든 동작은 인스턴스에 연결하는 데 사용되는 인증 자격 증명에 부여된 사용 권한에 의해 제어됩니다. 기본적으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공급자 및 cmdlet은 [!INCLUDE[ssDE](../includes/ssde-md.md)]에 대한 Windows 인증 연결을 만들기 위해 실행하는 Windows 계정을 사용합니다.  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증 연결을 만들려면 SQL Server 인증 로그인 ID 및 암호를 제공해야 합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공급자를 사용하는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로그인 자격 증명을 가상 드라이브에 연결한 다음 디렉터리 변경 명령(**cd**)을 사용하여 해당 드라이브에 연결해야 합니다. Windows PowerShell에서는 보안 자격 증명만 가상 드라이브에 연결할 수 있습니다.  

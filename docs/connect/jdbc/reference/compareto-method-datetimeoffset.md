@@ -11,16 +11,16 @@ ms.assetid: e4cf2ea4-0fe9-40ce-ba79-f2a2b616997e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3f70413a7624b9bbd380a664fbf61b9a33f8989b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955513"
 ---
 # <a name="compareto-method-datetimeoffset"></a>compareTo 메서드(DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  GMT의 시간을 기준으로이 **datetimeoffset** 개체를 다른 **datetimeoffset** 개체와 비교 합니다.  
+  이 **DateTimeOffset** 개체를 GMT의 시간을 기준으로 다른 **DateTimeOffset** 개체와 비교합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -32,16 +32,16 @@ public int compareTo(DateTimeOffset other)
 #### <a name="parameters"></a>매개 변수  
  현재 인스턴스와 비교할 [DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) 값입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  다음 표에서는 이 메서드의 반환 값에 대해 설명합니다.  
   
-|반환 값|설명|  
+|반환 값|Description|  
 |------------------|-----------------|  
-|0|두 **DateTimeOffset** 개체는 같은 지정 시간을 나타냅니다.|  
-|음수|이 **DateTimeOffset** 개체는 *다른*시점 이전의 지정 시간을 나타냅니다.|  
-|양수|이 **DateTimeOffset** 개체는 *다른*시점 이후의 지정 시간을 나타냅니다.|  
+|0|**DateTimeOffset** 개체가 둘 다 동일한 시점을 나타냅니다.|  
+|음수|이 **DateTimeOffset** 개체는 ‘다른’ 시점 이전 시점을 나타냅니다. |  
+|양수|이 **DateTimeOffset** 개체는 ‘다른’ 시점 이후 시점을 나타냅니다. |  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  두 **DateTimeOffset** 개체가 GMT에서 동일한 시간을 갖고 있으면 오프셋에 따라 개체의 순서가 추가로 지정되지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  

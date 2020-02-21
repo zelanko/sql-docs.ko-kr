@@ -11,20 +11,20 @@ ms.assetid: 3d9bb5b0-f943-4463-99e3-cc7178a2fb1e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7c521ac453cc0f82577c1d87a78e68d8ddf9cb78
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953220"
 ---
 # <a name="getcharacterstream-method-sqlserverclob"></a>getCharacterStream 메서드(SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Java. Clob 개체에 의해 지정 된 **clob** 값을 검색 하 여.  
+  java.sql.Clob 개체에 의해 java.io.Reader 개체로 지정된 **Clob** 값을 검색합니다.  
   
 ## <a name="overload-list"></a>오버로드 목록  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[getCharacterStream 메서드&#40;&#41;](../../../connect/jdbc/reference/getcharacterstream-method.md)|Clob 데이터를 java.io.Reader 개체 또는 문자 스트림으로 반환합니다.|  
 |[getCharacterStream 메서드&#40;long, long&#41;](../../../connect/jdbc/reference/getcharacterstream-method-long-long.md)|Clob 데이터를 지정된 위치 및 길이의 문자 스트림 또는 java.io.Reader 개체로 반환합니다.|  

@@ -1,7 +1,6 @@
 ---
-title: 컨트롤러 및 클라이언트 서비스 계정 수정 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 컨트롤러 및 클라이언트 서비스 계정 수정
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -9,16 +8,20 @@ ms.topic: conceptual
 ms.assetid: 44a73ddb-18ad-415c-bfbe-126ab2e3290b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e946949debc6d5a1fa3c586ece94da58e5241b4d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: c9ac64de75c79f3a614a8448b47e48af00b967b0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67950048"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75238919"
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>컨트롤러 및 클라이언트 서비스 계정 수정
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에서는 Distributed Replay Controller 및 Distributed Replay Client 서비스 계정을 수정한 후 ACL(액세스 제어 목록)을 다시 적용하는 방법에 대해 설명합니다.  
+
+이 항목에서는 Distributed Replay Controller 및 Distributed Replay Client 서비스 계정을 수정한 후 ACL(액세스 제어 목록)을 다시 적용하는 방법에 대해 설명합니다.  
   
 ### <a name="to-start-or-stop-the-distributed-replay-services-using-computer-management"></a>컴퓨터 관리를 사용하여 Distributed Replay 서비스를 시작 또는 중지하려면  
   

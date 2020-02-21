@@ -1,10 +1,7 @@
 ---
-title: 테이블 추가 대화 상자(쿼리 및 뷰 디자이너)(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
-ms.date: 01/19/2017
+title: 테이블 추가 대화 상자(쿼리 및 뷰 디자이너)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +10,19 @@ f1_keywords:
 ms.assetid: fce7adcc-4cf5-4a52-9203-11c13d1ecf08
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 89058296254f4aae6d8e27a214416cb76c1f03f6
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: 167b1e86c28a56c9d3159a4e01fe337ba428e1b7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263740"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253405"
 ---
 # <a name="add-table-dialog-box-query-and-view-designers-visual-database-tools"></a>테이블 추가 대화 상자(쿼리 및 뷰 디자이너)(Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 이 대화 상자를 사용하여 쿼리나 뷰에 테이블, 뷰, 사용자 정의 함수 또는 동의어를 추가할 수 있습니다.  
   

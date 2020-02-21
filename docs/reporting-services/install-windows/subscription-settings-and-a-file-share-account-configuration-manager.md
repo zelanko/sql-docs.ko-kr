@@ -1,22 +1,24 @@
 ---
 title: 구독 설정 및 파일 공유 계정(구성 관리자) | Microsoft Docs
-ms.date: 05/31/2016
+description: Reporting Services 구성 관리자의 구독 설정 페이지를 사용하면 기본 모드 보고서 서버 및 파일 공유 구독에 대한 파일 공유 계정을 구성할 수 있습니다.
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 f1_keywords:
 - SQL13.rsconfigtool.subscriptionsettings.F1
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9e8dfea342f4545313035869f8c2e12367e62aed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 9dd29c96f80ed24889356c72961f47de707037e6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62651978"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866276"
 ---
-# <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>구독 설정 및 파일 공유 계정(구성 관리자)
+# <a name="subscription-settings-and-a-file-share-account-ssrs-configuration-manager"></a>구독 설정 및 파일 공유 계정(SSRS 구성 관리자)
   **구성 관리자의** 구독 설정 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 사용하면 기본 모드 보고서 서버 및 파일 공유 구독에 대한 파일 공유 계정을 구성할 수 있습니다. 파일 공유 계정을 사용하면 보고서를 파일 공유로 전달하는 여러 구독에서 단일 자격 증명 집합을 사용할 수 있습니다. 자격 증명을 변경해야 하는 경우 파일 공유 계정에 대한 구성을 변경하면 각각의 개별 구독을 업데이트할 필요가 없습니다.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 파일 공유 구독에서 사용할 수 있는 두 가지 워크플로:  
@@ -27,7 +29,7 @@ ms.locfileid: "62651978"
   
 -   또한, 두 가지 방법을 혼용하여 일부 파일 공유 구독은 중앙식 파일 공유 계정을 사용하고 다른 구독은 특정 자격 증명을 사용하도록 할 수 있습니다.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드입니다.  
+ [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드.  
   
 ## <a name="specify-a-file-share-account"></a>파일 공유 계정 지정  
  이 옵션을 선택하면 보고서 서버에서 파일 공유에 액세스하는 데 사용할 계정을 제공할 수 있습니다. 파일 공유 계정을 구성하는 경우 모든 사용자는 보고서를 파일 공유로 전송하도록 구성된 모든 구독에서 계정을 선택할 수 있습니다. 이 옵션을 선택하지 않으면 파일 공유 계정을 모든 구독에서 사용할 수 **없습니다** .  

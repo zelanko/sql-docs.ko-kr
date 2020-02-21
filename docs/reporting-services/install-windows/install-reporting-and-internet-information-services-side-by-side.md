@@ -10,10 +10,10 @@ ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b854add44b256078cd19963f2ef22d55a7b3d300
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "64330624"
 ---
 # <a name="install-reporting-and-internet-information-services-side-by-side"></a>Reporting Services와 인터넷 정보 서비스 함께 설치
@@ -24,7 +24,7 @@ ms.locfileid: "64330624"
 
 SSRS(SQL Server Reporting Services)와 IIS(인터넷 정보 서비스)를 같은 컴퓨터에 설치하고 실행할 수 있습니다. 사용하는 IIS 버전에 따라 해결해야 하는 상호 운용성 문제가 결정됩니다.  
   
-|IIS 버전|문제|설명|  
+|IIS 버전|문제|Description|  
 |-----------------|------------|-----------------|  
 |8.0, 8.5|한 애플리케이션을 대상으로 하는 요청이 다른 애플리케이션에 받아들여집니다.<br /><br /> HTTP.SYS는 URL 예약에 대한 선행 규칙을 적용합니다. URL 예약이 다른 애플리케이션의 URL 예약에 비해 약한 경우에는 가상 디렉터리 이름이 동일하며 포트 80을 함께 모니터링하는 애플리케이션으로 전송된 요청이 의도한 대상에 도달하지 않을 수 있습니다.|상황에 따라 URL 예약 스키마의 다른 URL 엔드포인트를 대체하는 등록된 엔드포인트가 다른 애플리케이션을 대상으로 하는 HTTP 요청을 받을 수 있습니다.<br /><br /> 보고서 서버 웹 서비스 및 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 에 고유한 가상 디렉터리 이름을 사용하면 이러한 충돌을 방지할 수 있습니다.<br /><br /> 이 시나리오에 대한 자세한 내용은 이 항목에 제공되어 있습니다.|  
   
@@ -47,12 +47,12 @@ SSRS(SQL Server Reporting Services)와 IIS(인터넷 정보 서비스)를 같은
 |`https://+:80`|**모두 할당됨**에 매핑된 애플리케이션 엔드포인트에 대해 다른 애플리케이션이 아직 받지 않은 요청을 받습니다.|  
 |`https://*:80`|**모두 할당되지 않음**에 매핑된 애플리케이션 엔드포인트에 대해 다른 애플리케이션이 아직 받지 않은 요청을 받습니다.|  
   
- 'System.IO.FileLoadException: 파일이 다른 프로세스에서 사용되고 있으므로 프로세스에서 파일에 액세스할 수 없습니다 (예외가 발생한 HRESULT: 0x80070020)'.라는 오류 메시지가 표시되면 포트 충돌이 발생한 것입니다.  
+ 포트가 충돌하면 ‘System.IO.FileLoadException: 다른 프로세스가 파일을 사용 중이기 때문에 프로세스가 액세스할 수 없습니다. (HRESULT에서 예외 발생: 0x80070020).’이라는 오류 메시지가 나타납니다.  
   
 ## <a name="url-reservations-for-iis-80-85-with-sql-server-reporting-services"></a>SQL Server Reporting Services를 사용하여 IIS 8.0, 8.5에 대해 URL 예약  
  이전 섹션에 요약된 우선 순위 규칙을 기반으로 Reporting Services 및 IIS에 대해 정의된 URL 예약이 상호 운용성을 향상시키는 방식을 이해할 수 있습니다. Reporting Services는 해당 애플리케이션의 가상 디렉터리 이름을 명시적으로 지정하는 요청을 받습니다. IIS는 나머지 요청을 모두 받은 다음 이를 IIS 프로세스 모델 내에서 실행되는 애플리케이션으로 전송할 수 있습니다.  
   
-|애플리케이션|URL 예약|설명|요청 수신|  
+|애플리케이션|URL 예약|Description|요청 수신|  
 |-----------------|---------------------|-----------------|---------------------|  
 |보고서 서버|`https://+:80/ReportServer`|포트 80에서 ReportServer 가상 디렉터리가 있는 강력한 와일드카드입니다.|포트 80에서 ReportServer 가상 디렉터리를 지정하는 모든 요청을 받습니다. 보고서 서버 웹 서비스는 https://\<computername>/reportserver에 대한 모든 요청을 받습니다.|  
 |웹 포털|`https://+:80/Reports`|포트 80에서 Reports 가상 디렉터리가 있는 강력한 와일드카드입니다.|포트 80에서 Reports 가상 디렉터리를 지정하는 모든 요청을 받습니다. [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]는 https://\<computername>/reports에 대한 모든 요청을 받습니다.|  
@@ -72,7 +72,7 @@ SSRS(SQL Server Reporting Services)와 IIS(인터넷 정보 서비스)를 같은
   
  모든 애플리케이션이 요청을 받도록 하려면 다음 지침을 따릅니다.  
   
--   Reporting Services 설치의 경우 Reporting Services와 동일한 포트에서 IIS 웹 사이트에 아직 사용되지 않은 가상 디렉터리 이름을 사용합니다. 충돌이 발생하면 설치 완료 후 가상 디렉터리를 구성할 수 있도록 Reporting Services를 "파일만" 모드로 설치합니다(설치를 사용하지만 설치 마법사에서 서버 옵션 구성 안 함). System.IO.FileLoadException: 파일이 다른 프로세스에서 사용되고 있으므로 프로세스에서 파일에 액세스할 수 없습니다. (예외가 발생한 HRESULT: 0x80070020).라는 오류 메시지가 표시되면 구성 충돌이 발생한 것입니다.  
+-   Reporting Services 설치의 경우 Reporting Services와 동일한 포트에서 IIS 웹 사이트에 아직 사용되지 않은 가상 디렉터리 이름을 사용합니다. 충돌이 발생하면 설치 완료 후 가상 디렉터리를 구성할 수 있도록 Reporting Services를 "파일만" 모드로 설치합니다(설치를 사용하지만 설치 마법사에서 서버 옵션 구성 안 함). 구성이 충돌하면 System.IO.FileLoadException: 다른 프로세스가 파일을 사용 중이기 때문에 프로세스가 액세스할 수 없습니다. (HRESULT에서 예외 발생: 0x80070020)라는 오류 메시지가 나타납니다.  
   
 -   수동으로 구성하는 설치의 경우 구성하는 URL에 기본 명명 규칙을 적용합니다. [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 를 명명된 인스턴스로 설치하는 경우 가상 디렉터리를 만들 때 인스턴스 이름을 포함합니다.  
 

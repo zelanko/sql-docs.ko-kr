@@ -11,10 +11,10 @@ ms.assetid: 32335af1-5eae-4420-a0ef-b1e8a3267166
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 886c6b6622a2051751704aa9ea72aabcbb4afef3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579904"
 ---
 # <a name="configurationsetting-method---listreservedurls"></a>ConfigurationSetting 메서드 - ListReservedURLs
@@ -53,10 +53,10 @@ public void ListReservedUrls(out string[] Application, out string[] UrlString,
  *HRESULT*  
  [out] 호출의 성공 여부를 나타내는 값입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드 호출의 성공 또는 실패를 나타내는 *HRESULT* 를 반환합니다. 0 값은 메서드 호출이 성공했음을 나타내고 오류 코드는 호출이 실패했음을 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 ## <a name="requirements"></a>요구 사항  
  **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

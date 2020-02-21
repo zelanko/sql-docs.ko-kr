@@ -1,5 +1,5 @@
 ---
-title: getSearchStringEscape 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs
+title: getSearchStringEscape 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: ea0f95d0-0238-4dc8-9f26-7ff9b65f30c3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1b65281fbe6ba1f758bdd4e12ae834cee3347842
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980054"
 ---
 # <a name="getsearchstringescape-method-sqlserverdatabasemetadata"></a>getSearchStringEscape 메서드(SQLServerDatabaseMetaData)
@@ -34,14 +34,14 @@ ms.locfileid: "67980054"
 public java.lang.String getSearchStringEscape()  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  이스케이프 와일드카드 문자열이 들어 있는 **문자열**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 getSearchStringEscape 메서드는 java. DatabaseMetaData 인터페이스의 getSearchStringEscape 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 getSearchStringEscape 메서드는 java.sql.DatabaseMetaData 인터페이스의 getSearchStringEscape 메서드에 의해 지정됩니다.  
   
  이 메서드는 메타데이터 패턴 검색에만 사용되며 "\\"를 반환합니다. **문자열** 검색 패턴은 와일드카드("%" 및 "_")를 이스케이프하고 그 앞에 백슬래시를 추가하여 리터럴로 제공할 수 있습니다. 이렇게 하면 "\\%"는 "[%]"로 변환되고, "\\\_"는 "[\_]"로 변환됩니다.  
   

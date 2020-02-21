@@ -1,10 +1,7 @@
 ---
-title: CPU 유휴 상태 시간 및 지속 시간 설정(SQL Server Management Studio) | Microsoft 문서
-ms.custom: ''
-ms.date: 01/19/2017
+title: CPU 유휴 시간 및 기간 설정
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,15 +13,20 @@ helpviewer_keywords:
 ms.assetid: 8647b465-d899-4cc7-9640-134a506d0a2e
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0e76d3737e40aa2f102c9b0ae4fcc555d8c40158
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: bedb1d5e732caf92c8e42ea7fa89738dd20b1388
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265196"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253248"
 ---
-# <a name="set-cpu-idle-time-and-duration-sql-server-management-studio"></a>CPU 유휴 상태 시간 및 지속 시간 설정(SQL Server Management Studio)
+# <a name="set-cpu-idle-time-and-duration"></a>CPU 유휴 시간 및 기간 설정
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  

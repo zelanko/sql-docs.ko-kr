@@ -1,10 +1,9 @@
 ---
-title: 경고 속성 - 새 경고(일반 페이지) | Microsoft 문서
-ms.custom: ''
+title: 경고 속성 - 새 경고(일반 페이지)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,13 +11,15 @@ f1_keywords:
 ms.assetid: f5c11610-62e3-44df-9800-a5dc35be4a09
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4634821adee5021b986b3f9c87c0416bad33ec6a
-ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
+ms.openlocfilehash: d889dc5f93abb61dd3d92b736eb483a5a4ba2ff6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383803"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254556"
 ---
 # <a name="alert-properties---new-alert-general-page"></a>경고 속성 - 새 경고(일반 페이지)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +63,7 @@ ms.locfileid: "70383803"
 이벤트를 필터링할 때 사용할 문자열을 지정합니다.  
   
 ## <a name="sql-server-performance-condition-alerts"></a>SQL Server 성능 조건 경고  
-**개체**  
+**Object**  
 모니터링할 성능 개체를 지정합니다.  
   
 **카운터**  
@@ -74,11 +75,11 @@ ms.locfileid: "70383803"
 **경고 발생 카운터**  
 경고가 응답하는 카운터의 동작을 지정합니다. 예를 들어 경고를 **Free space in tempdb (KB)** 카운터의 값이 특정 값 미만이 될 때 응답하도록 지정하거나 **SQL Compilations/sec** 가 특정 값을 초과할 때 응답하도록 지정할 수 있습니다.  
   
-**Value**  
+**값**  
 카운터에 대한 값을 지정합니다.  
   
 ## <a name="wmi-event-alert-options"></a>WMI 이벤트 경고 옵션  
-**네임스페이스**  
+**Namespace**  
 WQL(WMI Query Language) 문에 사용할 네임스페이스를 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 실행하는 컴퓨터의 네임스페이스만 지원됩니다.  
   
 **쿼리**  

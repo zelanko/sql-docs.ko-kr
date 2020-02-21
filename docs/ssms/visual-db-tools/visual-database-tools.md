@@ -1,5 +1,5 @@
 ---
-title: Visual Database Tools | Microsoft 문서
+title: Visual Database Tools
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -7,15 +7,16 @@ ms.topic: conceptual
 ms.assetid: 1b1921b1-dcb2-47cd-985e-5a264de0bcf5
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 2c1da480b2857033c524d520a42ef5473e94063f
-ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
+ms.openlocfilehash: 4cc7ac6000027b1471c29d4657260a2c0408d68e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988082"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246287"
 ---
 # <a name="visual-database-tools"></a>Visual Database Tools
 
@@ -28,6 +29,6 @@ ms.locfileid: "70988082"
   
 |**설명**|**항목**|  
 |-------------------|-------------|  
-|데이터베이스 다이어그램 도구에 대해 설명합니다.|[데이터베이스 다이어그램 디자인(Visual Database Tools)](../../ssms/visual-db-tools/design-database-diagrams-visual-database-tools.md)|  
-|비주얼 테이블 디자인 도구에 대해 설명합니다.|[테이블 디자인(Visual Database Tools)](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)|  
-|비주얼 쿼리 디자이너에 대해 설명합니다.|[쿼리 및 뷰 디자인 방법 도움말 항목(Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)| 
+|데이터베이스 다이어그램 도구에 대해 설명합니다.|[데이터베이스 다이어그램 디자인](../../ssms/visual-db-tools/design-database-diagrams-visual-database-tools.md)|  
+|비주얼 테이블 디자인 도구에 대해 설명합니다.|[테이블 디자인](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)|  
+|비주얼 쿼리 디자이너에 대해 설명합니다.|[쿼리 및 뷰 디자인 방법 도움말 항목](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)| 

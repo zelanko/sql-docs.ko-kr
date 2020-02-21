@@ -1,5 +1,5 @@
 ---
-title: recover 메서드 (SQLServerXAResource) | Microsoft Docs
+title: recover 메서드(SQLServerXAResource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 840ecfcf-0dd3-4b7b-976f-dc9a96cd1464
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 92d7b0db997a6b77b43efb6d8104f629bb5507e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976025"
 ---
 # <a name="recover-method-sqlserverxaresource"></a>recover 메서드(SQLServerXAResource)
@@ -37,18 +37,18 @@ public javax.transaction.xa.Xid[] recover(int flags)
 #### <a name="parameters"></a>매개 변수  
  *flags*  
   
- 다음 값 중 하나를 사용할 수 있는 **int** 값: XAResource. TMSTARTRSCAN 또는 xaresource. TMSTARTRSCAN 또는 xaresource. TMNOFLAGS 또는 xaresource. TMSTARTRSCAN | XAResource. TMENDRSCAN.  
+ **int** 값이며 다음 값 중 하나일 수 있습니다. XAResource.TMSTARTRSCAN 또는 XAResource.TMENDRSCAN 또는 XAResource.TMNOFLAGS 또는 XAResource.TMSTARTTRSCAN | XAResource.TMENDRSCAN.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  Xid 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  javax.transaction.xa.XAException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 recover 메서드는 javax.transaction.xa.XAResource 인터페이스의 recover 메서드에 의해 지정됩니다.  
   
- 매개 변수 **플래그가** XAResource입니다. tmstartrscan 또는 XARESOURCE. tmstartrscan | XAResource. TMENDRSCAN, 복구 검사가 진행 중 이어야 합니다.  
+ 매개 변수 **flag**가 XAResource.TMSTARTRSCAN 또는 XAResource.TMSTARTRSCAN | XAResource.TMENDRSCAN이 아니면 복구 검색이 진행 중이어야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerXAResource 메서드](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   

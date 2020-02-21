@@ -11,10 +11,10 @@ ms.assetid: d3c0fb5d-ca05-43f7-9f38-fba6cf3705c6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d4dd548fcd6342e4c69ea9acc1614d0bc899f7d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67985327"
 ---
 # <a name="updatebinarystream-method-javalangstring-javaioinputstream-long"></a>updateBinaryStream 메서드(java.lang.String, java.io.InputStream, long)
@@ -47,8 +47,8 @@ public void updateBinaryStream(java.lang.String columnLabel,
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 updateBinaryStream 메서드는 java. ResultSet 인터페이스의 updateBinaryStream 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 updateBinaryStream 메서드는 java.sql.ResultSet 인터페이스의 updateBinaryStream 메서드에 의해 지정됩니다.  
   
  이 메서드는 InputStream 개체의 바이트를 binary, varbinary, varbinary(max), image, xml, udt와 같은 선택된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이진 열에 전달합니다. 이 메서드를 사용하여 문자 열을 업데이트할 수는 없습니다. 문자 열을 InputStream으로 업데이트하려면 [updateAsciiStream](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md) 메서드를 사용합니다.  
   

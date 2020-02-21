@@ -1,5 +1,5 @@
 ---
-title: getMoreResults 메서드 () | Microsoft Docs
+title: getMoreResults 메서드() | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: df89db50-0b2f-4094-820a-30be25ad72fe
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dcbce9783641376ae142e94ab5e45dc47fe16fef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981735"
 ---
 # <a name="getmoreresults-method-"></a>getMoreResults 메서드()
@@ -34,14 +34,14 @@ ms.locfileid: "67981735"
 public final boolean getMoreResults()  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  반환된 결과가 결과 집합이면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 getMoreResults 메서드는 getMoreResults 인터페이스의 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 getMoreResults 메서드는 java.sql.Statement 인터페이스의 getMoreResults 메서드에 의해 지정됩니다.  
   
  getMoreResults 메서드를 호출하면 [getResultSet](../../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md) 메서드를 사용하여 가져온 현재 열려 있는 결과 집합 개체가 암시적으로 닫힙니다.  
   

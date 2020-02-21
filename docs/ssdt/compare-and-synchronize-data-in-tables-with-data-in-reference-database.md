@@ -1,23 +1,24 @@
 ---
-title: 하나 이상의 테이블에 있는 데이터를 참조 데이터베이스에 있는 데이터와 비교 및 동기화 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 테이블에 있는 데이터를 참조 데이터베이스에 있는 데이터와 비교 및 동기화
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 96d743b0-b69a-45bb-ae0e-62103dca76e2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 055731473f94003440f4a78c6446ec965f1d0a2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: e30ec27733885521f8d6e5b487fde40afafca4dd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984670"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241704"
 ---
 # <a name="compare-and-synchronize-data-in-one-or-more-tables-with-data-in-a-reference-database"></a>하나 이상의 테이블에 있는 데이터를 참조 데이터베이스에 있는 데이터와 비교 및 동기화
+
 ‘원본’ 데이터베이스 및 ‘대상’ 데이터베이스의 데이터를 비교하고 비교할 테이블을 지정할 수 있습니다.   데이터를 검토하고 동기화할 변경 내용을 결정할 수 있습니다. 그런 후 대상을 업데이트해서 데이터베이스를 동기화하거나 업데이트 스크립트를 Transact\-SQL 편집기 또는 파일로 내보낼 수 있습니다.  
   
 예를 들어 준비 서버를 프로덕션 데이터의 복사본으로 업데이트하기 위해 데이터베이스를 동기화할 수 있습니다. 또한 하나 이상의 테이블을 동기화하여 다른 데이터베이스의 참조 데이터로 채울 수 있습니다. 추가 확인을 위해 테스트 전후에 데이터를 비교할 수도 있습니다.  
@@ -55,7 +56,7 @@ ms.locfileid: "67984670"
 ## <a name="UnderstandingDataCompareResults"></a>비교 결과 이해  
 다음 표에서는 **데이터 비교** 창의 5개 열에 대해 설명합니다.  
   
-|Column|참고|  
+|열|메모|  
 |----------|---------|  
 |Object|테이블 또는 뷰의 이름, 업데이트를 기록하거나 업데이트 스크립트를 내보낼 때 대상을 동기화할지 여부를 나타내는 확인란이 표시됩니다. 데이터가 없는 테이블 또는 뷰에 대해서는 확인란이 제공되지 않습니다.|  
 |다른 레코드|대상에서 키가 동일하지만 원본과 데이터가 동일하지 않은 레코드 수가 표시됩니다. 업데이트를 기록하거나 업데이트 스크립트를 내보낼 때 업데이트하도록 표시된 레코드 수는 괄호로 표시됩니다.|  

@@ -1,10 +1,9 @@
 ---
-title: 테이블 생성 및 업데이트(SSMS) | Microsoft Docs
-ms.custom: ''
+title: 테이블 만들기 및 업데이트
+ms.custom: seo-lt-2019
 ms.date: 08/25/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,14 @@ helpviewer_keywords:
 ms.assetid: c49e0155-5dcb-481f-9538-e1bde77105e2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c10e17fd9da739eecc07536b40be3964705abef
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 42da7ce86560e77cc7757f8077b0c0aca8775d93
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263766"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254679"
 ---
 # <a name="create-and-update-database-tables"></a>데이터베이스 테이블 생성 및 업데이트
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

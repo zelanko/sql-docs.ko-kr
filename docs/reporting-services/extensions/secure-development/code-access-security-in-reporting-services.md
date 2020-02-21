@@ -16,14 +16,14 @@ ms.assetid: 97480368-1fc3-4c32-b1b0-63edfb54e472
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5d629f820dfa2efd87e6460c1c85566e7b33cde8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63193826"
 ---
 # <a name="code-access-security-in-reporting-services"></a>Reporting Services의 코드 액세스 보안
-  코드 액세스 보안은 증명 정보, 코드 그룹 및 명명된 권한 집합 등의 핵심 개념을 기반으로 합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 보고서 관리자, 보고서 디자이너 및 보고서 서버 구성 요소에는 각각 데이터, 배달, 렌더링 및 보안 확장 프로그램뿐만 아니라 사용자 지정 어셈블리에 대한 코드 액세스 보안을 구성하는 정책 파일이 있습니다. 다음 섹션에서는 코드 액세스 보안에 대한 개요를 제공합니다. 이 섹션에서 다루는 항목에 대한 자세한 내용은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 설명서의 “보안 정책 모델”을 참조하십시오.  
+  코드 액세스 보안은 증명 정보, 코드 그룹 및 명명된 권한 집합 등의 핵심 개념을 기반으로 합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 보고서 관리자, 보고서 디자이너 및 보고서 서버 구성 요소에는 각각 데이터, 배달, 렌더링 및 보안 확장 프로그램뿐만 아니라 사용자 지정 어셈블리에 대한 코드 액세스 보안을 구성하는 정책 파일이 있습니다. 다음 섹션에서는 코드 액세스 보안에 대한 개요를 제공합니다. 이 섹션에서 다루는 항목에 대한 자세한 내용은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 설명서의 “보안 정책 모델”을 참조하세요.  
   
  보고서 서버가 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 기술을 기반으로 빌드되어도 일반적인 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 애플리케이션과 보고서 서버는 상당히 다르기 때문에 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]는 코드 액세스 보안을 사용합니다. 일반적인 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 애플리케이션은 사용자 코드를 실행하지 않습니다. 반면 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]는 사용자가 보고서 정의 언어의 **Code** 요소를 사용하여 보고서 정의 파일에 대해 프로그래밍 작업을 수행하고 보고서에 사용할 특수화된 기능을 사용자 지정 어셈블리로 개발해 넣을 수 있도록 하는 확장 가능한 개방형 아키텍처를 사용합니다. 또한 개발자는 보고서 서버의 기능을 향상시키는 강력한 확장 프로그램을 설계하고 배포할 수 있습니다. 이러한 기능과 유연성으로 인해 가능한 한 강력한 보호 및 보안을 제공해야 합니다.  
   

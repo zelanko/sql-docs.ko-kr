@@ -1,6 +1,6 @@
 ---
 title: 보고서 작성기 시작 | Microsoft Docs
-ms.date: 05/30/2017
+ms.date: 01/03/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-builder
@@ -13,18 +13,21 @@ helpviewer_keywords:
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8170a46bdcb0d6249b59965e190ff3eb6d14b4d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: cd186252204a82e115387b625503945c50604460
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65571745"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75721388"
 ---
 # <a name="start-report-builder"></a>보고서 작성기 시작
 
-[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 는 독립 실행형 보고서 제작 환경입니다. 보고서 작성기를 사용하면 페이지를 매긴 보고서를 만들어 기본 또는 SharePoint 통합 모드에서 설치된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에 게시할 수 있습니다.  
+[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]는 독립 실행형 보고서 제작 환경입니다. 보고서 작성기를 사용하면 페이지를 매긴 보고서를 만들어 기본 또는 SharePoint 통합 모드에서 설치된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에 게시할 수 있습니다.  
+
+> [!NOTE]
+> SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.
   
- [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 웹 포털 또는 SharePoint 통합 모드의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 처음으로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 시작하면 Microsoft 다운로드 센터에서 다운로드하라는 메시지가 표시됩니다. 
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털 또는 SharePoint 통합 모드의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 처음으로 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]를 시작하면 Microsoft 다운로드 센터에서 다운로드하라는 메시지가 표시됩니다. 
  
 ![report-builder-get-report-builder](../../reporting-services/report-builder/media/report-builder-get-report-builder.png) 
  
@@ -34,7 +37,7 @@ ms.locfileid: "65571745"
   
  웹 포털 또는 SharePoint 사이트에서 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 를 시작할 때 이전 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 버전이 열리면 관리자에게 문의하세요. 그러면 관리자가 웹 포털이나 SharePoint 사이트의 버전을 업데이트할 수 있습니다.  
   
-## <a name="to-start-includessrbnoversionincludesssrbnoversionmd-from-the-includessrsnoversionincludesssrsnoversion-mdmd-web-portal"></a>[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 웹 포털에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 시작하려면  
+## <a name="to-start-ssrbnoversion-from-the-ssrsnoversion-web-portal"></a>[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털에서 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]를 시작하려면  
   
 1.  웹 브라우저의 주소 표시줄에 보고서 서버의 URL을 입력합니다. 기본적으로 이 URL은 https://\<*servername*>/reports입니다.  
   
@@ -44,9 +47,9 @@ ms.locfileid: "65571745"
   
      처음에는 [보고서 작성기를 설치](../../reporting-services/install-windows/install-report-builder.md)하라는 메시지가 표시됩니다. 
   
-     그런 다음 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 가 열립니다. 그러면 페이지를 매긴 보고서를 만들거나 보고서 서버의 보고서를 열 수 있습니다.  
+     그런 다음, [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]가 열리고 페이지를 매긴 보고서를 만들거나 보고서 서버에서 보고서를 열 수 있습니다.  
   
-## <a name="to-start-includessrbnoversionincludesssrbnoversionmd-in-sharepoint-integrated-mode"></a>SharePoint 통합 모드에서 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 를 시작하려면  
+## <a name="to-start-ssrbnoversion-in-sharepoint-integrated-mode"></a>SharePoint 통합 모드에서 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]를 시작하려면  
   
 1.  원하는 라이브러리가 있는 SharePoint 사이트로 이동합니다.  
   
@@ -56,11 +59,11 @@ ms.locfileid: "65571745"
   
 4.  **새 문서** 메뉴에서 **보고서 작성기 보고서**를 클릭합니다.  
   
-     이 작업을 처음 수행하면 SQL Server [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 마법사가 시작됩니다. 자세한 내용은 [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md) 를 참조하십시오.  
+     처음으로 SQL Server [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 마법사가 시작됩니다. 자세한 내용은 [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md) 를 참조하십시오.  
   
-     [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 가 열립니다. 그러면 페이지를 매긴 보고서를 만들거나 보고서 서버의 보고서를 열 수 있습니다.  
+     [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]가 열리고 페이지를 매긴 보고서를 만들거나 보고서 서버에서 보고서를 열 수 있습니다.  
   
-     **참고**   **새 문서** 메뉴에 **보고서 작성기 보고서**, **보고서 작성기 모델**및 **보고서 데이터 원본**옵션이 나열되지 않는 경우 해당 콘텐츠 형식을 SharePoint 라이브러리에 추가해야 합니다. 자세한 내용은 [SharePoint 라이브러리에 Reporting Services 콘텐츠 형식 추가](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)를 참조하세요.  
+     **참고** **새 문서** 메뉴에 **보고서 작성기 보고서**, **보고서 작성기 모델**및 **보고서 데이터 원본**옵션이 나열되지 않는 경우 해당 콘텐츠 형식을 SharePoint 라이브러리에 추가해야 합니다. 자세한 내용은 [SharePoint 라이브러리에 Reporting Services 콘텐츠 형식 추가](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)를 참조하세요.  
 
 ## <a name="next-steps"></a>다음 단계
 

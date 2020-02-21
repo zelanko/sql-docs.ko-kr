@@ -1,5 +1,5 @@
 ---
-title: storesMixedCaseIdentifiers 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs
+title: storesMixedCaseIdentifiers 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: a91e5cd6-22b1-464e-aeec-665590737a74
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a1d1a924b913ecffc4baea959053001d7e30c1db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969905"
 ---
 # <a name="storesmixedcaseidentifiers-method-sqlserverdatabasemetadata"></a>storesMixedCaseIdentifiers 메서드(SQLServerDatabaseMetaData)
@@ -34,14 +34,14 @@ ms.locfileid: "67969905"
 public boolean storesMixedCaseIdentifiers()  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  식별자가 대/소문자가 혼합된 형식으로 저장되면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 storesMixedCaseIdentifiers 메서드는 storesMixedCaseIdentifiers 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 storesMixedCaseIdentifiers 메서드는 java.sql.DatabaseMetaData 인터페이스의 storesMixedCaseIdentifiers 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

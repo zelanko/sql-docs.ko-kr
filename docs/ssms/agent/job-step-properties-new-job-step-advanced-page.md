@@ -1,10 +1,7 @@
 ---
-title: 작업 단계 속성 - 새 작업 단계(고급 페이지) | Microsoft 문서
-ms.custom: ''
-ms.date: 01/19/2017
+title: 새 작업 단계 속성(고급 페이지)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,15 +9,20 @@ f1_keywords:
 ms.assetid: bdecfd4f-bcd8-4ba2-8ada-fbb636314f40
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f9395e9d1f7af28f0ff8a7d3f50d25eb665b7bb9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 1d51de2031e8187e96eaea3fcb344df133928779
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263301"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242239"
 ---
 # <a name="job-step-properties---new-job-step-advanced-page"></a>작업 단계 속성 - 새 작업 단계(고급 페이지)
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -123,7 +125,7 @@ ms.locfileid: "68263301"
 **Server**  
 복제 큐 판독기 작업 단계에 사용할 서버를 설정합니다.  
   
-**데이터베이스 백업**  
+**Database**  
 복제 큐 판독기 작업 단계에 사용할 데이터베이스를 설정합니다.  
   
 ## <a name="options-for-sql-server-analysis-services-job-steps"></a>SQL Server Analysis Services 작업 단계 옵션  

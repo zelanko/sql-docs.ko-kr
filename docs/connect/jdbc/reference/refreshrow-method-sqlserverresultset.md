@@ -16,10 +16,10 @@ ms.assetid: 048fe245-157f-4fd8-be75-ce54b83e02b3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 570a9185a83ecf1af0e47ee25cce5445dca1b958
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975983"
 ---
 # <a name="refreshrow-method-sqlserverresultset"></a>refreshRow 메서드(SQLServerResultSet)
@@ -37,8 +37,8 @@ public void refreshRow()
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 refreshRow 메서드는 java. ResultSet 인터페이스의 refreshRow 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 refreshRow 메서드는 java.sql.ResultSet 인터페이스의 refreshRow 메서드에 의해 지정됩니다.  
   
  커서가 삽입 행에 있는 경우에는 이 메서드를 호출할 수 없습니다.  
   

@@ -1,10 +1,9 @@
 ---
-title: 조인 대화 상자(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 조인 대화 상자
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: 0d9516bb-4ad3-4fcf-bb77-93474dea698f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 484be726624b4f6d1177435e7b68b6afc8eef98e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: cff110d8eccc22ac9c6705420c845713bfffdb74
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254011"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75224668"
 ---
 # <a name="join-dialog-box-visual-database-tools"></a>조인 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "68254011"
 |------------|------------------|  
 |**테이블**|조인에 관련된 테이블 또는 테이블 반환 개체의 이름입니다. 여기서는 테이블의 이름을 변경할 수 없으며 표시된 정보를 참조만 할 수 있습니다.|  
 |**열**|테이블 조인에 사용된 열의 이름입니다. 연산자 목록의 연산자는 열에 있는 데이터 간의 관계를 지정합니다. 여기서는 열의 이름을 변경할 수 없으며 표시된 정보를 참조만 할 수 있습니다.|  
-|**같음**|조인 열과 관련시키는 데 사용되는 연산자를 지정합니다. 등호(=) 이외의 연산자를 지정하려면 목록에서 해당 연산자를 선택하십시오. 속성 페이지를 닫으면 선택한 연산자가 다음 그림과 같이 조인 선의 다이아몬드 모양 안에 나타납니다.<br /><br />![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbii.gif "Visual Database Tools 아이콘")|  
+|**연산자**|조인 열과 관련시키는 데 사용되는 연산자를 지정합니다. 등호(=) 이외의 연산자를 지정하려면 목록에서 해당 연산자를 선택하십시오. 속성 페이지를 닫으면 선택한 연산자가 다음 그림과 같이 조인 선의 다이아몬드 모양 안에 나타납니다.<br /><br />![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbii.gif "Visual Database Tools 아이콘")|  
 |**모든 행 <table1>**|오른쪽 테이블에 일치하는 항목이 없는 경우에도 왼쪽 테이블의 모든 행이 출력되도록 지정합니다. 오른쪽 테이블에서 일치하는 데이터가 없는 열은 null로 나타납니다. 이 옵션을 선택하면 SQL 문에 왼쪽 우선 외부 조인을 지정하는 것과 결과가 같습니다.|  
 |**모든 행 <table2>**|왼쪽 테이블에 일치하는 항목이 없는 경우에도 오른쪽 테이블의 모든 행이 출력되도록 지정합니다. 왼쪽 테이블에서 일치하는 데이터가 없는 열은 null로 나타납니다. 이 옵션을 선택하면 SQL 문에 RIGHT OUTER JOIN을 지정하는 것과 결과가 같습니다.|  
   

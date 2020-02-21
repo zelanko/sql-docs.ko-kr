@@ -16,10 +16,10 @@ ms.assetid: 770668d9-2e52-4ff0-be2f-ebf78fd41644
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f2f77ce20c948623322b328c52d3f40db812551d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978764"
 ---
 # <a name="gettimestamp-method-javalangstring-javautilcalendar"></a>getTimestamp 메서드(java.lang.String, java.util.Calendar)
@@ -42,15 +42,15 @@ public java.sql.Timestamp getTimestamp(java.lang.String name,
   
  *cal*  
   
- 일정 개체입니다.  
+ Calendar 개체입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  Timestamp 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 getTimestamp 메서드는 java.sql.CallableStatement 인터페이스의 getTimestamp 메서드에 의해 지정됩니다.  
   
  이 메서드는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **datetime** 및 **smalldatetime** 열에서만 값을 반환합니다.  

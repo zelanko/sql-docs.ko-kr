@@ -16,10 +16,10 @@ ms.assetid: dc8c1a5e-700e-4059-a5ed-5013bbb87fb6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2418bd5e62f00e46ddc329c1c7ba987505fb5a7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982819"
 ---
 # <a name="getimportedkeys-method-sqlserverdatabasemetadata"></a>getImportedKeys 메서드(SQLServerDatabaseMetaData)
@@ -49,18 +49,18 @@ public java.sql.ResultSet getImportedKeys(java.lang.String cat,
   
  테이블 이름이 들어 있는 **문자열**입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 getImportedKeys 메서드는 java. DatabaseMetaData 인터페이스의 getImportedKeys 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 getImportedKeys 메서드는 java.sql.DatabaseMetaData 인터페이스의 getImportedKeys 메서드에 의해 지정됩니다.  
   
  getImportedKeys 메서드에서 반환되는 결과 집합에는 다음 정보가 포함됩니다.  
   
-|속성|형식|설명|  
+|속성|Type|Description|  
 |----------|----------|-----------------|  
 |PKTABLE_CAT|**String**|기본 키 테이블이 들어 있는 카탈로그의 이름입니다.|  
 |PKTABLE_SCHEM|**String**|기본 키 테이블의 스키마 이름입니다.|  

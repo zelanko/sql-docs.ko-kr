@@ -9,10 +9,10 @@ ms.assetid: 45da3d39-278e-4760-a4b3-9932c9547cf2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 776c8ab4b133a8655ce42c5b5c3d996360c71322
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578828"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart"></a>차트에 데이터 범위가 여러 개 있는 계열 표시
@@ -29,7 +29,7 @@ ms.locfileid: "65578828"
   
 -   **불필요한 값 필터링**. 차트에 표시할 중요한 데이터 범위를 가리는 데이터 요소가 있는 경우 보고서 필터를 사용하여 원하지 않는 데이터 요소를 제거합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 차트에 필터를 추가하는 방법에 대한 자세한 내용은 [데이터 세트 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)을 참조하세요.  
   
--   **여러 계열 비교를 위해 각 데이터 범위를 개별 계열로 그리기**. 데이터 범위가 두 개 이상인 경우 데이터 범위를 개별 계열로 구분하십시오. 자세한 내용은 [차트의 여러 계열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md).  
+-   **여러 계열 비교를 위해 각 데이터 범위를 개별 계열로 그리기**. 데이터 범위가 두 개 이상인 경우 데이터 범위를 개별 계열로 구분하십시오. 자세한 내용은 [차트의 여러 계열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md)을 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -37,7 +37,7 @@ ms.locfileid: "65578828"
 ## <a name="displaying-multiple-data-ranges-using-scale-breaks"></a>배율 구분선을 사용하여 여러 데이터 범위 표시  
  배율 구분선을 사용하면 차트 위에서 선을 그릴 위치가 계산됩니다. 배율 구분선을 그리기 위해 범위 사이를 충분히 구분해야 합니다. 기본적으로 차트의 25% 이상의 데이터 범위 사이가 구분되는 경우에만 배율 구분선을 추가할 수 있습니다.  
   
- ![배율 구분선을 포함하는 차트](../../reporting-services/report-design/media/rs-multipledatarangeschart-scalebreak.gif "배율 구분선을 포함하는 차트")  
+ ![눈금 구분선을 포함하는 차트](../../reporting-services/report-design/media/rs-multipledatarangeschart-scalebreak.gif "눈금 구분선을 포함하는 차트")  
   
 > [!NOTE]  
 >  차트에서 배율 구분선의 배치 위치는 지정할 수 없습니다. 그러나 이 항목의 뒷부분에 설명되어 있는 대로 배율 구분선을 계산하는 방식은 수정할 수 있습니다.  

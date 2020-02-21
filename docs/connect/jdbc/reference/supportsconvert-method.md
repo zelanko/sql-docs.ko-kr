@@ -1,5 +1,5 @@
 ---
-title: supportsConvert 메서드 () | Microsoft Docs
+title: supportsConvert 메서드() | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 45c83c4f-649a-4cd6-9d44-d38524758bb8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cc000039be5ca8a9699100f9bbe4672af26b0530
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969587"
 ---
 # <a name="supportsconvert-method-"></a>supportsConvert 메서드()
@@ -34,14 +34,14 @@ ms.locfileid: "67969587"
 public boolean supportsConvert()  
 ```  
   
-## <a name="return-value"></a>반환 값  
- 지원 되는 경우 **true** 입니다. 그렇지 않으면 **false**입니다.  
+## <a name="return-value"></a>Return Value  
+ 지원되는 경우 **true**입니다. 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 supportsConvert 메서드는 java. DatabaseMetaData 인터페이스의 supportsConvert 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 supportsConvert 메서드는 java.sql.DatabaseMetaData 인터페이스의 supportsConvert 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [supportsConvert 메서드&#40;SQLServerDatabaseMetaData&#41;](../../../connect/jdbc/reference/supportsconvert-method-sqlserverdatabasemetadata.md)   

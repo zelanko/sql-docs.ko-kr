@@ -1,6 +1,6 @@
 ---
-title: SQL Server Integration Services 속성(서비스 탭) | Microsoft Docs
-ms.custom: ''
+title: SQL Server Integration Services 속성(서비스 탭)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,16 +11,16 @@ ms.assetid: 37f0acd9-c96f-48fd-9b53-2ca0097af242
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d99dd32aa72d550db7aab32f0f4d9a4539d4251d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: e6b25e14ebc6f757239046987e338d941c3fbbd8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024024"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75304946"
 ---
 # <a name="sql-server-integration-services-properties-service-tab"></a>SQL Server Integration Services 속성(서비스 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]**속성** 대화 상자의 **서비스** 탭을 사용하여 다음 옵션을 확인하거나 지정할 수 있습니다.  
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] **속성** 대화 상자의 **서비스** 탭을 사용하여 다음 옵션을 확인하거나 지정할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
  **이진 경로**  
@@ -42,14 +42,14 @@ ms.locfileid: "68024024"
  Windows 프로세스 ID를 표시합니다.  
   
  **SQL 서비스 유형**  
- 호출 프로세스에 제공되는 서비스의 유형을 표시합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 몇 가지 서비스를 설치합니다.  
+ 호출 프로세스에 제공되는 서비스의 유형을 표시합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 몇 가지 서비스를 설치합니다.  
   
  **시작 모드**  
  이 서비스를 다음 옵션으로 설정합니다.  
   
--   수동: 컴퓨터가 시작될 때 이 서비스가 자동으로 시작되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자나 다른 도구를 사용하여 서비스를 시작해야 합니다.  
+-   수동: 이 서비스는 컴퓨터가 시작될 때 자동으로 시작되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자나 다른 도구를 사용하여 서비스를 시작해야 합니다.  
   
--   자동: 컴퓨터가 시작될 때 이 서비스가 시작됩니다.  
+-   자동: 이 서비스는 컴퓨터가 시작될 때 시작됩니다.  
   
 -   사용 안 함: 이 서비스를 시작할 수 없습니다.  
   

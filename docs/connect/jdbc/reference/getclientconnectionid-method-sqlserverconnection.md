@@ -1,5 +1,5 @@
 ---
-title: getClientConnectionID 메서드 (SQLServerConnection) | Microsoft Docs
+title: getClientConnectionID 메서드(SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: bee39c11-733a-461f-92cc-33efcb2af87d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 84367995aa5820bc6078b5e62bc830b0e58c4b0a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953171"
 ---
 # <a name="getclientconnectionid-method-sqlserverconnection"></a>getClientConnectionID 메서드(SQLServerConnection)
@@ -28,14 +28,14 @@ ms.locfileid: "67953171"
 public Java.util.UUID SQLServerConnection.getClientConnectionID();  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  가장 최근에 연결을 시도한 연결 ID를 나타내는 16바이트 GUID입니다. 또는 연결 요청이 시작된 후 실패하거나 사전 로그인 핸드셰이크가 있을 경우 NULL입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 확장 이벤트 로그에서 진단 정보에 액세스 하는 방법에 대 한 자세한 내용은 [확장 이벤트 로그에서 진단 정보에 액세스](../../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md)를 참조 하세요.  
+## <a name="remarks"></a>설명  
+ 확장 이벤트 로그의 진단 정보 액세스에 대한 자세한 내용은 [확장 이벤트 로그의 진단 정보 액세스](../../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md)를 참조하세요.  
   
  다음 예제는 연결 ID를 가져오는 방법을 설명합니다.  
   

@@ -1,7 +1,7 @@
 ---
-title: SQL Server 장애 조치(Failover) 클러스터 인스턴스 이름 변경 | Microsoft 문서
-ms.custom: ''
-ms.date: 03/14/2017
+title: 장애 조치(failover) 클러스터 인스턴스 이름 바꾸기
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 612f0171cbb7786374923dc5ed8c257224474a21
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: af1ec295ef8567496da84819532342164cb269cb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063884"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75230716"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>SQL Server 장애 조치(Failover) 클러스터 인스턴스 이름 변경
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,13 +67,13 @@ ms.locfileid: "68063884"
   
 -   SQL 에이전트가 이벤트를 전달하도록 구성된 경우 레지스트리 설정을 수정합니다. 자세한 내용은 [이벤트 전달 서버 지정&#40;SQL Server Management Studio&#41;](https://msdn.microsoft.com/library/81dfcbe4-3000-4e77-99de-bf85fef63a12)을 참조하세요.  
   
--   컴퓨터/클러스터 네트워크 이름을 바꿀 때 마스터 서버(MSX) 및 대상 서버(TSX) 인스턴스 이름을 수정합니다. 자세한 내용은 다음 항목을 참조하십시오.  
+-   컴퓨터/클러스터 네트워크 이름을 바꿀 때 마스터 서버(MSX) 및 대상 서버(TSX) 인스턴스 이름을 수정합니다. 자세한 내용은 아래 항목을 참조하세요.  
   
     -   [마스터 서버에서 여러 대상 서버 제거](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
   
     -   [다중 서버 환경 만들기](../../../ssms/agent/create-a-multiserver-environment.md)  
   
--   업데이트된 서버 이름을 사용하여 로그를 백업 및 복원할 수 있도록 로그 전달을 다시 구성합니다. 자세한 내용은 다음 항목을 참조하십시오.  
+-   업데이트된 서버 이름을 사용하여 로그를 백업 및 복원할 수 있도록 로그 전달을 다시 구성합니다. 자세한 내용은 아래 항목을 참조하세요.  
   
     -   [로그 전달 구성&#40;SQL Server&#41;](../../../database-engine/log-shipping/configure-log-shipping-sql-server.md)  
   
@@ -82,6 +82,6 @@ ms.locfileid: "68063884"
 -   서버 이름을 기반으로 하는 작업 단계를 업데이트합니다. 자세한 내용은 [Manage Job Steps](../../../ssms/agent/manage-job-steps.md)을(를) 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server의 독립 실행형 인스턴스를 호스팅하는 컴퓨터 이름 바꾸기](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  
+ [SQL Server의 독립 실행형 인스턴스를 호스트하는 컴퓨터 이름 바꾸기](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  
   
   

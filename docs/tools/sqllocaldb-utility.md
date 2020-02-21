@@ -1,6 +1,6 @@
 ---
-title: SqlLocalDB 유틸리티 | Microsoft Docs
-ms.custom: ''
+title: SqlLocalDB 유틸리티
+ms.custom: seo-lt-2019
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 78358b6477208dcb7aecb4c031ee25318eab9e05
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: c829c9adce95dd1a4a84d5fd6fc7b88abdece96a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065458"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306675"
 ---
 # <a name="sqllocaldb-utility"></a>SqlLocalDB 유틸리티
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,12 +68,12 @@ SqlLocalDB.exe
  *\<instance-name>* 은 지정된 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** 인스턴스의 이름, 버전, 상태(실행 중 또는 중지됨), 마지막 시작 시간 및 **LocalDB**의 로컬 파이프 이름을 반환합니다.  
   
  [ **trace** | **t** ] **on** | **off**  
- **trace on**을 사용하여 현재 사용자에 대한 **SqlLocalDB** API 호출을 추적할 수 있습니다. **trace off** 를 사용하면 추적이 사용되지 않습니다.  
+ **trace on** 을 사용하여 현재 사용자에 대한 **SqlLocalDB** API 호출을 추적할 수 있습니다. **trace off** 를 사용하면 추적이 사용되지 않습니다.  
   
  **-?**  
  각 **SqlLocalDB** 옵션에 대한 간략한 설명을 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  *instance name* 인수는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 식별자에 대한 규칙을 따르거나 큰따옴표로 묶어야 합니다.  
   
  인수 없이 SqlLocalDB를 실행하면 도움말 텍스트가 반환됩니다.  
@@ -82,14 +82,14 @@ SqlLocalDB.exe
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-an-instance-of-localdb"></a>1\. LocalDB의 인스턴스 만들기  
+### <a name="a-creating-an-instance-of-localdb"></a>A. LocalDB의 인스턴스 만들기  
  다음 예에서는 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**바이너리를 사용하여** 라는 `DEPARTMENT` LocalDB [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 의 인스턴스를 만든 다음 인스턴스를 시작합니다.  
   
 ```  
 SqlLocalDB.exe create "DEPARTMENT" 12.0 -s  
 ```  
   
-### <a name="b-working-with-a-shared-instance-of-localdb"></a>2\. LocalDB의 공유 인스턴스 작업  
+### <a name="b-working-with-a-shared-instance-of-localdb"></a>B. LocalDB의 공유 인스턴스 작업  
  관리자 권한을 사용하여 명령 프롬프트를 엽니다.  
   
 ```  

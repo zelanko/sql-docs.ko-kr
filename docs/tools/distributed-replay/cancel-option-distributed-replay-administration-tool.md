@@ -1,6 +1,7 @@
 ---
-title: 취소 옵션(Distributed Replay Administration Tool) | Microsoft Docs
-ms.custom: ''
+title: 취소 옵션 관리 도구
+titleSuffix: SQL Server Distributed Replay
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,16 +11,18 @@ ms.topic: conceptual
 ms.assetid: fea376de-307a-4b45-b7e2-37df88f3681a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6dd320b55b81a515bcd42e0e971b0c9cc6e98b34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 00bff043287d323b84ad878e1444fda83e6d97be
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67942857"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307064"
 ---
 # <a name="cancel-option-distributed-replay-administration-tool"></a>취소 옵션(Distributed Replay Administration Tool)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 관리 도구인 **DReplay.exe**는 Distributed Replay Controller와 통신하는 데 사용할 수 있는 명령줄 도구입니다. 이 항목에서는 **cancel** 명령줄 옵션과 해당 구문에 대해 설명합니다.  
+
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 관리 도구인 **DReplay.exe**는 Distributed Replay Controller와 통신하는 데 사용할 수 있는 명령줄 도구입니다. 이 문서에서는 **cancel** 명령줄 옵션과 해당 구문에 대해 설명합니다.  
   
  **cancel** 옵션은 컨트롤러에서 실행 중인 현재 작업을 취소합니다.  
   

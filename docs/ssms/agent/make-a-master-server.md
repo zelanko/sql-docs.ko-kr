@@ -1,10 +1,9 @@
 ---
-title: 마스터 서버 만들기 | Microsoft 문서
-ms.custom: ''
+title: Make a Master Server
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -21,13 +20,15 @@ helpviewer_keywords:
 ms.assetid: 05739a73-1fdf-4d9d-92a6-70f328380322
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 79f02ab705f6bf340403739ed01d46e8ab11b024
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 816c6b0432f9e5c93ae1ff1f1328e7c05c1a731e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552882"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242214"
 ---
 # <a name="make-a-master-server"></a>Make a Master Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "69552882"
 > [!IMPORTANT]  
 > 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
 
-이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 마스터 서버 [!INCLUDE[tsql](../../includes/tsql-md.md)]를 만드는 방법에 대해 설명합니다.  
+이 문서에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 마스터 서버 [!INCLUDE[tsql](../../includes/tsql-md.md)]를 만드는 방법에 대해 설명합니다.  
   
 ## <a name="BeforeYouBegin"></a>시작하기 전 주의 사항  
   
@@ -56,14 +57,14 @@ ms.locfileid: "69552882"
   
     이 오류를 해결하려면 프록시 계정이 작업 단계가 실행되는 마스터 서버 프록시 계정과 동일한 이름을 가진 대상 서버에 있는지 확인합니다.  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>권한  
 이 프로시저를 실행할 수 있는 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 설정됩니다.  
   
 ## <a name="SSMSProcedure"></a>SQL Server Management Studio 사용  
   
 #### <a name="to-make-a-master-server"></a>마스터 서버를 만들려면  
   
-1.  **개체 탐색기** 에서 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+1.  **개체 탐색기**에서 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]의 인스턴스에 연결한 다음, 해당 인스턴스를 확장합니다.  
   
 2.  **SQL Server 에이전트**를 마우스 오른쪽 단추로 클릭하고 **다중 서버 관리**를 가리킨 다음 **마스터로 만들기**를 클릭합니다. **마스터 서버 마법사** 는 마스터 서버를 만들고 대상 서버를 추가하는 프로세스를 안내합니다.  
   
@@ -101,7 +102,7 @@ ms.locfileid: "69552882"
     **연결 추가**  
     서버를 등록하지 않고 대상 서버 목록에 추가합니다.  
   
-    **대량 삽입 태스크 편집기**  
+    **연결**  
     선택한 서버의 연결 속성을 변경합니다.  
   
 5.  **마스터 서버 로그인 자격 증명** 페이지에서 대상 서버에 대해 새 로그인을 만들지 여부와 필요한 경우 해당 로그인에 마스터 서버에 대한 권한을 부여할지 여부를 지정할 수 있습니다.  

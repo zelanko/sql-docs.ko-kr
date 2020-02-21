@@ -1,5 +1,5 @@
 ---
-title: getObjectInstance 메서드 (SQLServerDataSourceObjectFactory) | Microsoft Docs
+title: getObjectInstance 메서드(SQLServerDataSourceObjectFactory) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 0a1503e2-e991-4d70-a223-087fc63baf73
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: de25e608c9fbdbdf6ff91d08e7a6502765bb590e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981054"
 ---
 # <a name="getobjectinstance-method-sqlserverdatasourceobjectfactory"></a>getObjectInstance 메서드(SQLServerDataSourceObjectFactory)
@@ -54,14 +54,14 @@ public java.lang.Object getObjectInstance(java.lang.Object ref,
   
  개체를 만드는 데 사용되는 환경입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  **Object** 값입니다.  
   
 ## <a name="exceptions"></a>예외  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
- 이 getObjectInstance 메서드는 javax.sql 팩터리 인터페이스의 getObjectInstance 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 getObjectInstance 메서드는 javax.naming.spi.ObjectFactory 인터페이스의 getObjectInstance 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDataSourceObjectFactory 메서드](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-methods.md)   

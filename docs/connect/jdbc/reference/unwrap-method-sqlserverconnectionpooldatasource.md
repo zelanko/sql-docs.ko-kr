@@ -1,5 +1,5 @@
 ---
-title: 래핑 해제 방법 (SQLServerConnectionPoolDataSource) | Microsoft Docs
+title: unwrap 메서드(SQLServerConnectionPoolDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: f5c9b734-2096-4ae4-a284-6b4d1b4a00d4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ab408e917a1e6c22cdbe320eb19f5c9995c6e216
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67985612"
 ---
 # <a name="unwrap-method-sqlserverconnectionpooldatasource"></a>unwrap 메서드(SQLServerConnectionPoolDataSource)
@@ -34,20 +34,20 @@ public <T> T unwrap(Class<T> iface)
   
  인터페이스를 정의하는 **T** 형식의 클래스입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  지정된 인터페이스를 구현하는 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverconnectionpooldatasource.md) 메서드는 JDBC 4.0 사양에서 도입된 java.sql.Wrapper 인터페이스에 의해 정의됩니다.  
   
  애플리케이션에서는 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]와 관련된 JDBC API에 대한 확장에 액세스해야 할 수 있습니다. unwrap 메서드는 이 개체가 확장하는 공용 클래스에서 공급업체 확장을 노출하는 경우 이 클래스에 대한 래핑 해제를 지원합니다.  
   
  [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) 클래스는 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) 클래스를 확장합니다. 이 메서드가 호출되면 개체가 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) 클래스 및 [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) 클래스로 래핑 해제됩니다.  
   
- 자세한 내용은 [래퍼 및 인터페이스](../../../connect/jdbc/wrappers-and-interfaces.md)를 참조 하세요.  
+ 자세한 내용은 [래퍼 및 인터페이스](../../../connect/jdbc/wrappers-and-interfaces.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerConnectionPoolDataSource 메서드](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-methods.md)   

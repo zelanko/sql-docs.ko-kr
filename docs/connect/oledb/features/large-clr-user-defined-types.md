@@ -1,6 +1,6 @@
 ---
-title: 많은 CLR 사용자 정의 형식 | Microsoft Docs
-description: SQL Server에 대 한 OLE DB 드라이버의 Large CLR 사용자 정의 형식
+title: 큰 CLR 사용자 정의 형식 | Microsoft Docs
+description: OLE DB Driver for SQL Server의 큰 CLR 사용자 정의 형식
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: acbdd170808ed9f6d7f67265a4e0d18f3b9e8eb0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67989074"
 ---
 # <a name="large-clr-user-defined-types"></a>큰 CLR 사용자 정의 형식
@@ -26,13 +26,13 @@ ms.locfileid: "67989074"
 
   SQL Server 2005에서는 CLR(공용 언어 런타임)에서의 UDT(사용자 정의 형식) 크기가 8,000바이트로 제한되었습니다. [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이상 버전에서는 이 제한이 더 이상 적용되지 않습니다. 이제 CLR UDT가 LOB(Large Object) 형식과 비슷하게 처리됩니다. 즉, 8,000바이트보다 작거나 같은 UDT는 SQL Server 2005에서와 동일하게 처리되나 이보다 큰 UDT도 지원되며 이 경우 크기가 "제한 없음"으로 보고됩니다.  
   
- 자세한 내용은 [OLE DB &#40;&#41;대량 CLR 사용자 정의 형식](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md)을 참조 하세요.  
+ 자세한 내용은 [큰 CLR 사용자 정의 형식&#40;OLE DB&#41;](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md)을 참조하세요.  
   
 ## <a name="use-cases"></a>사용 사례   
   
  OLE DB의 경우 ISequentialStream 바인딩을 통해 UDT 값을 서버로 스트리밍하거나 서버에서 스트리밍하는 기능이 큰 UDT에 대한 지원에 포함되었습니다.  
   
- 8,000바이트보다 작거나 같은 UDT는 SQL Server 2005에서와 동일하게 처리됩니다. OLE DB의 경우 ISequentialStream binding을 사용 하 여 작은 Udt를 스트리밍할 수 있습니다.  
+ 8,000바이트보다 작거나 같은 UDT는 SQL Server 2005에서와 동일하게 처리됩니다. OLE DB의 경우 작은 UDT는 ISequentialStream 바인딩을 사용하여 이전처럼 스트리밍할 수 있습니다.  
   
  네이티브 코드가 CLR UDT의 내용을 이해해야 하지만 관리되는 개체를 인스턴스화할 필요는 없는 경우가 있습니다. 이 경우 사용자 지정 직렬화를 사용하여 서버의 UDT 값을 클라이언트의 잘 알려진 형식으로 변환할 수 있습니다.  
   

@@ -1,24 +1,25 @@
 ---
-title: ReportViewer 컨트롤 2016에서 데이터 수집
+title: ReportViewer 컨트롤에서 데이터 수집
+description: 고객이 제품을 사용하는 방식을 보다 잘 이해하기 위해 컨트롤에서 익명의 사용량 현황 데이터가 수집됩니다. 사용량 현황 데이터는 향후 개발에서 고객에게 가장 적합한 사항을 집중적으로 개선하는 데 도움이 됩니다.
 author: maggiesMSFT
 ms.author: maggies
+ms.custom: ''
 ms.reviewer: ''
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
 ms.topic: reference
-ms.custom: ''
 ms.date: 09/18/2018
-ms.openlocfilehash: 2372adbf0fd0b9ad15383d6538d25ef955b27426
-ms.sourcegitcommit: 071065bc5433163ebfda4fdf6576349f9d195663
-ms.translationtype: MTE75
+ms.openlocfilehash: d7b70445fc4d8a29d8ebcdf7ecbffe4b54133f0e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71923796"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796890"
 ---
-# <a name="integrating-reporting-services-using-reportviewer-controls---data-collection"></a>ReportViewer 컨트롤을 사용하여 Reporting Services 통합 - 데이터 수집
+# <a name="integrate-reporting-services-using-reportviewer-controls---data-collection"></a>ReportViewer 컨트롤을 사용하여 Reporting Services 통합 - 데이터 수집
 
-고객이 제품을 사용하는 방식을 보다 잘 이해하기 위해 컨트롤에서 익명의 사용량 현황 데이터가 수집됩니다. 사용량 현황 데이터는 향후에 고객에게 가장 적합한 개선 방향으로 개발이 진행되도록 하는 데 도움이 됩니다.
+고객이 제품을 사용하는 방식을 보다 잘 이해하기 위해 컨트롤에서 익명의 사용량 현황 데이터가 수집됩니다. 사용량 현황 데이터는 향후 개발에서 고객에게 가장 적합한 사항을 집중적으로 개선하는 데 도움이 됩니다.
 
 Microsoft SQL Server 및 보고서 뷰어의 데이터 수집 및 사용 사례는 [개인정보처리방침](https://go.microsoft.com/fwlink/?LinkID=868444)에 설명되어 있습니다.
 
@@ -39,7 +40,7 @@ protected void Page_Load(object sender, EventArgs e)
     ReportViewer1.EnableTelemetry = false;
 }
 ```
-## <a name="see-also"></a>관련 항목:
+## <a name="see-also"></a>참고 항목
 
 [WebForms 보고서 뷰어 컨트롤 사용](../../reporting-services/application-integration/using-the-webforms-reportviewer-control.md)  
 [보고서 뷰어 컨트롤을 사용하여 Reporting Services 통합](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md) 

@@ -11,10 +11,10 @@ ms.assetid: 6c32b904-c44b-472e-a084-38f008a742b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 483588eee0a5d1baaf7f2eda4a88372c45836d2e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975313"
 ---
 # <a name="setbinarystream-method-int-javaioinputstream"></a>setBinaryStream 메서드(int, java.io.InputStream)
@@ -37,13 +37,13 @@ public final void setAsciiStream(int parameterIndex,
   
  *x*  
   
- InputStream 개체입니다.  
+ java.io.InputStream 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 setBinaryStream 메서드는 Java.sql.preparedstatement 인터페이스의 setBinaryStream 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 setBinaryStream 메서드는 java.sql.PreparedStatement 인터페이스의 setBinaryStream 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [setBinaryStream 메서드 &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setbinarystream-method-sqlserverpreparedstatement.md)   

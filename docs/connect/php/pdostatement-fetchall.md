@@ -1,5 +1,5 @@
 ---
-title: 'PDOStatement:: fetchAll | Microsoft Docs'
+title: PDOStatement::fetchAll | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: be74188a-77cd-4d19-b16e-77278373c979
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5bd53aedf65bd1e7935c7e51eb90fb78d65d2bed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936039"
 ---
 # <a name="pdostatementfetchall"></a>PDOStatement::fetchAll
@@ -36,10 +36,10 @@ $*column_index*: $*fetch_style*이 PDO::FETCH_COLUMN인 경우 반환할 열을 
   
 $*ctor_args*: $*fetch_style*이 PDO::FETCH_CLASS 또는 PDO::FETCH_OBJ인 경우 클래스 생성자에 대한 매개 변수 배열입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 결과 집합의 나머지 행 배열 또는 메서드 호출에 실패하면 false입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 PDO 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 2.0에 추가되었습니다.  
   
 ## <a name="example"></a>예제  

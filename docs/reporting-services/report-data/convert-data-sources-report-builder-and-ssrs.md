@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0e099c7e-8c03-43eb-9ea3-76e52d9ebbe3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1bd47c468354cead8a3fd9c2ad5b391988a919b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: ad8b75d75b5f9c4bc5b606c4e103c318e23398ed
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65573185"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190852"
 ---
 # <a name="convert-data-sources-report-builder-and-ssrs"></a>데이터 원본 변환(보고서 작성기 및 SSRS)
   보고서 데이터 창의 각 데이터 원본은 보고서에 관련 및 포함되거나 공유됩니다. 보고서 작성기에서 공유 데이터 원본은 보고서 서버 또는 SharePoint 사이트의 게시된 공유 데이터 원본을 가리킵니다. 보고서 디자이너에서 공유 데이터 원본은 솔루션 탐색기의 **공유 데이터 원본** 폴더에 있는 공유 데이터 원본을 가리킵니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "65573185"
   
 ### <a name="to-convert-a-data-source-from-shared-to-embedded"></a>공유 데이터 원본에서 포함된 데이터 원본으로 변환  
   
--   보고서 데이터 창에서 데이터 원본을 마우스 오른쪽 단추로 클릭하여 **데이터 원본 속성** 대화 상자를 열고 **포함된 연결**을 클릭합니다. 필수 정보를 입력합니다.  
+-   보고서 데이터 창에서 데이터 원본을 마우스 오른쪽 단추로 클릭하여 **데이터 원본 속성** 대화 상자를 열고 **포함된 연결**을 클릭합니다. 필요한 정보를 입력합니다.  
   
      보고서 데이터 창에서 데이터 원본 아이콘이 공유 데이터 원본 아이콘으로 변경됩니다.  
   
@@ -49,18 +49,18 @@ ms.locfileid: "65573185"
   
 #### <a name="to-convert-a-data-source-from-embedded-to-shared"></a>포함된 데이터 원본에서 공유 데이터 원본으로 변환  
   
--   보고서 데이터 창에서 데이터 원본을 마우스 오른쪽 단추로 클릭하여 **데이터 원본 속성** 대화 상자를 열고 **포함된 연결**을 클릭합니다. 필수 정보를 입력합니다.  
+-   보고서 데이터 창에서 데이터 원본을 마우스 오른쪽 단추로 클릭하여 **데이터 원본 속성** 대화 상자를 열고 **포함된 연결**을 클릭합니다. 필요한 정보를 입력합니다.  
   
      보고서 데이터 창에서 데이터 원본 아이콘이 공유 데이터 원본 아이콘으로 변경됩니다.  
   
 #### <a name="to-convert-a-data-source-from-shared-to-embedded"></a>공유 데이터 원본에서 포함된 데이터 원본으로 변환  
   
--   보고서 데이터 창에서 데이터 원본을 마우스 오른쪽 단추로 클릭하여 **데이터 원본 속성** 대화 상자를 열고 **포함된 연결**을 클릭합니다. 필수 정보를 입력합니다.  
+-   보고서 데이터 창에서 데이터 원본을 마우스 오른쪽 단추로 클릭하여 **데이터 원본 속성** 대화 상자를 열고 **포함된 연결**을 클릭합니다. 필요한 정보를 입력합니다.  
   
      보고서 데이터 창에서 데이터 원본 아이콘이 공유 데이터 원본 아이콘으로 변경됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [보고서 데이터 원본 관리](../../reporting-services/report-data/manage-report-data-sources.md)   
- [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [데이터 연결 문자열 만들기 - 보고서 작성기 및 SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   

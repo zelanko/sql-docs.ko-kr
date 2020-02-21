@@ -18,10 +18,10 @@ ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0012f01fead8d6890f8e593f4991cbb0252e3dd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576525"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>데이터 필터링, 그룹화 및 정렬(보고서 작성기 및 SSRS)
@@ -99,7 +99,7 @@ ms.locfileid: "65576525"
 ### <a name="groups-and-scope-in-data-regions"></a>데이터 영역의 그룹 및 범위  
  동일한 데이터 세트에서 다양한 데이터 보기를 제공하려면 각 데이터 영역에 동일한 그룹 식을 지정합니다. 예를 들어 범주화된 데이터를 테이블에 표시하면 모든 세부 데이터를 표시할 수 있고 원형 차트에 표시하면 집계를 표시하고 전체 데이터 세트와 관련된 각 범주를 시각화할 수 있습니다. 자세한 내용은 [동일한 데이터 세트에 여러 데이터 영역 연결&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)을 참조하세요.  
   
- 테이블, 행렬 또는 목록의 셀에 있는 데이터 영역을 중첩시킬 경우 자동으로 데이터의 범위가 셀의 가장 안쪽 그룹 멤버 자격으로 지정됩니다. 예를 들어 행 그룹 및 열 그룹 모두에 있는 셀에 차트를 추가하면 런타임에 이 차트에서 데이터 사용 범위는 가장 안쪽 행 그룹 인스턴스와 가장 안쪽 열 그룹 인스턴스입니다. 자세한 내용은 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)를 참조하세요.  
+ 테이블, 행렬 또는 목록의 셀에 있는 데이터 영역을 중첩시킬 경우 자동으로 데이터의 범위가 셀의 가장 안쪽 그룹 멤버 자격으로 지정됩니다. 예를 들어 행 그룹 및 열 그룹 모두에 있는 셀에 차트를 추가하면 런타임에 이 차트에서 데이터 사용 범위는 가장 안쪽 행 그룹 인스턴스와 가장 안쪽 열 그룹 인스턴스입니다. 자세한 내용은 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)를 나타냅니다.  
   
   
 ##  <a name="Sorting"></a> 보고서 데이터 정렬  
@@ -112,7 +112,7 @@ ms.locfileid: "65576525"
 ### <a name="sorting-data-in-a-dataset-query"></a>데이터 세트 쿼리에서 데이터 정렬  
  보고서에서 데이터를 가져오기 전에 미리 정렬하려면 데이터 세트 쿼리에 정렬 순서를 추가합니다. 쿼리에서 데이터를 정렬하면 보고서 처리기가 아닌 데이터 원본에 의해 정렬 작업이 수행됩니다.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본 유형의 경우에는 데이터 세트 쿼리에 ORDER BY 절을 추가할 수 있습니다. 예를 들어 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리인 `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`는 SalesOrders 테이블에서 Sales 및 Region 열을 Sales 기준의 내림차순으로 정렬합니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본 유형의 경우에는 데이터 세트 쿼리에 ORDER BY 절을 추가할 수 있습니다. 예를 들어 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리인 `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`는 SalesOrders 테이블에서 Sales 및 Region 열을 Sales 기준의 내림차순으로 정렬합니다.  
   
 > [!NOTE]  
 >  쿼리에서 정렬 순서를 지정할 수 없는 데이터 원본도 있습니다.  

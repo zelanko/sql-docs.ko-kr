@@ -9,10 +9,10 @@ ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: af9333214aa10f8c21d8b7eb31b92c261ff155e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574015"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>보고서 서버의 항목에 대한 URL 예제 - SharePoint 모드
@@ -29,7 +29,7 @@ ms.locfileid: "65574015"
   
  웹 계층의 다음 요소를 사용하여 보고서 서버 내용에 액세스하고 보안을 유지할 수 있습니다. 목록 및 페이지와 같은 다른 개체는 보고서 서버 내용에 액세스하는 데 사용되지 않으므로 다음 표에서 설명하지 않습니다.  
   
-|Object|설명|  
+|Object|Description|  
 |------------|-----------------|  
 |SharePoint 웹 애플리케이션|SharePoint 웹 애플리케이션은 독립 실행형 서버로 설치하거나 가상 서버 컬렉션이 포함된 팜에 설치할 수 있습니다. 웹 애플리케이션에는 URL(예: `http:*//servername*`)이 있으며 여러 사이트가 포함될 수 있습니다.|  
 |사이트|사이트는 웹 애플리케이션의 부모 사이트 또는 하위 사이트입니다.|  
@@ -49,7 +49,7 @@ ms.locfileid: "65574015"
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>SharePoint 서버 사이트 또는 하위 사이트에 대한 URL  
  보고서 또는 보고서 데이터 원본을 배포하는 경우 SharePoint 사이트 및 하위 사이트(있는 경우)에 대한 URL을 사용해야 합니다. URL에서 사이트 이름은 서버 이름 바로 뒤에 표시됩니다(예: `https://*servername/site*` 또는 `https://*servername/site/subsite*`).  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 또는 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 웹 애플리케이션에서 사이트와 하위 사이트는 주 사이트의 탭에 해당하는 경우가 많습니다. 사이트 이름이나 하위 사이트 이름을 찾으려면 **홈**, **모든 사이트 콘텐츠**를 차례로 클릭합니다. 그런 다음 아래쪽으로 스크롤하여 **사이트 및 작업 영역**을 찾습니다. 이 섹션에 사이트 목록이 표시됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 또는 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 웹 애플리케이션에서 사이트와 하위 사이트는 주 사이트의 탭에 해당하는 경우가 많습니다. 사이트 이름이나 하위 사이트 이름을 찾으려면 **홈**, **모든 사이트 콘텐츠**를 차례로 클릭합니다. 그런 다음 아래쪽으로 스크롤하여 **사이트 및 작업 영역**을 찾습니다. 이 섹션에 사이트 목록이 표시됩니다.  
   
 ### <a name="url-for-a-sharepoint-library"></a>SharePoint 라이브러리에 대한 URL  
  SharePoint 라이브러리에 보고서나 관련 항목을 배포하는 경우 SharePoint 라이브러리에 대한 URL을 사용해야 합니다. 라이브러리에 사용할 URL은 사용하는 SharePoint 버전에 따라 달라집니다.  
@@ -96,9 +96,9 @@ ms.locfileid: "65574015"
 |------------|-----------------|  
 |SharePoint 서버|`https://TestServer`|  
 |SharePoint 서버 사이트 또는 하위 사이트|`https://TestServer/toplevelsite/subsite`|  
-|**또는** [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 배포의 공유 문서 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 에 있는 Company Sales 예제 보고서|`https://TestServer/TestSite/Shared%20Documents/Company%20Sales.rdl`|  
+|**또는**[!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 배포의 공유 문서 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 에 있는 Company Sales 예제 보고서|`https://TestServer/TestSite/Shared%20Documents/Company%20Sales.rdl`|  
 |**또는** 인스턴스의 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] Documents/Doc [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 폴더에 있는 Company Sales 샘플 보고서|`https://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl`|  
-|**또는** [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 인스턴스의 보고서 센터 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 에 있는 Company Sales 예제 보고서|`https://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl`|  
+|**또는**[!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 인스턴스의 보고서 센터 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 에 있는 Company Sales 예제 보고서|`https://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl`|  
   
 ##  <a name="publishingToDocLib"></a> 제작 도구에서 SharePoint 라이브러리로 게시  
  보고서 제작 도구를 사용하여 보고서 및 관련 파일을 라이브러리에 게시하는 경우 파일은 추가되기 전에 유효한지 검사됩니다. SharePoint 라이브러리의 **업로드** 동작을 사용하여 보고서 및 관련 파일을 업로드하면 유효성 검사가 수행되지 않습니다. 보고서에 액세스하여 관리, 편집 또는 실행할 때까지 파일이 올바른지 여부를 확인할 수 없습니다.  
@@ -117,7 +117,7 @@ ms.locfileid: "65574015"
 ### <a name="file-names"></a>파일 이름  
  보고서 항목에 대한 URL의 파일 이름에는 파일 확장명이 포함되어야 합니다. 이러한 파일 확장명에 따라 파일 유형이 결정됩니다. 보고서 제작 도구에서 보고서 항목을 게시하는 경우 파일 확장명이 자동으로 포함됩니다. SharePoint 라이브러리에 보고서 항목을 업로드하는 경우에는 파일 확장명을 포함해야 합니다.  
   
- SharePoint 사이트에 업로드하는 항목의 파일 확장명을 지정하지 않으면 **rsInvalidDataSourceReference** 오류가 발생합니다. SharePoint 애플리케이션에서 올바른 파일 이름 문자로 인식하지 않는 문자는 파일 이름에 사용할 수 없습니다. # % &amp; * : &lt; &gt; ? / { | } 같은 문자는 포함하지 마십시오.  
+ SharePoint 사이트에 업로드하는 항목의 파일 확장명을 지정하지 않으면 **rsInvalidDataSourceReference** 오류가 발생합니다. SharePoint 애플리케이션에서 올바른 파일 이름 문자로 인식하지 않는 문자는 파일 이름에 사용할 수 없습니다. # % & * : &amp;lt; &amp;gt; ? / { | } 같은 문자는 포함하지 마십시오.  
   
 ## <a name="differences-between-uploading-and-publishing"></a>업로드와 게시의 차이점  
  보고서 디자이너 또는 보고서 작성기를 사용하여 보고서 및 관련 파일을 라이브러리에 게시하는 경우 파일이 추가되기 전에 해당 유효성이 검사됩니다. SharePoint 라이브러리의 **업로드** 동작을 사용하여 보고서 및 관련 파일을 업로드하면 유효성 검사가 수행되지 않습니다. 보고서에 액세스하여 관리, 편집 또는 실행할 때까지 파일이 올바른지 여부를 확인할 수 없습니다.  

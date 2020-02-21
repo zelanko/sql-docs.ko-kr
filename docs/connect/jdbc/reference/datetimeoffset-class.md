@@ -11,16 +11,16 @@ ms.assetid: 20bbeacd-ccca-4a46-8184-ff941ae2ec5f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1d697554d246d9bcc1720455137287029880d90a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955163"
 ---
 # <a name="datetimeoffset-class"></a>DateTimeOffset 클래스
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  이 형식은 datetimeoffset 형식의 개체를 나타내며 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **datetimeoffset** 데이터 형식에 해당 하는 Java 형식입니다.  
+  이 형식은 microsoft.sql.DateTimeOffset 형식의 개체를 나타내며 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **datetimeoffset** 데이터 형식에 해당하는 Java 형식입니다.  
   
  **패키지:** microsoft.sql  
   
@@ -35,8 +35,8 @@ ms.locfileid: "67955163"
 public final class DateTimeOffset  
 ```  
   
-## <a name="remarks"></a>Remarks  
- 데이터 형식에 대 한 자세한 내용은 [JDBC 드라이버 데이터 형식 이해](../../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)를 참조 하세요.  
+## <a name="remarks"></a>설명  
+ 데이터 형식에 대한 자세한 내용은 [JDBC 드라이버 데이터 형식 이해](../../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [JDBC 드라이버 API 참조](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)   

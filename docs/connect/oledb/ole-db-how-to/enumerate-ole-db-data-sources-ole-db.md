@@ -1,6 +1,6 @@
 ---
-title: OLE DB 데이터 원본 열거 (OLE DB) | Microsoft Docs
-description: MSOLEDBSQL 열거자를 사용 하 여 OLE DB 데이터 원본 열거
+title: OLE DB 데이터 원본 열거(OLE DB) | Microsoft Docs
+description: MSOLEDBSQL 열거자를 사용하여 OLE DB 데이터 원본 열거
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: b9e14ef426a07705c51c0aa77c908dd1c2b8bbcf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994823"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>OLE DB 데이터 원본 열거(OLE DB)

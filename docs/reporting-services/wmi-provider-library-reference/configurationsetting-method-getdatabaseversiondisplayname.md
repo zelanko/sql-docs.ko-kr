@@ -11,10 +11,10 @@ ms.assetid: e1286424-7043-4f12-a7ad-1cf69e81baa4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4d29ed7bc6e627f7ed670feca9b98b0b4fac3eb9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570955"
 ---
 # <a name="configurationsetting-method---getdatabaseversiondisplayname"></a>ConfigurationSetting 메서드 - GetDatabaseVersionDisplayName
@@ -40,10 +40,10 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
  *HRESULT*  
  [out] 호출의 성공 여부를 나타내는 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  다음 표에서는 표시 문자열에 대한 데이터베이스 버전의 매핑을 보여 줍니다.  
   
-|**릴리스**|**버전(Version)**|**표시 이름**|  
+|**릴리스**|**버전**|**표시 이름**|  
 |-----------------|-----------------|----------------------|  
 |RS 2005 SP2|@DBVersion = 'C.0.8.54'|SQL Server 2005 SP2|  
 |RS 2005 SP1|@DBVersion = 'C.0.8.43'|SQL Server 2005 SP1|  
@@ -55,7 +55,7 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
   
  *2000 이전* 버전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 경우 ACT_E_BAD_VERSION의 HRESULT가 반환됩니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  메서드 호출의 성공 또는 실패를 나타내는 *HRESULT* 를 반환합니다. 0 값은 메서드 호출이 성공했음을 나타냅니다. 0 이외의 값은 오류가 발생했음을 나타냅니다.  
   
 ## <a name="requirements"></a>요구 사항  

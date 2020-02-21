@@ -11,10 +11,10 @@ ms.assetid: 317c0b44-fe3f-4142-9cab-e40e4c4fe070
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9a792f33d598eafa706241329873338998c61865
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980266"
 ---
 # <a name="getrowidlifetime-method-sqlserverdatabasemetadata"></a>getRowIdLifetime 메서드(SQLServerDatabaseMetaData)
@@ -29,17 +29,17 @@ ms.locfileid: "67980266"
 public java.sql.RowIdLifetime getRowIdLifetime()  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  RowIdLifetime 개체입니다.  
   
 > [!NOTE]  
->  JDBC 드라이버 버전 2.0 릴리스에서이 메서드는 ROWID_UNSUPPORTED 값을 반환 합니다.  
+>  JDBC 드라이버 버전 2.0 릴리스에서 이 메서드는 java.sql.RowIdLifetime.ROWID_UNSUPPORTED 값을 반환합니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 getRowIdLifetime 메서드는 java .sql. DatabaseMetaData 인터페이스의 getRowIdLifetime 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 getRowIdLifetime 메서드는 java.sql.DatabaseMetaData 인터페이스의 getRowIdLifetime 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

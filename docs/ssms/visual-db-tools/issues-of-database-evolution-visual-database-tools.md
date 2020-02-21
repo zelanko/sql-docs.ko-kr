@@ -1,10 +1,9 @@
 ---
-title: 데이터베이스의 단계적 개발 문제(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 데이터베이스 단계적 개발 문제
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +12,14 @@ helpviewer_keywords:
 ms.assetid: 1ed6ae10-d212-4ec2-8569-1b94ab1cba6d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 33083fd036f2c52b12380f4186cbccc0c47f86be
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 987f808a647966671e155c94a80270b1faf6da30
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254253"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75225027"
 ---
 # <a name="issues-of-database-evolution-visual-database-tools"></a>데이터베이스의 단계적 개발 문제(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,6 +36,6 @@ ms.locfileid: "68254253"
 데이터베이스 디자인을 변경하는 방법에 관계 없이 변경 기록을 유지해야 합니다. 프로덕션 데이터베이스의 모든 수정 내용에 대한 SQL 스크립트를 유지하는 것도 변경 기록을 유지하는 한 방법입니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[제약 조건 작업(Visual Database Tools)](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
+[제약 조건 작업](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
 [다중 사용자 환경&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/multiuser-environments-visual-database-tools.md)  
   

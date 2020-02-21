@@ -1,5 +1,5 @@
 ---
-title: isSparseColumnSet 메서드 (SQLServerResultSetMetaData) | Microsoft Docs
+title: isSparseColumnSet 메서드(SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: ac363670-78ae-49f1-aeda-4fba3329a258
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2b902ddf8e9e05900e55492116ee9e22a3dbbccc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977224"
 ---
 # <a name="issparsecolumnset-method-sqlserverresultsetmetadata"></a>isSparseColumnSet 메서드(SQLServerResultSetMetaData)
@@ -33,10 +33,10 @@ public boolean isSparseColumnSet(int column)
   
  열의 인덱스(1부터 시작)입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  결과 집합의 열이 스파스 열 집합이면 **true**이고, 그렇지 않으면 **false**입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 메서드는 데이터베이스의 정보를 검색하지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  

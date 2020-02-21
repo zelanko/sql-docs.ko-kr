@@ -11,10 +11,10 @@ ms.assetid: cb6ac7f5-81ae-4cb7-87c8-cbee40d278c5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 486fd2b419e96e2a66a3aeca0c792632a462f4bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974757"
 ---
 # <a name="setcharacterstream-method-int-javaioreader-long"></a>setCharacterStream 메서드(int, java.io.Reader, long)
@@ -47,8 +47,8 @@ public final void setCharacterStream(int parameterIndex,
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 setCharacterStream 메서드는 Java.sql.preparedstatement 인터페이스의 setCharacterStream 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 setCharacterStream 메서드는 Java.sql.PreparedStatement 인터페이스의 setCharacterStream 메서드에 의해 지정됩니다.  
   
  스트림의 길이가 *length* 매개 변수에 지정된 길이와 다르면 행이 업데이트되거나 삽입될 때 JDBC 드라이버에서 예외가 발생합니다.  
   

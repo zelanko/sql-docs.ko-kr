@@ -11,10 +11,10 @@ ms.assetid: 097434fd-2b74-411c-a5ed-eba04481dde5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a1de4bc16b37c6224c0dfbb5556f59b6e15d825a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971526"
 ---
 # <a name="sqlserverdatasource-class"></a>SQLServerDataSource 클래스
@@ -33,8 +33,8 @@ ms.locfileid: "67971526"
 public class SQLServerDataSource  
 ```  
   
-## <a name="remarks"></a>Remarks  
- 이 클래스는 래핑 해제 to SQLServerDataSource 클래스, ISQLServerDataSource 인터페이스 및 DataSource 인터페이스를 지원 합니다. 자세한 내용은 [래퍼 및 인터페이스](../../../connect/jdbc/wrappers-and-interfaces.md)를 참조 하세요.  
+## <a name="remarks"></a>설명  
+ 이 클래스는 SQLServerDataSource 클래스, ISQLServerDataSource 인터페이스 및 DataSource 인터페이스에 대한 래핑 해제를 지원합니다. 자세한 내용은 [래퍼 및 인터페이스](../../../connect/jdbc/wrappers-and-interfaces.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDataSource 멤버](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

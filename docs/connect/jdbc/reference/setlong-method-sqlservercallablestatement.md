@@ -16,10 +16,10 @@ ms.assetid: 137416fe-a580-424e-be79-fe946eba9e6e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0f7110594eb808a50fa88e22b1e38d2a4052066f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974042"
 ---
 # <a name="setlong-method-sqlservercallablestatement"></a>setLong 메서드(SQLServerCallableStatement)
@@ -42,12 +42,12 @@ public void setLong(java.lang.String sCol,
   
  *l*  
   
- **Long** 값입니다.  
+ **long** 값입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 setLong 메서드는 java.sql.CallableStatement 인터페이스의 setLong 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

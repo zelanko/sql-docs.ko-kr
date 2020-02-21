@@ -1,27 +1,25 @@
 ---
-title: SQL Server Profiler에서 SHOWPLAN 결과로 쿼리 분석 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: SHOWPLAN 결과로 쿼리 분석
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- events [SQL Server], Showplan
-- Profiler [SQL Server Profiler], Showplan results
-- SQL Server Profiler, Showplan results
 ms.assetid: 6a2f7727-141c-4f59-8613-2e452bc78467
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 577590c360b14af9129487c120dbf70726f2a7ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: e0936a3931b574c08e5a58f396d7917eae569078
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105608"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307382"
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>SQL Server Profiler에서 SHOWPLAN 결과로 쿼리 분석
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에서 추적에 쿼리 계획 정보를 수집하고 표시하도록 추적 정의에 Showplan 이벤트 클래스를 추가할 수 있습니다. 추적에 수집된 다른 이벤트에서 Showplan 이벤트를 추출하고 이러한 Showplan 이벤트를 별도의 XML 파일에 저장할 수도 있습니다.  
   
@@ -36,7 +34,7 @@ ms.locfileid: "68105608"
 ## <a name="showplan-events"></a>Showplan 이벤트  
  Showplan 추적 이벤트는 다음 표에 나열 및 설명되어 있습니다.  
   
-|이벤트 이름|설명|  
+|이벤트 이름|Description|  
 |----------------|-----------------|  
 |**Performance statistics**|처음으로 컴파일된 실행 계획이 캐시된 때와 다시 컴파일된 때, 계획 캐시에서 삭제된 때를 나타냅니다. **TextData** 열에는 XML 형식의 실행 계획이 포함됩니다. 자세한 내용은 [Performance Statistics 이벤트 클래스](../../relational-databases/event-classes/performance-statistics-event-class.md)를 참조하세요.|  
 |**Showplan All**|실행된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 전체 컴파일 정보와 쿼리 계획을 표시합니다. 예를 들어 비용 계산 및 열 목록이 표시될 수 있습니다. 자세한 내용은 [Showplan All Event Class](../../relational-databases/event-classes/showplan-all-event-class.md)을 참조하세요.|  

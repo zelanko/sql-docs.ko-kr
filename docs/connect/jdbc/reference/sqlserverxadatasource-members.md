@@ -11,10 +11,10 @@ ms.assetid: 04178645-915f-4569-8907-d45e299bbe7d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f2baf4e745e18052646e842eb64445690229ed0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970178"
 ---
 # <a name="sqlserverxadatasource-members"></a>SQLServerXADataSource 멤버
@@ -24,7 +24,7 @@ ms.locfileid: "67970178"
   
 ## <a name="constructors"></a>생성자  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[SQLServerXADataSource ()](../../../connect/jdbc/reference/sqlserverxadatasource-constructor.md)|[SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md) 클래스의 새 인스턴스를 초기화합니다.|  
   
@@ -36,7 +36,7 @@ ms.locfileid: "67970178"
   
 ## <a name="methods"></a>메서드  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |[getApplicationIntent](../../../connect/jdbc/reference/getapplicationintent-method-sqlserverdatasource.md)|[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)에서 상속되며 **applicationIntent** 연결 속성의 값을 반환합니다.|  
 |[getApplicationName](../../../connect/jdbc/reference/getapplicationname-method-sqlserverdatasource.md)|[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)에서 상속되며, 애플리케이션 이름을 반환합니다.|  

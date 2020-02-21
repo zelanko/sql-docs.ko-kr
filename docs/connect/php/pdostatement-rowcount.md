@@ -1,5 +1,5 @@
 ---
-title: 'PDOStatement:: rowCount | Microsoft Docs'
+title: PDOStatement::rowCount | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 0569f26a-2376-4c20-8813-bd3c87d0ae9f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a9f6f7045c0729dad4fbb7d2875a645d370a1a5e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67935998"
 ---
 # <a name="pdostatementrowcount"></a>PDOStatement::rowCount
@@ -29,10 +29,10 @@ ms.locfileid: "67935998"
 int PDOStatement::rowCount ();  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 추가, 삭제 또는 변경된 행 수입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 관련된 PDOStatement에서 실행된 마지막 SQL 문이 SELECT 문인 경우 PDO::CURSOR_FWDONLY 커서가 -1을 반환합니다. PDO::CURSOR_SCROLLABLE 커서는 결과 집합의 행 수를 반환합니다.  
   
 PDO 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 2.0에 추가되었습니다.  

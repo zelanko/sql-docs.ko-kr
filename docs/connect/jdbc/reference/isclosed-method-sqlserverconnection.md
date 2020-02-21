@@ -16,10 +16,10 @@ ms.assetid: 3560ab18-4350-4d02-9716-439f0c2f7142
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 45e56a0a5ddb7cf8aece6813d421b7ebb1685408
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977709"
 ---
 # <a name="isclosed-method-sqlserverconnection"></a>isClosed 메서드(SQLServerConnection)
@@ -34,16 +34,16 @@ ms.locfileid: "67977709"
 public boolean isClosed()  
 ```  
   
-## <a name="return-value"></a>반환 값  
- 연결이 종료 되 면 **true** 이 고, 그렇지 않으면 **false** 입니다.  
+## <a name="return-value"></a>Return Value  
+ 연결이 닫혀 있으면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 isClosed 메서드는java.sql.Connection 인터페이스의 isClosed 메서드에 의해 지정됩니다.  
   
- 호출 된 SQLServerConnection 개체의 상태를 확인 합니다. 개체에서 [close](../../../connect/jdbc/reference/close-method-sqlserverconnection.md) 메서드가 호출되었거나 치명적인 오류가 발생했으면 연결이 닫혀 있습니다. 이 메서드는 close 메서드가 호출된 후에 호출되는 경우에만 **true**를 반환합니다.  
+ 호출된 SQLServerConnection 개체의 상태를 확인합니다. 개체에서 [close](../../../connect/jdbc/reference/close-method-sqlserverconnection.md) 메서드가 호출되었거나 치명적인 오류가 발생했으면 연결이 닫혀 있습니다. 이 메서드는 close 메서드가 호출된 후에 호출되는 경우에만 **true**를 반환합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerConnection 멤버](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

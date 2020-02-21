@@ -1,5 +1,5 @@
 ---
-title: getGeneratedKeys 메서드 (SQLServerStatement) | Microsoft Docs
+title: getGeneratedKeys 메서드(SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: a3325950-0e81-4ae8-aa0c-e1f6d371adcd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d47ff96fe493053e7a953cfbae53e52be95a0d62
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982944"
 ---
 # <a name="getgeneratedkeys-method-sqlserverstatement"></a>getGeneratedKeys 메서드(SQLServerStatement)
@@ -34,16 +34,16 @@ ms.locfileid: "67982944"
 public final java.sql.ResultSet getGeneratedKeys()  
 ```  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  ResultSet 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 getGeneratedKeys 메서드는 java .sql. Statement 인터페이스의 getGeneratedKeys 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 getGeneratedKeys 메서드는 java.sql.Statement 인터페이스의 getGeneratedKeys 메서드에 의해 지정됩니다.  
   
- 이 메서드를 사용 하는 방법에 대 한 자세한 내용은 [자동 생성 키 사용](../../../connect/jdbc/using-auto-generated-keys.md)을 참조 하세요.  
+ 이 메서드를 사용하는 방법에 대한 자세한 내용은 [자동 생성 키 사용](../../../connect/jdbc/using-auto-generated-keys.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerStatement 멤버](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

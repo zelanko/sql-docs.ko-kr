@@ -1,23 +1,24 @@
 ---
-title: SQL Server 단위 테스트의 스크립트 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: SQL Server 단위 테스트의 스크립트
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 80c5cf62-a9c9-4e9d-8c6f-8eed50a595a7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8f84c8b03343b353cf355f0f604152a82b23627b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: c5ff8457d5e2122f3e5bc455c204a5185cc30aec
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110737"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256976"
 ---
 # <a name="scripts-in-sql-server-unit-tests"></a>SQL Server 단위 테스트의 스크립트
+
 각 SQL Server 단위 테스트에는 단일 테스트 전 작업, 테스트 작업 및 테스트 후 작업이 포함됩니다. 이러한 작업에는 각각 다음과 같은 항목이 포함됩니다.  
   
 -   데이터베이스에서 실행되는 Transact\-SQL 스크립트  

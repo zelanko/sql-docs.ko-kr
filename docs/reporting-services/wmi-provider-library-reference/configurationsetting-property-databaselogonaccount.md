@@ -16,10 +16,10 @@ ms.assetid: 55f2863f-1ac1-4519-b512-e7f11c0ea5ea
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 603ae515642fa524841c160cafc82c4e8ace3249
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571659"
 ---
 # <a name="configurationsetting-property---databaselogonaccount"></a>ConfigurationSetting 속성 - DatabaseLogonAccount
@@ -41,7 +41,7 @@ public string DatabaseLogonAccount;
 ## <a name="example-code"></a>코드 예  
  [MSReportServer_ConfigurationSetting 클래스](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 속성의 유효 값은 [DatabaseLogonType](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogontype.md) 속성 값에 따라 달라집니다.  
   
  [DatabaseLogonType](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogontype.md) 속성이 **2(서비스)** 로 설정되어 있으면 이 속성은 무시됩니다.  

@@ -16,10 +16,10 @@ ms.assetid: 8a677cc6-8e33-4e57-8678-0849345aa8d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8dd512236aa3070ce299756d4e4294c79ac2e94a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982795"
 ---
 # <a name="getindexinfo-method-sqlserverdatabasemetadata"></a>getIndexInfo 메서드(SQLServerDatabaseMetaData)
@@ -53,24 +53,24 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
   
  *unique*  
   
- 고유 값에 대 한 인덱스만 반환 되 면 **true** 입니다. 모든 인덱스가 반환 되 면 **false** 입니다.  
+ 고유한 값의 인덱스만 반환되면 **true**입니다. 모든 인덱스가 반환되면 **false**입니다.  
   
  *approximate*  
   
- 결과가 대략적 이거나 오래 된 값을 반영 하면 **true** 입니다. 결과가 정확한 경우 **false** 입니다.  
+ 결과가 대략적인 값이나 오래된 값을 반영하면 **true**입니다. 결과가 정확하면 **false**입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 getIndexInfo 메서드는 java.sql.DatabaseMetaData 인터페이스의 getIndexInfo 메서드에 의해 지정됩니다.  
   
  getIndexInfo 메서드에서 반환되는 결과 집합에는 다음 정보가 포함됩니다.  
   
-|속성|형식|설명|  
+|속성|Type|Description|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|지정된 테이블이 있는 데이터베이스의 이름입니다.|  
 |TABLE_SCHEM|**String**|테이블의 스키마입니다.|  

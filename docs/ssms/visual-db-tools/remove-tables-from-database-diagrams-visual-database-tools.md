@@ -1,10 +1,9 @@
 ---
-title: 데이터베이스 다이어그램에서 테이블 제거(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 데이터베이스 다이어그램에서 테이블 제거
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,14 @@ helpviewer_keywords:
 ms.assetid: 11afcfa1-816b-419c-9bc7-3abf366f4c3c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fae136b4de6a85d26d14b487e1812c3b95a17b7a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 7b6e3847aa5471b757333a4ec7ff1964acabf0e1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256081"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255260"
 ---
 # <a name="remove-tables-from-database-diagrams-visual-database-tools"></a>데이터베이스 다이어그램에서 테이블 제거(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "68256081"
   
 2.  테이블을 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 **다이어그램에서 테이블 제거** 를 선택합니다.  
   
-    -또는-  
+    또는  
   
     Esc 키를 누릅니다.  
   
@@ -41,5 +42,5 @@ ms.locfileid: "68256081"
   
 ## <a name="see-also"></a>참고 항목  
 [데이터베이스 다이어그램 작업&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
-[방법: 데이터베이스에서 테이블 삭제(Visual Database Tools)](https://msdn.microsoft.com/ca6aa3e9-9885-44c3-bafc-aec441fd97ec)  
+[방법: 데이터베이스에서 테이블 삭제(https://msdn.microsoft.com/ca6aa3e9-9885-44c3-bafc-aec441fd97ec)  
   

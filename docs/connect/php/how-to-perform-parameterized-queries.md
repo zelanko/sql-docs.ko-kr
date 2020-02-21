@@ -14,10 +14,10 @@ ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7e406d64bd8c56b467c9b331eb4aef132dc0cc67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993497"
 ---
 # <a name="how-to-perform-parameterized-queries"></a>방법: 매개 변수가 있는 쿼리 수행
@@ -31,7 +31,7 @@ ms.locfileid: "67993497"
   
 2.  Transact-SQL 쿼리의 자리 표시자에 해당하는 PHP 변수를 초기화하거나 업데이트합니다.  
   
-3.  2단계의 PHP 변수를 사용하여 Transact-SQL 문자열의 매개 변수 자리 표시자에 해당하는 매개 변수 값의 배열을 만들거나 업데이트합니다. 배열의 매개 변수 값은 해당 값을 나타내는 자리 표시자와 동일한 순서 여야 합니다.
+3.  2단계의 PHP 변수를 사용하여 Transact-SQL 문자열의 매개 변수 자리 표시자에 해당하는 매개 변수 값의 배열을 만들거나 업데이트합니다. 배열의 매개 변수 값은 해당 값을 나타내는 데 사용되는 자리 표시자와 동일한 순서여야 합니다.
   
 4.  다음 쿼리를 실행합니다.  
   
@@ -190,7 +190,7 @@ sqlsrv_close( $conn);
 ## <a name="see-also"></a>참고 항목  
 [데이터 형식 변환](../../connect/php/converting-data-types.md)
 
-[Microsoft Drivers for PHP for SQL Server에 대 한 보안 고려 사항](../../connect/php/security-considerations-for-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server에 대한 보안 고려 사항](../../connect/php/security-considerations-for-php-sql-driver.md)
 
 [설명서의 코드 예제 정보](../../connect/php/about-code-examples-in-the-documentation.md)
 

@@ -1,10 +1,9 @@
 ---
-title: SQL Server 에이전트 속성(경고 시스템 페이지) | Microsoft 문서
-ms.custom: ''
+title: SQL Server 에이전트 속성(경고 시스템 페이지)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,13 +11,15 @@ f1_keywords:
 ms.assetid: 3e6d3bfd-20ee-4593-86cc-f65b1c08c69d
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 92db1bf98b3a50aa619333ba0107034d24106855
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 5b870368136055ea2df6e5473c1b33640cea57b8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265307"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75234540"
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>SQL Server 에이전트 속성(경고 시스템 페이지)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -92,7 +93,7 @@ ms.locfileid: "68265307"
 **유사 시 대기 운영자 설정**  
 유사 시 대기 운영자를 지정합니다.  
   
-**같음**  
+**연산자**  
 유사 시 대기 알림을 받을 운영자의 이름을 설정합니다.  
   
 **알림 방법**  

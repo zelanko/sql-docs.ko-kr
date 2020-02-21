@@ -9,10 +9,10 @@ ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 91550f60a7fe056a3df68ba9c4006e8359ff2c73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581815"
 ---
 # <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>기본 제공 컬렉션 - 데이터 세트 필드 컬렉션 참조(보고서 작성기)

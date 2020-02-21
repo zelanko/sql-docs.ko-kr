@@ -1,6 +1,6 @@
 ---
 title: RevoScaleR을 사용하여 R 모델 만들기
-description: SQL Server에서 R 언어를 사용하여 모델을 빌드하는 방법에 대한 자습서 연습입니다.
+description: 'RevoScaleR 자습서 7: SQL Server에서 R 언어를 사용하여 모델을 빌드하는 방법입니다.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9a23691e8ed4b5ec5290ae666455f789954fa95d
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 11feb62609cba61a695dd60085461410a38ed0f7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727264"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947249"
 ---
 # <a name="create-r-models-sql-server-and-revoscaler-tutorial"></a>R 모델 만들기(SQL Server 및 RevoScaleR 자습서)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 단원은 SQL Server에서 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)의 일부입니다.
+이것은 SQL Server에서 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)를 사용하는 방법에 대한 [RevoScaleR 자습서 시리즈](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 중 자습서 7에 해당됩니다.
 
-학습 데이터를 보강했습니다. 이제 회귀 모델링을 사용하여 데이터를 분석할 차례입니다. 선형 모델은 예측 분석 분야에서 중요한 도구입니다. **RevoScaleR** 패키지에는 워크로드를 세분화하고 병렬로 실행할 수 있는 회귀 알고리즘이 포함되어 있습니다.
+학습 데이터를 보강했습니다. 이 자습서에서는 회귀 모델링을 사용하여 데이터를 분석합니다. 선형 모델은 예측 분석 분야에서 중요한 도구입니다. **RevoScaleR** 패키지에는 워크로드를 세분화하고 병렬로 실행할 수 있는 회귀 알고리즘이 포함되어 있습니다.
 
 > [!div class="checklist"]
 > * 선형 회귀 모델 만들기

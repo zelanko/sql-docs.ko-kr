@@ -1,10 +1,7 @@
 ---
-title: SQL Server 에이전트 오류 로그 구성(일반 페이지) | Microsoft 문서
-ms.custom: ''
-ms.date: 01/19/2017
+title: 오류 로그 구성(일반 페이지)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,15 +9,20 @@ f1_keywords:
 ms.assetid: e08de622-6f87-470c-aee0-b2d6cb6cca88
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 97107d636f03d9cec2b74fe25b65c9d90ad848a0
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 1f5c804350a71ae4834a1bbc689a2bc3d6fbc73c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267438"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246077"
 ---
 # <a name="configure-sql-server-agent-error-logs-general-page"></a>SQL Server 에이전트 오류 로그 구성(일반 페이지)
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -38,7 +40,7 @@ ms.locfileid: "68267438"
 **OEM 오류 로그 쓰기**  
 오류 로그 파일을 비유니코드 파일로 작성합니다. 이렇게 하면 로그 파일에서 사용하는 디스크 공간의 양이 줄어듭니다. 그러나 이 옵션을 설정하면 유니코드 데이터가 포함된 메시지를 읽기가 어려울 수 있습니다.  
   
-**오류**  
+**Errors**  
 로그 파일에 오류 및 정보 메시지만 기록합니다.  
   
 **경고**  

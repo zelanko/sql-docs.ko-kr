@@ -1,5 +1,5 @@
 ---
-title: 'ISSCommandWithParameters:: SetParameterProperties (OLE DB) | Microsoft Docs'
+title: ISSCommandWithParameters::SetParameterProperties(OLE DB) | Microsoft Docs
 description: ISSCommandWithParameters::SetParameterProperties(OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: b9f5a3251b05453d01b2ef984c6a9ea7bde1c115
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015395"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties(OLE DB)
@@ -48,7 +48,7 @@ HRESULT SetParameterProperties(
 ## <a name="return-code-values"></a>반환 코드 값  
  **ISSCommandWithParameters::SetParameterProperties** 메서드에서 핵심 OLE DB **ICommandProperties::SetProperties** 메서드와 동일한 오류 코드를 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 메서드를 사용한 매개 변수 속성 설정은 매개 변수별 서수로 허용되거나, 속성 배열에서 SSPARAMPROPS가 작성된 후 단일 **ISSCommandWithParameters::SetParameterProperties** 호출을 사용하여 허용됩니다.  
   
  **ISSCommandWithParameters::SetParameterProperties** 메서드를 호출하기 전에 **SetParameterInfo** 메서드를 호출해야 합니다. `SetParameterProperties(0, NULL)`를 호출하면 지정한 모든 매개 변수 속성이 지워지지만 `SetParameterInfo(0,NULL,NULL)`를 호출하면 매개 변수와 관련이 있을 수 있는 모든 속성을 비롯하여 모든 매개 변수 정보가 지워집니다.  
@@ -73,15 +73,15 @@ HRESULT SetParameterProperties(
   
  `};`  
   
- 에서 시작 하는 데이터베이스 엔진의 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 향상 된 기능으로는 ISSCommandWithParameters:: setparameterproperties를 사용 하 여 예상 결과에 대 한 보다 정확한 설명을 얻을 수 있습니다. 이러한 더 정확한 결과는 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 ISSCommandWithParameters:: setparameterproperties에서 반환 된 값과 다를 수 있습니다. 자세한 내용은 [메타데이터 검색](../../oledb/features/metadata-discovery.md)을 참조하세요.  
+ [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]부터 데이터베이스 엔진의 기능이 향상되어 ISSCommandWithParameters::SetParameterProperties를 통해 예상 결과에 대한 보다 정확한 설명을 얻을 수 있습니다. 보다 정확한 결과는 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 ISSCommandWithParameters::SetParameterProperties가 반환한 값과 다를 수 있습니다. 자세한 내용은 [메타데이터 검색](../../oledb/features/metadata-discovery.md)을 참조하세요.  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |*iOrdinal*|전달된 매개 변수의 서수입니다.|  
 |*cPropertySets*|*rgPropertySets*에 있는 DBPROPSET 구조의 개수입니다.|  
 |*rgPropertySets*|DBPROPSET 구조의 배열을 반환할 메모리에 대한 포인터입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [ISSCommandWithParameters &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+ [ISSCommandWithParameters&#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

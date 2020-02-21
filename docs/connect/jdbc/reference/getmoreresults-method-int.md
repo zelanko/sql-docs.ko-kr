@@ -1,5 +1,5 @@
 ---
-title: getMoreResults 메서드 (int) | Microsoft Docs
+title: getMoreResults 메서드(int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 6419e5a8-8b3a-4d5b-8226-95865c52c723
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 08760680774b2e760b66d9e210c4ef939872444e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981768"
 ---
 # <a name="getmoreresults-method-int"></a>getMoreResults 메서드(int)
@@ -45,14 +45,14 @@ public final boolean getMoreResults(int mode)
   
  CLOSE_ALL_RESULTS  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  반환된 결과가 결과 집합이면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- 이 getMoreResults 메서드는 getMoreResults 인터페이스의 메서드에 의해 지정 됩니다.  
+## <a name="remarks"></a>설명  
+ 이 getMoreResults 메서드는 java.sql.Statement 인터페이스의 getMoreResults 메서드에 의해 지정됩니다.  
   
  결과가 검색되기 전에 getMoreResults 메서드를 호출할 경우 이 메서드는 *mode* 인수에 지정된 대로 동작하고 다음 결과로 이동합니다.  
   

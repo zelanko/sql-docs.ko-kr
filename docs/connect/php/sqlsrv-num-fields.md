@@ -17,16 +17,16 @@ ms.assetid: 03ca1860-01ed-408c-862a-57a7355de4bf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b5c095b74f8f299a1d5f2b15daaf95e3d5086ebd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992671"
 ---
-# <a name="sqlsrvnumfields"></a>sqlsrv_num_fields
+# <a name="sqlsrv_num_fields"></a>sqlsrv_num_fields
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-활성 결과 집합의 필드 수를 검색합니다. 이 함수는 실행 전후에 준비 된 문에서 호출할 수 있습니다.  
+활성 결과 집합의 필드 수를 검색합니다. 이 함수는 실행 전 또는 후에 준비된 문에서 호출할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,7 +38,7 @@ sqlsrv_num_fields( resource $stmt)
 #### <a name="parameters"></a>매개 변수  
 *$stmt*: 대상 결과 집합이 활성화되는 문입니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
 활성 결과 집합에서 필드의 수를 나타내는 정수 값입니다. 오류가 발생하면 부울 값 **false** 가 반환됩니다.  
   
 ## <a name="example"></a>예제  

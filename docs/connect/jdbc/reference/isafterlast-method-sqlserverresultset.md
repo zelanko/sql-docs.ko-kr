@@ -16,10 +16,10 @@ ms.assetid: 19f9d124-3184-4985-8b97-503a8ab8b4f9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 233599694c4fb4f7764bbb48d5c77e0fcd273340
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977842"
 ---
 # <a name="isafterlast-method-sqlserverresultset"></a>isAfterLast 메서드(SQLServerResultSet)
@@ -34,13 +34,13 @@ ms.locfileid: "67977842"
 public boolean isAfterLast()  
 ```  
   
-## <a name="return-value"></a>반환 값  
- 커서가 마지막 행 뒤에 있으면 **true** 입니다. 커서가 다른 위치에 있거나 결과 집합에 행이 포함 되어 있지 않으면 **false** 입니다.  
+## <a name="return-value"></a>Return Value  
+ 커서가 마지막 행 뒤에 있으면 **true**입니다. 커서가 그 외의 위치에 있거나 결과 집합에 행이 들어 있지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 isAfterLast 메서드는 java.sql.ResultSet 인터페이스의 isAfterLast 메서드에 의해 지정됩니다.  
   
  이 메서드를 정방향 전용의 읽기 전용 커서를 비롯한 동적 커서와 함께 사용할 경우 selectMethod 연결 속성이 "cursor"로 설정되어 있으면 예외가 발생합니다.  

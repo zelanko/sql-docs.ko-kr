@@ -1,10 +1,9 @@
 ---
-title: 쿼리 및 뷰 디자이너 도구(Visual Database Tools) | Microsoft 문서
-ms.custom: ''
+title: 쿼리 및 뷰 디자이너 도구
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -22,12 +21,14 @@ helpviewer_keywords:
 ms.assetid: 12e4b5a5-b793-4b6c-a0e5-c450c49bf26f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d8a1cbdc010f614c9b3cc72c1d3f9549b00ec8b2
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: a146d1697c506aa031ab3e9551075cfba635e9b6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266328"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255344"
 ---
 # <a name="query-and-view-designer-tools-visual-database-tools"></a>쿼리 및 뷰 디자이너 도구(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

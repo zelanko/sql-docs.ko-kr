@@ -1,5 +1,5 @@
 ---
-title: 저장 프로시저 실행 (OLE DB) | Microsoft Docs
+title: 저장 프로시저 실행(OLE DB) | Microsoft Docs
 description: 저장 프로시저 실행(OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -15,10 +15,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 4297feae08376871c68ffab2aa9b977e034c6364
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993798"
 ---
 # <a name="stored-procedures---running"></a>저장 프로시저 - 실행
@@ -38,7 +38,7 @@ ms.locfileid: "67993798"
   
 -   기능 추가  
   
- SQL Server에 대 한 OLE DB 드라이버는 저장 프로시저에서 데이터 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 반환 하는 데 사용 하는 세 가지 메커니즘을 지원 합니다.  
+ OLE DB Driver for SQL Server는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 저장 프로시저가 데이터를 반환하는 데 사용하는 세 가지 메커니즘을 지원합니다.  
   
 -   프로시저의 모든 SELECT 문은 결과 집합을 생성합니다.  
   

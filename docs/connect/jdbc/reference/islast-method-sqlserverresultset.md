@@ -16,10 +16,10 @@ ms.assetid: 85d4451f-6392-470e-ab21-78a495b45792
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 840d1183794a5d69ad108aef8eee9ef7aedffe4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977614"
 ---
 # <a name="islast-method-sqlserverresultset"></a>isLast 메서드(SQLServerResultSet)
@@ -34,13 +34,13 @@ ms.locfileid: "67977614"
 public boolean isLast()  
 ```  
   
-## <a name="return-value"></a>반환 값  
- 커서가 마지막 행에 있으면 **true** 입니다. 커서가 다른 위치에 있거나 결과 집합에 행이 포함 되어 있지 않으면 **false** 입니다.  
+## <a name="return-value"></a>Return Value  
+ 커서가 마지막 행에 있으면 **true**입니다. 커서가 그 외의 위치에 있거나 결과 집합에 행이 들어 있지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 isLast 메서드는 java.sql.ResultSet 인터페이스의 isLast 메서드에 의해 지정됩니다.  
   
  이 메서드를 정방향 및 동적 커서와 함께 사용하면 예외가 발생합니다.  

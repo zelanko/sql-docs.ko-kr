@@ -1,6 +1,6 @@
 ---
-title: SQL Server 서비스 | Microsoft 문서
-ms.custom: ''
+title: SQL Server 서비스
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: 97193ac4-aa97-489c-9e81-6fcbdf88aebf
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 11aad7e60d37fc855ed716d11421507aa8dea89f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: d37291b7626e3a8f3fb47555d66af2e5e21feea2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023865"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306756"
 ---
 # <a name="sql-server-services"></a>SQL Server 서비스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "68023865"
 >  리소스를 호스트하지 않는 클러스터의 노드에서 **SQL Server 구성 관리자** 를 열면 서비스가 중지된 상태로 표시됩니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스의 노드에 컴퓨터에서 사용 가능한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 채워져 있지 않으면 WMI(Windows Management Instrumentation)에 액세스할 수 있는 권한이 없는 것입니다. WMI에 대한 사용 권한을 구성하려면 온라인 설명서의 "방법: WMI를 구성하여 SQL Server 도구에 서버 상태 표시" 항목을 참조하십시오.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스의 노드에 컴퓨터에서 사용 가능한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 채워져 있지 않으면 WMI(Windows Management Instrumentation)에 액세스할 수 있는 권한이 없는 것입니다. WMI에 대한 권한을 구성하려면 온라인 설명서의 “방법: WMI를 구성하여 SQL Server 도구에 서버 상태 표시” 항목을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 구성 관리자 도움말](../../tools/configuration-manager/sql-server-configuration-manager-help.md)  

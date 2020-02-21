@@ -11,10 +11,10 @@ ms.assetid: ef2db0b3-b10e-4898-8bfc-d5e4baca18ef
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 160d28aae240179173949ccd67639746225b7c15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936083"
 ---
 # <a name="pdostatement-class"></a>PDOStatement 클래스
@@ -28,7 +28,7 @@ PDOStatement 클래스는 문과 문의 결과를 나타냅니다.
 PDOStatement {}  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 PDOStatement 클래스에 다음과 같은 메서드가 있습니다.  
   
 -   [PDOStatement::bindColumn](../../connect/php/pdostatement-bindcolumn.md)  
@@ -78,7 +78,7 @@ PDO 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버�
 
 [상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
-[Microsoft Drivers for PHP for SQL Server 프로그래밍 가이드](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 프로그래밍 가이드 | Microsoft Docs](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [Microsoft Drivers for PHP for SQL Server 시작](../../connect/php/getting-started-with-the-php-sql-driver.md)
 
